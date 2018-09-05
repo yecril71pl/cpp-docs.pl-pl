@@ -12,12 +12,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d626385523cb957b44589784c2e69539b5ed8fca
-ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
+ms.openlocfilehash: 4c659262d11d929e94958cee687103648270db23
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "42465058"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43679284"
 ---
 # <a name="welcome-back-to-c-modern-c"></a>Zapraszamy ponownie do języka C++ (Modern C++)
 Język C++ jest jednym z najczęściej używanych języków programowania na świecie. Dobrze napisane programy ++ są szybkie i wydajne. Język jest bardziej elastyczny niż inne języki, ponieważ służy do tworzenia szerokiej gamy aplikacji — od zabawnych i emocjonujących gier do wysokiej wydajności naukowego oprogramowania, sterowników urządzeń, programów osadzonych i aplikacji klienckich Windows. Ponad 20 lat firma C++ został użyty do rozwiązywania problemów, takich jak te i wiele innych. Co możesz nie znać jest, że rosnąca liczba programistów C++ ma składanych zapasową wyświechtanego stylu programowania C już przeszłość i przyjęła nowoczesny C++, zamiast tego.  
@@ -133,7 +133,7 @@ void f()
   
 -   [Przenośność na granicach ABI](../cpp/portability-at-abi-boundaries-modern-cpp.md)  
   
- Aby uzyskać więcej informacji, zobacz artykuł StackOverflow [jakie idiomy C++ zostały zaniechane w C ++ 11](http://go.microsoft.com/fwlink/p/?linkid=402836)  
+ Aby uzyskać więcej informacji, zobacz artykuł StackOverflow [jakie idiomy C++ zostały zaniechane w C ++ 11](https://stackoverflow.com/questions/9299101/which-c-idioms-are-deprecated-in-c11).  
   
 ## <a name="see-also"></a>Zobacz także  
  [Dokumentacja języka C++](../cpp/cpp-language-reference.md)   

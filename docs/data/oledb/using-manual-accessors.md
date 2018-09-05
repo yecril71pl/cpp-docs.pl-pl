@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: dceca7ead0910474b2277538066d3cbae4bc791e
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: c732bcf45f2dfbd4927366670aed6bfbdcfb4721
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43213831"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43679990"
 ---
 # <a name="using-manual-accessors"></a>Korzystanie z ręcznych metod dostępu
 Istnieją cztery czynności wykonywane podczas obsługi nieznane polecenie:  
@@ -53,7 +53,7 @@ Istnieją cztery czynności wykonywane podczas obsługi nieznane polecenie:
   
 6.  Wywołaj `GetNextResult` do określenia, czy więcej zestawów wierszy są dostępne. Powtórz kroki od 2 do 5.  
   
- Na przykład ręczne metody dostępu Zobacz `CDBListView::CallProcedure` w [DBVIEWER](https://msdn.microsoft.com/07620f99-c347-4d09-9ebc-2459e8049832) próbki.  
+ Na przykład ręczne metody dostępu Zobacz `CDBListView::CallProcedure` w [DBVIEWER](https://github.com/Microsoft/VCSamples) próbki.  
   
 ## <a name="see-also"></a>Zobacz też  
  [Korzystanie z metod dostępu](../../data/oledb/using-accessors.md)

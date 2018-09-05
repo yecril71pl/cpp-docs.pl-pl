@@ -41,12 +41,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4e5ddaf0f3368f9542fbbd04a8a16c56223aefd5
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 1535ccda7b53a4fe87c496e2749e382413e32d0a
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43219582"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43677791"
 ---
 # <a name="concurrency-namespace-functions"></a>Funkcje przestrzeni nazw współbieżności
 ||||  
@@ -179,12 +179,12 @@ IResourceManager* __cdecl CreateResourceManager();
  `IResourceManager` Interfejsu.  
   
 ### <a name="remarks"></a>Uwagi  
- Wiele kolejnych wywołań tej metody zwróci to samo wystąpienie Menedżera zasobów. Każde wywołanie metody zwiększa odwołanie zliczane w Menedżerze zasobów i musi być dopasowane z wywołaniem [IResourceManager::Release](https://msdn.microsoft.com/5d1356ec-fbd3-4284-a361-1e9e20bbb522) metoda po zakończeniu harmonogramu podczas komunikowania się z usługą Resource Manager.  
+ Wiele kolejnych wywołań tej metody zwróci to samo wystąpienie Menedżera zasobów. Każde wywołanie metody zwiększa odwołanie zliczane w Menedżerze zasobów i musi być dopasowane z wywołaniem [IResourceManager::Release](iresourcemanager-structure.md) metoda po zakończeniu harmonogramu podczas komunikowania się z usługą Resource Manager.  
   
  [unsupported_os](unsupported-os-class.md) jest generowany, jeśli system operacyjny nie jest obsługiwany przez środowisko uruchomieniowe współbieżności.  
   
 ##  <a name="create_task"></a>  create_task —  
- Tworzy PPL [zadań](https://msdn.microsoft.com/5389e8a5-5038-40b6-844a-55e9b58ad35f) obiektu. `create_task` może służyć wszędzie użyto konstruktora zadania. Jest ona udostępniana przede wszystkim dla wygody, ponieważ zezwala ona na korzystanie z `auto` — słowo kluczowe podczas tworzenia zadań.  
+ Tworzy PPL [zadań](task-class.md) obiektu. `create_task` może służyć wszędzie użyto konstruktora zadania. Jest ona udostępniana przede wszystkim dla wygody, ponieważ zezwala ona na korzystanie z `auto` — słowo kluczowe podczas tworzenia zadań.  
   
 ```
 template<typename T>

@@ -20,12 +20,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1f99f79e0e5f4f53356ed96528e310465b3ed2f0
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 733d090073fe2ed08a0499ea205c2377b4bdb289
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43220093"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43679700"
 ---
 # <a name="scope-c"></a>Zakres (C++)
 
@@ -114,7 +114,7 @@ class Account *Checking = new class Account( Account );
 > [!NOTE]
 > Ponowne użycie nazwy identyfikatora, jak pokazano w poniższym przykładzie jest uważany za słabe stylu programowania.
 
- Aby uzyskać więcej informacji o wskaźnikach, zobacz [typów pochodnych](https://msdn.microsoft.com/aa14183c-02fe-4d81-95fe-beddb0c01c7c). Aby uzyskać informacje na temat deklaracji i inicjowania obiektów klas, zobacz [klas, struktur i Unii](../cpp/classes-and-structs-cpp.md). Informacji o używaniu **nowe** i **Usuń** wolne i sklep z operatorów, zobacz [nowych i delete — operatory](new-and-delete-operators.md).
+Aby uzyskać informacje na temat deklaracji i inicjowania obiektów klas, zobacz [klas, struktur i Unii](../cpp/classes-and-structs-cpp.md). Informacji o używaniu **nowe** i **Usuń** wolne i sklep z operatorów, zobacz [nowych i delete — operatory](new-and-delete-operators.md).
 
 ## <a name="hiding-names-with-global-scope"></a>Ukrywanie nazw o zakresie globalnym
 

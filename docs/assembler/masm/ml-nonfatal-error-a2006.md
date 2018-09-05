@@ -1,7 +1,7 @@
 ---
 title: Błąd niekrytyczny ML A2006 | Dokumentacja firmy Microsoft
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 08/30/2018
 ms.technology:
 - cpp-masm
 ms.topic: error-reference
@@ -16,31 +16,33 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 31d2f7df00d1c0658ee8301fbde1efe2522b52fc
-ms.sourcegitcommit: dbca5fdd47249727df7dca77de5b20da57d0f544
+ms.openlocfilehash: f287c6ab46c6af71ba6dc0032f332ce3cc489454
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/28/2018
-ms.locfileid: "32054858"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43677408"
 ---
 # <a name="ml-nonfatal-error-a2006"></a>Błąd niekrytyczny ML A2006
-**Niezdefiniowany symbol: identyfikator**  
-  
- Próbowano użyć symbolu, który nie został zdefiniowany.  
-  
- Jedną z następujących przyczyn:  
-  
--   Symbol nie został zdefiniowany.  
-  
--   Pole nie jest członkiem określonej struktury.  
-  
--   Symbol został zdefiniowany w pliku dołączenia, które nie zostały uwzględnione.  
-  
--   Zewnętrzny symbol został użyty bez [EXTERN](../../assembler/masm/extern-masm.md) lub [externdef —](../../assembler/masm/externdef.md) dyrektywy.  
-  
--   Nazwa symbolu została wpisana z błędem.  
-  
--   Etykieta kod lokalny odwoływano poza jej zakres.  
-  
-## <a name="see-also"></a>Zobacz też  
- [Komunikaty o błędach ML](../../assembler/masm/ml-error-messages.md)
+
+**Niezdefiniowany symbol: identyfikator**
+
+Próbowano użyć symbolu, który nie został zdefiniowany.
+
+Jedną z następujących przyczyn:
+
+- Nie zdefiniowano symbolu.
+
+- Pole nie jest członkiem określonej struktury.
+
+- Symbol został zdefiniowany w pliku dołączonego, który nie został dołączony.
+
+- Zewnętrzny symbol został użyty bez [EXTERN](../../assembler/masm/extern-masm.md) lub [externdef —](../../assembler/masm/externdef.md) dyrektywy.
+
+- Nazwa symbolu została wpisana z błędem.
+
+- Etykieta kod lokalny odwoływano się poza zakres.
+
+## <a name="see-also"></a>Zobacz także
+
+[Komunikaty o błędach ML](../../assembler/masm/ml-error-messages.md)<br/>

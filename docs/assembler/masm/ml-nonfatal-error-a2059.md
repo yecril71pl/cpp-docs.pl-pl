@@ -1,7 +1,7 @@
 ---
 title: Błąd niekrytyczny ML A2059 | Dokumentacja firmy Microsoft
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 08/30/2018
 ms.technology:
 - cpp-masm
 ms.topic: error-reference
@@ -16,17 +16,19 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b8e978873a8c93cf4f7db636eb0daae79931a12c
-ms.sourcegitcommit: dbca5fdd47249727df7dca77de5b20da57d0f544
+ms.openlocfilehash: 68ccc1381af84928a3bff11aacdfb434d18cc740
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/28/2018
-ms.locfileid: "32055639"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43678706"
 ---
 # <a name="ml-nonfatal-error-a2059"></a>Błąd niekrytyczny ML A2059
-**wymuszone błąd: równości ciągów**  
-  
- Dyrektywa warunkowego błąd [. ERRIDN](../../assembler/masm/dot-erridn.md) lub **. ERRIDNI** zostało użyte do wygenerowania tego błędu.  
-  
-## <a name="see-also"></a>Zobacz też  
- [Komunikaty o błędach ML](../../assembler/masm/ml-error-messages.md)
+
+**Błąd wymuszonego: ciągi znaków równości**
+
+Dyrektywy warunkowej błąd [. ERRIDN](../../assembler/masm/dot-erridn.md) lub **. ERRIDNI** użyty do wygenerowania tego błędu.
+
+## <a name="see-also"></a>Zobacz także
+
+[Komunikaty o błędach ML](../../assembler/masm/ml-error-messages.md)<br/>

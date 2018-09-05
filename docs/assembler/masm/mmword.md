@@ -1,7 +1,7 @@
 ---
 title: MMWORD — | Dokumentacja firmy Microsoft
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 08/30/2018
 ms.technology:
 - cpp-masm
 ms.topic: reference
@@ -16,35 +16,35 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e97b1e58116d633519b1a780928e05862ac1771d
-ms.sourcegitcommit: dbca5fdd47249727df7dca77de5b20da57d0f544
+ms.openlocfilehash: 7314c6d0861195e312c7f72481d2e195e041965d
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/28/2018
-ms.locfileid: "32054783"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43679237"
 ---
 # <a name="mmword"></a>MMWORD
-Używany dla argumentów multimedialnych 64-bitowe instrukcje MMX i SSE (XMM).  
-  
-## <a name="syntax"></a>Składnia  
-  
-```  
-MMWORD  
-```  
-  
-## <a name="remarks"></a>Uwagi  
- `MMWORD` jest typem.  Przed mmword — dodawany do MASM równoważne funkcje można zostały osiągnięte z:  
-  
-```  
-mov mm0, qword ptr [ebx]  
-```  
-  
- Podczas pracy zarówno instrukcje dla operandów 64-bitowych `QWORD` jest typem 64-bitowych liczb całkowitych bez znaku i `MMWORD` jest typem wartości multimedialnych 64-bitowych.  
-  
- `MMWORD` reprezentuje ten sam typ co [__m64](../../cpp/m64.md).  
-  
-## <a name="example"></a>Przykład  
-  
-```  
-movq     mm0, mmword ptr [ebx]  
+
+Używane dla operandów multimedialnych 64-bitowe instrukcje MMX i SSE (XMM).
+
+## <a name="syntax"></a>Składnia
+
+> MMWORD
+
+## <a name="remarks"></a>Uwagi
+
+`MMWORD` jest typem.  Przed mmword — dodawany do MASM równoważne funkcje mógł być osiągnięty przy użyciu:
+
+```asm
+    mov mm0, qword ptr [ebx]
+```
+
+Gdy zarówno instrukcje działać na operandach 64-bitowych `QWORD` jest typem liczb całkowitych bez znaku 64-bitowych i `MMWORD` jest typem multimediów wartość 64-bitowych.
+
+`MMWORD` reprezentuje tego samego typu co [__m64](../../cpp/m64.md).
+
+## <a name="example"></a>Przykład
+
+```asm
+    movq     mm0, mmword ptr [ebx]
 ```

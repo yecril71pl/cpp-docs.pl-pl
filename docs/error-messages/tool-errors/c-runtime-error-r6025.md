@@ -16,12 +16,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b774c5f99387ca4403941d1461593bef8801e5de
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 1055d60d95292d3585bccf64c56962d62d4ea48e
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43220635"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43680558"
 ---
 # <a name="c-runtime-error-r6025"></a>R6025 błąd środowiska uruchomieniowego języka C
 Wywołanie czystych funkcji wirtualnych  
@@ -41,4 +41,3 @@ Wywołanie czystych funkcji wirtualnych
   
  Ten błąd jest spowodowany przez wywołanie funkcji wirtualnej w abstrakcyjna klasa bazowa, za pomocą wskaźnika, który jest tworzony przez rzutowanie na typ klasy pochodnej, ale jest właściwie wskaźnikiem do klasy bazowej. Taka sytuacja może wystąpić, gdy rzutowanie z **void** <strong>\*</strong> na wskaźnik do klasy podczas **void** <strong>\*</strong> został tworzone podczas tworzenia klasy bazowej.  
   
- Aby uzyskać więcej informacji, zobacz [pomocy technicznej firmy Microsoft](http://go.microsoft.com/fwlink/p/?linkid=75220) witryny sieci Web.

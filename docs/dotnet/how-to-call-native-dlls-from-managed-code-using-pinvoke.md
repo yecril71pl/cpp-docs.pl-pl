@@ -18,18 +18,18 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: 9ddd919fb621c971425e9763cf781e5ff0b1c731
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: c1e3d9d3d08ef0386a1ab85e0e5b6860f5d504cc
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43195671"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43681284"
 ---
 # <a name="how-to-call-native-dlls-from-managed-code-using-pinvoke"></a>Porady: wywoływanie natywnych bibliotek DLL z kodu zarządzanego za pomocą funkcji PInvoke
 Funkcje, które są implementowane w niezarządzanych bibliotek DLL może być wywołana z kodu zarządzanego za pomocą funkcji wywołania platformy (P/Invoke). Jeśli kod źródłowy dla biblioteki DLL nie jest dostępna, P/Invoke jest jedyną opcją dla współpracy. Jednak w przeciwieństwie do innych języków .NET, Visual C++ stanowi alternatywę dla metody P/Invoke. Aby uzyskać więcej informacji, zobacz [za pomocą międzyoperacyjności języka C++ (niejawna funkcja PInvoke)](../dotnet/using-cpp-interop-implicit-pinvoke.md).  
   
 ## <a name="example"></a>Przykład  
- Poniższy przykład kodu używa Win32 [GetSystemMetrics](https://msdn.microsoft.com/library/windows/desktop/ms724385) funkcję, aby pobrać aktualna rozdzielczość ekranu w pikselach.  
+ Poniższy przykład kodu używa Win32 [GetSystemMetrics](/windows/desktop/api/winuser/nf-winuser-getsystemmetrics) funkcję, aby pobrać aktualna rozdzielczość ekranu w pikselach.  
   
  Dla funkcji, które używają tylko typy wewnętrzne jako argumenty i zwracać wartości nie dodatkowej pracy jest wymagana. Inne typy danych, takich jak wskaźniki funkcji, tablic i struktur, wymagają dodatkowe atrybuty, aby upewnić się, organizowanie odpowiednie dane.  
   

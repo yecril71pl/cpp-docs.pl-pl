@@ -23,12 +23,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6b7ec520d27d52bb3e50a58780d822363016ef76
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: ff46958afea8825f29941d9f3cbead20c533c76c
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42606866"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43676988"
 ---
 # <a name="clr-common-language-runtime-compilation"></a>/clr (Kompilacja środowiska uruchomieniowego języka wspólnego)
 Umożliwia aplikacji i składników korzystać z funkcji z środowisko uruchomieniowe języka wspólnego (CLR).  
@@ -68,9 +68,7 @@ Umożliwia aplikacji i składników korzystać z funkcji z środowisko uruchomie
  Przed Visual C++ 2005 **/clr:noAssembly** wymagane **/LD**. **/LD** teraz jest implikowane przy określeniu **/clr:noAssembly**.  
   
  **/clr:initialAppDomain**  
- Umożliwia aplikacji Visual C++ do uruchomienia na 1 wersję środowiska CLR. Jeśli używasz **initialAppDomain**, a następnie może zostać wyświetlony niektóre problemy, które zostały omówione w [USTERKI: AppDomainUnloaded wyjątku, gdy używasz zarządzanych rozszerzeń dla składników Visual C++](http://go.microsoft.com/fwlink/p/?linkid=169465) w programie Microsoft Witryna sieci Web pomocy technicznej.  
-  
- Aplikacja, która jest kompilowany przy użyciu **initialAppDomain** nie powinny być używane przez aplikację, która używa programu ASP.NET, ponieważ nie jest obsługiwana w wersji 1 środowiska CLR.  
+ Umożliwia aplikacji Visual C++ do uruchomienia na 1 wersję środowiska CLR.  Aplikacja, która jest kompilowany przy użyciu **initialAppDomain** nie powinny być używane przez aplikację, która używa programu ASP.NET, ponieważ nie jest obsługiwana w wersji 1 środowiska CLR.  
   
  **/clr:nostdlib**  
  Nakazuje kompilatorowi ignorowanie domyślny katalog \clr. W przypadku dołączania wielu wersji biblioteki DLL, takich jak System.dll, kompilator generuje błędy. Użycie tej opcji pozwala określić określonym środowiskiem do użycia podczas kompilacji.  

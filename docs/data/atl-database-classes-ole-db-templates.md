@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 91cd06ea1d8ff697da6c4959fff34fdc3798dcfd
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 6df13353b61347455cc5d707f099086429d46f6f
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43218991"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43677872"
 ---
 # <a name="atl-database-classes-ole-db-templates"></a>Klasy baz danych ATL (Szablony OLE DB)
 Firma Microsoft udostępnia kilka implementacji OLE DB, zbiór interfejsów COM, które udostępniają jednolity dostęp do danych z różnymi źródłami informacji i formatów.  OLE DB oficjalnie jest przestarzała; Ta dokumentacja jest dla deweloperów, którzy są obsługi starszego kodu. Nowe aplikacje powinny używać ODBC do łączenia ze źródłami danych SQL.
@@ -39,11 +39,11 @@ Firma Microsoft udostępnia kilka implementacji OLE DB, zbiór interfejsów COM,
   
  Należy pamiętać, że biblioteka MFC zawiera jedną klasę [COleDBRecordView](../mfc/reference/coledbrecordview-class.md), który wyświetla rekordy bazy danych w kontrolkach. Widok jest podłączone bezpośrednio do widoku formularza `CRowset` obiektu, a następnie wyświetla pola `CRowset` obiektu w kontrolkach szablonu okna dialogowego.  
   
- Aby uzyskać więcej informacji, zobacz [OLE DB programowania](../data/oledb/ole-db-programming.md) i [OLE DB przewodnik](http://go.microsoft.com/fwlink/p/?linkid=121548).  
+ Aby uzyskać więcej informacji, zobacz [OLE DB programowania](../data/oledb/ole-db-programming.md) i [OLE DB przewodnik](/previous-versions/windows/desktop/ms713643\(v=vs.85\)).  
   
 ## <a name="see-also"></a>Zobacz też  
  [Tworzenie konsumenta OLE DB](../data/oledb/creating-an-ole-db-consumer.md)   
  [Tworzenie dostawcy OLE DB](../data/oledb/creating-an-ole-db-provider.md)   
  [OLE DB — Kompendium szablonów konsumentów](../data/oledb/ole-db-consumer-templates-reference.md)   
  [OLE DB Provider szablony — dokumentacja](../data/oledb/ole-db-provider-templates-reference.md)   
- [Przykłady szablonów OLE DB](https://msdn.microsoft.com/08958863-0b5f-41ad-ae99-fca7440c553c)
+ [Przykłady szablonów OLE DB](https://github.com/Microsoft/VCSamples)

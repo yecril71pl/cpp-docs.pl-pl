@@ -1,7 +1,7 @@
 ---
 title: QWORD | Dokumentacja firmy Microsoft
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 08/30/2018
 ms.technology:
 - cpp-masm
 ms.topic: reference
@@ -16,23 +16,23 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9888a6d7d918df1c9a5d83a28fca002d2ab59cf4
-ms.sourcegitcommit: dbca5fdd47249727df7dca77de5b20da57d0f544
+ms.openlocfilehash: b55691b9e91b8534b530059e95d856c11be7ea0c
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/28/2018
-ms.locfileid: "32052915"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43682013"
 ---
 # <a name="qword"></a>QWORD
-Przydziela i opcjonalnie inicjuje 8 bajtów magazynu dla każdej `initializer`. Można także używać jako Specyfikator typu dowolnym typem jest dozwolony.  
-  
-## <a name="syntax"></a>Składnia  
-  
-```  
-[[name]] QWORD initializer [[, initializer]]...  
-```  
-  
-## <a name="see-also"></a>Zobacz też  
- [Odwołania do dyrektyw](../../assembler/masm/directives-reference.md)   
- [SQWORD](../../assembler/masm/qword.md)   
- [DQ](../../assembler/masm/dq.md)
+
+Przydziela i opcjonalnie inicjuje 8 bajtów magazynu dla każdego `initializer`. Może również służyć jako specyfikatora typu dowolnym typem jest dozwolony.
+
+## <a name="syntax"></a>Składnia
+
+> [[name]] Inicjator QWORD [[, inicjator]]...
+
+## <a name="see-also"></a>Zobacz także
+
+[Dokumentacja dyrektyw](../../assembler/masm/directives-reference.md)<br/>
+[SQWORD](../../assembler/masm/qword.md)<br/>
+[DQ](../../assembler/masm/dq.md)<br/>

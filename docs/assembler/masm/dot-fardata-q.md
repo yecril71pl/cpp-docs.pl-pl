@@ -1,7 +1,7 @@
 ---
 title: .FARDATA? | Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 08/30/2018
 ms.technology:
 - cpp-masm
 ms.topic: reference
@@ -16,22 +16,21 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 55c859356aa3c4f4a1c07cd7902b75dacd8afcf4
-ms.sourcegitcommit: dbca5fdd47249727df7dca77de5b20da57d0f544
+ms.openlocfilehash: 28e6f26459a6c1513969c6f1d51e070f672b2647
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/28/2018
-ms.locfileid: "32051667"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43683148"
 ---
 # <a name="fardata"></a>.FARDATA?
-W przypadku użycia z [. MODEL](../../assembler/masm/dot-model.md), uruchamia segmentu danych daleko niezainicjowanych danych (Nazwa segmentu FAR_BSS lub *nazwa*).  
-  
-## <a name="syntax"></a>Składnia  
-  
-```  
-  
-.FARDATA? [[name]]  
-```  
-  
-## <a name="see-also"></a>Zobacz też  
- [Dokumentacja dyrektyw](../../assembler/masm/directives-reference.md)
+
+Gdy jest używane z [. MODEL](../../assembler/masm/dot-model.md), rozpoczyna się segmentu danych daleko niezainicjowanych danych (Nazwa segmentu FAR_BSS lub *nazwa*).
+
+## <a name="syntax"></a>Składnia
+
+> .FARDATA? [[name]]
+
+## <a name="see-also"></a>Zobacz także
+
+[Dokumentacja dyrektyw](../../assembler/masm/directives-reference.md)<br/>

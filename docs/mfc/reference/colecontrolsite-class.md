@@ -116,12 +116,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f79917e34a749048696f320a8311978acc2739f4
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 1c1d483f6ba532a6d8eeee1a8ec831cfd1d94b62
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43202858"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43678012"
 ---
 # <a name="colecontrolsite-class"></a>Klasa COleControlSite
 Zapewnia obsługę interfejsów kontrolki niestandardowej po stronie klienta.  
@@ -797,7 +797,7 @@ virtual BOOL ModifyStyle(
  Style, które mają zostać dodane z bieżącym Style okna ramowego.  
   
  *nFlags*  
- Okno pozycjonowanie flag. Aby uzyskać listę możliwych wartości, zobacz [SetWindowPos](https://msdn.microsoft.com/library/windows/desktop/ms633545) funkcji w zestawie Windows SDK.  
+ Okno pozycjonowanie flag. Aby uzyskać listę możliwych wartości, zobacz [SetWindowPos](/windows/desktop/api/winuser/nf-winuser-setwindowpos) funkcji w zestawie Windows SDK.  
   
 ### <a name="return-value"></a>Wartość zwracana  
  Różna od zera, jeśli style zostaną zmienione, w przeciwnym razie wartość zero.  
@@ -805,7 +805,7 @@ virtual BOOL ModifyStyle(
 ### <a name="remarks"></a>Uwagi  
  Stock formantu właściwość włączone zostaną zmodyfikowane w taki sposób, aby dopasować ustawienie WS_DISABLED. Podstawowe właściwości Styl obramowania formantu zostaną zmodyfikowane w taki sposób, aby dopasować żądany ustawienie WS_BORDER. Innymi stylami są stosowane bezpośrednio do dojścia okna kontrolki, jeśli jest obecna.  
   
- Modyfikuje style okna ramowego formantu. Style, które mają być dodane lub usunięte, może być połączone za pomocą bitowe OR ( &#124; ) — operator. Zobacz [CreateWindow](https://msdn.microsoft.com/library/windows/desktop/ms632679) funkcji w zestawie Windows SDK dla informacji o stylach dostępnym oknie.  
+ Modyfikuje style okna ramowego formantu. Style, które mają być dodane lub usunięte, może być połączone za pomocą bitowe OR ( &#124; ) — operator. Zobacz [CreateWindow](/windows/desktop/api/winuser/nf-winuser-createwindowa) funkcji w zestawie Windows SDK dla informacji o stylach dostępnym oknie.  
   
  Jeśli *nFlags* jest różna od zera, `ModifyStyle` wywołuje funkcję Win32 `SetWindowPos`i ponownie rysuje okna, łącząc *nFlags* z czterech następujących flag:  
   
@@ -837,7 +837,7 @@ virtual BOOL ModifyStyleEx(
  Rozszerzone style do dodania z bieżącym Style okna ramowego.  
   
  *nFlags*  
- Okno pozycjonowanie flag. Aby uzyskać listę możliwych wartości, zobacz [SetWindowPos](https://msdn.microsoft.com/library/windows/desktop/ms633545) funkcji w zestawie Windows SDK.  
+ Okno pozycjonowanie flag. Aby uzyskać listę możliwych wartości, zobacz [SetWindowPos](/windows/desktop/api/winuser/nf-winuser-setwindowpos) funkcji w zestawie Windows SDK.  
   
 ### <a name="return-value"></a>Wartość zwracana  
  Różna od zera, jeśli style zostaną zmienione, w przeciwnym razie wartość zero.  
@@ -845,7 +845,7 @@ virtual BOOL ModifyStyleEx(
 ### <a name="remarks"></a>Uwagi  
  Stock formantu właściwości wyglądu zostaną zmodyfikowane w taki sposób, aby dopasować ustawienie WS_EX_CLIENTEDGE. Wszystkie inne rozszerzone Style okna są stosowane bezpośrednio do dojścia okna kontrolki, jeśli jest obecna.  
   
- Modyfikuje okna rozszerzone style obiektu kontroli lokacji. Style, które mają być dodane lub usunięte, może być połączone za pomocą bitowe OR ( &#124; ) — operator. Zobacz [elementu CreateWindowEx](https://msdn.microsoft.com/library/windows/desktop/ms632680) funkcji w zestawie Windows SDK dla informacji o stylach dostępnym oknie.  
+ Modyfikuje okna rozszerzone style obiektu kontroli lokacji. Style, które mają być dodane lub usunięte, może być połączone za pomocą bitowe OR ( &#124; ) — operator. Zobacz [elementu CreateWindowEx](/windows/desktop/api/winuser/nf-winuser-createwindowexa) funkcji w zestawie Windows SDK dla informacji o stylach dostępnym oknie.  
   
  Jeśli *nFlags* jest różna od zera, `ModifyStyleEx` wywołuje funkcję Win32 `SetWindowPos`i ponownie rysuje okna, łącząc *nFlags* z czterech następujących flag:  
   
@@ -1051,7 +1051,7 @@ virtual BOOL SetWindowPos(
  Nową wysokość okna.  
   
  *nFlags*  
- Określa okna, rozmiar i położenie flag. Aby uzyskać możliwych wartości, zobacz sekcję Spostrzeżenia, aby [SetWindowPos](https://msdn.microsoft.com/library/windows/desktop/ms633545) w zestawie Windows SDK.  
+ Określa okna, rozmiar i położenie flag. Aby uzyskać możliwych wartości, zobacz sekcję Spostrzeżenia, aby [SetWindowPos](/windows/desktop/api/winuser/nf-winuser-setwindowpos) w zestawie Windows SDK.  
   
 ### <a name="return-value"></a>Wartość zwracana  
  Wartość różną od zera jeśli to się powiedzie, w przeciwnym razie wartość zero.  

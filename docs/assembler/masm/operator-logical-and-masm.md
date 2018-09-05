@@ -1,7 +1,7 @@
 ---
-title: operator &amp; &amp; (MASM) | Dokumentacja firmy Microsoft
+title: Operator podstawienia (MASM) | Dokumentacja firmy Microsoft
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 08/30/2018
 ms.technology:
 - cpp-masm
 ms.topic: reference
@@ -17,25 +17,21 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 03e285e5b691b2fdd24216a1156e8fe3708afe23
-ms.sourcegitcommit: dbca5fdd47249727df7dca77de5b20da57d0f544
+ms.openlocfilehash: a5af8bbb4f01e31493ebeb73c425b1ace031ddf1
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/28/2018
-ms.locfileid: "32055758"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43683473"
 ---
-# <a name="operator-ampamp-masm"></a>operator &amp; &amp; (MASM)
-Zastępuje `parameter` z jego wartość argumentu.  
-  
-## <a name="syntax"></a>Składnia  
-  
-```  
-  
-&  
-parameter  
-&  
-  
-```  
-  
-## <a name="see-also"></a>Zobacz też  
- [Dokumentacja operatorów](../../assembler/masm/operators-reference.md)
+# <a name="substitution-operator-masm"></a>Operator podstawienia (MASM)
+
+Zastępuje *parametru* z jego odpowiednia wartość argumentu.
+
+## <a name="syntax"></a>Składnia
+
+> &*Parametr*&
+
+## <a name="see-also"></a>Zobacz także
+
+[Dokumentacja operatorów](../../assembler/masm/operators-reference.md)<br/>

@@ -1,7 +1,7 @@
 ---
 title: Dyrektywy danych i operatory w zestawie wbudowanym | Dokumentacja firmy Microsoft
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 08/30/2018
 ms.technology:
 - cpp-masm
 ms.topic: conceptual
@@ -23,18 +23,21 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0bd3bc686cc8cee1a02e9df936f80f542bec26bd
-ms.sourcegitcommit: dbca5fdd47249727df7dca77de5b20da57d0f544
+ms.openlocfilehash: 6aff2f4c5ce5e7f5592aa9ec707d002c57f0eac0
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/28/2018
-ms.locfileid: "32051389"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43678740"
 ---
 # <a name="data-directives-and-operators-in-inline-assembly"></a>Dyrektywy danych i operatory w zestawie wbudowanym
-## <a name="microsoft-specific"></a>Specyficzne dla firmy Microsoft  
- Mimo że `__asm` bloku może odwoływać się typy danych języka C lub C++ i obiektów, nie można zdefiniować obiekty danych z dyrektywy MASM lub operatorów. W szczególności nie można użyć dyrektywy definicji **DB**, `DW`, **DD**, `DQ`, `DT`, i `DF`, lub operatory `DUP` lub  **TO**. MASM struktury i rejestruje także są niedostępne. Asembler wbudowany nie akceptuje dyrektywy `STRUC`, `RECORD`, **SZEROKOŚĆ**, lub **MASKI**.  
-  
- **KOŃCOWY określonych firmy Microsoft**  
-  
-## <a name="see-also"></a>Zobacz też  
- [Korzystanie z języka Asembler w blokach __asm](../../assembler/inline/using-assembly-language-in-asm-blocks.md)
+
+**Microsoft Specific**
+
+Mimo że `__asm` bloku można odwoływać się do typów danych C lub C++ i obiektów, nie można zdefiniować, obiektów danych za pomocą dyrektywy MASM lub operatorów. Ściślej mówiąc, nie można użyć dyrektywy definicji **DB**, `DW`, **DD**, `DQ`, `DT`, i `DF`, lub operatorów `DUP` lub  **TO**. MASM struktur i rejestruje również są niedostępne. Wbudowany asembler nie zaakceptuje dyrektywy `STRUC`, `RECORD`, **SZEROKOŚĆ**, lub **MASKI**.
+
+**END specyficzny dla Microsoft**
+
+## <a name="see-also"></a>Zobacz także
+
+[Korzystanie z języka Asembler w blokach __asm](../../assembler/inline/using-assembly-language-in-asm-blocks.md)<br/>

@@ -20,12 +20,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5c4acddaeac8e63ecd09860ffc9c56c97b212506
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: e0a4e8c47ea924fc098458219946f440f093339c
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43219731"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43681740"
 ---
 # <a name="single-inheritance"></a>Pojedyncze dziedziczenie
 W "pojedyncze dziedziczenie," wspólnej formy dziedziczenie, klasy mają tylko jedną klasę bazową. Należy wziąć pod uwagę relację przedstawiono na poniższej ilustracji.  
@@ -63,7 +63,7 @@ Przykładowe skierowanym grafie Acyklicznym
  Na diagramie powyżej o nazwie "skierowanym grafie acyklicznym" (lub "DAG"), niektóre z klas są klasy bazowe dla klasy pochodnej więcej niż jeden. Jednakże, odwrotna sytuacja nie jest wartość true: istnieje tylko jeden bezpośrednią klasą bazową dla dowolnej podanej klasy pochodnej. Wykres na rysunku przedstawiono strukturę "pojedyncze dziedziczenie".  
   
 > [!NOTE]
->  Grafy acykliczne ukierunkowanej nie są unikatowe dla pojedyncze dziedziczenie. Służą one również opisujący wykresy dziedziczenia wielokrotnego. W tym temacie omówiono [wielokrotne dziedziczenie](https://msdn.microsoft.com/3b74185e-2beb-4e29-8684-441e51d2a2ca).  
+>  Grafy acykliczne ukierunkowanej nie są unikatowe dla pojedyncze dziedziczenie. Służą one również opisujący wykresy dziedziczenia wielokrotnego.  
   
  W dziedziczenie Klasa pochodna zawiera elementy członkowskie klasy bazowej, a także nowych elementów członkowskich, które można dodać. W rezultacie klasy pochodnej może odwoływać się do elementów członkowskich klasy podstawowej, (chyba że te elementy członkowskie są ponownie zdefiniowana w klasie pochodnej). Operator rozpoznawania zakresu (`::`) może służyć do odwoływania się do elementów członkowskich bezpośredniej lub pośredniej klasy bazowej, gdy tych członków mają został ponownie zdefiniowana w klasie pochodnej. Rozważmy następujący przykład:  
   

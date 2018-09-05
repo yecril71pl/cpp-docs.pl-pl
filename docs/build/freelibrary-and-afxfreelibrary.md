@@ -23,25 +23,25 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f1e1bf5f1a05438ddf89af86c9b0d12e7885b901
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 063c858253c12cfedbf252a124029b8cbc16a691
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32367514"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43680966"
 ---
 # <a name="freelibrary-and-afxfreelibrary"></a>FreeLibrary i AfxFreeLibrary
-Procesy, które jawnie link do wywołania DLL [FreeLibrary](http://go.microsoft.com/fwlink/p/?LinkID=259188) działać, jeśli moduł biblioteki DLL nie jest już potrzebne. To funkcja zmniejsza liczbę odwołanie do modułu i jeśli liczba odwołań wynosi zero, usuwa ją z przestrzeni adresowej procesu mapowanie.  
+Procesy, które jawnie utworzyć łącze do wywołania biblioteki DLL [FreeLibrary](https://msdn.microsoft.com/library/windows/desktop/ms683152(v=vs.85).aspx) działa, gdy moduł DLL nie jest już potrzebny. Ta funkcja zmniejsza liczbę odwołań modułu i jeśli licznik odwołań wynosi zero, unmaps go z przestrzeni adresowej procesu.  
   
- W aplikacji MFC, użyj [AfxFreeLibrary](../mfc/reference/application-information-and-management.md#afxfreelibrary) zamiast `FreeLibrary` można zwolnić bibliotekę DLL rozszerzenia MFC. Interfejs (prototypu funkcji) dla `AfxFreeLibrary` jest taka sama jak `FreeLibrary`.  
+ W aplikacji MFC, należy użyć [AfxFreeLibrary](../mfc/reference/application-information-and-management.md#afxfreelibrary) zamiast `FreeLibrary` wyładować bibliotekę DLL rozszerzenia MFC. Interfejs (prototyp funkcji) `AfxFreeLibrary` jest taka sama jak `FreeLibrary`.  
   
 ## <a name="what-do-you-want-to-do"></a>Co chcesz zrobić?  
   
--   [Jak połączyć niejawnie z biblioteki DLL](../build/linking-an-executable-to-a-dll.md#linking-implicitly)  
+-   [Jak połączyć niejawnie biblioteki DLL](../build/linking-an-executable-to-a-dll.md#linking-implicitly)  
   
--   [Określić jakiej metody łączenia użyć](../build/linking-an-executable-to-a-dll.md#determining-which-linking-method-to-use)  
+-   [Określić, której metody łączenia użyjesz](../build/linking-an-executable-to-a-dll.md#determining-which-linking-method-to-use)  
   
-## <a name="what-do-you-want-to-know-more-about"></a>Co chcesz dowiedzieć się więcej o?  
+## <a name="what-do-you-want-to-know-more-about"></a>Co chcesz dowiedzieć się więcej na temat?  
   
 -   [LoadLibrary i AfxLoadLibrary](../build/loadlibrary-and-afxloadlibrary.md)  
   
@@ -49,5 +49,5 @@ Procesy, które jawnie link do wywołania DLL [FreeLibrary](http://go.microsoft.
   
 ## <a name="see-also"></a>Zobacz też  
  [Biblioteki dll w programie Visual C++](../build/dlls-in-visual-cpp.md)   
- [FreeLibrary](http://go.microsoft.com/fwlink/p/?LinkID=259188)   
+ [FreeLibrary](https://msdn.microsoft.com/library/windows/desktop/ms683152(v=vs.85).aspx)   
  [AfxFreeLibrary](../mfc/reference/application-information-and-management.md#afxfreelibrary)

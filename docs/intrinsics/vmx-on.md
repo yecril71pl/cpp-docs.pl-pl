@@ -17,12 +17,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e01be3d3f7db075116782b64e8b92ba12fb02f1d
-ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
+ms.openlocfilehash: 4321a082efa71ecc81963099317ad3600ce8b36f
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "42464739"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43676201"
 ---
 # <a name="vmxon"></a>__vmx_on
 **Microsoft Specific**  
@@ -50,7 +50,7 @@ unsigned char __vmx_on(
 |2|Operacja nie powiodła się bez informacji o stanie.|  
   
 ## <a name="remarks"></a>Uwagi  
- `__vmx_on` Funkcja odpowiada `VMXON` machine instrukcji. Ta funkcja obsługuje interakcji monitor maszyny wirtualnej hosta z gościa operacyjnego i jego aplikacji. Aby uzyskać więcej informacji, wyszukaj dokumentu, "Intel Virtualization Technical Preview specyfikacji dla IA-32 architekturze firmy Intel," dokumentu numer C97063-002 w [Intel Corporation](http://go.microsoft.com/fwlink/p/?linkid=127) lokacji.  
+ `__vmx_on` Funkcja odpowiada `VMXON` machine instrukcji. Ta funkcja obsługuje interakcji monitor maszyny wirtualnej hosta z gościa operacyjnego i jego aplikacji. Aby uzyskać więcej informacji, wyszukaj dokumentu, "Intel Virtualization Technical Preview specyfikacji dla IA-32 architekturze firmy Intel," dokumentu numer C97063-002 w [Intel Corporation](https://software.intel.com/en-us/articles/intel-sdm) lokacji.  
   
 ## <a name="requirements"></a>Wymagania  
   

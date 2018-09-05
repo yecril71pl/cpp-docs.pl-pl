@@ -19,12 +19,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: e135dd1cbfc3aeb164449a1f09e6c1cdf6287582
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: bbf85f8da0477de2483ee2ce4b981d832421da95
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43215123"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43680905"
 ---
 # <a name="how-to-marshal-structures-using-c-interop"></a>Porady: przeprowadzanie marshalingu struktur za pomocą międzyoperacyjności języka C++
 W tym temacie przedstawiono jeden zestaw reguł współdziałania Visual C++. Aby uzyskać więcej informacji, zobacz [za pomocą międzyoperacyjności języka C++ (niejawna funkcja PInvoke)](../dotnet/using-cpp-interop-implicit-pinvoke.md).  
@@ -32,7 +32,7 @@ W tym temacie przedstawiono jeden zestaw reguł współdziałania Visual C++. Ab
  Poniższy kod przykłady użycia [zarządzane, niezarządzane](../preprocessor/managed-unmanaged.md) #pragma — dyrektywy do zaimplementowania zarządzanych i niezarządzanych funkcji w tym samym pliku, ale te funkcje współpracować w taki sam sposób, jeśli zdefiniowany w oddzielnych plikach. Pliki zawierające tylko funkcji niezarządzanych nie muszą być skompilowana przy użyciu [/CLR (kompilacja języka wspólnego środowiska uruchomieniowego)](../build/reference/clr-common-language-runtime-compilation.md).  
   
 ## <a name="example"></a>Przykład  
- W poniższym przykładzie pokazano, przekazywanie struktury z zarządzanej do niezarządzanej funkcji, według wartości i według odwołania. Ponieważ struktura, w tym przykładzie zawiera typy danych wyłącznie proste, wewnętrzne (zobacz [Kopiowalne i typy danych Kopiowalnych inne niż](https://msdn.microsoft.com/Library/d03b050e-2916-49a0-99ba-f19316e5c1b3)), specjalne zarządzanie nie jest wymagane. Do organizowania niekopiowalnych struktur, takich jak te, które zawierają wskaźników, zobacz [instrukcje: przeprowadzanie Marshalingu osadzonych wskaźników za pomocą międzyoperacyjności języka C++](../dotnet/how-to-marshal-embedded-pointers-using-cpp-interop.md).  
+ W poniższym przykładzie pokazano, przekazywanie struktury z zarządzanej do niezarządzanej funkcji, według wartości i według odwołania. Ponieważ struktura, w tym przykładzie zawiera typy danych wyłącznie proste, wewnętrzne (zobacz [Kopiowalne i typy danych Kopiowalnych inne niż](/dotnet/framework/interop/blittable-and-non-blittable-types)), specjalne zarządzanie nie jest wymagane. Do organizowania niekopiowalnych struktur, takich jak te, które zawierają wskaźników, zobacz [instrukcje: przeprowadzanie Marshalingu osadzonych wskaźników za pomocą międzyoperacyjności języka C++](../dotnet/how-to-marshal-embedded-pointers-using-cpp-interop.md).  
   
 ```  
 // PassStruct1.cpp  
@@ -89,7 +89,7 @@ int main() {
 ```  
   
 ## <a name="example"></a>Przykład  
- W poniższym przykładzie pokazano, przekazywanie struktury z niezarządzanych do zarządzanej funkcji, według wartości i według odwołania. Ponieważ struktura, w tym przykładzie zawiera typy danych wyłącznie proste, wewnętrzne (zobacz [Kopiowalne i typy danych Kopiowalnych inne niż](https://msdn.microsoft.com/Library/d03b050e-2916-49a0-99ba-f19316e5c1b3)), nie kierowania jest wymagana. Do organizowania niekopiowalnych struktur, takich jak te, które zawierają wskaźników, zobacz [instrukcje: przeprowadzanie Marshalingu osadzonych wskaźników za pomocą międzyoperacyjności języka C++](../dotnet/how-to-marshal-embedded-pointers-using-cpp-interop.md).  
+ W poniższym przykładzie pokazano, przekazywanie struktury z niezarządzanych do zarządzanej funkcji, według wartości i według odwołania. Ponieważ struktura, w tym przykładzie zawiera typy danych wyłącznie proste, wewnętrzne (zobacz [Kopiowalne i typy danych Kopiowalnych inne niż](/dotnet/framework/interop/blittable-and-non-blittable-types)), nie kierowania jest wymagana. Do organizowania niekopiowalnych struktur, takich jak te, które zawierają wskaźników, zobacz [instrukcje: przeprowadzanie Marshalingu osadzonych wskaźników za pomocą międzyoperacyjności języka C++](../dotnet/how-to-marshal-embedded-pointers-using-cpp-interop.md).  
   
 ```  
 // PassStruct2.cpp  

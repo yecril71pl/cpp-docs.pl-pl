@@ -172,12 +172,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 60eed80d9f26ad33ce7f2af48cfca0a90c7d26b6
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 6ebae1828d102881d866e05d41f1831e35e01a51
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43210254"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43679250"
 ---
 # <a name="ctreectrl-class"></a>Klasa CTreeCtrl
 Oferuje funkcje formantu Windows typowego widoku drzewa.  
@@ -318,7 +318,7 @@ virtual BOOL Create(
   
 ### <a name="parameters"></a>Parametry  
  *dwStyle*  
- Określa styl kontrolki widoku drzewa. Zastosuj style okna ramowego opisanego w [CreateWindow](https://msdn.microsoft.com/library/windows/desktop/ms632679)i dowolną kombinację [style kontrolki widoku drzewa](/windows/desktop/Controls/tree-view-control-window-styles) zgodnie z opisem w zestawie Windows SDK.  
+ Określa styl kontrolki widoku drzewa. Zastosuj style okna ramowego opisanego w [CreateWindow](/windows/desktop/api/winuser/nf-winuser-createwindowa)i dowolną kombinację [style kontrolki widoku drzewa](/windows/desktop/Controls/tree-view-control-window-styles) zgodnie z opisem w zestawie Windows SDK.  
   
  *Rect*  
  Określa rozmiar i położenie kontrolki widoku drzewa. Może być albo [CRect](../../atl-mfc-shared/reference/crect-class.md) obiektu lub [Prostokąt](https://msdn.microsoft.com/library/windows/desktop/dd162897) struktury.  
@@ -356,10 +356,10 @@ virtual BOOL CreateEx(
   
 ### <a name="parameters"></a>Parametry  
  *dwExStyle*  
- Określa styl rozszerzony kontrolki tworzona. Aby uzyskać listę rozszerzone style Windows, zobacz *dwExStyle* parametr [elementu CreateWindowEx](https://msdn.microsoft.com/library/windows/desktop/ms632680) w zestawie Windows SDK.  
+ Określa styl rozszerzony kontrolki tworzona. Aby uzyskać listę rozszerzone style Windows, zobacz *dwExStyle* parametr [elementu CreateWindowEx](/windows/desktop/api/winuser/nf-winuser-createwindowexa) w zestawie Windows SDK.  
   
  *dwStyle*  
- Określa styl kontrolki widoku drzewa. Zastosuj style okna ramowego opisanego w [CreateWindow](https://msdn.microsoft.com/library/windows/desktop/ms632679)i dowolną kombinację [style kontrolki widoku drzewa](/windows/desktop/Controls/tree-view-control-window-styles) zgodnie z opisem w zestawie Windows SDK.  
+ Określa styl kontrolki widoku drzewa. Zastosuj style okna ramowego opisanego w [CreateWindow](/windows/desktop/api/winuser/nf-winuser-createwindowa)i dowolną kombinację [style kontrolki widoku drzewa](/windows/desktop/Controls/tree-view-control-window-styles) zgodnie z opisem w zestawie Windows SDK.  
   
  *Rect*  
  Odwołanie do [Prostokąt](https://msdn.microsoft.com/library/windows/desktop/dd162897) struktury opisujących rozmiar i położenie okna, można utworzyć klienta współrzędne *pParentWnd*.  

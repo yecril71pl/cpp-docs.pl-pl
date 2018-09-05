@@ -19,18 +19,16 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: ba809b4522637fd7307a403601f4621a5cb53ce8
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 4fe7dac220838841179096e8fe40d2c04dfcad1b
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43215243"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43677274"
 ---
 # <a name="editing-managed-resource-files"></a>Edytowanie zarządzanych plików zasobów
 
 Zarządzanych plików zasobów (.resx) są plikami XML. Po dodaniu plik zasobu zarządzanego projektu z **Dodaj nowy element** okno dialogowe **Edytor zasobów zarządzanych** domyślnie otwierany.
-
-Aby uzyskać więcej informacji, zobacz [zasobów. Format pliku ResX](https://msdn.microsoft.com/0c476133-87e4-47e8-b0ef-4b88f4ef3dc5).
 
 ## <a name="see-also"></a>Zobacz też
 

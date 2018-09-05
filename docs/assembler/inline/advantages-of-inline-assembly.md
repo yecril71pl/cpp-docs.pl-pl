@@ -1,7 +1,7 @@
 ---
 title: Zalety wbudowanego asemblera | Dokumentacja firmy Microsoft
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 08/30/2018
 ms.technology:
 - cpp-masm
 ms.topic: conceptual
@@ -16,30 +16,33 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 998ec5ff04911d3e476f0864f81f82b804969a82
-ms.sourcegitcommit: dbca5fdd47249727df7dca77de5b20da57d0f544
+ms.openlocfilehash: 820c862b90de3fd0d91a68d5a388b77f9a30a142
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/28/2018
-ms.locfileid: "32051710"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43682723"
 ---
 # <a name="advantages-of-inline-assembly"></a>Zalety wbudowanego asemblera
-## <a name="microsoft-specific"></a>Specyficzne dla firmy Microsoft  
- Asembler wbudowany nie wymagają osobny zestaw i kroki łącze, jest wygodniejsze niż oddzielne asemblera. Kod zestawu wbudowanego można użyć dowolnego C zmienną lub funkcję nazwę, która znajduje się w zakresie, dlatego łatwo zintegrować ją z kodem C z programem. Ponieważ kodu zestawu można łączyć wbudowany w instrukcjach języka C lub C++, możliwość zadania, które są skomplikowane lub niemożliwe w języka C lub C++.  
-  
- Używa wbudowanego asemblera obejmują:  
-  
--   Pisanie funkcji w języku zestawu.  
-  
--   Optymalizacja miejscu krytyczna szybkość fragmentów kodu.  
-  
--   Wprowadzenie dostępu bezpośredniego sprzętu, sterowników urządzeń.  
-  
--   Pisanie kodu prolog i epilog dla wywołania "naked".  
-  
- Wbudowany zestaw jest narzędziem specjalnych. Jeśli planujesz portu aplikacji na różnych komputerach, prawdopodobnie należy umieścić kodu określonych maszyny w oddzielnego modułu. Ponieważ asemblera wbudowanego nie obsługuje wszystkich Microsoft Macro Assembler firmy (MASM) dyrektywy makr i danych, może być bardziej wygodne MASM dla tych modułów.  
-  
- **KOŃCOWY określonych firmy Microsoft**  
-  
-## <a name="see-also"></a>Zobacz też  
- [Wbudowany asembler](../../assembler/inline/inline-assembler.md)
+
+**Microsoft Specific**
+
+Ponieważ wbudowanego asemblera nie wymaga osobny zestaw i kroki łącze, jest bardziej wygodne niż stosowania oddzielnego asemblera. Wbudowany kod asemblera, można użyć dowolnego języka C nazwy zmiennej lub funkcji, która znajduje się w zakresie, dzięki czemu można łatwo ją zintegrować z kodu C programu. Ponieważ kod zestawu mogą być mieszane wbudowanego w instrukcjach języka C lub C++, tworzyć zadania, które są uciążliwe lub wręcz niemożliwe w C lub C++.
+
+Zastosowań wbudowanego asemblera obejmują:
+
+- Pisanie funkcji w języku zestawu.
+
+- Optymalizacja miejscu krytyczna szybkość sekcje kodu.
+
+- Sterowniki urządzeń, dzięki czemu dostęp bezpośrednie sprzętu.
+
+- Pisania kodu prologu i epilogu dla wywołań "naked".
+
+Wbudowany zestaw jest narzędziem specjalnego przeznaczenia. Jeśli planujesz portu aplikacji na różnych komputerach, prawdopodobnie będziesz chciał umieść kod specyficzny dla komputera w oddzielny moduł. Ponieważ wbudowanego asemblera nie obsługuje wszystkich Microsoft Macro Assembler firmy (MASM) dyrektywy makr i danych, może okazać się bardziej wygodne służące MASM dla tych modułów.
+
+**END specyficzny dla Microsoft**
+
+## <a name="see-also"></a>Zobacz także
+
+[Wbudowany asembler](../../assembler/inline/inline-assembler.md)<br/>

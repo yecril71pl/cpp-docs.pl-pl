@@ -1,7 +1,7 @@
 ---
 title: Pisanie funkcji w zestawie wbudowanym | Dokumentacja firmy Microsoft
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 08/30/2018
 ms.technology:
 - cpp-masm
 ms.topic: conceptual
@@ -17,75 +17,79 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c6c6c5b064dfc7d156d4de424e1ab69d74140f90
-ms.sourcegitcommit: dbca5fdd47249727df7dca77de5b20da57d0f544
+ms.openlocfilehash: c8b2694d2dc5781a6ef521abdc97e98c928be92c
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/28/2018
-ms.locfileid: "32052742"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43680831"
 ---
 # <a name="writing-functions-with-inline-assembly"></a>Pisanie funkcji w zestawie wbudowanym
-## <a name="microsoft-specific"></a>Specyficzne dla firmy Microsoft  
- Jeśli piszesz funkcji z kodu zestawu wbudowanego jest łatwo przekazywać argumenty do funkcji i zwracanie wartości z jej. Poniższe przykłady porównanie funkcji najpierw napisane dla oddzielnych asemblera i ulegną asemblera wbudowanego. Wywołana funkcja `power2`, otrzymuje dwa parametry pomnożenie pierwszy parametr przez 2 do potęgi drugiego parametru. Przeznaczone dla oddzielnych asemblera, funkcja może wyglądać następująco:  
-  
-```  
-; POWER.ASM  
-; Compute the power of an integer  
-;  
-       PUBLIC _power2  
-_TEXT SEGMENT WORD PUBLIC 'CODE'  
-_power2 PROC  
-  
-        push ebp        ; Save EBP  
-        mov ebp, esp    ; Move ESP into EBP so we can refer  
-                        ;   to arguments on the stack  
-        mov eax, [ebp+4] ; Get first argument  
-        mov ecx, [ebp+6] ; Get second argument  
-        shl eax, cl     ; EAX = EAX * ( 2 ^ CL )  
-        pop ebp         ; Restore EBP  
-        ret             ; Return with sum in EAX  
-  
-_power2 ENDP  
-_TEXT   ENDS  
-        END  
-```  
-  
- Ponieważ jest ona zapisywana na oddzielnych asemblera, funkcja wymaga kroki oddzielne źródło pliku i zestaw oraz łącza. Argumenty funkcji C i C++ zwykle są przekazywane na stosie, dlatego ta wersja `power2` funkcja uzyskuje dostęp do argumentów według ich pozycji na stosie. (Należy pamiętać, że **modelu** dyrektywy dostępne w MASM i innych asemblerów umożliwia również dostęp do argumentów stosu i zmienne lokalne, stos według nazwy.)  
-  
-## <a name="example"></a>Przykład  
- Zapisuje ten program `power2` funkcji z kodu zestawu wbudowanego:  
-  
-```  
-// Power2_inline_asm.c  
-// compile with: /EHsc  
-// processor: x86  
-  
-#include <stdio.h>  
-  
-int power2( int num, int power );  
-  
-int main( void )  
-{  
-    printf_s( "3 times 2 to the power of 5 is %d\n", \  
-              power2( 3, 5) );  
-}  
-int power2( int num, int power )  
-{  
-   __asm  
-   {  
-      mov eax, num    ; Get first argument  
-      mov ecx, power  ; Get second argument  
-      shl eax, cl     ; EAX = EAX * ( 2 to the power of CL )  
-   }  
-   // Return with result in EAX  
-}  
-```  
-  
- Wersja wbudowanego `power2` funkcji odwołuje się do jego argumentów według nazwy i pojawia się w tym samym pliku źródłowego, jako całego programu. Ta wersja również wymaga mniej instrukcje zestawu.  
-  
- Ponieważ wersja wbudowanego `power2` nie jest wykonywana C `return` instrukcji, powoduje nieszkodliwe ostrzeżenie, jeśli kompilacja na poziomie ostrzeżenia 2 lub nowszej. Funkcja zwraca wartość, ale kompilator nie wiadomo, że w przypadku braku `return` instrukcji. Można użyć [ostrzeżenie #pragma](../../preprocessor/warning.md) Aby wyłączyć generowanie to ostrzeżenie.  
-  
- **KOŃCOWY określonych firmy Microsoft**  
-  
-## <a name="see-also"></a>Zobacz też  
- [Korzystanie z C lub C++ w blokach __asm](../../assembler/inline/using-c-or-cpp-in-asm-blocks.md)
+
+**Microsoft Specific**
+
+Jeśli piszesz funkcji z kodem asemblera wbudowanego, jest łatwo przekazywać argumenty do funkcji i zwracanie wartości z niego. W następującym przykładzie porównano funkcji najpierw jest przeznaczony dla stosowania oddzielnego asemblera i ulegną asemblera wbudowanego. Wywołana funkcja `power2`, otrzymuje dwa parametry, mnożenie pierwszy parametr przez 2 do potęgi równej drugi parametr. Przeznaczony dla stosowania oddzielnego asemblera, funkcja może wyglądać następująco:
+
+```asm
+; POWER.ASM
+; Compute the power of an integer
+;
+       PUBLIC _power2
+_TEXT SEGMENT WORD PUBLIC 'CODE'
+_power2 PROC
+
+        push ebp        ; Save EBP
+        mov ebp, esp    ; Move ESP into EBP so we can refer
+                        ;   to arguments on the stack
+        mov eax, [ebp+4] ; Get first argument
+        mov ecx, [ebp+6] ; Get second argument
+        shl eax, cl     ; EAX = EAX * ( 2 ^ CL )
+        pop ebp         ; Restore EBP
+        ret             ; Return with sum in EAX
+
+_power2 ENDP
+_TEXT   ENDS
+        END
+```
+
+Ponieważ jest on przeznaczony dla stosowania oddzielnego asemblera, funkcja wymaga kroki oddzielne źródło pliku i asemblacji i łączenia. C i C++ argumenty funkcji są zazwyczaj przekazywane na stosie, dlatego ta wersja `power2` funkcja uzyskuje dostęp do argumentów według ich położenia na stosie. (Należy pamiętać, że **modelu** dyrektywy, dostępne w MASM i innych asemblerów umożliwia również dostęp do argumentów stosu i zmiennych lokalnych stosu według nazwy.)
+
+## <a name="example"></a>Przykład
+
+Ten program zapisuje `power2` funkcji z wbudowany kod asemblera:
+
+```cpp
+// Power2_inline_asm.c
+// compile with: /EHsc
+// processor: x86
+
+#include <stdio.h>
+
+int power2( int num, int power );
+
+int main( void )
+{
+    printf_s( "3 times 2 to the power of 5 is %d\n", \
+              power2( 3, 5) );
+}
+int power2( int num, int power )
+{
+   __asm
+   {
+      mov eax, num    ; Get first argument
+      mov ecx, power  ; Get second argument
+      shl eax, cl     ; EAX = EAX * ( 2 to the power of CL )
+   }
+   // Return with result in EAX
+}
+```
+
+Wbudowane wersję `power2` funkcja odnosi się do jego argumentów według nazwy i pojawia się w tym samym pliku źródłowym jako pozostałej części programu. Ta wersja również wymaga mniejszej liczby instrukcje zestawu.
+
+Ponieważ wbudowane wersję `power2` nie jest wykonywany C `return` instrukcji powoduje nieszkodliwe ostrzeżenie w przypadku kompilacji na poziom ostrzeżeń 2 lub nowszej. Funkcja zwraca wartość, ale kompilator nie wiadomo, że w przypadku braku `return` instrukcji. Możesz użyć [ostrzeżenie #pragma](../../preprocessor/warning.md) Aby wyłączyć generowanie to ostrzeżenie.
+
+**END specyficzny dla Microsoft**
+
+## <a name="see-also"></a>Zobacz także
+
+[Korzystanie z C lub C++ w blokach __asm](../../assembler/inline/using-c-or-cpp-in-asm-blocks.md)<br/>

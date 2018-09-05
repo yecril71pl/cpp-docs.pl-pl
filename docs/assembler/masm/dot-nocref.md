@@ -1,7 +1,7 @@
 ---
 title: . NOCREF | Dokumentacja firmy Microsoft
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 08/30/2018
 ms.technology:
 - cpp-masm
 ms.topic: reference
@@ -16,25 +16,25 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5ee936ebbbd2136f14fecf51bfe0b7d69c61a476
-ms.sourcegitcommit: dbca5fdd47249727df7dca77de5b20da57d0f544
+ms.openlocfilehash: 9ad9e4d84d8d49b4d1b5c71cc695031da9cd878e
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/28/2018
-ms.locfileid: "32055082"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43680003"
 ---
 # <a name="nocref"></a>.NOCREF
-Pomija lista symboli w pliku symboli w tabeli i przeglądarki.  
-  
-## <a name="syntax"></a>Składnia  
-  
-```  
-  
-.NOCREF [[name[[, name]]...]]  
-```  
-  
-## <a name="remarks"></a>Uwagi  
- Jeśli nazwy zostały określone, podanymi nazwami są pomijane. Taki sam jak [. XCREF](../../assembler/masm/dot-xcref.md).  
-  
-## <a name="see-also"></a>Zobacz też  
- [Dokumentacja dyrektyw](../../assembler/masm/directives-reference.md)
+
+Pomija lista symboli w pliku symboli w tabeli i przeglądarki.
+
+## <a name="syntax"></a>Składnia
+
+> . NOCREF [[nazwa [[, name]]...]]
+
+## <a name="remarks"></a>Uwagi
+
+Jeśli nie określono nazwy, tylko nazwy podanej są pomijane. Taki sam jak [. XCREF](../../assembler/masm/dot-xcref.md).
+
+## <a name="see-also"></a>Zobacz także
+
+[Dokumentacja dyrektyw](../../assembler/masm/directives-reference.md)<br/>

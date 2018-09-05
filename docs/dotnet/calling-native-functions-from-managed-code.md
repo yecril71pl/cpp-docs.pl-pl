@@ -20,12 +20,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: a220f0dc2c979676ad2e28fd504ef80e0925f74d
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 3ef47e3aeb8cfb18dd1eb6497c593d8cec26081b
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43195691"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43678453"
 ---
 # <a name="calling-native-functions-from-managed-code"></a>Wywoływanie funkcji natywnych z kodu zarządzanego
 Środowisko uruchomieniowe języka wspólnego zapewnia platformę wywołania usług lub jako PInvoke, które umożliwia zarządzanemu kodowi można wywoływać funkcje w stylu języka C z macierzystych bibliotek łączonych dynamicznie (dll). Takie samo szeregowanie danych jest używany jak dla współdziałania COM ze środowiskiem uruchomieniowym i dla "It Just Works", lub mechanizmu IJW.  
@@ -35,8 +35,6 @@ ms.locfileid: "43195691"
 -   [Używanie jawnej funkcji PInvoke w języku C++ (atrybut DllImport)](../dotnet/using-explicit-pinvoke-in-cpp-dllimport-attribute.md)  
   
 -   [Korzystanie z międzyoperacyjności języka C++ (niejawna funkcja PInvoke)](../dotnet/using-cpp-interop-implicit-pinvoke.md)  
-  
--   [Im bliżej wywołania platformy](https://msdn.microsoft.com/ba9dd55b-2eaa-45cd-8afd-75cb8d64d243)  
   
  Przykłady w tym rozdziale jedynie ilustrują jak `PInvoke` mogą być używane. `PInvoke` może uprościć serializację dostosowanych danych, ponieważ użytkownik podaje informacje dotyczące serializacji deklaratywnie w atrybutach zamiast wpisywać kod procedury.  
   

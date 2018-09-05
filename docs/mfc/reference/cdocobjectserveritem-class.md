@@ -24,12 +24,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e660144808c3e9abf8f8c090b9af5ff2eb73d9e9
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 985333deaeceeed594e11223c417f3217e8b0322
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43211808"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43682046"
 ---
 # <a name="cdocobjectserveritem-class"></a>Klasa CDocObjectServerItem
 Implementuje zlecenia serwera OLE specjalnie dla serwerów DocObject.  
@@ -58,11 +58,12 @@ class CDocObjectServerItem : public COleServerItem
   
 |Nazwa|Opis|  
 |----------|-----------------|  
+|[CDocObjectServerItem::OnDoVerb](#ondoverb)|Zgłasza wyjątek, jeśli struktura próbuje ukryć element DocObject.|
 |[CDocObjectServerItem::OnHide](#onhide)|Zgłasza wyjątek, jeśli struktura próbuje ukryć element DocObject.|  
 |[CDocObjectServerItem::OnShow](#onshow)|Wywoływane przez platformę, aby element DocObject elementu w miejscu active. Jeśli element nie jest obiekt DocObject, wywołuje metodę [COleServerItem::OnShow](../../mfc/reference/coleserveritem-class.md#onshow).|  
   
 ## <a name="remarks"></a>Uwagi  
- `CDocObjectServerItem` Definiuje funkcje Członkowskie z możliwością: [OnHide](#onhide), [zdarzenia](https://msdn.microsoft.com/7a9b1363-6ad8-4732-9959-4e35c07644fd), i [metodzie OnShow](#onshow).  
+ `CDocObjectServerItem` Definiuje funkcje Członkowskie z możliwością: [OnHide](#onhide), [OnDoVerb](#ondoverb), i [metodzie OnShow](#onshow).  
   
  Aby użyć `CDocObjectServerItem`, zapewnić, że [OnGetEmbeddedItem](../../mfc/reference/coleserverdoc-class.md#ongetembeddeditem) zastąpić w usługi `COleServerDoc`— klasie pochodnej zwraca nowy `CDocObjectServerItem` obiektu. Jeśli musisz zmienić żadnych funkcji Twojego elementu, można utworzyć nowe wystąpienie klasy własne `CDocObjectServerItem`-klasy pochodnej.  
   

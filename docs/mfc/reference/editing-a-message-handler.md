@@ -17,19 +17,19 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 046ce538dafe90b172096eb37bf2309f8c75db1c
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: e6b8922ea176619764308122867c4d2ebfcfe449
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43206254"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43676812"
 ---
 # <a name="editing-a-message-handler"></a>Edytowanie programu obsługi komunikatów
 Po zdefiniowaniu obsługi wiadomości, możesz przejść do definicji funkcji składowej, aby dodać lub zmodyfikować kod.  
   
  Aby przejść do definicji funkcji składowej, z [Edytor okien dialogowych](../../windows/dialog-editor.md), kliknij dwukrotnie formant, dla którego program obsługi jest już zdefiniowany. To przechodzi do pliku, w którym zdefiniowano program obsługi komunikatów wybranej kontrolki.  
   
- Aby przejść do definicji funkcji składowej, z [Widok klas](https://msdn.microsoft.com/8d7430a9-3e33-454c-a9e1-a85e3d2db925), kliknij dwukrotnie nazwę funkcji, w widoku klas.  
+ Aby przejść do definicji funkcji składowej, z [Widok klas](/visualstudio/ide/viewing-the-structure-of-code), kliknij dwukrotnie nazwę funkcji, w widoku klas.  
   
 ## <a name="see-also"></a>Zobacz też  
  [Mapowanie komunikatów do funkcji](../../mfc/reference/mapping-messages-to-functions.md)   

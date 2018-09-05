@@ -25,12 +25,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 60d3d845f51f59e6072bd0425f34c63e0049dd31
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 1b556e724e75bb6eabc832893350126a27ad511a
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43202540"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43678437"
 ---
 # <a name="ccomcurrency-class"></a>Klasa CComCurrency
 `CComCurrency` zawiera metody i operatorów do tworzenia i zarządzania obiektem waluty.  
@@ -559,5 +559,5 @@ HRESULT SetInteger(LONGLONG nInteger);
   
 ## <a name="see-also"></a>Zobacz też  
  [Klasa COleCurrency](../../mfc/reference/colecurrency-class.md)   
- [WALUTY](https://msdn.microsoft.com/5e81273c-7289-45c7-93c0-32c1553f708e)   
+ [WALUTY](/windows/desktop/api/wtypes/ns-wtypes-tagcy)   
  [Klasa — Przegląd](../../atl/atl-class-overview.md)

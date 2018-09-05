@@ -22,12 +22,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 677518f45fdfb721027cc67b0210e9b437bed859
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: cc74f89708132b0895c8980538b852c15087b5e6
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43213153"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43682330"
 ---
 # <a name="cpanedialog-class"></a>Klasa CPaneDialog
 `CPaneDialog` Klasa obsługuje niemodalne, dokowane okno dialogowe.  
@@ -58,7 +58,7 @@ class CPaneDialog : public CDockablePane
 |`CPaneDialog::OnEraseBkgnd`|Obsługuje [WM_ERASEBKGND](/windows/desktop/winmsg/wm-erasebkgnd) wiadomości. (Redefiniuje [CWnd::OnEraseBkgnd](../../mfc/reference/cwnd-class.md#onerasebkgnd).)|  
 |`CPaneDialog::OnLButtonDblClk`|Obsługuje [WM_LBUTTONDBLCLK](/windows/desktop/inputdev/wm-lbuttondblclk) wiadomości. (Redefiniuje [CWnd::OnLButtonDblClk](../../mfc/reference/cwnd-class.md#onlbuttondblclk).)|  
 |`CPaneDialog::OnLButtonDown`|Obsługuje [WM_LBUTTONDOWN](/windows/desktop/inputdev/wm-lbuttondown) wiadomości. (Redefiniuje [CWnd::OnLButtonDown](../../mfc/reference/cwnd-class.md#onlbuttondown).)|  
-|`CPaneDialog::OnUpdateCmdUI`|Metoda wywoływana przez platformę, by zaktualizować okno dialogowe. (Przesłania [CDockablePane::OnUpdateCmdUI](https://msdn.microsoft.com/5dd61606-1c12-40d4-b024-f3839aa5e2e0).)|  
+|`CPaneDialog::OnUpdateCmdUI`|Metoda wywoływana przez platformę, by zaktualizować okno dialogowe. (Przesłania [CDockablePane::OnUpdateCmdUI](cdockablepane-class.md).)|  
 |`CPaneDialog::OnWindowPosChanging`|Obsługuje [WM_WINDOWPOSCHANGING](/windows/desktop/winmsg/wm-windowposchanging) wiadomości. (Redefiniuje [CWnd::OnWindowPosChanging](../../mfc/reference/cwnd-class.md#onwindowposchanging).)|  
 |[CPaneDialog::SetOccDialogInfo](#setoccdialoginfo)|Określa szablon dla okna dialogowego, który jest kontenerem sterowania OLE.|  
   

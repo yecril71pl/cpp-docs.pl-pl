@@ -15,12 +15,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1d7e82a384e3b2e8ca446843c91984e78754d6cc
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 468ce7d65e31a70192e1a48bf21126dd96a1936e
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43204063"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43678915"
 ---
 # <a name="deployment-in-visual-c"></a>Wdrożenie w Visual C++
 
@@ -58,7 +58,7 @@ Oprócz dynamicznie łączonych bibliotek programu Visual Studio dostarcza więk
 
 ## <a name="troubleshooting-deployment-issues"></a>Rozwiązywanie problemów dotyczących wdrożenia
 
-Kolejność ładowania bibliotek języka Visual C++ jest zależna od systemu. Aby zdiagnozować problemy z modułem ładowania, użyj depends.exe lub where.exe. Aby uzyskać więcej informacji, zobacz [kolejności przeszukiwania bibliotek dołączanych dynamicznie (Windows)](https://msdn.microsoft.com/library/windows/desktop/ms682586.aspx).
+Kolejność ładowania bibliotek języka Visual C++ jest zależna od systemu. Aby zdiagnozować problemy z modułem ładowania, użyj depends.exe lub where.exe. Aby uzyskać więcej informacji, zobacz [kolejności przeszukiwania bibliotek dołączanych dynamicznie (Windows)](/windows/desktop/Dlls/dynamic-link-library-search-order).
 
 ## <a name="see-also"></a>Zobacz także
 

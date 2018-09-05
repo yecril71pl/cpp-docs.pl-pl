@@ -1,7 +1,7 @@
 ---
 title: operator! (Czas wykonywania MASM) | Dokumentacja firmy Microsoft
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 08/30/2018
 ms.technology:
 - cpp-masm
 ms.topic: reference
@@ -17,24 +17,21 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b72f808bd17dc61334e7be84af902f5956efd1b8
-ms.sourcegitcommit: dbca5fdd47249727df7dca77de5b20da57d0f544
+ms.openlocfilehash: bb03955ab5c0bf50531b26c21b28b47083e7dbe4
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/28/2018
-ms.locfileid: "32057331"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43682402"
 ---
-# <a name="operator--masm-run-time"></a>operator! (W czasie wykonywania MASM)
-Logiczna negacja. Używana tylko wewnątrz [. Jeśli](../../assembler/masm/dot-if.md), [. GDY](../../assembler/masm/dot-while.md), lub [. Powtórz](../../assembler/masm/dot-repeat.md) blokuje i oceniane w czasie wykonywania, nie w czasie zestawu.  
-  
-## <a name="syntax"></a>Składnia  
-  
-```  
-  
-!  
-expression  
-  
-```  
-  
-## <a name="see-also"></a>Zobacz też  
- [Dokumentacja operatorów](../../assembler/masm/operators-reference.md)
+# <a name="operator--masm-run-time"></a>operator! (Środowisko wykonawcze Masm)
+
+Negacja logiczna. Stosowane tylko w [. Jeśli](../../assembler/masm/dot-if.md), [. GDY](../../assembler/masm/dot-while.md), lub [. Powtórz](../../assembler/masm/dot-repeat.md) blokuje i oceniane w czasie wykonywania, a nie w czasie zestawu.
+
+## <a name="syntax"></a>Składnia
+
+> ! *Wyrażenie*
+
+## <a name="see-also"></a>Zobacz także
+
+[Dokumentacja operatorów](../../assembler/masm/operators-reference.md)<br/>

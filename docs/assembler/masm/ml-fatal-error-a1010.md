@@ -1,7 +1,7 @@
 ---
 title: Błąd krytyczny ML A1010 | Dokumentacja firmy Microsoft
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 08/30/2018
 ms.technology:
 - cpp-masm
 ms.topic: error-reference
@@ -16,31 +16,33 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b622595b6994c4c4eaa74ed8f824f28dffe89b1a
-ms.sourcegitcommit: dbca5fdd47249727df7dca77de5b20da57d0f544
+ms.openlocfilehash: 12b7e8698951e8ef59e0433134ec992af5d5f77f
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/28/2018
-ms.locfileid: "32057685"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43676300"
 ---
 # <a name="ml-fatal-error-a1010"></a>Błąd krytyczny ML A1010
-**niedopasowane bloku zagnieżdżenia:**  
-  
- Początek bloku nie ma pasującego zakończenia lub zakończenia bloku nie ma pasującego początku. Może zostać objęty jedną z następujących czynności:  
-  
--   Dyrektywy wysokiego poziomu, takich jak [. Jeśli](../../assembler/masm/dot-if.md), [. Powtórz](../../assembler/masm/dot-repeat.md), lub [. GDY](../../assembler/masm/dot-while.md).  
-  
--   Dyrektywa zestawu warunkowego, takich jak [IF](../../assembler/masm/if-masm.md), [Powtórz](../../assembler/masm/repeat.md), lub **podczas**.  
-  
--   Definicja struktury lub związku.  
-  
--   Definicja procedury.  
-  
--   Definicja segmentu.  
-  
--   A [popcontext —](../../assembler/masm/popcontext.md) dyrektywy.  
-  
--   W zestawie warunkowego dyrektywy, takich jak [ELSE](../../assembler/masm/else-masm.md), [ELSEIF](../../assembler/masm/elseif-masm.md), lub **ENDIF** bez odpowiadającego mu [IF](../../assembler/masm/if-masm.md).  
-  
-## <a name="see-also"></a>Zobacz też  
- [Komunikaty o błędach ML](../../assembler/masm/ml-error-messages.md)
+
+**Zagnieżdżanie niedopasowane bloku:**
+
+Początek bloku nie ma pasującego zakończenia lub koniec bloku nie ma pasującego początku. Może być zaangażowany jedną z następujących czynności:
+
+- Dyrektywy wysokiego poziomu, takie jak [. Jeśli](../../assembler/masm/dot-if.md), [. Powtórz](../../assembler/masm/dot-repeat.md), lub [. GDY](../../assembler/masm/dot-while.md).
+
+- Dyrektywa zestawu warunkowego, takich jak [IF](../../assembler/masm/if-masm.md), [Powtórz](../../assembler/masm/repeat.md), lub **podczas**.
+
+- Definicja struktury lub Unii.
+
+- Definicja procedury.
+
+- Definicja segmentu.
+
+- A [popcontext —](../../assembler/masm/popcontext.md) dyrektywy.
+
+- Zestaw warunkowe dyrektywy, takie jak [ELSE](../../assembler/masm/else-masm.md), [ELSEIF](../../assembler/masm/elseif-masm.md), lub **ENDIF** bez odpowiadającego mu [IF](../../assembler/masm/if-masm.md).
+
+## <a name="see-also"></a>Zobacz także
+
+[Komunikaty o błędach ML](../../assembler/masm/ml-error-messages.md)<br/>

@@ -35,16 +35,16 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5289b27ae0749d85b3e4ee60717212acc95536d5
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 081e380dc639ed6a814913dd42c6fc1b55041b01
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32405708"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43681138"
 ---
 # <a name="rand"></a>rand
 
-Generuje liczby pseudolosowe za pomocą algorytmu dobrze znanych i pełni odtworzenia. Więcej programowo bezpiecznego wersja ta funkcja jest dostępna; zobacz [rand_s —](rand-s.md). Kody generowane przez **rand** nie są zabezpieczone kryptograficznie. Generowanie liczby losowej więcej zabezpieczone kryptograficznie, użyj [rand_s —](rand-s.md) lub zadeklarowany funkcje standardowej biblioteki C++ w [ \<losowe >](../../standard-library/random.md).
+Generuje numer pseudolosowych przy użyciu algorytmu dobrze znanych i w pełni odtworzenia. Więcej programowo bezpiecznego wersja tej funkcji jest dostępna; zobacz [rand_s —](rand-s.md). Kody generowane przez **rand** nie są kryptograficznie bezpieczne. Generowanie liczby losowej więcej zabezpieczone kryptograficznie, użyj [rand_s —](rand-s.md) lub funkcji zadeklarowanych w standardowej bibliotece języka C++ w [ \<losowy >](../../standard-library/random.md).
 
 ## <a name="syntax"></a>Składnia
 
@@ -54,13 +54,13 @@ int rand( void );
 
 ## <a name="return-value"></a>Wartość zwracana
 
-**RAND** zwraca liczby pseudolosowe jak opisano powyżej. Nie ma żadnych zwracany błąd.
+**RAND** zwraca liczbę pseudolosowych, zgodnie z opisem powyżej. Nie będzie zwrotu błędu.
 
 ## <a name="remarks"></a>Uwagi
 
-**Rand** funkcja zwraca pseudolosowych liczbą całkowitą z zakresu od 0 do **rand_max —** (32767). Użyj [srand —](srand.md) funkcji jako zalążek generatora liczby pseudolosowe przed wywołaniem **rand**.
+**Rand** funkcja zwraca pseudolosowych liczbę całkowitą z zakresu od 0 do **RAND_MAX** (32767). Użyj [srand —](srand.md) funkcji, aby zainicjować generatora liczb pseudolosowych przed wywołaniem **rand**.
 
-**Rand** funkcji generuje dobrze znanego sekwencji i nie jest odpowiedni dla funkcji kryptograficznych. Generowanie liczby losowej więcej zabezpieczone kryptograficznie, użyj [rand_s —](rand-s.md) lub zadeklarowany funkcje standardowej biblioteki C++ w [ \<losowe >](../../standard-library/random.md). Aby uzyskać informacje o problem z **rand** i w jaki sposób \<losowe > dotyczy tych nieprawidłowości zobacz [ten film](http://go.microsoft.com/fwlink/?LinkId=397615).
+**Rand** funkcja generuje sekwencję dobrze znanych i nie jest przeznaczone do użycia w funkcji kryptograficznych. Generowanie liczby losowej więcej zabezpieczone kryptograficznie, użyj [rand_s —](rand-s.md) lub funkcji zadeklarowanych w standardowej bibliotece języka C++ w [ \<losowy >](../../standard-library/random.md). Aby uzyskać informacje o problem z **rand** i w jaki sposób \<losowy > adresy te wad, zobacz ten film wideo, mają prawo [rand uznawane za szkodliwe](https://channel9.msdn.com/Events/GoingNative/2013/rand-Considered-Harmful).
 
 ## <a name="requirements"></a>Wymagania
 

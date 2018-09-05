@@ -1,7 +1,7 @@
 ---
 title: Używanie operatorów w blokach __asm | Dokumentacja firmy Microsoft
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 08/30/2018
 ms.technology:
 - cpp-masm
 ms.topic: conceptual
@@ -19,34 +19,37 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2e1c7c4b8415655aff36327db9c6a9f866d82683
-ms.sourcegitcommit: dbca5fdd47249727df7dca77de5b20da57d0f544
+ms.openlocfilehash: 8731169013cba50e01c36aa721859e136938f015
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/28/2018
-ms.locfileid: "32051133"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43676913"
 ---
 # <a name="using-operators-in-asm-blocks"></a>Używanie operatorów w blokach __asm
-## <a name="microsoft-specific"></a>Specyficzne dla firmy Microsoft  
- `__asm` Bloku nie można używać operatorów określonego języka C lub C++, takie jak **<<** operatora. Jednak operatory współużytkowane przez C i MASM, takich jak \* operatora, są traktowane jako operatory języka zestawu. Na przykład poza `__asm` zablokować nawiasy kwadratowe (**[**) są interpretowane jako otaczającej indeksy tablicy, w których C jest automatycznie skalowany rozmiar elementu w tablicy. Wewnątrz `__asm` bloku, są one widoczne jako operatora indeksu MASM, która daje w wyniku Przesunięcie bajtów nieskalowanego z dowolnego obiektu danych lub etykiety (nie tylko tablicą). Poniższy kod ilustruje różnicy:  
-  
-```  
-int array[10];  
-  
-__asm mov array[6], bx ;  Store BX at array+6 (not scaled)  
-  
-array[6] = 0;         /* Store 0 at array+24 (scaled) */  
-```  
-  
- Pierwsze odwołanie do `array` nie jest skalowana, ale drugą jest wartość. Należy pamiętać, że można użyć **typu** operator umożliwia skalowanie oparte na stałą. Na przykład następujące instrukcje są równoważne:  
-  
-```  
-__asm mov array[6 * TYPE int], 0 ; Store 0 at array + 24  
-  
-array[6] = 0;                   /* Store 0 at array + 24 */  
-```  
-  
- **KOŃCOWY określonych firmy Microsoft**  
-  
-## <a name="see-also"></a>Zobacz też  
- [Korzystanie z C lub C++ w blokach __asm](../../assembler/inline/using-c-or-cpp-in-asm-blocks.md)
+
+**Microsoft Specific**
+
+`__asm` Bloku nie można użyć określonego operatory C lub C++, takie jak **<<** operatora. Jednakże operatory współużytkowane przez C i MASM, takie jak \* operatora, są interpretowane jako operatorów języka asemblera. Na przykład poza `__asm` blokowanie nawiasach kwadratowych (**[**) są interpretowane jako otaczający indeksy dolne tablicy, które C jest automatycznie skalowany rozmiar elementu w tablicy. Wewnątrz `__asm` bloku, są one widoczne jako operatora indeksu MASM, która daje w wyniku przesunięcie bajtu nieskalowanego z dowolnego obiektu danych lub etykiety (nie tylko array). Poniższy kod ilustruje różnicę:
+
+```cpp
+int array[10];
+
+__asm mov array[6], bx ;  Store BX at array+6 (not scaled)
+
+array[6] = 0;         /* Store 0 at array+24 (scaled) */
+```
+
+Pierwszym odwołaniu do `array` nie jest skalowana, a w drugim. Należy zauważyć, że można użyć **typu** operatora do osiągnięcia, skalowanie w oparciu o stałą. Na przykład poniższe instrukcje są równoważne:
+
+```cpp
+__asm mov array[6 * TYPE int], 0 ; Store 0 at array + 24
+
+array[6] = 0;                   /* Store 0 at array + 24 */
+```
+
+**END specyficzny dla Microsoft**
+
+## <a name="see-also"></a>Zobacz także
+
+[Korzystanie z C lub C++ w blokach __asm](../../assembler/inline/using-c-or-cpp-in-asm-blocks.md)<br/>

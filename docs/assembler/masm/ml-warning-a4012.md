@@ -1,7 +1,7 @@
 ---
 title: Ostrzeżenie ML A4012 | Dokumentacja firmy Microsoft
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 08/30/2018
 ms.technology:
 - cpp-masm
 ms.topic: error-reference
@@ -16,19 +16,21 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 865b6afb6d5dd8fb8e5d7d6205a525bae2f7c934
-ms.sourcegitcommit: dbca5fdd47249727df7dca77de5b20da57d0f544
+ms.openlocfilehash: 083a0cd7687bc182aa9e387d6d575fa718b1b50c
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/28/2018
-ms.locfileid: "32056983"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43682158"
 ---
 # <a name="ml-warning-a4012"></a>Ostrzeżenie ML A4012
-**informacje o numerach wierszy dla segmentu bez klasy "CODE"**  
-  
- Brak instrukcji w segmencie, który nie ma nazwy klasy, która kończy się wyrazem "Kod". Asembler nie spowodowała wygenerowania informacje CodeView te instrukcje.  
-  
- CodeView nie może przetworzyć modułów z kodu w segmentach z nazwą klasy, które nie kończą się znakiem 'CODE'.  
-  
-## <a name="see-also"></a>Zobacz też  
- [Komunikaty o błędach ML](../../assembler/masm/ml-error-messages.md)
+
+**informacje o numerze wiersza dla segmentu bez klasy "CODE"**
+
+Wystąpiły instrukcje w segmencie, który nie ma nazwy klasy, która kończy się ciągiem "Kod". Asembler nie wygenerować informacje CodeView dotyczące tych instrukcji.
+
+CodeView nie może przetworzyć modułów przy użyciu kodu w segmentach z nazwą klasy, które nie kończą się znakiem "Kod".
+
+## <a name="see-also"></a>Zobacz także
+
+[Komunikaty o błędach ML](../../assembler/masm/ml-error-messages.md)<br/>

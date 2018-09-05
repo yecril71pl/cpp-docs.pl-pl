@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4c9ab0120b3aad3f4f4470ca9094f8a975dbb12d
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 9d4e90ace469614d6d422e0b75445eae5696bc26
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43200323"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43681605"
 ---
 # <a name="add-class-dialog-box"></a>Okno dialogowe Dodaj klasę
 **Dodaj klasę** okno dialogowe zawiera szablony, które pozwalają na:  
@@ -32,7 +32,7 @@ ms.locfileid: "43200323"
   
 -   Automatycznie Utwórz nowej klasy, dodając odpowiednie pliki i kod źródłowy do projektu.  
   
- Możesz uzyskać dostęp **Dodaj klasę** okno dialogowe z **projektu** menu **Eksploratora rozwiązań**, lub [Widok klas](https://msdn.microsoft.com/8d7430a9-3e33-454c-a9e1-a85e3d2db925).  
+ Możesz uzyskać dostęp **Dodaj klasę** okno dialogowe z **projektu** menu **Eksploratora rozwiązań**, lub [Widok klas](/visualstudio/ide/viewing-the-structure-of-code).  
   
 > [!NOTE]
 >  Gdy spróbujesz dodać klasę, która nie jest przeznaczone do bieżącego projektu, otrzymasz komunikat o błędzie. Kliknij przycisk **OK** aby powrócić do **Dodaj klasę** okno dialogowe.  

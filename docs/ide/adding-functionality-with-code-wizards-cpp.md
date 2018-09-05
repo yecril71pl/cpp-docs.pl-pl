@@ -20,12 +20,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 13d163ad8de9ef3ee6c8c1375c234a412c70de7d
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: ebda52eaa4deab6ddf8535da9b4c5a94a2cbc77b
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43213139"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43679408"
 ---
 # <a name="adding-functionality-with-code-wizards-c"></a>Dodawanie funkcji za pomocą kreatorów kodu (C++)
 Po utworzeniu projektu można zmienić lub dodać do funkcji tego projektu. Takie zadania obejmują tworzenie nowych klas, dodając nowe funkcje Członkowskie i zmienne i Dodawanie metody automatyzacji i właściwości. Kreatorzy kodu są przeznaczone do pozwalają korzystać z tych możliwości.  
@@ -56,7 +56,7 @@ Po utworzeniu projektu można zmienić lub dodać do funkcji tego projektu. Taki
   
 -   W **Eksploratora rozwiązań**, klikając prawym przyciskiem myszy dowolny folder i klikając pozycję **Dodaj** za pomocą skrótu menu pozwala na dodawanie nowych lub istniejących plików, folderów, elementy, klasy, zasoby i odwołania do sieci Web Projekt.  
   
--   Z [okna widoku klasy](https://msdn.microsoft.com/8d7430a9-3e33-454c-a9e1-a85e3d2db925), klikając prawym przyciskiem myszy odpowiedni węzeł i klikając pozycję **Dodaj** za pomocą skrótu menu pozwala na dodawanie funkcje, zmienne, klas, właściwości, metody, zdarzenia, interfejsy punkty połączenia lub innego kodu do projektu.  
+-   Z [okna widoku klasy](/visualstudio/ide/viewing-the-structure-of-code), klikając prawym przyciskiem myszy odpowiedni węzeł i klikając pozycję **Dodaj** za pomocą skrótu menu pozwala na dodawanie funkcje, zmienne, klas, właściwości, metody, zdarzenia, interfejsy punkty połączenia lub innego kodu do projektu.  
   
     > [!NOTE]
     >  Program Visual Studio nie udostępnia kreatora, aby dodać interfejs do projektu. Można dodać interfejs do projektu ATL lub do [Dodawanie obsługi ATL do projektu MFC](../mfc/reference/adding-atl-support-to-your-mfc-project.md) przez dodanie przy użyciu prostego obiektu [proste Kreator obiektu ATL](../atl/reference/atl-simple-object-wizard.md). Alternatywnie Otwórz pliku .idl projektu i Utwórz interfejs, wpisując:  

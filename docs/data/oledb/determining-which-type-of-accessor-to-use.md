@@ -16,12 +16,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: ef3da102cd01fa970fa50d687f6cfea57ac64325
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: e8dbfecf52e974330360714763da3bd4c81117ad
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43199754"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43679727"
 ---
 # <a name="determining-which-type-of-accessor-to-use"></a>Ustalanie, jakiego typu metody dostępu użyć
 W czasie kompilacji lub w czasie wykonywania, można określić typy danych w zestawie wierszy.  
@@ -38,7 +38,7 @@ W czasie kompilacji lub w czasie wykonywania, można określić typy danych w ze
 |`CDynamicAccessor`|Automatyczne.|Nie.|Parametr jest przydatne, jeśli nie jest znany typ danych w zestawie wierszy.|  
 |`CDynamicParameterAccessor`|Automatyczne, ale może być [zastąpione](../../data/oledb/overriding-a-dynamic-accessor.md).|Tak, jeśli dostawca obsługuje `ICommandWithParameters`. Automatycznie wiązania parametrów.|Wolniejsza niż `CDynamicAccessor` ale przydatne w przypadku wywoływania ogólnych procedurach składowanych.|  
 |`CDynamicStringAccessor[A,W]`|Automatyczne.|Nie.|Pobiera dane otwierane z magazynu danych jako dane ciągu.|  
-|`CManualAccessor`|Ręczne przy użyciu `AddBindEntry`.|Ręcznie przy użyciu `AddParameterEntry`.|Bardzo szybko; Parametry i kolumny powiązane tylko raz. Należy określić typ danych do użycia. (Zobacz [DBVIEWER](https://msdn.microsoft.com/07620f99-c347-4d09-9ebc-2459e8049832) próbki, na przykład.) Wymaga większej ilości kodu niż `CDynamicAccessor` lub `CAccessor`. Istnieje bardziej bezpośrednie wywoływanie OLE DB.|  
+|`CManualAccessor`|Ręczne przy użyciu `AddBindEntry`.|Ręcznie przy użyciu `AddParameterEntry`.|Bardzo szybko; Parametry i kolumny powiązane tylko raz. Należy określić typ danych do użycia. (Zobacz [DBVIEWER](https://github.com/Microsoft/VCSamples) próbki, na przykład.) Wymaga większej ilości kodu niż `CDynamicAccessor` lub `CAccessor`. Istnieje bardziej bezpośrednie wywoływanie OLE DB.|  
 |`CXMLAccessor`|Automatyczne.|Nie.|Pobiera dane otwierane z magazynu danych jako dane ciągu i formatuje ją danych oznaczone jako XML.|  
   
 ## <a name="see-also"></a>Zobacz też  

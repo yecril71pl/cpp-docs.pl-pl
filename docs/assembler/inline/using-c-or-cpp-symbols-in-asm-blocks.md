@@ -1,7 +1,7 @@
 ---
 title: Użycie symboli C lub C++ w blokach __asm | Dokumentacja firmy Microsoft
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 08/30/2018
 ms.technology:
 - cpp-masm
 ms.topic: conceptual
@@ -18,28 +18,31 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 746614de653649747bf20ae4c223e5687ee53f5c
-ms.sourcegitcommit: dbca5fdd47249727df7dca77de5b20da57d0f544
+ms.openlocfilehash: 8ba8426e2a7ae1152a41fafa0c239498801c6e4d
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/28/2018
-ms.locfileid: "32049430"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43678896"
 ---
 # <a name="using-c-or-c-symbols-in-asm-blocks"></a>Użycie symboli C lub C++ w blokach __asm
-## <a name="microsoft-specific"></a>Specyficzne dla firmy Microsoft  
- `__asm` Bloku może odwoływać się do żadnych symboli C lub C++ w zakresie, w którym pojawi się blok. (C i C++ symbole są nazwy zmiennych, nazwy funkcji i etykiety; które jest, nazw, które nie są stałe symboliczne lub `enum` elementów członkowskich. Nie można wywołać elementu członkowskiego C++ funkcji.)  
-  
- Kilka ograniczeń dotyczą użycie symboli C i C++:  
-  
--   Każda instrukcja języka zestawu może zawierać tylko jeden C lub C++ symbolu. Wiele symboli może występować w tej samej instrukcji zestawu tylko z **długość**, **typu**, i **rozmiar** wyrażenia.  
-  
--   Funkcje, do którego odwołuje się `__asm` bloku musi być zadeklarowany we wcześniejszej części programu (prototypowana). W przeciwnym razie kompilator nie rozróżnia między nazwami funkcji i etykiet w `__asm` bloku.  
-  
--   `__asm` Blok nie można używać żadnych symboli C lub C++ z taką samą pisownię jako słowa zastrzeżone MASM (niezależnie od wielkości liter). Słowa zastrzeżone MASM obejmują takie jak nazwy instrukcji **PUSH** i zarejestrować nazwy, takie jak SI.  
-  
--   Tagi struktury i Unii nie są rozpoznawane w `__asm` bloków.  
-  
- **KOŃCOWY określonych firmy Microsoft**  
-  
-## <a name="see-also"></a>Zobacz też  
- [Korzystanie z C lub C++ w blokach __asm](../../assembler/inline/using-c-or-cpp-in-asm-blocks.md)
+
+**Microsoft Specific**
+
+`__asm` Bloku mogą odwoływać się do żadnych symboli C lub C++ w zakresie, gdzie pojawia się blok. (Symbole C i C++ są nazwy zmiennych, nazwy funkcji i etykiet; czyli, nazw, które nie należy stosować stałe symboliczne lub `enum` elementów członkowskich. Nie można wywołać składowych języka C++ funkcji.)
+
+Kilku ograniczeniom użycie symboli C i C++:
+
+- Każda instrukcja języka asembler może zawierać tylko jeden C lub C++ symbolu. Wiele symboli może znajdować się w tej samej instrukcji montażu tylko w przypadku **długość**, **typu**, i **rozmiar** wyrażenia.
+
+- Funkcje, do którego odwołuje się `__asm` bloku musi być zadeklarowana we wcześniejszej części programu (prototypowane). W przeciwnym razie kompilator nie rozróżnia między nazwami funkcji i etykiety w `__asm` bloku.
+
+- `__asm` Bloku nie można używać żadnych symboli C lub C++ przy użyciu tej samej pisowni jako słowa zastrzeżone MASM (niezależnie od wielkości liter). Słowa zastrzeżone MASM obejmują instrukcji nazwy, takie jak **WYPYCHANIA** i Zarejestruj nazwy, takie jak SI.
+
+- Tagi struktury i Unii nie są rozpoznawane w `__asm` bloków.
+
+**END specyficzny dla Microsoft**
+
+## <a name="see-also"></a>Zobacz także
+
+[Korzystanie z C lub C++ w blokach __asm](../../assembler/inline/using-c-or-cpp-in-asm-blocks.md)<br/>

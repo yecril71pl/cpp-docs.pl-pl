@@ -142,12 +142,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4b30aa51f284d216332225664d07d7692bd042a1
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 456772306c854d4450a7be3996285e90a1d5783f
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43223068"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43679467"
 ---
 # <a name="cdockablepane-class"></a>Klasa CDockablePane
 Implementuje okienko, w którym może być zadokowane w witrynie stacji dokującej lub włączone do okienka z zakładkami.  
@@ -213,7 +213,7 @@ class CDockablePane : public CPane
 |[CDockablePane::IsTabLocationBottom](#istablocationbottom)|Określa, czy karty znajdują się u góry lub u dołu okienka.|  
 |[CDockablePane::IsTracked](#istracked)|Określa, czy okienko przeciągania przez użytkownika.|  
 |[CDockablePane::IsVisible](#isvisible)|Określa, czy bieżące okienko jest widoczne.|  
-|[CDockablePane::LoadState](https://msdn.microsoft.com/96110136-4f46-4764-8a76-3b4abaf77917)|Używane wewnętrznie.|  
+|[CDockablePane::LoadState](#loadstate)|Używane wewnętrznie.|  
 |[CDockablePane::OnAfterChangeParent](#onafterchangeparent)|Wywoływane przez platformę, gdy zmieniono element nadrzędny w okienku. (Przesłania [CPane::OnAfterChangeParent](../../mfc/reference/cpane-class.md#onafterchangeparent).)|  
 |[CDockablePane::OnAfterDockFromMiniFrame](#onafterdockfromminiframe)|Wywoływane przez platformę, gdy zmiennoprzecinkowy pasek dokowania dokowane w oknie ramowym.|  
 |[CDockablePane::OnBeforeChangeParent](#onbeforechangeparent)|Wywoływane przez platformę, gdy element nadrzędny w okienku zostanie zmienione. (Przesłania [CPane::OnBeforeChangeParent](../../mfc/reference/cpane-class.md#onbeforechangeparent).)|  
@@ -1153,7 +1153,18 @@ virtual BOOL IsVisible() const;
  Jeśli okienko dokowalne jest w trybie autoukrywania i `IsHideInAutoHideMode` zwraca wartość PRAWDA, stan widoczności zależy od stanu widoczności paska narzędzi powiązanych Autoukrywanie.  
   
  Jeśli okienko dokowalne nie jest w trybie autoukrywania, stan widoczności jest określana przez [CBasePane::IsVisible](../../mfc/reference/cbasepane-class.md#isvisible) metody.  
-  
+
+## ##  <a name="loadstate"></a>  CDockablePane::LoadState  
+Tylko do użytku wewnętrznego. Aby uzyskać szczegółowe informacje, zobacz kod źródłowy znajdujący się w folderze VC\atlmfc\src\mfc instalacji programu Visual Studio.
+
+```
+virtual BOOL LoadState(
+   LPCTSTR lpszProfileName = NULL,
+   int nIndex = -1,
+   UINT uiID = (UINT) -1
+);  
+```
+
 ##  <a name="m_bdisableanimation"></a>  CDockablePane::m_bDisableAnimation  
  Określa, czy jest wyłączone Autoukrywanie animacji dokowalne okienka.  
   

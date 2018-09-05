@@ -1,7 +1,7 @@
 ---
 title: = | Dokumentacja firmy Microsoft
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 08/30/2018
 ms.technology:
 - cpp-masm
 ms.topic: reference
@@ -16,28 +16,25 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 37a10cdc4253636ea073fd237b03524bcb55d690
-ms.sourcegitcommit: dbca5fdd47249727df7dca77de5b20da57d0f544
+ms.openlocfilehash: cfa60cf90d5a28acee467887ede2810cdef0bef5
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/28/2018
-ms.locfileid: "32055443"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43681402"
 ---
 # <a name=""></a>=
-Przypisuje wartość liczbową *wyrażenie* do *nazwa*.  
-  
-## <a name="syntax"></a>Składnia  
-  
-```  
-  
-name  
- =   
-expression  
-  
-```  
-  
-## <a name="remarks"></a>Uwagi  
- Symbol można zdefiniować ponownie później.  
-  
-## <a name="see-also"></a>Zobacz też  
- [Dokumentacja dyrektyw](../../assembler/masm/directives-reference.md)
+
+Przypisuje wartość liczbową *wyrażenie* do *nazwa*.
+
+## <a name="syntax"></a>Składnia
+
+> *Nazwa* = *wyrażenia*
+
+## <a name="remarks"></a>Uwagi
+
+Symbol można ponownie zdefiniować w dalszej części.
+
+## <a name="see-also"></a>Zobacz także
+
+[Dokumentacja dyrektyw](../../assembler/masm/directives-reference.md)<br/>

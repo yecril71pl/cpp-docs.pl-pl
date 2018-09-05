@@ -1,7 +1,7 @@
 ---
-title: Operator SECTIONREL | Dokumentacja firmy Microsoft
+title: sectionrel — operator | Dokumentacja firmy Microsoft
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 08/30/2018
 ms.technology:
 - cpp-masm
 ms.topic: reference
@@ -18,24 +18,25 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ca377c33c2d22be638b85d055c40b402cceb545f
-ms.sourcegitcommit: dbca5fdd47249727df7dca77de5b20da57d0f544
+ms.openlocfilehash: 746b9e5c0663937f829267634b2527f084b6611a
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/28/2018
-ms.locfileid: "32056405"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43682425"
 ---
 # <a name="operator-sectionrel"></a>operator SECTIONREL
-Zwraca przesunięcie względną sekcji wyrażenia względem sekcji zawierającej obiekt docelowy w końcowym pliku wykonywalnego.  
-  
-## <a name="syntax"></a>Składnia  
-  
-```  
-SECTIONREL expression  
-```  
-  
-## <a name="remarks"></a>Uwagi  
- SECTIONREL jest dostępna tylko w przypadku emisji obiektu COFF.  
-  
-## <a name="see-also"></a>Zobacz też  
- [Dokumentacja operatorów](../../assembler/masm/operators-reference.md)
+
+Zwraca przesunięcie względne sekcji wyrażenia względem sekcję zawierającą obiekt docelowy w końcowego pliku wykonywalnego.
+
+## <a name="syntax"></a>Składnia
+
+> Sectionrel — wyrażenie
+
+## <a name="remarks"></a>Uwagi
+
+Sectionrel — jest dostępna tylko w przypadku emisji obiektu COFF.
+
+## <a name="see-also"></a>Zobacz także
+
+[Dokumentacja operatorów](../../assembler/masm/operators-reference.md)<br/>

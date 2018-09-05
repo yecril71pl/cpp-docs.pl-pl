@@ -162,12 +162,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2847bf32a51a63e39d80839fed1b46fac18f29dc
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 3ad17396a9c82532d46ea04f88b637828fe6f460
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43215794"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43678500"
 ---
 # <a name="cricheditctrl-class"></a>Klasa CRichEditCtrl
 Oferuje funkcje formantu bogatej edycji.  
@@ -443,7 +443,7 @@ virtual BOOL Create(
   
 - WS_TABSTOP Aby dołączyć kolejności tabulacji kontrolki edycji.  
   
- Aby uzyskać więcej informacji na temat Style okna zobacz [CreateWindow](https://msdn.microsoft.com/library/windows/desktop/ms632679) w zestawie Windows SDK.  
+ Aby uzyskać więcej informacji na temat Style okna zobacz [CreateWindow](/windows/desktop/api/winuser/nf-winuser-createwindowa) w zestawie Windows SDK.  
   
 ### <a name="example"></a>Przykład  
  [!code-cpp[NVC_MFC_CRichEditCtrl#5](../../mfc/reference/codesnippet/cpp/cricheditctrl-class_5.cpp)]  
@@ -462,7 +462,7 @@ virtual BOOL CreateEx(
   
 ### <a name="parameters"></a>Parametry  
  *dwExStyle*  
- Określa styl rozszerzony kontrolki tworzona. Aby uzyskać listę rozszerzone style Windows, zobacz *dwExStyle* parametr [elementu CreateWindowEx](https://msdn.microsoft.com/library/windows/desktop/ms632680) w zestawie Windows SDK.  
+ Określa styl rozszerzony kontrolki tworzona. Aby uzyskać listę rozszerzone style Windows, zobacz *dwExStyle* parametr [elementu CreateWindowEx](/windows/desktop/api/winuser/nf-winuser-createwindowexa) w zestawie Windows SDK.  
   
  *dwStyle*  
  Określa styl kontrolki edycji. Stosowanie kombinacji Style okna, na liście **uwagi** części [Utwórz](#create) i [style kontrolki edycji](/windows/desktop/Controls/edit-control-styles), które zostały opisane w zestawie Windows SDK.  

@@ -17,12 +17,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 54cc51ee320c6b942c3ff0563f293cf48d1c34db
-ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
+ms.openlocfilehash: 50be44d612f44586ff8e6c8e953efa0b1fa90948
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "42465977"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43680640"
 ---
 # <a name="svmvmsave"></a>__svm_vmsave
 **Microsoft Specific**  
@@ -44,7 +44,7 @@ void __svm_vmsave(
 |[in] `VmcbPhysicalAddress`|Adres fizyczny VMCB.|  
   
 ## <a name="remarks"></a>Uwagi  
- `__svm_vmsave` Funkcji jest odpowiednikiem `VMSAVE` machine instrukcji. Ta funkcja obsługuje interakcji monitor maszyny wirtualnej hosta z gościa operacyjnego i jego aplikacji. Aby uzyskać więcej informacji, wyszukaj dokumentu, "AMD64 architektury programisty ręczne woluminie 2: programowania systemu" dokument o numerze 24593, wersji 3.11 lub później, w [AMD Corporation](http://go.microsoft.com/fwlink/p/?linkid=23746) lokacji.  
+ `__svm_vmsave` Funkcji jest odpowiednikiem `VMSAVE` machine instrukcji. Ta funkcja obsługuje interakcji monitor maszyny wirtualnej hosta z gościa operacyjnego i jego aplikacji. Aby uzyskać więcej informacji, wyszukaj dokumentu, "AMD64 architektury programisty ręczne woluminie 2: programowania systemu" dokument o numerze 24593, wersji 3.11 lub później, w [AMD Corporation](https://developer.amd.com/resources/developer-guides-manuals/) lokacji.  
   
 ## <a name="requirements"></a>Wymagania  
   

@@ -12,12 +12,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ebbb33a4f17f5b4d458c4add4d59040d698dd4b8
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 58eb907841abf63d77817e106ee339ad6c49bd7b
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43222197"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43681206"
 ---
 # <a name="using-accelerator-and-acceleratorview-objects"></a>Używanie akceleratora i obiektów accelerator_view
 Możesz użyć [akceleratora](../../parallel/amp/reference/accelerator-class.md) i [accelerator_view](../../parallel/amp/reference/accelerator-view-class.md) klasy do określenia urządzenia lub emulatora do uruchamiania kodu C++ AMP. System może mieć kilka urządzeń lub emulatorów różniących się ilość pamięci, obsługę pamięci współdzielonej, obsługę debugowania lub wsparcia podwójnej precyzji. C++ Accelerated Massive Parallelism (C++ AMP) udostępnia interfejsy API, który służy do dostępnych akceleratorów, ustawienie jednego z nich jako domyślny, określenia wielu accelerator_views dla wielu wywołań parallel_for_each i wykonywania specjalnych zadań debugowania.  
@@ -180,11 +180,11 @@ Istnieją dwa sposoby użycia wielu akceleratorów w aplikacji:
   
 - [Accelerator::direct3d_warp — element członkowski danych](reference/accelerator-class.md#direct3d_warp): Akcelerator ten dostarcza rozwiązanie alternatywne do wykonywania kodu C++ AMP na wielordzeniowych procesorach, które używają rozszerzenia SSE (Streaming SIMD).  
   
-- [Accelerator::cpu_accelerator — członek danych](reference/accelerator-class.md#cpu_accelerator): Akcelerator ten można użyć do tworzenia tablic tymczasowych. Nie może wykonywać kodu C++ AMP. Aby uzyskać więcej informacji, zobacz [tablice tymczasowe w bibliotece C++ AMP](http://go.microsoft.com/fwlink/p/?linkId=248485) opublikuj wpis na blogu programowania równoległego w kodzie natywnym.  
+- [Accelerator::cpu_accelerator — członek danych](reference/accelerator-class.md#cpu_accelerator): Akcelerator ten można użyć do tworzenia tablic tymczasowych. Nie może wykonywać kodu C++ AMP. Aby uzyskać więcej informacji, zobacz [tablice tymczasowe w bibliotece C++ AMP](https://blogs.msdn.microsoft.com/nativeconcurrency/2011/11/09/staging-arrays-in-c-amp/) opublikuj wpis na blogu programowania równoległego w kodzie natywnym.  
   
 ## <a name="interoperability"></a>Współdziałanie  
  
-Środowisko wykonawcze C++ AMP wspiera współdziałanie między `accelerator_view` klasy a występującym w Direct3D [interfejsu ID3D11Device](http://go.microsoft.com/fwlink/p/?linkId=248488). [Create_accelerator_view —](reference/concurrency-direct3d-namespace-functions-amp.md#create_accelerator_view) metoda przyjmuje `IUnknown` interfejsu i zwraca `accelerator_view` obiektu. [Get_device](https://msdn.microsoft.com/8194125e-8396-4d62-aa8a-65831dea8439) metoda przyjmuje `accelerator_view` obiektu i zwraca `IUknown` interfejsu.  
+Środowisko wykonawcze C++ AMP wspiera współdziałanie między `accelerator_view` klasy a występującym w Direct3D [interfejsu ID3D11Device](/windows/desktop/api/d3d11/nn-d3d11-id3d11device). [Create_accelerator_view —](reference/concurrency-direct3d-namespace-functions-amp.md#create_accelerator_view) metoda przyjmuje `IUnknown` interfejsu i zwraca `accelerator_view` obiektu. [Get_device](reference/concurrency-direct3d-namespace-functions-amp.md#get_device) metoda przyjmuje `accelerator_view` obiektu i zwraca `IUnknown` interfejsu.  
   
 ## <a name="see-also"></a>Zobacz też  
  

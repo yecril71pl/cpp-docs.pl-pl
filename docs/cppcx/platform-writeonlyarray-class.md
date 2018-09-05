@@ -20,12 +20,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3871b6ad3aead88c32c906726f689d949eb945ba
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: 44beeca9b860e2010b092739d8c39044ad0bb5b1
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42603349"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43680928"
 ---
 # <a name="platformwriteonlyarray-class"></a>Platform::WriteOnlyArray, klasa
 Reprezentuje Jednowymiarowa tablica, która jest używana jako parametr wejściowy, gdy wywołanie metody do wypełnienia tablicy.  
@@ -187,7 +187,7 @@ T& set(
 
   
 ### <a name="remarks"></a>Uwagi  
- Aby uzyskać więcej informacji dotyczących sposobu interpretowania wartości HRESULT, zobacz [struktury COM kody błędów](http://go.microsoft.com/fwlink/p/?LinkId=262045).  
+ Aby uzyskać więcej informacji dotyczących sposobu interpretowania wartości HRESULT, zobacz [struktury COM kody błędów](/windows/desktop/com/structure-of-com-error-codes).  
   
   
 ## <a name="see-also"></a>Zobacz też  

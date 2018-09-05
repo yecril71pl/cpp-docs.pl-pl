@@ -1,7 +1,7 @@
 ---
-title: ELSE (MASM) | Dokumentacja firmy Microsoft
+title: INNE (MASM) | Dokumentacja firmy Microsoft
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 08/30/2018
 ms.technology:
 - cpp-masm
 ms.topic: reference
@@ -16,26 +16,25 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9b9f74d0f2f9272987d4d56a1dcc16c11ab2ab4b
-ms.sourcegitcommit: dbca5fdd47249727df7dca77de5b20da57d0f544
+ms.openlocfilehash: 2cf048636b669586f93d12eeacf084c87a4139f1
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/28/2018
-ms.locfileid: "32054097"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43679092"
 ---
 # <a name="else-masm"></a>ELSE (MASM)
-Oznacza początek alternatywnego bloku warunkowego bloku.  
-  
-## <a name="syntax"></a>Składnia  
-  
-```  
-  
-ELSE  
-  
-```  
-  
-## <a name="remarks"></a>Uwagi  
- Zobacz [IF](../../assembler/masm/if-masm.md).  
-  
-## <a name="see-also"></a>Zobacz też  
- [Dokumentacja dyrektyw](../../assembler/masm/directives-reference.md)
+
+Oznacza początek alternatywne bloku, w ramach bloku warunkowego.
+
+## <a name="syntax"></a>Składnia
+
+> ELSE
+
+## <a name="remarks"></a>Uwagi
+
+Zobacz [IF](../../assembler/masm/if-masm.md).
+
+## <a name="see-also"></a>Zobacz także
+
+[Dokumentacja dyrektyw](../../assembler/masm/directives-reference.md)<br/>

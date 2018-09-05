@@ -17,12 +17,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4711238c45955ee7067e3e418212bcdb0fae09ca
-ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
+ms.openlocfilehash: 086fbbc2a25c4af2b09f40d83ac0b20399860ca1
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "42465688"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43679809"
 ---
 # <a name="svmvmrun"></a>__svm_vmrun
 **Microsoft Specific**  
@@ -46,7 +46,7 @@ void __svm_vmrun(
 ## <a name="remarks"></a>Uwagi  
  `__svm_vmrun` Funkcja używa minimalnej ilości informacji w VMCB umożliwiającą wykonywanie kodu gościa maszyny wirtualnej. Użyj [__svm_vmsave](../intrinsics/svm-vmsave.md) lub [__svm_vmload](../intrinsics/svm-vmload.md) działać, jeśli potrzebujesz więcej informacji, do obsługi złożonych przerwania lub przełączyć się do innego gościa.  
   
- `__svm_vmrun` Funkcji jest odpowiednikiem `VMRUN` machine instrukcji. Ta funkcja obsługuje interakcji monitor maszyny wirtualnej hosta z gościa operacyjnego i jego aplikacji. Aby uzyskać więcej informacji, wyszukaj dokumentu, "AMD64 architektury programisty ręczne woluminie 2: programowania systemu" dokument o numerze 24593, wersji 3.11 lub później, w [AMD corporation](http://go.microsoft.com/fwlink/p/?linkid=23746) lokacji.  
+ `__svm_vmrun` Funkcji jest odpowiednikiem `VMRUN` machine instrukcji. Ta funkcja obsługuje interakcji monitor maszyny wirtualnej hosta z gościa operacyjnego i jego aplikacji. Aby uzyskać więcej informacji, wyszukaj dokumentu, "AMD64 architektury programisty ręczne woluminie 2: programowania systemu" dokument o numerze 24593, wersji 3.11 lub później, w [AMD corporation](https://developer.amd.com/resources/developer-guides-manuals/) lokacji.  
   
 ## <a name="requirements"></a>Wymagania  
   

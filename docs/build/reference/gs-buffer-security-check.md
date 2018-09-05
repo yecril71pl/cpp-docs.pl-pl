@@ -24,12 +24,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6aa1204a6959121b3f6280433c0414f81c038548
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: fdb08515d20a4de00ea35373670887e48b835e28
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32379487"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43678395"
 ---
 # <a name="gs-buffer-security-check"></a>/GS (Sprawdzanie zabezpieczeń bufora)  
   
@@ -43,21 +43,21 @@ Wykrywa niektóre przepełnienia buforów, które zastępują adres zwrotny funk
   
 ## <a name="remarks"></a>Uwagi  
   
-**/ GS** jest domyślnie włączone. Jeśli aplikacja ma nie zagrożenie bezpieczeństwa, użyj **/GS-**. Aby uzyskać więcej informacji na temat **/GS**, zobacz [kompilatora zabezpieczeń sprawdza w głębokość](http://go.microsoft.com/fwlink/p/?linkid=7260). Aby uzyskać więcej informacji na temat pomijanie wykrywania przepełnienie buforu, zobacz [safebuffers](../../cpp/safebuffers.md).  
+**/ GS** jest domyślnie włączone. Jeśli oczekujesz, że aplikacja nie narażona na zagrożenia, należy użyć **/GS-**. Aby uzyskać więcej informacji dotyczących pomijania wykrywania przepełnień buforu, zobacz [safebuffers](../../cpp/safebuffers.md).  
   
 ## <a name="security-checks"></a>Sprawdzanie zabezpieczeń  
   
-W funkcjach, które kompilator uznaje za zagrożone problemem przepełnienia buforu, przydziela miejsce w stosie przed adresem zwrotnym. Przy wejściu do funkcji jest załadowana ilość miejsca przydzielonego *plik cookie zabezpieczeń* raz obliczonych na załadowanie modułu. Podczas zamykania funkcji oraz podczas usuwania ramek ze stosu (unwinding) w 64-bitowych systemach operacyjnych następuje wywołanie funkcji pomocnika, która sprawdza, czy wartość pliku cookie jest wciąż taka sama. Inna wartość wskazuje, że mogło dojść do zastąpienia stosu. Wykrycie innej wartości powoduje przerwanie procesu.  
+W funkcjach, które kompilator uznaje za zagrożone problemem przepełnienia buforu, przydziela miejsce w stosie przed adresem zwrotnym. Podczas uruchamiania funkcji przydzielonego miejsca jest wczytywany *plik cookie zabezpieczeń* obliczony jednokrotnie przy wczytywaniu modułu. Podczas zamykania funkcji oraz podczas usuwania ramek ze stosu (unwinding) w 64-bitowych systemach operacyjnych następuje wywołanie funkcji pomocnika, która sprawdza, czy wartość pliku cookie jest wciąż taka sama. Inna wartość wskazuje, że mogło dojść do zastąpienia stosu. Wykrycie innej wartości powoduje przerwanie procesu.  
   
 ## <a name="gs-buffers"></a>Bufory GS  
   
-Sprawdzanie zabezpieczeń przepełnienie buforu jest wykonywana na *buforu GS*. Buforem GS może być jeden z następujących obiektów:  
+Sprawdzanie zabezpieczeń przepełnienia buforu jest wykonywane na *buforu GS*. Buforem GS może być jeden z następujących obiektów:  
   
 -   Tablica, która jest większa niż 4 bajty, ma więcej niż dwa elementy oraz zawiera element typu innego niż wskaźnik.  
   
 -   Struktura danych, która ma więcej niż 8 bajtów i nie zawiera żadnych wskaźników.  
   
--   Bufor przydzielony przy użyciu [_alloca](../../c-runtime-library/reference/alloca.md) funkcji.  
+-   Bufor przydzielony za pomocą [_alloca](../../c-runtime-library/reference/alloca.md) funkcji.  
   
 -   Dowolna klasa lub struktura zawierająca bufor GS.  
   
@@ -82,7 +82,7 @@ struct { int a; int b; };
   
 ## <a name="initialize-the-security-cookie"></a>Inicjowanie pliku cookie zabezpieczeń  
   
-**/GS** — opcja kompilatora wymaga zainicjowanej plik cookie zabezpieczeń przed uruchomieniem dowolnej funkcji, która używa pliku cookie. Plik cookie zabezpieczeń musi być zainicjowany natychmiast na zapis do pliku EXE lub DLL. Odbywa się to automatycznie Jeśli użyjesz domyślnych punktów wejścia VCRuntime: mainCRTStartup, wmainCRTStartup, WinMainCRTStartup, wWinMainCRTStartup, lub _DllMainCRTStartup. Użycie punktu wejścia alternatywne, należy ręcznie zainicjować plik cookie zabezpieczeń przez wywołanie metody [__security_init_cookie —](../../c-runtime-library/reference/security-init-cookie.md).  
+**/GS** — opcja kompilatora wymaga zainicjowanej plik cookie zabezpieczeń przed uruchomieniem którejkolwiek funkcji korzystającej z pliku cookie. Plik cookie zabezpieczeń musi być zainicjowany natychmiast przy uruchamianiu pliku EXE lub DLL. Odbywa się to automatycznie, jeśli używasz domyślnych punktów wejścia VCRuntime: mainCRTStartup, wmainCRTStartup, WinMainCRTStartup, wWinMainCRTStartup, lub _DllMainCRTStartup. Jeśli używasz alternatywnego punktu wejścia, należy ręcznie zainicjować plik cookie zabezpieczeń, wywołując [__security_init_cookie](../../c-runtime-library/reference/security-init-cookie.md).  
   
 ## <a name="what-is-protected"></a>Co obejmuje ochrona  
   
@@ -94,11 +94,11 @@ struct { int a; int b; };
   
 -   Zagrożone parametry funkcji.  
   
-Na wszystkich platformach **/GS** podejmuje próbę wykrycia przepełnienia buforu na adres zwrotny. Przepełnienia buforów łatwiej wykonać na platformach takich jak x86 i x64, ponieważ używają one konwencji wywoływania, które przechowują adresy zwrotne wywołań funkcji w stosach.  
+Na wszystkich platformach **/GS** próbuje wykryć przepełnienia buforów pod adresami zwrotnymi. Przepełnienia buforów łatwiej wykonać na platformach takich jak x86 i x64, ponieważ używają one konwencji wywoływania, które przechowują adresy zwrotne wywołań funkcji w stosach.  
   
 Jeśli na platformie x86 funkcja używa aparatu obsługi wyjątków, kompilator wprowadza plik cookie zabezpieczeń chroniący adres tego aparatu. Plik cookie jest sprawdzany w trakcie usuwania ramek ze stosu.  
   
-**/ GS** chroni *narażone parametry* przekazywane do funkcji. Do takich parametrów zalicza się wskaźniki, odwołania do składni języka C++, struktury języka C (typu C++ POD) zawierające wskaźniki oraz bufory GS.  
+**/ GS** chroni *zagrożonych parametrów* przekazywane do funkcji. Do takich parametrów zalicza się wskaźniki, odwołania do składni języka C++, struktury języka C (typu C++ POD) zawierające wskaźniki oraz bufory GS.  
   
 Parametr zagrożony jest przydzielany przed plikiem cookie i lokalnymi zmiennymi. Przepełnienie buforu może spowodować zastąpienie tych parametrów. Wtedy kod w funkcji wykorzystującej te parametry może doprowadzić do ataku, zanim funkcja zwróci wartość i zostanie wykonane sprawdzanie zabezpieczeń. Aby ograniczyć to zagrożenie, kompilator tworzy kopię zagrożonych parametrów w trakcie prologu funkcji i umieszcza je w obszarze pamięci masowej wykorzystywanym przez bufory.  
   
@@ -110,7 +110,7 @@ Kompilator nie tworzy kopii zagrożonych parametrów w następujących sytuacjac
   
 -   Funkcje o zmiennej liczbie argumentów (...).  
   
--   Funkcje, które są oznaczone ikoną z [naked](../../cpp/naked-cpp.md).  
+-   Funkcje, które są oznaczone ["naked"](../../cpp/naked-cpp.md).  
   
 -   Funkcje, które w pierwszej instrukcji zawierają wbudowany kod zestawu.  
   
@@ -118,9 +118,9 @@ Kompilator nie tworzy kopii zagrożonych parametrów w następujących sytuacjac
   
 ## <a name="what-is-not-protected"></a>Czego nie obejmuje ochrona  
   
-**/GS** — opcja kompilatora nie chroni przed takimi atakami, wszystkie przepełnienie buforu. Jeśli na przykład istnieje bufor oraz tabela wirtualna w obiekcie, przepełnienie buforu może spowodować uszkodzenie tabeli.  
+**/GS** — opcja kompilatora nie chroni przed atakami, wszystkie przepełnienia buforu. Jeśli na przykład istnieje bufor oraz tabela wirtualna w obiekcie, przepełnienie buforu może spowodować uszkodzenie tabeli.  
   
-Nawet jeśli używasz **/GS**, zawsze próbować bezpieczny kod, który ma nie przepełnienia buforu zapisu.  
+Nawet w przypadku używania **/GS**, zawsze należy starać się pisać bezpieczny kod, który ma nie przepełnienia buforu.  
   
 ### <a name="to-set-this-compiler-option-in-visual-studio"></a>Aby ustawić tę opcję kompilatora w programie Visual Studio  
   
@@ -128,11 +128,11 @@ Nawet jeśli używasz **/GS**, zawsze próbować bezpieczny kod, który ma nie p
   
      Aby uzyskać więcej informacji, zobacz [Praca z właściwościami projektu](../../ide/working-with-project-properties.md).  
   
-2.  W **strony właściwości** okno dialogowe, kliknij przycisk **C/C++** folderu.  
+2.  W **stron właściwości** okno dialogowe, kliknij przycisk **C/C++** folderu.  
   
-3.  Kliknij przycisk **generowania kodu** strony właściwości.  
+3.  Kliknij przycisk **generowania kodu** stronę właściwości.  
   
-4.  Modyfikowanie **sprawdzanie zabezpieczeń bufora** właściwości.  
+4.  Modyfikowanie **sprawdzanie zabezpieczeń buforu** właściwości.  
   
 ### <a name="to-set-this-compiler-option-programmatically"></a>Aby programowo ustawić tę opcję kompilatora  
   

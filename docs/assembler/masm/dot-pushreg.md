@@ -1,7 +1,7 @@
 ---
 title: . PUSHREG | Dokumentacja firmy Microsoft
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 08/30/2018
 ms.technology:
 - cpp-masm
 ms.topic: reference
@@ -16,53 +16,55 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e4b9f4a7189d2dbe3717535a95a1816e5fd0de3b
-ms.sourcegitcommit: dbca5fdd47249727df7dca77de5b20da57d0f544
+ms.openlocfilehash: 11d0e0456621dd77e1545e2e8a16662556bed944
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/28/2018
-ms.locfileid: "32055150"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43676042"
 ---
 # <a name="pushreg"></a>.PUSHREG
-Generuje `UWOP_PUSH_NONVOL` unwind kod dla określonego zarejestrować numer przy użyciu bieżącego przesunięcie w prologu.  
-  
-## <a name="syntax"></a>Składnia  
-  
-```  
-.PUSHREG register  
-```  
-  
-## <a name="remarks"></a>Uwagi  
- . PUSHREG umożliwia użytkownikom ml64.exe określające, jak funkcja ramki cofa i jest dozwolone tylko w prologu, który rozciąga się od [PROC](../../assembler/masm/proc.md) deklaracji ramki [. ENDPROLOG](../../assembler/masm/dot-endprolog.md) dyrektywy. Dyrektywy te nie generują kod; tylko generowanie `.xdata` i `.pdata`. . PUSHREG powinien być poprzedzony instrukcje faktycznie implementujących działania, które można oddzielić. Jest dobrą praktyką jest zawijany zarówno dyrektywy unwind i kodu, które są przeznaczone do unwind w makrze do zapewnienia umowy.  
-  
- Aby uzyskać więcej informacji, zobacz [MASM dla x64 (ml64.exe)](../../assembler/masm/masm-for-x64-ml64-exe.md).  
-  
-## <a name="sample"></a>Przykład  
-  
-### <a name="description"></a>Opis  
- Poniższy przykład przedstawia sposób tegisters trwałej push.  
-  
-### <a name="code"></a>Kod  
-  
-```  
-; ml64 ex1.asm /link /entry:Example1 /SUBSYSTEM:CONSOLE  
-_text SEGMENT  
-Example1 PROC FRAME  
-   push r10  
-.pushreg r10  
-   push r15  
-.pushreg r15  
-   push rbx  
-.pushreg rbx  
-   push rsi  
-.pushreg rsi  
-.endprolog  
-   ; rest of function ...  
-   ret  
-Example1 ENDP  
-_text ENDS  
-END  
-```  
-  
-## <a name="see-also"></a>Zobacz też  
- [Dokumentacja dyrektyw](../../assembler/masm/directives-reference.md)
+
+Generuje `UWOP_PUSH_NONVOL` unwind wejścia kodu dla określonego rejestru liczbę za pomocą bieżące przesunięcie w prologu.
+
+## <a name="syntax"></a>Składnia
+
+> . Zarejestruj się PUSHREG
+
+## <a name="remarks"></a>Uwagi
+
+. PUSHREG umożliwia użytkownikom ml64.exe określające, jak funkcja ramki rozwija i jest dozwolone tylko w prologu, który rozciąga się od [PROC](../../assembler/masm/proc.md) deklaracji ramki [. ENDPROLOG](../../assembler/masm/dot-endprolog.md) dyrektywy. Te dyrektywy nie generują kodu. tylko generują `.xdata` i `.pdata`. . PUSHREG powinien być poprzedzony instrukcji, które faktycznie wykonania akcji, które mają być rozwinięty. Jest dobrą praktyką jest opakowywanie dyrektywy unwind i kodu, które są przeznaczone do rozwinięcie makra do zapewnienia umowy.
+
+Aby uzyskać więcej informacji, zobacz [MASM x64 (ml64.exe)](../../assembler/masm/masm-for-x64-ml64-exe.md).
+
+## <a name="sample"></a>Przykład
+
+### <a name="description"></a>Opis
+
+Poniższy przykład pokazuje jak wypychać tegisters trwałej.
+
+### <a name="code"></a>Kod
+
+```asm
+; ml64 ex1.asm /link /entry:Example1 /SUBSYSTEM:CONSOLE
+_text SEGMENT
+Example1 PROC FRAME
+   push r10
+.pushreg r10
+   push r15
+.pushreg r15
+   push rbx
+.pushreg rbx
+   push rsi
+.pushreg rsi
+.endprolog
+   ; rest of function ...
+   ret
+Example1 ENDP
+_text ENDS
+END
+```
+
+## <a name="see-also"></a>Zobacz także
+
+[Dokumentacja dyrektyw](../../assembler/masm/directives-reference.md)<br/>

@@ -1,7 +1,7 @@
 ---
 title: . NOLIST | Dokumentacja firmy Microsoft
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 08/30/2018
 ms.technology:
 - cpp-masm
 ms.topic: reference
@@ -16,26 +16,25 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0b264ebc4c860aac6e0cb29b2b4aa31795528c8c
-ms.sourcegitcommit: dbca5fdd47249727df7dca77de5b20da57d0f544
+ms.openlocfilehash: 732d50c5575d04f8eadf6e8ffe00b78cba322f38
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/28/2018
-ms.locfileid: "32054978"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43682827"
 ---
 # <a name="nolist"></a>.NOLIST
-Pomija listy programu.  
-  
-## <a name="syntax"></a>Składnia  
-  
-```  
-  
-.NOLIST  
-  
-```  
-  
-## <a name="remarks"></a>Uwagi  
- Taki sam jak [. O nazwie XLIST](../../assembler/masm/dot-xlist.md).  
-  
-## <a name="see-also"></a>Zobacz też  
- [Dokumentacja dyrektyw](../../assembler/masm/directives-reference.md)
+
+Pomija listy programów.
+
+## <a name="syntax"></a>Składnia
+
+> .NOLIST
+
+## <a name="remarks"></a>Uwagi
+
+Taki sam jak [. O nazwie XLIST](../../assembler/masm/dot-xlist.md).
+
+## <a name="see-also"></a>Zobacz także
+
+[Dokumentacja dyrektyw](../../assembler/masm/directives-reference.md)<br/>

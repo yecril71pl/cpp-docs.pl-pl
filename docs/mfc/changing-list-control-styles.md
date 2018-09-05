@@ -16,17 +16,17 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4919d9fd947a489ee9535abd5aa57d7861ba5a37
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 2fdb2bbb3681fab2bae42866df40d0ca363b7935
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43197997"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43676770"
 ---
 # <a name="changing-list-control-styles"></a>Zmienianie stylów kontrolki listy
 Można zmienić styl okna kontrolki listy ([CListCtrl](../mfc/reference/clistctrl-class.md)) w dowolnym momencie po jego utworzeniu. Zmiana stylu okna, możesz zmienić rodzaj widoku, który korzysta z kontrolki. Na przykład, aby emulować w Eksploratorze, może być podasz w menu i przycisków paska narzędzi do przełączania sterowania między różne widoki: widoku ikon, widoku listy i tak dalej.  
   
- Na przykład po wybraniu elementu menu, możesz wykonać wywołanie do [GetWindowLong](https://msdn.microsoft.com/library/windows/desktop/ms633584) można pobrać bieżącego stylu kontrolki, a następnie wywołać [SetWindowLong](https://msdn.microsoft.com/library/windows/desktop/ms633591) zresetować stylu. Aby uzyskać więcej informacji, zobacz [za pomocą kontrolki widoku listy](/windows/desktop/Controls/using-list-view-controls) w zestawie Windows SDK.  
+ Na przykład po wybraniu elementu menu, możesz wykonać wywołanie do [GetWindowLong](/windows/desktop/api/winuser/nf-winuser-getwindowlonga) można pobrać bieżącego stylu kontrolki, a następnie wywołać [SetWindowLong](/windows/desktop/api/winuser/nf-winuser-setwindowlonga) zresetować stylu. Aby uzyskać więcej informacji, zobacz [za pomocą kontrolki widoku listy](/windows/desktop/Controls/using-list-view-controls) w zestawie Windows SDK.  
   
  Dostępne style są wymienione w [Utwórz](../mfc/reference/clistctrl-class.md#create). Style **LVS_ICON**, **LVS_SMALLICON**, **LVS_LIST**, i **LVS_REPORT** wyznaczyć widoki kontrolne cztery listy.  
   

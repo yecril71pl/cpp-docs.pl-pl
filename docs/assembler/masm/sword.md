@@ -1,7 +1,7 @@
 ---
 title: SWORD — | Dokumentacja firmy Microsoft
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 08/30/2018
 ms.technology:
 - cpp-masm
 ms.topic: reference
@@ -16,23 +16,22 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 61f3e50db7c9ac7358190885d9e5b453126c8487
-ms.sourcegitcommit: dbca5fdd47249727df7dca77de5b20da57d0f544
+ms.openlocfilehash: a004148476f6eb0d63e91dfac5ebcc4ca2c8ad92
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/28/2018
-ms.locfileid: "32057393"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43676161"
 ---
 # <a name="sword"></a>SWORD
-Przydziela i opcjonalnie inicjuje podpisem word (2 bajty) magazynu dla każdej `initializer`. Może także służyć jako Specyfikator typu dowolnym typem jest dozwolony.  
-  
-## <a name="syntax"></a>Składnia  
-  
-```  
-  
-name SWORD initializer [[, initializer]]...  
-```  
-  
-## <a name="see-also"></a>Zobacz też  
- [Odwołania do dyrektyw](../../assembler/masm/directives-reference.md)   
- [WORD](../../assembler/masm/word.md)
+
+Przydziela i opcjonalnie inicjuje podpisem word (2 bajty) magazynu dla każdego `initializer`. Może również służyć jako specyfikatora typu dowolnym typem jest dozwolony.
+
+## <a name="syntax"></a>Składnia
+
+> Inicjator sword — nazwa [[, inicjator]]...
+
+## <a name="see-also"></a>Zobacz także
+
+[Dokumentacja dyrektyw](../../assembler/masm/directives-reference.md)<br/>
+[WORD](../../assembler/masm/word.md)<br/>

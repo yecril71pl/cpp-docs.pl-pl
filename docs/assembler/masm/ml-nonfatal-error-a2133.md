@@ -1,7 +1,7 @@
 ---
 title: Błąd niekrytyczny ML A2133 | Dokumentacja firmy Microsoft
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 08/30/2018
 ms.technology:
 - cpp-masm
 ms.topic: error-reference
@@ -16,21 +16,23 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f240ed6f2e8330017e56334dfcc41be478537c7b
-ms.sourcegitcommit: dbca5fdd47249727df7dca77de5b20da57d0f544
+ms.openlocfilehash: 0df094f5e7135ffb3b9a5f09383e03e411755de3
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/28/2018
-ms.locfileid: "32056210"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43678069"
 ---
 # <a name="ml-nonfatal-error-a2133"></a>Błąd niekrytyczny ML A2133
-**zastąpione przez INVOKE wartości rejestru**  
-  
- Rejestr został przekazany jako argument do procedury, ale kod wygenerowany przez [INVOKE](../../assembler/masm/invoke.md) Aby przekazać argumenty inne zniszczone zawartość rejestru.  
-  
- Rejestruje AX, AL AH, EAX, DX, DL, DH i EDX może posłużyć asemblera Aby dokonać konwersji danych.  
-  
- Użyj innego rejestru.  
-  
-## <a name="see-also"></a>Zobacz też  
- [Komunikaty o błędach ML](../../assembler/masm/ml-error-messages.md)
+
+**Zarejestruj wartość zastępowany INVOKE**
+
+Rejestr został przekazany jako argument do procedury, ale kod wygenerowany przez [INVOKE](../../assembler/masm/invoke.md) do przekazania inne argumenty zniszczone zawartość rejestru.
+
+AX, AL, AH i EAX, a także DX, listy Dystrybucyjnej, DH i EDX rejestrów może służyć przez asembler przeprowadzenie konwersji danych.
+
+Użyj innego rejestru.
+
+## <a name="see-also"></a>Zobacz także
+
+[Komunikaty o błędach ML](../../assembler/masm/ml-error-messages.md)<br/>

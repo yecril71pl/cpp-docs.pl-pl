@@ -1,7 +1,7 @@
 ---
 title: PUSHCONTEXT — | Dokumentacja firmy Microsoft
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 08/30/2018
 ms.technology:
 - cpp-masm
 ms.topic: reference
@@ -16,22 +16,21 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3c16d0de0848a9ceb61330498b12a9a4322e6604
-ms.sourcegitcommit: dbca5fdd47249727df7dca77de5b20da57d0f544
+ms.openlocfilehash: 16a76f80f72ab2d7f1ec0cfc86c102249330bf16
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/28/2018
-ms.locfileid: "32056382"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43677431"
 ---
 # <a name="pushcontext"></a>PUSHCONTEXT
-Zapisuje części lub całej bieżącej `context`: rejestr segmentu przyjmuje się, że wartość podstawa, flag listę i cref lub procesor/Koprocesor wartości. `context` Może być **ZAKŁADA**, `RADIX`, **WYŚWIETLANIA**, **Procesora**, lub **wszystkich**.  
-  
-## <a name="syntax"></a>Składnia  
-  
-```  
-  
-PUSHCONTEXT context  
-```  
-  
-## <a name="see-also"></a>Zobacz też  
- [Dokumentacja dyrektyw](../../assembler/masm/directives-reference.md)
+
+Zapisuje część lub całość bieżącego `context`: rejestr segmentu przyjmuje się, że wartości podstawy, listy i cref flagi lub procesor/Koprocesor wartości. `context` Może być **ASSUMES**, `RADIX`, **OFERCIE**, **Procesora**, lub **wszystkich**.
+
+## <a name="syntax"></a>Składnia
+
+> Pushcontext — kontekst
+
+## <a name="see-also"></a>Zobacz także
+
+[Dokumentacja dyrektyw](../../assembler/masm/directives-reference.md)<br/>

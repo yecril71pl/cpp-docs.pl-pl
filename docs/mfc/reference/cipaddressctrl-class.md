@@ -34,12 +34,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 49362fa02005ce44100b0248d25ffc364a68da16
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 0177d350d37b7fb1afe27d8aa4aad98dd985ec13
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43222341"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43679181"
 ---
 # <a name="cipaddressctrl-class"></a>Klasa CIPAddressCtrl
 Oferuje funkcje formantu typowego adresu IP Windows.  
@@ -120,7 +120,7 @@ virtual BOOL Create(
   
 ### <a name="parameters"></a>Parametry  
  *dwStyle*  
- Styl kontrolki adresu IP. Stosowanie kombinacji Style okna ramowego. Styl WS_CHILD musi zawierać, ponieważ kontrolka musi być okna podrzędnego. Zobacz [CreateWindow](https://msdn.microsoft.com/library/windows/desktop/ms632679) w zestawie Windows SDK dla listy stylów systemu windows.  
+ Styl kontrolki adresu IP. Stosowanie kombinacji Style okna ramowego. Styl WS_CHILD musi zawierać, ponieważ kontrolka musi być okna podrzędnego. Zobacz [CreateWindow](/windows/desktop/api/winuser/nf-winuser-createwindowa) w zestawie Windows SDK dla listy stylów systemu windows.  
   
  *Rect*  
  Odwołanie do rozmiaru i położenia formant adresu IP. Może być albo [CRect](../../atl-mfc-shared/reference/crect-class.md) obiektu lub [Prostokąt](https://msdn.microsoft.com/library/windows/desktop/dd162897) struktury.  
@@ -157,10 +157,10 @@ virtual BOOL CreateEx(
   
 ### <a name="parameters"></a>Parametry  
  *dwExStyle*  
- Określa styl rozszerzony kontrolki tworzona. Aby uzyskać listę rozszerzone style Windows, zobacz *dwExStyle* parametr [elementu CreateWindowEx](https://msdn.microsoft.com/library/windows/desktop/ms632680) w zestawie Windows SDK.  
+ Określa styl rozszerzony kontrolki tworzona. Aby uzyskać listę rozszerzone style Windows, zobacz *dwExStyle* parametr [elementu CreateWindowEx](/windows/desktop/api/winuser/nf-winuser-createwindowexa) w zestawie Windows SDK.  
   
  *dwStyle*  
- Styl kontrolki adresu IP. Stosowanie kombinacji Style okna ramowego. Styl WS_CHILD musi zawierać, ponieważ kontrolka musi być okna podrzędnego. Zobacz [CreateWindow](https://msdn.microsoft.com/library/windows/desktop/ms632679) w zestawie Windows SDK dla listy stylów systemu windows.  
+ Styl kontrolki adresu IP. Stosowanie kombinacji Style okna ramowego. Styl WS_CHILD musi zawierać, ponieważ kontrolka musi być okna podrzędnego. Zobacz [CreateWindow](/windows/desktop/api/winuser/nf-winuser-createwindowa) w zestawie Windows SDK dla listy stylów systemu windows.  
   
  *Rect*  
  Odwołanie do [Prostokąt](https://msdn.microsoft.com/library/windows/desktop/dd162897) struktury opisujących rozmiar i położenie okna, można utworzyć klienta współrzędne *pParentWnd*.  

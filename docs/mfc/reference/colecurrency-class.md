@@ -32,12 +32,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 46c12c29fcee310e8bd1d484743b754a830541d7
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: a26bae54e267dfa46b0ec8e6770b3643cc0b7ebb
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43196115"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43681775"
 ---
 # <a name="colecurrency-class"></a>Klasa COleCurrency
 Hermetyzuje `CURRENCY` typ danych w automatyzacji OLE.  
@@ -133,7 +133,7 @@ COleCurrency(
   
 - Konstrukcje COleCurrency() `COleCurrency` obiektu inicjowane na wartość 0 (zero).  
   
-- COleCurrency (`cySrc`) tworzy `COleCurrency` obiektu z [waluty](https://msdn.microsoft.com/5e81273c-7289-45c7-93c0-32c1553f708e) wartość.  
+- COleCurrency (`cySrc`) tworzy `COleCurrency` obiektu z [waluty](/windows/desktop/api/wtypes/ns-wtypes-tagcy) wartość.  
   
 - COleCurrency (`curSrc`) tworzy `COleCurrency` obiektu z istniejącego `COleCurrency` obiektu. Nowy obiekt ma ten sam stan, co obiekt źródłowy.  
   
@@ -141,7 +141,7 @@ COleCurrency(
   
 - `COleCurrency(`nUnits`, `nFractionalUnits`) Constructs a `COleCurrency "obiektu z określonym składników liczbowych. Jeśli wartość bezwzględna część ułamkową jest większa niż 10 000, odpowiednie dostosowania do jednostek. Należy zauważyć, że jednostki i część ułamkową są określone przez podpisany długich wartości.  
   
- Aby uzyskać więcej informacji, zobacz [waluty](https://msdn.microsoft.com/5e81273c-7289-45c7-93c0-32c1553f708e) i [VARIANT](/previous-versions/windows/desktop/api/oaidl/ns-oaidl-tagvariant) wpisów w zestawie Windows SDK.  
+ Aby uzyskać więcej informacji, zobacz [waluty](/windows/desktop/api/wtypes/ns-wtypes-tagcy) i [VARIANT](/previous-versions/windows/desktop/api/oaidl/ns-oaidl-tagvariant) wpisów w zestawie Windows SDK.  
   
 ### <a name="example"></a>Przykład  
  W poniższych przykładach pokazano skutki konstruktory parametr zero i dwóch parametrów:  
@@ -230,14 +230,14 @@ enum CurrencyStatus {
  [!code-cpp[NVC_MFCOleContainer#12](../../mfc/codesnippet/cpp/colecurrency-class_3.cpp)]  
   
 ##  <a name="m_cur"></a>  COleCurrency::m_cur  
- Podstawowe [waluty](https://msdn.microsoft.com/5e81273c-7289-45c7-93c0-32c1553f708e) struktury, w tym `COleCurrency` obiektu.  
+ Podstawowe [waluty](/windows/desktop/api/wtypes/ns-wtypes-tagcy) struktury, w tym `COleCurrency` obiektu.  
   
 ### <a name="remarks"></a>Uwagi  
   
 > [!CAUTION]
 >  Zmiana wartości w `CURRENCY` struktury używane przez wskaźnik zwracany przez tę funkcję zmieni wartość tego `COleCurrency` obiektu. Nie zmienia się jego stan to `COleCurrency` obiektu.  
   
- Aby uzyskać więcej informacji, zobacz [waluty](https://msdn.microsoft.com/5e81273c-7289-45c7-93c0-32c1553f708e) wejścia w zestawie Windows SDK.  
+ Aby uzyskać więcej informacji, zobacz [waluty](/windows/desktop/api/wtypes/ns-wtypes-tagcy) wejścia w zestawie Windows SDK.  
   
 ##  <a name="m_status"></a>  COleCurrency::m_status  
  Typ ten element członkowski danych jest Typ wyliczany `CurrencyStatus`, który jest zdefiniowany w obrębie `COleCurrency` klasy.  
@@ -304,7 +304,7 @@ const COleCurrency& operator=(const COleCurrency& curSrc);
   
 - **Operator = (** *varSrc* **)** Jeśli konwersja `VARIANT` wartość (lub [COleVariant](../../mfc/reference/colevariant-class.md) obiektu) walutę ( `VT_CY`) jest Operacja się powiedzie, wartość przekonwertowanego jest kopiowana do to `COleCurrency` obiekt i jego stan jest ustawiony na prawidłowy. Jeśli konwersja nie powiedzie, wartość `COleCurrency` obiekt jest ustawiony na 0 i jej stanie się nieprawidłowy.  
   
- Aby uzyskać więcej informacji, zobacz [waluty](https://msdn.microsoft.com/5e81273c-7289-45c7-93c0-32c1553f708e) i [VARIANT](/previous-versions/windows/desktop/api/oaidl/ns-oaidl-tagvariant) wpisów w zestawie Windows SDK.  
+ Aby uzyskać więcej informacji, zobacz [waluty](/windows/desktop/api/wtypes/ns-wtypes-tagcy) i [VARIANT](/previous-versions/windows/desktop/api/oaidl/ns-oaidl-tagvariant) wpisów w zestawie Windows SDK.  
   
 ### <a name="example"></a>Przykład  
  [!code-cpp[NVC_MFCOleContainer#15](../../mfc/codesnippet/cpp/colecurrency-class_4.cpp)]  

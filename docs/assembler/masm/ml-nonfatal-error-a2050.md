@@ -1,7 +1,7 @@
 ---
 title: Błąd niekrytyczny ML A2050 | Dokumentacja firmy Microsoft
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 08/30/2018
 ms.technology:
 - cpp-masm
 ms.topic: error-reference
@@ -16,25 +16,27 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 159ed131c13166435114234b3b16a82cd4d41d1f
-ms.sourcegitcommit: dbca5fdd47249727df7dca77de5b20da57d0f544
+ms.openlocfilehash: bd2e0e6c2fc818ef9286fd303c07a26bdd8b4e5a
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/28/2018
-ms.locfileid: "32056197"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43680674"
 ---
 # <a name="ml-nonfatal-error-a2050"></a>Błąd niekrytyczny ML A2050
-**Rzeczywista lub nie jest dozwolona liczba BCD**  
-  
- Liczba zmiennoprzecinkowa (rzeczywiste) lub stała binary kodowany dziesiętnych (BCD) użyto innych niż jako inicjator danych.  
-  
- Wystąpił jeden z następujących czynności:  
-  
--   Liczba rzeczywista lub danych konfiguracji rozruchu została użyta w wyrażeniu.  
-  
--   Liczba rzeczywista użyto innych niż zainicjować dyrektywy [DWORD](../../assembler/masm/dword.md), [QWORD](../../assembler/masm/qword.md), lub [tbyte —](../../assembler/masm/tbyte.md).  
-  
--   BCD użyto innych niż zainicjować dyrektywy `TBYTE`.  
-  
-## <a name="see-also"></a>Zobacz też  
- [Komunikaty o błędach ML](../../assembler/masm/ml-error-messages.md)
+
+**rzeczywiste lub nie jest dozwoloną liczbę BCD**
+
+Liczba zmiennoprzecinkowa (rzeczywiste) lub stałej dziesiętnej kodowany plik binarny (BCD) użyto innej niż jako inicjator danych.
+
+Wystąpił jeden z następujących czynności:
+
+- Liczba rzeczywista lub BCD był używany w wyrażeniu.
+
+- Liczba rzeczywista został użyty do zainicjowania dyrektywy innych niż [DWORD](../../assembler/masm/dword.md), [QWORD](../../assembler/masm/qword.md), lub [tbyte —](../../assembler/masm/tbyte.md).
+
+- BCD został użyty do zainicjowania dyrektywy innych niż `TBYTE`.
+
+## <a name="see-also"></a>Zobacz także
+
+[Komunikaty o błędach ML](../../assembler/masm/ml-error-messages.md)<br/>

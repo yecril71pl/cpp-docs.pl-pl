@@ -1,7 +1,7 @@
 ---
 title: Błąd niekrytyczny ML A2085 | Dokumentacja firmy Microsoft
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 08/30/2018
 ms.technology:
 - cpp-masm
 ms.topic: error-reference
@@ -16,19 +16,21 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 82f0a014810679f0b48f79198b1335240f5cd6a8
-ms.sourcegitcommit: dbca5fdd47249727df7dca77de5b20da57d0f544
+ms.openlocfilehash: dd5ec9f36a4f956b8eeb097b6a8f8eaed89ba2b2
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/28/2018
-ms.locfileid: "32054279"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43681439"
 ---
 # <a name="ml-nonfatal-error-a2085"></a>Błąd niekrytyczny ML A2085
-**instrukcji lub rejestru nie są akceptowane w bieżącym trybie Procesora**  
-  
- Nastąpiła próba użycia instrukcji, rejestru lub słowo kluczowe, która jest nieprawidłowa dla bieżącego trybu procesora.  
-  
- Na przykład wymagać rejestrów 32-bitowych [.386](../../assembler/masm/dot-386.md) lub nowszej. Rejestry sterowania, takie jak CR0 wymagają trybie uprzywilejowanym [.386p —](../../assembler/masm/dot-386p.md) lub nowszej. Ten błąd zostanie również wygenerowany dla **NEAR32**, **FAR32**, i **PŁASKIEJ** słów kluczowych, które wymagają. **386** lub nowszej.  
-  
-## <a name="see-also"></a>Zobacz też  
- [Komunikaty o błędach ML](../../assembler/masm/ml-error-messages.md)
+
+**instrukcji lub rejestru nie są akceptowane w bieżącym trybie procesora CPU**
+
+Próbowano użyć instrukcji, rejestr lub słowo kluczowe, które nie jest prawidłowa dla bieżącego trybu procesora.
+
+Na przykład wymagać 32-bitowych rejestrów [.386](../../assembler/masm/dot-386.md) lub nowszej. Rejestruje kontroli, takie jak CR0 wymagają trybie uprzywilejowanym [.386p —](../../assembler/masm/dot-386p.md) lub nowszej. Ten błąd zostanie również wygenerowany dla **NEAR32**, **FAR32**, i **PROSTEGO** słów kluczowych, które wymagają. **386** lub nowszej.
+
+## <a name="see-also"></a>Zobacz także
+
+[Komunikaty o błędach ML](../../assembler/masm/ml-error-messages.md)<br/>

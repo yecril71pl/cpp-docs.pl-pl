@@ -1,7 +1,7 @@
 ---
 title: '@Date | Dokumentacja firmy Microsoft'
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 08/30/2018
 ms.technology:
 - cpp-masm
 ms.topic: reference
@@ -16,23 +16,21 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 611fb69d16b69537d051aa4080c94525d7ce461c
-ms.sourcegitcommit: dbca5fdd47249727df7dca77de5b20da57d0f544
+ms.openlocfilehash: c24d78c7de05281a3bb14cf4459e230ee69fa421
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/28/2018
-ms.locfileid: "32049613"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43678780"
 ---
 # <a name="date"></a>@Date
-System Data w formacie mm/dd/rr (tekst makro).  
-  
-## <a name="syntax"></a>Składnia  
-  
-```  
-  
-@Date  
-  
-```  
-  
-## <a name="see-also"></a>Zobacz też  
- [Dokumentacja symboli](../../assembler/masm/symbols-reference.md)
+
+System Data w formacie mm/dd/rr (makro tekstu).
+
+## <a name="syntax"></a>Składnia
+
+> @Date
+
+## <a name="see-also"></a>Zobacz także
+
+[Dokumentacja symboli](../../assembler/masm/symbols-reference.md)<br/>

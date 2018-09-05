@@ -242,12 +242,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 41b5a9f936dc47852c766370d330576dc16ca58a
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 8c5c2697c22384524234f90a48c396a91b3c3522
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43213665"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43678101"
 ---
 # <a name="cmfcribbonbaseelement-class"></a>Klasa CMFCRibbonBaseElement
 `CMFCRibbonBaseElement` Klasy jest klasą bazową dla wszystkich elementów, które można dodać do [paska wstążki](../../mfc/reference/cmfcribbonbar-class.md). Przykładowe elementy wstążki są wstążki przyciski, pola wyboru Wstążki i pola kombi wstążki.  
@@ -921,7 +921,7 @@ virtual CWnd* GetParentWnd() const;
  Wskaźnik do okna nadrzędnego elementu wstążki, jeśli metoda zakończyła się pomyślnie; w przeciwnym razie wartość NULL.  
   
 ### <a name="remarks"></a>Uwagi  
- Okno nadrzędne dla elementu wstążki jest [klasa CMFCRibbonBar](../../mfc/reference/cmfcribbonbar-class.md) lub [cmfcribbonpanelmenubar —](https://msdn.microsoft.com/7bd4b986-8b7b-493e-9746-bd3161b78581).  
+ Okno nadrzędne dla elementu wstążki jest [klasa CMFCRibbonBar](../../mfc/reference/cmfcribbonbar-class.md) lub [cmfcribbonpanelmenubar —](internal-classes.md).  
   
 ##  <a name="getpressed"></a>  CMFCRibbonBaseElement::GetPressed  
  Pobiera wskaźnik do elementu wstążki, gdy użytkownik naciśnie obecnie go.  

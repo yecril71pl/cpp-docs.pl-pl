@@ -15,12 +15,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 7a8f06ae0021a95e9b4ae40506cfc91d6a8ae99b
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 0898d8a787c6d2c14f341a31e202738d666cdf86
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43200817"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43678467"
 ---
 # <a name="changing-the-font-of-text-on-an-image-image-editor-for-icons"></a>Zmiana czcionki tekstu obrazu (Edytor obrazów dla ikon)
 
@@ -32,7 +32,7 @@ Poniższa procedura to przykład:
 
 ### <a name="to-change-the-font-of-text-on-an-image"></a>Zmiana czcionki tekstu obrazu
 
-1. Tworzenie aplikacji formularzy Windows w języku C++. Aby uzyskać więcej informacji, zobacz [Tworzenie projektu aplikacji Windows](/previous-versions/visualstudio/visual-studio-2010/42wc9kk5\(v=vs.100\)). [Szablon aplikacji programu Windows Forms](https://msdn.microsoft.com/1babdebf-ab3f-4a64-a608-98499a5b9cea) dodaje plik o nazwie `app.ico` do swojego projektu, domyślnie.
+1. Tworzenie aplikacji formularzy Windows w języku C++. Aby uzyskać więcej informacji, zobacz [Tworzenie projektu aplikacji Windows](/previous-versions/visualstudio/visual-studio-2010/42wc9kk5\(v=vs.100\)). `app.ico` Plik zostanie dodany do projektu, domyślnie.
 
 2. W **Eksploratora rozwiązań**, kliknij dwukrotnie app.ico pliku. [Edytora obrazów](../windows/image-editor-for-icons.md) zostanie otwarty.
 

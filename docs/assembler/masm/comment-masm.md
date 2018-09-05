@@ -1,7 +1,7 @@
 ---
 title: KOMENTARZ (MASM) | Dokumentacja firmy Microsoft
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 08/30/2018
 ms.technology:
 - cpp-masm
 ms.topic: reference
@@ -16,24 +16,23 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 417a6da629f030a65c54bffafb08144f182fd58a
-ms.sourcegitcommit: dbca5fdd47249727df7dca77de5b20da57d0f544
+ms.openlocfilehash: c4530f938973053d40e1dbdaaefc0829a48329c1
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/28/2018
-ms.locfileid: "32049910"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43677059"
 ---
 # <a name="comment-masm"></a>COMMENT (MASM)
-Traktuje wszystkie *tekst* między lub w tym samym wierszu jako ograniczników jako komentarz.  
-  
-## <a name="syntax"></a>Składnia  
-  
-```  
-  
-      COMMENT delimiter [[text]]   
-[[text]]   
-[[text]] delimiter [[text]]  
-```  
-  
-## <a name="see-also"></a>Zobacz też  
- [Dokumentacja dyrektyw](../../assembler/masm/directives-reference.md)
+
+Traktuje wszystkie *tekstu* między lub w jednym wierszu w dwukropki jako komentarz.
+
+## <a name="syntax"></a>Składnia
+
+> Ogranicznik KOMENTARZA [[tekst]]<br/>
+> [[tekst]]<br/>
+> Ogranicznik [[tekst]] [[tekst]]
+
+## <a name="see-also"></a>Zobacz także
+
+[Dokumentacja dyrektyw](../../assembler/masm/directives-reference.md)<br/>

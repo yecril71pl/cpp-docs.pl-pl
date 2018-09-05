@@ -21,12 +21,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 16c1bdf088e0545292a672458c066364b5a47ff4
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 410737380f6cc7c5ad52f29953926b3b1c2e71b5
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43206298"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43678088"
 ---
 # <a name="understanding-custom-build-steps-and-build-events"></a>Ogólne informacje o niestandardowych krokach kompilacji lub zdarzeniach kompilacji
 W środowisku programistycznym Visual C++, istnieją trzy podstawowe sposoby dostosowywania procesu kompilacji:  
@@ -72,5 +72,4 @@ W środowisku programistycznym Visual C++, istnieją trzy podstawowe sposoby dos
   
 ## <a name="see-also"></a>Zobacz też  
  [Kompilowanie projektów C++ w programie Visual Studio](../ide/building-cpp-projects-in-visual-studio.md)   
- [Typowe makra dla poleceń kompilacji oraz właściwości](../ide/common-macros-for-build-commands-and-properties.md)   
- [Okno dialogowe kolejność kompilacji narzędzi](https://msdn.microsoft.com/6204c5b1-7ce9-4948-9ff6-0268642ee14c)
+ [Typowe makra dla właściwości i poleceń kompilacji](../ide/common-macros-for-build-commands-and-properties.md)   

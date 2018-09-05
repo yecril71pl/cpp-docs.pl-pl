@@ -9,12 +9,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c1c75c8821a04c0270a79800e77cd4b57bf49c00
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: e427d6469df3a3b82f25a26a0f9ce70642b8514c
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43202351"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43679555"
 ---
 # <a name="strings-ccx"></a>Ciągi (C + +/ CX)
 Tekst w środowisku uruchomieniowym Windows jest reprezentowana w języku C + +/ CX przez [Platform::String, klasa](../cppcx/platform-string-class.md). Użyj `Platform::String Class` Jeśli ciągi i z powrotem do metody klasy środowiska wykonawczego Windows, lub gdy użytkownik korzysta z innych składników środowiska wykonawczego Windows granicę interfejsem binarnym (ABI) aplikacji. `Platform::String Class` Udostępnia metody dla kilku typowych operacji na ciągach, ale nie mają być klasą ciągów w pełni funkcjonalne. W module języka C++, użyj standardowych typów ciągu C++ takich jak [wstring](../standard-library/basic-string-class.md) przetwarzanie znaczące tekstu i następnie przekonwertować ostatni wynik do [Platform::String ^](../cppcx/platform-string-class.md) następnie przekazać go do lub z publiczną interfejs. Jest łatwy i wydajny, aby wykonać konwersję między `wstring` lub `wchar_t*` i `Platform::String`.  
@@ -75,5 +75,3 @@ void GetDecodedStrings(std::vector<std::wstring> strings)
 }  
 ```  
   
-## <a name="see-also"></a>Zobacz też  
- [Typy wbudowane](https://msdn.microsoft.com/acc196fd-09da-4882-b554-6c94685ec75f)

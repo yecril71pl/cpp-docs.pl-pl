@@ -31,12 +31,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 309b01fac7e6461a48992ee1c2c091439353aee7
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: fc995da6ce25aaed35e4e3fac04c08f37acaea7a
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38961015"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43676147"
 ---
 # <a name="studenttdistribution-class"></a>student_t_distribution — Klasa
 
@@ -89,7 +89,7 @@ Funkcja właściwości `n()` zwraca wartość dla parametru przechowywanych dyst
 
 Aby uzyskać więcej informacji o dystrybucji klasy i składowe, zobacz [ \<losowy >](../standard-library/random.md).
 
-Aby uzyskać szczegółowe informacje na temat uczniów *t*-dystrybucji, znajduje się w artykule Wolfram MathWorld [t — rozkład studenta](http://go.microsoft.com/fwlink/p/?linkid=401094).
+Aby uzyskać szczegółowe informacje na temat uczniów *t*-dystrybucji, znajduje się w artykule Wolfram MathWorld [t — rozkład studenta](http://mathworld.wolfram.com/Studentst-Distribution.html).
 
 ## <a name="example"></a>Przykład
 

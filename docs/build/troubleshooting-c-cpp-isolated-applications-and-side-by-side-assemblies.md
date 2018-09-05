@@ -16,12 +16,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4550d523a4410734c391e2e4d266ae536b4610b4
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 3768056a240bb8ad647287b4ca2b60f8e7ede484
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43218672"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43681388"
 ---
 # <a name="troubleshooting-cc-isolated-applications-and-side-by-side-assemblies"></a>Rozwiązywanie problemów związanych z aplikacjami izolowanymi C/C++ oraz aplikacjami wykonywanymi równocześnie
 Trwa ładowanie aplikacji C/C++ może zakończyć się niepowodzeniem, jeśli nie można odnaleźć zależne biblioteki. W tym artykule opisano niektóre typowe przyczyny niepowodzenia aplikacji C/C++, aby załadować, a także sugeruje czynności, aby rozwiązać problemy.  
@@ -46,7 +46,7 @@ Trwa ładowanie aplikacji C/C++ może zakończyć się niepowodzeniem, jeśli ni
   
 3.  Jeśli Twoja aplikacja jest zależna od zestawów side-by-side i nie ma manifestu, należy upewnić się, że konsolidator generuje manifest dla projektu. Zaznacz opcję konsolidatora **Generuj manifest** w **właściwości projektu** okno dialogowe dla projektu.  
   
-4.  Jeśli manifest jest osadzony w pliku binarnym, upewnij się, że identyfikator RT_MANIFEST jest prawidłowy dla tego typu pliku binarnego. Aby uzyskać więcej informacji na temat którego Identyfikatora zasobu, aby użyć zobacz [używanie zestawów Side-by-Side jako zasób (Windows)](https://msdn.microsoft.com/library/windows/desktop/aa376617.aspx). Jeśli manifest znajduje się w oddzielnym pliku, otwórz go w edytorze XML lub edytorze tekstów. Aby uzyskać więcej informacji na temat manifestów i reguł dotyczących wdrażania, zobacz [manifesty](https://msdn.microsoft.com/library/aa375365).  
+4.  Jeśli manifest jest osadzony w pliku binarnym, upewnij się, że identyfikator RT_MANIFEST jest prawidłowy dla tego typu pliku binarnego. Aby uzyskać więcej informacji na temat którego Identyfikatora zasobu, aby użyć zobacz [używanie zestawów Side-by-Side jako zasób (Windows)](/windows/desktop/SbsCs/using-side-by-side-assemblies-as-a-resource). Jeśli manifest znajduje się w oddzielnym pliku, otwórz go w edytorze XML lub edytorze tekstów. Aby uzyskać więcej informacji na temat manifestów i reguł dotyczących wdrażania, zobacz [manifesty](https://msdn.microsoft.com/library/aa375365).  
   
     > [!NOTE]
     >  Jeśli obecne są oba wbudowanym manifeście i oddzielny plik manifestu, moduł ładujący systemu operacyjnego korzysta z manifestu osadzonego i ignoruje oddzielnym pliku. Jednak w systemie Windows XP, przeciwieństwo ma wartość true, jest używany oddzielny plik manifestu i manifestu osadzonego jest ignorowany.  

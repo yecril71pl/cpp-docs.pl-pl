@@ -1,7 +1,7 @@
 ---
 title: EXTERNDEF — | Dokumentacja firmy Microsoft
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 08/30/2018
 ms.technology:
 - cpp-masm
 ms.topic: reference
@@ -16,25 +16,25 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b010f52f91a04388f34052fcc5c374690cff13df
-ms.sourcegitcommit: dbca5fdd47249727df7dca77de5b20da57d0f544
+ms.openlocfilehash: d5c3d42cabb88c38ce1d98da24cd2cb4ddec8d5b
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/28/2018
-ms.locfileid: "32052703"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43683664"
 ---
 # <a name="externdef"></a>EXTERNDEF
-Określa jeden lub więcej zmiennych zewnętrznych, etykiety lub symbole o nazwie *nazwa* o typie `type`.  
-  
-## <a name="syntax"></a>Składnia  
-  
-```  
-  
-EXTERNDEF [[langtype]] name:type [[, [[langtype]] name:type]]...  
-```  
-  
-## <a name="remarks"></a>Uwagi  
- Jeśli *nazwa* jest zdefiniowany w module jest traktowany jako [publicznego](../../assembler/masm/public-masm.md). Jeśli *nazwa* odwołuje się do modułu, jest traktowany jako [EXTERN](../../assembler/masm/extern-masm.md). Jeśli *nazwa* jest nie odwołuje się do, jest ignorowana. `type` Może być [ABS](../../assembler/masm/operator-abs.md), który importuje *nazwa* jako stała. Zwykle używane w pliki dołączane.  
-  
-## <a name="see-also"></a>Zobacz też  
- [Dokumentacja dyrektyw](../../assembler/masm/directives-reference.md)
+
+Określa jeden lub więcej zmiennych zewnętrznych, etykiety lub symbole o nazwie *nazwa* o typie `type`.
+
+## <a name="syntax"></a>Składnia
+
+> Typ: Nazwa externdef — [[langtype]] [[, [[langtype]] Nazwa: typ]]...
+
+## <a name="remarks"></a>Uwagi
+
+Jeśli *nazwa* jest zdefiniowany w module, jest ona traktowana jako [publicznych](../../assembler/masm/public-masm.md). Jeśli *nazwa* o której mowa w module, jest ona traktowana jako [EXTERN](../../assembler/masm/extern-masm.md). Jeśli *nazwa* jest nie odwołania, jest ignorowany. `type` Może być [ABS](../../assembler/masm/operator-abs.md), który importuje *nazwa* jako stała. Zwykle używane Dołącz pliki.
+
+## <a name="see-also"></a>Zobacz także
+
+[Dokumentacja dyrektyw](../../assembler/masm/directives-reference.md)<br/>

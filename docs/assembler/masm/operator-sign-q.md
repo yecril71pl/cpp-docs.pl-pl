@@ -1,7 +1,7 @@
 ---
 title: operator SIGN? | Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 08/30/2018
 ms.technology:
 - cpp-masm
 ms.topic: reference
@@ -18,23 +18,21 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: cfa7aac72687201771001c93698d78f5ffe6489d
-ms.sourcegitcommit: dbca5fdd47249727df7dca77de5b20da57d0f544
+ms.openlocfilehash: 1ffbf6443e10a15cb0a7f29bb3ed36cc9b50d714
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/28/2018
-ms.locfileid: "32057698"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43683990"
 ---
 # <a name="operator-sign"></a>operator SIGN?
-Stan flagi logowania. Używana tylko wewnątrz [. Jeśli](../../assembler/masm/dot-if.md), [. GDY](../../assembler/masm/dot-while.md), lub [. Powtórz](../../assembler/masm/dot-repeat.md) blokuje i oceniane w czasie wykonywania, nie w czasie zestawu.  
-  
-## <a name="syntax"></a>Składnia  
-  
-```  
-  
-SIGN?  
-  
-```  
-  
-## <a name="see-also"></a>Zobacz też  
- [Dokumentacja operatorów](../../assembler/masm/operators-reference.md)
+
+Stan flagi logowania. Stosowane tylko w [. Jeśli](../../assembler/masm/dot-if.md), [. GDY](../../assembler/masm/dot-while.md), lub [. Powtórz](../../assembler/masm/dot-repeat.md) blokuje i oceniane w czasie wykonywania, a nie w czasie zestawu.
+
+## <a name="syntax"></a>Składnia
+
+> ZALOGUJ SIĘ?
+
+## <a name="see-also"></a>Zobacz także
+
+[Dokumentacja operatorów](../../assembler/masm/operators-reference.md)<br/>

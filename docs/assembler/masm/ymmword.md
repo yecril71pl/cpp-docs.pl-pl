@@ -1,7 +1,7 @@
 ---
 title: YMMWORD — | Dokumentacja firmy Microsoft
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 08/30/2018
 ms.technology:
 - cpp-masm
 ms.topic: reference
@@ -16,24 +16,25 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1f82d9c8066334ff0d8765e1aa4da41a253d3064
-ms.sourcegitcommit: dbca5fdd47249727df7dca77de5b20da57d0f544
+ms.openlocfilehash: 67ea3d2319f6c89abccc3acbba4e1fea94197210
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/28/2018
-ms.locfileid: "32057113"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43682186"
 ---
 # <a name="ymmword"></a>YMMWORD
-Używany do 256-bitowego operandy multimediów z instrukcjami Intel Advanced Vector Extensions (AVX).  
-  
-## <a name="syntax"></a>Składnia  
-  
-```  
-YMMWORD  
-```  
-  
-## <a name="remarks"></a>Uwagi  
- `YMMWORD` reprezentuje taki sam typ jak `__m256` dla funkcji wewnętrznych AVX.  
-  
-## <a name="see-also"></a>Zobacz też  
- [Dokumentacja dyrektyw](../../assembler/masm/directives-reference.md)
+
+Używany do 256-bitowego operandy multimedialnych za pomocą instrukcji Intel Advanced Vector Extensions (AVX).
+
+## <a name="syntax"></a>Składnia
+
+> YMMWORD
+
+## <a name="remarks"></a>Uwagi
+
+`YMMWORD` reprezentuje tego samego typu co `__m256` dla funkcji wewnętrznych AVX.
+
+## <a name="see-also"></a>Zobacz także
+
+[Dokumentacja dyrektyw](../../assembler/masm/directives-reference.md)<br/>

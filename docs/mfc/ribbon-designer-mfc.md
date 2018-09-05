@@ -17,15 +17,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0886f020be80ae417cd44a5b5cb5116198ce6a1e
-ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
+ms.openlocfilehash: f0a812ff5304288a2a7c25edeb07d76a4d06ded8
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "42464480"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43683018"
 ---
 # <a name="ribbon-designer-mfc"></a>Projektant wstążki (MFC)
-Projektant wstążki pozwala tworzyć i dostosowywać wstążki w aplikacjach MFC. Wstążka jest element interfejsu użytkownika, który organizuje polecenia w logiczne grupy. Te grupy są wyświetlane na osobnych kartach w górnej części okna. Wstążka zastępuje pasek menu i paski narzędzi. Wstążka może znacznie zwiększyć użyteczność aplikacji. Aby uzyskać więcej informacji, zobacz [wstążek](http://go.microsoft.com/fwlink/p/?linkid=129233). Na poniższej ilustracji pokazano Wstążkę.  
+Projektant wstążki pozwala tworzyć i dostosowywać wstążki w aplikacjach MFC. Wstążka jest element interfejsu użytkownika, który organizuje polecenia w logiczne grupy. Te grupy są wyświetlane na osobnych kartach w górnej części okna. Wstążka zastępuje pasek menu i paski narzędzi. Wstążka może znacznie zwiększyć użyteczność aplikacji. Aby uzyskać więcej informacji, zobacz [wstążek](/windows/desktop/uxguide/cmd-ribbons). Na poniższej ilustracji pokazano Wstążkę.  
   
  ![Kontrola zasobów wstążki MFC](../mfc/media/ribbon_no_callouts.png "ribbon_no_callouts")  
   
