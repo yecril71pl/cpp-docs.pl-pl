@@ -75,7 +75,6 @@
 ## [Ponowne dystrybuowanie plików programu Visual C++](redistributing-visual-cpp-files.md)
 ### [Ponowne dystrybuowanie składników za pomocą modułów scalania](redistributing-components-by-using-merge-modules.md)
 ### [Ponowne dystrybuowanie kontrolek ActiveX programu Visual C++](redistributing-visual-cpp-activex-controls.md)
-### [Ponowne dystrybuowanie plików obsługi baz danych](redistributing-database-support-files.md)
 ### [Ponowne dystrybuowanie biblioteki MFC](redistributing-the-mfc-library.md)
 ### [Ponowne dystrybuowanie aplikacji ATL](redistributing-an-atl-application.md)
 ## [Przykłady wdrożeń](deployment-examples.md)
