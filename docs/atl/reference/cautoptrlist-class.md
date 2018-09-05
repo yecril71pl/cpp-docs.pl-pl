@@ -18,67 +18,76 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5d942c0611b408303922f3e6ab91000630ce8774
-ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
+ms.openlocfilehash: 6d3463b9eaad5134f68fbe533e50431ef3a91cf5
+ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/06/2018
-ms.locfileid: "37883596"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43761202"
 ---
 # <a name="cautoptrlist-class"></a>Klasa CAutoPtrList
-Ta klasa dostarcza metody przydatne podczas tworzenia listy inteligentne wskaźniki.  
-  
+
+Ta klasa dostarcza metody przydatne podczas tworzenia listy inteligentne wskaźniki.
+
 > [!IMPORTANT]
->  Ta klasa i jej elementów członkowskich nie można użyć w aplikacjach korzystających ze środowiska wykonawczego Windows.  
-  
-## <a name="syntax"></a>Składnia  
-  
+>  Ta klasa i jej elementów członkowskich nie można użyć w aplikacjach korzystających ze środowiska wykonawczego Windows.
+
+## <a name="syntax"></a>Składnia
+
 ```
 template<typename E>  
 class CAutoPtrList : 
    public CAtlList<ATL::CAutoPtr<E>, CAutoPtrElementTraits<E>>
-```  
-  
-#### <a name="parameters"></a>Parametry  
- *E*  
- Typ wskaźnika.  
-  
-## <a name="members"></a>Elementy członkowskie  
-  
-### <a name="public-constructors"></a>Konstruktory publiczne  
-  
-|Nazwa|Opis|  
-|----------|-----------------|  
-|[CAutoPtrList::CAutoPtrList](#cautoptrlist)|Konstruktor.|  
-  
-## <a name="remarks"></a>Uwagi  
- Ta klasa zawiera konstruktora i pochodzi z metody z [CAtlList](../../atl/reference/catllist-class.md) i [CAutoPtrElementTraits](../../atl/reference/cautoptrelementtraits-class.md) ułatwiające tworzenie obiekt listy przechowywania inteligentnych wskaźników. Klasa [CAutoPtrArray](../../atl/reference/cautoptrarray-class.md) udostępnia podobną funkcję do tablicy obiektów.  
-  
- Aby uzyskać więcej informacji, zobacz [klasy kolekcji ATL](../../atl/atl-collection-classes.md).  
-  
-## <a name="inheritance-hierarchy"></a>Hierarchia dziedziczenia  
- [CAtlList](../../atl/reference/catllist-class.md)  
-  
- `CAutoPtrList`  
-  
-## <a name="requirements"></a>Wymagania  
- **Nagłówek:** atlcoll.h  
-  
-##  <a name="cautoptrlist"></a>  CAutoPtrList::CAutoPtrList  
- Konstruktor.  
-  
+```
+
+#### <a name="parameters"></a>Parametry
+
+*E*  
+Typ wskaźnika.
+
+## <a name="members"></a>Elementy członkowskie
+
+### <a name="public-constructors"></a>Konstruktory publiczne
+
+|Nazwa|Opis|
+|----------|-----------------|
+|[CAutoPtrList::CAutoPtrList](#cautoptrlist)|Konstruktor.|
+
+## <a name="remarks"></a>Uwagi
+
+Ta klasa zawiera konstruktora i pochodzi z metody z [CAtlList](../../atl/reference/catllist-class.md) i [CAutoPtrElementTraits](../../atl/reference/cautoptrelementtraits-class.md) ułatwiające tworzenie obiekt listy przechowywania inteligentnych wskaźników. Klasa [CAutoPtrArray](../../atl/reference/cautoptrarray-class.md) udostępnia podobną funkcję do tablicy obiektów.
+
+Aby uzyskać więcej informacji, zobacz [klasy kolekcji ATL](../../atl/atl-collection-classes.md).
+
+## <a name="inheritance-hierarchy"></a>Hierarchia dziedziczenia
+
+[CAtlList](../../atl/reference/catllist-class.md)
+
+`CAutoPtrList`
+
+## <a name="requirements"></a>Wymagania
+
+**Nagłówek:** atlcoll.h
+
+##  <a name="cautoptrlist"></a>  CAutoPtrList::CAutoPtrList
+
+Konstruktor.
+
 ```
 CAutoPtrList(UINT nBlockSize = 10) throw();
-```  
-  
-### <a name="parameters"></a>Parametry  
- *nBlockSize*  
- Rozmiar bloku z domyślną 10.  
-  
-### <a name="remarks"></a>Uwagi  
- Rozmiar bloku jest miarą ilość pamięci przydzielonej, gdy nowy element jest wymagany. Większe rozmiary bloków zmniejszają liczbę interwencji do procedur alokacji pamięci, ale używa więcej zasobów.  
-  
-## <a name="see-also"></a>Zobacz też  
- [Klasa CAtlList](../../atl/reference/catllist-class.md)   
- [Klasa CAutoPtrElementTraits](../../atl/reference/cautoptrelementtraits-class.md)   
- [Klasa — Przegląd](../../atl/atl-class-overview.md)
+```
+
+### <a name="parameters"></a>Parametry
+
+*nBlockSize*  
+Rozmiar bloku z domyślną 10.
+
+### <a name="remarks"></a>Uwagi
+
+Rozmiar bloku jest miarą ilość pamięci przydzielonej, gdy nowy element jest wymagany. Większe rozmiary bloków zmniejszają liczbę interwencji do procedur alokacji pamięci, ale używa więcej zasobów.
+
+## <a name="see-also"></a>Zobacz też
+
+[Klasa CAtlList](../../atl/reference/catllist-class.md)   
+[Klasa CAutoPtrElementTraits](../../atl/reference/cautoptrelementtraits-class.md)   
+[Klasa — Przegląd](../../atl/atl-class-overview.md)

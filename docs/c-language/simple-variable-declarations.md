@@ -15,53 +15,52 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9bbda7ff9a22a42ce4a6b8c3de10d0d6f0d03f77
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 7216a4a470b6293a31d6f364626188e41351b5cb
+ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32389770"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43763142"
 ---
 # <a name="simple-variable-declarations"></a>Proste deklaracje zmiennej
-Deklaracja prostej zmiennej najprostsza forma deklaratorze bezpośredniego Określa nazwę i typ zmiennej. Określa również klasy magazynu w zmiennej i typu danych.  
-  
- Klasy magazynu lub typy (lub obie) są wymagane w deklaracji zmiennych. Bez typu zmienne (takie jak `var;`) generowanie ostrzeżenia.  
-  
-## <a name="syntax"></a>Składnia  
- `declarator`:  
- *wskaźnik* opcjonalnych  
-  
- *bezpośrednie deklarator*  
-  
- *deklarator bezpośrednio*:  
- *Identyfikator*  
-  
- *Identyfikator*:  
- *cyfrą*  
-  
- *Identyfikator cyfrą*  
-  
- *Identyfikator cyfrowy*  
-  
- Arytmetyczny, struktury, Unii, wyliczeń i typy void i typy reprezentowane przez `typedef` nazwy, proste deklaratorów mogą być używane w deklaracji, ponieważ Specyfikator typu dostarcza wpisywania danych. Wskaźnik, tablic i typy funkcji wymagają deklaratorów bardziej złożonych.  
-  
- Można użyć listy identyfikatorów rozdzielonych przecinkami (**,**) do określenia kilku zmiennych w tej samej deklaracji. Wszystkie zmienne zdefiniowane w deklaracji mają ten sam typ podstawowy. Na przykład:  
-  
-```  
-int x, y;        /* Declares two simple variables of type int */  
-int const z = 1; /* Declares a constant value of type int */  
-```  
-  
- Zmienne `x` i `y` może zawierać żadnej wartości zdefiniowane przez zestaw `int` typu dla konkretnej implementacji. Prosty obiekt `z` jest ustawiana na wartość 1, a nie można modyfikować.  
-  
- Jeśli w deklaracji `z` niezainicjowanej zmiennej statyczne lub w zakresie pliku otrzyma początkowej wartości 0, a ta wartość będzie unmodifiable.  
-  
-```  
-unsigned long reply, flag; /* Declares two variables  
-                              named reply and flag     */  
-```  
-  
- W tym przykładzie zarówno zmienne, `reply` i `flag`, ma `unsigned long` typu która przechowuje wartości całkowitych bez znaku.  
-  
-## <a name="see-also"></a>Zobacz też  
- [Deklaratory i deklaracje zmiennych](../c-language/declarators-and-variable-declarations.md)
+
+Deklaracja zmiennej prosty, Najprostszą formą deklaratora bezpośrednich, określa nazwę i typ zmiennej. Określa również klasę magazynu w zmiennej i typ danych.
+
+Klasy magazynu lub typów (lub obie) są wymagane w deklaracji zmiennej. Bez typu zmienne (takie jak `var;`) generowanie ostrzeżenia.
+
+## <a name="syntax"></a>Składnia
+
+*deklarator*:<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*wskaźnik*<sub>zoptymalizowany pod kątem</sub> *deklaratora bezpośrednie*
+
+*deklarator bezpośrednio*:<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*Identyfikator*
+
+*Identyfikator*:<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*inny*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*Identyfikator* *nie cyfrą*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*Identyfikator* *cyfra*
+
+Dla arytmetyczne, struktury, złożenia, wyliczenia i typu void, a dla typów reprezentowanych przez `typedef` nazwy, proste deklaratory mogą być używane w deklaracji, ponieważ Specyfikator typu dostarcza Pisownia informacje. Wskaźnik, tablicy i typy funkcji wymaga deklaratorów bardziej skomplikowane.
+
+Można użyć identyfikatorów rozdzielonych przecinkami (**,**) do określania wielu zmiennych w tej samej deklaracji. Wszystkie zmienne zdefiniowane w deklaracji mają ten sam typ podstawowy. Na przykład:
+
+```C
+int x, y;        /* Declares two simple variables of type int */
+int const z = 1; /* Declares a constant value of type int */
+```
+
+Zmienne `x` i `y` mogą przechowywać dowolne wartości w zestawie, określone przez `int` typu dla danego wdrożenia. Prosty obiekt `z` jest ustawiana na wartość 1 i nie można modyfikować.
+
+Jeśli deklaracja `z` miał niezainicjowanej zmiennej statycznej czy był w zakresie pliku otrzyma początkowa wartość 0, a ta wartość będzie niemodyfikowalnych.
+
+```C
+unsigned long reply, flag; /* Declares two variables
+                              named reply and flag     */
+```
+
+W tym przykładzie oba zmienne, `reply` i `flag`, mają `unsigned long` wpisz i przechowywania wartości całkowitych bez znaku.
+
+## <a name="see-also"></a>Zobacz też
+
+[Deklaratory i deklaracje zmiennych](../c-language/declarators-and-variable-declarations.md)

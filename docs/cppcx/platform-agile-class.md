@@ -21,11 +21,11 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 ms.openlocfilehash: f552327156d9fc1abe5e921f3b59b1fb4132ff3d
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42596605"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43763435"
 ---
 # <a name="platformagile-class"></a>Platform::Agile, klasa
 Reprezentuje obiekt, który ma MashalingBehavior = Standard jako obiekt agile, co znacznie zmniejsza prawdopodobieństwo, że wątki wyjątki środowiska uruchomieniowego. `Agile<T>` Umożliwia-agile obiekt, aby wywołać lub być wywoływana z tym samym lub innym wątku. Aby uzyskać więcej informacji, zobacz [wątkowość i Marshaling](../cppcx/threading-and-marshaling-c-cx.md).  

@@ -12,12 +12,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a391ee0ee21925c59e5a95cb060f9897b3ef223c
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 6e63fae717fc3e5c223ad512b5cd2eae82160431
+ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43214869"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43754651"
 ---
 # <a name="summary-of-declarations"></a>Podsumowanie deklaracji
 
@@ -37,11 +37,11 @@ ms.locfileid: "43214869"
 
 *init-declarator-list*:<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*init-declarator*<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*init-declarator-list***,***init-declarator* 
+&nbsp;&nbsp;&nbsp;&nbsp;*init-declarator-list***,***init-declarator*
 
 *init-declarator*:<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*Deklarator*<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*deklarator***=***inicjatora*  / \* inicjowania skalarne     \*/
+&nbsp;&nbsp;&nbsp;&nbsp;*deklarator***=***inicjatora*  / \* inicjowania skalarne \*/
 
 *storage-class-specifier*:<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;**Automatycznie**<br/>
@@ -115,7 +115,8 @@ ms.locfileid: "43214869"
 &nbsp;&nbsp;&nbsp;&nbsp;*Identyfikator*
 
 *struct-or-union-specifier*:<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*Identyfikator struktury lub Unii*<sub>zoptymalizowany pod kątem</sub> **{** *struktury deklaracji listy* **}** *struktury lub Unii Identyfikator*
+&nbsp;&nbsp;&nbsp;&nbsp;*struktury lub Unii* *identyfikator*<sub>zoptymalizowany pod kątem</sub> **{** *struktury deklaracji listy* **}**<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*struktury lub Unii* *identyfikator*
 
 *struct-or-union*:<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;**— Struktura**<br/>

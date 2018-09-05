@@ -15,43 +15,45 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1d8cbb23c390a47b1bbfb7b1a78b327f07b06869
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 4ebd514b0135de4ac438b406201dc069257d1bce
+ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32358631"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43752477"
 ---
 # <a name="atl-encoding-reference"></a>Odwołanie kodowania ALT
-Kodowanie w szereg typowych standardy internetowe, takie jak uuencode szesnastkowych i UTF8 jest obsługiwane przez kod w atlenc.h.  
-  
-### <a name="functions"></a>Funkcje  
-  
-|||  
-|-|-|  
-|[AtlGetHexValue](reference/atl-text-encoding-functions.md#atlgethexvalue)|Wywołaj tę funkcję, aby uzyskać wartość liczbową z liczby szesnastkowej.|  
-|[AtlHexDecode](reference/atl-text-encoding-functions.md#atlhexdecode)|Dekoduje ciąg danych, który został zakodowany jako szesnastkowym, takich jak przez poprzednie wywołanie [AtlHexEncode](reference/atl-text-encoding-functions.md#atlhexencode).|  
-|[AtlHexDecodeGetRequiredLength](reference/atl-text-encoding-functions.md#atlhexdecodegetrequiredlength)|Wywołaj tę funkcję, aby uzyskać rozmiar (w bajtach) bufora, który może zawierać dane zdekodowane z ciągu zakodowanego szesnastkowo o określonej długości.|  
-|[AtlHexEncode](reference/atl-text-encoding-functions.md#atlhexencode)|Wywołaj tę funkcję, aby zakodować dane jako ciąg tekstu szesnastkowego.|  
-|[AtlHexEncodeGetRequiredLength](reference/atl-text-encoding-functions.md#atlhexencodegetrequiredlength)|Wywołaj tę funkcję, aby uzyskać rozmiar (w znakach) bufora, który może zawierać ciąg zakodowany z danych o określonej długości.|  
-|[AtlUnicodeToUTF8](reference/atl-text-encoding-functions.md#atlunicodetoutf8)|Wywołaj tę funkcję, aby przekonwertować ciąg Unicode na UTF-8.|  
-|[BEncode](reference/atl-text-encoding-functions.md#bencode)|Wywołaj tę funkcję, aby skonwertować dane przy użyciu kodowania „B”.|  
-|[BEncodeGetRequiredLength](reference/atl-text-encoding-functions.md#bencodegetrequiredlength)|Wywołaj tę funkcję, aby uzyskać rozmiar (w znakach) bufora, który może zawierać ciąg zakodowany z danych o określonej długości.|  
-|[EscapeXML](reference/atl-text-encoding-functions.md#escapexml)|Wywołaj tę funkcję, aby skonwertować znaki niebezpieczne w XML na ich bezpieczne odpowiedniki.|  
-|[GetExtendedChars](reference/atl-text-encoding-functions.md#getextendedchars)|Wywołaj tę funkcję, aby uzyskać liczbę znaków rozszerzonych w ciągu.|  
-|[IsExtendedChar](reference/atl-text-encoding-functions.md#isextendedchar)|Wywołaj tę funkcję, aby się dowiedzieć, czy dany znak to znak rozszerzony (mniej niż 32, więcej niż 126 i nie znak tabulacji, znak nowego wiersza lub znak powrotu karetki)|  
-|[QEncode](reference/atl-text-encoding-functions.md#qencode)|Wywołaj tę funkcję, aby skonwertować dane przy użyciu kodowania „Q”.|  
-|[QEncodeGetRequiredLength](reference/atl-text-encoding-functions.md#qencodegetrequiredlength)|Wywołaj tę funkcję, aby uzyskać rozmiar (w znakach) bufora, który może zawierać ciąg zakodowany z danych o określonej długości.|  
-|[QPDecode](reference/atl-text-encoding-functions.md#qpdecode)|Dekoduje ciąg danych, który został zakodowany w formacie cudzysłowach niedrukowalne, takie jak przez poprzednie wywołanie [QPEncode](reference/atl-text-encoding-functions.md#qpencode).|  
-|[QPDecodeGetRequiredLength](reference/atl-text-encoding-functions.md#qpdecodegetrequiredlength)|Wywołaj tę funkcję, aby uzyskać rozmiar (w bajtach) bufora, który może zawierać dane zdekodowane z ciągu zakodowanego w quoted-printable o określonej długości.|  
-|[QPEncode](reference/atl-text-encoding-functions.md#qpencode)|Wywołaj tę funkcję, aby zakodować dane w formacie quoted-printable.|  
-|[QPEncodeGetRequiredLength](reference/atl-text-encoding-functions.md#qpencodegetrequiredlength)|Wywołaj tę funkcję, aby uzyskać rozmiar (w znakach) bufora, który może zawierać ciąg zakodowany z danych o określonej długości.|  
-|[UUDecode](reference/atl-text-encoding-functions.md#uudecode)|Dekoduje ciąg danych, która została uuencoded, takich jak przez poprzednie wywołanie [UUEncode](reference/atl-text-encoding-functions.md#uuencode).|  
-|[UUDecodeGetRequiredLength](reference/atl-text-encoding-functions.md#uudecodegetrequiredlength)|Wywołaj tę funkcję, aby uzyskać rozmiar (w bajtach) bufora, który może zawierać dane zdekodowane z ciągu zakodowanego w uuencode o określonej długości.|  
-|[UUEncode](reference/atl-text-encoding-functions.md#uuencode)|Wywołaj tę funkcję, aby zakodować dane w uuencode.|  
-|[UUEncodeGetRequiredLength](reference/atl-text-encoding-functions.md#uuencodegetrequiredlength)|Wywołaj tę funkcję, aby uzyskać rozmiar (w znakach) bufora, który może zawierać ciąg zakodowany z danych o określonej długości.|  
-  
-## <a name="see-also"></a>Zobacz też  
- [Pojęcia](../atl/active-template-library-atl-concepts.md)   
- [Składniki ATL COM pulpitu](../atl/atl-com-desktop-components.md)
+
+Kodowanie w szereg typowych standardy internetowe, takie jak uuencode szesnastkową i UTF8 jest obsługiwane przez kod w atlenc.h.
+
+### <a name="functions"></a>Funkcje
+
+|||
+|-|-|
+|[AtlGetHexValue](reference/atl-text-encoding-functions.md#atlgethexvalue)|Wywołaj tę funkcję, aby uzyskać wartość liczbową z liczby szesnastkowej.|
+|[AtlHexDecode](reference/atl-text-encoding-functions.md#atlhexdecode)|Dekoduje ciąg danych, który został zakodowany jako tekst szesnastkowy, np. przez poprzednie wywołanie [AtlHexEncode](reference/atl-text-encoding-functions.md#atlhexencode).|
+|[AtlHexDecodeGetRequiredLength](reference/atl-text-encoding-functions.md#atlhexdecodegetrequiredlength)|Wywołaj tę funkcję, aby uzyskać rozmiar (w bajtach) bufora, który może zawierać dane zdekodowane z ciągu zakodowanego szesnastkowo o określonej długości.|
+|[AtlHexEncode](reference/atl-text-encoding-functions.md#atlhexencode)|Wywołaj tę funkcję, aby zakodować dane jako ciąg tekstu szesnastkowego.|
+|[AtlHexEncodeGetRequiredLength](reference/atl-text-encoding-functions.md#atlhexencodegetrequiredlength)|Wywołaj tę funkcję, aby uzyskać rozmiar (w znakach) bufora, który może zawierać ciąg zakodowany z danych o określonej długości.|
+|[AtlUnicodeToUTF8](reference/atl-text-encoding-functions.md#atlunicodetoutf8)|Wywołaj tę funkcję, aby przekonwertować ciąg Unicode na UTF-8.|
+|[BEncode](reference/atl-text-encoding-functions.md#bencode)|Wywołaj tę funkcję, aby skonwertować dane przy użyciu kodowania „B”.|
+|[BEncodeGetRequiredLength](reference/atl-text-encoding-functions.md#bencodegetrequiredlength)|Wywołaj tę funkcję, aby uzyskać rozmiar (w znakach) bufora, który może zawierać ciąg zakodowany z danych o określonej długości.|
+|[EscapeXML](reference/atl-text-encoding-functions.md#escapexml)|Wywołaj tę funkcję, aby skonwertować znaki niebezpieczne w XML na ich bezpieczne odpowiedniki.|
+|[GetExtendedChars](reference/atl-text-encoding-functions.md#getextendedchars)|Wywołaj tę funkcję, aby uzyskać liczbę znaków rozszerzonych w ciągu.|
+|[IsExtendedChar](reference/atl-text-encoding-functions.md#isextendedchar)|Wywołaj tę funkcję, aby się dowiedzieć, czy dany znak to znak rozszerzony (mniej niż 32, więcej niż 126 i nie znak tabulacji, znak nowego wiersza lub znak powrotu karetki)|
+|[QEncode](reference/atl-text-encoding-functions.md#qencode)|Wywołaj tę funkcję, aby skonwertować dane przy użyciu kodowania „Q”.|
+|[QEncodeGetRequiredLength](reference/atl-text-encoding-functions.md#qencodegetrequiredlength)|Wywołaj tę funkcję, aby uzyskać rozmiar (w znakach) bufora, który może zawierać ciąg zakodowany z danych o określonej długości.|
+|[QPDecode](reference/atl-text-encoding-functions.md#qpdecode)|Dekoduje ciąg danych, który został zakodowany w formacie quoted-printable, np. przez poprzednie wywołanie [QPEncode](reference/atl-text-encoding-functions.md#qpencode).|
+|[QPDecodeGetRequiredLength](reference/atl-text-encoding-functions.md#qpdecodegetrequiredlength)|Wywołaj tę funkcję, aby uzyskać rozmiar (w bajtach) bufora, który może zawierać dane zdekodowane z ciągu zakodowanego w quoted-printable o określonej długości.|
+|[QPEncode](reference/atl-text-encoding-functions.md#qpencode)|Wywołaj tę funkcję, aby zakodować dane w formacie quoted-printable.|
+|[QPEncodeGetRequiredLength](reference/atl-text-encoding-functions.md#qpencodegetrequiredlength)|Wywołaj tę funkcję, aby uzyskać rozmiar (w znakach) bufora, który może zawierać ciąg zakodowany z danych o określonej długości.|
+|[UUDecode](reference/atl-text-encoding-functions.md#uudecode)|Dekoduje ciąg danych, który został zakodowany w UUENCODE takich jak przez poprzednie wywołanie [UUEncode](reference/atl-text-encoding-functions.md#uuencode).|
+|[UUDecodeGetRequiredLength](reference/atl-text-encoding-functions.md#uudecodegetrequiredlength)|Wywołaj tę funkcję, aby uzyskać rozmiar (w bajtach) bufora, który może zawierać dane zdekodowane z ciągu zakodowanego w uuencode o określonej długości.|
+|[UUEncode](reference/atl-text-encoding-functions.md#uuencode)|Wywołaj tę funkcję, aby zakodować dane w uuencode.|
+|[UUEncodeGetRequiredLength](reference/atl-text-encoding-functions.md#uuencodegetrequiredlength)|Wywołaj tę funkcję, aby uzyskać rozmiar (w znakach) bufora, który może zawierać ciąg zakodowany z danych o określonej długości.|
+
+## <a name="see-also"></a>Zobacz też
+
+[Pojęcia](../atl/active-template-library-atl-concepts.md)   
+[Składniki ATL COM pulpitu](../atl/atl-com-desktop-components.md)
 

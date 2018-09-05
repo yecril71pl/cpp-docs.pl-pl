@@ -19,11 +19,11 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 ms.openlocfilehash: 6774aa0d90e9903798cd2a77a480782b669fdc57
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42586638"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43758771"
 ---
 # <a name="platformexception-class"></a>Platform::Exception, klasa
 Reprezentuje błędy występujące podczas wykonywania aplikacji. Klasy wyjątków niestandardowych nie mogą pochodzić z `Platform::Exception`. Jeśli potrzebujesz niestandardowego wyjątku, można użyć `Platform::COMException` i określ wartość HRESULT specyficzny dla aplikacji.  

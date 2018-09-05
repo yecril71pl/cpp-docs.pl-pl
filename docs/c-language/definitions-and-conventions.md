@@ -14,38 +14,34 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 99f227f37f4a9de92f244df5988f7ee8088e41d5
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 74a29acfcdc58b068ebabe9bc1c9b033cf801c21
+ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32384149"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43760409"
 ---
 # <a name="definitions-and-conventions"></a>Definicje i konwencje
-Terminale są punkty końcowe w definicji składni. Możliwe jest inne rozwiązanie. Terminale obejmują zestaw zawiera wyrazy zastrzeżone i identyfikatory zdefiniowane przez użytkownika.  
+Terminale to punkty końcowe w definicji składni. Możliwe jest inne rozwiązanie. Terminale obejmują zbiór słów zastrzeżonych oraz identyfikatorów zdefiniowanych przez użytkownika.  
   
- Symboli nieterminalnych symboli zastępczych w składni i zdefiniowany w innym miejscu w tej składni podsumowania. Definicje może mieć wartość recursive.  
+Symboli nieterminalnych są symbole zastępcze w składni i są definiowane w innych miejscach w tej składni podsumowania. Definicje mogą być cykliczne.  
   
- Opcjonalny składnik jest oznaczany jako opcjonalnych. Na przykład  
+Opcjonalny składnik jest wskazywany przez indeksem <sub>zoptymalizowany pod kątem</sub>. Na przykład  
   
-```  
+> **{** *wyrażenie*<sub>zoptymalizowany pod kątem</sub> **}**
   
-{  
-expression <SUB>opt</SUB> }  
-```  
+Określa opcjonalne wyrażenie ujęte w nawiasy klamrowe.  
   
- Określa opcjonalne wyrażenie ujęte w nawiasy klamrowe.  
-  
- Konwencje składni używane są atrybuty czcionkę dla różnych składników składni. Symbole i czcionek są następujące:  
+Konwencje składni Użyj atrybutów czcionkę dla różnych składników składni. Symbole i czcionki są następujące:  
   
 |Atrybut|Opis|  
 |---------------|-----------------|  
-|*nonterminal*|Kursywą wskazuje symboli nieterminalnych.|  
-|**const**|Terminale czcionką pogrubioną są literału wyrazy zastrzeżone i symboli, które należy wprowadzić, jak pokazano. Znaki w tym kontekście zawsze jest uwzględniana wielkość liter.|  
-|OPT|Opt symboli nieterminalnych następuje zawsze są opcjonalne.|  
-|domyślne krój czcionki|Znaki w zestawie opisane lub wymienione w tej czcionce mogą być używane jako terminali w instrukcjach języka C.|  
+|*nieterminalnych*|Kursywa wskazuje symboli nieterminalnych.|  
+|**const**|Terminale czcionką pogrubioną są literału wyrazy zastrzeżone i symboli, które należy wprowadzić, jak pokazano. Znaki w tym kontekście są zawsze z uwzględnieniem wielkości liter.|  
+|<sub>opt</sub>|Następuje symboli nieterminalnych <sub>zoptymalizowany pod kątem</sub> zawsze są opcjonalne.|  
+|krój czcionki domyślnej|Znaków w zestawie opisane lub wymienionych w tej czcionce może służyć jako terminale w instrukcjach języka C.|  
   
- Dwukropkiem (**:**) po nonterminal wprowadza jego definicji. Alternatywne definicje są wymienione w osobnych wierszach, z wyjątkiem gdy poprzedzone znakiem wyrazy "jedna z."  
+Dwukropek (**:**) po nieterminalnych wprowadza jego definicji. Alternatywne definicje są wymienione w osobnych wierszach, z wyjątkiem, gdy poprzedzone znakiem słowa "poszczególnych."  
   
 ## <a name="see-also"></a>Zobacz też  
- [Podsumowanie dotyczące składni języka C](../c-language/c-language-syntax-summary.md)
+[Podsumowanie dotyczące składni języka C](../c-language/c-language-syntax-summary.md)

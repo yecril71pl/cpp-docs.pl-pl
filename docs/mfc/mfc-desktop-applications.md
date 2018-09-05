@@ -1,5 +1,5 @@
 ---
-title: Aplikacje dla pulpitu MFC | Dokumentacja firmy Microsoft
+title: Aplikacje klasyczne MFC | Dokumentacja firmy Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -20,80 +20,80 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 ms.openlocfilehash: c3afd68e8407d1e02fa39b76316da66fcfe56b8c
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33350238"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43754998"
 ---
 # <a name="mfc-desktop-applications"></a>Aplikacje dla Pulpitu MFC
-Biblioteka Microsoft Foundation Class (MFC) zapewnia otoki zorientowane obiektowo przez większość Win32 i interfejsów API modelu COM. Mimo że może służyć do tworzenia aplikacji klasycznych bardzo proste, jest najbardziej przydatne w przypadku należy utworzyć bardziej złożoną interfejsów użytkownika za pomocą wielu formantów. MFC służy do tworzenia aplikacji z interfejsem użytkownika w stylu pakietu Office.  
+Biblioteka Microsoft Foundation Class (MFC) zapewnia otok obiektowy przez większość Win32 i COM, interfejsów API. Chociaż może służyć do tworzenia bardzo prostej aplikacji pulpitu, jest najbardziej użyteczna gdy trzeba tworzyć bardziej złożone interfejsy użytkownika z wieloma formantami. MFC można użyć do tworzenia aplikacji za pomocą interfejsów użytkownika w stylu pakietu Office.  
   
- Odwołanie do biblioteki MFC obejmuje klas, funkcje globalne, zmienne globalne i makra, które tworzą Microsoft Foundation Class Library.  
+ Odwołanie MFC obejmuje klasy, funkcje globalne, zmienne globalne i makra, które tworzą bibliotekę Microsoft Foundation Class.  
   
- Wykresy poszczególnych hierarchii dołączone do każdej klasy są przydatne do lokalizowania klas podstawowych. Odwołanie do biblioteki MFC zazwyczaj nie opisano funkcje dziedziczonego elementu członkowskiego lub dziedziczone operatorów. Aby uzyskać informacje na temat tych funkcji zapoznaj się przedstawione na rysunkach hierarchii klas podstawowych.  
+ Wykresy poszczególnych hierarchii dołączonych do każdej klasy są przydatne do lokalizowania klas podstawowych. Odwołanie MFC zwykle nie opisuje funkcji odziedziczonego członka lub odziedziczonych operatorów. Aby uzyskać informacje na temat tych funkcji zapoznaj się z podstawowe klasy przedstawiony na diagramach hierarchii.  
   
- Dokumentacja dla każdej klasy zawiera przegląd klasy, podsumowanie Członkowskich według kategorii i tematy dotyczące funkcji elementów członkowskich, przeciążone operatory i elementy członkowskie danych.  
+ Dokumentacja dla każdej klasy zawiera omówienie klasy, podsumowanie członków według kategorii i tematy dotyczące funkcji elementów członkowskich, przeciążone operatory i elementy członkowskie danych.  
   
- Klasa publiczne i chronione elementy członkowskie są udokumentowane tylko wtedy, gdy są zwykle używane w aplikacji, programów lub klas pochodnych. Zobacz pliki nagłówka klasy, aby uzyskać pełną listę elementów członkowskich klasy.  
+ Elementy członkowskie klasy publicznej i chronionej są udokumentowane tylko wtedy, gdy są normalnie używane w programach aplikacji lub klasach pochodnych. Zobacz pliki nagłówkowe klasy, aby uzyskać pełną listę elementów członkowskich klas.  
   
 > [!IMPORTANT]
->  Nie można używać klas MFC i ich elementy członkowskie w aplikacjach, które są wykonywane w środowisku środowiska wykonawczego systemu Windows.  
+>  Klasy MFC i ich członków nie można użyć w aplikacjach, które są wykonywane w środowisku Windows Runtime.  
 >   
->  Biblioteki MFC (dll) dla znaków wielobajtowych kodowania (MBCS) nie są uwzględnione w programie Visual Studio, ale są dostępne jako dodatek programu Visual Studio. Aby uzyskać więcej informacji, zobacz [MFC MBCS DLL dodatku](mfc-mbcs-dll-add-on.md).  
+>  Biblioteki MFC (dll) dla znaków wielobajtowych (MBCS) kodowania znajdują się już w programie Visual Studio, ale są dostępne jako dodatek programu Visual Studio. Aby uzyskać więcej informacji, zobacz [dodatku DLL MBCS MFC](mfc-mbcs-dll-add-on.md).  
   
 ## <a name="in-this-section"></a>W tej sekcji  
  [Pojęcia](mfc-concepts.md)  
- Artykuły koncepcyjne na tematy dotyczące MFC.  
+ Artykuły koncepcyjne dotyczące biblioteki MFC, tematów.  
   
  [Wykres hierarchii](hierarchy-chart.md)  
- Szczegóły wizualnie relacje klas w bibliotece klas.  
+ Wizualnie wyszczególnia relacje klas w bibliotece klas.  
   
- [Przegląd klas](class-library-overview.md)  
- Zawiera klasy biblioteki MFC według kategorii.  
+ [Klasa — Przegląd](class-library-overview.md)  
+ Wyświetla listę klas w bibliotece MFC według kategorii.  
   
  [Przewodniki](walkthroughs-mfc.md)  
- Zawiera artykuły, które umożliwia przeprowadzenie różnych zadań związanych z funkcjami biblioteki MFC.  
+ Zawiera artykuły, które zawierają wzięte różnych zadaniach związanych z funkcjami biblioteki MFC.  
   
  [Uwagi techniczne](mfc-technical-notes.md)  
- Zawiera łącza do tematów specjalne, napisane przez zespół deweloperów MFC w bibliotece klas programu.  
+ Zawiera łącza do tematów specjalistycznych, napisanych przez zespół projektowy MFC w bibliotece klas.  
   
  [Dostosowywanie na potrzeby MFC](customization-for-mfc.md)  
- Zawiera wskazówki dotyczące dostosowywania aplikacji MFC.  
+ Zawiera pewne wskazówki dotyczące dostosowywania aplikacji MFC.  
   
  [Klasy](reference/mfc-classes.md)  
- Zawiera linki do i informacje o pliku nagłówka dla klas MFC.  
+ Zawiera łącza do i informacje o plikach nagłówka dla klas MFC.  
   
  [Klasy wewnętrzne](reference/internal-classes.md)  
- Używana wewnętrznie w MFC. Aby informacje były kompletne w tej sekcji opisano te klasy wewnętrzne, ale nie są przeznaczone do użycia bezpośrednio w kodzie.  
+ Stosowane wewnętrznie w MFC. Aby informacje były kompletne w tej sekcji opisano te klasy wewnętrznej, ale nie są przeznaczone do użycia bezpośrednio w kodzie.  
   
  [Makra i funkcje globalne](reference/mfc-macros-and-globals.md)  
- Zawiera łącza do makra i funkcje globalne w bibliotece MFC.  
+ Zawiera łącza do makr i funkcje globalne w bibliotece MFC.  
   
  [Struktury, style, wywołania zwrotne i mapy komunikatów](reference/structures-styles-callbacks-and-message-maps.md)  
  Zawiera łącza do struktury, style, wywołania zwrotne i mapy komunikatów używany przez bibliotekę MFC.  
   
  [Kreatory i okna dialogowe MFC](reference/mfc-wizards-and-dialog-boxes.md)  
- Przewodnik dotyczący funkcji w programie Visual Studio przy tworzeniu aplikacji MFC.  
+ Przewodnik po funkcjach programu Visual Studio do tworzenia aplikacji MFC.  
   
  [Praca z plikami zasobów](../windows/working-with-resource-files.md)  
- Jak używać plików zasobów do zarządzania danymi interfejsu statycznego użytkownika, takich jak parametry interfejsu użytkownika i układ okna dialogowego.  
+ Jak używać plików zasobów do zarządzania danymi interfejsu użytkownika statycznych, takich jak ciągi interfejsu użytkownika i układ okna dialogowego.  
   
 ## <a name="related-sections"></a>Sekcje pokrewne  
  [Kategorie wykresów hierarchii](hierarchy-chart-categories.md)  
- Opisuje MFC diagram hierarchii według kategorii.  
+ Opisuje MFC wykresu hierarchii według kategorii.  
   
- [ATL/MFC udostępnionych klas](../atl-mfc-shared/atl-mfc-shared-classes.md)  
- Zawiera łącza do klasy, które są wspólne dla MFC i ATL.  
+ [Klasy współdzielone ATL/MFC](../atl-mfc-shared/atl-mfc-shared-classes.md)  
+ Oferuje łącza do klas, które są wspólne dla MFC i ATL.  
   
- [MFC — przykłady](../visual-cpp-samples.md)  
- Zawiera łącza do przykłady, które pokazują, jak używać MFC.  
+ [Przykłady MFC](../visual-cpp-samples.md)  
+ Zawiera łącza do przykładów, które przedstawiają sposoby użycia klas MFC.  
   
- [Dokumentacja bibliotek języka Visual C++](../standard-library/cpp-standard-library-reference.md)  
- Zawiera łącza do bibliotek różnych dostarczone z programem Visual C++, w tym ATL, MFC, szablony OLE DB, biblioteki wykonawczej języka C i standardowa biblioteka C++.  
+ [Odwołania do bibliotek języka Visual C++](../standard-library/cpp-standard-library-reference.md)  
+ Zawiera łącza do różnych bibliotek dostarczanych z programem Visual C++, włączając biblioteki ATL, MFC, szablony OLE DB, biblioteki wykonawczej C i standardowej biblioteki języka C++.  
   
  [Debugowanie w programie Visual Studio](/visualstudio/debugger/debugging-in-visual-studio.md)  
- Zawiera łącza do poprawianie błędów logikę w aplikacji lub procedury składowane za pomocą debugera programu Visual Studio.  
+ Zawiera łącza do przy użyciu debugera programu Visual Studio, aby poprawić błędy logiczne w aplikacji lub procedur składowanych.  
   
 ## <a name="see-also"></a>Zobacz też  
  [MFC i ATL](mfc-and-atl.md)

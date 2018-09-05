@@ -16,20 +16,22 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 68a8c96983443f39f05004493d0393f51f7ee19e
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: 4ac1821f34269a54fc0fb10a3ae797a815d5acd9
+ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38959959"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43758326"
 ---
 # <a name="site-information-classes"></a>Klasy informacji o witrynie
-Następujące klasy Zezwalaj na obiekt, do komunikacji z jej lokacją:  
-  
--   [IObjectWithSiteImpl](../atl/reference/iobjectwithsiteimpl-class.md) pobiera i ustawia wskaźnik do obiektu witryny. Używane dla obiektów, które nie są kontrolki.  
-  
--   [IOleObjectImpl](../atl/reference/ioleobjectimpl-class.md) pobiera i ustawia wskaźnik do obiektu witryny. Używane dla formantów.  
-  
-## <a name="see-also"></a>Zobacz też  
- [Klasa — Przegląd](../atl/atl-class-overview.md)
+
+Następujące klasy Zezwalaj na obiekt, do komunikacji z jej lokacją:
+
+- [IObjectWithSiteImpl](../atl/reference/iobjectwithsiteimpl-class.md) pobiera i ustawia wskaźnik do obiektu witryny. Używane dla obiektów, które nie są kontrolki.
+
+- [IOleObjectImpl](../atl/reference/ioleobjectimpl-class.md) pobiera i ustawia wskaźnik do obiektu witryny. Używane dla formantów.
+
+## <a name="see-also"></a>Zobacz też
+
+[Klasa — Przegląd](../atl/atl-class-overview.md)
 

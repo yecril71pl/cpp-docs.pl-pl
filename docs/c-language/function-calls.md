@@ -1,5 +1,5 @@
 ---
-title: Wywołania funkcji | Dokumentacja firmy Microsoft
+title: Funkcja wywołania | Dokumentacja firmy Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,29 +17,29 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: de77f98010bec66993585d8cc998ced489ebadf7
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 8849cd932bd44b5dd7094d05470a4a97f58b08cb
+ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32387866"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43755501"
 ---
 # <a name="function-calls"></a>Wywołania funkcji
-A *wywołanie funkcji* jest wyrażenie, które przekazuje kontroli i argumentów (jeśli istnieje) do funkcji i ma postać:  
+A *wywołania funkcji* jest wyrażeniem, które przekazuje kontrolę i argumentów (jeśli istnieje) do funkcji i ma postać:  
   
- *wyrażenie* (*lista wyrażeń*opt)  
+*wyrażenie* (*lista wyrażeń*<sub>zoptymalizowany pod kątem</sub>)  
   
- gdzie *wyrażenie* jest nazwą funkcji lub daje w wyniku adresu funkcji i *lista wyrażeń* znajduje się lista wyrażeń (oddzielone przecinkami). Wartości tych końcowych wyrażeń są argumentami przekazywanymi do funkcji. Jeśli funkcja nie zwraca wartości, a następnie Zadeklaruj funkcją, która zwraca `void`.  
+gdzie *wyrażenie* jest nazwą funkcji lub daje w wyniku adres funkcji i *lista wyrażeń* znajduje się lista wyrażeń (oddzielonych przecinkami). Wartości tych końcowych wyrażeń są argumentami przekazywanymi do funkcji. Jeśli funkcja nie zwraca wartości, a następnie możesz deklarować jako funkcja, która zwraca `void`.  
   
- Jeśli w deklaracji występuje przed wywołaniem funkcji, ale podano żadnych informacji dotyczących parametrów, argumenty niezadeklarowany po prostu przechodzą popularne konwersje arytmetyczne.  
+Jeśli deklaracja istnieje przed wywołaniem funkcji, ale nie informacji znajduje się w odniesieniu do parametrów, argumenty niezadeklarowany po prostu przejść zwykle konwersje arytmetyczne.  
   
 > [!NOTE]
->  Wyrażenia w liście argumentów funkcji może przyjąć w dowolnej kolejności, więc argumentów, których wartości mogą zostać zmienione przez efekty uboczne z innego argumentu ma niezdefiniowane wartości. Punktu sekwencji zdefiniowane przez operator wywołania funkcji tylko gwarantuje, że wszystkie efekty uboczne w liście argumentów są oceniane przed kontrola przechodzi do wywołanej funkcji. (Należy pamiętać, że kolejność argumentów przesyłanych na stosie oddzielne sprawy.) Zobacz [punkty sekwencji](../c-language/c-sequence-points.md) Aby uzyskać więcej informacji.  
+>  Może zostać oceniony wyrażeń na liście argumentów funkcji w dowolnej kolejności, dlatego argumentów, których wartości mogą zostać zmienione przez efekty uboczne z innego argumentu ma niezdefiniowane wartości. Tylko punktu sekwencji zdefiniowane przez operator wywołania funkcji gwarantuje, ze wszystkimi efektami ubocznymi na liście argumentów są oceniane przed kontrola przechodzi do wywołanej funkcji. (Zwróć uwagę, że kolejność, w której argumenty są wypychane na stos jest kwestią oddzielne). Zobacz [punktów sekwencji](../c-language/c-sequence-points.md) Aby uzyskać więcej informacji.  
   
- Jedynym wymaganiem w żadnym wywołaniu funkcji jest, że przed nawiasów wyrażenia musi być adresu funkcji. Oznacza to, że funkcja może być wywoływana za pomocą dowolnego wyrażenia wskaźnika funkcji.  
+Jedynym wymaganiem w żadnym wywołaniu, funkcja jest, że przed nawiasów wyrażenia musi być adresu funkcji. Oznacza to, że funkcja może być wywoływana przez dowolne wyrażenie wskaźnika funkcji.  
   
 ## <a name="example"></a>Przykład  
- W tym przykładzie przedstawiono wywoływane z wywołania funkcji `switch` instrukcji:  
+Ten przykład ilustruje wywołania funkcji o nazwie z `switch` instrukcji:  
   
 ```  
 int main()  
@@ -81,23 +81,23 @@ void work( int number, long (*function)(int i) )
 }  
 ```  
   
- W tym przykładzie funkcja wywołanie w `main`,  
+W tym przykładzie funkcja wywołania `main`,  
   
 ```  
 work( count, lift );  
 ```  
   
- przekazuje zmienna całkowitoliczbowa `count`i adres funkcji `lift` funkcji `work`. Należy pamiętać, że adres funkcji jest przekazywany przez nadanie identyfikator funkcji, ponieważ identyfikator funkcji daje w wyniku wyrażenia wskaźnika. Aby korzystać z identyfikatorem funkcji w ten sposób, funkcji muszą być zadeklarowane lub zdefiniowane przed użyciem identyfikator; w przeciwnym razie identyfikator nie został rozpoznany. W tym przypadku prototyp `work` znajduje się na początku `main` funkcji.  
+przekazuje zmienną całkowitoliczbową `count`oraz adres funkcji `lift` funkcji `work`. Należy pamiętać, że adres funkcji jest przekazywany, podając identyfikator funkcji, ponieważ identyfikator funkcji ocenia wyrażenie wskaźnika. Aby użyć identyfikator funkcji w ten sposób, funkcja musi być zadeklarowane lub zdefiniowane przed użyciem identyfikator; w przeciwnym razie identyfikator nie został rozpoznany. W tym przypadku prototyp `work` znajduje się na początku `main` funkcji.  
   
- Parametr `function` w `work` został zadeklarowany jako wskaźnik do funkcji, których jedna `int` argument i zwracanie **długi** wartość. Nawiasy otaczające nazwę parametru są wymagane; Deklaracja bez obawy, określ funkcji zwracającej wskaźnik do **długi** wartość.  
+Parametr `function` w `work` jest deklarowana jako wskaźnik do funkcji, w których jedna `int` argumentów i zwracanie **długie** wartość. Nawiasy, w których nazwa parametru są wymagane; bez nich deklaracji należałoby określić funkcji zwracającej wskaźnik do **długie** wartość.  
   
- Funkcja `work` wywołuje funkcję wybrane z wewnątrz **dla** pętli przy użyciu następujących wywołania funkcji:  
+Funkcja `work` wywołuje funkcję wybranego z wewnątrz **dla** pętli za pomocą poniższe wywołanie funkcji:  
   
 ```  
 ( *function )( i );  
 ```  
   
- Jeden argument `i`, są przekazywane do wywołanej funkcji.  
+Jeden argument `i`, jest przekazywany do funkcji o nazwie.  
   
 ## <a name="see-also"></a>Zobacz też  
- [Funkcje](../c-language/functions-c.md)
+[Funkcje](../c-language/functions-c.md)

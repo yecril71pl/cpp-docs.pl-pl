@@ -15,22 +15,24 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d35a05fc54f3358c567e293573a9a5352b359a95
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: cfbc23250acf751072e14b75f18944a5083e18cd
+ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32355197"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43756814"
 ---
-# <a name="debugging-tips"></a>Debugowanie porady
-W poniższych tematach przedstawiono niektóre kroki przydatne do debugowania z usługą:  
-  
--   [Korzystanie z Menedżera zadań](../atl/using-task-manager.md)  
-  
--   [Wyświetlanie asercji](../atl/displaying-assertions.md)  
-  
--   [Uruchamianie programu jako serwera lokalnego](../atl/running-the-program-as-a-local-server.md)  
-  
-## <a name="see-also"></a>Zobacz też  
- [Usługi](../atl/atl-services.md)
+# <a name="debugging-tips"></a>Wskazówki dotyczące debugowania
+
+W poniższych tematach przedstawiono niektóre przydatne etapy dotyczące debugowania usługi:
+
+- [Korzystanie z Menedżera zadań](../atl/using-task-manager.md)
+
+- [Wyświetlanie asercji](../atl/displaying-assertions.md)
+
+- [Uruchamianie programu jako serwera lokalnego](../atl/running-the-program-as-a-local-server.md)
+
+## <a name="see-also"></a>Zobacz też
+
+[Usługi](../atl/atl-services.md)
 

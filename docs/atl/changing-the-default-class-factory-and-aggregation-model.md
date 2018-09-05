@@ -22,29 +22,31 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: db2e684565589eb736b135db3460ed8b83d382b1
-ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
+ms.openlocfilehash: 3299fbac04da1e0c82671e5ccc4886d7276af5b9
+ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/05/2018
-ms.locfileid: "37850881"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43761130"
 ---
 # <a name="changing-the-default-class-factory-and-aggregation-model"></a>Zmienianie domyślnej fabryki klas i modelu agregacji
-Używa ATL [CComCoClass](../atl/reference/ccomcoclass-class.md) do definiowania domyślnej klasy fabryki i agregację modelu obiektu. `CComCoClass` Określa dwa następujące makra:  
-  
--   [DECLARE_CLASSFACTORY](reference/aggregation-and-class-factory-macros.md#declare_classfactory) deklaruje fabryki klas jako [CComClassFactory](../atl/reference/ccomclassfactory-class.md).  
-  
--   [DECLARE_AGGREGATABLE](reference/aggregation-and-class-factory-macros.md#declare_aggregatable) deklaruje, że obiekt może być agregowany.  
-  
- Można zastąpić jedną z tych wartości domyślnych, określając innego makra w definicji klasy. Na przykład, aby użyć [CComClassFactory2](../atl/reference/ccomclassfactory2-class.md) zamiast `CComClassFactory`, określ [DECLARE_CLASSFACTORY2](reference/aggregation-and-class-factory-macros.md#declare_classfactory2) makra:  
-  
- [!code-cpp[NVC_ATL_COM#2](../atl/codesnippet/cpp/changing-the-default-class-factory-and-aggregation-model_1.h)]  
-  
- Są dwa makra, które definiują fabrykę klas [DECLARE_CLASSFACTORY_AUTO_THREAD](reference/aggregation-and-class-factory-macros.md#declare_classfactory_auto_thread) i [DECLARE_CLASSFACTORY_SINGLETON](reference/aggregation-and-class-factory-macros.md#declare_classfactory_singleton).  
-  
- Używa również biblioteki ATL **typedef** mechanizmu, aby zaimplementować domyślne zachowanie. Na przykład używa makro DECLARE_AGGREGATABLE **typedef** definiowaniu typu o nazwie `_CreatorClass`, który jest następnie odwoływać w całym ATL. Należy pamiętać, że w klasie pochodnej **typedef** przy użyciu tej samej nazwie jako klasa bazowa **— typedef** skutkuje ATL za pomocą definicji i zastępowanie domyślnego zachowania.  
-  
-## <a name="see-also"></a>Zobacz też  
- [Podstawowe informacje na temat obiektów COM ATL](../atl/fundamentals-of-atl-com-objects.md)   
- [Makra agregacji i fabryki klas](../atl/reference/aggregation-and-class-factory-macros.md)
+
+Używa ATL [CComCoClass](../atl/reference/ccomcoclass-class.md) do definiowania domyślnej klasy fabryki i agregację modelu obiektu. `CComCoClass` Określa dwa następujące makra:
+
+- [DECLARE_CLASSFACTORY](reference/aggregation-and-class-factory-macros.md#declare_classfactory) deklaruje fabryki klas jako [CComClassFactory](../atl/reference/ccomclassfactory-class.md).
+
+- [DECLARE_AGGREGATABLE](reference/aggregation-and-class-factory-macros.md#declare_aggregatable) deklaruje, że obiekt może być agregowany.
+
+Można zastąpić jedną z tych wartości domyślnych, określając innego makra w definicji klasy. Na przykład, aby użyć [CComClassFactory2](../atl/reference/ccomclassfactory2-class.md) zamiast `CComClassFactory`, określ [DECLARE_CLASSFACTORY2](reference/aggregation-and-class-factory-macros.md#declare_classfactory2) makra:
+
+[!code-cpp[NVC_ATL_COM#2](../atl/codesnippet/cpp/changing-the-default-class-factory-and-aggregation-model_1.h)]
+
+Są dwa makra, które definiują fabrykę klas [DECLARE_CLASSFACTORY_AUTO_THREAD](reference/aggregation-and-class-factory-macros.md#declare_classfactory_auto_thread) i [DECLARE_CLASSFACTORY_SINGLETON](reference/aggregation-and-class-factory-macros.md#declare_classfactory_singleton).
+
+Używa również biblioteki ATL **typedef** mechanizmu, aby zaimplementować domyślne zachowanie. Na przykład używa makro DECLARE_AGGREGATABLE **typedef** definiowaniu typu o nazwie `_CreatorClass`, który jest następnie odwoływać w całym ATL. Należy pamiętać, że w klasie pochodnej **typedef** przy użyciu tej samej nazwie jako klasa bazowa **— typedef** skutkuje ATL za pomocą definicji i zastępowanie domyślnego zachowania.
+
+## <a name="see-also"></a>Zobacz też
+
+[Podstawowe informacje na temat obiektów COM ATL](../atl/fundamentals-of-atl-com-objects.md)   
+[Makra agregacji i fabryki klas](../atl/reference/aggregation-and-class-factory-macros.md)
 

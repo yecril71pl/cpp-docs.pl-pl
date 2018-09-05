@@ -21,127 +21,148 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c456aaa6f3448cf4386e0556773f2a9839702ccd
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: cf09696f6a13c11fbb37fa6e89ccb9b1241cadd0
+ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43202425"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43751546"
 ---
 # <a name="ccomheap-class"></a>Klasa CComHeap
-Ta klasa implementuje [IAtlMemMgr](../../atl/reference/iatlmemmgr-class.md) przy użyciu funkcji alokacji pamięci COM.  
-  
+
+Ta klasa implementuje [IAtlMemMgr](../../atl/reference/iatlmemmgr-class.md) przy użyciu funkcji alokacji pamięci COM.
+
 > [!IMPORTANT]
->  Ta klasa i jej elementów członkowskich nie można użyć w aplikacjach korzystających ze środowiska wykonawczego Windows.  
-  
-## <a name="syntax"></a>Składnia  
-  
+>  Ta klasa i jej elementów członkowskich nie można użyć w aplikacjach korzystających ze środowiska wykonawczego Windows.
+
+## <a name="syntax"></a>Składnia
+
 ```
 class CComHeap : public IAtlMemMgr
-```  
-  
-## <a name="members"></a>Elementy członkowskie  
-  
-### <a name="public-methods"></a>Metody publiczne  
-  
-|Nazwa|Opis|  
-|----------|-----------------|  
-|[CComHeap::Allocate](#allocate)|Wywołaj tę metodę można przydzielić bloku pamięci.|  
-|[CComHeap::Free](#free)|Wywołaj tę metodę w celu zwolnienia bloku pamięci przydzielonej przez tego menedżera pamięci.|  
-|[CComHeap::GetSize](#getsize)|Wywołaj tę metodę, aby uzyskać przydzielony rozmiar bloku pamięci przydzielonej przez tego menedżera pamięci.|  
-|[CComHeap::Reallocate](#reallocate)|Wywołaj tę metodę w celu ponownego przydzielenia pamięci przydzielonej przez tego menedżera pamięci.|  
-  
-## <a name="remarks"></a>Uwagi  
- `CComHeap` implementuje funkcje alokacji pamięci za pomocą funkcji alokacji COM, w tym [CoTaskMemAlloc](/windows/desktop/api/combaseapi/nf-combaseapi-cotaskmemalloc), [CoTaskMemFree](/windows/desktop/api/combaseapi/nf-combaseapi-cotaskmemfree), [IMalloc::GetSize](/windows/desktop/api/objidlbase/nf-objidlbase-imalloc-getsize)i [CoTaskMemRealloc](/windows/desktop/api/combaseapi/nf-combaseapi-cotaskmemrealloc). Maksymalna ilość pamięci, która może być przydzielona jest równa bajtów INT_MAX (2147483647).  
-  
-## <a name="example"></a>Przykład  
- Zobacz przykład [IAtlMemMgr](../../atl/reference/iatlmemmgr-class.md).  
-  
-## <a name="inheritance-hierarchy"></a>Hierarchia dziedziczenia  
- `IAtlMemMgr`  
-  
- `CComHeap`  
-  
-## <a name="requirements"></a>Wymagania  
- **Nagłówek:** ATLComMem.h  
-  
-##  <a name="allocate"></a>  CComHeap::Allocate  
- Wywołaj tę metodę można przydzielić bloku pamięci.  
-  
+```
+
+## <a name="members"></a>Elementy członkowskie
+
+### <a name="public-methods"></a>Metody publiczne
+
+|Nazwa|Opis|
+|----------|-----------------|
+|[CComHeap::Allocate](#allocate)|Wywołaj tę metodę można przydzielić bloku pamięci.|
+|[CComHeap::Free](#free)|Wywołaj tę metodę w celu zwolnienia bloku pamięci przydzielonej przez tego menedżera pamięci.|
+|[CComHeap::GetSize](#getsize)|Wywołaj tę metodę, aby uzyskać przydzielony rozmiar bloku pamięci przydzielonej przez tego menedżera pamięci.|
+|[CComHeap::Reallocate](#reallocate)|Wywołaj tę metodę w celu ponownego przydzielenia pamięci przydzielonej przez tego menedżera pamięci.|
+
+## <a name="remarks"></a>Uwagi
+
+`CComHeap` implementuje funkcje alokacji pamięci za pomocą funkcji alokacji COM, w tym [CoTaskMemAlloc](/windows/desktop/api/combaseapi/nf-combaseapi-cotaskmemalloc), [CoTaskMemFree](/windows/desktop/api/combaseapi/nf-combaseapi-cotaskmemfree), [IMalloc::GetSize](/windows/desktop/api/objidlbase/nf-objidlbase-imalloc-getsize)i [CoTaskMemRealloc](/windows/desktop/api/combaseapi/nf-combaseapi-cotaskmemrealloc). Maksymalna ilość pamięci, która może być przydzielona jest równa bajtów INT_MAX (2147483647).
+
+## <a name="example"></a>Przykład
+
+Zobacz przykład [IAtlMemMgr](../../atl/reference/iatlmemmgr-class.md).
+
+## <a name="inheritance-hierarchy"></a>Hierarchia dziedziczenia
+
+`IAtlMemMgr`
+
+`CComHeap`
+
+## <a name="requirements"></a>Wymagania
+
+**Nagłówek:** ATLComMem.h
+
+##  <a name="allocate"></a>  CComHeap::Allocate
+
+Wywołaj tę metodę można przydzielić bloku pamięci.
+
 ```
 virtual __declspec(allocator) void* Allocate(size_t nBytes) throw();
-```  
-  
-### <a name="parameters"></a>Parametry  
- *nBytes*  
- Żądana liczba bajtów w nowy blok pamięci.  
-  
-### <a name="return-value"></a>Wartość zwracana  
- Zwraca wskaźnik do początku bloku nowo alokacji pamięci.  
-  
-### <a name="remarks"></a>Uwagi  
- Wywołaj [CComHeap::Free](#free) lub [CComHeap::Reallocate](#reallocate) zwolnienie pamięci przydzielonej przez tę metodę.  
-  
- Implementowany przy użyciu [CoTaskMemAlloc](/windows/desktop/api/combaseapi/nf-combaseapi-cotaskmemalloc).  
-  
-##  <a name="free"></a>  CComHeap::Free  
- Wywołaj tę metodę w celu zwolnienia bloku pamięci przydzielonej przez tego menedżera pamięci.  
-  
+```
+
+### <a name="parameters"></a>Parametry
+
+*nBytes*  
+Żądana liczba bajtów w nowy blok pamięci.
+
+### <a name="return-value"></a>Wartość zwracana
+
+Zwraca wskaźnik do początku bloku nowo alokacji pamięci.
+
+### <a name="remarks"></a>Uwagi
+
+Wywołaj [CComHeap::Free](#free) lub [CComHeap::Reallocate](#reallocate) zwolnienie pamięci przydzielonej przez tę metodę.
+
+Implementowany przy użyciu [CoTaskMemAlloc](/windows/desktop/api/combaseapi/nf-combaseapi-cotaskmemalloc).
+
+##  <a name="free"></a>  CComHeap::Free
+
+Wywołaj tę metodę w celu zwolnienia bloku pamięci przydzielonej przez tego menedżera pamięci.
+
 ```
 virtual void Free(void* p) throw();
-```  
-  
-### <a name="parameters"></a>Parametry  
- *p*  
- Wskaźnik do pamięci uprzednio przydzielonej przez tego menedżera pamięci. Wartość NULL jest prawidłową wartością i nic nie robi.  
-  
-### <a name="remarks"></a>Uwagi  
- Implementowany przy użyciu [CoTaskMemFree](/windows/desktop/api/combaseapi/nf-combaseapi-cotaskmemfree).  
-  
-##  <a name="getsize"></a>  CComHeap::GetSize  
- Wywołaj tę metodę, aby uzyskać przydzielony rozmiar bloku pamięci przydzielonej przez tego menedżera pamięci.  
-  
+```
+
+### <a name="parameters"></a>Parametry
+
+*p*  
+Wskaźnik do pamięci uprzednio przydzielonej przez tego menedżera pamięci. Wartość NULL jest prawidłową wartością i nic nie robi.
+
+### <a name="remarks"></a>Uwagi
+
+Implementowany przy użyciu [CoTaskMemFree](/windows/desktop/api/combaseapi/nf-combaseapi-cotaskmemfree).
+
+##  <a name="getsize"></a>  CComHeap::GetSize
+
+Wywołaj tę metodę, aby uzyskać przydzielony rozmiar bloku pamięci przydzielonej przez tego menedżera pamięci.
+
 ```
 virtual size_t GetSize(void* p) throw();
-```  
-  
-### <a name="parameters"></a>Parametry  
- *p*  
- Wskaźnik do pamięci uprzednio przydzielonej przez tego menedżera pamięci.  
-  
-### <a name="return-value"></a>Wartość zwracana  
- Zwraca rozmiar bloku ilość przydzielonej pamięci w bajtach.  
-  
-### <a name="remarks"></a>Uwagi  
- Implementowany przy użyciu [IMalloc::GetSize](/windows/desktop/api/objidlbase/nf-objidlbase-imalloc-getsize).  
-  
-##  <a name="reallocate"></a>  CComHeap::Reallocate  
- Wywołaj tę metodę w celu ponownego przydzielenia pamięci przydzielonej przez tego menedżera pamięci.  
-  
+```
+
+### <a name="parameters"></a>Parametry
+
+*p*  
+Wskaźnik do pamięci uprzednio przydzielonej przez tego menedżera pamięci.
+
+### <a name="return-value"></a>Wartość zwracana
+
+Zwraca rozmiar bloku ilość przydzielonej pamięci w bajtach.
+
+### <a name="remarks"></a>Uwagi
+
+Implementowany przy użyciu [IMalloc::GetSize](/windows/desktop/api/objidlbase/nf-objidlbase-imalloc-getsize).
+
+##  <a name="reallocate"></a>  CComHeap::Reallocate
+
+Wywołaj tę metodę w celu ponownego przydzielenia pamięci przydzielonej przez tego menedżera pamięci.
+
 ```
 virtual __declspec(allocator) void* Reallocate(void* p, size_t nBytes) throw();
-```  
-  
-### <a name="parameters"></a>Parametry  
- *p*  
- Wskaźnik do pamięci uprzednio przydzielonej przez tego menedżera pamięci.  
-  
- *nBytes*  
- Żądana liczba bajtów w nowy blok pamięci.  
-  
-### <a name="return-value"></a>Wartość zwracana  
- Zwraca wskaźnik do początku bloku nowo alokacji pamięci.  
-  
-### <a name="remarks"></a>Uwagi  
- Wywołaj [CComHeap::Free](#free) zwolnienie pamięci przydzielonej przez tę metodę.  
-  
- Implementowany przy użyciu [CoTaskMemRealloc](/windows/desktop/api/combaseapi/nf-combaseapi-cotaskmemrealloc).  
-  
-## <a name="see-also"></a>Zobacz też  
- [Przykładowe DynamicConsumer](../../visual-cpp-samples.md)   
- [Klasa — Przegląd](../../atl/atl-class-overview.md)   
- [Klasa CWin32Heap](../../atl/reference/cwin32heap-class.md)   
- [Klasa CLocalHeap](../../atl/reference/clocalheap-class.md)   
- [Klasa CGlobalHeap](../../atl/reference/cglobalheap-class.md)   
- [Klasa CCRTHeap](../../atl/reference/ccrtheap-class.md)   
- [Klasa IAtlMemMgr](../../atl/reference/iatlmemmgr-class.md)
+```
+
+### <a name="parameters"></a>Parametry
+
+*p*  
+Wskaźnik do pamięci uprzednio przydzielonej przez tego menedżera pamięci.
+
+*nBytes*  
+Żądana liczba bajtów w nowy blok pamięci.
+
+### <a name="return-value"></a>Wartość zwracana
+
+Zwraca wskaźnik do początku bloku nowo alokacji pamięci.
+
+### <a name="remarks"></a>Uwagi
+
+Wywołaj [CComHeap::Free](#free) zwolnienie pamięci przydzielonej przez tę metodę.
+
+Implementowany przy użyciu [CoTaskMemRealloc](/windows/desktop/api/combaseapi/nf-combaseapi-cotaskmemrealloc).
+
+## <a name="see-also"></a>Zobacz też
+
+[Przykładowe DynamicConsumer](../../visual-cpp-samples.md)   
+[Klasa — Przegląd](../../atl/atl-class-overview.md)   
+[Klasa CWin32Heap](../../atl/reference/cwin32heap-class.md)   
+[Klasa CLocalHeap](../../atl/reference/clocalheap-class.md)   
+[Klasa CGlobalHeap](../../atl/reference/cglobalheap-class.md)   
+[Klasa CCRTHeap](../../atl/reference/ccrtheap-class.md)   
+[Klasa IAtlMemMgr](../../atl/reference/iatlmemmgr-class.md)

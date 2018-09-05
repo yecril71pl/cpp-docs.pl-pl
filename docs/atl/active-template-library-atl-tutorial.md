@@ -1,5 +1,5 @@
 ---
-title: Active Template Library (ATL) samouczek | Dokumentacja firmy Microsoft
+title: Active Template Library (ATL) — samouczek | Dokumentacja firmy Microsoft
 ms.custom: get-started-article
 ms.date: 11/04/2016
 ms.technology:
@@ -18,34 +18,36 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 069d5d84b06850705db5c48f09bb0d0122f58fa3
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: beb5f2592453f0063ceefe973311dd3c46f691d1
+ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32354871"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43755650"
 ---
 # <a name="active-template-library-atl-tutorial"></a>Biblioteka Active Template Library (ATL) — Samouczek
-ATL zaprojektowano w celu uproszczenia procesu tworzenia wydajne, elastyczne, lekkie formantów. W tym samouczku poprowadzi Cię przez tworzenie formantu ActiveX, prezentacja wiele podstawy ATL i COM.  
-  
- W ramach tego samouczka, dowiesz się, jak dodać Projekt ATL, który Rysuje wypełniony wielokąt i okrąg formantu. Następnie dodasz właściwość, aby wskazać liczbę boków wielokąta będzie mieć i utworzyć kod rysowania aktualizowania formantu, gdy właściwość. Formant zostanie wyświetlone na stronie sieci Web przy użyciu niektórych VBScript aby odpowiadanie na zdarzenia.  
-  
- Samouczek jest podzielone na siedem kroków. Każdy krok należy wykonać w kolejności, jak dalszych krokach są zależne od wcześniej wykonane zadania. Przed rozpoczęciem należy się upewnić, że masz uprawnienia wymagane do zarejestrowania składnika ActiveX w określonym komputerze. Jest to zwykle tylko problemem, jeśli używasz programu Visual Studio .NET przy użyciu połączenia usług terminalowych.  
-  
--   [Krok 1: Tworzenie projektu](../atl/creating-the-project-atl-tutorial-part-1.md)  
-  
--   [Krok 2: Dodawanie formantu do projektu](../atl/adding-a-control-atl-tutorial-part-2.md)  
-  
--   [Krok 3. Dodawanie właściwości do formantu](../atl/adding-a-property-to-the-control-atl-tutorial-part-3.md)  
-  
--   [Krok 4: Zmiana kodu rysującego formantu](../atl/changing-the-drawing-code-atl-tutorial-part-4.md)  
-  
--   [Krok 5: Dodawanie zdarzenia](../atl/adding-an-event-atl-tutorial-part-5.md)  
-  
--   [Krok 6: Dodawanie strony właściwości](../atl/adding-a-property-page-atl-tutorial-part-6.md)  
-  
--   [Krok 7: Umieszczanie formantu na stronie sieci Web](../atl/putting-the-control-on-a-web-page-atl-tutorial-part-7.md)  
-  
-## <a name="see-also"></a>Zobacz też  
- [Pojęcia](../atl/active-template-library-atl-concepts.md)
+
+ATL zaprojektowano w celu uproszczenia procesu tworzenia formantów, wydajny, elastyczne i uproszczone. Ten samouczek poprowadzi Cię przez tworzenie formantu ActiveX, demonstrując wiele podstawy ATL i COM.
+
+Korzystając z tego samouczka, dowiesz się, jak dodać kontrolki do projektu ATL, który rysuje okrąg i wypełniony wielokąt. Następnie dodasz właściwość, aby wskazać liczbę boków wielokąta będzie mieć i utworzyć kod rysowania aktualizowania kontrolki, gdy właściwość. Formant zostanie wyświetlony na stronie sieci Web, aby stał się reagowania na zdarzenia przy użyciu niektórych VBScript.
+
+Samouczek jest podzielone na siedem kroków. Należy wykonać każdy krok w kolejności, ponieważ dalszych krokach zależą od poprzednio wykonanych zadań. Przed rozpoczęciem należy się upewnić, że masz uprawnienia wymagane do zarejestrowania składnik ActiveX na określonym komputerze. Zazwyczaj jest tylko problemem, jeśli używasz programu Visual Studio .NET przy użyciu połączenia usług terminalowych.
+
+- [Krok 1: Tworzenie projektu](../atl/creating-the-project-atl-tutorial-part-1.md)
+
+- [Krok 2: Dodawanie formantu do projektu](../atl/adding-a-control-atl-tutorial-part-2.md)
+
+- [Krok 3. Dodawanie właściwości do kontrolki](../atl/adding-a-property-to-the-control-atl-tutorial-part-3.md)
+
+- [Krok 4: Zmiana kodu rysującego kontroli nad](../atl/changing-the-drawing-code-atl-tutorial-part-4.md)
+
+- [Krok 5: Dodawanie zdarzenia](../atl/adding-an-event-atl-tutorial-part-5.md)
+
+- [Krok 6: Dodawanie strony właściwości](../atl/adding-a-property-page-atl-tutorial-part-6.md)
+
+- [Krok 7: Umieszczanie kontrolki na stronie sieci Web](../atl/putting-the-control-on-a-web-page-atl-tutorial-part-7.md)
+
+## <a name="see-also"></a>Zobacz też
+
+[Pojęcia](../atl/active-template-library-atl-concepts.md)
 

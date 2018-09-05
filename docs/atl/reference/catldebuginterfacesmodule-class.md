@@ -18,28 +18,32 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 265bc9c59e240dc11ecf71b67719fc8dd1ea5ad4
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 6dbac5c07f04725400423e72d1cc38eb0f25e48f
+ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32359225"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43755530"
 ---
 # <a name="catldebuginterfacesmodule-class"></a>Klasa CAtlDebugInterfacesModule
-Ta klasa obsługuje interfejsy debugowania.  
-  
-## <a name="syntax"></a>Składnia  
-  
+
+Ta klasa obsługuje debugowanie interfejsów.
+
+## <a name="syntax"></a>Składnia
+
 ```
 class CAtlDebugInterfacesModule
-```  
-  
-## <a name="remarks"></a>Uwagi  
- `CAtlDebugInterfacesModule` zapewnia obsługę wymagana do debugowania interfejsów. Znajduje się w każdym projekcie, który definiuje symbol [_ATL_DEBUG_QI](debugging-and-error-reporting-macros.md#_atl_debug_qi).  
-  
-## <a name="requirements"></a>Wymagania  
- **Nagłówek:** atlbase.h  
-  
-## <a name="see-also"></a>Zobacz też  
- [Przegląd klas](../../atl/atl-class-overview.md)   
- [Klasy modułów](../../atl/atl-module-classes.md)
+```
+
+## <a name="remarks"></a>Uwagi
+
+`CAtlDebugInterfacesModule` zapewnia obsługę wymagane do debugowania interfejsów. Jest on zawarty w jakimkolwiek projektem, który definiuje symbol [_ATL_DEBUG_QI](debugging-and-error-reporting-macros.md#_atl_debug_qi).
+
+## <a name="requirements"></a>Wymagania
+
+**Nagłówek:** atlbase.h
+
+## <a name="see-also"></a>Zobacz też
+
+[Klasa — Przegląd](../../atl/atl-class-overview.md)   
+[Klasy modułów](../../atl/atl-module-classes.md)

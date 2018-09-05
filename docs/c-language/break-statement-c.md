@@ -1,5 +1,5 @@
 ---
-title: Podziel Statement (C) | Dokumentacja firmy Microsoft
+title: Przerwij Statement (C) | Dokumentacja firmy Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,25 +16,26 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 194e4c836f0423e20bb747cc6c3b06645c38a5fd
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: aeec33d61f21c34e52d582ebc3c0ef7313bb511f
+ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32381353"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43755037"
 ---
 # <a name="break-statement-c"></a>break — instrukcja (C)
-`break` Instrukcji kończy wykonywanie najbliższej otaczającej `do`, `for`, `switch`, lub `while` instrukcji, w której znajduje się. Kontrola przechodzi do instrukcji następującej instrukcji zakończone.  
+`break` Instrukcja kończy wykonywanie najbliższej otaczającej `do`, `for`, `switch`, lub `while` instrukcji, w której występuje. Kontrola przechodzi do instrukcji następującej instrukcji zakończone.  
   
-## <a name="syntax"></a>Składnia  
- *Instrukcja skok*:  
- `break;`  
+## <a name="syntax"></a>Składnia
+
+*Instrukcja skoku*:<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**Przerwij;**
   
- `break` Często używana jest instrukcja o zakończeniu przetwarzania konkretnego przypadku w `switch` instrukcji. Brak otaczającej iteracyjne lub `switch` instrukcji generuje błąd.  
+`break` Instrukcji jest często używany do zakończenia przetwarzania konkretnej wielkość liter w obrębie `switch` instrukcji. Brak otaczającego iteracji lub `switch` instrukcja generuje błąd.  
   
- W zagnieżdżonych instrukcjach `break` instrukcji kończy tylko `do`, `for`, `switch`, lub `while` instrukcji ograniczający natychmiast go. Można użyć `return` lub `goto` instrukcji do przekazywania kontroli w innym miejscu struktury zagnieżdżone.  
+W obrębie zagnieżdżonych instrukcji `break` kończy się tylko `do`, `for`, `switch`, lub `while` instrukcji, która bezpośrednio ją obejmuje. Możesz użyć `return` lub `goto` instrukcję, aby przekazać sterowanie w innym miejscu poza struktury zagnieżdżonej.  
   
- W tym przykładzie przedstawiono `break` instrukcji:  
+Ten przykład ilustruje `break` instrukcji:  
   
 ```  
 #include <stdio.h>  
@@ -52,4 +53,4 @@ int main() {
 ```  
   
 ## <a name="see-also"></a>Zobacz też  
- [break, instrukcja](../cpp/break-statement-cpp.md)
+[break, instrukcja](../cpp/break-statement-cpp.md)

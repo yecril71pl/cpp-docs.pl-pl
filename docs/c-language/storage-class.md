@@ -20,49 +20,47 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ecd50ddf72fbafb23571e2b2709418e4eb89093e
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 5473a3c11268e7e8563d95392ec6439e55c03bf4
+ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32391434"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43757165"
 ---
 # <a name="storage-class"></a>Klasa magazynu
-Specyfikator klasy magazynu w definicji funkcji zapewnia funkcję albo `extern` lub **statycznej** klasy magazynu.  
+Specyfikator klasy magazynu w definicji funkcji daje funkcji `extern` lub **statyczne** klasy magazynowania.  
   
-## <a name="syntax"></a>Składnia  
- *Definicja funkcji*:  
- *Specyfikatory deklaracji* opt*seq atrybutu* opt*lista deklaracji deklarator* opt*złożonej instrukcji*  
+## <a name="syntax"></a>Składnia
+
+*Definicja funkcji*:<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*Specyfikatory deklaracji*<sub>zoptymalizowany pod kątem</sub> *atrybutu seq*<sub>zoptymalizowany pod kątem</sub> *deklaratora* *lista deklaracji*  <sub>zoptymalizowany pod kątem</sub> *compound-statement*
+
+/\* *Atrybut seq* jest Specific dla Microsoft \*/
+
+*Specyfikatory deklaracji*:<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*Storage-class-specifier* *specyfikatory deklaracji*<sub>zoptymalizowany pod kątem</sub><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*Specyfikator typu* *specyfikatory deklaracji*<sub>zoptymalizowany pod kątem</sub><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*Kwalifikator typu* *specyfikatory deklaracji*<sub>zoptymalizowany pod kątem</sub>  
+
+*Storage-class-specifier*: /\* dla definicji funkcji \*/<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**extern**<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**Statyczne**
+
+Jeśli definicja funkcji nie obejmuje *storage-class-specifier*, domyślna klasa magazynu `extern`. Można jawnie zadeklarować funkcję jako `extern`, ale nie jest to wymagane.  
   
- /\* *Atrybut seq* jest Specific Microsoft * /  
+Jeśli deklaracja funkcji zawiera *storage-class-specifier* `extern`, identyfikator ma te same powiązania co dowolna widoczna deklaracja identyfikatora z zakresem pliku. Jeśli nie ma żadnej widocznej deklaracji z zakresem pliku, identyfikator ma powiązania zewnętrzne. Jeśli identyfikator ma zakres pliku a nie *storage-class-specifier*, identyfikator ma powiązania zewnętrzne. Powiązania zewnętrzne oznaczają, że każde wystąpienie identyfikatora oznacza ten sam obiekt lub funkcję. Zobacz [okres istnienia, zakres, widoczność i powiązania](../c-language/lifetime-scope-visibility-and-linkage.md) uzyskać więcej informacji dotyczących powiązań i zakresu pliku.  
   
- *Specyfikatory deklaracji*:  
- *Specyfikatory deklaracji Specyfikator klasy magazynu* opcjonalnych  
+Deklaracje funkcji o zakresie bloku ze specyfikatorem klasy magazynu innym niż `extern`.  
   
- *Specyfikatory deklaracji specyfikatora typu* opcjonalnych  
+Funkcja z **statyczne** klasę magazynu jest widoczna tylko w pliku źródłowym, w którym jest zdefiniowany. Wszystkie inne funkcje, niezależnie od tego, czy posiadają klasę magazynu `extern` jawnie lub niejawnie, są widoczne we wszystkich plikach z kodem źródłowym w programie. Jeśli **statyczne** pożądana jest klasa magazynu, musi być zadeklarowana podczas pierwszego wystąpienia deklaracji funkcji (jeśli istnieje), a w definicji funkcji.  
   
- *Specyfikatory deklaracji kwalifikator typu* opcjonalnych  
+**Microsoft Specific**  
   
- *Specyfikator klasy magazynu*: /\* definicje funkcji \*/  
- **extern**  
+Po włączeniu rozszerzeń Microsoft funkcja pierwotnie zadeklarowana bez klasy magazynu (lub za pomocą `extern` klasy magazynowania) otrzymuje **statyczne** klasy magazynu, jeśli definicja funkcji znajduje się w tym samym pliku źródłowym i Definicja jawnie określa **statyczne** klasy magazynowania.  
   
- **static**  
+Podczas kompilacji z opcją kompilatora /Ze, funkcje zadeklarowane wewnątrz bloku za pomocą słowa kluczowego `extern` mają globalną widoczność. Nie ma to zastosowania podczas kompilowania z opcją /Za. Na tej funkcji nie można polegać, jeżeli trzeba uwzględnić przenośność kodu źródłowego.  
   
- Jeśli nie ma definicji funkcji *Specyfikator klasy magazynu*, wartością domyślną klasę magazynu `extern`. Można jawnie zadeklarować funkcję jako `extern`, ale nie jest to wymagane.  
-  
- Jeśli w deklaracji funkcji zawiera *Specyfikator klasy magazynu* `extern`, identyfikator ma tego samego powiązania jako żadnych zgłoszenia widocznych identyfikatora z zakresem pliku. Jeśli nie ma żadnej widocznej deklaracji z zakresem pliku, identyfikator ma powiązania zewnętrzne. Jeśli identyfikator ma zakres pliku i nie *Specyfikator klasy magazynu*, identyfikator ma połączenie zewnętrzne. Powiązania zewnętrzne oznaczają, że każde wystąpienie identyfikatora oznacza ten sam obiekt lub funkcję. Zobacz [okres istnienia, zakres, widoczność i połączenie](../c-language/lifetime-scope-visibility-and-linkage.md) uzyskać więcej informacji dotyczących zakresu połączenie i plik.  
-  
- Deklaracje funkcji o zakresie bloku ze specyfikatorem klasy magazynu innym niż `extern`.  
-  
- Funkcja z **statycznych** Klasa magazynu jest widoczna tylko w pliku źródłowym, w którym jest zdefiniowany. Wszystkie inne funkcje, niezależnie od tego, czy posiadają klasę magazynu `extern` jawnie lub niejawnie, są widoczne we wszystkich plikach z kodem źródłowym w programie. Jeśli **statycznych** Klasa magazynu jest pożądane, może być deklarowana na pierwsze wystąpienie deklaracji funkcji (jeśli istnieje), a w definicji funkcji.  
-  
- **Microsoft Specific**  
-  
- Po włączeniu rozszerzenia Microsoft funkcji pierwotnie zadeklarowana bez klasy magazynu (lub `extern` klasy magazynu) podano **statycznych** klasy magazynu, jeśli z definicji funkcji znajduje się w tym samym pliku źródłowego i Definicja jawnie określa **statycznej** klasy magazynu.  
-  
- Podczas kompilacji z opcją kompilatora /Ze, funkcje zadeklarowane wewnątrz bloku za pomocą słowa kluczowego `extern` mają globalną widoczność. Nie ma to zastosowania podczas kompilowania z opcją /Za. Na tej funkcji nie można polegać, jeżeli trzeba uwzględnić przenośność kodu źródłowego.  
-  
- **KOŃCOWY określonych firmy Microsoft**  
+**END specyficzny dla Microsoft**  
   
 ## <a name="see-also"></a>Zobacz też  
- [Definicje funkcji języka C](../c-language/c-function-definitions.md)
+[Definicje funkcji języka C](../c-language/c-function-definitions.md)

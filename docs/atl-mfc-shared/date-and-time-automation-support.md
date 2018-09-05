@@ -24,42 +24,44 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b5f6f0c6bf9933f06da4b50f9754a0d68814e16b
-ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
+ms.openlocfilehash: 38933847065544f97d60dfc109436f059a025f7a
+ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/06/2018
-ms.locfileid: "37883755"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43763857"
 ---
 # <a name="date-and-time-automation-support"></a>Data i godzina: Obsługa automatyzacji
-W tym artykule opisano sposób korzystać z usług biblioteki klas, które są związane z zarządzaniem daty i godziny. Procedury opisane obejmują:  
-  
--   [Pobieranie bieżącego czasu](../atl-mfc-shared/current-time-automation-classes.md)  
-  
--   [Obliczanie czasu, który upłynął](../atl-mfc-shared/elapsed-time-automation-classes.md)  
-  
--   [Formatowanie daty/godziny reprezentację ciągu](../atl-mfc-shared/formatting-time-automation-classes.md)  
-  
- [COleDateTime](../atl-mfc-shared/reference/coledatetime-class.md) klasy zapewnia sposób przedstawiania informacji daty i godziny. Zapewnia bardziej szczegółowy i większy zakres niż [CTime](../atl-mfc-shared/reference/ctime-class.md) klasy. [COleDateTimeSpan](../atl-mfc-shared/reference/coledatetimespan-class.md) klasa reprezentuje czas, który upłynął, takich jak różnicę między dwoma `COleDateTime` obiektów.  
-  
- `COleDateTime` i `COleDateTimeSpan` klasy są przeznaczone do użycia z `COleVariant` klasy używane w usłudze Automation. `COleDateTime` i `COleDateTimeSpan` są także przydatne w programowaniu bazy danych MFC, ale mogą być używane, gdy chcesz przekształcić wartości daty i godziny. Mimo że `COleDateTime` klasa ma większy zakres wartości i bardziej szczegółowy od `CTime` klasy, wymaga więcej pamięci masowej dla każdego obiektu niż `CTime`. Istnieją również pewne specjalne zagadnienia, pracując z podstawowego typu Data. Zobacz [typ daty](../atl-mfc-shared/date-type.md) dodatkowe szczegóły dotyczące implementacji daty.  
-  
- `COleDateTime` obiekty może służyć do reprezentowania daty wypadające między 1 stycznia 100 r. a 31 grudnia 9999 r. `COleDateTime` wartości, przy użyciu przybliżoną rozdzielczość 1 milisekundy są zmiennoprzecinkowych obiektów. `COleDateTime` zależy od typu danych Data zdefiniowanego w dokumentacji MFC w obszarze [COleDateTime::operator data](../atl-mfc-shared/reference/coledatetime-class.md#operator_date). Rzeczywiste wdrożenie Data wykracza poza tymi granicami. `COleDateTime` Implementacji nakłada tych granic w celu ułatwienia pracy z tej klasy.  
-  
- `COleDateTime` nie obsługuje daty juliańskim. Kalendarz gregoriański zakłada, że rozszerzenie w czasie, 1 stycznia 100.  
-  
- `COleDateTime` ignoruje czasu letniego (DST). Poniższy przykład kodu porównuje obliczanie przedział czasu, przecinającym Data przełączenie czasu letniego na dwa sposoby: ją przy użyciu CRT i inne przy użyciu `COleDateTime`. Czas letni przełącza, w większości ustawień regionalnych, drugi tydzień w kwietniu i innych w październiku.  
-  
- Pierwsza metoda ustawia dwa `CTime` obiektów *godziny1* i *time2*, kwietnia 5 i 6 kwietnia odpowiednio przy użyciu standardowych struktury typu C `tm` i `time_t`. Ten kod wyświetla *godziny1* i *time2* i przedział czasu między nimi.  
-  
- Druga metoda tworzy dwa `COleDateTime` obiektów `oletime1` i `oletime2`i ustawia je na tej samej daty jako *godziny1* i *time2*. Wyświetla `oletime1` i `oletime2` i przedział czasu między nimi.  
-  
- CRT poprawnie oblicza różnicę 23 godzin. `COleDateTimeSpan` oblicza różnicę 24 godzin.  
-  
- Zauważyć, że obejście tego problemu jest używać w końcowej części przykładu, aby wyświetlić datę prawidłowo przy użyciu `COleDateTime::Format`. Zobacz artykuł bazy wiedzy Knowledge Base "USTERKI: Format("%D") nie powiedzie się `COleDateTime` i `COleDateTimeSpan`" (Q167338).  
-  
- [!code-cpp[NVC_ATLMFC_Utilities#176](../atl-mfc-shared/codesnippet/cpp/date-and-time-automation-support_1.cpp)]  
-  
-## <a name="see-also"></a>Zobacz też  
- [Data i godzina](../atl-mfc-shared/date-and-time.md)
+
+W tym artykule opisano sposób korzystać z usług biblioteki klas, które są związane z zarządzaniem daty i godziny. Procedury opisane obejmują:
+
+- [Pobieranie bieżącego czasu](../atl-mfc-shared/current-time-automation-classes.md)
+
+- [Obliczanie czasu, który upłynął](../atl-mfc-shared/elapsed-time-automation-classes.md)
+
+- [Formatowanie daty/godziny reprezentację ciągu](../atl-mfc-shared/formatting-time-automation-classes.md)
+
+[COleDateTime](../atl-mfc-shared/reference/coledatetime-class.md) klasy zapewnia sposób przedstawiania informacji daty i godziny. Zapewnia bardziej szczegółowy i większy zakres niż [CTime](../atl-mfc-shared/reference/ctime-class.md) klasy. [COleDateTimeSpan](../atl-mfc-shared/reference/coledatetimespan-class.md) klasa reprezentuje czas, który upłynął, takich jak różnicę między dwoma `COleDateTime` obiektów.
+
+`COleDateTime` i `COleDateTimeSpan` klasy są przeznaczone do użycia z `COleVariant` klasy używane w usłudze Automation. `COleDateTime` i `COleDateTimeSpan` są także przydatne w programowaniu bazy danych MFC, ale mogą być używane, gdy chcesz przekształcić wartości daty i godziny. Mimo że `COleDateTime` klasa ma większy zakres wartości i bardziej szczegółowy od `CTime` klasy, wymaga więcej pamięci masowej dla każdego obiektu niż `CTime`. Istnieją również pewne specjalne zagadnienia, pracując z podstawowego typu Data. Zobacz [typ daty](../atl-mfc-shared/date-type.md) dodatkowe szczegóły dotyczące implementacji daty.
+
+`COleDateTime` obiekty może służyć do reprezentowania daty wypadające między 1 stycznia 100 r. a 31 grudnia 9999 r. `COleDateTime` wartości, przy użyciu przybliżoną rozdzielczość 1 milisekundy są zmiennoprzecinkowych obiektów. `COleDateTime` zależy od typu danych Data zdefiniowanego w dokumentacji MFC w obszarze [COleDateTime::operator data](../atl-mfc-shared/reference/coledatetime-class.md#operator_date). Rzeczywiste wdrożenie Data wykracza poza tymi granicami. `COleDateTime` Implementacji nakłada tych granic w celu ułatwienia pracy z tej klasy.
+
+`COleDateTime` nie obsługuje daty juliańskim. Kalendarz gregoriański zakłada, że rozszerzenie w czasie, 1 stycznia 100.
+
+`COleDateTime` ignoruje czasu letniego (DST). Poniższy przykład kodu porównuje obliczanie przedział czasu, przecinającym Data przełączenie czasu letniego na dwa sposoby: ją przy użyciu CRT i inne przy użyciu `COleDateTime`. Czas letni przełącza, w większości ustawień regionalnych, drugi tydzień w kwietniu i innych w październiku.
+
+Pierwsza metoda ustawia dwa `CTime` obiektów *godziny1* i *time2*, kwietnia 5 i 6 kwietnia odpowiednio przy użyciu standardowych struktury typu C `tm` i `time_t`. Ten kod wyświetla *godziny1* i *time2* i przedział czasu między nimi.
+
+Druga metoda tworzy dwa `COleDateTime` obiektów `oletime1` i `oletime2`i ustawia je na tej samej daty jako *godziny1* i *time2*. Wyświetla `oletime1` i `oletime2` i przedział czasu między nimi.
+
+CRT poprawnie oblicza różnicę 23 godzin. `COleDateTimeSpan` oblicza różnicę 24 godzin.
+
+Zauważyć, że obejście tego problemu jest używać w końcowej części przykładu, aby wyświetlić datę prawidłowo przy użyciu `COleDateTime::Format`. Zobacz artykuł bazy wiedzy Knowledge Base "USTERKI: Format("%D") nie powiedzie się `COleDateTime` i `COleDateTimeSpan`" (Q167338).
+
+[!code-cpp[NVC_ATLMFC_Utilities#176](../atl-mfc-shared/codesnippet/cpp/date-and-time-automation-support_1.cpp)]
+
+## <a name="see-also"></a>Zobacz też
+
+[Data i godzina](../atl-mfc-shared/date-and-time.md)
 

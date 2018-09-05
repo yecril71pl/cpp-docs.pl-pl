@@ -14,19 +14,21 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ec7af04df819ed64c7c693392ee03b30893ce3d1
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 35256dcf1d43b2e176c722e7dfa1b2087029e277
+ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32360034"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43761784"
 ---
 # <a name="scope-of-atl"></a>Zakres ATL
-ATL umożliwia łatwe tworzenie obiektów COM, serwery automatyzacji i kontrolek ActiveX. ATL udostępnia wbudowaną obsługę wielu podstawowych interfejsów COM.  
-  
- ATL jest dostarczana jako kod źródłowy, który można umieścić w aplikacji. ATL powoduje biblioteki DLL dostępnych (atl90.dll), który zawiera kod, który może być współużytkowana przez składniki. Jednak ta biblioteka DLL nie jest konieczne.  
-  
-## <a name="see-also"></a>Zobacz też  
- [Wprowadzenie do ATL](../atl/introduction-to-atl.md)   
- [Kreator projektu ATL](../atl/reference/atl-project-wizard.md)
+
+ATL umożliwia łatwe tworzenie obiektów COM, serwerów automatyzacji i formantów ActiveX. ATL udostępnia wbudowaną obsługę dla wielu podstawowych interfejsów COM.
+
+ATL jest dostarczany jako kod źródłowy, który można umieścić w aplikacji. ATL sprawia, że biblioteki DLL dostępnych (atl90.dll), który zawiera kod, który mogą być współużytkowane przez składniki. Jednak ta biblioteka DLL nie jest konieczne.
+
+## <a name="see-also"></a>Zobacz też
+
+[Wprowadzenie do ATL](../atl/introduction-to-atl.md)   
+[Kreator projektu ATL](../atl/reference/atl-project-wizard.md)
 

@@ -18,69 +18,77 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 22815ddf3131b9d262d68a3202f4f500b7edf807
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 1c1c6ed120705886c1b0bb4836e851139543f629
+ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32358143"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43753915"
 ---
 # <a name="iaxwinambientdispatchex-interface"></a>Interfejs IAxWinAmbientDispatchEx
-Ten interfejs implementuje dodatkowe właściwości otaczających hostowanej kontrolki.  
-  
+
+Ten interfejs implementuje dodatkowe właściwości otoczenia hostowanej kontrolki.
+
 > [!IMPORTANT]
->  Nie można użyć tej klasy i jej elementów członkowskich w aplikacjach, które są wykonywane w środowisku wykonawczym systemu Windows.  
-  
-## <a name="syntax"></a>Składnia  
-  
+>  Ta klasa i jej elementów członkowskich nie można użyć w aplikacjach korzystających ze środowiska wykonawczego Windows.
+
+## <a name="syntax"></a>Składnia
+
 ```
 MIDL_INTERFACE("B2D0778B - AC99 - 4c58 - A5C8 - E7724E5316B5") IAxWinAmbientDispatchEx : public IAxWinAmbientDispatch
-```  
-  
-## <a name="members"></a>Elementy członkowskie  
-  
-### <a name="methods"></a>Metody  
-  
-|||  
-|-|-|  
-|[SetAmbientDispatch](#setambientdispatch)|Ta metoda jest wywoływana, aby uzupełnić domyślnego interfejsu — właściwość otoczenia z interfejsem użytkownika.|  
-  
-## <a name="remarks"></a>Uwagi  
- Dołącz ten interfejs ATL aplikacji, które są połączone statycznie z ATL i hosta formantów ActiveX, szczególnie kontrolki ActiveX ma właściwości otoczenia. W tym ten interfejs nie wygeneruje potwierdzenie: "Zapomnialeś do przekazania do CComModule::Init identyfikatora LIBID"  
-  
- Ten interfejs jest udostępniany przez formant ActiveX w ATL hosting obiektów. Pochodną [IAxWinAmbientDispatch](../../atl/reference/iaxwinambientdispatch-interface.md), `IAxWinAmbientDispatchEx` dodaje metodę, która umożliwia uzupełnienie — właściwość otoczenia interfejsu przez ATL własny.  
-  
- [AXHost](https://msdn.microsoft.com/library/system.windows.forms.axhost.aspx) próbuje załadować informacji o typie o `IAxWinAmbientDispatch` i `IAxWinAmbientDispatchEx` z biblioteki typów, który zawiera kod.  
-  
- Jeśli łączysz się ATL90.dll, **AXHost** załaduje informacji o typie z biblioteki typów w bibliotece DLL.  
-  
- Zobacz [Hosting AXHost za pomocą biblioteki ATL programu ActiveX formanty](../../atl/hosting-activex-controls-using-atl-axhost.md) więcej szczegółów.  
-  
-## <a name="requirements"></a>Wymagania  
- Definicja tego interfejsu jest dostępne w wielu formularzach, jak pokazano w poniższej tabeli.  
-  
-|Typ definicji|Plik|  
-|---------------------|----------|  
-|IDL|atliface.IDL|  
-|Biblioteki typów|ATL.dll|  
-|C++|atliface.h (również zawarte w ATLBase.h)|  
-  
-##  <a name="setambientdispatch"></a>  IAxWinAmbientDispatchEx::SetAmbientDispatch  
- Ta metoda jest wywoływana, aby uzupełnić domyślnego interfejsu — właściwość otoczenia z interfejsem użytkownika.  
-  
+```
+
+## <a name="members"></a>Elementy członkowskie
+
+### <a name="methods"></a>Metody
+
+|||
+|-|-|
+|[SetAmbientDispatch](#setambientdispatch)|Ta metoda jest wywoływana, aby uzupełnić domyślny interfejs zmieniono właściwość przy użyciu interfejsu użytkownika.|
+
+## <a name="remarks"></a>Uwagi
+
+Dołącz ten interfejs aplikacji biblioteki ATL, które są statycznie łączone z ATL i hosta formantów ActiveX, szczególnie kontrolki ActiveX, który ma właściwości otoczenia. Ta asercja nie wliczając tego interfejsu spowoduje wygenerowanie: "Czy pamiętasz o do przekazania LIBID CComModule::Init"
+
+Ten interfejs jest udostępniany przez ActiveX hostingu formantu ATL, obiekty. Pochodną [IAxWinAmbientDispatch](../../atl/reference/iaxwinambientdispatch-interface.md), `IAxWinAmbientDispatchEx` dodaje metodę, która umożliwia uzupełnienie zmieniono właściwość interfejsu przez ATL własny.
+
+[AXHost](https://msdn.microsoft.com/library/system.windows.forms.axhost.aspx) spróbuje załadować informacji o typie o `IAxWinAmbientDispatch` i `IAxWinAmbientDispatchEx` z biblioteki typów, która zawiera kod.
+
+Jeśli łączysz się ATL90.dll, **AXHost** zostaną załadowane informacje o typie z biblioteki typów w bibliotece DLL.
+
+Zobacz [hostingu ActiveX kontrolek przy użyciu ATL AXHost](../../atl/hosting-activex-controls-using-atl-axhost.md) Aby uzyskać więcej informacji.
+
+## <a name="requirements"></a>Wymagania
+
+Definicja ten interfejs jest dostępny w wielu formach, jak pokazano w poniższej tabeli.
+
+|Typ definicji|Plik|
+|---------------------|----------|
+|IDL|atliface.IDL|
+|Biblioteki typów|ATL.dll|
+|C++|atliface.h (dołączone do dodatków ATLBase.h)|
+
+##  <a name="setambientdispatch"></a>  IAxWinAmbientDispatchEx::SetAmbientDispatch
+
+Ta metoda jest wywoływana, aby uzupełnić domyślny interfejs zmieniono właściwość przy użyciu interfejsu użytkownika.
+
 ```
 virtual HRESULT STDMETHODCALLTYPE SetAmbientDispatch(IDispatch* pDispatch) = 0;
-```  
-  
-### <a name="parameters"></a>Parametry  
- *pDispatch*  
- Wskaźnik do nowego interfejsu.  
-  
-### <a name="return-value"></a>Wartość zwracana  
- Zwraca wartość S_OK w przypadku powodzenia lub błędu HRESULT w przypadku awarii.  
-  
-### <a name="remarks"></a>Uwagi  
- Gdy `SetAmbientDispatch` jest wywoływana za pomocą wskaźnika do nowego interfejsu nowy interfejs będzie służyć do wywołania żadnych właściwości ani metod wyświetlony monit o podanie przez formant hostowanej, jeśli te właściwości nie są już dostarczane przez [IAxWinAmbientDispatch](../../atl/reference/iaxwinambientdispatch-interface.md).  
-  
-## <a name="see-also"></a>Zobacz też  
- [Interfejs IAxWinAmbientDispatch](../../atl/reference/iaxwinambientdispatch-interface.md)
+```
+
+### <a name="parameters"></a>Parametry
+
+*pDispatch*  
+Wskaźnik do nowego interfejsu.
+
+### <a name="return-value"></a>Wartość zwracana
+
+Zwraca wartość S_OK w przypadku powodzenia lub błędu HRESULT w przypadku niepowodzenia.
+
+### <a name="remarks"></a>Uwagi
+
+Gdy `SetAmbientDispatch` jest wywoływana za pomocą wskaźnika do nowego interfejsu ten nowy interfejs będzie służyć do wywołania dowolnego właściwości lub metody wymagane przez obsługiwanego formantu, jeśli te właściwości nie są już udostępniane przez [IAxWinAmbientDispatch](../../atl/reference/iaxwinambientdispatch-interface.md).
+
+## <a name="see-also"></a>Zobacz też
+
+[Interfejs IAxWinAmbientDispatch](../../atl/reference/iaxwinambientdispatch-interface.md)

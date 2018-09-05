@@ -1,5 +1,5 @@
 ---
-title: Obsługa interfejsu IDispatch i IErrorInfo | Dokumentacja firmy Microsoft
+title: Obsługa interfejsów IDispatch i IErrorInfo | Dokumentacja firmy Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -20,18 +20,20 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 94f4c99da3989cce84bd5b6bd3bbfee8df97ff43
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 0d9c27dfe81c3bbd2978f418c8e942ac20190b30
+ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32360952"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43753611"
 ---
-# <a name="supporting-idispatch-and-ierrorinfo"></a>Obsługa interfejsu IDispatch i IErrorInfo
-Można użyć klasy szablonu [elementem IDispatchImpl](../atl/reference/idispatchimpl-class.md) zapewnienie domyślną implementację `IDispatch Interface` część interfejsami podwójną na obiekt.  
-  
- Jeśli używa obiektu `IErrorInfo` interfejsu na zgłaszanie błędów z powrotem do klienta, a następnie obiekt musi obsługiwać `ISupportErrorInfo Interface` interfejsu. Klasy szablonów [ISupportErrorInfoImpl](../atl/reference/isupporterrorinfoimpl-class.md) zapewnia łatwy sposób wdrożyć, jeśli masz tylko jeden interfejs, który generuje błędy na obiekt.  
-  
-## <a name="see-also"></a>Zobacz też  
- [Podstawowe informacje na temat obiektów COM ATL](../atl/fundamentals-of-atl-com-objects.md)
+# <a name="supporting-idispatch-and-ierrorinfo"></a>Obsługa interfejsów IDispatch i IErrorInfo
+
+Można użyć klasy szablonu [IDispatchImpl](../atl/reference/idispatchimpl-class.md) zapewnienie domyślną implementację elementu `IDispatch Interface` część wszelkie dwa interfejsy na obiekcie.
+
+Jeśli obiekt korzysta `IErrorInfo` interfejsu do zgłaszania błędów z powrotem do klienta, a następnie obiektu musi obsługiwać `ISupportErrorInfo Interface` interfejsu. Klasa szablonu [ISupportErrorInfoImpl](../atl/reference/isupporterrorinfoimpl-class.md) zapewnia łatwy sposób implementacji, jeśli masz tylko jeden interfejs, który generuje błędy na obiekcie.
+
+## <a name="see-also"></a>Zobacz też
+
+[Podstawowe informacje na temat obiektów COM ATL](../atl/fundamentals-of-atl-com-objects.md)
 

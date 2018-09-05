@@ -1,5 +1,5 @@
 ---
-title: Implementowanie obsługi interfejsu zdarzeń | Dokumentacja firmy Microsoft
+title: Implementowanie interfejsu obsługi zdarzeń | Dokumentacja firmy Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,36 +16,36 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ea37aa4c84cb0824d11f0081e38d9e8157b77ed1
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: b2241080fda6aa58dc5e70f57c83afec69a57203
+ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32356311"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43757341"
 ---
-# <a name="implementing-the-event-handling-interface"></a>Implementowanie obsługi interfejsu zdarzeń
-ATL pomaga wszystkie trzy elementy wymagane do obsługi zdarzeń: implementacja interfejsu zdarzenia, udzielanie porad źródło zdarzenia i unadvising źródło zdarzenia. Dokładne kroki, które należy podjąć, zależą od typu interfejsu zdarzenia i wymagania dotyczące wydajności aplikacji.  
-  
- Najbardziej typowe sposoby wdrażania interfejsu za pomocą biblioteki ATL są:  
-  
--   Wyprowadzanie z niestandardowego interfejsu.  
-  
--   Wyprowadzanie z [elementem IDispatchImpl](../atl/reference/idispatchimpl-class.md) dla dwóch interfejsów opisanych w bibliotece typów.  
-  
--   Wyprowadzanie z [IDispEventImpl](../atl/reference/idispeventimpl-class.md) dla dispinterfaces opisanych w bibliotece typów.  
-  
--   Wyprowadzanie z [IDispEventSimpleImpl](../atl/reference/idispeventsimpleimpl-class.md) dla dispinterfaces nie opisano w bibliotece typów lub umożliwia zwiększenie wydajności przez nie ładowanie informacji o typie w czasie wykonywania.  
-  
+# <a name="implementing-the-event-handling-interface"></a>Implementowanie interfejsu obsługi zdarzeń
 
- W przypadku wdrażania interfejsu niestandardowych lub Podwójna, należy poinformować źródło zdarzenia, przez wywołanie metody [AtlAdvise](reference/connection-point-global-functions.md#atladvise) lub [CComPtrBase::Advise](../atl/reference/ccomptrbase-class.md#advise). Należy do śledzenia plik cookie zwrócony przez wywołanie. Wywołanie [AtlUnadvise](reference/connection-point-global-functions.md#atlunadvise) aby przerwać połączenie.  
+ATL pomaga wszystkie trzy elementy wymagane do obsługi zdarzeń: implementacja interfejsu zdarzenia, wniosku źródła zdarzeń i unadvising źródła zdarzeń. Dokładne kroki, które należy podjąć, zależą od typu interfejsu zdarzenia i wymagania dotyczące wydajności aplikacji.
 
-  
- W przypadku wdrażania przy użyciu dispinterface `IDispEventImpl` lub `IDispEventSimpleImpl`, należy poinformować źródło zdarzenia, wywołując [IDispEventSimpleImpl::DispEventAdvise](../atl/reference/idispeventsimpleimpl-class.md#dispeventadvise). Wywołanie [IDispEventSimpleImpl::DispEventUnadvise](../atl/reference/idispeventsimpleimpl-class.md#dispeventunadvise) aby przerwać połączenie.  
-  
- Jeśli używasz `IDispEventImpl` jako klasę podstawową złożonego formantu źródła zdarzeń mapy zbiornika na liście będzie zaleca i unadvised automatycznie za pomocą [CComCompositeControl::AdviseSinkMap](../atl/reference/ccomcompositecontrol-class.md#advisesinkmap).  
-  
- `IDispEventImpl` i `IDispEventSimpleImpl` klasy zarządzać pliku cookie.  
-  
-## <a name="see-also"></a>Zobacz też  
- [Obsługa zdarzeń](../atl/event-handling-and-atl.md)
+Najbardziej typowych sposobów implementowania interfejsu przy użyciu biblioteki ATL są:
+
+- Wyprowadzanie z niestandardowego interfejsu.
+
+- Wyprowadzanie z [IDispatchImpl](../atl/reference/idispatchimpl-class.md) dwa interfejsy opisane w bibliotece typów.
+
+- Wyprowadzanie z [IDispEventImpl](../atl/reference/idispeventimpl-class.md) dla dispinterfaces opisanych w bibliotece typów.
+
+- Wyprowadzanie z [IDispEventSimpleImpl](../atl/reference/idispeventsimpleimpl-class.md) dla dispinterfaces nie opisano w bibliotece typów, lub jeśli chcesz zwiększyć wydajność przez nie trwa ładowanie informacji o typie w czasie wykonywania.
+
+W przypadku wdrażania niestandardowego lub podwójnego interfejsu źródła zdarzeń należy poinformować, wywołując [AtlAdvise](reference/connection-point-global-functions.md#atladvise) lub [CComPtrBase::Advise](../atl/reference/ccomptrbase-class.md#advise). Należy do śledzenia zwracany przez wywołanie pliku cookie. Wywołaj [AtlUnadvise](reference/connection-point-global-functions.md#atlunadvise) aby przerwać połączenie.  
+
+W przypadku wdrażania przy użyciu dispinterface `IDispEventImpl` lub `IDispEventSimpleImpl`, źródła zdarzeń należy poinformować, wywołując [IDispEventSimpleImpl::DispEventAdvise](../atl/reference/idispeventsimpleimpl-class.md#dispeventadvise). Wywołaj [IDispEventSimpleImpl::DispEventUnadvise](../atl/reference/idispeventsimpleimpl-class.md#dispeventunadvise) aby przerwać połączenie.
+
+Jeśli używasz `IDispEventImpl` jako klasa bazowa kontrolki złożonej wymienione na mapie obiektu sink źródła zdarzeń będzie zalecany unadvised automatycznie przy użyciu [CComCompositeControl::AdviseSinkMap](../atl/reference/ccomcompositecontrol-class.md#advisesinkmap).
+
+`IDispEventImpl` i `IDispEventSimpleImpl` klasy Zarządzanie pliku cookie.
+
+## <a name="see-also"></a>Zobacz też
+
+[Obsługa zdarzeń](../atl/event-handling-and-atl.md)
 

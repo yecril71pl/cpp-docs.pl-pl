@@ -22,94 +22,85 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 69c9846b2ee192071b951d5b9b196d6e4b1968aa
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 265dfe599d4c3586b350787baab5977562326991
+ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32389946"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43757685"
 ---
 # <a name="c-function-definitions"></a>Definicje funkcji języka C
-Definicja funkcji Określa nazwę funkcji, typy i liczby parametrów, które oczekuje na odbieranie i jej typu zwracanego. Definicja funkcji obejmuje również treść funkcji z deklaracji jego zmiennych lokalnych i instrukcje, które określają, jak działa funkcja.  
-  
-## <a name="syntax"></a>Składnia  
- *jednostki tłumaczenia*:  
- *external-declaration*  
-  
- *Deklaracja zewnętrznej jednostki tłumaczenia*  
-  
- *Deklaracja zewnętrzne*: /\* dozwolone tylko w zakresie zewnętrzne (plik) \*/  
- *Definicja funkcji*  
-  
- `declaration`  
-  
- *Definicja funkcji*: /\* Deklaratora w tym miejscu jest deklarator funkcji \*/  
- *Specyfikatory deklaracji* opt*seq atrybutu* opt*lista deklaracji deklarator* opt*złożonej instrukcji*  
-  
- /\* *Atrybut seq* jest Specific Microsoft * /  
-  
- Prototyp parametry są:  
-  
- *Specyfikatory deklaracji*:  
- *Specyfikatory deklaracji Specyfikator klasy magazynu* opcjonalnych  
-  
- *Specyfikatory deklaracji specyfikatora typu* opcjonalnych  
-  
- *Specyfikatory deklaracji kwalifikator typu* opcjonalnych  
-  
- *Lista deklaracji*:  
- *Deklaracja*  
-  
- *Lista deklaracji deklaracji*  
-  
- `declarator`:  
- *wskaźnik* opt*bezpośrednio deklarator*  
-  
- *deklarator bezpośrednio*: /\* deklarator funkcji \*/  
- *deklarator bezpośrednio***(***listy parametrów typu***)** / * nowy styl deklarator \*/  
-  
- *deklarator bezpośrednio***(***listy identyfikatorów* opt **)** / * przestarzały styl deklarator \*/  
-  
- Lista parametrów w definicji używa następującej składni:  
-  
- *listy parametrów typu*: /\* listy parametrów \*/  
- *parameter-list*  
-  
- *parameter-list* **, ...**  
-  
- *Lista parametrów*:  
- *Deklaracja parametru*  
-  
- *Lista parametrów* **,***deklaracji parametru*  
-  
- *Deklaracja parametru*:  
- *Specyfikatory deklaracji deklarator*  
-  
- *Specyfikatory deklaracji abstrakcji deklarator* opcjonalnych  
-  
- Lista parametrów w definicji funkcji w starym stylu używa następującej składni:  
-  
- *Lista identyfikatorów*: /\* używany w funkcji przestarzały styl definicje i deklaracje \*/  
- *Identyfikator*  
-  
- *Lista identyfikatorów* **,***identyfikator*  
-  
- Składnia treści funkcji to:  
-  
- *instrukcji złożonej*: /\* treść funkcji \*/  
- **{**`declaration`-*listy* opt*listy instrukcji* opt **}**  
-  
- Są tylko specyfikatory klasy magazynowania, które można modyfikować deklaracji funkcji `extern` i **statycznych**. `extern` Specyfikator oznacza, że funkcja mogą być przywoływane z innych plików; oznacza to, że nazwa funkcji są eksportowane do konsolidatora. **Statycznych** specyfikator oznacza, że funkcja nie może być przywoływany z innych plików; oznacza to, że nazwa nie jest eksportowany przez konsolidator. Jeśli klasa magazynu nie znajduje się w definicji funkcji `extern` zakłada, że. W każdym przypadku funkcji jest zawsze widoczne z punktu definicji na końcu pliku.  
-  
- Opcjonalny *specyfikatory deklaracji* i obowiązkowe `declarator` jednocześnie określić typ zwracany funkcji i nazwę. `declarator` Jest kombinacją identyfikatora nazwy funkcji i nawiasy po nazwie funkcji. Opcjonalny *seq atrybutu* nonterminal specyficzne dla firmy Microsoft jest zdefiniowany w funkcji [atrybuty funkcji](../c-language/function-attributes.md).  
-  
- *Deklarator bezpośrednio* (w `declarator` składni) Określa nazwę definiowanego funkcji i identyfikatory jego parametrów. Jeśli *deklarator bezpośrednio* obejmuje *listy parametrów typu*, listy określa typy wszystkich parametrów. Takie deklaratorze służy również jako prototyp funkcji nowsze wywołania funkcji.  
-  
- A `declaration` w *lista deklaracji* w funkcji nie mogą zawierać definicji *Specyfikator klasy magazynu* innych niż **zarejestrować**. *Specyfikatora typu* w *specyfikatory deklaracji* składni można pominąć tylko wtedy, gdy **zarejestrować** Klasa magazynu jest określony dla wartości `int` typu.  
-  
- *Instrukcji złożonej* treść funkcja zawierająca deklaracje zmiennej lokalnej, odwołania do elementów zewnętrznie zadeklarowane oraz instrukcje.  
-  
- Sekcje [atrybuty funkcji](../c-language/function-attributes.md), [Klasa magazynu](../c-language/storage-class.md), [typu zwracanego](../c-language/return-type.md), [parametry](../c-language/parameters.md), i [treści funkcji](../c-language/function-body.md) opisano składniki wynikającego z definicji funkcji szczegółowo.  
-  
-## <a name="see-also"></a>Zobacz też  
- [Funkcje](../c-language/functions-c.md)
+Definicja funkcji Określa nazwę funkcji, typy i liczbę parametrów, które oczekuje, aby otrzymać i jego typem zwracanym. Definicja funkcji obejmuje również treści funkcji za pomocą deklaracji jego zmienne lokalne i instrukcje, które określają, jak działa funkcja.
+
+## <a name="syntax"></a>Składnia
+
+*jednostki translacji*:<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*Deklaracja zewnętrzne* <br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*jednostki translacji* *deklaracji zewnętrzne*
+
+*Deklaracja zewnętrzne*: /\* dozwolone tylko w zakresie zewnętrzne (plik) \*/<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*Definicja funkcji*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*Deklaracja*
+
+*Definicja funkcji*:<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*Specyfikatory deklaracji*<sub>zoptymalizowany pod kątem</sub> *atrybutu seq*<sub>zoptymalizowany pod kątem</sub> *deklaratora* *lista deklaracji*  <sub>zoptymalizowany pod kątem</sub> *compound-statement*
+
+/\* *Atrybut seq* jest Specific dla Microsoft \*/
+
+Prototyp parametry są następujące:
+
+*Specyfikatory deklaracji*:<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*Storage-class-specifier* *specyfikatory deklaracji*<sub>zoptymalizowany pod kątem</sub> <br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*Specyfikator typu* *specyfikatory deklaracji*<sub>zoptymalizowany pod kątem</sub><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*Kwalifikator typu* *specyfikatory deklaracji*<sub>zoptymalizowany pod kątem</sub>
+
+*Lista deklaracji*:<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*Deklaracja*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*Lista deklaracji* *deklaracji*
+
+*deklarator*:<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*wskaźnik*<sub>zoptymalizowany pod kątem</sub> *deklaratora bezpośrednie*
+
+*deklarator bezpośrednio*: /\* deklaratora funkcji \*/<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*deklarator bezpośrednio***(***listy parametrów typu***)**  / \* deklaratora nowy styl \*/<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*deklarator bezpośrednio***(***listy identyfikatorów*<sub>zoptymalizowany pod kątem</sub> **)**  / \* Obsolete stylu deklarator \*/
+
+Lista parametrów w definicji używa następującej składni:
+
+*listy parametrów typu*: /\* listy parametrów \*/<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*Lista parametrów* <br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*Lista parametrów* **,...**
+
+*Lista parametrów*:<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*Deklaracja parametru*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*Lista parametrów* **,***deklaracji parametru* 
+
+*Deklaracja parametru*:<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*Specyfikatory deklaracji* *deklaratora*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*Specyfikatory deklaracji* *abstrakcyjny declarator*<sub>zoptymalizowany pod kątem</sub>
+
+Lista parametrów w definicji funkcji w starym stylu używa następującej składni:
+
+*Lista identyfikatorów*: /\* używany w funkcji przestarzały styl definicje i deklaracje \*/<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*Identyfikator*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*Lista identyfikatorów* **,***identyfikator* 
+
+Składnia dla treści funkcji jest następująca:
+
+*Compound-statement*:<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**{** *lista deklaracji*<sub>zoptymalizowany pod kątem</sub> *listy instrukcji*<sub>zoptymalizowany pod kątem</sub> **}**
+
+Są tylko specyfikatory klasy magazynowania, które można modyfikować deklaracji funkcji **extern** i **statyczne**. **Extern** specyfikator oznacza, że funkcja mogą być przywoływane z innych plików; oznacza to, że nazwa funkcji jest eksportowana do konsolidatora. **Statyczne** specyfikator oznacza, że funkcja nie może być przywoływany z innych plików; oznacza to, że nazwa nie jest eksportowane przez konsolidator. Jeśli żadna z klas magazynu znajduje się w definicji funkcji **extern** zakłada, że. W każdym przypadku funkcja zawsze jest widoczny w punkcie definicji do końca pliku.
+
+Opcjonalny *specyfikatory deklaracji* i jest to obowiązkowe *deklaratora* wspólnie określić typ zwracany przez funkcję i nazwę. *Deklaratora* jest kombinacją identyfikator, który nazwy funkcji i nawiasów po nazwie funkcji. Opcjonalny *atrybutu seq* nonterminal jest specyficzne dla firmy Microsoft funkcji zdefiniowanych w [atrybuty funkcji](../c-language/function-attributes.md).
+
+*Bezpośrednio declarator* (w *deklaratora* składni) Określa nazwę funkcji definiowanego i identyfikatory jego parametrów. Jeśli *bezpośrednio declarator* obejmuje *listy parametrów typu*, listy określa typy wszystkich parametrów. Takie deklaratora służy również jako prototyp funkcji nowsze wywołań funkcji.
+
+A *deklaracji* w *lista deklaracji* w funkcji nie może zawierać definicje *storage-class-specifier* innych niż **zarejestrować**. *Specyfikator typu* w *specyfikatory deklaracji* składni można pominąć, tylko wtedy, gdy **zarejestrować** klasę magazynu jest określona dla wartości **int** typu.
+
+*Compound-statement* stanowi treści funkcji, zawierająca deklaracje zmiennych lokalnych, odwołania do elementów zewnętrznie zadeklarowana i instrukcji.
+
+Sekcje [atrybuty funkcji](../c-language/function-attributes.md), [klasę magazynu](../c-language/storage-class.md), [typie zwracanym](../c-language/return-type.md), [parametry](../c-language/parameters.md), i [treści funkcji](../c-language/function-body.md) składników definicji funkcji szczegółowo opisano.
+
+## <a name="see-also"></a>Zobacz też
+[Funkcje](../c-language/functions-c.md)

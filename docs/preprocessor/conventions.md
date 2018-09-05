@@ -15,25 +15,25 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1227136dfc42269348fa8ac2d996ca80d063c610
-ms.sourcegitcommit: d4c803bd3a684d7951bf88dcecf1f14af43ae411
+ms.openlocfilehash: ccb595911ef3032b652faedf1195f95b468d30e9
+ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/10/2018
-ms.locfileid: "42466225"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43761959"
 ---
 # <a name="conventions"></a>Konwencje
-Konwencje używane są atrybuty czcionkę dla różnych składników składni. Symbole i czcionki są następujące:  
-  
-|Atrybut|Opis|  
-|---------------|-----------------|  
-|*nieterminalnych*|Kursywa wskazuje symboli nieterminalnych.|  
-|#include|Terminale czcionką pogrubioną są literału wyrazy zastrzeżone i symboli, które należy wprowadzić, jak pokazano. Znaki w tym kontekście są zawsze z uwzględnieniem wielkości liter.|  
-|zoptymalizowany pod kątem|Zoptymalizowany pod kątem symboli nieterminalnych następuje zawsze są opcjonalne.|  
-|krój czcionki domyślnej|Znaków w zestawie opisane lub wymienionych w tej czcionce może służyć jako terminali w instrukcji.|  
-  
-Dwukropek (:) po nieterminalnych wprowadza jego definicji. Alternatywne definicje są wymienione w osobnych wierszach.  
-  
-## <a name="see-also"></a>Zobacz też  
+Konwencje używane są atrybuty czcionkę dla różnych składników składni. Symbole i czcionki są następujące:
+
+|Atrybut|Opis|
+|---------------|-----------------|
+|*nieterminalnych*|Kursywa wskazuje symboli nieterminalnych.|
+|#include|Terminale czcionką pogrubioną są literału wyrazy zastrzeżone i symboli, które należy wprowadzić, jak pokazano. Znaki w tym kontekście są zawsze z uwzględnieniem wielkości liter.|
+|zoptymalizowany pod kątem|Następuje symboli nieterminalnych <sub>zoptymalizowany pod kątem</sub> zawsze są opcjonalne.|
+|krój czcionki domyślnej|Znaków w zestawie opisane lub wymienionych w tej czcionce może służyć jako terminali w instrukcji.|
+
+Dwukropek (**:**) po nieterminalnych wprowadza jego definicji. Alternatywne definicje są wymienione w osobnych wierszach.
+
+## <a name="see-also"></a>Zobacz też
 
 [Podsumowanie gramatyki (C/C++)](../preprocessor/grammar-summary-c-cpp.md)

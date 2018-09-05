@@ -19,18 +19,19 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d48d863cdbe8e5528824b3ffbad10e1117277e0c
-ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
+ms.openlocfilehash: fb7218d7fc8886cffdcce13f09a682fdc635f84f
+ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/06/2018
-ms.locfileid: "37885343"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43759931"
 ---
 # <a name="atlbasemodule70-structure"></a>Struktura _ATL_BASE_MODULE70
-Używane przez dowolny projekt, który używa ATL.  
-  
-## <a name="syntax"></a>Składnia  
-  
+
+Używane przez dowolny projekt, który używa ATL.
+
+## <a name="syntax"></a>Składnia
+
 ```
 struct _ATL_BASE_MODULE70 {
     UINT cbSize;
@@ -42,43 +43,43 @@ struct _ATL_BASE_MODULE70 {
     CRITICAL_SECTION m_csResource;
     CSimpleArray<HINSTANCE> m_rgResourceInstance;
 };
-```  
-  
-## <a name="members"></a>Elementy członkowskie  
- `cbSize`  
- Rozmiar struktury, używane do obsługi wersji.  
-  
- `m_hInst`  
- `hInstance` Dla tego modułu (plik exe lub dll).  
-  
- `m_hInstResource`  
- Dojście do zasobu wystąpienie domyślne.  
-  
- `m_bNT5orWin98`  
- Informacje o wersji systemu operacyjnego. Używane wewnętrznie przez ATL.  
-  
- `dwAtlBuildVer`  
- Przechowuje wersję ATL. Obecnie 0x0700.  
-  
- `pguidVer`  
- ATL wewnętrzny identyfikator GUID.  
-  
- `m_csResource`  
- Używane do synchronizowania dostępu do `m_rgResourceInstance` tablicy. Używane wewnętrznie przez ATL.  
-  
- `m_rgResourceInstance`  
- Tablica używanych do wyszukiwania zasobów we wszystkich wystąpieniach zasobów, których ATL zdaje sobie sprawę. Używane wewnętrznie przez ATL.  
-  
-## <a name="remarks"></a>Uwagi  
- [_ATL_BASE_MODULE](atl-typedefs.md#_atl_base_module) jest zdefiniowany jako element typedef _ATL_BASE_MODULE70.  
-  
-## <a name="requirements"></a>Wymagania  
- **Nagłówek:** atlcore.h  
-  
-## <a name="see-also"></a>Zobacz też  
- [Klasy i struktury](../../atl/reference/atl-classes.md)
+```
 
+## <a name="members"></a>Elementy członkowskie
 
+`cbSize`  
+Rozmiar struktury, używane do obsługi wersji.
 
+`m_hInst`  
+`hInstance` Dla tego modułu (plik exe lub dll).
 
+`m_hInstResource`  
+Dojście do zasobu wystąpienie domyślne.
+
+`m_bNT5orWin98`  
+Informacje o wersji systemu operacyjnego. Używane wewnętrznie przez ATL.
+
+`dwAtlBuildVer`  
+Przechowuje wersję ATL. Obecnie 0x0700.
+
+`pguidVer`  
+ATL wewnętrzny identyfikator GUID.
+
+`m_csResource`  
+Używane do synchronizowania dostępu do `m_rgResourceInstance` tablicy. Używane wewnętrznie przez ATL.
+
+`m_rgResourceInstance`  
+Tablica używanych do wyszukiwania zasobów we wszystkich wystąpieniach zasobów, których ATL zdaje sobie sprawę. Używane wewnętrznie przez ATL.
+
+## <a name="remarks"></a>Uwagi
+
+[_ATL_BASE_MODULE](atl-typedefs.md#_atl_base_module) jest zdefiniowany jako element typedef _ATL_BASE_MODULE70.
+
+## <a name="requirements"></a>Wymagania
+
+**Nagłówek:** atlcore.h
+
+## <a name="see-also"></a>Zobacz też
+
+[Klasy i struktury](../../atl/reference/atl-classes.md)
 

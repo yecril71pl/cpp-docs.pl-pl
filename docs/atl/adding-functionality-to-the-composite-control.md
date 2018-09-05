@@ -1,5 +1,5 @@
 ---
-title: Dodawanie funkcji do formantu złożonego | Dokumentacja firmy Microsoft
+title: Dodawanie funkcji do kontrolek złożonych | Dokumentacja firmy Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,29 +16,31 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 67602e16fc5a30c82e82772b6b9f6c553ba79d9b
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 59ee8047e17efdebbae6ee58ec243057a477caff
+ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32354185"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43751136"
 ---
-# <a name="adding-functionality-to-the-composite-control"></a>Dodawanie funkcji do złożonych kontrolek
-Po wstawieniu niezbędnej kontroli do formantu złożonego następny krok polega na dodawanie nowych funkcji. Ta nowa funkcja zazwyczaj znajduje się na dwie kategorie:  
-  
--   Pomocnicze dodatkowe interfejsy i dostosowywanie zachowania użytkownika formantu złożonego za pomocą funkcji dodatkowych, określonych.  
-  
--   Obsługa zdarzeń z formantu ActiveX zawartych w niej (lub kontrolki).  
-  
- Cel i zakres tego artykułu w pozostałej części tej sekcji przedstawiono wyłącznie Obsługa zdarzeń z kontrolki ActiveX.  
-  
+# <a name="adding-functionality-to-the-composite-control"></a>Dodawanie funkcji do kontrolek złożonych
+
+Po wstawieniu wszelkich niezbędnych opcji do kontrolek złożonych następny krok polega na dodawanie nowych funkcji. Ta nowa funkcja zwykle znajduje się na dwie kategorie:
+
+- Obsługa dodatkowych interfejsów i dostosowywanie zachowania dotyczącego kontrolki złożonej za pomocą funkcje dodatkowe, przeznaczone specjalnie.
+
+- Obsługa zdarzeń z zawartej kontrolki ActiveX (lub kontrolki).
+
+Cel i zakres tego artykułu dalszej części tej sekcji skupiono się wyłącznie na Obsługa zdarzeń z kontrolki ActiveX.
+
 > [!NOTE]
->  Jeśli wymagana jest obsługa komunikatów z formantów systemu Windows, zobacz [implementacji okna](../atl/implementing-a-window.md) uzyskać więcej informacji na temat obsługi w ATL. wiadomości  
-  
- Po wstawieniu formantu ActiveX w zasobu okna dialogowego, kliknij prawym przyciskiem myszy formantu, a następnie kliknij przycisk **Dodaj program obsługi zdarzeń**. Wybierz zdarzenie, aby obsłużyć, a następnie kliknij przycisk **dodawać i edytować**. Kod obsługi zdarzenia zostaną dodane do pliku .h formantu.  
-  
- Punkty połączenia dla formantów ActiveX formantu złożonego są automatycznie podłączone i odłączone za pośrednictwem wywołania [CComCompositeControl::AdviseSinkMap](../atl/reference/ccomcompositecontrol-class.md#advisesinkmap).  
-  
-## <a name="see-also"></a>Zobacz też  
- [Podstawy złożonych kontrolek](../atl/atl-composite-control-fundamentals.md)
+>  Jeśli trzeba obsługiwać komunikaty z kontrolek Windows, zobacz [Implementowanie okna](../atl/implementing-a-window.md) uzyskać więcej informacji dotyczących komunikatów w ATL.
+
+Po wstawieniu kontrolki ActiveX w zasobie, okno dialogowe, kliknij prawym przyciskiem myszy formant, a następnie kliknij przycisk **dodać program obsługi zdarzeń**. Wybierz zdarzenie, aby obsłużyć, a następnie kliknij przycisk **dodawać i edytować**. Kod obsługi zdarzeń zostaną dodane do plik .h klasy formantu.
+
+Punkty połączenia dla formantów ActiveX w złożonej kontrolki są automatycznie połączone i rozłączona za pośrednictwem wywołania [CComCompositeControl::AdviseSinkMap](../atl/reference/ccomcompositecontrol-class.md#advisesinkmap).
+
+## <a name="see-also"></a>Zobacz też
+
+[Podstawy złożonych kontrolek](../atl/atl-composite-control-fundamentals.md)
 

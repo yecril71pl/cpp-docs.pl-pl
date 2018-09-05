@@ -16,29 +16,32 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 62729df015e214f37acdda7d5cb2ef710dce6cb9
-ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
+ms.openlocfilehash: c84becc5b7117c9095a055e6a815e52396987800
+ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/05/2018
-ms.locfileid: "37847885"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43758394"
 ---
 # <a name="enumerators-and-collections-classes"></a>Klasy kolekcji i wyliczeń
-Następujących klas obsługi COM, kolekcje i wyliczenia:  
-  
--   [CComEnum](../atl/reference/ccomenum-class.md) definiuje COM enumerator — obiekt na podstawie tablicy.  
-  
--   [CComEnumImpl](../atl/reference/ccomenumimpl-class.md) dostarcza implementację interfejsu modułu wyliczającego COM, gdzie elementy wyliczany są przechowywane w tablicy.  
-  
--   [CComEnumOnSTL](../atl/reference/ccomenumonstl-class.md) obiekt modułu wyliczającego definiuje COM oparte na kolekcji standardowej biblioteki języka C++.  
-  
--   [IEnumOnSTLImpl](../atl/reference/ienumonstlimpl-class.md) dostarcza implementację interfejsu modułu wyliczającego COM, przechowywania elementów wyliczany w kontenerze C++ Standard zgodnym z biblioteki.  
-  
--   [ICollectionOnSTLImpl](../atl/reference/icollectiononstlimpl-class.md) udostępnia implementację dla `Count`, `Item`, i `_NewEnum` właściwości interfejsu kolekcji.  
-  
-## <a name="related-articles"></a>Powiązane artykuły  
- [Kolekcje i wyliczenia ATL](../atl/atl-collections-and-enumerators.md)  
-  
-## <a name="see-also"></a>Zobacz też  
- [Klasa — Przegląd](../atl/atl-class-overview.md)
+
+Następujących klas obsługi COM, kolekcje i wyliczenia:
+
+- [CComEnum](../atl/reference/ccomenum-class.md) definiuje COM enumerator — obiekt na podstawie tablicy.
+
+- [CComEnumImpl](../atl/reference/ccomenumimpl-class.md) dostarcza implementację interfejsu modułu wyliczającego COM, gdzie elementy wyliczany są przechowywane w tablicy.
+
+- [CComEnumOnSTL](../atl/reference/ccomenumonstl-class.md) obiekt modułu wyliczającego definiuje COM oparte na kolekcji standardowej biblioteki języka C++.
+
+- [IEnumOnSTLImpl](../atl/reference/ienumonstlimpl-class.md) dostarcza implementację interfejsu modułu wyliczającego COM, przechowywania elementów wyliczany w kontenerze C++ Standard zgodnym z biblioteki.
+
+- [ICollectionOnSTLImpl](../atl/reference/icollectiononstlimpl-class.md) udostępnia implementację dla `Count`, `Item`, i `_NewEnum` właściwości interfejsu kolekcji.
+
+## <a name="related-articles"></a>Powiązane artykuły
+
+[Kolekcje i wyliczenia ATL](../atl/atl-collections-and-enumerators.md)
+
+## <a name="see-also"></a>Zobacz też
+
+[Klasa — Przegląd](../atl/atl-class-overview.md)
 

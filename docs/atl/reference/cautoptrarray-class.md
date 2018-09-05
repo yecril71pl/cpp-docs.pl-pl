@@ -18,65 +18,73 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b99fe8fde475453c9e6dc0b524a6b1b94821bf75
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 85cd1a9a50d57ececb2d12dca8faa6dc914972f5
+ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32358954"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43763035"
 ---
 # <a name="cautoptrarray-class"></a>Klasa CAutoPtrArray
-Ta klasa dostarcza metody przydatne podczas konstruowania tablicę wskaźniki inteligentne.  
-  
+
+Ta klasa dostarcza metody przydatne przy konstruowaniu tablicy inteligentnych wskaźników.
+
 > [!IMPORTANT]
->  Nie można użyć tej klasy i jej elementów członkowskich w aplikacjach, które są wykonywane w środowisku wykonawczym systemu Windows.  
-  
-## <a name="syntax"></a>Składnia  
-  
+>  Ta klasa i jej elementów członkowskich nie można użyć w aplikacjach korzystających ze środowiska wykonawczego Windows.
+
+## <a name="syntax"></a>Składnia
+
 ```
 template <typename E>
 class CAutoPtrArray : public CAtlArray<
                         ATL::CAutoPtr<E>,
                         CAutoPtrElementTraits<E>>
-```  
-  
-#### <a name="parameters"></a>Parametry  
- `E`  
- Typ wskaźnika.  
-  
-## <a name="members"></a>Elementy członkowskie  
-  
-### <a name="public-constructors"></a>Konstruktory publiczne  
-  
-|Nazwa|Opis|  
-|----------|-----------------|  
-|[CAutoPtrArray::CAutoPtrArray](#cautoptrarray)|Konstruktor.|  
-  
-## <a name="remarks"></a>Uwagi  
- Ta klasa zawiera konstruktora i pochodzi z metody [CAtlArray](../../atl/reference/catlarray-class.md) i [CAutoPtrElementTraits](../../atl/reference/cautoptrelementtraits-class.md) ułatwiających tworzenie obiektu klasy zbierania, przechowywania wskaźniki inteligentne.  
-  
- Aby uzyskać więcej informacji, zobacz [klasy kolekcji ATL](../../atl/atl-collection-classes.md).  
-  
-## <a name="inheritance-hierarchy"></a>Hierarchia dziedziczenia  
- `CAtlArray`  
-  
- `CAutoPtrArray`  
-  
-## <a name="requirements"></a>Wymagania  
- **Nagłówek:** atlcoll.h  
-  
-##  <a name="cautoptrarray"></a>  CAutoPtrArray::CAutoPtrArray  
- Konstruktor.  
-  
+```
+
+#### <a name="parameters"></a>Parametry
+
+`E`  
+Typ wskaźnika.
+
+## <a name="members"></a>Elementy członkowskie
+
+### <a name="public-constructors"></a>Konstruktory publiczne
+
+|Nazwa|Opis|
+|----------|-----------------|
+|[CAutoPtrArray::CAutoPtrArray](#cautoptrarray)|Konstruktor.|
+
+## <a name="remarks"></a>Uwagi
+
+Ta klasa zawiera konstruktora i pochodzi z metody z [CAtlArray](../../atl/reference/catlarray-class.md) i [CAutoPtrElementTraits](../../atl/reference/cautoptrelementtraits-class.md) ułatwiające tworzenie obiektu klasy kolekcji przechowywania inteligentnych wskaźników.
+
+Aby uzyskać więcej informacji, zobacz [klasy kolekcji ATL](../../atl/atl-collection-classes.md).
+
+## <a name="inheritance-hierarchy"></a>Hierarchia dziedziczenia
+
+`CAtlArray`
+
+`CAutoPtrArray`
+
+## <a name="requirements"></a>Wymagania
+
+**Nagłówek:** atlcoll.h
+
+##  <a name="cautoptrarray"></a>  CAutoPtrArray::CAutoPtrArray
+
+Konstruktor.
+
 ```
 CAutoPtrArray() throw();
-```  
-  
-### <a name="remarks"></a>Uwagi  
- Inicjuje tablicy wskaźnika inteligentnego.  
-  
-## <a name="see-also"></a>Zobacz też  
- [Klasa CAtlArray](../../atl/reference/catlarray-class.md)   
- [Klasa CAutoPtrElementTraits](../../atl/reference/cautoptrelementtraits-class.md)   
- [Klasa CAutoPtrList](../../atl/reference/cautoptrlist-class.md)   
- [Przegląd klas](../../atl/atl-class-overview.md)
+```
+
+### <a name="remarks"></a>Uwagi
+
+Inicjuje tablicę inteligentnego wskaźnika.
+
+## <a name="see-also"></a>Zobacz też
+
+[Klasa CAtlArray](../../atl/reference/catlarray-class.md)   
+[Klasa CAutoPtrElementTraits](../../atl/reference/cautoptrelementtraits-class.md)   
+[Klasa CAutoPtrList](../../atl/reference/cautoptrlist-class.md)   
+[Klasa — Przegląd](../../atl/atl-class-overview.md)

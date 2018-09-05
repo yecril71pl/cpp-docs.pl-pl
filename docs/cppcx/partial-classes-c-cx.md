@@ -10,11 +10,11 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 ms.openlocfilehash: dd1d5f7559b88505929153ae1852fc42171e5208
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42593029"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43756850"
 ---
 # <a name="partial-classes-ccx"></a>Klasy częściowe (C + +/ CX)
 Częściowa klasa jest konstrukcja, która obsługuje scenariusze, w których w przypadku modyfikowania jednej części definicji klasy i automatyczne generowanie kodu oprogramowania — na przykład projektant XAML — jest także modyfikowanie kodu w tej samej klasy. Za pomocą klasy częściowej, można zapobiec projektanta zastępowanie kodu. W projekcie programu Visual Studio `partial` modyfikator, jest stosowane automatycznie wygenerowanego pliku.  

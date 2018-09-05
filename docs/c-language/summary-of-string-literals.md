@@ -12,26 +12,26 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ab516edc5cb30d777eb42cc96e2932e526f20772
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: a94d575ee36f38b56f64fb6298eb6f6f6e43567e
+ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32385822"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43762746"
 ---
 # <a name="summary-of-string-literals"></a>Podsumowanie literałów ciągu
-*literał ciągu*:  
- **"** *s char sekwencji* opt **"**  
+
+*literał ciągu*:<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**"** *s char sekwencji*<sub>zoptymalizowany pod kątem</sub> **"**<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**L "** *s char sekwencji*sub > zoptymalizowany pod kątem</sub> **"**  
   
- **L "** *s char sekwencji* opt **"**  
+*s char sekwencji*:<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*s-char*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*s char sekwencji* *s-char*  
   
- *s char sekwencji*:  
- *s char*  
-  
- *s char sekwencji s-char*  
-  
- *s char*:  
- Każdy członek znak źródłowy ustawić z wyjątkiem znaku cudzysłowu ("), ukośnik odwrotny (\\), lub znakiem nowego wiersza *sekwencja specjalna*  
-  
-## <a name="see-also"></a>Zobacz też  
- [Gramatyka leksykalna](../c-language/lexical-grammar.md)
+*s-char*:<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;Każdy członek znak źródłowy zestawu z wyjątkiem znaku podwójnego cudzysłowu ("), ukośnika odwrotnego (\\), lub sekwencje znaków nowego wiersza  
+
+## <a name="see-also"></a>Zobacz też
+
+[Gramatyka leksykalna](../c-language/lexical-grammar.md)

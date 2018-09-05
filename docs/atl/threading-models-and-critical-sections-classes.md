@@ -1,5 +1,5 @@
 ---
-title: Wątkowość modeli i klasy sekcje krytyczne (ATL) | Dokumentacja firmy Microsoft
+title: Modele wątkowości i klasy sekcji krytycznych (ATL) | Dokumentacja firmy Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -19,40 +19,42 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 37172c0080664f496bdf5d5c7c0ebecbd8f77898
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: b87fdac5220ede47f1acf19088e952fde408a413
+ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32359921"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43755960"
 ---
-# <a name="threading-models-and-critical-sections-classes"></a>Wątkowość modeli i klasy sekcje krytyczne
-Poniższe klasy definiują wątkowość modelu i sekcja krytyczna:  
-  
--   [CAtlAutoThreadModule](../atl/reference/catlautothreadmodule-class.md) implementuje wątków w puli, modelu typu apartment serwer COM.  
-  
--   [CAtlAutoThreadModuleT](../atl/reference/catlautothreadmodulet-class.md) udostępnia metody wykonywania wątków w puli, modelu typu apartment serwer COM.  
-  
--   [CComMultiThreadModel](../atl/reference/ccommultithreadmodel-class.md) udostępnia bezpieczne wątkowo metody zwiększanie oraz zmniejszanie zmiennej. Zawiera sekcja krytyczna.  
-  
--   [CComMultiThreadModelNoCS](../atl/reference/ccommultithreadmodelnocs-class.md) udostępnia bezpieczne wątkowo metody zwiększanie oraz zmniejszanie zmiennej. Nie zawiera sekcja krytyczna.  
-  
--   [CComSingleThreadModel](../atl/reference/ccomsinglethreadmodel-class.md) udostępnia metody zwiększanie oraz zmniejszanie zmiennej. Nie zawiera sekcja krytyczna.  
-  
--   [CComObjectThreadModel](../atl/reference/atl-typedefs.md#ccomobjectthreadmodel) określa odpowiedniej klasy model wątkowy dla klasy pojedynczego obiektu.  
-  
--   [CComGlobalsThreadModel](../atl/reference/atl-typedefs.md#ccomglobalsthreadmodel) określa odpowiedniej klasy model wątkowy dla obiekt, który jest ogólnie dostępna.  
-  
--   [CComAutoCriticalSection](../atl/reference/ccomautocriticalsection-class.md) zawiera metody uzyskiwania i zwalniania sekcja krytyczna. Sekcja krytyczna automatycznie został zainicjowany.  
-  
--   [CComCriticalSection](../atl/reference/ccomcriticalsection-class.md) zawiera metody uzyskiwania i zwalniania sekcja krytyczna. Sekcja krytyczna musi być jawnie zainicjowany.  
-  
--   [CComFakeCriticalSection](../atl/reference/ccomfakecriticalsection-class.md) odzwierciedla metod w `CComCriticalSection` bez podawania sekcja krytyczna. Metody w `CComFakeCriticalSection` nic nie rób.  
-  
--   [CRTThreadTraits](../atl/reference/crtthreadtraits-class.md) udostępnia funkcję tworzenia dla wątku CRT. Użyj tej klasy, jeśli wątek użyje funkcji CRT.  
-  
--   [Win32ThreadTraits](../atl/reference/win32threadtraits-class.md) udostępnia funkcję tworzenia dla wątku systemu Windows. Użyj tej klasy, jeśli wątek nie będzie używać funkcji CRT.  
-  
-## <a name="see-also"></a>Zobacz też  
- [Przegląd klas](../atl/atl-class-overview.md)
+# <a name="threading-models-and-critical-sections-classes"></a>Modele wątkowości i klasy sekcji krytycznych
+
+Poniższe klasy definiują wątkowości modelu i sekcję krytyczną:
+
+- [CAtlAutoThreadModule](../atl/reference/catlautothreadmodule-class.md) implementuje serwer COM wątków w puli, model przedziału.
+
+- [CAtlAutoThreadModuleT](../atl/reference/catlautothreadmodulet-class.md) udostępnia metody wykonywania wątków w puli, modelu typu apartment serwer COM.
+
+- [CComMultiThreadModel](../atl/reference/ccommultithreadmodel-class.md) zapewnia metody obsługujące wielowątkowość zwiększanie i zmniejszanie zmienną. Zawiera sekcję krytyczną.
+
+- [CComMultiThreadModelNoCS](../atl/reference/ccommultithreadmodelnocs-class.md) zapewnia metody obsługujące wielowątkowość zwiększanie i zmniejszanie zmienną. Nie zapewnia sekcję krytyczną.
+
+- [CComSingleThreadModel](../atl/reference/ccomsinglethreadmodel-class.md) zawiera metody służące do zwiększanie i zmniejszanie zmienną. Nie zapewnia sekcję krytyczną.
+
+- [CComObjectThreadModel](../atl/reference/atl-typedefs.md#ccomobjectthreadmodel) określa odpowiedniej klasy model wątkowości dla pojedynczego obiektu klasy.
+
+- [CComGlobalsThreadModel](../atl/reference/atl-typedefs.md#ccomglobalsthreadmodel) określa odpowiedniej klasy model wątkowości dla obiektu, który jest ogólnie dostępna.
+
+- [CComAutoCriticalSection](../atl/reference/ccomautocriticalsection-class.md) zawiera metody uzyskiwania i zwalniania sekcję krytyczną. Sekcję krytyczną jest inicjowana automatycznie.
+
+- [CComCriticalSection](../atl/reference/ccomcriticalsection-class.md) zawiera metody uzyskiwania i zwalniania sekcję krytyczną. Można jawnie zainicjować sekcję krytyczną.
+
+- [CComFakeCriticalSection](../atl/reference/ccomfakecriticalsection-class.md) odzwierciedla metod w `CComCriticalSection` bez podawania sekcję krytyczną. Metody w `CComFakeCriticalSection` nic nie rób.
+
+- [CRTThreadTraits](../atl/reference/crtthreadtraits-class.md) udostępnia funkcję tworzenia wątku CRT. Jeśli wątek będzie używać funkcji CRT, należy użyć tej klasy.
+
+- [Win32ThreadTraits](../atl/reference/win32threadtraits-class.md) udostępnia funkcję tworzenia wątku Windows. Jeśli wątek nie użyje funkcji CRT, należy użyć tej klasy.
+
+## <a name="see-also"></a>Zobacz też
+
+[Klasa — Przegląd](../atl/atl-class-overview.md)
 

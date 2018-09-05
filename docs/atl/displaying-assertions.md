@@ -1,5 +1,5 @@
 ---
-title: Wyświetlanie potwierdzeń | Dokumentacja firmy Microsoft
+title: Wyświetlanie asercji | Dokumentacja firmy Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,18 +17,20 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f9133d2fadfa4158eef9755fff7e0d2a62478966
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 8ff7b9b29808e310be2d5568add64a0294bc67e7
+ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32354282"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43762385"
 ---
-# <a name="displaying-assertions"></a>Wyświetlanie potwierdzeń
-Jeżeli klient połączony z usługą przestaje odpowiadać, usługa zostały potwierdzone i wyświetlane okno komunikatu, które nie są widoczne. Można to potwierdzić, za pomocą programu Visual C++ — debuger do debugowania kodu (zobacz [za pomocą Menedżera zadań](../atl/using-task-manager.md) wcześniej w tej sekcji).  
-  
- Jeśli okaże się, że usługi są wyświetlane okno komunikatu, który nie jest widoczne, możesz ustawić **umożliwiają usługi do interakcja z pulpitem** opcji przed ponownie przy użyciu usługi. Ta opcja jest parametru uruchamiania umożliwiającą okien komunikatów wyświetlanych przez usługę, aby można było wyświetlane na pulpicie. Tę opcję, Otwórz aplikację usługi w Panelu sterowania, wybierz usługę, kliknij przycisk **uruchamiania**, a następnie wybierz **umożliwiają usługi do interakcja z pulpitem** opcji.  
-  
-## <a name="see-also"></a>Zobacz też  
- [Wskazówki dotyczące debugowania](../atl/debugging-tips.md)
+# <a name="displaying-assertions"></a>Wyświetlanie asercji
+
+Jeśli klient połączony z usługą pojawi się przestanie odpowiadać, usługa ma potwierdzone i wyświetlone okno komunikatu, które nie są widoczne. Można to potwierdzić, przy użyciu debugera Visual C++ podczas debugowania kodu (zobacz [za pomocą Menedżera zadań](../atl/using-task-manager.md) wcześniej w tej sekcji).
+
+Jeśli okaże się, że usługa jest wyświetlane okno komunikatu, które nie są widoczne, warto ustawić **Zezwalaj na usługę, aby interakcja z pulpitem** opcji przed ponownie przy użyciu usługi. Ta opcja jest parametr uruchamiania, który pozwala na okien komunikatów wyświetlanych przez usługę, aby wyświetlane na pulpicie. Aby ustawić tę opcję, Otwórz aplikację w Panelu sterowania, wybierz usługę, kliknij przycisk **uruchamiania**, a następnie wybierz pozycję **Zezwalaj na usługę, aby interakcja z pulpitem** opcji.
+
+## <a name="see-also"></a>Zobacz też
+
+[Wskazówki dotyczące debugowania](../atl/debugging-tips.md)
 

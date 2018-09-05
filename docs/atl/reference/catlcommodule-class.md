@@ -22,151 +22,176 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b553a6b99afd2de34c11aa0ad8a979580177d042
-ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
+ms.openlocfilehash: f87f5b9f8295b49b9c1c4bec45cad96e3dec0872
+ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/06/2018
-ms.locfileid: "37885065"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43760061"
 ---
 # <a name="catlcommodule-class"></a>Klasa CAtlComModule
-Ta klasa implementuje modułu serwera COM.  
-  
-## <a name="syntax"></a>Składnia  
-  
+
+Ta klasa implementuje modułu serwera COM.
+
+## <a name="syntax"></a>Składnia
+
 ```
 class CAtlComModule : public _ATL_COM_MODULE
-```  
-  
-## <a name="members"></a>Elementy członkowskie  
-  
-### <a name="public-constructors"></a>Konstruktory publiczne  
-  
-|Nazwa|Opis|  
-|----------|-----------------|  
-|[CAtlComModule::CAtlComModule](#catlcommodule)|Konstruktor.|  
-|[CAtlComModule:: ~ CAtlComModule](#dtor)|Destruktor.|  
-  
-### <a name="public-methods"></a>Metody publiczne  
-  
-|Nazwa|Opis|  
-|----------|-----------------|  
-|[CAtlComModule::RegisterServer](#registerserver)|Wywołaj tę metodę, aby zaktualizować rejestr systemu dla każdego obiektu na mapie obiektu.|  
-|[CAtlComModule::RegisterTypeLib](#registertypelib)|Wywołaj tę metodę, aby zarejestrować bibliotekę typów.|  
-|[CAtlComModule::UnregisterServer](#unregisterserver)|Wywołaj tę metodę, aby wyrejestrować każdy obiekt na mapie obiektu.|  
-|[CAtlComModule::UnRegisterTypeLib](#unregistertypelib)|Wywołaj tę metodę, aby wyrejestrować biblioteki typów.|  
-  
-## <a name="remarks"></a>Uwagi  
- `CAtlComModule` implementuje modułu serwera COM, umożliwiając klientowi dostęp do składników modułu.  
-  
- Ta klasa zastępuje przestarzałe [CComModule](../../atl/reference/ccommodule-class.md) klasy stosowane we wcześniejszych wersjach ATL. Zobacz [klasy modułów ATL](../../atl/atl-module-classes.md) Aby uzyskać więcej informacji.  
-  
-## <a name="inheritance-hierarchy"></a>Hierarchia dziedziczenia  
- [_ATL_COM_MODULE](atl-typedefs.md#_atl_com_module)  
-  
- `CAtlComModule`  
-  
-## <a name="requirements"></a>Wymagania  
- **Nagłówek:** atlbase.h  
-  
-##  <a name="catlcommodule"></a>  CAtlComModule::CAtlComModule  
- Konstruktor.  
-  
+```
+
+## <a name="members"></a>Elementy członkowskie
+
+### <a name="public-constructors"></a>Konstruktory publiczne
+
+|Nazwa|Opis|
+|----------|-----------------|
+|[CAtlComModule::CAtlComModule](#catlcommodule)|Konstruktor.|
+|[CAtlComModule:: ~ CAtlComModule](#dtor)|Destruktor.|
+
+### <a name="public-methods"></a>Metody publiczne
+
+|Nazwa|Opis|
+|----------|-----------------|
+|[CAtlComModule::RegisterServer](#registerserver)|Wywołaj tę metodę, aby zaktualizować rejestr systemu dla każdego obiektu na mapie obiektu.|
+|[CAtlComModule::RegisterTypeLib](#registertypelib)|Wywołaj tę metodę, aby zarejestrować bibliotekę typów.|
+|[CAtlComModule::UnregisterServer](#unregisterserver)|Wywołaj tę metodę, aby wyrejestrować każdy obiekt na mapie obiektu.|
+|[CAtlComModule::UnRegisterTypeLib](#unregistertypelib)|Wywołaj tę metodę, aby wyrejestrować biblioteki typów.|
+
+## <a name="remarks"></a>Uwagi
+
+`CAtlComModule` implementuje modułu serwera COM, umożliwiając klientowi dostęp do składników modułu.
+
+Ta klasa zastępuje przestarzałe [CComModule](../../atl/reference/ccommodule-class.md) klasy stosowane we wcześniejszych wersjach ATL. Zobacz [klasy modułów ATL](../../atl/atl-module-classes.md) Aby uzyskać więcej informacji.
+
+## <a name="inheritance-hierarchy"></a>Hierarchia dziedziczenia
+
+[_ATL_COM_MODULE](atl-typedefs.md#_atl_com_module)
+
+`CAtlComModule`
+
+## <a name="requirements"></a>Wymagania
+
+**Nagłówek:** atlbase.h
+
+##  <a name="catlcommodule"></a>  CAtlComModule::CAtlComModule
+
+Konstruktor.
+
 ```
 CAtlComModule() throw();
-```  
-  
-### <a name="remarks"></a>Uwagi  
- Inicjuje modułu.  
-  
-##  <a name="dtor"></a>  CAtlComModule:: ~ CAtlComModule  
- Destruktor.  
-  
+```
+
+### <a name="remarks"></a>Uwagi
+
+Inicjuje modułu.
+
+##  <a name="dtor"></a>  CAtlComModule:: ~ CAtlComModule
+
+Destruktor.
+
 ```
 ~CAtlComModule();
-```  
-  
-### <a name="remarks"></a>Uwagi  
- Zwalnia wszystkie fabryki klas.  
-  
-##  <a name="registerserver"></a>  CAtlComModule::RegisterServer  
- Wywołaj tę metodę, aby zaktualizować rejestr systemu dla każdego obiektu na mapie obiektu.  
-  
+```
+
+### <a name="remarks"></a>Uwagi
+
+Zwalnia wszystkie fabryki klas.
+
+##  <a name="registerserver"></a>  CAtlComModule::RegisterServer
+
+Wywołaj tę metodę, aby zaktualizować rejestr systemu dla każdego obiektu na mapie obiektu.
+
 ```
 HRESULT RegisterServer(BOOL bRegTypeLib = FALSE, const CLSID* pCLSID = NULL);
-```  
-  
-### <a name="parameters"></a>Parametry  
- *bRegTypeLib*  
- Wartość TRUE, jeśli biblioteka typów ma zostać zarejestrowany. Wartość domyślna to FALSE.  
-  
- *pCLSID*  
- Wskazuje identyfikator CLSID obiektu do zarejestrowania. Jeśli zostanie zarejestrowany o wartości NULL (wartość domyślna) wszystkie obiekty na mapie obiektu.  
-  
-### <a name="return-value"></a>Wartość zwracana  
- Zwraca wartość S_OK w przypadku powodzenia lub błędu HRESULT w przypadku niepowodzenia.  
-  
-### <a name="remarks"></a>Uwagi  
- Wywołuje funkcję globalnego [AtlComModuleRegisterServer](server-registration-global-functions.md#atlcommoduleregisterserver).  
-  
-##  <a name="registertypelib"></a>  CAtlComModule::RegisterTypeLib  
- Wywołaj tę metodę, aby zarejestrować bibliotekę typów.  
-  
+```
+
+### <a name="parameters"></a>Parametry
+
+*bRegTypeLib*  
+Wartość TRUE, jeśli biblioteka typów ma zostać zarejestrowany. Wartość domyślna to FALSE.
+
+*pCLSID*  
+Wskazuje identyfikator CLSID obiektu do zarejestrowania. Jeśli zostanie zarejestrowany o wartości NULL (wartość domyślna) wszystkie obiekty na mapie obiektu.
+
+### <a name="return-value"></a>Wartość zwracana
+
+Zwraca wartość S_OK w przypadku powodzenia lub błędu HRESULT w przypadku niepowodzenia.
+
+### <a name="remarks"></a>Uwagi
+
+Wywołuje funkcję globalnego [AtlComModuleRegisterServer](server-registration-global-functions.md#atlcommoduleregisterserver).
+
+##  <a name="registertypelib"></a>  CAtlComModule::RegisterTypeLib
+
+Wywołaj tę metodę, aby zarejestrować bibliotekę typów.
+
 ```
 HRESULT RegisterTypeLib(LPCTSTR lpszIndex);
 HRESULT RegisterTypeLib();
-```  
-  
-### <a name="parameters"></a>Parametry  
- *lpszIndex*  
- Ciąg w formacie "\\\N", gdzie N to liczba całkowita indeksu zasobu biblioteki typów.  
-  
-### <a name="return-value"></a>Wartość zwracana  
- Zwraca wartość S_OK w przypadku powodzenia lub błędu HRESULT w przypadku niepowodzenia.  
-  
-### <a name="remarks"></a>Uwagi  
- Dodaje informacje o biblioteki typów do rejestru systemowego. Jeśli wystąpienie modułu zawiera wiele bibliotek typów, należy użyć pierwszej wersji tej metody, aby określić, biblioteki typów, które powinny być używane.  
-  
-##  <a name="unregisterserver"></a>  CAtlComModule::UnregisterServer  
- Wywołaj tę metodę, aby wyrejestrować każdy obiekt na mapie obiektu.  
-  
+```
+
+### <a name="parameters"></a>Parametry
+
+*lpszIndex*  
+Ciąg w formacie "\\\N", gdzie N to liczba całkowita indeksu zasobu biblioteki typów.
+
+### <a name="return-value"></a>Wartość zwracana
+
+Zwraca wartość S_OK w przypadku powodzenia lub błędu HRESULT w przypadku niepowodzenia.
+
+### <a name="remarks"></a>Uwagi
+
+Dodaje informacje o biblioteki typów do rejestru systemowego. Jeśli wystąpienie modułu zawiera wiele bibliotek typów, należy użyć pierwszej wersji tej metody, aby określić, biblioteki typów, które powinny być używane.
+
+##  <a name="unregisterserver"></a>  CAtlComModule::UnregisterServer
+
+Wywołaj tę metodę, aby wyrejestrować każdy obiekt na mapie obiektu.
+
 ```
 HRESULT UnregisterServer(
-  BOOL bRegTypeLib = FALSE,  
-  const CLSID* pCLSID = NULL);
-```  
-  
-### <a name="parameters"></a>Parametry  
- *bRegTypeLib*  
- Wartość TRUE, jeśli można wyrejestrować biblioteki typów. Wartość domyślna to FALSE.  
-  
- *pCLSID*  
- Wskazuje identyfikator CLSID obiektu do wyrejestrowania. Jeśli wartość NULL (wartość domyślna) wszystkie obiekty na mapie obiektu zostanie wyrejestrowany.  
-  
-### <a name="return-value"></a>Wartość zwracana  
- Zwraca wartość S_OK w przypadku powodzenia lub błędu HRESULT w przypadku niepowodzenia.  
-  
-### <a name="remarks"></a>Uwagi  
- Wywołuje funkcję globalnego [AtlComModuleUnregisterServer](server-registration-global-functions.md#atlcommoduleunregisterserver).  
-  
-##  <a name="unregistertypelib"></a>  CAtlComModule::UnRegisterTypeLib  
- Wywołaj tę metodę, aby wyrejestrować biblioteki typów.  
-  
+    BOOL bRegTypeLib = FALSE,  
+    const CLSID* pCLSID = NULL);
+```
+
+### <a name="parameters"></a>Parametry
+
+*bRegTypeLib*  
+Wartość TRUE, jeśli można wyrejestrować biblioteki typów. Wartość domyślna to FALSE.
+
+*pCLSID*  
+Wskazuje identyfikator CLSID obiektu do wyrejestrowania. Jeśli wartość NULL (wartość domyślna) wszystkie obiekty na mapie obiektu zostanie wyrejestrowany.
+
+### <a name="return-value"></a>Wartość zwracana
+
+Zwraca wartość S_OK w przypadku powodzenia lub błędu HRESULT w przypadku niepowodzenia.
+
+### <a name="remarks"></a>Uwagi
+
+Wywołuje funkcję globalnego [AtlComModuleUnregisterServer](server-registration-global-functions.md#atlcommoduleunregisterserver).
+
+##  <a name="unregistertypelib"></a>  CAtlComModule::UnRegisterTypeLib
+
+Wywołaj tę metodę, aby wyrejestrować biblioteki typów.
+
 ```
 HRESULT UnRegisterTypeLib(LPCTSTR lpszIndex);
 HRESULT UnRegisterTypeLib();
-```  
-  
-### <a name="parameters"></a>Parametry  
- *lpszIndex*  
- Ciąg w formacie "\\\N", gdzie N to liczba całkowita indeksu zasobu biblioteki typów.  
-  
-### <a name="remarks"></a>Uwagi  
- Usuwa informacji na temat biblioteki typów z rejestru systemowego. Jeśli wystąpienie modułu zawiera wiele bibliotek typów, należy użyć pierwszej wersji tej metody, aby określić, biblioteki typów, które powinny być używane.  
-  
-### <a name="return-value"></a>Wartość zwracana  
- Zwraca wartość S_OK w przypadku powodzenia lub błędu HRESULT w przypadku niepowodzenia.  
-  
-## <a name="see-also"></a>Zobacz też  
- [_ATL_COM_MODULE](atl-typedefs.md#_atl_com_module)   
- [Klasa — Przegląd](../../atl/atl-class-overview.md)
+```
+
+### <a name="parameters"></a>Parametry
+
+*lpszIndex*  
+Ciąg w formacie "\\\N", gdzie N to liczba całkowita indeksu zasobu biblioteki typów.
+
+### <a name="remarks"></a>Uwagi
+
+Usuwa informacji na temat biblioteki typów z rejestru systemowego. Jeśli wystąpienie modułu zawiera wiele bibliotek typów, należy użyć pierwszej wersji tej metody, aby określić, biblioteki typów, które powinny być używane.
+
+### <a name="return-value"></a>Wartość zwracana
+
+Zwraca wartość S_OK w przypadku powodzenia lub błędu HRESULT w przypadku niepowodzenia.
+
+## <a name="see-also"></a>Zobacz też
+
+[_ATL_COM_MODULE](atl-typedefs.md#_atl_com_module)   
+[Klasa — Przegląd](../../atl/atl-class-overview.md)

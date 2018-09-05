@@ -1,5 +1,5 @@
 ---
-title: C rozszerzone atrybuty klasy magazynu | Dokumentacja firmy Microsoft
+title: Rozszerzone atrybuty klasy magazynu języka C | Dokumentacja firmy Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,45 +17,42 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 014027f9b9917f6490bb54eaf21a05230ef5f2a2
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 1a55f4ac98a712d8166c3d0ca5e22e13cb8c9145
+ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32382442"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43758820"
 ---
 # <a name="c-extended-storage-class-attributes"></a>Rozszerzone atrybuty klasy magazynu języka C
 **Microsoft Specific**  
   
- Więcej aktualne informacje na ten temat można znaleźć w [__declspec (C++ — dokumentacja)](../cpp/declspec.md).  
+Bardziej aktualnych informacji na ten temat można znaleźć w obszarze [__declspec (odwołanie w języku C++)](../cpp/declspec.md).  
   
- Atrybut rozszerzony składni upraszcza i standaryzuje rozszerzenia specyficzne dla firmy Microsoft dla języka C. Atrybuty klasy magazynu, które należy użyć składni rozszerzonych atrybutów obejmują wątku naked dllimport i dllexport.  
+Składnia atrybutu rozszerzonego upraszcza i standaryzuje rozszerzenia specyficzne dla firmy Microsoft dla języka C. Atrybuty klasy magazynowania korzystających ze składni atrybutów rozszerzonych obejmują wątku "naked", dllimport i dllexport.  
   
- Składnia atrybutu rozszerzonego służący do określania informacji o klasie magazynu używa __declspec — słowo kluczowe, które określa, że wystąpienie podanego typu do przechowania atrybuty klasy magazynu specyficzne dla firmy Microsoft (wątek naked dllimport i dllexport). Przykładami innych modyfikatorów klasy magazynowania statyczne i zewnętrzne słów kluczowych. Jednak te słowa kluczowe są częścią ANSI C standard i jako takie nie są objęte składni rozszerzonych atrybutów.  
+Składnia atrybutów rozszerzonych służących do określania informacji klasy magazynowania wykorzystuje słowo kluczowe __declspec, który określa, czy wystąpienie danego typu ma być przechowywane z atrybutem klasy magazynowania specyficzne dla firmy Microsoft (wątek "naked" dllimport i dllexport). Przykłady innych modyfikatorów klasy magazynowania słów statyczne i zewnętrzne. Jednak te słowa kluczowe są częścią standardu ANSI C i jako takie nie są objęte składnią atrybutów rozszerzonych.  
   
-## <a name="syntax"></a>Składnia  
- *storage-class-specifier*:  
- `__declspec` ( *rozszerzony decl — modyfikator seq* ) / * Specific firmy Microsoft \*/  
+## <a name="syntax"></a>Składnia
+
+*storage-class-specifier*:<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**__declspec (** *extended-decl modyfikator seq* **)**  / \* Specific firmy Microsoft \*/
+
+*rozszerzony decl modyfikator seq*:&nbsp; &nbsp; &nbsp; &nbsp; / \* Specific firmy Microsoft \*/<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*rozszerzony decl modyfikator*<sub>zoptymalizowany pod kątem</sub><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*rozszerzony decl modyfikator seq* *extended-decl — modyfikator*
+
+*rozszerzony decl modyfikator*:&nbsp; &nbsp; &nbsp; &nbsp; / \* Specific firmy Microsoft \*/<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**Wątek**<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**"naked"**<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**DllImport**<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**dllexport**
+
+Spacja oddziela Modyfikatory deklaracji. Należy pamiętać, że *extended-decl modyfikator seq* może być pusta; w takim przypadku __declspec nie ma wpływu.
   
- *rozszerzony decl — modyfikator seq*:  
- *rozszerzony decl — modyfikator* opcjonalnych  
+Wątek "naked" dllimport i dllexport atrybuty klasy magazynu są właściwości tylko dla deklaracji danych lub funkcji, do której są stosowane; nie są ponownie zdefiniować atrybuty typu sama funkcja. Atrybut wątku wpływa na tylko dane. Atrybut "naked" dotyczy tylko funkcji. Atrybuty dllimport i dllexport wpływają na funkcje i dane.  
   
- *rozszerzony rozszerzony decl — modyfikator seq — decl — modyfikator*  
-  
- *rozszerzony decl — modyfikator*:  
- **wątek**  
-  
- **naked**  
-  
- **DllImport**  
-  
- `dllexport`  
-  
- Biały znak oddziela Modyfikatory deklaracji. Należy pamiętać, że *rozszerzony decl — modyfikator seq* może być pusta; w takim przypadku __declspec nie ma wpływu.  
-  
- Wątek naked dllimport i dllexport atrybuty klasy magazynu są właściwościami tylko deklaracji danych lub funkcji, do której są stosowane; nie one ponownie zdefiniować atrybuty typu samej funkcji. Atrybut wątku dotyczy tylko danych. Atrybut naked dotyczy tylko funkcji. Atrybut dllimport i dllexport dotyczą funkcji i danych.  
-  
- **KOŃCOWY określonych firmy Microsoft**  
+**END specyficzny dla Microsoft**  
   
 ## <a name="see-also"></a>Zobacz też  
- [Deklaracje i typy](../c-language/declarations-and-types.md)
+[Deklaracje i typy](../c-language/declarations-and-types.md)

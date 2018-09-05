@@ -16,11 +16,11 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 ms.openlocfilehash: f1a755314adec83e8853c2c29d9c9d9bb363575b
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42607809"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43759593"
 ---
 # <a name="platformmetadata-namespace"></a>Platform::METADATA Namespace
 Ta przestrzeń nazw zawiera atrybuty, które modyfikowania deklaracji typów.  

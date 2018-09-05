@@ -24,24 +24,26 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 73651aa4696425750fea728a5e66ca727e742b9a
-ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
+ms.openlocfilehash: 8676626c47471c2d1702d49df3069b618cc3ff4f
+ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/06/2018
-ms.locfileid: "37886196"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43752209"
 ---
 # <a name="memory-management-with-cstringt"></a>Zarządzanie pamięcią za pomocą CStringT
-Klasa [CStringT](../atl-mfc-shared/reference/cstringt-class.md) jest klasą szablonu, używane do manipulowania ciągami znaków o zmiennej długości. Pamięć do przechowywania tych ciągów jest przydzielane i wydawane za pośrednictwem obiekt menedżera parametry skojarzone z każdym wystąpieniem `CStringT`. MFC i ATL zapewniają wystąpieniami domyślne `CStringT`, co jest nazywane `CString`, `CStringA`, i `CStringW`, który manipulowania ciągami znaków różnych typów. Te typy znaków są typu TCHAR, **char**, i `wchar_t`, odpowiednio. Te domyślne typy parametrów za pomocą Menedżera ciąg, który przydziela pamięć ze sterty procesu (w ATL) lub stercie CRT (w MFC). W przypadku typowych aplikacji ten schemat alokacji pamięci jest wystarczająca. Jednak kod intensywnie korzystających z użytku ciągów (lub kod wielowątkowy), który menedżerów zarządzania pamięcią domyślne mogą nie działać optymalnie. W tym temacie opisano sposób zastąpienia domyślnej pamięci zachowanie zarządzania `CStringT`, tworzenie puli buforów specjalnie zoptymalizowana pod kątem wykonywanego zadania.  
-  
--   [Wdrożenie niestandardowego menedżera ciągów (metoda podstawowa)](../atl-mfc-shared/implementation-of-a-custom-string-manager-basic-method.md)  
-  
--   [Unikanie rywalizacji stert](../atl-mfc-shared/avoidance-of-heap-contention.md)  
-  
--   [Wdrożenie niestandardowego menedżera ciągów (metoda zaawansowana)](../atl-mfc-shared/implementation-of-a-custom-string-manager-advanced-method.md)  
-  
--   [CFixedStringT: Przykład niestandardowego Menedżera ciągów](../atl-mfc-shared/cfixedstringt-example-of-a-custom-string-manager.md)  
-  
-## <a name="see-also"></a>Zobacz też  
- [Przykładowe CustomString](../visual-cpp-samples.md)
+
+Klasa [CStringT](../atl-mfc-shared/reference/cstringt-class.md) jest klasą szablonu, używane do manipulowania ciągami znaków o zmiennej długości. Pamięć do przechowywania tych ciągów jest przydzielane i wydawane za pośrednictwem obiekt menedżera parametry skojarzone z każdym wystąpieniem `CStringT`. MFC i ATL zapewniają wystąpieniami domyślne `CStringT`, co jest nazywane `CString`, `CStringA`, i `CStringW`, który manipulowania ciągami znaków różnych typów. Te typy znaków są typu TCHAR, **char**, i `wchar_t`, odpowiednio. Te domyślne typy parametrów za pomocą Menedżera ciąg, który przydziela pamięć ze sterty procesu (w ATL) lub stercie CRT (w MFC). W przypadku typowych aplikacji ten schemat alokacji pamięci jest wystarczająca. Jednak kod intensywnie korzystających z użytku ciągów (lub kod wielowątkowy), który menedżerów zarządzania pamięcią domyślne mogą nie działać optymalnie. W tym temacie opisano sposób zastąpienia domyślnej pamięci zachowanie zarządzania `CStringT`, tworzenie puli buforów specjalnie zoptymalizowana pod kątem wykonywanego zadania.
+
+- [Wdrożenie niestandardowego menedżera ciągów (metoda podstawowa)](../atl-mfc-shared/implementation-of-a-custom-string-manager-basic-method.md)
+
+- [Unikanie rywalizacji stert](../atl-mfc-shared/avoidance-of-heap-contention.md)
+
+- [Wdrożenie niestandardowego menedżera ciągów (metoda zaawansowana)](../atl-mfc-shared/implementation-of-a-custom-string-manager-advanced-method.md)
+
+- [CFixedStringT: Przykład niestandardowego Menedżera ciągów](../atl-mfc-shared/cfixedstringt-example-of-a-custom-string-manager.md)
+
+## <a name="see-also"></a>Zobacz też
+
+[Przykładowe CustomString](../visual-cpp-samples.md)
 

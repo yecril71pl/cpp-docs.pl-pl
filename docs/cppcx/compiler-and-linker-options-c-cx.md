@@ -10,11 +10,11 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 ms.openlocfilehash: 1597acfdf608d5e8801870fcebb43109c2eb803d
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42593795"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43762586"
 ---
 # <a name="compiler-and-linker-options-ccx"></a>Opcje kompilatora i konsolidatora (C + +/ CX)
 Zmienna środowiskowa, C + +/ CX — opcje kompilatora i opcje konsolidatora obsługuje tworzenie aplikacji dla środowiska wykonawczego Windows.  
@@ -28,7 +28,7 @@ Zmienna środowiskowa, C + +/ CX — opcje kompilatora i opcje konsolidatora obs
 |------------|-----------------|  
 |[/ZW](../build/reference/zw-windows-runtime-compilation.md)<br /><br /> /ZW:nostdlib|Włącza rozszerzenia językowe środowiska wykonawczego Windows.<br /><br /> `nostdlib` Parametr zapobiega przy użyciu ścieżki wyszukiwania standardowych, wstępnie zdefiniowanych można znaleźć zestawu i winmd przez kompilator.<br /><br /> **/ZW** — opcja kompilatora niejawnie określa następujące opcje kompilatora:<br /><br /> -   **/Fi** vccorlib.h, co zmusza włączenia vccorlib.h pliku nagłówkowego, który definiuje wiele typów, które są wymagane przez kompilator.<br />-   [/Fu](../build/reference/fu-name-forced-hash-using-file.md) Windows.winmd, co zmusza włączenia Windows.winmd plik metadanych, które są dostarczane przez system operacyjny, a następnie definiuje wiele typów środowiska wykonawczego Windows.<br />-   **/Fu** Platform.winmd, co zmusza włączenia Platform.winmd pliku metadanych, które są dostarczane przez kompilator, a następnie definiuje większość typów w przestrzeni nazw z rodziny platformy.|  
 |[/AI](../build/reference/ai-specify-metadata-directories.md) *dir*|Dodaje katalog, który jest określony przez *dir* parametru do ścieżki wyszukiwania, której kompilator używa do wyszukiwania plików zestawu i winmd.|  
-|**/Fu***pliku* |Wymusza umieszczenie określonym module lub plik winmd. Oznacza to, nie trzeba określać `#using` *pliku* w kodzie źródłowym. Kompilator automatycznie wymusza umieszczenie swój własny plik metadanych Windows Platform.winmd.|  
+|**/Fu***pliku*|Wymusza umieszczenie określonym module lub plik winmd. Oznacza to, nie trzeba określać `#using` *pliku* w kodzie źródłowym. Kompilator automatycznie wymusza umieszczenie swój własny plik metadanych Windows Platform.winmd.|  
 |/D "WINAPI_FAMILY = 2"|Tworzy definicję, która umożliwia korzystanie z podzestawu Win32 SDK, który jest zgodny ze środowiskiem uruchomieniowym Windows.|  
   
 ## <a name="linker-options"></a>Opcje konsolidatora  

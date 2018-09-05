@@ -16,44 +16,47 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b4cd2f2473249271285d6b8812dac1b924e5a172
-ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
+ms.openlocfilehash: 914e11c71d4f015f7b62797d4ba2ab3bfca3c7fb
+ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/05/2018
-ms.locfileid: "37848539"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43754136"
 ---
 # <a name="iunknown-implementation-classes"></a>Klasy implementacji interfejsu IUnknown
-Następujące klasy implementacji `IUnknown` i powiązanych metod:  
-  
--   [Klasy CComObjectRootEx](../atl/reference/ccomobjectrootex-class.md) zarządza zliczanie zagregowane i nieagregowane obiektów. Zezwala na określanie modelu wątkowości.  
-  
--   [CComObjectRoot](../atl/reference/ccomobjectroot-class.md) zarządza zliczanie zagregowane i nieagregowane obiektów. Korzysta z domyślnego modelu serwera wątków.  
-  
--   [CComAggObject](../atl/reference/ccomaggobject-class.md) implementuje `IUnknown` dla obiektu zagregowanego.  
-  
--   [CComObject](../atl/reference/ccomobject-class.md) implementuje `IUnknown` nieagregowane obiektu.  
-  
--   [CComPolyObject](../atl/reference/ccompolyobject-class.md) implementuje `IUnknown` zagregowane i nieagregowane obiektów. Za pomocą `CComPolyObject` pozwala uniknąć konieczności zarówno `CComAggObject` i `CComObject` w module. Pojedynczy `CComPolyObject` obiektu obsługuje zarówno zagregowane i nieagregowane przypadkach.  
-  
--   [CComObjectNoLock](../atl/reference/ccomobjectnolock-class.md) implementuje `IUnknown` nieagregowane obiektu, bez konieczności modyfikacji liczbę blokad modułu.  
-  
--   [CComTearOffObject](../atl/reference/ccomtearoffobject-class.md) implementuje `IUnknown` odrywania interfejsu.  
-  
--   [CComCachedTearOffObject](../atl/reference/ccomcachedtearoffobject-class.md) implementuje `IUnknown` "buforowane" interfejsu odrywania.  
-  
--   [CComContainedObject](../atl/reference/ccomcontainedobject-class.md) implementuje `IUnknown` dla wewnętrznego obiektu agregacji lub interfejs odrywania.  
-  
--   [CComObjectGlobal](../atl/reference/ccomobjectglobal-class.md) zarządza licznik odwołań do modułu, aby upewnić się, obiekt nie zostanie usunięty.  
-  
--   [CComObjectStack](../atl/reference/ccomobjectstack-class.md) tworzy tymczasowy obiekt COM za pomocą implementacji szkieletowych `IUnknown`.  
-  
-## <a name="related-articles"></a>Powiązane artykuły  
- [Podstawowe informacje na temat obiektów COM ATL](../atl/fundamentals-of-atl-com-objects.md)  
-  
-## <a name="see-also"></a>Zobacz też  
- [Klasa — Przegląd](../atl/atl-class-overview.md)   
- [Agregacji i makra fabryki klas](../atl/reference/aggregation-and-class-factory-macros.md)   
- [Makra mapy modelu COM](../atl/reference/com-map-macros.md)   
- [Funkcje globalne mapy interfejsu COM](../atl/reference/com-map-global-functions.md)
+
+Następujące klasy implementacji `IUnknown` i powiązanych metod:
+
+- [Klasy CComObjectRootEx](../atl/reference/ccomobjectrootex-class.md) zarządza zliczanie zagregowane i nieagregowane obiektów. Zezwala na określanie modelu wątkowości.
+
+- [CComObjectRoot](../atl/reference/ccomobjectroot-class.md) zarządza zliczanie zagregowane i nieagregowane obiektów. Korzysta z domyślnego modelu serwera wątków.
+
+- [CComAggObject](../atl/reference/ccomaggobject-class.md) implementuje `IUnknown` dla obiektu zagregowanego.
+
+- [CComObject](../atl/reference/ccomobject-class.md) implementuje `IUnknown` nieagregowane obiektu.
+
+- [CComPolyObject](../atl/reference/ccompolyobject-class.md) implementuje `IUnknown` zagregowane i nieagregowane obiektów. Za pomocą `CComPolyObject` pozwala uniknąć konieczności zarówno `CComAggObject` i `CComObject` w module. Pojedynczy `CComPolyObject` obiektu obsługuje zarówno zagregowane i nieagregowane przypadkach.
+
+- [CComObjectNoLock](../atl/reference/ccomobjectnolock-class.md) implementuje `IUnknown` nieagregowane obiektu, bez konieczności modyfikacji liczbę blokad modułu.
+
+- [CComTearOffObject](../atl/reference/ccomtearoffobject-class.md) implementuje `IUnknown` odrywania interfejsu.
+
+- [CComCachedTearOffObject](../atl/reference/ccomcachedtearoffobject-class.md) implementuje `IUnknown` "buforowane" interfejsu odrywania.
+
+- [CComContainedObject](../atl/reference/ccomcontainedobject-class.md) implementuje `IUnknown` dla wewnętrznego obiektu agregacji lub interfejs odrywania.
+
+- [CComObjectGlobal](../atl/reference/ccomobjectglobal-class.md) zarządza licznik odwołań do modułu, aby upewnić się, obiekt nie zostanie usunięty.
+
+- [CComObjectStack](../atl/reference/ccomobjectstack-class.md) tworzy tymczasowy obiekt COM za pomocą implementacji szkieletowych `IUnknown`.
+
+## <a name="related-articles"></a>Powiązane artykuły
+
+[Podstawowe informacje na temat obiektów COM ATL](../atl/fundamentals-of-atl-com-objects.md)
+
+## <a name="see-also"></a>Zobacz też
+
+[Klasa — Przegląd](../atl/atl-class-overview.md)   
+[Agregacji i makra fabryki klas](../atl/reference/aggregation-and-class-factory-macros.md)   
+[Makra mapy modelu COM](../atl/reference/com-map-macros.md)   
+[Funkcje globalne mapy interfejsu COM](../atl/reference/com-map-global-functions.md)
 

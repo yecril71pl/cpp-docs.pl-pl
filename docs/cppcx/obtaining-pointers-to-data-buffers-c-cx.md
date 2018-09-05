@@ -10,11 +10,11 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 ms.openlocfilehash: b8a36573e72b173180e89b48403829a9387d4ee8
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43212508"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43757026"
 ---
 # <a name="obtaining-pointers-to-data-buffers-ccx"></a>Uzyskiwanie wskaźników do buforów danych (C + +/ CX)
 W środowisku uruchomieniowym Windows [Windows::Storage::Streams::IBuffer](https://msdn.microsoft.com/library/windows/apps/windows.storage.streams.ibuffer.aspx) interfejs zapewnia dostęp do buforów danych oznacza niezależny od języka, na podstawie strumienia. W języku C++ można uzyskać surowy wskaźnik do podstawowego tablicy typu byte, za pomocą interfejsu IBufferByteAccess biblioteki środowiska uruchomieniowego Windows, która jest zdefiniowana w robuffer.h. Za pomocą tej metody można zmodyfikować bajt tablicy w miejscu bez wprowadzania żadnych niepotrzebne kopie danych.  

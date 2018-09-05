@@ -16,11 +16,11 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 ms.openlocfilehash: 4b80fe7749fdb2f91e300cff007c01001edfa557
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42603041"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43755115"
 ---
 # <a name="platformcallbackcontext-enumeration"></a>Platform::CallbackContext, wyliczenie
 Określa kontekst wątku, w którym wykonuje funkcję wywołania zwrotnego (program obsługi zdarzeń).  

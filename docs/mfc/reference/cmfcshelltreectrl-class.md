@@ -39,11 +39,11 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 ms.openlocfilehash: 7fc8ef005eea61597eb316090e26af7e83718dd8
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43222779"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43760848"
 ---
 # <a name="cmfcshelltreectrl-class"></a>Klasa CMFCShellTreeCtrl
 `CMFCShellTreeCtrl` Klasa rozszerza [klasa CTreeCtrl](../../mfc/reference/ctreectrl-class.md) funkcji, wyświetlając hierarchię elementów powłoki.  

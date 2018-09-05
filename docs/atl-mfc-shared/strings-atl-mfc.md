@@ -1,5 +1,5 @@
 ---
-title: Ciągi (ATL do MFC) | Dokumentacja firmy Microsoft
+title: Ciągi (ATL-MFC) | Dokumentacja firmy Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -31,30 +31,34 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7c5ebcd038c7526edca7de4756bf3f5562f361b1
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: a918866710575ecc091fcce4564a7617d28a102d
+ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32355483"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43752778"
 ---
 # <a name="strings-atlmfc"></a>Ciągi (ATL/MFC)
-Prawie wszystkie programy pracować z danymi ciągu. Visual C++ udostępnia kilka sposobów zarządzania danych tego ciągu.  
-  
-## <a name="in-this-section"></a>W tej sekcji  
- [Użycie CStringT](../atl-mfc-shared/using-cstringt.md)  
- Zawiera opis programowania przy użyciu szablonu klasy CStringT.  
-  
- [Użycie CString](../atl-mfc-shared/using-cstring.md)  
- Zawiera opis programowania w języku cstring —, domyślna implementacja CStringT.  
-  
-## <a name="related-sections"></a>Sekcje pokrewne  
- [Omówienie CStringT](../atl-mfc-shared/reference/cstringt-class.md)  
- Udostępnia informacje na temat udostępnionego `CStringT` klasy.  
-  
- [Pojęcia związane z MFC](../mfc/mfc-concepts.md)  
- Zawiera tematy dotyczące pojęć i oparty na zadaniach ułatwiające programowania przy użyciu biblioteki MFC.  
-  
-## <a name="see-also"></a>Zobacz też  
- [ATL/MFC udostępnionych klas](../atl-mfc-shared/atl-mfc-shared-classes.md)
+
+Niemal we wszystkich programach pracować z danymi ciągu. Visual C++ zapewnia kilka sposobów zarządzania tych danych ciągu.
+
+## <a name="in-this-section"></a>W tej sekcji
+
+[Użycie CStringT](../atl-mfc-shared/using-cstringt.md)  
+W tym artykule opisano Programowanie przy użyciu CStringT klasy szablonu.
+
+[Użycie CString](../atl-mfc-shared/using-cstring.md)  
+Zawiera opis programowania w języku CString, domyślna implementacja CStringT.
+
+## <a name="related-sections"></a>Sekcje pokrewne
+
+[Omówienie CStringT](../atl-mfc-shared/reference/cstringt-class.md)  
+Oferuje informacje odwołań dotyczące wspólnie `CStringT` klasy.
+
+[Pojęcia związane z MFC](../mfc/mfc-concepts.md)  
+Zawiera tematy dotyczące pojęć i opartego na zadaniach ułatwiające programowania przy użyciu biblioteki MFC.
+
+## <a name="see-also"></a>Zobacz też
+
+[Klasy współdzielone ATL/MFC](../atl-mfc-shared/atl-mfc-shared-classes.md)
 

@@ -17,69 +17,73 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1b9dc87340d567f876d91abc4d8ebfa1d6353cad
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 7873b7006962449a40a8e67d118b6699ac61f263
+ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43209990"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43762096"
 ---
 # <a name="fundamentals-of-atl-com-objects"></a>Podstawowe informacje na temat obiektów COM ATL
-Poniższa ilustracja przedstawia relacje między klasy i interfejsy, które są używane do zdefiniowania obiektu ATL COM.  
-  
- ![Struktura ATL](../atl/media/vc307y1.gif "vc307y1")  
-  
+
+Poniższa ilustracja przedstawia relacje między klasy i interfejsy, które są używane do zdefiniowania obiektu ATL COM.
+
+![Struktura ATL](../atl/media/vc307y1.gif "vc307y1")
+
 > [!NOTE]
->  Ten diagram pokazuje, że `CComObject` jest tworzony na podstawie `CYourClass` natomiast `CComAggObject` i `CComPolyObject` obejmują `CYourClass` jako zmienną składową.  
-  
- Istnieją trzy sposoby, aby zdefiniować obiekt ATL COM. Standardowa opcją jest użycie `CComObject` klasę, która jest pochodną `CYourClass`. Drugą opcją jest tworzenie obiektu zagregowanego za pomocą `CComAggObject` klasy. Trzecia opcja jest użycie `CComPolyObject` klasy. `CComPolyObject` działa jako hybrydowego: może działać jako `CComObject` klasy lub jako `CComAggObject` klasy, w zależności od tego, jak jej pierwszego tworzenia. Aby uzyskać więcej informacji o sposobie używania `CComPolyObject` klasy, zobacz [klasa CComPolyObject](../atl/reference/ccompolyobject-class.md).  
-  
- Użycie opcji standard ATL COM, użyj dwóch obiektów: Obiekt wewnętrzny i zewnętrzny obiektu. Klienci zewnętrzni uzyskać dostęp do funkcji wewnętrznego obiektu za pomocą funkcji otoki, które są zdefiniowane w obiekcie zewnętrznym. Typ obiektu zewnętrznego to `CComObject`.  
-  
- Korzystając z obiektu zagregowanego obiektu zewnętrznego nie zapewnia otoki dla funkcji obiektu wewnętrznego. Zamiast tego obiektu zewnętrznego zapewnia wskaźnika, który jest bezpośrednio dostępny dla klientów zewnętrznych. W tym scenariuszu obiektu zewnętrznego jest typu `CComAggObject`. Obiekt wewnętrzny jest zmienną elementu członkowskiego obiektu zewnętrznego i jest typu `CYourClass`.  
-  
- Ponieważ klient nie ma za pośrednictwem obiektu zewnętrznego do interakcji z obiekt wewnętrzny, zagregowane obiekty są zwykle bardziej wydajne. Ponadto obiektu zewnętrznego nie ma znać funkcje obiektu zagregowane, biorąc pod uwagę, że interfejs obiektu zagregowanego jest dostępne bezpośrednio do klienta. Jednak nie wszystkie obiekty mogą być agregowane. Dla obiektu agregowania musi ona być zaprojektowane tak, za pomocą agregacji, należy pamiętać.  
-  
- Implementuje ATL [IUnknown](/windows/desktop/api/unknwn/nn-unknwn-iunknown) w dwóch fazach:  
-  
--   [CComObject](../atl/reference/ccomobject-class.md), [CComAggObject](../atl/reference/ccomaggobject-class.md), lub [CComPolyObject](../atl/reference/ccompolyobject-class.md) implementuje `IUnknown` metody.  
-  
--   [CComObjectRoot](../atl/reference/ccomobjectroot-class.md) lub [CComObjectRootEx](../atl/reference/ccomobjectrootex-class.md) zarządza licznika odwołań i zewnętrznych wskaźników `IUnknown`.  
-  
- Inne aspekty obiekt ATL COM są obsługiwane przez inne klasy:  
-  
--   [Klasy CComCoClass](../atl/reference/ccomcoclass-class.md) definiuje obiektu domyślnej klasy fabryki i agregację modelu.  
-  
--   [IDispatchImpl](../atl/reference/idispatchimpl-class.md) udostępnia domyślną implementację elementu `IDispatch Interface` część wszelkie dwa interfejsy do obiektu.  
-  
--   [ISupportErrorInfoImpl](../atl/reference/isupporterrorinfoimpl-class.md) implementuje `ISupportErrorInfo` interfejsu, która zapewnia informacje o błędzie mogą być przekazywane łańcuch wywołań poprawnie.  
-  
-## <a name="in-this-section"></a>W tej sekcji  
- [Implementowanie klasy CComObjectRootEx](../atl/implementing-ccomobjectrootex.md)  
- Pokaż przykład wpisy mapy modelu COM do implementowania `CComObjectRootEx`.  
-  
- [Implementowanie klas CComObject, CComAggObject i CComPolyObject](../atl/implementing-ccomobject-ccomaggobject-and-ccompolyobject.md)  
- W tym artykule omówiono sposób, w jaki **DECLARE_\*_AGGREGATABLE** makra wpływa na użycie `CComObject`, `CComAggObject`, i `CComPolyObject`.  
-  
- [Obsługa interfejsów IDispatch i IErrorInfo](../atl/supporting-idispatch-and-ierrorinfo.md)  
- Wyświetla listę klas ATL wdrażania służące do obsługi `IDispatch` i `IErrorInfo` interfejsów.  
-  
- [Obsługa interfejsu IDispEventImpl](../atl/supporting-idispeventimpl.md)  
- W tym artykule omówiono kroki, aby wdrożyć punkt połączenia dla swojej klasy.  
-  
- [Zmienianie domyślnej fabryki klas i modelu agregacji](../atl/changing-the-default-class-factory-and-aggregation-model.md)  
- Pokaż makra, jakie można użyć, aby zmienić model fabryki i agregację klasy domyślne.  
-  
- [Tworzenie obiektu zagregowanego](../atl/creating-an-aggregated-object.md)  
- Lista czynności prowadzących do tworzenie obiektu zagregowanego.  
-  
-## <a name="related-sections"></a>Sekcje pokrewne  
- [Tworzenie projektu ATL](../atl/reference/creating-an-atl-project.md)  
- Zawiera informacje dotyczące tworzenia obiektu ATL COM.  
-  
- [ATL](../atl/active-template-library-atl-concepts.md)  
- Zawiera łącza do tematów pojęciowych dotyczące programowania przy użyciu biblioteki Active Template Library.  
-  
-## <a name="see-also"></a>Zobacz też  
- [Pojęcia](../atl/active-template-library-atl-concepts.md)
+>  Ten diagram pokazuje, że `CComObject` jest tworzony na podstawie `CYourClass` natomiast `CComAggObject` i `CComPolyObject` obejmują `CYourClass` jako zmienną składową.
+
+Istnieją trzy sposoby, aby zdefiniować obiekt ATL COM. Standardowa opcją jest użycie `CComObject` klasę, która jest pochodną `CYourClass`. Drugą opcją jest tworzenie obiektu zagregowanego za pomocą `CComAggObject` klasy. Trzecia opcja jest użycie `CComPolyObject` klasy. `CComPolyObject` działa jako hybrydowego: może działać jako `CComObject` klasy lub jako `CComAggObject` klasy, w zależności od tego, jak jej pierwszego tworzenia. Aby uzyskać więcej informacji o sposobie używania `CComPolyObject` klasy, zobacz [klasa CComPolyObject](../atl/reference/ccompolyobject-class.md).
+
+Użycie opcji standard ATL COM, użyj dwóch obiektów: Obiekt wewnętrzny i zewnętrzny obiektu. Klienci zewnętrzni uzyskać dostęp do funkcji wewnętrznego obiektu za pomocą funkcji otoki, które są zdefiniowane w obiekcie zewnętrznym. Typ obiektu zewnętrznego to `CComObject`.
+
+Korzystając z obiektu zagregowanego obiektu zewnętrznego nie zapewnia otoki dla funkcji obiektu wewnętrznego. Zamiast tego obiektu zewnętrznego zapewnia wskaźnika, który jest bezpośrednio dostępny dla klientów zewnętrznych. W tym scenariuszu obiektu zewnętrznego jest typu `CComAggObject`. Obiekt wewnętrzny jest zmienną elementu członkowskiego obiektu zewnętrznego i jest typu `CYourClass`.
+
+Ponieważ klient nie ma za pośrednictwem obiektu zewnętrznego do interakcji z obiekt wewnętrzny, zagregowane obiekty są zwykle bardziej wydajne. Ponadto obiektu zewnętrznego nie ma znać funkcje obiektu zagregowane, biorąc pod uwagę, że interfejs obiektu zagregowanego jest dostępne bezpośrednio do klienta. Jednak nie wszystkie obiekty mogą być agregowane. Dla obiektu agregowania musi ona być zaprojektowane tak, za pomocą agregacji, należy pamiętać.
+
+Implementuje ATL [IUnknown](/windows/desktop/api/unknwn/nn-unknwn-iunknown) w dwóch fazach:
+
+- [CComObject](../atl/reference/ccomobject-class.md), [CComAggObject](../atl/reference/ccomaggobject-class.md), lub [CComPolyObject](../atl/reference/ccompolyobject-class.md) implementuje `IUnknown` metody.
+
+- [CComObjectRoot](../atl/reference/ccomobjectroot-class.md) lub [CComObjectRootEx](../atl/reference/ccomobjectrootex-class.md) zarządza licznika odwołań i zewnętrznych wskaźników `IUnknown`.
+
+Inne aspekty obiekt ATL COM są obsługiwane przez inne klasy:
+
+- [Klasy CComCoClass](../atl/reference/ccomcoclass-class.md) definiuje obiektu domyślnej klasy fabryki i agregację modelu.
+
+- [IDispatchImpl](../atl/reference/idispatchimpl-class.md) udostępnia domyślną implementację elementu `IDispatch Interface` część wszelkie dwa interfejsy do obiektu.
+
+- [ISupportErrorInfoImpl](../atl/reference/isupporterrorinfoimpl-class.md) implementuje `ISupportErrorInfo` interfejsu, która zapewnia informacje o błędzie mogą być przekazywane łańcuch wywołań poprawnie.
+
+## <a name="in-this-section"></a>W tej sekcji
+
+[Implementowanie klasy CComObjectRootEx](../atl/implementing-ccomobjectrootex.md)  
+Pokaż przykład wpisy mapy modelu COM do implementowania `CComObjectRootEx`.
+
+[Implementowanie klas CComObject, CComAggObject i CComPolyObject](../atl/implementing-ccomobject-ccomaggobject-and-ccompolyobject.md)  
+W tym artykule omówiono sposób, w jaki **DECLARE_\*_AGGREGATABLE** makra wpływa na użycie `CComObject`, `CComAggObject`, i `CComPolyObject`.
+
+[Obsługa interfejsów IDispatch i IErrorInfo](../atl/supporting-idispatch-and-ierrorinfo.md)  
+Wyświetla listę klas ATL wdrażania służące do obsługi `IDispatch` i `IErrorInfo` interfejsów.
+
+[Obsługa interfejsu IDispEventImpl](../atl/supporting-idispeventimpl.md)  
+W tym artykule omówiono kroki, aby wdrożyć punkt połączenia dla swojej klasy.
+
+[Zmienianie domyślnej fabryki klas i modelu agregacji](../atl/changing-the-default-class-factory-and-aggregation-model.md)  
+Pokaż makra, jakie można użyć, aby zmienić model fabryki i agregację klasy domyślne.
+
+[Tworzenie obiektu zagregowanego](../atl/creating-an-aggregated-object.md)  
+Lista czynności prowadzących do tworzenie obiektu zagregowanego.
+
+## <a name="related-sections"></a>Sekcje pokrewne
+
+[Tworzenie projektu ATL](../atl/reference/creating-an-atl-project.md)  
+Zawiera informacje dotyczące tworzenia obiektu ATL COM.
+
+[ATL](../atl/active-template-library-atl-concepts.md)  
+Zawiera łącza do tematów pojęciowych dotyczące programowania przy użyciu biblioteki Active Template Library.
+
+## <a name="see-also"></a>Zobacz też
+
+[Pojęcia](../atl/active-template-library-atl-concepts.md)
 

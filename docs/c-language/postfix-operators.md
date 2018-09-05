@@ -15,33 +15,29 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 14a23da2e8ed41954bd6faa2803d6e6c7dfb37a9
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 338e518d1939cb6ea32aaf200c54b6c352287561
+ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32384388"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43760266"
 ---
 # <a name="postfix-operators"></a>Operatory przyrostka
-Operatory przyrostek ma najwyższy priorytet (najbardziej restrykcyjne metody powiązanie) obliczania wyrażeń.  
-  
-## <a name="syntax"></a>Składnia  
- *Operatory przyrostka wyrażenie*:  
- *wyrażenia podstawowe*  
-  
- *Operatory przyrostka wyrażenie***[***wyrażenie***]**   
-  
- *wyrażenie przyrostek***(***lista wyrażeń argument* opt **)**   
-  
- *Operatory przyrostka wyrażenie***.**   *Identyfikator*  
-  
- *Operatory przyrostka wyrażenie***->***identyfikator*   
-  
- *Operatory przyrostka wyrażenia*  **++**  
-  
- *Operatory przyrostka wyrażenia*  **--**  
-  
- Operatory na tym poziomie pierwszeństwo są indeksy tablicy, wywołania funkcji, struktury i złożenia członków przyrostka inkrementacji i operatory dekrementacji.  
-  
-## <a name="see-also"></a>Zobacz też  
- [Operatory języka C](../c-language/c-operators.md)
+Operatory przyrostkowe ma najwyższy priorytet (najbardziej restrykcyjne metody powiązania) obliczania wyrażeń.  
+
+## <a name="syntax"></a>Składnia
+
+*wyrażeniem przyrostkowym*:<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*wyrażenia podstawowe*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*wyrażeniem przyrostkowym***[***wyrażenie***]** <br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*wyrażeniem przyrostkowym***(***argument-expression-list*<sub>zoptymalizowany pod kątem</sub> **)**<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*wyrażeniem przyrostkowym***.**   *Identyfikator*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*wyrażeniem przyrostkowym***->***identyfikator* <br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*wyrażeniem przyrostkowym*  **++**<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*wyrażeniem przyrostkowym*  **--**
+
+Operatory na tym poziomie pierwszeństwa indeksy dolne tablicy, wywołania funkcji, struktury i Unii członków i zwiększenie przyrostkowe i operatory dekrementacji.
+
+## <a name="see-also"></a>Zobacz też
+
+[Operatory języka C](../c-language/c-operators.md)

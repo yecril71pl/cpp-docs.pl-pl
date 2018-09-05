@@ -17,22 +17,24 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ae961d47f77b630eaff91e1c02e244454b12dc80
-ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
+ms.openlocfilehash: 46b65fa43ddc2fc26f2cd87746f763c8a8e7c924
+ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/05/2018
-ms.locfileid: "37851317"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43756314"
 ---
 # <a name="data-types-classes"></a>Klasy typów danych
-Następujące klasy opakować typy danych języka C++:  
-  
--   [CComBSTR](../atl/reference/ccombstr-class.md) Opakowuje `BSTR` typu danych.  
-  
--   [CComVariant](../atl/reference/ccomvariant-class.md) Opakowuje `VARIANT` typu danych.  
-  
--   [CComCurrency](../atl/reference/ccomcurrency-class.md) zawiera operatory i metod do tworzenia i zarządzania `CURRENCY` obiektu.  
-  
-## <a name="see-also"></a>Zobacz też  
- [Klasa — Przegląd](../atl/atl-class-overview.md)
+
+Następujące klasy opakować typy danych języka C++:
+
+- [CComBSTR](../atl/reference/ccombstr-class.md) Opakowuje `BSTR` typu danych.
+
+- [CComVariant](../atl/reference/ccomvariant-class.md) Opakowuje `VARIANT` typu danych.
+
+- [CComCurrency](../atl/reference/ccomcurrency-class.md) zawiera operatory i metod do tworzenia i zarządzania `CURRENCY` obiektu.
+
+## <a name="see-also"></a>Zobacz też
+
+[Klasa — Przegląd](../atl/atl-class-overview.md)
 

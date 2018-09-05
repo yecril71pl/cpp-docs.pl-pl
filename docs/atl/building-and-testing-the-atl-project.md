@@ -1,5 +1,5 @@
 ---
-title: Tworzenie i testowanie Projekt ATL | Dokumentacja firmy Microsoft
+title: Tworzenie i testowanie projektu ATL | Dokumentacja firmy Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -15,18 +15,20 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ee9be7db4251b6238265d53b6d84f24f39b7b9a2
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 0a0ec4f98a36f6278c7e9101c4a8e8855d25758a
+ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32354733"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43761623"
 ---
-# <a name="building-and-testing-the-atl-project"></a>Tworzenie i testowanie Projekt ATL
-Jak wspomniano w [Wstawianie formantu złożonego](../atl/inserting-a-composite-control.md), jeden ze składników początkowej projektu jest domyślną stronę HTML, która obsługuje nowego formantu złożonego. Po zakończeniu modyfikacji złożonego formantu, kliknij przycisk **Kompiluj rozwiązanie** lub **Kompiluj ponownie rozwiązanie** z **kompilacji** menu. Po pomyślnie utworzy projekt, ładowanie strony HTML, znajduje się w katalogu głównym projektu formantu złożonego, do programu Internet Explorer lub innej przeglądarki i przetestować funkcje formantu.  
-  
- Można również sprawdzić formantu złożonego za pomocą narzędzia kontenera testu lub innej aplikacji, która może hostować formantu ActiveX. Zobacz [testowanie właściwości i zdarzeń za pomocą kontenera testu](../mfc/testing-properties-and-events-with-test-container.md) informacji na temat sposobu dostępu kontener testu.  
-  
-## <a name="see-also"></a>Zobacz też  
- [Podstawy złożonych kontrolek](../atl/atl-composite-control-fundamentals.md)
+# <a name="building-and-testing-the-atl-project"></a>Tworzenie i testowanie projektu ATL
+
+Jak wspomniano w [Wstawianie kontrolki złożonej](../atl/inserting-a-composite-control.md), jeden ze składników początkowego projektu jest domyślną stronę HTML, który jest hostem nowego formantu złożonego. Po zakończeniu modyfikowania złożonego formantu, kliknij przycisk **Kompiluj rozwiązanie** lub **Kompiluj rozwiązanie** z **kompilacji** menu. Gdy projekt jest kompilowany pomyślnie, załadowania strony HTML, znajduje się w katalogu głównym projektu kontrolki złożonej w programie Internet Explorer lub innej przeglądarki i przetestować funkcje kontrolki.
+
+Możesz także testować formantu złożonego za pomocą narzędzia do testowania kontenera lub innej aplikacji, który może obsługiwać formant ActiveX. Zobacz [testowanie właściwości i zdarzeń za pomocą kontenera testu](../mfc/testing-properties-and-events-with-test-container.md) informacji na temat dostępu do kontenera testu.
+
+## <a name="see-also"></a>Zobacz też
+
+[Podstawy złożonych kontrolek](../atl/atl-composite-control-fundamentals.md)
 

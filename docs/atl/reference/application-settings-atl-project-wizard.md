@@ -1,5 +1,5 @@
 ---
-title: Ustawienia aplikacji, ATL Kreator projektu | Dokumentacja firmy Microsoft
+title: Ustawienia aplikacji, ATL projektów Kreatora | Dokumentacja firmy Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,48 +16,51 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 47fbf95451834e5f8c41e8b6d7e5af7a9746bb85
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: dee20d07ff37024506ef925fd94363bf85ceb8bc
+ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32357408"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43756889"
 ---
-# <a name="application-settings-atl-project-wizard"></a>Ustawienia aplikacji, Kreator projektu ATL
-Użyj **ustawienia aplikacji** strony Kreator projektu ATL do projektu i dodawanie podstawowych funkcji do nowy projekt ATL.  
-  
-## <a name="server-type"></a>Typ serwera  
- Wybierz jedną z trzech typów serwerów:  
-  
- **Biblioteki dołączanej (dynamicznie DLL)**  
- Wybierz, aby utworzyć server wewnątrzprocesowe.  
-  
- **Pliki wykonywalne (EXE)**  
- Wybierz, aby utworzyć lokalnego serwera poza procesem. Ta opcja nie zezwala na obsługę MFC lub COM + 1.0. Nie zezwala na scalanie kodu serwera proxy/stub.  
-  
- **Usługi (EXE)**  
- Wybierz, aby utworzyć aplikację systemu Windows, która działa w tle podczas uruchamiania systemu Windows. Tej opcji nie zezwalaj na obsługę MFC lub COM + 1.0 lub nie zezwala na scalanie kodu serwera proxy/stub.  
-  
-## <a name="additional-options"></a>Dodatkowe opcje  
-  
+# <a name="application-settings-atl-project-wizard"></a>Ustawienia aplikacji, Kreator projektów ATL
+
+Użyj **ustawienia aplikacji** strony Kreator projektu ATL projektować i dodawanie podstawowych funkcji do nowego projektu ATL.
+
+## <a name="server-type"></a>Typ serwera
+
+Wybierz jedną z trzech typów serwerów:
+
+**Biblioteka dołączana dynamicznie (DLL)**  
+Zaznacz, aby utworzyć serwer w procesie.
+
+**Plik wykonywalny (EXE)**  
+Zaznacz, aby utworzyć serwer lokalny poza procesem. Ta opcja nie umożliwia obsługi MFC lub modelu COM + 1.0. Nie zezwala na scalanie kodu klasy zastępczej/serwera proxy.
+
+**Usługa (EXE)**  
+Zaznacz, aby utworzyć aplikację Windows, która działa w tle podczas uruchamiania Windows. Ta opcja nie zezwala na obsługę MFC lub modelu COM + 1.0 lub nie zezwala na scalanie kodu klasy zastępczej/serwera proxy.
+
+## <a name="additional-options"></a>Dodatkowe opcje
+
 > [!NOTE]
->  Wszystkie dodatkowe opcje są dostępne dla projektów biblioteki DLL tylko.  
-  
- **Zezwalaj na scalanie kodu serwera proxy/stub**  
- Wybierz **Zezwalaj na scalanie kodu serwera proxy/stub** pole wyboru dla wygody, gdy wymagana jest przekazywanie interfejsów. Ta opcja umieszcza kod serwera proxy i skrótowych generowanych przez MIDL w tym samym pliku wykonywalnego jako serwer.  
-  
- **Obsługa MFC**  
- Wybierz, aby określić, że obiekt zawiera obsługę MFC. Ta opcja łączy projektu biblioteki MFC, aby uzyskać dostępu do żadnego z klasy i funkcje, które zawierają.  
-  
- **Obsługa modelu COM + 1.0**  
- Wybierz, aby zmodyfikować ustawienia kompilacji projektu do obsługi składników modelu COM + 1.0. Oprócz standardowych listę bibliotek Kreator dodaje comsvcs.lib biblioteki specyficzne dla składnika modelu COM + 1.0  
-  
- Ponadto mtxex.dll to opóźnienie ładowane w systemie hosta, gdy aplikacja jest uruchamiana.  
-  
--   **Obsługuje rejestratora składników** Projekt ATL zawiera obsługę składników modelu COM + 1.0, należy ustawić tę opcję. Rejestrator składników umożliwia obiektu modelu COM + 1.0 do uzyskiwania listy składników, zarejestrować komponenty lub wyrejestrować komponenty (indywidualnie lub jednorazowo).  
-  
-## <a name="see-also"></a>Zobacz też  
- [Kreator projektu ATL](../../atl/reference/atl-project-wizard.md)   
- [Tworzenie projektu ATL](../../atl/reference/creating-an-atl-project.md)   
- [Domyślne konfiguracje projektu ATL](../../atl/reference/default-atl-project-configurations.md)
+>  Wszystkie dodatkowe opcje są dostępne biblioteki DLL tylko dla projektów.
+
+**Zezwalaj na scalanie kodu klasy zastępczej/serwera proxy**  
+Wybierz **Zezwalaj na scalanie kodu klasy zastępczej/serwera proxy** pole wyboru dla wygody, gdy wymagana jest kierowanie interfejsów. Ta opcja umieszcza kod serwera proxy i klas zastępczych MIDL generowane w tym samym pliku wykonywalnego jako serwer.
+
+**Obsługa MFC**  
+Zaznacz, aby określić, że obiekt zawiera obsługę MFC. Ta opcja łączy projektu biblioteki MFC, aby dostęp do wszystkich klas i funkcji, które zawierają.
+
+**Obsługa modelu COM + 1.0**  
+Zaznacz, aby zmodyfikować ustawienia kompilacji projektu do obsługi składników modelu COM + 1.0. Oprócz standardowych listę bibliotek Kreator dodaje comsvcs.lib biblioteki specyficzne dla składników modelu COM + 1.0
+
+Ponadto mtxex.dll jest ładowane w systemie hosta, po uruchomieniu aplikacji z opóźnieniem.
+
+- **Obsługuje rejestratora składników** Projekt ATL zawiera wsparcie dla składników modelu COM + 1.0, można ustawić tę opcję. Rejestratora składników umożliwia obiektu modelu COM + 1.0 do uzyskiwania listy składników, rejestrować składników lub wyrejestrować komponenty (pojedynczo lub wszystkie na raz).
+
+## <a name="see-also"></a>Zobacz też
+
+[Kreator projektu ATL](../../atl/reference/atl-project-wizard.md)   
+[Tworzenie projektu ATL](../../atl/reference/creating-an-atl-project.md)   
+[Domyślne konfiguracje projektu ATL](../../atl/reference/default-atl-project-configurations.md)
 

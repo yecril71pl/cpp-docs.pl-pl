@@ -1,5 +1,5 @@
 ---
-title: Testowanie kontroli zmodyfikowane DHTML ATL | Dokumentacja firmy Microsoft
+title: Testowanie zmodyfikowanej kontrolki ATL DHTML | Dokumentacja firmy Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,40 +16,42 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b140788cd409aa5a11f93689e96fa40c1a167dfe
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 9730f8ef9bfc89d65ffb89ddbbfe67ce247138e9
+ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32360348"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43755605"
 ---
-# <a name="testing-the-modified-atl-dhtml-control"></a>Testowanie kontroli zmodyfikowane DHTML ATL
-Wypróbuj nowe formantu można zobaczyć, jak działa teraz.  
-  
-#### <a name="to-build-and-test-the-modified-control"></a>Tworzenie i testowanie zmodyfikowanego formantu  
-  
-1.  Ponownie skompilować projekt i otworzyć go w kontenerze testowym. Zobacz [testowanie właściwości i zdarzeń za pomocą kontenera testu](../mfc/testing-properties-and-events-with-test-container.md) informacji na temat sposobu dostępu kontener testu.  
-  
-     Rozmiar formantu do wyświetlenia wszystkich przycisków dodane.  
-  
-2.  Sprawdź, czy dwa przyciski wstawione przez zmodyfikowanie pliku HTML. Każdy przycisk posiada etykiety został zidentyfikowany w [modyfikacji formantu ATL DHTML](../atl/modifying-the-atl-dhtml-control.md): **Odśwież** i **HelloHTML**.  
-  
-3.  Przetestuj dwa nowe przyciski, aby zobaczyć, jak działają.  
-  
- Teraz można przetestować metody, które nie są częścią interfejsu użytkownika.  
-  
-1.  Zaznacz formantu, więc obramowania jest aktywny.  
-  
-2.  Na **kontroli** menu, kliknij przycisk **wywołania metody**.  
-  
- Metody z listy **nazwę metody** metod, które można wywołać kontenera: `MethodInvoked` i `GoToURL`. Wszystkie inne metody są kontrolowane przez interfejs użytkownika.  
-  
-1.  Wybierz metodę do wywołania, a następnie kliknij przycisk `Invoke` wyświetlany komunikat metody lub przejdź do www.microsoft.com.  
-  
-2.  W **wywołania metody** okno dialogowe, kliknij przycisk **Zamknij**.  
-  
- Aby dowiedzieć się więcej na temat różnych elementów i plików, które tworzą formantu ATL DHTML, zobacz [określający elementy projektu kontroli DHTML](../atl/identifying-the-elements-of-the-dhtml-control-project.md).  
-  
-## <a name="see-also"></a>Zobacz też  
- [Obsługa dla DHTML](../atl/atl-support-for-dhtml-controls.md)
+# <a name="testing-the-modified-atl-dhtml-control"></a>Testowanie zmodyfikowanej kontrolki ATL DHTML
+
+Wypróbuj nowe kontrolki, aby zobaczyć, jak działa teraz.
+
+#### <a name="to-build-and-test-the-modified-control"></a>Tworzenie i testowanie zmodyfikowanej kontrolki
+
+1. Skompiluj ponownie projekt i otworzyć ją w kontenerze testowym. Zobacz [testowanie właściwości i zdarzeń za pomocą kontenera testu](../mfc/testing-properties-and-events-with-test-container.md) informacji na temat dostępu do kontenera testu.
+
+     Zmień rozmiar kontrolki aby pokazać wszystkie przyciski, którą dodałeś.
+
+2. Sprawdź dwa przyciski, które wstawione przez zmianę kodu HTML. Każdy przycisk ma etykietę, został zidentyfikowany w [modyfikowanie kontrolki DHTML ATL](../atl/modifying-the-atl-dhtml-control.md): **Odśwież** i **HelloHTML**.
+
+3. Przetestuj dwa nowe przyciski, aby zobaczyć, jak działają.
+
+Teraz przetestować metody, które nie są częścią interfejsu użytkownika.
+
+1. Zaznacz formant, więc obramowania została aktywowana.
+
+2. Na **kontroli** menu, kliknij przycisk **wywołania metody**.
+
+Metody na liście etykietą **nazwę metody** to metody, które można wywołać kontenera: `MethodInvoked` i `GoToURL`. Wszystkie inne metody są kontrolowane przez interfejs użytkownika.
+
+1. Wybierz metodę do wywołania, a następnie kliknij przycisk `Invoke` Aby wyświetlić okno komunikatu metody lub przejdź do www.microsoft.com.
+
+2. W **wywołania metody** okno dialogowe, kliknij przycisk **Zamknij**.
+
+Aby dowiedzieć się więcej na temat różnych elementów i plików, które tworzą kontrolki ATL DHTML, zobacz [identyfikowanie elementów projektu kontrolki DHTML](../atl/identifying-the-elements-of-the-dhtml-control-project.md).
+
+## <a name="see-also"></a>Zobacz też
+
+[Obsługa kontrolki DHTML](../atl/atl-support-for-dhtml-controls.md)
 

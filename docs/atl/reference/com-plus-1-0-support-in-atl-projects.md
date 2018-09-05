@@ -1,5 +1,5 @@
 ---
-title: Model COM + 1.0 obsługuje w projektach ATL | Dokumentacja firmy Microsoft
+title: COM + 1.0 pomocy technicznej w projektach ATL | Dokumentacja firmy Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,28 +16,30 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e3440d3ed2e3244b35588d5c07fd181f1ad2f082
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 06a9e6cd4a374f0941b360a3f8f24f61e4b46a6a
+ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32359360"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43763301"
 ---
-# <a name="com-10-support-in-atl-projects"></a>Model COM + 1.0 obsługuje w projekty ATL
-Można użyć [Kreator projektu ATL](../../atl/reference/creating-an-atl-project.md) do utworzenia projektu z obsługą podstawowe składniki modelu COM + 1.0.  
-  
- COM + 1.0 jest służy do opracowywania aplikacji rozproszonych na podstawie składnika. Wdrażania i zarządzania nimi te aplikacje są również zapewnia infrastrukturę czasu wykonywania.  
-  
- W przypadku wybrania **obsługi modelu COM + 1.0** pole wyboru, Kreator modyfikuje skryptu kompilacji w kroku łącza. W szczególności modelu COM + 1.0 projektu łącza do następujące biblioteki:  
-  
--   Comsvcs.lib  
-  
--   Mtxguid.lib  
-  
- W przypadku wybrania **obsługi modelu COM + 1.0** pole wyboru, możesz również wybrać **obsługę rejestratora składników**. Rejestratora składników umożliwia wyświetlenie listy składników, zarejestrować komponenty lub wyrejestrować komponenty (indywidualnie lub jednorazowo) obiektu modelu COM + 1.0.  
-  
-## <a name="see-also"></a>Zobacz też  
- [Podstawowe informacje na temat ATL COM — obiekty](../../atl/fundamentals-of-atl-com-objects.md)   
- [Programowanie za pomocą ALT i C Run-Time kodu](../../atl/programming-with-atl-and-c-run-time-code.md)   
- [Domyślne konfiguracje projektu ATL](../../atl/reference/default-atl-project-configurations.md)
+# <a name="com-10-support-in-atl-projects"></a>COM + 1.0 pomocy technicznej w projektach ATL
+
+Możesz użyć [Kreator projektów ATL](../../atl/reference/creating-an-atl-project.md) Tworzenie projektu z podstawowej pomocy technicznej dla składników modelu COM + 1.0.
+
+COM + 1.0 jest przeznaczona do tworzenia aplikacji rozproszonych oparty na komponentach. Wdrażanie i zarządzanie nimi te aplikacje są również zapewnia infrastrukturę czasu wykonywania.
+
+Jeśli wybierzesz **Obsługa modelu COM + 1.0** pole wyboru, Kreator modyfikuje skryptu kompilacji w kroku łącza. W szczególności modelu COM + 1.0 projektu linki do następujących bibliotek:
+
+- Comsvcs.lib
+
+- Mtxguid.lib
+
+Jeśli wybierzesz **Obsługa modelu COM + 1.0** pole wyboru, możesz również wybrać **rejestratora składników obsługi**. Rejestratora składników umożliwia obiektu modelu COM + 1.0 listę składników, rejestrować składników lub wyrejestrować komponenty (pojedynczo lub wszystkie na raz).
+
+## <a name="see-also"></a>Zobacz też
+
+[Podstawowe informacje na temat obiektów COM ATL](../../atl/fundamentals-of-atl-com-objects.md)   
+[Programowanie za pomocą kodu ATL i C Run-Time](../../atl/programming-with-atl-and-c-run-time-code.md)   
+[Domyślne konfiguracje projektu ATL](../../atl/reference/default-atl-project-configurations.md)
 

@@ -16,24 +16,26 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7f3e2663fa2e8c39bbd8b618d279a49b7eb29233
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: f8712f5ab169838e94aa743a29dd4b73e5b0979f
+ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32357016"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43762759"
 ---
 # <a name="implementing-a-window"></a>Implementowanie okna
-Klasa [CWindowImpl](../atl/reference/cwindowimpl-class.md) umożliwia wdrożenie okna i obsługiwać jego wiadomości. Komunikat przekazywanie w ATL jest oparta na mapy komunikatów. W tej sekcji opisano:  
-  
--   Jak [Dodaj program obsługi komunikatów](../atl/adding-an-atl-message-handler.md) do formantu.  
-  
--   Co [mapy komunikatów](../atl/message-maps-atl.md) są i sposobu ich używania.  
-  
--   Składnia [funkcji obsługi komunikatów](../atl/message-handler-functions.md).  
-  
--   Jak [zaimplementować okno z CWindowImpl](../atl/implementing-a-window-with-cwindowimpl.md).  
-  
-## <a name="see-also"></a>Zobacz też  
- [Klasy okien](../atl/atl-window-classes.md)
+
+Klasa [CWindowImpl](../atl/reference/cwindowimpl-class.md) pozwala na implementowanie okna i obsługiwać swoje wiadomości. Komunikat pierwszemu w ATL opiera się na mapie komunikatów. W tej sekcji opisano:
+
+- Jak [dodać program obsługi komunikatów](../atl/adding-an-atl-message-handler.md) do formantu.
+
+- Co [komunikatu mapy](../atl/message-maps-atl.md) są i jak z nich korzystać.
+
+- Składnia [funkcje obsługi komunikatów](../atl/message-handler-functions.md).
+
+- Jak [Implementowanie okna przy użyciu klasy CWindowImpl](../atl/implementing-a-window-with-cwindowimpl.md).
+
+## <a name="see-also"></a>Zobacz też
+
+[Klasy okien](../atl/atl-window-classes.md)
 

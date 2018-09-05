@@ -14,39 +14,46 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6fcfffcd9508876399b30238cac0b4f65c92c733
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 04bad7c90869eb5a5b87a465b175e4ed3f0b9991
+ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43206504"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43751514"
 ---
 # <a name="object-status-macros"></a>Makra stanu obiektów
-To makro ustawia flagi należących do kontrolki ActiveX.  
-  
-|||  
-|-|-|  
+
+To makro ustawia flagi należących do kontrolki ActiveX.
+
+|||
+|-|-|
 |[DECLARE_OLEMISC_STATUS](#declare_olemisc_status)|Używane w kontrolkach ActiveX biblioteki ATL, można ustawić flagi OLEMISC.|  
 
-## <a name="requirements"></a>Wymagania  
- **Nagłówek:** atlcom.h  
+## <a name="requirements"></a>Wymagania
 
-##  <a name="declare_olemisc_status"></a>  DECLARE_OLEMISC_STATUS  
- Używane w kontrolkach ActiveX biblioteki ATL, można ustawić flagi OLEMISC.  
-  
+**Nagłówek:** atlcom.h  
+
+##  <a name="declare_olemisc_status"></a>  DECLARE_OLEMISC_STATUS
+
+Używane w kontrolkach ActiveX biblioteki ATL, można ustawić flagi OLEMISC.
+
 ```
 DECLARE_OLEMISC_STATUS( miscstatus )
-```  
-  
-### <a name="parameters"></a>Parametry  
- *miscstatus*  
- Wszystkich odpowiednich OLEMISC flagi.  
-  
-### <a name="remarks"></a>Uwagi  
- To makro jest używane do ustawiania flagi OLEMISC dla formantu ActiveX. Zapoznaj się [IOleObject::GetMiscStatus](/windows/desktop/api/oleidl/nf-oleidl-ioleobject-getmiscstatus) Aby uzyskać więcej informacji.  
-  
-### <a name="example"></a>Przykład  
- [!code-cpp[NVC_ATL_Windowing#124](../../atl/codesnippet/cpp/object-status-macros_1.h)]  
-  
-## <a name="see-also"></a>Zobacz też  
- [Makra](../../atl/reference/atl-macros.md)
+```
+
+### <a name="parameters"></a>Parametry
+
+*miscstatus*  
+Wszystkich odpowiednich OLEMISC flagi.
+
+### <a name="remarks"></a>Uwagi
+
+To makro jest używane do ustawiania flagi OLEMISC dla formantu ActiveX. Zapoznaj się [IOleObject::GetMiscStatus](/windows/desktop/api/oleidl/nf-oleidl-ioleobject-getmiscstatus) Aby uzyskać więcej informacji.
+
+### <a name="example"></a>Przykład
+
+[!code-cpp[NVC_ATL_Windowing#124](../../atl/codesnippet/cpp/object-status-macros_1.h)]
+
+## <a name="see-also"></a>Zobacz też
+
+[Makra](../../atl/reference/atl-macros.md)

@@ -21,59 +21,61 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 314b943b171d43f8b1723321ac3a942ed33fd100
-ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
+ms.openlocfilehash: d5a6ade991e3a2def588bdd3139cbea8089d3124
+ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/06/2018
-ms.locfileid: "37883469"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43758014"
 ---
 # <a name="date-type"></a>DATE — typ
-Typ daty jest implementowany przy użyciu 8-bajtowa liczba zmiennoprzecinkowa. Dni są reprezentowane przez zwiększa liczbę całkowitą z zakresu, począwszy od 30 grudnia 1899, o północy czasu zero. Wartości godziny są wyrażone jako wartość bezwzględną liczby część ułamkową liczby. W poniższej tabeli przedstawiono kilka dat wraz z ich daty typ numeryczny ekwiwalent:  
-  
-|Data i godzina|Reprezentacja|  
-|-------------------|--------------------|  
-|30 grudnia 1899, północy|0.00|  
-|1 stycznia 1900 r. północy|2.00|  
-|4 stycznia 1900 północy|5.00|  
-|4 stycznia 1900 godziny 6: 00|5.25|  
-|4 stycznia 1900 południe|5.50|  
-|4 stycznia 1900 r. o 9|5.875|  
-  
- Typ daty daty, także `COleDateTime` klasy reprezentuje daty i godziny, jako klasyczny wiersz numer. `COleDateTime` Klasa zawiera kilka metody do manipulowania wartości daty, w tym konwersji do i z innych typowych formatów daty.  
-  
- Podczas pracy z tych formatów daty i godziny w usłudze Automation, należy zauważyć następujące kwestie:  
-  
--   Daty są określane w czasie lokalnym; należy przeprowadzić synchronizację ręcznie podczas pracy z datami w różnych strefach czasowych.  
-  
--   Typy daty nie uwzględniają czasu letniego.  
-  
--   Oś czasu daty staje się nieciągły dla wartości daty mniejszą od 0 (przed 30 grudnia 1899). Jest to spowodowane część liczby całkowitej wartość daty jest traktowany jako podpisany, podczas gdy część ułamkową jest traktowany jako nieoznaczony. Innymi słowy część liczby całkowitej wartości typu date może nastąpić dodatnie lub ujemne, część ułamkowa wartości typu date jest zawsze dodawany do wartości typu date ogólną logiczne. W poniższej tabeli przedstawiono kilka przykładów:  
-  
-|Data i godzina|Reprezentacja|  
-|-------------------|--------------------|  
-|27 grudnia 1899, północy|-3.00|  
-|28 grudnia 1899, południe|-2.50|  
-|28 grudnia 1899, północy|-2.00|  
-|29 grudnia 1899, północy|-1.00|  
-|30 grudnia 1899, 18: 00|-0.75|  
-|30 grudnia 1899, południe|-0.50|  
-|30 grudnia 1899, godziny 6: 00|-0.25|  
-|30 grudnia 1899, północy|0.00|  
-|30 grudnia 1899, godziny 6: 00|0.25|  
-|30 grudnia 1899, południe|0.50|  
-|30 grudnia 1899, 18: 00|0.75|  
-|Do 31 grudnia 1899, północy|1.00|  
-|1 stycznia 1900 r. północy|2.00|  
-|1 stycznia 1900 południe|2.50|  
-|2 stycznia 1900 północy|3.00|  
-  
+
+Typ daty jest implementowany przy użyciu 8-bajtowa liczba zmiennoprzecinkowa. Dni są reprezentowane przez zwiększa liczbę całkowitą z zakresu, począwszy od 30 grudnia 1899, o północy czasu zero. Wartości godziny są wyrażone jako wartość bezwzględną liczby część ułamkową liczby. W poniższej tabeli przedstawiono kilka dat wraz z ich daty typ numeryczny ekwiwalent:
+
+|Data i godzina|Reprezentacja|
+|-------------------|--------------------|
+|30 grudnia 1899, północy|0.00|
+|1 stycznia 1900 r. północy|2.00|
+|4 stycznia 1900 północy|5.00|
+|4 stycznia 1900 godziny 6: 00|5.25|
+|4 stycznia 1900 południe|5.50|
+|4 stycznia 1900 r. o 9|5.875|
+
+Typ daty daty, także `COleDateTime` klasy reprezentuje daty i godziny, jako klasyczny wiersz numer. `COleDateTime` Klasa zawiera kilka metody do manipulowania wartości daty, w tym konwersji do i z innych typowych formatów daty.
+
+Podczas pracy z tych formatów daty i godziny w usłudze Automation, należy zauważyć następujące kwestie:
+
+- Daty są określane w czasie lokalnym; należy przeprowadzić synchronizację ręcznie podczas pracy z datami w różnych strefach czasowych.
+
+- Typy daty nie uwzględniają czasu letniego.
+
+- Oś czasu daty staje się nieciągły dla wartości daty mniejszą od 0 (przed 30 grudnia 1899). Jest to spowodowane część liczby całkowitej wartość daty jest traktowany jako podpisany, podczas gdy część ułamkową jest traktowany jako nieoznaczony. Innymi słowy część liczby całkowitej wartości typu date może nastąpić dodatnie lub ujemne, część ułamkowa wartości typu date jest zawsze dodawany do wartości typu date ogólną logiczne. W poniższej tabeli przedstawiono kilka przykładów:
+
+|Data i godzina|Reprezentacja|
+|-------------------|--------------------|
+|27 grudnia 1899, północy|-3.00|
+|28 grudnia 1899, południe|-2.50|
+|28 grudnia 1899, północy|-2.00|
+|29 grudnia 1899, północy|-1.00|
+|30 grudnia 1899, 18: 00|-0.75|
+|30 grudnia 1899, południe|-0.50|
+|30 grudnia 1899, godziny 6: 00|-0.25|
+|30 grudnia 1899, północy|0.00|
+|30 grudnia 1899, godziny 6: 00|0.25|
+|30 grudnia 1899, południe|0.50|
+|30 grudnia 1899, 18: 00|0.75|
+|Do 31 grudnia 1899, północy|1.00|
+|1 stycznia 1900 r. północy|2.00|
+|1 stycznia 1900 południe|2.50|
+|2 stycznia 1900 północy|3.00|
+
 > [!CAUTION]
->  Należy pamiętać, że ponieważ 6:00 AM zawsze jest reprezentowany przez wartość ułamkowa 0,25 niezależnie od tego, czy (po 30 grudnia 1899) liczbę całkowitą przedstawiającą dzień jest dodatnia lub ujemna (przed 30 grudnia 1899), prosty zmiennoprzecinkowy porównania punktu błędnie posortować Dowolna data reprezentujący 6:00:00 w dniu starszych niż 12/30/1899 *później* niż wartość typu DATE reprezentującą 7:00:00 tego samego dnia.  
-  
- Więcej informacji na temat problemów związanych z DATĄ i `COleDateTime` typów można znaleźć w obszarze [COleDateTime, klasa](../atl-mfc-shared/reference/coledatetime-class.md) i [Data i godzina: Obsługa automatyzacji](../atl-mfc-shared/date-and-time-automation-support.md).  
-  
-## <a name="see-also"></a>Zobacz też  
- [Data i godzina](../atl-mfc-shared/date-and-time.md)   
- [COleDateTime, klasa](../atl-mfc-shared/reference/coledatetime-class.md)
+>  Należy pamiętać, że ponieważ 6:00 AM zawsze jest reprezentowany przez wartość ułamkowa 0,25 niezależnie od tego, czy (po 30 grudnia 1899) liczbę całkowitą przedstawiającą dzień jest dodatnia lub ujemna (przed 30 grudnia 1899), prosty zmiennoprzecinkowy porównania punktu błędnie posortować Dowolna data reprezentujący 6:00:00 w dniu starszych niż 12/30/1899 *później* niż wartość typu DATE reprezentującą 7:00:00 tego samego dnia.
+
+Więcej informacji na temat problemów związanych z DATĄ i `COleDateTime` typów można znaleźć w obszarze [COleDateTime, klasa](../atl-mfc-shared/reference/coledatetime-class.md) i [Data i godzina: Obsługa automatyzacji](../atl-mfc-shared/date-and-time-automation-support.md).
+
+## <a name="see-also"></a>Zobacz też
+
+[Data i godzina](../atl-mfc-shared/date-and-time.md)   
+[COleDateTime, klasa](../atl-mfc-shared/reference/coledatetime-class.md)
 

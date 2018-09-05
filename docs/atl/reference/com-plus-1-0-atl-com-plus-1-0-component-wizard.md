@@ -14,49 +14,51 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 158d279106538fd059252f8e8dcd19aeb6a20f6d
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 8b70589829ec75712eedde86b71d90f0eec46fba
+ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43198195"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43754669"
 ---
 # <a name="com-10-atl-com-10-component-wizard"></a>COM + 1.0, Kreator składnika ATL COM + 1.0
-Użyj tej strony, ATL COM + 1.0 składnika kreatora, aby określić typ interfejsu i dodatkowe interfejsy, które są obsługiwane.  
-  
- Aby uzyskać więcej informacji na temat projektów ATL i klasy ATL COM, zobacz [ATL COM pulpitu składniki](../../atl/atl-com-desktop-components.md).  
-  
- **Interface**  
- Wskazuje typ interfejsu, który obsługuje obiektu. Domyślnie obiekt obsługuje podwójnego interfejsu.  
-  
-|Opcja|Opis|  
-|------------|-----------------|  
-|**Dual**|Określa, że obiekt obsługuje interfejs podwójny (jego vtable ma niestandardowy interfejs funkcji i późne powiązania `IDispatch` metody). Umożliwia klientom COM i kontrolery automatyzacji dostępu do obiektu.|  
-|**Niestandardowy**|Określa, że obiekt obsługuje interfejs niestandardowy (jego vtable ma niestandardowy interfejs funkcji). Niestandardowy interfejs może być szybsza niż podwójnego interfejsu, szczególnie w granicach procesu.<br /><br /> -   **Automatyzacja zgodne** dodaje obsługę automatyzacji do niestandardowego interfejsu. W przypadku projektów opartego na atrybutach ustawia **oleautomation —** atrybut w klasie coclass.|  
-  
- **Kolejkowane**  
- Wskazuje, że klientów można wywołać ten składnik asynchronicznie przy użyciu kolejek komunikatów. Dodaje niestandardowy — makro składnika opartego na atrybutach (TLBATTR_QUEUEABLE, 0), plik .h (opartego na atrybutach projektów) lub pliku .idl (nonattributed projektów).  
-  
- **Obsługa**  
- Wskazuje, dodatkową obsługę kontroli obiektu i obsługi błędów.  
-  
-|Opcja|Opis|  
-|------------|-----------------|  
-|**Interfejs ISupportErrorInfo**|Tworzy obsługę [Interfejs ISupportErrorInfo](../../atl/reference/isupporterrorinfoimpl-class.md) interfejsu, obiekt może zwrócić informacje o błędzie do klienta.|  
-|**IObjectControl**|Zapewnia dostęp do tych trzech obiektu [IObjectControl](/windows/desktop/api/comsvcs/nn-comsvcs-iobjectcontrol) metody: [Aktywuj](/windows/desktop/api/comsvcs/nf-comsvcs-iobjectcontrol-activate), [CanBePooled](/windows/desktop/api/comsvcs/nf-comsvcs-iobjectcontrol-canbepooled), i [Dezaktywuj](/windows/desktop/api/comsvcs/nf-comsvcs-iobjectcontrol-deactivate).|  
-|**IObjectConstruct**|Tworzy obsługę [IObjectConstruct](/windows/desktop/api/comsvcs/nn-comsvcs-iobjectconstruct) interfejsu, aby zarządzać przekazywanie parametrów przy użyciu innych metod lub obiektów.|  
-  
- **Transakcja**  
- Wskazuje, że obiekt obsługuje transakcji. Zawiera mtxattr.h pliku w pliku .idl (nonattributed projektów).  
-  
-|Opcja|Opis|  
-|------------|-----------------|  
-|**Obsługiwane**|Określa, że obiekt jest nigdy nie głównego strumienia transakcji, dodając custom(TLBATTR_TRANS_SUPPORTED,0) — makro atrybutu składnika plik .h (opartego na atrybutach projektów) lub pliku .idl (nonattributed projektów).|  
-|**Wymagane**|Określa, że obiekt może być, lub może nie być głównego strumienia transakcji, dodając custom(TLBATTR_TRANS_REQUIRED,0) — makro atrybutu składnika plik .h (opartego na atrybutach projektów) lub pliku .idl (nonattributed projektów).|  
-|**Nie jest obsługiwany**|Określa, że obiekt wyklucza transakcji. Plik .h (opartego na atrybutach projektów) lub pliku .idl (nonattributed projektów), dodaje custom(TLBATTR_TRANS_NOTSUPP,0) — makro atrybutu składnika.|  
-|**Wymagane nowe**|Określa, że obiekt jest zawsze głównego strumienia transakcji, dodając custom(TLBATTR_TRANS_REQNEW,0) — makro atrybutu składnika plik .h (opartego na atrybutach projektów) lub pliku .idl (nonattributed projektów).|  
-  
-## <a name="see-also"></a>Zobacz też  
- [Kreator 1.0 składnika ATL COM +](../../atl/reference/atl-com-plus-1-0-component-wizard.md)   
- [Składnik ATL COM + 1.0](../../atl/reference/adding-an-atl-com-plus-1-0-component.md)
+
+Użyj tej strony, ATL COM + 1.0 składnika kreatora, aby określić typ interfejsu i dodatkowe interfejsy, które są obsługiwane.
+
+Aby uzyskać więcej informacji na temat projektów ATL i klasy ATL COM, zobacz [ATL COM pulpitu składniki](../../atl/atl-com-desktop-components.md).
+
+**Interface**  
+Wskazuje typ interfejsu, który obsługuje obiektu. Domyślnie obiekt obsługuje podwójnego interfejsu.
+
+|Opcja|Opis|
+|------------|-----------------|
+|**Dual**|Określa, że obiekt obsługuje interfejs podwójny (jego vtable ma niestandardowy interfejs funkcji i późne powiązania `IDispatch` metody). Umożliwia klientom COM i kontrolery automatyzacji dostępu do obiektu.|
+|**Niestandardowy**|Określa, że obiekt obsługuje interfejs niestandardowy (jego vtable ma niestandardowy interfejs funkcji). Niestandardowy interfejs może być szybsza niż podwójnego interfejsu, szczególnie w granicach procesu.<br /><br /> -   **Automatyzacja zgodne** dodaje obsługę automatyzacji do niestandardowego interfejsu. W przypadku projektów opartego na atrybutach ustawia **oleautomation —** atrybut w klasie coclass.|
+
+**Kolejkowane**  
+Wskazuje, że klientów można wywołać ten składnik asynchronicznie przy użyciu kolejek komunikatów. Dodaje niestandardowy — makro składnika opartego na atrybutach (TLBATTR_QUEUEABLE, 0), plik .h (opartego na atrybutach projektów) lub pliku .idl (nonattributed projektów).
+
+**Obsługa**  
+Wskazuje, dodatkową obsługę kontroli obiektu i obsługi błędów.
+
+|Opcja|Opis|
+|------------|-----------------|
+|**Interfejs ISupportErrorInfo**|Tworzy obsługę [Interfejs ISupportErrorInfo](../../atl/reference/isupporterrorinfoimpl-class.md) interfejsu, obiekt może zwrócić informacje o błędzie do klienta.|
+|**IObjectControl**|Zapewnia dostęp do tych trzech obiektu [IObjectControl](/windows/desktop/api/comsvcs/nn-comsvcs-iobjectcontrol) metody: [Aktywuj](/windows/desktop/api/comsvcs/nf-comsvcs-iobjectcontrol-activate), [CanBePooled](/windows/desktop/api/comsvcs/nf-comsvcs-iobjectcontrol-canbepooled), i [Dezaktywuj](/windows/desktop/api/comsvcs/nf-comsvcs-iobjectcontrol-deactivate).|
+|**IObjectConstruct**|Tworzy obsługę [IObjectConstruct](/windows/desktop/api/comsvcs/nn-comsvcs-iobjectconstruct) interfejsu, aby zarządzać przekazywanie parametrów przy użyciu innych metod lub obiektów.|
+
+**Transakcja**  
+Wskazuje, że obiekt obsługuje transakcji. Zawiera mtxattr.h pliku w pliku .idl (nonattributed projektów).
+
+|Opcja|Opis|
+|------------|-----------------|
+|**Obsługiwane**|Określa, że obiekt jest nigdy nie głównego strumienia transakcji, dodając custom(TLBATTR_TRANS_SUPPORTED,0) — makro atrybutu składnika plik .h (opartego na atrybutach projektów) lub pliku .idl (nonattributed projektów).|
+|**Wymagane**|Określa, że obiekt może być, lub może nie być głównego strumienia transakcji, dodając custom(TLBATTR_TRANS_REQUIRED,0) — makro atrybutu składnika plik .h (opartego na atrybutach projektów) lub pliku .idl (nonattributed projektów).|
+|**Nie jest obsługiwany**|Określa, że obiekt wyklucza transakcji. Plik .h (opartego na atrybutach projektów) lub pliku .idl (nonattributed projektów), dodaje custom(TLBATTR_TRANS_NOTSUPP,0) — makro atrybutu składnika.|
+|**Wymagane nowe**|Określa, że obiekt jest zawsze głównego strumienia transakcji, dodając custom(TLBATTR_TRANS_REQNEW,0) — makro atrybutu składnika plik .h (opartego na atrybutach projektów) lub pliku .idl (nonattributed projektów).|
+
+## <a name="see-also"></a>Zobacz też
+
+[Kreator 1.0 składnika ATL COM +](../../atl/reference/atl-com-plus-1-0-component-wizard.md)   
+[Składnik ATL COM + 1.0](../../atl/reference/adding-an-atl-com-plus-1-0-component.md)
 

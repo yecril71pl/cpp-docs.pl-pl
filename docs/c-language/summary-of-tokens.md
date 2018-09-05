@@ -12,62 +12,48 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 936807fef6b74ccb081bf15d7314da14f064fb7a
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: e331661fc011fe0ab98a762f5c7081c35f06363c
+ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32389117"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43758482"
 ---
 # <a name="summary-of-tokens"></a>Podsumowanie tokenów
-*Token*:  
- *keyword*  
-  
- *Identyfikator*  
-  
- *Stała*  
-  
- *literał ciągu*  
-  
- *operator*  
-  
- `punctuator`  
-  
- *Przetwarzanie wstępne token*:  
- *Nazwa nagłówka*  
-  
- *Identyfikator*  
-  
- *numer PZ*  
-  
- *Stała znakowa*  
-  
- *literał ciągu*  
-  
- *znak interpunkcyjny — operator*  
-  
- każdy znak niebiałym znakiem, która nie może być jedną z powyższych  
-  
- *Nazwa nagłówka*:  
- **\<**  *Ścieżka spec***> "***specyfikacji ścieżki***"**   
-  
- *Ścieżka spec*:  
- Ścieżka pliku prawnych  
-  
- *numer PZ*:  
- *digit*  
-  
- **.** *digit*  
-  
- *PZ cyfry*  
-  
- *numer PZ cyfrą*  
-  
- *numer PZ***e***logowania*   
-  
- *numer PZ***E***logowania*   
-  
- *numer PZ***.**   
-  
-## <a name="see-also"></a>Zobacz też  
- [Gramatyka leksykalna](../c-language/lexical-grammar.md)
+
+*Token*:<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*Słowo kluczowe*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*Identyfikator*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*Stałe*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*literał ciągu*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*Operator*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*znak interpunkcyjny*
+
+*Przetwarzanie wstępne token*:<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*Nazwa nagłówka*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*Identyfikator*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*numer strony*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*Stała znakowa*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*literał ciągu*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*znak interpunkcyjny — operator*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;każdy znak niebędący odstępem, który nie może być jedną z powyższych
+
+*Nazwa nagłówka*:<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**\<**  *PATH-spec*  **>**<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**"***specyfikacji ścieżki***"** 
+
+*PATH-spec*:<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;Ścieżka pliku prawne
+
+*numer strony*:<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*cyfra*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**.** *digit*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*numer strony* *cyfra* <br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*numer strony* *nie cyfrą*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*numer strony***e***logowania* <br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*numer strony***E***logowania* <br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*numer strony***.** 
+
+## <a name="see-also"></a>Zobacz też
+
+[Gramatyka leksykalna](../c-language/lexical-grammar.md)

@@ -18,85 +18,83 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6979bb90debc1734ccadf40b5d0e814d3c28c1ac
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: cb058b9984cfcd34669f2691fa20245c14d49344
+ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32390564"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43752290"
 ---
 # <a name="function-prototypes"></a>Prototypy funkcji
-Deklaracja funkcji poprzedza definicji funkcji i określa nazwę, typ zwracany Klasa magazynu i inne atrybuty funkcji. Jako prototyp deklaracji funkcji należy również określić typy i identyfikatory dla argumentów funkcji.  
-  
-## <a name="syntax"></a>Składnia  
- `declaration`:  
- *Specyfikatory deklaracji atrybutu seq* opt*init deklarator listy* opt **;**  
-  
- /\* *Atrybut seq* opt jest Specific Microsoft * /  
-  
- *Specyfikatory deklaracji*:  
- *Specyfikatory deklaracji Specyfikator klasy magazynu* opcjonalnych  
-  
- *Specyfikatory deklaracji specyfikatora typu* opcjonalnych  
-  
- *Specyfikatory deklaracji kwalifikator typu* opcjonalnych  
-  
- *init-declarator-list*:  
- *init-declarator*  
-  
- *init — deklarator — lista***,***init deklarator*  
-  
- *init-declarator*:  
- *declarator*  
-  
- *deklarator = inicjatora*  
-  
- `declarator`:  
- *wskaźnik* opt*bezpośrednio deklarator*  
-  
- *deklarator bezpośrednio*: /\* deklarator funkcji \*/  
- *deklarator bezpośrednio***(***listy parametrów typu***)** / * nowy styl deklarator \*/  
-  
- *deklarator bezpośrednio***(***listy identyfikatorów* opt **)** / * przestarzały styl deklarator \*/  
-  
- Prototyp ma tego samego formularza jako definicji funkcji, z wyjątkiem, że jest zakończona średnikiem bezpośrednio po nawiasie zamykającym i w związku z tym ma treść nie. W obu przypadkach zwracany typ należy uzgodnić z zwracany typ określony w definicji funkcji.  
-  
- Prototypy funkcji są ważne następujące zastosowania:  
-  
--   Określają typ zwracany dla funkcji zwracających typów innych niż `int`. Chociaż funkcje, które zwracają `int` wartości nie wymagają prototypy, zaleca się prototypów.  
-  
--   Bez ukończenia prototypy konwersje standardowe zostały wprowadzone, ale nie są podejmowane próby do sprawdzenia typu lub liczbą argumentów z liczbą parametrów.  
-  
--   Prototypy są używane do zainicjowania wskaźniki do funkcji zdefiniowaniem tych funkcji.  
-  
--   Lista parametrów służy do sprawdzania zgodności argumentów w wywołaniu funkcji z parametrami w definicji funkcji.  
-  
- Przekonwertowana typ każdego parametru określa interpretacji argumenty, które powoduje wywołanie funkcji na stosie. Niezgodność typu argumentu i parametr może spowodować argumenty na stosie, aby zostać błędnie zinterpretowane. Na przykład na komputerze 16-bitowych, jeśli wskaźnik 16-bitowych jest przekazywany jako argument, następnie zadeklarowany jako **długi** parametru pierwszy 32-bitowy na stosie będą interpretowane jako **długi** parametru. Ten błąd stwarza problemy nie tylko z **długi** parametru, ale wszystkie parametry, które po nim. Przez zadeklarowanie prototypy funkcji pełną dla wszystkich funkcji, można wykrywać błędy tego typu.  
-  
- Prototyp ustanawia atrybuty funkcji, dzięki czemu można sprawdzić wywołania funkcji, które poprzedzać jego definicji (lub wystąpić w innych plikach źródłowych) typ argumentu i niezgodności zwracanego typu. Na przykład jeśli określisz **statycznych** Specyfikator klasy magazynu w prototyp, należy także określić **statycznej** klasy magazynu w definicji funkcji.  
-  
- Zakończenie deklaracji parametrów (`int a`) można łączyć z deklaratory abstrakcyjne języka (`int`) w tej samej deklaracji. Na przykład następujące oświadczenie jest dozwolony:  
-  
-```  
-int add( int a, int );  
-```  
-  
- Prototyp może zawierać typ i identyfikator dla każdego wyrażenie, które jest przekazywany jako argument. Jednak takie identyfikatory mają zakres tylko do końca deklaracji. Prototyp można również odzwierciedlają fakt, że liczba argumentów jest zmienna lub czy są przekazywane bez argumentów. Bez tych listy niezgodności może nie są ujawniane, dlatego kompilator nie może wygenerować komunikaty diagnostyczne ich dotyczących. Zobacz [argumenty](../c-language/arguments.md) Aby uzyskać więcej informacji na temat sprawdzania typu.  
-  
- Zakres prototypu w kompilatorze C firmy Microsoft jest standardem ANSI teraz podczas kompilowania za pomocą /Za — opcja kompilatora. Oznacza to, że w przypadku `struct` lub **Unii** znaczniku prototyp, tag jest wprowadzana w tym zakresie, a nie w zakresie globalnym. Na przykład podczas kompilowania za pomocą /Za zgodność ANSI, nigdy nie można wywołać tej funkcji bez uzyskiwania błąd niezgodności typów:  
-  
-```  
-void func1( struct S * );  
-```  
-  
- Aby rozwiązać problem kodu, zdefiniuj lub zadeklarować `struct` lub **Unii** w zakresie globalnym przed prototypu funkcji:  
-  
-```  
-struct S;  
-void func1( struct S * );  
-```  
-  
- W obszarze /Ze tag wprowadzona w zakresie globalnym.  
-  
-## <a name="see-also"></a>Zobacz też  
- [Funkcje](../c-language/functions-c.md)
+
+Deklaracja funkcji poprzedza definicji funkcji i określa nazwę, typ zwracany, klasę magazynu i innych atrybutów funkcji. Jako prototyp, deklaracji funkcji należy również określić typy i identyfikatory dla argumentów funkcji.
+
+## <a name="syntax"></a>Składnia
+
+*Deklaracja*:<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*Specyfikatory deklaracji* *atrybutu seq*<sub>zoptymalizowany pod kątem</sub> *init-declarator-list*<sub>zoptymalizowany pod kątem</sub> **;**
+
+/\* *Atrybut seq*<sub>zoptymalizowany pod kątem</sub> jest Specific dla Microsoft \*/
+
+*Specyfikatory deklaracji*:<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*Storage-class-specifier* *specyfikatory deklaracji*<sub>zoptymalizowany pod kątem</sub> <br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*Specyfikator typu* *specyfikatory deklaracji*<sub>zoptymalizowany pod kątem</sub> <br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*Kwalifikator typu* *specyfikatory deklaracji*<sub>zoptymalizowany pod kątem</sub>
+
+*init-declarator-list*:<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*init-declarator*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*init-declarator-list***,***init-declarator*
+
+*init-declarator*:<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*Deklarator*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*deklarator* **=** *inicjatora*
+
+*deklarator*:<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*wskaźnik*<sub>zoptymalizowany pod kątem</sub> *deklaratora bezpośrednie*
+
+*deklarator bezpośrednio*: /\* deklaratora funkcji \*/<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*deklarator bezpośrednio***(***listy parametrów typu***)**   / \* deklaratora nowy styl       \*/<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*deklarator bezpośrednio***(***listy identyfikatorów*<sub>zoptymalizowany pod kątem</sub> **)**  / \* Obsolete stylu deklarator     \*/
+
+Prototyp ma tę samą postać co definicji funkcji, z tą różnicą, że jest zakończona średnikiem, natychmiast po zamykającym i dlatego ma bez treści. W obu przypadkach typ zwracany należy uzgodnić z typem zwracanym, określonym w definicji funkcji.
+
+Prototypy funkcji ma następujące zastosowania ważnych:
+
+- Określają typ zwracany dla funkcji, które zwracają typów innych niż **int**. Chociaż funkcje zwracają **int** wartości nie wymagają prototypy, prototypy są zalecane.
+
+- Bez pełną prototypy konwersje standardowe są wykonywane, ale nie jest podejmowane próby sprawdź typ lub liczbą argumentów z liczbą parametrów.
+
+- Prototypy są stosowane do inicjalizacji wskaźników do funkcji, zanim funkcje te są zdefiniowane.
+
+- Lista parametrów jest używany do sprawdzania zgodności argumentów w wywołaniu funkcji przy użyciu parametrów w definicji funkcji.
+
+Przekonwertowana typ każdego parametru określa interpretacji argumenty, które wywołanie funkcji miejsca na stosie. Niezgodność typu argumentu i parametru może spowodować argumenty na stosie, aby być niemożliwe. Na przykład na komputerze 16-bitowych, jeśli wskaźnik 16-bitowy jest przekazywany jako argument, następnie zadeklarowane jako **długie** parametru pierwsze 32 bity na stosie są interpretowane jako **długie** parametru. Ten błąd stwarza problemy, które nie tylko w przypadku **długie** parametru, ale wszystkie parametry, które występują po nim. DEKLARUJĄC prototypy funkcji ukończone dla wszystkich funkcji, można wykrywać błędy tego typu.
+
+Prototyp ustanawia atrybutów funkcji tak, aby wywołania do funkcji, które poprzedzają jego definicji (lub wystąpić w innych plikach źródłowych) można sprawdzić typ argumentu i niezgodności zwracanego typu. Na przykład, jeśli określisz **statyczne** — Specyfikator klasy magazynowania w prototyp, należy także określić **statyczne** klasy magazynu w definicji funkcji.
+
+Wykonaj deklaracji parametrów (`int a`) mogą być mieszane z deklaratory abstrakcyjne (`int`) w jednej deklaracji. Na przykład następująca deklaracja jest dozwolony:
+
+```C
+int add( int a, int );
+```
+
+Prototyp może zawierać typ i identyfikator, każde wyrażenie, który jest przekazywany jako argument. Jednak takie identyfikatory mają zakres tylko do końca deklaracji. Prototyp można również odzwierciedlają fakt, że liczba argumentów jest zmienna lub nie nich argumentów. Bez tych listy niezgodności może nie są ujawniane, dzięki czemu kompilator nie może wygenerować komunikaty diagnostyczne dotyczące ich. Zobacz [argumenty](../c-language/arguments.md) więcej informacji na temat sprawdzania typu.
+
+Zakres prototypu w kompilatorze Microsoft C jest teraz ze standardem ANSI, podczas kompilowania za pomocą **/Za** — opcja kompilatora. Oznacza to, że jeśli zadeklarujesz **struktury** lub **Unii** tagu w ciągu prototypów, tagu jest wprowadzana w tym zakresie, a nie w zakresie globalnym. Na przykład podczas kompilowania za pomocą **/Za** zgodności z ANSI, może nigdy nie Wywołaj tę funkcję, bez błąd niezgodności typów:
+
+```C
+void func1( struct S * );
+```
+
+Aby poprawić kod, należy zdefiniować lub deklarowania **struktury** lub **Unii** w zakresie globalnym przed prototypu funkcji:
+
+```C
+struct S;
+void func1( struct S * );
+```
+
+W obszarze **/Ze**, tagu jest nadal wprowadzony w zakresie globalnym.
+
+## <a name="see-also"></a>Zobacz też
+
+[Funkcje](../c-language/functions-c.md)

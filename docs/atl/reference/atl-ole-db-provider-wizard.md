@@ -17,65 +17,68 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 827b46de299341f23d0b799a5ed44b8923bbc182
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: a4bb77489a610d9331378e523b6983dcf14d996c
+ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32357483"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43762982"
 ---
 # <a name="atl-ole-db-provider-wizard"></a>Kreator dostawcy interfejsu OLE DB ATL
-Ten kreator tworzy klasy, które tworzą dostawcy OLE DB.  
-  
-## <a name="remarks"></a>Uwagi  
- Począwszy od programu Visual Studio 2008 skryptu rejestracji utworzone przez tego kreatora zarejestruje jego składniki modelu COM w obszarze **HKEY_CURRENT_USER** zamiast **HKEY_LOCAL_MACHINE**. Aby zmienić to zachowanie, ustaw **składnik rejestru dla wszystkich użytkowników** opcji kreatora ATL.  
-  
- W poniższej tabeli opisano opcje OLE DB Provider Kreator ATL:  
-  
- **Krótka nazwa**  
- Wpisz krótką nazwę dostawcy, który ma zostać utworzony. Pozostałe pola edycji kreatora zostaną wypełnione automatycznie na podstawie w tym miejscu wpisz. Jeśli chcesz, możesz edytować pozostałe pola nazw.  
-  
- **Klasa coclass**  
- Nazwa klasy coclass. Nazwa identyfikatora ProgID zostanie zmieniona na odpowiada podanej nazwie.  
-  
- **Atrybut**  
- Ta opcja określa, czy Kreator utworzy za pomocą atrybutów lub deklaracji szablonu klasy dostawcy. Po wybraniu tej opcji, kreator używa atrybutów zamiast deklaracji szablonu (to jest domyślną opcją w przypadku utworzenia projekcie z atrybutami). Gdy ta opcja zostanie wyłączona, kreator używa deklaracji szablonu zamiast atrybutów (to jest domyślną opcją w przypadku bezatrybutowego projekt został utworzony).  
-  
- Wybranie tej opcji podczas tworzenia projektu bezatrybutowego Kreator wyświetli ostrzeżenie, że projekt zostanie przekonwertowany na projekcie z atrybutami i zapyta, czy kontynuować, lub nie.  
-  
- **Identyfikator programu**  
- Identyfikator ProgID lub identyfikator programowy, to ciąg tekstowy, który aplikacja może używać zamiast identyfikatora GUID. Nazwa identyfikatora ProgID ma formę *NazwaProjektu.nazwaklasycoclass*.  
-  
- **Wersja**  
- Numer wersji dostawcy. Domyślnym ustawieniem jest 1.  
-  
- **Klasa źródła danych**  
- Nazwa klasy źródła danych w postaci C*nazwa_skrócona*źródła.  
-  
- **Źródło danych w pliku .h**  
- Plik nagłówka klasy źródła danych. Możesz zmienić nazwę tego pliku lub wybierz istniejący plik nagłówka.  
-  
- **Klasa sesji**  
- Nazwa klasy sesji formularza C*nazwa_skrócona*sesji.  
-  
- **Plik .h sesji**  
- Plik nagłówka klasy sesji. Możesz zmienić nazwę tego pliku lub wybierz istniejący plik nagłówka.  
-  
- **Polecenie — klasa**  
- Nazwa klasy poleceń formularza C*nazwa_skrócona*polecenia.  
-  
- **Polecenie .h pliku**  
- Plik nagłówka klasy poleceń. Ta nazwa nie może być edytowany i jest zależna od nazwy pliku nagłówka zestawu wierszy.  
-  
- **Klasy zestawu wierszy**  
- Nazwa klasy zestawu wierszy formularza C*nazwa_skrócona*zestawu wierszy.  
-  
- **Zestaw wierszy w pliku .h**  
- Plik nagłówka klasy zestawu wierszy. Możesz zmienić nazwę tego pliku lub wybierz istniejący plik nagłówka.  
-  
- **Plik .cpp zestawu wierszy**  
- Plik implementacji dostawcy. Możesz zmienić nazwę tego pliku lub wybierz istniejący plik implementacji.  
-  
-## <a name="see-also"></a>Zobacz też  
- [Dostawca ATL OLE DB](../../atl/reference/adding-an-atl-ole-db-provider.md)
+
+Ten kreator tworzy klas, które tworzą dostawcy OLE DB.
+
+## <a name="remarks"></a>Uwagi
+
+Począwszy od programu Visual Studio 2008, skrypt rejestrowania generowane przez kreatora, będą rejestrować jego składników modelu COM, w obszarze **HKEY_CURRENT_USER** zamiast **HKEY_LOCAL_MACHINE**. Aby zmienić to zachowanie, ustaw **części rejestru dla wszystkich użytkowników** opcji kreatora ATL.
+
+W poniższej tabeli opisano opcje ATL OLE DB Provider kreatora:
+
+**Krótka nazwa**  
+Wpisz krótką nazwę dostawcy, który ma zostać utworzony. Pozostałe pola edycji kreatora zostaną wypełnione automatycznie oparte na w tym miejscu wpisz. Jeśli chcesz, możesz edytować pozostałe pola nazw.
+
+**Klasa coclass**  
+Nazwa klasy coclass. Nazwa identyfikatora ProgID zostanie zmieniona na pasują do tej nazwy.
+
+**Opartego na atrybutach**  
+Ta opcja określa, czy Kreator utworzy klasy dostawców przy użyciu atrybutów lub deklaracji szablonu. Po wybraniu tej opcji, kreator używa atrybutów zamiast deklaracji szablonu (jest to opcja domyślna Jeśli zostało utworzone w projekcie z atrybutami). Po usunięciu zaznaczenia tej opcji, kreator używa deklaracji szablonu zamiast atrybutów (jest to opcja domyślna, jeśli utworzono projekt bezatrybutowego).
+
+Wybranie tej opcji podczas tworzenia projektu bezatrybutowego, Kreator wyświetli ostrzeżenie, zostaną przekonwertowane na projekcie z atrybutami i zapyta, czy chcesz kontynuować, lub nie projektu.
+
+**Identyfikator programu**  
+Identyfikator ProgID lub identyfikator programowy, to ciąg tekstowy, który aplikacja może użyć zamiast identyfikatora GUID. Nazwa identyfikatora ProgID ma formę *NazwaProjektu.nazwaklasycoclass*.
+
+**Wersja**  
+Numer wersji dostawcy. Domyślnym ustawieniem jest 1.
+
+**Klasa źródła danych**  
+Nazwa klasy źródła danych w formularzu C*Shortname*źródła.
+
+**Plik .h klasy źródła danych**  
+Plik nagłówkowy klasy źródła danych. Można zmienić nazwę tego pliku lub wybierz istniejący plik nagłówkowy.
+
+**Klasy sesji**  
+Nazwa klasy sesji formularza C*Shortname*sesji.
+
+**Plik .h klasy sesji**  
+Plik nagłówkowy klasy sesji. Można zmienić nazwę tego pliku lub wybierz istniejący plik nagłówkowy.
+
+**Klasa polecenia**  
+Nazwa klasy poleceń formularza C*Shortname*polecenia.
+
+**Plik .h klasy poleceń**  
+Plik nagłówkowy klasy poleceń. Ta nazwa nie może być edytowany i zależy od nazwy pliku nagłówkowego zestawu wierszy.
+
+**Klasy zestawów wierszy**  
+Nazwa klasy zestawu wierszy formularza C*Shortname*zestawu wierszy.
+
+**Plik .h klasy zestawu wierszy**  
+Plik nagłówkowy klasy zestawu wierszy. Można zmienić nazwę tego pliku lub wybierz istniejący plik nagłówkowy.
+
+**Plik CPP zestawu wierszy**  
+Plik implementacji dostawcy. Można zmienić nazwę tego pliku lub wybierz istniejący plik implementacji.
+
+## <a name="see-also"></a>Zobacz też
+
+[Dostawcy ATL OLE DB](../../atl/reference/adding-an-atl-ole-db-provider.md)
 

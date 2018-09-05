@@ -12,11 +12,11 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 ms.openlocfilehash: 87510fe7eee6a8027e5375f82f2b6ce7bf74ec3c
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42589737"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43754104"
 ---
 # <a name="default-namespace"></a>Domyślna przestrzeń nazw
 `default` Przestrzeni nazw zakresów wbudowanych typów, które są obsługiwane przez C + +/ CX.  

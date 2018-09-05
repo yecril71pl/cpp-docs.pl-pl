@@ -15,22 +15,24 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ab8b42804ca892c80971928b869e09ccdf479d68
-ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
+ms.openlocfilehash: 8ffe40b583a9dabeb14ce5347de6ae3d14dae724
+ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/05/2018
-ms.locfileid: "37851330"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43751488"
 ---
 # <a name="design-principles-for-collection-and-enumerator-interfaces"></a>Zasady projektowania interfejsów kolekcji i wyliczeń
-Istnieją zasady dotyczące projektowania każdego typu interfejsu:  
-  
--   Udostępnia interfejs kolekcji *losowych* dostęp do *pojedynczego* elementu w kolekcji za pomocą `Item` metody umożliwia klientom odnajdywanie, ile elementów znajdują się w kolekcji za pomocą `Count` właściwości i często umożliwia klientom dodawanie i usuwanie elementów.  
-  
--   Udostępnia interfejs modułu wyliczającego *serial* dostęp do *wielu* elementów w kolekcji, nie zezwalał na klienta dowiedzieć się, ile elementów są w kolekcji (aż do modułu wyliczającego zatrzymuje, zwracając elementy), a nie udostępnia żadnym dodawania lub usuwania elementów.  
-  
- Każdy typ interfejsu odgrywa inną rolę w zapewnieniu dostępu do elementów w kolekcji.  
-  
-## <a name="see-also"></a>Zobacz też  
- [Kolekcje i wyliczenia](../atl/atl-collections-and-enumerators.md)
+
+Istnieją zasady dotyczące projektowania każdego typu interfejsu:
+
+- Udostępnia interfejs kolekcji *losowych* dostęp do *pojedynczego* elementu w kolekcji za pomocą `Item` metody umożliwia klientom odnajdywanie, ile elementów znajdują się w kolekcji za pomocą `Count` właściwości i często umożliwia klientom dodawanie i usuwanie elementów.
+
+- Udostępnia interfejs modułu wyliczającego *serial* dostęp do *wielu* elementów w kolekcji, nie zezwalał na klienta dowiedzieć się, ile elementów są w kolekcji (aż do modułu wyliczającego zatrzymuje, zwracając elementy), a nie udostępnia żadnym dodawania lub usuwania elementów.
+
+Każdy typ interfejsu odgrywa inną rolę w zapewnieniu dostępu do elementów w kolekcji.
+
+## <a name="see-also"></a>Zobacz też
+
+[Kolekcje i wyliczenia](../atl/atl-collections-and-enumerators.md)
 

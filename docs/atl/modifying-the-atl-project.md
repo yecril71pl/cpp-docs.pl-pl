@@ -1,5 +1,5 @@
 ---
-title: Modyfikowanie Projekt ATL | Dokumentacja firmy Microsoft
+title: Modyfikowanie projektu ATL | Dokumentacja firmy Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,21 +16,23 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0a8594c2d98b05750d6e43138101894fb8fc4b72
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 8f94a698d9e23d0481daf940fc55fa99616104aa
+ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32355036"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43763461"
 ---
-# <a name="modifying-the-atl-project"></a>Modyfikowanie Projekt ATL
-W tym momencie projektu formantu złożonego implementuje niezbędnych obiektów dla formantu złożonego. Następnym krokiem jest dodać wszystkie formanty, że złożonych kontrolek będzie zawierać i obsługiwać wszelkie niezbędne zdarzenia.  
-  
- Aby dodać dodatkowe formantów ActiveX lub systemu Windows, należy dodać nowy skrypt zasobu, a następnie użyć edytora okien dialogowych. Aby uzyskać więcej informacji na temat dodawania formantów (i powiązanych zadań), zobacz [Edytor okien dialogowych](../windows/dialog-editor.md).  
-  
- Aby obsługiwać wszystkie niezbędne zdarzeń z kontrolki ActiveX, zobacz [dodawania funkcji do formantu złożonego](../atl/adding-functionality-to-the-composite-control.md).  
-  
-## <a name="see-also"></a>Zobacz też  
- [Podstawy złożonych kontrolek](../atl/atl-composite-control-fundamentals.md)   
- [Instrukcje: tworzenie pliku skryptu zasobu](../windows/how-to-create-a-resource-script-file.md)
+# <a name="modifying-the-atl-project"></a>Modyfikowanie projektu ATL
+
+W tym momencie projektu kontrolki złożonej implementuje niezbędne obiekty złożonej kontrolki. Następnym krokiem jest dodać dowolne kontrolki, że złożonej kontrolki będzie zawierać i obsługiwać wszystkie niezbędne zdarzenia.
+
+Aby dodać dodatkowe formanty ActiveX lub Windows, należy dodać nowy skrypt zasobu, a następnie użyć edytora okien dialogowych. Aby uzyskać więcej informacji na temat dodawania formantów (i informacje o zadaniach pokrewnych), zobacz [Edytor okien dialogowych](../windows/dialog-editor.md).
+
+Aby obsługiwać wszystkie niezbędne zdarzeń z kontrolki ActiveX, zobacz [Dodawanie funkcji do kontrolek złożonych](../atl/adding-functionality-to-the-composite-control.md).
+
+## <a name="see-also"></a>Zobacz też
+
+[Podstawy złożonych kontrolek](../atl/atl-composite-control-fundamentals.md)   
+[Instrukcje: tworzenie pliku skryptu zasobu](../windows/how-to-create-a-resource-script-file.md)
 

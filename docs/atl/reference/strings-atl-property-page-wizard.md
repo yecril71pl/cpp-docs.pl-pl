@@ -16,26 +16,28 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 101a81eb2adf7b1ee133c2e68a6a74d9369075c7
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: f65b75ff7ad5af4f3552cec594497616922bd048
+ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32361769"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43753753"
 ---
 # <a name="strings-atl-property-page-wizard"></a>Ciągi, Kreator strony właściwości ATL
-Zawiera tekst skojarzony ze stroną właściwości.  
-  
- **Tytuł**  
- Ustawia tekst wyświetlany na karcie strony właściwości.  
-  
- **Ciąg dokumentu**  
- Ustawia ciąg tekstowy opisujące strony. Te parametry mogą być wyświetlane w oknie dialogowym arkusza właściwości. Ramka właściwości można użyć opis w etykietce wiersza lub narzędzia stanu. Ramka standardowe właściwości obecnie nie korzysta z tych parametrów.  
-  
- **Plik pomocy**  
- Ustawia nazwę pliku Pomocy opisano, jak użyć strony właściwości. Ta nazwa nie może zawierać ścieżki. Gdy użytkownik naciśnie **pomocy**, ramki otwiera plik pomocy w katalogu o nazwie wartości klucza HelpDir wpisy rejestru strony właściwości w jego identyfikator CLSID.  
-  
-## <a name="see-also"></a>Zobacz też  
- [Kreator strony właściwości ATL](../../atl/reference/atl-property-page-wizard.md)   
- [Opcje, Kreator strony właściwości ATL](../../atl/reference/options-atl-property-page-wizard.md)
+
+Zawiera tekst skojarzony ze stroną właściwości.
+
+**Tytuł**  
+Ustawia tekst, który pojawia się na karcie strony właściwości.
+
+**Ciąg dokumentu**  
+Ustawia ciąg tekstowy z opisem na stronie. Te parametry mogą być wyświetlane w oknie dialogowym arkusza właściwości. Ramka właściwości można użyć opisu w etykietce wiersza lub narzędzia stanu. Ramka właściwości standardowe obecnie nie są używane te parametry.
+
+**Plik pomocy**  
+Określa nazwę pliku pomocy, który opisuje sposób używania na stronie właściwości. Ta nazwa nie może zawierać ścieżki. Gdy użytkownik naciśnie **pomocy**, ramki spowoduje otwarcie pliku pomocy w katalogu o nazwie w wartości klucza HelpDir we wpisach rejestru strony właściwości w ramach jego identyfikator CLSID.
+
+## <a name="see-also"></a>Zobacz też
+
+[Kreator strony właściwości ATL](../../atl/reference/atl-property-page-wizard.md)   
+[Opcje, Kreator strony właściwości ATL](../../atl/reference/options-atl-property-page-wizard.md)
 

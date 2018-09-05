@@ -18,75 +18,84 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a54818b839f13ad9114274248cfdbfc74efa033a
-ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
+ms.openlocfilehash: ebf3ba07ac5608a47f4e2bbbe853cb37c033e5f7
+ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/06/2018
-ms.locfileid: "37883076"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43757618"
 ---
 # <a name="catlautothreadmodulet-class"></a>Klasa CAtlAutoThreadModuleT
-Ta klasa dostarcza metody do implementowania serwera wątków w puli, model przedziału COM.  
-  
+
+Ta klasa dostarcza metody do implementowania serwera wątków w puli, model przedziału COM.
+
 > [!IMPORTANT]
->  Ta klasa i jej elementów członkowskich nie można użyć w aplikacjach korzystających ze środowiska wykonawczego Windows.  
-  
-## <a name="syntax"></a>Składnia  
-  
+>  Ta klasa i jej elementów członkowskich nie można użyć w aplikacjach korzystających ze środowiska wykonawczego Windows.
+
+## <a name="syntax"></a>Składnia
+
 ```
 template <class T, 
          class ThreadAllocator = CComSimpleThreadAllocator,
          DWORD dwWait = INFINITE>  
 class ATL_NO_VTABLE CAtlAutoThreadModuleT : public IAtlAutoThreadModule
-```  
-  
-#### <a name="parameters"></a>Parametry  
- *T*  
- Klasa, który będzie implementowany serwer COM.  
-  
- *ThreadAllocator*  
- Klasa zarządzania wybór wątku. Wartość domyślna to [CComSimpleThreadAllocator](../../atl/reference/ccomsimplethreadallocator-class.md).  
-  
- *dwWait*  
- Określa interwał limitu czasu w milisekundach. Wartość domyślna to NIESKOŃCZONE, co oznacza interwał limitu czasu metody nigdy nie upłynie.  
-  
-## <a name="members"></a>Elementy członkowskie  
-  
-### <a name="public-methods"></a>Metody publiczne  
-  
-|Nazwa|Opis|  
-|----------|-----------------|  
-|[CAtlAutoThreadModuleT::GetDefaultThreads](#getdefaultthreads)|Ta funkcja statyczna dynamicznie oblicza i zwraca maksymalną liczbę wątków dla modułu "EXE", na podstawie liczby procesorów.|  
-  
-## <a name="remarks"></a>Uwagi  
- Klasa [CAtlAutoThreadModule](../../atl/reference/catlautothreadmodule-class.md) pochodzi od klasy `CAtlAutoThreadModuleT` w celu wdrożenia serwera wątków w puli, model przedziału COM. Zastępuje on programy przestarzałe klasy [CComAutoThreadModule](../../atl/reference/ccomautothreadmodule-class.md).  
-  
+```
+
+#### <a name="parameters"></a>Parametry
+
+*T*  
+Klasa, który będzie implementowany serwer COM.
+
+*ThreadAllocator*  
+Klasa zarządzania wybór wątku. Wartość domyślna to [CComSimpleThreadAllocator](../../atl/reference/ccomsimplethreadallocator-class.md).
+
+*dwWait*  
+Określa interwał limitu czasu w milisekundach. Wartość domyślna to NIESKOŃCZONE, co oznacza interwał limitu czasu metody nigdy nie upłynie.
+
+## <a name="members"></a>Elementy członkowskie
+
+### <a name="public-methods"></a>Metody publiczne
+
+|Nazwa|Opis|
+|----------|-----------------|
+|[CAtlAutoThreadModuleT::GetDefaultThreads](#getdefaultthreads)|Ta funkcja statyczna dynamicznie oblicza i zwraca maksymalną liczbę wątków dla modułu "EXE", na podstawie liczby procesorów.|
+
+## <a name="remarks"></a>Uwagi
+
+Klasa [CAtlAutoThreadModule](../../atl/reference/catlautothreadmodule-class.md) pochodzi od klasy `CAtlAutoThreadModuleT` w celu wdrożenia serwera wątków w puli, model przedziału COM. Zastępuje on programy przestarzałe klasy [CComAutoThreadModule](../../atl/reference/ccomautothreadmodule-class.md).
+
 > [!NOTE]
->  Ta klasa nie można używać w bibliotece DLL, jako domyślny *dwWait* wartości NIESKOŃCZONE spowoduje zakleszczenia, gdy biblioteka DLL jest zwalniana.  
-  
-## <a name="inheritance-hierarchy"></a>Hierarchia dziedziczenia  
- `IAtlAutoThreadModule`  
-  
- `CAtlAutoThreadModuleT`  
-  
-## <a name="requirements"></a>Wymagania  
- **Nagłówek:** atlbase.h  
-  
-##  <a name="getdefaultthreads"></a>  CAtlAutoThreadModuleT::GetDefaultThreads  
- Ta funkcja statyczna dynamicznie oblicza i zwraca maksymalną liczbę wątków dla modułu "EXE", na podstawie liczby procesorów.  
-  
+>  Ta klasa nie można używać w bibliotece DLL, jako domyślny *dwWait* wartości NIESKOŃCZONE spowoduje zakleszczenia, gdy biblioteka DLL jest zwalniana.
+
+## <a name="inheritance-hierarchy"></a>Hierarchia dziedziczenia
+
+`IAtlAutoThreadModule`
+
+`CAtlAutoThreadModuleT`
+
+## <a name="requirements"></a>Wymagania
+
+**Nagłówek:** atlbase.h
+
+##  <a name="getdefaultthreads"></a>  CAtlAutoThreadModuleT::GetDefaultThreads
+
+Ta funkcja statyczna dynamicznie oblicza i zwraca maksymalną liczbę wątków dla modułu "EXE", na podstawie liczby procesorów.
+
 ```
 static int GetDefaultThreads();
-```  
-  
-### <a name="return-value"></a>Wartość zwracana  
- Liczba wątków, które zostały utworzone w EXE module.  
-  
-### <a name="remarks"></a>Uwagi  
- Należy przesłonić tę metodę, jeśli chcesz użyć innej metody do obliczania liczby wątków. Domyślnie liczba wątków zależy od liczby procesorów.  
-  
-## <a name="see-also"></a>Zobacz też  
- [Klasa IAtlAutoThreadModule](../../atl/reference/iatlautothreadmodule-class.md)   
- [Klasa — Przegląd](../../atl/atl-class-overview.md)   
- [Klasa IAtlAutoThreadModule](../../atl/reference/iatlautothreadmodule-class.md)   
- [Klasy modułów](../../atl/atl-module-classes.md)
+```
+
+### <a name="return-value"></a>Wartość zwracana
+
+Liczba wątków, które zostały utworzone w EXE module.
+
+### <a name="remarks"></a>Uwagi
+
+Należy przesłonić tę metodę, jeśli chcesz użyć innej metody do obliczania liczby wątków. Domyślnie liczba wątków zależy od liczby procesorów.
+
+## <a name="see-also"></a>Zobacz też
+
+[Klasa IAtlAutoThreadModule](../../atl/reference/iatlautothreadmodule-class.md)   
+[Klasa — Przegląd](../../atl/atl-class-overview.md)   
+[Klasa IAtlAutoThreadModule](../../atl/reference/iatlautothreadmodule-class.md)   
+[Klasy modułów](../../atl/atl-module-classes.md)

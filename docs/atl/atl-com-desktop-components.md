@@ -15,47 +15,50 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e53f2dfd0181b85efbc71defbc528d452d32b4dd
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: b16f2fd1a82d6199f1e035b06f8c0598810f0dfd
+ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38953852"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43752170"
 ---
 # <a name="atl-com-desktop-components"></a>Składniki ATL COM pulpitu
-Dokumentacja ATL dokumenty Active Template Library (ATL), zestaw na podstawie szablonu klasy C++, które upraszczają programowanie obiektów Component Object Model (COM). Aby w pełni wykorzystać ATL, zdecydowanie zaleca się pracę znajomość COM.  
-  
-## <a name="in-this-section"></a>W tej sekcji  
- [Przegląd klas ATL](../atl/atl-class-overview.md)  
- Zawiera łącza do i krótkie opisy klasy ATL, uporządkowane według kategorii.  
-  
- [Klasy i struktury ATL](../atl/reference/atl-classes.md)  
- Oferuje materiały źródłowe dotyczące klas i struktur zorganizowane alfabetycznie.  
-  
- [Funkcje ATL](../atl/reference/atl-functions.md)  
- Oferuje materiały źródłowe w przypadku funkcji globalnych zorganizowane alfabetycznie. Zawiera tematy, organizowanie funkcje w kategorii.  
-  
- [Zmienne globalne ATL](../atl/reference/atl-global-variables.md)  
- Zawiera materiały referencyjne dotyczące zmiennych globalnych zorganizowane alfabetycznie.  
-  
- [Makra ATL](../atl/reference/atl-macros.md)  
- Zawiera materiały źródłowe dotyczące makra zorganizowane alfabetycznie. Zawiera tematy, organizowanie makra w kategorii.  
-  
- [Definicje typów ATL](../atl/reference/atl-typedefs.md)  
- Zawiera materiały referencyjne dotyczące definicje typów zorganizowane alfabetycznie  
-  
- [Archetyp procesu roboczego](../atl/reference/worker-archetype.md)  
- Zawiera łącza do archetyp procesu roboczego ATL.  
-  
-## <a name="related-sections"></a>Sekcje pokrewne  
- [ATL](../atl/active-template-library-atl-concepts.md)  
- Zawiera tematy dotyczące programowania przy użyciu Active Template Library (ATL).  
-  
- [ALT — samouczek](../atl/active-template-library-atl-tutorial.md)  
- Poprowadzi Cię przez tworzenie formantu i pokazuje podstawowe informacje dotyczące niektórych ATL w procesie.  
-  
- [Przykłady ATL](../visual-cpp-samples.md)  
- Przykładowy kod, który pokazuje, jak na potrzeby zapisywania obiektów COM ATL.  
-  
- [Szablony OLE DB](../data/oledb/ole-db-templates.md)  
- Oferuje materiały źródłowe dla szablonów konsumentów i dostawcy OLE DB, zestaw klas szablonów, które implementują wiele powszechnie używanych interfejsy OLE DB.  
+
+Dokumentacja ATL dokumenty Active Template Library (ATL), zestaw na podstawie szablonu klasy C++, które upraszczają programowanie obiektów Component Object Model (COM). Aby w pełni wykorzystać ATL, zdecydowanie zaleca się pracę znajomość COM.
+
+## <a name="in-this-section"></a>W tej sekcji
+
+[Przegląd klas ATL](../atl/atl-class-overview.md)  
+Zawiera łącza do i krótkie opisy klasy ATL, uporządkowane według kategorii.
+
+[Klasy i struktury ATL](../atl/reference/atl-classes.md)  
+Oferuje materiały źródłowe dotyczące klas i struktur zorganizowane alfabetycznie.
+
+[Funkcje ATL](../atl/reference/atl-functions.md)  
+Oferuje materiały źródłowe w przypadku funkcji globalnych zorganizowane alfabetycznie. Zawiera tematy, organizowanie funkcje w kategorii.
+
+[Zmienne globalne ATL](../atl/reference/atl-global-variables.md)  
+Zawiera materiały referencyjne dotyczące zmiennych globalnych zorganizowane alfabetycznie.
+
+[Makra ATL](../atl/reference/atl-macros.md)  
+Zawiera materiały źródłowe dotyczące makra zorganizowane alfabetycznie. Zawiera tematy, organizowanie makra w kategorii.
+
+[Definicje typów ATL](../atl/reference/atl-typedefs.md)  
+Zawiera materiały referencyjne dotyczące definicje typów zorganizowane alfabetycznie
+
+[Archetyp procesu roboczego](../atl/reference/worker-archetype.md)  
+Zawiera łącza do archetyp procesu roboczego ATL.
+
+## <a name="related-sections"></a>Sekcje pokrewne
+
+[ATL](../atl/active-template-library-atl-concepts.md)  
+Zawiera tematy dotyczące programowania przy użyciu Active Template Library (ATL).
+
+[ALT — samouczek](../atl/active-template-library-atl-tutorial.md)  
+Poprowadzi Cię przez tworzenie formantu i pokazuje podstawowe informacje dotyczące niektórych ATL w procesie.
+
+[Przykłady ATL](../visual-cpp-samples.md)  
+Przykładowy kod, który pokazuje, jak na potrzeby zapisywania obiektów COM ATL.
+
+[Szablony OLE DB](../data/oledb/ole-db-templates.md)  
+Oferuje materiały źródłowe dla szablonów konsumentów i dostawcy OLE DB, zestaw klas szablonów, które implementują wiele powszechnie używanych interfejsy OLE DB.  
