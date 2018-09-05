@@ -15,12 +15,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f965481ae1d3abea40577680b1af72004f793123
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 16c204636baf87cd88f80294b1f413cacc9f5ddc
+ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43197231"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43764267"
 ---
 # <a name="c-type-specifiers"></a>Specyfikatory typu C
 
@@ -29,18 +29,18 @@ Specyfikatory typów w deklaracjach zdefiniować typu w deklaracji zmiennej lub 
 ## <a name="syntax"></a>Składnia
 
 *Specyfikator typu*:  
-&nbsp;&nbsp;**Void**  
-&nbsp;&nbsp;**Char**  
-&nbsp;&nbsp;**Krótka**  
-&nbsp;&nbsp;**int**  
-&nbsp;&nbsp;**długi**  
-&nbsp;&nbsp;**float**  
-&nbsp;&nbsp;**Podwójne**  
-&nbsp;&nbsp;**Podpisany**  
-&nbsp;&nbsp;**Bez znaku**  
-&nbsp;&nbsp;*struct-or-union-specifier*  
-&nbsp;&nbsp;*enum-specifier*  
-&nbsp;&nbsp;*Nazwa TypeDef*  
+&nbsp;&nbsp;&nbsp;&nbsp;**Void**  
+&nbsp;&nbsp;&nbsp;&nbsp;**Char**  
+&nbsp;&nbsp;&nbsp;&nbsp;**Krótka**  
+&nbsp;&nbsp;&nbsp;&nbsp;**Int**  
+&nbsp;&nbsp;&nbsp;&nbsp;**długi**  
+&nbsp;&nbsp;&nbsp;&nbsp;**float**  
+&nbsp;&nbsp;&nbsp;&nbsp;**Podwójne**  
+&nbsp;&nbsp;&nbsp;&nbsp;**Podpisany**  
+&nbsp;&nbsp;&nbsp;&nbsp;**Bez znaku**  
+&nbsp;&nbsp;&nbsp;&nbsp;*Specyfikator struktury lub Unii*  
+&nbsp;&nbsp;&nbsp;&nbsp;*Specyfikator typu wyliczeniowego*  
+&nbsp;&nbsp;&nbsp;&nbsp;*Nazwa TypeDef*  
 
 **Podpisany char**, **podpisany int**, **podpisany krótka wartość całkowita**, i **podpisany long int** typów, wraz z ich **bez znaku**  odpowiedniki i **wyliczenia**, są nazywane *całkowitego* typów. **Float**, **double**, i **typu long double** specyfikatory typu są określane jako *zmiennoprzecinkowy* lub *zmiennoprzecinkowych* typów. W deklaracji zmiennej lub funkcji, można użyć dowolnego Specyfikator typu całkowitego lub zmiennoprzecinkowego. Jeśli *Specyfikator typu* nie znajduje się w deklaracji, jest traktowana jako **int**.
 

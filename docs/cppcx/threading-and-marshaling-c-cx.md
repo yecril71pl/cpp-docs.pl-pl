@@ -16,11 +16,11 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 ms.openlocfilehash: 4cf37857e12eb795ebfa4c5c115bc80a1688d69e
-ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
-ms.translationtype: HT
+ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 09/05/2018
-ms.locfileid: "43677155"
+ms.locfileid: "43756216"
 ---
 # <a name="threading-and-marshaling-ccx"></a>Wątkowość i Marshaling (C + +/ CX)
 W zdecydowanej większości przypadków wystąpienia klas środowiska wykonawczego Windows, takich jak standardowymi obiektami C++ jest możliwy z żadnym z wątków. Takich klas są określane jako "agile". Jednak niewielkiej liczby klasy środowiska wykonawczego Windows, które są dostarczane z Windows są inne niż agile i należy wykorzystać w bardziej podobnie jak obiekty COM niż standardowymi obiektami C++. Nie musisz być ekspertem COM, używać klas agile, ale należy wziąć pod uwagę klasy modelu wątkowości i jego zachowanie organizowania. Ten artykuł zawiera wskazówki dotyczące tych rzadkich scenariuszach, w których należy używać wystąpienia klasy — agile i tła.  

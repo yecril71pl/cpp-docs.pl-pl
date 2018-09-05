@@ -19,71 +19,79 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c845243e3b99be10af70042688e672fa867fb888
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: cab1b2699c87c09761258fcde8cbb8b4c8eaa32f
+ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32357449"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43764254"
 ---
 # <a name="cautoptrelementtraits-class"></a>Klasa CAutoPtrElementTraits
-Ta klasa udostępnia metody statyczne funkcje i definicje typów przydatne podczas tworzenia kolekcji wskaźniki inteligentne.  
-  
+
+Ta klasa dostarcza metody, funkcje statyczne i definicje typów przydatne podczas tworzenia kolekcji inteligentnych wskaźników.
+
 > [!IMPORTANT]
->  Nie można użyć tej klasy i jej elementów członkowskich w aplikacjach, które są wykonywane w środowisku wykonawczym systemu Windows.  
-  
-## <a name="syntax"></a>Składnia  
-  
+>  Ta klasa i jej elementów członkowskich nie można użyć w aplikacjach korzystających ze środowiska wykonawczego Windows.
+
+## <a name="syntax"></a>Składnia
+
 ```
 template<typename T>  
 class CAutoPtrElementTraits 
     : public CDefaultElementTraits<ATL::CAutoPtr<T>>
-```    
-  
-#### <a name="parameters"></a>Parametry  
- `T`  
- Typ wskaźnika.  
-  
-## <a name="members"></a>Elementy członkowskie  
-  
-### <a name="public-typedefs"></a>Definicje typów publicznych  
-  
-|Nazwa|Opis|  
-|----------|-----------------|  
-|[CAutoPtrElementTraits::INARGTYPE](#inargtype)|Typ danych służących do dodawania elementów do obiektu klasy kolekcji.|  
-|[CAutoPtrElementTraits::OUTARGTYPE](#outargtype)|Typ danych używany do pobierania elementów z kolekcji klasy obiektu.|  
-  
-## <a name="remarks"></a>Uwagi  
- Ta klasa udostępnia metody statyczne funkcje i definicje typów dla nawiąże tworzenie kolekcji obiektów klasy zawierające wskaźniki inteligentne. Klasy [CAutoPtrArray](../../atl/reference/cautoptrarray-class.md) i [CAutoPtrList](../../atl/reference/cautoptrlist-class.md) pochodzi od `CAutoPtrElementTraits`. Jeśli tworzenie kolekcji wskaźniki inteligentne, które wymaga nowy wektor i usuwanie operatorów, należy użyć [CAutoVectorPtrElementTraits](../../atl/reference/cautovectorptrelementtraits-class.md) zamiast tego.  
-  
-## <a name="inheritance-hierarchy"></a>Hierarchia dziedziczenia  
- [CDefaultCompareTraits](../../atl/reference/cdefaultcomparetraits-class.md)  
-  
- [CDefaultHashTraits](../../atl/reference/cdefaulthashtraits-class.md)  
-  
- [CElementTraitsBase](../../atl/reference/celementtraitsbase-class.md)  
-  
- [CDefaultElementTraits](../../atl/reference/cdefaultelementtraits-class.md)  
-  
- `CAutoPtrElementTraits`  
-  
-## <a name="requirements"></a>Wymagania  
- **Nagłówek:** atlcoll.h  
-  
-##  <a name="inargtype"></a>  CAutoPtrElementTraits::INARGTYPE  
- Typ danych służących do dodawania elementów do obiektu klasy kolekcji.  
-  
+```
+
+#### <a name="parameters"></a>Parametry
+
+`T`  
+Typ wskaźnika.
+
+## <a name="members"></a>Elementy członkowskie
+
+### <a name="public-typedefs"></a>Publiczne definicje typów
+
+|Nazwa|Opis|
+|----------|-----------------|
+|[CAutoPtrElementTraits::INARGTYPE](#inargtype)|Typ danych na potrzeby dodawania elementów do obiektu klasy kolekcji.|
+|[CAutoPtrElementTraits::OUTARGTYPE](#outargtype)|Typ danych używany do pobierania elementów z obiektu klasy kolekcji.|
+
+## <a name="remarks"></a>Uwagi
+
+Ta klasa dostarcza metody, funkcje statyczne i definicje typów dla łatwiejszemu tworzenia typów obiektów klas kolekcji zawierających inteligentnych wskaźników. Klasy [CAutoPtrArray](../../atl/reference/cautoptrarray-class.md) i [CAutoPtrList](../../atl/reference/cautoptrlist-class.md) dziedziczyć `CAutoPtrElementTraits`. Jeśli tworzenie kolekcji inteligentnych wskaźników, który wymaga nowy wektor i delete, operatory, należy użyć [CAutoVectorPtrElementTraits](../../atl/reference/cautovectorptrelementtraits-class.md) zamiast tego.
+
+## <a name="inheritance-hierarchy"></a>Hierarchia dziedziczenia
+
+[CDefaultCompareTraits](../../atl/reference/cdefaultcomparetraits-class.md)
+
+[CDefaultHashTraits](../../atl/reference/cdefaulthashtraits-class.md)
+
+[CElementTraitsBase](../../atl/reference/celementtraitsbase-class.md)
+
+[CDefaultElementTraits](../../atl/reference/cdefaultelementtraits-class.md)
+
+`CAutoPtrElementTraits`
+
+## <a name="requirements"></a>Wymagania
+
+**Nagłówek:** atlcoll.h
+
+##  <a name="inargtype"></a>  CAutoPtrElementTraits::INARGTYPE
+
+Typ danych na potrzeby dodawania elementów do obiektu klasy kolekcji.
+
 ```
 typedef CAutoPtr<T>& INARGTYPE;
-```  
-  
-##  <a name="outargtype"></a>  CAutoPtrElementTraits::OUTARGTYPE  
- Typ danych używany do pobierania elementów z kolekcji klasy obiektu.  
-  
+```
+
+##  <a name="outargtype"></a>  CAutoPtrElementTraits::OUTARGTYPE
+
+Typ danych używany do pobierania elementów z obiektu klasy kolekcji.
+
 ```
 typedef T *& OUTARGTYPE;
-```  
-  
-## <a name="see-also"></a>Zobacz też  
- [Klasa CDefaultElementTraits](../../atl/reference/cdefaultelementtraits-class.md)   
- [Przegląd klas](../../atl/atl-class-overview.md)
+```
+
+## <a name="see-also"></a>Zobacz też
+
+[Klasa CDefaultElementTraits](../../atl/reference/cdefaultelementtraits-class.md)   
+[Klasa — Przegląd](../../atl/atl-class-overview.md)

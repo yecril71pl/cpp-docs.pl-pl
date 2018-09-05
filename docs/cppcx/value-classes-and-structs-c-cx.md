@@ -13,11 +13,11 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 ms.openlocfilehash: 226198c35dc0b7e7e1c7fab4ce81fc4782b5ca38
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42589059"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43764205"
 ---
 # <a name="value-classes-and-structs-ccx"></a>Klasy i struktury wartości (C + +/ CX)
 A *struktury wartości* lub *klasę wartości* jest Windows ZASOBNIKA zgodnego środowiska uruchomieniowego ("zwykłe stare dane strukturę"). Ma stały rozmiar i składa się z pól. w odróżnieniu od klasy ref go nie ma właściwości.  

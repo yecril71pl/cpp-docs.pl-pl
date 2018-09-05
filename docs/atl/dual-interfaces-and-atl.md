@@ -16,33 +16,37 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9212662d419f5750d6a8037b73a58fd58c4c858f
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: ebe6ac2e3d19d16e2147411df436a976526ea2ff
+ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32355049"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43765138"
 ---
 # <a name="dual-interfaces-and-atl"></a>Podwójne interfejsy i ATL
-Podwójna interfejs umożliwiający jego metody można uzyskać dostępu do metody dispinterface lub metody vtable. W tej sekcji opisano niektóre funkcje podwójne interfejsy z perspektywy ATL.  
-  
-## <a name="in-this-section"></a>W tej sekcji  
- [Implementacja podwójnego interfejsu](../atl/implementing-a-dual-interface.md)  
- W tym artykule omówiono klas i kreatorów objętego implementującej interfejs podwójny.  
-  
- [Wiele podwójnych interfejsów](../atl/multiple-dual-interfaces.md)  
- Omówiono sposób ujawniać wiele interfejsów dwa na jeden obiekt.  
-  
- [Nonextensible — atrybut](../atl/nonextensible-attribute.md)  
- Kiedy należy używać omówiono **nonextensible —** atrybutu definition interfejsu.  
-  
- [Podwójne interfejsy i zdarzenia](../atl/dual-interfaces-and-events.md)  
- W tym artykule omówiono przyczyny projektu nie robi zdarzenia interfejs podwójną interfejs.  
-  
-## <a name="related-sections"></a>Sekcje pokrewne  
- [ATL](../atl/active-template-library-atl-concepts.md)  
- Zawiera łącza do tematów koncepcyjne na temat programowania przy użyciu biblioteki Active Template Library.  
-  
-## <a name="see-also"></a>Zobacz też  
- [Pojęcia](../atl/active-template-library-atl-concepts.md)
+
+Podwójnego interfejsu umożliwia jego metody są dostępne jako dispinterface metody lub jako metody vtable. W tej sekcji opisano niektóre funkcje dwa interfejsy z perspektywy ATL.
+
+## <a name="in-this-section"></a>W tej sekcji
+
+[Implementacja podwójnego interfejsu](../atl/implementing-a-dual-interface.md)  
+W tym artykule omówiono klasy i kreatorów objętych implementacja podwójnego interfejsu.
+
+[Wiele podwójnych interfejsów](../atl/multiple-dual-interfaces.md)  
+W tym artykule omówiono, jak udostępniać wiele podwójnych interfejsów dla pojedynczego obiektu.
+
+[Nonextensible — atrybut](../atl/nonextensible-attribute.md)  
+W tym artykule omówiono użycie **nonextensible** atrybutu na danej definicji interfejsu.
+
+[Podwójne interfejsy i zdarzenia](../atl/dual-interfaces-and-events.md)  
+W tym artykule omówiono projektowania powodów nie zdarzenia interfejsu podwójnego interfejsu.
+
+## <a name="related-sections"></a>Sekcje pokrewne
+
+[ATL](../atl/active-template-library-atl-concepts.md)  
+Zawiera łącza do tematów pojęciowych dotyczące programowania przy użyciu biblioteki Active Template Library.
+
+## <a name="see-also"></a>Zobacz też
+
+[Pojęcia](../atl/active-template-library-atl-concepts.md)
 

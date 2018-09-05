@@ -1,5 +1,5 @@
 ---
-title: Wprowadzenie do klas okien ALT | Dokumentacja firmy Microsoft
+title: Wprowadzenie do klas okien ATL | Dokumentacja firmy Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -14,38 +14,40 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ea9b275831aee3ea96da1036019db07f9e2dfc93
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: dbd433eb024e7715c065a005ce06d38a086a5072
+ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32356689"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43765498"
 ---
-# <a name="introduction-to-atl-window-classes"></a>Wprowadzenie do klas okien ALT
-Następujące klasy ATL są przeznaczone do wdrożenia i manipulowania systemu windows:  
-  
--   [CWindow](../atl/reference/cwindow-class.md) umożliwia dołączanie uchwyt okna do `CWindow` obiektu. Następnie wywołaj `CWindow` metoda manipulowania okna.  
-  
--   [CWindowImpl](../atl/reference/cwindowimpl-class.md) umożliwia wdrożenie nowe okno i przetwarzać komunikaty z mapy komunikatów. Można utworzyć okna oparte na nowe klasy systemu Windows, superklasie istniejącej klasy lub podklasy istniejącego okna.  
-  
--   [Cdialogimpl —](../atl/reference/cdialogimpl-class.md) umożliwia wdrożenie po zakończeniu instalacji lub niemodalnego okna dialogowego proces i pola wiadomości z mapy komunikatów.  
-  
--   [CContainedWindowT](../atl/reference/ccontainedwindowt-class.md) jest klasą wbudowane, który implementuje okno mapę komunikatów w której znajduje się w innej klasy. Przy użyciu `CContainedWindowT` pozwala na scentralizowanie przetwarzania komunikatu w jednej klasie.  
-  
--   [CAxDialogImpl](../atl/reference/caxdialogimpl-class.md) umożliwia implementuje okno dialogowe (modalne i niemodalne) obsługującego formantów ActiveX.  
-  
--   [CSimpleDialog](../atl/reference/csimpledialog-class.md) umożliwia wdrożenie modalne okno dialogowe z podstawowymi funkcjami.  
-  
--   [CAxWindow](../atl/reference/caxwindow-class.md) umożliwia zaimplementować okno obsługującego formantu ActiveX.  
-  
--   [CAxWindow2T](../atl/reference/caxwindow2t-class.md) umożliwia wdrożenie okna, który jest hostem licencjonowanego formantu ActiveX.  
-  
- Oprócz klasy określone okno ATL udostępnia kilka klas zaprojektowanych w celu ułatwienia implementacji obiektu okna ATL. Są one następujące:  
-  
--   [CWndClassInfo](../atl/reference/cwndclassinfo-class.md) zarządza informacjami nową klasę okna.  
-  
--   [CWinTraits](../atl/reference/cwintraits-class.md) i [CWinTraitsOR](../atl/reference/cwintraitsor-class.md) Podaj to prosta metoda standaryzacji cechy obiekt ATL okna.  
-  
-## <a name="see-also"></a>Zobacz też  
- [Klasy okien](../atl/atl-window-classes.md)
+# <a name="introduction-to-atl-window-classes"></a>Wprowadzenie do klas okien ATL
+
+Następujące klasy ATL są przeznaczone do wdrożenia i manipulowania systemu windows:
+
+- [CWindow](../atl/reference/cwindow-class.md) pozwala dołączyć uchwyt okna do `CWindow` obiektu. Następnie wywołaj `CWindow` metody do manipulowania okna.
+
+- [CWindowImpl](../atl/reference/cwindowimpl-class.md) pozwala na implementowanie nowe okno i przetwarzać komunikaty z mapy komunikatów. Można utworzyć okna na podstawie nowych Windows klasy, superklasie istniejącej klasy lub podklasy istniejącego okna.
+
+- [CDialogImpl](../atl/reference/cdialogimpl-class.md) pozwala na implementowanie modalne lub niemodalnego okna dialogowego pole i przetwarzania komunikatów za pomocą mapy komunikatów.
+
+- [CContainedWindowT](../atl/reference/ccontainedwindowt-class.md) jest wstępnie klasa, która implementuje okno mapę komunikatów, w której znajduje się w innej klasy. Za pomocą `CContainedWindowT` umożliwia scentralizowanie przetwarzanie komunikatów w jednej klasie.
+
+- [CAxDialogImpl](../atl/reference/caxdialogimpl-class.md) pozwala na implementowanie okno dialogowe (modalnym lub niemodalnym), który obsługuje formanty ActiveX.
+
+- [CSimpleDialog](../atl/reference/csimpledialog-class.md) pozwala na implementowanie modalne okno dialogowe z podstawowymi funkcjami.
+
+- [CAxWindow](../atl/reference/caxwindow-class.md) pozwala na implementowanie okno które obsługuje formant ActiveX.
+
+- [CAxWindow2T](../atl/reference/caxwindow2t-class.md) pozwala na implementowanie okna, który jest hostem licencjonowany formant ActiveX.
+
+Oprócz klas w określonym oknie ATL udostępnia kilka klas, które mają ułatwić implementacji obiektu okien ATL. Są one następujące:
+
+- [CWndClassInfo](../atl/reference/cwndclassinfo-class.md) zarządza informacjami nowe klasy okna.
+
+- [CWinTraits](../atl/reference/cwintraits-class.md) i [CWinTraitsOR](../atl/reference/cwintraitsor-class.md) umożliwiają proste standaryzacji cech obiektu ATL okna.
+
+## <a name="see-also"></a>Zobacz też
+
+[Klasy okien](../atl/atl-window-classes.md)
 

@@ -19,43 +19,43 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: cf51197750e9595570a7b011c179c2ed4c7902c3
-ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
+ms.openlocfilehash: c5751fa3c5c8bc20f287ca3c48d885fc41c60ba0
+ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/06/2018
-ms.locfileid: "37880011"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43764332"
 ---
 # <a name="atlcreatewnddata-structure"></a>Struktura _AtlCreateWndData
-Ta struktura zawiera dane wystąpienia klasy w kodzie obsługi okien w ATL.  
-  
-## <a name="syntax"></a>Składnia  
-  
+
+Ta struktura zawiera dane wystąpienia klasy w kodzie obsługi okien w ATL.
+
+## <a name="syntax"></a>Składnia
+
 ```
     struct _AtlCreateWndData{
     void* m_pThis;
     DWORD m_dwThreadID;
     _AtlCreateWndData* m_pNext;
 };
-```  
-  
-## <a name="members"></a>Elementy członkowskie  
- `m_pThis`  
- **To** wskaźnik używany do uzyskiwania dostępu do wystąpienia klasy w procedury okna.  
-  
- `m_dwThreadID`  
- Identyfikator wątku bieżącego wystąpienia klasy.  
-  
- `m_pNext`  
- Wskaźnik do następnego `_AtlCreateWndData` obiektu.  
-  
-## <a name="requirements"></a>Wymagania  
- **Nagłówek:** atlbase.h  
-  
-## <a name="see-also"></a>Zobacz też  
- [Klasy i struktury](../../atl/reference/atl-classes.md)
+```
 
+## <a name="members"></a>Elementy członkowskie
 
+`m_pThis`  
+**To** wskaźnik używany do uzyskiwania dostępu do wystąpienia klasy w procedury okna.
 
+`m_dwThreadID`  
+Identyfikator wątku bieżącego wystąpienia klasy.
 
+`m_pNext`  
+Wskaźnik do następnego `_AtlCreateWndData` obiektu.
+
+## <a name="requirements"></a>Wymagania
+
+**Nagłówek:** atlbase.h
+
+## <a name="see-also"></a>Zobacz też
+
+[Klasy i struktury](../../atl/reference/atl-classes.md)
 

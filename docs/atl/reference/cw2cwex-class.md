@@ -19,123 +19,137 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f97ddd87194d9cf7cce0b5fcd898b6a9f391d908
-ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
+ms.openlocfilehash: ee4314e4f2d31e499c01049d1fbec579f16c2849
+ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/06/2018
-ms.locfileid: "37879384"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43765372"
 ---
 # <a name="cw2cwex-class"></a>Klasa CW2CWEX
-Ta klasa jest używana przez makra konwersji ciągów CW2CTEX i CT2CWEX i typedef CW2W.  
-  
+
+Ta klasa jest używana przez makra konwersji ciągów CW2CTEX i CT2CWEX i typedef CW2W.
+
 > [!IMPORTANT]
->  Ta klasa i jej elementów członkowskich nie można użyć w aplikacjach korzystających ze środowiska wykonawczego Windows.  
-  
-## <a name="syntax"></a>Składnia  
-  
+>  Ta klasa i jej elementów członkowskich nie można użyć w aplikacjach korzystających ze środowiska wykonawczego Windows.
+
+## <a name="syntax"></a>Składnia
+
 ```
 template<int t_nBufferLength = 128>  
 class CW2CWEX
-```  
-  
-#### <a name="parameters"></a>Parametry  
- *t_nBufferLength*  
- Rozmiar buforu używany w procesie tłumaczenia. Domyślna długość to 128 bajtów.  
-  
-## <a name="members"></a>Elementy członkowskie  
-  
-### <a name="public-constructors"></a>Konstruktory publiczne  
-  
-|Nazwa|Opis|  
-|----------|-----------------|  
-|[CW2CWEX::CW2CWEX](#cw2cwex)|Konstruktor.|  
-|[CW2CWEX:: ~ CW2CWEX](#dtor)|Destruktor.|  
-  
-### <a name="public-operators"></a>Operatory publiczne  
-  
-|Nazwa|Opis|  
-|----------|-----------------|  
-|[CW2CWEX::operator LPCWSTR](#operator_lpcwstr)|Operator konwersji.|  
-  
-### <a name="public-data-members"></a>Publiczne elementy członkowskie danych  
-  
-|Nazwa|Opis|  
-|----------|-----------------|  
-|[CW2CWEX::m_psz](#m_psz)|Element członkowski danych, który przechowuje ciąg źródłowy.|  
-  
-## <a name="remarks"></a>Uwagi  
- O ile nie jest wymagane dodatkowe funkcje, należy użyć CW2CTEX, CT2CWEX lub CW2W w kodzie.  
-  
- Ta klasa jest bezpiecznym rozwiązaniem jest użycie w pętli i nie będzie przepełnienia stosu. Domyślnie klasy konwersji ATL i makra stronę kodową ANSI bieżącego wątku na użytek konwersji.  
-  
- Następujące makra są oparte na tej klasy:  
-  
-- CW2CTEX  
-  
-- CT2CWEX  
-  
- Następujący element typedef opiera się na tej klasy:  
-  
-- CW2W  
-  
- Omówienie tych makr konwersji tekstu, zobacz [ATL i makr konwersji ciągu MFC](string-conversion-macros.md).  
-  
-## <a name="example"></a>Przykład  
- Zobacz [ATL i makr konwersji ciągu MFC](string-conversion-macros.md) na przykład używanie makr konwersji tych parametrów.  
-  
-## <a name="requirements"></a>Wymagania  
- **Nagłówek:** atlconv.h  
-  
-##  <a name="cw2cwex"></a>  CW2CWEX::CW2CWEX  
- Konstruktor.  
-  
+```
+
+#### <a name="parameters"></a>Parametry
+
+*t_nBufferLength*  
+Rozmiar buforu używany w procesie tłumaczenia. Domyślna długość to 128 bajtów.
+
+## <a name="members"></a>Elementy członkowskie
+
+### <a name="public-constructors"></a>Konstruktory publiczne
+
+|Nazwa|Opis|
+|----------|-----------------|
+|[CW2CWEX::CW2CWEX](#cw2cwex)|Konstruktor.|
+|[CW2CWEX:: ~ CW2CWEX](#dtor)|Destruktor.|
+
+### <a name="public-operators"></a>Operatory publiczne
+
+|Nazwa|Opis|
+|----------|-----------------|
+|[CW2CWEX::operator LPCWSTR](#operator_lpcwstr)|Operator konwersji.|
+
+### <a name="public-data-members"></a>Publiczne elementy członkowskie danych
+
+|Nazwa|Opis|
+|----------|-----------------|
+|[CW2CWEX::m_psz](#m_psz)|Element członkowski danych, który przechowuje ciąg źródłowy.|
+
+## <a name="remarks"></a>Uwagi
+
+O ile nie jest wymagane dodatkowe funkcje, należy użyć CW2CTEX, CT2CWEX lub CW2W w kodzie.
+
+Ta klasa jest bezpiecznym rozwiązaniem jest użycie w pętli i nie będzie przepełnienia stosu. Domyślnie klasy konwersji ATL i makra stronę kodową ANSI bieżącego wątku na użytek konwersji.
+
+Następujące makra są oparte na tej klasy:
+
+- CW2CTEX
+
+- CT2CWEX
+
+Następujący element typedef opiera się na tej klasy:
+
+- CW2W
+
+Omówienie tych makr konwersji tekstu, zobacz [ATL i makr konwersji ciągu MFC](string-conversion-macros.md).
+
+## <a name="example"></a>Przykład
+
+Zobacz [ATL i makr konwersji ciągu MFC](string-conversion-macros.md) na przykład używanie makr konwersji tych parametrów.
+
+## <a name="requirements"></a>Wymagania
+
+**Nagłówek:** atlconv.h
+
+##  <a name="cw2cwex"></a>  CW2CWEX::CW2CWEX
+
+Konstruktor.
+
 ```
 CW2CWEX(LPCWSTR psz, UINT nCodePage) throw(...);  
 CW2CWEX(LPCWSTR psz) throw(...);
-```  
-  
-### <a name="parameters"></a>Parametry  
- *psz*  
- Ciąg tekstowy, który ma zostać przekonwertowany.  
-  
- *nCodePage*  
- Strona kodowa. Nie jest używany w tej klasie.  
-  
-### <a name="remarks"></a>Uwagi  
- Przydziela bufor używany w procesie tłumaczenia.  
-  
-##  <a name="dtor"></a>  CW2CWEX:: ~ CW2CWEX  
- Destruktor.  
-  
+```
+
+### <a name="parameters"></a>Parametry
+
+*psz*  
+Ciąg tekstowy, który ma zostać przekonwertowany.
+
+*nCodePage*  
+Strona kodowa. Nie jest używany w tej klasie.
+
+### <a name="remarks"></a>Uwagi
+
+Przydziela bufor używany w procesie tłumaczenia.
+
+##  <a name="dtor"></a>  CW2CWEX:: ~ CW2CWEX
+
+Destruktor.
+
 ```
 ~CW2CWEX() throw();
-```  
-  
-### <a name="remarks"></a>Uwagi  
- Zwalnia przydzielonego buforu.  
-  
-##  <a name="m_psz"></a>  CW2CWEX::m_psz  
- Element członkowski danych, który przechowuje ciąg źródłowy.  
-  
+```
+
+### <a name="remarks"></a>Uwagi
+
+Zwalnia przydzielonego buforu.
+
+##  <a name="m_psz"></a>  CW2CWEX::m_psz
+
+Element członkowski danych, który przechowuje ciąg źródłowy.
+
 ```
 LPCWSTR m_psz;
-```  
-  
-##  <a name="operator_lpcwstr"></a>  CW2CWEX::operator LPCWSTR  
- Operator konwersji.  
-  
+```
+
+##  <a name="operator_lpcwstr"></a>  CW2CWEX::operator LPCWSTR
+
+Operator konwersji.
+
 ```  
 operator LPCWSTR() const throw();
-```  
-  
-### <a name="return-value"></a>Wartość zwracana  
- Zwraca ciąg tekstowy jako typu LPCWSTR.  
-  
-## <a name="see-also"></a>Zobacz też  
- [Klasa CA2AEX](../../atl/reference/ca2aex-class.md)   
- [Klasa CA2CAEX](../../atl/reference/ca2caex-class.md)   
- [Klasa CA2WEX](../../atl/reference/ca2wex-class.md)   
- [Klasa CW2AEX](../../atl/reference/cw2aex-class.md)   
- [Klasa CW2WEX](../../atl/reference/cw2wex-class.md)   
- [Klasa — Przegląd](../../atl/atl-class-overview.md)
+```
+
+### <a name="return-value"></a>Wartość zwracana
+
+Zwraca ciąg tekstowy jako typu LPCWSTR.
+
+## <a name="see-also"></a>Zobacz też
+
+[Klasa CA2AEX](../../atl/reference/ca2aex-class.md)   
+[Klasa CA2CAEX](../../atl/reference/ca2caex-class.md)   
+[Klasa CA2WEX](../../atl/reference/ca2wex-class.md)   
+[Klasa CW2AEX](../../atl/reference/cw2aex-class.md)   
+[Klasa CW2WEX](../../atl/reference/cw2wex-class.md)   
+[Klasa — Przegląd](../../atl/atl-class-overview.md)

@@ -32,16 +32,16 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 77d7576b5e8914148a8c67d8df82573c1f379e16
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 1128834e49de75feba37409101a9ffe2a3e2ece2
+ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32394697"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43764790"
 ---
 # <a name="bsearch"></a>bsearch
 
-Wykonuje wyszukiwanie binarne posortowane tablicy. Bezpieczniejsza wersja ta funkcja jest dostępna; zobacz [bsearch_s —](bsearch-s.md).
+Wykonuje wyszukiwanie binarne posortowany tablicy. Bardziej bezpieczna wersja ta funkcja jest dostępna; zobacz [bsearch_s —](bsearch-s.md).
 
 ## <a name="syntax"></a>Składnia
 
@@ -69,24 +69,24 @@ Liczba elementów.
 *width*<br/>
 Szerokość elementów.
 
-*Porównaj*<br/>
-Funkcja wywołania zwrotnego, który porównuje dwa elementy. Pierwsza to wskaźnik do klucza wyszukiwania, a drugą jest wartość wskaźnika do elementu tablicy, która ma zostać porównane z kluczem.
+*Porównanie*<br/>
+Funkcja wywołania zwrotnego, która porównuje dwa elementy. Pierwszy jest wskaźnikiem do klucza wyszukiwania, a drugą jest wartość wskaźnika do elementu tablicy, który można porównać z kluczem.
 
 ## <a name="return-value"></a>Wartość zwracana
 
-**bsearch —** zwraca wskaźnik do wystąpienia *klucza* w tablicy wskazywana przez *podstawowej*. Jeśli *klucza* nie zostanie znaleziony, funkcja zwraca **NULL**. Jeśli tablica nie jest w kolejności rosnącej lub zawiera zduplikowane rekordy z identycznymi kluczami, wynik będzie nieprzewidywalny.
+**bsearch —** zwraca wskaźnik do wystąpienia *klucz* w tablicy, do których prowadzą *podstawowy*. Jeśli *klucz* nie zostanie znaleziony, funkcja zwraca **NULL**. Jeśli tablica nie znajduje się w kolejności rosnącej lub zawiera zduplikowane rekordy z identycznymi kluczami, wynik jest nieprzewidywalne.
 
 ## <a name="remarks"></a>Uwagi
 
-**Bsearch —** funkcja Wyszukiwanie binarne posortowaną tablicę *numer* z elementów *szerokość* rozmiar bajtów. *Podstawowej* wartość jest wskaźnik do podstawy tablicy ma zostać wyszukany i *klucza* jest wartością złożony. *Porównania* parametr jest wskaźnikiem do podanego przez użytkownika procedury porównuje żądany klucz do elementu tablicy, która zwraca jedną z następujących wartości, określając ich relacji:
+**Bsearch —** — funkcja Wyszukiwanie binarne posortowaną tablicę *numer* elementów, z których każdy z *szerokość* bajtów. *Podstawowy* wartość jest wskaźnikiem do podstawy tablicy, które mają być wyszukiwane i *klucza* jest wartością niestabilna. *Porównania* parametr jest wskaźnikiem do procedury dostarczone przez użytkownika, który porównuje żądany klucz do elementu tablicy i zwraca jedną z następujących wartości, określając ich relacji:
 
-|Wartość zwrócona przez *porównania* procedury|Opis|
+|Wartość zwrócona przez obiekt *porównania* procedury|Opis|
 |-----------------------------------------|-----------------|
 |\< 0|Klucz jest mniejsza niż elementu tablicy.|
-|0|Klucz jest równa wartości elementu tablicy.|
+|0|Klucz jest równa elementu tablicy.|
 |> 0|Klucz jest większy niż element tablicy.|
 
-Ta funkcja weryfikuje jego parametrów. Jeśli *porównania*, *klucza* lub *numer* jest **NULL**, lub jeśli *podstawowej* jest **NULL**i **numer* jest różna od zera, lub jeśli *szerokość* wynosi zero, program obsługi nieprawidłowych parametrów zostanie wywołany, zgodnie z opisem w [sprawdzanie poprawności parametru](../../c-runtime-library/parameter-validation.md). Jeśli jest dozwolone wykonywanie, aby kontynuować, **errno** ustawiono **einval —** i funkcja zwraca **NULL**.
+Ta funkcja sprawdza poprawność swoich parametrów. Jeśli *porównania*, *klucz* lub *numer* jest **NULL**, lub jeśli *podstawowy* jest **NULL**i *numer* jest różna od zera, lub jeśli *szerokość* wynosi zero, procedura obsługi nieprawidłowego parametru zostanie wywołana, zgodnie z opisem w [Parameter Validation](../../c-runtime-library/parameter-validation.md). Jeśli wykonanie może być kontynuowane, **errno** ustawiono `EINVAL` a funkcja zwraca **NULL**.
 
 ## <a name="requirements"></a>Wymagania
 
@@ -98,7 +98,7 @@ Aby uzyskać dodatkowe informacje o zgodności, zobacz [zgodności](../../c-runt
 
 ## <a name="example"></a>Przykład
 
-Ten program sortuje tablicy ciągów z qsort —, a następnie używa bsearch — Aby znaleźć wyraz "kot".
+Ten program sortuje tablicy ciągów przy użyciu qsort —, a następnie używa bsearch — można znaleźć słowo "cat".
 
 ```C
 // crt_bsearch.c

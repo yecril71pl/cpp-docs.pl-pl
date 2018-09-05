@@ -17,130 +17,149 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 932cc50095ddbe908e9a3f451c1d6f8e3803fb74
-ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
+ms.openlocfilehash: 42ae4ddf3c3b17023f3a6968e3498c178813d039
+ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/06/2018
-ms.locfileid: "37882374"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43765348"
 ---
 # <a name="service-map-macros"></a>Makra mapy usługi
-Te makra definiują map usług i wpisów.  
-  
-|||  
-|-|-|  
-|[BEGIN_SERVICE_MAP](#begin_service_map)|Oznacza początek ATL mapy usługi.|  
-|[END_SERVICE_MAP](#end_service_map)|Oznacza koniec ATL mapy usługi.|  
-|[SERVICE_ENTRY](#service_entry)|Oznacza, że obiekt obsługuje identyfikatora dla określonej usługi.|  
+
+Te makra definiują map usług i wpisów.
+
+|||
+|-|-|
+|[BEGIN_SERVICE_MAP](#begin_service_map)|Oznacza początek ATL mapy usługi.|
+|[END_SERVICE_MAP](#end_service_map)|Oznacza koniec ATL mapy usługi.|
+|[SERVICE_ENTRY](#service_entry)|Oznacza, że obiekt obsługuje identyfikatora dla określonej usługi.|
 |[SERVICE_ENTRY_CHAIN](#service_entry_chain)|Powoduje, że [IServiceProviderImpl::QueryService](#queryservice) do tworzenia łańcucha określony obiekt.|  
 
-## <a name="requirements"></a>Wymagania  
- **Nagłówek:** atlcom.h  
-   
-##  <a name="begin_service_map"></a>  BEGIN_SERVICE_MAP  
- Oznacza początek mapy usługi.  
-  
+## <a name="requirements"></a>Wymagania
+
+**Nagłówek:** atlcom.h
+
+##  <a name="begin_service_map"></a>  BEGIN_SERVICE_MAP
+
+Oznacza początek mapy usługi.
+
 ```
 BEGIN_SERVICE_MAP(theClass)
-```  
-  
-### <a name="parameters"></a>Parametry  
- *theClass*  
- [in] Określa klasę zawierającą mapy usługi.  
-  
-### <a name="remarks"></a>Uwagi  
- Aby zaimplementować funkcję dostawcy usług na obiekcie COM, należy wykonać mapy usługi. Po pierwsze, musi pochodzić z klasy [IServiceProviderImpl](../../atl/reference/iserviceproviderimpl-class.md). Istnieją dwa rodzaje wpisy:  
-  
-- [SERVICE_ENTRY](#service_entry) wskazuje pomocy technicznej dla określonej usługi identyfikator (SID).  
-  
-- [SERVICE_ENTRY_CHAIN](#service_entry_chain) nakazuje [IServiceProviderImpl::QueryService](#queryservice) do tworzenia łańcucha innego, określonego obiektu.  
-  
-### <a name="example"></a>Przykład  
- [!code-cpp[NVC_ATL_COM#57](../../atl/codesnippet/cpp/service-map-macros_1.h)]  
-  
-##  <a name="end_service_map"></a>  END_SERVICE_MAP  
- Oznacza koniec mapy usługi.  
-  
+```
+
+### <a name="parameters"></a>Parametry
+
+*theClass*  
+[in] Określa klasę zawierającą mapy usługi.
+
+### <a name="remarks"></a>Uwagi
+
+Aby zaimplementować funkcję dostawcy usług na obiekcie COM, należy wykonać mapy usługi. Po pierwsze, musi pochodzić z klasy [IServiceProviderImpl](../../atl/reference/iserviceproviderimpl-class.md). Istnieją dwa rodzaje wpisy:
+
+- [SERVICE_ENTRY](#service_entry) wskazuje pomocy technicznej dla określonej usługi identyfikator (SID).
+
+- [SERVICE_ENTRY_CHAIN](#service_entry_chain) nakazuje [IServiceProviderImpl::QueryService](#queryservice) do tworzenia łańcucha innego, określonego obiektu.
+
+### <a name="example"></a>Przykład
+
+[!code-cpp[NVC_ATL_COM#57](../../atl/codesnippet/cpp/service-map-macros_1.h)]
+
+##  <a name="end_service_map"></a>  END_SERVICE_MAP
+
+Oznacza koniec mapy usługi.
+
 ```
 END_SERVICE_MAP()
-```  
-  
-### <a name="example"></a>Przykład  
- Zobacz przykład [BEGIN_SERVICE_MAP](#begin_service_map).  
-  
-##  <a name="service_entry"></a>  SERVICE_ENTRY  
- Oznacza, że obiekt obsługuje określonego przez identyfikator usługi *SID*.  
-  
+```
+
+### <a name="example"></a>Przykład
+
+Zobacz przykład [BEGIN_SERVICE_MAP](#begin_service_map).
+
+##  <a name="service_entry"></a>  SERVICE_ENTRY
+
+Oznacza, że obiekt obsługuje określonego przez identyfikator usługi *SID*.
+
 ```
 SERVICE_ENTRY( SID )
-```  
-  
-### <a name="parameters"></a>Parametry  
- *IDENTYFIKATOR SID*  
- Identyfikator usługi.  
-  
-### <a name="example"></a>Przykład  
- Zobacz przykład [BEGIN_SERVICE_MAP](#begin_service_map).  
-  
-##  <a name="service_entry_chain"></a>  SERVICE_ENTRY_CHAIN  
- Powoduje, że [IServiceProviderImpl::QueryService](#queryservice) do tworzenia łańcucha obiekt określony przez *punk*.  
-  
+```
+
+### <a name="parameters"></a>Parametry
+
+*IDENTYFIKATOR SID*  
+Identyfikator usługi.
+
+### <a name="example"></a>Przykład
+
+Zobacz przykład [BEGIN_SERVICE_MAP](#begin_service_map).
+
+##  <a name="service_entry_chain"></a>  SERVICE_ENTRY_CHAIN
+
+Powoduje, że [IServiceProviderImpl::QueryService](#queryservice) do tworzenia łańcucha obiekt określony przez *punk*.
+
 ```
 SERVICE_ENTRY_CHAIN( punk )
-```  
-  
-### <a name="parameters"></a>Parametry  
- *punk*  
- Wskaźnik do **IUnknown** interfejsu, do którego łańcuch.  
-  
-### <a name="example"></a>Przykład  
- Zobacz przykład [BEGIN_SERVICE_MAP](#begin_service_map).  
-  
-##  <a name="queryservice"></a>  IServiceProviderImpl::QueryService  
- Tworzy lub uzyskuje dostęp do określonej usługi i zwraca wskaźnik interfejsu do określonego interfejsu usługi.  
-  
+```
+
+### <a name="parameters"></a>Parametry
+
+*punk*  
+Wskaźnik do **IUnknown** interfejsu, do którego łańcuch.
+
+### <a name="example"></a>Przykład
+
+Zobacz przykład [BEGIN_SERVICE_MAP](#begin_service_map).
+
+##  <a name="queryservice"></a>  IServiceProviderImpl::QueryService
+
+Tworzy lub uzyskuje dostęp do określonej usługi i zwraca wskaźnik interfejsu do określonego interfejsu usługi.
+
 ```
 STDMETHOD(QueryService)( 
     REFGUID guidService,
     REFIID riid,
     void** ppvObject);
-```  
-  
-### <a name="parameters"></a>Parametry  
- [IN] *guidService*  
- Wskaźnik do identyfikator usług (SID).  
-  
- [IN] *riid*  
- Identyfikator interfejsu, do którego ma dostęp obiekt wywołujący.  
-  
- [OUT] *ppvObj*  
- Pośredni wskaźnik do żądanego interfejsu.  
-  
-### <a name="return-value"></a>Wartość zwracana  
- Zwrócona wartość HRESULT jest jedną z następujących czynności:  
-  
-|Wartość zwracana|Znaczenie|  
-|------------------|-------------|  
-|S_OK|Usługa została pomyślnie utworzone lub pobrać.|  
-|E_INVALIDARG|Co najmniej jeden z argumentów jest nieprawidłowa.|  
-|E_OUTOFMEMORY|Pamięć jest za mała, aby utworzyć usługę.|  
-|WARTOŚĆ E_UNEXPECTED|Wystąpił nieznany błąd.|  
-|E_NOINTERFACE|Żądany interfejs nie jest częścią tej usługi lub usługa jest nieznany.|  
-  
-### <a name="remarks"></a>Uwagi  
- `QueryService` Zwraca wartość pośredni wskaźnik do żądanego interfejsu w określonej usługi. Obiekt wywołujący jest odpowiedzialny za zwalniając tego wskaźnika, gdy nie jest już wymagany.  
-  
- Gdy wywołujesz `QueryService`, należy przekazać identyfikatorem usługi (*guidService*) i identyfikator interfejsu (*riid*). *GuidService* Określa usługę, do którego mają dostęp, i *riid* identyfikuje interfejs, który jest częścią usługi. W zamian otrzymasz pośredni wskaźnik do interfejsu.  
-  
- Obiekt, który implementuje interfejs może także implementować interfejsy, które należą do innych usług. Rozważ następujące opcje:  
-  
--   Niektóre z tych interfejsów, może być opcjonalny. Nie wszystkie interfejsy, zdefiniowane w opisie usługi są zawsze obecne w każdej implementacji usługi lub dla każdego zwróconego obiektu.  
-  
--   W przeciwieństwie do wywołania `QueryInterface`, przekazując identyfikator innej usługi nie musi oznaczać zwróceniem innego obiektu Component Object Model (COM).  
-  
--   Zwrócony obiekt może mieć dodatkowe interfejsy, które nie są częścią definicji usługi.  
-  
- Dwa różne usługi, takie jak SID_SMyService i SID_SYourService, zarówno określić korzystanie z tego samego interfejsu, mimo że implementacja interfejsu może być nic wspólnego między obiema usługami. To działa, ponieważ wywołanie `QueryService` (SID_SMyService, IID_IDispatch) może zwrócić obiekt inny niż `QueryService` (SID_SYourService, IID_IDispatch). Tożsamość obiektu nie zakłada, że podczas określania identyfikatora innej usługi.  
-  
-## <a name="see-also"></a>Zobacz też  
- [Makra](../../atl/reference/atl-macros.md)
+```
+
+### <a name="parameters"></a>Parametry
+
+[IN] *guidService*  
+Wskaźnik do identyfikator usług (SID).
+
+[IN] *riid*  
+Identyfikator interfejsu, do którego ma dostęp obiekt wywołujący.
+
+[OUT] *ppvObj*  
+Pośredni wskaźnik do żądanego interfejsu.
+
+### <a name="return-value"></a>Wartość zwracana
+
+Zwrócona wartość HRESULT jest jedną z następujących czynności:
+
+|Wartość zwracana|Znaczenie|
+|------------------|-------------|
+|S_OK|Usługa została pomyślnie utworzone lub pobrać.|
+|E_INVALIDARG|Co najmniej jeden z argumentów jest nieprawidłowa.|
+|E_OUTOFMEMORY|Pamięć jest za mała, aby utworzyć usługę.|
+|WARTOŚĆ E_UNEXPECTED|Wystąpił nieznany błąd.|
+|E_NOINTERFACE|Żądany interfejs nie jest częścią tej usługi lub usługa jest nieznany.|
+
+### <a name="remarks"></a>Uwagi
+
+`QueryService` Zwraca wartość pośredni wskaźnik do żądanego interfejsu w określonej usługi. Obiekt wywołujący jest odpowiedzialny za zwalniając tego wskaźnika, gdy nie jest już wymagany.
+
+Gdy wywołujesz `QueryService`, należy przekazać identyfikatorem usługi (*guidService*) i identyfikator interfejsu (*riid*). *GuidService* Określa usługę, do którego mają dostęp, i *riid* identyfikuje interfejs, który jest częścią usługi. W zamian otrzymasz pośredni wskaźnik do interfejsu.
+
+Obiekt, który implementuje interfejs może także implementować interfejsy, które należą do innych usług. Rozważ następujące opcje:
+
+- Niektóre z tych interfejsów, może być opcjonalny. Nie wszystkie interfejsy, zdefiniowane w opisie usługi są zawsze obecne w każdej implementacji usługi lub dla każdego zwróconego obiektu.
+
+- W przeciwieństwie do wywołania `QueryInterface`, przekazując identyfikator innej usługi nie musi oznaczać zwróceniem innego obiektu Component Object Model (COM).
+
+- Zwrócony obiekt może mieć dodatkowe interfejsy, które nie są częścią definicji usługi.
+
+Dwa różne usługi, takie jak SID_SMyService i SID_SYourService, zarówno określić korzystanie z tego samego interfejsu, mimo że implementacja interfejsu może być nic wspólnego między obiema usługami. To działa, ponieważ wywołanie `QueryService` (SID_SMyService, IID_IDispatch) może zwrócić obiekt inny niż `QueryService` (SID_SYourService, IID_IDispatch). Tożsamość obiektu nie zakłada, że podczas określania identyfikatora innej usługi.
+
+## <a name="see-also"></a>Zobacz też
+
+[Makra](../../atl/reference/atl-macros.md)

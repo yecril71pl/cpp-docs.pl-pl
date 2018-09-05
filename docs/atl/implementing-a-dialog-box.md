@@ -17,41 +17,46 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4c5133960cca3aab3d4bf526179fd9c825c41a20
-ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
+ms.openlocfilehash: b656af864f8a0dd7c5a69866976b4c1e624b87b9
+ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/05/2018
-ms.locfileid: "37848460"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43764296"
 ---
 # <a name="implementing-a-dialog-box"></a>Implementowanie okna dialogowego
-Istnieją dwa sposoby okno dialogowe Dodawanie do projektu ATL: Użyj Kreator okna dialogowego ATL lub dodać ją ręcznie.  
-  
-## <a name="adding-a-dialog-box-with-the-atl-dialog-wizard"></a>Dodawanie okno dialogowe z Kreator okna dialogowego ATL  
- W [okno dialogowe Dodaj klasę](../ide/add-class-dialog-box.md), wybierz obiekt okno dialogowe ATL do okno dialogowe Dodawanie do projektu ATL. Wypełnij Kreator okna dialogowego ATL, zgodnie z potrzebami, a następnie kliknij przycisk **Zakończ**. Kreator dodaje klasę pochodną [CAxDialogImpl](../atl/reference/caxdialogimpl-class.md) do projektu. Powoduje ono otwarcie widoku zasobu z **widoku** menu, zlokalizuj okna dialogowego, a następnie go dwukrotnie, aby otworzyć go w edytorze zasobów.  
-  
+
+Istnieją dwa sposoby okno dialogowe Dodawanie do projektu ATL: Użyj Kreator okna dialogowego ATL lub dodać ją ręcznie.
+
+## <a name="adding-a-dialog-box-with-the-atl-dialog-wizard"></a>Dodawanie okno dialogowe z Kreator okna dialogowego ATL
+
+W [okno dialogowe Dodaj klasę](../ide/add-class-dialog-box.md), wybierz obiekt okno dialogowe ATL do okno dialogowe Dodawanie do projektu ATL. Wypełnij Kreator okna dialogowego ATL, zgodnie z potrzebami, a następnie kliknij przycisk **Zakończ**. Kreator dodaje klasę pochodną [CAxDialogImpl](../atl/reference/caxdialogimpl-class.md) do projektu. Powoduje ono otwarcie widoku zasobu z **widoku** menu, zlokalizuj okna dialogowego, a następnie go dwukrotnie, aby otworzyć go w edytorze zasobów.
+
 > [!NOTE]
->  Jeśli Twoje okno dialogowe jest tworzony na podstawie `CAxDialogImpl`, może on obsługiwać oba ActiveX i kontrolki Windows. Jeśli nie ma konieczności obsługi formantów ActiveX w klasie okno dialogowe, należy użyć [CSimpleDialog](../atl/reference/csimpledialog-class.md) lub [CDialogImpl](../atl/reference/cdialogimpl-class.md) zamiast tego.  
-  
- Programy obsługi komunikatów i zdarzenia można dodać do klasy okien dialogowych z widoku klasy. Aby uzyskać więcej informacji, zobacz [Dodawanie programu obsługi komunikatów ATL](../atl/adding-an-atl-message-handler.md).  
-  
-## <a name="adding-a-dialog-box-manually"></a>Ręczne dodawanie okno dialogowe  
- Implementowanie okna dialogowego przypomina Implementowanie okna. Wyprowadzić klasę z poziomu [CAxDialogImpl](../atl/reference/caxdialogimpl-class.md), [CDialogImpl](../atl/reference/cdialogimpl-class.md), lub [CSimpleDialog](../atl/reference/csimpledialog-class.md) i Zadeklaruj [mapy komunikatów](../atl/message-maps-atl.md) do obsługi wiadomości. Jednakże należy także określić identyfikator zasobu szablonu okna dialogowego w klasie pochodnej. Klasa musi mieć element członkowski danych o nazwie `IDD` zawierającą tę wartość.  
-  
+>  Jeśli Twoje okno dialogowe jest tworzony na podstawie `CAxDialogImpl`, może on obsługiwać oba ActiveX i kontrolki Windows. Jeśli nie ma konieczności obsługi formantów ActiveX w klasie okno dialogowe, należy użyć [CSimpleDialog](../atl/reference/csimpledialog-class.md) lub [CDialogImpl](../atl/reference/cdialogimpl-class.md) zamiast tego.
+
+Programy obsługi komunikatów i zdarzenia można dodać do klasy okien dialogowych z widoku klasy. Aby uzyskać więcej informacji, zobacz [Dodawanie programu obsługi komunikatów ATL](../atl/adding-an-atl-message-handler.md).
+
+## <a name="adding-a-dialog-box-manually"></a>Ręczne dodawanie okno dialogowe
+
+Implementowanie okna dialogowego przypomina Implementowanie okna. Wyprowadzić klasę z poziomu [CAxDialogImpl](../atl/reference/caxdialogimpl-class.md), [CDialogImpl](../atl/reference/cdialogimpl-class.md), lub [CSimpleDialog](../atl/reference/csimpledialog-class.md) i Zadeklaruj [mapy komunikatów](../atl/message-maps-atl.md) do obsługi wiadomości. Jednakże należy także określić identyfikator zasobu szablonu okna dialogowego w klasie pochodnej. Klasa musi mieć element członkowski danych o nazwie `IDD` zawierającą tę wartość.
+
 > [!NOTE]
->  Kiedy tworzysz okno dialogowe, za pomocą Kreator okna dialogowego ATL, Kreator automatycznie doda `IDD` jako element członkowski **wyliczenia** typu.  
-  
- `CDialogImpl` pozwala na implementowanie modalne lub niemodalne okno dialogowe, który obsługuje formanty Windows. `CAxDialogImpl` pozwala na implementowanie modalne lub niemodalne okno dialogowe, który obsługuje formanty ActiveX i Windows.  
-  
- Aby utworzyć modalne okno dialogowe, Utwórz wystąpienie obiektu usługi `CDialogImpl`— pochodnych (lub `CAxDialogImpl`— pochodzące) klasy, a następnie wywołać [DoModal](../atl/reference/cdialogimpl-class.md#domodal) metody. Aby zamknąć okno modalne okno dialogowe, należy wywołać [EndDialog](../atl/reference/cdialogimpl-class.md#enddialog) metody z obsługi wiadomości. Aby utworzyć niemodalnego okna dialogowego, wywołaj [Utwórz](../atl/reference/cdialogimpl-class.md#create) zamiast metody `DoModal`. Aby zniszczyć niemodalnego okna dialogowego, należy wywołać [destroywindow —](../atl/reference/cdialogimpl-class.md#destroywindow).  
-  
- Wychwytywania zdarzeń jest wykonywane automatycznie [CAxDialogImpl](../atl/reference/caxdialogimpl-class.md). Implementuje okno dialogowe programy obsługi komunikatów, jak w przypadku obsługi w `CWindowImpl`-klasy pochodnej. Jeśli jest zwracana wartość specyficzne dla wiadomości, zwrócić go w formie `LRESULT`. Zwrócony `LRESULT` wartości są mapowane przez ATL do obsługi właściwego przez Menedżera okno dialogowe Windows. Aby uzyskać szczegółowe informacje, zobacz kod źródłowy [CDialogImplBaseT::DialogProc](../atl/reference/cdialogimpl-class.md#dialogproc) w atlwin.h.  
-  
-## <a name="example"></a>Przykład  
- Następujące klasy implementuje okno dialogowe:  
-  
- [!code-cpp[NVC_ATL_Windowing#66](../atl/codesnippet/cpp/implementing-a-dialog-box_1.h)]  
-  
-## <a name="see-also"></a>Zobacz też  
- [Klasy okien](../atl/atl-window-classes.md)
+>  Kiedy tworzysz okno dialogowe, za pomocą Kreator okna dialogowego ATL, Kreator automatycznie doda `IDD` jako element członkowski **wyliczenia** typu.
+
+`CDialogImpl` pozwala na implementowanie modalne lub niemodalne okno dialogowe, który obsługuje formanty Windows. `CAxDialogImpl` pozwala na implementowanie modalne lub niemodalne okno dialogowe, który obsługuje formanty ActiveX i Windows.
+
+Aby utworzyć modalne okno dialogowe, Utwórz wystąpienie obiektu usługi `CDialogImpl`— pochodnych (lub `CAxDialogImpl`— pochodzące) klasy, a następnie wywołać [DoModal](../atl/reference/cdialogimpl-class.md#domodal) metody. Aby zamknąć okno modalne okno dialogowe, należy wywołać [EndDialog](../atl/reference/cdialogimpl-class.md#enddialog) metody z obsługi wiadomości. Aby utworzyć niemodalnego okna dialogowego, wywołaj [Utwórz](../atl/reference/cdialogimpl-class.md#create) zamiast metody `DoModal`. Aby zniszczyć niemodalnego okna dialogowego, należy wywołać [destroywindow —](../atl/reference/cdialogimpl-class.md#destroywindow).
+
+Wychwytywania zdarzeń jest wykonywane automatycznie [CAxDialogImpl](../atl/reference/caxdialogimpl-class.md). Implementuje okno dialogowe programy obsługi komunikatów, jak w przypadku obsługi w `CWindowImpl`-klasy pochodnej. Jeśli jest zwracana wartość specyficzne dla wiadomości, zwrócić go w formie `LRESULT`. Zwrócony `LRESULT` wartości są mapowane przez ATL do obsługi właściwego przez Menedżera okno dialogowe Windows. Aby uzyskać szczegółowe informacje, zobacz kod źródłowy [CDialogImplBaseT::DialogProc](../atl/reference/cdialogimpl-class.md#dialogproc) w atlwin.h.
+
+## <a name="example"></a>Przykład
+
+Następujące klasy implementuje okno dialogowe:
+
+[!code-cpp[NVC_ATL_Windowing#66](../atl/codesnippet/cpp/implementing-a-dialog-box_1.h)]
+
+## <a name="see-also"></a>Zobacz też
+
+[Klasy okien](../atl/atl-window-classes.md)
 

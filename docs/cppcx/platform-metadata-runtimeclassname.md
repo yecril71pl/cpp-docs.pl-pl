@@ -15,11 +15,11 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 ms.openlocfilehash: 024d9d7dce234b07620a108b1f11c240bd842ac6
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42592581"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43765492"
 ---
 # <a name="platformmetadataruntimeclassname"></a>Platform::Metadata::RuntimeClassName
 Po zastosowaniu do definicji klasy, zapewnia, że klasa prywatna zwraca prawidłową nazwę funkcji getruntimeclassname —...  

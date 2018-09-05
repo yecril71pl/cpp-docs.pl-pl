@@ -18,54 +18,62 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a325da2edd4af8b8b0e6e965dc60df8c11bf8d30
-ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
+ms.openlocfilehash: 74bc3326c50f1b460fc212074b7ca34dec518c76
+ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/06/2018
-ms.locfileid: "37882861"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43765638"
 ---
 # <a name="csimplearrayequalhelperfalse-class"></a>Klasa CSimpleArrayEqualHelperFalse
-Ta klasa jest pomocnika dla [CSimpleArray](../../atl/reference/csimplearray-class.md) klasy.  
-  
-## <a name="syntax"></a>Składnia  
-  
+
+Ta klasa jest pomocnika dla [CSimpleArray](../../atl/reference/csimplearray-class.md) klasy.
+
+## <a name="syntax"></a>Składnia
+
 ```
 template <class T>  
 class CSimpleArrayEqualHelperFalse
-```  
-  
-#### <a name="parameters"></a>Parametry  
- *T*  
- Klasy pochodnej.  
-  
-## <a name="members"></a>Elementy członkowskie  
-  
-### <a name="public-methods"></a>Metody publiczne  
-  
-|Nazwa|Opis|  
-|----------|-----------------|  
-|[CSimpleArrayEqualHelperFalse::IsEqual](#isequal)|(Statyczny) Zwraca wartość false.|  
-  
-## <a name="remarks"></a>Uwagi  
- Ta klasa cech jest uzupełnieniem `CSimpleArray` klasy. IT zawsze zwraca wartość false, a ponadto wywoła `ATLASSERT` z nieprawidłowym argumentem wartość false, jeśli nigdy nie jest wywoływany. W sytuacjach, w którym testu równości nie jest wystarczająco zdefiniowana ta klasa umożliwia tablica zawierająca elementy, aby działać prawidłowo w przypadku większości metod, ale nie działać w sposób dobrze zdefiniowanych dla metod, które są zależne od porównań, takich jak [CSimpleArray:: Znajdź](../../atl/reference/csimplearray-class.md#find).  
-  
-## <a name="requirements"></a>Wymagania  
- **Nagłówek:** atlsimpcoll.h  
-  
-##  <a name="isequal"></a>  CSimpleArrayEqualHelperFalse::IsEqual  
- Zwraca wartość false.  
-  
+```
+
+#### <a name="parameters"></a>Parametry
+
+*T*  
+Klasy pochodnej.
+
+## <a name="members"></a>Elementy członkowskie
+
+### <a name="public-methods"></a>Metody publiczne
+
+|Nazwa|Opis|
+|----------|-----------------|
+|[CSimpleArrayEqualHelperFalse::IsEqual](#isequal)|(Statyczny) Zwraca wartość false.|
+
+## <a name="remarks"></a>Uwagi
+
+Ta klasa cech jest uzupełnieniem `CSimpleArray` klasy. IT zawsze zwraca wartość false, a ponadto wywoła `ATLASSERT` z nieprawidłowym argumentem wartość false, jeśli nigdy nie jest wywoływany. W sytuacjach, w którym testu równości nie jest wystarczająco zdefiniowana ta klasa umożliwia tablica zawierająca elementy, aby działać prawidłowo w przypadku większości metod, ale nie działać w sposób dobrze zdefiniowanych dla metod, które są zależne od porównań, takich jak [CSimpleArray:: Znajdź](../../atl/reference/csimplearray-class.md#find).
+
+## <a name="requirements"></a>Wymagania
+
+**Nagłówek:** atlsimpcoll.h
+
+##  <a name="isequal"></a>  CSimpleArrayEqualHelperFalse::IsEqual
+
+Zwraca wartość false.
+
 ```
 static bool IsEqual(const T&, const T&);
-```  
-  
-### <a name="return-value"></a>Wartość zwracana  
- Zwraca wartość false.  
-  
-### <a name="remarks"></a>Uwagi  
- Ta metoda zawsze zwraca wartość false i wywoła `ATLASSERT` z nieprawidłowym argumentem false, jeśli przywoływany. Celem `CSimpleArrayEqualHelperFalse::IsEqual` jest wymuszenie metod, które się nie powieść w dobrze zdefiniowany sposób w przypadku równości testy nie zostały odpowiednio zdefiniowane za pomocą porównania.  
-  
-## <a name="see-also"></a>Zobacz też  
- [Klasa CSimpleArrayEqualHelper](../../atl/reference/csimplearrayequalhelper-class.md)   
- [Klasa — Przegląd](../../atl/atl-class-overview.md)
+```
+
+### <a name="return-value"></a>Wartość zwracana
+
+Zwraca wartość false.
+
+### <a name="remarks"></a>Uwagi
+
+Ta metoda zawsze zwraca wartość false i wywoła `ATLASSERT` z nieprawidłowym argumentem false, jeśli przywoływany. Celem `CSimpleArrayEqualHelperFalse::IsEqual` jest wymuszenie metod, które się nie powieść w dobrze zdefiniowany sposób w przypadku równości testy nie zostały odpowiednio zdefiniowane za pomocą porównania.
+
+## <a name="see-also"></a>Zobacz też
+
+[Klasa CSimpleArrayEqualHelper](../../atl/reference/csimplearrayequalhelper-class.md)   
+[Klasa — Przegląd](../../atl/atl-class-overview.md)

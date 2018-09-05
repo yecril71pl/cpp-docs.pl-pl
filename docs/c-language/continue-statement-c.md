@@ -1,5 +1,5 @@
 ---
-title: kontynuować Statement (C) | Dokumentacja firmy Microsoft
+title: Kontynuuj Statement (C) | Dokumentacja firmy Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,27 +17,29 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0f474d24bd6057165a50cc6edaca5db5462f6459
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 6d98329b46bd7db72caa88030f56abb92142904c
+ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32383553"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43765052"
 ---
 # <a name="continue-statement-c"></a>continue — instrukcja (C)
-`continue` Instrukcja przekazuje formantu do następnej iteracji najbliższej otaczającej `do`, `for`, lub `while` instrukcji, w którym zostanie wyświetlona, pomijanie wszelkie pozostałe instrukcje w `do`, `for`, lub `while` treść instrukcji.  
+
+`continue` Instrukcji przekazuje kontrolę do następnej iteracji najbliższej otaczającej `do`, `for`, lub `while` instrukcji, w której występuje, dowolnej pozostałych instrukcji z pominięciem `do`, `for`, lub `while` treść instrukcji.  
   
-## <a name="syntax"></a>Składnia  
- `jump-statement`:  
- `continue;`  
+## <a name="syntax"></a>Składnia
+
+*Instrukcja skoku*:<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**Kontynuuj;**
   
- Następnej iteracji `do`, `for`, lub `while` instrukcji jest określane w następujący sposób:  
+Następnej iteracji `do`, `for`, lub `while` instrukcji jest określany w następujący sposób:  
   
--   W ramach `do` lub `while` instrukcji następnej iteracji rozpoczyna się od wyrażenia reevaluating `do` lub `while` instrukcji.  
+-   W ramach `do` lub `while` instrukcji następnej iteracji należy zacząć od reevaluating wyrażenie `do` lub `while` instrukcji.  
   
--   A `continue` instrukcji w `for` instrukcja powoduje, że wyrażenie pętli `for` instrukcji, które ma zostać obliczone. Następnie kompilator reevaluates wyrażenie warunkowe i, w zależności od wyniku albo kończy lub iteruje treść instrukcji. Zobacz [dla instrukcji](../c-language/for-statement-c.md) Aby uzyskać więcej informacji na temat `for` instrukcji i jego symboli nieterminalnych.  
+-   A `continue` instrukcji w `for` instrukcji powoduje, że wyrażenie pętli `for` instrukcji, które ma zostać obliczone. Następnie kompilator reevaluates wyrażenia warunkowego, w zależności od wyniku albo kończy się i wykonuje iterację w treści instrukcji. Zobacz [dla instrukcji](../c-language/for-statement-c.md) więcej informacji na temat `for` instrukcji i jego symboli nieterminalnych.  
   
- To jest przykład `continue` instrukcji:  
+Jest to przykład `continue` instrukcji:  
   
 ```  
 while ( i-- > 0 )   
@@ -49,7 +51,8 @@ while ( i-- > 0 )
 }  
 ```  
   
- W tym przykładzie jest wykonywane w treści instrukcji podczas `i` jest większa niż 0. Pierwszy `f(i)` jest przypisany do `x`; następnie, jeśli `x` jest równa 1, `continue` instrukcja jest wykonywana. Pozostałe instrukcje w treści są ignorowane, a wykonanie wznawia w górnej części pętli z oceną testu pętli.  
+W tym przykładzie zostaje wykonana instrukcja podczas `i` jest większa niż 0. Pierwszy `f(i)` jest przypisany do `x`; a, w przypadku `x` jest równa 1, `continue` instrukcja jest wykonywana. Resztę instrukcji w treści są ignorowane i wykonanie zostanie wznowione u góry pętli z oceną test pętli.  
   
-## <a name="see-also"></a>Zobacz też  
- [continue, instrukcja](../cpp/continue-statement-cpp.md)
+## <a name="see-also"></a>Zobacz też
+
+[continue, instrukcja](../cpp/continue-statement-cpp.md)

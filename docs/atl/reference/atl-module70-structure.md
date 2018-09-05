@@ -19,18 +19,19 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9666d73eec770ff8231e5730e01520b0bee68012
-ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
+ms.openlocfilehash: e7afe6867f359b334654f58aad39ad7f143dd428
+ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/06/2018
-ms.locfileid: "37886222"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43764894"
 ---
 # <a name="atlmodule70-structure"></a>Struktura _ATL_MODULE70
-Zawiera dane używane przez każdy moduł ATL.  
-  
-## <a name="syntax"></a>Składnia  
-  
+
+Zawiera dane używane przez każdy moduł ATL.
+
+## <a name="syntax"></a>Składnia
+
 ```
 struct _ATL_MODULE70 {
     UINT cbSize;
@@ -38,33 +39,31 @@ struct _ATL_MODULE70 {
     _ATL_TERMFUNC_ELEM* m_pTermFuncs;
     CComCriticalSection m_csStaticDataInitAndTypeInfo;
 };
-```  
-  
-## <a name="members"></a>Elementy członkowskie  
- `cbSize`  
- Rozmiar struktury, używane do obsługi wersji.  
-  
- `m_nLockCnt`  
- Aby określić, jak długo moduł powinien pozostaną aktywne liczbę odwołań.  
-  
- `m_pTermFuncs`  
- Funkcje ścieżki, które zostały zarejestrowane wywoływana, gdy zamyka ATL.  
-  
- `m_csStaticDataInitAndTypeInfo`  
- Używane do koordynowania dostępu do danych wewnętrznych w sytuacjach wielowątkowych.  
-  
-## <a name="remarks"></a>Uwagi  
- [_ATL_MODULE](atl-typedefs.md#_atl_module) jest zdefiniowany jako element typedef dla `_ATL_MODULE70`.  
-  
-## <a name="requirements"></a>Wymagania  
- **Nagłówek:** atlbase.h  
-  
-## <a name="see-also"></a>Zobacz też  
-  [Klasy i struktury](../../atl/reference/atl-classes.md)
+```
 
+## <a name="members"></a>Elementy członkowskie
 
+`cbSize`  
+Rozmiar struktury, używane do obsługi wersji.
 
+`m_nLockCnt`  
+Aby określić, jak długo moduł powinien pozostaną aktywne liczbę odwołań.
 
+`m_pTermFuncs`  
+Funkcje ścieżki, które zostały zarejestrowane wywoływana, gdy zamyka ATL.
 
+`m_csStaticDataInitAndTypeInfo`  
+Używane do koordynowania dostępu do danych wewnętrznych w sytuacjach wielowątkowych.
 
+## <a name="remarks"></a>Uwagi
+
+[_ATL_MODULE](atl-typedefs.md#_atl_module) jest zdefiniowany jako element typedef dla `_ATL_MODULE70`.
+
+## <a name="requirements"></a>Wymagania
+
+**Nagłówek:** atlbase.h
+
+## <a name="see-also"></a>Zobacz też
+
+[Klasy i struktury](../../atl/reference/atl-classes.md)
 
