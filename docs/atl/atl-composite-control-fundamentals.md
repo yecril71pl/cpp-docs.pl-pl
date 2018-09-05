@@ -14,30 +14,32 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0dabb46e1a61b2d8afab2e565c6034e6a33d17da
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 6d44abba005295fbc328f005c48a16611a2b5f25
+ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32354620"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43765833"
 ---
 # <a name="atl-composite-control-fundamentals"></a>Podstawy złożonych kontrolek ALT
-Formantu złożonego jest typem formantu ActiveX, który może zawierać (podobnie do okna dialogowego) innych formantów ActiveX lub formantów systemu Windows. Po utworzeniu złożonych kontrolek, aby można było wstawić wszędzie tam, gdzie mogą być hostowane kontrolki ActiveX.  
-  
- Kreator projektu ATL i **Dodaj klasę** okno dialogowe zautomatyzować proces tworzenia i wdrażania projektu formantu złożonego, podobnie jak wynik uruchomienia Kreatora aplikacji, aby utworzyć struktura aplikacji MFC. Proces tworzenia składa się z pięciu krokach:  
-  
--   [Tworzenie projektu ATL](../atl/reference/creating-an-atl-project.md)  
-  
--   [Wstawianie formantu złożonego](../atl/inserting-a-composite-control.md)  
-  
--   [Modyfikowanie Projekt ATL](../atl/modifying-the-atl-project.md)  
-  
--   [Dodawanie funkcji do złożonych kontrolek](../atl/adding-functionality-to-the-composite-control.md)  
-  
--   [Tworzenie i testowanie Projekt ATL](../atl/building-and-testing-the-atl-project.md)  
-  
-## <a name="see-also"></a>Zobacz też  
- [Pojęcia](../atl/active-template-library-atl-concepts.md)   
- [Funkcje globalne złożonych kontrolek](../atl/reference/composite-control-global-functions.md)   
- [Makra kontrolek złożonych](../atl/reference/composite-control-macros.md)
+
+Kontrolki złożonej jest typem formantu ActiveX, który może zawierać (podobnie do okna dialogowego) innych formantów ActiveX lub formanty Windows. Po skompilowaniu złożonej kontrolki mogła zostać wstawiona wszędzie tam, gdzie formant ActiveX może być obsługiwany.
+
+Kreator projektu ATL i **Dodaj klasę** okno dialogowe zautomatyzować tworzenie i wdrażanie złożonych kontrolek projektu, podobnie jak wynik uruchomienia Kreatora aplikacji, aby utworzyć strukturę aplikacji MFC. Proces tworzenia aplikacji składa się z pięciu krokach:
+
+- [Tworzenie projektu ATL](../atl/reference/creating-an-atl-project.md)
+
+- [Wstawianie kontrolki złożonej](../atl/inserting-a-composite-control.md)
+
+- [Modyfikowanie projektu ATL](../atl/modifying-the-atl-project.md)
+
+- [Dodawanie funkcji do kontrolek złożonych](../atl/adding-functionality-to-the-composite-control.md)
+
+- [Tworzenie i testowanie projektu ATL](../atl/building-and-testing-the-atl-project.md)
+
+## <a name="see-also"></a>Zobacz też
+
+[Pojęcia](../atl/active-template-library-atl-concepts.md)   
+[Funkcje globalne kontrolek złożonych](../atl/reference/composite-control-global-functions.md)   
+[Makra kontrolek złożonych](../atl/reference/composite-control-macros.md)
 

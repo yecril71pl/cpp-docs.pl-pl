@@ -18,19 +18,21 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a0c0386cd17e7a33628790520e356c706f9743b9
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: dbc7c74e0fd6fdd34ba9a0c386c028469113c88e
+ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32354997"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43767089"
 ---
 # <a name="catlservicemodulethandler-function"></a>Funkcja CAtlServiceModuleT::Handler
-`CAtlServiceModuleT::Handler` jest procedura, która wywołuje Menedżera sterowania usługami (SCM) można pobrać stanu usługi i nadaj mu różnych instrukcje (na przykład zatrzymanie lub wstrzymanie). Menedżer sterowania usługami przekazuje kod operacji `Handler` wskaż, jakie działanie ma wykonać usługi. Domyślna usługa wygenerowany ATL obsługuje tylko instrukcje stop. Jeśli Menedżer sterowania usługami przekazuje instrukcje stop, usługa informuje SCM program o zbliżającym się zatrzymać. Wywołuje usługę `PostThreadMessage` można wysłać komunikat o rezygnacji do samej siebie. To kończy pętlę komunikatów i usługa ostatecznie zostanie zamknięte.  
-  
- Aby obsłużyć więcej instrukcji, musisz zmienić `m_status` zainicjować elementu członkowskiego danych w `CAtlServiceModuleT` konstruktora. Ten element członkowski danych informuje SCM, które przyciski umożliwiające wybranie usługę w aplikacji Panelu sterowania usługami.  
-  
-## <a name="see-also"></a>Zobacz też  
- [Usługi](../atl/atl-services.md)   
- [CAtlServiceModuleT::Handler](../atl/reference/catlservicemodulet-class.md#handler)
+
+`CAtlServiceModuleT::Handler` jest procedury, która wywołuje Menedżera sterowania usługami (SCM), można pobrać stanu usługi i nadaj mu różne instrukcje (na przykład zatrzymanie lub wstrzymanie). Menedżer sterowania usługami przekazuje kod operacji do `Handler` do wskazania, co należy zrobić. Domyślna usługa generowane ATL obsługuje tylko instrukcji zatrzymania. Jeśli Menedżer sterowania usługami przekazuje instrukcje stop, usługa informuje Menedżer sterowania usługami, program zostanie zatrzymana. Następnie wywołuje usługę `PostThreadMessage` publikować komunikat o sobie. To kończy pętli komunikatów, a usługa ostatecznie zostanie zamknięte.
+
+Aby obsłużyć więcej instrukcji, musisz zmienić `m_status` zainicjować dane składowej w `CAtlServiceModuleT` konstruktora. Ten element członkowski danych informuje Menedżer sterowania usługami, które przyciski, aby umożliwić wybranie usługi w aplikacji Panelu sterowania usługami.
+
+## <a name="see-also"></a>Zobacz też
+
+[Usługi](../atl/atl-services.md)   
+[CAtlServiceModuleT::Handler](../atl/reference/catlservicemodulet-class.md#handler)
 

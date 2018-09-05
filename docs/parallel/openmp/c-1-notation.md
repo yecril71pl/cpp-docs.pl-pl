@@ -12,24 +12,21 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 39e8610524e20aa99ea316d62f36b512700e377e
-ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
+ms.openlocfilehash: 3d3ada700955c3acd2e96aa3e8a98c25c51393c1
+ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33686818"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43766155"
 ---
 # <a name="c1-notation"></a>C.1 Notacja
-Reguły gramatyki składają się z nazwy na inny niż końcowy, wprowadź dwukropek, następuje alternatyw zastąpienia w osobnych wierszach.  
-  
- Termopt składni wyrażenia wskazuje, że termin jest opcjonalne w zastąpienia.  
-  
- Składni wyrażenia *termin*optseq jest odpowiednikiem *termin seq*zrezygnować z następującymi regułami dodatkowe:  
-  
- *seq termin* :  
-  
- *Termin*  
-  
- *termin seq termin*  
-  
- *termin seq* , *termin*
+Reguły gramatyki składają się z nazwy dla inny niż końcowy, następuje dwukropek, następuje zastąpienie alternatywy w osobnych wierszach.
+
+Termin składni wyrażenia<sub>zoptymalizowany pod kątem</sub> wskazuje, że termin jest opcjonalna w ramach wymiany.
+
+Składni wyrażenia *termin*<sub>optseq</sub> jest odpowiednikiem *termin seq*<sub>zoptymalizowany pod kątem</sub> z następujące reguły dodatkowe:
+
+*termin seq* :<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*Termin*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*termin seq* *termin*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*termin seq* **,** *termin*

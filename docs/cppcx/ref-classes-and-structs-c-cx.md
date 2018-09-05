@@ -10,11 +10,11 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 ms.openlocfilehash: ba5ce5b5cb2f55caf00ea6094cb4e14b2b08c236
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42584123"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43767610"
 ---
 # <a name="ref-classes-and-structs-ccx"></a>Klasy i struktury odwołania (C + +/ CX)
 C + +/ CX obsługuje zdefiniowanych przez użytkownika *klasy ref* i *struktury ref*i zdefiniowane przez użytkownika *wartość klasy* i *wartość struktury*. Te struktury danych są podstawowym kontenerów, przez które C + +/ CX obsługuje system typów środowiska wykonawczego Windows. Ich zawartość są emitowane do metadanych zgodnie z niektórych określone zasady, a dzięki temu przekazywane między składników środowiska wykonawczego Windows i aplikacji Universal Windows Platform, które zostały napisane w języku C++ lub innych języków.  

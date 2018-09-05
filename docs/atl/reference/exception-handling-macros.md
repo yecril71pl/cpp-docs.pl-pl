@@ -1,5 +1,5 @@
 ---
-title: Obsługa makra wyjątków | Dokumentacja firmy Microsoft
+title: Makra obsługi wyjątków | Dokumentacja firmy Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -19,58 +19,68 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 05ee381aa792c252fc9b80107d25e15e7d1ecfca
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: b503e36dfe04eaa3180809033187957ff8d970a0
+ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32358980"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43766818"
 ---
-# <a name="exception-handling-macros"></a>Makra Obsługa wyjątków
-Makra te zapewniają obsługę wyjątków.  
-  
-|||  
-|-|-|  
-|[_ATLCATCH](#_atlcatch)|Instrukcji do obsługi błędów występujących w skojarzonym `_ATLTRY`.|  
-|[_ATLCATCHALL](#_atlcatchall)|Instrukcji do obsługi błędów występujących w skojarzonym `_ATLTRY`.|  
-|[_ATLTRY](#_atltry)|Oznacza sekcji kodu ochroną, gdzie prawdopodobnie może wystąpić błąd.|  
-  
+# <a name="exception-handling-macros"></a>Makra obsługi wyjątków
+
+Te makra obsługi wyjątków.
+
+|||
+|-|-|
+|[_ATLCATCH](#_atlcatch)|Liczba zapytań: do obsługi błędów występujących w skojarzonym `_ATLTRY`.|
+|[_ATLCATCHALL](#_atlcatchall)|Liczba zapytań: do obsługi błędów występujących w skojarzonym `_ATLTRY`.|
+|[_ATLTRY](#_atltry)|Oznacza sekcji chronionej kodu, gdzie prawdopodobnie może wystąpić błąd.|
+
 ## <a name="requirements"></a>Wymagania:
+
 **Nagłówek:** atldef.h
 
-##  <a name="_atlcatch"></a>  _ATLCATCH  
- Instrukcji do obsługi błędów występujących w skojarzonym `_ATLTRY`.  
-  
+##  <a name="_atlcatch"></a>  _ATLCATCH
+
+Liczba zapytań: do obsługi błędów występujących w skojarzonym `_ATLTRY`.
+
 ```
 _ATLCATCH(e)
-```  
-  
-### <a name="parameters"></a>Parametry  
- *e*  
- Wyjątek do catch.  
-  
-### <a name="remarks"></a>Uwagi  
- Używane w połączeniu z `_ATLTRY`. Jest rozpoznawana jako C++ [catch (CAtlException e)](../../cpp/try-throw-and-catch-statements-cpp.md) obsługi danego typu wyjątków C++.  
-  
-##  <a name="_atlcatchall"></a>  _ATLCATCHALL  
- Instrukcji do obsługi błędów występujących w skojarzonym `_ATLTRY`.  
-  
+```
+
+### <a name="parameters"></a>Parametry
+
+*e*  
+Wyjątek do przechwytywania.
+
+### <a name="remarks"></a>Uwagi
+
+Używany w połączeniu z `_ATLTRY`. Jest rozpoznawana jako C++ [catch (CAtlException e)](../../cpp/try-throw-and-catch-statements-cpp.md) do obsługi danego typu wyjątki C++.
+
+##  <a name="_atlcatchall"></a>  _ATLCATCHALL
+
+Liczba zapytań: do obsługi błędów występujących w skojarzonym `_ATLTRY`.
+
 ```
 _ATLCATCHALL
-```  
-  
-### <a name="remarks"></a>Uwagi  
- Używane w połączeniu z `_ATLTRY`. Jest rozpoznawana jako C++ [instrukcji catch(...) została ](../../cpp/try-throw-and-catch-statements-cpp.md) obsługę wszystkich typów wyjątków C++.  
-  
-##  <a name="_atltry"></a>  _ATLTRY  
- Oznacza sekcji kodu ochroną, gdzie prawdopodobnie może wystąpić błąd.  
-  
+```
+
+### <a name="remarks"></a>Uwagi
+
+Używany w połączeniu z `_ATLTRY`. C++ jest rozpoznawana jako [catch(...) ](../../cpp/try-throw-and-catch-statements-cpp.md) do obsługi wszystkich typów wyjątków języka C++.
+
+##  <a name="_atltry"></a>  _ATLTRY
+
+Oznacza sekcji chronionej kodu, gdzie prawdopodobnie może wystąpić błąd.
+
 ```
 _ATLTRY
-```  
-  
-### <a name="remarks"></a>Uwagi  
- Używane w połączeniu z [_ATLCATCH](#_atlcatch) lub [_ATLCATCHALL](#_atlcatchall). Jest rozpoznawana jako C++ symbol [spróbuj](../../cpp/try-throw-and-catch-statements-cpp.md).  
-  
-## <a name="see-also"></a>Zobacz też  
- [Makra](../../atl/reference/atl-macros.md)
+```
+
+### <a name="remarks"></a>Uwagi
+
+Używany w połączeniu z [_ATLCATCH](#_atlcatch) lub [_ATLCATCHALL](#_atlcatchall). Jest rozpoznawana jako C++ symbol [spróbuj](../../cpp/try-throw-and-catch-statements-cpp.md).
+
+## <a name="see-also"></a>Zobacz też
+
+[Makra](../../atl/reference/atl-macros.md)

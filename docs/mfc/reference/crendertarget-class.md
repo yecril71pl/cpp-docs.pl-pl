@@ -125,14 +125,14 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 ms.openlocfilehash: 6ab1f4a056e1a65475a71ede0b51db45189d2dd9
-ms.sourcegitcommit: be0e3457f2884551f18e183ef0ea65c3ded7f689
+ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/28/2018
-ms.locfileid: "37079763"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43766421"
 ---
 # <a name="crendertarget-class"></a>Klasa CRenderTarget
-Otoka dla ID2D1RenderTarget.  
+Otoka ID2D1RenderTarget.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -147,61 +147,61 @@ class CRenderTarget : public CObject;
 |Nazwa|Opis|  
 |----------|-----------------|  
 |[CRenderTarget::CRenderTarget](#crendertarget)|Tworzy obiekt CRenderTarget.|  
-|[CRenderTarget:: ~ CRenderTarget](#crendertarget__~crendertarget)|Destruktor. Wywoływane, gdy trwa niszczenie obiektu docelowego renderowania.|  
+|[CRenderTarget:: ~ CRenderTarget](#crendertarget__~crendertarget)|Destruktor. Wywołuje się, kiedy niszczony jest obiekt docelowy renderowania.|  
   
 ### <a name="public-methods"></a>Metody publiczne  
   
 |Nazwa|Opis|  
 |----------|-----------------|  
-|[CRenderTarget::Attach](#attach)|Dołącza istniejących renderowania interfejsu docelowych do obiektu|  
+|[CRenderTarget::Attach](#attach)|Dołącza istniejące renderowania interfejsu docelowego do obiektu|  
 |[CRenderTarget::BeginDraw](#begindraw)|Inicjuje rysowania dla tego elementu docelowego renderowania.|  
-|[CRenderTarget::Clear](#clear)|Czyści obszaru rysowania do określonego koloru.|  
+|[CRenderTarget::Clear](#clear)|Czyści obszaru rysowania określony kolor.|  
 |[CRenderTarget::COLORREF_TO_D2DCOLOR](#colorref_to_d2dcolor)|Konwertuje obiekt D2D1_COLOR_F GDI koloru i wartości alfa.|  
-|[CRenderTarget::CreateCompatibleRenderTarget](#createcompatiblerendertarget)|Tworzy nowy cel renderowania mapy bitowej do użycia podczas pośredniego niewidocznej rysunku, który jest zgodny z bieżącym obiektu docelowego renderowania.|  
+|[CRenderTarget::CreateCompatibleRenderTarget](#createcompatiblerendertarget)|Tworzy nowy obiekt docelowy renderowania mapy bitowej do użycia podczas pośrednich rysunku poza ekranem, który jest zgodny z bieżącego obiektu docelowego renderowania.|  
 |[CRenderTarget::Destroy](#destroy)|Usuwa jeden lub więcej zasobów|  
 |[CRenderTarget::Detach](#detach)|Odłącza interfejs docelowy renderowania z obiektu|  
-|[CRenderTarget::DrawBitmap](#drawbitmap)|Rysuje tekst sformatowany opisanego przez określony obiekt IDWriteTextLayout.|  
-|[CRenderTarget::DrawEllipse](#drawellipse)|Rysuje konturu elipsy określony przy użyciu stylu obrysu określony.|  
-|[CRenderTarget::DrawGeometry](#drawgeometry)|Rysuje konturu określona Geometria przy użyciu stylu obrysu określony.|  
-|[CRenderTarget::DrawGlyphRun](#drawglyphrun)|Rysuje określonego symboli.|  
-|[CRenderTarget::DrawLine](#drawline)|Rysuje linię między punktami określony przy użyciu stylu obrysu określony.|  
-|[CRenderTarget::DrawRectangle](#drawrectangle)|Rysuje konturu prostokąt określony wymiarów i styl obrysu.|  
-|[CRenderTarget::DrawRoundedRectangle](#drawroundedrectangle)|Rysuje konturu określonego zaokrąglony prostokąt przy użyciu stylu obrysu określony.|  
-|[CRenderTarget::DrawText](#drawtext)|Rysuje określony tekst przy użyciu informacji o formacie dostarczony przez obiekt IDWriteTextFormat.|  
-|[CRenderTarget::DrawTextLayout](#drawtextlayout)|Rysuje tekst sformatowany opisanego przez określony obiekt IDWriteTextLayout.|  
-|[CRenderTarget::EndDraw](#enddraw)|Kończy operacje rysowania w celu renderowania i wskazuje bieżący stan błędu i skojarzonych tagów.|  
-|[CRenderTarget::FillEllipse](#fillellipse)|Umożliwia malowanie wnętrza określonego elipsy.|  
-|[CRenderTarget::FillGeometry](#fillgeometry)|Umożliwia malowanie wnętrza określona Geometria.|  
-|[CRenderTarget::FillMesh](#fillmesh)|Umożliwia malowanie wnętrza określonej sieci.|  
-|[CRenderTarget::FillOpacityMask](#fillopacitymask)|Stosuje maskę przezroczystości opisanego przez określony mapy bitowej do pędzla i używa tego pędzla do rysowania region obiektu docelowego renderowania.|  
-|[CRenderTarget::FillRectangle](#fillrectangle)|Umożliwia malowanie wnętrza określonego prostokąta.|  
-|[CRenderTarget::FillRoundedRectangle](#fillroundedrectangle)|Umożliwia malowanie wnętrza określonego zaokrąglony prostokąt.|  
+|[CRenderTarget::DrawBitmap](#drawbitmap)|Rysuje tekst sformatowany, opisanego przez określony obiekt IDWriteTextLayout.|  
+|[CRenderTarget::DrawEllipse](#drawellipse)|Rysuje konspektu elipsy określony przy użyciu stylu określonego obrysu.|  
+|[CRenderTarget::DrawGeometry](#drawgeometry)|Rysuje zarys określona Geometria przy użyciu stylu określonego obrysu.|  
+|[CRenderTarget::DrawGlyphRun](#drawglyphrun)|Rysuje określoną symbole.|  
+|[CRenderTarget::DrawLine](#drawline)|Rysuje linię między punktami określony przy użyciu stylu określonego obrysu.|  
+|[CRenderTarget::DrawRectangle](#drawrectangle)|Rysuje zarys prostokąt, który ma określony wymiary i styl obrysu.|  
+|[CRenderTarget::DrawRoundedRectangle](#drawroundedrectangle)|Rysuje zarys określonego zaokrąglony prostokąt przy użyciu stylu określonego obrysu.|  
+|[CRenderTarget::DrawText](#drawtext)|Rysuje określony tekst przy użyciu dostarczonych przez obiekt IDWriteTextFormat informacji o formacie.|  
+|[CRenderTarget::DrawTextLayout](#drawtextlayout)|Rysuje tekst sformatowany, opisanego przez określony obiekt IDWriteTextLayout.|  
+|[CRenderTarget::EndDraw](#enddraw)|Kończy operacji rysowania dla elementu docelowego renderowania i wskazuje bieżący stan błędu i skojarzonych tagów.|  
+|[CRenderTarget::FillEllipse](#fillellipse)|Malowanie wnętrza określonego elipsy.|  
+|[CRenderTarget::FillGeometry](#fillgeometry)|Malowanie wnętrza określona Geometria.|  
+|[CRenderTarget::FillMesh](#fillmesh)|Malowanie wnętrza określonego siatki.|  
+|[CRenderTarget::FillOpacityMask](#fillopacitymask)|Stosuje maski krycia opisanego przez określony mapy bitowej do pędzla i używa tego pędzla do malowania obszarem obiektu docelowego renderowania.|  
+|[CRenderTarget::FillRectangle](#fillrectangle)|Malowanie wnętrza określonego prostokąta.|  
+|[CRenderTarget::FillRoundedRectangle](#fillroundedrectangle)|Malowanie wnętrza określonego prostokąt zaokrąglony.|  
 |[CRenderTarget::Flush](#flush)|Wykonuje wszystkie oczekujące polecenia rysowania.|  
 |[CRenderTarget::GetAntialiasMode](#getantialiasmode)|Pobiera bieżący tryb antialiasingu nietekstowy operacji rysowania.|  
-|[CRenderTarget::GetDpi](#getdpi)|Zwraca renderowania elementu docelowego punkty na cal (DPI)|  
-|[CRenderTarget::GetMaximumBitmapSize](#getmaximumbitmapsize)|Pobiera maksymalny rozmiar w jednostki zależne od urządzenia (w pikselach), wymiaru jeden mapy bitowej, obsługiwane przez obiektu docelowego renderowania|  
-|[CRenderTarget::GetPixelFormat](#getpixelformat)|Pobiera tryb format i alfa pikseli obiektu docelowego renderowania|  
+|[CRenderTarget::GetDpi](#getdpi)|Zwraca renderowania elementu docelowego punktów na cal (DPI)|  
+|[CRenderTarget::GetMaximumBitmapSize](#getmaximumbitmapsize)|Pobiera maksymalny rozmiar w jednostkach zależne od urządzenia (w pikselach), wymiaru jeden mapy bitowej, obsługiwane przez docelowego renderowania|  
+|[CRenderTarget::GetPixelFormat](#getpixelformat)|Pobiera tryb format i alfa pikseli, obiektu docelowego renderowania|  
 |[CRenderTarget::GetPixelSize](#getpixelsize)|Zwraca rozmiar obiektu docelowego renderowania w pikselach urządzenia|  
-|[CRenderTarget::GetRenderTarget](#getrendertarget)|Zwraca interfejs ID2D1RenderTarget|  
+|[CRenderTarget::GetRenderTarget](#getrendertarget)|Zwraca ID2D1RenderTarget interfejsu|  
 |[CRenderTarget::GetSize](#getsize)|Zwraca rozmiar obiektu docelowego renderowania w pikselach niezależnych od urządzenia|  
 |[CRenderTarget::GetTags](#gettags)|Pobiera etykietę dla kolejnych operacji rysowania.|  
-|[CRenderTarget::GetTextAntialiasMode](#gettextantialiasmode)|Pobiera bieżący tryb antialiasingu tekstu i operacje rysowania symboli.|  
+|[CRenderTarget::GetTextAntialiasMode](#gettextantialiasmode)|Pobiera bieżący tryb antyaliasingu do tekstu i symbol operacji rysowania.|  
 |[CRenderTarget::GetTextRenderingParams](#gettextrenderingparams)|Pobiera bieżące opcje renderowania tekstu obiektu docelowego renderowania.|  
-|[CRenderTarget::GetTransform](#gettransform)|Stosuje określona transformacja do obiektu docelowego renderowania, zastępując istniejące transformacji. Wszystkie kolejne operacje rysowania występują w przekształcone miejsca.|  
-|[CRenderTarget::IsSupported](#issupported)|Wskazuje, czy obiektu docelowego renderowania obsługuje określonej właściwości|  
-|[CRenderTarget::IsValid](#isvalid)|Sprawdzanie poprawności zasobów|  
-|[CRenderTarget::PopAxisAlignedClip](#popaxisalignedclip)|Usuwa ostatni klip wyrównane osi z obiektu docelowego renderowania. Po ta metoda jest wywoływana, klip nie jest stosowany do kolejnych operacji rysowania.|  
-|[CRenderTarget::PopLayer](#poplayer)|Zatrzymuje przekierowywania operacji rysowania warstwy, która jest określona przez ostatnich PushLayer wywołania.|  
-|[CRenderTarget::PushAxisAlignedClip](#pushaxisalignedclip)|Usuwa ostatni klip wyrównane osi z obiektu docelowego renderowania. Po ta metoda jest wywoływana, klip nie jest stosowany do kolejnych operacji rysowania.|  
-|[CRenderTarget::PushLayer](#pushlayer)|Dodaje określonej warstwy do elementu docelowego renderowania, dzięki czemu odbiera wszystkie kolejne operacje rysowania aż PopLayer jest wywoływana.|  
-|[CRenderTarget::RestoreDrawingState](#restoredrawingstate)|Ustawia stan rysowania obiektu docelowego renderowania do tej określonej ID2D1DrawingStateBlock.|  
+|[CRenderTarget::GetTransform](#gettransform)|Stosuje określony przekształcenie do elementu docelowego renderowania, zastępując istniejące transformacji. Wszystkie kolejne operacje rysowania występują w obszaru przekształconych.|  
+|[CRenderTarget::IsSupported](#issupported)|Wskazuje, czy element docelowy renderowania obsługuje określone właściwości|  
+|[CRenderTarget::IsValid](#isvalid)|Sprawdzanie zasobów ważności|  
+|[CRenderTarget::PopAxisAlignedClip](#popaxisalignedclip)|Usuwa ostatni klip wyrównany do osi z obiektu docelowego renderowania. Po ta metoda jest wywoływana, klip jest już stosowany do kolejnych operacji rysowania.|  
+|[CRenderTarget::PopLayer](#poplayer)|Zatrzymuje przekierowywania operacji rysowania warstwy, która jest określona przez ostatnie PushLayer wywołania.|  
+|[CRenderTarget::PushAxisAlignedClip](#pushaxisalignedclip)|Usuwa ostatni klip wyrównany do osi z obiektu docelowego renderowania. Po ta metoda jest wywoływana, klip jest już stosowany do kolejnych operacji rysowania.|  
+|[CRenderTarget::PushLayer](#pushlayer)|Tak, że odbiera wszystkie kolejne operacje rysowania, dopóki PopLayer jest wywoływana, dodaje określonej warstwy do elementu docelowego renderowania.|  
+|[CRenderTarget::RestoreDrawingState](#restoredrawingstate)|Ustawia stan rysowania obiektu docelowego renderowania, w tym określonym ID2D1DrawingStateBlock.|  
 |[CRenderTarget::SaveDrawingState](#savedrawingstate)|Zapisuje bieżący stan określonego ID2D1DrawingStateBlock.|  
-|[CRenderTarget::SetAntialiasMode](#setantialiasmode)|Ustawia tryb antialiasingu obiektu docelowego renderowania. Tryb antialiasingu ma zastosowanie do wszystkich kolejnych operacji rysowania, z wyłączeniem tekstu i operacje rysowania symboli.|  
+|[CRenderTarget::SetAntialiasMode](#setantialiasmode)|Ustawia tryb antyaliasingu do obiektu docelowego renderowania. Tryb antialiasingu odnosi się do wszystkich kolejnych operacji rysowania, z wyłączeniem tekstu i symbol operacji rysowania.|  
 |[CRenderTarget::SetDpi](#setdpi)|Ustawia punktów na cal (DPI) obiektu docelowego renderowania.|  
 |[CRenderTarget::SetTags](#settags)|Określa etykietę dla kolejnych operacji rysowania.|  
-|[CRenderTarget::SetTextAntialiasMode](#settextantialiasmode)|Określa tryb antialiasingu do użycia dla kolejnych tekstu i operacje rysowania symboli.|  
-|[CRenderTarget::SetTextRenderingParams](#settextrenderingparams)|Określa opcje renderowania tekst ma zostać zastosowany do wszystkich kolejnych tekstu i operacje rysowania symboli.|  
-|[CRenderTarget::SetTransform](#settransform)|Przeciążone. Stosuje określona transformacja do obiektu docelowego renderowania, zastępując istniejące transformacji. Wszystkie kolejne operacje rysowania występują w przekształcone miejsca.|  
+|[CRenderTarget::SetTextAntialiasMode](#settextantialiasmode)|Określa tryb antialiasingu do użycia w kolejnych tekstu i operacji rysowania symboli.|  
+|[CRenderTarget::SetTextRenderingParams](#settextrenderingparams)|Określa opcje renderowania tekstu mają być stosowane do wszystkich kolejnych tekstu i symbol operacji rysowania.|  
+|[CRenderTarget::SetTransform](#settransform)|Przeciążone. Stosuje określony przekształcenie do elementu docelowego renderowania, zastępując istniejące transformacji. Wszystkie kolejne operacje rysowania występują w obszaru przekształconych.|  
   
 ### <a name="protected-methods"></a>Metody chronione  
   
@@ -213,9 +213,9 @@ class CRenderTarget : public CObject;
   
 |Nazwa|Opis|  
 |----------|-----------------|  
-|[CRenderTarget::operator ID2D1RenderTarget *](#operator_id2d1rendertarget_star)|Zwraca interfejs ID2D1RenderTarget|  
+|[CRenderTarget::operator ID2D1RenderTarget *](#operator_id2d1rendertarget_star)|Zwraca ID2D1RenderTarget interfejsu|  
   
-### <a name="protected-data-members"></a>Dane chronione elementy członkowskie  
+### <a name="protected-data-members"></a>Chronione elementy członkowskie danych  
   
 |Nazwa|Opis|  
 |----------|-----------------|  
@@ -232,14 +232,14 @@ class CRenderTarget : public CObject;
  **Nagłówek:** afxrendertarget.h  
   
 ##  <a name="_dtorcrendertarget"></a>  CRenderTarget:: ~ CRenderTarget  
- Destruktor. Wywoływane, gdy trwa niszczenie obiektu docelowego renderowania.  
+ Destruktor. Wywołuje się, kiedy niszczony jest obiekt docelowy renderowania.  
   
 ```  
 virtual ~CRenderTarget();
 ```  
   
 ##  <a name="attach"></a>  CRenderTarget::Attach  
- Dołącza istniejących renderowania interfejsu docelowych do obiektu  
+ Dołącza istniejące renderowania interfejsu docelowego do obiektu  
   
 ```  
 void Attach(ID2D1RenderTarget* pRenderTarget);
@@ -257,7 +257,7 @@ void BeginDraw();
 ```  
   
 ##  <a name="clear"></a>  CRenderTarget::Clear  
- Czyści obszaru rysowania do określonego koloru.  
+ Czyści obszaru rysowania określony kolor.  
   
 ```  
 void Clear(D2D1_COLOR_F color);
@@ -265,7 +265,7 @@ void Clear(D2D1_COLOR_F color);
   
 ### <a name="parameters"></a>Parametry  
  *Kolor*  
- Kolor, do którego jest wyczyszczone obszaru rysowania.  
+ Kolor, do którego zostanie wyczyszczona obszaru rysowania.  
   
 ##  <a name="colorref_to_d2dcolor"></a>  CRenderTarget::COLORREF_TO_D2DCOLOR  
  Konwertuje obiekt D2D1_COLOR_F GDI koloru i wartości alfa.  
@@ -278,7 +278,7 @@ static D2D1_COLOR_F COLORREF_TO_D2DCOLOR(
   
 ### <a name="parameters"></a>Parametry  
  *Kolor*  
- Wartości RGB.  
+ Wartość RGB.  
   
  *nAlpha*  
   
@@ -286,7 +286,7 @@ static D2D1_COLOR_F COLORREF_TO_D2DCOLOR(
  Wartość D2D1_COLOR_F.  
   
 ##  <a name="createcompatiblerendertarget"></a>  CRenderTarget::CreateCompatibleRenderTarget  
- Tworzy nowy cel renderowania mapy bitowej do użycia podczas pośredniego niewidocznej rysunku, który jest zgodny z bieżącym obiektu docelowego renderowania.  
+ Tworzy nowy obiekt docelowy renderowania mapy bitowej do użycia podczas pośrednich rysunku poza ekranem, który jest zgodny z bieżącego obiektu docelowego renderowania.  
   
 ```  
 BOOL CreateCompatibleRenderTarget(
@@ -299,22 +299,22 @@ BOOL CreateCompatibleRenderTarget(
   
 ### <a name="parameters"></a>Parametry  
  *bitmapTarget*  
- Gdy metoda zwróci wartość, zawiera adres wskaźnik do nowego obiektu docelowego renderowania mapy bitowej. Ten parametr jest przekazywany niezainicjowany.  
+ Po powrocie z tej metody zawiera adres aby wskazywał nowy obiekt docelowy renderowania mapy bitowej. Ten parametr jest przekazywany niezainicjowany.  
   
  *sizeDesired*  
- Wymagany rozmiar nowego obiektu docelowego renderowania w pikselach niezależnych od urządzenia, jeśli powinien być inny od pierwotnego z elementem docelowym renderowania lub wartość NULL. Aby uzyskać więcej informacji, zobacz sekcję: Uwagi.  
+ Żądany rozmiar nowego obiektu docelowego renderowania w pikselach niezależnych od urządzenia, jeśli powinien być inny od pierwotnego obiekt docelowy renderowania lub wartość NULL. Aby uzyskać więcej informacji, zobacz sekcję: Uwagi.  
   
  *sizePixelDesired*  
- Wymagany rozmiar nowego obiektu docelowego renderowania w pikselach, jeśli powinien być inny od pierwotnego z elementem docelowym renderowania lub wartość NULL. Aby uzyskać więcej informacji, zobacz sekcję: Uwagi.  
+ Żądany rozmiar nowego obiektu docelowego renderowania w pikselach, jeśli powinien być inny od pierwotnego obiekt docelowy renderowania lub wartość NULL. Aby uzyskać więcej informacji, zobacz sekcję: Uwagi.  
   
  *desiredFormat*  
- Format pikseli żądaną i alfa tryb nowej z elementem docelowym renderowania, lub wartość NULL. Format pikseli ma ustawioną wartość DXGI_FORMAT_UNKNOWN lub ten parametr ma wartość null, nowego obiektu docelowego renderowania używa tego samego formatu piksela zgodnie z oryginalnym elementem docelowym renderowania. Jeśli tryb alfa jest D2D1_ALPHA_MODE_UNKNOWN lub ten parametr ma wartość NULL, D2D1_ALPHA_MODE_PREMULTIPLIED domyślnie alfa tryb nowego obiektu docelowego renderowania. Informacje o formacie pikseli obsługiwane Zobacz obsługiwanych formatów pikseli i tryby alfa.  
+ Format pikseli żądaną i alfa tryb nowego obiekt docelowy renderowania, lub wartość NULL. Jeśli format pikseli jest równa DXGI_FORMAT_UNKNOWN lub jeśli ten parametr ma wartość null, nowy obiekt docelowy renderowania używa ten sam format pikseli, jak oryginalny obiekt docelowy renderowania. Jeśli tryb alfa jest D2D1_ALPHA_MODE_UNKNOWN lub ten parametr ma wartość NULL, alfa tryb nowego elementu docelowego renderowania domyślnie D2D1_ALPHA_MODE_PREMULTIPLIED. Dla informacji na temat pikseli obsługiwanych formatów Zobacz obsługiwanych formatów pikseli i tryby alfa.  
   
  *Opcje*  
- Wartość, która określa, czy nowego obiektu docelowego renderowania musi być zgodny z GDI.  
+ Wartość, która określa, czy nowy obiekt docelowy renderowania musi być zgodny z użyciem interfejsu GDI.  
   
 ### <a name="return-value"></a>Wartość zwracana  
- Jeśli metoda zakończy się powodzeniem, zwraca wartość PRAWDA. W przeciwnym razie zwraca wartość FALSE.  
+ Jeśli metoda się powiedzie, zwraca wartość PRAWDA. W przeciwnym razie zwraca wartość FALSE.  
   
 ##  <a name="crendertarget"></a>  CRenderTarget::CRenderTarget  
  Tworzy obiekt CRenderTarget.  
@@ -332,10 +332,10 @@ BOOL Destroy(BOOL bDeleteResources = TRUE);
   
 ### <a name="parameters"></a>Parametry  
  *bDeleteResources*  
- Jeśli bDeleteResources ma wartość PRAWDA, wszystkich zasobów w m_lstResources zostaną usunięte automatycznie.  
+ Jeśli bDeleteResources ma wartość TRUE, wszystkie zasoby znajdujące się w m_lstResources zostanie automatycznie zniszczona.  
   
 ### <a name="return-value"></a>Wartość zwracana  
- Jeśli metoda zakończy się powodzeniem, zwraca wartość PRAWDA. W przeciwnym razie zwraca wartość FALSE  
+ Jeśli metoda się powiedzie, zwraca wartość PRAWDA. W przeciwnym razie zwraca wartość FALSE  
   
 ##  <a name="detach"></a>  CRenderTarget::Detach  
  Odłącza interfejs docelowy renderowania z obiektu  
@@ -348,7 +348,7 @@ ID2D1RenderTarget* Detach ();
  Wskaźnik do odłączonego renderowania interfejs docelowy.  
   
 ##  <a name="drawbitmap"></a>  CRenderTarget::DrawBitmap  
- Rysuje tekst sformatowany opisanego przez określony obiekt IDWriteTextLayout.  
+ Rysuje tekst sformatowany, opisanego przez określony obiekt IDWriteTextLayout.  
   
 ```  
 void DrawBitmap(
@@ -361,22 +361,22 @@ void DrawBitmap(
   
 ### <a name="parameters"></a>Parametry  
  *pBitmap*  
- Mapy bitowej do renderowania.  
+ Mapa bitowa do renderowania.  
   
  *rectDest*  
- Rozmiar i położenie, w pikselach niezależnych od urządzenia w przestrzeni współrzędnych obiektu docelowego renderowania, do której ma zostać narysowana mapy bitowej obszaru. Jeśli nie jest prawidłowo uporządkowanego prostokąta, nic nie jest rysowane, ale obiektu docelowego renderowania nie przechodzi do stanu błędu.  
+ Rozmiar i położenie w pikselach niezależnych od urządzenia w przestrzeni współrzędnych obiektu docelowego renderowania, obszaru, do którego jest rysowana mapy bitowej. Jeśli nie jest prawidłowo uporządkowanego prostokąt, nic nie jest rysowane, ale obiektu docelowego renderowania nie przechodzi do stanu błędu.  
   
  *fOpacity*  
  Wartość z zakresu od 0,0 do 1,0 f, włącznie, który określa wartość do zastosowania do mapy bitowej; Ta wartość jest mnożona względem wartości alfa zawartości bitmapy.  
   
  *interpolationMode*  
- Tryb interpolacji do użycia, jeśli mapy bitowej jest skalowana lub obracać o operacji rysowania.  
+ Tryb interpolacji do użycia, jeśli mapa bitowa jest skalowany lub obracać o operacji rysowania.  
   
  *pRectSrc*  
- Rozmiar i położenie, w pikselach niezależnych od urządzenia w przestrzeni współrzędnych mapy bitowej, obszaru w obrębie mapy bitowej do rysowania.  
+ Rozmiar i położenie w pikselach niezależnych od urządzenia w przestrzeni współrzędnych mapy bitowej, obszaru w obrębie mapy bitowej do rysowania.  
   
 ##  <a name="drawellipse"></a>  CRenderTarget::DrawEllipse  
- Rysuje konturu elipsy określony przy użyciu stylu obrysu określony.  
+ Rysuje konspektu elipsy określony przy użyciu stylu określonego obrysu.  
   
 ```  
 void DrawEllipse(
@@ -387,20 +387,20 @@ void DrawEllipse(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- *elipsy*  
- Położenie i promień elipsy do rysowania w pikselach niezależnych od urządzenia.  
+ *Elipsa*  
+ Położenie i radius ikonę wielokropka, aby narysować w pikselach niezależnych od urządzenia.  
   
  *pBrush*  
  Pędzel używany do rysowania konspektu elipsy.  
   
  *fStrokeWidth*  
- Grubość pociągnięć elipsy. Obrysu skupia się na konspektu elipsy.  
+ Grubość obrysu elipsy. Stroke skupia się na konspekt elipsy.  
   
  *strokeStyle*  
- Styl obrysu do zastosowania do konturu elipsy lub wartość NULL do malowania stałe pociągnięcia.  
+ Styl obrysu mające zastosowanie do konturu elipsy lub o wartości NULL do malowania solid obrysu.  
   
 ##  <a name="drawgeometry"></a>  CRenderTarget::DrawGeometry  
- Rysuje konturu określona Geometria przy użyciu stylu obrysu określony.  
+ Rysuje zarys określona Geometria przy użyciu stylu określonego obrysu.  
   
 ```  
 void DrawGeometry(
@@ -418,13 +418,13 @@ void DrawGeometry(
  Pędzel używany do rysowania obrysu geometrii.  
   
  *fStrokeWidth*  
- Grubość pociągnięć geometrii. Obrysu skupia się na konspektu geometrii.  
+ Grubość obrysu geometrii. Stroke skupia się na Geometria konturu.  
   
  *strokeStyle*  
- Styl obrysu do zastosowania do konturu geometrii lub wartość NULL do malowania stałe pociągnięcia.  
+ Styl obrysu mające zastosowanie do Geometria konturu lub o wartości NULL do malowania solid obrysu.  
   
 ##  <a name="drawglyphrun"></a>  CRenderTarget::DrawGlyphRun  
- Rysuje określonego symboli.  
+ Rysuje określoną symbole.  
   
 ```  
 void DrawGlyphRun(
@@ -436,19 +436,19 @@ void DrawGlyphRun(
   
 ### <a name="parameters"></a>Parametry  
  *ptBaseLineOrigin*  
- Źródło w pikselach niezależnych od urządzenia, linii bazowej symboli.  
+ Źródło w pikselach niezależnych od urządzenia, symbole w linii bazowej.  
   
- *obiektu glyphRun*  
+ *glyphRun*  
  Symbole do renderowania.  
   
  *pForegroundBrush*  
- Pędzel używany do rysowania określonego symboli.  
+ Pędzel używany do rysowania określonego symbole.  
   
  *measuringMode*  
- Wartość, która wskazuje, jak metryki symbolu są używane do mierzenia tekstu, gdy jest on formatowany. Wartość domyślna to DWRITE_MEASURING_MODE_NATURAL.  
+ Wartość, która wskazuje, jak metryki symbol służą do mierzenia tekstu, gdy jest on formatowany. Wartość domyślna to DWRITE_MEASURING_MODE_NATURAL.  
   
 ##  <a name="drawline"></a>  CRenderTarget::DrawLine  
- Rysuje linię między punktami określony przy użyciu stylu obrysu określony.  
+ Rysuje linię między punktami określony przy użyciu stylu określonego obrysu.  
   
 ```  
 void DrawLine(
@@ -461,22 +461,22 @@ void DrawLine(
   
 ### <a name="parameters"></a>Parametry  
  *ptFrom*  
- Punkt początkowy linii w pikselach niezależnych od urządzenia.  
+ Punkt początkowy dla wiersza, w pikselach niezależnych od urządzenia.  
   
  *ptTo*  
  Punkt końcowy linii w pikselach niezależnych od urządzenia.  
   
  *pBrush*  
- Pędzel używany do rysowania linii stroke.  
+ Pędzel używany do rysowania linii obrysu.  
   
  *fStrokeWidth*  
- Wartość większa niż lub równa 0.0f, która określa szerokość pociągnięć. Jeśli ten parametr nie jest określony, domyślnie 1,0 f. Obrysu skupia się na wiersz.  
+ Wartość większa niż lub równa 0.0f, który określa szerokość pociągnięć. Jeśli ten parametr nie jest określony, domyślnie 1.0f. Stroke skupia się na wiersz.  
   
  *strokeStyle*  
- Styl obrysu do malowania lub wartość NULL namalować linię ciągłą.  
+ Styl obrysu paint lub wartością NULL do malowania linię ciągłą.  
   
 ##  <a name="drawrectangle"></a>  CRenderTarget::DrawRectangle  
- Rysuje konturu prostokąt określony wymiarów i styl obrysu.  
+ Rysuje zarys prostokąt, który ma określony wymiary i styl obrysu.  
   
 ```  
 void DrawRectangle(
@@ -488,19 +488,19 @@ void DrawRectangle(
   
 ### <a name="parameters"></a>Parametry  
  *Rect*  
- Wymiary prostokąta do rysowania w pikselach niezależnych od urządzenia  
+ Wymiary prostokąta, aby narysować w pikselach niezależnych od urządzenia  
   
  *pBrush*  
- Pędzel używany do rysowania obrysu prostokąta  
+ Pędzel używany do rysowania prostokąta pociągnięcia  
   
  *fStrokeWidth*  
- Wartość większa niż lub równa 0.0f, która określa szerokość pociągnięć prostokąta. Obrysu skupia się na konspektu prostokąta.  
+ Wartość większa niż lub równa 0.0f, który określa szerokość pociągnięć prostokąta. Stroke skupia się na konspekt prostokąta.  
   
  *strokeStyle*  
- Styl obrysu paint lub wartość NULL do malowania pociągnięcia stałe.  
+ Styl obrysu paint lub o wartości NULL do malowania solid obrysu.  
   
 ##  <a name="drawroundedrectangle"></a>  CRenderTarget::DrawRoundedRectangle  
- Rysuje konturu określonego zaokrąglony prostokąt przy użyciu stylu obrysu określony.  
+ Rysuje zarys określonego zaokrąglony prostokąt przy użyciu stylu określonego obrysu.  
   
 ```  
 void DrawRoundedRectangle(
@@ -512,19 +512,19 @@ void DrawRoundedRectangle(
   
 ### <a name="parameters"></a>Parametry  
  *rectRounded*  
- Wymiary zaokrąglony prostokąt do rysowania w pikselach niezależnych od urządzenia.  
+ Wymiary prostokąt zaokrąglony do rysowania w pikselach niezależnych od urządzenia.  
   
  *pBrush*  
- Pędzel używany do rysowania konspektu zaokrąglony prostokąt.  
+ Pędzel używany do namalować kontur zaokrąglonego prostokąta.  
   
  *fStrokeWidth*  
- Szerokość pociągnięć zaokrąglony prostokąt. Obrysu skupia się na konspektu zaokrąglony prostokąt. Wartość domyślna to 1,0 f.  
+ Szerokość pociągnięcia prostokąt zaokrąglony. Stroke skupia się na kontur zaokrąglonego prostokąta. Wartość domyślna to 1.0f.  
   
  *strokeStyle*  
- Styl obrysu zaokrąglony prostokąt lub wartość NULL do malowania pociągnięcia stałe. Wartość domyślna to NULL.  
+ Styl obrysu prostokąt zaokrąglony lub wartość NULL do malowania solid obrysu. Wartością domyślną jest NULL.  
   
 ##  <a name="drawtext"></a>  CRenderTarget::DrawText  
- Rysuje określony tekst przy użyciu informacji o formacie dostarczony przez obiekt IDWriteTextFormat.  
+ Rysuje określony tekst przy użyciu dostarczonych przez obiekt IDWriteTextFormat informacji o formacie.  
   
 ```  
 void DrawText(
@@ -538,25 +538,25 @@ void DrawText(
   
 ### <a name="parameters"></a>Parametry  
  *strText*  
- Wskaźnik do tablicy znaków Unicode do rysowania.  
+ Wskaźnik do tablicy znaków Unicode, aby narysować.  
   
  *Rect*  
- Rozmiar i położenie obszaru, w którym zostanie narysowana tekst.  
+ Rozmiar i położenie obszaru, w którym jest narysowany tekst.  
   
  *pForegroundBrush*  
  Pędzel używany do rysowania tekstu.  
   
  *textFormat*  
- Obiekt, który opisuje formatowanie szczegóły tekstu do rysowania, na przykład czcionkę, rozmiar czcionki i kierunek przepływu.  
+ Obiekt, który opisuje formatowanie szczegóły tekstu do rysowania, na przykład czcionkę, rozmiar czcionki i kierunku przepływu.  
   
  *Opcje*  
- Wartość, która wskazuje, czy tekst powinien przypięty do pikseli i określa, czy tekst przycinania na prostokąt układu. Wartość domyślna to D2D1_DRAW_TEXT_OPTIONS_NONE, która wskazuje, że tekst powinien być przyciągane do pikseli i nie powinien zostać obcięty do prostokąta układu.  
+ Wartość, która wskazuje, czy tekst powinien być przyciągane do pikseli i czy przycinania tekstu do prostokąta układu. Wartość domyślna to D2D1_DRAW_TEXT_OPTIONS_NONE, co oznacza, że tekst powinien być przyciągane do pikseli i nie powinna zostać obcięty do prostokąta układu.  
   
  *measuringMode*  
- Wartość, która wskazuje, jak metryki symbolu są używane do mierzenia tekstu, gdy jest on formatowany. Wartość domyślna to DWRITE_MEASURING_MODE_NATURAL.  
+ Wartość, która wskazuje, jak metryki symbol służą do mierzenia tekstu, gdy jest on formatowany. Wartość domyślna to DWRITE_MEASURING_MODE_NATURAL.  
   
 ##  <a name="drawtextlayout"></a>  CRenderTarget::DrawTextLayout  
- Rysuje tekst sformatowany opisanego przez określony obiekt IDWriteTextLayout.  
+ Rysuje tekst sformatowany, opisanego przez określony obiekt IDWriteTextLayout.  
   
 ```  
 void DrawTextLayout(
@@ -568,29 +568,29 @@ void DrawTextLayout(
   
 ### <a name="parameters"></a>Parametry  
  *ptOrigin*  
- Punkt opisanego w pikselach niezależnych od urządzenia, w których jest wstawiany w lewym górnym rogu opisanego przez textLayout tekstu.  
+ Punkt opisanego w pikselach niezależnych od urządzenia, w których jest rysowana lewego górnego rogu tekstu opisanego przez textLayout.  
   
  *textLayout*  
- Tekst sformatowany do rysowania. Efekty rysunku, które dziedziczą ID2D1Resource są ignorowane. W przypadku rysowania efekty dziedziczące ID2D1Resource niebędące pędzle, ta metoda zawiedzie i przechodzi w stan błędu obiektu docelowego renderowania.  
+ Sformatowany tekst do rysowania. Efekty rysowania, które nie dziedziczą ID2D1Resource są ignorowane. W przypadku rysowania efektów, które dziedziczą z ID2D1Resource, które nie są pędzle, ta metoda nie powiedzie się i obiektu docelowego renderowania jest umieszczany w stanie błędu.  
   
  *pBrushForeground*  
- Pędzel używany do rysowania dowolny tekst w textLayout, który nie ma jeszcze pędzla skojarzonych z nim jako efekt rysowania (określone przez metodę IDWriteTextLayout::SetDrawingEffect).  
+ Pędzel używany do rysowania dowolny tekst w textLayout, który nie ma jeszcze pędzel skojarzonych z nim jako efekt rysowania (określone przez metodę IDWriteTextLayout::SetDrawingEffect).  
   
  *Opcje*  
- Wartość, która wskazuje, czy tekst powinien przypięty do pikseli i określa, czy tekst przycinania na prostokąt układu. Wartość domyślna to D2D1_DRAW_TEXT_OPTIONS_NONE, która wskazuje, że tekst powinien być przyciągane do pikseli i nie powinien zostać obcięty do prostokąta układu.  
+ Wartość, która wskazuje, czy tekst powinien być przyciągane do pikseli i czy przycinania tekstu do prostokąta układu. Wartość domyślna to D2D1_DRAW_TEXT_OPTIONS_NONE, co oznacza, że tekst powinien być przyciągane do pikseli i nie powinna zostać obcięty do prostokąta układu.  
   
 ##  <a name="enddraw"></a>  CRenderTarget::EndDraw  
- Kończy operacje rysowania w celu renderowania i wskazuje bieżący stan błędu i skojarzonych tagów.  
+ Kończy operacji rysowania dla elementu docelowego renderowania i wskazuje bieżący stan błędu i skojarzonych tagów.  
   
 ```  
 HRESULT EndDraw();
 ```  
   
 ### <a name="return-value"></a>Wartość zwracana  
- Jeśli metoda zakończy się powodzeniem, zwraca wartość S_OK. W przeciwnym wypadku zwraca kod błędu HRESULT.  
+ Jeśli metoda się powiedzie, zwraca wartość S_OK. W przeciwnym razie zwraca kod błędu HRESULT.  
   
 ##  <a name="fillellipse"></a>  CRenderTarget::FillEllipse  
- Umożliwia malowanie wnętrza określonego elipsy.  
+ Malowanie wnętrza określonego elipsy.  
   
 ```  
 void FillEllipse(
@@ -599,14 +599,14 @@ void FillEllipse(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- *elipsy*  
- Pozycja i usługi radius, w pikselach niezależnych od urządzenia, elipsy do malowania.  
+ *Elipsa*  
+ Położenie i usługi radius, w pikselach niezależnych od urządzenia, elipsy do malowania.  
   
  *pBrush*  
  Pędzel używany do wnętrza elipsy.  
   
 ##  <a name="fillgeometry"></a>  CRenderTarget::FillGeometry  
- Umożliwia malowanie wnętrza określona Geometria.  
+ Malowanie wnętrza określona Geometria.  
   
 ```  
 void FillGeometry(
@@ -620,13 +620,13 @@ void FillGeometry(
  Geometria do malowania.  
   
  *pBrush*  
- Pędzel używany do rysowania geometrii przez wewnętrzne.  
+ Pędzel używany do rysowania geometrii użytkownika posługiwanie się nimi.  
   
  *pOpacityBrush*  
- Maskę przezroczystości do zastosowania do geometrii; Wartość NULL w przypadku nie maskę przezroczystości. Jeśli określono maskę przezroczystości (parametr opacityBrush), pędzla musi być ID2D1BitmapBrush, który ma ustawioną D2D1_EXTEND_MODE_CLAMP trybach rozszerzyć x i y. Aby uzyskać więcej informacji, zobacz sekcję: Uwagi.  
+ Maska nieprzezroczystości dotyczą geometrii; Wartość NULL w przypadku żadna maska nieprzezroczystości. Jeśli określono maski krycia (parametr opacityBrush), pędzla musi być ID2D1BitmapBrush mającego trybach rozszerzyć x i y równa D2D1_EXTEND_MODE_CLAMP. Aby uzyskać więcej informacji, zobacz sekcję: Uwagi.  
   
 ##  <a name="fillmesh"></a>  CRenderTarget::FillMesh  
- Umożliwia malowanie wnętrza określonej sieci.  
+ Malowanie wnętrza określonego siatki.  
   
 ```  
 void FillMesh(
@@ -639,10 +639,10 @@ void FillMesh(
  Siatka do malowania.  
   
  *pBrush*  
- Pędzel używany do rysowania siatki.  
+ Pędzel używany do rysowania siatkę.  
   
 ##  <a name="fillopacitymask"></a>  CRenderTarget::FillOpacityMask  
- Stosuje maskę przezroczystości opisanego przez określony mapy bitowej do pędzla i używa tego pędzla do rysowania region obiektu docelowego renderowania.  
+ Stosuje maski krycia opisanego przez określony mapy bitowej do pędzla i używa tego pędzla do malowania obszarem obiektu docelowego renderowania.  
   
 ```  
 void FillOpacityMask(
@@ -655,22 +655,22 @@ void FillOpacityMask(
   
 ### <a name="parameters"></a>Parametry  
  *pOpacityMask*  
- Pozycja i usługi radius, w pikselach niezależnych od urządzenia, elipsy do malowania.  
+ Położenie i usługi radius, w pikselach niezależnych od urządzenia, elipsy do malowania.  
   
  *pBrush*  
- Pędzel używany do rysowania obszaru określonego przez destinationRectangle obiektu docelowego renderowania.  
+ Pędzel używany do rysowania regionu docelowego renderowania, określony przez destinationRectangle.  
   
  *Zawartość*  
- Zawiera typ zawartości maskę przezroczystości. Wartość jest używana do określenia ilości miejsca kolor, w którym jest mieszane maskę przezroczystości.  
+ Zawiera typ zawartości maski nieprzezroczystości. Wartość jest używana do określenia przestrzeń kolorów, w którym jest zmieszana maski nieprzezroczystości.  
   
  *rectDest*  
  Region docelowego renderowania do malowania w pikselach niezależnych od urządzenia.  
   
  *rectSrc*  
- Obszar mapy bitowej do użycia jako maskę przezroczystości, w pikselach niezależnych od urządzenia.  
+ Region mapy bitowej do użycia jako maski krycia, w pikselach niezależnych od urządzenia.  
   
 ##  <a name="fillrectangle"></a>  CRenderTarget::FillRectangle  
- Umożliwia malowanie wnętrza określonego prostokąta.  
+ Malowanie wnętrza określonego prostokąta.  
   
 ```  
 void FillRectangle(
@@ -683,10 +683,10 @@ void FillRectangle(
  Wymiar prostokąta do malowania w pikselach niezależnych od urządzenia.  
   
  *pBrush*  
- Pędzel używany do rysowania prostokąta przez wewnętrzne.  
+ Pędzel używany do rysowania prostokąta użytkownika posługiwanie się nimi.  
   
 ##  <a name="fillroundedrectangle"></a>  CRenderTarget::FillRoundedRectangle  
- Umożliwia malowanie wnętrza określonego zaokrąglony prostokąt.  
+ Malowanie wnętrza określonego prostokąt zaokrąglony.  
   
 ```  
 void FillRoundedRectangle(
@@ -696,10 +696,10 @@ void FillRoundedRectangle(
   
 ### <a name="parameters"></a>Parametry  
  *rectRounded*  
- Wymiary zaokrąglony prostokąt namalować w pikselach niezależnych od urządzenia.  
+ Wymiary prostokąt zaokrąglony do malowania w pikselach niezależnych od urządzenia.  
   
  *pBrush*  
- Pędzel używany do wnętrza zaokrąglony prostokąt.  
+ Pędzel używany do wnętrza prostokąt zaokrąglony.  
   
 ##  <a name="flush"></a>  CRenderTarget::Flush  
  Wykonuje wszystkie oczekujące polecenia rysowania.  
@@ -712,10 +712,10 @@ void Flush(
   
 ### <a name="parameters"></a>Parametry  
  *tag1*  
- Zawiera znacznik operacje powodujące błędy lub 0, jeśli nie było żadnych błędów rysowania. Ten parametr jest przekazywany niezainicjowany.  
+ Zawiera tag rysowania operacje, które spowodowały błędy lub 0, jeśli nie było żadnych błędów. Ten parametr jest przekazywany niezainicjowany.  
   
  *tag2*  
- Zawiera znacznik operacje powodujące błędy lub 0, jeśli nie było żadnych błędów rysowania. Ten parametr jest przekazywany niezainicjowany.  
+ Zawiera tag rysowania operacje, które spowodowały błędy lub 0, jeśli nie było żadnych błędów. Ten parametr jest przekazywany niezainicjowany.  
   
 ##  <a name="getantialiasmode"></a>  CRenderTarget::GetAntialiasMode  
  Pobiera bieżący tryb antialiasingu nietekstowy operacji rysowania.  
@@ -725,37 +725,37 @@ D2D1_ANTIALIAS_MODE GetAntialiasMode() const;
 ```  
   
 ### <a name="return-value"></a>Wartość zwracana  
- Bieżący tryb antialiasingu nietekstowy operacje rysowania.  
+ Bieżący tryb antialiasingu nietekstowy operacji rysowania.  
   
 ##  <a name="getdpi"></a>  CRenderTarget::GetDpi  
- Zwraca renderowania elementu docelowego punkty na cal (DPI)  
+ Zwraca renderowania elementu docelowego punktów na cal (DPI)  
   
 ```  
 CD2DSizeF GetDpi() const;  
 ```  
   
 ### <a name="return-value"></a>Wartość zwracana  
- Cel renderowania punkty na cal (DPI).  
+ Obiektu docelowego renderowania punktów na cal (DPI).  
   
 ##  <a name="getmaximumbitmapsize"></a>  CRenderTarget::GetMaximumBitmapSize  
- Pobiera maksymalny rozmiar w jednostki zależne od urządzenia (w pikselach), wymiaru jeden mapy bitowej, obsługiwane przez obiektu docelowego renderowania  
+ Pobiera maksymalny rozmiar w jednostkach zależne od urządzenia (w pikselach), wymiaru jeden mapy bitowej, obsługiwane przez docelowego renderowania  
   
 ```  
 UINT32 GetMaximumBitmapSize() const;  
 ```  
   
 ### <a name="return-value"></a>Wartość zwracana  
- Maksymalny rozmiar w pikselach wymiaru jeden mapy bitowej, obsługiwane przez obiektu docelowego renderowania  
+ Maksymalny rozmiar w pikselach wymiaru jeden mapy bitowej, obsługiwane przez docelowego renderowania  
   
 ##  <a name="getpixelformat"></a>  CRenderTarget::GetPixelFormat  
- Pobiera tryb format i alfa pikseli obiektu docelowego renderowania  
+ Pobiera tryb format i alfa pikseli, obiektu docelowego renderowania  
   
 ```  
 D2D1_PIXEL_FORMAT GetPixelFormat() const;  
 ```  
   
 ### <a name="return-value"></a>Wartość zwracana  
- Tryb format i alfa pikseli obiektu docelowego renderowania  
+ Tryb format i alfa pikseli, obiektu docelowego renderowania  
   
 ##  <a name="getpixelsize"></a>  CRenderTarget::GetPixelSize  
  Zwraca rozmiar obiektu docelowego renderowania w pikselach urządzenia  
@@ -768,7 +768,7 @@ CD2DSizeU GetPixelSize() const;
  Rozmiar obiektu docelowego renderowania w pikselach urządzenia  
   
 ##  <a name="getrendertarget"></a>  CRenderTarget::GetRenderTarget  
- Zwraca interfejs ID2D1RenderTarget  
+ Zwraca ID2D1RenderTarget interfejsu  
   
 ```  
 ID2D1RenderTarget* GetRenderTarget();
@@ -798,20 +798,20 @@ void GetTags(
   
 ### <a name="parameters"></a>Parametry  
  *tag1*  
- Zawiera pierwsza etykieta dla kolejnych operacji rysowania. Ten parametr jest przekazywany niezainicjowany. Jeśli określona jest wartość NULL, wartość nie jest pobierana dla tego parametru.  
+ Zawiera pierwszą etykietę dla kolejnych operacji rysowania. Ten parametr jest przekazywany niezainicjowany. Jeśli określono wartość NULL, wartość nie są pobierane dla tego parametru.  
   
  *tag2*  
- Zawiera drugą etykietę dla kolejnych operacji rysowania. Ten parametr jest przekazywany niezainicjowany. Jeśli określona jest wartość NULL, wartość nie jest pobierana dla tego parametru.  
+ Zawiera drugiej etykiety dla kolejnych operacji rysowania. Ten parametr jest przekazywany niezainicjowany. Jeśli określono wartość NULL, wartość nie są pobierane dla tego parametru.  
   
 ##  <a name="gettextantialiasmode"></a>  CRenderTarget::GetTextAntialiasMode  
- Pobiera bieżący tryb antialiasingu tekstu i operacje rysowania symboli.  
+ Pobiera bieżący tryb antyaliasingu do tekstu i symbol operacji rysowania.  
   
 ```  
 D2D1_TEXT_ANTIALIAS_MODE GetTextAntialiasMode() const;  
 ```  
   
 ### <a name="return-value"></a>Wartość zwracana  
- Bieżący tryb antialiasingu tekstu i operacje rysowania symboli.  
+ Bieżący tryb antyaliasingu do tekstu i symbol operacji rysowania.  
   
 ##  <a name="gettextrenderingparams"></a>  CRenderTarget::GetTextRenderingParams  
  Pobiera bieżące opcje renderowania tekstu obiektu docelowego renderowania.  
@@ -822,10 +822,10 @@ void GetTextRenderingParams(IDWriteRenderingParams** textRenderingParams);
   
 ### <a name="parameters"></a>Parametry  
  *textRenderingParams*  
- Po powrocie z tej metody textRenderingParamscontains adres wskaźnika do elementu docelowego renderowania elementu bieżące opcje renderowania tekstu.  
+ Po powrocie z tej metody textRenderingParamscontains adres wskaźnika do elementu docelowego renderowania w bieżącym opcje renderowania tekstu.  
   
 ##  <a name="gettransform"></a>  CRenderTarget::GetTransform  
- Stosuje określona transformacja do obiektu docelowego renderowania, zastępując istniejące transformacji. Wszystkie kolejne operacje rysowania występują w przekształcone miejsca.  
+ Stosuje określony przekształcenie do elementu docelowego renderowania, zastępując istniejące transformacji. Wszystkie kolejne operacje rysowania występują w obszaru przekształconych.  
   
 ```  
 void GetTransform(D2D1_MATRIX_3X2_F* transform);
@@ -833,10 +833,10 @@ void GetTransform(D2D1_MATRIX_3X2_F* transform);
   
 ### <a name="parameters"></a>Parametry  
  *transform*  
- Przekształcenie do zastosowania do obiektu docelowego renderowania.  
+ Przekształcenie do zastosowania do elementu docelowego renderowania.  
   
 ##  <a name="issupported"></a>  CRenderTarget::IsSupported  
- Wskazuje, czy obiektu docelowego renderowania obsługuje określonej właściwości  
+ Wskazuje, czy element docelowy renderowania obsługuje określone właściwości  
   
 ```  
 BOOL IsSupported(const D2D1_RENDER_TARGET_PROPERTIES& renderTargetProperties) const;  
@@ -847,17 +847,17 @@ BOOL IsSupported(const D2D1_RENDER_TARGET_PROPERTIES& renderTargetProperties) co
  Właściwości obiektu docelowego renderowania do testowania  
   
 ### <a name="return-value"></a>Wartość zwracana  
- Wartość TRUE, jeśli właściwości obiektu docelowego renderowania określonego są obsługiwane przez ten element docelowy renderowania; w przeciwnym razie wartość FALSE  
+ Wartość TRUE, jeśli właściwości obiektu docelowego renderowania określonego są obsługiwane przez ten element docelowy renderowania; w przeciwnym razie, FAŁSZ.  
   
 ##  <a name="isvalid"></a>  CRenderTarget::IsValid  
- Sprawdzanie poprawności zasobów  
+ Sprawdzanie zasobów ważności  
   
 ```  
 BOOL IsValid() const;  
 ```  
   
 ### <a name="return-value"></a>Wartość zwracana  
- Wartość TRUE, jeśli zasób jest nieprawidłowy; w przeciwnym razie wartość FALSE.  
+ Wartość TRUE, jeśli zasób jest ważny; w przeciwnym razie wartość FALSE.  
   
 ##  <a name="m_lstresources"></a>  CRenderTarget::m_lstResources  
  Lista wskaźników do obiektów CD2DResource.  
@@ -881,7 +881,7 @@ CD2DTextFormat* m_pTextFormatDefault;
 ```  
   
 ##  <a name="operator_id2d1rendertarget_star"></a>  CRenderTarget::operator ID2D1RenderTarget *  
- Zwraca interfejs ID2D1RenderTarget  
+ Zwraca ID2D1RenderTarget interfejsu  
   
 ```  
 operator ID2D1RenderTarget*();
@@ -891,21 +891,21 @@ operator ID2D1RenderTarget*();
  Wskaźnik do interfejsu ID2D1RenderTarget lub wartość NULL, jeśli obiekt nie został jeszcze zainicjowany.  
   
 ##  <a name="popaxisalignedclip"></a>  CRenderTarget::PopAxisAlignedClip  
- Usuwa ostatni klip wyrównane osi z obiektu docelowego renderowania. Po ta metoda jest wywoływana, klip nie jest stosowany do kolejnych operacji rysowania.  
+ Usuwa ostatni klip wyrównany do osi z obiektu docelowego renderowania. Po ta metoda jest wywoływana, klip jest już stosowany do kolejnych operacji rysowania.  
   
 ```  
 void PopAxisAlignedClip();
 ```  
   
 ##  <a name="poplayer"></a>  CRenderTarget::PopLayer  
- Zatrzymuje przekierowywania operacji rysowania warstwy, która jest określona przez ostatnich PushLayer wywołania.  
+ Zatrzymuje przekierowywania operacji rysowania warstwy, która jest określona przez ostatnie PushLayer wywołania.  
   
 ```  
 void PopLayer();
 ```  
   
 ##  <a name="pushaxisalignedclip"></a>  CRenderTarget::PushAxisAlignedClip  
- Usuwa ostatni klip wyrównane osi z obiektu docelowego renderowania. Po ta metoda jest wywoływana, klip nie jest stosowany do kolejnych operacji rysowania.  
+ Usuwa ostatni klip wyrównany do osi z obiektu docelowego renderowania. Po ta metoda jest wywoływana, klip jest już stosowany do kolejnych operacji rysowania.  
   
 ```  
 void PushAxisAlignedClip(
@@ -918,10 +918,10 @@ void PushAxisAlignedClip(
  Rozmiar i położenie obszaru przycinania w pikselach niezależnych od urządzenia.  
   
  *Tryb*  
- Tryb antialiasingu, który jest używany do rysowania krawędzi prostokąty klip, który mają subpixel granice i blend klip z zawartością sceny. Mieszanie jest wykonywane, gdy podczas jest wywoływana metoda PopAxisAlignedClip i nie ma zastosowania do każdego pierwotnego w warstwie.  
+ Tryb antialiasingu, który jest używany do rysowania krawędziami prostokąty klipu, które mają subpixel granice i klipów z zawartością sceny programu blend. Mieszanie odbywa się po po jest wywoływana metoda PopAxisAlignedClip i nie ma zastosowania do każdego podstawowego w ramach warstwy.  
   
 ##  <a name="pushlayer"></a>  CRenderTarget::PushLayer  
- Dodaje określonej warstwy do elementu docelowego renderowania, dzięki czemu odbiera wszystkie kolejne operacje rysowania aż PopLayer jest wywoływana.  
+ Tak, że odbiera wszystkie kolejne operacje rysowania, dopóki PopLayer jest wywoływana, dodaje określonej warstwy do elementu docelowego renderowania.  
   
 ```  
 void PushLayer(
@@ -931,13 +931,13 @@ void PushLayer(
   
 ### <a name="parameters"></a>Parametry  
  *layerParameters*  
- Granice zawartości, maska geometrycznych nieprzezroczystość, maskę przezroczystości i opcje antialiasingu warstwy.  
+ Granice zawartości, maska geometryczne, nieprzezroczystość, maski krycia i opcje antialiasingu warstwy.  
   
- *Warstwy*  
- Warstwy, która odbiera kolejnych operacji rysowania.  
+ *Warstwa*  
+ Warstwa, która odbiera kolejnych operacji rysowania.  
   
 ##  <a name="restoredrawingstate"></a>  CRenderTarget::RestoreDrawingState  
- Ustawia stan rysowania obiektu docelowego renderowania do tej określonej ID2D1DrawingStateBlock.  
+ Ustawia stan rysowania obiektu docelowego renderowania, w tym określonym ID2D1DrawingStateBlock.  
   
 ```  
 void RestoreDrawingState(ID2D1DrawingStateBlock& drawingStateBlock);
@@ -959,7 +959,7 @@ void SaveDrawingState(ID2D1DrawingStateBlock& drawingStateBlock) const;
  Po powrocie z tej metody zawiera bieżący stan obiektu docelowego renderowania. Ten parametr musi zostać zainicjowany przed przekazaniem go do metody.  
   
 ##  <a name="setantialiasmode"></a>  CRenderTarget::SetAntialiasMode  
- Ustawia tryb antialiasingu obiektu docelowego renderowania. Tryb antialiasingu ma zastosowanie do wszystkich kolejnych operacji rysowania, z wyłączeniem tekstu i operacje rysowania symboli.  
+ Ustawia tryb antyaliasingu do obiektu docelowego renderowania. Tryb antialiasingu odnosi się do wszystkich kolejnych operacji rysowania, z wyłączeniem tekstu i symbol operacji rysowania.  
   
 ```  
 void SetAntialiasMode(D2D1_ANTIALIAS_MODE antialiasMode);
@@ -978,7 +978,7 @@ void SetDpi(const CD2DSizeF& sizeDPI);
   
 ### <a name="parameters"></a>Parametry  
  *sizeDPI*  
- Wartość większa niż lub równa zero, określająca poziomym/verticalDPI obiektu docelowego renderowania.  
+ Wartość większa niż lub równa zero, który określa poziomy/verticalDPI obiektu docelowego renderowania.  
   
 ##  <a name="settags"></a>  CRenderTarget::SetTags  
  Określa etykietę dla kolejnych operacji rysowania.  
@@ -997,7 +997,7 @@ void SetTags(
  Etykiety w celu zastosowania do kolejnych operacji rysowania.  
   
 ##  <a name="settextantialiasmode"></a>  CRenderTarget::SetTextAntialiasMode  
- Określa tryb antialiasingu do użycia dla kolejnych tekstu i operacje rysowania symboli.  
+ Określa tryb antialiasingu do użycia w kolejnych tekstu i operacji rysowania symboli.  
   
 ```  
 void SetTextAntialiasMode(D2D1_TEXT_ANTIALIAS_MODE textAntialiasMode);
@@ -1005,10 +1005,10 @@ void SetTextAntialiasMode(D2D1_TEXT_ANTIALIAS_MODE textAntialiasMode);
   
 ### <a name="parameters"></a>Parametry  
  *textAntialiasMode*  
- Tryb antialiasingu do użycia dla kolejnych tekstu i operacje rysowania symboli.  
+ Tryb antialiasingu do użycia w kolejnych tekstu i symbol operacji rysowania.  
   
 ##  <a name="settextrenderingparams"></a>  CRenderTarget::SetTextRenderingParams  
- Określa opcje renderowania tekst ma zostać zastosowany do wszystkich kolejnych tekstu i operacje rysowania symboli.  
+ Określa opcje renderowania tekstu mają być stosowane do wszystkich kolejnych tekstu i symbol operacji rysowania.  
   
 ```  
 void SetTextRenderingParams(IDWriteRenderingParams* textRenderingParams = NULL);
@@ -1016,10 +1016,10 @@ void SetTextRenderingParams(IDWriteRenderingParams* textRenderingParams = NULL);
   
 ### <a name="parameters"></a>Parametry  
  *textRenderingParams*  
- Opcje renderowania tekst ma zostać zastosowany do wszystkich kolejnych tekstu i operacje; rysowania symboli Wartość NULL, aby wyczyścić bieżący opcje renderowania tekstu.  
+ Opcje renderowania tekstu mają być stosowane do wszystkich kolejnych tekstu i symbol operacji rysowania Wartość NULL, aby wyczyścić bieżące opcje renderowania tekstu.  
   
 ##  <a name="settransform"></a>  CRenderTarget::SetTransform  
- Stosuje określona transformacja do obiektu docelowego renderowania, zastępując istniejące transformacji. Wszystkie kolejne operacje rysowania występują w przekształcone miejsca.  
+ Stosuje określony przekształcenie do elementu docelowego renderowania, zastępując istniejące transformacji. Wszystkie kolejne operacje rysowania występują w obszaru przekształconych.  
   
 ```  
 void SetTransform(const D2D1_MATRIX_3X2_F* transform);  
@@ -1028,7 +1028,7 @@ void SetTransform(const D2D1_MATRIX_3X2_F& transform);
   
 ### <a name="parameters"></a>Parametry  
  *transform*  
- Przekształcenie do zastosowania do obiektu docelowego renderowania.  
+ Przekształcenie do zastosowania do elementu docelowego renderowania.  
   
 ##  <a name="verifyresource"></a>  CRenderTarget::VerifyResource  
  Sprawdza poprawność obiektu CD2DResource; Tworzy obiekt, jeśli jeszcze nie istnieje.  
@@ -1042,7 +1042,7 @@ BOOL VerifyResource(CD2DResource* pResource);
  Wskaźnik do obiektu CD2DResource.  
   
 ### <a name="return-value"></a>Wartość zwracana  
- Wartość TRUE, jest obiekt, jeśli jest nieprawidłowy; w przeciwnym razie wartość FALSE.  
+ Wartość TRUE, to obiekt, jeśli są one prawidłowe; w przeciwnym razie wartość FALSE.  
   
 ## <a name="see-also"></a>Zobacz też  
  [Klasy](../../mfc/reference/mfc-classes.md)

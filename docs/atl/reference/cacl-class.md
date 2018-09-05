@@ -32,184 +32,204 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 066f9ac076d4371692331231b5f6f212947b2001
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 9f5e71fbf1a24a38b0a18e70ce7d0fa044ad4ec5
+ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43196487"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43767881"
 ---
 # <a name="cacl-class"></a>Klasa CAcl
-Ta klasa jest otoką `ACL` struktury (lista kontroli dostępu).  
-  
+
+Ta klasa jest otoką `ACL` struktury (lista kontroli dostępu).
+
 > [!IMPORTANT]
->  Ta klasa i jej elementów członkowskich nie można użyć w aplikacjach korzystających ze środowiska wykonawczego Windows.  
-  
-## <a name="syntax"></a>Składnia  
-  
+>  Ta klasa i jej elementów członkowskich nie można użyć w aplikacjach korzystających ze środowiska wykonawczego Windows.
+
+## <a name="syntax"></a>Składnia
+
 ```
 class CAcl
-```  
-  
-## <a name="members"></a>Elementy członkowskie  
-  
-### <a name="public-typedefs"></a>Publiczne definicje typów  
-  
-|Nazwa|Opis|  
-|----------|-----------------|  
-|[CAcl::CAccessMaskArray](#caccessmaskarray)|Tablica ACCESS_MASKs.|  
-|[CAcl::CAceFlagArray](#caceflagarray)|Tablica bajtów.|  
-|[CAcl::CAceTypeArray](#cacetypearray)|Tablica bajtów.|  
-  
-### <a name="public-constructors"></a>Konstruktory publiczne  
-  
-|Nazwa|Opis|  
-|----------|-----------------|  
-|[CAcl::CAcl](#cacl)|Konstruktor.|  
-|[CAcl:: ~ CAcl](#dtor)|Destruktor.|  
-  
-### <a name="public-methods"></a>Metody publiczne  
-  
-|Nazwa|Opis|  
-|----------|-----------------|  
-|[CAcl::GetAceCount](#getacecount)|Zwraca liczbę kontroli dostępu do obiektów wpisu.|  
-|[CAcl::GetAclEntries](#getaclentries)|Pobiera wpisy listę kontroli dostępu (ACL) kontroli dostępu z `CAcl` obiektu.|  
-|[CAcl::GetAclEntry](#getaclentry)|Pobiera wszystkie informacje na temat wpis w `CAcl` obiektu.|  
-|[CAcl::GetLength](#getlength)|Zwraca długość listy kontroli dostępu.|  
-|[CAcl::GetPACL](#getpacl)|Zwraca PACL (wskaźnik na listę ACL).|  
-|[CAcl::IsEmpty](#isempty)|Testy `CAcl` obiektu dla wpisów.|  
-|[CAcl::IsNull](#isnull)|Zwraca stan `CAcl` obiektu.|  
-|[CAcl::RemoveAce](#removeace)|Usuwa określone ACE (wpis kontroli dostępu) z `CAcl` obiektu.|  
-|[CAcl::RemoveAces](#removeaces)|Usuwa wszystkie wpisy kontroli dostępu (wpisy kontroli dostępu) z `CAcl` przeznaczonych do danej `CSid`.|  
-|[CAcl::SetEmpty](#setempty)|Znaczniki `CAcl` obiektu jako pusta.|  
-|[CAcl::SetNull](#setnull)|Znaczniki `CAcl` obiektu jako wartości NULL.|  
-  
-### <a name="public-operators"></a>Operatory publiczne  
-  
-|Nazwa|Opis|  
-|----------|-----------------|  
-|[CAcl::operator const ACL *](#operator_const_acl__star)|Rzutowania `CAcl` obiekt `ACL` struktury.|  
-|[CAcl::operator =](#operator_eq)|Operator przypisania.|  
-  
-## <a name="remarks"></a>Uwagi  
- `ACL` Struktury jest nagłówkiem, którego listy kontroli dostępu (listy kontroli dostępu). Lista ACL zawiera listę kolejnych zero lub więcej [ACE](/windows/desktop/SecAuthZ/access-control-entries) (wpisy kontroli dostępu). Poszczególne wpisy kontroli dostępu na liście ACL są numerowane od 0 do *n-1*, gdzie *n* jest liczbą ACE na liście ACL. Podczas edytowania listy ACL, aplikacja odwołuje się do wpisu kontroli dostępu (ACE) w obrębie listy ACL według indeksu.  
-  
- Istnieją dwa typy list ACL:  
-  
--   Poufne  
-  
--   System  
-  
- Poufne listy kontroli dostępu jest kontrolowana przez właściciela obiektu lub każda osoba uzyskuje dostęp WRITE_DAC do obiektu. Określa ona, czy możliwy dostęp do konkretnych użytkowników i grup do obiektu. Na przykład właściciela pliku, można użyć poufnej listy kontroli dostępu do kontroli, którym użytkownikom i grupom można i nie może mieć dostęp do pliku.  
-  
- Każdy obiekt może również mieć informacje zabezpieczeń na poziomie systemu, skojarzone z nią w formularzu systemu listy ACL kontrolowane przez administratora systemu. Systemowe listy kontroli dostępu umożliwia administratorowi systemu inspekcji wszelkie próby uzyskania dostępu do obiektu.  
-  
- Aby uzyskać więcej informacji, zobacz [listy ACL](/windows/desktop/SecAuthZ/access-control-lists) dyskusji w zestawie Windows SDK.  
-  
- Wprowadzenie do modelu kontroli dostępu w Windows, zobacz [kontroli dostępu](/windows/desktop/SecAuthZ/access-control) w zestawie Windows SDK.  
-  
-## <a name="requirements"></a>Wymagania  
- **Nagłówek:** atlsecurity.h  
-  
-##  <a name="caccessmaskarray"></a>  CAcl::CAccessMaskArray  
- Tablica obiektów ACCESS_MASK.  
-  
+```
+
+## <a name="members"></a>Elementy członkowskie
+
+### <a name="public-typedefs"></a>Publiczne definicje typów
+
+|Nazwa|Opis|
+|----------|-----------------|
+|[CAcl::CAccessMaskArray](#caccessmaskarray)|Tablica ACCESS_MASKs.|
+|[CAcl::CAceFlagArray](#caceflagarray)|Tablica bajtów.|
+|[CAcl::CAceTypeArray](#cacetypearray)|Tablica bajtów.|
+
+### <a name="public-constructors"></a>Konstruktory publiczne
+
+|Nazwa|Opis|
+|----------|-----------------|
+|[CAcl::CAcl](#cacl)|Konstruktor.|
+|[CAcl:: ~ CAcl](#dtor)|Destruktor.|
+
+### <a name="public-methods"></a>Metody publiczne
+
+|Nazwa|Opis|
+|----------|-----------------|
+|[CAcl::GetAceCount](#getacecount)|Zwraca liczbę kontroli dostępu do obiektów wpisu.|
+|[CAcl::GetAclEntries](#getaclentries)|Pobiera wpisy listę kontroli dostępu (ACL) kontroli dostępu z `CAcl` obiektu.|
+|[CAcl::GetAclEntry](#getaclentry)|Pobiera wszystkie informacje na temat wpis w `CAcl` obiektu.|
+|[CAcl::GetLength](#getlength)|Zwraca długość listy kontroli dostępu.|
+|[CAcl::GetPACL](#getpacl)|Zwraca PACL (wskaźnik na listę ACL).|
+|[CAcl::IsEmpty](#isempty)|Testy `CAcl` obiektu dla wpisów.|
+|[CAcl::IsNull](#isnull)|Zwraca stan `CAcl` obiektu.|
+|[CAcl::RemoveAce](#removeace)|Usuwa określone ACE (wpis kontroli dostępu) z `CAcl` obiektu.|
+|[CAcl::RemoveAces](#removeaces)|Usuwa wszystkie wpisy kontroli dostępu (wpisy kontroli dostępu) z `CAcl` przeznaczonych do danej `CSid`.|
+|[CAcl::SetEmpty](#setempty)|Znaczniki `CAcl` obiektu jako pusta.|
+|[CAcl::SetNull](#setnull)|Znaczniki `CAcl` obiektu jako wartości NULL.|
+
+### <a name="public-operators"></a>Operatory publiczne
+
+|Nazwa|Opis|
+|----------|-----------------|
+|[CAcl::operator const ACL *](#operator_const_acl__star)|Rzutowania `CAcl` obiekt `ACL` struktury.|
+|[CAcl::operator =](#operator_eq)|Operator przypisania.|
+
+## <a name="remarks"></a>Uwagi
+
+`ACL` Struktury jest nagłówkiem, którego listy kontroli dostępu (listy kontroli dostępu). Lista ACL zawiera listę kolejnych zero lub więcej [ACE](/windows/desktop/SecAuthZ/access-control-entries) (wpisy kontroli dostępu). Poszczególne wpisy kontroli dostępu na liście ACL są numerowane od 0 do *n-1*, gdzie *n* jest liczbą ACE na liście ACL. Podczas edytowania listy ACL, aplikacja odwołuje się do wpisu kontroli dostępu (ACE) w obrębie listy ACL według indeksu.
+
+Istnieją dwa typy list ACL:
+
+- Poufne
+
+- System
+
+Poufne listy kontroli dostępu jest kontrolowana przez właściciela obiektu lub każda osoba uzyskuje dostęp WRITE_DAC do obiektu. Określa ona, czy możliwy dostęp do konkretnych użytkowników i grup do obiektu. Na przykład właściciela pliku, można użyć poufnej listy kontroli dostępu do kontroli, którym użytkownikom i grupom można i nie może mieć dostęp do pliku.
+
+Każdy obiekt może również mieć informacje zabezpieczeń na poziomie systemu, skojarzone z nią w formularzu systemu listy ACL kontrolowane przez administratora systemu. Systemowe listy kontroli dostępu umożliwia administratorowi systemu inspekcji wszelkie próby uzyskania dostępu do obiektu.
+
+Aby uzyskać więcej informacji, zobacz [listy ACL](/windows/desktop/SecAuthZ/access-control-lists) dyskusji w zestawie Windows SDK.
+
+Wprowadzenie do modelu kontroli dostępu w Windows, zobacz [kontroli dostępu](/windows/desktop/SecAuthZ/access-control) w zestawie Windows SDK.
+
+## <a name="requirements"></a>Wymagania
+
+**Nagłówek:** atlsecurity.h
+
+##  <a name="caccessmaskarray"></a>  CAcl::CAccessMaskArray
+
+Tablica obiektów ACCESS_MASK.
+
 ```
 typedef CAtlArray<ACCESS_MASK> CAccessMaskArray;
-```  
-  
-### <a name="remarks"></a>Uwagi  
- Ten element typedef Określa typ tablicy, który może służyć do przechowywania prawa dostępu, używany w wpisy kontroli dostępu (ACE).  
-  
-##  <a name="caceflagarray"></a>  CAcl::CAceFlagArray  
- Tablica bajtów.  
-  
+```
+
+### <a name="remarks"></a>Uwagi
+
+Ten element typedef Określa typ tablicy, który może służyć do przechowywania prawa dostępu, używany w wpisy kontroli dostępu (ACE).
+
+##  <a name="caceflagarray"></a>  CAcl::CAceFlagArray
+
+Tablica bajtów.
+
 ```
 typedef CAtlArray<BYTE> CAceFlagArray;
-```  
-  
-### <a name="remarks"></a>Uwagi  
- Ten element typedef Określa typ tablicy, używane do definiowania flagi kontrolne specyficznych dla typu wpisu kontroli dostępu. Zobacz [ACE_HEADER](/windows/desktop/api/winnt/ns-winnt-_ace_header) definicji pełną listę flag możliwe.  
-  
-##  <a name="cacetypearray"></a>  CAcl::CAceTypeArray  
- Tablica bajtów.  
-  
+```
+
+### <a name="remarks"></a>Uwagi
+
+Ten element typedef Określa typ tablicy, używane do definiowania flagi kontrolne specyficznych dla typu wpisu kontroli dostępu. Zobacz [ACE_HEADER](/windows/desktop/api/winnt/ns-winnt-_ace_header) definicji pełną listę flag możliwe.
+
+##  <a name="cacetypearray"></a>  CAcl::CAceTypeArray
+
+Tablica bajtów.
+
 ```
 typedef CAtlArray<BYTE> CAceTypeArray;
-```  
-  
-### <a name="remarks"></a>Uwagi  
- Ten element typedef Określa typ tablicy, używane do definiowania charakter obiektów wpisu kontroli dostępu, takich jak ACCESS_ALLOWED_ACE_TYPE lub ACCESS_DENIED_ACE_TYPE. Zobacz [ACE_HEADER](/windows/desktop/api/winnt/ns-winnt-_ace_header) definicji, aby uzyskać pełną listę możliwych typów.  
-  
-##  <a name="cacl"></a>  CAcl::CAcl  
- Konstruktor.  
-  
+```
+
+### <a name="remarks"></a>Uwagi
+
+Ten element typedef Określa typ tablicy, używane do definiowania charakter obiektów wpisu kontroli dostępu, takich jak ACCESS_ALLOWED_ACE_TYPE lub ACCESS_DENIED_ACE_TYPE. Zobacz [ACE_HEADER](/windows/desktop/api/winnt/ns-winnt-_ace_header) definicji, aby uzyskać pełną listę możliwych typów.
+
+##  <a name="cacl"></a>  CAcl::CAcl
+
+Konstruktor.
+
 ```
 CAcl() throw();
 CAcl(const CAcl& rhs) throw(...);
-```  
-  
-### <a name="parameters"></a>Parametry  
- *RHS*  
- Istniejące `CAcl` obiektu.  
-  
-### <a name="remarks"></a>Uwagi  
- `CAcl` Obiektu można opcjonalnie utworzyć przy użyciu istniejącego `CAcl` obiektu.  
-  
-##  <a name="dtor"></a>  CAcl:: ~ CAcl  
- Destruktor.  
-  
+```
+
+### <a name="parameters"></a>Parametry
+
+*RHS*  
+Istniejące `CAcl` obiektu.
+
+### <a name="remarks"></a>Uwagi
+
+`CAcl` Obiektu można opcjonalnie utworzyć przy użyciu istniejącego `CAcl` obiektu.
+
+##  <a name="dtor"></a>  CAcl:: ~ CAcl
+
+Destruktor.
+
 ```
 virtual ~CAcl() throw();
-```  
-  
-### <a name="remarks"></a>Uwagi  
- Destruktor zwalnia wszystkie zasoby, uzyskanych przez obiekt.  
-  
-##  <a name="getacecount"></a>  CAcl::GetAceCount  
- Zwraca liczbę kontroli dostępu do obiektów wpisu.  
-  
+```
+
+### <a name="remarks"></a>Uwagi
+
+Destruktor zwalnia wszystkie zasoby, uzyskanych przez obiekt.
+
+##  <a name="getacecount"></a>  CAcl::GetAceCount
+
+Zwraca liczbę kontroli dostępu do obiektów wpisu.
+
 ```
 virtual UINT GetAceCount() const throw() = 0;
-```  
-  
-### <a name="return-value"></a>Wartość zwracana  
- Zwraca liczbę wpisów ACE `CAcl` obiektu.  
-  
-##  <a name="getaclentries"></a>  CAcl::GetAclEntries  
- Pobiera wpisy listę kontroli dostępu (ACL) kontroli dostępu z `CAcl` obiektu.  
-  
+```
+
+### <a name="return-value"></a>Wartość zwracana
+
+Zwraca liczbę wpisów ACE `CAcl` obiektu.
+
+##  <a name="getaclentries"></a>  CAcl::GetAclEntries
+
+Pobiera wpisy listę kontroli dostępu (ACL) kontroli dostępu z `CAcl` obiektu.
+
 ```
 void GetAclEntries(
     CSid::CSidArray* pSids,
     CAccessMaskArray* pAccessMasks = NULL,
     CAceTypeArray* pAceTypes = NULL,
     CAceFlagArray* pAceFlags = NULL) const throw(...);
-```  
-  
-### <a name="parameters"></a>Parametry  
- *pSids*  
- Wskaźnik do tablicy [CSid](../../atl/reference/csid-class.md) obiektów.  
-  
- *pAccessMasks*  
- Maski dostępu.  
-  
- *pAceTypes*  
- Typy wpisu kontroli dostępu.  
-  
- *pAceFlags*  
- Flagi ACE.  
-  
-### <a name="remarks"></a>Uwagi  
- Ta metoda wypełni parametry tablicy ze szczegółami dotyczącymi każdego obiektu ACE zawarte w `CAcl` obiektu. Użyj wartości NULL, gdy szczegółowe informacje dotyczące określonej tablicy nie są wymagane.  
-  
- Zawartość każdej macierzy odpowiadają ze sobą, czyli pierwszy element `CAccessMaskArray` tablicy odnosi się do pierwszego elementu w `CSidArray` tablicy i tak dalej.  
-  
- Zobacz [ACE_HEADER](/windows/desktop/api/winnt/ns-winnt-_ace_header) więcej informacji na temat typów wpisu kontroli dostępu i flagi.  
-  
-##  <a name="getaclentry"></a>  CAcl::GetAclEntry  
- Pobiera wszystkie informacje o wpis na liście kontroli dostępu (ACL).  
-  
+```
+
+### <a name="parameters"></a>Parametry
+
+*pSids*  
+Wskaźnik do tablicy [CSid](../../atl/reference/csid-class.md) obiektów.
+
+*pAccessMasks*  
+Maski dostępu.
+
+*pAceTypes*  
+Typy wpisu kontroli dostępu.
+
+*pAceFlags*  
+Flagi ACE.
+
+### <a name="remarks"></a>Uwagi
+
+Ta metoda wypełni parametry tablicy ze szczegółami dotyczącymi każdego obiektu ACE zawarte w `CAcl` obiektu. Użyj wartości NULL, gdy szczegółowe informacje dotyczące określonej tablicy nie są wymagane.
+
+Zawartość każdej macierzy odpowiadają ze sobą, czyli pierwszy element `CAccessMaskArray` tablicy odnosi się do pierwszego elementu w `CSidArray` tablicy i tak dalej.
+
+Zobacz [ACE_HEADER](/windows/desktop/api/winnt/ns-winnt-_ace_header) więcej informacji na temat typów wpisu kontroli dostępu i flagi.
+
+##  <a name="getaclentry"></a>  CAcl::GetAclEntry
+
+Pobiera wszystkie informacje o wpis na liście kontroli dostępu (ACL).
+
 ```
 void GetAclEntry(
     UINT nIndex,
@@ -219,144 +239,169 @@ void GetAclEntry(
     BYTE* pFlags = NULL,
     GUID* pObjectType = NULL,
     GUID* pInheritedObjectType = NULL) const throw(...);
-```  
-  
-### <a name="parameters"></a>Parametry  
- *nIndex*  
- Indeks wpisu listy ACL do pobrania.  
-  
- *pSid*  
- [CSid](../../atl/reference/csid-class.md) obiektu, którego dotyczy wpisu na liście ACL.  
-  
- *pMask*  
- Maska, określając uprawnienia, aby udzielić lub odmówić dostępu.  
-  
- *pType*  
- Typ wpisu kontroli dostępu.  
-  
- *pFlags*  
- Flagi ACE.  
-  
- *pObjectType*  
- Typ obiektu. Spowoduje to ustawienie na GUID_NULL Jeśli nie określono typu obiektu w asa lub ACE nie jest ACE obiektu.  
-  
- *pInheritedObjectType*  
- Typ obiektu dziedziczone. Spowoduje to ustawienie na GUID_NULL Jeśli nie określono typu obiektu dziedziczonych w asa lub ACE nie jest ACE obiektu.  
-  
-### <a name="remarks"></a>Uwagi  
- Ta metoda pobiera wszystkie informacje o poszczególnych ACE, podając więcej informacji, niż [CAcl::GetAclEntries](#getaclentries) samodzielnie udostępnia.  
-  
- Zobacz [ACE_HEADER](/windows/desktop/api/winnt/ns-winnt-_ace_header) więcej informacji na temat typów wpisu kontroli dostępu i flagi.  
-  
-##  <a name="getlength"></a>  CAcl::GetLength  
- Zwraca długość listy kontroli dostępu (ACL).  
-  
+```
+
+### <a name="parameters"></a>Parametry
+
+*nIndex*  
+Indeks wpisu listy ACL do pobrania.
+
+*pSid*  
+[CSid](../../atl/reference/csid-class.md) obiektu, którego dotyczy wpisu na liście ACL.
+
+*pMask*  
+Maska, określając uprawnienia, aby udzielić lub odmówić dostępu.
+
+*pType*  
+Typ wpisu kontroli dostępu.
+
+*pFlags*  
+Flagi ACE.
+
+*pObjectType*  
+Typ obiektu. Spowoduje to ustawienie na GUID_NULL Jeśli nie określono typu obiektu w asa lub ACE nie jest ACE obiektu.
+
+*pInheritedObjectType*  
+Typ obiektu dziedziczone. Spowoduje to ustawienie na GUID_NULL Jeśli nie określono typu obiektu dziedziczonych w asa lub ACE nie jest ACE obiektu.
+
+### <a name="remarks"></a>Uwagi
+
+Ta metoda pobiera wszystkie informacje o poszczególnych ACE, podając więcej informacji, niż [CAcl::GetAclEntries](#getaclentries) samodzielnie udostępnia.
+
+Zobacz [ACE_HEADER](/windows/desktop/api/winnt/ns-winnt-_ace_header) więcej informacji na temat typów wpisu kontroli dostępu i flagi.
+
+##  <a name="getlength"></a>  CAcl::GetLength
+
+Zwraca długość listy kontroli dostępu (ACL).
+
 ```
 UINT GetLength() const throw();
-```  
-  
-### <a name="return-value"></a>Wartość zwracana  
- Zwraca wartość wymaganą długość w bajtach niezbędne do przechowywania `ACL` struktury.  
-  
-##  <a name="getpacl"></a>  CAcl::GetPACL  
- Zwraca wskaźnik do listy kontroli dostępu (ACL).  
-  
+```
+
+### <a name="return-value"></a>Wartość zwracana
+
+Zwraca wartość wymaganą długość w bajtach niezbędne do przechowywania `ACL` struktury.
+
+##  <a name="getpacl"></a>  CAcl::GetPACL
+
+Zwraca wskaźnik do listy kontroli dostępu (ACL).
+
 ```
 const ACL* GetPACL() const throw(...);
-```  
-  
-### <a name="return-value"></a>Wartość zwracana  
- Zwraca wskaźnik do `ACL` struktury.  
-  
-##  <a name="isempty"></a>  CAcl::IsEmpty  
- Testy `CAcl` obiektu dla wpisów.  
-  
+```
+
+### <a name="return-value"></a>Wartość zwracana
+
+Zwraca wskaźnik do `ACL` struktury.
+
+##  <a name="isempty"></a>  CAcl::IsEmpty
+
+Testy `CAcl` obiektu dla wpisów.
+
 ```
 bool IsEmpty() const throw();
-```  
-  
-### <a name="remarks"></a>Uwagi  
- Zwraca wartość PRAWDA, jeśli `CAcl` obiekt nie ma wartości NULL i zawiera żadnych wpisów. Zwraca wartość FALSE, jeśli `CAcl` obiektu ma wartość NULL lub zawiera co najmniej jeden wpis.  
-  
-##  <a name="isnull"></a>  CAcl::IsNull  
- Zwraca stan `CAcl` obiektu.  
-  
+```
+
+### <a name="remarks"></a>Uwagi
+
+Zwraca wartość PRAWDA, jeśli `CAcl` obiekt nie ma wartości NULL i zawiera żadnych wpisów. Zwraca wartość FALSE, jeśli `CAcl` obiektu ma wartość NULL lub zawiera co najmniej jeden wpis.
+
+##  <a name="isnull"></a>  CAcl::IsNull
+
+Zwraca stan `CAcl` obiektu.
+
 ```
 bool IsNull() const throw();
-```  
-  
-### <a name="return-value"></a>Wartość zwracana  
- Zwraca wartość PRAWDA, jeśli `CAcl` obiektu ma wartość NULL, wartość FALSE w przeciwnym razie.  
-  
-##  <a name="operator_const_acl__star"></a>  CAcl::operator const ACL *  
- Rzutowania `CAcl` obiekt `ACL` struktury (lista kontroli dostępu).  
-  
+```
+
+### <a name="return-value"></a>Wartość zwracana
+
+Zwraca wartość PRAWDA, jeśli `CAcl` obiektu ma wartość NULL, wartość FALSE w przeciwnym razie.
+
+##  <a name="operator_const_acl__star"></a>  CAcl::operator const ACL *
+
+Rzutowania `CAcl` obiekt `ACL` struktury (lista kontroli dostępu).
+
 ```  
 operator const ACL *() const throw(...);
-```  
-  
-### <a name="remarks"></a>Uwagi  
- Zwraca adres `ACL` struktury.  
-  
-##  <a name="operator_eq"></a>  CAcl::operator =  
- Operator przypisania.  
-  
+```
+
+### <a name="remarks"></a>Uwagi
+
+Zwraca adres `ACL` struktury.
+
+##  <a name="operator_eq"></a>  CAcl::operator =
+
+Operator przypisania.
+
 ```
 CAcl& operator= (const CAcl& rhs) throw(...);
-```  
-  
-### <a name="parameters"></a>Parametry  
- *RHS*  
- `CAcl` Można przypisać do istniejącego obiektu.  
-  
-### <a name="return-value"></a>Wartość zwracana  
- Zwraca odwołanie do zaktualizowanego `CAcl` obiektu.  
-  
-##  <a name="removeace"></a>  CAcl::RemoveAce  
- Usuwa określone ACE (wpis kontroli dostępu) z `CAcl` obiektu.  
-  
+```
+
+### <a name="parameters"></a>Parametry
+
+*RHS*  
+`CAcl` Można przypisać do istniejącego obiektu.
+
+### <a name="return-value"></a>Wartość zwracana
+
+Zwraca odwołanie do zaktualizowanego `CAcl` obiektu.
+
+##  <a name="removeace"></a>  CAcl::RemoveAce
+
+Usuwa określone ACE (wpis kontroli dostępu) z `CAcl` obiektu.
+
 ```
 void RemoveAce(UINT nIndex) throw();
-```  
-  
-### <a name="parameters"></a>Parametry  
- *nIndex*  
- Indeks wpisu ACE do usunięcia.  
-  
-### <a name="remarks"></a>Uwagi  
- Ta metoda jest tworzony na podstawie [CAtlArray::RemoveAt](../../atl/reference/catlarray-class.md#removeat).  
-  
-##  <a name="removeaces"></a>  CAcl::RemoveAces  
- Usuwa wszystkim wpisy kontroli dostępu (wpisy kontroli dostępu) z `CAcl` przeznaczonych do danej `CSid`.  
-  
+```
+
+### <a name="parameters"></a>Parametry
+
+*nIndex*  
+Indeks wpisu ACE do usunięcia.
+
+### <a name="remarks"></a>Uwagi
+
+Ta metoda jest tworzony na podstawie [CAtlArray::RemoveAt](../../atl/reference/catlarray-class.md#removeat).
+
+##  <a name="removeaces"></a>  CAcl::RemoveAces
+
+Usuwa wszystkim wpisy kontroli dostępu (wpisy kontroli dostępu) z `CAcl` przeznaczonych do danej `CSid`.
+
 ```
 bool RemoveAces(const CSid& rSid) throw(...)
-```  
-  
-### <a name="parameters"></a>Parametry  
- *rSid*  
- Odwołanie do `CSid` obiektu.  
-  
-##  <a name="setempty"></a>  CAcl::SetEmpty  
- Znaczniki `CAcl` obiektu jako pusta.  
-  
+```
+
+### <a name="parameters"></a>Parametry
+
+*rSid*  
+Odwołanie do `CSid` obiektu.
+
+##  <a name="setempty"></a>  CAcl::SetEmpty
+
+Znaczniki `CAcl` obiektu jako pusta.
+
 ```
 void SetEmpty() throw();
-```  
-  
-### <a name="remarks"></a>Uwagi  
- `CAcl` Można ustawić pustą lub null: dwa stany są różne.  
-  
-##  <a name="setnull"></a>  CAcl::SetNull  
- Znaczniki `CAcl` obiektu jako wartości NULL.  
-  
+```
+
+### <a name="remarks"></a>Uwagi
+
+`CAcl` Można ustawić pustą lub null: dwa stany są różne.
+
+##  <a name="setnull"></a>  CAcl::SetNull
+
+Znaczniki `CAcl` obiektu jako wartości NULL.
+
 ```
 void SetNull() throw();
-```  
-  
-### <a name="remarks"></a>Uwagi  
- `CAcl` Można ustawić pustą lub null: dwa stany są różne.  
-  
-## <a name="see-also"></a>Zobacz też  
- [Klasa — Przegląd](../../atl/atl-class-overview.md)   
- [Funkcje globalne zabezpieczeń](../../atl/reference/security-global-functions.md)
+```
+
+### <a name="remarks"></a>Uwagi
+
+`CAcl` Można ustawić pustą lub null: dwa stany są różne.
+
+## <a name="see-also"></a>Zobacz też
+
+[Klasa — Przegląd](../../atl/atl-class-overview.md)   
+[Funkcje globalne zabezpieczeń](../../atl/reference/security-global-functions.md)

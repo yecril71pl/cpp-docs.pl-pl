@@ -1,5 +1,5 @@
 ---
-title: Interfejsy, Kreator formantu ATL | Dokumentacja firmy Microsoft
+title: Interfejsy, Kreator kontrolki ATL | Dokumentacja firmy Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,32 +16,34 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 745e8ee1074af6b4126a2123acafdc821906d24c
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: c3629b65b8f6373b20fc35dd6d90133d7377e674
+ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32362355"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43766564"
 ---
-# <a name="interfaces-atl-control-wizard"></a>Interfejsy, Kreator formantu ATL
-Ta strona kreatora zidentyfikować interfejsy, które obsługuje formantu. Domyślnie interfejsy obsługiwane są zwykle używanych przez większość kontenerów.  
-  
+# <a name="interfaces-atl-control-wizard"></a>Interfejsy, Kreator kontrolki ATL
+
+Ta strona kreatora zidentyfikować interfejsy, które są obsługiwane przez kontrolkę. Domyślnie obsługiwanych interfejsów są zwykle używane przez większość kontenerów.
+
 > [!NOTE]
->  W przypadku wybrania **minimalnego kontroli** na [opcje](../../atl/reference/options-atl-control-wizard.md) karcie interfejsy nie są wyświetlane domyślnie w **obsługiwane** pola listy.  
-  
- **Nieobsługiwane**  
- Wskazuje dostępnych interfejsów, które nie są obecnie obsługiwane dla formantu.  
-  
- **Obsługiwane**  
- Wskazuje interfejsów, które są obecnie obsługiwane dla formantu.  
-  
-|Przycisk transferu|Opis|  
-|---------------------|-----------------|  
-|**>**|Dodaje do **obsługiwane** listy z nazwą interfejsu aktualnie wybrane w **nieobsługiwane** listy.|  
-|**>>**|Dodaje do **obsługiwane** listę wszystkich nazw interfejsu dostępne w **nieobsługiwane** listy.|  
-|**<**|Usuwa nazwę interfejsu aktualnie wybrane w **obsługiwane** listy.|  
-|**<<**|Usuwa wszystkie interfejsu nazw znajdujących się na liście w **obsługiwane** listy.|  
-  
-## <a name="see-also"></a>Zobacz też  
- [Kreator kontrolki ATL](../../atl/reference/atl-control-wizard.md)
+>  W przypadku wybrania **kontrolka minimalnego** na [opcje](../../atl/reference/options-atl-control-wizard.md) karcie interfejsy nie są wyświetlane domyślnie w **obsługiwane** pola listy.
+
+**Nie jest obsługiwany**  
+Wskazuje dostępnych interfejsów, które nie są obecnie obsługiwane dla formantu.
+
+**Obsługiwane**  
+Wskazuje, interfejsy, które są obecnie obsługiwane dla formantu.
+
+|Przycisk transferu|Opis|
+|---------------------|-----------------|
+|**>**|Dodaje do **obsługiwane** Nazwa interfejsu, aktualnie wybrane w listy **nieobsługiwane** listy.|
+|**>>**|Dodaje do **obsługiwane** listy dostępny w wszystkich nazw interfejsu **nieobsługiwane** listy.|
+|**<**|Usuwa nazwę interfejsu aktualnie wybrany w **obsługiwane** listy.|
+|**<<**|Usuwa wszystkie interfejsu nazwy obecnie wymienione w **obsługiwane** listy.|
+
+## <a name="see-also"></a>Zobacz też
+
+[Kreator kontrolki ATL](../../atl/reference/atl-control-wizard.md)
 

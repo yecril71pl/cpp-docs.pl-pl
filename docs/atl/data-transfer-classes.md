@@ -18,20 +18,22 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5b953b7e7a2f67aa3b17d5bb5fd020706d4c98e3
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: e129ec4df6738086d111742adc4b3c0ffd226c40
+ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38953385"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43765801"
 ---
 # <a name="data-transfer-classes"></a>Klasy transferu danych
-Następujące klasy obsługi różnych typów transferowanych danych:  
-  
--   [IDataObjectImpl](../atl/reference/idataobjectimpl-class.md) obsługuje jednolitego transferu danych za pomocą standardowych formatów próbę pobrania i ustawienia danych. Powiadomienia o zmianie za zarządzanie połączeniami w celu poinformowania ujść danych obsługuje.  
-  
--   [CBindStatusCallback](../atl/reference/cbindstatuscallback-class.md) umożliwia asynchroniczne monikera do wysyłania i odbierania informacji dotyczących transferu asynchronicznego danych do i z obiektu.  
-  
-## <a name="see-also"></a>Zobacz też  
- [Klasa — Przegląd](../atl/atl-class-overview.md)
+
+Następujące klasy obsługi różnych typów transferowanych danych:
+
+- [IDataObjectImpl](../atl/reference/idataobjectimpl-class.md) obsługuje jednolitego transferu danych za pomocą standardowych formatów próbę pobrania i ustawienia danych. Powiadomienia o zmianie za zarządzanie połączeniami w celu poinformowania ujść danych obsługuje.
+
+- [CBindStatusCallback](../atl/reference/cbindstatuscallback-class.md) umożliwia asynchroniczne monikera do wysyłania i odbierania informacji dotyczących transferu asynchronicznego danych do i z obiektu.
+
+## <a name="see-also"></a>Zobacz też
+
+[Klasa — Przegląd](../atl/atl-class-overview.md)
 

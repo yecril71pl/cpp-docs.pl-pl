@@ -1,5 +1,5 @@
 ---
-title: Właściwości podstawowe, ATL kontrolować Kreatora | Dokumentacja firmy Microsoft
+title: Właściwości podstawowe, ATL kontrolek, Kreator | Dokumentacja firmy Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -14,29 +14,31 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4b6ba488e2cb498aa3d130a8525f1438adc6d406
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: b84563c2576f4969acb4162bcaa92d6f62f97c72
+ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32358902"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43767468"
 ---
-# <a name="stock-properties-atl-control-wizard"></a>Właściwości podstawowe, Kreator formantu ATL
-Ta strona kreatora identyfikuje właściwości podstawowe obsługiwane dla formantu. Domyślnie są identyfikowane żadnych właściwości.  
-  
- **Nieobsługiwane**  
- Wskazuje dostępne właściwości, które nie są obecnie obsługiwane dla formantu.  
-  
- **Obsługiwane**  
- Wskazuje właściwości, które są obecnie obsługiwane dla formantu.  
-  
-|Przycisk transferu|Opis|  
-|---------------------|-----------------|  
-|**>**|Dodaje do **obsługiwane** listy Nazwa właściwości aktualnie wybrane w **nieobsługiwane** listy.|  
-|**>>**|Dodaje do **obsługiwane** listę wszystkich nazw właściwości dostępne w **nieobsługiwane** listy.|  
-|**<**|Usuwa nazwę właściwości aktualnie wybrane w **obsługiwane** listy.|  
-|**<<**|Usuwa wszystkie nazwy właściwości, w obecnie na liście **obsługiwane** listy.|  
-  
-## <a name="see-also"></a>Zobacz też  
- [Kreator kontrolki ATL](../../atl/reference/atl-control-wizard.md)
+# <a name="stock-properties-atl-control-wizard"></a>Kreator kontrolki ATL, właściwości podstawowe
+
+Ta strona kreatora identyfikuje właściwości podstawowe obsługiwane dla formantu. Domyślnie są identyfikowane żadnych właściwości.
+
+**Nie jest obsługiwany**  
+Wskazuje dostępnych właściwości, które nie są obecnie obsługiwane dla formantu.
+
+**Obsługiwane**  
+Określa właściwości, które są obecnie obsługiwane dla formantu.
+
+|Przycisk transferu|Opis|
+|---------------------|-----------------|
+|**>**|Dodaje do **obsługiwane** listy nazwy właściwości aktualnie wybrany w **nieobsługiwane** listy.|
+|**>>**|Dodaje do **obsługiwane** listę wszystkich nazw właściwości dostępne w **nieobsługiwane** listy.|
+|**<**|Usuwa nazwę właściwości aktualnie wybrany w **obsługiwane** listy.|
+|**<<**|Usuwa wszystkie nazwy właściwości, które obecnie na liście **obsługiwane** listy.|
+
+## <a name="see-also"></a>Zobacz też
+
+[Kreator kontrolki ATL](../../atl/reference/atl-control-wizard.md)
 

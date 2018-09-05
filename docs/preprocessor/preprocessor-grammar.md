@@ -1,7 +1,7 @@
 ---
 title: Gramatyka preprocesora | Dokumentacja firmy Microsoft
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 09/04/2018
 ms.technology:
 - cpp-tools
 ms.topic: reference
@@ -16,98 +16,86 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1871d1b8281f4dd74733133ede70ed80430246b3
-ms.sourcegitcommit: d4c803bd3a684d7951bf88dcecf1f14af43ae411
+ms.openlocfilehash: 56df4d0bfdaf87ace87a9f9dcbde85166929e642
+ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/10/2018
-ms.locfileid: "42464528"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43766119"
 ---
 # <a name="preprocessor-grammar"></a>Gramatyka preprocesora
-**#define***identyfikator* *ciąg tokenu*zoptymalizowany pod kątem    
-  
-*#* **Zdefiniuj***identyfikator*[**(** *identyfikator*zoptymalizowany pod kątem **,** *...*  **,** *identyfikator*zoptymalizowany pod kątem **)**] *ciąg tokenu*zoptymalizowany pod kątem    
-  
-**zdefiniowany (***identyfikator* **)**   
-  
-**definicja***identyfikator*   
-  
-`#include` **"***path-spec***"**  
-  
-`#include` **\<***path-spec***>**  
-  
-**#line***sekwencję cyfr***"** *filename* **"** zoptymalizowany pod kątem      
-  
-*#* **undef***identyfikator*   
-  
-**#error***ciąg tokenu*   
-  
-**#pragma***ciąg tokenu*   
-  
-*warunkowe* :  
-*część IF części elif*zoptymalizowany pod kątem*część else*zoptymalizowany pod kątem*linia endif*  
-  
-*część IF* :  
-*if-linetext*  
-  
-*wiersz z operatorem IF* :  
-**#if***wyrażenia stałego*   
-  
-**#ifdef***identyfikator*   
-  
-**#ifndef***identyfikator*   
-  
-*części elif* :  
-*tekst linii elif*  
-  
-*tekst linii elif części elif*  
-  
-*Linia elif* :  
-**#elif**  *constant-expression*  
-  
-*część else* :  
-*else-linetext*  
-  
-*else linii* :  
-`#else`  
-  
-*Linia ENDIF* :  
-`#endif`  
-  
-*sekwencja cyfr* :  
-*digit*  
-  
-*sekwencja cyfr cyfra*  
-  
-*cyfra* : jeden z  
-**0 1 2 3 4 5 6 7 8 9**  
-  
-*token ciągu* :  
-Ciąg tokenów  
-  
-*Token* :  
-*keyword*  
-  
-*Identyfikator*  
-  
-*Stałe*  
-  
-*operator*  
-  
-`punctuator`  
-  
-*Nazwa pliku* :  
-System operacyjny prawne, nazwa_pliku  
-  
-*PATH-spec* :  
-Ścieżka pliku prawne  
-  
-*tekst* :  
-Dowolną sekwencją tekstu  
-  
+
+*formant linii*:<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**#define** *identyfikator* *ciąg tokenu*<sub>zoptymalizowany pod kątem</sub><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**#define** <em>identyfikator</em>**(** *identyfikator*<sub>zoptymalizowany pod kątem</sub> **,** ... **,** *identyfikator*<sub>zoptymalizowany pod kątem</sub> **)** *ciąg tokenu*<sub>zoptymalizowany pod kątem</sub><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**#include** **"** *path-spec* **"**<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**#include** **\<** *path-spec* **>**<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**#line** *sekwencję cyfr***"** *filename* **"**<sub>zoptymalizowany pod kątem  </sub><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**#undef** *identyfikator*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**#error** *ciąg tokenu*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**#pragma** *ciąg tokenu*
+
+*wyrażenie stałe*:<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**zdefiniowany (** *identyfikator* **)**<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**definicja** *identyfikator*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;Dowolne wyrażenie stałej
+
+*warunkowe* :<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*część IF* *części elif*<sub>zoptymalizowany pod kątem</sub> *część else*<sub>zoptymalizowany pod kątem</sub> *linia endif*
+
+*część IF* :<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*wiersz z operatorem IF* *tekstu*
+
+*wiersz z operatorem IF* :<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**#if** *wyrażenia stałego*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**#ifdef** *identyfikator*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**#ifndef** *identyfikator*
+
+*części elif* :<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*Linia elif* *tekstu*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*części elif* *linii elif* *tekstu*
+
+*Linia elif* :<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**#elif** *wyrażenia stałego*
+
+*część else* :<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*else linii* *tekstu*
+
+*else linii* :<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**#else**
+
+*Linia ENDIF* :<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**#endif**
+
+*sekwencja cyfr* :<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*cyfra*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*sekwencja cyfr* *cyfra*
+
+*cyfra* : jeden z<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**0 1 2 3 4 5 6 7 8 9**
+
+*token ciągu* :<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;Ciąg tokenów
+
+*Token* :<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*Słowo kluczowe*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*Identyfikator*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*Stałe*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*Operator*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*znak interpunkcyjny*
+
+*Nazwa pliku* :<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;System operacyjny prawne, nazwa_pliku
+
+*PATH-spec* :<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;Ścieżka pliku prawne
+
+*tekst* :<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;Dowolną sekwencją tekstu
+
 > [!NOTE]
-> Następujące symboli nieterminalnych są rozwijane w [konwencje leksykalne](../cpp/lexical-conventions.md) części *C++ Language Reference*: `constant`, `constant` - *wyrażenia* , *identyfikator*, *— słowo kluczowe*, `operator`, i `punctuator`.  
-  
-## <a name="see-also"></a>Zobacz też  
- 
+> Następujące symboli nieterminalnych są rozwijane w [konwencje leksykalne](../cpp/lexical-conventions.md) części *C++ Language Reference*: *stałej*, *wyrażenia stałego* , *identyfikator*, *— słowo kluczowe*, *operator*, i *znak interpunkcyjny*.
+
+## <a name="see-also"></a>Zobacz też
+
 [Podsumowanie gramatyki (C/C++)](../preprocessor/grammar-summary-c-cpp.md)
