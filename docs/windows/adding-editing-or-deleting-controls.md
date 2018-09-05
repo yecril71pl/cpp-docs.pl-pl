@@ -17,18 +17,18 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 61caccd2a4511faf937f73e3ee17efe8f1b0bb2f
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: b28736e4e9c4b4f327f80a97b5b7ed3b6d1c7c40
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43219439"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43686275"
 ---
 # <a name="adding-editing-or-deleting-controls"></a>Dodawanie, edytowanie lub usuwanie kontrolek
 
 Za pomocą **okna dialogowego** edytora, możesz dodać, zmienić rozmiar, edytowanie i usuwanie kontrolki w oknach dialogowych. Można również edytować właściwości kontrolki, takie jak jego identyfikator lub czy jest początkowo widoczne w czasie wykonywania.
 
-Możesz użyć menu skrótów w **okna dialogowego** edytora, aby szybko dodać zarejestrowany kontrolek ActiveX do okna dialogowego i można dodać formanty ActiveX do **przybornika** Aby uzyskać szybki dostęp (Aby uzyskać więcej informacji, zobacz [Dostosuj — okno dialogowe przybornika](https://msdn.microsoft.com/bd07835f-18a8-433e-bccc-7141f65263bb)).
+Możesz użyć menu skrótów w **okna dialogowego** edytora, aby szybko dodać zarejestrowany kontrolek ActiveX do okna dialogowego i można dodać formanty ActiveX do **przybornika** Aby uzyskać szybki dostęp (Aby uzyskać więcej informacji, zobacz [Przybornika](/visualstudio/ide/reference/toolbox)).
 
 - [Dodawanie kontrolki do okna dialogowego](adding-a-control-to-a-dialog-box.md)
 

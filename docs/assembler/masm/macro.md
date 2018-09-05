@@ -1,7 +1,7 @@
 ---
 title: MAKRA | Dokumentacja firmy Microsoft
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 08/30/2018
 ms.technology:
 - cpp-masm
 ms.topic: reference
@@ -16,27 +16,27 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c2b7469314bc1b65f960df1ca582acb6dbb4624e
-ms.sourcegitcommit: dbca5fdd47249727df7dca77de5b20da57d0f544
+ms.openlocfilehash: 9d957935c9ca91d2d09a093350c8d23a848e58b2
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/28/2018
-ms.locfileid: "32054448"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43688871"
 ---
 # <a name="macro"></a>MACRO
-Oznacza blok makro o nazwie *nazwa* i ustanawia *parametru* symbole zastępcze Argumenty przekazane po wywołaniu makra.  
-  
-## <a name="syntax"></a>Składnia  
-  
-```  
-  
-   name MACRO [[parameter [[:REQ | :=default | :VARARG]]]]...  
-statements  
-ENDM [[value]]  
-```  
-  
-## <a name="remarks"></a>Uwagi  
- Zwraca funkcję makro *wartość* do wywoływania instrukcji.  
-  
-## <a name="see-also"></a>Zobacz też  
- [Dokumentacja dyrektyw](../../assembler/masm/directives-reference.md)
+
+Oznacza blok — makro o nazwie *nazwa* i ustanawia *parametru* symbole zastępcze dla argumentów przekazana po wywołaniu makra.
+
+## <a name="syntax"></a>Składnia
+
+> *Nazwa* — makro [[*parametru* [[: liczba ŻĄDAŃ |: =*domyślne* |: VARARG]]]]...<br/>
+> *Instrukcje*<br/>
+> Endm — [[*wartość*]]
+
+## <a name="remarks"></a>Uwagi
+
+Zwraca funkcję makro *wartość* wywoływanie.
+
+## <a name="see-also"></a>Zobacz także
+
+[Dokumentacja dyrektyw](../../assembler/masm/directives-reference.md)<br/>

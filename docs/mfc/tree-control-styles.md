@@ -29,15 +29,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2a448d76236c3467228b2aa57cd71284274687ac
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: b6f3f28bbc2a69a5ad5c4fe9910d8312b236c34f
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43200434"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43686501"
 ---
 # <a name="tree-control-styles"></a>Style kontrolki drzewa
-Kontrolki drzewa ([CTreeCtrl](../mfc/reference/ctreectrl-class.md)) Style określają aspekty wyglądu formantu drzewa. Możesz ustawić style początkowej podczas tworzenia kontrolki drzewa. Możesz pobrać i zmieniać style po utworzeniu kontrolki drzewa za pomocą [GetWindowLong](https://msdn.microsoft.com/library/windows/desktop/ms633584) i [SetWindowLong](https://msdn.microsoft.com/library/windows/desktop/ms633591) funkcje Windows, określając **GWL_STYLE** dla *nIndex* parametru. Aby uzyskać pełną listę style, zobacz [Style okna kontrolki widoku drzewa](/windows/desktop/Controls/tree-view-control-window-styles) w zestawie Windows SDK.  
+Kontrolki drzewa ([CTreeCtrl](../mfc/reference/ctreectrl-class.md)) Style określają aspekty wyglądu formantu drzewa. Możesz ustawić style początkowej podczas tworzenia kontrolki drzewa. Możesz pobrać i zmieniać style po utworzeniu kontrolki drzewa za pomocą [GetWindowLong](/windows/desktop/api/winuser/nf-winuser-getwindowlonga) i [SetWindowLong](/windows/desktop/api/winuser/nf-winuser-setwindowlonga) funkcje Windows, określając **GWL_STYLE** dla *nIndex* parametru. Aby uzyskać pełną listę style, zobacz [Style okna kontrolki widoku drzewa](/windows/desktop/Controls/tree-view-control-window-styles) w zestawie Windows SDK.  
   
  **TVS_HASLINES** styl zwiększa graficzną reprezentację kontrolką drzewa hierarchii za pomocą rysowania wiersze, które łączą elementy podrzędne do ich odpowiedniego elementu nadrzędnego. Ten styl nie łączy się elementy w folderze głównym hierarchii. Aby to zrobić, trzeba połączyć **TVS_HASLINES** i **TVS_LINESATROOT** style.  
   

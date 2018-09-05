@@ -1,7 +1,7 @@
 ---
-title: Operator IMAGEREL | Dokumentacja firmy Microsoft
+title: imagerel — operator | Dokumentacja firmy Microsoft
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 08/30/2018
 ms.technology:
 - cpp-masm
 ms.topic: reference
@@ -18,26 +18,27 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: db4c22c1e12ff2850c61cb1b0aea7fe89eca5ca4
-ms.sourcegitcommit: dbca5fdd47249727df7dca77de5b20da57d0f544
+ms.openlocfilehash: 3293f78151ae9bc5a8de47c4083d3e896027815c
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/28/2018
-ms.locfileid: "32055115"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43691411"
 ---
 # <a name="operator-imagerel"></a>operator IMAGEREL
-Zwraca obraz względną przesunięcie `expression`.  
-  
-## <a name="syntax"></a>Składnia  
-  
-```  
-IMAGEREL expression  
-```  
-  
-## <a name="remarks"></a>Uwagi  
- Wartość wynikową jest często określany jako adres RVA lub wirtualny adres względny.  
-  
- IMAGEREL jest dostępna tylko w przypadku emisji obiektu COFF.  
-  
-## <a name="see-also"></a>Zobacz też  
- [Dokumentacja operatorów](../../assembler/masm/operators-reference.md)
+
+Zwraca przesunięcie względne obrazu z `expression`.
+
+## <a name="syntax"></a>Składnia
+
+> Imagerel — wyrażenie
+
+## <a name="remarks"></a>Uwagi
+
+Wartość wynikowa często nazywa się RVA lub względny adres wirtualny.
+
+Imagerel — jest dostępna tylko w przypadku emisji obiektu COFF.
+
+## <a name="see-also"></a>Zobacz także
+
+[Dokumentacja operatorów](../../assembler/masm/operators-reference.md)<br/>

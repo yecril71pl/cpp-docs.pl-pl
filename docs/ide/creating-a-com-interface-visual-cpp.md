@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b69c2318ec5b1dd986a71bc684e1c9adc0f4ef0f
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: c31dfc72e6d552cacd46f3e0b49aedc18bf4c7f2
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43194967"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43683316"
 ---
 # <a name="creating-a-com-interface-visual-c"></a>Tworzenie interfejsu COM (Visual C++)
 Visual C++ zapewnia kreatory i szablony do tworzenia projektów używających definiowanie interfejsów COM i dispinterfaces dla obiektów COM i klasy automatyzacji.  
@@ -67,7 +67,7 @@ interface IMyInterface {
   
  Zobacz [implementującej interfejs](../ide/implementing-an-interface-visual-cpp.md) i [Dodawanie obiektów i kontrolek do projektu ATL](../atl/reference/adding-objects-and-controls-to-an-atl-project.md) Aby uzyskać więcej informacji.  
   
- Visual C++ oferuje kilka sposobów, aby wyświetlić i [Edytuj interfejsów COM](../ide/editing-a-com-interface.md) zdefiniowane dla Twoich projektów. [Widok klas](https://msdn.microsoft.com/8d7430a9-3e33-454c-a9e1-a85e3d2db925) Wyświetla ikony dla dowolnej interfejsu dispinterface zdefiniowane w pliku .idl w projekcie języka C++.  
+ Visual C++ oferuje kilka sposobów, aby wyświetlić i [Edytuj interfejsów COM](../ide/editing-a-com-interface.md) zdefiniowane dla Twoich projektów. [Widok klas](/visualstudio/ide/viewing-the-structure-of-code) Wyświetla ikony dla dowolnej interfejsu dispinterface zdefiniowane w pliku .idl w projekcie języka C++.  
   
  Dla klas obiektów oparty na bibliotece ATL COM widoku klasy odczytuje mapy COM w klasy ATL do wyświetlania relacji między klasą ATL i wszystkie interfejsy, które implementuje.  
   

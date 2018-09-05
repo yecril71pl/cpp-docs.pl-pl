@@ -15,12 +15,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 782e0789268f55e254535434e39c3aeb9b0532cb
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: afa5d7e3297cd77d1c5d8362d005bd2a48aee4d5
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43201931"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43690200"
 ---
 # <a name="c-attributes-reference"></a>Atrybuty (C++)
 
@@ -47,9 +47,3 @@ Zawiera łącza do wszystkich tematów odwołanie do atrybutu.
 
 [Programowanie oparte na atrybutach](../windows/attributed-programming-concepts.md)  
 Omówienie koncepcyjne atrybutów.
-
-[Dokumentacja](https://msdn.microsoft.com/1ba03b5c-8229-4f63-b08c-6c12141d6ab1)  
-Zawiera łącza do tematów opisujących C i C++ language odwołania, biblioteki dostarczane z Visual C++, Model obiektowy rozszerzalności Visual C++ i Microsoft Macro Assembler (MASM).
-
-[Przykłady Visual C++](../visual-cpp-samples.md)  
-Zawiera łącza do przykładowego kodu pokazując możliwości programu Visual C++ i bibliotek oraz technologii, które obsługuje.

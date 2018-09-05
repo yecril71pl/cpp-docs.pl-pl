@@ -1,7 +1,7 @@
 ---
 title: Operator niski | Dokumentacja firmy Microsoft
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 08/30/2018
 ms.technology:
 - cpp-masm
 ms.topic: reference
@@ -18,22 +18,21 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 33915cea2b77c3304a50c095544e9a08803a9182
-ms.sourcegitcommit: dbca5fdd47249727df7dca77de5b20da57d0f544
+ms.openlocfilehash: b9f38dc4c3af912e258bff9dd5ada044a928c3d2
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/28/2018
-ms.locfileid: "32055626"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43692279"
 ---
 # <a name="operator-low"></a>operator LOW
-Zwraca niski 8 bitów *wyrażenia*. Wyrażenia MASM są 64-bitowej wartości.  
-  
-## <a name="syntax"></a>Składnia  
-  
-```  
-  
-LOW expression  
-```  
-  
-## <a name="see-also"></a>Zobacz też  
- [Dokumentacja operatorów](../../assembler/masm/operators-reference.md)
+
+Zwraca niskie 8 bitów *wyrażenie*. Wyrażenia MASM są 64-bitowych wartości.
+
+## <a name="syntax"></a>Składnia
+
+> Wyrażenie niski
+
+## <a name="see-also"></a>Zobacz także
+
+[Dokumentacja operatorów](../../assembler/masm/operators-reference.md)<br/>

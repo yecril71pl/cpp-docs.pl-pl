@@ -1,7 +1,7 @@
 ---
 title: Błąd krytyczny ML A1017 | Dokumentacja firmy Microsoft
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 08/30/2018
 ms.technology:
 - cpp-masm
 ms.topic: error-reference
@@ -16,21 +16,23 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c5fcb2d921a40b35c6022b2aca1e22adc2d8c45e
-ms.sourcegitcommit: dbca5fdd47249727df7dca77de5b20da57d0f544
+ms.openlocfilehash: fb98eab68da417526a75beaa57870ce906c85a8d
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/28/2018
-ms.locfileid: "32054686"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43688562"
 ---
 # <a name="ml-fatal-error-a1017"></a>Błąd krytyczny ML A1017
-**Brak nazwy pliku źródłowego**  
-  
- ML nie można odnaleźć pliku złóż lub przekazywane do konsolidatora.  
-  
- Ten błąd jest generowany po uruchomieniu ML opcje wiersza polecenia bez określania nazwy pliku działanie. Aby utworzyć pliki, które nie mają rozszerzenia .asm, użyj **/Ta** opcji wiersza polecenia.  
-  
- Ten błąd może być również generowany przez wywołanie ML bez parametrów, jeśli ML — zmienna środowiskowa zawiera opcje wiersza polecenia.  
-  
-## <a name="see-also"></a>Zobacz też  
- [Komunikaty o błędach ML](../../assembler/masm/ml-error-messages.md)
+
+**Brakująca nazwa pliku źródłowego**
+
+Uczenie Maszynowe, nie można odnaleźć plik, aby utworzyć lub przekazać do konsolidatora.
+
+Ten błąd jest generowany po zapewnieniu ML opcji wiersza polecenia bez określania nazwy pliku wykonywane działania. Gromadzi pliki, które nie mają rozszerzenie .asm, użyj **/Ta** opcji wiersza polecenia.
+
+Ten błąd można wygenerować w taki sposób, wywołując ML bez parametrów, jeśli ML — zmienna środowiskowa zawiera opcje wiersza polecenia.
+
+## <a name="see-also"></a>Zobacz także
+
+[Komunikaty o błędach ML](../../assembler/masm/ml-error-messages.md)<br/>

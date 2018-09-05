@@ -15,12 +15,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: dc319c2da652cd1c43f23c13456b32f978595199
-ms.sourcegitcommit: 7eadb968405bcb92ffa505e3ad8ac73483e59685
+ms.openlocfilehash: d62669ffef0ae1e5788dcf4086a1c5b58e7728ff
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/23/2018
-ms.locfileid: "39207960"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43683355"
 ---
 # <a name="redistributing-visual-c-activex-controls"></a>Redystrybuowanie kontrolek ActiveX programu Visual C++
 Visual C++ 6.0 dostarcza kontrolki ActiveX, używane w aplikacjach, które następnie ponownie rozesłać. Te kontrolki znajdują się już w programie Visual C++. Na umowy licencyjne dla Visual C++ 6.0 można redystrybuować tych kontrolek, za pomocą aplikacji utworzonych w programie Visual C++.  
@@ -43,8 +43,6 @@ Visual C++ 6.0 dostarcza kontrolki ActiveX, używane w aplikacjach, które nast�
 -   Stdole2.tlb  
   
  Te biblioteki DLL nie są dostępne w systemie docelowym, należy je zaktualizować przy użyciu mechanizmu wymaganych aktualizacji odpowiedni system operacyjny. Możesz pobrać najnowsze dodatki service Pack dla systemów operacyjnych Windows z [ http://windowsupdate.microsoft.com ](http://windowsupdate.microsoft.com).  
-  
- Jeśli aplikacja korzysta z jednego z kontrolki ActiveX, które nawiązuje połączenie z bazą danych, konieczne jest posiadanie Microsoft Data Access Components (MDAC) zainstalowane w systemie docelowym. Aby uzyskać więcej informacji, zobacz [redystrybuowanie plików obsługi baz danych](../ide/redistributing-database-support-files.md).  
   
  Korzystając z formantu ActiveX, który nawiązuje połączenie z bazą danych, należy również replikować nazwa źródła danych na komputerze docelowym. Można to zrobić programowo przy użyciu funkcji takich jak `ConfigDSN`.  
   

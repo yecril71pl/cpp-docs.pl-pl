@@ -202,12 +202,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 58509ec4f6a3773478e1bc544f28baf92d7e97b7
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: c940ec56b0f522e90410b786d595f4cbf929ed89
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43206895"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43688548"
 ---
 # <a name="cwinapp-class"></a>Klasa CWinApp
 
@@ -270,7 +270,7 @@ class CWinApp : public CWinThread
 |[CWinApp::OnIdle](#onidle)|Należy przesłonić, aby wykonać przetwarzanie specyficzne dla aplikacji w czasie bezczynności (%).|
 |[CWinApp::OpenDocumentFile](#opendocumentfile)|Metoda wywoływana przez platformę, by otworzyć dokument z pliku.|
 |[CWinApp::ParseCommandLine](#parsecommandline)|Analizuje poszczególne parametry i flagi w wierszu polecenia.|
-|[CWinApp::PreTranslateMessage](#pretranslatemessage)|Filtry komunikatów przed ich wysłaniem do funkcji Windows [TranslateMessage](https://msdn.microsoft.com/library/windows/desktop/ms644955) i [DispatchMessage](https://msdn.microsoft.com/library/windows/desktop/ms644934).|
+|[CWinApp::PreTranslateMessage](#pretranslatemessage)|Filtry komunikatów przed ich wysłaniem do funkcji Windows [TranslateMessage](/windows/desktop/api/winuser/nf-winuser-translatemessage) i [DispatchMessage](/windows/desktop/api/winuser/nf-winuser-dispatchmessage).|
 |[CWinApp::ProcessMessageFilter](#processmessagefilter)|Przechwytuje niektóre komunikaty zanim osiągną one aplikację.|
 |[CWinApp::ProcessShellCommand](#processshellcommand)|Obsługuje argumenty wiersza polecenia i flagi.|
 |[CWinApp::ProcessWndProcException](#processwndprocexception)|Przechwytuje wszystkie nieobsługiwane wyjątki rzucane przez komunikat aplikacji i programy obsługi poleceń.|
@@ -1794,7 +1794,7 @@ Aby uzyskać opis flag wiersza polecenia, zobacz [CCommandLineInfo::m_nShellComm
 
 ##  <a name="pretranslatemessage"></a>  CWinApp::PreTranslateMessage
 
-Zastąp tę funkcję, aby przefiltrować komunikaty okna, zanim zostaną rozesłane do funkcji Windows [TranslateMessage](https://msdn.microsoft.com/library/windows/desktop/ms644955) i [DispatchMessage](https://msdn.microsoft.com/library/windows/desktop/ms644934) Domyślna implementacja wykonuje klawisza skrótu tłumaczenie, więc należy wywołać `CWinApp::PreTranslateMessage` funkcja elementu członkowskiego w zgodnym z przesłoniętą wersji.
+Zastąp tę funkcję, aby przefiltrować komunikaty okna, zanim zostaną rozesłane do funkcji Windows [TranslateMessage](/windows/desktop/api/winuser/nf-winuser-translatemessage) i [DispatchMessage](/windows/desktop/api/winuser/nf-winuser-dispatchmessage) Domyślna implementacja wykonuje klawisza skrótu tłumaczenie, więc należy wywołać `CWinApp::PreTranslateMessage` funkcja elementu członkowskiego w zgodnym z przesłoniętą wersji.
 
 ```
 virtual BOOL PreTranslateMessage(MSG* pMsg);

@@ -1,7 +1,7 @@
 ---
 title: REKORD (MASM) | Dokumentacja firmy Microsoft
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 08/30/2018
 ms.technology:
 - cpp-masm
 ms.topic: reference
@@ -16,23 +16,21 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e726053a9146cf88ed4e84045118d19b7094ed37
-ms.sourcegitcommit: dbca5fdd47249727df7dca77de5b20da57d0f544
+ms.openlocfilehash: d08f4abbdaba59969c85bd0e9907e80014033b4f
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/28/2018
-ms.locfileid: "32057267"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43687163"
 ---
 # <a name="record-masm"></a>RECORD (MASM)
-Deklaruje typ rekordu składające się z określone pola. *Nazwa pola* nazwy pola *szerokość* określa liczbę bitów, i *wyrażenie* daje swojej wartości początkowej.  
-  
-## <a name="syntax"></a>Składnia  
-  
-```  
-  
-   recordname RECORD fieldname:width [[= expression]]   
-[[, fieldname:width [[= expression]]]]...  
-```  
-  
-## <a name="see-also"></a>Zobacz też  
- [Dokumentacja dyrektyw](../../assembler/masm/directives-reference.md)
+
+Deklaruje typ rekordu, składający się z określonego pola. *Nazwa pola* nazwy pola, *szerokość* określa liczbę bitów, i *wyrażenie* zapewnia jej wartość początkową.
+
+## <a name="syntax"></a>Składnia
+
+> *nazwa_rekordu* REKORDU *fieldname*:*szerokość* [[= *wyrażenie*]] [[, *fieldname*:*szerokość* [[= *wyrażenie*]]]]...
+
+## <a name="see-also"></a>Zobacz także
+
+[Dokumentacja dyrektyw](../../assembler/masm/directives-reference.md)<br/>

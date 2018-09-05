@@ -26,12 +26,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f0baf6eb87cd73293bc02b670e915bfd4a10cbfd
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: a05eddd4f0ed75db4e122b1544b0347ad922eba3
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43219155"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43688763"
 ---
 # <a name="string-and-character-literals--c"></a>Literały ciągów i znakowe (C++)
 C++ obsługuje różne typy ciągów i znakowe i zapewnia metody do wyrażenia wartości literału w każdej z tych typów. W kodzie źródłowym można wyrazić zawartość literały znakowe i przy użyciu zestawu znaków. Uniwersalne nazwy znaków i znaków ucieczki umożliwiają express dowolny ciąg przy użyciu tylko zestaw znaków podstawowego źródła. Nieprzetworzony literał ciągu pozwala uniknąć przy użyciu znaków ucieczki i może służyć do express wszystkie rodzaje literałów ciągów. Można również utworzyć literały std::string, bez konieczności wykonywania dodatkowych konstrukcji lub konwersji kroki.  
@@ -248,7 +248,7 @@ auto s4 = U"hello"; // const char32_t*
 ```  
   
 ### <a name="raw-string-literals-c11"></a>Surowe Literały ciągu (C ++ 11)  
- Literał ciągu surowego jest tablicą zakończoną znakiem null — dowolnego znaku typu — zawierającą dowolny znak graficzny, w tym podwójny cudzysłów ("), ukośnika odwrotnego (\\), lub znak nowego wiersza. Surowe Literały ciągu są często używane w wyrażeniach regularnych, które używają klas znaku, a także w ciągach HTML i XML. Aby uzyskać przykłady, zapoznaj się z następującym artykułem: [Bjarne'a Stroustrupa często zadawane pytania dotyczące języka C ++ 11](http://go.microsoft.com/fwlink/p/?linkid=401172).  
+ Literał ciągu surowego jest tablicą zakończoną znakiem null — dowolnego znaku typu — zawierającą dowolny znak graficzny, w tym podwójny cudzysłów ("), ukośnika odwrotnego (\\), lub znak nowego wiersza. Surowe Literały ciągu są często używane w wyrażeniach regularnych, które używają klas znaku, a także w ciągach HTML i XML. Aby uzyskać przykłady, zapoznaj się z następującym artykułem: [Bjarne'a Stroustrupa często zadawane pytania dotyczące języka C ++ 11](http://www.stroustrup.com/C++11FAQ.html).  
   
 ```cpp  
 // represents the string: An unescaped \ character  

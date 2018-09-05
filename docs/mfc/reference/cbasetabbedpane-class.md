@@ -72,12 +72,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 412010f7e8599ab9a97ea5a4e5cab55fca6051a0
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: c5585ad86b0c55a7ab47cd026fd0bb7032db11b9
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43213859"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43690437"
 ---
 # <a name="cbasetabbedpane-class"></a>Klasa CBaseTabbedPane
 Rozszerza funkcjonalność [klasa CDockablePane](../../mfc/reference/cdockablepane-class.md) aby obsługiwać tworzenie okien z zakładkami.  
@@ -128,7 +128,7 @@ class CBaseTabbedPane : public CDockablePane
 |[CBaseTabbedPane::RecalcLayout](#recalclayout)|Ponownie oblicza układ informacji dla tego okienka. (Przesłania [CPane::RecalcLayout](../../mfc/reference/cpane-class.md#recalclayout).)|  
 |[CBaseTabbedPane::RemovePane](#removepane)|Usuwa okienko z poziomu okienka z zakładkami.|  
 |`CBaseTabbedPane::SaveSiblingBarIDs`|Używane wewnętrznie, podczas serializacji.|  
-|`CBaseTabbedPane::Serialize`|(Przesłania [CDockablePane::Serialize](https://msdn.microsoft.com/09787e59-e446-4e76-894b-206d303dcfd6).)|  
+|`CBaseTabbedPane::Serialize`|(Przesłania [CDockablePane::Serialize](cdockablepane-class.md).)|  
 |`CBaseTabbedPane::SerializeTabWindow`|Używane wewnętrznie, podczas serializacji.|  
 |[CBaseTabbedPane::SetAutoDestroy](#setautodestroy)|Określa, czy pasek sterowania z kartami zostaną automatycznie usunięte.|  
 |[CBaseTabbedPane::SetAutoHideMode](#setautohidemode)|Włącza lub wyłącza okienko dokowania między wyświetlane i trybie autoukrywania. (Przesłania [CDockablePane::SetAutoHideMode](../../mfc/reference/cdockablepane-class.md#setautohidemode).)|  

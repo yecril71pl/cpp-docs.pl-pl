@@ -15,12 +15,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2dd920f3dd8d08d6ceb766b9c10969137b8bf03c
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 258d8f10238db58be26743694943ae3bd6abc20e
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43199267"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43693578"
 ---
 # <a name="walkthrough-putting-controls-on-toolbars"></a>Wskazówki: umieszczanie formantów na paskach narzędzi
 W tym temacie opisano sposób dodawania przycisku paska narzędzi, który zawiera formant Windows, na pasku narzędzi. W MFC, musi być przycisku paska narzędzi [klasa CMFCToolBarButton](../mfc/reference/cmfctoolbarbutton-class.md)-pochodne klasy, na przykład [klasa CMFCToolBarComboBoxButton](../mfc/reference/cmfctoolbarcomboboxbutton-class.md), [klasa CMFCToolBarEditBoxButton](../mfc/reference/cmfctoolbareditboxbutton-class.md), [Klasa CMFCDropDownToolbarButton](../mfc/reference/cmfcdropdowntoolbarbutton-class.md), lub [klasa CMFCToolBarMenuButton](../mfc/reference/cmfctoolbarmenubutton-class.md).  
@@ -73,7 +73,7 @@ W tym temacie opisano sposób dodawania przycisku paska narzędzi, który zawier
   
     1.  Przekaż `ID_EDIT_FIND_COMBO` jako identyfikator polecenia.  
   
-    2.  Użyj [CCommandManager::GetCmdImage](https://msdn.microsoft.com/4094d08e-de74-4398-a483-76d27a742dca) z `ID_EDIT_FIND` uzyskać indeks obrazu.  
+    2.  Użyj [CCommandManager::GetCmdImage](reference/internal-classes.md) z `ID_EDIT_FIND` uzyskać indeks obrazu.  
   
     3.  Aby uzyskać listę style pola kombi dostępne, zobacz [style pola kombi](../mfc/reference/styles-used-by-mfc.md#combo-box-styles).  
   

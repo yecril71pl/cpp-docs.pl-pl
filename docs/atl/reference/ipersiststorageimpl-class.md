@@ -25,12 +25,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 08cde95cf7ce680137aa932eb9642b9cd910318a
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: e7a337743ece9edfa71a052ee9d6e19728b0c051
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43223216"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43693719"
 ---
 # <a name="ipersiststorageimpl-class"></a>Klasa IPersistStorageImpl
 Ta klasa implementuje [IPersistStorage](/windows/desktop/api/objidl/nn-objidl-ipersiststorage) interfejsu.  
@@ -66,7 +66,7 @@ class ATL_NO_VTABLE IPersistStorageImpl : public IPersistStorage
 ## <a name="remarks"></a>Uwagi  
  `IPersistStorageImpl` implementuje [IPersistStorage](/windows/desktop/api/objidl/nn-objidl-ipersiststorage) interfejsu, co pozwala klientowi na żądanie, które obciążenia obiektu, a następnie zapisz jego trwałe dane przy użyciu magazynu.  
   
- Implementacja tej klasy wymaga klasy `T` się implementację `IPersistStreamInit` dostępne za pośrednictwem interfejsu `QueryInterface`. Zwykle oznacza to, że klasa `T` powinien pochodzić od [IPersistStreamInitImpl](../../atl/reference/ipersiststreaminitimpl-class.md), podaj wpis dla `IPersistStreamInit` w [mapy interfejsu COM](https://msdn.microsoft.com/library/ead2a1e3-334d-44ad-bb1f-b94bb14c2333)i użyj [map właściwości](https://msdn.microsoft.com/library/bfe30be6-62c3-4dc2-bd49-21ef96f15427) do opisania klasy trwałych danych.  
+ Implementacja tej klasy wymaga klasy `T` się implementację `IPersistStreamInit` dostępne za pośrednictwem interfejsu `QueryInterface`. Zwykle oznacza to, że klasa `T` powinien pochodzić od [IPersistStreamInitImpl](../../atl/reference/ipersiststreaminitimpl-class.md), podaj wpis dla `IPersistStreamInit` w [mapy interfejsu COM](com-map-macros.md)i użyj [map właściwości](property-map-macros.md) do opisania klasy trwałych danych.  
   
  **Powiązane artykuły** [ALT — samouczek](../../atl/active-template-library-atl-tutorial.md), [Tworzenie projektu ATL](../../atl/reference/creating-an-atl-project.md)  
   

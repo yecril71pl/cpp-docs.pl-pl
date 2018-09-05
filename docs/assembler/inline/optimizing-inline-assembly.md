@@ -1,7 +1,7 @@
 ---
 title: Optymalizacja wbudowanego asemblera | Dokumentacja firmy Microsoft
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 08/30/2018
 ms.technology:
 - cpp-masm
 ms.topic: conceptual
@@ -18,18 +18,21 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c494594e3b7c541487f34fd33359b0e31f73dd61
-ms.sourcegitcommit: dbca5fdd47249727df7dca77de5b20da57d0f544
+ms.openlocfilehash: 49660bdc6d2eb84e6e1bbaeb5ebf0d57e484e9e1
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/28/2018
-ms.locfileid: "32050561"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43687879"
 ---
 # <a name="optimizing-inline-assembly"></a>Optymalizacja wbudowanego asemblera
-## <a name="microsoft-specific"></a>Specyficzne dla firmy Microsoft  
- Obecność `__asm` blok w funkcji ma wpływ optymalizacji na kilka sposobów. Kompilator nie najpierw próbuje zoptymalizować `__asm` zablokować samej siebie. Pisanie w języku zestawu jest dokładnie, możesz uzyskać. Drugie, obecności `__asm` wpływa na blok zarejestrować zmiennej magazynu. Kompilator pozwala uniknąć rejestracja zmiennych w `__asm` zablokować, jeśli zawartość kasy zostałaby zmieniona przez `__asm` bloku. Na koniec włączenia języka zestawu w funkcji wpływ inne optymalizacje całej funkcji.  
-  
- **KOŃCOWY określonych firmy Microsoft**  
-  
-## <a name="see-also"></a>Zobacz też  
- [Wbudowany asembler](../../assembler/inline/inline-assembler.md)
+
+**Microsoft Specific**
+
+Obecność `__asm` bloku w funkcji ma wpływ optymalizacji na kilka sposobów. Po pierwsze, kompilator nie próbuje zoptymalizować `__asm` block sam. Pisanie w języku zestawu jest dokładnie, co można uzyskać. Drugi, obecności `__asm` wpływa na blok zarejestrować zmiennej magazynu. Kompilator eliminuje rejestrowanie zmienne z różnych `__asm` zablokować, jeśli zawartość rejestru zostaną zmienione przez `__asm` bloku. Na koniec włączenia języka zestawu w funkcji wpływ inne optymalizacje całej funkcji.
+
+**END specyficzny dla Microsoft**
+
+## <a name="see-also"></a>Zobacz także
+
+[Wbudowany asembler](../../assembler/inline/inline-assembler.md)<br/>

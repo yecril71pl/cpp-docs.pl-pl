@@ -9,12 +9,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5c174c904dfb43ff3fa3c032bae30da8c1e139c3
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 0be29ed74b2c5abf8bc3c781900caa61ada3713f
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43222903"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43693081"
 ---
 # <a name="collections-ccx"></a>Kolekcje (C + +/ CX)
 W języku C + +/ CX programu, aby włączyć bezpłatne korzystanie z kontenerów standardowy szablon biblioteki (STL) lub dowolny inny typ zdefiniowany przez użytkownika kolekcji. Jednak gdy przekazujesz kolekcji i z powrotem między interfejsem binarnym aplikacji (ABI) środowiska uruchomieniowego Windows — na przykład, kontrolki XAML lub klienta JavaScript — należy użyć typów kolekcji środowiska wykonawczego Windows.  
@@ -145,6 +145,5 @@ void FindButton(UIElementCollection^ col)
   
 ## <a name="see-also"></a>Zobacz też  
  [System typów](../cppcx/type-system-c-cx.md)   
- [Typy wbudowane](https://msdn.microsoft.com/acc196fd-09da-4882-b554-6c94685ec75f)   
  [Dokumentacja języka Visual C++](../cppcx/visual-c-language-reference-c-cx.md)   
  [Odwołanie do przestrzeni nazw](../cppcx/namespaces-reference-c-cx.md)

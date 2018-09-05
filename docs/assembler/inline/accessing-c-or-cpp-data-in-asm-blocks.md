@@ -1,7 +1,7 @@
 ---
 title: Uzyskiwanie dostępu do danych C lub C++ w blokach __asm | Dokumentacja firmy Microsoft
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 08/30/2018
 ms.technology:
 - cpp-masm
 ms.topic: conceptual
@@ -17,70 +17,73 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9631db3c09c19e38791a6c909be02acd1c91601b
-ms.sourcegitcommit: dbca5fdd47249727df7dca77de5b20da57d0f544
+ms.openlocfilehash: f9e4b684c878e630de81ac712fab714dc09db5ff
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/28/2018
-ms.locfileid: "32049762"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43685040"
 ---
 # <a name="accessing-c-or-c-data-in-asm-blocks"></a>Uzyskiwanie dostępu do danych C lub C++ w blokach __asm
-## <a name="microsoft-specific"></a>Specyficzne dla firmy Microsoft  
- Dużą wygodę wbudowany zestaw jest możliwość odwołuje się do zmiennej języka C lub C++ według nazwy. `__asm` Bloku może odwoływać się do żadnych symboli, w tym nazwy zmiennych, które znajdują się w zakresie, w którym pojawi się blok. Na przykład jeśli zmienna C `var` znajduje się w zakresie, instrukcja  
-  
-```  
-__asm mov eax, var  
-```  
-  
- przechowuje wartość `var` w EAX.  
-  
- Jeśli klasy, struktury lub elementu członkowskiego typu union ma unikatową nazwę, `__asm` bloku może odwoływać się do niego przy użyciu tylko nazwę elementu członkowskiego, bez określania zmiennej lub `typedef` nazwa przed okresem (**.**) operatora. Jeśli nazwa elementu członkowskiego nie jest unikatowa, jednak należy umieścić zmiennej lub `typedef` nazwa bezpośrednio przed operatorem okresu. Na przykład typy struktur w następującego udziału próbki `same_name` jak nazwa ich elementu członkowskiego:.  
-  
- Deklarowanie zmiennych z typami  
-  
-```  
-struct first_type hal;  
-struct second_type oat;  
-```  
-  
- wszystkie odwołania do elementu członkowskiego `same_name` muszą używać nazwy zmiennej, ponieważ `same_name` nie jest unikatowa. Element członkowski, ale `weasel` ma unikatową nazwę, więc można odwołać się do niego przy użyciu nazwy elementu członkowskiego:  
-  
-```  
-// InlineAssembler_Accessing_C_asm_Blocks.cpp  
-// processor: x86  
-#include <stdio.h>  
-struct first_type  
-{  
-   char *weasel;  
-   int same_name;  
-};  
-  
-struct second_type  
-{  
-   int wonton;  
-   long same_name;  
-};  
-  
-int main()  
-{  
-   struct first_type hal;  
-   struct second_type oat;  
-  
-   __asm  
-   {  
-      lea ebx, hal  
-      mov ecx, [ebx]hal.same_name ; Must use 'hal'  
-      mov esi, [ebx].weasel       ; Can omit 'hal'  
-   }  
-   return 0;  
-}  
-```  
-  
- Należy pamiętać, że nazwa zmiennej pominięcie jedynie udogodnienie kodowania. Z takimi samymi instrukcjami zestawu są generowane, czy nazwa zmiennej jest obecny.  
-  
- Można uzyskać dostępu do elementów członkowskich danych w języku C++ bez względu na ograniczenia dostępu. Jednak nie można wywołać elementu członkowskiego funkcji.  
-  
- **KOŃCOWY określonych firmy Microsoft**  
-  
-## <a name="see-also"></a>Zobacz też  
- [Korzystanie z C lub C++ w blokach __asm](../../assembler/inline/using-c-or-cpp-in-asm-blocks.md)
+
+**Microsoft Specific**
+
+Doskonałe wygodę wbudowany zestaw jest możliwość odwoływania się do zmiennych C lub C++ według nazwy. `__asm` Bloku mogą odwoływać się do żadnych symboli, w tym nazwy zmiennych, które znajdują się w zakresie, gdzie pojawia się blok. Na przykład jeśli zmienna C `var` znajduje się w zakresie, instrukcja
+
+```cpp
+__asm mov eax, var
+```
+
+przechowuje wartość `var` w EAX.
+
+Jeśli klasy, struktury lub Unii ma unikatową nazwę `__asm` bloku mogą odwoływać się do niej przy użyciu tylko nazwy elementu członkowskiego bez określenia zmiennej lub `typedef` nazwa przed kropką (**.**) — operator. Jeśli nazwa elementu członkowskiego nie jest unikatowa, jednak należy umieścić zmienną lub `typedef` nazwę tuż przed operatora kropki. Na przykład typy struktur w blokach następującego udziału przykładowe `same_name` jako swojej nazwy członka:.
+
+Przy deklarowaniu zmiennych z typami
+
+```cpp
+struct first_type hal;
+struct second_type oat;
+```
+
+wszystkie odwołania do elementu członkowskiego `same_name` należy użyć nazwy zmiennych, ponieważ `same_name` nie jest unikatowa. Element członkowski, ale `weasel` ma unikatową nazwę, dzięki czemu mogą odwoływać się do niego przy użyciu nazwy elementu członkowskiego:
+
+```cpp
+// InlineAssembler_Accessing_C_asm_Blocks.cpp
+// processor: x86
+#include <stdio.h>
+struct first_type
+{
+   char *weasel;
+   int same_name;
+};
+
+struct second_type
+{
+   int wonton;
+   long same_name;
+};
+
+int main()
+{
+   struct first_type hal;
+   struct second_type oat;
+
+   __asm
+   {
+      lea ebx, hal
+      mov ecx, [ebx]hal.same_name ; Must use 'hal'
+      mov esi, [ebx].weasel       ; Can omit 'hal'
+   }
+   return 0;
+}
+```
+
+Należy zauważyć, że nazwa zmiennej z pominięciem jedynie udogodnienie kodowania. Tych samych instrukcji zestawu są generowane, czy nazwa zmiennej jest obecny.
+
+Można uzyskać dostęp do elementów członkowskich danych w języku C++ bez względu na ograniczenia dostępu. Jednak nie można wywołać element członkowski funkcji.
+
+**END specyficzny dla Microsoft**
+
+## <a name="see-also"></a>Zobacz także
+
+[Korzystanie z C lub C++ w blokach __asm](../../assembler/inline/using-c-or-cpp-in-asm-blocks.md)<br/>

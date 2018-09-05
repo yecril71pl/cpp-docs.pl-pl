@@ -32,12 +32,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 94468f2499a349847f62ed65a03e88cf776536ce
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 78867405627a870f68e5411b7e577b563a605c75
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43207199"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43690949"
 ---
 # <a name="ccontainedwindowt-class"></a>Klasa CContainedWindowT
 Ta klasa implementuje okno znajdujących się w innym obiekcie.  
@@ -220,16 +220,16 @@ HWND Create(
  [in] Określa nazwę okna. Wartością domyślną jest NULL.  
   
  *dwStyle*  
- [in] Styl okna. Wartość domyślna to WS_CHILD &#124; WS_VISIBLE. Aby uzyskać listę możliwych wartości, zobacz [CreateWindow](https://msdn.microsoft.com/library/windows/desktop/ms632679) w zestawie Windows SDK.  
+ [in] Styl okna. Wartość domyślna to WS_CHILD &#124; WS_VISIBLE. Aby uzyskać listę możliwych wartości, zobacz [CreateWindow](/windows/desktop/api/winuser/nf-winuser-createwindowa) w zestawie Windows SDK.  
   
  *dwExStyle*  
- [in] Styl okna rozszerzonej. Wartość domyślna to 0, co oznacza nie rozszerzonego stylu. Aby uzyskać listę możliwych wartości, zobacz [elementu CreateWindowEx](https://msdn.microsoft.com/library/windows/desktop/ms632680) w zestawie Windows SDK.  
+ [in] Styl okna rozszerzonej. Wartość domyślna to 0, co oznacza nie rozszerzonego stylu. Aby uzyskać listę możliwych wartości, zobacz [elementu CreateWindowEx](/windows/desktop/api/winuser/nf-winuser-createwindowexa) w zestawie Windows SDK.  
   
  *MenuOrID*  
  [in] Dla okna podrzędnego identyfikator okna. Aby uzyskać oknem najwyższego poziomu uchwyt menu dla okna. Wartość domyślna to **0U**.  
   
  *lpCreateParam*  
- [in] Wskaźnik do danych tworzenie okien. Aby uzyskać pełny opis, zobacz opis ostatni parametr do [elementu CreateWindowEx](https://msdn.microsoft.com/library/windows/desktop/ms632680).  
+ [in] Wskaźnik do danych tworzenie okien. Aby uzyskać pełny opis, zobacz opis ostatni parametr do [elementu CreateWindowEx](/windows/desktop/api/winuser/nf-winuser-createwindowexa).  
   
 ### <a name="return-value"></a>Wartość zwracana  
  Jeśli to się powiedzie, uchwyt do nowo utworzonego okna; w przeciwnym razie wartość NULL.  

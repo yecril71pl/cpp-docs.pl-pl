@@ -1,7 +1,7 @@
 ---
-title: GOTO (MASM) | Dokumentacja firmy Microsoft
+title: PRZEJDŹ DO (MASM) | Dokumentacja firmy Microsoft
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 08/30/2018
 ms.technology:
 - cpp-masm
 ms.topic: reference
@@ -16,26 +16,25 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9eecdab2fe91de0aae656b37c6fddafe658e60c0
-ms.sourcegitcommit: dbca5fdd47249727df7dca77de5b20da57d0f544
+ms.openlocfilehash: b0be678e2d39389cbc551c386c1890f799124b5b
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/28/2018
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43691225"
 ---
 # <a name="goto-masm"></a>GOTO (MASM)
-Przenosi zestaw zaznaczony wiersz **: *** macrolabel*.  
-  
-## <a name="syntax"></a>Składnia  
-  
-```  
-  
-GOTO   
-macrolabel  
-  
-```  
-  
-## <a name="remarks"></a>Uwagi  
- **Przejdź do** jest dozwolona tylko wewnątrz [makro](../../assembler/masm/macro.md), [dla](../../assembler/masm/for-masm.md), [forc —](../../assembler/masm/forc.md), [Powtórz](../../assembler/masm/repeat.md), i **podczas**bloków. Etykieta musi być tylko dyrektywy w wierszu i musi być poprzedzony znakiem dwukropka wiodące.  
-  
-## <a name="see-also"></a>Zobacz też  
- [Dokumentacja dyrektyw](../../assembler/masm/directives-reference.md)
+
+Przenosi zaznaczony wiersz zestawu **:**_macrolabel_.
+
+## <a name="syntax"></a>Składnia
+
+> **Przejdź do** *macrolabel*
+
+## <a name="remarks"></a>Uwagi
+
+**Przejdź do** jest dozwolona tylko wewnątrz [— makro](macro.md), [dla](for-masm.md), [FORC](forc.md), [Powtórz](repeat.md), i [podczas](while-masm.md)bloków. *Macrolabel* docelowy musi być jedynym dyrektywy w wierszu i musi być poprzedzony przez wiodących średnikami.
+
+## <a name="see-also"></a>Zobacz także
+
+[Dokumentacja dyrektyw](../../assembler/masm/directives-reference.md)<br/>

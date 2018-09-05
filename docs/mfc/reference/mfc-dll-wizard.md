@@ -21,12 +21,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9b352d3f99ccee103f7f08e54fb96634bad4a32a
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: c66ca089a54f00148cf683612e529f1cd0505445
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43216490"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43685409"
 ---
 # <a name="mfc-dll-wizard"></a>Kreator biblioteki MFC DLL
 Podczas tworzenia projektu MFC DLL za pomocą Kreatora biblioteki MFC DLL, otrzymasz starter działającą aplikację za pomocą wbudowanych funkcji, po skompilowany, wdroży podstawowych funkcji [DLL](../../build/dlls-in-visual-cpp.md). MFC starter program zawiera pliki źródłowe (.cpp) języka C++, pliki zasobów (.rc) i plik projektu (.vcxproj). Kod wygenerowany w tych plikach startowych jest oparty na MFC. Aby uzyskać szczegółowe informacje, zobacz szczegóły plik Readme.txt wygenerowany w projekcie w programie Visual Studio i [klasy i funkcje generowane przez kreatora MFC DLL](../../mfc/reference/classes-and-functions-generated-by-the-mfc-dll-wizard.md)  
@@ -50,7 +50,6 @@ Podczas tworzenia projektu MFC DLL za pomocą Kreatora biblioteki MFC DLL, otrzy
  [Tworzenie i zarządzanie projektami Visual C++](../../ide/creating-and-managing-visual-cpp-projects.md)   
  [Strony właściwości](../../ide/property-pages-visual-cpp.md)   
  [Praca z właściwościami projektu](../../ide/working-with-project-properties.md)   
- [Wdrażanie aplikacji](https://msdn.microsoft.com/4ff8881d-0daf-47e7-bfe7-774c625031b4)   
  [Klasy MFC](../../mfc/reference/adding-an-mfc-class.md)   
  [Dodawanie funkcji członkowskiej](../../ide/adding-a-member-function-visual-cpp.md)   
  [Implementowanie interfejsu](../../ide/implementing-an-interface-visual-cpp.md)   

@@ -1,7 +1,7 @@
 ---
-title: Operator krótkiej | Dokumentacja firmy Microsoft
+title: Operator SHORT | Dokumentacja firmy Microsoft
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 08/30/2018
 ms.technology:
 - cpp-masm
 ms.topic: reference
@@ -17,22 +17,21 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8f307482e602759c688ebca120a46efce7624a25
-ms.sourcegitcommit: dbca5fdd47249727df7dca77de5b20da57d0f544
+ms.openlocfilehash: 13ea2b0d7333bcdabc42e59ac3f3d4e4a24a0af3
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/28/2018
-ms.locfileid: "32056330"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43686239"
 ---
 # <a name="operator-short"></a>operator SHORT
-Ustawia typ *etykiety* do krótkiej. Wszystkie przechodzi do *etykiety* musi być krótka (z przedziału od -128 do + 127 bajtów z instrukcji skok do *etykiety*).  
-  
-## <a name="syntax"></a>Składnia  
-  
-```  
-  
-SHORT label  
-```  
-  
-## <a name="see-also"></a>Zobacz też  
- [Dokumentacja operatorów](../../assembler/masm/operators-reference.md)
+
+Ustawia typ *etykiety* na wartość typu short. Wszystkie przechodzi do *etykiety* musi być krótki (z zakresu od -128 bajtów + 127 z instrukcji skoku do *etykiety*).
+
+## <a name="syntax"></a>Składnia
+
+> KRÓTKICH etykietach
+
+## <a name="see-also"></a>Zobacz także
+
+[Dokumentacja operatorów](../../assembler/masm/operators-reference.md)<br/>

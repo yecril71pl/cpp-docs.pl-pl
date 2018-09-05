@@ -1,7 +1,7 @@
 ---
 title: ORG | Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 08/30/2018
 ms.technology:
 - cpp-masm
 ms.topic: reference
@@ -16,24 +16,21 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a94e966cea2dcfee4413c0fb5b25add9deee770b
-ms.sourcegitcommit: dbca5fdd47249727df7dca77de5b20da57d0f544
+ms.openlocfilehash: 2113e6891992e8c25882b04c949ed61f9a7205f0
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/28/2018
-ms.locfileid: "32052537"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43693692"
 ---
 # <a name="org"></a>ORG
-Ustawia lokalizację licznika *wyrażenia*.  
-  
-## <a name="syntax"></a>Składnia  
-  
-```  
-  
-ORG   
-expression  
-  
-```  
-  
-## <a name="see-also"></a>Zobacz też  
- [Dokumentacja dyrektyw](../../assembler/masm/directives-reference.md)
+
+Ustawia lokalizację licznika *wyrażenie*.
+
+## <a name="syntax"></a>Składnia
+
+> Organizacja *wyrażenia*
+
+## <a name="see-also"></a>Zobacz także
+
+[Dokumentacja dyrektyw](../../assembler/masm/directives-reference.md)<br/>

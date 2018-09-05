@@ -1,7 +1,7 @@
 ---
 title: Operator GT | Dokumentacja firmy Microsoft
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 08/30/2018
 ms.technology:
 - cpp-masm
 ms.topic: reference
@@ -18,22 +18,21 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: dd859ac77e0713ee475edc4ceebe2ba5e8390b92
-ms.sourcegitcommit: dbca5fdd47249727df7dca77de5b20da57d0f544
+ms.openlocfilehash: ca217c595d11ae6832310c3e8b98541a6e215c12
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/28/2018
-ms.locfileid: "32057204"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43686589"
 ---
 # <a name="operator-gt"></a>operator GT
-Zwraca wartość true (-1) Jeśli *wyrażenie1* jest większa niż *wyrażenie2*, lub zwraca wartość false (0), jeśli nie jest.  
-  
-## <a name="syntax"></a>Składnia  
-  
-```  
-  
-expression1 GT expression2  
-```  
-  
-## <a name="see-also"></a>Zobacz też  
- [Dokumentacja operatorów](../../assembler/masm/operators-reference.md)
+
+Zwraca wartość true (-1) Jeśli *wyrażenie1* jest większa niż *wyrażenie2*, lub zwraca wartość false (0), jeśli nie jest.
+
+## <a name="syntax"></a>Składnia
+
+> wyrażenie1 GT wyrażenie2
+
+## <a name="see-also"></a>Zobacz także
+
+[Dokumentacja operatorów](../../assembler/masm/operators-reference.md)<br/>

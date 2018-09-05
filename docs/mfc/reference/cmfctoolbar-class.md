@@ -321,12 +321,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a510d163075ccefbc61364cd7efa4003dfd0b8aa
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 43eb3f239f50b59245714069c70655a997882c64
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43208561"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43689235"
 ---
 # <a name="cmfctoolbar-class"></a>Klasa CMFCToolBar
 `CMFCToolBar` Klasa przypomina [klasa CToolBar](../../mfc/reference/ctoolbar-class.md), ale zapewnia dodatkową obsługę funkcji interfejsu użytkownika. Te obejmują płaskie paski narzędzi, paski narzędzi z wymiennymi obrazami, duże ikony, przyciski pagera, zablokowane paski narzędzi, formanty paska pomocniczego, tekst pod obrazami, obrazy w tle i paski narzędzi w kartach. `CMFCToolBar` Klasa zawiera także wbudowaną obsługę użytkownika dostosowywania pasków narzędzi i menu, przeciągania i upuszczania pomiędzy paskami narzędzi i menu, przyciskami pola kombi, Edytuj pola, próbnikami kolorów i przyciski zbiorczy.
@@ -2222,7 +2222,7 @@ BOOL IsOneRowWithSibling();
  Wartość TRUE, jeśli pasek narzędzi i jego równorzędne są ustawione w tym samym wierszu; w przeciwnym razie wartość FALSE.  
   
 ### <a name="remarks"></a>Uwagi  
- [CMFCCustomizeButton::CreatePopupMenu](https://msdn.microsoft.com/e501083e-f78e-4d8d-900c-40bd6e2bb7f8) metoda wywołuje tę metodę, aby określić sposób wyświetlania **Dostosuj** menu podręcznego. Jeśli ta metoda zwraca wartość PRAWDA, struktura Wyświetla **Pokaż przyciski w jednym wierszu** przycisku. W przeciwnym razie wyświetla ramach **Pokaż przycisków w dwóch wierszach** przycisku.  
+ [CMFCCustomizeButton::CreatePopupMenu](internal-classes.md) metoda wywołuje tę metodę, aby określić sposób wyświetlania **Dostosuj** menu podręcznego. Jeśli ta metoda zwraca wartość PRAWDA, struktura Wyświetla **Pokaż przyciski w jednym wierszu** przycisku. W przeciwnym razie wyświetla ramach **Pokaż przycisków w dwóch wierszach** przycisku.  
   
  Zwykle nie trzeba używać tej metody. Aby włączyć **Pokaż przyciski w jednym wierszu** lub **Pokaż przycisków w dwóch wierszach** przycisków, wywołań [CMFCToolBar::SetSiblingToolBar](#setsiblingtoolbar).  
   

@@ -1,7 +1,7 @@
 ---
 title: Debugowanie i listy dla zestawu wbudowanego | Dokumentacja firmy Microsoft
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 08/30/2018
 ms.technology:
 - cpp-masm
 ms.topic: conceptual
@@ -19,24 +19,27 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 457402626edcdb2be05923aa33bbd26b1cab7137
-ms.sourcegitcommit: dbca5fdd47249727df7dca77de5b20da57d0f544
+ms.openlocfilehash: b6cca954ae15252b97d883ba8491fdb98e506f68
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/28/2018
-ms.locfileid: "32050119"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43689292"
 ---
 # <a name="debugging-and-listings-for-inline-assembly"></a>Debugowanie i listy dla zestawu wbudowanego
-## <a name="microsoft-specific"></a>Specyficzne dla firmy Microsoft  
- Programy zawierają kodu zestawu wbudowanego może być debugowany przy użyciu debuger poziomu źródła Jeśli kompilacji z [/zi](../../build/reference/z7-zi-zi-debug-information-format.md) opcji.  
-  
- W ramach debugera można ustawić punktów przerwania C lub C++ i języka zestawu wierszy. Po włączeniu mieszanego zestawu i tryb źródła można wyświetlić na źródłowym i rozłożonych kodu zestawu.  
-  
- Należy pamiętać, że wprowadzanie wielu instrukcje zestawu lub instrukcje języka źródłowego w jednym wierszu może utrudniać debugowania. W trybie źródła można użyć debuger można ustawić punktów przerwania w jednym wierszu, ale nie na pojedyncze instrukcje w tym samym wierszu. Ta sama zasada ma zastosowanie do `__asm` bloku zdefiniowany jako makr C, rozwijany do pojedynczej linii logiczne.  
-  
- Jeśli tworzenie mieszanych źródła i lista z zestawu [/FAS](../../build/reference/fa-fa-listing-file.md) — opcja kompilatora, listę zawiera zarówno źródłowy, jak i zestawu metod każdego wiersza języka zestawu. Makra nie zostaną rozwinięte na listach zawartości, ale są one rozwinięte podczas kompilacji.  
-  
- **KOŃCOWY określonych firmy Microsoft**  
-  
-## <a name="see-also"></a>Zobacz też  
- [Korzystanie z języka Asembler w blokach __asm](../../assembler/inline/using-assembly-language-in-asm-blocks.md)
+
+**Microsoft Specific**
+
+Programy zawierają wbudowany kod zestawu może być debugowany przy użyciu debugera poziom źródła, jeśli kompilujesz z opcją [/zi](../../build/reference/z7-zi-zi-debug-information-format.md) opcji.
+
+W ramach debugera można ustawić punktów przerwania w wierszach C lub C++ i język asemblera. Jeśli włączysz zestawów mieszanych i tryb źródła, możesz wyświetlić źródłowym i w postaci zdezasemblowany kod zestawu.
+
+Należy pamiętać, że umieszczenie wielu zestawu instrukcji lub instrukcjach języka źródłowego w jednym wierszu mogą utrudniać debugowania. W trybie źródła można użyć debugera można ustawić punktów przerwania w jednym wierszu, ale nie na pojedyncze instrukcje w tym samym wierszu. Ta sama zasada dotyczy `__asm` bloku zdefiniowany jako makra języka C, która rozszerza się na jednym wierszu logicznym.
+
+Jeśli utworzysz mieszane źródła i listę przy użyciu zestawu [/FAS](../../build/reference/fa-fa-listing-file.md) — opcja kompilatora, listę zawiera zarówno źródłowy, jak i zestaw formularze każdego wiersza języka asemblera. Makra nie są rozszerzone na listach zawartości, ale są one rozszerzane podczas kompilacji.
+
+**END specyficzny dla Microsoft**
+
+## <a name="see-also"></a>Zobacz także
+
+[Korzystanie z języka Asembler w blokach __asm](../../assembler/inline/using-assembly-language-in-asm-blocks.md)<br/>

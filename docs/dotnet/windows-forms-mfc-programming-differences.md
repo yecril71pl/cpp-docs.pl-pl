@@ -16,12 +16,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: 48a337ab82045543035c2612c707d8c47186ed2d
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: c7fe0665db01d1a2cd7a1da10b495ba86bc17469
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43195455"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43690865"
 ---
 # <a name="windows-formsmfc-programming-differences"></a>Różnice w programowaniu Windows Forms/MFC
 Tematy w [za pomocą kontrolki użytkownika formularza Windows w MFC](../dotnet/using-a-windows-form-user-control-in-mfc.md) opisują Obsługa MFC dla formularzy Windows Forms. Jeśli nie jesteś zaznajomiony z .NET Framework lub programowania MFC, ten temat zawiera informacje dotyczące programowania różnice między nimi.  
@@ -65,5 +65,4 @@ Tematy w [za pomocą kontrolki użytkownika formularza Windows w MFC](../dotnet/
      MFC posiada polecenia mechanizmu aktualizacji. W związku z tym widok aktywny lub dokument jest odpowiedzialny za stan elementów interfejsu użytkownika (na przykład, włączanie lub wyłączanie przycisku lub narzędzia elementu menu i sprawdzane stanów). Formularze Windows nie ma odpowiednika polecenia mechanizmu aktualizacji.  
   
 ## <a name="see-also"></a>Zobacz też  
- [Używanie kontrolki użytkownika formularza Windows w MFC](../dotnet/using-a-windows-form-user-control-in-mfc.md)   
- [Windows Forms — wskazówki](https://msdn.microsoft.com/fd44d13d-4733-416f-aefc-32592e59e5d9)
+ [Używanie kontrolki użytkownika formularza systemu Windows w MFC](../dotnet/using-a-windows-form-user-control-in-mfc.md)   

@@ -19,12 +19,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: cd12bff6638ef86205b1037a8a7c7e348767ae9a
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 287e540f73b202229c0355aec55aa0d8f5e0421f
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43221758"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43690452"
 ---
 # <a name="cancellation-in-the-ppl"></a>Anulowanie w PPL
 W tym dokumencie opisano rolę anulowania w Biblioteka równoległych wzorców (PPL), jak anulować czynność równoległą i jak określić, kiedy zostanie anulowane równoległą pracę.  
@@ -150,7 +150,7 @@ W tym dokumencie opisano rolę anulowania w Biblioteka równoległych wzorców (
   
 #### <a name="cancellation-tokens-and-task-composition"></a>Anulowanie tokenów i kompozycji zadania  
 
- [Współbieżności:: HYPERLINK "https://msdn.microsoft.com/library/system.threading.tasks.task.whenall(v=VS.110).aspx" when_all —](reference/concurrency-namespace-functions.md#when_all) i [concurrency::when_any](reference/concurrency-namespace-functions.md#when_all) functions może pomóc w komponowaniu wielu zadań do realizacji typowych wzorców. W tej sekcji opisano, jak te funkcje używają tokenów anulowania.  
+ [Concurrency::when_all](reference/concurrency-namespace-functions.md#when_all) i [concurrency::when_any](reference/concurrency-namespace-functions.md#when_all) functions może pomóc w komponowaniu wielu zadań do realizacji typowych wzorców. W tej sekcji opisano, jak te funkcje używają tokenów anulowania.  
   
  Kiedy podasz token anulowania do jednej `when_all` i `when_any` funkcji, że funkcja anuluje tylko wtedy, gdy ten token anulowania, zostanie anulowane, lub gdy jeden z uczestnika zadań kończy się na stanem anulowane lub zgłasza wyjątek.  
   

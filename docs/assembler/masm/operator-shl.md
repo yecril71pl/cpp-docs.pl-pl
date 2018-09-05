@@ -1,7 +1,7 @@
 ---
-title: Operator SHL | Dokumentacja firmy Microsoft
+title: shl — operator | Dokumentacja firmy Microsoft
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 08/30/2018
 ms.technology:
 - cpp-masm
 ms.topic: reference
@@ -18,22 +18,21 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7b09d3a8704dcd1772dc6f0f48c2908101f8b43f
-ms.sourcegitcommit: dbca5fdd47249727df7dca77de5b20da57d0f544
+ms.openlocfilehash: 31f7c8dadd9f619ebdb53cd6279c4da68bc8af18
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/28/2018
-ms.locfileid: "32055934"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43693383"
 ---
 # <a name="operator-shl"></a>operator SHL
-Zwraca wynik przesunięcia bitów *wyrażenie* po lewej stronie *liczba* liczba bitów.  
-  
-## <a name="syntax"></a>Składnia  
-  
-```  
-  
-expression SHL count  
-```  
-  
-## <a name="see-also"></a>Zobacz też  
- [Dokumentacja operatorów](../../assembler/masm/operators-reference.md)
+
+Zwraca wynik przesunięcia bitów *wyrażenie* po lewej stronie *liczba* liczby bitów.
+
+## <a name="syntax"></a>Składnia
+
+> wyrażenie shl — liczba
+
+## <a name="see-also"></a>Zobacz także
+
+[Dokumentacja operatorów](../../assembler/masm/operators-reference.md)<br/>

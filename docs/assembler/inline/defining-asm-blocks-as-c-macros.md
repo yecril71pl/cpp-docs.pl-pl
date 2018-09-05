@@ -1,7 +1,7 @@
 ---
 title: Definiowanie bloków __asm jako makr C | Dokumentacja firmy Microsoft
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 08/30/2018
 ms.technology:
 - cpp-masm
 ms.topic: conceptual
@@ -16,53 +16,55 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 69e1e7f2d4b980045a4e8993e39a69fc353a4f39
-ms.sourcegitcommit: dbca5fdd47249727df7dca77de5b20da57d0f544
+ms.openlocfilehash: 0cb9ef740ec8b521771c84a1edd194a6ee6ace4f
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/28/2018
-ms.locfileid: "32050496"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43683100"
 ---
 # <a name="defining-asm-blocks-as-c-macros"></a>Definiowanie bloków __asm jako makr C
-**Microsoft Specific**  
-  
- Makra C oferują wygodny sposób, aby wstawić kod zestawu do kodu źródłowego, ale zażądać szczególną uwagę, ponieważ rozszerza makra w jednym wierszu logicznym. Aby utworzyć bezproblemowe makra, należy wykonać następujące czynności:  
-  
--   Umieść `__asm` blok w nawiasach klamrowych.  
-  
--   Umieść `__asm` — słowo kluczowe przed każdą instrukcję zestawu.  
-  
--   Użyj stary styl komentarze języka C ( `/* comment */`) zamiast zestawu w stylu ( `; comment`) lub jeden wiersz komentarze języka C ( `// comment`).  
-  
- Aby zilustrować, w poniższym przykładzie zdefiniowano proste makra:  
-  
-```  
-#define PORTIO __asm      \  
-/* Port output */         \  
-{                         \  
-   __asm mov al, 2        \  
-   __asm mov dx, 0xD007   \  
-   __asm out dx, al       \  
-}  
-```  
-  
- Na pierwszy rzut, ostatnich trzech `__asm` zbędny prawdopodobnie słów kluczowych. Są one potrzebne, jednakże, ponieważ rozszerza makra w jednym wierszu:  
-  
-```  
-__asm /* Port output */ { __asm mov al, 2  __asm mov dx, 0xD007 __asm out dx, al }  
-```  
-  
- Trzecia i czwarta `__asm` wymagane są słowa kluczowe jako separatorów instrukcji. Rozpoznany separatorów jedyną instrukcją w `__asm` bloki są znaku nowego wiersza i `__asm` — słowo kluczowe. Ponieważ blok zdefiniowany jako makra jest jednym wierszu logicznym, muszą być rozdzielone każdej instrukcji z `__asm`.  
-  
- Nawiasy klamrowe są niezbędne, jak również. W przypadku pominięcia ich kompilator można pomylić przez wyrażenia języka C lub C++ w tym samym wierszu w prawo wywołanie makra. Bez zamykający nawias klamrowy, kompilator nie wiadomo, gdzie zatrzymuje kodu zestawu który zobaczy instrukcji języka C lub C++ `__asm` bloku jako zestaw instrukcji.  
-  
- Komentarze zestawu stylu, rozpoczynające się średnikiem (**;**) nadal końca wiersza. Wystąpił problem w makrach ponieważ kompilator ignoruje całą zawartość po komentarz, aż do końca wiersza logiczne. To samo dotyczy jednowierszowego komentarza C lub C++ ( `// comment`). Aby zapobiec błędom, używając komentarzy C w starym stylu ( `/* comment */`) w `__asm` bloki zdefiniowany jako makra.  
-  
- `__asm` Bloku jako makr C może zająć argumentów. W odróżnieniu od zwykłego C makra, jednak `__asm` makro nie może zwracać wartości. Dlatego takie makra nie można używać w wyrażeniach języka C lub C++.  
-  
- Nie można więc przyrostu wywołanie makra tego typu. Na przykład wywoływania makra języka zestawu w funkcji zadeklarowana z `__fastcall` Konwencji może spowodować nieoczekiwane wyniki. (Zobacz [przy użyciu rejestrów i zachowanie ich w zestawie wbudowanym](../../assembler/inline/using-and-preserving-registers-in-inline-assembly.md).)  
-  
- **KOŃCOWY określonych firmy Microsoft**  
-  
-## <a name="see-also"></a>Zobacz też  
- [Wbudowany asembler](../../assembler/inline/inline-assembler.md)
+
+**Microsoft Specific**
+
+Makr C, oferuje wygodny sposób, aby wstawić kod zestawu do kodu źródłowego, ale wymagają ostrożność, ponieważ makro rozszerzy się na jednym wierszu logicznym. Aby utworzyć bezproblemowej makra, należy wykonać następujące czynności:
+
+- Ujmij `__asm` bloku w nawiasach klamrowych.
+
+- Umieść `__asm` — słowo kluczowe przed każdą instrukcję montażu.
+
+- Użyj komentarze języka C w starym stylu ( `/* comment */`) zamiast zestawu w stylu ( `; comment`) lub jeden wiersz komentarze języka C ( `// comment`).
+
+Aby zilustrować, w poniższym przykładzie zdefiniowano proste makra:
+
+```cpp
+#define PORTIO __asm      \
+/* Port output */         \
+{                         \
+   __asm mov al, 2        \
+   __asm mov dx, 0xD007   \
+   __asm out dx, al       \
+}
+```
+
+Na pierwszy rzut oka ostatnich trzech `__asm` słowa kluczowe wydają się zbędne. Są one potrzebne, jednak ponieważ makro rozszerza się w jednym wierszu:
+
+```cpp
+__asm /* Port output */ { __asm mov al, 2  __asm mov dx, 0xD007 __asm out dx, al }
+```
+
+Trzecia i czwarta `__asm` słowa kluczowe są wymagane jako separatory instrukcji. Separatory jedyną instrukcją rozpoznawany w `__asm` bloki są znak nowego wiersza i `__asm` — słowo kluczowe. Ponieważ blok, który został zdefiniowany jako makro jest jednym wierszu logicznym, muszą być rozdzielone każdą instrukcję przy użyciu `__asm`.
+
+Nawiasy klamrowe są również istotne. Jeśli je pominiesz, kompilator może mylące instrukcje C i C++, w tym samym wierszu z prawej strony wywołanie makra. Bez zamykającego nawiasu klamrowego, kompilator nie wiadomo, gdzie kod zestawu zatrzymuje się i widzi instrukcje C i C++ `__asm` bloku jako zestaw instrukcji.
+
+Komentarze stylu zestawu, rozpoczynające się od średnika (**;**) przejdź do końca wiersza. To powoduje problemy w makrach, ponieważ kompilator ignoruje całą zawartość po komentarzu, aż do końca wiersza logiczne. To samo dotyczy programu Komentarze jednowierszowe C lub C++ ( `// comment`). Aby uniknąć błędów, należy użyć komentarze języka C w starym stylu ( `/* comment */`) w `__asm` bloki określone jako makra.
+
+`__asm` Bloku pisane jako makr C może potrwać argumentów. W odróżnieniu od zwykłego C — makro, jednak `__asm` — makro nie może zwracać wartości. Dlatego takie makra nie można używać w wyrażeniach języka C lub C++.
+
+Uważaj, aby nie masowe wywołania makra tego typu. Na przykład, wywołanie makra języka zestawu w funkcji zadeklarowanych za pomocą `__fastcall` Konwencji może spowodować nieoczekiwane wyniki. (Zobacz [za pomocą rejestrów i zachowywanie ich w asemblerze wbudowanym](../../assembler/inline/using-and-preserving-registers-in-inline-assembly.md).)
+
+**END specyficzny dla Microsoft**
+
+## <a name="see-also"></a>Zobacz także
+
+[Wbudowany asembler](../../assembler/inline/inline-assembler.md)<br/>

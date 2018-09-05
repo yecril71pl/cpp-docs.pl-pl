@@ -1,7 +1,7 @@
 ---
 title: ETYKIETA (MASM) | Dokumentacja firmy Microsoft
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 08/30/2018
 ms.technology:
 - cpp-masm
 ms.topic: reference
@@ -16,23 +16,23 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4189d1ae5cf79d0ecf8cc07fa940e754fe314a6d
-ms.sourcegitcommit: dbca5fdd47249727df7dca77de5b20da57d0f544
+ms.openlocfilehash: d7fe6e6b2297cac689ed5f179b3e299488dd99cc
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/28/2018
-ms.locfileid: "32054071"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43690593"
 ---
 # <a name="label-masm"></a>ETYKIETA (MASM)
-Tworzy nową etykietę, przypisując bieżącą wartość licznika lokalizacji i danego `type` do *nazwa*.  
-  
-## <a name="syntax"></a>Składnia  
-  
-```  
-  
-      name LABEL type  
-name LABEL [[NEAR | FAR | PROC]] PTR [[type]]   
-```  
-  
-## <a name="see-also"></a>Zobacz też  
- [Dokumentacja dyrektyw](../../assembler/masm/directives-reference.md)
+
+Tworzy nową etykietę, przypisując bieżącą wartość licznika lokalizacji i danym *typu* do *nazwa*.
+
+## <a name="syntax"></a>Składnia
+
+> *Nazwa* etykiety *typu*
+
+> *Nazwa* etykiety [[NEAR | ZNACZNIE | PTR PROC]] [[*typu*]]
+
+## <a name="see-also"></a>Zobacz także
+
+[Dokumentacja dyrektyw](../../assembler/masm/directives-reference.md)<br/>

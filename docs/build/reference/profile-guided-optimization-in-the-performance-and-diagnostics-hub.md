@@ -1,5 +1,5 @@
 ---
-title: Optymalizacja sterowana profilem w Centrum diagnostyki i wydajności | Dokumentacja firmy Microsoft
+title: Optymalizacja sterowana profilem w Centrum wydajności i diagnostyki | Dokumentacja firmy Microsoft
 ms.custom: ''
 ms.date: 03/14/2018
 ms.technology:
@@ -12,87 +12,87 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f8a586ef48f87f90dd5f191f9fcaea6f30af5c56
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 275d65cdf4f0f5986ff80e65898732dadbd5f61f
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32378967"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43691098"
 ---
-# <a name="profile-guided-optimization-in-the-visual-studio-2013-performance-and-diagnostics-hub"></a>Optymalizacja sterowana profilem w Centrum diagnostyki i Visual Studio 2013 wydajności
+# <a name="profile-guided-optimization-in-the-visual-studio-2013-performance-and-diagnostics-hub"></a>Optymalizacja sterowana profilem w Visual Studio 2013 Centrum wydajności i diagnostyki
 
-Jeśli używasz programu Visual Studio 2013, optymalizacja sterowana profilem w języku Visual C++ wtyczki w Centrum diagnostyki i wydajności usprawnia proces optymalizacji oparte na profilach dla deweloperów. Możesz [pobrać](http://go.microsoft.com/fwlink/p/?LinkId=327915) z witryny sieci Web programu Visual Studio. Wtyczka nie jest obsługiwana w nowszych wersjach programu Visual Studio.
+Jeśli używasz programu Visual Studio 2013, optymalizacja sterowana profilem Visual c++ dla dodatku typu plug-in w Centrum wydajności i diagnostyki usprawnia proces optymalizacji profilowe z przewodnikiem dla deweloperów. Możesz [Pobierz wtyczkę](https://marketplace.visualstudio.com/items?itemName=ProfileGuidedOptimizationTeam.ProfileGuidedOptimizationforVisualC) z witryny sieci Web programu Visual Studio. Wtyczka nie jest obsługiwana w nowszych wersjach programu Visual Studio.
 
-Oparte na profilach optymalizacji (PGO) ułatwia tworzenie kompilacji x86 i x64 natywnych aplikacji, które są zoptymalizowane pod kątem użytkowników sposób interakcji z użytkownikiem. PGO jest procesem wieloetapowych: tworzenie kompilowania aplikacji, który został zinstrumentowany na potrzeby profilowania, a następnie wykonać "szkolenia." Oznacza to uruchomieniem instrumentowanej aplikacji za pomocą typowych scenariuszy interakcji użytkownika. Zapisz przechwycone dane profilowania, a następnie ponownie aplikację przy użyciu wyniki prowadzące optymalizacji całego programu. Chociaż te kroki można wykonać oddzielnie w programie Visual Studio lub w wierszu polecenia, wtyczka PGO centralizuje i upraszcza proces. Wtyczka PGO Ustawia wszystkie wymagane opcje, przeprowadzi Cię przez każdy krok, pokazuje analizy, a następnie używa wyniki do skonfigurowania kompilacji w celu zoptymalizowania każdej funkcji dla rozmiaru i szybkości. Wtyczka PGO również ułatwia ponownie do szkolenia aplikacji i aktualizacji danych optymalizacji kompilacji, jak zmienić swój kod.
+Profilowe z przewodnikiem Optymalizacja (PGO) pomaga tworzyć kompilacje x86 i x64 aplikacje natywne, które są zoptymalizowane pod kątem przez użytkowników wchodzić w interakcje z nimi. PGO to proces obejmujący wiele kroków: tworzenie kompilacji aplikacji, który został zinstrumentowany na potrzeby profilowania, a następnie wykonaj "szkoleniowe." Oznacza to, że uruchamiasz instrumentowanej aplikacji przy użyciu typowych scenariuszy interakcji użytkownika. Zapisanie przechwycone dane profilowania i ponownie skompiluj aplikację za pomocą wyników przeprowadzenie optymalizacji całego programu. Mimo że te kroki można wykonać osobno w programie Visual Studio lub w wierszu polecenia, wtyczka PGO centralizuje i upraszcza ten proces. Wtyczka PGO Ustawia wszystkie wymagane opcje, przeprowadzi Cię przez kolejne kroki, dowiesz się, analizę i następnie używa wyników do konfigurowania kompilacji, aby zoptymalizować każdej funkcji dla rozmiar lub prędkość. Wtyczka PGO również ułatwia ponowne uruchomienie aplikacji szkolenia i zaktualizować dane optymalizacji kompilacji, ponieważ zmian w kodzie.
 
 ## <a name="prerequisites"></a>Wymagania wstępne
 
-Należy [Pobieranie wtyczki PGO](http://go.microsoft.com/fwlink/p/?LinkId=327915) i zainstaluj go w programie Visual Studio przed użyciem w Centrum diagnostyki i wydajności.
+Należy najpierw [Pobierz wtyczkę PGO](https://marketplace.visualstudio.com/items?itemName=ProfileGuidedOptimizationTeam.ProfileGuidedOptimizationforVisualC) i zainstaluj go w programie Visual Studio, zanim użyjesz go w Centrum wydajności i diagnostyki.
 
-## <a name="walkthrough-using-the-pgo-plug-in-to-optimize-an-app"></a>Wskazówki: Używanie PGO wtyczki do optymalizowania aplikacji
+## <a name="walkthrough-using-the-pgo-plug-in-to-optimize-an-app"></a>Przewodnik: Używanie PGO wtyczka do optymalizacji aplikacji
 
-Najpierw utworzysz podstawowe aplikacji klasycznej Win32 w programie Visual Studio. Jeśli masz już natywnych aplikacji, który chcesz zoptymalizować, można go używać i pominąć ten krok.
+Najpierw utworzymy podstawową aplikację pulpitu Win32 w programie Visual Studio. Jeśli masz już aplikację natywną, którą chcesz zoptymalizować, możesz go użyć i pominąć ten krok.
 
 ### <a name="to-create-an-app"></a>Aby utworzyć aplikację
 
-1. Na pasku menu wybierz **pliku**, **nowy**, **projektu**.
+1. Na pasku menu wybierz **pliku**, **New**, **projektu**.
 
-1. W lewym okienku **nowy projekt** okna dialogowego rozwiń **zainstalowana**, **szablony**, **Visual C++**, a następnie wybierz  **MFC**.
+1. W okienku po lewej stronie **nowy projekt** okna dialogowego rozwiń **zainstalowane**, **szablony**, **Visual C++**, a następnie wybierz pozycję  **MFC**.
 
 1. W środkowym okienku wybierz **aplikacji MFC**.
 
 1. Określ nazwę dla projektu — na przykład **SamplePGOProject**— w **nazwa** pole. Wybierz **OK** przycisku.
 
-1. Na **omówienie** strony **Kreator aplikacji MFC** oknie dialogowym wybierz **Zakończ** przycisku.
+1. Na **Przegląd** strony **Kreator aplikacji MFC** okna dialogowego wybierz **Zakończ** przycisku.
 
-Następnie ustaw dla konfiguracji kompilacji aplikacji, do wersji, aby przygotować go PGO kompilacji i kroki szkolenia.
+Następnie ustaw dla konfiguracji kompilacji aplikacji do wersji na "gotowy" on PGO kompilacji i kroki szkolenia.
 
 ### <a name="to-set-the-build-configuration"></a>Aby ustawić konfigurację kompilacji
 
 1. Na pasku menu wybierz **kompilacji**, **programu Configuration Manager**.
 
-1. W **programu Configuration Manager** oknie dialogowym wybierz **aktywną konfigurację rozwiązania** przycisku rozwijanego i wybierz **wersji**. Wybierz **Zamknij** przycisku.
+1. W **programu Configuration Manager** okna dialogowego wybierz **aktywną konfigurację rozwiązania** przycisk listy rozwijanej i wybierz pozycję **wersji**. Wybierz **Zamknij** przycisku.
 
-Otwórz Centrum diagnostyki i wydajności — na pasku menu wybierz **Analizuj**, **wydajności i diagnostyki**. Spowoduje to otwarcie strony sesji diagnostyki zawierającej narzędzi analizy, które są dostępne dla danego typu projektu.
+Otwórz Centrum wydajności i diagnostyki, na pasku menu wybierz **analizy**, **wydajności i diagnostyki**. Spowoduje to otwarcie strony sesji diagnostyki, która dysponuje narzędziami analizy, które są dostępne dla danego typu projektu.
 
-![PGO w Centrum diagnostyki i wydajności](../../build/reference/media/pgofig0hub.png "PGOFig0Hub")
+![PGO w Centrum wydajności i diagnostyki](../../build/reference/media/pgofig0hub.png "PGOFig0Hub")
 
-W **dostępne narzędzia**, wybierz pozycję **profilowana Optymalizacja** pole wyboru. Wybierz **Start** przycisk, aby uruchomić PGO wtyczki.
+W **dostępnych narzędzi**, wybierz opcję **profilowana Optymalizacja** pole wyboru. Wybierz **Start** przycisk, aby uruchomić dodatek typu plug-in PGO.
 
 ![Strona wprowadzenia PGO](../../build/reference/media/pgofig1start.png "PGOFig1Start")
 
-**Profilowana Optymalizacja** stronie opisano kroki używa wtyczki, aby poprawić wydajność aplikacji. Wybierz **Start** przycisku.
+**Profilowana Optymalizacja** strony opisano kroki, używa wtyczki, aby zwiększyć wydajność aplikacji. Wybierz **Start** przycisku.
 
 ![Strona Instrumentacji PGO](../../build/reference/media/pgofig2instrument.png "PGOFig2Instrument")
 
-W **Instrumentacji** sekcji, użyj **początkowo włączono szkolenia** opcję, aby wybrać, czy dołączać jako część szkolenia na etapie uruchamiania aplikacji. Jeśli ta opcja nie jest zaznaczona, dane szkoleniowe nie została zarejestrowana w uruchomionej aplikacji instrumentowanych, dopóki nie zostanie jawnie włączona szkolenia.
+W **Instrumentacji** sekcji, możesz użyć **szkolenia początkowo jest włączona** opcję, aby wybrać, czy mają zostać dołączone do fazy uruchamiania aplikacji w ramach szkolenia. Jeśli ta opcja nie jest zaznaczone, dane szkoleniowe nie została zarejestrowana w uruchomionej aplikacji instrumentowanych, aż jawnie włączyć szkolenia.
 
-Wybierz **dokumentu** przycisku do tworzenia aplikacji za pomocą specjalnego zestawu opcji kompilatora. Instrukcje sondowania zostanie wstawiona w wygenerowanym kodzie. Te instrukcje rejestrowania danych profilowania w fazie szkolenia.
+Wybierz **Instrument** przycisk, aby utworzyć aplikację przy użyciu specjalnego zestawu opcji kompilatora. Kompilator wstawia sondy instrukcje w wygenerowanym kodzie. Te instrukcje rejestrowania danych profilowania w fazie szkolenia.
 
-![Strona kompilacji instrumentowanej PGO](../../build/reference/media/pgofig3build.PNG "PGOFig3Build")
+![Strona kompilację instrumentowaną PGO](../../build/reference/media/pgofig3build.PNG "PGOFig3Build")
 
-Aplikacja jest uruchamiana automatycznie po ukończeniu kompilacji instrumentowanej aplikacji.
+Aplikacja jest uruchomiane automatycznie po zakończeniu kompilacji instrumentowanej aplikacji.
 
-Jeśli występują błędy lub ostrzeżenia wystąpi podczas kompilacji, popraw je, a następnie wybierz pozycję **ponowne uruchomienie kompilacji** ponowne uruchomienie kompilacji instrumentowanej.
+Jeśli występują błędy lub ostrzeżenia podczas kompilowania, popraw je, a następnie wybierz **ponowne uruchomienie kompilacji** ponownie uruchomić kompilację instrumentowaną.
 
-Po uruchomieniu aplikacji, można użyć **rozpocząć szkolenie** i **szkolenia Wstrzymaj** łączy w **szkolenia** sekcji, aby kontrolować, gdy informacje dotyczące profilowania jest rejestrowany. Można użyć **Zatrzymaj aplikację** i **Uruchom aplikację** łącza, aby zatrzymać i ponownie uruchom aplikację.
+Gdy aplikacja jest uruchomiona, można użyć **Rozpocznij szkolenie** i **szkolenia Wstrzymaj** linki w **szkolenia** sekcji, aby kontrolować podczas profilowania informacje są rejestrowane. Możesz użyć **Zatrzymaj aplikację** i **Uruchom aplikację** łącza, aby zatrzymać i ponownie uruchom aplikację.
 
 ![Strony szkolenia PGO](../../build/reference/media/pgofig4training.PNG "PGOFig4Training")
 
-Podczas uczenia, przejdź do scenariuszy użytkownika do przechwycenia profilowania informacje wymagające PGO wtyczka do optymalizacji kodu. Po ukończeniu szkolenia, zamknij aplikację, lub wybierz **Zatrzymaj aplikację** łącza. Wybierz **Analizuj** przycisk, aby uruchomić krok analizy.
+Podczas szkolenia, przechodzą przez scenariuszy użytkownika do przechwytywania informacji profilowania, wymagającym PGO wtyczka do optymalizacji kodu. Po zakończeniu szkolenia, zamknij aplikację, lub wybierz **Zatrzymaj aplikację** łącza. Wybierz **analizy** przycisk, aby rozpocząć krok analizy.
 
-Po zakończeniu analizy **analizy** sekcja zawiera raport z informacjami profilowania, przechwyconych podczas fazy szkolenia scenariusza użytkownika. Ten raport służy do sprawdzenia, które funkcji o nazwie większość i zużyte najwięcej czasu w aplikacji. Wtyczka PGO informacje są używane do określenia aplikacji funkcje, które mają Optymalizuj pod kątem szybkości, a które Optymalizuj dla rozmiaru. Wtyczka PGO konfiguruje optymalizacje kompilacji do utworzenia aplikacji najmniejszą, fastest dla scenariuszy użytkownika, zapisanych podczas uczenia.
+Po zakończeniu analizy **analizy** sekcji przedstawiono raport z informacjami profilowania, przechwyconą w fazie szkolenia scenariusza użytkownika. Ten raport służy do sprawdzenia, które funkcje aplikacji o nazwie większość i wydano najwięcej czasu w. Wtyczka PGO informacje są używane do określenia aplikacji, która działa pod kątem szybkości i którego ma zostać Optymalizuj pod kątem rozmiaru. Wtyczka PGO konfiguruje optymalizacje kompilacji do utworzenia aplikacji najmniejsza, fastest dla scenariuszy użytkowników, które rejestrowane podczas szkolenia.
 
 ![Strona analizy PGO](../../build/reference/media/pgofig5analyze.png "PGOFig5Analyze")
 
-Jeśli szkolenia przechwycone oczekiwane informacje profilowania, można wybrać **Zapisz zmiany** można zapisać danych profilu przeanalizowane w projekcie w celu zoptymalizowania kompilacji w przyszłości. Aby odrzucić dane profilu i Rozpoczęcie szkolenia od początku, wybierz **wykonaj ponownie szkolenia**.
+Jeśli szkolenia przechwytywane oczekiwane informacje profilowania, możesz wybrać **Zapisz zmiany** można zapisać danych profilu przeanalizowany w projekcie, aby zoptymalizować kompilacji w przyszłości. Aby odrzucić dane profilu i szkolenie za pośrednictwem są uruchamiane od początku, wybierz opcję **ponownie przeprowadzić szkolenia**.
 
-Plik danych profilu jest zapisywany w projekcie **dane szkoleniowe PGO** folderu. Te dane są używane do kontrolowania ustawień optymalizacji kompilatora kompilacji w aplikacji.
+Plik danych profilu jest zapisywany w projekcie w **dane szkoleniowe PGO** folderu. Te dane są używane do kontrolowania ustawień optymalizacji kompilatora kompilacji w swojej aplikacji.
 
 ![Plik danych PGO w Eksploratorze rozwiązań](../../build/reference/media/pgofig6data.png "PGOFig6Data")
 
-Po analizie wtyczki PGO Ustawia opcje kompilacji w swoim projekcie selektywnie Optymalizowanie aplikacji podczas kompilowania przy użyciu danych profilu. Możesz zmodyfikować i kompilowania aplikacji za pomocą tych samych danych profilu. Podczas tworzenia aplikacji, danych wyjściowych kompilacji raporty, jak wiele funkcji oraz instrukcje, które zostały zoptymalizowane przy użyciu danych profilu.
+Po analizie usługa PGO wtyczka Ustawia opcje kompilacji w projekt, aby użyć danych profilowych selektywnie zoptymalizować aplikację, podczas kompilacji. Można modyfikować i tworzenie aplikacji przy użyciu tych samych danych profilu. Podczas kompilowania aplikacji, dane wyjściowe kompilacji raporty, jak wiele funkcji i instrukcje, które zostały zoptymalizowane przy użyciu danych profilu.
 
 ![PGO dane wyjściowe diagnostyki](../../build/reference/media/pgofig7diagnostics.png "PGOFig7Diagnostics")
 
-Jeśli podczas tworzenia istotne zmiany kodu, może być konieczne ponownie ucz aplikację, aby uzyskać najlepsze optymalizacji. Firma Microsoft zaleca retrain aplikacji, gdy dane wyjściowe kompilacji zgłasza, że mniej niż 80 procent funkcji lub instrukcji zostały zoptymalizowane przy użyciu danych profilu.
+Po wprowadzeniu zmian w kodzie istotne podczas projektowania może być konieczne ponowne szkolenie aplikację, aby uzyskać najlepszą optymalizację. Firma Microsoft zaleca ponowne szkolenie aplikację, kiedy dane wyjściowe kompilacji, mniej niż 80 procent, funkcji lub instrukcje zostały zoptymalizowane przy użyciu danych profilu.

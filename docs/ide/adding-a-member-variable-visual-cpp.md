@@ -17,15 +17,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d20611d2cc5e4b391e2dafdef614dd5173d32ef7
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: dade9987358c1c160dffd0221b0421b4fab92c24
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43207301"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43687645"
 ---
 # <a name="adding-a-member-variable--visual-c"></a>Dodawanie zmiennej członkowskiej (Visual C++)
-Możesz dodać zmienną członkowską do klasy za pomocą widoku klas. Zmienne składowe mogą być albo dla [wymiany danych i sprawdzanie poprawności danych](../mfc/dialog-data-exchange-and-validation.md), lub może być ogólny. Kreator zmiennej składowej danych jest specjalnie przeznaczona do podjąć odpowiednie informacje i używać go do wstawienia elementów w plikach źródłowych w odpowiednich lokalizacjach. Można dodać zmienną członkowską z [Edytor okien dialogowych](../windows/dialog-editor.md) w [widok zasobów](../windows/resource-view-window.md), lub z [Widok klas](https://msdn.microsoft.com/8d7430a9-3e33-454c-a9e1-a85e3d2db925).  
+Możesz dodać zmienną członkowską do klasy za pomocą widoku klas. Zmienne składowe mogą być albo dla [wymiany danych i sprawdzanie poprawności danych](../mfc/dialog-data-exchange-and-validation.md), lub może być ogólny. Kreator zmiennej składowej danych jest specjalnie przeznaczona do podjąć odpowiednie informacje i używać go do wstawienia elementów w plikach źródłowych w odpowiednich lokalizacjach. Można dodać zmienną członkowską z [Edytor okien dialogowych](../windows/dialog-editor.md) w [widok zasobów](../windows/resource-view-window.md), lub z [Widok klas](/visualstudio/ide/viewing-the-structure-of-code).  
   
 > [!NOTE]
 >  Podczas projektowania i implementowania okno dialogowe, może okazać się bardziej wydajne, można użyć okna dialogowego edytora, aby dodać formanty okna dialogowego, a następnie wdrożyć zmiennych składowych kontrolek.  
@@ -49,7 +49,7 @@ Możesz dodać zmienną członkowską do klasy za pomocą widoku klas. Zmienne s
   
 ### <a name="to-add-a-member-variable-from-class-view-using-the-add-member-variable-wizard"></a>Aby dodać zmienną członkowską z widoku klasy za pomocą Kreatora dodawania zmiennej składowej  
   
-1.  W [Widok klas](https://msdn.microsoft.com/8d7430a9-3e33-454c-a9e1-a85e3d2db925), rozwiń węzeł projektu, aby wyświetlić klasy w projekcie.  
+1.  W [Widok klas](/visualstudio/ide/viewing-the-structure-of-code), rozwiń węzeł projektu, aby wyświetlić klasy w projekcie.  
   
 2.  Kliknij prawym przyciskiem myszy klasę, do której chcesz dodać zmienną.  
   

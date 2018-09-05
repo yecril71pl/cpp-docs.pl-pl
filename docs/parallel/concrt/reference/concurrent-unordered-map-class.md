@@ -24,12 +24,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d7d31203069fe6916c485586fdfb62ee48559727
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: c6fddd90eaa6259cd2552dddbeafb405d90580ac
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43195891"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43684355"
 ---
 # <a name="concurrentunorderedmap-class"></a>concurrent_unordered_map — Klasa
 `concurrent_unordered_map` Klasa jest kontenerem bezpieczne pod względem współbieżności, który kontroluje różnej długości sekwencje elementów typu `std::pair<const K, _Element_type>`. Sekwencja jest reprezentowana w sposób umożliwiający bezpieczne pod względem współbieżności dołączyć element dostępu, dostępu do iteratora i operacji przechodzenia iteratora.  
@@ -328,7 +328,7 @@ std::pair<const_iterator,
  Wartość klucza do wyszukania.  
   
 ### <a name="return-value"></a>Wartość zwracana  
- A [pary](https://msdn.microsoft.com/c5a37023-d939-4eb2-ae24-ce8e0cd4505d) gdzie pierwszy element jest iterację do początku, a drugi element stanowi iterator do końca zakresu.  
+ A [pary](../../../standard-library/pair-structure.md) gdzie pierwszy element jest iterację do początku, a drugi element stanowi iterator do końca zakresu.  
   
 ### <a name="remarks"></a>Uwagi  
  Istnieje możliwość współbieżnych operacji wstawienia powodować dodatkowych kluczy, które ma zostać wstawiony po iteratora begin i przed iteratora zakończenia.  

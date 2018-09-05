@@ -1,7 +1,7 @@
 ---
 title: '@InStr | Dokumentacja firmy Microsoft'
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 08/30/2018
 ms.technology:
 - cpp-masm
 ms.topic: reference
@@ -16,22 +16,21 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d0fb92987de21f653440d6c4cc23d726ad323b69
-ms.sourcegitcommit: dbca5fdd47249727df7dca77de5b20da57d0f544
+ms.openlocfilehash: b0beb5fbde4433ad436d9dffa0dd3048b17a7fcd
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/28/2018
-ms.locfileid: "32049284"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43682996"
 ---
 # <a name="instr"></a>@InStr
-Makra funkcji, która znajduje pierwsze wystąpienie *ciąg2* w *ciąg1*, początkowe na *pozycji* w *ciąg1*. Jeśli *pozycji* nie ma, wyszukiwanie rozpoczyna się od początku *ciąg1*. Zwraca całkowitą pozycji lub 0, jeśli *ciąg2* nie znaleziono.  
-  
-## <a name="syntax"></a>Składnia  
-  
-```  
-  
-@InStr( [[position]], string1, string2 )  
-```  
-  
-## <a name="see-also"></a>Zobacz też  
- [Dokumentacja symboli](../../assembler/masm/symbols-reference.md)
+
+Funkcja makra, która wyszukuje pierwsze wystąpienie *ciąg2* w *ciąg1*, rozpoczynająca się w *pozycji* w ramach *ciąg1*. Jeśli *pozycji* jest niewidoczny, wyszukiwanie rozpoczyna się od początku *ciąg1*. Zwraca całkowitą pozycji lub 0, jeśli *ciąg2* nie zostanie znaleziony.
+
+## <a name="syntax"></a>Składnia
+
+> @InStr([[położenie]], ciąg1, ciąg2)
+
+## <a name="see-also"></a>Zobacz także
+
+[Dokumentacja symboli](../../assembler/masm/symbols-reference.md)<br/>

@@ -1,7 +1,7 @@
 ---
 title: TBYTE — | Dokumentacja firmy Microsoft
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 08/30/2018
 ms.technology:
 - cpp-masm
 ms.topic: reference
@@ -16,22 +16,22 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8b7c8b3f4cbe26eda9709f27a18ccb4a9cf2bbb1
-ms.sourcegitcommit: dbca5fdd47249727df7dca77de5b20da57d0f544
+ms.openlocfilehash: 1a75c07885c0460af6035c8d6fb1b42c6aa733e4
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/28/2018
-ms.locfileid: "32058006"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43692889"
 ---
 # <a name="tbyte"></a>TBYTE
-Przydziela i opcjonalnie inicjuje 10 bajtów magazynu dla każdej `initializer`. Może także służyć jako Specyfikator typu dowolnym typem jest dozwolony.  
-  
-## <a name="syntax"></a>Składnia  
-  
-```  
-[[name]] TBYTEinitializer [[, initializer]]...  
-```  
-  
-## <a name="see-also"></a>Zobacz też  
- [Odwołania do dyrektyw](../../assembler/masm/directives-reference.md)   
- [DT](../../assembler/masm/dt.md)
+
+Przydziela i opcjonalnie inicjuje 10 bajtów magazynu dla każdego `initializer`. Może również służyć jako specyfikatora typu dowolnym typem jest dozwolony.
+
+## <a name="syntax"></a>Składnia
+
+> [[name]] TBYTEinitializer [[, inicjator]]...
+
+## <a name="see-also"></a>Zobacz także
+
+[Dokumentacja dyrektyw](../../assembler/masm/directives-reference.md)<br/>
+[DT](../../assembler/masm/dt.md)<br/>

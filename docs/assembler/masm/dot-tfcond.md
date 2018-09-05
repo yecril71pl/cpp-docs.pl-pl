@@ -1,7 +1,7 @@
 ---
 title: . TFCOND | Dokumentacja firmy Microsoft
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 08/30/2018
 ms.technology:
 - cpp-masm
 ms.topic: reference
@@ -16,23 +16,21 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4d552d27337b76ceb2d6db2c8d9e9de0fa819fd0
-ms.sourcegitcommit: dbca5fdd47249727df7dca77de5b20da57d0f544
+ms.openlocfilehash: 4e0ec36f97801ad1227eeaa719a930d0ab820b8c
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/28/2018
-ms.locfileid: "32049993"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43687665"
 ---
 # <a name="tfcond"></a>.TFCOND
-Włącza lub wyłącza Lista bloków warunkowych wartość false.  
-  
-## <a name="syntax"></a>Składnia  
-  
-```  
-  
-.TFCOND  
-  
-```  
-  
-## <a name="see-also"></a>Zobacz też  
- [Dokumentacja dyrektyw](../../assembler/masm/directives-reference.md)
+
+Włącza lub wyłącza listę false bloków warunkowych.
+
+## <a name="syntax"></a>Składnia
+
+> .TFCOND
+
+## <a name="see-also"></a>Zobacz także
+
+[Dokumentacja dyrektyw](../../assembler/masm/directives-reference.md)<br/>

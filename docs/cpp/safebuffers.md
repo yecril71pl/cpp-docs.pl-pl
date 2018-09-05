@@ -17,12 +17,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b41646dbde21f68c2cc23dfbcf977d9f5ad06c1e
-ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
+ms.openlocfilehash: ce106727fac6b3b9903a53fae64bee94441aa038
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/02/2018
-ms.locfileid: "39467498"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43685079"
 ---
 # <a name="safebuffers"></a>safebuffers
 **Microsoft Specific**  
@@ -36,7 +36,7 @@ __declspec( safebuffers )
 ```  
   
 ## <a name="remarks"></a>Uwagi  
- **/GS** — opcja kompilatora powoduje, że kompilator testuje przepełnienia buforu, wstawiając sprawdzenia zabezpieczeń na stosie. Rodzaje struktur danych, które są uprawnione do sprawdzania zabezpieczeń opisano w [/GS (Sprawdzanie zabezpieczeń bufora)](../build/reference/gs-buffer-security-check.md). Aby uzyskać więcej informacji dotyczących wykrywania przepełnienia buforu, zobacz [sprawdzania zabezpieczeń w kompilatorze](http://go.microsoft.com/fwlink/p/?linkid=7260) w witrynie MSDN w sieci Web.  
+ **/GS** — opcja kompilatora powoduje, że kompilator testuje przepełnienia buforu, wstawiając sprawdzenia zabezpieczeń na stosie. Rodzaje struktur danych, które są uprawnione do sprawdzania zabezpieczeń opisano w [/GS (Sprawdzanie zabezpieczeń bufora)](../build/reference/gs-buffer-security-check.md). Aby uzyskać więcej informacji dotyczących wykrywania przepełnienia buforu, zobacz [funkcji zabezpieczeń w MSVC](https://blogs.msdn.microsoft.com/vcblog/2017/06/28/security-features-in-microsoft-visual-c/).  
   
  Przegląd kodu lub zewnętrzna analiza eksperta może pomóc w ustaleniu, czy funkcja jest zabezpieczona przed przepełnieniem buforu. W takim przypadku można pominąć sprawdzanie zabezpieczeń dla funkcji, stosując **__declspec(safebuffers)** — słowo kluczowe do deklaracji funkcji.  
   

@@ -1,5 +1,5 @@
 ---
-title: Odwołanie do asemblera ARM | Dokumentacja firmy Microsoft
+title: Dokumentacja asemblera ARM | Dokumentacja firmy Microsoft
 ms.custom: ''
 ms.date: 08/28/2017
 ms.technology:
@@ -12,28 +12,28 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 198e38547258837999c3e11903bc98575fdb036f
-ms.sourcegitcommit: dbca5fdd47249727df7dca77de5b20da57d0f544
+ms.openlocfilehash: 6be0dcb9333c3381c48dc72c31742bfe902bb02b
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/28/2018
-ms.locfileid: "32049704"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43689126"
 ---
 # <a name="arm-assembler-reference"></a>Odwołanie do asemblera ARM
 
-Artykuły w tej sekcji dokumentacji zawierają materiału odwołanie do asemblera ARM firmy Microsoft (armasm) oraz narzędzia pokrewne.  
-  
-## <a name="related-articles"></a>Powiązane artykuły  
-  
-|Tytuł|Opis|  
-|-----------|-----------------|  
-|[Dokumentacja wiersza polecenia asemblera ARM](../../assembler/arm/arm-assembler-command-line-reference.md)|Opis opcji wiersza polecenia armasm.|  
-|[Komunikaty diagnostyczne asemblera ARM](../../assembler/arm/arm-assembler-diagnostic-messages.md)|Opis najczęściej spotykanych armasm ostrzeżenia i komunikaty o błędach.|  
-|[Dyrektywy ARM dotycząca asemblera](../../assembler/arm/arm-assembler-directives.md)|W tym artykule opisano dyrektywy ARM, które różnią się w armasm.|  
-|[Ręczne odwołanie do architektury ARM](https://developer.arm.com/search#q=ARM%20Architecture%20Reference%20Manual) w witrynie sieci Web ARM Developer.|Wybierz odpowiednie ręcznego dla architektury ARM. Każdy zawiera sekcje odwołania o ARM, Thumb i NEON, VFP i dodatkowe informacje na temat języka asemblera ARM.|  
-|[ARM kompilatora armasm Podręcznik użytkownika](https://developer.arm.com/search#q=ARM%20Compiler%20armasm%20User%20Guide) w witrynie sieci Web ARM Developer.|Wybierz najnowszą wersję można znaleźć aktualne informacje na temat języka asemblera ARM. **Uwaga:** asemblera "armasm", która odnosi się do witryny sieci Web ARM Developer nie jest asemblera armasm firmy Microsoft, który znajduje się w programie Visual Studio i jest opisana w tej sekcji.|  
-  
-## <a name="see-also"></a>Zobacz też  
+Artykuły w tej części dokumentacji zapewniają materiały źródłowe dotyczące asemblera ARM firmy Microsoft (armasm) i pokrewnych narzędzi.
 
- [Funkcje wewnętrzne ARM](../../intrinsics/arm-intrinsics.md)   
- [Funkcje wewnętrzne kompilatora](../../intrinsics/compiler-intrinsics.md)
+## <a name="related-articles"></a>Powiązane artykuły
+
+|Tytuł|Opis|
+|-----------|-----------------|
+|[Dokumentacja wiersza polecenia asemblera ARM](../../assembler/arm/arm-assembler-command-line-reference.md)|W tym artykule opisano opcje wiersza polecenia armasm.|
+|[Komunikaty diagnostyczne asemblera ARM](../../assembler/arm/arm-assembler-diagnostic-messages.md)|W tym artykule opisano najczęściej spotykanych armasm ostrzeżenia i komunikaty o błędach.|
+|[Dyrektywy ARM dotycząca asemblera](../../assembler/arm/arm-assembler-directives.md)|Opisuje dyrektywy ARM, które różnią się w armasm.|
+|[Ręczne odwołanie do architektury ARM](https://developer.arm.com/search#q=ARM%20Architecture%20Reference%20Manual) w witrynie sieci Web deweloperów ARM.|Wybierz odpowiednie podręcznika dla architektury ARM. Każdy zawiera odwołanie do sekcji o ARM, miniatury, NEON i Visual FOXPRO i dodatkowe informacje na temat języka asemblera ARM.|
+|[ARM kompilator armasm Podręcznik użytkownika](https://developer.arm.com/search#q=ARM%20Compiler%20armasm%20User%20Guide) w witrynie sieci Web deweloperów ARM.|Wybierz najnowszą wersję można znaleźć aktualne informacje na temat języka asemblera ARM. **Uwaga:** asemblera "armasm", która odnosi się do witryny dla deweloperów ARM nie jest asemblera armasm firmy Microsoft, który znajduje się w programie Visual Studio i jest opisana w tej sekcji.|
+
+## <a name="see-also"></a>Zobacz także
+
+[Funkcje wewnętrzne ARM](../../intrinsics/arm-intrinsics.md)<br/>
+[Funkcje wewnętrzne kompilatora](../../intrinsics/compiler-intrinsics.md)<br/>

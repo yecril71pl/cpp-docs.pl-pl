@@ -18,12 +18,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 2a01c319f8a93931539b8ba79cc9c9f554317bab
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 1db86f2ba4b9f023d0a0a0abaf67114176c0ddf4
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43200172"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43690213"
 ---
 # <a name="adding-files-to-an-empty-win32-applications"></a>Dodawanie plików do pustych aplikacji Win32
 
@@ -45,4 +45,3 @@ Aby dodać pliki, które są ani źródła, nagłówkiem lub pliki zasobów do s
 ## <a name="see-also"></a>Zobacz też
 
 [Tworzenie pustej aplikacji klasycznej systemu Windows](../windows/creating-an-empty-windows-desktop-application.md)  
-[Wdrażanie aplikacji](https://msdn.microsoft.com/4ff8881d-0daf-47e7-bfe7-774c625031b4)

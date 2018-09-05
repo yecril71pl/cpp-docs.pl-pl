@@ -15,12 +15,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 12081cbc34182fc4c974bd96fd0ce7bbc78cca5f
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: ed404bcbbdd62c051b0f93e2607d1278bfbf0204
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43220232"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43691838"
 ---
 # <a name="walkthrough-using-the-concurrency-runtime-in-a-com-enabled-application"></a>Wskazówki: korzystanie ze współbieżności środowiska wykonawczego w aplikacji z możliwością korzystania z COM
 W tym dokumencie przedstawiono sposób korzystania ze środowiska uruchomieniowego współbieżności w aplikacji, która używa Component Object Model (COM).  
@@ -36,7 +36,7 @@ W tym dokumencie przedstawiono sposób korzystania ze środowiska uruchomieniowe
   
 - [Obsługa wyjątków](../../parallel/concrt/exception-handling-in-the-concurrency-runtime.md)  
   
- Aby uzyskać więcej informacji na temat modelu COM, zobacz [składnik modelu COM](https://msdn.microsoft.com/library/windows/desktop/ms680573).  
+ Aby uzyskać więcej informacji na temat modelu COM, zobacz [składnik modelu COM](/windows/desktop/com/component-object-model--com--portal).  
   
 ## <a name="managing-the-lifetime-of-the-com-library"></a>Zarządzanie okresem istnienia biblioteki COM  
  Mimo że korzystanie z modelu COM w środowisku uruchomieniowym współbieżności wykona te same zasady jako innego mechanizmu współbieżności, mogą pomóc poniższe wskazówki, możesz używać tych bibliotek razem skutecznie.  

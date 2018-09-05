@@ -21,12 +21,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 49973d203670eaa2aa0988d9de04784d13eaec09
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: e72cc680036d2c7e3737e5512c73115e29562018
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43196690"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43692218"
 ---
 # <a name="link-an-executable-to-a-dll"></a>Łączenie pliku wykonywalnego z biblioteką DLL  
   
@@ -76,7 +76,7 @@ Poniżej przedstawiono dwa zagrożenia z jawnymi łączami, w których trzeba pa
   
 -   Jeśli biblioteka DLL ma `DllMain` funkcję punktu wejścia, system operacyjny wywołuje funkcję w kontekście wątku, który wywołał `LoadLibrary`. Funkcja punktu wejścia nie jest wywoływana, jeśli biblioteka DLL jest już dołączony do procesu ze względu na poprzednie wywołanie `LoadLibrary` który miał nie odpowiedniego wywołania `FreeLibrary` funkcji. Jawne tworzenie łączy może powodować problemy, jeśli korzysta z biblioteki DLL `DllMain` funkcję, aby wykonać inicjowania na każdy wątek procesu, ponieważ wątki z już istniejącymi podczas `LoadLibrary` (lub `AfxLoadLibrary`) jest wywoływana nie zainicjowano.  
   
--   Jeśli biblioteka DLL deklaruje dane statyczne zakresu jako `__declspec(thread)`, może spowodować błąd ochrony w przypadku, gdy jawnie połączony. Po załadowaniu pliku DLL za pomocą wywołania `LoadLibrary`, powoduje błąd ochrony, zawsze wtedy, gdy kod odwołuje się do tych danych. (Dane statyczne zakres obejmuje zarówno globalne i lokalne elementy statyczne). W związku z tym podczas tworzenia biblioteki DLL, należy albo Unikaj używania magazynu wątków lokalnych lub informować użytkowników DLL o potencjalne pułapki związane z dynamiczne ładowanie biblioteki DLL. Aby uzyskać więcej informacji, zobacz [przy użyciu pamięci lokalnej wątku w Biblioteka dołączana dynamicznie (Windows SDK)](https://msdn.microsoft.com/library/windows/desktop/ms686997).  
+-   Jeśli biblioteka DLL deklaruje dane statyczne zakresu jako `__declspec(thread)`, może spowodować błąd ochrony w przypadku, gdy jawnie połączony. Po załadowaniu pliku DLL za pomocą wywołania `LoadLibrary`, powoduje błąd ochrony, zawsze wtedy, gdy kod odwołuje się do tych danych. (Dane statyczne zakres obejmuje zarówno globalne i lokalne elementy statyczne). W związku z tym podczas tworzenia biblioteki DLL, należy albo Unikaj używania magazynu wątków lokalnych lub informować użytkowników DLL o potencjalne pułapki związane z dynamiczne ładowanie biblioteki DLL. Aby uzyskać więcej informacji, zobacz [przy użyciu pamięci lokalnej wątku w Biblioteka dołączana dynamicznie (Windows SDK)](/windows/desktop/Dlls/using-thread-local-storage-in-a-dynamic-link-library).  
   
 <a name="linking-implicitly"></a>  
   

@@ -52,12 +52,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 05b259afe5c266db30ed31ed47e917f0ac1a5607
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 7c4ea8cf95298918088f54c3099a8f41d9c16ca9
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43196193"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43690155"
 ---
 # <a name="cprogressctrl-class"></a>Klasa CProgressCtrl
 Oferuje funkcje formantu Windows typowego paska postępu.  
@@ -143,7 +143,7 @@ virtual BOOL Create(
   
 ### <a name="parameters"></a>Parametry  
  *dwStyle*  
- Określa styl formantu paska postępu. Zastosuj dowolną kombinację stylesdescribed okna w [CreateWindow](https://msdn.microsoft.com/library/windows/desktop/ms632679) w zestawie SDK Windows, oprócz pasek style kontrolki do kontrolki postępu następujące:  
+ Określa styl formantu paska postępu. Zastosuj dowolną kombinację stylesdescribed okna w [CreateWindow](/windows/desktop/api/winuser/nf-winuser-createwindowa) w zestawie SDK Windows, oprócz pasek style kontrolki do kontrolki postępu następujące:  
   
 - Pbs_vertical — Wyświetla postęp informacji w pionie, od góry do dołu. Bez tej flagi kontrolkę paska postępu Wyświetla poziomie, w lewo po prawej stronie.  
   
@@ -181,10 +181,10 @@ virtual BOOL CreateEx(
   
 ### <a name="parameters"></a>Parametry  
  *dwExStyle*  
- Określa styl rozszerzony kontrolki tworzona. Aby uzyskać listę rozszerzone style Windows, zobacz *dwExStyle* parametr [elementu CreateWindowEx](https://msdn.microsoft.com/library/windows/desktop/ms632680) w zestawie Windows SDK.  
+ Określa styl rozszerzony kontrolki tworzona. Aby uzyskać listę rozszerzone style Windows, zobacz *dwExStyle* parametr [elementu CreateWindowEx](/windows/desktop/api/winuser/nf-winuser-createwindowexa) w zestawie Windows SDK.  
   
  *dwStyle*  
- Określa styl formantu paska postępu. Zastosuj dowolną kombinację Style okna ramowego opisanego w [CreateWindow](https://msdn.microsoft.com/library/windows/desktop/ms632679) w zestawie Windows SDK.  
+ Określa styl formantu paska postępu. Zastosuj dowolną kombinację Style okna ramowego opisanego w [CreateWindow](/windows/desktop/api/winuser/nf-winuser-createwindowa) w zestawie Windows SDK.  
   
  *Rect*  
  Odwołanie do [Prostokąt](https://msdn.microsoft.com/library/windows/desktop/dd162897) struktury opisujących rozmiar i położenie okna, można utworzyć klienta współrzędne *pParentWnd*.  

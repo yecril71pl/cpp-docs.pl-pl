@@ -142,12 +142,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: bcc4ec99ea8dc7dfc0706237e274b6b96f437829
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: fe0d8b5b0679e8770bda715d3d0da0eaa3b5cce3
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43214994"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43682859"
 ---
 # <a name="cpaneframewnd-class"></a>Klasa CPaneFrameWnd
 Aby uzyskać więcej informacji, zobacz kod źródłowy znajdujący się w **VC\\atlmfc\\src\\mfc** folder instalacji programu Visual Studio.  
@@ -210,7 +210,7 @@ class CPaneFrameWnd : public CWnd
 |[CPaneFrameWnd::OnShowPane](#onshowpane)|Wywoływane przez platformę, gdy okienka w oknie mini ramki jest ukryta lub wyświetlone.|  
 |[CPaneFrameWnd::PaneFromPoint](#panefrompoint)|Zwraca okienko, jeśli zawiera ona punkt dostarczone przez użytkownika wewnątrz okna mini ramki.|  
 |[CPaneFrameWnd::Pin](#pin)||  
-|`CPaneFrameWnd::PreTranslateMessage`|Używane przez klasę [CWinApp](../../mfc/reference/cwinapp-class.md) do translacji komunikatów okien, zanim zostaną rozesłane do [TranslateMessage](https://msdn.microsoft.com/library/windows/desktop/ms644955) i [DispatchMessage](https://msdn.microsoft.com/library/windows/desktop/ms644934) funkcje Windows.|  
+|`CPaneFrameWnd::PreTranslateMessage`|Używane przez klasę [CWinApp](../../mfc/reference/cwinapp-class.md) do translacji komunikatów okien, zanim zostaną rozesłane do [TranslateMessage](/windows/desktop/api/winuser/nf-winuser-translatemessage) i [DispatchMessage](/windows/desktop/api/winuser/nf-winuser-dispatchmessage) funkcje Windows.|  
 |[CPaneFrameWnd::RedrawAll](#redrawall)|Odrysowuje wszystkie okna mini ramki.|  
 |[CPaneFrameWnd::RemoveNonValidPanes](#removenonvalidpanes)|Metoda wywoływana przez platformę, by usunąć okienka nie jest ważna.|  
 |[CPaneFrameWnd::RemovePane](#removepane)|Usuwa okienko z okna mini ramki.|  
@@ -532,7 +532,7 @@ virtual int GetCaptionHeight() const;
  Wysokość w pikselach, okno mini ramki.  
   
 ### <a name="remarks"></a>Uwagi  
- Wywołaj tę metodę, aby określić wysokość okna mini ramki. Domyślnie wysokość jest równa SM_CYSMCAPTION. Aby uzyskać więcej informacji, zobacz [funkcja GetSystemMetrics](https://msdn.microsoft.com/library/windows/desktop/ms724385).  
+ Wywołaj tę metodę, aby określić wysokość okna mini ramki. Domyślnie wysokość jest równa SM_CYSMCAPTION. Aby uzyskać więcej informacji, zobacz [funkcja GetSystemMetrics](/windows/desktop/api/winuser/nf-winuser-getsystemmetrics).  
   
 ##  <a name="getcaptionrect"></a>  CPaneFrameWnd::GetCaptionRect  
  Oblicza prostokąt otaczający tytuł okna mini ramki.  

@@ -1,7 +1,7 @@
 ---
 title: Operator GE | Dokumentacja firmy Microsoft
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 08/30/2018
 ms.technology:
 - cpp-masm
 ms.topic: reference
@@ -18,22 +18,21 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 99ef77272c6f3242c0f5359f1625496da9ba3fb0
-ms.sourcegitcommit: dbca5fdd47249727df7dca77de5b20da57d0f544
+ms.openlocfilehash: e494e7eb36173d77a8fc0cd16015f97c4c756e34
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/28/2018
-ms.locfileid: "32055781"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43692351"
 ---
 # <a name="operator-ge"></a>operator GE
-Zwraca wartość true (-1) Jeśli *wyrażenie1* jest większa niż lub równa *wyrażenie2*, lub zwraca wartość false (0), jeśli nie jest.  
-  
-## <a name="syntax"></a>Składnia  
-  
-```  
-  
-expression1 GE expression2  
-```  
-  
-## <a name="see-also"></a>Zobacz też  
- [Dokumentacja operatorów](../../assembler/masm/operators-reference.md)
+
+Zwraca wartość true (-1) Jeśli *wyrażenie1* jest większa niż lub równa *wyrażenie2*, lub zwraca wartość false (0), jeśli nie jest.
+
+## <a name="syntax"></a>Składnia
+
+> wyrażenie1 wyrażenie2 GE
+
+## <a name="see-also"></a>Zobacz także
+
+[Dokumentacja operatorów](../../assembler/masm/operators-reference.md)<br/>

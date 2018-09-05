@@ -18,15 +18,15 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5c47154d7a5eddd26573612708462c0352da30ae
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: ea6f08a141d48183d96dba6cb02fcf31909af0ae
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32368437"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43686256"
 ---
 # <a name="appcontainer"></a>/APPCONTAINER
-Oznacza plik wykonywalny, który musi zostać uruchomiony w kontenerze aplikacji — na przykład aplikację Microsoft Store lub uniwersalnych systemu Windows.  
+Oznacza plik wykonywalny, który należy uruchomić w pojemniku aplikacji — na przykład aplikacji Microsoft Store lub Universal Windows.  
   
 ```  
   
@@ -34,8 +34,8 @@ Oznacza plik wykonywalny, który musi zostać uruchomiony w kontenerze aplikacji
 ```  
   
 ## <a name="remarks"></a>Uwagi  
- Plik wykonywalny, który ma **/APPCONTAINER** zestaw opcji może być uruchamiany tylko w kontenerze aplikacji, czyli środowisku izolacji procesu, wprowadzone w systemie Windows 8. W przypadku aplikacji Microsoft Store i uniwersalnych systemu Windows można ustawić tę opcję.  
+ Plik wykonywalny, który ma **/appcontainer** zestaw opcji może być uruchamiany tylko w pojemniku aplikacji, który jest środowiskiem izolacja procesu, wprowadzona w systemie Windows 8. W przypadku aplikacji Microsoft Store i Windows Universal można ustawić tę opcję.  
   
 ## <a name="see-also"></a>Zobacz też  
  [Opcje polecenia EDITBIN](../../build/reference/editbin-options.md)   
- [Co to jest aplikacji uniwersalnej systemu Windows?](http://go.microsoft.com/fwlink/p/?LinkID=522074)
+ [Co to jest aplikacją Universal Windows?](/windows/uwp/get-started/universal-application-platform-guide)

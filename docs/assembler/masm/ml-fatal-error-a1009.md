@@ -1,7 +1,7 @@
 ---
 title: Błąd krytyczny ML A1009 | Dokumentacja firmy Microsoft
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 08/30/2018
 ms.technology:
 - cpp-masm
 ms.topic: error-reference
@@ -16,19 +16,21 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 65df88c6ccfd19f7d8c7d745204a176dc3272674
-ms.sourcegitcommit: dbca5fdd47249727df7dca77de5b20da57d0f544
+ms.openlocfilehash: 5dde8fbc68fa125afd71798707acad879691af23
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/28/2018
-ms.locfileid: "32053291"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43687087"
 ---
 # <a name="ml-fatal-error-a1009"></a>Błąd krytyczny ML A1009
-**wiersz jest zbyt długi**  
-  
- Wiersz w pliku źródłowym przekroczyła limit równy 512 znaków.  
-  
- Jeśli wiele wierszy fizycznego jest połączony z znak kontynuacji wiersza (\), wynikowy wierszu logicznym jest nadal maksymalnie 512 znaków.  
-  
-## <a name="see-also"></a>Zobacz też  
- [Komunikaty o błędach ML](../../assembler/masm/ml-error-messages.md)
+
+**wiersz jest za długa**
+
+Wiersz w pliku źródłowym przekroczyła limit równy 512 znaków.
+
+Jeśli wiele wierszy fizycznych są łączone ze znakiem kontynuacji wiersza (\), wynikowy wierszu logicznym jest nadal ograniczona do 512 znaków.
+
+## <a name="see-also"></a>Zobacz także
+
+[Komunikaty o błędach ML](../../assembler/masm/ml-error-messages.md)<br/>

@@ -1,7 +1,7 @@
 ---
 title: KOŃCZY SIĘ (MASM) | Dokumentacja firmy Microsoft
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 08/30/2018
 ms.technology:
 - cpp-masm
 ms.topic: reference
@@ -16,22 +16,21 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e0c8712ef0c5820e91f3050d6ea1ed5fa861550a
-ms.sourcegitcommit: dbca5fdd47249727df7dca77de5b20da57d0f544
+ms.openlocfilehash: 5a198a3577769699ddae4a320429844ef7d46f3a
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/28/2018
-ms.locfileid: "32050288"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43692924"
 ---
 # <a name="ends-masm"></a>ENDS (MASM)
-Oznacza koniec segmentu, struktury lub związku *nazwa* wcześniej uruchomione za pomocą [segmentu](../../assembler/masm/segment.md), [struktury](../../assembler/masm/struct-masm.md), [Unii](../../assembler/masm/union.md), lub segment uproszczony dyrektywa.  
-  
-## <a name="syntax"></a>Składnia  
-  
-```  
-  
-name ENDS  
-```  
-  
-## <a name="see-also"></a>Zobacz też  
- [Dokumentacja dyrektyw](../../assembler/masm/directives-reference.md)
+
+Oznacza koniec segmentu, struktury lub Unii *nazwa* wcześniej uruchomione przy użyciu [segmentu](../../assembler/masm/segment.md), [struktury](../../assembler/masm/struct-masm.md), [Unii](../../assembler/masm/union.md), lub segment uproszczony dyrektywa.
+
+## <a name="syntax"></a>Składnia
+
+> nazwa kończy się
+
+## <a name="see-also"></a>Zobacz także
+
+[Dokumentacja dyrektyw](../../assembler/masm/directives-reference.md)<br/>

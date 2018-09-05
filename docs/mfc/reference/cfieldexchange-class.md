@@ -20,12 +20,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f6735cddf401ba09d3743b178357fb740b873c21
-ms.sourcegitcommit: 6408139d5f5ff8928f056bde93d20eecb3520361
+ms.openlocfilehash: 76167793f7252540dbe9feedbb2d83678ebdcacb
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37336510"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43688389"
 ---
 # <a name="cfieldexchange-class"></a>Klasa CFieldExchange
 Obsługuje procedury wymiany (zbiorcze RFX) zbiorczej pól rekordów z używanych przez klasy bazy danych i wymiana pól rekordów (RFX).  
@@ -117,7 +117,7 @@ void SetFieldType(UINT nFieldType);
 |Wartość parametru SetFieldType|Typ parametru element członkowski danych|  
 |----------------------------------|-----------------------------------|  
 |`CFieldExchange::inputParam`|Parametr wejściowy. Wartość, która została przekazana do zapytań lub procedurze składowanej w zestawie rekordów.|  
-|"ieldExchange::param **`ame as **CFieldExchange::inputParam`.|  
+|`CFieldExchange::param` | Taki sam jak `CFieldExchange::inputParam`.|  
 |`CFieldExchange::outputParam`|Parametr wyjściowy. Zwracana wartość wynosząca procedury składowanej w zestawie rekordów.|  
 |`CFieldExchange::inoutParam`|Parametr input/output. Wartość, która jest przekazywana do i zwrócone przez procedurę składowaną w zestawie rekordów.|  
   

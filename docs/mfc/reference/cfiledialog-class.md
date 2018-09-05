@@ -142,12 +142,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e8743619b1c47f085aacd569a7b90d716f175842
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 45b9b5bb5beae8599c360d35df878a38b591b1b4
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43210808"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43685746"
 ---
 # <a name="cfiledialog-class"></a>Klasa CFileDialog
 Hermetyzuje wspólne okno dialogowe, które służy do otwarcia pliku lub pliku operacji zapisywania.  
@@ -1398,7 +1398,7 @@ BOOL SetProperties(LPCWSTR lpszPropList);
   
 ### <a name="parameters"></a>Parametry  
  *lpszPropList*  
- Listę wstępnie zdefiniowanych właściwości oddzielone ";". Aby uzyskać listę flag, zobacz **flagi** części [LPSTRFILE](https://msdn.microsoft.com/8cecfd45-f7c1-4f8d-81a0-4e7fecc3b104).  
+ Listę wstępnie zdefiniowanych właściwości oddzielone ";". Aby uzyskać listę flag, zobacz **flagi** części [LPSTRFILE](/windows/desktop/api/commdlg/ns-commdlg-tagofna).  
   
 ### <a name="remarks"></a>Uwagi  
   

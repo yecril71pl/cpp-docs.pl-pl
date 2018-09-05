@@ -27,12 +27,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 869eba484a5ffa4e9c57c9c65a9b74e0962114e3
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 66096fcfee62e869577527b632f3409fea231b35
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43204043"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43690834"
 ---
 # <a name="errorcondition-class"></a>error_condition — Klasa
 
@@ -157,7 +157,7 @@ error_condition(_Enum _Errcode,
 
 Pierwszy Konstruktor przechowuje błąd kodu wartość zero i wskaźnik [generic_category](../standard-library/system-error-functions.md#generic_category).
 
-Drugi Konstruktor magazynów *val* jako wartość kodu błędu i wskaźnik [error_category](https://msdn.microsoft.com/6fe57a15-63a1-4e79-8af4-6738e43e19c8).
+Drugi Konstruktor magazynów *val* jako wartość kodu błędu i wskaźnik [error_category](../standard-library/error-category-class.md).
 
 Trzeci Konstruktor magazynów `(value_type)_Errcode` jako wartość kodu błędu i wskaźnik [generic_category](../standard-library/system-error-functions.md#generic_category).
 

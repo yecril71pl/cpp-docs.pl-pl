@@ -17,12 +17,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6bec76b407221fb9029662ba982a10edc4ca9c77
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: 3a8c5affeaee73be7dd464ea44ea62db35257f7b
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42604923"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43689759"
 ---
 # <a name="walkthrough-debugging-a-c-amp-application"></a>Wskazówki: debugowanie aplikacji C++ AMP
 W tym temacie pokazano, jak można debugować aplikację, która używa C++ Accelerated Massive Parallelism (C++ AMP), aby móc korzystać z jednostki przetwarzania grafiki (GPU). Używa programu równoległych redukcji, która będzie sumować dużą tablicę liczb całkowitych. W instruktażu przedstawiono następujące zagadnienia:  
@@ -398,4 +398,4 @@ Uruchom wszystkie wątki we fragmencie danego na wiersz zawierający kursor przy
 [Debugowanie kodu GPU](/visualstudio/debugger/debugging-gpu-code)   
 [Porady: Korzystanie z okna wątków GPU](/visualstudio/debugger/how-to-use-the-gpu-threads-window)   
 [Porady: Korzystanie z okna równoległego wyrażenia kontrolnego](/visualstudio/debugger/how-to-use-the-parallel-watch-window)   
-[Analizowanie kodu C++ AMP w narzędziu Concurrency Visualizer](http://go.microsoft.com/fwlink/p/?linkid=253987&clcid=0x409)
+[Analizowanie kodu C++ AMP w narzędziu Concurrency Visualizer](https://blogs.msdn.microsoft.com/nativeconcurrency/2012/03/09/analyzing-c-amp-code-with-the-concurrency-visualizer/)

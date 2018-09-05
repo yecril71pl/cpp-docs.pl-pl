@@ -24,12 +24,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9fc0bc1789e4fc4f11b9d0becfda656a42d0ec95
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 29ab603001405056626af0debbde7b6f8ef78704
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43214199"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43690578"
 ---
 # <a name="file-types-created-for-visual-c-projects"></a>Typy plików utworzonych dla projektów Visual C++
 W tym temacie opisano wszystkie typy plików, które są skojarzone z projektów Visual C++ dla klasycznych aplikacji klasycznych. Rzeczywiste pliki zawarte w projekcie są zależne od typu projektu i opcje wybrane w przypadku korzystania z kreatora.  
@@ -73,7 +73,7 @@ W tym temacie opisano wszystkie typy plików, które są skojarzone z projektów
 |. HxC.|Projekt|Plik projektu pomocy.|  
 |.ico|Zasób|Plik graficzny mapy bitowej ikony.|  
 |.IDB|Kompilowanie|Plik stanu, zawierający informacje o zależnościach między plikami źródłowymi a definicje klas, które mogą być używane przez kompilator podczas minimalną ponowną kompilację i kompilacji przyrostowej. Użyj [/Fd](../build/reference/fd-program-database-file-name.md) opcję kompilatora, aby określić nazwę pliku .idb. Zobacz [/Gm (Włącz minimalną ponowną kompilację)](../build/reference/gm-enable-minimal-rebuild.md) Aby uzyskać więcej informacji.|  
-|.IDL|Kompilowanie|Plik języka definicji interfejsu. Zobacz [plik definicji interfejsu (IDL)](https://msdn.microsoft.com/library/windows/desktop/aa378712) w zestawie Windows SDK, aby uzyskać więcej informacji.|  
+|.IDL|Kompilowanie|Plik języka definicji interfejsu. Zobacz [plik definicji interfejsu (IDL)](/windows/desktop/Rpc/the-interface-definition-language-idl-file) w zestawie Windows SDK, aby uzyskać więcej informacji.|  
 |.ilk|Konsolidacja|Plik konsolidowania przyrostowego. Zobacz [/INCREMENTAL](../build/reference/incremental-link-incrementally.md) Aby uzyskać więcej informacji.|  
 |map|Konsolidacja|Plik tekstowy zawierający informacje o konsolidatora. Użyj [/Fm](../build/reference/fm-name-mapfile.md) — opcja kompilatora nazwę pliku mapy. Zobacz [/MAP](../build/reference/map-generate-mapfile.md) Aby uzyskać więcej informacji.|  
 |.mfcribbon ms|Zasób|Plik zasobu, który zawiera kod XML, który definiuje przyciskami, formanty i atrybuty na Wstążce. Aby uzyskać więcej informacji, zobacz [Projektant wstążki (MFC)](../mfc/ribbon-designer-mfc.md).|  
@@ -81,7 +81,7 @@ W tym temacie opisano wszystkie typy plików, które są skojarzone z projektów
 |.pch|Debugowanie|Prekompilowany plik nagłówkowy.|  
 |.RC, .rc2|Zasób|[Pliki skryptów zasobów](../windows/working-with-resource-files.md) by wygenerować zasoby.|  
 |.SBR|Kompilowanie|Plik pośredni przeglądarki źródeł. Plik wejściowy dla [BSCMAKE](../build/reference/bscmake-options.md).|  
-|.sln|Rozwiązanie|[Rozwiązania](https://msdn.microsoft.com/a45c299d-69f5-4b67-879d-1383417df0a7) pliku.|  
+|.sln|Rozwiązanie|[Rozwiązania](/visualstudio/ide/solutions-and-projects-in-visual-studio) pliku.|  
 |.suo|Rozwiązanie|Opcje pliku rozwiązania.|  
 |.txt|Zasób|Plik tekstowy, zwykle w pliku "readme".|  
 |.VAP|Projekt|Plik projektu programu Visual Studio Analyzer.|  

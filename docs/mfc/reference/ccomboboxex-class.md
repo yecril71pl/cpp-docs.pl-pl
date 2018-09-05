@@ -46,12 +46,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7c3626fbdba9fcf34364237e8970e5b941ecce9d
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: cd480e7b1ffb0923e33361c545bca68202ec3f4f
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43201529"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43687719"
 ---
 # <a name="ccomboboxex-class"></a>Klasa CComboBoxEx
 Rozszerza formant pola kombi, umożliwiając obsługę list obrazów.  
@@ -200,7 +200,7 @@ virtual BOOL CreateEx(
   
 ### <a name="parameters"></a>Parametry  
  *dwExStyle*  
- Określa styl rozszerzony kontrolki tworzona. Aby uzyskać listę rozszerzone style Windows, zobacz *dwExStyle* parametr [elementu CreateWindowEx](https://msdn.microsoft.com/library/windows/desktop/ms632680) w zestawie Windows SDK.  
+ Określa styl rozszerzony kontrolki tworzona. Aby uzyskać listę rozszerzone style Windows, zobacz *dwExStyle* parametr [elementu CreateWindowEx](/windows/desktop/api/winuser/nf-winuser-createwindowexa) w zestawie Windows SDK.  
   
  *dwStyle*  
  Styl kontrolki pola kombi. Zobacz [Utwórz](#create) listę style.  
@@ -381,7 +381,7 @@ CImageList* SetImageList(CImageList* pImageList);
  Wskaźnik do [CImageList](../../mfc/reference/cimagelist-class.md) obiekt zawierający obrazy używanych wcześniej przez `CComboBoxEx` kontroli. Wartość NULL, jeśli uprzednio ustawioną nie listy obrazów.  
   
 ### <a name="remarks"></a>Uwagi  
- Ta funkcja elementu członkowskiego implementuje funkcje komunikatu [CBEM_SETIMAGELIST](/windows/desktop/Controls/cbem-setimagelist), zgodnie z opisem w zestawie Windows SDK. Jeśli zmienisz wysokość domyślny formant edycji, należy wywołać funkcję Win32 [SetWindowPos](https://msdn.microsoft.com/library/windows/desktop/ms633545) zmiana rozmiaru formantu po wywołaniu metody `SetImageList`, lub nie będzie on wyświetlany poprawnie.  
+ Ta funkcja elementu członkowskiego implementuje funkcje komunikatu [CBEM_SETIMAGELIST](/windows/desktop/Controls/cbem-setimagelist), zgodnie z opisem w zestawie Windows SDK. Jeśli zmienisz wysokość domyślny formant edycji, należy wywołać funkcję Win32 [SetWindowPos](/windows/desktop/api/winuser/nf-winuser-setwindowpos) zmiana rozmiaru formantu po wywołaniu metody `SetImageList`, lub nie będzie on wyświetlany poprawnie.  
   
  `CImageList` Obiekt wskazywany przez wartość zwracana jest obiektem tymczasowym i jest niszczony, podczas następnego przetwarzania bezczynności.  
   

@@ -15,15 +15,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: dfe64e627fd3ca37ab1e1d2d820cafaf3a6a4258
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 65a3c4da1664e34e40e0961655c130f320efb17b
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43199968"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43690706"
 ---
 # <a name="using-verifiable-assemblies-with-sql-server-ccli"></a>Używanie zestawów weryfikowalnych z programem SQL Server (C++/CLI)
-Rozszerzone procedury składowane spakowany jako bibliotek dołączanych dynamicznie (dll), umożliwiają do rozszerzania funkcji programu SQL Server za pomocą funkcji przygotowane w programie Visual C++. Rozszerzone procedury składowane są implementowane jako funkcjami wewnątrz biblioteki dll. Oprócz funkcji, rozszerzone procedury składowane można również zdefiniować [typy zdefiniowane przez użytkownika](../cpp/classes-and-structs-cpp.md) i [funkcje](https://msdn.microsoft.com/de255454-f45e-4281-81f9-bc61893ac5da) (na przykład Suma lub średnia).  
+Rozszerzone procedury składowane spakowany jako bibliotek dołączanych dynamicznie (dll), umożliwiają do rozszerzania funkcji programu SQL Server za pomocą funkcji przygotowane w programie Visual C++. Rozszerzone procedury składowane są implementowane jako funkcjami wewnątrz biblioteki dll. Oprócz funkcji, rozszerzone procedury składowane można również zdefiniować [typy zdefiniowane przez użytkownika](../cpp/classes-and-structs-cpp.md) i agregowanie funkcji (np. Suma lub średnia).  
   
  Gdy klient wykonuje procedurę przechowywaną, wyszukiwanie programu SQL Server dla biblioteki DLL skojarzone z rozszerzoną procedurę składowaną i ładuje bibliotekę DLL. Program SQL Server wywołuje żądanego rozszerzoną procedurę składowaną i wykonuje go w kontekście zabezpieczeń określonym. Rozszerzonej procedury składowanej, a następnie wyników przebiegów ustawia i zwraca parametry do serwera.  
   

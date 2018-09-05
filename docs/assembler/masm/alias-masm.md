@@ -1,7 +1,7 @@
 ---
 title: ALIAS (MASM) | Dokumentacja firmy Microsoft
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 08/30/2018
 ms.technology:
 - cpp-masm
 ms.topic: reference
@@ -16,34 +16,29 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7b14e1c41a448d0cb7014dabc50a42305249938f
-ms.sourcegitcommit: dbca5fdd47249727df7dca77de5b20da57d0f544
+ms.openlocfilehash: c6a977d35040d8ca25cd3bd4ae4def233092b37a
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/28/2018
-ms.locfileid: "32049170"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43691065"
 ---
 # <a name="alias-masm"></a>ALIAS (MASM)
-**ALIAS** dyrektywy tworzy alternatywną nazwę funkcji.  Dzięki temu można utworzyć wiele nazw dla funkcji lub bibliotek, które umożliwia konsolidator (LINK.exe) do mapowania funkcji starego nową funkcję.  
-  
-## <a name="syntax"></a>Składnia  
-  
-```  
-  
-ALIAS  <  
-alias  
-> = <  
-actual-name  
->  
-  
-```  
-  
-#### <a name="parameters"></a>Parametry  
- `actual-name`  
- Rzeczywistą nazwą funkcji lub procedury.  Nawiasy są wymagane.  
-  
- `alias`  
- Alternatywną nazwę.  Nawiasy są wymagane.  
-  
-## <a name="see-also"></a>Zobacz też  
- [Dokumentacja dyrektyw](../../assembler/masm/directives-reference.md)
+
+**ALIAS** tworzy dyrektywa alternatywną nazwę funkcji.  Dzięki temu można utworzyć wiele nazw dla funkcji lub tworzenie bibliotek, które umożliwiają łączący (LINK.exe) do mapowania funkcję starej do nowej funkcji.
+
+## <a name="syntax"></a>Składnia
+
+> ALIAS \< *alias*> = \< *rzeczywista nazwa*>
+
+#### <a name="parameters"></a>Parametry
+
+*Rzeczywista nazwa*<br/>
+Rzeczywista nazwa funkcji lub procedury.  Nawiasy są wymagane.
+
+*Alias*<br/>
+Nazwa aliasu lub alternatywne.  Nawiasy są wymagane.
+
+## <a name="see-also"></a>Zobacz także
+
+[Dokumentacja dyrektyw](../../assembler/masm/directives-reference.md)<br/>

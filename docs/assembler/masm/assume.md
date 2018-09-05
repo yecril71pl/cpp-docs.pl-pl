@@ -1,7 +1,7 @@
 ---
 title: ZAŁÓŻMY | Dokumentacja firmy Microsoft
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 08/30/2018
 ms.technology:
 - cpp-masm
 ms.topic: reference
@@ -16,27 +16,29 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f8898895d2e107e522fe88dc954146d64e6f62b9
-ms.sourcegitcommit: dbca5fdd47249727df7dca77de5b20da57d0f544
+ms.openlocfilehash: 8a0e43548292d2ffecbebdaead6aa12d6dacc352
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/28/2018
-ms.locfileid: "32050639"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43693811"
 ---
 # <a name="assume"></a>ASSUME
-Włącza sprawdzanie wartości rejestru.  
-  
-## <a name="syntax"></a>Składnia  
-  
-```  
-ASSUME segregister:name [[, segregister:name]]...  
-ASSUME dataregister:type [[, dataregister:type]]...  
-ASSUME register:ERROR [[, register:ERROR]]...  
-ASSUME [[register:]] NOTHING [[, register:NOTHING]]...  
-```  
-  
-## <a name="remarks"></a>Uwagi  
- Po `ASSUME` zacznie obowiązywać, asemblera Obserwujący się zmian wartości danego rejestrów. **Błąd** generuje błąd, jeśli jest używany w rejestrze. **NIC** usuwa zarejestrować sprawdzanie błędów. Można łączyć różnego rodzaju założenia w jednej instrukcji.  
-  
-## <a name="see-also"></a>Zobacz też  
- [Dokumentacja dyrektyw](../../assembler/masm/directives-reference.md)
+
+Włącza sprawdzanie błędów dotyczących wartości rejestru.
+
+## <a name="syntax"></a>Składnia
+
+> PRZYJMIJ *segregister*:*nazwa* [[, *segregister*:*nazwa*]]...<br/>
+> PRZYJMIJ *dataregister*:*typu* [[, *dataregister*:*typu*]]...<br/>
+> PRZYJMIJ *zarejestrować*: błąd [[, *zarejestrować*: błąd]]...<br/>
+> PRZYJMIJ [[*zarejestrować*:]] nic [[, *zarejestrować*: nie RÓB]]...
+
+
+## <a name="remarks"></a>Uwagi
+
+Po `ASSUME` zacznie obowiązywać, asembler obserwuje się zmian wartości danego rejestrów. **Błąd** generuje błąd, jeśli rejestr jest używany. **Nic nie** usuwa zarejestrować, sprawdzanie błędów. Można łączyć różnego rodzaju założenia w jednej instrukcji.
+
+## <a name="see-also"></a>Zobacz także
+
+[Dokumentacja dyrektyw](../../assembler/masm/directives-reference.md)<br/>

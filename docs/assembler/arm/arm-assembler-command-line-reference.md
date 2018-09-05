@@ -1,7 +1,7 @@
 ---
-title: Informacje w wierszu polecenia asemblera ARM | Dokumentacja firmy Microsoft
+title: Dokumentacja wiersza polecenia asemblera ARM | Dokumentacja firmy Microsoft
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 08/30/2018
 ms.technology:
 - cpp-masm
 ms.topic: reference
@@ -12,85 +12,89 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f196b4aad76c72233c179249386dbb42960b31a6
-ms.sourcegitcommit: dbca5fdd47249727df7dca77de5b20da57d0f544
+ms.openlocfilehash: e88f35035944ee24bed0bef8733db0e2c0139c83
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/28/2018
-ms.locfileid: "32054614"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43685344"
 ---
 # <a name="arm-assembler-command-line-reference"></a>Informacje w wierszu polecenia asemblera ARM
-W tym artykule omówiono wiersza polecenia asemblera Microsoft ARM *armasm*, który kompiluje języka zestawu ARMv7 Thumb do przez firmę Microsoft implementacją z typowych Format pliku obiektu (COFF). Konsolidator połączyć COFF kodu za pomocą kodu obiektu, który jest generowany przez asemblera ARM lub za pomocą kompilatora C, wraz z biblioteki obiektów, które są tworzone przez bibliotekarza.  
-  
-## <a name="syntax"></a>Składnia  
-  
-```  
-armasm [[options]] sourcefile objectfile  
-```  
-  
-```  
-armasm [[options]] -o objectfile sourcefile  
-```  
-  
-#### <a name="parameters"></a>Parametry  
- `options`  
- — błędy `filename`  
- Przekieruj błędach i komunikaty ostrzegawcze do `filename`.  
-  
- -i `dir[;dir]`  
- Dodaj określone katalogi na ścieżkę wyszukiwania dyrektywy include.  
-  
- -wstępnie `directive`  
- Określ SETA, SETL lub zestawy dyrektywy wstępnie symbolu. Przykład: **armasm.exe-wstępnie "COUNT SETA 150" source.asm**. Aby uzyskać więcej informacji, zobacz [przewodnik narzędzia asemblera ARM](http://go.microsoft.com/fwlink/p/?linkid=246102).  
-  
- -nowarn  
- Wyłącz wszystkie ostrzeżenia.  
-  
- -Ignoruj `warning`  
- Wyłącz określonego ostrzeżenie. Możliwe wartości zobacz sekcję o ostrzeżenia.  
-  
- -help  
- Drukuj komunikat pomocy wiersza polecenia.  
-  
- -machine `machine`  
- Określ typ urządzenia, które można ustawić w nagłówku PE.  Możliwe wartości `machine` są:  
-**ARM**— ustawia typ maszyny IMAGE_FILE_MACHINE_ARMNT. Domyślnie włączone.   
-**THUMB**— ustawia typ maszyny IMAGE_FILE_MACHINE_THUMB.  
-  
- -oldit  
- Generowanie ARMv7 stylu bloki IT.  Domyślnie ARMv8 zgodnego IT bloki są generowane.  
-  
- -via `filename`  
- Przeczytaj dodatkowe argumenty wiersza polecenia z `filename`.  
-  
- -16  
- Składanie źródła jako 16-bitowe instrukcje przycisku suwaka.  Domyślnie włączone.  
-  
- -32  
- Składanie źródła jako 32-bitowe instrukcje ARM.  
-  
- -g  
- Generuj informacje debugowania.  
-  
- -errorReport: `option`  
- Określ asemblera jak wewnętrzne błędy są zgłaszane do firmy Microsoft.  Możliwe wartości `option` są:   
-**Brak**— nie wysyłaj raportów.   
-**wiersz**— Monituj użytkownika, aby bezpośrednio wysyłać raporty.   
-**kolejki**— Monituj użytkownika o wysyłanie raportów przy kolejnym zalogowaniu administratora. Domyślnie włączone.   
-**Wyślij**— Wyślij raporty automatycznie.  
-  
- `sourcefile`  
- Nazwa pliku źródłowego.  
-  
- `objectfile`  
- Nazwa pliku obiektu (dane wyjściowe).  
-  
- W poniższym przykładzie pokazano sposób użycia armasm w typowy scenariusz. Najpierw użyj armasm do tworzenia pliku źródłowego (.asm) języka zestawu do pliku obiektu (.obj). Następnie użyj CL wiersza polecenia kompilatora C, aby skompilować pliku źródłowego (.c), a także określić opcję konsolidatora Połącz plik z obiektu ARM.  
-  
- **armasm myasmcode.asm -o myasmcode.obj**  
-  
- **cl myccode.c /link myasmcode.obj**  
-  
-## <a name="see-also"></a>Zobacz też  
- [Komunikaty diagnostyczne asemblera ARM](../../assembler/arm/arm-assembler-diagnostic-messages.md)   
- [Dyrektywy ARM dotycząca asemblera](../../assembler/arm/arm-assembler-directives.md)
+
+W tym artykule omówiono wiersza polecenia asemblera ARM firmy Microsoft, *armasm*, który kompiluje język asemblera ARMv7 Thumb w implementacji firmy Microsoft z Common Object File Format (COFF). Konsolidator może połączyć COFF kodu za pomocą kod obiektowy, który jest wytwarzany przez asemblera ARM lub przez kompilator języka C, wraz z biblioteki obiektów, które są tworzone przez bibliotekarza.
+
+## <a name="syntax"></a>Składnia
+
+> **armasm** [*opcje*] *sourcefile* *objectfile*
+> **armasm** [*opcje *] **-o** *objectfile* *sourcefile*
+
+### <a name="parameters"></a>Parametry
+
+*Opcje*<br/>
+Kombinacja zero lub więcej z następujących czynności:
+
+- **-błędy** *nazwy pliku*<br/>
+   Przekierowywanie błędach i komunikaty ostrzegawcze do *filename*.
+
+- **-i** *dir*[**;** <em>dir</em>]<br/>
+   Dodaj określonych katalogach na ścieżkę wyszukiwania dołączenia.
+
+- **-wstępnie** *— dyrektywa*<br/>
+   Określ dyrektywę SETA, SETL lub zestawy w celu wstępnego zdefiniowania symbolu.<br/>
+   Przykład: **armasm.exe — wstępnie source.asm "ZLICZ SETA 150"**<br/>
+   Aby uzyskać więcej informacji, zobacz [armasm ARM kompilator podręcznik](http://infocenter.arm.com/help/topic/com.arm.doc.dui0802b/index.html).
+
+- **-nowarn**<br/>
+   Wyłącz wszystkie komunikaty ostrzegawcze.
+
+- **-Ignoruj** *ostrzeżenie*<br/>
+   Wyłącz określone ostrzeżenie. Możliwe wartości zobacz sekcję dotyczącą ostrzeżenia.
+
+- **-help**<br/>
+   Drukuj komunikat pomoc w wierszu polecenia.
+
+- **-machine** *maszyny*<br/>
+   Określ typ urządzenia, aby ustawić nagłówek PE.  Możliwe wartości dla *maszyny* są:<br/>
+   **ARM**— ustawia typ maszyny IMAGE_FILE_MACHINE_ARMNT. Domyślnie włączone.<br/>
+   **THUMB**— ustawia typ maszyny IMAGE_FILE_MACHINE_THUMB.
+
+- **-oldit**<br/>
+   Generuj styl ARMv7 bloki IT.  Domyślnie zgodnego z ARMv8 IT bloki są generowane.
+
+- **— za pośrednictwem** *nazwy pliku*<br/>
+   Przeczytaj dodatkowe argumenty wiersza polecenia z *filename*.
+
+- **-16**<br/>
+   Złóż źródła jako instrukcji Thumb 16-bitowych.  Domyślnie włączone.
+
+- **-32**<br/>
+   Złóż źródła jako 32-bitowe instrukcje ARM.
+
+- **-g**<br/>
+   Generuj informacje debugowania.
+
+- **-errorReport:** *opcji*<br/>
+   Określ asemblera jak wewnętrzne błędy są zgłaszane do firmy Microsoft.  Możliwe wartości dla *opcji* są:<br/>
+   **Brak**— nie będą wysyłane raporty.<br/>
+   **wiersz**— Monituj użytkownika, aby natychmiast je wysyłać.<br/>
+   **kolejka**— monitować użytkownika o wysyłanie raportów przy kolejnym zalogowaniu administratora. Domyślnie włączone.<br/>
+   **Wyślij**— Wyślij raporty automatycznie.
+
+*sourcefile*<br/>
+Nazwa pliku źródłowego.
+
+*objectfile*<br/>
+Nazwa pliku obiektu (dane wyjściowe).
+
+## <a name="remarks"></a>Uwagi
+
+Poniższy przykład pokazuje, jak używać armasm w typowym scenariuszu. Najpierw użyj armasm do utworzenia pliku źródłowego (sam) języka zestawu do pliku obiektu (.obj). Następnie użyj kompilator języka C z wiersza polecenia CL do kompilowania pliku źródłowego (.c) i również określić opcję konsolidatora, aby połączyć pliku obiektu ARM.
+
+**armasm myasmcode.asm -o myasmcode.obj**
+
+**cl myccode.c /link myasmcode.obj**
+
+## <a name="see-also"></a>Zobacz także
+
+[Komunikaty diagnostyczne asemblera ARM](../../assembler/arm/arm-assembler-diagnostic-messages.md)<br/>
+[Dyrektywy ARM dotycząca asemblera](../../assembler/arm/arm-assembler-directives.md)<br/>

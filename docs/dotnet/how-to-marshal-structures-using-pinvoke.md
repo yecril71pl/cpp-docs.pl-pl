@@ -18,12 +18,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: a26394a906f40d6dc194118bb312cfe1a0ce834e
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 6719d7b104c5dd520a8c4e8a027ea47bd76a95bc
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43219887"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43689513"
 ---
 # <a name="how-to-marshal-structures-using-pinvoke"></a>Porady: przeprowadzanie marshalingu struktur za pomocą funkcji PInvoke
 W tym dokumencie wyjaśniono, jak natywne funkcje, których struktury stylu C może być wywoływana z funkcji zarządzanej przez przy użyciu metody P/Invoke. Mimo że zaleca się, że korzystasz z funkcji międzyoperacyjności języka C++, a nie P/Invoke ponieważ P/Invoke zapewnia nieco błąd kompilacji, raportowanie, nie jest bezpieczny i może być uciążliwe zaimplementować, jeśli niezarządzanego interfejsu API jest spakowany jako biblioteki DLL i kod źródłowy jest dostępne metody P/Invoke jest jedyną opcją. W przeciwnym razie można znaleźć w następujących dokumentach:  
@@ -34,7 +34,7 @@ W tym dokumencie wyjaśniono, jak natywne funkcje, których struktury stylu C mo
   
  Domyślnie struktur natywnych i zarządzanych są wyświetlane inaczej w pamięci, dlatego pomyślnie przekazywanie struktury przez granicę zarządzanych/niezarządzanych wymaga wykonania dodatkowych czynności w celu zachowania integralności danych.  
   
- W tym dokumencie opisano kroki wymagane do zdefiniowania zarządzanych odpowiedników funkcji natywnej struktury i jak wynikowy struktury mogą być przekazywane do funkcji niezarządzanych. W tym dokumencie założono, że prosty struktur — te, które nie zawierają ciągi lub wskaźniki — są używane. Aby uzyskać informacje o współdziałaniu niekopiowalnych, zobacz [za pomocą międzyoperacyjności języka C++ (niejawna funkcja PInvoke)](../dotnet/using-cpp-interop-implicit-pinvoke.md). Zwracana wartość metody P/Invoke nie może być typów niekopiowalnych. Typy Kopiowalne mają tę samą reprezentację w kodzie zarządzanym i niezarządzanym. Aby uzyskać więcej informacji, zobacz [Kopiowalne i typy danych Kopiowalnych inne niż](https://msdn.microsoft.com/Library/d03b050e-2916-49a0-99ba-f19316e5c1b3).  
+ W tym dokumencie opisano kroki wymagane do zdefiniowania zarządzanych odpowiedników funkcji natywnej struktury i jak wynikowy struktury mogą być przekazywane do funkcji niezarządzanych. W tym dokumencie założono, że prosty struktur — te, które nie zawierają ciągi lub wskaźniki — są używane. Aby uzyskać informacje o współdziałaniu niekopiowalnych, zobacz [za pomocą międzyoperacyjności języka C++ (niejawna funkcja PInvoke)](../dotnet/using-cpp-interop-implicit-pinvoke.md). Zwracana wartość metody P/Invoke nie może być typów niekopiowalnych. Typy Kopiowalne mają tę samą reprezentację w kodzie zarządzanym i niezarządzanym. Aby uzyskać więcej informacji, zobacz [Kopiowalne i typy danych Kopiowalnych inne niż](/dotnet/framework/interop/blittable-and-non-blittable-types).  
   
  Marshaling prosty, struktur danych kopiowalnych granicę zarządzanych/niezarządzanych najpierw wymaga zdefiniowania zarządzanej wersji natywnej struktury. Te struktury mogą mieć dowolną nazwę prawne; nie ma relacji między wersjami natywnych i zarządzanych dwie struktury inne niż ich układ danych. Dlatego jest istotne, że zarządzanej wersji zawiera pola, które są takie same, rozmiar i w tej samej kolejności, jak natywnej wersji. (Nie ma mechanizmu za zapewnienie, że zarządzanego i natywnego wersje struktury są równoważne, więc niezgodności nie staną się widoczne do czasu wykonywania. Jest odpowiedzialny za programisty, aby upewnić się, że dwie struktury mają taki sam układ danych).  
   

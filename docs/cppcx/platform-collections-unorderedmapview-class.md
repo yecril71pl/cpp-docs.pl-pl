@@ -11,12 +11,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c463dbcb68b5a4b875dbb109eedc07a3b4b27c86
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 2251703307c5f6ed5787227a4def42dfbcd3fc18
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43203031"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43684012"
 ---
 # <a name="platformcollectionsunorderedmapview-class"></a>Platform::Collections::UnorderedMapView — Klasa
 Reprezentuje widok tylko do odczytu *mapy*, który stanowi kolekcję par klucz wartość.  
@@ -42,7 +42,7 @@ ref class UnorderedMapView sealed;
  Typ, który dostarcza obiekt funkcji, która może porównać dwie wartości klucza dla równości. Domyślnie [std::equal_to\<K >](../standard-library/equal-to-struct.md)  
   
 ### <a name="remarks"></a>Uwagi  
- UnorderedMapView jest konkretną implementację C++ [Windows::Foundation::Collections::IMapView\<K, V >](http://go.microsoft.com/fwlink/p/?LinkId=262409) interfejsu, który jest przekazywany między interfejsem binarnym aplikacji (ABI). Aby uzyskać więcej informacji, zobacz [kolekcje (C + +/ CX)](../cppcx/collections-c-cx.md).  
+ UnorderedMapView jest konkretną implementację C++ [Windows::Foundation::Collections::IMapView\<K, V >](/uwp/api/Windows.Foundation.Collections.IMapView_K_V_) interfejsu, który jest przekazywany między interfejsem binarnym aplikacji (ABI). Aby uzyskać więcej informacji, zobacz [kolekcje (C + +/ CX)](../cppcx/collections-c-cx.md).  
   
 ### <a name="members"></a>Elementy członkowskie  
   
@@ -221,7 +221,7 @@ UnorderedMapView(
  Element typename UnorderedMapView.  
   
  `H`  
- Obiekt funkcji, która może być wartość skrótu dla klucza. Wartość domyślna to [std::hash\<K >](https://msdn.microsoft.com/54f67435-af9d-4217-a29d-fa4d2491a104) dla typów, `std::hash` obsługuje.  
+ Obiekt funkcji, która może być wartość skrótu dla klucza. Wartość domyślna to [std::hash\<K >](../standard-library/hash-class.md) dla typów, `std::hash` obsługuje.  
   
  `P`  
  Typ, który dostarcza obiekt funkcji, która może porównać dwa klucze, aby określić ich równości. Wartość domyślna to [std::equal_to\<K >](../standard-library/equal-to-struct.md).  
@@ -237,4 +237,4 @@ UnorderedMapView(
    
 ## <a name="see-also"></a>Zobacz też  
  [Platform::Collections Namespace](../cppcx/platform-collections-namespace.md)   
- [Windows::Foundation::IMapView](http://go.microsoft.com/fwlink/p/?LinkId=262409)
+ [Windows::Foundation::IMapView](/uwp/api/Windows.Foundation.Collections.IMapView_K_V_)

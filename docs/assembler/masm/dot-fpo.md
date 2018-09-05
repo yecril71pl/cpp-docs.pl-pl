@@ -1,7 +1,7 @@
 ---
 title: . FPO | Dokumentacja firmy Microsoft
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 08/30/2018
 ms.technology:
 - cpp-masm
 ms.topic: reference
@@ -16,54 +16,41 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 234ec5bd703a390d1e2ee60e48d99d346d4aad95
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: be5e20716ff414eea3eddc8490e2a3f82adeb777
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43203116"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43687748"
 ---
 # <a name="fpo"></a>.FPO
-. Dyrektywa FPO steruje emisji rekordów debugowania do sekcji lub .debug$ F segmentu.  
-  
-## <a name="syntax"></a>Składnia  
-  
-```  
-  
-FPO (  
-cdwLocals  
-,   
-cdwParams  
-,   
-cbProlog  
-,   
-cbRegs  
-,   
-fUseBP  
-,   
-cbFrame  
-)  
-  
-```  
-  
-#### <a name="parameters"></a>Parametry  
- `cdwLocals`  
- Liczba zmiennych lokalnych, wartością bez znaku 32-bitowych.  
-  
- `cdwParams`  
- Rozmiar parametrów w dane DWORD, wartością bez znaku 16-bitowych.  
-  
- *cbProlog*  
- Liczba bajtów w kodzie prologu funkcji wartością bez znaku 8-bitową.  
-  
- `cbRegs`  
- Liczba rejestrów zapisane.  
-  
- `fUseBP`  
- Wskazuje, czy został przydzielony do rejestru EBP. 0 lub 1.  
-  
- *cbFrame*  
- Wskazuje typ ramki.  Zobacz [FPO_DATA](/windows/desktop/api/winnt/ns-winnt-_fpo_data) Aby uzyskać więcej informacji.  
-  
-## <a name="see-also"></a>Zobacz też  
- [Dokumentacja dyrektyw](../../assembler/masm/directives-reference.md)
+
+. Dyrektywa FPO steruje emisji rekordów debugowania do sekcji lub .debug$ F segmentu.
+
+## <a name="syntax"></a>Składnia
+
+> FPO (*cdwLocals*, *cdwParams*, *cbProlog*, *cbRegs*, *fUseBP*,  *cbFrame*)
+
+### <a name="parameters"></a>Parametry
+
+*cdwLocals*<br/>
+Liczba zmiennych lokalnych, wartością bez znaku 32-bitowych.
+
+*cdwParams*<br/>
+Rozmiar parametrów w dane DWORD, wartością bez znaku 16-bitowych.
+
+*cbProlog*<br/>
+Liczba bajtów w kodzie prologu funkcji wartością bez znaku 8-bitową.
+
+*cbRegs*<br/>
+Liczba rejestrów zapisane.
+
+*fUseBP*<br/>
+Wskazuje, czy został przydzielony do rejestru EBP. 0 lub 1.
+
+*cbFrame*<br/>
+Wskazuje typ ramki.  Zobacz [FPO_DATA](/windows/desktop/api/winnt/ns-winnt-_fpo_data) Aby uzyskać więcej informacji.
+
+## <a name="see-also"></a>Zobacz także
+
+[Dokumentacja dyrektyw](../../assembler/masm/directives-reference.md)<br/>

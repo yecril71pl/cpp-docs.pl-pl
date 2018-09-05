@@ -34,12 +34,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b9a4827900f30dba168f9f5b1b6a93c2aa7e331b
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: e835da146cb609abc873e7e53eb617b8635af0e5
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43215738"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43689110"
 ---
 # <a name="cbrush-class"></a>Klasa CBrush
 Hermetyzuje pędzel Windows graphics urządzenia interface (GDI).  
@@ -313,7 +313,7 @@ BOOL CreateSysColorBrush(int nIndex);
   
 ### <a name="parameters"></a>Parametry  
  *nIndex*  
- Określa indeks koloru. Ta wartość odpowiada kolor używany do rysowania, jeden z elementów 21 okna. Zobacz [GetSysColor](https://msdn.microsoft.com/library/windows/desktop/ms724371) w zestawie Windows SDK dla listy wartości.  
+ Określa indeks koloru. Ta wartość odpowiada kolor używany do rysowania, jeden z elementów 21 okna. Zobacz [GetSysColor](/windows/desktop/api/winuser/nf-winuser-getsyscolor) w zestawie Windows SDK dla listy wartości.  
   
 ### <a name="return-value"></a>Wartość zwracana  
  Wartość różną od zera, jeśli to się powiedzie; w przeciwnym razie 0.  

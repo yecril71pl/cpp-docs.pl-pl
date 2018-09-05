@@ -1,7 +1,7 @@
 ---
 title: Błąd krytyczny ML A1007 | Dokumentacja firmy Microsoft
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 08/30/2018
 ms.technology:
 - cpp-masm
 ms.topic: error-reference
@@ -16,35 +16,37 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 10b883fad01943cd8cff71b3da9dee66407ccc93
-ms.sourcegitcommit: dbca5fdd47249727df7dca77de5b20da57d0f544
+ms.openlocfilehash: 539ab431510d5dc721e6531c11069a87e27c287a
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/28/2018
-ms.locfileid: "32055732"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43693604"
 ---
 # <a name="ml-fatal-error-a1007"></a>Błąd krytyczny ML A1007
-**poziom zagnieżdżenia zbyt głęboko**  
-  
- Asembler osiągnęła limit zagnieżdżania. Limit wynosi 20 poziomy, z wyjątkiem przypadków, gdy zaznaczono inaczej.  
-  
- Jedną z następujących zostało zagnieżdżone zbyt głęboko:  
-  
--   Dyrektywy wysokiego poziomu, takich jak [. Jeśli](../../assembler/masm/dot-if.md), [. Powtórz](../../assembler/masm/dot-repeat.md), lub [. GDY](../../assembler/masm/dot-while.md).  
-  
--   Definicja struktury.  
-  
--   Dyrektywa zestawu warunkowego.  
-  
--   Definicja procedury.  
-  
--   A [pushcontext —](../../assembler/masm/pushcontext.md) — dyrektywa (limit wynosi 10).  
-  
--   Definicja segmentu.  
-  
--   Dołącz plik.  
-  
--   Makra.  
-  
-## <a name="see-also"></a>Zobacz też  
- [Komunikaty o błędach ML](../../assembler/masm/ml-error-messages.md)
+
+**poziom zagnieżdżenia, które są zbyt głęboko**
+
+Asembler osiągnęła limit zagnieżdżania. Limit wynosi 20 poziomy, chyba że zaznaczono inaczej.
+
+Jedną z następujących był zbyt głęboko zagnieżdżone:
+
+- Dyrektywy wysokiego poziomu, takie jak [. Jeśli](../../assembler/masm/dot-if.md), [. Powtórz](../../assembler/masm/dot-repeat.md), lub [. GDY](../../assembler/masm/dot-while.md).
+
+- Definicja struktury.
+
+- Dyrektywa zestawu warunkowe.
+
+- Definicja procedury.
+
+- A [pushcontext —](../../assembler/masm/pushcontext.md) — dyrektywa (limit wynosi 10).
+
+- Definicja segmentu.
+
+- Plik dołączania.
+
+- Makra.
+
+## <a name="see-also"></a>Zobacz także
+
+[Komunikaty o błędach ML](../../assembler/masm/ml-error-messages.md)<br/>

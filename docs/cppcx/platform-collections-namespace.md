@@ -15,16 +15,16 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 171fdfe8e174d0d3b5d1c69e9aa5a777a3148ee0
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: d872df7294e33ef47247609af4606da842bb6184
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42612534"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43686550"
 ---
 # <a name="platformcollections-namespace"></a>Platform::Collections Namespace
 
-Platform::Collections, przestrzeń nazw zawiera `Map`, `MapView`, `Vector`, i `VectorView` klasy. Te klasy są konkretnych implementacji odpowiednich interfejsów, które są zdefiniowane w [Windows::Foundation:: Collections](http://go.microsoft.com/fwlink/p/?LinkId=262645) przestrzeni nazw. Typy kolekcji konkretnych nie są przenośne między ABI (na przykład gdy Javascript lub C# program wywołania do składnika C++), ale są one niejawnie konwertowany jako odpowiednie typy interfejsu. Na przykład, jeśli należy zaimplementować metodę publiczną, która wypełnia i zwraca kolekcję, użyj [platform::Collections:: Vector](../cppcx/platform-collections-vector-class.md) wewnętrznie implementacji zbierania i używania [Windows::Foundation:: Collections: : IVector](http://go.microsoft.com/fwlink/p/?LinkId=262410) jako typ zwracany. Aby uzyskać więcej informacji, zobacz [kolekcje](../cppcx/collections-c-cx.md) i [Tworzenie składników środowiska wykonawczego Windows w języku C++](/windows/uwp/winrt-components/creating-windows-runtime-components-in-cpp).
+Platform::Collections, przestrzeń nazw zawiera `Map`, `MapView`, `Vector`, i `VectorView` klasy. Te klasy są konkretnych implementacji odpowiednich interfejsów, które są zdefiniowane w [Windows::Foundation:: Collections](/uwp/api/Windows.Foundation.Collections) przestrzeni nazw. Typy kolekcji konkretnych nie są przenośne między ABI (na przykład gdy Javascript lub C# program wywołania do składnika C++), ale są one niejawnie konwertowany jako odpowiednie typy interfejsu. Na przykład, jeśli należy zaimplementować metodę publiczną, która wypełnia i zwraca kolekcję, użyj [platform::Collections:: Vector](../cppcx/platform-collections-vector-class.md) wewnętrznie implementacji zbierania i używania [Windows::Foundation:: Collections: : IVector](/uwp/api/Windows.Foundation.Collections.IVector_T_) jako typ zwracany. Aby uzyskać więcej informacji, zobacz [kolekcje](../cppcx/collections-c-cx.md) i [Tworzenie składników środowiska wykonawczego Windows w języku C++](/windows/uwp/winrt-components/creating-windows-runtime-components-in-cpp).
 
 Platform::Collections:: Vector z można skonstruować [std::vector](../standard-library/vector-class.md) i [platform::Collections:: map](../cppcx/platform-collections-map-class.md) z [std::map](../standard-library/map-class.md).
 

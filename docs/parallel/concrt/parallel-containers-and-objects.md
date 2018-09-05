@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8256a6d49166b5a002a400892f0808706c66eba9
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 0e0bade8cc233b438f98c3b73b04bf644bb37cbf
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43212465"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43692292"
 ---
 # <a name="parallel-containers-and-objects"></a>Równoległe kontenery oraz obiekty
 Biblioteka równoległych wzorców (PPL) obejmuje kilka kontenerów i obiektów, które dostarczają wątkowo dostęp do swoich elementów.  
@@ -186,14 +186,14 @@ Biblioteka równoległych wzorców (PPL) obejmuje kilka kontenerów i obiektów,
   
 |Operator|Opis|  
 |--------------|-----------------|  
-|[operator++](https://msdn.microsoft.com/4cfdd07e-927a-42f8-aaa0-d6881687f413)|Przechodzi do następnego elementu w kolejce. Ten operator jest przeciążony zapewnienie semantyki przyrostu przed i po przyrostu.|  
-|[operator *](https://msdn.microsoft.com/a0e671fc-76e6-4fb4-b95c-ced4dd2b2017)|Pobiera odwołanie do bieżącego elementu.|  
-|[operator ->](https://msdn.microsoft.com/41fa393d-ae1e-4a38-bb4b-19e8df709ca9)|Pobiera wskaźnik do bieżącego elementu.|  
+|`operator++`|Przechodzi do następnego elementu w kolejce. Ten operator jest przeciążony zapewnienie semantyki przyrostu przed i po przyrostu.|  
+|`operator*`|Pobiera odwołanie do bieżącego elementu.|  
+|`operator->`|Pobiera wskaźnik do bieżącego elementu.|  
   
  [[Górnej](#top)]  
   
 ##  <a name="unordered_map"></a> concurrent_unordered_map — klasa  
- [HYPERLINK "file:///C:\\\Users\\\thompet\\\AppData\\\Local\\\Temp\\\DxEditor\\\DduePreview\\\Default \\\798d7037-df37-4310-858b-6f590bbf6ebf\\\HTM\\\html\\\a217b4ac-af2b-4d41-94eb-09a75ee28622 "concurrency::concurrent_unordered_map](../../parallel/concrt/reference/concurrent-unordered-map-class.md) klasa jest Klasa kontenerem asocjacyjnym, która, podobnie jak w przypadku [std::unordered_map](../../standard-library/unordered-map-class.md) klasy, kontroluje różnej długości sekwencje elementów typu [std::pair\<const Key, Ty >](../../standard-library/pair-structure.md). Mapy nieuporządkowanej można traktować jako słownik, który można dodać parę klucza i wartości do lub wyszukać wartość według klucza. Ta klasa jest przydatna, jeśli masz wiele wątków lub zadania, które mają jednocześnie dostęp do udostępnionych kontenerów, Wstaw do niej lub go zaktualizować.  
+ [Concurrency::concurrent_unordered_map](../../parallel/concrt/reference/concurrent-unordered-map-class.md) klasy jest klasą kontenerem asocjacyjnym, która, podobnie jak w przypadku [std::unordered_map](../../standard-library/unordered-map-class.md) klasy, kontroluje różnej długości sekwencje elementów typu [std::pair\<const Key, Ty >](../../standard-library/pair-structure.md). Mapy nieuporządkowanej można traktować jako słownik, który można dodać parę klucza i wartości do lub wyszukać wartość według klucza. Ta klasa jest przydatna, jeśli masz wiele wątków lub zadania, które mają jednocześnie dostęp do udostępnionych kontenerów, Wstaw do niej lub go zaktualizować.  
   
  Poniższy przykład pokazuje podstawową strukturę przy użyciu `concurrent_unordered_map`. W tym przykładzie Wstawia znak kluczy z zakresu ["" "i"]. Ponieważ kolejność operacji jest nieokreślony, również jest nieokreślony końcowa wartość dla każdego klucza. Jednak jest bezpieczne do wykonywania wstawienia równolegle.  
   

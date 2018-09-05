@@ -1,7 +1,7 @@
 ---
 title: Błąd krytyczny ML A1000 | Dokumentacja firmy Microsoft
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 08/30/2018
 ms.technology:
 - cpp-masm
 ms.topic: error-reference
@@ -16,35 +16,37 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2cc6fe8013fa36063031aba9bfc3dc02de40b092
-ms.sourcegitcommit: dbca5fdd47249727df7dca77de5b20da57d0f544
+ms.openlocfilehash: 2ecd72e749be8ff4325e644376e312206756d1b4
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/28/2018
-ms.locfileid: "32054806"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43691453"
 ---
 # <a name="ml-fatal-error-a1000"></a>Błąd krytyczny ML A1000
-**Nie można otworzyć pliku: Nazwa pliku**  
-  
- Asembler nie może otworzyć źródła Dołącz lub pliku wyjściowego.  
-  
- Jedną z następujących mogą być przyczyna:  
-  
--   Plik nie istnieje.  
-  
--   Plik jest używany przez inny proces.  
-  
--   Nazwa pliku jest nieprawidłowa.  
-  
--   Istnieje już plik tylko do odczytu z pliku wyjściowego.  
-  
--   Bieżący dysk jest pełny.  
-  
--   Bieżący katalog jest katalogiem głównym i jest pełna.  
-  
--   Nie można zapisać urządzenia.  
-  
--   Dysk nie jest gotowy.  
-  
-## <a name="see-also"></a>Zobacz też  
- [Komunikaty o błędach ML](../../assembler/masm/ml-error-messages.md)
+
+**Nie można otworzyć pliku: Nazwa pliku**
+
+Asembler nie może "open source", obejmują lub pliku wyjściowego.
+
+Można jedną z następujących przyczyn:
+
+- Plik nie istnieje.
+
+- Plik jest używany przez inny proces.
+
+- Nazwa pliku jest nieprawidłowa.
+
+- Tylko do odczytu pliku przy użyciu nazwy pliku wyjściowego już istnieje.
+
+- Bieżący dysk jest pełny.
+
+- Bieżący katalog jest katalogiem głównym i jest pełny.
+
+- Nie można zapisać urządzenia.
+
+- Dysk nie jest gotowa.
+
+## <a name="see-also"></a>Zobacz także
+
+[Komunikaty o błędach ML](../../assembler/masm/ml-error-messages.md)<br/>

@@ -1,7 +1,7 @@
 ---
 title: Intel&#39;s MMX — zestaw instrukcji | Dokumentacja firmy Microsoft
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 08/30/2018
 ms.technology:
 - cpp-masm
 ms.topic: reference
@@ -14,18 +14,21 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c054c1236fbbc74cfc45834f05aa2be08faa07f6
-ms.sourcegitcommit: dbca5fdd47249727df7dca77de5b20da57d0f544
+ms.openlocfilehash: 95f3cb57fc5c046057a5efa568ce930f13ca3256
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/28/2018
-ms.locfileid: "32050740"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43688356"
 ---
 # <a name="intel39s-mmx-instruction-set"></a>Intel&#39;s MMX — zestaw instrukcji
-## <a name="microsoft-specific"></a>Specyficzne dla firmy Microsoft  
- Kompilator Visual C++ umożliwia przy użyciu zestawu w asemblera wbudowanego instrukcji MMX (rozszerzenie multimediów) firmy Intel. Instrukcje MMX są również obsługiwane przez debuger dezasemblacji. Kompilator generuje ostrzeżenie, jeśli funkcja zawiera instrukcje MMX, ale nie zawiera instrukcji EMMS, aby opróżnić multimedialnych stanu. Aby uzyskać więcej informacji zobacz witrynę sieci Web Intel.  
-  
- **KOŃCOWY określonych firmy Microsoft**  
-  
-## <a name="see-also"></a>Zobacz też  
- [Korzystanie z języka Asembler w blokach __asm](../../assembler/inline/using-assembly-language-in-asm-blocks.md)
+
+**Microsoft Specific**
+
+Kompilator języka Visual C++ umożliwia instrukcji MMX (rozszerzenie multimedialnych) firmy Intel w asemblera wbudowanego. Instrukcje MMX są również obsługiwane przez dezasemblacji debugera. Kompilator generuje ostrzeżenie, jeśli funkcja zawiera instrukcje MMX, ale nie ma instrukcji EMMS pustą multimedialnych stanu. Aby uzyskać więcej informacji zobacz witrynę sieci Web Intel.
+
+**END specyficzny dla Microsoft**
+
+## <a name="see-also"></a>Zobacz także
+
+[Korzystanie z języka Asembler w blokach __asm](../../assembler/inline/using-assembly-language-in-asm-blocks.md)<br/>

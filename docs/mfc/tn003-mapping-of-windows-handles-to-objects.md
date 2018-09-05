@@ -19,12 +19,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a7dbd74a8f216efb64d220747155a619d2084b3b
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: b022c4c42a7373f9bfc23c1fff5be2c1317709de
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43211765"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43692451"
 ---
 # <a name="tn003-mapping-of-windows-handles-to-objects"></a>TN003: mapowanie uchwytów okien na obiekty
 Ta uwaga opisuje MFC procedur, które obsługuje mapowania Windows obiektu dojścia do obiektów języka C++.  
@@ -74,7 +74,7 @@ CWnd myWnd;
 myWnd.Attach(hWnd);
 ```  
   
- To sprawia, że wpis w kojarzenie stałe mapy *myWnd* i *hWnd*. Wywoływanie `CWnd::FromHandle(hWnd)` teraz zwraca wskaźnik do *myWnd*. Gdy *myWnd* jest usunięte, destruktor automatycznie zniszcz *hWnd* wywołując Windows [destroywindow —](https://msdn.microsoft.com/library/windows/desktop/ms632682) funkcji. Jeśli jest to niepożądane, *hWnd* musi zostać odłączony od *myWnd* przed *myWnd* zostanie zniszczony (zwykle w przypadku, gdy opuszczania zakresu, w którym *myWnd*została zdefiniowana). `Detach` To realizowane przez metodę.  
+ To sprawia, że wpis w kojarzenie stałe mapy *myWnd* i *hWnd*. Wywoływanie `CWnd::FromHandle(hWnd)` teraz zwraca wskaźnik do *myWnd*. Gdy *myWnd* jest usunięte, destruktor automatycznie zniszcz *hWnd* wywołując Windows [destroywindow —](/windows/desktop/api/winuser/nf-winuser-destroywindow) funkcji. Jeśli jest to niepożądane, *hWnd* musi zostać odłączony od *myWnd* przed *myWnd* zostanie zniszczony (zwykle w przypadku, gdy opuszczania zakresu, w którym *myWnd*została zdefiniowana). `Detach` To realizowane przez metodę.  
   
 ```  
 myWnd.Detach();

@@ -14,12 +14,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8cdd0c5d8e89d41e24bf980093f5994c1c9fc495
-ms.sourcegitcommit: 7eadb968405bcb92ffa505e3ad8ac73483e59685
+ms.openlocfilehash: ed65ff0e608740ae5747ec9cd708c119d79a3829
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/23/2018
-ms.locfileid: "39209277"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43685715"
 ---
 # <a name="x86-intrinsics-list"></a>Lista funkcji wewnętrznych x86
 
@@ -31,13 +31,13 @@ Aby uzyskać informacje o poszczególnych funkcjach wewnętrznych, zapoznaj się
 
 - [Przewodnik po funkcjach wewnętrznych Intel](https://software.intel.com/sites/landingpage/IntrinsicsGuide/). Użyj pola wyszukiwania, aby znaleźć określone funkcje wewnętrzne.
 
-- [Podręczniki dewelopera oprogramowania architektury 64 i IA-32 firmy Intel](https://go.microsoft.com/fwlink/p/?LinkID=510021)
+- [Podręczniki dewelopera oprogramowania architektury 64 i IA-32 firmy Intel](https://software.intel.com/articles/intel-sdm)
 
-- [Dokumentacja programowania Intel architektury instrukcji zestawu rozszerzeń](https://go.microsoft.com/fwlink/p/?linkid=874960)
+- [Dokumentacja programowania Intel architektury instrukcji zestawu rozszerzeń](https://software.intel.com/isa-extensions)
 
-- [Wprowadzenie do Intel Advanced Vector Extensions](https://go.microsoft.com/fwlink/p/?linkid=874961)
+- [Wprowadzenie do Intel Advanced Vector Extensions](https://software.intel.com/articles/introduction-to-intel-advanced-vector-extensions)
 
-- [Podręczniki dla projektantów AMD, podręczników & dokumentów ISA](https://go.microsoft.com/fwlink/p/?linkid=874958)
+- [Podręczniki dla projektantów AMD, podręczników & dokumentów ISA](https://developer.amd.com/resources/developer-guides-manuals/)
 
 W poniższej tabeli wymieniono funkcje wewnętrzne dostępne na x86 procesorów. Kolumna technologii zawiera zestaw instrukcji obsługi technicznej. Użyj [__cpuid](../intrinsics/cpuid-cpuidex.md) wewnętrznych, aby określić zestaw instrukcji obsługi w czasie wykonywania. W przypadku dwóch wpisów w jednym wierszu, stanowią one różne punkty wejścia dla tej samej wewnętrznej. [1] wskazuje, że wewnętrznych jest dostępna tylko na procesory AMD. [2] wskazuje, że wewnętrznych jest dostępna tylko na procesorach Intel. [3] wskazuje, że prototyp jest makra. Nagłówek, wymagane do prototypu funkcji znajduje się w nagłówku kolumny. Nagłówek intrin.h obejmuje zarówno immintrin.h, jak i ammintrin.h dla uproszczenia.
 

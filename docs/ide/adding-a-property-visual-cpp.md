@@ -15,19 +15,19 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 00b19fa7166e6edad05d729c5a738a2a827086ae
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: e121cf9738910b105f5bb1933592e67d334f8937
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43212798"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43685329"
 ---
 # <a name="adding-a-property-visual-c"></a>Dodawanie właściwości (Visual C++)
 Możesz użyć [Kreator dodawania właściwości](../ide/names-add-property-wizard.md) Aby dodać metodę do interfejsu w projekcie.  
   
 ### <a name="to-add-a-property-to-your-object"></a>Aby dodać właściwość do obiektu  
   
-1.  W [Widok klas](https://msdn.microsoft.com/8d7430a9-3e33-454c-a9e1-a85e3d2db925), kliknij prawym przyciskiem myszy nazwę interfejsu, do którego chcesz dodać właściwość.  
+1.  W [Widok klas](/visualstudio/ide/viewing-the-structure-of-code), kliknij prawym przyciskiem myszy nazwę interfejsu, do którego chcesz dodać właściwość.  
   
     > [!NOTE]
     >  Można również dodać właściwości do dispinterfaces, który, chyba że projekt jest przypisane, są zagnieżdżone w obrębie węzła biblioteki.  

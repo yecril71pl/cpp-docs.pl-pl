@@ -19,12 +19,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ffbc1d7fc7f74121c37c9e80a538ec60f2265701
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: bd1fbd635b1d3d3a5f9963edaa9f22e22472dad1
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43219565"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43691754"
 ---
 # <a name="obj-files-as-linker-input"></a>Pliki .Obj — Wejście konsolidatora
 
@@ -38,7 +38,7 @@ Firma Microsoft udostępnia pełny opis wspólny format plików obiektu. Aby uzy
 
 Począwszy od programu Visual Studio 2005, kompilator Microsoft Visual C++ obsługuje znaki Unicode w identyfikatorach, zgodnie z definicją C ISO/IEC i standardów C++. Poprzednie wersje kompilatora obsługiwane tylko znaki ASCII w identyfikatorach. Do obsługi standardu Unicode w nazwach funkcji, klas i danych statycznych, kompilatora i konsolidatora, użyj kodowania Unicode UTF-8 dla symboli COFF, pliki .obj. Kodowanie UTF-8 jest upwardly zgodnych z kodowaniem ASCII używane we wcześniejszych wersjach programu Visual Studio.
 
-Aby uzyskać więcej informacji dotyczących kompilatora i konsolidatora, zobacz [Obsługa formatu Unicode w kompilatorze i Konsolidatorze](../../build/reference/unicode-support-in-the-compiler-and-linker.md). Aby uzyskać więcej informacji na temat standardu Unicode, zobacz [Unicode](http://go.microsoft.com/fwlink/p/?linkid=37123) organizacji.
+Aby uzyskać więcej informacji dotyczących kompilatora i konsolidatora, zobacz [Obsługa formatu Unicode w kompilatorze i Konsolidatorze](../../build/reference/unicode-support-in-the-compiler-and-linker.md). Aby uzyskać więcej informacji na temat standardu Unicode, zobacz [Unicode](http://www.unicode.org/) organizacji.
 
 ## <a name="see-also"></a>Zobacz także
 
@@ -46,5 +46,5 @@ Aby uzyskać więcej informacji dotyczących kompilatora i konsolidatora, zobacz
 [Opcje konsolidatora](../../build/reference/linker-options.md)  
 [Obsługa formatu Unicode](../../text/support-for-unicode.md)  
 [Obsługa formatu Unicode w kompilatorze i konsolidatorze](../../build/reference/unicode-support-in-the-compiler-and-linker.md)  
-[Unicode standard](http://go.microsoft.com/fwlink/p/?linkid=37123)  
+[Unicode standard](http://www.unicode.org/)  
 [Formatu PE](/windows/desktop/Debug/pe-format)  

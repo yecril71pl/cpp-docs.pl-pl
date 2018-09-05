@@ -1,7 +1,7 @@
 ---
 title: Ostrzeżenie ML A4014 | Dokumentacja firmy Microsoft
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 08/30/2018
 ms.technology:
 - cpp-masm
 ms.topic: error-reference
@@ -16,17 +16,19 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 924cf02dd9b555cf27b13141e972146f0acde0ab
-ms.sourcegitcommit: dbca5fdd47249727df7dca77de5b20da57d0f544
+ms.openlocfilehash: d3108d961c213ca5035cdba5ca9e7c5c8c10317b
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/28/2018
-ms.locfileid: "32056944"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43692154"
 ---
 # <a name="ml-warning-a4014"></a>Ostrzeżenie ML A4014
-instrukcje i zainicjowane dane nie są obsługiwane w segmentach BSS  
-  
- Została podjęta próba zdefiniowania danymi zainicjowanymi wewnątrz sekcji BSS.  Sekcja BSS jest zdefiniowany jako klasa, której nazwa jest BSS.  Obejmuje to uproszczona segmentu `.data?`.  
-  
-## <a name="see-also"></a>Zobacz też  
- [Komunikaty o błędach ML](../../assembler/masm/ml-error-messages.md)
+
+instrukcje i zainicjowany dane nie są obsługiwane w segmentach BSS
+
+Nastąpiła próba do definiowania danych zainicjowanych w obrębie sekcji BSS.  Sekcja BSS jest zdefiniowany jako klasę, której nazwa to BSS.  Obejmuje to uproszczony segmentu `.data?`.
+
+## <a name="see-also"></a>Zobacz także
+
+[Komunikaty o błędach ML](../../assembler/masm/ml-error-messages.md)<br/>

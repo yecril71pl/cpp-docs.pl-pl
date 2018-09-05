@@ -34,19 +34,19 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8f95169f62fa2eaf9c562bff463ad84c0827db9a
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 6b6d8d53ea3b7331de08ea2aa2a00e5fdfb106c8
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32394425"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43684326"
 ---
 # <a name="chdrive"></a>_chdrive
 
-Zmienia bieżący stacji roboczych.
+Zmienia bieżący dysk roboczy.
 
 > [!IMPORTANT]
-> Nie można używać tego interfejsu API w aplikacjach, które są wykonywane w środowisku wykonawczym systemu Windows. Aby uzyskać więcej informacji, zobacz [funkcje CRT, nie są obsługiwane w aplikacjach platformy uniwersalnej systemu Windows](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
+> Tego API nie można używać w aplikacjach korzystających ze środowiska wykonawczego Windows. Aby uzyskać więcej informacji, zobacz [funkcje CRT nieobsługiwane w aplikacjach platformy uniwersalnej Windows](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
 
 ## <a name="syntax"></a>Składnia
 
@@ -59,19 +59,19 @@ int _chdrive(
 ### <a name="parameters"></a>Parametry
 
 *Dysk*<br/>
-Liczba całkowita od 1 do 26, który określa bieżący roboczy dysku (1 = A, 2 = B i tak dalej).
+Liczba całkowita z zakresu od 1 do 26, która określa bieżący działający napęd (1 = A, 2 = B i tak dalej).
 
 ## <a name="return-value"></a>Wartość zwracana
 
-Wartość zero (0), jeśli pomyślnie; zmieniono bieżącej stacji roboczych w przeciwnym razie wartość -1.
+Zero (0), jeśli bieżący dysk pracy został zmieniona pomyślnie; w przeciwnym razie, wartość -1.
 
 ## <a name="remarks"></a>Uwagi
 
-Jeśli *dysku* jest nie jest w zakresie od 1 do 26 obsługi nieprawidłowy parametr jest wywoływany, zgodnie z opisem w [sprawdzanie poprawności parametru](../../c-runtime-library/parameter-validation.md). Jeśli jest dozwolone wykonywanie, aby kontynuować, **_chdrive —** funkcja zwraca wartość -1, **errno** ustawiono **eacces —**, i **_doserrno —** ma ustawioną wartość  **ERROR_INVALID_DRIVE**.
+Jeśli *dysku* jest nie jest w zakresie od 1 do 26, zostanie wywołany nieprawidłowy — parametr uchwytu, zgodnie z opisem w [Parameter Validation](../../c-runtime-library/parameter-validation.md). Jeśli wykonanie może być kontynuowane, **_chdrive —** funkcja zwraca wartość -1, **errno** ustawiono **EACCES**, i **_doserrno** jest ustawiona na  **ERROR_INVALID_DRIVE**.
 
-**_Chdrive —** funkcja nie jest bezpieczne wątkowo, ponieważ zależy on od **SetCurrentDirectory** funkcji, która jest elementem nie wątkowo. Aby użyć **_chdrive —** bezpiecznie w aplikacji wielowątkowej, musisz podać własne synchronizacja wątku. Aby uzyskać więcej informacji, przejdź do [biblioteki MSDN Library](http://go.microsoft.com/fwlink/p/?linkid=150542) , a następnie wyszukaj **SetCurrentDirectory**.
+**_Chdrive —** funkcja nie jest bezpieczna dla wątków, ponieważ zależy ona **SetCurrentDirectory** funkcja, która sama nie metodą o bezpiecznych wątkach. Aby użyć **_chdrive —** bezpiecznie w przypadku aplikacji wielowątkowych, należy dostarczyć własnej synchronizacji wątków. Aby uzyskać więcej informacji, zobacz [SetCurrentDirectory](/windows/desktop/api/winbase/nf-winbase-setcurrentdirectory).
 
-**_Chdrive —** funkcja zmienia tylko bieżący pracy dysk;  **_chdir —** zmienia bieżący katalog roboczy.
+**_Chdrive —** funkcji zmienia tylko bieżącą pracę dysku;  **_chdir —** zmienia bieżący katalog roboczy.
 
 ## <a name="requirements"></a>Wymagania
 

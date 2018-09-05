@@ -1,5 +1,5 @@
 ---
-title: Po R6035 błąd w czasie wykonywania C | Dokumentacja firmy Microsoft
+title: R6035 błąd środowiska uruchomieniowego języka C | Dokumentacja firmy Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,23 +16,23 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ecadf1793475e1cf5f354796c71a1894884e24e9
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: aa300619d59bdcf4295c8db9f8e9ebf1acb6bb3a
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33299750"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43683593"
 ---
-# <a name="c-runtime-error-r6035"></a>Po R6035 błąd w czasie wykonywania C
-Biblioteka programu Microsoft Visual C++ środowiska wykonawczego, po R6035 błąd - module w tej aplikacji jest podczas inicjowania pliku cookie zabezpieczeń globalnych modułu, gdy funkcja polegania na ten plik cookie zabezpieczeń jest aktywny.  Wywołanie __security_init_cookie — wcześniej.  
+# <a name="c-runtime-error-r6035"></a>R6035 błąd środowiska uruchomieniowego języka C
+Biblioteki Microsoft Visual C++ środowiska uruchomieniowego, R6035 błąd - module w tej aplikacji Trwa inicjowanie plik cookie zabezpieczeń globalnych modułu w czasie gdy aktywny jest funkcją, opierając się na ten plik cookie zabezpieczeń.  Wywołaj __security_init_cookie wcześniej.  
   
- [__security_init_cookie —](../../c-runtime-library/reference/security-init-cookie.md) musi zostać wywołana przed pierwszym użyciem plik cookie zabezpieczeń globalnych.  
+ [__security_init_cookie](../../c-runtime-library/reference/security-init-cookie.md) musi zostać wywołana przed pierwszym użyciem plik cookie zabezpieczeń globalnych.  
   
- Plik cookie zabezpieczeń globalnych służy do ochrony przepełnienie buforu w kodzie skompilowanym z [/GS (Sprawdzanie zabezpieczeń bufora)](../../build/reference/gs-buffer-security-check.md) i w kodzie, który używa Obsługa wyjątków strukturalnych. Zasadniczo przy wejściu do funkcji chronionych przekroczenie, plik cookie jest umieszczany na stosie, a po zakończeniu wartość na stosie jest porównywana globalnego pliku cookie. Różnicę między nimi wskazuje, czy nastąpiło przepełnienie buforu oraz powoduje natychmiastowe przerwanie działania programu.  
+ Plik cookie zabezpieczeń globalnych służy do ochrony przepełnienie buforu w kodzie skompilowanym z [/GS (Sprawdzanie zabezpieczeń bufora)](../../build/reference/gs-buffer-security-check.md) i w kodzie, który używa strukturalna Obsługa wyjątków. Zasadniczo przy wejściu do funkcji chronionych przekroczenie, plik cookie jest umieszczany na stosie, a przy zamykaniu, wartość na stosie jest porównywana globalnego pliku cookie. Wszelkie różnice między nimi wskazuje, że przepełnienie buforu wystąpił i powoduje natychmiastowe przerwanie działania programu.  
   
- Po R6035 błąd wskazuje, że wywołanie `__security_init_cookie` został utworzony po wprowadzono funkcję chronionych. Jeżeli kontynuować wykonywania, przepełnienie buforu fałszywe można wykryć ponieważ plik cookie na stosie nie spowoduje dopasowanie globalnego pliku cookie.  
+ R6035 błąd wskazuje, że wywołanie `__security_init_cookie` został utworzony po wprowadzono funkcję chronionych. Gdyby kontynuować wykonywanie, przepełnienie buforu fałszywe będzie wykryła, ponieważ plik cookie na stosie już nie będzie odpowiadać globalnego pliku cookie.  
   
- Należy wziąć pod uwagę w poniższym przykładzie biblioteki DLL. Punkt wejścia biblioteki DLL ma ustawioną wartość DllEntryPoint przez konsolidator [/Entry (Symbol punktu wejścia)](../../build/reference/entry-entry-point-symbol.md) opcji. To powoduje pominięcie inicjowania CRT, które zwykle może ustawić plik cookie zabezpieczeń globalnych, tak się biblioteki DLL należy wywołać metodę `__security_init_cookie`.  
+ Rozważmy następujący przykład biblioteki DLL. Punkt wejścia biblioteki DLL jest równa DllEntryPoint za pośrednictwem konsolidatora [/Entry (Symbol punktu wejścia)](../../build/reference/entry-entry-point-symbol.md) opcji. Pomija to Inicjalizacja CRT, który zazwyczaj będzie zainicjować plik cookie zabezpieczeń globalnych, więc wywołania biblioteki DLL, sama `__security_init_cookie`.  
   
 ```  
 // Wrong way to call __security_init_cookie  
@@ -51,9 +51,9 @@ void DllInitialize() {
 }  
 ```  
   
- W tym przykładzie wygeneruje błąd po R6035, ponieważ DllEntryPoint używa Obsługa wyjątków strukturalnych i w związku z tym używa pliku cookie zabezpieczeń do wykrywania przepełnienia buforu. W czasie, gdy zostanie wywołana DllInitialize plik cookie zabezpieczeń globalnych ma już wprowadzone na stosie.  
+ Ten przykład wygeneruje błąd R6035, ponieważ DllEntryPoint używa strukturalna Obsługa wyjątków i w związku z tym używa pliku cookie zabezpieczeń do wykrywania przepełnienia buforu. Przez razem, gdy jest wywoływana DllInitialize plik cookie zabezpieczeń globalnych już została wprowadzona na stosie.  
   
- Prawidłowy sposób przedstawionej w tym przykładzie:  
+ Prawidłowy sposób została przedstawiona w tym przykładzie:  
   
 ```  
 // Correct way to call __security_init_cookie  
@@ -72,10 +72,10 @@ void DllEntryHelper() {
 }  
 ```  
   
- W takim przypadku DllEntryPoint nie jest chroniony przed przepełnienia buforu (ma buforów ciąg lokalnym i nie używa Obsługa wyjątków strukturalnych;) w związku z tym można bezpiecznie wywołać `__security_init_cookie`. Następnie wywołuje funkcję pomocnika, która jest chroniona.  
+ W tym przypadku DllEntryPoint nie są chronione przed przepełnienia buforu (go ma buforów ciągu lokalne i nie używa strukturalna Obsługa wyjątków); w związku z tym można bezpiecznie wywołać `__security_init_cookie`. Następnie wywołuje funkcję pomocnika, która jest chroniona.  
   
 > [!NOTE]
->  Komunikat o błędzie, który jest po R6035 tylko wygenerowane przez x86 debugowania CRT i tylko w przypadku obsługa wyjątków strukturalnych, ale warunku błędu na wszystkich platformach i dla wszystkich formularzy wyjątku obsługuje, takich jak C++ EH.  
+>  Komunikat o błędzie, który jest R6035 tylko generowane przez x86 debugowania CRT i tylko w przypadku strukturalna Obsługa wyjątków, ale ten stan jest na wszystkich platformach i dla wszystkich formularzy wyjątek obsługę błędów, takich jak EH w języku C++.  
   
 ## <a name="see-also"></a>Zobacz też  
- [Kontrole zabezpieczeń kompilatora szczegółowo](http://go.microsoft.com/fwlink/p/?linkid=7260)
+ [Funkcje zabezpieczeń w MSVC](https://blogs.msdn.microsoft.com/vcblog/2017/06/28/security-features-in-microsoft-visual-c/)

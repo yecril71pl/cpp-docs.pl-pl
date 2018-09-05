@@ -17,12 +17,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: fed2cad9c96b20313617ef57e4373de16712aa34
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 2e374ad9c0024b602c07ea91e53d45c9bf0742f8
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43218855"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43692467"
 ---
 # <a name="lttypetraitsgt"></a>&lt;type_traits&gt;
 
@@ -142,7 +142,7 @@ Właściwości typu
 |[is_nothrow_copy_assignable](../standard-library/is-nothrow-copy-assignable-class.md)|Sprawdza, czy typ jest możliwy do przypisania kopiowania, przypisanie wiadomo, że nie zostać zgłoszony.|
 |[is_nothrow_move_assignable](../standard-library/type-traits-functions.md#is_nothrow_move_assignable)|Sprawdza, czy typ jest możliwy do przypisania przeniesienia, przypisanie wiadomo, że nie zostać zgłoszony.|
 |[is_nothrow_destructible](../standard-library/is-nothrow-destructible-class.md)|Sprawdza, czy typ jest zniszczalnych, destruktor wiadomo, że nie zostać zgłoszony.|
-|[has_virtual_destructor](https://msdn.microsoft.com/c0f85f0b-c63c-410d-a046-72eeaf44f7eb)|Sprawdza, czy typ ma destruktor wirtualny.|
+|`has_virtual_destructor`|Sprawdza, czy typ ma destruktor wirtualny.|
 
 Zapytania dotyczące właściwości typu
 

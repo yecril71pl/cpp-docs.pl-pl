@@ -9,15 +9,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2a54774193c0274c2ee9e4f79c389cee3ffe5c49
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: 272921d0a9ac00ec5ee69fb50a17a34e257b1725
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42608336"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43692591"
 ---
 # <a name="quick-reference-ccx"></a>Krótki przewodnik (C + +/ CX)
-Środowisko wykonawcze Windows obsługuje aplikacje platformy uniwersalnej Windows (UWP), wykonywanie tylko w środowisku godne zaufania systemu operacyjnego przy użyciu funkcji autoryzowanych, typów danych i urządzeń, oraz są dystrybuowane za pośrednictwem Microsoft Store. C + +/ CX uproszczają pisanie aplikacji dla środowiska wykonawczego Windows. Ten artykuł stanowi krótki; dla bardziej wyczerpujące informacje, zobacz [System typów](../cppcx/type-system-c-cx.md) i [Component Extensions dla platform środowiska uruchomieniowego](http://go.microsoft.com/fwlink/p/?linkid=228720).  
+Środowisko wykonawcze Windows obsługuje aplikacje platformy uniwersalnej Windows (UWP), wykonywanie tylko w środowisku godne zaufania systemu operacyjnego przy użyciu funkcji autoryzowanych, typów danych i urządzeń, oraz są dystrybuowane za pośrednictwem Microsoft Store. C + +/ CX uproszczają pisanie aplikacji dla środowiska wykonawczego Windows. Ten artykuł stanowi krótki; dla bardziej wyczerpujące informacje, zobacz [System typów](../cppcx/type-system-c-cx.md).  
   
  W przypadku tworzenia w wierszu polecenia, użyj **/ZW** — opcja kompilatora do tworzenia aplikacji platformy uniwersalnej systemu Windows lub składnik środowiska wykonawczego Windows. Aby dostęp do środowiska wykonawczego Windows deklaracje, które są zdefiniowane w plikach metadanych (.winmd) środowiska wykonawczego Windows, należy określić `#using` dyrektywy lub **/FU** — opcja kompilatora. Kiedy tworzysz projekt aplikacji platformy uniwersalnej systemu Windows, Visual Studio domyślnie ustawia tych opcji i dodaje odwołania do wszystkich bibliotek środowiska wykonawczego Windows.  
   
@@ -42,7 +42,7 @@ ms.locfileid: "42608336"
 |Tematy pomocy|Odwołanie do obiektu (`&`):<br /><br /> *T* `&` *identyfikator*|Odwołanie śledzenia (`%`):<br /><br /> *T* `%` *identyfikator*|Modyfikator odwoływać się tylko środowiska wykonawczego Windows, które typy mogą być deklarowane przy użyciu śledzenia. Elementy członkowskie obiektu są dostępne przy użyciu kropki (`.`) operator dostępu do składowej klasy.<br /><br /> Odwołanie śledzenia oznacza "odwołanie do obiektu Windows Runtime, która automatycznie jest liczona liczba odwołań." Bardziej precyzyjne odwołaniem śledzącym deklaruje, że kompilator należy wstawić kod do automatycznego zarządzania licznik odwołań obiektu i usuń go, jeśli liczba odwołań osiąga zero.|  
 |Deklaracja typu dynamicznego|`new`|`ref new`|Przydziela obiektu Windows Runtime, a następnie zwraca uchwyt do tego obiektu.|  
 |Zarządzanie okresem istnienia obiektów|`delete` *Identyfikator*<br /><br /> `delete[]`  *Identyfikator*|(Wywołuje destruktor).|Okres istnienia jest określany przez zliczanie odwołań. Wywołanie w celu usunięcia wywołuje destruktor, ale sam nie spowoduje zwolnienia pamięci.|  
-|Deklaracja tablicy|*Identyfikator T* `[]`<br /><br /> `std::array` *Identyfikator*|`Array<` *T* `^>^` *identyfikator* `(` *rozmiar* `)`<br /><br /> —lub—<br /><br /> `WriteOnlyArray<` *T* `^>` *identyfikator* `(` *rozmiar*  `)`|Deklaruje Jednowymiarowa tablica, można modyfikować, czy tylko do zapisu, typu T ^. Macierz, sama jest również zliczonych odwołań obiektu, który musi być zadeklarowany za pomocą modyfikatora uchwytu do obiektu.<br /><br /> (Deklaracje tablicy użycie klasy nagłówka szablonu, która znajduje się w `Platform` przestrzeni nazw.)|  
+|Deklaracja tablicy|*Identyfikator T* `[]`<br /><br /> `std::array` *Identyfikator*|`Array<` *T* `^>^` *identyfikator* `(` *rozmiar* `)`<br /><br /> —lub—<br /><br /> `WriteOnlyArray<` *T* `^>` *identyfikator* `(` *rozmiar* `)`|Deklaruje Jednowymiarowa tablica, można modyfikować, czy tylko do zapisu, typu T ^. Macierz, sama jest również zliczonych odwołań obiektu, który musi być zadeklarowany za pomocą modyfikatora uchwytu do obiektu.<br /><br /> (Deklaracje tablicy użycie klasy nagłówka szablonu, która znajduje się w `Platform` przestrzeni nazw.)|  
 |Deklaracja klasy|`class`  *Identyfikator* `{}`<br /><br /> `struct` *Identyfikator* `{}`|`ref class` *Identyfikator* `{}`<br /><br /> `ref struct` *Identyfikator* `{}`|Deklaruje klasy środowiska wykonawczego, która ma domyślne prywatną dostępność.<br /><br /> Deklaruje klasy środowiska wykonawczego, która ma domyślne powszechnej dostępności.|  
 |Deklaracji struktury|`struct` *Identyfikator* `{}`<br /><br /> (czyli zwykłe stare dane struktury (POD))|`value class` *Identyfikator* `{}`<br /><br /> `value struct` *Identyfikator* `{}`|Deklaruje struktury ZASOBNIKÓW, która ma domyślne prywatną dostępność.<br /><br /> Klasa wartości mogą być reprezentowane w metadanych Windows, ale klasa C++ standardowa nie może być.<br /><br /> Deklaruje struktury ZASOBNIKÓW, która ma domyślne powszechnej dostępności.<br /><br /> Struktura wartości mogą być reprezentowane w metadanych Windows, ale struktura standard C++ nie może być.|  
 |Deklaracja interfejsu|abstrakcyjna klasa, która zawiera tylko czyste funkcje wirtualne.|`interface class` *Identyfikator* `{}`<br /><br /> `interface struct` *Identyfikator* `{}`|Deklaruje interfejs, który ma domyślne prywatną dostępność.<br /><br /> Deklaruje interfejs, który ma domyślne powszechnej dostępności.|  

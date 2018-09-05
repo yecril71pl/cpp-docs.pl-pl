@@ -16,12 +16,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 6fd13c3e94f6b42bd485c645233f84272c6eae91
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 5e37a3a934fbc66af62a30fd2fc2c23e1c659ef2
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43194836"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43692101"
 ---
 # <a name="string--c-component-extensions"></a>Ciąg (C++ Component Extensions)
 
@@ -45,10 +45,6 @@ using namespace default;
    String^ MyString2 = "jumped over the lazy dog.";
    String^ MyString3 = "Hello, world!";
 ```
-
-### <a name="remarks"></a>Uwagi
-
-Aby uzyskać więcej informacji i przykładów dotyczących parametrów, zobacz [Platform::String, std::wstring i literały (platformy)](https://msdn.microsoft.com/ec92fbc6-edf3-4137-a85e-8e29bdb857a8)
 
 ### <a name="requirements"></a>Wymagania
 

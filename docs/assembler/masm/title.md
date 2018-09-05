@@ -1,7 +1,7 @@
 ---
 title: TYTUŁ | Dokumentacja firmy Microsoft
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 08/30/2018
 ms.technology:
 - cpp-masm
 ms.topic: reference
@@ -16,22 +16,21 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2854ead8001855ed002b7b14e37aace76f16ff50
-ms.sourcegitcommit: dbca5fdd47249727df7dca77de5b20da57d0f544
+ms.openlocfilehash: 16e215a07a5269a3250d808bc3125f6ec97b4246
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/28/2018
-ms.locfileid: "32053457"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43692980"
 ---
 # <a name="title"></a>TITLE
-Określa program wyświetlania tytułu.  
-  
-## <a name="syntax"></a>Składnia  
-  
-```  
-  
-TITLE text  
-```  
-  
-## <a name="see-also"></a>Zobacz też  
- [Dokumentacja dyrektyw](../../assembler/masm/directives-reference.md)
+
+Określa program, wyświetlanie tytułu.
+
+## <a name="syntax"></a>Składnia
+
+> Tekst tytułu
+
+## <a name="see-also"></a>Zobacz także
+
+[Dokumentacja dyrektyw](../../assembler/masm/directives-reference.md)<br/>

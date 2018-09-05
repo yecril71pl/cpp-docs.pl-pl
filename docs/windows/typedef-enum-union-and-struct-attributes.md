@@ -19,16 +19,16 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: a285cc8c0d24e36d6c00f336d0b3724a31c7af82
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 3c8cca379b9b9ba6498908469761acefce189117
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43211303"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43686991"
 ---
 # <a name="typedef-enum-union-and-struct-attributes"></a>Atrybuty Typedef, Enum, Union oraz Struct
 
-Następujące atrybuty dotyczą [typedef](https://msdn.microsoft.com/cc96cf26-ba93-4179-951e-695d1f5fdcf1), [struktury](../cpp/struct-cpp.md), i [wyliczenia](../cpp/enumerations-cpp.md) słów kluczowych języka C++.
+Następujące atrybuty dotyczą [typedef](../cpp/aliases-and-typedefs-cpp.md), [struktury](../cpp/struct-cpp.md), i [wyliczenia](../cpp/enumerations-cpp.md) słów kluczowych języka C++.
 
 ### <a name="typedef"></a>— klasa typedef
 

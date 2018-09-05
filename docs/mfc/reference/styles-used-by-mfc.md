@@ -206,12 +206,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6de4e448450aa346875bfef5e9455d713258b5d6
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 043a046209d5e52439ed61165557cc6596db48e8
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43199924"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43689324"
 ---
 # <a name="styles-used-by-mfc"></a>Style używane przez MFC  
   
@@ -219,7 +219,7 @@ Za pomocą następujących flag styl okna lub kontroli wygląd i zachowanie moż
   
 ## <a name="button-styles"></a> Style przycisku  
   
-Style przycisku dotyczą [klasa CButton](../../mfc/reference/cbutton-class.md) obiekty, takie jak przyciski radiowe pól wyboru i przyciski. Określ kombinację style w *dwStyle* parametru [CButton::Create](../../mfc/reference/cbutton-class.md#create). Aby uzyskać więcej informacji na temat stylów przycisków w Windows, zobacz [style przycisku (Windows)](https://msdn.microsoft.com/library/windows/desktop/bb775951).  
+Style przycisku dotyczą [klasa CButton](../../mfc/reference/cbutton-class.md) obiekty, takie jak przyciski radiowe pól wyboru i przyciski. Określ kombinację style w *dwStyle* parametru [CButton::Create](../../mfc/reference/cbutton-class.md#create). Aby uzyskać więcej informacji na temat stylów przycisków w Windows, zobacz [style przycisku (Windows)](/windows/desktop/Controls/button-styles).  
   
 ### <a name="button-types"></a>Typy przycisków  
   
@@ -288,7 +288,7 @@ Poniższa lista zawiera dodatkowe opcje, które można użyć w przypadku każde
   
 ## <a name="combo-box-styles"></a>  Style pola kombi  
   
-Następujące style pola kombi są dostępne w MFC. Aby uzyskać więcej informacji na temat style pola kombi w Windows, zobacz [style pola kombi (Windows)](https://msdn.microsoft.com/library/windows/desktop/bb775796).  
+Następujące style pola kombi są dostępne w MFC. Aby uzyskać więcej informacji na temat style pola kombi w Windows, zobacz [style pola kombi (Windows)](/windows/desktop/Controls/combo-box-styles).  
   
 |Styl|Opis|  
 |-----------|-----------------|  
@@ -308,7 +308,7 @@ Następujące style pola kombi są dostępne w MFC. Aby uzyskać więcej informa
   
 ## <a name="edit-styles"></a>  Style edycji  
   
-Edytuj style dotyczą [klasa CEdit](../../mfc/reference/cedit-class.md) obiektów. Określ kombinację style w *dwStyle* parametru [CEdit::Create](../../mfc/reference/cedit-class.md#create). Aby uzyskać więcej informacji dotyczących edytowania stylów kontrolki w Windows, zobacz [Edytuj style kontrolki (Windows)](https://msdn.microsoft.com/library/windows/desktop/bb775464).  
+Edytuj style dotyczą [klasa CEdit](../../mfc/reference/cedit-class.md) obiektów. Określ kombinację style w *dwStyle* parametru [CEdit::Create](../../mfc/reference/cedit-class.md#create). Aby uzyskać więcej informacji dotyczących edytowania stylów kontrolki w Windows, zobacz [Edytuj style kontrolki (Windows)](/windows/desktop/Controls/edit-control-styles).  
   
 |Styl|Opis|  
 |-----------|-----------------|  
@@ -339,7 +339,7 @@ Style okna ramki mają zastosowanie do [klasa CFrameWnd](../../mfc/reference/cfr
   
 ## <a name="list-box-styles"></a> Style pola listy  
   
-Style pola listy dotyczą [klasa CListBox](../../mfc/reference/clistbox-class.md) obiektów. Określ kombinację style w *dwStyle* parametru [CListBox::Create](../../mfc/reference/clistbox-class.md#create). Aby uzyskać więcej informacji na temat style pola listy w Windows, zobacz [style pola listy (Windows)](https://msdn.microsoft.com/library/windows/desktop/bb775149).  
+Style pola listy dotyczą [klasa CListBox](../../mfc/reference/clistbox-class.md) obiektów. Określ kombinację style w *dwStyle* parametru [CListBox::Create](../../mfc/reference/clistbox-class.md#create). Aby uzyskać więcej informacji na temat style pola listy w Windows, zobacz [style pola listy (Windows)](/windows/desktop/Controls/list-box-styles).  
   
 |Styl|Opis|  
 |-----------|-----------------|  
@@ -362,7 +362,7 @@ Style pola listy dotyczą [klasa CListBox](../../mfc/reference/clistbox-class.md
   
 ##<a name="message-box-styles"></a>  Style okna komunikatu  
   
-Style okna komunikatu dotyczą [AfxMessageBox](../../mfc/reference/cstring-formatting-and-message-box-display.md#afxmessagebox) elementów. Określ kombinację style w *nNie* parametru `AfxMessageBox`. Aby uzyskać więcej informacji na temat Style okna komunikatu w Windows, zobacz [funkcji MessageBox (Windows)](https://msdn.microsoft.com/library/windows/desktop/ms645505).  
+Style okna komunikatu dotyczą [AfxMessageBox](../../mfc/reference/cstring-formatting-and-message-box-display.md#afxmessagebox) elementów. Określ kombinację style w *nNie* parametru `AfxMessageBox`. Aby uzyskać więcej informacji na temat Style okna komunikatu w Windows, zobacz [funkcji MessageBox (Windows)](/windows/desktop/api/winuser/nf-winuser-messagebox).  
   
 Dostępne są następujące style okno komunikatu.  
   
@@ -403,7 +403,7 @@ Dostępne są następujące style okno komunikatu.
   
 ## <a name="scroll-bar-styles"></a> Style paska przewijania  
   
-Style paska przewijania dotyczą [klasa CScrollBar](../../mfc/reference/cscrollbar-class.md) obiektów. Określ kombinację style w *dwStyle* parametru [CScrollBar::Create](../../mfc/reference/cscrollbar-class.md#create). Aby uzyskać więcej informacji na temat paska sterowania style w Windows przewijania, zobacz [style formantu paska przewijania (Windows)](https://msdn.microsoft.com/library/windows/desktop/bb787533).  
+Style paska przewijania dotyczą [klasa CScrollBar](../../mfc/reference/cscrollbar-class.md) obiektów. Określ kombinację style w *dwStyle* parametru [CScrollBar::Create](../../mfc/reference/cscrollbar-class.md#create). Aby uzyskać więcej informacji na temat paska sterowania style w Windows przewijania, zobacz [style formantu paska przewijania (Windows)](/windows/desktop/Controls/scroll-bar-control-styles).  
   
 |Styl|Opis|  
 |-----------|-----------------|  
@@ -420,7 +420,7 @@ Style paska przewijania dotyczą [klasa CScrollBar](../../mfc/reference/cscrollb
   
 ## <a name="static-styles"></a> Style statyczne  
   
-Style statyczne dotyczą [klasa CStatic](../../mfc/reference/cstatic-class.md) obiektów. Określ kombinację style w *dwStyle* parametru [CStatic::Create](../../mfc/reference/cstatic-class.md#create). Aby uzyskać więcej informacji na temat style kontrolki statycznej w Windows zobacz [style kontrolki statyczne (Windows)](https://msdn.microsoft.com/library/windows/desktop/bb760773).  
+Style statyczne dotyczą [klasa CStatic](../../mfc/reference/cstatic-class.md) obiektów. Określ kombinację style w *dwStyle* parametru [CStatic::Create](../../mfc/reference/cstatic-class.md#create). Aby uzyskać więcej informacji na temat style kontrolki statycznej w Windows zobacz [style kontrolki statyczne (Windows)](/windows/desktop/Controls/static-control-styles).  
   
 |Styl|Opis|  
 |-----------|-----------------|  
@@ -488,7 +488,7 @@ Style okna ramowego dotyczą [klasa CWnd](../../mfc/reference/cwnd-class.md) obi
   
 ## <a name="extended-window-styles"></a> Rozszerzone Style okna  
   
-Rozszerzone Style okna dotyczą [klasa CWnd](../../mfc/reference/cwnd-class.md) obiektów. Określ kombinację style w *dwExStyle* parametru [CWnd::CreateEx](../../mfc/reference/cwnd-class.md#createex). Aby uzyskać więcej informacji na temat rozszerzone Style okna w Windows, zobacz [rozszerzone Style okna ramowego (Windows)](https://msdn.microsoft.com/library/windows/desktop/ff700543).  
+Rozszerzone Style okna dotyczą [klasa CWnd](../../mfc/reference/cwnd-class.md) obiektów. Określ kombinację style w *dwExStyle* parametru [CWnd::CreateEx](../../mfc/reference/cwnd-class.md#createex). Aby uzyskać więcej informacji na temat rozszerzone Style okna w Windows, zobacz [rozszerzone Style okna ramowego (Windows)](/windows/desktop/winmsg/extended-window-styles).  
   
 |Styl|Opis|  
 |-----------|-----------------|  
@@ -524,14 +524,14 @@ Rozszerzone Style okna dotyczą [klasa CWnd](../../mfc/reference/cwnd-class.md) 
 [CScrollBar::Create](../../mfc/reference/cscrollbar-class.md#create)  
 [CStatic::Create](../../mfc/reference/cstatic-class.md#create)  
 [AfxMessageBox](../../mfc/reference/cstring-formatting-and-message-box-display.md#afxmessagebox)  
-[CreateWindow](https://msdn.microsoft.com/library/windows/desktop/ms632679)  
-[Elementu CreateWindowEx](https://msdn.microsoft.com/library/windows/desktop/ms632680)  
-[Style przycisku (Windows)](https://msdn.microsoft.com/library/windows/desktop/bb775951)  
-[Style pola kombi (Windows)](https://msdn.microsoft.com/library/windows/desktop/bb775796)  
-[Edytuj style kontrolki (Windows)](https://msdn.microsoft.com/library/windows/desktop/bb775464)  
-[Style okna (Windows) do listy](https://msdn.microsoft.com/library/windows/desktop/bb775149) 
-[funkcji MessageBox (Windows)](https://msdn.microsoft.com/library/windows/desktop/ms645505) 
-[style formantu paska przewijania (Windows)](https://msdn.microsoft.com/library/windows/desktop/bb787533)  
-[Style formantu statycznego (Windows)](https://msdn.microsoft.com/library/windows/desktop/bb760773)  
+[CreateWindow](/windows/desktop/api/winuser/nf-winuser-createwindowa)  
+[Elementu CreateWindowEx](/windows/desktop/api/winuser/nf-winuser-createwindowexa)  
+[Style przycisku (Windows)](/windows/desktop/Controls/button-styles)  
+[Style pola kombi (Windows)](/windows/desktop/Controls/combo-box-styles)  
+[Edytuj style kontrolki (Windows)](/windows/desktop/Controls/edit-control-styles)  
+[Style okna (Windows) do listy](/windows/desktop/Controls/list-box-styles) 
+[funkcji MessageBox (Windows)](/windows/desktop/api/winuser/nf-winuser-messagebox) 
+[style formantu paska przewijania (Windows)](/windows/desktop/Controls/scroll-bar-control-styles)  
+[Style formantu statycznego (Windows)](/windows/desktop/Controls/static-control-styles)  
 [Style okna ramowego (Windows)](https://msdn.microsoft.com/library/windows/desktop/ms632600)  
-[Rozszerzone Style okna (Windows)](https://msdn.microsoft.com/library/windows/desktop/ff700543)  
+[Rozszerzone Style okna (Windows)](/windows/desktop/winmsg/extended-window-styles)  

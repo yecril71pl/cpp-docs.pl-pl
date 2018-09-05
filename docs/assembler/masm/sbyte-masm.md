@@ -1,7 +1,7 @@
 ---
 title: SBYTE (MASM) | Dokumentacja firmy Microsoft
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 08/30/2018
 ms.technology:
 - cpp-masm
 ms.topic: reference
@@ -16,24 +16,23 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f8d9def44f027255df77d1e2f160450501857147
-ms.sourcegitcommit: dbca5fdd47249727df7dca77de5b20da57d0f544
+ms.openlocfilehash: 24703e88c63c04b7f0e3681744e5409622a83078
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/28/2018
-ms.locfileid: "32057971"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43692002"
 ---
 # <a name="sbyte-masm"></a>SBYTE (MASM)
-Przydziela i opcjonalnie inicjuje bajtu ze znakiem magazynu dla każdej `initializer`. Może także służyć jako Specyfikator typu dowolnym typem jest dozwolony.  
-  
-## <a name="syntax"></a>Składnia  
-  
-```  
-  
-name SBYTEinitializer [[, initializer]]...  
-```  
-  
-## <a name="see-also"></a>Zobacz też  
- [Odwołania do dyrektyw](../../assembler/masm/directives-reference.md)   
- [BAJTÓW](../../assembler/masm/byte-masm.md)   
- [DB](../../assembler/masm/db.md)
+
+Przydziela i opcjonalnie inicjuje bajtowych ze znakiem magazynu dla każdego `initializer`. Może również służyć jako specyfikatora typu dowolnym typem jest dozwolony.
+
+## <a name="syntax"></a>Składnia
+
+> Nazwa SBYTEinitializer [[, inicjator]]...
+
+## <a name="see-also"></a>Zobacz także
+
+[Dokumentacja dyrektyw](../../assembler/masm/directives-reference.md)<br/>
+[BAJTÓW](../../assembler/masm/byte-masm.md)<br/>
+[DB](../../assembler/masm/db.md)<br/>

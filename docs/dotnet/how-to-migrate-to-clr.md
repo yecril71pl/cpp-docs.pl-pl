@@ -20,12 +20,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: 47914999a48b4d5924a25ad1688ee83c533398f3
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: cfdf224ed96484af52a84c270c93df87821a444f
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43218901"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43684602"
 ---
 # <a name="how-to-migrate-to-clr"></a>Porady: migracja do /clr
 W tym temacie omówiono problemy, które powstają, gdy kompilacja kodu natywnego za pomocą **/CLR** (zobacz [/CLR (kompilacja języka wspólnego środowiska uruchomieniowego)](../build/reference/clr-common-language-runtime-compilation.md) Aby uzyskać więcej informacji). **/ CLR** umożliwia modułów języka Visual C++ do wywołania i można wywołać z zestawów platformy .NET, przy zachowaniu zgodności z modułami niezarządzanych. Zobacz [zestawy mieszane (natywne i zarządzane)](../dotnet/mixed-native-and-managed-assemblies.md) i [natywne i .NET współdziałanie](../dotnet/native-and-dotnet-interoperability.md) Aby uzyskać więcej informacji na temat korzyści wynikające z kompilowania za pomocą **/CLR**.  
@@ -90,7 +90,7 @@ COMObj2->Method(args);  // C++ equivalent
  Po projekt kompiluje i uruchamia w programie Visual Studio 2010 należy utworzyć nowe konfiguracje projektu dla **/CLR** zamiast modyfikowanie domyślnej konfiguracji. **/ CLR** jest niezgodna z niektóre opcje kompilatora i tworzenia oddzielne konfiguracje umożliwia kompilowanie projektu jako macierzysty lub zarządzany. Gdy **/CLR** jest zaznaczona w oknie dialogowym stron właściwości, nie jest zgodna z ustawień projektu **/CLR** są wyłączone (i wyłączonych opcjach nie są automatycznie przywracane **/CLR** jest następnie zaznaczona).  
   
 ### <a name="create-new-project-configurations"></a>Utwórz nowe konfiguracje projektu  
- Możesz użyć **Kopiuj ustawienia z** opcji [nowe okno dialogowe konfiguracji projektu](https://msdn.microsoft.com/cca616dc-05a6-4fe3-bdc1-40c72a66f2be) do utworzenia konfiguracji projektu, w oparciu o istniejących ustawień projektu. Wykonaj tę czynność jeden raz dla konfiguracji debugowania i raz dla konfiguracji wydania. Następnie można zastosować kolejne zmiany do **/CLR** -określonej konfiguracji, pozostawiając bez zmian do oryginalnej konfiguracji projektu.  
+ Możesz użyć **Kopiuj ustawienia z** opcji **nowe okno dialogowe konfiguracji projektu** (**kompilacji** > **programu Configuration Manager**  >  **Aktywną konfigurację rozwiązania** > **New**) do utworzenia konfiguracji projektu, w oparciu o istniejących ustawień projektu. Wykonaj tę czynność jeden raz dla konfiguracji debugowania i raz dla konfiguracji wydania. Następnie można zastosować kolejne zmiany do **/CLR** -określonej konfiguracji, pozostawiając bez zmian do oryginalnej konfiguracji projektu.  
   
  Projektów, które korzystają z niestandardowych regułach kompilacji mogą wymagać uwagi dodatkowe.  
   

@@ -248,12 +248,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 212637b55a422c11d82ae6ad9f548d9e429c41dd
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: dbd12c98014e2adfe9617f0bdaac891f33ebc600
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43198571"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43693929"
 ---
 # <a name="cmfcbasetabctrl-class"></a>Klasa CMFCBaseTabCtrl
 Implementuje podstawowe funkcje dla okien z zakładkami.  
@@ -357,7 +357,7 @@ class CMFCBaseTabCtrl : public CWnd
 |[CMFCBaseTabCtrl::OnDragOver](#ondragover)||  
 |[CMFCBaseTabCtrl::OnDrop](#ondrop)||  
 |[CMFCBaseTabCtrl::OnRenameTab](#onrenametab)||  
-|[CMFCBaseTabCtrl::PreTranslateMessage](#pretranslatemessage)|Używane przez klasę [CWinApp](../../mfc/reference/cwinapp-class.md) do translacji komunikatów okien, zanim zostaną rozesłane do [TranslateMessage](https://msdn.microsoft.com/library/windows/desktop/ms644955) i [DispatchMessage](https://msdn.microsoft.com/library/windows/desktop/ms644934) funkcje Windows. (Przesłania [CWnd::PreTranslateMessage](../../mfc/reference/cwnd-class.md#pretranslatemessage).)|  
+|[CMFCBaseTabCtrl::PreTranslateMessage](#pretranslatemessage)|Używane przez klasę [CWinApp](../../mfc/reference/cwinapp-class.md) do translacji komunikatów okien, zanim zostaną rozesłane do [TranslateMessage](/windows/desktop/api/winuser/nf-winuser-translatemessage) i [DispatchMessage](/windows/desktop/api/winuser/nf-winuser-dispatchmessage) funkcje Windows. (Przesłania [CWnd::PreTranslateMessage](../../mfc/reference/cwnd-class.md#pretranslatemessage).)|  
 |[CMFCBaseTabCtrl::RecalcLayout](#recalclayout)|Ponownie oblicza układ wewnętrznego okien z kartami.|  
 |[CMFCBaseTabCtrl::RemoveAllTabs](#removealltabs)|Usuwa wszystkie karty z okna z kartami.|  
 |[CMFCBaseTabCtrl::RemoveTab](#removetab)|Usuwa kartę z oknem z kartami.|  
@@ -1844,7 +1844,7 @@ virtual void SetActiveTabColor(COLORREF clr);
  Określa nowy kolor tła.  
   
 ### <a name="remarks"></a>Uwagi  
- Struktura uzyskuje domyślny kolor tła dla aktywnych kart z [GetSysColor](https://msdn.microsoft.com/library/windows/desktop/ms724371)metody.  
+ Struktura uzyskuje domyślny kolor tła dla aktywnych kart z [GetSysColor](/windows/desktop/api/winuser/nf-winuser-getsyscolor)metody.  
   
 ##  <a name="setactivetabtextcolor"></a>  CMFCBaseTabCtrl::SetActiveTabTextColor  
  Określa kolor tekstu dla aktywnych kart.  
@@ -1858,7 +1858,7 @@ virtual void SetActiveTabTextColor(COLORREF clr);
  A [COLORREF](/windows/desktop/gdi/colorref) parametr, który określa nowy kolor tekstu.  
   
 ### <a name="remarks"></a>Uwagi  
- Domyślnie struktura uzyskuje kolor tekstu z [GetSysColor](https://msdn.microsoft.com/library/windows/desktop/ms724371). Zastąpić ten kolor domyślny za pomocą `SetActiveTabTextColor` metody.  
+ Domyślnie struktura uzyskuje kolor tekstu z [GetSysColor](/windows/desktop/api/winuser/nf-winuser-getsyscolor). Zastąpić ten kolor domyślny za pomocą `SetActiveTabTextColor` metody.  
   
 ##  <a name="setautocolors"></a>  CMFCBaseTabCtrl::SetAutoColors  
  Ustawia kolory używającej w ramach kontrolki karty w trybie kolorowi automatycznemu.  

@@ -13,12 +13,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: b1d82f3a6b39fb4b550b8d7f9f9bfbc689088648
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: 9d4f44e3587e9b274bbe89e2fa4f91accadb08ab
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42605020"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43688262"
 ---
 # <a name="desktop-applications-visual-c"></a>Aplikacje klasyczne (Visual C++)
 
@@ -37,7 +37,7 @@ W Visual Studio 2017 w wersji 15.4 lub nowszy można utworzyć projekt pakietu a
 
 - A *Win32* aplikacja jest Windows, aplikacji klasycznych w języku C++, który może zgłaszać korzystać z natywnych [interfejsów API języka C Windows i/lub interfejsów API modelu COM](https://msdn.microsoft.com/library/windows/desktop/ff818516\(v=vs.85\).aspx) CRT i standardowe biblioteki interfejsów API i 3 bibliotek innych firm. Aplikacja Win32, który działa w oknie wymaga deweloperowi jawnie pracować Windows komunikaty wewnątrz funkcji procedury Windows. Niezależnie od nazwy jest aplikacją systemu Win32 może być kompilowane jako (x86) 32-bitowy lub 64-bitowych (x64) binarny. W programie Visual Studio IDE to samo warunków x86 i Win32.
 
-- [Component Object Model (COM)](https://msdn.microsoft.com/library/windows/desktop/ms694363\(v=vs.85\).aspx) jest specyfikacja, która umożliwia programom napisane w różnych językach, aby komunikować się ze sobą. Windows wiele składników są implementowane jako obiekty COM i postępuj zgodnie z standardowe zasady modelu COM do tworzenia obiektów interfejsu zniszczenie odnajdywania i obiektu.  Obiekty COM z aplikacji klasycznych w języku C++ jest stosunkowo prosta, ale zapisywania obiektu COM jest bardziej zaawansowane. [Active Template Library (ATL)](../atl/atl-com-desktop-components.md) zawiera makra i funkcje pomocnicze, które upraszczają programowanie COM.
+- [Component Object Model (COM)](/windows/desktop/com/the-component-object-model) jest specyfikacja, która umożliwia programom napisane w różnych językach, aby komunikować się ze sobą. Windows wiele składników są implementowane jako obiekty COM i postępuj zgodnie z standardowe zasady modelu COM do tworzenia obiektów interfejsu zniszczenie odnajdywania i obiektu.  Obiekty COM z aplikacji klasycznych w języku C++ jest stosunkowo prosta, ale zapisywania obiektu COM jest bardziej zaawansowane. [Active Template Library (ATL)](../atl/atl-com-desktop-components.md) zawiera makra i funkcje pomocnicze, które upraszczają programowanie COM.
 
 - Aplikacja MFC jest używanego przez aplikację pulpitu Windows [Microsoft Foundation Classes](../mfc/mfc-desktop-applications.md) do tworzenia interfejsu użytkownika. Aplikacja MFC umożliwia również składników COM, a także CRT i standardowych interfejsów API w bibliotece. Biblioteka MFC zawiera alokowania elastycznego otok obiektowy C++ przez API Windows i pętli komunikatów okien. MFC jest opcją domyślną dla aplikacji — zwłaszcza aplikacji typu korporacyjnego — które mają wiele formantów interfejsu użytkownika lub niestandardowych formantów użytkownika. MFC udostępnia wygodne klasy pomocnika do zarządzania systemem Windows, serializacji, operacji na tekście, drukowania i elementy interfejsu użytkownika modern, takie jak wstążki. Zaczęła obowiązywać z MFC, należy zapoznać się z systemu Win32.
 

@@ -1,7 +1,7 @@
 ---
 title: . JEŚLI | Dokumentacja firmy Microsoft
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 08/30/2018
 ms.technology:
 - cpp-masm
 ms.topic: reference
@@ -16,31 +16,31 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7ab0e2fc510b4be8c5a9a8c0c3d0fb1c4347f0b9
-ms.sourcegitcommit: dbca5fdd47249727df7dca77de5b20da57d0f544
+ms.openlocfilehash: f7bd5ba5821b4dcfb2d088e31816f50540445018
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/28/2018
-ms.locfileid: "32053119"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43691547"
 ---
 # <a name="if"></a>.IF
-Generuje kod, który umożliwia sprawdzenie `condition1` (na przykład AX > 7) i wykonuje *instrukcje* Jeśli ten warunek jest spełniony.  
-  
-## <a name="syntax"></a>Składnia  
-  
-```  
-  
-   .IF condition1   
-statements  
-[[.ELSEIF condition2   
-   statements]]  
-[[.ELSE  
-   statements]]  
-.ENDIF  
-```  
-  
-## <a name="remarks"></a>Uwagi  
- Jeśli [. ELSE](../../assembler/masm/dot-else.md) następujące, jego instrukcje są wykonywane, jeśli fabrycznego była wartość false. Należy pamiętać, że warunki są oceniane w czasie wykonywania.  
-  
-## <a name="see-also"></a>Zobacz też  
- [Dokumentacja dyrektyw](../../assembler/masm/directives-reference.md)
+
+Generuje kod, który umożliwia sprawdzenie `condition1` (na przykład AX > 7) i wykonuje *instrukcji* Jeśli ten warunek jest prawdziwy.
+
+## <a name="syntax"></a>Składnia
+
+> . Jeśli condition1<br/>
+> instrukcje<br/>
+> [[. ELSEIF condition2<br/>
+> instrukcje]]<br/>
+> [[. ELSE<br/>
+> instrukcje]]<br/>
+> .ENDIF
+
+## <a name="remarks"></a>Uwagi
+
+Jeśli [. ELSE](../../assembler/masm/dot-else.md) obserwowanych jego instrukcje są wykonywane, jeśli oryginalnego warunku był FAŁSZ. Należy pamiętać, że warunki są oceniane w czasie wykonywania.
+
+## <a name="see-also"></a>Zobacz także
+
+[Dokumentacja dyrektyw](../../assembler/masm/directives-reference.md)<br/>

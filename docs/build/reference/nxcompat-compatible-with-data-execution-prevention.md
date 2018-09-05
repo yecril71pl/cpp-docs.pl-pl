@@ -17,16 +17,16 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: bb4f8a91545a196bc92fdc0ec44e89a7d5680185
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 9f6e2c3f1c297493b2af72f280ac5eabcb6f17ce
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32374807"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43690322"
 ---
 # <a name="nxcompat-compatible-with-data-execution-prevention"></a>/NXCOMPAT (Zgodny z zapobieganiem wykonywaniu danych)
 
-Wskazuje, że plik wykonywalny jest zgodny z funkcją zapobiegania wykonywaniu danych systemu Windows.
+Wskazuje, że plik wykonywalny jest zgodny z funkcją zapobiegania wykonywaniu danych Windows.
 
 ## <a name="syntax"></a>Składnia
 
@@ -36,23 +36,23 @@ Wskazuje, że plik wykonywalny jest zgodny z funkcją zapobiegania wykonywaniu d
 
 Domyślnie **/NXCOMPAT** znajduje się na.
 
-**: No** może służyć do jawnie określ plik wykonywalny jako niezgodne z zapobieganiem wykonywaniu danych.
+**: No** może służyć do jawnego określenia pliku wykonywalnego jako niezgodny z zapobieganiem wykonywaniu danych.
 
-Aby uzyskać więcej informacji na temat zapobiegania wykonywaniu danych zobacz następujące artykuły:
+Aby uzyskać więcej informacji dotyczących zapobiegania wykonywaniu danych zobacz następujące artykuły:
 
-- [Szczegółowy opis funkcja Zapobieganie wykonywaniu danych (DEP)](http://go.microsoft.com/fwlink/p/?linkid=157771)
+- [Szczegółowy opis funkcji Zapobieganie wykonywania danych (DEP)](https://support.microsoft.com/en-us/help/875352/a-detailed-description-of-the-data-execution-prevention-dep-feature-in)
 
-- [Zapobieganie wykonywaniu danych](http://go.microsoft.com/fwlink/p/?linkid=157770)
+- [Zapobieganie wykonywaniu danych](/windows/desktop/Memory/data-execution-prevention)
 
-- [Zapobieganie wykonywaniu danych (z systemem Windows Embedded)](http://go.microsoft.com/fwlink/p/?linkid=157768)
+- [Zapobieganie wykonywaniu danych (Windows Embedded)](/previous-versions/windows/embedded/ms913190\(v=winembedded.5\))
 
 ### <a name="to-set-this-linker-option-in-visual-studio"></a>Aby ustawić tę opcję konsolidatora w programie Visual Studio
 
-1. Otwórz projekt **strony właściwości** okno dialogowe. Aby uzyskać więcej informacji, zobacz [Praca z właściwościami projektu](../../ide/working-with-project-properties.md).
+1. Otwórz projekt **stron właściwości** okno dialogowe. Aby uzyskać więcej informacji, zobacz [Praca z właściwościami projektu](../../ide/working-with-project-properties.md).
 
-1. Wybierz **właściwości konfiguracji** > **konsolidatora** > **wiersza polecenia** strony właściwości.
+1. Wybierz **właściwości konfiguracji** > **konsolidatora** > **wiersza polecenia** stronę właściwości.
 
-1. Wybierz opcję w **dodatkowe opcje** pole. Wybierz **OK** lub **Zastosuj** do zastosowania zmiany.
+1. Wpisz opcje w **dodatkowe opcje** pole. Wybierz **OK** lub **Zastosuj** do zastosowania zmiany.
 
 ### <a name="to-set-this-linker-option-programmatically"></a>Aby programowo ustawić tę opcję konsolidatora
 

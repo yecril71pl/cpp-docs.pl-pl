@@ -14,12 +14,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1f7d7bed9725e4ec1cc8ad0fc66673ce5c6212e1
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: cfee61f1632fad2d762c41149c1bc302a1c4b9da
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43211215"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43691989"
 ---
 # <a name="implementing-an-interface-visual-c"></a>Implementowanie interfejsu (Visual C++)
 Aby zaimplementować interfejs, musi utworzono projekt jako aplikację ATL COM lub aplikacji MFC, który zawiera obsługę ATL. Możesz użyć [Kreator projektów ATL](../atl/reference/atl-project-wizard.md) do tworzenia aplikacji biblioteki ATL, lub [Dodaj obiekt ATL do Twojej aplikacji MFC](../mfc/reference/adding-atl-support-to-your-mfc-project.md) do zaimplementowania Obsługa ALT dla aplikacji MFC.  
@@ -46,7 +46,7 @@ Aby zaimplementować interfejs, musi utworzono projekt jako aplikację ATL COM l
 4.  W widoku klas, rozwiń węzeł bazy obiektu i języka node interfejsów, aby wyświetlić interfejs został zaimplementowany, a następnie rozwiń węzeł interfejsu, aby wyświetlić jego dostępnych właściwości, metody i zdarzenia.  
   
     > [!NOTE]
-    >  Można również użyć [przeglądarki obiektów](https://msdn.microsoft.com/f89acfc5-1152-413d-9f56-3dc16e3f0470) zbadanie składowych interfejsu.  
+    >  Można również użyć [przeglądarki obiektów](/visualstudio/ide/viewing-the-structure-of-code) zbadanie składowych interfejsu.  
   
 ## <a name="see-also"></a>Zobacz też  
  [Tworzenie interfejsu COM](../ide/creating-a-com-interface-visual-cpp.md)   

@@ -1,5 +1,5 @@
 ---
-title: -sdl (Włącz dodatkowe testy zabezpieczeń) | Dokumentacja firmy Microsoft
+title: -sdl (Włącz dodatkowe kontrole zabezpieczeń) | Dokumentacja firmy Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -14,15 +14,15 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8aa984b488f74043b8c90876047516ebca23d4d3
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: b6f88e254a49309c0ca44c330fdc71d32ee1a87d
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32379539"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43686342"
 ---
 # <a name="sdl-enable-additional-security-checks"></a>/sdl (Włącz dodatkowe kontrole zabezpieczeń)
-Dodaje zalecane kontroli Security Development Lifecycle (SDL). Kontrole te obejmują bardzo związanych z zabezpieczeniami ostrzeżenia jako błędy i funkcje dodatkowe bezpiecznego generowania kodu.  
+Dodaje zalecane testy cykl projektowania zabezpieczeń (SDL). Testy te obejmują dodatkowych związanych z zabezpieczeniami ostrzeżenia jako błędy i funkcje dodatkowe bezpiecznego generowania kodu.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -31,42 +31,42 @@ Dodaje zalecane kontroli Security Development Lifecycle (SDL). Kontrole te obejm
 ```  
   
 ## <a name="remarks"></a>Uwagi  
- **/ SDL** włącza nadzbiór kontroli zabezpieczeń linii bazowej, które są udostępniane przez [/GS](../../build/reference/gs-buffer-security-check.md) i zastępuje **/GS-**. Domyślnie **/SDL** jest wyłączona. **Zgłaszanie** wyłącza sprawdzanie dodatkowe zabezpieczenia.  
+ **/ SDL** włącza nadzbiór kontrole zabezpieczeń linii bazowej, które są dostarczane przez [/GS](../../build/reference/gs-buffer-security-check.md) i zastępuje **/GS-**. Domyślnie **/SDL** jest wyłączona. **Zgłaszanie** wyłącza dodatkowe kontrole zabezpieczeń.  
   
-## <a name="compile-time-checks"></a>Sprawdzenie w czasie kompilacji  
+## <a name="compile-time-checks"></a>Sprawdzanie w czasie kompilacji  
  **/ SDL** włącza te ostrzeżenia jako błędy:  
   
-|Ostrzeżenie włączane przez/SDL|Odpowiednik przełącznik wiersza polecenia|Opis|  
+|Ostrzeżenie włączone przez/SDL|Równoważne przełącznik wiersza polecenia|Opis|  
 |------------------------------|-------------------------------------|-----------------|  
-|[C4146](../../error-messages/compiler-warnings/compiler-warning-level-2-c4146.md)|/we4146|Jednoargumentowy minus operator została zastosowana do typu unsigned, co w wyniku bez znaku.|  
-|[C4308](../../error-messages/compiler-warnings/compiler-warning-level-2-c4308.md)|/we4308|Ujemne stałe całkowite skonwertowano na typ bez znaku, co w wyniku prawdopodobnie znaczenia.|  
-|[C4532](../../error-messages/compiler-warnings/compiler-warning-level-1-c4532.md)|/we4532|Użycie `continue`, `break` lub `goto` słów kluczowych w `__finally` / `finally` bloku ma niezdefiniowane zachowanie podczas przerwania pracy.|  
-|[C4533](../../error-messages/compiler-warnings/compiler-warning-level-1-c4533.md)|/we4533|Inicjowanie zmiennej kod nie zostanie wykonany.|  
+|[C4146](../../error-messages/compiler-warnings/compiler-warning-level-2-c4146.md)|/we4146|Jednoargumentowy minus operator została zastosowana do typu unsigned, co wynik bez znaku.|  
+|[C4308](../../error-messages/compiler-warnings/compiler-warning-level-2-c4308.md)|/we4308|Ujemne stałe całkowite skonwertowano na typ bez znaku, co w wyniku prawdopodobnie ta nie ma znaczenia.|  
+|[C4532](../../error-messages/compiler-warnings/compiler-warning-level-1-c4532.md)|/we4532|Korzystanie z `continue`, `break` lub `goto` słów kluczowych w `__finally` / `finally` bloku posiada niezdefiniowane zachowanie podczas Nienormalne zakończenie.|  
+|[C4533](../../error-messages/compiler-warnings/compiler-warning-level-1-c4533.md)|/we4533|Kod inicjowania zmiennej nie zostaną wykonane.|  
 |[C4700](../../error-messages/compiler-warnings/compiler-warning-level-1-and-level-4-c4700.md)|/we4700|Użycie niezainicjowanej zmiennej lokalnej.|  
 |[C4703](../../error-messages/compiler-warnings/compiler-warning-level-4-c4703.md)|/we4703|Użycie potencjalnie niezainicjowanej lokalnej zmiennej wskaźnikowej.|  
-|[C4789](../../error-messages/compiler-warnings/compiler-warning-level-1-c4789.md)|/we4789|Przepełnienie stosowania określone funkcje (CRT) wykonawcze języka C buforu.|  
-|[C4995](../../error-messages/compiler-warnings/compiler-warning-level-3-c4995.md)|/we4995|Używać funkcji oznaczonych pragma [przestarzałe](../../preprocessor/deprecated-c-cpp.md).|  
-|[C4996](../../error-messages/compiler-warnings/compiler-warning-level-3-c4996.md)|/we4996|Używać funkcji oznaczona jako [przestarzałe](../../cpp/deprecated-cpp.md).|  
+|[C4789](../../error-messages/compiler-warnings/compiler-warning-level-1-c4789.md)|/we4789|Przepełnienie podczas korzystania z określonych funkcji wykonawczej (CRT) C buforu.|  
+|[C4995](../../error-messages/compiler-warnings/compiler-warning-level-3-c4995.md)|/we4995|Korzystanie z funkcji oznaczona za pomocą pragmy [przestarzałe](../../preprocessor/deprecated-c-cpp.md).|  
+|[C4996](../../error-messages/compiler-warnings/compiler-warning-level-3-c4996.md)|/we4996|Korzystanie z funkcji oznaczone jako [przestarzałe](../../cpp/deprecated-cpp.md).|  
   
-## <a name="runtime-checks"></a>Sprawdzanie czasu wykonania  
- Gdy **/SDL** jest włączone, kompilator generuje kod do wykonania tych testów w czasie wykonywania:  
+## <a name="runtime-checks"></a>Testy środowiska uruchomieniowego  
+ Gdy **/SDL** jest włączone, kompilator generuje kod do wykonywania tych sprawdzeń w czasie wykonywania:  
   
--   Włącza tryb strict **/GS** wykrywania przepełnienie buforu czasu wykonywania, odpowiednikiem kompilowania przy użyciu `#pragma strict_gs_check(push, on)`.  
+-   Włącza tryb strict **/GS** wykrywania przepełnienia buforu środowiska wykonawczego, odpowiednikiem kompilowania za pomocą `#pragma strict_gs_check(push, on)`.  
   
--   Wykonuje ich oczyszczania ograniczone wskaźnika. W wyrażeniach, które nie wymagają wyłuskań i typy, których nie ma destruktora zdefiniowane przez użytkownika, odwołania do wskaźnika są ustawione nie jest prawidłowym adresem po wywołaniu `delete`. Pozwala to zapobiec ponownemu użyciu odwołania do starych wskaźnika.  
+-   Wykonuje oczyszczania ograniczone wskaźnika. W wyrażeniach, które nie wymagają wyłuskań, i na typy, które mają nie destruktor zdefiniowany przez użytkownika, wskaźnik odwołania są ustawione na nie jest prawidłowym adresem po wywołaniu `delete`. Pomaga to zapobiec ponownemu użyciu starych wskaźnik odwołania.  
   
--   Wykonuje inicjowanie elementu członkowskiego klasy. Automatycznie inicjuje wszystkich elementów członkowskich klasy na zero dla wystąpienia obiektu (przed uruchomieniem Konstruktora). Pomaga to zapobiec użycia niezainicjowanej dane skojarzone z elementów członkowskich klasy, które nie jawnie zainicjować konstruktora.  
+-   Wykonuje inicjowanie składowej klasy. Automatycznie inicjuje wszystkie elementy klas na zero dla tworzenia wystąpienia obiektu (przed uruchomieniem Konstruktora). Pozwala to zapobiec użycie niezainicjowanej danych skojarzonych z członków klasy, które nie jawnie zainicjować konstruktora.  
   
 ## <a name="remarks"></a>Uwagi  
- Aby uzyskać więcej informacji, zobacz [ostrzeżenia, / SDL i poprawy niezainicjowanej zmiennej wykrywania](http://go.microsoft.com/fwlink/p/?LinkId=331012).  
+ Aby uzyskać więcej informacji, zobacz [ostrzeżenia, / SDL i poprawy niezainicjowanej zmiennej wykrywania](https://cloudblogs.microsoft.com/microsoftsecure/2012/06/06/warnings-sdl-and-improving-uninitialized-variable-detection/).  
   
 #### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Aby ustawić tę opcję kompilatora w środowisku programowania Visual Studio  
   
-1.  Otwórz projekt **strony właściwości** okno dialogowe. Aby uzyskać więcej informacji, zobacz [Praca z właściwościami projektu](../../ide/working-with-project-properties.md).  
+1.  Otwórz projekt **stron właściwości** okno dialogowe. Aby uzyskać więcej informacji, zobacz [Praca z właściwościami projektu](../../ide/working-with-project-properties.md).  
   
 2.  Wybierz **C/C++** folderu.  
   
-3.  Na **ogólne** wybierz tę opcję z **kontroli SDL** listy rozwijanej.  
+3.  Na **ogólne** wybierz tę opcję z **sprawdzenia SDL** listy rozwijanej.  
   
 ## <a name="see-also"></a>Zobacz też  
  [Opcje kompilatora](../../build/reference/compiler-options.md)   

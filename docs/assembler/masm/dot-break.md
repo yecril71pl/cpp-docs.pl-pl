@@ -1,7 +1,7 @@
 ---
-title: . PODZIEL | Dokumentacja firmy Microsoft
+title: . PRZERWIJ | Dokumentacja firmy Microsoft
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 08/30/2018
 ms.technology:
 - cpp-masm
 ms.topic: reference
@@ -16,22 +16,21 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0ab2f921452d46546bd8ed48b87bf053aaf64dc8
-ms.sourcegitcommit: dbca5fdd47249727df7dca77de5b20da57d0f544
+ms.openlocfilehash: 4d9521c9771452d435a93248afd0e968e4cce734
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/28/2018
-ms.locfileid: "32051559"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43691969"
 ---
 # <a name="break"></a>.BREAK
-Generuje kod, aby zakończyć [. GDY](../../assembler/masm/dot-while.md) lub [. Powtórz](../../assembler/masm/dot-repeat.md) zablokować, jeśli *warunku* ma wartość true.  
-  
-## <a name="syntax"></a>Składnia  
-  
-```  
-  
-.BREAK [[.IF condition]]   
-```  
-  
-## <a name="see-also"></a>Zobacz też  
- [Dokumentacja dyrektyw](../../assembler/masm/directives-reference.md)
+
+Generuje kod, aby zakończyć [. GDY](../../assembler/masm/dot-while.md) lub [. Powtórz](../../assembler/masm/dot-repeat.md) zablokować, jeśli *warunek* ma wartość true.
+
+## <a name="syntax"></a>Składnia
+
+> . PRZERWIJ [[. Warunek IF]]
+
+## <a name="see-also"></a>Zobacz także
+
+[Dokumentacja dyrektyw](../../assembler/masm/directives-reference.md)<br/>

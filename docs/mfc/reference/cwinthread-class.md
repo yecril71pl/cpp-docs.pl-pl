@@ -60,12 +60,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 02bfbe474d30088c887e7a16b6dcea079dfd9821
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 784425246c3be99acde2942633ce5190807c59b4
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43213069"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43689561"
 ---
 # <a name="cwinthread-class"></a>Cwinthread — klasa
 Przedstawia wątek wykonania wewnątrz aplikacji.  
@@ -96,10 +96,10 @@ class CWinThread : public CCmdTarget
 |[CWinThread::IsIdleMessage](#isidlemessage)|Sprawdza, czy specjalne wiadomości.|  
 |[CWinThread::OnIdle](#onidle)|Należy przesłonić, aby wykonać przetwarzanie w czasie bezczynności właściwe dla wątków.|  
 |[CWinThread::PostThreadMessage](#postthreadmessage)|Publikuje komunikat do innego `CWinThread` obiektu.|  
-|[CWinThread::PreTranslateMessage](#pretranslatemessage)|Filtry komunikatów przed ich wysłaniem do funkcji Windows [TranslateMessage](https://msdn.microsoft.com/library/windows/desktop/ms644955) i [DispatchMessage](https://msdn.microsoft.com/library/windows/desktop/ms644934).|  
+|[CWinThread::PreTranslateMessage](#pretranslatemessage)|Filtry komunikatów przed ich wysłaniem do funkcji Windows [TranslateMessage](/windows/desktop/api/winuser/nf-winuser-translatemessage) i [DispatchMessage](/windows/desktop/api/winuser/nf-winuser-dispatchmessage).|  
 |[CWinThread::ProcessMessageFilter](#processmessagefilter)|Przechwytuje niektóre komunikaty zanim osiągną one aplikację.|  
 |[CWinThread::ProcessWndProcException](#processwndprocexception)|Przechwytuje wszystkie nieobsługiwane wyjątki rzucane przez komunikat dla wątku i programy obsługi poleceń.|  
-|[CWinThread::PumpMessage](#pumpmessage)|Zawiera pętli komunikatów dla wątku.|  
+|[CWinThread::PumpMessage](#pumpmessage)|zawiera pętli komunikatów dla wątku.|  
 |[CWinThread::ResumeThread](#resumethread)|Zmniejsza wątku zawiesić count.|  
 |[CWinThread::Run](#run)|Kontrolowanie funkcji dla wątków, za pomocą "pompy komunikatów". Przesłoń, aby dostosować domyślną pętlę komunikatów.|  
 |[CWinThread::SetThreadPriority](#setthreadpriority)|Ustawia priorytet bieżącego wątku.|  
@@ -411,7 +411,7 @@ BOOL PostThreadMessage(
 >  Podczas wywoływania Windows [PostThreadMessage](https://msdn.microsoft.com/library/windows/desktop/ms644946) funkcję w aplikacji MFC, komunikatów MFC nie są wywoływane programy obsługi. Aby uzyskać więcej informacji zobacz artykuł bazy wiedzy, "PRB: MFC komunikat obsługi nie wywołuje się za pomocą PostThreadMessage()" (Q142415).  
   
 ##  <a name="pretranslatemessage"></a>  CWinThread::PreTranslateMessage  
- Zastąp tę funkcję, aby przefiltrować komunikaty okna, zanim zostaną rozesłane do funkcji Windows [TranslateMessage](https://msdn.microsoft.com/library/windows/desktop/ms644955) i [DispatchMessage](https://msdn.microsoft.com/library/windows/desktop/ms644934).  
+ Zastąp tę funkcję, aby przefiltrować komunikaty okna, zanim zostaną rozesłane do funkcji Windows [TranslateMessage](/windows/desktop/api/winuser/nf-winuser-translatemessage) i [DispatchMessage](/windows/desktop/api/winuser/nf-winuser-dispatchmessage).  
   
 ```  
 virtual BOOL PreTranslateMessage(MSG* pMsg);
@@ -485,7 +485,7 @@ virtual LRESULT ProcessWndProcException(
  Ta funkcja członkowska jest używany tylko w wątki, które zawierają "pompy komunikatów".  
   
 ##  <a name="pumpmessage"></a>  CWinThread::PumpMessage  
- Zawiera pętli komunikatów dla wątku.  
+ zawiera pętli komunikatów dla wątku.  
   
 ```  
 virtual BOOL PumpMessage();
@@ -520,7 +520,7 @@ virtual int Run();
  **Int** wartość zwracana przez wątek. Ta wartość może być pobierany przez wywołanie [GetExitCodeThread](/windows/desktop/api/processthreadsapi/nf-processthreadsapi-getexitcodethread).  
   
 ### <a name="remarks"></a>Uwagi  
- `Run` uzyskuje i wysyła komunikaty Windows, aż aplikacja otrzymuje [WM_QUIT](/windows/desktop/winmsg/wm-quit) wiadomości. Jeśli kolejka komunikatów wątku zawiera obecnie żadne komunikaty o `Run` wywołania `OnIdle` do wykonywania przetwarzania w czasie bezczynności (%). Komunikaty przychodzące, przejdź do [pretranslatemessage —](#pretranslatemessage) funkcja elementu członkowskiego dla specjalnego przetwarzania, a następnie do funkcji Windows [TranslateMessage](https://msdn.microsoft.com/library/windows/desktop/ms644955) standardowy interfejs użytkownika translacji. Na koniec [DispatchMessage](https://msdn.microsoft.com/library/windows/desktop/ms644934) Windows funkcja jest wywoływana.  
+ `Run` uzyskuje i wysyła komunikaty Windows, aż aplikacja otrzymuje [WM_QUIT](/windows/desktop/winmsg/wm-quit) wiadomości. Jeśli kolejka komunikatów wątku zawiera obecnie żadne komunikaty o `Run` wywołania `OnIdle` do wykonywania przetwarzania w czasie bezczynności (%). Komunikaty przychodzące, przejdź do [pretranslatemessage —](#pretranslatemessage) funkcja elementu członkowskiego dla specjalnego przetwarzania, a następnie do funkcji Windows [TranslateMessage](/windows/desktop/api/winuser/nf-winuser-translatemessage) standardowy interfejs użytkownika translacji. Na koniec [DispatchMessage](/windows/desktop/api/winuser/nf-winuser-dispatchmessage) Windows funkcja jest wywoływana.  
   
  `Run` rzadko zostanie zastąpiona, ale można ją zastąpić, tak aby implementował specjalnego zachowania.  
   

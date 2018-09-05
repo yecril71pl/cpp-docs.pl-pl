@@ -1,7 +1,7 @@
 ---
 title: PODTYTUŁ | Dokumentacja firmy Microsoft
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 08/30/2018
 ms.technology:
 - cpp-masm
 ms.topic: reference
@@ -16,22 +16,21 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b235919291128df99a6187f9fdb92a6a098db99f
-ms.sourcegitcommit: dbca5fdd47249727df7dca77de5b20da57d0f544
+ms.openlocfilehash: 8c81bb3da0ecc73cd7634141a8c5df0cb18318ec
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/28/2018
-ms.locfileid: "32057854"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43685184"
 ---
 # <a name="subtitle"></a>SUBTITLE
-Definiuje listę pomocniczą. Taki sam jak [subttl —](../../assembler/masm/subttl.md).  
-  
-## <a name="syntax"></a>Składnia  
-  
-```  
-  
-SUBTITLE text  
-```  
-  
-## <a name="see-also"></a>Zobacz też  
- [Dokumentacja dyrektyw](../../assembler/masm/directives-reference.md)
+
+Definiuje podtytuł listy. Taki sam jak [subttl —](../../assembler/masm/subttl.md).
+
+## <a name="syntax"></a>Składnia
+
+> Tekst PODTYTUŁU
+
+## <a name="see-also"></a>Zobacz także
+
+[Dokumentacja dyrektyw](../../assembler/masm/directives-reference.md)<br/>

@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 9a775370228691e47b1b9becca8e0769ea0f7367
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 7338f513754722bc00a96f5ee71cce06591f031d
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43221881"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43685993"
 ---
 # <a name="ole-db-templates-attributes-and-other-implementations"></a>Szablony i atrybuty OLE DB oraz inne implementacje
 ## <a name="atl-ole-db-templates"></a>Szablony ATL OLE DB  
@@ -44,7 +44,7 @@ ms.locfileid: "43221881"
   
 -   Przejrzyj listę rzeczy, [klasy konsumentów OLE DB](../../data/oledb/ole-db-consumer-templates-reference.md) lub [klasy dostawców OLE DB](../../data/oledb/ole-db-provider-templates-reference.md).  
   
--   Przejrzyj listę rzeczy, [przykłady szablonów OLE DB](https://msdn.microsoft.com/08958863-0b5f-41ad-ae99-fca7440c553c).  
+-   Przejrzyj listę rzeczy, [przykłady szablonów OLE DB](https://github.com/Microsoft/VCSamples).  
   
 -   Zobacz [OLE DB Podręcznik programisty](/previous-versions/windows/desktop/ms713643\(v=vs.85\)) (w Windows SDK).  
   

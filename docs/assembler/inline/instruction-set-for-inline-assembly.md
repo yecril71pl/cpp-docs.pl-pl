@@ -1,7 +1,7 @@
 ---
-title: Ustaw instrukcji dla zestawu wbudowanego | Dokumentacja firmy Microsoft
+title: Instrukcja zestawu dla zestawu wbudowanego | Dokumentacja firmy Microsoft
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 08/30/2018
 ms.technology:
 - cpp-masm
 ms.topic: reference
@@ -17,18 +17,21 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 622f5aea757506dd3bf48056a139f381e9d8a883
-ms.sourcegitcommit: dbca5fdd47249727df7dca77de5b20da57d0f544
+ms.openlocfilehash: 02fe69fad2e1ef9fb8aa0c5aa23913ccf403e15a
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/28/2018
-ms.locfileid: "32051120"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43693998"
 ---
 # <a name="instruction-set-for-inline-assembly"></a>Zestaw instrukcji dla zestawu wbudowanego
-## <a name="microsoft-specific"></a>Specyficzne dla firmy Microsoft  
- Kompilator Visual C++ obsługuje wszystkie kody operacji za pośrednictwem Pentium 4 i AMD Athlon. Dodatkowe instrukcje, obsługiwanych przez procesor docelowy można tworzyć za pomocą [pseudoinstrukcja _emit](../../assembler/inline/emit-pseudoinstruction.md).  
-  
- **KOŃCOWY określonych firmy Microsoft**  
-  
-## <a name="see-also"></a>Zobacz też  
- [Korzystanie z języka Asembler w blokach __asm](../../assembler/inline/using-assembly-language-in-asm-blocks.md)
+
+**Microsoft Specific**
+
+Kompilator języka Visual C++ obsługuje wszystkie rozkazów Pentium 4 i AMD Athlon. Dodatkowe informacje obsługiwane przez procesor docelowy można tworzyć z [pseudoinstrukcja _emit](../../assembler/inline/emit-pseudoinstruction.md).
+
+**END specyficzny dla Microsoft**
+
+## <a name="see-also"></a>Zobacz także
+
+[Korzystanie z języka Asembler w blokach __asm](../../assembler/inline/using-assembly-language-in-asm-blocks.md)<br/>
