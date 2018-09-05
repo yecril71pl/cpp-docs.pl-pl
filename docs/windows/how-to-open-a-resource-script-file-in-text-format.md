@@ -19,12 +19,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: aae516aeecd90a46544d1e9e28e1352fc73f6e2c
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: e331966c44d19f2410a59505348bcc0a37c63912
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43221463"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43676056"
 ---
 # <a name="how-to-open-a-resource-script-file-in-text-format"></a>Porady: otwieranie pliku skryptu zasobu w formacie tekstowym
 
@@ -33,7 +33,7 @@ Mogą wystąpić sytuacje, gdy chcesz wyświetlić zawartość pliku skryptu (.r
 > [!NOTE]
 > Jeśli projekt nie zawiera jeszcze pliku .rc, zobacz [tworzenia nowego pliku skryptu zasobów](../windows/how-to-create-a-resource-script-file.md).
 
-Łatwo można otworzyć pliku zasobów, w formacie tekstowym, aby wyświetlić wszystkie zawarte w niej zasoby i wykonywać globalne operacje obsługiwane przez [edytora tekstów](https://msdn.microsoft.com/508e1f18-99d5-48ad-b5ad-d011b21c6ab1).
+Łatwo można otworzyć pliku zasobów, w formacie tekstowym, aby wyświetlić wszystkie zasoby, zawiera i wykonywać globalne operacje obsługiwane przez Edytor tekstu.
 
 > [!NOTE]
 > Edytory zasobów bezpośrednio odczytu nie .rc lub `resource.h` plików. Kompilator zasobów kompiluje je na .aps pliki, które są używane przez edytory zasobów. Ten plik jest to krok kompilacji i tylko przechowuje dane symboliczne. Jak zwykłym skompilować procesu, informacje symboliczne (na przykład komentarzy) jest pomijany w procesie kompilacji. Zawsze, gdy plik .aps pobiera synchronizację z pliku .rc, zostanie ponownie wygenerowany plik .rc (na przykład podczas zapisywania, Edytor zasobów zastąpi plików .rc i pliku resource.h). Zmiany wprowadzone w zasobach pozostaną dołączone w pliku .rc, ale komentarze zostać utracone po plik .rc jest zastępowany. Aby uzyskać informacje na temat sposobu zachowanie komentarzy, wyświetlić [tym zasobów w czasie kompilowania](../windows/how-to-include-resources-at-compile-time.md).
