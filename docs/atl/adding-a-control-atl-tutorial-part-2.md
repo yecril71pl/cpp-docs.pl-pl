@@ -12,105 +12,107 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f1547d48b5b5914d9b32ff8b476b0c007f972067
-ms.sourcegitcommit: d06966efce25c0e66286c8047726ffe743ea6be0
+ms.openlocfilehash: ac4f3e1460dc4601e15065cb7b968153bd928c87
+ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36238711"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43762863"
 ---
 # <a name="adding-a-control-atl-tutorial-part-2"></a>Dodawanie kontrolki (ALT — Samouczek, część 2)
-W tym kroku zostanie Dodawanie formantu do projektu, skompiluj go i przetestować go na stronie sieci Web.  
-  
-## <a name="procedures"></a>Procedury  
-  
-#### <a name="to-add-an-object-to-an-atl-project"></a>Można dodać obiektu do Projekt ATL  
-  
-1.  W **Eksploratora rozwiązań**, kliknij prawym przyciskiem myszy projekt wielokąta.  
-  
-2.  Wskaż **Dodaj** na pasku menu skrótów, a następnie kliknij **nowy element** w podmenu.  
-  
-     **Dodaj nowy element** zostanie wyświetlone okno dialogowe. Kategorie różne obiekty są wyświetlane w strukturze drzewa po lewej stronie.  
-  
-3.  Kliknij przycisk **ATL** folderu.  
-  
-4.  Na liście szablonów po prawej stronie zaznacz **formantu ATL**. Kliknij przycisk **Dodaj**. Zostanie otwarty Kreator formantu ATL i sterowanie można skonfigurować.  
-  
-5.  Typ `PolyCtl` jako krótka nazwa i należy pamiętać, że inne pola zostały automatycznie zakończone. Nie klikaj pozycji **Zakończ** jeszcze, ponieważ trzeba wprowadzić kilka zmian.  
-  
- Kreator formantu ATL **nazwy** strona zawiera następujące pola:  
-  
-|Pole|Spis treści|  
-|-----------|--------------|  
-|**Krótka nazwa**|Nazwa wprowadzona dla formantu.|  
-|**Class**|Nazwa klasy C++ utworzone w celu wdrożenia formantu.|  
-|**w pliku .h**|Plik zawiera definicję klasy C++.|  
-|**plik .cpp**|Plik zawiera implementację klasy C++.|  
-|**Klasa coClass**|Nazwa klasy składnika dla tego formantu.|  
-|**Interface**|Nazwa interfejsu, na którym formantu zostanie Implementowanie niestandardowych metod i właściwości.|  
-|**Typ**|Opis dla formantu.|  
-|**Identyfikator programu**|Dla użytkownika nazwę używaną do odszukania CLSID formantu.|  
-  
- Konieczne będzie wprowadzenie kilka dodatkowych ustawień kreatora ATL kontroli.  
-  
-#### <a name="to-enable-support-for-rich-error-information-and-connection-points"></a>Aby włączyć obsługę połączenia i informacje o błędzie sformatowanego punkty  
-  
-1.  Kliknij przycisk **opcje** otworzyć **opcje** strony.  
-  
-2.  Wybierz **punkty połączenia** pole wyboru. Spowoduje to utworzenie obsługę interfejsu wychodzącego w pliku IDL.  
-  
- Należy również wybrać formant insertable, co oznacza, że można ją osadzić w aplikacji, które obsługuje osadzonych obiektów, takich jak Excel lub Word.  
-  
-#### <a name="to-make-the-control-insertable"></a>Aby insertable formantu  
-  
-1.  Kliknij przycisk **wygląd** otworzyć **wygląd** strony.  
-  
-2.  Wybierz **Insertable** pole wyboru.  
-  
- Wielokąt wyświetlany przez obiekt będzie mieć kolor wypełnienia stałe, dlatego należy dodać `Fill Color` podstawowy właściwości.  
-  
-#### <a name="to-add-a-fill-color-stock-property-and-create-the-control"></a>Dodawanie właściwości standardowych kolor wypełnienia i utworzyć formantu  
-  
-1.  Kliknij przycisk **właściwości zasobów** otworzyć **właściwości zasobu** strony.  
-  
-2.  W obszarze **nieobsługiwane**, przewiń w dół listę możliwych właściwości standardowych. Kliknij dwukrotnie `Fill Color` docelowy **obsługiwane** listy.  
-  
-3.  Na tym kończy się opcji dla formantu. Kliknij przycisk **Zakończ**.  
-  
- Kreator tworzenia kontrolki, wystąpił kilka zmian w kodzie i pliku dodatków. Następujące pliki zostały utworzone:  
-  
-|Plik|Opis|  
-|----------|-----------------|  
-|PolyCtl.h|Zawiera większość Implementacja klasy C++ `CPolyCtl`.|  
-|PolyCtl.cpp|Pozostałe części zawiera `CPolyCtl`.|  
-|PolyCtl.rgs|Plik tekstowy zawierający skrypt rejestru używany do rejestrowania formantu.|  
-|PolyCtl.htm|Strony sieci Web zawierającej odwołanie do nowo utworzonej formantu.|  
-  
- Kreator również wykonać następujące zmiany kodu:  
-  
--   Dodaje `#include` instrukcji do pliku stdafx.h i stdafx.cpp w celu ATL pliki niezbędne do obsługi formantów.  
-  
--   Zmienione Polygon.idl uwzględnienie szczegółów nowego formantu.  
-  
--   Dodany nowy formant do mapy obiektu w Polygon.cpp.  
-  
- Teraz można tworzyć formant jest widoczny w akcji.  
-  
-## <a name="building-and-testing-the-control"></a>Tworzenie i testowanie formantu  
-  
-#### <a name="to-build-and-test-the-control"></a>Tworzenie i testowanie formantu  
-  
-1.  Na **kompilacji** menu, kliknij przycisk **kompilacji wielokąta**.  
-  
-     Gdy formant kończy budynku, kliknij prawym przyciskiem myszy PolyCtl.htm w **Eksploratora rozwiązań** i wybierz **Wyświetl w przeglądarce**. Wyświetli się strona sieci HTML Web zawierająca formant. Powinna zostać wyświetlona strona z tytułem "ATL strony testowej 8.0 dla obiekt PolyCtl" i tekst **PolyCtl**. To jest formant.  
-  
+
+W tym kroku zostanie dodać formant do projektu, skompiluj go i je przetestować na stronie sieci Web.
+
+## <a name="procedures"></a>Procedury
+
+#### <a name="to-add-an-object-to-an-atl-project"></a>Aby dodać obiekt do projektu ATL
+
+1. W **Eksploratora rozwiązań**, kliknij prawym przyciskiem myszy projekt wielokąt.
+
+2. Wskaż **Dodaj** w menu skrótów, a następnie kliknij przycisk **nowy element** w podmenu.
+
+     **Dodaj nowy element** pojawi się okno dialogowe. Inne kategorie obiektów są wymienione w strukturze drzewa po lewej stronie.
+
+3. Kliknij przycisk **ATL** folderu.
+
+4. Na liście szablonów po prawej stronie zaznacz **kontrolka ATL**. Kliknij przycisk **Dodaj**. Zostanie otwarty Kreator formantu biblioteki ATL i sterowanie można skonfigurować.
+
+5. Typ `PolyCtl` jako krótka nazwa i zwróć uwagę, że inne pola są automatycznie uzupełniane. Nie klikaj **Zakończ** jeszcze, ponieważ trzeba wprowadzić pewne zmiany.
+
+Kreator kontrolki ATL **nazwy** strona zawiera następujące pola:
+
+|Pole|Spis treści|
+|-----------|--------------|
+|**Krótka nazwa**|Nazwa wprowadzona dla formantu.|
+|**Class**|Nazwa klasy języka C++ utworzona w celu wdrożenia kontroli.|
+|**plik .h**|Plik utworzony, aby zawierać definicję klasy C++.|
+|**Plik CPP**|Plik utworzony, aby zawierać wdrożenie klasy C++.|
+|**Klasa coClass**|Nazwa klasy składnika dla tego formantu.|
+|**Interface**|Nazwa interfejsu, na którym formant będzie implementował swoje niestandardowe metody i właściwości.|
+|**Typ**|Opis formantu.|
+|**Identyfikator programu**|Czytelna nazwa, która może służyć do sprawdzania CLSID formantu.|
+
+Musisz wprowadzić kilka dodatkowych ustawień w Kreatorze formantu ATL.
+
+#### <a name="to-enable-support-for-rich-error-information-and-connection-points"></a>Aby włączyć obsługę szczegółowych informacji o błędach i połączenie punktów
+
+1. Kliknij przycisk **opcje** otworzyć **opcje** strony.
+
+2. Wybierz **punkty połączenia** pole wyboru. Spowoduje to utworzenie obsługi interfejsu wychodzącego w pliku IDL.
+
+Można również ustawić formant będzie wstawialny, co oznacza, że mogą być osadzone w aplikacjach, które obsługują obiekty osadzone, takie jak Excel lub Word.
+
+#### <a name="to-make-the-control-insertable"></a>Aby umożliwić wstawianie formantu
+
+1. Kliknij przycisk **wygląd** otworzyć **wygląd** strony.
+
+2. Wybierz **wstawialny** pole wyboru.
+
+Wielokąt wyświetlany przez obiekt będzie miał kolor wypełnienia kryjącego, więc trzeba dodać `Fill Color` właściwość magazynu.
+
+#### <a name="to-add-a-fill-color-stock-property-and-create-the-control"></a>Aby dodać właściwość podstawowy kolor wypełnienia i utworzyć formant
+
+1. Kliknij przycisk **właściwości podstawowe** otworzyć **właściwości podstawowe** strony.
+
+2. W obszarze **nieobsługiwane**, przewiń w dół listę możliwych właściwości stosu. Kliknij dwukrotnie `Fill Color` przenieść je do **obsługiwane** listy.
+
+3. Na tym kończy się opcje dla formantu. Kliknij przycisk **Zakończ**.
+
+Gdy Kreator utworzył już formant, kilka zmian kodu i uzupełnień pliku wystąpił. Utworzone zostały następujące pliki:
+
+|Plik|Opis|
+|----------|-----------------|
+|PolyCtl.h|Zawiera większość implementacji klasy języka C++ `CPolyCtl`.|
+|PolyCtl.cpp|Zawiera pozostałe części `CPolyCtl`.|
+|PolyCtl.rgs|Plik tekstowy zawierający skrypt rejestru używany do rejestrowania formantu.|
+|PolyCtl.htm|Strona sieci Web zawierająca odwołanie do nowo utworzonego formantu.|
+
+Kreator wykonał również następujące zmiany kodu:
+
+- Dodano `#include` instrukcję do plików stdafx.h i stdafx.cpp, aby uwzględnić ATL pliki niezbędne do obsługi formantów.
+
+- Zmieniono Polygon.idl, aby dołączyć szczegóły nowego formantu.
+
+- Dodany nowy formant do mapy obiektu w Polygon.cpp.
+
+Teraz można skompilować formant aby zobaczyć go w działaniu.
+
+## <a name="building-and-testing-the-control"></a>Tworzenie i testowanie formantu
+
+#### <a name="to-build-and-test-the-control"></a>Aby skompilować i przetestować formant
+
+1. Na **kompilacji** menu, kliknij przycisk **Kompiluj Wielokąt**.
+
+     Po zakończeniu kompilowania formantu, kliknij prawym przyciskiem myszy plik PolyCtl.htm w **Eksploratora rozwiązań** i wybierz **Pokaż w przeglądarce**. Pojawi się Strona HTML sieci Web zawierająca formant. Powinieneś widzieć stronę o tytule "Strona testowa 8.0 ATL dla obiektu PolyCtl" i tekst **PolyCtl**. To jest Twój formant.
+
 > [!NOTE]
->  Po ukończeniu tego samouczka, jeśli zostanie wyświetlony komunikat o błędzie, której nie można utworzyć pliku biblioteki DLL, zamknij plik PolyCtl.htm i kontener testu formantu ActiveX i ponownie skompiluj rozwiązanie. Jeśli nadal nie można utworzyć biblioteki DLL, ponownego uruchamiania komputera lub wylogowywanie (Jeśli używasz usług terminalowych).  
-  
- Następnie dodasz właściwości niestandardowych do formantu.  
-  
- [Wróć do kroku 1](../atl/creating-the-project-atl-tutorial-part-1.md) &#124; [do kroku 3](../atl/adding-a-property-to-the-control-atl-tutorial-part-3.md)  
-  
-## <a name="see-also"></a>Zobacz też  
- [Samouczek](../atl/active-template-library-atl-tutorial.md)
+>  Po ukończeniu tego samouczka, jeśli zostanie wyświetlony komunikat o błędzie, w których nie można utworzyć pliku DLL, zamknij plik PolyCtl.htm i kontener badania kontrolnego ActiveX i ponownie skompiluj rozwiązanie. Jeśli nadal nie można utworzyć biblioteki DLL, uruchom ponownie komputer lub wyloguj (Jeśli używasz usług terminalowych).
+
+Następnie dodasz właściwość niestandardową do formantu.
+
+[Wróć do kroku 1](../atl/creating-the-project-atl-tutorial-part-1.md) &#124; [do kroku 3](../atl/adding-a-property-to-the-control-atl-tutorial-part-3.md)
+
+## <a name="see-also"></a>Zobacz też
+
+[Samouczek](../atl/active-template-library-atl-tutorial.md)
 

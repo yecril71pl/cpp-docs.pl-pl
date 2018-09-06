@@ -16,79 +16,82 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 92c3ece3ddef00161a769c0c45a4d31712d6f691
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 28342c71602409f3d62023e6d7923d49ca63a96f
+ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43208764"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43766246"
 ---
 # <a name="options-atl-control-wizard"></a>Opcje, Kreator kontrolki ATL
-Tutaj Wstaw "Wyniki wyszukiwania" podsumowania.  
-  
- Ta strona kreatora służy do definiowania typu formantu, który tworzysz, i zawiera poziom obsługi interfejsu.  
-  
-## <a name="uielement-list"></a>Lista elementów UI  
- **Typ formantu**  
- Rodzaj kontrolki, którą chcesz utworzyć.  
-  
--   **Kontrolki standardowe: kontrolki ActiveX.**  
-  
--   **Kontrolki złożonej**: formant ActiveX, który może zawierać (podobnie do okna dialogowego) innych formantów ActiveX lub formanty Windows. Kontrolki złożonej obejmuje następujące funkcje:  
-  
-    -   Szablon dla okna dialogowego, który implementuje złożonego formantu.  
-  
-    -   Zasób niestandardowy, rejestru, co powoduje automatyczne zarejestrowanie złożonego formantu po wywołaniu.  
-  
-    -   Klasy języka C++, który implementuje złożonego formantu.  
-  
-    -   Interfejs COM udostępnianych przez złożonego formantu.  
-  
-    -   Testową stronę HTML zawierający złożonego formantu.  
-  
-     Domyślnie ten formant ustawia [CComControlBase::m_bWindowOnly](../../atl/reference/ccomcontrolbase-class.md#m_bwindowonly) na wartość true, aby wskazać, że jest to okna formantu. Implementuje mapę ujścia. Aby uzyskać więcej informacji, zobacz [obsługę kontrolki DHTML](../../atl/atl-support-for-dhtml-controls.md).  
-  
--   **Kontrolki DHTML**: kontrolki DHTML ATL określa interfejs użytkownika, za pomocą kodu HTML. Klasa interfejsu użytkownika DHTML zawiera mapę COM. Domyślnie ten formant ustawia [CComControlBase::m_bWindowOnly](../../atl/reference/ccomcontrolbase-class.md#m_bwindowonly) na wartość true, aby wskazać, że jest to okna formantu.  
-  
-     Aby uzyskać więcej informacji, zobacz [identyfikowanie elementów projektu kontrolki DHTML](../../atl/identifying-the-elements-of-the-dhtml-control-project.md).  
-  
- **Kontrolka minimalnego**  
- Obsługuje tylko interfejsy, które są całkowicie wymagane przez większość kontenerów. Możesz ustawić **kontrolka minimalnego** dla każdego z typów kontroli: można utworzyć kontrolki standardowej minimalny, formantu złożonego minimalnego lub minimalnego kontrolki DHTML.  
-  
- **Agregacja**  
- Dodaje obsługę agregacji dla formantu, który tworzysz. Aby uzyskać więcej informacji, zobacz [agregacji](../../atl/aggregation.md).  
-  
--   **Tak**: Tworzenie formantu, który może być agregowany.  
-  
--   **Nie**: Tworzenie formantu, którego nie można agregować.  
-  
--   **Tylko**: Tworzenie formantu, który może być tylko utworzone za pomocą agregacji.  
-  
- **Model wątkowości**  
- Określa, że model wątkowości używany przez kontrolkę.  
-  
--   **Pojedynczy**: formant będzie uruchamiane tylko w podstawowym wątku com.  
-  
--   **Apartamentu**: kontrolki można utworzyć w dowolnym komórka wątku pojedynczego. Domyślnie.  
-  
- **Interface**  
- Typ interfejsu, który udostępnia tę kontrolkę, do kontenera.  
-  
--   **Podwójna**: tworzy interfejs, który udostępnia właściwości i metod za pośrednictwem `IDispatch` oraz bezpośrednio z poziomu VTBL.  
-  
--   **Niestandardowe**: tworzy interfejs, który udostępnia metody bezpośrednio za pomocą VTBL.  
-  
-     Jeśli wybierzesz **niestandardowe**, możesz określić, czy kontrolka jest **zgodnego z automatyzacji**. Po wybraniu **zgodnego z automatyzacji**, wówczas Kreator dodaje [oleautomation —](../../windows/oleautomation.md) atrybut interfejsu w pliku IDL, i interfejs mogą być organizowane przez organizatora uniwersalnych w oleaut32.dll. Zobacz [Marshaling szczegóły](/windows/desktop/com/marshaling-details) w zestawie Windows SDK, aby uzyskać więcej informacji.  
-  
-     Ponadto jeśli wybierzesz **zgodnego z automatyzacji**, wszystkie parametry dla wszystkich metod w kontrolce musi być typ VARIANT zgodne.  
-  
- **Obsługa**  
- Ustawia różne obsługę formantu.  
-  
--   **Punkty połączenia**: włącza punkty połączenia dla obiektu, wprowadzając nazwę obiektu klasy pochodzi od [IConnectionPointContainerImpl](../../atl/reference/iconnectionpointcontainerimpl-class.md) , dzięki czemu go do udostępnienia interfejs źródłowy.  
-  
--   **Licencjonowane**: dodaje obsługę do formantu dla [licencjonowania](/windows/desktop/com/licensing). Licencjonowane formanty mogą być hostowane tylko, jeśli komputer kliencki ma odpowiednią licencję.  
-  
-## <a name="see-also"></a>Zobacz też  
- [Kreator kontrolki ATL](../../atl/reference/atl-control-wizard.md)
+
+Tutaj Wstaw "Wyniki wyszukiwania" podsumowania.
+
+Ta strona kreatora służy do definiowania typu formantu, który tworzysz, i zawiera poziom obsługi interfejsu.
+
+## <a name="uielement-list"></a>Lista elementów UI
+
+**Typ formantu**  
+Rodzaj kontrolki, którą chcesz utworzyć.
+
+- **Kontrolki standardowe: kontrolki ActiveX.**
+
+- **Kontrolki złożonej**: formant ActiveX, który może zawierać (podobnie do okna dialogowego) innych formantów ActiveX lub formanty Windows. Kontrolki złożonej obejmuje następujące funkcje:
+
+   - Szablon dla okna dialogowego, który implementuje złożonego formantu.
+
+   - Zasób niestandardowy, rejestru, co powoduje automatyczne zarejestrowanie złożonego formantu po wywołaniu.
+
+   - Klasy języka C++, który implementuje złożonego formantu.
+
+   - Interfejs COM udostępnianych przez złożonego formantu.
+
+   - Testową stronę HTML zawierający złożonego formantu.
+
+     Domyślnie ten formant ustawia [CComControlBase::m_bWindowOnly](../../atl/reference/ccomcontrolbase-class.md#m_bwindowonly) na wartość true, aby wskazać, że jest to okna formantu. Implementuje mapę ujścia. Aby uzyskać więcej informacji, zobacz [obsługę kontrolki DHTML](../../atl/atl-support-for-dhtml-controls.md).
+
+- **Kontrolki DHTML**: kontrolki DHTML ATL określa interfejs użytkownika, za pomocą kodu HTML. Klasa interfejsu użytkownika DHTML zawiera mapę COM. Domyślnie ten formant ustawia [CComControlBase::m_bWindowOnly](../../atl/reference/ccomcontrolbase-class.md#m_bwindowonly) na wartość true, aby wskazać, że jest to okna formantu.
+
+     Aby uzyskać więcej informacji, zobacz [identyfikowanie elementów projektu kontrolki DHTML](../../atl/identifying-the-elements-of-the-dhtml-control-project.md).
+
+**Kontrolka minimalnego**  
+Obsługuje tylko interfejsy, które są całkowicie wymagane przez większość kontenerów. Możesz ustawić **kontrolka minimalnego** dla każdego z typów kontroli: można utworzyć kontrolki standardowej minimalny, formantu złożonego minimalnego lub minimalnego kontrolki DHTML.
+
+**Agregacja**  
+Dodaje obsługę agregacji dla formantu, który tworzysz. Aby uzyskać więcej informacji, zobacz [agregacji](../../atl/aggregation.md).
+
+- **Tak**: Tworzenie formantu, który może być agregowany.
+
+- **Nie**: Tworzenie formantu, którego nie można agregować.
+
+- **Tylko**: Tworzenie formantu, który może być tylko utworzone za pomocą agregacji.
+
+**Model wątkowości**  
+Określa, że model wątkowości używany przez kontrolkę.
+
+- **Pojedynczy**: formant będzie uruchamiane tylko w podstawowym wątku com.
+
+- **Apartamentu**: kontrolki można utworzyć w dowolnym komórka wątku pojedynczego. Domyślnie.
+
+**Interface**  
+Typ interfejsu, który udostępnia tę kontrolkę, do kontenera.
+
+- **Podwójna**: tworzy interfejs, który udostępnia właściwości i metod za pośrednictwem `IDispatch` oraz bezpośrednio z poziomu VTBL.
+
+- **Niestandardowe**: tworzy interfejs, który udostępnia metody bezpośrednio za pomocą VTBL.
+
+     Jeśli wybierzesz **niestandardowe**, możesz określić, czy kontrolka jest **zgodnego z automatyzacji**. Po wybraniu **zgodnego z automatyzacji**, wówczas Kreator dodaje [oleautomation —](../../windows/oleautomation.md) atrybut interfejsu w pliku IDL, i interfejs mogą być organizowane przez organizatora uniwersalnych w oleaut32.dll. Zobacz [Marshaling szczegóły](/windows/desktop/com/marshaling-details) w zestawie Windows SDK, aby uzyskać więcej informacji.
+
+     Ponadto jeśli wybierzesz **zgodnego z automatyzacji**, wszystkie parametry dla wszystkich metod w kontrolce musi być typ VARIANT zgodne.
+
+**Obsługa**  
+Ustawia różne obsługę formantu.
+
+- **Punkty połączenia**: włącza punkty połączenia dla obiektu, wprowadzając nazwę obiektu klasy pochodzi od [IConnectionPointContainerImpl](../../atl/reference/iconnectionpointcontainerimpl-class.md) , dzięki czemu go do udostępnienia interfejs źródłowy.
+
+- **Licencjonowane**: dodaje obsługę do formantu dla [licencjonowania](/windows/desktop/com/licensing). Licencjonowane formanty mogą być hostowane tylko, jeśli komputer kliencki ma odpowiednią licencję.
+
+## <a name="see-also"></a>Zobacz też
+
+[Kreator kontrolki ATL](../../atl/reference/atl-control-wizard.md)
 
