@@ -36,12 +36,12 @@ helpviewer_keywords:
 - std::tolower [C++]
 - std::toupper [C++]
 - std::use_facet [C++]
-ms.openlocfilehash: 8b3f6ed544bd4726b8bed2b63394a8b28c54c339
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: 3a93a9c4e8cf9059d80b602d80043809fb75152a
+ms.sourcegitcommit: d10a2382832373b900b1780e1190ab104175397f
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38956075"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43895334"
 ---
 # <a name="ltlocalegt-functions"></a>&lt;Ustawienia regionalne&gt; funkcji
 
@@ -64,7 +64,8 @@ bool has_facet(const locale& Loc);
 
 ### <a name="parameters"></a>Parametry
 
-*Lokalizacja* ustawień regionalnych pod kątem obecności zestaw reguł.
+*Lokalizacja*  
+Ustawienia regionalne pod kątem obecności zestaw reguł.
 
 ### <a name="return-value"></a>Wartość zwracana
 
@@ -106,9 +107,11 @@ bool isalnum(CharType Ch, const locale& Loc)
 
 ### <a name="parameters"></a>Parametry
 
-*Ch* alfanumeryczne element ma zostać przetestowana.
+*ch*  
+Element alfanumeryczne, które ma zostać przetestowana.
 
-*Lokalizacja* ustawień regionalnych, zawierający element alfanumeryczne, które ma zostać przetestowana.
+*Lokalizacja*  
+Ustawienia regionalne, zawierający element alfanumeryczne, które ma zostać przetestowana.
 
 ### <a name="return-value"></a>Wartość zwracana
 
@@ -171,9 +174,11 @@ bool isalpha(CharType Ch, const locale& Loc)
 
 ### <a name="parameters"></a>Parametry
 
-*Ch* element, który ma zostać przetestowana.
+*ch*  
+Element, który ma zostać przetestowana.
 
-*Lokalizacja* ustawień regionalnych, zawierający element alfabetyczne, które ma zostać przetestowana.
+*Lokalizacja*  
+Ustawienia regionalne, zawierający element alfabetyczne, które ma zostać przetestowana.
 
 ### <a name="return-value"></a>Wartość zwracana
 
@@ -234,9 +239,11 @@ bool iscntrl(CharType Ch, const locale& Loc)
 
 ### <a name="parameters"></a>Parametry
 
-*Ch* element, który ma zostać przetestowana.
+*ch*  
+Element, który ma zostać przetestowana.
 
-*Lokalizacja* ustawień regionalnych, zawierający element, który ma zostać przetestowana.
+*Lokalizacja*  
+Ustawienia regionalne, zawierający element, który ma zostać przetestowana.
 
 ### <a name="return-value"></a>Wartość zwracana
 
@@ -297,9 +304,11 @@ bool isdigit(CharType Ch, const locale& Loc)
 
 ### <a name="parameters"></a>Parametry
 
-*Ch* element, który ma zostać przetestowana.
+*ch*  
+Element, który ma zostać przetestowana.
 
-*Lokalizacja* ustawień regionalnych, zawierający element, który ma zostać przetestowana.
+*Lokalizacja*  
+Ustawienia regionalne, zawierający element, który ma zostać przetestowana.
 
 ### <a name="return-value"></a>Wartość zwracana
 
@@ -360,9 +369,11 @@ bool isgraph(CharType Ch, const locale& Loc)
 
 ### <a name="parameters"></a>Parametry
 
-*Ch* element, który ma zostać przetestowana.
+*ch*  
+Element, który ma zostać przetestowana.
 
-*Lokalizacja* ustawień regionalnych, zawierający element, który ma zostać przetestowana.
+*Lokalizacja*  
+Ustawienia regionalne, zawierający element, który ma zostać przetestowana.
 
 ### <a name="return-value"></a>Wartość zwracana
 
@@ -423,9 +434,11 @@ bool islower(CharType Ch, const locale& Loc)
 
 ### <a name="parameters"></a>Parametry
 
-*Ch* element, który ma zostać przetestowana.
+*ch*  
+Element, który ma zostać przetestowana.
 
-*Lokalizacja* ustawień regionalnych, zawierający element, który ma zostać przetestowana.
+*Lokalizacja*  
+Ustawienia regionalne, zawierający element, który ma zostać przetestowana.
 
 ### <a name="return-value"></a>Wartość zwracana
 
@@ -486,9 +499,11 @@ bool isprint(CharType Ch, const locale& Loc)
 
 ### <a name="parameters"></a>Parametry
 
-*Ch* element, który ma zostać przetestowana.
+*ch*  
+Element, który ma zostać przetestowana.
 
-*Lokalizacja* ustawień regionalnych, zawierający element, który ma zostać przetestowana.
+*Lokalizacja*  
+Ustawienia regionalne, zawierający element, który ma zostać przetestowana.
 
 ### <a name="return-value"></a>Wartość zwracana
 
@@ -548,9 +563,11 @@ bool ispunct(CharType Ch, const locale& Loc)
 
 ### <a name="parameters"></a>Parametry
 
-*Ch* element, który ma zostać przetestowana.
+*ch*  
+Element, który ma zostać przetestowana.
 
-*Lokalizacja* ustawień regionalnych, zawierający element, który ma zostać przetestowana.
+*Lokalizacja*  
+Ustawienia regionalne, zawierający element, który ma zostać przetestowana.
 
 ### <a name="return-value"></a>Wartość zwracana
 
@@ -611,9 +628,11 @@ bool isspace(CharType Ch, const locale& Loc)
 
 ### <a name="parameters"></a>Parametry
 
-*Ch* element, który ma zostać przetestowana.
+*ch*  
+Element, który ma zostać przetestowana.
 
-*Lokalizacja* ustawień regionalnych, zawierający element, który ma zostać przetestowana.
+*Lokalizacja*  
+Ustawienia regionalne, zawierający element, który ma zostać przetestowana.
 
 ### <a name="return-value"></a>Wartość zwracana
 
@@ -674,9 +693,11 @@ bool isupper(CharType Ch, const locale& Loc)
 
 ### <a name="parameters"></a>Parametry
 
-*Ch* element, który ma zostać przetestowana.
+*ch*  
+Element, który ma zostać przetestowana.
 
-*Lokalizacja* ustawień regionalnych, zawierający element, który ma zostać przetestowana.
+*Lokalizacja*  
+Ustawienia regionalne, zawierający element, który ma zostać przetestowana.
 
 ### <a name="return-value"></a>Wartość zwracana
 
@@ -737,9 +758,11 @@ bool isxdigit(CharType Ch, const locale& Loc)
 
 ### <a name="parameters"></a>Parametry
 
-*Ch* element, który ma zostać przetestowana.
+*ch*  
+Element, który ma zostać przetestowana.
 
-*Lokalizacja* ustawień regionalnych, zawierający element, który ma zostać przetestowana.
+*Lokalizacja*  
+Ustawienia regionalne, zawierający element, który ma zostać przetestowana.
 
 ### <a name="return-value"></a>Wartość zwracana
 
@@ -802,9 +825,11 @@ CharType tolower(CharType Ch, const locale& Loc)
 
 ### <a name="parameters"></a>Parametry
 
-*ch* znak, który ma zostać przekonwertowany na małe litery.
+*ch*  
+Znak, który ma zostać przekonwertowany na małe litery.
 
-*Lokalizacja* ustawień regionalnych, zawierającą znak, który ma zostać przekonwertowany.
+*Lokalizacja*  
+Ustawienia regionalne, zawierającą znak, który ma zostać przekonwertowany.
 
 ### <a name="return-value"></a>Wartość zwracana
 
@@ -849,9 +874,11 @@ CharType toupper(CharType Ch, const locale& Loc)
 
 ### <a name="parameters"></a>Parametry
 
-*ch* znak, który ma zostać przekonwertowany na wielkie litery.
+*ch*  
+Znak, który ma zostać przekonwertowany na wielkie litery.
 
-*Lokalizacja* ustawień regionalnych, zawierającą znak, który ma zostać przekonwertowany.
+*Lokalizacja*  
+Ustawienia regionalne, zawierającą znak, który ma zostać przekonwertowany.
 
 ### <a name="return-value"></a>Wartość zwracana
 
@@ -896,7 +923,8 @@ const Facet& use_facet(const locale& Loc);
 
 ### <a name="parameters"></a>Parametry
 
-*Lokalizacja* const ustawień regionalnych, zawierający typ zestawu reguł, do którego nastąpiło odwołanie.
+*Lokalizacja*  
+Const ustawienia regionalne, zawierający typ zestawu reguł, do którego nastąpiło odwołanie.
 
 ### <a name="return-value"></a>Wartość zwracana
 

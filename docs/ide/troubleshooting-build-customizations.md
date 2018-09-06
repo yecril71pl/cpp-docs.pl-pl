@@ -1,5 +1,5 @@
 ---
-title: Rozwiązywanie problemów z kompilacji dostosowania | Dokumentacja firmy Microsoft
+title: Rozwiązywanie problemów z lacji | Dokumentacja firmy Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -20,29 +20,31 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d48e9f7bdcbf422a25fb0bdb40411e6c662fadc2
-ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
+ms.openlocfilehash: 2821c851c5b4498250a78f33eb111dd5f20ae272
+ms.sourcegitcommit: d10a2382832373b900b1780e1190ab104175397f
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "33330278"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43895152"
 ---
 # <a name="troubleshooting-build-customizations"></a>Rozwiązywanie problemów z dostosowaniami kompilacji
-Niestandardowe kroki procesu kompilacji lub zdarzenia nie zachowują się zgodnie z oczekiwaniami, istnieje kilka kwestii, które może wykonywać próby zrozumieć, co się dzieje niewłaściwy.  
-  
--   Upewnij się, że pliki, które Generowanie Twoje niestandardowe kroki procesu kompilacji zgodne pliki, które należy zadeklarować jako dane wyjściowe.  
-  
--   Jeśli Twoje niestandardowe kroki procesu kompilacji generować pliki, które są dane wejściowe lub zależności innych kompilacji czynności (niestandardowego lub innych), upewnij się, że te pliki zostaną dodane do projektu. I upewnij się, że narzędzia, które korzystają z tych plików są wykonywane po kroku kompilacji niestandardowej.  
-  
--   Wyświetlane użytkownika niestandardowego kroku kompilacji faktycznie czynności, dodawać `@echo on` jako pierwsze polecenie. Zdarzenia kompilacji i kroki kompilacji są umieścić w pliku tymczasowego bat i uruchamiane po utworzeniu projektu. W związku z tym można dodać błąd sprawdzania zdarzenie kompilacji lub polecenia kroku kompilacji.  
-  
--   Przeanalizuj dziennik kompilacji w katalogu plików pośrednich, aby sprawdzić, co faktycznie wykonywane. Ścieżka i nazwa dziennika kompilacji jest reprezentowana przez **MSBuild** wyrażeniu makra **$(IntDir)\\log $(MSBuildProjectName)**.  
-  
--   Zmodyfikuj ustawienia projektu, aby zbierać więcej niż domyślna ilość informacji w dzienniku kompilacji. Na **narzędzia** menu, kliknij przycisk **opcje**. W **opcje** okno dialogowe, kliknij przycisk **projekty i rozwiązania** węzeł, a następnie kliknij przycisk **skompilować i uruchomić** węzła. Następnie w **szczegółowości dziennika kompilacji MSBuild projektu w pliku** kliknij **szczegółowy**.  
-  
--   Sprawdź, czy wartości dowolnego pliku nazwę lub katalogu makra używanego. Makra można echo indywidualnie lub dodać `copy %0 command.bat` do uruchomienia z niestandardowego kroku kompilacji, który skopiuje poleceń użytkownika niestandardowego kroku kompilacji dla command.bat z wszystkie makra rozwinięty.  
-  
--   Uruchom niestandardowe kroki procesu kompilacji i zdarzenia pojedynczo, aby sprawdzić ich zachowanie kompilacji.  
-  
-## <a name="see-also"></a>Zobacz też  
- [Ogólne informacje o niestandardowych krokach budowania lub zdarzeniach kompilacji](../ide/understanding-custom-build-steps-and-build-events.md)
+
+Jeśli niestandardowych kroków kompilacji lub zdarzenia nie zachowują się zgodnie z oczekiwaniami, istnieje kilka rzeczy, które można zrobić, aby zrozumieć, co się dzieje problem.
+
+- Upewnij się, że pliki, które kroków kompilacji niestandardowej generować takie same jak pliki, zadeklarowanej jako dane wyjściowe.
+
+- Jeśli Twoje niestandardowych kroków kompilacji wygenerowanie plików, które to dane wejściowe lub innych zależności kompilacji kroki (niestandardowego lub w inny sposób), upewnij się, że te pliki zostaną dodane do projektu. I upewnij się, że narzędzia, które korzystają z tych plików są wykonywane po krok niestandardowej kompilacji.
+
+- Aby wyświetlić swoje niestandardowy krok kompilacji faktycznie działania, Dodaj `@echo on` jako pierwsze polecenie. Zdarzenia kompilacji i kroki kompilacji są umieścić w pliku tymczasowego bat i uruchamiany, gdy projekt jest kompilowany. W związku z tym można dodać błąd podczas sprawdzania do zdarzenia kompilacji, lub tworzenia poleceń kroku.
+
+- W dzienniku kompilacji w katalogu plików pośrednich, aby zobaczyć, co faktycznie wykonywane. Ścieżka i nazwa dziennika kompilacji jest reprezentowany przez **MSBuild** wyrażeniu makra **$(IntDir)\\.log $(MSBuildProjectName)**.
+
+- Zmodyfikuj ustawienia projektu, aby zebrać więcej niż domyślna ilość informacji w dzienniku kompilacji. Na **narzędzia** menu, kliknij przycisk **opcje**. W **opcje** okno dialogowe, kliknij przycisk **projekty i rozwiązania** węzeł, a następnie kliknij przycisk **kompilowanie i uruchamianie** węzła. Następnie w **poziom szczegółowości pliku dziennika MSBuild projektu kompilacji** kliknij **szczegółowe**.
+
+- Sprawdź, czy wartości dowolnego pliku makra nazwa lub katalogu, którego używasz. Makra można echo osobno lub możesz dodać `copy %0 command.bat` na początku Twojego niestandardowego kroku kompilacji, który skopiuje poleceń Twoje krok niestandardowej kompilacji, aby command.bat z makrami wszystkie rozwinięte.
+
+- Uruchomić kroki procesu kompilacji niestandardowej, a zdarzenia pojedynczo, aby sprawdzić ich zachowanie kompilacji.
+
+## <a name="see-also"></a>Zobacz też
+
+[Ogólne informacje o niestandardowych krokach budowania lub zdarzeniach kompilacji](../ide/understanding-custom-build-steps-and-build-events.md)

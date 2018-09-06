@@ -1,7 +1,7 @@
 ---
 title: Uruchomienie NMAKE | Dokumentacja firmy Microsoft
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 09/05/2018
 ms.technology:
 - cpp-tools
 ms.topic: conceptual
@@ -20,31 +20,33 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 29516dcbcf650225ec3b86eee9e135a35bff82f4
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 9eb3ba676da2de9790fc992b9f788963f8dcdbc1
+ms.sourcegitcommit: d10a2382832373b900b1780e1190ab104175397f
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32379708"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43894645"
 ---
 # <a name="running-nmake"></a>Uruchomienie NMAKE
-## <a name="syntax"></a>Składnia  
-  
-```  
-NMAKE [option...] [macros...] [targets...] [@commandfile...]  
-```  
-  
-## <a name="remarks"></a>Uwagi  
- Określony tylko kompilacje NMAKE *cele* lub, jeśli nie zostanie określona, pierwszy obiektów docelowych w pliku reguł programu make. Pierwszy element docelowy pliku reguł programu make może być [pseudotarget](../build/pseudotargets.md) które kompilacje innych celów. Pliki reguł programu make określony za pomocą /F; używa NMAKE Jeśli nie określono /F, używa plik pliku reguł programu make w bieżącym katalogu. Jeśli określono pliku makefile, zasady wnioskowania używa do kompilacji wiersza polecenia *cele*.  
-  
- `commandfile` Pliku tekstowego (lub plik odpowiedzi) zawiera danych wejściowych wiersza polecenia. Inne dane wejściowe mogą przed lub po`commandfile`. Ścieżka jest dozwolone. W `commandfile`, podziały wiersza są traktowane jako spacje. Należy ująć w cudzysłów definicje makr, jeśli zawierać spacji.  
-  
-## <a name="what-do-you-want-to-know-more-about"></a>Co chcesz dowiedzieć się więcej o?  
- [Opcje NMAKE](../build/nmake-options.md)  
-  
- [Tools.ini i NMAKE](../build/tools-ini-and-nmake.md)  
-  
- [Kody zakończenia z NMAKE](../build/exit-codes-from-nmake.md)  
-  
-## <a name="see-also"></a>Zobacz też  
- [NMAKE — dokumentacja](../build/nmake-reference.md)
+
+## <a name="syntax"></a>Składnia
+
+> **NMAKE** [*opcji* ...] [*makra* ...] [*cele* ...] [**\@**<em>commandfile</em> ...]
+
+## <a name="remarks"></a>Uwagi
+
+Kompilacje NMAKE określony tylko *cele* albo, jeśli nie zostanie określona, pierwszy w pliku reguł programu make. Pierwszy element docelowy pliku reguł programu make może być [pseudotarget](../build/pseudotargets.md) opiera się innych celów. NMAKE używa plików reguł programu make określony za pomocą /F; Jeśli /F nie zostanie określony, zostanie użyta plik pliku reguł programu make w bieżącym katalogu. Jeśli określono nie pliku reguł programu make, używa reguły wnioskowania Tworzenie wiersza polecenia *cele*.
+
+*Commandfile* plik tekstowy (lub pliku odpowiedzi) zawiera dane wejściowe wiersza polecenia. Inne dane wejściowe mogą poprzedzających lub następnych \@ *commandfile*. Ścieżka jest dozwolone. W *commandfile*, podziały wierszy są traktowane jako miejsca do magazynowania. Definicje makr należy ująć w znaki cudzysłowu, gdy miejsca do magazynowania.
+
+## <a name="what-do-you-want-to-know-more-about"></a>Co chcesz dowiedzieć się więcej na temat?
+
+[Opcje NMAKE](../build/nmake-options.md)  
+
+[Tools.ini i NMAKE](../build/tools-ini-and-nmake.md)  
+
+[Kody zakończenia z NMAKE](../build/exit-codes-from-nmake.md)  
+
+## <a name="see-also"></a>Zobacz też
+
+[NMAKE — dokumentacja](../build/nmake-reference.md)

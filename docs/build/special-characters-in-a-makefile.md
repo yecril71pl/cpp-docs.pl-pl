@@ -17,25 +17,27 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 157f9ed499ef7a0ac9efdd6bebe118ca593acabb
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 40d9ad442e4838ee837c93ada0352f230fc0cbed
+ms.sourcegitcommit: d10a2382832373b900b1780e1190ab104175397f
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32380462"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43894437"
 ---
 # <a name="special-characters-in-a-makefile"></a>Znaki specjalne w pliku reguł programu Make
-Aby użyć znaków specjalnych w NMAKE jako literału znaku, umieść daszek (^) przed nim. NMAKE ignoruje daszka poprzedzających innych znaków. Znaki specjalne są:  
-  
- `:  ;  #  (  )  $  ^  \  {  }  !  @  —`  
-  
- Daszek (^) w ciągu w cudzysłowie jest traktowany jako znak literału karetki. Karetkę na końcu wiersza wstawia znaku nowego wiersza literału ciągu lub makra.  
-  
- W makrach, ukośnik odwrotny (\\) zostały wykonane przez nowym wierszem znak zastępuje się spacją.  
-  
- W poleceniach symbol procentu (%) jest określenie pliku. Do reprezentowania % dosłownie w poleceniu, zamiast jedno należy określić podwójnego znaku procentu (%). W innych sytuacjach NMAKE interpretuje pojedynczego % dosłownie, ale zawsze interpretuje wartość o podwójnej precyzji %% jako pojedynczy %. W związku z tym do reprezentowania literału %%, określ albo znaki procent trzech %%%, lub wartość procentowa czterech znaków, %%%.  
-  
- Aby użyć dolara ($) jako znak literałowy, w poleceniu, określ dwa dolara ($). Ta metoda umożliwia również w innych sytuacjach, w którym ^ $ działa.  
-  
-## <a name="see-also"></a>Zobacz też  
- [Zawartość pliku reguł programu Make](../build/contents-of-a-makefile.md)
+
+Aby użyć znaków specjalnych NMAKE jako znak literałowy, należy umieścić znak daszka (^) przed nim. NMAKE ignoruje są daszka, które poprzedzają innych znaków. Znaki specjalne są:
+
+`:  ;  #  (  )  $  ^  \  {  }  !  @  —`  
+
+Daszek (^) w ramach ciągów w cudzysłowach jest traktowana jako znak daszka literału. Karetkę na koniec wiersza Wstawia znak nowego wiersza literału ciągu lub makro.
+
+W makrach, kreski ułamkowej odwróconej (\\) i nowego wiersza znakiem został zastąpiony spacją.
+
+W poleceniach symbol procentu (%) jest określenie pliku. Do reprezentowania % dosłownie w poleceniu, należy określić podwójnego znaku procentu (%) zamiast jednego. W innych sytuacjach NMAKE interpretuje pojedynczego % dosłownie, ale zawsze interpretuje wartość o podwójnej precyzji %% jako pojedynczy %. W związku z tym do reprezentowania literału %%, określ albo znaki procentu trzech, %%%, lub symptomów cztery procent %%%.
+
+Aby znak dolara ($) jest używany jako znak literałowy, za pomocą polecenia, należy określić dwa dolara ($). Ta metoda umożliwia także w innych sytuacjach, w którym ^ $ działa.
+
+## <a name="see-also"></a>Zobacz też
+
+[Zawartość pliku reguł programu Make](../build/contents-of-a-makefile.md)

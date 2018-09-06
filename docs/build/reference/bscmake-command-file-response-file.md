@@ -19,38 +19,40 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a879306078c52e0ad11d29f1786a2e55c2480d2f
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 2a14e0ba315820eec0dd2fe17823f2c5c656fd87
+ms.sourcegitcommit: d10a2382832373b900b1780e1190ab104175397f
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32369568"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43895113"
 ---
 # <a name="bscmake-command-file-response-file"></a>Plik polecenia BSCMAKE (Plik odpowiedzi)
-Możesz podać części lub całości danych wejściowych wiersza polecenia w pliku poleceń. Określ plik polecenia, używając następującej składni:  
-  
+
+Możesz podać część lub całość danych wejściowych wiersza polecenia w pliku poleceń. Określ plik polecenia, używając następującej składni:
+
 ```  
-BSCMAKE @filename  
+BSCMAKE @filename
 ```  
-  
- Dozwolone jest tylko jedno polecenie pliku. Można określić ścieżki z *filename*. Należy poprzedzić *filename* z znak @ (@). BSCMAKE nie zakłada się rozszerzeniem. Możesz określić dodatkowe *sbrfiles* w wierszu polecenia, po *filename*. Plik polecenia to plik tekstowy, który zawiera dane wejściowe BSCMAKE w tej samej kolejności, ponieważ należy ją określić w wierszu polecenia. Argumenty wiersza polecenia oddzielić co najmniej jeden spacje, tabulatory lub znakami nowego wiersza.  
-  
- Polecenie wywołuje BSCMAKE przy użyciu pliku polecenia:  
-  
+
+Tylko jedno polecenie pliku jest dozwolone. Można określić ścieżkę z *filename*. Należy poprzedzić *filename* ze znakiem (**\@**). BSCMAKE nie zakłada rozszerzenie. Można określić dodatkowe *sbrfiles* w wierszu polecenia po *filename*. Plik poleceń jest plik tekstowy, który zawiera dane wejściowe BSCMAKE w tej samej kolejności, jak należy je określić w wierszu polecenia. Oddzielne argumenty wiersza polecenia z jednego lub więcej miejsca do magazynowania, karty lub znakami nowego wiersza.
+
+Następujące polecenie wywołuje BSCMAKE przy użyciu pliku polecenia:
+
 ```  
-BSCMAKE @prog1.txt  
+BSCMAKE @prog1.txt
 ```  
-  
- Poniżej przedstawiono przykładowy plik polecenia:  
-  
+
+Oto przykładowy plik polecenia:
+
 ```  
-/n /v /o main.bsc /El  
+/n /v /o main.bsc /El
 /S (  
-toolbox.h  
-verdate.h c:\src\inc\screen.h  
-)  
-file1.sbr file2.sbr file3.sbr file4.sbr  
+toolbox.h
+verdate.h c:\src\inc\screen.h
+)
+file1.sbr file2.sbr file3.sbr file4.sbr
 ```  
-  
-## <a name="see-also"></a>Zobacz też  
- [BSCMAKE — dokumentacja](../../build/reference/bscmake-reference.md)
+
+## <a name="see-also"></a>Zobacz też
+
+[BSCMAKE — dokumentacja](../../build/reference/bscmake-reference.md)

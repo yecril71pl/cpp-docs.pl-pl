@@ -1,7 +1,7 @@
 ---
 title: -BASE (adres podstawowy) | Dokumentacja firmy Microsoft
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 09/05/2018
 ms.technology:
 - cpp-tools
 ms.topic: reference
@@ -30,62 +30,63 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c4090a3e8d2f9f3bdcb68875d94a1b84e7bff0f3
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 4c43e01a1417710751bf0604e5365beaf143a293
+ms.sourcegitcommit: d10a2382832373b900b1780e1190ab104175397f
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32376627"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43895217"
 ---
 # <a name="base-base-address"></a>/BASE (Adres podstawowy)
+
+Określa adres bazowy programu.
+
+## <a name="syntax"></a>Składnia
+
+> **/ BASE:**{*adres*[**,**<em>rozmiar</em>] | **\@** <em>filename</em>**,**<em>klucz</em>}
+
+## <a name="remarks"></a>Uwagi
+
+> [!NOTE]
+> Ze względów bezpieczeństwa firma Microsoft zaleca, możesz użyć [opcja/DynamicBase](../../build/reference/dynamicbase-use-address-space-layout-randomization.md) opcji zamiast określania adresami podstawowymi dla usługi plików wykonywalnych. Spowoduje to wygenerowanie pliku wykonywalnego obrazu, który może być losowo przebazowanych w czasie ładowania przy użyciu funkcji randomizacji (ASLR) adres miejsca układu systemu Windows. Opcja/DynamicBase — opcja jest domyślnie włączone.
+
+/ PODSTAWOWYCH opcji ustawia adres bazowy programu zastępowanie domyślną lokalizację dla pliku .exe lub DLL. Domyślny adres podstawowy dla pliku .exe jest 0x400000 dla 32-bitowych obrazów lub 0x140000000 dla 64-bitowych obrazów. Dla bibliotek DLL z adres bazowy domyślną jest 0x10000000 dla 32-bitowych obrazów lub 0x180000000 dla 64-bitowych obrazów. W systemach operacyjnych, które nie obsługują randomizacji układu przestrzeni adresowej (ASLR) lub jeśli opcja: no została ustawiona system operacyjny najpierw próbuje załadować programu pod jego określonego lub adres bazowy domyślną. Jeśli wystarczającą ilość miejsca jest niedostępny w istnieje, system przenosi program. Aby uniknąć przenoszenia, należy użyć [/FIXED](../../build/reference/fixed-fixed-base-address.md) opcji.
+
+Konsolidator generuje błąd, jeśli *adres* nie jest wielokrotnością 64 KB. Opcjonalnie można określić rozmiar program konsolidator generuje ostrzeżenie, jeśli program nie mieści się w podany rozmiar.
+
+W wierszu polecenia innym sposobem określenia adres podstawowy jest przy użyciu pliku odpowiedzi z adresu podstawowego. Adres podstawowy plik odpowiedzi jest plik tekstowy, który zawiera adres podstawowy i opcjonalnie rozmiarów wszystkie biblioteki dll będzie używać programu i klucz unikatowy tekst dla każdego adresu podstawowego. Aby określić adres bazowy przy użyciu pliku odpowiedzi, należy użyć znakiem (**\@**) i nazwa pliku odpowiedzi *filename*, a następnie przecinek, a następnie *klucz*wartość dla podstawowego adresu do użycia w pliku. Konsolidator szuka *filename* w obu określonej ścieżce, lub jeśli ścieżka nie zostanie określona w katalogach określonych w zmiennej środowiskowej LIB. Każdy wiersz w *filename* reprezentuje jedną bibliotekę DLL, a ma następującą składnię:
+
+> *klucz* *adres* [*rozmiar*] **;** *komentarz*
+
+*Klucz* ciąg znaków alfanumerycznych i nie jest uwzględniana wielkość liter. Zazwyczaj jest to nazwa biblioteki dll, ale nie muszą być. *Klucz* następuje podstawowej *adres* w notacji języka C, szesnastkowym lub dziesiętną i opcjonalnie maksymalnie *rozmiar*. Wszystkie trzy argumenty są oddzielone tabulacji lub spacji. Konsolidator generuje ostrzeżenie, jeśli określony *rozmiar* jest mniejsza niż wirtualnej przestrzeni adresowej wymagane przez program. A *komentarz* określono za pomocą średnika (**;**) i może być na tym samym lub w osobnym wierszu. Konsolidator ignoruje cały tekst z średnik z powrotem do końca wiersza. W tym przykładzie przedstawiono część tego pliku:
+
 ```  
-/BASE:{address[,size] | @filename,key}  
+main   0x00010000    0x08000000    ; for PROJECT.exe
+one    0x28000000    0x00100000    ; for DLLONE.DLL
+two    0x28100000    0x00300000    ; for DLLTWO.DLL
 ```  
-  
- / PODSTAWOWEJ opcji ustawia adres podstawowy dla programu, zastępowanie domyślną lokalizację pliku .exe lub DLL. Domyślny adres podstawowy plik .exe jest 0x400000 dla 32-bitowych obrazów lub 0x140000000 dla 64-bitowych obrazów. Dla biblioteki DLL domyślny adres podstawowy jest 0x10000000 dla 32-bitowych obrazów lub 0x180000000 dla 64-bitowych obrazów. W systemach operacyjnych, które nie obsługują randomizacji układu przestrzeni adresowej (ASLR) lub gdy opcja No została ustawiona system operacyjny najpierw próbuje załadować programu w jego określonego lub domyślnego adres podstawowy. Jeśli wystarczającą ilość miejsca jest niedostępne w nie, system przenosi program. Aby zapobiec relokacji, użyj [/FIXED](../../build/reference/fixed-fixed-base-address.md) opcji.  
-  
- Konsolidator generuje błąd, jeśli *adres* nie jest wielokrotnością 64 KB. Opcjonalnie można określić rozmiaru program; konsolidator wygeneruje ostrzeżenie, jeśli program nie mieści się w podany rozmiar.  
-  
- W wierszu polecenia inny sposób, aby określić adres podstawowy jest przy użyciu pliku odpowiedzi adres podstawowy. Adres podstawowy plik odpowiedzi jest plik tekstowy zawierający adresy podstawowy i opcjonalnie rozmiary wszystkich bibliotek DLL programu, użyje i tekst Unikatowy klucz dla każdego adresu podstawowego. Aby określić adres podstawowy przy użyciu pliku odpowiedzi, należy użyć znaku (@) i nazwa pliku odpowiedzi *filename*, a następnie przecinek, a następnie `key` wartość dla adresu podstawowego do użycia w pliku. Wyszukuje konsolidator *filename* albo na określonej ścieżce, lub jeśli nie określono ścieżki, w katalogach określonych w zmiennej środowiskowej LIB. Każdy wiersz w *filename* reprezentuje jeden biblioteki DLL i ma następującą składnię:  
-  
-```  
-  
-key address [size] ;comment  
-```  
-  
- `key` Ciąg znaków alfanumerycznych i nie jest uwzględniana wielkość liter. Zazwyczaj jest to nazwa biblioteki DLL, ale nie muszą być. `key` Następuje podstawowej *adres* w notacji języka C, szesnastkową lub dziesiętną i opcjonalnie maksymalny `size`. Wszystkie trzy argumenty są oddzielone spacjami lub kart. Konsolidator wygeneruje ostrzeżenie, jeśli określony `size` jest mniejsza niż wirtualnej przestrzeni adresowej wymagane przez program. A `comment` określono za pomocą średnika (;) i może być na tym samym lub w oddzielnym wierszu. Konsolidator ignoruje wszystkie po średniku do końca wiersza. W tym przykładzie przedstawiono część tego pliku:  
-  
-```  
-main   0x00010000    0x08000000    ; for PROJECT.exe  
-one    0x28000000    0x00100000    ; for DLLONE.DLL  
-two    0x28100000    0x00300000    ; for DLLTWO.DLL  
-```  
-  
- Jeśli plik, który zawiera te wiersze po wywołaniu DLLS.txt następujące przykładowe polecenie stosuje się te informacje:  
-  
-```  
-link dlltwo.obj /dll /base:@dlls.txt,two  
-```  
-  
-## <a name="remarks"></a>Uwagi  
- Ze względów bezpieczeństwa firma Microsoft zaleca używasz [/DYNAMICBASE](../../build/reference/dynamicbase-use-address-space-layout-randomization.md) opcji zamiast określania adresu podstawowego dla Twojego plików wykonywalnych. Spowoduje to wygenerowanie obrazu wykonywalnego, który może być losowo przebazowanych w czasie obciążenia za pomocą funkcji adres miejsca układu losowe (ASLR) systemu Windows. Opcja /DYNAMICBASE jest domyślnie.  
-  
- Innym sposobem, aby ustawić adres podstawowy jest przy użyciu *podstawowej* argumentu w [nazwa](../../build/reference/name-c-cpp.md) lub [biblioteki](../../build/reference/library.md) instrukcji. /BASE i [/dll](../../build/reference/dll-build-a-dll.md) razem opcje są równoważne **biblioteki** instrukcji.  
-  
-### <a name="to-set-this-linker-option-in-the-visual-studio-development-environment"></a>Aby ustawić tę opcję konsolidatora w środowisku programowania Visual Studio  
-  
-1.  Otwórz projekt **strony właściwości** okno dialogowe. Aby uzyskać więcej informacji, zobacz [Ustawianie właściwości projektu Visual C++](../../ide/working-with-project-properties.md).  
-  
-2.  Rozwiń węzeł **konsolidatora** folderu.  
-  
-3.  Wybierz **zaawansowane** strony właściwości.  
-  
-4.  Modyfikowanie **adresu podstawowego** właściwości.  
-  
-### <a name="to-set-this-linker-option-programmatically"></a>Aby programowo ustawić tę opcję konsolidatora  
-  
--   Zobacz <xref:Microsoft.VisualStudio.VCProjectEngine.VCLinkerTool.BaseAddress%2A>.  
-  
-## <a name="see-also"></a>Zobacz też  
- [Ustawianie opcji konsolidatora](../../build/reference/setting-linker-options.md)   
- [Opcje konsolidatora](../../build/reference/linker-options.md)
+
+Jeśli plik, który zawiera następujące wiersze, zostanie wywołany DLLS.txt, następujące przykładowe polecenie mają zastosowanie te informacje:
+
+```
+link dlltwo.obj /dll /base:@dlls.txt,two
+```
+
+Innym sposobem, aby ustawić adres podstawowy jest za pomocą *podstawowy* argument [nazwa](../../build/reference/name-c-cpp.md) lub [biblioteki](../../build/reference/library.md) instrukcji. Uwzględniają i [/dll](../../build/reference/dll-build-a-dll.md) opcje razem są równoważne **biblioteki** instrukcji.
+
+### <a name="to-set-this-linker-option-in-the-visual-studio-development-environment"></a>Aby ustawić tę opcję konsolidatora w środowisku programowania Visual Studio
+
+1. Otwórz projekt **stron właściwości** okno dialogowe. Aby uzyskać więcej informacji, zobacz [ustawienie właściwości projektu Visual C++](../../ide/working-with-project-properties.md).
+
+2. Wybierz **właściwości konfiguracji** > **konsolidatora** > **zaawansowane** stronę właściwości.
+
+3. Modyfikowanie **adresu podstawowego** właściwości.
+
+### <a name="to-set-this-linker-option-programmatically"></a>Aby programowo ustawić tę opcję konsolidatora
+
+- Zobacz <xref:Microsoft.VisualStudio.VCProjectEngine.VCLinkerTool.BaseAddress%2A>.
+
+## <a name="see-also"></a>Zobacz też
+
+[Ustawianie opcji konsolidatora](../../build/reference/setting-linker-options.md)  
+[Opcje konsolidatora](../../build/reference/linker-options.md)

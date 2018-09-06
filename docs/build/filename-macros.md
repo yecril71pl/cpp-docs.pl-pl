@@ -16,33 +16,35 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e28ba5923d8b62973860c0ba503d13682b3c5e79
-ms.sourcegitcommit: 3bb7c1c0ceeb8012418e2fff9ae5a7db0fff3877
+ms.openlocfilehash: bc231dfb156460a2a0cc383b6d038a98c6e2015b
+ms.sourcegitcommit: d10a2382832373b900b1780e1190ab104175397f
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/23/2018
-ms.locfileid: "34458865"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43894411"
 ---
 # <a name="filename-macros"></a>Makra nazwy pliku
-Makra nazwy pliku są wstępnie zdefiniowane jako nazw plików określonych w zależności (specyfikacje nie pełna nazwa pliku na dysku). Tych makr nie muszą być ujęte w nawiasy, gdy została wywołana; Określ tylko $, jak pokazano.  
-  
-|Macro|Znaczenie|  
-|-----------|-------------|  
-|**$@**|Bieżący element docelowy Pełna nazwa (ścieżka, nazwa podstawowa, rozszerzenia), w obecnie określone.|  
-|**$$@**|Bieżący element docelowy Pełna nazwa (ścieżka, nazwa podstawowa, rozszerzenia), w obecnie określone. Prawidłowe tylko jako zależne od powstanie zależności.|  
-|**$&#42;**|Bieżący element docelowy ścieżka i podstawowa nazwa minus rozszerzenie pliku.|  
-|**$&#42;&#42;**|Wszystkie zależności bieżącą lokalizację docelową.|  
-|**$?**|Wszystkie zależności z sygnaturą czasową nowsze niż bieżący element docelowy.|  
-|**$<**|Plik zależny z sygnaturą czasową nowsze niż bieżący element docelowy. Prawidłowe tylko w przypadku poleceń w regułach wnioskowania.|  
-  
- Aby określić część filename wstępnie zdefiniowanego makra, Dołącz modyfikator makro i należy umieścić makro zmodyfikowane w nawiasach.  
-  
-|Modyfikator|Wynikowa część nazwy pliku|  
-|--------------|-----------------------------|  
-|**D**|Dysk plus katalogu|  
-|**B**|Nazwa podstawowa|  
-|**F**|Nazwie podstawowej z dodanym rozszerzeniem|  
-|**R**|Dysku plus katalog oraz nazwę podstawową|  
-  
-## <a name="see-also"></a>Zobacz też  
- [Specjalne makra NMAKE](../build/special-nmake-macros.md)
+
+Makra nazwy pliku są wstępnie zdefiniowane jako nazwy plików określone w zależności (specyfikacje nie pełna nazwa pliku na dysku). Te makra nie muszą być ujęte w nawiasy, gdy wywoływany; Podaj tylko $, jak pokazano.
+
+|Macro|Znaczenie|
+|-----------|-------------|
+|**$\@**|Bieżący obiekt docelowy imię i nazwisko (ścieżka, nazwa podstawowa, rozszerzenia), jak aktualnie określone.|
+|**$$\@**|Bieżący obiekt docelowy imię i nazwisko (ścieżka, nazwa podstawowa, rozszerzenia), jak aktualnie określone. Prawidłowy tylko jako zależnych od ustawień lokalnych powstanie zależności.|
+|**$&#42;**|Bieżący obiekt docelowy nazwa ścieżki i base minus rozszerzenia pliku.|
+|**$&#42;&#42;**|Wszystkie zależności bieżącą lokalizację docelową.|
+|**$?**|Wszystkie zależności z sygnaturą czasową nowsze niż bieżący element docelowy.|
+|**$<**|Plik zależny z sygnaturą czasową nowsze niż bieżący element docelowy. Prawidłowy tylko w przypadku poleceń w zasadach wnioskowania.|
+
+Aby określić część makra, nazwa_pliku wstępnie zdefiniowanych, Dołącz modyfikator — makro, a następnie dołączyć makra zmodyfikowane w nawiasie.
+
+|Modyfikator|Wynikowy część nazwy pliku|
+|--------------|-----------------------------|
+|**D**|Dysk i katalog|
+|**B**|Nazwa podstawowa|
+|**F**|Podstawowa nazwa oraz rozszerzenie|
+|**R**|Dysk i katalog, a także nazwę podstawową|
+
+## <a name="see-also"></a>Zobacz też
+
+[Specjalne makra NMAKE](../build/special-nmake-macros.md)

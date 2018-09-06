@@ -1,7 +1,7 @@
 ---
 title: '@ (Określ plik odpowiedzi konsolidatora) | Dokumentacja firmy Microsoft'
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 09/05/2018
 ms.technology:
 - cpp-tools
 ms.topic: reference
@@ -20,35 +20,39 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f182abcb26561bd07d62581b3beb9c0d3497ddb1
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 4ff031c64ab57373beadd8a88235d018f2e5c0f5
+ms.sourcegitcommit: d10a2382832373b900b1780e1190ab104175397f
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32369084"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43894424"
 ---
 # <a name="-specify-a-linker-response-file"></a>@ (Określ plik odpowiedzi konsolidatora)
-```  
-@response_file  
-```  
-  
-## <a name="remarks"></a>Uwagi  
- gdzie:  
-  
- `response_file`  
- Plik tekstowy, określając polecenia konsolidatora.  
-  
-## <a name="remarks"></a>Uwagi  
- Zobacz [@ (Określ plik odpowiedzi kompilatora)](../../build/reference/at-specify-a-compiler-response-file.md) Aby uzyskać więcej informacji.  
-  
-### <a name="to-set-this-linker-option-in-the-visual-studio-development-environment"></a>Aby ustawić tę opcję konsolidatora w środowisku programowania Visual Studio  
-  
-1.  Ta opcja konsolidatora nie jest dostępny w środowisku programowania Visual Studio.  
-  
-### <a name="to-set-this-linker-option-programmatically"></a>Aby programowo ustawić tę opcję konsolidatora  
-  
-1.  Nie można zmienić tej opcji konsolidatora programowo.  
-  
-## <a name="see-also"></a>Zobacz też  
- [Ustawianie opcji konsolidatora](../../build/reference/setting-linker-options.md)   
- [Opcje konsolidatora](../../build/reference/linker-options.md)
+
+Określa plik odpowiedzi konsolidatora.
+
+## <a name="syntax"></a>Składnia
+
+> **\@**<em>response_file</em>
+
+## <a name="arguments"></a>Argumenty
+
+*response_file*  
+Plik tekstowy, określając polecenia konsolidatora.
+
+## <a name="remarks"></a>Uwagi
+
+Zobacz [@ (Określ plik odpowiedzi kompilatora)](../../build/reference/at-specify-a-compiler-response-file.md) Aby uzyskać więcej informacji.
+
+### <a name="to-set-this-linker-option-in-the-visual-studio-development-environment"></a>Aby ustawić tę opcję konsolidatora w środowisku programowania Visual Studio
+
+- Tę opcję konsolidatora nie jest dostępny z poziomu środowiska projektowego programu Visual Studio.
+
+### <a name="to-set-this-linker-option-programmatically"></a>Aby programowo ustawić tę opcję konsolidatora
+
+- Nie można zmienić tę opcję konsolidatora w programowo.
+
+## <a name="see-also"></a>Zobacz też
+
+[Ustawianie opcji konsolidatora](../../build/reference/setting-linker-options.md)  
+[Opcje konsolidatora](../../build/reference/linker-options.md)

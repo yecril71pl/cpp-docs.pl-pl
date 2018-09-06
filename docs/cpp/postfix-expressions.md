@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a951c45da8c5c6b672540c03bc1d97b5d54d9338
-ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
+ms.openlocfilehash: e7ab8ad911869cab56df12b08b9688b9912f2a63
+ms.sourcegitcommit: d10a2382832373b900b1780e1190ab104175397f
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/01/2018
-ms.locfileid: "39403144"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43895165"
 ---
 # <a name="postfix-expressions"></a>Wyrażenia przyrostków
 Wyrażenia przyrostkowe składają się z podstawowego wyrażenia lub wyrażeń, w których operatory przyrostkowe następują po wyrażeniu podstawowym. Operatory przyrostkowe są wymienione w poniższej tabeli.  
@@ -50,7 +50,7 @@ postfix-expression[expression]postfix-expression(expression-list)simple-type-nam
 func(1)->GetValue()++  
 ```  
   
- W powyższym wyrażeniu `func` jest wyrażeniem podstawowym `func(1)` jest wyrażeniem przyrostkowym funkcji `func(1)->GetData` jest wyrażeniem przyrostkowym składowej klasy, `func(1)->GetData()` jest innym wyrażeniem przyrostkowym funkcji, a cały wyrażenie jest wyrażeniem przyrostkowym, zwiększającym wartość zwracaną GetData.  Znaczenie wyrażenia jako całości to „wywołaj funkcję przekazywania 1 jako argument i uzyskaj wskaźnik do klasy jako wartość zwracaną.  Następnie wywołaj `GetValue()` dla tej klasy, a następnie zwiększ wartość zwracaną.  
+ W powyższym wyrażeniu `func` jest wyrażeniem podstawowym `func(1)` jest wyrażeniem przyrostkowym funkcji `func(1)->GetValue` jest wyrażeniem przyrostkowym składowej klasy, `func(1)->GetValue()` jest innym wyrażeniem przyrostkowym funkcji, a cały wyrażenie jest wyrażeniem przyrostkowym, zwiększającym wartość elementu GetValue.  Znaczenie wyrażenia jako całości to „wywołaj funkcję przekazywania 1 jako argument i uzyskaj wskaźnik do klasy jako wartość zwracaną.  Następnie wywołaj `GetValue()` dla tej klasy, a następnie zwiększ wartość zwracaną.  
   
  Wyrażenia wymienione powyżej są wyrażeniami przypisania, co oznacza, że wyniki wyrażenia muszą być r-wartościami.  
   

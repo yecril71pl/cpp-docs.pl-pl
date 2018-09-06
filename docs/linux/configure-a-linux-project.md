@@ -1,7 +1,7 @@
 ---
 title: Konfigurowanie projektu systemu Linux w języku C++ w programie Visual Studio | Dokumentacja firmy Microsoft
 ms.custom: ''
-ms.date: 04/28/2018
+ms.date: 09/05/2018
 ms.reviewer: ''
 ms.suite: ''
 ms.technology:
@@ -14,17 +14,19 @@ ms.author: corob
 ms.workload:
 - cplusplus
 - linux
-ms.openlocfilehash: b4e5bad5b0688a2f0deeb237335c26419e2d9cbe
-ms.sourcegitcommit: 7eadb968405bcb92ffa505e3ad8ac73483e59685
+ms.openlocfilehash: fbc0674a7659ffccd5ab5c655f74167acebdca97
+ms.sourcegitcommit: d10a2382832373b900b1780e1190ab104175397f
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/23/2018
-ms.locfileid: "39207905"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43895204"
 ---
 # <a name="configure-a-linux-project"></a>Konfigurowanie projektu systemu Linux
+
 W tym temacie opisano sposób konfigurowania projektu systemu Linux w języku C++ w programie Visual Studio. Aby uzyskać informacji na temat narzędzia CMake projektów systemu Linux w programie Visual Studio, zobacz [Konfigurowanie projektu CMake systemu Linux ](cmake-linux-project.md).
 
 ## <a name="general-settings"></a>Ustawienia ogólne
+
 Dla projektu systemu Linux przy użyciu programu Visual Studio można skonfigurować różne opcje.  Zaznacz, aby wyświetlić te opcje **projektu > właściwości** menu lub kliknij prawym przyciskiem projekt w **Eksploratora rozwiązań** i wybierz **właściwości** z menu kontekstowego. **Ogólne** pojawią się ustawienia.
 
 ![Konfiguracja ogólna](media/settings_general.png)
@@ -32,13 +34,14 @@ Dla projektu systemu Linux przy użyciu programu Visual Studio można skonfiguro
 Domyślnie plik wykonywalny (.out) została stworzona za pomocą narzędzia.  Do tworzenia biblioteki statycznej lub dynamicznej lub użyć istniejącego pliku reguł programu make, użyj **typu konfiguracji** zaznaczenia.
 
 ## <a name="remote-settings"></a>Ustawienia zdalnego
+
 Aby zmienić ustawienia odnoszących się do komputera zdalnego systemu Linux, należy skonfigurować opcje zdalnego, które pojawiają się w **ogólne** ustawienia:
 
-* Aby zmienić komputer docelowy z systemem Linux, użyj **maszyny zdalnej kompilacji** wpisu.  Pozwoli to wybranie jednego z utworzonych wcześniej połączeń.  Aby utworzyć nowy wpis, zobacz [nawiązywanie połączeń z Twojej zdalny komputer z systemem Linux](connect-to-your-remote-linux-computer.md) sekcji.
+- Aby zmienić komputer docelowy z systemem Linux, użyj **maszyny zdalnej kompilacji** wpisu.  Pozwoli to wybranie jednego z utworzonych wcześniej połączeń.  Aby utworzyć nowy wpis, zobacz [nawiązywanie połączeń z Twojej zdalny komputer z systemem Linux](connect-to-your-remote-linux-computer.md) sekcji.
 
-* **Katalog główny kompilacji zdalnej** Określa lokalizację katalogu głównego, z której projekt jest kompilowany na zdalnym komputerze z systemem Linux.  To domyślnie zostanie **~/projects** chyba że zmieniony.
+- **Katalog główny kompilacji zdalnej** Określa lokalizację katalogu głównego, z której projekt jest kompilowany na zdalnym komputerze z systemem Linux.  To domyślnie zostanie **~/projects** chyba że zmieniony.
 
-* **Zdalny katalog projektu kompilacji** jest, gdzie tego określonego projektu zostanie utworzona na zdalnym komputerze z systemem Linux.  To domyślnie zostanie **$(RemoteRootDir)/$(ProjectName)**, które rozszerzy się do katalogu o nazwie po bieżącym projekcie, w katalogu głównym powyżej.
+- **Zdalny katalog projektu kompilacji** jest, gdzie tego określonego projektu zostanie utworzona na zdalnym komputerze z systemem Linux.  To domyślnie zostanie **$(RemoteRootDir)/$(ProjectName)**, które rozszerzy się do katalogu o nazwie po bieżącym projekcie, w katalogu głównym powyżej.
 
 > [!NOTE]
 > Aby zmienić domyślne C i Kompilatory języka C++ lub konsolidatora i programu archiwizującego, używany do tworzenia projektu, należy użyć odpowiednie wpisy w **C/C++ > Ogólne** sekcji i **Konsolidator > Ogólne** sekcji.  Te opcje można można ustawić, aby użyć określonej wersji kompilatora GCC lub nawet kompilatora Clang, na przykład.
@@ -61,17 +64,19 @@ Gdy pliki są kopiowane, użyć **katalogi VC ++** elementu we właściwościach
 **Visual Studio 2017 w wersji 15.7 lub nowszej:** zobacz [zarządzać zdalnych nagłówków funkcji IntelliSense](#remote_intellisense).
 
 ## <a name="copy-sources"></a>Kopiuj źródła
+
 Podczas kompilowania, pliki źródłowe na komputerze są skopiowane na komputer z systemem Linux i kompilowane istnieje.  Domyślnie wszystkie źródła w projekcie programu Visual Studio są kopiowane do lokalizacji, w oknie Ustawienia powyżej.  Dodatkowe źródła mogą być również dodawane do listy lub kopiowania źródeł można wyłączyć całkowicie, co jest ustawieniem domyślnym dla projektu pliku reguł programu make.
 
-* **Źródła do skopiowania** Określa, jakie źródła są kopiowane do komputera zdalnego.  Domyślnie **@(SourcesToCopyRemotely)** wartość domyślna to wszystkich plikach kodu źródłowego w projekcie, ale nie ma żadnych plików zasobów lub zasobu, taką jak obrazy.
+- **Źródła do skopiowania** Określa, jakie źródła są kopiowane do komputera zdalnego.  Domyślnie  **\@(SourcesToCopyRemotely)** wartość domyślna to wszystkich plikach kodu źródłowego w projekcie, ale nie ma żadnych plików zasobów lub zasobu, taką jak obrazy.
 
-* **Kopiuj źródła** można włączyć i wyłączyć pozwala włączać i wyłączać, skopiowanie plików źródłowych do komputera zdalnego.
+- **Kopiuj źródła** można włączyć i wyłączyć pozwala włączać i wyłączać, skopiowanie plików źródłowych do komputera zdalnego.
 
-* **Dodatkowe źródła do skopiowania** pozwala na dodawanie dodatkowych plików źródłowych, które zostaną skopiowane do systemu zdalnego.  Można określić listy podzielonej średnikami, lub możesz użyć **: =** składni, aby określić nazwę lokalne i zdalne do użycia:
+- **Dodatkowe źródła do skopiowania** pozwala na dodawanie dodatkowych plików źródłowych, które zostaną skopiowane do systemu zdalnego.  Można określić listy podzielonej średnikami, lub możesz użyć **: =** składni, aby określić nazwę lokalne i zdalne do użycia:
 
-  `C:\Projects\ConsoleApplication1\MyFile.cpp:=~/projects/ConsoleApplication1/ADifferentName.cpp;C:\Projects\ConsoleApplication1\MyFile2.cpp:=~/projects/ConsoleApplication1/ADifferentName2.cpp;`
+`C:\Projects\ConsoleApplication1\MyFile.cpp:=~/projects/ConsoleApplication1/ADifferentName.cpp;C:\Projects\ConsoleApplication1\MyFile2.cpp:=~/projects/ConsoleApplication1/ADifferentName2.cpp;`
 
 ## <a name="build-events"></a>Zdarzenia kompilacji
+
 Ponieważ wszystkie kompilacji dzieje się na komputerze zdalnym, kilka dodatkowych zdarzeń kompilacji zostały dodane do sekcji zdarzenia kompilacji we właściwościach projektu.  Są to **zdalne zdarzenie Prekompilacyjne**, **zdalne zdarzenie poprzedzające Link**, i **zdalne zdarzenie Pokompilacyjne**i na komputerze zdalnym przed lub po poszczególnych kroków w proces.
 
 ![Zdarzenia kompilacji](media/settings_buildevents.png)
@@ -91,6 +96,7 @@ Do zarządzania pamięcią podręczną usługi nagłówka, przejdź do **Narzęd
 ![Nagłówek zdalny IntelliSense](media/remote-header-intellisense.png)
 
 ## <a name="see-also"></a>Zobacz też
+
 [Praca z właściwościami projektu](../ide/working-with-project-properties.md)  
 [Właściwości ogólne C++ (Linux C++)](../linux/prop-pages/general-linux.md)  
 [Katalogi VC ++ (Linux C++)](../linux/prop-pages/directories-linux.md)  

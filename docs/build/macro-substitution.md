@@ -16,26 +16,29 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4028ee710cf38b6a4ef929de9a7e4ffad95f3e41
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 8f71ef2e1a8f337a4cd415169b6f9d817042f19a
+ms.sourcegitcommit: d10a2382832373b900b1780e1190ab104175397f
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32368073"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43894398"
 ---
 # <a name="macro-substitution"></a>Podstawianie makr
-Gdy *makra* zostanie wywołany, każde wystąpienie *ciąg1* w swojej definicji zastępuje ciąg *ciąg2*.  
-  
-## <a name="syntax"></a>Składnia  
-  
-```  
-$(macroname:string1=string2)  
-```  
-  
-## <a name="remarks"></a>Uwagi  
- Podstawianie makr jest uwzględniana wielkość liter i jest literałem; *ciąg1* i *ciąg2* nie można wywołać makra. Podstawienia nie modyfikuje oryginalnej definicji. Można zastąpić tekst w dowolnym wstępnie zdefiniowanego makra, z wyjątkiem [ $$@ ](../build/filename-macros.md).  
-  
- Bez spacji i karty poprzedzać colon; wszelkie po dwukropku są interpretowane jako literału. Jeśli *ciąg2* jest null, wszystkie wystąpienia *ciąg1* są usuwane z ciągu definicji makra.  
-  
-## <a name="see-also"></a>Zobacz też  
- [Korzystanie z makro NMAKE](../build/using-an-nmake-macro.md)
+
+Gdy *makra* zostanie wywołana, każde wystąpienie *ciąg1* definicja ciągu zastępuje *ciąg2*.
+
+## <a name="syntax"></a>Składnia
+
+```
+$(macroname:string1=string2)
+```
+
+## <a name="remarks"></a>Uwagi
+
+Podstawianie makr jest uwzględniana wielkość liter i jest literałowy; *ciąg1* i *ciąg2* nie można wywołać makra. Podstawienia nie modyfikuje oryginalnej definicji. Można zastąpić tekst w dowolnej wstępnie zdefiniowane makro, z wyjątkiem [ $$@ ](../build/filename-macros.md).
+
+Nie spacje lub tabulatory poprzedzać colon; dowolny po dwukropku są interpretowane jako literał. Jeśli *ciąg2* jest null, wszystkie wystąpienia *ciąg1* są usuwane z ciągu definicji makra.
+
+## <a name="see-also"></a>Zobacz też
+
+[Korzystanie z makro NMAKE](../build/using-an-nmake-macro.md)

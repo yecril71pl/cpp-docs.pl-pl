@@ -45,12 +45,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0babb0932fc059a91fd8da79f649039bcaebc457
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 02453ae14ab6e8cd4a75a9f2d8725ce69e2b7f02
+ms.sourcegitcommit: d10a2382832373b900b1780e1190ab104175397f
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43753736"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43895295"
 ---
 # <a name="curl-class"></a>Klasa cUrl
 
@@ -116,11 +116,11 @@ class CUrl
 
 `CUrl` Służy do modyfikowania pola adresu URL, takich jak ścieżki lub numer portu. `CUrl` Określa adresy URL o następującej postaci:
 
-\<Schemat > ://\<UserName >:\<hasło > @\<nazwa hosta >:\<numer_portu > /\<UrlPath >\<ExtraInfo >
+\<Schemat > ://\<UserName >:\<hasło >\@\<nazwa hosta >:\<numer_portu > /\<UrlPath >\<ExtraInfo >
 
 (Niektóre pola są opcjonalne). Na przykład rozważmy ten adres URL:
 
-http://someone:secret@www.microsoft.com:80/visualc/stuff.htm#contents
+`http://someone:secret@www.microsoft.com:80/visualc/stuff.htm#contents`
 
 [CUrl::CrackUrl](#crackurl) analizuje je w następujący sposób:
 
@@ -130,7 +130,7 @@ http://someone:secret@www.microsoft.com:80/visualc/stuff.htm#contents
 
 - Hasło: "wpis tajny"
 
-- Nazwa hosta: "www.microsoft.com"
+- Nazwa hosta: "`www.microsoft.com`"
 
 - Numer_portu: 80
 
@@ -235,7 +235,7 @@ Zwraca wartość TRUE w przypadku powodzenia, wartość FALSE w przypadku niepow
 
 Ta metoda dołącza jej poszczególne pola w celu utworzenia całego ciągu adresu URL w następującym formacie:
 
-**\<Schemat > ://\<użytkownika >:\<przekazać > @\<domeny >:\<port >\<ścieżka >\<dodatkowe >**
+**\<Schemat > ://\<użytkownika >:\<przekazać >\@\<domeny >:\<port >\<ścieżka >\<dodatkowe >**
 
 Po wywołaniu tej metody *pdwMaxLength* parametr początkowo musi zawierać maksymalną długość buforu ciągu odwołuje się *lpszUrl* parametru. Wartość *pdwMaxLength* parametr zostanie zaktualizowany o rzeczywistej długości ciągu adresu URL.
 

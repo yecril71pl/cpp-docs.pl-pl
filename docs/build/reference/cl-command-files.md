@@ -18,42 +18,44 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 367ea6dc22777b473cad44f35b1f5e4c34528471
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 0a1e2b25330bd326ac32dbe1c1b8abcc37c89d09
+ms.sourcegitcommit: d10a2382832373b900b1780e1190ab104175397f
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32369880"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43894762"
 ---
 # <a name="cl-command-files"></a>Pliki poleceń CL
-Plik polecenia to plik tekstowy, który zawiera opcje i nazwy plików, w przeciwnym razie należy wpisać w [wiersza polecenia](../../build/reference/compiler-command-line-syntax.md) lub określić za pomocą [zmiennej środowiskowej CL](../../build/reference/cl-environment-variables.md). CL akceptuje pliku poleceń kompilatora jako argumentu w zmiennej środowiskowej CL lub w wierszu polecenia. W przeciwieństwie do wiersza polecenia lub zmiennej środowiskowej CL, plik poleceń pozwala na używanie wielu wierszy opcji i nazw plików.  
-  
- Opcje i nazwy plików w pliku poleceń są przetwarzane zgodnie z lokalizacją polecenia nazwy pliku w zmiennej środowiskowej CL lub w wierszu polecenia. Jeśli opcja/Link pojawia się w pliku poleceń, wszystkie opcje na pozostałą część wiersza są przekazywane do konsolidatora. Opcje w kolejnych wierszy w pliku poleceń i opcji wiersza polecenia po wywołaniu pliku polecenia nadal są akceptowane jako opcje kompilatora. Aby uzyskać więcej informacji na wpływ ich interpretacji kolejność opcji, zobacz [kolejność opcji CL](../../build/reference/order-of-cl-options.md).  
-  
- Plik poleceń nie może zawierać polecenia CL. Każda opcja muszą się rozpoczynać i kończyć się w tym samym wierszu; Nie można użyć kreska ułamkowa odwrócona (\\) do łączenia z opcją między dwoma liniami.  
-  
- Pliku poleceń jest określona przez znak @ (@) następuje filename; Nazwa pliku można określić ścieżkę bezwzględną ani względną.  
-  
- Jeśli na przykład następujące polecenie znajduje się w pliku o nazwie Odp.:  
-  
+
+Plik poleceń jest plik tekstowy, który zawiera opcje i nazwy plików, w przeciwnym razie należy wpisać w [wiersza polecenia](../../build/reference/compiler-command-line-syntax.md) lub określić za pomocą [zmiennej środowiskowej CL](../../build/reference/cl-environment-variables.md). CL przyjmuje plik polecenia kompilatora jako argument w zmiennej środowiskowej CL lub w wierszu polecenia. W przeciwieństwie do wiersza polecenia lub zmiennej środowiskowej CL, plik poleceń pozwala na używanie wielu wierszy opcji i nazw plików.
+
+Opcje i nazwy plików w pliku poleceń są przetwarzane zgodnie z lokalizacją, nazwa_pliku polecenia, w ramach zmiennej środowiskowej CL lub w wierszu polecenia. Jeśli opcja/Link znajduje się w pliku poleceń, wszystkie opcje na pozostałą część wiersza są przekazywane do konsolidatora. Opcje w kolejnych wierszy w pliku poleceń i opcji w wierszu polecenia, po wywołaniu pliku polecenia nadal będzie akceptowane jako opcje kompilatora. Aby uzyskać więcej informacji na temat sposobu kolejność opcji ma wpływ na ich interpretacji, zobacz [kolejność opcji CL](../../build/reference/order-of-cl-options.md).
+
+Plik poleceń nie może zawierać polecenia CL. Każda opcja musi rozpoczynać się i kończyć na tym samym wierszu; Nie można użyć ukośnika odwrotnego (**\\**) połączyć opcję między dwoma wierszami.
+
+Plik poleceń jest określona przez znak (**\@**) następuje filename; Nazwa pliku można określić ścieżkę bezwzględną lub względną.
+
+Jeśli na przykład następujące polecenie znajduje się w pliku o nazwie Odp.:
+
 ```  
-/Og /link LIBC.LIB  
+/Og /link LIBC.LIB
 ```  
-  
- i określ polecenie CL:  
-  
+
+i podaj polecenie CL:
+
 ```  
-CL /Ob2 @RESP MYAPP.C  
+CL /Ob2 @RESP MYAPP.C
 ```  
-  
- polecenie CL wygląda następująco:  
-  
+
+polecenie, aby CL jest następująca:
+
 ```  
-CL /Ob2 /Og MYAPP.C /link LIBC.LIB  
+CL /Ob2 /Og MYAPP.C /link LIBC.LIB
 ```  
-  
- Należy pamiętać, efektywnie łączyć wiersza polecenia i polecenia pliku polecenia.  
-  
-## <a name="see-also"></a>Zobacz też  
- [Ustawianie opcji kompilatora](../../build/reference/setting-compiler-options.md)   
- [Opcje kompilatora](../../build/reference/compiler-options.md)
+
+Należy pamiętać, efektywnie połączone w wierszu polecenia i polecenia w pliku poleceń.
+
+## <a name="see-also"></a>Zobacz też
+
+[Ustawianie opcji kompilatora](../../build/reference/setting-compiler-options.md)
+[opcje kompilatora](../../build/reference/compiler-options.md)

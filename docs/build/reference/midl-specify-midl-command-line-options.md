@@ -1,7 +1,7 @@
 ---
 title: -MIDL (Określ opcje wiersza polecenia MIDL) | Dokumentacja firmy Microsoft
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 09/05/2018
 ms.technology:
 - cpp-tools
 ms.topic: reference
@@ -21,47 +21,49 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7fc5e4b0b3e19f9a71e1ada445181bede68d65a5
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: e513b0397a41a19c9a8088332eb3d1793b6b6647
+ms.sourcegitcommit: d10a2382832373b900b1780e1190ab104175397f
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43222684"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43894593"
 ---
 # <a name="midl-specify-midl-command-line-options"></a>/MIDL (Określ opcje wiersza polecenia MIDL)
-```  
-/MIDL:@file  
-```  
-  
-## <a name="remarks"></a>Uwagi  
- gdzie:  
-  
- `file`  
- Nazwa pliku, który zawiera [opcje wiersza polecenia MIDL](/windows/desktop/Midl/general-midl-command-line-syntax).  
-  
-## <a name="remarks"></a>Uwagi  
- Wszystkie opcje konwersji w pliku IDL z plikiem TLB musi być podany w `file`; Nie można określić opcje wiersza polecenia MIDL w wierszu polecenia konsolidatora. Jeśli /MIDL nie zostanie określony, kompilator MIDL zostanie wywołany za pomocą tylko nazwę pliku IDL i inne opcje.  
-  
- Ten plik powinien zawierać jedną opcję wiersza polecenia MIDL na wiersz.  
-  
-### <a name="to-set-this-linker-option-in-the-visual-studio-development-environment"></a>Aby ustawić tę opcję konsolidatora w środowisku programowania Visual Studio  
-  
-1.  Otwórz projekt **stron właściwości** okno dialogowe. Aby uzyskać więcej informacji, zobacz [ustawienie właściwości projektu Visual C++](../../ide/working-with-project-properties.md).  
-  
-2.  Kliknij przycisk **konsolidatora** folderu.  
-  
-3.  Kliknij przycisk **osadzone IDL** stronę właściwości.  
-  
-4.  Modyfikowanie **polecenia MIDL** właściwości.  
-  
-### <a name="to-set-this-linker-option-programmatically"></a>Aby programowo ustawić tę opcję konsolidatora  
-  
--   Zobacz <xref:Microsoft.VisualStudio.VCProjectEngine.VCLinkerTool.MidlCommandFile%2A>.  
-  
-## <a name="see-also"></a>Zobacz też  
- [Ustawianie opcji konsolidatora](../../build/reference/setting-linker-options.md)   
- [Opcje konsolidatora](../../build/reference/linker-options.md)   
- [/ IDLOUT (nazwij wyjściowe pliki MIDL)](../../build/reference/idlout-name-midl-output-files.md)   
- [/ IGNOREIDL (nie Przetwarzaj atrybutów w MIDL)](../../build/reference/ignoreidl-don-t-process-attributes-into-midl.md)   
- [/ TLBOUT (nazwa. Plik TLB)](../../build/reference/tlbout-name-dot-tlb-file.md)   
- [Kompilowanie programu opartego na atrybutach](../../windows/building-an-attributed-program.md)
+
+Określa plik odpowiedzi opcji wiersza polecenia MIDL
+
+## <a name="syntax"></a>Składnia
+
+> **/ MIDL:\@**<em>pliku</em>
+
+## <a name="arguments"></a>Argumenty
+
+*Plik*  
+Nazwa pliku, który zawiera [opcje wiersza polecenia MIDL](/windows/desktop/Midl/general-midl-command-line-syntax).
+
+## <a name="remarks"></a>Uwagi
+
+Wszystkie opcje konwersji w pliku IDL z plikiem TLB musi być podany w *pliku*; Nie można określić opcje wiersza polecenia MIDL w wierszu polecenia konsolidatora. Jeśli /MIDL nie zostanie określony, kompilator MIDL zostanie wywołany za pomocą tylko nazwę pliku IDL i inne opcje.
+
+Ten plik powinien zawierać jedną opcję wiersza polecenia MIDL na wiersz.
+
+### <a name="to-set-this-linker-option-in-the-visual-studio-development-environment"></a>Aby ustawić tę opcję konsolidatora w środowisku programowania Visual Studio
+
+1. Otwórz projekt **stron właściwości** okno dialogowe. Aby uzyskać więcej informacji, zobacz [ustawienie właściwości projektu Visual C++](../../ide/working-with-project-properties.md).
+
+2. Wybierz **właściwości konfiguracji** > **konsolidatora** > **osadzone IDL** stronę właściwości.
+
+3. Modyfikowanie **polecenia MIDL** właściwości.
+
+### <a name="to-set-this-linker-option-programmatically"></a>Aby programowo ustawić tę opcję konsolidatora
+
+- Zobacz <xref:Microsoft.VisualStudio.VCProjectEngine.VCLinkerTool.MidlCommandFile%2A>.
+
+## <a name="see-also"></a>Zobacz też
+
+[Ustawianie opcji konsolidatora](../../build/reference/setting-linker-options.md)   
+[Opcje konsolidatora](../../build/reference/linker-options.md)   
+[/ IDLOUT (nazwij wyjściowe pliki MIDL)](../../build/reference/idlout-name-midl-output-files.md)   
+[/ IGNOREIDL (nie Przetwarzaj atrybutów w MIDL)](../../build/reference/ignoreidl-don-t-process-attributes-into-midl.md)   
+[/ TLBOUT (nazwa. Plik TLB)](../../build/reference/tlbout-name-dot-tlb-file.md)   
+[Kompilowanie programu opartego na atrybutach](../../windows/building-an-attributed-program.md)

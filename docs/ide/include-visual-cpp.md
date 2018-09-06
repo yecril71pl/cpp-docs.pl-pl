@@ -18,103 +18,108 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b4c1a75acb89d9510dd7f489e5d0d582611da8de
-ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
+ms.openlocfilehash: a3cb07824ad5212f4174a6f19e3efa4549432455
+ms.sourcegitcommit: d10a2382832373b900b1780e1190ab104175397f
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "33330430"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43894456"
 ---
 # <a name="ltincludegt-visual-c"></a>&lt;obejmują&gt; (Visual C++)
-\<Obejmują > należy odwoływać się do komentarzy w innym pliku, które opisują typy i elementy członkowskie w kodzie źródłowym. Jest to alternatywa do wprowadzania komentarzy do dokumentacji bezpośrednio w pliku kodu źródłowego.  Na przykład można użyć \<obejmują > Wstaw komentarze standardowe "standardowy", które są używane w całym zespołu lub firmy.  
-  
-## <a name="syntax"></a>Składnia  
-  
+
+\<Obejmują > tag pozwala odwoływać się do komentarzy w innym pliku, które opisują typy i elementy członkowskie w kodzie źródłowym. Jest to alternatywa do wprowadzania komentarzy dokumentacji bezpośrednio w pliku kodu źródłowego.  Na przykład, można użyć \<obejmują > Aby wstawić komentarze standardowy "standardowy", które są używane przez cały zespół lub firma.
+
+## <a name="syntax"></a>Składnia
+
 ```  
-<include file='filename' path='tagpath' />  
+<include file='filename' path='tagpath' />
 ```  
-  
-#### <a name="parameters"></a>Parametry  
- `filename`  
- Nazwa pliku zawierającego w dokumentacji. Nazwa pliku może być kwalifikowany za pomocą ścieżki.  Nazwę należy ująć w cudzysłów pojedynczym lub podwójnym.  Kompilator generuje ostrzeżenie, jeśli nie znajdzie `filename`.  
-  
- `tagpath`  
- Prawidłowe wyrażenie XPath, które wybiera żądany zestaw węzłów zawarte w pliku.  
-  
- `name`  
- Określenie nazwy w tagu poprzedzający komentarze; `name` będzie mieć `id`.  
-  
- `id`  
- Identyfikator znacznika poprzedzający komentarze.  Nazwę należy ująć w cudzysłów pojedynczym lub podwójnym.  
-  
-## <a name="remarks"></a>Uwagi  
- \<Obejmują > tag używa składni XML XPath. Zapoznaj się z dokumentacją XPath o sposobach dostosowywania za pomocą \<obejmują >.  
-  
- Kompiluj z użyciem [/doc](../build/reference/doc-process-documentation-comments-c-cpp.md) na przetwarzanie komentarzy dokumentacji do pliku.  
-  
-## <a name="example"></a>Przykład  
- To jest przykład wiele plików. Pierwszy plik, który używa \<obejmują >, zawiera następujące komentarzy dokumentacji:  
-  
+
+#### <a name="parameters"></a>Parametry
+
+`filename`  
+Nazwa pliku zawierającego dokumentację. Nazwa pliku może być kwalifikowana przy użyciu ścieżki.  Nazwę należy ująć w pojedyncze lub podwójne znaki cudzysłowu.  Kompilator generuje ostrzeżenie, jeśli nie znajdzie `filename`.
+
+`tagpath`  
+Prawidłowe wyrażenie XPath wybierające żądany zestaw węzłów znajdujących się w pliku.
+
+`name`  
+Określenie nazwy w tagu, który poprzedza komentarzy; `name` będzie miał `id`.
+
+`id`  
+Identyfikator tagu, który poprzedza komentarze.  Nazwę należy ująć w pojedyncze lub podwójne znaki cudzysłowu.
+
+## <a name="remarks"></a>Uwagi
+
+\<Obejmują > tag używa składni XML XPath. Zajrzyj do dokumentacji wyrażenie XPath sposoby dostosowywania za pomocą \<obejmują >.
+
+Kompiluj przy użyciu [/doc](../build/reference/doc-process-documentation-comments-c-cpp.md) do Przetwarzaj komentarze dokumentacji do pliku.
+
+## <a name="example"></a>Przykład
+
+To jest przykład wieloplikowego. Pierwszy plik, który używa \<obejmują >, zawiera następujące komentarzy dokumentacji:
+
+```cpp
+// xml_include_tag.cpp
+// compile with: /clr /doc /LD
+// post-build command: xdcmake xml_include_tag.dll
+
+/// <include file='xml_include_tag.doc' path='MyDocs/MyMembers[@name="test"]/*' />
+public ref class Test {
+   void TestMethod() {
+   }
+};
+
+/// <include file='xml_include_tag.doc' path='MyDocs/MyMembers[@name="test2"]/*' />
+public ref class Test2 {
+   void Test() {
+   }
+};
 ```  
-// xml_include_tag.cpp  
-// compile with: /clr /doc /LD  
-// post-build command: xdcmake xml_include_tag.dll  
-  
-/// <include file='xml_include_tag.doc' path='MyDocs/MyMembers[@name="test"]/*' />  
-public ref class Test {  
-   void TestMethod() {  
-   }  
-};  
-  
-/// <include file='xml_include_tag.doc' path='MyDocs/MyMembers[@name="test2"]/*' />  
-public ref class Test2 {  
-   void Test() {  
-   }  
-};  
+
+Drugi plik, xml_include_tag.doc, zawiera następujące komentarzy dokumentacji:
+
+```xml
+<MyDocs>
+
+<MyMembers name="test">
+<summary>
+The summary for this type.
+</summary>
+</MyMembers>
+
+<MyMembers name="test2">
+<summary>
+The summary for this other type.
+</summary>
+</MyMembers>
+
+</MyDocs>
 ```  
-  
- Drugi plik, xml_include_tag.doc, zawiera następujące komentarzy dokumentacji:  
-  
-```  
-<MyDocs>  
-  
-<MyMembers name="test">  
-<summary>  
-The summary for this type.  
-</summary>  
-</MyMembers>  
-  
-<MyMembers name="test2">  
-<summary>  
-The summary for this other type.  
-</summary>  
-</MyMembers>  
-  
-</MyDocs>  
-```  
-  
-## <a name="program-output"></a>Dane wyjściowe programu  
-  
-```  
-<?xml version="1.0"?>  
-<doc>  
-    <assembly>  
-        <name>t2</name>  
-    </assembly>  
-    <members>  
-        <member name="T:Test">  
-            <summary>  
-The summary for this type.  
-</summary>  
-        </member>  
-        <member name="T:Test2">  
-            <summary>  
-The summary for this other type.  
-</summary>  
-        </member>  
-    </members>  
-</doc>  
-```  
-  
-## <a name="see-also"></a>Zobacz też  
- [Dokumentacja XML](../ide/xml-documentation-visual-cpp.md)
+
+## <a name="program-output"></a>Dane wyjściowe programu
+
+```xml
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>t2</name>
+    </assembly>
+    <members>
+        <member name="T:Test">
+            <summary>
+The summary for this type.
+</summary>
+        </member>
+        <member name="T:Test2">
+            <summary>
+The summary for this other type.
+</summary>
+        </member>
+    </members>
+</doc>
+```
+
+## <a name="see-also"></a>Zobacz też
+
+[Dokumentacja XML](../ide/xml-documentation-visual-cpp.md)

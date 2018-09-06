@@ -14,32 +14,35 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 99e1eb5b4800ff1046ca60d4d4874d386809e2e0
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: cfbf931d2758a361c739ca410547273c5530366e
+ms.sourcegitcommit: d10a2382832373b900b1780e1190ab104175397f
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32366877"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43894736"
 ---
 # <a name="commands-in-a-makefile"></a>Polecenia w pliku reguł programu Make
-Opis reguły blokowanie lub wnioskowania określa blok polecenia do uruchomienia, jeśli zależność jest nieaktualne. NMAKE Wyświetla każde polecenie przed uruchomieniem go, chyba że/s, **. DYSKRETNEJ**, **! CMDSWITCHES**, lub @ jest używany. NMAKE szuka reguły wnioskowania dopasowania, jeśli blok opis nie następuje blok poleceń.  
-  
- Blok poleceń zawiera co najmniej jedno polecenie, każdego w osobnym wierszu. Nie pusty wiersz może wystąpić między zależności lub reguły i blok poleceń. Jednak wiersz zawierający tylko spacji ani karty mogą być wyświetlane; Ten wiersz jest interpretowane jako polecenie null, a nie występują błędy. Puste wiersze są dozwolone między wiersze polecenia.  
-  
- Wiersz polecenia rozpoczyna się od spacji lub kart. Ukośnik odwrotny (\), a następnie znaku nowego wiersza jest interpretowana jako miejsca w poleceniu; Użyj ukośnikiem na końcu wiersza, aby kontynuować do następnego wiersza polecenia. NMAKE interpretuje ukośniku odwrotnym dosłownie innych znaków, w tym spację lub tabulator, jeśli ukośniku odwrotnym.  
-  
- Polecenie poprzedzonego średnikami (;) może wystąpić reguł wiersza lub wnioskowania zależności, czy następuje blok poleceń:  
-  
-```  
-project.obj : project.c project.h ; cl /c project.c  
-```  
-  
-## <a name="what-do-you-want-to-know-more-about"></a>Co chcesz dowiedzieć się więcej o?  
- [Modyfikatory poleceń](../build/command-modifiers.md)  
-  
- [Składnia nazwy pliku części](../build/filename-parts-syntax.md)  
-  
- [Pliki wbudowane w pliku reguł programu make](../build/inline-files-in-a-makefile.md)  
-  
-## <a name="see-also"></a>Zobacz też  
- [NMAKE — dokumentacja](../build/nmake-reference.md)
+
+Opis reguły blokowanie lub wnioskowania określa blok polecenia do uruchomienia, jeśli zależność jest nieaktualna. NMAKE Wyświetla każde polecenie przed uruchomieniem go, chyba że /S, **. DYSKRETNEJ**, **! CMDSWITCHES**, lub \@ jest używany. NMAKE szuka reguły wnioskowania dopasowania, jeśli blok opis nie następuje w bloku poleceń.
+
+Blok poleceń zawiera co najmniej jedno polecenie, każdą w osobnym wierszu. Nie pusty wiersz, mogą występować między zależność lub reguły i blok poleceń. Jednakże wiersz zawierający tylko spacje lub tabulatory mogą być wyświetlane; Ten wiersz jest interpretowane jako polecenie o wartości null i nie występują błędy. Puste wiersze są dozwolone między wiersze polecenia.
+
+Wiersz polecenia rozpoczyna się od spacji lub karty. Ukośnik odwrotny (\), w którym następuje znak nowego wiersza jest interpretowany jako miejsca w poleceniu; użyć znaku ukośnika na końcu wiersza, aby kontynuować do następnego wiersza polecenia. NMAKE interpretuje ukośnik odwrotny dosłownie Jeśli jakikolwiek inny znak, w tym spacji lub tabulatorów, następuje po odwrotnym ukośniku.
+
+Polecenie poprzedzone średnika (;) mogą być wyświetlane na reguły linii lub wnioskowania zależności, czy następuje po bloku poleceń:
+
+```
+project.obj : project.c project.h ; cl /c project.c
+```
+
+## <a name="what-do-you-want-to-know-more-about"></a>Co chcesz dowiedzieć się więcej na temat?
+
+[Modyfikatory poleceń](../build/command-modifiers.md)
+
+[Składnia nazwy pliku części](../build/filename-parts-syntax.md)
+
+[Pliki wbudowane w pliku reguł programu make](../build/inline-files-in-a-makefile.md)
+
+## <a name="see-also"></a>Zobacz też
+
+[NMAKE — dokumentacja](../build/nmake-reference.md)
