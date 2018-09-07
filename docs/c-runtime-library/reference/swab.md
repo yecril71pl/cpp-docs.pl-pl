@@ -36,12 +36,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: aeedb217466262d8643a851b5f93cb9ac26fb0a2
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 2975e63f79818e5eac430056258b72b9c6641a49
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32408450"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44100277"
 ---
 # <a name="swab"></a>_swab
 
@@ -59,21 +59,24 @@ void _swab(
 
 ## <a name="parameters"></a>Parametry
 
-*SRC* dane do skopiowania i zamienione.
+*src*<br/>
+Dane do skopiowania i zamienione.
 
-*docelowy* lokalizację magazynowania danych zamienione.
+*dest*<br/>
+Lokalizacja magazynowa danych wymienione.
 
-*n* liczba bajtów do skopiowania i zamienione.
+*N*<br/>
+Liczba bajtów do skopiowania i zamienione.
 
 ## <a name="return-value"></a>Wartość zwracana
 
-**Swab —** funkcja nie zwraca wartości. Zestawy funkcji **errno** do **einval —** Jeśli *src* lub *dest* wskaźnik ma wartość null lub *n* jest mniejsza od zera i nieprawidłowy parametr zostanie wywołany program obsługi, zgodnie z opisem w [sprawdzanie poprawności parametru](../../c-runtime-library/parameter-validation.md).
+**Swab —** funkcja nie zwraca wartości. Zestawy funkcji **errno** do **EINVAL** Jeśli *src* lub *dest* wskaźnika ma wartość null lub *n* jest mniejsza od zera i nieprawidłowy parametr program obsługi zostanie wywołana, zgodnie z opisem w [Parameter Validation](../../c-runtime-library/parameter-validation.md).
 
-Zobacz [_doserrno —, errno, _sys_errlist — i _sys_nerr —](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md) Aby uzyskać więcej informacji na ten temat oraz inne kody powrotu.
+Zobacz [_doserrno, errno, _sys_errlist i _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md) Aby uzyskać więcej informacji na ten temat i inne kody powrotne.
 
 ## <a name="remarks"></a>Uwagi
 
-Jeśli *n* jest parzysta, **_swab —** funkcji kopie *n* bajtów z *src*zamienia każda para bajtów sąsiadujących ze sobą i zapisuje wynik w *dest*. Jeśli *n* jest nieparzysta, **_swab —** kopiuje i zamienia pierwszy *n*-1 bajtów *src*, i końcowe bajtów nie zostaną skopiowane. **_Swab —** używane zwykle do przygotować dane binarne do przeniesienia do urządzenia, które używa kolejności bajtów różnych funkcji.
+Jeśli *n* jest parzysta, **_swab —** funkcja kopiuje *n* bajtów z *src*zamienia każdej pary bajtów sąsiadujących i zapisuje wynik w *dest*. Jeśli *n* jest nieparzysta, **_swab —** kopiuje i zamienia pierwszy *n*b-1 *src*, a bajt końcowy nie jest kopiowany. **_Swab —** funkcji jest zazwyczaj używany do przygotowania danych binarnych transferu na komputerze, który używa kolejności bajtów różne.
 
 ## <a name="requirements"></a>Wymagania
 

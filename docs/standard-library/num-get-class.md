@@ -24,12 +24,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b2fc6fe93b3c7b798a53f6989d95e83c3be4b022
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: 2cb6364a9f1cb74f9a002e37c278f3686b9916ca
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38959823"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44110126"
 ---
 # <a name="numget-class"></a>num_get — Klasa
 
@@ -44,9 +44,11 @@ class num_get : public locale::facet;
 
 ### <a name="parameters"></a>Parametry
 
-*CharType* typ używany w programie do kodowania znaków w ustawieniach regionalnych.
+*CharType*<br/>
+Typ używany w programie do kodowania znaków w ustawieniach regionalnych.
 
-*InputIterator* typ iteratora, z którego liczbowe funkcje get odczytują swoje dane wejściowe.
+*InputIterator*<br/>
+Typ iteratora, z którego liczbowe funkcje get odczytują swoje dane wejściowe.
 
 ## <a name="remarks"></a>Uwagi
 
@@ -175,15 +177,20 @@ virtual iter_type do_get(
 
 ### <a name="parameters"></a>Parametry
 
-*pierwszy* początek zakresu znaków, z którego można odczytać numeru.
+*pierwszy*<br/>
+Początek zakresu znaków, z którego można odczytać numeru.
 
-*ostatni* koniec zakresu znaków, z którego można odczytać numeru.
+*ostatni*<br/>
+Koniec zakresu znaków, z którego można odczytać numeru.
 
-*_Iosbase* [ios_base —](../standard-library/ios-base-class.md) którego flagi są używane przez konwersję.
+*_Iosbase*<br/>
+[Ios_base —](../standard-library/ios-base-class.md) którego flagi są używane przez konwersję.
 
-*_Stanu* stanu, do których failbit (zobacz [ios_base::iostate](../standard-library/ios-base-class.md#iostate)) jest dodawany w przypadku awarii.
+*_Stanu*<br/>
+Stan, do których failbit (zobacz [ios_base::iostate](../standard-library/ios-base-class.md#iostate)) jest dodawany w przypadku awarii.
 
-*Val* wartość, która została odczytana.
+*Val*<br/>
+Wartość, która została odczytana.
 
 ### <a name="return-value"></a>Wartość zwracana
 
@@ -417,15 +424,20 @@ iter_type get(
 
 ### <a name="parameters"></a>Parametry
 
-*pierwszy* początek zakresu znaków, z którego można odczytać numeru.
+*pierwszy*<br/>
+Początek zakresu znaków, z którego można odczytać numeru.
 
-*ostatni* koniec zakresu znaków, z którego można odczytać numeru.
+*ostatni*<br/>
+Koniec zakresu znaków, z którego można odczytać numeru.
 
-*_Iosbase* [ios_base —](../standard-library/ios-base-class.md) którego flagi są używane przez konwersję.
+*_Iosbase*<br/>
+[Ios_base —](../standard-library/ios-base-class.md) którego flagi są używane przez konwersję.
 
-*_Stanu* stanu, do których failbit (zobacz [ios_base::iostate](../standard-library/ios-base-class.md#iostate)) jest dodawany w przypadku awarii.
+*_Stanu*<br/>
+Stan, do których failbit (zobacz [ios_base::iostate](../standard-library/ios-base-class.md#iostate)) jest dodawany w przypadku awarii.
 
-*Val* wartość, która została odczytana.
+*Val*<br/>
+Wartość, która została odczytana.
 
 ### <a name="return-value"></a>Wartość zwracana
 
@@ -571,7 +583,8 @@ explicit num_get(size_t _Refs = 0);
 
 ### <a name="parameters"></a>Parametry
 
-*_Refs* wartość całkowitą, można określić typ zarządzania pamięci dla obiektu.
+*_Refs*<br/>
+Wartość liczby całkowitej, można określić typ zarządzania pamięci dla obiektu.
 
 ### <a name="remarks"></a>Uwagi
 

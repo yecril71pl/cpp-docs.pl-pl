@@ -26,12 +26,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0d90cbfd5d1f239f05d19803c9ed89ad080667f2
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: 31637c1c194754e193970a4ff5efef500228115b
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38964817"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44105253"
 ---
 # <a name="basicofstream-class"></a>basic_ofstream — Klasa
 
@@ -46,9 +46,11 @@ class basic_ofstream : public basic_ostream<Elem, Tr>
 
 ### <a name="parameters"></a>Parametry
 
-*Elem* podstawowy element buforu plików.
+*Elem*<br/>
+Podstawowy element buforu plików.
 
-*TR* cech elementu podstawowego buforu pliku (zazwyczaj `char_traits` <  `Elem`>).
+*TR*<br/>
+Cechy elementu podstawowego buforu pliku (zazwyczaj `char_traits` <  `Elem`>).
 
 ## <a name="remarks"></a>Uwagi
 
@@ -129,13 +131,17 @@ basic_ofstream(
 
 ### <a name="parameters"></a>Parametry
 
-*Nazwa p_liku* nazwę pliku, aby otworzyć.
+*Nazwa p_liku*<br/>
+Nazwa pliku, aby otworzyć.
 
-*_Tryb* jedno z wyliczeń w [ios_base::openmode](../standard-library/ios-base-class.md#openmode).
+*_Tryb*<br/>
+Jedno z wyliczeń w [ios_base::openmode](../standard-library/ios-base-class.md#openmode).
 
-*_Prot* domyślnego pliku otwarcie ochrony odpowiednikiem `shflag` parametru w [_fsopen —, _wfsopen —](../c-runtime-library/reference/fsopen-wfsopen.md).
+*_Prot*<br/>
+Domyślny plik otwarcie ochrony odpowiednikiem `shflag` parametru w [_fsopen —, _wfsopen —](../c-runtime-library/reference/fsopen-wfsopen.md).
 
-*prawy* odwołania rvalue do `basic_ofstream` obiekt używany do zainicjowania tego `basic_ofstream` obiektu.
+*right*<br/>
+Odwołania rvalue do `basic_ofstream` obiekt używany do zainicjowania tego `basic_ofstream` obiektu.
 
 ### <a name="remarks"></a>Uwagi
 
@@ -247,11 +253,14 @@ void open(
 
 ### <a name="parameters"></a>Parametry
 
-*Nazwa p_liku* nazwę pliku, aby otworzyć.
+*Nazwa p_liku*<br/>
+Nazwa pliku, aby otworzyć.
 
-*_Tryb* jedno z wyliczeń w [ios_base::openmode](../standard-library/ios-base-class.md#openmode).
+*_Tryb*<br/>
+Jedno z wyliczeń w [ios_base::openmode](../standard-library/ios-base-class.md#openmode).
 
-*_Prot* domyślnego pliku otwarcie ochrony odpowiednikiem `shflag` parametru w [_fsopen —, _wfsopen —](../c-runtime-library/reference/fsopen-wfsopen.md).
+*_Prot*<br/>
+Domyślny plik otwarcie ochrony odpowiednikiem `shflag` parametru w [_fsopen —, _wfsopen —](../c-runtime-library/reference/fsopen-wfsopen.md).
 
 ### <a name="remarks"></a>Uwagi
 
@@ -271,7 +280,8 @@ basic_ofstream& operator=(basic_ofstream&& right);
 
 ### <a name="parameters"></a>Parametry
 
-*prawy* odwołania rvalue do `basic_ofstream` obiektu.
+*right*<br/>
+Odwołania rvalue do `basic_ofstream` obiektu.
 
 ### <a name="return-value"></a>Wartość zwracana
 
@@ -307,7 +317,8 @@ void swap(basic_ofstream& right);
 
 ### <a name="parameters"></a>Parametry
 
-*prawy* `lvalue` odwoływać się do innego `basic_ofstream` obiektu.
+*right*<br/>
+`lvalue` Odwoływać się do innego `basic_ofstream` obiektu.
 
 ### <a name="remarks"></a>Uwagi
 

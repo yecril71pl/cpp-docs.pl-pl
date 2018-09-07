@@ -90,12 +90,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c85e1637691d602c63208cd180071c0f388c5893
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: 017d5d5c2934fa687f91898b896a0ad6f1dcab6f
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38954958"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44102580"
 ---
 # <a name="forwardlist-class"></a>forward_list — Klasa
 
@@ -522,7 +522,7 @@ forward_list(InputIterator First, InputIterator Last, const Allocator& Al);
 |*Al*|Klasa alokatora do wykorzystania z tym obiektem.|
 |*Liczba*|Liczba elementów na utworzonej liście.|
 |*Val*|Wartość elementów na utworzonej liście.|
-|*Po prawej stronie*|Lista, z której kopią jest lista skonstruowana.|
+|*po prawej stronie*|Lista, z której kopią jest lista skonstruowana.|
 |*pierwszy*|Pozycja pierwszego elementu w zakresie elementów, które mają zostać skopiowane.|
 |*ostatni*|Pozycja pierwszego elementu poza zakresem elementów, które mają zostać skopiowane.|
 |*IList*|Lista initializer_list do skopiowania.|
@@ -881,15 +881,20 @@ void splice_after(
 
 ### <a name="parameters"></a>Parametry
 
-*Gdzie* pozycji w forward_list miejsce docelowe, po upływie którego do wstawienia.
+*Where*<br/>
+Pozycja w forward_list miejsce docelowe, po upływie którego do wstawienia.
 
-*Źródło* forward_list źródła, który ma zostać wstawiony do forward_list docelowego.
+*Źródło*<br/>
+Forward_list — źródłowy, który ma zostać wstawiony do forward_list docelowego.
 
-*ITER* element, który ma zostać wstawiony z forward_list źródła.
+*ITER*<br/>
+Element, który ma zostać wstawiony z forward_list źródła.
 
-*Pierwszy* pierwszego elementu w zakresie, który ma zostać wstawiony z forward_list źródła.
+*pierwszy*<br/>
+Pierwszy element w zakresie, który ma zostać wstawiony z forward_list źródła.
 
-*Ostatni* do pierwszej pozycji poza zakres, który ma zostać wstawiony z forward_list źródła.
+*ostatni*<br/>
+Pierwszej pozycji poza zakres, który ma zostać wstawiony z forward_list źródła.
 
 ### <a name="remarks"></a>Uwagi
 

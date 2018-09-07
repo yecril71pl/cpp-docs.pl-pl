@@ -68,12 +68,12 @@ helpviewer_keywords:
 - std::kill_dependency [C++]
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b70f4df63b5a885403b91c1470c3066c33f5f123
-ms.sourcegitcommit: e9ce38decc9f986edab5543de3464b11ebccb123
+ms.openlocfilehash: c00f66eef11d2d26bbcaa07110e9d9e738fc7c2f
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/13/2018
-ms.locfileid: "42465785"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44110165"
 ---
 # <a name="ltatomicgt-functions"></a>&lt;Atomic&gt; funkcji
 
@@ -110,11 +110,14 @@ inline bool atomic_compare_exchange_strong(
 
 ### <a name="parameters"></a>Parametry
 
-*Atom* wskaźnik do *atomic* obiekt, który przechowuje wartości typu `Ty`.
+*Atom*<br/>
+Wskaźnik do *atomic* obiekt, który przechowuje wartości typu `Ty`.
 
-*EXP* wskaźnik do wartości typu `Ty`.
+*EXP*<br/>
+Wskaźnik do wartości typu `Ty`.
 
-*Wartość* wartości typu `Ty`.
+*Wartość*<br/>
+Wartości typu `Ty`.
 
 ### <a name="return-value"></a>Wartość zwracana
 
@@ -148,15 +151,20 @@ inline bool atomic_compare_exchange_strong_explicit(
 
 ### <a name="parameters"></a>Parametry
 
-*Atom* wskaźnik do `atomic` obiekt, który przechowuje wartości typu `Ty`.
+*Atom*<br/>
+Wskaźnik do `atomic` obiekt, który przechowuje wartości typu `Ty`.
 
-*EXP* wskaźnik do wartości typu `Ty`.
+*EXP*<br/>
+Wskaźnik do wartości typu `Ty`.
 
-*Wartość* wartości typu `Ty`.
+*Wartość*<br/>
+Wartości typu `Ty`.
 
-*Order1* pierwszy [memory_order](../standard-library/atomic-enums.md#memory_order_enum) argumentu.
+*Order1*<br/>
+Pierwszy [memory_order](../standard-library/atomic-enums.md#memory_order_enum) argumentu.
 
-*Order2* drugi `memory_order` argumentu. Wartość *Order2* nie może być `memory_order_release` lub `memory_order_acq_rel`, nie może być silniejszy niż wartość *Order1*.
+*Order2*<br/>
+Drugi `memory_order` argumentu. Wartość *Order2* nie może być `memory_order_release` lub `memory_order_acq_rel`, nie może być silniejszy niż wartość *Order1*.
 
 ### <a name="return-value"></a>Wartość zwracana
 
@@ -186,11 +194,14 @@ inline bool atomic_compare_exchange_strong(
 
 ### <a name="parameters"></a>Parametry
 
-*Atom* wskaźnik do `atomic` obiekt, który przechowuje wartości typu `Ty`.
+*Atom*<br/>
+Wskaźnik do `atomic` obiekt, który przechowuje wartości typu `Ty`.
 
-*EXP* wskaźnik do wartości typu `Ty`.
+*EXP*<br/>
+Wskaźnik do wartości typu `Ty`.
 
-*Wartość* wartości typu `Ty`.
+*Wartość*<br/>
+Wartości typu `Ty`.
 
 ### <a name="return-value"></a>Wartość zwracana
 
@@ -224,15 +235,20 @@ inline bool atomic_compare_exchange_weak_explicit(
 
 ### <a name="parameters"></a>Parametry
 
-*Atom* wskaźnik do `atomic` obiekt, który przechowuje wartości typu `Ty`.
+*Atom*<br/>
+Wskaźnik do `atomic` obiekt, który przechowuje wartości typu `Ty`.
 
-*EXP* wskaźnik do wartości typu `Ty`.
+*EXP*<br/>
+Wskaźnik do wartości typu `Ty`.
 
-*Wartość* wartości typu `Ty`.
+*Wartość*<br/>
+Wartości typu `Ty`.
 
-*Order1* pierwszy [memory_order](../standard-library/atomic-enums.md#memory_order_enum) argumentu.
+*Order1*<br/>
+Pierwszy [memory_order](../standard-library/atomic-enums.md#memory_order_enum) argumentu.
 
-*Order2* drugi `memory_order` argumentu. Wartość *Order2* nie może być `memory_order_release` lub `memory_order_acq_rel`, ani nie może być silniejszy niż wartość *Order1*.
+*Order2*<br/>
+Drugi `memory_order` argumentu. Wartość *Order2* nie może być `memory_order_release` lub `memory_order_acq_rel`, ani nie może być silniejszy niż wartość *Order1*.
 
 ### <a name="return-value"></a>Wartość zwracana
 
@@ -256,9 +272,11 @@ inline T atomic_exchange(atomic<Ty>* Atom, Ty Value) noexcept;
 
 ### <a name="parameters"></a>Parametry
 
-*Atom* wskaźnik do `atomic` obiekt, który przechowuje wartości typu `Ty`.
+*Atom*<br/>
+Wskaźnik do `atomic` obiekt, który przechowuje wartości typu `Ty`.
 
-*Wartość* wartości typu `Ty`.
+*Wartość*<br/>
+Wartości typu `Ty`.
 
 ### <a name="return-value"></a>Wartość zwracana
 
@@ -288,11 +306,14 @@ inline Ty atomic_exchange_explicit(
 
 ### <a name="parameters"></a>Parametry
 
-*Atom* wskaźnik do `atomic` obiekt, który przechowuje wartości typu `Ty`.
+*Atom*<br/>
+Wskaźnik do `atomic` obiekt, który przechowuje wartości typu `Ty`.
 
-*Wartość* wartości typu `Ty`.
+*Wartość*<br/>
+Wartości typu `Ty`.
 
-*Kolejność* A [memory_order](../standard-library/atomic-enums.md#memory_order_enum).
+*Kolejność*<br/>
+A [memory_order](../standard-library/atomic-enums.md#memory_order_enum).
 
 ### <a name="return-value"></a>Wartość zwracana
 
@@ -315,9 +336,11 @@ T* atomic_fetch_add(atomic<T*>* Atom, ptrdiff_t Value) noexcept;
 
 ### <a name="parameters"></a>Parametry
 
-*Atom* wskaźnik do `atomic` obiekt przechowujący wskaźnik do typu `T`.
+*Atom*<br/>
+Wskaźnik do `atomic` obiekt przechowujący wskaźnik do typu `T`.
 
-*Wartość* wartości typu `ptrdiff_t`.
+*Wartość*<br/>
+Wartości typu `ptrdiff_t`.
 
 ### <a name="return-value"></a>Wartość zwracana
 
@@ -357,9 +380,11 @@ T* atomic_fetch_add_explicit(
 
 ### <a name="parameters"></a>Parametry
 
-*Atom* wskaźnik do `atomic` obiekt przechowujący wskaźnik do typu `T`.
+*Atom*<br/>
+Wskaźnik do `atomic` obiekt przechowujący wskaźnik do typu `T`.
 
-*Wartość* wartości typu `ptrdiff_t`.
+*Wartość*<br/>
+Wartości typu `ptrdiff_t`.
 
 ### <a name="return-value"></a>Wartość zwracana
 
@@ -398,9 +423,11 @@ inline T atomic_fetch_and(volatile atomic<T>* Atom, T Value) noexcept;
 
 ### <a name="parameters"></a>Parametry
 
-*Atom* wskaźnik do `atomic` obiekt, który przechowuje wartości typu `T`.
+*Atom*<br/>
+Wskaźnik do `atomic` obiekt, który przechowuje wartości typu `T`.
 
-*Wartość* wartości typu `T`.
+*Wartość*<br/>
+Wartości typu `T`.
 
 ### <a name="return-value"></a>Wartość zwracana
 
@@ -430,11 +457,14 @@ inline T atomic_fetch_and_explicit(
 
 ### <a name="parameters"></a>Parametry
 
-*Atom* wskaźnik do `atomic` obiekt, który przechowuje wartości typu `T`.
+*Atom*<br/>
+Wskaźnik do `atomic` obiekt, który przechowuje wartości typu `T`.
 
-*Wartość* wartości typu `T`.
+*Wartość*<br/>
+Wartości typu `T`.
 
-*Kolejność* A [memory_order](../standard-library/atomic-enums.md#memory_order_enum).
+*Kolejność*<br/>
+A [memory_order](../standard-library/atomic-enums.md#memory_order_enum).
 
 ### <a name="return-value"></a>Wartość zwracana
 
@@ -457,9 +487,11 @@ inline T atomic_fetch_or (volatile atomic<T>* Atom, T Value) noexcept;
 
 ### <a name="parameters"></a>Parametry
 
-*Atom* wskaźnik do `atomic` obiekt, który przechowuje wartości typu `T`.
+*Atom*<br/>
+Wskaźnik do `atomic` obiekt, który przechowuje wartości typu `T`.
 
-*Wartość* wartości typu `T`.
+*Wartość*<br/>
+Wartości typu `T`.
 
 ### <a name="return-value"></a>Wartość zwracana
 
@@ -489,11 +521,14 @@ inline T atomic_fetch_or_explicit(
 
 ### <a name="parameters"></a>Parametry
 
-*Atom* wskaźnik do `atomic` obiekt, który przechowuje wartości typu `T`.
+*Atom*<br/>
+Wskaźnik do `atomic` obiekt, który przechowuje wartości typu `T`.
 
-*Wartość* wartości typu `T`.
+*Wartość*<br/>
+Wartości typu `T`.
 
-*Kolejność* A [memory_order](../standard-library/atomic-enums.md#memory_order_enum).
+*Kolejność*<br/>
+A [memory_order](../standard-library/atomic-enums.md#memory_order_enum).
 
 ### <a name="return-value"></a>Wartość zwracana
 
@@ -521,9 +556,11 @@ T* atomic_fetch_sub(
 
 ### <a name="parameters"></a>Parametry
 
-*Atom* wskaźnik do `atomic` obiekt przechowujący wskaźnik do typu `T`.
+*Atom*<br/>
+Wskaźnik do `atomic` obiekt przechowujący wskaźnik do typu `T`.
 
-*Wartość* wartości typu `ptrdiff_t`.
+*Wartość*<br/>
+Wartości typu `ptrdiff_t`.
 
 ### <a name="return-value"></a>Wartość zwracana
 
@@ -561,9 +598,11 @@ T* atomic_fetch_sub_explicit(
 
 ### <a name="parameters"></a>Parametry
 
-*Atom* wskaźnik do `atomic` obiekt przechowujący wskaźnik do typu `T`.
+*Atom*<br/>
+Wskaźnik do `atomic` obiekt przechowujący wskaźnik do typu `T`.
 
-*Wartość* wartości typu `ptrdiff_t`.
+*Wartość*<br/>
+Wartości typu `ptrdiff_t`.
 
 ### <a name="return-value"></a>Wartość zwracana
 
@@ -603,9 +642,11 @@ inline T atomic_fetch_xor(volatile atomic<T>* Atom, T Value) noexcept;
 
 ### <a name="parameters"></a>Parametry
 
-*Atom* wskaźnik do `atomic` obiekt, który przechowuje wartości typu `T`.
+*Atom*<br/>
+Wskaźnik do `atomic` obiekt, który przechowuje wartości typu `T`.
 
-*Wartość* wartości typu `T`.
+*Wartość*<br/>
+Wartości typu `T`.
 
 ### <a name="return-value"></a>Wartość zwracana
 
@@ -635,11 +676,14 @@ inline T atomic_fetch_xor_explicit(
 
 ### <a name="parameters"></a>Parametry
 
-*Atom* wskaźnik do `atomic` obiekt, który przechowuje wartości typu `T`.
+*Atom*<br/>
+Wskaźnik do `atomic` obiekt, który przechowuje wartości typu `T`.
 
-*Wartość* wartości typu `T`.
+*Wartość*<br/>
+Wartości typu `T`.
 
-*Kolejność* A [memory_order](../standard-library/atomic-enums.md#memory_order_enum).
+*Kolejność*<br/>
+A [memory_order](../standard-library/atomic-enums.md#memory_order_enum).
 
 ### <a name="return-value"></a>Wartość zwracana
 
@@ -660,7 +704,8 @@ inline void atomic_flag_clear(atomic_flag* Flag) noexcept;
 
 ### <a name="parameters"></a>Parametry
 
-*Flaga* wskaźnik do `atomic_flag` obiektu.
+*Flaga*<br/>
+Wskaźnik do `atomic_flag` obiektu.
 
 ## <a name="atomic_flag_clear_explicit"></a>  atomic_flag_clear_explicit
 
@@ -673,9 +718,11 @@ inline void atomic_flag_clear_explicit(atomic_flag* Flag, memory_order Order) no
 
 ### <a name="parameters"></a>Parametry
 
-*Flaga* wskaźnik do `atomic_flag` obiektu.
+*Flaga*<br/>
+Wskaźnik do `atomic_flag` obiektu.
 
-*Kolejność* A [memory_order](../standard-library/atomic-enums.md#memory_order_enum).
+*Kolejność*<br/>
+A [memory_order](../standard-library/atomic-enums.md#memory_order_enum).
 
 ## <a name="atomic_flag_test_and_set"></a>  atomic_flag_test_and_set
 
@@ -688,7 +735,8 @@ inline bool atomic_flag_test_and_set(atomic_flag* Flag,) noexcept;
 
 ### <a name="parameters"></a>Parametry
 
-*Flaga* wskaźnik do `atomic_flag` obiektu.
+*Flaga*<br/>
+Wskaźnik do `atomic_flag` obiektu.
 
 ### <a name="return-value"></a>Wartość zwracana
 
@@ -705,9 +753,11 @@ inline bool atomic_flag_test_and_set_explicit(atomic_flag* Flag, memory_order Or
 
 ### <a name="parameters"></a>Parametry
 
-*Flaga* wskaźnik do `atomic_flag` obiektu.
+*Flaga*<br/>
+Wskaźnik do `atomic_flag` obiektu.
 
-*Kolejność* A [memory_order](../standard-library/atomic-enums.md#memory_order_enum).
+*Kolejność*<br/>
+A [memory_order](../standard-library/atomic-enums.md#memory_order_enum).
 
 ### <a name="return-value"></a>Wartość zwracana
 
@@ -726,9 +776,11 @@ inline void atomic_init(atomic<Ty>* Atom, Ty Value) noexcept;
 
 ### <a name="parameters"></a>Parametry
 
-*Atom* wskaźnik do `atomic` obiekt, który przechowuje wartości typu `Ty`.
+*Atom*<br/>
+Wskaźnik do `atomic` obiekt, który przechowuje wartości typu `Ty`.
 
-*Wartość* wartości typu `Ty`.
+*Wartość*<br/>
+Wartości typu `Ty`.
 
 ### <a name="remarks"></a>Uwagi
 
@@ -747,7 +799,8 @@ inline bool atomic_is_lock_free(const atomic<T>* Atom) noexcept;
 
 ### <a name="parameters"></a>Parametry
 
-*Atom* wskaźnik do `atomic` obiekt, który przechowuje wartości typu `T`.
+*Atom*<br/>
+Wskaźnik do `atomic` obiekt, który przechowuje wartości typu `T`.
 
 ### <a name="return-value"></a>Wartość zwracana
 
@@ -770,7 +823,8 @@ inline Ty atomic_load(const atomic<Ty>* Atom) noexcept;
 
 ### <a name="parameters"></a>Parametry
 
-*Atom* wskaźnik do `atomic` obiekt, który zawiera wartości typu `Ty`.
+*Atom*<br/>
+Wskaźnik do `atomic` obiekt, który zawiera wartości typu `Ty`.
 
 ### <a name="return-value"></a>Wartość zwracana
 
@@ -793,9 +847,11 @@ inline Ty atomic_load_explicit(const atomic<Ty>* Atom, memory_order Order) noexc
 
 ### <a name="parameters"></a>Parametry
 
-*Atom* wskaźnik do `atomic` obiekt, który zawiera wartości typu `Ty`.
+*Atom*<br/>
+Wskaźnik do `atomic` obiekt, który zawiera wartości typu `Ty`.
 
-*Kolejność* A [memory_order](../standard-library/atomic-enums.md#memory_order_enum). Nie używaj `memory_order_release` lub `memory_order_acq_rel`.
+*Kolejność*<br/>
+A [memory_order](../standard-library/atomic-enums.md#memory_order_enum). Nie używaj `memory_order_release` lub `memory_order_acq_rel`.
 
 ### <a name="return-value"></a>Wartość zwracana
 
@@ -811,7 +867,8 @@ inline void atomic_signal_fence(memory_order Order) noexcept;
 
 ### <a name="parameters"></a>Parametry
 
-*Kolejność* pamięci ograniczenie, które określa typ ogrodzenia.
+*Kolejność*<br/>
+Pamięć, ograniczenie, które określa typ ogrodzenia.
 
 ### <a name="remarks"></a>Uwagi
 
@@ -839,9 +896,11 @@ inline Ty atomic_store_explicit(const atomic<Ty>* Atom, T Value) noexcept;
 
 ### <a name="parameters"></a>Parametry
 
-*Atom* wskaźnik do obiektu niepodzielnego, który zawiera wartości typu `Ty`.
+*Atom*<br/>
+Wskaźnik do obiektu niepodzielnego, który zawiera wartości typu `Ty`.
 
-*Wartość* wartości typu `Ty`.
+*Wartość*<br/>
+Wartości typu `Ty`.
 
 ### <a name="remarks"></a>Uwagi
 
@@ -867,11 +926,14 @@ inline Ty atomic_store_explicit(
 
 ### <a name="parameters"></a>Parametry
 
-*Atom* wskaźnik do `atomic` obiekt, który zawiera wartości typu `Ty`.
+*Atom*<br/>
+Wskaźnik do `atomic` obiekt, który zawiera wartości typu `Ty`.
 
-*Wartość* wartości typu `Ty`.
+*Wartość*<br/>
+Wartości typu `Ty`.
 
-*Kolejność* A [memory_order](../standard-library/atomic-enums.md#memory_order_enum). Nie używaj `memory_order_consume`, `memory_order_acquire`, lub `memory_order_acq_rel`.
+*Kolejność*<br/>
+A [memory_order](../standard-library/atomic-enums.md#memory_order_enum). Nie używaj `memory_order_consume`, `memory_order_acquire`, lub `memory_order_acq_rel`.
 
 ### <a name="remarks"></a>Uwagi
 
@@ -887,7 +949,8 @@ inline void atomic_thread_fence(memory_order Order) noexcept;
 
 ### <a name="parameters"></a>Parametry
 
-*Kolejność* pamięci ograniczenie, które określa typ ogrodzenia.
+*Kolejność*<br/>
+Pamięć, ograniczenie, które określa typ ogrodzenia.
 
 ### <a name="remarks"></a>Uwagi
 
@@ -913,7 +976,8 @@ Ty kill_dependency(Ty Arg) noexcept;
 
 ### <a name="parameters"></a>Parametry
 
-*ARG* wartości typu `Ty`.
+*ARG*<br/>
+Wartości typu `Ty`.
 
 ### <a name="return-value"></a>Wartość zwracana
 

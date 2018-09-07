@@ -35,16 +35,16 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d000dce4c0009341c787a211ed8ef41d1728b51b
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 63b0950aaea5520849f9a32b2b08ab138cd8099b
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32407775"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44107549"
 ---
 # <a name="unlockfile"></a>_unlock_file
 
-Umożliwia odblokowanie pliku, dzięki czemu inne procesy dostępu do tego pliku.
+Umożliwia odblokowanie pliku, dzięki czemu inne procesy uzyskać dostęp do pliku.
 
 ## <a name="syntax"></a>Składnia
 
@@ -56,11 +56,12 @@ void _unlock_file(
 
 ### <a name="parameters"></a>Parametry
 
-*plik* dojście do pliku.
+*Plik*<br/>
+Dojście do pliku.
 
 ## <a name="remarks"></a>Uwagi
 
-**_Unlock_file —** funkcji powoduje odblokowanie pliku określonego przez *pliku*. Odblokowanie pliku zezwala na dostęp do pliku przez inne procesy. Ta funkcja nie powinna być wywoływana, chyba że **_lock_file —** wcześniej została wywołana w *pliku* wskaźnika. Wywoływanie **_unlock_file —** w pliku, który nie jest zablokowany może doprowadzić do zakleszczenia. Na przykład zobacz [_lock_file —](lock-file.md).
+**_Unlock_file —** funkcji powoduje odblokowanie pliku określonego przez *pliku*. Odblokowanie pliku zezwala na dostęp do pliku przez inne procesy. Ta funkcja nie powinien być wywoływany, chyba że **_lock_file —** był wcześniej nazywany programem na *pliku* wskaźnika. Wywoływanie **_unlock_file —** w pliku, który nie jest zablokowany może doprowadzić do zakleszczenia. Aby uzyskać przykład, zobacz [_lock_file —](lock-file.md).
 
 ## <a name="requirements"></a>Wymagania
 

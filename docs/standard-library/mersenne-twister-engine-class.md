@@ -16,12 +16,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: bb03b35ed792bda7c506fd06d6102dda83c768e6
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: f868a6f2ec63e38573d49a1dc4b3b7a122f4d8f2
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38959274"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44100225"
 ---
 # <a name="mersennetwisterengine-class"></a>mersenne_twister_engine — Klasa
 
@@ -39,23 +39,32 @@ class mersenne_twister_engine;
 
 ### <a name="parameters"></a>Parametry
 
-*UIntType* typ wyniku liczby całkowitej bez znaku. Aby możliwych typów, zobacz [ \<losowy >](../standard-library/random.md).
+*UIntType*<br/>
+Typ wyniku liczby całkowitej bez znaku. Aby możliwych typów, zobacz [ \<losowy >](../standard-library/random.md).
 
-*W* **Word rozmiar**. Rozmiar każdego wyrazu w bitach sekwencji stanu. **Warunek wstępny**: `2u < W ≤ numeric_limits<UIntType>::digits`
+*W*<br/>
+**Word rozmiar**. Rozmiar każdego wyrazu w bitach sekwencji stanu. **Warunek wstępny**: `2u < W ≤ numeric_limits<UIntType>::digits`
 
-*N* **stanu rozmiar**. Liczba elementów (wartości) w sekwencji stanu.
+*N*<br/>
+**Stan: rozmiar**. Liczba elementów (wartości) w sekwencji stanu.
 
-*M* **rozmiaru do przesunięcia**. Liczba elementów do pominięcia podczas każdego akcentem. **Warunek wstępny**: `0 < M ≤ N`
+*M*<br/>
+**Zmiany rozmiaru**. Liczba elementów do pominięcia podczas każdego akcentem. **Warunek wstępny**: `0 < M ≤ N`
 
-*R* **maski bitów**. **Warunek wstępny**: `R ≤ W`
+*R*<br/>
+**Maski bitów**. **Warunek wstępny**: `R ≤ W`
 
-*A* **maska XOR**. **Warunek wstępny**: `A ≤ (1u<<W) - 1u`
+*A*<br/>
+**Maska XOR**. **Warunek wstępny**: `A ≤ (1u<<W) - 1u`
 
-*U*, *S*, *T*, *L* **parametry przesunięcia Tempering**. Używane jako wartości przesunięcia podczas zaszyfrowanie (jej). Warunek wstępny: `U,S,T,L ≤ W`
+*U*, *S*, *T*, *L*<br/>
+**Jej parametry przesunięcia**. Używane jako wartości przesunięcia podczas zaszyfrowanie (jej). Warunek wstępny: `U,S,T,L ≤ W`
 
-*D*, *B*, *C* **Tempering bit maski parametry**. Używane jako wartości maski bitowej podczas zaszyfrowanie (jej). Warunek wstępny: `D,B,C ≤ (1u<<W) - 1u`
+*D*, *B*, *C*<br/>
+**Jej bit maski parametry**. Używane jako wartości maski bitowej podczas zaszyfrowanie (jej). Warunek wstępny: `D,B,C ≤ (1u<<W) - 1u`
 
-*F* **mnożnik inicjowania**. Używane z inicjalizacją sekwencji. Warunek wstępny: `F ≤ (1u<<W) - 1u`
+*F*<br/>
+**Mnożnik inicjowania**. Używane z inicjalizacją sekwencji. Warunek wstępny: `F ≤ (1u<<W) - 1u`
 
 ## <a name="members"></a>Elementy członkowskie
 

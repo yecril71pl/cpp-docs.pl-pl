@@ -16,12 +16,12 @@ helpviewer_keywords:
 - std::inner_product [C++]
 - std::iota [C++]
 - std::partial_sum [C++]
-ms.openlocfilehash: 1060c5c02b0e599de5ca5a39970825fd5622ebf5
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: ae1c3e043d35ba91813fb5288e100610986dbd76
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43199191"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44100186"
 ---
 # <a name="ltnumericgt-functions"></a>&lt;liczbowe&gt; funkcji
 
@@ -48,13 +48,17 @@ Type accumulate(
 
 ### <a name="parameters"></a>Parametry
 
-*pierwszy* iterator danych wejściowych odnoszący się do pierwszego elementu w zakresie sumowane lub scalony według określonej operacji binarnej.
+*pierwszy*<br/>
+Iterator danych wejściowych odnoszący się do pierwszego elementu w zakresie sumowane lub scalony według określonej operacji binarnej.
 
-*ostatni* iterator danych wejściowych odnoszący się do ostatniego elementu w zakresie sumowane lub scalony według określonej operacji binarnej, który jest o jedną pozycję poza ostatnim elementem faktycznie zawierał włączonym w iterowaną akumulację.
+*ostatni*<br/>
+Iterator danych wejściowych odnoszący się do ostatniego elementu w zakresie ma być sumowany lub scalony według określonej operacji binarnej, który jest jedną pozycję poza ostatnim elementem faktycznie włączonym w iterowaną akumulację.
 
-*Val* wartość początkową, do której każdy element z kolei jest dodane lub w połączeniu z według określonej operacji binarnej.
+*Val*<br/>
+Początkowa wartość, do której każdy element z kolei jest dodane lub w połączeniu z według określonej operacji binarnej.
 
-*binary_op* operacja binarna, który ma być stosowana do każdego elementu w określonym zakresie i wynik jego starszymi aplikacjami.
+*binary_op*<br/>
+Operacja binarna, który ma być stosowana do każdego elementu w określonym zakresie i wynik jego starszymi aplikacjami.
 
 ### <a name="return-value"></a>Wartość zwracana
 
@@ -151,16 +155,16 @@ int main( )
 
 ```Output
 The original vector v1 is:
- ( 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 ).
+( 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 ).
 The sum of the integers from 1 to 20 is: 210.
 The vector of partial sums is:
- ( 1 3 6 10 15 21 28 36 45 55 66 78 91 105 120 136 153 171 190 210 ).
+( 1 3 6 10 15 21 28 36 45 55 66 78 91 105 120 136 153 171 190 210 ).
 
 The original vector v3 is:
- ( 1 2 3 4 5 6 7 8 9 10 ).
+( 1 2 3 4 5 6 7 8 9 10 ).
 The product of the integers from 1 to 10 is: 3628800.
 The vector of partial products is:
- ( 1 2 6 24 120 720 5040 40320 362880 3628800 ).
+( 1 2 6 24 120 720 5040 40320 362880 3628800 ).
 ```
 
 ## <a name="adjacent_difference"></a>  adjacent_difference
@@ -184,13 +188,17 @@ OutputIterator adjacent_difference(
 
 ### <a name="parameters"></a>Parametry
 
-*pierwszy* iterator danych wejściowych, odnoszący się do pierwszego elementu zakresu wejściowego, którego elementy mają być zróżnicowane z ich odpowiednimi poprzednikami lub gdzie parze wartości ma być obsługiwany przez żadnego innego określoną operacją binarną.
+*pierwszy*<br/>
+Iterator danych wejściowych odnoszący się do pierwszego elementu z zakresu wejściowego, którego elementy mają być zróżnicowane z ich odpowiednimi poprzednikami lub gdzie na parze wartości ma działać inna określona operacja binarna.
 
-*ostatni* iterator danych wejściowych, odnoszący się do ostatniego elementu z zakresu wejściowego, którego elementy mają być zróżnicowane z ich odpowiednimi poprzednikami lub gdzie parze wartości ma być obsługiwany przez żadnego innego określoną operacją binarną.
+*ostatni*<br/>
+Iterator danych wejściowych odnoszący się do ostatniego elementu z zakresu wejściowego, którego elementy mają być zróżnicowane z ich odpowiednimi poprzednikami lub gdzie na parze wartości ma działać inna określona operacja binarna.
 
-*wynik* iterator danych wyjściowych odnoszący się do pierwszego elementu zakresu docelowego, gdzie ma być przechowywany szereg różnic lub wyniki określonej operacji.
+*wynik*<br/>
+Iterator danych wyjściowych odnoszący się do pierwszego elementu zakresu docelowego, gdzie ma być przechowywany szereg różnic lub wyniki określonej operacji.
 
-*binary_op* operacja binarna, który ma być stosowana w ogólnej operacji zastępującej operację odejmowania w procedurze różnicującej.
+*binary_op*<br/>
+Operacja binarna, który ma być stosowana w ogólnej operacji zastępującej operację odejmowania w procedurze różnicującej.
 
 ### <a name="return-value"></a>Wartość zwracana
 
@@ -291,17 +299,23 @@ Type inner_product(
 
 ### <a name="parameters"></a>Parametry
 
-*first1* iterator danych wejściowych, odnoszący się do pierwszego elementu w zakresie pierwszego którego wewnętrzna produktem, czy uogólnionego wewnętrzny z drugiego zakresu jest ma zostać obliczony.
+*first1*<br/>
+Iterator danych wejściowych, odnoszący się do pierwszego elementu w zakresie pierwszego którego wewnętrzna produktem, czy uogólnionego wewnętrzny z drugiego zakresu jest ma zostać obliczony.
 
-*Nazwisko1* iterator danych wejściowych, odnoszący się do ostatniego elementu w zakresie pierwszego którego wewnętrzna produktem, czy uogólnionego wewnętrzny z drugiego zakresu jest ma zostać obliczony.
+*Nazwisko1*<br/>
+Iterator danych wejściowych, odnoszący się do ostatniego elementu w zakresie pierwszego którego wewnętrzna produktem, czy uogólnionego wewnętrzny z drugiego zakresu jest ma zostać obliczony.
 
-*first2* iterator danych wejściowych, odnoszący się do pierwszego elementu w drugim zakresu którego produktu wewnętrzny lub uogólnionego produktu wewnętrzny z pierwszego zakresu jest ma zostać obliczony.
+*first2*<br/>
+Iterator danych wejściowych, odnoszący się do pierwszego elementu w drugiego zakresu, w których wewnętrzna produktem, czy uogólnionego wewnętrzny z pierwszego zakresu jest ma zostać obliczony.
 
-*Val* wartość początkową, do którego ma zostać dodany produkt wewnętrzny lub uogólnionego produktu wewnętrzny między zakresów.
+*Val*<br/>
+Wartość początkowa, do którego ma zostać dodany produkt wewnętrzny lub uogólnionego produktu wewnętrzny między zakresów.
 
-*binary_op1* operacja binarna, który zastępuje operacja produktu wewnętrzny sumy w stosunku do element-wise produktów w generalizacji produktu wewnętrzny.
+*binary_op1*<br/>
+Operacja binarna, który zastępuje operacja produktu wewnętrzny sumy w stosunku do element-wise produktów w generalizacji produktu wewnętrzny.
 
-*binary_op2* operacja binarna, który zastępuje produktu wewnętrzny element-wise działanie wielokrotnie w generalizacji produktu wewnętrzny.
+*binary_op2*<br/>
+Operacja binarna, który zastępuje produktu wewnętrzny element-wise działanie, należy pomnożyć w generalizacji produktu wewnętrzny.
 
 ### <a name="return-value"></a>Wartość zwracana
 
@@ -422,11 +436,14 @@ void iota(ForwardIterator first, ForwardIterator last, Type value);
 
 ### <a name="parameters"></a>Parametry
 
-*pierwszy* iterator danych wejściowych, odnoszący się do pierwszego elementu w zakresie, który ma zostać wypełniony.
+*pierwszy*<br/>
+Iterator danych wejściowych, odnoszący się do pierwszego elementu w zakresie, który ma zostać wypełniony.
 
-*ostatni* iterator danych wejściowych, odnoszący się do ostatniego elementu w zakresie, który ma zostać wypełniony.
+*ostatni*<br/>
+Iterator danych wejściowych, odnoszący się do ostatniego elementu w zakresie, który ma zostać wypełniony.
 
-*wartość* wartości początkowej do przechowywania w pierwszym elemencie i kolejno przyrostu dla kolejnych elementów.
+*value*<br/>
+Wartość początkową do przechowywania w pierwszym elemencie i kolejno przyrostu dla kolejnych elementów.
 
 ### <a name="remarks"></a>Uwagi
 
@@ -493,13 +510,17 @@ OutputIterator partial_sum(
 
 ### <a name="parameters"></a>Parametry
 
-*pierwszy* iterator danych wejściowych odnoszący się do pierwszego elementu w zakresie ma być częściowo sumowany lub scalony według określonej operacji binarnej.
+*pierwszy*<br/>
+Iterator danych wejściowych odnoszący się do pierwszego elementu w zakresie, który ma być częściowo sumowany lub scalony według określonej operacji binarnej.
 
-*ostatni* iterator danych wejściowych odnoszący się do ostatniego elementu w zakresie ma być częściowo sumowany lub scalony według określonej operacji binarnej, który jest o jedną pozycję poza ostatnim elementem faktycznie zawierał włączonym w iterowaną akumulację.
+*ostatni*<br/>
+Iterator danych wejściowych odnoszący się do ostatniego elementu w zakresie, który ma być częściowo sumowany lub scalony według określonej operacji binarnej, znajdujący się o jedną pozycję poza ostatnim elementem faktycznie włączonym w iterowaną akumulację.
 
-*wynik* iterator danych wyjściowych odnoszący się do pierwszego elementu zakresu docelowego, gdzie ma być przechowywany szereg częściowych sum lub wyniki określonej operacji.
+*wynik*<br/>
+Iterator danych wyjściowych odnoszący się do pierwszego elementu zakresu docelowego, gdzie ma być przechowywany szereg częściowych sum lub wyniki określonej operacji.
 
-*binary_op* operacja binarna, który ma być stosowana w ogólnej operacji zastępującej operację sumowania w procedurze częściowej sumy.
+*binary_op*<br/>
+Operacja binarna, który ma być stosowana w ogólnej operacji zastępującej operację sumowania w procedurze częściowej sumy.
 
 ### <a name="return-value"></a>Wartość zwracana
 

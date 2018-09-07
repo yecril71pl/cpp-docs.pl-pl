@@ -1,5 +1,5 @@
 ---
-title: -doc (przetwarzanie komentarzy dokumentacji) (C/C++) | Dokumentacja firmy Microsoft
+title: -doc (Przetwarzaj komentarze dokumentacji) (C/C++) | Dokumentacja firmy Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -21,49 +21,46 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 899ff6b774c365ce9df3019ef5ba6d08d0d7b93d
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: ee09b3fe61c86015d8dc7464ef9925419fc745d9
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32371284"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44100343"
 ---
 # <a name="doc-process-documentation-comments-cc"></a>/doc (Przetwarzaj komentarze dokumentacji) (C/C++)
-Powoduje, że kompilator przetwarzanie komentarzy dokumentacji w plików kodu źródłowego oraz do tworzenia pliku .xdc dla każdego pliku źródła kodu, który ma komentarzy do dokumentacji.  
-  
-## <a name="syntax"></a>Składnia  
-  
-```  
-/doc[name]  
-```  
-  
-## <a name="arguments"></a>Argumenty  
- `name`  
- Nazwa pliku .xdc, który zostanie utworzony przez kompilator. Prawidłowy tylko wtedy, gdy jeden plik .cpp jest przekazywany w kompilacji.  
-  
-## <a name="remarks"></a>Uwagi  
- W pliku XML z xdcmake.exe przetwarzania plików xdc. Aby uzyskać więcej informacji, zobacz [xdcmake — odwołanie](../../ide/xdcmake-reference.md).  
-  
- Komentarze dokumentacji można dodawać do plików kodu źródłowego. Aby uzyskać więcej informacji, zobacz [tagi zalecane dla komentarzy do dokumentacji](../../ide/recommended-tags-for-documentation-comments-visual-cpp.md).  
-  
- Plik XML wygenerowanych za pomocą funkcji IntelliSense, aby nazwa pliku jest taka sama jak zestawu, który chcesz obsługiwać i umieścić plik XML w tym samym katalogu co zestaw pliku XML. W przypadku zestawu odwołuje się projekt programu Visual Studio, znajduje się także plik XML. Aby uzyskać więcej informacji, zobacz [za pomocą funkcji IntelliSense](/visualstudio/ide/using-intellisense) i [dostarczanie komentarze w kodzie XML](/visualstudio/ide/supplying-xml-code-comments).  
-  
-### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Aby ustawić tę opcję kompilatora w środowisku programowania Visual Studio  
-  
-1.  Otwórz projekt **strony właściwości** okno dialogowe. Aby uzyskać więcej informacji, zobacz [Praca z właściwościami projektu](../../ide/working-with-project-properties.md).  
-  
-2.  Rozwiń węzeł **właściwości konfiguracji** węzła.  
-  
-3.  Rozwiń węzeł **C/C++** węzła.  
-  
-4.  Wybierz **pliki wyjściowe** strony właściwości.  
-  
-5.  Modyfikowanie **generować pliki dokumentacji XML** właściwości.  
-  
-### <a name="to-set-this-linker-option-programmatically"></a>Aby programowo ustawić tę opcję konsolidatora  
-  
-1.  Zobacz <xref:Microsoft.VisualStudio.VCProjectEngine.VCCLCompilerTool.GenerateXMLDocumentationFiles%2A>.  
-  
-## <a name="see-also"></a>Zobacz też  
- [Opcje kompilatora](../../build/reference/compiler-options.md)   
- [Ustawianie opcji kompilatora](../../build/reference/setting-compiler-options.md)
+Powoduje, że kompilator Przetwarzaj komentarze dokumentacji w plikach kodu źródłowego i Utwórz plik .xdc dla każdego pliku kodu źródłowego, który ma komentarze dokumentacji.
+
+## <a name="syntax"></a>Składnia
+
+> **/ doc**[*nazwa*]
+
+## <a name="arguments"></a>Argumenty
+
+*Nazwa*<br/>
+Nazwa pliku .xdc, który zostanie utworzony przez kompilator. Prawidłowy tylko w przypadku jeden plik .cpp jest przekazywany w kompilacji.
+
+## <a name="remarks"></a>Uwagi
+
+W plikach xdc są przetwarzane w pliku XML z xdcmake.exe. Aby uzyskać więcej informacji, zobacz [xdcmake — dokumentacja](../../ide/xdcmake-reference.md).
+
+Możesz dodać komentarze dokumentacji do plików kodu źródłowego. Aby uzyskać więcej informacji, zobacz [tagi zalecane dla komentarzy do dokumentacji](../../ide/recommended-tags-for-documentation-comments-visual-cpp.md).
+
+Plik XML wygenerowany za pomocą funkcji IntelliSense, wprowadzić nazwę pliku w pliku XML, który jest taki sam jak zestaw, który chcesz obsługiwać i umieścić ten plik XML w tym samym katalogu co zestaw. W przypadku zestawu odwołuje się do projektu programu Visual Studio, znajduje się także plik XML. Aby uzyskać więcej informacji, zobacz [za pomocą funkcji IntelliSense](/visualstudio/ide/using-intellisense) i [podawania komentarzy kodu XML](/visualstudio/ide/supplying-xml-code-comments).
+
+### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Aby ustawić tę opcję kompilatora w środowisku programowania Visual Studio
+
+1.  Otwórz projekt **stron właściwości** okno dialogowe. Aby uzyskać więcej informacji, zobacz [Praca z właściwościami projektu](../../ide/working-with-project-properties.md).
+
+1. Wybierz **właściwości konfiguracji** > **C/C++** > **pliki wyjściowe** stronę właściwości.
+
+1. Modyfikowanie **Generuj pliki dokumentacji XML** właściwości.
+
+### <a name="to-set-this-linker-option-programmatically"></a>Aby programowo ustawić tę opcję konsolidatora
+
+- Zobacz <xref:Microsoft.VisualStudio.VCProjectEngine.VCCLCompilerTool.GenerateXMLDocumentationFiles%2A>.
+
+## <a name="see-also"></a>Zobacz też
+
+[Opcje kompilatora](../../build/reference/compiler-options.md)   
+[Ustawianie opcji kompilatora](../../build/reference/setting-compiler-options.md)

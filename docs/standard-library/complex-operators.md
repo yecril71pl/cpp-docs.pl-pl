@@ -19,12 +19,12 @@ helpviewer_keywords:
 - std::operator!= (complex)
 - std::operator&gt;&gt; (complex)
 - std::operator&lt;&lt; (complex), std::operator== (complex)
-ms.openlocfilehash: 2491cb859de8908bbe0710f03d12f836bbd80e2f
-ms.sourcegitcommit: 7eadb968405bcb92ffa505e3ad8ac73483e59685
+ms.openlocfilehash: de26779c569326f46794ba76b7b886f994cd8b11
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/23/2018
-ms.locfileid: "39208679"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44110197"
 ---
 # <a name="ltcomplexgt-operators"></a>&lt;złożone&gt; operatorów
 
@@ -58,9 +58,11 @@ bool operator!=(
 
 ### <a name="parameters"></a>Parametry
 
-*po lewej stronie* liczby zespolonej lub obiektu typu parametru ma zostać przetestowana pod kątem nierówności.
+*left*<br/>
+Liczby zespolonej lub obiektu typu parametru ma zostać przetestowana pod kątem nierówności.
 
-*prawy* liczby zespolonej lub obiektu typu parametru ma zostać przetestowana pod kątem nierówności.
+*right*<br/>
+Liczby zespolonej lub obiektu typu parametru ma zostać przetestowana pod kątem nierówności.
 
 ### <a name="return-value"></a>Wartość zwracana
 
@@ -196,9 +198,11 @@ complex<Type> operator*(
 
 ### <a name="parameters"></a>Parametry
 
-*po lewej stronie* pierwsza z dwóch liczb zespolonych lub liczbą, która jest typu parametru dla liczby zespolonej, który ma zostać pomnożona przez \* operacji.
+*left*<br/>
+Pierwsza z dwóch liczb zespolonych lub liczbą, która jest typu parametru dla liczby zespolonej, który ma zostać pomnożona przez \* operacji.
 
-*prawy* drugi z dwóch liczb zespolonych lub liczbą, która jest typu parametru dla liczby zespolonej, który ma zostać pomnożona przez \* operacji.
+*right*<br/>
+Druga dwóch liczb zespolonych lub liczbą, która jest typu parametru dla liczby zespolonej, który ma zostać pomnożona przez \* operacji.
 
 ### <a name="return-value"></a>Wartość zwracana
 
@@ -295,9 +299,11 @@ complex<Type> operator+(const complex<Type>& left);
 
 ### <a name="parameters"></a>Parametry
 
-*po lewej stronie* pierwsza z dwóch liczb zespolonych lub liczbą, która jest typu parametru dla liczby zespolonej, który ma zostać dodany przez + operacji.
+*left*<br/>
+Pierwsza z dwóch liczb zespolonych lub liczbą, która jest typu parametru dla liczby zespolonej, który ma zostać dodany przez + operacji.
 
-*prawy* drugi z dwóch liczb zespolonych lub liczbą, która jest typu parametru dla liczby zespolonej, który ma zostać dodany przez + operacji.
+*right*<br/>
+Druga dwóch liczb zespolonych lub liczbą, która jest typu parametru dla liczby zespolonej, który ma zostać dodany przez + operacji.
 
 ### <a name="return-value"></a>Wartość zwracana
 
@@ -402,7 +408,7 @@ The argument of cs3 is: 0.463648 radians, which is 26.5651 degrees.
 
 The right-side complex number is cr4 = (3,4)
 The result of the unary application of + to the right-side
- complex number is: cs4 = (3,4)
+complex number is: cs4 = (3,4)
 The modulus of cs4 is: 5
 The argument of cs4 is: 0.927295 radians, which is 53.1301 degrees.
 ```
@@ -433,9 +439,11 @@ complex<Type> operator-(const complex<Type>& left);
 
 ### <a name="parameters"></a>Parametry
 
-*po lewej stronie* pierwsza z dwóch liczb zespolonych lub liczbą, która jest typu parametru dla liczby zespolonej do odjęcia — operacja.
+*left*<br/>
+Pierwsza z dwóch liczb zespolonych lub liczbą, która jest typu parametru dla liczby zespolonej do odjęcia — operacja.
 
-*prawy* drugi z dwóch liczb zespolonych lub liczbą, która jest typu parametru dla liczby zespolonej do odjęcia — operacja.
+*right*<br/>
+Drugi z dwóch liczb zespolonych lub liczbą, która jest typu parametru dla liczby zespolonej do odjęcia — operacja.
 
 ### <a name="return-value"></a>Wartość zwracana
 
@@ -542,7 +550,7 @@ The argument of cs3 is: -1.10715 radians, which is -63.4349 degrees.
 
 The right-side complex number is cr4 = (3,4)
 The result of the unary application of - to the right-side
- complex number is: cs4 = (-3,-4)
+complex number is: cs4 = (-3,-4)
 The modulus of cs4 is: 5
 The argument of cs4 is: -2.2143 radians, which is -126.87 degrees.
 ```
@@ -570,9 +578,11 @@ complex<Type> operator*(
 
 ### <a name="parameters"></a>Parametry
 
-*po lewej stronie* liczbą lub liczbą, która jest typu parametru dla liczby zespolonej, który jest licznikiem podzielenia przez dzielnik z / operacji.
+*left*<br/>
+Liczbą lub liczbą, która jest typu parametru dla liczby zespolonej, który jest licznikiem podzielenia przez dzielnik z / operacji.
 
-*prawy* liczbą lub liczbą, która jest typu parametru dla numeru złożone, który jest mianownikiem ma być używany do dzielenia licznik z / operacji.
+*right*<br/>
+Liczbą lub liczbą, która jest typu parametru dla numeru złożone, który jest mianownikiem ma być używany do dzielenia licznik z / operacji.
 
 ### <a name="return-value"></a>Wartość zwracana
 
@@ -678,9 +688,11 @@ basic_ostream<Elem, Traits>& operator<<(
 
 ### <a name="parameters"></a>Parametry
 
-*OSTR* strumienia wyjściowego, w którym jest wprowadzana liczby zespolonej.
+*Ostr*<br/>
+Strumień wyjściowy, w którym jest wprowadzana liczby zespolonej.
 
-*prawy* liczby zespolonej wprowadzonych do strumienia wyjściowego.
+*right*<br/>
+Liczby zespolonej wprowadzonych do strumienia wyjściowego.
 
 ### <a name="return-value"></a>Wartość zwracana
 
@@ -749,9 +761,11 @@ bool operator==(
 
 ### <a name="parameters"></a>Parametry
 
-*po lewej stronie* liczby zespolonej lub obiektu typu parametru ma zostać przetestowana pod kątem nierówności.
+*left*<br/>
+Liczby zespolonej lub obiektu typu parametru ma zostać przetestowana pod kątem nierówności.
 
-*prawy* liczby zespolonej lub obiektu typu parametru ma zostać przetestowana pod kątem nierówności.
+*right*<br/>
+Liczby zespolonej lub obiektu typu parametru ma zostać przetestowana pod kątem nierówności.
 
 ### <a name="return-value"></a>Wartość zwracana
 
@@ -877,9 +891,11 @@ basic_istream<Elem, Traits>& operator>>(
 
 ### <a name="parameters"></a>Parametry
 
-*Istr* strumienia wejściowego, z której jest wyodrębniany liczby zespolonej.
+*Istr*<br/>
+Strumień wejściowy, z której jest wyodrębniany liczby zespolonej.
 
-*prawy* liczby zespolonej, wyodrębniona ze strumienia wejściowego.
+*right*<br/>
+Liczby zespolonej wyodrębniona ze strumienia wejściowego.
 
 ### <a name="return-value"></a>Wartość zwracana
 

@@ -44,12 +44,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4250a2b13740b5aa71ca10300a90560ed615f68e
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 51dc841efa3e9f64a106002945c07ce10bcf7565
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43200031"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44102619"
 ---
 # <a name="basicistream-class"></a>basic_istream — Klasa
 
@@ -193,11 +193,14 @@ basic_istream(basic_istream&& right);
 
 ### <a name="parameters"></a>Parametry
 
-*strbuf* obiektu typu [basic_streambuf](../standard-library/basic-streambuf-class.md).
+*strbuf*<br/>
+Obiekt typu [basic_streambuf](../standard-library/basic-streambuf-class.md).
 
-*_Isstd* **true** Jeśli jest to Standardowy strumień; w przeciwnym razie **false**.
+*_Isstd*<br/>
+**wartość true,** Jeśli jest to Standardowy strumień; w przeciwnym razie **false**.
 
-*prawy* A `basic_istream` obiektu do skopiowania.
+*right*<br/>
+Element `basic_istream` obiektu do skopiowania.
 
 ### <a name="remarks"></a>Uwagi
 
@@ -277,15 +280,20 @@ basic_istream<Elem, Tr>& get(basic_streambuf<Elem, Tr>& strbuf, Elem Delim);
 
 ### <a name="parameters"></a>Parametry
 
-*Liczba* liczba znaków do odczytu z `strbuf`.
+*Liczba*<br/>
+Liczba znaków do odczytu z `strbuf`.
 
-*Delim* znak, który powinien wygasają odczytu, jeśli zostanie osiągnięty zanim *liczba*.
+*Delim*<br/>
+Znak, który powinien wygasają odczytu, jeśli zostanie osiągnięty zanim *liczba*.
 
-*str* ciąg, w którym mają zostać zapisane.
+*str*<br/>
+Ciąg, w którym mają zostać zapisane.
 
-*Ch* znaku można pobrać.
+*ch*<br/>
+Znak można pobrać.
 
-*strbuf* buforu, w którym mają zostać zapisane.
+*strbuf*<br/>
+Bufor, w którym mają zostać zapisane.
 
 ### <a name="return-value"></a>Wartość zwracana
 
@@ -356,11 +364,14 @@ basic_istream<Elem, Tr>& getline(
 
 ### <a name="parameters"></a>Parametry
 
-*Liczba* liczba znaków do odczytu z `strbuf`.
+*Liczba*<br/>
+Liczba znaków do odczytu z `strbuf`.
 
-*Delim* znak, który powinien wygasają odczytu, jeśli zostanie osiągnięty zanim *liczba*.
+*Delim*<br/>
+Znak, który powinien wygasają odczytu, jeśli zostanie osiągnięty zanim *liczba*.
 
-*str* ciąg, w którym mają zostać zapisane.
+*str*<br/>
+Ciąg, w którym mają zostać zapisane.
 
 ### <a name="return-value"></a>Wartość zwracana
 
@@ -414,9 +425,11 @@ basic_istream<Elem, Tr>& ignore(
 
 ### <a name="parameters"></a>Parametry
 
-*Liczba* liczba elementów do pominięcia z bieżącej pozycja odczytu.
+*Liczba*<br/>
+Liczba elementów do pominięcia z bieżącą pozycję odczytu.
 
-*Delim* element, który, jeśli osiągnięty zanim liczba, powoduje, że `ignore` do zwrócenia, dzięki czemu wszystkie elementy po *Delim* do odczytu.
+*Delim*<br/>
+Element, który, jeśli osiągnięty zanim liczba, powoduje, że `ignore` do zwrócenia, dzięki czemu wszystkie elementy po *Delim* do odczytu.
 
 ### <a name="return-value"></a>Wartość zwracana
 
@@ -474,11 +487,14 @@ basic_istream& operator>>(long double& val);
 
 ### <a name="parameters"></a>Parametry
 
-*Nazwy Pfn* wskaźnika funkcji.
+*nazwy pfn*<br/>
+Wskaźnik funkcji.
 
-*strbuf* obiektu typu `stream_buf`.
+*strbuf*<br/>
+Obiekt typu `stream_buf`.
 
-*Val* wartości, które można odczytać ze strumienia.
+*Val*<br/>
+Wartość do odczytania ze strumienia.
 
 ### <a name="return-value"></a>Wartość zwracana
 
@@ -584,7 +600,8 @@ basic_istream& operator=(basic_istream&& right);
 
 ### <a name="parameters"></a>Parametry
 
-*prawy* `rvalue` odwołanie do `basic_ifstream` obiektu.
+*right*<br/>
+`rvalue` Odwołanie do `basic_ifstream` obiektu.
 
 ### <a name="return-value"></a>Wartość zwracana
 
@@ -653,7 +670,8 @@ basic_istream<Elem, Tr>& putback(
 
 ### <a name="parameters"></a>Parametry
 
-*Ch* znak zostać umieszczona w strumieniu.
+*ch*<br/>
+Znak zostać umieszczona w strumieniu.
 
 ### <a name="return-value"></a>Wartość zwracana
 
@@ -702,9 +720,11 @@ basic_istream<Elem, Tr>& read(
 
 ### <a name="parameters"></a>Parametry
 
-*str* tablicy, w której mają zostać odczytane znaków.
+*str*<br/>
+Tablica, w której mają zostać odczytane znaków.
 
-*Liczba* liczba znaków do odczytania.
+*Liczba*<br/>
+Liczba znaków do odczytania.
 
 ### <a name="return-value"></a>Wartość zwracana
 
@@ -764,9 +784,11 @@ streamsize readsome(
 
 ### <a name="parameters"></a>Parametry
 
-*str* tablicy, w którym `readsome` znaki odczytuje są przechowywane.
+*str*<br/>
+Tablica, w którym `readsome` znaki odczytuje są przechowywane.
 
-*Liczba* liczba znaków do odczytania.
+*Liczba*<br/>
+Liczba znaków do odczytania.
 
 ### <a name="return-value"></a>Wartość zwracana
 
@@ -819,11 +841,14 @@ basic_istream<Elem, Tr>& seekg(off_type off, ios_base::seekdir way);
 
 ### <a name="parameters"></a>Parametry
 
-*POS* położenie bezwzględne, w której chcesz przenieść wskaźnik odczytu.
+*punktu sprzedaży*<br/>
+Położenie bezwzględne, w której chcesz przenieść wskaźnik odczytu.
 
-*Wyłącz* przesunięcia wskaźnika odczytu względem *sposób*.
+*Wyłączone*<br/>
+Przesunięcie do przesuwania wskaźnika odczytu względem *sposób*.
 
-*sposób* jednego z [ios_base::seekdir](../standard-library/ios-base-class.md#seekdir) wyliczenia.
+*sposób*<br/>
+Jedną z [ios_base::seekdir](../standard-library/ios-base-class.md#seekdir) wyliczenia.
 
 ### <a name="return-value"></a>Wartość zwracana
 
@@ -887,7 +912,8 @@ void swap(basic_istream& right);
 
 ### <a name="parameters"></a>Parametry
 
-*prawy* odwołania wartościowanego lewostronnie do `basic_istream` obiektu.
+*right*<br/>
+Odwołania wartościowanego lewostronnie do `basic_istream` obiektu.
 
 ### <a name="remarks"></a>Uwagi
 

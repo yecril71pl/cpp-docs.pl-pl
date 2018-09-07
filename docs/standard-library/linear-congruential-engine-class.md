@@ -16,12 +16,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d4069dc5151dd231773e926aadf17de7c03d3770
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: a3b5ed9880a29e0738f67ca30695ea87c81de6b7
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38958282"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44110217"
 ---
 # <a name="linearcongruentialengine-class"></a>linear_congruential_engine — Klasa
 
@@ -55,13 +55,17 @@ class linear_congruential_engine{
 
 ### <a name="parameters"></a>Parametry
 
-*UIntType* typ wyniku liczby całkowitej bez znaku. Aby możliwych typów, zobacz [ \<losowy >](../standard-library/random.md).
+*UIntType*<br/>
+Typ wyniku liczby całkowitej bez znaku. Aby możliwych typów, zobacz [ \<losowy >](../standard-library/random.md).
 
-*A* **mnożnik**. **Warunek wstępny**: sekcję Zobacz uwagi.
+*A*<br/>
+**Mnożnik**. **Warunek wstępny**: sekcję Zobacz uwagi.
 
-*C* **przyrostu**. **Warunek wstępny**: sekcję Zobacz uwagi.
+*C*<br/>
+**Inkrementacja**. **Warunek wstępny**: sekcję Zobacz uwagi.
 
-*M* **modulo**. **Warunek wstępny**: Zobacz uwagi.
+*M*<br/>
+**Modulo**. **Warunek wstępny**: Zobacz uwagi.
 
 ## <a name="members"></a>Elementy członkowskie
 

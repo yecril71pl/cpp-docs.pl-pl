@@ -29,12 +29,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: aeaed487db1063efd14dddbca28480a169b13522
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 36fe82bc5d17cd3c4951b008af28ba89b171c78f
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43761114"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44103935"
 ---
 # <a name="platformcollectionsvector-class"></a>Platform::Collections:: Vector, klasa
 
@@ -49,10 +49,10 @@ template <typename T, typename E>
 
 ### <a name="parameters"></a>Parametry
 
-*T*  
+*T*<br/>
 Typ elementów znajdujących się w obiektu wektora.
 
-*E*  
+*E*<br/>
 Określa binarny predykat równości z wartościami typu testowania *T*. Wartość domyślna to `std::equal_to<T>`.
 
 ### <a name="remarks"></a>Uwagi
@@ -128,7 +128,7 @@ virtual void Append(T item);
 
 ### <a name="parameters"></a>Parametry
 
-*index*  
+*index*<br/>
 Element do wstawienia do wektora. Typ *elementu* jest definiowany przez *T* typename.
 
 ## <a name="clear"></a>  Vector::Clear — metoda
@@ -173,7 +173,7 @@ virtual T GetAt(unsigned int index);
 
 ### <a name="parameters"></a>Parametry
 
-*index*  
+*index*<br/>
 Liczony od zera, nieoznaczona liczba całkowita określająca konkretnego elementu w obiekcie wektora.
 
 ### <a name="return-value"></a>Wartość zwracana
@@ -194,10 +194,10 @@ virtual unsigned int GetMany(
 
 ### <a name="parameters"></a>Parametry
 
-*startIndex*  
+*startIndex*<br/>
 Liczony od zera indeks początku elementów do pobrania.
 
-*dest*  
+*dest*<br/>
 Tablica przydzielana przez obiekt wywołujący elementów, które zaczynają się na określony przez element *startIndex* i końcowy z ostatniego elementu w wektorze.
 
 ### <a name="return-value"></a>Wartość zwracana
@@ -234,10 +234,10 @@ virtual bool IndexOf(T value, unsigned int* index);
 
 ### <a name="parameters"></a>Parametry
 
-*value*  
+*value*<br/>
 Element do znalezienia.
 
-*index*  
+*index*<br/>
 Liczony od zera indeks elementu Jeśli parametr *wartość* jest; w przeciwnym razie 0.
 
 *Indeksu* parametru to 0, jeśli element jest pierwszy element wektora lub element nie został znaleziony. Jeśli wartość zwracana jest `true`, element został odnaleziony i jest pierwszy element; w przeciwnym razie nie znaleziono elementu.
@@ -262,10 +262,10 @@ virtual void InsertAt(unsigned int index, T item)
 
 ### <a name="parameters"></a>Parametry
 
-*index*  
+*index*<br/>
 Liczony od zera, nieoznaczona liczba całkowita określająca konkretnego elementu w obiekcie wektora.
 
-*item*  
+*item*<br/>
 Element do wstawienia do wektora po określony przez element *indeksu*. Typ *elementu* jest definiowany przez *T* typename.
 
 ## <a name="removeat"></a>  Metoda Vector::RemoveAt
@@ -280,7 +280,7 @@ virtual void RemoveAt(unsigned int index);
 
 ### <a name="parameters"></a>Parametry
 
-*index*  
+*index*<br/>
 Liczony od zera, nieoznaczona liczba całkowita określająca konkretnego elementu w obiekcie wektora.
 
 ## <a name="removeatend"></a>  Metoda Vector::RemoveAtEnd
@@ -305,7 +305,7 @@ virtual void ReplaceAll(const ::Platform::Array<T>^ arr);
 
 ### <a name="parameters"></a>Parametry
 
-*Moduł ARR*  
+*Moduł ARR*<br/>
 Użyj tablicy obiektów o tym, którego typ jest zdefiniowany przez *T* typename.
 
 ## <a name="setat"></a>  Metoda Vector::SetAt
@@ -320,10 +320,10 @@ virtual void SetAt(unsigned int index, T item);
 
 ### <a name="parameters"></a>Parametry
 
-*index*  
+*index*<br/>
 Liczony od zera, nieoznaczona liczba całkowita określająca konkretnego elementu w obiekcie wektora.
 
-*item*  
+*item*<br/>
 Wartość do przypisania do określonego elementu. Typ *elementu* jest definiowany przez *T* typename.
 
 ## <a name="size"></a>  Vector::size — metoda
@@ -365,40 +365,40 @@ Vector(std::initializer_list<T> il);
 
 ### <a name="parameters"></a>Parametry
 
-*a*  
+*a*<br/>
 A [std::array](../standard-library/array-class-stl.md) posłuży inicjują wektor.
 
-*Moduł ARR*  
+*Moduł ARR*<br/>
 A [Platform::Array](../cppcx/platform-array-class.md) posłuży inicjują wektor.
 
-*InIt*  
+*InIt*<br/>
 Typ kolekcji obiektów służy do inicjowania bieżącego wektora.
 
-*il*  
+*il*<br/>
 A [std::initializer_list](../standard-library/initializer-list-class.md) obiektów typu *T* posłuży inicjują wektor.
 
-*N*  
+*N*<br/>
 Liczba elementów w kolekcji obiektów, które służy do inicjowania bieżącego wektora.
 
-*Rozmiar*  
+*Rozmiar*<br/>
 Liczba elementów w wektorze.
 
-*value*  
+*value*<br/>
 Wartość, która służy do inicjowania każdego elementu w bieżącym wektora.
 
-*v*  
+*v*<br/>
 [Lvalues i Rvalues](../cpp/lvalues-and-rvalues-visual-cpp.md) do [std::vector](../standard-library/vector-class.md) umożliwiający inicjują wektor bieżącego.
 
-*ptr*  
+*ptr*<br/>
 Wskaźnik do `std::vector` umożliwiający inicjują wektor bieżącego.
 
-*pierwszy*  
+*pierwszy*<br/>
 Pierwszy element w sekwencji obiektów, które są stosowane do inicjalizacji bieżącego wektora. Typ *pierwszy* jest przekazywany przez *doskonała przekazywania*. Aby uzyskać więcej informacji, zobacz [Rvalue Reference Declarator: & &](../cpp/rvalue-reference-declarator-amp-amp.md).
 
-*ostatni*  
+*ostatni*<br/>
 Ostatniego elementu w sekwencji obiektów, które są stosowane do inicjalizacji bieżącego wektora. Typ *ostatniego* jest przekazywany przez *doskonała przekazywania*. Aby uzyskać więcej informacji, zobacz [Rvalue Reference Declarator: & &](../cpp/rvalue-reference-declarator-amp-amp.md).
 
 ## <a name="see-also"></a>Zobacz też
 
-[Namespace platformy](platform-namespace-c-cx.md)  
-[Tworzenie składników środowiska wykonawczego Windows w języku C++](/windows/uwp/winrt-components/creating-windows-runtime-components-in-cpp)  
+[Namespace platformy](platform-namespace-c-cx.md)<br/>
+[Tworzenie składników środowiska wykonawczego Windows w języku C++](/windows/uwp/winrt-components/creating-windows-runtime-components-in-cpp)

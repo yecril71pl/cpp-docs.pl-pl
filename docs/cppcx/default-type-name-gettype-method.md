@@ -13,34 +13,37 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 915b2e0c15d3afb3f040b59c22b2de40af2aabb5
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 6f849b18e761fed4daf2c4a336a984242008bfd7
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43761771"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44105188"
 ---
 # <a name="defaulttypenamegettype-method"></a>domyślne:: (type_name):: gettype — metoda
-Zwraca Platform::Type ^ reprezentujący bieżącego typu.  
-  
-## <a name="syntax"></a>Składnia  
-  
-```cpp  
-  
-Platform::Type^ GetType()  
-```  
-  
-### <a name="return-value"></a>Wartość zwracana  
- A [Platform::Type](../cppcx/platform-type-class.md)^ obiekt, który reprezentuje bieżący obiekt.  
-  
-### <a name="requirements"></a>Wymagania  
- **Minimalna obsługiwana klienta:** systemu Windows 8  
-  
- **Minimalna obsługiwana serwera:** systemu Windows Server 2012  
-  
- **Namespace:** domyślne  
-  
- **Nagłówek:** vccorlib.h  
-  
-## <a name="see-also"></a>Zobacz też  
- [domyślna przestrzeń nazw](../cppcx/default-namespace.md)
+
+Zwraca Platform::Type ^ reprezentujący bieżącego typu.
+
+## <a name="syntax"></a>Składnia
+
+```cpp
+Platform::Type^ GetType();
+```
+
+### <a name="return-value"></a>Wartość zwracana
+
+A [Platform::Type](../cppcx/platform-type-class.md)^ obiekt, który reprezentuje bieżący obiekt.
+
+### <a name="requirements"></a>Wymagania
+
+**Minimalna obsługiwana klienta:** systemu Windows 8
+
+**Minimalna obsługiwana serwera:** systemu Windows Server 2012
+
+**Namespace:** domyślne
+
+**Nagłówek:** vccorlib.h
+
+## <a name="see-also"></a>Zobacz też
+
+[domyślna przestrzeń nazw](../cppcx/default-namespace.md)

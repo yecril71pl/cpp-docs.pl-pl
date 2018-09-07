@@ -30,12 +30,12 @@ helpviewer_keywords:
 - std::promise [C++], swap
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8a1ddfd30a1e061426f0a19ac1118aa5ade1de17
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: a56e188e581ea5d9dcafaa222ab4367e0b4b33fe
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38958567"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44100303"
 ---
 # <a name="promise-class"></a>promise — Klasa
 
@@ -75,7 +75,7 @@ class promise;
 
 ## <a name="inheritance-hierarchy"></a>Hierarchia dziedziczenia
 
-`promise`
+*Promise*<br/>
 
 ## <a name="requirements"></a>Wymagania
 
@@ -107,7 +107,8 @@ promise& operator=(promise&& Other) noexcept;
 
 ### <a name="parameters"></a>Parametry
 
-*Inne* A `promise` obiektu.
+*Inne*<br/>
+Element `promise` obiektu.
 
 ### <a name="return-value"></a>Wartość zwracana
 
@@ -130,9 +131,11 @@ promise(promise&& Other) noexcept;
 
 ### <a name="parameters"></a>Parametry
 
-*Al* alokatora pamięci. Zobacz [ \<buforów >](../standard-library/allocators-header.md) Aby uzyskać więcej informacji.
+*Al*<br/>
+Alokator pamięci. Zobacz [ \<buforów >](../standard-library/allocators-header.md) Aby uzyskać więcej informacji.
 
-*Inne* A `promise` obiektu.
+*Inne*<br/>
+Element `promise` obiektu.
 
 ### <a name="remarks"></a>Uwagi
 
@@ -152,7 +155,8 @@ void set_exception(exception_ptr Exc);
 
 ### <a name="parameters"></a>Parametry
 
-*Wyłączne* [exception_ptr](../standard-library/exception-typedefs.md#exception_ptr) przechowywane przez tę metodę jako wynik wyjątku.
+*Wyłączne*<br/>
+[Exception_ptr](../standard-library/exception-typedefs.md#exception_ptr) przechowywane przez tę metodę jako wynik wyjątku.
 
 ### <a name="remarks"></a>Uwagi
 
@@ -172,7 +176,8 @@ void set_exception_at_thread_exit(exception_ptr Exc);
 
 ### <a name="parameters"></a>Parametry
 
-*Wyłączne* [exception_ptr](../standard-library/exception-typedefs.md#exception_ptr) przechowywane przez tę metodę jako wynik wyjątku.
+*Wyłączne*<br/>
+[Exception_ptr](../standard-library/exception-typedefs.md#exception_ptr) przechowywane przez tę metodę jako wynik wyjątku.
 
 ### <a name="remarks"></a>Uwagi
 
@@ -195,7 +200,8 @@ void promise<void>::set_value();
 
 ### <a name="parameters"></a>Parametry
 
-*Val* wartości, które mają być przechowywane jako wynik.
+*Val*<br/>
+Wartość, które mają być przechowywane jako wynik.
 
 ### <a name="remarks"></a>Uwagi
 
@@ -226,7 +232,8 @@ void promise<void>::set_value_at_thread_exit();
 
 ### <a name="parameters"></a>Parametry
 
-*Val* wartości, które mają być przechowywane jako wynik.
+*Val*<br/>
+Wartość, które mają być przechowywane jako wynik.
 
 ### <a name="remarks"></a>Uwagi
 
@@ -254,7 +261,8 @@ void swap(promise& Other) noexcept;
 
 ### <a name="parameters"></a>Parametry
 
-*Inne* A `promise` obiektu.
+*Inne*<br/>
+Element `promise` obiektu.
 
 ## <a name="see-also"></a>Zobacz także
 

@@ -33,16 +33,16 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6ca83a9b9b48302e9ff4974d083d0a95796a1ef3
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: e1418278f4b6756db4e747162f090545c3e9f3ae
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32395516"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44107576"
 ---
 # <a name="crtmemcheckpoint"></a>_CrtMemCheckpoint
 
-Pobiera bieżący stan sterty debugowania i zapisuje w dostarczonych aplikacji **_crtmemstate —** struktury (tylko wersja do debugowania).
+Pobiera bieżący stan sterty debugowania i przechowuje w dostarczonej przez aplikację **_CrtMemState** struktury (tylko wersja debugowania).
 
 ## <a name="syntax"></a>Składnia
 
@@ -54,17 +54,18 @@ void _CrtMemCheckpoint(
 
 ### <a name="parameters"></a>Parametry
 
-*Stan* wskaźnik do **_crtmemstate —** struktury umożliwia wypełnienie pamięci punktu kontrolnego.
+*state*<br/>
+Wskaźnik do **_CrtMemState** strukturę, aby wypełnić z pamięci punkt kontrolny.
 
 ## <a name="remarks"></a>Uwagi
 
-**_Crtmemcheckpoint —** funkcja tworzy migawkę bieżącego stanu sterty debugowania w danym momencie. Ta migawka mogą być używane przez inne funkcje stanu sterty takich jak [_crtmemdifference —](crtmemdifference.md) ułatwia wykrywanie przecieków pamięci i innych problemów. Gdy [_DEBUG](../../c-runtime-library/debug.md) nie jest zdefiniowany, wywołań **_crtmemstate —** są usuwane podczas przetwarzania wstępnego.
+**_Crtmemcheckpoint —** funkcja tworzy migawkę bieżącego stanu sterty debugowania w danej chwili. Ta migawka mogą być używane przez inne funkcje stanu sterty takie jak [_crtmemdifference —](crtmemdifference.md) w celu wykrycia przecieków pamięci i innych problemów. Gdy [_DEBUG](../../c-runtime-library/debug.md) nie jest zdefiniowany, wywołania **_CrtMemState** są usuwane podczas przetwarzania wstępnego.
 
-Aplikacja musi przekazać wskaźnik do wcześniej alokowanego wystąpienia elementu **_crtmemstate —** struktury zdefiniowane w Crtdbg.h, w *stanu* parametru. Jeśli **_crtmemcheckpoint —** napotka błąd podczas tworzenia punktu kontrolnego, funkcja generuje **_CRT_WARN** debugowania raport opisujący problem.
+Aplikacja musi przekazać wskaźnik do poprzednio przydzielonego wystąpienia **_CrtMemState** struktury, zdefiniowanego w Crtdbg.h, w *stanu* parametru. Jeśli **_crtmemcheckpoint —** napotka błąd podczas tworzenia punktu kontrolnego, funkcja generuje **_CRT_WARN** opisujący problem raport debugowania.
 
-Aby uzyskać więcej informacji na temat funkcji stanu sterty i **_crtmemstate —** struktury, zobacz [funkcje raportowania stanu sterty](/visualstudio/debugger/crt-debug-heap-details). Aby uzyskać więcej informacji dotyczących sposobu bloki pamięci są przydzielone, zainicjować i zarządzane w wersji podstawowej sterty debugowania, zobacz [szczegóły dotyczące sterty debugowania CRT](/visualstudio/debugger/crt-debug-heap-details).
+Aby uzyskać więcej informacji o funkcjach stanu sterty i **_CrtMemState** struktury, zobacz [funkcje raportowania stanu sterty](/visualstudio/debugger/crt-debug-heap-details). Aby uzyskać więcej informacji na temat sposobu bloki pamięci są przydzielane, inicjowane i zarządzane w wersji debugowania podstawowej sterty, zobacz [szczegóły dotyczące sterty debugowania CRT](/visualstudio/debugger/crt-debug-heap-details).
 
-Jeśli *stanu* jest **NULL**, program obsługi nieprawidłowych parametrów zostanie wywołany, zgodnie z opisem w [sprawdzanie poprawności parametru](../../c-runtime-library/parameter-validation.md). Jeśli jest dozwolone wykonywanie, aby kontynuować, [errno _doserrno —, _sys_errlist — i _sys_nerr —](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md) ustawiono **einval —** i zwraca funkcję.
+Jeśli *stanu* jest **NULL**, procedura obsługi nieprawidłowego parametru zostanie wywołana, zgodnie z opisem w [Parameter Validation](../../c-runtime-library/parameter-validation.md). Jeśli wykonanie może być kontynuowane, [errno, _doserrno, _sys_errlist i _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md) ustawiono **EINVAL** a funkcja zwraca.
 
 ## <a name="requirements"></a>Wymagania
 
@@ -72,9 +73,9 @@ Jeśli *stanu* jest **NULL**, program obsługi nieprawidłowych parametrów zost
 |-------------|---------------------|
 |**_CrtMemCheckpoint**|\<crtdbg.h>, \<errno.h>|
 
-Aby uzyskać więcej informacji o zgodności, zobacz [zgodności](../../c-runtime-library/compatibility.md).
+Aby uzyskać więcej informacji na temat zgodności, zobacz [zgodności](../../c-runtime-library/compatibility.md).
 
-**Biblioteki:** wersja biblioteka UCRT tylko debugowania.
+**Biblioteki:** 140_xp Biblioteka UCRT tylko wersja debugowania.
 
 ## <a name="see-also"></a>Zobacz także
 

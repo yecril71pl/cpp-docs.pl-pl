@@ -18,12 +18,12 @@ helpviewer_keywords:
 - std::swap [C++]
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1d369ba9b2af313c27e96e9981129fe2cf1da3c8
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: a67a22b8236646b549032e236006cd4855c3a43c
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38961074"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44108729"
 ---
 # <a name="ltarraygt-functions"></a>&lt;Tablica&gt; funkcji
 
@@ -50,13 +50,17 @@ constexpr T&& get(array<T, N>&& arr) noexcept;
 
 ### <a name="parameters"></a>Parametry
 
-*Indeks* przesunięcia elementu.
+*Index*<br/>
+Przesunięcie elementu.
 
-*T* typ elementu.
+*T*<br/>
+Typ elementu.
 
-*N* liczbę elementów w tablicy.
+*N*<br/>
+Liczba elementów w tablicy.
 
-*Moduł ARR* tablicy, które można wybierać.
+*Moduł ARR*<br/>
+Tablica, które można wybierać.
 
 ### <a name="example"></a>Przykład
 
@@ -101,13 +105,17 @@ void swap(array<Ty, N>& left, array<Ty, N>& right);
 
 ### <a name="parameters"></a>Parametry
 
-*Ty* typ elementu.
+*Ty*<br/>
+Typ elementu.
 
-*N* rozmiar tablicy.
+*N*<br/>
+Rozmiar tablicy.
 
-*po lewej stronie* pierwszej tablicy można zamienić.
+*left*<br/>
+Pierwsza tablica można zamienić.
 
-*prawy* druga tablica można zamienić.
+*right*<br/>
+Druga tablica można zamienić.
 
 ### <a name="remarks"></a>Uwagi
 

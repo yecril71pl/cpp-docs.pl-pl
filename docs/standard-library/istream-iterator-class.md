@@ -22,12 +22,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e41abbc4d7fa3cd18363982b806811b0698b44f4
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: e565d5f10bdb06bff6ad8c17047ed3e11070364d
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38959871"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44099593"
 ---
 # <a name="istreamiterator-class"></a>istream_iterator — Klasa
 
@@ -38,7 +38,7 @@ Opisuje obiekt iteratora wejściowego. Wyodrębnia obiekty klasy `Type` ze strum
 ```cpp
 template <class Type, class CharType = char, class Traits = char_traits<CharType>, class Distance = ptrdiff_t,>
 class istream_iterator
- : public iterator<
+: public iterator<
     input_iterator_tag, Type, Distance,
     const Type *,
     const Type&>;
@@ -46,13 +46,17 @@ class istream_iterator
 
 ### <a name="parameters"></a>Parametry
 
-*Typ* typ obiektu, które ma zostać wyodrębniony ze strumienia wejściowego.
+*Typ*<br/>
+Typ obiektu, który ma zostać wyodrębniony ze strumienia wejściowego.
 
-*CharType* typ, który reprezentuje typ znaków dla `istream_iterator`. Ten argument jest opcjonalny, a wartość domyślna to **char**.
+*CharType*<br/>
+Typ, który reprezentuje typ znaków dla `istream_iterator`. Ten argument jest opcjonalny, a wartość domyślna to **char**.
 
-*Cechy* typ, który reprezentuje typ znaków dla `istream_iterator`. Ten argument jest opcjonalny, a wartość domyślna to `char_traits` <  `CharType`>.
+*Cechy*<br/>
+Typ, który reprezentuje typ znaków dla `istream_iterator`. Ten argument jest opcjonalny, a wartość domyślna to `char_traits` <  `CharType`>.
 
-*Odległość* A podpisany typ całkowity, który reprezentuje typ różnicy dla `istream_iterator`. Ten argument jest opcjonalny, a wartość domyślna to `ptrdiff_t`.
+*odległość*<br/>
+A podpisany typ całkowity, który reprezentuje typ różnicy dla `istream_iterator`. Ten argument jest opcjonalny, a wartość domyślna to `ptrdiff_t`.
 
 Po skonstruowaniu lub inkrementacji obiektu klasy istream_iterator z przechowywanym wskaźnikiem innym niż null, obiekt próbuje wyodrębnić i przechowywać obiekt typu `Type` ze skojarzonego strumienia wejściowego. Jeśli wyodrębnienie się nie uda, obiekt skutecznie zastępuje przechowywany wskaźnik wskaźnikiem pustym, tworząc wskaźnik końca sekwencji.
 
@@ -144,7 +148,8 @@ istream_iterator(istream_type& _Istr);
 
 ### <a name="parameters"></a>Parametry
 
-*_Istr* strumienia wejściowego do przeczytania Użyj zainicjować `istream_iterator`.
+*_Istr*<br/>
+Strumień wejściowy odczyt Użyj zainicjować `istream_iterator`.
 
 ### <a name="remarks"></a>Uwagi
 

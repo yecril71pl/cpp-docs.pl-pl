@@ -44,12 +44,12 @@ helpviewer_keywords:
 - std::sqrt [C++]
 - std::tan [C++]
 - std::tanh [C++]
-ms.openlocfilehash: 6fd1712cb5d6c565b5ccea90050d2d4be6a1f7b0
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: 12dd6d48b8d0e2012273ad122708d9a0d7ea11cd
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38959995"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44110178"
 ---
 # <a name="ltcomplexgt-functions"></a>&lt;złożone&gt; funkcji
 
@@ -73,7 +73,8 @@ Type abs(const complex<Type>& complexNum);
 
 ### <a name="parameters"></a>Parametry
 
-*complexNum* liczby zespolonej, którego moduł zostanie określony.
+*complexNum*<br/>
+Liczby zespolonej, którego moduł zostanie określony.
 
 ### <a name="return-value"></a>Wartość zwracana
 
@@ -141,10 +142,10 @@ c2 = polar ( 5.0 , pi / 6 ) = (4.33013,2.5)
 c3 = polar ( 5.0 , 13 * pi / 6 ) = (4.33013,2.5)
 The modulus of c1 is recovered from c1 using: abs ( c1 ) = 5
 Argument of c1 is recovered from c1 using:
- arg ( c1 ) = 0 radians, which is 0 degrees.
+arg ( c1 ) = 0 radians, which is 0 degrees.
 The modulus of c2 is recovered from c2 using: abs ( c2 ) = 5
 Argument of c2 is recovered from c2 using:
- arg ( c2 ) = 0.523599 radians, which is 30 degrees.
+arg ( c2 ) = 0.523599 radians, which is 30 degrees.
 The complex numbers c2 & c3 have the same principal arguments.
 ```
 
@@ -159,7 +160,8 @@ Type arg(const complex<Type>& complexNum);
 
 ### <a name="parameters"></a>Parametry
 
-*complexNum* liczby zespolonej, którego argument zostanie określony.
+*complexNum*<br/>
+Liczby zespolonej, którego argument zostanie określony.
 
 ### <a name="return-value"></a>Wartość zwracana
 
@@ -227,10 +229,10 @@ c2 = polar ( 5.0 , pi / 6 ) = (4.33013,2.5)
 c3 = polar ( 5.0 , 13 * pi / 6 ) = (4.33013,2.5)
 The modulus of c1 is recovered from c1 using: abs ( c1 ) = 5
 Argument of c1 is recovered from c1 using:
- arg ( c1 ) = 0 radians, which is 0 degrees.
+arg ( c1 ) = 0 radians, which is 0 degrees.
 The modulus of c2 is recovered from c2 using: abs ( c2 ) = 5
 Argument of c2 is recovered from c2 using:
- arg ( c2 ) = 0.523599 radians, which is 30 degrees.
+arg ( c2 ) = 0.523599 radians, which is 30 degrees.
 The complex numbers c2 & c3 have the same principal arguments.
 ```
 
@@ -245,7 +247,8 @@ complex<Type> conj(const complex<Type>& complexNum);
 
 ### <a name="parameters"></a>Parametry
 
-*complexNum* liczby zespolonej, w których zespolonej jest zwracany.
+*complexNum*<br/>
+Liczby zespolonej, którego zespolonej jest zwracany.
 
 ### <a name="return-value"></a>Wartość zwracana
 
@@ -319,7 +322,8 @@ complex<Type> cos(const complex<Type>& complexNum);
 
 ### <a name="parameters"></a>Parametry
 
-*complexNum* liczby zespolonej, którego cosinus jest określane.
+*complexNum*<br/>
+Liczby zespolonej, którego cosinus jest określane.
 
 ### <a name="return-value"></a>Wartość zwracana
 
@@ -409,7 +413,8 @@ complex<Type> cosh(const complex<Type>& complexNum);
 
 ### <a name="parameters"></a>Parametry
 
-*complexNum* liczby zespolonej, której cosinus hiperboliczny jest określane.
+*complexNum*<br/>
+Liczby zespolonej, której cosinus hiperboliczny jest określane.
 
 ### <a name="return-value"></a>Wartość zwracana
 
@@ -499,7 +504,8 @@ complex<Type> exp(const complex<Type>& complexNum);
 
 ### <a name="parameters"></a>Parametry
 
-*complexNum* numer tym złożone, którego wykładniczej określa.
+*complexNum*<br/>
+Liczba złożonych, którego wykładniczej określa.
 
 ### <a name="return-value"></a>Wartość zwracana
 
@@ -569,7 +575,8 @@ Type imag(const complex<Type>& complexNum);
 
 ### <a name="parameters"></a>Parametry
 
-*complexNum* liczby zespolonej, w których część rzeczywista jest do wyodrębnienia.
+*complexNum*<br/>
+Liczby zespolonej, którego część rzeczywista jest do wyodrębnienia.
 
 ### <a name="return-value"></a>Wartość zwracana
 
@@ -620,7 +627,8 @@ complex<Type> log(const complex<Type>& complexNum);
 
 ### <a name="parameters"></a>Parametry
 
-*complexNum* liczby zespolonej zależy której obliczyć logarytm naturalny.
+*complexNum*<br/>
+Liczby zespolonej zależy której obliczyć logarytm naturalny.
 
 ### <a name="return-value"></a>Wartość zwracana
 
@@ -689,7 +697,8 @@ complex<Type> log10(const complex<Type>& complexNum);
 
 ### <a name="parameters"></a>Parametry
 
-*complexNum* liczby zespolonej zależy którego logarytm 10.
+*complexNum*<br/>
+Liczby zespolonej zależy którego logarytm 10.
 
 ### <a name="return-value"></a>Wartość zwracana
 
@@ -758,7 +767,8 @@ Type norm(const complex<Type>& complexNum);
 
 ### <a name="parameters"></a>Parametry
 
-*complexNum* liczby zespolonej, w których norm zostanie określony.
+*complexNum*<br/>
+Liczby zespolonej, którego norm zostanie określony.
 
 ### <a name="return-value"></a>Wartość zwracana
 
@@ -824,7 +834,7 @@ c3 = polar ( 5.0 , 13 * pi / 6 ) = (4.33013,2.5)
 The complex numbers c2 & c3 have the same principal arguments.
 The modulus of c2 is recovered from c2 using: abs ( c2 ) = 5
 Argument of c2 is recovered from c2 using:
- arg ( c2 ) = 0.523599 radians, which is 30 degrees.
+arg ( c2 ) = 0.523599 radians, which is 30 degrees.
 The norm of c2 given by: norm ( c2 ) = 25
 The modulus of c2 is the square root of the norm: sqrt ( normc2 ) = 5.
 ```
@@ -840,9 +850,11 @@ complex<Type> polar(const Type& _Modulus, const Type& _Argument = 0);
 
 ### <a name="parameters"></a>Parametry
 
-*_Modulus* modulo liczby zespolonej są dane wejściowe.
+*_Modulus*<br/>
+Moduł liczby zespolonej są dane wejściowe.
 
-*_Argument* argument liczby zespolonej są dane wejściowe.
+*_Argument*<br/>
+Argument liczby zespolonej są dane wejściowe.
 
 ### <a name="return-value"></a>Wartość zwracana
 
@@ -901,7 +913,7 @@ c3 = polar ( 5.0 , 13 * pi / 6 ) = (4.33013,2.5)
 The complex numbers c2 & c3 have the same principal arguments.
 The modulus of c2 is recovered from c2 using: abs ( c2 ) = 5
 Argument of c2 is recovered from c2 using:
- arg ( c2 ) = 0.523599 radians, which is 30 degrees.
+arg ( c2 ) = 0.523599 radians, which is 30 degrees.
 ```
 
 ## <a name="pow"></a>  Pow
@@ -924,9 +936,11 @@ complex<Type> pow(const Type& _Base, const complex<Type>& _Power);
 
 ### <a name="parameters"></a>Parametry
 
-*_Podstawowego* liczby zespolonej lub liczbę, która jest typu parametru dla liczby zespolonej, która jest podstawą zostać podniesiona do potęgi funkcja elementu członkowskiego.
+*_Podstawowego*<br/>
+Liczby zespolonej lub liczbę, która jest typu parametru dla liczby zespolonej, która jest podstawą zostać podniesiona do potęgi funkcja elementu członkowskiego.
 
-*_Wyłącz* liczby całkowitej lub liczby zespolonej lub liczbę, która jest typu parametru liczby złożone, z którą jest energii base zostać podniesiona do funkcji składowej.
+*_Power*<br/>
+Liczba całkowita lub liczby zespolonej lub liczbę, która jest typu parametru liczby złożone, z którą jest energii base zostać podniesiona do funkcji składowej.
 
 ### <a name="return-value"></a>Wartość zwracana
 
@@ -1021,28 +1035,28 @@ int main( )
 Complex number for base cb1 = (3,4)
 Integer for power = 2
 Complex number returned from complex base and integer power:
- ce1 = cb1 ^ cp1 = (-7,24)
+ce1 = cb1 ^ cp1 = (-7,24)
 The modulus of ce1 is: 25
 The argument of ce1 is: 1.85459 radians, which is 106.26 degrees.
 
 Complex number for base cb2 = (3,4)
 Type double for power cp2 = pi = 3.14159
 Complex number returned from complex base and double power:
- ce2 = cb2 ^ cp2 = (-152.915,35.5475)
+ce2 = cb2 ^ cp2 = (-152.915,35.5475)
 The modulus of ce2 is: 156.993
 The argument of ce2 is: 2.91318 radians, which is 166.913 degrees.
 
 Complex number for base cb3 = (3,4)
 Complex number for power cp3= (-2,1)
 Complex number returned from complex base and complex power:
- ce3 = cb3 ^ cp3 = (0.0153517,-0.00384077)
+ce3 = cb3 ^ cp3 = (0.0153517,-0.00384077)
 The modulus of ce3 is: 0.0158249
 The argument of ce3 is: -0.245153 radians, which is -14.0462 degrees.
 
 Type double for base cb4 = pi = 3.14159
 Complex number for power cp4 = (2,-1)
 Complex number returned from double base and complex power:
- ce4 = cb4 ^ cp4 = (4.07903,-8.98725)
+ce4 = cb4 ^ cp4 = (4.07903,-8.98725)
 The modulus of ce4 is: 9.8696
 The argument of ce4 is: -1.14473 radians, which is -65.5882 degrees.
 ```
@@ -1058,7 +1072,8 @@ Type real(const complex<Type>& complexNum);
 
 ### <a name="parameters"></a>Parametry
 
-*complexNum* liczby zespolonej, w których część rzeczywista jest do wyodrębnienia.
+*complexNum*<br/>
+Liczby zespolonej, którego część rzeczywista jest do wyodrębnienia.
 
 ### <a name="return-value"></a>Wartość zwracana
 
@@ -1109,7 +1124,8 @@ complex<Type> sin(const complex<Type>& complexNum);
 
 ### <a name="parameters"></a>Parametry
 
-*complexNum* liczby zespolonej, którego sinus jest określane.
+*complexNum*<br/>
+Liczby zespolonej, którego sinus jest określane.
 
 ### <a name="return-value"></a>Wartość zwracana
 
@@ -1199,7 +1215,8 @@ complex<Type> sinh(const complex<Type>& complexNum);
 
 ### <a name="parameters"></a>Parametry
 
-*complexNum* liczby zespolonej, której sinusem hiperbolicznym jest określane.
+*complexNum*<br/>
+Liczby zespolonej, której sinusem hiperbolicznym jest określane.
 
 ### <a name="return-value"></a>Wartość zwracana
 
@@ -1289,7 +1306,8 @@ complex<Type> sqrt(const complex<Type>& complexNum);
 
 ### <a name="parameters"></a>Parametry
 
-*complexNum* liczby zespolonej pierwiastek kwadratowy, którego ma zostać znaleziona.
+*complexNum*<br/>
+Liczby zespolonej pierwiastek kwadratowy, którego ma zostać znaleziona.
 
 ### <a name="return-value"></a>Wartość zwracana
 
@@ -1348,10 +1366,10 @@ c1 = polar ( 5.0 ) = (-2.58529e-012,25)
 c2 = sqrt ( c1 ) = (3.53553,3.53553)
 The modulus of c2 is recovered from c2 using: abs ( c2 ) = 5
 Argument of c2 is recovered from c2 using:
- arg ( c2 ) = 0.785398 radians, which is 45 degrees.
+arg ( c2 ) = 0.785398 radians, which is 45 degrees.
 The modulus of c2 = sqrt( abs ( c1 ) ) =5
 The argument of c2 = ( 1 / 2 ) * arg ( c1 ) =0.785398 radians,
- which is 45 degrees.
+which is 45 degrees.
 ```
 
 ## <a name="tan"></a> tan
@@ -1365,7 +1383,8 @@ complex<Type> tan(const complex<Type>& complexNum);
 
 ### <a name="parameters"></a>Parametry
 
-*complexNum* liczby zespolonej, którego tangens jest określane.
+*complexNum*<br/>
+Liczby zespolonej, którego tangens jest określane.
 
 ### <a name="return-value"></a>Wartość zwracana
 
@@ -1453,7 +1472,8 @@ complex<Type> tanh(const complex<Type>& complexNum);
 
 ### <a name="parameters"></a>Parametry
 
-*complexNum* liczby zespolonej, której tangens hiperboliczny jest określane.
+*complexNum*<br/>
+Liczby zespolonej, której tangens hiperboliczny jest określane.
 
 ### <a name="return-value"></a>Wartość zwracana
 

@@ -33,16 +33,16 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9c78355277fbb987d82bed46fb0b5f4ffd848b6a
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: c4bfc37a53e3b2b4e3c185c101685b7009d9d354
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32395305"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44105279"
 ---
 # <a name="clearerr"></a>clearerr
 
-Resetuje wskaźnik błędów dla strumienia. Bezpieczniejsza wersja ta funkcja jest dostępna; zobacz [clearerr_s —](clearerr-s.md).
+Resetuje wskaźnik błędu dla strumienia. Bardziej bezpieczna wersja ta funkcja jest dostępna; zobacz [clearerr_s —](clearerr-s.md).
 
 ## <a name="syntax"></a>Składnia
 
@@ -54,15 +54,16 @@ void clearerr(
 
 ### <a name="parameters"></a>Parametry
 
-*strumień* wskaźnik do **pliku** struktury.
+*Stream*<br/>
+Wskaźnik do **pliku** struktury.
 
 ## <a name="remarks"></a>Uwagi
 
-**Clearerr —** funkcja resetuje wskaźnik błędów i wskaźnik plik końcowy *strumienia*. Wskaźniki błędów nie są automatycznie usuwane; Po ustawieniu wskaźnik błędów dla określonego strumienia operacji na strumieniu w dalszym ciągu zwracają wartość błąd do **clearerr —**, [fseek](fseek-fseeki64.md), **fsetpos —**, lub [rewind](rewind.md) jest wywoływana.
+**Clearerr —** funkcja resetuje wskaźnik błędów i wskaźnik końca pliku *strumienia*. Wskaźniki błędów nie zostaną automatycznie wyczyszczone; Po ustawieniu wskaźnika błędu dla określonego strumienia operacje na strumieniu w dalszym ciągu zwraca wartości błędu do czasu **clearerr —**, [fseek](fseek-fseeki64.md), **fsetpos**, lub [rewind](rewind.md) jest wywoływana.
 
-Jeśli *strumienia* jest **NULL**, program obsługi nieprawidłowych parametrów zostanie wywołany, zgodnie z opisem w [sprawdzanie poprawności parametru](../../c-runtime-library/parameter-validation.md). Jeśli wykonanie może kontynuować, ta funkcja ustawia **errno** do **einval —** i zwraca. Aby uzyskać więcej informacji na temat **errno** i kody błędów, zobacz [errno — stałe](../../c-runtime-library/errno-constants.md).
+Jeśli *strumienia* jest **NULL**, procedura obsługi nieprawidłowego parametru zostanie wywołana, zgodnie z opisem w [Parameter Validation](../../c-runtime-library/parameter-validation.md). Jeśli wykonanie może być kontynuowane, funkcja ta ustawia **errno** do **EINVAL** i zwraca. Aby uzyskać więcej informacji na temat **errno** i kodach błędów, zobacz [errno — stałe](../../c-runtime-library/errno-constants.md).
 
-Bezpieczniejsza wersja ta funkcja jest dostępna; zobacz [clearerr_s —](clearerr-s.md).
+Bardziej bezpieczna wersja ta funkcja jest dostępna; zobacz [clearerr_s —](clearerr-s.md).
 
 ## <a name="requirements"></a>Wymagania
 
@@ -122,7 +123,7 @@ No read error
 ## <a name="see-also"></a>Zobacz także
 
 [Obsługa błędów](../../c-runtime-library/error-handling-crt.md)<br/>
-[We/Wy strumienia](../../c-runtime-library/stream-i-o.md)<br/>
+[Stream operacji We/Wy](../../c-runtime-library/stream-i-o.md)<br/>
 [_eof](eof.md)<br/>
 [feof](feof.md)<br/>
 [ferror](ferror.md)<br/>

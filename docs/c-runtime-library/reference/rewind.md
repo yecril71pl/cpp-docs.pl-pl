@@ -1,5 +1,5 @@
 ---
-title: REWIND | Dokumentacja firmy Microsoft
+title: Przewiń do tyłu | Dokumentacja firmy Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -34,16 +34,16 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 58f8eddd2cae672f2a3677ebc9af87987889d166
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 37f54ff6b2c3738550c707887f2068986ca4abd6
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32406836"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44100290"
 ---
 # <a name="rewind"></a>przewijanie
 
-Zmienia położenie wskaźnika pliku na początku pliku.
+Powoduje przeniesienie wskaźnika pliku na początku pliku.
 
 ## <a name="syntax"></a>Składnia
 
@@ -55,21 +55,22 @@ void rewind(
 
 ### <a name="parameters"></a>Parametry
 
-*strumień* wskaźnik do **pliku** struktury.
+*Stream*<br/>
+Wskaźnik do **pliku** struktury.
 
 ## <a name="remarks"></a>Uwagi
 
-**Rewind** funkcja powoduje przeniesienie wskaźnika pliku skojarzone z *strumienia* na początku pliku. Wywołanie **rewind** jest podobny do
+**Rewind** funkcji powoduje przeniesienie wskaźnika pliku skojarzone z *strumienia* na początku pliku. Wywołanie **rewind** jest podobny do
 
-**fseek (void) (** _strumienia_**, 0 L, seek_set —);**
+**fseek (void) (** _strumienia_**, 0 L, SEEK_SET);**
 
-Jednak w przeciwieństwie do [fseek](fseek-fseeki64.md), **rewind** czyści wskaźników błędów dla tego strumienia, a także wskaźnik końca pliku. Ponadto, w odróżnieniu od [fseek](fseek-fseeki64.md), **rewind** nie zwraca wartości wskazującej, czy wskaźnik została pomyślnie przeniesiona.
+Jednak w przeciwieństwie do [fseek](fseek-fseeki64.md), **rewind** czyści wskaźników błędu dla strumienia, a także wskaźnik końca pliku. Ponadto, w odróżnieniu od [fseek](fseek-fseeki64.md), **rewind** nie zwraca wartości, aby wskazać, czy wskaźnik został pomyślnie przeniesiony.
 
-Aby wyczyścić buforu klawiatury, należy użyć **rewind** ze strumienia **stdin**, który jest skojarzony z klawiatury domyślnie.
+Aby wyczyścić buforu klawiatury, należy użyć **rewind** za pomocą strumienia **stdin**, który jest skojarzony z klawiatury, domyślnie.
 
-W przypadku strumienia **NULL** wskaźnika, program obsługi nieprawidłowych parametrów zostanie wywołany, zgodnie z opisem w [sprawdzanie poprawności parametru](../../c-runtime-library/parameter-validation.md). Jeśli jest dozwolone wykonywanie, aby kontynuować, ta funkcja zwraca i **errno** ustawiono **einval —**.
+Jeśli wartość strumienia wynosi **NULL** wskaźnika, procedura obsługi nieprawidłowego parametru zostanie wywołana, zgodnie z opisem w [Parameter Validation](../../c-runtime-library/parameter-validation.md). Jeśli wykonanie może być kontynuowane, funkcja zwraca i **errno** ustawiono **EINVAL**.
 
-Aby uzyskać informacje na temat tych i innych kodów błędów, zobacz [_doserrno —, errno, _sys_errlist — i _sys_nerr —](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
+Aby uzyskać informacje na temat tych i innych kodów błędu, zobacz [_doserrno, errno, _sys_errlist i _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
 
 ## <a name="requirements"></a>Wymagania
 
@@ -81,7 +82,7 @@ Aby uzyskać dodatkowe informacje o zgodności, zobacz [zgodności](../../c-runt
 
 ## <a name="libraries"></a>Biblioteki
 
-Wszystkie wersje [biblioteki wykonawcze języka C](../../c-runtime-library/crt-library-features.md).
+Wszystkie wersje [biblioteki wykonawczej C](../../c-runtime-library/crt-library-features.md).
 
 ## <a name="example"></a>Przykład
 
@@ -125,4 +126,4 @@ The values read are: 1 and -37
 
 ## <a name="see-also"></a>Zobacz także
 
-[We/Wy strumienia](../../c-runtime-library/stream-i-o.md)<br/>
+[Stream operacji We/Wy](../../c-runtime-library/stream-i-o.md)<br/>

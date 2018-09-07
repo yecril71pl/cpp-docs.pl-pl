@@ -36,12 +36,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 26386ebb5e2bbb20b952200869ccffb7677c59af
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: 05442a0c590bcb66449aeae72d54cc6e988421bc
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38962429"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44099899"
 ---
 # <a name="gammadistribution-class"></a>gamma_distribution — Klasa
 
@@ -80,9 +80,11 @@ public:
 
 ### <a name="parameters"></a>Parametry
 
-*RealType* typu wyniku zmiennoprzecinkowych, wartość domyślna to **double**. Aby możliwych typów, zobacz [ \<losowy >](../standard-library/random.md).
+*RealType*<br/>
+Typ wyniku zmiennoprzecinkowych, wartość domyślna to **double**. Aby możliwych typów, zobacz [ \<losowy >](../standard-library/random.md).
 
-*URNG* jednolitego numer generator aparat losowy. Aby możliwych typów, zobacz [ \<losowy >](../standard-library/random.md).
+*URNG*<br/>
+Jednolity numer generator aparat losowy. Aby możliwych typów, zobacz [ \<losowy >](../standard-library/random.md).
 
 ## <a name="remarks"></a>Uwagi
 
@@ -207,11 +209,14 @@ explicit gamma_distribution(const param_type& parm);
 
 ### <a name="parameters"></a>Parametry
 
-*alfa* `alpha` parametru dystrybucji.
+*alpha*<br/>
+`alpha` Parametru dystrybucji.
 
-*w wersji beta* `beta` parametru dystrybucji.
+*Beta*<br/>
+`beta` Parametru dystrybucji.
 
-*Parametr* struktury parametr, używane do konstruowania dystrybucji.
+*parm*<br/>
+Struktura parametr, używane do konstruowania dystrybucji.
 
 ### <a name="remarks"></a>Uwagi
 
@@ -239,11 +244,14 @@ struct param_type {
 
 ### <a name="parameters"></a>Parametry
 
-*alfa* `alpha` parametru dystrybucji.
+*alpha*<br/>
+`alpha` Parametru dystrybucji.
 
-*w wersji beta* `beta` parametru dystrybucji.
+*Beta*<br/>
+`beta` Parametru dystrybucji.
 
-*prawy* `param_type` wystąpienie do porównania.
+*right*<br/>
+`param_type` Wystąpienie do porównania.
 
 ### <a name="remarks"></a>Uwagi
 

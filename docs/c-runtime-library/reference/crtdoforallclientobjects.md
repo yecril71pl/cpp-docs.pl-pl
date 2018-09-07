@@ -1,5 +1,5 @@
 ---
-title: _Crtdoforallclientobjects — | Dokumentacja firmy Microsoft
+title: _CrtDoForAllClientObjects | Dokumentacja firmy Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -33,16 +33,16 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 889c3c4060098927df08d785e85b64e7e7becc2c
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 378ef3c6218d1f57cd1d817d8895b3ff8b081ecb
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32397203"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44105346"
 ---
 # <a name="crtdoforallclientobjects"></a>_CrtDoForAllClientObjects
 
-Wywołania funkcji aplikacji dla wszystkich **_client_block —** typy w stercie (tylko wersja do debugowania).
+Wywołuje funkcję dostarczone przez aplikację dla wszystkich **_CLIENT_BLOCK** typy w stercie (tylko wersja debugowania).
 
 ## <a name="syntax"></a>Składnia
 
@@ -55,19 +55,21 @@ void _CrtDoForAllClientObjects(
 
 ### <a name="parameters"></a>Parametry
 
-*pfn* wskaźnika do funkcji wywołania zwrotnego funkcji aplikacji. Pierwszy parametr do funkcji punktów danych. Drugi parametr jest wskaźnik kontekstu przekazywany do wywołania **_crtdoforallclientobjects —**.
+*nazwy pfn*<br/>
+Wskaźnik do funkcji wywołania zwrotnego dostarczonej przez aplikację funkcji. Pierwszy parametr do tej funkcji punktów danych. Drugi parametr jest wskaźnik kontekstu, który jest przekazywany do wywołania **_CrtDoForAllClientObjects**.
 
-*kontekst* wskaźnik do kontekstu dostarczone przez aplikację do przekazania do funkcji aplikacji.
+*Kontekst*<br/>
+Wskaźnik do kontekstu dostarczone przez aplikację do przekazania do funkcji dostarczonych aplikacji.
 
 ## <a name="remarks"></a>Uwagi
 
-**_Crtdoforallclientobjects —** funkcja wyszukuje połączonej listy sterty dla bloków pamięci z **_client_block —** typu i wywołań znajduje się funkcja dostarczone przez aplikację po bloku tego typu. Znaleziono bloku i *kontekstu* parametrów są przekazywane jako argumenty do funkcji aplikacji. Podczas debugowania aplikacji można śledzić określonej grupy alokacji jawnie podczas wywoływania debugowania funkcje sterty przydzielić pamięci i określając, że bloki można przypisać **_client_block —** zablokować typu. Następnie można osobno i zgłaszanych na inaczej podczas wykrywania przecieków i raportowanie stanu pamięci te bloki.
+**_CrtDoForAllClientObjects** Funkcja przeszukuje połączonej liście stosu, bloków pamięci za pomocą **_CLIENT_BLOCK** typu i wywołań, znajduje się funkcja dostarczone przez aplikację, gdy blok tego typu. Znaleziono bloku i *kontekstu* parametru są przekazywane jako argumenty do funkcji dostarczonych aplikacji. Podczas debugowania aplikacji można śledzić określonej grupy alokacji przez jawne wywołanie funkcji sterty w celu przydzielenia pamięci debugowania i określenie, że można przypisać te bloki **_CLIENT_BLOCK** typ bloku. Te bloki, następnie można osobno i inaczej zgłoszone podczas wykrywania przecieków i raportowania stanu pamięci.
 
-Jeśli **_crtdbg_alloc_mem_df —** pola bitowego ze [_crtdbgflag —](../../c-runtime-library/crtdbgflag.md) flaga nie jest włączona, **_crtdoforallclientobjects —** natychmiast zwraca. Gdy [_DEBUG](../../c-runtime-library/debug.md) nie jest zdefiniowany, wywołań **_crtdoforallclientobjects —** są usuwane podczas przetwarzania wstępnego.
+Jeśli **_CRTDBG_ALLOC_MEM_DF** pola bitowego [_crtDbgFlag](../../c-runtime-library/crtdbgflag.md) flaga nie jest włączona, **_CrtDoForAllClientObjects** natychmiast powraca. Gdy [_DEBUG](../../c-runtime-library/debug.md) nie jest zdefiniowany, wywołania **_CrtDoForAllClientObjects** są usuwane podczas przetwarzania wstępnego.
 
-Aby uzyskać więcej informacji na temat **_client_block —** typu i może służyć za inne funkcje debugowania, zobacz [typów bloków w stercie debugowania](/visualstudio/debugger/crt-debug-heap-details). Aby dowiedzieć się jak bloki pamięci są przydzielone, zainicjować i zarządzane w wersji podstawowej sterty debugowania, zobacz [szczegóły dotyczące sterty debugowania CRT](/visualstudio/debugger/crt-debug-heap-details).
+Aby uzyskać więcej informacji na temat **_CLIENT_BLOCK** wpisz i może służyć przez inne funkcje debugowania, zobacz [typy bloków na stercie debugowania](/visualstudio/debugger/crt-debug-heap-details). Aby dowiedzieć się jak bloki pamięci są przydzielane, inicjowane i zarządzane w wersji debugowania podstawowej sterty, zobacz [szczegóły dotyczące sterty debugowania CRT](/visualstudio/debugger/crt-debug-heap-details).
 
-Jeśli *pfn* jest **NULL**, program obsługi nieprawidłowych parametrów zostanie wywołany, zgodnie z opisem w [sprawdzanie poprawności parametru](../../c-runtime-library/parameter-validation.md). Jeśli jest dozwolone wykonywanie, aby kontynuować, [errno _doserrno —, _sys_errlist — i _sys_nerr —](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md) ustawiono **einval —** i zwraca funkcję.
+Jeśli *pfn* jest **NULL**, procedura obsługi nieprawidłowego parametru zostanie wywołana, zgodnie z opisem w [Parameter Validation](../../c-runtime-library/parameter-validation.md). Jeśli wykonanie może być kontynuowane, [errno, _doserrno, _sys_errlist i _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md) ustawiono **EINVAL** a funkcja zwraca.
 
 ## <a name="requirements"></a>Wymagania
 
@@ -75,13 +77,13 @@ Jeśli *pfn* jest **NULL**, program obsługi nieprawidłowych parametrów zostan
 |-------------|---------------------|
 |**_CrtDoForAllClientObjects**|\<crtdbg.h>, \<errno.h>|
 
-Aby uzyskać więcej informacji o zgodności, zobacz [zgodności](../../c-runtime-library/compatibility.md).
+Aby uzyskać więcej informacji na temat zgodności, zobacz [zgodności](../../c-runtime-library/compatibility.md).
 
-**Biblioteki:** wersja universal C biblioteki wykonawcze tylko debugowania.
+**Biblioteki:** universal C biblioteki wykonawczej tylko wersja debugowania.
 
 ## <a name="see-also"></a>Zobacz także
 
 [Procedury debugowania](../../c-runtime-library/debug-routines.md)<br/>
 [_CrtSetDbgFlag](crtsetdbgflag.md)<br/>
-[Funkcje raportowania stanu sterty](/visualstudio/debugger/crt-debug-heap-details)<br/>
+[Funkcje raportowania stanu stosu](/visualstudio/debugger/crt-debug-heap-details)<br/>
 [_CrtReportBlockType](crtreportblocktype.md)<br/>

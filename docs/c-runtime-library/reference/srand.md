@@ -38,16 +38,16 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e2b527561e312ce9c50dce106a243d7e49a1d303
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 7972ddfe6ae9c1d591bdbd4cc5e208d78e826037
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32406891"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44107557"
 ---
 # <a name="srand"></a>srand
 
-Ustawia wartość początkową inicjatora dla generatora liczb pseudolosowych używane przez **rand** funkcji.
+Ustawia wartość początkową inicjatora generator liczb pseudolosowych, używane przez **rand** funkcji.
 
 ## <a name="syntax"></a>Składnia
 
@@ -59,11 +59,12 @@ void srand(
 
 ### <a name="parameters"></a>Parametry
 
-*seed* inicjatora dla Generowanie liczb pseudolosowych
+*Inicjator*<br/>
+Początkowy dla Generowanie liczb pseudolosowych
 
 ## <a name="remarks"></a>Uwagi
 
-**Srand —** funkcja określa punkt początkowy generowania serii liczb pseudolosowych w bieżącym wątku. Aby ponownie zainicjować generatora, aby utworzyć taką samą sekwencję wyników, należy wywołać **srand —** funkcji i używać tego samego *inicjatora* argument ponownie. Wszystkie inne wartości *inicjatora* ustawia generator do innego punktu początkowego pseudolosowych sekwencji. **RAND** pobiera liczb pseudolosowych, które zostały wygenerowane. Wywoływanie **rand** przed wywołaniem dowolnej **srand —** generuje takiej samej kolejności, co wywołanie **srand —** z *inicjatora* przekazany jako 1.
+**Srand —** funkcja ustawia punkt początkowy dla generowania szereg pseudolosowych liczb całkowitych w bieżącym wątku. Aby ponownie zainicjować generatora Aby utworzyć taką samą sekwencję wyniki, należy wywołać **srand —** działać, a następnie używać tego samego *inicjatora* argument ponownie. Dowolna inna wartość, aby uzyskać *inicjatora* ustawia generator do innego punktu wyjścia w sekwencji pseudolosowych. **RAND** pobiera liczb pseudolosowych, które są generowane. Wywoływanie **rand** przed wywołaniem dowolnej **srand —** generuje tę samą sekwencję co wywołanie metody **srand —** z *inicjatora* przekazywane jako 1.
 
 ## <a name="requirements"></a>Wymagania
 

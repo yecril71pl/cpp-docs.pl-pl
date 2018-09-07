@@ -9,17 +9,17 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ff2fc36582e6ffbff8f7608a5a26cc472687132e
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 1bd61fd12c555c42f3226d523a519c29f1d09c10
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43760981"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44102697"
 ---
 # <a name="wrl-integration-ccx"></a>Integracja z WRL (C + +/ CX)
 
 Za darmo można łączyć WRL kodu za pomocą kodu systemu Windows środowiska uruchomieniowego C++ szablon biblioteki (WRL). W tej samej jednostce translacji, można użyć obiektów zadeklarowanych za pomocą biblioteki WRL uchwytu do obiektu (`^`) notacją i WRL inteligentnego wskaźnika (`ComPtr<T>`) notacji. Jednak ręcznie musi obsługiwać zwracane wartości i kody błędów WRL HRESULT i wyjątków biblioteki WRL.
-  
+
 ## <a name="wrl-development"></a>Tworzenie biblioteki WRL
 
 Aby uzyskać więcej informacji na temat tworzenia i używania składników biblioteki WRL, zobacz [Windows środowiska uruchomieniowego C++ szablon biblioteki (WRL)](../windows/windows-runtime-cpp-template-library-wrl.md).
@@ -115,9 +115,8 @@ IVector<String^>^ GetTypeMethods(Object^ instance)
     }
     return retVal;
 }
-
 ```
 
 ## <a name="see-also"></a>Zobacz także
 
-[Współdziałanie z innymi językami](interoperating-with-other-languages-c-cx.md)  
+[Współdziałanie z innymi językami](interoperating-with-other-languages-c-cx.md)

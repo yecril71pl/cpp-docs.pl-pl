@@ -6,12 +6,12 @@ ms.topic: reference
 f1_keywords:
 - chrono/std::operator modulo
 ms.assetid: c5a19267-4684-40c1-b7a9-cc1012b058f3
-ms.openlocfilehash: 786713f37bc8470dd5c455eae49eb4faed72b781
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: 56a8d05c3a68cf8d3e12b8a6452d43033e414cbf
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38957415"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44102723"
 ---
 # <a name="ltchronogt-operators"></a>&lt;chrono&gt; operatorów
 
@@ -49,13 +49,17 @@ constexpr typename common_type<Duration1, Duration2>::type
 
 ### <a name="parameters"></a>Parametry
 
-*Po lewej stronie* po lewej stronie `duration` lub `time_point` obiektu.
+*po lewej stronie*<br/>
+Po lewej stronie `duration` lub `time_point` obiektu.
 
-*Po prawej stronie* po prawej stronie `duration` lub `time_point` obiektu.
+*po prawej stronie*<br/>
+Po prawej stronie `duration` lub `time_point` obiektu.
 
-*Czas* A `time_point` obiektu.
+*czas*<br/>
+Element `time_point` obiektu.
 
-*Czas trwania* A `duration` obiektu.
+*Czas trwania*<br/>
+Element `duration` obiektu.
 
 ### <a name="return-value"></a>Wartość zwracana
 
@@ -84,9 +88,11 @@ constexpr bool operator!=(
 
 ### <a name="parameters"></a>Parametry
 
-`Left` Po lewej stronie `duration` lub `time_point` obiektu.
+*po lewej stronie*<br/>
+Po lewej stronie `duration` lub `time_point` obiektu.
 
-`Right` Po prawej stronie `duration` lub `time_point` obiektu.
+*po prawej stronie*<br/>
+Po prawej stronie `duration` lub `time_point` obiektu.
 
 ### <a name="return-value"></a>Wartość zwracana
 
@@ -114,9 +120,11 @@ constexpr duration<typename common_type<Rep1, Rep2>::type, Period2>
 
 ### <a name="parameters"></a>Parametry
 
-*Czas trwania* A `duration` obiektu.
+*Czas trwania*<br/>
+Element `duration` obiektu.
 
-*Iloczyn* wartością całkowitą.
+*Iloczyn*<br/>
+Wartość całkowita.
 
 ### <a name="return-value"></a>Wartość zwracana
 
@@ -147,13 +155,17 @@ constexpr typename common_type<Rep1, Rep2>::type
 
 ### <a name="parameters"></a>Parametry
 
-*Czas trwania* A `duration` obiektu.
+*Czas trwania*<br/>
+Element `duration` obiektu.
 
-*DIV* wartością całkowitą.
+*Div*<br/>
+Wartość całkowita.
 
-*po lewej stronie* po lewej stronie `duration` obiektu.
+*po lewej stronie*<br/>
+Po lewej stronie `duration` obiektu.
 
-*prawy* po prawej stronie `duration` obiektu.
+*po prawej stronie*<br/>
+Po prawej stronie `duration` obiektu.
 
 ### <a name="return-value"></a>Wartość zwracana
 
@@ -191,13 +203,17 @@ time_point<Clock, constexpr typename common_type<duration<Rep1, Period1>, Durati
 
 ### <a name="parameters"></a>Parametry
 
-*Po lewej stronie* po lewej stronie `duration` lub `time_point` obiektu.
+*po lewej stronie*<br/>
+Po lewej stronie `duration` lub `time_point` obiektu.
 
-*Po prawej stronie* po prawej stronie `duration` lub `time_point` obiektu.
+*po prawej stronie*<br/>
+Po prawej stronie `duration` lub `time_point` obiektu.
 
-*Czas* A `time_point` obiektu.
+*czas*<br/>
+Element `time_point` obiektu.
 
-*Czas trwania* A `duration` obiektu.
+*Czas trwania*<br/>
+Element `duration` obiektu.
 
 ### <a name="return-value"></a>Wartość zwracana
 
@@ -224,9 +240,11 @@ constexpr bool operator<(
 
 ### <a name="parameters"></a>Parametry
 
-*Po lewej stronie* po lewej stronie `duration` lub `time_point` obiektu.
+*po lewej stronie*<br/>
+Po lewej stronie `duration` lub `time_point` obiektu.
 
-*Po prawej stronie* po prawej stronie `duration` lub `time_point` obiektu.
+*po prawej stronie*<br/>
+Po prawej stronie `duration` lub `time_point` obiektu.
 
 ### <a name="return-value"></a>Wartość zwracana
 
@@ -252,9 +270,11 @@ constexpr bool operator<=(
 
 ### <a name="parameters"></a>Parametry
 
-*Po lewej stronie* po lewej stronie `duration` lub `time_point` obiektu.
+*po lewej stronie*<br/>
+Po lewej stronie `duration` lub `time_point` obiektu.
 
-*Po prawej stronie* po prawej stronie `duration` lub `time_point` obiektu.
+*po prawej stronie*<br/>
+Po prawej stronie `duration` lub `time_point` obiektu.
 
 ### <a name="return-value"></a>Wartość zwracana
 
@@ -278,9 +298,11 @@ constexpr bool operator==(
 
 ### <a name="parameters"></a>Parametry
 
-*Po lewej stronie* po lewej stronie `duration` lub `time_point` obiektu.
+*po lewej stronie*<br/>
+Po lewej stronie `duration` lub `time_point` obiektu.
 
-*Po prawej stronie* po prawej stronie `duration` lub `time_point` obiektu.
+*po prawej stronie*<br/>
+Po prawej stronie `duration` lub `time_point` obiektu.
 
 ### <a name="return-value"></a>Wartość zwracana
 
@@ -306,9 +328,11 @@ constexpr bool operator>(
 
 ### <a name="parameters"></a>Parametry
 
-*Po lewej stronie* po lewej stronie `duration` lub `time_point` obiektu.
+*po lewej stronie*<br/>
+Po lewej stronie `duration` lub `time_point` obiektu.
 
-*Po prawej stronie* po prawej stronie `duration` lub `time_point` obiektu.
+*po prawej stronie*<br/>
+Po prawej stronie `duration` lub `time_point` obiektu.
 
 ### <a name="return-value"></a>Wartość zwracana
 
@@ -332,9 +356,11 @@ constexpr bool operator>=(
 
 ### <a name="parameters"></a>Parametry
 
-*Po lewej stronie* po lewej stronie `duration` lub `time_point` obiektu.
+*po lewej stronie*<br/>
+Po lewej stronie `duration` lub `time_point` obiektu.
 
-*Po prawej stronie* po prawej stronie `duration` lub `time_point` obiektu.
+*po prawej stronie*<br/>
+Po prawej stronie `duration` lub `time_point` obiektu.
 
 ### <a name="return-value"></a>Wartość zwracana
 
@@ -360,13 +386,17 @@ constexpr typename common_type<duration<Rep1, _Period1>, duration<Rep2, Period2>
 
 ### <a name="parameters"></a>Parametry
 
-*Czas trwania* A `duration` obiektu.
+*Czas trwania*<br/>
+Element `duration` obiektu.
 
-*DIV* wartością całkowitą.
+*Div*<br/>
+Wartość całkowita.
 
-*po lewej stronie* po lewej stronie `duration` obiektu.
+*po lewej stronie*<br/>
+Po lewej stronie `duration` obiektu.
 
-*prawy* po prawej stronie `duration` obiektu.
+*po prawej stronie*<br/>
+Po prawej stronie `duration` obiektu.
 
 ### <a name="return-value"></a>Wartość zwracana
 

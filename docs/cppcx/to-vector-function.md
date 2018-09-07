@@ -15,39 +15,43 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 00ecb00a890629c69994019c9232ff559ea93c96
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: a3dcccc332a5d768a614414838003e1400f3c6a6
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43758881"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44107630"
 ---
 # <a name="tovector-function"></a>to_vector, funkcja
-Zwraca `std::vector` którego wartość jest taka sama jak kolekcja podstawowy określony parametr IVector lub IVectorView.  
-  
-## <a name="syntax"></a>Składnia  
-  
-```  
-template <typename T>  
-inline ::std::vector<T> to_vector(IVector<T>^ v); 
- 
-template <typename T>  
-inline ::std::vector<T> to_vector(IVectorView<T>^ v);  
-```  
-  
-#### <a name="parameters"></a>Parametry  
- `T`  
- Parametrowi typu szablonu.  
-  
- `v`  
- Interfejs IVector lub IVectorView, która zapewnia dostęp do bazowego obiektu wektora lub VectorView.  
-  
-### <a name="return-value"></a>Wartość zwracana  
-  
-### <a name="requirements"></a>Wymagania  
- **Nagłówek:** collection.h  
-  
- **Namespace:** Windows::Foundation:: Collections  
-  
-## <a name="see-also"></a>Zobacz też  
- [Windows::Foundation:: Collections Namespace](../cppcx/windows-foundation-collections-namespace-c-cx.md)
+
+Zwraca `std::vector` którego wartość jest taka sama jak kolekcja podstawowy określony parametr IVector lub IVectorView.
+
+## <a name="syntax"></a>Składnia
+
+```
+template <typename T>
+inline ::std::vector<T> to_vector(IVector<T>^ v);
+
+template <typename T>
+inline ::std::vector<T> to_vector(IVectorView<T>^ v);
+```
+
+#### <a name="parameters"></a>Parametry
+
+*T*<br/>
+Parametrowi typu szablonu.
+
+*v*<br/>
+Interfejs IVector lub IVectorView, która zapewnia dostęp do bazowego obiektu wektora lub VectorView.
+
+### <a name="return-value"></a>Wartość zwracana
+
+### <a name="requirements"></a>Wymagania
+
+**Nagłówek:** collection.h
+
+**Namespace:** Windows::Foundation:: Collections
+
+## <a name="see-also"></a>Zobacz też
+
+[Windows::Foundation:: Collections Namespace](../cppcx/windows-foundation-collections-namespace-c-cx.md)

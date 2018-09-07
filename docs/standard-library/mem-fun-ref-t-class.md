@@ -16,12 +16,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: fc0684d51fd406f16588188555f67fcebb351fbf
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: a2dffdb71b8121073775af52ed42cda205c70589
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38956101"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44100173"
 ---
 # <a name="memfunreft-class"></a>mem_fun_ref_t — Klasa
 
@@ -42,9 +42,11 @@ class mem_fun_ref_t : public unary_function<Type, Result> {
 
 ### <a name="parameters"></a>Parametry
 
-*_Pm* wskaźnik do funkcji składowej klasy typu `Type` do konwersji na obiekt funkcyjny.
+*_Pm*<br/>
+Wskaźnik do funkcji składowej klasy typu `Type` do konwersji na obiekt funkcyjny.
 
-*po lewej stronie* obiektu, *_Pm* wywoływana jest funkcja elementu członkowskiego.
+*left*<br/>
+Obiekt, *_Pm* wywoływana jest funkcja elementu członkowskiego.
 
 ## <a name="return-value"></a>Wartość zwracana
 

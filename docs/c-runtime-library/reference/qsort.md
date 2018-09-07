@@ -35,16 +35,16 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8ac444680a22a99f292b1728181103789435a150
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 87e9ba6ef9bcb4a909e97466d7ea71ee18374991
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32404711"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44110204"
 ---
 # <a name="qsort"></a>qsort
 
-Wykonuje szybkie sortowanie. Bezpieczniejsza wersja ta funkcja jest dostępna; zobacz [qsort_s —](qsort-s.md).
+Wykonuje szybkie sortowanie. Bardziej bezpieczna wersja ta funkcja jest dostępna; zobacz [qsort_s —](qsort-s.md).
 
 ## <a name="syntax"></a>Składnia
 
@@ -59,19 +59,23 @@ void qsort(
 
 ### <a name="parameters"></a>Parametry
 
-*podstawowy* Start tablicy docelowej.
+<br/>
+Początek tablicy docelowej.
 
-*numer* rozmiar w elementach tablicy.
+*Numer*<br/>
+Rozmiar tablicy w elementach.
 
-*szerokość* Element rozmiar w bajtach.
+*width*<br/>
+Element rozmiar w bajtach.
 
-*Porównaj* wskaźnik do procedury dostarczone przez użytkownika, który porównuje dwa elementy tablicy i zwraca wartość określającą ich relacji.
+*Porównanie*<br/>
+Wskaźnik do procedury dostarczone przez użytkownika, która porównuje dwa elementy tablicy i zwraca wartość, która określa ich relacje.
 
 ## <a name="remarks"></a>Uwagi
 
-**Qsort —** funkcja implementuje algorytm szybkiego sortowania, aby posortować tablicę *numer* z elementów *szerokość* bajtów. Argument *podstawowej* wskaźnik do podstawy tablicy ma zostać posortowana. **qsort —** zastępuje tej tablicy przy użyciu posortowanych elementów.
+**Qsort —** funkcja implementuje algorytm szybkiego sortowania, aby posortować tablicę *numer* elementów, z których każdy z *szerokość* bajtów. Argument *podstawowy* jest wskaźnikiem do podstawy tablicy, która ma zostać posortowana. **qsort —** zastępuje tej tablicy przy użyciu posortowanych elementów.
 
-**qsort —** wywołania *porównania* rutynowych co najmniej jeden razy podczas sortowania i przekazuje wskaźników do dwóch elementów tablicy przy każdym wywołaniu.
+**qsort —** wywołania *porównania* rutynowych jeden lub więcej razy w ciągu sortowanie i przekazuje wskaźniki do dwóch elementów tablicy przy każdym wywołaniu.
 
 ```C
 compare( (void *) & elem1, (void *) & elem2 );
@@ -79,15 +83,15 @@ compare( (void *) & elem1, (void *) & elem2 );
 
 Procedura porównuje elementy i zwraca jedną z następujących wartości.
 
-|Porównaj wartości zwracanej — funkcja|Opis|
+|Porównaj wartości zwracanej funkcji|Opis|
 |-----------------------------------|-----------------|
 |< 0|**elem1** mniej niż **elem2**|
 |0|**elem1** odpowiednikiem **elem2**|
-|> 0|**elem1** większa niż **elem2**|
+|> 0|**elem1** większa **elem2**|
 
-Tablicy jest sortowany w kolejności rosnącej, zgodnie z definicją przez funkcję porównania. Sortowanie tablicy w kolejności malejącej, należy wycofać rozumieniu "większe niż" i "poniżej" w funkcji porównania.
+Tablica jest sortowane rosnąco, zgodnie z definicją funkcji porównywania. Aby posortować tablicę w kolejności malejącej, odwrócić sens "równy" i "poniżej" w funkcji porównywania.
 
-Ta funkcja weryfikuje jego parametrów. Jeśli *porównania* lub *numer* jest **NULL**, lub jeśli *podstawowej* jest **NULL** i **numer* jest różna od zera, lub jeśli *szerokość* jest mniejsza od zera, zostanie wywołany program obsługi nieprawidłowych parametrów, zgodnie z opisem w [sprawdzanie poprawności parametru](../../c-runtime-library/parameter-validation.md). Jeśli jest dozwolone wykonywanie, aby kontynuować, funkcja zwraca i **errno** ustawiono **einval —**.
+Ta funkcja sprawdza poprawność swoich parametrów. Jeśli *porównania* lub *numer* jest **o wartości NULL**, lub jeśli *podstawowy* jest **NULL** i **numer* jest różna od zera, lub jeśli *szerokość* jest mniejsza niż zero, zostanie wywołana procedura obsługi nieprawidłowego parametru, zgodnie z opisem w [Parameter Validation](../../c-runtime-library/parameter-validation.md). Jeśli wykonanie może być kontynuowane, funkcja zwraca i **errno** ustawiono **EINVAL**.
 
 ## <a name="requirements"></a>Wymagania
 

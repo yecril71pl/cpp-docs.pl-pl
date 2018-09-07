@@ -16,12 +16,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5051fe82a4d197a1518ccf9c0f3c797108c665e0
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: 99f9219c8f22cf0050c667eac679070151b82ef6
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38961252"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44100336"
 ---
 # <a name="constmemfunreft-class"></a>const_mem_fun_ref_t — Klasa
 
@@ -32,18 +32,20 @@ Klasa adaptera, który umożliwia **const** funkcja elementu członkowskiego, kt
 ```cpp
 template <class Result, class Type>
 class const_mem_fun_ref_t
- : public unary_function<Type, Result>
+: public unary_function<Type, Result>
 {
     explicit const_mem_fun_t(Result (Type::* Pm)() const);
     Result operator()(const Type& left) const;
- };
+};
 ```
 
 ### <a name="parameters"></a>Parametry
 
-*PM* wskaźnik do funkcji składowej klasy typu `Type` do konwersji na obiekt funkcyjny.
+*PM*<br/>
+Wskaźnik do funkcji składowej klasy typu `Type` do konwersji na obiekt funkcyjny.
 
-*po lewej stronie* obiektu, *Pm* wywoływana jest funkcja elementu członkowskiego.
+*left*<br/>
+Obiekt, *Pm* wywoływana jest funkcja elementu członkowskiego.
 
 ## <a name="return-value"></a>Wartość zwracana
 
