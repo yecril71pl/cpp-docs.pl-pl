@@ -20,12 +20,12 @@ helpviewer_keywords:
 - std::operator&lt; (stack)
 - std::operator&lt;= (stack)
 - std::operator== (stack)
-ms.openlocfilehash: 5c4e2f6b0b86e7b13c917eaf50d7f7dd0a55d9d6
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: a013b438bcdf9b84357da5cfbd908d114abe7c34
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38955764"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44103363"
 ---
 # <a name="ltstackgt-operators"></a>&lt;stos&gt; operatorów
 
@@ -44,9 +44,11 @@ bool operator!=(const stack <Type, Container>& left, const stack <Type, Containe
 
 ### <a name="parameters"></a>Parametry
 
-*po lewej stronie* obiektu typu `stack`.
+*left*<br/>
+Obiekt typu `stack`.
 
-*prawy* obiektu typu `stack`.
+*right*<br/>
+Obiekt typu `stack`.
 
 ### <a name="return-value"></a>Wartość zwracana
 
@@ -107,9 +109,11 @@ bool operator<(const stack <Type, Container>& left, const stack <Type, Container
 
 ### <a name="parameters"></a>Parametry
 
-*po lewej stronie* obiektu typu `stack`.
+*left*<br/>
+Obiekt typu `stack`.
 
-*prawy* obiektu typu `stack`.
+*right*<br/>
+Obiekt typu `stack`.
 
 ### <a name="return-value"></a>Wartość zwracana
 
@@ -189,9 +193,11 @@ bool operator<=(const stack <Type, Container>& left, const stack <Type, Containe
 
 ### <a name="parameters"></a>Parametry
 
-*po lewej stronie* obiektu typu `stack`.
+*left*<br/>
+Obiekt typu `stack`.
 
-*prawy* obiektu typu `stack`.
+*right*<br/>
+Obiekt typu `stack`.
 
 ### <a name="return-value"></a>Wartość zwracana
 
@@ -254,9 +260,11 @@ bool operator==(const stack <Type, Container>& left, const stack <Type, Containe
 
 ### <a name="parameters"></a>Parametry
 
-*po lewej stronie* obiektu typu `stack`.
+*left*<br/>
+Obiekt typu `stack`.
 
-*prawy* obiektu typu `stack`.
+*right*<br/>
+Obiekt typu `stack`.
 
 ### <a name="return-value"></a>Wartość zwracana
 
@@ -317,9 +325,11 @@ bool operator>(const stack <Type, Container>& left, const stack <Type, Container
 
 ### <a name="parameters"></a>Parametry
 
-*po lewej stronie* obiektu typu `stack`.
+*left*<br/>
+Obiekt typu `stack`.
 
-*prawy* obiektu typu `stack`.
+*right*<br/>
+Obiekt typu `stack`.
 
 ### <a name="return-value"></a>Wartość zwracana
 
@@ -384,9 +394,11 @@ bool operator>=(const stack <Type, Container>& left, const stack <Type, Containe
 
 ### <a name="parameters"></a>Parametry
 
-*po lewej stronie* obiektu typu `stack`.
+*left*<br/>
+Obiekt typu `stack`.
 
-*prawy* obiektu typu `stack`.
+*right*<br/>
+Obiekt typu `stack`.
 
 ### <a name="return-value"></a>Wartość zwracana
 

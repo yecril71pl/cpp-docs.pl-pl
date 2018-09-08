@@ -20,39 +20,41 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 74d65caa8a0ea140f93bf156e3c14a85232e6e56
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: b140aed55bb1a83224bbe1698ff40695c306a693
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32372259"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44103739"
 ---
 # <a name="delayload-delay-load-import"></a>/DELAYLOAD (Opóźnij importowanie ładowania)
-```  
-/DELAYLOAD:dllname  
-```  
-  
-## <a name="parameters"></a>Parametry  
- `dllname`  
- Nazwa biblioteki DLL, który ma zostać opóźnienia ładowania.  
-  
-## <a name="remarks"></a>Uwagi  
- Opcja/delayload powoduje, że biblioteki DLL, która jest określona przez `dllname` można załadować wyłącznie przy pierwszym wywołaniu przez program do funkcji w tej bibliotece DLL. Aby uzyskać więcej informacji, zobacz [Obsługa konsolidatora dla bibliotek DLL Delay-Loaded](../../build/reference/linker-support-for-delay-loaded-dlls.md). Tę opcję wiele razy umożliwia określić dowolną liczbę bibliotek DLL, wybierz polecenie. Należy użyć Delayimp.lib podczas łączenia z programem lub można zaimplementować własnej funkcji Pomocnik załadować z opóźnieniem.  
-  
- [/DELAY](../../build/reference/delay-delay-load-import-settings.md) opcja określa powiązania i Trwa ładowanie opcji dla każdej biblioteki DLL załadowanych z opóźnieniem.  
-  
-### <a name="to-set-this-linker-option-in-the-visual-studio-development-environment"></a>Aby ustawić tę opcję konsolidatora w środowisku programowania Visual Studio  
-  
-1.  Otwórz projekt **strony właściwości** okno dialogowe. Aby uzyskać więcej informacji, zobacz [Praca z właściwościami projektu](../../ide/working-with-project-properties.md).  
-  
-2.  W **konsolidatora** folderu, wybierz opcję **dane wejściowe** strony właściwości.  
-  
-3.  Modyfikowanie **bibliotek DLL załadowanych z opóźnieniem** właściwości.  
-  
-### <a name="to-set-this-linker-option-programmatically"></a>Aby programowo ustawić tę opcję konsolidatora  
-  
--   Zobacz <xref:Microsoft.VisualStudio.VCProjectEngine.VCLinkerTool.DelayLoadDLLs%2A>.  
-  
-## <a name="see-also"></a>Zobacz też  
- [Ustawianie opcji konsolidatora](../../build/reference/setting-linker-options.md)   
- [Opcje konsolidatora](../../build/reference/linker-options.md)
+
+> **/ DELAYLOAD:**_nazwa_pliku_dll_
+
+## <a name="parameters"></a>Parametry
+
+*Parametr DllName*<br/>
+Nazwa biblioteki DLL, która ma opóźnić obciążenie.
+
+## <a name="remarks"></a>Uwagi
+
+Opcja/delayload powoduje, że biblioteka DLL, która jest określona przez `dllname` , należy załadować tylko przy pierwszym wywołaniu przez program do funkcji w tej bibliotece DLL. Aby uzyskać więcej informacji, zobacz [Obsługa konsolidatora dla bibliotek DLL Delay-Loaded](../../build/reference/linker-support-for-delay-loaded-dlls.md). Tę opcję wiele razy umożliwia określenie dowolnej liczby bibliotek DLL, wybierz polecenie. Musisz użyć Delayimp.lib. podczas połączenia programu lub możesz zaimplementować własną funkcję pomocnika obciążenia opóźnienia.
+
+[/Opóźnienie](../../build/reference/delay-delay-load-import-settings.md) opcja Określa wiązanie i ładowania opcji dla każdej biblioteki DLL ładowanych z opóźnieniem.
+
+### <a name="to-set-this-linker-option-in-the-visual-studio-development-environment"></a>Aby ustawić tę opcję konsolidatora w środowisku programowania Visual Studio
+
+1. Otwórz projekt **stron właściwości** okno dialogowe. Aby uzyskać więcej informacji, zobacz [Praca z właściwościami projektu](../../ide/working-with-project-properties.md).
+
+2. W **konsolidatora** folderu, wybierz **dane wejściowe** stronę właściwości.
+
+3. Modyfikowanie **bibliotek DLL załadowanych z opóźnieniem** właściwości.
+
+### <a name="to-set-this-linker-option-programmatically"></a>Aby programowo ustawić tę opcję konsolidatora
+
+- Zobacz <xref:Microsoft.VisualStudio.VCProjectEngine.VCLinkerTool.DelayLoadDLLs%2A>.
+
+## <a name="see-also"></a>Zobacz też
+
+[Ustawianie opcji konsolidatora](../../build/reference/setting-linker-options.md)   
+[Opcje konsolidatora](../../build/reference/linker-options.md)

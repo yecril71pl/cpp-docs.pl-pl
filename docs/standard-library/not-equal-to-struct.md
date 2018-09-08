@@ -17,12 +17,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e02a48fddfb2e5ff8f85b59b1ff241492461e521
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: 8be70ac575d5459ea6f88ed19d60dbfe0ddfda14
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38966358"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44108788"
 ---
 # <a name="notequalto-struct"></a>not_equal_to — Struktura
 
@@ -51,9 +51,11 @@ struct not_equal_to<void>
 
 *Typ*, *T*, *U* dowolnego typu, który obsługuje `operator!=` przyjmującej argumentów operacji typu określonego lub wywnioskowane uprawnienie.
 
-*Po lewej stronie* lewy operand operacji nierówności. Szablon Niewyspecjalizowana przyjmuje argument odwołania l-wartości typu *typu*. Wyspecjalizowane szablonu doskonała przekazywania l-wartością i argumenty odwołania rvalue wywnioskować typu *T*.
+*po lewej stronie*<br/>
+Lewy operand operacji nierówności. Szablon Niewyspecjalizowana przyjmuje argument odwołania l-wartości typu *typu*. Wyspecjalizowane szablonu doskonała przekazywania l-wartością i argumenty odwołania rvalue wywnioskować typu *T*.
 
-*Po prawej stronie* prawy operand operacji nierówności. Szablon Niewyspecjalizowana przyjmuje argument odwołania l-wartości typu *typu*. Wyspecjalizowane szablonu doskonała przekazywania l-wartością i argumenty odwołania rvalue wywnioskować typu *U*.
+*po prawej stronie*<br/>
+Prawy operand operacji nierówności. Szablon Niewyspecjalizowana przyjmuje argument odwołania l-wartości typu *typu*. Wyspecjalizowane szablonu doskonała przekazywania l-wartością i argumenty odwołania rvalue wywnioskować typu *U*.
 
 ## <a name="return-value"></a>Wartość zwracana
 

@@ -16,33 +16,37 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: dbe88c460dfc3341832abdcda21698357a649570
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 1fe772f1c2925ce28d0e445023ab14d82b9b3f23
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43759918"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44107695"
 ---
 # <a name="platformwrongthreadexception-class"></a>Platform::WrongThreadException, klasa
-Element zgłaszany, gdy wątek wywołuje za pomocą wskaźnika interfejsu dla obiektu serwera proxy, który nie należy do komórka wątku.  
-  
-## <a name="syntax"></a>Składnia  
-  
-```cpp  
-public ref class WrongThreadException : COMException,    IException,    IPrintable,    IEquatable  
-```  
-  
-### <a name="remarks"></a>Uwagi  
- Aby uzyskać więcej informacji, zobacz [COMException](../cppcx/platform-comexception-class.md).  
-  
-### <a name="requirements"></a>Wymagania  
- **Minimalna obsługiwana klienta:** systemu Windows 8  
-  
- **Minimalna obsługiwana serwera:** systemu Windows Server 2012  
-  
- **Namespace:** platformy  
-  
- **Metadane:** platform.winmd  
-  
-## <a name="see-also"></a>Zobacz też  
- [Platform::COMException, klasa](../cppcx/platform-comexception-class.md)
+
+Element zgłaszany, gdy wątek wywołuje za pomocą wskaźnika interfejsu dla obiektu serwera proxy, który nie należy do komórka wątku.
+
+## <a name="syntax"></a>Składnia
+
+```cpp
+public ref class WrongThreadException : COMException,    IException,    IPrintable,    IEquatable
+```
+
+### <a name="remarks"></a>Uwagi
+
+Aby uzyskać więcej informacji, zobacz [COMException](../cppcx/platform-comexception-class.md).
+
+### <a name="requirements"></a>Wymagania
+
+**Minimalna obsługiwana klienta:** systemu Windows 8
+
+**Minimalna obsługiwana serwera:** systemu Windows Server 2012
+
+**Namespace:** platformy
+
+**Metadane:** platform.winmd
+
+## <a name="see-also"></a>Zobacz też
+
+[Platform::COMException, klasa](../cppcx/platform-comexception-class.md)

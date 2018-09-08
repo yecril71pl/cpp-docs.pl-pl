@@ -17,12 +17,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 06fe531330b1043c78882fb511caafe9cc3a7b6d
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: e467f150135fd9960747ec6bb25fd44fd8ae7e7b
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38963810"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44106125"
 ---
 # <a name="greater-struct"></a>greater — Struktura
 
@@ -47,16 +47,18 @@ struct greater<void>
   template <class T, class U>
   auto operator()(T&& Left, U&& Right) const
     ->  decltype(std::forward<T>(Left)> std::forward<U>(Right));
- };
+};
 ```
 
 ### <a name="parameters"></a>Parametry
 
 *Typ*, *T*, *U* dowolnego typu, który obsługuje `operator>` przyjmującej argumentów operacji typu określonego lub wywnioskowane uprawnienie.
 
-*Po lewej stronie* lewy operand większą-niż operacji. Szablon Niewyspecjalizowana przyjmuje argument odwołania l-wartości typu *typu*. Wyspecjalizowane szablonu doskonała przekazywania l-wartością i argumenty odwołania rvalue wywnioskować typu *T*.
+*po lewej stronie*<br/>
+Lewy operand większą-niż operacji. Szablon Niewyspecjalizowana przyjmuje argument odwołania l-wartości typu *typu*. Wyspecjalizowane szablonu doskonała przekazywania l-wartością i argumenty odwołania rvalue wywnioskować typu *T*.
 
-*Po prawej stronie* prawy operand większą-niż operacji. Szablon Niewyspecjalizowana przyjmuje argument odwołania l-wartości typu *typu*. Wyspecjalizowane szablonu doskonała przekazywania l-wartością i argumenty odwołania rvalue wywnioskować typu *U*.
+*po prawej stronie*<br/>
+Prawy operand większą-niż operacji. Szablon Niewyspecjalizowana przyjmuje argument odwołania l-wartości typu *typu*. Wyspecjalizowane szablonu doskonała przekazywania l-wartością i argumenty odwołania rvalue wywnioskować typu *U*.
 
 ## <a name="return-value"></a>Wartość zwracana
 

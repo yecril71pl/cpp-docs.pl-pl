@@ -48,12 +48,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2d0ab896860d1e759b5ad1df6bb23e93f42d28f9
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: 9ff44c6352224b65d712161a62d34b34ee858ad6
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38960134"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44102749"
 ---
 # <a name="timeget-class"></a>time_get — Klasa
 
@@ -70,10 +70,10 @@ class time_get : public time_base;
 ### <a name="parameters"></a>Parametry
 
 *CharType*  
- Typ używany w programie do kodowania znaków.
+Typ używany w programie do kodowania znaków.
 
 *InputIterator*  
- Iterator, z którego są odczytywane wartości czasu.
+Iterator, z którego są odczytywane wartości czasu.
 
 ## <a name="remarks"></a>Uwagi
 
@@ -216,7 +216,7 @@ Odczytuje i konwertuje dane znakowe na wartość czasu. Akceptuje specyfikatora 
 ```cpp
 virtual iter_type
     do_get(
- iter_type first,
+iter_type first,
     iter_type last,
     ios_base& iosbase,
     ios_base::iostate& state,
@@ -227,19 +227,26 @@ virtual iter_type
 
 ### <a name="parameters"></a>Parametry
 
-*pierwszy* iteratora danych wejściowych, który wskazuje początek sekwencji do przekonwertowania.
+*pierwszy*<br/>
+Iterator danych wejściowych, który wskazuje początek sekwencji do przekonwertowania.
 
-*ostatni* iteratora danych wejściowych, który wskazuje na końcu sekwencji.
+*ostatni*<br/>
+Iterator danych wejściowych, który wskazuje na końcu sekwencji.
 
-*iosbase* obiektu strumienia.
+*iosbase*<br/>
+Obiekt strumienia.
 
-*Stan* pola w iosbase gdzie maski bitów odpowiednie elementy są ustawione do sygnalizowania błędów.
+*state*<br/>
+Pole w iosbase gdzie maski bitów odpowiednie elementy są ustawione do sygnalizowania błędów.
 
-*ptm* wskaźnik do struktury czasu, gdy czas ma być przechowywany.
+*ptm*<br/>
+Wskaźnik do struktury czasu, gdy czas ma być przechowywany.
 
-*FMT* znak specyfikatora konwersji.
+*FMT*<br/>
+Znak specyfikatora konwersji.
 
-*mod* znak opcjonalny modyfikator właściwy.
+*dzielenie modulo*<br/>
+Opcjonalny modyfikator właściwy znak.
 
 ### <a name="return-value"></a>Wartość zwracana
 
@@ -314,19 +321,19 @@ virtual iter_type do_get_date(iter_type first,
 ### <a name="parameters"></a>Parametry
 
 *pierwszy*  
- Iterator danych wejściowych, odnoszący się na początku sekwencji, który ma zostać przekonwertowany.
+Iterator danych wejściowych, odnoszący się na początku sekwencji, który ma zostać przekonwertowany.
 
 *ostatni*  
- Iterator danych wejściowych, odnoszący się koniec sekwencji, który ma zostać przekonwertowany.
+Iterator danych wejściowych, odnoszący się koniec sekwencji, który ma zostać przekonwertowany.
 
 *iosbase*  
- Flagi formatu, który po zestaw wskazuje, że symbol waluty jest opcjonalna. w przeciwnym razie jest ona wymagana.
+Flagi formatu, który po zestaw wskazuje, że symbol waluty jest opcjonalna. w przeciwnym razie jest ona wymagana.
 
 *state*  
- Ustawia elementy odpowiedniej maski bitów dla stanu strumień zgodnie z tego, czy operacje zakończyło się pomyślnie.
+Ustawia elementy odpowiedniej maski bitów dla stanu strumień zgodnie z tego, czy operacje zakończyło się pomyślnie.
 
 *ptm*  
- Wskaźnik do której ma być przechowywane informacje o dacie.
+Wskaźnik do której ma być przechowywane informacje o dacie.
 
 ### <a name="return-value"></a>Wartość zwracana
 
@@ -365,19 +372,19 @@ virtual iter_type do_get_monthname(iter_type first,
 ### <a name="parameters"></a>Parametry
 
 *pierwszy*  
- Iterator danych wejściowych, odnoszący się na początku sekwencji, który ma zostać przekonwertowany.
+Iterator danych wejściowych, odnoszący się na początku sekwencji, który ma zostać przekonwertowany.
 
 *ostatni*  
- Iterator danych wejściowych, odnoszący się koniec sekwencji, który ma zostać przekonwertowany.
+Iterator danych wejściowych, odnoszący się koniec sekwencji, który ma zostać przekonwertowany.
 
 *iosbase*  
- Nieużywane.
+Nieużywane.
 
 *state*  
- Parametr wyjściowy, który ustawia elementy odpowiedniej maski bitów dla stanu strumień zgodnie z tego, czy operacje zakończyło się pomyślnie.
+Parametr wyjściowy, który ustawia elementy odpowiedniej maski bitów dla stanu strumień zgodnie z tego, czy operacje zakończyło się pomyślnie.
 
 *ptm*  
- Wskaźnik do której informacje miesiąc ma być przechowywany.
+Wskaźnik do której informacje miesiąc ma być przechowywany.
 
 ### <a name="return-value"></a>Wartość zwracana
 
@@ -408,19 +415,19 @@ virtual iter_type do_get_time(iter_type first,
 ### <a name="parameters"></a>Parametry
 
 *pierwszy*  
- Iterator danych wejściowych, odnoszący się na początku sekwencji, który ma zostać przekonwertowany.
+Iterator danych wejściowych, odnoszący się na początku sekwencji, który ma zostać przekonwertowany.
 
 *ostatni*  
- Iterator danych wejściowych, odnoszący się koniec sekwencji, który ma zostać przekonwertowany.
+Iterator danych wejściowych, odnoszący się koniec sekwencji, który ma zostać przekonwertowany.
 
 *iosbase*  
- Nieużywane.
+Nieużywane.
 
 *state*  
- Ustawia elementy odpowiedniej maski bitów dla stanu strumień zgodnie z tego, czy operacje zakończyło się pomyślnie.
+Ustawia elementy odpowiedniej maski bitów dla stanu strumień zgodnie z tego, czy operacje zakończyło się pomyślnie.
 
 *ptm*  
- Wskaźnik do której ma być przechowywane informacje o dacie.
+Wskaźnik do której ma być przechowywane informacje o dacie.
 
 ### <a name="return-value"></a>Wartość zwracana
 
@@ -459,19 +466,19 @@ virtual iter_type do_get_weekday(iter_type first,
 ### <a name="parameters"></a>Parametry
 
 *pierwszy*  
- Iterator danych wejściowych, odnoszący się na początku sekwencji, który ma zostać przekonwertowany.
+Iterator danych wejściowych, odnoszący się na początku sekwencji, który ma zostać przekonwertowany.
 
 *ostatni*  
- Iterator danych wejściowych, odnoszący się koniec sekwencji, który ma zostać przekonwertowany.
+Iterator danych wejściowych, odnoszący się koniec sekwencji, który ma zostać przekonwertowany.
 
 *iosbase*  
- Flagi formatu, który po zestaw wskazuje, że symbol waluty jest opcjonalna. w przeciwnym razie jest ona wymagana.
+Flagi formatu, który po zestaw wskazuje, że symbol waluty jest opcjonalna. w przeciwnym razie jest ona wymagana.
 
 *state*  
- Ustawia elementy odpowiedniej maski bitów dla stanu strumień zgodnie z tego, czy operacje zakończyło się pomyślnie.
+Ustawia elementy odpowiedniej maski bitów dla stanu strumień zgodnie z tego, czy operacje zakończyło się pomyślnie.
 
 *ptm*  
- Wskaźnik do której ma być przechowywany informacji dzień tygodnia.
+Wskaźnik do której ma być przechowywany informacji dzień tygodnia.
 
 ### <a name="return-value"></a>Wartość zwracana
 
@@ -502,19 +509,19 @@ virtual iter_type do_get_year(iter_type first,
 ### <a name="parameters"></a>Parametry
 
 *pierwszy*  
- Iterator danych wejściowych, odnoszący się na początku sekwencji, który ma zostać przekonwertowany.
+Iterator danych wejściowych, odnoszący się na początku sekwencji, który ma zostać przekonwertowany.
 
 *ostatni*  
- Iterator danych wejściowych, odnoszący się koniec sekwencji, który ma zostać przekonwertowany.
+Iterator danych wejściowych, odnoszący się koniec sekwencji, który ma zostać przekonwertowany.
 
 *iosbase*  
- Flagi formatu, który po zestaw wskazuje, że symbol waluty jest opcjonalna. w przeciwnym razie jest ona wymagana.
+Flagi formatu, który po zestaw wskazuje, że symbol waluty jest opcjonalna. w przeciwnym razie jest ona wymagana.
 
 *state*  
- Ustawia elementy odpowiedniej maski bitów dla stanu strumień zgodnie z tego, czy operacje zakończyło się pomyślnie.
+Ustawia elementy odpowiedniej maski bitów dla stanu strumień zgodnie z tego, czy operacje zakończyło się pomyślnie.
 
 *ptm*  
- Wskaźnik do których informacji o roku ma być przechowywany.
+Wskaźnik do których informacji o roku ma być przechowywany.
 
 ### <a name="return-value"></a>Wartość zwracana
 
@@ -557,31 +564,31 @@ iter_type get(
 ### <a name="parameters"></a>Parametry
 
 *pierwszy*  
- Iterator danych wejściowych, która wskazuje, gdzie rozpoczyna się sekwencja, który ma zostać przekonwertowany.
+Iterator danych wejściowych, która wskazuje, gdzie rozpoczyna się sekwencja, który ma zostać przekonwertowany.
 
 *ostatni*  
- Iterator danych wejściowych, który wskazuje koniec sekwencji, który ma zostać przekonwertowany.
+Iterator danych wejściowych, który wskazuje koniec sekwencji, który ma zostać przekonwertowany.
 
 *iosbase*  
- Strumień.
+Strumień.
 
 *state*  
- Elementy odpowiedniej maski bitów są ustawiane dla stanu strumienia do sygnalizowania błędów.
+Elementy odpowiedniej maski bitów są ustawiane dla stanu strumienia do sygnalizowania błędów.
 
 *ptm*  
- Wskaźnik do struktury czasu, gdy czas ma być przechowywany.
+Wskaźnik do struktury czasu, gdy czas ma być przechowywany.
 
 *FMT*  
- Znak specyfikatora konwersji.
+Znak specyfikatora konwersji.
 
 *dzielenie modulo*  
- Opcjonalny modyfikator właściwy znak.
+Opcjonalny modyfikator właściwy znak.
 
 *fmt_first*  
- Wskazuje gdzie rozpocząć dyrektywy formatu.
+Wskazuje gdzie rozpocząć dyrektywy formatu.
 
 *fmt_last*  
- Wskazuje koniec dyrektywy formatu.
+Wskazuje koniec dyrektywy formatu.
 
 ### <a name="return-value"></a>Wartość zwracana
 
@@ -614,19 +621,19 @@ iter_type get_date(iter_type first,
 ### <a name="parameters"></a>Parametry
 
 *pierwszy*  
- Iterator danych wejściowych, odnoszący się na początku sekwencji, który ma zostać przekonwertowany.
+Iterator danych wejściowych, odnoszący się na początku sekwencji, który ma zostać przekonwertowany.
 
 *ostatni*  
- Iterator danych wejściowych, odnoszący się koniec sekwencji, który ma zostać przekonwertowany.
+Iterator danych wejściowych, odnoszący się koniec sekwencji, który ma zostać przekonwertowany.
 
 *iosbase*  
- Flagi formatu, który po zestaw wskazuje, że symbol waluty jest opcjonalna. w przeciwnym razie jest ona wymagana.
+Flagi formatu, który po zestaw wskazuje, że symbol waluty jest opcjonalna. w przeciwnym razie jest ona wymagana.
 
 *state*  
- Ustawia elementy odpowiedniej maski bitów dla stanu strumień zgodnie z tego, czy operacje zakończyło się pomyślnie.
+Ustawia elementy odpowiedniej maski bitów dla stanu strumień zgodnie z tego, czy operacje zakończyło się pomyślnie.
 
 *ptm*  
- Wskaźnik do której ma być przechowywane informacje o dacie.
+Wskaźnik do której ma być przechowywane informacje o dacie.
 
 ### <a name="return-value"></a>Wartość zwracana
 
@@ -708,19 +715,19 @@ iter_type get_monthname(iter_type first,
 ### <a name="parameters"></a>Parametry
 
 *pierwszy*  
- Iterator danych wejściowych, odnoszący się na początku sekwencji, który ma zostać przekonwertowany.
+Iterator danych wejściowych, odnoszący się na początku sekwencji, który ma zostać przekonwertowany.
 
 *ostatni*  
- Iterator danych wejściowych, odnoszący się koniec sekwencji, który ma zostać przekonwertowany.
+Iterator danych wejściowych, odnoszący się koniec sekwencji, który ma zostać przekonwertowany.
 
 *iosbase*  
- Nieużywane.
+Nieużywane.
 
 *state*  
- Parametr wyjściowy, który ustawia elementy odpowiedniej maski bitów dla stanu strumień zgodnie z tego, czy operacje zakończyło się pomyślnie.
+Parametr wyjściowy, który ustawia elementy odpowiedniej maski bitów dla stanu strumień zgodnie z tego, czy operacje zakończyło się pomyślnie.
 
 *ptm*  
- Wskaźnik do której informacje miesiąc ma być przechowywany.
+Wskaźnik do której informacje miesiąc ma być przechowywany.
 
 ### <a name="return-value"></a>Wartość zwracana
 
@@ -800,19 +807,19 @@ iter_type get_time(iter_type first,
 ### <a name="parameters"></a>Parametry
 
 *pierwszy*  
- Iterator danych wejściowych, odnoszący się na początku sekwencji, który ma zostać przekonwertowany.
+Iterator danych wejściowych, odnoszący się na początku sekwencji, który ma zostać przekonwertowany.
 
 *ostatni*  
- Iterator danych wejściowych, odnoszący się koniec sekwencji, który ma zostać przekonwertowany.
+Iterator danych wejściowych, odnoszący się koniec sekwencji, który ma zostać przekonwertowany.
 
 *iosbase*  
- Nieużywane.
+Nieużywane.
 
 *state*  
- Ustawia elementy odpowiedniej maski bitów dla stanu strumień zgodnie z tego, czy operacje zakończyło się pomyślnie.
+Ustawia elementy odpowiedniej maski bitów dla stanu strumień zgodnie z tego, czy operacje zakończyło się pomyślnie.
 
 *ptm*  
- Wskaźnik do której ma być przechowywane informacje o dacie.
+Wskaźnik do której ma być przechowywane informacje o dacie.
 
 ### <a name="return-value"></a>Wartość zwracana
 
@@ -881,19 +888,19 @@ iter_type get_weekday(iter_type first,
 ### <a name="parameters"></a>Parametry
 
 *pierwszy*  
- Iterator danych wejściowych, odnoszący się na początku sekwencji, który ma zostać przekonwertowany.
+Iterator danych wejściowych, odnoszący się na początku sekwencji, który ma zostać przekonwertowany.
 
 *ostatni*  
- Iterator danych wejściowych, odnoszący się koniec sekwencji, który ma zostać przekonwertowany.
+Iterator danych wejściowych, odnoszący się koniec sekwencji, który ma zostać przekonwertowany.
 
 *iosbase*  
- Flagi formatu, który po zestaw wskazuje, że symbol waluty jest opcjonalna. w przeciwnym razie jest ona wymagana.
+Flagi formatu, który po zestaw wskazuje, że symbol waluty jest opcjonalna. w przeciwnym razie jest ona wymagana.
 
 *state*  
- Ustawia elementy odpowiedniej maski bitów dla stanu strumień zgodnie z tego, czy operacje zakończyło się pomyślnie.
+Ustawia elementy odpowiedniej maski bitów dla stanu strumień zgodnie z tego, czy operacje zakończyło się pomyślnie.
 
 *ptm*  
- Wskaźnik do której ma być przechowywany informacji dzień tygodnia.
+Wskaźnik do której ma być przechowywany informacji dzień tygodnia.
 
 ### <a name="return-value"></a>Wartość zwracana
 
@@ -958,19 +965,19 @@ iter_type get_year(iter_type first,
 ### <a name="parameters"></a>Parametry
 
 *pierwszy*  
- Iterator danych wejściowych, odnoszący się na początku sekwencji, który ma zostać przekonwertowany.
+Iterator danych wejściowych, odnoszący się na początku sekwencji, który ma zostać przekonwertowany.
 
 *ostatni*  
- Iterator danych wejściowych, odnoszący się koniec sekwencji, który ma zostać przekonwertowany.
+Iterator danych wejściowych, odnoszący się koniec sekwencji, który ma zostać przekonwertowany.
 
 *iosbase*  
- Flagi formatu, który po zestaw wskazuje, że symbol waluty jest opcjonalna. w przeciwnym razie jest ona wymagana.
+Flagi formatu, który po zestaw wskazuje, że symbol waluty jest opcjonalna. w przeciwnym razie jest ona wymagana.
 
 *state*  
- Ustawia elementy odpowiedniej maski bitów dla stanu strumień zgodnie z tego, czy operacje zakończyło się pomyślnie.
+Ustawia elementy odpowiedniej maski bitów dla stanu strumień zgodnie z tego, czy operacje zakończyło się pomyślnie.
 
 *ptm*  
- Wskaźnik do których informacji o roku ma być przechowywany.
+Wskaźnik do których informacji o roku ma być przechowywany.
 
 ### <a name="return-value"></a>Wartość zwracana
 
@@ -1044,7 +1051,7 @@ explicit time_get(size_t refs = 0);
 ### <a name="parameters"></a>Parametry
 
 *System plików refs*  
- Wartość liczby całkowitej, można określić typ zarządzania pamięci dla obiektu.
+Wartość liczby całkowitej, można określić typ zarządzania pamięci dla obiektu.
 
 ### <a name="remarks"></a>Uwagi
 

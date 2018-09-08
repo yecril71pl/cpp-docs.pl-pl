@@ -16,12 +16,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: bbd2f2c652c619a954b789a3b765fc636a03c33e
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: 040687a4218f24bb57f20ea3307dbf69ffa3f37d
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38962727"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44108400"
 ---
 # <a name="binder2nd-class"></a>binder2nd — Klasa
 
@@ -53,11 +53,14 @@ protected:
 
 ### <a name="parameters"></a>Parametry
 
-*FUNC* obiektu binarnego funkcja do konwersji na obiekt funkcyjny jednoargumentowy.
+*FUNC*<br/>
+Obiekt binarny funkcji do konwersji na obiekt funkcyjny jednoargumentowy.
 
-*prawy* wartości, do którego ma zostać powiązany drugi argument obiektu binarnego funkcji.
+*right*<br/>
+Wartość, do którego ma zostać powiązany drugi argument obiektu binarnego funkcji.
 
-*po lewej stronie* wartość argumentu, który porównuje dostosowane obiektu binarnego stała wartość drugiego argumentu.
+*left*<br/>
+Wartość argumentu, który porównuje dostosowane obiektu binarnego stała wartość drugiego argumentu.
 
 ## <a name="return-value"></a>Wartość zwracana
 

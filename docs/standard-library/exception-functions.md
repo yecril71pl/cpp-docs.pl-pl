@@ -26,12 +26,12 @@ helpviewer_keywords:
 - std::terminate [C++]
 - std::uncaught_exception [C++]
 - std::unexpected [C++]
-ms.openlocfilehash: 5734c745f19d22c562f68aa2b518c9b4315ba12e
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: 9401772e35527c63f47dc10bbb0e501029558825
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38962276"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44105409"
 ---
 # <a name="ltexceptiongt-functions"></a>&lt;wyjątek&gt; funkcji
 
@@ -75,7 +75,8 @@ exception_ptr make_exception_ptr(E Except);
 
 ### <a name="parameters"></a>Parametry
 
-*Z wyjątkiem* klasy, z wyjątkiem do skopiowania. Zwykle określaj [klasy wyjątku](../standard-library/exception-class.md) obiekt jako argument `make_exception_ptr` funkcji, mimo że dowolny obiekt klasy może być argumentem.
+*Z wyjątkiem*<br/>
+Klasa z wyjątkiem do skopiowania. Zwykle określaj [klasy wyjątku](../standard-library/exception-class.md) obiekt jako argument `make_exception_ptr` funkcji, mimo że dowolny obiekt klasy może być argumentem.
 
 ### <a name="return-value"></a>Wartość zwracana
 
@@ -97,7 +98,8 @@ void rethrow_exception(exception_ptr P);
 
 ### <a name="parameters"></a>Parametry
 
-*P* przechwycony wyjątek do ponownego zgłoszenia. Jeśli *P* ma wartość null [exception_ptr](../standard-library/exception-typedefs.md#exception_ptr), funkcja zgłasza [std::bad_exception](../standard-library/bad-exception-class.md).
+*P*<br/>
+Przechwycony wyjątek do ponownego zgłoszenia. Jeśli *P* ma wartość null [exception_ptr](../standard-library/exception-typedefs.md#exception_ptr), funkcja zgłasza [std::bad_exception](../standard-library/bad-exception-class.md).
 
 ### <a name="remarks"></a>Uwagi
 
@@ -121,7 +123,8 @@ terminate_handler set_terminate(terminate_handler fnew) throw();
 
 ### <a name="parameters"></a>Parametry
 
-*fnew* funkcja wywoływana po zakończeniu.
+*fnew*<br/>
+Funkcja wywoływana po zakończeniu.
 
 ### <a name="return-value"></a>Wartość zwracana
 
@@ -178,7 +181,8 @@ unexpected_handler set_unexpected(unexpected_handler fnew) throw();
 
 ### <a name="parameters"></a>Parametry
 
-*fnew* funkcja wywoływana, gdy Napotkano nieoczekiwany wyjątek.
+*fnew*<br/>
+Funkcja wywoływana, gdy Napotkano nieoczekiwany wyjątek.
 
 ### <a name="return-value"></a>Wartość zwracana
 

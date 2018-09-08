@@ -25,16 +25,16 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6b0fecd7eefe9ac6a7a479fb12475b2b1c769cf4
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 26e66b6ad47af521bb5188860d7d987e9d3b5f6b
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32405474"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44100841"
 ---
 # <a name="invalidparameter-invalidparameternoinfo-invalidparameternoinfonoreturn-invokewatson"></a>_invalid_parameter, _invalid_parameter_noinfo, _invalid_parameter_noinfo_noreturn, _invoke_watson
 
-Funkcje te są używane przez biblioteki wykonawczej C do obsługi nieprawidłowych parametrów przekazanych do funkcji CRT biblioteki. Kod może także korzystania z tych funkcji do obsługi domyślne lub dostosować obsługi nieprawidłowych parametrów.
+Te funkcje są używane przez biblioteki środowiska uruchomieniowego języka C do obsługi nieprawidłowych parametrów przekazana do funkcji biblioteki CRT. Na potrzeby obsługi domyślne lub możliwe do dostosowania obsługi nieprawidłowych parametrów kodu możesz skorzystać z tych funkcji.
 
 ## <a name="syntax"></a>Składnia
 
@@ -64,29 +64,34 @@ _invoke_watson(
 
 ## <a name="parameters"></a>Parametry
 
-*wyrażenie* ciąg reprezentujący wyrażenie parametru kodu źródłowego jest nieprawidłowy.
+*Wyrażenie*<br/>
+Ciąg reprezentujący wyrażenie parametru kodu źródłowego, które jest nieprawidłowy.
 
-*nazwa_funkcji* nazwę funkcji, która wywołuje program obsługi.
+*nazwa_funkcji*<br/>
+Nazwa funkcji, która wywołuje program obsługi.
 
-*nazwa_pliku* pliku źródła kodu, w którym została wywołana przez program obsługi.
+*nazwa_pliku*<br/>
+Plik kodu źródłowego, gdzie został wywołany program obsługi.
 
-*line_number* numer wiersza w kodzie źródłowym, gdy została wywołana przez program obsługi.
+*line_number*<br/>
+Numer wiersza w kodzie źródłowym, gdzie został wywołany program obsługi.
 
-*zastrzeżone* węzła nieużywane.
+*Zastrzeżone*<br/>
+Nieużywane.
 
 ## <a name="return-value"></a>Wartość zwracana
 
-Te funkcje nie zwracają wartość. **_Invalid_parameter_noinfo_noreturn** i **_invoke_watson** nie zwracają do elementu wywołującego, a w niektórych przypadkach **_invalid_parameter** i **_invalid_parameter_noinfo** nie może zwracać do obiektu wywołującego.
+Te funkcje nie zwracają wartości. **_Invalid_parameter_noinfo_noreturn** i **_invoke_watson** funkcje nie zwracają do obiektu wywołującego, a w niektórych przypadkach **_invalid_parameter** i **_invalid_parameter_noinfo** mogą nie zwracać wywołującemu.
 
 ## <a name="remarks"></a>Uwagi
 
-Gdy funkcje biblioteki czasu wykonywania języka C przekazano nieprawidłowe parametry, biblioteka funkcji wywołania *program obsługi nieprawidłowych parametrów*, funkcji, która może zostać określona przez programistę wykonywać kilka czynności. Na przykład go może Zgłoś problem do użytkownika, zapisu w dzienniku, przerwanie w debugerze, zakończyć program lub w ogóle nic nie rób. Jeśli funkcja nie jest określona przez programistę domyślny program obsługi **_invoke_watson**, nosi nazwę.
+Gdy funkcje biblioteki środowiska uruchomieniowego języka C przekazano nieprawidłowe parametry, biblioteka funkcji wywołanie *nieprawidłowy parametr uchwytu*, funkcja, która może być określone przez programisty, należy wykonać kilka czynności. Na przykład go może zgłosić problem do użytkownika, zapisu w dzienniku, przerwanie w debugerze, zakończyć program lub nie rób nic w ogóle. Jeśli żadna funkcja nie jest określony przez programistę domyślny program obsługi **_invoke_watson**, jest wywoływana.
 
-Domyślnie, gdy nie jest prawidłowym parametrem zostanie zidentyfikowana w debugowaniu kodu, funkcje bibliotek CRT wywołanie funkcji **_invalid_parameter** przy użyciu pełnego parametrów. W kodzie bez debugowania **_invalid_parameter_noinfo** funkcja jest wywoływana, które wywołuje **_invalid_parameter** funkcji przy użyciu parametrów puste. Jeśli funkcja biblioteki CRT bez debugowania wymaga zakończenie programu **_invalid_parameter_noinfo_noreturn** funkcja jest wywoływana, które wywołuje **_invalid_parameter** funkcji przy użyciu pustego Parametry, a następnie wywołania **_invoke_watson** funkcji, aby wymusić Kończenie działania programu.
+Domyślnie, gdy nie jest prawidłowym parametrem jest zidentyfikowany w kodzie debugowania funkcji biblioteki CRT wywołanie funkcji **_invalid_parameter** przy użyciu pełnych parametrów. W kodzie bez debugowania **_invalid_parameter_noinfo** zostanie wywołana funkcja, która wywołuje metodę **_invalid_parameter** funkcję za pomocą puste parametry. Jeśli funkcja biblioteki CRT bez debugowania wymaga zakończenie programu **_invalid_parameter_noinfo_noreturn** zostanie wywołana funkcja, która wywołuje metodę **_invalid_parameter** funkcję za pomocą pustego Parametry, następuje wywołanie **_invoke_watson** funkcję, aby wymusić zakończenie programu.
 
-**_Invalid_parameter** funkcji kontroli czy ustawiono obsługi zdefiniowane przez użytkownika nieprawidłowy parametr, a jeśli tak, określa je. Na przykład, jeśli program lokalnej wątku obsługi zdefiniowane przez użytkownika została ustawiona przez wywołanie do [set_thread_local_invalid_parameter_handler](set-invalid-parameter-handler-set-thread-local-invalid-parameter-handler.md) w bieżącym wątku jest wywoływana, a następnie zwraca funkcję. W przeciwnym razie, jeśli program obsługi zdefiniowane przez użytkownika globalne nieprawidłowy parametr został ustawiony przez wywołanie do [set_invalid_parameter_handler —](set-invalid-parameter-handler-set-thread-local-invalid-parameter-handler.md), jest ona wywoływana, a następnie zwraca funkcję. W przeciwnym razie domyślny program obsługi **_invoke_watson** jest wywoływana. Domyślne zachowanie **_invoke_watson** jest, aby zakończyć program. Programy obsługi zdefiniowane przez użytkownika może zakończyć lub return. Firma Microsoft zaleca, programy obsługi zdefiniowane przez użytkownika zakończyć program, chyba że odzyskiwanie zostało określone.
+**_Invalid_parameter** funkcja sprawdza czy ustawiono użytkownika nieprawidłowy parametr uchwytu, a jeśli tak, ją wywołuje. Na przykład, jeśli program obsługi wątków lokalnych zdefiniowanych przez użytkownika została ustawiona przez wywołanie [set_thread_local_invalid_parameter_handler](set-invalid-parameter-handler-set-thread-local-invalid-parameter-handler.md) w bieżącym wątku, jest wywoływana, wówczas funkcja zwraca. W przeciwnym razie, jeśli zdefiniowany przez użytkownika globalnego nieprawidłowy parametr uchwytu została ustawiona przez wywołanie [set_invalid_parameter_handler —](set-invalid-parameter-handler-set-thread-local-invalid-parameter-handler.md), jest wywoływana, a następnie funkcja zwraca. W przeciwnym razie domyślny program obsługi **_invoke_watson** jest wywoływana. Domyślne zachowanie **_invoke_watson** jest, aby zakończyć program. Programy obsługi zdefiniowane przez użytkownika może zakończyć lub return. Firma Microsoft zaleca, programy obsługi zdefiniowane przez użytkownika zakończyć program, chyba że odzyskiwania jest określone.
 
-Gdy domyślny program obsługi **_invoke_watson** jest wywoływana, gdy procesor obsługuje [__fastfail](../../intrinsics/fastfail.md) operacji jest wywoływana przy użyciu parametru **FAST_FAIL_INVALID_ARG** i kończy proces. W przeciwnym razie wartość niepowodzenie szybkiego Wystąpił wyjątek, które mogą podlegać dołączony debuger. Jeśli proces będzie mógł kontynuować, zostanie zakończony przez wywołanie do systemu Windows **TerminateProcess** funkcji przy użyciu stan kod wyjątku **STATUS_INVALID_CRUNTIME_PARAMETER**.
+Gdy domyślny program obsługi **_invoke_watson** jest wywoływana, gdy procesor obsługuje [__fastfail](../../intrinsics/fastfail.md) operacji jest wywoływany przy użyciu parametru **FAST_FAIL_INVALID_ARG** i kończy proces. W przeciwnym razie niepowodzenie szybkie zgłaszany jest wyjątek, który może zostać przechwycony przez dołączony debuger. Jeśli ten proces może być kontynuowane, zostanie zakończony przez wywołanie Windows **TerminateProcess** funkcję za pomocą stan kod wyjątku **STATUS_INVALID_CRUNTIME_PARAMETER**.
 
 ## <a name="requirements"></a>Wymagania
 

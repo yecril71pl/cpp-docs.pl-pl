@@ -20,12 +20,12 @@ helpviewer_keywords:
 - std::operator&lt;&lt; (bitset)
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7d01a9ad5ef0b5cc3198231ae2b361e04856449f
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: 83e6e1bc3d35f076d3a1b8fd2151ad4c94c060cb
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38955023"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44107659"
 ---
 # <a name="ltbitsetgt-operators"></a>&lt;bitset —&gt; operatorów
 
@@ -48,9 +48,11 @@ operator&(
 
 ### <a name="parameters"></a>Parametry
 
-*po lewej stronie* pierwsza z dwóch bitsets, w której odpowiednie elementy, które mają być łączone za pomocą operatora testu koniunkcji `AND`.
+*left*<br/>
+Pierwsza z dwóch bitsets, w której odpowiednie elementy, które mają być łączone za pomocą operatora testu koniunkcji `AND`.
 
-*prawy* drugi dwóch valarrays, w której odpowiednie elementy, które mają być łączone za pomocą operatora testu koniunkcji `AND`.
+*right*<br/>
+Drugi dwóch valarrays, w której odpowiednie elementy, które mają być łączone za pomocą operatora testu koniunkcji `AND`.
 
 ### <a name="return-value"></a>Wartość zwracana
 
@@ -98,7 +100,8 @@ basic_ostream<CharType, Traits>& operator<<(
 
 ### <a name="parameters"></a>Parametry
 
-*prawy* obiektu typu **bitset —\<N >** który ma zostać wstawiony do strumienia wyjściowego, jako ciąg.
+*right*<br/>
+Obiekt typu **bitset —\<N >** który ma zostać wstawiony do strumienia wyjściowego, jako ciąg.
 
 ### <a name="return-value"></a>Wartość zwracana
 
@@ -157,9 +160,11 @@ _Istr,
 
 ### <a name="parameters"></a>Parametry
 
-*_Istr* ciąg, który jest wprowadzany do strumienia wejściowego, który ma zostać wstawiony do bitset —.
+*_Istr*<br/>
+Ciąg, który jest wprowadzany do strumienia wejściowego, który ma zostać wstawiony do bitset —.
 
-*prawy* bitset —, który otrzymuje bity ze strumienia wejściowego.
+*right*<br/>
+Bitset — otrzymuje bity ze strumienia wejściowego.
 
 ### <a name="return-value"></a>Wartość zwracana
 
@@ -240,9 +245,11 @@ operator^(
 
 ### <a name="parameters"></a>Parametry
 
-*po lewej stronie* pierwsza z dwóch bitsets, w której odpowiednie elementy, które mają być łączone za pomocą operatora testu koniunkcji `EXCLUSIVE-OR`.
+*left*<br/>
+Pierwsza z dwóch bitsets, w której odpowiednie elementy, które mają być łączone za pomocą operatora testu koniunkcji `EXCLUSIVE-OR`.
 
-*prawy* drugi dwóch valarrays, w której odpowiednie elementy, które mają być łączone za pomocą operatora testu koniunkcji `EXCLUSIVE-OR`.
+*right*<br/>
+Drugi dwóch valarrays, w której odpowiednie elementy, które mają być łączone za pomocą operatora testu koniunkcji `EXCLUSIVE-OR`.
 
 ### <a name="return-value"></a>Wartość zwracana
 
@@ -290,9 +297,11 @@ operator|(
 
 ### <a name="parameters"></a>Parametry
 
-*po lewej stronie* pierwsza z dwóch bitsets, w której odpowiednie elementy, które mają być łączone za pomocą operatora testu koniunkcji `OR`.
+*left*<br/>
+Pierwsza z dwóch bitsets, w której odpowiednie elementy, które mają być łączone za pomocą operatora testu koniunkcji `OR`.
 
-*prawy* drugi dwóch valarrays, w której odpowiednie elementy, które mają być łączone za pomocą operatora testu koniunkcji `OR`.
+*right*<br/>
+Drugi dwóch valarrays, w której odpowiednie elementy, które mają być łączone za pomocą operatora testu koniunkcji `OR`.
 
 ### <a name="return-value"></a>Wartość zwracana
 

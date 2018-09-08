@@ -9,12 +9,12 @@ f1_keywords:
 dev_langs:
 - C++
 ms.assetid: 24b9bb9e-e983-4060-bce5-2c7c8161ee61
-ms.openlocfilehash: 135922bb88b02c00849a577fb8d8457b6fb21989
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: bd140fed954c097fa73f179c92cbc64f3148e77c
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38958240"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44108464"
 ---
 # <a name="lthashmapgt-operators"></a>&lt;hash_map —&gt; operatorów
 
@@ -36,9 +36,11 @@ bool operator!=(const hash_map <Key, Type, Traits, Allocator>& left, const hash_
 
 ### <a name="parameters"></a>Parametry
 
-*po lewej stronie* obiektu typu `hash_map`.
+*left*<br/>
+Obiekt typu `hash_map`.
 
-*prawy* obiektu typu `hash_map`.
+*right*<br/>
+Obiekt typu `hash_map`.
 
 ### <a name="return-value"></a>Wartość zwracana
 
@@ -103,9 +105,11 @@ bool operator==(const hash_map <Key, Type, Traits, Allocator>& left, const hash_
 
 ### <a name="parameters"></a>Parametry
 
-*po lewej stronie* obiektu typu `hash_map`.
+*left*<br/>
+Obiekt typu `hash_map`.
 
-*prawy* obiektu typu `hash_map`.
+*right*<br/>
+Obiekt typu `hash_map`.
 
 ### <a name="return-value"></a>Wartość zwracana
 
@@ -168,9 +172,11 @@ bool operator!=(const hash_multimap <Key, Type, Traits, Allocator>& left, const 
 
 ### <a name="parameters"></a>Parametry
 
-*po lewej stronie* obiektu typu `hash_multimap`.
+*left*<br/>
+Obiekt typu `hash_multimap`.
 
-*prawy* obiektu typu `hash_multimap`.
+*right*<br/>
+Obiekt typu `hash_multimap`.
 
 ### <a name="return-value"></a>Wartość zwracana
 
@@ -233,9 +239,11 @@ bool operator==(const hash_multimap <Key, Type, Traits, Allocator>& left, const 
 
 ### <a name="parameters"></a>Parametry
 
-*po lewej stronie* obiektu typu `hash_multimap`.
+*left*<br/>
+Obiekt typu `hash_multimap`.
 
-*prawy* obiektu typu `hash_multimap`.
+*right*<br/>
+Obiekt typu `hash_multimap`.
 
 ### <a name="return-value"></a>Wartość zwracana
 

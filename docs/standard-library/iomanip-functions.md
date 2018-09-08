@@ -28,12 +28,12 @@ helpviewer_keywords:
 - std::setiosflags [C++]
 - std::setprecision [C++]
 - std::setw [C++]
-ms.openlocfilehash: 5882a2fc31d5c9369429cdc39fb86a1c08e0c828
-ms.sourcegitcommit: 7eadb968405bcb92ffa505e3ad8ac73483e59685
+ms.openlocfilehash: 673289f5ac8b739dfe7c1a4de446a37d85763452
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/23/2018
-ms.locfileid: "39208835"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44108412"
 ---
 # <a name="ltiomanipgt-functions"></a>&lt;iomanip&gt; funkcji
 
@@ -55,9 +55,11 @@ T7 get_money(Money& _Amount, bool _Intl);
 
 ### <a name="parameters"></a>Parametry
 
-*_Amount* wyodrębniona wartość pieniężną.
+*_Amount*<br/>
+Wyodrębniona wartość pieniężną.
 
-*_Intl* Jeśli **true**, użyj formatu międzynarodowe. Wartość domyślna to **false**.
+*_Intl*<br/>
+Jeśli **true**, użyj formatu międzynarodowe. Wartość domyślna to **false**.
 
 ### <a name="remarks"></a>Uwagi
 
@@ -76,9 +78,11 @@ T10 put_time(struct tm *_Tptr, const Elem *_Fmt);
 
 ### <a name="parameters"></a>Parametry
 
-*_Tptr* czasu w postaci struktury czasu.
+*_Tptr*<br/>
+Czas w postaci struktury czasu.
 
-*_Fmt* żądany format do użycia w celu uzyskania wartości godziny.
+*_Fmt*<br/>
+Żądany format do użycia w celu uzyskania wartości godziny.
 
 ### <a name="remarks"></a>Uwagi
 
@@ -95,9 +99,11 @@ T8 put_money(const Money& _Amount, bool _Intl);
 
 ### <a name="parameters"></a>Parametry
 
-*_Amount* kwotę pieniężną do wstawienia do strumienia.
+*_Amount*<br/>
+Pieniężna do wstawienia do strumienia.
 
-*_Intl* równa **true** Jeśli manipulator powinien używać formacie międzynarodowym, **false** Jeśli nie powinien.
+*_Intl*<br/>
+Ustaw **true** Jeśli manipulator powinien używać formacie międzynarodowym, **false** Jeśli nie powinien.
 
 ### <a name="return-value"></a>Wartość zwracana
 
@@ -120,9 +126,11 @@ T10 put_time(struct tm* _Tptr, const Elem* _Fmt);
 
 ### <a name="parameters"></a>Parametry
 
-*_Tptr* wartości godziny do zapisu do strumienia, podany w strukturze czasu.
+*_Tptr*<br/>
+Wartość czasu, który można zapisać do strumienia, podany w strukturze czasu.
 
-*_Fmt* żądany format można zapisać wartości czasu.
+*_Fmt*<br/>
+Żądany format można zapisać wartości czasu.
 
 ### <a name="remarks"></a>Uwagi
 
@@ -141,11 +149,14 @@ quoted(const char* str, char delimiter, char escape) // or wide versions
 
 ### <a name="parameters"></a>Parametry
 
-*str* std::string, char\*, string literał ciągu literału lub raw lub szerokie wersję któregoś z powyższych (np. std::wstring, wchar_t\*).
+*str*<br/>
+Std::string, char\*, string literał ciągu literału lub raw lub szerokie wersję któregoś z powyższych (np. std::wstring, wchar_t\*).
 
-*ogranicznik* A znak określony przez użytkownika lub znak dwubajtowy, do użycia jako ogranicznika, na początku i końca ciągu.
+*Ogranicznik*<br/>
+Znak określony przez użytkownika lub znak dwubajtowy, do użycia jako ogranicznika, na początku i końca ciągu.
 
-*specjalna* A znak określony przez użytkownika lub znak dwubajtowy, do użycia jako znak ucieczki dla sekwencji ucieczki w ciągu.
+*Znak ucieczki*<br/>
+Znak określony przez użytkownika lub znak dwubajtowy, do użycia jako znak ucieczki dla sekwencji ucieczki w ciągu.
 
 ### <a name="remarks"></a>Uwagi
 
@@ -303,7 +314,8 @@ T1 resetiosflags(ios_base::fmtflags Mask);
 
 ### <a name="parameters"></a>Parametry
 
-*Maska* flagi do wyczyszczenia.
+*Maska*<br/>
+Flagi do wyczyszczenia.
 
 ### <a name="return-value"></a>Wartość zwracana
 
@@ -323,7 +335,8 @@ T3 setbase(int _Base);
 
 ### <a name="parameters"></a>Parametry
 
-*_Podstawowego* numer podstawowy.
+*_Podstawowego*<br/>
+Numer podstawowy.
 
 ### <a name="return-value"></a>Wartość zwracana
 
@@ -352,7 +365,8 @@ T4 setfill(Elem Ch);
 
 ### <a name="parameters"></a>Parametry
 
-*Ch* znak, który będzie używany do wypełnienia miejsca do magazynowania w wyświetlaną z prawej strony.
+*ch*<br/>
+Znak, który będzie używany do wypełnienia miejsca do magazynowania w wyświetlaną z prawej strony.
 
 ### <a name="return-value"></a>Wartość zwracana
 
@@ -372,7 +386,8 @@ T2 setiosflags(ios_base::fmtflags Mask);
 
 ### <a name="parameters"></a>Parametry
 
-*Maska* flagi, aby ustawić.
+*Maska*<br/>
+Flagi, aby ustawić.
 
 ### <a name="return-value"></a>Wartość zwracana
 
@@ -392,7 +407,8 @@ T5 setprecision(streamsize Prec);
 
 ### <a name="parameters"></a>Parametry
 
-*Prec* precyzja wartości zmiennoprzecinkowych.
+*Prec*<br/>
+Precyzja wartości zmiennoprzecinkowych.
 
 ### <a name="return-value"></a>Wartość zwracana
 
@@ -412,7 +428,8 @@ T6 setw(streamsize Wide);
 
 ### <a name="parameters"></a>Parametry
 
-*Szerokie* szerokość wyświetlanego pola.
+*Szerokie*<br/>
+Szerokość wyświetlanego pola.
 
 ### <a name="return-value"></a>Wartość zwracana
 

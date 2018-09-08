@@ -33,12 +33,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 00c23cf21b8d9c5c46976f522f837dddb941f24f
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: 97ac9d7e8e00e5f81d974aa84befaad99881391d
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38964213"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44108762"
 ---
 # <a name="discretedistribution-class"></a>discrete_distribution — Klasa
 
@@ -82,7 +82,8 @@ public:
 
 ### <a name="parameters"></a>Parametry
 
-*IntType* typ wyniku liczby całkowitej, wartość domyślna to **int**. Aby możliwych typów, zobacz [ \<losowy >](../standard-library/random.md).
+*IntType*<br/>
+Typ wyniku liczby całkowitej, wartość domyślna to **int**. Aby możliwych typów, zobacz [ \<losowy >](../standard-library/random.md).
 
 ## <a name="remarks"></a>Uwagi
 
@@ -209,21 +210,29 @@ explicit discrete_distribution(const param_type& parm);
 
 ### <a name="parameters"></a>Parametry
 
-*firstW* pierwszym iteratorem na liście, z którego do konstruowania dystrybucji.
+*firstW*<br/>
+Pierwszym iteratorem na liście, z którego do konstruowania dystrybucji.
 
-*lastW* ostatniego iteratora na liście, z którego do konstruowania dystrybucji (wyłącznie ponieważ Iteratory użyj pustego elementu dla elementu end).
+*lastW*<br/>
+Ostatnie iteratora na liście, z którego do konstruowania dystrybucji (wyłącznie ponieważ Iteratory użyj pustego elementu dla elementu end).
 
-*weightlist* [initializer_list](../cpp/initializers.md) służąca do konstruowania dystrybucji.
+*weightlist*<br/>
+[Initializer_list](../cpp/initializers.md) służąca do konstruowania dystrybucji.
 
-*Liczba* liczbę elementów w zakresie dystrybucji. Jeśli `count==0`, jest to równoważne z domyślnego konstruktora (zawsze generuje wartość zero).
+*Liczba*<br/>
+Liczba elementów w zakresie dystrybucji. Jeśli `count==0`, jest to równoważne z domyślnego konstruktora (zawsze generuje wartość zero).
 
-*niski* najniższej wartości w zakresie dystrybucji.
+*Niska*<br/>
+Najniższa wartość z zakresu dystrybucji.
 
-*Wysoka* najwyższą wartość w zakresie dystrybucji.
+*high*<br/>
+Najwyższą wartość w zakresie dystrybucji.
 
-*weightfunc* obiekt reprezentujący prawdopodobieństwa rozkładu. Zarówno parametr i wartość zwracana wartość musi być konwertowany na **double**.
+*weightfunc*<br/>
+Obiekt reprezentujący prawdopodobieństwa rozkładu. Zarówno parametr i wartość zwracana wartość musi być konwertowany na **double**.
 
-*Parametr* `param_type` struktura używana do konstruowania dystrybucji.
+*parm*<br/>
+`param_type` Struktura używana do konstruowania dystrybucji.
 
 ### <a name="remarks"></a>Uwagi
 
@@ -269,21 +278,29 @@ struct param_type {
 
 ### <a name="parameters"></a>Parametry
 
-*firstW* pierwszym iteratorem na liście, z którego do konstruowania dystrybucji.
+*firstW*<br/>
+Pierwszym iteratorem na liście, z którego do konstruowania dystrybucji.
 
-*lastW* ostatniego iteratora na liście, z którego do konstruowania dystrybucji (wyłącznie ponieważ Iteratory użyj pustego elementu dla elementu end).
+*lastW*<br/>
+Ostatnie iteratora na liście, z którego do konstruowania dystrybucji (wyłącznie ponieważ Iteratory użyj pustego elementu dla elementu end).
 
-*weightlist* [initializer_list](../cpp/initializers.md) służąca do konstruowania dystrybucji.
+*weightlist*<br/>
+[Initializer_list](../cpp/initializers.md) służąca do konstruowania dystrybucji.
 
-*Liczba* liczbę elementów w zakresie dystrybucji. Jeśli *liczba* wynosi 0, jest to równoważne domyślnego konstruktora (zawsze generuje wartość zero).
+*Liczba*<br/>
+Liczba elementów w zakresie dystrybucji. Jeśli *liczba* wynosi 0, jest to równoważne domyślnego konstruktora (zawsze generuje wartość zero).
 
-*niski* najniższej wartości w zakresie dystrybucji.
+*Niska*<br/>
+Najniższa wartość z zakresu dystrybucji.
 
-*Wysoka* najwyższą wartość w zakresie dystrybucji.
+*high*<br/>
+Najwyższą wartość w zakresie dystrybucji.
 
-*weightfunc* obiekt reprezentujący prawdopodobieństwa rozkładu. Zarówno parametr i wartość zwracana wartość musi być konwertowany na **double**.
+*weightfunc*<br/>
+Obiekt reprezentujący prawdopodobieństwa rozkładu. Zarówno parametr i wartość zwracana wartość musi być konwertowany na **double**.
 
-*prawy* `param_type` obiekt do porównania z tym.
+*right*<br/>
+`param_type` Obiekt do porównania z tym.
 
 ### <a name="remarks"></a>Uwagi
 

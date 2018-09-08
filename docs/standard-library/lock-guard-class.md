@@ -15,12 +15,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7f53732fee62906da19a5771c8598cce51fc6331
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: 5e096d21699d4e6218bbadedcd1cc0bcc65f92f2
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38953761"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44108192"
 ---
 # <a name="lockguard-class"></a>lock_guard — Klasa
 
@@ -70,7 +70,8 @@ lock_guard(mutex_type& Mtx, adopt_lock_t);
 
 ### <a name="parameters"></a>Parametry
 
-*Mtx* A *typu obiektu mutex* obiektu.
+*Mtx*<br/>
+A *typu obiektu mutex* obiektu.
 
 ### <a name="remarks"></a>Uwagi
 

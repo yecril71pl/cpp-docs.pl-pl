@@ -14,12 +14,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b651d73db043388e1dc7bf33c085f07d3aabed33
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 8f5027fa4b84d84bf07766c7ac4e75f140706f0c
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43767946"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44103713"
 ---
 # <a name="atl-operators"></a>Operatory ATL
 
@@ -43,15 +43,15 @@ Ta sekcja zawiera tematy referencyjne dla operatorów globalnych ATL.
 Porównuje `CSid` obiektów lub `SID` struktur (identyfikator zabezpieczeń) pod kątem równości.
 
 ```   
-bool operator==(const CSid& lhs, const CSid& rhs) throw(); 
+bool operator==(const CSid& lhs, const CSid& rhs) throw();
 ```
 
 ### <a name="parameters"></a>Parametry
 
-`lhs`  
+*Lewa strona reguły przepisywania*  
 Pierwszy `CSid` obiektu lub `SID` struktury do porównania.
 
-`rhs`  
+*RHS*  
 Drugi `CSid` obiektu lub `SID` struktury do porównania.
 
 ### <a name="return-value"></a>Wartość zwracana
@@ -63,7 +63,7 @@ Zwraca wartość TRUE, jeśli obiekty są równe, wartość FALSE, jeśli nie s�
 Porównuje `CSid` obiektów lub `SID` struktur (identyfikator zabezpieczeń) pod kątem nierówności.
 
 ```   
-bool operator==(const CSid& lhs, const CSid& rhs) throw(); 
+bool operator==(const CSid& lhs, const CSid& rhs) throw();
 ```
 
 ### <a name="parameters"></a>Parametry
@@ -83,7 +83,7 @@ Zwraca wartość TRUE, jeśli obiekty nie są równe, wartość FALSE, jeśli s�
 Sprawdza, czy `CSid` obiektu lub `SID` struktura po lewej stronie operatora jest mniejszy od `CSid` obiektu lub `SID` struktury z prawej strony (w przypadku zgodności standardowa biblioteka C++).
 
 ```   
-bool operator<(const CSid& lhs, const CSid& rhs) throw(); 
+bool operator<(const CSid& lhs, const CSid& rhs) throw();
 ```
 
 ### <a name="parameters"></a>Parametry
@@ -107,7 +107,7 @@ Ten operator działa na adres `CSid` obiektu lub `SID` struktury i jest implemen
 Sprawdza, czy `CSid` obiektu lub `SID` struktury po lewej stronie operatora jest większy niż `CSid` obiektu lub `SID` struktury z prawej strony (w przypadku zgodności standardowa biblioteka C++).
 
 ```   
-bool operator<(const CSid& lhs, const CSid& rhs) throw(); 
+bool operator<(const CSid& lhs, const CSid& rhs) throw();
 ```
 
 ### <a name="parameters"></a>Parametry
@@ -131,7 +131,7 @@ Ten operator działa na adres `CSid` obiektu lub `SID` struktury i jest implemen
 Sprawdza, czy `CSid` obiektu lub `SID` struktury po lewej stronie operatora jest mniejszy niż lub równe `CSid` obiektu lub `SID` struktury z prawej strony (w przypadku zgodności standardowa biblioteka C++).
 
 ```   
-bool operator<(const CSid& lhs, const CSid& rhs) throw(); 
+bool operator<(const CSid& lhs, const CSid& rhs) throw();
 ```
 
 ### <a name="parameters"></a>Parametry
@@ -155,7 +155,7 @@ Ten operator działa na adres `CSid` obiektu lub `SID` struktury i jest implemen
 Sprawdza, czy `CSid` obiektu lub `SID` struktury po lewej stronie operatora jest większy niż lub równa `CSid` obiektu lub `SID` struktury z prawej strony (w przypadku zgodności standardowa biblioteka C++).
 
 ```   
-bool operator<(const CSid& lhs, const CSid& rhs) throw(); 
+bool operator<(const CSid& lhs, const CSid& rhs) throw();
 ```
 
 ### <a name="parameters"></a>Parametry

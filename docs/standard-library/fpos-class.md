@@ -21,12 +21,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3ce85d846d142e2c15a0fba6d2d3fb76c924b97f
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: 914f3623e3ac288a27554edac848686efc025896
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38966605"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44105890"
 ---
 # <a name="fpos-class"></a>fpos — Klasa
 
@@ -47,7 +47,8 @@ class fpos
 
 ### <a name="parameters"></a>Parametry
 
-*Statetype* informacje stanie.
+*Statetype*<br/>
+Informacje o stanie.
 
 ### <a name="constructors"></a>Konstruktorów
 
@@ -92,11 +93,14 @@ fpos(Statetype _State, fpos_t _Filepos);
 
 ### <a name="parameters"></a>Parametry
 
-*_Off* przesunięcie w strumieniu.
+*_Off*<br/>
+Przesunięcie w strumieniu.
 
-*_Stanu* początkowy stan `fpos` obiektu.
+*_Stanu*<br/>
+Początkowy stan `fpos` obiektu.
 
-*_Filepos* przesunięcie w strumieniu.
+*_Filepos*<br/>
+Przesunięcie w strumieniu.
 
 ### <a name="remarks"></a>Uwagi
 
@@ -114,7 +118,8 @@ bool operator!=(const fpos<Statetype>& right) const;
 
 ### <a name="parameters"></a>Parametry
 
-*prawy* wskaźnik pozycji pliku, względem którego do porównania.
+*right*<br/>
+Wskaźnik położenia pliku za pomocą którego chcesz porównać.
 
 ### <a name="return-value"></a>Wartość zwracana
 
@@ -186,7 +191,8 @@ fpos<Statetype> operator+(streamoff _Off) const;
 
 ### <a name="parameters"></a>Parametry
 
-*_Off* przesunięcie, według którego mają być zwiększane wskaźnik położenia pliku.
+*_Off*<br/>
+Przesunięcie, według którego mają być zwiększane wskaźnik położenia pliku.
 
 ### <a name="return-value"></a>Wartość zwracana
 
@@ -210,7 +216,8 @@ fpos<Statetype>& operator+=(streamoff _Off);
 
 ### <a name="parameters"></a>Parametry
 
-*_Off* przesunięcie, według którego mają być zwiększane wskaźnik położenia pliku.
+*_Off*<br/>
+Przesunięcie, według którego mają być zwiększane wskaźnik położenia pliku.
 
 ### <a name="return-value"></a>Wartość zwracana
 
@@ -236,9 +243,11 @@ fpos<Statetype> operator-(streamoff _Off) const;
 
 ### <a name="parameters"></a>Parametry
 
-*prawy* położenie pliku.
+*right*<br/>
+Położenie pliku.
 
-*_Off* przesunięcie Stream.
+*_Off*<br/>
+Przesunięcie Stream.
 
 ### <a name="return-value"></a>Wartość zwracana
 
@@ -258,7 +267,8 @@ fpos<Statetype>& operator-=(streamoff _Off);
 
 ### <a name="parameters"></a>Parametry
 
-*_Off* przesunięcie Stream.
+*_Off*<br/>
+Przesunięcie Stream.
 
 ### <a name="return-value"></a>Wartość zwracana
 
@@ -282,7 +292,8 @@ bool operator==(const fpos<Statetype>& right) const;
 
 ### <a name="parameters"></a>Parametry
 
-*prawy* wskaźnik pozycji pliku, względem którego do porównania.
+*right*<br/>
+Wskaźnik położenia pliku za pomocą którego chcesz porównać.
 
 ### <a name="return-value"></a>Wartość zwracana
 
@@ -355,7 +366,8 @@ void state(Statetype _State);
 
 ### <a name="parameters"></a>Parametry
 
-*_Stanu* nowy stan konwersji.
+*_Stanu*<br/>
+Nowy stan konwersji.
 
 ### <a name="return-value"></a>Wartość zwracana
 

@@ -32,12 +32,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 604d8a2082d609e85e4c55f1d4ae3b6d15c4ce22
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: 054246ce78601abf61f36d070500845275b61761
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38966462"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44110376"
 ---
 # <a name="collate-class"></a>collate — Klasa
 
@@ -52,7 +52,8 @@ class collate : public locale::facet;
 
 ### <a name="parameters"></a>Parametry
 
-*CharType* typ używany w programie do kodowania znaków.
+*CharType*<br/>
+Typ używany w programie do kodowania znaków.
 
 ## <a name="remarks"></a>Uwagi
 
@@ -111,15 +112,17 @@ public:
 
 protected:
     collate(
- const char* _Locname,
+const char* _Locname,
     size_t _Refs = 0);
 ```
 
 ### <a name="parameters"></a>Parametry
 
-*_Refs* wartość całkowitą, można określić typ zarządzania pamięci dla obiektu.
+*_Refs*<br/>
+Wartość liczby całkowitej, można określić typ zarządzania pamięci dla obiektu.
 
-*_Locname* nazwę ustawień regionalnych.
+*_Locname*<br/>
+Nazwa ustawień regionalnych.
 
 ### <a name="remarks"></a>Uwagi
 
@@ -146,13 +149,17 @@ int compare(const CharType* first1,
 
 ### <a name="parameters"></a>Parametry
 
-*first1* wskaźnik do pierwszego elementu w pierwszej kolejności, które mają być porównane.
+*first1*<br/>
+Wskaźnik do pierwszego elementu w pierwszej kolejności mają być porównane.
 
-*Nazwisko1* wskaźnik do ostatniego elementu w pierwszej kolejności do porównania.
+*Nazwisko1*<br/>
+Wskaźnik do ostatniego elementu w pierwszej kolejności mają być porównane.
 
-*first2* wskaźnik do pierwszego elementu w drugiej sekwencji, które mają być porównane.
+*first2*<br/>
+Wskaźnik do pierwszego elementu w drugiej sekwencji, które mają być porównane.
 
-*Nazwisko2* wskaźnik do ostatniego elementu w drugiej sekwencji do porównania.
+*Nazwisko2*<br/>
+Wskaźnik do ostatniego elementu w drugiej sekwencji, które mają być porównane.
 
 ### <a name="return-value"></a>Wartość zwracana
 
@@ -208,13 +215,17 @@ virtual int do_compare(const CharType* first1,
 
 ### <a name="parameters"></a>Parametry
 
-*first1* wskaźnik do pierwszego elementu w pierwszej kolejności, które mają być porównane.
+*first1*<br/>
+Wskaźnik do pierwszego elementu w pierwszej kolejności mają być porównane.
 
-*Nazwisko1* wskaźnik do ostatniego elementu w pierwszej kolejności do porównania.
+*Nazwisko1*<br/>
+Wskaźnik do ostatniego elementu w pierwszej kolejności mają być porównane.
 
-*first2* wskaźnik do pierwszego elementu w drugiej sekwencji, które mają być porównane.
+*first2*<br/>
+Wskaźnik do pierwszego elementu w drugiej sekwencji, które mają być porównane.
 
-*Nazwisko2* wskaźnik do ostatniego elementu w drugiej sekwencji do porównania.
+*Nazwisko2*<br/>
+Wskaźnik do ostatniego elementu w drugiej sekwencji, które mają być porównane.
 
 ### <a name="return-value"></a>Wartość zwracana
 
@@ -244,9 +255,11 @@ virtual long do_hash(const CharType* first, const CharType* last) const;
 
 ### <a name="parameters"></a>Parametry
 
-*pierwszy* wskaźnik do pierwszego znaku w sekwencji, w których ma wartość zostanie określony.
+*pierwszy*<br/>
+Wskaźnik do pierwszego znaku w sekwencji, w których ma wartość zostanie określony.
 
-*ostatni* wskaźnik do ostatniego znaku w sekwencji, w których ma wartość zostanie określony.
+*ostatni*<br/>
+Wskaźnik do ostatniego znaku w sekwencji, w których ma wartość zostanie określony.
 
 ### <a name="return-value"></a>Wartość zwracana
 
@@ -270,9 +283,11 @@ virtual string_type do_transform(const CharType* first, const CharType* last) co
 
 ### <a name="parameters"></a>Parametry
 
-*pierwszy* wskaźnik do pierwszego znaku w sekwencji, który ma zostać przekonwertowany.
+*pierwszy*<br/>
+Wskaźnik do pierwszego znaku w sekwencji, który ma zostać przekonwertowany.
 
-*ostatni* wskaźnik do ostatniego znaku w sekwencji, który ma zostać przekonwertowany.
+*ostatni*<br/>
+Wskaźnik do ostatniego znaku w sekwencji, który ma zostać przekonwertowany.
 
 ### <a name="return-value"></a>Wartość zwracana
 
@@ -296,9 +311,11 @@ long hash(const CharType* first, const CharType* last) const;
 
 ### <a name="parameters"></a>Parametry
 
-*pierwszy* wskaźnik do pierwszego znaku w sekwencji, w których ma wartość zostanie określony.
+*pierwszy*<br/>
+Wskaźnik do pierwszego znaku w sekwencji, w których ma wartość zostanie określony.
 
-*ostatni* wskaźnik do ostatniego znaku w sekwencji, w których ma wartość zostanie określony.
+*ostatni*<br/>
+Wskaźnik do ostatniego znaku w sekwencji, w których ma wartość zostanie określony.
 
 ### <a name="return-value"></a>Wartość zwracana
 
@@ -364,9 +381,11 @@ string_type transform(const CharType* first, const CharType* last) const;
 
 ### <a name="parameters"></a>Parametry
 
-*pierwszy* wskaźnik do pierwszego znaku w sekwencji, który ma zostać przekonwertowany.
+*pierwszy*<br/>
+Wskaźnik do pierwszego znaku w sekwencji, który ma zostać przekonwertowany.
 
-*ostatni* wskaźnik do ostatniego znaku w sekwencji, który ma zostać przekonwertowany.
+*ostatni*<br/>
+Wskaźnik do ostatniego znaku w sekwencji, który ma zostać przekonwertowany.
 
 ### <a name="return-value"></a>Wartość zwracana
 

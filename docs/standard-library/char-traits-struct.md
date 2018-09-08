@@ -37,12 +37,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1c2346ed8a7d9cc2359c0bdf984b52993a13b05a
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: bc8f906c4c084ef4cabef9b26ef9e6b48e9e33cd
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38956885"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44106086"
 ---
 # <a name="chartraits-struct"></a>char_traits — Struktura
 
@@ -57,7 +57,8 @@ struct char_traits;
 
 ### <a name="parameters"></a>Parametry
 
-*CharType* typ danych elementu.
+*CharType*<br/>
+Typ danych elementu.
 
 ## <a name="remarks"></a>Uwagi
 
@@ -116,11 +117,13 @@ static char_type *assign(char_type* strTo,
 
 **_** *CharFrom* znaku, którego wartość ma być przypisana.
 
-*_CharTo* element, który ma być przypisana wartość znaku.
+*_CharTo*<br/>
+Element, który ma być przypisana wartość znaku.
 
 * strTo * tablicy ciąg lub znak, którego początkowe elementy mają można przypisać wartości znakowych.
 
-*_Num* liczbę elementów, które można przypisać wartości.
+*_Num*<br/>
+Liczba elementów, które można przypisać wartości.
 
 ### <a name="return-value"></a>Wartość zwracana
 
@@ -199,7 +202,8 @@ static int compare(const char_type* str1,
 
 * str2 * drugi dwóch ciągów, który można porównać ze sobą.
 
-*_Num* liczbę elementów w ciągach, które mają być porównane.
+*_Num*<br/>
+Liczba elementów w ciągach, które mają być porównane.
 
 ### <a name="return-value"></a>Wartość zwracana
 
@@ -258,11 +262,14 @@ static char_type *copy(char_type* _To,
 
 ### <a name="parameters"></a>Parametry
 
-*_Do* element na początku ciągu lub tablicy znaków przeznaczone do odbierania skopiowany sekwencji znaków.
+*_Do*<br/>
+Element na początku ciągu lub tablicy znaków przeznaczone do odbierania skopiowany sekwencji znaków.
 
-*_Z* element na początku tablicy ciąg lub znak źródła do skopiowania.
+*_Z*<br/>
+Element na początku tablicy ciąg lub znak źródła do skopiowania.
 
-*_Num* liczbę elementów do skopiowania.
+*_Num*<br/>
+Liczba elementów, które mają zostać skopiowane.
 
 ### <a name="return-value"></a>Wartość zwracana
 
@@ -317,13 +324,17 @@ static char_type *_Copy_s(
 
 ### <a name="parameters"></a>Parametry
 
-*dest* tablicy ciąg lub znak przeznaczone do odbierania skopiowany sekwencji znaków.
+*dest*<br/>
+Tablica ciąg lub znak przeznaczone do odbierania skopiowany sekwencji znaków.
 
-*dest_size* rozmiar *dest*. Jeśli `char_type` jest **char**, a następnie ten rozmiar jest w bajtach. Jeśli `char_type` jest **wchar_t**, a następnie ten rozmiar jest w słowach.
+*dest_size*<br/>
+Rozmiar *dest*. Jeśli `char_type` jest **char**, a następnie ten rozmiar jest w bajtach. Jeśli `char_type` jest **wchar_t**, a następnie ten rozmiar jest w słowach.
 
-*_Z* tablicy ciąg lub znak źródła do skopiowania.
+*_Z*<br/>
+Ciąg lub znak tablica źródłowa do skopiowania.
 
-*Liczba* liczbę elementów do skopiowania.
+*Liczba*<br/>
+Liczba elementów, które mają zostać skopiowane.
 
 ### <a name="return-value"></a>Wartość zwracana
 
@@ -425,9 +436,11 @@ static bool eq(const char_type& _Ch1, const char_type& _Ch2);
 
 ### <a name="parameters"></a>Parametry
 
-*_Ch1* pierwszego dnia dwa znaki, które ma zostać przetestowana pod kątem równości.
+*_Ch1*<br/>
+Pierwsze dwa znaki do sprawdzenia pod kątem równości.
 
-*_Ch2* drugi dwóch znaków, które ma zostać przetestowana pod kątem równości.
+*_Ch2*<br/>
+Drugi dwóch znaków ma zostać przetestowana pod kątem równości.
 
 ### <a name="return-value"></a>Wartość zwracana
 
@@ -483,9 +496,11 @@ static bool eq_int_type(const int_type& _Ch1, const int_type& _Ch2);
 
 ### <a name="parameters"></a>Parametry
 
-*_Ch1* pierwszego dnia dwa znaki, które ma zostać przetestowana pod kątem równości jako `int_type`s.
+*_Ch1*<br/>
+Pierwszego dnia dwa znaki, które ma zostać przetestowana pod kątem równości jako `int_type`s.
 
-*_Ch2* drugi dwóch znaków ma zostać przetestowana pod kątem równości jako `int_type`s.
+*_Ch2*<br/>
+Drugi dwóch znaków ma zostać przetestowana pod kątem równości jako `int_type`s.
 
 ### <a name="return-value"></a>Wartość zwracana
 
@@ -551,9 +566,9 @@ The char_types and corresponding int_types are:
     ch3 = x corresponding to int1 = 120.
 
 The int_type representation of character ch1
- is not equal to the int_type representation of ch2.
+is not equal to the int_type representation of ch2.
 The int_type representation of character ch1
- is equal to the int_type representation of ch3.
+is equal to the int_type representation of ch3.
 ```
 
 ## <a name="find"></a>  char_traits::Find
@@ -568,11 +583,14 @@ static const char_type* find(const char_type* str,
 
 ### <a name="parameters"></a>Parametry
 
-*str* pierwszego znaku w ciągu, który ma być przeszukiwany.
+*str*<br/>
+Pierwszy znak w ciągu, który ma być przeszukiwany.
 
-*_Num* liczbę pozycji, licząc od pierwszego, w zakresie, który ma być przeszukiwany.
+*_Num*<br/>
+Liczba stanowisk, licząc od pierwszego, w zakresie, który ma być przeszukiwany.
 
-*_Ch* znaków, które mają być wyszukiwane w zakresie.
+*_Ch*<br/>
+Znak, który ma zostać wyszukany w zakresie.
 
 ### <a name="return-value"></a>Wartość zwracana
 
@@ -616,7 +634,7 @@ int main( )
 The string to be searched is: f2d-1234-abcd
 The character searched for in s1 is: d
 The string beginning with the first occurrence
- of the character 'd' is: d-1234-abcd
+of the character 'd' is: d-1234-abcd
 The result2 of the search is NULL.
 ```
 
@@ -646,7 +664,8 @@ static size_t length(const char_type* str);
 
 ### <a name="parameters"></a>Parametry
 
-*str* C — ciąg, którego długość jest mierzone.
+*str*<br/>
+C — ciąg którego długość jest mierzone.
 
 ### <a name="return-value"></a>Wartość zwracana
 
@@ -688,9 +707,11 @@ static bool lt(const char_type& _Ch1, const char_type& _Ch2);
 
 ### <a name="parameters"></a>Parametry
 
-*_Ch1* pierwszego dnia dwa znaki pod kątem poniżej.
+*_Ch1*<br/>
+Pierwsza z dwóch znaków pod kątem poniżej.
 
-*_Ch2* druga dwa znaki pod kątem poniżej.
+*_Ch2*<br/>
+Druga dwa znaki pod kątem poniżej.
 
 ### <a name="return-value"></a>Wartość zwracana
 
@@ -749,11 +770,14 @@ static char_type *move(char_type* _To,
 
 ### <a name="parameters"></a>Parametry
 
-*_Do* element na początku ciągu lub tablicy znaków przeznaczone do odbierania skopiowany sekwencji znaków.
+*_Do*<br/>
+Element na początku ciągu lub tablicy znaków przeznaczone do odbierania skopiowany sekwencji znaków.
 
-*_Z* element na początku tablicy ciąg lub znak źródła do skopiowania.
+*_Z*<br/>
+Element na początku tablicy ciąg lub znak źródła do skopiowania.
 
-*_Num* liczbę elementów, które mają być kopiowane z ciągu źródłowego.
+*_Num*<br/>
+Liczba elementów, które mają być kopiowane z ciągu źródłowego.
 
 ### <a name="return-value"></a>Wartość zwracana
 
@@ -823,13 +847,17 @@ static char_type *_Move_s(
 
 ### <a name="parameters"></a>Parametry
 
-*dest* element na początku ciągu lub tablicy znaków przeznaczone do odbierania skopiowany sekwencji znaków.
+*dest*<br/>
+Element na początku ciągu lub tablicy znaków przeznaczone do odbierania skopiowany sekwencji znaków.
 
-*dest_size* rozmiar *dest*. Jeśli `char_type` jest **char**, a następnie jest w bajtach. Jeśli `char_type` jest **wchar_t**, wówczas to słowa.
+*dest_size*<br/>
+Rozmiar *dest*. Jeśli `char_type` jest **char**, a następnie jest w bajtach. Jeśli `char_type` jest **wchar_t**, wówczas to słowa.
 
-*_Z* element na początku tablicy ciąg lub znak źródła do skopiowania.
+*_Z*<br/>
+Element na początku tablicy ciąg lub znak źródła do skopiowania.
 
-*Liczba* liczbę elementów, które mają być kopiowane z ciągu źródłowego.
+*Liczba*<br/>
+Liczba elementów, które mają być kopiowane z ciągu źródłowego.
 
 ### <a name="return-value"></a>Wartość zwracana
 
@@ -895,7 +923,8 @@ static int_type not_eof(const int_type& _Ch);
 
 ### <a name="parameters"></a>Parametry
 
-*_Ch* znaku, reprezentowane jako `int_type` ma zostać przetestowana dla tego, czy jest to znak EOF lub nie.
+*_Ch*<br/>
+Znaku, reprezentowane jako `int_type` ma zostać przetestowana dla tego, czy jest to znak EOF lub nie.
 
 ### <a name="return-value"></a>Wartość zwracana
 
@@ -1002,7 +1031,8 @@ static char_type to_char_type(const int_type& _Ch);
 
 ### <a name="parameters"></a>Parametry
 
-*_Ch* `int_type` znak może być reprezentowana jako `char_type`.
+*_Ch*<br/>
+`int_type` Znak może być reprezentowana jako `char_type`.
 
 ### <a name="return-value"></a>Wartość zwracana
 
@@ -1107,7 +1137,8 @@ static int_type to_int_type(const char_type& _Ch);
 
 ### <a name="parameters"></a>Parametry
 
-*_Ch* `char_type` znak może być reprezentowana jako `int_type`.
+*_Ch*<br/>
+`char_type` Znak może być reprezentowana jako `int_type`.
 
 ### <a name="return-value"></a>Wartość zwracana
 

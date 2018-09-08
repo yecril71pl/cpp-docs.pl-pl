@@ -36,12 +36,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0266c33731bdbd70fe9c9fb26a33878fc5d1c495
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: f853ada608b2f70dc0a7c7e3fb78e5fb28d0fa83
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38957688"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44100875"
 ---
 # <a name="binomialdistribution-class"></a>binomial_distribution — Klasa
 
@@ -81,9 +81,11 @@ public:
 
 ### <a name="parameters"></a>Parametry
 
-*IntType* typ wyniku liczby całkowitej, wartość domyślna to **int**. Aby możliwych typów, zobacz [ \<losowy >](../standard-library/random.md).
+*IntType*<br/>
+Typ wyniku liczby całkowitej, wartość domyślna to **int**. Aby możliwych typów, zobacz [ \<losowy >](../standard-library/random.md).
 
-*URNG* jednolitego numer generator aparat losowy. Aby możliwych typów, zobacz [ \<losowy >](../standard-library/random.md).
+*URNG*<br/>
+Jednolity numer generator aparat losowy. Aby możliwych typów, zobacz [ \<losowy >](../standard-library/random.md).
 
 ## <a name="remarks"></a>Uwagi
 
@@ -250,11 +252,14 @@ explicit binomial_distribution(const param_type& parm);
 
 ### <a name="parameters"></a>Parametry
 
-*t* `t` parametru dystrybucji.
+*t*<br/>
+`t` Parametru dystrybucji.
 
-*p* `p` parametru dystrybucji.
+*p*<br/>
+`p` Parametru dystrybucji.
 
-*Parametr* `param_type` struktura używana do konstruowania dystrybucji.
+*parm*<br/>
+`param_type` Struktura używana do konstruowania dystrybucji.
 
 ### <a name="remarks"></a>Uwagi
 
@@ -282,11 +287,14 @@ struct param_type {
 
 ### <a name="parameters"></a>Parametry
 
-*t* `t` parametru dystrybucji.
+*t*<br/>
+`t` Parametru dystrybucji.
 
-*p* `p` parametru dystrybucji.
+*p*<br/>
+`p` Parametru dystrybucji.
 
-*prawy* `param_type` obiekt do porównania z tym.
+*right*<br/>
+`param_type` Obiekt do porównania z tym.
 
 ### <a name="remarks"></a>Uwagi
 

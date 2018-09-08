@@ -43,12 +43,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 69123bfd07d992d96c504e538ded157c49991dab
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 46d29b55e215ce426bbfd465b3d54e1d267a1bb1
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43221611"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44103921"
 ---
 # <a name="splitpath-wsplitpath"></a>_splitpath, _wsplitpath
 
@@ -75,15 +75,20 @@ void _wsplitpath(
 
 ### <a name="parameters"></a>Parametry
 
-*ścieżka* pełną ścieżkę.
+*Ścieżka*<br/>
+Pełna ścieżka.
 
-*dysk* litera dysku z dwukropkiem (**:**). Możesz przekazać **NULL** dla tego parametru, jeśli nie potrzebujesz literę dysku.
+*Dysk*<br/>
+Litera, następuje dwukropek (**:**). Możesz przekazać **NULL** dla tego parametru, jeśli nie potrzebujesz literę dysku.
 
-*dir* ścieżkę katalogu, w tym ukośnika. Kreski ułamkowe ( **/** ), ukośniki odwrotne ( **\\** ), lub obie mogą być używane. Możesz przekazać **NULL** dla tego parametru, jeśli nie potrzebujesz ścieżki katalogu.
+*dir*<br/>
+Ścieżka katalogu, w tym ukośnika. Kreski ułamkowe ( **/** ), ukośniki odwrotne ( **\\** ), lub obie mogą być używane. Możesz przekazać **NULL** dla tego parametru, jeśli nie potrzebujesz ścieżki katalogu.
 
-*fname* podstawowa nazwa pliku (bez rozszerzenia). Możesz przekazać **NULL** dla tego parametru, jeśli nazwa pliku nie jest potrzebna.
+*fname*<br/>
+Podstawowa nazwa pliku (bez rozszerzenia). Możesz przekazać **NULL** dla tego parametru, jeśli nazwa pliku nie jest potrzebna.
 
-*ext* rozszerzenie nazwy pliku, w tym wiodące w okresie (**.**). Możesz przekazać **NULL** dla tego parametru, jeśli nie potrzebujesz rozszerzenie nazwy pliku.
+*ext*<br/>
+Rozszerzenie nazwy pliku, w tym wiodące w okresie (**.**). Możesz przekazać **NULL** dla tego parametru, jeśli nie potrzebujesz rozszerzenie nazwy pliku.
 
 ## <a name="remarks"></a>Uwagi
 

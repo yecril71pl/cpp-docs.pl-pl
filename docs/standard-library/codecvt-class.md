@@ -50,12 +50,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: fac73456108669950f59f2399495526b8b319f07
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: 3198a2d3ef91df80429f7cd245e5616ebe7af43a
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38956810"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44110634"
 ---
 # <a name="codecvt-class"></a>codecvt — Klasa
 
@@ -70,11 +70,14 @@ class codecvt : public locale::facet, codecvt_base;
 
 ### <a name="parameters"></a>Parametry
 
-*CharType* typ używany w programie do kodowania znaków.
+*CharType*<br/>
+Typ używany w programie do kodowania znaków.
 
-*Bajt* typ używany do kodowania znaków poza programem.
+*Byte*<br/>
+Typ używany do kodowania znaków poza programem.
 
-*StateType* typu, który może służyć do reprezentowania pośrednich stanów konwersji między typami wewnętrznymi i zewnętrznymi reprezentacji znaków.
+*StateType*<br/>
+Typ, który może służyć do reprezentowania pośrednich stanów konwersji między typami wewnętrznymi i zewnętrznymi reprezentacji znaków.
 
 ## <a name="remarks"></a>Uwagi
 
@@ -206,7 +209,8 @@ explicit codecvt(size_t _Refs = 0);
 
 ### <a name="parameters"></a>Parametry
 
-*_Refs* wartość całkowitą, można określić typ zarządzania pamięci dla obiektu.
+*_Refs*<br/>
+Wartość liczby całkowitej, można określić typ zarządzania pamięci dla obiektu.
 
 ### <a name="remarks"></a>Uwagi
 
@@ -216,7 +220,7 @@ Możliwe wartości parametru *_Refs* parametrów i ich znaczenie są:
 
 - 1: okres istnienia obiektu musi być zarządzane ręcznie.
 
-- \> 1: nie zdefiniowano tych wartości.
+- 2: nie zdefiniowano tych wartości.
 
 Konstruktor inicjuje jego `locale::facet` podstawowego obiektu z **locale::**[aspekt](../standard-library/locale-class.md#facet_class)(`_Refs`).
 
@@ -277,19 +281,26 @@ virtual result do_in(
 
 ### <a name="parameters"></a>Parametry
 
-*_Stanu* stan konwersji, który jest zachowywane między wywołaniami funkcji elementu członkowskiego.
+*_Stanu*<br/>
+Stan konwersji, który jest zachowywane między wywołaniami funkcji elementu członkowskiego.
 
-*first1* wskaźnik do początku sekwencji, które ma zostać przekonwertowany.
+*first1*<br/>
+Wskaźnik na początku sekwencji, który ma zostać przekonwertowany.
 
-*Nazwisko1* wskaźnik końca sekwencji, który ma zostać przekonwertowany.
+*Nazwisko1*<br/>
+Wskaźnik końca sekwencji, który ma zostać przekonwertowany.
 
-*next1* wskaźnika za końcem przekonwertowany sekwencji do pierwszego znaku nieprzekonwertowane.
+*next1*<br/>
+Wskaźnik poza końcem przekonwertowany sekwencji do pierwszego znaku nieprzekonwertowane.
 
-*first2* wskaźnik do początku przekonwertowany sekwencji.
+*first2*<br/>
+Wskaźnik do początku przekonwertowany sekwencji.
 
-*Nazwisko2* wskaźnik końca sekwencji przekonwertowana.
+*Nazwisko2*<br/>
+Wskaźnik końca sekwencji przekonwertowana.
 
-*next2* wskaźnik do `CharType` dostarczany po przekonwertowaniu ostatniego `CharType`, do niezmienionym pierwszego znaku w sekwencji docelowej.
+*next2*<br/>
+Wskaźnik do `CharType` dostarczany po przekonwertowaniu ostatniego `CharType`, do niezmienionym pierwszego znaku w sekwencji docelowej.
 
 ### <a name="return-value"></a>Wartość zwracana
 
@@ -325,13 +336,17 @@ virtual int do_length(
 
 ### <a name="parameters"></a>Parametry
 
-*_Stanu* stan konwersji, który jest zachowywane między wywołaniami funkcji elementu członkowskiego.
+*_Stanu*<br/>
+Stan konwersji, który jest zachowywane między wywołaniami funkcji elementu członkowskiego.
 
-*first1* wskaźnik do początku sekwencji zewnętrznych.
+*first1*<br/>
+Wskaźnik na początku sekwencji zewnętrznych.
 
-*Nazwisko1* wskaźnik końca sekwencji zewnętrznych.
+*Nazwisko1*<br/>
+Wskaźnik końca sekwencji zewnętrznych.
 
-*_Len2* maksymalną liczbę `Byte`s, który może zostać zwrócony przez funkcję elementu członkowskiego.
+*_Len2*<br/>
+Maksymalna liczba `Byte`s, który może zostać zwrócony przez funkcję elementu członkowskiego.
 
 ### <a name="return-value"></a>Wartość zwracana
 
@@ -386,19 +401,26 @@ virtual result do_out(
 
 ### <a name="parameters"></a>Parametry
 
-*_Stanu* stan konwersji, który jest zachowywane między wywołaniami funkcji elementu członkowskiego.
+*_Stanu*<br/>
+Stan konwersji, który jest zachowywane między wywołaniami funkcji elementu członkowskiego.
 
-*first1* wskaźnik do początku sekwencji, które ma zostać przekonwertowany.
+*first1*<br/>
+Wskaźnik na początku sekwencji, który ma zostać przekonwertowany.
 
-*Nazwisko1* wskaźnik końca sekwencji, który ma zostać przekonwertowany.
+*Nazwisko1*<br/>
+Wskaźnik końca sekwencji, który ma zostać przekonwertowany.
 
-*next1* nieprzekonwertowany odwołanie do wskaźnika do pierwszego `CharType`, po ostatnim `CharType` konwertowane.
+*next1*<br/>
+Odwołanie do wskaźnika do pierwszego nieprzekonwertowany `CharType`, po ostatnim `CharType` konwertowane.
 
-*first2* wskaźnik do początku przekonwertowany sekwencji.
+*first2*<br/>
+Wskaźnik do początku przekonwertowany sekwencji.
 
-*Nazwisko2* wskaźnik końca sekwencji przekonwertowana.
+*Nazwisko2*<br/>
+Wskaźnik końca sekwencji przekonwertowana.
 
-*next2* nieprzekonwertowany odwołanie do wskaźnika do pierwszego `Byte`, po ostatnim `Byte` konwertowane.
+*next2*<br/>
+Odwołanie do wskaźnika do pierwszego nieprzekonwertowany `Byte`, po ostatnim `Byte` konwertowane.
 
 ### <a name="return-value"></a>Wartość zwracana
 
@@ -434,13 +456,17 @@ virtual result do_unshift(
 
 ### <a name="parameters"></a>Parametry
 
-*_Stanu* stan konwersji, który jest zachowywane między wywołaniami funkcji elementu członkowskiego.
+*_Stanu*<br/>
+Stan konwersji, który jest zachowywane między wywołaniami funkcji elementu członkowskiego.
 
-*first2* wskaźnik do pierwszego pozycji w zakresie docelowym.
+*first2*<br/>
+Wskaźnik do pierwszego pozycji w zakresie docelowym.
 
-*Nazwisko2* wskaźnik do ostatniej pozycji w zakresie docelowym.
+*Nazwisko2*<br/>
+Wskaźnik do ostatniej pozycji w zakresie docelowym.
 
-*next2* wskaźnik do pierwszego elementu niezmienione w sekwencji docelowej.
+*next2*<br/>
+Wskaźnik do pierwszego elementu niezmienione w sekwencji docelowej.
 
 ### <a name="return-value"></a>Wartość zwracana
 
@@ -544,19 +570,26 @@ result in(
 
 ### <a name="parameters"></a>Parametry
 
-*_Stanu* stan konwersji, który jest zachowywane między wywołaniami funkcji elementu członkowskiego.
+*_Stanu*<br/>
+Stan konwersji, który jest zachowywane między wywołaniami funkcji elementu członkowskiego.
 
-*first1* wskaźnik do początku sekwencji, które ma zostać przekonwertowany.
+*first1*<br/>
+Wskaźnik na początku sekwencji, który ma zostać przekonwertowany.
 
-*Nazwisko1* wskaźnik końca sekwencji, który ma zostać przekonwertowany.
+*Nazwisko1*<br/>
+Wskaźnik końca sekwencji, który ma zostać przekonwertowany.
 
-*next1* wskaźnika za końcem sekwencji przekonwertowany do pierwszego znaku nieprzekonwertowane.
+*next1*<br/>
+Wskaźnik poza końcem sekwencji przekonwertowany do pierwszego znaku nieprzekonwertowane.
 
-*first2* wskaźnik do początku przekonwertowany sekwencji.
+*first2*<br/>
+Wskaźnik do początku przekonwertowany sekwencji.
 
-*Nazwisko2* wskaźnik końca sekwencji przekonwertowana.
+*Nazwisko2*<br/>
+Wskaźnik końca sekwencji przekonwertowana.
 
-*next2* wskaźnik do `CharType` dostarczany po przekonwertowaniu ostatniego `Chartype` do niezmienionym pierwszego znaku w sekwencji docelowej.
+*next2*<br/>
+Wskaźnik do `CharType` dostarczany po przekonwertowaniu ostatniego `Chartype` do niezmienionym pierwszego znaku w sekwencji docelowej.
 
 ### <a name="return-value"></a>Wartość zwracana
 
@@ -610,7 +643,7 @@ int main( )
 
 ```Output
 It worked! The converted string is:
- [This is the string to be converted!]
+[This is the string to be converted!]
 ```
 
 ## <a name="intern_type"></a>  codecvt::intern_type
@@ -639,13 +672,17 @@ int length(
 
 ### <a name="parameters"></a>Parametry
 
-*_Stanu* stan konwersji, który jest zachowywane między wywołaniami funkcji elementu członkowskiego.
+*_Stanu*<br/>
+Stan konwersji, który jest zachowywane między wywołaniami funkcji elementu członkowskiego.
 
-*first1* wskaźnik do początku sekwencji zewnętrznych.
+*first1*<br/>
+Wskaźnik na początku sekwencji zewnętrznych.
 
-*Nazwisko1* wskaźnik końca sekwencji zewnętrznych.
+*Nazwisko1*<br/>
+Wskaźnik końca sekwencji zewnętrznych.
 
-*_Len2* maksymalną liczbę bajtów, które mogą być zwracane przez funkcję elementu członkowskiego.
+*_Len2*<br/>
+Maksymalna liczba bajtów, które mogą być zwracane przez funkcję elementu członkowskiego.
 
 ### <a name="return-value"></a>Wartość zwracana
 
@@ -740,19 +777,26 @@ result out(
 
 ### <a name="parameters"></a>Parametry
 
-*_Stanu* stan konwersji, który jest zachowywane między wywołaniami funkcji elementu członkowskiego.
+*_Stanu*<br/>
+Stan konwersji, który jest zachowywane między wywołaniami funkcji elementu członkowskiego.
 
-*first1* wskaźnik do początku sekwencji, które ma zostać przekonwertowany.
+*first1*<br/>
+Wskaźnik na początku sekwencji, który ma zostać przekonwertowany.
 
-*Nazwisko1* wskaźnik końca sekwencji, który ma zostać przekonwertowany.
+*Nazwisko1*<br/>
+Wskaźnik końca sekwencji, który ma zostać przekonwertowany.
 
-*next1* nieprzekonwertowany odwołanie do wskaźnika do pierwszego `CharType` po ostatnim `CharType` konwertowane.
+*next1*<br/>
+Odwołanie do wskaźnika do pierwszego nieprzekonwertowany `CharType` po ostatnim `CharType` konwertowane.
 
-*first2* wskaźnik do początku przekonwertowany sekwencji.
+*first2*<br/>
+Wskaźnik do początku przekonwertowany sekwencji.
 
-*Nazwisko2* wskaźnik końca sekwencji przekonwertowana.
+*Nazwisko2*<br/>
+Wskaźnik końca sekwencji przekonwertowana.
 
-*next2* nieprzekonwertowany odwołanie do wskaźnika do pierwszego `Byte` po przekonwertowaniu ostatniego `Byte`.
+*next2*<br/>
+Odwołanie do wskaźnika do pierwszego nieprzekonwertowany `Byte` po przekonwertowaniu ostatniego `Byte`.
 
 ### <a name="return-value"></a>Wartość zwracana
 
@@ -796,7 +840,7 @@ int main( )
 
 ```Output
 It worked: The converted string is:
- [This is the wchar_t string to be converted.]
+[This is the wchar_t string to be converted.]
 ```
 
 ## <a name="state_type"></a>  codecvt::state_type
@@ -825,13 +869,17 @@ result unshift(
 
 ### <a name="parameters"></a>Parametry
 
-*_Stanu* stan konwersji, który jest zachowywane między wywołaniami funkcji elementu członkowskiego.
+*_Stanu*<br/>
+Stan konwersji, który jest zachowywane między wywołaniami funkcji elementu członkowskiego.
 
-*first2* wskaźnik do pierwszego pozycji w zakresie docelowym.
+*first2*<br/>
+Wskaźnik do pierwszego pozycji w zakresie docelowym.
 
-*Nazwisko2* wskaźnik do ostatniej pozycji w zakresie docelowym.
+*Nazwisko2*<br/>
+Wskaźnik do ostatniej pozycji w zakresie docelowym.
 
-*next2* wskaźnik do pierwszego elementu niezmienione w sekwencji docelowej.
+*next2*<br/>
+Wskaźnik do pierwszego elementu niezmienione w sekwencji docelowej.
 
 ### <a name="return-value"></a>Wartość zwracana
 

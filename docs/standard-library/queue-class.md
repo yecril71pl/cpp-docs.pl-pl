@@ -32,12 +32,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d50b53f9c06c5edbd159e7e2bac112f6f30432df
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: 20566e34200b5c0e89b532d7096821d58a5f564f
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38954919"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44103706"
 ---
 # <a name="queue-class"></a>queue — Klasa
 
@@ -52,9 +52,11 @@ class queue
 
 ### <a name="parameters"></a>Parametry
 
-*Typ* typ danych elementu mają być przechowywane w kolejce
+*Typ*<br/>
+Typ danych elementu mają być przechowywane w kolejce
 
-*Kontener* typu bazowego kontenera, używaną do zaimplementowania kolejki.
+*Kontener*<br/>
+Typ podstawowy kontener używany do implementowania kolejki.
 
 ## <a name="remarks"></a>Uwagi
 
@@ -331,7 +333,8 @@ void push(const Type& val);
 
 ### <a name="parameters"></a>Parametry
 
-*Val* elementu dodany do tyłu kolejki.
+*Val*<br/>
+Element dodany do tyłu kolejki.
 
 ### <a name="remarks"></a>Uwagi
 
@@ -381,7 +384,8 @@ explicit queue(const container_type& right);
 
 ### <a name="parameters"></a>Parametry
 
-*prawy* **const** kontenera, w której skonstruowany kolejki jest kopią.
+*right*<br/>
+**Const** kontenera, w której skonstruowany kolejki jest kopią.
 
 ### <a name="remarks"></a>Uwagi
 
