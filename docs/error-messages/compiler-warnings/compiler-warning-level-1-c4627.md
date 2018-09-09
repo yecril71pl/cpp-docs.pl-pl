@@ -1,7 +1,7 @@
 ---
-title: Kompilatora (poziom 1) ostrzeżenie C4627 | Dokumentacja firmy Microsoft
+title: Kompilator ostrzeżenie (poziom 1) C4627 | Dokumentacja firmy Microsoft
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 09/09/2018
 ms.technology:
 - cpp-diagnostics
 ms.topic: error-reference
@@ -16,17 +16,34 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: dcde9e6707465fd95dbcb10e073a852624f0de0a
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 8f6be9ba8ba45adecfe5355848126dcb4b3b2fd1
+ms.sourcegitcommit: 592a2f402fef502450a45571a846175cc3ab1ceb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33284189"
+ms.lasthandoff: 09/09/2018
+ms.locfileid: "44249623"
 ---
-# <a name="compiler-warning-level-1-c4627"></a>Kompilator C4627 ostrzegawcze (poziom 1)
-"\<identyfikator >": pominięto podczas wyszukiwania użycia prekompilowanego nagłówka  
+# <a name="compiler-warning-level-1-c4627"></a>Kompilator ostrzeżenie (poziom 1) C4627
+
+> "*header_file*": pominięto podczas wyszukiwania użycia prekompilowanego nagłówka
+
+Jeśli bieżącego pliku źródłowego ma [/Yu \(Użyj prekompilowanego pliku nagłówka)](../../build/reference/yu-use-precompiled-header-file.md) zestaw, opcji, a następnie Kompilator ignoruje całą zawartość pliku, zanim prekompilowany plik nagłówkowy jest dołączony. Ostrzeżenie **C4627** jest generowany w programie Visual Studio 2015 i starsze wersje, jeśli *header_file* znajduje się przed prekompilowanego pliku nagłówkowego, i jeśli prekompilowanego pliku nagłówkowego nie obejmuje również *header_file*.
+
+## <a name="example"></a>Przykład
+
+W tym przykładzie pokazano, jak może wystąpić błąd i pokazuje, jak go naprawić:
+ 
+```cpp
+// c4627.cpp
+#include <iostream>       // C4627 - iostream not included by pch.h
+#include "pch.h"          // precompiled header file that does not include iostream
+// #include <iostream>    // To fix, move the iostream header include here from above
+int main()
+{
+    std::cout << "std::cout is defined!\n";
+}
+```
   
- Podczas wyszukiwania lokalizacji, w których jest używany prekompilowanego nagłówka, kompilator napotkano `#include` dyrektywy dla  *\<identyfikator >* dołączyć plik. Kompilator ignoruje `#include` dyrektywy, ale generuje ostrzeżenie **C4627** Jeśli prekompilowanego nagłówka nie zawiera już  *\<identyfikator >* dołączyć plik.  
-  
-## <a name="see-also"></a>Zobacz też  
- [Tworzenie prekompilowanych plików nagłówka](../../build/reference/creating-precompiled-header-files.md)
+## <a name="see-also"></a>Zobacz też
+
+[Tworzenie prekompilowanych plików nagłówka](../../build/reference/creating-precompiled-header-files.md)
