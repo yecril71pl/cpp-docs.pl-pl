@@ -1,5 +1,5 @@
 ---
-title: Usuwanie odstępów między przyciskami na pasku narzędzi | Dokumentacja firmy Microsoft
+title: Usuwanie odstępów między przyciskami na pasku narzędzi (C++) | Dokumentacja firmy Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -8,22 +8,22 @@ ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
-- Toolbar editor, spacing toolbar buttons
-- toolbar buttons (in Toolbar editor), space between buttons
+- Toolbar editor [C++], spacing toolbar buttons
+- toolbar buttons [C++], space between buttons
 ms.assetid: 3bbbacec-cd42-4c35-9ea5-de62daa4041d
 author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 5d96c68f7800a0819ea150ab970a6a84e6ee8ee0
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: 2f1324fdef8e63f202536f46c4b164905a9130cd
+ms.sourcegitcommit: f0c90000125a9497bf61e41624de189a043703c0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42592035"
+ms.lasthandoff: 09/10/2018
+ms.locfileid: "44312693"
 ---
-# <a name="removing-space-between-buttons-on-a-toolbar"></a>Usuwanie odstępów między przyciskami na pasku narzędzi
+# <a name="removing-space-between-buttons-on-a-toolbar-c"></a>Usuwanie odstępów między przyciskami na pasku narzędzi (C++)
 
 Poniższa procedura pokazuje, jak usunąć odstępów między przyciskami na pasku narzędzi.
 

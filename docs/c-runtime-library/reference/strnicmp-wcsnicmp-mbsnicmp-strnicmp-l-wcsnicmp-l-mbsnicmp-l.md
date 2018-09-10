@@ -76,18 +76,18 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ba97d3bcd356a044245e7613470bead1cc42eb25
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 0da454b2b980be3565ee27fde4ee14d7eadd42fb
+ms.sourcegitcommit: f0c90000125a9497bf61e41624de189a043703c0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32417132"
+ms.lasthandoff: 09/10/2018
+ms.locfileid: "44313633"
 ---
 # <a name="strnicmp-wcsnicmp-mbsnicmp-strnicmpl-wcsnicmpl-mbsnicmpl"></a>_strnicmp, _wcsnicmp, _mbsnicmp, _strnicmp_l, _wcsnicmp_l, _mbsnicmp_l
 Porównuje określoną liczbę znaków z dwóch ciągów bez uwzględniania wielkości liter.
 
 > [!IMPORTANT]
-> **_mbsnicmp —** i **_mbsnicmp_l —** nie można używać w aplikacjach, które są wykonywane w środowisku wykonawczym systemu Windows. Aby uzyskać więcej informacji, zobacz [funkcje CRT, nie są obsługiwane w aplikacjach platformy uniwersalnej systemu Windows](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
+> **_mbsnicmp —** i **_mbsnicmp_l —** nie można używać w aplikacjach korzystających ze środowiska wykonawczego Windows. Aby uzyskać więcej informacji, zobacz [funkcje CRT nieobsługiwane w aplikacjach platformy uniwersalnej Windows](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
 
 ## <a name="syntax"></a>Składnia
 
@@ -130,7 +130,7 @@ int _mbsnicmp_l(
 ### <a name="parameters"></a>Parametry
 
 *ciąg1*, *ciąg2*<br/>
-Ciągi zakończone wartością null do porównania.
+Ciągi zakończony wartością null do porównania.
 
 *Liczba*<br/>
 Liczba znaków do porównania.
@@ -140,29 +140,29 @@ Ustawienia regionalne do użycia.
 
 ## <a name="return-value"></a>Wartość zwracana
 
-Wskazuje relację między podciągów, w następujący sposób.
+Określa relację pomiędzy podciągami, w następujący sposób.
 
 |Wartość zwracana|Opis|
 |------------------|-----------------|
-|< 0|*ciąg1* podciąg jest mniejsza niż *ciąg2* podciąg.|
-|0|*ciąg1* podciąg jest taki sam jak *ciąg2* podciąg.|
-|> 0|*ciąg1* podciąg jest większa niż *ciąg2* podciąg.|
+|< 0|*ciąg1* podciąg ma mniej niż *ciąg2* podciąg.|
+|0|*ciąg1* podciągu jest taka sama jak *ciąg2* podciąg.|
+|> 0|*ciąg1* podciągu jest większa niż *ciąg2* podciąg.|
 
-Parametr błędu sprawdzania poprawności, te funkcje zwracają **_NLSCMPERROR**, która jest zdefiniowana w \<string.h > i \<mbstring.h >.
+Na parametr błąd sprawdzania poprawności, te funkcje zwracają **_NLSCMPERROR**, który jest zdefiniowany w \<string.h > i \<mbstring.h >.
 
 ## <a name="remarks"></a>Uwagi
 
-**_Strnicmp —** funkcja ordinally porównuje, co najwyżej pierwszy *liczba* znaków *ciąg1* i *ciąg2*. Porównanie jest wykonywane bez rozróżniania wielkości liter konwertując każdy znak na małe litery. **_strnicmp —** jest rozróżniana wielkość liter wersja **strncmp —**. Porównanie kończy się po osiągnięciu znak końcowy null w każdym ciągu przed *liczba* znaki są porównywane. Jeśli ciągi są takie same po znak końcowy null osiągnięciu w każdym ciągu przed *liczba* znaki są porównywane, krótszego ciągu jest mniejsza.
+**_Strnicmp —** funkcja ordinally porównuje, co najwyżej, pierwsze *liczba* znaków *ciąg1* i *ciąg2*. Porównanie jest wykonywane bez uwzględniania wielkości liter, dokonując przekonwertowania na małe litery, każdy znak. **_strnicmp —** jest wersją uwzględniającą wielkości **strncmp —**. Porównanie kończy się po osiągnięciu kończącego znaku null albo w ciągu przed *liczba* znaki są porównywane. Jeśli ciągi są równe gdy kończący znak null jest osiągany w każdym ciągu przed *liczba* znaki są porównywane, krótszy ciąg jest mniejszy.
 
-Znaków 91 96 w tabeli ASCII ("[","\\", "]", "^", "_" i "\`") oceny następujący mniej niż jakakolwiek alfabetu. Ta kolejność jest identyczna ze **stricmp —**.
+Znaków 91 96 w tabeli kodów ASCII ('[','\\","] "," ^ ","_"i"\`") oceny jako mniej niż dowolny znaku alfabetyczny. Ta kolejność jest taka sama jak w przypadku **stricmp —**.
 
-**_wcsnicmp —** i **_mbsnicmp —** znaków dwubajtowych i znaków wielobajtowych wersji **_strnicmp —**. Argumenty **_wcsnicmp —** są znaków dwubajtowych ciągi; tych **_mbsnicmp —** są ciągami znaków wielobajtowych. **_mbsnicmp —** rozpoznaje wielobajtowych sekwencji znaków zgodnie z bieżącej strony kodowe wielobajtowe i zwraca **_NLSCMPERROR** w przypadku wystąpienia błędu. Aby uzyskać więcej informacji, zobacz [stron kodowych](../../c-runtime-library/code-pages.md). Te trzy funkcje działają tak samo w przeciwnym razie wartość. Funkcje te zależą od ustawień regionalnych — wersje, które nie mają **_l** Użyj sufiksu bieżące ustawienia regionalne dla ich działania zależnego od ustawień regionalnych; wersje, które mają **_l** sufiks Zamiast tego użyj *ustawień regionalnych* przekazanego pakietu. Aby uzyskać więcej informacji, zobacz [ustawień regionalnych](../../c-runtime-library/locale.md).
+**_wcsnicmp —** i **_mbsnicmp —** są wersjami znaków dwubajtowych i znaków wielobajtowych **_strnicmp —**. Argumenty **_wcsnicmp —** są znakami dwubajtowymi ciągów; te z **_mbsnicmp —** są ciągami znaków wielobajtowych. **_mbsnicmp —** rozpoznaje sekwencje znaków wielobajtowych według bieżącej strony kodowe wielobajtowe i zwraca **_NLSCMPERROR** w przypadku błędu. Aby uzyskać więcej informacji, zobacz [stron kodowych](../../c-runtime-library/code-pages.md). Te trzy funkcje zachowują się identycznie. Te funkcje zależą od ustawień regionalnych — wersje, które nie mają **_l** sufiks używają bieżących ustawień regionalnych dla swoich zachowań zależnych od ustawień regionalnych; wersje, które mają **_l** sufiks Zamiast tego użyć *ustawień regionalnych* który jest przekazywany w. Aby uzyskać więcej informacji, zobacz [ustawień regionalnych](../../c-runtime-library/locale.md).
 
-Wszystkie te funkcje walidację ich parametrów. Jeśli dowolny *ciąg1* lub *ciąg2* wskaźnika o wartości null, jest program obsługi nieprawidłowych parametrów zostanie wywołany, zgodnie z opisem w [sprawdzanie poprawności parametru](../../c-runtime-library/parameter-validation.md). Jeśli jest dozwolone wykonywanie, aby kontynuować, te funkcje zwracają **_NLSCMPERROR** i ustaw **errno** do **einval —**.
+Wszystkie te funkcje sprawdzają poprawność swoich parametrów. Jeśli *ciąg1* lub *ciąg2* jest pustym wskaźnikiem, wywoływany nieprawidłowy parametr uchwytu, zgodnie z opisem w [Parameter Validation](../../c-runtime-library/parameter-validation.md). Jeśli wykonanie może być kontynuowane, te funkcje zwracają **_NLSCMPERROR** i ustaw **errno** do **EINVAL**.
 
 ### <a name="generic-text-routine-mappings"></a>Mapowania procedur zwykłego tekstu
 
-|Procedura TCHAR.H|_Unicode — & _MBCS nie zdefiniowany|_MBCS zdefiniowano|_UNICODE zdefiniowano|
+|Procedura TCHAR.H|_UNICODE & _MBCS nie zdefiniowano|_MBCS zdefiniowano|_UNICODE zdefiniowano|
 |---------------------|------------------------------------|--------------------|-----------------------|
 |**_tcsncicmp —**|**_strnicmp**|**_mbsnicmp —**|**_wcsnicmp**|
 |**_tcsnicmp —**|**_strnicmp**|**_mbsnbicmp —**|**_wcsnicmp**|
@@ -172,8 +172,8 @@ Wszystkie te funkcje walidację ich parametrów. Jeśli dowolny *ciąg1* lub *ci
 
 |Procedura|Wymagany nagłówek|
 |-------------|---------------------|
-|**_strnicmp —**, **_strnicmp_l —**|<string.h>|
-|**_wcsnicmp —**, **_wcsnicmp_l —**|< string.h > lub < wchar.h >|
+|**_strnicmp —**, **_strnicmp_l —**|\<string.h>|
+|**_wcsnicmp —**, **_wcsnicmp_l —**|\<Włącz String.h > lub \<wchar.h >|
 |**_mbsnicmp —**, **_mbsnicmp_l —**|\<mbstring.h>|
 
 Aby uzyskać dodatkowe informacje o zgodności, zobacz [zgodności](../../c-runtime-library/compatibility.md).

@@ -1,5 +1,5 @@
 ---
-title: Okno dialogowe Nowy zasób paska narzędzi | Dokumentacja firmy Microsoft
+title: Okno dialogowe Nowy zasób paska narzędzi (C++) | Dokumentacja firmy Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -10,23 +10,23 @@ f1_keywords:
 dev_langs:
 - C++
 helpviewer_keywords:
-- New Toolbar Resource dialog box
+- New Toolbar Resource dialog box [C++]
 ms.assetid: 52dd01ad-e748-4ab2-b3eb-59f5df990ca6
 author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 6952fa51115d5bec9650ef6d6012e3c7aff2d127
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: 6ca09463a2934db0097c09d6a4f928f108fd0760
+ms.sourcegitcommit: f0c90000125a9497bf61e41624de189a043703c0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42602173"
+ms.lasthandoff: 09/10/2018
+ms.locfileid: "44316305"
 ---
-# <a name="new-toolbar-resource-dialog-box"></a>Okno dialogowe Nowy zasób paska narzędzi
+# <a name="new-toolbar-resource-dialog-box-c"></a>Okno dialogowe Nowy zasób paska narzędzi (C++)
 
-**Nowy zasób paska narzędzi** okno dialogowe umożliwia określenie szerokości i wysokości przycisków, które dodajesz do zasobu paska narzędzi. Wartość domyślna to 16 x 15 pikseli.
+**Nowy zasób paska narzędzi** okno dialogowe umożliwia określenie szerokości i wysokości przycisków, które dodajesz do zasobu paska narzędzi w projekcie C++. Wartość domyślna to 16 x 15 pikseli.
 
 Mapa bitowa, który jest używany do tworzenia paska narzędzi ma maksymalną szerokość 2048. Jeśli ustawisz **szerokość przycisku** do 512, możesz mieć tylko cztery przyciski. Ustaw szerokość 513, może mieć tylko trzy przyciski.
 

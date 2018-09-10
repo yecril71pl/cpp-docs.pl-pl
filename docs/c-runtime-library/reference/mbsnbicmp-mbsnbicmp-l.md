@@ -50,19 +50,19 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 15038e42b87a9803312df79eb5d235f1add51669
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 43c9da102f81654062518ca8e886aab1c49df623
+ms.sourcegitcommit: f0c90000125a9497bf61e41624de189a043703c0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32405019"
+ms.lasthandoff: 09/10/2018
+ms.locfileid: "44314966"
 ---
 # <a name="mbsnbicmp-mbsnbicmpl"></a>_mbsnbicmp, _mbsnbicmp_l
 
-Porównuje **n** bajtów dwóch znaków wielobajtowych ciągi i ignoruje wielkość liter.
+Porównuje **n** bajtów znaków wielobajtowych dwa ciągi i ignoruje wielkość liter.
 
 > [!IMPORTANT]
-> Nie można używać tego interfejsu API w aplikacjach, które są wykonywane w środowisku wykonawczym systemu Windows. Aby uzyskać więcej informacji, zobacz [funkcje CRT, nie są obsługiwane w aplikacjach platformy uniwersalnej systemu Windows](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
+> Tego API nie można używać w aplikacjach korzystających ze środowiska wykonawczego Windows. Aby uzyskać więcej informacji, zobacz [funkcje CRT nieobsługiwane w aplikacjach platformy uniwersalnej Windows](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
 
 ## <a name="syntax"></a>Składnia
 
@@ -77,34 +77,34 @@ int _mbsnbicmp(
 ### <a name="parameters"></a>Parametry
 
 *ciąg1*, *ciąg2*<br/>
-Ciągi zakończone wartością null do porównania.
+Ciągi zakończony wartością null do porównania.
 
 *Liczba*<br/>
 Liczba bajtów do porównania.
 
 ## <a name="return-value"></a>Wartość zwracana
 
-Wartości zwracanej wskazuje relację między podciągów.
+Wartość zwracana określa relację pomiędzy podciągami.
 
 |Wartość zwracana|Opis|
 |------------------|-----------------|
-|< 0|*ciąg1* podciąg mniej niż *ciąg2* podciąg.|
-|0|*ciąg1* podciąg taki sam jak *ciąg2* podciąg.|
-|> 0|*ciąg1* podciąg większe *ciąg2* podciąg.|
+|< 0|*ciąg1* podciąg mniejszy niż *ciąg2* podciąg.|
+|0|*ciąg1* podciąg identyczny z *ciąg2* podciąg.|
+|> 0|*ciąg1* podciąg większy niż *ciąg2* podciąg.|
 
-W przypadku wystąpienia błędu **_mbsnbicmp —** zwraca **_NLSCMPERROR**, która jest zdefiniowana w String.h i Mbstring.h.
+W przypadku błędu **_mbsnbicmp —** zwraca **_NLSCMPERROR**, który jest zdefiniowany w String.h i Mbstring.h.
 
 ## <a name="remarks"></a>Uwagi
 
-**_Mbsnbicmp —** funkcja przeprowadza porównanie liczby porządkowej co najwyżej pierwszego *liczba* bajtów *ciąg1* i *ciąg2*. Porównanie odbywa się za pomocą konwersji na małe litery; każdy znak [_mbsnbcmp —](mbsnbcmp-mbsnbcmp-l.md) jest rozróżniana wielkość liter wersja **_mbsnbicmp —**. Porównanie kończy się po osiągnięciu znak końcowy null w każdym ciągu przed *liczba* znaki są porównywane. Jeśli ciągi są takie same po znak końcowy null osiągnięciu w każdym ciągu przed *liczba* znaki są porównywane, krótszego ciągu jest mniejsza.
+**_Mbsnbicmp —** funkcja wykonuje porównanie porządkowe, co najwyżej pierwsze *liczba* bajtów *ciąg1* i *ciąg2*. Porównanie jest wykonywane, dokonując przekonwertowania na małe litery; każdy znak [_mbsnbcmp —](mbsnbcmp-mbsnbcmp-l.md) jest rozróżniana wielkość liter wersją **_mbsnbicmp —**. Porównanie kończy się po osiągnięciu kończącego znaku null albo w ciągu przed *liczba* znaki są porównywane. Jeśli ciągi są równe gdy kończący znak null jest osiągany w każdym ciągu przed *liczba* znaki są porównywane, krótszy ciąg jest mniejszy.
 
-**_mbsnbicmp —** jest podobny do [_mbsnbcmp —](mbsnbcmp-mbsnbcmp-l.md), ale do porównywania ciągów *liczba* bajtów zamiast znaków.
+**_mbsnbicmp —** przypomina [_mbsnbcmp —](mbsnbcmp-mbsnbcmp-l.md), z tą różnicą, że porównuje ciągi do *liczba* bajtów, a znakami.
 
-Dwa ciągi zawierające znaki znajdujące się między "Z" i "" w tabeli ASCII ('[','\\","] "," ^ ","_", i"\`") porównania w różny sposób, w zależności od ich przypadku. Na przykład dwa ciągi "ABCDE" i "ABCD ^" porównanie jedną z metod, jeśli wynikiem porównania jest małe litery ("abcde" > "abcd ^") i w inny sposób ("ABCDE" < "ABCD ^") jeśli wielkie litery.
+Dwa ciągi zawierające znaki znajdujące się między "Z" i "" w tabeli kodów ASCII ('[','\\","] "," ^ ","_"i"\`') porównać różnie, w zależności od ich przypadku. Na przykład dwa ciągi "ABCDE" i "ABCD ^" porównują w jedna stronę, jeśli wynikiem porównania jest pisana małymi literami ("abcde" > "abcd ^") i w drugą stronę ("ABCDE" < "ABCD ^") jeżeli wynik jest dużą literą.
 
-**_mbsnbicmp —** rozpoznaje wielobajtowych sekwencji znaków zgodnie z [strony kodowe wielobajtowe](../../c-runtime-library/code-pages.md) obecnie w użyciu. Nie dotyczy on bieżących ustawień regionalnych.
+**_mbsnbicmp —** rozpoznaje sekwencje znaków wielobajtowych według [wielobajtowa strona kodowa](../../c-runtime-library/code-pages.md) aktualnie w użyciu. Nie występuje przy bieżących ustawień regionalnych.
 
-Jeśli dowolny *ciąg1* lub *ciąg2* wskaźnika o wartości null, jest **_mbsnbicmp —** wywołuje program obsługi nieprawidłowych parametrów, zgodnie z opisem w [sprawdzanie poprawności parametru](../../c-runtime-library/parameter-validation.md). Jeśli jest dozwolone wykonywanie, aby kontynuować, funkcja zwraca **_NLSCMPERROR** i ustawia **errno** do **einval —**.
+Jeśli *ciąg1* lub *ciąg2* jest pustym wskaźnikiem, **_mbsnbicmp —** wywołuje program obsługi nieprawidłowego parametru, zgodnie z opisem w [Parameter Validation](../../c-runtime-library/parameter-validation.md). Jeśli wykonanie może być kontynuowane, funkcja zwraca **_NLSCMPERROR** i ustawia **errno** do **EINVAL**.
 
 ### <a name="generic-text-routine-mappings"></a>Mapowania procedur zwykłego tekstu
 
@@ -117,9 +117,9 @@ Jeśli dowolny *ciąg1* lub *ciąg2* wskaźnika o wartości null, jest **_mbsnbi
 
 |Procedura|Wymagany nagłówek|
 |-------------|---------------------|
-|**_mbsnbicmp —**|<mbstring.h>|
+|**_mbsnbicmp —**|\<mbstring.h>|
 
-Aby uzyskać więcej informacji o zgodności, zobacz [zgodności](../../c-runtime-library/compatibility.md).
+Aby uzyskać więcej informacji na temat zgodności, zobacz [zgodności](../../c-runtime-library/compatibility.md).
 
 ## <a name="example"></a>Przykład
 

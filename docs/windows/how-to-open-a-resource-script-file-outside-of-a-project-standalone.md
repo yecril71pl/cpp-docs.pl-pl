@@ -1,5 +1,5 @@
 ---
-title: 'Porady: otwieranie pliku skryptu zasobu spoza projektu (autonomicznego) | Dokumentacja firmy Microsoft'
+title: 'Porady: otwieranie pliku skryptu zasobu spoza projektu (autonomicznego) języka C++ | Dokumentacja firmy Microsoft'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -10,24 +10,24 @@ f1_keywords:
 dev_langs:
 - C++
 helpviewer_keywords:
-- resources [Visual Studio], viewing
-- rc files, viewing resources
-- .rc files, viewing resources
-- resource script files, viewing resources
+- resources [C++], viewing
+- rc files [C++], viewing resources
+- .rc files [C++], viewing resources
+- resource script files [C++], viewing resources
 ms.assetid: bc350c60-178d-4c5d-9a7e-6576b0c936e4
 author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 2711c34d55c4f4a7f1acfba4f315e06768623014
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: 6972d76127bccf839c7778e9050e11ec10b6ac2f
+ms.sourcegitcommit: f0c90000125a9497bf61e41624de189a043703c0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42600913"
+ms.lasthandoff: 09/10/2018
+ms.locfileid: "44315252"
 ---
-# <a name="how-to-open-a-resource-script-file-outside-of-a-project-standalone"></a>Porady: otwieranie pliku skryptu zasobu spoza projektu (autonomicznego)
+# <a name="how-to-open-a-resource-script-file-outside-of-a-c-project-standalone"></a>Porady: otwieranie pliku skryptu zasobu spoza projektu (autonomicznego) języka C++
 
 Zasoby można wyświetlić w pliku .rc, bez konieczności jest otwarty projekt. Plik .rc zostanie otwarty w oknie dokumentu, w przeciwieństwie do otwarcia w [widok zasobów](../windows/resource-view-window.md) okna (co jest wykonywane, gdy plik jest otwarty w projekcie).
 

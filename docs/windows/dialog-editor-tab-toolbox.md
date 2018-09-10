@@ -1,5 +1,5 @@
 ---
-title: Karta Edytor okien dialogowych, przybornik | Dokumentacja firmy Microsoft
+title: Karta Edytor okien dialogowych, przybornik (C++) | Dokumentacja firmy Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -10,10 +10,10 @@ dev_langs:
 helpviewer_keywords:
 - Toolbox [C++], Dialog Editor tab
 - controls [C++], types
-- syslink controls ino dialog boxes
-- custom controls [Visual Studio], dialog boxes
+- syslink controls in dialog boxes
+- custom controls [C++], dialog boxes
 - controls [C++], standard
-- Dialog editor, creating controls
+- Dialog Editor [C++], creating controls
 - controls [C++], adding to dialog boxes
 ms.assetid: 253885c2-dcb9-4d8e-ac9b-805ea31cbf5e
 author: mikeblome
@@ -21,14 +21,14 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: a528ece23301f707b267ed7cefd30649b34c5e60
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: 2fa16a2cf15d5004ff80dda3188d79ffcba72ec1
+ms.sourcegitcommit: f0c90000125a9497bf61e41624de189a043703c0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42613515"
+ms.lasthandoff: 09/10/2018
+ms.locfileid: "44316214"
 ---
-# <a name="dialog-editor-tab-toolbox"></a>Karta Edytor okien dialogowych, Przybornik
+# <a name="dialog-editor-tab-toolbox-c"></a>Karta Edytor okien dialogowych, przybornik (C++)
 
 **Edytor okien dialogowych** karta jest wyświetlana w [okno przybornika](/visualstudio/ide/reference/toolbox) podczas pracy **okna dialogowego** edytora. Aby dodać formanty do Twojego nowego okna dialogowego, przeciągnij formanty z **przybornika** do okna dialogowego, który tworzysz (Aby uzyskać więcej informacji, zobacz [Dodawanie formantu do okna dialogowego](adding-a-control-to-a-dialog-box.md)). Możesz przenosić kontrolki lub zmieniać ich rozmiar i kształt.
 

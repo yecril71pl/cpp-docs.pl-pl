@@ -1,5 +1,5 @@
 ---
-title: file_status — klasa | Dokumentacja firmy Microsoft
+title: file_status, klasa | Dokumentacja firmy Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -22,12 +22,12 @@ helpviewer_keywords:
 - std::experimental::filesystem::file_status::permissions
 ms.workload:
 - cplusplus
-ms.openlocfilehash: be8f85041099d76a4bbb492aa55c5fb73d870589
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 7dc955aa615deadb6e99cfdbb8d72513cc93ced8
+ms.sourcegitcommit: f0c90000125a9497bf61e41624de189a043703c0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33842537"
+ms.lasthandoff: 09/10/2018
+ms.locfileid: "44314563"
 ---
 # <a name="filestatus-class"></a>file_status — Klasa
 
@@ -39,7 +39,34 @@ Opakowuje [typ_pliku](../standard-library/filesystem-enumerations.md#file_type) 
 class file_status;
 ```
 
-## <a name="filestatusfilestatus"></a>file_status::file_status
+### <a name="constructors"></a>Konstruktorów
+
+|Konstruktor|Opis|
+|-|-|
+|[file_status](#file_status)|Tworzy otokę dla [typ_pliku](../standard-library/filesystem-enumerations.md#file_type) i plik [perms](../standard-library/filesystem-enumerations.md#perms).|
+
+### <a name="member-functions"></a>Funkcje Członkowskie
+
+|Funkcja elementu członkowskiego|Opis|
+|-|-|
+|[Typ](#type)|Pobiera lub ustawia `file_type`.|
+|[Uprawnienia](#permissions)|Pobiera lub ustawia uprawnienia do pliku.|
+
+### <a name="operators"></a>Operatory
+
+|Operator|Opis|
+|-|-|
+|[operator=](#op_as)|Operatory przypisania domyślne elementów członkowskich zachowują się zgodnie z oczekiwaniami.|
+
+## <a name="requirements"></a>Wymagania
+
+**Nagłówek:** \<filesystem >
+
+**Namespace:** std::experimental::filesystem, std::experimental::filesystem
+
+## <a name="file_status"></a> file_status::file_status —
+
+Tworzy otokę dla [typ_pliku](../standard-library/filesystem-enumerations.md#file_type) i plik [perms](../standard-library/filesystem-enumerations.md#perms).
 
 ```cpp
 explicit file_status(
@@ -53,40 +80,60 @@ file_status(file_status&&) noexcept = default;
 ~file_status() noexcept = default;
 ```
 
-## <a name="filestatusoperator"></a>file_status::operator=
+### <a name="parameters"></a>Parametry
+
+*ftype*<br/>
+Określony `file_type`, wartość domyślna to `file_type::none`.
+
+*Maska*<br/>
+Określony plik `perms`, wartość domyślna to `perms::unknown`.
+
+*file_status*<br/>
+Przechowywany obiekt.
+
+## <a name="op_as"></a> file_status::operator =
+
+Operatory przypisania domyślne elementów członkowskich zachowują się zgodnie z oczekiwaniami.
 
 ```cpp
 file_status& operator=(const file_status&) noexcept = default;
 file_status& operator=(file_status&&) nexcept = default;
 ```
 
-Operatory przypisania domyślnego elementu członkowskiego działają zgodnie z oczekiwaniami.
+### <a name="parameters"></a>Parametry
 
-## <a name="type"></a>— typ
+*file_status*<br/>
+[File_status](../standard-library/file-status-class.md) są kopiowane do `file_status`.
+
+## <a name="type"></a> Typ
+
+Pobiera lub ustawia `file_type`.
 
 ```cpp
 file_type type() const noexcept
 void type(file_type ftype) noexcept
 ```
 
-Pobiera lub ustawia typ_pliku.
+### <a name="parameters"></a>Parametry
 
-## <a name="permissions"></a>uprawnienia
+*ftype*<br/>
+Określony `file_type`.
+
+## <a name="permissions"></a> Uprawnienia
+
+Pobiera lub ustawia uprawnienia do pliku.
+
+Użyj metody ustawiającej, aby wyświetlić plik `readonly` lub usuń `readonly` atrybutu.
 
 ```cpp
 perms permissions() const noexcept
 void permissions(perms mask) noexcept
 ```
 
-Pobiera lub ustawia uprawnienia do pliku.
+### <a name="parameters"></a>Parametry
 
-Metoda setter należy użyć pliku tylko do odczytu lub usuń atrybut tylko do odczytu.
-
-## <a name="requirements"></a>Wymagania
-
-**Nagłówek:** \<filesystem >
-
-**Namespace:** std::experimental::filesystem, std::experimental::filesystem
+*Maska*<br/>
+Określony `perms`.
 
 ## <a name="see-also"></a>Zobacz także
 

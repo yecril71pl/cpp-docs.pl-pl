@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a6d8780c249fdf768c322e3026240642c4da43c4
-ms.sourcegitcommit: 6408139d5f5ff8928f056bde93d20eecb3520361
+ms.openlocfilehash: 538a376dd14eae32864b494b7e79db1c89686b84
+ms.sourcegitcommit: f0c90000125a9497bf61e41624de189a043703c0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37338724"
+ms.lasthandoff: 09/10/2018
+ms.locfileid: "44315018"
 ---
 # <a name="application-control"></a>Sterowanie aplikacjami
 OLE wymaga znacznej kontroli nad aplikacjami i ich obiektami. OLE systemowych bibliotek DLL musi mieć możliwość uruchamiania i automatyczne wydanie aplikacji, koordynowania ich produkcji i modyfikacji obiektów i tak dalej. Funkcje, w tym temacie spełniają te wymagania. Oprócz wywoływana przez OLE systemowych bibliotek DLL, te funkcje czasami musi zostać wywołany przez aplikacje, jak również. 
@@ -186,7 +186,7 @@ AfxOleLockControl(_T("MSCAL.Calendar"));
 ```
    
 ### <a name="requirements"></a>Wymagania  
- **Nagłówek:** < afxwin.h >  
+ **Nagłówek:** afxwin.h  
    
 ### <a name="see-also"></a>Zobacz też  
  [Makra i funkcje globalne](mfc-macros-and-globals.md)   
@@ -332,7 +332,7 @@ AfxOleUnlockControl(_T("MSCAL.Calendar"));
 ```
    
 ### <a name="requirements"></a>Wymagania  
- **Nagłówek:** < afxwin.h >  
+ **Nagłówek:** afxwin.h  
    
 ### <a name="see-also"></a>Zobacz też  
  [Makra i funkcje globalne](mfc-macros-and-globals.md)  

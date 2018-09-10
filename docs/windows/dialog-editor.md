@@ -1,5 +1,5 @@
 ---
-title: Edytor okien dialogowych | Dokumentacja firmy Microsoft
+title: Edytor okien dialogowych (C++) | Dokumentacja firmy Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -11,24 +11,24 @@ f1_keywords:
 dev_langs:
 - C++
 helpviewer_keywords:
-- resource editors, Dialog editor
+- resource editors [C++], Dialog editor
 - editors, dialog boxes
 - Dialog editor
-- dialog boxes, editing
+- dialog boxes [C++], editing
 ms.assetid: d94884ef-2cca-49d8-9b58-775f34848134
 author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 39c34487941ee45f91883ed91b1faa2c93973cfe
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: 6226b583b60bb458d75ba82ac1fd0b758028dca8
+ms.sourcegitcommit: f0c90000125a9497bf61e41624de189a043703c0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42601727"
+ms.lasthandoff: 09/10/2018
+ms.locfileid: "44315499"
 ---
-# <a name="dialog-editor"></a>Edytor okien dialogowych
+# <a name="dialog-editor-c"></a>Edytor okien dialogowych (C++)
 
 **Okna dialogowego** Edytor umożliwia tworzenie i edytowanie zasobów okien dialogowych. Otwórz Edytor okien dialogowych przez dwukrotne kliknięcie pliku .rc okna dialogowego w **widok zasobów** okna (**widoku** > **widok zasobów**). Należy pamiętać, że **widok zasobów** nie jest dostępny w wersji Express.
 

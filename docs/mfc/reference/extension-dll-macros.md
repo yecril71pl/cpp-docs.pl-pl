@@ -14,12 +14,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ee79ccad55d2fd360166b9d693f3d4757fe2049f
-ms.sourcegitcommit: 6408139d5f5ff8928f056bde93d20eecb3520361
+ms.openlocfilehash: d3f34a6bc42f1c01783e21e1c3b0f9f04adad46f
+ms.sourcegitcommit: f0c90000125a9497bf61e41624de189a043703c0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37339231"
+ms.lasthandoff: 09/10/2018
+ms.locfileid: "44317761"
 ---
 # <a name="macros-and-functions-for-managing-dlls"></a>Makra i funkcje zarządzania biblioteki dll
 
@@ -99,7 +99,7 @@ void AFXAPI AfxOleInitModule( );
  Jeśli tworzysz kontrolkę OLE i korzystają `COleControlModule`, nie należy wywołać `AfxOleInitModule` ponieważ `InitInstance` funkcję członkowską `COleControlModule` wywołania `AfxOleInitModule`.  
    
 ### <a name="requirements"></a>Wymagania  
- **Nagłówek**: < afxdll_.h >  
+ **Nagłówek**: \<afxdll_.h >  
    
 ### <a name="see-also"></a>Zobacz też  
  [Makra i funkcje globalne](mfc-macros-and-globals.md)   
@@ -117,7 +117,7 @@ void AFXAPI AfxNetInitModule( );
  Biblioteki DLL MFC gniazd jest rozszerzeniem MFC DLL; w celu rozszerzenia MFC biblioteki DLL Pobierz połączonymi w `CDynLinkLibrary` łańcucha, należy utworzyć `CDynLinkLibrary` obiektu w kontekście każdego modułu, który będzie go używać. `AfxNetInitModule` Tworzy `CDynLinkLibrary` obiekt w kontekście swojej zwykłej biblioteki MFC DLL firmy, tak, aby go pobiera połączonymi w `CDynLinkLibrary` obiektu łańcucha zwykłej biblioteki MFC DLL.  
    
 ### <a name="requirements"></a>Wymagania  
- **Nagłówek:** < afxdll_.h >  
+ **Nagłówek:** \<afxdll_.h >  
    
 ### <a name="see-also"></a>Zobacz też  
  [Makra i funkcje globalne](mfc-macros-and-globals.md)   

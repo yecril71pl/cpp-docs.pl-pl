@@ -255,12 +255,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d1a157bcd3ecdce16a25d5bb6523ed6962a94a18
-ms.sourcegitcommit: e9ce38decc9f986edab5543de3464b11ebccb123
+ms.openlocfilehash: 49677077761a11df93a540a749e140485fa9485f
+ms.sourcegitcommit: f0c90000125a9497bf61e41624de189a043703c0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/13/2018
-ms.locfileid: "42465132"
+ms.lasthandoff: 09/10/2018
+ms.locfileid: "44319074"
 ---
 # <a name="compiler-errors-c3500-through-c3999"></a>Błędy kompilatora od C3500 do C3999
 
@@ -496,7 +496,7 @@ Artykuły w tej sekcji dokumentacji wyjaśniają podzbiór komunikaty o błędac
 |[Błąd kompilatora C3721](compiler-error-c3721.md)|"*podpisu*": niezgodny podpis dla zdarzenia|
 |[Błąd kompilatora C3722](compiler-error-c3722.md)|Zdarzenie generyczne nie jest dozwolone.|
 |[Błąd kompilatora C3723](compiler-error-c3723.md)|"*funkcja*": nie można rozpoznać zdarzenia|
-|[Błąd kompilatora C3724](compiler-error-c3724.md)|należy #include < windows.h > Aby użyć wielowątkowości ze zdarzeniami|
+|[Błąd kompilatora C3724](compiler-error-c3724.md)|należy #include \<windows.h > Aby użyć wielowątkowości ze zdarzeniami|
 |C3725 błąd kompilatora|Nieaktualne.|
 |C3726 błąd kompilatora|Nieaktualne.|
 |[Błąd kompilatora C3727](compiler-error-c3727.md)|"*zdarzeń*": zdarzenie zarządzane musi być funkcją składową lub składową danych będącą wskaźnikiem do delegata|

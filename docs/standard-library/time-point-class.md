@@ -20,12 +20,12 @@ helpviewer_keywords:
 - std::chrono [C++], time_point
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 99209063e8856ffe9ea26ffaaf0917e1f6cd487b
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: 72ce06a3f722bca0147d220fb8602ab9e30f8751
+ms.sourcegitcommit: f0c90000125a9497bf61e41624de189a043703c0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38954263"
+ms.lasthandoff: 09/10/2018
+ms.locfileid: "44319022"
 ---
 # <a name="timepoint-class"></a>time_point — Klasa
 
@@ -160,7 +160,7 @@ constexpr time_point(const time_point<clock, Duration2>& Tp);
 
 Pierwszy Konstruktor konstruuje obiekt, którego przechowywane `duration` wartość jest równa [duration::zero](../standard-library/duration-class.md#zero).
 
-Drugi Konstruktor konstruuje obiekt, którego przechowywana wartość jest równa *czas trwania*. Chyba że `is_convertible<Duration2, duration>` *prawdziwe*, drugi Konstruktor nie uczestniczy w przeciążeniu rozdzielczości. Aby uzyskać więcej informacji, zobacz [< type_traits >](../standard-library/type-traits.md).
+Drugi Konstruktor konstruuje obiekt, którego przechowywana wartość jest równa *czas trwania*. Chyba że `is_convertible<Duration2, duration>` przechowuje wartości true, drugi Konstruktor nie uczestniczy w przeciążeniu rozdzielczości. Aby uzyskać więcej informacji, zobacz [< type_traits >](../standard-library/type-traits.md).
 
 Trzeci Konstruktor inicjuje jego `duration` wartości za pomocą `Tp.time_since_epoch()`.
 

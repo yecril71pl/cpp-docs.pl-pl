@@ -16,16 +16,16 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 629c7fa0a113f0db279403fcfbcc82b6c0a0571b
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: ff8e486be6e28de313a8e1a20634af4c50c350e8
+ms.sourcegitcommit: f0c90000125a9497bf61e41624de189a043703c0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33854252"
+ms.lasthandoff: 09/10/2018
+ms.locfileid: "44313861"
 ---
 # <a name="unaryfunction-struct"></a>unary_function — Struktura
 
-Pusty podstawowej struktury definiujący typy, które mogą być dziedziczone przez klasy pochodne udostępniający obiektem funkcji jednoargumentowy.
+Pusty podstawowej struktury, która definiuje typy, które mogą być dziedziczone przez klasy pochodne, który dostarcza obiekt funkcji jednoargumentowy.
 
 ## <a name="syntax"></a>Składnia
 
@@ -38,9 +38,9 @@ struct unary_function
 ```
 ## <a name="remarks"></a>Uwagi
 
-Struktura szablonu służy jako podstawa dla klas definiujących funkcji członkowskiej formularza **result_type**`operator()`( **constargument_type &**) **const**.
+Struktura szablonu służy jako podstawowa dla klas definiujących funkcji składowej typu formularza **element result_type**`operator()`( **constargument_type &**) **const**.
 
-Wszystkie takie funkcje pochodne jednoargumentowy może odwoływać się do ich typ argumentu wyłącznie jako **argument_type** i ich typ zwracany jako **result_type**.
+Wszystkie takie funkcje pochodne jednoargumentowy może odwoływać się do ich typ Jedyny argument jako **argument_type** i ich typ zwrotu jako **element result_type**.
 
 ## <a name="example"></a>Przykład
 
@@ -86,17 +86,17 @@ int main()
     cout << "The number of elements in v1 greater than 10 is: "
          << result1 << "." << endl;
 }
-\* Output:
+/* Output:
 The vector v1 = ( 0 5 10 15 20 25 )
 The number of elements in v1 greater than 10 is: 3.
-*\
+*/
 ```
 
 ## <a name="requirements"></a>Wymagania
 
 **Nagłówek:** \<funkcjonalności >
 
-**Namespace:** Standard
+**Namespace:** standardowe
 
 ## <a name="see-also"></a>Zobacz także
 

@@ -1,5 +1,5 @@
 ---
-title: Tworzenie nowego okna dialogowego | Dokumentacja firmy Microsoft
+title: Tworzenie nowego okna dialogowego (C++) | Dokumentacja firmy Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -10,22 +10,22 @@ f1_keywords:
 dev_langs:
 - C++
 helpviewer_keywords:
-- dialog boxes, creating
-- Dialog editor, creating dialog boxes
+- dialog boxes [C++], creating
+- Dialog Editor [C++], creating dialog boxes
 ms.assetid: 303de801-c4f8-42e1-b622-353f6423f688
 author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 8cd214cdf2a3d4677464c98ca1c950a5c1891a42
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: 285444b5f9bfa29ab00fc6a2ca1b644208bc95a8
+ms.sourcegitcommit: f0c90000125a9497bf61e41624de189a043703c0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42584159"
+ms.lasthandoff: 09/10/2018
+ms.locfileid: "44315798"
 ---
-# <a name="creating-a-new-dialog-box"></a>Tworzenie nowego okna dialogowego
+# <a name="creating-a-new-dialog-box-c"></a>Tworzenie nowego okna dialogowego (C++)
 
 ### <a name="to-create-a-new-dialog-box"></a>Aby utworzyć nowe okno dialogowe
 

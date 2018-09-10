@@ -1,5 +1,5 @@
 ---
-title: Okno dialogowe narzędzi tekstowych (edytor obrazów dla ikon) | Dokumentacja firmy Microsoft
+title: Okno dialogowe narzędzi tekstowych (edytor obrazów dla ikon) (C++) | Dokumentacja firmy Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -11,21 +11,21 @@ dev_langs:
 - C++
 helpviewer_keywords:
 - text, adding to an image
-- Text Tool dialog box
+- Text Tool dialog box [C++]
 ms.assetid: a6036ef4-1871-40db-8239-6ddbe8f422f5
 author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 86de06ded585c027af6ebf31dec964222d088198
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: e55ad361c9252cfc4989926f90a9fedfd523c7d9
+ms.sourcegitcommit: f0c90000125a9497bf61e41624de189a043703c0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42613183"
+ms.lasthandoff: 09/10/2018
+ms.locfileid: "44313452"
 ---
-# <a name="text-tool-dialog-box-image-editor-for-icons"></a>Okno dialogowe narzędzi tekstowych (Edytor obrazów dla ikon)
+# <a name="text-tool-dialog-box-c-image-editor-for-icons"></a>Okno dialogowe narzędzi tekstowych (edytor obrazów dla ikon) (C++)
 
 Użyj **narzędzie tekstowe** okno dialogowe, aby dodać tekst do kursora, mapa bitowa lub ikona zasobu.
 

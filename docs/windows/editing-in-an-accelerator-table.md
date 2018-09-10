@@ -1,5 +1,5 @@
 ---
-title: Edytowanie w tabeli akceleratora | Dokumentacja firmy Microsoft
+title: Edytowanie w tabeli akceleratora (C++) | Dokumentacja firmy Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,14 +16,14 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: ed8e2b630444c28675b4714b65676a049a8b285b
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: 0fc9352993491c10599b0b7937561104b91ba76c
+ms.sourcegitcommit: f0c90000125a9497bf61e41624de189a043703c0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42611100"
+ms.lasthandoff: 09/10/2018
+ms.locfileid: "44314836"
 ---
-# <a name="editing-in-an-accelerator-table"></a>Edytowanie w Tabeli akceleratora
+# <a name="editing-in-an-accelerator-table-c"></a>Edytowanie w tabeli akceleratora (C++)
 
 ### <a name="to-edit-in-an-accelerator-table"></a>Edytowanie w tabeli akceleratora
 

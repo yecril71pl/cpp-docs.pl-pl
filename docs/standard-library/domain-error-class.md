@@ -16,16 +16,16 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 82fa31d81b55df624c0eab4cdd68cf18c9c7f19b
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: baa0cd298e157db6facb8fcdb16e7724392a56fc
+ms.sourcegitcommit: f0c90000125a9497bf61e41624de189a043703c0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33842641"
+ms.lasthandoff: 09/10/2018
+ms.locfileid: "44314537"
 ---
 # <a name="domainerror-class"></a>domain_error — Klasa
 
-Klasa służy jako klasa podstawowa dla wszystkich wyjątków zgłaszanych zgłosić błąd domeny.
+Klasa służy jako klasa bazowa dla wszystkich wyjątków generowanych, aby zgłosić błąd domeny.
 
 ## <a name="syntax"></a>Składnia
 
@@ -41,7 +41,7 @@ public:
 
 ## <a name="remarks"></a>Uwagi
 
-Wartość zwrócona przez [co](../standard-library/exception-class.md) kopię **komunikat**`.`[danych](../standard-library/basic-string-class.md#data).
+Wartość zwrócona przez obiekt [co](../standard-library/exception-class.md) jest kopią **komunikat**`.`[danych](../standard-library/basic-string-class.md#data).
 
 ## <a name="example"></a>Przykład
 
@@ -64,17 +64,17 @@ int main( )
       cerr << "Type: " << typeid(e).name( ) << endl;
    };
 }
-\* Output:
+/* Output:
 Caught: Your domain is in error!
 Type: class std::domain_error
-*\
+*/
 ```
 
 ## <a name="requirements"></a>Wymagania
 
-**Nagłówek:** \<stdexcept — >
+**Nagłówek:** \<stdexcept >
 
-**Namespace:** Standard
+**Namespace:** standardowe
 
 ## <a name="see-also"></a>Zobacz także
 

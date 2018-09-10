@@ -1,5 +1,5 @@
 ---
-title: Dodawanie wpisu do tabeli akceleratora | Dokumentacja firmy Microsoft
+title: Dodawanie wpisu do tabeli akceleratora (C++) | Dokumentacja firmy Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,18 +16,18 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 6d463dc59e88dbd5c302de632d5261f29d8a4aab
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: 7055c21a2b9e7d0e32f3dac56641513b19953e18
+ms.sourcegitcommit: f0c90000125a9497bf61e41624de189a043703c0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42595570"
+ms.lasthandoff: 09/10/2018
+ms.locfileid: "44315584"
 ---
-# <a name="adding-an-entry-to-an-accelerator-table"></a>Dodawanie wpisu do Tabeli akceleratora
+# <a name="adding-an-entry-to-an-accelerator-table-c"></a>Dodawanie wpisu do tabeli akceleratora (C++)
 
 ### <a name="to-add-an-entry-to-an-accelerator-table"></a>Aby dodać wpis do tabeli akceleratora
 
-1. Otwórz tabeli akceleratora, klikając dwukrotnie odpowiednią ikonę w [widok zasobów](../windows/resource-view-window.md).
+1. W projekcie w języku C++ Otwórz tabeli akceleratora, klikając dwukrotnie odpowiednią ikonę w [widok zasobów](../windows/resource-view-window.md).
 
    > [!NOTE]
    > Jeśli projekt nie zawiera jeszcze pliku .rc, zobacz [tworzenia nowego pliku skryptu zasobów](../windows/how-to-create-a-resource-script-file.md).

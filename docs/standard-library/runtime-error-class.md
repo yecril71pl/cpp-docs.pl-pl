@@ -16,16 +16,16 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d21fcc072608d7e0aa1f2f76c1a1b070d7a442eb
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 1d21a6649e42e4f02f3655d89e230d6c739e64e4
+ms.sourcegitcommit: f0c90000125a9497bf61e41624de189a043703c0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33853459"
+ms.lasthandoff: 09/10/2018
+ms.locfileid: "44316396"
 ---
 # <a name="runtimeerror-class"></a>runtime_error — Klasa
 
-Klasa służy jako klasa podstawowa dla wszystkich wyjątków zgłaszanych może raportować błędy prawdopodobnie wykrywalny, tylko wtedy, gdy program jest wykonywana.
+Klasa służy jako klasa bazowa dla wszystkich wyjątków generowanych do zgłaszania błędów, wykrywalnych prawdopodobnie tylko wtedy, gdy program będzie działać.
 
 ## <a name="syntax"></a>Składnia
 
@@ -41,7 +41,7 @@ public:
 
 ## <a name="remarks"></a>Uwagi
 
-Wartość zwrócona przez [wyjątek klasy](../standard-library/exception-class.md) kopię **komunikat**`.`[danych](../standard-library/basic-string-class.md#data).
+Wartość zwrócona przez obiekt [wyjątek klasy](../standard-library/exception-class.md) jest kopią **komunikat**`.`[danych](../standard-library/basic-string-class.md#data).
 
 ## <a name="example"></a>Przykład
 
@@ -65,17 +65,17 @@ int main( )
       cerr << "Type " << typeid( e ).name( ) << endl;
    };
 }
-\* Output:
+/* Output:
 Caught bad locale name
 Type class std::runtime_error
-*\
+*/
 ```
 
 ## <a name="requirements"></a>Wymagania
 
-**Nagłówek:** \<stdexcept — >
+**Nagłówek:** \<stdexcept >
 
-**Namespace:** Standard
+**Namespace:** standardowe
 
 ## <a name="see-also"></a>Zobacz także
 

@@ -1,5 +1,5 @@
 ---
-title: 'Porady: określanie katalogów dołączenia dla zasobów | Dokumentacja firmy Microsoft'
+title: 'Porady: określanie katalogów dołączenia dla zasobów (C++) | Dokumentacja firmy Microsoft'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -9,22 +9,22 @@ dev_langs:
 - C++
 helpviewer_keywords:
 - directories [C++], specifying include paths for resources
-- include files, specifying for resources
-- resources [Visual Studio], including in projects
+- include files [C++], specifying for resources
+- resources [C++], including in projects
 ms.assetid: d6a7c0f6-4810-4bb0-b4b7-7d2476a20ca2
 author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: e0b655713a378c859bb017f661022f86aa687ab6
-ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
+ms.openlocfilehash: 257ca11dcc44b22d6ddbb5043315d29a70377148
+ms.sourcegitcommit: f0c90000125a9497bf61e41624de189a043703c0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43676435"
+ms.lasthandoff: 09/10/2018
+ms.locfileid: "44313952"
 ---
-# <a name="how-to-specify-include-directories-for-resources"></a>Porady: określanie katalogów dołączenia dla zasobów
+# <a name="how-to-specify-include-directories-for-resources-c"></a>Porady: określanie katalogów dołączenia dla zasobów (C++)
 
 ### <a name="to-specify-include-directories-for-a-specific-rc-file"></a>W celu określenia katalogów dołączanych dla określonego pliku .rc
 

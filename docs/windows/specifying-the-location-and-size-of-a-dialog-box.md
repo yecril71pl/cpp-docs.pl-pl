@@ -1,5 +1,5 @@
 ---
-title: Określanie lokalizacji i rozmiaru okna dialogowego | Dokumentacja firmy Microsoft
+title: Określanie lokalizacji i rozmiaru okna dialogowe (C++) | Dokumentacja firmy Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -8,24 +8,24 @@ ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
-- dialog boxes, size
-- dialog boxes, positioning
+- dialog boxes [C++], size
+- dialog boxes [C++], positioning
 ms.assetid: 2b7c495e-6595-4cfb-9664-80b2826d0851
 author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: be3db9c689b79edd17af567831d62071d79cad2d
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: 854e4df84bfc5f75eda8f98fa117c199ba054b3a
+ms.sourcegitcommit: f0c90000125a9497bf61e41624de189a043703c0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42604622"
+ms.lasthandoff: 09/10/2018
+ms.locfileid: "44316578"
 ---
-# <a name="specifying-the-location-and-size-of-a-dialog-box"></a>Określanie lokalizacji i rozmiaru okna dialogowego
+# <a name="specifying-the-location-and-size-of-a-dialog-box-c"></a>Określanie lokalizacji i rozmiaru okna dialogowe (C++)
 
-Lokalizacja i rozmiar, okno dialogowe, a także lokalizacji i rozmiaru formantów w nim, są mierzone w jednostkach okna dialogowego. Wartości dla poszczególnych formantów i w oknie dialogowym są wyświetlane w prawej dolnej części paska po ich wybraniu stanu programu Visual Studio.
+Lokalizacja i rozmiar, okno dialogowe C++, jak również lokalizacji i rozmiaru formantów w nim, są mierzone w jednostkach okna dialogowego. Wartości dla poszczególnych formantów i w oknie dialogowym są wyświetlane w prawej dolnej części paska po ich wybraniu stanu programu Visual Studio.
 
 Istnieją trzy właściwości, które można ustawić w [okno właściwości](/visualstudio/ide/reference/properties-window) do określenia, gdzie zostanie wyświetlone okno dialogowe na ekranie. **Centrum** właściwość jest atrybut typu wartość logiczna; Jeśli równa wartości **True**, okno dialogowe pojawia się zawsze w środku ekranu. Jeśli ustawisz na **False**, możesz ustawić **Pozycja_x** i **Pozycja_y** właściwości umożliwia jawne zdefiniowanie w przypadku, gdy na ekranie, zostanie wyświetlone okno dialogowe. Właściwości pozycji są wartości przesunięcia z lewym górnym rogu obszaru wyświetlania, która jest zdefiniowana jako `{X=0, Y=0}`. Pozycja również opiera się na **bezwzględnie Wyrównaj** właściwości: Jeżeli **True**, współrzędne są podawane względem ekranu; Jeśli **False**, współrzędne są podawane względem okna dialogowego Okno właściciela.
 

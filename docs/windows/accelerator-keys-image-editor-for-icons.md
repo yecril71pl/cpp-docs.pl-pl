@@ -1,5 +1,5 @@
 ---
-title: Klawisze skrótów (edytor obrazów dla ikon) | Dokumentacja firmy Microsoft
+title: Klawisze skrótów (C++ edytor obrazów dla ikon) | Dokumentacja firmy Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -19,14 +19,14 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: f211b15134ad292c9e7e4d3ed92d81ea59dd3b86
-ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
+ms.openlocfilehash: 26818aaaec16e06553bde24ba7e5d6d350971cef
+ms.sourcegitcommit: f0c90000125a9497bf61e41624de189a043703c0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43683303"
+ms.lasthandoff: 09/10/2018
+ms.locfileid: "44317748"
 ---
-# <a name="accelerator-keys-image-editor-for-icons"></a>Klawisze skrótów (Edytor obrazów dla ikon)
+# <a name="accelerator-keys-c-image-editor-for-icons"></a>Klawisze skrótów (C++ edytor obrazów dla ikon)
 
 Poniżej przedstawiono klawisze skrótów dla poleceń edytora obrazów, które są powiązane z kluczy domyślnie. Aby zmienić klawisze skrótów, kliknij przycisk **opcje** na **narzędzia** menu, a następnie wybierz **klawiatury** w obszarze **środowiska** folderu. Aby uzyskać więcej informacji, zobacz [określenie i dostosowywanie skrótów klawiaturowych](/visualstudio/ide/identifying-and-customizing-keyboard-shortcuts-in-visual-studio).
 

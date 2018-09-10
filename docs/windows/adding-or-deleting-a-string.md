@@ -1,5 +1,5 @@
 ---
-title: Dodawanie lub usuwanie ciągu | Dokumentacja firmy Microsoft
+title: Dodawanie lub usuwanie zasobu ciągu (C++) | Dokumentacja firmy Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -11,23 +11,23 @@ dev_langs:
 - C++
 helpviewer_keywords:
 - strings [C++], adding to string tables
-- string tables, deleting strings
+- string tables [C++], deleting strings
 - strings [C++], deleting in string tables
-- string tables, adding strings
+- string tables [C++], adding strings
 ms.assetid: 077077b4-0f4b-4633-92d6-60b321164cab
 author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 952531a846fe48e9f093f016efd67d73c386d82c
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 0c22990c504700ab82ae0d7542420a3f82db4d73
+ms.sourcegitcommit: f0c90000125a9497bf61e41624de189a043703c0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43204490"
+ms.lasthandoff: 09/10/2018
+ms.locfileid: "44314043"
 ---
-# <a name="adding-or-deleting-a-string"></a>Dodawanie lub usuwanie ciągu
+# <a name="adding-or-deleting-a-string-resource-c"></a>Dodawanie lub usuwanie zasobu ciągu (C++)
 
 Można szybko wstawić nowych wpisów do tabeli ciągów przy użyciu **ciąg** edytora. Nowych ciągów są umieszczane na końcu tabeli i podano następny dostępny identyfikator. Następnie można edytować **identyfikator**, **wartość**, lub **podpis** właściwości w [okno właściwości](/visualstudio/ide/reference/properties-window) zgodnie z potrzebami.
 

@@ -1,5 +1,5 @@
 ---
-title: Uzyskiwanie dostępu do informacji o wersji z Twojego programu | Dokumentacja firmy Microsoft
+title: Uzyskiwanie dostępu do informacji o wersji z Twojego programu (C++) | Dokumentacja firmy Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -20,14 +20,14 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: db32214543278023cdce91654c86e53568fffb00
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: b9340ffc4e951a08b77ce44afd6666d8b3a94db9
+ms.sourcegitcommit: f0c90000125a9497bf61e41624de189a043703c0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42606925"
+ms.lasthandoff: 09/10/2018
+ms.locfileid: "44315265"
 ---
-# <a name="accessing-version-information-from-within-your-program"></a>Uzyskiwanie informacji o wersji z Twojego programu
+# <a name="accessing-version-information-from-within-your-program-c"></a>Uzyskiwanie dostępu do informacji o wersji z Twojego programu (C++)
 
 ### <a name="to-access-version-information-from-within-your-program"></a>Aby uzyskać dostęp do informacji o wersji z Twojego programu
 

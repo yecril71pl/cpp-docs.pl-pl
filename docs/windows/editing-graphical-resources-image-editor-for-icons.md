@@ -1,5 +1,5 @@
 ---
-title: Edytowanie zasobów graficznych (edytor obrazów dla ikon) | Dokumentacja firmy Microsoft
+title: Edytowanie zasobów graficznych (C++ edytor obrazów dla ikon) | Dokumentacja firmy Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -22,14 +22,14 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: d66345685dbb6780b0ecf11d91d699c8b6866c47
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: c46f8391f39d65c84860f8c0ca62f69288d834c8
+ms.sourcegitcommit: f0c90000125a9497bf61e41624de189a043703c0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42608864"
+ms.lasthandoff: 09/10/2018
+ms.locfileid: "44312639"
 ---
-# <a name="editing-graphical-resources-image-editor-for-icons"></a>Edytowanie zasobów graficznych (Edytor obrazów dla ikon)
+# <a name="editing-graphical-resources-c-image-editor-for-icons"></a>Edytowanie zasobów graficznych (C++ edytor obrazów dla ikon)
 
 Zasoby graficzne są obrazy, które należy zdefiniować dla aplikacji. Można narysować freehand lub rysowanie przy użyciu kształtów. Możesz wybrać części obrazu dla edycji lub zmiana rozmiaru i odbijanie lub można utworzyć niestandardowy obiekt brush z wybranej części obrazu i rysowanie za pomocą tego pędzla. Można zdefiniować właściwości obrazu, zapisać obrazy w różnych formatach i konwertowania obrazów z jednego formatu na inny.
 

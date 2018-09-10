@@ -1,5 +1,5 @@
 ---
-title: Pasek narzędzi (edytor obrazów dla ikon) | Dokumentacja firmy Microsoft
+title: Pasek narzędzi (C++ edytor obrazów dla ikon) | Dokumentacja firmy Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -22,14 +22,14 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 2fbad27020b18bafe2f9fc60ee08282d9101ea5a
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: 9a454d067881a15f6d125430c304f4b5af71b5d1
+ms.sourcegitcommit: f0c90000125a9497bf61e41624de189a043703c0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42604139"
+ms.lasthandoff: 09/10/2018
+ms.locfileid: "44314407"
 ---
-# <a name="toolbar-image-editor-for-icons"></a>Pasek narzędzi (Edytor obrazów dla ikon)
+# <a name="toolbar-c-image-editor-for-icons"></a>Pasek narzędzi (C++ edytor obrazów dla ikon)
 
 **Edytora obrazów** narzędzi zawiera narzędzia do rysowania, rysowania, wprowadzania tekstu, wymazywanie i manipulowanie widoków. Zawiera ona także Selektor opcji, za pomocą którego można wybrać opcje dotyczące korzystania z poszczególnych narzędzi. Na przykład można wybierać różne szerokość pędzla, czynniki powiększenia i style linii.
 

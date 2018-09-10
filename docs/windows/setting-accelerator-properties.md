@@ -1,5 +1,5 @@
 ---
-title: Ustawianie właściwości klawiszy skrótów | Dokumentacja firmy Microsoft
+title: Ustawianie właściwości klawiszy skrótów (C++) | Dokumentacja firmy Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -19,12 +19,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: b89f409fcf5a856a2207dd8efa655728f57b3fe8
-ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
+ms.openlocfilehash: eb08a9dce4c90c9efddd10683bc4b7c2ac0b08b9
+ms.sourcegitcommit: f0c90000125a9497bf61e41624de189a043703c0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43680138"
+ms.lasthandoff: 09/10/2018
+ms.locfileid: "44314420"
 ---
 # <a name="setting-accelerator-properties"></a>Ustawianie właściwości klawiszy skrótów
 

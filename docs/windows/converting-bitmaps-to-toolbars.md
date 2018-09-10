@@ -1,5 +1,5 @@
 ---
-title: Konwertowanie map bitowych na paski narzędzi | Dokumentacja firmy Microsoft
+title: Konwertowanie map bitowych na paski narzędzi (C++) | Dokumentacja firmy Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -9,7 +9,7 @@ dev_langs:
 - C++
 helpviewer_keywords:
 - bitmaps [C++], converting to toolbars
-- Toolbar editor, converting bitmaps
+- Toolbar editor [C++], converting bitmaps
 - toolbars [C++], converting bitmaps
 ms.assetid: 971c181b-40f5-44be-843d-677a7c235667
 author: mikeblome
@@ -17,16 +17,16 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: d5524b1d5ecb3fa4de38f46706f26d2a318fe5ef
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: ed77f1df88bb3f3572c3ea819ffac5cb9a1f45b1
+ms.sourcegitcommit: f0c90000125a9497bf61e41624de189a043703c0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42602403"
+ms.lasthandoff: 09/10/2018
+ms.locfileid: "44317232"
 ---
-# <a name="converting-bitmaps-to-toolbars"></a>Konwertowanie map bitowych na paski narzędzi
+# <a name="converting-bitmaps-to-toolbars-c"></a>Konwertowanie map bitowych na paski narzędzi (C++)
 
-Konwertowanie map bitowych można utworzyć nowy pasek narzędzi. Konwertuje grafiki z mapy bitowej obrazy przycisków na pasku narzędzi. Zazwyczaj mapy bitowej zawiera kilka obrazów przycisku w postaci bitmapy z jednego obrazu dla każdego przycisku. Obrazy mogą być dowolnego rozmiaru; Wartość domyślna to 16 pikseli szerokości i wysokości obrazu. Można określić rozmiar obrazów przycisku w [okno dialogowe Nowy zasób paska narzędzi](../windows/new-toolbar-resource-dialog-box.md) po wybraniu **Edytor paska narzędzi** z **obraz** menu znajduje się w edytorze obrazu.
+Aby utworzyć nowy pasek narzędzi w projektu w języku C++, konwertowania mapy bitowej. Konwertuje grafiki z mapy bitowej obrazy przycisków na pasku narzędzi. Zazwyczaj mapy bitowej zawiera kilka obrazów przycisku w postaci bitmapy z jednego obrazu dla każdego przycisku. Obrazy mogą być dowolnego rozmiaru; Wartość domyślna to 16 pikseli szerokości i wysokości obrazu. Można określić rozmiar obrazów przycisku w [okno dialogowe Nowy zasób paska narzędzi](../windows/new-toolbar-resource-dialog-box.md) po wybraniu **Edytor paska narzędzi** z **obraz** menu znajduje się w edytorze obrazu.
 
 ### <a name="to-convert-bitmaps-to-a-toolbar"></a>Aby przekonwertować map bitowych paska narzędzi
 

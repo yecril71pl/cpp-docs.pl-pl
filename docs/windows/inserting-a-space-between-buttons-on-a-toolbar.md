@@ -1,5 +1,5 @@
 ---
-title: Wstawianie odstępów między przyciskami na pasku narzędzi | Dokumentacja firmy Microsoft
+title: Wstawianie odstępów między przyciskami na pasku narzędzi (C++) | Dokumentacja firmy Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -8,22 +8,22 @@ ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
-- Toolbar editor, spacing toolbar buttons
-- toolbar buttons (in Toolbar editor), space between buttons
+- Toolbar editor [C++], spacing toolbar buttons
+- toolbar buttons [C++], space between buttons
 ms.assetid: 4925ea6b-5d3a-4949-a920-bf371a37e529
 author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: d45fb3c7d0d61e1895ff03fff64ab75c828eda0e
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: 09086ea214bcf2abd9708f8abcee4f9f5f376994
+ms.sourcegitcommit: f0c90000125a9497bf61e41624de189a043703c0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42599669"
+ms.lasthandoff: 09/10/2018
+ms.locfileid: "44313419"
 ---
-# <a name="inserting-a-space-between-buttons-on-a-toolbar"></a>Wstawianie odstępów między przyciskami na pasku narzędzi
+# <a name="inserting-a-space-between-buttons-on-a-toolbar-c"></a>Wstawianie odstępów między przyciskami na pasku narzędzi (C++)
 
 Ogólnie rzecz biorąc Aby wstawić odstęp między przyciskami, wystarczy przeciągnąć je od siebie nawzajem na pasku narzędzi. Aby usunąć przestrzeń, przeciągnij je do siebie nawzajem.
 

@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4a0652ca867ba49243ca5c87caa1dec98da929cf
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 8a08563396a77dec5f72ea35e10dd8a349095077
+ms.sourcegitcommit: f0c90000125a9497bf61e41624de189a043703c0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43764553"
+ms.lasthandoff: 09/10/2018
+ms.locfileid: "44314238"
 ---
 # <a name="modifying-the-atl-dhtml-control"></a>Modyfikowanie kontrolki ATL DHTML
 
@@ -51,7 +51,7 @@ Kreator kontrolki ATL zawiera kod startowy, dzięki czemu można tworzyć i uruc
 
    Możesz użyć **IWebBrowser2** metody ponieważ ATL dostarcza wskaźnik do interfejsu dla Ciebie w pliku .h.
 
-Następnie można zmodyfikować zasobu HTML do wywołania metody, który został utworzony. Zostaną dodane trzy przyciski wywoływanie tych metod.  
+Następnie można zmodyfikować zasobu HTML do wywołania metody, który został utworzony. Zostaną dodane trzy przyciski wywoływanie tych metod.
 
 #### <a name="to-modify-the-html-resource"></a>Aby zmodyfikować zasób HTML
 
@@ -72,9 +72,9 @@ Następnie można zmodyfikować zasobu HTML do wywołania metody, który został
 3. Dodaj wywołanie do `HelloHTML` metody tworzenia. Na przykład:
 
     ```html
-    <br>  
-    <br>  
-    <BUTTON onclick='window.external.HelloHTML();'>HelloHTML</BUTTON>  
+    <br>
+    <br>
+    <BUTTON onclick='window.external.HelloHTML();'>HelloHTML</BUTTON>
     ```
 
    Ta metoda utworzy przycisku, **HelloHTML**, który użytkownik może kliknąć, aby wyświetlić `HelloHTML` okno komunikatu.

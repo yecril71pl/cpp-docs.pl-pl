@@ -1,5 +1,5 @@
 ---
-title: Edytowanie tabel akceleratora | Dokumentacja firmy Microsoft
+title: Edytowanie tabel akceleratora (C++) | Dokumentacja firmy Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,16 +18,16 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 1c258f691b7dbea814c707cbf1f3825b9db5ba42
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: 14f9e82e87d395341dc1f05f1de49a20d58fec52
+ms.sourcegitcommit: f0c90000125a9497bf61e41624de189a043703c0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42596406"
+ms.lasthandoff: 09/10/2018
+ms.locfileid: "44314888"
 ---
-# <a name="editing-accelerator-tables"></a>Edytowanie tabel akceleratora
+# <a name="editing-accelerator-tables-c"></a>Edytowanie tabel akceleratora (C++)
 
-W programie Visual C++, możesz edytować bezpośrednio za pomocą edycji w miejscu, w tabeli akceleratora **akceleratora** edytora.
+W projekcie w języku C++ możesz edytować bezpośrednio za pomocą edycji w miejscu, w tabeli akceleratora **akceleratora** edytora.
 
 Poniższe procedury dotyczą używanie stron właściwości standardowych, jednak zarówno edycji w miejscu, jak i metody strony właściwości mają ten sam wynik. Zmiany wprowadzone za pomocą stron właściwości lub edycji w miejscu są natychmiast odzwierciedlane w tabeli klawiszy skrótu.
 

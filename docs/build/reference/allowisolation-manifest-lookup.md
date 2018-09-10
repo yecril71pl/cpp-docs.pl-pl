@@ -18,45 +18,44 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 62f467ff467d785d17601737436e0eb1ff972f37
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: c9197e67e46932f08a266258c41dab7922af2900
+ms.sourcegitcommit: f0c90000125a9497bf61e41624de189a043703c0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43205496"
+ms.lasthandoff: 09/10/2018
+ms.locfileid: "44318983"
 ---
 # <a name="allowisolation-manifest-lookup"></a>/ALLOWISOLATION (Przeszukiwanie manifestu)
-Określa zachowanie wyszukiwania plików manifestu.  
-  
-## <a name="syntax"></a>Składnia  
-  
-```  
-/ALLOWISOLATION[:NO]  
-```  
-  
-## <a name="remarks"></a>Uwagi  
- **/ALLOWISOLATION:No** wskazuje bibliotek DLL ładowanych tak, jakby nie było żadnych manifestu i powoduje, że konsolidator ustawia `IMAGE_DLLCHARACTERISTICS_NO_ISOLATION` bit w opcjonalnym nagłówku `DllCharacteristics` pola.  
-  
- **/ ALLOWISOLATION** powoduje, że system operacyjny do manifestu, wyszukiwania i obciążeniami.  
-  
- **/ ALLOWISOLATION** jest ustawieniem domyślnym.  
-  
- Po wyłączeniu izolacji dla pliku wykonywalnego modułu ładującego Windows nie będzie próbował znaleźć manifest aplikacji do nowo utworzonego procesu. Nowy proces nie będzie domyślny kontekst aktywacji, nawet jeśli dostępny jest manifestu wewnątrz pliku wykonywalnego lub umieszczone w tym samym katalogu co plik wykonywalny o nazwie <em>nazwę pliku wykonywalnego</em>**. exe.manifest**.  
-  
- Aby uzyskać więcej informacji, zobacz [odwołania plików manifestu](/windows/desktop/SbsCs/manifest-files-reference).  
-  
-### <a name="to-set-this-linker-option-in-the-visual-studio-development-environment"></a>Aby ustawić tę opcję konsolidatora w środowisku programowania Visual Studio  
-  
-1.  Otwórz projekt **stron właściwości** okno dialogowe. Aby uzyskać więcej informacji, zobacz [Praca z właściwościami projektu](../../ide/working-with-project-properties.md).  
-  
-2.  Rozwiń **właściwości konfiguracji** węzła.  
-  
-3.  Rozwiń **konsolidatora** węzła.  
-  
-4.  Wybierz **pliku manifestu** stronę właściwości.  
-  
-5.  Modyfikowanie **Zezwalaj na izolację** właściwości.  
-  
-## <a name="see-also"></a>Zobacz też  
- [Ustawianie opcji konsolidatora](../../build/reference/setting-linker-options.md)   
- [Opcje konsolidatora](../../build/reference/linker-options.md)
+
+Określa zachowanie wyszukiwania plików manifestu.
+
+## <a name="syntax"></a>Składnia
+
+```
+/ALLOWISOLATION[:NO]
+```
+
+## <a name="remarks"></a>Uwagi
+
+**/ALLOWISOLATION:No** wskazuje bibliotek DLL ładowanych tak, jakby nie było żadnych manifestu i powoduje, że konsolidator ustawia `IMAGE_DLLCHARACTERISTICS_NO_ISOLATION` bit w opcjonalnym nagłówku `DllCharacteristics` pola.
+
+**/ ALLOWISOLATION** powoduje, że system operacyjny do manifestu, wyszukiwania i obciążeniami.
+
+**/ ALLOWISOLATION** jest ustawieniem domyślnym.
+
+Po wyłączeniu izolacji dla pliku wykonywalnego modułu ładującego Windows nie będzie próbował znaleźć manifest aplikacji do nowo utworzonego procesu. Nowy proces nie będzie domyślny kontekst aktywacji, nawet jeśli dostępny jest manifestu wewnątrz pliku wykonywalnego lub umieszczone w tym samym katalogu co plik wykonywalny o nazwie <em>nazwę pliku wykonywalnego</em>**. exe.manifest**.
+
+Aby uzyskać więcej informacji, zobacz [odwołania plików manifestu](/windows/desktop/SbsCs/manifest-files-reference).
+
+### <a name="to-set-this-linker-option-in-the-visual-studio-development-environment"></a>Aby ustawić tę opcję konsolidatora w środowisku programowania Visual Studio
+
+1. Otwórz projekt **stron właściwości** okno dialogowe. Aby uzyskać więcej informacji, zobacz [Praca z właściwościami projektu](../../ide/working-with-project-properties.md).
+
+1. Wybierz **właściwości konfiguracji** > **konsolidatora** > **pliku manifestu** stronę właściwości.
+
+1. Modyfikowanie **Zezwalaj na izolację** właściwości.
+
+## <a name="see-also"></a>Zobacz też
+
+[Ustawianie opcji konsolidatora](../../build/reference/setting-linker-options.md)<br/>
+[Opcje konsolidatora](../../build/reference/linker-options.md)

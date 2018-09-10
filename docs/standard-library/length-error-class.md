@@ -16,16 +16,16 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4ed0976a8323eaaef0ba289c020cf5d0a0c5837e
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 11529c0fd8f5f64562e7b0c02c44698641cef2c8
+ms.sourcegitcommit: f0c90000125a9497bf61e41624de189a043703c0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33912917"
+ms.lasthandoff: 09/10/2018
+ms.locfileid: "44317553"
 ---
 # <a name="lengtherror-class"></a>length_error — Klasa
 
-Klasa służy jako klasa podstawowa dla wszystkich wyjątków zgłaszanych do zgłaszania próby generowania zbyt długi, aby określić obiekt.
+Klasa służy jako klasa bazowa dla wszystkich wyjątków generowanych do zgłaszania próba wygenerowania zbyt długo, należy określić obiekt.
 
 ## <a name="syntax"></a>Składnia
 
@@ -41,7 +41,7 @@ public:
 
 ## <a name="remarks"></a>Uwagi
 
-Wartość zwrócona przez [co](../standard-library/exception-class.md) kopię **komunikat**`.`[danych](../standard-library/basic-string-class.md#data).
+Wartość zwrócona przez obiekt [co](../standard-library/exception-class.md) jest kopią **komunikat**`.`[danych](../standard-library/basic-string-class.md#data).
 
 ## <a name="example"></a>Przykład
 
@@ -79,17 +79,17 @@ int main( )
       cerr << "Type " << typeid( e ).name( ) << endl;
    };
 }
-\* Output:
+/* Output:
 Caught vector<T> too long
 Type class std::length_error
-*\
+*/
 ```
 
 ## <a name="requirements"></a>Wymagania
 
-**Nagłówek:** \<stdexcept — >
+**Nagłówek:** \<stdexcept >
 
-**Namespace:** Standard
+**Namespace:** standardowe
 
 ## <a name="see-also"></a>Zobacz także
 

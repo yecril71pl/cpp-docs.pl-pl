@@ -1,5 +1,5 @@
 ---
-title: Akcelerator klucze dla edytora okien dialogowych | Dokumentacja firmy Microsoft
+title: Akcelerator klucze dla edytora okien dialogowych (C++) | Dokumentacja firmy Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -10,21 +10,21 @@ f1_keywords:
 dev_langs:
 - C++
 helpviewer_keywords:
-- Dialog editor, shortcut keys
+- Dialog Editor [C++], shortcut keys
 ms.assetid: 940270e9-a974-425b-a681-dfeaba0adf66
 author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: c5abfe45cc2f6e73dfe3c7bd8d38a0c783a15e05
-ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
+ms.openlocfilehash: 6314d4333254957ea2d8116786128843dafef64a
+ms.sourcegitcommit: f0c90000125a9497bf61e41624de189a043703c0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43685635"
+ms.lasthandoff: 09/10/2018
+ms.locfileid: "44313575"
 ---
-# <a name="accelerator-keys-for-the-dialog-editor"></a>Klucze akceleratora dla Edytora okien dialogowych
+# <a name="accelerator-keys-for-the-dialog-editor-c"></a>Klucze akceleratora dla edytora okien dialogowych (C++)
 
 Poniżej przedstawiono domyślną klawiszy skrótów dla poleceń edytora okna dialogowego. Aby zmienić klawisze skrótów, kliknij przycisk **opcje** na **narzędzia** menu, wybierz **klawiatury** w obszarze **środowiska** folderu. Aby uzyskać więcej informacji, zobacz [określenie i dostosowywanie skrótów klawiaturowych](/visualstudio/ide/identifying-and-customizing-keyboard-shortcuts-in-visual-studio).
 

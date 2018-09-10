@@ -16,12 +16,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: caae1a52c36c5d21e55e90a821b280f2face7ede
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: 0ef090aec97308a6d423c18daab5ee540efdd8a1
+ms.sourcegitcommit: f0c90000125a9497bf61e41624de189a043703c0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38959777"
+ms.lasthandoff: 09/10/2018
+ms.locfileid: "44316326"
 ---
 # <a name="lthashmapgt"></a>&lt;hash_map&gt;
 
@@ -32,7 +32,7 @@ Definiuje hash_map klasy szablonu kontenera i hash_multimap i ich szablonów pom
 
 ## <a name="syntax"></a>Składnia
 
-> #<a name="include-hashmap"></a>obejmują < hash_map >
+> #<a name="include-hashmap"></a>obejmują \<hash_map >
 
 ### <a name="operators"></a>Operatory
 
@@ -64,6 +64,6 @@ Definiuje hash_map klasy szablonu kontenera i hash_multimap i ich szablonów pom
 
 ## <a name="see-also"></a>Zobacz także
 
-[Pliki nagłówkowe odwołanie](cpp-standard-library-header-files.md)
-[bezpieczeństwo wątku w standardowej bibliotece C++](thread-safety-in-the-cpp-standard-library.md)
-[dokumentacja standardowej biblioteki C++](cpp-standard-library-reference.md)
+[Odwołanie do plików nagłówkowych](cpp-standard-library-header-files.md)<br/>
+[Bezpieczeństwo wątku w standardowej bibliotece C++](thread-safety-in-the-cpp-standard-library.md)<br/>
+[Dokumentacja standardowej biblioteki C++](cpp-standard-library-reference.md)

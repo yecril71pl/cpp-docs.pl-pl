@@ -18,12 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c83e644d8544b7919c0f61199197574d03b13ff8
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: ec6c778c46998ba8e324fcf97c209598cc2f99dd
+ms.sourcegitcommit: f0c90000125a9497bf61e41624de189a043703c0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43763071"
+ms.lasthandoff: 09/10/2018
+ms.locfileid: "44315379"
 ---
 # <a name="atl-ole-db-consumer-wizard"></a>Kreator konsumenta OLE DB ATL
 
@@ -106,23 +106,23 @@ Ten kreator konfiguruje klasę konsumenta OLE DB przy użyciu powiązania danych
 
    Po wybraniu źródła danych, to pole jest wypełniane domyślną nazwę klasy na podstawie tabeli lub procedury składowanej, które wybrano (zobacz **wybierz źródło danych** poniżej). Można edytować nazwę klasy.
 
-- **plik .h**  
+- **plik .h**
 
    Po wybraniu źródła danych, to pole jest wypełniane domyślną nazwę klasy nagłówek na podstawie tabeli lub procedury składowanej, które wybrano (zobacz **wybierz źródło danych** poniżej). Możesz zmienić nazwę pliku nagłówka, lub wybrać istniejący plik nagłówkowy.
 
-- **Opartego na atrybutach**  
+- **Opartego na atrybutach**
 
    Ta opcja określa, czy Kreator utworzy klasy konsumentów przy użyciu atrybutów lub deklaracji szablonu. Po wybraniu tej opcji, kreator używa atrybutów zamiast deklaracji szablonu (jest to opcja domyślna). Jeśli wyłączysz tę opcję, kreator używa deklaracji szablonu zamiast atrybutów.
 
    - Po wybraniu odbiorcy **typu** z **tabeli**, kreator używa `db_source` i `db_table` atrybutów, aby utworzyć tabelę i metoda dostępu do tabeli deklaracje klas i używa `db_column` do Tworzenie mapy kolumny. Na przykład tworzy tej mapy:
 
         ```cpp
-        // Inject table class and table accessor class declarations  
-        [db_source("<initialization_string>"), db_table("dbo.Orders")]  
-        ... 
-        // Column map  
-        [ db_column(1, status=m_dwOrderIDStatus, length=m_dwOrderIDLength) ] LONG m_OrderID;  
-        [ db_column(2, status=m_dwCustomerIDStatus, length=m_dwCustomerIDLength) ] TCHAR m_CustomerID[6];  
+        // Inject table class and table accessor class declarations
+        [db_source("<initialization_string>"), db_table("dbo.Orders")]
+        ...
+        // Column map
+        [ db_column(1, status=m_dwOrderIDStatus, length=m_dwOrderIDLength) ] LONG m_OrderID;
+        [ db_column(2, status=m_dwCustomerIDStatus, length=m_dwCustomerIDLength) ] TCHAR m_CustomerID[6];
         ...
         ```
 
@@ -133,20 +133,20 @@ Ten kreator konfiguruje klasę konsumenta OLE DB przy użyciu powiązania danych
             class COrdersAccessor; // Table class
             class COrders : public CTable<CAccessor<COrdersAccessor>>;
         // ...
-        // Column map  
+        // Column map
             BEGIN_COLUMN_MAP(COrderDetailsAccessor)
                 COLUMN_ENTRY_LENGTH_STATUS(1, m_OrderID, m_dwOrderIDLength, m_dwOrderIDStatus)
                 COLUMN_ENTRY_LENGTH_STATUS(2, m_CustomerID, m_dwCustomerIDLength, m_dwCustomerIDStatus)
-                // ...  
+                // ...
             END_COLUMN_MAP()
         ```
 
    - Po wybraniu odbiorcy **typu** z **polecenia**, kreator używa `db_source` i `db_command` atrybutów i używa `db_column` do tworzenia mapy kolumny. Na przykład tworzy tej mapy:
 
         ```cpp
-        [db_source("<initialization_string>"), db_command("SQL_command")]  
-        ... 
-        // Column map using db_column is the same as for consumer type of 'table'  
+        [db_source("<initialization_string>"), db_command("SQL_command")]
+        ...
+        // Column map using db_column is the same as for consumer type of 'table'
         ```
 
       Zamiast korzystać z poleceń i polecenia deklaracjach metod dostępu do klasy w pliku .h klasy poleceń, na przykład:
@@ -193,6 +193,6 @@ Ten kreator konfiguruje klasę konsumenta OLE DB przy użyciu powiązania danych
 
 ## <a name="see-also"></a>Zobacz także
 
-[Konsumenta ATL OLE DB](../../atl/reference/adding-an-atl-ole-db-consumer.md)  
-[Dodawanie funkcji za pomocą kreatorów kodu](../../ide/adding-functionality-with-code-wizards-cpp.md)  
-[Parametry połączenia i połączeń między danymi (OLE DB)](/previous-versions/windows/desktop/ms718376\(v=vs.85\))
+[Konsumenta ATL OLE DB](../../atl/reference/adding-an-atl-ole-db-consumer.md)
+[Dodawanie funkcji za pomocą kreatorów kodu](../../ide/adding-functionality-with-code-wizards-cpp.md)
+[parametrów połączeń i połączeń między danymi (OLE DB)](/previous-versions/windows/desktop/ms718376\(v=vs.85\))

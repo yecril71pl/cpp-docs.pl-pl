@@ -1,5 +1,5 @@
 ---
-title: Edytowalne typy plików dla zasobów | Dokumentacja firmy Microsoft
+title: Edytowalne typy plików zasobów (C++) | Dokumentacja firmy Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -11,7 +11,7 @@ dev_langs:
 - C++
 helpviewer_keywords:
 - file types [C++], for resources
-- resources [Visual Studio], editing
+- resources [C++], editing
 - files [C++], editable types
 ms.assetid: c40f9204-f2f2-400b-9f53-53b7bf291356
 author: mikeblome
@@ -19,14 +19,14 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 8319786603470ca7ef8ab58897261b1be0a3503a
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: 204a1a33f97b7061edef484fb4067f1ba428b190
+ms.sourcegitcommit: f0c90000125a9497bf61e41624de189a043703c0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42603529"
+ms.lasthandoff: 09/10/2018
+ms.locfileid: "44316136"
 ---
-# <a name="editable-file-types-for-resources"></a>Edytowalne typy plików dla zasobów
+# <a name="editable-file-types-for-resources-c"></a>Edytowalne typy plików zasobów (C++)
 
 Można otworzyć następujących typów plików i edytowanie zasobów, które zawierają.
 

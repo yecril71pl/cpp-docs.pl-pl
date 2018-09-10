@@ -1,5 +1,5 @@
 ---
-title: Formanty w oknach dialogowych | Dokumentacja firmy Microsoft
+title: Formanty w oknach dialogowych (C++) | Dokumentacja firmy Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -9,7 +9,7 @@ dev_langs:
 - C++
 helpviewer_keywords:
 - controls [C++], dialog boxes
-- dialog box controls, about dialog box controls
+- dialog box controls [C++], about dialog box controls
 - dialog box controls
 ms.assetid: e216c4f9-2fd4-429d-889a-8ebce7bad177
 author: mikeblome
@@ -17,14 +17,14 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 70e3bcfb644893f1dc8b41b9c11a3aee5c92103d
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: d8128859f2b136fb945376eeea8afa0d1ef8e6e1
+ms.sourcegitcommit: f0c90000125a9497bf61e41624de189a043703c0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42591961"
+ms.lasthandoff: 09/10/2018
+ms.locfileid: "44317111"
 ---
-# <a name="controls-in-dialog-boxes"></a>Formanty w oknach dialogowych
+# <a name="controls-in-dialog-box-ces"></a>Określa, w oknie dialogowym (C++), es
 
 Okno dialogowe za pomocą można dodawać formanty [Karta Edytor okien dialogowych](../windows/dialog-editor-tab-toolbox.md) w [okno przybornika](/visualstudio/ide/reference/toolbox), który umożliwia wybranie kontrolki ma i przeciągnij go do okna dialogowego. Domyślnie okno przybornika jest równa Autoukrywanie. Jest wyświetlany jako karty na lewym marginesie rozwiązania, gdy Edytor okien dialogowych jest otwarty. Jednakże, możesz przypiąć **przybornika** okna w miejscu, klikając **Autoukrywanie** przycisk w prawym górnym rogu okna. Aby uzyskać więcej informacji na temat sposobu kontrolowania zachowania tego okna, zobacz [Zarządzanie oknem](/visualstudio/ide/customizing-window-layouts-in-visual-studio).
 

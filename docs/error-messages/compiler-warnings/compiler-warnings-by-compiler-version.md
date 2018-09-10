@@ -14,12 +14,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4eb91708545d2303304177093e79ea49e8fa9208
-ms.sourcegitcommit: 894b3b3a91fcd8894b582747b03135c0be450c1f
+ms.openlocfilehash: 6645bb81a1fd4a2b42eb7419a0d008b9ac7692ad
+ms.sourcegitcommit: f0c90000125a9497bf61e41624de189a043703c0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "37850423"
+ms.lasthandoff: 09/10/2018
+ms.locfileid: "44319087"
 ---
 # <a name="compiler-warnings-by-compiler-version"></a>Ostrzeżenia kompilatora według wersji kompilatora
 
@@ -404,7 +404,7 @@ C4694|"*typu*": zapieczętowana klasa abstrakcyjna nie może mieć klasy bazowej
 C4720|wbudowane raporty asemblera: "*opis*"
 C4721|"*opis*": nie jest dostępna jako funkcja wewnętrzna
 C4722|"*opis*": destruktor nigdy nie powraca, Potencjalny przeciek pamięci
-C4726|ARM arch4/4T obsługuje "< cpsr_f > lub < spsr_f >" z adresowaniem natychmiastowym
+C4726|ARM arch4/4T obsługuje "\<cpsr_f > lub \<spsr_f >" z adresowaniem natychmiastowym
 C4727|PCH o nazwie *nazwa* z tą samą sygnaturą czasową w *nazwa* i *nazwa*.  Za pomocą pierwszego układu PCH.
 C4729|Funkcja za duża dla grafu przepływu na podstawie ostrzeżenia
 C4730|"*opis*": połączenie typu _m64 i zmiennoprzecinkowa wyrażeń może spowodować niepoprawny kod
