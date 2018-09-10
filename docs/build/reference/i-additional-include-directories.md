@@ -1,5 +1,5 @@
 ---
-title: -(Dodatkowe katalogi dołączenia) | Dokumentacja firmy Microsoft
+title: -I (dodatkowe katalogi dołączenia) | Dokumentacja firmy Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -24,60 +24,60 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 435714d72eeabe74f0cd85509d74dff5d541b019
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 506f0900cfc7ef5f84e11b2c76d4b593f81d10ba
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32373130"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44109087"
 ---
 # <a name="i-additional-include-directories"></a>/I (Dodatkowe katalogi dołączenia)
-Dodaje katalog do listy katalogów wyszukiwane plików dołączanych.  
-  
-## <a name="syntax"></a>Składnia  
-  
+Dodaje katalog do listy katalogi przeszukiwane w poszukiwaniu plików dołączanych.
+
+## <a name="syntax"></a>Składnia
+
 ```  
-/I[ ]directory  
+/I[ ]directory
 ```  
-  
-## <a name="arguments"></a>Argumenty  
- `directory`  
- Katalog do dodania do listy katalogów wyszukiwane plików dołączanych.  
-  
-## <a name="remarks"></a>Uwagi  
- Aby dodać więcej niż jeden katalog, użyj tej opcji więcej niż raz. Katalogi są przeszukiwane tylko w aż do znalezienia dołączanego określonego pliku.  
-  
- Tej opcji można użyć z Ignoruj standardowe ścieżki dołączanych plików ([/X (Ignoruj standardowe ścieżki dołączanych plików)](../../build/reference/x-ignore-standard-include-paths.md)) opcja.  
-  
- Kompilator szuka katalogów w następującej kolejności:  
-  
-1.  Katalogi z plikiem źródłowym.  
-  
-2.  Katalogów podanych **/I** opcji w kolejności CL napotka je.  
-  
-3.  Katalogach określonych w **INCLUDE** zmiennej środowiskowej.  
-  
-### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Aby ustawić tę opcję kompilatora w środowisku programowania Visual Studio  
-  
-1.  Otwórz projekt **strony właściwości** okno dialogowe. Aby uzyskać więcej informacji, zobacz [Praca z właściwościami projektu](../../ide/working-with-project-properties.md).  
-  
-2.  Kliknij przycisk **C/C++** folderu.  
-  
-3.  Kliknij przycisk **ogólne** strony właściwości.  
-  
-4.  Modyfikowanie **dodatkowe katalogi dołączenia** właściwości.  
-  
-### <a name="to-set-this-compiler-option-programmatically"></a>Aby programowo ustawić tę opcję kompilatora  
-  
--   Zobacz <xref:Microsoft.VisualStudio.VCProjectEngine.VCCLCompilerTool.AdditionalIncludeDirectories%2A>.  
-  
-## <a name="example"></a>Przykład  
- Polecenie wyszukuje pliki nagłówkowe zażądał MAIN.c w następującej kolejności: pierwszy w katalogu zawierającego MAIN.c, następnie w katalogu \INCLUDE, a następnie w katalogu \MY\INCLUDE i finally w katalogach przypisane do uwzględnienia zmiennej środowiskowej.  
-  
+
+## <a name="arguments"></a>Argumenty
+*Katalog*<br/>
+Katalog, który ma zostać dodany do listy katalogów wyszukiwane dołączane pliki.
+
+## <a name="remarks"></a>Uwagi
+Aby dodać więcej niż jeden katalog, użyj tej opcji więcej niż jeden raz. Przeszukiwane są katalogi, aż zostanie znaleziony określonegop dołączanego pliku.
+
+Za pomocą tej opcji Ignore Standard Include Paths ([/X (Ignoruj standardowe ścieżki dołączanych plików)](../../build/reference/x-ignore-standard-include-paths.md)) opcji.
+
+Kompilator wyszukuje katalogi, w następującej kolejności:
+
+1.  Katalogi zawierające pliku źródłowego.
+
+2.  Katalogi określone za pomocą **/I** opcji, w kolejności CL napotka je.
+
+3.  Katalogi określone w **INCLUDE** zmiennej środowiskowej.
+
+### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Aby ustawić tę opcję kompilatora w środowisku programowania Visual Studio
+
+1.  Otwórz projekt **stron właściwości** okno dialogowe. Aby uzyskać więcej informacji, zobacz [Praca z właściwościami projektu](../../ide/working-with-project-properties.md).
+
+2.  Kliknij przycisk **C/C++** folderu.
+
+3.  Kliknij przycisk **ogólne** stronę właściwości.
+
+4.  Modyfikowanie **dodatkowe katalogi dołączenia** właściwości.
+
+### <a name="to-set-this-compiler-option-programmatically"></a>Aby programowo ustawić tę opcję kompilatora
+
+-   Zobacz <xref:Microsoft.VisualStudio.VCProjectEngine.VCCLCompilerTool.AdditionalIncludeDirectories%2A>.
+
+## <a name="example"></a>Przykład
+Następujące polecenie szuka plików dołączanych, żądane przez MAIN.c w następującej kolejności: pierwsza na katalog zawierający MAIN.c, następnie w katalogu \INCLUDE, a następnie w katalogu \MY\INCLUDE i na koniec w katalogach przypisane do DOŁĄCZENIA zmiennej środowiskowej.
+
 ```  
-CL /I \INCLUDE /I\MY\INCLUDE MAIN.C  
+CL /I \INCLUDE /I\MY\INCLUDE MAIN.C
 ```  
-  
-## <a name="see-also"></a>Zobacz też  
- [Opcje kompilatora](../../build/reference/compiler-options.md)   
- [Ustawianie opcji kompilatora](../../build/reference/setting-compiler-options.md)
+
+## <a name="see-also"></a>Zobacz też
+[Opcje kompilatora](../../build/reference/compiler-options.md)   
+[Ustawianie opcji kompilatora](../../build/reference/setting-compiler-options.md)

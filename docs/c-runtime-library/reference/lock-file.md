@@ -34,16 +34,16 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5a7be40c729faff78c75c4ee751737a7b53592aa
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 705210881faed70a32c1ddd52d7257b5b5e5f161
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32400661"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44107501"
 ---
 # <a name="lockfile"></a>_lock_file
 
-Blokuje **pliku** obiektu w celu zapewnienia spójności dla wątków podczas uzyskiwania dostępu do **pliku** obiektów jednocześnie.
+Blokuje **pliku** obiektu w celu zapewnienia spójności dla wątków, uzyskiwanie dostępu do **pliku** obiektów jednocześnie.
 
 ## <a name="syntax"></a>Składnia
 
@@ -53,11 +53,12 @@ void _lock_file( FILE* file );
 
 ### <a name="parameters"></a>Parametry
 
-*plik* dojście do pliku.
+*Plik*<br/>
+Dojście do pliku.
 
 ## <a name="remarks"></a>Uwagi
 
-**_Lock_file —** funkcji blokady **pliku** obiekt określony przez *pliku*. Plik źródłowy nie jest zablokowany przez **_lock_file —**. Użyj [_unlock_file —](unlock-file.md) zwolnić blokady pliku. Wywołuje się **_lock_file —** i **_unlock_file —** muszą być zgodne w wątku.
+**_Lock_file —** funkcję blokady **pliku** obiekt określony przez *pliku*. Plik podstawowy nie jest zablokowany przez **_lock_file —**. Użyj [_unlock_file —](unlock-file.md) zwolnienia blokady pliku. Wywołania **_lock_file —** i **_unlock_file —** muszą się zgadzać w wątku.
 
 ## <a name="requirements"></a>Wymagania
 
@@ -65,7 +66,7 @@ void _lock_file( FILE* file );
 |-------------|---------------------|
 |**_lock_file**|\<stdio.h>|
 
-Aby uzyskać więcej informacji o zgodności, zobacz [zgodności](../../c-runtime-library/compatibility.md).
+Aby uzyskać więcej informacji na temat zgodności, zobacz [zgodności](../../c-runtime-library/compatibility.md).
 
 ## <a name="example"></a>Przykład
 

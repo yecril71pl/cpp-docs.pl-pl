@@ -15,44 +15,48 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a28f07990d5958f48f032b1355a565d2a4a559e9
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 8345a8418a2ff08b8909a7c01bd177afa426709b
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43758977"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44104098"
 ---
 # <a name="platformruntimeinteropservices-namespace"></a>Platform::Runtime:: InteropServices Namespace
-Ta przestrzeń nazw jest przeznaczona wyłącznie do użytku wewnętrznego i nie jest przeznaczona do użycia na potrzeby programowania.  
-  
-## <a name="syntax"></a>Składnia  
-  
-```cpp  
-  
-namespace Platform {  
-   namespace InteropServices {  
-}}  
-```  
-  
-### <a name="members"></a>Elementy członkowskie  
- Chociaż ta przestrzeń nazw jest przeznaczony do użytku wewnętrznego, przeglądarki można wyświetlić następujące elementy członkowskie tej przestrzeni nazw.  
-  
-|Nazwa|Uwagi|  
-|----------|------------|  
-|ComInterfaceType|— wyliczenie|  
-|InterfaceTypeAttribute||  
-|LayoutKind|— wyliczenie|  
-|MarshalAsAttribute||  
-|StuctLayoutAttribute||  
-|UnmanagedType|— wyliczenie|  
-  
-## <a name="inheritance-hierarchy"></a>Hierarchia dziedziczenia  
- `Platform`  
-  
-### <a name="requirements"></a>Wymagania  
- **Metadane:** platform.winmd  
-  
- **Namespace:** Platform::InteropServices  
-  
-## <a name="see-also"></a>Zobacz też  
- [Namespace platformy](platform-namespace-c-cx.md)
+
+Ta przestrzeń nazw jest przeznaczona wyłącznie do użytku wewnętrznego i nie jest przeznaczona do użycia na potrzeby programowania.
+
+## <a name="syntax"></a>Składnia
+
+```cpp
+namespace Platform {
+   namespace InteropServices {
+}}
+```
+
+### <a name="members"></a>Elementy członkowskie
+
+Chociaż ta przestrzeń nazw jest przeznaczony do użytku wewnętrznego, przeglądarki można wyświetlić następujące elementy członkowskie tej przestrzeni nazw.
+
+|Nazwa|Uwagi|
+|----------|------------|
+|ComInterfaceType|— wyliczenie|
+|InterfaceTypeAttribute||
+|LayoutKind|— wyliczenie|
+|MarshalAsAttribute||
+|StuctLayoutAttribute||
+|UnmanagedType|— wyliczenie|
+
+## <a name="inheritance-hierarchy"></a>Hierarchia dziedziczenia
+
+`Platform`
+
+### <a name="requirements"></a>Wymagania
+
+**Metadane:** platform.winmd
+
+**Namespace:** Platform::InteropServices
+
+## <a name="see-also"></a>Zobacz też
+
+[Namespace platformy](platform-namespace-c-cx.md)

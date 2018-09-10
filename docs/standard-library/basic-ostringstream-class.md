@@ -22,12 +22,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1fb0027ba6afbceed8cc5f1daafef8cb183759ce
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: 623e1df599f3d1e0e2011f2cea3c7f9422516c67
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38955237"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44108866"
 ---
 # <a name="basicostringstream-class"></a>basic_ostringstream — Klasa
 
@@ -42,11 +42,14 @@ class basic_ostringstream : public basic_ostream<Elem, Tr>
 
 ### <a name="parameters"></a>Parametry
 
-*ALLOC* klasa alokatora.
+*Alokacji*<br/>
+Klasa alokatora.
 
-*Elem* typ elementu podstawowego ciągu.
+*Elem*<br/>
+Typ elementu podstawowego ciągu.
 
-*TR* cech przeznaczone specjalnie dla elementu podstawowego ciągu.
+*TR*<br/>
+Cechy znaków przeznaczone specjalnie dla elementu podstawowego ciągu.
 
 ## <a name="remarks"></a>Uwagi
 
@@ -97,9 +100,11 @@ explicit basic_ostringstream(const basic_string<Elem, Tr, Alloc>& str, ios_base:
 
 ### <a name="parameters"></a>Parametry
 
-*_Tryb* jedno z wyliczeń w [ios_base::openmode](../standard-library/ios-base-class.md#openmode).
+*_Tryb*<br/>
+Jedno z wyliczeń w [ios_base::openmode](../standard-library/ios-base-class.md#openmode).
 
-*str* obiektu typu `basic_string`.
+*str*<br/>
+Obiekt typu `basic_string`.
 
 ### <a name="remarks"></a>Uwagi
 
@@ -141,7 +146,8 @@ void str(
 
 ### <a name="parameters"></a>Parametry
 
-*_Newstr* nowego ciągu znaków.
+*_Newstr*<br/>
+Nowy ciąg.
 
 ### <a name="return-value"></a>Wartość zwracana
 

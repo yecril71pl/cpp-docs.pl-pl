@@ -24,12 +24,12 @@ helpviewer_keywords:
 - std::operator&lt; (string)
 - std::operator&lt;&lt; (string)
 - std::operator&lt;= (string), std::operator== (string)
-ms.openlocfilehash: 728a0f643a77b47bf857d409517407bec3a1b8b4
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: 0b4ec7d6d79f70423b2d7c30e1de73e05eb04d9c
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38966631"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44101813"
 ---
 # <a name="ltstringgt-operators"></a>&lt;ciąg&gt; operatorów
 
@@ -107,9 +107,11 @@ basic_string<CharType, Traits, Allocator>&& operator+(
 
 ### <a name="parameters"></a>Parametry
 
-*po lewej stronie* ciąg stylu C lub obiektu o typie `basic_string` ma zostać połączony.
+*left*<br/>
+Ciąg stylu C lub obiektu o typie `basic_string` ma zostać połączony.
 
-*prawy* ciąg stylu C lub obiektu o typie `basic_string` ma zostać połączony.
+*right*<br/>
+Ciąg stylu C lub obiektu o typie `basic_string` ma zostać połączony.
 
 ### <a name="return-value"></a>Wartość zwracana
 
@@ -194,9 +196,11 @@ bool operator!=(
 
 ### <a name="parameters"></a>Parametry
 
-*po lewej stronie* ciąg stylu C lub obiektu o typie `basic_string` mają być porównane.
+*left*<br/>
+Ciąg stylu C lub obiektu o typie `basic_string` mają być porównane.
 
-*prawy* ciąg stylu C lub obiektu o typie `basic_string` mają być porównane.
+*right*<br/>
+Ciąg stylu C lub obiektu o typie `basic_string` mają być porównane.
 
 ### <a name="return-value"></a>Wartość zwracana
 
@@ -283,9 +287,11 @@ bool operator==(
 
 ### <a name="parameters"></a>Parametry
 
-*po lewej stronie* ciąg stylu C lub obiektu o typie `basic_string` mają być porównane.
+*left*<br/>
+Ciąg stylu C lub obiektu o typie `basic_string` mają być porównane.
 
-*prawy* ciąg stylu C lub obiektu o typie `basic_string` mają być porównane.
+*right*<br/>
+Ciąg stylu C lub obiektu o typie `basic_string` mają być porównane.
 
 ### <a name="return-value"></a>Wartość zwracana
 
@@ -372,9 +378,11 @@ bool operator<(
 
 ### <a name="parameters"></a>Parametry
 
-*po lewej stronie* ciąg stylu C lub obiektu o typie `basic_string` mają być porównane.
+*left*<br/>
+Ciąg stylu C lub obiektu o typie `basic_string` mają być porównane.
 
-*prawy* ciąg stylu C lub obiektu o typie `basic_string` mają być porównane.
+*right*<br/>
+Ciąg stylu C lub obiektu o typie `basic_string` mają być porównane.
 
 ### <a name="return-value"></a>Wartość zwracana
 
@@ -466,9 +474,11 @@ bool operator<=(
 
 ### <a name="parameters"></a>Parametry
 
-*po lewej stronie* ciąg stylu C lub obiektu o typie `basic_string` mają być porównane.
+*left*<br/>
+Ciąg stylu C lub obiektu o typie `basic_string` mają być porównane.
 
-*prawy* ciąg stylu C lub obiektu o typie `basic_string` mają być porównane.
+*right*<br/>
+Ciąg stylu C lub obiektu o typie `basic_string` mają być porównane.
 
 ### <a name="return-value"></a>Wartość zwracana
 
@@ -557,9 +567,11 @@ basic_ostream<CharType, Traits>& operator<<(
 
 ### <a name="parameters"></a>Parametry
 
-*_Ostr* były zapisywane do strumienia wyjściowego.
+*_Ostr*<br/>
+Były zapisywane do strumienia wyjściowego.
 
-*str* ciągu do wprowadzenia do strumienia wyjściowego.
+*str*<br/>
+Ciąg, który ma zostać nawiązane do strumienia wyjściowego.
 
 ### <a name="return-value"></a>Wartość zwracana
 
@@ -592,9 +604,11 @@ bool operator>(
 
 ### <a name="parameters"></a>Parametry
 
-*po lewej stronie* ciąg stylu C lub obiektu o typie `basic_string` mają być porównane.
+*left*<br/>
+Ciąg stylu C lub obiektu o typie `basic_string` mają być porównane.
 
-*prawy* ciąg stylu C lub obiektu o typie `basic_string` mają być porównane.
+*right*<br/>
+Ciąg stylu C lub obiektu o typie `basic_string` mają być porównane.
 
 ### <a name="return-value"></a>Wartość zwracana
 
@@ -693,9 +707,11 @@ bool operator>=(
 
 ### <a name="parameters"></a>Parametry
 
-*po lewej stronie* ciąg stylu C lub obiektu o typie `basic_string` mają być porównane.
+*left*<br/>
+Ciąg stylu C lub obiektu o typie `basic_string` mają być porównane.
 
-*prawy* ciąg stylu C lub obiektu o typie `basic_string` mają być porównane.
+*right*<br/>
+Ciąg stylu C lub obiektu o typie `basic_string` mają być porównane.
 
 ### <a name="return-value"></a>Wartość zwracana
 
@@ -784,9 +800,11 @@ basic_istream<CharType, Traits>& operator>>(
 
 ### <a name="parameters"></a>Parametry
 
-*_Istr* strumienia wejściowego, służą do wyodrębniania sekwencji
+*_Istr*<br/>
+Strumień wejściowy służą do wyodrębniania sekwencji
 
-*prawy* ciąg, który jest wyodrębniania ze strumienia wejściowego.
+*right*<br/>
+Ciąg, który jest wyodrębniania ze strumienia wejściowego.
 
 ### <a name="return-value"></a>Wartość zwracana
 

@@ -28,12 +28,12 @@ helpviewer_keywords:
 - std::condition_variable_any::wait_until
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 56082c63ccc64e117d9962ff35dddc01969f403b
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: 9acd5abc941c3cc3ab2f1c22486298d7cc7da16c
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38959235"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44106967"
 ---
 # <a name="conditionvariableany-class"></a>condition_variable_any — Klasa
 
@@ -111,9 +111,11 @@ void wait(Lock& Lck, Predicate Pred);
 
 ### <a name="parameters"></a>Parametry
 
-*Lck* A `mutex` obiekt dowolnego typu.
+*Lck*<br/>
+A `mutex` obiekt dowolnego typu.
 
-*P.* dowolne wyrażenie zwracające **true** lub **false**.
+*P.*<br/>
+Dowolne wyrażenie zwracające **true** lub **false**.
 
 ### <a name="remarks"></a>Uwagi
 
@@ -140,11 +142,14 @@ bool wait_for(Lock& Lck, const chrono::duration<Rep, Period>& Rel_time, Predicat
 
 ### <a name="parameters"></a>Parametry
 
-*Lck* A `mutex` obiekt dowolnego typu.
+*Lck*<br/>
+A `mutex` obiekt dowolnego typu.
 
-*Rel_time* A `chrono::duration` obiektu, który określa ilość czasu przed wątek zostanie wznowiona.
+*Rel_time*<br/>
+Element `chrono::duration` obiektu, który określa ilość czasu przed wątek zostanie wznowiona.
 
-*P.* dowolne wyrażenie zwracające **true** lub **false**.
+*P.*<br/>
+Dowolne wyrażenie zwracające **true** lub **false**.
 
 ### <a name="return-value"></a>Wartość zwracana
 
@@ -192,11 +197,14 @@ void wait_until(
 
 ### <a name="parameters"></a>Parametry
 
-*Lck* obiektu mutex.
+*Lck*<br/>
+Obiekt wzajemnego wykluczania mutex.
 
-*Abs_time* A [chrono::time_point](../standard-library/time-point-class.md) obiektu.
+*Abs_time*<br/>
+A [chrono::time_point](../standard-library/time-point-class.md) obiektu.
 
-*P.* dowolne wyrażenie zwracające **true** lub **false**.
+*P.*<br/>
+Dowolne wyrażenie zwracające **true** lub **false**.
 
 ### <a name="return-value"></a>Wartość zwracana
 

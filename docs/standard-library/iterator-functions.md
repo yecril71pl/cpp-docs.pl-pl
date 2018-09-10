@@ -34,12 +34,12 @@ helpviewer_keywords:
 - std::make_unchecked_array_iterator [C++]
 - std::next [C++]
 - std::prev [C++]
-ms.openlocfilehash: 995aa846af4642070150f2dd41d4bf6463f46ee8
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: d14bba0e38e49145ccd7d0078f4bbfd731e08827
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38964466"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44110428"
 ---
 # <a name="ltiteratorgt-functions"></a>&lt;Iterator&gt; funkcji
 
@@ -64,9 +64,11 @@ void advance(
 
 ### <a name="parameters"></a>Parametry
 
-*InIt* iteratora, który ma być inkrementowany i który musi spełniać wymagania dla iteratora danych wejściowych.
+*InIt*<br/>
+Iterator, który ma być inkrementowany i który musi spełniać wymagania dla iteratora danych wejściowych.
 
-*Wyłącz* integralny typ, który jest konwertowany na typ różnicy iteratora i który określa liczbę przyrostów ma być zwiększone położenie iteratora.
+*Off*<br/>
+Typ całkowitoliczbowy, który jest konwertowany na typ różnicy iteratora i który określa liczbę inkrementacji, o którą ma być zwiększone położenie iteratora.
 
 ### <a name="remarks"></a>Uwagi
 
@@ -134,7 +136,8 @@ back_insert_iterator<Container> back_inserter(Container& _Cont);
 
 ### <a name="parameters"></a>Parametry
 
-*_Cont* kontenera, do którego ma zostać wykonana wstawiania na tył.
+*_Cont*<br/>
+Kontener, do którego ma zostać wykonana wstawiania na tył.
 
 ### <a name="return-value"></a>Wartość zwracana
 
@@ -172,9 +175,9 @@ int main( )
 
    // Insertions can be done with template function
    back_insert_iterator<vector<int> > backiter ( vec );
- *backiter = 30;
+*backiter = 30;
    backiter++;
- *backiter = 40;
+*backiter = 40;
 
    // Alternatively, insertions can be done with the
    // back_insert_iterator member function
@@ -212,9 +215,11 @@ Ty *begin(Ty (& array)[Size]);
 
 ### <a name="parameters"></a>Parametry
 
-*CD* kontenera.
+*CD*<br/>
+Kontener.
 
-*Tablica* tablicę obiektów typu `Ty`.
+*Tablica*<br/>
+Tablica obiektów typu `Ty`.
 
 ### <a name="return-value"></a>Wartość zwracana
 
@@ -305,7 +310,8 @@ auto cbegin(const Container& cont)
 
 ### <a name="parameters"></a>Parametry
 
-*CD* kontener lub lista initializer_list.
+*CD*<br/>
+Kontener lub lista initializer_list.
 
 ### <a name="return-value"></a>Wartość zwracana
 
@@ -337,7 +343,8 @@ auto cend(const Container& cont)
 
 ### <a name="parameters"></a>Parametry
 
-*CD* kontener lub lista initializer_list.
+*CD*<br/>
+Kontener lub lista initializer_list.
 
 ### <a name="return-value"></a>Wartość zwracana
 
@@ -368,9 +375,11 @@ typename iterator_traits<InputIterator>::difference_type distance(InputIterator 
 
 ### <a name="parameters"></a>Parametry
 
-*pierwszy* pierwszym iteratorem, których odległość od drugiego zostanie określony.
+*pierwszy*<br/>
+Pierwszym iteratorem, których odległość od drugiego zostanie określony.
 
-*ostatni* drugi iterator, w których odległość od pierwszego zostanie określony.
+*ostatni*<br/>
+Drugi iterator, których odległość od pierwszego zostanie określony.
 
 ### <a name="return-value"></a>Wartość zwracana
 
@@ -447,9 +456,11 @@ Ty *end(Ty (& array)[Size]);
 
 ### <a name="parameters"></a>Parametry
 
-*CD* kontenera.
+*CD*<br/>
+Kontener.
 
-*Tablica* tablicę obiektów typu `Ty`.
+*Tablica*<br/>
+Tablica obiektów typu `Ty`.
 
 ### <a name="return-value"></a>Wartość zwracana
 
@@ -472,7 +483,8 @@ front_insert_iterator<Container> front_inserter(Container& _Cont);
 
 ### <a name="parameters"></a>Parametry
 
-*_Cont* obiekt kontenera, w których frontonu ma element wstawiony.
+*_Cont*<br/>
+Obiekt kontenera, w których frontonu ma element wstawiony.
 
 ### <a name="return-value"></a>Wartość zwracana
 
@@ -512,7 +524,7 @@ int main( )
 
    // Using the template function to insert an element
    front_insert_iterator< list < int> > Iter(L);
- *Iter = 100;
+*Iter = 100;
 
    // Alternatively, you may use the front_insert member function
    front_inserter ( L ) = 200;
@@ -526,9 +538,9 @@ int main( )
 
 ```Output
 The list L is:
- ( -1 0 1 2 3 4 5 6 7 8 ).
+( -1 0 1 2 3 4 5 6 7 8 ).
 After the front insertions, the list L is:
- ( 200 100 -1 0 1 2 3 4 5 6 7 8 ).
+( 200 100 -1 0 1 2 3 4 5 6 7 8 ).
 ```
 
 ## <a name="inserter"></a>  inserter
@@ -545,9 +557,11 @@ inserter(
 
 ### <a name="parameters"></a>Parametry
 
-*_Cont* kontenera, do którego mają być dodawane nowe elementy.
+*_Cont*<br/>
+Kontener, do którego mają być dodawane nowe elementy.
 
-*_Where* iterator lokalizowania punktu wstawiania.
+*_Where*<br/>
+Iterator lokalizowania punktu wstawiania.
 
 ### <a name="remarks"></a>Uwagi
 
@@ -581,7 +595,7 @@ int main( )
 
    // Using the template version to insert an element
    insert_iterator<list <int> > Iter( L, L.begin ( ) );
- *Iter = 1;
+*Iter = 1;
 
    // Alternatively, using the member function to insert an element
    inserter ( L, L.end ( ) ) = 500;
@@ -595,9 +609,9 @@ int main( )
 
 ```Output
 The list L is:
- ( 20 30 40 ).
+( 20 30 40 ).
 After the insertions, the list L is:
- ( 1 20 30 40 500 ).
+( 1 20 30 40 500 ).
 ```
 
 ## <a name="make_checked_array_iterator"></a>  make_checked_array_iterator
@@ -611,18 +625,21 @@ Tworzy [checked_array_iterator](../standard-library/checked-array-iterator-class
 template <class Iter>
 checked_array_iterator<Iter>
     make_checked_array_iterator(
- Iter Ptr,
+Iter Ptr,
     size_t Size,
     size_t Index = 0);
 ```
 
 ### <a name="parameters"></a>Parametry
 
-*PTR* wskaźnik do tablicy docelowej.
+*PTR*<br/>
+Wskaźnik do tablicy docelowej.
 
-*Rozmiar* rozmiar tablicy docelowej.
+*Rozmiar*<br/>
+Rozmiar tablicy docelowej.
 
-*Indeks* opcjonalny indeks do tablicy.
+*Index*<br/>
+Opcjonalny indeks do tablicy.
 
 ### <a name="return-value"></a>Wartość zwracana
 
@@ -704,7 +721,8 @@ make_move_iterator(const Iterator& _It);
 
 ### <a name="parameters"></a>Parametry
 
-*_It* iteratora, przechowywane w nowym przenieść iteratora.
+*_It*<br/>
+Iterator, przechowywane w nowych iteratorem przenoszenia.
 
 ### <a name="remarks"></a>Uwagi
 
@@ -725,7 +743,8 @@ unchecked_array_iterator<Iter>
 
 ### <a name="parameters"></a>Parametry
 
-*PTR* wskaźnik do tablicy docelowej.
+*PTR*<br/>
+Wskaźnik do tablicy docelowej.
 
 ### <a name="return-value"></a>Wartość zwracana
 
@@ -802,9 +821,11 @@ InputIterator next(
 
 ### <a name="parameters"></a>Parametry
 
-*pierwszy* bieżącej pozycji.
+*pierwszy*<br/>
+Bieżące położenie.
 
-*_Off* liczbę iteracji.
+*_Off*<br/>
+Liczba razy do iteracji.
 
 ### <a name="return-value"></a>Wartość zwracana
 
@@ -827,9 +848,11 @@ BidirectionalIterator prev(
 
 ### <a name="parameters"></a>Parametry
 
-*pierwszy* bieżącej pozycji.
+*pierwszy*<br/>
+Bieżące położenie.
 
-*_Off* liczbę iteracji.
+*_Off*<br/>
+Liczba razy do iteracji.
 
 ### <a name="remarks"></a>Uwagi
 

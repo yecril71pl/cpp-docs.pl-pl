@@ -14,18 +14,18 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8ea20d43e2679addc10465cfc549a64fc210274f
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 4559bec84d7e6051155ad73f68a1ef8ae13ca6cc
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33861691"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44104163"
 ---
 # <a name="path-class"></a>path — klasa
 
-**Ścieżki** klasy przechowuje obiekt typu String\_typu o nazwie mójużytkownik tutaj na potrzeby specyfikacji odpowiednie do użycia jako nazwa ścieżki. ciąg\_typu jest synonimem basic\_ciąg\<value_type >, gdzie wartość\_typu jest synonimem znak w systemie Windows lub wchar_t w obszarze Posix.
+**Ścieżki** klasa przechowuje obiekt typu String\_typu, o nazwie mojanazwa w tym miejscu na potrzeby specyfikacji odpowiedni do użytku jako nazwa ścieżki. ciąg\_typ jest synonimem dla basic\_ciąg\<value_type >, gdzie wartość\_typ jest synonimem dla znaków w obszarze Windows lub wchar_t w modelu Posix.
 
-Aby uzyskać więcej informacji oraz przykłady kodu, zobacz [nawigacji systemu plików (C++)](../standard-library/file-system-navigation.md).
+Aby uzyskać więcej informacji i przykłady kodu, zobacz [nawigacji systemu plików (C++)](../standard-library/file-system-navigation.md).
 
 ## <a name="syntax"></a>Składnia
 
@@ -33,7 +33,88 @@ Aby uzyskać więcej informacji oraz przykłady kodu, zobacz [nawigacji systemu 
 class path;
 ```
 
-## <a name="pathappend"></a>path::append
+### <a name="constructors"></a>Konstruktorów
+
+|Konstruktor|Opis|
+|-|-|
+|[Ścieżka](#path)|Konstruuje `path`.|
+
+### <a name="typedefs"></a>Typedefs
+
+|Nazwa typu|Opis|
+|-|-|
+|[const_iterator](#const_iterator)|Synonim dla `iterator`.|
+|[iterator](#iterator)|Stałe iteratora dwukierunkowego, który wyznacza `path` składniki `myname`.|
+|[string_type](#string_type)|Typ jest synonimem dla `basic_string<value_type>`.|
+
+### <a name="member-functions"></a>Funkcje Członkowskie
+
+|Funkcja elementu członkowskiego|Opis|
+|-|-|
+|[Dołącz](#append)|Dołącza określony sekwencji w celu `mypath`, konwersji i wstawianie preferred_separator zgodnie z potrzebami.|
+|[Przypisz](#assign)|Zastępuje `mypath` określonej sekwencji konwertowane odpowiednio do potrzeb.|
+|[begin](#begin)|Zwraca `path::iterator` wyznaczanie pierwszego elementu w ścieżce w nazwie ścieżki, jeśli jest obecny.|
+|[c_str](#c_str)|Zwraca wskaźnik do pierwszego znaku w `mypath`.|
+|[Usuń zaznaczenie](#clear)|Wykonuje `mypath.clear()`.|
+|[Porównanie](#compare)|Zwraca wartości do porównania.|
+|[concat](#compare)|Dołącza określony sekwencji w celu `mypath`, przekonwertować (ale nie Wstawianie separatorem) zgodnie z potrzebami.|
+|[pusty](#empty)|Zwraca `mypath.empty()`.|
+|[koniec](#end)|Zwraca iterator sekwencja kończenia typu `iterator`.|
+|[Rozszerzenie](#extension)|Zwraca sufiks `filename()`.|
+|[Nazwa pliku](#filename)|Zwraca składnik katalogu głównego mojanazwa, w szczególności `empty() path() : *--end()`. Składnik może być pusta.|
+|[generic_string —](#generic_string)|Zwraca `this->string<Elem, Traits, Alloc>(al)` z (w obszarze Windows) wszelkie ukośnik odwrotny jest konwertowany na ukośnik.|
+|[generic_u16string](#generic_u16string)|Zwraca `u16string()` z (w obszarze Windows) wszelkie ukośnik odwrotny jest konwertowany na ukośnik.|
+|[generic_u32string](#generic_u32string)|Zwraca `u32string()` z (w obszarze Windows) wszelkie ukośnik odwrotny jest konwertowany na ukośnik.|
+|[generic_u8string](#generic_u8string)|Zwraca `u8string()` z (w obszarze Windows) wszelkie ukośnik odwrotny jest konwertowany na ukośnik.|
+|[generic_wstring](#generic_wstring)|Zwraca `wstring()` z (w obszarze Windows) wszelkie ukośnik odwrotny jest konwertowany na ukośnik.|
+|[has_extension](#has_extension)|Zwraca `!extension().empty()`.|
+|[has_filename](#has_filename)|Zwraca `!filename().empty()`.|
+|[has_parent_path](#has_parent_path)|Zwraca `!parent_path().empty()`.|
+|[has_relative_path](#has_relative_path)|Zwraca `!relative_path().empty()`.|
+|[has_root_directory](#has_root_directory)|Zwraca `!root_directory().empty()`.|
+|[has_root_name](#has_root_name)|Zwraca `!root_name().empty()`.|
+|[has_root_path](#has_root_path)|Zwraca `!root_path().empty()`.|
+|[has_stem](#has_stem)|Zwraca `!stem().empty()`.|
+|[is_absolute](#is_absolute)|Windows, funkcja zwraca `has_root_name() && has_root_directory()`. Posix, funkcja zwraca `has_root_directory()`.|
+|[is_relative](#is_relative)|Zwraca `!is_absolute()`.|
+|[make_preferred](#make_preferred)|Konwertuje każdego separatora preferred_separator zgodnie z potrzebami.|
+|[Natywne](#native)|Zwraca `myname`.|
+|[parent_path](#parent_path)|Zwraca element nadrzędny składnik path `myname`.|
+|[preferred_separator](#preferred_separator)|Stały obiekt zawierają znaków preferowaną oddzielenie składników ścieżki, w zależności od systemu operacyjnego hosta. |
+|[relative_path](#relative_path)|Zwraca składnik ścieżki względnej `myname`. |
+|[remove_filename —](#remove_filename)|Usuwa nazwę pliku.|
+|[replace_extension —](#replace_extension)|Zastępuje rozszerzenie `myname`. |
+|[replace_filename](#replace_filename)|RReplaces nazwę pliku.|
+|[root_directory](#root_directory)|Zwraca składnik katalogu głównego `myname`. |
+|[root_name](#root_name)|Zwraca składnik nazwy głównej `myname`. |
+|[root_path](#root_path)|Zwraca składnik ścieżki katalogu głównego `myname`.|
+|[stem](#stem)|Zwraca `stem` składnika `myname`.|
+|[string](#string)|Konwertuje sekwencję przechowywane w `mypath`.|
+|[swap](#swap)|Wykonuje `swap(mypath, right.mypath)`.|
+|[u16string](#u16string)|Konwertuje sekwencję przechowywane w `mypath` UTF-16 i zwraca ona przechowywana w obiekcie typu `u16string`.|
+|[u32string](#u32string)|Konwertuje sekwencję przechowywane w `mypath` UTF-32 i zwraca ona przechowywana w obiekcie typu `u32string`.|
+|[u8string](#u8string)|Konwertuje sekwencję przechowywane w `mypath` UTF-8 i zwraca ona przechowywana w obiekcie typu `u8string`.|
+|[value_type](#value_type)|Typ opisuje elementów ścieżki faworytem przez system operacyjny hosta.|
+|[wstring](#wstring)|Konwertuje sekwencję przechowywane w `mypath` faworytem przez system hosta do kodowania `wchar_t` sekwencji i zwraca ona przechowywana w obiekcie typu `wstring`.|
+
+### <a name="operators"></a>Operatory
+
+|Operator|Opis|
+|-|-|
+|[operator=](#op_as)|Zastępuje elementy ścieżki z kopią inną ścieżkę.|
+|[operator+=](#op_add)|Różne `concat` wyrażenia.|
+|[operator / =](#op_divide)|Różne `append` wyrażenia.|
+|[string_type — operator](#op_string)|Zwraca `myname`.|
+
+## <a name="requirements"></a>Wymagania
+
+**Nagłówek:** \<filesystem >
+
+**Namespace:** std::experimental::filesystem
+
+## <a name="append"></a> path::append —
+
+Dołącza określony sekwencji w celu `mypath`przekonwertowanego i wstawianie `preferred_separator` zgodnie z potrzebami.
 
 ```cpp
 template <class Source>
@@ -43,9 +124,20 @@ template <class InIt>
 path& append(InIt first, InIt last);
 ```
 
-Funkcje Członkowskie Dołącz określona sekwencja do mypath, przekonwertować i wstawianie preferred_separator zgodnie z potrzebami.
+### <a name="parameters"></a>Parametry
 
-## <a name="pathassign"></a>path::ASSIGN
+*source*<br/>
+Określonej sekwencji.
+
+*pierwszy*<br/>
+Początek określonej sekwencji.
+
+*ostatni*<br/>
+Zakończenie określonej sekwencji.
+
+## <a name="assign"></a> path::ASSIGN —
+
+Zastępuje `mypath` określonej sekwencji konwertowane odpowiednio do potrzeb.
 
 ```cpp
 template <class Source>
@@ -55,33 +147,44 @@ template <class InIt>
 path& assign(InIt first, InIt last);
 ```
 
-Funkcje Członkowskie Zamień mypath sekwencji określony, przekonwertować zgodnie z potrzebami.
+### <a name="parameters"></a>Parametry
 
-## <a name="pathbegin"></a>path::begin
+*source*<br/>
+Określonej sekwencji.
+
+*pierwszy*<br/>
+Początek określonej sekwencji.
+
+*ostatni*<br/>
+Zakończenie określonej sekwencji.
+
+## <a name="begin"></a> path::BEGIN —
+
+Zwraca `path::iterator` wyznaczanie pierwszego elementu w ścieżce w nazwie ścieżki, jeśli jest obecny.
 
 ```cpp
 iterator begin() const;
 ```
 
-Zwraca path::iterator wyznaczenie pierwszy element ścieżki w nazwie ścieżki, jeśli jest obecny.
+## <a name="c_str"></a> path::c_str
 
-## <a name="pathcstr"></a>path::c_str
+Zwraca wskaźnik do pierwszego znaku w `mypath`.
 
 ```cpp
 const value_type& *c_str() const noexcept;
 ```
 
-Zwraca wskaźnik do pierwszego znaku w mypath.
+## <a name="clear"></a> path::Clear —
 
-## <a name="pathclear"></a>path::Clear
+Wykonuje `mypath.clear()`.
 
 ```cpp
 void clear() noexcept;
 ```
 
-Funkcja członkowska wykonuje mypath.clear()
+## <a name="compare"></a> path::COMPARE —
 
-## <a name="pathcompare"></a>path::COMPARE
+Pierwsza funkcja zwraca `mypath.compare(pval.native())`. Druga funkcja zwraca `mypath.compare(str)`. Trzecia funkcja zwraca `mypath.compare(ptr)`.
 
 ```cpp
 int compare(const path& pval) const noexcept;
@@ -89,9 +192,20 @@ int compare(const string_type& str) const;
 int compare(const value_type *ptr) const;
 ```
 
-Pierwsza funkcja zwraca mypath.compare(pval.native()). Druga funkcja zwraca mypath.compare(str). Trzeci funkcja mypath.compare(ptr).
+### <a name="parameters"></a>Parametry
 
-## <a name="pathconcat"></a>path::concat
+*pval*<br/>
+Ścieżka do porównania.
+
+*str*<br/>
+Ciąg do porównania.
+
+*ptr*<br/>
+Wskaźnik do porównania.
+
+## <a name="concat"></a> path::concat —
+
+Dołącza określony sekwencji w celu `mypath`, przekonwertować (ale nie Wstawianie separatorem) zgodnie z potrzebami.
 
 ```cpp
 template <class Source>
@@ -101,53 +215,68 @@ template <class InIt>
 path& concat(InIt first, InIt last);
 ```
 
-Funkcje Członkowskie Dołącz określona sekwencja mypath przekonwertować (ale nie Wstawianie separator) zgodnie z potrzebami.
+### <a name="parameters"></a>Parametry
 
-## <a name="pathconstiterator"></a>path::const_iterator
+*source*<br/>
+Określonej sekwencji.
+
+*pierwszy*<br/>
+Początek określonej sekwencji.
+
+*ostatni*<br/>
+Zakończenie określonej sekwencji.
+
+## <a name="const_iterator"></a> path::const_iterator
+
+Synonim dla `iterator`.
 
 ```cpp
 typedef iterator const_iterator;
 ```
 
-Typ jest synonimem iteratora.
+## <a name="empty"></a> path::Empty —
 
-## <a name="pathempty"></a>path::Empty
+Zwraca `mypath.empty()`.
 
 ```cpp
 bool empty() const noexcept;
 ```
 
-Zwraca mypath.empty().
+## <a name="end"></a> path::end —
 
-## <a name="pathend"></a>path::end
+Zwraca iterator sekwencja kończenia typu `iterator`.
 
 ```cpp
 iterator end() const;
 ```
 
-Zwraca iterator sekwencja kończenia typ iteratora.
+## <a name="extension"></a> path::Extension —
 
-## <a name="pathextension"></a>path::Extension
+Zwraca sufiks `filename()`.
 
 ```cpp
 path extension() const;
 ```
 
-Zwraca sufiks filename() X tak, aby:
+### <a name="remarks"></a>Uwagi
 
-Jeśli X == path(".") &#124; &#124; X == path("..") lub jeśli X zawiera nie kropki, sufiks jest pusty.
+Zwraca sufiks `filename() X` tak, aby:
 
-W przeciwnym razie sufiks rozpoczyna się od ciągu (i zawiera) po prawej stronie kropki (.).
+Jeśli `X == path(".") || X == path("..")` lub jeśli `X` zawiera nie kropka sufiks jest pusty.
 
-## <a name="pathfilename"></a>path::filename
+W przeciwnym razie sufiks zaczyna się od (i zawiera) po prawej stronie kropki (.).
+
+## <a name="filename"></a> path::filename —
+
+Zwraca składnik katalogu głównego mojanazwa, w szczególności `empty() path() : *--end()`. Składnik może być pusta.
 
 ```cpp
 path filename() const;
 ```
 
-Zwraca składnik katalogu głównego mójużytkownik, w szczególności `empty()  path() : *--end()`. Składnik może być pusta.
+## <a name="generic_string"></a> path::generic_string
 
-## <a name="pathgenericstring"></a>path::generic_string
+Zwraca `this->string<Elem, Traits, Alloc>(al)` z (w obszarze Windows) wszelkie ukośnik odwrotny jest konwertowany na ukośnik.
 
 ```cpp
 template <class Elem,
@@ -159,121 +288,121 @@ template <class Elem,
 string generic_string() const;
 ```
 
-Zwraca `this->string<Elem, Traits, Alloc>(al)` z (w systemie Windows) wszelkie ukośnik odwrotny przekonwertować kreską ukośną.
+## <a name="generic_u16string"></a> path::generic_u16string
 
-## <a name="pathgenericu16string"></a>path::generic_u16string
+Zwraca `u16string()` z (w obszarze Windows) wszelkie ukośnik odwrotny jest konwertowany na ukośnik.
 
 ```cpp
 u16string generic_u16string() const;
 ```
 
-Zwraca odwrotny żadnych u16string() z (w systemie Windows) przekonwertować kreską ukośną.
+## <a name="generic_u32string"></a> path::generic_u32string
 
-## <a name="pathgenericu32string"></a>path::generic_u32string
+Zwraca `u32string()` z (w obszarze Windows) wszelkie ukośnik odwrotny jest konwertowany na ukośnik.
 
 ```cpp
 u32string generic_u32string() const;
 ```
 
-Zwraca odwrotny żadnych u32string() z (w systemie Windows) przekonwertować kreską ukośną.
+## <a name="generic_u8string"></a> path::generic_u8string
 
-## <a name="pathgenericu8string"></a>path::generic_u8string
+Zwraca `u8string()` z (w obszarze Windows) wszelkie ukośnik odwrotny jest konwertowany na ukośnik.
 
 ```cpp
 string generic_u8string() const;
 ```
 
-Zwraca odwrotny żadnych u8string() z (w systemie Windows) przekonwertować kreską ukośną.
+## <a name="generic_wstring"></a> path::generic_wstring
 
-## <a name="pathgenericwstring"></a>path::generic_wstring
+Zwraca `wstring()` z (w obszarze Windows) wszelkie ukośnik odwrotny jest konwertowany na ukośnik.
 
 ```cpp
 wstring generic_wstring() const;
 ```
 
-Zwraca odwrotny żadnych wstring() z (w systemie Windows) przekonwertować kreską ukośną.
+## <a name="has_extension"></a> path::has_extension
 
-## <a name="pathhasextension"></a>path::has_extension
+Zwraca `!extension().empty()`.
 
 ```cpp
 bool has_extension() const;
 ```
 
-Zwraca! extension().empty().
+## <a name="has_filename"></a> path::has_filename —
 
-## <a name="pathhasfilename"></a>path::has_filename
+Zwraca `!filename().empty()`.
 
 ```cpp
 bool has_filename() const;
 ```
 
-Zwraca! filename().empty().
+## <a name="has_parent_path"></a> path::has_parent_path —
 
-## <a name="pathhasparentpath"></a>path::has_parent_path
+Zwraca `!parent_path().empty()`.
 
 ```cpp
 bool has_parent_path() const;
 ```
 
-Returns !parent_path().empty().
+## <a name="has_relative_path"></a> path::has_relative_path —
 
-## <a name="pathhasrelativepath"></a>path::has_relative_path
+Zwraca `!relative_path().empty()`.
 
 ```cpp
 bool has_relative_path() const;
 ```
 
-Returns !relative_path().empty().
+## <a name="has_root_directory"></a> path::has_root_directory —
 
-## <a name="pathhasrootdirectory"></a>path::has_root_directory
+Zwraca `!root_directory().empty()`.
 
 ```cpp
 bool has_root_directory() const;
 ```
 
-Zwraca! root_directory().empty().
+## <a name="has_root_name"></a> path::has_root_name —
 
-## <a name="pathhasrootname"></a>path::has_root_name
+Zwraca `!root_name().empty()`.
 
 ```cpp
 bool has_root_name() const;
 ```
 
-Zwraca! root_name().empty().
+## <a name="has_root_path"></a> path::has_root_path —
 
-## <a name="pathhasrootpath"></a>path::has_root_path
+Zwraca `!root_path().empty()`.
 
 ```cpp
 bool has_root_path() const;
 ```
 
-Zwraca! root_path().empty().
+## <a name="has_stem"></a> path::has_stem
 
-## <a name="pathhasstem"></a>path::has_stem
+Zwraca `!stem().empty()`.
 
 ```cpp
 bool has_stem() const;
 ```
 
-Zwraca! stem().empty().
+## <a name="is_absolute"></a> path::is_absolute —
 
-## <a name="pathisabsolute"></a>path::is_absolute
+Windows, funkcja zwraca `has_root_name() && has_root_directory()`. Posix, funkcja zwraca `has_root_directory()`.
 
 ```cpp
 bool is_absolute() const;
 ```
 
-W systemie Windows, funkcja zwraca has_root_name() & & has_root_directory(). Dla Posix funkcja zwraca has_root_directory().
+## <a name="is_relative"></a> path::is_relative —
 
-## <a name="pathisrelative"></a>path::is_relative
+Zwraca `!is_absolute()`.
 
 ```cpp
 bool is_relative() const;
 ```
 
-Zwraca! is_absolute().
+## <a name="iterator"></a> path::iterator
 
-## <a name="pathiterator"></a>path::iterator
+Stałe iteratora dwukierunkowego, który wyznacza ścieżkę składniki `myname`.
 
 ```cpp
 class iterator
@@ -288,45 +417,49 @@ class iterator
    };
 ```
 
-Klasa opisuje dwukierunkowego iteratora stałej, który wyznacza ścieżkę składników mójużytkownik w sekwencji:
+### <a name="remarks"></a>Uwagi
 
-1. Nazwa głównego, jeśli jest obecny
+Klasa opisuje stałej iteratora dwukierunkowego, który wyznacza `path` składniki `myname` w sekwencji:
+
+1. główna nazwa, jeśli jest obecny
 
 1. katalog główny, jeśli jest obecny
 
-1. pozostałe elementy katalogu ścieżki nadrzędnej, jeśli jest obecny, kończąc nazwę pliku, jeśli jest obecny
+1. wszystkie pozostałe elementy katalogu nadrzędnego `path`, jeśli jest obecny, kończąc nazwy pliku, jeśli jest obecny
 
-Dla obiektu typu ścieżki pval:
+Aby uzyskać `pval` obiektu typu `path`:
 
-1. path::iterator X = pval.begin() wyznacza pierwszy element ścieżki w nazwie ścieżki, jeśli jest obecny.
+1. `path::iterator X = pval.begin()` Określa pierwszy `path` elementu w nazwie ścieżki, jeśli jest obecny.
 
-1. X == pval.end() ma wartość true, gdy X punktów tylko poza koniec sekwencja składników.
+1. `X == pval.end()` jest istotne, kiedy `X` punktów tylko poza końcem sekwencji składników.
 
-3. * X zwraca ciąg zgodny bieżącego składnika
+3. `*X` Zwraca ciąg, który pasuje do bieżącego składnika
 
-1. ++ X wyznacza następny składnik w sekwencji, jeśli jest obecny.
+1. `++X` wskazuje następny składnik w sekwencji, jeśli jest obecny.
 
-1. --X wyznacza poprzedniego składnika w sekwencji, jeśli jest obecny.
+1. `--X` wyznacza poprzedni składnik w sekwencji, jeśli jest obecny.
 
-1. Zmienianie mójużytkownik unieważnia Iteratory wszystkich elementów w mójużytkownik wyznaczenie.
+1. Zmienianie `myname` unieważnia wszystkie Iteratory, wyznaczanie elementów w `myname`.
 
-## <a name="pathmakepreferred"></a>path::make_preferred
+## <a name="make_preferred"></a> path::make_preferred —
+
+Konwertuje każdego separatora preferred_separator zgodnie z potrzebami.
 
 ```cpp
 path& make_preferred();
 ```
 
-Funkcja członkowska konwertuje każdego separatora preferred_separator zgodnie z potrzebami.
+## <a name="native"></a> path::Native
 
-## <a name="pathnative"></a>path::Native
+Zwraca `myname`.
 
 ```cpp
 const string_type& native() const noexcept;
 ```
 
-Zwraca mójużytkownik.
+## <a name="op_as"></a> path::operator =
 
-## <a name="pathoperator"></a>path::operator=
+Zastępuje elementy ścieżki z kopią inną ścieżkę.
 
 ```cpp
 path& operator=(const path& right);
@@ -336,9 +469,21 @@ template <class Source>
 path& operator=(const Source& source);
 ```
 
-Pierwszy operator członkowski kopiuje right.myname mójużytkownik. Drugi operator członkowski przenosi right.myname mójużytkownik. Trzeci operator członkowski działa tak samo jak * to = path(source).
+### <a name="parameters"></a>Parametry
 
-## <a name="pathoperator"></a>path::operator +=
+*right*<br/>
+[Ścieżki](../standard-library/path-class.md) są kopiowane do `path`.
+
+*source*<br/>
+Ścieżka źródłowa.
+
+### <a name="remarks"></a>Uwagi
+
+Pierwszy kopie operator składowej `right.myname` do `myname`. Drugi operator członkowski przenosi `right.myname` do `myname`. Trzeci operator składowy zachowuje się taka sama jak `*this = path(source)`.
+
+## <a name="op_add"></a> path::operator +=
+
+Różne `concat` wyrażenia.
 
 ```cpp
 path& operator+=(const path& right);
@@ -353,21 +498,42 @@ template <class Elem>
 path& operator+=(Elem elem);
 ```
 
-Funkcje Członkowskie zachowują się taka sama jak następujących odpowiednich wyrażeń:
+### <a name="parameters"></a>Parametry
 
-1. concat(right);
+*right*<br/>
+Dodano ścieżka.
 
-1. concat(path(str));
+*str*<br/>
+Dodano parametry.
 
-1. concat(ptr);
+*ptr*<br/>
+Dodano wskaźnik.
 
-1. concat (string_type (element 1));
+*Elem*<br/>
+Dodany `value_type` lub `Elem`.
 
-1. concat(source);
+*source*<br/>
+Dodano źródło.
 
-1. concat (ścieżka (basic_string —\<elementu >(1, elem)));
+### <a name="remarks"></a>Uwagi
 
-## <a name="pathoperator"></a>path::operator / =
+Funkcje elementów członkowskich zachowują się taka sama jak poniższy odpowiednich wyrażeń:
+
+1. `concat(right);`
+
+1. `concat(path(str));`
+
+1. `concat(ptr);`
+
+1. `concat(string_type(1, elem));`
+
+1. `concat(source);`
+
+1. `concat(path(basic_string\<Elem>(1, elem)));`
+
+## <a name="op_divide"></a> path::operator / =
+
+Różne `append` wyrażenia.
 
 ```cpp
 path& operator/=(const path& right);
@@ -376,29 +542,45 @@ template <class Source>
 path& operator/=(const Source& source);
 ```
 
-Funkcje Członkowskie zachowują się taka sama jak następujących odpowiednich wyrażeń:
+### <a name="parameters"></a>Parametry
 
-1. append(Right);
+*right*<br/>
+Dodano ścieżka.
 
-1. append(Source);
+*source*<br/>
+Dodano źródło.
 
-## <a name="pathoperator-stringtype"></a>path::operator string_type
+### <a name="remarks"></a>Uwagi
+
+Funkcje elementów członkowskich zachowują się taka sama jak poniższy odpowiednich wyrażeń:
+
+1. `append(right);`
+
+1. `append(source);`
+
+## <a name="op_string"></a> path::operator string_type
+
+Zwraca `myname`.
 
 ```cpp
 operator string_type() const;
 ```
 
-Operator członkowski zwraca mójużytkownik.
+## <a name="parent_path"></a> path::parent_path —
 
-## <a name="pathparentpath"></a>path::parent_path
+Zwraca element nadrzędny składnik path `myname`.
 
 ```cpp
 path parent_path() const;
 ```
 
-Zwraca element nadrzędny składnika ścieżki mójużytkownik, w szczególności prefiks mójużytkownik po usunięciu filename().native() i wszystkie bezpośrednio poprzednie separatorów katalogu. (Jednakowo, jeśli begin()! = end(), jest łączenie wszystkich elementów z zakresu [begin(),--end()), stosując kolejno operator / =.) Składnik może być pusta.
+### <a name="remarks"></a>Uwagi
 
-## <a name="pathpath"></a>path::Path —
+Zwraca element nadrzędny składnik path `myname`, w szczególności prefiks `myname` po usunięciu `filename().native()` i wszystkie bezpośrednio poprzedzającego separatora katalogów. (Tak samo, jeśli `begin() != end()`, jest łączenie wszystkich elementów w zakresie [begin(),--end()) stosując kolejno operator / =.) Składnik może być pusta.
+
+## <a name="path"></a> path::Path —
+
+Konstruuje `path` na różne sposoby.
 
 ```cpp
 path();
@@ -419,23 +601,44 @@ template <class InIt>
 path(InIt first, InIt last, const locale& loc);
 ```
 
-Wszystkie konstruktory utworzyć mójużytkownik na różne sposoby:
+### <a name="parameters"></a>Parametry
 
-Path() jest myname().
+*right*<br/>
+Ścieżka, w której ścieżki konstruowanej jest kopią.
 
-Dla ścieżki (const Ścieżka & prawej) jest myname(right.myname).
+*source*<br/>
+Źródło, w której ścieżki konstruowanej jest kopią.
 
-Dla ścieżki (ścieżka & & prawo) jest myname(right.myname).
+*Lokalizacja*<br/>
+Określonych ustawień regionalnych.
 
-Dla szablonu\<klasy źródła > Ścieżka (const źródła & źródła) jest myname(source).
+*pierwszy*<br/>
+Pozycja pierwszego elementu, który ma być skopiowany.
 
-Dla szablonu\<klasy źródła > Ścieżka (const źródła i źródła, const ustawień regionalnych i lokalizacja) jest myname(source) uzyskiwanie wszystkie aspekty codecvt potrzebne w loc.
+*ostatni*<br/>
+Pozycja ostatni element do skopiowania.
 
-Dla szablonu\<klasy InIt > Ścieżka (InIt pierwszy, InIt ostatniego) jest mójużytkownik (imię, nazwisko).
+### <a name="remarks"></a>Uwagi
 
-Dla szablonu\<klasy InIt > Ścieżka (InIt InIt ostatnich, stałe ustawień regionalnych & Lokalizacja jest pierwszą) jest mójużytkownik (imię, nazwisko), uzyskiwanie wszelkie potrzebne aspekty codecvt z loc.
+Konstruktory wszystkie konstruowania `myname` na różne sposoby:
 
-## <a name="pathpreferredseparator"></a>path::preferred_separator
+Aby uzyskać `path()` jest `myname()`.
+
+Aby uzyskać `path(const path& right`) jest `myname(right.myname)`.
+
+Aby uzyskać `path(path&& right)` jest `myname(right.myname)`.
+
+Aby uzyskać `template<class Source> path(const Source& source)` jest `myname(source)`.
+
+Aby uzyskać `template<class Source> path(const Source& source, const locale& loc)` jest `myname(source)`, uzyskiwanie dowolne wymagane aspektami codecvt z `loc`.
+
+Aby uzyskać `template<class InIt> path(InIt first, InIt last)` jest `myname(first, last)`.
+
+Aby uzyskać `template<class InIt> path(InIt first, InIt last, const locale& loc)` jest `myname(first, last)`, uzyskiwanie dowolne wymagane aspektami codecvt z `loc`.
+
+## <a name="preferred_separator"></a> path::preferred_separator
+
+Stały obiekt zawierają znaków preferowaną oddzielenie składników ścieżki, w zależności od systemu operacyjnego hosta. 
 
 ```cpp
 #if _WIN32_C_LIB
@@ -445,37 +648,63 @@ static constexpr value_type preferred_separator == '/';
 #endif // filesystem model now defined
 ```
 
-Stała obiektu daje preferowanych znak do oddzielania składników ścieżki, w zależności od systemu operacyjnego hosta. Należy pamiętać, że jednakowo dopuszczalna, w większości kontekstów w systemie Windows, aby użyć L '/' w tym miejscu.
+### <a name="remarks"></a>Uwagi
 
-## <a name="pathrelativepath"></a>path::relative_path
+Należy pamiętać, że równie dopuszczalna w większości konteksty w Windows do użycia L "/" w tym miejscu.
+
+## <a name="relative_path"></a> path::relative_path —
+
+Zwraca składnik ścieżki względnej `myname`. 
 
 ```cpp
 path relative_path() const;
 ```
 
-Zwraca składnik ścieżki względnej mójużytkownik, w szczególności sufiks mójużytkownik po usunięciu root_path().native() i żadnych separatorów natychmiast kolejnych nadmiarowe katalogu. Składnik może być pusta.
+### <a name="remarks"></a>Uwagi
 
-## <a name="pathremovefilename"></a>path::remove_filename
+Zwraca składnik ścieżki względnej `myname`, w szczególności sufiks `myname` po usunięciu `root_path().native()` i żadnych separatorów natychmiast kolejnych nadmiarowe katalogu. Składnik może być pusta.
+
+## <a name="remove_filename"></a> path::remove_filename —
+
+Usuwa nazwę pliku.
 
 ```cpp
 path& remove_filename();
 ```
 
-## <a name="pathreplaceextension"></a>path::replace_extension
+## <a name="replace_extension"></a> path::replace_extension —
+
+Zastępuje rozszerzenie `myname`. 
 
 ```cpp
 path& replace_extension(const path& newext = path());
 ```
 
-Funkcja członkowska najpierw usuwa extension().native() sufiks mójużytkownik. Jeśli następnie! newext.empty() & & newext [0]! = kropka (gdzie jest kropka * path("."). c_str()), a następnie kropka jest dołączany do mójużytkownik. Następnie newext jest dołączany do mójużytkownik.
+### <a name="parameters"></a>Parametry
 
-## <a name="pathreplacefilename"></a>path::replace_filename
+*newext*<br/>
+Nowe rozszerzenie.
+
+### <a name="remarks"></a>Uwagi
+
+Najpierw Usuwa sufiks `extension().native()` z `myname`. A w przypadku `!newext.empty() && newext[0] != dot` (gdzie `dot` jest `*path(".").c_str()`), następnie `dot` jest dołączany do `myname`. Następnie `newext` jest dołączany do `myname`.
+
+## <a name="replace_filename"></a> path::replace_filename —
+
+Zastępuje nazwę pliku.
 
 ```cpp
 path& replace_filename(const path& pval);
 ```
 
-Funkcja członkowska wykonuje:
+### <a name="parameters"></a>Parametry
+
+*pval*<br/>
+Ścieżka do pliku.
+
+### <a name="remarks"></a>Uwagi
+
+Funkcja elementu członkowskiego wykonuje:
 
 ```cpp
 remove_filename();
@@ -484,39 +713,57 @@ remove_filename();
 return (*this);
 ```
 
-## <a name="pathrootdirectory"></a>path::root_directory
+## <a name="root_directory"></a> path::root_directory —
+
+Zwraca składnik katalogu głównego `myname`. 
 
 ```cpp
 path root_directory() const;
 ```
 
-Zwraca składnik katalogu głównego mójużytkownik. Składnik może być pusta.
+### <a name="remarks"></a>Uwagi
 
-## <a name="pathrootname"></a>path::root_name
+Składnik może być pusta.
+
+## <a name="root_name"></a> path::root_name —
+
+Zwraca składnik nazwy głównej `myname`. 
 
 ```cpp
 path root_name() const;
 ```
 
-Zwraca składnik nazwy głównej mójużytkownik. Składnik może być pusta.
+### <a name="remarks"></a>Uwagi
 
-## <a name="pathrootpath"></a>path::root_path
+Składnik może być pusta.
+
+## <a name="root_path"></a> path::root_path —
+
+Zwraca składnik ścieżki katalogu głównego `myname`.
 
 ```cpp
 path root_path() const;
 ```
 
-Zwraca część ścieżki katalogu głównego mójużytkownik, w szczególności root_name() / root_directory. Składnik może być pusta.
+### <a name="remarks"></a>Uwagi
 
-## <a name="pathstem"></a>path::stem
+Zwraca składnik ścieżki katalogu głównego `myname`, w szczególności root_name() / root_directory. Składnik może być pusta.
+
+## <a name="stem"></a> path::stem —
+
+Zwraca `stem` składnika `myname`.
 
 ```cpp
 path stem() const;
 ```
 
-Zwraca składnik stem mójużytkownik, w szczególności filename().native() z wszelkich końcowych extension().native() usunięte. Składnik może być pusta.
+### <a name="remarks"></a>Uwagi
 
-## <a name="pathstring"></a>path::String
+Zwraca `stem` składnika `myname`, konkretnie `filename().native()` wszelkie spacją `extension().native()` usunięte. Składnik może być pusta.
+
+## <a name="string"></a> path::String
+
+Konwertuje sekwencję przechowywane w `mypath`.
 
 ```cpp
 template \<class Elem, class Traits = char_traits\<Elem>, class Alloc = allocator\<Elem>>
@@ -524,59 +771,63 @@ basic_string\<Elem, Traits, Alloc> string(const Alloc& al = Alloc()) const;
 string string() const;
 ```
 
-Pierwszy funkcji członkowskiej (szablonu) konwertuje sekwencji przechowywane w mypath taki sam sposób jak:
+### <a name="remarks"></a>Uwagi
 
-1. String() ciągu\<char, cech, alokacji >)
+Pierwsza funkcja elementu członkowskiego (szablon) konwertuje sekwencję przechowywane w mypath w taki sam sposób jak:
 
-1. wstring() ciągu\<wchar_t cech, alokacji >)
+1. `string()` Aby uzyskać `string<char, Traits, Alloc>()`
 
-1. u16string() ciągu\<char16_t, cech, alokacji >)
+1. `wstring()` Aby uzyskać `string<wchar_t, Traits, Alloc>()`
 
-1. u32string() ciągu\<char32_t, cech, alokacji >)
+1. `u16string()` Aby uzyskać `string<char16_t, Traits, Alloc>()`
 
-Drugi funkcji członkowskiej konwertuje sekwencji przechowywane w mypath kodowanie ich drużyna jest faworytem systemu hosta sekwencji znaku i zwraca wartość ona przechowywana w obiekcie typu String.
+1. `u32string()` Aby uzyskać `string<char32_t, Traits, Alloc>()`
 
-## <a name="pathstringtype"></a>path::STRING_TYPE
+Funkcja drugiego członka konwertuje sekwencję przechowywane w `mypath` kodowanie faworytem przez system hosta do sekwencji znaków i zwraca ona przechowywana w obiekcie typu String.
+
+## <a name="string_type"></a> path::STRING_TYPE
+
+Typ jest synonimem dla `basic_string<value_type>`.
 
 ```cpp
 typedef basic_string<value_type> string_type;
 ```
 
-Typ jest synonimem basic_string — < value_type >.
+## <a name="swap"></a> path::swap —
 
-## <a name="pathswap"></a>path::swap
+Wykonuje `swap(mypath, right.mypath)`.
 
 ```cpp
 void swap(path& right) noexcept;
 ```
 
-Wykonuje swap (mypath, right.mypath).
+## <a name="u16string"></a> path::u16string
 
-## <a name="pathu16string"></a>path::u16string
+Konwertuje sekwencję przechowywane w `mypath` UTF-16 i zwraca ona przechowywana w obiekcie typu `u16string`.
 
 ```cpp
 u16string u16string() const;
 ```
 
-Funkcja członkowska konwertuje sekwencji przechowywane w mypath UTF-16 i zwróci ona przechowywana w obiekcie u16string typu.
+## <a name="u32string"></a> path::u32string
 
-## <a name="pathu32string"></a>path::u32string
+Konwertuje sekwencję przechowywane w `mypath` UTF-32 i zwraca ona przechowywana w obiekcie typu `u32string`.
 
 ```cpp
 u32string u32string() const;
 ```
 
-Funkcja członkowska konwertuje sekwencji przechowywane w mypath UTF-32 i zwróci ona przechowywana w obiekcie u32string typu.
+## <a name="u8string"></a> path::u8string
 
-## <a name="pathu8string"></a>path::u8string
+Konwertuje sekwencję przechowywane w `mypath` UTF-8 i zwraca ona przechowywana w obiekcie typu `u8string`.
 
 ```cpp
 string u8string() const;
 ```
 
-Funkcja członkowska konwertuje przechowywanych w mypath UTF-8 kolejność i zwraca wartość ona przechowywana w obiekcie u8string typu.
+## <a name="value_type"></a> path::value_type
 
-## <a name="pathvaluetype"></a>path::value_type
+Typ opisuje elementów ścieżki faworytem przez system operacyjny hosta.
 
 ```cpp
 #if _WIN32_C_LIB
@@ -586,21 +837,13 @@ typedef char value_type;
 #endif // filesystem model now defined
 ```
 
-Typ w tym artykule opisano elementy ścieżki ich drużyna jest faworytem systemu operacyjnego hosta.
+## <a name="wstring"></a> path::wstring
 
-## <a name="pathwstring"></a>path::wstring
+Konwertuje sekwencję przechowywane w `mypath` faworytem przez system hosta do kodowania `wchar_t` sekwencji i zwraca ona przechowywana w obiekcie typu `wstring`.
 
 ```cpp
 wstring wstring() const;
 ```
-
-Konwertuje sekwencji przechowywane w mypath kodowanie ich drużyna jest faworytem systemu hosta sekwencji wchar_t i zwróci ona przechowywana w obiekcie wstring typu.
-
-## <a name="requirements"></a>Wymagania
-
-**Nagłówek:** \<filesystem >
-
-**Namespace:** std::experimental::filesystem
 
 ## <a name="see-also"></a>Zobacz także
 

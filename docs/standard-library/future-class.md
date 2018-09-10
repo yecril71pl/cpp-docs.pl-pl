@@ -30,12 +30,12 @@ helpviewer_keywords:
 - std::future [C++], wait_until
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 77b3c96d2c579b9fa3081ad7223ac254a727a88b
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: e55f5d9759de0993f0202612e237bb778a195602
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38956641"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44106655"
 ---
 # <a name="future-class"></a>future — Klasa
 
@@ -94,7 +94,8 @@ future(future&& Other) noexcept;
 
 ### <a name="parameters"></a>Parametry
 
-*Inne* A `future` obiektu.
+*Inne*<br/>
+Element `future` obiektu.
 
 ### <a name="remarks"></a>Uwagi
 
@@ -134,7 +135,8 @@ future& operator=(future&& Right) noexcept;
 
 ### <a name="parameters"></a>Parametry
 
-*Po prawej stronie* A `future` obiektu.
+*po prawej stronie*<br/>
+Element `future` obiektu.
 
 ### <a name="return-value"></a>Wartość zwracana
 
@@ -191,7 +193,8 @@ future_status wait_for(const chrono::duration<Rep, Period>& Rel_time) const;
 
 ### <a name="parameters"></a>Parametry
 
-*Rel_time* A [chrono::duration](../standard-library/duration-class.md) obiekt, który określa przedział czasu maksymalna, która blokuje wątek.
+*Rel_time*<br/>
+A [chrono::duration](../standard-library/duration-class.md) obiekt, który określa przedział czasu maksymalna, która blokuje wątek.
 
 ### <a name="return-value"></a>Wartość zwracana
 
@@ -212,7 +215,8 @@ future_status wait_until(const chrono::time_point<Clock, Duration>& Abs_time) co
 
 ### <a name="parameters"></a>Parametry
 
-*Abs_time* A [chrono::time_point](../standard-library/time-point-class.md) obiektu, który określa czas, po którym można odblokować wątku.
+*Abs_time*<br/>
+A [chrono::time_point](../standard-library/time-point-class.md) obiektu, który określa czas, po którym można odblokować wątku.
 
 ### <a name="return-value"></a>Wartość zwracana
 

@@ -41,12 +41,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9192f52b35ec50c7acb1672e03ea248d140c7f71
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: 999b4bcee00c633184795e22865bc5c75ee64846
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38957525"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44109878"
 ---
 # <a name="sharedptr-class"></a>shared_ptr — Klasa
 
@@ -351,9 +351,11 @@ shared_ptr& operator=(unique_ptr<Other, Deletor>&& ap);
 
 ### <a name="parameters"></a>Parametry
 
-*SP* wspólny wskaźnik do skopiowania.
+*SP*<br/>
+Wspólny wskaźnik do skopiowania.
 
-*wschodni Region Azji i* wskaźnik auto, aby skopiować.
+*wschodni Region Azji i*<br/>
+Wskaźnik auto do skopiowania.
 
 ### <a name="remarks"></a>Uwagi
 
@@ -441,7 +443,8 @@ bool owner_before(const weak_ptr<Other>& ptr);
 
 ### <a name="parameters"></a>Parametry
 
-*PTR* `lvalue` odwołanie do albo `shared_ptr` lub `weak_ptr`.
+*ptr*<br/>
+`lvalue` Odwołanie do albo `shared_ptr` lub `weak_ptr`.
 
 ### <a name="remarks"></a>Uwagi
 
@@ -466,17 +469,23 @@ void reset(Other *ptr, D dtor, A alloc);
 
 ### <a name="parameters"></a>Parametry
 
-*Inne* typ kontrolowany przez wskaźnik argumentu.
+*Inne*<br/>
+Typ kontrolowany przez wskaźnik argumentu.
 
-*D* typ deletera.
+*D*<br/>
+Typ deletera.
 
-*PTR* wskaźnik do skopiowania.
+*ptr*<br/>
+Wskaźnik do skopiowania.
 
-*dtor* deleter do skopiowania.
+*dtor*<br/>
+Deleter do skopiowania.
 
-*A* typ alokatora.
+*A*<br/>
+Typ alokatora.
 
-*ALLOC* alokatora do skopiowania.
+*Alokacji*<br/>
+Alokator do skopiowania.
 
 ### <a name="remarks"></a>Uwagi
 
@@ -581,23 +590,32 @@ shared_ptr(const unique_ptr<Other, D>& up) = delete;
 
 ### <a name="parameters"></a>Parametry
 
-*Inne* typ kontrolowany przez wskaźnik argumentu.
+*Inne*<br/>
+Typ kontrolowany przez wskaźnik argumentu.
 
-*PTR* wskaźnik do skopiowania.
+*ptr*<br/>
+Wskaźnik do skopiowania.
 
-*D* typ deletera.
+*D*<br/>
+Typ deletera.
 
-*A* typ alokatora.
+*A*<br/>
+Typ alokatora.
 
-*dtor* deleter.
+*dtor*<br/>
+Deleter.
 
-*aż operator* alokator.
+*aż operator*<br/>
+Alokator.
 
-*SP* inteligentny wskaźnik do skopiowania.
+*SP*<br/>
+Inteligentny wskaźnik do skopiowania.
 
-*WP* słaby wskaźnik.
+*WP*<br/>
+Słaby wskaźnik.
 
-*wschodni Region Azji i* wskaźnik auto, aby skopiować.
+*wschodni Region Azji i*<br/>
+Wskaźnik auto do skopiowania.
 
 ### <a name="remarks"></a>Uwagi
 
@@ -722,7 +740,8 @@ void swap(shared_ptr& sp);
 
 ### <a name="parameters"></a>Parametry
 
-*SP* wspólny wskaźnik do wymiany.
+*SP*<br/>
+Wspólny wskaźnik do wymiany.
 
 ### <a name="remarks"></a>Uwagi
 

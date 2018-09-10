@@ -36,12 +36,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 875df2d76f10b1d8319df0e82541ddf73e9d8c2c
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: 2c2b4c93604a95b4c2d73c69a834ab6724bd9193
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38963540"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44103948"
 ---
 # <a name="piecewiseconstantdistribution-class"></a>piecewise_constant_distribution — Klasa
 
@@ -90,7 +90,8 @@ public:
 
 ### <a name="parameters"></a>Parametry
 
-*RealType* zmiennoprzecinkowy typu wyniku, wartość domyślna to **double**. Aby możliwych typów, zobacz [ \<losowy >](../standard-library/random.md).
+*RealType*<br/>
+Zmiennoprzecinkowy typu wyniku, wartość domyślna to **double**. Aby możliwych typów, zobacz [ \<losowy >](../standard-library/random.md).
 
 ## <a name="remarks"></a>Uwagi
 
@@ -258,23 +259,32 @@ explicit piecewise_constant_distribution(const param_type& parm);
 
 ### <a name="parameters"></a>Parametry
 
-*firstI* iterator danych wejściowych do pierwszego elementu w zakresie dystrybucji.
+*firstI*<br/>
+Iterator danych wejściowych do pierwszego elementu w zakresie dystrybucji.
 
-*lastI* iterator danych wejściowych do ostatniego elementu w zakresie dystrybucji.
+*lastI*<br/>
+Iterator danych wejściowych do ostatniego elementu w zakresie dystrybucji.
 
-*firstW* iterator danych wejściowych do pierwszego elementu w zakresie wagi.
+*firstW*<br/>
+Iterator danych wejściowych do pierwszego elementu w zakresie wagi.
 
-*interwały* [initializer_list](../cpp/initializers.md) z interwałami dystrybucji.
+*intervals*<br/>
+[Initializer_list](../cpp/initializers.md) z interwałami dystrybucji.
 
-*Liczba* liczbę elementów w zakresie dystrybucji.
+*Liczba*<br/>
+Liczba elementów w zakresie dystrybucji.
 
-*Wartości xMin* najniższej wartości w zakresie dystrybucji.
+*xmin*<br/>
+Najniższa wartość z zakresu dystrybucji.
 
-*xMax* najwyższą wartość w zakresie dystrybucji. Musi być większa niż *wartości xmin*.
+*xmax*<br/>
+Najwyższą wartość w zakresie dystrybucji. Musi być większa niż *wartości xmin*.
 
-*weightfunc* obiekt reprezentujący prawdopodobieństwa rozkładu. Zarówno parametr i wartość zwracana wartość musi być konwertowany na **double**.
+*weightfunc*<br/>
+Obiekt reprezentujący prawdopodobieństwa rozkładu. Zarówno parametr i wartość zwracana wartość musi być konwertowany na **double**.
 
-*Parametr* struktury parametr, używane do konstruowania dystrybucji.
+*parm*<br/>
+Struktura parametr, używane do konstruowania dystrybucji.
 
 ### <a name="remarks"></a>Uwagi
 

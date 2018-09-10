@@ -38,12 +38,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8a2b776fb155d8927b610de38bdd79370f4c0803
-ms.sourcegitcommit: 7eadb968405bcb92ffa505e3ad8ac73483e59685
+ms.openlocfilehash: 5c93f32a7684d32cba0d2822571bd138f9206f46
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/23/2018
-ms.locfileid: "39208653"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44107416"
 ---
 # <a name="ltfunctionalgt-functions"></a>&lt;funkcjonalności&gt; funkcji
 
@@ -70,13 +70,17 @@ unspecified bind(Fty fn, T1 t1, T2 t2, ..., TN tN);
 
 ### <a name="parameters"></a>Parametry
 
-*Fty* typ obiektu do wywołania.
+*Fty*<br/>
+Typ obiektu do wywołania.
 
-*TN* typ argumentu n-tego wywołania.
+*TN*<br/>
+Typ n-tej wywołać argument.
 
-*FN* obiekt do wywołania.
+*FN*<br/>
+Obiekt do wywołania.
 
-*tN* n-ty argument wywołania.
+*TN*<br/>
+Wywołanie n-ty argument.
 
 ### <a name="remarks"></a>Uwagi
 
@@ -165,9 +169,11 @@ binder1st <Operation> bind1st (const Operation& func, const Type& left);
 
 ### <a name="parameters"></a>Parametry
 
-*FUNC* obiektu binarnego funkcja do konwersji na obiekt funkcyjny jednoargumentowy.
+*FUNC*<br/>
+Obiekt binarny funkcji do konwersji na obiekt funkcyjny jednoargumentowy.
 
-*po lewej stronie* wartości, do którego ma zostać powiązany pierwszy argument obiektu binarnego funkcji.
+*left*<br/>
+Wartość, do którego ma zostać powiązany pierwszy argument obiektu binarnego funkcji.
 
 ### <a name="return-value"></a>Wartość zwracana
 
@@ -257,9 +263,11 @@ binder2nd <Operation> bind2nd(const Operation& func, const Type& right);
 
 ### <a name="parameters"></a>Parametry
 
-*FUNC* obiektu binarnego funkcja do konwersji na obiekt funkcyjny jednoargumentowy.
+*FUNC*<br/>
+Obiekt binarny funkcji do konwersji na obiekt funkcyjny jednoargumentowy.
 
-*prawy* wartości, do którego ma zostać powiązany drugi argument obiektu binarnego funkcji.
+*right*<br/>
+Wartość, do którego ma zostać powiązany drugi argument obiektu binarnego funkcji.
 
 ### <a name="return-value"></a>Wartość zwracana
 
@@ -348,7 +356,7 @@ struct bit_and : public binary_function<Type, Type, Type> {
     Type operator()(
     const Type& Left,
     const Type& Right) const;
- };
+};
 
 // specialized transparent functor for operator&
 template <>
@@ -364,9 +372,11 @@ struct bit_and<void>
 
 *Typ*, *T*, *U* dowolnego typu, który obsługuje `operator&` przyjmującej argumentów operacji typu określonego lub wywnioskowane uprawnienie.
 
-*Po lewej stronie* lewy operand operacja bitowa AND. Szablon Niewyspecjalizowana przyjmuje argument odwołania l-wartości typu *typu*. Wyspecjalizowane szablonu doskonała przekazywania l-wartością i argumenty odwołania rvalue wywnioskować typu *T*.
+*po lewej stronie*<br/>
+Lewy operand operacja bitowa AND. Szablon Niewyspecjalizowana przyjmuje argument odwołania l-wartości typu *typu*. Wyspecjalizowane szablonu doskonała przekazywania l-wartością i argumenty odwołania rvalue wywnioskować typu *T*.
 
-*Po prawej stronie* prawy operand operacja bitowa AND. Szablon Niewyspecjalizowana przyjmuje argument odwołania l-wartości typu *typu*. Wyspecjalizowane szablonu doskonała przekazywania l-wartością i argumenty odwołania rvalue wywnioskować typu *U*.
+*po prawej stronie*<br/>
+Prawy operand operacja bitowa AND. Szablon Niewyspecjalizowana przyjmuje argument odwołania l-wartości typu *typu*. Wyspecjalizowane szablonu doskonała przekazywania l-wartością i argumenty odwołania rvalue wywnioskować typu *U*.
 
 ### <a name="return-value"></a>Wartość zwracana
 
@@ -383,24 +393,26 @@ Obiekt wstępnie zdefiniowana funkcja, który wykonuje bitowe uzupełnienie (nie
 ```cpp
 template <class Type = void>
 struct bit_not : public unary_function<Type, Type>
- {
+{
     Type operator()(const Type& Right) const;
- };
+};
 
 // specialized transparent functor for operator~
 template <>
 struct bit_not<void>
- {
+{
     template <class Type>
     auto operator()(Type&& Right) const  ->  decltype(~std::forward<Type>(Right));
- };
+};
 ```
 
 ### <a name="parameters"></a>Parametry
 
-*Typ* typu, który obsługuje jednoargumentowy `operator~`.
+*Typ*<br/>
+Typ, który obsługuje jednoargumentowy `operator~`.
 
-*Po prawej stronie* argument operacji dopełnienia bitowego. Szablon Niewyspecjalizowana przyjmuje argument odwołania l-wartości typu *typu*. Szablon wyspecjalizowane doskonała przekazywania argumentu odwołanie lvalue lub rvalue typu wywnioskowanego *typu*.
+*po prawej stronie*<br/>
+Argument operacji dopełnienia bitowego. Szablon Niewyspecjalizowana przyjmuje argument odwołania l-wartości typu *typu*. Szablon wyspecjalizowane doskonała przekazywania argumentu odwołanie lvalue lub rvalue typu wywnioskowanego *typu*.
 
 ### <a name="return-value"></a>Wartość zwracana
 
@@ -420,7 +432,7 @@ struct bit_or : public binary_function<Type, Type, Type> {
     Type operator()(
     const Type& Left,
     const Type& Right) const;
- };
+};
 
 // specialized transparent functor for operator|
 template <>
@@ -436,9 +448,11 @@ struct bit_or<void>
 
 *Typ*, *T*, *U* dowolnego typu, który obsługuje `operator|` przyjmującej argumentów operacji typu określonego lub wywnioskowane uprawnienie.
 
-*Po lewej stronie* lewy operand operacji bitowej OR. Szablon Niewyspecjalizowana przyjmuje argument odwołania l-wartości typu *typu*. Wyspecjalizowane szablonu doskonała przekazywania l-wartością i argumenty odwołania rvalue wywnioskować typu *T*.
+*po lewej stronie*<br/>
+Lewy operand operacji bitowej OR. Szablon Niewyspecjalizowana przyjmuje argument odwołania l-wartości typu *typu*. Wyspecjalizowane szablonu doskonała przekazywania l-wartością i argumenty odwołania rvalue wywnioskować typu *T*.
 
-*Po prawej stronie* prawy operand operacji bitowej OR. Szablon Niewyspecjalizowana przyjmuje argument odwołania l-wartości typu *typu*. Wyspecjalizowane szablonu doskonała przekazywania l-wartością i argumenty odwołania rvalue wywnioskować typu *U*.
+*po prawej stronie*<br/>
+Prawy operand operacji bitowej OR. Szablon Niewyspecjalizowana przyjmuje argument odwołania l-wartości typu *typu*. Wyspecjalizowane szablonu doskonała przekazywania l-wartością i argumenty odwołania rvalue wywnioskować typu *U*.
 
 ### <a name="return-value"></a>Wartość zwracana
 
@@ -458,7 +472,7 @@ struct bit_xor : public binary_function<Type, Type, Type> {
     Type operator()(
     const Type& Left,
     const Type& Right) const;
- };
+};
 
 // specialized transparent functor for operator^
 template <>
@@ -474,9 +488,11 @@ struct bit_xor<void>
 
 *Typ*, *T*, *U* dowolnego typu, który obsługuje `operator^` przyjmującej argumentów operacji typu określonego lub wywnioskowane uprawnienie.
 
-*Po lewej stronie* lewy operand operacja bitowa XOR. Szablon Niewyspecjalizowana przyjmuje argument odwołania l-wartości typu *typu*. Wyspecjalizowane szablonu doskonała przekazywania l-wartością i argumenty odwołania rvalue wywnioskować typu *T*.
+*po lewej stronie*<br/>
+Lewy operand operacja bitowa XOR. Szablon Niewyspecjalizowana przyjmuje argument odwołania l-wartości typu *typu*. Wyspecjalizowane szablonu doskonała przekazywania l-wartością i argumenty odwołania rvalue wywnioskować typu *T*.
 
-*Po prawej stronie* prawy operand operacja bitowa XOR. Szablon Niewyspecjalizowana przyjmuje argument odwołania l-wartości typu *typu*. Wyspecjalizowane szablonu doskonała przekazywania l-wartością i argumenty odwołania rvalue wywnioskować typu *U*.
+*po prawej stronie*<br/>
+Prawy operand operacja bitowa XOR. Szablon Niewyspecjalizowana przyjmuje argument odwołania l-wartości typu *typu*. Wyspecjalizowane szablonu doskonała przekazywania l-wartością i argumenty odwołania rvalue wywnioskować typu *U*.
 
 ### <a name="return-value"></a>Wartość zwracana
 
@@ -500,9 +516,11 @@ reference_wrapper<const Ty> cref(const reference_wrapper<Ty>& arg);
 
 ### <a name="parameters"></a>Parametry
 
-*Ty* typ argumentu do opakowania.
+*Ty*<br/>
+Typ argumentu do opakowania.
 
-*ARG* argument do opakowania.
+*ARG*<br/>
+Argument do opakowania.
 
 ### <a name="remarks"></a>Uwagi
 
@@ -552,9 +570,11 @@ unspecified mem_fn(Ret Ty::*pm);
 
 ### <a name="parameters"></a>Parametry
 
-*RET* zwracany typ opakowana funkcja.
+*instrukcji*<br/>
+Opakowana funkcja typ zwrotny.
 
-*Ty* typ wskaźnika funkcji elementu członkowskiego.
+*Ty*<br/>
+Typ wskaźnika funkcji elementu członkowskiego.
 
 ### <a name="remarks"></a>Uwagi
 
@@ -623,7 +643,8 @@ const_mem_fun1_t<Result, Type, Arg> mem_fun(Result (Type::* pmem)(Arg) const);
 
 ### <a name="parameters"></a>Parametry
 
-*pmem* wskaźnik do funkcji składowej klasy typu `Type` do konwersji na obiekt funkcyjny.
+*pmem*<br/>
+Wskaźnik do funkcji składowej klasy typu `Type` do konwersji na obiekt funkcyjny.
 
 ### <a name="return-value"></a>Wartość zwracana
 
@@ -709,7 +730,8 @@ const_mem_fun1_ref_t<Result, Type, Arg> mem_fun_ref(Result (T::* pmem)(Arg) cons
 
 ### <a name="parameters"></a>Parametry
 
-*pmem* wskaźnik do funkcji składowej klasy typu `Type` do konwersji na obiekt funkcyjny.
+*pmem*<br/>
+Wskaźnik do funkcji składowej klasy typu `Type` do konwersji na obiekt funkcyjny.
 
 ### <a name="return-value"></a>Wartość zwracana
 
@@ -804,7 +826,8 @@ unary_negate<UnaryPredicate> not1(const UnaryPredicate& pred);
 
 ### <a name="parameters"></a>Parametry
 
-*pred* Predykat jednoelementowy, aby być ujemna.
+*P.*<br/>
+Predykat jednoelementowy, aby być ujemna.
 
 ### <a name="return-value"></a>Wartość zwracana
 
@@ -875,7 +898,8 @@ binary_negate<BinaryPredicate> not2(const BinaryPredicate& func);
 
 ### <a name="parameters"></a>Parametry
 
-*FUNC* binarny predykat, aby być ujemna.
+*FUNC*<br/>
+Predykat binarny, aby być ujemna.
 
 ### <a name="return-value"></a>Wartość zwracana
 
@@ -953,7 +977,8 @@ pointer_to_binary_function<Arg1, Arg2, Result, Result (*)(Arg1, Arg2)> ptr_fun(R
 
 ### <a name="parameters"></a>Parametry
 
-*pfunc* wskaźnik funkcji jednoargumentowy lub binarny ma zostać przekonwertowany do potężnej funkcji.
+*pfunc*<br/>
+Jednoargumentowy lub binarny wskaźnik funkcji do konwersji na funkcję dostosowywalne.
 
 ### <a name="return-value"></a>Wartość zwracana
 
@@ -1072,11 +1097,14 @@ void swap(function<Fty>& f1, function<Fty>& f2);
 
 ### <a name="parameters"></a>Parametry
 
-*Fty* typ kontrolowany przez obiekty funkcji.
+*Fty*<br/>
+Typ kontrolowany przez obiekty funkcji.
 
-*F1* pierwszy obiekt funkcji.
+*F1*<br/>
+Pierwszy obiekt funkcyjny.
 
-*F2* drugi obiekt funkcji.
+*F2*<br/>
+Drugi obiekt funkcyjny.
 
 ### <a name="remarks"></a>Uwagi
 

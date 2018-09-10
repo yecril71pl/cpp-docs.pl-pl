@@ -18,12 +18,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ad33ff04c688ab79fa4a73234829d3e13fd1b44d
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: e37d1506fd713f90b793c6f3f9a04b39bf53f7a4
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38954238"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44100473"
 ---
 # <a name="ltmemorygt-operators"></a>&lt;Pamięć&gt; operatorów
 
@@ -56,13 +56,17 @@ bool operator!=(
 
 ### <a name="parameters"></a>Parametry
 
-*po lewej stronie* jeden z obiektów, które ma zostać przetestowana pod kątem nierówności.
+*left*<br/>
+Jednym z obiektów, które ma zostać przetestowana pod kątem nierówności.
 
-*prawy* jeden z obiektów, które ma zostać przetestowana pod kątem nierówności.
+*right*<br/>
+Jednym z obiektów, które ma zostać przetestowana pod kątem nierówności.
 
-*Ty1* typ kontrolowany przez po lewej stronie udostępnionego wskaźnika.
+*Ty1*<br/>
+Typ kontrolowany przez dzielony wskaźnik po lewej stronie.
 
-*Ty2* typ kontrolowany przez prawo udostępnionego wskaźnika.
+*Ty2*<br/>
+Typ kontrolowany przez dzielony wskaźnik prawo.
 
 ### <a name="return-value"></a>Wartość zwracana
 
@@ -154,13 +158,17 @@ bool operator==(
 
 ### <a name="parameters"></a>Parametry
 
-*po lewej stronie* jeden z obiektów, które ma zostać przetestowana pod kątem równości.
+*left*<br/>
+Jednym z obiektów, które ma zostać przetestowana pod kątem równości.
 
-*prawy* jeden z obiektów, które ma zostać przetestowana pod kątem równości.
+*right*<br/>
+Jednym z obiektów, które ma zostać przetestowana pod kątem równości.
 
-*Ty1* typ kontrolowany przez po lewej stronie udostępnionego wskaźnika.
+*Ty1*<br/>
+Typ kontrolowany przez dzielony wskaźnik po lewej stronie.
 
-*Ty2* typ kontrolowany przez prawo udostępnionego wskaźnika.
+*Ty2*<br/>
+Typ kontrolowany przez dzielony wskaźnik prawo.
 
 ### <a name="return-value"></a>Wartość zwracana
 
@@ -258,13 +266,17 @@ bool operator>=(
 
 ### <a name="parameters"></a>Parametry
 
-*po lewej stronie* jeden z obiektów, które mają być porównane.
+*left*<br/>
+Jednym z obiektów, które mają być porównane.
 
-*prawy* jeden z obiektów, które mają być porównane.
+*right*<br/>
+Jednym z obiektów, które mają być porównane.
 
-*Ty1* typ kontrolowany przez po lewej stronie udostępnionego wskaźnika.
+*Ty1*<br/>
+Typ kontrolowany przez dzielony wskaźnik po lewej stronie.
 
-*Ty2* typ kontrolowany przez prawo udostępnionego wskaźnika.
+*Ty2*<br/>
+Typ kontrolowany przez dzielony wskaźnik prawo.
 
 ### <a name="remarks"></a>Uwagi
 
@@ -288,13 +300,17 @@ bool operator<(
 
 ### <a name="parameters"></a>Parametry
 
-*po lewej stronie* jeden z obiektów, które mają być porównane.
+*left*<br/>
+Jednym z obiektów, które mają być porównane.
 
-*prawy* jeden z obiektów, które mają być porównane.
+*right*<br/>
+Jednym z obiektów, które mają być porównane.
 
-*Ty1* typ kontrolowany przez wskaźnik po lewej stronie.
+*Ty1*<br/>
+Typ kontrolowany przez wskaźnik po lewej stronie.
 
-*Ty2* typ kontrolowany przez wskaźnik prawo.
+*Ty2*<br/>
+Typ kontrolowany przez wskaźnik prawo.
 
 ## <a name="op_lt_eq"></a>  Operator&lt;=
 
@@ -314,13 +330,17 @@ bool operator<=(
 
 ### <a name="parameters"></a>Parametry
 
-*po lewej stronie* jeden z obiektów, które mają być porównane.
+*left*<br/>
+Jednym z obiektów, które mają być porównane.
 
-*prawy* jeden z obiektów, które mają być porównane.
+*right*<br/>
+Jednym z obiektów, które mają być porównane.
 
-*Ty1* typ kontrolowany przez po lewej stronie udostępnionego wskaźnika.
+*Ty1*<br/>
+Typ kontrolowany przez dzielony wskaźnik po lewej stronie.
 
-*Ty2* typ kontrolowany przez prawo udostępnionego wskaźnika.
+*Ty2*<br/>
+Typ kontrolowany przez dzielony wskaźnik prawo.
 
 ### <a name="remarks"></a>Uwagi
 
@@ -344,13 +364,17 @@ bool operator>(
 
 ### <a name="parameters"></a>Parametry
 
-*po lewej stronie* jeden z obiektów, które mają być porównane.
+*left*<br/>
+Jednym z obiektów, które mają być porównane.
 
-*prawy* jeden z obiektów, które mają być porównane.
+*right*<br/>
+Jednym z obiektów, które mają być porównane.
 
-*Ty1* typ kontrolowany przez po lewej stronie udostępnionego wskaźnika.
+*Ty1*<br/>
+Typ kontrolowany przez dzielony wskaźnik po lewej stronie.
 
-*Ty2* typ kontrolowany przez prawo udostępnionego wskaźnika.
+*Ty2*<br/>
+Typ kontrolowany przez dzielony wskaźnik prawo.
 
 ## <a name="op_lt_lt"></a>  Operator&lt;&lt;
 
@@ -364,15 +388,20 @@ std::basic_ostream<Elem, Tr>& operator<<(std::basic_ostream<Elem, Tr>& out,
 
 ### <a name="parameters"></a>Parametry
 
-*Elem* typ elementu strumienia.
+*Elem*<br/>
+Typ elementu strumienia.
 
-*TR* typ cechy elementu strumienia.
+*TR*<br/>
+Typ cechy elementu strumienia.
 
-*Ty* typ kontrolowany przez dzielony wskaźnik.
+*Ty*<br/>
+Typ kontrolowany przez dzielony wskaźnik.
 
-*limit* strumienia wyjściowego.
+*out*<br/>
+Strumień danych wyjściowych.
 
-*SP* dzielony wskaźnik.
+*SP*<br/>
+Wspólny wskaźnik.
 
 ### <a name="remarks"></a>Uwagi
 

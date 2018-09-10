@@ -26,12 +26,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: de84f708957074878fba84ebfe3db600a1b6ed86
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: 299d11ea29afa5331ef79c7947ccd2684713b29e
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38954815"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44108905"
 ---
 # <a name="moneyput-class"></a>money_put — Klasa
 
@@ -47,9 +47,11 @@ class money_put : public locale::facet;
 
 ### <a name="parameters"></a>Parametry
 
-*CharType* typ używany w programie do kodowania znaków w ustawieniach regionalnych.
+*CharType*<br/>
+Typ używany w programie do kodowania znaków w ustawieniach regionalnych.
 
-*OutputIterator* typ iteratora, do którego funkcje pieniężne put zapisują swoje dane wyjściowe.
+*OutputIterator*<br/>
+Typ iteratora, do którego funkcje pieniężne put zapisują swoje dane wyjściowe.
 
 ## <a name="remarks"></a>Uwagi
 
@@ -117,15 +119,20 @@ virtual iter_type do_put(
 
 ### <a name="parameters"></a>Parametry
 
-*Następny* iterator adresujący pierwszy element wstawiony ciągu.
+*next*<br/>
+Iterator adresujący pierwszy element wstawiony ciągu.
 
-*_Intl* wartość logiczną wskazującą typ symbolu waluty, oczekiwano w sekwencji: **true** Jeśli międzynarodowe, **false** Jeśli krajowych.
+*_Intl*<br/>
+Wartość logiczną wskazującą typ symbolu waluty, oczekiwano w sekwencji: **true** Jeśli międzynarodowe, **false** Jeśli krajowych.
 
-*_Iosbase* formatu Flaga który, gdy zestaw wskazuje, że symbol waluty jest opcjonalny; w przeciwnym razie jest wymagana
+*_Iosbase*<br/>
+Flagi formatu, który po zestaw wskazuje, że symbol waluty jest opcjonalna. w przeciwnym razie jest wymagana
 
-*_Fill* znak, który jest używany do rozdzielenia.
+*_Fill*<br/>
+Znak, który jest używany do rozdzielenia.
 
-*Val* obiekt ciągu ma zostać przekonwertowany.
+*Val*<br/>
+Obiekt ciągu ma zostać przekonwertowany.
 
 ### <a name="return-value"></a>Wartość zwracana
 
@@ -195,7 +202,8 @@ explicit money_put(size_t _Refs = 0);
 
 ### <a name="parameters"></a>Parametry
 
-*_Refs* wartość całkowitą, można określić typ zarządzania pamięci dla obiektu.
+*_Refs*<br/>
+Wartość liczby całkowitej, można określić typ zarządzania pamięci dla obiektu.
 
 ### <a name="remarks"></a>Uwagi
 
@@ -234,15 +242,20 @@ iter_type put(
 
 ### <a name="parameters"></a>Parametry
 
-*Następny* iterator adresujący pierwszy element wstawiony ciągu.
+*next*<br/>
+Iterator adresujący pierwszy element wstawiony ciągu.
 
-*_Intl* wartość logiczną wskazującą typ symbolu waluty, oczekiwano w sekwencji: **true** Jeśli międzynarodowe, **false** Jeśli krajowych.
+*_Intl*<br/>
+Wartość logiczną wskazującą typ symbolu waluty, oczekiwano w sekwencji: **true** Jeśli międzynarodowe, **false** Jeśli krajowych.
 
-*_Iosbase* formatu Flaga który, gdy zestaw wskazuje, że symbol waluty jest opcjonalny; w przeciwnym razie jest wymagana
+*_Iosbase*<br/>
+Flagi formatu, który po zestaw wskazuje, że symbol waluty jest opcjonalna. w przeciwnym razie jest wymagana
 
-*_Fill* znak, który jest używany do rozdzielenia.
+*_Fill*<br/>
+Znak, który jest używany do rozdzielenia.
 
-*Val* obiekt ciągu ma zostać przekonwertowany.
+*Val*<br/>
+Obiekt ciągu ma zostać przekonwertowany.
 
 ### <a name="return-value"></a>Wartość zwracana
 

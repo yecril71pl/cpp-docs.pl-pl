@@ -104,12 +104,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6bacb90052b46b687349e9069fd7c47f825f0221
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 6bc4fa8da5d9fa2d15febc3c7b016622e614129a
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43202795"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44100966"
 ---
 # <a name="basicstreambuf-class"></a>basic_streambuf — Klasa
 
@@ -124,9 +124,11 @@ class basic_streambuf;
 
 ### <a name="parameters"></a>Parametry
 
-*Elem* A [char_type](#char_type).
+*Elem*<br/>
+A [char_type](#char_type).
 
-*TR* znak [traits_type](#traits_type).
+*TR*<br/>
+Znak [traits_type](#traits_type).
 
 ## <a name="remarks"></a>Uwagi
 
@@ -250,7 +252,8 @@ basic_streambuf(const basic_streambuf& right);
 
 ### <a name="parameters"></a>Parametry
 
-*prawy* odwołania wartościowanego lewostronnie do `basic_streambuf` obiekt, który służy do ustawiania wartości dla tego `basic_streambuf` obiektu.
+*right*<br/>
+Odwołania wartościowanego lewostronnie do `basic_streambuf` obiekt, który służy do ustawiania wartości dla tego `basic_streambuf` obiektu.
 
 ### <a name="remarks"></a>Uwagi
 
@@ -312,7 +315,8 @@ void gbump(int count);
 
 ### <a name="parameters"></a>Parametry
 
-*Liczba* wartość, o którą pomocnych wskaźnika.
+*Liczba*<br/>
+Kwota za pomocą którego pomocnych wskaźnika.
 
 ## <a name="getloc"></a>  basic_streambuf::getloc
 
@@ -370,7 +374,8 @@ virtual void imbue(const locale& _Loc);
 
 ### <a name="parameters"></a>Parametry
 
-*_Loc* odwołanie do ustawienia regionalne.
+*_Loc*<br/>
+Odwołanie do ustawienia regionalne.
 
 ### <a name="remarks"></a>Uwagi
 
@@ -436,7 +441,8 @@ basic_streambuf& operator=(const basic_streambuf& right);
 
 ### <a name="parameters"></a>Parametry
 
-*prawy* odwołania wartościowanego lewostronnie do `basic_streambuf` obiekt, który jest używany do przypisywania wartości do tego obiektu.
+*right*<br/>
+Odwołania wartościowanego lewostronnie do `basic_streambuf` obiekt, który jest używany do przypisywania wartości do tego obiektu.
 
 ### <a name="remarks"></a>Uwagi
 
@@ -452,7 +458,8 @@ virtual int_type overflow(int_type _Meta = traits_type::eof());
 
 ### <a name="parameters"></a>Parametry
 
-*_Meta* znak wstawiania do bufora, lub **traits_type::**[eof](../standard-library/char-traits-struct.md#eof).
+*_Meta*<br/>
+Znak do wstawienia do określonego bufora lub **traits_type::**[eof](../standard-library/char-traits-struct.md#eof).
 
 ### <a name="return-value"></a>Wartość zwracana
 
@@ -486,7 +493,8 @@ virtual int_type pbackfail(int_type _Meta = traits_type::eof());
 
 ### <a name="parameters"></a>Parametry
 
-*_Meta* znak wstawiania do bufora, lub **traits_type::**[eof](../standard-library/char-traits-struct.md#eof).
+*_Meta*<br/>
+Znak do wstawienia do określonego bufora lub **traits_type::**[eof](../standard-library/char-traits-struct.md#eof).
 
 ### <a name="return-value"></a>Wartość zwracana
 
@@ -524,7 +532,8 @@ void pbump(int count);
 
 ### <a name="parameters"></a>Parametry
 
-*Liczba* liczbę znaków, według którego ma zostać przeniesiona zapisu pozycji do przodu.
+*Liczba*<br/>
+Liczba znaków, w ramach którego ma zostać przeniesiona do przodu pozycji zapisu.
 
 ## <a name="pos_type"></a>  basic_streambuf::pos_type
 
@@ -556,7 +565,8 @@ locale pubimbue(const locale& _Loc);
 
 ### <a name="parameters"></a>Parametry
 
-*_Loc* odwołanie do ustawienia regionalne.
+*_Loc*<br/>
+Odwołanie do ustawienia regionalne.
 
 ### <a name="return-value"></a>Wartość zwracana
 
@@ -582,11 +592,14 @@ pos_type pubseekoff(off_type _Off,
 
 ### <a name="parameters"></a>Parametry
 
-*_Off* położenie do wyszukania dla względem *_Way*.
+*_Off*<br/>
+Położenie do wyszukania dla względem *_Way*.
 
-*_Way* punkt początkowy dla operacji przesunięcia. Zobacz [seekdir](../standard-library/ios-base-class.md#seekdir) uzyskać odpowiednie wartości.
+*_Way*<br/>
+Punkt początkowy dla operacji przesunięcia. Zobacz [seekdir](../standard-library/ios-base-class.md#seekdir) uzyskać odpowiednie wartości.
 
-*_Which* Określa tryb pozycję wskaźnika. Wartość domyślna to umożliwia modyfikowanie, Odczyt i zapis pozycji.
+*_Which*<br/>
+Określa tryb pozycję wskaźnika. Wartość domyślna to umożliwia modyfikowanie, Odczyt i zapis pozycji.
 
 ### <a name="return-value"></a>Wartość zwracana
 
@@ -606,9 +619,11 @@ pos_type pubseekpos(pos_type _Sp, ios_base::openmode _Which = ios_base::in | ios
 
 ### <a name="parameters"></a>Parametry
 
-*_Sp* położenie do wyszukania dla.
+*_Sp*<br/>
+Położenie do wyszukania dla.
 
-*_Which* Określa tryb pozycję wskaźnika. Wartość domyślna to umożliwia modyfikowanie, Odczyt i zapis pozycji.
+*_Which*<br/>
+Określa tryb pozycję wskaźnika. Wartość domyślna to umożliwia modyfikowanie, Odczyt i zapis pozycji.
 
 ### <a name="return-value"></a>Wartość zwracana
 
@@ -630,9 +645,11 @@ basic_streambuf<Elem, Tr> *pubsetbuf(
 
 ### <a name="parameters"></a>Parametry
 
-*Właściwość _Buffer* wskaźnik do `char_type` dla tego wystąpienia.
+*Właściwość _Buffer*<br/>
+Wskaźnik do `char_type` dla tego wystąpienia.
 
-*Liczba* rozmiar buforu.
+*Liczba*<br/>
+Rozmiar buforu.
 
 ### <a name="return-value"></a>Wartość zwracana
 
@@ -707,11 +724,14 @@ virtual pos_type seekoff(
 
 ### <a name="parameters"></a>Parametry
 
-*_Off* położenie do wyszukania dla względem *_Way*.
+*_Off*<br/>
+Położenie do wyszukania dla względem *_Way*.
 
-*_Way* punkt początkowy dla operacji przesunięcia. Zobacz [seekdir](../standard-library/ios-base-class.md#seekdir) uzyskać odpowiednie wartości.
+*_Way*<br/>
+Punkt początkowy dla operacji przesunięcia. Zobacz [seekdir](../standard-library/ios-base-class.md#seekdir) uzyskać odpowiednie wartości.
 
-*_Which* Określa tryb pozycję wskaźnika. Wartość domyślna to umożliwia modyfikowanie, Odczyt i zapis pozycji.
+*_Which*<br/>
+Określa tryb pozycję wskaźnika. Wartość domyślna to umożliwia modyfikowanie, Odczyt i zapis pozycji.
 
 ### <a name="return-value"></a>Wartość zwracana
 
@@ -741,9 +761,11 @@ virtual pos_type seekpos(pos_type _Sp, ios_base::openmode _Which = ios_base::in 
 
 ### <a name="parameters"></a>Parametry
 
-*_Sp* położenie do wyszukania dla.
+*_Sp*<br/>
+Położenie do wyszukania dla.
 
-*_Which* Określa tryb pozycję wskaźnika. Wartość domyślna to umożliwia modyfikowanie, Odczyt i zapis pozycji.
+*_Which*<br/>
+Określa tryb pozycję wskaźnika. Wartość domyślna to umożliwia modyfikowanie, Odczyt i zapis pozycji.
 
 ### <a name="return-value"></a>Wartość zwracana
 
@@ -769,9 +791,11 @@ virtual basic_streambuf<Elem, Tr> *setbuf(
 
 ### <a name="parameters"></a>Parametry
 
-*Właściwość _Buffer* wskaźnik do buforu.
+*Właściwość _Buffer*<br/>
+Wskaźnik do buforu.
 
-*Liczba* rozmiar buforu.
+*Liczba*<br/>
+Rozmiar buforu.
 
 ### <a name="return-value"></a>Wartość zwracana
 
@@ -793,11 +817,14 @@ void setg(char_type* _Gbeg,
 
 ### <a name="parameters"></a>Parametry
 
-*_Gbeg* wskaźnik do początku bufora.
+*_Gbeg*<br/>
+Wskaźnik do początku bufora.
 
-*_Gnext* wskaźnik do innej lokalizacji w środku buforu.
+*_Gnext*<br/>
+Wskaźnik do innej lokalizacji w środku buforu.
 
-*_Gend* wskaźnik na koniec buforu.
+*_Gend*<br/>
+Wskaźnik na koniec buforu.
 
 ## <a name="setp"></a>  basic_streambuf::setp
 
@@ -809,9 +836,11 @@ void setp(char_type* _Pbeg, char_type* _Pend);
 
 ### <a name="parameters"></a>Parametry
 
-*_Pbeg* wskaźnik do początku bufora.
+*_Pbeg*<br/>
+Wskaźnik do początku bufora.
 
-*_Pend* wskaźnik na koniec buforu.
+*_Pend*<br/>
+Wskaźnik na koniec buforu.
 
 ## <a name="sgetc"></a>  basic_streambuf::sgetc
 
@@ -863,9 +892,11 @@ streamsize sgetn(
 
 ### <a name="parameters"></a>Parametry
 
-*PTR* bufor do przechowywania wyodrębnione znaki.
+*ptr*<br/>
+Bufor do przechowywania wyodrębnione znaki.
 
-*Liczba* liczbę elementów do odczytu.
+*Liczba*<br/>
+Liczba elementów do odczytu.
 
 ### <a name="return-value"></a>Wartość zwracana
 
@@ -967,7 +998,8 @@ int_type sputbackc(char_type _Ch);
 
 ### <a name="parameters"></a>Parametry
 
-*_Ch* znak.
+*_Ch*<br/>
+Znak.
 
 ### <a name="return-value"></a>Wartość zwracana
 
@@ -1014,7 +1046,8 @@ int_type sputc(char_type _Ch);
 
 ### <a name="parameters"></a>Parametry
 
-*_Ch* znak.
+*_Ch*<br/>
+Znak.
 
 ### <a name="return-value"></a>Wartość zwracana
 
@@ -1056,9 +1089,11 @@ streamsize sputn(const char_type* ptr, streamsize count);
 
 ### <a name="parameters"></a>Parametry
 
-*PTR* ciąg znaków.
+*ptr*<br/>
+Ciąg znaków.
 
-*Liczba* liczba znaków.
+*Liczba*<br/>
+Liczba znaków.
 
 ### <a name="return-value"></a>Wartość zwracana
 
@@ -1281,9 +1316,11 @@ virtual streamsize xsgetn(
 
 ### <a name="parameters"></a>Parametry
 
-*PTR* bufor do przechowywania wyodrębnione znaki.
+*ptr*<br/>
+Bufor do przechowywania wyodrębnione znaki.
 
-*Liczba* liczbę elementów do wyodrębnienia.
+*Liczba*<br/>
+Liczba elementów do wyodrębnienia.
 
 ### <a name="return-value"></a>Wartość zwracana
 
@@ -1303,9 +1340,11 @@ virtual streamsize xsputn(const char_type* ptr, streamsize count);
 
 ### <a name="parameters"></a>Parametry
 
-*PTR* wskaźników do elementów do wstawienia.
+*ptr*<br/>
+Wskaźnik elementów do wstawienia.
 
-*Liczba* liczbę elementów do wstawienia.
+*Liczba*<br/>
+Liczba elementów do wstawienia.
 
 ### <a name="return-value"></a>Wartość zwracana
 

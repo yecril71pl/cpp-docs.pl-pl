@@ -126,12 +126,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3c56cdcf59c6dad891029e21e14940598e0cfeae
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 9a44cccd38d64f3e6b0c2b7af390d06292f70157
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43209087"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44105669"
 ---
 # <a name="basicstring-class"></a>basic_string — Klasa
 
@@ -146,11 +146,14 @@ class basic_string;
 
 ### <a name="parameters"></a>Parametry
 
-*CharType* typ danych pojedynczego znaku mają być przechowywane w ciągu. Standardowa biblioteka C++ zapewnia specjalizacje tej klasy szablonu, z definicjami typu [ciąg](../standard-library/string-typedefs.md#string) dla elementów typu **char**, [wstring](../standard-library/string-typedefs.md#wstring), dla **wchar_t**, [u16string](../standard-library/string-typedefs.md#u16string) dla `char16_t`, i [u32string](../standard-library/string-typedefs.md#u32string) dla `char32_t`.
+*CharType*<br/>
+Typ danych pojedynczego znaku mają być przechowywane w ciągu. Standardowa biblioteka C++ zapewnia specjalizacje tej klasy szablonu, z definicjami typu [ciąg](../standard-library/string-typedefs.md#string) dla elementów typu **char**, [wstring](../standard-library/string-typedefs.md#wstring), dla **wchar_t**, [u16string](../standard-library/string-typedefs.md#u16string) dla `char16_t`, i [u32string](../standard-library/string-typedefs.md#u32string) dla `char32_t`.
 
-*Cechy* różne ważne właściwości `CharType` elementów w specjalizacji basic_string są opisane przez klasę `Traits`. Wartość domyślna to `char_traits` <  `CharType`>.
+*Cechy*<br/>
+Różne ważne właściwości `CharType` elementów w specjalizacji basic_string są opisane przez klasę `Traits`. Wartość domyślna to `char_traits` <  `CharType`>.
 
-*Allocator* typ reprezentujący przechowywany obiekt alokatora, który hermetyzuje szczegóły dotyczące alokacji i dezalokacji pamięci ciągu. Wartość domyślna to **alokatora**< `CharType`>.
+*Allocator*<br/>
+Typ reprezentujący przechowywany obiekt alokatora, który hermetyzuje szczegóły dotyczące alokacji i dezalokacji pamięci ciągu. Wartość domyślna to **alokatora**< `CharType`>.
 
 ### <a name="constructors"></a>Konstruktorów
 
@@ -314,19 +317,26 @@ basic_string<CharType, Traits, Allocator>& append(
 
 ### <a name="parameters"></a>Parametry
 
-*PTR* C ciąg do dołączenia.
+*ptr*<br/>
+C — ciąg do dołączenia.
 
-*str* ciąg, którego znaki mają być dołączane.
+*str*<br/>
+Ciąg, którego znaki mają być dołączane.
 
-*_Off* indeks części ciąg źródłowy, podając znaków do dołączenia.
+*_Off*<br/>
+Indeks części ciąg źródłowy, podając znaków do dołączenia.
 
-*Liczba* liczbę znaków, które mają być dołączane, co najwyżej z ciągu źródłowego.
+*Liczba*<br/>
+Liczba znaków, które mają być dołączane, co najwyżej z ciągu źródłowego.
 
-*_Ch* wartość znaku do dołączenia.
+*_Ch*<br/>
+Wartość znaku do dołączenia.
 
-*pierwszy* iterator danych wejściowych odnoszący się do pierwszego elementu w zakresie do dołączenia.
+*pierwszy*<br/>
+Iterator danych wejściowych odnoszący się do pierwszego elementu w zakresie do dołączenia.
 
-*ostatni* iterator danych wejściowych, const_pointer lub const_iterator odnoszący się do pozycji jeden po ostatnim elemencie w zakresie do dołączenia.
+*ostatni*<br/>
+Iterator danych wejściowych, const_pointer lub const_iterator odnoszący się do pozycji jeden po ostatnim elemencie w zakresie do dołączenia.
 
 ### <a name="return-value"></a>Wartość zwracana
 
@@ -468,19 +478,26 @@ basic_string<CharType, Traits, Allocator>& assign(
 
 ### <a name="parameters"></a>Parametry
 
-*PTR* wskaźnik do znaków w ciągu C ma być przypisane do ciągu docelowego.
+*ptr*<br/>
+Wskaźnik do znaków w ciągu C ma być przypisane do ciągu docelowego.
 
-*Liczba* liczbę znaków, które zostaną przypisane, w ciągu źródłowego.
+*Liczba*<br/>
+Liczba znaków, które zostaną przypisane, w ciągu źródłowego.
 
-*str* ciąg źródłowy, do którego znaki mają być przypisane do ciągu docelowego.
+*str*<br/>
+Ciąg źródłowy, którego znaki mają być przypisane do ciągu docelowego.
 
-*_Ch* wartość znaku do przypisania.
+*_Ch*<br/>
+Wartość znaku do przypisania.
 
-*pierwszy* iterator danych wejściowych, const_pointer lub const_iterator adresowania pierwszego znaku w zakresie ciąg źródłowy ma być przypisane do zakresu docelowego.
+*pierwszy*<br/>
+Iterator danych wejściowych, const_pointer lub const_iterator adresowania pierwszego znaku w zakresie ciąg źródłowy ma być przypisane do zakresu docelowego.
 
-*ostatni* iterator danych wejściowych, const_pointer lub const_iterator adresowania spośród poza ostatni znak w zakresie ciąg źródłowy ma być przypisane do zakresu docelowego.
+*ostatni*<br/>
+Iterator danych wejściowych, const_pointer lub const_iterator adresowania spośród poza ostatni znak w zakresie ciąg źródłowy ma być przypisane do zakresu docelowego.
 
-*Wyłącz* pozycji jaką nowe znaki rozpocznie się do przypisania.
+*Wyłączone*<br/>
+Pozycja, jaką nowe znaki rozpocznie się do przypisania.
 
 ### <a name="return-value"></a>Wartość zwracana
 
@@ -595,7 +612,8 @@ reference at(size_type _Off);
 
 ### <a name="parameters"></a>Parametry
 
-*_Off* indeks położenie elementu można odwoływać się.
+*_Off*<br/>
+Indeks położenie elementu można odwoływać się.
 
 ### <a name="return-value"></a>Wartość zwracana
 
@@ -721,12 +739,12 @@ basic_string(
 
 template <class InputIterator>
 basic_string(
- InputIterator first,
+InputIterator first,
     InputIterator last);
 
 template <class InputIterator>
 basic_string(
- InputIterator first,
+InputIterator first,
     InputIterator last,
     const allocator_type& _Al);
 
@@ -741,21 +759,29 @@ basic_string(
 
 ### <a name="parameters"></a>Parametry
 
-*PTR* C — ciąg, którego znaki, które mają być używane do zainicjowania `string` budowany. Ta wartość nie może być wskaźnikiem typu null.
+*ptr*<br/>
+C — ciąg, którego znaki, które mają być używane do zainicjowania `string` budowany. Ta wartość nie może być wskaźnikiem typu null.
 
-*_Al* magazynu klasę alokatora dla obiektu ciągu podczas konstruowania.
+*_Al*<br/>
+Klasa alokatora pamięci masowej z obiektem ciągu podczas konstruowania.
 
-*Liczba* liczbę znaków, które mają zostać zainicjowane.
+*Liczba*<br/>
+Liczba znaków, które mają zostać zainicjowane.
 
-*prawy* ciągu do zainicjowania ciągu podczas konstruowania.
+*right*<br/>
+Ciąg do zainicjowania ciągu podczas konstruowania.
 
-*_Roff* indeks znaku w ciągu, który jest pierwszy można użyć do zainicjowania wartości znaków ciągu podczas konstruowania.
+*_Roff*<br/>
+Indeks znaków w ciągu, który jest pierwszy można użyć do zainicjowania wartości znaków ciągu podczas konstruowania.
 
-*_Ch* wartość znaku, który ma zostać skopiowana do ciągu podczas konstruowania.
+*_Ch*<br/>
+Wartość znaku, który ma zostać skopiowana do ciągu podczas konstruowania.
 
-*pierwszy* iterator danych wejściowych, const_pointer lub const_iterator adresujący pierwszy element w zakresie źródłowym, który ma zostać wstawiony.
+*pierwszy*<br/>
+Iterator danych wejściowych, const_pointer lub const_iterator adresujący pierwszy element w zakresie źródłowym, który ma zostać wstawiony.
 
-*ostatni* iterator danych wejściowych, const_pointer lub const_iterator odnoszący się do pozycji jeden po ostatnim elemencie w zakresie źródłowym, który ma zostać wstawiony.
+*ostatni*<br/>
+Iterator danych wejściowych, const_pointer lub const_iterator odnoszący się do pozycji jeden po ostatnim elemencie w zakresie źródłowym, który ma zostać wstawiony.
 
 ### <a name="return-value"></a>Wartość zwracana
 
@@ -851,7 +877,7 @@ int main( ) {
    cout << "The full original string str1 is: " << str1 << endl;
 
    // The dereferenced iterator can be used to modify a character
- *str1_Iter = 'G';
+*str1_Iter = 'G';
    cout << "The first character of the modified str1 is now: "
         << *str1_Iter << endl;
    cout << "The full modified string str1 is now: " << str1 << endl;
@@ -1148,19 +1174,26 @@ int compare(
 
 ### <a name="parameters"></a>Parametry
 
-*str* ciąg, który należy porównać ciąg argumentu.
+*str*<br/>
+Ciąg, który należy porównać ciąg argumentu.
 
-*_Pos1* indeksu ciągu argumentu operacji, od której rozpoczyna się porównania.
+*_Pos1*<br/>
+Indeks ciągu argumentu operacji, od której rozpoczyna się porównania.
 
-*_Num1* maksymalną liczbę znaków z ciągu argumentu operacji, które mają być porównane.
+*_Num1*<br/>
+Maksymalna liczba znaków z ciągu argumentu operacji, które mają być porównane.
 
-*_Num2* maksymalną liczbę znaków z ciągu parametr, który ma zostać porównane.
+*_Num2*<br/>
+Maksymalna liczba znaków z ciągu parametr, który ma zostać porównane.
 
-*_Off* indeksu ciągu parametru, od której rozpoczyna się porównania.
+*_Off*<br/>
+Indeks ciągu parametru, od której rozpoczyna się porównania.
 
-*Liczba* maksymalną liczbę znaków z ciągu parametr, który ma zostać porównane.
+*Liczba*<br/>
+Maksymalna liczba znaków z ciągu parametr, który ma zostać porównane.
 
-*PTR* C ciąg do porównania ciągu argumentu operacji.
+*ptr*<br/>
+C — ciąg do porównania ciągu argumentu operacji.
 
 ### <a name="return-value"></a>Wartość zwracana
 
@@ -1341,14 +1374,14 @@ The operand string is equal to the parameter string.
 The operand string is: AACAB
 The parameter string is: CAB
 The last three characters of the operand string
- are equal to the parameter string.
+are equal to the parameter string.
 The first three characters of the operand string
- are less than the parameter string.
+are less than the parameter string.
 
 The operand string is: AACAB
 The parameter string is: DCABD
 The three characters from position 2 of the operand string are equal to
- the 3 characters parameter string from position 1.
+the 3 characters parameter string from position 1.
 
 The operand string is: ABC
 The parameter C-string is: DEF
@@ -1357,12 +1390,12 @@ The operand string is less than the parameter C-string.
 The operand string is: AACAB
 The parameter string is: CAB
 The last three characters of the operand string
- are equal to the parameter C-string.
+are equal to the parameter C-string.
 
 The operand string is: AACAB
 The parameter C-string is: ACAB
 The 3 characters from position 2 of the operand string are equal to
- the first 3 characters of the parameter C-string.
+the first 3 characters of the parameter C-string.
 ```
 
 ## <a name="const_iterator"></a>  basic_string::const_iterator
@@ -1470,11 +1503,13 @@ size_type copy(
 
 ### <a name="parameters"></a>Parametry
 
-*PTR* docelowej tablicy znaków, do którego mają zostać skopiowane elementy.
+*ptr*<br/>
+Tablica docelowa znak, do którego mają zostać skopiowane elementy.
 
 _ *Liczba* liczba znaków do skopiowania, co najwyżej z ciągu źródłowego.
 
-*_Off* pozycję początkową w ciągu źródłowym, z którego mają zostać wprowadzone kopii.
+*_Off*<br/>
+Pozycję początkową w ciągu źródłowym, z którego mają zostać wprowadzone kopii.
 
 ### <a name="return-value"></a>Wartość zwracana
 
@@ -1573,13 +1608,16 @@ size_type _Copy_s(
 
 ### <a name="parameters"></a>Parametry
 
-*dest* docelowej tablicy znaków, do którego mają zostać skopiowane elementy.
+*dest*<br/>
+Tablica docelowa znak, do którego mają zostać skopiowane elementy.
 
-*dest_size* rozmiar *dest*.
+*dest_size*<br/>
+Rozmiar *dest*.
 
 _ *Liczba* liczba znaków do skopiowania, co najwyżej z ciągu źródłowego.
 
-*_Off* pozycję początkową w ciągu źródłowym, z którego mają zostać wprowadzone kopii.
+*_Off*<br/>
+Pozycję początkową w ciągu źródłowym, z którego mają zostać wprowadzone kopii.
 
 ### <a name="return-value"></a>Wartość zwracana
 
@@ -1847,7 +1885,7 @@ int main( )
    cout << endl;
 
    // The dereferenced iterator can be used to modify a character
- *str1_Iter = 'T';
+*str1_Iter = 'T';
    cout << "The last character-letter of the modified str1 is now: "
         << *str1_Iter << endl;
    cout << "The modified string str1 is now: " << str1 << endl;
@@ -1891,15 +1929,20 @@ basic_string<CharType, Traits, Allocator>& erase(
 
 ### <a name="parameters"></a>Parametry
 
-*pierwszy* iterator odnoszący się do pozycji pierwszego elementu w zakresie zostaną wymazane.
+*pierwszy*<br/>
+Iterator adresowania adresuje pozycję pierwszego elementu w zakresie ma zostać wymazane.
 
-*ostatni* iterator odnoszący się do pozycji jednym elementem w zakresie zostaną wymazane.
+*ostatni*<br/>
+Iterator odnoszący się do pozycji jednym elementem w zakresie ma zostać wymazane.
 
-*_It* iterator odnoszący się do pozycji elementu w ciągu zostaną wymazane.
+*_It*<br/>
+Iterator adresowania adresuje pozycję elementu w ciągu do wymazane.
 
-*_Pos* indeks pierwszego wystąpienia znaku w ciągu, który ma zostać usunięty.
+*_Pos*<br/>
+Indeks pierwszego wystąpienia znaku w ciągu, który ma zostać usunięty.
 
-*Liczba* liczbę elementów, które zostaną usunięte, jeśli istnieją dowolną liczbę z zakresu od początku ciągu z *_Pos*.
+*Liczba*<br/>
+Liczba elementów, które zostaną usunięte, jeśli istnieją dowolną liczbę z zakresu od początku ciągu z *_Pos*.
 
 ### <a name="return-value"></a>Wartość zwracana
 
@@ -1998,15 +2041,20 @@ size_type find(
 
 ### <a name="parameters"></a>Parametry
 
-*_Ch* wartość znaku, dla którego funkcja członkowska jest do wyszukiwania.
+*_Ch*<br/>
+Wartość znaku, dla którego funkcja członkowska jest do wyszukiwania.
 
-*_Off* indeksu w sytuacji, w którym ma się rozpocząć wyszukiwanie.
+*_Off*<br/>
+Indeks sytuację, w którym ma się rozpocząć wyszukiwanie.
 
-*PTR* C — ciąg, dla którego funkcja członkowska jest do wyszukiwania.
+*ptr*<br/>
+C — ciąg dla którego funkcja członkowska jest do wyszukiwania.
 
-*Liczba* liczbę znaków, licząc do przodu, od pierwszego wystąpienia znaku w ciągu języka C dla którego funkcja członkowska jest do wyszukiwania.
+*Liczba*<br/>
+Liczba znaków, licząc do przodu, od pierwszego wystąpienia znaku w ciągu języka C dla którego funkcja członkowska jest do wyszukiwania.
 
-*str* ciąg znaków, dla którego funkcja członkowska jest do wyszukiwania.
+*str*<br/>
+Ciąg, dla którego funkcja członkowska jest do wyszukiwania.
 
 ### <a name="return-value"></a>Wartość zwracana
 
@@ -2130,7 +2178,7 @@ The Character 'x' was not found in str1.
 
 The original string str2 is: Let me make this perfectly clear.
 The index of the 1st element of 'perfect' after
- the 5th position in str2 is: 17
+the 5th position in str2 is: 17
 The substring 'imperfect' was not found in str2 .
 
 The original string str3 is: This is a sample string for this program
@@ -2139,7 +2187,7 @@ The index of the next occurrence of 'for' is in str3 begins at: 24
 
 The original string str4 is: clearly this perfectly unclear.
 The index of the 1st element of 'clear' after
- the 5th position in str4 is: 25
+the 5th position in str4 is: 25
 The index of the 1st element of 'clear' in str4 is: 0
 ```
 
@@ -2171,15 +2219,20 @@ size_type find_first_not_of(
 
 ### <a name="parameters"></a>Parametry
 
-*_Ch* wartość znaku, dla którego funkcja członkowska jest do wyszukiwania.
+*_Ch*<br/>
+Wartość znaku, dla którego funkcja członkowska jest do wyszukiwania.
 
-*_Off* indeksu w sytuacji, w którym ma się rozpocząć wyszukiwanie.
+*_Off*<br/>
+Indeks sytuację, w którym ma się rozpocząć wyszukiwanie.
 
-*PTR* C — ciąg, dla którego funkcja członkowska jest do wyszukiwania.
+*ptr*<br/>
+C — ciąg dla którego funkcja członkowska jest do wyszukiwania.
 
-*Liczba* liczbę znaków, licząc do przodu, od pierwszego wystąpienia znaku w ciągu języka C dla którego funkcja członkowska jest do wyszukiwania.
+*Liczba*<br/>
+Liczba znaków, licząc do przodu, od pierwszego wystąpienia znaku w ciągu języka C dla którego funkcja członkowska jest do wyszukiwania.
 
-*str* ciąg znaków, dla którego funkcja członkowska jest do wyszukiwania.
+*str*<br/>
+Ciąg, dla którego funkcja członkowska jest do wyszukiwania.
 
 ### <a name="return-value"></a>Wartość zwracana
 
@@ -2312,21 +2365,21 @@ The index of the 'non x' found in str1 is: 1
 
 The original string str2 is: BBB-1111
 Elements of the substring 'B1' were not
- found in str2 after the 6th position.
+found in str2 after the 6th position.
 The index of the 1st element of 'B2' after
- the 0th position in str2 is: 3
+the 0th position in str2 is: 3
 
 The original string str3 is: 444-555-GGG
 The index of the 1st occurrence of an element in str3
- other than one of the characters in '45G' is: 3
+other than one of the characters in '45G' is: 3
 The index of the second occurrence of an element of '45G' in str3
- after the 0th position is: 7
+after the 0th position is: 7
 
 The original string str4 is: 12-ab-12-ab
 The index of the 1st non occurrence of an element of 'ba3' in str4 after
- the 5th position is: 5
+the 5th position is: 5
 The index of the 1st non occurrence of an element of '12' in str4 after
- the 0th position is: 2
+the 0th position is: 2
 ```
 
 ## <a name="find_first_of"></a>  basic_string::find_first_of
@@ -2357,15 +2410,20 @@ size_type find_first_of(
 
 ### <a name="parameters"></a>Parametry
 
-*_Ch* wartość znaku, dla którego funkcja członkowska jest do wyszukiwania.
+*_Ch*<br/>
+Wartość znaku, dla którego funkcja członkowska jest do wyszukiwania.
 
-*_Off* indeksu w sytuacji, w którym ma się rozpocząć wyszukiwanie.
+*_Off*<br/>
+Indeks sytuację, w którym ma się rozpocząć wyszukiwanie.
 
-*PTR* C — ciąg, dla którego funkcja członkowska jest do wyszukiwania.
+*ptr*<br/>
+C — ciąg dla którego funkcja członkowska jest do wyszukiwania.
 
-*Liczba* liczbę znaków, licząc do przodu, od pierwszego wystąpienia znaku w ciągu języka C dla którego funkcja członkowska jest do wyszukiwania.
+*Liczba*<br/>
+Liczba znaków, licząc do przodu, od pierwszego wystąpienia znaku w ciągu języka C dla którego funkcja członkowska jest do wyszukiwania.
 
-*str* ciąg znaków, dla którego funkcja członkowska jest do wyszukiwania.
+*str*<br/>
+Ciąg, dla którego funkcja członkowska jest do wyszukiwania.
 
 ### <a name="return-value"></a>Wartość zwracana
 
@@ -2497,21 +2555,21 @@ The character 'x' was not found in str1.
 
 The original string str2 is: ABCD-1234-ABCD-1234
 The index of the 1st occurrence of an element of 'B1' in str2 after
- the 6th position is: 11
+the 6th position is: 11
 The index of the 1st element of 'D2' after
- the 0th position in str2 is: 3
+the 0th position in str2 is: 3
 
 The original string str3 is: 123-abc-123-abc-456-EFG-456-EFG
 The index of the 1st occurrence of an element of '5G' in str3 after
- the 0th position is: 17
+the 0th position is: 17
 The index of the second occurrence of an element of '5G' in str3
- after the 0th position is: 22
+after the 0th position is: 22
 
 The original string str4 is: 12-ab-12-ab
 The index of the 1st occurrence of an element of 'ba3' in str4 after
- the 5th position is: 9
+the 5th position is: 9
 The index of the 1st occurrence of an element of 'a2' in str4 after
- the 0th position is: 1
+the 0th position is: 1
 ```
 
 ## <a name="find_last_not_of"></a>  basic_string::find_last_not_of
@@ -2542,15 +2600,20 @@ size_type find_last_not_of(
 
 ### <a name="parameters"></a>Parametry
 
-*_Ch* wartość znaku, dla którego funkcja członkowska jest do wyszukiwania.
+*_Ch*<br/>
+Wartość znaku, dla którego funkcja członkowska jest do wyszukiwania.
 
-*_Off* indeksu pozycji jaką wyszukiwanie jest aby zakończyć.
+*_Off*<br/>
+Indeks pozycji jaką wyszukiwanie jest aby zakończyć.
 
-*PTR* C — ciąg, dla którego funkcja członkowska jest do wyszukiwania.
+*ptr*<br/>
+C — ciąg dla którego funkcja członkowska jest do wyszukiwania.
 
-*Liczba* liczbę znaków, licząc do przodu, od pierwszego wystąpienia znaku w ciągu języka C dla którego funkcja członkowska jest do wyszukiwania.
+*Liczba*<br/>
+Liczba znaków, licząc do przodu, od pierwszego wystąpienia znaku w ciągu języka C dla którego funkcja członkowska jest do wyszukiwania.
 
-*str* ciąg znaków, dla którego funkcja członkowska jest do wyszukiwania.
+*str*<br/>
+Ciąg, dla którego funkcja członkowska jest do wyszukiwania.
 
 ### <a name="return-value"></a>Wartość zwracana
 
@@ -2680,25 +2743,25 @@ int main( )
 ```Output
 The original string str1 is: dddd-1dd4-abdd
 The index of the last non 'd'
- found before the 7th position in str1 is: 5
+found before the 7th position in str1 is: 5
 The index of the non 'd' found in str1 is: 11
 
 The original string str2 is: BBB-1111
 The index of the last occurrence of a element
- not of 'B1' in str2 before the 6th position is: 3
+not of 'B1' in str2 before the 6th position is: 3
 The elements of the substring 'B-1' were not found in str2 .
 
 The original string str3 is: 444-555-GGG
 The index of the last occurrence of an element in str3
- other than one of the characters in '45G' is: 7
+other than one of the characters in '45G' is: 7
 The index of the penultimate occurrence of an element
- not in '45G' in str3 is: 3
+not in '45G' in str3 is: 3
 
 The original string str4 is: 12-ab-12-ab
 The index of the last occurrence of an element not
- in 'b-a' in str4 before the 5th position is: 1
+in 'b-a' in str4 before the 5th position is: 1
 The index of the last occurrence of an element not in '12'
- in str4 before the end position is: 10
+in str4 before the end position is: 10
 ```
 
 ## <a name="find_last_of"></a>  basic_string::find_last_of
@@ -2729,15 +2792,20 @@ size_type find_last_of(
 
 ### <a name="parameters"></a>Parametry
 
-*_Ch* wartość znaku, dla którego funkcja członkowska jest do wyszukiwania.
+*_Ch*<br/>
+Wartość znaku, dla którego funkcja członkowska jest do wyszukiwania.
 
-*_Off* indeksu pozycji jaką wyszukiwanie jest aby zakończyć.
+*_Off*<br/>
+Indeks pozycji jaką wyszukiwanie jest aby zakończyć.
 
-*PTR* C — ciąg, dla którego funkcja członkowska jest do wyszukiwania.
+*ptr*<br/>
+C — ciąg dla którego funkcja członkowska jest do wyszukiwania.
 
-*Liczba* liczbę znaków, licząc do przodu, od pierwszego wystąpienia znaku w ciągu języka C dla którego funkcja członkowska jest do wyszukiwania.
+*Liczba*<br/>
+Liczba znaków, licząc do przodu, od pierwszego wystąpienia znaku w ciągu języka C dla którego funkcja członkowska jest do wyszukiwania.
 
-*str* ciąg znaków, dla którego funkcja członkowska jest do wyszukiwania.
+*str*<br/>
+Ciąg, dla którego funkcja członkowska jest do wyszukiwania.
 
 ### <a name="return-value"></a>Wartość zwracana
 
@@ -2858,19 +2926,19 @@ The character 'x' was not found in str1.
 
 The original string str2 is: ABCD-1234-ABCD-1234
 The index of the last occurrence of an element of 'B1' in str2 before
- the 12th position is: 11
+the 12th position is: 11
 The index of the last element of 'D2' after
- the 0th position in str2 is: 16
+the 0th position in str2 is: 16
 
 The original string str3 is: 456-EFG-456-EFG
 The index of the last occurrence of an element of '5E' in str3 before
- the 8th position is: 4
+the 8th position is: 4
 
 The original string str4 is: 12-ab-12-ab
 The index of the last occurrence of an element of 'ba3' in str4 before
- the 8th position is: 4
+the 8th position is: 4
 The index of the last occurrence of an element of 'a2' in str4 before
- the 0th position is: 9
+the 0th position is: 9
 ```
 
 ## <a name="front"></a>  basic_string::front
@@ -2992,23 +3060,32 @@ void insert(
 
 ### <a name="parameters"></a>Parametry
 
-*_P0* indeks pozycji za punkt wstawiania nowych znaków.
+*_P0*<br/>
+Indeks pozycji za punkt wstawiania nowych znaków.
 
-*PTR* ciągu c. zostać w całości lub częściowo wstawiony do ciągu.
+*ptr*<br/>
+C — ciąg do całości lub częściowo wstawiony do ciągu.
 
-*Liczba* liczba znaków do wstawienia.
+*Liczba*<br/>
+Liczba znaków do wstawienia.
 
-*str* ciągu do całości lub częściowo wstawiony do ciągu docelowego.
+*str*<br/>
+Ciąg, który ma zostać całkowicie lub częściowo wstawiony do ciągu docelowego.
 
-*_Off* indeks części ciąg źródłowy, podając znaków do dołączenia.
+*_Off*<br/>
+Indeks części ciąg źródłowy, podając znaków do dołączenia.
 
-*_Ch* wartość znaku elementów do wstawienia.
+*_Ch*<br/>
+Wartość znaku elementów do wstawienia.
 
-*_It* iterator odnoszący się do pozycji za zaporą, która ma zostać wstawiony znak.
+*_It*<br/>
+Iterator odnoszący się do pozycji za zaporą, która ma zostać wstawiony znak.
 
-*pierwszy* iterator danych wejściowych, const_pointer lub const_iterator adresujący pierwszy element w zakresie źródłowym, który ma zostać wstawiony.
+*pierwszy*<br/>
+Iterator danych wejściowych, const_pointer lub const_iterator adresujący pierwszy element w zakresie źródłowym, który ma zostać wstawiony.
 
-*ostatni* iterator danych wejściowych, const_pointer lub const_iterator odnoszący się do pozycji jeden po ostatnim elemencie w zakresie źródłowym, który ma zostać wstawiony.
+*ostatni*<br/>
+Iterator danych wejściowych, const_pointer lub const_iterator odnoszący się do pozycji jeden po ostatnim elemencie w zakresie źródłowym, który ma zostać wstawiony.
 
 ### <a name="return-value"></a>Wartość zwracana
 
@@ -3288,11 +3365,14 @@ basic_string<CharType, Traits, Allocator>& operator+=(
 
 ### <a name="parameters"></a>Parametry
 
-*_Ch* znak, który ma zostać dołączona.
+*_Ch*<br/>
+Znak, który ma zostać dołączona.
 
-*PTR* znaków ciągu języka C do dołączenia.
+*ptr*<br/>
+Znaki ciągu języka C do dołączenia.
 
-*prawy* znaki ciągu do dołączenia.
+*right*<br/>
+Znaki ciągu do dołączenia.
 
 ### <a name="return-value"></a>Wartość zwracana
 
@@ -3377,11 +3457,14 @@ basic_string<CharType, Traits, Allocator>& operator=(
 
 ### <a name="parameters"></a>Parametry
 
-*_Ch* wartość znaku do przypisania.
+*_Ch*<br/>
+Wartość znaku do przypisania.
 
-*PTR* wskaźnik do znaków w ciągu C ma być przypisane do ciągu docelowego.
+*ptr*<br/>
+Wskaźnik do znaków w ciągu C ma być przypisane do ciągu docelowego.
 
-*prawy* ciąg źródłowy, do którego znaki mają być przypisane do ciągu docelowego.
+*right*<br/>
+Ciąg źródłowy, którego znaki mają być przypisane do ciągu docelowego.
 
 ### <a name="return-value"></a>Wartość zwracana
 
@@ -3459,7 +3542,8 @@ reference operator[](size_type _Off);
 
 ### <a name="parameters"></a>Parametry
 
-*_Off* indeks położenie elementu można odwoływać się.
+*_Off*<br/>
+Indeks położenie elementu można odwoływać się.
 
 ### <a name="return-value"></a>Wartość zwracana
 
@@ -3575,7 +3659,8 @@ void push_back(value_type _Ch);
 
 ### <a name="parameters"></a>Parametry
 
-*_Ch* znaków, które mają zostać dodane do końca ciągu.
+*_Ch*<br/>
+Znak, który ma zostać dodany do końca ciągu.
 
 ### <a name="remarks"></a>Uwagi
 
@@ -3667,7 +3752,7 @@ int main( )
    cout << endl;
 
    // The dereferenced iterator can be used to modify a character
- *str1_rIter = 'A';
+*str1_rIter = 'A';
    cout << "The first character-letter of the modified str1 is now: "
         << *str1_rIter << endl;
    cout << "The full modified reversed string str1 is now:\n ";
@@ -3689,10 +3774,10 @@ int main( )
 ```Output
 The first character-letter of the reversed string str1 is: a
 The full reversed string str1 is:
- ablE was I ere I saw elbA
+ablE was I ere I saw elbA
 The first character-letter of the modified str1 is now: A
 The full modified reversed string str1 is now:
- AblE was I ere I saw elbA
+AblE was I ere I saw elbA
 The string str2 is empty.
 ```
 
@@ -3766,7 +3851,7 @@ int main( )
    cout << endl;
 
    // The dereferenced iterator can be used to modify a character
- *str1_rIter = 'o';
+*str1_rIter = 'o';
    cout << "The last character-letter of the modified str1 is now: "
         << *str1_rIter << endl;
    cout << "The full modified reversed string str1 is now:\n ";
@@ -3788,10 +3873,10 @@ int main( )
 ```Output
 The last character-letter of the reversed string str1 is: A
 The full reversed string str1 is:
- ablE was I ere I saw elbA
+ablE was I ere I saw elbA
 The last character-letter of the modified str1 is now: o
 The full modified reversed string str1 is now:
- ablE was I ere I saw elbo
+ablE was I ere I saw elbo
 The string str2 is empty.
 ```
 
@@ -3873,29 +3958,39 @@ basic_string<CharType, Traits, Allocator>& replace(
 
 ### <a name="parameters"></a>Parametry
 
-*str* ciąg, który ma być źródłem znaków w ciągu argumentu operacji.
+*str*<br/>
+Ciąg, który ma być źródłem znaków w ciągu argumentu operacji.
 
-*_Pos1* indeksu ciągu argumentu operacji, od której rozpoczyna się zastąpienia.
+*_Pos1*<br/>
+Indeks ciągu argumentu operacji, od której rozpoczyna się zastąpienia.
 
-*_Num1* maksymalną liczbę znaków, które mają zostać zastąpione w ciągu argumentu operacji.
+*_Num1*<br/>
+Maksymalna liczba znaków, które mają zostać zastąpione w ciągu argumentu operacji.
 
-*_Pos2* indeksu ciągu parametru, od której rozpoczyna się kopiowanie.
+*_Pos2*<br/>
+Indeks ciągu parametru, od której rozpoczyna się kopiowanie.
 
-*_Num2* maksymalna liczba znaków do użycia z parametru C-string.
+*_Num2*<br/>
+Maksymalna liczba znaków do użycia z parametru C-string.
 
-*PTR* C — ciąg, który ma być źródłem znaków w ciągu argumentu operacji.
+*ptr*<br/>
+C — ciąg który ma być źródłem znaków w ciągu argumentu operacji.
 
-*_Ch* znaków, które mają być kopiowane do ciągu argumentu operacji.
+*_Ch*<br/>
+Znak, który ma zostać skopiowana do ciągu argumentu operacji.
 
 * first0 * wiadomość iterator odnoszący się pierwszy znak ma zostać usunięty w ciągu argumentu operacji.
 
 * last0 * wiadomość iterator odnoszący się ostatni znak ma zostać usunięty w ciągu argumentu operacji.
 
-*pierwszy* iteratora, const_pointer lub const_iterator adresowania pierwszego znaku mają być kopiowane do ciągu parametru.
+*pierwszy*<br/>
+Iterator, const_pointer lub const_iterator adresowania pierwszego znaku mają być kopiowane do ciągu parametru.
 
-*ostatni* iteratora, const_pointer lub const_iterator adresowania ostatni znak ma być kopiowany do ciągu parametru.
+*ostatni*<br/>
+Iterator, const_pointer lub const_iterator adresowania ostatni znak ma być kopiowany do ciągu parametru.
 
-*Liczba* liczby *_Ch* jest kopiowana do ciągu argumentu operacji.
+*Liczba*<br/>
+Ile razy *_Ch* jest kopiowana do ciągu argumentu operacji.
 
 ### <a name="return-value"></a>Wartość zwracana
 
@@ -4039,45 +4134,45 @@ The operand string s1o is: AAAAAAAA
 The parameter string s1p is: BBB
 The parameter C-string cs1p is: CCC
 The result of s1o.replace ( 1 , 3 , s1p )
- is the string: ABBBAAAA.
+is the string: ABBBAAAA.
 The result of s1o.replace ( 5 , 3 , cs1p )
- is the string: ABBBACCC.
+is the string: ABBBACCC.
 
 The operand string s2o is: AAAAAAAA
 The parameter string s1p is: BBB
 The parameter C-string cs2p is: CCC
 The result of s2o.replace (1, 3, s2p, 1, 2)
- is the string: ABBAAAA.
+is the string: ABBAAAA.
 The result of s2o.replace (4 ,3 ,cs2p)
- is the string: ABBAC.
+is the string: ABBAC.
 
 The operand string s3o is: AAAAAAAA
 The parameter character c1p is: C
 The result of s3o.replace(1, 3, 4, ch3p)
- is the string: ACCCCAAAA.
+is the string: ACCCCAAAA.
 
 The operand string s4o is: AAAAAAAA
 The parameter string s4p is: BBB
 The parameter C-string cs4p is: CCC
 The result of s1o.replace (IterF0, IterL0, s4p)
- is the string: BBBAAAAA.
+is the string: BBBAAAAA.
 The result of s4o.replace (IterF0, IterL0, cs4p)
- is the string: CCCAAAAA.
+is the string: CCCAAAAA.
 
 The operand string s5o is: AAAAAAAF
 The parameter C-string cs5p is: CCCBB
 The result of s5o.replace (IterF1, IterL1, cs4p ,4)
- is the string: CCCBAAAF.
+is the string: CCCBAAAF.
 
 The operand string s6o is: AAAAAAAG
 The parameter character ch6p is: q
 The result of s6o.replace (IterF1, IterL1, 4, ch6p)
- is the string: qqqqAAAAG.
+is the string: qqqqAAAAG.
 
 The operand string s7o is: OOOOOOO
 The parameter string s7p is: PPPP
 The result of s7o.replace (IterF3 ,IterL3 ,IterF4 ,IterL4)
- is the string: OPPOOOO.
+is the string: OPPOOOO.
 ```
 
 ## <a name="reserve"></a>  basic_string::Reserve
@@ -4090,7 +4185,8 @@ void reserve(size_type count = 0);
 
 ### <a name="parameters"></a>Parametry
 
-*Liczba* liczbę znaków, dla których pamięć jest zarezerwowana.
+*Liczba*<br/>
+Liczba znaków, dla których pamięć jest zarezerwowana.
 
 ### <a name="remarks"></a>Uwagi
 
@@ -4184,9 +4280,11 @@ void resize(
 
 ### <a name="parameters"></a>Parametry
 
-*Liczba* nowy rozmiar ciągu.
+*Liczba*<br/>
+Nowy rozmiar ciągu.
 
-*_Ch* wartość, która dołączona znaki są inicjowane za pomocą, jeśli wymagane są dodatkowe elementy.
+*_Ch*<br/>
+Wartość, która dołączona znaki są inicjowane za pomocą, jeśli wymagane są dodatkowe elementy.
 
 ### <a name="remarks"></a>Uwagi
 
@@ -4321,15 +4419,20 @@ size_type rfind(
 
 ### <a name="parameters"></a>Parametry
 
-*_Ch* wartość znaku, dla którego funkcja członkowska jest do wyszukiwania.
+*_Ch*<br/>
+Wartość znaku, dla którego funkcja członkowska jest do wyszukiwania.
 
-*_Off* indeksu w sytuacji, w którym ma się rozpocząć wyszukiwanie.
+*_Off*<br/>
+Indeks sytuację, w którym ma się rozpocząć wyszukiwanie.
 
-*PTR* C — ciąg, dla którego funkcja członkowska jest do wyszukiwania.
+*ptr*<br/>
+C — ciąg dla którego funkcja członkowska jest do wyszukiwania.
 
-*Liczba* liczbę znaków, licząc do przodu, od pierwszego wystąpienia znaku w ciągu języka C dla którego funkcja członkowska jest do wyszukiwania.
+*Liczba*<br/>
+Liczba znaków, licząc do przodu, od pierwszego wystąpienia znaku w ciągu języka C dla którego funkcja członkowska jest do wyszukiwania.
 
-*str* ciąg znaków, dla którego funkcja członkowska jest do wyszukiwania.
+*str*<br/>
+Ciąg, dla którego funkcja członkowska jest do wyszukiwania.
 
 ### <a name="return-value"></a>Wartość zwracana
 
@@ -4454,7 +4557,7 @@ The character 'x' was not found in str1.
 
 The original string str2 is: Let me make this perfectly clear.
 The index of the 1st element of 'perfect' before
- the 30th position in str2 is: 17
+the 30th position in str2 is: 17
 The substring 'imperfect' was not found in str2 .
 
 The original string str3 is: It is a nice day. I am happy.
@@ -4599,9 +4702,11 @@ basic_string<CharType, Traits, Allocator> substr(
 
 ### <a name="parameters"></a>Parametry
 
-*_Off* indeksu, znajdowania elementu w miejscu, z którego wykonano kopia ciągu, przy użyciu wartości domyślnej 0.
+*_Off*<br/>
+Indeks lokalizacji elementu w miejscu, z którego wykonano kopia ciągu, przy użyciu wartości domyślnej 0.
 
-*Liczba* liczbę znaków, które mają zostać skopiowane, jeśli są obecne.
+*Liczba*<br/>
+Liczba znaków, które mają zostać skopiowane, jeśli są obecne.
 
 ### <a name="return-value"></a>Wartość zwracana
 
@@ -4635,13 +4740,13 @@ int main( )
 
 ```Output
 The original string str1 is:
- Heterological paradoxes are persistent.
+Heterological paradoxes are persistent.
 
 The substring str1 copied is: logical
 
 The default substring str3 is:
- Heterological paradoxes are persistent.
- which is the entire original string.
+Heterological paradoxes are persistent.
+which is the entire original string.
 ```
 
 ## <a name="swap"></a>  basic_string::swap
@@ -4655,7 +4760,8 @@ void swap(
 
 ### <a name="parameters"></a>Parametry
 
-*str* ciąg źródłowy, w której elementy są wymieniane z postanowieniami w ciągu docelowym.
+*str*<br/>
+Ciąg źródłowy, której elementy są wymieniane z postanowieniami w ciągu docelowym.
 
 ### <a name="remarks"></a>Uwagi
 
@@ -4697,11 +4803,11 @@ int main( )
 
 ```Output
 Before swapping string s1 and s2:
- The basic_string s1 = Tweedledee.
- The basic_string s2 = Tweedledum.
+The basic_string s1 = Tweedledee.
+The basic_string s2 = Tweedledum.
 After swapping string s1 and s2:
- The basic_string s1 = Tweedledum.
- The basic_string s2 = Tweedledee.
+The basic_string s1 = Tweedledum.
+The basic_string s2 = Tweedledee.
 ```
 
 ## <a name="traits_type"></a>  basic_string::traits_type

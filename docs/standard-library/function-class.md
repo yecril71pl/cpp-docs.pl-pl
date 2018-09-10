@@ -28,12 +28,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4ca8621067c851b5a1e107eb16800d546562fbb6
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: 3cfafc2c17ef804cb8d87c1189c8a7f3163d3c46
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38959937"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44104137"
 ---
 # <a name="function-class"></a>function — Klasa
 
@@ -89,9 +89,11 @@ public:
 
 ### <a name="parameters"></a>Parametry
 
-*Fty* typu funkcji do opakowania.
+*Fty*<br/>
+Typ funkcji do opakowania.
 
-*AX* funkcja alokatora.
+*AX*<br/>
+Funkcja programu przydzielania.
 
 ## <a name="remarks"></a>Uwagi
 
@@ -164,11 +166,14 @@ template <class Fx, class Alloc>
 
 ### <a name="parameters"></a>Parametry
 
-*_Func* wywoływanego obiektu.
+*_Func*<br/>
+Obiekt możliwy do wywołania.
 
-*_Fnref* otok odwołania, który zawiera obiekt możliwy do wywołania.
+*_Fnref*<br/>
+Otok odwołania, który zawiera obiekt możliwy do wywołania.
 
-*AX* obiekt programu przydzielania.
+*AX*<br/>
+Obiekt programu przydzielania.
 
 ### <a name="remarks"></a>Uwagi
 
@@ -199,17 +204,23 @@ template <class Fx, class Alloc>
 
 ### <a name="parameters"></a>Parametry
 
-*prawy* obiekt funkcji do skopiowania.
+*right*<br/>
+Obiekt funkcji do skopiowania.
 
-*FX* Typ wywoływanego obiektu.
+*FX*<br/>
+Typ wywoływanego obiektu.
 
-*_Func* obiekt do opakowania.
+*_Func*<br/>
+Obiekt do opakowania.
 
-*ALLOC* typ programu przydzielania.
+*Alokacji*<br/>
+Typ programu przydzielania.
 
-*AX* alokator.
+*AX*<br/>
+Alokator.
 
-*_Fnref* odwołania obiekt do opakowania.
+*_Fnref*<br/>
+Odwołanie obiekt do opakowania.
 
 ### <a name="remarks"></a>Uwagi
 
@@ -340,9 +351,11 @@ result_type operator()(
 
 ### <a name="parameters"></a>Parametry
 
-*TN* typ argumentu n-tego wywołania.
+*TN*<br/>
+Typ n-tej wywołać argument.
 
-*tN* n-ty argument wywołania.
+*TN*<br/>
+Wywołanie n-ty argument.
 
 ### <a name="remarks"></a>Uwagi
 
@@ -391,13 +404,17 @@ template <class Fty>
 
 ### <a name="parameters"></a>Parametry
 
-*npc* stałą pustego wskaźnika.
+*npc*<br/>
+Stała wskaźnika o wartości null.
 
-*prawy* obiekt funkcji do skopiowania.
+*right*<br/>
+Obiekt funkcji do skopiowania.
 
-*FN* obiekt do opakowania.
+*FN*<br/>
+Obiekt do opakowania.
 
-*fnref* odwołania obiekt do opakowania.
+*fnref*<br/>
+Odwołanie obiekt do opakowania.
 
 ### <a name="remarks"></a>Uwagi
 
@@ -506,7 +523,8 @@ void swap(function& right);
 
 ### <a name="parameters"></a>Parametry
 
-*prawy* obiekt funkcji, która ma być Zamień.
+*right*<br/>
+Obiekt funkcji, która ma być Zamień.
 
 ### <a name="remarks"></a>Uwagi
 
@@ -567,7 +585,8 @@ template <class Fty2>
 
 ### <a name="parameters"></a>Parametry
 
-*Fty2* Typ wywoływanego obiektu docelowego do przetestowania.
+*Fty2*<br/>
+Obiekt docelowy typ do przetestowania.
 
 ### <a name="remarks"></a>Uwagi
 

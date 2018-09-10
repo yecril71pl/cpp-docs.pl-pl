@@ -148,12 +148,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6e02be0369821cc6f8aa37210c9a3b7f9479be84
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: 28fbbce7c63e60bfdeb75c32b3c919b4f38b2b2a
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38954724"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44107469"
 ---
 # <a name="unorderedmap-class"></a>unordered_map — Klasa
 
@@ -417,7 +417,8 @@ size_type bucket(const Key& keyval) const;
 
 ### <a name="parameters"></a>Parametry
 
-*keyval* wartość klucza do mapowania.
+*keyval*<br/>
+Wartość klucza do mapowania.
 
 ### <a name="remarks"></a>Uwagi
 
@@ -457,7 +458,7 @@ int main()
 ```
 
 ```Output
- [c, 3] [b, 2] [a, 1]
+[c, 3] [b, 2] [a, 1]
 bucket('a') == 7
 bucket_size(7) == 1
 ```
@@ -561,7 +562,7 @@ size_type bucket_size(size_type nbucket) const;
 ### <a name="parameters"></a>Parametry
 
 *nbucket*  
- Numer przedziału.
+Numer przedziału.
 
 ### <a name="remarks"></a>Uwagi
 
@@ -601,7 +602,7 @@ int main()
 ```
 
 ```Output
- [c, 3] [b, 2] [a, 1]
+[c, 3] [b, 2] [a, 1]
 bucket('a') == 7
 bucket_size(7) == 1
 ```
@@ -718,7 +719,7 @@ int main()
 ```
 
 ```Output
- [c, 3] [b, 2] [a, 1]
+[c, 3] [b, 2] [a, 1]
 size == 0
 empty() == true
 
@@ -925,7 +926,7 @@ size_type count(const Key& keyval) const;
 ### <a name="parameters"></a>Parametry
 
 *keyval*  
- Wartość klucza do wyszukania.
+Wartość klucza do wyszukania.
 
 ### <a name="remarks"></a>Uwagi
 
@@ -964,7 +965,7 @@ int main()
 ```
 
 ```Output
- [c, 3] [b, 2] [a, 1]
+[c, 3] [b, 2] [a, 1]
 count('A') == 0
 count('b') == 1
 count('C') == 0
@@ -1024,7 +1025,7 @@ int main()
 ```
 
 ```Output
- [c, 3] [b, 2] [a, 1]
+[c, 3] [b, 2] [a, 1]
 end()-begin() == 3
 begin()-end() == -3
 ```
@@ -1148,7 +1149,7 @@ int main()
 ```
 
 ```Output
- [c, 3] [b, 2] [a, 1]
+[c, 3] [b, 2] [a, 1]
 size == 0
 empty() == true
 
@@ -1190,7 +1191,7 @@ std::pair<const_iterator, const_iterator>  equal_range(const Key& keyval) const;
 ### <a name="parameters"></a>Parametry
 
 *keyval*  
- Wartość klucza do wyszukania.
+Wartość klucza do wyszukania.
 
 ### <a name="remarks"></a>Uwagi
 
@@ -1242,7 +1243,7 @@ int main()
 ```
 
 ```Output
- [c, 3] [b, 2] [a, 1]
+[c, 3] [b, 2] [a, 1]
 equal_range('x'):
 equal_range('b'): [b, 2]
 ```
@@ -1260,16 +1261,16 @@ size_type erase(const key_type& Key);
 ### <a name="parameters"></a>Parametry
 
 *Where*  
- Pozycja elementu, który ma zostać usunięty.
+Pozycja elementu, który ma zostać usunięty.
 
 *pierwszy*  
- Pozycja pierwszego elementu do usunięcia.
+Pozycja pierwszego elementu do usunięcia.
 
 *ostatni*  
- Pozycja tuż za ostatni element do usunięcia.
+Pozycja tuż za ostatni element do usunięcia.
 
 *Key*  
- Wartość klucza elementów do usunięcia.
+Wartość klucza elementów do usunięcia.
 
 ### <a name="return-value"></a>Wartość zwracana
 
@@ -1292,7 +1293,7 @@ const_iterator find(const Key& keyval) const;
 ### <a name="parameters"></a>Parametry
 
 *keyval*  
- Wartość klucza do wyszukania.
+Wartość klucza do wyszukania.
 
 ### <a name="remarks"></a>Uwagi
 
@@ -1337,7 +1338,7 @@ int main()
 ```
 
 ```Output
- [c, 3] [b, 2] [a, 1]
+[c, 3] [b, 2] [a, 1]
 find('A') == false
 find('b') == true: [b, 2]
 ```
@@ -1784,7 +1785,7 @@ int main()
 ```
 
 ```Output
- [c, 3] [b, 2] [a, 1]
+[c, 3] [b, 2] [a, 1]
 bucket_count() == 8
 load_factor() == 0.375
 max_bucket_count() == 8
@@ -1977,7 +1978,7 @@ int main()
 ```
 
 ```Output
- [c, 3] [b, 2] [a, 1]
+[c, 3] [b, 2] [a, 1]
 bucket_count() == 8
 load_factor() == 0.375
 max_bucket_count() == 8
@@ -2009,7 +2010,7 @@ void max_load_factor(float factor);
 ### <a name="parameters"></a>Parametry
 
 *współczynnik*  
- Nowy współczynnik maksymalnego obciążenia.
+Nowy współczynnik maksymalnego obciążenia.
 
 ### <a name="remarks"></a>Uwagi
 
@@ -2073,7 +2074,7 @@ int main()
 ```
 
 ```Output
- [c, 3] [b, 2] [a, 1]
+[c, 3] [b, 2] [a, 1]
 bucket_count() == 8
 load_factor() == 0.375
 max_bucket_count() == 8
@@ -2141,7 +2142,7 @@ Ty& operator[](Key&& keyval);
 
 |Parametr|Opis|
 |-|-|
-|*Keyval*|Wartość klucza, która ma być znaleziona lub wstawiona.|
+|*keyval*|Wartość klucza, która ma być znaleziona lub wstawiona.|
 
 ### <a name="return-value"></a>Wartość zwracana
 
@@ -2203,10 +2204,10 @@ int main()
 ```
 
 ```Output
- [c, 3] [b, 2] [a, 1]
+[c, 3] [b, 2] [a, 1]
 c1['A'] == 0
 c1['a'] == 1
- [c, 3] [b, 2] [A, 0] [a, 1]
+[c, 3] [b, 2] [A, 0] [a, 1]
 c2[move(str)] == 0
 c2["abc"] == 1
 ```
@@ -2381,7 +2382,7 @@ void rehash(size_type nbuckets);
 ### <a name="parameters"></a>Parametry
 
 *nbuckets*  
- Żądaną liczbę przedziałów.
+Żądaną liczbę przedziałów.
 
 ### <a name="remarks"></a>Uwagi
 
@@ -2435,7 +2436,7 @@ int main()
 ```
 
 ```Output
- [c, 3] [b, 2] [a, 1]
+[c, 3] [b, 2] [a, 1]
 bucket_count() == 8
 load_factor() == 0.375
 max_load_factor() == 4
@@ -2508,7 +2509,7 @@ int main()
 ```
 
 ```Output
- [c, 3] [b, 2] [a, 1]
+[c, 3] [b, 2] [a, 1]
 size == 0
 empty() == true
 
@@ -2565,7 +2566,7 @@ void swap(unordered_map& right);
 ### <a name="parameters"></a>Parametry
 
 *right*  
- Kontener wymiany.
+Kontener wymiany.
 
 ### <a name="remarks"></a>Uwagi
 
@@ -2664,7 +2665,7 @@ unordered_map(
 
 template <class InIt>
 unordered_map(
- InputIterator First,
+InputIterator First,
     InputIterator Last,
     size_type Bucket_count = N0,
     const Hash& Hash = Hash(),
@@ -2679,8 +2680,8 @@ unordered_map(
 |*Al*|Obiekt alokatora, który ma być przechowywany.|
 |*Comp*|Obiekt funkcji porównywania, który ma być przechowywany.|
 |*Skrót*|Obiekt funkcji mieszania, który ma być przechowywany.|
-|*bucket_count —*|Minimalna liczba przedziałów.|
-|*Po prawej stronie*|Kontener, który ma być skopiowany.|
+|*Bucket_count —*|Minimalna liczba przedziałów.|
+|*po prawej stronie*|Kontener, który ma być skopiowany.|
 |*pierwszy*||
 |*ostatni*||
 |*IList*|Lista initializer_list zawierająca elementy, które ma być skopiowany.|
@@ -2820,18 +2821,18 @@ int main()
 ```
 
 ```Output
- [a, 1] [b, 2] [c, 3]
- [d, 4] [e, 5] [f, 6]
- [a, 1] [b, 2] [c, 3]
- [a, 1] [b, 2] [c, 3]
+[a, 1] [b, 2] [c, 3]
+[d, 4] [e, 5] [f, 6]
+[a, 1] [b, 2] [c, 3]
+[a, 1] [b, 2] [c, 3]
 
 [5, g] [6, h] [7, i] [8, j]
- [a, 1] [b, 2] [c, 3]
+[a, 1] [b, 2] [c, 3]
 
 [a, 1] [b, 2] [c, 3]
- [a, 1] [b, 2] [c, 3]
- [a, 1] [b, 2] [c, 3]
- ```
+[a, 1] [b, 2] [c, 3]
+[a, 1] [b, 2] [c, 3]
+```
 
 ## <a name="value_type"></a>  unordered_map::value_type
 

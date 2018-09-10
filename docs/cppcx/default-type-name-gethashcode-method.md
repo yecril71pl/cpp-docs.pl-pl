@@ -13,33 +13,37 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9d6461e6c94a6889c956ac0319c55c9ee5d2a361
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: edcb67686db871e4ebddb961ed254d260b630139
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43751383"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44107151"
 ---
 # <a name="defaulttypenamegethashcode-method"></a>domyślne:: (type_name):: GetHashCode — metoda
-Zwraca kod skrótu dla tego wystąpienia.  
-  
-## <a name="syntax"></a>Składnia  
-  
-```cpp  
-public:int GetHashCode()  
-```  
-  
-### <a name="return-value"></a>Wartość zwracana  
- Kod skrótu dla tego wystąpienia.  
-  
-### <a name="requirements"></a>Wymagania  
- **Minimalna obsługiwana klienta:** systemu Windows 8  
-  
- **Minimalna obsługiwana serwera:** systemu Windows Server 2012  
-  
- **Namespace:** domyślne  
-  
- **Nagłówek:** vccorlib.h  
-  
-## <a name="see-also"></a>Zobacz też  
- [domyślna przestrzeń nazw](../cppcx/default-namespace.md)
+
+Zwraca kod skrótu dla tego wystąpienia.
+
+## <a name="syntax"></a>Składnia
+
+```cpp
+public:int GetHashCode();
+```
+
+### <a name="return-value"></a>Wartość zwracana
+
+Kod skrótu dla tego wystąpienia.
+
+### <a name="requirements"></a>Wymagania
+
+**Minimalna obsługiwana klienta:** systemu Windows 8
+
+**Minimalna obsługiwana serwera:** systemu Windows Server 2012
+
+**Namespace:** domyślne
+
+**Nagłówek:** vccorlib.h
+
+## <a name="see-also"></a>Zobacz też
+
+[domyślna przestrzeń nazw](../cppcx/default-namespace.md)

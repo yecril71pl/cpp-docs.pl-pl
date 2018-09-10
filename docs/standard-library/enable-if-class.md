@@ -17,12 +17,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2192ea954df1e7a63157d6deb04c7d34cd42337c
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: c4cdc26c66c05cda821b43367b806ecc2a2a8168
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38966488"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44100809"
 ---
 # <a name="enableif-class"></a>enable_if — Klasa
 
@@ -37,9 +37,11 @@ struct enable_if;
 
 ### <a name="parameters"></a>Parametry
 
-*B* wartość, która określa istnienie wynikowy typ.
+*B*<br/>
+Wartość, która określa istnienie wynikowy typ.
 
-*T* typ do utworzenia wystąpienia, jeśli *B* ma wartość true.
+*T*<br/>
+Typ do utworzenia wystąpienia, jeśli *B* ma wartość true.
 
 ## <a name="remarks"></a>Uwagi
 
@@ -64,12 +66,12 @@ Poniżej przedstawiono cztery przykładowe scenariusze:
     template <your_stuff>
 typename enable_if<your_condition, your_return_type>::type
     yourfunction(args) {// ...
- }
+}
 // The alias template makes it more concise:
     template <your_stuff>
 enable_if_t<your_condition, your_return_type>
 yourfunction(args) {// ...
- }
+}
 ```
 
 - Scenariusz 2: Dodawanie parametru funkcji, która ma argument domyślny:
@@ -78,7 +80,7 @@ yourfunction(args) {// ...
     template <your_stuff>
 your_return_type_if_present
     yourfunction(args, enable_if_t<your condition, FOO> = BAR) {// ...
- }
+}
 ```
 
 - Scenariusz 3: Dodawanie parametru szablonu, który ma argument domyślny:
@@ -95,7 +97,7 @@ rest_of_function_declaration_goes_here
 void your_function(const T& t,
     enable_if_t<is_something<T>::value, const string&>
 s) {// ...
- }
+}
 ```
 
 Scenariusz 1 nie działa z konstruktorów i operatory konwersji, ponieważ nie mają zwracanych typów.

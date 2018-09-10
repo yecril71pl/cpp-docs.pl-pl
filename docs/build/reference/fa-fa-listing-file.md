@@ -1,5 +1,5 @@
 ---
-title: / FA, /Fa (umieszczanie pliku) | Dokumentacja firmy Microsoft
+title: / FA, /Fa (umieszczanie pliku na) | Dokumentacja firmy Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -26,80 +26,87 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1840d2f2ff7d968fdcc19e2013a89af9cec32d24
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: a4014c58a7e562aa632dba62dcac04c835352cbf
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32378954"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44101732"
 ---
 # <a name="fa-fa-listing-file"></a>/FA, /Fa (Umieszczanie pliku na liście)
-Tworzy listę plik zawierający kod asemblera.  
-  
-## <a name="syntax"></a>Składnia  
-  
-> **/FA**[**c**\][**s**\][**u**]  
-> **/Fa**_nazwy ścieżki_  
-  
-## <a name="remarks"></a>Uwagi  
-`/FA` — Opcja kompilatora zostanie wygenerowany plik listy asemblera dla każdej jednostki tłumaczenia w kompilacji, które zazwyczaj odpowiada plik źródłowy języka C lub C++. Domyślnie tylko asemblera znajduje się w pliku listy, które są kodowane jako ANSI. Opcjonalny `c`, `s`, i `u` argumenty `/FA` kontroli komputera Określa, czy kod lub kodu źródłowego są dane wyjściowe wraz z asemblera wyświetlania i czy listę został zakodowany jako UTF-8.  
-  
-Domyślnie każdy plik pobiera taką samą nazwę podstawową jak plik źródłowy i ma rozszerzenie .asm. Jeśli kod maszynowy znajduje się za pomocą `c` opcji pliku listy ma rozszerzenie .cod. Można zmienić nazwę i rozszerzenie pliku listy i katalog, w którym jest tworzona przy użyciu `/Fa` opcji.  
 
-### <a name="fa-arguments"></a>/FA argumentów  
+Tworzy plik listingu z kodem asemblera.
+
+## <a name="syntax"></a>Składnia
+
+> **/FA**[**c**\][**s**\][**u**] **/Fa**_nazwy ścieżki_
+
+## <a name="remarks"></a>Uwagi
+
+**/FA** — opcja kompilatora generuje plik listingu asemblera dla każdej jednostki translacji w kompilacji i zazwyczaj odpowiada plik źródłowy C lub C++. Domyślnie tylko asemblera znajduje się w pliku listy, który jest zakodowanymi w formacie ANSI. Opcjonalny **c**, **s**, i **u** argumenty **/FA** kontroli tego, czy maszyny kodu lub kodu źródłowego są dane wyjściowe wraz z asemblera Wyświetlanie listy, i czy listy jest zakodowany w formacie UTF-8.
+
+Domyślnie każdy plik listingu pobiera tej samej nazwie podstawowej co plik źródłowy i ma rozszerzenie .asm. Gdy kod maszynowy znajduje się za pomocą **c** opcji plik listingu z rozszerzeniem .cod. Możesz zmienić nazwę i rozszerzenie pliku listy i katalog, w której jest tworzona przy użyciu **/Fa** opcji.
+
+### <a name="fa-arguments"></a>/FA argumentów
+
 brak  
-Tylko język asemblera znajduje się na liście.  
-  
-`c`  
-Opcjonalna. Zawiera kod maszynowy na liście.  
-  
-`s`  
-Opcjonalna. Zawiera kod źródłowy na liście.  
-  
-`u` Opcjonalne. Koduje plik listy w formacie UTF-8 i zawiera znacznika kolejności bajtów. Domyślnie plik jest zakodowany jako ANSI. Użyj `u` do utworzenia pliku listy, który jest wyświetlane prawidłowo w każdym systemie, lub jeśli używasz Unicode kod plików źródłowych jako dane wejściowe do kompilatora.  
-  
-Jeśli oba `s` i `u` są określone, a jeśli plik kod źródłowy używa kodowania Unicode, inne niż UTF-8, a następnie wierszy kodu w pliku .asm mogą nie wyświetlać się poprawnie.  
-  
-### <a name="fa-argument"></a>/Fa argumentu  
+Tylko język asemblera znajduje się na liście.
+
+**c**  
+Opcjonalna. Zawiera kod maszynowy na liście.
+
+**s**  
+Opcjonalna. Zawiera kod źródłowy, na liście.
+
+**u**  
+Opcjonalna. Koduje plik listy w formacie UTF-8 i zawiera znacznika kolejności bajtów. Domyślnie plik jest zakodowane jako ANSI. Użyj `u` do Utwórz plik listingu, w którym są wyświetlane poprawnie w dowolnym systemie lub jeśli używasz Unicode pliki kodów źródłowych jako dane wejściowe do kompilatora.
+
+Jeśli oba **s** i **u** są określone, a jeśli plik kodu źródłowego przy użyciu kodowania Unicode, inne niż UTF-8, a następnie wierszy kodu w pliku .asm mogą nie wyświetlać się poprawnie.
+
+### <a name="fa-argument"></a>/Fa argumentu
+
 brak  
-Jeden *źródła*.asm plik jest tworzony dla każdego pliku kodu źródłowego w kompilacji.  
-  
-*Nazwa pliku* plik listy o nazwie *filename*.asm znajduje się w bieżącym katalogu. To jest prawidłowe tylko podczas kompilowania pliku kodu jednego źródła.  
-  
+Jeden *źródła*sam plik jest tworzony dla każdego pliku kodu źródłowego w kompilacji.
+
+*Nazwa pliku*  
+Plik listingu o nazwie *filename*.asm znajduje się w bieżącym katalogu. To jest prawidłowe tylko podczas kompilowania pliku z kodem jedno źródło.
+
 *filename.Extension*  
-Plik listy o nazwie *filename.extension* znajduje się w bieżącym katalogu. To jest prawidłowe tylko podczas kompilowania pliku kodu jednego źródła.  
-  
-*Katalog*\  
-Jeden *source_file*.asm pliku jest tworzony i umieszczane w określonym *katalogu* dla każdego pliku kodu źródłowego w kompilacji. Należy pamiętać, wymagane końcowy ukośnik odwrotny. Dozwolone są tylko ścieżki na bieżącym dysku.  
-  
-*katalog*\\*filename* plik listy o nazwie *filename*.asm znajduje się w określonym *katalogu*. To jest prawidłowe tylko podczas kompilowania pliku kodu jednego źródła.  
-  
-*katalog*\\*filename.extension*  
-Plik listy o nazwie *filename.extension* znajduje się w określonym *katalogu*. To jest prawidłowe tylko podczas kompilowania pliku kodu jednego źródła.  
-  
-### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Aby ustawić tę opcję kompilatora w środowisku programowania Visual Studio  
-  
-1.  Otwórz projekt **strony właściwości** okno dialogowe. Aby uzyskać więcej informacji, zobacz [Praca z właściwościami projektu](../../ide/working-with-project-properties.md).  
-  
-2.  Otwórz **C/C++** i wybierz polecenie **pliki wyjściowe** strony właściwości.  
-  
-3.  Modyfikowanie **wynik zestawów** właściwości można ustawić `/FAc` i `/FAs` opcje asemblera, maszyna i kod źródłowy. Modyfikowanie **Użyj Unicode do asemblera wyświetlania** właściwości można ustawić `/FAu` opcji dla danych wyjściowych ANSI lub UTF-8. Modyfikowanie **lokalizacja listy ASM** można ustawić `/Fa` opcję wyświetlania list nazwę pliku i lokalizację.  
-  
-Należy pamiętać, że ustawienie zarówno **wynik zestawów** i **Użyj Unicode do asemblera wyświetlania** właściwości może spowodować [wiersza polecenia ostrzeżenie D9025](../../error-messages/tool-errors/command-line-warning-d9025.md). Aby połączyć tych opcji w środowisku IDE, należy użyć **dodatkowe opcje** w **wiersza polecenia** właściwości strony zamiast tego.  
-  
-### <a name="to-set-this-compiler-option-programmatically"></a>Aby programowo ustawić tę opcję kompilatora  
-  
--   Zobacz <xref:Microsoft.VisualStudio.VCProjectEngine.VCCLCompilerTool.AssemblerListingLocation%2A> lub <xref:Microsoft.VisualStudio.VCProjectEngine.VCCLCompilerTool.AssemblerOutput%2A>. Aby określić `/FAu`, zobacz <xref:Microsoft.VisualStudio.VCProjectEngine.VCCLCompilerTool.AdditionalOptions%2A>.  
-  
-## <a name="example"></a>Przykład  
-Następujące polecenie w wierszu tworzy połączonego źródła i przykładowy kod komputera o nazwie HELLO.cod:  
-  
-```  
-CL /FAcs HELLO.CPP  
-```  
-  
-## <a name="see-also"></a>Zobacz też  
- [Plik wyjściowy (/ F) opcje](../../build/reference/output-file-f-options.md)   
- [Opcje kompilatora](../../build/reference/compiler-options.md)   
- [Ustawianie opcji kompilatora](../../build/reference/setting-compiler-options.md)   
- [Określanie nazwy ścieżki](../../build/reference/specifying-the-pathname.md)
+Plik listingu o nazwie *filename.extension* znajduje się w bieżącym katalogu. To jest prawidłowe tylko podczas kompilowania pliku z kodem jedno źródło.
+
+*Katalog*__\\__  
+Jeden *$source_file*plików .asm jest tworzone i umieszczane w określonym *katalogu* dla każdego pliku kodu źródłowego w kompilacji. Należy pamiętać, wymagane ukośnik odwrotny na końcu. Dozwolone są tylko ścieżki na bieżącym dysku.
+
+*katalog*__\\__*nazwy pliku*  
+Plik listingu o nazwie *filename*.asm znajduje się w określonym *katalogu*. To jest prawidłowe tylko podczas kompilowania pliku z kodem jedno źródło.
+
+*katalog*__\\__*filename.extension*  
+Plik listingu o nazwie *filename.extension* znajduje się w określonym *katalogu*. To jest prawidłowe tylko podczas kompilowania pliku z kodem jedno źródło.
+
+### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Aby ustawić tę opcję kompilatora w środowisku programowania Visual Studio
+
+1. Otwórz projekt **stron właściwości** okno dialogowe. Aby uzyskać więcej informacji, zobacz [Praca z właściwościami projektu](../../ide/working-with-project-properties.md).
+
+2. Wybierz **właściwości konfiguracji** > **C/C++** > **pliki wyjściowe** stronę właściwości.
+
+3. Modyfikowanie **produkt wyjściowy asemblera** właściwość umożliwiająca ustawienie **/FAC** i **/FAS** opcje asemblera, maszyna i kod źródłowy. Modyfikowanie **Użyj Unicode dla asemblera ofercie** właściwość umożliwiająca ustawienie **/fau** opcji ANSI lub UTF-8 danych wyjściowych. Modyfikowanie **lokalizacja listy ASM** można ustawić **/Fa** opcji do wyświetlania listy nazwę i lokalizację pliku.
+
+Należy pamiętać, że ustawienie oba **produkt wyjściowy asemblera** i **Użyj Unicode dla asemblera ofercie** właściwości może spowodować, że [wiersza polecenia ostrzeżenie d9025 dla](../../error-messages/tool-errors/command-line-warning-d9025.md). Aby połączyć tych opcji w środowisku IDE, należy użyć **dodatkowe opcje** pole **wiersza polecenia** zamiast stronie właściwości.
+
+### <a name="to-set-this-compiler-option-programmatically"></a>Aby programowo ustawić tę opcję kompilatora
+
+- Zobacz <xref:Microsoft.VisualStudio.VCProjectEngine.VCCLCompilerTool.AssemblerListingLocation%2A> lub <xref:Microsoft.VisualStudio.VCProjectEngine.VCCLCompilerTool.AssemblerOutput%2A>. Aby określić **/fau**, zobacz <xref:Microsoft.VisualStudio.VCProjectEngine.VCCLCompilerTool.AdditionalOptions%2A>.
+
+## <a name="example"></a>Przykład
+Następujące polecenie w wierszu tworzy połączone źródło i kod maszynowy listę o nazwie HELLO.cod:
+
+```cmd
+CL /FAcs HELLO.CPP
+```
+
+## <a name="see-also"></a>Zobacz też
+
+[Plik wyjściowy (/ F) opcje](../../build/reference/output-file-f-options.md)   
+[Opcje kompilatora](../../build/reference/compiler-options.md)   
+[Ustawianie opcji kompilatora](../../build/reference/setting-compiler-options.md)   
+[Określanie nazwy ścieżki](../../build/reference/specifying-the-pathname.md)

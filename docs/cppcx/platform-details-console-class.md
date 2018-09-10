@@ -15,33 +15,37 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 904ca2920f1086aeb099290382402e7201e81b49
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 789aa77c28fa5fc73b9f65ca70fcae77e5887e2d
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43759015"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44110834"
 ---
 # <a name="platformdetailsconsole-class"></a>Platform::details:: Console, klasa
-Ta klasa jest przeznaczona wyłącznie do użytku wewnętrznego i nie jest przeznaczona do użycia na potrzeby programowania.  
-  
-## <a name="syntax"></a>Składnia  
-  
-```cpp  
-  
-ref class Console sealed;  
-```  
-  
-### <a name="remarks"></a>Uwagi  
- Ta klasa jest przeznaczona wyłącznie dla kompletności, ponieważ mogą być kontrolowane za pomocą przeglądarki.  
-  
-## <a name="inheritance-hierarchy"></a>Hierarchia dziedziczenia  
- `Platform`  
-  
-### <a name="requirements"></a>Wymagania  
- **Metadane:** platform.winmd  
-  
- **Namespace:** Platform::Details  
-  
-## <a name="see-also"></a>Zobacz też  
- [Namespace platformy](platform-namespace-c-cx.md)
+
+Ta klasa jest przeznaczona wyłącznie do użytku wewnętrznego i nie jest przeznaczona do użycia na potrzeby programowania.
+
+## <a name="syntax"></a>Składnia
+
+```cpp
+ref class Console sealed;
+```
+
+### <a name="remarks"></a>Uwagi
+
+Ta klasa jest przeznaczona wyłącznie dla kompletności, ponieważ mogą być kontrolowane za pomocą przeglądarki.
+
+## <a name="inheritance-hierarchy"></a>Hierarchia dziedziczenia
+
+`Platform`
+
+### <a name="requirements"></a>Wymagania
+
+**Metadane:** platform.winmd
+
+**Namespace:** Platform::Details
+
+## <a name="see-also"></a>Zobacz też
+
+[Namespace platformy](platform-namespace-c-cx.md)

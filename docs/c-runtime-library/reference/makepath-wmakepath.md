@@ -43,12 +43,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 20985ce09d301002e6db3164cc3e99f36b03717b
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 21cfcfb8a1c82fb351b85b0fb169a94dd3c2c5d4
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43204907"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44105097"
 ---
 # <a name="makepath-wmakepath"></a>_makepath, _wmakepath
 
@@ -75,15 +75,20 @@ void _wmakepath(
 
 ### <a name="parameters"></a>Parametry
 
-*ścieżka* buforu pełnej ścieżki.
+*Ścieżka*<br/>
+Buforu pełnej ścieżki.
 
-*dysk* zawiera litery (A, B i tak dalej) odpowiadający żądany dysk i opcjonalny dwukropek końcowe. **_makepath —** wstawia dwukropkiem w ścieżce złożonego przypadku jej braku. Jeśli *dysku* jest **NULL** lub punktów na pusty ciąg, litera nie zostanie wyświetlony w złożonego *ścieżki* ciągu.
+*Dysk*<br/>
+Zawiera litery (A, B i tak dalej) odpowiadający żądany dysk i opcjonalny dwukropek końcowe. **_makepath —** wstawia dwukropkiem w ścieżce złożonego przypadku jej braku. Jeśli *dysku* jest **NULL** lub punktów na pusty ciąg, litera nie zostanie wyświetlony w złożonego *ścieżki* ciągu.
 
-*dir* zawiera ścieżkę katalogów, nie wliczając oznaczenie dysku lub rzeczywiste nazwy plików. Końcowy ukośnik jest opcjonalna i ukośnika (/) lub ukośnika odwrotnego (\\) lub obu z nich mogą być używane w ramach pojedynczej *dir* argumentu. Jeśli nie ukośnika (/ lub \\) jest określona, jest wstawiany automatycznie. Jeśli *dir* jest **NULL** lub wskazuje na pusty ciąg, nie ścieżka katalogu jest wstawiana w złożonego *ścieżki* ciągu.
+*dir*<br/>
+Zawiera ścieżkę katalogów, nie wliczając oznaczenie dysku lub rzeczywiste nazwy plików. Końcowy ukośnik jest opcjonalna i ukośnika (/) lub ukośnika odwrotnego (\\) lub obu z nich mogą być używane w ramach pojedynczej *dir* argumentu. Jeśli nie ukośnika (/ lub \\) jest określona, jest wstawiany automatycznie. Jeśli *dir* jest **NULL** lub wskazuje na pusty ciąg, nie ścieżka katalogu jest wstawiana w złożonego *ścieżki* ciągu.
 
-*fname* zawiera nazwę pliku podstawowego bez żadnych rozszerzeń nazw plików. Jeśli *fname* jest **NULL** lub wskazuje na pusty ciąg, a nazwa pliku nie jest wstawiana w złożonego *ścieżki* ciągu.
+*fname*<br/>
+Zawiera nazwę pliku podstawowego bez żadnych rozszerzeń nazw plików. Jeśli *fname* jest **NULL** lub wskazuje na pusty ciąg, a nazwa pliku nie jest wstawiana w złożonego *ścieżki* ciągu.
 
-*ext* zawiera rozszerzenie nazwy pliku, z lub bez poprzedzającej go kropki (.). **_makepath —** wstawia okresu automatycznie, jeżeli nie ma w *ext*. Jeśli *ext* jest **NULL** lub wskazuje na pusty ciąg, bez rozszerzenia jest wstawiana w złożonego *ścieżki* ciągu.
+*ext*<br/>
+Zawiera rozszerzenie nazwy pliku, z lub bez poprzedzającej go kropki (.). **_makepath —** wstawia okresu automatycznie, jeżeli nie ma w *ext*. Jeśli *ext* jest **NULL** lub wskazuje na pusty ciąg, bez rozszerzenia jest wstawiana w złożonego *ścieżki* ciągu.
 
 ## <a name="remarks"></a>Uwagi
 

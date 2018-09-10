@@ -96,16 +96,16 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a53a069138b4e54988be008917e5ca2b24fa0a6c
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 69347ab698661346b8d598dda1bb007d071a21f8
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32411887"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44104150"
 ---
 # <a name="rpt-rptf-rptw-rptfw-macros"></a>_RPT, _RPTF, _RPTW, _RPTFW — Makra
 
-Śledzi postęp aplikacji przez Generowanie raportu debugowania (tylko wersja do debugowania). Należy pamiętać, że *n* określa liczbę argumentów *argumentów* i może być 0, 1, 2, 3, 4 i 5.
+Aplikacja postęp jest śledzony przez wygenerowanie raportu debugowania (tylko wersja debugowania). Należy pamiętać, że *n* określa liczbę argumentów *args* i może być 0, 1, 2, 3, 4 lub 5.
 
 ## <a name="syntax"></a>Składnia
 
@@ -136,25 +136,28 @@ _RPTFWn(
 
 ### <a name="parameters"></a>Parametry
 
-*reportType* typ raportu: **_CRT_WARN**, **_CRT_ERROR**, lub **_CRT_ASSERT**.
+*reportType*<br/>
+Typ raportu: **_CRT_WARN**, **_CRT_ERROR**, lub **_CRT_ASSERT**.
 
-*Format* ciąg formatu kontroli używany do tworzenia komunikatów użytkownika.
+*Format*<br/>
+Ciąg formantu formatu używany do tworzenia wiadomości użytkownika.
 
-*argumenty* Podstawienie argumentów używana przez *format*.
+*argumenty*<br/>
+Argumenty podstawiania używane przez *format*.
 
 ## <a name="remarks"></a>Uwagi
 
-Te makra zająć *reportType* i *format* parametrów. Ponadto one może potrwać maksymalnie cztery dodatkowe argumenty oznaczony numerem dodanym na końcu nazwy makra. Na przykład **_rpt0 —** i **_rptf0 —** nie wymaga żadnych dodatkowych argumentów **_rpt1 —** i **_rptf1 —** zająć *arg1*, **_Rpt2 —** i **_rptf2 —** zająć *arg1* i **arg2**i tak dalej.
+Wszystkie te makra nie przyjmują *reportType* i *format* parametrów. Ponadto ich może zająć maksymalnie cztery dodatkowe argumenty oznaczona liczba dołączana do nazwy makra. Na przykład **_RPT0** i **_RPTF0** nie wymaga żadnych dodatkowych argumentów **_RPT1** i **_RPTF1** zająć *arg1*, **_RPT2** i **_RPTF2** zająć *arg1* i **argument2**i tak dalej.
 
-**_RPT** i **_RPTF** makra są podobne do [printf](printf-printf-l-wprintf-wprintf-l.md) działać, ponieważ może służyć do śledzić postęp aplikacji podczas debugowania. Jednak te makra są bardziej elastyczne niż **printf** ponieważ nie muszą być ujęte w **#ifdef** instrukcje, aby uniemożliwić ich wywołana w sprzedaży detalicznej kompilacji aplikacji. Tego rodzaju elastyczności jest realizowane za pośrednictwem [_DEBUG](../../c-runtime-library/debug.md) makro; **_RPT** i **_RPTF** makra są dostępne tylko podczas **_DEBUG** flaga jest zdefiniowane. Gdy **_DEBUG** jest niezdefiniowana, wywołań do tych makr są usuwane podczas przetwarzania wstępnego.
+**_RPT** i **_RPTF** makra są podobne do [printf](printf-printf-l-wprintf-wprintf-l.md) działać, ponieważ może służyć do śledzenia postępu aplikacji podczas debugowania procesu. Jednak te makra są bardziej elastyczne niż **printf** ponieważ nie muszą być ujęte w nawiasy **#ifdef** instrukcji, aby uniemożliwić ich wywoływana w przypadku kompilacji detalicznej aplikacji. Ta elastyczność to osiągnąć, używając [_DEBUG](../../c-runtime-library/debug.md) — makro; **_RPT** i **_RPTF** makra są dostępne tylko w przypadku **_DEBUG** flaga jest zdefiniowane. Gdy **_DEBUG** jest nie jest zdefiniowany, wywołania te makra są usuwane podczas przetwarzania wstępnego.
 
-**_RPTW** i **_rptfw —** makra są wersje tych makr znaków dwubajtowych. Są one podobne **wprintf** i pobierają ciągi znaków dwubajtowych jako argumenty.
+**_RPTW** i **_rptfw —** makra są wersjami znaków dwubajtowych tych makr. Są one podobne **wprintf** i ciągi znaków dwubajtowych jako argumenty.
 
-**_RPT** wywołanie makra [_crtdbgreport —](crtdbgreport-crtdbgreportw.md) funkcji, aby wygenerować raport debugowania z następującym komunikatem użytkownika. **_RPTW** wywołanie makra **_crtdbgreportw —** funkcji do generowania jednym raporcie z znaki dwubajtowe. **_RPTF** i **_rptfw —** makra utworzyć raport debugowania z liczbą plików i wierszy źródła gdzie makro raportu została wywołana, oprócz komunikat użytkownika. Zostanie utworzony komunikat użytkownika, zastępując **arg**[*n*] argumenty do *format* ciąg znaków, według reguł zdefiniowanych przez [printf](printf-printf-l-wprintf-wprintf-l.md)funkcji.
+**_RPT** wywołanie makra [_CrtDbgReport](crtdbgreport-crtdbgreportw.md) funkcję, aby wygenerować raport debugowania z komunikatem użytkownika. **_RPTW** wywołanie makra **_crtdbgreportw —** funkcję, aby wygenerować ten sam raport przy użyciu znaków dwubajtowych. **_RPTF** i **_rptfw —** makra utworzony raport debugowania ze źródłowego pliku i numer wiersza gdzie makro raportu została wywołana, dodatkowo do dla użytkownika komunikat o. Dla użytkownika komunikat o utworzeniu wstawiając **arg**[*n*] argumenty do *format* ciąg znaków, przy użyciu tych samych zasad zdefiniowanych przez [printf](printf-printf-l-wprintf-wprintf-l.md)funkcji.
 
-**_Crtdbgreport —** lub **_crtdbgreportw —** generuje raport debugowania i określa jej miejsc docelowych oparte na trybie Bieżące raportu i plik zdefiniowane dla *reportType*. [_Crtsetreportmode —](crtsetreportmode.md) i [_crtsetreportfile —](crtsetreportfile.md) funkcje są używane do definiowania miejsc docelowych dla każdego typu raportu.
+**_CrtDbgReport** lub **_crtdbgreportw —** generuje raport debugowania i określa jej miejsc docelowych w oparciu o bieżące tryby raportów i plik zdefiniowany dla *reportType*. [_CrtSetReportMode](crtsetreportmode.md) i [_CrtSetReportFile](crtsetreportfile.md) funkcje są używane do definiowania miejsca docelowe dla każdego typu raportu.
 
-Jeśli **_RPT** nosi nazwę makra i ani **_crtsetreportmode —** ani **_crtsetreportfile —** została wywołana, komunikaty są wyświetlane w następujący sposób.
+Jeśli **_RPT** nosi nazwę makra a **_CrtSetReportMode** ani **_CrtSetReportFile** została wywołana, komunikaty są wyświetlane w następujący sposób.
 
 |Typ raportu|Miejsce docelowe danych wyjściowych|
 |-----------------|------------------------|
@@ -162,9 +165,9 @@ Jeśli **_RPT** nosi nazwę makra i ani **_crtsetreportmode —** ani **_crtsetr
 |**_CRT_ERROR**|Okno podręczne. Tym samym tak, jakby `_CrtSetReportMode(_CRT_ERROR, _CRTDBG_MODE_WNDW);` jakby określono.|
 |**_CRT_ASSERT**|Taki sam jak **_CRT_ERROR**.|
 
-Gdy obiektem docelowym jest oknem komunikatu debugowania i użytkownik wybierze **ponów** przycisku **_crtdbgreport —** lub **_crtdbgreportw —** zwraca wartość 1 powoduje tych makr uruchomić Debuger, pod warunkiem, że włączone jest debugowanie programu just in time (JIT). Aby uzyskać więcej informacji o używaniu tych makr jako mechanizmu obsługi debugowania błąd, zobacz [przy użyciu makra weryfikacji i raportowania](/visualstudio/debugger/macros-for-reporting).
+Jeśli miejsce docelowe jest okna komunikatów debugowania i użytkownik wybierze **ponów próbę wykonania** przycisku **_CrtDbgReport** lub **_crtdbgreportw —** zwraca wartość 1, co powoduje tych makr rozpocząć debugera, pod warunkiem, że włączone jest debugowanie programu just-in-time (JIT). Aby uzyskać więcej informacji o używaniu tych makr, jako mechanizm obsługi błędów debugowania, zobacz [używania makr do weryfikacji i raportowania](/visualstudio/debugger/macros-for-reporting).
 
-Istnieją dwa inne makra, które Generowanie raportu debugowania. [_ASSERT](assert-asserte-assert-expr-macros.md) makro generuje raport, ale tylko wtedy, gdy jej argument wyrażenie daje w wyniku wartość FALSE. [_Asserte —](assert-asserte-assert-expr-macros.md) jest dokładnie podobnego **_ASSERT**, ale zawiera wyrażenie, które nie powiodło się w generowanym raporcie.
+Dwa inne makra istnieje, które generują raport debugowania. [_ASSERT](assert-asserte-assert-expr-macros.md) — makro generuje raport, ale tylko wtedy, gdy jej argument wyrażenie zwróci wartość FALSE. [_Asserte —](assert-asserte-assert-expr-macros.md) jest dokładnie like **_ASSERT**, ale zawiera wyrażenie zakończonych niepowodzeniem w wygenerowanym raporcie.
 
 ## <a name="requirements"></a>Wymagania
 
@@ -175,17 +178,17 @@ Istnieją dwa inne makra, które Generowanie raportu debugowania. [_ASSERT](asse
 |**_RPTW** makra|\<crtdbg.h>|
 |**_Rptfw —** makra|\<crtdbg.h>|
 
-Aby uzyskać więcej informacji o zgodności, zobacz [zgodności](../../c-runtime-library/compatibility.md).
+Aby uzyskać więcej informacji na temat zgodności, zobacz [zgodności](../../c-runtime-library/compatibility.md).
 
 ## <a name="libraries"></a>Biblioteki
 
-Wersja debugowania [biblioteki wykonawcze języka C](../../c-runtime-library/crt-library-features.md) tylko.
+Debuguj wersje [biblioteki wykonawczej C](../../c-runtime-library/crt-library-features.md) tylko.
 
-Mimo że te są makra i są pobierane przez dołączenie Crtdbg.h, aplikacja musi połączyć z jednej z bibliotek debugowania, ponieważ tych makr wywołaniem innych funkcji środowiska wykonawczego.
+Mimo że te makra są i są pobierane przez dołączenie Crtdbg.h, aplikacja musi łączyć przy użyciu jednej z bibliotek debugowania, ponieważ te makra wywołania innych funkcji wykonawczej.
 
 ## <a name="example"></a>Przykład
 
-Zapoznaj się z przykładem w [_ASSERT](assert-asserte-assert-expr-macros.md) tematu.
+Zobacz przykład w [_ASSERT](assert-asserte-assert-expr-macros.md) tematu.
 
 ## <a name="see-also"></a>Zobacz także
 

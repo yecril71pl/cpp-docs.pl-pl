@@ -13,34 +13,37 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3855da95342098c9ae260dc1d238c77f0fe69b86
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 756fbf28a73314ad4e335f658a48527f90975e55
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43752505"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44108575"
 ---
 # <a name="defaulttypenametostring-method"></a>domyślne:: (type_name):: metody ToString
-Zwraca ciąg reprezentujący bieżącego typu.  
-  
-## <a name="syntax"></a>Składnia  
-  
-```cpp  
-  
-String^ ToString()  
-```  
-  
-### <a name="return-value"></a>Wartość zwracana  
- Ciąg, który reprezentuje bieżący obiekt.  
-  
-### <a name="requirements"></a>Wymagania  
- **Minimalna obsługiwana klienta:** systemu Windows 8  
-  
- **Minimalna obsługiwana serwera:** systemu Windows Server 2012  
-  
- **Namespace:** domyślne  
-  
- **Nagłówek:** vccorlib.h  
-  
-## <a name="see-also"></a>Zobacz też  
- [domyślna przestrzeń nazw](../cppcx/default-namespace.md)
+
+Zwraca ciąg reprezentujący bieżącego typu.
+
+## <a name="syntax"></a>Składnia
+
+```cpp
+String^ ToString();
+```
+
+### <a name="return-value"></a>Wartość zwracana
+
+Ciąg, który reprezentuje bieżący obiekt.
+
+### <a name="requirements"></a>Wymagania
+
+**Minimalna obsługiwana klienta:** systemu Windows 8
+
+**Minimalna obsługiwana serwera:** systemu Windows Server 2012
+
+**Namespace:** domyślne
+
+**Nagłówek:** vccorlib.h
+
+## <a name="see-also"></a>Zobacz też
+
+[domyślna przestrzeń nazw](../cppcx/default-namespace.md)

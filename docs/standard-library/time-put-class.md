@@ -24,12 +24,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0b6c1c11a9c81123c518e3a0da3e56cc81d4cd5c
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: 02c4c537f1a420a096fbcd979580ff7b10076845
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38958932"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44106759"
 ---
 # <a name="timeput-class"></a>time_put — Klasa
 
@@ -46,10 +46,10 @@ class time_put : public locale::facet;
 ### <a name="parameters"></a>Parametry
 
 *CharType*  
- Typ używany w programie do kodowania znaków.
+Typ używany w programie do kodowania znaków.
 
 *OutputIterator*  
- Typ iteratora, do którego funkcje czasu put zapisują swoje dane wyjściowe.
+Typ iteratora, do którego funkcje czasu put zapisują swoje dane wyjściowe.
 
 ## <a name="remarks"></a>Uwagi
 
@@ -109,19 +109,19 @@ virtual iter_type do_put(
 ### <a name="parameters"></a>Parametry
 
 *next*  
- Iterator danych wyjściowych, w którym kolejność znaków reprezentująca datę i godzinę mają zostać wstawione.
+Iterator danych wyjściowych, w którym kolejność znaków reprezentująca datę i godzinę mają zostać wstawione.
 
 *_Iosbase*  
- Nieużywane.
+Nieużywane.
 
 *_Pt*  
- Data i godzina informacje są dane wyjściowe.
+Data i godzina informacje są dane wyjściowe.
 
 *_Fmt*  
- Format danych wyjściowych. Zobacz [strftime, wcsftime, _strftime_l —, _wcsftime_l —](../c-runtime-library/reference/strftime-wcsftime-strftime-l-wcsftime-l.md) prawidłowych wartości.
+Format danych wyjściowych. Zobacz [strftime, wcsftime, _strftime_l —, _wcsftime_l —](../c-runtime-library/reference/strftime-wcsftime-strftime-l-wcsftime-l.md) prawidłowych wartości.
 
 *_Mod*  
- Modyfikator dla formatu. Zobacz [strftime, wcsftime, _strftime_l —, _wcsftime_l —](../c-runtime-library/reference/strftime-wcsftime-strftime-l-wcsftime-l.md) prawidłowych wartości.
+Modyfikator dla formatu. Zobacz [strftime, wcsftime, _strftime_l —, _wcsftime_l —](../c-runtime-library/reference/strftime-wcsftime-strftime-l-wcsftime-l.md) prawidłowych wartości.
 
 ### <a name="return-value"></a>Wartość zwracana
 
@@ -172,28 +172,28 @@ iter_type put(iter_type next,
 ### <a name="parameters"></a>Parametry
 
 *next*  
- Iterator danych wyjściowych, w którym kolejność znaków reprezentująca datę i godzinę mają zostać wstawione.
+Iterator danych wyjściowych, w którym kolejność znaków reprezentująca datę i godzinę mają zostać wstawione.
 
 *_Iosbase*  
- Nieużywane.
+Nieużywane.
 
 *_Fill*  
- Znak typu `CharType` użytego do rozdzielenia.
+Znak typu `CharType` użytego do rozdzielenia.
 
 *_Pt*  
- Data i godzina informacje są dane wyjściowe.
+Data i godzina informacje są dane wyjściowe.
 
 *_Fmt*  
- Format danych wyjściowych. Zobacz [strftime, wcsftime, _strftime_l —, _wcsftime_l —](../c-runtime-library/reference/strftime-wcsftime-strftime-l-wcsftime-l.md) prawidłowych wartości.
+Format danych wyjściowych. Zobacz [strftime, wcsftime, _strftime_l —, _wcsftime_l —](../c-runtime-library/reference/strftime-wcsftime-strftime-l-wcsftime-l.md) prawidłowych wartości.
 
 *_Mod*  
- Modyfikator dla formatu. Zobacz [strftime, wcsftime, _strftime_l —, _wcsftime_l —](../c-runtime-library/reference/strftime-wcsftime-strftime-l-wcsftime-l.md) prawidłowych wartości.
+Modyfikator dla formatu. Zobacz [strftime, wcsftime, _strftime_l —, _wcsftime_l —](../c-runtime-library/reference/strftime-wcsftime-strftime-l-wcsftime-l.md) prawidłowych wartości.
 
 *pierwszy*  
- Początek ciąg formatowania danych wyjściowych. Zobacz [strftime, wcsftime, _strftime_l —, _wcsftime_l —](../c-runtime-library/reference/strftime-wcsftime-strftime-l-wcsftime-l.md) prawidłowych wartości.
+Początek ciąg formatowania danych wyjściowych. Zobacz [strftime, wcsftime, _strftime_l —, _wcsftime_l —](../c-runtime-library/reference/strftime-wcsftime-strftime-l-wcsftime-l.md) prawidłowych wartości.
 
 *ostatni*  
- Koniec ciągu formatowania danych wyjściowych. Zobacz [strftime, wcsftime, _strftime_l —, _wcsftime_l —](../c-runtime-library/reference/strftime-wcsftime-strftime-l-wcsftime-l.md) prawidłowych wartości.
+Koniec ciągu formatowania danych wyjściowych. Zobacz [strftime, wcsftime, _strftime_l —, _wcsftime_l —](../c-runtime-library/reference/strftime-wcsftime-strftime-l-wcsftime-l.md) prawidłowych wartości.
 
 ### <a name="return-value"></a>Wartość zwracana
 
@@ -257,7 +257,8 @@ explicit time_put(size_t _Refs = 0);
 
 ### <a name="parameters"></a>Parametry
 
-*_Refs* wartość całkowitą, można określić typ zarządzania pamięci dla obiektu.
+*_Refs*<br/>
+Wartość liczby całkowitej, można określić typ zarządzania pamięci dla obiektu.
 
 ### <a name="remarks"></a>Uwagi
 

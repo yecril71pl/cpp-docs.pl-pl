@@ -118,12 +118,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: aec1d5291526360157b4e1a0b5b4eff9ae9fd454
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: 66818710a1d5811f2ff52acf7f9785de09ba0c53
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38956466"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44101693"
 ---
 # <a name="iosbase-class"></a>ios_base — Klasa
 
@@ -272,11 +272,14 @@ typedef void (__cdecl *event_callback)(
 
 ### <a name="parameters"></a>Parametry
 
-*Adr_es* [zdarzeń](#event).
+*_E*<br/>
+[Zdarzeń](#event).
 
-*_Podstawowego* strumienia, w której wywołano zdarzenie.
+*_Podstawowego*<br/>
+Strumień, w której wywołano zdarzenie.
 
-*_Akceptuję* wiele zdefiniowanych przez użytkownika.
+*_I*<br/>
+Liczba zdefiniowanych przez użytkownika.
 
 ### <a name="remarks"></a>Uwagi
 
@@ -349,7 +352,8 @@ fmtflags flags(fmtflags fmtfl);
 
 ### <a name="parameters"></a>Parametry
 
-*fmtfl* nowy `fmtflags` ustawienie.
+*fmtfl*<br/>
+Nowy `fmtflags` ustawienie.
 
 ### <a name="return-value"></a>Wartość zwracana
 
@@ -499,7 +503,8 @@ locale imbue(const locale& _Loc);
 
 ### <a name="parameters"></a>Parametry
 
-*_Loc* nowych ustawień regionalnych.
+*_Loc*<br/>
+Nowe ustawienie regionalne.
 
 ### <a name="return-value"></a>Wartość zwracana
 
@@ -575,7 +580,8 @@ long& iword(int idx);
 
 ### <a name="parameters"></a>Parametry
 
-*idx* indeks wartości do przechowywania jako `iword`.
+*idx*<br/>
+Indeks wartości do przechowywania jako `iword`.
 
 ### <a name="remarks"></a>Uwagi
 
@@ -649,7 +655,8 @@ ios_base& operator=(const ios_base& right);
 
 ### <a name="parameters"></a>Parametry
 
-*prawy* obiektu typu `ios_base`.
+*right*<br/>
+Obiekt typu `ios_base`.
 
 ### <a name="return-value"></a>Wartość zwracana
 
@@ -672,7 +679,8 @@ streamsize precision(streamsize _Prec);
 
 ### <a name="parameters"></a>Parametry
 
-*_Prec* liczbę cyfr znaczących, aby wyświetlić lub liczbę cyfr po punkcie dziesiętnym w stałej cyfrowym.
+*_Prec*<br/>
+Liczba cyfr znaczących, aby wyświetlić, lub liczbę cyfr po punkcie dziesiętnym w stałej cyfrowym.
 
 ### <a name="return-value"></a>Wartość zwracana
 
@@ -716,7 +724,8 @@ void *& pword(int _Idx);
 
 ### <a name="parameters"></a>Parametry
 
-*_Idx* indeks wartości do przechowywania jako `pword`.
+*_Idx*<br/>
+Indeks wartości do przechowywania jako `pword`.
 
 ### <a name="remarks"></a>Uwagi
 
@@ -741,9 +750,11 @@ void register_callback(
 
 ### <a name="parameters"></a>Parametry
 
-*nazwy pfn* wskaźnik do funkcji wywołania zwrotnego.
+*nazwy pfn*<br/>
+Wskaźnik do funkcji wywołania zwrotnego.
 
-*idx* wiele zdefiniowanych przez użytkownika.
+*idx*<br/>
+Liczba zdefiniowanych przez użytkownika.
 
 ### <a name="remarks"></a>Uwagi
 
@@ -901,17 +912,19 @@ fmtflags setf(
 
 ### <a name="parameters"></a>Parametry
 
-*_Maska* flagi, aby włączyć.
+*_Maska*<br/>
+Flagi, aby włączyć.
 
-*_Unset* flagi, aby wyłączyć.
+*_Unset*<br/>
+Flagi, aby wyłączyć.
 
 ### <a name="return-value"></a>Wartość zwracana
 
-    The previous format flags
+Poprzednie flagi formatu
 
 ### <a name="remarks"></a>Uwagi
 
-    The first member function effectively calls [flags](#flags)(_ *Mask* &#124; \_ *Flags*) (set selected bits) and then returns the previous format flags. The second member function effectively calls **flags**(\_ *Mask* **& fmtfl, flags& ~**`_Mask`) (replace selected bits under a mask) and then returns the previous format flags.
+Pierwsza funkcja elementu członkowskiego skutecznie wywołuje [flagi](#flags)(_ *maski* &#124; \_ *flagi*) (Ustaw wybrane usługi bits), a następnie zwraca poprzedniego flagi formatu. Funkcja drugiego członka skutecznie wywołuje **flagi**(\_ *maski* **& fmtfl, flagi & ~**`_Mask`) (Zastąp wybrany bitów pod maską) a następnie zwraca poprzedniego flagi formatu.
 
 ### <a name="example"></a>Przykład
 
@@ -949,15 +962,16 @@ static bool sync_with_stdio(
 
 ### <a name="parameters"></a>Parametry
 
-*_Sync* tego, czy wszystkie strumienie są zsynchronizowane z `stdio`.
+*_Sync*<br/>
+Czy wszystkie strumienie są zsynchronizowane z `stdio`.
 
 ### <a name="return-value"></a>Wartość zwracana
 
-    Previous setting for this function.
+Poprzednie ustawienia dla tej funkcji.
 
 ### <a name="remarks"></a>Uwagi
 
-    The static member function stores a `stdio` sync flag, which is initially **true**. When **true**, this flag ensures that operations on the same file are properly synchronized between the [iostreams](../standard-library/iostreams-conventions.md) functions and those defined in the C++ Standard Library. Otherwise, synchronization may or may not be guaranteed, but performance may be improved. The function stores *_Sync* in the `stdio` sync flag and returns its previous stored value. You can call it reliably only before performing any operations on the standard streams.
+Magazyny funkcja statycznej składowej `stdio` synchronizacji Flaga, która jest początkowo **true**. Podczas **true**, ta flaga gwarantuje, że operacje na tym samym pliku są poprawnie synchronizowane między [iostreams](../standard-library/iostreams-conventions.md) funkcje oraz tymi określonymi w standardowej biblioteki języka C++. W przeciwnym razie synchronizacja może lub nie ma gwarancji, ale można poprawić wydajność. Magazyny funkcji *_Sync* w `stdio` synchronizacji flagę i zwraca jego poprzednią wartość przechowywanych. Można też wywołać niezawodnie tylko przed wykonaniem jakichkolwiek działań na standardowych strumieni.
 
 ## <a name="unsetf"></a> ios_base::unsetf
 
@@ -971,15 +985,16 @@ void unsetf(
 
 ### <a name="parameters"></a>Parametry
 
-*_Maska* flagi, które chcesz wyłączyć.
+*_Maska*<br/>
+Flagi, które chcesz wyłączyć.
 
 ### <a name="remarks"></a>Uwagi
 
-    The member function effectively calls [flags](#flags)(`~`*_Mask* **& flags**) (clear selected bits).
+Funkcja elementu członkowskiego skutecznie wywołuje [flagi](#flags)(`~`*_maska* **& flagi**) (Wyczyść wybrane usługi bits).
 
 ### <a name="example"></a>Przykład
 
-    See [ios_base::setf](#setf) for a sample of using `unsetf`.
+Zobacz [ios_base::setf](#setf) przykład użycia `unsetf`.
 
 ## <a name="width"></a> ios_base::Width
 
@@ -994,15 +1009,16 @@ streamsize width(
 
 ### <a name="parameters"></a>Parametry
 
-*_Wide* żądany rozmiar strumienia wyjściowego.
+*_Wide*<br/>
+Żądany rozmiar strumienia wyjściowego.
 
 ### <a name="return-value"></a>Wartość zwracana
 
-    The current width setting.
+Bieżące ustawienie szerokości.
 
 ### <a name="remarks"></a>Uwagi
 
-    The first member function returns the stored field width. The second member function stores *_Wide* in the field width and returns its previous stored value.
+Pierwsza funkcja elementu członkowskiego Zwraca szerokość pola przechowywanych. Drugi magazynów funkcja elementu członkowskiego *_Wide* szerokość pola i zwraca jego poprzedniej przechowywaną wartość.
 
 ### <a name="example"></a>Przykład
 
@@ -1027,7 +1043,7 @@ int main( ) {
 
 ## <a name="xalloc"></a> ios_base::xalloc
 
-    Specifies that a variable is part of the stream.
+Określa, czy zmienna jest częścią strumienia.
 
 ```cpp
 static int xalloc( );
@@ -1035,11 +1051,11 @@ static int xalloc( );
 
 ### <a name="return-value"></a>Wartość zwracana
 
-    The static member function returns a stored static value, which it increments on each call.
+Funkcja statycznej składowej zwraca przechowywaną wartość statyczne, które zwiększa przy każdym wywołaniu.
 
 ### <a name="remarks"></a>Uwagi
 
-    You can use the return value as a unique index argument when calling the member functions [iword](#iword) or [pword](#pword).
+Użyj wartości zwracanej jako argumenty unikatowy indeks podczas wywoływania funkcji elementu członkowskiego [iword —](#iword) lub [pword —](#pword).
 
 ### <a name="example"></a>Przykład
 

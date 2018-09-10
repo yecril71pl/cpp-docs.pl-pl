@@ -1,5 +1,5 @@
 ---
-title: _Static_assert — makro | Dokumentacja firmy Microsoft
+title: _STATIC_ASSERT — makro | Dokumentacja firmy Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -28,16 +28,16 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: bbbab8314a038d796ebd1a13342f3054e59f3e68
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 8eda76666679b133b2d5486d21cd4c8e24d1fdf3
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32407369"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44105086"
 ---
 # <a name="staticassert-macro"></a>_STATIC_ASSERT — Makro
 
-Oceń wyrażenia w czasie kompilacji i generuje błąd, gdy wynik jest **FALSE**.
+Ocena wyrażenia w czasie kompilacji i wygenerują błąd, jeśli wynik to **FALSE**.
 
 ## <a name="syntax"></a>Składnia
 
@@ -49,15 +49,16 @@ _STATIC_ASSERT(
 
 ### <a name="parameters"></a>Parametry
 
-*booleanExpression* wyrażenia (w tym wskaźników), którego wynikiem do różną od zera (**TRUE**) lub równa 0 (**FALSE**).
+*booleanExpression*<br/>
+Wyrażenie (w tym wskaźniki) obliczane na wartość różną od zera (**TRUE**) lub równa 0 (**FALSE**).
 
 ## <a name="remarks"></a>Uwagi
 
-Przypomina to makro [_ASSERT i _asserte — makra](assert-asserte-assert-expr-macros.md), ale *booleanExpression* jest oceniane w czasie kompilacji zamiast w czasie wykonywania. Jeśli *booleanExpression* daje w wyniku **FALSE** (0), [C2466 błąd kompilatora](../../error-messages/compiler-errors-1/compiler-error-c2466.md) jest generowany.
+Przypomina to makro [_ASSERT i _asserte — makra](assert-asserte-assert-expr-macros.md), chyba że *booleanExpression* jest obliczane w czasie kompilacji, a nie w czasie wykonywania. Jeśli *booleanExpression* daje w wyniku **FALSE** (0), [błąd kompilatora C2466](../../error-messages/compiler-errors-1/compiler-error-c2466.md) jest generowany.
 
 ## <a name="example"></a>Przykład
 
-W tym przykładzie, musimy sprawdzić czy [sizeof](../../c-language/sizeof-operator-c.md) **int** jest większa niż lub równa 2 bajty oraz tego, czy [sizeof](../../c-language/sizeof-operator-c.md) **długi** jest 1 bajt. Program nie zostanie skompilowany i będzie generować [C2466 błąd kompilatora](../../error-messages/compiler-errors-1/compiler-error-c2466.md) ponieważ **długi** jest większy niż 1 bajt.
+W tym przykładzie, możemy sprawdzić, czy [sizeof](../../c-language/sizeof-operator-c.md) **int** jest większy niż lub równa 2 bajty oraz tego, czy [sizeof](../../c-language/sizeof-operator-c.md) **długie** jest 1 bajt. Program nie zostanie skompilowany i będzie generować [błąd kompilatora C2466](../../error-messages/compiler-errors-1/compiler-error-c2466.md) ponieważ **długie** jest większy niż 1 bajt.
 
 ```C
 // crt__static_assert.c

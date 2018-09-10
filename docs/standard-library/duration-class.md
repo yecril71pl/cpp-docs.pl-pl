@@ -21,12 +21,12 @@ helpviewer_keywords:
 - std::chrono [C++], duration
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a4b85fd369e82ceab0a6b5255267e32d864eab67
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: bb4d2c813b53a180f13d5047dc0d78dae98fe59f
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38956869"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44100914"
 ---
 # <a name="duration-class"></a>duration — Klasa
 
@@ -120,13 +120,17 @@ constexpr duration(const duration<Rep2, Period2>& Dur);
 
 ### <a name="parameters"></a>Parametry
 
-*Rep2* typ arytmetyczny, do reprezentowania liczby taktów.
+*Rep2*<br/>
+Typ arytmetyczny do reprezentowania liczby taktów.
 
-*Period2* A `std::ratio` specjalizacja szablonu do reprezentowania okresu taktu w jednostkach czasu w sekundach.
+*Period2*<br/>
+A `std::ratio` specjalizacja szablonu do reprezentowania okresu taktu w jednostkach czasu w sekundach.
 
-*R* liczby taktów domyślny okres.
+*R*<br/>
+Liczba impulsów domyślny okres.
 
-*Czas trwania* liczby taktów okresie zdefiniowanym przez *Period2*.
+*Czas trwania*<br/>
+Liczba impulsów okresie zdefiniowanym przez *Period2*.
 
 ### <a name="remarks"></a>Uwagi
 
@@ -202,7 +206,8 @@ duration& operator%=(const duration& Div);
 
 ### <a name="parameters"></a>Parametry
 
-*DIV* w przypadku pierwszej metody *Div* reprezentuje liczbę cykli. W przypadku drugiej metody *Div* jest `duration` obiekt, który zawiera liczbę cykli.
+*Div*<br/>
+W przypadku pierwszej metody *Div* reprezentuje liczbę cykli. W przypadku drugiej metody *Div* jest `duration` obiekt, który zawiera liczbę cykli.
 
 ### <a name="return-value"></a>Wartość zwracana
 
@@ -218,7 +223,8 @@ duration& operator*=(const rep& Mult);
 
 ### <a name="parameters"></a>Parametry
 
-*Iloczyn* wartości typu, który jest określony przez `duration::rep`.
+*Iloczyn*<br/>
+Wartość typu, który jest określony przez `duration::rep`.
 
 ### <a name="return-value"></a>Wartość zwracana
 
@@ -234,7 +240,8 @@ duration& operator/=(const rep& Div);
 
 ### <a name="parameters"></a>Parametry
 
-*DIV* wartości typu, który jest określony przez `duration::rep`.
+*Div*<br/>
+Wartość typu, który jest określony przez `duration::rep`.
 
 ### <a name="return-value"></a>Wartość zwracana
 
@@ -274,7 +281,8 @@ duration& operator+=(const duration& Dur);
 
 ### <a name="parameters"></a>Parametry
 
-*Czas trwania* A `duration` obiektu.
+*Czas trwania*<br/>
+Element `duration` obiektu.
 
 ### <a name="return-value"></a>Wartość zwracana
 
@@ -290,7 +298,8 @@ duration& operator-=(const duration& Dur);
 
 ### <a name="parameters"></a>Parametry
 
-*Czas trwania* A `duration` obiektu.
+*Czas trwania*<br/>
+Element `duration` obiektu.
 
 ### <a name="return-value"></a>Wartość zwracana
 
@@ -314,7 +323,8 @@ duration& operator%=(const rep& Div);duration& operator%=(const duration& Div);
 
 ### <a name="parameters"></a>Parametry
 
-*DIV* dzielnika, czyli obiektu czasu trwania lub wartość, która reprezentuje liczby cykli.
+*Div*<br/>
+Dzielnik obiektu czasu trwania lub wartość, która reprezentuje liczby cykli.
 
 ### <a name="remarks"></a>Uwagi
 

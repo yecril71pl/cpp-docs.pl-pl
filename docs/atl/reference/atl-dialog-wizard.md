@@ -17,12 +17,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: fe3311e46ea28424717a0274fbe9e956610cdc54
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 3a6854a3b11d5c5850d790e749789e91a7cb986a
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43767715"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44110047"
 ---
 # <a name="atl-dialog-wizard"></a>Kreator okna dialogowego ATL
 
@@ -35,7 +35,7 @@ Kreator wstawia do pliku nagłówka [mapy komunikatów](../../atl/message-maps-a
 **Krótka nazwa**  
 Ustawia skróconą nazwę obiektu okna dialogowego ATL. Podana nazwa określa nazwę klasy i nazwy (.cpp i .h) plików, chyba że zmienił się tych pól indywidualnie.
 
-`Class`  
+**Class**  
 Ustawia nazwę klasy, która ma zostać utworzony. Ta nazwa jest na podstawie nazwy podane **krótką nazwę**, poprzedzającą "C", typowy prefiks dla nazwy klasy.
 
 **plik .h**  

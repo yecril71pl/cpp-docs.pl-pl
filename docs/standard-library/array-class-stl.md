@@ -106,12 +106,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: bf54b113e5eb3750d02b887945345880dca94775
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: ac07884d3ac7390bdb3aba4144c1c436041434f0
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38960046"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44110061"
 ---
 # <a name="array-class-c-standard-library"></a>Array — klasa (standardowa biblioteka C++)
 
@@ -202,7 +202,8 @@ array(const array& right);
 
 ### <a name="parameters"></a>Parametry
 
-*prawy* obiektu lub zakres do wstawienia.
+*right*<br/>
+Obiekt lub zakresu do wstawienia.
 
 ### <a name="remarks"></a>Uwagi
 
@@ -257,7 +258,8 @@ void assign(const Ty& val);
 
 ### <a name="parameters"></a>Parametry
 
-*Val* wartość do przypisania.
+*Val*<br/>
+Wartość do przypisania.
 
 ### <a name="remarks"></a>Uwagi
 
@@ -313,7 +315,8 @@ constexpr const_reference at(size_type off) const;
 
 ### <a name="parameters"></a>Parametry
 
-*Wyłącz* pozycji elementu, aby uzyskać dostęp.
+*Wyłączone*<br/>
+Pozycja elementu, aby uzyskać dostęp.
 
 ### <a name="remarks"></a>Uwagi
 
@@ -1173,7 +1176,8 @@ constexpr const_reference operator[](size_type off) const;
 
 ### <a name="parameters"></a>Parametry
 
-*Wyłącz* pozycji elementu, aby uzyskać dostęp.
+*Wyłączone*<br/>
+Pozycja elementu, aby uzyskać dostęp.
 
 ### <a name="remarks"></a>Uwagi
 
@@ -1225,7 +1229,8 @@ array <Value>%  operator=(array <Value>% right);
 
 ### <a name="parameters"></a>Parametry
 
-*prawy* kontenera do skopiowania.
+*right*<br/>
+Kontener do skopiowania.
 
 ### <a name="remarks"></a>Uwagi
 
@@ -1602,7 +1607,8 @@ void swap(array& right);
 
 ### <a name="parameters"></a>Parametry
 
-*prawy* tablicy do wymiany zawartości z.
+*right*<br/>
+Tablica do wymiany zawartości z.
 
 ### <a name="remarks"></a>Uwagi
 

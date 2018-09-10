@@ -50,12 +50,12 @@ helpviewer_keywords:
 - std::allocator_traits [C++], select_on_container_copy_construction
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9bae212ec3d8edfacc7cd3afb37ab3c13dc11aef
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: fb00f7205dcb470785c9682335341ca07935aae5
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38962453"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44110441"
 ---
 # <a name="allocatortraits-class"></a>allocator_traits — klasa
 
@@ -116,11 +116,14 @@ static pointer allocate(Alloc& al, size_type count,
 
 ### <a name="parameters"></a>Parametry
 
-*Al* obiekt programu przydzielania.
+*Al*<br/>
+Obiekt programu przydzielania.
 
-*Liczba* liczbę elementów do przydzielenia.
+*Liczba*<br/>
+Liczba elementów do przydzielenia.
 
-*Wskazówka* A `const_pointer` może ułatwiającymi obiekt alokatora który spełnia żądanie dla magazynu, znajdując adres przydzielonego obiektu przed żądaniem. Wskaźnikiem typu null, jest traktowany jako bez wskazówki.
+*Wskazówka*<br/>
+Element `const_pointer` może ułatwiającymi obiekt alokatora który spełnia żądanie dla magazynu, znajdując adres przydzielonego obiektu przed żądaniem. Wskaźnikiem typu null, jest traktowany jako bez wskazówki.
 
 ### <a name="return-value"></a>Wartość zwracana
 
@@ -141,11 +144,14 @@ static void construct(Alloc& al, Uty* ptr, Types&&... args);
 
 ### <a name="parameters"></a>Parametry
 
-*Al* obiekt programu przydzielania.
+*Al*<br/>
+Obiekt programu przydzielania.
 
-*PTR* wskaźnik do lokalizacji, w której obiekt ma zostać skonstruowane.
+*ptr*<br/>
+Wskaźnik do lokalizacji, w której obiekt ma zostać skonstruowane.
 
-*argumenty* listy argumentów, który jest przekazywany do konstruktora obiektu.
+*argumenty*<br/>
+Lista argumentów jest przekazywany do konstruktora obiektu.
 
 ### <a name="remarks"></a>Uwagi
 
@@ -163,11 +169,14 @@ static void deallocate(Alloc al,
 
 ### <a name="parameters"></a>Parametry
 
-*Al* obiekt programu przydzielania.
+*Al*<br/>
+Obiekt programu przydzielania.
 
-*PTR* wskaźnika, począwszy od lokalizacji obiektów, które można cofnąć przydziału.
+*ptr*<br/>
+Wskaźnik do począwszy od lokalizacji obiektów, które można cofnąć przydziału.
 
-*Liczba* liczbę obiektów, które można cofnąć alokacji.
+*Liczba*<br/>
+Liczba obiektów, które można cofnąć alokacji.
 
 ### <a name="remarks"></a>Uwagi
 
@@ -186,9 +195,11 @@ static void destroy(Alloc& al, Uty* ptr);
 
 ### <a name="parameters"></a>Parametry
 
-*Al* obiekt programu przydzielania.
+*Al*<br/>
+Obiekt programu przydzielania.
 
-*PTR* wskaźnik do lokalizacji obiektu.
+*ptr*<br/>
+Wskaźnik do lokalizacji obiektu.
 
 ### <a name="remarks"></a>Uwagi
 
@@ -204,7 +215,8 @@ static size_type max_size(const Alloc& al);
 
 ### <a name="parameters"></a>Parametry
 
-*Al* obiekt programu przydzielania.
+*Al*<br/>
+Obiekt programu przydzielania.
 
 ### <a name="remarks"></a>Uwagi
 
@@ -220,7 +232,8 @@ static Alloc select_on_container_copy_construction(const Alloc& al);
 
 ### <a name="parameters"></a>Parametry
 
-*Al* obiekt programu przydzielania.
+*Al*<br/>
+Obiekt programu przydzielania.
 
 ### <a name="return-value"></a>Wartość zwracana
 

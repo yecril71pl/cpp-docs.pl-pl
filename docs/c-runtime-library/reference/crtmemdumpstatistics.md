@@ -32,16 +32,16 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 688cef94721ac7ea3a36ccd375185b922b23a15f
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 655d9be75fa031cc2cbebfd65c4634528f410e85
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32395607"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44110529"
 ---
 # <a name="crtmemdumpstatistics"></a>_CrtMemDumpStatistics
 
-Zrzuty debugowania informacje nagłówka stanu sterty określonego użytkownika i przechowywane w formie (tylko wersja do debugowania).
+Zrzuca informacji nagłówka debugowania stanu sterty określony w formie czytelny dla użytkownika (tylko wersja debugowania).
 
 ## <a name="syntax"></a>Składnia
 
@@ -53,15 +53,16 @@ void _CrtMemDumpStatistics(
 
 ### <a name="parameters"></a>Parametry
 
-*Stan* wskaźnik do stanu sterty celu zrzutu.
+*state*<br/>
+Wskaźnik stanu sterty do zrzutu.
 
 ## <a name="remarks"></a>Uwagi
 
-**_Crtmemdumpstatistics —** funkcja zrzuty debugowania informacje nagłówka dla określonego stanu sterty w postaci czytelny dla użytkownika. Statystyki zrzutu można przez aplikację do śledzenia alokacji i wykrywać problemy z pamięcią. Stan pamięci może zawierać stanu sterty określonych lub różnicę między dwoma stanami. Gdy [_DEBUG](../../c-runtime-library/debug.md) nie jest zdefiniowany, wywołań **_crtmemdumpstatistics —** są usuwane podczas przetwarzania wstępnego.
+**_Crtmemdumpstatistics —** funkcja zrzuty informacji nagłówka debugowania dla określonego stanu sterty w postaci czytelny dla użytkownika. Statystyki zrzutu może służyć przez aplikację do śledzenia alokacji i wykrycia problemów z pamięcią. Stan pamięci może zawierać stanu sterty określonych lub różnicę między dwoma stanami. Gdy [_DEBUG](../../c-runtime-library/debug.md) nie jest zdefiniowany, wywołania **_crtmemdumpstatistics —** są usuwane podczas przetwarzania wstępnego.
 
-*Stanu* parametru musi być wskaźnikiem do **_crtmemstate —** strukturę, która ma zostać wypełnione podczas [_crtmemcheckpoint —](crtmemcheckpoint.md) lub zwróconych przez [_ Crtmemdifference —](crtmemdifference.md) przed **_crtmemdumpstatistics —** jest wywoływana. Jeśli *stanu* jest **NULL**, program obsługi nieprawidłowych parametrów zostanie wywołany, zgodnie z opisem w [sprawdzanie poprawności parametru](../../c-runtime-library/parameter-validation.md). Jeśli jest dozwolone wykonywanie, aby kontynuować, **errno** ustawiono **einval —** i nie podjęto żadnej akcji. Aby uzyskać więcej informacji, zobacz [errno _doserrno —, _sys_errlist — i _sys_nerr —](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
+*Stanu* parametru musi być wskaźnikiem do **_CrtMemState** strukturę, która ma zostać wypełnione podczas [_crtmemcheckpoint —](crtmemcheckpoint.md) lub zwróconych przez [_ Crtmemdifference —](crtmemdifference.md) przed **_crtmemdumpstatistics —** jest wywoływana. Jeśli *stanu* jest **NULL**, procedura obsługi nieprawidłowego parametru zostanie wywołana, zgodnie z opisem w [Parameter Validation](../../c-runtime-library/parameter-validation.md). Jeśli wykonanie może być kontynuowane, **errno** ustawiono **EINVAL** i nie podjęto żadnej akcji. Aby uzyskać więcej informacji, zobacz [errno, _doserrno, _sys_errlist i _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
 
-Aby uzyskać więcej informacji na temat funkcji stanu sterty i **_crtmemstate —** struktury, zobacz [funkcje raportowania stanu sterty](/visualstudio/debugger/crt-debug-heap-details). Aby uzyskać więcej informacji dotyczących sposobu bloki pamięci są przydzielone, zainicjować i zarządzane w wersji podstawowej sterty debugowania, zobacz [szczegóły dotyczące sterty debugowania CRT](/visualstudio/debugger/crt-debug-heap-details).
+Aby uzyskać więcej informacji o funkcjach stanu sterty i **_CrtMemState** struktury, zobacz [funkcje raportowania stanu sterty](/visualstudio/debugger/crt-debug-heap-details). Aby uzyskać więcej informacji na temat sposobu bloki pamięci są przydzielane, inicjowane i zarządzane w wersji debugowania podstawowej sterty, zobacz [szczegóły dotyczące sterty debugowania CRT](/visualstudio/debugger/crt-debug-heap-details).
 
 ## <a name="requirements"></a>Wymagania
 
@@ -69,9 +70,9 @@ Aby uzyskać więcej informacji na temat funkcji stanu sterty i **_crtmemstate �
 |-------------|---------------------|----------------------|
 |**_CrtMemDumpStatistics**|\<crtdbg.h>|\<errno.h>|
 
-Aby uzyskać więcej informacji o zgodności, zobacz [zgodności](../../c-runtime-library/compatibility.md).
+Aby uzyskać więcej informacji na temat zgodności, zobacz [zgodności](../../c-runtime-library/compatibility.md).
 
-**Biblioteki:** wersja debugowania [Biblioteka CRT — funkcje](../../c-runtime-library/crt-library-features.md) tylko.
+**Biblioteki:** Debuguj wersje [funkcje biblioteki CRT](../../c-runtime-library/crt-library-features.md) tylko.
 
 ## <a name="see-also"></a>Zobacz także
 

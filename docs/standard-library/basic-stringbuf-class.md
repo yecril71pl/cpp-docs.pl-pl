@@ -40,12 +40,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 58765b254069524f28b5edd171c10da92ab2f457
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: 0b8bb688a0a79c82d4a8baa13ef2841956b5e331
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38956153"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44101719"
 ---
 # <a name="basicstringbuf-class"></a>basic_stringbuf — Klasa
 
@@ -61,11 +61,14 @@ class basic_stringbuf : public basic_streambuf<Elem, Tr>
 
 ### <a name="parameters"></a>Parametry
 
-*ALLOC* klasa alokatora.
+*Alokacji*<br/>
+Klasa alokatora.
 
-*Elem* typ elementu podstawowego ciągu.
+*Elem*<br/>
+Typ elementu podstawowego ciągu.
 
-*TR* cech przeznaczone specjalnie dla elementu podstawowego ciągu.
+*TR*<br/>
+Cechy znaków przeznaczone specjalnie dla elementu podstawowego ciągu.
 
 ## <a name="remarks"></a>Uwagi
 
@@ -135,9 +138,11 @@ basic_stringbuf(
 
 ### <a name="parameters"></a>Parametry
 
-*_Tryb* jedno z wyliczeń w [ios_base::openmode](../standard-library/ios-base-class.md#openmode).
+*_Tryb*<br/>
+Jedno z wyliczeń w [ios_base::openmode](../standard-library/ios-base-class.md#openmode).
 
-*str* obiektu typu [basic_string](../standard-library/basic-string-class.md).
+*str*<br/>
+Obiekt typu [basic_string](../standard-library/basic-string-class.md).
 
 ### <a name="remarks"></a>Uwagi
 
@@ -179,7 +184,8 @@ virtual int_type overflow(int_type _Meta = traits_type::eof());
 
 ### <a name="parameters"></a>Parametry
 
-*_Meta* znak wstawiania do bufora, lub `traits_type::eof`.
+*_Meta*<br/>
+Znak do wstawienia do określonego bufora lub `traits_type::eof`.
 
 ### <a name="return-value"></a>Wartość zwracana
 
@@ -203,7 +209,8 @@ virtual int_type pbackfail(int_type _Meta = traits_type::eof());
 
 ### <a name="parameters"></a>Parametry
 
-*_Meta* znak wstawiania do bufora, lub `traits_type::eof`.
+*_Meta*<br/>
+Znak do wstawienia do określonego bufora lub `traits_type::eof`.
 
 ### <a name="return-value"></a>Wartość zwracana
 
@@ -238,11 +245,14 @@ virtual pos_type seekoff(
 
 ### <a name="parameters"></a>Parametry
 
-*_Off* położenie do wyszukania dla względem *_Way*. Aby uzyskać więcej informacji, zobacz [basic_stringbuf::off_type](#off_type).
+*_Off*<br/>
+Położenie do wyszukania dla względem *_Way*. Aby uzyskać więcej informacji, zobacz [basic_stringbuf::off_type](#off_type).
 
-*_Way* punkt początkowy dla operacji przesunięcia. Zobacz [ios_base::seekdir](../standard-library/ios-base-class.md#seekdir) uzyskać odpowiednie wartości.
+*_Way*<br/>
+Punkt początkowy dla operacji przesunięcia. Zobacz [ios_base::seekdir](../standard-library/ios-base-class.md#seekdir) uzyskać odpowiednie wartości.
 
-*_Tryb* Określa tryb pozycję wskaźnika. Wartość domyślna to umożliwia modyfikowanie, Odczyt i zapis pozycji. Aby uzyskać więcej informacji, zobacz [ios_base::openmode](../standard-library/ios-base-class.md#openmode).
+*_Tryb*<br/>
+Określa tryb pozycję wskaźnika. Wartość domyślna to umożliwia modyfikowanie, Odczyt i zapis pozycji. Aby uzyskać więcej informacji, zobacz [ios_base::openmode](../standard-library/ios-base-class.md#openmode).
 
 ### <a name="return-value"></a>Wartość zwracana
 
@@ -274,9 +284,11 @@ virtual pos_type seekpos(pos_type _Sp, ios_base::openmode _Mode = ios_base::in |
 
 ### <a name="parameters"></a>Parametry
 
-*_Sp* położenie do wyszukania dla.
+*_Sp*<br/>
+Położenie do wyszukania dla.
 
-*_Tryb* Określa tryb pozycję wskaźnika. Wartość domyślna to umożliwia modyfikowanie, Odczyt i zapis pozycji.
+*_Tryb*<br/>
+Określa tryb pozycję wskaźnika. Wartość domyślna to umożliwia modyfikowanie, Odczyt i zapis pozycji.
 
 ### <a name="return-value"></a>Wartość zwracana
 
@@ -300,7 +312,8 @@ void str(
 
 ### <a name="parameters"></a>Parametry
 
-*_Newstr* nowego ciągu znaków.
+*_Newstr*<br/>
+Nowy ciąg.
 
 ### <a name="return-value"></a>Wartość zwracana
 
@@ -388,7 +401,8 @@ void basic_stringbuf<T>::swap(basic_stringbuf& other)
 
 ### <a name="parameters"></a>Parametry
 
-*inne* których zawartość zostanie zamienione basic_stringbuf — za pomocą tego basic_stringbuf —.
+*other*<br/>
+Basic_stringbuf — których zawartość zostanie zamienione z tym basic_stringbuf —.
 
 ### <a name="remarks"></a>Uwagi
 
@@ -402,7 +416,8 @@ basic_stringbuf& basic_stringbuf:: operator=(const basic_stringbuf& other)
 
 ### <a name="parameters"></a>Parametry
 
-*inne* basic_stringbuf —, w których zawartość, w tym cech ustawień regionalnych, które zostaną przypisane do stringbuf po lewej stronie operatora.
+*other*<br/>
+Basic_stringbuf —, których zawartość, w tym cech ustawień regionalnych, które zostaną przypisane do stringbuf po lewej stronie operatora.
 
 ### <a name="remarks"></a>Uwagi
 

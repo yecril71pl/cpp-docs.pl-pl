@@ -1,5 +1,5 @@
 ---
-title: _ftime —, _ftime32 —, _ftime64 — | Dokumentacja firmy Microsoft
+title: _ftime _ftime32, _ftime64 | Dokumentacja firmy Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -45,16 +45,16 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9fd388e2963a0e28389fbf7cc2c4bd146ac9b61e
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 8942dbaddcc1f4ab1ec5d571d08d95d8669d302d
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32401441"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44107058"
 ---
 # <a name="ftime-ftime32-ftime64"></a>_ftime, _ftime32, _ftime64
 
-Pobierz bieżący czas. Bezpieczniejsza wersje te funkcje są dostępne; zobacz [_ftime_s —, _ftime32_s —, _ftime64_s —](ftime-s-ftime32-s-ftime64-s.md).
+Pobierz bieżący czas. Bardziej bezpieczne wersje tych funkcji są dostępne; zobacz [_ftime_s _ftime32_s, _ftime64_s](ftime-s-ftime32-s-ftime64-s.md).
 
 ## <a name="syntax"></a>Składnia
 
@@ -66,34 +66,35 @@ void _ftime64( struct __timeb64 *timeptr );
 
 ### <a name="parameters"></a>Parametry
 
-*timeptr* wskaźnik do **_timeb —**, **__timeb32**, lub **__timeb64 —** struktury.
+*timeptr*<br/>
+Wskaźnik do **_timeb —**, **__timeb32**, lub **__timeb64 —** struktury.
 
 ## <a name="remarks"></a>Uwagi
 
-**_Ftime —** funkcja pobiera bieżącym czasem lokalnym i zapisuje go w strukturze wskazywana przez *timeptr*. **_Timeb —**, **__timeb32**, i **__timeb64 —** struktury są zdefiniowane w \<sys\\timeb.h >. Zawierają one cztery pola, które są wymienione w poniższej tabeli.
+**_Ftime** funkcja pobiera bieżącym czasem lokalnym i zapisuje go w strukturze wskazywany przez *timeptr*. **_Timeb —**, **__timeb32**, i **__timeb64 —** struktury są zdefiniowane w \<sys\\timeb.h >. Zawierają one cztery pola, które są wymienione w poniższej tabeli.
 
 |Pole|Opis|
 |-|-|
-|**dstflag**|Różna od zera, jeśli czasu letniego działa obecnie na podstawie lokalnej strefy czasowej. (Zobacz [_tzset —](tzset.md) wyjaśnienie sposobu czasu jest określany.)|
-|**millitm**|Ułamek sekund (w milisekundach).|
-|**Czas**|Czas w sekundach od północy (00: 00:00), 1 stycznia 1970, uniwersalny czas koordynowany (UTC).|
-|**Strefa czasowa**|Różnica (w minutach), przenoszenie westward, między czasem UTC i czasem lokalnym. Wartość **strefy czasowej** jest ustawiany na wartość zmiennej globalnej **_timezone** (zobacz **_tzset —**).|
+|**dstflag**|Różna od zera, jeśli czas letni jest obecnie obowiązuje dla lokalnej strefy czasowej. (Zobacz [_tzset —](tzset.md) poznać sposób ustalania czasu letniego.)|
+|**millitm**|Część 1 sekunda w milisekundach.|
+|**czas**|Czas w sekundach, które upłynęły od północy (00: 00:00), 1 stycznia 1970 r., skoordynowanego czasu uniwersalnego (UTC).|
+|**Strefa czasowa**|Różnica (w minutach), westward, przenoszenie między czasem UTC i czasem lokalnym. Wartość **strefa czasowa** jest ustawiany na wartość zmiennej globalnej **_timezone** (zobacz **_tzset —**).|
 
-**_Ftime64 —** funkcji, która używa **__timeb64 —** struktury, umożliwia tworzenie plików daty wyrażane się za pośrednictwem 23:59:59 31 grudnia 3000 UTC; natomiast **_ftime32 —** tylko reprezentuje dat za pośrednictwem 23:59:59 18 stycznia 2038 r., UTC. Północy, 1 stycznia 1970 jest dolna granica zakresu dat dla tych funkcji.
+**_Ftime64** funkcji, która używa **__timeb64 —** struktury, umożliwia tworzenie pliku daty do za pośrednictwem 23:59:59, 31 grudnia 3000, UTC, natomiast **_ftime32**przedstawia tylko daty do 23:59:59 18 stycznia 2038 r. UTC. Północy 1 stycznia 1970 r., to dolna granica zakresu dat dla tych funkcji.
 
-**_Ftime —** funkcji jest odpowiednikiem **_ftime64 —**, i **_timeb —** zawiera czas 64-bitowych, chyba że **_USE_32BIT_TIME_T** jest zdefiniowany w którym to przypadku stare zachowanie jest włączona; **_ftime —** używany czas 32-bitowe i **_timeb —** zawiera czas 32-bitowych.
+**_Ftime** funkcji jest odpowiednikiem **_ftime64**, i **_timeb —** zawiera czas 64-bitowych, chyba że **_USE_32BIT_TIME_T** jest zdefiniowany w którym to przypadku stare zachowanie obowiązuje; **_ftime** używany czas 32-bitowe i **_timeb —** zawiera godzinę 32-bitowych.
 
-**_ftime —** sprawdza poprawność parametrów. Jeśli przekazany wskaźnika o wartości null jako *timeptr*, funkcja wywołuje program obsługi nieprawidłowych parametrów, zgodnie z opisem w [sprawdzanie poprawności parametru](../../c-runtime-library/parameter-validation.md). Jeśli wykonanie może kontynuować, funkcja ustawia **errno** do **einval —**.
+**_ftime** sprawdza poprawność parametrów. Jeśli przekazywany jest pusty wskaźnik jako *timeptr*, funkcja wywołuje procedurę obsługi nieprawidłowego parametru, zgodnie z opisem w [Parameter Validation](../../c-runtime-library/parameter-validation.md). Jeśli wykonanie może być kontynuowane, funkcja ustawia **errno** do **EINVAL**.
 
 ## <a name="requirements"></a>Wymagania
 
 |Funkcja|Wymagany nagłówek|
 |--------------|---------------------|
-|**_ftime —**|\<sys/types.h > i \<sys/timeb.h >|
+|**_ftime**|\<sys/types.h > i \<sys/timeb.h >|
 |**_ftime32**|\<sys/types.h > i \<sys/timeb.h >|
 |**_ftime64**|\<sys/types.h > i \<sys/timeb.h >|
 
-Aby uzyskać więcej informacji o zgodności, zobacz [zgodności](../../c-runtime-library/compatibility.md).
+Aby uzyskać więcej informacji na temat zgodności, zobacz [zgodności](../../c-runtime-library/compatibility.md).
 
 ## <a name="example"></a>Przykład
 

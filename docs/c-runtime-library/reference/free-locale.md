@@ -36,12 +36,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0b74725ddd7884bcc714e1048b28c53f201ebe4e
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: ce945499505b7efcaaf010585f27fbfaf42a06b8
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32397135"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44103322"
 ---
 # <a name="freelocale"></a>_free_locale
 
@@ -57,13 +57,14 @@ void _free_locale(
 
 ### <a name="parameters"></a>Parametry
 
-*Ustawienia regionalne* obiektu ustawień regionalnych zwolnienia.
+*Ustawienia regionalne*<br/>
+Obiekt ustawień regionalnych do bezpłatnej.
 
 ## <a name="remarks"></a>Uwagi
 
-**_Free_locale —** funkcja służy do zwolnienia obiektu ustawień regionalnych uzyskane w wyniku wywołania **_get_current_locale —** lub **_create_locale**.
+**_Free_locale —** funkcja jest używana w celu zwolnienia obiektu ustawień regionalnych, uzyskany z wywołania **_get_current_locale —** lub **_create_locale**.
 
-Poprzednia nazwa ta funkcja **__free_locale —** (z dwoma podkreśleniami wiodące) jest przestarzała.
+Poprzednia nazwa tej funkcji **__free_locale —** (z dwoma wiodącymi podkreśleniami) jest przestarzała.
 
 ## <a name="requirements"></a>Wymagania
 
@@ -71,7 +72,7 @@ Poprzednia nazwa ta funkcja **__free_locale —** (z dwoma podkreśleniami wiod�
 |---------------|---------------------|
 |**_free_locale**|\<locale.h>|
 
-Aby uzyskać więcej informacji o zgodności, zobacz [zgodności](../../c-runtime-library/compatibility.md).
+Aby uzyskać więcej informacji na temat zgodności, zobacz [zgodności](../../c-runtime-library/compatibility.md).
 
 ## <a name="see-also"></a>Zobacz także
 

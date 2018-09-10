@@ -16,33 +16,37 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ea9a2d1e2e956ae83498a5fc99878c5a4ef7bb3a
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 2ccd6a2ac0b47db7d808f3f90a228ecf497e95be
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43761384"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44101863"
 ---
 # <a name="platforminvalidargumentexception-class"></a>Platform::InvalidArgumentException, klasa
-Element zgłaszany, gdy jeden z podanych argumentów metody jest nieprawidłowy.  
-  
-## <a name="syntax"></a>Składnia  
-  
-```cpp  
-public ref class InvalidArgumentException : COMException,    IException,    IPrintable,    IEquatable  
-```  
-  
-### <a name="remarks"></a>Uwagi  
- Aby uzyskać więcej informacji, zobacz [COMException](../cppcx/platform-comexception-class.md) klasy.  
-  
-### <a name="requirements"></a>Wymagania  
- **Minimalna obsługiwana klienta:** systemu Windows 8  
-  
- **Minimalna obsługiwana serwera:** systemu Windows Server 2012  
-  
- **Namespace:** platformy  
-  
- **Metadane:** platform.winmd  
-  
-## <a name="see-also"></a>Zobacz też  
- [Platform::COMException, klasa](../cppcx/platform-comexception-class.md)
+
+Element zgłaszany, gdy jeden z podanych argumentów metody jest nieprawidłowy.
+
+## <a name="syntax"></a>Składnia
+
+```cpp
+public ref class InvalidArgumentException : COMException,    IException,    IPrintable,    IEquatable
+```
+
+### <a name="remarks"></a>Uwagi
+
+Aby uzyskać więcej informacji, zobacz [COMException](../cppcx/platform-comexception-class.md) klasy.
+
+### <a name="requirements"></a>Wymagania
+
+**Minimalna obsługiwana klienta:** systemu Windows 8
+
+**Minimalna obsługiwana serwera:** systemu Windows Server 2012
+
+**Namespace:** platformy
+
+**Metadane:** platform.winmd
+
+## <a name="see-also"></a>Zobacz też
+
+[Platform::COMException, klasa](../cppcx/platform-comexception-class.md)

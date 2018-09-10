@@ -31,12 +31,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 80cb3dd5d60665fbfb510fb2fddf94f17ef9f171
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: 7fc38fe11fa267fe4f14d149d883da4ad5ec02e0
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38963797"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44100757"
 ---
 # <a name="locale-class"></a>locale — Klasa
 
@@ -301,7 +301,8 @@ locale combine(const locale& Loc) const;
 
 ### <a name="parameters"></a>Parametry
 
-*Lokalizacja* ustawień regionalnych, zawierająca zestaw reguł do wstawienia do docelowych ustawień regionalnych.
+*Lokalizacja*<br/>
+Ustawienia regionalne, zawierająca zestaw reguł do wstawienia do docelowych ustawień regionalnych.
 
 ### <a name="return-value"></a>Wartość zwracana
 
@@ -369,7 +370,8 @@ static locale global(const locale& Loc);
 
 ### <a name="parameters"></a>Parametry
 
-*Lokalizacja* ustawień regionalnych, który ma być używany jako domyślnych ustawień regionalnych przez program.
+*Lokalizacja*<br/>
+Ustawienia regionalne do użycia jako domyślnych ustawień regionalnych przez program.
 
 ### <a name="return-value"></a>Wartość zwracana
 
@@ -436,15 +438,20 @@ locale(const locale& Loc, const Facet* Fac);
 
 ### <a name="parameters"></a>Parametry
 
-*Locname* nazwy ustawień regionalnych.
+*Locname*<br/>
+Nazwa ustawień regionalnych.
 
-*Lokalizacja* ustawień regionalnych, które mają zostać skopiowane podczas tworzenia nowych ustawień regionalnych.
+*Lokalizacja*<br/>
+Ustawienia regionalne, który ma zostać skopiowane do tworzenia nowych ustawień regionalnych.
 
-*Inne* ustawień regionalnych, z którego można wybrać kategorię.
+*Inne*<br/>
+Ustawienia regionalne, z którego można wybrać kategorię.
 
-*Cat* kategorii, które mają zostać podstawione do skonstruowanego ustawień regionalnych.
+*CAT*<br/>
+Kategoria do podstawienia do skonstruowanego ustawień regionalnych.
 
-*FAC* reguł, które mają zostać podstawione do skonstruowanego ustawień regionalnych.
+*FAC*<br/>
+Zestaw reguł do podstawienia do skonstruowanego ustawień regionalnych.
 
 ### <a name="remarks"></a>Uwagi
 
@@ -555,7 +562,8 @@ bool operator!=(const locale& right) const;
 
 ### <a name="parameters"></a>Parametry
 
-*prawy* jedno z ustawień regionalnych do sprawdzenia pod kątem nierówności.
+*right*<br/>
+Jedno z ustawień regionalnych, który ma zostać przetestowana pod kątem nierówności.
 
 ### <a name="return-value"></a>Wartość zwracana
 
@@ -600,9 +608,9 @@ int main( )
 
 ```Output
 locales loc1 (German_Germany.1252) and
- loc2 (German_Germany.1252) are equal.
+loc2 (German_Germany.1252) are equal.
 locales loc1 (German_Germany.1252) and
- loc3 (English_United States.1252) are not equal.
+loc3 (English_United States.1252) are not equal.
 ```
 
 ## <a name="op_call"></a>  Locale:: operator()
@@ -618,9 +626,11 @@ bool operator()(
 
 ### <a name="parameters"></a>Parametry
 
-*po lewej stronie* po lewej stronie ciągu.
+*left*<br/>
+Ciąg, który po lewej stronie.
 
-*prawy* odpowiednie parametry.
+*right*<br/>
+Ciąg, do prawej.
 
 ### <a name="return-value"></a>Wartość zwracana
 
@@ -685,7 +695,8 @@ bool operator==(const locale& right) const;
 
 ### <a name="parameters"></a>Parametry
 
-*prawy* jedno z ustawień regionalnych do sprawdzenia pod kątem równości.
+*right*<br/>
+Jedno z ustawień regionalnych, który ma zostać przetestowana pod kątem równości.
 
 ### <a name="return-value"></a>Wartość zwracana
 
@@ -734,9 +745,9 @@ int main( )
 
 ```Output
 locales loc1 (German_Germany.1252)
- and loc2 (German_Germany.1252) are equal.
+and loc2 (German_Germany.1252) are equal.
 locales loc1 (German_Germany.1252)
- and loc3 (English_United States.1252) are not equal.
+and loc3 (English_United States.1252) are not equal.
 ```
 
 ## <a name="see-also"></a>Zobacz także

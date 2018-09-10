@@ -34,16 +34,16 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 96256f71a94f20f126f02b04511c57c831ad2a00
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 783225412b01430d1043dafd4761cb7432eaa1d7
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32406644"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44108322"
 ---
 # <a name="setprintfcountoutput"></a>_set_printf_count_output
 
-Włącza lub wyłącza obsługę **%n** formatowania w [printf, _printf_l —, wprintf, _wprintf_l —](printf-printf-l-wprintf-wprintf-l.md)— funkcje rodziny.
+Włącza lub wyłącza obsługę **%n** formatowania w [printf, _printf_l —, wprintf, _wprintf_l —](printf-printf-l-wprintf-wprintf-l.md)-rodziny funkcji.
 
 ## <a name="syntax"></a>Składnia
 
@@ -55,15 +55,16 @@ int _set_printf_count_output(
 
 ### <a name="parameters"></a>Parametry
 
-*Włącz* wartość inną niż zero, aby włączyć **%n** obsługuje, 0, aby wyłączyć **%n** obsługuje.
+*Włącz*<br/>
+Wartość niezerową, aby umożliwić **%n** pomocy technicznej, 0 — wyłączenie **%n** pomocy technicznej.
 
 ## <a name="property-valuereturn-value"></a>Wartość właściwości/Zwracana wartość
 
-Stan **%n** obsługuje przed wywołaniem tej funkcji: Jeśli niezerowy **%n** włączona była obsługa, 0, jeśli zostało wyłączone.
+Stan **%n** obsługuje przed wywołaniem tej funkcji: różna od zera, jeśli **%n** włączona była obsługa, 0, jeśli została ona wyłączona.
 
 ## <a name="remarks"></a>Uwagi
 
-Ze względu na bezpieczeństwo, obsługę **%n** specyfikator formatu jest domyślnie wyłączona w **printf** i jej wariantów. Jeśli **%n** napotkano w **printf** jest specyfikacją formatu, domyślne zachowanie można wywołać program obsługi nieprawidłowych parametrów, zgodnie z opisem w [sprawdzanie poprawności parametru](../../c-runtime-library/parameter-validation.md). Wywoływanie **_set_printf_count_output —** z argumentem inną niż zero spowoduje, że **printf**-rodziny funkcji interpretować **%n** zgodnie z opisem w [formatu Składnia specyfikacji: funkcje printf i wprintf](../../c-runtime-library/format-specification-syntax-printf-and-wprintf-functions.md).
+Ze względu na bezpieczeństwo, obsługa **%n** specyfikator formatu jest domyślnie wyłączona w systemie **printf** i jej wariantów. Jeśli **%n** zostanie napotkany w **printf** specyfikacji formatu, zachowanie domyślne jest wywołują procedurę obsługi nieprawidłowego parametru, zgodnie z opisem w [Parameter Validation](../../c-runtime-library/parameter-validation.md). Wywoływanie **_set_printf_count_output —** z argumentem równa zero spowoduje, że **printf**-rodziny funkcji do interpretacji **%n** zgodnie z opisem w [formatu Składnia specyfikacji: funkcje printf i wprintf](../../c-runtime-library/format-specification-syntax-printf-and-wprintf-functions.md).
 
 ## <a name="requirements"></a>Wymagania
 

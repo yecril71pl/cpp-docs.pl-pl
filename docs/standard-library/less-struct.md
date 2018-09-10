@@ -17,12 +17,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7c146862a18d4292dd6c375dda83063bbcf4dee4
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: 231b3f0267f50f68452d4ba0b6cb2f186a07e3e5
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38954358"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44100940"
 ---
 # <a name="less-struct"></a>less — Struktura
 
@@ -51,9 +51,11 @@ struct less<void>
 
 *Typ*, *T*, *U* dowolnego typu, który obsługuje `operator<` przyjmującej argumentów operacji typu określonego lub wywnioskowane uprawnienie.
 
-*Po lewej stronie* lewy operand mniej-niż operacji. Szablon Niewyspecjalizowana przyjmuje argument odwołania l-wartości typu *typu*. Wyspecjalizowane szablonu doskonała przekazywania l-wartością i argumenty odwołania rvalue wywnioskować typu *T*.
+*po lewej stronie*<br/>
+Lewy operand mniej-niż operacji. Szablon Niewyspecjalizowana przyjmuje argument odwołania l-wartości typu *typu*. Wyspecjalizowane szablonu doskonała przekazywania l-wartością i argumenty odwołania rvalue wywnioskować typu *T*.
 
-*Po prawej stronie* prawy operand mniej-niż operacji. Szablon Niewyspecjalizowana przyjmuje argument odwołania l-wartości typu *typu*. Wyspecjalizowane szablonu doskonała przekazywania l-wartością i argumenty odwołania rvalue wywnioskować typu *U*.
+*po prawej stronie*<br/>
+Prawy operand mniej-niż operacji. Szablon Niewyspecjalizowana przyjmuje argument odwołania l-wartości typu *typu*. Wyspecjalizowane szablonu doskonała przekazywania l-wartością i argumenty odwołania rvalue wywnioskować typu *U*.
 
 ## <a name="return-value"></a>Wartość zwracana
 
@@ -105,7 +107,7 @@ cout << Iter1->m_i << " ";
    for ( Iter1 = v1.begin() ; Iter1 != v1.end() ; Iter1++ )
 cout << Iter1->m_i << " ";
    cout << ")" << endl;
- }
+}
 ```
 
 ## <a name="output"></a>Dane wyjściowe

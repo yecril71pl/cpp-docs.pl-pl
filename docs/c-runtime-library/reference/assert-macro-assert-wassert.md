@@ -38,12 +38,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c1d2bef607e80e2e972915bd8a8b0517b7c6e5eb
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 67fef1231d4488b1714cc2f0f2f0e892737e627d
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43200670"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44101940"
 ---
 # <a name="assert-macro-assert-wassert"></a>assert Macro, _assert, _wassert
 
@@ -69,13 +69,17 @@ void _wassert(
 
 ### <a name="parameters"></a>Parametry
 
-*wyrażenie* wyrażenie skalarne (w tym wyrażenia wskaźnika) obliczane na wartość różną od zera (**true**) lub równa 0 (**false**).
+*Wyrażenie*<br/>
+Wyrażenie skalarne (w tym wyrażenia wskaźnika) obliczane na wartość różną od zera (**true**) lub równa 0 (**false**).
 
-*komunikat* widomość do wyświetlenia.
+*komunikat*<br/>
+Widomość do wyświetlenia.
 
-*Nazwa pliku* nazwa źródła pliku asercja nie powiodła się.
+*Nazwa pliku*<br/>
+Nazwa pliku źródłowego potwierdzenie nie powiodło się.
 
-*wiersz* liczbę wierszy w pliku źródłowym potwierdzenie nie powiodło się.
+*Wiersz*<br/>
+Numer wiersza w pliku źródłowym potwierdzenie nie powiodło się.
 
 ## <a name="remarks"></a>Uwagi
 

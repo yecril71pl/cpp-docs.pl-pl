@@ -20,12 +20,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8bff57549307eeaa9245c0bb4083b206471fe726
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: 053816fcf18ec29b5e405f84b545432e848d2b59
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38962536"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44104013"
 ---
 # <a name="integralconstant-class-boolconstant-class"></a>integral_constant, klasa, bool_constant, klasa
 
@@ -46,9 +46,11 @@ struct integral_constant {
 
 ### <a name="parameters"></a>Parametry
 
-*T* typ stałej.
+*T*<br/>
+Typ stałej.
 
-*v* wartość stałej.
+*v*<br/>
+Wartość stałej.
 
 ## <a name="remarks"></a>Uwagi
 

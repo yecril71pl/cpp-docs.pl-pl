@@ -82,12 +82,12 @@ helpviewer_keywords:
 - std::uninitialized_fill_n [C++]
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d104d8a64dd60e5aaa7244e5bf5f535343f6e132
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: 762cc70c40c2d6e201b42c0c10ed83c981c97ec7
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38957428"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44101667"
 ---
 # <a name="ltmemorygt-functions"></a>&lt;Pamięć&gt; funkcji
 
@@ -113,7 +113,8 @@ T* addressof(T& Val);
 
 ### <a name="parameters"></a>Parametry
 
-*Val* obiektu lub funkcji, dla którego ma zostać uzyskany prawdziwy adres.
+*Val*<br/>
+Obiekt lub funkcja, dla których ma być uzyskany prawdziwy adres.
 
 ### <a name="return-value"></a>Wartość zwracana
 
@@ -136,13 +137,17 @@ void* align(
 
 ### <a name="parameters"></a>Parametry
 
-*Wyrównanie* wyrównanie powiązane z próbą.
+*Wyrównanie*<br/>
+Wyrównanie powiązane z próbą.
 
-*Rozmiar* rozmiar w bajtach dla wyrównanej pamięci.
+*Rozmiar*<br/>
+Rozmiar w bajtach dla wyrównanej pamięci.
 
-*PTR* adres początkowy dostępnej puli ciągłej pamięci do użycia. Ten parametr to również parametr wyjściowy, a jest równa zawiera nowy adres początkowy, jeśli wyrównanie zakończy się pomyślnie. Jeśli `align()` się nie powiedzie, ten parametr nie jest modyfikowany.
+*PTR*<br/>
+Adres początkowy dostępnej puli ciągłej pamięci, która ma być użyta. Ten parametr to również parametr wyjściowy, a jest równa zawiera nowy adres początkowy, jeśli wyrównanie zakończy się pomyślnie. Jeśli `align()` się nie powiedzie, ten parametr nie jest modyfikowany.
 
-*Miejsce* całkowita ilość miejsca dostępna do `align()` w celu utworzenia wyrównanej pamięci. Ten parametr to również parametr wyjściowy, zawiera skorygowane miejsce pozostawione w buforze pamięci po odjęciu wyrównanej pamięci i wszystkich powiązanych obciążeń.
+*miejsce*<br/>
+Całkowita ilość miejsca dostępna do `align()` w celu utworzenia wyrównanej pamięci. Ten parametr to również parametr wyjściowy, zawiera skorygowane miejsce pozostawione w buforze pamięci po odjęciu wyrównanej pamięci i wszystkich powiązanych obciążeń.
 
 Jeśli `align()` się nie powiedzie, ten parametr nie jest modyfikowany.
 
@@ -189,9 +194,11 @@ allocate_shared(Allocator Alloc, Types&&... Args);
 
 ### <a name="parameters"></a>Parametry
 
-*ALLOC* alokator używany do tworzenia obiektów.
+*Alokacji*<br/>
+Alokator używany do tworzenia obiektów.
 
-*Argumenty* zero lub więcej argumentów, które stają się obiektami.
+*Args*<br/>
+Zero lub więcej argumentów, które stają się obiektami.
 
 ### <a name="remarks"></a>Uwagi
 
@@ -209,11 +216,14 @@ const_pointer_cast(const shared_ptr<Other>& sp);
 
 ### <a name="parameters"></a>Parametry
 
-*Ty* typ kontrolowany przez zwrócony udostępnionego wskaźnika.
+*Ty*<br/>
+Typ kontrolowany przez dzielony wskaźnik zwracany.
 
-*Inne* typ kontrolowany przez dzielony wskaźnik argumentu.
+*Inne*<br/>
+Typ kontrolowany przez dzielony wskaźnik argumentu.
 
-*Inne* wspólny wskaźnik argumentu.
+*Inne*<br/>
+Argument wskaźnika udostępnionego.
 
 ### <a name="remarks"></a>Uwagi
 
@@ -275,7 +285,8 @@ void declare_reachable(void* ptr);
 
 ### <a name="parameters"></a>Parametry
 
-*PTR* wskaźnika w obszarze pamięci masowej dostępny, przydzielony prawidłowy.
+*ptr*<br/>
+Wskaźnik do obszaru pamięci dostępny, przydzielony prawidłowy.
 
 ### <a name="remarks"></a>Uwagi
 
@@ -296,7 +307,8 @@ struct default_delete {
 
 ### <a name="parameters"></a>Parametry
 
-*PTR* wskaźnik do obiektu do usunięcia.
+*PTR*<br/>
+Wskaźnik do obiektu do usunięcia.
 
 Inne typ elementów w tablicy do usunięcia.
 
@@ -316,11 +328,14 @@ dynamic_pointer_cast(const shared_ptr<Other>& sp);
 
 ### <a name="parameters"></a>Parametry
 
-*Ty* typ kontrolowany przez zwrócony udostępnionego wskaźnika.
+*Ty*<br/>
+Typ kontrolowany przez dzielony wskaźnik zwracany.
 
-*Inne* typ kontrolowany przez dzielony wskaźnik argumentu.
+*Inne*<br/>
+Typ kontrolowany przez dzielony wskaźnik argumentu.
 
-*SP* wspólny wskaźnik argumentu.
+*SP*<br/>
+Argument wskaźnika udostępnionego.
 
 ### <a name="remarks"></a>Uwagi
 
@@ -373,11 +388,14 @@ D* get_deleter(const shared_ptr<Ty>& sp);
 
 ### <a name="parameters"></a>Parametry
 
-*D* typ deletera.
+*D*<br/>
+Typ deletera.
 
-*Ty* typ kontrolowany przez dzielony wskaźnik.
+*Ty*<br/>
+Typ kontrolowany przez dzielony wskaźnik.
 
-*SP* dzielony wskaźnik.
+*SP*<br/>
+Wspólny wskaźnik.
 
 ### <a name="remarks"></a>Uwagi
 
@@ -451,7 +469,8 @@ pair<Type *, ptrdiff_t> get_temporary_buffer(ptrdiff_t count);
 
 ### <a name="parameters"></a>Parametry
 
-*Liczba* maksymalna liczba elementów żądania pamięci, które to do przydzielenia.
+*Liczba*<br/>
+Maksymalną liczbę elementów zażądał, dla którego ma przydzielenia pamięci.
 
 ### <a name="return-value"></a>Wartość zwracana
 
@@ -619,15 +638,20 @@ make_unique(Types&&...) = delete;
 
 ### <a name="parameters"></a>Parametry
 
-*T* typ obiektu, który `unique_ptr` wskaże.
+*T*<br/>
+Typ obiektu, który `unique_ptr` wskaże.
 
-*Typy* typy argumentów konstruktora określone przez *Args*.
+*Typy*<br/>
+Typy argumentów konstruktora określone przez *Args*.
 
-*Argumenty* argumenty do przekazania do konstruktora obiektu typu *T*.
+*Args*<br/>
+Argumenty do przekazania do konstruktora obiektu typu *T*.
 
-*Elem* tablicę elementów typu *T*.
+*Elem*<br/>
+Tablica elementów typu *T*.
 
-*Rozmiar* liczbę elementów do przydzielenia miejsca dla w nowej tablicy.
+*Rozmiar*<br/>
+Liczba elementów do przydzielenia miejsca dla w nowej tablicy.
 
 ### <a name="remarks"></a>Uwagi
 
@@ -684,9 +708,11 @@ struct owner_less<weak_ptr<Type>>
 
 ### <a name="parameters"></a>Parametry
 
-*_lewej* wskaźnika udostępnionego lub słabe.
+*z _lewej*<br/>
+Udostępnione lub słaby wskaźnik.
 
-*prawy* wskaźnika udostępnionego lub słabe.
+*right*<br/>
+Udostępnione lub słaby wskaźnik.
 
 ### <a name="remarks"></a>Uwagi
 
@@ -703,7 +729,8 @@ void return_temporary_buffer(Type* _Pbuf);
 
 ### <a name="parameters"></a>Parametry
 
-*_Pbuf* wskaźnik do pamięci do przydzielenia.
+*_Pbuf*<br/>
+Wskaźnik do pamięci do przydzielenia.
 
 ### <a name="remarks"></a>Uwagi
 
@@ -744,7 +771,7 @@ int main( )
 ```Output
 The number of integers in the array is: 7.
 The number of elements that the allocated memory
- could store is given by: resultPair.second = 7.
+could store is given by: resultPair.second = 7.
 ```
 
 ## <a name="static_pointer_cast"></a>  static_pointer_cast —
@@ -759,11 +786,14 @@ static_pointer_cast(const shared_ptr<Other>& sp);
 
 ### <a name="parameters"></a>Parametry
 
-*Ty* typ kontrolowany przez zwrócony udostępnionego wskaźnika.
+*Ty*<br/>
+Typ kontrolowany przez dzielony wskaźnik zwracany.
 
-*Inne* typ kontrolowany przez dzielony wskaźnik argumentu.
+*Inne*<br/>
+Typ kontrolowany przez dzielony wskaźnik argumentu.
 
-*Inne* wspólny wskaźnik argumentu.
+*Inne*<br/>
+Argument wskaźnika udostępnionego.
 
 ### <a name="remarks"></a>Uwagi
 
@@ -818,13 +848,17 @@ void swap(weak_ptr<Ty>& left, weak_ptr<Other>& right);
 
 ### <a name="parameters"></a>Parametry
 
-*Ty* typ kontrolowany przez wskaźnik udostępnione weak po lewej stronie.
+*Ty*<br/>
+Typ kontrolowany przez wskaźnik udostępnione weak po lewej stronie.
 
-*Inne* typ kontrolowany przez wskaźnik udostępnione bezpośrednio/weak.
+*Inne*<br/>
+Typ kontrolowany przez wskaźnik udostępnione bezpośrednio/weak.
 
-*po lewej stronie* wskaźnika udostępnionego weak po lewej stronie.
+*left*<br/>
+Po lewej stronie wskaźnika udostępnionego słabych.
 
-*prawy* wskaźnika udostępnionego prawo/weak.
+*right*<br/>
+Wskaźnik udostępnione bezpośrednio/weak.
 
 ### <a name="remarks"></a>Uwagi
 
@@ -927,11 +961,14 @@ ForwardIterator uninitialized_copy(InputIterator first, InputIterator last, Forw
 
 ### <a name="parameters"></a>Parametry
 
-*pierwszy* iterator danych wejściowych, odnoszący się do pierwszego elementu w zakresie źródłowym.
+*pierwszy*<br/>
+Iterator danych wejściowych, odnoszący się do pierwszego elementu w zakresie źródłowym.
 
-*ostatni* iterator danych wejściowych, odnoszący się do ostatniego elementu w zakresie źródłowym.
+*ostatni*<br/>
+Iterator danych wejściowych, odnoszący się do ostatniego elementu w zakresie źródłowym.
 
-*dest* iterator postępujący odnosi się do pierwszego elementu w zakresie docelowym.
+*dest*<br/>
+Iterator do przodu, który dotyczy pierwszego elementu w zakresie docelowym.
 
 ### <a name="return-value"></a>Wartość zwracana
 
@@ -1032,11 +1069,14 @@ ForwardIterator uninitialized_copy_n(
 
 ### <a name="parameters"></a>Parametry
 
-*pierwszy* iterator danych wejściowych, która odwołuje się do obiektu do skopiowania.
+*pierwszy*<br/>
+Iterator danych wejściowych, który odwołuje się do obiektu do skopiowania.
 
-*Liczba* A podpisane lub niepodpisane typu Liczba całkowita określająca liczbę razy obiekt ma być skopiowany.
+*Liczba*<br/>
+Typ całkowitoliczbowy ze znakiem lub bez znaku, określający, ile razy obiekt ma być skopiowany.
 
-*dest* iterator do przodu odwołujący się do gdzie nowych kopii.
+*dest*<br/>
+Iterator do przodu odwołujący się do lokalizacji nowych kopii.
 
 ### <a name="return-value"></a>Wartość zwracana
 
@@ -1066,11 +1106,14 @@ void uninitialized_fill(ForwardIterator first, ForwardIterator last, const Type&
 
 ### <a name="parameters"></a>Parametry
 
-*pierwszy* iterator postępujący odnosi się do pierwszego elementu w zakresie docelowym, który ma zostać zainicjowane.
+*pierwszy*<br/>
+Iterator postępujący odnosi się do pierwszego elementu w zakresie docelowym, który ma zostać zainicjowane.
 
-*ostatni* iterator do przodu, odnoszący się do ostatniego elementu w zakresie docelowym, który ma zostać zainicjowane.
+*ostatni*<br/>
+Iterator do przodu, odnoszący się do ostatniego elementu w zakresie docelowym, który ma zostać zainicjowane.
 
-*Val* wartość ma być używany do zainicjowania zakresu docelowego.
+*Val*<br/>
+Wartość wykorzystana do zainicjowania zakresu docelowego.
 
 ### <a name="remarks"></a>Uwagi
 
@@ -1135,11 +1178,14 @@ void uninitialized_fill_n(ForwardIterator first, Size count, const Type& val);
 
 ### <a name="parameters"></a>Parametry
 
-*pierwszy* iterator do przodu, odnoszący się do pierwszego elementu w zakresie docelowym ma być zainicjowany.
+*pierwszy*<br/>
+Iterator do przodu, odnoszący się do pierwszego elementu w zakresie docelowym, który ma być zainicjowany.
 
-*Liczba* liczbę elementów, które mają zostać zainicjowane.
+*Liczba*<br/>
+Liczba elementów, które mają być zainicjowane.
 
-*Val* wartość ma być używany do zainicjowania zakresu docelowego.
+*Val*<br/>
+Wartość wykorzystana do zainicjowania zakresu docelowego.
 
 ### <a name="remarks"></a>Uwagi
 

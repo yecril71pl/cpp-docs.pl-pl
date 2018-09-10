@@ -28,12 +28,12 @@ helpviewer_keywords:
 - std::shared_future [C++], wait_until
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f27162b1dfc96b4797184b3fefc1ad8ecc464f55
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: c3f59bcb792d17f031b7a8ce7363158630d87506
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38954997"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44100783"
 ---
 # <a name="sharedfuture-class"></a>shared_future — Klasa
 
@@ -115,7 +115,8 @@ shared_future& operator=(const shared_future& Right);
 
 ### <a name="parameters"></a>Parametry
 
-*Po prawej stronie* A `shared_future` obiektu.
+*po prawej stronie*<br/>
+Element `shared_future` obiektu.
 
 ### <a name="return-value"></a>Wartość zwracana
 
@@ -140,7 +141,8 @@ shared_future(const shared_future& Right);
 
 ### <a name="parameters"></a>Parametry
 
-*Po prawej stronie* A [przyszłych](../standard-library/future-class.md) lub `shared_future` obiektu.
+*po prawej stronie*<br/>
+A [przyszłych](../standard-library/future-class.md) lub `shared_future` obiektu.
 
 ### <a name="remarks"></a>Uwagi
 
@@ -186,7 +188,8 @@ future_status wait_for(
 
 ### <a name="parameters"></a>Parametry
 
-*Rel_time* A [chrono::duration](../standard-library/duration-class.md) obiekt, który określa przedział czasu maksymalna, która blokuje wątek.
+*Rel_time*<br/>
+A [chrono::duration](../standard-library/duration-class.md) obiekt, który określa przedział czasu maksymalna, która blokuje wątek.
 
 ### <a name="return-value"></a>Wartość zwracana
 
@@ -208,7 +211,8 @@ future_status wait_until(
 
 ### <a name="parameters"></a>Parametry
 
-*Abs_time* A [chrono::time_point](../standard-library/time-point-class.md) obiektu, który określa czas, po którym można odblokować wątku.
+*Abs_time*<br/>
+A [chrono::time_point](../standard-library/time-point-class.md) obiektu, który określa czas, po którym można odblokować wątku.
 
 ### <a name="return-value"></a>Wartość zwracana
 

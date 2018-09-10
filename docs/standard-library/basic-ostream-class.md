@@ -30,12 +30,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: be74641b229fbf888504df72a97f8a5c025d9b7b
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: f30e2b226524e1d4a62c9f8cc950f4dd30846861
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38963719"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44100979"
 ---
 # <a name="basicostream-class"></a>basic_ostream — Klasa
 
@@ -50,9 +50,11 @@ class basic_ostream : virtual public basic_ios<Elem, Tr>
 
 ### <a name="parameters"></a>Parametry
 
-*Elem* A `char_type`.
+*Elem*<br/>
+A `char_type`.
 
-*TR* znak `traits_type`.
+*TR*<br/>
+Znak `traits_type`.
 
 ## <a name="remarks"></a>Uwagi
 
@@ -63,16 +65,16 @@ iostate state = goodbit;
 const sentry ok(*this);
 
 if (ok)
- {try
- {<convert and insert elements
+{try
+{<convert and insert elements
     accumulate flags in state> }
     catch (...)
- {try
- {setstate(badbit);
+{try
+{setstate(badbit);
 
 }
     catch (...)
- {}
+{}
     if ((exceptions()& badbit) != 0)
     throw; }}
 width(0);
@@ -91,16 +93,16 @@ const sentry ok(*this);
 if (!ok)
     state |= badbit;
 else
- {try
- {<obtain and insert elements
+{try
+{<obtain and insert elements
     accumulate flags in state> }
     catch (...)
- {try
- {setstate(badbit);
+{try
+{setstate(badbit);
 
 }
     catch (...)
- {}
+{}
     if ((exceptions()& badbit) != 0)
     throw; }}
 setstate(state);
@@ -161,11 +163,14 @@ basic_ostream(basic_ostream&& right);
 
 ### <a name="parameters"></a>Parametry
 
-*strbuf* obiektu typu [basic_streambuf](../standard-library/basic-streambuf-class.md).
+*strbuf*<br/>
+Obiekt typu [basic_streambuf](../standard-library/basic-streambuf-class.md).
 
-*_Isstd* **true** Jeśli jest to Standardowy strumień; w przeciwnym razie **false**.
+*_Isstd*<br/>
+**wartość true,** Jeśli jest to Standardowy strumień; w przeciwnym razie **false**.
 
-*prawy* odwołania rvalue do obiektu typu `basic_ostream`.
+*right*<br/>
+Odwołania rvalue do obiektu typu `basic_ostream`.
 
 ### <a name="remarks"></a>Uwagi
 
@@ -242,11 +247,14 @@ basic_ostream<Elem, Tr>& operator<<(const void* val);
 
 ### <a name="parameters"></a>Parametry
 
-*Nazwy Pfn* wskaźnika funkcji.
+*nazwy pfn*<br/>
+Wskaźnik funkcji.
 
-*strbuf* wskaźnik do `stream_buf` obiektu.
+*strbuf*<br/>
+Wskaźnik do `stream_buf` obiektu.
 
-*Val* element, aby zapisać do strumienia.
+*Val*<br/>
+Element do zapisu do strumienia.
 
 ### <a name="return-value"></a>Wartość zwracana
 
@@ -360,7 +368,8 @@ basic_ostream& operator=(basic_ostream&& right);
 
 ### <a name="parameters"></a>Parametry
 
-*prawy* `rvalue` odwołanie do `basic_ostream` obiektu.
+*right*<br/>
+`rvalue` Odwołanie do `basic_ostream` obiektu.
 
 ### <a name="remarks"></a>Uwagi
 
@@ -376,7 +385,8 @@ basic_ostream<Elem, Tr>& put(char_type _Ch);
 
 ### <a name="parameters"></a>Parametry
 
-*_Ch* znak.
+*_Ch*<br/>
+Znak.
 
 ### <a name="return-value"></a>Wartość zwracana
 
@@ -419,11 +429,14 @@ basic_ostream<Elem, Tr>& seekp(off_type _Off, ios_base::seekdir _Way);
 
 ### <a name="parameters"></a>Parametry
 
-*_Pos* pozycji w strumieniu.
+*_Pos*<br/>
+Pozycji w strumieniu.
 
-*_Off* przesunięcie względem *_Way*.
+*_Off*<br/>
+Przesunięcie względem *_Way*.
 
-*_Way* jednego z [ios_base::seekdir](../standard-library/ios-base-class.md#seekdir) wyliczenia.
+*_Way*<br/>
+Jedną z [ios_base::seekdir](../standard-library/ios-base-class.md#seekdir) wyliczenia.
 
 ### <a name="return-value"></a>Wartość zwracana
 
@@ -485,7 +498,8 @@ void swap(basic_ostream& right);
 
 ### <a name="parameters"></a>Parametry
 
-*prawy* odwołanie do `basic_ostream` obiektu.
+*right*<br/>
+Odwołanie do `basic_ostream` obiektu.
 
 ### <a name="remarks"></a>Uwagi
 
@@ -521,9 +535,11 @@ basic_ostream<Elem, Tr>& write(const char_type* str, streamsize count);
 
 ### <a name="parameters"></a>Parametry
 
-*Liczba* liczba znaków do umieszczenia w strumieniu.
+*Liczba*<br/>
+Liczba znaków do umieszczenia w strumieniu.
 
-*str* znaków, które zostaną wprowadzone do strumienia.
+*str*<br/>
+Znaki, które można umieścić w strumieniu.
 
 ### <a name="return-value"></a>Wartość zwracana
 

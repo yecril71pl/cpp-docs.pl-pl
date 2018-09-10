@@ -1,7 +1,7 @@
 ---
 title: EKSPORTY | Dokumentacja firmy Microsoft
 ms.custom: ''
-ms.date: 08/20/2018
+ms.date: 09/07/2018
 ms.technology:
 - cpp-tools
 ms.topic: reference
@@ -16,12 +16,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 299d300cb3b2247a4dfa698a53c486bcef6164e3
-ms.sourcegitcommit: d10a2382832373b900b1780e1190ab104175397f
+ms.openlocfilehash: f3ea5c28fe54e5d117ef40430912ef3f8ea0efd8
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43894554"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44104293"
 ---
 # <a name="exports"></a>EKSPORTY
 
@@ -38,9 +38,7 @@ Pierwszy *definicji* mogą znajdować się na tym samym wierszu co `EXPORTS` —
 
 Składnia służąca do eksportu *definicji* jest:
 
-```DEF
-entryname[=internal_name|other_module.another_exported_name] [@Ordinal [NONAME]] [[PRIVATE] | [DATA]]
-```
+> *Nazwa_wpisu*\[__=__*internal_name*|*other_module.exported_name*] \[ **\@** _porządkowe_ \[ **NONAME**]] \[ \[ **prywatne**] | \[ **Danych**]]
 
 *Nazwa_wpisu* jest nazwa zmiennej lub funkcji, który chcesz wyeksportować. Jest to wymagane. Jeśli eksportujesz nazwa różni się od nazwy w bibliotece DLL, określ nazwę eksportu w bibliotece DLL, używając *internal_name*. Na przykład, jeśli biblioteka DLL eksportuje funkcję `func1` i wywołań, aby użyć go jako `func2`, należy określić:
 
@@ -56,18 +54,18 @@ EXPORTS
    func2=other_module.func1
 ```
 
-W przypadku nazwy, który eksportujesz z innego modułu, który eksportuje według liczby porządkowej, określ eksportu przez numer porządkowy w bibliotece DLL za pomocą *other_module. #ordinal_number*. Na przykład, jeśli biblioteka DLL eksportuje funkcję w module, gdzie jest numerem porządkowym 42, a ma obiektów wywołujących, aby użyć go jako `func2`, należy określić:
+W przypadku nazwy, który eksportujesz z innego modułu, który eksportuje według liczby porządkowej, określ eksportu przez numer porządkowy w bibliotece DLL za pomocą *other_module*.__#__ *porządkowe*. Na przykład, jeśli biblioteka DLL eksportuje funkcję w module, gdzie jest numerem porządkowym 42, a ma obiektów wywołujących, aby użyć go jako `func2`, należy określić:
 
 ```DEF
 EXPORTS
    func2=other_module.#42
 ```
 
-Ponieważ kompilator języka Visual C++ używa dekorowania nazwy dla funkcji języka C++, możesz użyć internal_name również nazwę uzupełnioną lub zdefiniować eksportowane funkcji za pomocą funkcji extern "C" w kodzie źródłowym. Kompilator również rozszerza funkcje języka C, które używają [__stdcall](../../cpp/stdcall.md) wywoływania Konwencji od znaku podkreślenia (\_) prefiks i sufiks składające się z znakiem (\@) następuje liczba bajtów (w zapisie dziesiętnym) w Lista argumentów.
+Ponieważ kompilator języka Visual C++ używa dekorowania nazwy dla funkcji języka C++, należy użyć również nazwę uzupełnioną *internal_name* lub zdefiniować eksportowanych funkcji przy użyciu `extern "C"` w kodzie źródłowym. Kompilator również rozszerza funkcje języka C, które używają [__stdcall](../../cpp/stdcall.md) wywoływania Konwencji od znaku podkreślenia (\_) prefiks i sufiks składające się z znakiem (\@) następuje liczba bajtów (w zapisie dziesiętnym) w Lista argumentów.
 
 Aby znaleźć nazwy dekoracyjne wytworzone przez kompilator, użyj [DUMPBIN](../../build/reference/dumpbin-reference.md) narzędzia lub konsolidator [/MAP](../../build/reference/map-generate-mapfile.md) opcji. Nazwy ozdobione są specyficzne dla kompilatora. Jeśli eksportujesz nazwy dekorowane w. Plik DEF, pliki wykonywalne, które łącze do biblioteki DLL muszą być także kompilowane przy użyciu tej samej wersji kompilatora. Daje to gwarancję, że nazwy dekorowane w obiekcie wywołującym odpowiadały nazwom eksportowanym w. Plik DEF.
 
-Możesz użyć \@ *porządkowe* do określenia, czy numer, a nie nazwę funkcji, zostaną umieszczone w tabeli eksportu biblioteki DLL. Wiele bibliotek DLL Windows wyeksportować liczb porządkowych do obsługi starszego kodu. Było często używa się w kodzie Windows 16-bitowych liczb porządkowych, ponieważ może to pomóc zminimalizować rozmiar biblioteki DLL. Nie zaleca się eksportowanie funkcji według liczby porządkowej, chyba że klientów biblioteki DLL potrzebny do obsługi starszych wersji. Ponieważ. Plik biblioteki będzie zawierać mapowania między numeru porządkowego a funkcją, można użyć nazwy funkcji, tak jak zwykle w projektach korzystających z biblioteki DLL.
+Możesz użyć \@ *porządkowe* do określenia, czy numer, a nie nazwę funkcji, przechodzi w tabeli eksportu biblioteki DLL. Wiele bibliotek DLL Windows wyeksportować liczb porządkowych do obsługi starszego kodu. Było często używa się w kodzie Windows 16-bitowych liczb porządkowych, ponieważ może to pomóc zminimalizować rozmiar biblioteki DLL. Nie zaleca się eksportowanie funkcji według liczby porządkowej, chyba że klientów biblioteki DLL potrzebny do obsługi starszych wersji. Ponieważ. Plik biblioteki będzie zawierać mapowania między numeru porządkowego a funkcją, można użyć nazwy funkcji, tak jak zwykle w projektach korzystających z biblioteki DLL.
 
 Przy użyciu opcjonalnego **NONAME** — słowo kluczowe, możesz wyeksportować według liczby porządkowej tylko i Zmniejsz rozmiar tabeli eksportu w wynikowy DLL. Jednakże jeśli chcesz używać [GetProcAddress](https://msdn.microsoft.com/library/windows/desktop/ms683212.aspx) w pliku DLL, należy znać numer porządkowy, ponieważ nazwa straci ważność.
 
@@ -88,9 +86,16 @@ Istnieją cztery sposoby eksportowania definicji, wymienione w zalecanej kolejno
 
 3. [/EXPORT](../../build/reference/export-exports-a-function.md) specyfikacji za pomocą polecenia łącza
 
-4. A [komentarz](../../preprocessor/comment-c-cpp.md) dyrektywę w kodzie źródłowym w formularzu `#pragma comment(linker, "/export: definition ")`  
+4. A [komentarz](../../preprocessor/comment-c-cpp.md) dyrektywę w kodzie źródłowym w postaci `#pragma comment(linker, "/export: definition ")`. W poniższym przykładzie pokazano dyrektywy #pragma komentarz przed deklaracją funkcji, której `PlainFuncName` jest nieozdobioną nazwę i `_PlainFuncName@4` jest dekorowane nazwy funkcji:
 
-Wszystkie cztery metody może służyć w tym samym programie. Łączenie kompilacji program, który zawiera eksporty, powoduje również utworzenie biblioteki importowanej, chyba że. EXP, plik jest używany w kompilacji.
+    ```cpp
+    #pragma comment(linker, "/export:PlainFuncName=_PlainFuncName@4")
+    BOOL CALLBACK PlainFuncName( Things * lpParams)
+    ```
+
+Dyrektywa #pragma jest przydatne, jeśli chcesz eksportować nazwy funkcji bez i eksportuje różne w zależności od konfiguracji kompilacji (na przykład w wersjach 32-bitową lub 64-bitowych).
+
+Wszystkie cztery metody może służyć w tym samym programie. Łączenie kompilacji program, który zawiera eksporty, powoduje również utworzenie biblioteki importowanej, chyba że. EXP, plik jest używany w kompilacji. 
 
 Oto przykład sekcji:
 

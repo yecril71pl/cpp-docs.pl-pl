@@ -16,12 +16,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2f13dfb45073a1a21e8d6a7b4585f0dfc5c71b8e
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: 372dc829810fd08e3cc872abfb769221b2ca2a58
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38959751"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44100888"
 ---
 # <a name="basicregex-class"></a>basic_regex — Klasa
 
@@ -84,9 +84,11 @@ class basic_regex {
 
 ### <a name="parameters"></a>Parametry
 
-*Elem* typ elementów do dopasowania.
+*Elem*<br/>
+Typ elementów, do których ma pasować.
 
-*RXtraits* klasa cech dla elementów.
+*RXtraits*<br/>
+Klasa cech dla elementów.
 
 ## <a name="remarks"></a>Uwagi
 
@@ -148,27 +150,37 @@ basic_regex& assign(
 
 ### <a name="parameters"></a>Parametry
 
-*STtraits* klasa cech dla źródła ciągu.
+*STtraits*<br/>
+Klasa cech dla źródła ciągu.
 
-*STalloc* klasę alokatora dla źródła ciągu.
+*STalloc*<br/>
+Klasa alokatora źródła ciągu.
 
-*InIt* typu iteratora zakres źródła danych wejściowych.
+*InIt*<br/>
+Typ iteratora danych wejściowych dla źródła zakresu.
 
-*prawy* wyrażenia regularnego źródła do skopiowania.
+*right*<br/>
+Wyrażenie regularne źródła do skopiowania.
 
-*PTR* wskaźnik do początku sekwencji do skopiowania.
+*ptr*<br/>
+Wskaźnik do początku sekwencji do skopiowania.
 
-*flagi* składni flagi opcji można dodać podczas kopiowania.
+*flagi*<br/>
+Flagi opcji składni można dodać podczas kopiowania.
 
 *LEN/TD >* długości sekwencji do skopiowania.
 
-*str* ciągu do skopiowania.
+*str*<br/>
+Ciąg do skopiowania.
 
-*pierwszy* początek sekwencji do skopiowania.
+*pierwszy*<br/>
+Początek sekwencji do skopiowania.
 
-*ostatni* koniec sekwencji do skopiowania.
+*ostatni*<br/>
+Koniec sekwencji do skopiowania.
 
-*IList* initializer_list do skopiowania.
+*IList*<br/>
+Lista initializer_list do skopiowania.
 
 ### <a name="remarks"></a>Uwagi
 
@@ -293,27 +305,37 @@ explicit basic_regex(
 
 ### <a name="parameters"></a>Parametry
 
-*STtraits* klasa cech dla źródła ciągu.
+*STtraits*<br/>
+Klasa cech dla źródła ciągu.
 
-*STalloc* klasę alokatora dla źródła ciągu.
+*STalloc*<br/>
+Klasa alokatora źródła ciągu.
 
-*InIt* typu iteratora zakres źródła danych wejściowych.
+*InIt*<br/>
+Typ iteratora danych wejściowych dla źródła zakresu.
 
-*prawy* wyrażenia regularnego źródła do skopiowania.
+*right*<br/>
+Wyrażenie regularne źródła do skopiowania.
 
-*PTR* wskaźnik do początku sekwencji do skopiowania.
+*ptr*<br/>
+Wskaźnik do początku sekwencji do skopiowania.
 
-*flagi* składni flagi opcji można dodać podczas kopiowania.
+*flagi*<br/>
+Flagi opcji składni można dodać podczas kopiowania.
 
 *LEN/TD >* długości sekwencji do skopiowania.
 
-*str* ciągu do skopiowania.
+*str*<br/>
+Ciąg do skopiowania.
 
-*pierwszy* początek sekwencji do skopiowania.
+*pierwszy*<br/>
+Początek sekwencji do skopiowania.
 
-*ostatni* koniec sekwencji do skopiowania.
+*ostatni*<br/>
+Koniec sekwencji do skopiowania.
 
-*IList* initializer_list do skopiowania.
+*IList*<br/>
+Lista initializer_list do skopiowania.
 
 ### <a name="remarks"></a>Uwagi
 
@@ -706,7 +728,8 @@ locale_type imbue(locale_type loc);
 
 ### <a name="parameters"></a>Parametry
 
-*Lokalizacja* obiekt ustawień regionalnych, który ma być przechowywany.
+*Lokalizacja*<br/>
+Obiekt ustawień regionalnych, który ma być przechowywany.
 
 ### <a name="remarks"></a>Uwagi
 
@@ -1006,13 +1029,17 @@ basic_regex& operator=(const basic_string<Elem, STtraits, STalloc>& str);
 
 ### <a name="parameters"></a>Parametry
 
-*STtraits* klasa cech dla źródła ciągu.
+*STtraits*<br/>
+Klasa cech dla źródła ciągu.
 
-*STalloc* klasę alokatora dla źródła ciągu.
+*STalloc*<br/>
+Klasa alokatora źródła ciągu.
 
-*prawy* wyrażenia regularnego źródła do skopiowania.
+*right*<br/>
+Wyrażenie regularne źródła do skopiowania.
 
-*str* ciągu do skopiowania.
+*str*<br/>
+Ciąg do skopiowania.
 
 ### <a name="remarks"></a>Uwagi
 
@@ -1113,7 +1140,8 @@ void swap(basic_regex& right) throw();
 
 ### <a name="parameters"></a>Parametry
 
-*prawy* obiektu będącego wyrażeniem regularnym wymiany.
+*right*<br/>
+Obiekt wyrażenia regularnego do wymiany.
 
 ### <a name="remarks"></a>Uwagi
 

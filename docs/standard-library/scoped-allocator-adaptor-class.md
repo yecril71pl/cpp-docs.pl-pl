@@ -33,12 +33,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7025e0d52aa882c26e2785279626959ca6b29ac1
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: 62bdeeddf0e81cf017c49eac51ca0e2eaaf046c1
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38962933"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44104070"
 ---
 # <a name="scopedallocatoradaptor-class"></a>scoped_allocator_adaptor — klasa
 
@@ -131,9 +131,11 @@ pointer allocate(size_type count);pointer allocate(size_type count, const_void_p
 
 ### <a name="parameters"></a>Parametry
 
-*Liczba* liczbę elementów, dla których ma można przydzielić wystarczającej ilości miejsca.
+*Liczba*<br/>
+Liczba elementów, dla których ma można przydzielić wystarczającej ilości miejsca.
 
-*Wskazówka* wskaźnika, który może pomóc obiekt alokatora, znajdując adres obiektu, przydzielany przed żądaniem.
+*Wskazówka*<br/>
+Wskaźnik, który może pomóc obiekt alokatora, znajdując adres obiektu, przydzielany przed żądaniem.
 
 ### <a name="return-value"></a>Wartość zwracana
 
@@ -168,15 +170,20 @@ void construct(pair<Ty1, Ty2>* ptr, pair<Uy1, Uy2>&& right);
 
 ### <a name="parameters"></a>Parametry
 
-*PTR* wskaźnik do lokalizacji pamięci, której obiekt ma zostać skonstruowane.
+*ptr*<br/>
+Wskaźnik do lokalizacji pamięci, której obiekt ma zostać skonstruowane.
 
-*argumenty* listy argumentów.
+*argumenty*<br/>
+Lista argumentów.
 
-*pierwszy* obiektu pierwszego typu w parze.
+*pierwszy*<br/>
+Obiekt pierwszy typ w parze.
 
-*drugi* obiekt drugi typ w parze.
+*Sekundy*<br/>
+Obiekt drugi typ w parze.
 
-*prawy* istniejącego obiektu do przeniesienia lub skopiowania.
+*right*<br/>
+Istniejący obiekt do przeniesienia lub skopiowania.
 
 ### <a name="remarks"></a>Uwagi
 
@@ -208,9 +215,11 @@ void deallocate(pointer ptr, size_type count);
 
 ### <a name="parameters"></a>Parametry
 
-*PTR* wskaźnika, począwszy od lokalizacji obiektów, które można cofnąć przydziału.
+*ptr*<br/>
+Wskaźnik do począwszy od lokalizacji obiektów, które można cofnąć przydziału.
 
-*Liczba* liczbę obiektów, które można cofnąć alokacji.
+*Liczba*<br/>
+Liczba obiektów, które można cofnąć alokacji.
 
 ## <a name="destroy"></a>  scoped_allocator_adaptor::Destroy —
 
@@ -223,7 +232,8 @@ void destroy(Ty* ptr)
 
 ### <a name="parameters"></a>Parametry
 
-*PTR* wskaźnik do obiektu, które mają zostać zniszczone.
+*ptr*<br/>
+Wskaźnik do zniszczenia obiektu.
 
 ### <a name="return-value"></a>Wartość zwracana
 
@@ -283,10 +293,10 @@ scoped_allocator_adaptor();
 scoped_allocator_adaptor(const scoped_allocator_adaptor& right) noexcept;
 template <class Outer2>
 scoped_allocator_adaptor(
- const scoped_allocator_adaptor<Outer2, Inner...>& right) noexcept;
+const scoped_allocator_adaptor<Outer2, Inner...>& right) noexcept;
 template <class Outer2>
 scoped_allocator_adaptor(
- scoped_allocator_adaptor<Outer2, Inner...>&& right) noexcept;
+scoped_allocator_adaptor<Outer2, Inner...>&& right) noexcept;
 template <class Outer2>
 scoped_allocator_adaptor(Outer2&& al,
     const Inner&... rest) noexcept;
@@ -294,11 +304,14 @@ scoped_allocator_adaptor(Outer2&& al,
 
 ### <a name="parameters"></a>Parametry
 
-*prawy* istniejące `scoped_allocator_adaptor`.
+*right*<br/>
+Istniejące `scoped_allocator_adaptor`.
 
-*Al* istniejących alokatora ma być używany jako zewnętrzne alokatora.
+*Al*<br/>
+Istniejące alokator ma być używany jako zewnętrzne alokatora.
 
-*REST* listy buforów, które ma być używany jako wewnętrzny buforów.
+*REST*<br/>
+Lista buforów, które ma być używany jako wewnętrzny buforów.
 
 ### <a name="remarks"></a>Uwagi
 

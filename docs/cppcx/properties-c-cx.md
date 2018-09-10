@@ -9,37 +9,41 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f5cfe1bf4ae614bc892b4ea93d36fa44604029f1
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: d4b5193919195e51b4dbcf82af50cd6dedbcf2b0
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43764309"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44103804"
 ---
 # <a name="properties-ccx"></a>Właściwości (C + +/ CX)
-Typy środowiska wykonawczego Windows ujawnić dane publiczne jako właściwości. Kod klienta uzyskuje dostęp do właściwości, takich jak datamember publicznych. Wewnętrznie właściwość jest zaimplementowana jako blok, który zawiera metody dostępu get i/lub metody dostępu set. Za pomocą metody dostępu, można wykonywać dodatkowych czynności przed lub po pobraniu wartości, na przykład można wyzwolić zdarzenie lub wykonać sprawdzanie poprawności.  
-  
-### <a name="remarks"></a>Uwagi  
- Wartość właściwości jest zawarta w zmiennej prywatnej — znane jako *magazyn zapasowy*— czyli tego samego typu, ponieważ właściwość. Właściwość może zawierać metody dostępu set, która przypisuje wartość do magazyn zapasowy, i metody dostępu get, który pobiera wartość magazyn zapasowy. Właściwość jest tylko do odczytu zawiera tylko akcesor pobierania, tylko do zapisu, jeśli zawiera tylko metody dostępu set i odczyt/zapis (można modyfikować) zapewnia obu metod dostępu.  
-  
- A *trivial* właściwość jest właściwością odczytu/zapisu, dla których kompilator automatycznie implementuje metody dostępu i magazyn zapasowy. Nie masz dostępu do implementacji kompilatora. Jednak można zadeklarować właściwości niestandardowej i jawnie deklarować swoją metody dostępu i magazyn zapasowy. W ramach metodę dostępu możesz wykonać wszelka logika, która jest wymagana, takich jak sprawdzanie poprawności danych wejściowych do metody dostępu set, obliczania wartości z wartości właściwości, uzyskiwanie dostępu do bazy danych lub wyzwalanie zdarzeń, gdy właściwość.  
-  
- Gdy w języku C + +/ CX klasy referencyjnej zostanie uruchomiony, jego pamięci jest inicjowany z wartością zerową przed jego konstruktor jest wywoływana w związku z tym wszystkie właściwości są przypisywane domyślną wartość zero lub nullptr punkcie deklaracji.  
-  
-### <a name="examples"></a>Przykłady  
- Poniższy przykład kodu pokazuje sposób deklarowania i dostępu do właściwości. Pierwszą właściwością `Name`, jest znany jako *trivial* właściwość, ponieważ kompilator automatycznie generuje `set` akcesora `get` metody dostępu i magazyn zapasowy.  
-  
- Drugą właściwością `Doctor`, to właściwość tylko do odczytu, ponieważ określa on *blok właściwości* jawnie określa tylko `get` metody dostępu. Ponieważ jest zadeklarowany w bloku właściwości, należy jawnie zadeklarować magazyn zapasowy; oznacza to, że ciąg prywatnej ^ zmiennej `doctor_`. Zazwyczaj właściwość tylko do odczytu po prostu zwraca wartość magazyn zapasowy. Tylko klasy można ustawić wartość magazynie zapasowym, zazwyczaj w konstruktorze.  
-  
- Właściwość trzeciej `Quantity`, jest właściwością odczytu i zapisu, ponieważ deklaruje bloku właściwości, która deklaruje zarówno `set` metody dostępu i `get` metody dostępu.  
-  
- `set` Akcesor wykonuje test zdefiniowanych przez użytkownika ważność przypisaną wartością. W przeciwieństwie do języka C#, tutaj nazwę *wartość* tylko identyfikator parametr w to `set` akcesor; nie jest słowem kluczowym. Jeśli *wartość* nie jest większa niż zero, jest zgłaszany Platform::InvalidArgumentException. W przeciwnym razie przechowywania zapasowy `quantity_`, jest aktualizowany z przypisaną wartością.  
-  
- Należy pamiętać, że na liście składowych nie można zainicjować właściwości. Oczywiście można zainicjować zmienne magazyn zapasowy na liście składowych.  
-  
- [!code-cpp[cx_properties#01](../cppcx/codesnippet/CPP/cx_properties/class1.h#01)]  
-  
-## <a name="see-also"></a>Zobacz też  
- [System typów](../cppcx/type-system-c-cx.md)   
- [Dokumentacja języka Visual C++](../cppcx/visual-c-language-reference-c-cx.md)   
- [Odwołanie do przestrzeni nazw](../cppcx/namespaces-reference-c-cx.md)
+
+Typy środowiska wykonawczego Windows ujawnić dane publiczne jako właściwości. Kod klienta uzyskuje dostęp do właściwości, takich jak datamember publicznych. Wewnętrznie właściwość jest zaimplementowana jako blok, który zawiera metody dostępu get i/lub metody dostępu set. Za pomocą metody dostępu, można wykonywać dodatkowych czynności przed lub po pobraniu wartości, na przykład można wyzwolić zdarzenie lub wykonać sprawdzanie poprawności.
+
+### <a name="remarks"></a>Uwagi
+
+Wartość właściwości jest zawarta w zmiennej prywatnej — znane jako *magazyn zapasowy*— czyli tego samego typu, ponieważ właściwość. Właściwość może zawierać metody dostępu set, która przypisuje wartość do magazyn zapasowy, i metody dostępu get, który pobiera wartość magazyn zapasowy. Właściwość jest tylko do odczytu zawiera tylko akcesor pobierania, tylko do zapisu, jeśli zawiera tylko metody dostępu set i odczyt/zapis (można modyfikować) zapewnia obu metod dostępu.
+
+A *trivial* właściwość jest właściwością odczytu/zapisu, dla których kompilator automatycznie implementuje metody dostępu i magazyn zapasowy. Nie masz dostępu do implementacji kompilatora. Jednak można zadeklarować właściwości niestandardowej i jawnie deklarować swoją metody dostępu i magazyn zapasowy. W ramach metodę dostępu możesz wykonać wszelka logika, która jest wymagana, takich jak sprawdzanie poprawności danych wejściowych do metody dostępu set, obliczania wartości z wartości właściwości, uzyskiwanie dostępu do bazy danych lub wyzwalanie zdarzeń, gdy właściwość.
+
+Gdy w języku C + +/ CX klasy referencyjnej zostanie uruchomiony, jego pamięci jest inicjowany z wartością zerową przed jego konstruktor jest wywoływana w związku z tym wszystkie właściwości są przypisywane domyślną wartość zero lub nullptr punkcie deklaracji.
+
+### <a name="examples"></a>Przykłady
+
+Poniższy przykład kodu pokazuje sposób deklarowania i dostępu do właściwości. Pierwszą właściwością `Name`, jest znany jako *trivial* właściwość, ponieważ kompilator automatycznie generuje `set` akcesora `get` metody dostępu i magazyn zapasowy.
+
+Drugą właściwością `Doctor`, to właściwość tylko do odczytu, ponieważ określa on *blok właściwości* jawnie określa tylko `get` metody dostępu. Ponieważ jest zadeklarowany w bloku właściwości, należy jawnie zadeklarować magazyn zapasowy; oznacza to, że ciąg prywatnej ^ zmiennej `doctor_`. Zazwyczaj właściwość tylko do odczytu po prostu zwraca wartość magazyn zapasowy. Tylko klasy można ustawić wartość magazynie zapasowym, zazwyczaj w konstruktorze.
+
+Właściwość trzeciej `Quantity`, jest właściwością odczytu i zapisu, ponieważ deklaruje bloku właściwości, która deklaruje zarówno `set` metody dostępu i `get` metody dostępu.
+
+`set` Akcesor wykonuje test zdefiniowanych przez użytkownika ważność przypisaną wartością. W przeciwieństwie do języka C#, tutaj nazwę *wartość* tylko identyfikator parametr w to `set` akcesor; nie jest słowem kluczowym. Jeśli *wartość* nie jest większa niż zero, jest zgłaszany Platform::InvalidArgumentException. W przeciwnym razie przechowywania zapasowy `quantity_`, jest aktualizowany z przypisaną wartością.
+
+Należy pamiętać, że na liście składowych nie można zainicjować właściwości. Oczywiście można zainicjować zmienne magazyn zapasowy na liście składowych.
+
+[!code-cpp[cx_properties#01](../cppcx/codesnippet/CPP/cx_properties/class1.h#01)]
+
+## <a name="see-also"></a>Zobacz też
+
+[System typów](../cppcx/type-system-c-cx.md)<br/>
+[Dokumentacja języka Visual C++](../cppcx/visual-c-language-reference-c-cx.md)<br/>
+[Odwołanie do przestrzeni nazw](../cppcx/namespaces-reference-c-cx.md)

@@ -34,12 +34,12 @@ helpviewer_keywords:
 - std::to_wstring [C++]
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6534d93b4f04826188fa13c942efd080e152aebe
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: a80749e6eaffe02d748167f462580782a2755f89
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38954906"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44106746"
 ---
 # <a name="ltstringgt-functions"></a>&lt;ciąg&gt; funkcji
 
@@ -85,11 +85,14 @@ basic_istream<Allocator, Traits>& getline(
 
 ### <a name="parameters"></a>Parametry
 
-*jest* strumienia wejściowego, z którego ma zostać wyodrębnione ciągu.
+*is*<br/>
+Strumień wejściowy, z którego ma zostać wyodrębnione ciągu.
 
-*str* ciągu, do którego są odczytywane znaków ze strumienia wejściowego.
+*str*<br/>
+Ciąg, do którego są odczytywane znaków ze strumienia wejściowego.
 
-*delim* ogranicznik wiersza.
+*Delim*<br/>
+Ogranicznik wiersza.
 
 ### <a name="return-value"></a>Wartość zwracana
 
@@ -426,9 +429,11 @@ void swap(basic_string<CharType, Traits, Allocator>& left, basic_string<CharType
 
 ### <a name="parameters"></a>Parametry
 
-*po lewej stronie* jednego ciągu, którego elementy mają być zamieniona na te, które z innego ciągu.
+*left*<br/>
+Jednego ciągu, którego elementy mają być zamieniona na te, które z innego ciągu.
 
-*prawy* ciąg, którego elementy mają być zamieniona na pierwszy ciąg.
+*right*<br/>
+Inne ciąg którego elementy mają być zamieniona na pierwszy ciąg.
 
 ### <a name="remarks"></a>Uwagi
 

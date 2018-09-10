@@ -92,12 +92,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: fcf3a5fcdb8c604dac368b60cf4a368bdb1c3f14
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: f766df104df31ba2ba154c081338f7a6d1d4a05c
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33865757"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44107529"
 ---
 # <a name="regexconstants-class"></a>regex_constants — Klasa
 
@@ -110,22 +110,22 @@ namespace regex_constants {
     enum syntax_option_type;
     enum match_flag_type;
     enum error_type;
- }
+}
 ```
 
 ## <a name="remarks"></a>Uwagi
 
-Przestrzeń nazw `regex_constants` hermetyzuje kilka typów flagę i ich wartości flag skojarzone.
+Przestrzeń nazw `regex_constants` hermetyzuje kilka typów flag i ich skojarzone wartości flag.
 
 ## <a name="requirements"></a>Wymagania
 
-**Nagłówek:** \<regex >
+**Nagłówek:** \<wyrażenia regularnego >
 
-**Namespace:** Standard
+**Namespace:** standardowe
 
 ## <a name="error_type"></a>  regex_constants::error_type
 
-Flagi dla raportowania błędów składni wyrażeń regularnych.
+Flagi unikatowe dla raportowania błędów składni wyrażeń regularnych.
 
 ```cpp
 enum error_type
@@ -150,43 +150,43 @@ enum error_type
 
 ### <a name="remarks"></a>Uwagi
 
-Typ jest Typ wyliczany opisujący obiekt, który może zawierać flag błędów. Flaga różne wartości są następujące:
+Typ jest typem wyliczanym, opisująca obiekt, który może pomieścić flag błędów. Wartości odrębnych flagi są następujące:
 
 `error_backref` --wyrażenie zawiera nieprawidłowe odwołanie do tyłu
 
 `error_badbrace` --wyrażenie zawiera nieprawidłową liczbę w wyrażeniu {}
 
-`error_badrepeat` --powtarzania wyrażenia (jedną z "*", ","+"," {"w kontekstach większości) nie był poprzedzony przez wyrażenie
+`error_badrepeat` — wyrażenia powtórzenia (jedną z "*", ","+"," {"w większości kontekstach) nie został poprzedzona przez wyrażenie
 
-`error_brace` --wyrażenie zawiera niedopasowane "{" lub "}"
+`error_brace` --wyrażenie zawiera Niedopasowany "{" lub "}"
 
-`error_brack` --wyrażenie zawiera niedopasowane "[" lub "]"
+`error_brack` --wyrażenie zawiera Niedopasowany "[" lub "]"
 
-`error_collate` --wyrażenie zawiera nieprawidłową nazwę sortowania elementu
+`error_collate` --wyrażenie zawiera nieprawidłową nazwę element sortujący
 
-`error_complexity` --próbę dopasowania nie powiodło się, ponieważ był zbyt złożony
+`error_complexity` --próby dopasowania nie powiodło się, ponieważ był zbyt złożony
 
 `error_ctype` --wyrażenie zawiera nieprawidłowy znak nazwy klasy
 
 `error_escape` --wyrażenie zawiera nieprawidłową sekwencję ucieczki
 
-`error_paren` --wyrażenie zawiera niedopasowane "(" lub")"
+`error_paren` --wyrażenie zawiera Niedopasowany "(" lub")"
 
 `error_parse` --Nie można przeanalizować wyrażenia
 
 `error_range` --wyrażenie zawiera nieprawidłowy znak specyfikator zakresu
 
-`error_space` — podczas analizowania wyrażenia regularnego nie powiodło się, ponieważ nie były dostępne za mało zasobów
+`error_space` --analizowanie wyrażeń regularnych nie powiodło się, ponieważ nie były dostępne za mało zasobów
 
-`error_stack` — dopasowanie próba nie powiodła się, ponieważ nie był dostępny za mało pamięci
+`error_stack` --próby dopasowania nie powiodło się, ponieważ nie była dostępna wystarczająca ilość pamięci
 
-`error_syntax` --Wystąpił błąd podczas analizowania składni błędu
+`error_syntax` --analizowanie nie powiodło się na błąd składni
 
 `error_backref` --wyrażenie zawiera nieprawidłowe odwołanie do tyłu
 
 ## <a name="match_flag_type"></a>  regex_constants::match_flag_type
 
-Flagi dla wyrażenia regularnego dopasowanie opcje.
+Flagi unikatowe dla wyrażenia regularnego, opcje dopasowania.
 
 ```cpp
 enum match_flag_type
@@ -210,41 +210,41 @@ enum match_flag_type
 
 ### <a name="remarks"></a>Uwagi
 
-Typ jest typem maski, który opisuje opcje, które będą używane podczas dopasowywania tekstu sekwencję przed wyrażeniem regularnym i format flagi do użycia podczas zamieniania tekstu. Opcje można łączyć z `|`.
+Typ jest typem maski bitów, który w tym artykule opisano opcje, które będą używane podczas dopasowywania sekwencją tekstu względem wyrażenia regularnego i format flagi do użycia podczas zamieniania tekstu. Opcje można łączyć z `|`.
 
 Dostępne są opcje dopasowania:
 
-`match_default`
+*match_default*<br/>
 
-`match_not_bol` --nie Traktuj pierwszą pozycję w sekwencji docelowy jako początek wiersza
+`match_not_bol` --nie Traktuj pierwszej pozycji w sekwencji docelowej, jak początek wiersza
 
-`match_not_eol` --nie Traktuj przeszłości end pozycji w sekwencji docelowy jako koniec wiersza
+`match_not_eol` --nie Traktuj przeszłości end pozycja w sekwencji docelowej, jako koniec wiersza
 
-`match_not_bow` --nie Traktuj pierwszą pozycję w sekwencji docelowy jako początku słowa
+`match_not_bow` --nie Traktuj pierwszej pozycji w sekwencji docelowej, jak początku wyrazu
 
-`match_not_eow` --nie Traktuj przeszłości end pozycji w sekwencji docelowy jako koniec słowa
+`match_not_eow` --nie Traktuj przeszłości end pozycja w sekwencji docelowej, jako koniec wyrazu
 
-`match_any` — Jeśli możliwe jest więcej niż jedno dopasowanie dopuszczalny jest żadnego dopasowania
+`match_any` — Jeśli możliwe jest więcej niż jedno dopasowanie jakiegokolwiek dopasowania jest dopuszczalne
 
-`match_not_null` --nie Traktuj puste podsekwencji jako dopasowanie
+`match_not_null` --nie Traktuj pusty podsekwencję jako dopasowanie
 
-`match_continuous` --Nie wyszukuj dopasowań innych niż na początku sekwencji docelowego
+`match_continuous` --Nie wyszukuj dopasowania innych niż na początku sekwencji docelowej
 
-`match_prev_avail` -- `--first` jest prawidłowy iteratora; Ignoruj `match_not_bol` i `match_not_bow` Jeśli ustawiona
+`match_prev_avail` -- `--first` jest iteratorem prawidłowe; Ignoruj `match_not_bol` i `match_not_bow` Jeśli ustawić
 
-Flagi format to:
+Flagi formatu to:
 
-`format_default` — Użyj reguł format języka ECMAScript
+`format_default` — Użyj reguły formatu ECMAScript
 
-`format_sed` — Użyj reguł format mniejszyć
+`format_sed` — Użyj reguły formatu sed
 
-`format_no_copy` --nie Kopiuj tekst, który nie pasuje do wyrażenia regularnego
+`format_no_copy` --nie Kopiuj tekst, który nie jest zgodny z wyrażeniem regularnym
 
-`format_first_only` --nie wyszukiwania po pierwszego dopasowania
+`format_first_only` --Nie wyszukuj dopasowania po pierwszej
 
 ## <a name="syntax_option_type"></a>  regex_constants::syntax_option_type
 
-Flagi do wybierania opcji składni.
+Flagi służąca do wybierania opcji składni.
 
 ```cpp
 enum syntax_option_type
@@ -266,39 +266,39 @@ enum syntax_option_type
 
 ### <a name="remarks"></a>Uwagi
 
-Typ jest typem maski, który opisuje specyfikatory języka i Modyfikatory składni do użycia w przypadku kompilowania kodu wyrażenia regularnego. Opcje można łączyć z `|`. Specyfikator nie więcej niż jednym języku, należy używać w czasie.
+Typ jest typem maski bitów, który opisuje specyfikatory języka i składni modyfikatory, które ma być używany podczas kompilowania wyrażeń regularnych. Opcje można łączyć z `|`. Specyfikator nie więcej niż jednym języku powinny być używane w danym momencie.
 
-Specyfikatory języka są:
+Specyfikatory języka są następujące:
 
-`ECMAScript` --Skompiluj jako ECMAScript
+`ECMAScript` --skompilowana jako ECMAScript
 
-`basic` --Skompiluj jako BRE
+`basic` --skompilowana jako BRE
 
-`extended` --Skompiluj jako ERE
+`extended` --skompilowana jako ERE
 
-`awk` --Skompiluj jako awk
+`awk` --skompilowana jako awk
 
-`grep` --Skompiluj jako grep
+`grep` --skompilowana jako grep
 
-`egrep` --Skompiluj jako egrep
+`egrep` --skompilowana jako egrep
 
-Modyfikatory składnia to:
+Dostępne są następujące Modyfikatory składni:
 
-`icase` — upewnić zgodna bez uwzględniania wielkości liter
+`icase` — upewnić dopasowania, bez uwzględniania wielkości liter
 
-`nosubs` --przewidujące muszą nie zachować informacje o zawartości grupy przechwytywania
+`nosubs` --przewidujące muszą nie zachować informacje o zawartości grup przechwytywania
 
-`optimize` --wdrożenia należy wyróżnić szybkości zgodnych, a nie szybkość kompilacji wyrażeń regularnych
+`optimize` --implementacji podkreślić szybkość zgodnych, a nie szybkość kompilowania wyrażeń regularnych
 
-`collate` — Utwórz odpowiada zależne od ustawień regionalnych
+`collate` --marki dopasowuje zależne od ustawień regionalnych
 
 ## <a name="see-also"></a>Zobacz także
 
 [\<regex>](../standard-library/regex.md)<br/>
 [regex_error, klasa](../standard-library/regex-error-class.md)<br/>
-[\<wyrażenie regularne > Funkcje](../standard-library/regex-functions.md)<br/>
+[\<wyrażenie regularne > funkcji](../standard-library/regex-functions.md)<br/>
 [regex_iterator, klasa](../standard-library/regex-iterator-class.md)<br/>
-[\<wyrażenie regularne > operatory](../standard-library/regex-operators.md)<br/>
+[\<wyrażenie regularne > operatorów](../standard-library/regex-operators.md)<br/>
 [regex_token_iterator, klasa](../standard-library/regex-token-iterator-class.md)<br/>
 [regex_traits, klasa](../standard-library/regex-traits-class.md)<br/>
 [\<wyrażenie regularne > definicje typów](../standard-library/regex-typedefs.md)<br/>

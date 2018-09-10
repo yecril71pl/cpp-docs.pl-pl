@@ -40,16 +40,16 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 455bf63cdac425217c40068853b302edefb94f16
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 1df9e064ac7af761a858c6e18d99526a9b3c7ffb
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32404285"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44103791"
 ---
 # <a name="perror-wperror"></a>perror, _wperror
 
-Drukuj komunikat o błędzie.
+Wydrukuj komunikat o błędzie.
 
 ## <a name="syntax"></a>Składnia
 
@@ -64,25 +64,26 @@ void _wperror(
 
 ### <a name="parameters"></a>Parametry
 
-*komunikat* ciąg komunikatu do drukowania.
+*komunikat*<br/>
+Ciąg komunikatu do drukowania.
 
 ## <a name="remarks"></a>Uwagi
 
-**Perror** funkcja wyświetla komunikat o błędzie **stderr**. **_wperror —** jest wersja znaków dwubajtowych **_perror**; *komunikat* argument **_wperror —** jest ciągiem znaków dwubajtowych. **_wperror —** i **_perror** zachowują się tak samo w przeciwnym razie wartość.
+**Perror** funkcja drukuje komunikat o błędzie do **stderr**. **_wperror —** to wersja znaku dwubajtowego **_perror**; *komunikat* argument **_wperror —** jest ciągiem znaku dwubajtowego. **_wperror —** i **_perror** zachowują się identycznie.
 
 ### <a name="generic-text-routine-mappings"></a>Mapowania procedur zwykłego tekstu
 
-|Procedura TCHAR.H|_Unicode — & _MBCS nie zdefiniowany|_MBCS zdefiniowano|_UNICODE zdefiniowano|
+|Procedura TCHAR.H|_UNICODE & _MBCS nie zdefiniowano|_MBCS zdefiniowano|_UNICODE zdefiniowano|
 |---------------------|------------------------------------|--------------------|-----------------------|
 |**_tperror —**|**perror**|**perror**|**_wperror —**|
 
-*komunikat* drukowania najpierw, a następnie dwukropek, a następnie system komunikat o błędzie dla ostatniego wywołania biblioteki, które spowodowało błąd, a na końcu znakiem nowego wiersza. Jeśli *komunikat* wskaźnika o wartości null lub wskaźnikiem do ciągu wartości null, **perror** wyświetla tylko system komunikat o błędzie.
+*komunikat* najpierw, wydrukowaniu, a następnie dwukropek, a następnie komunikat o błędzie systemu dla ostatniego wywołania biblioteki, które spowodowało błąd, a na koniec znakiem nowego wiersza. Jeśli *komunikat* jest wskaźnikiem typu null lub wskaźnikiem do ciągu o wartości null, **perror** drukuje tylko system komunikat o błędzie.
 
-Numer błędu jest przechowywana w zmiennej [errno](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md) (zdefiniowany w numer błędu. H). Komunikaty o błędach systemu są dostępne za pośrednictwem zmiennej [_sys_errlist —](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md), która jest tablicę komunikatów uporządkowanych według numer błędu. **perror** drukuje wiadomości odpowiednie błąd przy użyciu **errno** wartość jako indeks **_sys_errlist —**. Wartość zmiennej [_sys_nerr —](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md) jest zdefiniowany jako maksymalną liczbę elementów w **_sys_errlist —** tablicy.
+Numer błędu jest przechowywana w zmiennej [errno](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md) (zdefiniowany w numer błędu. GODZ.). Komunikaty o błędach systemu są dostępne za pośrednictwem zmiennej [_sys_errlist](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md), który jest tablicą wiadomości według wielkości błędu. **perror** wyświetli odpowiedni komunikat o błędzie komunikat przy użyciu **errno** wartość jako indeksu do **_sys_errlist**. Wartość zmiennej [_sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md) jest zdefiniowana jako maksymalna liczba elementów w **_sys_errlist** tablicy.
 
-Aby uzyskać dokładne wyniki wywołania **perror** natychmiast po procedury biblioteki zwraca błąd. W przeciwnym razie można zastąpić wezwań **errno** wartości.
+Aby uzyskać dokładne wyniki, należy wywołać **perror** natychmiast, po procedurze biblioteki zwraca błąd. W przeciwnym razie kolejnych wywołań może spowodować zastąpienie **errno** wartości.
 
-W oknach systemu operacyjnego, niektóre **errno** wartości na liście numer błędu. H są używane. Wartości te są zarezerwowane do użytku przez system operacyjny UNIX. Zobacz [_doserrno —, errno, _sys_errlist — i _sys_nerr —](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md) listę **errno** wartości używane przez system operacyjny Windows. **perror** wyświetla pusty ciąg dla każdego **errno** wartości nie są używane przez tych platform.
+W Windows system operacyjny, niektóre **errno** wartości na liście numer błędu. H są nieużywane. Te wartości są zarezerwowane do użytku przez system operacyjny UNIX. Zobacz [_doserrno, errno, _sys_errlist i _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md) listę **errno** wartości używane przez system operacyjny Windows. **perror** drukuje pusty ciąg dla każdego **errno** wartość nie jest używana przez te platformy.
 
 ## <a name="requirements"></a>Wymagania
 
@@ -95,7 +96,7 @@ Aby uzyskać dodatkowe informacje o zgodności, zobacz [zgodności](../../c-runt
 
 ## <a name="libraries"></a>Biblioteki
 
-Wszystkie wersje [biblioteki wykonawcze języka C](../../c-runtime-library/crt-library-features.md).
+Wszystkie wersje [biblioteki wykonawczej C](../../c-runtime-library/crt-library-features.md).
 
 ## <a name="example"></a>Przykład
 

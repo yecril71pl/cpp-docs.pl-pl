@@ -33,12 +33,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e40c06d2dc95366e154f4299dda0087c42698312
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: 018af5d544e38485dc38608f280d57ce595db49c
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38960199"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44103282"
 ---
 # <a name="exponentialdistribution-class"></a>exponential_distribution — Klasa
 
@@ -77,9 +77,11 @@ public:
 
 ### <a name="parameters"></a>Parametry
 
-*RealType* typu wyniku zmiennoprzecinkowych, wartość domyślna to **double**. Aby możliwych typów, zobacz [ \<losowy >](../standard-library/random.md).
+*RealType*<br/>
+Typ wyniku zmiennoprzecinkowych, wartość domyślna to **double**. Aby możliwych typów, zobacz [ \<losowy >](../standard-library/random.md).
 
-*URNG* losowego silnika generatora liczb. Aby możliwych typów, zobacz [ \<losowy >](../standard-library/random.md).
+*URNG*<br/>
+Liczba generator aparat losowy. Aby możliwych typów, zobacz [ \<losowy >](../standard-library/random.md).
 
 ## <a name="remarks"></a>Uwagi
 
@@ -191,9 +193,11 @@ explicit exponential_distribution(const param_type& parm);
 
 ### <a name="parameters"></a>Parametry
 
-*lambda* `lambda` parametru dystrybucji.
+*lambda*<br/>
+`lambda` Parametru dystrybucji.
 
-*Parametr* pakiet parametru wykorzystywany do konstruowania dystrybucji.
+*parm*<br/>
+Pakiet parametru wykorzystywany do konstruowania dystrybucji.
 
 ### <a name="remarks"></a>Uwagi
 
@@ -220,9 +224,11 @@ struct param_type {
 
 ### <a name="parameters"></a>Parametry
 
-*lambda* `lambda` parametru dystrybucji.
+*lambda*<br/>
+`lambda` Parametru dystrybucji.
 
-*prawy* `param_type` obiekt do porównania z tym.
+*right*<br/>
+`param_type` Obiekt do porównania z tym.
 
 ### <a name="remarks"></a>Uwagi
 

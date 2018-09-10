@@ -17,12 +17,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d5b9ae4ae3b7d741624d220ba00006d51a61fd20
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: 8b277a31eafafa4ae33066653b7a080bb3474408
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38962165"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44104124"
 ---
 # <a name="modulus-struct"></a>modulus — Struktura
 
@@ -51,9 +51,11 @@ struct modulus<void>
 
 *Typ*, *T*, *U* dowolnego typu, który obsługuje `operator%` przyjmującej argumentów operacji typu określonego lub wywnioskowane uprawnienie.
 
-*Po lewej stronie* lewy operand operacji modulo. Szablon Niewyspecjalizowana przyjmuje argument odwołania l-wartości typu *typu*. Wyspecjalizowane szablonu doskonała przekazywania l-wartością i argumenty odwołania rvalue wywnioskować typu *T*.
+*po lewej stronie*<br/>
+Lewy operand operacji modulo. Szablon Niewyspecjalizowana przyjmuje argument odwołania l-wartości typu *typu*. Wyspecjalizowane szablonu doskonała przekazywania l-wartością i argumenty odwołania rvalue wywnioskować typu *T*.
 
-*Po prawej stronie* prawy operand operacji modulo. Szablon Niewyspecjalizowana przyjmuje argument odwołania l-wartości typu *typu*. Wyspecjalizowane szablonu doskonała przekazywania l-wartością i argumenty odwołania rvalue wywnioskować typu *U*.
+*po prawej stronie*<br/>
+Prawy operand operacji modulo. Szablon Niewyspecjalizowana przyjmuje argument odwołania l-wartości typu *typu*. Wyspecjalizowane szablonu doskonała przekazywania l-wartością i argumenty odwołania rvalue wywnioskować typu *U*.
 
 ## <a name="return-value"></a>Wartość zwracana
 
@@ -115,8 +117,8 @@ int main( )
 The vector v1 = ( 5 10 15 20 25 30 )
 The vector v2 = ( 3 6 9 12 15 18 )
 The element-wise remainders of the modular division
- are: ( 2 4 6 8 10 12 )
- */
+are: ( 2 4 6 8 10 12 )
+*/
 ```
 
 ## <a name="requirements"></a>Wymagania

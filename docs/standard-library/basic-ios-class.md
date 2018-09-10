@@ -65,12 +65,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 28854866824b1750fb1887d5e822d2165034f687
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: 3abc3c08b46577f7d59b2831a68ded812a5da60a
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38956846"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44110021"
 ---
 # <a name="basicios-class"></a>basic_ios — Klasa
 
@@ -86,9 +86,11 @@ class basic_ios : public ios_base
 
 ### <a name="parameters"></a>Parametry
 
-*Elem* typu.
+*Elem*<br/>
+Typ.
 
-*Cechy* zmienną typu `char_traits`.
+*Cechy*<br/>
+Zmienna typu `char_traits`.
 
 ## <a name="remarks"></a>Uwagi
 
@@ -202,7 +204,8 @@ basic_ios();
 
 ### <a name="parameters"></a>Parametry
 
-*SB* standardowa bufor do przechowywania elementów wejściowych lub wyjściowych.
+*sb*<br/>
+Standardowa bufor do przechowywania elementów wejściowych lub wyjściowych.
 
 ### <a name="remarks"></a>Uwagi
 
@@ -256,7 +259,8 @@ const basic_ios<Elem, Traits>& right);
 
 ### <a name="parameters"></a>Parametry
 
-*prawy* strumienia flagi, którego chcesz skopiować.
+*right*<br/>
+Strumień, którego flagi, które chcesz skopiować.
 
 ### <a name="return-value"></a>Wartość zwracana
 
@@ -338,7 +342,8 @@ void exceptions(io_state Newexcept);
 
 ### <a name="parameters"></a>Parametry
 
-*Newexcept* flagi, które chcesz zgłosić wyjątek.
+*Newexcept*<br/>
+Flagi, które mają zostać zgłoszony wyjątek.
 
 ### <a name="return-value"></a>Wartość zwracana
 
@@ -426,7 +431,8 @@ char_type fill(char_type Char);
 
 ### <a name="parameters"></a>Parametry
 
-*CHAR* żądany jako znak wypełnienia znak.
+*Char*<br/>
+Znak, który ma być znak wypełnienia.
 
 ### <a name="return-value"></a>Wartość zwracana
 
@@ -489,7 +495,8 @@ locale imbue(const locale& Loc);
 
 ### <a name="parameters"></a>Parametry
 
-*Lokalizacja* ciągu ustawień regionalnych.
+*Lokalizacja*<br/>
+Ciąg ustawień regionalnych.
 
 ### <a name="return-value"></a>Wartość zwracana
 
@@ -531,9 +538,11 @@ void init(basic_streambuf<Elem,Traits>* _Sb, bool _Isstd = false);
 
 ### <a name="parameters"></a>Parametry
 
-*_Sb* standardowa bufor do przechowywania elementów wejściowych lub wyjściowych.
+*_Sb*<br/>
+Standardowa bufor do przechowywania elementów wejściowych lub wyjściowych.
 
-*_Isstd* Określa, czy jest to Standardowy strumień.
+*_Isstd*<br/>
+Określa, czy jest to Standardowy strumień.
 
 ### <a name="remarks"></a>Uwagi
 
@@ -577,7 +586,8 @@ void move(basic_ios&& right);
 
 ### <a name="parameters"></a>Parametry
 
-*prawy* `ios_base` przesunięcia wartości z.
+*right*<br/>
+`ios_base` Przesunięcia wartości z.
 
 ### <a name="remarks"></a>Uwagi
 
@@ -593,9 +603,11 @@ char narrow(char_type Char, char Default = '\0') const;
 
 ### <a name="parameters"></a>Parametry
 
-*CHAR* **char** do przekonwertowania.
+*Char*<br/>
+**Char** do przekonwertowania.
 
-*Domyślne* **char** czy mają być zwracane, jeśli znaleziono odpowiednika.
+*Default*<br/>
+**Char** czy mają być zwracane, jeśli znaleziono odpowiednika.
 
 ### <a name="return-value"></a>Wartość zwracana
 
@@ -726,7 +738,8 @@ basic_streambuf<Elem, Traits>* _Sb);
 
 ### <a name="parameters"></a>Parametry
 
-*_Sb* strumienia.
+*_Sb*<br/>
+Strumień.
 
 ### <a name="remarks"></a>Uwagi
 
@@ -817,7 +830,8 @@ void setstate(iostate _State);
 
 ### <a name="parameters"></a>Parametry
 
-*_Stanu* dodatkowe flagi, aby ustawić.
+*_Stanu*<br/>
+Dodatkowe flagi, aby ustawić.
 
 ### <a name="remarks"></a>Uwagi
 
@@ -866,7 +880,8 @@ basic_streambuf<Elem, Tr>* strbuf)
 
 ### <a name="parameters"></a>Parametry
 
-*strbuf* buforu strumienia, aby stać się buforu odczytu.
+*strbuf*<br/>
+Bufor strumienia przestanie buforu odczytu.
 
 ### <a name="remarks"></a>Uwagi
 
@@ -884,7 +899,8 @@ basic_ostream<Elem, Traits>* str);
 
 ### <a name="parameters"></a>Parametry
 
-*str* strumienia.
+*str*<br/>
+Strumień.
 
 ### <a name="return-value"></a>Wartość zwracana
 
@@ -930,7 +946,8 @@ char_type widen(char Char) const;
 
 ### <a name="parameters"></a>Parametry
 
-*CHAR* znak, który ma zostać przekształcony.
+*Char*<br/>
+Znak, który ma zostać przekształcony.
 
 ### <a name="return-value"></a>Wartość zwracana
 
@@ -971,7 +988,8 @@ void swap(basic_ios&& right);
 
 ### <a name="parameters"></a>Parametry
 
-*prawy* `basic_ios` obiekt, który jest używany do wymiany wartości.
+*right*<br/>
+`basic_ios` Obiekt, który jest używany do wymiany wartości.
 
 ### <a name="remarks"></a>Uwagi
 

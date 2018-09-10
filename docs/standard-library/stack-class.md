@@ -30,12 +30,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9b933029f7180292e1c9e392bf2ab09e8dbcb204
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: e4f1f34e43f04d19efb38ba32488b43845d42260
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38963228"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44110415"
 ---
 # <a name="stack-class"></a>stack — Klasa
 
@@ -50,9 +50,11 @@ class stack
 
 ### <a name="parameters"></a>Parametry
 
-*Typ* typ danych elementu mają być przechowywane w stosie.
+*Typ*<br/>
+Typ danych elementu mają być przechowywane w stosie.
 
-*Kontener* typu bazowego kontenera, używaną do zaimplementowania stosu. Wartość domyślna to klasa `deque`  *\<typ >*.
+*Kontener*<br/>
+Typ podstawowy kontener używany do implementowania stosu. Wartość domyślna to klasa `deque`  *\<typ >*.
 
 ## <a name="remarks"></a>Uwagi
 
@@ -227,7 +229,8 @@ void push(const Type& val);
 
 ### <a name="parameters"></a>Parametry
 
-*Val* elementu dodany na górze stosu.
+*Val*<br/>
+Element dodany na górze stosu.
 
 ### <a name="remarks"></a>Uwagi
 
@@ -334,7 +337,8 @@ explicit stack(const container_type& right);
 
 ### <a name="parameters"></a>Parametry
 
-*prawy* kontenera, w której skonstruowany stosu jest kopią.
+*right*<br/>
+Kontener, w której skonstruowany stosu jest kopią.
 
 ### <a name="example"></a>Przykład
 

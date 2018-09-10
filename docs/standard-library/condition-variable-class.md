@@ -30,12 +30,12 @@ helpviewer_keywords:
 - std::condition_variable::wait_until
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ca85765d6fed21938a61f52f25c1a377ec43c499
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: 0e4d31a93ac8e0f7785ea567821c0ac6b0ad6a58
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38965181"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44109839"
 ---
 # <a name="conditionvariable-class"></a>condition_variable — Klasa
 
@@ -125,9 +125,11 @@ void wait(unique_lock<mutex>& Lck, Predicate Pred);
 
 ### <a name="parameters"></a>Parametry
 
-*Lck* A [unique_lock\<mutex >](../standard-library/unique-lock-class.md) obiektu.
+*Lck*<br/>
+A [unique_lock\<mutex >](../standard-library/unique-lock-class.md) obiektu.
 
-*P.* dowolne wyrażenie zwracające **true** lub **false**.
+*P.*<br/>
+Dowolne wyrażenie zwracające **true** lub **false**.
 
 ### <a name="remarks"></a>Uwagi
 
@@ -159,11 +161,14 @@ bool wait_for(
 
 ### <a name="parameters"></a>Parametry
 
-*Lck* A [unique_lock\<mutex >](../standard-library/unique-lock-class.md) obiektu.
+*Lck*<br/>
+A [unique_lock\<mutex >](../standard-library/unique-lock-class.md) obiektu.
 
-*Rel_time* A `chrono::duration` obiektu, który określa ilość czasu przed wątek zostanie wznowiona.
+*Rel_time*<br/>
+Element `chrono::duration` obiektu, który określa ilość czasu przed wątek zostanie wznowiona.
 
-*P.* dowolne wyrażenie zwracające **true** lub **false**.
+*P.*<br/>
+Dowolne wyrażenie zwracające **true** lub **false**.
 
 ### <a name="return-value"></a>Wartość zwracana
 
@@ -214,11 +219,14 @@ bool wait_until(
 
 ### <a name="parameters"></a>Parametry
 
-*Lck* A [unique_lock\<mutex >](../standard-library/unique-lock-class.md) obiektu.
+*Lck*<br/>
+A [unique_lock\<mutex >](../standard-library/unique-lock-class.md) obiektu.
 
-*Abs_time* A [chrono::time_point](../standard-library/time-point-class.md) obiektu.
+*Abs_time*<br/>
+A [chrono::time_point](../standard-library/time-point-class.md) obiektu.
 
-*P.* dowolne wyrażenie zwracające **true** lub **false**.
+*P.*<br/>
+Dowolne wyrażenie zwracające **true** lub **false**.
 
 ### <a name="return-value"></a>Wartość zwracana
 

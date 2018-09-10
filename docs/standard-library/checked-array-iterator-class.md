@@ -23,12 +23,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7091ba3c7f4d40a2b16c48afadfd5068bcd794bb
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: d74c9930816f353be7594bb67bf5e44b5251aa6c
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38961743"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44106734"
 ---
 # <a name="checkedarrayiterator-class"></a>checked_array_iterator — Klasa
 
@@ -145,7 +145,7 @@ int main()
     return 0;
 }
 \* Output:
- 0 1 2 3 4 5 6 7 8 9
+0 1 2 3 4 5 6 7 8 9
 *\
 ```
 
@@ -253,11 +253,14 @@ checked_array_iterator(
 
 ### <a name="parameters"></a>Parametry
 
-*PTR* wskaźnika do tablicy.
+*ptr*<br/>
+Wskaźnik do tablicy.
 
-*rozmiar* rozmiar tablicy.
+*Rozmiar*<br/>
+Rozmiar tablicy.
 
-*Indeks* (opcjonalnie) element w tablicy, aby zainicjować iteratora.  Domyślnie iterator który jest inicjowany do pierwszego elementu w tablicy.
+*index*<br/>
+(Opcjonalnie) Element w tablicy, aby zainicjować iteratora.  Domyślnie iterator który jest inicjowany do pierwszego elementu w tablicy.
 
 ### <a name="remarks"></a>Uwagi
 
@@ -325,7 +328,8 @@ bool operator==(const checked_array_iterator<_Iterator>& right) const;
 
 ### <a name="parameters"></a>Parametry
 
-*prawy* `checked_array_iterator` względem, który ma zostać sprawdzony pod kątem równości.
+*right*<br/>
+`checked_array_iterator` Względem, który ma zostać sprawdzony pod kątem równości.
 
 ### <a name="remarks"></a>Uwagi
 
@@ -380,7 +384,8 @@ bool operator!=(const checked_array_iterator<_Iterator>& right) const;
 
 ### <a name="parameters"></a>Parametry
 
-*prawy* `checked_array_iterator` względem, który ma zostać sprawdzony pod kątem nierówności.
+*right*<br/>
+`checked_array_iterator` Względem, który ma zostać sprawdzony pod kątem nierówności.
 
 ### <a name="remarks"></a>Uwagi
 
@@ -435,7 +440,8 @@ bool operator<(const checked_array_iterator<_Iterator>& right) const;
 
 ### <a name="parameters"></a>Parametry
 
-*prawy* `checked_array_iterator` względem, który ma zostać sprawdzony pod kątem nierówności.
+*right*<br/>
+`checked_array_iterator` Względem, który ma zostać sprawdzony pod kątem nierówności.
 
 ### <a name="remarks"></a>Uwagi
 
@@ -490,7 +496,8 @@ bool operator>(const checked_array_iterator<_Iterator>& right) const;
 
 ### <a name="parameters"></a>Parametry
 
-*prawy* `checked_array_iterator` ma zostać wykonane porównanie.
+*right*<br/>
+`checked_array_iterator` Ma zostać wykonane porównanie.
 
 ### <a name="remarks"></a>Uwagi
 
@@ -508,7 +515,8 @@ bool operator<=(const checked_array_iterator<_Iterator>& right) const;
 
 ### <a name="parameters"></a>Parametry
 
-*prawy* `checked_array_iterator` ma zostać wykonane porównanie.
+*right*<br/>
+`checked_array_iterator` Ma zostać wykonane porównanie.
 
 ### <a name="remarks"></a>Uwagi
 
@@ -526,7 +534,8 @@ bool operator>=(const checked_array_iterator<_Iterator>& right) const;
 
 ### <a name="parameters"></a>Parametry
 
-*prawy* `checked_array_iterator` ma zostać wykonane porównanie.
+*right*<br/>
+`checked_array_iterator` Ma zostać wykonane porównanie.
 
 ### <a name="remarks"></a>Uwagi
 
@@ -756,7 +765,8 @@ checked_array_iterator<_Iterator>& operator+=(difference_type _Off);
 
 ### <a name="parameters"></a>Parametry
 
-*_Off* przesunięcie, o którą należy zwiększyć iteratora.
+*_Off*<br/>
+Przesunięcie, o którą należy zwiększyć iteratora.
 
 ### <a name="return-value"></a>Wartość zwracana
 
@@ -803,7 +813,8 @@ checked_array_iterator<_Iterator> operator+(difference_type _Off) const;
 
 ### <a name="parameters"></a>Parametry
 
-*_Off* przesunięcia, które mają zostać dodane do `checked_array_iterator`.
+*_Off*<br/>
+Przesunięcie, które mają zostać dodane do `checked_array_iterator`.
 
 ### <a name="return-value"></a>Wartość zwracana
 
@@ -850,7 +861,8 @@ checked_array_iterator<_Iterator>& operator-=(difference_type _Off);
 
 ### <a name="parameters"></a>Parametry
 
-*_Off* przesunięcie, o którą należy zwiększyć iteratora.
+*_Off*<br/>
+Przesunięcie, o którą należy zwiększyć iteratora.
 
 ### <a name="return-value"></a>Wartość zwracana
 
@@ -900,7 +912,8 @@ difference_type operator-(const checked_array_iterator& right) const;
 
 ### <a name="parameters"></a>Parametry
 
-*_Off* przesunięcie do zmniejszenia z `checked_array_iterator`.
+*_Off*<br/>
+Przesunięcie do zmniejszenia z `checked_array_iterator`.
 
 ### <a name="return-value"></a>Wartość zwracana
 
@@ -922,7 +935,8 @@ reference operator[](difference_type _Off) const;
 
 ### <a name="parameters"></a>Parametry
 
-*_Off* przesunięcie od `checked_array_iterator` adresu.
+*_Off*<br/>
+Przesunięcie od `checked_array_iterator` adresu.
 
 ### <a name="return-value"></a>Wartość zwracana
 

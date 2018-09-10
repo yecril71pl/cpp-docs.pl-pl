@@ -17,12 +17,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: bf93d84534671cb65c873555d70fea756036fe06
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: 5ea50f3e8ad70de8473df88bde60673f7b5caa35
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38961642"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44108710"
 ---
 # <a name="logicalnot-struct"></a>logical_not — Struktura
 
@@ -44,14 +44,16 @@ struct logical_not<void>
   template <class Type>
   auto operator()(Type&& Left) const`
      -> decltype(!std::forward<Type>(Left));
- };
+};
 ```
 
 ### <a name="parameters"></a>Parametry
 
-*Typ* dowolnego typu, który obsługuje `operator!` która przyjmuje argument typu określonego lub wywnioskowane uprawnienie.
+*Typ*<br/>
+Dowolny typ, który obsługuje `operator!` która przyjmuje argument typu określonego lub wywnioskowane uprawnienie.
 
-*Po lewej stronie* operand logicznego nie operacji. Szablon Niewyspecjalizowana przyjmuje argument odwołania l-wartości typu *typu*. Wyspecjalizowane szablonu doskonała przekazywania l-wartością i argumenty odwołania rvalue wywnioskować typu *typu*.
+*po lewej stronie*<br/>
+Operand logicznego nie operacji. Szablon Niewyspecjalizowana przyjmuje argument odwołania l-wartości typu *typu*. Wyspecjalizowane szablonu doskonała przekazywania l-wartością i argumenty odwołania rvalue wywnioskować typu *typu*.
 
 ## <a name="return-value"></a>Wartość zwracana
 
@@ -96,10 +98,10 @@ int main( )
 }
 /* Output:
 Original deque:
- d1 = ( false true false true false true false )
+d1 = ( false true false true false true false )
 The deque with its values negated is:
- d2 = ( true false true false true false true )
- */
+d2 = ( true false true false true false true )
+*/
 ```
 
 ## <a name="requirements"></a>Wymagania

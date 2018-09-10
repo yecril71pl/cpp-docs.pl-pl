@@ -32,16 +32,16 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: bd3ab2994359e99e490422fbb2f11cf28a05d6e5
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: f7adf4c285646e6a3f4706a9a56995f4440cc1e8
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32395663"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44103818"
 ---
 # <a name="cxxthrowexception"></a>_CxxThrowException
 
-Tworzy rekord wyjątku i wywołuje środowiska uruchomieniowego zaczął przetwarzać wyjątek.
+Tworzy rekord wyjątku i wywołuje środowisko uruchomieniowe do rozpoczęcia przetwarzania wyjątku.
 
 ## <a name="syntax"></a>Składnia
 
@@ -54,13 +54,15 @@ extern "C" void __stdcall _CxxThrowException(
 
 ### <a name="parameters"></a>Parametry
 
-*pExceptionObject* obiektu, który wygenerował wyjątek.
+*pExceptionObject*<br/>
+Obiekt, który wygenerował wyjątek.
 
-*pThrowInfo* informacji, która jest wymagana do przetwarzania wyjątek.
+*pThrowInfo*<br/>
+Informacje wymagane do przetwarzania wyjątku.
 
 ## <a name="remarks"></a>Uwagi
 
-Ta metoda znajduje się w pliku tylko do kompilatora kompilator używa do przetwarzania wyjątków. Nie wywołuj metody bezpośrednio w kodzie.
+Ta metoda znajduje się w pliku tylko do kompilatora, której kompilator używa do przetwarzania wyjątków. Nie wywołuj metody bezpośrednio w kodzie.
 
 ## <a name="requirements"></a>Wymagania
 

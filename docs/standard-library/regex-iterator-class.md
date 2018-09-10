@@ -26,12 +26,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a6f45f8a445420d85c539de2f5ba485c0a47127b
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: 264f61ede0fb47e198459593b2eea154846cc7b9
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38962559"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44108294"
 ---
 # <a name="regexiterator-class"></a>regex_iterator — Klasa
 
@@ -75,11 +75,14 @@ private:
 
 ### <a name="parameters"></a>Parametry
 
-*BidIt* typ iteratora dla poddopasowania.
+*BidIt*<br/>
+Typ iteratora poddopasowania.
 
-*Elem* typ elementów do dopasowania.
+*Elem*<br/>
+Typ elementów, do których ma pasować.
 
-*RXtraits* klasa cech dla elementów.
+*RXtraits*<br/>
+Klasa cech dla elementów.
 
 ## <a name="remarks"></a>Uwagi
 
@@ -223,7 +226,8 @@ bool operator!=(const regex_iterator& right);
 
 ### <a name="parameters"></a>Parametry
 
-*prawy* iteratora do porównania.
+*right*<br/>
+Iterator do porównania.
 
 ### <a name="remarks"></a>Uwagi
 
@@ -395,7 +399,8 @@ bool operator==(const regex_iterator& right);
 
 ### <a name="parameters"></a>Parametry
 
-*prawy* iteratora do porównania.
+*right*<br/>
+Iterator do porównania.
 
 ### <a name="remarks"></a>Uwagi
 
@@ -625,13 +630,17 @@ regex_iterator(BidIt first,
 
 ### <a name="parameters"></a>Parametry
 
-*pierwszy* początek sekwencji w celu dopasowania.
+*pierwszy*<br/>
+Początek sekwencji w celu dopasowania.
 
-*ostatni* koniec sekwencji do dopasowania.
+*ostatni*<br/>
+Koniec sekwencji w celu dopasowania.
 
-*ponownie* wyrażenia regularnego do dopasowania.
+*środowisko odzyskiwania*<br/>
+Wyrażenie regularne do dopasowania.
 
-*f* flagi dla dopasowań.
+*f*<br/>
+Flagi dopasowania.
 
 ### <a name="remarks"></a>Uwagi
 

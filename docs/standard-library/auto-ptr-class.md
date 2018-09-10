@@ -24,12 +24,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 00114711f93fcc1ec057ea50b1ce681523db3a9c
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: 945de6e2ef7e9ec3967091f88b1d0cfeaa8df5e3
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38958006"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44108892"
 ---
 # <a name="autoptr-class"></a>auto_ptr — Klasa
 
@@ -65,9 +65,11 @@ public:
 ```
 ### <a name="parameters"></a>Parametry
 
-*prawy* `auto_ptr` z którego można pobrać istniejącego zasobu.
+*right*<br/>
+`auto_ptr` z którego można pobrać istniejącego zasobu.
 
-*PTR* wskaźnika, określić, aby zastąpić przechowywany wskaźnik.
+*ptr*<br/>
+Wskaźnik, określić, aby zastąpić przechowywany wskaźnik.
 
 ## <a name="remarks"></a>Uwagi
 
@@ -130,9 +132,11 @@ auto _ptr(auto _ptr<Other>& right) throw();
 
 ### <a name="parameters"></a>Parametry
 
-*PTR* wskaźnik do obiektu, `auto_ptr` hermetyzuje.
+*ptr*<br/>
+Wskaźnik do obiektu, `auto_ptr` hermetyzuje.
 
-*prawy* `auto_ptr` obiektu do skopiowania przez konstruktora.
+*right*<br/>
+`auto_ptr` Obiektu do skopiowania przez konstruktora.
 
 ### <a name="remarks"></a>Uwagi
 
@@ -282,7 +286,8 @@ auto_ptr<Type>& operator=(auto_ptr_ref<Type> right) throw();
 
 ### <a name="parameters"></a>Parametry
 
-*prawy* obiektu typu `auto_ptr`.
+*right*<br/>
+Obiekt typu `auto_ptr`.
 
 ### <a name="return-value"></a>Wartość zwracana
 
@@ -499,7 +504,8 @@ void reset(Type* ptr = 0);
 
 ### <a name="parameters"></a>Parametry
 
-*PTR* wskaźnika, określić, aby zastąpić przechowywany wskaźnik `myptr`.
+*ptr*<br/>
+Wskaźnik, określić, aby zastąpić przechowywany wskaźnik `myptr`.
 
 ### <a name="example"></a>Przykład
 

@@ -208,12 +208,12 @@ helpviewer_keywords:
 - std::swap [C++]
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 334702a2c3e9a86becfb5a653b22154b5a4e197a
-ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
+ms.openlocfilehash: 9e8ec44fcdd336786707bf809ce676d866df132e
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43691720"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44101680"
 ---
 # <a name="ltalgorithmgt-functions"></a>&lt;Algorytm&gt; funkcji
 
@@ -268,11 +268,14 @@ ForwardIterator adjacent_find(
 
 ### <a name="parameters"></a>Parametry
 
-*pierwszy* iterator do przodu, odnoszący się do pozycji pierwszego elementu w zakresie do wyszukania.
+*pierwszy*<br/>
+Iterator postępujący odnosi się pozycja pierwszego elementu w zakresie do wyszukania.
 
-*ostatni* iterator do przodu, odnoszący się do pozycji jeden po elemencie końcowym w zakresie do wyszukania.
+*ostatni*<br/>
+Iterator postępujący odnosi się pozycja jeden po elemencie końcowym w zakresie do wyszukania.
 
-*comp* predykat binarny, podając warunek muszą być spełnione przez wartości sąsiadujących elementów w zakresie wyszukiwany.
+*Comp*<br/>
+Binarny predykat, podając warunek muszą być spełnione przez wartości sąsiadujących elementów w zakresie wyszukiwany.
 
 ### <a name="return-value"></a>Wartość zwracana
 
@@ -341,9 +344,9 @@ int main()
 ```Output
 L = ( 50 40 10 20 20 )
 There are two adjacent elements that are equal.
- They have a value of 20.
+They have a value of 20.
 There are two adjacent elements where the second is twice the first.
- They have values of 10 & 20.
+They have values of 10 & 20.
 ```
 
 ## <a name="all_of"></a>  all_of
@@ -360,11 +363,14 @@ bool all_of(
 
 ### <a name="parameters"></a>Parametry
 
-*pierwszy* iterator danych wejściowych, która wskazuje, gdzie zacząć sprawdzić, czy warunek. Iterator który oznacza w przypadku, gdy szeroką gamę elementów rozpoczyna się.
+*pierwszy*<br/>
+Iterator danych wejściowych, która wskazuje, gdzie zacząć sprawdzić, czy warunek. Iterator który oznacza w przypadku, gdy szeroką gamę elementów rozpoczyna się.
 
-*ostatni* iterator danych wejściowych, która wskazuje koniec zakresu elementów, który ma sprawdzać występowanie warunku.
+*ostatni*<br/>
+Iterator danych wejściowych, która wskazuje koniec zakresu elementów, który ma sprawdzać występowanie warunku.
 
-*comp* warunek do testowania. Jest to obiekt funkcji predykatu zdefiniowanej przez użytkownika, który definiuje warunek muszą być spełnione przez element sprawdzany. Predykat przyjmuje jeden argument i zwraca **true** lub **false**.
+*Comp*<br/>
+Warunek do testowania. Jest to obiekt funkcji predykatu zdefiniowanej przez użytkownika, który definiuje warunek muszą być spełnione przez element sprawdzany. Predykat przyjmuje jeden argument i zwraca **true** lub **false**.
 
 ### <a name="return-value"></a>Wartość zwracana
 
@@ -388,11 +394,14 @@ bool any_of(
 
 ### <a name="parameters"></a>Parametry
 
-*pierwszy* iterator danych wejściowych, która wskazuje, gdzie można rozpocząć sprawdzanie szereg elementów dla warunku.
+*pierwszy*<br/>
+Iterator danych wejściowych, która wskazuje, gdzie można rozpocząć sprawdzanie szereg elementów dla warunku.
 
-*ostatni* iterator danych wejściowych, która wskazuje koniec zakresu elementów, który ma sprawdzać występowanie warunku.
+*ostatni*<br/>
+Iterator danych wejściowych, która wskazuje koniec zakresu elementów, który ma sprawdzać występowanie warunku.
 
-*comp* warunek do testowania. To jest zapewniana przez obiekt funkcji predykatu zdefiniowanej przez użytkownika. Predykat definiuje warunek muszą być spełnione przez element poddawana testom. Predykat przyjmuje jeden argument i zwraca **true** lub **false**.
+*Comp*<br/>
+Warunek do testowania. To jest zapewniana przez obiekt funkcji predykatu zdefiniowanej przez użytkownika. Predykat definiuje warunek muszą być spełnione przez element poddawana testom. Predykat przyjmuje jeden argument i zwraca **true** lub **false**.
 
 ### <a name="return-value"></a>Wartość zwracana
 
@@ -426,13 +435,17 @@ bool binary_search(
 
 ### <a name="parameters"></a>Parametry
 
-*pierwszy* iterator do przodu, odnoszący się do pozycji pierwszego elementu w zakresie do wyszukania.
+*pierwszy*<br/>
+Iterator postępujący odnosi się pozycja pierwszego elementu w zakresie do wyszukania.
 
-*ostatni* iterator do przodu, odnoszący się do pozycji jeden po elemencie końcowym w zakresie do wyszukania.
+*ostatni*<br/>
+Iterator postępujący odnosi się pozycja jeden po elemencie końcowym w zakresie do wyszukania.
 
-*wartość* wartości wymagane mają być dopasowywane o wartość elementu lub które muszą spełnić warunek z wartością elementu określoną przez predykat binarny.
+*value*<br/>
+Wartości wymagane mają być dopasowywane o wartość elementu lub które muszą spełnić warunek z wartością elementu określoną przez predykat binarny.
 
-*comp* obiekt funkcji predykatu zdefiniowanej przez użytkownika, który definiuje sens, w którym jeden element jest mniejszy niż inny. Predykat dwuelementowy przyjmuje dwa argumenty i zwraca **true** po spełnieniu oraz **false** Jeśli nie jest spełniony.
+*Comp*<br/>
+Obiekt funkcji predykatu zdefiniowanej przez użytkownika, który definiuje sens, w którym jeden element jest mniejszy niż inny. Predykat dwuelementowy przyjmuje dwa argumenty i zwraca **true** po spełnieniu oraz **false** Jeśli nie jest spełniony.
 
 ### <a name="return-value"></a>Wartość zwracana
 
@@ -546,11 +559,14 @@ OutputIterator copy(
 
 ### <a name="parameters"></a>Parametry
 
-*pierwszy* iterator danych wejściowych, odnoszący się do pozycji pierwszego elementu w zakresie źródłowym.
+*pierwszy*<br/>
+Iterator danych wejściowych, odnoszący się do pozycji pierwszego elementu w zakresie źródłowym.
 
-*ostatni* iterator danych wejściowych, odnoszący się do pozycji, który jest jednym po elemencie końcowym w zakresie źródłowym.
+*ostatni*<br/>
+Iterator danych wejściowych, odnoszący się do pozycji, który jest jednym po elemencie końcowym w zakresie źródłowym.
 
-*destBeg* iterator danych wyjściowych odnoszący się do pozycji pierwszego elementu w zakresie docelowym.
+*destBeg*<br/>
+Iterator danych wyjściowych odnoszący się do pozycji pierwszego elementu w zakresie docelowym.
 
 ### <a name="return-value"></a>Wartość zwracana
 
@@ -636,11 +652,14 @@ BidirectionalIterator2 copy_backward(
 
 ### <a name="parameters"></a>Parametry
 
-*pierwszy* iterator dwukierunkowy odnoszący się do pozycji pierwszego elementu w zakresie źródłowym.
+*pierwszy*<br/>
+Iterator dwukierunkowy odnoszący się do pozycji pierwszego elementu w zakresie źródłowym.
 
-*ostatni* iterator dwukierunkowy odnoszący się do pozycji, który jest jednym po elemencie końcowym w zakresie źródłowym.
+*ostatni*<br/>
+Iterator dwukierunkowy odnoszący się do pierwszej pozycji po elemencie końcowym w zakresie źródłowym.
 
-*destEnd* iterator dwukierunkowy odnoszący się do pozycji po elemencie końcowym w zakresie docelowym.
+*destEnd*<br/>
+Iterator dwukierunkowy odnoszący się do pierwszej pozycji po elemencie końcowym w zakresie docelowym.
 
 ### <a name="return-value"></a>Wartość zwracana
 
@@ -724,13 +743,17 @@ OutputIterator copy_if(
 
 ### <a name="parameters"></a>Parametry
 
-*pierwszy* iterator danych wejściowych, która wskazuje początek zakresu, aby sprawdzić, czy warunek.
+*pierwszy*<br/>
+Iterator danych wejściowych, która wskazuje początek zakresu, aby sprawdzić, czy warunek.
 
-*ostatni* iterator danych wejściowych, która wskazuje koniec zakresu.
+*ostatni*<br/>
+Iterator danych wejściowych, która wskazuje koniec zakresu.
 
-*dest* iteratora wyjściowego, który wskazuje obiekt docelowy skopiowane elementy.
+*dest*<br/>
+Iterator danych wyjściowych, który wskazuje obiekt docelowy skopiowane elementy.
 
-*_Pred* warunek, w której każdy element w zakresie jest testowana. Ten stan jest zapewniana przez obiekt funkcji predykatu zdefiniowanej przez użytkownika. Predykat przyjmuje jeden argument i zwraca **true** lub **false**.
+*_Pred*<br/>
+Warunek, w której każdy element w zakresie jest testowana. Ten stan jest zapewniana przez obiekt funkcji predykatu zdefiniowanej przez użytkownika. Predykat przyjmuje jeden argument i zwraca **true** lub **false**.
 
 ### <a name="return-value"></a>Wartość zwracana
 
@@ -758,11 +781,14 @@ OutputIterator copy_n(
 
 ### <a name="parameters"></a>Parametry
 
-*pierwszy* iterator danych wejściowych, która wskazuje, gdzie można kopiować elementy z.
+*pierwszy*<br/>
+Iterator danych wejściowych, która wskazuje, gdzie można kopiować elementy z.
 
-*Liczba* A podpisane lub niepodpisane typu Liczba całkowita określająca liczbę elementów do skopiowania.
+*Liczba*<br/>
+Liczba całkowita ze znakiem lub bez znaku typu określający, ile elementów do skopiowania.
 
-*dest* iteratora wyjściowego, który wskazuje, gdzie elementy, aby skopiować.
+*dest*<br/>
+Iterator danych wyjściowych, który wskazuje, gdzie elementy, aby skopiować.
 
 ### <a name="return-value"></a>Wartość zwracana
 
@@ -786,11 +812,14 @@ typename iterator_traits<InputIterator>::difference_type count(
 
 ### <a name="parameters"></a>Parametry
 
-*pierwszy* iterator danych wejściowych odnoszący się do pozycji pierwszego elementu w zakresie te typy można przemierzać.
+*pierwszy*<br/>
+Iterator danych wejściowych odnoszący się do pozycji pierwszego elementu w zakresie ma te typy można przemierzać.
 
-*ostatni* iterator danych wejściowych odnoszący się do pozycji jeden po elemencie końcowym w zakresie te typy można przemierzać.
+*ostatni*<br/>
+Iterator danych wejściowych odnoszący się do pozycji jeden po elemencie końcowym w zakresie ma te typy można przemierzać.
 
-*Val* wartość elementów do zliczenia.
+*Val*<br/>
+Wartość elementów do zliczenia.
 
 ### <a name="return-value"></a>Wartość zwracana
 
@@ -853,11 +882,14 @@ typename iterator_traits<InputIterator>::difference_type count_if(
 
 ### <a name="parameters"></a>Parametry
 
-*pierwszy* iterator danych wejściowych odnoszący się do pozycji pierwszego elementu w zakresie do wyszukania.
+*pierwszy*<br/>
+Iterator danych wejściowych odnoszący się do pozycji pierwszego elementu w zakresie do wyszukania.
 
-*ostatni* iterator danych wejściowych odnoszący się do pozycji jeden po elemencie końcowym w zakresie do wyszukania.
+*ostatni*<br/>
+Iterator danych wejściowych odnoszący się do pozycji jeden po elemencie końcowym w zakresie do wyszukania.
 
-*_Pred* obiekt funkcji predykatu zdefiniowanej przez użytkownika, który definiuje warunek spełniony, jeśli element jest do zliczenia. Predykat przyjmuje jeden argument i zwraca **true** lub **false**.
+*_Pred*<br/>
+Obiekt funkcji predykatu zdefiniowanej przez użytkownika, który definiuje warunek spełniony, jeśli element jest do zliczenia. Predykat przyjmuje jeden argument i zwraca **true** lub **false**.
 
 ### <a name="return-value"></a>Wartość zwracana
 
@@ -950,15 +982,20 @@ bool equal(
 
 ### <a name="parameters"></a>Parametry
 
-*First1* iterator danych wejściowych odnoszący się do pozycji pierwszego elementu w zakresie pierwszy ma zostać przetestowana.
+*first1*<br/>
+Iterator danych wejściowych odnoszący się do pozycji pierwszego elementu w zakresie pierwszy ma zostać przetestowana.
 
-*Nazwisko1* iterator danych wejściowych odnoszący jednej pozycji poza ostatnim elemencie w zakresie pierwszy ma zostać przetestowana.
+*Nazwisko1*<br/>
+Iterator danych wejściowych odnoszący jednej pozycji poza ostatnim elemencie w zakresie pierwszy ma zostać przetestowana.
 
-*First2* iterator danych wejściowych odnoszący się do pozycji pierwszego elementu w zakresie drugi ma zostać przetestowana.
+*first2*<br/>
+Iterator danych wejściowych odnoszący się do pozycji pierwszego elementu w zakresie drugi ma zostać przetestowana.
 
-*First2* iterator danych wejściowych odnoszący się do pozycji po ostatnim elemencie w zakresie drugi ma zostać przetestowana.
+*first2*<br/>
+Iterator danych wejściowych odnoszący się do pozycji po ostatnim elemencie w zakresie drugi ma zostać przetestowana.
 
-*Comp* obiekt funkcji predykatu zdefiniowanej przez użytkownika, który definiuje warunek spełniony, jeśli dwa elementy, które są pobierane jako równoważne. Predykat dwuelementowy przyjmuje dwa argumenty i zwraca **true** po spełnieniu oraz **false** Jeśli nie jest spełniony.
+*Comp*<br/>
+Obiekt funkcji predykatu zdefiniowanej przez użytkownika, który definiuje warunek spełniony, jeśli dwa elementy, które są pobierane jako równoważne. Predykat dwuelementowy przyjmuje dwa argumenty i zwraca **true** po spełnieniu oraz **false** Jeśli nie jest spełniony.
 
 ### <a name="return-value"></a>Wartość zwracana
 
@@ -1027,13 +1064,17 @@ pair<ForwardIterator, ForwardIterator> equal_range(
 
 ### <a name="parameters"></a>Parametry
 
-*pierwszy* iterator do przodu, odnoszący się do pozycji pierwszego elementu w zakresie do wyszukania.
+*pierwszy*<br/>
+Iterator postępujący odnosi się pozycja pierwszego elementu w zakresie do wyszukania.
 
-*ostatni* iterator do przodu, odnoszący się do pozycji jeden po elemencie końcowym w zakresie do wyszukania.
+*ostatni*<br/>
+Iterator postępujący odnosi się pozycja jeden po elemencie końcowym w zakresie do wyszukania.
 
-*Val* wartość wyszukiwana w zakresie uporządkowanym.
+*Val*<br/>
+Wartość wyszukiwana w zakresie uporządkowanym.
 
-*comp* obiekt zdefiniowany przez użytkownika funkcji predykatu, który definiuje sens, w którym jeden element jest mniejszy niż inny.
+*Comp*<br/>
+Obiekt funkcji predykatu zdefiniowanej przez użytkownika, który definiuje sens, w którym jeden element jest mniejszy niż inny.
 
 ### <a name="return-value"></a>Wartość zwracana
 
@@ -1183,11 +1224,14 @@ void fill(
 
 ### <a name="parameters"></a>Parametry
 
-*pierwszy* iterator do przodu, odnoszący się do pozycji pierwszego elementu w zakresie ma te typy można przemierzać.
+*pierwszy*<br/>
+Iterator postępujący odnosi się pozycja pierwszego elementu w zakresie do te typy można przemierzać.
 
-*ostatni* iterator do przodu, odnoszący się do pozycji jeden po elemencie końcowym w zakresie ma te typy można przemierzać.
+*ostatni*<br/>
+Iterator postępujący odnosi się pozycja jeden po elemencie końcowym w zakresie do te typy można przemierzać.
 
-*Val* wartość do przypisania do elementów w zakresie [ *pierwszy*, *ostatniego*).
+*Val*<br/>
+Wartość do przypisania do elementów w zakresie [ *pierwszy*, *ostatniego*).
 
 ### <a name="remarks"></a>Uwagi
 
@@ -1248,11 +1292,14 @@ OutputIterator fill_n(
 
 ### <a name="parameters"></a>Parametry
 
-*Pierwszy* iterator danych wyjściowych odnoszący się do pozycji pierwszego elementu w zakresie do przypisania wartości *Val*.
+*pierwszy*<br/>
+Iterator danych wyjściowych odnoszący się do pozycji pierwszego elementu w zakresie do przypisania wartości *Val*.
 
-*Liczba* A podpisane lub niepodpisane typu Liczba całkowita określająca liczbę elementów przypisana wartość.
+*Liczba*<br/>
+Liczba całkowita ze znakiem lub bez znaku typu określającą liczbę elementów do przypisania wartości.
 
-*Val* wartość do przypisania do elementów w zakresie [ *pierwszy*, *pierwszy + liczba*).
+*Val*<br/>
+Wartość do przypisania do elementów w zakresie [ *pierwszy*, *pierwszy + liczba*).
 
 ### <a name="return-value"></a>Wartość zwracana
 
@@ -1325,11 +1372,14 @@ InputIterator find(
 
 ### <a name="parameters"></a>Parametry
 
-*pierwszy* iterator danych wejściowych odnoszący się do pozycji pierwszego elementu w zakresie mają być wyszukiwane określoną wartość.
+*pierwszy*<br/>
+Iterator danych wejściowych odnoszący się do pozycji pierwszego elementu w zakresie mają być wyszukiwane określoną wartość.
 
-*ostatni* iterator danych wejściowych odnoszący się do pozycji pierwszej po elemencie końcowym w zakresie mają być wyszukiwane określoną wartość.
+*ostatni*<br/>
+Iterator danych wejściowych odnoszący się do pozycji pierwszej po elemencie końcowym w zakresie mają być wyszukiwane określoną wartość.
 
-*Val* wartości, które mają być wyszukiwane.
+*Val*<br/>
+Wartość, które mają być wyszukiwane.
 
 ### <a name="return-value"></a>Wartość zwracana
 
@@ -1364,15 +1414,20 @@ ForwardIterator1 find_end(
 
 ### <a name="parameters"></a>Parametry
 
-*First1* iterator do przodu, odnoszący się do pozycji pierwszego elementu w zakresie do wyszukania.
+*first1*<br/>
+Iterator postępujący odnosi się pozycja pierwszego elementu w zakresie do wyszukania.
 
-*Nazwisko1* iterator do przodu, odnoszący się do pozycji jednym elementem w zakresie do wyszukania.
+*Nazwisko1*<br/>
+Iterator postępujący odnosi się pozycja jednym elementem w zakresie do wyszukania.
 
-*First2* iterator do przodu, odnoszący się do pozycji pierwszego elementu w zakresie wyszukiwania.
+*first2*<br/>
+Iterator postępujący odnosi się pozycja pierwszego elementu w zakresie wyszukiwania.
 
-*Nazwisko2* iterator do przodu, odnoszący się do pozycji jednym elementem w zakresie wyszukiwania.
+*Nazwisko2*<br/>
+Iterator postępujący odnosi się pozycja jednym elementem w zakresie wyszukiwania.
 
-*Comp* obiekt funkcji predykatu zdefiniowanej przez użytkownika, który definiuje warunek spełniony, jeśli dwa elementy, które są pobierane jako równoważne. Predykat dwuelementowy przyjmuje dwa argumenty i zwraca **true** po spełnieniu oraz **false** Jeśli nie jest spełniony.
+*Comp*<br/>
+Obiekt funkcji predykatu zdefiniowanej przez użytkownika, który definiuje warunek spełniony, jeśli dwa elementy, które są pobierane jako równoważne. Predykat dwuelementowy przyjmuje dwa argumenty i zwraca **true** po spełnieniu oraz **false** Jeśli nie jest spełniony.
 
 ### <a name="return-value"></a>Wartość zwracana
 
@@ -1477,7 +1532,7 @@ List L1 = ( 5 10 15 20 )
 Vector v2 = ( 20 30 40 )
 There is a match of L1 in v1 that begins at position 7.
 There is a sequence of elements in v1 that are equivalent to those
- in v2 under the binary predicate twice and that begins at position 8.
+in v2 under the binary predicate twice and that begins at position 8.
 ```
 
 ## <a name="find_first_of"></a>  find_first_of —
@@ -1503,15 +1558,20 @@ ForwardIterator1 find_first_of(
 
 ### <a name="parameters"></a>Parametry
 
-*First1* iterator do przodu, odnoszący się do pozycji pierwszego elementu w zakresie do wyszukania.
+*first1*<br/>
+Iterator postępujący odnosi się pozycja pierwszego elementu w zakresie do wyszukania.
 
-*Nazwisko1* iterator do przodu, odnoszący się do pozycji jeden po elemencie końcowym w zakresie do wyszukania.
+*Nazwisko1*<br/>
+Iterator postępujący odnosi się pozycja jeden po elemencie końcowym w zakresie do wyszukania.
 
-*first2* iterator do przodu, odnoszący się do pozycji pierwszego elementu w zakresie do dopasowania.
+*first2*<br/>
+Iterator postępujący odnosi się pozycja pierwszego elementu w zakresie do dopasowania.
 
-*Nazwisko2* iterator do przodu, odnoszący się do pozycji jeden po elemencie końcowym w zakresie do dopasowania.
+*Nazwisko2*<br/>
+Iterator postępujący odnosi się pozycja jeden po elemencie końcowym w zakresie do dopasowania.
 
-*Comp* obiekt funkcji predykatu zdefiniowanej przez użytkownika, który definiuje warunek spełniony, jeśli dwa elementy, które są pobierane jako równoważne. Predykat dwuelementowy przyjmuje dwa argumenty i zwraca **true** po spełnieniu oraz **false** Jeśli nie jest spełniony.
+*Comp*<br/>
+Obiekt funkcji predykatu zdefiniowanej przez użytkownika, który definiuje warunek spełniony, jeśli dwa elementy, które są pobierane jako równoważne. Predykat dwuelementowy przyjmuje dwa argumenty i zwraca **true** po spełnieniu oraz **false** Jeśli nie jest spełniony.
 
 ### <a name="return-value"></a>Wartość zwracana
 
@@ -1616,10 +1676,10 @@ Vector v1 = ( 0 5 10 15 20 25 0 5 10 15 20 25 )
 List L1 = ( 15 20 )
 Vector v2 = ( 20 30 40 )
 There is at least one match of L1 in v1
- and the first one begins at position 3.
+and the first one begins at position 3.
 There is a sequence of elements in v1 that are equivalent
- to those in v2 under the binary predicate twice
- and the first one begins at position 2.
+to those in v2 under the binary predicate twice
+and the first one begins at position 2.
 ```
 
 ## <a name="find_if"></a>  find_if
@@ -1636,11 +1696,14 @@ InputIterator find_if(
 
 ### <a name="parameters"></a>Parametry
 
-*pierwszy* iterator danych wejściowych odnoszący się do pozycji pierwszego elementu w zakresie do wyszukania.
+*pierwszy*<br/>
+Iterator danych wejściowych odnoszący się do pozycji pierwszego elementu w zakresie do wyszukania.
 
-*ostatni* iterator danych wejściowych odnoszący się do pozycji jeden po elemencie końcowym w zakresie do wyszukania.
+*ostatni*<br/>
+Iterator danych wejściowych odnoszący się do pozycji jeden po elemencie końcowym w zakresie do wyszukania.
 
-*pred* zdefiniowany przez użytkownika obiekt funkcji predykatu lub [wyrażenia lambda](../cpp/lambda-expressions-in-cpp.md) definiujący warunek muszą być spełnione przez element wyszukane. Predykat przyjmuje jeden argument i zwraca **true** (spełnione) lub **false** (nie jest spełniony). Podpis *pred* musi być skutecznie `bool pred(const T& arg);`, gdzie `T` jest typem, do którego `InputIterator` mogą być niejawnie konwertowane podczas wyłuskiwany. **Const** — słowo kluczowe jest wyświetlany tylko w celu zilustrowania obiektu funkcyjnego lub lambda nie należy modyfikować argumentu.
+*P.*<br/>
+Zdefiniowany przez użytkownika obiekt funkcji predykatu lub [wyrażenia lambda](../cpp/lambda-expressions-in-cpp.md) definiujący warunek muszą być spełnione przez element wyszukane. Predykat przyjmuje jeden argument i zwraca **true** (spełnione) lub **false** (nie jest spełniony). Podpis *pred* musi być skutecznie `bool pred(const T& arg);`, gdzie `T` jest typem, do którego `InputIterator` mogą być niejawnie konwertowane podczas wyłuskiwany. **Const** — słowo kluczowe jest wyświetlany tylko w celu zilustrowania obiektu funkcyjnego lub lambda nie należy modyfikować argumentu.
 
 ### <a name="return-value"></a>Wartość zwracana
 
@@ -1750,11 +1813,14 @@ InputIterator find_if_not(
 
 ### <a name="parameters"></a>Parametry
 
-*pierwszy* iterator danych wejściowych odnoszący się do pozycji pierwszego elementu w zakresie do wyszukania.
+*pierwszy*<br/>
+Iterator danych wejściowych odnoszący się do pozycji pierwszego elementu w zakresie do wyszukania.
 
-*ostatni* iterator danych wejściowych odnoszący się do pozycji jeden po elemencie końcowym w zakresie do wyszukania.
+*ostatni*<br/>
+Iterator danych wejściowych odnoszący się do pozycji jeden po elemencie końcowym w zakresie do wyszukania.
 
-*pred* zdefiniowany przez użytkownika obiekt funkcji predykatu lub [wyrażenia lambda](../cpp/lambda-expressions-in-cpp.md) definiujący warunek, którego chcesz się nie zostały spełnione przez element wyszukane. Predykat przyjmuje jeden argument i zwraca **true** (spełnione) lub **false** (nie jest spełniony). Podpis *pred* musi być skutecznie `bool pred(const T& arg);`, gdzie `T` jest typem, do którego `InputIterator` mogą być niejawnie konwertowane podczas wyłuskiwany. **Const** — słowo kluczowe jest wyświetlany tylko w celu zilustrowania obiektu funkcyjnego lub lambda nie należy modyfikować argumentu.
+*P.*<br/>
+Zdefiniowany przez użytkownika obiekt funkcji predykatu lub [wyrażenia lambda](../cpp/lambda-expressions-in-cpp.md) definiujący warunek, którego chcesz się nie zostały spełnione przez element wyszukane. Predykat przyjmuje jeden argument i zwraca **true** (spełnione) lub **false** (nie jest spełniony). Podpis *pred* musi być skutecznie `bool pred(const T& arg);`, gdzie `T` jest typem, do którego `InputIterator` mogą być niejawnie konwertowane podczas wyłuskiwany. **Const** — słowo kluczowe jest wyświetlany tylko w celu zilustrowania obiektu funkcyjnego lub lambda nie należy modyfikować argumentu.
 
 ### <a name="return-value"></a>Wartość zwracana
 
@@ -1780,11 +1846,14 @@ Function for_each(
 
 ### <a name="parameters"></a>Parametry
 
-*pierwszy* iterator danych wejściowych, odnoszący się do pozycji pierwszego elementu w zakresie na.
+*pierwszy*<br/>
+Iterator danych wejściowych, odnoszący się do pozycji pierwszego elementu w zakresie na.
 
-*ostatni* działa jako iterator danych wejściowych, odnoszący się do pozycji jeden po elemencie końcowym w zakresie.
+*ostatni*<br/>
+Iterator danych wejściowych, odnoszący się do pozycji jeden po elemencie końcowym w zakresie zasilaniu.
 
-*_Func* obiektu funkcji zdefiniowanej przez użytkownika, która jest stosowana do każdego elementu w zakresie.
+*_Func*<br/>
+Obiekt funkcji zdefiniowanej przez użytkownika, która jest stosowana do każdego elementu w zakresie.
 
 ### <a name="return-value"></a>Wartość zwracana
 
@@ -1902,13 +1971,13 @@ int main()
 ```Output
 Original vector  v1 = ( -4 -3 -2 -1 0 1 2 ).
 Multiplying the elements of the vector v1
- by the factor -2 gives:
- v1mod1 = ( 8 6 4 2 0 -2 -4 ).
+by the factor -2 gives:
+v1mod1 = ( 8 6 4 2 0 -2 -4 ).
 Multiplying the elements of the vector v1mod
- by the factor 5 gives:
- v1mod2 = ( 40 30 20 10 0 -10 -20 ).
+by the factor 5 gives:
+v1mod2 = ( 40 30 20 10 0 -10 -20 ).
 The average of the elements of v1 is:
- Average ( v1mod2 ) = 10.
+Average ( v1mod2 ) = 10.
 ```
 
 ## <a name="generate"></a>  Generowanie
@@ -1925,11 +1994,14 @@ void generate(
 
 ### <a name="parameters"></a>Parametry
 
-*pierwszy* iterator do przodu, odnoszący się do pozycji pierwszego elementu zakresu, do którego mają zostać przypisane wartości.
+*pierwszy*<br/>
+Iterator do przodu, odnoszący się do pozycji pierwszego elementu zakresu, do którego mają zostać przypisane wartości.
 
-*ostatni* iterator postępujący odnosi się do pozycji pierwszej po elemencie końcowym w zakresie, do którego mają zostać przypisane wartości.
+*ostatni*<br/>
+Iterator postępujący odnosi się do pozycji pierwszej po elemencie końcowym w zakresie, do którego mają zostać przypisane wartości.
 
-*_Gen* obiektu funkcji, która jest wywoływana bez argumentów służący do generowania wartości, które ma być przypisane do poszczególnych elementów w zakresie.
+*_Gen*<br/>
+Obiektu funkcji, która jest wywoływana bez argumentów służący do generowania wartości, które ma być przypisane do poszczególnych elementów w zakresie.
 
 ### <a name="remarks"></a>Uwagi
 
@@ -1996,11 +2068,14 @@ void generate_n(
 
 ### <a name="parameters"></a>Parametry
 
-*Pierwszy* iterator danych wyjściowych odnoszący się do pozycji pierwszego elementu zakresu, do którego mają zostać przypisane wartości.
+*pierwszy*<br/>
+Iterator danych wyjściowych odnoszący się do pozycji pierwszego elementu zakresu, do którego mają zostać przypisane wartości.
 
-*Liczba* A podpisane lub niepodpisane typu Liczba całkowita określająca liczbę elementów można przypisać jej wartości za pomocą funkcji generator.
+*Liczba*<br/>
+Liczba całkowita ze znakiem lub bez znaku typ określającą liczbę elementów do przypisania wartości przez funkcję generatora.
 
-*Gen* obiektu funkcji, która jest wywoływana bez argumentów służący do generowania wartości, które ma być przypisane do poszczególnych elementów w zakresie.
+*Gen*<br/>
+Obiektu funkcji, która jest wywoływana bez argumentów służący do generowania wartości, które ma być przypisane do poszczególnych elementów w zakresie.
 
 ### <a name="remarks"></a>Uwagi
 
@@ -2077,15 +2152,20 @@ bool includes(
 
 ### <a name="parameters"></a>Parametry
 
-*first1* iterator danych wejściowych, odnoszący się do pozycji pierwszego elementu w pierwszym z dwóch posortowanych zakresów źródłowych do sprawdzenia dla tego, czy wszystkie elementy drugiego są zawarte w pierwszym.
+*first1*<br/>
+Iterator danych wejściowych, odnoszący się do pozycji pierwszego elementu w pierwszym z dwóch posortowanych zakresów źródłowych do sprawdzenia dla tego, czy wszystkie elementy drugiego są zawarte w pierwszym.
 
-*Nazwisko1* iterator danych wejściowych odnoszący się do pozycji pierwszej po ostatnim elemencie w pierwszym z dwóch posortowanych zakresów źródłowych ma zostać przetestowana dla tego, czy wszystkie elementy drugiego są zawarte w pierwszym.
+*Nazwisko1*<br/>
+Iterator danych wejściowych odnoszący się do pozycji pierwszej po ostatnim elemencie w pierwszym z dwóch posortowanych zakresów źródłowych pod kątem tego, czy wszystkie elementy drugiego są zawarte w pierwszym.
 
-*first2* iterator danych wejściowych odnoszący się do pozycji pierwszego elementu w ciągu sekundy z dwóch następujących po sobie posortowanych zakresów ma zostać przetestowana dla tego, czy wszystkie elementy drugiego są zawarte w pierwszym.
+*first2*<br/>
+Iterator danych wejściowych odnoszący się do pozycji pierwszego elementu w ciągu sekundy z dwóch następujących po sobie posortowanych zakresów ma pod kątem tego, czy wszystkie elementy drugiego są zawarte w pierwszym.
 
-*Nazwisko2* iterator danych wejściowych odnoszący się do pozycji pierwszej ostatniego elementu w ciągu sekundy z dwóch następujących po sobie posortowanych zakresów ma zostać przetestowana dla tego, czy wszystkie elementy drugiego są zawarte w pierwszym.
+*Nazwisko2*<br/>
+Iterator danych wejściowych, odnoszący się do pozycji pierwszej po ostatnim elemencie w ciągu sekundy z dwóch następujących po sobie posortowanych zakresów źródłowych pod kątem tego, czy wszystkie elementy drugiego są zawarte w pierwszym.
 
-*comp* obiekt funkcji predykatu zdefiniowanej przez użytkownika, który definiuje sens, w którym jeden element jest mniejszy niż inny. Predykat dwuelementowy przyjmuje dwa argumenty i zwraca **true** po spełnieniu oraz **false** Jeśli nie jest spełniony.
+*Comp*<br/>
+Obiekt funkcji predykatu zdefiniowanej przez użytkownika, który definiuje sens, w którym jeden element jest mniejszy niż inny. Predykat dwuelementowy przyjmuje dwa argumenty i zwraca **true** po spełnieniu oraz **false** Jeśli nie jest spełniony.
 
 ### <a name="return-value"></a>Wartość zwracana
 
@@ -2238,17 +2318,17 @@ int main()
 
 ```Output
 Original vector v1a with range sorted by the
- binary predicate less than is v1a = ( -2 -1 0 1 2 3 4 ).
+binary predicate less than is v1a = ( -2 -1 0 1 2 3 4 ).
 Original vector v1b with range sorted by the
- binary predicate less than is v1b = ( -2 -1 0 1 2 3 ).
+binary predicate less than is v1b = ( -2 -1 0 1 2 3 ).
 Original vector v2a with range sorted by the
- binary predicate greater is v2a = ( 4 3 2 1 0 -1 ).
+binary predicate greater is v2a = ( 4 3 2 1 0 -1 ).
 Original vector v2b with range sorted by the
- binary predicate greater is v2b = ( 3 2 1 0 -1 -2 ).
+binary predicate greater is v2b = ( 3 2 1 0 -1 -2 ).
 Original vector v3a with range sorted by the
- binary predicate mod_lesser is v3a = ( 0 1 2 3 4 ).
+binary predicate mod_lesser is v3a = ( 0 1 2 3 4 ).
 Original vector v3b with range sorted by the
- binary predicate mod_lesser is v3b = ( 0 -1 1 -2 2 3 ).
+binary predicate mod_lesser is v3b = ( 0 -1 1 -2 2 3 ).
 All the elements in vector v1b are contained in vector v1a.
 At least one of the elements in vector v2b is not contained in vector v2a.
 At least one of the elements in vector v3b is  not contained under mod_lesser in vector v3a.
@@ -2275,13 +2355,17 @@ void inplace_merge(
 
 ### <a name="parameters"></a>Parametry
 
-*pierwszy* iterator dwukierunkowy odnoszący się do pozycji pierwszego zakresów elementu w pierwszym z dwóch następujących po sobie posortowanych w połączeniu i posortowane w pojedynczy zakres.
+*pierwszy*<br/>
+Iterator dwukierunkowy odnoszący się do pozycji pierwszego elementu w pierwszym z dwóch następujących po sobie posortowanych zakresów można łączyć i posortowane w pojedynczy zakres.
 
-*środkowy* iterator dwukierunkowy odnoszący się do pozycji pierwszego zakresów elementu w drugim z dwóch następujących po sobie posortowanych w połączeniu i posortowane w pojedynczy zakres.
+*drugie*<br/>
+Iterator dwukierunkowy odnoszący się do pozycji pierwszego elementu w drugim z dwóch następujących po sobie posortowanych zakresów można łączyć i posortowane w pojedynczy zakres.
 
-*ostatni* iterator dwukierunkowy odnoszący się do pozycji pierwszej ostatniego zakresów elementu w drugim z dwóch następujących po sobie posortowanych w połączeniu i posortowane w pojedynczy zakres.
+*ostatni*<br/>
+Iterator dwukierunkowy odnoszący się do pozycji, jeden po ostatnim elemencie w ciągu sekundy z dwóch następujących po sobie posortowanych zakresów w połączeniu i posortowane w pojedynczy zakres.
 
-*comp* obiekt zdefiniowany przez użytkownika funkcji predykatu, który definiuje sens, w którym jeden element jest większy niż inny. Predykat dwuelementowy przyjmuje dwa argumenty i powinna zwrócić **true** kiedy pierwszy element jest mniejszy od drugiego elementu i **false** inaczej.
+*Comp*<br/>
+Obiekt funkcji predykatu zdefiniowanej przez użytkownika, który definiuje sens, w którym jeden element jest większy niż inny. Predykat dwuelementowy przyjmuje dwa argumenty i powinna zwrócić **true** kiedy pierwszy element jest mniejszy od drugiego elementu i **false** inaczej.
 
 ### <a name="remarks"></a>Uwagi
 
@@ -2389,17 +2473,17 @@ int main()
 
 ```Output
 Original vector v1 with subranges sorted by the
- binary predicate less than is  v1 = ( 0 1 2 3 4 5 -5 -4 -3 -2 -1 0 )
+binary predicate less than is  v1 = ( 0 1 2 3 4 5 -5 -4 -3 -2 -1 0 )
 Original vector v2 with subranges sorted by the
- binary predicate greater is v2 = ( 5 4 3 2 1 0 0 -1 -2 -3 -4 -5 )
+binary predicate greater is v2 = ( 5 4 3 2 1 0 0 -1 -2 -3 -4 -5 )
 Original vector v3 with subranges sorted by the
- binary predicate mod_lesser is v3 = ( 0 1 2 3 4 5 0 -1 -2 -3 -4 -5 )
+binary predicate mod_lesser is v3 = ( 0 1 2 3 4 5 0 -1 -2 -3 -4 -5 )
 Merged inplace with default order,
- vector v1mod = ( -5 -4 -3 -2 -1 0 0 1 2 3 4 5 )
+vector v1mod = ( -5 -4 -3 -2 -1 0 0 1 2 3 4 5 )
 Merged inplace with binary predicate greater specified,
- vector v2mod = ( 5 4 3 2 1 0 0 -1 -2 -3 -4 -5 )
+vector v2mod = ( 5 4 3 2 1 0 0 -1 -2 -3 -4 -5 )
 Merged inplace with binary predicate mod_lesser specified,
- vector v3mod = ( 0 0 1 -1 2 -2 3 -3 4 -4 5 -5 )
+vector v3mod = ( 0 0 1 -1 2 -2 3 -3 4 -4 5 -5 )
 ```
 
 ## <a name="is_heap"></a>  is_heap
@@ -2421,11 +2505,14 @@ bool is_heap(
 
 ### <a name="parameters"></a>Parametry
 
-*pierwszy* iterator dostępu losowego, który wskazuje początek zakresu, aby sprawdzić, czy sterty.
+*pierwszy*<br/>
+Iterator dostępu losowego, który wskazuje początek zakresu, aby sprawdzić, czy sterty.
 
-*ostatni* iterator dostępu losowego, który wskazuje koniec zakresu.
+*ostatni*<br/>
+Iterator dostępu losowego, który wskazuje koniec zakresu.
 
-*comp* warunków do przetestowania w celu kolejność elementów. Predykat dwuelementowy przyjmuje jeden argument i zwraca **true** lub **false**.
+*Comp*<br/>
+Warunek do przetestowania w celu kolejność elementów. Predykat dwuelementowy przyjmuje jeden argument i zwraca **true** lub **false**.
 
 ### <a name="return-value"></a>Wartość zwracana
 
@@ -2458,11 +2545,14 @@ RandomAccessIterator is_heap_until(
 
 ### <a name="parameters"></a>Parametry
 
-*Rozpocznij* iterator dostępu losowego, który określa pierwszy element zakresu pod kątem sterty.
+*begin*<br/>
+Iterator dostępu losowego, który określa pierwszy element zakresu pod kątem sterty.
 
-*koniec* iterator dostępu losowego, który określa koniec zakresu, aby sprawdzić, czy sterty.
+*koniec*<br/>
+Iterator dostępu losowego, który określa koniec zakresu, aby sprawdzić, czy sterty.
 
-*Porównaj* predykat binarny, który określa ścisłym słabym porządkowanie warunek, który definiuje sterty. Domyślny predykat, gdy *porównania* nie zostanie określony jest `std::less<>`.
+*Porównanie*<br/>
+Binarny predykat określający ścisłym słabym porządkowanie warunek, który definiuje sterty. Domyślny predykat, gdy *porównania* nie zostanie określony jest `std::less<>`.
 
 ### <a name="return-value"></a>Wartość zwracana
 
@@ -2488,11 +2578,14 @@ bool is_partitioned(
 
 ### <a name="parameters"></a>Parametry
 
-*pierwszy* iterator danych wejściowych, która wskazuje, której zakres rozpoczyna sprawdzać występowanie warunku.
+*pierwszy*<br/>
+Iterator danych wejściowych, która wskazuje, której zakres rozpoczyna sprawdzać występowanie warunku.
 
-*ostatni* iterator danych wejściowych, który wskazuje koniec zakresu.
+*ostatni*<br/>
+Iterator danych wejściowych, który wskazuje koniec zakresu.
 
-*comp* warunek, którego chcesz sprawdzić. To jest zapewniana przez obiekt funkcji predykatu zdefiniowanej przez użytkownika, który definiuje warunek muszą być spełnione przez element wyszukane. Predykat przyjmuje jeden argument i zwraca **true** lub **false**.
+*Comp*<br/>
+Warunek do testowania. To jest zapewniana przez obiekt funkcji predykatu zdefiniowanej przez użytkownika, który definiuje warunek muszą być spełnione przez element wyszukane. Predykat przyjmuje jeden argument i zwraca **true** lub **false**.
 
 ### <a name="return-value"></a>Wartość zwracana
 
@@ -2539,15 +2632,20 @@ bool is_permutation(
 
 ### <a name="parameters"></a>Parametry
 
-*First1* iterator do przodu, który odwołuje się do pierwszego elementu zakresu.
+*first1*<br/>
+Iterator do przodu, który odwołuje się do pierwszego elementu zakresu.
 
-*Nazwisko1* iterator do przodu, który odwołuje się po ostatnim elemencie zakresu.
+*Nazwisko1*<br/>
+Iterator do przodu, który odwołuje się po ostatnim elemencie zakresu.
 
-*First2* iterator do przodu odwołujący się do pierwszego elementu drugiego zakresu, używana na potrzeby porównania.
+*first2*<br/>
+Iterator postępujący odnosi się do pierwszego elementu drugiego zakresu, używana na potrzeby porównania.
 
-*Nazwisko2* iterator do przodu odwołujący się do po ostatnim elemencie drugiego zakresu, używana na potrzeby porównania.
+*Nazwisko2*<br/>
+Iterator postępujący odnosi się do po ostatnim elemencie drugiego zakresu, używana na potrzeby porównania.
 
-*P.* predykat, sprawdza, czy równoważności, która zwraca **bool**.
+*P.*<br/>
+Predykat, sprawdza, czy równoważności, która zwraca **bool**.
 
 ### <a name="return-value"></a>Wartość zwracana
 
@@ -2637,11 +2735,14 @@ bool is_sorted(
 
 ### <a name="parameters"></a>Parametry
 
-*pierwszy* iterator do przodu, który wskazuje, gdzie rozpoczyna się zakres do sprawdzenia.
+*pierwszy*<br/>
+Iterator do przodu, który wskazuje, gdzie rozpoczyna się zakres do sprawdzenia.
 
-*ostatni* iterator do przodu, który wskazuje koniec zakresu.
+*ostatni*<br/>
+Iterator do przodu, który wskazuje koniec zakresu.
 
-*comp* warunek do sprawdzenia, aby określić kolejność między dwoma elementami. Predykat przyjmuje jeden argument i zwraca **true** lub **false**. Spowoduje to wykonanie tych samych zadań `operator<`.
+*Comp*<br/>
+Warunek, którego chcesz przetestować, aby określić kolejność między dwoma elementami. Predykat przyjmuje jeden argument i zwraca **true** lub **false**. Spowoduje to wykonanie tych samych zadań `operator<`.
 
 ### <a name="remarks"></a>Uwagi
 
@@ -2659,21 +2760,24 @@ Druga wersja umożliwia dostarczanie `BinaryPredicate` funkcja, która zwraca **
 template<class ForwardIterator>
 ForwardIterator is_sorted_until(
     ForwardIterator first,
-    ForwardIterator last); 
+    ForwardIterator last);
 template<class ForwardIterator, class BinaryPredicate>
 ForwardIterator is_sorted_until(
     ForwardIterator first,
     ForwardIterator last,
-    BinaryPredicate comp); 
+    BinaryPredicate comp);
 ```
 
 ### <a name="parameters"></a>Parametry
 
-*pierwszy* iterator do przodu, który wskazuje, gdzie rozpoczyna się zakres do sprawdzenia.
+*pierwszy*<br/>
+Iterator do przodu, który wskazuje, gdzie rozpoczyna się zakres do sprawdzenia.
 
-*ostatni* iterator do przodu, który wskazuje koniec zakresu.
+*ostatni*<br/>
+Iterator do przodu, który wskazuje koniec zakresu.
 
-*comp* warunek do sprawdzenia, aby określić kolejność między dwoma elementami. Predykat przyjmuje jeden argument i zwraca **true** lub **false**.
+*Comp*<br/>
+Warunek, którego chcesz przetestować, aby określić kolejność między dwoma elementami. Predykat przyjmuje jeden argument i zwraca **true** lub **false**.
 
 ### <a name="return-value"></a>Wartość zwracana
 
@@ -2697,9 +2801,11 @@ void iter_swap( ForwardIterator1 left, ForwardIterator2 right );
 
 ### <a name="parameters"></a>Parametry
 
-*po lewej stronie* jeden iteratorów do przodu, którego wartość ma zostać wymienione.
+*left*<br/>
+Jeden iteratorów do przodu, którego wartość ma zostać wymienione.
 
-*prawy* drugi tworzyć Iteratory do przodu, którego wartość ma zostać wymienione.
+*right*<br/>
+Drugi tworzyć Iteratory do przodu, którego wartość ma zostać wymienione.
 
 ### <a name="remarks"></a>Uwagi
 
@@ -2830,14 +2936,14 @@ int main()
 ```Output
 The original deque of CInts is deq1 = ( CInt(5), CInt(1), CInt(10) ).
 The deque of CInts with first & last elements swapped is:
- deq1 = ( CInt(10), CInt(1), CInt(5) ).
+deq1 = ( CInt(10), CInt(1), CInt(5) ).
 The deque of CInts with first & last elements swapped back is:
- deq1 = ( CInt(5), CInt(1), CInt(10) ).
+deq1 = ( CInt(5), CInt(1), CInt(10) ).
 Vector v1 is ( 0 1 2 3 ).
 Deque deq2 is ( 4 5 ).
 After exchanging first elements,
- vector v1 is: v1 = ( 4 1 2 3 ).
- & deque deq2 is: deq2 = ( 0 5 ).
+vector v1 is: v1 = ( 4 1 2 3 ).
+& deque deq2 is: deq2 = ( 0 5 ).
 ```
 
 ## <a name="lexicographical_compare"></a>  lexicographical_compare —
@@ -2864,15 +2970,20 @@ bool lexicographical_compare(
 
 ### <a name="parameters"></a>Parametry
 
-*first1* iterator danych wejściowych odnoszący się do pozycji pierwszego elementu w pierwszym zakresie mają być porównane.
+*first1*<br/>
+Iterator danych wejściowych odnoszący się do pozycji pierwszego elementu w pierwszym zakresie mają być porównane.
 
-*Nazwisko1* iterator danych wejściowych odnoszący się do pozycji pierwszej po elemencie końcowym w zakresie pierwszy mają być porównane.
+*Nazwisko1*<br/>
+Iterator danych wejściowych odnoszący się do pozycji pierwszej po elemencie końcowym w zakresie pierwszy mają być porównane.
 
-*first2* iterator danych wejściowych odnoszący się do pozycji pierwszego elementu w drugim zakresie mają być porównane.
+*first2*<br/>
+Iterator danych wejściowych odnoszący się do pozycji pierwszego elementu w drugim zakresie mają być porównane.
 
-*Nazwisko2* iterator danych wejściowych odnoszący się do pozycji pierwszej po elemencie końcowym w zakresie drugi do porównania.
+*Nazwisko2*<br/>
+Iterator danych wejściowych odnoszący się do pozycji pierwszej po elemencie końcowym w zakresie drugi do porównania.
 
-*comp* obiekt funkcji predykatu zdefiniowanej przez użytkownika, który definiuje sens, w którym jeden element jest mniejszy niż inny. Predykat dwuelementowy przyjmuje dwa argumenty i zwraca **true** po spełnieniu oraz **false** Jeśli nie jest spełniony.
+*Comp*<br/>
+Obiekt funkcji predykatu zdefiniowanej przez użytkownika, który definiuje sens, w którym jeden element jest mniejszy niż inny. Predykat dwuelementowy przyjmuje dwa argumenty i zwraca **true** po spełnieniu oraz **false** Jeśli nie jest spełniony.
 
 ### <a name="return-value"></a>Wartość zwracana
 
@@ -3005,13 +3116,17 @@ ForwardIterator lower_bound(
 
 ### <a name="parameters"></a>Parametry
 
-*pierwszy* iterator do przodu, odnoszący się do pozycji pierwszego elementu w zakresie do wyszukania.
+*pierwszy*<br/>
+Iterator postępujący odnosi się pozycja pierwszego elementu w zakresie do wyszukania.
 
-*ostatni* iterator do przodu, odnoszący się do pozycji jeden po elemencie końcowym w zakresie do wyszukania.
+*ostatni*<br/>
+Iterator postępujący odnosi się pozycja jeden po elemencie końcowym w zakresie do wyszukania.
 
-*wartość* wartość, której pierwsza pozycja lub możliwa pierwsza pozycja są wyszukiwane w zakresie uporządkowanym.
+*value*<br/>
+Wartość, której pierwsza pozycja lub możliwa pierwsza pozycja są wyszukiwane w zakresie uporządkowanym.
 
-*comp* obiekt funkcji predykatu zdefiniowanej przez użytkownika, który definiuje sens, w którym jeden element jest mniejszy niż inny. Predykat dwuelementowy przyjmuje dwa argumenty i zwraca **true** po spełnieniu oraz **false** Jeśli nie jest spełniony.
+*Comp*<br/>
+Obiekt funkcji predykatu zdefiniowanej przez użytkownika, który definiuje sens, w którym jeden element jest mniejszy niż inny. Predykat dwuelementowy przyjmuje dwa argumenty i zwraca **true** po spełnieniu oraz **false** Jeśli nie jest spełniony.
 
 ### <a name="return-value"></a>Wartość zwracana
 
@@ -3140,11 +3255,14 @@ void make_heap(
 
 ### <a name="parameters"></a>Parametry
 
-*pierwszy* iteratora dostępu swobodnego, odnoszący się do pozycji pierwszego elementu w zakresie, który ma zostać przekonwertowany na stertę.
+*pierwszy*<br/>
+Iterator dostępu swobodnego, odnoszący się do pozycji pierwszego elementu w zakresie, który ma zostać przekonwertowany na stertę.
 
-*ostatni* iteratora dostępu swobodnego, odnoszący się do pozycji pierwszej po elemencie końcowym w zakresie, który ma zostać przekonwertowany na stertę.
+*ostatni*<br/>
+Iterator dostępu swobodnego, odnoszący się do pozycji pierwszej po elemencie końcowym w zakresie, który ma zostać przekonwertowany na stertę.
 
-*comp* obiekt funkcji predykatu zdefiniowanej przez użytkownika, który definiuje sens, w którym jeden element jest mniejszy niż inny. Predykat dwuelementowy przyjmuje dwa argumenty i zwraca **true** po spełnieniu oraz **false** Jeśli nie jest spełniony.
+*Comp*<br/>
+Obiekt funkcji predykatu zdefiniowanej przez użytkownika, który definiuje sens, w którym jeden element jest mniejszy niż inny. Predykat dwuelementowy przyjmuje dwa argumenty i zwraca **true** po spełnieniu oraz **false** Jeśli nie jest spełniony.
 
 ### <a name="remarks"></a>Uwagi
 
@@ -3208,30 +3326,34 @@ Porównuje dwa obiekty i zwraca większy z nich, gdzie kryterium sortowania moż
 template<class Type>
 constexpr Type& max(
     const Type& left,
-    const Type& right); 
+    const Type& right);
 template<class Type, class Pr>
 constexpr Type& max(
     const Type& left,
     const Type& right,
-    BinaryPredicate comp); 
+    BinaryPredicate comp);
 template<class Type>
 constexpr Type& max (
-    initializer_list<Type> ); 
+    initializer_list<Type> );
 template<class Type, class Pr>
 constexpr Type& max(
     initializer_list<Type> ,
-    BinaryPredicate comp); 
+    BinaryPredicate comp);
 ```
 
 ### <a name="parameters"></a>Parametry
 
-*po lewej stronie* pierwsze dwa obiekty są porównywane.
+*left*<br/>
+Pierwsze dwa obiekty są porównywane.
 
-*prawy* drugi dwa obiekty, którą jest porównywany.
+*right*<br/>
+Drugi dwa obiekty są porównywane.
 
-*comp* predykat binarny, używany do porównywania dwóch obiektów.
+*Comp*<br/>
+Predykat binarny, używany do porównywania dwóch obiektów.
 
-*_IList* lista inicjatora, który zawiera obiekty, które mają być porównane.
+*_IList*<br/>
+Lista inicjatora, który zawiera obiekty, które mają być porównane.
 
 ### <a name="return-value"></a>Wartość zwracana
 
@@ -3424,11 +3546,14 @@ constexpr ForwardIterator max_element(ForwardIterator first, ForwardIterator las
 
 ### <a name="parameters"></a>Parametry
 
-*pierwszy* iterator do przodu, odnoszący się do pozycji pierwszego elementu w zakresie mają być wyszukiwane największego elementu.
+*pierwszy*<br/>
+Iterator postępujący odnosi się pozycja pierwszego elementu w zakresie mają być wyszukiwane największego elementu.
 
-*ostatni* iterator postępujący odnosi się do pozycji pierwszej po elemencie końcowym w zakresie mają być wyszukiwane największego elementu.
+*ostatni*<br/>
+Iterator postępujący odnosi się do pozycji pierwszej po elemencie końcowym w zakresie mają być wyszukiwane największego elementu.
 
-*comp* obiekt zdefiniowany przez użytkownika funkcji predykatu, który definiuje sens, w którym jeden element jest większy niż inny. Predykat dwuelementowy przyjmuje dwa argumenty i powinna zwrócić **true** kiedy pierwszy element jest mniejszy od drugiego elementu i **false** inaczej.
+*Comp*<br/>
+Obiekt funkcji predykatu zdefiniowanej przez użytkownika, który definiuje sens, w którym jeden element jest większy niż inny. Predykat dwuelementowy przyjmuje dwa argumenty i powinna zwrócić **true** kiedy pierwszy element jest mniejszy od drugiego elementu i **false** inaczej.
 
 ### <a name="return-value"></a>Wartość zwracana
 
@@ -3566,17 +3691,23 @@ OutputIterator merge(
 
 ### <a name="parameters"></a>Parametry
 
-*first1* iterator danych wejściowych, odnoszący się do pozycji pierwszego elementu w pierwszym z dwóch posortowanych zakresów źródłowych w połączeniu i posortowane w pojedynczy zakres.
+*first1*<br/>
+Iterator danych wejściowych, odnoszący się do pozycji pierwszego elementu w pierwszym z dwóch posortowanych zakresów źródłowych w połączeniu i posortowane w pojedynczy zakres.
 
-*Nazwisko1* iterator danych wejściowych, odnoszący się do pozycji pierwszej po ostatnim elemencie w pierwszym z dwóch posortowanych zakresów źródłowych w połączeniu i posortowane w pojedynczy zakres.
+*Nazwisko1*<br/>
+Iterator danych wejściowych, odnoszący się do pozycji pierwszej po ostatnim elemencie w pierwszym z dwóch posortowanych zakresów źródłowych w połączeniu i posortowane w pojedynczy zakres.
 
-*first2* iterator danych wejściowych, odnoszący się do pozycji pierwszego elementu w ciągu sekundy z dwóch następujących po sobie posortowanych zakresów w połączeniu i posortowane w pojedynczy zakres.
+*first2*<br/>
+Iterator danych wejściowych, odnoszący się do pozycji pierwszego elementu w ciągu sekundy z dwóch następujących po sobie posortowanych zakresów źródłowych w połączeniu i posortowane w pojedynczy zakres.
 
-*Nazwisko2* iterator danych wejściowych odnoszący jednej pozycji poza ostatnim zakresów źródłowych element w ciągu sekundy z dwóch następujących po sobie posortowanych połączone i posortowane w pojedynczy zakres.
+*Nazwisko2*<br/>
+Iterator danych wejściowych, odnoszący się do pozycji, jeden po ostatnim elemencie w ciągu sekundy z dwóch następujących po sobie posortowanych zakresów źródłowych w połączeniu i posortowane w pojedynczy zakres.
 
-*wynik* iterator danych wyjściowych odnoszący się do pozycji pierwszego elementu w zakresie docelowym, w którym źródło dwa zakresy, które mają być łączone w pojedynczy posortowany zakres.
+*wynik*<br/>
+Iterator danych wyjściowych odnoszący się do pozycji pierwszego elementu w zakresie docelowym, w którym mają być łączone w pojedynczy posortowany zakres źródłowe dwa zakresy.
 
-*comp* obiekt zdefiniowany przez użytkownika funkcji predykatu, który definiuje sens, w którym jeden element jest większy niż inny. Predykat dwuelementowy przyjmuje dwa argumenty i powinna zwrócić **true** kiedy pierwszy element jest mniejszy od drugiego elementu i **false** inaczej.
+*Comp*<br/>
+Obiekt funkcji predykatu zdefiniowanej przez użytkownika, który definiuje sens, w którym jeden element jest większy niż inny. Predykat dwuelementowy przyjmuje dwa argumenty i powinna zwrócić **true** kiedy pierwszy element jest mniejszy od drugiego elementu i **false** inaczej.
 
 ### <a name="return-value"></a>Wartość zwracana
 
@@ -3716,31 +3847,35 @@ Porównuje dwa obiekty i zwraca mniejszy z nich, gdzie kryterium sortowania moż
 template<class Type>
 constexpr const Type& min(
     const Type& left,
-    const Type& right); 
+    const Type& right);
 template<class Type, class Pr>
 constexpr const Type& min(
     const Type& left,
     const Type& right,
-    BinaryPredicate comp); 
+    BinaryPredicate comp);
 template<class Type>
 constexpr Type min( 
-    initializer_list<Type> ); 
+    initializer_list<Type> );
 template<class Type, class Pr>
 constexpr Type min(
     initializer_list<Type>,
-    BinaryPredicate comp); 
+    BinaryPredicate comp);
 
 ```
 
 ### <a name="parameters"></a>Parametry
 
-*po lewej stronie* pierwsze dwa obiekty są porównywane.
+*left*<br/>
+Pierwsze dwa obiekty są porównywane.
 
-*prawy* drugi dwa obiekty, którą jest porównywany.
+*right*<br/>
+Drugi dwa obiekty są porównywane.
 
-*comp* predykat binarny, używany do porównywania dwóch obiektów.
+*Comp*<br/>
+Predykat binarny, używany do porównywania dwóch obiektów.
 
-*_IList* initializer_list, który zawiera elementy członkowskie, które mają być porównane.
+*_IList*<br/>
+Lista initializer_list, który zawiera elementy członkowskie, które mają być porównane.
 
 ### <a name="return-value"></a>Wartość zwracana
 
@@ -3935,11 +4070,14 @@ constexpr ForwardIterator min_element(
 
 ### <a name="parameters"></a>Parametry
 
-*pierwszy* iterator do przodu, odnoszący się do pozycji pierwszego elementu w zakresie mają być wyszukiwane najmniejszy element.
+*pierwszy*<br/>
+Iterator postępujący odnosi się pozycja pierwszego elementu w zakresie mają być wyszukiwane najmniejszy element.
 
-*ostatni* iterator postępujący odnosi się do pozycji pierwszej po elemencie końcowym w zakresie mają być wyszukiwane najmniejszy element.
+*ostatni*<br/>
+Iterator postępujący odnosi się do pozycji pierwszej po elemencie końcowym w zakresie mają być wyszukiwane najmniejszy element.
 
-*comp* obiekt zdefiniowany przez użytkownika funkcji predykatu, który definiuje sens, w którym jeden element jest większy niż inny. Predykat dwuelementowy przyjmuje dwa argumenty i powinna zwrócić **true** kiedy pierwszy element jest mniejszy od drugiego elementu i **false** inaczej.
+*Comp*<br/>
+Obiekt funkcji predykatu zdefiniowanej przez użytkownika, który definiuje sens, w którym jeden element jest większy niż inny. Predykat dwuelementowy przyjmuje dwa argumenty i powinna zwrócić **true** kiedy pierwszy element jest mniejszy od drugiego elementu i **false** inaczej.
 
 ### <a name="return-value"></a>Wartość zwracana
 
@@ -4058,7 +4196,7 @@ The smallest element in s1 is: CInt( -3 )
 Vector v1 is ( 0 1 2 3 -2 -4 -6 -8 ).
 The smallest element in v1 is: -8
 The smallest element in v1 under the mod_lesser
- binary predicate is: 0
+binary predicate is: 0
 ```
 
 ## <a name="minmax_element"></a>  minmax_element
@@ -4069,21 +4207,24 @@ Wykonuje pracę wykonaną przez `min_element` i `max_element` w jednym wywołani
 template<class ForwardIterator>
 constexpr pair<ForwardIterator, ForwardIterator> minmax_element(
     ForwardIterator first,
-    ForwardIterator Last); 
+    ForwardIterator Last);
 template<class ForwardIterator, class BinaryPredicate>
 constexpr pair<ForwardIterator, ForwardIterator> minmax_element(
     ForwardIterator  first,
     ForwardIterator Last,
-    BinaryPredicate  comp); 
+    BinaryPredicate  comp);
 ```
 
 ### <a name="parameters"></a>Parametry
 
-*pierwszy* iterator do przodu, który wskazuje początek zakresu.
+*pierwszy*<br/>
+Iterator do przodu, który wskazuje początek zakresu.
 
-*ostatni* iterator do przodu, który wskazuje koniec zakresu.
+*ostatni*<br/>
+Iterator do przodu, który wskazuje koniec zakresu.
 
-*comp* opcjonalne badanie umożliwia kolejność elementów.
+*Comp*<br/>
+Opcjonalne badanie umożliwia kolejność elementów.
 
 ### <a name="return-value"></a>Wartość zwracana
 
@@ -4113,31 +4254,35 @@ Porównuje dwa parametry wejściowe i zwraca je jako parę w kolejności mniejsz
 template<class Type>
 constexpr pair<const Type&, const Type&> minmax(
     const Type& left,
-    const Type& right); 
+    const Type& right);
 template<class Type, class BinaryPredicate>
 constexpr pair<const Type&, const Type&> minmax(
     const Type& left,
     const Type& right,
-    BinaryPredicate comp); 
+    BinaryPredicate comp);
 template<class Type>
- constexpr pair<Type&, Type&> minmax(
-    initializer_list<Type> ); 
+constexpr pair<Type&, Type&> minmax(
+    initializer_list<Type> );
 template<class Type, class BinaryPredicate>
 constexpr pair<Type&, Type&> minmax(
     initializer_list<Type>,
-    BinaryPredicate comp); 
+    BinaryPredicate comp);
 
 ```
 
 ### <a name="parameters"></a>Parametry
 
-*po lewej stronie* pierwsze dwa obiekty są porównywane.
+*left*<br/>
+Pierwsze dwa obiekty są porównywane.
 
-*prawy* drugi dwa obiekty, którą jest porównywany.
+*right*<br/>
+Drugi dwa obiekty są porównywane.
 
-*comp* predykat binarny, używany do porównywania dwóch obiektów.
+*Comp*<br/>
+Predykat binarny, używany do porównywania dwóch obiektów.
 
-*_IList* initializer_list, który zawiera elementy członkowskie, które mają być porównane.
+*_IList*<br/>
+Lista initializer_list, który zawiera elementy członkowskie, które mają być porównane.
 
 ### <a name="remarks"></a>Uwagi
 
@@ -4190,15 +4335,20 @@ mismatch(
 
 ### <a name="parameters"></a>Parametry
 
-*First1* iterator danych wejściowych odnoszący się do pozycji pierwszego elementu w zakresie pierwszy ma zostać przetestowana.
+*first1*<br/>
+Iterator danych wejściowych odnoszący się do pozycji pierwszego elementu w zakresie pierwszy ma zostać przetestowana.
 
-*Nazwisko1* iterator danych wejściowych odnoszący jednej pozycji poza ostatnim elemencie w zakresie pierwszy ma zostać przetestowana.
+*Nazwisko1*<br/>
+Iterator danych wejściowych odnoszący jednej pozycji poza ostatnim elemencie w zakresie pierwszy ma zostać przetestowana.
 
-*First2* iterator danych wejściowych odnoszący się do pozycji pierwszego elementu w zakresie drugi ma zostać przetestowana.
+*first2*<br/>
+Iterator danych wejściowych odnoszący się do pozycji pierwszego elementu w zakresie drugi ma zostać przetestowana.
 
-*Nazwisko2* iterator danych wejściowych odnoszący się do pozycji po ostatnim elemencie w zakresie drugi ma zostać przetestowana.
+*Nazwisko2*<br/>
+Iterator danych wejściowych odnoszący się do pozycji po ostatnim elemencie w zakresie drugi ma zostać przetestowana.
 
-*Comp* obiekt zdefiniowany przez użytkownika funkcji predykatu, który porównuje bieżące elementy w każdym zakresie i określa, czy są równoważne. Zwraca **true** po spełnieniu oraz **false** Jeśli nie jest spełniony.
+*Comp*<br/>
+Obiekt funkcji predykatu zdefiniowanej przez użytkownika, który porównuje bieżące elementy w każdym zakresie i określa, czy są równoważne. Zwraca **true** po spełnieniu oraz **false** Jeśli nie jest spełniony.
 
 ### <a name="return-value"></a>Wartość zwracana
 
@@ -4320,16 +4470,19 @@ template<class InputIterator, class OutputIterator>
 OutputIterator move(
     InputIterator first,
     InputIterator last,
-    OutputIterator dest); 
+    OutputIterator dest);
 ```
 
 ### <a name="parameters"></a>Parametry
 
-*pierwszy* iterator danych wejściowych, która wskazuje, gdzie zacząć szeregu elementów, aby przenieść.
+*pierwszy*<br/>
+Iterator danych wejściowych, która wskazuje, gdzie zacząć szeregu elementów, aby przenieść.
 
-*ostatni* iterator danych wejściowych, która wskazuje koniec zakresu elementów, aby przenieść.
+*ostatni*<br/>
+Iterator danych wejściowych, która wskazuje koniec zakresu elementów, aby przenieść.
 
-*dest* iteratora danych wyjściowych, który musi zawierać przeniesione elementy.
+*dest*<br/>
+Iterator danych wyjściowych, który musi zawierać przeniesione elementy.
 
 ### <a name="remarks"></a>Uwagi
 
@@ -4350,11 +4503,14 @@ template<class BidirectionalIterator1, class BidirectionalIterator2>
 
 ### <a name="parameters"></a>Parametry
 
-*pierwszy* iterator wskazuje początek zakresu, aby przenosić elementy.
+*pierwszy*<br/>
+Iterator wskazuje początek zakresu, aby przenosić elementy.
 
-*ostatni* iterator wskazuje koniec zakresu można przenosić elementy. Ten element jest nieruchomy.
+*ostatni*<br/>
+Iterator wskazuje koniec zakresu można przenosić elementy. Ten element jest nieruchomy.
 
-*destEnd* iterator dwukierunkowy odnoszący się do pozycji po elemencie końcowym w zakresie docelowym.
+*destEnd*<br/>
+Iterator dwukierunkowy odnoszący się do pierwszej pozycji po elemencie końcowym w zakresie docelowym.
 
 ### <a name="remarks"></a>Uwagi
 
@@ -4377,11 +4533,14 @@ bool next_permutation(BidirectionalIterator first, BidirectionalIterator last, B
 
 ### <a name="parameters"></a>Parametry
 
-*pierwszy* iterator dwukierunkowy wskazujący pozycji pierwszego elementu w zakresie do cieniowania można.
+*pierwszy*<br/>
+Iterator dwukierunkowy wskazujący pozycji pierwszego elementu w zakresie w do cieniowania można.
 
-*ostatni* iterator dwukierunkowy wskazuje do jednej pozycji po elemencie końcowym w zakresie do cieniowania można.
+*ostatni*<br/>
+Iterator dwukierunkowy wskazuje do jednej pozycji po elemencie końcowym w zakresie w do cieniowania można.
 
-*comp* obiekt funkcji predykatu zdefiniowanej przez użytkownika, który definiuje kryterium porównania, które muszą być spełnione przez kolejne elementy w kolejności. Predykat dwuelementowy przyjmuje dwa argumenty i zwraca **true** po spełnieniu oraz **false** Jeśli nie jest spełniony.
+*Comp*<br/>
+Obiekt funkcji predykatu zdefiniowanej przez użytkownika, który definiuje kryterium porównania, które muszą być spełnione przez kolejne elementy w kolejności. Predykat dwuelementowy przyjmuje dwa argumenty i zwraca **true** po spełnieniu oraz **false** Jeśli nie jest spełniony.
 
 ### <a name="return-value"></a>Wartość zwracana
 
@@ -4517,21 +4676,21 @@ The original deque of CInts is deq1 = ( CInt( 5 ), CInt( 1 ), CInt( 10 ) ).
 The lexicographically next permutation exists and has
 replaced the original ordering of the sequence in deq1.
 After one application of next_permutation,
- deq1 = ( CInt( 5 ), CInt( 10 ), CInt( 1 ) ).
+deq1 = ( CInt( 5 ), CInt( 10 ), CInt( 1 ) ).
 
 Vector v1 is ( -3 -2 -1 0 1 2 3 ).
 After the first next_permutation, vector v1 is:
- v1 = ( -3 -2 -1 0 1 3 2 ).
+v1 = ( -3 -2 -1 0 1 3 2 ).
 After another next_permutation of vector v1,
- v1 =   ( -3 -2 -1 0 2 1 3 ).
+v1 =   ( -3 -2 -1 0 2 1 3 ).
 After another next_permutation of vector v1,
- v1 =   ( -3 -2 -1 0 2 3 1 ).
+v1 =   ( -3 -2 -1 0 2 3 1 ).
 After another next_permutation of vector v1,
- v1 =   ( -3 -2 -1 0 3 1 2 ).
+v1 =   ( -3 -2 -1 0 3 1 2 ).
 After another next_permutation of vector v1,
- v1 =   ( -3 -2 -1 0 3 2 1 ).
+v1 =   ( -3 -2 -1 0 3 2 1 ).
 After another next_permutation of vector v1,
- v1 =   ( -3 -2 -1 1 0 2 3 ).
+v1 =   ( -3 -2 -1 1 0 2 3 ).
 ```
 
 ## <a name="nth_element"></a>  nth_element —
@@ -4543,19 +4702,23 @@ template<class RandomAccessIterator>
 void nth_element( RandomAccessIterator first, RandomAccessIterator _Nth, RandomAccessIterator last);
 
 template<class RandomAccessIterator, class BinaryPredicate>
- void nth_element( RandomAccessIterator first, RandomAccessIterator _Nth, RandomAccessIterator last, BinaryPredicate comp);
+void nth_element( RandomAccessIterator first, RandomAccessIterator _Nth, RandomAccessIterator last, BinaryPredicate comp);
 
 ```
 
 ### <a name="parameters"></a>Parametry
 
-*pierwszy* iterator dostępu swobodnego odnoszący się do pozycji pierwszego elementu w zakresie do podzielenia na partycje.
+*pierwszy*<br/>
+Iterator dostępu swobodnego odnoszący się do pozycji pierwszego elementu w zakresie do podzielenia na partycje.
 
-*_Nth* dostępu swobodnego odnoszący się do pozycji elementu, umożliwiające prawidłowe sekwencjonowanie na granicy partycji.
+*_Nth*<br/>
+Iterator dostępu swobodnego odnoszący się do pozycji elementu umożliwiające prawidłowe sekwencjonowanie na granicy partycji.
 
-*ostatni* iterator dostępu swobodnego odnoszący się do pozycji pierwszej po elemencie końcowym w zakresie do podzielenia na partycje.
+*ostatni*<br/>
+Iterator dostępu swobodnego odnoszący się do pozycji pierwszej po elemencie końcowym w zakresie do podzielenia na partycje.
 
-*comp* obiekt funkcji predykatu zdefiniowanej przez użytkownika, który definiuje kryterium porównania, które muszą być spełnione przez kolejne elementy w kolejności. Predykat dwuelementowy przyjmuje dwa argumenty i zwraca **true** po spełnieniu oraz **false** Jeśli nie jest spełniony.
+*Comp*<br/>
+Obiekt funkcji predykatu zdefiniowanej przez użytkownika, który definiuje kryterium porównania, które muszą być spełnione przez kolejne elementy w kolejności. Predykat dwuelementowy przyjmuje dwa argumenty i zwraca **true** po spełnieniu oraz **false** Jeśli nie jest spełniony.
 
 ### <a name="remarks"></a>Uwagi
 
@@ -4644,11 +4807,14 @@ bool none_of(InputIterator first, InputIterator last, BinaryPredicate comp);
 
 ### <a name="parameters"></a>Parametry
 
-*pierwszy* iterator danych wejściowych, która wskazuje, gdzie zacząć sprawdzić szereg elementów dla warunku.
+*pierwszy*<br/>
+Iterator danych wejściowych, która wskazuje, gdzie zacząć sprawdzić szereg elementów dla warunku.
 
-*ostatni* iterator danych wejściowych, która wskazuje koniec zakresu elementów.
+*ostatni*<br/>
+Iterator danych wejściowych, która wskazuje koniec zakresu elementów.
 
-*comp* warunek, którego chcesz sprawdzić. To jest zapewniana przez obiekt funkcji predykatu zdefiniowanej przez użytkownika, który definiuje warunek. Predykat przyjmuje jeden argument i zwraca **true** lub **false**.
+*Comp*<br/>
+Warunek do testowania. To jest zapewniana przez obiekt funkcji predykatu zdefiniowanej przez użytkownika, który definiuje warunek. Predykat przyjmuje jeden argument i zwraca **true** lub **false**.
 
 ### <a name="return-value"></a>Wartość zwracana
 
@@ -4680,13 +4846,17 @@ void partial_sort(
 
 ### <a name="parameters"></a>Parametry
 
-*pierwszy* iterator dostępu swobodnego odnoszący się do pozycji pierwszego elementu w zakresie ma zostać posortowana.
+*pierwszy*<br/>
+Iterator dostępu swobodnego odnoszący się do pozycji pierwszego elementu w zakresie ma zostać posortowana.
 
-*sortEnd* dostępu swobodnego odnoszący się do pozycji pierwszej po elemencie końcowym w Podzakres, ma zostać posortowana.
+*sortEnd*<br/>
+Iterator dostępu swobodnego odnoszący się do pozycji pierwszej po elemencie końcowym w Podzakres ma zostać posortowana.
 
-*ostatni* iterator dostępu swobodnego odnoszący się do pozycji jeden po elemencie końcowym w zakresie częściowo posortowane.
+*ostatni*<br/>
+Iterator dostępu swobodnego odnoszący się do pozycji jeden po elemencie końcowym w zakresie w częściowo posortowane.
 
-*comp* obiekt funkcji predykatu zdefiniowanej przez użytkownika, który definiuje kryterium porównania, które muszą być spełnione przez kolejne elementy w kolejności. Predykat dwuelementowy przyjmuje dwa argumenty i zwraca **true** po spełnieniu oraz **false** Jeśli nie jest spełniony.
+*Comp*<br/>
+Obiekt funkcji predykatu zdefiniowanej przez użytkownika, który definiuje kryterium porównania, które muszą być spełnione przez kolejne elementy w kolejności. Predykat dwuelementowy przyjmuje dwa argumenty i zwraca **true** po spełnieniu oraz **false** Jeśli nie jest spełniony.
 
 ### <a name="remarks"></a>Uwagi
 
@@ -4750,7 +4920,7 @@ int main()
 
    // A user-defined (UD) binary predicate can also be used
    partial_sort(v1.begin( ), v1.begin( ) + 8, v1.end( ),
- UDgreater );
+UDgreater );
    cout << "Partially resorted (UDgreater) vector:\n v1 = ( " ;
    for ( Iter1 = v1.begin( ) ; Iter1 != v1.end( ) ; Iter1++ )
       cout << *Iter1 << " ";
@@ -4760,13 +4930,13 @@ int main()
 
 ```Output
 Original vector:
- v1 = ( 0 2 4 6 8 10 1 3 5 7 9 11 )
+v1 = ( 0 2 4 6 8 10 1 3 5 7 9 11 )
 Partially sorted vector:
- v1 = ( 0 1 2 3 4 5 10 8 6 7 9 11 )
+v1 = ( 0 1 2 3 4 5 10 8 6 7 9 11 )
 Partially resorted (greater) vector:
- v1 = ( 11 10 9 8 0 1 2 3 4 5 6 7 )
+v1 = ( 11 10 9 8 0 1 2 3 4 5 6 7 )
 Partially resorted (UDgreater) vector:
- v1 = ( 11 10 9 8 7 6 5 4 0 1 2 3 )
+v1 = ( 11 10 9 8 7 6 5 4 0 1 2 3 )
 ```
 
 ## <a name="partial_sort_copy"></a>  partial_sort_copy —
@@ -4792,15 +4962,20 @@ RandomAccessIterator partial_sort_copy(
 
 ### <a name="parameters"></a>Parametry
 
-*first1* iterator danych wejściowych, odnoszący się do pozycji pierwszego elementu w zakresie źródłowym.
+*first1*<br/>
+Iterator danych wejściowych, odnoszący się do pozycji pierwszego elementu w zakresie źródłowym.
 
-*Nazwisko1* iterator danych wejściowych, odnoszący się do pozycji jeden po elemencie końcowym w zakresie źródłowym.
+*Nazwisko1*<br/>
+Iterator danych wejściowych, odnoszący się do pozycji jeden po elemencie końcowym w zakresie źródłowym.
 
-*first2* iteratora dostępu swobodnego, odnoszący się do pozycji pierwszego elementu w zakresie docelowym posortowany.
+*first2*<br/>
+Iterator dostępu swobodnego, odnoszący się do pozycji pierwszego elementu w zakresie docelowym posortowany.
 
-*Nazwisko2* iteratora dostępu swobodnego, odnoszący się do pozycji jeden po elemencie końcowym w zakresie docelowym posortowany.
+*Nazwisko2*<br/>
+Iterator dostępu swobodnego, odnoszący się do pozycji jeden po elemencie końcowym w zakresie docelowym posortowany.
 
-*Comp* obiekt funkcji predykatu zdefiniowanej przez użytkownika, który definiuje warunek spełniony, jeśli dwa elementy, które są pobierane jako równoważne. Predykat dwuelementowy przyjmuje dwa argumenty i zwraca **true** po spełnieniu oraz **false** Jeśli nie jest spełniony.
+*Comp*<br/>
+Obiekt funkcji predykatu zdefiniowanej przez użytkownika, który definiuje warunek spełniony, jeśli dwa elementy, które są pobierane jako równoważne. Predykat dwuelementowy przyjmuje dwa argumenty i zwraca **true** po spełnieniu oraz **false** Jeśli nie jest spełniony.
 
 ### <a name="return-value"></a>Wartość zwracana
 
@@ -4903,11 +5078,14 @@ BidirectionalIterator partition(
 
 ### <a name="parameters"></a>Parametry
 
-*pierwszy* iterator dwukierunkowy odnoszący się do pozycji pierwszego elementu w zakresie do podzielenia na partycje.
+*pierwszy*<br/>
+Iterator dwukierunkowy odnoszący się do pozycji pierwszego elementu w zakresie w do podzielenia na partycje.
 
-*ostatni* iterator dwukierunkowy odnoszący się do pozycji pierwszej po elemencie końcowym w zakresie do podzielenia na partycje.
+*ostatni*<br/>
+Iterator dwukierunkowy odnoszący się do pozycji pierwszej po elemencie końcowym w zakresie w do podzielenia na partycje.
 
-*comp* obiekt funkcji predykatu zdefiniowanej przez użytkownika, który definiuje warunek spełniony, jeśli element ma być klasyfikowane. Predykat przyjmuje jeden argument i zwraca **true** lub **false**.
+*Comp*<br/>
+Obiekt funkcji predykatu zdefiniowanej przez użytkownika, który definiuje warunek spełniony, jeśli element ma być klasyfikowane. Predykat przyjmuje jeden argument i zwraca **true** lub **false**.
 
 ### <a name="return-value"></a>Wartość zwracana
 
@@ -4972,20 +5150,25 @@ pair<OutputIterator1, OutputIterator2>
     InputIterator last,
     OutputIterator1 dest1,
     OutputIterator2 dest2,
-    Predicate pred); 
+    Predicate pred);
 ```
 
 ### <a name="parameters"></a>Parametry
 
-*pierwszy* iterator danych wejściowych, który wskazuje początek zakresu, aby sprawdzić, czy warunek.
+*pierwszy*<br/>
+Iterator danych wejściowych, który wskazuje początek zakresu, aby sprawdzić, czy warunek.
 
-*ostatni* iterator danych wejściowych, który wskazuje koniec zakresu.
+*ostatni*<br/>
+Iterator danych wejściowych, który wskazuje koniec zakresu.
 
-*dest1* iterator danych wyjściowych umożliwia kopiowanie elementów, które zwracają wartość true dla warunku przetestowany przy użyciu *_Pred*.
+*dest1*<br/>
+Iterator danych wyjściowych umożliwia kopiowanie elementów, które zwracają wartość true dla warunku przetestowany przy użyciu *_Pred*.
 
-*dest2* iterator danych wyjściowych umożliwia kopiowanie elementów, które zwróci wartość false dla warunku przetestowany przy użyciu *_Pred*.
+*dest2*<br/>
+Iterator danych wyjściowych umożliwia kopiowanie elementów, które zwróci wartość false dla warunku przetestowany przy użyciu *_Pred*.
 
-*_Pred* warunek, którego chcesz sprawdzić. To jest zapewniana przez obiekt funkcji predykatu zdefiniowanej przez użytkownika, który definiuje warunek do sprawdzenia. Predykat przyjmuje jeden argument i zwraca **true** lub **false**.
+*_Pred*<br/>
+Warunek do testowania. To jest zapewniana przez obiekt funkcji predykatu zdefiniowanej przez użytkownika, który definiuje warunek do sprawdzenia. Predykat przyjmuje jeden argument i zwraca **true** lub **false**.
 
 ### <a name="remarks"></a>Uwagi
 
@@ -5000,16 +5183,19 @@ template<class ForwardIterator, class Predicate>
 ForwardIterator partition_point(
     ForwardIterator first,
     ForwardIterator last,
-    Predicate comp); 
+    Predicate comp);
 ```
 
 ### <a name="parameters"></a>Parametry
 
-*pierwszy* A `ForwardIterator` oznacza początek zakresu, aby sprawdzić, czy warunek.
+*pierwszy*<br/>
+A `ForwardIterator` oznacza początek zakresu, aby sprawdzić, czy warunek.
 
-*ostatni* A `ForwardIterator` oznacza koniec zakresu.
+*ostatni*<br/>
+A `ForwardIterator` oznacza koniec zakresu.
 
-*comp* warunek, którego chcesz sprawdzić. To jest zapewniana przez obiekt funkcji predykatu zdefiniowanej przez użytkownika, który definiuje warunek muszą być spełnione przez element wyszukane. Predykat przyjmuje jeden argument i zwraca **true** lub **false**.
+*Comp*<br/>
+Warunek do testowania. To jest zapewniana przez obiekt funkcji predykatu zdefiniowanej przez użytkownika, który definiuje warunek muszą być spełnione przez element wyszukane. Predykat przyjmuje jeden argument i zwraca **true** lub **false**.
 
 ### <a name="return-value"></a>Wartość zwracana
 
@@ -5034,11 +5220,14 @@ void pop_heap(RandomAccessIterator first, RandomAccessIterator last, BinaryPredi
 
 ### <a name="parameters"></a>Parametry
 
-*pierwszy* iteratora dostępu swobodnego, odnoszący się do pozycji pierwszego elementu w stosie.
+*pierwszy*<br/>
+Iterator dostępu swobodnego, odnoszący się do pozycji pierwszego elementu w stosie.
 
-*ostatni* iteratora dostępu swobodnego, odnoszący się do pozycji pierwszej po ostatnim elementem w stosie.
+*ostatni*<br/>
+Iterator dostępu swobodnego dotyczy jednej pozycji poza ostatnim elementem w stosie.
 
-*comp* obiekt funkcji predykatu zdefiniowanej przez użytkownika, który definiuje sens, w którym jeden element jest mniejszy niż inny. Predykat dwuelementowy przyjmuje dwa argumenty i zwraca **true** po spełnieniu oraz **false** Jeśli nie jest spełniony.
+*Comp*<br/>
+Obiekt funkcji predykatu zdefiniowanej przez użytkownika, który definiuje sens, w którym jeden element jest mniejszy niż inny. Predykat dwuelementowy przyjmuje dwa argumenty i zwraca **true** po spełnieniu oraz **false** Jeśli nie jest spełniony.
 
 ### <a name="remarks"></a>Uwagi
 
@@ -5140,11 +5329,14 @@ bool prev_permutation(
 
 ### <a name="parameters"></a>Parametry
 
-*pierwszy* iterator dwukierunkowy wskazujący pozycji pierwszego elementu w zakresie do cieniowania można.
+*pierwszy*<br/>
+Iterator dwukierunkowy wskazujący pozycji pierwszego elementu w zakresie w do cieniowania można.
 
-*ostatni* iterator dwukierunkowy wskazuje do jednej pozycji po elemencie końcowym w zakresie do cieniowania można.
+*ostatni*<br/>
+Iterator dwukierunkowy wskazuje do jednej pozycji po elemencie końcowym w zakresie w do cieniowania można.
 
-*comp* obiekt funkcji predykatu zdefiniowanej przez użytkownika, który definiuje kryterium porównania, które muszą być spełnione przez kolejne elementy w kolejności. Predykat dwuelementowy przyjmuje dwa argumenty i zwraca **true** po spełnieniu oraz **false** Jeśli nie jest spełniony.
+*Comp*<br/>
+Obiekt funkcji predykatu zdefiniowanej przez użytkownika, który definiuje kryterium porównania, które muszą być spełnione przez kolejne elementy w kolejności. Predykat dwuelementowy przyjmuje dwa argumenty i zwraca **true** po spełnieniu oraz **false** Jeśli nie jest spełniony.
 
 ### <a name="return-value"></a>Wartość zwracana
 
@@ -5272,24 +5464,24 @@ int main() {
 ```Output
 The original deque of CInts is deq1 = ( CInt( 1 ), CInt( 5 ), CInt( 10 ) ).
 The lexicographically previous permutation doesn't exist
- and the lexicographically smallest permutation
- has replaced the original ordering of the sequence in deq1.
+and the lexicographically smallest permutation
+has replaced the original ordering of the sequence in deq1.
 After one application of prev_permutation,
- deq1 = ( CInt( 10 ), CInt( 5 ), CInt( 1 ) ).
+deq1 = ( CInt( 10 ), CInt( 5 ), CInt( 1 ) ).
 
 Vector v1 is ( -3 -2 -1 0 1 2 3 ).
 After the first prev_permutation, vector v1 is:
- v1 = ( -3 -2 0 3 2 1 -1 ).
+v1 = ( -3 -2 0 3 2 1 -1 ).
 After another prev_permutation of vector v1,
- v1 =   ( -3 -2 0 3 -1 2 1 ).
+v1 =   ( -3 -2 0 3 -1 2 1 ).
 After another prev_permutation of vector v1,
- v1 =   ( -3 -2 0 3 -1 1 2 ).
+v1 =   ( -3 -2 0 3 -1 1 2 ).
 After another prev_permutation of vector v1,
- v1 =   ( -3 -2 0 2 3 1 -1 ).
+v1 =   ( -3 -2 0 2 3 1 -1 ).
 After another prev_permutation of vector v1,
- v1 =   ( -3 -2 0 2 -1 3 1 ).
+v1 =   ( -3 -2 0 2 -1 3 1 ).
 After another prev_permutation of vector v1,
- v1 =   ( -3 -2 0 2 -1 1 3 ).
+v1 =   ( -3 -2 0 2 -1 1 3 ).
 ```
 
 ## <a name="push_heap"></a>  push_heap —
@@ -5307,11 +5499,14 @@ void push_heap( RandomAccessIterator first, RandomAccessIterator last, BinaryPre
 
 ### <a name="parameters"></a>Parametry
 
-*pierwszy* iteratora dostępu swobodnego, odnoszący się do pozycji pierwszego elementu w stosie.
+*pierwszy*<br/>
+Iterator dostępu swobodnego, odnoszący się do pozycji pierwszego elementu w stosie.
 
-*ostatni* iteratora dostępu swobodnego, odnoszący się do pozycji pierwszej po elemencie końcowym w zakresie, który ma zostać przekonwertowany na stertę.
+*ostatni*<br/>
+Iterator dostępu swobodnego, odnoszący się do pozycji pierwszej po elemencie końcowym w zakresie, który ma zostać przekonwertowany na stertę.
 
-*comp* obiekt funkcji predykatu zdefiniowanej przez użytkownika, który definiuje sens, w którym jeden element jest mniejszy niż inny. Predykat dwuelementowy przyjmuje dwa argumenty i zwraca **true** po spełnieniu oraz **false** Jeśli nie jest spełniony.
+*Comp*<br/>
+Obiekt funkcji predykatu zdefiniowanej przez użytkownika, który definiuje sens, w którym jeden element jest mniejszy niż inny. Predykat dwuelementowy przyjmuje dwa argumenty i zwraca **true** po spełnieniu oraz **false** Jeśli nie jest spełniony.
 
 ### <a name="remarks"></a>Uwagi
 
@@ -5408,17 +5603,20 @@ Eliminuje określoną wartość z danego zakresu bez zakłócania kolejności po
 
 ```cpp
 template<class ForwardIterator, class Type>
- ForwardIterator remove(ForwardIterator first, ForwardIterator last, const Type& val);
+ForwardIterator remove(ForwardIterator first, ForwardIterator last, const Type& val);
 
 ```
 
 ### <a name="parameters"></a>Parametry
 
-*pierwszy* iterator do przodu, odnoszący się do pozycji pierwszego elementu w zakresie, z której elementy są usuwane.
+*pierwszy*<br/>
+Iterator do przodu, odnoszący się do pozycji pierwszego elementu w zakresie, z której elementy są usuwane.
 
-*ostatni* iterator postępujący odnosi się do pozycji pierwszej po elemencie końcowym w zakresie, z której elementy są usuwane.
+*ostatni*<br/>
+Iterator postępujący odnosi się do pozycji pierwszej po elemencie końcowym w zakresie, z której elementy są usuwane.
 
-*Val* wartość, która ma zostać usunięte z zakresu.
+*Val*<br/>
+Wartość, która ma zostać usunięte z zakresu.
 
 ### <a name="return-value"></a>Wartość zwracana
 
@@ -5488,19 +5686,23 @@ Kopiuje elementy z zakresu źródłowego do zakresu docelowego, z tym wyjątkiem
 
 ```cpp
 template<class InputIterator, class OutputIterator, class Type>
- OutputIterator remove_copy(InputIterator first, InputIterator last, OutputIterator result, const Type& val);
+OutputIterator remove_copy(InputIterator first, InputIterator last, OutputIterator result, const Type& val);
 
 ```
 
 ### <a name="parameters"></a>Parametry
 
-*pierwszy* iterator danych wejściowych, odnoszący się do pozycji pierwszego elementu w zakresie, z której elementy są usuwane.
+*pierwszy*<br/>
+Iterator danych wejściowych, odnoszący się do pozycji pierwszego elementu w zakresie, z której elementy są usuwane.
 
-*ostatni* iterator danych wejściowych, odnoszący się do pozycji pierwszej po elemencie końcowym w zakresie, z której elementy są usuwane.
+*ostatni*<br/>
+Iterator danych wejściowych, odnoszący się do pozycji pierwszej po elemencie końcowym w zakresie, z której elementy są usuwane.
 
-*wynik* iterator danych wyjściowych odnoszący się do pozycji pierwszego elementu w zakresie docelowym, do której elementy są usuwane.
+*wynik*<br/>
+Iterator danych wyjściowych odnoszący się do pozycji pierwszego elementu w zakresie docelowym, do której elementy są usuwane.
 
-*Val* wartość, która ma zostać usunięte z zakresu.
+*Val*<br/>
+Wartość, która ma zostać usunięte z zakresu.
 
 ### <a name="return-value"></a>Wartość zwracana
 
@@ -5573,13 +5775,17 @@ OutputIterator remove_copy_if(InputIterator first, InputIterator Last, OutputIte
 
 ### <a name="parameters"></a>Parametry
 
-*pierwszy* iterator danych wejściowych, odnoszący się do pozycji pierwszego elementu w zakresie, z której elementy są usuwane.
+*pierwszy*<br/>
+Iterator danych wejściowych, odnoszący się do pozycji pierwszego elementu w zakresie, z której elementy są usuwane.
 
-*ostatni* iterator danych wejściowych, odnoszący się do pozycji pierwszej po elemencie końcowym w zakresie, z której elementy są usuwane.
+*ostatni*<br/>
+Iterator danych wejściowych, odnoszący się do pozycji pierwszej po elemencie końcowym w zakresie, z której elementy są usuwane.
 
-*wynik* iterator danych wyjściowych odnoszący się do pozycji pierwszego elementu w zakresie docelowym, do której elementy są usuwane.
+*wynik*<br/>
+Iterator danych wyjściowych odnoszący się do pozycji pierwszego elementu w zakresie docelowym, do której elementy są usuwane.
 
-*_Pred* Predykat jednoelementowy, które muszą być spełnione jest wartość elementu ma zostać zastąpiony.
+*_Pred*<br/>
+Predykat jednoelementowy, które muszą być spełnione jest wartość elementu ma zostać zastąpiony.
 
 ### <a name="return-value"></a>Wartość zwracana
 
@@ -5664,11 +5870,14 @@ ForwardIterator remove_if(
 
 ### <a name="parameters"></a>Parametry
 
-*pierwszy* iterator do przodu, wskazując pozycję pierwszego elementu w zakresie, z której elementy są usuwane.
+*pierwszy*<br/>
+Iterator do przodu, wskazując pozycję pierwszego elementu w zakresie, z której elementy są usuwane.
 
-*ostatni* iterator do przodu, wskazując jednej pozycji po elemencie końcowym w zakresie, z której elementy są usuwane.
+*ostatni*<br/>
+Iterator do przodu, wskazując jednej pozycji po elemencie końcowym w zakresie, z której elementy są usuwane.
 
-*_Pred* Predykat jednoelementowy, które muszą być spełnione jest wartość elementu ma zostać zastąpiony.
+*_Pred*<br/>
+Predykat jednoelementowy, które muszą być spełnione jest wartość elementu ma zostać zastąpiony.
 
 ### <a name="return-value"></a>Wartość zwracana
 
@@ -5751,13 +5960,17 @@ void replace(
 
 ### <a name="parameters"></a>Parametry
 
-*pierwszy* iterator do przodu, wskazując pozycję pierwszego elementu w zakresie, z której elementy są zastępowane.
+*pierwszy*<br/>
+Iterator do przodu, wskazując pozycję pierwszego elementu w zakresie, z której elementy są zastępowane.
 
-*ostatni* iterator do przodu, wskazując jednej pozycji po elemencie końcowym w zakresie, z której elementy są zastępowane.
+*ostatni*<br/>
+Iterator do przodu, wskazując jednej pozycji po elemencie końcowym w zakresie, z której elementy są zastępowane.
 
-*_OldVal* starej wartości elementów jest zastępowany.
+*_OldVal*<br/>
+Stara wartość zastępowany elementów.
 
-*_NewVal* nowej wartości, które są przypisywane do elementów przy użyciu starej wartości.
+*_NewVal*<br/>
+Nowa wartość przypisywane do elementów przy użyciu starej wartości.
 
 ### <a name="remarks"></a>Uwagi
 
@@ -5823,15 +6036,20 @@ OutputIterator replace_copy(
 
 ### <a name="parameters"></a>Parametry
 
-*pierwszy* iterator danych wejściowych, wskazując pozycję pierwszego elementu w zakresie, z której elementy są zastępowane.
+*pierwszy*<br/>
+Iterator danych wejściowych, wskazując pozycję pierwszego elementu w zakresie, z której elementy są zastępowane.
 
-*ostatni* iterator danych wejściowych, wskazując do jednej pozycji po elemencie końcowym w zakresie, z której elementy są zastępowane.
+*ostatni*<br/>
+Iterator danych wejściowych, wskazując do jednej pozycji po elemencie końcowym w zakresie, z której elementy są zastępowane.
 
-*wynik* wskazuje na pierwszy element w zakresie docelowym, do którego został skopiowany zmienionego sekwencję elementów iteratora danych wyjściowych.
+*wynik*<br/>
+Iterator danych wyjściowych, wskazuje na pierwszy element w zakresie docelowym, do którego został skopiowany zmienionego sekwencję elementów.
 
-*_OldVal* starej wartości elementów jest zastępowany.
+*_OldVal*<br/>
+Stara wartość zastępowany elementów.
 
-*_NewVal* nowej wartości, które są przypisywane do elementów przy użyciu starej wartości.
+*_NewVal*<br/>
+Nowa wartość przypisywane do elementów przy użyciu starej wartości.
 
 ### <a name="return-value"></a>Wartość zwracana
 
@@ -5921,15 +6139,20 @@ OutputIterator replace_copy_if(
 
 ### <a name="parameters"></a>Parametry
 
-*pierwszy* iterator danych wejściowych, wskazując pozycję pierwszego elementu w zakresie, z której elementy są zastępowane.
+*pierwszy*<br/>
+Iterator danych wejściowych, wskazując pozycję pierwszego elementu w zakresie, z której elementy są zastępowane.
 
-*ostatni* iterator danych wejściowych, wskazując do jednej pozycji po elemencie końcowym w zakresie, z której elementy są zastępowane.
+*ostatni*<br/>
+Iterator danych wejściowych, wskazując do jednej pozycji po elemencie końcowym w zakresie, z której elementy są zastępowane.
 
-*wynik* iterator danych wyjściowych, wskazując pozycję pierwszego elementu w zakresie docelowym, do której są kopiowane elementy.
+*wynik*<br/>
+Iterator danych wyjściowych, wskazując pozycję pierwszego elementu w zakresie docelowym, do której są kopiowane elementy.
 
-*_Pred* Predykat jednoelementowy, które muszą być spełnione jest wartość elementu ma zostać zastąpiony.
+*_Pred*<br/>
+Predykat jednoelementowy, które muszą być spełnione jest wartość elementu ma zostać zastąpiony.
 
-*Val* nowej wartości, które są przypisywane do elementów, których stara wartość spełnia predykat.
+*Val*<br/>
+Nowa wartość przypisywane do elementów, których stara wartość spełnia predykat.
 
 ### <a name="return-value"></a>Wartość zwracana
 
@@ -6025,13 +6248,17 @@ void replace_if(
 
 ### <a name="parameters"></a>Parametry
 
-*pierwszy* iterator do przodu, wskazując pozycję pierwszego elementu w zakresie, z której elementy są zastępowane.
+*pierwszy*<br/>
+Iterator do przodu, wskazując pozycję pierwszego elementu w zakresie, z której elementy są zastępowane.
 
-*ostatni* iteratora wskazującego do jednej pozycji po elemencie końcowym w zakresie, z której elementy są zastępowane.
+*ostatni*<br/>
+Iterator wskazuje do jednej pozycji po elemencie końcowym w zakresie, z której elementy są zastępowane.
 
-*_Pred* Predykat jednoelementowy, które muszą być spełnione jest wartość elementu ma zostać zastąpiony.
+*_Pred*<br/>
+Predykat jednoelementowy, które muszą być spełnione jest wartość elementu ma zostać zastąpiony.
 
-*Val* nowej wartości, które są przypisywane do elementów, których stara wartość spełnia predykat.
+*Val*<br/>
+Nowa wartość przypisywane do elementów, których stara wartość spełnia predykat.
 
 ### <a name="remarks"></a>Uwagi
 
@@ -6101,9 +6328,11 @@ void reverse(BidirectionalIterator first, BidirectionalIterator last);
 
 ### <a name="parameters"></a>Parametry
 
-*pierwszy* iteratora dwukierunkowego, wskazując pozycję pierwszego elementu w zakresie, w ramach której elementy są trwa cieniowania.
+*pierwszy*<br/>
+Iterator dwukierunkowy, wskazując pozycję pierwszego elementu w zakresie, w ramach której elementy są trwa cieniowania.
 
-*ostatni* iteratora dwukierunkowego, wskazując do jednej pozycji po elemencie końcowym w zakresie, w ramach której elementy są trwa cieniowania.
+*ostatni*<br/>
+Iterator dwukierunkowy, wskazując do jednej pozycji po elemencie końcowym w zakresie, w ramach której elementy są trwa cieniowania.
 
 ### <a name="remarks"></a>Uwagi
 
@@ -6146,9 +6375,9 @@ int main() {
 
 ```Output
 The original vector v1 is:
- ( 0 1 2 3 4 5 6 7 8 9 ).
+( 0 1 2 3 4 5 6 7 8 9 ).
 The modified vector v1 with values reversed is:
- ( 9 8 7 6 5 4 3 2 1 0 ).
+( 9 8 7 6 5 4 3 2 1 0 ).
 ```
 
 ## <a name="reverse_copy"></a>  reverse_copy —
@@ -6166,11 +6395,14 @@ OutputIterator reverse_copy(
 
 ### <a name="parameters"></a>Parametry
 
-*pierwszy* iteratora dwukierunkowego, wskazując pozycję pierwszego elementu w zakresie źródłowym, w której elementy są trwa cieniowania.
+*pierwszy*<br/>
+Iterator dwukierunkowy, wskazując pozycję pierwszego elementu w zakresie źródłowym, w której elementy są trwa cieniowania.
 
-*ostatni* iteratora dwukierunkowego, wskazując do jednej pozycji po elemencie końcowym w zakresie źródłowym, w której elementy są trwa cieniowania.
+*ostatni*<br/>
+Iterator dwukierunkowy, wskazując do jednej pozycji po elemencie końcowym w zakresie źródłowym, w której elementy są trwa cieniowania.
 
-*wynik* iterator danych wyjściowych, wskazując pozycję pierwszego elementu w zakresie docelowym, do której są kopiowane elementy.
+*wynik*<br/>
+Iterator danych wyjściowych, wskazując pozycję pierwszego elementu w zakresie docelowym, do której są kopiowane elementy.
 
 ### <a name="return-value"></a>Wartość zwracana
 
@@ -6226,7 +6458,7 @@ Wymienia elementy znajdujące się w dwóch sąsiednich zakresach.
 
 ```cpp
 template<class ForwardIterator>
- void rotate(
+void rotate(
     ForwardIterator first,
     ForwardIterator middle,
     ForwardIterator last);
@@ -6235,11 +6467,14 @@ template<class ForwardIterator>
 
 ### <a name="parameters"></a>Parametry
 
-*pierwszy* iterator do przodu, odnoszący się do pozycji pierwszego elementu w zakresie ma być obracany.
+*pierwszy*<br/>
+Iterator postępujący odnosi się pozycja pierwszego elementu w zakresie wszystkie.
 
-*środkowy* iterator do przodu, Definiowanie granic w zakresie, odnoszący się do pozycji pierwszego elementu w drugiej części zakresu, w której elementy są wymieniane z postanowieniami w pierwszej części zakresu.
+*drugie*<br/>
+Iterator do przodu, Definiowanie granic w zakresie, odnoszący się do pozycji pierwszego elementu w drugiej części zakresu, w której elementy są wymieniane z postanowieniami w pierwszej części zakresu.
 
-*Ostatni* iterator do przodu, odnoszący się do pozycji jeden po elemencie końcowym w zakresie wszystkie.
+*ostatni*<br/>
+Iterator postępujący odnosi się pozycja jeden po elemencie końcowym w zakresie wszystkie.
 
 ### <a name="remarks"></a>Uwagi
 
@@ -6309,17 +6544,17 @@ Vector v1 is ( -3 -2 -1 0 1 2 3 4 5 ).
 After rotating, vector v1 is ( 0 1 2 3 4 5 -3 -2 -1 ).
 The original deque d1 is ( 0 1 2 3 4 5 ).
 After the rotation of a single deque element to the back,
- d1 is   ( 1 2 3 4 5 0 ).
+d1 is   ( 1 2 3 4 5 0 ).
 After the rotation of a single deque element to the back,
- d1 is   ( 2 3 4 5 0 1 ).
+d1 is   ( 2 3 4 5 0 1 ).
 After the rotation of a single deque element to the back,
- d1 is   ( 3 4 5 0 1 2 ).
+d1 is   ( 3 4 5 0 1 2 ).
 After the rotation of a single deque element to the back,
- d1 is   ( 4 5 0 1 2 3 ).
+d1 is   ( 4 5 0 1 2 3 ).
 After the rotation of a single deque element to the back,
- d1 is   ( 5 0 1 2 3 4 ).
+d1 is   ( 5 0 1 2 3 4 ).
 After the rotation of a single deque element to the back,
- d1 is   ( 0 1 2 3 4 5 ).
+d1 is   ( 0 1 2 3 4 5 ).
 ```
 
 ## <a name="rotate_copy"></a>  rotate_copy —
@@ -6338,13 +6573,16 @@ OutputIterator rotate_copy(
 
 ### <a name="parameters"></a>Parametry
 
-*pierwszy* iterator do przodu, odnoszący się do pozycji pierwszego elementu w zakresie ma być obracany.
+*pierwszy*<br/>
+Iterator postępujący odnosi się pozycja pierwszego elementu w zakresie wszystkie.
 
-*środkowy* iterator do przodu, Definiowanie granic w zakresie, odnoszący się do pozycji pierwszego elementu w drugiej części zakresu, w której elementy są wymieniane z postanowieniami w pierwszej części zakresu.
+*drugie*<br/>
+Iterator do przodu, Definiowanie granic w zakresie, odnoszący się do pozycji pierwszego elementu w drugiej części zakresu, w której elementy są wymieniane z postanowieniami w pierwszej części zakresu.
 
 _ *Ostatniego* iterator do przodu, odnoszący się do pozycji jeden po elemencie końcowym w zakresie wszystkie.
 
-*wynik* iterator danych wyjściowych odnoszący się do pozycji pierwszego elementu w zakresie docelowym.
+*wynik*<br/>
+Iterator danych wyjściowych odnoszący się do pozycji pierwszego elementu w zakresie docelowym.
 
 ### <a name="return-value"></a>Wartość zwracana
 
@@ -6439,15 +6677,20 @@ ForwardIterator1 search(
 
 ### <a name="parameters"></a>Parametry
 
-*First1* iterator do przodu, odnoszący się do pozycji pierwszego elementu w zakresie do wyszukania.
+*first1*<br/>
+Iterator postępujący odnosi się pozycja pierwszego elementu w zakresie do wyszukania.
 
-*Nazwisko1* iterator do przodu, odnoszący się do pozycji jeden po elemencie końcowym w zakresie do wyszukania.
+*Nazwisko1*<br/>
+Iterator postępujący odnosi się pozycja jeden po elemencie końcowym w zakresie do wyszukania.
 
-*first2* iterator do przodu, odnoszący się do pozycji pierwszego elementu w zakresie do dopasowania.
+*first2*<br/>
+Iterator postępujący odnosi się pozycja pierwszego elementu w zakresie do dopasowania.
 
-*Nazwisko2* iterator do przodu, odnoszący się do pozycji jeden po elemencie końcowym w zakresie do dopasowania.
+*Nazwisko2*<br/>
+Iterator postępujący odnosi się pozycja jeden po elemencie końcowym w zakresie do dopasowania.
 
-*Comp* obiekt funkcji predykatu zdefiniowanej przez użytkownika, który definiuje warunek spełniony, jeśli dwa elementy, które są pobierane jako równoważne. Predykat dwuelementowy przyjmuje dwa argumenty i zwraca **true** po spełnieniu oraz **false** Jeśli nie jest spełniony.
+*Comp*<br/>
+Obiekt funkcji predykatu zdefiniowanej przez użytkownika, który definiuje warunek spełniony, jeśli dwa elementy, które są pobierane jako równoważne. Predykat dwuelementowy przyjmuje dwa argumenty i zwraca **true** po spełnieniu oraz **false** Jeśli nie jest spełniony.
 
 ### <a name="return-value"></a>Wartość zwracana
 
@@ -6553,10 +6796,10 @@ Vector v1 = ( 0 5 10 15 20 25 0 5 10 15 20 25 )
 List L1 = ( 20 25 )
 Vector v2 = ( 20 30 40 )
 There is at least one match of L1 in v1
- and the first one begins at position 4.
+and the first one begins at position 4.
 There is a sequence of elements in v1 that are equivalent
- to those in v2 under the binary predicate twice
- and the first one begins at position 2.
+to those in v2 under the binary predicate twice
+and the first one begins at position 2.
 ```
 
 ## <a name="search_n"></a>  search_n —
@@ -6583,15 +6826,20 @@ ForwardIterator1 search_n(
 
 ### <a name="parameters"></a>Parametry
 
-*First1* iterator do przodu, odnoszący się do pozycji pierwszego elementu w zakresie do wyszukania.
+*first1*<br/>
+Iterator postępujący odnosi się pozycja pierwszego elementu w zakresie do wyszukania.
 
-*Nazwisko1* iterator do przodu, odnoszący się do pozycji jeden po elemencie końcowym w zakresie do wyszukania.
+*Nazwisko1*<br/>
+Iterator postępujący odnosi się pozycja jeden po elemencie końcowym w zakresie do wyszukania.
 
-*Liczba* rozmiar podsekwencję wyszukane.
+*Liczba*<br/>
+Rozmiar podsekwencję wyszukane.
 
-*Val* wartość elementów w sekwencji wyszukane.
+*Val*<br/>
+Wartość elementów w sekwencji wyszukane.
 
-*Comp* obiekt funkcji predykatu zdefiniowanej przez użytkownika, który definiuje warunek spełniony, jeśli dwa elementy, które są pobierane jako równoważne. Predykat dwuelementowy przyjmuje dwa argumenty i zwraca **true** po spełnieniu oraz **false** Jeśli nie jest spełniony.
+*Comp*<br/>
+Obiekt funkcji predykatu zdefiniowanej przez użytkownika, który definiuje warunek spełniony, jeśli dwa elementy, które są pobierane jako równoważne. Predykat dwuelementowy przyjmuje dwa argumenty i zwraca **true** po spełnieniu oraz **false** Jeśli nie jest spełniony.
 
 ### <a name="return-value"></a>Wartość zwracana
 
@@ -6683,9 +6931,9 @@ int main()
 ```Output
 Vector v1 = ( 0 5 10 15 20 25 5 5 5 0 5 10 15 20 25 10 10 10 )
 There is at least one match of a sequence ( 5 5 5 )
- in v1 and the first one begins at position 6.
+in v1 and the first one begins at position 6.
 There is a match of a sequence ( 5 5 5 ) under the equivalence
- predicate one_half in v1 and the first one begins at position 15.
+predicate one_half in v1 and the first one begins at position 15.
 ```
 
 ## <a name="set_difference"></a>  set_difference —
@@ -6713,17 +6961,23 @@ OutputIterator set_difference(
 
 ### <a name="parameters"></a>Parametry
 
-*first1* iterator danych wejściowych, odnoszący się do pozycji pierwszego elementu w pierwszym dwóch posortowanych zakresów źródłowych Zjednoczone i posortowane w jednym zakresem reprezentujący różnica dwóch zakresów.
+*first1*<br/>
+Iterator danych wejściowych, odnoszący się do pozycji pierwszego elementu w pierwszym dwóch posortowanych zakresów źródłowych Zjednoczone i posortowane w jednym zakresem reprezentujący różnica dwóch zakresów.
 
-*Nazwisko1* iterator danych wejściowych odnoszący się do pozycji pierwszej po ostatnim elemencie w pierwszym z dwóch posortowanych zakresów źródłowych Zjednoczone i posortowane w jednym zakresem reprezentujący różnica dwóch zakresów.
+*Nazwisko1*<br/>
+Iterator danych wejściowych odnoszący się do pozycji pierwszej po ostatnim elemencie w pierwszym z dwóch posortowanych zakresów źródłowych Zjednoczone i posortowane w jednym zakresem reprezentujący różnica dwóch zakresów.
 
-*first2* iterator danych wejściowych odnoszący się pozycja pierwszego elementu w ciągu sekundy z dwóch następujących po sobie posortowanych zakresów źródłowych Zjednoczone i posortowane w jednym zakresem reprezentujący różnica dwóch zakresów.
+*first2*<br/>
+Iterator danych wejściowych, odnoszący się do pozycji pierwszego elementu w ciągu sekundy z dwóch następujących po sobie posortowanych zakresów źródłowych Zjednoczone i posortowane w jednym zakresem reprezentujący różnica dwóch zakresów.
 
-*Nazwisko2* iterator danych wejściowych odnoszący jednej pozycji poza ostatnim elemencie w ciągu sekundy z dwóch następujących po sobie posortowanych zakresów źródłowych Zjednoczone i posortowane w jednym zakresem reprezentujący różnica dwóch zakresów.
+*Nazwisko2*<br/>
+Iterator danych wejściowych odnoszący jednej pozycji w ciągu ostatnich ostatnim elemencie w ciągu sekundy z dwóch następujących po sobie posortowanych zakresów źródłowych Zjednoczone i posortowane w jednym zakresem reprezentujący różnica dwóch zakresów.
 
-*wynik* iterator danych wyjściowych odnoszący się do pozycji pierwszego elementu w zakresie docelowym, w którym źródło dwa zakresy, które mają być scalone w pojedynczy posortowany zakres reprezentujący różnica dwóch zakresów.
+*wynik*<br/>
+Iterator danych wyjściowych odnoszący się do pozycji pierwszego elementu w zakresie docelowym, w którym mają być scalone w pojedynczy posortowany zakres reprezentujący różnica dwóch zakresów źródłowe dwa zakresy.
 
-*comp* obiekt zdefiniowany przez użytkownika funkcji predykatu, który definiuje sens, w którym jeden element jest większy niż inny. Predykat dwuelementowy przyjmuje dwa argumenty i powinna zwrócić **true** kiedy pierwszy element jest mniejszy od drugiego elementu i **false** inaczej.
+*Comp*<br/>
+Obiekt funkcji predykatu zdefiniowanej przez użytkownika, który definiuje sens, w którym jeden element jest większy niż inny. Predykat dwuelementowy przyjmuje dwa argumenty i powinna zwrócić **true** kiedy pierwszy element jest mniejszy od drugiego elementu i **false** inaczej.
 
 ### <a name="return-value"></a>Wartość zwracana
 
@@ -6887,17 +7141,22 @@ OutputIterator set_intersection(
 
 ### <a name="parameters"></a>Parametry
 
-*first1* iterator danych wejściowych, odnoszący się do pozycji pierwszego elementu w pierwszym dwóch posortowanych zakresów źródłowych Zjednoczone i posortowane w jeden zakres, reprezentujących część wspólną dwóch zakresów.
+*first1*<br/>
+Iterator danych wejściowych, odnoszący się do pozycji pierwszego elementu w pierwszym dwóch posortowanych zakresów źródłowych Zjednoczone i posortowane w jeden zakres, reprezentujących część wspólną dwóch zakresów.
 
-*Nazwisko1* iterator danych wejściowych odnoszący się do pozycji pierwszej po ostatnim elemencie w pierwszym z dwóch posortowanych zakresów źródłowych Zjednoczone i posortowane w jeden zakres, reprezentujących część wspólną dwóch zakresów.
+*Nazwisko1*<br/>
+Iterator danych wejściowych odnoszący się do pozycji pierwszej po ostatnim elemencie w pierwszym z dwóch posortowanych zakresów źródłowych Zjednoczone i posortowane w jeden zakres, reprezentujących część wspólną dwóch zakresów.
 
-*first2* iterator danych wejściowych odnoszący się pozycja pierwszego elementu w ciągu sekundy z dwóch następujących po sobie posortowanych zakresów źródłowych Zjednoczone i posortowane w jeden zakres, reprezentujących część wspólną dwóch zakresów.
+*first2*<br/>
+Iterator danych wejściowych, odnoszący się do pozycji pierwszego elementu w ciągu sekundy z dwóch następujących po sobie posortowanych zakresów źródłowych Zjednoczone i posortowane w jeden zakres, reprezentujących część wspólną dwóch zakresów.
 
-*Nazwisko2* iterator danych wejściowych odnoszący jednej pozycji poza ostatnim elemencie w ciągu sekundy z dwóch następujących po sobie posortowanych zakresów źródłowych Zjednoczone i posortowane w jeden zakres, reprezentujących część wspólną dwóch zakresów.
+*Nazwisko2*<br/>
+Iterator danych wejściowych odnoszący jednej pozycji w ciągu ostatnich ostatnim elemencie w ciągu sekundy z dwóch następujących po sobie posortowanych zakresów źródłowych Zjednoczone i posortowane w jeden zakres, reprezentujących część wspólną dwóch zakresów.
 
 **_** *Wynik* iterator danych wyjściowych odnoszący się do pozycji pierwszego elementu w zakresie docelowym, w którym źródło dwa zakresy, które mają być scalone w pojedynczy posortowany zakres, reprezentujących część wspólną dwóch źródła zakresy.
 
-*comp* obiekt zdefiniowany przez użytkownika funkcji predykatu, który definiuje sens, w którym jeden element jest większy niż inny. Predykat dwuelementowy przyjmuje dwa argumenty i powinna zwrócić **true** kiedy pierwszy element jest mniejszy od drugiego elementu i **false** inaczej.
+*Comp*<br/>
+Obiekt funkcji predykatu zdefiniowanej przez użytkownika, który definiuje sens, w którym jeden element jest większy niż inny. Predykat dwuelementowy przyjmuje dwa argumenty i powinna zwrócić **true** kiedy pierwszy element jest mniejszy od drugiego elementu i **false** inaczej.
 
 ### <a name="return-value"></a>Wartość zwracana
 
@@ -7036,7 +7295,7 @@ int main() {
 
 ```cpp
 template<class InputIterator1, class InputIterator2, class OutputIterator>
- OutputIterator set_symmetric_difference(
+OutputIterator set_symmetric_difference(
     InputIterator1 first1,
     InputIterator1 last1,
     InputIterator2 first2,
@@ -7056,17 +7315,22 @@ OutputIterator set_symmetric_difference(
 
 ### <a name="parameters"></a>Parametry
 
-*first1* iterator danych wejściowych, odnoszący się do pozycji pierwszego elementu w pierwszym dwóch posortowanych zakresów źródłowych Zjednoczone i posortowane w jednym zakresem reprezentujący symetrycznego różnica dwóch zakresów.
+*first1*<br/>
+Iterator danych wejściowych, odnoszący się do pozycji pierwszego elementu w pierwszym dwóch posortowanych zakresów źródłowych Zjednoczone i posortowane w jednym zakresem reprezentujący symetrycznego różnica dwóch zakresów.
 
-*Nazwisko1* iterator danych wejściowych odnoszący się do pozycji pierwszej po ostatnim elemencie w pierwszym z dwóch posortowanych zakresów źródłowych Zjednoczone i posortowane w jednym zakresem reprezentujący symetrycznego różnica dwóch zakresów.
+*Nazwisko1*<br/>
+Iterator danych wejściowych odnoszący się do pozycji pierwszej po ostatnim elemencie w pierwszym z dwóch posortowanych zakresów źródłowych Zjednoczone i posortowane w jednym zakresem reprezentujący symetrycznego różnica dwóch zakresów.
 
-*first2* iterator danych wejściowych odnoszący się pozycja pierwszego elementu w ciągu sekundy z dwóch następujących po sobie posortowanych zakresów źródłowych Zjednoczone i posortowane w jednym zakresem reprezentujący symetrycznego różnica dwóch zakresów.
+*first2*<br/>
+Iterator danych wejściowych, odnoszący się do pozycji pierwszego elementu w ciągu sekundy z dwóch następujących po sobie posortowanych zakresów źródłowych Zjednoczone i posortowane w jednym zakresem reprezentujący symetrycznego różnica dwóch zakresów.
 
-*Nazwisko2* iterator danych wejściowych odnoszący jednej pozycji poza ostatnim elemencie w ciągu sekundy z dwóch następujących po sobie posortowanych zakresów źródłowych Zjednoczone i posortowane w jednym zakresem reprezentujący symetrycznego różnica dwóch zakresów.
+*Nazwisko2*<br/>
+Iterator danych wejściowych odnoszący jednej pozycji w ciągu ostatnich ostatnim elemencie w ciągu sekundy z dwóch następujących po sobie posortowanych zakresów źródłowych Zjednoczone i posortowane w jednym zakresem reprezentujący symetrycznego różnica dwóch zakresów.
 
 **_** *Wynik* iterator danych wyjściowych odnoszący się do pozycji pierwszego elementu w zakresie docelowym, w którym źródło dwa zakresy, które mają być scalone w pojedynczy posortowany zakres reprezentujący symetrycznego różnica dwóch źródłowe zakresy.
 
-*comp* obiekt zdefiniowany przez użytkownika funkcji predykatu, który definiuje sens, w którym jeden element jest większy niż inny. Predykat dwuelementowy przyjmuje dwa argumenty i powinna zwrócić **true** kiedy pierwszy element jest mniejszy od drugiego elementu i **false** inaczej.
+*Comp*<br/>
+Obiekt funkcji predykatu zdefiniowanej przez użytkownika, który definiuje sens, w którym jeden element jest większy niż inny. Predykat dwuelementowy przyjmuje dwa argumenty i powinna zwrócić **true** kiedy pierwszy element jest mniejszy od drugiego elementu i **false** inaczej.
 
 ### <a name="return-value"></a>Wartość zwracana
 
@@ -7230,17 +7494,22 @@ OutputIterator set_union(
 
 ### <a name="parameters"></a>Parametry
 
-*first1* iterator danych wejściowych, odnoszący się do pozycji pierwszego elementu w pierwszym dwóch posortowanych zakresów źródłowych Zjednoczone i posortowane w jednym zakresem reprezentuje sumę dwóch zakresów.
+*first1*<br/>
+Iterator danych wejściowych, odnoszący się do pozycji pierwszego elementu w pierwszym dwóch posortowanych zakresów źródłowych Zjednoczone i posortowane w jednym zakresem reprezentuje sumę dwóch zakresów.
 
-*Nazwisko1* iterator danych wejściowych odnoszący się do pozycji pierwszej po ostatnim elemencie w pierwszym z dwóch posortowanych zakresów źródłowych Zjednoczone i posortowane w jednym zakresem reprezentuje sumę dwóch zakresów.
+*Nazwisko1*<br/>
+Iterator danych wejściowych odnoszący się do pozycji pierwszej po ostatnim elemencie w pierwszym z dwóch posortowanych zakresów źródłowych Zjednoczone i posortowane w jednym zakresem reprezentuje sumę dwóch zakresów.
 
-*first2* iterator danych wejściowych odnoszący się pozycja pierwszego elementu w ciągu sekundy z dwóch następujących po sobie posortowanych zakresów źródłowych Zjednoczone i posortowane w jednym zakresem reprezentuje sumę dwóch zakresów.
+*first2*<br/>
+Iterator danych wejściowych, odnoszący się do pozycji pierwszego elementu w ciągu sekundy z dwóch następujących po sobie posortowanych zakresów źródłowych Zjednoczone i posortowane w jednym zakresem reprezentuje sumę dwóch zakresów.
 
-*Nazwisko2* iterator danych wejściowych odnoszący jednej pozycji poza ostatnim elemencie w ciągu sekundy z dwóch następujących po sobie posortowanych zakresów źródłowych Zjednoczone i posortowane w jednym zakresem reprezentuje sumę dwóch zakresów.
+*Nazwisko2*<br/>
+Iterator danych wejściowych odnoszący jednej pozycji w ciągu ostatnich ostatnim elemencie w ciągu sekundy z dwóch następujących po sobie posortowanych zakresów źródłowych Zjednoczone i posortowane w jednym zakresem reprezentuje sumę dwóch zakresów.
 
 **_** *Wynik* iterator danych wyjściowych odnoszący się do pozycji pierwszego elementu w zakresie docelowym, w którym źródło dwa zakresy, które mają być scalone w pojedynczy posortowany zakres reprezentuje sumę dwóch zakresów.
 
-*comp* obiekt zdefiniowany przez użytkownika funkcji predykatu, który definiuje sens, w którym jeden element jest większy niż inny. Predykat dwuelementowy przyjmuje dwa argumenty i powinna zwrócić **true** kiedy pierwszy element jest mniejszy od drugiego elementu i **false** inaczej.
+*Comp*<br/>
+Obiekt funkcji predykatu zdefiniowanej przez użytkownika, który definiuje sens, w którym jeden element jest większy niż inny. Predykat dwuelementowy przyjmuje dwa argumenty i powinna zwrócić **true** kiedy pierwszy element jest mniejszy od drugiego elementu i **false** inaczej.
 
 ### <a name="return-value"></a>Wartość zwracana
 
@@ -7392,11 +7661,14 @@ void shuffle(RandomAccessIterator first,
 
 ### <a name="parameters"></a>Parametry
 
-*pierwszy* iterator do pierwszego elementu w zakresie pomieszaną, włącznie. Musi spełniać wymagania `RandomAccessIterator` i `ValueSwappable`.
+*pierwszy*<br/>
+Iterator do pierwszego elementu w zakresie pomieszaną, włącznie. Musi spełniać wymagania `RandomAccessIterator` i `ValueSwappable`.
 
-*ostatni* iterator do ostatniego elementu w zakresie pomieszaną, wyłączności. Musi spełniać wymagania `RandomAccessIterator` i `ValueSwappable`.
+*ostatni*<br/>
+Iterator do ostatniego elementu w zakresie ma być wyłączność, który losowo. Musi spełniać wymagania `RandomAccessIterator` i `ValueSwappable`.
 
-*Gen* generator liczb losowych, `shuffle()` użyje funkcji dla tej operacji. Musi spełniać wymagania `UniformRandomNumberGenerator`.
+*Gen*<br/>
+Generator liczb losowych, `shuffle()` użyje funkcji dla tej operacji. Musi spełniać wymagania `UniformRandomNumberGenerator`.
 
 ### <a name="remarks"></a>Uwagi
 
@@ -7422,11 +7694,14 @@ template<class RandomAccessIterator, class Predicate>
 
 ### <a name="parameters"></a>Parametry
 
-*pierwszy* iterator dostępu swobodnego odnoszący się do pozycji pierwszego elementu w zakresie ma zostać posortowana.
+*pierwszy*<br/>
+Iterator dostępu swobodnego odnoszący się do pozycji pierwszego elementu w zakresie ma zostać posortowana.
 
-*ostatni* iterator dostępu swobodnego odnoszący się do pozycji pierwszej po elemencie końcowym w zakresie ma zostać posortowana.
+*ostatni*<br/>
+Iterator dostępu swobodnego odnoszący się do pozycji pierwszej po elemencie końcowym w zakresie ma zostać posortowana.
 
-*comp* obiekt funkcji predykatu zdefiniowanej przez użytkownika, który definiuje kryterium porównania, które muszą być spełnione przez kolejne elementy w kolejności. Ten predykat dwuelementowy przyjmuje dwa argumenty i zwraca **true** w przypadku dwóch argumentów w porządku i **false** inaczej. Ta funkcja komparator musi powodować ścisłe słabe porządkowanie w pary elementów z sekwencji. Aby uzyskać więcej informacji, zobacz [algorytmy](../standard-library/algorithms.md).
+*Comp*<br/>
+Obiekt funkcji predykatu zdefiniowanej przez użytkownika, który definiuje kryterium porównania, które muszą być spełnione przez kolejne elementy w kolejności. Ten predykat dwuelementowy przyjmuje dwa argumenty i zwraca **true** w przypadku dwóch argumentów w porządku i **false** inaczej. Ta funkcja komparator musi powodować ścisłe słabe porządkowanie w pary elementów z sekwencji. Aby uzyskać więcej informacji, zobacz [algorytmy](../standard-library/algorithms.md).
 
 ### <a name="remarks"></a>Uwagi
 
@@ -7523,11 +7798,14 @@ template<class RandomAccessIterator, class Predicate>
 
 ### <a name="parameters"></a>Parametry
 
-*pierwszy* iteratora dostępu swobodnego, odnoszący się do pozycji pierwszego elementu w stosie docelowego.
+*pierwszy*<br/>
+Iterator dostępu swobodnego, odnoszący się do pozycji pierwszego elementu w stosie docelowego.
 
-*ostatni* iteratora dostępu swobodnego, adresowania jednej pozycji po elemencie końcowym w stosie docelowego.
+*ostatni*<br/>
+Iterator dostępu swobodnego, adresowania jednej pozycji po elemencie końcowym w stosie docelowego.
 
-*comp* obiekt funkcji predykatu zdefiniowanej przez użytkownika, który definiuje sens, w którym jeden element jest mniejszy niż inny. Predykat dwuelementowy przyjmuje dwa argumenty i zwraca **true** po spełnieniu oraz **false** Jeśli nie jest spełniony.
+*Comp*<br/>
+Obiekt funkcji predykatu zdefiniowanej przez użytkownika, który definiuje sens, w którym jeden element jest mniejszy niż inny. Predykat dwuelementowy przyjmuje dwa argumenty i zwraca **true** po spełnieniu oraz **false** Jeśli nie jest spełniony.
 
 ### <a name="remarks"></a>Uwagi
 
@@ -7612,11 +7890,14 @@ BidirectionalIterator stable_partition(
 
 ### <a name="parameters"></a>Parametry
 
-*pierwszy* iterator dwukierunkowy odnoszący się do pozycji pierwszego elementu w zakresie do podzielenia na partycje.
+*pierwszy*<br/>
+Iterator dwukierunkowy odnoszący się do pozycji pierwszego elementu w zakresie w do podzielenia na partycje.
 
-*ostatni* iterator dwukierunkowy odnoszący się do pozycji pierwszej po elemencie końcowym w zakresie do podzielenia na partycje.
+*ostatni*<br/>
+Iterator dwukierunkowy odnoszący się do pozycji pierwszej po elemencie końcowym w zakresie w do podzielenia na partycje.
 
-*_Pred* obiekt funkcji predykatu zdefiniowanej przez użytkownika, który definiuje warunek spełniony, jeśli element ma być klasyfikowane. Predykat przyjmuje jeden argument i zwraca **true** lub **false**.
+*_Pred*<br/>
+Obiekt funkcji predykatu zdefiniowanej przez użytkownika, który definiuje warunek spełniony, jeśli element ma być klasyfikowane. Predykat przyjmuje jeden argument i zwraca **true** lub **false**.
 
 ### <a name="return-value"></a>Wartość zwracana
 
@@ -7679,7 +7960,7 @@ Rozmieszcza elementy w określonym zakresie w niemalejącej kolejności lub wed�
 
 ```cpp
 template<class BidirectionalIterator>
- void stable_sort( BidirectionalIterator first, BidirectionalIterator last );
+void stable_sort( BidirectionalIterator first, BidirectionalIterator last );
 
 template<class BidirectionalIterator, class BinaryPredicate>
 void stable_sort(
@@ -7691,11 +7972,14 @@ void stable_sort(
 
 ### <a name="parameters"></a>Parametry
 
-*pierwszy* iterator dwukierunkowy odnoszący się do pozycji pierwszego elementu w zakresie ma zostać posortowana.
+*pierwszy*<br/>
+Iterator dwukierunkowy odnoszący się do pozycji pierwszego elementu w zakresie w ma zostać posortowana.
 
-*ostatni* iterator dwukierunkowy odnoszący się do pozycji pierwszej po elemencie końcowym w zakresie ma zostać posortowana.
+*ostatni*<br/>
+Iterator dwukierunkowy odnoszący się do pozycji pierwszej po elemencie końcowym w zakresie w ma zostać posortowana.
 
-*comp* obiekt funkcji predykatu zdefiniowanej przez użytkownika, który definiuje kryterium porównania, które muszą być spełnione przez kolejne elementy w kolejności. Predykat dwuelementowy przyjmuje dwa argumenty i zwraca **true** po spełnieniu oraz **false** Jeśli nie jest spełniony.
+*Comp*<br/>
+Obiekt funkcji predykatu zdefiniowanej przez użytkownika, który definiuje kryterium porównania, które muszą być spełnione przez kolejne elementy w kolejności. Predykat dwuelementowy przyjmuje dwa argumenty i zwraca **true** po spełnieniu oraz **false** Jeśli nie jest spełniony.
 
 ### <a name="remarks"></a>Uwagi
 
@@ -7790,9 +8074,11 @@ template<class Type, size_t N>
 
 ### <a name="parameters"></a>Parametry
 
-*po lewej stronie* dla pierwszego zastąpienia, pierwszy obiekt do mają jego zawartość wymiany. Dla drugiego zastąpienia pierwsza tablica obiektów, aby mieć jego zawartość wymieniane.
+*left*<br/>
+Dla pierwszego zastąpienia pierwszy obiekt do mają jego zawartość wymiany. Dla drugiego zastąpienia pierwsza tablica obiektów, aby mieć jego zawartość wymieniane.
 
-*prawy* związanego z operacją zastępowania pierwszy, drugi obiekt, aby mieć jego zawartość wymieniane. Dla drugiego zastąpienia druga tablica obiektów, aby mieć jego zawartość wymieniane.
+*right*<br/>
+Dla pierwszego zastąpienia drugi obiekt, aby mieć jego zawartość wymieniane. Dla drugiego zastąpienia druga tablica obiektów, aby mieć jego zawartość wymieniane.
 
 ### <a name="remarks"></a>Uwagi
 
@@ -7869,11 +8155,14 @@ ForwardIterator2 swap_ranges(
 
 ### <a name="parameters"></a>Parametry
 
-*first1* wskazuje na pierwszą pozycję pierwszego zakresu, w której elementy są wymieniane iterator do przodu.
+*first1*<br/>
+Iterator do przodu, wskazując na pierwszym miejscu pierwszego zakresu, w której elementy są wymieniane.
 
-*Nazwisko1* iterator do przodu, wskazując jedno poza ostatnim położenie pierwszego zakresu, w której elementy są wymieniane.
+*Nazwisko1*<br/>
+Iterator do przodu, wskazując jedno poza ostatnim położenie pierwszego zakresu, w której elementy są wymieniane.
 
-*first2* wskazuje na pierwszą pozycję drugiego zakresu, w której elementy są wymieniane iterator do przodu.
+*first2*<br/>
+Iterator do przodu, wskazując na pierwszym miejscu drugiego zakresu, w której elementy są wymieniane.
 
 ### <a name="return-value"></a>Wartość zwracana
 
@@ -7969,15 +8258,20 @@ OutputIterator transform(
 
 ### <a name="parameters"></a>Parametry
 
-*first1* iterator danych wejściowych, odnoszący się do pozycji pierwszego elementu w zakresie źródłowym pierwszy na.
+*first1*<br/>
+Iterator danych wejściowych, odnoszący się do pozycji pierwszego elementu w zakresie źródłowym pierwszy na.
 
-*Nazwisko1* iterator danych wejściowych, odnoszący się do pozycji pierwszej po elemencie końcowym w zakresie źródłowym, pierwszy obsługiwany.
+*Nazwisko1*<br/>
+Iterator danych wejściowych, odnoszący się do pozycji pierwszej po elemencie końcowym w zakresie źródłowym, pierwszy obsługiwany przez.
 
-*first2* iterator danych wejściowych, odnoszący się do pozycji pierwszego elementu w zakresie źródłowym drugi na.
+*first2*<br/>
+Iterator danych wejściowych, odnoszący się do pozycji pierwszego elementu w zakresie źródłowym drugi na.
 
-*wynik* iterator danych wyjściowych odnoszący się do pozycji pierwszego elementu w zakresie docelowym.
+*wynik*<br/>
+Iterator danych wyjściowych odnoszący się do pozycji pierwszego elementu w zakresie docelowym.
 
-*_Func* jednoargumentowe zdefiniowanych przez użytkownika obiekt funkcji używanych w pierwszej wersji algorytmu, który jest stosowany do każdego elementu w pierwszym zakresu źródłowego lub zdefiniowanych przez użytkownika (UD) binarne obiekt funkcji używanych w drugą wersję algorytmu, który jest stosowany parowania w kolejności do przodu, do dwóch zakresów.
+*_Func*<br/>
+Jednoargumentowy zdefiniowanych przez użytkownika funkcja używany w pierwszej wersji algorytmu, który jest stosowany do każdego elementu w zakresie źródłowym, pierwszy obiekt lub zdefiniowanych przez użytkownika (UD) binarne obiekt funkcyjny używane w drugą wersję algorytmu, który jest stosowany parowania, w kolejności do przodu , do dwóch zakresów.
 
 ### <a name="return-value"></a>Wartość zwracana
 
@@ -8070,12 +8364,12 @@ int main()
 ```Output
 Original vector  v1 = ( -4 -3 -2 -1 0 1 2 ).
 The elements of the vector v1 multiplied by 2 in place gives:
- v1mod = ( -8 -6 -4 -2 0 2 4 ).
+v1mod = ( -8 -6 -4 -2 0 2 4 ).
 Multiplying the elements of the vector v1mod
- by the factor 5 & copying to v2 gives:
- v2 = ( -40 -30 -20 -10 0 10 20 ).
+by the factor 5 & copying to v2 gives:
+v2 = ( -40 -30 -20 -10 0 10 20 ).
 Multiplying elements of the vectors v1mod and v2 pairwise gives:
- v3 = ( 320 180 80 20 0 20 80 ).
+v3 = ( 320 180 80 20 0 20 80 ).
 ```
 
 ## <a name="unique"></a>  unikatowe
@@ -8098,11 +8392,14 @@ template<class ForwardIterator, class Predicate>
 
 ### <a name="parameters"></a>Parametry
 
-*pierwszy* iterator do przodu, odnoszący się do pozycji pierwszego elementu w zakresie dla usuwania duplikatów.
+*pierwszy*<br/>
+Iterator do przodu, odnoszący się do pozycji pierwszego elementu w zakresie dla usuwania duplikatów.
 
-*ostatni* iterator do przodu, odnoszący się do pozycji jeden po elemencie końcowym w zakresie dla usuwania duplikatów.
+*ostatni*<br/>
+Iterator do przodu, odnoszący się do pozycji jeden po elemencie końcowym w zakresie dla usuwania duplikatów.
 
-*Comp* obiekt funkcji predykatu zdefiniowanej przez użytkownika, który definiuje warunek spełniony, jeśli dwa elementy, które są pobierane jako równoważne. Predykat dwuelementowy przyjmuje dwa argumenty i zwraca **true** po spełnieniu oraz **false** Jeśli nie jest spełniony.
+*Comp*<br/>
+Obiekt funkcji predykatu zdefiniowanej przez użytkownika, który definiuje warunek spełniony, jeśli dwa elementy, które są pobierane jako równoważne. Predykat dwuelementowy przyjmuje dwa argumenty i zwraca **true** po spełnieniu oraz **false** Jeśli nie jest spełniony.
 
 ### <a name="return-value"></a>Wartość zwracana
 
@@ -8201,10 +8498,10 @@ int main()
 ```Output
 Vector v1 is ( 5 -5 5 -5 5 -5 5 -5 4 4 4 4 7 ).
 Removing adjacent duplicates from vector v1 gives
- ( 5 -5 5 -5 5 -5 5 -5 4 7 ).
+( 5 -5 5 -5 5 -5 5 -5 4 7 ).
 Removing adjacent duplicates from vector v1 under the
   binary predicate mod_equal gives
- ( 5 4 7 ).
+( 5 4 7 ).
 Removing adjacent elements satisfying the binary
   predicate mod_equal from vector v1 gives ( 5 7 ).
 ```
@@ -8228,13 +8525,17 @@ OutputIterator unique_copy( InputIterator first,
 
 ### <a name="parameters"></a>Parametry
 
-*pierwszy* iterator do przodu, odnoszący się do pozycji pierwszego elementu w zakresie źródłowym, który ma być skopiowany.
+*pierwszy*<br/>
+Iterator postępujący odnosi się pozycja pierwszego elementu w zakresie źródłowym, który ma być skopiowany.
 
-*ostatni* iterator postępujący odnosi się do pozycji pierwszej po elemencie końcowym w zakresie źródłowym, który ma być skopiowany.
+*ostatni*<br/>
+Iterator postępujący odnosi się do pozycji pierwszej po elemencie końcowym w zakresie źródłowym, który ma być skopiowany.
 
-*wynik* iterator danych wyjściowych odnoszący się do pozycji pierwszego elementu w zakresie docelowym, który otrzymuje kopię kolejnych duplikatów usunięte.
+*wynik*<br/>
+Iterator danych wyjściowych odnoszący się do pozycji pierwszego elementu w zakresie docelowym, który otrzymuje kopię za pomocą następujących po sobie duplikaty są usuwane.
 
-*Comp* obiekt funkcji predykatu zdefiniowanej przez użytkownika, który definiuje warunek spełniony, jeśli dwa elementy, które są pobierane jako równoważne. Predykat dwuelementowy przyjmuje dwa argumenty i zwraca **true** po spełnieniu oraz **false** Jeśli nie jest spełniony.
+*Comp*<br/>
+Obiekt funkcji predykatu zdefiniowanej przez użytkownika, który definiuje warunek spełniony, jeśli dwa elementy, które są pobierane jako równoważne. Predykat dwuelementowy przyjmuje dwa argumenty i zwraca **true** po spełnieniu oraz **false** Jeśli nie jest spełniony.
 
 ### <a name="return-value"></a>Wartość zwracana
 
@@ -8344,13 +8645,17 @@ template<class ForwardIterator, class Type, class Predicate>
 
 ### <a name="parameters"></a>Parametry
 
-*pierwszy* pozycja pierwszego elementu w zakresie, który ma być przeszukiwany.
+*pierwszy*<br/>
+Pozycja pierwszego elementu w zakresie, który ma być przeszukiwany.
 
-*ostatni* położenie jeden po elemencie końcowym w zakresie, który ma być przeszukiwany.
+*ostatni*<br/>
+Pozycja jeden po elemencie końcowym w zakresie, który ma być przeszukiwany.
 
-*wartość* zwracana wartość w uporządkowanym zakresie, który musi zostać przekroczony o wartość elementu wspominanego przez iterator.
+*value*<br/>
+Wartość w uporządkowanym zakresie, który musi zostać przekroczony o wartość elementu wspominanego przez zwracany iterator.
 
-*comp* obiekt funkcji predykatu zdefiniowanej przez użytkownika, który definiuje sens, w którym jeden element jest mniejszy niż inny. Predykat dwuelementowy przyjmuje dwa argumenty i zwraca **true** po spełnieniu oraz **false** Jeśli nie jest spełniony.
+*Comp*<br/>
+Obiekt funkcji predykatu zdefiniowanej przez użytkownika, który definiuje sens, w którym jeden element jest mniejszy niż inny. Predykat dwuelementowy przyjmuje dwa argumenty i zwraca **true** po spełnieniu oraz **false** Jeśli nie jest spełniony.
 
 ### <a name="return-value"></a>Wartość zwracana
 

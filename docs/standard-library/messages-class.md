@@ -32,12 +32,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4b7b604fd58c3f320b62c022e6b5d1749c1f3a87
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: f6b4faf2ac5f04a2dcc9e1e9112016038fa2fcec
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38954893"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44106454"
 ---
 # <a name="messages-class"></a>messages — Klasa
 
@@ -54,7 +54,8 @@ class messages : public messages_base;
 
 ### <a name="parameters"></a>Parametry
 
-*CharType* typ używany w programie do kodowania znaków w ustawieniach regionalnych.
+*CharType*<br/>
+Typ używany w programie do kodowania znaków w ustawieniach regionalnych.
 
 ## <a name="remarks"></a>Uwagi
 
@@ -114,7 +115,8 @@ void close(catalog _Catval) const;
 
 ### <a name="parameters"></a>Parametry
 
-*_Catval* katalogu zostanie zamknięty.
+*_Catval*<br/>
+Katalog zostanie zamknięty.
 
 ### <a name="remarks"></a>Uwagi
 
@@ -130,7 +132,8 @@ virtual void do_close(catalog _Catval) const;
 
 ### <a name="parameters"></a>Parametry
 
-*_Catval* katalogu zostanie zamknięty.
+*_Catval*<br/>
+Katalog zostanie zamknięty.
 
 ### <a name="remarks"></a>Uwagi
 
@@ -156,13 +159,17 @@ virtual string_type do_get(
 
 ### <a name="parameters"></a>Parametry
 
-*_Catval* identyfikacji określająca katalog komunikatów, który ma być przeszukiwany.
+*_Catval*<br/>
+Wartość Identyfikacja, określając katalog komunikatów, który ma być przeszukiwany.
 
-*_Ustaw* zidentyfikowany pierwszy używana do lokalizowania komunikat w katalog komunikatów.
+*_Ustaw*<br/>
+Zidentyfikowany pierwszy używana do lokalizowania komunikat w katalog komunikatów.
 
-*_Message* zidentyfikowane drugi używana do lokalizowania komunikat w katalog komunikatów.
+*_Message*<br/>
+Drugi zidentyfikowane używana do lokalizowania komunikat w katalog komunikatów.
 
-*_Dfault* ciąg, który ma zostać zwrócona w przypadku niepowodzenia.
+*_Dfault*<br/>
+Ciąg, który ma zostać zwrócona w przypadku niepowodzenia.
 
 ### <a name="return-value"></a>Wartość zwracana
 
@@ -188,9 +195,11 @@ virtual catalog do_open(
 
 ### <a name="parameters"></a>Parametry
 
-*_Catname* nazwę katalogu, który ma być przeszukiwany.
+*_Catname*<br/>
+Nazwa katalogu, który ma być przeszukiwany.
 
-*_Loc* ustawienia regionalne są wyszukiwane w wykazie.
+*_Loc*<br/>
+Ustawienia regionalne są wyszukiwane w wykazie.
 
 ### <a name="return-value"></a>Wartość zwracana
 
@@ -220,13 +229,17 @@ string_type get(
 
 ### <a name="parameters"></a>Parametry
 
-*_Catval* identyfikacji określająca katalog komunikatów, który ma być przeszukiwany.
+*_Catval*<br/>
+Wartość Identyfikacja, określając katalog komunikatów, który ma być przeszukiwany.
 
-*_Ustaw* zidentyfikowany pierwszy używana do lokalizowania komunikat w katalog komunikatów.
+*_Ustaw*<br/>
+Zidentyfikowany pierwszy używana do lokalizowania komunikat w katalog komunikatów.
 
-*_Message* zidentyfikowane drugi używana do lokalizowania komunikat w katalog komunikatów.
+*_Message*<br/>
+Drugi zidentyfikowane używana do lokalizowania komunikat w katalog komunikatów.
 
-*_Dfault* ciąg, który ma zostać zwrócona w przypadku niepowodzenia.
+*_Dfault*<br/>
+Ciąg, który ma zostać zwrócona w przypadku niepowodzenia.
 
 ### <a name="return-value"></a>Wartość zwracana
 
@@ -251,9 +264,11 @@ protected: messages(
 
 ### <a name="parameters"></a>Parametry
 
-*_Refs* wartość całkowitą, można określić typ zarządzania pamięci dla obiektu.
+*_Refs*<br/>
+Wartość liczby całkowitej, można określić typ zarządzania pamięci dla obiektu.
 
-*_Locname* nazwę ustawień regionalnych.
+*_Locname*<br/>
+Nazwa ustawień regionalnych.
 
 ### <a name="remarks"></a>Uwagi
 
@@ -281,9 +296,11 @@ catalog open(
 
 ### <a name="parameters"></a>Parametry
 
-*_Catname* nazwę katalogu, który ma być przeszukiwany.
+*_Catname*<br/>
+Nazwa katalogu, który ma być przeszukiwany.
 
-*_Loc* ustawienia regionalne są wyszukiwane w wykazie.
+*_Loc*<br/>
+Ustawienia regionalne są wyszukiwane w wykazie.
 
 ### <a name="return-value"></a>Wartość zwracana
 
