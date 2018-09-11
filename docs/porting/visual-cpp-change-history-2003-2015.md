@@ -14,12 +14,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d4b7184e2eebcea83770aff55a5e9f75242aa1c1
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 04e331da219f0c7a3996dda69d53769ea443b55e
+ms.sourcegitcommit: f0c90000125a9497bf61e41624de189a043703c0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43206174"
+ms.lasthandoff: 09/10/2018
+ms.locfileid: "44319100"
 ---
 # <a name="visual-c-change-history-2003---2015"></a>Visual C++ — Historia latach 2003 – 2015 zmian
 
@@ -65,7 +65,7 @@ Ponadto najnowsze ulepszenia do zgodności kompilatora czasem zmienić jak kompi
   
 - **C++ przeciążenia funkcji bibliotek matematycznych** w poprzednich wersjach \<math.h > zdefiniowane niektóre, ale nie wszystkie z przeciążeń C++ dla funkcji bibliotek matematycznych. \<cmath > zdefiniowane pozostałe przeciążeń, dlatego w celu uzyskania wszystkich przeciążeń, jeden wymagane było uwzględnienie \<cmath > nagłówka. Doprowadziło to do problemów z Rozpoznanie przeciążenia funkcji w kodzie, który tylko \<math.h >. Teraz wszystkich przeciążeń C++ zostały usunięte z \<math.h > a teraz są dostępne tylko w \<cmath >.  
   
-     Aby naprawić błędy, należy dołączyć <cmath> można pobrać deklaracji funkcji, które zostały usunięte z \<math.h >. W poniższej tabeli wymieniono funkcje, które zostały przeniesione.  
+     Aby naprawić błędy, należy dołączyć \<cmath > Aby uzyskać deklaracji funkcji, które zostały usunięte z \<math.h >. W poniższej tabeli wymieniono funkcje, które zostały przeniesione.  
   
      Funkcje, które zostały przeniesione:  
   

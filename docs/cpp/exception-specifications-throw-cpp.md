@@ -18,12 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 15e872faab5beee296e4543c8404141428345842
-ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
+ms.openlocfilehash: 1dfc9c50503fcd277f34e8f5dfc4a630d888eebf
+ms.sourcegitcommit: f0c90000125a9497bf61e41624de189a043703c0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/01/2018
-ms.locfileid: "39402406"
+ms.lasthandoff: 09/10/2018
+ms.locfileid: "44318281"
 ---
 # <a name="exception-specifications-throw-noexcept-c"></a>Specyfikacje wyjątków (throw, noexcept) (C++)
 
@@ -43,7 +43,7 @@ Poniższa tabela zawiera podsumowanie implementacji specyfikacji wyjątków Micr
 
 |Specyfikacja wyjątku|Znaczenie|
 |-----------------------------|-------------|
-|`noexcept`<br>`noexcept(true)`<br>`throw()`|Funkcja nie zgłasza wyjątku. W [/STD: c ++ 14](../build/reference/std-specify-language-standard-version.md) tryb (jest to ustawienie domyślne), `noexcept` i `noexcept(true)` są równoważne. Gdy wyjątek jest generowany przez funkcję, która jest zadeklarowana `noexcept` lub `noexcept(true)`, [std::terminate](../standard-library/exception-functions.md#terminate) zostanie wywołana. Gdy wyjątek jest generowany przez funkcję zadeklarowane jako `throw()` w **/STD: c ++ 14** tryb, wynik jest niezdefiniowane zachowanie. Brak określonej funkcji jest wywoływana. Jest to rozbieżności z C ++ 14 w warstwie standardowa, który wymagany kompilator, aby wywołać [std::unexpected](../standard-library/exception-functions.md#unexpected).  <br> **Visual Studio 2017 w wersji 15.5 lub nowszej**: W **/STD: c ++ 17** trybie `noexcept`, `noexcept(true)`, i `throw()` są wszystkie równoważne. W **/STD: c ++ 17** trybie `throw()` jest aliasem `noexcept(true)`. W **/STD: c ++ 17** tryb, gdy wyjątek jest generowany przez funkcję zadeklarowane za pomocą dowolnego z tych specyfikacji [std::terminate](../standard-library/exception-functions.md#terminate) wywoływaną zgodnie z wymaganiami C ++ 17 standardowych.|
+|`noexcept`<br/>`noexcept(true)`<br/>`throw()`|Funkcja nie zgłasza wyjątku. W [/STD: c ++ 14](../build/reference/std-specify-language-standard-version.md) tryb (jest to ustawienie domyślne), `noexcept` i `noexcept(true)` są równoważne. Gdy wyjątek jest generowany przez funkcję, która jest zadeklarowana `noexcept` lub `noexcept(true)`, [std::terminate](../standard-library/exception-functions.md#terminate) zostanie wywołana. Gdy wyjątek jest generowany przez funkcję zadeklarowane jako `throw()` w **/STD: c ++ 14** tryb, wynik jest niezdefiniowane zachowanie. Brak określonej funkcji jest wywoływana. Jest to rozbieżności z C ++ 14 w warstwie standardowa, który wymagany kompilator, aby wywołać [std::unexpected](../standard-library/exception-functions.md#unexpected).  <br/> **Visual Studio 2017 w wersji 15.5 lub nowszej**: W **/STD: c ++ 17** trybie `noexcept`, `noexcept(true)`, i `throw()` są wszystkie równoważne. W **/STD: c ++ 17** trybie `throw()` jest aliasem `noexcept(true)`. W **/STD: c ++ 17** tryb, gdy wyjątek jest generowany przez funkcję zadeklarowane za pomocą dowolnego z tych specyfikacji [std::terminate](../standard-library/exception-functions.md#terminate) wywoływaną zgodnie z wymaganiami C ++ 17 standardowych.|
 |`noexcept(false)`<br/>`throw(...)`<br/>Brak specyfikacji|Funkcja może zgłosić wyjątek dowolnego typu.|
 |`throw(type)`| (**C ++ 14 i starszych**) funkcja może zgłosić wyjątek typu `type`. Kompilator akceptuje składni, ale zinterpretuje ją jako `noexcept(false)`. W **/STD: c ++ 17** tryb kompilator generuje ostrzeżenie C5040.|
 
