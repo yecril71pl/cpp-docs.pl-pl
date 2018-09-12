@@ -15,12 +15,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ec3509b71d78221c3e15607d34f674fc38d9f635
-ms.sourcegitcommit: f7703076b850c717c33d72fb0755fbb2215c5ddc
+ms.openlocfilehash: 2d3b238b9a5bc01fa3ee053acdb3c7c84b95df71
+ms.sourcegitcommit: 27b5712badd09a09c499d887e2e4cf2208a28603
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/28/2018
-ms.locfileid: "43130992"
+ms.lasthandoff: 09/11/2018
+ms.locfileid: "44385011"
 ---
 # <a name="qspectre"></a>/ Qspectre
 
@@ -44,7 +44,7 @@ Jeśli Twój kod działa na danych w granicy zaufania, a następnie zaleca się,
 
 ### <a name="availability"></a>Dostępność
 
-**/Qspectre** opcja jest dostępna w Visual Studio 2017, wersja 15.5.5 i wszystkie aktualizacje Kompilatory języka Microsoft Visual C++ (MSVC) wprowadzone na lub po 23 stycznia 2018 r.
+**/Qspectre** opcja jest dostępna w Visual Studio 2017, wersja 15.5.5 i wszystkie aktualizacje Kompilatory języka Microsoft Visual C++ (MSVC) wprowadzone na lub po 23 stycznia 2018 r. Użyj Instalatora programu Visual Studio, aby zaktualizować kompilator i zainstalowanie biblioteki skorygowane z krokami zaradczymi dla luki jako poszczególnych składników. **/Qspectre** opcja jest również dostępna w programie Visual Studio 2015 Update 3 za pomocą poprawek. Aby uzyskać więcej informacji, zobacz [KB 4338871](https://support.microsoft.com/help/4338871).
 
 Wszystkie wersje programu Visual Studio 2017, wersja 15.5 i wszystkich wersji zapoznawczych programu Visual Studio w wersji 15.6 już zawierać nieudokumentowane opcję **/d2guardspecload**, oznacza to odpowiednik początkowe zachowanie   **/qspectre**. Możesz użyć **/d2guardspecload** do zastosowania tych samych środki zaradcze w kodzie w tych wersjach kompilatora. Zaktualizuj kompilacji, aby użyć **/qspectre** w kompilatory, które obsługują opcję; **/qspectre** opcji mogą także obsługiwać nowe środki zaradcze w nowszych wersjach kompilatora.
 

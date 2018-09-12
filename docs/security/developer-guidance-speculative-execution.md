@@ -14,16 +14,16 @@ helpviewer_keywords:
 - Spectre
 - CVE-2017-5753
 - Speculative Execution
-author: mamillmsft
+author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 378c6fe9a86cc44d80252f69367cf8c70234f469
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: 0800812e39d4d5240b87b24961585610814cd367
+ms.sourcegitcommit: 27b5712badd09a09c499d887e2e4cf2208a28603
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42613249"
+ms.lasthandoff: 09/11/2018
+ms.locfileid: "44384959"
 ---
 # <a name="c-developer-guidance-for-speculative-execution-side-channels"></a>Wskazówki dla deweloperów C++ spekulacyjnego kanałów po stronie wykonywania
 
@@ -31,7 +31,7 @@ Ten artykuł zawiera wskazówki dla deweloperów, która pomaga w identyfikacji 
 
 Ze wskazówkami zawartymi w tym artykule dotyczy klasy reprezentowane przez luki w zabezpieczeniach:
 
-1. CVE-2017-5753, znany także jako luki Spectre w wariancie 1. Ta klasa luk w zabezpieczeniach sprzętu jest powiązana z kanałów po stronie, które mogą wystąpić z powodu wykonywaniem spekulatywnym, który występuje w wyniku misprediction gałąź warunkowa. Kompilator języka Visual C++ w programie Visual Studio 2017 (począwszy od wersji 15.5.5) obejmuje obsługę `/Qspectre` przełącznika, który umożliwia ograniczenie kompilacji, dla ograniczonego zestawu schematów kodowania potencjalnie zagrożone związane z CVE-2017-5753. W dokumentacji dotyczącej [/qspectre](https://docs.microsoft.com/cpp/build/reference/qspectre) flagi zawiera więcej informacji na jego skutków i użycia. 
+1. CVE-2017-5753, znany także jako luki Spectre w wariancie 1. Ta klasa luk w zabezpieczeniach sprzętu jest powiązana z kanałów po stronie, które mogą wystąpić z powodu wykonywaniem spekulatywnym, który występuje w wyniku misprediction gałąź warunkowa. Kompilator języka Visual C++ w programie Visual Studio 2017 (począwszy od wersji 15.5.5) obejmuje obsługę `/Qspectre` przełącznika, który umożliwia ograniczenie kompilacji, dla ograniczonego zestawu schematów kodowania potencjalnie zagrożone związane z CVE-2017-5753. `/Qspectre` Przełącznik jest również dostępna w programie Visual Studio 2015 Update 3 za pomocą [KB 4338871](https://support.microsoft.com/help/4338871). W dokumentacji dotyczącej [/qspectre](https://docs.microsoft.com/cpp/build/reference/qspectre) flagi zawiera więcej informacji na jego skutków i użycia. 
 
 2. CVE-2018-3639, nazywana również [spekulacyjnego obejścia Store (SSB)](https://aka.ms/sescsrdssb). Ta klasa luk w zabezpieczeniach sprzętu jest powiązana z kanałów po stronie, które mogą wystąpić z powodu związanego z wykonywaniem spekulatywnym obciążenia wcześniej zależne magazynu wyniku misprediction dostępu do pamięci.
 
