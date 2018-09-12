@@ -1,7 +1,7 @@
 ---
 title: directory_iterator, klasa | Dokumentacja firmy Microsoft
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 09/10/2018
 ms.technology:
 - cpp-standard-libraries
 ms.topic: reference
@@ -35,24 +35,24 @@ helpviewer_keywords:
 - std::experimental::filesystem::directory_iterator::operator++
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 36cbf9e8d4ebdf62cbbfdc5a37ca1c49d7106a42
-ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
+ms.openlocfilehash: 09970c0d3cf8771317c93670c0ec7f029e1ace2a
+ms.sourcegitcommit: fb9448eb96c6351a77df04af16ec5c0fb9457d9e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44105216"
+ms.lasthandoff: 09/12/2018
+ms.locfileid: "44691591"
 ---
 # <a name="directoryiterator-class"></a>directory_iterator — klasa
 
-Opisuje iterator danych wejściowych, które sekwencji za pomocą nazwy plików w katalogu. Dla iteratora X, wyrażenie * X daje w wyniku obiektu directory_entry — klasa, która otacza nazwę pliku i nic wiedzieć o jego stan.
+Opisuje iterator danych wejściowych, które sekwencji za pomocą nazwy plików w katalogu. Dla iteratora `X`, wyrażenie `*X` zwróci obiekt klasy `directory_entry` to wszystko na nazwę pliku i nic wiedzieć o jego stan.
 
-Klasa przechowuje obiekt typu ścieżki, o nazwie `mydir` w tym miejscu na potrzeby specyfikacja, która reprezentuje nazwę katalogu, który ma być sekwencjonowania i wywołuje obiekt typu directory_entry `myentry` tutaj, który reprezentuje nazwę bieżącego pliku w katalogu sekwencji. Domyślne obiektu typu directory_entry ma pustą `mydir` pathname i reprezentuje iterator sekwencja kończenia.
+Klasa przechowuje obiekt typu `path`, co jest nazywane `mydir` tutaj w celu specyfikacji, który reprezentuje nazwę katalogu, który ma zostać ustawione w kolejności, i obiektu typu `directory_entry` o nazwie `myentry` tutaj, który reprezentuje bieżący Nazwa pliku w katalogu sekwencji. Domyślne obiektu typu `directory_entry` ma pustą `mydir` pathname i reprezentuje iterator sekwencja kończenia.
 
-Na przykład, biorąc pod uwagę katalogu abc def wpisów i ghi, kod:
+Na przykład, biorąc pod uwagę katalogu `abc` z wpisy `def` i `ghi`, kod:
 
 `for (directory_iterator next(path("abc")), end; next != end; ++next)     visit(next->path());`
 
-wywoła `visit` path("abc/def") argumentów i path("abc/ghi").
+wywoła `visit` z argumentami `path("abc/def")` i `path("abc/ghi")`.
 
 Aby uzyskać więcej informacji i przykłady kodu, zobacz [nawigacji systemu plików (C++)](../standard-library/file-system-navigation.md).
 
@@ -72,7 +72,7 @@ class directory_iterator;
 
 |Funkcja elementu członkowskiego|Opis|
 |-|-|
-|[Inkrementacja](#increment)|Funkcja polegające na Przejdź do następnego nazwy pliku w katalogu.|
+|[Inkrementacja](#increment)|Próby, przejdź do następnego nazwy pliku w katalogu.|
 
 ### <a name="operators"></a>Operatory
 

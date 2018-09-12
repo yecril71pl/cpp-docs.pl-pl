@@ -1,7 +1,7 @@
 ---
 title: PATH — klasa | Dokumentacja firmy Microsoft
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 09/10/2018
 ms.technology:
 - cpp-standard-libraries
 ms.topic: reference
@@ -14,16 +14,16 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4559bec84d7e6051155ad73f68a1ef8ae13ca6cc
-ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
+ms.openlocfilehash: e47310a93a3901f072330a57619c2655aefb7ff5
+ms.sourcegitcommit: fb9448eb96c6351a77df04af16ec5c0fb9457d9e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44104163"
+ms.lasthandoff: 09/12/2018
+ms.locfileid: "44691513"
 ---
 # <a name="path-class"></a>path — klasa
 
-**Ścieżki** klasa przechowuje obiekt typu String\_typu, o nazwie mojanazwa w tym miejscu na potrzeby specyfikacji odpowiedni do użytku jako nazwa ścieżki. ciąg\_typ jest synonimem dla basic\_ciąg\<value_type >, gdzie wartość\_typ jest synonimem dla znaków w obszarze Windows lub wchar_t w modelu Posix.
+**Ścieżki** klasa przechowuje obiekt typu `string_type`, co jest nazywane `myname` tutaj na potrzeby specyfikacji odpowiedni do użytku jako nazwa ścieżki. `string_type` jest synonimem dla `basic_string<value_type>`, gdzie `value_type` jest synonimem dla **char** w obszarze Windows lub **wchar_t** w modelu Posix.
 
 Aby uzyskać więcej informacji i przykłady kodu, zobacz [nawigacji systemu plików (C++)](../standard-library/file-system-navigation.md).
 
@@ -443,7 +443,7 @@ Aby uzyskać `pval` obiektu typu `path`:
 
 ## <a name="make_preferred"></a> path::make_preferred —
 
-Konwertuje każdego separatora preferred_separator zgodnie z potrzebami.
+Konwertuje każdy separator, który `preferred_separator` zgodnie z potrzebami.
 
 ```cpp
 path& make_preferred();
@@ -529,7 +529,7 @@ Funkcje elementów członkowskich zachowują się taka sama jak poniższy odpowi
 
 1. `concat(source);`
 
-1. `concat(path(basic_string\<Elem>(1, elem)));`
+1. `concat(path(basic_string<Elem>(1, elem)));`
 
 ## <a name="op_divide"></a> path::operator / =
 
@@ -576,7 +576,7 @@ path parent_path() const;
 
 ### <a name="remarks"></a>Uwagi
 
-Zwraca element nadrzędny składnik path `myname`, w szczególności prefiks `myname` po usunięciu `filename().native()` i wszystkie bezpośrednio poprzedzającego separatora katalogów. (Tak samo, jeśli `begin() != end()`, jest łączenie wszystkich elementów w zakresie [begin(),--end()) stosując kolejno operator / =.) Składnik może być pusta.
+Zwraca element nadrzędny składnik path `myname`, w szczególności prefiks `myname` po usunięciu `filename().native()` i wszystkie bezpośrednio poprzedzającego separatora katalogów. (Tak samo, jeśli `begin() != end()`, jest łączenie wszystkich elementów w zakresie `[begin(), --end())` kolejno stosując `operator/=`.) Składnik może być pusta.
 
 ## <a name="path"></a> path::Path —
 
@@ -687,7 +687,7 @@ Nowe rozszerzenie.
 
 ### <a name="remarks"></a>Uwagi
 
-Najpierw Usuwa sufiks `extension().native()` z `myname`. A w przypadku `!newext.empty() && newext[0] != dot` (gdzie `dot` jest `*path(".").c_str()`), następnie `dot` jest dołączany do `myname`. Następnie `newext` jest dołączany do `myname`.
+Najpierw Usuwa sufiks `extension().native()` z `myname`. A w przypadku `!newext.empty() && newext[0] != dot` (gdzie `dot` jest `*path(".").c_str()`), następnie `dot` jest dołączany do `myname`. Następnie *newext* jest dołączany do `myname`.
 
 ## <a name="replace_filename"></a> path::replace_filename —
 
@@ -747,7 +747,7 @@ path root_path() const;
 
 ### <a name="remarks"></a>Uwagi
 
-Zwraca składnik ścieżki katalogu głównego `myname`, w szczególności root_name() / root_directory. Składnik może być pusta.
+Zwraca składnik ścieżki katalogu głównego `myname`, konkretnie `root_name()`  /  `root_directory`. Składnik może być pusta.
 
 ## <a name="stem"></a> path::stem —
 
@@ -773,7 +773,7 @@ string string() const;
 
 ### <a name="remarks"></a>Uwagi
 
-Pierwsza funkcja elementu członkowskiego (szablon) konwertuje sekwencję przechowywane w mypath w taki sam sposób jak:
+Pierwsza funkcja elementu członkowskiego (szablon) konwertuje sekwencję przechowywane w `mypath` taki sam sposób jak:
 
 1. `string()` Aby uzyskać `string<char, Traits, Alloc>()`
 
@@ -783,7 +783,7 @@ Pierwsza funkcja elementu członkowskiego (szablon) konwertuje sekwencję przech
 
 1. `u32string()` Aby uzyskać `string<char32_t, Traits, Alloc>()`
 
-Funkcja drugiego członka konwertuje sekwencję przechowywane w `mypath` kodowanie faworytem przez system hosta do sekwencji znaków i zwraca ona przechowywana w obiekcie typu String.
+Funkcja drugiego członka konwertuje sekwencję przechowywane w `mypath` faworytem przez system hosta do kodowania **char** sekwencji i zwraca ona przechowywana w obiekcie typu `string`.
 
 ## <a name="string_type"></a> path::STRING_TYPE
 
@@ -827,7 +827,7 @@ string u8string() const;
 
 ## <a name="value_type"></a> path::value_type
 
-Typ opisuje elementów ścieżki faworytem przez system operacyjny hosta.
+Typ opisuje `path` elementy faworytem przez system operacyjny hosta.
 
 ```cpp
 #if _WIN32_C_LIB
@@ -839,7 +839,7 @@ typedef char value_type;
 
 ## <a name="wstring"></a> path::wstring
 
-Konwertuje sekwencję przechowywane w `mypath` faworytem przez system hosta do kodowania `wchar_t` sekwencji i zwraca ona przechowywana w obiekcie typu `wstring`.
+Konwertuje sekwencję przechowywane w `mypath` faworytem przez system hosta do kodowania **wchar_t** sekwencji i zwraca ona przechowywana w obiekcie typu `wstring`.
 
 ```cpp
 wstring wstring() const;

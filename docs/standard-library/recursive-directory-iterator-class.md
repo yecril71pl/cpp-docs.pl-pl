@@ -1,7 +1,7 @@
 ---
 title: recursive_directory_iterator, klasa | Dokumentacja firmy Microsoft
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 09/10/2018
 ms.technology:
 - cpp-standard-libraries
 ms.topic: reference
@@ -14,12 +14,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 82df045c5a41767093e690ec35ffeb3d81032474
-ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
+ms.openlocfilehash: 0d3765f57ee299a70a54e3b69dbaee0e0687a64c
+ms.sourcegitcommit: fb9448eb96c6351a77df04af16ec5c0fb9457d9e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44110659"
+ms.lasthandoff: 09/12/2018
+ms.locfileid: "44691656"
 ---
 # <a name="recursivedirectoryiterator-class"></a>recursive_directory_iterator — klasa
 
@@ -41,7 +41,7 @@ Magazyny klasy szablonu:
 
 1. obiekt typu `directory_entry` o nazwie `myentry` tutaj, który reprezentuje bieżący nazwy pliku w sekwencji katalogu
 
-1. obiekt typu `bool`, co jest nazywane `no_push` tutaj, który rejestruje, czy zejścia cyklicznego do podkatalogów jest wyłączona
+1. obiekt typu **bool**, co jest nazywane `no_push` tutaj, który rejestruje, czy zejścia cyklicznego do podkatalogów jest wyłączona
 
 1. obiekt typu `directory_options`, co jest nazywane `myoptions` tutaj, który rejestruje opcje ustalone w konstrukcji
 
