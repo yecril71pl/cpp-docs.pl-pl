@@ -28,12 +28,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7e30fb37be6738b7100b84a1898c02ab4230c41b
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: 63c4998ae0ff6efc6fa520c66a4cabff2476f0d0
+ms.sourcegitcommit: 6e479e33e8fd8e30ea32801edbff2e3415f31bf7
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42597576"
+ms.lasthandoff: 09/13/2018
+ms.locfileid: "45556757"
 ---
 # <a name="za-ze-disable-language-extensions"></a>/Za, /Ze (Wyłącz rozszerzenia językowe)
 **/Za** kompilator generuje błąd dla konstrukcji języka, które nie są zgodne z ANSI C89 lub ISO C ++ 11. **/Ze** opcji kompilatora, która jest domyślnie włączona, umożliwia korzystanie z rozszerzeń firmy Microsoft.  
@@ -54,8 +54,8 @@ ms.locfileid: "42597576"
   
  Firma Microsoft zaleca, wyłącz rozszerzenia językowe, określając **/Za** opcję, jeśli planujesz portu program do innych środowisk. Gdy **/Za** jest określony, kompilator traktuje rozszerzone słów kluczowych jako identyfikatorów proste firmy Microsoft, wyłącza rozszerzenia Microsoft i automatycznie definiuje `__STDC__` wstępnie zdefiniowane makro dla programów C.  
   
- Inne opcje kompilatora, używane z **/Za** mogą mieć wpływ na sposób kompilator zapewnia zgodność ze standardami. Na przykład **/Za** i [/FP (określenie zachowania zmiennopozycyjna)](../../build/reference/fp-specify-floating-point-behavior.md) może skutkować zachowanie promocji typu zmiennoprzecinkowego, który nie jest zgodny ISO C99 lub C ++ 11 standardy.  
-  
+ Inne opcje kompilatora, używane z **/Za** mogą mieć wpływ na sposób kompilator zapewnia zgodność ze standardami.
+
  Sposoby, aby określić ustawienia zachowania określonych zgodność standardy, można zobaczyć [/Zc](../../build/reference/zc-conformance.md) — opcja kompilatora.  
   
  Aby uzyskać więcej informacji na temat problemów ze zgodnością w języku Visual C++, zobacz [niestandardowe zachowanie](../../cpp/nonstandard-behavior.md).  
