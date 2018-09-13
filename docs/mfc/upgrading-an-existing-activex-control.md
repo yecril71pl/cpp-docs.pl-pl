@@ -1,7 +1,7 @@
 ---
 title: Uaktualnianie istniejącego kontrolki ActiveX | Dokumentacja firmy Microsoft
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 09/12/2018
 ms.technology:
 - cpp-mfc
 ms.topic: conceptual
@@ -22,15 +22,20 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3d162aea1d000aa9e65aea253f974c38ffc85bcd
-ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
+ms.openlocfilehash: 0bca0cca66f7f8b9c59dcea4911550abfc2024c8
+ms.sourcegitcommit: b4432d30f255f0cb58dce69cbc8cbcb9d44bc68b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43686189"
+ms.lasthandoff: 09/13/2018
+ms.locfileid: "45535278"
 ---
 # <a name="upgrading-an-existing-activex-control"></a>Uaktualnianie istniejącego kontrolki ActiveX
-Kontrolki ActiveX istniejących (dawniej kontrolka OLE) może służyć w Internecie bez żadnych modyfikacji. Można zmodyfikować formantów, aby zwiększyć ich wydajność. Korzystając z kontrolki na stronie sieci Web, istnieją dodatkowe zagadnienia. Plik ocx i wszystkie pliki obsługi muszą znajdować się na komputerze docelowym lub można pobrać przez Internet. To sprawia, że rozmiar kodu i pobierania czasu ważną kwestią. W pliku .cab podpisanych można spakować pliki do pobrania. Możesz oznaczyć obsługi skryptów, jak i bezpiecznie zainicjować formant.  
+Kontrolki ActiveX istniejących (dawniej kontrolka OLE) może służyć w Internecie bez żadnych modyfikacji. Można zmodyfikować formantów, aby zwiększyć ich wydajność. 
+
+>[!IMPORTANT]
+> ActiveX jest technologią starszą, która nie powinny być używane w przypadku nowych wdrożeń. Aby uzyskać więcej informacji na temat nowych technologii, które wypierają ActiveX zobacz [formantów ActiveX](activex-controls.md).
+
+Korzystając z kontrolki na stronie sieci Web, istnieją dodatkowe zagadnienia. Plik ocx i wszystkie pliki obsługi muszą znajdować się na komputerze docelowym lub można pobrać przez Internet. To sprawia, że rozmiar kodu i pobierania czasu ważną kwestią. W pliku .cab podpisanych można spakować pliki do pobrania. Możesz oznaczyć obsługi skryptów, jak i bezpiecznie zainicjować formant.  
   
  W tym artykule omówiono następujące tematy:  
   

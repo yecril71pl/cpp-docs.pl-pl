@@ -20,16 +20,16 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 03815ac535033d9b0fdf0146c0200be16e5ae91a
-ms.sourcegitcommit: b92ca0b74f0b00372709e81333885750ba91f90e
+ms.openlocfilehash: e24a86ead18cde836fd52df4e0c279f69b4c67a1
+ms.sourcegitcommit: fb9448eb96c6351a77df04af16ec5c0fb9457d9e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/16/2018
-ms.locfileid: "42465989"
+ms.lasthandoff: 09/13/2018
+ms.locfileid: "43687938"
 ---
 # <a name="loadlibrary-and-afxloadlibrary"></a>LoadLibrary i AfxLoadLibrary
 
-Przetwarza wywołanie [LoadLibrary](https://go.microsoft.com/fwlink/p/?LinkID=259187) (lub [AfxLoadLibrary](../mfc/reference/application-information-and-management.md#afxloadlibrary)) Aby jawnie utworzyć łącze do biblioteki DLL. Jeśli funkcja się powiedzie, mapuje daną bibliotekę DLL do przestrzeni adresowej procesu wywołującego i zwraca uchwyt do biblioteki DLL, która może być używany z innymi funkcjami jawnego łączenia — na przykład `GetProcAddress` i `FreeLibrary`.
+Przetwarza wywołanie [LoadLibraryExA](/windows/desktop/api/libloaderapi/nf-libloaderapi-loadlibraryexa) lub [LoadLibraryExW](/windows/desktop/api/libloaderapi/nf-libloaderapi-loadlibraryexw)(lub [AfxLoadLibrary](../mfc/reference/application-information-and-management.md#afxloadlibrary)) Aby jawnie utworzyć łącze do biblioteki DLL. Jeśli funkcja się powiedzie, mapuje daną bibliotekę DLL do przestrzeni adresowej procesu wywołującego i zwraca uchwyt do biblioteki DLL, która może być używany z innymi funkcjami jawnego łączenia — na przykład `GetProcAddress` i `FreeLibrary`.
 
 `LoadLibrary` próbuje zlokalizować bibliotekę DLL przy użyciu tej samej kolejności wyszukiwania, która jest używana w przypadku łączenia niejawnego. Jeśli system nie może odnaleźć biblioteki DLL lub jeśli funkcja punktu wejścia zwraca wartość FALSE, `LoadLibrary` zwraca wartość NULL. Jeśli wywołanie `LoadLibrary` Określa moduł DLL, który jest już zmapowany do przestrzeni adresowej procesu wywołującego, funkcja zwraca uchwyt DLL i zwiększa odczyt licznika odwołań modułu.
 
@@ -59,5 +59,3 @@ Jeśli Windows nie może załadować biblioteki DLL, proces może próbować odz
 ## <a name="see-also"></a>Zobacz także
 
 - [Biblioteki DLL w programie Visual C++](../build/dlls-in-visual-cpp.md)
-- [LoadLibrary](https://go.microsoft.com/fwlink/p/?LinkID=259187)
-- [AfxLoadLibrary](../mfc/reference/application-information-and-management.md#afxloadlibrary)

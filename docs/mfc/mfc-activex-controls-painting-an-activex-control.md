@@ -1,7 +1,7 @@
 ---
-title: 'Formanty MFC ActiveX: Malowanie formantu ActiveX | Dokumentacja firmy Microsoft'
+title: 'Kontrolki ActiveX MFC: Malowanie kontrolki ActiveX | Dokumentacja firmy Microsoft'
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 09/12/2018
 ms.technology:
 - cpp-mfc
 ms.topic: conceptual
@@ -15,66 +15,69 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: de12a21c4b411f3cd1fe25d7d6badd8d26318351
-ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
+ms.openlocfilehash: c6a43f5e3e5aa202513fa5a9461a326e6c0c7a6c
+ms.sourcegitcommit: b4432d30f255f0cb58dce69cbc8cbcb9d44bc68b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/25/2018
-ms.locfileid: "36929815"
+ms.lasthandoff: 09/13/2018
+ms.locfileid: "45535304"
 ---
 # <a name="mfc-activex-controls-painting-an-activex-control"></a>Kontrolki ActiveX MFC: malowanie kontrolki ActiveX
-W tym artykule opisano proces malowanie formantu ActiveX i jak można zmienić kod farby, aby zoptymalizować proces. (Zobacz [Optymalizacja rysowania kontroli](../mfc/optimizing-control-drawing.md) dla techniki dotyczące optymalizacji rysunku, ponieważ nie ma pojedynczych formantów Przywróć wcześniej wybrane obiekty GDI. Po zostały wystawione wszystkie formanty, kontener może automatycznie Przywracanie oryginalnych obiektów.)  
+W tym artykule opisano proces malowanie kontrolki ActiveX i jak może zmienić kod malowania, aby zoptymalizować proces. (Zobacz [Optymalizacja rysowania kontrolki](../mfc/optimizing-control-drawing.md) dla techniki dotyczące optymalizacji rysowania przez nie formantów indywidualnie Przywróć wcześniej wybrane obiekty GDI. Po zostały wystawione wszystkich formantów, kontener automatycznie przywrócić oryginalnych obiektów.)  
+
+>[!IMPORTANT]
+> ActiveX jest technologią starszą, która nie powinny być używane w przypadku nowych wdrożeń. Aby uzyskać więcej informacji na temat nowych technologii, które wypierają ActiveX zobacz [formantów ActiveX](activex-controls.md).
   
- Przykłady w tym artykule pochodzą z formantu tworzone przez Kreator kontrolek ActiveX MFC z ustawieniami domyślnymi. Aby uzyskać więcej informacji na temat tworzenia aplikacji szkielet formantów przy użyciu kreator kontrolek ActiveX MFC, zobacz artykuł [Kreator kontrolek ActiveX MFC](../mfc/reference/mfc-activex-control-wizard.md).  
+ Przykłady w tym artykule pochodzą z kontrolki utworzone przez kreatora kontrolek ActiveX MFC przy użyciu ustawień domyślnych. Aby uzyskać więcej informacji na temat tworzenia aplikacji szkielet kontrolek przy użyciu Kreatora kontrolek ActiveX MFC, zobacz artykuł [Kreator kontrolek ActiveX MFC](../mfc/reference/mfc-activex-control-wizard.md).  
   
  Omówiono następujące tematy:  
   
--   [Ogólny proces malowanie formantu i kod utworzonych przez Kreator kontrolek ActiveX do obsługi rysowania](#_core_the_painting_process_of_an_activex_control)  
+-   [Ogólny proces malowanie kontrolki i kod utworzony przez kreatora kontrolek ActiveX do obsługi rysowania](#_core_the_painting_process_of_an_activex_control)  
   
 -   [Jak zoptymalizować proces rysowania](#_core_optimizing_your_paint_code)  
   
--   [Jak namalować formantu przy użyciu metapliki](#_core_painting_your_control_using_metafiles)  
+-   [Jak malować kontrolki przy użyciu metapliki](#_core_painting_your_control_using_metafiles)  
   
-##  <a name="_core_the_painting_process_of_an_activex_control"></a> Proces malowanie formantu ActiveX  
- Formanty ActiveX są początkowo wyświetlane lub są rysowane, należy wykonać procedurę rysowania podobnie jak inne aplikacje opracowane za pomocą MFC, z jedną istotną różnicę: formantów ActiveX może być aktywny lub nieaktywny.  
+##  <a name="_core_the_painting_process_of_an_activex_control"></a> Proces malowanie kontrolki ActiveX  
+ Kontrolki ActiveX początkowo są wyświetlane lub są rysowane, należy wykonać proces rysowania, podobnie jak inne aplikacje opracowane przy użyciu biblioteki MFC, z jedną istotną różnicę: formanty ActiveX może być aktywny lub nieaktywny.  
   
- Aktywny formant jest reprezentowana w kontenerze formantów ActiveX przez okna podrzędnego. Podobnie jak inne okna jest odpowiedzialny za malowanie się, gdy zostaje otrzymany komunikat WM_PAINT. Klasa podstawowa dla formantu, [colecontrol —](../mfc/reference/colecontrol-class.md), obsługuje tę wiadomość w jego `OnPaint` funkcji. Ta domyślna implementacja wywołuje `OnDraw` funkcja formantu.  
+ Aktywny formant jest reprezentowany w kontenerze kontrolek ActiveX, okno podrzędne. Podobnie jak inne okna jest odpowiedzialny za malowanie sam po odebraniu komunikat WM_PAINT. Klasa bazowa dla formantu, [COleControl](../mfc/reference/colecontrol-class.md), obsługuje ten komunikat jest jego `OnPaint` funkcji. Ta domyślna implementacja wywołuje `OnDraw` funkcja kontrolki.  
   
- Formant nieaktywne jest rysowane inaczej. Gdy formant jest nieaktywny, okna jest niewidoczne lub nie istnieje, więc może nie odbierać wiadomości malowania. Zamiast tego formantu kontenera bezpośrednio wywołuje `OnDraw` funkcja formantu. Ta różni się od procesu rysowania aktywny formant w tym `OnPaint` nigdy nie została wywołana funkcja elementu członkowskiego.  
+ Kontrolka w postaci nieaktywny jest malowane inaczej. Gdy kontrolka jest nieaktywny, okno jest niewidoczne lub nie istnieje, więc nie może ona odbierać komunikat malowania. Zamiast tego kontenera kontrolek bezpośrednio wywołuje `OnDraw` funkcja formantu. To różni się od procesu malowania aktywną kontrolkę w tym `OnPaint` nigdy nie jest wywoływana funkcja elementu członkowskiego.  
   
- Zgodnie z opisem w akapitów, sposób aktualizowania formantu ActiveX zależny od stanu formantu. Jednak ponieważ struktura wywołuje `OnDraw` funkcji członkowskiej w obu przypadkach należy dodać większość kodu malowania w funkcji członkowskiej.  
+ Zgodnie z opisem w poprzednich akapitach, jak kontrolki ActiveX jest aktualizowany zależy od stanu kontrolki. Jednakże ponieważ struktura wywołuje `OnDraw` funkcja elementu członkowskiego w obu przypadkach możesz dodać większość kodu rysowania w tej funkcji elementu członkowskiego.  
   
- `OnDraw` Funkcji członkowskiej obsługuje malowanie formantu. Gdy formant jest nieaktywny, wywołuje kontenera formantu `OnDraw`, przekazanie kontekstu urządzenia formantu kontenera i współrzędne prostokątny obszar zajmowane przez formant.  
+ `OnDraw` Funkcja elementu członkowskiego obsługuje malowania kontroli. Gdy formant jest nieaktywny, kontener formantu wywołuje `OnDraw`, przekazując kontekst urządzenia kontenera kontrolki i współrzędne prostokątny obszar zajmowany przez kontrolkę.  
   
- Prostokąt przekazany przez platformę, by `OnDraw` funkcji członkowskiej zawiera obszar zajęty przez formant. Jeśli formant jest aktywny, lewego górnego rogu jest (0, 0) i kontekst urządzenia przekazany do okna podrzędnego z formantem. Jeśli formant jest nieaktywny, Współrzędna lewej górnej niekoniecznie (0, 0) i kontekst urządzenia przekazany dla formantu kontenera zawierająca formant.  
+ Prostokąt przekazywane przez platformę, by `OnDraw` funkcja elementu członkowskiego zawiera obszar zajmowany przez kontrolkę. Jeśli kontrolka jest aktywny, jest lewego górnego rogu (0, 0) i kontekst urządzenia przekazany do okna podrzędnego, który zawiera formant. Jeśli kontrolka jest nieaktywny, Współrzędna lewej górnej niekoniecznie jest (0, 0) a kontekst urządzenia przekazany do kontenera kontrolki zawierająca formant.  
   
 > [!NOTE]
->  Ważne jest, że modyfikacje `OnDraw` nie zależą od prostokąta górnego punktu po lewej stronie jest równa (0, 0) i rysowania tylko wewnątrz prostokąta przekazywane do `OnDraw`. Po narysowaniu poza obszarem prostokąta, mogą wystąpić nieoczekiwane rezultaty.  
+>  Ważne jest, że modyfikacje w `OnDraw` nie są zależne od prostokąta górnego punktu po lewej stronie jest równa (0, 0) i rysowania tylko wewnątrz prostokąta przekazane do `OnDraw`. Jeśli narysujesz poza obszar prostokąta, mogą wystąpić nieoczekiwane rezultaty.  
   
- Domyślna implementacja udostępniane przez Kreator kontrolek ActiveX MFC w pliku implementacji (. CPP), pokazano poniżej, prostokąt z białym znakiem pędzla do malowania i wypełnia elipsy bieżący kolor tła.  
+ Domyślna implementacja dostarczone przez Kreator kontrolek ActiveX MFC w pliku implementacji (. CPP), pokazano poniżej, rysują prostokąt pędzlem biały i wypełnia elipsę z bieżącym kolorem tła.  
   
  [!code-cpp[NVC_MFC_AxUI#1](../mfc/codesnippet/cpp/mfc-activex-controls-painting-an-activex-control_1.cpp)]  
   
 > [!NOTE]
->  Gdy malowanie formantu, nie należy podejmować założenia dotyczące stan kontekstu urządzenia, który jest przekazywany jako *kontrolera pdc* parametr `OnDraw` funkcji. Czasami kontekstu urządzenia jest dostarczany przez aplikację kontenera i nie zostaną niekoniecznie zainicjowane do stanu domyślnego. W szczególności należy jawnie wybrać pióra, pędzle, kolory, czcionki i inne zasoby, które zależy od swój kod rysowania.  
+>  Gdy malowanie kontrolki, nie powinna dokonywać założeń dotyczących stan kontekstu urządzenia, który jest przekazywany jako *kontrolera pdc* parametr `OnDraw` funkcji. Od czasu do czasu kontekstu urządzenia jest dostarczany przez aplikację kontenera i nie zostaną niekoniecznie zainicjowane do stanu domyślnego. W szczególności należy jawnie wybrać pióra, pędzle, kolory, czcionki i inne zasoby, które zależy od kodu rysowania.  
   
 ##  <a name="_core_optimizing_your_paint_code"></a> Optymalizacja kodu malowania  
- Po formantu jest pomyślnie malowanie samego, następnym krokiem jest zoptymalizować `OnDraw` funkcji.  
+ Formant jest pomyślnie malowanie sam, następnym krokiem po zoptymalizować `OnDraw` funkcji.  
   
- Domyślna implementacja malowanie formantu ActiveX umożliwia malowanie obszar całego kontroli. To jest wystarczająca dla formantów prostego, ale w wielu przypadkach ponownego rysowania formant będzie szybciej, jeśli tylko część wymaganej aktualizacji zostało odowieżany zamiast całego formantu.  
+ Domyślna implementacja klasy kontrolki ActiveX malowanie Malowanie obszaru całego kontroli. Jest to wystarczające dla prostych kontrolek, ale w wielu przypadkach odświeżenie formant będzie szybciej, jeśli tylko część wymaganej aktualizacji była odświeżana, zamiast całego kontroli.  
   
- `OnDraw` Funkcja zapewnia to łatwa metoda optymalizacji przez przekazanie *rcInvalid*, prostokątny obszar kontrolkę, która wymaga ponownego narysowania. Umożliwia ten obszar zwykle mniejsze niż obszar kontroli cały proces rysowania.  
+ `OnDraw` Funkcja zapewnia prostą metodę optymalizacji, przekazując *rcInvalid*, prostokątny obszar formantu, który wymaga ponownego narysowania. Umożliwia ten obszar zwykle mniejsze niż obszar kontroli cały proces rysowania.  
   
-##  <a name="_core_painting_your_control_using_metafiles"></a> Malowanie formantu przy użyciu metapliki  
- W większości przypadków *kontrolera pdc* parametr `OnDraw` funkcji wskazuje ekranu kontekstu urządzenia (DC). Jednak podczas drukowania obrazów formantu lub podczas sesji podglądu wydruku, kontroler domeny otrzymał celu renderowania jest specjalny typ o nazwie "metaplik kontrolera domeny". W przeciwieństwie do ekranu kontrolera domeny, która natychmiast obsługuje żądania wysyłane do niego, metaplików kontroler domeny przechowuje żądań, aby go odtworzyć w późniejszym czasie. Niektóre aplikacje kontener może też renderować obraz kontrolki za pomocą metaplik kontrolera domeny w trybie projektowania.  
+##  <a name="_core_painting_your_control_using_metafiles"></a> Malowanie przy użyciu metapliki kontrolki  
+ W większości przypadków *kontrolera pdc* parametr `OnDraw` funkcji wskazuje na ekranie kontekstu urządzenia (DC). Jednak podczas drukowania obrazów formantu lub podczas sesji podglądu wydruku, kontroler domeny otrzymał renderowanie to specjalny typ o nazwie "metaplik DC". W przeciwieństwie do ekranu kontrolera domeny, która od razu obsługuje żądania wysyłane do niej, metaplik kontroler domeny przechowuje żądania do odtworzenia w późniejszym czasie. Niektóre aplikacje kontenera mają także możliwość renderowania obrazu sterowania przy użyciu metaplik kontrolera domeny w trybie projektowania.  
   
- Metaplik rysowania żądań jest możliwe przez kontener za pośrednictwem dwóch funkcji interfejsu: `IViewObject::Draw` (Ta funkcja także dla może zostać wywołany z systemem innym niż metaplik rysowania) i `IDataObject::GetData`. Gdy metaplik kontrolera domeny jest przekazywany jako jeden z parametrów, struktura MFC nawiązuje połączenie [COleControl::OnDrawMetafile](../mfc/reference/colecontrol-class.md#ondrawmetafile). Ponieważ jest to funkcja wirtualny element członkowski, należy przesłonić tę funkcję w klasie formantu do dowolnego specjalnego przetwarzania. Wywołania zachowanie domyślne `COleControl::OnDraw`.  
+ Metaplik rysowania żądań będzie możliwe przez kontener za pośrednictwem dwóch funkcji interfejsu: `IViewObject::Draw` (tej funkcji mogą być również wywoływane dla innych metaplik rysowania) i `IDataObject::GetData`. Gdy metaplik kontroler domeny jest przekazywany jako jeden z parametrów, struktura MFC sprawia, że wywołanie [COleControl::OnDrawMetafile](../mfc/reference/colecontrol-class.md#ondrawmetafile). Ponieważ jest to funkcja wirtualna elementu członkowskiego, należy zastąpić tę funkcję w klasie kontrolki, aby wykonywać żadnych specjalnych przetwarzanie. Domyślne zachowanie wywołania `COleControl::OnDraw`.  
   
- Upewnij się, że formant może znajdować się na środku zarówno ekranu, a metaplików konteksty urządzenia, możesz korzystać tylko funkcji elementów członkowskich, które są obsługiwane zarówno ekranu i metaplik kontrolera domeny. Należy pamiętać, że współrzędnych nie może być podawana w pikselach.  
+ Aby upewnić się, że formant może znajdować się na środku ekranu i metaplik konteksty urządzenia, należy użyć tylko funkcji elementów członkowskich, które są obsługiwane zarówno w ekran i metaplik kontrolera domeny. Należy pamiętać, że w układzie współrzędnych nie może być (w pikselach).  
   
- Ponieważ domyślna implementacja `OnDrawMetafile` wywołuje formantu `OnDraw` funkcji, należy użyć tylko funkcje Członkowskie, które są odpowiednie dla zarówno metaplik, jak i kontekst urządzenia ekranu, chyba że nadpiszesz `OnDrawMetafile`. Poniższa lista zawiera podzbiór `CDC` funkcji elementów członkowskich, których można użyć w metaplik i kontekst urządzenia ekranu. Aby uzyskać więcej informacji na temat tych funkcji, zobacz klasy [CDC](../mfc/reference/cdc-class.md) w *odwołania MFC*.  
+ Ponieważ domyślną implementację elementu `OnDrawMetafile` wywołuje formantu `OnDraw` funkcji, należy użyć tylko funkcji Członkowskich, które są odpowiednie na potrzeby metaplik i kontekstu urządzenia ekranu, chyba że przesłonisz `OnDrawMetafile`. Poniższa lista zawiera podzbiór `CDC` funkcji Członkowskich, które mogą być używane w metaplik i kontekst urządzenia ekranu. Aby uzyskać więcej informacji na temat tych funkcji, zobacz klasy [CDC](../mfc/reference/cdc-class.md) w *odwołanie MFC*.  
   
-|Łuk|BibBlt|Akordu|  
+|Łuk|BibBlt|Skrót|  
 |---------|------------|-----------|  
 |`Ellipse`|`Escape`|`ExcludeClipRect`|  
 |`ExtTextOut`|`FloodFill`|`IntersectClipRect`|  
@@ -91,25 +94,25 @@ W tym artykule opisano proces malowanie formantu ActiveX i jak można zmienić k
 |`SetViewportOrg`|`SetWindowExt`|`SetWindowORg`|  
 |`StretchBlt`|`TextOut`||  
   
- Oprócz `CDC` funkcji członkowskiej, istnieje kilka funkcji, które są zgodne w metaplik kontrolera domeny. Obejmują one [CPalette::AnimatePalette](../mfc/reference/cpalette-class.md#animatepalette), [CFont::CreateFontIndirect](../mfc/reference/cfont-class.md#createfontindirect)i trzy funkcje Członkowskie `CBrush`: [CreateBrushIndirect](../mfc/reference/cbrush-class.md#createbrushindirect), [CreateDIBPatternBrush](../mfc/reference/cbrush-class.md#createdibpatternbrush), i [CreatePatternBrush](../mfc/reference/cbrush-class.md#createpatternbrush).  
+ Oprócz `CDC` funkcji elementów członkowskich, istnieje kilka funkcji, które są zgodne w metaplik kontrolera domeny. Obejmują one [CPalette::AnimatePalette](../mfc/reference/cpalette-class.md#animatepalette), [CFont::CreateFontIndirect](../mfc/reference/cfont-class.md#createfontindirect)i trzy funkcje elementów członkowskich `CBrush`: [CreateBrushIndirect](../mfc/reference/cbrush-class.md#createbrushindirect), [CreateDIBPatternBrush](../mfc/reference/cbrush-class.md#createdibpatternbrush), i [CreatePatternBrush](../mfc/reference/cbrush-class.md#createpatternbrush).  
   
- Funkcje, które nie są rejestrowane w metaplik są: [DrawFocusRect](../mfc/reference/cdc-class.md#drawfocusrect), [DrawIcon](../mfc/reference/cdc-class.md#drawicon), [DrawText](../mfc/reference/cdc-class.md#drawtext), [ExcludeUpdateRgn](../mfc/reference/cdc-class.md#excludeupdatergn), [FillRect](../mfc/reference/cdc-class.md#fillrect), [FrameRect](../mfc/reference/cdc-class.md#framerect), [GrayString](../mfc/reference/cdc-class.md#graystring), [InvertRect](../mfc/reference/cdc-class.md#invertrect), [ScrollDC](../mfc/reference/cdc-class.md#scrolldc)i [TabbedTextOut](../mfc/reference/cdc-class.md#tabbedtextout). Ponieważ metaplik kontrolera domeny nie jest rzeczywiście skojarzone z urządzeniem, nie można używać SetDIBits, GetDIBits i CreateDIBitmap metaplik kontrolera domeny. Umożliwia SetDIBitsToDevice i StretchDIBits z metaplik kontrolera domeny jako miejsca docelowego. [CreateCompatibleDC](../mfc/reference/cdc-class.md#createcompatibledc), [CreateCompatibleBitmap](../mfc/reference/cbitmap-class.md#createcompatiblebitmap), i [CreateDiscardableBitmap](../mfc/reference/cbitmap-class.md#creatediscardablebitmap) nie są znaczące z metaplik kontrolera domeny.  
+ Funkcje, które nie są rejestrowane w metaplik: [DrawFocusRect](../mfc/reference/cdc-class.md#drawfocusrect), [DrawIcon](../mfc/reference/cdc-class.md#drawicon), [DrawText](../mfc/reference/cdc-class.md#drawtext), [ExcludeUpdateRgn](../mfc/reference/cdc-class.md#excludeupdatergn), [FillRect](../mfc/reference/cdc-class.md#fillrect), [FrameRect](../mfc/reference/cdc-class.md#framerect), [GrayString](../mfc/reference/cdc-class.md#graystring), [InvertRect](../mfc/reference/cdc-class.md#invertrect), [ScrollDC](../mfc/reference/cdc-class.md#scrolldc)i [TabbedTextOut](../mfc/reference/cdc-class.md#tabbedtextout). Ponieważ metaplik kontrolera domeny nie jest faktycznie skojarzony z urządzeniem, nie można używać SetDIBits GetDIBits i CreateDIBitmap metaplik kontrolera domeny. SetDIBitsToDevice i StretchDIBits z metaplik kontrolera domeny można użyć jako miejsca docelowego. [CreateCompatibleDC](../mfc/reference/cdc-class.md#createcompatibledc), [CreateCompatibleBitmap](../mfc/reference/cbitmap-class.md#createcompatiblebitmap), i [CreateDiscardableBitmap](../mfc/reference/cbitmap-class.md#creatediscardablebitmap) nie są istotne przy użyciu metaplik kontrolera domeny.  
   
- Inny punkt do uwzględnienia przy użyciu metaplik kontrolera domeny jest, że współrzędnych nie może być podawana w pikselach. Z tego powodu wszystkie swój kod rysowania powinny być dostosowane do mieści się w prostokącie przekazany do `OnDraw` w *rcBounds* parametru. Zapobiega przypadkowemu rysowania poza kontrolą, ponieważ *rcBounds* reprezentuje rozmiar okna formantu.  
+ Inny należy wziąć pod uwagę podczas korzystania z metaplik kontroler domeny jest czy współrzędnych nie może być (w pikselach). Z tego powodu przekazywane do wszystkich swój kod rysowania powinny być dostosowane do mieści się w prostokącie `OnDraw` w *rcBounds* parametru. Zapobiega to przypadkowym malowania poza kontrolą, ponieważ *rcBounds* reprezentuje rozmiar okna formantu.  
   
- Po wdrożeniu metaplik renderowania dla formantu, przetestuj metaplik za pomocą kontenera testu. Zobacz [testowanie właściwości i zdarzeń za pomocą kontenera testu](../mfc/testing-properties-and-events-with-test-container.md) informacji na temat sposobu dostępu kontener testu.  
+ Po udało Ci się wdrożyć metaplik renderowania dla formantu, należy użyć kontenera testu do testowania metaplik. Zobacz [testowanie właściwości i zdarzeń za pomocą kontenera testu](../mfc/testing-properties-and-events-with-test-container.md) informacji na temat dostępu do kontenera testu.  
   
 #### <a name="to-test-the-controls-metafile-using-test-container"></a>Aby przetestować metaplik formantu za pomocą kontenera testu  
   
-1.  W kontenerze testowym **Edytuj** menu, kliknij przycisk **Wstaw nowy formant**.  
+1.  W kontenerze testów **Edytuj** menu, kliknij przycisk **Wstaw nową kontrolkę**.  
   
-2.  W **Wstaw nowy formant** wybierz formantu a kliknij **OK**.  
+2.  W **Wstaw nową kontrolkę** polu, wybierz kontrolkę i kliknij przycisk **OK**.  
   
-     Formant pojawią się w kontenerze testowym.  
+     Kontrolka pojawi się w kontenerze testowym.  
   
-3.  Na **kontroli** menu, kliknij przycisk **rysowania metaplik**.  
+3.  Na **kontroli** menu, kliknij przycisk **Rysowanie metaplik**.  
   
-     Osobne okno jest wyświetlane, w którym jest wyświetlany metaplik. Można zmienić rozmiar tego okna, aby zobaczyć wpływ skalowania formantu metaplik. W dowolnej chwili możesz zamknąć to okno.  
+     Oddzielne okno pojawia się, w którym jest wyświetlany metaplik. Można zmienić rozmiar tego okna, aby zobaczyć, jak skalowanie wpływa na metaplik formantu. Możesz zamknąć to okno, w dowolnym momencie.  
   
 ## <a name="see-also"></a>Zobacz też  
  [Kontrolki ActiveX MFC](../mfc/mfc-activex-controls.md)

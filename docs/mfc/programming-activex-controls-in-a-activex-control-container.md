@@ -1,7 +1,7 @@
 ---
-title: 'Kontenery formantów ActiveX: Programowanie formantów ActiveX w kontenerze formantów ActiveX | Dokumentacja firmy Microsoft'
+title: 'Kontenery kontrolek ActiveX: Programowanie kontrolek ActiveX w kontenerze kontrolek ActiveX | Dokumentacja firmy Microsoft'
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 09/12/2018
 ms.technology:
 - cpp-mfc
 ms.topic: conceptual
@@ -22,77 +22,82 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e1bd8a99faa4cf0444782f402e69da761a8c25e2
-ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
+ms.openlocfilehash: f68e74c5374379019fd8fd5b0348b34e36005171
+ms.sourcegitcommit: b4432d30f255f0cb58dce69cbc8cbcb9d44bc68b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/25/2018
-ms.locfileid: "36929958"
+ms.lasthandoff: 09/13/2018
+ms.locfileid: "45535330"
 ---
 # <a name="activex-control-containers-programming-activex-controls-in-an-activex-control-container"></a>Kontenery kontrolek ActiveX: programowanie kontrolek ActiveX w kontenerze kontrolek ActiveX
-W tym artykule opisano proces do uzyskiwania dostępu do narażonych [metody](../mfc/mfc-activex-controls-methods.md) i [właściwości](../mfc/mfc-activex-controls-properties.md) osadzonych formantów ActiveX. Zasadniczo spowoduje wykonaj następujące kroki:  
+W tym artykule opisano proces uzyskiwania dostępu do narażonych [metody](../mfc/mfc-activex-controls-methods.md) i [właściwości](../mfc/mfc-activex-controls-properties.md) osadzone formantów ActiveX. 
+
+>[!IMPORTANT]
+> ActiveX jest technologią starszą, która nie powinny być używane w przypadku nowych wdrożeń. Aby uzyskać więcej informacji na temat nowych technologii, które wypierają ActiveX zobacz [formantów ActiveX](activex-controls.md).
+
+Będzie po prostu wykonaj następujące kroki:  
   
-1.  [Wstawianie formantu ActiveX w projekcie kontenera ActiveX](../mfc/inserting-a-control-into-a-control-container-application.md) za pomocą galerii.  
+1.  [Wstaw kontrolkę ActiveX do projektu ActiveX w kontenerze](../mfc/inserting-a-control-into-a-control-container-application.md) przy użyciu galerii.  
   
-2.  [Zdefiniuj zmienną członkowską](../mfc/activex-control-containers-connecting-an-activex-control-to-a-member-variable.md) (lub inne formy dostępu) z tego samego typu co ActiveX kontrolować klasy otoki.  
+2.  [Zdefiniuj zmienną członkowską](../mfc/activex-control-containers-connecting-an-activex-control-to-a-member-variable.md) (lub inną formę dostępu) z tego samego typu co ActiveX kontrolować klasy otoki.  
   
-3.  [Kontrolki ActiveX programu](#_core_programming_the_activex_control) przy użyciu wstępnie zdefiniowanych funkcji elementów członkowskich klasy otoki.  
+3.  [Program formantu ActiveX](#_core_programming_the_activex_control) przy użyciu wstępnie zdefiniowane funkcje Członkowskie klasy otoki.  
   
- Dla tej dyskusji przyjęto założenie, że po utworzeniu projektu opartych na oknach dialogowych (o nazwie kontenera) z obsługą formantu ActiveX. Formantu próbki OK OK, zostaną dodane do Projekt wynikowy.  
+ Na potrzeby tego omówienia przyjęto założenie, że utworzono projektu oparte o okna dialogowe (o nazwie kontenera) przy użyciu obsługi formantów ActiveX. Pełna kontrola przykładowe OK i OK, zostaną dodane do wynikowego projektu.  
   
- Po kontroli OK zostaną wstawione do projektu (krok 1), włóż wystąpienia formantu OK do głównego okna dialogowego aplikacji.  
+ Po wstawieniu kontrolki OK do projektu (krok 1) należy wstawić wystąpienie kontrolki OK do głównego okna dialogowego aplikacji.  
   
 ## <a name="procedures"></a>Procedury  
   
-#### <a name="to-add-the-circ-control-to-the-dialog-template"></a>Aby dodać kontrolki OK do szablonu okna dialogowego  
+#### <a name="to-add-the-circ-control-to-the-dialog-template"></a>Aby dodać formant OK do szablonu okna dialogowego  
   
-1.  Załaduj projekt kontenera formantu ActiveX. Na przykład użyć `Container` projektu.  
+1.  Załaduj projekt kontener formantu ActiveX. W tym przykładzie użyj `Container` projektu.  
   
-2.  Na karcie Widok zasobów.  
+2.  Kliknij kartę widoku zasobów.  
   
 3.  Otwórz **okna dialogowego** folderu.  
   
-4.  Kliknij dwukrotnie szablon okno główne okno dialogowe. Na przykład użyć **IDD_CONTAINER_DIALOG**.  
+4.  Kliknij dwukrotnie szablonu okna dialogowego głównego. W tym przykładzie użyj **IDD_CONTAINER_DIALOG**.  
   
-5.  Kliknij ikonę kontroli OK w przyborniku.  
+5.  Kliknij ikonę kontrolki OK w przyborniku.  
   
-6.  Kliknij punkt, w oknie dialogowym Wstaw formant OK.  
+6.  Kliknij punkt, w oknie dialogowym, aby wstawić formant OK.  
   
-7.  Z **pliku** menu, wybierz **Zapisz wszystko** można zapisać wszystkich zmian do szablonu — okno dialogowe.  
+7.  Z **pliku** menu, wybierz **Zapisz wszystko** Aby zapisać wszystkie zmiany do szablonu okna dialogowego.  
   
-## <a name="modifications-to-the-project"></a>Zmiany do projektu  
- Aby włączyć OK kontroli dostępu do aplikacji kontenera, Visual C++ automatycznie dodaje klasy otoki (`CCirc`) pliku implementacji (. CPP) do projektu kontenera i nagłówka klasy otoki (. H) pliku do pliku nagłówka okno dialogowe:  
+## <a name="modifications-to-the-project"></a>Modyfikacje projektu  
+ Aby umożliwić aplikacji kontenera uzyskać dostęp do formantu OK, Visual C++ automatycznie dodaje klasy otoki (`CCirc`) pliku implementacji (. CPP) do projektu kontenera i nagłówek klasy otoki (. H) pliku do pliku nagłówka okno dialogowe:  
   
  [!code-cpp[NVC_MFC_AxCont#1](../mfc/codesnippet/cpp/programming-activex-controls-in-a-activex-control-container_1.h)]  
   
-##  <a name="_core_the_wrapper_class_header_28h29_file"></a> Nagłówka klasy otoki (. H) plik  
- Pobierz i ustaw właściwości (i wywołania metod) dla formantu OK `CCirc` klasy otoki zawiera deklarację narażonych wszystkie metody i właściwości. W tym przykładzie deklaracji znajdują się w okólnik H. Poniższy przykład jest częścią klasy `CCirc` definiuje interfejsów formantu ActiveX:  
+##  <a name="_core_the_wrapper_class_header_28h29_file"></a> Nagłówek klasy otoki (. H) plik  
+ Aby uzyskać i ustawić właściwości (i wywoływać metody) dla formantu OK `CCirc` klasy otoki zawiera deklarację narażonych wszystkie metody i właściwości. W tym przykładzie te deklaracje znajdują się w okólnik H. Poniższy przykład jest to część klasy `CCirc` definiujący interfejsów formantu ActiveX:  
   
  [!code-cpp[NVC_MFC_AxCont#2](../mfc/codesnippet/cpp/programming-activex-controls-in-a-activex-control-container_2.h)]  
 [!code-cpp[NVC_MFC_AxCont#3](../mfc/codesnippet/cpp/programming-activex-controls-in-a-activex-control-container_3.h)]  
   
- Następnie można wywołać funkcji z innych procedur aplikacji przy użyciu normalnego składni języka C++. Aby uzyskać więcej informacji na temat używania tej funkcji Członkowskich ustawić dostęp do metody i właściwości formantu, zobacz sekcję [programowania formantu ActiveX](#_core_programming_the_activex_control).  
+ Te funkcje można następnie wywołać innej procedury aplikacji przy użyciu normalnych składni języka C++. Aby uzyskać więcej informacji na temat korzystania z tej funkcji elementu członkowskiego, ustaw na dostęp do metod i właściwości formantu, zobacz sekcję [programowanie kontrolek ActiveX](#_core_programming_the_activex_control).  
   
-##  <a name="_core_member_variable_modifications_to_the_project"></a> Modyfikacje zmiennej elementu członkowskiego do projektu  
- Gdy formant ActiveX został dodany do projektu i osadzone w kontenerze — okno dialogowe, jest dostępny przez inne części projektu. Najprostszym sposobem kontroli dostępu jest [Utwórz zmienną członkowską](../mfc/activex-control-containers-connecting-an-activex-control-to-a-member-variable.md) klasy okna dialogowego `CContainerDlg` (krok 2), czyli z tego samego typu co klasy otoki dodane do projektu w programie Visual C++. Można następnie użyć zmiennej członkowskiej do formantu osadzonego w dowolnym momencie.  
+##  <a name="_core_member_variable_modifications_to_the_project"></a> Element członkowski modyfikacje zmiennych do projektu  
+ Gdy formant ActiveX zostanie dodany do projektu i osadzone w kontenerze okno dialogowe, uzyskiwania dostępu przez inne części projektu. Najprostszym sposobem, aby uzyskać dostęp do formantu jest [Utwórz zmienną składową](../mfc/activex-control-containers-connecting-an-activex-control-to-a-member-variable.md) klasy okna dialogowego `CContainerDlg` (krok 2), czyli z tego samego typu co klasa otoki dodane do projektu przez Visual C++. Następnie można zmiennej składowej dostęp do formantu osadzonego w dowolnym momencie.  
   
- Gdy **Dodawanie zmiennej członkowskiej** dodaje okno dialogowe *m_circctl* elementu członkowskiego zmiennej do projektu, dodane również następujące wiersze do pliku nagłówka (. H) z `CContainerDlg` klasy:  
+ Gdy **Dodawanie zmiennej członkowskiej** dodaje okno dialogowe *m_circctl* składowej zmiennej do projektu dodano również następujące wiersze do pliku nagłówka (. Godz.) z `CContainerDlg` klasy:  
   
  [!code-cpp[NVC_MFC_AxCont#4](../mfc/codesnippet/cpp/programming-activex-controls-in-a-activex-control-container_4.h)]  
 [!code-cpp[NVC_MFC_AxCont#5](../mfc/codesnippet/cpp/programming-activex-controls-in-a-activex-control-container_5.h)]  
   
- Ponadto wywołanie **ddx_control —** jest automatycznie dodawany do `CContainerDlg`w implementacji `DoDataExchange`:  
+ Ponadto wywołanie **ddx_control —** jest automatycznie dodawany do `CContainerDlg`przez implementację `DoDataExchange`:  
   
  [!code-cpp[NVC_MFC_AxCont#6](../mfc/codesnippet/cpp/programming-activex-controls-in-a-activex-control-container_6.cpp)]  
   
-##  <a name="_core_programming_the_activex_control"></a> Programowania formantu ActiveX  
- W tym momencie zostały wstawione do szablonu okna dialogowego formantu ActiveX i utworzonej dla niego zmienną członkowską. Typowe składni języka C++ umożliwia teraz dostęp do właściwości i metod formantu osadzonego.  
+##  <a name="_core_programming_the_activex_control"></a> Programowanie kontrolek ActiveX  
+ W tym momencie masz dodaje formant ActiveX do szablonu okna dialogowego i utworzono zmienną składową. Typowej składni języka C++ umożliwia teraz dostęp do właściwości i metod formantu osadzonego.  
   
- Jak wspomniano (w [nagłówka klasy otoki (. H) pliku](#_core_the_wrapper_class_header_28h29_file)), plik nagłówka (. H) dla `CCirc` klasy otoki, w tym okólnik wielkość H, zawiera listę funkcji elementów członkowskich, które służą do pobierania i ustawiania wartości właściwości uwidocznione. Dostępne są również funkcje Członkowskie dla metod uwidocznione.  
+ Jak wspomniano (w [nagłówka klasy otoki (. Plik H)](#_core_the_wrapper_class_header_28h29_file)), plik nagłówkowy (. H) aby `CCirc` klasy otoki, w tym okólnik wielkości liter Godz., zawiera listę funkcji Członkowskich, które umożliwia pobieranie i ustawianie dowolnej wartości właściwości narażone. Dostępne są również funkcji elementów członkowskich dla narażonych metod.  
   
- Modyfikowanie właściwości formantu spójne znajduje się w `OnInitDialog` funkcji członkowskiej klasy głównym oknie dialogowym. Ta funkcja jest wywoływana bezpośrednio przed zamknięciem okna dialogowego zostanie wyświetlony i służy do inicjowania jego zawartość, łącznie z dowolnego z jego formantów.  
+ Typowe miejscem, aby zmodyfikować właściwości formantu jest `OnInitDialog` funkcji składowej klasy głównego okna dialogowego. Ta funkcja jest wywoływana tuż przed okno dialogowe pojawia się i służy do inicjowania jego zawartość, wraz ze wszystkimi jego środków kontroli.  
   
- Poniższy przykład kodu wykorzystuje *m_circctl* zmiennej członkowskiej, aby zmodyfikować właściwości podpisu i CircleShape osadzonego formantu OK:  
+ Poniższy przykład kodu wykorzystuje *m_circctl* zmiennej składowej, aby zmodyfikować właściwości podpisu i CircleShape formantu osadzonego OK:  
   
  [!code-cpp[NVC_MFC_AxCont#7](../mfc/codesnippet/cpp/programming-activex-controls-in-a-activex-control-container_7.cpp)]  
   

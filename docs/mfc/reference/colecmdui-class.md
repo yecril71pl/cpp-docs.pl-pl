@@ -1,7 +1,7 @@
 ---
 title: Klasa COleCmdUI | Dokumentacja firmy Microsoft
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 09/12/2018
 ms.technology:
 - cpp-mfc
 ms.topic: reference
@@ -24,12 +24,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9b057620e0ea348559b9c37f55ba7658b7f5270c
-ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
+ms.openlocfilehash: 4ece2d45bdce490d09c7195deec380728d79392d
+ms.sourcegitcommit: b4432d30f255f0cb58dce69cbc8cbcb9d44bc68b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/05/2018
-ms.locfileid: "37851486"
+ms.lasthandoff: 09/13/2018
+ms.locfileid: "45535247"
 ---
 # <a name="colecmdui-class"></a>Klasa COleCmdUI
 Implementuje metodę dla MFC zaktualizować stan obiektów interfejsu użytkownika związane z `IOleCommandTarget`-driven funkcje aplikacji.  
@@ -61,7 +61,7 @@ class COleCmdUI : public CCmdUI
   
  `COleCmdUI` zezwala na DocObject w celu odbierania poleceń, które pochodzą z jego kontenerem interfejsu użytkownika (na przykład nowy plik, Otwórz, drukowania i tak dalej) i umożliwia kontenera w celu odbierania poleceń, które pochodzą z interfejsu użytkownika DocObject. Mimo że `IDispatch` może służyć do wysyłania tych samych poleceń `IOleCommandTarget` zapewnia prostszy sposób wykonywania zapytań i wykonać operacji, ponieważ opiera się na zestaw standardowych poleceń, zwykle bez argumentów, i jest używana nie informacji o typie. `COleCmdUI` można włączyć, aktualizowanie i ustawić inne właściwości polecenia interfejsu użytkownika DocObject. Jeśli chcesz wywołać polecenie wywołania [COleServerDoc::OnExecOleCmd](../../mfc/reference/coleserverdoc-class.md#onexecolecmd).  
   
- Aby uzyskać więcej informacji na temat DocObjects zobacz [CDocObjectServer](../../mfc/reference/cdocobjectserver-class.md) i [CDocObjectServerItem](../../mfc/reference/cdocobjectserveritem-class.md). Zobacz też [Internet pierwszych kroków: dokumenty aktywne](../../mfc/active-documents-on-the-internet.md) i [dokumenty aktywne](../../mfc/active-documents-on-the-internet.md).  
+ Aby uzyskać więcej informacji na temat DocObjects zobacz [CDocObjectServer](../../mfc/reference/cdocobjectserver-class.md) i [CDocObjectServerItem](../../mfc/reference/cdocobjectserveritem-class.md).  
   
 ## <a name="inheritance-hierarchy"></a>Hierarchia dziedziczenia  
  [CCmdUI](../../mfc/reference/ccmdui-class.md)  

@@ -18,21 +18,21 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a5fbd58954e5b5b0bf16a052e3a667e28f6bc981
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 29f678eb776e17fc9dc7cbd07e9a0fa91eef530c
+ms.sourcegitcommit: fb9448eb96c6351a77df04af16ec5c0fb9457d9e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 09/13/2018
 ms.locfileid: "33383312"
 ---
 # <a name="using-crebarctrl"></a>Korzystanie z CReBarCtrl
-Formantu paska pomocniczego działa jako kontener dla okien podrzędnych. Te okna podrzędnego często inne formanty są przypisane do grupy formantu paska pomocniczego. Formantu paska pomocniczego może zawierać jeden lub więcej grup, z każdej grupy o dowolnej kombinacji pasek uchwytu, mapy bitowej etykietę tekstową i okna podrzędnego. Jednak pasma nie może zawierać więcej niż jedno okno podrzędne.  
+Kontrolki paska pomocniczego działa jako kontener dla okien podrzędnych. Tych okien podrzędnych często inne kontrolki, są przypisane do grupy kontrolki paska pomocniczego. Kontrolki paska pomocniczego może zawierać jeden lub więcej grup, z każdego pasma o dowolnej kombinacji pasek uchwytu, mapy bitowej, etykietę tekstową i okna podrzędnego. Jednak grupy nie może zawierać więcej niż jedno okno podrzędne.  
   
- Na poniższej ilustracji przedstawiono formantu paska pomocniczego, która ma dwa pasma. Zawiera jedną pasek uchwytu, etykietę tekstową ("Address") i okno podrzędne pola kombi. Inne grupy zawiera pasek uchwytu, etykietę tekstową i prosty paska narzędzi (zaimplementowany przy użyciu okna podrzędnego).  
+ Poniższa ilustracja przedstawia formantu paska pomocniczego, który ma dwa pasma. Jeden zawiera pasek uchwytu, etykieta tekstowa ("Address") i okno podrzędne pola kombi. Inne urządzenia band zawiera pasek uchwytu, etykietę tekstową i prostych narzędzi, (implementowane za pomocą okna podrzędnego).  
   
- ![Paska pomocniczego kontrolki, która ma dwa pasma](../mfc/media/vc4ruz1.gif "vc4ruz1")  
+ ![Paska pomocniczego kontrolki, który ma dwa paski](../mfc/media/vc4ruz1.gif "vc4ruz1")  
   
-## <a name="what-do-you-want-to-know-more-about"></a>Co chcesz dowiedzieć się więcej o  
+## <a name="what-do-you-want-to-know-more-about"></a>Co chcesz dowiedzieć się więcej na temat  
   
 -   [CReBar a CReBarCtrl](../mfc/crebar-vs-crebarctrl.md)  
   

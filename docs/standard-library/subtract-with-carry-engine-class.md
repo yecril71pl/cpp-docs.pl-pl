@@ -26,12 +26,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f6bd4a7827ec5223297f3ec3195724b62d4dc72c
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: bfb0c3c0544a9c58801f98567825e7e97e48b13c
+ms.sourcegitcommit: fb9448eb96c6351a77df04af16ec5c0fb9457d9e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38955309"
+ms.lasthandoff: 09/13/2018
+ms.locfileid: "43687990"
 ---
 # <a name="subtractwithcarryengine-class"></a>subtract_with_carry_engine — Klasa
 
@@ -84,7 +84,7 @@ Chociaż można utworzyć generatora z tego aparatu bezpośrednio, umożliwia ta
 `ranlux48_base`: Używany jako podstawa `ranlux48`.
 `typedef subtract_with_carry_engine<unsigned long long, 48, 5, 12> ranlux48_base;`
 
-Aby uzyskać szczegółowe informacje na temat subract z algorytmem aparatem przeniesienia, zobacz artykułu w Wikipedii [generator opóźnioną kopię Fibonacci](http://go.microsoft.com/fwlink/p/?linkid=402445).
+Aby uzyskać szczegółowe informacje na temat subract z algorytmem aparatem przeniesienia, zobacz artykułu w Wikipedii [generator opóźnioną kopię Fibonacci](https://en.wikipedia.org/wiki/Lagged_Fibonacci_generator).
 
 ## <a name="requirements"></a>Wymagania
 

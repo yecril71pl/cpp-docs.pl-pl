@@ -12,27 +12,27 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: caa6d435db98c7177cbf55b866bb8e5a4a110c1d
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 22c2afae3678e945678862059034b4d60be456b0
+ms.sourcegitcommit: fb9448eb96c6351a77df04af16ec5c0fb9457d9e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 09/13/2018
 ms.locfileid: "32380605"
 ---
 # <a name="stack-allocation"></a>Alokacja stosu
-Funkcja prologu jest odpowiedzialny za przydzielania miejsca na stosie dla zmiennych lokalnych, zapisane rejestrowania, stosu parametry i parametry rejestru.  
+Prologu funkcji jest odpowiedzialny za przydzielanie miejsca na stosie dla zmiennych lokalnych, zapisane rejestrów, stos parametry i parametry rejestru.  
   
- Parametr obszar jest zawsze w dolnej części stosu (nawet jeśli jest używany alloca), dzięki czemu zawsze będzie sąsiadujące adres zwrotny podczas wszystkie wywołania funkcji. Zawiera co najmniej cztery wpisy, ale zawsze wystarczającej ilości miejsca dla wszystkich parametrów wymagane przez funkcję, która może zostać wywołana. Należy pamiętać, że jest zawsze przydzielone miejsce dla parametrów rejestru nawet wtedy, gdy parametry się nigdy nie są podłączony do stosu; wywoływany jest gwarantowana przydzielone miejsce jego parametrów. Adresy domowe są wymagane dla argumentów rejestru, dlatego ciągły obszar jest dostępna w przypadku, gdy wywoływana funkcja musi przyjąć adresu listy argumentów (va_list) lub poszczególnych argumentów. Ten obszar zapewnia również wygodne miejsce do zapisania rejestru argumentów podczas wykonywania thunk i jako opcji debugowania (na przykład ułatwia argumenty łatwe do odnalezienia podczas debugowania, jeśli są one przechowywane na adresy domowe w kodzie prologu). Nawet wtedy, gdy wywoływana funkcja ma mniej niż 4 parametry, te lokalizacje 4 stosu skutecznie własnością wywołana funkcja i mogą być używane przez wywołanej funkcji do innych celów, oprócz zapisywania parametru wartości rejestru.  W związku z tym wywołujący może nie zostać zapisana informacje w tym regionie stosu w wywołaniu funkcji.  
+ Parametr obszar jest zawsze w dolnej części stosu (nawet jeśli jest używany alloca), dzięki czemu zawsze będzie sąsiadujące adres zwrotny podczas każde wywołanie funkcji. Zawiera on co najmniej cztery wpisy, ale zawsze wystarczającej ilości miejsca dla wszystkich parametrów wymaganych przez dowolną funkcję, która może zostać wywołana. Należy zauważyć, że dla parametrów rejestru miejsca jest zawsze przydzielana, nawet wtedy, gdy same parametry nigdy nie są umieszczone na stosie; / / wywoływany ma żadnej gwarancji, że miejsca przydzielonego dla jego parametrów. Adresy domowe są wymagane dla argumentów rejestru, więc ciągły obszar jest dostępna w przypadku, gdy wywołana funkcja musi przyjąć adresu listy argumentów (va_list) lub poszczególnych argumentu. Ten obszar zawiera również wygodne miejsce do zapisania rejestru argumentów podczas wykonywania thunk i opcję debugowania (na przykład, ułatwia argumenty znaleźć podczas debugowania, jeśli są one przechowywane na adresy domowe w kodzie prologu). Nawet wtedy, gdy wywołana funkcja ma następujące parametry mniej niż 4, te lokalizacje stosu 4 skutecznie własnością wywołanej funkcji i może być używany przez funkcję o nazwie do innych celów, oprócz zapisywanie parametru wartości rejestru.  Ten sposób obiekt wywołujący może nie zostać zapisana informacje w tym regionie stosu w wywołaniu funkcji.  
   
- Jeśli miejsce jest przydzielane dynamicznie (alloca) w funkcji, następnie nieulotnej rejestru muszą być używane jako wskaźnika ramki, aby oznaczyć base stałej części stosu i rejestru musi być zapisany i zainicjowany w prologu. Należy pamiętać, że użycie alloca wywołania do tej samej wywoływany z tego samego obiektu wywołującego może mieć różne adresy domowe ich parametry rejestru.  
+ Jeśli w funkcji miejsca jest przydzielany dynamicznie (alloca), następnie nieulotnej rejestru muszą być używane jako wskaźnik ramki, aby oznaczyć bazy stałej części stosu i rejestru musi być zapisany i inicjowana w prologu. Należy pamiętać, że użycie alloca wywołania do tej samej / / wywoływany z tego samego obiektu wywołującego może mieć różne adresy domowe ich parametrów rejestru.  
   
- Stos zostanie zachowany 16-bajtowych wyrównane, z wyjątkiem w prologu (na przykład po spoczywa adres zwrotny) oraz z wyjątkiem wskazanych w [typy funkcji](../build/function-types.md) dla klasy funkcji ramki.  
+ Stos zostanie zachowany 16-bajtowy wyrównane, z wyjątkiem w prologu (na przykład po zostanie przypisany adres zwrotny) i z wyjątkiem wskazanych w [typy funkcji](../build/function-types.md) dla klasy funkcje ramki.  
   
- Poniżej znajduje się, że przykład układu stosu, gdzie wywołania funkcji A niebędący liściem funkcji prologu funkcji B. A zawiera już przydzielone miejsce dla wszystkich parametrów rejestru i stosu wymagane przez B w dolnej części stosu. Wywołanie wypchnięcia adres zwrotny i prologu B przydziela miejsce dla jego zmiennych lokalnych, nieulotnej rejestrów i miejsce wymagane do jej do wywołania funkcji. Jeśli B używa alloca, miejsce jest przydzielane od lokalnego rejestru zmiennej/nieulotnej Zapisz obszaru i obszaru stosu parametru.  
+ Poniżej przedstawiono, że przykładowy układ stosu, w którym wywołania funkcji element niebędący liściem funkcji prologu funkcji B. A ma już przydzielone miejsce dla wszystkich parametrów rejestru i stosu wymagane przez B na dole stosu. Wywołanie wypycha adres zwrotny i prologu B przydziela miejsce dla jego zmiennych lokalnych, nieulotnej rejestrów i miejsce wymagane do jej do wywołania funkcji. Jeśli B używa alloca, miejsce jest przydzielane między lokalnego rejestru zmiennej/nieulotnej Zapisz obszar i obszaru stosu parametru.  
   
  ![Przykład konwersji AMD](../build/media/vcamd_conv_ex_5.png "vcAmd_conv_ex_5")  
   
- Gdy funkcja B wywołuje innej funkcji, adres zwrotny spoczywa poniżej adres domowy dla RCX.  
+ Gdy funkcja B wywołuje inną funkcję, adres zwrotny jest wypychane bezpośrednio pod adres domowy dla RCX.  
   
 ## <a name="see-also"></a>Zobacz też  
  [Wykorzystanie stosu](../build/stack-usage.md)

@@ -1,7 +1,7 @@
 ---
 title: Klasa CEdit | Dokumentacja firmy Microsoft
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 09/12/2018
 ms.technology:
 - cpp-mfc
 ms.topic: reference
@@ -104,12 +104,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 27ea5ccb0d15bd57a526c78cd3c57a4e83369ed0
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 4d3c7f9e1d638c547b2b340a610a52af9318c714
+ms.sourcegitcommit: b4432d30f255f0cb58dce69cbc8cbcb9d44bc68b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43757793"
+ms.lasthandoff: 09/13/2018
+ms.locfileid: "45535408"
 ---
 # <a name="cedit-class"></a>Klasa CEdit
 Oferuje funkcje formantu edycji Windows.  
@@ -520,7 +520,7 @@ BOOL GetHighlight(
  Wartość TRUE, jeśli ta metoda jest kończy się pomyślnie; w przeciwnym razie wartość FALSE.  
   
 ### <a name="remarks"></a>Uwagi  
- Ta metoda wysyła [EM_GETHILITE](/windows/desktop/Controls/em-gethilite) komunikat, który jest opisany w zestawie Windows SDK.  
+ Ta metoda wysyła [EM_GETHILITE](/windows/desktop/Controls/em-gethilite) komunikat, który jest opisany w zestawie Windows SDK. Zarówno `SetHighlight` i `GetHighlight` są obecnie włączone UNICODE tylko do kompilacji. 
   
 ##  <a name="getlimittext"></a>  CEdit::GetLimitText  
  Wywołaj tę funkcję elementu członkowskiego, aby pobrać limit tekstu, w tym `CEdit` obiektu.  
@@ -985,7 +985,7 @@ void SetHighlight(
 |[in] *ichEnd*|Liczony od zera indeks ostatniego znaku w zakresie tekstu, aby wyróżnić.|  
   
 ### <a name="remarks"></a>Uwagi  
- Ta metoda wysyła [EM_SETHILITE](/windows/desktop/Controls/em-sethilite) komunikat, który jest opisany w zestawie Windows SDK.  
+ Ta metoda wysyła [EM_SETHILITE](/windows/desktop/Controls/em-sethilite) komunikat, który jest opisany w zestawie Windows SDK.  Ta metoda wysyła [EM_SETHILITE](/windows/desktop/Controls/em-sethilite) komunikat, który jest opisany w zestawie Windows SDK. Zarówno `SetHighlight` i `GetHighlight` są włączone, UNICODE kompilacji tylko. 
   
 ##  <a name="setlimittext"></a>  CEdit::SetLimitText  
  Wywołaj tę funkcję elementu członkowskiego, aby ustawić limit tekstu, w tym `CEdit` obiektu.  

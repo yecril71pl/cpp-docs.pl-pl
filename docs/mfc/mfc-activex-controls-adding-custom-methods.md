@@ -1,7 +1,7 @@
 ---
-title: 'Formanty MFC ActiveX: Dodawanie metod niestandardowych | Dokumentacja firmy Microsoft'
+title: 'Kontrolki ActiveX MFC: Dodawanie metod niestandardowych | Dokumentacja firmy Microsoft'
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 09/12/2018
 ms.technology:
 - cpp-mfc
 ms.topic: conceptual
@@ -15,68 +15,71 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6b20d649bc89d9d66103f258ebdfdac767f431b5
-ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
+ms.openlocfilehash: 3f0d52f3dec2967cc7a8d859e1f6845fe93c6fd6
+ms.sourcegitcommit: b4432d30f255f0cb58dce69cbc8cbcb9d44bc68b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/25/2018
-ms.locfileid: "36930051"
+ms.lasthandoff: 09/13/2018
+ms.locfileid: "45534888"
 ---
 # <a name="mfc-activex-controls-adding-custom-methods"></a>Kontrolki ActiveX MFC: dodawanie metod niestandardowych
-Niestandardowe metody różnią się od metod standardowych, nie są już zaimplementowane przez `COleControl`. Należy podać implementacji dla każdej niestandardowej metody dodawany do formantu.  
+Niestandardowe metody różnią się od metod standardowych, w tym, że nie są już zaimplementowane przez `COleControl`. Należy podać implementacja dla każdej niestandardowej metody dodanych do formantu.
+
+>[!IMPORTANT]
+> ActiveX jest technologią starszą, która nie powinny być używane w przypadku nowych wdrożeń. Aby uzyskać więcej informacji na temat nowych technologii, które wypierają ActiveX zobacz [formantów ActiveX](activex-controls.md).  
   
- Użytkownik formantu ActiveX można wywołać metody niestandardowej w dowolnym momencie do wykonania akcji specyficzne dla formantu. Wpis mapy wysyłania niestandardowych metod jest w formie disp_function —.  
+ Użytkownik formantu ActiveX, można wywołać metodę niestandardowe, w dowolnym momencie, aby wykonać akcje specyficzne dla kontrolki. Wpis mapy wysyłania niestandardowych metod jest DISP_FUNCTION formularza.  
   
 ##  <a name="_core_adding_a_custom_method_with_classwizard"></a> Dodawanie niestandardowej metody z Kreator dodawania metody  
- W poniższej procedurze przedstawiono Dodawanie niestandardowej metody PtInCircle do formantu ActiveX szkielet kodu. PtInCircle Określa, czy współrzędne przekazany do formantu są wewnątrz lub na zewnątrz okręgu. Tę samą procedurę można również dodać innych metod niestandardowych. Zastąp nazwę niestandardowej metody i jego parametrów dla nazwy metody PtInCircle i parametry.  
+ Poniższa procedura demonstruje, dodając niestandardową metodę ptincircle — do formantu ActiveX szkielet kodu. Ptincircle — Określa, czy współrzędne przekazany do kontrolki są wewnątrz lub na zewnątrz koła. Tę samą procedurę można również dodawać inne niestandardowe metody. Zastąp nazwę niestandardową metodę i jego parametrów ptincircle — Nazwa metody i parametrów.  
   
 > [!NOTE]
->  W tym przykładzie użyto `InCircle` funkcji w artykule zdarzenia. Aby uzyskać więcej informacji dotyczących tej funkcji, zobacz artykuł [kontrolki ActiveX MFC: Dodawanie zdarzeń niestandardowych do formantu ActiveX](../mfc/mfc-activex-controls-adding-custom-events.md).  
+>  W tym przykładzie użyto `InCircle` funkcji z tego artykułu zdarzenia. Aby uzyskać więcej informacji na temat tej funkcji, zobacz artykuł [kontrolki ActiveX MFC: Dodawanie zdarzeń niestandardowych do kontrolki ActiveX](../mfc/mfc-activex-controls-adding-custom-events.md).  
   
-#### <a name="to-add-the-ptincircle-custom-method-using-the-add-method-wizard"></a>Aby dodać PtInCircle niestandardowej metody za pomocą Kreatora dodawania — metoda  
+#### <a name="to-add-the-ptincircle-custom-method-using-the-add-method-wizard"></a>Aby dodać ptincircle — metoda niestandardowa, za pomocą Kreatora dodawania — metoda  
   
-1.  Załadowanie projektu formantu.  
+1.  Załaduj projekt formantu.  
   
-2.  W widoku klas rozwiń węzeł Biblioteka formantu.  
+2.  W widoku klas rozwiń węzeł biblioteki kontrolki.  
   
-3.  Kliknij prawym przyciskiem myszy węzeł interfejsu dla formantu (drugiego węzła węzeł biblioteki), aby otworzyć menu skrótów.  
+3.  Kliknij prawym przyciskiem myszy węzeł interfejsu dla kontrolki (drugi węzeł węzła biblioteki), aby otworzyć menu skrótów.  
   
-4.  W menu skrótów kliknij **Dodaj** , a następnie kliknij przycisk **Dodaj metodę**.  
+4.  W menu skrótów kliknij **Dodaj** a następnie kliknij przycisk **Dodaj metodę**.  
   
      Spowoduje to otwarcie Kreatora dodawania metody.  
   
-5.  W **nazwę metody** wpisz *PtInCircle*.  
+5.  W **nazwę metody** wpisz *ptincircle —*.  
   
-6.  W **wewnętrzna nazwa** wpisz nazwę metody wewnętrznej funkcji lub użyj wartości domyślnej (w tym przypadku *PtInCircle*).  
+6.  W **wewnętrzna nazwa** wpisz nazwę metody wewnętrznej funkcji lub użyj wartości domyślnej (w tym przypadku *ptincircle —*).  
   
-7.  W **typu zwracanego** kliknij **VARIANT_BOOL** dla zwracanego typu metody.  
+7.  W **typie zwracanym** kliknij **VARIANT_BOOL** dla zwracanego typu metody.  
   
-8.  Przy użyciu **typ parametru** i **Nazwa parametru** formantów, Dodaj parametr o nazwie *xCoord* (typ *OLE_XPOS_PIXELS*).  
+8.  Za pomocą **typ parametru** i **Nazwa parametru** formantów, Dodaj parametr o nazwie *xCoord* (typ *OLE_XPOS_PIXELS*).  
   
-9. Przy użyciu **typ parametru** i **Nazwa parametru** formantów, Dodaj parametr o nazwie *yCoord* (typ *OLE_YPOS_PIXELS*).  
+9. Za pomocą **typ parametru** i **Nazwa parametru** formantów, Dodaj parametr o nazwie *yCoord* (typ *OLE_YPOS_PIXELS*).  
   
 10. Kliknij przycisk **Zakończ**.  
   
-##  <a name="_core_classwizard_changes_for_custom_methods"></a> Dodaj metody kreatora zmiany dla metod niestandardowych  
- Po dodaniu niestandardowej metody Kreator dodawania metody sprawia, że pewne zmiany do nagłówka klasy formantu (. H) i implementacji (. Pliki CPP). Następujący wiersz jest dodawany do deklaracji mapy wysyłania nagłówka klasy formantu (. H) plików:  
+##  <a name="_core_classwizard_changes_for_custom_methods"></a> Dodaj zmiany kreatora metody dla metod niestandardowych  
+ Po dodaniu niestandardowej metody, Kreator dodawania metody sprawia, że pewne zmiany do formantu nagłówka klasy (. Godz.), jak i implementację (. Plikach CPP). Następujący wiersz jest dodawany do deklaracji mapy wysyłania w nagłówku klasy formantu (. H) plik:  
   
  [!code-cpp[NVC_MFC_AxUI#18](../mfc/codesnippet/cpp/mfc-activex-controls-adding-custom-methods_1.h)]  
   
- Ten kod deklaruje obsługi metody wysyłania o nazwie `PtInCircle`. Ta funkcja może być wywoływany przez użytkownika formantu przy użyciu zewnętrzną nazwę `PtInCircle`.  
+ Ten kod deklaruje procedury obsługi wysyłania metodę o nazwie `PtInCircle`. Ta funkcja może być wywoływana przez użytkownika kontroli przy użyciu zewnętrzną nazwę `PtInCircle`.  
   
  Następujący wiersz jest dodawany do formantu. Plik IDL:  
   
  [!code-cpp[NVC_MFC_AxUI#19](../mfc/codesnippet/cpp/mfc-activex-controls-adding-custom-methods_2.idl)]  
   
- Ten wiersz przypisuje `PtInCircle` metoda określonych numer identyfikacyjny, metody pozycję na liście właściwości i metod Kreator dodawania metody. Ponieważ Kreator dodawania metody został użyty do dodania niestandardowej metody, wpis dla niego był automatycznie dodawany do projektu. Plik IDL.  
+ Ten wiersz przypisuje `PtInCircle` metody określonej numer identyfikacyjny, metoda pozycji na liście właściwości i metod Kreator dodawania metody. Ponieważ Kreator dodawania metody została użyta, aby dodać niestandardową metodę, wpis dla niego został dodany automatycznie do projektu. Plik IDL.  
   
- Ponadto następujący wiersz znajduje się w implementacji (. Pliku CPP) klasy formant został dodany do formantu mapy wysyłania:  
+ Ponadto, znajduje się następujący wiersz w implementacji (. Plik CPP) klasy kontrolki, zostanie dodany do mapy wysyłania formantu:  
   
  [!code-cpp[NVC_MFC_AxUI#20](../mfc/codesnippet/cpp/mfc-activex-controls-adding-custom-methods_3.cpp)]  
   
- Disp_function — makro mapuje metody `PtInCircle` funkcji obsługi formantu, `PtInCircle`, deklaruje typ zwrotny jako **VARIANT_BOOL**i deklaruje dwa parametry typu **vts_xpos_pixels —** i **VTS_YPOSPIXELS** do przekazania do `PtInCircle`.  
+ DISP_FUNCTION — makro mapuje metody `PtInCircle` funkcję obsługi formantu, `PtInCircle`, deklaruje typ zwracany jako **VARIANT_BOOL**i deklaruje dwa parametry typu **VTS_XPOS_PIXELS** i **VTS_YPOSPIXELS** mają być przekazane do `PtInCircle`.  
   
- Ponadto Kreator dodawania metody dodaje funkcję stub `CSampleCtrl::PtInCircle` z dolną krawędzią formantu implementacji (. Pliku CPP). Aby uzyskać `PtInCircle` działanie, jak wspomniano wcześniej, go muszą zostać zmodyfikowane w następujący sposób:  
+ Ponadto Kreator dodawania metody dodaje funkcję klasy zastępczej `CSampleCtrl::PtInCircle` do dolnej części kontrolki implementacji (. Plik CPP). Aby uzyskać `PtInCircle` działanie, jak wspomniano wcześniej, jego muszą zostać zmodyfikowane w następujący sposób:  
   
  [!code-cpp[NVC_MFC_AxUI#21](../mfc/codesnippet/cpp/mfc-activex-controls-adding-custom-methods_4.cpp)]  
   

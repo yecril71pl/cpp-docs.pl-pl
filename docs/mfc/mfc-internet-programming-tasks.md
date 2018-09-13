@@ -1,7 +1,7 @@
 ---
-title: Zadania związane z programowaniem Internetu MFC | Dokumentacja firmy Microsoft
+title: Zadania programowania Internet MFC | Dokumentacja firmy Microsoft
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 09/12/2018
 ms.technology:
 - cpp-mfc
 ms.topic: conceptual
@@ -15,31 +15,31 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: df7efbc8d29b2e36c6911255389cc270e7bf5e37
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 4e8d8fab6fe78c6ca1e32f7973327d2285cfcd20
+ms.sourcegitcommit: b4432d30f255f0cb58dce69cbc8cbcb9d44bc68b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33347249"
+ms.lasthandoff: 09/13/2018
+ms.locfileid: "45534914"
 ---
 # <a name="mfc-internet-programming-tasks"></a>MFC — zadania związane z programowaniem Internetu
-Ta sekcja zawiera szczegółowe informacje na temat dodawania obsługę Internetu dla poszczególnych aplikacji. Tematy zawierają dotyczące używania klas MFC do Internet Włącz istniejących aplikacji i jak dodać obsługę dokumentów aktywnych do istniejących składnika COM. Czy chcesz utworzyć dokument z aktualny giełdowych, wyniki football Pittsburgh firmy, i najnowszych temperatury w programie Microsoft Antarktyka zapewnia różne technologie, aby to zrobić za pośrednictwem Internetu.  
+Ta sekcja zawiera szczegółowe informacje na temat dodawania obsługi Internetu do aplikacji. Tematy obejmują, jak używać klasy MFC z obsługą Internetu istniejących aplikacji i jak dodać obsługę aktywnego dokumentu do istniejącego składnika COM. Czy chcesz utworzyć dokument z Associated giełdowych, wyniki football na energię, i najnowsze temperatury Antarktyda firmy Microsoft udostępnia wiele technologii, aby pomóc Ci to zrobić za pośrednictwem Internetu.  
   
- Aktywne technologie obejmują formantów ActiveX (dawniej formanty OLE) i dokumentów aktywnych; Wininet — łatwe pobieranie i zapisywanie plików w Internecie; i monikerów asynchronicznych pobierania danych wydajne. Visual C++ zawiera kreatorów, aby ułatwić szybkie rozpoczęcie pracy z aplikacją początkowego. Aby obejrzeć wprowadzenie do tych technologii, zobacz [podstawy programowania Internetu MFC](../mfc/mfc-internet-programming-basics.md) i [model COM MFC](../mfc/mfc-com.md).  
+ Aktywne technologie obejmują kontrolki ActiveX (dawniej kontrolka OLE) i dokumenty aktywne; WinInet łatwe pobieranie i zapisywanie plików w Internecie. i monikerów asynchronicznych do pobierania danych wydajne. Visual C++ zapewnia, że kreatorów, aby pomóc Ci szybko rozpocząć pracę z aplikacją starter. Aby zapoznać się z wprowadzeniem do tych technologii, zobacz [podstawy programowania Internet MFC](../mfc/mfc-internet-programming-basics.md) i [model COM MFC](../mfc/mfc-com.md).  
   
- Miał zawsze chcieli FTP z pliku, ale nie zostało to jeszcze zapamiętanych WinSock i sieci programowania protokołów Wininet — klasy Hermetyzowanie tych protokołów, zapewniając prostych zestaw funkcji, które służy do tworzenia aplikacji klienckich w Internecie, aby pobrać pliki przy użyciu protokołu HTTP, FTP i gopher. Wininet — służy do wyszukiwania katalogów na dysku twardym lub na całym świecie. Można niewidocznie zbierania danych z wielu różnych typów i przedstawić go do użytkownika w zintegrowanym interfejsie.  
+ Masz możesz zawsze chciała FTP pliku, ale jeszcze nie nauczony WinSock i klasach WinInet protokołów programowanie dla sieci hermetyzacji tych protokołów, zapewniając prosty zestaw funkcji służących do pisania aplikacji klienckich w Internecie, aby pobrać pliki przy użyciu protokołu HTTP, FTP i gopher. WinInet służy do wyszukiwania katalogów na dysku twardym lub na całym świecie. Przezroczyste można zbierać dane z wielu różnych typów i przekazywania ich do użytkownika w zintegrowanym interfejsie.  
   
- Czy masz dużych ilości danych, aby pobrać Asynchronous monikerów stanowią rozwiązanie modelu COM (Component Object Model) do renderowania progresywnego dużych obiektów. Można również asynchronicznie WinInet.  
+ Czy masz duże ilości danych, aby pobrać asynchroniczne monikerów stanowią rozwiązanie COM (Component Object Model) do renderowania progresywnego dużych obiektów. Można również asynchronicznie WinInet.  
   
- W poniższej tabeli opisano kilka czynności, które można wykonywać z tych technologii.  
+ W poniższej tabeli opisano kilka rzeczy, które można wykonać przy użyciu tych technologii.  
   
-|Masz|Chcesz|Wykonaj następujące czynności|  
+|Masz|Chcesz|Należy|  
 |--------------|-----------------|----------------|  
-|Serwer sieci Web.|Śledzenie logowania i szczegółowe informacje dotyczące adresu URL żądania.|Zapisać filtr żądania powiadomień o zdarzenia logowania i mapowanie adresu URL.|  
+|Serwer sieci Web.|Śledź logowania i szczegółowe informacje dotyczące adresu URL żądania.|Napisz filtr żądania powiadomienia dotyczące zdarzenia logowania i mapowanie adresu URL.|  
 |Przeglądarka sieci Web.|Podaj zawartość dynamiczną.|Tworzenie formantów ActiveX i dokumenty aktywne.|  
-|Aplikacją opartą na dokument.|Dodawanie obsługi do FTP pliku.|Użyj WinInet lub monikery asynchroniczne.|  
+|Aplikacja oparta na dokumentach.|Dodanie obsługi do pliku protokołu FTP.|Za pomocą interfejsu WinInet lub monikerów asynchronicznych.|  
   
- Zobacz poniższe tematy zawierają szczegółowe informacje ułatwiające rozpoczęcie pracy:  
+ Zobacz następujące tematy, aby uzyskać szczegółowe informacje ułatwiające rozpoczęcie pracy:  
   
 -   [Opcje do wyboru przy projektowaniu aplikacji](../mfc/application-design-choices.md)  
   
@@ -49,8 +49,6 @@ Ta sekcja zawiera szczegółowe informacje na temat dodawania obsługę Internet
   
 -   [Uaktualnianie istniejącej kontrolki ActiveX](../mfc/upgrading-an-existing-activex-control.md)  
   
--   [Dokumenty aktywne w Internecie](../mfc/active-documents-on-the-internet.md)  
-  
 -   [Monikery asynchroniczne w Internecie](../mfc/asynchronous-monikers-on-the-internet.md)  
   
 -   [Testowanie aplikacji internetowych](../mfc/testing-internet-applications.md)  
@@ -58,6 +56,6 @@ Ta sekcja zawiera szczegółowe informacje na temat dodawania obsługę Internet
 -   [Zabezpieczenia internetowe](../mfc/internet-security-cpp.md)  
   
 ## <a name="see-also"></a>Zobacz też  
- [MFC — podstawy programowania Internetu](../mfc/mfc-internet-programming-basics.md)   
+ [Podstawy programowania Internet MFC](../mfc/mfc-internet-programming-basics.md)   
  [Informacje internetowe według zadań](../mfc/internet-information-by-task.md)
 

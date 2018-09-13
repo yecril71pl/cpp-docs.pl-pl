@@ -1,7 +1,7 @@
 ---
 title: Klasa CDocObjectServer | Dokumentacja firmy Microsoft
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 09/12/2018
 ms.technology:
 - cpp-mfc
 ms.topic: reference
@@ -26,12 +26,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 701cfc2f8a88f57a1c50c9c4310ecd21154ef09a
-ms.sourcegitcommit: 6408139d5f5ff8928f056bde93d20eecb3520361
+ms.openlocfilehash: 156480c05833b9d653a903986a37f77878c37671
+ms.sourcegitcommit: b4432d30f255f0cb58dce69cbc8cbcb9d44bc68b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37337869"
+ms.lasthandoff: 09/13/2018
+ms.locfileid: "45535291"
 ---
 # <a name="cdocobjectserver-class"></a>Klasa CDocObjectServer
 Implementuje dodatkowe interfejsy OLE potrzebne do normalnego `COleDocument` serwer do całego serwera obiektów DocObject: `IOleDocument`, `IOleDocumentView`, `IOleCommandTarget`, i `IPrint`.  
@@ -71,7 +71,7 @@ class CDocObjectServer : public CCmdTarget
   
  Aby dostosować swoje serwera obiektów DocObject, pochodną klasy z `CDocObjectServer` i zastąpić jej przeglądanie ustawień funkcji [OnActivateView](#onactivateview), [OnApplyViewState](#onapplyviewstate), i [OnSaveViewState ](#onsaveviewstate). Należy podać nowe wystąpienie klasy w odpowiedzi na wywołania framework.  
   
- Aby uzyskać więcej informacji na temat DocObjects zobacz [CDocObjectServerItem](../../mfc/reference/cdocobjectserveritem-class.md) i [COleCmdUI](../../mfc/reference/colecmdui-class.md) w *odwołanie MFC*. Zobacz też [Internet pierwszych kroków: dokumenty aktywne](../../mfc/active-documents-on-the-internet.md) i [dokumenty aktywne](../../mfc/active-documents-on-the-internet.md).  
+ Aby uzyskać więcej informacji na temat DocObjects zobacz [CDocObjectServerItem](../../mfc/reference/cdocobjectserveritem-class.md) i [COleCmdUI](../../mfc/reference/colecmdui-class.md) w *odwołanie MFC*.  
   
  Ponadto zawiera następujący artykuł bazy wiedzy:  
   

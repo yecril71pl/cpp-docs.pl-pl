@@ -1,7 +1,7 @@
 ---
 title: Kontrolki ActiveX MFC | Dokumentacja firmy Microsoft
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 09/12/2018
 ms.technology:
 - cpp-mfc
 ms.topic: conceptual
@@ -25,15 +25,21 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9f0f0d88274e6804d087f8acf905ba3181d57798
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 64b44afa6f9605c8c10d933b06fcec79b92f7c97
+ms.sourcegitcommit: b4432d30f255f0cb58dce69cbc8cbcb9d44bc68b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43205845"
+ms.lasthandoff: 09/13/2018
+ms.locfileid: "45535200"
 ---
 # <a name="mfc-activex-controls"></a>Kontrolki ActiveX MFC
-Kontrolki ActiveX jest składnik oprogramowania wielokrotnego użytku, oparte na Component Object Model (COM) obsługuje szeroki zakres funkcji OLE, który można dostosować do potrzeb wiele oprogramowania. Kontrolki ActiveX są przeznaczone do użycia zarówno w zwykłych kontenery kontrolek ActiveX w Internecie, w strony sieci Web. Kontrolki ActiveX można utworzyć za pomocą MFC, opisane w tym miejscu lub za pomocą [Active Template Library (ATL)](../atl/active-template-library-atl-concepts.md).  
+
+Kontrolki ActiveX jest składnik oprogramowania wielokrotnego użytku, oparte na Component Object Model (COM) obsługuje szeroki zakres funkcji OLE, który można dostosować do potrzeb wiele oprogramowania. 
+
+>[!IMPORTANT]
+> ActiveX jest technologią starszą, która nie powinny być używane w przypadku nowych wdrożeń. Aby uzyskać więcej informacji, zobacz [formantów ActiveX](activex-controls.md).
+
+Kontrolki ActiveX są przeznaczone do użycia zarówno w zwykłych kontenery kontrolek ActiveX w Internecie, w strony sieci Web. Kontrolki ActiveX można utworzyć za pomocą MFC, opisane w tym miejscu lub za pomocą [Active Template Library (ATL)](../atl/active-template-library-atl-concepts.md).  
   
  Kontrolki ActiveX można narysować sam w osobnym oknie reagowania na zdarzenia (na przykład kliknięć myszą), a następnie można zarządzać za pomocą interfejsu, który zawiera właściwości i metod podobnych do tych obiektów automatyzacji.  
   

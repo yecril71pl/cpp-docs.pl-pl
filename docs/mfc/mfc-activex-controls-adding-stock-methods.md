@@ -1,7 +1,7 @@
 ---
-title: 'Formanty MFC ActiveX: Dodawanie metod standardowych | Dokumentacja firmy Microsoft'
+title: 'Kontrolki ActiveX MFC: Dodawanie metod standardowych | Dokumentacja firmy Microsoft'
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 09/12/2018
 ms.technology:
 - cpp-mfc
 ms.topic: conceptual
@@ -16,35 +16,38 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2005391c6d91ee09703194eb8b8062ecfe08ba77
-ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
+ms.openlocfilehash: 604a095ab26abf4953d56786e00461cabd07e579
+ms.sourcegitcommit: b4432d30f255f0cb58dce69cbc8cbcb9d44bc68b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/25/2018
-ms.locfileid: "36929802"
+ms.lasthandoff: 09/13/2018
+ms.locfileid: "45534953"
 ---
 # <a name="mfc-activex-controls-adding-stock-methods"></a>Kontrolki ActiveX MFC: dodawanie metod standardowych
-Podstawowe metody różni się od niestandardowej metody w tym został już zaimplementowany przez klasę [colecontrol —](../mfc/reference/colecontrol-class.md). Na przykład `COleControl` zawiera funkcję wstępnie zdefiniowanego elementu członkowskiego, która obsługuje metoda odświeżania dla formantu. Wpisu mapy wysyłania dla tej metody akcji jest DISP_STOCKFUNC_REFRESH.  
+Podstawowe metody różni się od niestandardowej metody, w tym, że został już zaimplementowany przez klasę [COleControl](../mfc/reference/colecontrol-class.md). Na przykład `COleControl` zawiera funkcję wstępnie zdefiniowanego elementu członkowskiego, która obsługuje metodę odświeżania kontrolki. Wpis mapy wysyłania dla tej metody akcji jest DISP_STOCKFUNC_REFRESH.
+
+>[!IMPORTANT]
+> ActiveX jest technologią starszą, która nie powinny być używane w przypadku nowych wdrożeń. Aby uzyskać więcej informacji na temat nowych technologii, które wypierają ActiveX zobacz [formantów ActiveX](activex-controls.md).  
   
- `COleControl` obsługuje dwie metody akcji: DoClick i Odśwież. Odświeżanie jest wywoływany przez kontrolki użytkownika można natychmiast zaktualizować wygląd formantu; DoClick jest wywoływane w celu wyzwalać formantu kliknij zdarzenie.  
+ `COleControl` obsługuje dwie podstawowe metody: DoClick i odświeżania. Po wywołaniu polecenia Odśwież przez kontrolki użytkownika można natychmiast zaktualizować wygląd formantu; DoClick wywoływaną ognia formantu kliknij zdarzenie.  
   
-|Metoda|Wpisu mapy wysyłania|Komentarz|  
+|Metoda|Wpis mapy wysyłania|Komentarz|  
 |------------|------------------------|-------------|  
 |`DoClick`|**(DISP_STOCKPROP_DOCLICK)**|Wyzwala zdarzenie Click.|  
 |`Refresh`|**(DISP_STOCKPROP_REFRESH)**|Aktualizacje od razu wygląd formantu.|  
   
 ##  <a name="_core_adding_a_stock_method_using_classwizard"></a> Dodawanie metody akcji przy użyciu Kreator dodawania metody  
- Dodawanie metody akcji jest prosty przy użyciu [Kreator dodawania metody](../ide/add-method-wizard.md). W poniższej procedurze przedstawiono dodawanie do formantu utworzonych za pomocą Kreatora kontrolki ActiveX MFC metoda odświeżania.  
+ Dodawanie metody akcji jest proste przy użyciu [Kreator dodawania metody](../ide/add-method-wizard.md). Poniższa procedura demonstruje, Dodawanie metody odświeżania do formantu, który został utworzony za pomocą Kreatora kontrolek ActiveX MFC.  
   
-#### <a name="to-add-the-stock-refresh-method-using-the-add-method-wizard"></a>Aby dodać podstawowe metoda odświeżania za pomocą Kreatora dodawania — metoda  
+#### <a name="to-add-the-stock-refresh-method-using-the-add-method-wizard"></a>Aby dodać podstawowe metody odświeżania za pomocą Kreatora dodawania — metoda  
   
-1.  Załaduj projekt z kontroli.  
+1.  Załaduj projekt formantu.  
   
-2.  W widoku klas rozwiń węzeł Biblioteka formantu.  
+2.  W widoku klas rozwiń węzeł biblioteki kontrolki.  
   
-3.  Kliknij prawym przyciskiem myszy węzeł interfejsu dla formantu (drugiego węzła węzeł biblioteki), aby otworzyć menu skrótów.  
+3.  Kliknij prawym przyciskiem myszy węzeł interfejsu dla kontrolki (drugi węzeł węzła biblioteki), aby otworzyć menu skrótów.  
   
-4.  W menu skrótów kliknij **Dodaj** , a następnie kliknij przycisk **Dodaj metodę**.  
+4.  W menu skrótów kliknij **Dodaj** a następnie kliknij przycisk **Dodaj metodę**.  
   
      Spowoduje to otwarcie Kreatora dodawania metody.  
   
@@ -52,18 +55,18 @@ Podstawowe metody różni się od niestandardowej metody w tym został już zaim
   
 6.  Kliknij przycisk **Zakończ**.  
   
-##  <a name="_core_classwizard_changes_for_stock_methods"></a> Dodawanie metody kreatora zmiany dla metod standardowych  
- Ponieważ standardowych metoda odświeżania jest obsługiwany przez klasę podstawową dla formantu, **Kreator dodawania metody** nie zmienia deklaracja klasy formantu w dowolny sposób. Dodaje wpis dla metody do formantu mapy wysyłania oraz na jej. Plik IDL. Następujący wiersz zostanie dodany do mapy wysyłania formantu, znajduje się w jej wdrożenia (. Pliku CPP):  
+##  <a name="_core_classwizard_changes_for_stock_methods"></a> Dodaj zmiany kreatora metody dla metod standardowych  
+ Ponieważ podstawowy metoda odświeżania jest obsługiwana przez klasę bazową dla formantu, **Kreator dodawania metody** nie zmienia się z deklaracji klasy formantu w dowolny sposób. Dodaje wpis dla metody do mapy wysyłania kontrolki a w jej. Plik IDL. Następujący wiersz zostanie dodany do mapy wysyłania formantu, znajduje się w swojej implementacji (. Plik CPP):  
   
  [!code-cpp[NVC_MFC_AxUI#16](../mfc/codesnippet/cpp/mfc-activex-controls-adding-stock-methods_1.cpp)]  
   
- Dzięki temu metoda odświeżania dostępne dla użytkowników formantu.  
+ Dzięki temu metoda odświeżania dostępne dla użytkowników do formantu.  
   
  Następujący wiersz jest dodawany do formantu. Plik IDL:  
   
  [!code-cpp[NVC_MFC_AxUI#17](../mfc/codesnippet/cpp/mfc-activex-controls-adding-stock-methods_2.idl)]  
   
- Ten wiersz przypisuje metoda odświeżania określonych numer identyfikacyjny.  
+ Ten wiersz przypisuje metoda odświeżanie określony numer Identyfikatora.  
   
 ## <a name="see-also"></a>Zobacz też  
  [Kontrolki ActiveX MFC](../mfc/mfc-activex-controls.md)

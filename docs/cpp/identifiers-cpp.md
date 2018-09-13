@@ -1,7 +1,7 @@
 ---
 title: Identyfikatory (C++) | Dokumentacja firmy Microsoft
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 09/12/2018
 ms.technology:
 - cpp-language
 ms.topic: language-reference
@@ -18,12 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2d112e7ca192e56ede21d06e7ff17a775d661d01
-ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
+ms.openlocfilehash: cad3c53be23d472a8ce40dae9056d73ab1de1c89
+ms.sourcegitcommit: b4432d30f255f0cb58dce69cbc8cbcb9d44bc68b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/01/2018
-ms.locfileid: "39405233"
+ms.lasthandoff: 09/13/2018
+ms.locfileid: "45535148"
 ---
 # <a name="identifiers-c"></a>Identyfikatory (C++)
 Identyfikator jest sekwencja znaków używany do określenia jednej z następujących czynności:  
@@ -104,7 +104,7 @@ int main() {
   
  Identyfikatory nie może być dokładnie tej samej pisowni i wielkości liter jak słowa kluczowe. Identyfikatory zawierające słowa kluczowe są dozwolone. Na przykład `Pint` jest dozwolonym identyfikatorem, mimo że zawiera on **int**, które jest słowem kluczowym.  
   
- Użycie dwóch podkreślników ( **__** ) na początku identyfikatora lub pojedynczego wiodącego podkreślnika, a po nim wielkiej litery, jest zarezerwowane dla implementacji C++ we wszystkich zakresach. Należy unikać używania jednego wiodącego podkreślenia następuje mała litera dla nazw z zakresem pliku z powodu możliwych konfliktów z bieżącym lub przyszłymi zarezerwowanymi identyfikatorami.  
+ Użycie dwóch podkreślników ( **__** ) w identyfikatora lub pojedynczego wiodącego podkreślnika, a po nim wielkiej litery, jest zarezerwowane dla implementacji C++ we wszystkich zakresach. Należy unikać używania jednego wiodącego podkreślenia następuje mała litera dla nazw z zakresem pliku z powodu możliwych konfliktów z bieżącym lub przyszłymi zarezerwowanymi identyfikatorami.  
   
 ## <a name="see-also"></a>Zobacz także  
  [Konwencje leksykalne](../cpp/lexical-conventions.md)

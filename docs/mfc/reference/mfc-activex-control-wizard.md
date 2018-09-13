@@ -1,7 +1,7 @@
 ---
-title: Kreator formantów MFC ActiveX | Dokumentacja firmy Microsoft
+title: Kreator kontrolek ActiveX MFC | Dokumentacja firmy Microsoft
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 09/12/2018
 ms.technology:
 - cpp-mfc
 ms.topic: reference
@@ -20,31 +20,34 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 45af43a98244e90f52075817fc9e17a905cbf065
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 4b7dcd6d1924281f5a283a86211e49b338b6bc42
+ms.sourcegitcommit: b4432d30f255f0cb58dce69cbc8cbcb9d44bc68b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33375066"
+ms.lasthandoff: 09/13/2018
+ms.locfileid: "45535135"
 ---
 # <a name="mfc-activex-control-wizard"></a>Kreator kontrolek ActiveX MFC
-Formant ActiveX jest określonego typu [serwer automatyzacji](../../mfc/automation-servers.md); jest komponentów wielokrotnego użytku. Hosting kontrolki ActiveX aplikacji jest [klienta automatyzacji](../../mfc/automation-clients.md) tego formantu. Jeśli do utworzenia komponentów wielokrotnego użytku, użyj tego kreatora można utworzyć formantu. Zobacz [kontrolki ActiveX MFC](../../mfc/mfc-activex-controls.md) Aby uzyskać więcej informacji.  
+Kontrolki ActiveX jest określonego typu [serwer automatyzacji](../../mfc/automation-servers.md); jest komponentów wielokrotnego użytku. Hosting kontrolek ActiveX aplikacji jest [klienta automatyzacji](../../mfc/automation-clients.md) tej kontrolki. Jeśli do tworzenia składników wielokrotnego użytku, użyj tego kreatora do tworzenia kontrolki. Zobacz [kontrolki ActiveX MFC](../../mfc/mfc-activex-controls.md) Aby uzyskać więcej informacji.
+
+>[!IMPORTANT]
+> ActiveX jest technologią starszą, która nie powinny być używane w przypadku nowych wdrożeń. Aby uzyskać więcej informacji na temat nowych technologii, które wypierają ActiveX zobacz [formantów ActiveX](../activex-controls.md).  
   
- Alternatywnie można utworzyć automatyzacji serwera MFC aplikację przy użyciu [Kreator aplikacji MFC](../../mfc/reference/mfc-application-wizard.md).  
+ Alternatywnie można utworzyć automatyzacji serwera MFC aplikacji za pomocą [Kreator aplikacji MFC](../../mfc/reference/mfc-application-wizard.md).  
   
- Formantu ActiveX utworzona za pomocą tego kreatora można mieć interfejsu użytkownika lub może być niewidoczny. Można określić tę opcję w [ustawienia kontroli](../../mfc/reference/control-settings-mfc-activex-control-wizard.md) strony kreatora. Formant czasomierza jest przykładem formantu ActiveX, który ma być niewidoczna.  
+ Kontrolki ActiveX utworzona za pomocą tego kreatora można mieć interfejsu użytkownika lub może być niewidoczna. Można określić tę opcję w [ustawienia kontroli](../../mfc/reference/control-settings-mfc-activex-control-wizard.md) strony kreatora. Kontrolka czasomierza znajduje się przykład formantu ActiveX, który ma być niewidoczna.  
   
- Kontrolki ActiveX ma interfejs użytkownika złożonych. Niektóre kontrolki mogą być takie jak formularze hermetyzowany: jeden formant zawierający wiele pola każdego w osobnym kontrolki systemu Windows. Na przykład obiekt części automatycznie zaimplementowane jako kontrolki MFC ActiveX mogą stanowić interfejs użytkownika przypominającej formularza za pomocą którego użytkownicy mogą odczytywać i edytować numer części, Nazwa części i inne informacje. Zobacz [kontrolki ActiveX MFC](../../mfc/mfc-activex-controls.md) Aby uzyskać więcej informacji.  
+ Kontrolki ActiveX może mieć interfejs użytkownika złożone. Niektóre kontrolki mogą być takich jak formularze zhermetyzowany: jeden formant zawierające wiele pól każdy formant Windows samodzielną. Na przykład obiekt części automatycznie implementowana jako formant MFC ActiveX mogą stanowić interfejs użytkownika podobne do formularza za pomocą którego użytkownicy mogą odczytywać i edytować numer części, Nazwa części i inne informacje. Zobacz [kontrolki ActiveX MFC](../../mfc/mfc-activex-controls.md) Aby uzyskać więcej informacji.  
   
- Jeśli musisz utworzyć kontener dla obiektów ActiveX, zobacz [Tworzenie kontenera formantu ActiveX](../../mfc/reference/creating-an-mfc-activex-control-container.md).  
+ Jeśli musisz utworzyć kontener dla obiektów ActiveX, zobacz [utworzyć kontener formantu ActiveX](../../mfc/reference/creating-an-mfc-activex-control-container.md).  
   
- MFC starter program zawiera pliki źródłowe (.cpp) C++, pliki zasobów (.rc) i pliku projektu (.vcxproj). Kod wygenerowany w tych plikach starter jest oparta na MFC.  
+ MFC starter program zawiera pliki źródłowe (.cpp) języka C++, pliki zasobów (.rc) i plik projektu (.vcxproj). Kod wygenerowany w tych plikach startowych jest oparty na MFC.  
   
- Na poniższej liście próbki przedstawiono zadania i typy rozszerzeń dla formantu ActiveX:  
+ Na poniższej liście przykład przedstawiono zadania i typy rozszerzeń dla formantu ActiveX:  
   
 -   [Optymalizacja formantu ActiveX](../../mfc/mfc-activex-controls-optimization.md)  
   
--   [Dodawanie zdarzeń standardowych do formantu ActiveX](../../mfc/mfc-activex-controls-adding-stock-events-to-an-activex-control.md)  
+-   [Dodawanie zdarzeń standardowych do kontrolki ActiveX](../../mfc/mfc-activex-controls-adding-stock-events-to-an-activex-control.md)  
   
 -   [Dodawanie zdarzeń niestandardowych](../../mfc/mfc-activex-controls-adding-custom-events.md)  
   
@@ -56,16 +59,16 @@ Formant ActiveX jest określonego typu [serwer automatyzacji](../../mfc/automati
   
 -   [Dodawanie właściwości niestandardowych](../../mfc/mfc-activex-controls-adding-custom-properties.md)  
   
--   [Programowanie formantów ActiveX w kontenerze formantów ActiveX](../../mfc/programming-activex-controls-in-a-activex-control-container.md)  
+-   [Programowanie kontrolek ActiveX w kontenerze kontrolek ActiveX](../../mfc/programming-activex-controls-in-a-activex-control-container.md)  
   
 ## <a name="overview"></a>Omówienie  
- Ta strona kreatora opisano bieżące ustawienia aplikacji dla tworzonego projektu formantu MFC ActiveX. Domyślnie kreator tworzy projekt w następujący sposób:  
+ Ta strona kreatora opisuje bieżące ustawienia aplikacji dla projektu kontrolki MFC ActiveX, który tworzysz. Domyślnie kreator tworzy projekt w następujący sposób:  
   
--   Domyślny projekt generuje żadnych plików licencji lub Pomoc środowiska wykonawczego. Te ustawienia domyślne można zmienić na [ustawienia aplikacji](../../mfc/reference/application-settings-mfc-activex-control-wizard.md) strony. Tylko wybrane elementy na tej stronie Kreator kontrolek ActiveX zostaną odzwierciedlone na **omówienie** strony.  
+-   Domyślny projekt generuje pliki licencji lub pomocy nie czasu wykonywania. Te ustawienia domyślne można zmienić na [ustawienia aplikacji](../../mfc/reference/application-settings-mfc-activex-control-wizard.md) strony. Tylko wybrane opcje na tej stronie kreatora kontrolek ActiveX są odzwierciedlane **Przegląd** strony.  
   
--   Projekt zawiera klasę formantu i klasy strony właściwości, na podstawie nazwy projektu. Można edytować nazwy nazwy projektu i pliku na [nazwy formantów](../../mfc/reference/control-names-mfc-activex-control-wizard.md) strony.  
+-   Projekt zawiera klasy kontrolki i właściwości klasy strony, na podstawie nazwy projektu. Można edytować nazwy, nazwa projektu i pliku na [nazw kontrolek](../../mfc/reference/control-names-mfc-activex-control-wizard.md) strony.  
   
--   Kontrolka jest oparta na nie istniejącego formantu systemu Windows, aktywuje staje się widoczna, interfejs użytkownika, a obejmuje **o** okno dialogowe. Te ustawienia domyślne można zmienić na [ustawienia kontroli](../../mfc/reference/control-settings-mfc-activex-control-wizard.md) strony.  
+-   Formant opiera się na nie istniejące kontrolki Windows, aktywuje staje się widoczny, ma interfejs użytkownika, i obejmuje **o** okno dialogowe. Te ustawienia domyślne można zmienić na [ustawienia kontroli](../../mfc/reference/control-settings-mfc-activex-control-wizard.md) strony.  
   
 ## <a name="see-also"></a>Zobacz też  
  [Tworzenie i zarządzanie projektami Visual C++](../../ide/creating-and-managing-visual-cpp-projects.md)   

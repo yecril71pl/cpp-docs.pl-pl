@@ -1,7 +1,7 @@
 ---
 title: 'Kontrolki ActiveX MFC: Optymalizacja | Dokumentacja firmy Microsoft'
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 09/12/2018
 ms.technology:
 - cpp-mfc
 ms.topic: conceptual
@@ -24,15 +24,18 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 424bb8e7082432cea3f730bb0783c2c1912c293f
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 09d441a44660310a13be264b24286ad2f0ccc6cd
+ms.sourcegitcommit: b4432d30f255f0cb58dce69cbc8cbcb9d44bc68b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43220509"
+ms.lasthandoff: 09/13/2018
+ms.locfileid: "45535187"
 ---
 # <a name="mfc-activex-controls-optimization"></a>Kontrolki ActiveX MFC: optymalizacja
 W tym artykule opisano techniki, które można użyć, aby zoptymalizować swoje kontrolek ActiveX w celu zapewnienia lepszej wydajności.  
+
+>[!IMPORTANT]
+> ActiveX jest technologią starszą, która nie powinny być używane w przypadku nowych wdrożeń. Aby uzyskać więcej informacji na temat nowych technologii, które wypierają ActiveX zobacz [formantów ActiveX](activex-controls.md).
   
  Tematy [włączenie wyłączanie opcji aktywacji w przypadku widoczne](../mfc/turning-off-the-activate-when-visible-option.md) i [dostarczanie myszy interakcji podczas nieaktywne](../mfc/providing-mouse-interaction-while-inactive.md) omówienia formantów, które nie należy tworzyć okna do momentu aktywowania. Temat [zapewnianie aktywacji niepowiązanej z oknami](../mfc/providing-windowless-activation.md) w tym artykule omówiono formantów, które nigdy nie twórz oknie, nawet wtedy, gdy są one aktywowane.  
   

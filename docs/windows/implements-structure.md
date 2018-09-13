@@ -1,28 +1,36 @@
 ---
 title: Struktura implementuje | Dokumentacja firmy Microsoft
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 09/11/2018
 ms.technology:
 - cpp-windows
 ms.topic: reference
 f1_keywords:
 - implements/Microsoft::WRL::Implements
+- implements/Microsoft::WRL::Implements::CanCastTo
+- implements/Microsoft::WRL::Implements::CastToUnknown
+- implements/Microsoft::WRL::Implements::FillArrayWithIid
+- implements/Microsoft::WRL::Implements::IidCount
 dev_langs:
 - C++
 helpviewer_keywords:
-- Implements structure
+- Microsoft::WRL::Implements structure
+- Microsoft::WRL::Implements::CanCastTo method
+- Microsoft::WRL::Implements::CastToUnknown method
+- Microsoft::WRL::Implements::FillArrayWithIid method
+- Microsoft::WRL::Implements::IidCount method
 ms.assetid: 29b13e90-34d4-4a0b-babd-5187c9eb0c36
 author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 417f384b54833786c68fe2b13dc9e7e53b1bc975
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: 18616b1010dfe6a23861c512b1113c30fe5251ce
+ms.sourcegitcommit: b4432d30f255f0cb58dce69cbc8cbcb9d44bc68b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42603291"
+ms.lasthandoff: 09/13/2018
+ms.locfileid: "45535356"
 ---
 # <a name="implements-structure"></a>Implements — Struktura
 
@@ -104,23 +112,23 @@ Każdy *I0* za pośrednictwem *I9* parametru interfejs musi pochodzić z klasy `
 
 ### <a name="public-typedefs"></a>Publiczne definicje typów
 
-|Nazwa|Opis|
-|----------|-----------------|
-|`ClassFlags`|Synonim dla `RuntimeClassFlags<WinRt>`.|
+| Nazwa        | Opis                               |
+| ----------- | ----------------------------------------- |
+| `ClassFlags`| Synonim dla `RuntimeClassFlags<WinRt>`. |
 
 ### <a name="protected-methods"></a>Metody chronione
 
-|Nazwa|Opis|
-|----------|-----------------|
-|[Implements::CanCastTo, metoda](../windows/implements-cancastto-method.md)|Pobiera wskaźnik do określonego interfejsu.|
-|[Implements::CastToUnknown, metoda](../windows/implements-casttounknown-method.md)|Pobiera wskaźnik do bazowego `IUnknown` interfejsu.|
-|[Implements::FillArrayWithIid, metoda](../windows/implements-fillarraywithiid-method.md)|Wstawia identyfikator interfejsu określonego przez bieżący parametr szablonu zerowego do elementu określonej tablicy.|
+| Nazwa                                              | Opis                                                                                                   |
+| ------------------------------------------------- | ------------------------------------------------------------------------------------------------------------- |
+| [Implements::CanCastTo](#cancastto)               | Pobiera wskaźnik do określonego interfejsu.                                                                    |
+| [Implements::CastToUnknown](#casttounknown)       | Pobiera wskaźnik do bazowego `IUnknown` interfejsu.                                                        |
+| [Implements::FillArrayWithIid](#fillarraywithiid) | Wstawia identyfikator interfejsu określonego przez bieżący parametr szablonu zerowego do elementu określonej tablicy. |
 
 ### <a name="protected-constants"></a>Stałe chronione
 
-|Nazwa|Opis|
-|----------|-----------------|
-|[Implements::IidCount, stała](../windows/implements-iidcount-constant.md)|Przechowuje liczbę zaimplementowanego interfejsu identyfikatorów.|
+| Nazwa                              | Opis                                    |
+| --------------------------------- | ---------------------------------------------- |
+| [Implements::IidCount](#iidcount) | Przechowuje liczbę zaimplementowanego interfejsu identyfikatorów. |
 
 ## <a name="inheritance-hierarchy"></a>Hierarchia dziedziczenia
 
@@ -142,6 +150,76 @@ Każdy *I0* za pośrednictwem *I9* parametru interfejs musi pochodzić z klasy `
 
 **Namespace:** Microsoft::WRL
 
-## <a name="see-also"></a>Zobacz też
+## <a name="cancastto"></a>Implements::CanCastTo
 
-[Microsoft::WRL, przestrzeń nazw](../windows/microsoft-wrl-namespace.md)
+Pobiera wskaźnik do określonego interfejsu.
+
+```cpp
+__forceinline HRESULT CanCastTo(
+   REFIID riid,
+   _Deref_out_ void **ppv
+);
+```
+
+### <a name="parameters"></a>Parametry
+
+*Parametr riid*  
+Odwołanie do identyfikatora interfejsu.
+
+*ppv*  
+Jeśli operacja się powiedzie, wskaźnik do interfejsu określonego przez *riid*.
+
+### <a name="return-value"></a>Wartość zwracana
+
+S_OK w przypadku powodzenia; w przeciwnym razie HRESULT, która wskazuje błąd, takich jak E_NOINTERFACE.
+
+### <a name="remarks"></a>Uwagi
+
+Jest to funkcja pomocnicza wewnętrznej, która wykonuje operację QueryInterface.
+
+## <a name="casttounknown"></a>Implements::CastToUnknown
+
+Pobiera wskaźnik do bazowego `IUnknown` interfejsu.
+
+```cpp
+__forceinline IUnknown* CastToUnknown();
+```
+
+### <a name="return-value"></a>Wartość zwracana
+
+Ta operacja zawsze powiedzie się i zwraca `IUnknown` wskaźnika.
+
+### <a name="remarks"></a>Uwagi
+
+Funkcja pomocnika wewnętrznego.
+
+## <a name="fillarraywithiid"></a>Implements::FillArrayWithIid
+
+Wstawia identyfikator interfejsu określonego przez bieżący parametr szablonu zerowego do elementu określonej tablicy.
+
+```cpp
+__forceinline static void FillArrayWithIid(
+   unsigned long &index,
+   _In_ IID* iids
+);
+```
+
+### <a name="parameters"></a>Parametry
+
+*index*  
+Liczony od zera indeks, który wskazuje element początkowy tablicy do wykonania tej operacji. Po zakończeniu tej operacji, *indeksu* jest zwiększana o 1.
+
+*IID*  
+Tablica typu IID.
+
+### <a name="remarks"></a>Uwagi
+
+Funkcja pomocnika wewnętrznego.
+
+## <a name="iidcount"></a>Implements::IidCount
+
+Przechowuje liczbę zaimplementowanego interfejsu identyfikatorów.
+
+```cpp
+static const unsigned long IidCount;
+```

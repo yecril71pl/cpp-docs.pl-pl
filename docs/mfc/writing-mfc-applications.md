@@ -1,7 +1,7 @@
 ---
 title: Pisanie aplikacji MFC | Dokumentacja firmy Microsoft
 ms.custom: ''
-ms.date: 11/16/2016
+ms.date: 09/12/2018
 ms.technology:
 - cpp-mfc
 ms.topic: conceptual
@@ -17,35 +17,33 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 267fee7f3309cf5cbc4daa48f65e647c4d85a47d
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 0f3f542fc1ff45a80f4d198c58255d91388a30ce
+ms.sourcegitcommit: b4432d30f255f0cb58dce69cbc8cbcb9d44bc68b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33385992"
+ms.lasthandoff: 09/13/2018
+ms.locfileid: "45535174"
 ---
 # <a name="writing-mfc-applications"></a>Pisanie aplikacji MFC
-W tym artykule opisano początkowe kroki, które należy wykonać w celu opracowywania aplikacji. Najpierw należy zdecydować, jakiego rodzaju aplikacji pisania. Niektóre opcje zostały omówione w [decyzji projektowych aplikacji](../mfc/application-design-choices.md). Czy będzie aplikacji:  
+W tym artykule opisano kroki początkowe, które należy wykonać w celu tworzenia aplikacji. Najpierw należy zdecydować, jakiego rodzaju aplikacji podczas pisania. Niektóre opcje zostały omówione w [aplikacji uzasadnienie wyboru tych elementów](../mfc/application-design-choices.md). Czy będzie aplikacji:  
   
--   Uruchomione w Internecie lub intranecie  
+-   Uruchamianie w Internecie lub intranecie  
   
--   Uruchomiona na kliencie lub na serwerze  
+-   Uruchomiony na komputerze klienckim lub na serwerze  
   
--   Uruchomiona w przeglądarce lub jako aplikacja autonomiczna  
+-   Uruchamianie w przeglądarce lub jako aplikacja autonomiczna  
   
 -   Przy użyciu technologii COM lub aktywny  
   
--   Pobieranie danych przy użyciu WinInet lub monikery asynchroniczne  
+-   Pobieranie danych przy użyciu interfejsu WinInet lub monikerów asynchronicznych  
   
- Swoje decyzje dotyczące określenia klas, które są odpowiednie dla twojej aplikacji. Twoje odpowiedzi pomagają określić ustawienia wprowadzone po uruchomieniu Kreatora aplikacji, aby rozpocząć tworzenia aplikacji.  
+ Decyzje określają klas, które są odpowiednie dla twojej aplikacji. Twoje odpowiedzi pomagają określić opcje, wprowadzone po uruchomieniu Kreatora aplikacji, aby rozpocząć tworzenie aplikacji.  
   
- Po utworzeniu swoje decyzje dotyczące projektu początkowej dotyczące Twojej aplikacji internetowych, służy Kreator aplikacji rozpocząć pracę. Użyj Kreatora aplikacji, aby utworzyć szkielet aplikacji i zmodyfikuj kod, zgodnie z opisem w następujących artykułach:  
+ Po określeniu decyzji projektowych początkowej dotyczące aplikacji internetowych, służy Kreator aplikacji na rozpoczęcie pracy. Użyj Kreatora aplikacji, aby utworzyć szkielet aplikacji i zmodyfikować kod, zgodnie z opisem w następujących artykułach:  
   
--   Dla formantu ActiveX [formantów ActiveX w Internecie](../mfc/activex-controls-on-the-internet.md).  
+-   Kontrolki ActiveX, zobacz [kontrolki ActiveX w Internecie](../mfc/activex-controls-on-the-internet.md).  
   
--   Dla aktywnego dokumentu, zobacz [dokumenty aktywne w Internecie](../mfc/active-documents-on-the-internet.md).  
-  
- Poniższe artykuły zawierają również szczegółowe instrukcje dotyczące uruchamiania zadań programowania:  
+ Poniższe artykuły zawierają również instrukcje ułatwiające rozpoczęcie pracy zadań programistycznych:  
   
 -   [Opcje do wyboru przy projektowaniu aplikacji](../mfc/application-design-choices.md)  
   
@@ -54,6 +52,6 @@ W tym artykule opisano początkowe kroki, które należy wykonać w celu opracow
 -   [Podstawy WinInet](../mfc/wininet-basics.md)  
   
 ## <a name="see-also"></a>Zobacz też  
- [Zadania związane z programowaniem Internetu MFC](../mfc/mfc-internet-programming-tasks.md)   
+ [Zadania programowania Internet MFC](../mfc/mfc-internet-programming-tasks.md)   
  [MFC — podstawy programowania Internetu](../mfc/mfc-internet-programming-basics.md)
 

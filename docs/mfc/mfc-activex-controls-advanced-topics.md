@@ -1,7 +1,7 @@
 ---
-title: 'Formanty MFC ActiveX: Tematy dotyczące zaawansowanego | Dokumentacja firmy Microsoft'
+title: 'Kontrolki ActiveX MFC: Tematy zaawansowane | Dokumentacja firmy Microsoft'
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 09/12/2018
 ms.technology:
 - cpp-mfc
 ms.topic: conceptual
@@ -22,54 +22,57 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 99480a8d77aef1822034be100a03f73cfa9d1be0
-ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
+ms.openlocfilehash: fbebffa1bbec55e08cccafd387c44991ebe467ca
+ms.sourcegitcommit: b4432d30f255f0cb58dce69cbc8cbcb9d44bc68b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/25/2018
-ms.locfileid: "36930007"
+ms.lasthandoff: 09/13/2018
+ms.locfileid: "45535256"
 ---
 # <a name="mfc-activex-controls-advanced-topics"></a>Kontrolki ActiveX MFC: tematy zaawansowane
-W tym artykule omówiono Tematy zaawansowane powiązany Programowanie formantów ActiveX. Należą do nich następujące elementy:  
+W tym artykule omówiono zaawansowane tematy związane z tworzenia formantów ActiveX. Należą do nich następujące elementy:  
   
 -   [Używanie klas baz danych w kontrolkach ActiveX](#_core_using_database_classes_in_activex_controls)  
   
--   [Implementowanie sparametryzowane](#_core_implementing_a_parameterized_property)  
+-   [Implementowanie właściwości sparametryzowane](#_core_implementing_a_parameterized_property)  
   
--   [Obsługa błędów formantu ActiveX](#_core_handling_errors_in_your_activex_control)  
+-   [Obsługa błędów w kontrolce ActiveX](#_core_handling_errors_in_your_activex_control)  
   
--   [Klawisze specjalne Obsługa w formancie](#_core_handling_special_keys_in_your_control)  
+-   [Obsługa klawisze specjalne w kontrolce](#_core_handling_special_keys_in_your_control)  
   
--   [Uzyskiwanie dostępu do formantów okna dialogowego, które nie są widoczne w czasie wykonywania](#_core_accessing_dialog_controls_that_are_invisible_at_run_time)  
+-   [Uzyskiwanie dostępu do formantów okna dialogowego, które są niewidoczne w czasie wykonywania](#_core_accessing_dialog_controls_that_are_invisible_at_run_time)  
+
+>[!IMPORTANT]
+> ActiveX jest technologią starszą, która nie powinny być używane w przypadku nowych wdrożeń. Aby uzyskać więcej informacji na temat nowych technologii, które wypierają ActiveX zobacz [formantów ActiveX](activex-controls.md).
   
 ##  <a name="_core_using_database_classes_in_activex_controls"></a> Używanie klas baz danych w kontrolkach ActiveX  
- Klasy formantów ActiveX są częścią biblioteki klas, należy zastosować te same procedury i reguły dotyczące używania klas baz danych w przypadku standardowej aplikacji MFC Programowanie formantów ActiveX, korzystających z klasami baz danych MFC.  
+ Ponieważ klasy kontrolek ActiveX są częścią biblioteki klas, można zastosować te same procedury i reguły dotyczące używania klas baz danych w standardowej aplikacji MFC do tworzenia kontrolek ActiveX, które używają klas baz danych MFC.  
   
- Ogólne omówienie klasami baz danych MFC, zobacz [klasami baz danych MFC (DAO i ODBC)](../data/mfc-database-classes-odbc-and-dao.md). Artykuł wprowadzono klasach MFC ODBC i MFC DAO klas i kieruje użytkownika, aby uzyskać więcej szczegółów, w zależności.  
+ Aby uzyskać ogólne omówienie klas baz danych MFC, zobacz [klas baz danych MFC (DAO i ODBC)](../data/mfc-database-classes-odbc-and-dao.md). Artykuł wprowadza klasach MFC ODBC i MFC DAO klasy i kieruje użytkownika do szczegółowe informacje na temat albo.  
   
 > [!NOTE]
->  Środowiska Visual C++ i kreatorów nie obsługują DAO (mimo że uwzględniono klasy DAO i nadal można ich używać). Firma Microsoft zaleca użycie [szablony OLE DB](../data/oledb/ole-db-programming.md) lub [ODBC i MFC](../data/odbc/odbc-and-mfc.md) dla nowych projektów. Obiekty DAO należy używać tylko w zachowaniu istniejących aplikacji.  
+>  Środowiska Visual C++ i kreatory nie obsługują DAO (mimo że uwzględniono klas DAO i nadal można użyć). Firma Microsoft zaleca się, że używasz [szablony OLE DB](../data/oledb/ole-db-programming.md) lub [ODBC i MFC](../data/odbc/odbc-and-mfc.md) dla nowych projektów. DAO należy używać tylko w zachowaniu istniejących aplikacji.  
   
-##  <a name="_core_implementing_a_parameterized_property"></a> Implementowanie sparametryzowane  
- Właściwość parametrycznego (nazywane również tablicy właściwości) to metoda udostępnianie jednorodnych kolekcję wartości jako jedna właściwość formantu. Na przykład służy sparametryzowane właściwości do udostępnienia tablicy lub słownika jako właściwość. W języku Visual Basic takiego dostępu do właściwości tablicy notacji:  
+##  <a name="_core_implementing_a_parameterized_property"></a> Implementowanie właściwości sparametryzowane  
+ Właściwości sparametryzowane (czasami nazywany tablicy właściwości) jest metodą udostępnianie jednorodnych zbiór wartości jako pojedynczej właściwości formantu. Na przykład umożliwia sparametryzowane tablicy lub słownika jako właściwość. W języku Visual Basic taką właściwość odbywa się przy użyciu notacji tablicy:  
   
  [!code-vb[NVC_MFC_AxVb#1](../mfc/codesnippet/visualbasic/mfc-activex-controls-advanced-topics_1.vb)]  
   
- Kreator Dodaj właściwość do zaimplementowania sparametryzowane właściwości. Kreator dodawania właściwości implementuje właściwości, dodając pary funkcji Get i Set, które umożliwiają użytkownikom kontroli dostępu do właściwości przy użyciu notacji powyżej lub w sposób standardowy.  
+ Kreator dodawania właściwości do zaimplementowania sparametryzowane. Kreator dodawania właściwości implementuje właściwość poprzez dodanie pary funkcji Get/Set, które umożliwia użytkownikowi kontroli dostępu do właściwości przy użyciu notacji powyżej, lub w sposób standardowy.  
   
- Podobny do metody i właściwości sparametryzowane również mieć maksymalną dozwoloną liczbę parametrów. W przypadku właściwości sparametryzowane limit wynosi 15 parametrów (za pomocą jednego parametru zastrzeżone do przechowywania wartości właściwości).  
+ Podobnie jak metod i właściwości sparametryzowane również mieć maksymalną dozwoloną liczbę parametrów. W przypadku właściwości parametryzowania limit wynosi 15 parametrów (za pomocą jednego parametru zastrzeżone do przechowywania wartości właściwości).  
   
- Poniższa procedura dodaje parametryczne właściwość o nazwie tablicy, które są dostępne jest tablicą dwuwymiarową liczb całkowitych.  
+ Poniższa procedura dodaje właściwość sparametryzowane, o nazwie tablicy, która może być dostępna jako tablicę dwuwymiarową liczb całkowitych.  
   
-#### <a name="to-add-a-parameterized-property-using-the-add-property-wizard"></a>Aby dodać właściwość sparametryzowana przy użyciu Kreatora dodawania właściwości  
+#### <a name="to-add-a-parameterized-property-using-the-add-property-wizard"></a>Aby dodać właściwości sparametryzowane przy użyciu Kreatora dodawania właściwości  
   
-1.  Załaduj projekt z kontroli.  
+1.  Załaduj projekt formantu.  
   
-2.  W widoku klas rozwiń węzeł Biblioteka formantu.  
+2.  W widoku klas rozwiń węzeł biblioteki kontrolki.  
   
-3.  Kliknij prawym przyciskiem myszy węzeł interfejsu dla formantu (drugiego węzła węzeł biblioteki), aby otworzyć menu skrótów.  
+3.  Kliknij prawym przyciskiem myszy węzeł interfejsu dla kontrolki (drugi węzeł węzła biblioteki), aby otworzyć menu skrótów.  
   
-4.  W menu skrótów kliknij **Dodaj** , a następnie kliknij przycisk **Dodaj właściwość**.  
+4.  W menu skrótów kliknij **Dodaj** a następnie kliknij przycisk **Dodaj właściwość**.  
   
 5.  W **nazwa właściwości** wpisz `Array`.  
   
@@ -77,42 +80,42 @@ W tym artykule omówiono Tematy zaawansowane powiązany Programowanie formantów
   
 7.  Dla **implementacji** typu, kliknij przycisk **metod Get/Set**.  
   
-8.  W **uzyskać funkcji** i **ustawić funkcja** pola, wpisz unikatowe nazwy Get i ustawić funkcji lub zaakceptuj domyślne nazwy.  
+8.  W **funkcja Pobierz** i **zestawu funkcji** pola, wpisz unikatowe nazwy zestawu funkcji i Get lub zaakceptować domyślne nazwy.  
   
-9. Dodawanie parametru o nazwie *wiersza* (typ *krótki*) za pomocą **Nazwa parametru** i **typ parametru** formantów.  
+9. Dodaj parametr o nazwie *wiersz* (typ *krótki*) przy użyciu **Nazwa parametru** i **typ parametru** kontrolki.  
   
 10. Dodaj drugi parametr o nazwie *kolumny* (typ *krótki*).  
   
 11. Kliknij przycisk **Zakończ**.  
   
-### <a name="changes-made-by-the-add-property-wizard"></a>Zmiany wprowadzone przez Dodaj Kreatora właściwości  
- Podczas dodawania właściwości niestandardowej, Kreator dodawania właściwości zmienia nagłówka klasy formantu (. H), jak i implementację (. Pliki CPP).  
+### <a name="changes-made-by-the-add-property-wizard"></a>Zmiany wprowadzone przez Kreator dodawania właściwości  
+ Po dodaniu właściwości niestandardowej, Kreator dodawania właściwości sprawia, że zmiany do formantu nagłówka klasy (. Godz.), jak i implementację (. Plikach CPP).  
   
  Następujące wiersze są dodawane do klasy formantu. Plik H:  
   
  [!code-cpp[NVC_MFC_AxUI#35](../mfc/codesnippet/cpp/mfc-activex-controls-advanced-topics_2.h)]  
   
- Ten kod deklaruje dwóch funkcji o nazwie `GetArray` i `SetArray` umożliwiające użytkownikowi żądanie określonych wierszy i kolumn podczas uzyskiwania dostępu do właściwości.  
+ Ten kod deklaruje dwie funkcje o nazwie `GetArray` i `SetArray` umożliwiające użytkownikowi żądanie określonych wierszy i kolumn podczas uzyskiwania dostępu do właściwości.  
   
- Ponadto Kreator dodawania właściwości dodaje następujące wiersze do formantu mapy wysyłania, znajduje się w implementacji klasy formantu (. Pliku CPP):  
+ Ponadto Kreator dodawania właściwości dodaje następujące wiersze do kontrolki mapy wysyłania, znajduje się w implementacji klasy formantu (. Plik CPP):  
   
  [!code-cpp[NVC_MFC_AxUI#36](../mfc/codesnippet/cpp/mfc-activex-controls-advanced-topics_3.cpp)]  
   
- Na koniec implementacje `GetArray` i `SetArray` funkcje są dodawane na końcu. Pliku CPP. W większości przypadków należy zmodyfikować funkcji Get zwraca wartość właściwości. Funkcja zestawu zazwyczaj zawiera kod, który powinien zostać wykonany, przed lub po zmianie właściwości.  
+ Na koniec implementacje `GetArray` i `SetArray` funkcje są dodawane na końcu. Plik CPP. W większości przypadków należy zmodyfikować funkcję Get w celu zwrócenia wartości właściwości. Funkcja Set zwykle zawiera kod, który powinien zostać wykonany przed lub po zmianie właściwości.  
   
- Dla tej właściwości powinna być użyteczna, można zadeklarować zmiennej członkowskiej tablicą dwuwymiarową w klasie formantu typu **krótki**, do przechowywania wartości dla właściwości sparametryzowana. Można następnie zmodyfikuj funkcję Get, aby powrócić do wartości przechowywanej w odpowiednich wiersz i kolumnę, wskazane przez parametry i zmodyfikuj funkcję zestaw aktualizacji wartości odwołuje się parametry wierszy i kolumn.  
+ Dla tej właściwości, które były przydatne, można zadeklarować zmienną członkowską dwuwymiarową tablicę w klasie kontrolki typu **krótki**w celu przechowywania wartości właściwości sparametryzowane. Można następnie zmodyfikuj funkcję Get, aby zwrócić wartość przechowywaną w odpowiednich wierszy i kolumn, wskazane przez parametry i zmodyfikuj funkcję Set, można zaktualizować wartości odwołuje się parametry wierszy i kolumn.  
   
-##  <a name="_core_handling_errors_in_your_activex_control"></a> Obsługa błędów formantu ActiveX  
- Jeśli wystąpią błędy w formancie, konieczne może być raport o błędzie do formantu kontenera. Istnieją dwie metody zgłaszania błędów, w zależności od sytuacji, w której występuje błąd. Jeśli wystąpi błąd w wartości właściwości pobierania lub ustawiania funkcji, lub w implementacji metody automatyzacji OLE, powinny wywoływać formantu [COleControl::ThrowError](../mfc/reference/colecontrol-class.md#throwerror), które sygnały do kontrolki użytkownika wystąpił błąd. Jeśli błąd pojawia się w dowolnym momencie, powinny wywoływać formantu [COleControl::FireError](../mfc/reference/colecontrol-class.md#fireerror), który generowane zdarzenie błędu.  
+##  <a name="_core_handling_errors_in_your_activex_control"></a> Obsługa błędów w kontrolce ActiveX  
+ Jeśli wystąpią błędy w kontrolce, może być konieczne Zgłoś błąd kontener formantu. Istnieją dwie metody dla raportowania błędów, w zależności od sytuacji, w której występuje błąd. Jeśli wystąpi błąd w ramach właściwości należy pobrać lub ustawić funkcji, lub w obrębie implementacji metody automatyzacji OLE, powinny wywoływać kontrolki [COleControl::ThrowError](../mfc/reference/colecontrol-class.md#throwerror), które sygnałów do kontrolki użytkownika wystąpił błąd. Jeśli błąd wystąpi w dowolnym innym czasie, formant powinien wywoływać [COleControl::FireError](../mfc/reference/colecontrol-class.md#fireerror), która wyzwala zdarzenie błędu.  
   
- Aby wskazać typ błędu, który wystąpił, kontrolki musi przejść pomyślnie kodu błędu `ThrowError` lub `FireError`. Kod błędu to kod stanu OLE, który ma wartość 32-bitowych. Jeśli to możliwe, wybierz kod błędu z standardowy zestaw kodów zdefiniowanych w OLECTL. Plik nagłówka H. W poniższej tabeli przedstawiono te kody.  
+ Kontrolka musi pomyślnie przejść kod błędu wskazujący rodzaj błędu, który wystąpił, `ThrowError` lub `FireError`. Kod błędu jest kod stanu OLE, który jest wartością 32-bitową. Jeśli to możliwe, wybierać standardowy zestaw kodów zdefiniowanych w OLECTL kod błędu. Plik nagłówkowy H. W poniższej tabeli przedstawiono te kody.  
   
 ### <a name="activex-control-error-codes"></a>Kody błędów kontrolki ActiveX  
   
 |Błąd|Opis|  
 |-----------|-----------------|  
 |CTL_E_ILLEGALFUNCTIONCALL|Niedozwolone wywołanie funkcji|  
-|CTL_E_OVERFLOW|Przepełnienie|  
+|CTL_E_OVERFLOW|przepełnienia|  
 |CTL_E_OUTOFMEMORY|Za mało pamięci|  
 |CTL_E_DIVISIONBYZERO|Dzielenie przez zero|  
 |CTL_E_OUTOFSTRINGSPACE|Za mało miejsca na ciąg|  
@@ -124,7 +127,7 @@ W tym artykule omówiono Tematy zaawansowane powiązany Programowanie formantów
 |CTL_E_DEVICEIOERROR|Błąd We/Wy urządzenia|  
 |CTL_E_FILEALREADYEXISTS|Plik już istnieje.|  
 |CTL_E_BADRECORDLENGTH|Zła długość rekordu|  
-|CTL_E_DISKFULL|Dysk jest zapełniony|  
+|CTL_E_DISKFULL|Dysk zapełniony|  
 |CTL_E_BADRECORDNUMBER|Nieprawidłowy numer rekordu|  
 |CTL_E_BADFILENAME|Nieprawidłowa nazwa pliku|  
 |CTL_E_TOOMANYFILES|Za dużo plików|  
@@ -133,50 +136,50 @@ W tym artykule omówiono Tematy zaawansowane powiązany Programowanie formantów
 |CTL_E_DISKNOTREADY|Dysk nie jest gotowy|  
 |CTL_E_PATHFILEACCESSERROR|Błąd dostępu do ścieżki/pliku|  
 |CTL_E_PATHNOTFOUND|Nie można odnaleźć ścieżki|  
-|CTL_E_INVALIDPATTERNSTRING|Nieprawidłowy ciąg znaków wzorca|  
+|CTL_E_INVALIDPATTERNSTRING|Nieprawidłowy ciąg wzorca|  
 |CTL_E_INVALIDUSEOFNULL|Nieprawidłowe użycie wartości NULL|  
 |CTL_E_INVALIDFILEFORMAT|Nieprawidłowy format pliku|  
 |CTL_E_INVALIDPROPERTYVALUE|Nieprawidłowa wartość właściwości|  
 |CTL_E_INVALIDPROPERTYARRAYINDEX|Nieprawidłowy indeks tablicy właściwości|  
-|CTL_E_SETNOTSUPPORTEDATRUNTIME|Zestaw nie jest obsługiwana w czasie wykonywania|  
-|CTL_E_SETNOTSUPPORTED|Set nie jest możliwa (właściwość tylko do odczytu)|  
+|CTL_E_SETNOTSUPPORTEDATRUNTIME|Zestaw nie jest obsługiwane w czasie wykonywania|  
+|CTL_E_SETNOTSUPPORTED|Nieobsługiwany zestaw (właściwość tylko do odczytu)|  
 |CTL_E_NEEDPROPERTYARRAYINDEX|Potrzebny indeks tablicy właściwości|  
 |CTL_E_SETNOTPERMITTED|Zestaw nie jest dozwolone|  
-|CTL_E_GETNOTSUPPORTEDATRUNTIME|Get nie jest możliwa w czasie wykonywania|  
-|CTL_E_GETNOTSUPPORTED|Pobierz nie jest obsługiwany (właściwość tylko do zapisu)|  
+|CTL_E_GETNOTSUPPORTEDATRUNTIME|Pobierz nieobsługiwane w czasie wykonywania|  
+|CTL_E_GETNOTSUPPORTED|Pobieranie nie jest obsługiwany (tylko do zapisu właściwości)|  
 |CTL_E_PROPERTYNOTFOUND|Nie odnaleziono właściwości|  
 |CTL_E_INVALIDCLIPBOARDFORMAT|Nieprawidłowy format Schowka|  
 |CTL_E_INVALIDPICTURE|Nieprawidłowy obraz|  
 |CTL_E_PRINTERERROR|Błąd drukarki|  
-|CTL_E_CANTSAVEFILETOTEMP|Nie można zapisać pliku do katalogu TEMP|  
-|CTL_E_SEARCHTEXTNOTFOUND|Nie można odnaleźć wyszukiwania tekstu|  
-|CTL_E_REPLACEMENTSTOOLONG|Zbyt długie elementy zastępujące|  
+|CTL_E_CANTSAVEFILETOTEMP|Nie można zapisać pliku Temp|  
+|CTL_E_SEARCHTEXTNOTFOUND|Nie można odnaleźć tekstu wyszukiwania|  
+|CTL_E_REPLACEMENTSTOOLONG|Wymiana za długa|  
   
- W razie potrzeby należy użyć makra CUSTOM_CTL_SCODE do definiowania kodu błędu niestandardowego dla warunku, który nie pasuje do przez jeden z kodów standardowa. Parametr to makro powinna być liczbą całkowitą z zakresu od 1000 do 32767 włącznie. Na przykład:  
+ Jeśli to konieczne, zdefiniować kod błędu niestandardowego w warunku, który nie pasuje do przez jeden z kodów standardowa przy użyciu funkcji makro CUSTOM_CTL_SCODE. Parametr to makro powinna być liczbą całkowitą od 1000 do 32767 (włącznie). Na przykład:  
   
  [!code-cpp[NVC_MFC_AxUI#37](../mfc/codesnippet/cpp/mfc-activex-controls-advanced-topics_4.cpp)]  
   
- Jeśli tworzysz formantu ActiveX, aby zastąpić istniejący formant VBX zdefiniuj Twojej kody błędów kontrolki ActiveX z wartości liczbowych używanych przez formant VBX aby upewnić się, że kody błędów są zgodne.  
+ Jeśli tworzysz formant ActiveX, aby zastąpić istniejącą kontrolkę VBX zdefiniować swoje kody błędów kontrolki ActiveX przy użyciu tych samych wartości numerycznych, używanych przez formant VBX aby upewnić się, że kody błędów są zgodne.  
   
-##  <a name="_core_handling_special_keys_in_your_control"></a> Klawisze specjalne Obsługa w formancie  
- W niektórych przypadkach można obsługiwać niektórych kombinacji klawiszy w specjalny sposób; na przykład, Wstaw nowy wiersz po naciśnięciu klawisza ENTER w tekście wielowierszowym polu formantu lub przenosić między grupy edycji kontroluje, gdy kierunkowe naciśnięty Identyfikatora klucza.  
+##  <a name="_core_handling_special_keys_in_your_control"></a> Obsługa klawisze specjalne w kontrolce  
+ W niektórych przypadkach możesz chcieć obsługi niektórych kombinacji klawiszy w specjalny sposób; na przykład, Wstaw nowy wiersz po naciśnięciu klawisza ENTER w Tekst wielowierszowy kontrolka box lub przenosić między grupą edycji przypadku steruje kierunkowego naciśnięty Identyfikatora klucza.  
   
- Jeśli klasą podstawową formantu ActiveX jest `COleControl`, można zastąpić [CWnd::PreTranslateMessage](../mfc/reference/cwnd-class.md#pretranslatemessage) do obsługi wiadomości, zanim kontenera przetwarza je. Korzystając z tej techniki, zawsze zwracają **TRUE** Jeśli obsługi wiadomości w zastąpienia z `PreTranslateMessage`.  
+ Jeśli klasa bazowa kontrolki ActiveX jest `COleControl`, możesz zastąpić [CWnd::PreTranslateMessage](../mfc/reference/cwnd-class.md#pretranslatemessage) może obsługiwać komunikaty zanim kontenera przetwarza je. Korzystając z tej techniki, zawsze zwracają **TRUE** Jeśli obsłużyć komunikat w zastąpienie metody `PreTranslateMessage`.  
   
- Poniższy przykład kodu pokazuje sposób możliwości obsługi komunikatów dotyczących klawiszy strzałek.  
+ Poniższy przykład kodu demonstruje sposób możliwości obsługi komunikatów dotyczących klawiszy strzałek.  
   
  [!code-cpp[NVC_MFC_AxUI#38](../mfc/codesnippet/cpp/mfc-activex-controls-advanced-topics_5.cpp)]  
   
- Więcej informacji dotyczących obsługi interfejsy klawiatury dla formantu ActiveX znajduje się w dokumentacji zestawu SDK ActiveX.  
+ Więcej informacji na temat obsługi interfejsów klawiatury dla formantu ActiveX znajduje się w dokumentacji zestawu SDK ActiveX.  
   
-##  <a name="_core_accessing_dialog_controls_that_are_invisible_at_run_time"></a> Uzyskiwanie dostępu do formantów okna dialogowego, które nie są widoczne w czasie wykonywania  
- Można utworzyć kontrolki okna dialogowego, bez interfejsu użytkownika, które nie są widoczne w czasie wykonywania. Jeśli dodasz niewidoczne w czasie wykonywania formantu ActiveX — okno dialogowe i użyj [CWnd::GetDlgItem](../mfc/reference/cwnd-class.md#getdlgitem) do kontroli dostępu, kontrolka nie będzie działać poprawnie. Zamiast tego warto z nich korzystać z poniższych można uzyskać obiektu, który reprezentuje kontrolkę:  
+##  <a name="_core_accessing_dialog_controls_that_are_invisible_at_run_time"></a> Uzyskiwanie dostępu do formantów okna dialogowego, które są niewidoczne w czasie wykonywania  
+ Można utworzyć kontrolki okna dialogowego, bez interfejsu użytkownika, które są niewidoczne w czasie wykonywania. Jeśli dodasz niewidoczne w czasie wykonywania formantu ActiveX, okno dialogowe i używania [CWnd::GetDlgItem](../mfc/reference/cwnd-class.md#getdlgitem) można uzyskać dostęp do formantu, formant nie będą działać poprawnie. Zamiast tego warto z nich korzystać z następujących technik uzyskać obiekt, który reprezentuje kontrolkę:  
   
--   Za pomocą elementu członkowskiego zmiennej Kreatora dodawania, wybierz **zmiennej formantu** , a następnie wybierz identyfikator formantu. Wprowadź nazwę zmiennej elementu członkowskiego i wybierz klasy otoki formantu jako **— typ formantu**.  
+-   Za pomocą elementu członkowskiego zmiennych Kreatora dodawania, wybierz **kontroli zmiennej** , a następnie wybierz identyfikator formantu. Wprowadź nazwę zmiennej elementu członkowskiego, a następnie wybierz klasę otoki formantu jako **— typ formantu**.  
   
      —lub—  
   
--   Deklarowanie zmiennej lokalnej i podklasy elementu okna dialogowego. Wstaw kod, który jest podobny do następującego (`CMyCtrl` to klasa otoki IDC_MYCTRL1 jest identyfikator formantu):  
+-   Zadeklaruj zmienną lokalną i podklasy jako elementu okna dialogowego. Wstaw kod, który jest podobny do następującego (`CMyCtrl` jest klasą otoki IDC_MYCTRL1 jest identyfikator formantu):  
   
      [!code-cpp[NVC_MFC_AxCont#19](../mfc/codesnippet/cpp/mfc-activex-controls-advanced-topics_6.cpp)]  
   

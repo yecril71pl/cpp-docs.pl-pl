@@ -1,7 +1,7 @@
 ---
-title: MFC — podstawy programowania Internetu | Dokumentacja firmy Microsoft
+title: Podstawy programowania Internet MFC | Dokumentacja firmy Microsoft
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 09/12/2018
 ms.technology:
 - cpp-mfc
 ms.topic: conceptual
@@ -26,19 +26,23 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6896daddc0eb900f9e2a29497eb2dd8a1dc78446
-ms.sourcegitcommit: 19a108b4b30e93a9ad5394844c798490cb3e2945
+ms.openlocfilehash: 980822792c3be4bc9c4de93baa20d4b3decb5af9
+ms.sourcegitcommit: b4432d30f255f0cb58dce69cbc8cbcb9d44bc68b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/17/2018
-ms.locfileid: "34255612"
+ms.lasthandoff: 09/13/2018
+ms.locfileid: "45535161"
 ---
 # <a name="mfc-internet-programming-basics"></a>MFC — podstawy programowania Internetu
-Firma Microsoft udostępnia wiele interfejsów API do programowania aplikacji klienta i serwera. Wiele nowych aplikacji są zapisywane w Internecie, a jako technologie, przeglądarki możliwości i zmiany opcji zabezpieczeń, nowych typów aplikacji zostanie zapisany. Uruchamianie przeglądarki na komputerach klienckich, zapewnianie dostępu do sieci Web i wyświetlanie strony HTML, które zawierają tekst, grafiki, formantów ActiveX i dokumenty. Serwery FTP, HTTP i gopher usług i uruchamiania aplikacji rozszerzenia serwera przy użyciu CGI. Niestandardową aplikację można pobrać informacji o i udostępniać dane w Internecie.  
+
+Firma Microsoft udostępnia wiele interfejsów API do programowania aplikacji klienta i serwera. Wiele nowych aplikacji są zapisywane do korzystania z Internetu, a jako technologii, możliwości przeglądarki i zmień opcje zabezpieczeń będą zapisywane nowych typów aplikacji. Przeglądarki uruchamiane na komputerach klienckich, umożliwiając dostęp w sieci World Wide Web i wyświetlanie strony HTML, które zawierają tekst, grafikę, kontrolek ActiveX i dokumentów. Serwery usługi gopher, HTTP i FTP i uruchamiania aplikacji rozszerzenia serwera przy użyciu CGI. Twoją aplikacją niestandardową można pobrać informacji o i udostępniać dane w Internecie.  
+
+>[!IMPORTANT]
+> ActiveX jest technologią starszą, która nie powinny być używane w przypadku nowych wdrożeń. Aby uzyskać więcej informacji, zobacz [formantów ActiveX](activex-controls.md).
   
- ![Aplikacje klienta i serwera](../mfc/media/vc38bq1.gif "vc38bq1")  
+ ![Aplikacje klienckie i serwerowe](../mfc/media/vc38bq1.gif "vc38bq1")  
   
- MFC zawiera klasy obsługujące programowania Internetu. Można użyć [colecontrol —](../mfc/reference/colecontrol-class.md) i [CDocObjectServer](../mfc/reference/cdocobjectserver-class.md) i powiązanych klas MFC do zapisania formantów ActiveX i dokumenty aktywne. Można użyć klasy MFC, takich jak [CInternetSession](../mfc/reference/cinternetsession-class.md), [CFtpConnection](../mfc/reference/cftpconnection-class.md), i [CAsyncMonikerFile](../mfc/reference/casyncmonikerfile-class.md) można pobrać pliki i informacje przy użyciu protokołów internetowych, takich jak FTP HTTP i gopher.  
+ Biblioteka MFC zawiera klasy, które obsługują Programowanie w Internecie. Możesz użyć [COleControl](../mfc/reference/colecontrol-class.md) i [CDocObjectServer](../mfc/reference/cdocobjectserver-class.md) i pokrewne klasy MFC do zapisania formantów ActiveX i dokumenty aktywne. Można użyć klas MFC, takich jak [CInternetSession](../mfc/reference/cinternetsession-class.md), [CFtpConnection](../mfc/reference/cftpconnection-class.md), i [CAsyncMonikerFile](../mfc/reference/casyncmonikerfile-class.md) do pobierania plików i informacji przy użyciu protokołów internetowych, takich jak FTP HTTP i gopher.  
   
 ## <a name="in-this-section"></a>W tej sekcji  
   
@@ -58,8 +62,6 @@ Firma Microsoft udostępnia wiele interfejsów API do programowania aplikacji kl
   
 -   [Kontrolki ActiveX w Internecie](../mfc/activex-controls-on-the-internet.md)  
   
--   [Dokumenty aktywne w Internecie](../mfc/active-documents-on-the-internet.md)  
-  
 -   [Monikery asynchroniczne w Internecie](../mfc/asynchronous-monikers-on-the-internet.md)  
   
 -   [Rozszerzenia internetowe Win32 (WinInet)](../mfc/win32-internet-extensions-wininet.md)  
@@ -77,14 +79,14 @@ Firma Microsoft udostępnia wiele interfejsów API do programowania aplikacji kl
 -   [Obsługa ATL dla kontrolek DHTML](../atl/atl-support-for-dhtml-controls.md)  
   
 ##  <a name="_core_web_sites_for_more_information"></a> Witryny sieci Web, aby uzyskać więcej informacji  
- Aby uzyskać dodatkowe informacje na temat technologii Microsoft Internet, zobacz [Microsoft Developer Network (MSDN)](http://go.microsoft.com/fwlink/p/?linkid=56322) witryny sieci Web. (Łącza mogą ulec zmianie bez powiadomienia).  
+ Aby uzyskać dodatkowe informacje o technologii internetowych, zobacz [Microsoft Developer Network (MSDN)](http://go.microsoft.com/fwlink/p/?linkid=56322) witryny sieci Web. (Linki mogą ulec zmianie bez powiadomienia).  
   
- Witryny sieci Web dla deweloperów zawiera informacji o korzystaniu z narzędzi programistycznych firmy Microsoft i technologie i najważniejszych artykułów o najnowsze i kolejnych. Na tej stronie można przejść do wielu witryn powiązanych developer, łącznie z .NET i centrów Developer XML. Możesz również pobrać zestawów SDK w wersji beta i przykłady.  
+ Tę witrynę sieci Web dla deweloperów zawiera informacje na temat korzystania z narzędzi programistycznych firmy Microsoft i technologii i Najciekawsze o najnowsze i nadchodzących konferencji. Na tej stronie możesz przejść do wielu powiązane witryny dla deweloperów, łącznie z .NET i centra deweloperów XML. Można również pobrać zestawy SDK w wersji beta i przykłady.  
   
- [Sieci World Wide Web konsorcjum W3C](http://go.microsoft.com/fwlink/p/?linkid=37125) publikuje specyfikacje dla kodu HTML, HTTP CGI i inne technologie sieci World Wide Web.  
+ [World Wide Web Consortium (W3C)](http://go.microsoft.com/fwlink/p/?linkid=37125) publikuje specyfikacje dotyczące HTML, HTTP, CGI i inne technologie sieci World Wide Web.  
   
 ##  <a name="_core_more_internet_help"></a> Więcej pomocy z Internetu  
- Sekcja OLE zestawu Windows SDK zawiera dodatkowe informacje na temat programowania OLE. Te informacje szczegółowe informacje na temat korzystania z funkcji Win32 WinInet, bezpośrednio, a nie za pośrednictwem klas MFC. Zawiera przegląd informacji dotyczących technologii internetowych.  
+ Sekcja OLE zestawu Windows SDK zawiera dodatkowe informacje na temat programowania OLE. Te informacje zawiera szczegółowe informacje o używaniu funkcji Win32 WinInet bezpośrednio, a nie przy użyciu klas MFC. Zawiera przegląd informacji dotyczących technologii internetowych.  
   
 ## <a name="see-also"></a>Zobacz też  
 

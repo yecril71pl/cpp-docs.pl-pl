@@ -1,7 +1,7 @@
 ---
-title: 'Kontenery formantów ActiveX: Obsługa zdarzeń z formantu ActiveX | Dokumentacja firmy Microsoft'
+title: 'Kontenery kontrolek ActiveX: Obsługa zdarzeń z kontrolki ActiveX | Dokumentacja firmy Microsoft'
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 09/12/2018
 ms.technology:
 - cpp-mfc
 ms.topic: conceptual
@@ -21,56 +21,60 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3a3844788330cfe79366221ee215c437fc4aefc8
-ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
+ms.openlocfilehash: bf642a5485ed7659e313467679f57ceda7eead19
+ms.sourcegitcommit: b4432d30f255f0cb58dce69cbc8cbcb9d44bc68b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/25/2018
-ms.locfileid: "36930664"
+ms.lasthandoff: 09/13/2018
+ms.locfileid: "45534875"
 ---
 # <a name="activex-control-containers-handling-events-from-an-activex-control"></a>Kontenery kontrolek ActiveX: obsługa zdarzeń z kontrolki ActiveX
-W tym artykule omówiono korzystanie z okna właściwości instalacji obsługi zdarzeń dla formantów ActiveX w kontenerze formantów ActiveX. Programy obsługi zdarzeń są używane do otrzymywania powiadomień (od formantu) niektórych zdarzeń i wykonanie akcji w odpowiedzi. To powiadomienie jest nazywany "wyzwoleniem" zdarzenia.  
+W tym artykule omówiono, aby zainstalować programy obsługi zdarzeń dla kontrolek ActiveX w kontenerze kontrolek ActiveX przy użyciu okna właściwości. Programy obsługi zdarzeń są używane do odbierania powiadomień (z formantu) określonych zdarzeń i wykonanie akcji w odpowiedzi. To powiadomienie jest nazywany "wyzwoleniem" zdarzenia.
+
+>[!IMPORTANT]
+> ActiveX jest technologią starszą, która nie powinny być używane w przypadku nowych wdrożeń. Aby uzyskać więcej informacji na temat nowych technologii, które wypierają ActiveX zobacz [formantów ActiveX](activex-controls.md).
+  
   
 > [!NOTE]
->  W tym artykule wykorzystano opartych na oknach dialogowych ActiveX formantu kontenera projektu o nazwie kontenera i osadzonego formantu o nazwie OK jako przykłady w procedurach i kod.  
+>  W tym artykule używany jest oparta na oknach dialogowych ActiveX kontroli kontenera projektu o nazwie kontener i osadzonego formantu o nazwie OK przykładowe w procedurach i kodu.  
   
- Za pomocą przycisku zdarzeń w oknie właściwości, można utworzyć mapę zdarzeń, które mogą wystąpić w Twojej aplikacji kontenera formantów ActiveX. Ta mapa o nazwie "sink mapę zdarzeń," nie zostanie utworzona i obsługiwanego przez Visual C++, po dodaniu obsługi zdarzeń do klasy formantu kontenera. Każdy program obsługi zdarzeń, zaimplementowany przy użyciu wpisu mapy zdarzenia mapuje określonego zdarzenia do kontenera funkcji członkowskiej programu obsługi zdarzeń. Ta funkcja obsługi zdarzeń jest wywoływane, gdy określone zdarzenie jest wywoływane przez obiekt formantu ActiveX.  
+ W oknie dialogowym właściwości, za pomocą przycisku zdarzenia, można utworzyć mapę zdarzeń, które mogą wystąpić w Twojej aplikacji kontenera kontrolek ActiveX. Ta mapa o nazwie "sink mapę zdarzeń,'' jest tworzone i konserwowane przez Visual C++, po dodaniu obsługi zdarzeń do klasy kontenera kontrolki. Każdy program obsługi zdarzeń, implementowane za pomocą wpisu mapy zdarzenia mapuje określonego zdarzenia funkcji elementu członkowskiego kontenera procedury obsługi zdarzeń. Ta funkcja obsługi zdarzenia jest wywoływana, gdy określone zdarzenie jest wywoływane przez obiekt formantu ActiveX.  
   
- Aby uzyskać więcej informacji dotyczących mapy wychwytywania zdarzeń, zobacz [mapy wychwytywania zdarzeń](../mfc/reference/event-sink-maps.md) w *informacje dotyczące biblioteki klas*.  
+ Aby uzyskać więcej informacji na temat mapy wychwytywania zdarzeń, zobacz [mapy wychwytywania zdarzeń](../mfc/reference/event-sink-maps.md) w *odwołanie do biblioteki klas*.  
   
-##  <a name="_core_event_handler_modifications_to_the_project"></a> Zmiany obsługi zdarzeń do projektu  
- Korzystając z okna właściwości można dodać obsługi zdarzeń, mapa ujścia zdarzeń został zadeklarowany i zdefiniowane w projekcie. Poniższe instrukcje są dodawane do formantu. Pliku CPP program obsługi zdarzeń jest dodawany po raz pierwszy. Ten kod deklaruje mapy obiekt sink zdarzenia dla klasy okno dialogowe (w tym przypadku `CContainerDlg`):  
+##  <a name="_core_event_handler_modifications_to_the_project"></a> Modyfikacje programu obsługi zdarzeń do projektu  
+ Korzystając z okna właściwości można dodać procedury obsługi zdarzeń, mapę ujścia zdarzeń jest zadeklarowana i zdefiniowana w projekcie. Poniższe instrukcje są dodawane do formantu. Plik CPP po raz pierwszy zostanie dodany do obsługi zdarzeń. Ten kod deklaruje mapą obiekt sink zdarzenia dla klasy okno dialogowe (w tym przypadku `CContainerDlg`):  
   
  [!code-cpp[NVC_MFC_AxCont#8](../mfc/codesnippet/cpp/activex-control-containers-handling-events-from-an-activex-control_1.cpp)]  
 [!code-cpp[NVC_MFC_AxCont#9](../mfc/codesnippet/cpp/activex-control-containers-handling-events-from-an-activex-control_2.cpp)]  
   
- Podczas dodawania zdarzenia przy użyciu okna właściwości, zdarzenia mapowania wpis (`ON_EVENT`) zostanie dodany do mapy obiekt sink zdarzenia i program obsługi zdarzeń funkcji jest dodawany do wdrożenia kontenera (. Pliku CPP).  
+ Podczas dodawania zdarzenia przy użyciu okna właściwości, zdarzenia mapy wpis (`ON_EVENT`) zostanie dodany do mapy obiektu sink zdarzenia i procedury obsługi zdarzeń funkcji zostanie dodany do wdrożenia kontenera (. Plik CPP).  
   
- Poniższy przykład deklaruje program obsługi zdarzeń o nazwie `OnClickInCircCtrl`, formantu OK `ClickIn` zdarzeń:  
+ Poniższy przykład deklaruje procedurę obsługi zdarzeń, o nazwie `OnClickInCircCtrl`, dla formantu OK `ClickIn` zdarzeń:  
   
  [!code-cpp[NVC_MFC_AxCont#10](../mfc/codesnippet/cpp/activex-control-containers-handling-events-from-an-activex-control_3.cpp)]  
   
- Ponadto następującego szablonu jest dodawany do `CContainerDlg` Implementacja klasy (. Pliku CPP) dla funkcji Członkowskich procedury obsługi zdarzeń:  
+ Ponadto następujący szablon zostanie dodany do `CContainerDlg` Implementacja klasy (. Plik CPP) dla funkcji członkowskiej procedury obsługi zdarzeń:  
   
  [!code-cpp[NVC_MFC_AxCont#11](../mfc/codesnippet/cpp/activex-control-containers-handling-events-from-an-activex-control_4.cpp)]  
   
- Aby uzyskać więcej informacji na makra obiekt sink zdarzenia, zobacz [mapy wychwytywania zdarzeń](../mfc/reference/event-sink-maps.md) w *informacje dotyczące biblioteki klas*.  
+ Aby uzyskać więcej informacji na temat makr ujścia zdarzeń, zobacz [mapy wychwytywania zdarzeń](../mfc/reference/event-sink-maps.md) w *odwołanie do biblioteki klas*.  
   
-#### <a name="to-create-an-event-handler-function"></a>Aby utworzyć funkcję obsługi zdarzeń  
+#### <a name="to-create-an-event-handler-function"></a>Aby utworzyć funkcję obsługi zdarzenia  
   
-1.  Z widoku klasy wybierz klasę okna dialogowego z formantem ActiveX. Na przykład użyć `CContainerDlg`.  
+1.  Widok klasy zaznacz klasy okien dialogowych, który zawiera formant ActiveX. W tym przykładzie użyj `CContainerDlg`.  
   
-2.  Kliknij w oknie właściwości **zdarzenia** przycisku.  
+2.  W oknie dialogowym właściwości kliknij **zdarzenia** przycisku.  
   
-3.  W oknie właściwości wybierz identyfikator formantu osadzonego formantu ActiveX. Na przykład użyć `IDC_CIRCCTRL1`.  
+3.  W oknie dialogowym właściwości wybierz identyfikator formantu osadzonego formantu ActiveX. W tym przykładzie użyj `IDC_CIRCCTRL1`.  
   
-     Okno właściwości wyświetla listę zdarzeń, które mogą być uruchamiane przez osadzonego formantu ActiveX. Jakiegokolwiek funkcji członkowskiej pogrubione już ma funkcje obsługi przypisane do niej.  
+     Okno właściwości wyświetla listę zdarzeń, które mogą być wywoływane przez osadzonego formantu ActiveX. Żadnej funkcji składowej pogrubione już ma funkcje obsługi do niej przypisany.  
   
-4.  Wybierz zdarzenie ma klasę okna dialogowego obsługi. Na przykład wybierz **kliknij**.  
+4.  Wybierz zdarzenie ma klasy okien dialogowych, aby obsłużyć. W tym przykładzie wybierz **kliknij**.  
   
 5.  W polu listy rozwijanej po prawej stronie wybierz  **\<Dodaj > ClickCircctrl1**.  
   
-6.  Kliknij dwukrotnie ikonę Nowa funkcja obsługi z widoku klasy, aby przejść do kod obsługi zdarzeń w implementacji (. Pliku CPP) `CContainerDlg`.  
+6.  Kliknij dwukrotnie przycisk Nowa funkcja obsługi z widoku klasy, aby przejść do kodu programu obsługi zdarzeń w implementacji (. Plik CPP) `CContainerDlg`.  
   
 ## <a name="see-also"></a>Zobacz też  
  [Kontenery kontrolek ActiveX](../mfc/activex-control-containers.md)
