@@ -13,12 +13,12 @@ ms.author: corob
 ms.workload:
 - cplusplus
 - linux
-ms.openlocfilehash: 9b3977c46e05ab0b175dad3658d1dcc390d33354
-ms.sourcegitcommit: 7eadb968405bcb92ffa505e3ad8ac73483e59685
+ms.openlocfilehash: bba17549abc9f747d93299cf22c39ae7c3e8f4d6
+ms.sourcegitcommit: 87d317ac62620c606464d860aaa9e375a91f4c99
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/23/2018
-ms.locfileid: "39207669"
+ms.lasthandoff: 09/14/2018
+ms.locfileid: "45601447"
 ---
 # <a name="connect-to-your-remote-linux-computer"></a>Podłącz do komputera zdalnego systemu Linux
 
@@ -41,7 +41,7 @@ Podczas kompilowania projektu systemu Linux w języku C++ w programie Visual Stu
    | **Nazwa użytkownika**           | Użytkownika do uwierzytelnienia się jako
    | **Typ uwierzytelniania** | Hasło lub klucz prywatny są obsługiwane
    | **Hasło**            | Hasło dla wprowadzona nazwa użytkownika
-   | **Plik klucza prywatnego**    | Wygenerowany klucz prywatny dla protokołu ssh połączenia
+   | **Plik klucza prywatnego**    | Plik klucza prywatnego dla protokołu ssh połączenie utworzone
    | **Hasło**          | Hasło używane razem z kluczem prywatnym w wybranym powyżej
 
 1. Kliknij przycisk **Connect** przycisk prób połączenia z komputerem zdalnym.  Jeśli połączenie nie powiedzie się, pola wpisu, które muszą zostać zmienione zostaną opisane w kolorze czerwonym.

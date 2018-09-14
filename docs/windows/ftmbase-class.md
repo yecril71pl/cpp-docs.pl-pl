@@ -1,28 +1,46 @@
 ---
 title: Ftmbase — klasa | Dokumentacja firmy Microsoft
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 09/12/2018
 ms.technology:
 - cpp-windows
 ms.topic: reference
 f1_keywords:
 - ftm/Microsoft::WRL::FtmBase
+- ftm/Microsoft::WRL::FtmBaseCreateGlobalInterfaceTable
+- ftm/Microsoft::WRL::FtmBase::DisconnectObject
+- ftm/Microsoft::WRL::FtmBase::FtmBase
+- ftm/Microsoft::WRL::FtmBase::GetMarshalSizeMax
+- ftm/Microsoft::WRL::FtmBase::GetUnmarshalClass
+- ftm/Microsoft::WRL::FtmBase::MarshalInterface
+- ftm/Microsoft::WRL::FtmBase::marshaller_
+- ftm/Microsoft::WRL::FtmBase::ReleaseMarshalData
+- ftm/Microsoft::WRL::FtmBase::UnmarshalInterface
 dev_langs:
 - C++
 helpviewer_keywords:
-- FtmBase class
+- Microsoft::WRL::FtmBase class
+- Microsoft::WRL::FtmBase::CreateGlobalInterfaceTable method
+- Microsoft::WRL::FtmBase::DisconnectObject method
+- Microsoft::WRL::FtmBase::FtmBase, constructor
+- Microsoft::WRL::FtmBase::GetMarshalSizeMax method
+- Microsoft::WRL::FtmBase::GetUnmarshalClass method
+- Microsoft::WRL::FtmBase::MarshalInterface method
+- Microsoft::WRL::FtmBase::marshaller_ data member
+- Microsoft::WRL::FtmBase::ReleaseMarshalData method
+- Microsoft::WRL::FtmBase::UnmarshalInterface method
 ms.assetid: 275f3b71-2975-4f92-89e7-d351e96496df
 author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: cb3b9ecae955ac78c6139156c3379fcd97511671
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: 687fd4f4bd77043bd0b74c7bcc39fb6a496b60be
+ms.sourcegitcommit: 87d317ac62620c606464d860aaa9e375a91f4c99
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42584376"
+ms.lasthandoff: 09/14/2018
+ms.locfileid: "45601460"
 ---
 # <a name="ftmbase-class"></a>FtmBase — Klasa
 
@@ -44,27 +62,27 @@ Aby uzyskać więcej informacji, zobacz [runtimeclass — klasa](runtimeclass-cl
 
 ### <a name="public-constructors"></a>Konstruktory publiczne
 
-|Nazwa|Opis|
-|----------|-----------------|
-|[FtmBase::FtmBase, konstruktor](../windows/ftmbase-ftmbase-constructor.md)|Inicjuje nowe wystąpienie klasy **FtmBase** klasy.|
+| Nazwa                         | Opis                                        |
+| ---------------------------- | -------------------------------------------------- |
+| [FtmBase::FtmBase](#ftmbase) | Inicjuje nowe wystąpienie klasy `FtmBase` klasy. |
 
 ### <a name="public-methods"></a>Metody publiczne
 
-|Nazwa|Opis|
-|----------|-----------------|
-|[FtmBase::CreateGlobalInterfaceTable, metoda](../windows/ftmbase-createglobalinterfacetable-method.md)|Tworzy tabelę interfejsu globalnego (GIT).|
-|[FtmBase::DisconnectObject, metoda](../windows/ftmbase-disconnectobject-method.md)|Wymuś zwalnia wszystkie połączenia zewnętrzne do obiektu. Serwer obiektu wywołuje obiekt implementacja tej metody przed zamykanie.|
-|[FtmBase::GetMarshalSizeMax, metoda](../windows/ftmbase-getmarshalsizemax-method.md)|Uzyskaj górnej granicy liczby bajtów potrzebnych do organizowania określony wskaźnik interfejsu do określonego obiektu.|
-|[FtmBase::GetUnmarshalClass, metoda](../windows/ftmbase-getunmarshalclass-method.md)|Pobiera identyfikator klasy, który używa modelu COM, aby zlokalizować bibliotekę DLL zawierającego kod dla odpowiedniego serwera proxy. COM ładuje tę bibliotekę DLL, aby utworzyć wystąpienie niezainicjowanej serwera proxy.|
-|[FtmBase::MarshalInterface, metoda](../windows/ftmbase-marshalinterface-method.md)|Zapisuje w strumieniu danych wymagane do zainicjowania obiektu serwera proxy, w niektórych procesu klienta.|
-|[FtmBase::ReleaseMarshalData, metoda](../windows/ftmbase-releasemarshaldata-method.md)|Niszczy pakietów danych zorganizowanej.|
-|[FtmBase::UnmarshalInterface, metoda](../windows/ftmbase-unmarshalinterface-method.md)|Inicjuje nowo utworzony serwer proxy i zwraca wskaźnik interfejsu do tego serwera proxy.|
+| Nazwa                                                               | Opis                                                                                                                                                          |
+| ------------------------------------------------------------------ | -------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| [FtmBase::CreateGlobalInterfaceTable](#createglobalinterfacetable) | Tworzy tabelę interfejsu globalnego (GIT).                                                                                                                              |
+| [FtmBase::DisconnectObject](#disconnectobject)                     | Wymuś zwalnia wszystkie połączenia zewnętrzne do obiektu. Serwer obiektu wywołuje obiekt implementacja tej metody przed zamykanie.                |
+| [FtmBase::GetMarshalSizeMax](#getmarshalsizemax)                   | Uzyskaj górnej granicy liczby bajtów potrzebnych do organizowania określony wskaźnik interfejsu do określonego obiektu.                                                |
+| [FtmBase::GetUnmarshalClass](#getunmarshalclass)                   | Pobiera identyfikator klasy, który używa modelu COM, aby zlokalizować bibliotekę DLL zawierającego kod dla odpowiedniego serwera proxy. COM ładuje tę bibliotekę DLL, aby utworzyć wystąpienie niezainicjowanej serwera proxy. |
+| [FtmBase::MarshalInterface](#marshalinterface)                     | Zapisuje w strumieniu danych wymagane do zainicjowania obiektu serwera proxy, w niektórych procesu klienta.                                                                          |
+| [FtmBase::ReleaseMarshalData](#releasemarshaldata)                 | Niszczy pakietów danych zorganizowanej.                                                                                                                                    |
+| [FtmBase::UnmarshalInterface](#unmarshalinterface)                 | Inicjuje nowo utworzony serwer proxy i zwraca wskaźnik interfejsu do tego serwera proxy.                                                                                    |
 
 ### <a name="public-data-members"></a>Publiczne elementy członkowskie danych
 
-|Nazwa|Opis|
-|----------|-----------------|
-|[FtmBase::marshaller_, składowa danych](../windows/ftmbase-marshaller-data-member.md)|Zawiera odwołanie do marshaler trybu.|
+| Nazwa                                | Opis                                       |
+| ----------------------------------- | ------------------------------------------------- |
+| [FtmBase::marshaller_](#marshaller) | Zawiera odwołanie do marshaler trybu. |
 
 ## <a name="inheritance-hierarchy"></a>Hierarchia dziedziczenia
 
@@ -76,6 +94,240 @@ Aby uzyskać więcej informacji, zobacz [runtimeclass — klasa](runtimeclass-cl
 
 **Namespace:** Microsoft::WRL
 
-## <a name="see-also"></a>Zobacz też
+## <a name="createglobalinterfacetable"></a>FtmBase::CreateGlobalInterfaceTable
 
-[Microsoft::WRL, przestrzeń nazw](../windows/microsoft-wrl-namespace.md)
+Tworzy tabelę interfejsu globalnego (GIT).
+
+```cpp
+static HRESULT CreateGlobalInterfaceTable(
+   __out IGlobalInterfaceTable **git
+);
+```
+
+### <a name="parameters"></a>Parametry
+
+*usługi git*  
+Gdy ta operacja zostanie ukończone, wskaźnik tabeli interfejsu globalnego.
+
+### <a name="return-value"></a>Wartość zwracana
+
+S_OK w przypadku powodzenia; w przeciwnym razie wartość HRESULT, która wskazuje błąd.
+
+### <a name="remarks"></a>Uwagi
+
+Aby uzyskać więcej informacji, zobacz `IGlobalInterfaceTable` tematu w `COM Interfaces` podrzędny z `COM Reference` w bibliotece MSDN.
+
+## <a name="disconnectobject"></a>FtmBase::DisconnectObject
+
+Wymuś zwalnia wszystkie połączenia zewnętrzne do obiektu. Serwer obiektu wywołuje obiekt implementacja tej metody przed zamykanie.
+
+```cpp
+STDMETHODIMP DisconnectObject(
+   __in DWORD dwReserved
+) override;
+```
+
+### <a name="parameters"></a>Parametry
+
+*dwReserved*  
+Zarezerwowane dla przyszłego użytku; musi mieć wartość zero.
+
+### <a name="return-value"></a>Wartość zwracana
+
+S_OK w przypadku powodzenia; w przeciwnym razie wartość HRESULT, która wskazuje błąd.
+
+## <a name="ftmbase"></a>FtmBase::FtmBase
+
+Inicjuje nowe wystąpienie klasy `FtmBase` klasy.
+
+```cpp
+FtmBase();
+```
+
+## <a name="getmarshalsizemax"></a>FtmBase::GetMarshalSizeMax
+
+Uzyskaj górnej granicy liczby bajtów potrzebnych do organizowania określony wskaźnik interfejsu do określonego obiektu.
+
+```cpp
+STDMETHODIMP GetMarshalSizeMax(
+   __in REFIID riid,
+   __in_opt void *pv,
+   __in DWORD dwDestContext,
+   __reserved void *pvDestContext,
+   __in DWORD mshlflags,
+   __out DWORD *pSize
+) override;
+```
+
+### <a name="parameters"></a>Parametry
+
+*Parametr riid*  
+Odwołanie do identyfikatora interfejsu aby być organizowany.
+
+*Wa*  
+Wskaźnik interfejsu do przekazywania; może mieć wartości NULL.
+
+*dwDestContext*  
+Miejsce docelowe kontekst, w którym ma zostać wycofana określonego interfejsu.
+
+Określ co najmniej jednej wartości wyliczenia MSHCTX.
+
+Obecnie unmarshaling może wystąpić w innym apartamentu bieżącego procesu (MSHCTX_INPROC) lub w inny proces na tym samym komputerze, co bieżący proces (MSHCTX_LOCAL).
+
+*pvDestContext*  
+Zarezerwowane dla przyszłego użytku; musi mieć wartość NULL.
+
+*mshlflags*  
+Flaga wskazująca, czy ma być przesyłane z powrotem do procesu klienta dane, które mają być przekazywane — typowy przypadek — lub zapisywane w tabeli globalne, gdzie mogą być pobierane przez wielu klientów. Określ co najmniej jednej wartości wyliczenia MSHLFLAGS.
+
+*pSize*  
+Gdy ta operacja zostanie ukończone, wskaźnik do górnej granicy ilości danych do zapisania do organizowania strumienia.
+
+### <a name="return-value"></a>Wartość zwracana
+
+S_OK w przypadku powodzenia; w przeciwnym razie, lub E_NOINTERFACE E_FAIL.
+
+## <a name="getunmarshalclass"></a>FtmBase::GetUnmarshalClass
+
+Pobiera identyfikator klasy, który używa modelu COM, aby zlokalizować bibliotekę DLL zawierającego kod dla odpowiedniego serwera proxy. COM ładuje tę bibliotekę DLL, aby utworzyć wystąpienie niezainicjowanej serwera proxy.
+
+```cpp
+STDMETHODIMP GetUnmarshalClass(
+   __in REFIID riid,
+   __in_opt void *pv,
+   __in DWORD dwDestContext,
+   __reserved void *pvDestContext,
+   __in DWORD mshlflags,
+   __out CLSID *pCid
+) override;
+```
+
+### <a name="parameters"></a>Parametry
+
+*Parametr riid*  
+Odwołanie do identyfikatora interfejsu aby być organizowany.
+
+*Wa*  
+Wskaźnik do interfejsu, aby zorganizować; może mieć wartości NULL, jeśli obiekt wywołujący nie ma wskaźnik do żądanego interfejsu.
+
+*dwDestContext*  
+Miejsce docelowe kontekst, w którym ma zostać wycofana określonego interfejsu.
+
+Określ co najmniej jednej wartości wyliczenia MSHCTX.
+
+Unmarshaling może wystąpić w innym apartamentu bieżącego procesu (MSHCTX_INPROC) lub w inny proces na tym samym komputerze, co bieżący proces (MSHCTX_LOCAL).
+
+*pvDestContext*  
+Zarezerwowane dla przyszłego użytku; musi mieć wartość NULL.
+
+*mshlflags*  
+Gdy ta operacja zostanie ukończone, wskaźnik do CLSID, który ma być używany do tworzenia serwera proxy w procesie klienta.
+
+*pCid*
+
+### <a name="return-value"></a>Wartość zwracana
+
+S_OK w przypadku powodzenia; w przeciwnym razie wartość S_FALSE.
+
+## <a name="marshalinterface"></a>FtmBase::MarshalInterface
+
+Zapisuje w strumieniu danych wymagane do zainicjowania obiektu serwera proxy, w niektórych procesu klienta.
+
+```cpp
+STDMETHODIMP MarshalInterface(
+   __in IStream *pStm,
+   __in REFIID riid,
+   __in_opt void *pv,
+   __in DWORD dwDestContext,
+   __reserved void *pvDestContext,
+   __in DWORD mshlflags
+) override;
+```
+
+### <a name="parameters"></a>Parametry
+
+*pStm*  
+Wskaźnik do strumienia, który ma być używany podczas kierowania.
+
+*Parametr riid*  
+Odwołanie do identyfikatora interfejsu aby być organizowany. Ten interfejs musi pochodzić od `IUnknown` interfejsu.
+
+*Wa*  
+Wskaźnik do wskaźnika interfejsu, aby zorganizować; może mieć wartości NULL, jeśli obiekt wywołujący nie ma wskaźnik do żądanego interfejsu.
+
+*dwDestContext*  
+Miejsce docelowe kontekst, w którym ma zostać wycofana określonego interfejsu.
+
+Określ co najmniej jednej wartości wyliczenia MSHCTX.
+
+Unmarshaling może wystąpić w innym apartamentu bieżącego procesu (MSHCTX_INPROC) lub inny proces na tym samym komputerze, co bieżący proces (MSHCTX_LOCAL).
+
+*pvDestContext*  
+Zarezerwowane dla przyszłego użytku; musi mieć wartość zero.
+
+*mshlflags*  
+Określa, czy dane, które mają być przekazywane do być przesyłane z powrotem do procesu klienta — typowy przypadek — lub zapisywane w tabeli globalne, gdzie mogą być pobierane przez wielu klientów.
+
+### <a name="return-value"></a>Wartość zwracana
+
+S_OK wskaźnika interfejsu zorganizować został pomyślnie.
+
+E_NOINTERFACE określonego interfejsu nie jest obsługiwane.
+
+STG_E_MEDIUMFULL strumień jest pełny.
+
+E_FAIL operacja nie powiodła się.
+
+## <a name="marshaller"></a>FtmBase::marshaller_
+
+Zawiera odwołanie do marshaler trybu.
+
+```cpp
+Microsoft::WRL::ComPtr<IMarshal> marshaller_; ;
+```
+
+## <a name="releasemarshaldata"></a>FtmBase::ReleaseMarshalData
+
+Niszczy pakietów danych zorganizowanej.
+
+```cpp
+STDMETHODIMP ReleaseMarshalData(
+   __in IStream *pStm
+) override;
+```
+
+### <a name="parameters"></a>Parametry
+
+*pStm*  
+Wskaźnik do strumienia, który zawiera pakiet danych, które mają zostać zniszczone.
+
+### <a name="return-value"></a>Wartość zwracana
+
+S_OK w przypadku powodzenia; w przeciwnym razie wartość HRESULT, która wskazuje błąd.
+
+## <a name="unmarshalinterface"></a>FtmBase::UnmarshalInterface
+
+Inicjuje nowo utworzony serwer proxy i zwraca wskaźnik interfejsu do tego serwera proxy.
+
+```cpp
+STDMETHODIMP UnmarshalInterface(
+   __in IStream *pStm,
+   __in REFIID riid,
+   __deref_out void **ppv
+) override;
+```
+
+### <a name="parameters"></a>Parametry
+
+*pStm*  
+Wskaźnik do strumienia, z którego ma zostać wycofana wskaźnika interfejsu.
+
+*Parametr riid*  
+Odwołanie do identyfikatora interfejsu Aby zostać wycofana.
+
+*ppv*  
+Po zakończeniu tej operacji, adres zmiennej wskaźnika, który otrzymuje wskaźnik interfejsu w *riid*. Jeśli operacja zakończy się powodzeniem, **ppv* znajduje się wskaźnik interfejsu żądanego interfejsu Aby zostać wycofana.
+
+### <a name="return-value"></a>Wartość zwracana
+
+S_OK w przypadku powodzenia; w przeciwnym razie E_NOINTERFACE lub E_FAIL.

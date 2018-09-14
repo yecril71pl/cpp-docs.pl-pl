@@ -1,7 +1,7 @@
 ---
 title: Obsługa iteratora debugowania | Dokumentacja firmy Microsoft
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 09/13/2018
 ms.technology:
 - cpp-standard-libraries
 ms.topic: reference
@@ -21,12 +21,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 237ce1e956cd05f21a34d0b2b159ba104167ca37
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: ffcd69475d13277884deaf9ee114f3cd8d86516f
+ms.sourcegitcommit: 87d317ac62620c606464d860aaa9e375a91f4c99
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38959595"
+ms.lasthandoff: 09/14/2018
+ms.locfileid: "45601473"
 ---
 # <a name="debug-iterator-support"></a>Obsługa iteratora debugowania
 
@@ -38,7 +38,7 @@ C++ standard w tym artykule opisano sposób elementów członkowskich może spow
 
 - Zwiększenie rozmiaru [wektor](../standard-library/vector.md) za pomocą wypychania lub Wstaw iteratorów powoduje, że do `vector` staną się nieprawidłowe.
 
-## <a name="example"></a>Przykład
+## <a name="invalid-iterators"></a>Nieprawidłowy Iteratory
 
 W przypadku kompilacji ten przykładowy program w trybie debugowania w czasie wykonywania go potwierdza i kończy się.
 
@@ -49,12 +49,7 @@ W przypadku kompilacji ten przykładowy program w trybie debugowania w czasie wy
 #include <iostream>
 
 int main() {
-   std::vector<int> v ;
-
-   v.push_back(10);
-   v.push_back(15);
-   v.push_back(20);
-
+   std::vector<int> v {10, 15, 20};
    std::vector<int>::iterator i = v.begin();
    ++i;
 
@@ -69,7 +64,7 @@ int main() {
 }
 ```
 
-## <a name="example"></a>Przykład
+## <a name="using-iteratordebuglevel"></a>Za pomocą _ITERATOR_DEBUG_LEVEL
 
 Można użyć makra preprocesora [_ITERATOR_DEBUG_LEVEL](../standard-library/iterator-debug-level.md) wyłączenia debugowania funkcji do kompilacji debugowanej iteratora. Ten program nie, ale nadal wyzwala niezdefiniowane zachowanie.
 
@@ -81,11 +76,7 @@ Można użyć makra preprocesora [_ITERATOR_DEBUG_LEVEL](../standard-library/ite
 #include <iostream>
 
 int main() {
-   std::vector<int> v ;
-
-   v.push_back(10);
-   v.push_back(15);
-   v.push_back(20);
+    std::vector<int> v {10, 15, 20};
 
    std::vector<int>::iterator i = v.begin();
    ++i;
@@ -106,7 +97,7 @@ int main() {
 -572662307
 ```
 
-## <a name="example"></a>Przykład
+## <a name="unitialized-iterators"></a>Iteratory niezainicjowanej
 
 Asercja również występuje, Jeśli spróbujesz użyć iteratora, zanim zostanie zainicjowany, jak pokazano poniżej:
 
@@ -123,7 +114,7 @@ int main() {
 }
 ```
 
-## <a name="example"></a>Przykład
+## <a name="incompatible-iterators"></a>Niezgodne Iteratory
 
 Poniższy przykładowy kod powoduje potwierdzenie, ponieważ dwóch iteratorów [for_each](../standard-library/algorithm-functions.md#for_each) algorytm są niezgodne. Algorytmy Sprawdź, czy Iteratory, które są dostarczane do nich odwoływać się do tego samego kontenera.
 
@@ -136,14 +127,8 @@ using namespace std;
 
 int main()
 {
-    vector<int> v1;
-    vector<int> v2;
-
-    v1.push_back(10);
-    v1.push_back(20);
-
-    v2.push_back(10);
-    v2.push_back(20);
+    vector<int> v1 {10, 20};
+    vector<int> v2 {10, 20};
 
     // The next line asserts because v1 and v2 are
     // incompatible.
@@ -153,7 +138,7 @@ int main()
 
 Zwróć uwagę, że w tym przykładzie użyto wyrażenia lambda `[] (int& elem) { elem *= 2; }` zamiast funktorem. Mimo że ten wybór nie ma wpływu na niepowodzenie asercji — podobne funktor mogłoby spowodować wystąpienie takiego samego błędu — wyrażenia lambda są bardzo przydatne w sposób wykonywania zadań obiektu compact funkcji. Aby uzyskać więcej informacji na temat wyrażeń lambda, zobacz [wyrażeń Lambda](../cpp/lambda-expressions-in-cpp.md).
 
-## <a name="example"></a>Przykład
+## <a name="iterators-going-out-of-scope"></a>Iteratory przerywaj poza zakresem
 
 Debugowania iteratora sprawdza również powodować zmienna iteratora, który jest zadeklarowany w **dla** pętli się poza zakres, kiedy **dla** zakończeniu zakresu pętli.
 
@@ -163,11 +148,7 @@ Debugowania iteratora sprawdza również powodować zmienna iteratora, który je
 #include <vector>
 #include <iostream>
 int main() {
-   std::vector<int> v ;
-
-   v.push_back(10);
-   v.push_back(15);
-   v.push_back(20);
+   std::vector<int> v {10, 15, 20};
 
    for (std::vector<int>::iterator i = v.begin(); i != v.end(); ++i)
       ;   // do nothing
@@ -175,9 +156,9 @@ int main() {
 }
 ```
 
-## <a name="example"></a>Przykład
+## <a name="destructors-for-debug-iterators"></a>Destruktory dla iteratorów debugowania
 
-Debugowanie Iteratory mają nietrywialnymi destruktory. Jeśli destruktor nie jest uruchamiany z jakiegokolwiek powodu, może wystąpić naruszenia zasad dostępu i uszkodzeniem danych. Rozważmy następujący przykład:
+Debugowanie Iteratory mają nietrywialnymi destruktory. Jeśli destruktor nie działa, ale obiektu pamięć jest zwalniana, mogą wystąpić dostępu naruszenia i uszkodzenia danych. Rozważmy następujący przykład:
 
 ```cpp
 // iterator_debugging_5.cpp
@@ -195,11 +176,10 @@ struct derived : base {
 };
 
 int main() {
-   std::vector<int> vect( 10 );
-   base * pb = new derived( vect.begin() );
-   delete pb;  // doesn't call ~derived()
-   // access violation
-}
+  auto vect = std::vector<int>(10);
+  auto sink = new auto(std::begin(vect));
+  ::operator delete(sink); // frees the memory without calling ~iterator()
+} // access violation
 ```
 
 ## <a name="see-also"></a>Zobacz także

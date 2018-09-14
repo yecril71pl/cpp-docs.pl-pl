@@ -1,7 +1,7 @@
 ---
-title: Kompilatora (poziom 4) ostrzeżenie C4127 | Dokumentacja firmy Microsoft
+title: Kompilator ostrzeżenie (poziom 4) C4127 | Dokumentacja firmy Microsoft
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 09/13/2018
 ms.technology:
 - cpp-diagnostics
 ms.topic: error-reference
@@ -16,32 +16,40 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c98b2eb42cfc66c27faf74c3d6e46e981851a0a9
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 1bfd913b95b84d8425649476649f9bffa6163141
+ms.sourcegitcommit: 87d317ac62620c606464d860aaa9e375a91f4c99
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33293650"
+ms.lasthandoff: 09/14/2018
+ms.locfileid: "45601525"
 ---
-# <a name="compiler-warning-level-4-c4127"></a>Kompilator C4127 ostrzegawcze (poziom 4)
-wyrażenie warunkowe jest stałą  
-  
- Kontrolowanie wyrażenie `if` instrukcji lub `while` pętli jest stałą. Ze względu na ich typowe obciążenie idiomatyczne trivial stałe, takich jak 1 lub `true` nie wyzwalają ostrzeżenie, chyba że są one wynik operacji w wyrażeniu. Jeśli wyrażenie kontrolowanie `while` pętli jest stałą, ponieważ opuszcza pętlę w środku, rozważ zastąpienie `while` pętli z `for` pętli. Można pominąć inicjowanie, zakończenia testu i pętla przyrost `for` pętli, co powoduje, że pętli nieskończony, podobnie jak `while(1)`, a pętla może wyjść z treści `for` instrukcji.  
-  
- Poniższy przykład przedstawia dwa sposoby C4127 jest generowana i przedstawia sposób użycia dla pętli uniknąć tego ostrzeżenia:  
-  
-```  
+# <a name="compiler-warning-level-4-c4127"></a>Kompilator ostrzeżenie (poziom 4) C4127
+
+> wyrażenie warunkowe jest stałą
+
+## <a name="remarks"></a>Uwagi
+
+Wyrażenie kontrolujące `if` instrukcji lub `while` pętli, daje w wyniku stałej. Ze względu na ich wspólne użycie idiomatyczną, począwszy od programu Visual Studio 2015 update 3, stałe prosta, taką jak 1 lub `true` nie wyzwalają ostrzeżenie, chyba że są one wynik operacji w wyrażeniu.
+
+Jeśli wyrażenie kontrolujące `while` pętli jest stałą, ponieważ pętli kończy działanie w środku, rozważ zastąpienie `while` pętli z `for` pętli. Można pominąć inicjowanie, test zakończenia i pętli z przyrostem `for` pętli, która powoduje, że pętla nieskończony, podobnie jak `while(1)`, i może wyjście z pętli z treści `for` instrukcji.
+
+## <a name="example"></a>Przykład
+
+Poniższy przykład pokazuje dwa sposoby C4127 jest generowany i przedstawia sposób użycia dla pętli uniknąć ostrzeżenia:
+
+```cpp
 // C4127.cpp  
 // compile with: /W4  
 #include <stdio.h>  
 int main() {  
-   if (1 == 1) {}   // C4127  
-   while (42) { break; }   // C4127  
-  
-   // OK  
-   for ( ; ; ) {  
-      printf("test\n");  
-      break;  
-   }  
-}  
+   if (true) {}           // OK in VS2015 update 3 and later
+   if (1 == 1) {}         // C4127
+   while (42) { break; }  // C4127
+
+   // OK
+   for ( ; ; ) {
+      printf("test\n");
+      break;
+   }
+}
 ```
