@@ -1,7 +1,7 @@
 ---
 title: MODEL COM MFC | Dokumentacja firmy Microsoft
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 09/12/2018
 ms.technology:
 - cpp-mfc
 ms.topic: conceptual
@@ -21,12 +21,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3e8c3af361e1ffb5928132727fa124f03a99e81e
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 026e8b39d751a352830b37ae0b5692882e2daa3f
+ms.sourcegitcommit: b4432d30f255f0cb58dce69cbc8cbcb9d44bc68b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43205652"
+ms.lasthandoff: 09/13/2018
+ms.locfileid: "45534836"
 ---
 # <a name="mfc-com"></a>MFC COM
 Podzbiór MFC jest przeznaczona do obsługi COM, podczas gdy większość z Active Template Library (ATL) jest przeznaczona do programowania COM. W tej sekcji tematów opisano obsługi MFC dla modelu COM.  
@@ -34,8 +34,6 @@ Podzbiór MFC jest przeznaczona do obsługi COM, podczas gdy większość z Acti
  Aktywne technologii (np. ActiveX formantów, zawieranie dokumentów aktywnych, OLE i tak dalej) umożliwiają Component Object Model (COM) składników oprogramowania współdziałać ze sobą w środowisku sieciowym, niezależnie od języka, z którym znajdowały się utworzony. Technologii Active może służyć do tworzenia aplikacji, które są uruchamiane na pulpicie lub w Internecie. Aby uzyskać więcej informacji, zobacz [wprowadzenie do COM](../atl/introduction-to-com.md) lub [Component Object Model](/windows/desktop/com/the-component-object-model).  
   
  Aktywne technologie obejmują technologie klienta i serwera, w tym następujące czynności:  
-  
--   [Zawieranie dokumentów aktywnych](../mfc/active-document-containment.md), obsługiwane w wersjach MFC 4.2 i nowszym, pozwala użytkownikom na wyświetlanie [dokumenty aktywne](../mfc/active-documents.md) (takich jak pliki programu Microsoft Excel lub Word) i Aktywuj cały interfejs dokumentu macierzystego Aplikacja w klienckim obszarze [kontener dokumentów aktywnych](../mfc/active-document-containers.md) takich jak Microsoft Office Binder ani Microsoft Internet Explorer. Kontenery działają jako klienci, natomiast dokumenty są udostępniane przez [serwery dokumentów aktywnych](../mfc/active-document-servers.md). Aby uzyskać więcej informacji na temat używania dokumentów aktywnych aplikacji internetowych, zobacz: [dokumenty aktywne w Internecie](../mfc/active-documents-on-the-internet.md).  
   
 -   Formanty ActiveX to interaktywny obiektów, które mogą być używane w kontenerach, takich jak witryny sieci Web. Aby uzyskać więcej informacji na temat formantów ActiveX zobacz:  
   
