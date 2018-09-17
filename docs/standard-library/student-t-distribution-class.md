@@ -31,12 +31,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2ef525ee1b000c7f374260961de17076eb4734e7
-ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
+ms.openlocfilehash: 6ce2c5e134b93c1cefd64b7a33935d42c6bba5cb
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44108853"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45723986"
 ---
 # <a name="studenttdistribution-class"></a>student_t_distribution — Klasa
 
@@ -184,7 +184,7 @@ explicit student_t_distribution(const param_type& parm);
 
 ### <a name="parameters"></a>Parametry
 
-*N*  
+*N*<br/>
 `n` Parametru dystrybucji.
 
 *parm*<br/>
@@ -215,10 +215,10 @@ struct param_type {
 
 ### <a name="parameters"></a>Parametry
 
-*N*  
+*N*<br/>
 `n` Parametru dystrybucji.
 
-*right*  
+*right*<br/>
 `param_type` Obiekt do porównania z tym.
 
 ### <a name="remarks"></a>Uwagi

@@ -100,12 +100,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 14fbe2bf5f74a2d6d2f6ae3f394c2e6e74a4e76f
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 8405c41f5235ecba580bbf453a1129a38b4d8421
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43206193"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45719104"
 ---
 # <a name="cmonthcalctrl-class"></a>Klasa CMonthCalCtrl
 Hermetyzuje funkcjonalność formantu kalendarza miesięcznego.  
@@ -297,7 +297,7 @@ BOOL GetCalendarGridInfo(PMCGRIDINFO pmcGridInfo) const;
   
 |Parametr|Opis|  
 |---------------|-----------------|  
-|[out] *pmcGridInfo*|Wskaźnik do [MCGRIDINFO](/windows/desktop/api/commctrl/ns-commctrl-tagmcgridinfo) strukturę, która otrzymuje informacje o formant kalendarza miesięcznego bieżącego. Obiekt wywołujący jest odpowiedzialny za przydzielanie i Inicjowanie tej struktury.|  
+|*pmcGridInfo*|[out] Wskaźnik do [MCGRIDINFO](/windows/desktop/api/commctrl/ns-commctrl-tagmcgridinfo) strukturę, która otrzymuje informacje o formant kalendarza miesięcznego bieżącego. Obiekt wywołujący jest odpowiedzialny za przydzielanie i Inicjowanie tej struktury.|  
   
 ### <a name="return-value"></a>Wartość zwracana  
  Wartość TRUE, jeśli ta metoda jest kończy się pomyślnie; w przeciwnym razie wartość FALSE.  
@@ -733,7 +733,7 @@ void SetCalendarBorder(int cxyBorder);
   
 |Parametr|Opis|  
 |---------------|-----------------|  
-|[in] *cxyBorder*|Szerokość obramowania, w pikselach.|  
+|*cxyBorder*|[in] Szerokość obramowania, w pikselach.|  
   
 ### <a name="remarks"></a>Uwagi  
  Jeśli ta metoda zakończy się powodzeniem, szerokość obramowania jest ustawiony na *cxyBorder* parametru. W przeciwnym razie szerokość obramowania zostanie zresetowana do wartości domyślnej, który jest określony przez bieżącą [motyw](/windows/desktop/Controls/visual-styles-overview), lub zero, jeśli nie są używane motywów.  
@@ -773,7 +773,7 @@ BOOL SetCalID(CALID calid);
   
 |Parametr|Opis|  
 |---------------|-----------------|  
-|[in] *ID_kalendarza*|Jedną z [identyfikator kalendarza](/windows/desktop/Intl/calendar-identifiers) stałe.|  
+|*ID_kalendarza*|[in] Jedną z [identyfikator kalendarza](/windows/desktop/Intl/calendar-identifiers) stałe.|  
   
 ### <a name="return-value"></a>Wartość zwracana  
  Wartość TRUE, jeśli ta metoda jest kończy się pomyślnie; w przeciwnym razie wartość FALSE.  
@@ -851,7 +851,7 @@ BOOL SetCurrentView(DWORD dwNewView);
   
 |Parametr|Opis|  
 |---------------|-----------------|  
-|[in] *dwNewView*|Jedną z następujących wartości, które określa, co miesiąc, co rok, dekadę lub wieku widoku.<br /><br /> MCMV_MONTH: Widok miesięczny<br /><br /> MCMV_YEAR: Widok roczny<br /><br /> MCMV_DECADE: Wyświetlanie ostatniej dekady<br /><br /> MCMV_CENTURY: Wyświetl wieku|  
+|*dwNewView*|[in] Jedną z następujących wartości, które określa, co miesiąc, co rok, dekadę lub wieku widoku.<br /><br /> MCMV_MONTH: Widok miesięczny<br /><br /> MCMV_YEAR: Widok roczny<br /><br /> MCMV_DECADE: Wyświetlanie ostatniej dekady<br /><br /> MCMV_CENTURY: Wyświetl wieku|  
   
 ### <a name="return-value"></a>Wartość zwracana  
  Wartość TRUE, jeśli ta metoda jest kończy się pomyślnie; w przeciwnym razie wartość FALSE.  
@@ -1137,7 +1137,7 @@ LPRECT SizeRectToMin(LPRECT lpRect);
   
 |Parametr|Opis|  
 |---------------|-----------------|  
-|[in] *lprect —*|Wskaźnik do [Prostokąt](https://msdn.microsoft.com/library/windows/desktop/dd162897) strukturę, która definiuje prostokąt, który zawiera odpowiednią liczbę kalendarzy.|  
+|*lprect —*|[in] Wskaźnik do [Prostokąt](https://msdn.microsoft.com/library/windows/desktop/dd162897) strukturę, która definiuje prostokąt, który zawiera odpowiednią liczbę kalendarzy.|  
   
 ### <a name="return-value"></a>Wartość zwracana  
  Wskaźnik do [Prostokąt](https://msdn.microsoft.com/library/windows/desktop/dd162897) strukturę, która definiuje prostokąta, którego rozmiar jest mniejszy niż lub równe prostokąta zdefiniowane przez *lprect —* parametru.  

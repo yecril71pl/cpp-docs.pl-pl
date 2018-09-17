@@ -12,12 +12,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 240cd4588cb36125b571462b26fcee3853412218
-ms.sourcegitcommit: e9ce38decc9f986edab5543de3464b11ebccb123
+ms.openlocfilehash: c1ff172fde385b4e814508aaf2b567ac15874069
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/13/2018
-ms.locfileid: "42464531"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45720409"
 ---
 # <a name="auto-parallelization-and-auto-vectorization"></a>Automatyczna paralelizacja i wektoryzacja
 Auto-Parallelizer and Auto-Vectorizer są przeznaczone do zapewnienia wzrost wydajności automatyczne pętli w kodzie.  
@@ -75,8 +75,10 @@ Kompilowanie za pomocą tego polecenia:
   
  daje następujące dane wyjściowe:  
   
-**---Analiza funkcji: void __cdecl test(void)**   
-**d:\myproject\mytest.cpp(4): pętla zrównoleglona**  
+```Output
+--- Analyzing function: void __cdecl test(void)
+d:\myproject\mytest.cpp(4) : loop parallelized
+```
   
 Kompilowanie za pomocą tego polecenia:  
   
@@ -84,9 +86,11 @@ Kompilowanie za pomocą tego polecenia:
   
 daje następujące dane wyjściowe:  
   
-**---Analiza funkcji: void __cdecl test(void)**   
-**d:\myproject\mytest.cpp(4): pętla zrównoleglona**   
-**d:\myproject\mytest.cpp(4): pętla niezrównoleglona z powodu "1008"**  
+```Output
+--- Analyzing function: void __cdecl test(void)
+d:\myproject\mytest.cpp(4) : loop parallelized
+d:\myproject\mytest.cpp(4) : loop not parallelized due to reason '1008'
+```
   
 Należy zauważyć różnicę w danych wyjściowych między dwiema różnymi [/Qpar-report (poziom raportowania automatycznej Paralelizacji)](../build/reference/qpar-report-auto-parallelizer-reporting-level.md) opcje. `/Qpar-report:1` generuje komunikaty paralelizatora tylko dla pętli, które są pomyślnie zrównoleglona. `/Qpar-report:2` generuje komunikaty paralelizatora dla obu parallelizations pętli zakończone powodzeniem i niepowodzeniem.  
   

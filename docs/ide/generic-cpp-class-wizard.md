@@ -1,5 +1,5 @@
 ---
-title: Kreator klasy generycznej C++ | Dokumentacja firmy Microsoft
+title: Kreator rodzajowej klasy C++ | Dokumentacja firmy Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,47 +16,56 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 43e86a4047ef025f49dd01eda90f324623a90752
-ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
+ms.openlocfilehash: 758aafa91a8b74c52e8af88e0f6862c1cf99f229
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "33328308"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45719623"
 ---
 # <a name="generic-c-class-wizard"></a>Kreator klasy generycznej C++
-Dodaje klasy ogólnej C++ do projektu. Klasa nie dziedziczy z ATL ani MFC.  
+
+Dodaje rodzajowej klasy C++ do projektu. Klasa nie dziedziczy ATL lub MFC.  
   
- **Nazwa klasy**  
- Ustawia nazwę nowej klasy.  
+- **Nazwa klasy**
+
+   Określa nazwę nowej klasy.  
   
- **w pliku .h**  
- Ustawia nazwę pliku nagłówka dla nowej klasy. Domyślnie ta nazwa jest na podstawie nazwy podane **Nazwa klasy**. Aby zapisać plik nagłówka wybranej lokalizacji lub do dołączenia do istniejącego pliku deklaracji klasy, kliknij przycisk oznaczony wielokropkiem (**...** ). Jeśli określisz istniejący plik, po kliknięciu **Zakończ**, Kreator wyświetli monit o określenie, czy deklaracja klasy powinna zostać dołączona do zawartości pliku. Aby dołączyć deklaracji, kliknij przycisk **tak**; aby powrócić do kreatora i podaj inną nazwę pliku, kliknij przycisk **nr**.  
+- **plik .h**
+
+   Określa nazwę pliku nagłówka dla nowej klasy. Domyślnie ta nazwa jest na podstawie nazwy podane **Nazwa klasy**. Aby zapisać plik nagłówkowy na lokalizację lub Dołącz deklaracji klasy do istniejącego pliku, kliknij przycisk oznaczony wielokropkiem (**...** ). Jeśli określisz istniejącego pliku, po kliknięciu **Zakończ**, Kreator monituje o określenie, czy deklaracja klasy powinna zostać dołączona do zawartości pliku. Aby dołączyć deklaracji, kliknij przycisk **tak**; aby powrócić do kreatora i podaj inną nazwę pliku, kliknij przycisk **nie**.  
   
- **plik .cpp**  
- Ustawia nazwę pliku implementacji dla nowej klasy. Domyślnie ta nazwa jest na podstawie nazwy podane **Nazwa klasy**. Aby zapisać plik implementacji w wybranej lokalizacji lub do dołączenia do istniejącego pliku definicji klasy, kliknij przycisk oznaczony wielokropkiem (**...** ). Jeśli określisz istniejący plik, po kliknięciu **Zakończ**, Kreator wyświetli monit o określenie, czy w definicji klasy powinna zostać dołączona do zawartości pliku. Aby dołączyć definicji, kliknij przycisk **tak**; aby powrócić do kreatora i podaj inną nazwę pliku, kliknij przycisk **nr**.  
+- **Plik CPP**
+
+   Określa nazwę pliku implementacji dla nowej klasy. Domyślnie ta nazwa jest na podstawie nazwy podane **Nazwa klasy**. Aby zapisać plik implementacji na lokalizację lub Dołącz definicję klasy do istniejącego pliku, kliknij przycisk oznaczony wielokropkiem (**...** ). Jeśli określisz istniejącego pliku, po kliknięciu **Zakończ**, Kreator monituje o określenie, czy definicja klasy powinna zostać dołączona do zawartości pliku. Aby dołączyć definicji, kliknij przycisk **tak**; aby powrócić do kreatora i podaj inną nazwę pliku, kliknij przycisk **nie**.  
   
- **Klasa podstawowa**  
- Ustawia klasę podstawową dla nowej klasy.  
+- **Klasa bazowa**
+
+   Ustawia klasę bazową dla nowej klasy.  
   
- **Dostęp**  
- Ustawia dostęp do elementów członkowskich klasy podstawowej dla nowej klasy. Modyfikatory dostępu są słowa kluczowe, które określają poziom dostępu do funkcji Członkowskich klasy innych klas. Aby uzyskać więcej informacji na temat określania dostępu, zobacz [kontroli dostępu elementu członkowskiego](../cpp/member-access-control-cpp.md). Domyślny poziom dostępu do klasy jest ustawiony na `public`.  
+- **Dostęp do**
+
+   Ustawia dostęp do składowych klasy bazowej dla nowej klasy. Modyfikatory dostępu są słowami kluczowymi, które określają poziom dostępu, który inne klasy mają funkcji składowych klasy. Aby uzyskać więcej informacji o sposobie określania dostępu, zobacz [kontrola dostępu do składowych](../cpp/member-access-control-cpp.md). Domyślnie ustawiono poziom dostępu do klasy `public`.  
   
--   `public`  
+   - `public`  
   
--   `protected`  
+   - `protected`  
   
--   `private`  
+   - `private`  
   
--   **Domyślna** (nie modyfikator dostępu jest generowany).  
+   - **Domyślne** (nie modyfikator dostępu jest generowany.)  
   
- **Destruktor wirtualny**  
- Określa, czy wirtualny destruktor klasy. Użyj destruktor wirtualny pomaga, upewnij się, że poprawne destruktora jest wywoływane w przypadku wystąpienia klas pochodnych są usuwane.  
+- **Destruktor wirtualny**
+
+   Określa, czy wirtualny destruktor klasy. Użyj wirtualnego destruktora pomaga upewnić się, że poprawne destruktor jest wywoływany, usunięcie wystąpień klas pochodnych.  
   
- **Wbudowany**  
- Generuje zarówno konstruktora klasy, jak i definicja klasy jako funkcje wbudowane w pliku nagłówka.  
+- **wbudowane**
+
+   Generuje konstruktora klasy i definicji klasy, jak funkcje śródwierszowe w pliku nagłówkowym.  
   
- **Zarządzane**  
- Po wybraniu dodaje plik zarządzanej klasy i nagłówek. Po wyczyszczeniu dodaje natywny plik klasy i nagłówek.  
+- **Zarządzane**
+
+   Po wybraniu dodaje plik zarządzanych klas i nagłówek. Po wyczyszczeniu, dodaje macierzysty plik klasy i nagłówek.  
   
 ## <a name="see-also"></a>Zobacz też  
  [Dodawanie rodzajowej klasy C++](../ide/adding-a-generic-cpp-class.md)

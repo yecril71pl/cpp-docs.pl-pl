@@ -16,15 +16,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 10f5aebaf586581446293147f56dfbce8bd3519a
-ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
+ms.openlocfilehash: 73b840eba35ec4291ffb6e57b17c9002b6c501a2
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33694865"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45721659"
 ---
 # <a name="for-openmp"></a>for (OpenMP)
-Powoduje, że pracy wykonanej dla pętli równoległego regionu do podzielony wątków.  
+Powoduje, że prace wykonane w pętli wewnątrz równoległego regionu podzielony między wątkami.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -33,14 +33,13 @@ Powoduje, że pracy wykonanej dla pętli równoległego regionu do podzielony w�
    for_statement  
 ```  
   
-## <a name="remarks"></a>Uwagi  
- w przypadku gdy  
+## <a name="arguments"></a>Argumenty
+
+*Klauzula*<br/>
+(Opcjonalnie) Zero lub więcej klauzul. Zobacz sekcję Spostrzeżenia, aby uzyskać listę klauzul obsługiwane przez **dla**.  
   
- `clause` (opcjonalnie)  
- Klauzule zero lub więcej. Zobacz sekcję uwag listę klauzule obsługiwane przez **dla**.  
-  
- `for_statement`  
- A pętli for. Niezdefiniowane zachowanie spowoduje, że jeśli kod użytkownika dla zmieni się zmienna index pętli.  
+*for_statement*<br/>
+Element dla pętli. Spowoduje niezdefiniowane zachowanie, jeśli kod użytkownika dla zmieni się zmienna index pętli.  
   
 ## <a name="remarks"></a>Uwagi  
  **Dla** dyrektywy obsługuje następujące klauzule OpenMP:  
@@ -51,7 +50,7 @@ Powoduje, że pracy wykonanej dla pętli równoległego regionu do podzielony w�
   
 -   [nowait](../../../parallel/openmp/reference/nowait.md)  
   
--   [uporządkowane](../../../parallel/openmp/reference/ordered-openmp-directives.md)  
+-   [Uporządkowane](../../../parallel/openmp/reference/ordered-openmp-directives.md)  
   
 -   [private](../../../parallel/openmp/reference/private-openmp.md)  
   
@@ -59,9 +58,9 @@ Powoduje, że pracy wykonanej dla pętli równoległego regionu do podzielony w�
   
 -   [schedule](../../../parallel/openmp/reference/schedule.md)  
   
- Jeśli **równoległych** jest określona, `clause` może zostać klauzuli zaakceptowane przez **równoległych** lub **dla** dyrektywy, z wyjątkiem **nowait**.  
+ Jeśli **równoległe** również jest określony, `clause` mogą być klauzuli akceptowane przez **równoległe** lub **dla** dyrektyw, z wyjątkiem **nowait**.  
   
- Aby uzyskać więcej informacji, zobacz [2.4.1 — dla konstrukcji](../../../parallel/openmp/2-4-1-for-construct.md).  
+ Aby uzyskać więcej informacji, zobacz [2.4.1 konstrukcji](../../../parallel/openmp/2-4-1-for-construct.md).  
   
 ## <a name="example"></a>Przykład  
   

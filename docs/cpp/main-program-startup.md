@@ -22,12 +22,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 824bb7059e13c76af0c2f739676d32afc04aa0c7
-ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
+ms.openlocfilehash: 41bc9c9771622b1778abc5bf86a8ebb6e67d3fbd
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "42466062"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45716909"
 ---
 # <a name="main-program-startup"></a>main: uruchamianie programu
 Specjalną funkcję o nazwie **głównego** jest punktem początkowym wykonanie wszystkich programów C i C++. Jeśli jesteś pisanie kodu, która jest zgodna z modelu programowania Unicode, możesz użyć `wmain`, która jest wersją znaków dwubajtowych z **głównego**.  
@@ -63,7 +63,8 @@ int wmain(int argc, wchar_t *argv[], wchar_t *envp[]);
   
  Alternatywnie **głównego** i `wmain` funkcje mogą być zadeklarowane jako zwracanie **void** (nie zwraca wartości). Jeśli zadeklarujesz **głównego** lub `wmain` powrotu **void**, nie można zwrócić kod wyjścia procesu nadrzędnego lub systemu operacyjnego za pomocą [zwracają](../cpp/return-statement-in-program-termination-cpp.md) instrukcji. Do zwrócenia wyjście kodu, gdy **głównego** lub `wmain` jest zadeklarowany jako **void**, należy użyć [wyjść](../cpp/exit-function.md) funkcji.  
   
-**END specyficzny dla Microsoft**  
+**END specyficzny dla Microsoft**
+
  Typy dla `argc` i `argv` są definiowane przez język. Nazwy `argc`, `argv`, i `envp` są tradycyjne, ale nie są wymagane przez kompilator. Aby uzyskać więcej informacji i obejrzeć przykład, zobacz [definicje argumentu](../cpp/argument-definitions.md).  
   
 ## <a name="see-also"></a>Zobacz także  

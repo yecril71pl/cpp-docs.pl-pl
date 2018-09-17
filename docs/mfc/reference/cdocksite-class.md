@@ -96,12 +96,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9d3af5911cac27a0ac2bb65e9ee0cdb7b714b41d
-ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
+ms.openlocfilehash: 4552fa0462332cacaa8abfd8c42b0de4871dc8d4
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "42465429"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45720307"
 ---
 # <a name="cdocksite-class"></a>Klasa CDockSite
 Aby uzyskać więcej informacji, zobacz kod źródłowy znajdujący się w **VC\\atlmfc\\src\\mfc** folder instalacji programu Visual Studio.  
@@ -189,8 +189,8 @@ CDockingPanesRow* AddRow(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *punktu sprzedaży*  
- [in] *nHeight*  
+*punktu sprzedaży*<br/>
+[in] [in] *nHeight*  
   
 ### <a name="return-value"></a>Wartość zwracana  
   
@@ -225,8 +225,8 @@ void AlignDockSite(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *rectToAlignBy*  
- [in] *rectResult*  
+*rectToAlignBy*<br/>
+[in] [in] *rectResult*  
  [in] *bMoveImmediately*  
   
 ### <a name="remarks"></a>Uwagi  
@@ -241,8 +241,8 @@ virtual CSize CalcFixedLayout(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *bStretch*  
- [in] *bHorz*  
+*bStretch*<br/>
+[in] [in] *bHorz*  
   
 ### <a name="return-value"></a>Wartość zwracana  
   
@@ -276,12 +276,12 @@ virtual BOOL CreateEx(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *dwStyleEx*  
- [in] *dwStyle*  
- [in] *rect*  
- [in] *pParentWnd*  
- [in] *dwControlBarStyle*  
- [in] *pContext*  
+*dwStyleEx*<br/>
+[in] [in] *dwStyle*  
+*Rect*<br/>
+[in] [in] *pParentWnd*  
+*dwControlBarStyle*<br/>
+[in] [in] *pContext*  
   
 ### <a name="return-value"></a>Wartość zwracana  
   
@@ -298,8 +298,8 @@ virtual CDockingPanesRow* CreateRow(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *pParentDockBar*  
- [in] *nOffset*  
+*pParentDockBar*<br/>
+[in] [in] *nOffset*  
  [in] *nRowHeight*  
   
 ### <a name="return-value"></a>Wartość zwracana  
@@ -317,8 +317,8 @@ virtual void DockPane(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *pWnd*  
- [in] *dockMethod*  
+*pWnd*<br/>
+[in] [in] *dockMethod*  
  [in] *lprect —*  
   
 ### <a name="remarks"></a>Uwagi  
@@ -363,8 +363,8 @@ CPane* FindPaneByID(UINT nID);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *nID*  
- Identyfikator polecenia okienka ma zostać odnaleziona.  
+*nID*<br/>
+[in] Identyfikator polecenia okienka ma zostać odnaleziona.  
   
 ### <a name="return-value"></a>Wartość zwracana  
  Wskaźnik do okienka z polecenie o określonym identyfikatorze lub o wartości NULL, jeśli nie zostanie znaleziony okienka.  
@@ -472,8 +472,8 @@ BOOL IsRectWithinDockSite(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *rect*  
- [in] *ptDelta*  
+*Rect*<br/>
+[in] [in] *ptDelta*  
   
 ### <a name="return-value"></a>Wartość zwracana  
   
@@ -501,8 +501,8 @@ virtual BOOL MovePane(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *pWnd*  
- [in] *nFlags*  
+*pWnd*<br/>
+[in] [in] *nFlags*  
  [in] *ptOffset*  
   
 ### <a name="return-value"></a>Wartość zwracana  
@@ -531,8 +531,8 @@ virtual void OnRemoveRow(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *punktu sprzedaży*  
- [in] *bByShow*  
+*punktu sprzedaży*<br/>
+[in] [in] *bByShow*  
   
 ### <a name="remarks"></a>Uwagi  
   
@@ -546,8 +546,8 @@ virtual int OnResizeRow(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *pRowToResize*  
- [in] *nOffset*  
+*pRowToResize*<br/>
+[in] [in] *nOffset*  
   
 ### <a name="return-value"></a>Wartość zwracana  
   
@@ -565,10 +565,10 @@ virtual void OnSizeParent(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *rectAvailable*  
- [in] *nSide*  
- [in] *bExpand*  
- [in] *nOffset*  
+*rectAvailable*<br/>
+[in] [in] *nSide*  
+*bExpand*<br/>
+[in] [in] *nOffset*  
   
 ### <a name="remarks"></a>Uwagi  
   
@@ -583,8 +583,8 @@ virtual BOOL OnSetWindowPos(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *pWndInsertAfter*  
- [in] *rectWnd*  
+*pWndInsertAfter*<br/>
+[in] [in] *rectWnd*  
  [in] *nFlags*  
   
 ### <a name="return-value"></a>Wartość zwracana  
@@ -601,8 +601,8 @@ virtual void OnShowRow(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *punktu sprzedaży*  
- [in] *bShow*  
+*punktu sprzedaży*<br/>
+[in] [in] *bShow*  
   
 ### <a name="remarks"></a>Uwagi  
   
@@ -614,8 +614,8 @@ virtual CPane* PaneFromPoint(CPoint pt);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *(czas pacyficzny)*  
- Punkt, w układzie współrzędnych ekranu, dla tego okienka do pobrania.  
+*(czas pacyficzny)*<br/>
+[in] Punkt, w układzie współrzędnych ekranu, dla tego okienka do pobrania.  
   
 ### <a name="return-value"></a>Wartość zwracana  
  Wskaźnik do okienka znajdujący się w określonym lub wartość NULL, jeśli okienko nie była obecna w określonym momencie.  
@@ -632,8 +632,8 @@ static int __stdcall RectSideFromPoint(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *rect*  
- [in] *punktu*  
+*Rect*<br/>
+[in] [in] *punktu*  
   
 ### <a name="return-value"></a>Wartość zwracana  
   
@@ -649,8 +649,8 @@ virtual void RemovePane(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *pWnd*  
- [in] *dockMethod*  
+*pWnd*<br/>
+[in] [in] *dockMethod*  
   
 ### <a name="remarks"></a>Uwagi  
   
@@ -676,8 +676,8 @@ BOOL ReplacePane(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *pOldBar*  
- [in] *pNewBar*  
+*pOldBar*<br/>
+[in] [in] *pNewBar*  
   
 ### <a name="return-value"></a>Wartość zwracana  
   
@@ -705,8 +705,8 @@ void ResizeDockSite(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *nNewWidth*  
- [in] *nNewHeight*  
+*nNewWidth*<br/>
+[in] [in] *nNewHeight*  
   
 ### <a name="remarks"></a>Uwagi  
   
@@ -721,8 +721,8 @@ int ResizeRow(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *pRow*  
- [in] *nNewSize*  
+*pRow*<br/>
+[in] [in] *nNewSize*  
  [in] *bAdjustLayout*  
   
 ### <a name="return-value"></a>Wartość zwracana  
@@ -744,14 +744,14 @@ virtual BOOL ShowPane(
  [in] [out] *pBar*  
  Wskaźnik do okienka, które mają być wyświetlane lub ukryte.  
   
- [in] *bShow*  
- Wartość TRUE, aby określić, że okienka ma być wyświetlana; Wartość FALSE, aby określić, to okienko zostanie ukryte.  
+*bShow*<br/>
+[in] Wartość TRUE, aby określić, że okienka ma być wyświetlana; Wartość FALSE, aby określić, to okienko zostanie ukryte.  
   
- [in] *bDelay*  
- Wartość TRUE, aby określić, że układ okienka powinno zostać opóźnione do po okienku są wyświetlane; w przeciwnym razie wartość FALSE.  
+*bDelay*<br/>
+[in] Wartość TRUE, aby określić, że układ okienka powinno zostać opóźnione do po okienku są wyświetlane; w przeciwnym razie wartość FALSE.  
   
- [in] *bActivate*  
- Ten parametr nie jest używany.  
+*bActivate*<br/>
+[in] Ten parametr nie jest używany.  
   
 ### <a name="return-value"></a>Wartość zwracana  
  Wartość TRUE, jeśli okienko zostało pokazane lub ukryte pomyślnie. Wartość FALSE, jeśli określony okienko nie należy do tej witryny dokowania.  
@@ -770,8 +770,8 @@ void ShowRow(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *pRow*  
- [in] *bShow*  
+*pRow*<br/>
+[in] [in] *bShow*  
  [in] *bAdjustLayout*  
   
 ### <a name="remarks"></a>Uwagi  
@@ -786,8 +786,8 @@ void SwapRows(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *pFirstRow*  
- [in] *pSecondRow*  
+*pFirstRow*<br/>
+[in] [in] *pSecondRow*  
   
 ### <a name="remarks"></a>Uwagi  
   

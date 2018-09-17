@@ -32,12 +32,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 47acba5c5bb6164dc7a9ac73fa8f777c99226466
-ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
+ms.openlocfilehash: 592deab171a8085e2260a27ae642b3cd5c4af810
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43681628"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45722250"
 ---
 # <a name="chotkeyctrl-class"></a>Klasa CHotKeyCtrl
 Oferuje funkcje Windows formantu typowego klawisza dostępu.  
@@ -176,11 +176,11 @@ void GetHotKey(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [out] *wVirtualKeyCode*  
- Wirtualne kod klawisza skrótu klawiaturowego. Aby uzyskać listę standardowa wirtualnej kody klawiszy Zobacz Winuser.h.  
+*wVirtualKeyCode*<br/>
+[out] Wirtualne kod klawisza skrótu klawiaturowego. Aby uzyskać listę standardowa wirtualnej kody klawiszy Zobacz Winuser.h.  
   
- [out] *wModifiers*  
- Bitowa kombinacja (lub) flagi wskazujące klawisze modyfikujące w skrótów klawiaturowych.  
+*wModifiers*<br/>
+[out] Bitowa kombinacja (lub) flagi wskazujące klawisze modyfikujące w skrótów klawiaturowych.  
   
  Dostępne są następujące flagi modyfikatora:  
   
@@ -245,11 +245,11 @@ void SetHotKey(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *wVirtualKeyCode*  
- Wirtualne kod klawisza skrótu klawiaturowego. Aby uzyskać listę standardowa wirtualnej kody klawiszy Zobacz Winuser.h.  
+*wVirtualKeyCode*<br/>
+[in] Wirtualne kod klawisza skrótu klawiaturowego. Aby uzyskać listę standardowa wirtualnej kody klawiszy Zobacz Winuser.h.  
   
- [in] *wModifiers*  
- Bitowa kombinacja (lub) flagi wskazujące klawisze modyfikujące w skrótów klawiaturowych.  
+*wModifiers*<br/>
+[in] Bitowa kombinacja (lub) flagi wskazujące klawisze modyfikujące w skrótów klawiaturowych.  
   
  Dostępne są następujące flagi modyfikatora:  
   

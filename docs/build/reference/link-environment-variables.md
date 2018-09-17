@@ -19,28 +19,28 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 076e427e50520651f30cde20c764ff1124a6f953
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: e88ac63ace95ac0b9874dc3376210f3f5b4af320
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32372701"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45716658"
 ---
 # <a name="link-environment-variables"></a>Zmienne środowiskowe LINK
 
-LINK-narzędzie używa następujących zmiennych środowiskowych:  
-  
--   ŁĄCZE i \_łącze\_, jeśli została zdefiniowana. LINK-narzędzie dołącza opcje i argumenty zdefiniowane w zmiennej środowiskowej łącza i dołącza opcje i argumenty zdefiniowane w \_łącze\_ zmiennej środowiskowej do argumentów wiersza polecenia przed rozpoczęciem przetwarzania.  
-  
--   Biblioteka, jeśli została zdefiniowana. Narzędzia łącze używa ścieżka LIB podczas wyszukiwania dla obiekt, bibliotekę lub inny plik określony w wierszu polecenia lub przez [/BASE](../../build/reference/base-base-address.md) opcji. Używa również ścieżka LIB można znaleźć pliku PDB o nazwie w obiekcie. Lib — zmienna może zawierać specyfikacji ścieżki, oddzielając je średnikami. Jednej ścieżki musi wskazywać podkatalogu \lib instalację programu Visual C++.  
-  
--   ŚCIEŻKA, jeśli narzędzie musi być uruchamiane CVTRES i nie można odnaleźć pliku w tym samym katalogu co łącza. (Łącze wymaga CVTRES połączyć plik .res). ŚCIEŻKA musi wskazywać podkatalogu \bin instalację programu Visual C++.  
-  
--   TMP, aby określić katalog, w trakcie łączenia OMF lub .res plików.  
-  
-## <a name="see-also"></a>Zobacz też  
+Narzędzie łącze używane następujące zmienne środowiskowe:
 
-[Ustawianie opcji konsolidatora](../../build/reference/setting-linker-options.md)   
-[Opcje konsolidatora](../../build/reference/linker-options.md)   
-[Kompilowanie kodu C/C++ w wierszu polecenia](../../build/building-on-the-command-line.md)  
+- ŁĄCZA i \_łącze\_, jeśli została zdefiniowana. Narzędzie łącze dołącza opcje i argumenty zdefiniowanej zmiennej środowiskowej łącze i dołącza opcje i argumenty zdefiniowane w \_łącze\_ zmiennej środowiskowej, aby argumenty wiersza polecenia, przed rozpoczęciem przetwarzania.
+
+- LIB, jeśli została zdefiniowana. Narzędzia łącze używa ścieżki LIB, aby wyszukać obiekt, bibliotekę lub inny plik określony w wierszu polecenia lub przez [/BASE](../../build/reference/base-base-address.md) opcji. Używa również ścieżki biblioteki można znaleźć pliku .pdb o nazwie w obiekcie. Lib — zmienna może zawierać specyfikacji ścieżki, oddzielając je średnikami. Jedna ścieżka musi wskazywać podkatalog \lib instalację programu Visual C++.
+
+- ŚCIEŻKA, jeśli narzędzie musi zostać uruchomiony CVTRES i nie można odnaleźć pliku w tym samym katalogu co LINKU. (LINK wymaga CVTRES połączyć plik .res). ŚCIEŻKA musi wskazywać w podkatalogu \bin instalację programu Visual C++.
+
+- TMP, aby określić katalog podczas łączenia OMF lub .res plików.
+
+## <a name="see-also"></a>Zobacz też
+
+[Ustawianie opcji konsolidatora](../../build/reference/setting-linker-options.md)<br/>
+[Opcje konsolidatora](../../build/reference/linker-options.md)<br/>
+[Kompilowanie kodu C/C++ w wierszu polecenia](../../build/building-on-the-command-line.md)<br/>
 [Ustawianie ścieżki i zmiennych środowiskowych dla kompilacji z wiersza polecenia](../../build/setting-the-path-and-environment-variables-for-command-line-builds.md)

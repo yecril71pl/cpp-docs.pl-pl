@@ -54,12 +54,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 09f086673ba015b168211261bed68db479ef77a9
-ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
+ms.openlocfilehash: efe15f53cda42089b35d620ae9965050595121c7
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "42464485"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45720229"
 ---
 # <a name="cmfcdesktopalertwnd-class"></a>Klasa CMFCDesktopAlertWnd
 `CMFCDesktopAlertWnd` Klasa implementuje funkcje niemodalnego okna dialogowego który jest wyświetlany na ekranie, aby poinformować użytkownika o zdarzeniu.  
@@ -166,20 +166,20 @@ virtual BOOL Create(
  [in] [out] *pWndOwner*  
  Określa właściciela okno alertu. Ten właściciel następnie będą otrzymywać wszystkie powiadomienia dla okno alertu pulpitu. Ta wartość nie może mieć wartości NULL.  
   
- [in] *uiDlgResID*  
- Określa identyfikator zasobu w oknie alert.  
+*uiDlgResID*<br/>
+[in] Określa identyfikator zasobu w oknie alert.  
   
- [in] *hMenu*  
- Określa menu wyświetlanym po kliknięciu przycisku menu. Jeśli ma wartość NULL, nie jest wyświetlany przycisk menu.  
+*hMenu*<br/>
+[in] Określa menu wyświetlanym po kliknięciu przycisku menu. Jeśli ma wartość NULL, nie jest wyświetlany przycisk menu.  
   
- [in] *ptPos*  
- Określa położenie początkowe, w którym jest wyświetlana w oknie alert, za pomocą współrzędnych ekranu. Jeśli ten parametr ma (-1, -1), w oknie alert jest wyświetlany w prawym dolnym rogu ekranu.  
+*ptPos*<br/>
+[in] Określa położenie początkowe, w którym jest wyświetlana w oknie alert, za pomocą współrzędnych ekranu. Jeśli ten parametr ma (-1, -1), w oknie alert jest wyświetlany w prawym dolnym rogu ekranu.  
   
- [in] *pRTIDlgBar*  
- Informacje o klasie czasu wykonywania dla klasy pole niestandardowe okno dialogowe, w którym omówiono obszaru klienckiego okna alertu.  
+*pRTIDlgBar*<br/>
+[in] Informacje o klasie czasu wykonywania dla klasy pole niestandardowe okno dialogowe, w którym omówiono obszaru klienckiego okna alertu.  
   
- [in] *params*  
- Określa parametry, które są używane w celu utworzenia alertu okna.  
+*params*<br/>
+[in] Określa parametry, które są używane w celu utworzenia alertu okna.  
   
 ### <a name="return-value"></a>Wartość zwracana  
  Wartość TRUE, jeśli w oknie alert został utworzony pomyślnie; w przeciwnym razie wartość FALSE.  
@@ -311,8 +311,8 @@ virtual BOOL OnClickLinkButton(UINT uiCmdID);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *uiCmdID*  
- Ten parametr nie jest używany.  
+*uiCmdID*<br/>
+[in] Ten parametr nie jest używany.  
   
 ### <a name="return-value"></a>Wartość zwracana  
  Zawsze wartość FALSE.  
@@ -330,8 +330,8 @@ virtual BOOL OnCommand(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *wParam*  
- [in] *lParam*  
+*wParam*<br/>
+[in] [in] *lParam*  
   
 ### <a name="return-value"></a>Wartość zwracana  
   
@@ -371,8 +371,8 @@ void SetAnimationSpeed(UINT nSpeed);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *nSpeed*  
- Określa nowe szybkość animacji w milisekundach.  
+*nSpeed*<br/>
+[in] Określa nowe szybkość animacji w milisekundach.  
   
 ### <a name="remarks"></a>Uwagi  
  Wywołaj tę metodę, aby ustawić szybkość animacji okno alertu. Szybkość animacji domyślny to 30 milisekund.  
@@ -385,8 +385,8 @@ void SetAnimationType(CMFCPopupMenu::ANIMATION_TYPE type);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *typu*  
- Określa typ animacji.  
+*Typ*<br/>
+[in] Określa typ animacji.  
   
 ### <a name="remarks"></a>Uwagi  
  Wywołaj tę metodę, aby ustawić typ animacji. Można określić jedną z następujących wartości:  
@@ -409,8 +409,8 @@ void SetAutoCloseTime(int nTime);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *nTime*  
- Czas w milisekundach, który musi upłynąć, zanim okno alertu zostanie automatycznie zamknięte.  
+*nTime*<br/>
+[in] Czas w milisekundach, który musi upłynąć, zanim okno alertu zostanie automatycznie zamknięte.  
   
 ### <a name="remarks"></a>Uwagi  
  W oknie alert zostaje automatycznie zamknięty po określonym czasie, jeśli użytkownik nie wchodzi w interakcję z oknem.  
@@ -423,8 +423,8 @@ void SetSmallCaption(BOOL bSmallCaption = TRUE);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *bSmallCaption*  
- Wartość TRUE, aby określić, czy okno alertu powoduje wyświetlenie małych podpis; w przeciwnym razie wartość FALSE, aby określić, czy okno alertu powoduje wyświetlenie podpis zwykłych rozmiar.  
+*bSmallCaption*<br/>
+[in] Wartość TRUE, aby określić, czy okno alertu powoduje wyświetlenie małych podpis; w przeciwnym razie wartość FALSE, aby określić, czy okno alertu powoduje wyświetlenie podpis zwykłych rozmiar.  
   
 ### <a name="remarks"></a>Uwagi  
  Wywołaj tę metodę, aby wyświetlić podpis małe lub rozmiar zwykłych. Domyślnie małych podpis jest 7 pikseli. Rozmiar podpisu regularnych można uzyskać przez wywołanie funkcji interfejsu Windows API `GetSystemMetrics(SM_CYCAPTION)`.  
@@ -437,8 +437,8 @@ void SetTransparency(BYTE nTransparency);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *nTransparency*  
- Określa poziom przezroczystości. Ta wartość musi być z zakresu od 0 do 255 włącznie. Im większa wartość, więcej nieprzezroczysty okna.  
+*nTransparency*<br/>
+[in] Określa poziom przezroczystości. Ta wartość musi być z zakresu od 0 do 255 włącznie. Im większa wartość, więcej nieprzezroczysty okna.  
   
 ### <a name="remarks"></a>Uwagi  
  Wywołaj tę funkcję, aby ustawić poziom przezroczystości w oknie podręcznym.  

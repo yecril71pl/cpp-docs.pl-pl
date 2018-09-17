@@ -16,22 +16,25 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 04a53e5e6fe45c2c846cae3fb9e973fe1c712107
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 1070eb01802bd4b39f62ae24519ad6dabca7eb90
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32367271"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45719009"
 ---
 # <a name="expressions-in-makefile-preprocessing"></a>Wyrażenia w przetwarzaniu wstępnym pliku reguł programu Make
-**! Jeśli** lub **! ELSE IF** `constantexpression` składa się z stałe całkowite (w notacji dziesiętnej lub języka C), stałe typu string lub polecenia. Użyj nawiasów do wyrażeń grupy. Wyrażenia użyć stylu języka C podpisem długich liczb całkowitych arytmetyczne; numery są w formie uzupełnienia do dwóch 32-bitowe w zakresie od-2147483648 do 2147483647.  
-  
- Wyrażenia można używać operatorów, które działają na stałych kody wyjścia z poleceń, ciągi makra i ścieżki systemu plików.  
-  
-## <a name="what-do-you-want-to-know-more-about"></a>Co chcesz dowiedzieć się więcej o?  
- [Operatory przetwarzania wstępnego pliku reguł programu make](../build/makefile-preprocessing-operators.md)  
-  
- [Wykonywanie programu w przetwarzaniu wstępnym](../build/executing-a-program-in-preprocessing.md)  
-  
-## <a name="see-also"></a>Zobacz też  
- [Przetwarzanie wstępne pliku reguł programu Make](../build/makefile-preprocessing.md)
+
+**! Jeśli** lub **! Jeśli nie** `constantexpression` składa się z stałe całkowite (w notacji dziesiętnej lub języka C), stałe typu string lub poleceń. Użyj nawiasów do wyrażenia grupy. Wyrażenia użycia stylu C podpisem liczba całkowita typu long arytmetyczne; liczby są w 32-bitowych do dwóch dopełnień z zakresu od - 2147483648 do 2147483647.
+
+Wyrażenia można użyć operatorów, które działają na stałe wartości, kody wyjścia z poleceń, ciągi, makr i ścieżki systemu plików.
+
+## <a name="what-do-you-want-to-know-more-about"></a>Co chcesz dowiedzieć się więcej na temat?
+
+[Operatory przetwarzania wstępnego pliku reguł programu make](../build/makefile-preprocessing-operators.md)
+
+[Wykonywanie programu w przetwarzaniu wstępnym](../build/executing-a-program-in-preprocessing.md)
+
+## <a name="see-also"></a>Zobacz też
+
+[Przetwarzanie wstępne pliku reguł programu Make](../build/makefile-preprocessing.md)

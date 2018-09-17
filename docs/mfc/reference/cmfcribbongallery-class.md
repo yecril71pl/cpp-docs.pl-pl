@@ -88,12 +88,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3ed6fde4ffb510c30189e49639112edfadfcfd14
-ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
+ms.openlocfilehash: de624d9775160d1cbe7f048baf2dd83a592cfbe3
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "42465145"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45724798"
 ---
 # <a name="cmfcribbongallery-class"></a>Klasa CMFCRibbonGallery
 Implementacja galerię wstążki stylu pakietu Office 2007.  
@@ -195,20 +195,20 @@ void AddGroup(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *lpszGroupName*  
- Określa nazwę grupy.  
+*lpszGroupName*<br/>
+[in] Określa nazwę grupy.  
   
- [in] *uiImagesPaletteResID*  
- Określa identyfikator zasobu z listy obrazów, który zawiera obrazy dla grupy.  
+*uiImagesPaletteResID*<br/>
+[in] Określa identyfikator zasobu z listy obrazów, który zawiera obrazy dla grupy.  
   
- [in] *cxPaletteImage*  
- Określa szerokość obrazu w pikselach.  
+*cxPaletteImage*<br/>
+[in] Określa szerokość obrazu w pikselach.  
   
- [in] *imagesGroup*  
- Odwołanie do listy obrazów, który zawiera grupę obrazów.  
+*imagesGroup*<br/>
+[in] Odwołanie do listy obrazów, który zawiera grupę obrazów.  
   
- [in] *nIconsNum*  
- Określa liczbę ikon w grupie. Ten parametr należy określić tylko dla niestandardowego (właściciel rysowane) grup.  
+*nIconsNum*<br/>
+[in] Określa liczbę ikon w grupie. Ten parametr należy określić tylko dla niestandardowego (właściciel rysowane) grup.  
   
 ### <a name="remarks"></a>Uwagi  
  Elementy w galerii Wstążki można podzielić na wiele grup, przez wywołanie tej metody. Każda grupa może mieć podpisu.  
@@ -224,14 +224,14 @@ void AddSubItem(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *pSubItem*  
- Wskaźnik do elementu, aby dodać do menu.  
+*pSubItem*<br/>
+[in] Wskaźnik do elementu, aby dodać do menu.  
   
- [in] *nIndex*  
- Określa liczony od zera indeks lokalizacji, gdzie można wstawić elementu.  
+*nIndex*<br/>
+[in] Określa liczony od zera indeks lokalizacji, gdzie można wstawić elementu.  
   
- [in] *bOnTop*  
- Wartość TRUE, aby określić, czy element powinien zostać wstawiony przed galerii wstążki; w przeciwnym razie wartość FALSE.  
+*bOnTop*<br/>
+[in] Wartość TRUE, aby określić, czy element powinien zostać wstawiony przed galerii wstążki; w przeciwnym razie wartość FALSE.  
   
 ### <a name="remarks"></a>Uwagi  
  Przez wywołanie tej metody, można połączyć galerie okno podręczne z elementów menu podręcznego. Elementy menu można umieścić przed lub po galerii.  
@@ -325,11 +325,11 @@ void EnableMenuResize(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *bWłączenie*  
- Wartość TRUE powoduje włączenie rozmiaru menu. w przeciwnym razie wartość FALSE.  
+*bWłączenie*<br/>
+[in] Wartość TRUE powoduje włączenie rozmiaru menu. w przeciwnym razie wartość FALSE.  
   
- [in] *bVertcalOnly*  
- Wartość TRUE, aby określić tylko w pionie; rozmiar galerii Wartość FALSE, aby określić, że galerii rozmiar można zmieniać w pionie i w poziomie.  
+*bVertcalOnly*<br/>
+[in] Wartość TRUE, aby określić tylko w pionie; rozmiar galerii Wartość FALSE, aby określić, że galerii rozmiar można zmieniać w pionie i w poziomie.  
   
 ### <a name="remarks"></a>Uwagi  
  Ta metoda umożliwia włączanie lub wyłączanie zmiany rozmiaru w galerii wstążki. Po włączeniu zmiany rozmiaru w galerii wstążki Wyświetla uchwytu, które użytkownik może używać, aby zmienić jego rozmiar.  
@@ -342,8 +342,8 @@ void EnablMenuSideBar(BOOL bEnable=TRUE);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *bWłączenie*  
- Wartość TRUE, aby określić, czy włączono pasku bocznym; w przeciwnym razie wartość FALSE.  
+*bWłączenie*<br/>
+[in] Wartość TRUE, aby określić, czy włączono pasku bocznym; w przeciwnym razie wartość FALSE.  
   
 ### <a name="remarks"></a>Uwagi  
  Wywołaj tę metodę, aby włączyć lub wyłączyć pasku bocznym stylu XP pakietu Office, w menu po lewej stronie.  
@@ -381,8 +381,8 @@ LPCTSTR GetGroupName(int nGroupIndex) const;
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *nGroupIndex*  
- Określa liczony od zera indeks grupy, której nazwa ma zostać pobrane.  
+*nGroupIndex*<br/>
+[in] Określa liczony od zera indeks grupy, której nazwa ma zostać pobrane.  
   
 ### <a name="return-value"></a>Wartość zwracana  
  Nazwa grupy znajduje się w określonym indeksie. Przekazywanie nieprawidłowy indeks powoduje potwierdzenie nie powiodło się.  
@@ -420,8 +420,8 @@ LPCTSTR GetItemToolTip(int nItemIndex) const;
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *nItemIndex*  
- Określa liczony od zera indeks elementu, dla którego mają zostać pobrane tekst etykietki narzędzia.  
+*nItemIndex*<br/>
+[in] Określa liczony od zera indeks elementu, dla którego mają zostać pobrane tekst etykietki narzędzia.  
   
 ### <a name="return-value"></a>Wartość zwracana  
  Wskaźnik do ciągu etykietki narzędzia, przypisany do elementu w galerii wstążki. Jeśli nie etykietka narzędzia jest przypisany do tego elementu może być NULL.  
@@ -436,8 +436,8 @@ static int GetLastSelectedItem(UINT uiCmdID);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *uiCmdID*  
- Określa identyfikator polecenia elementu menu, który otwarty galerii wstążki.  
+*uiCmdID*<br/>
+[in] Określa identyfikator polecenia elementu menu, który otwarty galerii wstążki.  
   
 ### <a name="return-value"></a>Wartość zwracana  
  Gdy użytkownik wybierze dowolny element w galerii wstążki, biblioteka wysyła komunikatów WM_COMMAND wraz z identyfikator polecenia przycisku menu, który otwarty galerii wstążki.  
@@ -576,20 +576,20 @@ virtual void OnDrawPaletteIcon(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *podstawowego kontrolera domeny*  
- Wskaźnik do kontekstu urządzenia, który jest używany do rysowania.  
+*podstawowego kontrolera domeny*<br/>
+[in] Wskaźnik do kontekstu urządzenia, który jest używany do rysowania.  
   
- [in] *rectIcon*  
- Określa ikonę Aby narysować prostokąt otaczający.  
+*rectIcon*<br/>
+[in] Określa ikonę Aby narysować prostokąt otaczający.  
   
- [in] *nIconIndex*  
- Określa liczony od zera indeks, z listy obrazów z galerii ikon ikonę Aby narysować.  
+*nIconIndex*<br/>
+[in] Określa liczony od zera indeks, z listy obrazów z galerii ikon ikonę Aby narysować.  
   
- [in] *pIcon*  
- Wskaźnik do ikony rysowania.  
+*pIcon*<br/>
+[in] Wskaźnik do ikony rysowania.  
   
- [in] *clrText*  
- Określa kolor tekstu elementu, aby narysować.  
+*clrText*<br/>
+[in] Określa kolor tekstu elementu, aby narysować.  
   
 ### <a name="remarks"></a>Uwagi  
  Można zastąpić tę metodę w klasie pochodnej, aby dostosować wygląd galerii wstążki.  
@@ -659,11 +659,11 @@ virtual BOOL SetACCData(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *pParent*  
- Okno nadrzędne okna Galerii wstążki.  
+*pParent*<br/>
+[in] Okno nadrzędne okna Galerii wstążki.  
   
- [out] *danych*  
- A `CAccessibilityData` obiekt, który odbiera dane dostępności z galerii wstążki.  
+*Dane*<br/>
+[out] A `CAccessibilityData` obiekt, który odbiera dane dostępności z galerii wstążki.  
   
 ### <a name="return-value"></a>Wartość zwracana  
   
@@ -678,8 +678,8 @@ void SetButtonMode(BOOL bSet=TRUE);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *bUstawienie*  
- Wartość TRUE, aby galerii wstążki są wyświetlane jako przycisk menu rozwijanego; Wartość FALSE, aby wyświetlić zawartość galerii wstążki bezpośrednio na Wstążce.  
+*bUstawienie*<br/>
+[in] Wartość TRUE, aby galerii wstążki są wyświetlane jako przycisk menu rozwijanego; Wartość FALSE, aby wyświetlić zawartość galerii wstążki bezpośrednio na Wstążce.  
   
 ### <a name="remarks"></a>Uwagi  
   
@@ -693,11 +693,11 @@ void SetGroupName(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *nGroupIndex*  
- Określa liczony od zera indeks grupy, dla którego nazwa jest zmieniany.  
+*nGroupIndex*<br/>
+[in] Określa liczony od zera indeks grupy, dla którego nazwa jest zmieniany.  
   
- [in] *lpszGroupName*  
- Określa nową nazwę grupy.  
+*lpszGroupName*<br/>
+[in] Określa nową nazwę grupy.  
   
 ### <a name="remarks"></a>Uwagi  
  Grupy, którego nazwa jest zmieniane, należy dodać za pomocą [CMFCRibbonGallery::AddGroup](#addgroup) metody.  
@@ -710,8 +710,8 @@ void SetIconsInRow(int nIconsInRow);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *nIconsInRow*  
- Określa liczbę elementów, które mają być wyświetlane w każdym wierszu w galerii.  
+*nIconsInRow*<br/>
+[in] Określa liczbę elementów, które mają być wyświetlane w każdym wierszu w galerii.  
   
 ### <a name="remarks"></a>Uwagi  
  Użyj tej metody, aby określić szerokość galerii wstążki.  
@@ -726,11 +726,11 @@ void SetItemToolTip(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *nItemIndex*  
- Liczony od zera indeks elementu palety, z którą chcesz skojarzyć etykietki narzędzia.  
+*nItemIndex*<br/>
+[in] Liczony od zera indeks elementu palety, z którą chcesz skojarzyć etykietki narzędzia.  
   
- [in] *lpszToolTip*  
- Tekst, który ma być wyświetlana w etykietce narzędzia.  
+*lpszToolTip*<br/>
+[in] Tekst, który ma być wyświetlana w etykietce narzędzia.  
   
 ### <a name="remarks"></a>Uwagi  
   
@@ -747,14 +747,14 @@ void SetPalette(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *imagesPalette*  
- Określa listę obrazu który zawiera ikony są wyświetlane w galerii.  
+*imagesPalette*<br/>
+[in] Określa listę obrazu który zawiera ikony są wyświetlane w galerii.  
   
- [in] *uiImagesPaletteResID*  
- Określa identyfikator zasobu z listy obrazów, który zawiera ikony są wyświetlane w galerii.  
+*uiImagesPaletteResID*<br/>
+[in] Określa identyfikator zasobu z listy obrazów, który zawiera ikony są wyświetlane w galerii.  
   
- [in] *cxPaletteImage*  
- Określa szerokość w pikselach, obraz w galerii.  
+*cxPaletteImage*<br/>
+[in] Określa szerokość w pikselach, obraz w galerii.  
   
 ### <a name="remarks"></a>Uwagi  
   
@@ -766,8 +766,8 @@ void SetPaletteID(UINT nID);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *nID*  
- Określa identyfikator polecenia, który będzie wysyłany w wiadomości WM_COMMAND, gdy użytkownik wybierze element galerii.  
+*nID*<br/>
+[in] Określa identyfikator polecenia, który będzie wysyłany w wiadomości WM_COMMAND, gdy użytkownik wybierze element galerii.  
   
 ### <a name="remarks"></a>Uwagi  
  Aby ustalić konkretny element, który użytkownik zaznaczył w galerii, należy wywołać [CMFCRibbonGallery::GetLastSelectedItem](#getlastselecteditem) metody statycznej.  

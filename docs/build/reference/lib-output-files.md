@@ -16,21 +16,23 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e8caa26685d6132cbc1ffd8a2467f8615bffd42f
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 23665897266bab87c71b8b3889688113fe8aa99a
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32370491"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45720710"
 ---
 # <a name="lib-output-files"></a>Pliki wyjściowe LIB
-Pliki wyjściowe, generowane przez LIB zależą od tryb, w którym jest on używany, jak pokazano w poniższej tabeli.  
-  
-|Tryb|Dane wyjściowe|  
-|----------|------------|  
-|Domyślne (Tworzenie lub modyfikowanie biblioteki)|Biblioteka COFF (lib)|  
-|Wyodrębnianie członka o/extract|Plik obiektu (.obj)|  
-|Tworzenie eksportu pliku i zaimportować biblioteki z/DEF|Importuj biblioteki (lib) i pliku eksportu (.exp)|  
-  
-## <a name="see-also"></a>Zobacz też  
- [Informacje o LIB](../../build/reference/overview-of-lib.md)
+
+Pliki wyjściowe utworzone przez LIB zależą od trybu, w którym jest on używany, jak pokazano w poniższej tabeli.
+
+|Tryb|Dane wyjściowe|
+|----------|------------|
+|Domyślne (Tworzenie lub modyfikowanie biblioteki)|COFF biblioteki (lib)|
+|Wyodrębnianie do członka za pomocą/extract|Plik obiektowy (.obj)|
+|Tworzenie eksportu pliku i zaimportować biblioteki z/DEF|Importowanie biblioteki (.lib) oraz pliku eksportu (.exp)|
+
+## <a name="see-also"></a>Zobacz też
+
+[Informacje o LIB](../../build/reference/overview-of-lib.md)

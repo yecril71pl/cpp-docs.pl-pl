@@ -17,84 +17,97 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: cc2ebd18640f0ab778cb45252691e63206861d53
-ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
+ms.openlocfilehash: 9c26f4b75c2c4920cbf8a235064aea222a066fca
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "33340349"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45718851"
 ---
 # <a name="add-method-wizard"></a>Kreator dodawania metody
-Ten kreator umożliwia dodawanie metody do interfejsu. W zależności od typu projektu lub typ interfejsu, do którego dodajesz metody Kreator wyświetli różne opcje.  
+Użyj tego kreatora, aby dodać metodę do interfejsu. W zależności od typu projektu lub typu interfejsu, do którego dodajesz metodę Kreator wyświetli inne opcje.  
   
-## <a name="names"></a>Nazwy  
- **Zwracany typ**  
- Typ danych zwracanych przez metodę. `HRESULT` Zaleca się dla wszystkich typów interfejsu, ponieważ zapewnia standardowy sposób zwracać błędów.  
+## <a name="names"></a>Nazwy
+
+- **Zwracany typ**
+
+   Typ danych zwracany przez metodę. `HRESULT` Zaleca się dla wszystkich typów interfejsu, ponieważ zawiera ono standardowy sposób zwracane błędy.  
   
-|Typ interfejsu|Opis|  
-|--------------------|-----------------|  
-|Podwójna — interfejs|`HRESULT`. Niezmienne.|  
-|Niestandardowy interfejs|`HRESULT`. Niezmienne.|  
-|Niestandardowy interfejs lokalnego|Podaj własny typ zwracany albo wybierz z listy.|  
-|Dispinterface|Podaj własny typ zwracany albo wybierz z listy.|  
-|Dispinterface kontrolki MFC ActiveX|W przypadku zastosowania metody akcji, zwracany typ jest ustawiona na odpowiednią wartość i jest niezmienne. W przypadku wybrania metody z **nazwę metody** listy i kliknij przycisk **niestandardowy** w obszarze **wybierz typ metody**, wybierz typ zwracany z listy.|  
+   |Typ interfejsu|Opis|  
+   |--------------------|-----------------|  
+   |Podwójnego interfejsu|`HRESULT`. Nie będzie zmieniana.|  
+   |Niestandardowy interfejs|`HRESULT`. Nie będzie zmieniana.|  
+   |Lokalny interfejs niestandardowe|Podaj swój własny typ zwracany lub wybierz z listy.|  
+   |Dispinterface|Podaj swój własny typ zwracany lub wybierz z listy.|  
+   |Dispinterface kontrolki MFC ActiveX|W przypadku zastosowania metody akcji, zwracany typ ma ustawioną wartość odpowiednią i można zmienić. Jeśli zostanie wybrana metoda z **nazwę metody** listy, a następnie kliknij przycisk **niestandardowe** w obszarze **wybierz typ metody**, wybierz typ zwracany z listy.|  
   
- **Nazwa metody**  
- Ustawia nazwę metody.  
+- **Nazwa metody**
+
+   Ustawia nazwę metody.  
   
-|Typ interfejsu|Opis|  
-|--------------------|-----------------|  
-|Interfejs podwójny ATL, niestandardowy interfejs i lokalne niestandardowy interfejs|Podaj nazwę metody.|  
-|MFC dispinterface|Podaj nazwę metody lub wybierz nazwę sugerowane metody z listy. W przypadku wybrania nazwę z listy odpowiednią wartość znajduje się w **zwracany typ** pole ma zmieniać.|  
-|Dispinterface kontrolki MFC ActiveX|Podaj własny lub wybrać jedną z metod standardowych [DoClick](../mfc/reference/colecontrol-class.md#doclick) i [Odśwież](../mfc/reference/colecontrol-class.md#refresh). Zobacz [kontrolki ActiveX MFC: dodawanie metod giełdowych](../mfc/mfc-activex-controls-adding-stock-methods.md) Aby uzyskać więcej informacji.|  
+   |Typ interfejsu|Opis|  
+   |--------------------|-----------------|  
+   |ATL podwójnego interfejsu, niestandardowego interfejsu i lokalne niestandardowy interfejs|Podaj nazwę metody.|  
+   |MFC dispinterface|Podaj własną nazwę metody lub wybierz nazwę sugerowane metody z listy. Jeśli wybierzesz nazwę z listy odpowiednią wartość pojawia się w **zwracany typ** pole to nie będzie zmieniana.|  
+   |Dispinterface kontrolki MFC ActiveX|Podaj własny lub wybrać jedną z metod standardowych [DoClick](../mfc/reference/colecontrol-class.md#doclick) i [Odśwież](../mfc/reference/colecontrol-class.md#refresh). Zobacz [kontrolki ActiveX MFC: dodawanie metod akcji](../mfc/mfc-activex-controls-adding-stock-methods.md) Aby uzyskać więcej informacji.|  
   
- **Typ — metoda**  
- Dostępne tylko w przypadku kontrolek MFC ActiveX. Jeśli podasz nazwę metody w **nazwę metody** polu, zamiast wybierać metodę z listy, to pole jest niedostępne.  
+- **Typ metody**
+
+   Dostępne tylko dla kontrolek MFC ActiveX. Jeśli podasz nazwę metody w **nazwę metody** polu, zamiast wybierania metody na liście, to pole jest niedostępne.  
   
- Po wybraniu jednej z metod w **nazwę metody** wybierz implementacji standardowych lub niestandardowych implementacji.  
+    Po wybraniu jednej z metod w **nazwę metody** wybierz implementacji standardowych lub niestandardowych implementacji.  
   
-|Typ — metoda|Opis|  
-|-----------------|-----------------|  
-|**Zapasów**|Domyślnie. Wstawia standardowych implementacja metody, należy wybrać w **nazwę metody** listy. **Zwracany typ** jest zmieniać w przypadku wybrania **giełdowych**.|  
-|**Niestandardowy**|Wstawia implementacji programu klasy zastępczej metody wybrany w **nazwę metody** listy. Dla typów niestandardowej metody, można podać własne zwracany typ lub możesz wybrać jeden z **zwracany typ** listy.|  
+   |Typ metody|Opis|  
+   |-----------------|-----------------|  
+   |**Zapasów**|Domyślnie. Wstawia podstawowe implementacji metody, wybierz w **nazwę metody** listy. **Zwracany typ** można zmienić, jeśli zostanie wybrana **Stock**.|  
+   |**Niestandardowy**|Wstawia z implementacją wycinka Metoda wybrana w **nazwę metody** listy. W przypadku typów niestandardową metodę możesz podać swój własny typ zwracany lub możesz wybrać jeden z **zwracany typ** listy.|  
   
- **Nazwa wewnętrzna**  
- Dostępne tylko niestandardowych metod dodane do dispinterface MFC. Ustawia nazwę używaną w mapy wysyłania plików nagłówków (.h) i pliku implementacji (.cpp). Domyślnie ta nazwa jest taka sama jak **nazwę metody**. Jeśli pracujesz z dispinterface MFC lub dodajesz niestandardowe metody do dispinterface kontrolki MFC ActiveX, można zmienić nazwę metody.  
+- **Nazwa wewnętrzna**
+
+   Dostępne tylko niestandardowych metod, dodane do dispinterface MFC. Ustawia nazwę używaną w Mapa wysyłania pliku nagłówka (.h) i plik implementacji (.cpp). Domyślnie ta nazwa jest taka sama jak **nazwę metody**. Możesz zmienić nazwę metody, jeśli pracujesz z dispinterface MFC lub Jeśli dodajesz niestandardową metodę do dispinterface kontrolki MFC ActiveX.  
   
-|Typ interfejsu|Opis|  
-|--------------------|-----------------|  
-|Interfejs podwójny ATL, niestandardowy interfejs i lokalne niestandardowy interfejs|Niedostępne|  
-|MFC dispinterface|Domyślnie w nazwie metody. Można edytować nazwy wewnętrznej.|  
-|Dispinterface kontrolki MFC ActiveX|Można ustawić tylko dla metod niestandardowych wewnętrzna nazwa. Podstawowe metody nie należy używać wewnętrzna nazwa.|  
+   |Typ interfejsu|Opis|  
+   |--------------------|-----------------|  
+   |ATL podwójnego interfejsu, niestandardowego interfejsu i lokalne niestandardowy interfejs|Niedostępne|  
+   |MFC dispinterface|Domyślnie w nazwie metody. Można edytować nazwy wewnętrznej.|  
+   |Dispinterface kontrolki MFC ActiveX|Możesz ustawić nazwa wewnętrzna tylko w przypadku niestandardowych metod. Metody akcji nie należy używać nazw wewnętrznych.|  
   
- **Atrybuty parametrów**  
- Ustawia wszelkie dodatkowe atrybuty parametru określone w **Nazwa parametru**.  
+- **Atrybuty parametru**
+
+   Ustawia wszelkie dodatkowe atrybuty dla określonego w parametrze **Nazwa parametru**.  
   
-|Atrybut parametru|Opis|Dozwolone kombinacje|  
-|-------------------------|-----------------|--------------------------|  
-|**W**|Wskazuje, że parametr jest przekazywany z procedury wywołującej do procedury wywoływanej.|**w** tylko<br /><br /> **w** i **out**|  
-|**limit**|Wskazuje, że parametr wskaźnika jest zwracana z procedury wywoływanej do procedury wywołującej (z serwera do klienta).|**limit** tylko<br /><br /> **w** i **out**<br /><br /> **limit** i **retval**|  
-|**retval**|Wskazuje, że parametr otrzymuje wartość zwrotną z elementu członkowskiego.|**retval** i out|  
+   |Atrybut parametru|Opis|Dozwolone kombinacje|  
+   |-------------------------|-----------------|--------------------------|  
+   |**W**|Wskazuje, że parametr jest przekazywany z procedury wywołującej do procedury wywoływanej.|**w** tylko<br /><br /> **w** i **out**|  
+   |**limit**|Wskazuje, że parametr wskaźnika jest zwracana z procedury wywoływanej do procedury wywołującej (z serwera do klienta).|**limit** tylko<br /><br /> **w** i **out**<br /><br /> **limit** i **retval**|  
+   |**retval**|Wskazuje, że parametr otrzymuje wartość zwrotną z elementu członkowskiego.|**retval** i komentarz|  
   
- **Typ parametru**  
- Ustawia typ danych parametru. Wybierz typ z listy.  
+- **Typ parametru**
+
+   Ustawia typ danych parametru. Wybierz typ z listy.  
   
- **Nazwa parametru**  
- Ustawia nazwę parametru przekazywane do metody. Po wpisaniu nazwy, należy kliknąć opcję **Dodaj** dodać ją do listy parametrów, które mają być przekazywane metodę. Jeśli nazwa parametru nie jest określona, Kreator ignoruje wszystkie atrybuty parametru (tylko ATL) lub **typ parametru** wybrane opcje.  
+- **Nazwa parametru**
+
+   Określa nazwę parametru, aby przechodzić przez metodę. Po wpisaniu nazwy, należy kliknąć przycisk **Dodaj** ją dodać do listy parametrów, które będzie przekazywał metodę. Jeśli nazwa parametru nie jest określona, Kreator ignoruje wszelkie atrybuty parametru (tylko ATL) lub **typ parametru** wybrane opcje.  
   
- Po kliknięciu **Dodaj**, nazwa parametru jest wyświetlana w **listy parametrów**.  
+   Po kliknięciu **Dodaj**, nazwa parametru jest wyświetlana w **listy parametrów**.  
   
- **Uwaga** Jeśli podać nazwę parametru, a następnie kliknij przycisk **Zakończ** przed kliknięciem przycisku **Dodaj**, parametr nie zostanie dodany do metody. Należy znaleźć metody i Wstaw parametr ręcznie.  
+   > [!Note]
+   > Jeśli należy podać nazwę parametru, a następnie kliknij przycisk **Zakończ** przed kliknięciem przycisku **Dodaj**, parametr nie zostanie dodany do metody. Należy znaleźć metody i wstawić parametr ręcznie.  
   
- **Dodaj**  
- Dodaje parametr należy określić w **Nazwa parametru**i jego atrybuty typu i parametru do **listy parametrów**. Należy kliknąć opcję **Dodaj** powoduje dodanie parametru do listy.  
+- **Add**
+
+   Dodaje parametr należy określić w **Nazwa parametru**i jego atrybuty typu i parametr do **listy parametrów**. Należy kliknąć przycisk **Dodaj** Aby dodać parametr do listy.  
   
- **Usuń**  
- Usuwa parametr należy wybrać w **listy parametrów** z listy.  
+- **Usuń**
+
+   Usuwa parametr w **listy parametrów** z listy.  
   
- **Listy parametrów**  
- Wyświetla wszystkie parametry i Modyfikatory i typy aktualnie dodanych w metodzie. Jak dodać parametry, Kreator aktualizuje **listy parametrów** do wyświetlania każdego parametru z modyfikatora i typu.  
+- **Lista parametrów**
+
+   Wyświetla wszystkie parametry i ich Modyfikatory i typów dodanych w aktualnie dla metody. W miarę dodawania parametrów, kreator dokona aktualizacji **listy parametrów** do wyświetlenia każdego parametru, z modyfikatora i typu.  
   
 ## <a name="see-also"></a>Zobacz też  
- [Dodawanie metody](../ide/adding-a-method-visual-cpp.md)   
- [Atrybuty IDL, Kreator dodawania metody](../ide/idl-attributes-add-method-wizard.md)
+
+[Dodawanie metody](../ide/adding-a-method-visual-cpp.md)<br/>
+[Atrybuty IDL, Kreator dodawania metody](../ide/idl-attributes-add-method-wizard.md)

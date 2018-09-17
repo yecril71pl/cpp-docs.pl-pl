@@ -21,73 +21,81 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ebfbd7e8cedd522c324743abc5c28c6ac3e9f2b0
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 75e4612104fdc57fd1442f1a35efbf317a60310d
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43200391"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45717096"
 ---
 # <a name="subsystem-specify-subsystem"></a>/SUBSYSTEM (Określ podsystem)
-```  
-/SUBSYSTEM:{BOOT_APPLICATION|CONSOLE|EFI_APPLICATION|  
-            EFI_BOOT_SERVICE_DRIVER|EFI_ROM|EFI_RUNTIME_DRIVER|NATIVE|  
-            POSIX|WINDOWS)  
-            [,major[.minor]]  
-```  
-  
- BOOT_APPLICATION  
- Aplikacja, która jest uruchamiana w środowisku Windows rozruchowego. Aby uzyskać więcej informacji dotyczących aplikacji rozruchu, zobacz [o BCD](/previous-versions/windows/desktop/bcd/about-bcd).  
-  
- KONSOLA  
- Aplikacja trybu znaków Win32. System operacyjny zapewnia konsolę dla aplikacji konsoli. Jeśli `main` lub `wmain` jest zdefiniowany dla kodu natywnego, `int main(array<String ^> ^)` jest zdefiniowany dla kodu zarządzanego, lub całkowicie skompilować aplikację przy użyciu `/clr:safe`, CONSOLE jest wartością domyślną.  
-  
- Interfejs Extensible Firmware Interface  
- EFI_ * podsystemów. Zobacz specyfikację interfejsu EFI, aby uzyskać więcej informacji. Na przykład zobacz witrynę sieci Web Intel. Minimalna wersja wersji i domyślne to 1.0.  
-  
- NATYWNE  
- Sterowniki trybu jądra Windows NT. Ta opcja jest zazwyczaj zarezerwowana dla składników systemu Windows. Jeśli [WDM](../../build/reference/driver-windows-nt-kernel-mode-driver.md) określono NATYWNYCH jest ustawieniem domyślnym.  
-  
- POSIX  
- Aplikacja uruchamiana z podsystem POSIX w Windows NT.  
-  
- SYSTEMU WINDOWS  
- Aplikacja nie wymaga konsoli, prawdopodobnie ponieważ powoduje to utworzenie własnego systemu windows do interakcji z użytkownikiem. Jeśli `WinMain` lub `wWinMain` jest zdefiniowany dla kodu natywnego lub `WinMain(HISTANCE *, HINSTANCE *, char *, int)` lub `wWinMain(HINSTANCE *, HINSTANCE *, wchar_t *, int)` jest zdefiniowany dla kodu zarządzanego, systemu WINDOWS jest ustawieniem domyślnym.  
-  
- `Major` i `minor` (opcjonalnie)  
- Określ minimalną wymaganą wersję podsystemu. Argumenty są liczbami dziesiętnymi z zakresu od 0 do 65 535. Zobacz uwagi, aby uzyskać więcej informacji. Nie ma żadnych granic dla numerów wersji.  
-  
-## <a name="remarks"></a>Uwagi  
- Opcja/Subsystem określa środowisko dla pliku wykonywalnego.  
-  
- Wybór podsystemu wpływa na symbol punktu wejścia (lub funkcję punktu wejścia), które wybierze konsolidator.  
-  
- Opcjonalne minimalnych i domyślnych `major` i `minor` numery wersji dla podsystemów są następujące.  
-  
-|Podsystem|Minimalnie|Domyślny|  
-|---------------|-------------|-------------|  
-|BOOT_APPLICATION|1.0|1.0|  
-|KONSOLA|5.01 (x 86) 5.02 (x 64) 6.02 (ARM)|6.00 (x86, x64) 6.02 (ARM)|  
-|SYSTEMU WINDOWS|5.01 (x 86) 5.02 (x 64) 6.02 (ARM)|6.00 (x86, x64) 6.02 (ARM)|  
-|NATYWNY (DRIVER: WDM)|1,00 (x 86) — x64 ARM 64 1.10|1,00 (x 86) — x64 ARM 64 1.10|  
-|NATYWNE (bez WDM)|4.00 (x 86) 5.02 (x 64) 6.02 (ARM)|4.00 (x 86) 5.02 (x 64) 6.02 (ARM)|  
-|POSIX|1.0|19.90|  
-|EFI_APPLICATION, EFI_BOOT_SERVICE_DRIVER, EFI_ROM, EFI_RUNTIME_DRIVER|1.0|1.0|  
-  
-### <a name="to-set-this-linker-option-in-the-visual-studio-development-environment"></a>Aby ustawić tę opcję konsolidatora w środowisku programowania Visual Studio  
-  
-1.  Otwórz projekt **stron właściwości** okno dialogowe. Aby uzyskać więcej informacji, zobacz [ustawienie właściwości projektu Visual C++](../../ide/working-with-project-properties.md).  
-  
-2.  Wybierz folder konsolidatora.  
-  
-3.  Wybierz **systemu** stronę właściwości.  
-  
-4.  Modyfikowanie `SubSystem` właściwości.  
-  
-### <a name="to-set-this-linker-option-programmatically"></a>Aby programowo ustawić tę opcję konsolidatora  
-  
--   Zobacz <xref:Microsoft.VisualStudio.VCProjectEngine.VCLinkerTool.SubSystem%2A>.  
-  
-## <a name="see-also"></a>Zobacz też  
- [Ustawianie opcji konsolidatora](../../build/reference/setting-linker-options.md)   
- [Opcje konsolidatora](../../build/reference/linker-options.md)
+
+```
+/SUBSYSTEM:{BOOT_APPLICATION|CONSOLE|EFI_APPLICATION|
+            EFI_BOOT_SERVICE_DRIVER|EFI_ROM|EFI_RUNTIME_DRIVER|NATIVE|
+            POSIX|WINDOWS)
+            [,major[.minor]]
+```
+
+## <a name="arguments"></a>Argumenty
+
+**BOOT_APPLICATION**<br/>
+Aplikacja, która jest uruchamiana w środowisku Windows rozruchowego. Aby uzyskać więcej informacji dotyczących aplikacji rozruchu, zobacz [o BCD](/previous-versions/windows/desktop/bcd/about-bcd).
+
+**KONSOLA**<br/>
+Aplikacja trybu znaków Win32. System operacyjny zapewnia konsolę dla aplikacji konsoli. Jeśli `main` lub `wmain` jest zdefiniowany dla kodu natywnego, `int main(array<String ^> ^)` jest zdefiniowany dla kodu zarządzanego, lub całkowicie skompilować aplikację przy użyciu `/clr:safe`, CONSOLE jest wartością domyślną.
+
+**EFI_APPLICATION**<br/>
+**EFI_BOOT_SERVICE_DRIVER**<br/>
+**EFI_ROM**<br/>
+**EFI_RUNTIME_DRIVER**<br/>
+Podsystemy rozszerzalnego interfejsu oprogramowania układowego. Zobacz specyfikację interfejsu EFI, aby uzyskać więcej informacji. Przykłady zobacz witrynę sieci Web Intel. Minimalna wersja wersji i domyślne to 1.0.
+
+**NATYWNE**<br/>
+Sterowniki trybu jądra Windows NT. Ta opcja jest zazwyczaj zarezerwowana dla składników systemu Windows. Jeśli [WDM](../../build/reference/driver-windows-nt-kernel-mode-driver.md) określono NATYWNYCH jest ustawieniem domyślnym.
+
+**POSIX**<br/>
+Aplikacja uruchamiana z podsystem POSIX w Windows NT.
+
+**SYSTEMU WINDOWS**<br/>
+Aplikacja nie wymaga konsoli, prawdopodobnie ponieważ powoduje to utworzenie własnego systemu windows do interakcji z użytkownikiem. Jeśli `WinMain` lub `wWinMain` jest zdefiniowany dla kodu natywnego lub `WinMain(HISTANCE *, HINSTANCE *, char *, int)` lub `wWinMain(HINSTANCE *, HINSTANCE *, wchar_t *, int)` jest zdefiniowany dla kodu zarządzanego, systemu WINDOWS jest ustawieniem domyślnym.
+
+*główne* i *pomocnicza*<br/>
+(Opcjonalnie) Określ minimalną wymaganą wersję podsystemu. Argumenty są liczbami dziesiętnymi z zakresu od 0 do 65 535. Zobacz uwagi, aby uzyskać więcej informacji. Nie ma żadnych granic dla numerów wersji.
+
+## <a name="remarks"></a>Uwagi
+
+**/Subsystem** opcja określa środowisko dla pliku wykonywalnego.
+
+Wybór podsystemu wpływa na symbol punktu wejścia (lub funkcję punktu wejścia), które wybierze konsolidator.
+
+Opcjonalne minimalnych i domyślnych *głównych* i *pomocnicza* numery wersji dla podsystemów są następujące.
+
+|Podsystem|Minimalnie|Domyślny|
+|---------------|-------------|-------------|
+|BOOT_APPLICATION|1.0|1.0|
+|KONSOLA|5.01 (x 86) 5.02 (x 64) 6.02 (ARM)|6.00 (x86, x64) 6.02 (ARM)|
+|SYSTEMU WINDOWS|5.01 (x 86) 5.02 (x 64) 6.02 (ARM)|6.00 (x86, x64) 6.02 (ARM)|
+|NATYWNY (DRIVER: WDM)|1,00 (x 86) — x64 ARM 64 1.10|1,00 (x 86) — x64 ARM 64 1.10|
+|NATYWNE (bez WDM)|4.00 (x 86) 5.02 (x 64) 6.02 (ARM)|4.00 (x 86) 5.02 (x 64) 6.02 (ARM)|
+|POSIX|1.0|19.90|
+|EFI_APPLICATION, EFI_BOOT_SERVICE_DRIVER, EFI_ROM, EFI_RUNTIME_DRIVER|1.0|1.0|
+
+### <a name="to-set-this-linker-option-in-the-visual-studio-development-environment"></a>Aby ustawić tę opcję konsolidatora w środowisku programowania Visual Studio
+
+1. Otwórz projekt **stron właściwości** okno dialogowe. Aby uzyskać więcej informacji, zobacz [ustawienie właściwości projektu Visual C++](../../ide/working-with-project-properties.md).
+
+1. Wybierz folder konsolidatora.
+
+1. Wybierz **systemu** stronę właściwości.
+
+1. Modyfikowanie `SubSystem` właściwości.
+
+### <a name="to-set-this-linker-option-programmatically"></a>Aby programowo ustawić tę opcję konsolidatora
+
+- Zobacz <xref:Microsoft.VisualStudio.VCProjectEngine.VCLinkerTool.SubSystem%2A>.
+
+## <a name="see-also"></a>Zobacz też
+
+[Ustawianie opcji konsolidatora](../../build/reference/setting-linker-options.md)<br/>
+[Opcje konsolidatora](../../build/reference/linker-options.md)

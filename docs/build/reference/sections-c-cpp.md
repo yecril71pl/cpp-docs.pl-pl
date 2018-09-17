@@ -16,57 +16,60 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4c433bf49ee4c56833ac7291bcc4a0f90e32f4e5
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: ecd8d6050df7a4d30b0a37cad28e030d1cd63cf0
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32377303"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45722901"
 ---
 # <a name="sections-cc"></a>SEKCJE (C/C++)
-Wprowadza sekcji jednego lub więcej `definitions` , które są specyfikatory dostępu w sekcjach pliku wyjściowego projektu.  
-  
-```  
-SECTIONS  
-definitions  
-```  
-  
-## <a name="remarks"></a>Uwagi  
- Każda definicja musi być w oddzielnym wierszu. `SECTIONS` — Słowo kluczowe może być w tym samym wierszu jako pierwsza definicja lub w poprzednim wierszu. Plik .def może zawierać jeden lub więcej `SECTIONS` instrukcje.  
-  
- To `SECTIONS` instrukcja Ustawia atrybuty dla co najmniej jednej sekcji w pliku obrazu i może służyć do zastępowania domyślne atrybuty dla każdego typu sekcji.  
-  
- Format `definitions` jest:  
-  
- `.section_name specifier`  
-  
- gdzie `.section_name` jest nazwę sekcji w obrazie programu i `specifier` jest co najmniej jednego z następujących modyfikatorów dostępu:  
-  
-|Modyfikator|Opis|  
-|--------------|-----------------|  
-|`EXECUTE`|Sekcja jest pliku wykonywalnego|  
-|`READ`|Zezwala na operacje odczytu danych|  
-|`SHARED`|Udostępnia sekcji między wszystkie procesy, które ładują obrazu|  
-|`WRITE`|Zezwala na wykonywanie operacji zapisu na danych|  
-  
- Rozdziel nazwy specyfikator się spacją. Na przykład:  
-  
-```  
-SECTIONS  
-.rdata READ WRITE  
-```  
-  
- `SECTIONS` oznacza początek listy sekcji `definitions`. Każdy `definition` musi być w oddzielnym wierszu. `SECTIONS` — Słowo kluczowe może być w tym samym wierszu co pierwszy `definition` lub w poprzednim wierszu. Plik .def może zawierać jeden lub więcej `SECTIONS` instrukcje. `SEGMENTS` — Słowo kluczowe jest obsługiwany jako synonimem `SECTIONS`.  
-  
- Obsługuje starsze wersje programu Visual C++:  
-  
-```  
-section [CLASS 'classname'] specifier  
-```  
-  
- `CLASS` — Słowo kluczowe jest obsługiwana w przypadku zgodności, ale został zignorowany.  
-  
- Sposób, aby określić atrybuty sekcji równoważny jest z [/SECTION](../../build/reference/section-specify-section-attributes.md) opcji.  
-  
-## <a name="see-also"></a>Zobacz też  
- [Zasady dla instrukcji definicji modułu](../../build/reference/rules-for-module-definition-statements.md)
+
+Wprowadza części w co najmniej jednego `definitions` , które są specyfikatory dostępu, w sekcji w pliku danych wyjściowych projektu.
+
+```
+SECTIONS
+definitions
+```
+
+## <a name="remarks"></a>Uwagi
+
+Każda definicja musi być w oddzielnym wierszu. `SECTIONS` — Słowo kluczowe może być na tym samym wierszu co pierwsza definicja lub na poprzedni wiersz. Plik .def może zawierać jeden lub więcej `SECTIONS` instrukcji.
+
+To `SECTIONS` instrukcja Ustawia atrybuty dla jednej lub więcej sekcji w pliku obrazu i może służyć do zastępowania atrybutów domyślnych dla każdego typu sekcji.
+
+Format `definitions` jest:
+
+`.section_name specifier`
+
+gdzie `.section_name` to nazwa sekcji w obrazie programu i `specifier` jest co najmniej następujące modyfikatory dostępu:
+
+|Modyfikator|Opis|
+|--------------|-----------------|
+|`EXECUTE`|Sekcja jest wykonywalny|
+|`READ`|Zezwala na operacje odczytu danych|
+|`SHARED`|Udostępnia sekcji między wszystkie procesy, które ładują obrazu|
+|`WRITE`|Umożliwia wykonywanie operacji zapisu na danych|
+
+Specyfikator nazwy należy oddzielić spacjami. Na przykład:
+
+```
+SECTIONS
+.rdata READ WRITE
+```
+
+`SECTIONS` oznacza początek listy sekcji `definitions`. Każdy `definition` muszą znajdować się w osobnym wierszu. `SECTIONS` — Słowo kluczowe może być w tym samym wierszu jako pierwsze `definition` lub na poprzedni wiersz. Plik .def może zawierać jeden lub więcej `SECTIONS` instrukcji. `SEGMENTS` — Słowo kluczowe jest obsługiwany jako synonim dla `SECTIONS`.
+
+Starsze wersje programu Visual C++ są obsługiwane:
+
+```
+section [CLASS 'classname'] specifier
+```
+
+`CLASS` — Słowo kluczowe jest obsługiwana w przypadku zgodności, ale został zignorowany.
+
+Jest równoważne sposób Określ atrybuty sekcji [/SECTION](../../build/reference/section-specify-section-attributes.md) opcji.
+
+## <a name="see-also"></a>Zobacz też
+
+[Zasady dla instrukcji definicji modułu](../../build/reference/rules-for-module-definition-statements.md)

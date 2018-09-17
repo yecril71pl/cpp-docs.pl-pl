@@ -28,12 +28,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3984ebc1568c831420e11bd7b3c9004dabcc316b
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: eef400f13e36ac543fbcd73ccb7aedf4bc053037
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43222097"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45718097"
 ---
 # <a name="cmfcfontinfo-class"></a>Klasa CMFCFontInfo
 `CMFCFontInfo` Klasa opisuje nazwę i inne atrybuty czcionki.  
@@ -94,23 +94,23 @@ CMFCFontInfo(const CMFCFontInfo& src);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *lpszName*  
- Nazwa czcionki. Aby uzyskać więcej informacji, zobacz `lfFaceName` członkiem [LOGFONT](/windows/desktop/api/wingdi/ns-wingdi-taglogfonta) struktury.  
+*lpszName*<br/>
+[in] Nazwa czcionki. Aby uzyskać więcej informacji, zobacz `lfFaceName` członkiem [LOGFONT](/windows/desktop/api/wingdi/ns-wingdi-taglogfonta) struktury.  
   
- [in] *lpszScript*  
- Nazwa skryptu (zestaw znaków) czcionki.  
+*lpszScript*<br/>
+[in] Nazwa skryptu (zestaw znaków) czcionki.  
   
- [in] *nCharSet*  
- Wartość, która określa zestaw znaków (skrypt) czcionki. Aby uzyskać więcej informacji, zobacz `lfCharSet` członkiem [LOGFONT](/windows/desktop/api/wingdi/ns-wingdi-taglogfonta) struktury.  
+*nCharSet*<br/>
+[in] Wartość, która określa zestaw znaków (skrypt) czcionki. Aby uzyskać więcej informacji, zobacz `lfCharSet` członkiem [LOGFONT](/windows/desktop/api/wingdi/ns-wingdi-taglogfonta) struktury.  
   
- [in] *nPitchAndFamily*  
- Wartość, która określa gęstość i rodzinę czcionek. Aby uzyskać więcej informacji, zobacz `lfPitchAndFamily` członkiem [LOGFONT](/windows/desktop/api/wingdi/ns-wingdi-taglogfonta) struktury.  
+*nPitchAndFamily*<br/>
+[in] Wartość, która określa gęstość i rodzinę czcionek. Aby uzyskać więcej informacji, zobacz `lfPitchAndFamily` członkiem [LOGFONT](/windows/desktop/api/wingdi/ns-wingdi-taglogfonta) struktury.  
   
- [in] *nNie*  
- Wartość, która określa typ czcionki. Ten parametr może być bitowa kombinacja (lub) DEVICE_FONTTYPE RASTER_FONTTYPE i TRUETYPE_FONTTYPE.  
+*nNie*<br/>
+[in] Wartość, która określa typ czcionki. Ten parametr może być bitowa kombinacja (lub) DEVICE_FONTTYPE RASTER_FONTTYPE i TRUETYPE_FONTTYPE.  
   
- [in] *src*  
- Istniejące `CMFCFontInfo` obiektu, której członkami są używane do konstruowania to `CMFCFontInfo` obiektu.  
+*src*<br/>
+[in] Istniejące `CMFCFontInfo` obiektu, której członkami są używane do konstruowania to `CMFCFontInfo` obiektu.  
   
 ### <a name="return-value"></a>Wartość zwracana  
   

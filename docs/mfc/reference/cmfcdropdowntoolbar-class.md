@@ -30,12 +30,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5b227f9d2fdd43b576f89b74f43e4cdce8476bf9
-ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
+ms.openlocfilehash: 23ca73629208e0ac80f7c516f8249e83ae0d41a6
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43692386"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45719241"
 ---
 # <a name="cmfcdropdowntoolbar-class"></a>Klasa CMFCDropDownToolBar
 Pasek narzędzi, który pojawia się po naciśnięciu i przytrzymaniu przycisku paska narzędzi najwyższego poziomu.  
@@ -133,23 +133,23 @@ virtual BOOL LoadBitmap(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *uiResID*  
- Identyfikator zasobu mapy bitowej, która odwołuje się do gorąca paska narzędzi obrazów.  
+*uiResID*<br/>
+[in] Identyfikator zasobu mapy bitowej, która odwołuje się do gorąca paska narzędzi obrazów.  
   
- [in] *uiColdResID*  
- Identyfikator zasobu mapy bitowej, która odwołuje się do zimnej paska narzędzi obrazów.  
+*uiColdResID*<br/>
+[in] Identyfikator zasobu mapy bitowej, która odwołuje się do zimnej paska narzędzi obrazów.  
   
- [in] *uiMenuResID*  
- Identyfikator zasobu mapy bitowej, która odwołuje się do obrazów regularne menu.  
+*uiMenuResID*<br/>
+[in] Identyfikator zasobu mapy bitowej, która odwołuje się do obrazów regularne menu.  
   
- [in] *zablokowane*  
- Wartość TRUE, aby zablokować narzędzi; w przeciwnym razie wartość FALSE.  
+*Zablokowane*<br/>
+[in] Wartość TRUE, aby zablokować narzędzi; w przeciwnym razie wartość FALSE.  
   
- [in] *uiDisabledResID*  
- Identyfikator zasobu mapy bitowej, która odwołuje się do wyłączonego paska narzędzi obrazów.  
+*uiDisabledResID*<br/>
+[in] Identyfikator zasobu mapy bitowej, która odwołuje się do wyłączonego paska narzędzi obrazów.  
   
- [in] *uiMenuDisabledResID*  
- Identyfikator zasobu mapy bitowej, która odwołuje się do obrazów menu wyłączone.  
+*uiMenuDisabledResID*<br/>
+[in] Identyfikator zasobu mapy bitowej, która odwołuje się do obrazów menu wyłączone.  
   
 ### <a name="return-value"></a>Wartość zwracana  
  Wartość różną od zera, jeśli metoda się powiedzie; w przeciwnym razie 0.  
@@ -174,12 +174,12 @@ virtual BOOL LoadToolBar(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *uiResID*  
- [in] *uiColdResID*  
- [in] *uiMenuResID*  
- [in] *BOOL*  
- [in] *uiDisabledResID*  
- [in] *uiMenuDisabledResID*  
+*uiResID*<br/>
+[in] [in] *uiColdResID*  
+*uiMenuResID*<br/>
+[in] [in] *BOOL*  
+*uiDisabledResID*<br/>
+[in] [in] *uiMenuDisabledResID*  
  [in] *uiHotResID*  
   
 ### <a name="return-value"></a>Wartość zwracana  
@@ -196,8 +196,8 @@ afx_msg void OnLButtonUp(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *nFlags*  
- [in] *punktu*  
+*nFlags*<br/>
+[in] [in] *punktu*  
   
 ### <a name="remarks"></a>Uwagi  
   
@@ -211,8 +211,8 @@ afx_msg void OnMouseMove(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *nFlags*  
- [in] *punktu*  
+*nFlags*<br/>
+[in] [in] *punktu*  
   
 ### <a name="remarks"></a>Uwagi  
   
@@ -240,8 +240,8 @@ virtual void OnUpdateCmdUI(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *pTarget*  
- [in] *bDisableIfNoHndler*  
+*pTarget*<br/>
+[in] [in] *bDisableIfNoHndler*  
   
 ### <a name="remarks"></a>Uwagi  
   

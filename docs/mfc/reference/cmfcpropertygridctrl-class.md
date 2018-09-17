@@ -160,12 +160,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 25e1c3fdad045b17b83f7562256592114a5c6e72
-ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
+ms.openlocfilehash: a9b17c62c767b6665f70e91bfd04dc03379e08ab
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43680656"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45724675"
 ---
 # <a name="cmfcpropertygridctrl-class"></a>Klasa CMFCPropertyGridCtrl
 Aby uzyskać więcej informacji, zobacz kod źródłowy znajdujący się w **VC\\atlmfc\\src\\mfc** folder instalacji programu Visual Studio.  
@@ -332,8 +332,8 @@ virtual HRESULT accSelect(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *flagsSelect*  
- [in] *varChild*  
+*flagsSelect*<br/>
+[in] [in] *varChild*  
   
 ### <a name="return-value"></a>Wartość zwracana  
   
@@ -350,14 +350,14 @@ int AddProperty(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *pProp*  
- Wskaźnik do właściwości.  
+*pProp*<br/>
+[in] Wskaźnik do właściwości.  
   
- [in] *bRedraw*  
- Wartość TRUE, by narysować ponownie właściwość natychmiast; w przeciwnym razie wartość FALSE. Wartość domyślna to TRUE.  
+*bRedraw*<br/>
+[in] Wartość TRUE, by narysować ponownie właściwość natychmiast; w przeciwnym razie wartość FALSE. Wartość domyślna to TRUE.  
   
- [in] *bAdjustLayout*  
- Wartość TRUE, aby ponownie obliczyć jak rysować tekst i wartości właściwości, a następnie narysuj właściwości; Wartość FALSE, aby użyć istniejącego obliczeń do rysowania właściwości. Wartość domyślna to TRUE.  
+*bAdjustLayout*<br/>
+[in] Wartość TRUE, aby ponownie obliczyć jak rysować tekst i wartości właściwości, a następnie narysuj właściwości; Wartość FALSE, aby użyć istniejącego obliczeń do rysowania właściwości. Wartość domyślna to TRUE.  
   
 ### <a name="return-value"></a>Wartość zwracana  
  Jeśli metoda ta powiedzie się, liczony od zera indeks pozycji w formant siatki właściwości, w której jest dodawana właściwość; w przeciwnym razie, wartość -1.  
@@ -447,17 +447,17 @@ virtual BOOL Create(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *dwStyle*  
- Bitowa kombinacja (lub) [Style okna ramowego](../../mfc/reference/styles-used-by-mfc.md#window-styles).  
+*dwStyle*<br/>
+[in] Bitowa kombinacja (lub) [Style okna ramowego](../../mfc/reference/styles-used-by-mfc.md#window-styles).  
   
- [in] *rect*  
- Współrzędne prostokąt otaczający, który określa rozmiar i położenie okna w kliencie *pParentWnd*.  
+*Rect*<br/>
+[in] Współrzędne prostokąt otaczający, który określa rozmiar i położenie okna w kliencie *pParentWnd*.  
   
- [in] *pParentWnd*  
- Wskaźnik do okna nadrzędnego. Nie może mieć wartości NULL.  
+*pParentWnd*<br/>
+[in] Wskaźnik do okna nadrzędnego. Nie może mieć wartości NULL.  
   
- [in] *nID*  
- Identyfikator okna podrzędnego.  
+*nID*<br/>
+[in] Identyfikator okna podrzędnego.  
   
 ### <a name="return-value"></a>Wartość zwracana  
  Wartość TRUE, jeśli okno został utworzony pomyślnie; w przeciwnym razie wartość FALSE.  
@@ -481,14 +481,14 @@ BOOL DeleteProperty(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *pProp*  
- Wskaźnik do właściwości.  
+*pProp*<br/>
+[in] Wskaźnik do właściwości.  
   
- [in] *bRedraw*  
- Wartość TRUE, by narysować ponownie formant siatki właściwości; w przeciwnym razie wartość FALSE. Wartość domyślna to TRUE.  
+*bRedraw*<br/>
+[in] Wartość TRUE, by narysować ponownie formant siatki właściwości; w przeciwnym razie wartość FALSE. Wartość domyślna to TRUE.  
   
- [in] *bAdjustLayout*  
- Wartość TRUE, aby ponownie obliczyć jak rysować tekst, obrazy i elementów w formancie siatki właściwości, a następnie narysuj kontroli. w przeciwnym razie wartość FALSE. Wartość domyślna to TRUE.  
+*bAdjustLayout*<br/>
+[in] Wartość TRUE, aby ponownie obliczyć jak rysować tekst, obrazy i elementów w formancie siatki właściwości, a następnie narysuj kontroli. w przeciwnym razie wartość FALSE. Wartość domyślna to TRUE.  
   
 ### <a name="return-value"></a>Wartość zwracana  
  Wartość TRUE, jeśli ta metoda jest kończy się pomyślnie; w przeciwnym razie wartość FALSE.  
@@ -517,11 +517,11 @@ virtual BOOL EditItem(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *pProp*  
- Wskaźnik do właściwości.  
+*pProp*<br/>
+[in] Wskaźnik do właściwości.  
   
- [in] *lptClick*  
- Punkt na formant siatki właściwości, że użytkownik kliknął element, aby rozpocząć operację edycji. Punkt jest we współrzędnych klienta formantu. Wartością domyślną jest NULL.  
+*lptClick*<br/>
+[in] Punkt na formant siatki właściwości, że użytkownik kliknął element, aby rozpocząć operację edycji. Punkt jest we współrzędnych klienta formantu. Wartością domyślną jest NULL.  
   
 ### <a name="return-value"></a>Wartość zwracana  
  Wartość TRUE, jeśli metoda się powiedzie; w przeciwnym razie wartość FALSE.  
@@ -536,8 +536,8 @@ void EnableDescriptionArea(BOOL bEnable=TRUE);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *bWłączenie*  
- Wartość TRUE, aby włączyć obszar opisu; Wartość FALSE umożliwia wyłączenie obszar opisu. Wartość domyślna to TRUE.  
+*bWłączenie*<br/>
+[in] Wartość TRUE, aby włączyć obszar opisu; Wartość FALSE umożliwia wyłączenie obszar opisu. Wartość domyślna to TRUE.  
   
 ### <a name="remarks"></a>Uwagi  
  Obszar opis jest wyświetlany w dolnej części kontrolki siatki właściwości. Domyślnie obszar opisu jest wyłączone i niewidoczne.  
@@ -553,14 +553,14 @@ void EnableHeaderCtrl(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *bWłączenie*  
- Wartość TRUE, aby włączyć kontrolki nagłówka; Wartość FALSE, aby wyłączyć kontrolki nagłówka. Wartość domyślna to TRUE.  
+*bWłączenie*<br/>
+[in] Wartość TRUE, aby włączyć kontrolki nagłówka; Wartość FALSE, aby wyłączyć kontrolki nagłówka. Wartość domyślna to TRUE.  
   
- [in] *lpszLeftColumn*  
- Tytuł lewej kolumnie w formancie nagłówka. Wartość domyślna to **właściwość**.  
+*lpszLeftColumn*<br/>
+[in] Tytuł lewej kolumnie w formancie nagłówka. Wartość domyślna to **właściwość**.  
   
- [in] *lpszRightColumn*  
- Tytuł kolumna po prawej stronie formantu nagłówka. Wartość domyślna to **wartość**.  
+*lpszRightColumn*<br/>
+[in] Tytuł kolumna po prawej stronie formantu nagłówka. Wartość domyślna to **wartość**.  
   
 ##  <a name="endedititem"></a>  CMFCPropertyGridCtrl::EndEditItem  
  Wywoływane przez platformę, gdy użytkownik zakończy modyfikowanie właściwości.  
@@ -570,8 +570,8 @@ virtual BOOL EndEditItem(BOOL bUpdateData=TRUE);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *bUpdateData*  
- Wartość TRUE, aby określić, że dane zmodyfikowane właściwości muszą być weryfikowane, po zakończeniu operacji edycji; w przeciwnym razie wartość FALSE. Wartość domyślna to TRUE.  
+*bUpdateData*<br/>
+[in] Wartość TRUE, aby określić, że dane zmodyfikowane właściwości muszą być weryfikowane, po zakończeniu operacji edycji; w przeciwnym razie wartość FALSE. Wartość domyślna to TRUE.  
   
 ### <a name="return-value"></a>Wartość zwracana  
  Wartość TRUE, jeśli operacja edytowania kończy się pomyślnie; Wartość FALSE, jeśli dane zmodyfikowane właściwości są nieprawidłowe lub operacji edycji powinno być kontynuowane.  
@@ -588,11 +588,11 @@ void EnsureVisible(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *pProp*  
- Wskaźnik do właściwości.  
+*pProp*<br/>
+[in] Wskaźnik do właściwości.  
   
- [in] *bExpandParents*  
- Wartość TRUE, aby rozwinąć elementów nadrzędnych, aby uwidocznić określonej właściwości; w przeciwnym razie wartość FALSE. Wartość domyślna to FALSE.  
+*bExpandParents*<br/>
+[in] Wartość TRUE, aby rozwinąć elementów nadrzędnych, aby uwidocznić określonej właściwości; w przeciwnym razie wartość FALSE. Wartość domyślna to FALSE.  
   
 ### <a name="remarks"></a>Uwagi  
   
@@ -604,8 +604,8 @@ void ExpandAll(BOOL bExpand=TRUE);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *bExpand*  
- Wartość TRUE, aby rozwinąć wszystkie węzły; Wartość FALSE, aby zwinąć wszystkie węzły. Wartość domyślna to TRUE.  
+*bExpand*<br/>
+[in] Wartość TRUE, aby rozwinąć wszystkie węzły; Wartość FALSE, aby zwinąć wszystkie węzły. Wartość domyślna to TRUE.  
   
 ### <a name="remarks"></a>Uwagi  
   
@@ -619,11 +619,11 @@ CMFCPropertyGridProperty* FindItemByData(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *dwData*  
- Wartość DWORD.  
+*dwData*<br/>
+[in] Wartość DWORD.  
   
- [in] *bSearchSubItems*  
- Wartość TRUE, aby wyszukać właściwość elementy podrzędne. w przeciwnym razie wartość FALSE. Wartość domyślna to TRUE.  
+*bSearchSubItems*<br/>
+[in] Wartość TRUE, aby wyszukać właściwość elementy podrzędne. w przeciwnym razie wartość FALSE. Wartość domyślna to TRUE.  
   
 ### <a name="return-value"></a>Wartość zwracana  
  Wskaźnik do obiektu właściwości skojarzonej, jeśli ta metoda zakończy się powodzeniem; w przeciwnym razie wartość NULL.  
@@ -669,8 +669,8 @@ virtual HRESULT get_accHelp(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *varChild*  
- [in] *pszHelp*  
+*varChild*<br/>
+[in] [in] *pszHelp*  
   
 ### <a name="return-value"></a>Wartość zwracana  
   
@@ -687,8 +687,8 @@ virtual HRESULT get_accHelpTopic(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *pszHelpFile*  
- [in] *varChild*  
+*pszHelpFile*<br/>
+[in] [in] *varChild*  
  [in] *pidTopic*  
   
 ### <a name="return-value"></a>Wartość zwracana  
@@ -705,8 +705,8 @@ virtual HRESULT get_accKeyboardShortcut(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *varChild*  
- [in] *pszKeyboardShortcut*  
+*varChild*<br/>
+[in] [in] *pszKeyboardShortcut*  
   
 ### <a name="return-value"></a>Wartość zwracana  
   
@@ -776,26 +776,26 @@ void GetCustomColors(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [out] *clrBackground*  
- Kolor tła wartości właściwości.  
+*clrBackground*<br/>
+[out] Kolor tła wartości właściwości.  
   
- [out] *clrText*  
- Kolor nazw właściwości i tekst wartości właściwości.  
+*clrText*<br/>
+[out] Kolor nazw właściwości i tekst wartości właściwości.  
   
- [out] *clrGroupBackground*  
- Kolor tła grupy właściwości.  
+*clrGroupBackground*<br/>
+[out] Kolor tła grupy właściwości.  
   
- [out] *clrGroupText*  
- Kolor tekstu w grupie właściwości.  
+*clrGroupText*<br/>
+[out] Kolor tekstu w grupie właściwości.  
   
- [out] *clrDescriptionBackground*  
- Kolor tła obszar opisu.  
+*clrDescriptionBackground*<br/>
+[out] Kolor tła obszar opisu.  
   
- [out] *clrDescriptionText*  
- Kolor tekstu w obszarze Opis.  
+*clrDescriptionText*<br/>
+[out] Kolor tekstu w obszarze Opis.  
   
- [out] *clrLine*  
- Kolor linii, które są rysowane między właściwościami.  
+*clrLine*<br/>
+[out] Kolor linii, które są rysowane między właściwościami.  
   
 ### <a name="remarks"></a>Uwagi  
  Użyj [CMFCPropertyGridCtrl::SetCustomColors](#setcustomcolors) metodę, aby ustawić kolorów niestandardowych.  
@@ -883,8 +883,8 @@ CMFCPropertyGridProperty* GetProperty(int nIndex) const;
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *nIndex*  
- Liczony od zera indeks elementu kontrolki siatki właściwości.  
+*nIndex*<br/>
+[in] Liczony od zera indeks elementu kontrolki siatki właściwości.  
   
  Ta metoda potwierdza Jeśli *nIndex* parametr jest mniejsza od zera lub w większe niż lub równa liczbie właściwości.  
   
@@ -939,8 +939,8 @@ virtual CScrollBar* GetScrollBarCtrl(int nBar) const;
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *nBar*  
- Orientacja paska przewijania, który musi być SB_VERT.  
+*nBar*<br/>
+[in] Orientacja paska przewijania, który musi być SB_VERT.  
   
 ### <a name="return-value"></a>Wartość zwracana  
  Wskaźnik do obiektu lub wartość NULL, jeśli nie paska przewijania lub orientacja paska przewijania — paska przewijania jest SB_HORZ.  
@@ -972,14 +972,14 @@ CMFCPropertyGridProperty* HitTest(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *(czas pacyficzny)*  
- Punkt, w układzie współrzędnych klienta.  
+*(czas pacyficzny)*<br/>
+[in] Punkt, w układzie współrzędnych klienta.  
   
- [out w] *pnArea*  
- Wskaźnik do `ClickArea` zmiennej. Po powrocie z tej metody oznacza zmiennej *obszar właściwości* zawierający określony punkt. Aby uzyskać więcej informacji o obszarze właściwości Zobacz uwagi.  
+*pnArea*<br/>
+[out w] Wskaźnik do `ClickArea` zmiennej. Po powrocie z tej metody oznacza zmiennej *obszar właściwości* zawierający określony punkt. Aby uzyskać więcej informacji o obszarze właściwości Zobacz uwagi.  
   
- [in] *bPropsOnly*  
- Wartość TRUE, aby przetestować tylko w obszarze właściwości; Wartość FALSE, aby przetestować *obszar opisu* Jeśli określony punkt nie znajduje się w obszarze właściwości. Wartość domyślna to FALSE. Aby uzyskać więcej informacji na temat obszar opisu zobacz uwagi.  
+*bPropsOnly*<br/>
+[in] Wartość TRUE, aby przetestować tylko w obszarze właściwości; Wartość FALSE, aby przetestować *obszar opisu* Jeśli określony punkt nie znajduje się w obszarze właściwości. Wartość domyślna to FALSE. Aby uzyskać więcej informacji na temat obszar opisu zobacz uwagi.  
   
 ### <a name="return-value"></a>Wartość zwracana  
  Jeśli *bPropsOnly* parametr ma wartość PRAWDA i określony punkt znajduje się w obszarze właściwości, wartość zwracana jest wskaźnikiem do odpowiedniego obiektu właściwości. Ponadto *pnArea* parametr jest ustawiony na określonym obszarze, który zawiera określony punkt. W przeciwnym razie wartość zwracana jest wartość NULL i *pnArea* parametr nie jest modyfikowany.  
@@ -1127,11 +1127,11 @@ void MarkModifiedProperties(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *bMark*  
- Wartość true, ekran zmodyfikowane właściwości styl pogrubiony; Wartość FALSE, aby wyświetlić właściwości zmodyfikowane w stylu normalnego. Wartość domyślna to TRUE.  
+*bMark*<br/>
+[in] Wartość true, ekran zmodyfikowane właściwości styl pogrubiony; Wartość FALSE, aby wyświetlić właściwości zmodyfikowane w stylu normalnego. Wartość domyślna to TRUE.  
   
- [in] *bRedraw*  
- Wartość true, ponownego wystawiania natychmiast; formant siatki właściwości w przeciwnym razie wartość FALSE. Wartość domyślna to TRUE.  
+*bRedraw*<br/>
+[in] Wartość true, ponownego wystawiania natychmiast; formant siatki właściwości w przeciwnym razie wartość FALSE. Wartość domyślna to TRUE.  
   
 ### <a name="remarks"></a>Uwagi  
   
@@ -1148,8 +1148,8 @@ virtual void OnChangeSelection(
   
 |Parametr|Opis|  
 |---------------|-----------------|  
-|[in] *pNewSel*|Wskaźnik do nowo wybranej właściwości.|  
-|[in] *pOldSel*|Wskaźnik do poprzednio wybranego właściwości.|  
+|*pNewSel*|[in] Wskaźnik do nowo wybranej właściwości.|  
+|*pOldSel*|[in] Wskaźnik do poprzednio wybranego właściwości.|  
   
 ### <a name="remarks"></a>Uwagi  
  Domyślna implementacja tej metody nie działa.  
@@ -1162,8 +1162,8 @@ virtual void OnClickButton(CPoint point);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *punktu*  
- Punkt, w układzie współrzędnych klienta.  
+*Punkt*<br/>
+[in] Punkt, w układzie współrzędnych klienta.  
   
 ### <a name="remarks"></a>Uwagi  
  Domyślnie ta metoda aktualizuje bieżącej wartości właściwości.  
@@ -1176,8 +1176,8 @@ virtual void OnDrawBorder(CDC* pDC);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *podstawowego kontrolera domeny*  
- Wskaźnik do kontekstu urządzenia.  
+*podstawowego kontrolera domeny*<br/>
+[in] Wskaźnik do kontekstu urządzenia.  
   
 ### <a name="remarks"></a>Uwagi  
   
@@ -1191,11 +1191,11 @@ virtual void OnDrawDescription(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *podstawowego kontrolera domeny*  
- Wskaźnik do kontekstu urządzenia.  
+*podstawowego kontrolera domeny*<br/>
+[in] Wskaźnik do kontekstu urządzenia.  
   
- [in] *rect*  
- Prostokąt, który określa, gdzie można narysować obszar opisu.  
+*Rect*<br/>
+[in] Prostokąt, który określa, gdzie można narysować obszar opisu.  
   
 ### <a name="remarks"></a>Uwagi  
  Użyj [CMFCPropertyGridCtrl::EnableDescriptionArea](#enabledescriptionarea) metodę, aby wyświetlić obszar opisu.  
@@ -1208,8 +1208,8 @@ virtual void OnDrawList(CDC* pDC);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *podstawowego kontrolera domeny*  
- Wskaźnik do kontekstu urządzenia.  
+*podstawowego kontrolera domeny*<br/>
+[in] Wskaźnik do kontekstu urządzenia.  
   
 ### <a name="remarks"></a>Uwagi  
   
@@ -1223,11 +1223,11 @@ virtual int OnDrawProperty(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *podstawowego kontrolera domeny*  
- Wskaźnik do kontekstu urządzenia.  
+*podstawowego kontrolera domeny*<br/>
+[in] Wskaźnik do kontekstu urządzenia.  
   
- [in] *pProp*  
- Wskaźnik do obiektu właściwości.  
+*pProp*<br/>
+[in] Wskaźnik do obiektu właściwości.  
   
 ### <a name="return-value"></a>Wartość zwracana  
  Wartość TRUE, jeśli ta metoda jest kończy się pomyślnie; w przeciwnym razie wartość FALSE.  
@@ -1242,8 +1242,8 @@ virtual void OnPropertyChanged(CMFCPropertyGridProperty* pProp) const;
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *pProp*  
- Wskaźnik do obiektu właściwości, którego wartość została zmieniona.  
+*pProp*<br/>
+[in] Wskaźnik do obiektu właściwości, którego wartość została zmieniona.  
   
 ### <a name="remarks"></a>Uwagi  
  Domyślnie ta metoda wysyła [AFX_WM_PROPERTY_CHANGED](../../mfc/reference/afx-messages.md) wiadomości do właściciela formant siatki właściwości.  
@@ -1274,8 +1274,8 @@ void ResetOriginalValues(BOOL bRedraw=TRUE);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *bRedraw*  
- Wartość TRUE, aby odświeżyć listę właściwości; w przeciwnym razie wartość FALSE. Wartość domyślna to TRUE.  
+*bRedraw*<br/>
+[in] Wartość TRUE, aby odświeżyć listę właściwości; w przeciwnym razie wartość FALSE. Wartość domyślna to TRUE.  
   
 ### <a name="remarks"></a>Uwagi  
   
@@ -1287,8 +1287,8 @@ void SetAlphabeticMode(BOOL bSet=TRUE);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *bUstawienie*  
- Wartość TRUE, aby ustawić tryb alfabetycznej; Alfabetyczne tryb resetowania wartość FALSE. Wartość domyślna to TRUE.  
+*bUstawienie*<br/>
+[in] Wartość TRUE, aby ustawić tryb alfabetycznej; Alfabetyczne tryb resetowania wartość FALSE. Wartość domyślna to TRUE.  
   
 ### <a name="remarks"></a>Uwagi  
  Gdy na formancie siatki właściwości jest w trybie alfabetyczne, formant sortowania wszystkich właściwości, które zawiera nazwy właściwości.  
@@ -1303,11 +1303,11 @@ void SetBoolLabels(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *lpszTrue*  
- Ciąg tekstowy wyświetlany w przypadku wartość logiczną PRAWDA.  
+*lpszTrue*<br/>
+[in] Ciąg tekstowy wyświetlany w przypadku wartość logiczną PRAWDA.  
   
- [in] *lpszFalse*  
- Ciąg tekstowy wyświetlany w przypadku wartość logiczną FAŁSZ.  
+*lpszFalse*<br/>
+[in] Ciąg tekstowy wyświetlany w przypadku wartość logiczną FAŁSZ.  
   
 ### <a name="remarks"></a>Uwagi  
   
@@ -1321,11 +1321,11 @@ void SetCurSel(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *pProp*  
- Wskaźnik do obiektu właściwości.  
+*pProp*<br/>
+[in] Wskaźnik do obiektu właściwości.  
   
- [in] *bRedraw*  
- Wartość true, ponownego wystawiania natychmiast; formant siatki właściwości w przeciwnym razie wartość FALSE. Wartość domyślna to TRUE.  
+*bRedraw*<br/>
+[in] Wartość true, ponownego wystawiania natychmiast; formant siatki właściwości w przeciwnym razie wartość FALSE. Wartość domyślna to TRUE.  
   
 ### <a name="remarks"></a>Uwagi  
  Ta metoda umożliwia anulowanie zaznaczenia bieżącego elementu w formancie siatki właściwości, a następnie wybierz element, który odnosi się do określonej właściwości.  
@@ -1345,26 +1345,26 @@ void SetCustomColors(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *clrBackground*  
- Kolor tła wartości właściwości.  
+*clrBackground*<br/>
+[in] Kolor tła wartości właściwości.  
   
- [in] *clrText*  
- Kolor nazw właściwości i tekst wartości właściwości.  
+*clrText*<br/>
+[in] Kolor nazw właściwości i tekst wartości właściwości.  
   
- [in] *clrGroupBackground*  
- Kolor tła grupy właściwości.  
+*clrGroupBackground*<br/>
+[in] Kolor tła grupy właściwości.  
   
- [in] *clrGroupText*  
- Nowy kolor tekstu grupy właściwości.  
+*clrGroupText*<br/>
+[in] Nowy kolor tekstu grupy właściwości.  
   
- [in] *clrDescriptionBackground*  
- Kolor tła obszar opisu.  
+*clrDescriptionBackground*<br/>
+[in] Kolor tła obszar opisu.  
   
- [in] *clrDescriptionText*  
- Kolor tekstu w obszarze Opis.  
+*clrDescriptionText*<br/>
+[in] Kolor tekstu w obszarze Opis.  
   
- [in] *clrLine*  
- Kolor linii, które są rysowane między właściwościami.  
+*clrLine*<br/>
+[in] Kolor linii, które są rysowane między właściwościami.  
   
 ### <a name="remarks"></a>Uwagi  
  Dla każdego parametru określić `((COLORREF)-1)` koloru wartość domyślny kolor dla tego elementu na formancie siatki właściwości.  
@@ -1379,8 +1379,8 @@ void SetDescriptionRows(int nDescRows);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *nDescRows*  
- Liczba wierszy do wyświetlenia w opisie właściwości.  
+*nDescRows*<br/>
+[in] Liczba wierszy do wyświetlenia w opisie właściwości.  
   
 ##  <a name="setgroupnamefullwidth"></a>  CMFCPropertyGridCtrl::SetGroupNameFullWidth  
  Określa, czy należy wyświetlać całą szerokość nazwa kategorii dla grupy właściwości w bieżącym formant siatki właściwości.  
@@ -1392,11 +1392,11 @@ void SetGroupNameFullWidth(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *bGroupNameFullWidth*  
- Wartość TRUE, aby wyświetlić pełną szerokość nazwę kategorii, niezależnie od tego, szerokość kolumny nazwy właściwości. Wartość FALSE, aby ograniczyć szerokość nazwę kategorii, aby szerokość kolumny nazwy właściwości. Wartość domyślna to TRUE.  
+*bGroupNameFullWidth*<br/>
+[in] Wartość TRUE, aby wyświetlić pełną szerokość nazwę kategorii, niezależnie od tego, szerokość kolumny nazwy właściwości. Wartość FALSE, aby ograniczyć szerokość nazwę kategorii, aby szerokość kolumny nazwy właściwości. Wartość domyślna to TRUE.  
   
- [in] *bRedraw*  
- Wartość PRAWDA, aby od razu; formant siatki właściwości aktualizacji Wartość FALSE, aby aktualizować formantu podczas następnego ponownego wystawiania zdarzenie występuje. Wartość domyślna to TRUE.  
+*bRedraw*<br/>
+[in] Wartość PRAWDA, aby od razu; formant siatki właściwości aktualizacji Wartość FALSE, aby aktualizować formantu podczas następnego ponownego wystawiania zdarzenie występuje. Wartość domyślna to TRUE.  
   
 ### <a name="remarks"></a>Uwagi  
  Formant siatki właściwości, który składa się z możliwością zmiany rozmiaru *nazwa właściwości* kolumny i *wartość właściwości* kolumny. Koniec kolumny Nazwa jest także początku wartości kolumny. Aby zmienić rozmiar kolumn, przeciągnij krawędź między kolumnami.  
@@ -1411,8 +1411,8 @@ void SetListDelimiter(TCHAR c);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *c*  
- Znak jako ogranicznika.  
+*c*<br/>
+[in] Znak jako ogranicznika.  
   
 ### <a name="remarks"></a>Uwagi  
  Ta metoda służy do definiowania znak ograniczający na liście wartości właściwości, które są używane w [CMFCPropertyGridProperty::CMFCPropertyGridProperty](../../mfc/reference/cmfcpropertygridproperty-class.md#cmfcpropertygridproperty) konstruktora. W tym konstruktorze ustaw *bIsValueList* parametru na wartość TRUE.  
@@ -1427,8 +1427,8 @@ void SetShowDragContext(BOOL bShowDragContext = TRUE);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *bShowDragContext*  
- Wartość TRUE, by narysować ponownie kolumny nazwy i wartości podczas operacji zmiany rozmiaru; Wartość FALSE, aby odświeżyć kolumn po ukończeniu operacji przeciągania. Wartość domyślna to TRUE.  
+*bShowDragContext*<br/>
+[in] Wartość TRUE, by narysować ponownie kolumny nazwy i wartości podczas operacji zmiany rozmiaru; Wartość FALSE, aby odświeżyć kolumn po ukończeniu operacji przeciągania. Wartość domyślna to TRUE.  
   
 ### <a name="remarks"></a>Uwagi  
  Użytkownika można zmienić rozmiar kolumny Nazwa i wartość właściwości kontrolki siatki, przeciągając pasek podziału, który jest między kolumnami. Jeśli kontekst przeciągania jest wyświetlana, nazwa i wartość kolumny zmieniany jest rozmiar tak długo, jak użytkownik przeciąga linię podziału. W przeciwnym razie Przenosi pasek podziału, ale kolumny nie jest odświeżana, aż do zakończenia operacji przeciągania.  
@@ -1441,8 +1441,8 @@ void SetVSDotNetLook(BOOL bSet=TRUE);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *bUstawienie*  
- Wartość true, zestaw kontrolę siatki właściwości stylu, który jest używany w programie Visual Studio .NET; w przeciwnym razie wartość FALSE. Wartość domyślna to TRUE.  
+*bUstawienie*<br/>
+[in] Wartość true, zestaw kontrolę siatki właściwości stylu, który jest używany w programie Visual Studio .NET; w przeciwnym razie wartość FALSE. Wartość domyślna to TRUE.  
   
 ### <a name="remarks"></a>Uwagi  
   
@@ -1454,8 +1454,8 @@ virtual void UpdateColor(COLORREF color);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *kolorów*  
- Wartość koloru RGB.  
+*Kolor*<br/>
+[in] Wartość koloru RGB.  
   
 ### <a name="remarks"></a>Uwagi  
  Ta metoda potwierdza w trybie debugowania, jeśli aktualnie wybranej właściwości formant siatki właściwości nie jest właściwością kolorów.  
@@ -1471,7 +1471,7 @@ virtual BOOL ValidateItemData(CMFCPropertyGridProperty* pProp);
   
 |Parametr|Opis|  
 |---------------|-----------------|  
-|[in] *pProp*|Wskaźnik do właściwości. Ten parametr nie jest używany.|  
+|*pProp*|[in] Wskaźnik do właściwości. Ten parametr nie jest używany.|  
   
 ### <a name="return-value"></a>Wartość zwracana  
  Zawsze TRUE.  

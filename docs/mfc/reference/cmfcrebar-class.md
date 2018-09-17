@@ -38,12 +38,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: af74ab381293e04c08a1fa8c601558edaeacf6c4
-ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
+ms.openlocfilehash: 0336cb9bd2f0e12c834615647cb4a442ab261316
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43689195"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45721516"
 ---
 # <a name="cmfcrebar-class"></a>Klasa CMFCReBar
 A `CMFCReBar` obiekt jest pasek sterowania, który zawiera układ, trwałość i informacje o stanie dla formantów rebar.  
@@ -113,20 +113,20 @@ BOOL AddBar(
  [in] [out] *pBar*  
  Wskaźnik do okna podrzędnego, który ma zostać wstawiony do paska pomocniczego. Przywoływany obiekt musi mieć **WS_CHILD** styl okna.  
   
- [in] *pszText*  
- Określa tekst do wyświetlenia na paska pomocniczego. Tekst nie jest częścią okna podrzędnego. Przeciwnie jest wyświetlany na paska pomocniczego, sam.  
+*pszText*<br/>
+[in] Określa tekst do wyświetlenia na paska pomocniczego. Tekst nie jest częścią okna podrzędnego. Przeciwnie jest wyświetlany na paska pomocniczego, sam.  
   
  [in] [out] *pbmp*  
  Określa mapy bitowej, który będzie wyświetlany w tle paska pomocniczego.  
   
- [in] *dwStyle*  
- Zawiera style, które można zastosować do grupy. Aby uzyskać pełną listę style poza pasmem, zobacz opis `fStyle` w [REBARBANDINFO](/windows/desktop/api/commctrl/ns-commctrl-tagrebarbandinfoa) struktury w dokumentacji zestawu Windows SDK.  
+*dwStyle*<br/>
+[in] Zawiera style, które można zastosować do grupy. Aby uzyskać pełną listę style poza pasmem, zobacz opis `fStyle` w [REBARBANDINFO](/windows/desktop/api/commctrl/ns-commctrl-tagrebarbandinfoa) struktury w dokumentacji zestawu Windows SDK.  
   
- [in] *clrFore*  
- Reprezentuje kolor pierwszego planu paska pomocniczego.  
+*clrFore*<br/>
+[in] Reprezentuje kolor pierwszego planu paska pomocniczego.  
   
- [in] *clrBack*  
- Reprezentuje kolor tła paska pomocniczego.  
+*clrBack*<br/>
+[in] Reprezentuje kolor tła paska pomocniczego.  
   
 ### <a name="return-value"></a>Wartość zwracana  
  Wartość TRUE, jeśli pasmo zostało pomyślnie dodane do paska pomocniczego; w przeciwnym razie wartość FALSE.  
@@ -146,14 +146,14 @@ BOOL Create(
  [in] [out] *pParentWnd*  
  Wskaźnik do nadrzędnego okna tej kontrolki paska pomocniczego.  
   
- [in] *dwCtrlStyle*  
- Określa styl kontrolki paska pomocniczego. Domyślna wartość stylu jest **RBS_BANDBORDERS**, który wyświetla zawęzić zakres wierszy w celu rozdzielenia sąsiadujących paskami w formancie paska pomocniczego. Aby uzyskać listę prawidłowe style, zobacz [style kontrolki paska pomocniczego](/windows/desktop/Controls/rebar-control-styles) w dokumentacji zestawu Windows SDK.  
+*dwCtrlStyle*<br/>
+[in] Określa styl kontrolki paska pomocniczego. Domyślna wartość stylu jest **RBS_BANDBORDERS**, który wyświetla zawęzić zakres wierszy w celu rozdzielenia sąsiadujących paskami w formancie paska pomocniczego. Aby uzyskać listę prawidłowe style, zobacz [style kontrolki paska pomocniczego](/windows/desktop/Controls/rebar-control-styles) w dokumentacji zestawu Windows SDK.  
   
- [in] *dwStyle*  
- Styl okna formantu paska pomocniczego. Aby uzyskać listę prawidłowe style, zobacz [Style okna ramowego](../../mfc/reference/styles-used-by-mfc.md#window-styles).  
+*dwStyle*<br/>
+[in] Styl okna formantu paska pomocniczego. Aby uzyskać listę prawidłowe style, zobacz [Style okna ramowego](../../mfc/reference/styles-used-by-mfc.md#window-styles).  
   
- [in] *nID*  
- Identyfikator okna podrzędnego paska pomocniczego  
+*nID*<br/>
+[in] Identyfikator okna podrzędnego paska pomocniczego  
   
 ### <a name="return-value"></a>Wartość zwracana  
  Wartość TRUE, jeśli pomyślnie; utworzono paska pomocniczego w przeciwnym razie wartość FALSE.  
@@ -183,8 +183,8 @@ virtual CSize CalcFixedLayout(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *bStretch*  
- [in] *bHorz*  
+*bStretch*<br/>
+[in] [in] *bHorz*  
   
 ### <a name="return-value"></a>Wartość zwracana  
   
@@ -248,8 +248,8 @@ virtual INT_PTR OnToolHitTest(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *punktu*  
- [in] *pTI*  
+*Punkt*<br/>
+[in] [in] *pTI*  
   
 ### <a name="return-value"></a>Wartość zwracana  
   
@@ -265,8 +265,8 @@ virtual void OnUpdateCmdUI(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *pTarget*  
- [in] *bDisableIfNoHndler*  
+*pTarget*<br/>
+[in] [in] *bDisableIfNoHndler*  
   
 ### <a name="remarks"></a>Uwagi  
   

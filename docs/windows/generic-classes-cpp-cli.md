@@ -19,12 +19,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 76dc54662fac3dc769e0bbf72c672908196ef351
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: 09390e25ffe06ce6702aef68d73c352e063a48ef
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42598250"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45716784"
 ---
 # <a name="generic-classes-ccli"></a>Klasy ogólne [C++/CLI]
 
@@ -47,8 +47,8 @@ class-body
 
 W powyższej składni używane są następujące warunki:
 
-*atrybuty* (opcjonalnie)  
-Dodatkowe informacje deklaratywnego. Aby uzyskać więcej informacji o atrybuty i klasy atrybutów Zobacz atrybutów.
+*Atrybuty*  
+(Opcjonalnie) Dodatkowe informacje deklaratywnego. Aby uzyskać więcej informacji o atrybuty i klasy atrybutów Zobacz atrybutów.
 
 *klucz klasy*  
 Albo **klasy** lub **typename**
@@ -58,7 +58,7 @@ Albo **klasy** lub **typename**
 *ograniczenie — klauzule*  
 Listy (nie rozdzielanych przecinkami) **gdzie** klauzul określania ograniczenia dla parametrów typu. Ma postać:
 
-`where`  *Typ parametru identyfikatorów*`:`*lista ograniczeń*  `...`
+> **gdzie** *typu parametru identyfikatorów* **:** *lista ograniczeń***...** 
 
 *Lista ograniczeń*  
 *Klasa lub interfejs*[`,` *...* ]
@@ -69,8 +69,8 @@ Modyfikatory dostępności dla klasy ogólnej. Dla środowiska wykonawczego Wind
 *Identyfikator*  
 Nazwa klasy ogólnej dowolnego prawidłowego identyfikatora C++.
 
-*Modyfikatory* (opcjonalnie)  
-Może zawierać Modyfikatory **zapieczętowanego** i **abstrakcyjne**.
+*Modyfikatory*  
+(Opcjonalnie) Może zawierać Modyfikatory **zapieczętowanego** i **abstrakcyjne**.
 
 *Lista podstawowego*  
 Lista, która zawiera jedną klasę bazową i wszystkie zaimplementowane interfejsy, wszystkie rozdzielonych przecinkami.

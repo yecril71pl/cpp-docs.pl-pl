@@ -30,12 +30,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 132498c5773e4cce1fd178573698b62e874dda48
-ms.sourcegitcommit: fb9448eb96c6351a77df04af16ec5c0fb9457d9e
+ms.openlocfilehash: d2349beadb5983c85059be83ee5a933689913886
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/12/2018
-ms.locfileid: "44691617"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45722725"
 ---
 # <a name="submatch-class"></a>sub_match — Klasa
 
@@ -51,8 +51,8 @@ class sub_match
 
 ## <a name="parameters"></a>Parametry
 
-*BidIt*  
- Typ iteratora poddopasowania.
+*BidIt*<br/>
+Typ iteratora poddopasowania.
 
 ## <a name="remarks"></a>Uwagi
 
@@ -159,14 +159,14 @@ int compare(const value_type *ptr) const;
 
 ### <a name="parameters"></a>Parametry
 
-*right*  
- Poddopasowanie do porównania.
+*right*<br/>
+Poddopasowanie do porównania.
 
-*str*  
- Ciąg do porównania.
+*str*<br/>
+Ciąg do porównania.
 
-*ptr*  
- Sekwencja zakończony wartością null do porównania.
+*ptr*<br/>
+Sekwencja zakończony wartością null do porównania.
 
 ### <a name="remarks"></a>Uwagi
 

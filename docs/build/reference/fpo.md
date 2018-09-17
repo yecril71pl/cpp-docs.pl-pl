@@ -18,22 +18,25 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7e0c761dc34d1b9dfc88b31754e00dbe77bffe1c
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 957782d9f360ad5d7a16c46c6b65ae19dd0adec8
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32372486"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45717154"
 ---
 # <a name="fpo"></a>/FPO
-```  
-/FPO  
-```  
-  
-## <a name="remarks"></a>Uwagi  
- Ta opcja powoduje wyświetlenie rekordów optymalizacji (FPO) wskaźnika ramki.  
-  
- Tylko [/HEADERS](../../build/reference/headers.md) — opcja polecenia DUMPBIN jest dostępny do użytku na pliki tworzone z [/GL](../../build/reference/gl-whole-program-optimization.md) — opcja kompilatora.  
-  
-## <a name="see-also"></a>Zobacz też  
- [Opcje DUMPBIN](../../build/reference/dumpbin-options.md)
+
+```
+/FPO
+```
+
+## <a name="remarks"></a>Uwagi
+
+Ta opcja umożliwia wyświetlenie rekordów optymalizacji (ang.) wskaźnika ramki.
+
+Tylko [/HEADERS](../../build/reference/headers.md) — opcja polecenia DUMPBIN jest dostępna do użycia w plikach z [/GL](../../build/reference/gl-whole-program-optimization.md) — opcja kompilatora.
+
+## <a name="see-also"></a>Zobacz też
+
+[Opcje DUMPBIN](../../build/reference/dumpbin-options.md)

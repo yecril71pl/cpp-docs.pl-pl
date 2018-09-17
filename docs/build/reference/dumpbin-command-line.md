@@ -16,26 +16,28 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: bc807a8f67ddaae894a0e0cba55475b804a0abce
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: c9028cebd7c75bb37bbfa958186ebb2e5d206094
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32370517"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45724787"
 ---
 # <a name="dumpbin-command-line"></a>Wiersz polecenia DUMPBIN
-Aby uruchomić DUMPBIN, należy użyć następującej składni:  
-  
-```  
-DUMPBIN [options] files...  
-```  
-  
- Określ jeden lub więcej plików binarnych, razem ze wszystkimi opcjami wymagane do kontroli nad informacjami. Dumpbin — Wyświetla informacje do wyjścia standardowego. Można przekierować go do pliku lub użyj opcji/Out, aby określić nazwę pliku dla danych wyjściowych.  
-  
- Po uruchomieniu polecenia DUMPBIN pliku bez określania opcji DUMPBIN Wyświetla przełącznika/Summary danych wyjściowych.  
-  
- Po wpisaniu polecenia `dumpbin` bez żadnych innych danych wiersza polecenia DUMPBIN wyświetla instrukcji użycia, która zawiera podsumowanie jej opcji.  
-  
-## <a name="see-also"></a>Zobacz też  
- [Narzędzia kompilacji C/C++](../../build/reference/c-cpp-build-tools.md)   
- [DUMPBIN — dokumentacja](../../build/reference/dumpbin-reference.md)
+
+Aby uruchomić DUMPBIN, użyj następującej składni:
+
+```
+DUMPBIN [options] files...
+```
+
+Określ jeden lub więcej plików binarnych, razem ze wszystkimi opcjami wymagane do sterowania informacjami. DUMPBIN Wyświetla informacje do wyjścia standardowego. Możesz przekierować go do pliku lub użyj opcji Out, aby określić nazwę pliku dla danych wyjściowych.
+
+Po uruchomieniu polecenia DUMPBIN dla pliku bez określania opcji DUMPBIN Wyświetla przełącznika/Summary danych wyjściowych.
+
+Po wpisaniu polecenia `dumpbin` bez żadnych innych danych wiersza polecenia DUMPBIN wyświetla instrukcji użycia, który podsumowuje opcje.
+
+## <a name="see-also"></a>Zobacz też
+
+[Narzędzia kompilacji C/C++](../../build/reference/c-cpp-build-tools.md)<br/>
+[DUMPBIN — dokumentacja](../../build/reference/dumpbin-reference.md)

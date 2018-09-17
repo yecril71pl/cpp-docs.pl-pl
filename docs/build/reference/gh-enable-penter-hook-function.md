@@ -19,92 +19,96 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 68497e4e760e1268a0175d5a68452678153896b8
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 231eed17f155b9ec184e0cf4fe3bd91e7770a7f4
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32373156"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45716863"
 ---
 # <a name="gh-enable-penter-hook-function"></a>/Gh (Włącz funkcję _penter Hook)
-Powoduje, że wywołanie `_penter` funkcja na początku każdej metody lub funkcji.  
-  
-## <a name="syntax"></a>Składnia  
-  
-```  
-/Gh  
-```  
-  
-## <a name="remarks"></a>Uwagi  
- `_penter` Funkcja nie jest częścią żadnej biblioteki i jest maksymalnie o podanie definicji `_penter`.  
-  
- Jeśli nie chcesz jawnie wywołać `_penter`, nie trzeba podać prototypu. Funkcja muszą znajdować się tak, jakby miała następujące prototypu, a i musi być wypychania zawartości wszystkich rejestrów na zapis pop zawartości bez zmian na wyjściu:  
-  
-```  
-void __declspec(naked) _cdecl _penter( void );  
-```  
-  
- Ta deklaracja nie jest dostępne dla projektów 64-bitowych.  
-  
-### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Aby ustawić tę opcję kompilatora w środowisku programowania Visual Studio  
-  
-1.  Otwórz projekt **strony właściwości** okno dialogowe. Aby uzyskać więcej informacji, zobacz [Praca z właściwościami projektu](../../ide/working-with-project-properties.md).  
-  
-2.  Kliknij przycisk **C/C++** folderu.  
-  
-3.  Kliknij przycisk **wiersza polecenia** strony właściwości.  
-  
-4.  Typ opcji kompilatora w **dodatkowe opcje** pole.  
-  
-### <a name="to-set-this-compiler-option-programmatically"></a>Aby programowo ustawić tę opcję kompilatora  
-  
--   Zobacz <xref:Microsoft.VisualStudio.VCProjectEngine.VCCLCompilerTool.AdditionalOptions%2A>.  
-  
-## <a name="example"></a>Przykład  
- Poniższy kod, gdy skompilowano z opcją **/Gh**, pokazuje sposób `_penter` jest wywoływana dwukrotnie; raz podczas wprowadzania funkcja `main` i raz podczas wprowadzania funkcji `x`.  
-  
-```  
-// Gh_compiler_option.cpp  
-// compile with: /Gh  
-// processor: x86  
-#include <stdio.h>  
-void x() {}  
-  
-int main() {  
-   x();  
-}  
-  
-extern "C" void __declspec(naked) _cdecl _penter( void ) {  
-   _asm {  
-      push eax  
-      push ebx  
-      push ecx  
-      push edx  
-      push ebp  
-      push edi  
-      push esi  
-    }  
-  
-   printf_s("\nIn a function!");  
-  
-   _asm {  
-      pop esi  
-      pop edi  
-      pop ebp  
-      pop edx  
-      pop ecx  
-      pop ebx  
-      pop eax  
-      ret  
-    }  
-}  
-```  
-  
-```Output  
-In a function!  
-In a function!  
-```  
-  
-## <a name="see-also"></a>Zobacz też  
- [Opcje kompilatora](../../build/reference/compiler-options.md)   
- [Ustawianie opcji kompilatora](../../build/reference/setting-compiler-options.md)
+
+Powoduje, że wywołanie `_penter` funkcji na początku każdej metody lub funkcji.
+
+## <a name="syntax"></a>Składnia
+
+```
+/Gh
+```
+
+## <a name="remarks"></a>Uwagi
+
+`_penter` Funkcja nie jest częścią wszystkie biblioteki i jest maksymalnie musisz podać definicję `_penter`.
+
+Jeśli nie chcesz jawnie wywołać `_penter`, nie należy podać prototypu. Funkcja musi znajdować się tak, jakby miał poniższy prototyp i musi wypychania zawartości wszystkich rejestrów przy uruchamianiu i pop zawartości bez zmian przy zamykaniu:
+
+```
+void __declspec(naked) _cdecl _penter( void );
+```
+
+Ta deklaracja nie jest dostępne dla projektów 64-bitowych.
+
+### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Aby ustawić tę opcję kompilatora w środowisku programowania Visual Studio
+
+1. Otwórz projekt **stron właściwości** okno dialogowe. Aby uzyskać więcej informacji, zobacz [Praca z właściwościami projektu](../../ide/working-with-project-properties.md).
+
+1. Kliknij przycisk **C/C++** folderu.
+
+1. Kliknij przycisk **wiersza polecenia** stronę właściwości.
+
+1. Wpisz opcje kompilatora w **dodatkowe opcje** pole.
+
+### <a name="to-set-this-compiler-option-programmatically"></a>Aby programowo ustawić tę opcję kompilatora
+
+- Zobacz <xref:Microsoft.VisualStudio.VCProjectEngine.VCCLCompilerTool.AdditionalOptions%2A>.
+
+## <a name="example"></a>Przykład
+
+Poniższy kod, gdy skompilowano z opcją **/Gh**, pokazuje, jak `_penter` jest wywoływana dwa razy; raz podczas wprowadzania funkcji `main` i raz podczas wprowadzania funkcji `x`.
+
+```
+// Gh_compiler_option.cpp
+// compile with: /Gh
+// processor: x86
+#include <stdio.h>
+void x() {}
+
+int main() {
+   x();
+}
+
+extern "C" void __declspec(naked) _cdecl _penter( void ) {
+   _asm {
+      push eax
+      push ebx
+      push ecx
+      push edx
+      push ebp
+      push edi
+      push esi
+    }
+
+   printf_s("\nIn a function!");
+
+   _asm {
+      pop esi
+      pop edi
+      pop ebp
+      pop edx
+      pop ecx
+      pop ebx
+      pop eax
+      ret
+    }
+}
+```
+
+```Output
+In a function!
+In a function!
+```
+
+## <a name="see-also"></a>Zobacz też
+
+[Opcje kompilatora](../../build/reference/compiler-options.md)<br/>
+[Ustawianie opcji kompilatora](../../build/reference/setting-compiler-options.md)

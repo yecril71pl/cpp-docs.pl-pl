@@ -18,31 +18,35 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 772e9dc6a296873ef27171676ebca0c185c1771c
-ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
+ms.openlocfilehash: 1ee18e32d1aaf2a9035b425cb3c3ef5e2db15145
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "33339079"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45718812"
 ---
 # <a name="xml-document-generator-tool-property-pages"></a>Strony właściwości narzędzia generowania dokumentów XML
-Strona właściwości narzędzie generowania dokumentu XML ujawniającą funkcjonalność xdcmake.exe. xdcmake.exe scala plikach xdc w pliku XML, gdy kod źródłowy zawiera komentarzy do dokumentacji i [/doc (przetwarzanie komentarzy dokumentacji) (C/C++)](../build/reference/doc-process-documentation-comments-c-cpp.md) jest określona. Zobacz [tagi zalecane dla komentarzy do dokumentacji](../ide/recommended-tags-for-documentation-comments-visual-cpp.md) informacji na temat dodawania komentarzy do dokumentacji do kodu źródłowego.  
+Strona właściwości narzędzie generowania dokumentów XML udostępnia funkcję xdcmake.exe. xdcmake.exe scala plików xdc do pliku XML, gdy kod źródłowy zawiera komentarzy do dokumentacji i [/doc (Przetwarzaj komentarze dokumentacji) (C/C++)](../build/reference/doc-process-documentation-comments-c-cpp.md) jest określony. Zobacz [tagi zalecane dla komentarzy do dokumentacji](../ide/recommended-tags-for-documentation-comments-visual-cpp.md) informacji dotyczących dodawania komentarzy do dokumentacji do kodu źródłowego.  
   
 > [!NOTE]
->  Opcje xdcmake.exe w środowisku programistycznym (strony właściwości) różnią się od opcji, gdy xdcmake.exe jest używany w wierszu polecenia. Aby uzyskać informacje na temat używania xdcmake.exe w wierszu polecenia, zobacz [xdcmake — odwołanie](../ide/xdcmake-reference.md).  
+>  Opcje xdcmake.exe w środowisku programistycznym (strony właściwości) różnią się od opcji, gdy xdcmake.exe jest używany w wierszu polecenia. Aby uzyskać informacje na temat używania xdcmake.exe w wierszu polecenia, zobacz [xdcmake — dokumentacja](../ide/xdcmake-reference.md).  
   
 ## <a name="uielement-list"></a>Lista elementów UI  
- **Pomiń Baner startowy**  
- Pomiń komunikat o prawach autorskich.  
+- **Pomijaj transparent startowy**
+
+   Pomiń komunikat o prawach autorskich.  
   
- **Pliki dodatkowe**  
- Dodatkowe katalogi, w których ma szukać plików xdc system projektu. xdcmake — zawsze będzie szukać plików xdc wygenerowany przez projekt. Można określić wiele katalogów.  
+- **Pliki dodatkowe dokumentów**
+
+   Dodatkowe katalogi, w których chcesz, aby system projektu będzie szukał plików xdc. xdcmake — zawsze będzie szukał plików xdc wygenerowany przez projekt. Można określić wiele katalogów.  
   
- **Wynikowy plik dokumentu**  
- Nazwy i lokalizacji katalogu wyjściowego pliku XML. Zobacz [wspólnej makra dla poleceń kompilacji oraz właściwości](../ide/common-macros-for-build-commands-and-properties.md) informacji przy użyciu makra w celu określenia lokalizacji katalogu.  
+- **Wynikowy plik dokumentu**
+
+   Nazwy i lokalizacji katalogu wyjściowego pliku XML. Zobacz [typowe makra dla poleceń i właściwości kompilacji](../ide/common-macros-for-build-commands-and-properties.md) informacji na temat korzystania z makr do określenia lokalizacji w katalogu.  
   
- **Zależności biblioteki dokumentów**  
- Jeśli projekt zawiera zależności w projekcie lib w rozwiązaniu, można przetwarzać plików xdc z projektu .lib do plików XML dla bieżącego projektu.  
+- **Zależności biblioteki dokumentów**
+
+   Jeśli projekt zależny od .lib projektu w rozwiązaniu, może przetwarzać plików xdc z projektu lib w plikach XML dla bieżącego projektu.  
   
 ## <a name="see-also"></a>Zobacz też  
  [Strony właściwości](../ide/property-pages-visual-cpp.md)   

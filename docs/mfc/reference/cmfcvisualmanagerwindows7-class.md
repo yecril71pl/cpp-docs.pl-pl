@@ -20,12 +20,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 58772f3690a68dc3a0d22c2db863fc7ad4904a1c
-ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
+ms.openlocfilehash: c17a9b6970f612c31ba9491ca2e3483b4a3fa37b
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "42465520"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45720554"
 ---
 # <a name="cmfcvisualmanagerwindows7-class"></a>Klasa CMFCVisualManagerWindows7
 `CMFCVisualManagerWindows7` Nadaje aplikacji wygląd aplikacji Windows 7.  
@@ -149,17 +149,17 @@ virtual COLORREF GetRibbonEditBackgroundColor (
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *pEdit*  
- Wskaźnik do kontrolki edycji. Ta wartość nie może mieć wartości NULL.  
+*pEdit*<br/>
+[in] Wskaźnik do kontrolki edycji. Ta wartość nie może mieć wartości NULL.  
   
- [out] *bIsHighlighted*  
- Zwraca, czy pole wstążki jest wyróżniona.  
+*bIsHighlighted*<br/>
+[out] Zwraca, czy pole wstążki jest wyróżniona.  
   
- [out] *bIsPaneHighlighted*  
- Zwraca wartość TRUE, jeśli panelu wstążki, który zawiera *pEdit* zostanie wyróżniona.  
+*bIsPaneHighlighted*<br/>
+[out] Zwraca wartość TRUE, jeśli panelu wstążki, który zawiera *pEdit* zostanie wyróżniona.  
   
- [out] *bIsDisabled*  
- Zwraca czy *pEdit* jest wyłączona.  
+*bIsDisabled*<br/>
+[out] Zwraca czy *pEdit* jest wyłączona.  
   
 ### <a name="return-value"></a>Wartość zwracana  
  Kolor tła pola edycji *pEdit*.  
@@ -178,17 +178,17 @@ virtual void OnFillMenuImageRect(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *podstawowego kontrolera domeny*  
- Wskaźnik do kontekstu urządzenia przycisku menu.  
+*podstawowego kontrolera domeny*<br/>
+[in] Wskaźnik do kontekstu urządzenia przycisku menu.  
   
- [in] *pButton*  
- Wskaźnik do `CMFCToolBarButton`. Struktura wypełnia tło tego przycisku.  
+*pButton*<br/>
+[in] Wskaźnik do `CMFCToolBarButton`. Struktura wypełnia tło tego przycisku.  
   
- [in] *rect*  
- Prostokąt, który określa granice obszar obrazu przycisku menu.  
+*Rect*<br/>
+[in] Prostokąt, który określa granice obszar obrazu przycisku menu.  
   
- [in] *stanu*  
- Stan przycisku.  
+*state*<br/>
+[in] Stan przycisku.  
   
 ### <a name="remarks"></a>Uwagi  
   

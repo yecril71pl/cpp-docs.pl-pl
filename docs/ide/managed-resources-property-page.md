@@ -18,28 +18,31 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e88f7ccf6f510ad5bcc7178af87714ca22a97252
-ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
+ms.openlocfilehash: 58d2b1eaee54ac33e687d457830372f2bef06230
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43688614"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45718513"
 ---
 # <a name="managed-resources-property-page"></a>Strona właściwości Zarządzane zasoby
 Umożliwia ustawień dla kompilatora zasobów.  
   
  **Zarządzanych zasobów** strona właściwości zawiera następujące właściwości:  
   
- **Nazwa logiczna zasobu**  
- Określa *Nazwa logiczna* pliku wygenerowanego pośredniego .resources. Nazwa logiczna jest nazwa służąca do załadowania zasobu. Jeśli nazwa logiczne, nie zostanie określona, nazwy pliku zasobów (.resx) jest używana jako nazwa logiczna.  
+- **Nazwa logiczna zasobu**
+
+   Określa *Nazwa logiczna* pliku wygenerowanego pośredniego .resources. Nazwa logiczna jest nazwa służąca do załadowania zasobu. Jeśli nazwa logiczne, nie zostanie określona, nazwy pliku zasobów (.resx) jest używana jako nazwa logiczna.  
   
- **Nazwa pliku wyjściowego**  
- Określa nazwę pliku wyjściowego, który plik zasobów (.resx), którzy przyczyniają się do.  
+- **Nazwa pliku wyjściowego**
+
+   Określa nazwę pliku wyjściowego, który plik zasobów (.resx), którzy przyczyniają się do.  
   
- **Domyślnie lokalizowane zasoby**  
- Określa, czy plik danego .resx jest częścią domyślnych zasobów lub satelitarnej biblioteki dll.  
+- **Domyślnie lokalizowane zasoby**
+
+   Określa, czy plik danego .resx jest częścią domyślnych zasobów lub satelitarnej biblioteki dll.  
   
- Aby uzyskać informacje dotyczące uzyskiwania dostępu do **zarządzanych zasobów** strony właściwości, zobacz [Praca z właściwościami projektu](../ide/working-with-project-properties.md).  
+Aby uzyskać informacje dotyczące uzyskiwania dostępu do **zarządzanych zasobów** strony właściwości, zobacz [Praca z właściwościami projektu](../ide/working-with-project-properties.md).  
   
 ## <a name="see-also"></a>Zobacz też  
  [Za pomocą RC (RC wiersza polecenia)](/windows/desktop/menurc/using-rc-the-rc-command-line-)   

@@ -1,5 +1,5 @@
 ---
-title: Zmienne środowiskowe | Dokumentacja firmy Microsoft
+title: Zmienne środowiskowe CL | Dokumentacja firmy Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -19,57 +19,54 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6f3986097bcb5028d9ad708c9a3132f5e417d502
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 74ac2cb1ad28720cc45aec4f6258d1152a55e861
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32372614"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45722738"
 ---
 # <a name="cl-environment-variables"></a>Zmienne środowiskowe CL
 
-Narzędzia CL używa następujących zmiennych środowiskowych:
+Narzędzia CL są używane następujące zmienne środowiskowe:
 
 - CL i \_CL\_, jeśli została zdefiniowana. Narzędzia CL dołącza opcje i argumenty zdefiniowane w zmiennej środowiskowej CL do argumentów wiersza polecenia i dołącza opcje i argumenty zdefiniowane w \_CL\_, przed rozpoczęciem przetwarzania.
 
-- OBEJMUJĄ, musi wskazywać podkatalogu \include instalację programu Visual C++.
+- UWZGLĘDNIĆ, który musi się odnosić do podkatalogu \include instalację programu Visual C++.
 
-- LIBPATH, który określa katalogi wyszukiwania plików metadanych przywoływana za pomocą [#using](../../preprocessor/hash-using-directive-cpp.md). Zobacz `#using` Aby uzyskać więcej informacji na temat LIBPATH.
+- LIBPATH, który określa katalogi do wyszukiwania plików metadanych, do którego odwołuje się [#using](../../preprocessor/hash-using-directive-cpp.md). Zobacz `#using` więcej informacji na temat LIBPATH.
 
-Można ustawić CL lub \_CL\_ zmiennej środowiskowej, używając następującej składni:
+Możesz ustawić CL lub \_CL\_ zmienną środowiskową przy użyciu następującej składni:
 
-> Ustaw CL = [[*opcji*]... [*pliku*]...] [/ link *opt łącze* ...]  
-> Ustaw \_CL\_= [[*opcji*]... [*pliku*]...] [/ link *opt łącze* ...]
+> Ustaw CL = [[*opcji*]... [*pliku*]...] [/ link *zoptymalizowany pod kątem linku* ...] Ustaw \_CL\_= [[*opcji*]... [*pliku*]...] [/ link *zoptymalizowany pod kątem linku* ...]
 
-Aby uzyskać więcej informacji na temat argumentów do CL i \_CL\_ zmiennych środowiskowych, zobacz [składnia wiersza polecenia kompilatora](../../build/reference/compiler-command-line-syntax.md).
+Aby uzyskać szczegółowe informacje na temat argumentów cl i \_CL\_ zmiennych środowiskowych, zobacz [składnia wiersza polecenia kompilatora](../../build/reference/compiler-command-line-syntax.md).
 
-Możesz umożliwia zdefiniowanie plików i opcje, które najczęściej używane te zmienne środowiskowe i użyć wiersza polecenia, aby zdefiniować konkretne pliki i opcje do określonych celów. CL i \_CL\_ zmienne środowiskowe są ograniczone do 1024 znaków (wiersza polecenia limit wprowadzania).
+Można użyć tych zmiennych środowiskowych do definiowania plików i opcji, których używasz najczęściej i użyć wiersza polecenia, aby zdefiniować konkretne pliki i opcje do określonych celów. CL i \_CL\_ zmienne środowiskowe są ograniczone do 1024 znaków (wiersza polecenia limit wejściowego).
 
-Nie można użyć opcji /D do definiowania symbol, który używa znaku równości (=). Można zastąpić znak numeru (#) dla znaku równości. W ten sposób można użyć CL lub \_CL\_ zmienne środowiskowe do definiowania preprocesora stałe wartościami jawne — na przykład `/DDEBUG#1` do definiowania `DEBUG=1`.
+Nie można użyć opcji/d., aby zdefiniować symbol, który używa znaku równości (=). Można zastąpić znak numeru (#) znaku równości. W ten sposób można użyć CL lub \_CL\_ zmiennych środowiskowych w celu definiowania stałych preprocesora z jawne wartości — na przykład `/DDEBUG#1` do definiowania `DEBUG=1`.
 
-Aby uzyskać odpowiednie informacje, zobacz [ustawić zmienne środowiskowe](../../build/setting-the-path-and-environment-variables-for-command-line-builds.md).
+Aby uzyskać powiązane informacje, zobacz [ustawić zmienne środowiskowe](../../build/setting-the-path-and-environment-variables-for-command-line-builds.md).
 
 ## <a name="examples"></a>Przykłady
 
-Poniżej przedstawiono przykładową konfigurację zmiennej środowiskowej CL:
+Oto przykład ustawienia zmiennej środowiskowej CL:
 
-> Ustaw CL = Zp2 OX /I\INCLUDE\MYINCLS \LIB\BINMODE. OBJ
+> Ustaw CL = / Zp2 OX /I\INCLUDE\MYINCLS \LIB\BINMODE. OBJ
 
-Jeśli wartość tej zmiennej środowiskowej po wprowadzeniu `CL INPUT.C` w wierszu polecenia jest skuteczne polecenie:
+Gdy ta zmienna środowiskowa jest ustawiona, po wprowadzeniu `CL INPUT.C` w wierszu polecenia jest skuteczne polecenie:
 
-> CL /Zp2 OX /I\INCLUDE\MYINCLS \LIB\BINMODE. WPROWADŹ LICZBĘ OBIEKTÓW. C
+> CL /Zp2 OX /I\INCLUDE\MYINCLS \LIB\BINMODE. OBJ DANE WEJŚCIOWE. C
 
-Poniższy przykład powoduje, że polecenie CL zwykły Kompiluj pliki źródłowe FILE1.c i FILE2.c, a następnie połącz plik obiektu FILE1.obj, FILE2.obj i FILE3.obj:
+Poniższy przykład powoduje zwykły polecenie CL, aby skompilować pliki źródłowe FILE1.c i FILE2.c, a następnie połącz pliki obiektów FILE1.obj FILE2.obj i FILE3.obj:
 
-> CL ZESTAWU = FILE1. PLIK2 C. C  
-> USTAW \_CL\_= PLIK3. OBJ  
-> CL  
+> ZESTAW CL = FILE1. PLIK2 C. ZESTAW C \_CL\_= PLIK3. OBJ CL
 
-Ma to ten sam efekt co następującego polecenia:
+Ma to taki sam skutek jak następującego polecenia:
 
-> CL FILE1. PLIK2 C. PLIK3 C. OBJ
+> PLIK1 CL. PLIK2 C. PLIK3 C. OBJ
 
 ## <a name="see-also"></a>Zobacz też
 
-[Ustawianie opcji kompilatora](../../build/reference/setting-compiler-options.md)   
+[Ustawianie opcji kompilatora](../../build/reference/setting-compiler-options.md)<br/>
 [Opcje kompilatora](../../build/reference/compiler-options.md)

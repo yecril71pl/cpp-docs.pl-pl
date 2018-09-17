@@ -18,28 +18,31 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e6e8af5b23d2e6cd0759f75c4054e0a811f687e1
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 1a93b854dba2855fa68bb3be163cecdcd3570df0
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32375051"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45723102"
 ---
 # <a name="swaprun"></a>/SWAPRUN
-```  
-/SWAPRUN:{[!]NET|[!]CD}  
-```  
-  
-## <a name="remarks"></a>Uwagi  
- Ta opcja służy do edytowania obrazu systemu operacyjnego, aby skopiować obraz do pliku wymiany i uruchomić go z mówić. Użyj tej opcji dla obrazów, które znajdują się w sieciach lub nośnik wymienny.  
-  
- Można dodawać i usuwać kwalifikatory NET lub dysk CD:  
-  
--   NET wskazuje, że obraz znajduje się w sieci.  
-  
--   CD wskazuje, że obraz znajduje się na dysku CD-ROM lub podobne nośnik wymienny.  
-  
--   Użyj! NET i! CD, aby odwrócić skutków sieci i dysku CD.  
-  
-## <a name="see-also"></a>Zobacz też  
- [Opcje EDITBIN](../../build/reference/editbin-options.md)
+
+```
+/SWAPRUN:{[!]NET|[!]CD}
+```
+
+## <a name="remarks"></a>Uwagi
+
+Ta opcja edytuje obraz, aby poinformować system operacyjny, skopiować obraz do pliku wymiany, i uruchom je stamtąd. Użyj tej opcji dla obrazów, które znajdują się w sieci lub nośnikach wymiennych.
+
+Można dodawać i usuwać kwalifikatory NET lub CD:
+
+- NET wskazuje, że obraz, który znajduje się w sieci.
+
+- Ciągłe dostarczanie wskazuje, że obraz, który znajduje się na dysku CD-ROM lub podobne nośnik wymienny.
+
+- Użyj! NET i! Ciągłe dostarczanie do odwrotnego skutki NET i ciągłego wdrażania.
+
+## <a name="see-also"></a>Zobacz też
+
+[Opcje EDITBIN](../../build/reference/editbin-options.md)

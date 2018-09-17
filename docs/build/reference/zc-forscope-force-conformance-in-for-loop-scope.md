@@ -21,16 +21,16 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b21c844cd29c7fb45e58f44fdf8eaae427b74235
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: bef68f47fe8fdc430138a6961078139b48030b3d
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32378616"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45723596"
 ---
 # <a name="zcforscope-force-conformance-in-for-loop-scope"></a>/Zc:forScope (Wymuszaj zgodność w zakresie pętli For)
 
-Używane do implementowania standardowego zachowania C++ dla [dla](../../cpp/for-statement-cpp.md) pętle z rozszerzeniami firmy Microsoft ([/Ze](../../build/reference/za-ze-disable-language-extensions.md)).
+Używany do implementowania standardowego zachowania C++ dla [dla](../../cpp/for-statement-cpp.md) pętli for z rozszerzeniami Microsoft ([/Ze](../../build/reference/za-ze-disable-language-extensions.md)).
 
 ## <a name="syntax"></a>Składnia
 
@@ -38,18 +38,18 @@ Używane do implementowania standardowego zachowania C++ dla [dla](../../cpp/for
 
 ## <a name="remarks"></a>Uwagi
 
-Standardowe zachowanie jest umożliwienie **dla** inicjatora pętli się znaleźć poza zakresem po **dla** pętli. W obszarze **/Zc:forScope-** i [/Ze](../../build/reference/za-ze-disable-language-extensions.md), **dla** inicjatora pętli pozostaje w zakresie do czasu zakończenia zakresu lokalnego.
+Standardowe zachowanie jest umożliwienie **dla** inicjatora pętli wykraczają poza zakres po **dla** pętli. W obszarze **/Zc:forScope-** i [/Ze](../../build/reference/za-ze-disable-language-extensions.md), **dla** inicjatora pętli pozostaje w zakresie do czasu zakończenia zakres lokalny.
 
-**/Zc: forscope** opcja jest domyślnie włączona. **/ Zc: forscope** nie występuje podczas [/ ograniczająca-](permissive-standards-conformance.md) określono opcję.
+**/Zc: forscope** opcja jest domyślnie włączone. **/ Zc: forscope** nie występuje kiedy [/ permissive-](permissive-standards-conformance.md) określono opcję.
 
-**/Zc:forScope-** opcja jest przestarzała i zostanie usunięta w przyszłej wersji. Użycie **/Zc:forScope-** generuje ostrzeżenie D9035 wycofywanie.
+**/Zc:forScope-** opcja jest przestarzały i zostanie usunięta w przyszłej wersji. Korzystanie z **/Zc:forScope-** generuje ostrzeżenie d9035 dla wycofywania.
 
-Kompiluje następujący kod pod **/Ze** , ale nie w obszarze **/Za**:
+Poniższy kod jest kompilowany w obszarze **/Ze** , ale nie w obszarze **/Za**:
 
 ```cpp
 // zc_forScope.cpp
 // compile by using: cl /Zc:forScope- /Za zc_forScope.cpp
-// C2065, D9035 expected  
+// C2065, D9035 expected
 int main() {
     // Compile by using cl /Zc:forScope- zc_forScope.cpp
     // to compile this non-standard code as-is.
@@ -61,21 +61,21 @@ int main() {
 }
 ```
 
-Jeśli używasz **/Zc:forScope-**, ostrzeżenie C4288 (domyślnie wyłączone) jest generowany, gdy zmienna znajduje się w zakresie z powodu deklaracji, która została wprowadzona w poprzednim zakresu. Aby to wykazać, Usuń `//` znaków w przykładowym kodzie Aby zadeklarować `int i`.
+Jeśli używasz **/Zc:forScope-**, ostrzeżenie C4288 (funkcja domyślnie wyłączona) jest generowany, gdy zmienna jest w zakresie z powodu deklaracji, która została wprowadzona w poprzednim zakresie. Aby to wykazać, Usuń `//` znaków w przykładowym kodzie, aby zadeklarować `int i`.
 
-Można zmodyfikować zachowanie środowiska wykonawczego **/Zc: forscope** za pomocą [jest zgodna z](../../preprocessor/conform.md) pragma.
+Możesz zmodyfikować zachowanie środowiska wykonawczego **/Zc: forscope** przy użyciu [jest zgodna z](../../preprocessor/conform.md) pragmy.
 
-Jeśli używasz **/Zc:forScope-** w projekcie ma istniejącego pliku .pch, ostrzeżenie jest generowany, **/Zc:forScope-** jest ignorowany i kompilacji będzie kontynuowane przy użyciu istniejących .pch — pliki. Jeśli chcesz wygenerować nowy plik .pch użyj [/Yc (Utwórz prekompilowany plik nagłówka)](../../build/reference/yc-create-precompiled-header-file.md).
+Jeśli używasz **/Zc:forScope-** w projekcie, który ma istniejący plik .pch, generowane jest ostrzeżenie, **/Zc:forScope-** jest ignorowana, a kompilacja jest kontynuowana przy użyciu istniejących plików .pch. Jeśli chcesz, aby plik .pch wygenerowanych, użyj [/Yc (Utwórz prekompilowany plik nagłówkowy)](../../build/reference/yc-create-precompiled-header-file.md).
 
-Aby uzyskać więcej informacji na temat problemów zgodności w programie Visual C++, zobacz [niestandardowe zachowanie](../../cpp/nonstandard-behavior.md).
+Aby uzyskać więcej informacji na temat problemów ze zgodnością w języku Visual C++, zobacz [niestandardowe zachowanie](../../cpp/nonstandard-behavior.md).
 
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Aby ustawić tę opcję kompilatora w środowisku programowania Visual Studio
 
-1. Otwórz projekt **strony właściwości** okno dialogowe. Aby uzyskać więcej informacji, zobacz [Praca z właściwościami projektu](../../ide/working-with-project-properties.md).
+1. Otwórz projekt **stron właściwości** okno dialogowe. Aby uzyskać więcej informacji, zobacz [Praca z właściwościami projektu](../../ide/working-with-project-properties.md).
 
-1. Wybierz **właściwości konfiguracji** > **C/C++** > **języka** strony właściwości.
+1. Wybierz **właściwości konfiguracji** > **C/C++** > **języka** stronę właściwości.
 
-1. Modyfikowanie **Wymuszaj zgodność w dla zakresu pętli** właściwości.
+1. Modyfikowanie **Wymuszaj zgodność w zakresie pętli — dla** właściwości.
 
 ### <a name="to-set-this-compiler-option-programmatically"></a>Aby programowo ustawić tę opcję kompilatora
 

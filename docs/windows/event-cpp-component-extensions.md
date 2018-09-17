@@ -18,12 +18,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 648b1084b978e4a7ab38775aefcdc7026fee1243
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: d301f2bc7464d52be643d252e4febf7049657c2b
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43206464"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45724776"
 ---
 # <a name="event--c-component-extensions"></a>event (C++ Component Extensions)
 
@@ -157,7 +157,7 @@ Poniższe kroki należy podjąć w celu tworzenia i używania zdarzenia w progra
 
    - Zdarzenie utworzone na podstawie obiektu delegowanego.
 
-   - (opcjonalnie) Metoda, która sprawdza, czy wystąpienie delegata jest zadeklarowana za pomocą **zdarzeń** istnieje — słowo kluczowe. W przeciwnym razie ta logika muszą być umieszczone w kodzie, który wyzwala zdarzenie.
+   - (Opcjonalnie) Metoda, która sprawdza, czy wystąpienie delegata jest zadeklarowana za pomocą **zdarzeń** istnieje — słowo kluczowe. W przeciwnym razie ta logika muszą być umieszczone w kodzie, który wyzwala zdarzenie.
 
    - Metody, które wywołują zdarzenia. Te metody mogą być zastąpienia niektóre funkcje klasy bazowej.
 

@@ -16,16 +16,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: fab2b937f8bf941219c678c638e9757903ee7698
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: f1d2a55d683e9c8b9d6a0da2b3e5fa78d5a39933
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33298515"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45725572"
 ---
 # <a name="linker-tools-error-lnk1120"></a>Błąd narzędzi konsolidatora LNK1120
-*numer* nierozpoznane obiektów zewnętrznych  
+
+> *Liczba* nierozpoznanych elementów zewnętrznych  
   
-Błąd LNK1120 liczności (*numer*) błędów nierozpoznany zewnętrzny symbol dla tej operacji łącza. Większość nierozpoznane osobno zostały zgłoszone błędy zewnętrzny symbol [błąd narzędzi konsolidatora LNK2001](../../error-messages/tool-errors/linker-tools-error-lnk2001.md) i [błąd narzędzi konsolidatora LNK2019](../../error-messages/tool-errors/linker-tools-error-lnk2019.md), który poprzedzać ten komunikat o błędzie, tylko jeden raz dla każdego nierozwiązane zewnętrzne Błąd symbolu.  
+Błąd LNK1120 liczności (*numer*) błędów nierozpoznany symbol zewnętrzny dla tej operacji łączenia. Większość nierozpoznanych symboli zewnętrznych błędy są zgłaszane indywidualnie przez [błąd narzędzi konsolidatora LNK2001](../../error-messages/tool-errors/linker-tools-error-lnk2001.md) i [błąd narzędzi konsolidatora LNK2019](../../error-messages/tool-errors/linker-tools-error-lnk2019.md), które poprzedzają ten komunikat o błędzie, jeden raz dla każdego nierozpoznany zewnętrzny symbol błędu.  
   
-Aby naprawić ten błąd, należy rozwiązać wszystkie inne nierozwiązane błędy zewnętrznych lub inne błędy konsolidatora, które należy poprzedzić go w danych wyjściowych kompilacji. Ten błąd nie jest zgłaszany, kiedy pozostają bez nierozwiązane błędów zewnętrznych.  
+Aby naprawić ten błąd, należy rozwiązać wszystkie inne nierozwiązane błędy zewnętrznych lub inne błędy konsolidatora, które należy poprzedzić go w danych wyjściowych kompilacji. Ten błąd nie jest zgłaszany, kiedy pozostają żadne nierozwiązane błędy zewnętrznych.  

@@ -16,15 +16,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 13f832f0ea7aaf7b766141ce7df4f83f21e1cdca
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 29f2faecb29da93729b0be0f40c00c18b82f6344
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32372870"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45720879"
 ---
 # <a name="dumping-delay-loaded-imports"></a>Zrzucanie importów załadowanych z opóźnieniem
-Importy załadowane z opóźnieniem można można utworzyć zrzutu przy użyciu [dumpbin/Imports](../../build/reference/imports-dumpbin.md) i wyświetlane informacje nieco inne niż importuje standard. Te są rozdzielone w osobnej sekcji / Imports zrzucanie i są jawnie oznaczone jako Importy załadowane z opóźnieniem. W przypadku zwolnienia informacji zawartych w obrazie, który jest odnotowany. W przypadku powiązania informacji zawartych sygnaturę daty/godziny docelowej biblioteki DLL jest odnotowany oraz powiązane adresy operacji importu.  
-  
-## <a name="see-also"></a>Zobacz też  
- [Obsługa konsolidatora dla bibliotek DLL załadowanych z opóźnieniem](../../build/reference/linker-support-for-delay-loaded-dlls.md)
+
+Może być zrzucany importów załadowanych z opóźnieniem przy użyciu [dumpbin/Imports —](../../build/reference/imports-dumpbin.md) i są wyświetlane z informacji nieco inne niż standardowe importuje. Czy można podzielić na własnej sekcji/Imports — zrzucanie, a są jawnie oznaczone jako importów załadowanych z opóźnieniem. Jeśli jest zwolnienie informacji zawartych w obrazie, który podano. W przypadku powiązania informacji zawartych wraz z powiązanej adresy polecenie importuje zauważyć sygnaturę daty/godziny docelowej biblioteki DLL.
+
+## <a name="see-also"></a>Zobacz też
+
+[Obsługa konsolidatora dla bibliotek DLL załadowanych z opóźnieniem](../../build/reference/linker-support-for-delay-loaded-dlls.md)

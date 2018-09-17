@@ -14,15 +14,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 74a8ab3259560cbc99a509f3b7cf6075aacc7036
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: a7dc18065499773d0646bde2bc63cb5c8e1d6076
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32371450"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45717954"
 ---
 # <a name="look-up-button"></a>Przycisk wyszukiwania
-Kliknij przycisk **przeglądowych** można pobrać komunikatu o błędzie, umożliwiająca wprowadzona wartość system lub module. Można wprowadzić wartości w postaci szesnastkowej lub dziesiętnej (w tym ujemne wartości dziesiętnych). Na liście modułów **dodatkowych modułów do wyszukiwania błąd** okna dialogowego również będą wyszukiwane.  
-  
-## <a name="see-also"></a>Zobacz też  
- [Kontrolka edycji wartości](../../build/reference/value-edit-control.md)
+
+Kliknij przycisk **odszukaj** można pobrać komunikatu o błędzie odnosi się do systemu lub moduł wprowadzona wartość. Można wprowadzić wartości w postaci szesnastkowej lub dziesiętnymi (w tym wartości ujemnych dziesiętna). Na liście modułów **dodatkowe moduły do wyszukiwania błędów** przeszukiwane są również okna dialogowego.
+
+## <a name="see-also"></a>Zobacz też
+
+[Kontrolka edycji wartości](../../build/reference/value-edit-control.md)

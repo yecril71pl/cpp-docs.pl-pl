@@ -18,39 +18,43 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9ee3ffe33dbb99f1f9b4124e2695d2e56dbe5544
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: fc07ba1de15795e99a5e2ed75a5df9752026d08e
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32368876"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45717005"
 ---
 # <a name="importing-and-exporting"></a>Importowanie i eksportowanie
-Możesz zaimportować symbole publiczne do aplikacji lub eksportowanie funkcji z biblioteki DLL przy użyciu dwóch metod:  
-  
--   Podczas tworzenia biblioteki DLL przy użyciu pliku modułu definicji (.def)  
-  
--   Użyj słowa kluczowe **__declspec(dllimport)** lub **__declspec(dllexport)** w definicji funkcji w głównej aplikacji  
-  
-## <a name="using-a-def-file"></a>Używany plik .def  
- Plik definicji modułu (.def) to plik tekstowy zawierający co najmniej jeden moduł instrukcje opisujących różne atrybuty biblioteki dll. Jeśli nie używasz **__declspec(dllimport)** lub **__declspec(dllexport)** wyeksportować funkcji DLL, plik .def wymaga biblioteki DLL.  
-  
- Można użyć .def — pliki do [importowanie do aplikacji](../build/importing-using-def-files.md) lub [eksportowanie z biblioteki DLL](../build/exporting-from-a-dll-using-def-files.md).  
-  
-## <a name="using-declspec"></a>Przy użyciu __declspec  
- Visual C++ używa **__declspec(dllimport)** i **__declspec(dllexport)** zastąpić **__export** — słowo kluczowe wcześniej używany w 16-bitowych wersjach Visual C++.  
-  
- Nie trzeba używać **__declspec(dllimport)** swój kod, aby skompilować poprawnie, ale w ten sposób umożliwia kompilatorowi generowanie kodu lepiej. Kompilator jest w stanie wygenerować kodu lepsze, ponieważ można określić, czy funkcję istnieje w bibliotece DLL lub nie, który umożliwia kompilatorowi tworzenia kodu z pominięciem poziom pośredni, które zwykle będą obecne w wywołaniu funkcji, które przekroczeniu granic DLL. Jednak należy użyć **__declspec(dllimport)** do zaimportowania zmienne używane w bibliotece DLL.  
-  
- Z sekcji .def prawidłowego pliku EKSPORTÓW **__declspec(dllexport)** nie jest wymagana. **__declspec(dllexport)** został dodany do umożliwiają łatwe do wyeksportowania funkcji z pliku .exe lub .dll bez użycia pliku .def.  
-  
- Format przenośnej plikiem wykonywalnym środowiska Win32 jest przeznaczona do zminimalizować liczbę stron, które muszą być dotknięciu ustalenie importów. Aby to zrobić, umieszcza w jednym miejscu o nazwie tabeli Adres zaimportować wszystkie adresy importu dla dowolnego programu. Dzięki temu można zmodyfikować jedną lub dwie strony podczas uzyskiwania dostępu do tych importuje moduł ładujący.  
-  
-## <a name="what-do-you-want-to-do"></a>Co chcesz zrobić?  
-  
--   [Importowanie do aplikacji](../build/importing-into-an-application-using-declspec-dllimport.md)  
-  
--   [Eksportowanie z biblioteki DLL](../build/exporting-from-a-dll.md)  
-  
-## <a name="see-also"></a>Zobacz też  
- [Biblioteki DLL w programie Visual C++](../build/dlls-in-visual-cpp.md)
+
+Można zaimportować symboli publicznych do aplikacji lub eksportowania funkcji z biblioteki DLL przy użyciu dwóch metod:
+
+- Użyj pliku definicji (.def) moduł podczas kompilowania biblioteki DLL
+
+- Używać słów kluczowych **__declspec(dllimport)** lub **__declspec(dllexport)** w definicji funkcji w głównym aplikacji
+
+## <a name="using-a-def-file"></a>Używając pliku .def
+
+Plik definicji modułu (.def) jest plikiem tekstowym zawierającym jedną lub więcej instrukcji modułu, które opisują różne atrybuty pliku DLL. Jeśli nie używasz **__declspec(dllimport)** lub **__declspec(dllexport)** do eksportowania funkcji DLL, biblioteka DLL wymaga pliku .def.
+
+Możesz użyć .def — pliki do [importowanie do aplikacji](../build/importing-using-def-files.md) lub [eksportowanie z biblioteki DLL](../build/exporting-from-a-dll-using-def-files.md).
+
+## <a name="using-declspec"></a>Za pomocą __declspec
+
+Visual C++ używa **__declspec(dllimport)** i **__declspec(dllexport)** zastąpić **__export** — słowo kluczowe używane wcześniej w 16-bitowych wersjach Visual C++.
+
+Nie trzeba używać **__declspec(dllimport)** swój kod, aby skompilować poprawnie, ale to umożliwia kompilatorowi generowanie lepszego kodu. Kompilator jest w stanie generowanie lepszego kodu, ponieważ można określić, czy funkcja istnieje w bibliotece DLL lub nie, co pozwala kompilator generuje kod, z pominięciem poziom pośrednictwa, które zwykle będą obecne w wywołaniu funkcji, która przekroczyła granicę biblioteki DLL. Jednakże, należy użyć **__declspec(dllimport)** do zaimportowania zmiennych używanych w bibliotece DLL.
+
+Za pomocą sekcji EXPORTS pliku .def odpowiednie **__declspec(dllexport)** nie jest wymagana. **__declspec(dllexport)** została dodana do umożliwiają łatwe do eksportowania funkcji z pliku .exe lub .dll, bez użycia pliku .def.
+
+Format przenośnym plikiem wykonywalnym środowiska Win32 jest przeznaczony do zminimalizować liczbę stron, które muszą dotknięciu naprawić importów. Aby to zrobić, umieszcza wszystkie adresy importu dla dowolnego programu, w jednym miejscu, o nazwie tabeli adresów importowania. Dzięki temu moduł ładujący zmodyfikować jedną lub dwie strony podczas uzyskiwania dostępu do tych importów.
+
+## <a name="what-do-you-want-to-do"></a>Co chcesz zrobić?
+
+- [Importowanie do aplikacji](../build/importing-into-an-application-using-declspec-dllimport.md)
+
+- [Eksportowanie z biblioteki DLL](../build/exporting-from-a-dll.md)
+
+## <a name="see-also"></a>Zobacz też
+
+[Biblioteki DLL w programie Visual C++](../build/dlls-in-visual-cpp.md)

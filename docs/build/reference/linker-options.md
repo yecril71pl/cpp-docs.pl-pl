@@ -19,12 +19,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d514e992b165f7deb5f9354f58fe5a409f52546a
-ms.sourcegitcommit: 7f3df9ff0310a4716b8136ca20deba699ca86c6c
+ms.openlocfilehash: e5a091a4301a107fb820f63c357c4e7f43c35948
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/21/2018
-ms.locfileid: "42465088"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45721295"
 ---
 # <a name="linker-options"></a>Opcje konsolidatora
 
@@ -146,5 +146,5 @@ Aby uzyskać więcej informacji, zobacz [opcje łącza Compiler-Controlled](../.
 
 ## <a name="see-also"></a>Zobacz też
 
-[Dokumentacja kompilacji w języku C/C++](../../build/reference/c-cpp-building-reference.md)  
-[Ustawianie opcji konsolidatora](../../build/reference/setting-linker-options.md)  
+[Dokumentacja kompilacji w języku C/C++](../../build/reference/c-cpp-building-reference.md)<br/>
+[Ustawianie opcji konsolidatora](../../build/reference/setting-linker-options.md)

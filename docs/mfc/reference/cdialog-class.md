@@ -50,12 +50,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ff3bc9ea331be6c25be80b21c14a309d47718c8e
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: c18a9b1e4a35a1089b8a7fb441161552bb3a3909
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43217336"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45724311"
 ---
 # <a name="cdialog-class"></a>Cdialog — klasa
 Klasa podstawowa używana do wyświetlania okien dialogowych na ekranie.  
@@ -472,8 +472,8 @@ Virtual void OnSetFont(CFont* pFont);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *pFont*  
- Określa wskaźnik na czcionkę, która będzie służyć jako domyślną czcionkę dla wszystkich kontrolek w oknie dialogowym.  
+*pFont*<br/>
+[in] Określa wskaźnik na czcionkę, która będzie służyć jako domyślną czcionkę dla wszystkich kontrolek w oknie dialogowym.  
   
 ### <a name="remarks"></a>Uwagi  
  Okno dialogowe użyje określonej czcionki jako domyślny dla wszystkich jej kontrolek.  

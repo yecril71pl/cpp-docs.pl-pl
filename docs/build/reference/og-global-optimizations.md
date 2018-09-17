@@ -23,16 +23,16 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 03ef87f31e478bfbc8691b7e678186dd1a0621e5
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 8443ae8111476cdd3339982c8df0b4b7e3e9c475
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32377160"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45722530"
 ---
 # <a name="og-global-optimizations"></a>/Og (Optymalizacje globalne)
 
-Przestarzałe. Udostępnia lokalne i globalne optymalizacje, automatyczne rejestru alokacji i pętla optymalizacji. Zalecane jest użycie albo [/O1 (Minimalizuj rozmiar)](../../build/reference/o1-o2-minimize-size-maximize-speed.md) lub [/O2 (Maksymalizuj szybkość)](../../build/reference/o1-o2-minimize-size-maximize-speed.md) zamiast tego.
+Przestarzałe. Udostępnia lokalne i globalne optymalizacje, automatyczne rejestrowanie alokacji i optymalizacji pętli. Firma Microsoft zaleca, należy użyć [/O1 (Minimalizuj rozmiar)](../../build/reference/o1-o2-minimize-size-maximize-speed.md) lub [/O2 (Maksymalizuj szybkość)](../../build/reference/o1-o2-minimize-size-maximize-speed.md) zamiast tego.
 
 ## <a name="syntax"></a>Składnia
 
@@ -40,13 +40,13 @@ Przestarzałe. Udostępnia lokalne i globalne optymalizacje, automatyczne rejest
 
 ## <a name="remarks"></a>Uwagi
 
-**/Og** jest przestarzały. Te optymalizacje są teraz zazwyczaj domyślnie włączone. Aby uzyskać więcej informacji o optymalizacji, zobacz [/O1, / O2 (Minimalizuj rozmiar, Maksymalizuj szybkość)](../../build/reference/o1-o2-minimize-size-maximize-speed.md) lub [OX (Włącz najbardziej prędkości optymalizacji)](../../build/reference/ox-full-optimization.md).
+**/Og** jest przestarzała. Optymalizacje te są teraz ogólnie domyślnie włączone. Aby uzyskać więcej informacji na temat optymalizacji, zobacz [/O1, / O2 (Minimalizuj rozmiar, Maksymalizuj szybkość)](../../build/reference/o1-o2-minimize-size-maximize-speed.md) lub [OX (Włącz większość optymalizacji szybkości)](../../build/reference/ox-full-optimization.md).
 
-Następujące funkcje optymalizacji są dostępne w ramach **/Og**:
+Następujące optymalizacje są dostępne w obszarze **/Og**:
 
 - Lokalne i globalne eliminacja wspólnych podwyrażeń
 
-     W tej optymalizacji wartości typowych Podwyrażenie jest obliczany raz. W poniższym przykładzie Jeśli wartości `b` i `c` nie należy zmieniać między trzy wyrażenia, kompilator można przypisać do obliczania `b + c` do zmiennej tymczasowej i Zastąp zmienną dla `b + c`:
+   W tego rodzaju optymalizacji jeden raz jest obliczana wartość wspólnych podwyrażeń. W poniższym przykładzie Jeśli wartości `b` i `c` nie zmienił się od trzech wyrażeń, kompilator może przypisać do obliczania `b + c` do zmiennej tymczasowej i Zastąp zmienną dla `b + c`:
 
     ```C
     a = b + c;
@@ -54,15 +54,15 @@ Następujące funkcje optymalizacji są dostępne w ramach **/Og**:
     e = b + c;
     ```
 
-     Lokalne wspólnej optymalizacji Podwyrażenie kompilator sprawdza krótkich fragmentów kodu dla typowych użyto. Globalne wspólnej optymalizacji Podwyrażenie kompilator wyszukuje całego funkcje dla typowych zakresie.
+   Lokalne wspólnej optymalizacji Podwyrażenie kompilator sprawdza krótkich fragmentów kodu dla typowych podwyrażenia. Globalne wspólnej optymalizacji Podwyrażenie kompilator przeszukuje cały funkcje dla typowych podwyrażenia.
 
 - Automatyczna alokacja rejestru
 
-     Tego rodzaju optymalizacji umożliwia kompilatorowi zmienne do przechowywania często używanych i użyto w rejestrach; `register` — słowo kluczowe jest ignorowana.
+   Tego rodzaju optymalizacji umożliwia kompilatorowi do przechowywania często używanych zmiennych i podwyrażenia w rejestrach; `register` — słowo kluczowe jest ignorowana.
 
-- Optymalizacja pętli
+- Optymalizacji pętli
 
-     Tego rodzaju optymalizacji usuwa niezmiennej użyto z treści pętli. Optymalne pętla zawiera tylko wyrażenia, którego wartości zmienić za pomocą każdej wykonywania pętli. W poniższym przykładzie wyrażenie `x + y` nie zmienia się w treści pętli:
+   Tego rodzaju optymalizacji usuwa niezmiennej podwyrażenia z treści pętli. Optymalne pętla zawiera tylko wyrażenia, w których wartości zmieniają się za pomocą każdego wykonania pętli. W poniższym przykładzie wyrażenie `x + y` nie zmienia się w ciele pętli:
 
     ```C
     i = -100;
@@ -71,7 +71,7 @@ Następujące funkcje optymalizacji są dostępne w ramach **/Og**:
     }
     ```
 
-     Po optymalizacji `x + y` jest obliczana raz zamiast zawsze pętla jest wykonywana:
+   Po optymalizacji `x + y` jest obliczana raz zamiast każdym wykonaniu pętli:
 
     ```C
     i = -100;
@@ -81,22 +81,22 @@ Następujące funkcje optymalizacji są dostępne w ramach **/Og**:
     }
     ```
 
-     Optymalizacja pętli jest bardziej efektywne, gdy kompilator może przyjmować nie aliasów, który ustawia z [__restrict](../../cpp/extension-restrict.md), [noalias](../../cpp/noalias.md), lub [ograniczyć](../../cpp/restrict.md).
+   Optymalizacji pętli jest znacznie bardziej efektywne w przypadku, gdy kompilator może przyjąć aliasing, możesz ustawić przy użyciu [element __restrict](../../cpp/extension-restrict.md), [noalias](../../cpp/noalias.md), lub [ograniczyć](../../cpp/restrict.md).
 
-    > [!NOTE]
-    > Można włączyć lub wyłączyć optymalizacje globalne na poszczególnych funkcji funkcji przy użyciu `optimize` pragma razem z `g` opcji.
+   > [!NOTE]
+   > Można włączyć lub wyłączyć optymalizację globalną na temat korzystania z poszczególnych funkcji przez funkcję `optimize` pragma wraz z `g` opcji.
 
- Aby uzyskać odpowiednie informacje, zobacz [/Oi (Generuj funkcje wewnętrzne)](../../build/reference/oi-generate-intrinsic-functions.md) i [OX (Włącz najbardziej prędkości optymalizacji)](../../build/reference/ox-full-optimization.md).
+Aby uzyskać powiązane informacje, zobacz [/Oi (Generuj funkcje wewnętrzne)](../../build/reference/oi-generate-intrinsic-functions.md) i [OX (Włącz większość optymalizacji szybkości)](../../build/reference/ox-full-optimization.md).
 
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Aby ustawić tę opcję kompilatora w środowisku programowania Visual Studio
 
-1. Otwórz projekt **strony właściwości** okno dialogowe. Aby uzyskać więcej informacji, zobacz [Praca z właściwościami projektu](../../ide/working-with-project-properties.md).
+1. Otwórz projekt **stron właściwości** okno dialogowe. Aby uzyskać więcej informacji, zobacz [Praca z właściwościami projektu](../../ide/working-with-project-properties.md).
 
 1. Kliknij przycisk **C/C++** folderu.
 
-1. Kliknij przycisk **wiersza polecenia** strony właściwości.
+1. Kliknij przycisk **wiersza polecenia** stronę właściwości.
 
-1. Wybierz opcję kompilatora w **dodatkowe opcje** pole.
+1. Wpisz opcję kompilatora w **dodatkowe opcje** pole.
 
 ### <a name="to-set-this-compiler-option-programmatically"></a>Aby programowo ustawić tę opcję kompilatora
 

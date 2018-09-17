@@ -26,12 +26,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 449d79119b15e814485f3b7e0c3eb7472d314d19
-ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
+ms.openlocfilehash: ee3bf6b087777bc550a34234a8969e2127c8ec2d
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/05/2018
-ms.locfileid: "37852487"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45720255"
 ---
 # <a name="cmfcimagepaintarea-class"></a>Klasa CMFCImagePaintArea
 Zapewnia obszar obrazu, który umożliwia modyfikowanie obrazu w okno dialogowe edytora obrazu.  
@@ -98,7 +98,7 @@ CMFCImagePaintArea(CMFCImageEditorDialog* pParentDlg);
 |||  
 |-|-|  
 |Parametr|Opis|  
-|[in] *pParentDlg*|Wskaźnik do okna dialogowego, który jest elementem nadrzędnym edytora obrazów.|  
+|*pParentDlg*|[in] Wskaźnik do okna dialogowego, który jest elementem nadrzędnym edytora obrazów.|  
   
 ##  <a name="getmode"></a>  CMFCImagePaintArea::GetMode  
  Pobiera bieżący tryb rysowania.  
@@ -122,7 +122,7 @@ void SetBitmap(CBitmap* pBitmap);
 |||  
 |-|-|  
 |Parametr|Opis|  
-|[in] *pBitmap*|Nowy obraz mapy bitowej do wyświetlenia.|  
+|*pBitmap*|[in] Nowy obraz mapy bitowej do wyświetlenia.|  
   
 ### <a name="remarks"></a>Uwagi  
  Jeśli *pBitmap* ma wartość NULL, ta metoda ustawia rozmiar obszaru paint modyfikowane przez zero. W przeciwnym razie ustawia rozmiar obszaru można modyfikować paint, rozmiar obrazu mapy bitowej podana.  
@@ -139,7 +139,7 @@ void SetColor(COLORREF color);
 |||  
 |-|-|  
 |Parametr|Opis|  
-|[in] *kolorów*|Nowy kolor rysowania.|  
+|*Kolor*|[in] Nowy kolor rysowania.|  
   
 ### <a name="remarks"></a>Uwagi  
  Kiedy wybrać kolor z palety paska edytora obrazu lub selektora kolorów, struktura wywołuje tę metodę w celu aktualizacji bieżący kolor rysowania. Początkowy kolor rysunku jest czarny (COLORREF wartość 0).  
@@ -158,7 +158,7 @@ void SetMode(IMAGE_EDIT_MODE mode);
 |||  
 |-|-|  
 |Parametr|Opis|  
-|[in] *tryb*|[Image_edit_mode —](cmfcimagepaintarea-image-edit-mode-enumeration.md) wartość, która określa bieżący tryb rysowania.|  
+|*Tryb*|[in] [Image_edit_mode —](cmfcimagepaintarea-image-edit-mode-enumeration.md) wartość, która określa bieżący tryb rysowania.|  
   
 ## <a name="see-also"></a>Zobacz też  
  [Diagram hierarchii](../../mfc/hierarchy-chart.md)   

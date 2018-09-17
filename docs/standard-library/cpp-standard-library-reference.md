@@ -1,5 +1,5 @@
 ---
-title: Odwołanie do biblioteki C++ Standard | Dokumentacja firmy Microsoft
+title: Dokumentacja standardowej biblioteki C++ | Dokumentacja firmy Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,25 +17,25 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: bc6c665309f51044f00b05931500065ed087e774
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: dcf760219f06ab71684d9d67240712fa501b3c00
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33841209"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45722608"
 ---
 # <a name="c-standard-library-reference"></a>Odwołanie do standardowej biblioteki C++
 
-Program w języku C++ można wywołać na wiele funkcji z tym zgodnych implementacji standardowa biblioteka C++. Te funkcje wykonywania podstawowych usług takich jak dane wejściowe i wyjściowe i zapewnić efektywne implementacje operacji często używanych.
+Program w języku C++, można wywołać na dużej liczbie funkcji z tym odpowiadające implementacja standardowej biblioteki C++. Te funkcje wykonywania podstawowych usług, takich jak dane wejściowe i wyjściowe i zapewniają efektywne implementacje często używanych operacji.
 
-Aby uzyskać więcej informacji na temat biblioteki wykonawcze języka Visual C++, zobacz [Biblioteka CRT — funkcje](../c-runtime-library/crt-library-features.md).
+Aby uzyskać więcej informacji na temat biblioteki wykonawczej języka Visual C++, zobacz [funkcje biblioteki CRT](../c-runtime-library/crt-library-features.md).
 
 ## <a name="in-this-section"></a>W tej sekcji
 
-[Przegląd biblioteki Standard C++](../standard-library/cpp-standard-library-overview.md) zawiera omówienie przez firmę Microsoft implementacją standardowa biblioteka C++.
+[Przegląd biblioteki Standard C++](../standard-library/cpp-standard-library-overview.md) zawiera omówienie wdrożenia przez Microsoft standardowej biblioteki języka C++.
 
-[iostream — programowanie](../standard-library/iostream-programming.md) zawiera omówienie iostream — programowanie.
+[iostream Programming](../standard-library/iostream-programming.md) zawiera omówienie iostream — programowanie.
 
-[Odwołanie do plików nagłówkowych](../standard-library/cpp-standard-library-header-files.md) zawiera łącza do tematów odwołania dyskutować pliki nagłówków standardowa biblioteka C++, wraz z przykładami kodu.
+[Odwołanie do plików nagłówkowych](../standard-library/cpp-standard-library-header-files.md) zawiera łącza do tematów odwołania, omawiając pliki nagłówkowe standardowej biblioteki języka C++ z przykładami kodu.
 
 

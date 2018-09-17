@@ -17,34 +17,34 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c8a18c5d790cf21e8eb130a2b2baa152e20d79a1
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 15854333a9f26f87d20f7819327e68050ab37bf6
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32375038"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45717791"
 ---
 # <a name="q-options-low-level-operations"></a>/Q Opcje (Operacje na niskim poziomie)
 
-Można użyć **/Q** opcji kompilatora, aby wykonywać następujące operacje kompilatora niskiego poziomu:
+Możesz użyć **/q** opcje kompilatora, aby wykonywać następujące operacje kompilatora niskiego poziomu:
 
 - [/ Qfast_transcendentals (Wymuszaj Fast Transcendentals)](../../build/reference/qfast-transcendentals-force-fast-transcendentals.md): generuje fast transcendentals.
 
-- [/ QIfist (pomijanie _ftol)](../../build/reference/qifist-suppress-ftol.md): pomija `_ftol` podczas konwersji z typu zmiennoprzecinkowego do typu Liczba całkowita jest wymagana (tylko x86).
+- [/ QIfist (pomijanie _ftol)](../../build/reference/qifist-suppress-ftol.md): pomija `_ftol` gdy konwersja typu zmiennoprzecinkowego na typ całkowitoliczbowy jest wymagana (tylko x86).
 
-- [/ Qimprecise_fwaits (usuwanie fwaits wewnątrz bloków Try)](../../build/reference/qimprecise-fwaits-remove-fwaits-inside-try-blocks.md): usuwa `fwait` poleceniach wewnątrz `try` bloków.
+- [/ Qimprecise_fwaits (usuwanie fwaits wewnątrz bloków Try)](../../build/reference/qimprecise-fwaits-remove-fwaits-inside-try-blocks.md): usuwa `fwait` polecenia wewnątrz `try` bloków.
 
-- [/ Qpar (automatyczny Paralelizator)](../../build/reference/qpar-auto-parallelizer.md): włącza automatyczna paralelizacja pętli, które są oznaczone ikoną z [#pragma loop()](../../preprocessor/loop.md) dyrektywy.
+- [/ Qpar (automatyczny Paralelizator)](../../build/reference/qpar-auto-parallelizer.md): Włącza automatyczne przetwarzanie równoległe pętli, które są oznaczone [#pragma loop()](../../preprocessor/loop.md) dyrektywy.
 
-- [/ Qpar raport (poziom raportowania automatycznej Paralelizacji)](../../build/reference/qpar-report-auto-parallelizer-reporting-level.md): Włącza raportowanie poziomy automatyczna paralelizacja.
+- [/ Qpar raport (poziom raportowania automatycznej Paralelizacji)](../../build/reference/qpar-report-auto-parallelizer-reporting-level.md): włącza poziomy raportowania dla automatycznego przetwarzania równoległego.
 
-- [/ Qsafe_fp_loads](../../build/reference/qsafe-fp-loads.md): powoduje pominięcie optymalizacji liczb zmiennoprzecinkowych rejestru ładuje i dla ruchu między pamięcią i MMX rejestruje.
+- [/ Qsafe_fp_loads](../../build/reference/qsafe-fp-loads.md): powoduje pominięcie optymalizacji zmiennoprzecinkowa rejestr ładuje i aby poruszać się między pamięcią i MMX rejestruje.
 
-- [/ Qspectre](../../build/reference/qspectre.md): generuje instrukcje, aby ograniczyć niektórych Spectre luk w zabezpieczeniach.
+- [/ Qspectre](../../build/reference/qspectre.md): generuje instrukcje, aby uniknąć niektórych luk w zabezpieczeniach Spectre.
 
-- [/ Qvec raport (poziom raportowania automatycznej Wektoryzacji)](../../build/reference/qvec-report-auto-vectorizer-reporting-level.md): Włącza raportowanie poziomy vectorization automatycznego.
+- [/ Qvec raport (poziom raportowania automatycznej Wektoryzacji)](../../build/reference/qvec-report-auto-vectorizer-reporting-level.md): włącza poziomy raportowania dla automatycznej wektoryzacji.
 
 ## <a name="see-also"></a>Zobacz także
 
-[Opcje kompilatora](../../build/reference/compiler-options.md)  
-[Ustawianie opcji kompilatora](../../build/reference/setting-compiler-options.md)  
+[Opcje kompilatora](../../build/reference/compiler-options.md)<br/>
+[Ustawianie opcji kompilatora](../../build/reference/setting-compiler-options.md)

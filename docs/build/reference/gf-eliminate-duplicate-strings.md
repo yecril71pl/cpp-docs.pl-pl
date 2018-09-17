@@ -24,56 +24,59 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9e2710fe8c5cc444d9e2681620f6813312a1d65a
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: e19915485bddb32ac993bd0f0cbb4c3e2f9bc517
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32375896"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45718500"
 ---
 # <a name="gf-eliminate-duplicate-strings"></a>/GF (Eliminowanie ciągów zduplikowanych)
-Umożliwia kompilatorowi tworzenia pojedynczej kopii identycznych ciągów w obrazie programu i pamięci podczas wykonywania. Jest to optymalizacją nazywaną *buforowania ciągu* aby tworzenia mniejszymi programami.  
-  
-## <a name="syntax"></a>Składnia  
-  
-```  
-/GF  
-```  
-  
-## <a name="remarks"></a>Uwagi  
- Jeśli używasz **/GF**, system operacyjny nie zamiana części ciągu pamięci i może być odczytany ciągów wykonaj kopię z pliku obrazu.  
-  
- **/GF** pul ciągi jako tylko do odczytu. Jeśli użytkownik próbuje zmodyfikować ciągów w obszarze **/GF**, występuje błąd aplikacji.  
-  
- Buforowanie ciągów umożliwia co miały jako wskaźniki wiele do wielu buforów się wiele wskaźniki do pojedynczego buforu. W poniższym kodzie `s` i `t` są inicjowane z tych samych parametrach. Buforowanie ciągów powoduje, że ich do punktu w tej samej pamięci:  
-  
-```  
-char *s = "This is a character buffer";  
-char *t = "This is a character buffer";  
-```  
-  
+
+Umożliwia kompilatorowi tworzenie pojedynczej kopii identycznych ciągów w obrazie programu i w pamięci podczas wykonywania. Jest to optymalizacją nazywaną *stringów* , można utworzyć mniejszymi programami.
+
+## <a name="syntax"></a>Składnia
+
+```
+/GF
+```
+
+## <a name="remarks"></a>Uwagi
+
+Jeśli używasz **/GF**, system operacyjny nie zamienić ciąg część pamięci i mogą odczytywać ciągi kopię z pliku obrazu.
+
+**/GF** pul ciągi jako tylko do odczytu. Jeśli spróbujesz zmodyfikować ciągi w **/GF**, występuje błąd aplikacji.
+
+Buforowanie ciągów umożliwia co miały jako wielu wskaźników do buforów wiele do wielu wskaźników do pojedynczego buforu. W poniższym kodzie `s` i `t` są inicjowane za pomocą tego samego ciągu. Buforowanie ciągu powoduje, że ich wskaż tej samej pamięci:
+
+```
+char *s = "This is a character buffer";
+char *t = "This is a character buffer";
+```
+
 > [!NOTE]
->  [/Zi](../../build/reference/z7-zi-zi-debug-information-format.md) , używane Edytuj i Kontynuuj, powoduje **/GF** opcji.  
-  
+>  [/Zi](../../build/reference/z7-zi-zi-debug-information-format.md) , używane do edycji i kontynuowania oraz powoduje **/GF** opcji.
+
 > [!NOTE]
->  **/GF** — opcja kompilatora tworzy sekcję z adresowanego dla każdego unikatowego ciągu. I domyślnie pliku obiektu może zawierać do 65 536 sekcje adresowanego. Jeśli program zawiera więcej niż 65 536 ciągów, użyj [/bigobj](../../build/reference/bigobj-increase-number-of-sections-in-dot-obj-file.md) opcję kompilatora, aby utworzyć więcej sekcji.  
-  
- **/GF** jest w życie, kiedy [/O1](../../build/reference/o1-o2-minimize-size-maximize-speed.md) lub **/O2** jest używany.  
-  
-### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Aby ustawić tę opcję kompilatora w środowisku programowania Visual Studio  
-  
-1.  Otwórz projekt **strony właściwości** okno dialogowe. Aby uzyskać więcej informacji, zobacz [Praca z właściwościami projektu](../../ide/working-with-project-properties.md).  
-  
-2.  Kliknij przycisk **C/C++** folderu.  
-  
-3.  Kliknij przycisk **generowania kodu** strony właściwości.  
-  
-4.  Modyfikowanie **Włącz buforowanie Stringów** właściwości.  
-  
-### <a name="to-set-this-compiler-option-programmatically"></a>Aby programowo ustawić tę opcję kompilatora  
-  
--   Zobacz <xref:Microsoft.VisualStudio.VCProjectEngine.VCCLCompilerTool.StringPooling%2A>.  
-  
-## <a name="see-also"></a>Zobacz też  
- [Opcje kompilatora](../../build/reference/compiler-options.md)   
- [Ustawianie opcji kompilatora](../../build/reference/setting-compiler-options.md)
+>  **/GF** — opcja kompilatora tworzy adresowalnych sekcji każdy unikatowy ciąg. I domyślnie plik obiektu może zawierać maksymalnie 65 536 adresowalnych sekcji. Jeśli program zawiera więcej niż 65536 ciągów, użyj [/bigobj](../../build/reference/bigobj-increase-number-of-sections-in-dot-obj-file.md) opcję kompilatora, aby utworzyć więcej sekcji.
+
+**/GF** jest w działa, gdy [/O1](../../build/reference/o1-o2-minimize-size-maximize-speed.md) lub **/O2** jest używany.
+
+### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Aby ustawić tę opcję kompilatora w środowisku programowania Visual Studio
+
+1. Otwórz projekt **stron właściwości** okno dialogowe. Aby uzyskać więcej informacji, zobacz [Praca z właściwościami projektu](../../ide/working-with-project-properties.md).
+
+1. Kliknij przycisk **C/C++** folderu.
+
+1. Kliknij przycisk **generowania kodu** stronę właściwości.
+
+1. Modyfikowanie **Włącz buforowanie ciągów** właściwości.
+
+### <a name="to-set-this-compiler-option-programmatically"></a>Aby programowo ustawić tę opcję kompilatora
+
+- Zobacz <xref:Microsoft.VisualStudio.VCProjectEngine.VCCLCompilerTool.StringPooling%2A>.
+
+## <a name="see-also"></a>Zobacz też
+
+[Opcje kompilatora](../../build/reference/compiler-options.md)<br/>
+[Ustawianie opcji kompilatora](../../build/reference/setting-compiler-options.md)

@@ -12,18 +12,19 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 205241f2306885800813597568ed9ae8cf3858b3
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: 2c2b1dc80cec8ba18522d8238752857105993074
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42598236"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45720736"
 ---
 # <a name="configuring-programs-for-windows-xp"></a>Konfigurowanie programów pod kątem Windows XP
 
 Ponieważ program Visual Studio obsługuje wiele zestawów narzędzi platformy, mogą kierować systemów operacyjnych i bibliotek środowiska uruchomieniowego, które nie są obsługiwane przez domyślny zestaw narzędzi. Na przykład, przełączając zestawu narzędzi platformy, służy C ++ 11, C ++ 14 i C ++ 17 języka ulepszenia obsługiwane przez kompilator języka Visual C++ w programie Visual Studio do tworzenia aplikacji przeznaczonych dla Windows XP i Windows Server 2003. Można również używać starszych zestawów narzędzi platformy do obsługi starszego kodu zgodne dane binarne i nadal korzystaj z najnowszych funkcji środowiska IDE programu Visual Studio.
 
 ## <a name="install-the-windows-xp-platform-toolset"></a>Zainstaluj zestaw narzędzi platformy Windows XP
+
 Aby uzyskać zestaw narzędzi platformy i składników do obiektu docelowego Windows XP i Windows Server 2003 w programie Visual Studio 2017, uruchom Instalatora programu Visual Studio. Podczas pierwszej instalacji programu Visual Studio lub w przypadku wybrania **Modyfikuj** modyfikowania istniejącej instalacji, upewnij się, że **programowanie aplikacji klasycznych w języku C++** obciążenie jest zaznaczone. Na liście opcjonalnych składników dla tego obciążenia, wybierz opcję **podporu Windows XP Pro C++**, a następnie wybierz **zainstalować** lub **Modyfikuj**.
 
 ## <a name="windows-xp-targeting-experience"></a>Windows XP kierowania
@@ -72,7 +73,7 @@ Ze względu na różnice w obsłudze platformy i biblioteki środowisko programi
 
 - **Debugowanie grafiki DirectX**
 
-     Ponieważ debuger grafiki nie obsługuje interfejsu API programu Direct3D 9, nie można używać do debugowania aplikacji, które używają programu Direct3D na Windows XP lub Windows Server 2003. Jednakże jeśli aplikacja korzysta alternatywny moduł renderowania, korzystającą z programów Direct3D 10 lub interfejsów API programu Direct3D 11, debuger grafiki może służyć do diagnozowania problemów z użyciem tych interfejsów API.
+   Ponieważ debuger grafiki nie obsługuje interfejsu API programu Direct3D 9, nie można używać do debugowania aplikacji, które używają programu Direct3D na Windows XP lub Windows Server 2003. Jednakże jeśli aplikacja korzysta alternatywny moduł renderowania, korzystającą z programów Direct3D 10 lub interfejsów API programu Direct3D 11, debuger grafiki może służyć do diagnozowania problemów z użyciem tych interfejsów API.
 
 - **Tworzenie HLSL**
 

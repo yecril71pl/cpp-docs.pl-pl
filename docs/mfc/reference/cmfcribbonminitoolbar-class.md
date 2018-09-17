@@ -26,12 +26,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 789a8165a12977d11220d299e2c99549121dba64
-ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
+ms.openlocfilehash: ef348275059fd2623ca83b40730f010a7d18d6d5
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "42465623"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45721178"
 ---
 # <a name="cmfcribbonminitoolbar-class"></a>Klasa CMFCRibbonMiniToolBar
 Implementuje kontekstowy podręczny pasek narzędzi.  
@@ -98,11 +98,11 @@ void SetCommands(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *pRibbonBar*  
- Paska wstążki, paska wyszukiwania przyciski, aby wyświetlić program.  
+*pRibbonBar*<br/>
+[in] Paska wstążki, paska wyszukiwania przyciski, aby wyświetlić program.  
   
- [in] *lstCommands*  
- Lista poleceń, który będzie wyświetlany w podręczny pasek narzędzi. Wszystkie kategorie wstążki są przeszukiwane w celu skojarzone przycisk Znajdź.  
+*lstCommands*<br/>
+[in] Lista poleceń, który będzie wyświetlany w podręczny pasek narzędzi. Wszystkie kategorie wstążki są przeszukiwane w celu skojarzone przycisk Znajdź.  
   
 ### <a name="remarks"></a>Uwagi  
  Aby ustawić listę poleceń, które mają być wyświetlane w podręczny pasek narzędzi, należy użyć tej funkcji.  
@@ -122,11 +122,11 @@ BOOL Show(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *x*  
- Określa położenie w poziomie podręczny pasek narzędzi w współrzędne ekranu.  
+*x*<br/>
+[in] Określa położenie w poziomie podręczny pasek narzędzi w współrzędne ekranu.  
   
- [in] *y*  
- Określa położenie w pionie podręczny pasek narzędzi w współrzędne ekranu.  
+*y*<br/>
+[in] Określa położenie w pionie podręczny pasek narzędzi w współrzędne ekranu.  
   
 ### <a name="return-value"></a>Wartość zwracana  
  Wartość TRUE, jeśli pomyślnie; zobrazilo podręczny pasek narzędzi w przeciwnym razie wartość FALSE.  
@@ -143,17 +143,17 @@ BOOL ShowWithContextMenu(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *x*  
- Określa położenie menu kontekstowego w poziomie w współrzędne ekranu.  
+*x*<br/>
+[in] Określa położenie menu kontekstowego w poziomie w współrzędne ekranu.  
   
- [in] *y*  
- Określa położenie menu kontekstowego w pionie w współrzędne ekranu.  
+*y*<br/>
+[in] Określa położenie menu kontekstowego w pionie w współrzędne ekranu.  
   
- [in] *uiMenuResID*  
- Określa identyfikator zasobu menu kontekstowe do wyświetlania.  
+*uiMenuResID*<br/>
+[in] Określa identyfikator zasobu menu kontekstowe do wyświetlania.  
   
- [in] *pWndOwner*  
- Identyfikuje okna, która odbiera komunikaty z menu kontekstowego.  
+*pWndOwner*<br/>
+[in] Identyfikuje okna, która odbiera komunikaty z menu kontekstowego.  
   
 ### <a name="return-value"></a>Wartość zwracana  
  Wartość TRUE, jeśli pomyślnie; zobrazilo menu kontekstowe w przeciwnym razie wartość FALSE.  

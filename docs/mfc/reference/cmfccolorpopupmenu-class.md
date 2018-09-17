@@ -24,12 +24,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b32317f4fd67a627a272ea8eefcc949d1b0e63c8
-ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
+ms.openlocfilehash: 32dd81b005570761088cdeb874ad0524bc543df2
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/05/2018
-ms.locfileid: "37852997"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45721867"
 ---
 # <a name="cmfccolorpopupmenu-class"></a>Klasa CMFCColorPopupMenu
 Reprezentuje menu podręczne, które użytkownicy Użyj, aby wybrać kolory w dokumencie lub aplikacji.  
@@ -133,51 +133,51 @@ CMFCColorPopupMenu(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *kolorów*  
- Tablica kolorów wyświetlanych w menu podręcznym.  
+*Kolory*<br/>
+[in] Tablica kolorów wyświetlanych w menu podręcznym.  
   
- [in] *kolorów*  
- Kolor domyślnie wybrana.  
+*Kolor*<br/>
+[in] Kolor domyślnie wybrana.  
   
- [in] *lpszAutoColor*  
- Etykieta tekstowa elementu *automatyczne* przycisk koloru (ustawienie domyślne) lub wartość NULL.  
+*lpszAutoColor*<br/>
+[in] Etykieta tekstowa elementu *automatyczne* przycisk koloru (ustawienie domyślne) lub wartość NULL.  
   
  Standardowa etykieta przycisku automatycznego **automatyczne**.  
   
- [in] *lpszOtherColor*  
- Etykieta tekstowa elementu *innych* przycisk wyświetlający więcej opcji koloru, lub wartość NULL.  
+*lpszOtherColor*<br/>
+[in] Etykieta tekstowa elementu *innych* przycisk wyświetlający więcej opcji koloru, lub wartość NULL.  
   
  Standardowa etykieta dla innych przycisku **więcej kolorów...** .  
   
- [in] *lpszDocColors*  
- Etykieta tekstowa przycisku kolory dokumentu. Paleta kolorów dokumentu zawiera listę kolorów używanych obecnie dokumentu.  
+*lpszDocColors*<br/>
+[in] Etykieta tekstowa przycisku kolory dokumentu. Paleta kolorów dokumentu zawiera listę kolorów używanych obecnie dokumentu.  
   
- [in] *lstDocColors*  
- Lista kolorów, które są obecnie używane.  
+*lstDocColors*<br/>
+[in] Lista kolorów, które są obecnie używane.  
   
- [in] *nColumns*  
- Liczba kolumn, które zawiera tablicę kolorów.  
+*nColumns*<br/>
+[in] Liczba kolumn, które zawiera tablicę kolorów.  
   
- [in] *nHorzDockRows*  
- Liczba wierszy, które ma pasek koloru, gdy jest zadokowany w poziomie.  
+*nHorzDockRows*<br/>
+[in] Liczba wierszy, które ma pasek koloru, gdy jest zadokowany w poziomie.  
   
- [in] *nVertDockColumns*  
- Liczba kolumn, które ma pasek koloru, gdy jest zadokowany w pionie.  
+*nVertDockColumns*<br/>
+[in] Liczba kolumn, które ma pasek koloru, gdy jest zadokowany w pionie.  
   
- [in] *colorAutomatic*  
- Domyślny kolor struktura ma zastosowanie, gdy klikniesz przycisk Automatyczny.  
+*colorAutomatic*<br/>
+[in] Domyślny kolor struktura ma zastosowanie, gdy klikniesz przycisk Automatyczny.  
   
- [in] *uiCommandID*  
- Identyfikator polecenia sterowania paska kolorów.  
+*uiCommandID*<br/>
+[in] Identyfikator polecenia sterowania paska kolorów.  
   
- [in] *bStdColorDlg*  
- Wartość logiczna wskazująca, czy mają być wyświetlane okno dialogowe kolorów standardowych systemowych lub [CMFCColorDialog](../../mfc/reference/cmfccolordialog-class.md) okno dialogowe.  
+*bStdColorDlg*<br/>
+[in] Wartość logiczna wskazująca, czy mają być wyświetlane okno dialogowe kolorów standardowych systemowych lub [CMFCColorDialog](../../mfc/reference/cmfccolordialog-class.md) okno dialogowe.  
   
- [in] *pParentBtn*  
- Wskaźnik do przycisku nadrzędnej.  
+*pParentBtn*<br/>
+[in] Wskaźnik do przycisku nadrzędnej.  
   
- [in] *nID*  
- Identyfikator polecenia.  
+*nID*<br/>
+[in] Identyfikator polecenia.  
   
 ### <a name="remarks"></a>Uwagi  
  Każdego przeciążonego konstruktora zestawy `m_bEnabledInCustomizeMode` elementu członkowskiego na wartość FALSE.  
@@ -202,9 +202,9 @@ virtual CPane* CreateTearOffBar(
 |||  
 |-|-|  
 |Parametr|Opis|  
-|[in] *pWndMain*|Wskaźnik do okna nadrzędnego z paskiem oderwania.|  
-|[in] *uiID*|Identyfikator polecenia paskiem oderwania.|  
-|[in] *lpszName*|Tekst okna paskiem oderwania.|  
+|*pWndMain*|[in] Wskaźnik do okna nadrzędnego z paskiem oderwania.|  
+|*uiID*|[in] Identyfikator polecenia paskiem oderwania.|  
+|*lpszName*|[in] Tekst okna paskiem oderwania.|  
   
 ### <a name="return-value"></a>Wartość zwracana  
  Wskaźnik do nowego obiektu pasek sterowania odrywania.  
@@ -233,8 +233,8 @@ void SetPropList(CMFCPropertyGridCtrl* pWndList);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *pWndList*  
- Wskaźnik do obiektu formantu siatki właściwości.  
+*pWndList*<br/>
+[in] Wskaźnik do obiektu formantu siatki właściwości.  
   
 ## <a name="see-also"></a>Zobacz też  
  [Diagram hierarchii](../../mfc/hierarchy-chart.md)   

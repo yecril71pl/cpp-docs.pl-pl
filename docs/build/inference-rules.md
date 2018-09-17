@@ -16,28 +16,31 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2baa4bdd749e7553d052600cc9efe524ec09910d
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: ed45e5ad61ea1cc50172cd86716b357baa64fa39
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32368424"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45724389"
 ---
 # <a name="inference-rules"></a>Zasady wnioskowania
-Zasady wnioskowania Podaj poleceń, aby zaktualizować elementów docelowych i rozpoznać zależności dla celów. Rozszerzenia w regule wnioskowania są zgodne z pojedynczym elementem docelowym i zależne, które mają taką samą nazwę podstawową. Zasady wnioskowania są zdefiniowane przez użytkownika lub wstępnie zdefiniowanej; można ponownie zdefiniować wstępnie zdefiniowanych reguł.  
-  
- Jeśli nieaktualne zależności nie ma żadnych poleceń, a [. SUFIKSY](../build/dot-directives.md) zawiera rozszerzenie zależnego, używa NMAKE reguły, których rozszerzenia są zgodne z elementem docelowym i istniejące plików w katalogu bieżącego lub został określony. Jeśli więcej niż jeden reguła istniejące pliki **. SUFIKSY** lista określa, który ma zostać użyty; priorytet listy descends od lewej do prawej. Jeśli plik zależny nie istnieje i nie jest wymieniony jako element docelowy w innym bloku opis, reguła wnioskowania można utworzyć brakujący zależnych z innego pliku o tej samej nazwie podstawowej. Docelowy blok opis nie ma zależności ani poleceń, reguła wnioskowania może zaktualizować element docelowy. Zasady wnioskowania można utworzyć docelowej wiersza polecenia, nawet jeśli nie bloku opis istnieje. NMAKE może wywoływać regułę wnioskowany zależne od nawet wtedy, gdy określono jawnej zależne od.  
-  
-## <a name="what-do-you-want-to-know-more-about"></a>Co chcesz dowiedzieć się więcej o?  
- [Definiowanie zasady](../build/defining-a-rule.md)  
-  
- [Zasady dotyczące trybu partii](../build/batch-mode-rules.md)  
-  
- [Wstępnie zdefiniowane zasady](../build/predefined-rules.md)  
-  
- [Zależności wywnioskowane oraz zasady](../build/inferred-dependents-and-rules.md)  
-  
- [Pierwszeństwo w zasadach wnioskowania](../build/precedence-in-inference-rules.md)  
-  
-## <a name="see-also"></a>Zobacz też  
- [NMAKE — dokumentacja](../build/nmake-reference.md)
+
+Zasady wnioskowania podać poleceń, aby zaktualizować obiektów docelowych i zależności dla celów wywnioskuj. Rozszerzenia w regule wnioskowania są zgodne z pojedynczy element docelowy i zależnych, które mają taką samą nazwę. Zasady wnioskowania są zdefiniowane przez użytkownika lub wstępnie zdefiniowanych; można ponownie zdefiniować wstępnie zdefiniowanych zasad.
+
+Jeśli nieaktualne zależność posiada żadnych poleceń i [. SUFIKSY](../build/dot-directives.md) zawiera rozszerzenie zależnego, używa NMAKE reguły, których rozszerzenia są zgodne z obiektu docelowego i istniejącego pliku w katalogu bieżącej lub określonej. Jeśli więcej niż jedna reguła pasuje do istniejących plików **. SUFIKSY** Określa listę, której mają zostać użyte; priorytet listy descends od lewej do prawej. Jeśli plik zależny nie istnieje, nie jest wymieniony jako element docelowy inny opis bloku reguły wnioskowania można utworzyć brakujący zależne z innego pliku o tej samej nazwie podstawowej. Jeśli blok opis elementu docelowego nie ma zależności lub polecenia, reguła wnioskowania można zaktualizować obiektu docelowego. Zasady wnioskowania można zbudować obiekt docelowy wiersza polecenia, nawet jeśli istnieje bez blokady opis. NMAKE może wywołać regułę dotyczącą wywnioskowane zależnych od ustawień lokalnych, nawet, jeśli określono jawne zależnych od ustawień lokalnych.
+
+## <a name="what-do-you-want-to-know-more-about"></a>Co chcesz dowiedzieć się więcej na temat?
+
+[Definiowanie zasady](../build/defining-a-rule.md)
+
+[Zasady dotyczące trybu partii](../build/batch-mode-rules.md)
+
+[Wstępnie zdefiniowane zasady](../build/predefined-rules.md)
+
+[Zależności wywnioskowane oraz zasady](../build/inferred-dependents-and-rules.md)
+
+[Pierwszeństwo w zasadach wnioskowania](../build/precedence-in-inference-rules.md)
+
+## <a name="see-also"></a>Zobacz też
+
+[NMAKE — dokumentacja](../build/nmake-reference.md)

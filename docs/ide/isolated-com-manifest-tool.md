@@ -17,34 +17,38 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 59b19a35a70b3bdadd935f06ff7d9ae1ce7d7d95
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 5439e04fdb2563748bc21fb494cc09fd7bd5c929
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43216383"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45720099"
 ---
 # <a name="isolated-com-manifest-tool-configuration-properties-ltprojectnamegt-property-pages-dialog-box"></a>COM izolowany, narzędzie manifestu, właściwości konfiguracji, &lt;Projectname&gt; okno dialogowe strony właściwości
 To okno dialogowe służy do określania **COM izolowany** opcje dla [Mt.exe](https://msdn.microsoft.com/library/aa375649).  
   
- Aby uzyskać dostęp do tego okna dialogowego strony właściwości, otwórz strony właściwości dla projektu lub arkuszu właściwości. Rozwiń **narzędziu manifestu** węźle **wspólne właściwości**, a następnie wybierz pozycję **COM izolowany**.  
+Aby uzyskać dostęp do tego okna dialogowego strony właściwości, otwórz strony właściwości dla projektu lub arkuszu właściwości. Rozwiń **narzędziu manifestu** węźle **wspólne właściwości**, a następnie wybierz pozycję **COM izolowany**.  
   
 ## <a name="task-list"></a>Lista zadań  
   
 -   [Instrukcje: kompilowanie izolowanych aplikacji korzystających ze składników COM](../build/how-to-build-isolated-applications-to-consume-com-components.md)  
   
 ## <a name="uielement-list"></a>Lista elementów UI  
- **Plik biblioteki typów**  
- Używa opcji/tlb, aby określić nazwę pliku biblioteki typów (pliku .tlb), narzędzie manifestu, zostanie użyta do wygenerowania pliku manifestu.  
+- **Plik biblioteki typów**
+
+   Używa opcji/tlb, aby określić nazwę pliku biblioteki typów (pliku .tlb), narzędzie manifestu, zostanie użyta do wygenerowania pliku manifestu.  
   
- **Plik skryptu rejestratora**  
- Opcja /rgs jest używana do określenia nazwy plik skryptu rejestratora (pliku .rgs), narzędzie manifestu, zostanie użyta do wygenerowania pliku manifestu.  
+- **Plik skryptu rejestratora**
+
+   Opcja /rgs jest używana do określenia nazwy plik skryptu rejestratora (pliku .rgs), narzędzie manifestu, zostanie użyta do wygenerowania pliku manifestu.  
   
- **Nazwa pliku składnika**  
- Opcja/dll jest używana do określenia nazwy zasobu, który zostanie wygenerowany przez narzędzie manifestu. Wprowadź wartość tej właściwości podczas wartości dla dowolnego **pliku biblioteki typów** lub **plik skryptu rejestratora** zostały określone.  
+- **Nazwa pliku składnika**
+
+   Opcja/dll jest używana do określenia nazwy zasobu, który zostanie wygenerowany przez narzędzie manifestu. Wprowadź wartość tej właściwości podczas wartości dla dowolnego **pliku biblioteki typów** lub **plik skryptu rejestratora** zostały określone.  
   
- **Plik zastępstw**  
- Używa opcji /replacements, aby określić pełną ścieżkę do pliku, który zawiera wartości dla wymienialnych ciągów w pliku .rgs.  
+- **Plik zastępstw**
+
+   Używa opcji /replacements, aby określić pełną ścieżkę do pliku, który zawiera wartości dla wymienialnych ciągów w pliku .rgs.  
   
 ## <a name="see-also"></a>Zobacz też  
  [Aplikacje izolowane](/windows/desktop/SbsCs/isolated-applications)   

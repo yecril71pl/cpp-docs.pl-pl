@@ -38,12 +38,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 946c82d4f558974d548a40af0b14e63f7ccebf4e
-ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
+ms.openlocfilehash: afabb17847f1c94ce7fae1db05e589f03a79506a
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43680583"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45721256"
 ---
 # <a name="cvslistbox-class"></a>Klasa CVSListBox
 `CVSListBox` Klasa obsługuje formant edytowalnej listy.  
@@ -124,14 +124,14 @@ virtual int AddItem(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *strIext*  
- Odwołanie do ciągu.  
+*strIext*<br/>
+[in] Odwołanie do ciągu.  
   
- [in] *dwData*  
- Specyficzne dla aplikacji 32-bitową wartość skojarzoną z ciągiem. Wartość domyślna to 0.  
+*dwData*<br/>
+[in] Specyficzne dla aplikacji 32-bitową wartość skojarzoną z ciągiem. Wartość domyślna to 0.  
   
- [in] *iIndex*  
- Liczony od zera indeks położenie, w którym będą przechowywane w ciągu. Jeśli *iIndex* parametr ma wartość -1, ciąg zostanie dodany na końcu listy. Wartość domyślna to -1.  
+*iIndex*<br/>
+[in] Liczony od zera indeks położenie, w którym będą przechowywane w ciągu. Jeśli *iIndex* parametr ma wartość -1, ciąg zostanie dodany na końcu listy. Wartość domyślna to -1.  
   
 ### <a name="return-value"></a>Wartość zwracana  
  Liczony od zera indeks pozycji w ciągu w kontrolce listy.  
@@ -158,8 +158,8 @@ virtual BOOL EditItem(int iIndex);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *iIndex*  
- Liczony od zera indeks elementu kontrolki listy.  
+*iIndex*<br/>
+[in] Liczony od zera indeks elementu kontrolki listy.  
   
 ### <a name="return-value"></a>Wartość zwracana  
  Wartość TRUE, jeśli operacja edytowania uruchamia się pomyślnie; w przeciwnym razie wartość FALSE.  
@@ -188,8 +188,8 @@ virtual DWORD_PTR GetItemData(int iIndex) const;
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *iIndex*  
- Liczony od zera indeks elementu formant edytowalnej listy.  
+*iIndex*<br/>
+[in] Liczony od zera indeks elementu formant edytowalnej listy.  
   
 ### <a name="return-value"></a>Wartość zwracana  
  32-bitową wartość, który jest skojarzony z określonym elementem.  
@@ -205,8 +205,8 @@ virtual CString GetItemText(int iIndex) const;
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] `iIndex`  
- Liczony od zera indeks elementu formant edytowalnej listy.  
+*iIndex*<br/>
+[in] Liczony od zera indeks elementu formant edytowalnej listy.  
   
 ### <a name="return-value"></a>Wartość zwracana  
  A [CString](../../atl-mfc-shared/reference/cstringt-class.md) obiekt, który zawiera tekst określony element.  
@@ -246,8 +246,8 @@ virtual BOOL RemoveItem(int iIndex);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *iIndex*  
- Liczony od zera indeks elementu formant edytowalnej listy.  
+*iIndex*<br/>
+[in] Liczony od zera indeks elementu formant edytowalnej listy.  
   
 ### <a name="return-value"></a>Wartość zwracana  
  Wartość TRUE, jeśli określony element został usunięty; w przeciwnym razie wartość FALSE.  
@@ -262,8 +262,8 @@ virtual BOOL SelectItem(int iItem);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *towaru*  
- Liczony od zera indeks elementu formant edytowalnej listy.  
+*Towaru*<br/>
+[in] Liczony od zera indeks elementu formant edytowalnej listy.  
   
 ### <a name="return-value"></a>Wartość zwracana  
  Wartość TRUE, jeśli ta metoda jest kończy się pomyślnie; w przeciwnym razie wartość FALSE.  
@@ -281,11 +281,11 @@ virtual void SetItemData(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *iIndex*  
- Liczony od zera indeks elementu formant edytowalnej listy.  
+*iIndex*<br/>
+[in] Liczony od zera indeks elementu formant edytowalnej listy.  
   
- [in] *dwData*  
- 32-bitową wartość. Ta wartość może być liczbą całkowitą określonych aplikacji lub wskaźnik do innych danych.  
+*dwData*<br/>
+[in] 32-bitową wartość. Ta wartość może być liczbą całkowitą określonych aplikacji lub wskaźnik do innych danych.  
   
 ### <a name="remarks"></a>Uwagi  
   

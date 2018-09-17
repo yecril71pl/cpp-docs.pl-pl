@@ -20,29 +20,31 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: dec06c3d6a8a981a059f173700e716431acc53a7
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 72c494745fa33c8feeb4955f4542e9db5ed22307
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32374092"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45718394"
 ---
 # <a name="pdbaltpath-use-alternate-pdb-path"></a>/PDBALTPATH (Użyj alternatywnej ścieżki PDB)
-```  
-/PDBALTPATH:pdb_file_name  
-```  
-  
-## <a name="remarks"></a>Uwagi  
- gdzie:  
-  
- *pdb_file_name*  
- Nazwa i ścieżka pliku dla pliku PDB.  
-  
-## <a name="remarks"></a>Uwagi  
- Użyj tej opcji, aby dostarczyć alternatywną lokalizację pliku bazy danych programu (PDB) w skompilowanym plikiem binarnym. Zwykle konsolidator rejestruje lokalizację pliku PDB w generuje pliki binarne. Ta opcja umożliwia Podaj inną ścieżkę i nazwę pliku dla pliku PDB. Z informacji podanych z /PDBALTPATH nie zmienia się lokalizacja lub nazwa pliku PDB rzeczywiste; Zmienia informacje, które konsolidator zapisuje w pliku binarnym. Dzięki temu można wprowadzić ścieżkę, która jest niezależna od struktury plików komputerze kompilacji. Podaj ścieżkę sieciową lub plik, który nie ma ścieżki informacji są dwie typowe zastosowania tej opcji.  
-  
- Wartość *pdb_file_name* może być dowolny ciąg, wartość zmiennej środowiskowej lub **_PDB %**. Konsolidator rozwinie zmiennej środowiskowej, takich jak **katalogu % SystemRoot %**, jego wartość. Zmienne środowiskowe definiuje konsolidator **_PDB %** i **_EXT %**. **_PDB %** rozszerza na nazwę pliku bez żadnych danych ścieżki pliku .pdb rzeczywiste i **_EXT %** jest rozszerzeniem wygenerowanego pliku wykonywalnego.  
-  
-## <a name="see-also"></a>Zobacz też  
- [Opcje DUMPBIN](../../build/reference/dumpbin-options.md)   
- [/PDBPATH](../../build/reference/pdbpath.md)
+
+```
+/PDBALTPATH:pdb_file_name
+```
+
+## <a name="arguments"></a>Argumenty
+
+*pdb_file_name*<br/>
+Ścieżka i nazwa pliku dla pliku PDB.
+
+## <a name="remarks"></a>Uwagi
+
+Użyj tej opcji, aby zapewnić alternatywną lokalizację pliku bazy danych programu (.pdb) w skompilowanym plikiem binarnym. Normalnie konsolidator rejestruje lokalizację pliku .pdb w pliki binarne, które tworzy. Ta opcja umożliwia Podaj inną ścieżkę i nazwę pliku dla pliku PDB. Informacjami o /PDBALTPATH nie zmienia lokalizację lub nazwę pliku .pdb rzeczywiste; Zmienia informacje, które konsolidator zapisuje w pliku binarnym. Dzięki temu można podać ścieżkę, która jest niezależna od struktury plików komputera kompilacji. Dwie typowe zastosowania tej opcji są Podaj ścieżkę sieciową lub pliku, który zawiera informacje o ścieżce.
+
+Wartość *pdb_file_name* może być dowolny ciąg, zmienną środowiskową lub **_PDB %**. Konsolidator rozwinie zmiennej środowiskowej, takich jak **% SystemRoot %**, jego wartość. Konsolidator definiuje zmiennych środowiskowych **_PDB %** i **_EXT %**. **_PDB %** rozszerza się na nazwę pliku w pliku .pdb rzeczywista, bez żadnych informacji o ścieżce i **_EXT %** jest rozszerzeniem wygenerowany plik wykonywalny.
+
+## <a name="see-also"></a>Zobacz też
+
+[Opcje DUMPBIN](../../build/reference/dumpbin-options.md)<br/>
+[/PDBPATH](../../build/reference/pdbpath.md)

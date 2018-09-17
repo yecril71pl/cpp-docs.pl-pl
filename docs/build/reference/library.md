@@ -16,26 +16,29 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0d2fb7e69b0557bf96601666c390b3d59412b5a0
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 43b14e8e8ff4871ba4319c7f4fac5545e72e710b
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32371167"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45723557"
 ---
 # <a name="library"></a>BIBLIOTEKA
-Informuje KONSOLIDACJĘ, aby utworzyć biblioteki DLL. W tym samym czasie łącze tworzy biblioteki importowanej, chyba że używana jest plik EXP w kompilacji.  
-  
-```  
-LIBRARY [library][BASE=address]  
-```  
-  
-## <a name="remarks"></a>Uwagi  
- *Biblioteki* argument określa nazwę pliku dll. Można również użyć [/OUT](../../build/reference/out-output-file-name.md) — opcja konsolidatora do określenia nazwy wyjściowego pliku DLL.  
-  
- PODSTAWOWYM =*adres* argument ustawia adres podstawowy, używaną do załadowania biblioteki DLL systemu operacyjnego. Ten argument zastępuje domyślną lokalizację biblioteki DLL 0x10000000. Zobacz opis [/BASE](../../build/reference/base-base-address.md) opcji szczegółowe informacje o adres podstawowy.  
-  
- Pamiętaj, aby użyć [/dll](../../build/reference/dll-build-a-dll.md) podczas tworzenia biblioteki DLL — opcja konsolidatora.  
-  
-## <a name="see-also"></a>Zobacz też  
- [Zasady dla instrukcji definicji modułu](../../build/reference/rules-for-module-definition-statements.md)
+
+/ ORDER informuje KONSOLIDACJĘ, aby utworzyć biblioteki DLL. W tym samym czasie LINK tworzy bibliotekę importu, chyba że używany jest plik .exp w kompilacji.
+
+```
+LIBRARY [library][BASE=address]
+```
+
+## <a name="remarks"></a>Uwagi
+
+*Biblioteki* argument określa nazwę biblioteki DLL. Można również użyć [/OUT](../../build/reference/out-output-file-name.md) opcję konsolidatora, aby określić nazwę wyjściowego pliku DLL.
+
+Podstawa =*adres* argument ustawia adres podstawowy, który korzysta z systemu operacyjnego można załadować biblioteki DLL. Argument ten zastępuje domyślną lokalizację biblioteki DLL 0x10000000. Zobacz opis [/BASE](../../build/reference/base-base-address.md) opcji szczegółowe informacje na temat adres podstawowy.
+
+Pamiętaj, aby używać [/dll](../../build/reference/dll-build-a-dll.md) podczas kompilowania biblioteki DLL — opcja konsolidatora.
+
+## <a name="see-also"></a>Zobacz też
+
+[Zasady dla instrukcji definicji modułu](../../build/reference/rules-for-module-definition-statements.md)

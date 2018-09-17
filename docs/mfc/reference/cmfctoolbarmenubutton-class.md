@@ -102,12 +102,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 07b582c8b785adb13acce86497d898c183b3128b
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: d5baebfa1d706bf18b9fc36d706ebe474b6b042d
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43765934"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45721724"
 ---
 # <a name="cmfctoolbarmenubutton-class"></a>Klasa CMFCToolBarMenuButton
 Przycisk paska narzędzi, który zawiera menu rozwijane.  
@@ -220,23 +220,23 @@ CMFCToolBarMenuButton(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *src*  
- Istniejące `CMFCToolBarMenuButton` obiektu do skopiowania do tego `CMFCToolBarMenuButton` obiektu.  
+*src*<br/>
+[in] Istniejące `CMFCToolBarMenuButton` obiektu do skopiowania do tego `CMFCToolBarMenuButton` obiektu.  
   
- [in] *uiID*  
- Identyfikator polecenia do wykonania, gdy użytkownik kliknie przycisk; lub (UINT) -1 dla przycisku menu, który bezpośrednio nie wykonać polecenie.  
+*uiID*<br/>
+[in] Identyfikator polecenia do wykonania, gdy użytkownik kliknie przycisk; lub (UINT) -1 dla przycisku menu, który bezpośrednio nie wykonać polecenie.  
   
- [in] *hMenu*  
- Dojście do menu. lub wartość NULL, jeśli ten przycisk nie ma menu.  
+*hMenu*<br/>
+[in] Dojście do menu. lub wartość NULL, jeśli ten przycisk nie ma menu.  
   
- [in] *iImage*  
- Indeks obrazu dla przycisku; lub -1, jeśli ten przycisk nie ma ikony lub używa ikonę polecenie określone przez *uiID*. Indeks jest taka sama dla każdego `CMFCToolBarImages` obiektu w aplikacji.  
+*iImage*<br/>
+[in] Indeks obrazu dla przycisku; lub -1, jeśli ten przycisk nie ma ikony lub używa ikonę polecenie określone przez *uiID*. Indeks jest taka sama dla każdego `CMFCToolBarImages` obiektu w aplikacji.  
   
- [in] *lpszText*  
- Tekst przycisku menu paska narzędzi.  
+*lpszText*<br/>
+[in] Tekst przycisku menu paska narzędzi.  
   
- [in] *bUserButton*  
- Wartość TRUE, jeśli przycisk powoduje wyświetlenie obrazu zdefiniowanych przez użytkownika. Wartość FALSE, jeśli przycisk powoduje wyświetlenie obrazu wstępnie zdefiniowane, skojarzone z polecenie określone przez *uiID*.  
+*bUserButton*<br/>
+[in] Wartość TRUE, jeśli przycisk powoduje wyświetlenie obrazu zdefiniowanych przez użytkownika. Wartość FALSE, jeśli przycisk powoduje wyświetlenie obrazu wstępnie zdefiniowane, skojarzone z polecenie określone przez *uiID*.  
   
 ### <a name="remarks"></a>Uwagi  
  Jeśli *uiID* jest prawidłowy identyfikator komunikatu, przycisk wykonuje polecenie, po kliknięciu przez użytkownika. Jeśli *hMenu* jest uchwytem prawidłowe menu przycisku zawiera menu rozwijane, pojawiają się w pasku narzędzi lub podmenu pojawiają się w menu. Jeśli oba *uiID* i *hMenu* są prawidłowe, przycisk to przycisk podziału z części, w której zostanie wykonane polecenie, gdy użytkownik kliknie na nim i część z strzałkę w dół, która będzie rozwijanego menu po użytkownik Kliknięcie na nim. Jednak jeśli *hMenu* jest prawidłowy, użytkownik nie będzie można kliknąć przycisk próbę wykonania polecenia, gdy przycisk jest wstawiany do menu.  
@@ -280,8 +280,8 @@ virtual void CreateFromMenu(HMENU hMenu);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *hMenu*  
- Dojście do menu.  
+*hMenu*<br/>
+[in] Dojście do menu.  
   
 ### <a name="remarks"></a>Uwagi  
  Przycisk menu paska narzędzi można wyświetlić podmenu listy rozwijanej.  
@@ -327,14 +327,14 @@ void DrawDocumentIcon(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *podstawowego kontrolera domeny*  
- Wskaźnik do kontekstu urządzenia.  
+*podstawowego kontrolera domeny*<br/>
+[in] Wskaźnik do kontekstu urządzenia.  
   
- [in] *rectImage*  
- Współrzędne obraz prostokąt ograniczający.  
+*rectImage*<br/>
+[in] Współrzędne obraz prostokąt ograniczający.  
   
- [in] *hIcon*  
- Dojście do ikony.  
+*hIcon*<br/>
+[in] Dojście do ikony.  
   
 ### <a name="remarks"></a>Uwagi  
  Ta metoda przyjmuje ikony dokumentu i rysuje go przycisku menu, wyśrodkowane w obszarze określony przez *rectImage*.  
@@ -424,8 +424,8 @@ void GetImageRect(CRect& rectImage);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [out] *rectImage*  
- Odwołanie do `CRect` obiekt, który odbiera współrzędne obraz prostokąt ograniczający.  
+*rectImage*<br/>
+[out] Odwołanie do `CRect` obiekt, który odbiera współrzędne obraz prostokąt ograniczający.  
   
 ##  <a name="getpaletterows"></a>  CMFCToolBarMenuButton::GetPaletteRows  
  Zwraca liczbę wierszy w menu rozwijanym, gdy jest w trybie palety.  
@@ -560,8 +560,8 @@ virtual SIZE OnCalculateSize(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *podstawowego kontrolera domeny*  
- [in] *sizeDefault*  
+*podstawowego kontrolera domeny*<br/>
+[in] [in] *sizeDefault*  
  [in] *bHorz*  
   
 ### <a name="return-value"></a>Wartość zwracana  
@@ -599,8 +599,8 @@ virtual BOOL OnClick(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *pWnd*  
- [in] *bDelay*  
+*pWnd*<br/>
+[in] [in] *bDelay*  
   
 ### <a name="return-value"></a>Wartość zwracana  
   
@@ -651,14 +651,14 @@ virtual void OnDraw(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *podstawowego kontrolera domeny*  
- [in] *rect*  
- [in] *pImages*  
- [in] *bHorz*  
- [in] *bCustomizeMode*  
- [in] *bHighlight*  
- [in] *bDrawBorder*  
- [in] *bGrayDisabledButtons*  
+*podstawowego kontrolera domeny*<br/>
+[in] [in] *rect*  
+*pImages*<br/>
+[in] [in] *bHorz*  
+*bCustomizeMode*<br/>
+[in] [in] *bHighlight*  
+*bDrawBorder*<br/>
+[in] [in] *bGrayDisabledButtons*  
   
 ### <a name="remarks"></a>Uwagi  
   
@@ -673,8 +673,8 @@ virtual int OnDrawOnCustomizeList(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *podstawowego kontrolera domeny*  
- [in] *rect*  
+*podstawowego kontrolera domeny*<br/>
+[in] [in] *rect*  
  [in] *bSelected*  
   
 ### <a name="return-value"></a>Wartość zwracana  
@@ -689,8 +689,8 @@ virtual BOOL OpenPopupMenu(CWnd* pWnd=NULL);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *pWnd*  
- Określa okno, które otrzyma poleceń menu rozwijanego. Może być NULL tylko wtedy, gdy przycisk menu na pasku narzędzi okna nadrzędnego.  
+*pWnd*<br/>
+[in] Określa okno, które otrzyma poleceń menu rozwijanego. Może być NULL tylko wtedy, gdy przycisk menu na pasku narzędzi okna nadrzędnego.  
   
 ### <a name="return-value"></a>Wartość zwracana  
  Wartość TRUE, gdy [klasa CMFCPopupMenu](../../mfc/reference/cmfcpopupmenu-class.md) obiekt został utworzony i otwarty pomyślnie; w przeciwnym razie wartość FALSE.  
@@ -759,8 +759,8 @@ void SetMenuOnly(BOOL bMenuOnly);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *bMenuOnly*  
- Wartość TRUE, aby wyświetlić ten przycisk jako przycisk menu, gdy ma ona zarówno identyfikator prawidłowe polecenie, jak i podmenu, wartość FALSE do wyświetlania tego przycisku jako przycisku podziału, gdy ma ona zarówno identyfikator prawidłowe polecenie, jak i podmenu.  
+*bMenuOnly*<br/>
+[in] Wartość TRUE, aby wyświetlić ten przycisk jako przycisk menu, gdy ma ona zarówno identyfikator prawidłowe polecenie, jak i podmenu, wartość FALSE do wyświetlania tego przycisku jako przycisku podziału, gdy ma ona zarówno identyfikator prawidłowe polecenie, jak i podmenu.  
   
 ### <a name="remarks"></a>Uwagi  
  Zazwyczaj gdy przycisk menu narzędzi znajdują się zarówno w podmenu, jak i identyfikator polecenia, menu wydaje się być przycisku podziału, która ma przycisk główny i dołączonych przycisk strzałki w dół. Jeśli chcesz wywołać tę metodę i *bMenuOnly* ma wartość PRAWDA, przycisk zamiast wydaje się być przycisk menu w jednym z strzałkę w dół na przycisku. Po kliknięciu strzałki w trybie spowoduje otwarcie podmenu, a po kliknięciu części innego niż strzałkę przycisku w trybie struktura wykonuje polecenie.  
@@ -775,11 +775,11 @@ void SetMenuPaletteMode(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *bMenuPaletteMode*  
- Określa, czy menu rozwijane jest w trybie palety.  
+*bMenuPaletteMode*<br/>
+[in] Określa, czy menu rozwijane jest w trybie palety.  
   
- [in] *nPaletteRows*  
- Liczba wierszy w palecie.  
+*nPaletteRows*<br/>
+[in] Liczba wierszy w palecie.  
   
 ### <a name="remarks"></a>Uwagi  
  W trybie palety wszystkie elementy menu są wyświetlane jako wielokolumnowe palety. Należy określić liczbę wierszy za pomocą *nPaletteRows*.  
@@ -816,8 +816,8 @@ virtual void SetTearOff(UINT uiBarID);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *uiBarID*  
- Określa nowe odrywania pasku identyfikatora.  
+*uiBarID*<br/>
+[in] Określa nowe odrywania pasku identyfikatora.  
   
 ### <a name="remarks"></a>Uwagi  
  Wywołaj tę metodę, aby określić identyfikator dla paskiem oderwania, który jest tworzony, gdy użytkownik przeciągnie przycisk menu zniżki w stosunku do paska menu. Jeśli *uiBarID* parametr ma wartość 0, użytkownik nie wydzielić przycisku menu.  

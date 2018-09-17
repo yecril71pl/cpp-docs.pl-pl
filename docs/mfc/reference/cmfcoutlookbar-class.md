@@ -48,12 +48,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0b9de076f4682bd3649f62940a0dd492eb801e28
-ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
+ms.openlocfilehash: 9ed3a07b7994d2c7adc7a5d708d31abe9c49437f
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/05/2018
-ms.locfileid: "37850186"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45717109"
 ---
 # <a name="cmfcoutlookbar-class"></a>Klasa CMFCOutlookBar
 Okienka z zakładkami z wygląd **okienka nawigacji** w programie Microsoft Outlook 2000 lub Outlook 2003. `CMFCOutlookBar` Obiekt zawiera [klasa CMFCOutlookBarTabCtrl](../../mfc/reference/cmfcoutlookbartabctrl-class.md) obiektu i szereg kart. Karty mogą być [klasa CMFCOutlookBarPane](../../mfc/reference/cmfcoutlookbarpane-class.md) obiektów lub `CWnd`-obiektami wywodzącymi. Użytkownikowi jako seria przycisków i obszar wyświetlacza zostanie wyświetlony pasek programu Outlook. Gdy użytkownik kliknie przycisk, wyświetlany jest odpowiedni formant lub okienko przycisku.  
@@ -210,8 +210,8 @@ virtual BOOL CanAcceptPane(const CBasePane* pBar) const;
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *pBar*  
- Wskaźnik do innego okienka, który jest jest zadokowany do to okienko.  
+*pBar*<br/>
+[in] Wskaźnik do innego okienka, który jest jest zadokowany do to okienko.  
   
 ### <a name="return-value"></a>Wartość zwracana  
  Wartość TRUE, jeśli w kolejnym okienku może być zadokowane, aby okienko paska Outlook; w przeciwnym razie wartość FALSE.  
@@ -253,26 +253,26 @@ virtual BOOL Create(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *lpszCaption*  
- Określa tytuł okna.  
+*lpszCaption*<br/>
+[in] Określa tytuł okna.  
   
- [in] *pParentWnd*  
- Określa wskaźnik do okna nadrzędnego. Nie może być równa NULL.  
+*pParentWnd*<br/>
+[in] Określa wskaźnik do okna nadrzędnego. Nie może być równa NULL.  
   
- [in] *rect*  
- Określa program outlook paska rozmiar i położenie w pikselach.  
+*Rect*<br/>
+[in] Określa program outlook paska rozmiar i położenie w pikselach.  
   
- [in] *nID*  
- Określa identyfikator kontrolki. Musi się różnić od innego formantu identyfikatory używane w aplikacji.  
+*nID*<br/>
+[in] Określa identyfikator kontrolki. Musi się różnić od innego formantu identyfikatory używane w aplikacji.  
   
- [in] *dwStyle*  
- Określa styl paska sterowania żądaną. Możliwe wartości, zobacz [Style okna ramowego](../../mfc/reference/styles-used-by-mfc.md#window-styles).  
+*dwStyle*<br/>
+[in] Określa styl paska sterowania żądaną. Możliwe wartości, zobacz [Style okna ramowego](../../mfc/reference/styles-used-by-mfc.md#window-styles).  
   
- [in] *dwControlBarStyle*  
- Określa specjalne style zdefiniowane przez bibliotekę.  
+*dwControlBarStyle*<br/>
+[in] Określa specjalne style zdefiniowane przez bibliotekę.  
   
- [in] *pContext*  
- Utwórz kontekst.  
+*pContext*<br/>
+[in] Utwórz kontekst.  
   
 ### <a name="return-value"></a>Wartość zwracana  
  Wartość różną od zera, jeśli metoda się powiedzie; w przeciwnym razie 0.  
@@ -300,17 +300,17 @@ CMFCOutlookBarPane* CreateCustomPage(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *lpszPageName*  
- Etykieta strony.  
+*lpszPageName*<br/>
+[in] Etykieta strony.  
   
- [in] *bActivatePage*  
- W przypadku opcji TRUE stronie staje się aktywny przy jej tworzeniu.  
+*bActivatePage*<br/>
+[in] W przypadku opcji TRUE stronie staje się aktywny przy jej tworzeniu.  
   
- [in] *dwEnabledDocking*  
- Kombinacja flag CBRS_ALIGN_ określa włączone strony dokowania, gdy strona jest odłączona.  
+*dwEnabledDocking*<br/>
+[in] Kombinacja flag CBRS_ALIGN_ określa włączone strony dokowania, gdy strona jest odłączona.  
   
- [in] *bEnableTextLabels*  
- W przypadku opcji TRUE etykiety tekstowe są włączone dla przycisków, które znajdują się na stronie.  
+*bEnableTextLabels*<br/>
+[in] W przypadku opcji TRUE etykiety tekstowe są włączone dla przycisków, które znajdują się na stronie.  
   
 ### <a name="return-value"></a>Wartość zwracana  
  Wskaźnik do nowo utworzonej stronie, lub wartość NULL, jeśli nie można utworzyć.  
@@ -350,17 +350,17 @@ virtual BOOL FloatTab(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *pBar*  
- Wskaźnik do okienka na typ zmiennoprzecinkowy.  
+*pBar*<br/>
+[in] Wskaźnik do okienka na typ zmiennoprzecinkowy.  
   
- [in] *nTabID*  
- Liczony od zera indeks karty na typ zmiennoprzecinkowy.  
+*nTabID*<br/>
+[in] Liczony od zera indeks karty na typ zmiennoprzecinkowy.  
   
- [in] *dockMethod*  
- Określa metodę używaną do dokowanie panelu.  Aby uzyskać więcej informacji, zobacz [CBaseTabbedPane::FloatTab](../../mfc/reference/cbasetabbedpane-class.md#floattab).  
+*dockMethod*<br/>
+[in] Określa metodę używaną do dokowanie panelu.  Aby uzyskać więcej informacji, zobacz [CBaseTabbedPane::FloatTab](../../mfc/reference/cbasetabbedpane-class.md#floattab).  
   
- [in] *bHide*  
- Wartość TRUE, aby ukryć okienko przed liczb zmiennoprzecinkowych; w przeciwnym razie wartość FALSE. W odróżnieniu od klasy bazowej wersję tej metody ten parametr nie ma wartości domyślnej.  
+*bHide*<br/>
+[in] Wartość TRUE, aby ukryć okienko przed liczb zmiennoprzecinkowych; w przeciwnym razie wartość FALSE. W odróżnieniu od klasy bazowej wersję tej metody ten parametr nie ma wartości domyślnej.  
   
 ### <a name="return-value"></a>Wartość zwracana  
  Wartość TRUE, jeśli zawartość okienka przestawione; w przeciwnym razie wartość FALSE.  
@@ -391,11 +391,11 @@ virtual void GetTabArea(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [out] *rectTabAreaTop*  
- Zawiera rozmiar i położenie (we współrzędnych klienta) obszaru górnej karty, jeśli funkcja zwraca.  
+*rectTabAreaTop*<br/>
+[out] Zawiera rozmiar i położenie (we współrzędnych klienta) obszaru górnej karty, jeśli funkcja zwraca.  
   
- [out] *rectTabAreaBottom*  
- Zawiera rozmiar i położenie (we współrzędnych klienta) wartości obszar karty w dół, gdy funkcja zwraca.  
+*rectTabAreaBottom*<br/>
+[out] Zawiera rozmiar i położenie (we współrzędnych klienta) wartości obszar karty w dół, gdy funkcja zwraca.  
   
 ### <a name="remarks"></a>Uwagi  
  Struktura wywołuje tę metodę, aby określić rodzaj Dokowanie do okienka docelowego. Gdy struktura okaże się, że użytkownik przeciągnie okienko aby być zadokowane, za pośrednictwem obszaru karty w okienku docelowego, próbuje dodać pierwszego okienka jako na nowej karcie w okienku docelowego. W przeciwnym razie próbuje zadokować pierwszego okienka boku odpowiednie okienko docelowego. Szablon tworzy nowy kontener za pomocą suwaka, aby uwzględnić dodatkowe zadokowanego okienka.  
@@ -425,8 +425,8 @@ virtual void OnAfterAnimation(int nPage);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *nPage*  
- Liczony od zera indeks strony karty, który ma zostać aktywowane.  
+*nPage*<br/>
+[in] Liczony od zera indeks strony karty, który ma zostać aktywowane.  
   
 ### <a name="remarks"></a>Uwagi  
  Efekt wizualny ustawienia aktywnej karcie zależy od tego, czy włączono animacji. Aby uzyskać więcej informacji, zobacz [CMFCOutlookBarTabCtrl::EnableAnimation](../../mfc/reference/cmfcoutlookbartabctrl-class.md#enableanimation).  
@@ -439,8 +439,8 @@ virtual BOOL OnBeforeAnimation(int nPage);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *nPage*  
- Liczony od zera indeks strony karty, który ma aktywne.  
+*nPage*<br/>
+[in] Liczony od zera indeks strony karty, który ma aktywne.  
   
 ### <a name="return-value"></a>Wartość zwracana  
  Zwraca wartość TRUE, jeśli animacje powinny być używane w nowej karcie aktywne ustawienia, lub FAŁSZ, jeśli animacja powinna być wyłączona.  
@@ -455,8 +455,8 @@ virtual void OnScroll(BOOL bDown);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *bDown*  
- Wartość TRUE, jeśli pasek programu Outlook jest przewinięcie w dół, lub FAŁSZ, jeśli jest przewijanie w górę.  
+*bDown*<br/>
+[in] Wartość TRUE, jeśli pasek programu Outlook jest przewinięcie w dół, lub FAŁSZ, jeśli jest przewijanie w górę.  
   
 ### <a name="remarks"></a>Uwagi  
   
@@ -470,11 +470,11 @@ BOOL RemoveCustomPage(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *klasy uipage o identyfikatorze*  
- Liczony od zera indeks strony w oknie nadrzędnym programu Outlook.  
+*klasy uipage o identyfikatorze*<br/>
+[in] Liczony od zera indeks strony w oknie nadrzędnym programu Outlook.  
   
- [in] *pTargetWnd*  
- Pointerto okno nadrzędne programu Outlook.  
+*pTargetWnd*<br/>
+[in] Pointerto okno nadrzędne programu Outlook.  
   
 ### <a name="return-value"></a>Wartość zwracana  
  Wartość różną od zera, jeśli niestandardowy strona została usunięta pomyślnie; w przeciwnym razie 0.  
@@ -496,11 +496,11 @@ void SetButtonsFont(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *pFont*  
- Określa czcionkę nowe.  
+*pFont*<br/>
+[in] Określa czcionkę nowe.  
   
- [in] *bRedraw*  
- W przypadku opcji TRUE pasek programu Outlook zostanie narysowany ponownie.  
+*bRedraw*<br/>
+[in] W przypadku opcji TRUE pasek programu Outlook zostanie narysowany ponownie.  
   
 ### <a name="remarks"></a>Uwagi  
  Ta metoda umożliwia ustawianie czcionki dla tekstu wyświetlanego na przyciskach strony karty programu outlook.  
@@ -513,8 +513,8 @@ void SetMode2003(BOOL bMode2003=TRUE);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *bMode2003*  
- W przypadku opcji TRUE jest włączony tryb Office 2003.  
+*bMode2003*<br/>
+[in] W przypadku opcji TRUE jest włączony tryb Office 2003.  
   
 ### <a name="remarks"></a>Uwagi  
  Aby włączyć lub wyłączyć tryb Office 2003, należy użyć tej funkcji. W tym trybie paska Outlook zawiera dodatkowych narzędzi, za pomocą przycisku dostosowywania. Zachowanie paska Outlook jest zgodny z zachowaniem paska Outlook, Microsoft Office 2003.  

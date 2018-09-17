@@ -42,12 +42,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 55ef22eec84b4d7e5e4ea27abe611cf2d18f2a1b
-ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
+ms.openlocfilehash: 889a6f083cb4aace6e93d221a33caef29155d7f1
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "42465345"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45725015"
 ---
 # <a name="cmfcribbonstatusbarpane-class"></a>Klasa CMFCRibbonStatusBarPane
 `CMFCRibbonStatusBarPane` Klasa implementuje element wstążki, który można dodać do paska stanu wstążki.  
@@ -136,32 +136,32 @@ CMFCRibbonStatusBarPane(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *nCmdID*  
- Określa identyfikator polecenia okienka.  
+*nCmdID*<br/>
+[in] Określa identyfikator polecenia okienka.  
   
- [in] *lpszText*  
- Określa ciąg tekstowy, który będzie wyświetlany w okienku.  
+*lpszText*<br/>
+[in] Określa ciąg tekstowy, który będzie wyświetlany w okienku.  
   
- [in] *bIsStatic*  
- W przypadku opcji TRUE w okienku stanu nie wyróżnione lub wybrane, klikając go.  
+*bIsStatic*<br/>
+[in] W przypadku opcji TRUE w okienku stanu nie wyróżnione lub wybrane, klikając go.  
   
- [in] *hIcon*  
- Określa dojścia do ikony, który będzie wyświetlany w okienku.  
+*hIcon*<br/>
+[in] Określa dojścia do ikony, który będzie wyświetlany w okienku.  
   
- [in] *lpszAlmostLargeText*  
- Określa najdłuższy ciąg tekstowy, który można wyświetlić w okienku.  
+*lpszAlmostLargeText*<br/>
+[in] Określa najdłuższy ciąg tekstowy, który można wyświetlić w okienku.  
   
- [in] *hBmpAnimationList*  
- Określa dojścia do listy obrazów, który jest używany podczas tworzenia animacji.  
+*hBmpAnimationList*<br/>
+[in] Określa dojścia do listy obrazów, który jest używany podczas tworzenia animacji.  
   
- [in] *cxAnimation*  
- Określa szerokość w pikselach, ikony na liście obrazu, który jest używany podczas tworzenia animacji.  
+*cxAnimation*<br/>
+[in] Określa szerokość w pikselach, ikony na liście obrazu, który jest używany podczas tworzenia animacji.  
   
- [in] *clrTrnsp*  
- Określa przezroczysty kolor obrazów z listy obrazów, które są używane podczas tworzenia animacji.  
+*clrTrnsp*<br/>
+[in] Określa przezroczysty kolor obrazów z listy obrazów, które są używane podczas tworzenia animacji.  
   
- [in] *uiAnimationListResID*  
- Określa identyfikator zasobu, listy obrazów, który jest używany podczas tworzenia animacji.  
+*uiAnimationListResID*<br/>
+[in] Określa identyfikator zasobu, listy obrazów, który jest używany podczas tworzenia animacji.  
   
 ##  <a name="getalmostlargetext"></a>  CMFCRibbonStatusBarPane::GetAlmostLargeText  
  Pobiera najdłuższy ciąg tekstowy, który można wyświetlić w okienku paska stanu.  
@@ -253,8 +253,8 @@ void SetAlmostLargeText(LPCTSTR lpszAlmostLargeText);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *lpszAlmostLargeText*  
- Określa najdłuższy parametry, z których mogą być wyświetlane w okienku paska stanu bez obcinania.  
+*lpszAlmostLargeText*<br/>
+[in] Określa najdłuższy parametry, z których mogą być wyświetlane w okienku paska stanu bez obcinania.  
   
 ### <a name="remarks"></a>Uwagi  
  Biblioteka oblicza rozmiar tekstu, *lpszAlmostLargeText* określa i w związku z tym zmienia rozmiar okienka. Jeśli nadal nie mieszczą się w okienku, tekst zostanie obcięta.  
@@ -275,17 +275,17 @@ BOOL SetAnimationList(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *hBmpAnimationList*  
- Określa dojścia do listy obrazów.  
+*hBmpAnimationList*<br/>
+[in] Określa dojścia do listy obrazów.  
   
- [in] *cxAnimation*  
- Określa szerokość w pikselach, ramkę z listy obrazów.  
+*cxAnimation*<br/>
+[in] Określa szerokość w pikselach, ramkę z listy obrazów.  
   
- [in] *clrTransp*  
- Określa przezroczysty kolor listy obrazów.  
+*clrTransp*<br/>
+[in] Określa przezroczysty kolor listy obrazów.  
   
- [in] *uiAnimationListResID*  
- Określa identyfikator zasobu listy obrazów.  
+*uiAnimationListResID*<br/>
+[in] Określa identyfikator zasobu listy obrazów.  
   
 ### <a name="return-value"></a>Wartość zwracana  
  Wartość TRUE, jeśli dołączone do okienka paska stanu; listy obrazów Wartość FALSE w przeciwnym razie.  
@@ -298,8 +298,8 @@ void SetTextAlign(int nAlign);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *nAlign*  
- Określa wyrównanie tekstu.  
+*nAlign*<br/>
+[in] Określa wyrównanie tekstu.  
   
 ### <a name="remarks"></a>Uwagi  
  *nAlign* może mieć jedną z następujących wartości:  
@@ -320,11 +320,11 @@ void StartAnimation(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *nFrameDelay*  
- Określa szybkość odtwarzania animacji, w milisekundach.  
+*nFrameDelay*<br/>
+[in] Określa szybkość odtwarzania animacji, w milisekundach.  
   
- [in] *nDuration*  
- Określa, jak długo można odtwarzać animację, w milisekundach. Użyj wartości -1 dla wejścia w nieskończoną pętlę.  
+*nDuration*<br/>
+[in] Określa, jak długo można odtwarzać animację, w milisekundach. Użyj wartości -1 dla wejścia w nieskończoną pętlę.  
   
 ### <a name="remarks"></a>Uwagi  
  Należy określić dojście do listy obrazów przed wywołaniem `StartAnimation` przy użyciu `SetAnimationList`.  

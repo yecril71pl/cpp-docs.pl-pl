@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5052aaadc673e38a844ea5b0d1e11ff3a96f3fbe
-ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
+ms.openlocfilehash: 8d873d29d5ac6de1073c1ba3f3065dd015cde1f5
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33691758"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45720450"
 ---
 # <a name="ompschedule"></a>OMP_SCHEDULE
 Modyfikuje zachowanie [harmonogram](../../../parallel/openmp/reference/schedule.md) klauzuli podczas `schedule(runtime)` została określona w `for` lub `parallel for` dyrektywy.  
@@ -32,11 +32,10 @@ Modyfikuje zachowanie [harmonogram](../../../parallel/openmp/reference/schedule.
 set OMP_SCHEDULE[=type[,size]]  
 ```  
   
-## <a name="remarks"></a>Uwagi  
- w przypadku gdy  
-  
- `size` (opcjonalnie)  
- Określa rozmiar iteracji. `size` Musi być dodatnią liczbą całkowitą. Wartość domyślna to 1, chyba że `type` jest statyczna. Jeśli `type` jest `runtime`.  
+## <a name="arguments"></a>Argumenty
+
+*Rozmiar*<br/>
+(Opcjonalnie) Określa rozmiar iteracji. `size` Musi być dodatnią liczbą całkowitą. Wartość domyślna to 1, chyba że `type` jest statyczna. Jeśli `type` jest `runtime`.  
   
  `type`  
  Rodzaj planowania:  
@@ -50,18 +49,18 @@ set OMP_SCHEDULE[=type[,size]]
 -   `static`  
   
 ## <a name="remarks"></a>Uwagi  
- Wartość domyślna w implementacji Visual C++ standardu OpenMP to `OMP_SCHEDULE=static,0`.  
+ Wartość domyślna w implementacji Visual C++ OpenMP standard to `OMP_SCHEDULE=static,0`.  
   
  Aby uzyskać więcej informacji, zobacz [4.1 OMP_SCHEDULE](../../../parallel/openmp/4-1-omp-schedule.md).  
   
 ## <a name="example"></a>Przykład  
- Następujące polecenie ustawia **OMP_SCHEDULE** zmiennej środowiskowej:  
+ Następujące polecenie ustawia **OMP_SCHEDULE** zmienną środowiskową:  
   
 ```  
 set OMP_SCHEDULE="guided,2"  
 ```  
   
- Następujące polecenie wyświetla bieżące ustawienie **OMP_SCHEDULE** zmiennej środowiskowej:  
+ Następujące polecenie wyświetla bieżące ustawienie **OMP_SCHEDULE** zmienną środowiskową:  
   
 ```  
 set OMP_SCHEDULE  

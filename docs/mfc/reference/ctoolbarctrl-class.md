@@ -192,12 +192,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0801fab2ef5cec0da42cb40e28cd5124141c1007
-ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
+ms.openlocfilehash: 1f97559dd962fefbb4e727c0e75d0102898c8f13
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43686088"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45724077"
 ---
 # <a name="ctoolbarctrl-class"></a>Klasa CToolBarCtrl
 Oferuje funkcje formantu typowego paska narzędzi Windows.  
@@ -532,8 +532,8 @@ BOOL ChangeBitmap(
   
 |Parametr|Opis|  
 |---------------|-----------------|  
-|[in] *idButton*|Identyfikator polecenia przycisku, który ma otrzymać nowej mapy bitowej.|  
-|[in] *iBitmap*|Liczony od zera indeks obrazu w bieżącym formantem paska narzędzi listy obrazów.|  
+|*idButton*|[in] Identyfikator polecenia przycisku, który ma otrzymać nowej mapy bitowej.|  
+|*iBitmap*|[in] Liczony od zera indeks obrazu w bieżącym formantem paska narzędzi listy obrazów.|  
   
 ### <a name="return-value"></a>Wartość zwracana  
  Wartość TRUE, jeśli ta metoda jest kończy się pomyślnie; w przeciwnym razie wartość FALSE.  
@@ -841,7 +841,7 @@ CString GetButtonText(int idButton) const;
   
 |Parametr|Opis|  
 |---------------|-----------------|  
-|[in] *idButton*|Identyfikator dla przycisku, którego tekst jest pobierany.|  
+|*idButton*|[in] Identyfikator dla przycisku, którego tekst jest pobierany.|  
   
 ### <a name="return-value"></a>Wartość zwracana  
  A [CString](../../atl-mfc-shared/using-cstring.md) zawierający tekst wyświetlany określonego przycisku.  
@@ -860,7 +860,7 @@ BOOL GetColorScheme(COLORSCHEME* lpColorScheme) const;
   
 |Parametr|Opis|  
 |---------------|-----------------|  
-|[out] *lpColorScheme*|Wskaźnik do [COLORSCHEME](/windows/desktop/api/commctrl/ns-commctrl-tagcolorscheme) strukturę, która otrzymuje informacje schemat kolorów. Po powrocie z tej metody struktury opisuje kolor wyróżnienia i kolor cienia formantu paska narzędzi.|  
+|*lpColorScheme*|[out] Wskaźnik do [COLORSCHEME](/windows/desktop/api/commctrl/ns-commctrl-tagcolorscheme) strukturę, która otrzymuje informacje schemat kolorów. Po powrocie z tej metody struktury opisuje kolor wyróżnienia i kolor cienia formantu paska narzędzi.|  
   
 ### <a name="return-value"></a>Wartość zwracana  
 Wartość TRUE, jeśli ta metoda jest kończy się pomyślnie; w przeciwnym razie wartość FALSE.  
@@ -1053,8 +1053,8 @@ BOOL GetPadding(
   
 |Parametr|Opis|  
 |---------------|-----------------|  
-|[out] *pnHorzPadding*|Liczba całkowita, która odbiera Dopełnienie formantu paska narzędzi w poziomie w pikselach.|  
-|[out] *pnVertPadding*|Liczba całkowita, która odbiera Dopełnienie formantu paska narzędzi w pionie w pikselach.|  
+|*pnHorzPadding*|[out] Liczba całkowita, która odbiera Dopełnienie formantu paska narzędzi w poziomie w pikselach.|  
+|*pnVertPadding*|[out] Liczba całkowita, która odbiera Dopełnienie formantu paska narzędzi w pionie w pikselach.|  
   
 ### <a name="return-value"></a>Wartość zwracana  
  Wartość TRUE, jeśli ta metoda jest kończy się pomyślnie; w przeciwnym razie wartość FALSE.  
@@ -1349,8 +1349,8 @@ BOOL IsButtonHighlighted(int nID) const;
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *nID*  
- Identyfikator polecenia dla przycisku paska narzędzi.  
+*nID*<br/>
+[in] Identyfikator polecenia dla przycisku paska narzędzi.  
   
 ### <a name="return-value"></a>Wartość zwracana  
  Dodatnia liczba całkowita, jeśli przycisk jest wyróżniony, 0, jeśli nie zostanie on wyróżniony przycisku lub wartość-1, jeśli błąd występuje.  
@@ -1363,8 +1363,8 @@ BOOL IsButtonIndeterminate(int nID) const;
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *nID*  
- Identyfikator polecenia przycisku na pasku narzędzi.  
+*nID*<br/>
+[in] Identyfikator polecenia przycisku na pasku narzędzi.  
   
 ### <a name="return-value"></a>Wartość zwracana  
  Dodatnia liczba całkowita Jeśli przycisk jest nieokreślony, zero, jeśli przycisk jest nieokreślony, lub wartość-1 Jeśli błąd występuje.  
@@ -1491,11 +1491,11 @@ BOOL PressButton(int nID, BOOL bPress = TRUE);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *nID*  
- Identyfikator polecenia przycisku, aby klawisz lub wydania.  
+*nID*<br/>
+[in] Identyfikator polecenia przycisku, aby klawisz lub wydania.  
   
- [in] *bPress*  
- Wartość TRUE, kliknij przycisk określonej; Wartość FALSE, aby zwolnić określonego przycisku. Wartość domyślna to TRUE.  
+*bPress*<br/>
+[in] Wartość TRUE, kliknij przycisk określonej; Wartość FALSE, aby zwolnić określonego przycisku. Wartość domyślna to TRUE.  
   
 ### <a name="return-value"></a>Wartość zwracana  
  Wartość TRUE, jeśli metoda się powiedzie; w przeciwnym razie wartość FALSE.  
@@ -1516,7 +1516,7 @@ BOOL ReplaceBitmap(LPTBREPLACEBITMAP pReplaceBitmap);
   
 |Parametr|Opis|  
 |---------------|-----------------|  
-|[in] *pReplaceBitmap*|Wskaźnik do [TBREPLACEBITMAP](/windows/desktop/api/commctrl/ns-commctrl-tbreplacebitmap) strukturę, która opisuje mapy bitowej, który ma zostać zastąpione i nowej mapy bitowej.|  
+|*pReplaceBitmap*|[in] Wskaźnik do [TBREPLACEBITMAP](/windows/desktop/api/commctrl/ns-commctrl-tbreplacebitmap) strukturę, która opisuje mapy bitowej, który ma zostać zastąpione i nowej mapy bitowej.|  
   
 ### <a name="return-value"></a>Wartość zwracana  
  Wartość TRUE, jeśli ta metoda jest kończy się pomyślnie; w przeciwnym razie wartość FALSE.  
@@ -1593,8 +1593,8 @@ BOOL SetAnchorHighlight(BOOL fAnchor = TRUE);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *fAnchor*  
- Określa, czy wyróżnianie zakotwiczenia jest włączona lub wyłączona. Jeśli ta wartość jest różna od zera, zostaną włączone wyróżnianie zakotwiczenia. Jeśli ta wartość wynosi zero, zostaną wyłączone wyróżnianie zakotwiczenia  
+*fAnchor*<br/>
+[in] Określa, czy wyróżnianie zakotwiczenia jest włączona lub wyłączona. Jeśli ta wartość jest różna od zera, zostaną włączone wyróżnianie zakotwiczenia. Jeśli ta wartość wynosi zero, zostaną wyłączone wyróżnianie zakotwiczenia  
   
 ### <a name="return-value"></a>Wartość zwracana  
  Poprzednie ustawienie zakotwiczenia. Jeśli wyróżnianie zostało włączone, ta wartość jest różna od zera. Jeśli wyróżnienie nie zostało włączone, ta wartość wynosi zero.  
@@ -1729,7 +1729,7 @@ void SetColorScheme(const COLORSCHEME* lpColorScheme);
   
 |Parametr|Opis|  
 |---------------|-----------------|  
-|[in] *lpColorScheme*|Wskaźnik do [COLORSCHEME](/windows/desktop/api/commctrl/ns-commctrl-tagcolorscheme) strukturę, która opisuje kolor wyróżnienia i kolor w tle formantu paska narzędzi.|  
+|*lpColorScheme*|[in] Wskaźnik do [COLORSCHEME](/windows/desktop/api/commctrl/ns-commctrl-tagcolorscheme) strukturę, która opisuje kolor wyróżnienia i kolor w tle formantu paska narzędzi.|  
   
 ### <a name="remarks"></a>Uwagi  
  Ta metoda nie obowiązuje, jeśli ustawiono motyw wizualny Windows Vista.  
@@ -1952,8 +1952,8 @@ DWORD SetPadding(
   
 |Parametr|Opis|  
 |---------------|-----------------|  
-|[in] *nHorzPadding*|Dopełnienie formantu paska narzędzi w poziomie określa w pikselach.|  
-|[in] *nVertPadding*|Dopełnienie formantu paska narzędzi w pionie określa w pikselach.|  
+|*nHorzPadding*|[in] Dopełnienie formantu paska narzędzi w poziomie określa w pikselach.|  
+|*nVertPadding*|[in] Dopełnienie formantu paska narzędzi w pionie określa w pikselach.|  
   
 ### <a name="return-value"></a>Wartość zwracana  
  DWORD, którego niższe słowo zawiera poprzedniej wartości dopełnienie w poziomie, a których wyższe słowo poprzednią wartość dopełnienie w pionie. Wypełnienie wartości jest podawana w pikselach.  
@@ -1979,8 +1979,8 @@ CImagelist* SetPressedImageList(
   
 |Parametr|Opis|  
 |---------------|-----------------|  
-|[in] *iImageID*|Liczony od zera indeks listy obrazów. Ustaw ten parametr na wartość zero, jeśli używasz tylko jednej listy obrazów.|  
-|[in] *pImageList*|Wskaźnik do [CImageList](../../mfc/reference/cimagelist-class.md) zawierający nową listę obrazów.|  
+|*iImageID*|[in] Liczony od zera indeks listy obrazów. Ustaw ten parametr na wartość zero, jeśli używasz tylko jednej listy obrazów.|  
+|*pImageList*|[in] Wskaźnik do [CImageList](../../mfc/reference/cimagelist-class.md) zawierający nową listę obrazów.|  
   
 ### <a name="return-value"></a>Wartość zwracana  
  Wskaźnik do [CImageList](../../mfc/reference/cimagelist-class.md) zawierający poprzedniej listy obrazów w bieżącym kontroli lub wartość NULL, jeśli został ustawiony nie listy obrazów.  

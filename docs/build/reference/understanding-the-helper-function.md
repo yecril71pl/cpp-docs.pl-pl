@@ -1,5 +1,5 @@
 ---
-title: Opis funkcji Pomocnik | Dokumentacja firmy Microsoft
+title: Ogólne informacje funkcji Pomocnik | Dokumentacja firmy Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -20,57 +20,59 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 54ed331022c29ecc47d61bbcccbfac82000cb235
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 90ca214b28296417ab80341232c08a55b92adff4
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32379240"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45725495"
 ---
 # <a name="understanding-the-helper-function"></a>Ogólne informacje funkcji Pomocnik
-Funkcja pomocnika służąca do ładowania opóźnionego obsługiwane konsolidatora to, co faktycznie ładuje bibliotekę DLL w czasie wykonywania. Funkcja pomocnika, aby dostosować zachowanie przy jego własnej funkcji zapisywania i łącząc go do programu zamiast przy użyciu funkcji pomocnika podany w Delayimp.lib można modyfikować. Jedna funkcja pomocnika służy wszystkie opóźnienie załadować biblioteki dll.  
-  
- Musisz podać wersji funkcji pomocnika, jeśli chcesz zrobić przetwarzania specyficznego dla opartych na nazwach biblioteki DLL lub importowania.  
-  
- Funkcja pomocnika wykonuje następujące czynności:  
-  
--   Sprawdza dojście przechowywanych w bibliotece, aby zobaczyć, jeśli jego został już załadowany  
-  
--   Wywołania **LoadLibrary** próby ładowania biblioteki dll  
-  
--   Wywołania **GetProcAddress** próby uzyskiwania adresu procedury  
-  
--   Zwraca do zaimportowania opóźnienie załadować thunk do wywołania punktu wejścia załadować teraz  
-  
- Funkcja pomocnika można wywołania zwrotnego punktu zaczepienia powiadomień w programie po każdej z następujących czynności:  
-  
--   Po uruchomieniu funkcji Pomocnik  
-  
--   Tuż przed **LoadLibrary** jest wywoływana w funkcji pomocnika  
-  
--   Tuż przed **GetProcAddress** jest wywoływana w funkcji pomocnika  
-  
--   Jeśli wywołanie **LoadLibrary** w funkcji pomocnika nie powiodło się  
-  
--   Jeśli wywołanie **GetProcAddress** w funkcji pomocnika nie powiodło się  
-  
--   Po pomocnika odbywa się funkcja przetwarzania  
-  
- Każdy z tych punktów utworzenie punktu zaczepienia może zwrócić wartość, która będzie zastępowania normalnego przetwarzania procedury pomocnika w jakikolwiek sposób, z wyjątkiem powrotu do thunk obciążenia importu opóźnienia.  
-  
- Domyślny kod pomocnika można znaleźć w Delayhlp.cpp i Delayimp.h (w vc\include) i jest skompilowana w Delayimp.lib (w vc\lib). Należy do uwzględnienia w kompilacji z tej biblioteki, chyba że zapisu własnej funkcji Pomocnik.  
-  
- Funkcja pomocnika można znaleźć w następujących tematach:  
-  
--   [Zmiany w funkcjach pomocnika opóźnionego załadunku bibliotek DLL po Visual C++ 6.0](../../build/reference/changes-in-the-dll-delayed-loading-helper-function-since-visual-cpp-6-0.md)  
-  
--   [Konwencje wywoływania, parametry oraz zwracany typ](../../build/reference/calling-conventions-parameters-and-return-type.md)  
-  
--   [Struktura i stała, definicje](../../build/reference/structure-and-constant-definitions.md)  
-  
--   [Obliczanie niezbędnych wartości](../../build/reference/calculating-necessary-values.md)  
-  
--   [Zwalnianie bibliotek DLL załadowanych z opóźnieniem](../../build/reference/explicitly-unloading-a-delay-loaded-dll.md)  
-  
-## <a name="see-also"></a>Zobacz też  
- [Obsługa konsolidatora dla bibliotek DLL załadowanych z opóźnieniem](../../build/reference/linker-support-for-delay-loaded-dlls.md)
+
+Funkcja pomocnika dla obsługiwanych przez program łączący opóźnionego ładowania to, co faktycznie ładuje bibliotekę DLL, w czasie wykonywania. Można zmodyfikować funkcji pomocnika, aby dostosować jego zachowanie własną funkcję zapisywania i łącząc go do programu, zamiast korzystać z funkcji pomocnika podane w Delayimp.lib. Jedna funkcja pomocnika służy wszystkie biblioteki DLL ładowane z opóźnieniem.
+
+Możesz podać własnej wersji funkcji pomocnika, aby wykonywać określone przetwarzanie na podstawie nazw biblioteki DLL lub importów.
+
+Funkcja pomocnika wykonuje następujące czynności:
+
+- Sprawdza, czy przechowywane uchwyt do biblioteki, aby zobaczyć, jeśli już został załadowany
+
+- Wywołania **LoadLibrary** prób podczas ładowania biblioteki dll
+
+- Wywołania **GetProcAddress** próby pobierania adresu procedury
+
+- Powrót do Opóźnij importowanie ładowania thunk wywołać punkt wejścia załadowane teraz
+
+Funkcja pomocnika wywołania zwrotnego do zaczepienia powiadomień w programie po każdym z następujących czynności:
+
+- Po uruchomieniu funkcji Pomocnik
+
+- Tuż przed **LoadLibrary** jest wywoływana w funkcji Pomocnik
+
+- Tuż przed **GetProcAddress** jest wywoływana w funkcji Pomocnik
+
+- Jeśli wywołanie **LoadLibrary** w funkcji pomocnika nie powiodło się
+
+- Jeśli wywołanie **GetProcAddress** w funkcji pomocnika nie powiodło się
+
+- Po pomocnika odbywa się funkcja przetwarzania
+
+Każda z tych punktów utworzenie punktu zaczepienia może zwrócić wartość, która będzie zastępowania normalnego przetwarzania procedury pomocnika w jakikolwiek sposób, z wyjątkiem zwraca thunk obciążenia importu opóźnienia.
+
+Domyślny kod pomocnika można znaleźć w Delayhlp.cpp i Delayimp.h (w vc\include) i jest skompilowany w Delayimp.lib (w vc\lib). Należy uwzględnić tę bibliotekę w Twojej kompilacji, chyba że napisany został własnej funkcji Pomocnik.
+
+Funkcja pomocnika można znaleźć w następujących tematach:
+
+- [Zmiany w funkcjach pomocnika opóźnionego załadunku bibliotek DLL po Visual C++ 6.0](../../build/reference/changes-in-the-dll-delayed-loading-helper-function-since-visual-cpp-6-0.md)
+
+- [Konwencje wywoływania, parametry oraz zwracany typ](../../build/reference/calling-conventions-parameters-and-return-type.md)
+
+- [Struktura i stała, definicje](../../build/reference/structure-and-constant-definitions.md)
+
+- [Obliczanie niezbędnych wartości](../../build/reference/calculating-necessary-values.md)
+
+- [Zwalnianie bibliotek DLL załadowanych z opóźnieniem](../../build/reference/explicitly-unloading-a-delay-loaded-dll.md)
+
+## <a name="see-also"></a>Zobacz też
+
+[Obsługa konsolidatora dla bibliotek DLL załadowanych z opóźnieniem](../../build/reference/linker-support-for-delay-loaded-dlls.md)

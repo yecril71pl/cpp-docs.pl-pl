@@ -72,12 +72,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c5585ad86b0c55a7ab47cd026fd0bb7032db11b9
-ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
+ms.openlocfilehash: fa9af83ce4f18f4e4f2e916c5d9bacf724720814
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43690437"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45718448"
 ---
 # <a name="cbasetabbedpane-class"></a>Klasa CBaseTabbedPane
 Rozszerza funkcjonalność [klasa CDockablePane](../../mfc/reference/cdockablepane-class.md) aby obsługiwać tworzenie okien z zakładkami.  
@@ -176,14 +176,14 @@ virtual BOOL AddTab(
  [in] [out] *pNewBar*  
  Wskaźnik do okienka, aby dodać. This, wskaźnik może stać się nieprawidłowe po wywołaniu tej metody. Aby uzyskać więcej informacji, zobacz sekcję: Uwagi.  
   
- [in] *bVisible*  
- Wartość TRUE, aby uwidocznić karcie; w przeciwnym razie wartość FALSE.  
+*bVisible*<br/>
+[in] Wartość TRUE, aby uwidocznić karcie; w przeciwnym razie wartość FALSE.  
   
- [in] *bSetActive*  
- Wartość TRUE, aby wprowadzić na karcie aktywną kartę; w przeciwnym razie wartość FALSE.  
+*bSetActive*<br/>
+[in] Wartość TRUE, aby wprowadzić na karcie aktywną kartę; w przeciwnym razie wartość FALSE.  
   
- [in] *bDetachable*  
- Wartość TRUE, aby wprowadzić na karcie odłączane; w przeciwnym razie wartość FALSE.  
+*bDetachable*<br/>
+[in] Wartość TRUE, aby wprowadzić na karcie odłączane; w przeciwnym razie wartość FALSE.  
   
 ### <a name="return-value"></a>Wartość zwracana  
  Wartość TRUE, jeśli okienko został pomyślnie dodany jako karty i nie została zniszczona w procesie. Wartość FALSE, jeśli okienko dodawany jest obiekt typu `CBaseTabbedPane`. Aby uzyskać więcej informacji, zobacz sekcję: Uwagi.  
@@ -212,8 +212,8 @@ virtual void ApplyRestoredTabInfo(BOOL bUseTabIndexes = FALSE);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *bUseTabIndexes*  
- Ten parametr jest używana wewnętrznie przez platformę.  
+*bUseTabIndexes*<br/>
+[in] Ten parametr jest używana wewnętrznie przez platformę.  
   
 ### <a name="remarks"></a>Uwagi  
  Ta metoda jest wywoływana przez platformę, gdy się ponownie ładuje informacje o stanie dokowania z rejestru. Metoda uzyskuje informacje o kolejności tabulacji i nazwy kart dla okienka z zakładkami.  
@@ -249,8 +249,8 @@ virtual void ConvertToTabbedDocument(BOOL bActiveTabOnly = TRUE);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *bActiveTabOnly*  
- Podczas konwersji okienka z zakładkami, określ wartość PRAWDA, aby przekonwertować tylko aktywną kartę. Określ wartość FALSE, aby przekonwertować wszystkie karty w okienku.  
+*bActiveTabOnly*<br/>
+[in] Podczas konwersji okienka z zakładkami, określ wartość PRAWDA, aby przekonwertować tylko aktywną kartę. Określ wartość FALSE, aby przekonwertować wszystkie karty w okienku.  
   
 ##  <a name="detachpane"></a>  CBaseTabbedPane::DetachPane  
  Odłącza okienko z poziomu okienka z zakładkami.  
@@ -262,11 +262,11 @@ virtual BOOL DetachPane(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *pBar*  
- Wskaźnik do okienka, aby odłączyć.  
+*pBar*<br/>
+[in] Wskaźnik do okienka, aby odłączyć.  
   
- [in] *bHide*  
- Parametr logiczny, który określa, czy strukturze ukrywa okienko po jest odłączony od.  
+*bHide*<br/>
+[in] Parametr logiczny, który określa, czy strukturze ukrywa okienko po jest odłączony od.  
   
 ### <a name="return-value"></a>Wartość zwracana  
  Wartość TRUE, jeśli w ramach pomyślnie odłącza okienko; FAŁSZ Jeśli *pBar* ma wartość NULL lub odwołuje się do okienka, który nie znajduje się w okienku z kartami.  
@@ -282,8 +282,8 @@ virtual void EnableSetCaptionTextToTabName(BOOL bEnable);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *bWłączenie*  
- Wartość TRUE, aby zsynchronizować podpis okienka z zakładkami z aktywną kartę podpis; w przeciwnym razie wartość FALSE.  
+*bWłączenie*<br/>
+[in] Wartość TRUE, aby zsynchronizować podpis okienka z zakładkami z aktywną kartę podpis; w przeciwnym razie wartość FALSE.  
   
 ##  <a name="filldefaulttabsorderarray"></a>  CBaseTabbedPane::FillDefaultTabsOrderArray  
  Przywraca kolejność tabulacji wewnętrznej do stanu domyślnego.  
@@ -303,8 +303,8 @@ virtual CWnd* FindPaneByID(UINT uBarID);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *uBarID*  
- Określa identyfikator okienka, aby znaleźć.  
+*uBarID*<br/>
+[in] Określa identyfikator okienka, aby znaleźć.  
   
 ### <a name="return-value"></a>Wartość zwracana  
  Wskaźnik do okienka, jeśli znaleziono; w przeciwnym razie wartość NULL.  
@@ -322,11 +322,11 @@ virtual CWnd* FindBarByTabNumber(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *nTabNum*  
- Określa liczony od zera indeks karty do pobrania.  
+*nTabNum*<br/>
+[in] Określa liczony od zera indeks karty do pobrania.  
   
- [in] *bGetWrappedBar*  
- Wartość TRUE, aby zwrócić podstawowej (opakowana) okno okienka zamiast okienka. w przeciwnym razie wartość FALSE. Dotyczy to tylko okienka pochodną [CDockablePaneAdapter](../../mfc/reference/cdockablepaneadapter-class.md).  
+*bGetWrappedBar*<br/>
+[in] Wartość TRUE, aby zwrócić podstawowej (opakowana) okno okienka zamiast okienka. w przeciwnym razie wartość FALSE. Dotyczy to tylko okienka pochodną [CDockablePaneAdapter](../../mfc/reference/cdockablepaneadapter-class.md).  
   
 ### <a name="return-value"></a>Wartość zwracana  
  Jeśli okienko zostanie znaleziony, zwracana jest prawidłowy wskaźnik do okienka wyszukane; w przeciwnym razie wartość NULL.  
@@ -349,14 +349,14 @@ virtual BOOL FloatTab(
  [in] [out] *pBar*  
  Wskaźnik do okienka na typ zmiennoprzecinkowy.  
   
- [in] *nTabID*  
- Określa liczony od zera indeks karty na typ zmiennoprzecinkowy.  
+*nTabID*<br/>
+[in] Określa liczony od zera indeks karty na typ zmiennoprzecinkowy.  
   
- [in] *dockMethod*  
- Określa metodę używaną do dokowanie panelu. Aby uzyskać więcej informacji, zobacz sekcję: Uwagi.  
+*dockMethod*<br/>
+[in] Określa metodę używaną do dokowanie panelu. Aby uzyskać więcej informacji, zobacz sekcję: Uwagi.  
   
- [in] *bHide*  
- Wartość TRUE, aby ukryć okienko przed liczb zmiennoprzecinkowych; w przeciwnym razie wartość FALSE.  
+*bHide*<br/>
+[in] Wartość TRUE, aby ukryć okienko przed liczb zmiennoprzecinkowych; w przeciwnym razie wartość FALSE.  
   
 ### <a name="return-value"></a>Wartość zwracana  
  Wartość TRUE, jeśli zawartość okienka przestawione; w przeciwnym razie wartość FALSE.  
@@ -387,8 +387,8 @@ virtual CWnd* GetFirstVisibleTab(int& iTabNum);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *iTabNum*  
- Odwołanie do wartości całkowitej. Ta metoda zapisuje liczony od zera indeks pierwszej karcie wyświetlany ten parametr lub wartość -1 Jeśli wyświetlane nie znajduje się karta.  
+*iTabNum*<br/>
+[in] Odwołanie do wartości całkowitej. Ta metoda zapisuje liczony od zera indeks pierwszej karcie wyświetlany ten parametr lub wartość -1 Jeśli wyświetlane nie znajduje się karta.  
   
 ### <a name="return-value"></a>Wartość zwracana  
  Jeśli to się powiedzie, wskaźnik do pierwszej karcie wyświetlane; w przeciwnym razie wartość NULL.  
@@ -401,8 +401,8 @@ virtual void GetMinSize(CSize& size) const;
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [out] *rozmiar*  
- A `CSize` obiekt, który zostanie wypełniony kolorem minimalny dozwolony rozmiar.  
+*Rozmiar*<br/>
+[out] A `CSize` obiekt, który zostanie wypełniony kolorem minimalny dozwolony rozmiar.  
   
 ### <a name="remarks"></a>Uwagi  
  Jeśli aktywne jest spójne obsługi rozmiary okienka minimalną ( [CPane::m_bHandleMinSize](../../mfc/reference/cpane-class.md#m_bhandleminsize)), *rozmiar* jest wypełniany minimalny dozwolony rozmiar dla aktywnej karty. W przeciwnym razie *rozmiar* jest wypełniany wartość zwracaną przez [CPane::GetMinSize](../../mfc/reference/cpane-class.md#getminsize).  
@@ -415,8 +415,8 @@ virtual void GetMinSize(CSize& size) const;
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [out] *rozmiar*  
- A `CSize` obiekt, który zostanie wypełniony kolorem minimalny dozwolony rozmiar.  
+*Rozmiar*<br/>
+[out] A `CSize` obiekt, który zostanie wypełniony kolorem minimalny dozwolony rozmiar.  
   
 ### <a name="remarks"></a>Uwagi  
  Jeśli aktywne jest spójne obsługi rozmiary okienka minimalną ( [CPane::m_bHandleMinSize](../../mfc/reference/cpane-class.md#m_bhandleminsize)), *rozmiar* jest wypełniany minimalny dozwolony rozmiar dla aktywnej karty. W przeciwnym razie *rozmiar* jest wypełniany wartość zwracaną przez [CPane::GetMinSize](../../mfc/reference/cpane-class.md#getminsize).  
@@ -431,11 +431,11 @@ virtual void GetPaneList(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [out] *dzieł*  
- A `CObList` , jest wypełniany okienek, które są zawarte w okienku z kartami.  
+*dzieł*<br/>
+[out] A `CObList` , jest wypełniany okienek, które są zawarte w okienku z kartami.  
   
- [in] *pRTCFilter*  
- Jeśli nie ma wartość NULL, tego zwracana lista zawiera tylko okienek, które są klasy określonego środowiska uruchomieniowego.  
+*pRTCFilter*<br/>
+[in] Jeśli nie ma wartość NULL, tego zwracana lista zawiera tylko okienek, które są klasy określonego środowiska uruchomieniowego.  
   
 ##  <a name="gettabarea"></a>  CBaseTabbedPane::GetTabArea  
  Zwraca prostokąty dla obszarów kartę górny i dolny.  
@@ -447,11 +447,11 @@ virtual void GetTabArea(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [out] *rectTabAreaTop*  
- Odbiera współrzędne ekranu obszaru górnej karty.  
+*rectTabAreaTop*<br/>
+[out] Odbiera współrzędne ekranu obszaru górnej karty.  
   
- [out] *rectTabAreaBottom*  
- Odbiera współrzędne ekranu dolny obszar karty.  
+*rectTabAreaBottom*<br/>
+[out] Odbiera współrzędne ekranu dolny obszar karty.  
   
 ### <a name="remarks"></a>Uwagi  
  Wywołaj tę metodę pozwala ustalić prostokąty, we współrzędnych ekranu, obszarów górny i dolny kartę.  
@@ -540,8 +540,8 @@ void SetAutoDestroy(BOOL bAutoDestroy = TRUE);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *bAutoDestroy*  
- Wartość TRUE, jeśli okienka z zakładkami został utworzony dynamicznie i nie możesz kontrolować jego trwania. w przeciwnym razie wartość FALSE.  
+*bAutoDestroy*<br/>
+[in] Wartość TRUE, jeśli okienka z zakładkami został utworzony dynamicznie i nie możesz kontrolować jego trwania. w przeciwnym razie wartość FALSE.  
   
 ### <a name="remarks"></a>Uwagi  
  Ustaw automatyczne zniszczyć tryb na wartość TRUE, jeśli dynamicznie utworzyć okienka z zakładkami, a nie sterowanej cały okres ich istnienia. Jeśli zniszczyć automatyczny tryb ma wartość PRAWDA, okienka z zakładkami jest niszczony automatycznie przez platformę.  
@@ -558,17 +558,17 @@ virtual BOOL ShowTab(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *pBar*  
- Wskaźnik do okienka, aby pokazać lub ukryć.  
+*pBar*<br/>
+[in] Wskaźnik do okienka, aby pokazać lub ukryć.  
   
- [in] *bShow*  
- Wartość TRUE, aby wyświetlić okienko; Wartość FALSE, aby ukryć okienko.  
+*bShow*<br/>
+[in] Wartość TRUE, aby wyświetlić okienko; Wartość FALSE, aby ukryć okienko.  
   
- [in] *bDelay*  
- Wartość TRUE, aby opóźnić dostosowania układu kartę; w przeciwnym razie wartość FALSE.  
+*bDelay*<br/>
+[in] Wartość TRUE, aby opóźnić dostosowania układu kartę; w przeciwnym razie wartość FALSE.  
   
- [in] *bActivate*  
- Wartość TRUE, aby wprowadzić na karcie aktywną kartę; w przeciwnym razie wartość FALSE.  
+*bActivate*<br/>
+[in] Wartość TRUE, aby wprowadzić na karcie aktywną kartę; w przeciwnym razie wartość FALSE.  
   
 ### <a name="return-value"></a>Wartość zwracana  
  Wartość TRUE, jeśli karta został pokazane lub ukryte pomyślnie; w przeciwnym razie wartość FALSE.  
@@ -600,17 +600,17 @@ virtual CMFCAutoHideToolBar* SetAutoHideMode(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *bMode*  
- Wartość TRUE, aby włączyć tryb autoukrywania; Wartość FALSE, aby włączyć do trybu normalnego dokowania.  
+*bMode*<br/>
+[in] Wartość TRUE, aby włączyć tryb autoukrywania; Wartość FALSE, aby włączyć do trybu normalnego dokowania.  
   
- [in] *dwAlignment*  
- Określa wyrównanie okienko automatycznego ukrywania, w którym ma zostać utworzony. Aby uzyskać listę możliwych wartości, zobacz [CPane::MoveByAlignment](../../mfc/reference/cpane-class.md#movebyalignment).  
+*dwAlignment*<br/>
+[in] Określa wyrównanie okienko automatycznego ukrywania, w którym ma zostać utworzony. Aby uzyskać listę możliwych wartości, zobacz [CPane::MoveByAlignment](../../mfc/reference/cpane-class.md#movebyalignment).  
   
  [in] [out] *pCurrAutoHideBar*  
  Wskaźnik do bieżącego automatyczne ukrywanie paska narzędzi. Może mieć wartości NULL.  
   
- [in] *bUseTimer*  
- Określa, czy gdy użytkownik zmienia okienka tryb automatycznego ukrywania za pomocą automatyczne ukrywanie efektu lub ukrywanie okienka natychmiast.  
+*bUseTimer*<br/>
+[in] Określa, czy gdy użytkownik zmienia okienka tryb automatycznego ukrywania za pomocą automatyczne ukrywanie efektu lub ukrywanie okienka natychmiast.  
   
 ### <a name="return-value"></a>Wartość zwracana  
  Wskaźnik do paska narzędzi automatycznego ukrywania, który jest tworzony podczas przełączania trybie autoukrywania lub wartość NULL, jeśli brak paska narzędzi jest tworzony.  

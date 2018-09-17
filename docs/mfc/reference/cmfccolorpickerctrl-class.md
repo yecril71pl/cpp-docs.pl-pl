@@ -50,12 +50,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 709992c42cf7fd489fbe8fe8d4ebf40bf92a989e
-ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
+ms.openlocfilehash: 0ea0bf6ed8361419af3519a41edbe6bb3c4b4a77
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/05/2018
-ms.locfileid: "37849968"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45725663"
 ---
 # <a name="cmfccolorpickerctrl-class"></a>Klasa CMFCColorPickerCtrl
 `CMFCColorPickerCtrl` Klasa oferuje funkcję dla formantu, który jest używany do wybierania kolorów.  
@@ -158,11 +158,11 @@ virtual void DrawCursor(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *podstawowego kontrolera domeny*  
- Wskaźnik do kontekstu urządzenia.  
+*podstawowego kontrolera domeny*<br/>
+[in] Wskaźnik do kontekstu urządzenia.  
   
- [in] *rect*  
- Określa prostokątny obszar wokół wybranego koloru.  
+*Rect*<br/>
+[in] Określa prostokątny obszar wokół wybranego koloru.  
   
 ### <a name="remarks"></a>Uwagi  
  Należy przesłonić tę metodę, gdy trzeba zmienić kształt kursora, który wskazuje na wybranym kolorze.  
@@ -190,14 +190,14 @@ void GetHLS(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [out] *hue*  
- Wskaźnik do zmiennej typu double odbierająca hue informacji.  
+*HUE*<br/>
+[out] Wskaźnik do zmiennej typu double odbierająca hue informacji.  
   
- [out] *jasności*  
- Wskaźnik do zmiennej typu double odbierająca jasności informacji.  
+*Jasności*<br/>
+[out] Wskaźnik do zmiennej typu double odbierająca jasności informacji.  
   
- [out] *nasycenia*  
- Wskaźnik do zmiennej typu double odbierająca nasycenie informacji.  
+*Nasycenie*<br/>
+[out] Wskaźnik do zmiennej typu double odbierająca nasycenie informacji.  
   
 ### <a name="remarks"></a>Uwagi  
   
@@ -253,20 +253,20 @@ BOOL SelectCellHexagon(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *R*  
- Kolor czerwony składnik.  
+*R*<br/>
+[in] Kolor czerwony składnik.  
   
- [in] *G*  
- Kolor zielony składnik.  
+*G*<br/>
+[in] Kolor zielony składnik.  
   
- [in] *B*  
- Składnik niebieski.  
+*B*<br/>
+[in] Składnik niebieski.  
   
- [in] *x*  
- Współrzędna x kursora, które wskazuje sześciokąt komórki.  
+*x*<br/>
+[in] Współrzędna x kursora, które wskazuje sześciokąt komórki.  
   
- [in] *y*  
- Współrzędna y kursora, które wskazuje sześciokąt komórki.  
+*y*<br/>
+[in] Współrzędna y kursora, które wskazuje sześciokąt komórki.  
   
 ### <a name="return-value"></a>Wartość zwracana  
  Drugie przeciążenie to metoda zawsze zwraca wartość FALSE.  
@@ -284,8 +284,8 @@ void SetColor(COLORREF Color);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *Kolorów*  
- Wartość koloru RGB.  
+*Kolor*<br/>
+[in] Wartość koloru RGB.  
   
 ### <a name="remarks"></a>Uwagi  
   
@@ -301,17 +301,17 @@ void SetHLS(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *hue*  
- Wartość hue.  
+*HUE*<br/>
+[in] Wartość hue.  
   
- [in] *jasności*  
- Wartość jasności.  
+*Jasności*<br/>
+[in] Wartość jasności.  
   
- [in] *nasycenia*  
- Wartość nasycenia koloru.  
+*Nasycenie*<br/>
+[in] Wartość nasycenia koloru.  
   
- [in] *bInvalidate*  
- Wartość TRUE, aby wymusić okna, aby natychmiast zaktualizować na nowy kolor; w przeciwnym razie wartość FALSE. Wartość domyślna to TRUE.  
+*bInvalidate*<br/>
+[in] Wartość TRUE, aby wymusić okna, aby natychmiast zaktualizować na nowy kolor; w przeciwnym razie wartość FALSE. Wartość domyślna to TRUE.  
   
 ### <a name="remarks"></a>Uwagi  
   
@@ -323,8 +323,8 @@ void SetHue(double Hue);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *Hue*  
- Wartość hue.  
+*HUE*<br/>
+[in] Wartość hue.  
   
 ### <a name="remarks"></a>Uwagi  
   
@@ -336,8 +336,8 @@ void SetLuminance(double Luminance);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *Jasności*  
- Wartość jasności.  
+*Jasności*<br/>
+[in] Wartość jasności.  
   
 ### <a name="remarks"></a>Uwagi  
   
@@ -349,8 +349,8 @@ void SetLuminanceBarWidth(int w);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *w*  
- Szerokość paska jasności (w pikselach).  
+*w*<br/>
+[in] Szerokość paska jasności (w pikselach).  
   
 ### <a name="remarks"></a>Uwagi  
  Ta metoda służy do zmiany rozmiaru Pasek jasności, który znajduje się w **niestandardowe** kartę kontroli próbnika kolorów. *w* parametr określa nową szerokość paska jasności. Wartość szerokości jest ignorowany w przypadku przekroczenia trzy czwarte szerokość obszaru klienta.  
@@ -363,8 +363,8 @@ void SetOriginalColor(COLORREF ref);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *ref*  
- Wartość koloru RGB.  
+*ref*<br/>
+[in] Wartość koloru RGB.  
   
 ### <a name="remarks"></a>Uwagi  
  Tę metodę należy wywołać po zainicjowaniu kontroli próbnika kolorów.  
@@ -377,8 +377,8 @@ void SetPalette(CPalette* pPalette);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *pPalette*  
- Wskaźnik do palety kolorów.  
+*pPalette*<br/>
+[in] Wskaźnik do palety kolorów.  
   
 ### <a name="remarks"></a>Uwagi  
  Paletę kolorów, która definiuje tablicy kolorów, które są prezentowane w kontroli próbnika kolorów.  
@@ -391,8 +391,8 @@ void SetSaturation(double Saturation);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *Nasycenia*  
- Wartość nasycenia koloru.  
+*Nasycenie*<br/>
+[in] Wartość nasycenia koloru.  
   
 ### <a name="remarks"></a>Uwagi  
   
@@ -404,8 +404,8 @@ void SetType(COLORTYPE colorType);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *colorType*  
- Typ formantu selektora kolorów.  
+*colorType*<br/>
+[in] Typ formantu selektora kolorów.  
   
  Typy są definiowane przez `CMFCColorPickerCtrl::COLORTYPE` wyliczenia. Możliwe typy są JASNOŚCI, wybór, HEX i HEX_GREYSCALE. Domyślnym typem jest wybór.  
   

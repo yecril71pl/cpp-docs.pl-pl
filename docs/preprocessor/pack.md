@@ -1,7 +1,7 @@
 ---
 title: pakiet | Dokumentacja firmy Microsoft
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 09/17/2018
 ms.technology:
 - cpp-tools
 ms.topic: reference
@@ -18,12 +18,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0bcbd8dcc64d26f124a7b6443a79f01aa4329414
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: d75b62716066d1df94b0072b00254dc96ec450df
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43207495"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45720619"
 ---
 # <a name="pack"></a>pakiet
 Określa wyrównanie pakowania dla struktury, Unii i składowych klasy.  
@@ -34,29 +34,31 @@ Określa wyrównanie pakowania dla struktury, Unii i składowych klasy.
 #pragma pack( [ show ] | [ push | pop ] [, identifier ] , n  )  
 ```  
   
+### <a name="parameters"></a>Parametry
+
+**Pokaż**<br/>
+(Opcjonalnie) Wyświetla bieżącą wartość bajtu pakowania wyrównania. Wartość jest wyświetlana przez komunikat ostrzegawczy.  
+
+**push**<br/>
+(Opcjonalnie) Wypchnięcia bieżącego wyrównania pakowania wartości na wewnętrznym stosie kompilatora i ustawia wartość bieżącej wyrównanie pakowania *n*. Jeśli *n* nie zostanie określony, bieżącą wartość wyrównania pakowania zostanie przypisany.  
+  
+**POP**<br/>
+(Opcjonalnie) Usuwa rekord z góry wewnętrznego stosu kompilatora. Jeśli *n* nie zostanie określony z **pop**, wartość pakowania skojarzone z wynikowego rekordu na górze stosu jest nową wartość wyrównania pakowania. Jeśli *n* jest określony, na przykład `#pragma pack(pop, 16)`, *n* staje się nowym pakowania wartością wyrównania. Jeśli pop z *identyfikator*, na przykład `#pragma pack(pop, r1)`, a następnie wszystkie rekordy na stosie są zdjęte ze stosu dopóki rekord, który ma *identyfikator* znajduje się. Że zdjęte ze stosu rekordu i wartość pakowania skojarzone z wynikowego rekordu w górnej części stosu nowe pakowania wartością wyrównania. Jeśli pop z *identyfikator* który nie znajduje się w każdy rekord w stosie, a następnie **pop** jest ignorowana.  
+  
+*Identyfikator*<br/>
+(Opcjonalnie) Gdy jest używane z *wypychania*, przypisuje nazwę rekordowi na wewnętrznym stosie kompilatora. Gdy jest używane z **pop**, zdejmuje rekordy z wewnętrznego stosu aż do usunięcia *identyfikator* zostanie usunięta; Jeśli *identyfikator* nie zostanie znaleziony na wewnętrznym stosie, nic nie zostanie zdjęte.  
+  
+*N*<br/>
+(Opcjonalnie) Określa wartość, w bajtach, służący do pakowania. Jeśli opcja kompilatora [/ZP](../build/reference/zp-struct-member-alignment.md) nie jest ustawiona dla modułu, wartością domyślną dla *n* wynosi 8. Prawidłowe wartości to 1, 2, 4, 8 i 16. Wyrównanie elementu członkowskiego będzie znajdować się na granicy, która jest wielokrotnością liczby *n* lub wielokrotność rozmiaru elementu członkowskiego, która kwota jest mniejsza.  
+  
+`#pragma pack(pop, identifier, n)` jest niezdefiniowane.  
+  
 ## <a name="remarks"></a>Uwagi  
 
 Umieszczenie klasy jest umieszczenie jej elementy członkowskie bezpośrednio po sobie nawzajem w pamięci, co może oznaczać, że niektóre lub wszystkie elementy członkowskie można wyrównać na granicy mniejszy niż domyślne wyrównanie architektury docelowej. **pakiet** zapewnia kontrolę na poziomie deklaracji danych. To różni się od — opcja kompilatora [/ZP](../build/reference/zp-struct-member-alignment.md), który tylko można kontrolować poziom modułu. **pakiet** staje się skuteczny po pierwszym **struktury**, **Unii**, lub **klasy** deklaracji po pragmy jest widoczny. **pakiet** nie ma wpływu na definicje. Wywoływanie **pakiet** z zestawami nie argumentów *n* wartość ustawioną w — opcja kompilatora `/Zp`. Jeśli nie ustawiono opcję kompilatora, wartością domyślną jest 8.  
   
-Jeśli zmienisz Wyrównanie struktury, nie może używać dużej ilości miejsca w pamięci, ale może zobaczyć spadek wydajności lub nawet uzyskać wyjątek generowany sprzętu dla niewyrównany dostęp.  To zachowanie wyjątku można zmienić za pomocą [SetErrorMode](https://msdn.microsoft.com/library/windows/desktop/ms680621).  
-  
-*Pokaż* (opcjonalnie)  
-Wyświetla bieżącą wartość bajtu pakowania wyrównania. Wartość jest wyświetlana przez komunikat ostrzegawczy.  
-  
-*wypychane* (opcjonalnie)  
-Wypchnięcia bieżącego wyrównania pakowania wartości na wewnętrznym stosie kompilatora i ustawia wartość bieżącej wyrównanie pakowania *n*. Jeśli *n* nie zostanie określony, bieżącą wartość wyrównania pakowania zostanie przypisany.  
-  
-*POP* (opcjonalnie)  
-Usuwa rekord z góry wewnętrznego stosu kompilatora. Jeśli *n* nie zostanie określony z *pop*, wartość pakowania skojarzone z wynikowego rekordu na górze stosu jest nową wartość wyrównania pakowania. Jeśli *n* jest określony, na przykład `#pragma pack(pop, 16)`, *n* staje się nowym pakowania wartością wyrównania. Jeśli pop z *identyfikator*, na przykład `#pragma pack(pop, r1)`, a następnie wszystkie rekordy na stosie są zdjęte ze stosu dopóki rekord, który ma *identyfikator* znajduje się. Że zdjęte ze stosu rekordu i wartość pakowania skojarzone z wynikowego rekordu w górnej części stosu nowe pakowania wartością wyrównania. Jeśli pop z *identyfikator* który nie znajduje się w każdy rekord w stosie, a następnie *pop* jest ignorowana.  
-  
-*Identyfikator* (opcjonalnie)  
-Gdy jest używane z *wypychania*, przypisuje nazwę rekordowi na wewnętrznym stosie kompilatora. Gdy jest używane z *pop*, zdejmuje rekordy z wewnętrznego stosu aż do usunięcia *identyfikator* zostanie usunięta; Jeśli *identyfikator* nie zostanie znaleziony na wewnętrznym stosie, nic nie zostanie zdjęte.  
-  
-*n* (opcjonalnie)  
-Określa wartość, w bajtach, służący do pakowania. Jeśli opcja kompilatora [/ZP](../build/reference/zp-struct-member-alignment.md) nie jest ustawiona dla modułu, wartością domyślną dla *n* wynosi 8. Prawidłowe wartości to 1, 2, 4, 8 i 16. Wyrównanie elementu członkowskiego będzie znajdować się na granicy, która jest wielokrotnością liczby *n* lub wielokrotność rozmiaru elementu członkowskiego, która kwota jest mniejsza.  
-  
-`#pragma pack(pop, identifier, n)` jest niezdefiniowane.  
-  
+Jeśli zmienisz Wyrównanie struktury, nie może używać dużej ilości miejsca w pamięci, ale może zobaczyć spadek wydajności lub nawet uzyskać wyjątek generowany sprzętu dla niewyrównany dostęp.  To zachowanie wyjątku można zmienić za pomocą [SetErrorMode](https://msdn.microsoft.com/library/windows/desktop/ms680621).
+
 Aby uzyskać więcej informacji na temat sposobu modyfikowania wyrównania zobacz następujące tematy:  
   
 - [__alignof](../cpp/alignof-operator.md)  
@@ -67,8 +69,8 @@ Aby uzyskać więcej informacji na temat sposobu modyfikowania wyrównania zobac
   
 - [Przykłady wyrównania struktury](../build/examples-of-structure-alignment.md) — x64 określonych 64  
   
-    > [!WARNING]
-    > Należy pamiętać, że w programie Visual Studio 2015 i nowszych można użyć operatory alignof i alignas standardowa którego, w przeciwieństwie do `__alignof` i `declspec( align )` można przenosić między kompilatory. C++ standard nie opisano kwestii pakowania, dlatego należy nadal używać **pakiet** (lub odpowiedniego rozszerzenia na inne kompilatory) do określenia wyrównania jest mniejszy niż rozmiar word architektury docelowej.  
+   > [!WARNING]
+   > Należy pamiętać, że w programie Visual Studio 2015 i nowszych można użyć operatory alignof i alignas standardowa którego, w przeciwieństwie do `__alignof` i `declspec( align )` można przenosić między kompilatory. C++ standard nie opisano kwestii pakowania, dlatego należy nadal używać **pakiet** (lub odpowiedniego rozszerzenia na inne kompilatory) do określenia wyrównania jest mniejszy niż rozmiar word architektury docelowej.  
   
 ## <a name="examples"></a>Przykłady
 

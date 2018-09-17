@@ -18,43 +18,46 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b67520bd1cb961b7dcef7b05cb23a59ed9e6a4b2
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: d99408490874f989a5063aef29d0b0e020f2e08a
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32375080"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45719657"
 ---
 # <a name="y--ignore-precompiled-header-options"></a>/Y- (Ignoruj opcje prekompilowanego nagłówka)
-Wszystkie inne przyczyny `/Y` kompilatora opcje mają być ignorowane (i nie może sam zostać zastąpione).  
-  
-## <a name="syntax"></a>Składnia  
-  
-```  
-/Y-  
-```  
-  
-## <a name="remarks"></a>Uwagi  
- Aby uzyskać więcej informacji o prekompilowanych nagłówków zobacz:  
-  
--   [/Y (Prekompilowane nagłówki)](../../build/reference/y-precompiled-headers.md)  
-  
--   [Tworzenie prekompilowanych plików nagłówka](../../build/reference/creating-precompiled-header-files.md)  
-  
-### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Aby ustawić tę opcję kompilatora w środowisku programowania Visual Studio  
-  
-1.  Otwórz projekt **strony właściwości** okno dialogowe. Aby uzyskać więcej informacji, zobacz [Praca z właściwościami projektu](../../ide/working-with-project-properties.md).  
-  
-2.  Kliknij przycisk **C/C++** folderu.  
-  
-3.  Kliknij przycisk **wiersza polecenia** strony właściwości.  
-  
-4.  Typ opcji kompilatora w **dodatkowe opcje** pole.  
-  
-### <a name="to-set-this-compiler-option-programmatically"></a>Aby programowo ustawić tę opcję kompilatora  
-  
--   Zobacz <xref:Microsoft.VisualStudio.VCProjectEngine.VCCLCompilerTool.AdditionalOptions%2A>.  
-  
-## <a name="see-also"></a>Zobacz też  
- [Opcje kompilatora](../../build/reference/compiler-options.md)   
- [Ustawianie opcji kompilatora](../../build/reference/setting-compiler-options.md)
+
+Powoduje, że wszystkie inne `/Y` kompilatora opcje są ignorowane (i nie może sama zostać zastąpiona).
+
+## <a name="syntax"></a>Składnia
+
+```
+/Y-
+```
+
+## <a name="remarks"></a>Uwagi
+
+Aby uzyskać więcej informacji na temat wstępnie skompilowanych nagłówków zobacz:
+
+- [/Y (Prekompilowane nagłówki)](../../build/reference/y-precompiled-headers.md)
+
+- [Tworzenie prekompilowanych plików nagłówka](../../build/reference/creating-precompiled-header-files.md)
+
+### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Aby ustawić tę opcję kompilatora w środowisku programowania Visual Studio
+
+1. Otwórz projekt **stron właściwości** okno dialogowe. Aby uzyskać więcej informacji, zobacz [Praca z właściwościami projektu](../../ide/working-with-project-properties.md).
+
+1. Kliknij przycisk **C/C++** folderu.
+
+1. Kliknij przycisk **wiersza polecenia** stronę właściwości.
+
+1. Wpisz opcje kompilatora w **dodatkowe opcje** pole.
+
+### <a name="to-set-this-compiler-option-programmatically"></a>Aby programowo ustawić tę opcję kompilatora
+
+- Zobacz <xref:Microsoft.VisualStudio.VCProjectEngine.VCCLCompilerTool.AdditionalOptions%2A>.
+
+## <a name="see-also"></a>Zobacz też
+
+[Opcje kompilatora](../../build/reference/compiler-options.md)<br/>
+[Ustawianie opcji kompilatora](../../build/reference/setting-compiler-options.md)

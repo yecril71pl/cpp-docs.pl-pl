@@ -54,12 +54,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7b0d2972c7d6b1f7211d5f43fa0248a8b2980f10
-ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
+ms.openlocfilehash: a54f8e21c253c46c6a6a086fd10d193a18b7e59e
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "42465430"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45718266"
 ---
 # <a name="cmfcoutlookbartabctrl-class"></a>Klasa CMFCOutlookBarTabCtrl
 Formant karty, która ma wygląd **okienka nawigacji** w programie Microsoft Outlook.  
@@ -148,20 +148,20 @@ void AddControl(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *pWndCtrl*  
- Wskaźnik do kontrolki do dodania.  
+*pWndCtrl*<br/>
+[in] Wskaźnik do kontrolki do dodania.  
   
- [in] *lpszName*  
- Określa nazwę karty.  
+*lpszName*<br/>
+[in] Określa nazwę karty.  
   
- [in] *bDetachable*  
- W przypadku opcji TRUE strony zostanie utworzony jako odłączane.  
+*bDetachable*<br/>
+[in] W przypadku opcji TRUE strony zostanie utworzony jako odłączane.  
   
- [in] *nImageID*  
- Indeks obrazu z listy obrazów wewnętrznego dla obrazu, które mają być wyświetlane w nowej karcie.  
+*nImageID*<br/>
+[in] Indeks obrazu z listy obrazów wewnętrznego dla obrazu, które mają być wyświetlane w nowej karcie.  
   
- [in] *dwControlBarStyle*  
- Określa styl AFX_ CBRS_ * dla opakowana tafli dokowania.  
+*dwControlBarStyle*<br/>
+[in] Określa styl AFX_ CBRS_ * dla opakowana tafli dokowania.  
   
 ### <a name="remarks"></a>Uwagi  
  Aby dodać kontrolkę jako nową stronę paska outlook, należy użyć tej funkcji.  
@@ -212,14 +212,14 @@ virtual BOOL Create(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *rect*  
- Określa początkowy rozmiar i położenie w pikselach.  
+*Rect*<br/>
+[in] Określa początkowy rozmiar i położenie w pikselach.  
   
- [in] *pParentWnd*  
- Wskazuje okna nadrzędnego. Nie może mieć wartości NULL.  
+*pParentWnd*<br/>
+[in] Wskazuje okna nadrzędnego. Nie może mieć wartości NULL.  
   
- [in] *nID*  
- Identyfikator kontrolki.  
+*nID*<br/>
+[in] Identyfikator kontrolki.  
   
 ### <a name="return-value"></a>Wartość zwracana  
  Wartość różną od zera, jeśli kontrolka została utworzona pomyślnie; w przeciwnym razie 0.  
@@ -235,8 +235,8 @@ static void EnableAnimation(BOOL bEnable=TRUE);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *bWłączenie*  
- Określa, czy animacja powinna być włączona lub wyłączona.  
+*bWłączenie*<br/>
+[in] Określa, czy animacja powinna być włączona lub wyłączona.  
   
 ### <a name="remarks"></a>Uwagi  
  Wywołaj tę funkcję, aby włączyć lub wyłączyć animacji. Gdy użytkownik otworzy stronę karty, podpisu strony slajdy w górę lub w dół, jeśli animacji jest włączone. Jeśli animacji jest wyłączone, strona staje się aktywny od razu.  
@@ -268,14 +268,14 @@ void EnableScrollButtons(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *bWłączenie*  
- Określa, czy przyciski przewijania są wyświetlane.  
+*bWłączenie*<br/>
+[in] Określa, czy przyciski przewijania są wyświetlane.  
   
- [in] *bIsUp*  
- Określa, czy górny pasek przewijania jest wyświetlany.  
+*bIsUp*<br/>
+[in] Określa, czy górny pasek przewijania jest wyświetlany.  
   
- [in] *bIsDown*  
- Określa, czy pasek przewijania dołu jest wyświetlana.  
+*bIsDown*<br/>
+[in] Określa, czy pasek przewijania dołu jest wyświetlana.  
   
 ### <a name="remarks"></a>Uwagi  
  Umożliwia wyświetlanie przyciski przewijania. Ta metoda jest wywoływana przez platformę, gdy aktywną kartę zmieni się na przywracania przyciski przewijania.  
@@ -367,8 +367,8 @@ virtual BOOL SetActiveTab(int iTab);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *iTab*  
- Liczony od zera indeks kartę, aby otworzyć.  
+*iTab*<br/>
+[in] Liczony od zera indeks kartę, aby otworzyć.  
   
 ### <a name="return-value"></a>Wartość zwracana  
  Wartość różną od zera, jeśli określony karta została otwarta pomyślnie; w przeciwnym razie 0.  
@@ -384,8 +384,8 @@ void SetBorderSize(int nBorderSize);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *nBorderSize*  
- Określa nowy rozmiar obramowania w pikselach.  
+*nBorderSize*<br/>
+[in] Określa nowy rozmiar obramowania w pikselach.  
   
 ### <a name="remarks"></a>Uwagi  
  Określa nowy rozmiar obramowania i ponownie oblicza układ okna programu outlook.  
@@ -400,11 +400,11 @@ void SetPageButtonTextAlign(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *uiAlign*  
- Określa wyrównanie tekstu.  
+*uiAlign*<br/>
+[in] Określa wyrównanie tekstu.  
   
- [in] *bRedraw*  
- W przypadku opcji TRUE okna programu outlook zostanie narysowany ponownie.  
+*bRedraw*<br/>
+[in] W przypadku opcji TRUE okna programu outlook zostanie narysowany ponownie.  
   
 ### <a name="remarks"></a>Uwagi  
  Aby zmienić wyrównanie tekstu dla strony przycisków, należy użyć tej funkcji.  
@@ -430,14 +430,14 @@ BOOL SetToolbarImageList(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *uiID*  
- Określa identyfikator zasobu obrazu do załadowania.  
+*uiID*<br/>
+[in] Określa identyfikator zasobu obrazu do załadowania.  
   
- [in] *cx*  
- Określa szerokość obrazu z listy obrazów w pikselach.  
+*CX*<br/>
+[in] Określa szerokość obrazu z listy obrazów w pikselach.  
   
- [in] *clrTransp*  
- Wartości RGB, który określa przezroczysty kolor.  
+*clrTransp*<br/>
+[in] Wartości RGB, który określa przezroczysty kolor.  
   
 ### <a name="return-value"></a>Wartość zwracana  
  Zwraca wartość TRUE, jeśli to się powiedzie; w przeciwnym razie zwraca wartość FALSE.  

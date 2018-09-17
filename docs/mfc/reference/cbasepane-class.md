@@ -176,12 +176,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1485e997afda54a80cf4c44787881d8ffdb15ac4
-ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
+ms.openlocfilehash: 48c73e220c3e80abf0535e414572427f75b04511
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43683755"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45718214"
 ---
 # <a name="cbasepane-class"></a>Klasa CBasePane
 Klasa bazowa dla wszystkich okienek w MFC.  
@@ -372,8 +372,8 @@ virtual void AccNotifyObjectFocusEvent(int);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *int*  
- Nie używany.  
+*int*<br/>
+[in] Nie jest używany.  
   
 ##  <a name="addpane"></a>  CBasePane::AddPane  
  Dodaje okienko dokowania menedżera.  
@@ -383,8 +383,8 @@ void AddPane(CBasePane* pBar);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *pBar*  
- Wskaźnik do okienka do dodania.  
+*pBar*<br/>
+[in] Wskaźnik do okienka do dodania.  
   
 ### <a name="remarks"></a>Uwagi  
  Jest to wygodna metoda, która dodaje okienko dokowania menedżera. Za pomocą tej metody, nie trzeba napisać kod, który analizuje rodzaj ramki nadrzędnej.  
@@ -399,8 +399,8 @@ virtual void AdjustDockingLayout(HDWP hdwp=NULL);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [out] *hdwp*  
- Dojście do struktury zawierającej wiele położenia okna.  
+*hdwp*<br/>
+[out] Dojście do struktury zawierającej wiele położenia okna.  
   
 ### <a name="remarks"></a>Uwagi  
  Jest to wygodna metoda, która dostosowuje układ dokowania. Za pomocą tej metody, nie trzeba napisać kod, który analizuje rodzaj ramki nadrzędnej.  
@@ -427,11 +427,11 @@ virtual CSize CalcFixedLayout(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *bStretch*  
- Wskazuje, czy pasek powinien być rozciągnięty do rozmiaru ramki. *BStretch* parametru jest różna od zera, gdy pasek pasek dokowania (niedostępne dla dokowanie) nie jest to 0, gdy jest zadokowany lub przestawny (dostępne dla dokowanie).  
+*bStretch*<br/>
+[in] Wskazuje, czy pasek powinien być rozciągnięty do rozmiaru ramki. *BStretch* parametru jest różna od zera, gdy pasek pasek dokowania (niedostępne dla dokowanie) nie jest to 0, gdy jest zadokowany lub przestawny (dostępne dla dokowanie).  
   
- [in] *bHorz*  
- Wskazuje, czy pasek jest zorientowany poziomo czy pionowo. *BHorz* parametr ma wartość różną od zera, jeśli pasek jest w orientacji poziomej i wynosi 0, jeśli jest w orientacji pionowej.  
+*bHorz*<br/>
+[in] Wskazuje, czy pasek jest zorientowany poziomo czy pionowo. *BHorz* parametr ma wartość różną od zera, jeśli pasek jest w orientacji poziomej i wynosi 0, jeśli jest w orientacji pionowej.  
   
 ### <a name="return-value"></a>Wartość zwracana  
  Pasek sterowania rozmiar, w pikselach, o `CSize` obiektu.  
@@ -447,8 +447,8 @@ virtual BOOL CanAcceptPane(const CBasePane* pBar) const;
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *pBar*  
- Wskaźnik do okienka, aby zadokować.  
+*pBar*<br/>
+[in] Wskaźnik do okienka, aby zadokować.  
   
 ### <a name="return-value"></a>Wartość zwracana  
  Wartość TRUE, jeśli w kolejnym okienku można zaakceptować; w przeciwnym razie wartość FALSE.  
@@ -515,8 +515,8 @@ virtual BOOL CanBeDocked(CBasePane* pDockBar) const;
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *pDockBar*  
- Wskaźnik do innego okienka.  
+*pDockBar*<br/>
+[in] Wskaźnik do innego okienka.  
   
 ### <a name="return-value"></a>Wartość zwracana  
  Wartość TRUE, jeśli w tym okienku może być zadokowane do innego panelu. w przeciwnym razie wartość FALSE.  
@@ -597,8 +597,8 @@ virtual void CopyState(CBasePane* pOrgBar);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *pOrgBar*  
- Wskaźnik do innego okienka.  
+*pOrgBar*<br/>
+[in] Wskaźnik do innego okienka.  
   
 ### <a name="remarks"></a>Uwagi  
  Ta metoda kopiuje stan z *pOrgBar* do tego okienka.  
@@ -611,8 +611,8 @@ virtual CPaneFrameWnd* CreateDefaultMiniframe(CRect rectInitial);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *rectInitial*  
- Określa współrzędne początkowe okno mini ramki.  
+*rectInitial*<br/>
+[in] Określa współrzędne początkowe okno mini ramki.  
   
 ### <a name="return-value"></a>Wartość zwracana  
  Wskaźnik do nowego okna mini ramki lub wartość NULL, jeśli nie można utworzyć.  
@@ -639,32 +639,32 @@ virtual BOOL CreateEx(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *dwStyleEx*  
- Rozszerzone style (zobacz [CWnd::CreateEx](../../mfc/reference/cwnd-class.md#createex) Aby uzyskać więcej informacji).  
+*dwStyleEx*<br/>
+[in] Rozszerzone style (zobacz [CWnd::CreateEx](../../mfc/reference/cwnd-class.md#createex) Aby uzyskać więcej informacji).  
   
- [in] *lpszClassName*  
- Nazwa klasy okna.  
+*lpszClassName*<br/>
+[in] Nazwa klasy okna.  
   
- [in] *lpszWindowName*  
- Nazwa okna.  
+*lpszWindowName*<br/>
+[in] Nazwa okna.  
   
- [in] *dwStyle*  
- Style okna (zobacz [CWnd::CreateEx](../../mfc/reference/cwnd-class.md#createex)).  
+*dwStyle*<br/>
+[in] Style okna (zobacz [CWnd::CreateEx](../../mfc/reference/cwnd-class.md#createex)).  
   
- [in] *rect*  
- Początkowa prostokąt.  
+*Rect*<br/>
+[in] Początkowa prostokąt.  
   
- [in] *pParentWnd*  
- Wskaźnik do okna nadrzędnego.  
+*pParentWnd*<br/>
+[in] Wskaźnik do okna nadrzędnego.  
   
- [in] *nID*  
- Określa identyfikator okienka. Musi być unikatowa.  
+*nID*<br/>
+[in] Określa identyfikator okienka. Musi być unikatowa.  
   
- [in] *dwControlBarStyle*  
- Styl flagi dla okienka.  
+*dwControlBarStyle*<br/>
+[in] Styl flagi dla okienka.  
   
- [in] *pContext*  
- Wskaźnik do `CcreateContext`  
+*pContext*<br/>
+[in] Wskaźnik do `CcreateContext`  
   
 ### <a name="return-value"></a>Wartość zwracana  
  Wartość TRUE, jeśli zawartość okienka został utworzony pomyślnie; w przeciwnym razie wartość FALSE.  
@@ -699,14 +699,14 @@ virtual BOOL DockPane(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *pDockBar*  
- Wskaźnik do innego okienka.  
+*pDockBar*<br/>
+[in] Wskaźnik do innego okienka.  
   
- [in] *lprect —*  
- Określa prostokąta docelowego.  
+*lprect —*<br/>
+[in] Określa prostokąta docelowego.  
   
- [in] *dockMethod*  
- Określa metodę dokowania.  
+*dockMethod*<br/>
+[in] Określa metodę dokowania.  
   
 ### <a name="return-value"></a>Wartość zwracana  
  Wartość TRUE, jeśli pasek sterowania był zadokowany pomyślnie; w przeciwnym razie wartość FALSE.  
@@ -724,8 +724,8 @@ void DockPaneUsingRTTI(BOOL bUseDockSite);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *bUseDockSite*  
- W przypadku opcji TRUE zadokować się do witryny dokowania. W przypadku wartości FAŁSZ zadokować do nadrzędnej ramki.  
+*bUseDockSite*<br/>
+[in] W przypadku opcji TRUE zadokować się do witryny dokowania. W przypadku wartości FAŁSZ zadokować do nadrzędnej ramki.  
   
 ##  <a name="docktoframewindow"></a>  CBasePane::DockToFrameWindow  
  Dokowane dokowalne okienka w ramce.  
@@ -741,23 +741,23 @@ virtual BOOL DockToFrameWindow(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *dwAlignment*  
- Po stronie nadrzędnej ramki, który chcesz zadokować okienka, aby.  
+*dwAlignment*<br/>
+[in] Po stronie nadrzędnej ramki, który chcesz zadokować okienka, aby.  
   
- [in] *lprect —*  
- Żądany rozmiar.  
+*lprect —*<br/>
+[in] Żądany rozmiar.  
   
- [in] *dwDockFlags*  
- Ignorowane.  
+*dwDockFlags*<br/>
+[in] Ignorowane.  
   
- [in] *pRelativeBar*  
- Ignorowane.  
+*pRelativeBar*<br/>
+[in] Ignorowane.  
   
- [in] *nRelativeIndex*  
- Ignorowane.  
+*nRelativeIndex*<br/>
+[in] Ignorowane.  
   
- [in] *bOuterEdge*  
- Jeśli wartość PRAWDA, a są inne dokowalne okienka po stronie określony przez *dwAlignment*, okienka jest zadokowany poza inne okienka bliżej krawędzią nadrzędnej ramki. W przypadku wartości FAŁSZ okienka jest zadokowany bliżej do środka obszaru klienta.  
+*bOuterEdge*<br/>
+[in] Jeśli wartość PRAWDA, a są inne dokowalne okienka po stronie określony przez *dwAlignment*, okienka jest zadokowany poza inne okienka bliżej krawędzią nadrzędnej ramki. W przypadku wartości FAŁSZ okienka jest zadokowany bliżej do środka obszaru klienta.  
   
 ### <a name="return-value"></a>Wartość zwracana  
  Wartość TRUE, jeśli metoda zakończyła się pomyślnie; w przeciwnym razie wartość FALSE.  
@@ -792,8 +792,8 @@ virtual void DoPaint(CDC* pDC);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *podstawowego kontrolera domeny*  
- Wskaźnik do kontekstu urządzenia.  
+*podstawowego kontrolera domeny*<br/>
+[in] Wskaźnik do kontekstu urządzenia.  
   
 ### <a name="remarks"></a>Uwagi  
  Domyślna implementacja wywołanie bieżącego Menedżera visual w celu wypełnienia tła ( [CMFCVisualManager::OnFillBarBackground](../../mfc/reference/cmfcvisualmanager-class.md#onfillbarbackground)).  
@@ -806,8 +806,8 @@ virtual void EnableDocking(DWORD dwAlignment);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *dwAlignment*  
- Określa wyrównanie dokowania, aby włączyć.  
+*dwAlignment*<br/>
+[in] Określa wyrównanie dokowania, aby włączyć.  
   
 ### <a name="remarks"></a>Uwagi  
  Wywołaj tę metodę, aby umożliwić wyrównywanie dokowania do głównej ramki. Można przekazać kombinacja flag CBRS_ALIGN_ (Aby uzyskać więcej informacji, zobacz [CControlBar::EnableDocking](../../mfc/reference/ccontrolbar-class.md#enabledocking)).  
@@ -824,8 +824,8 @@ virtual void EnableGripper(BOOL bEnable);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *bWłączenie*  
- Wartość TRUE powoduje włączenie uchwytu; Wartość FALSE, aby je wyłączyć.  
+*bWłączenie*<br/>
+[in] Wartość TRUE powoduje włączenie uchwytu; Wartość FALSE, aby je wyłączyć.  
   
 ### <a name="remarks"></a>Uwagi  
  Struktura używa tej metody, aby umożliwić uchwytu zamiast przy użyciu stylu WS_CAPTION.  
@@ -841,14 +841,14 @@ virtual BOOL FloatPane(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *rectFloat*  
- Określa współrzędne ekranu, w którym pojawia się okienko przestawne.  
+*rectFloat*<br/>
+[in] Określa współrzędne ekranu, w którym pojawia się okienko przestawne.  
   
- [in] *dockMethod*  
- Określa metodę dock za pomocą liczb zmiennoprzecinkowych okienka.  
+*dockMethod*<br/>
+[in] Określa metodę dock za pomocą liczb zmiennoprzecinkowych okienka.  
   
- [in] *bShow*  
- Określa, czy okienko przestawne jest widoczny (PRAWDA) lub ukryte (FALSE).  
+*bShow*<br/>
+[in] Określa, czy okienko przestawne jest widoczny (PRAWDA) lub ukryte (FALSE).  
   
 ### <a name="return-value"></a>Wartość zwracana  
  Wartość TRUE, jeśli okienka został pomyślnie; przestawione. w przeciwnym razie wartość FALSE.  
@@ -867,14 +867,14 @@ virtual HRESULT get_accHelpTopic(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *pszHelpFile*  
- Adres BSTR, który odbiera pełną ścieżkę **WinHelp** pliku, który jest skojarzony z określonym obiektem, jeśli istnieje.  
+*pszHelpFile*<br/>
+[in] Adres BSTR, który odbiera pełną ścieżkę **WinHelp** pliku, który jest skojarzony z określonym obiektem, jeśli istnieje.  
   
- [in] *varChild*  
- Określa, czy tematu pomocy, które mają zostać pobrane z jednego z elementów podrzędnych obiektu lub obiektu. Ten parametr może być CHILDID_SELF (w celu uzyskania tematu pomocy dla obiektu) lub identyfikator elementu podrzędnego (w celu uzyskania tematu pomocy dla jednego elementu podrzędnego elementów obiektu).  
+*varChild*<br/>
+[in] Określa, czy tematu pomocy, które mają zostać pobrane z jednego z elementów podrzędnych obiektu lub obiektu. Ten parametr może być CHILDID_SELF (w celu uzyskania tematu pomocy dla obiektu) lub identyfikator elementu podrzędnego (w celu uzyskania tematu pomocy dla jednego elementu podrzędnego elementów obiektu).  
   
- [in] *pidTopic*  
- Identyfikuje **pomocy** temat pliku, który jest skojarzony z określonym obiektem.  
+*pidTopic*<br/>
+[in] Identyfikuje **pomocy** temat pliku, który jest skojarzony z określonym obiektem.  
   
 ### <a name="return-value"></a>Wartość zwracana  
  `CBasePane` nie implementuje tej metody. W związku z tym `CBasePane::get_accHelpTopic` zawsze zwraca wartość S_FALSE.  
@@ -890,8 +890,8 @@ virtual HRESULT get_accSelection(VARIANT* pvarChildren);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *pvarChildren*  
- Otrzymuje informacje umożliwiające identyfikację zaznaczony element podrzędny.  
+*pvarChildren*<br/>
+[in] Otrzymuje informacje umożliwiające identyfikację zaznaczony element podrzędny.  
   
 ### <a name="return-value"></a>Wartość zwracana  
  `CBasePane` nie implementuje tej metody. Jeśli *pvarChildren* ma wartość NULL, Metoda ta zwraca E_INVALIDARG. W przeciwnym razie metoda ta zwraca DISP_E_MEMBERNOTFOUND.  
@@ -1017,8 +1017,8 @@ virtual HICON GetPaneIcon(BOOL bBigIcon);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *bBigIcon*  
- Określa 32 piksele ikoną pikseli 32 w przypadku opcji TRUE; Określa 16 pikseli, 16 ikona pikseli, jeśli wartość to FALSE.  
+*bBigIcon*<br/>
+[in] Określa 32 piksele ikoną pikseli 32 w przypadku opcji TRUE; Określa 16 pikseli, 16 ikona pikseli, jeśli wartość to FALSE.  
   
 ### <a name="return-value"></a>Wartość zwracana  
  Dojście do ikony okienka. W przypadku niepowodzenia zwraca wartość NULL.  
@@ -1067,8 +1067,8 @@ virtual CPaneFrameWnd* GetParentMiniFrame(BOOL bNoAssert=FALSE) const;
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *bNoAssert*  
- W przypadku opcji TRUE, ta metoda nie sprawdza wskaźniki nie jest ważna. Jeśli ta metoda jest wywoływana, gdy aplikacja zakończy działanie, należy ustawić ten parametr na wartość TRUE.  
+*bNoAssert*<br/>
+[in] W przypadku opcji TRUE, ta metoda nie sprawdza wskaźniki nie jest ważna. Jeśli ta metoda jest wywoływana, gdy aplikacja zakończy działanie, należy ustawić ten parametr na wartość TRUE.  
   
 ### <a name="return-value"></a>Wartość zwracana  
  Nieprawidłowy wskaźnik do nadrzędnego okna mini ramki, jeśli okienko jest liczb zmiennoprzecinkowych; w przeciwnym razie wartość NULL.  
@@ -1096,8 +1096,8 @@ CMFCBaseTabCtrl* GetParentTabWnd(HWND& hWndTab) const;
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [out] *hWndTab*  
- Jeśli wartość zwracana nie jest NULL, ten parametr zawiera dojście do nadrzędnego okna z kartami.  
+*hWndTab*<br/>
+[out] Jeśli wartość zwracana nie jest NULL, ten parametr zawiera dojście do nadrzędnego okna z kartami.  
   
 ### <a name="return-value"></a>Wartość zwracana  
  Nieprawidłowy wskaźnik do elementu nadrzędnego z kartami, okno lub wartość NULL.  
@@ -1139,14 +1139,14 @@ BOOL InsertPane(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *pControlBar*  
- Wskaźnik do okienka do wstawienia.  
+*pControlBar*<br/>
+[in] Wskaźnik do okienka do wstawienia.  
   
- [in] *pTarget*  
- Wskaźnik do sąsiadujących okienka.  
+*pTarget*<br/>
+[in] Wskaźnik do sąsiadujących okienka.  
   
- [in] *bPo*  
- W przypadku opcji TRUE *pControlBar* po *pTarget*. W przypadku wartości FAŁSZ *pControlBar* jest wstawiany przed *pTarget*.  
+*bPo*<br/>
+[in] W przypadku opcji TRUE *pControlBar* po *pTarget*. W przypadku wartości FAŁSZ *pControlBar* jest wstawiany przed *pTarget*.  
   
 ### <a name="return-value"></a>Wartość zwracana  
  Wartość TRUE, jeśli metoda się powiedzie, wartość FALSE w przeciwnym razie.  
@@ -1270,14 +1270,14 @@ BOOL IsPointNearDockSite(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *punktu*  
- Określony punkt.  
+*Punkt*<br/>
+[in] Określony punkt.  
   
- [out] *dwBarAlignment*  
- Określa, które krawędzi punkt znajduje się w pobliżu. Możliwe wartości to CBRS_ALIGN_LEFT, CBRS_ALIGN_RIGHT, CBRS_ALIGN_TOP i CBRS_ALIGN_BOTTOM  
+*dwBarAlignment*<br/>
+[out] Określa, które krawędzi punkt znajduje się w pobliżu. Możliwe wartości to CBRS_ALIGN_LEFT, CBRS_ALIGN_RIGHT, CBRS_ALIGN_TOP i CBRS_ALIGN_BOTTOM  
   
- [out] *bOuterEdge*  
- Wartość TRUE, jeśli punkt znajduje się w pobliżu zewnętrznymi krawędziami witryny dokowania; Wartość FALSE w przeciwnym razie.  
+*bOuterEdge*<br/>
+[out] Wartość TRUE, jeśli punkt znajduje się w pobliżu zewnętrznymi krawędziami witryny dokowania; Wartość FALSE w przeciwnym razie.  
   
 ### <a name="return-value"></a>Wartość zwracana  
  Wartość TRUE, jeśli punkt znajduje się w pobliżu witryny dokowania; w przeciwnym razie wartość FALSE.  
@@ -1349,14 +1349,14 @@ virtual BOOL LoadState(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *lpszProfileName*  
- Nazwa profilu.  
+*lpszProfileName*<br/>
+[in] Nazwa profilu.  
   
- [in] *nIndex*  
- Indeks profilu.  
+*nIndex*<br/>
+[in] Indeks profilu.  
   
- [in] *uiID*  
- Identyfikator okienka.  
+*uiID*<br/>
+[in] Identyfikator okienka.  
   
 ### <a name="return-value"></a>Wartość zwracana  
  Wartość TRUE, jeśli stan okienka został załadowany pomyślnie; w przeciwnym razie wartość FALSE.  
@@ -1375,14 +1375,14 @@ virtual HDWP MoveWindow(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *rect*  
- Prostokąt, określając nową lokalizację i rozmiar okienka.  
+*Rect*<br/>
+[in] Prostokąt, określając nową lokalizację i rozmiar okienka.  
   
- [in] *bRepaint*  
- W przypadku opcji TRUE jest odświeżana okienka. W przypadku wartości FAŁSZ okienka nie jest odświeżana.  
+*bRepaint*<br/>
+[in] W przypadku opcji TRUE jest odświeżana okienka. W przypadku wartości FAŁSZ okienka nie jest odświeżana.  
   
- [in] *hdwp*  
- Dojście do struktury położenie okna odroczone.  
+*hdwp*<br/>
+[in] Dojście do struktury położenie okna odroczone.  
   
 ### <a name="return-value"></a>Wartość zwracana  
  Dojście do struktury położenie okna odroczonego lub wartość NULL.  
@@ -1398,8 +1398,8 @@ virtual void OnAfterChangeParent(CWnd* pWndOldParent);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *pWndOldParent*  
- Wskaźnik do poprzedniego elementu nadrzędnego.  
+*pWndOldParent*<br/>
+[in] Wskaźnik do poprzedniego elementu nadrzędnego.  
   
 ### <a name="remarks"></a>Uwagi  
  Struktura wywołuje tę metodę po nadrzędnej okienko zmian zwykle z powodu operacji dokowania lub zmiennoprzecinkową.  
@@ -1416,11 +1416,11 @@ virtual void OnBeforeChangeParent(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *pWndNewParent*  
- Wskaźnik do nowego okna nadrzędnego.  
+*pWndNewParent*<br/>
+[in] Wskaźnik do nowego okna nadrzędnego.  
   
- [in] *bDelay*  
- Określa, czy opóźnienia dostosowania układu.  
+*bDelay*<br/>
+[in] Określa, czy opóźnienia dostosowania układu.  
   
 ### <a name="remarks"></a>Uwagi  
  Platforma wywołuje tę metodę, tuż przed okienka nadrzędnego zmienia znajdujący się zwykle z powodu dokowania, zmiennoprzecinkowego lub automatycznego ukrywania operacji.  
@@ -1458,11 +1458,11 @@ virtual void OnPaneContextMenu(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *pParentFrame*  
- Wskaźnik do ramki nadrzędnej.  
+*pParentFrame*<br/>
+[in] Wskaźnik do ramki nadrzędnej.  
   
- [in] *punktu*  
- Określa lokalizację, w menu skrótów.  
+*Punkt*<br/>
+[in] Określa lokalizację, w menu skrótów.  
   
 ### <a name="remarks"></a>Uwagi  
  `OnPaneContextMenu` wywołuje Menedżera dokowania, który przechowuje listę okienek, które należą do bieżącego okna ramki. Ta metoda dodaje nazwy okienka do menu skrótów i wyświetla je. Polecenia menu pokazać lub ukryć poszczególne okienka.  
@@ -1477,8 +1477,8 @@ virtual void OnRemoveFromMiniFrame(CPaneFrameWnd* pMiniFrame);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *pMiniFrame*  
- Wskaźnik do okna mini ramki, z którego okienku zostanie usunięty.  
+*pMiniFrame*<br/>
+[in] Wskaźnik do okna mini ramki, z którego okienku zostanie usunięty.  
   
 ### <a name="remarks"></a>Uwagi  
  Struktura wywołuje tę metodę, gdy okienko zostanie usunięty z okna mini ramki nadrzędnego (w wyniku dokowania, na przykład).  
@@ -1493,8 +1493,8 @@ virtual BOOL OnSetAccData(long lVal);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *lVal*  
- Nie używany.  
+*lVal*<br/>
+[in] Nie jest używany.  
   
 ### <a name="return-value"></a>Wartość zwracana  
  Ta metoda zawsze zwraca wartość TRUE.  
@@ -1513,17 +1513,17 @@ CBasePane* PaneFromPoint(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *punktu*  
- Określa punkt, w układzie współrzędnych ekranu, aby sprawdzić.  
+*Punkt*<br/>
+[in] Określa punkt, w układzie współrzędnych ekranu, aby sprawdzić.  
   
- [in] *nSensitivity*  
- Zwiększanie obszaru search tę kwotę. Okienko zostanie spełniają kryteria wyszukiwania, jeśli dany punkt mieści się w obszarze zwiększone.  
+*nSensitivity*<br/>
+[in] Zwiększanie obszaru search tę kwotę. Okienko zostanie spełniają kryteria wyszukiwania, jeśli dany punkt mieści się w obszarze zwiększone.  
   
- [in] *bExactBar*  
- Wartość TRUE, aby zignorować *nSensitivity* parametru; w przeciwnym razie wartość FALSE.  
+*bExactBar*<br/>
+[in] Wartość TRUE, aby zignorować *nSensitivity* parametru; w przeciwnym razie wartość FALSE.  
   
- [in] *pRTCBarType*  
- Jeśli nie ma wartość NULL, metoda szuka tylko okienka określonego typu.  
+*pRTCBarType*<br/>
+[in] Jeśli nie ma wartość NULL, metoda szuka tylko okienka określonego typu.  
   
 ### <a name="return-value"></a>Wartość zwracana  
  `CBasePane`-Pochodnych obiekt, który zawiera dany punkt, lub wartość NULL, jeśli okienko nie został znaleziony.  
@@ -1548,20 +1548,20 @@ void RemovePaneFromDockManager(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *pBar*  
- Wskaźnik do okienka do usunięcia.  
+*pBar*<br/>
+[in] Wskaźnik do okienka do usunięcia.  
   
- [in] *bDestroy*  
- W przypadku opcji TRUE usunięto okienko zostanie zniszczony.  
+*bDestroy*<br/>
+[in] W przypadku opcji TRUE usunięto okienko zostanie zniszczony.  
   
- [in] *bAdjustLayout*  
- W przypadku opcji TRUE natychmiast dostosować układ dokowania.  
+*bAdjustLayout*<br/>
+[in] W przypadku opcji TRUE natychmiast dostosować układ dokowania.  
   
- [in] *bAutoHide*  
- W przypadku opcji TRUE układ dokowania jest powiązana z listy paski Autoukrywanie. W przypadku wartości FAŁSZ układ dokowania jest powiązana z listy regularne okienka.  
+*bAutoHide*<br/>
+[in] W przypadku opcji TRUE układ dokowania jest powiązana z listy paski Autoukrywanie. W przypadku wartości FAŁSZ układ dokowania jest powiązana z listy regularne okienka.  
   
- [in] *pBarReplacement*  
- Wskaźnik do okienka w którym zastępuje okienka usunięte.  
+*pBarReplacement*<br/>
+[in] Wskaźnik do okienka w którym zastępuje okienka usunięte.  
   
 ##  <a name="savestate"></a>  CBasePane::SaveState  
  Zapisuje stan w okienku w rejestrze.  
@@ -1574,14 +1574,14 @@ virtual BOOL SaveState(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *lpszProfileName*  
- Nazwa profilu.  
+*lpszProfileName*<br/>
+[in] Nazwa profilu.  
   
- [in] *nIndex*  
- Indeks profilu.  
+*nIndex*<br/>
+[in] Indeks profilu.  
   
- [in] *uiID*  
- Identyfikator okienka.  
+*uiID*<br/>
+[in] Identyfikator okienka.  
   
 ### <a name="return-value"></a>Wartość zwracana  
  Wartość TRUE, jeśli stan został zapisany pomyślnie; w przeciwnym razie wartość FALSE.  
@@ -1597,8 +1597,8 @@ CFont* SelectDefaultFont(CDC* pDC);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *podstawowego kontrolera domeny*  
- Kontekst urządzenia.  
+*podstawowego kontrolera domeny*<br/>
+[in] Kontekst urządzenia.  
   
 ### <a name="return-value"></a>Wartość zwracana  
  Wskaźnik do domyślnego [klasa CFont](../../mfc/reference/cfont-class.md) obiektu.  
@@ -1611,8 +1611,8 @@ virtual void SetControlBarStyle(DWORD dwNewStyle);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *dwNewStyle*  
- Bitowe OR kombinacji następujących możliwych wartości.  
+*dwNewStyle*<br/>
+[in] Bitowe OR kombinacji następujących możliwych wartości.  
   
 |Styl|Opis|  
 |-----------|-----------------|  
@@ -1629,8 +1629,8 @@ void SetDockingMode(AFX_DOCK_TYPE dockModeNew);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *dockModeNew*  
- Określa nowy tryb dokujące okienka.  
+*dockModeNew*<br/>
+[in] Określa nowy tryb dokujące okienka.  
   
 ### <a name="remarks"></a>Uwagi  
  Platforma obsługuje dwa tryby dokowania: standardowa i bezpośrednie.  
@@ -1647,8 +1647,8 @@ virtual void SetPaneAlignment(DWORD dwAlignment);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *dwAlignment*  
- Określa wyrównanie nowe.  
+*dwAlignment*<br/>
+[in] Określa wyrównanie nowe.  
   
 ### <a name="remarks"></a>Uwagi  
  Zazwyczaj platforma wywołuje tę metodę, gdy okienko jest zadokowany z jednej strony ramki głównego do innego.  
@@ -1670,8 +1670,8 @@ virtual void SetPaneStyle(DWORD dwNewStyle);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *dwNewStyle*  
- Określa nowy styl do ustawienia.  
+*dwNewStyle*<br/>
+[in] Określa nowy styl do ustawienia.  
   
 ### <a name="remarks"></a>Uwagi  
  Ta metoda może służyć do skonfigurowania któregokolwiek CBRS_ style, które są zdefiniowane w afxres.h. Okienko styl i wyrównanie okienko są przechowywane razem, należy ustawić nowy styl, łącząc ją z wyrównaniem bieżącego w następujący sposób.  
@@ -1693,26 +1693,26 @@ virtual HDWP SetWindowPos(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *pWndInsertAfter*  
- Identyfikuje `CWnd` obiekt, który znajduje się przed tym `CWnd` obiekt w porządku osi Z. Aby uzyskać więcej informacji, zobacz [CWnd::SetWindowPos](../../mfc/reference/cwnd-class.md#setwindowpos).  
+*pWndInsertAfter*<br/>
+[in] Identyfikuje `CWnd` obiekt, który znajduje się przed tym `CWnd` obiekt w porządku osi Z. Aby uzyskać więcej informacji, zobacz [CWnd::SetWindowPos](../../mfc/reference/cwnd-class.md#setwindowpos).  
   
- [in] *x*  
- Określa położenie po lewej stronie okna.  
+*x*<br/>
+[in] Określa położenie po lewej stronie okna.  
   
- [in] *y*  
- Określa położenie górnej części okna.  
+*y*<br/>
+[in] Określa położenie górnej części okna.  
   
- [in] *cx*  
- Określa szerokość okna.  
+*CX*<br/>
+[in] Określa szerokość okna.  
   
- [in] *cy*  
- Określa wysokość okna.  
+*CY*<br/>
+[in] Określa wysokość okna.  
   
- [in] *nFlags*  
- Określa opcje rozmiaru i położenia. Aby uzyskać więcej informacji, zobacz [CWnd::SetWindowPos](../../mfc/reference/cwnd-class.md#setwindowpos).  
+*nFlags*<br/>
+[in] Określa opcje rozmiaru i położenia. Aby uzyskać więcej informacji, zobacz [CWnd::SetWindowPos](../../mfc/reference/cwnd-class.md#setwindowpos).  
   
- [in] *hdwp*  
- Obsługa do struktury, która zawiera informacje dotyczące jednego lub kilku okien rozmiaru i pozycji.  
+*hdwp*<br/>
+[in] Obsługa do struktury, która zawiera informacje dotyczące jednego lub kilku okien rozmiaru i pozycji.  
   
 ### <a name="return-value"></a>Wartość zwracana  
  Dojście do struktury pozycji uaktualnionego odroczonego okna lub wartość NULL.  
@@ -1731,14 +1731,14 @@ virtual void ShowPane(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *bShow*  
- Określa, czy pokazać (PRAWDA) lub ukryć (FALSE) okienko.  
+*bShow*<br/>
+[in] Określa, czy pokazać (PRAWDA) lub ukryć (FALSE) okienko.  
   
- [in] *bDelay*  
- Obliczanie układu dokowania opóźniony w przypadku opcji TRUE.  
+*bDelay*<br/>
+[in] Obliczanie układu dokowania opóźniony w przypadku opcji TRUE.  
   
- [in] *bActivate*  
- W przypadku opcji TRUE okienka jest aktywny, gdy wyświetlana.  
+*bActivate*<br/>
+[in] W przypadku opcji TRUE okienka jest aktywny, gdy wyświetlana.  
   
 ### <a name="remarks"></a>Uwagi  
  Ta metoda pokazuje lub ukrywa okienko. Użyj tej metody, zamiast `ShowWindow` , ponieważ ta metoda powiadamia odpowiednie menedżerów dokowania o zmianach wprowadzonych w okienku widoczności.  
@@ -1755,11 +1755,11 @@ virtual CSize StretchPane(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *nLength*  
- Długość za pomocą którego do rozciągania okienka.  
+*nLength*<br/>
+[in] Długość za pomocą którego do rozciągania okienka.  
   
- [in] *bVert*  
- W przypadku opcji TRUE rozciąganie okienko w pionie. W przypadku wartości FAŁSZ rozciąganie okienko poziomo.  
+*bVert*<br/>
+[in] W przypadku opcji TRUE rozciąganie okienko w pionie. W przypadku wartości FAŁSZ rozciąganie okienko poziomo.  
   
 ### <a name="return-value"></a>Wartość zwracana  
  Rozmiar okienka rozproszonym.  

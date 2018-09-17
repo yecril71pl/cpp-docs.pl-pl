@@ -16,15 +16,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 017364061093ef7a3c3e006f58c331c48a8009e8
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 37544db8076d40e638b6ddf6f340070298229149
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32379903"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45722465"
 ---
 # <a name="reusing-inline-files"></a>Ponowne użycie plików wbudowanych
-Aby ponownie użyć pliku wbudowanego, określ <<*filename* w przypadku, gdy plik jest zdefiniowana i pierwszego, ponowne *filename* bez << dalej w tym samym lub innym polecenia. Polecenie w celu utworzenia pliku wbudowanego musi zostać uruchomiony przed wszystkie polecenia używające tego pliku.  
-  
-## <a name="see-also"></a>Zobacz też  
- [Pliki wbudowane w pliku reguł programu Make](../build/inline-files-in-a-makefile.md)
+
+Aby ponownie użyć pliku wbudowanego, należy określić <<*filename* w przypadku, gdy plik jest zdefiniowana i pierwszego, korzystać z nich *filename* bez << później w tym samym lub innym polecenia. Polecenie, aby utworzyć pliku wbudowanego musi zostać uruchomiony przed wszystkie polecenia, używające tego pliku.
+
+## <a name="see-also"></a>Zobacz też
+
+[Pliki wbudowane w pliku reguł programu Make](../build/inline-files-in-a-makefile.md)

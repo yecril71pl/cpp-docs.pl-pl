@@ -9,12 +9,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 996a891d62ee254fe2ce769483d34941ffb300b6
-ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
+ms.openlocfilehash: cc82a45c181d4a2b56670af9cc0d6da055737b8d
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43680542"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45722322"
 ---
 # <a name="whats-new-for-visual-c-in-visual-studio-2017"></a>Co nowego w języku Visual C++ w programie Visual Studio 2017
 
@@ -394,8 +394,7 @@ Język C++ stanowi składnik opcjonalny obciążenia Aplikacja uniwersalna syste
 ## <a name="new-options-for-c-on-universal-windows-platform-uwp"></a>Nowe opcje dla języka C++ na uniwersalnej platformy Windows (UWP)
 Masz teraz nowe opcje zapisywania i pakowania aplikacji w języku C++ platformy uniwersalnej Windows i Windows Store: infrastrukturę programu Desktop Bridge można użyć do pakietu z istniejącej aplikacji pulpitu lub obiektu COM dla wdrożenia przy użyciu Windows Store lub za pośrednictwem istniejących kanałów za pośrednictwem ładowania bezpośredniego. Nowe funkcje w systemie Windows 10 umożliwiają dodawanie funkcji platformy uniwersalnej systemu Windows do swojej aplikacji klasycznej na różne sposoby. Aby uzyskać więcej informacji, zobacz [Desktop Bridge](/windows/uwp/porting/desktop-to-uwp-root).
 
-**Visual Studio 2017, wersja 15.5**  
-A **projekt pakietu aplikacji Windows** szablonu projektu zostanie dodany, które znacznie upraszczają pracę pakowania aplikacji klasycznych przy użyciu Desktop Bridge. Jest on dostępny w obszarze **pliku | Nowe | Projekt | Zainstalowane | Visual C++ | Platforma Universal Windows**. Aby uzyskać więcej informacji, zobacz [pakietu aplikacji przy użyciu programu Visual Studio (Desktop Bridge)](/windows/uwp/porting/desktop-to-uwp-packaging-dot-net).
+**Visual Studio 2017 w wersji 15.5**: A **projekt pakietu aplikacji Windows** szablonu projektu zostanie dodany, które znacznie upraszczają pracę pakowania aplikacji klasycznych przy użyciu Desktop Bridge. Jest on dostępny w obszarze **pliku | Nowe | Projekt | Zainstalowane | Visual C++ | Platforma Universal Windows**. Aby uzyskać więcej informacji, zobacz [pakietu aplikacji przy użyciu programu Visual Studio (Desktop Bridge)](/windows/uwp/porting/desktop-to-uwp-packaging-dot-net).
 
 Jeśli piszesz nowy kod, możesz teraz używać języka C + +/ WinRT, standardowe rzutowania języka C++ dla Windows implementowanej wyłącznie w plikach nagłówkowych. Ona umożliwia zarówno tworzenie i używanie interfejsów API środowiska wykonawczego Windows przy użyciu dowolnej zgodnych ze standardami kompilator języka C++. C + +/ WinRT ma na celu zapewnienie programistów C++ przy użyciu najwyższej klasy dostępu do nowoczesnego interfejsu Windows API. Aby uzyskać więcej informacji, zobacz [C + +/ WinRT dostępne w serwisie GitHub](https://moderncpp.com/).
 

@@ -14,33 +14,36 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5c50480fae1f4f3e7421236615d059a642d1074f
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: b31f6ae5baf9aadbb40b4b45f532b344b6b2e037
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32375561"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45723856"
 ---
 # <a name="winmddelaysign-partially-sign-a-winmd"></a>/WINMDDELAYSIGN (podpisz częściowo winmd)
-Umożliwia częściowe podpisywanie pliku metadanych środowiska wykonawczego systemu Windows (.winmd) poprzez umieszczenie klucza publicznego w pliku.  
-  
-```  
-/WINMDDELAYSIGN[:NO]  
-```  
-  
-## <a name="remarks"></a>Uwagi  
- Podobny [/DelaySign](../../build/reference/delaysign-partially-sign-an-assembly.md) — opcja konsolidatora zastosowanych do pliku winmd. Użyj **opcji/winmddelaysign** Jeśli chcesz umieścić klucz publiczny w pliku winmd. Domyślnie konsolidator działa tak, jakby **/winmddelaysign: No** określono; oznacza to, że nie podpisać plik winmd.  
-  
-### <a name="to-set-this-linker-option-in-the-visual-studio-development-environment"></a>Aby ustawić tę opcję konsolidatora w środowisku programowania Visual Studio  
-  
-1.  Otwórz projekt **strony właściwości** okno dialogowe. Aby uzyskać więcej informacji, zobacz [Praca z właściwościami projektu](../../ide/working-with-project-properties.md).  
-  
-2.  Wybierz **konsolidatora** folderu.  
-  
-3.  Wybierz **metadanych systemu Windows** strony właściwości.  
-  
-4.  W **znak opóźnienia metadanych systemu Windows** listy rozwijanej wybierz odpowiednią opcję.  
-  
-## <a name="see-also"></a>Zobacz też  
- [Ustawianie opcji konsolidatora](../../build/reference/setting-linker-options.md)   
- [Opcje konsolidatora](../../build/reference/linker-options.md)
+
+Umożliwia częściowe podpisywanie pliku metadanych środowiska wykonawczego Windows (.winmd) poprzez umieszczenie klucza publicznego w pliku.
+
+```
+/WINMDDELAYSIGN[:NO]
+```
+
+## <a name="remarks"></a>Uwagi
+
+Przypomina [/DelaySign](../../build/reference/delaysign-partially-sign-an-assembly.md) opcji konsolidatora, która jest stosowana do pliku winmd. Użyj **opcji/winmddelaysign** Jeśli chcesz umieścić klucz publiczny w pliku winmd. Domyślnie konsolidator działa tak, jakby **/winmddelaysign: No** zostały określone; oznacza to, że nie podpisuje plik winmd.
+
+### <a name="to-set-this-linker-option-in-the-visual-studio-development-environment"></a>Aby ustawić tę opcję konsolidatora w środowisku programowania Visual Studio
+
+1. Otwórz projekt **stron właściwości** okno dialogowe. Aby uzyskać więcej informacji, zobacz [Praca z właściwościami projektu](../../ide/working-with-project-properties.md).
+
+1. Wybierz **konsolidatora** folderu.
+
+1. Wybierz **metadanych Windows** stronę właściwości.
+
+1. W **Windows metadanych opóźnione podpisywanie** listy rozwijanej wybierz odpowiednią opcję.
+
+## <a name="see-also"></a>Zobacz też
+
+[Ustawianie opcji konsolidatora](../../build/reference/setting-linker-options.md)<br/>
+[Opcje konsolidatora](../../build/reference/linker-options.md)

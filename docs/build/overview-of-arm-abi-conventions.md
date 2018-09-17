@@ -12,12 +12,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0e5ee2ddc29c2a014aceb8ac6356cae9e42a916d
-ms.sourcegitcommit: 76fd30ff3e0352e2206460503b61f45897e60e4f
+ms.openlocfilehash: def07f92cc05828c132ba7d34d3dcc06d4aecf50
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/13/2018
-ms.locfileid: "39027326"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45721451"
 ---
 # <a name="overview-of-arm32-abi-conventions"></a>Przegląd Konwencji ABI ARM32
 
@@ -64,16 +64,16 @@ Użycie IT zgodnie z instrukcjami w kod Thumb-2 jest niedozwolone z wyjątkiem t
 - Instrukcji docelowej musi mieć jedną z nich:
 
    |Rozkazów 16-bitowych|Class|Ograniczenia|
-    |---------------------|-----------|------------------|
-    |MOV, MVN|Przenieś|Menedżer zasobów! = PC, usług pulpitu zdalnego! = PC|
-    |LDR, LDR [S] B, H LDR [S]|Ładowanie z pamięci|Ale nie LDR literału formularzy|
-    |STR, STRB, STRH|Store pamięci||
-    |DODAJ ADC, RSB, PROGRAMOWEJ, SUB|Dodaj lub Odejmij|Ale nie SP ADD/SUBSKRYBOWANIA, PS, imm7 formularzy<br /><br /> Menedżer zasobów! = PC, Rdn! = PC, od Rdm! = PC|
-    |CMP, CMN|{1&gt;Compare&lt;1}|Menedżer zasobów! = PC, Rn! = PC|
-    |MUL|Mnożenie||
-    |USŁUGA ASR, LSL, LSR, ROR|Przesunięcie bitu||
-    |PONADTO ORR KOD IDENTYFIKACYJNY, RÓWNORZĘDNĄ, TST|Bitowe operacje arytmetyczne||
-    |BX|Gałąź do zarejestrowania|Menedżer zasobów! = PC|
+   |---------------------|-----------|------------------|
+   |MOV, MVN|Przenieś|Menedżer zasobów! = PC, usług pulpitu zdalnego! = PC|
+   |LDR, LDR [S] B, H LDR [S]|Ładowanie z pamięci|Ale nie LDR literału formularzy|
+   |STR, STRB, STRH|Store pamięci||
+   |DODAJ ADC, RSB, PROGRAMOWEJ, SUB|Dodaj lub Odejmij|Ale nie SP ADD/SUBSKRYBOWANIA, PS, imm7 formularzy<br /><br /> Menedżer zasobów! = PC, Rdn! = PC, od Rdm! = PC|
+   |CMP, CMN|{1&gt;Compare&lt;1}|Menedżer zasobów! = PC, Rn! = PC|
+   |MUL|Mnożenie||
+   |USŁUGA ASR, LSL, LSR, ROR|Przesunięcie bitu||
+   |PONADTO ORR KOD IDENTYFIKACYJNY, RÓWNORZĘDNĄ, TST|Bitowe operacje arytmetyczne||
+   |BX|Gałąź do zarejestrowania|Menedżer zasobów! = PC|
 
 Mimo że bieżący ARMv7 procesorów CPU, nie można zgłosić użycia formularzy niedozwoloną instrukcję, przyszłych generacji powinny. W przypadku wykrycia tych postaci dowolnego programu, który używa tych może zostać zakończona z powodu wyjątku niezdefiniowane instrukcji.
 
@@ -233,5 +233,5 @@ Ten licznik jest licznikiem true cyklu, nie zegara; w związku z tym zliczania c
 
 ## <a name="see-also"></a>Zobacz także
 
-[Typowe problemy przy migracji Visual C++ ARM](../build/common-visual-cpp-arm-migration-issues.md)  
-[Obsługa wyjątków ARM](../build/arm-exception-handling.md)  
+[Typowe problemy przy migracji Visual C++ ARM](../build/common-visual-cpp-arm-migration-issues.md)<br/>
+[Obsługa wyjątków ARM](../build/arm-exception-handling.md)

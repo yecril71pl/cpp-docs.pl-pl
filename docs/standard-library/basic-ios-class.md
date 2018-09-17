@@ -65,12 +65,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3abc3c08b46577f7d59b2831a68ded812a5da60a
-ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
+ms.openlocfilehash: 175d7895331ec960244354870c6bd6845baf37d1
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44110021"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45725325"
 ---
 # <a name="basicios-class"></a>basic_ios — Klasa
 
@@ -230,9 +230,11 @@ void clear(io_state state);
 
 ### <a name="parameters"></a>Parametry
 
-*Stan* (opcjonalnie) flagi, które chcesz ustawić po wyczyszczeniu wszystkie flagi. Wartość domyślna to `goodbit`.
+*state*<br/>
+(Opcjonalnie) Flagi, które chcesz ustawić po wyczyszczeniu wszystkie flagi. Wartość domyślna to `goodbit`.
 
-*reraise —* (opcjonalnie) określa czy wystawca ma być ponownie podniesiona podstawa. Wartość domyślna to **false** (nie ponownie zgłosi wyjątek).
+*reraise —*<br/>
+(Opcjonalnie) Określa, czy wyjątek powinien być ponownie podniesiona podstawa. Wartość domyślna to **false** (nie ponownie zgłosi wyjątek).
 
 ### <a name="remarks"></a>Uwagi
 

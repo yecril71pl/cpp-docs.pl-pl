@@ -22,12 +22,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 87fafb0f6eba5130524a373a065fb86ea7eacfc9
-ms.sourcegitcommit: d10a2382832373b900b1780e1190ab104175397f
+ms.openlocfilehash: d8ea4df02e87a64d70ce773ed35d1a3cb0509f8b
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43894515"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45717793"
 ---
 # <a name="order-put-functions-in-order"></a>/ORDER (Ustaw funkcje w kolejności)
 
@@ -39,7 +39,7 @@ Określ kolejność łączy oddzielnie spakowanych funkcji (COMDAT).
 
 ### <a name="parameters"></a>Parametry
 
-*Nazwa pliku*  
+*Nazwa pliku*<br/>
 Plik tekstowy, który określa kolejność łączy dla sekcji COMDAT funkcji.
 
 ## <a name="remarks"></a>Uwagi
@@ -83,5 +83,5 @@ Jeśli istnieje więcej niż jedna **/ORDER** opcja jest wyświetlana w obszarze
 
 ## <a name="see-also"></a>Zobacz też
 
-[Ustawianie opcji konsolidatora](../../build/reference/setting-linker-options.md)  
+[Ustawianie opcji konsolidatora](../../build/reference/setting-linker-options.md)<br/>
 [Opcje konsolidatora](../../build/reference/linker-options.md)

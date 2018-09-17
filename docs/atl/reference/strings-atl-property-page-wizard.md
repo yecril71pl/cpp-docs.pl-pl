@@ -16,25 +16,28 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f65b75ff7ad5af4f3552cec594497616922bd048
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 27a67430b82e1badc2beb5fecd72c55802e690cd
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43753753"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45724363"
 ---
 # <a name="strings-atl-property-page-wizard"></a>Ciągi, Kreator strony właściwości ATL
 
 Zawiera tekst skojarzony ze stroną właściwości.
 
-**Tytuł**  
-Ustawia tekst, który pojawia się na karcie strony właściwości.
+- **Tytuł**
 
-**Ciąg dokumentu**  
-Ustawia ciąg tekstowy z opisem na stronie. Te parametry mogą być wyświetlane w oknie dialogowym arkusza właściwości. Ramka właściwości można użyć opisu w etykietce wiersza lub narzędzia stanu. Ramka właściwości standardowe obecnie nie są używane te parametry.
+   Ustawia tekst, który pojawia się na karcie strony właściwości.
 
-**Plik pomocy**  
-Określa nazwę pliku pomocy, który opisuje sposób używania na stronie właściwości. Ta nazwa nie może zawierać ścieżki. Gdy użytkownik naciśnie **pomocy**, ramki spowoduje otwarcie pliku pomocy w katalogu o nazwie w wartości klucza HelpDir we wpisach rejestru strony właściwości w ramach jego identyfikator CLSID.
+- **Ciąg dokumentu**
+
+   Ustawia ciąg tekstowy z opisem na stronie. Te parametry mogą być wyświetlane w oknie dialogowym arkusza właściwości. Ramka właściwości można użyć opisu w etykietce wiersza lub narzędzia stanu. Ramka właściwości standardowe obecnie nie są używane te parametry.
+
+- **Plik pomocy**
+
+   Określa nazwę pliku pomocy, który opisuje sposób używania na stronie właściwości. Ta nazwa nie może zawierać ścieżki. Gdy użytkownik naciśnie **pomocy**, ramki spowoduje otwarcie pliku pomocy w katalogu o nazwie w wartości klucza HelpDir we wpisach rejestru strony właściwości w ramach jego identyfikator CLSID.
 
 ## <a name="see-also"></a>Zobacz też
 

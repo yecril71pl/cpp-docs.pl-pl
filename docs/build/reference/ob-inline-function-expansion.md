@@ -34,16 +34,16 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: fb7c31dca2d95232850140576be3ddc0ac695cac
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 6755025ff07d79b7e6086fc8c8a59a3bdebdb777
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32377835"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45725260"
 ---
 # <a name="ob-inline-function-expansion"></a>/Ob (Rozszerzenie funkcji wbudowanej)
 
-Określa rozszerzenie funkcji wbudowanej funkcji.
+Kontroluje wbudowane rozwijanie funkcji.
 
 ## <a name="syntax"></a>Składnia
 
@@ -51,35 +51,35 @@ Określa rozszerzenie funkcji wbudowanej funkcji.
 
 ## <a name="arguments"></a>Argumenty
 
-**0**  
-Wyłącza wbudowane rozszerzenia. Domyślnie rozszerzenie występuje według uznania kompilatora na wszystkich funkcji, często nazywane *ze śródwierszowaniem automatycznie*.
+**0**<br/>
+Wyłącza wbudowane rozszerzenia. Domyślnie rozszerzenie występuje według uznania kompilatora wszystkie funkcje, często nazywane *auto-inlining*.
 
-**1**  
-Umożliwia rozszerzanie tylko funkcje oznaczone [wbudowanego](../../cpp/inline-functions-cpp.md), `__inline`, lub `__forceinline`, lub w funkcji członkowskiej C++, zdefiniowane w deklaracji klasy.
+**1**<br/>
+Umożliwia rozwinięcie tylko funkcje oznaczone [wbudowane](../../cpp/inline-functions-cpp.md), `__inline`, lub `__forceinline`, lub w funkcji składowej C++, zdefiniowane w deklaracji klasy.
 
-**2**  
-Wartość domyślna. Umożliwia rozszerzanie funkcje oznaczone jako `inline`, `__inline`, lub `__forceinline`oraz wszystkie inne funkcje, które wybierze kompilator.
+**2**<br/>
+Wartość domyślna. Umożliwia rozwijanie funkcje oznaczone jako `inline`, `__inline`, lub `__forceinline`oraz wszystkie inne funkcje, które wybierze kompilator.
 
-**/ Ob2** jest w życie, kiedy [/O1, / O2 (Minimalizuj rozmiar, Maksymalizuj szybkość)](../../build/reference/o1-o2-minimize-size-maximize-speed.md) lub [OX (Włącz najbardziej prędkości optymalizacji)](../../build/reference/ox-full-optimization.md) jest używany.
+**/ Ob2** jest w działa, gdy [/O1, / O2 (Minimalizuj rozmiar, Maksymalizuj szybkość)](../../build/reference/o1-o2-minimize-size-maximize-speed.md) lub [OX (Włącz większość optymalizacji szybkości)](../../build/reference/ox-full-optimization.md) jest używany.
 
-Ta opcja wymaga włączenia optymalizacji za pomocą **/O1**, **/O2**, **ox**, lub **/Og**.  
+Ta opcja wymaga, aby włączyć optymalizacje przy użyciu **/O1**, **/O2**, **ox**, lub **/Og**.
 
 ## <a name="remarks"></a>Uwagi
 
-Kompilator traktuje wbudowane opcje rozszerzeń i słowa kluczowe jako sugestie. Nie ma żadnej gwarancji, że dowolnej funkcji zostaną rozwinięte wbudowanego. Można wyłączyć rozszerzenia w tekście, ale nie może wymusić kompilator wbudowanego konkretną funkcję, nawet w przypadku używania `__forceinline` — słowo kluczowe.
+Kompilator traktuje opcje rozszerzenia wbudowane i słów kluczowych jako sugestie. Nie ma żadnej gwarancji, że dowolnej funkcji będą rozwinięte wbudowanego. Można wyłączyć rozszerzenia w tekście, ale nie może wymusić na kompilatorze wbudowane określonej funkcji, nawet w przypadku używania `__forceinline` — słowo kluczowe.
 
-Można użyć `#pragma` [auto_inline](../../preprocessor/auto-inline.md) dyrektywy do wykluczenia z brany pod uwagę jako kandydatów do rozszerzenie funkcji wbudowanej funkcji. Zobacz też `#pragma` [wewnętrzne](../../preprocessor/intrinsic.md) dyrektywy.
+Możesz użyć `#pragma` [auto_inline](../../preprocessor/auto-inline.md) dyrektywy, które mają zostać wykluczone funkcje pod uwagę podczas tworzenia dla wbudowane rozwijanie. Zobacz też `#pragma` [wewnętrzne](../../preprocessor/intrinsic.md) dyrektywy.
 
 > [!NOTE]
-> Informacje, które są zbierane z profilowania uruchomień testów zastępuje optymalizacji, które w przeciwnym razie będą w efekcie Jeśli określisz **/Ob**, **/OS**, lub **/Ot**. Aby uzyskać więcej informacji, zobacz [optymalizacje Profile-Guided](../../build/reference/profile-guided-optimizations.md).
+> Informacje zebrane w trakcie przebiegów testowych profilowania zastępuje optymalizacje, które normalnie w efekcie w przypadku określenia **/Ob**, **/Os**, lub **/Ot**. Aby uzyskać więcej informacji, zobacz [optymalizacje Profile-Guided](../../build/reference/profile-guided-optimizations.md).
 
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Aby ustawić tę opcję kompilatora w środowisku programowania Visual Studio
 
-1. Otwórz projekt **strony właściwości** okno dialogowe. Aby uzyskać więcej informacji, zobacz [Praca z właściwościami projektu](../../ide/working-with-project-properties.md).
+1. Otwórz projekt **stron właściwości** okno dialogowe. Aby uzyskać więcej informacji, zobacz [Praca z właściwościami projektu](../../ide/working-with-project-properties.md).
 
-1. Rozwiń węzeł **właściwości konfiguracji**, **C/C++** i wybierz **optymalizacji**.
+1. Rozwiń **właściwości konfiguracji**, **C/C++** i wybierz **optymalizacji**.
 
-1. Modyfikowanie **rozwijania funkcji śródwierszowych** właściwości.
+1. Modyfikowanie **rozwijania funkcji Inline** właściwości.
 
 ### <a name="to-set-this-compiler-option-programmatically"></a>Aby programowo ustawić tę opcję kompilatora
 
@@ -87,6 +87,6 @@ Można użyć `#pragma` [auto_inline](../../preprocessor/auto-inline.md) dyrekty
 
 ## <a name="see-also"></a>Zobacz też
 
-[/O Opcje (Optymalizuj kod)](../../build/reference/o-options-optimize-code.md)  
-[Opcje kompilatora](../../build/reference/compiler-options.md)  
+[/O opcje (Optymalizuj kod)](../../build/reference/o-options-optimize-code.md)
+[opcje kompilatora](../../build/reference/compiler-options.md)<br/>
 [Ustawianie opcji kompilatora](../../build/reference/setting-compiler-options.md)

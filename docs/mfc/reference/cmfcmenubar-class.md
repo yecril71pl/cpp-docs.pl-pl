@@ -116,12 +116,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2933ed9fbb9a464b4458ce357ce196f2ae9df8f6
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: fa6af27d314a4c4421230a9088ead6f3d9e53af3
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43196385"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45723011"
 ---
 # <a name="cmfcmenubar-class"></a>Klasa CMFCMenuBar
 Pasek menu, który implementuje dokowania.  
@@ -265,8 +265,8 @@ virtual CSize CalcFixedLayout(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *bStretch*  
- [in] *bHorz*  
+*bStretch*<br/>
+[in] [in] *bHorz*  
   
 ### <a name="return-value"></a>Wartość zwracana  
   
@@ -282,8 +282,8 @@ virtual CSize CalcLayout(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *dwMode*  
- [in] *nLength*  
+*dwMode*<br/>
+[in] [in] *nLength*  
   
 ### <a name="return-value"></a>Wartość zwracana  
   
@@ -333,14 +333,14 @@ virtual BOOL Create(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *pParentWnd*  
- Wskaźnik do okna nadrzędnego dla nowego `CMFCMenuBar` obiektu.  
+*pParentWnd*<br/>
+[in] Wskaźnik do okna nadrzędnego dla nowego `CMFCMenuBar` obiektu.  
   
- [in] *dwStyle*  
- Styl nowy pasek menu.  
+*dwStyle*<br/>
+[in] Styl nowy pasek menu.  
   
- [in] *nID*  
- Identyfikator okna podrzędnego paska menu.  
+*nID*<br/>
+[in] Identyfikator okna podrzędnego paska menu.  
   
 ### <a name="return-value"></a>Wartość zwracana  
  Wartość TRUE, jeśli to się powiedzie; w przeciwnym razie wartość FALSE.  
@@ -366,20 +366,20 @@ virtual BOOL CreateEx(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *pParentWnd*  
- Wskaźnik do nadrzędnego okna nowej `CMFCMenuBar` obiektu.  
+*pParentWnd*<br/>
+[in] Wskaźnik do nadrzędnego okna nowej `CMFCMenuBar` obiektu.  
   
- [in] *dwCtrlStyle*  
- Dodatkowe style na nowym pasku menu.  
+*dwCtrlStyle*<br/>
+[in] Dodatkowe style na nowym pasku menu.  
   
- [in] *dwStyle*  
- Styl głównych nowy pasek menu.  
+*dwStyle*<br/>
+[in] Styl głównych nowy pasek menu.  
   
- [in] *rcBorders*  
- A `CRect` parametr, który określa rozmiary obramowania `CMFCMenuBar` obiektu.  
+*rcBorders*<br/>
+[in] A `CRect` parametr, który określa rozmiary obramowania `CMFCMenuBar` obiektu.  
   
- [in] *nID*  
- Identyfikator okna podrzędnego paska menu.  
+*nID*<br/>
+[in] Identyfikator okna podrzędnego paska menu.  
   
 ### <a name="return-value"></a>Wartość zwracana  
  Wartość różną od zera, jeśli metoda się powiedzie; w przeciwnym razie 0.  
@@ -406,14 +406,14 @@ virtual void CreateFromMenu(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *hMenu*  
- Dojście do zasobu menu. `CreateFromMenu` używa tego zasobu jako szablon dla `CMFCMenuBar`.  
+*hMenu*<br/>
+[in] Dojście do zasobu menu. `CreateFromMenu` używa tego zasobu jako szablon dla `CMFCMenuBar`.  
   
- [in] *bDefaultMenu*  
- Wartość logiczna, która wskazuje, czy nowe menu jest domyślne menu.  
+*bDefaultMenu*<br/>
+[in] Wartość logiczna, która wskazuje, czy nowe menu jest domyślne menu.  
   
- [in] *bForceUpdate*  
- Wartość logiczna, która wskazuje, czy ta metoda wymusza aktualizację menu.  
+*bForceUpdate*<br/>
+[in] Wartość logiczna, która wskazuje, czy ta metoda wymusza aktualizację menu.  
   
 ### <a name="remarks"></a>Uwagi  
  Użyj tej metody, jeśli chcesz, aby formant menu, aby te same elementy menu jako zasób menu. Ta metoda jest wywoływana po wywołaniu metody albo [CMFCMenuBar::Create](#create) lub [CMFCMenuBar::CreateEx](#createex).  
@@ -429,14 +429,14 @@ void EnableHelpCombobox(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *uiID*  
- Identyfikator polecenia dla przycisku o **pomocy** pola kombi.  
+*uiID*<br/>
+[in] Identyfikator polecenia dla przycisku o **pomocy** pola kombi.  
   
- [in] *lpszPrompt*  
- Ciąg, który zawiera tekst, który wyświetla platformę w polu kombi, jeśli jest pusta i nie jest aktywny. Na przykład "Wprowadź tutaj tekst".  
+*lpszPrompt*<br/>
+[in] Ciąg, który zawiera tekst, który wyświetla platformę w polu kombi, jeśli jest pusta i nie jest aktywny. Na przykład "Wprowadź tutaj tekst".  
   
- [in] *nComboBoxWidth*  
- Szerokość przycisku pola kombi w pikselach.  
+*nComboBoxWidth*<br/>
+[in] Szerokość przycisku pola kombi w pikselach.  
   
 ### <a name="remarks"></a>Uwagi  
  **Pomocy** przypomina pola kombi **pomocy** pola kombi na pasku menu programu Microsoft Word.  
@@ -451,8 +451,8 @@ static void EnableMenuShadows(BOOL bEnable = TRUE);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *bWłączenie*  
- Parametr logiczny, który wskazuje, czy cieni powinien być włączony w menu podręcznym.  
+*bWłączenie*<br/>
+[in] Parametr logiczny, który wskazuje, czy cieni powinien być włączony w menu podręcznym.  
   
 ### <a name="remarks"></a>Uwagi  
  Algorytmu, który korzysta z tej metody jest złożona i może obniżyć wydajność aplikacji w systemach wolniej.  
@@ -558,8 +558,8 @@ static const CFont& GetMenuFont(BOOL bHorz = TRUE);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *bHorz*  
- Parametr logiczny, który określa, czy zwracać czcionki poziomej lub pionowej. Wartość TRUE wskazuje czcionki poziomej.  
+*bHorz*<br/>
+[in] Parametr logiczny, który określa, czy zwracać czcionki poziomej lub pionowej. Wartość TRUE wskazuje czcionki poziomej.  
   
 ### <a name="return-value"></a>Wartość zwracana  
  Wskaźnik do [CFont](../../mfc/reference/cfont-class.md) parametr, który zawiera bieżącą czcionkę paska menu.  
@@ -575,8 +575,8 @@ CMFCToolBarButton* GetMenuItem(int iItem) const;
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *towaru*  
- Indeks elementu menu do zwrócenia.  
+*Towaru*<br/>
+[in] Indeks elementu menu do zwrócenia.  
   
 ### <a name="return-value"></a>Wartość zwracana  
  Wskaźnik do `CMFCToolBarButton` obiektu, który odpowiada określony przez indeks *towaru*. Wartość NULL, jeśli ten indeks jest nieprawidłowy.  
@@ -602,8 +602,8 @@ CMFCToolBarMenuButtonsButton* GetSystemButton(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *uiBtn*  
- [in] *bByCommand*  
+*uiBtn*<br/>
+[in] [in] *bByCommand*  
   
 ### <a name="return-value"></a>Wartość zwracana  
   
@@ -639,8 +639,8 @@ static void HighlightDisabledItems(BOOL bHighlight = TRUE);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *bHighlight*  
- Parametrów logiczny, który wskazuje, czy ramach wyróżnia elementy menu niedostępny.  
+*bHighlight*<br/>
+[in] Parametrów logiczny, który wskazuje, czy ramach wyróżnia elementy menu niedostępny.  
   
 ### <a name="remarks"></a>Uwagi  
  Domyślnie struktura nie zaznacz elementy menu dostępne po użytkownik umieszcza wskaźnik myszy nad nimi.  
@@ -740,14 +740,14 @@ virtual BOOL LoadState(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *lpszProfileName*  
- Ciąg, który zawiera ścieżkę klucza rejestru Windows.  
+*lpszProfileName*<br/>
+[in] Ciąg, który zawiera ścieżkę klucza rejestru Windows.  
   
- [in] *nIndex*  
- Identyfikator formantu paska menu.  
+*nIndex*<br/>
+[in] Identyfikator formantu paska menu.  
   
- [in] *uiID*  
- Zastrzeżonej wartości.  
+*uiID*<br/>
+[in] Zastrzeżonej wartości.  
   
 ### <a name="return-value"></a>Wartość zwracana  
  Wartość TRUE, jeśli metoda zakończyła się pomyślnie; w przeciwnym razie wartość FALSE.  
@@ -777,8 +777,8 @@ virtual void OnDefaultMenuLoaded(HMENU hMenu);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *hMenu*  
- Uchwyt menu dołączone do `CMFCMenuBar` obiektu.  
+*hMenu*<br/>
+[in] Uchwyt menu dołączone do `CMFCMenuBar` obiektu.  
   
 ### <a name="remarks"></a>Uwagi  
  Domyślna implementacja tej funkcji, nic nie robi. Należy przesłonić tę funkcję, aby wykonać kod niestandardowy, po ramach ładuje zasobów menu z pliku zasobów.  
@@ -805,8 +805,8 @@ virtual BOOL OnSetDefaultButtonText(CMFCToolBarButton* pButton);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *pButton*  
- Wskaźnik do [CMFCToolBarButton](../../mfc/reference/cmfctoolbarbutton-class.md) obiekt, który użytkownik chce, aby dostosować.  
+*pButton*<br/>
+[in] Wskaźnik do [CMFCToolBarButton](../../mfc/reference/cmfctoolbarbutton-class.md) obiekt, który użytkownik chce, aby dostosować.  
   
 ### <a name="return-value"></a>Wartość zwracana  
  Wartość TRUE, jeśli ma zastosowanie w ramach użytkownik zmieni się na pasku menu; w przeciwnym razie wartość FALSE.  
@@ -824,8 +824,8 @@ virtual INT_PTR OnToolHitTest(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *punktu*  
- [in] *pTI*  
+*Punkt*<br/>
+[in] [in] *pTI*  
   
 ### <a name="return-value"></a>Wartość zwracana  
   
@@ -871,14 +871,14 @@ virtual BOOL SaveState (
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *lpszProfileName*  
- Ciąg, który zawiera ścieżkę klucza rejestru Windows.  
+*lpszProfileName*<br/>
+[in] Ciąg, który zawiera ścieżkę klucza rejestru Windows.  
   
- [in] *nIndex*  
- Identyfikator formantu paska menu.  
+*nIndex*<br/>
+[in] Identyfikator formantu paska menu.  
   
- [in] *uiID*  
- Zastrzeżonej wartości.  
+*uiID*<br/>
+[in] Zastrzeżonej wartości.  
   
 ### <a name="return-value"></a>Wartość zwracana  
  Wartość TRUE, jeśli to się powiedzie; w przeciwnym razie wartość FALSE;  
@@ -896,8 +896,8 @@ void SetDefaultMenuResId(UINT uiResId);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *uiResId*  
- Identyfikator zasobu menu nowy domyślny.  
+*uiResId*<br/>
+[in] Identyfikator zasobu menu nowy domyślny.  
   
 ### <a name="remarks"></a>Uwagi  
  [CMFCMenuBar::RestoreOriginalstate](#restoreoriginalstate) metoda przywraca domyślne menu z pliku zasobów.  
@@ -927,14 +927,14 @@ void SetMaximizeMode(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *bMax*  
- Wartość logiczna, która określa tryb. Zobacz sekcję Spostrzeżenia, aby uzyskać więcej informacji.  
+*bMax*<br/>
+[in] Wartość logiczna, która określa tryb. Zobacz sekcję Spostrzeżenia, aby uzyskać więcej informacji.  
   
- [in] *pWnd*  
- Wskaźnik do okno podrzędne MDI, która zmienia się.  
+*pWnd*<br/>
+[in] Wskaźnik do okno podrzędne MDI, która zmienia się.  
   
- [in] *bRecalcLayout*  
- Wartość logiczna określająca, czy układ paska menu, powinny zostać ponownie obliczone natychmiast.  
+*bRecalcLayout*<br/>
+[in] Wartość logiczna określająca, czy układ paska menu, powinny zostać ponownie obliczone natychmiast.  
   
 ### <a name="remarks"></a>Uwagi  
  Jeśli okno podrzędne MDI jest zmaksymalizowane, pasek menu, dołączone do ramce głównej okna MDI Wyświetla menu systemu i **Minimalizuj**, **Maksymalizuj** i **Zamknij** przycisków. Jeśli *bMax* ma wartość TRUE i *pWnd* nie ma wartości NULL, jest zmaksymalizowane okno podrzędne MDI i na pasku menu należy zastosować dodatkowe kontrolki. W przeciwnym razie na pasku menu powraca do stanu regularne.  
@@ -947,8 +947,8 @@ void SetMenuButtonRTC(CRuntimeClass* pMenuButtonRTC);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *pMenuButtonRTC*  
- [CRuntimeClass](../../mfc/reference/cruntimeclass-structure.md) informacji dla klasy pochodnej z [klasa CMFCMenuButton](../../mfc/reference/cmfcmenubutton-class.md).  
+*pMenuButtonRTC*<br/>
+[in] [CRuntimeClass](../../mfc/reference/cruntimeclass-structure.md) informacji dla klasy pochodnej z [klasa CMFCMenuButton](../../mfc/reference/cmfcmenubutton-class.md).  
   
 ### <a name="remarks"></a>Uwagi  
  Gdy użytkownik dodaje nowe przyciski na pasku menu, szablon tworzy przyciski dynamicznie. Domyślnie tworzy `CMFCMenuButton` obiektów. Zastępuje tę metodę, aby zmienić typ obiekty przycisku, utworzone przez platformę.  
@@ -963,11 +963,11 @@ static BOOL SetMenuFont(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *lpLogFont*  
- Wskaźnik do [LOGFONT](/windows/desktop/api/dimm/ns-dimm-__midl___midl_itf_dimm_0000_0000_0003) strukturę, która definiuje czcionki do ustawienia.  
+*lpLogFont*<br/>
+[in] Wskaźnik do [LOGFONT](/windows/desktop/api/dimm/ns-dimm-__midl___midl_itf_dimm_0000_0000_0003) strukturę, która definiuje czcionki do ustawienia.  
   
- [in] *bHorz*  
- Wartość TRUE, jeśli chcesz, aby *lpLogFont* parametr służący do czcionki pionowej, wartość FALSE, jeśli chcesz, aby służyć do czcionki poziomej.  
+*bHorz*<br/>
+[in] Wartość TRUE, jeśli chcesz, aby *lpLogFont* parametr służący do czcionki pionowej, wartość FALSE, jeśli chcesz, aby służyć do czcionki poziomej.  
   
 ### <a name="return-value"></a>Wartość zwracana  
  Wartość TRUE, jeśli metoda zakończyła się pomyślnie; w przeciwnym razie wartość FALSE.  
@@ -985,8 +985,8 @@ static void SetRecentlyUsedMenus (BOOL bOn = TRUE);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *bOn*  
- Wartość logiczna, która kontroluje, czy są wyświetlane polecenia menu ostatnio używanych.  
+*bOn*<br/>
+[in] Wartość logiczna, która kontroluje, czy są wyświetlane polecenia menu ostatnio używanych.  
   
 ##  <a name="setshowallcommands"></a>  CMFCMenuBar::SetShowAllCommands  
  Określa, czy menu pokazuje wszystkich dostępnych poleceń.  
@@ -996,8 +996,8 @@ static void SetShowAllCommands(BOOL bShowAllCommands = TRUE);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *bShowAllCommands*  
- Parametr logiczny, który określa, czy menu podręcznym pokazuje wszystkie polecenia menu.  
+*bShowAllCommands*<br/>
+[in] Parametr logiczny, który określa, czy menu podręcznym pokazuje wszystkie polecenia menu.  
   
 ### <a name="remarks"></a>Uwagi  
  Jeśli menu nie są wyświetlane wszystkie polecenia menu, powoduje ukrycie opcji poleceń, które są rzadko używane. Aby uzyskać więcej informacji na temat wyświetlania poleceń menu zobacz [klasa CMFCMenuBar](../../mfc/reference/cmfcmenubar-class.md).  

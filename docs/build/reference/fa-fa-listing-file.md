@@ -26,12 +26,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a4014c58a7e562aa632dba62dcac04c835352cbf
-ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
+ms.openlocfilehash: 03b2f4e746632cc91b652ca76587ddad18afd165
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44101732"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45717967"
 ---
 # <a name="fa-fa-listing-file"></a>/FA, /Fa (Umieszczanie pliku na liście)
 
@@ -49,38 +49,38 @@ Domyślnie każdy plik listingu pobiera tej samej nazwie podstawowej co plik źr
 
 ### <a name="fa-arguments"></a>/FA argumentów
 
-brak  
+brak<br/>
 Tylko język asemblera znajduje się na liście.
 
-**c**  
+**c**<br/>
 Opcjonalna. Zawiera kod maszynowy na liście.
 
-**s**  
+**s**<br/>
 Opcjonalna. Zawiera kod źródłowy, na liście.
 
-**u**  
+**u**<br/>
 Opcjonalna. Koduje plik listy w formacie UTF-8 i zawiera znacznika kolejności bajtów. Domyślnie plik jest zakodowane jako ANSI. Użyj `u` do Utwórz plik listingu, w którym są wyświetlane poprawnie w dowolnym systemie lub jeśli używasz Unicode pliki kodów źródłowych jako dane wejściowe do kompilatora.
 
 Jeśli oba **s** i **u** są określone, a jeśli plik kodu źródłowego przy użyciu kodowania Unicode, inne niż UTF-8, a następnie wierszy kodu w pliku .asm mogą nie wyświetlać się poprawnie.
 
 ### <a name="fa-argument"></a>/Fa argumentu
 
-brak  
+brak<br/>
 Jeden *źródła*sam plik jest tworzony dla każdego pliku kodu źródłowego w kompilacji.
 
-*Nazwa pliku*  
+*Nazwa pliku*<br/>
 Plik listingu o nazwie *filename*.asm znajduje się w bieżącym katalogu. To jest prawidłowe tylko podczas kompilowania pliku z kodem jedno źródło.
 
-*filename.Extension*  
+*filename.Extension*<br/>
 Plik listingu o nazwie *filename.extension* znajduje się w bieżącym katalogu. To jest prawidłowe tylko podczas kompilowania pliku z kodem jedno źródło.
 
-*Katalog*__\\__  
+*Katalog*__\\__<br/>
 Jeden *$source_file*plików .asm jest tworzone i umieszczane w określonym *katalogu* dla każdego pliku kodu źródłowego w kompilacji. Należy pamiętać, wymagane ukośnik odwrotny na końcu. Dozwolone są tylko ścieżki na bieżącym dysku.
 
-*katalog*__\\__*nazwy pliku*  
+*katalog*__\\__*nazwy pliku*<br/>
 Plik listingu o nazwie *filename*.asm znajduje się w określonym *katalogu*. To jest prawidłowe tylko podczas kompilowania pliku z kodem jedno źródło.
 
-*katalog*__\\__*filename.extension*  
+*katalog*__\\__*filename.extension*<br/>
 Plik listingu o nazwie *filename.extension* znajduje się w określonym *katalogu*. To jest prawidłowe tylko podczas kompilowania pliku z kodem jedno źródło.
 
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Aby ustawić tę opcję kompilatora w środowisku programowania Visual Studio
@@ -98,6 +98,7 @@ Należy pamiętać, że ustawienie oba **produkt wyjściowy asemblera** i **Uży
 - Zobacz <xref:Microsoft.VisualStudio.VCProjectEngine.VCCLCompilerTool.AssemblerListingLocation%2A> lub <xref:Microsoft.VisualStudio.VCProjectEngine.VCCLCompilerTool.AssemblerOutput%2A>. Aby określić **/fau**, zobacz <xref:Microsoft.VisualStudio.VCProjectEngine.VCCLCompilerTool.AdditionalOptions%2A>.
 
 ## <a name="example"></a>Przykład
+
 Następujące polecenie w wierszu tworzy połączone źródło i kod maszynowy listę o nazwie HELLO.cod:
 
 ```cmd
@@ -106,7 +107,7 @@ CL /FAcs HELLO.CPP
 
 ## <a name="see-also"></a>Zobacz też
 
-[Plik wyjściowy (/ F) opcje](../../build/reference/output-file-f-options.md)   
-[Opcje kompilatora](../../build/reference/compiler-options.md)   
-[Ustawianie opcji kompilatora](../../build/reference/setting-compiler-options.md)   
+[Plik wyjściowy (/ F) opcje](../../build/reference/output-file-f-options.md)
+[opcje kompilatora](../../build/reference/compiler-options.md)<br/>
+[Ustawianie opcji kompilatora](../../build/reference/setting-compiler-options.md)<br/>
 [Określanie nazwy ścieżki](../../build/reference/specifying-the-pathname.md)

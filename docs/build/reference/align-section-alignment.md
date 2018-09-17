@@ -21,12 +21,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 543ea30b06f62939f378167d8598c73f66061f46
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: cb92d4b16be7903004831ffb25e2891f498a8989
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32370309"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45718253"
 ---
 # <a name="align-section-alignment"></a>/ALIGN (Wyrównanie sekcji)
 
@@ -36,26 +36,26 @@ ms.locfileid: "32370309"
 
 ### <a name="arguments"></a>Argumenty
 
-*Numer*  
+*Numer*<br/>
 Wartość wyrównania w bajtach.
 
 ## <a name="remarks"></a>Uwagi
 
-**/ALIGN** opcja określa wyrównanie każdej z sekcji w liniowej przestrzeni adresowej programu. *Numer* argument w bajtach i musi być potęgą liczby dwa. Wartość domyślna to 4K (4096). Konsolidator wygeneruje ostrzeżenie, jeśli wyrównanie tworzy nieprawidłowy obraz.
+**/ALIGN** opcja określa wyrównanie każdej sekcji w liniowej przestrzeni adresowej programu. *Numer* argument w bajtach i musi być potęgą liczby dwa. Wartość domyślna to 4K (4096). Konsolidator generuje ostrzeżenie, jeśli wyrównanie generuje nieprawidłowy obraz.
 
-Jeśli piszesz aplikację, takie jak sterownik urządzenia, należy nie należy zmodyfikować wyrównania.
+Chyba, że piszesz aplikację taką jak sterownika urządzenia, nie należy do modyfikowania wyrównania.
 
-Istnieje możliwość modyfikowania wyrównanie sekcji z parametrem Wyrównaj do [/SECTION](../../build/reference/section-specify-section-attributes.md) opcji.
+Istnieje możliwość modyfikowania wyrównania sekcji przy użyciu parametrów wyrównanie do [/SECTION](../../build/reference/section-specify-section-attributes.md) opcji.
 
-Wartość wyrównania, określonym przez użytkownika nie może być mniejszy niż największa wyrównanie sekcji.
+Wartość wyrównania, który określisz nie może być mniejszy niż największa wyrównanie sekcji.
 
 ### <a name="to-set-this-linker-option-in-the-visual-studio-development-environment"></a>Aby ustawić tę opcję konsolidatora w środowisku programowania Visual Studio
 
-1. Otwórz projekt **strony właściwości** okno dialogowe. Aby uzyskać więcej informacji, zobacz [Ustawianie właściwości projektu Visual C++](../../ide/working-with-project-properties.md).
+1. Otwórz projekt **stron właściwości** okno dialogowe. Aby uzyskać więcej informacji, zobacz [ustawienie właściwości projektu Visual C++](../../ide/working-with-project-properties.md).
 
-1. Wybierz **właściwości konfiguracji** > **konsolidatora** > **wiersza polecenia** strony właściwości.
+1. Wybierz **właściwości konfiguracji** > **konsolidatora** > **wiersza polecenia** stronę właściwości.
 
-1. Wybierz opcję w **dodatkowe opcje** pole. Wybierz **OK** lub **Zastosuj** do zastosowania zmiany.
+1. Wpisz opcje w **dodatkowe opcje** pole. Wybierz **OK** lub **Zastosuj** do zastosowania zmiany.
 
 ### <a name="to-set-this-linker-option-programmatically"></a>Aby programowo ustawić tę opcję konsolidatora
 
@@ -63,5 +63,5 @@ Wartość wyrównania, określonym przez użytkownika nie może być mniejszy ni
 
 ## <a name="see-also"></a>Zobacz także
 
-[Ustawianie opcji konsolidatora](../../build/reference/setting-linker-options.md)  
-[Opcje konsolidatora](../../build/reference/linker-options.md)  
+[Ustawianie opcji konsolidatora](../../build/reference/setting-linker-options.md)<br/>
+[Opcje konsolidatora](../../build/reference/linker-options.md)

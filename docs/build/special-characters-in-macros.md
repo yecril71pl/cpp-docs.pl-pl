@@ -14,26 +14,28 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c271d2f39a4d81776c06a107616170192e82d40d
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 55a94001e2f912049518120911c25ae64afa24da
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32380176"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45721431"
 ---
 # <a name="special-characters-in-macros"></a>Znaki specjalne w makrach
-Numer podpisać (#) po definicji określa komentarz. Aby określić znak numeru literału w makrze, użyj daszek (^), podobnie jak w ^ #.  
-  
- Znak dolara ($) określa wywołanie makra. Aby określić $ literału, użyj $$.  
-  
- Aby rozszerzyć definicji do nowego wiersza, kończyć wiersz z ukośnik odwrotny (\\). Po wywołaniu makra znaku ukośnika odwrotnego plus nowego wiersza zostanie zastąpiony się spacją. Aby określić literału ukośnikiem na końcu wiersza, należy poprzedzić go daszek (^), lub po nim ze specyfikatorem komentarza (#).  
-  
- Aby określić znak nowego wiersza literału, Zakończ wiersz z daszek (^), jak w programie:  
-  
-```  
-CMDS = cls^  
-dir  
-```  
-  
-## <a name="see-also"></a>Zobacz też  
- [Definiowanie makro NMAKE](../build/defining-an-nmake-macro.md)
+
+Numer Zaloguj (#), po definicji określa komentarz. Aby określić znak numeru literału w makrze, użyj daszek (^), podobnie jak w ^ #.
+
+Określa znak dolara ($), wywołanie makra. Aby określić literał $, użyj $$.
+
+Aby rozszerzyć definicji do nowego wiersza, zakończenia wiersza znakiem kreski ułamkowej odwróconej (\\). Po wywołaniu makra znak ukośnika odwrotnego oraz nowego wiersza jest zastępowany spację. Aby określić literału ukośnik odwrotny na końcu wiersza, należy poprzedzić znak daszka (^), lub należy postępować zgodnie ze specyfikatorem komentarza (#).
+
+Aby określić znak literału nowego wiersza, zakończenia wiersza z daszkiem (^), jak w programie:
+
+```
+CMDS = cls^
+dir
+```
+
+## <a name="see-also"></a>Zobacz też
+
+[Definiowanie makro NMAKE](../build/defining-an-nmake-macro.md)

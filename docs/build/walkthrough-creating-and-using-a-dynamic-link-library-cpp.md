@@ -15,12 +15,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 535b0a0777c481a235f2a8999f004418e8d0eeb7
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: bb47b64277aea568cf3cad8e2c4b6203e43f1b2f
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43215427"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45723259"
 ---
 # <a name="walkthrough-create-and-use-your-own-dynamic-link-library-c"></a>Wskazówki: Tworzenie i używanie własnych dynamicznej biblioteki łączy (C++)
 
@@ -409,7 +409,7 @@ Podczas wdrażania aplikacji, należy wdrożyć używa biblioteki dll. Najprosts
 
 ## <a name="see-also"></a>Zobacz też
 
-[Biblioteki DLL w programie Visual C++](../build/dlls-in-visual-cpp.md)  
-[Wdrażanie aplikacji komputerowych](../ide/deploying-native-desktop-applications-visual-cpp.md)  
-[Przewodnik: wdrażanie Twojego programu (C++)](../ide/walkthrough-deploying-your-program-cpp.md)  
-[Wywoływanie funkcji DLL z aplikacji języka Visual Basic](../build/calling-dll-functions-from-visual-basic-applications.md)
+[Biblioteki DLL w programie Visual C++](../build/dlls-in-visual-cpp.md)<br/>
+[Wdrażanie aplikacji komputerowych](../ide/deploying-native-desktop-applications-visual-cpp.md)<br/>
+[Przewodnik: Wdrażanie Twojego programu (C++)](../ide/walkthrough-deploying-your-program-cpp.md)
+[wywoływanie funkcji DLL z aplikacji języka Visual Basic](../build/calling-dll-functions-from-visual-basic-applications.md)

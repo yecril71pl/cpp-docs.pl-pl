@@ -52,12 +52,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: aef6192218f5fae40bca6aa6fb8202a0d238091a
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: b2ae5b321ce9de1e834119e764a65df638d97e10
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43195835"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45721191"
 ---
 # <a name="cmfcshelllistctrl-class"></a>Klasa CMFCShellListCtrl
 `CMFCShellListCtrl` Klasa oferuje funkcję formantu listy Windows i rozszerza ją przez uwzględnienie możliwości wyświetlenia listy elementów powłoki.  
@@ -130,11 +130,11 @@ virtual HRESULT DisplayFolder(LPAFX_SHELLITEMINFO lpItemInfo);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *lpszPath*  
- Ciąg, który zawiera ścieżkę do folderu.  
+*lpszPath*<br/>
+[in] Ciąg, który zawiera ścieżkę do folderu.  
   
- [in] *lpItemInfo*  
- Wskaźnik do `LPAFX_SHELLITEMINFO` strukturę, która opisuje folder, aby wyświetlić.  
+*lpItemInfo*<br/>
+[in] Wskaźnik do `LPAFX_SHELLITEMINFO` strukturę, która opisuje folder, aby wyświetlić.  
   
 ### <a name="return-value"></a>Wartość zwracana  
  S_OK w przypadku powodzenia; W przeciwnym razie E_FAIL.  
@@ -157,8 +157,8 @@ void EnableShellContextMenu(BOOL bEnable = TRUE);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *bWłączenie*  
- Wartość logiczna określająca, czy struktura umożliwia menu skrótów.  
+*bWłączenie*<br/>
+[in] Wartość logiczna określająca, czy struktura umożliwia menu skrótów.  
   
 ##  <a name="getcurrentfolder"></a>  CMFCShellListCtrl::GetCurrentFolder  
  Pobiera ścieżkę do aktualnie wybranego folderu w [CMFCShellListCtrl](../../mfc/reference/cmfcshelllistctrl-class.md) obiektu.  
@@ -168,8 +168,8 @@ BOOL GetCurrentFolder(CString& strPath) const;
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [out] *strPath*  
- Odwołanie do parametru ciągu, którego metoda zapisuje ścieżki.  
+*strPath*<br/>
+[out] Odwołanie do parametru ciągu, którego metoda zapisuje ścieżki.  
   
 ### <a name="return-value"></a>Wartość zwracana  
  Wartość różną od zera, jeśli to się powiedzie; w przeciwnym razie 0.  
@@ -185,8 +185,8 @@ BOOL GetCurrentFolderName(CString& strName) const;
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [out] *strName*  
- Odwołanie do parametru ciągu, którego metoda zapisuje nazwę.  
+*strName*<br/>
+[out] Odwołanie do parametru ciągu, którego metoda zapisuje nazwę.  
   
 ### <a name="return-value"></a>Wartość zwracana  
  Wartość różną od zera, jeśli to się powiedzie; w przeciwnym razie 0.  
@@ -227,11 +227,11 @@ BOOL GetItemPath(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [out] *strPath*  
- Odwołanie do ciągu, który odbiera ścieżki.  
+*strPath*<br/>
+[out] Odwołanie do ciągu, który odbiera ścieżki.  
   
- [in] *towaru*  
- Indeks elementu listy.  
+*Towaru*<br/>
+[in] Indeks elementu listy.  
   
 ### <a name="return-value"></a>Wartość zwracana  
  Wartość TRUE, jeśli to się powiedzie; Wartość FALSE w przeciwnym razie.  
@@ -273,8 +273,8 @@ virtual int OnCompareItems(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *lParam1*  
- [in] *lParam2*  
+*lParam1*<br/>
+[in] [in] *lParam2*  
  [in] *iColumn*  
   
 ### <a name="return-value"></a>Wartość zwracana  
@@ -291,11 +291,11 @@ virtual void OnFormatFileDate(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *tmFile*  
- Data skojarzonych z plikiem.  
+*tmFile*<br/>
+[in] Data skojarzonych z plikiem.  
   
- [out] *str*  
- Ciąg, który zawiera datę sformatowanym plikiem.  
+*str*<br/>
+[out] Ciąg, który zawiera datę sformatowanym plikiem.  
   
 ### <a name="remarks"></a>Uwagi  
  Gdy [klasa CMFCShellListCtrl](../../mfc/reference/cmfcshelllistctrl-class.md) obiekt wyświetla datę skojarzonych z plikiem, przekonwertuj tej daty do formatu ciągu. `CMFCShellListCtrl` Używa tej metody, aby tej konwersji. Domyślnie ta metoda używa bieżących ustawień regionalnych do formatowania daty w ciągu.  
@@ -310,11 +310,11 @@ virtual void OnFormatFileSize(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *lFileSize*  
- Rozmiar pliku który będzie wyświetlany w ramach.  
+*lFileSize*<br/>
+[in] Rozmiar pliku który będzie wyświetlany w ramach.  
   
- [out] *str*  
- Ciąg, który zawiera rozmiar sformatowanym plikiem.  
+*str*<br/>
+[out] Ciąg, który zawiera rozmiar sformatowanym plikiem.  
   
 ### <a name="remarks"></a>Uwagi  
  Gdy [klasa CMFCShellListCtrl](../../mfc/reference/cmfcshelllistctrl-class.md) obiektu wymaganych, aby wyświetlić rozmiar pliku, należy ją przekonwertować rozmiar pliku w formacie ciągu. `CMFCShellListCtrl` Używa tej metody, aby tej konwersji. Domyślnie ta metoda konwertuje rozmiar pliku w bajtach na kilobajtów, a następnie używa bieżących ustawień regionalnych w celu sformatowania rozmiar jako ciąg.  
@@ -329,11 +329,11 @@ virtual int OnGetItemIcon(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *towaru*  
- Indeks elementu.  
+*Towaru*<br/>
+[in] Indeks elementu.  
   
- [in] *pItem*  
- Parametr LPAFX_SHELLITEMINFO, który zawiera opis elementu.  
+*pItem*<br/>
+[in] Parametr LPAFX_SHELLITEMINFO, który zawiera opis elementu.  
   
 ### <a name="return-value"></a>Wartość zwracana  
  Indeks obrazu ikony, jeśli to się powiedzie; -1, jeśli funkcja kończy się niepowodzeniem.  
@@ -354,14 +354,14 @@ virtual CString OnGetItemText(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *towaru*  
- Indeks elementu.  
+*Towaru*<br/>
+[in] Indeks elementu.  
   
- [in] *iColumn*  
- Kolumna zainteresowania.  
+*iColumn*<br/>
+[in] Kolumna zainteresowania.  
   
- [in] *pItem*  
- Parametr LPAFX_SHELLITEMINFO, który zawiera opis elementu.  
+*pItem*<br/>
+[in] Parametr LPAFX_SHELLITEMINFO, który zawiera opis elementu.  
   
 ### <a name="return-value"></a>Wartość zwracana  
  Element `CString` zawierający tekst skojarzony z elementem.  
@@ -402,8 +402,8 @@ void SetItemTypes(SHCONTF nTypes);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *nTypes*  
- Lista elementów typy, które `CMFCShellListCtrl` obiekt obsługuje.  
+*nTypes*<br/>
+[in] Lista elementów typy, które `CMFCShellListCtrl` obiekt obsługuje.  
   
 ### <a name="remarks"></a>Uwagi  
  Aby uzyskać więcej informacji dotyczących listy typów elementów, zobacz [SHCONTF](/windows/desktop/api/shobjidl_core/ne-shobjidl_core-_shcontf).  

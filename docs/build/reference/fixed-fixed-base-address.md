@@ -1,5 +1,5 @@
 ---
-title: -FIXED (stałe adresy podstawowe) | Dokumentacja firmy Microsoft
+title: -FIXED (stały adres podstawowy) | Dokumentacja firmy Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -20,41 +20,44 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 08b1193b7cfe58aed45e4feec598a49227eafc87
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 697f6ccfd98059175311cd04e4e82038877b2110
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32374164"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45723401"
 ---
 # <a name="fixed-fixed-base-address"></a>/FIXED (Stałe adresy podstawowe)
-```  
-/FIXED[:NO]  
-```  
-  
-## <a name="remarks"></a>Uwagi  
- Informuje system operacyjny, aby załadować program tylko na jego preferowany adres podstawowy. Preferowany adres podstawowy jest niedostępny, system operacyjny nie ładuje plik. Aby uzyskać więcej informacji, zobacz [/BASE (adres podstawowy)](../../build/reference/base-base-address.md).  
-  
- / Fixed: no jest ustawieniem domyślnym dla biblioteki DLL, a Fixed jest domyślne ustawienie dla dowolnego typu projektu.  
-  
- W przypadku Fixed łącze nie generuje sekcji relokacji w programie. W czasie wykonywania Jeśli system operacyjny nie może załadować program pod określonym adresem go generuje komunikat o błędzie i program nie zostanie załadowany.  
-  
- Określ/Fixed: No, aby wygenerować sekcji relokacji w programie.  
-  
-### <a name="to-set-this-linker-option-in-the-visual-studio-development-environment"></a>Aby ustawić tę opcję konsolidatora w środowisku programowania Visual Studio  
-  
-1.  Otwórz projekt **strony właściwości** okno dialogowe. Aby uzyskać więcej informacji, zobacz [Praca z właściwościami projektu](../../ide/working-with-project-properties.md).  
-  
-2.  Wybierz **konsolidatora** folderu.  
-  
-3.  Wybierz **wiersza polecenia** strony właściwości.  
-  
-4.  Wpisz nazwę opcji i ustawień **dodatkowe opcje** pole.  
-  
-### <a name="to-set-this-linker-option-programmatically"></a>Aby programowo ustawić tę opcję konsolidatora  
-  
--   Zobacz <xref:Microsoft.VisualStudio.VCProjectEngine.VCLinkerTool.AdditionalOptions%2A>.  
-  
-## <a name="see-also"></a>Zobacz też  
- [Ustawianie opcji konsolidatora](../../build/reference/setting-linker-options.md)   
- [Opcje konsolidatora](../../build/reference/linker-options.md)
+
+```
+/FIXED[:NO]
+```
+
+## <a name="remarks"></a>Uwagi
+
+Informuje system operacyjny, aby załadować program tylko pod swoim preferowanym adresem bazowym. Jeśli preferowany adres podstawowy jest niedostępny, system operacyjny nie ładuje pliku. Aby uzyskać więcej informacji, zobacz [uwzględniają (adres podstawowy)](../../build/reference/base-base-address.md).
+
+/ Fixed: no jest ustawieniem domyślnym dla DLL, a/Fixed jest domyślne ustawienie dla innych typów projektów.
+
+Po określeniu/Fixed, łącze nie generuje sekcji relokacji w programie. W czasie wykonywania Jeśli system operacyjny nie jest w stanie załadować programu pod podanym adresem go generuje komunikat o błędzie i nie ładuje programu.
+
+Określ/Fixed: No, aby generować sekcję relokacji w programie.
+
+### <a name="to-set-this-linker-option-in-the-visual-studio-development-environment"></a>Aby ustawić tę opcję konsolidatora w środowisku programowania Visual Studio
+
+1. Otwórz projekt **stron właściwości** okno dialogowe. Aby uzyskać więcej informacji, zobacz [Praca z właściwościami projektu](../../ide/working-with-project-properties.md).
+
+1. Wybierz **konsolidatora** folderu.
+
+1. Wybierz **wiersza polecenia** stronę właściwości.
+
+1. Wpisz opcje nazwy i ustawienia w **dodatkowe opcje** pole.
+
+### <a name="to-set-this-linker-option-programmatically"></a>Aby programowo ustawić tę opcję konsolidatora
+
+- Zobacz <xref:Microsoft.VisualStudio.VCProjectEngine.VCLinkerTool.AdditionalOptions%2A>.
+
+## <a name="see-also"></a>Zobacz też
+
+[Ustawianie opcji konsolidatora](../../build/reference/setting-linker-options.md)<br/>
+[Opcje konsolidatora](../../build/reference/linker-options.md)

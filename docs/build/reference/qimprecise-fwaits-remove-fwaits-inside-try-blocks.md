@@ -17,40 +17,43 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a688f4b9f8f3c9302bb6a49e4b0a94a0e0931b33
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 98dc9416ecee69bca285ff54d6321144c4a3fd02
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32378057"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45724428"
 ---
 # <a name="qimprecisefwaits-remove-fwaits-inside-try-blocks"></a>/Qimprecise_fwaits (Usuwanie fwaits wewnątrz bloków Try)
-Usuwa `fwait` polecenia wewnętrzne `try` blokuje, korzystając z [/FP: except](../../build/reference/fp-specify-floating-point-behavior.md) — opcja kompilatora.  
-  
-## <a name="syntax"></a>Składnia  
-  
-```  
-/Qimprecise_fwaits  
-```  
-  
-## <a name="remarks"></a>Uwagi  
- Ta opcja nie ma efektu Jeśli **/FP: except** również nie określono. Jeśli określisz **/FP: except** opcja, kompilator powoduje wstawienie `fwait` polecenia wokół każdego wiersza kodu w `try` bloku. W ten sposób kompilator może wskazywać określonego wiersza kodu, który spowoduje utworzenie Wystąpił wyjątek. **/ Qimprecise_fwaits** usuwa wewnętrzny `fwait` instrukcje, pozostawiając tylko czeka wokół `try` bloku. Poprawia to wydajność, ale kompilator tylko będą mogli powiedzieć, które `try` wyjątek nie wiersza, który powoduje, że blok.  
-  
-### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Aby ustawić tę opcję kompilatora w środowisku programowania Visual Studio  
-  
-1.  Otwórz projekt **strony właściwości** okno dialogowe. Aby uzyskać więcej informacji, zobacz [Praca z właściwościami projektu](../../ide/working-with-project-properties.md).  
-  
-2.  Kliknij przycisk **C/C++** folderu.  
-  
-3.  Kliknij przycisk **wiersza polecenia** strony właściwości.  
-  
-4.  Typ opcji kompilatora w **dodatkowe opcje** pole.  
-  
-### <a name="to-set-this-compiler-option-programmatically"></a>Aby programowo ustawić tę opcję kompilatora  
-  
--   Zobacz <xref:Microsoft.VisualStudio.VCProjectEngine.VCCLCompilerTool.AdditionalOptions%2A>.  
-  
-## <a name="see-also"></a>Zobacz też  
- [/Q opcje (operacje na niskim poziomie)](../../build/reference/q-options-low-level-operations.md)   
- [Opcje kompilatora](../../build/reference/compiler-options.md)   
- [Ustawianie opcji kompilatora](../../build/reference/setting-compiler-options.md)
+
+Usuwa `fwait` polecenia wewnętrzne `try` blokowana, gdy używasz [/FP: except](../../build/reference/fp-specify-floating-point-behavior.md) — opcja kompilatora.
+
+## <a name="syntax"></a>Składnia
+
+```
+/Qimprecise_fwaits
+```
+
+## <a name="remarks"></a>Uwagi
+
+Ta opcja nie obowiązuje, jeśli **/FP: except** również nie zostanie określony. Jeśli określisz **/FP: except** opcja, kompilator wstawi `fwait` polecenia wokół każdego wiersza kodu w `try` bloku. Dzięki temu kompilator może wskazywać konkretnego wiersza kodu, który powoduje wyjątek. **/ Qimprecise_fwaits** usuwa wewnętrzny `fwait` instrukcje, pozostawiając tylko czeka wokół `try` bloku. Poprawia to wydajność, ale kompilator będzie tylko można powiedzieć, który `try` bloku powoduje, że wyjątek nie która linia.
+
+### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Aby ustawić tę opcję kompilatora w środowisku programowania Visual Studio
+
+1. Otwórz projekt **stron właściwości** okno dialogowe. Aby uzyskać więcej informacji, zobacz [Praca z właściwościami projektu](../../ide/working-with-project-properties.md).
+
+1. Kliknij przycisk **C/C++** folderu.
+
+1. Kliknij przycisk **wiersza polecenia** stronę właściwości.
+
+1. Wpisz opcje kompilatora w **dodatkowe opcje** pole.
+
+### <a name="to-set-this-compiler-option-programmatically"></a>Aby programowo ustawić tę opcję kompilatora
+
+- Zobacz <xref:Microsoft.VisualStudio.VCProjectEngine.VCCLCompilerTool.AdditionalOptions%2A>.
+
+## <a name="see-also"></a>Zobacz też
+
+[/Q opcje (operacje na niskim poziomie)](../../build/reference/q-options-low-level-operations.md)
+[opcje kompilatora](../../build/reference/compiler-options.md)<br/>
+[Ustawianie opcji kompilatora](../../build/reference/setting-compiler-options.md)

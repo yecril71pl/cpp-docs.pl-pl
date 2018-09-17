@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: ab2dd3b359806aa6b5d54e476ec3581f7bb31d02
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 6e084a0f876d0b2598a5317e15057162c602474a
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43201782"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45717122"
 ---
 # <a name="dbtable"></a>db_table
 
@@ -44,14 +44,14 @@ Zostanie otwarty tabeli OLE DB.
 *db_table*  
 Ciąg określający nazwę tabeli bazy danych (na przykład "produkty").
 
-*Nazwa* (opcjonalnie)  
-Nazwa uchwyt, używanej do pracy z tabeli. Należy określić ten parametr, aby zwrócić więcej niż jeden wiersz wyników. **db_table —** generuje zmienna o określonej *nazwa* który może służyć do przechodzenia zestawu wierszy lub wykonywać wiele zapytań akcji.
+*Nazwa*  
+(Opcjonalnie) Nazwa uchwyt, używanej do pracy z tabeli. Należy określić ten parametr, aby zwrócić więcej niż jeden wiersz wyników. **db_table —** generuje zmienna o określonej *nazwa* który może służyć do przechodzenia zestawu wierszy lub wykonywać wiele zapytań akcji.
 
-*source_name* (opcjonalnie)  
-`CSession` Zmiennej lub wystąpienia klasy, która ma `db_source` zastosowany do niego, w którym polecenie zostanie wykonane. Zobacz [db_source —](../windows/db-source.md).
+*source_name*  
+(Opcjonalnie) `CSession` Zmiennej lub wystąpienia klasy, która ma `db_source` zastosowany do niego, w którym polecenie zostanie wykonane. Zobacz [db_source —](../windows/db-source.md).
 
-*HRESULT* (opcjonalnie)  
-Identyfikuje zmienna, która otrzyma wartość HRESULT dla tego polecenia bazy danych. Jeśli zmienna nie istnieje, jego zostanie automatycznie dodany przez atrybut.
+*wartość HRESULT*  
+(Opcjonalnie) Identyfikuje zmienna, która otrzyma wartość HRESULT dla tego polecenia bazy danych. Jeśli zmienna nie istnieje, jego zostanie automatycznie dodany przez atrybut.
 
 ## <a name="remarks"></a>Uwagi
 

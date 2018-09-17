@@ -30,12 +30,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e7f52e0e62a831a77a7a00dc50aeecac45cd0fe9
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: 2424ce23c0a376156bbb78869a2e33e501958e73
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38960557"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45719137"
 ---
 # <a name="strstreambuf-class"></a>strstreambuf — Klasa
 
@@ -103,8 +103,8 @@ void freeze(bool _Freezeit = true);
 
 ### <a name="parameters"></a>Parametry
 
-*_Freezeit*  
- A **bool** wskazującą, czy chcesz, aby strumień jest zablokowana.
+*_Freezeit*<br/>
+A **bool** wskazującą, czy chcesz, aby strumień jest zablokowana.
 
 ### <a name="remarks"></a>Uwagi
 
@@ -191,8 +191,8 @@ virtual int overflow(int _Meta = EOF);
 
 ### <a name="parameters"></a>Parametry
 
-*_Meta*  
- Znak do wstawienia do określonego bufora lub `EOF`.
+*_Meta*<br/>
+Znak do wstawienia do określonego bufora lub `EOF`.
 
 ### <a name="return-value"></a>Wartość zwracana
 
@@ -216,8 +216,8 @@ virtual int pbackfail(int _Meta = EOF);
 
 ### <a name="parameters"></a>Parametry
 
-*_Meta*  
- Znak do wstawienia do określonego bufora lub `EOF`.
+*_Meta*<br/>
+Znak do wstawienia do określonego bufora lub `EOF`.
 
 ### <a name="return-value"></a>Wartość zwracana
 
@@ -280,14 +280,14 @@ virtual streampos seekoff(streamoff _Off,
 
 ### <a name="parameters"></a>Parametry
 
-*_Off*  
- Położenie do wyszukania dla względem *_Way*.
+*_Off*<br/>
+Położenie do wyszukania dla względem *_Way*.
 
-*_Way*  
- Punkt początkowy dla operacji przesunięcia. Zobacz [seekdir](../standard-library/ios-base-class.md#seekdir) uzyskać odpowiednie wartości.
+*_Way*<br/>
+Punkt początkowy dla operacji przesunięcia. Zobacz [seekdir](../standard-library/ios-base-class.md#seekdir) uzyskać odpowiednie wartości.
 
-*_Which*  
- Określa tryb pozycję wskaźnika. Wartość domyślna to umożliwia modyfikowanie, Odczyt i zapis pozycji.
+*_Which*<br/>
+Określa tryb pozycję wskaźnika. Wartość domyślna to umożliwia modyfikowanie, Odczyt i zapis pozycji.
 
 ### <a name="return-value"></a>Wartość zwracana
 
@@ -319,11 +319,11 @@ virtual streampos seekpos(streampos _Sp, ios_base::openmode _Which = ios_base::i
 
 ### <a name="parameters"></a>Parametry
 
-*_Sp*  
- Położenie do wyszukania dla.
+*_Sp*<br/>
+Położenie do wyszukania dla.
 
-*_Which*  
- Określa tryb pozycję wskaźnika. Wartość domyślna to umożliwia modyfikowanie, Odczyt i zapis pozycji.
+*_Which*<br/>
+Określa tryb pozycję wskaźnika. Wartość domyślna to umożliwia modyfikowanie, Odczyt i zapis pozycji.
 
 ### <a name="return-value"></a>Wartość zwracana
 
@@ -389,20 +389,20 @@ strstreambuf(const unsigned char* _Getptr,
 
 ### <a name="parameters"></a>Parametry
 
-*_Allocfunc*  
- Funkcja używana można przydzielić bufora pamięci.
+*_Allocfunc*<br/>
+Funkcja używana można przydzielić bufora pamięci.
 
-*Liczba*  
- Określa długość bufor wskazywany przez *_Getptr*. Jeśli *_Getptr* nie jest argument (pierwszy Konstruktor formularz) sugerowane alokacji rozmiar buforów.
+*Liczba*<br/>
+Określa długość bufor wskazywany przez *_Getptr*. Jeśli *_Getptr* nie jest argument (pierwszy Konstruktor formularz) sugerowane alokacji rozmiar buforów.
 
-*_Freefunc*  
- Funkcja używana, aby zwolnić pamięć buforu.
+*_Freefunc*<br/>
+Funkcja używana, aby zwolnić pamięć buforu.
 
-*_Getptr*  
- Bufor używany do wprowadzania danych.
+*_Getptr*<br/>
+Bufor używany do wprowadzania danych.
 
-*_Putptr*  
- Bufor używany dla danych wyjściowych.
+*_Putptr*<br/>
+Bufor używany dla danych wyjściowych.
 
 ### <a name="remarks"></a>Uwagi
 

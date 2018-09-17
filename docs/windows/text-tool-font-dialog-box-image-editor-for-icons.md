@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: aa6788945a7f36a2b9b478b72e514552cf8d9603
-ms.sourcegitcommit: f0c90000125a9497bf61e41624de189a043703c0
+ms.openlocfilehash: b83acbc8b4ca6beb3288ed9e02667410b239c6e7
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44315811"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45722049"
 ---
 # <a name="text-tool-font-dialog-box-c-image-editor-for-icons"></a>Okno dialogowe czcionki narzędzi tekstowych (edytor obrazów dla ikon) (C++)
 
@@ -34,20 +34,25 @@ Użyj tego okna dialogowego dla:
 
 Aby otworzyć to okno dialogowe, kliknij przycisk **czcionki** znajdujący się w **narzędzie tekstowe** okno dialogowe.
 
-**Czcionka**  
-Wyświetla listę dostępnych czcionek.
+- **Czcionka**
 
-**Styl czcionki**  
-Wyświetla listę dostępnych stylów określonej czcionki.
+   Wyświetla listę dostępnych czcionek.
 
-**Rozmiar**  
-Wyświetla listę dostępnych rozmiarów określonej czcionki.
+- **Styl czcionki**
 
-**Próbki**  
-Pokazuje przykładowy wygląd tekstu przy użyciu ustawień określonej czcionki.
+   Wyświetla listę dostępnych stylów określonej czcionki.
 
-**Skrypt**  
-Wyświetla listę dostępnych skryptów językowych dla określonej czcionki. Po wybraniu inny język skryptu, zestawu znaków języka i udostępnieniu do tworzenia dokumentów w wielu języków.
+- **Rozmiar**
+
+   Wyświetla listę dostępnych rozmiarów określonej czcionki.
+
+- **Próbki**
+
+   Pokazuje przykładowy wygląd tekstu przy użyciu ustawień określonej czcionki.
+
+- **Skrypt**
+
+   Wyświetla listę dostępnych skryptów językowych dla określonej czcionki. Po wybraniu inny język skryptu, zestawu znaków języka i udostępnieniu do tworzenia dokumentów w wielu języków.
 
 ## <a name="requirements"></a>Wymagania
 

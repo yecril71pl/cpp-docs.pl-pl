@@ -60,12 +60,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e4cfc3e0d129fdb10ee10275000df6d8c51604be
-ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
+ms.openlocfilehash: cc824d31f305fe36e0971704fd63025b3c1fdad2
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "42465704"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45722959"
 ---
 # <a name="cmfcautohidebutton-class"></a>Klasa CMFCAutoHideButton
 Przycisk, który wyświetla lub ukrywa [klasa CDockablePane](../../mfc/reference/cdockablepane-class.md) skonfigurowanego do ukrycia.  
@@ -144,14 +144,14 @@ virtual BOOL Create(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *pParentBar*  
- Wskaźnik do paska narzędzi nadrzędnej.  
+*pParentBar*<br/>
+[in] Wskaźnik do paska narzędzi nadrzędnej.  
   
- [in] *pAutoHideWnd*  
- Wskaźnik do [CDockablePane](../../mfc/reference/cdockablepane-class.md) obiektu. Ten przycisk automatycznego ukrywania polega na schowaniu i pokazuje, że `CDockablePane`.  
+*pAutoHideWnd*<br/>
+[in] Wskaźnik do [CDockablePane](../../mfc/reference/cdockablepane-class.md) obiektu. Ten przycisk automatycznego ukrywania polega na schowaniu i pokazuje, że `CDockablePane`.  
   
- [in] *dwAlignment*  
- Wartość, która określa wyrównanie przycisku z ramką głównego okna.  
+*dwAlignment*<br/>
+[in] Wartość, która określa wyrównanie przycisku z ramką głównego okna.  
   
 ### <a name="return-value"></a>Wartość zwracana  
  Wartość różną od zera, jeśli to się powiedzie; w przeciwnym razie 0.  
@@ -303,8 +303,8 @@ virtual void OnDraw(CDC* pDC);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *podstawowego kontrolera domeny*  
- Wskaźnik do kontekstu urządzenia.  
+*podstawowego kontrolera domeny*<br/>
+[in] Wskaźnik do kontekstu urządzenia.  
   
 ### <a name="remarks"></a>Uwagi  
  Jeśli chcesz dostosować wygląd przycisków automatycznego ukrywania w aplikacji, Utwórz nową klasę pochodną `CMFCAutoHideButton`. W klasie pochodnej należy przesłonić tę metodę.  
@@ -320,14 +320,14 @@ virtual void OnDrawBorder(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *podstawowego kontrolera domeny*  
- Wskaźnik do kontekstu urządzenia.  
+*podstawowego kontrolera domeny*<br/>
+[in] Wskaźnik do kontekstu urządzenia.  
   
- [in] *rectBounds*  
- Prostokąt otaczający przycisk Autoukrywanie.  
+*rectBounds*<br/>
+[in] Prostokąt otaczający przycisk Autoukrywanie.  
   
- [in] *rectBorderSize*  
- Grubość obramowania z każdej strony przycisk Autoukrywanie.  
+*rectBorderSize*<br/>
+[in] Grubość obramowania z każdej strony przycisk Autoukrywanie.  
   
 ### <a name="remarks"></a>Uwagi  
  Jeśli chcesz dostosować obramowania przycisku automatycznego ukrywania w aplikacji, Utwórz nową klasę pochodną `CMFCAutoHideButton`. W klasie pochodnej należy przesłonić tę metodę.  
@@ -342,11 +342,11 @@ virtual void OnFillBackground(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *podstawowego kontrolera domeny*  
- Wskaźnik do kontekstu urządzenia.  
+*podstawowego kontrolera domeny*<br/>
+[in] Wskaźnik do kontekstu urządzenia.  
   
- [in] *rect*  
- Prostokąt otaczający przycisk Autoukrywanie.  
+*Rect*<br/>
+[in] Prostokąt otaczający przycisk Autoukrywanie.  
   
 ### <a name="remarks"></a>Uwagi  
  Jeśli chcesz dostosować tło Autoukrywanie przycisków w aplikacji, Utwórz nową klasę pochodną `CMFCAutoHideButton`. W klasie pochodnej należy przesłonić tę metodę.  
@@ -359,8 +359,8 @@ void ShowAttachedWindow(BOOL bShow);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *bShow*  
- Wartość logiczna określająca, czy ta metoda ma pokazać dołączonego `CDockablePane`.  
+*bShow*<br/>
+[in] Wartość logiczna określająca, czy ta metoda ma pokazać dołączonego `CDockablePane`.  
   
 ##  <a name="showbutton"></a>  CMFCAutoHideButton::ShowButton  
  Pokazuje lub ukrywa przycisk Autoukrywanie.  
@@ -370,8 +370,8 @@ virtual void ShowButton(BOOL bShow);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *bShow*  
- Wartość logiczna określająca, czy wyświetlać przycisk automatycznego ukrywania.  
+*bShow*<br/>
+[in] Wartość logiczna określająca, czy wyświetlać przycisk automatycznego ukrywania.  
   
 ##  <a name="move"></a>  CMFCAutoHideButton::Move  
 
@@ -405,8 +405,8 @@ virtual void UnSetAutoHideMode(CDockablePane* pFirstBarInGroup);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *pFirstBarInGroup*  
- Wskaźnik do pierwszego paska w grupie.  
+*pFirstBarInGroup*<br/>
+[in] Wskaźnik do pierwszego paska w grupie.  
   
 ### <a name="remarks"></a>Uwagi  
   

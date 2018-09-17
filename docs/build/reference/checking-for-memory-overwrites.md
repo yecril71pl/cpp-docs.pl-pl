@@ -14,28 +14,30 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 258aa6ae01d48df6717135f7dc8b73fc3f9e697a
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 246f625e899016080662f27a5901962c1c62f1a8
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32369854"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45718653"
 ---
 # <a name="checking-for-memory-overwrites"></a>Sprawdzanie nadpisywania pamięci
-Jeśli na wywołanie funkcji manipulowania sterty naruszenia zasad dostępu, jest to możliwe, że program zawiera uszkodzone sterty. Typowym symptomem tej sytuacji mogą być następujące:  
-  
-```  
-Access Violation in _searchseg  
-```  
-  
- [_Heapchk —](../../c-runtime-library/reference/heapchk.md) funkcja jest dostępna w obu debug i release kompiluje (tylko system Windows NT) do sprawdzania integralności sterty biblioteki czasu wykonywania. Można użyć `_heapchk` w znacznie taki sam sposób jak `AfxCheckMemory` funkcji, aby odizolować Zastąp sterty, na przykład:  
-  
-```  
-if(_heapchk()!=_HEAPOK)  
-   DebugBreak();  
-```  
-  
- Jeśli kiedykolwiek tej funkcji ulegnie awarii, należy do izolowania w takim przypadku stos został uszkodzony.  
-  
-## <a name="see-also"></a>Zobacz też  
- [Naprawianie problemów kompilacji wydania](../../build/reference/fixing-release-build-problems.md)
+
+Jeśli naruszenie zasad dostępu na wywołanie funkcji manipulowania sterty, jest to możliwe, że program zawiera uszkodzone sterty. Typowym symptomem tej sytuacji mogą być następujące:
+
+```
+Access Violation in _searchseg
+```
+
+[_Heapchk —](../../c-runtime-library/reference/heapchk.md) funkcja jest dostępna w obu debug i release kompilacji (tylko Windows NT) w celu sprawdzenia integralności sterty biblioteki czasu wykonywania. Możesz użyć `_heapchk` w podobny sposób jak `AfxCheckMemory` funkcję, aby odizolować Zastąp sterty, na przykład:
+
+```
+if(_heapchk()!=_HEAPOK)
+   DebugBreak();
+```
+
+Jeśli ta funkcja nigdy nie zakończy się niepowodzeniem, należy do izolowania w tym momencie stos został uszkodzony.
+
+## <a name="see-also"></a>Zobacz też
+
+[Naprawianie problemów kompilacji wydania](../../build/reference/fixing-release-build-problems.md)

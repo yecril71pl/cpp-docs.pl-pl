@@ -20,49 +20,52 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1767ac9ef063ace2ee9d567dd9038519afababf8
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: ec5beed66de3834759f35a5021d0155eab0a066e
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32373078"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45716836"
 ---
 # <a name="dll-build-a-dll"></a>/DLL (Kompilowanie biblioteki DLL)
-```  
-/DLL  
-```  
-  
-## <a name="remarks"></a>Uwagi  
- Opcja/dll tworzy bibliotekę DLL jako plik wyjściowy głównego. Biblioteki DLL zawiera zwykle eksportu, które mogą być używane przez inny program. Istnieją trzy metody Określanie eksportów wymienione w kolejności zalecane użycie:  
-  
-1.  [__declspec(dllexport)](../../cpp/dllexport-dllimport.md) w kodzie źródłowym  
-  
-2.  [EKSPORTÓW](../../build/reference/exports.md) instrukcji w plik .def  
-  
-3.  [/EXPORT](../../build/reference/export-exports-a-function.md) Specyfikacja polecenia łącza  
-  
- Program można używać więcej niż jedna metoda.  
-  
- Innym sposobem tworzenia biblioteki DLL jest z **biblioteki** instrukcji definicji modułu. Opcje /BASE i/dll razem są równoważne **biblioteki** instrukcji.  
-  
- Nie należy określać tej opcji środowiska programistycznego; Ta opcja jest przeznaczona do użytku tylko w wierszu polecenia. Ta opcja jest ustawiana podczas tworzenia projektu biblioteki DLL przy użyciu Kreatora aplikacji.  
-  
- Należy pamiętać, że w przypadku utworzenia biblioteki importu w krok wstępny, przed utworzeniem sieci dll, należy podać ten sam zestaw plików obiektów podczas tworzenia biblioteki dll, jako przekazaną podczas tworzenia biblioteki importu.  
-  
-### <a name="to-set-this-linker-option-in-the-visual-studio-development-environment"></a>Aby ustawić tę opcję konsolidatora w środowisku programowania Visual Studio  
-  
-1.  Otwórz projekt **strony właściwości** okno dialogowe. Aby uzyskać więcej informacji, zobacz [Ustawianie właściwości projektu Visual C++](../../ide/working-with-project-properties.md).  
-  
-2.  Kliknij przycisk **właściwości konfiguracji** folderu.  
-  
-3.  Kliknij przycisk **ogólne** strony właściwości.  
-  
-4.  Modyfikowanie **typu konfiguracji** właściwości.  
-  
-### <a name="to-set-this-linker-option-programmatically"></a>Aby programowo ustawić tę opcję konsolidatora  
-  
--   Zobacz <xref:Microsoft.VisualStudio.VCProjectEngine.VCPropertySheet.ConfigurationType%2A>.  
-  
-## <a name="see-also"></a>Zobacz też  
- [Ustawianie opcji konsolidatora](../../build/reference/setting-linker-options.md)   
- [Opcje konsolidatora](../../build/reference/linker-options.md)
+
+```
+/DLL
+```
+
+## <a name="remarks"></a>Uwagi
+
+Opcja/dll kompiluje bibliotekę DLL jako plik wyjściowy głównego. Biblioteka DLL zawiera zazwyczaj eksportu, które mogą być używane przez inny program. Istnieją trzy metody Określanie eksportów, wymienione w zalecanej kolejności używania:
+
+1. [__declspec(dllexport)](../../cpp/dllexport-dllimport.md) w kodzie źródłowym
+
+1. [EKSPORTY](../../build/reference/exports.md) instrukcja w pliku .def
+
+1. [/EXPORT](../../build/reference/export-exports-a-function.md) specyfikacji za pomocą polecenia łącza
+
+Program można używać więcej niż jednej metody.
+
+Innym sposobem tworzenia biblioteki DLL jest **biblioteki** instrukcji definicji modułu. Opcje uwzględniają i/dll ze sobą są równoważne **biblioteki** instrukcji.
+
+Nie należy określać tej opcji w środowisku deweloperskim; Ta opcja jest do użytku tylko w wierszu polecenia. Ta opcja jest ustawiona, gdy tworzysz projekt DLL za pomocą Kreatora aplikacji.
+
+Należy pamiętać, że jeśli tworzysz biblioteki importu w krok wstępny, przed utworzeniem usługi .dll, należy przekazać ten sam zestaw plików obiektów podczas tworzenia pliku .dll, jako zakończony powodzeniem w podczas kompilowania biblioteki importowanej.
+
+### <a name="to-set-this-linker-option-in-the-visual-studio-development-environment"></a>Aby ustawić tę opcję konsolidatora w środowisku programowania Visual Studio
+
+1. Otwórz projekt **stron właściwości** okno dialogowe. Aby uzyskać więcej informacji, zobacz [ustawienie właściwości projektu Visual C++](../../ide/working-with-project-properties.md).
+
+1. Kliknij przycisk **właściwości konfiguracji** folderu.
+
+1. Kliknij przycisk **ogólne** stronę właściwości.
+
+1. Modyfikowanie **typu konfiguracji** właściwości.
+
+### <a name="to-set-this-linker-option-programmatically"></a>Aby programowo ustawić tę opcję konsolidatora
+
+- Zobacz <xref:Microsoft.VisualStudio.VCProjectEngine.VCPropertySheet.ConfigurationType%2A>.
+
+## <a name="see-also"></a>Zobacz też
+
+[Ustawianie opcji konsolidatora](../../build/reference/setting-linker-options.md)<br/>
+[Opcje konsolidatora](../../build/reference/linker-options.md)

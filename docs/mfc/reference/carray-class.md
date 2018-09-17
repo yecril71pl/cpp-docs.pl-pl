@@ -52,12 +52,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 53089439c3857dd947a263a80f3330aad3f03f7b
-ms.sourcegitcommit: 6408139d5f5ff8928f056bde93d20eecb3520361
+ms.openlocfilehash: f59cc50e864a241608e460a45f3336e7cb89ecbb
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37339441"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45717642"
 ---
 # <a name="carray-class"></a>Carray — klasa
 Obsługuje tablice, które przypominają tablice języka C, ale można dynamicznie zmniejszać i powiększać w razie.  
@@ -69,12 +69,13 @@ template <class TYPE, class ARG_TYPE = const TYPE&>
 class CArray : public CObject  
 ```  
   
-#### <a name="parameters"></a>Parametry  
- *TYP*  
- Parametr szablonu, który określa typ obiektów przechowywanych w tablicy. *Typ* jest parametrem, który jest zwracany przez `CArray`.  
-  
- *ARG* *_* *TYPU*  
- Parametr szablonu, który określa typ argumentu, który umożliwia dostęp do obiektów przechowywanych w tablicy. Często odwołanie do *typu*. *ARG_TYPE* jest parametrem, który jest przekazywany do `CArray`.  
+#### <a name="parameters"></a>Parametry
+
+*TYP*<br/>
+Parametr szablonu, który określa typ obiektów przechowywanych w tablicy. *Typ* jest parametrem, który jest zwracany przez `CArray`.
+
+*ARG_TYPE*<br/>
+Parametr szablonu, który określa typ argumentu, który umożliwia dostęp do obiektów przechowywanych w tablicy. Często odwołanie do *typu*. *ARG_TYPE* jest parametrem, który jest przekazywany do `CArray`.  
   
 ## <a name="members"></a>Elementy członkowskie  
   
@@ -137,7 +138,7 @@ class CArray : public CObject
  `CArray`  
   
 ## <a name="requirements"></a>Wymagania  
- `Header:` afxtempl.h  
+**Nagłówek:** afxtempl.h  
   
 ##  <a name="add"></a>  CArray::Add  
  Dodaje nowy element do końca tablicy, rośnie tablicy o 1.  

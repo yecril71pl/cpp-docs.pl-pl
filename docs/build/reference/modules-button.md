@@ -14,15 +14,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e6ab09578b5d26d262784bcee49033538a45a4b0
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: d6d8bc890bba56835455960e706dea23c80cf395
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32372246"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45724730"
 ---
 # <a name="modules-button"></a>Przycisk modułów
-Kliknij przycisk **modułów** przycisk, aby wyświetlić **dodatkowych modułów do wyszukiwania błąd** okna dialogowego. Wprowadź nazwę żądany plik EXE lub DLL w polu edycji, a następnie kliknij przycisk **Dodaj** do dołączenia modułów błąd wyszukiwania wiadomości. Usuń moduł z listy wyróżnianie ją i klikając przycisk **Usuń** przycisku.  
-  
-## <a name="see-also"></a>Zobacz też  
- [Kontrolka edycji wartości](../../build/reference/value-edit-control.md)
+
+Kliknij przycisk **modułów** przycisk, aby wyświetlić **dodatkowe moduły do wyszukiwania błędów** okna dialogowego. Wprowadź nazwę żądanego pliku EXE lub DLL w polu edycji, a następnie kliknij przycisk **Dodaj** obejmujący moduły w wyszukiwaniu komunikat o błędzie. Usuń moduł z listy, zaznaczając ją i klikając **Usuń** przycisku.
+
+## <a name="see-also"></a>Zobacz też
+
+[Kontrolka edycji wartości](../../build/reference/value-edit-control.md)

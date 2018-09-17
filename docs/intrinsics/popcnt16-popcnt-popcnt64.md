@@ -21,17 +21,18 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a639091bd7c5c263a3f09067858cd0fe4ac631cd
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 34063223addb433a94c877ad56cf410f189e6681
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33329199"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45724740"
 ---
 # <a name="popcnt16-popcnt-popcnt64"></a>__popcnt16, __popcnt, __popcnt64
+
 **Microsoft Specific**  
   
- Zlicza jednego bitów (liczba populacji) 16 – 32- i 64-bajtowa liczba całkowita bez znaku.  
+ Zlicza jednej usługi bits (liczba populacji) w 16-, 32- lub 64-bajtowych całkowitą bez znaku.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -48,26 +49,26 @@ unsigned __int64 __popcnt64(
 ```  
   
 #### <a name="parameters"></a>Parametry  
- [in] `value`  
- 16-, 32- lub 64-bitowych unsigned integer dla którego chcemy liczba populacji.  
+*value*<br/>
+[in] 16-, 32- lub 64-bitowych unsigned integer dla którego chcemy, aby liczba populacji.  
   
 ## <a name="return-value"></a>Wartość zwracana  
- Liczba bitów jeden `value` parametru.  
+ Liczba bitów co `value` parametru.  
   
 ## <a name="requirements"></a>Wymagania  
   
-|— Wewnętrzne|Architektura|  
+|Wewnętrzne|Architektura|  
 |---------------|------------------|  
 |`__popcnt16`|Manipulowanie Bit zaawansowane|  
 |`__popcnt`|Manipulowanie Bit zaawansowane|  
-|`__popcnt64`|Zaawansowane manipulowanie bitowe w trybie 64-bitowym.|  
+|`__popcnt64`|Zaawansowane manipulowania bitowych w trybie 64-bitowym.|  
   
- **Plik nagłówka** \<intrin.h >  
+ **Plik nagłówkowy** \<intrin.h >  
   
 ## <a name="remarks"></a>Uwagi  
- Każdy z tych funkcji wewnętrznych generuje `popcnt` instrukcji.  Rozmiar wartości który `popcnt` instrukcji zwraca jest taka sama jak rozmiar jej argument.  W trybie 32-bitowym istnieją nie 64-bitowych ogólnego przeznaczenia rejestrów, dlatego nie 64-bitowych `popcnt`.  
+ Każda z tych funkcji wewnętrznych generuje `popcnt` instrukcji.  Rozmiar wartości, `popcnt` instrukcji daje w wyniku jest taki sam jak rozmiar argumentu.  W trybie 32-bitowym istnieją Brak 64-bitowych ogólnego przeznaczenia rejestrów, dlatego nie 64-bitowych `popcnt`.  
   
- Aby określić obsługę sprzętu `popcnt` instrukcji, wywołanie `__cpuid` wewnętrzne z `InfoType=0x00000001` i sprawdź bit 23 `CPUInfo[2] (ECX)`. Ten bit jest 1, jeśli instrukcja jest obsługiwana i 0, w przeciwnym razie wartość. Jeśli możesz uruchomić kodu korzystającego z tym wewnętrzna na sprzęcie, który nie obsługuje `popcnt` instrukcji są nieprzewidywalne wyniki.  
+ Aby określić, pomoc techniczna dotycząca sprzętu dla `popcnt` instrukcji, wywołanie `__cpuid` wewnętrzne z `InfoType=0x00000001` i sprawdź bit 23 `CPUInfo[2] (ECX)`. Ten bit jest 1, jeśli instrukcja jest obsługiwana lub 0. Jeśli możesz uruchomić kod, który korzysta z tym wewnętrzne na sprzęcie, który nie obsługuje `popcnt` instrukcji, wyniki są nieprzewidywalne.  
   
 ## <a name="example"></a>Przykład  
   
@@ -106,8 +107,9 @@ __popcnt(0xffff) = 16
 __popcnt(0xffffffff) = 32  
 ```  
   
-**KOŃCOWY określonych firmy Microsoft**  
- Copyright 2007 zaawansowane Micro urządzeń, Inc. Wszelkie prawa zastrzeżone. Odtworzyć z uprawnieniem z zaawansowanymi Micro urządzeń, Inc.  
+**END specyficzny dla Microsoft**  
+
+Copyright 2007 zaawansowane Micro urządzeń, Inc. Wszelkie prawa zastrzeżone. Odtworzyć zgoda zaawansowane Micro urządzeń, Inc.  
   
 ## <a name="see-also"></a>Zobacz też  
  [Funkcje wewnętrzne kompilatora](../intrinsics/compiler-intrinsics.md)

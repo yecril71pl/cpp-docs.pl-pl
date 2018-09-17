@@ -1,5 +1,5 @@
 ---
-title: /Zc:twoPhase-(Wyłącz wyszukiwanie nazw dwufazowego) | Dokumentacja firmy Microsoft
+title: /Zc:twoPhase-(Wyłącz dwufazowe wyszukiwanie nazw) | Dokumentacja firmy Microsoft
 ms.custom: ''
 ms.date: 03/06/2018
 ms.technology:
@@ -19,16 +19,16 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5653959b25105f10ae98768217524dc0ff0cbe2a
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 30647ab07984c393b10d7c0fb74d0e2be35cdf26
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32389104"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45723297"
 ---
-# <a name="zctwophase--disable-two-phase-name-lookup"></a>/Zc:twoPhase-(Wyłącz wyszukiwanie nazw dwufazowego)
+# <a name="zctwophase--disable-two-phase-name-lookup"></a>/Zc:twoPhase-(Wyłącz dwufazowe wyszukiwanie nazw)
 
-Gdy **/Zc:twoPhase-** zostanie określona opcja, kompilator analizuje i tworzy wystąpienie klasy szablony i funkcji w taki sam sposób niezgodnych jako wersje programu Visual Studio przed Visual Studio 2017 wersji 15 ustęp 3. 
+Gdy **/Zc:twoPhase-** opcja zostanie określona, kompilator analizuje i tworzy szablony klas i funkcji w taki sam sposób niezgodnych, dostępne w wersjach programu Visual Studio przed Visual Studio 2017 w wersji 15.3.
 
 ## <a name="syntax"></a>Składnia
 
@@ -36,31 +36,31 @@ Gdy **/Zc:twoPhase-** zostanie określona opcja, kompilator analizuje i tworzy w
 
 ## <a name="remarks"></a>Uwagi
 
-W Visual Studio 2017 wersji 15.3 i nowsze, domyślnie kompilator używa wyszukiwanie nazw dwufazowego do rozpoznawania nazw szablonu. Jeśli **/Zc:twoPhase-** jest określony, kompilator powraca do jego poprzedniego niezgodnych klasy szablonu i funkcja szablonu rozdzielczość i podstawienia nazw.
+W programie Visual Studio 2017 w wersji 15.3 lub nowszy, domyślnie kompilator używa dwufazowe wyszukiwanie nazw do rozpoznawania nazwy szablonu. Jeśli **/Zc:twoPhase-** jest określony, kompilator powraca do jego poprzedniego niezgodnych klasy szablonu i funkcji szablonu rozdzielczość i podstawienia zachowanie nazwy.
 
-**/Zc:twoPhase-** nie ustawiono opcję, aby włączyć niezgodnych zachowanie domyślne. [/ Ograniczająca-](permissive-standards-conformance.md) opcji niejawnie ustawia zgodnych zachowanie kompilatora dwufazowego wyszukiwania, ale może być zastąpiona przy użyciu **/Zc:twoPhase-**.
+**/Zc:twoPhase-** nie ustawiono opcję, aby włączyć niezgodnych zachowanie domyślne. [/ Permissive-](permissive-standards-conformance.md) opcji ustawia niejawnie odpowiadające zachowanie kompilatora dwufazowe wyszukiwanie, ale może być zastąpiona przy użyciu **/Zc:twoPhase-**.
 
-Pliki nagłówka zestawu Windows SDK w wersji 10.0.15063.0 (twórców aktualizacji lub Redstone 2) i starszych wersji nie działają prawidłowo w trybie zgodności. Należy użyć **/Zc:twoPhase-** skompilować kod dla tych wersji zestawu SDK podczas korzystania z wersji programu Visual Studio 2017 15 ustęp 3 i nowszych wersjach. Wersje zestawu SDK systemu Windows, począwszy od wersji 10.0.15254.0 (Redstone 3 lub aktualizacji twórców spadek) działają prawidłowo w trybie zgodności i nie wymagają **/Zc:twoPhase-** opcji.
+Pliki nagłówków zestawu Windows SDK w wersji 10.0.15063.0 (Aktualizacja dla twórców lub czerwonego kamienia 2) i starszych wersjach będą działać poprawnie w trybie zgodności. Należy użyć **/Zc:twoPhase-** do kompilowania kodu dla tych wersji zestawu SDK, gdy używasz programu Visual Studio 2017 w wersji 15.3 lub nowszym. Wersje zestawu SDK Windows, począwszy od wersji 10.0.15254.0 (3 czerwonego kamienia lub Fall Creators Update) działają prawidłowo w trybie zgodności i nie wymagają **/Zc:twoPhase-** opcji.
 
-Użyj **/Zc:twoPhase-** Jeśli kod wymaga starego zachowania do poprawnej kompilacji. Zdecydowanie może być konieczna aktualizacja swój kod, aby był zgodny ze standardowego.
+Użyj **/Zc:twoPhase-** Jeśli kod wymaga stare zachowanie do poprawnej kompilacji. Zdecydowanie rozważyć aktualizowanie kodu w taki sposób, aby były zgodne ze standardem.
 
-### <a name="compiler-behavior-under-zctwophase-"></a>Zachowanie kompilatora w obszarze /Zc:twoPhase-
+### <a name="compiler-behavior-under-zctwophase-"></a>Zachowanie kompilatora, w obszarze /Zc:twoPhase-
 
-W wersji kompilatora przed Visual Studio 2017 15 ustęp 3, wersja i kiedy **/Zc:twoPhase-** określono kompilator używa tego zachowania:
+W wersji kompilatora przed Visual Studio 2017 w wersji 15.3 i kiedy **/Zc:twoPhase-** jest określony, kompilator używa tego zachowania:
 
-- Analizuje tylko deklaracji szablonu, head klasy i liście klas podstawowych. Treść szablonu jest przechwytywany jako strumień tokenu. Nie ciało funkcji, inicjatory, argumenty domyślne lub noexcept argumenty są parsowane. Szablon klasy jest tworzone pseudo w wstępnie typ, aby sprawdzić, czy deklaracje w szablonie klasy są poprawne. Należy wziąć pod uwagę tego szablonu klasy:
+- Analizuje ona tylko do deklaracji szablonu, head klasy i liście klas bazowych. Treść szablonu jest przechwytywany jako strumień tokenu. Nie treści funkcji, inicjatory, argumenty domyślne lub noexcept argumenty są parsowane. Szablon klasy jest tworzone pseudo niepewnego typu, aby sprawdzić, czy deklaracji w klasie szablonu są prawidłowe. Należy wziąć pod uwagę ten szablon klasy:
 
    ```cpp
    template <typename T> class Derived : public Base<T> { ... }
    ```
 
-   Deklaracja szablonu `template <typename T`>, head klasy `class Derived`, liście klasy podstawowej i `public Base<T>` przeanalizować, ale treści szablonu jest przechwytywany jako strumień tokenu.
+   Deklaracja szablonu `template <typename T`>, head klasy `class Derived`i listy klas podstawowych `public Base<T>` są analizowane, ale treści szablonu jest przechwytywany jako strumień tokenu.
 
-- Podczas analizowania szablonu funkcji, kompilator analizuje tylko sygnatura funkcji. Nigdy nie jest analizowana z treści funkcji. Zamiast tego jest przechwytywany jako strumień tokenu.
+- Podczas analizowania szablonu funkcji, w którym kompilator analizuje tylko sygnatura funkcji. Nigdy nie jest analizowana z treści funkcji. Zamiast tego jest przechwytywany jako strumień tokenu.
 
-W związku z tym treści szablonu zawiera błędy składni szablonu nigdy nie zostanie uruchomiony, nigdy nie są zdiagnozowaniu błędów.
+W rezultacie jeśli treść szablonu zawiera błędy składniowe i nigdy nie zostanie utworzone wystąpienie szablonu, nigdy nie są zdiagnozować błędy.
 
-Inny wpływ to zachowanie jest rozpoznanie przeciążenia. Ze względu na sposób strumień tokenu jest rozwinięta w witrynie wystąpienia symbole, które nie były widoczne w deklaracji szablonu mogą być widoczne w punkcie wystąpienia i brać udziału w Rozpoznanie przeciążenia. Może to prowadzić do szablonów, które należy zmienić to zachowanie na podstawie kodu, który nie był widoczny, gdy szablon został zdefiniowany w przeciwieństwie do standardowego.
+Inny wpływ to zachowanie jest w przeciążeniu rozdzielczości. Ze względu na sposób, w jaki strumień tokenu jest rozwinięty w lokacji utworzenia wystąpienia symbole, które nie były widoczne w deklaracji szablonu mogą być widoczne w punkcie tworzenia wystąpienia i uczestniczy w przeciążeniu rozdzielczości. Może to prowadzić do zmiany zachowania na podstawie kodu, który nie był widoczny, gdy szablon został zdefiniowany, w przeciwieństwie do standardowych szablonów.
 
 Na przykład, rozważmy ten kod:
 
@@ -76,17 +76,17 @@ template<typename T> void g(T x)
 
 void func(int) { std::puts("The call resolves to int"); }
 
-int main() 
+int main()
 {
     g(3.14);
 }
 ```
 
-Podczas kompilacji w obszarze **/Zc:twoPhase-**, drukuje ten program "wywołanie jest rozpoznawana jako int". W trybie zgodności, w obszarze **/ ograniczająca-**, ten program drukuje "wywołanie jest rozpoznawany jako void *", ponieważ drugi przeciążenia z `func` nie jest widoczny, gdy kompilator napotka szablonu.
+Podczas kompilowania w ramach **/Zc:twoPhase-**, ten program wyświetli "wywołanie jest rozpoznawana jako int". W trybie zgodności w obszarze **/ permissive-**, ten program wyświetli "wywołanie jest rozpoznawany jako void *", ponieważ drugi przeciążenia `func` nie jest widoczny, gdy kompilator napotka szablonu.
 
-*Nazwy zależne*, nazwy, które są zależne od parametru szablonu, mają zachowanie wyszukiwania, która różni się również w obszarze **/Zc:twoPhase-**. W trybie zgodności nazwy zależne nie są powiązane w punkcie definicji szablonu. Zamiast tego te nazwy są wyszukiwane przy tworzeniu wystąpienia szablonu. Wywołania funkcji o nazwie funkcji zależnych nazwa jest powiązany zestaw funkcji, które są widoczne w punkcie połączenia w definicji szablonu, jak powyżej. Dodatkowe przeciążenia z wyszukiwania zależnego od argumentów są dodawane zarówno w punkt definicji szablonu, jak i w którym szablon zostanie uruchomiony punkt. Dwie fazy dwufazowego wyszukiwania są wyszukiwania dla nazwy zależne od innych niż w momencie definicja szablonu oraz wyszukiwania dla nazwy zależne w momencie utworzenie wystąpienia szablonu. W obszarze **/Zc:twoPhase-**, kompilator nie działa wyszukiwanie zależne od argumentów oddzielnie od zwykłej, niekwalifikowanych wyszukiwania (to znaczy nie wyszukiwania dwufazowego), więc wyniki Rozpoznanie przeciążenia mogą się różnić.
+*Nazwy zależne*, w przypadku nazw, które są zależne od parametru szablonu, obowiązują zachowania wyszukiwania, która różni się również w obszarze **/Zc:twoPhase-**. W trybie zgodności nazwy zależne nie są powiązane w punkcie definicji szablonu. Zamiast tego te nazwy są wyszukiwane przy tworzeniu wystąpienia szablonu. Dla wywołań funkcji o nazwie funkcji zależnych nazwa jest powiązany zestaw funkcji, które są widoczne w punkcie połączenia w definicji szablonu, jak powyżej. W punkcie definicji szablonu i punkt, gdzie konkretyzacji szablonu są dodawane dodatkowe przeciążenia z wyszukiwania zależnego od argumentów. W dwóch fazach dwufazowe wyszukiwanie są wyszukiwanie zależne od innych nazw w czasie definicji szablonu i wyszukiwania dla nazwy zależne w momencie konkretyzacji szablonu. W obszarze **/Zc:twoPhase-**, kompilator nie wyszukiwania zależnego od argumentów oddzielnie od zwykłych, niekwalifikowane wyszukiwania (czyli nie robi dwufazowe wyszukiwanie), dlatego wyniki funkcja rozpoznawania przeciążeń może różnić się.
 
-Innym przykładem jest następujący:
+Oto inny przykład:
 
 ```cpp
 // zctwophase1.cpp
@@ -116,7 +116,7 @@ int main() {
 }
 ```
 
-Podczas kompilacji bez **/Zc:twoPhase-**, drukowania
+Gdy kompilowany bez **/Zc:twoPhase-**, drukowania
 
 ```Output
 func(long)
@@ -130,21 +130,21 @@ func(int)
 NS::func(NS::S)
 ```
 
-W trybie zgodności, w obszarze **/ ograniczająca-**, wywołanie `tfunc(1729)` jest rozpoznawana jako `void func(long)` przeciążenia nie `void func(int)` przeciążenia zgodnie z sekcją **/Zc:twoPhase-**, ponieważ niekwalifikowane `func(int)` jest zadeklarowany po definicji szablonu i nie można odnaleźć za pomocą wyszukiwania zależnego od argumentów. Ale `void func(S)` uczestniczyć w wyszukiwania zależnego od argumentów, aby dodać go do przeciążenia, ustaw dla wywołania `tfunc(s)` nawet, jeśli jest on zadeklarowany jako po funkcji szablonu.
+W trybie zgodności w obszarze **/ permissive-**, wywołanie `tfunc(1729)` jest rozpoznawana jako `void func(long)` przeciążenia nie `void func(int)` przeciążenia zgodnie z sekcją **/Zc:twoPhase-**, ponieważ niekwalifikowanej `func(int)` jest zadeklarowana po definicji szablonu i nie można odnaleźć za pomocą wyszukiwania zależnego od argumentów. Ale `void func(S)` uczestniczyć w wyszukiwania zależnego od argumentów, aby dodać go do przeciążenia, ustaw dla wywołania `tfunc(s)` nawet, jeśli jest on zadeklarowany po funkcji szablonu.
 
-### <a name="update-your-code-for-two-phase-conformance"></a>Zaktualizuj kod dla zgodność dwufazowego
+### <a name="update-your-code-for-two-phase-conformance"></a>Zaktualizuj swój kod pod kątem zgodności dwufazowe
 
-Starsze wersje kompilatora nie wymagają słowa kluczowe `template` i `typename` wszędzie C++ Standard wymaga ich. Słowa kluczowe są potrzebne w niektórych pozycji do odróżniania jak przeanalizować zależna nazwa w pierwszej fazie wyszukiwania kompilatory. Na przykład:
+Starsze wersje kompilatora nie wymagają słowa kluczowe `template` i `typename` wszędzie, gdzie C++ Standard wymaga ich. Te słowa kluczowe są wymagane w niektórych pozycji do odróżniania, jak przeanalizować zależna nazwa w pierwszej fazie wyszukiwania kompilatory. Na przykład:
 
 `T::Foo<a || b>(c);`
 
-Analizuje zgodnych kompilatora `Foo` jako zmiennej w zakresie `T`, co oznacza ten kod jest logiczną — lub wyrażenie z `T::foo < a` jako lewy operand i `b > (c)` jako prawy argument operacji. Jeśli chcesz użyć `Foo` jako szablon funkcji musi wskazać, że jest to szablon, dodając `template` — słowo kluczowe:
+Odpowiadające kompilator analizuje `Foo` jako zmienne w zakresie `T`, co oznacza ten kod jest wartość logiczna — lub wyrażenie o `T::foo < a` jako lewy operand i `b > (c)` jako prawy operand. Jeśli chcesz użyć `Foo` jako szablon funkcji, należy wskazać, że jest to szablon, dodając `template` — słowo kluczowe:
 
 `T::template Foo<a || b>(c);`
 
-W wersjach wcześniejszych niż Visual Studio 2017 15 ustęp 3, wersja i kiedy **/Zc:twoPhase-** określono kompilator umożliwia tego kodu bez `template` — słowo kluczowe i interpretuje ją jako wywołania z argumentem szablonufunkcji`a || b`, ponieważ analizuje szablonów w sposób bardzo ograniczone. Powyższy kod nie jest analizowana w ogóle w pierwszej fazie. W drugiej fazie jest wystarczający kontekst stwierdzić, że `T::Foo` jest szablonu, a nie w zmiennej, dlatego kompilator nie wymusza użycie słowa kluczowego.
+W wersjach wcześniejszych niż Visual Studio 2017 w wersji 15.3 i kiedy **/Zc:twoPhase-** jest określony, kompilator umożliwi ten kod bez `template` — słowo kluczowe i interpretuje ją jako wywołanie funkcji szablonu z nieprawidłowym argumentem `a || b`, ponieważ jej analizuje szablonów w sposób bardzo ograniczona. Powyższy kod nie jest analizowana w ogóle w pierwszej fazie. W drugiej fazie jest wystarczający kontekst, aby sprawdzić `T::Foo` jest szablon, a nie zmienną, dzięki czemu kompilator nie wymusza użycie słowa kluczowego.
 
-To zachowanie można także znaleźć przez wyeliminowanie kluczowego `typename` przed nazwy w treści szablonu funkcji, inicjatory argumenty domyślne i noexcept argumentów. Na przykład:
+To zachowanie można także zobaczyć, eliminując słowa kluczowego `typename` przed nazwy w treści szablonu funkcji, inicjatory, argumenty domyślne i noexcept argumentów. Na przykład:
 
 ```cpp
 template<typename T>
@@ -154,9 +154,9 @@ typename T::TYPE func(typename T::TYPE*)
 }
 ```
 
-Jeśli nie należy używać słowa kluczowego `typename` w treści funkcji ten kod kompiluje w obszarze **/Zc:twoPhase-**, ale nie w obszarze **/ ograniczająca-**. `typename` — Słowo kluczowe jest wymagany w celu wskazania, że `TYPE` jest zależna. Ponieważ treść nie jest analizowana w obszarze **/Zc:twoPhase-**, słowo kluczowe wymagają does't kompilatora. W **/ ograniczająca-** trybu zgodności, kod bez `typename` — słowo kluczowe generuje błędy. Aby przeprowadzić migrację kodu do programu Visual Studio 2017 wersji 15 ustęp 3 i nowszych, Wstaw `typename` — słowo kluczowe, gdy jest on niedostępny.
+Jeśli nie używasz słowa kluczowego `typename` w treści funkcji, ten kod jest kompilowany w obszarze **/Zc:twoPhase-**, ale nie w obszarze **/ permissive-**. `typename` — Słowo kluczowe jest wymagany w celu wskazania, że `TYPE` jest zależny. Ponieważ treść nie jest analizowana w obszarze **/Zc:twoPhase-**, kompilator hierarchyinfoguid nie jest wymagane słowa kluczowego. W **/ permissive-** tryb zgodności, kod bez `typename` — słowo kluczowe generuje błędy. Migrowanie kodu programu Visual Studio 2017 w wersji 15.3 i Wstaw, `typename` słowa kluczowego, w którym jest Brak.
 
-Podobnie należy wziąć pod uwagę ten przykład kodu:
+Podobnie należy wziąć pod uwagę ten przykładowy kod:
 
 ```cpp
 template<typename T>
@@ -166,17 +166,17 @@ typename T::template X<T>::TYPE func(typename T::TYPE)
 }
 ```
 
-W obszarze **/Zc:twoPhase-** i w starszych kompilatory wymaga tylko kompilator `template` — słowo kluczowe w wierszu 2. Domyślnie, a w trybie zgodności, kompilator teraz wymaga również `template` — słowo kluczowe w wierszu 4, aby wskazać, że `T::X<T>` jest szablonem. Poszukaj kodu, który nie ma to słowo kluczowe i dostarczenia go do uczynienia kodu są zgodne ze standardem.
+W obszarze **/Zc:twoPhase-** i w starszych kompilatory, kompilator wymaga on tylko `template` — słowo kluczowe w wierszu 2. Domyślnie, a w trybie zgodności, kompilator teraz wymaga również `template` — słowo kluczowe w wierszu 4, aby wskazać, że `T::X<T>` jest szablonem. Wyszukaj kod, który nie ma to słowo kluczowe i dostarczenia go do kodu są zgodne ze standardem.
 
-Aby uzyskać więcej informacji dotyczących zgodności, zobacz [ulepszenia zgodność języka C++ w programie Visual Studio](../../cpp-conformance-improvements-2017.md) i [niestandardowe zachowanie](../../cpp/nonstandard-behavior.md).
+Aby uzyskać więcej informacji na temat problemów ze zgodnością, zobacz [ulepszenia zgodności języka C++ w programie Visual Studio](../../cpp-conformance-improvements-2017.md) i [niestandardowe zachowanie](../../cpp/nonstandard-behavior.md).
 
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Aby ustawić tę opcję kompilatora w środowisku programowania Visual Studio
 
-1. Otwórz projekt **strony właściwości** okno dialogowe. Aby uzyskać więcej informacji, zobacz [Praca z właściwościami projektu](../../ide/working-with-project-properties.md).
+1. Otwórz projekt **stron właściwości** okno dialogowe. Aby uzyskać więcej informacji, zobacz [Praca z właściwościami projektu](../../ide/working-with-project-properties.md).
 
-1. Wybierz **właściwości konfiguracji** > **C/C++** > **wiersza polecenia** strony właściwości.
+1. Wybierz **właściwości konfiguracji** > **C/C++** > **wiersza polecenia** stronę właściwości.
 
-1. Modyfikowanie **dodatkowe opcje** właściwości, aby uwzględnić **/Zc:twoPhase-** , a następnie wybierz **OK**.
+1. Modyfikowanie **dodatkowe opcje** właściwości do uwzględnienia **/Zc:twoPhase-** , a następnie wybierz **OK**.
 
 ## <a name="see-also"></a>Zobacz także
 

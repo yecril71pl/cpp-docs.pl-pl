@@ -14,15 +14,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 85db49f138cc733326e47a3008e79bae5ab4b7cb
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: a7451ea6afee81cc296fb091705bde48041ef5d1
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32360783"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45722491"
 ---
 # <a name="bitfields"></a>Pola bitów
-Pola bitowe struktury są ograniczone do 64-bitowy i może być typu podpisany int, int bez znaku, int64 lub int64 bez znaku. Pola bitowe, które przekraczają granicę typu pominie usługi bits, aby były wyrównane bitfield do następnego wyrównania typu. Pola bitów liczba całkowita może na przykład przecina graniczny 32-bitowych.  
-  
-## <a name="see-also"></a>Zobacz też  
- [Typy i magazyn](../build/types-and-storage.md)
+
+Struktura pola bitowe są ograniczone do 64-bitowy i może być typu podpisany int, niepodpisane int, int64 lub int64 bez znaku. Pola bitowe, które przecinają granice typu pominie bitów, aby wyrównać bitfield do następnego wyrównanie typu. Na przykład pola bitów liczba całkowita, nie mogą przekroczyć graniczny 32-bitowych.
+
+## <a name="see-also"></a>Zobacz też
+
+[Typy i magazyn](../build/types-and-storage.md)

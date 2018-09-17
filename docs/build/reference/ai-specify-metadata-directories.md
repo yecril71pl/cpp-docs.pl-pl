@@ -21,12 +21,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6f932e186630d1bc6c846c78af99f98262861068
-ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
+ms.openlocfilehash: 985ff4eb96b904dc9c5b4377b336109b00e06b40
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44110672"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45716595"
 ---
 # <a name="ai-specify-metadata-directories"></a>/AI (Określ katalogi metadanych)
 
@@ -42,6 +42,7 @@ Określa katalog, który kompilator będzie przeszukiwał, aby rozwiązać odwo�
 Katalog lub ścieżka, w której kompilator będzie wyszukiwał.
 
 ## <a name="remarks"></a>Uwagi
+
 Tylko jeden katalog może być przekazywany do **/AI** wywołania. Określ jedną **/AI** opcję dla każdej ścieżki, w której kompilator ma wyszukiwać. Na przykład, aby dodać do ścieżki wyszukiwania kompilatora dla zarówno C:\Project\Meta, jak i C:\Common\Meta `#using` dyrektyw, Dodaj `/AI"C:\Project\Meta" /AI"C:\Common\Meta"` do wiersza polecenia kompilatora lub Dodaj każdy katalog do **dodatkowe # katalogi using** właściwości w programie Visual Studio.
 
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Aby ustawić tę opcję kompilatora w środowisku programowania Visual Studio
@@ -58,6 +59,6 @@ Tylko jeden katalog może być przekazywany do **/AI** wywołania. Określ jedn�
 
 ## <a name="see-also"></a>Zobacz też
 
-[Opcje kompilatora](../../build/reference/compiler-options.md)   
-[Ustawianie opcji kompilatora](../../build/reference/setting-compiler-options.md)   
+[Opcje kompilatora](../../build/reference/compiler-options.md)<br/>
+[Ustawianie opcji kompilatora](../../build/reference/setting-compiler-options.md)<br/>
 [#using — dyrektywa](../../preprocessor/hash-using-directive-cpp.md)

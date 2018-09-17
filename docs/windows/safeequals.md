@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 2b0c2bb91f21b48554ca523a3523e82eee09d2fe
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: 81f30386946c7fd187f1044804b9f1737a94c58f
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42600586"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45718658"
 ---
 # <a name="safeequals"></a>SafeEquals
 
@@ -40,11 +40,11 @@ inline bool SafeEquals (
 
 ### <a name="parameters"></a>Parametry
 
-[in] *t*  
-Pierwsza liczba do porównania. To musi być typu T.
+*t*<br/>
+[in] Pierwsza liczba do porównania. To musi być typu T.
 
-[in] *u*  
-Druga liczba do porównania. Musi mieć typ U.
+*u*<br/>
+[in] Druga liczba do porównania. Musi mieć typ U.
 
 ## <a name="return-value"></a>Wartość zwracana
 

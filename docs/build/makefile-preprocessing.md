@@ -15,20 +15,23 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b4b304276f20f66e02808f3894e5b948dd994cbb
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 11bd2b74a17e5fd7b2507a531fda6da0a31e53c8
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32368229"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45722884"
 ---
 # <a name="makefile-preprocessing"></a>Przetwarzanie wstępne pliku reguł programu Make
-Sesja NMAKE można kontrolować przy użyciu wyrażeń i dyrektywy przetwarzania wstępnego. Przetwarzanie wstępne instrukcji można umieścić w pliku reguł programu make lub Tools.ini. Przy użyciu dyrektyw, użytkownik może warunkowo przetworzyć Twojego pliku reguł programu make, wyświetlane komunikaty o błędach zawierają inne pliki reguł programu make, Usuń makro i włączanie lub wyłączanie niektórych opcji.  
-  
-## <a name="what-do-you-want-to-know-more-about"></a>Co chcesz dowiedzieć się więcej o?  
- [Dyrektywy przetwarzania wstępnego pliku reguł programu make](../build/makefile-preprocessing-directives.md)  
-  
- [Wyrażenia w przetwarzaniu wstępnym pliku reguł programu make](../build/expressions-in-makefile-preprocessing.md)  
-  
-## <a name="see-also"></a>Zobacz też  
- [NMAKE — dokumentacja](../build/nmake-reference.md)
+
+Aby sterować sesją NMAKE, należy za pomocą wstępnego przetwarzania dyrektywy i wyrażeń. Wstępne przetwarzanie instrukcji można umieścić w pliku reguł programu make lub Tools.ini. Przy użyciu dyrektyw, użytkownik może warunkowo przetworzyć Twojego pliku reguł programu make, wyświetlane komunikaty o błędach, obejmują inne pliki reguł programu make, usuń definicję makra i włączyć lub wyłączyć niektórych opcje.
+
+## <a name="what-do-you-want-to-know-more-about"></a>Co chcesz dowiedzieć się więcej na temat?
+
+[Dyrektywy przetwarzania wstępnego pliku reguł programu make](../build/makefile-preprocessing-directives.md)
+
+[Wyrażenia w przetwarzaniu wstępnym pliku reguł programu make](../build/expressions-in-makefile-preprocessing.md)
+
+## <a name="see-also"></a>Zobacz też
+
+[NMAKE — dokumentacja](../build/nmake-reference.md)

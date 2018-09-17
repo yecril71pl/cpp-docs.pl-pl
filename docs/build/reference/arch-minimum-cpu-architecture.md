@@ -1,5 +1,5 @@
 ---
-title: -arch (minimalna szybkość CPU architektura) | Dokumentacja firmy Microsoft
+title: -arch (minimalna architektura procesora CPU) | Dokumentacja firmy Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -19,22 +19,24 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3d1232697619eafa5633f3dc61d1a1c3520e21b6
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: c6750b2d998976b1c19dcc5b687f407a3c32faef
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32368993"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45720333"
 ---
 # <a name="arch-minimum-cpu-architecture"></a>/arch (minimalna architektura procesora)
-Opcje architektura Określ architekturę dla generowania kodu. Wybierz podstawowej architektury, które użytkownik pracuje z Zobacz / arch opcje dla tej platformy docelowej.  
-  
--   [/arch (x86)](../../build/reference/arch-x86.md)  
-  
--   [/arch (x64)](../../build/reference/arch-x64.md)  
-  
--   [/arch (ARM)](../../build/reference/arch-arm.md)  
-  
-## <a name="see-also"></a>Zobacz też  
- [Opcje kompilatora](../../build/reference/compiler-options.md)   
- [Ustawianie opcji kompilatora](../../build/reference/setting-compiler-options.md)
+
+Opcje architektury określić architektury w celu generowania kodu. Wybierz podstawowy architektury, którą pracujesz Zobacz / arch opcje dla tej platformy docelowej.
+
+- [/arch (x86)](../../build/reference/arch-x86.md)
+
+- [/arch (x64)](../../build/reference/arch-x64.md)
+
+- [/arch (ARM)](../../build/reference/arch-arm.md)
+
+## <a name="see-also"></a>Zobacz też
+
+[Opcje kompilatora](../../build/reference/compiler-options.md)<br/>
+[Ustawianie opcji kompilatora](../../build/reference/setting-compiler-options.md)

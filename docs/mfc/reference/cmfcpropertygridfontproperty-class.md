@@ -22,12 +22,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d9e90570e783b2c42081da4854d54a65d1bdb9b6
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 33c719ffcba207beb4a5f867192af2b98aef2797
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43208869"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45719943"
 ---
 # <a name="cmfcpropertygridfontproperty-class"></a>Klasa CMFCPropertyGridFontProperty
 `CMFCPropertyGridFileProperty` Klasa obsługuje element formantu listy właściwości, który powoduje otwarcie okna dialogowego wyboru czcionki.  
@@ -83,23 +83,23 @@ CMFCPropertyGridFontProperty(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *strName*  
- Nazwa właściwości.  
+*strName*<br/>
+[in] Nazwa właściwości.  
   
- [in] *lf*  
- Struktury logicznej czcionek, która określa atrybuty czcionki.  
+*LF*<br/>
+[in] Struktury logicznej czcionek, która określa atrybuty czcionki.  
   
- [in] *dwFontDialogFlags*  
- Style, które są stosowane do czcionki okna dialogowego wyświetlanego po kliknięciu przycisku rozwijanego wartości właściwości. Wartością domyślną jest bitową kombinacją (lub) CF_EFFECTS i CF_SCREENFONTS. Aby uzyskać więcej informacji, zobacz *flagi* parametru [struktury CHOOSEFONT](/windows/desktop/api/commdlg/ns-commdlg-tagchoosefonta).  
+*dwFontDialogFlags*<br/>
+[in] Style, które są stosowane do czcionki okna dialogowego wyświetlanego po kliknięciu przycisku rozwijanego wartości właściwości. Wartością domyślną jest bitową kombinacją (lub) CF_EFFECTS i CF_SCREENFONTS. Aby uzyskać więcej informacji, zobacz *flagi* parametru [struktury CHOOSEFONT](/windows/desktop/api/commdlg/ns-commdlg-tagchoosefonta).  
   
- [in] *lpszDescr*  
- Opis właściwości czcionki. Wartością domyślną jest NULL.  
+*lpszDescr*<br/>
+[in] Opis właściwości czcionki. Wartością domyślną jest NULL.  
   
- [in] *dwData*  
- Dane specyficzne dla aplikacji, takich jak liczby całkowitej lub wskaźnika do innych danych, który jest skojarzony z właściwością. Wartość domyślna to 0.  
+*dwData*<br/>
+[in] Dane specyficzne dla aplikacji, takich jak liczby całkowitej lub wskaźnika do innych danych, który jest skojarzony z właściwością. Wartość domyślna to 0.  
   
- [in] *kolorów*  
- Kolor czcionki. Wartość domyślna to domyślny kolor.  
+*Kolor*<br/>
+[in] Kolor czcionki. Wartość domyślna to domyślny kolor.  
   
 ### <a name="remarks"></a>Uwagi  
  A `CMFCPropertyGridFontProperty` obiekt reprezentuje właściwość czcionki w kontrolce czcionki siatki właściwości.  

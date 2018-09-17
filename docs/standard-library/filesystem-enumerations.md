@@ -21,12 +21,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 22e4cf19ec3b85d14d346bd56697f4bcc4ff687b
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: ff655573f77b901725fe18c2346c46306c9b853a
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43194471"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45716810"
 ---
 # <a name="ltfilesystemgt-enumerations"></a>&lt;System plików&gt; wyliczenia
 
@@ -34,7 +34,9 @@ Tym temacie omówiono typy wyliczeniowe w nagłówku systemu plików.
 
 ## <a name="requirements"></a>Wymagania
 
-**Nagłówek:** \<eksperymentalne/filesystem > **Namespace:** std::experimental::filesystem
+**Nagłówek:** \<eksperymentalne/filesystem >
+
+**Namespace:** std::experimental::filesystem
 
 ## <a name="copy_options"></a>  copy_options
 

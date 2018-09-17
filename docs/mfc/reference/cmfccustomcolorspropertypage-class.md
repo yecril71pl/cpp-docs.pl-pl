@@ -18,15 +18,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8123db8e4a8dfba94e469881af8fbb2ecb40e2a0
-ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
+ms.openlocfilehash: 6c8fea125c61bebe836a31c0b2718741e8c531d3
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/27/2018
-ms.locfileid: "37041984"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45716867"
 ---
 # <a name="cmfccustomcolorspropertypage-class"></a>Klasa CMFCCustomColorsPropertyPage
-Reprezentuje stronę właściwości, który można wybrać kolory niestandardowe w oknie dialogowym koloru.  
+Reprezentuje stronę właściwości, które może wybrać kolory niestandardowe w oknie dialogowym koloru.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -49,14 +49,14 @@ class CMFCCustomColorsPropertyPage : public CPropertyPage
 |-|-|  
 |Nazwa|Opis|  
 |`CMFCCustomColorsPropertyPage::CreateObject`|Używane przez platformę do tworzenia dynamicznych wystąpienia tego typu klasy.|  
-|`CMFCCustomColorsPropertyPage::GetThisClass`|Używany przez platformę do uzyskania wskaźnik do [CRuntimeClass](../../mfc/reference/cruntimeclass-structure.md) obiekt, który jest skojarzony z tym typem klasy.|  
-|[CMFCCustomColorsPropertyPage::Setup](#setup)|Ustawia kolor części strony właściwości.|  
+|`CMFCCustomColorsPropertyPage::GetThisClass`|Używane przez architekturę, aby uzyskać wskaźnik do [CRuntimeClass](../../mfc/reference/cruntimeclass-structure.md) obiektu, który jest skojarzony z tym typem klasy.|  
+|[CMFCCustomColorsPropertyPage::Setup](#setup)|Ustawia kolor składniki na stronie właściwości.|  
   
 ### <a name="remarks"></a>Uwagi  
- `CMFCColorDialog` Klasa korzysta z tej klasy do wyświetlenia strony właściwości niestandardowego koloru. Aby uzyskać więcej informacji na temat `CMFCColorDialog`, zobacz [CMFCColorDialog klasy](../../mfc/reference/cmfccolordialog-class.md).  
+ `CMFCColorDialog` Klasa korzysta z tej klasy można wyświetlić strony właściwości koloru niestandardowego. Aby uzyskać więcej informacji na temat `CMFCColorDialog`, zobacz [klasa CMFCColorDialog](../../mfc/reference/cmfccolordialog-class.md).  
   
 ## <a name="example"></a>Przykład  
- W poniższym przykładzie pokazano sposób tworzenia `CMFCCustomColorsPropertyPage` obiektu i ustawić składniki kolor strony właściwości.  
+ W poniższym przykładzie pokazano sposób tworzenia `CMFCCustomColorsPropertyPage` obiektu i ustaw składników koloru na stronie właściwości.  
   
  [!code-cpp[NVC_MFC_RibbonApp#35](../../mfc/reference/codesnippet/cpp/cmfccustomcolorspropertypage-class_1.cpp)]  
   
@@ -77,7 +77,7 @@ class CMFCCustomColorsPropertyPage : public CPropertyPage
  **Nagłówek:** afxcustomcolorspropertypage.h  
   
 ##  <a name="setup"></a>  CMFCCustomColorsPropertyPage::Setup  
- Ustawia kolor części strony właściwości.  
+ Ustawia kolor składniki na stronie właściwości.  
   
 ```  
 void Setup(
@@ -91,12 +91,12 @@ void Setup(
 |||  
 |-|-|  
 |Parametr|Opis|  
-|[in] *R*|Czerwony składnik wartości RGB.|  
-|[in] *G*|Zielony składnik wartości RGB.|  
-|[in] *B*|Niebieski składnik wartości RGB.|  
+|*R*|[in] Składnik czerwony wartości RGB.|  
+|*G*|[in] Składnik zielony wartości RGB.|  
+|*B*|[in] Składnik niebieski wartości RGB.|  
   
 ### <a name="remarks"></a>Uwagi  
- Ta metoda aktualizacji bieżącego RGB i skojarzone HLS (hue, jasność i nasycenie) wartości kolorów stronę właściwości. [CMFCColorDialog::SetPageTwo](../../mfc/reference/cmfccolordialog-class.md#setpagetwo) metoda wywołuje tę metodę w ramach inicjuje okno dialogowe kolorów lub naciśnięciu lewego przycisku myszy. Aby uzyskać więcej informacji na temat `CMFCColorDialog`, zobacz [CMFCColorDialog klasy](../../mfc/reference/cmfccolordialog-class.md).  
+ Ta metoda aktualizacji bieżący RGB i skojarzone HLS (hue, jasność i nasycenie) wartości kolorów na stronie właściwości. [CMFCColorDialog::SetPageTwo](../../mfc/reference/cmfccolordialog-class.md#setpagetwo) metoda wywołuje tę metodę, gdy struktura inicjuje okno dialogowe kolorów lub naciśnięciu lewego przycisku myszy. Aby uzyskać więcej informacji na temat `CMFCColorDialog`, zobacz [klasa CMFCColorDialog](../../mfc/reference/cmfccolordialog-class.md).  
   
 ## <a name="see-also"></a>Zobacz też  
  [Diagram hierarchii](../../mfc/hierarchy-chart.md)   

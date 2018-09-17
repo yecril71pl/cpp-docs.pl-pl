@@ -128,12 +128,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c0e5fe8c9f9eb5f4d09bac28c4ffed3eda95454c
-ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
+ms.openlocfilehash: 5528e8eb8c7eeb54e221ca6c6167246a6491d7b2
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "42465703"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45720073"
 ---
 # <a name="cwinappex-class"></a>Klasa CWinAppEx
 `CWinAppEx` Obsługuje stan aplikacji, zapisuje stan w rejestrze, ładuje stan z rejestru, inicjuje Menedżery aplikacji i zawiera łącza do tych menedżerów.  
@@ -254,8 +254,8 @@ virtual BOOL CleanState(LPCTSTR lpszSectionName=NULL);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *lpszSectionName*  
- Ciąg, który zawiera ścieżkę klucza rejestru.  
+*lpszSectionName*<br/>
+[in] Ciąg, który zawiera ścieżkę klucza rejestru.  
   
 ### <a name="return-value"></a>Wartość zwracana  
  Wartość różną od zera, jeśli metoda zakończyła się pomyślnie; w przeciwnym razie 0.  
@@ -271,8 +271,8 @@ CWinAppEx(BOOL bResourceSmartUpdate = FALSE);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *bResourceSmartUpdate*  
- Parametr logiczny, który określa, czy obiekt obszaru roboczego powinien wykrywania i obsługi aktualizacji zasobu.  
+*bResourceSmartUpdate*<br/>
+[in] Parametr logiczny, który określa, czy obiekt obszaru roboczego powinien wykrywania i obsługi aktualizacji zasobu.  
   
 ### <a name="remarks"></a>Uwagi  
  `CWinAppEx` Klasy posiada metody inicjowania, oferuje funkcję zapisywanie i ładowanie informacji o aplikacji do rejestru i kontroluje ustawienia globalne aplikacji. Można również używać menedżerów globalnych, takich jak [klasa CKeyboardManager](../../mfc/reference/ckeyboardmanager-class.md) i [klasa CUserToolsManager](../../mfc/reference/cusertoolsmanager-class.md). Każda aplikacja może mieć tylko jedno wystąpienie `CWinAppEx` klasy.  
@@ -285,8 +285,8 @@ void EnableLoadWindowPlacement(BOOL bEnable = TRUE);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *bWłączenie*  
- Określa, czy aplikacja ładuje z rejestru rozmiaru początkowego i lokalizacji głównej ramki okna.  
+*bWłączenie*<br/>
+[in] Określa, czy aplikacja ładuje z rejestru rozmiaru początkowego i lokalizacji głównej ramki okna.  
   
 ### <a name="remarks"></a>Uwagi  
  Domyślnie rozmiar i położenie głównej ramki jest ładowany z rejestru wraz z innymi ustawieniami aplikacji. Ten problem wystąpi podczas [CWinAppEx::LoadState](#loadstate). Jeśli nie chcesz załadować położenie okna z rejestru, należy wywołać tej metody za pomocą *bWłączenie* ustawiony na wartość FALSE.  
@@ -302,14 +302,14 @@ BOOL EnableTearOffMenus(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *lpszRegEntry*  
- Ciąg, który zawiera ścieżkę klucza rejestru. Aplikacja używa tego klucza rejestru do przechowywania informacji o menu odrywania.  
+*lpszRegEntry*<br/>
+[in] Ciąg, który zawiera ścieżkę klucza rejestru. Aplikacja używa tego klucza rejestru do przechowywania informacji o menu odrywania.  
   
- [in] *uiCmdFirst*  
- Identyfikator pierwszego wydzielić menu.  
+*uiCmdFirst*<br/>
+[in] Identyfikator pierwszego wydzielić menu.  
   
- [in] *uiCmdLast*  
- Identyfikator ostatniego wydzielić menu.  
+*uiCmdLast*<br/>
+[in] Identyfikator ostatniego wydzielić menu.  
   
 ### <a name="return-value"></a>Wartość zwracana  
  Wartość TRUE, jeśli `CMenuTearOffManager` zostanie utworzony i zainicjowany pomyślnie; Wartość FALSE, jeśli wystąpi błąd lub `CMenuTearOffManager` już istnieje.  
@@ -331,23 +331,23 @@ BOOL EnableUserTools(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *uiCmdToolsDummy*  
- Liczba całkowita bez znaku środowisko wykorzystuje jako symbol zastępczy dla Identyfikatora polecenia menu Narzędzia użytkownika.  
+*uiCmdToolsDummy*<br/>
+[in] Liczba całkowita bez znaku środowisko wykorzystuje jako symbol zastępczy dla Identyfikatora polecenia menu Narzędzia użytkownika.  
   
- [in] *uiCmdFirst*  
- Identyfikator polecenia dla polecenia narzędzia pierwszego użytkownika.  
+*uiCmdFirst*<br/>
+[in] Identyfikator polecenia dla polecenia narzędzia pierwszego użytkownika.  
   
- [in] *uiCmdLast*  
- Identyfikator polecenia dla polecenia narzędzia ostatniego użytkownika.  
+*uiCmdLast*<br/>
+[in] Identyfikator polecenia dla polecenia narzędzia ostatniego użytkownika.  
   
- [in] *pToolRTC*  
- Klasa, `CUserToolsManager` używa obiektu w celu utworzenia nowych narzędzi użytkownika.  
+*pToolRTC*<br/>
+[in] Klasa, `CUserToolsManager` używa obiektu w celu utworzenia nowych narzędzi użytkownika.  
   
- [in] *uArgMenuID*  
- Identyfikator argument menu.  
+*uArgMenuID*<br/>
+[in] Identyfikator argument menu.  
   
- [in] *uInitDirMenuID*  
- Identyfikator menu dla katalogu początkowego narzędzia.  
+*uInitDirMenuID*<br/>
+[in] Identyfikator menu dla katalogu początkowego narzędzia.  
   
 ### <a name="return-value"></a>Wartość zwracana  
  Wartość TRUE, jeśli metoda tworzy i inicjuje `CUserToolsManager` obiektu; Wartość FALSE, jeśli metoda nie powiedzie się lub jeśli `CUserToolsManager` obiekt już istnieje.  
@@ -381,14 +381,14 @@ BOOL GetBinary(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *lpszEntry*  
- Ciąg, który zawiera nazwę klucza rejestru.  
+*lpszEntry*<br/>
+[in] Ciąg, który zawiera nazwę klucza rejestru.  
   
- [out] *ppData*  
- Wskaźnik do buforu, który wypełnia metody danych binarnych.  
+*ppData*<br/>
+[out] Wskaźnik do buforu, który wypełnia metody danych binarnych.  
   
- [out] *pBytes*  
- Wskaźnik na liczbę całkowitą bez znaku, metoda używa do zapisu liczba odczytanych bajtów.  
+*pBytes*<br/>
+[out] Wskaźnik na liczbę całkowitą bez znaku, metoda używa do zapisu liczba odczytanych bajtów.  
   
 ### <a name="return-value"></a>Wartość zwracana  
  Wartość TRUE, jeśli to się powiedzie; Wartość FALSE w przeciwnym razie.  
@@ -452,11 +452,11 @@ int GetInt(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *lpszEntry*  
- Ciąg, który zawiera nazwę wpisu rejestru.  
+*lpszEntry*<br/>
+[in] Ciąg, który zawiera nazwę wpisu rejestru.  
   
- [in] *nDefault*  
- Wartość domyślna, metoda zwraca wartość, jeśli określony wpis rejestru nie istnieje.  
+*nDefault*<br/>
+[in] Wartość domyślna, metoda zwraca wartość, jeśli określony wpis rejestru nie istnieje.  
   
 ### <a name="return-value"></a>Wartość zwracana  
  Dane rejestru, jeśli metoda zakończyła się pomyślnie; w przeciwnym razie *nDefault*.  
@@ -502,11 +502,11 @@ BOOL GetObject(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *lpszEntry*  
- Ciąg, który zawiera ścieżkę relatywną wpisu rejestru.  
+*lpszEntry*<br/>
+[in] Ciąg, który zawiera ścieżkę relatywną wpisu rejestru.  
   
- [out] *obj*  
- Odwołanie do `CObject`. Metoda używa tego odwołania do przechowywania danych rejestru.  
+*obj*<br/>
+[out] Odwołanie do `CObject`. Metoda używa tego odwołania do przechowywania danych rejestru.  
   
 ### <a name="return-value"></a>Wartość zwracana  
  Wartość różną od zera, jeśli metoda zakończyła się pomyślnie; w przeciwnym razie 0.  
@@ -537,8 +537,8 @@ CString GetRegSectionPath(LPCTSTR szSectionAdd = _T(""));
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *szSectionAdd*  
- Ciąg, który zawiera ścieżkę względną do klucza rejestru.  
+*szSectionAdd*<br/>
+[in] Ciąg, który zawiera ścieżkę względną do klucza rejestru.  
   
 ### <a name="return-value"></a>Wartość zwracana  
  Element `CString` zawierający ścieżkę bezwzględną klucza rejestru.  
@@ -558,17 +558,17 @@ BOOL GetSectionBinary(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *lpszSubSection*  
- Ciąg, który zawiera ścieżkę względną do klucza rejestru.  
+*lpszSubSection*<br/>
+[in] Ciąg, który zawiera ścieżkę względną do klucza rejestru.  
   
- [in] *lpszEntry*  
- Ciąg, który zawiera wartość do odczytu.  
+*lpszEntry*<br/>
+[in] Ciąg, który zawiera wartość do odczytu.  
   
- [out] *ppData*  
- Wskaźnik do buforu, której metody są przechowywane dane.  
+*ppData*<br/>
+[out] Wskaźnik do buforu, której metody są przechowywane dane.  
   
- [out] *pBytes*  
- Wskaźnik na liczbę całkowitą bez znaku. Metoda zapisuje rozmiar *ppData* do tego parametru.  
+*pBytes*<br/>
+[out] Wskaźnik na liczbę całkowitą bez znaku. Metoda zapisuje rozmiar *ppData* do tego parametru.  
   
 ### <a name="return-value"></a>Wartość zwracana  
  Wartość TRUE, jeśli to się powiedzie; w przeciwnym razie wartość FALSE.  
@@ -589,14 +589,14 @@ int GetSectionInt(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *lpszSubSection*  
- Ciąg, który zawiera ścieżkę względną do klucza rejestru.  
+*lpszSubSection*<br/>
+[in] Ciąg, który zawiera ścieżkę względną do klucza rejestru.  
   
- [in] *lpszEntry*  
- Ciąg, który zawiera wartość do odczytu.  
+*lpszEntry*<br/>
+[in] Ciąg, który zawiera wartość do odczytu.  
   
- [in] *nDefault*  
- Domyślna wartość do zwrócenia, jeśli określona wartość nie istnieje.  
+*nDefault*<br/>
+[in] Domyślna wartość do zwrócenia, jeśli określona wartość nie istnieje.  
   
 ### <a name="return-value"></a>Wartość zwracana  
  Danych liczb całkowitych, która jest przechowywana w określonej wartości rejestru; *nDefault* Jeśli dane nie istnieje.  
@@ -617,14 +617,14 @@ BOOL GetSectionObject(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *lpszSubSection*  
- Ciąg, który zawiera ścieżkę względną do klucza rejestru.  
+*lpszSubSection*<br/>
+[in] Ciąg, który zawiera ścieżkę względną do klucza rejestru.  
   
- [in] *lpszEntry*  
- Ciąg, który zawiera wartość do odczytu.  
+*lpszEntry*<br/>
+[in] Ciąg, który zawiera wartość do odczytu.  
   
- [out] *obj*  
- Odwołanie do `CObject`. Metoda używa to `CObject` do przechowywania danych rejestru.  
+*obj*<br/>
+[out] Odwołanie do `CObject`. Metoda używa to `CObject` do przechowywania danych rejestru.  
   
 ### <a name="return-value"></a>Wartość zwracana  
  Wartość różną od zera, jeśli to się powiedzie; w przeciwnym razie 0.  
@@ -645,14 +645,14 @@ CString GetSectionString(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *lpszSubSection*  
- Ciąg, który zawiera ścieżkę względną do klucza rejestru.  
+*lpszSubSection*<br/>
+[in] Ciąg, który zawiera ścieżkę względną do klucza rejestru.  
   
- [in] *lpszEntry*  
- Ciąg, który zawiera wartość do odczytu.  
+*lpszEntry*<br/>
+[in] Ciąg, który zawiera wartość do odczytu.  
   
- [in] *lpszDefault*  
- Domyślna wartość do zwrócenia, jeśli określona wartość nie istnieje.  
+*lpszDefault*<br/>
+[in] Domyślna wartość do zwrócenia, jeśli określona wartość nie istnieje.  
   
 ### <a name="return-value"></a>Wartość zwracana  
  Dane ciągu przechowywane w określonej wartości rejestru, jeśli dane istnieją; w przeciwnym razie *lpszDefault*.  
@@ -685,11 +685,11 @@ CString GetString(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *lpszEntry*  
- Ciąg zawierający nazwę klucza rejestru  
+*lpszEntry*<br/>
+[in] Ciąg zawierający nazwę klucza rejestru  
   
- [in] *lpzDefault*  
- Wartość domyślna, metoda zwraca wartość, jeśli określony wpis rejestru nie istnieje.  
+*lpzDefault*<br/>
+[in] Wartość domyślna, metoda zwraca wartość, jeśli określony wpis rejestru nie istnieje.  
   
 ### <a name="return-value"></a>Wartość zwracana  
  Dane ciągu przechowywane w rejestrze, jeśli to się powiedzie; *lpszDefault* inaczej.  
@@ -819,8 +819,8 @@ BOOL IsStateExists(LPCTSTR lpszSectionName);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *lpszSectionName*  
- Ciąg, który zawiera ścieżkę klucza rejestru.  
+*lpszSectionName*<br/>
+[in] Ciąg, który zawiera ścieżkę klucza rejestru.  
   
 ### <a name="return-value"></a>Wartość zwracana  
  Wartość różną od zera, jeśli klucz jest w rejestrze. w przeciwnym razie 0.  
@@ -862,14 +862,14 @@ virtual BOOL LoadState(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *pFrame*  
- Wskaźnik do obiektu okna ramki. Metoda dotyczy informacji o stanie w rejestrze tej ramki okna.  
+*pFrame*<br/>
+[in] Wskaźnik do obiektu okna ramki. Metoda dotyczy informacji o stanie w rejestrze tej ramki okna.  
   
- [in] *lpszSectionName*  
- Ciąg, który zawiera ścieżkę względną do klucza rejestru.  
+*lpszSectionName*<br/>
+[in] Ciąg, który zawiera ścieżkę względną do klucza rejestru.  
   
- [in] *pFrameImpl*  
- Wskaźnik do `CFrameImpl` obiektu. Metoda dotyczy informacji o stanie w rejestrze tej ramki okna.  
+*pFrameImpl*<br/>
+[in] Wskaźnik do `CFrameImpl` obiektu. Metoda dotyczy informacji o stanie w rejestrze tej ramki okna.  
   
 ### <a name="return-value"></a>Wartość zwracana  
  Wartość różną od zera, jeśli to się powiedzie; w przeciwnym razie 0.  
@@ -892,14 +892,14 @@ virtual BOOL LoadWindowPlacement(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [out] *rectNormalPosition*  
- Prostokąt, który zawiera współrzędne ramką głównego okna, gdy jest on w przywróconej pozycji.  
+*rectNormalPosition*<br/>
+[out] Prostokąt, który zawiera współrzędne ramką głównego okna, gdy jest on w przywróconej pozycji.  
   
- [out] *nFlags*  
- Flagi określające położenie zminimalizowane okno i jak system operacyjny stan zmieni się między zminimalizowane okno i przywrócone okna.  
+*nFlags*<br/>
+[out] Flagi określające położenie zminimalizowane okno i jak system operacyjny stan zmieni się między zminimalizowane okno i przywrócone okna.  
   
- [out] *nShowCmd*  
- Liczba całkowita określająca Pokaż stan okna. Aby uzyskać więcej informacji na temat możliwych wartości, zobacz [CWnd::ShowWindow](../../mfc/reference/cwnd-class.md#showwindow).  
+*nShowCmd*<br/>
+[out] Liczba całkowita określająca Pokaż stan okna. Aby uzyskać więcej informacji na temat możliwych wartości, zobacz [CWnd::ShowWindow](../../mfc/reference/cwnd-class.md#showwindow).  
   
 ### <a name="return-value"></a>Wartość zwracana  
  Wartość różną od zera, jeśli to się powiedzie; w przeciwnym razie 0.  
@@ -929,11 +929,11 @@ virtual void OnAppContextHelp(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *pWndControl*  
- Wskaźnik do obiektu okna, dla którego użytkownik wywołał pomocy kontekstowej.  
+*pWndControl*<br/>
+[in] Wskaźnik do obiektu okna, dla którego użytkownik wywołał pomocy kontekstowej.  
   
- [in] *dwHelpIDArray]*  
- Zastrzeżonej wartości.  
+*[] dwHelpIDArray*<br/>
+[in] Zastrzeżonej wartości.  
   
 ### <a name="remarks"></a>Uwagi  
  Ta metoda obecnie jest zarezerwowana do użytku w przyszłości. Domyślna implementacja nic nie robi, i obecnie nie jest wywoływany przez platformę.  
@@ -946,8 +946,8 @@ virtual void OnClosingMainFrame(CFrameImpl* pFrameImpl);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *pFrameImpl*  
- Wskaźnik do `CFrameImpl` obiektu.  
+*pFrameImpl*<br/>
+[in] Wskaźnik do `CFrameImpl` obiektu.  
   
 ### <a name="remarks"></a>Uwagi  
  Domyślna implementacja tej metody zapisuje stan *pFrameImpl*.  
@@ -962,11 +962,11 @@ virtual BOOL OnViewDoubleClick(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *pWnd*  
- Wskaźnik do obiektu pochodzi od [CView Class](../../mfc/reference/cview-class.md).  
+*pWnd*<br/>
+[in] Wskaźnik do obiektu pochodzi od [CView Class](../../mfc/reference/cview-class.md).  
   
- [in] *iViewId*  
- Identyfikator widoku.  
+*iViewId*<br/>
+[in] Identyfikator widoku.  
   
 ### <a name="return-value"></a>Wartość zwracana  
  Wartość TRUE, jeśli w ramach znajdzie polecenia; w przeciwnym razie wartość FALSE.  
@@ -1016,8 +1016,8 @@ virtual BOOL ReloadWindowPlacement(CFrameWnd* pFrame);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *pFrame*  
- Wskaźnik do ramki okna.  
+*pFrame*<br/>
+[in] Wskaźnik do ramki okna.  
   
 ### <a name="return-value"></a>Wartość zwracana  
  Wartość różną od zera, jeśli metoda zakończyła się pomyślnie; 0, jeśli obciążenie nie powiodło się lub występują jest Brak danych do załadowania.  
@@ -1060,14 +1060,14 @@ BOOL SaveState(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *lpszSectionName*  
- Ciąg, który zawiera ścieżkę względną do klucza rejestru.  
+*lpszSectionName*<br/>
+[in] Ciąg, który zawiera ścieżkę względną do klucza rejestru.  
   
- [in] *pFrameImpl*  
- Wskaźnik do `CFrameImpl` obiektu. Ta ramka są zapisywane w rejestrze systemu Windows.  
+*pFrameImpl*<br/>
+[in] Wskaźnik do `CFrameImpl` obiektu. Ta ramka są zapisywane w rejestrze systemu Windows.  
   
- [in] *pFrame*  
- Wskaźnik do obiektu okna ramki. Ta ramka są zapisywane w rejestrze systemu Windows.  
+*pFrame*<br/>
+[in] Wskaźnik do obiektu okna ramki. Ta ramka są zapisywane w rejestrze systemu Windows.  
   
 ### <a name="return-value"></a>Wartość zwracana  
  Wartość TRUE, jeśli to się powiedzie; Wartość FALSE w przeciwnym razie.  
@@ -1085,8 +1085,8 @@ LPCTSTR SetRegistryBase(LPCTSTR lpszSectionName = NULL);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *lpszSectionName*  
- Ciąg, który zawiera ścieżkę klucza rejestru.  
+*lpszSectionName*<br/>
+[in] Ciąg, który zawiera ścieżkę klucza rejestru.  
   
 ### <a name="return-value"></a>Wartość zwracana  
  Ciąg, który zawiera ścieżkę domyślnej lokalizacji rejestru.  
@@ -1105,14 +1105,14 @@ virtual BOOL ShowPopupMenu(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *uiMenuResId*  
- Identyfikator zasobu menu.  
+*uiMenuResId*<br/>
+[in] Identyfikator zasobu menu.  
   
- [in] *punktu*  
- A [CPoint](../../atl-mfc-shared/reference/cpoint-class.md) określająca położenie menu we współrzędnych ekranu.  
+*Punkt*<br/>
+[in] A [CPoint](../../atl-mfc-shared/reference/cpoint-class.md) określająca położenie menu we współrzędnych ekranu.  
   
- [in] *pWnd*  
- Wskaźnik do okna, który jest właścicielem menu podręcznego.  
+*pWnd*<br/>
+[in] Wskaźnik do okna, który jest właścicielem menu podręcznego.  
   
 ### <a name="return-value"></a>Wartość zwracana  
  Wartość różną od zera, jeśli pomyślnie; zostanie wyświetlone menu podręcznego w przeciwnym razie 0.  
@@ -1133,14 +1133,14 @@ virtual BOOL StoreWindowPlacement(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *nFlags*  
- Flagi określające położenie zminimalizowane okno i jak system operacyjny stan zmieni się między zminimalizowane okno i przywrócone okna.  
+*nFlags*<br/>
+[in] Flagi określające położenie zminimalizowane okno i jak system operacyjny stan zmieni się między zminimalizowane okno i przywrócone okna.  
   
- [in] *nShowCmd*  
- Liczba całkowita określająca Pokaż stan okna. Aby uzyskać więcej informacji na temat możliwych wartości, zobacz [CWnd::ShowWindow](../../mfc/reference/cwnd-class.md#showwindow).  
+*nShowCmd*<br/>
+[in] Liczba całkowita określająca Pokaż stan okna. Aby uzyskać więcej informacji na temat możliwych wartości, zobacz [CWnd::ShowWindow](../../mfc/reference/cwnd-class.md#showwindow).  
   
- [in] *rectNormalPosition*  
- Prostokąt, który zawiera współrzędne ramką głównego okna, gdy jest ona w stanie przywrócona.  
+*rectNormalPosition*<br/>
+[in] Prostokąt, który zawiera współrzędne ramką głównego okna, gdy jest ona w stanie przywrócona.  
   
 ### <a name="return-value"></a>Wartość zwracana  
  Wartość różną od zera, jeśli to się powiedzie; w przeciwnym razie 0.  
@@ -1161,14 +1161,14 @@ BOOL WriteBinary(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *lpszEntry*  
- Ciąg, który zawiera nazwę klucza rejestru.  
+*lpszEntry*<br/>
+[in] Ciąg, który zawiera nazwę klucza rejestru.  
   
- [in] *pData*  
- Dane, które mają być przechowywane.  
+*pData*<br/>
+[in] Dane, które mają być przechowywane.  
   
- [in] *nBytes*  
- Rozmiar *pData* w bajtach.  
+*nBytes*<br/>
+[in] Rozmiar *pData* w bajtach.  
   
 ### <a name="return-value"></a>Wartość zwracana  
  Wartość TRUE, jeśli ta metoda jest kończy się pomyślnie; w przeciwnym razie wartość FALSE.  
@@ -1188,11 +1188,11 @@ BOOL WriteInt(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *lpszEntry*  
- Ciąg, który zawiera nazwę klucza rejestru.  
+*lpszEntry*<br/>
+[in] Ciąg, który zawiera nazwę klucza rejestru.  
   
- [in] *nWartość:*  
- Dane, które mają być przechowywane.  
+*nWartość:*<br/>
+[in] Dane, które mają być przechowywane.  
   
 ### <a name="return-value"></a>Wartość zwracana  
  Wartość TRUE, jeśli ta metoda jest kończy się pomyślnie; w przeciwnym razie wartość FALSE.  
@@ -1212,11 +1212,11 @@ BOOL WriteObject(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *lpszEntry*  
- Ciąg, który zawiera wartość do ustawienia.  
+*lpszEntry*<br/>
+[in] Ciąg, który zawiera wartość do ustawienia.  
   
- [in] *obj*  
- Odwołanie do `CObject` dane, które będą przechowywane w metodzie.  
+*obj*<br/>
+[in] Odwołanie do `CObject` dane, które będą przechowywane w metodzie.  
   
 ### <a name="return-value"></a>Wartość zwracana  
  Wartość TRUE, jeśli ta metoda jest kończy się pomyślnie; w przeciwnym razie wartość FALSE.  
@@ -1236,17 +1236,17 @@ BOOL WriteSectionBinary(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *lpszSubSection*  
- Ciąg zawierający nazwę klucza rejestru  
+*lpszSubSection*<br/>
+[in] Ciąg zawierający nazwę klucza rejestru  
   
- [in] *lpszEntry*  
- Ciąg, który zawiera wartość do ustawienia.  
+*lpszEntry*<br/>
+[in] Ciąg, który zawiera wartość do ustawienia.  
   
- [in] *pData*  
- Dane do zapisu w rejestrze.  
+*pData*<br/>
+[in] Dane do zapisu w rejestrze.  
   
- [in] *nBytes*  
- Rozmiar *pData* w bajtach.  
+*nBytes*<br/>
+[in] Rozmiar *pData* w bajtach.  
   
 ### <a name="return-value"></a>Wartość zwracana  
  Wartość TRUE, jeśli ta metoda jest kończy się pomyślnie; w przeciwnym razie wartość FALSE.  
@@ -1267,14 +1267,14 @@ BOOL WriteSectionInt(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *lpszSubSection*  
- Ciąg, który zawiera ścieżkę względną do klucza rejestru.  
+*lpszSubSection*<br/>
+[in] Ciąg, który zawiera ścieżkę względną do klucza rejestru.  
   
- [in] *lpszEntry*  
- Ciąg, który zawiera wartość do ustawienia.  
+*lpszEntry*<br/>
+[in] Ciąg, który zawiera wartość do ustawienia.  
   
- [in] *nWartość:*  
- Dane do zapisu w rejestrze.  
+*nWartość:*<br/>
+[in] Dane do zapisu w rejestrze.  
   
 ### <a name="return-value"></a>Wartość zwracana  
  Wartość TRUE, jeśli ta metoda jest kończy się pomyślnie; w przeciwnym razie wartość FALSE.  
@@ -1295,14 +1295,14 @@ BOOL WriteSectionObject(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *lpszSubSection*  
- Ciąg, który zawiera nazwę klucza rejestru.  
+*lpszSubSection*<br/>
+[in] Ciąg, który zawiera nazwę klucza rejestru.  
   
- [in] *lpszEntry*  
- Ciąg, który zawiera nazwę wartość do ustawienia.  
+*lpszEntry*<br/>
+[in] Ciąg, który zawiera nazwę wartość do ustawienia.  
   
- [in] *obj*  
- Dane, które mają być przechowywane.  
+*obj*<br/>
+[in] Dane, które mają być przechowywane.  
   
 ### <a name="return-value"></a>Wartość zwracana  
  Wartość TRUE, jeśli ta metoda jest kończy się pomyślnie; w przeciwnym razie wartość FALSE.  
@@ -1323,14 +1323,14 @@ BOOL WriteSectionString(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *lpszSubSection*  
- Ciąg, który zawiera nazwę klucza rejestru.  
+*lpszSubSection*<br/>
+[in] Ciąg, który zawiera nazwę klucza rejestru.  
   
- [in] *lpszEntry*  
- Ciąg, który zawiera wartość do ustawienia.  
+*lpszEntry*<br/>
+[in] Ciąg, który zawiera wartość do ustawienia.  
   
- [in] *lpszValue*  
- Dane ciągu do zapisu w rejestrze.  
+*lpszValue*<br/>
+[in] Dane ciągu do zapisu w rejestrze.  
   
 ### <a name="return-value"></a>Wartość zwracana  
  Wartość TRUE, jeśli ta metoda jest kończy się pomyślnie; w przeciwnym razie wartość FALSE.  
@@ -1350,11 +1350,11 @@ BOOL WriteString(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *lpszEntry*  
- Ciąg, który zawiera nazwę klucza rejestru.  
+*lpszEntry*<br/>
+[in] Ciąg, który zawiera nazwę klucza rejestru.  
   
- [in] *lpszValue*  
- Dane, które mają być przechowywane.  
+*lpszValue*<br/>
+[in] Dane, które mają być przechowywane.  
   
 ### <a name="return-value"></a>Wartość zwracana  
  Wartość TRUE, jeśli ta metoda jest kończy się pomyślnie; w przeciwnym razie wartość FALSE.  

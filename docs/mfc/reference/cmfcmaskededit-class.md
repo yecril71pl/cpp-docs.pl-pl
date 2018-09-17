@@ -34,12 +34,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3b903946a2e907b67d70e5008bff602670f1751e
-ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
+ms.openlocfilehash: a0bb29fdaff72370ec197fc9b3f651b5ff574c32
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/05/2018
-ms.locfileid: "37849474"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45717434"
 ---
 # <a name="cmfcmaskededit-class"></a>Klasa CMFCMaskedEdit
 `CMFCMaskedEdit` Klasa obsługuje formant edycji maskowanej, który sprawdza poprawność danych wejściowych użytkownika w oparciu o maskę i wyświetla zatwierdzone wyniki zgodnie ze wzorcem.  
@@ -132,8 +132,8 @@ void EnableGetMaskedCharsOnly(BOOL bEnable=TRUE);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *bWłączenie*  
- Wartość TRUE, aby określić, że [CMFCMaskedEdit::GetWindowText](#getwindowtext) metody pobierania tylko maskowane znaków. Wartość FALSE, aby określić, że metoda pobieranie całego tekstu. Wartość domyślna to TRUE.  
+*bWłączenie*<br/>
+[in] Wartość TRUE, aby określić, że [CMFCMaskedEdit::GetWindowText](#getwindowtext) metody pobierania tylko maskowane znaków. Wartość FALSE, aby określić, że metoda pobieranie całego tekstu. Wartość domyślna to TRUE.  
   
 ### <a name="remarks"></a>Uwagi  
  Ta metoda umożliwia pobieranie maskowanego znaków. Następnie należy utworzyć formant edycji maskowanej, który odpowiada numer telefonu, takich jak (425) 555-0187. Jeśli wywołasz `GetWindowText` metody, zwraca "4255550187". Po wyłączeniu pobierania maskowanego znaków `GetWindowText` metoda zwraca tekst, który jest wyświetlany w formancie edycji, na przykład "(425) 555-0187".  
@@ -150,17 +150,17 @@ void EnableMask(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *lpszMask*  
- Ciąg maska, który określa typ znaku, który może znajdować się w każdej pozycji w danych wejściowych użytkownika. Długość *lpszInputTemplate* i *lpszMask* ciągi parametru musi być taka sama. Zobacz sekcję Spostrzeżenia, aby uzyskać więcej informacji na temat maski znaków.  
+*lpszMask*<br/>
+[in] Ciąg maska, który określa typ znaku, który może znajdować się w każdej pozycji w danych wejściowych użytkownika. Długość *lpszInputTemplate* i *lpszMask* ciągi parametru musi być taka sama. Zobacz sekcję Spostrzeżenia, aby uzyskać więcej informacji na temat maski znaków.  
   
- [in] *lpszInputTemplate*  
- Ciąg szablonu maski, określający, że znaków literału, które mogą być wyświetlane w każdej pozycji w danych wejściowych użytkownika. Użyj znaku podkreślenia (_) jako symbolu zastępczego znaków. Długość *lpszInputTemplate* i *lpszMask* ciągi parametru musi być taka sama.  
+*lpszInputTemplate*<br/>
+[in] Ciąg szablonu maski, określający, że znaków literału, które mogą być wyświetlane w każdej pozycji w danych wejściowych użytkownika. Użyj znaku podkreślenia (_) jako symbolu zastępczego znaków. Długość *lpszInputTemplate* i *lpszMask* ciągi parametru musi być taka sama.  
   
- [in] *chMaskInputTemplate*  
- Domyślny znak ramach zastępuje każdy nieprawidłowy znak w danych wejściowych użytkownika. Wartość domyślna tego parametru to znak podkreślenia (_).  
+*chMaskInputTemplate*<br/>
+[in] Domyślny znak ramach zastępuje każdy nieprawidłowy znak w danych wejściowych użytkownika. Wartość domyślna tego parametru to znak podkreślenia (_).  
   
- [in] *lpszValid*  
- Ciąg, który zawiera zestaw prawidłowych znaków. Wartości NULL wskazuje, że wszystkie znaki są prawidłowe. Wartość domyślna tego parametru ma wartość NULL.  
+*lpszValid*<br/>
+[in] Ciąg, który zawiera zestaw prawidłowych znaków. Wartości NULL wskazuje, że wszystkie znaki są prawidłowe. Wartość domyślna tego parametru ma wartość NULL.  
   
 ### <a name="remarks"></a>Uwagi  
  Ta metoda umożliwia tworzenie maski dla maskowana kontrolka edycji. Wyprowadzić klasę z `CMFCMaskedEdit` klasy, a także Przesłoń [CMFCMaskedEdit::IsMaskedChar](#ismaskedchar) metoda do użycia z własnego kodu podczas przetwarzania niestandardowej maski.  
@@ -186,8 +186,8 @@ void EnableSelectByGroup(BOOL bEnable=TRUE);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *bWłączenie*  
- Wartość TRUE, aby wybrać tylko grupy; Wartość FALSE, aby zaznaczyć cały tekst. Wartość domyślna to TRUE.  
+*bWłączenie*<br/>
+[in] Wartość TRUE, aby wybrać tylko grupy; Wartość FALSE, aby zaznaczyć cały tekst. Wartość domyślna to TRUE.  
   
 ### <a name="remarks"></a>Uwagi  
  Ta funkcja umożliwia określenie, czy maskowana kontrolka edycji zezwala użytkownikowi na wybranie, grupie lub Zaznaczanie całego tekstu.  
@@ -218,8 +218,8 @@ void EnableSetMaskedCharsOnly(BOOL bEnable=TRUE);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *bWłączenie*  
- Wartość TRUE, aby zweryfikować użytkownika dane wejściowe względem tylko maskowane znaków. Wartość FAŁSZ, aby przeprowadzić walidacji względem całej maski. Wartość domyślna to TRUE.  
+*bWłączenie*<br/>
+[in] Wartość TRUE, aby zweryfikować użytkownika dane wejściowe względem tylko maskowane znaków. Wartość FAŁSZ, aby przeprowadzić walidacji względem całej maski. Wartość domyślna to TRUE.  
   
 ##  <a name="getwindowtext"></a>  CMFCMaskedEdit::GetWindowText  
  Pobiera zweryfikować tekst z maskowana kontrolka edycji.  
@@ -233,14 +233,14 @@ void GetWindowText(CString& rstrString) const;
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [out] *lpszStringBuf*  
- Wskaźnik do buforu, który odbiera tekstu z kontrolki edycji.  
+*lpszStringBuf*<br/>
+[out] Wskaźnik do buforu, który odbiera tekstu z kontrolki edycji.  
   
- [in] *nMaxCount*  
- Maksymalna liczba znaków do odbierania.  
+*nMaxCount*<br/>
+[in] Maksymalna liczba znaków do odbierania.  
   
- [out] *rstrString*  
- Odwołanie do obiektu ciągu, który odbiera tekstu z kontrolki edycji.  
+*rstrString*<br/>
+[out] Odwołanie do obiektu ciągu, który odbiera tekstu z kontrolki edycji.  
   
 ### <a name="return-value"></a>Wartość zwracana  
  Pierwsze przeciążenie metody zwraca liczbę bajtów w ciągu, który jest kopiowany do *lpszStringBuf* bufor parametru; 0, jeśli maskowana kontrolka edycji nie zawiera tekstu.  
@@ -260,11 +260,11 @@ virtual BOOL IsMaskedChar(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *chChar*  
- Znak, który ma zostać zweryfikowana.  
+*chChar*<br/>
+[in] Znak, który ma zostać zweryfikowana.  
   
- [in] *chMaskChar*  
- Odpowiedniego znaku w ciągu maski.  
+*chMaskChar*<br/>
+[in] Odpowiedniego znaku w ciągu maski.  
   
 ### <a name="return-value"></a>Wartość zwracana  
  Wartość TRUE, jeśli *chChar* parametr jest typem znaków dozwoloną przez *chMaskChar* parametru; w przeciwnym razie wartość FALSE.  
@@ -280,8 +280,8 @@ void SetValidChars(LPCTSTR lpszValid=NULL);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *lpszValid*  
- Ciąg, który zawiera zestaw prawidłowych znaków danych wejściowych. Wartość NULL oznacza, że wszystkie znaki są prawidłowe. Wartość domyślna tego parametru ma wartość NULL.  
+*lpszValid*<br/>
+[in] Ciąg, który zawiera zestaw prawidłowych znaków danych wejściowych. Wartość NULL oznacza, że wszystkie znaki są prawidłowe. Wartość domyślna tego parametru ma wartość NULL.  
   
 ### <a name="remarks"></a>Uwagi  
  Ta metoda umożliwia definiowanie listy prawidłowych znaków. Jeśli wprowadzanych znaków nie ma na tej liście, maskowana kontrolka edit nie akceptuje je.  
@@ -298,8 +298,8 @@ void SetWindowText(LPCTSTR lpszString);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *lpszString*  
- Wskazuje ciąg zakończony zerem, która będzie służyć jako wiersz.  
+*lpszString*<br/>
+[in] Wskazuje ciąg zakończony zerem, która będzie służyć jako wiersz.  
   
 ### <a name="remarks"></a>Uwagi  
  Ta metoda ustawia tekst kontrolki.  

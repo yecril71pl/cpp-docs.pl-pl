@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: c3bfa286e253ef634a42fea5a5c926981174c400
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: b599e5f25449dfef3b37d7811db572ee4299b241
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42613004"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45719111"
 ---
 # <a name="dbparam"></a>db_param
 
@@ -47,8 +47,8 @@ Zmienna określonego elementu członkowskiego jest skojarzona z parametrów wej�
 *Liczba porządkowa*  
 Numer kolumny (liczba porządkowa DBCOLUMNINFO) odpowiadający pole w zestawie wierszy, do którego należy powiązać dane.
 
-*paramtype* (opcjonalnie)  
-Typ, który można ustawić dla parametru. Dostawcy obsługują tylko typy operacji We/Wy parametrów, które są obsługiwane przez bazowe źródło danych. Typ składa się z co najmniej jedną wartość DBPARAMIOENUM:
+*paramtype*  
+(Opcjonalnie) Typ, który można ustawić dla parametru. Dostawcy obsługują tylko typy operacji We/Wy parametrów, które są obsługiwane przez bazowe źródło danych. Typ składa się z co najmniej jedną wartość DBPARAMIOENUM:
 
 - DBPARAMIO_INPUT parametr wejściowy.
 
@@ -56,20 +56,20 @@ Typ, który można ustawić dla parametru. Dostawcy obsługują tylko typy opera
 
 - DBPARAMIO_NOTPARAM akcesor nie ma parametrów. Ustawienie `eParamIO` tej wartości w wierszu Akcesory przypomina o tym użytkownika, parametry są ignorowane.
 
-*Atrybut DbType* (opcjonalnie)  
-OLE DB [wskaźnika typu](/previous-versions/windows/desktop/ms711251\(v=vs.85\)) wpisu kolumny.
+*Atrybut DbType*  
+(Opcjonalnie) OLE DB [wskaźnika typu](/previous-versions/windows/desktop/ms711251\(v=vs.85\)) wpisu kolumny.
 
-*dokładność* (opcjonalnie)  
-Dokładności, który ma być używany dla wpisu kolumny. Aby uzyskać szczegółowe informacje, zobacz opis `bPrecision` elementu [DBBINDING struktury](/previous-versions/windows/desktop/ms716845\(v=vs.85\))
+*Precyzja*  
+(Opcjonalnie) Dokładności, który ma być używany dla wpisu kolumny. Aby uzyskać szczegółowe informacje, zobacz opis `bPrecision` elementu [DBBINDING struktury](/previous-versions/windows/desktop/ms716845\(v=vs.85\))
 
-*Skala* (opcjonalnie)  
-Skala, który ma być używany dla wpisu kolumny. Aby uzyskać szczegółowe informacje, zobacz opis `bScale` elementu [DBBINDING struktury](/previous-versions/windows/desktop/ms716845\(v=vs.85\))
+*Skala*  
+(Opcjonalnie) Skala, który ma być używany dla wpisu kolumny. Aby uzyskać szczegółowe informacje, zobacz opis `bScale` elementu [DBBINDING struktury](/previous-versions/windows/desktop/ms716845\(v=vs.85\))
 
-*Stan* (opcjonalnie)  
-Zmienną członkowską, używane do przechowywania stanu dla tej kolumny. Stan wskazuje, czy wartość kolumny jest wartość danych lub innej wartości, takie jak wartości NULL. Możliwe wartości, zobacz [stan](/previous-versions/windows/desktop/ms722617\(v=vs.85\)) w *OLE DB Podręcznik programisty*.
+*status*  
+(Opcjonalnie) Zmienną członkowską, używane do przechowywania stanu dla tej kolumny. Stan wskazuje, czy wartość kolumny jest wartość danych lub innej wartości, takie jak wartości NULL. Możliwe wartości, zobacz [stan](/previous-versions/windows/desktop/ms722617\(v=vs.85\)) w *OLE DB Podręcznik programisty*.
 
-*długość* (opcjonalnie)  
-Zmienną członkowską, używane do przechowywania rozmiar kolumny w bajtach.
+*Długość*  
+(Opcjonalnie) Zmienną członkowską, używane do przechowywania rozmiar kolumny w bajtach.
 
 ## <a name="remarks"></a>Uwagi
 

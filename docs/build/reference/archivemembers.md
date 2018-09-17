@@ -18,22 +18,25 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8c63d50364e761b7c0f10c3ce713e2d502bf6356
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: e1923dc5fd5f9188f71d37ab2417746f71cdb6c1
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32369022"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45719671"
 ---
 # <a name="archivemembers"></a>/ARCHIVEMEMBERS
-```  
-/ARCHIVEMEMBERS  
-```  
-  
-## <a name="remarks"></a>Uwagi  
- Ta opcja powoduje wyświetlenie minimalne informacje o obiektach elementu członkowskiego w bibliotece.  
-  
- Tylko [/HEADERS](../../build/reference/headers.md) — opcja polecenia DUMPBIN jest dostępny do użytku na pliki tworzone z [/GL](../../build/reference/gl-whole-program-optimization.md) — opcja kompilatora.  
-  
-## <a name="see-also"></a>Zobacz też  
- [Opcje DUMPBIN](../../build/reference/dumpbin-options.md)
+
+```
+/ARCHIVEMEMBERS
+```
+
+## <a name="remarks"></a>Uwagi
+
+Ta opcja wyświetla minimalne informacje o obiektach elementu członkowskiego w bibliotece.
+
+Tylko [/HEADERS](../../build/reference/headers.md) — opcja polecenia DUMPBIN jest dostępna do użycia w plikach z [/GL](../../build/reference/gl-whole-program-optimization.md) — opcja kompilatora.
+
+## <a name="see-also"></a>Zobacz też
+
+[Opcje DUMPBIN](../../build/reference/dumpbin-options.md)

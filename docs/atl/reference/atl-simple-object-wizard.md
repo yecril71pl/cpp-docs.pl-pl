@@ -17,12 +17,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: eea9fbdb5e93698962ecaca498bda9f3eedfc439
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 871e27b4a28299e6a3c96f7249f4636f412001d8
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43757555"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45723622"
 ---
 # <a name="atl-simple-object-wizard"></a>Kreator prostych obiektów ATL
 
@@ -45,49 +45,58 @@ Określ nazwy dla obiektu, interfejsów i klas, które mają zostać dodane do p
 
 Zawiera informacje dla klasy języka C++ utworzona dla obiektu.
 
-**Krótka nazwa**  
-Ustawia skróconą nazwę dla obiektu. Nazwy, zapewniające Określa `Class` i `Coclass` nazwy, **plik .cpp** i **plik .h klasy** nazwy, **interfejsu** nazwę **Typu** nazwy i **ProgID**, chyba że zmienił się tych pól indywidualnie.
+- **Krótka nazwa**
 
-**plik .h**  
-Określa nazwę pliku nagłówkowego klasy nowego obiektu. Domyślnie ta nazwa opiera się na nazwę, która zapewnia w **krótką nazwę**. Kliknij przycisk wielokropka, aby zapisać nazwę pliku na lokalizację lub dołączyć deklaracji klasy do istniejącego pliku. Jeśli wybierzesz istniejący plik, Kreator nie zapisze go w wybranej lokalizacji do momentu kliknij **Zakończ** w kreatorze.
+   Ustawia skróconą nazwę dla obiektu. Nazwy, zapewniające Określa `Class` i `Coclass` nazwy, **plik .cpp** i **plik .h klasy** nazwy, **interfejsu** nazwę **Typu** nazwy i **ProgID**, chyba że zmienił się tych pól indywidualnie.
 
-Kreator nie powoduje zastąpienia pliku. Jeśli wybierasz nazwę istniejącego pliku, po kliknięciu **Zakończ**, Kreator wyświetli monit o wskazują, czy deklaracja klasy powinna zostać dołączona do zawartości pliku. Kliknij przycisk **tak** można dołączyć pliku kliknij przycisk **nie** aby powrócić do kreatora i podaj inną nazwę pliku.
+- **plik .h**
 
-**Class**  
-Ustawia nazwę klasy, która ma zostać utworzony. Ta nazwa jest oparta na nazwę, która zapewnia w **krótką nazwę**, poprzedzającą "C", typowy prefiks dla nazwy klasy.
+   Określa nazwę pliku nagłówkowego klasy nowego obiektu. Domyślnie ta nazwa opiera się na nazwę, która zapewnia w **krótką nazwę**. Kliknij przycisk wielokropka, aby zapisać nazwę pliku na lokalizację lub dołączyć deklaracji klasy do istniejącego pliku. Jeśli wybierzesz istniejący plik, Kreator nie zapisze go w wybranej lokalizacji do momentu kliknij **Zakończ** w kreatorze.
 
-**Plik CPP**  
-Określa nazwę pliku implementacji dla nowego obiektu klasy. Domyślnie ta nazwa opiera się na nazwę, która zapewnia w **krótką nazwę**. Kliknij przycisk wielokropka, aby zapisać nazwę pliku w wybranej lokalizacji. Plik nie jest zapisywany w wybranej lokalizacji, dopóki nie klikniesz **Zakończ** w kreatorze.
+   Kreator nie powoduje zastąpienia pliku. Jeśli wybierasz nazwę istniejącego pliku, po kliknięciu **Zakończ**, Kreator wyświetli monit o wskazują, czy deklaracja klasy powinna zostać dołączona do zawartości pliku. Kliknij przycisk **tak** można dołączyć pliku kliknij przycisk **nie** aby powrócić do kreatora i podaj inną nazwę pliku.
 
-Kreator nie powoduje zastąpienia pliku. Jeśli wybierasz nazwę istniejącego pliku, po kliknięciu **Zakończ**, Kreator wyświetli monit o wskazują, czy Implementacja klasy powinna zostać dołączona do zawartości pliku. Kliknij przycisk **tak** można dołączyć pliku kliknij przycisk **nie** aby powrócić do kreatora i podaj inną nazwę pliku.
+- **Class**
 
-**Opartego na atrybutach**  
-Wskazuje, czy obiekt używa atrybutów. W przypadku dodawania obiektu do projekcie ATL z atrybutami, ta opcja jest zaznaczone i nie można zmienić. Oznacza to, że można dodać tylko opartego na atrybutach obiekty do projektu utworzonego za pomocą atrybutu pomocy technicznej.
+   Ustawia nazwę klasy, która ma zostać utworzony. Ta nazwa jest oparta na nazwę, która zapewnia w **krótką nazwę**, poprzedzającą "C", typowy prefiks dla nazwy klasy.
 
-Obiekt opartego na atrybutach można dodać tylko do projektu ATL, który używa atrybutów. Jeśli wybierzesz tę opcję, aby Projekt ATL, który nie ma atrybutu pomocy technicznej, w kreatora zostanie wyświetlony monit o określenie, czy chcesz dodać obsługę atrybutu do projektu.
+- **Plik CPP**
 
-Domyślnie wszystkie obiekty, które możesz dodać po ustawieniu tej opcji są oznaczone jako opartego na atrybutach (pole wyboru jest zaznaczone). Aby wyczyścić to pole, aby dodać obiekt, który nie korzysta z atrybutów.
+   Określa nazwę pliku implementacji dla nowego obiektu klasy. Domyślnie ta nazwa opiera się na nazwę, która zapewnia w **krótką nazwę**. Kliknij przycisk wielokropka, aby zapisać nazwę pliku w wybranej lokalizacji. Plik nie jest zapisywany w wybranej lokalizacji, dopóki nie klikniesz **Zakończ** w kreatorze.
 
-Zobacz [ustawienia aplikacji, Kreator projektów ATL](../../atl/reference/application-settings-atl-project-wizard.md) i [podstawowa mechanika atrybutów](../../windows/basic-mechanics-of-attributes.md) Aby uzyskać więcej informacji.
+   Kreator nie powoduje zastąpienia pliku. Jeśli wybierasz nazwę istniejącego pliku, po kliknięciu **Zakończ**, Kreator wyświetli monit o wskazują, czy Implementacja klasy powinna zostać dołączona do zawartości pliku. Kliknij przycisk **tak** można dołączyć pliku kliknij przycisk **nie** aby powrócić do kreatora i podaj inną nazwę pliku.
+
+- **Opartego na atrybutach**
+
+   Wskazuje, czy obiekt używa atrybutów. W przypadku dodawania obiektu do projekcie ATL z atrybutami, ta opcja jest zaznaczone i nie można zmienić. Oznacza to, że można dodać tylko opartego na atrybutach obiekty do projektu utworzonego za pomocą atrybutu pomocy technicznej.
+
+   Obiekt opartego na atrybutach można dodać tylko do projektu ATL, który używa atrybutów. Jeśli wybierzesz tę opcję, aby Projekt ATL, który nie ma atrybutu pomocy technicznej, w kreatora zostanie wyświetlony monit o określenie, czy chcesz dodać obsługę atrybutu do projektu.
+
+   Domyślnie wszystkie obiekty, które możesz dodać po ustawieniu tej opcji są oznaczone jako opartego na atrybutach (pole wyboru jest zaznaczone). Aby wyczyścić to pole, aby dodać obiekt, który nie korzysta z atrybutów.
+
+   Zobacz [ustawienia aplikacji, Kreator projektów ATL](../../atl/reference/application-settings-atl-project-wizard.md) i [podstawowa mechanika atrybutów](../../windows/basic-mechanics-of-attributes.md) Aby uzyskać więcej informacji.
 
 ## <a name="com"></a>Model COM
 
 Zawiera informacje dotyczące funkcji COM dla obiektu.
 
-**Klasa coclass**  
-Ustawia nazwę klasy składnika, który zawiera listę interfejsów, obsługiwane przez obiekt.
+- **Klasa coclass**
 
-> [!NOTE]
->  Jeśli tworzysz projekt za pomocą atrybutów lub jeśli na tej stronie kreatora wskazujesz, że obiekt używa atrybutów, nie można zmienić tej opcji, ponieważ nie ma ATL `coclass` atrybutu.
+   Ustawia nazwę klasy składnika, który zawiera listę interfejsów, obsługiwane przez obiekt.
 
-**Typ**  
-Określa opis obiektu, który będzie wyświetlany w rejestrze
+   > [!NOTE]
+   > Jeśli tworzysz projekt za pomocą atrybutów lub jeśli na tej stronie kreatora wskazujesz, że obiekt używa atrybutów, nie można zmienić tej opcji, ponieważ nie ma ATL `coclass` atrybutu.
 
-**Interface**  
-Ustawia interfejs, który można utworzyć obiektu. Ten interfejs zawiera swoje niestandardowe metody.
+- **Typ**
 
-**Identyfikator programu**  
-Ustawia nazwę, która kontenerów można użyć zamiast identyfikatora CLSID obiektu.
+   Określa opis obiektu, który będzie wyświetlany w rejestrze
+
+- **Interface**
+
+   Ustawia interfejs, który można utworzyć obiektu. Ten interfejs zawiera swoje niestandardowe metody.
+
+- **Identyfikator programu**
+
+   Ustawia nazwę, która kontenerów można użyć zamiast identyfikatora CLSID obiektu.
 
 ## <a name="see-also"></a>Zobacz też
 

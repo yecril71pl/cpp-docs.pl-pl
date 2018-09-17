@@ -15,22 +15,25 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 58dca91d5ab3bf0cf28d30a04d33ae8bf5819401
-ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
+ms.openlocfilehash: edcc84e8c12fab7149bbf6db2baf1f86e8635eb5
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "33321197"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45725511"
 ---
 # <a name="hlsl-property-pages-advanced"></a>Strony właściwości HLSL: zaawansowane
-Aby skonfigurować następujące właściwości kompilatora HLSL (fxc.exe), użyj jej **zaawansowane** strony właściwości. Aby uzyskać informacje dotyczące dostępu do **zaawansowane** zobacz stronę właściwości w folderze HLSL [Praca z właściwościami projektu](../ide/working-with-project-properties.md).  
+Aby skonfigurować następujące właściwości kompilator HLSL (fxc.exe), użyj jej **zaawansowane** stronę właściwości. Aby uzyskać informacje o tym, jak uzyskać dostęp do **zaawansowane** zobacz stronę właściwości w folderze HLSL [Praca z właściwościami projektu](../ide/working-with-project-properties.md).  
   
-## <a name="uielement-list"></a>Lista elementów UI  
- **Pomiń Baner startowy**  
- **Tak (/ nologo)** aby zapobiec wyświetlaniu komunikat transparentu i informacji uruchamiania; w przeciwnym razie **nr**. Domyślna wartość to **tak (/ nologo)**.  
+## <a name="uielement-list"></a>Lista elementów UI
+
+- **Pomijaj transparent startowy**
+
+   **Tak (/ nologo)** Pomija wyświetlanie komunikat transparentu i informacje o uruchamiania; w przeciwnym razie **nie**. Domyślna wartość to **tak (/ nologo)**.  
   
- **Traktuj ostrzeżenia jako błędy**  
- **Tak (/WX)** na traktowanie wszystkich ostrzeżeń kompilatora jako błędy; w przeciwnym razie **nr**.  
+- **Traktuj ostrzeżenia jako błędy**
+
+   **Tak (/WX)** traktować wszystkie ostrzeżenia kompilatora jako błędy; w przeciwnym razie **nie**.  
   
 ## <a name="see-also"></a>Zobacz też  
  [Strony właściwości HLSL](../ide/hlsl-property-pages.md)   

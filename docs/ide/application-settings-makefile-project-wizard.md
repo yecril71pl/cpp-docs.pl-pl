@@ -16,27 +16,31 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 335c8e6f73236b96330c32c4b3106aec3cf66a73
-ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
+ms.openlocfilehash: 8bfd7db4692b162ea603d91d7ca6174dddf4a3db
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43677331"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45722906"
 ---
 # <a name="application-settings-makefile-project-wizard"></a>Ustawienia aplikacji, Kreator projektu pliku reguł dla programu make
 Podaj informacje dla projektu. Opcje, należy określić są odzwierciedlane w projekcie [strona właściwości](../ide/working-with-project-properties.md). Po utworzeniu projektu, można wyświetlać i edytować każdy z następujących opcji w **Nmake** strony na stronie właściwości projektu.  
   
- **Wiersz polecenia kompilacji**  
- Określa wiersz polecenia do uruchomienia, gdy użytkownik wybierze **kompilacji** z **kompilacji** menu. Wyświetlane w **wiersz poleceń kompilacji** na **Nmake** strony na stronie właściwości projektu.  
+- **Wiersz polecenia kompilacji**
+
+   Określa wiersz polecenia do uruchomienia, gdy użytkownik wybierze **kompilacji** z **kompilacji** menu. Wyświetlane w **wiersz poleceń kompilacji** na **Nmake** strony na stronie właściwości projektu.  
   
- **Output**  
- Określa nazwę pliku, który będzie zawierał dane wyjściowe wiersza polecenia. Domyślnie ta opcja opiera się na nazwę projektu. Wyświetlane w **dane wyjściowe** na **Nmake** strony na stronie właściwości projektu.  
+- **Output**
+
+   Określa nazwę pliku, który będzie zawierał dane wyjściowe wiersza polecenia. Domyślnie ta opcja opiera się na nazwę projektu. Wyświetlane w **dane wyjściowe** na **Nmake** strony na stronie właściwości projektu.  
   
- **Wyczyść poleceń**  
- Określa wiersz polecenia do uruchomienia, gdy użytkownik wybierze **czysty** z **kompilacji** menu. Wyświetlane w **wiersz poleceń oczyszczenia** na **Nmake** strony na stronie właściwości projektu.  
+- **Wyczyść poleceń**
+
+   Określa wiersz polecenia do uruchomienia, gdy użytkownik wybierze **czysty** z **kompilacji** menu. Wyświetlane w **wiersz poleceń oczyszczenia** na **Nmake** strony na stronie właściwości projektu.  
   
- **Ponownie skompiluj wiersza polecenia**  
- Określa wiersz polecenia do uruchomienia, gdy użytkownik wybierze **odbudować** z **kompilacji** menu. Wyświetlane w **wiersz poleceń rekompilacji wszystkiego** na **Nmake** strony na stronie właściwości projektu.  
+- **Ponownie skompiluj wiersza polecenia**
+
+   Określa wiersz polecenia do uruchomienia, gdy użytkownik wybierze **odbudować** z **kompilacji** menu. Wyświetlane w **wiersz poleceń rekompilacji wszystkiego** na **Nmake** strony na stronie właściwości projektu.  
   
 ## <a name="see-also"></a>Zobacz też  
  [Kreator projektu pliku reguł programu make](../ide/makefile-project-wizard.md)   

@@ -16,15 +16,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 165e20eefecd20ad9dec9e01b38c5eaa7926e4eb
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 3ffe9a440396df14823775db335e52bca6cacdb3
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32372812"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45725026"
 ---
 # <a name="order-of-cl-options"></a>Kolejność opcji CL
-Opcje mogą występować w dowolnym miejscu w wierszu polecenia CL, z wyjątkiem opcji/Link musi występować jako ostatnia. Kompilator rozpoczyna się od określonego w opcji [zmiennej środowiskowej CL](../../build/reference/cl-environment-variables.md) i odczytuje wiersza polecenia od lewej do prawej — przetwarzania plików poleceń w kolejności ich wystąpienia. Każda opcja ma zastosowanie do wszystkich plików w wierszu polecenia. Jeśli CL napotka opcje powodujące konflikt, używa opcji po prawej stronie.  
-  
-## <a name="see-also"></a>Zobacz też  
- [Składnia wiersza polecenia kompilatora](../../build/reference/compiler-command-line-syntax.md)
+
+Opcje mogą występować w dowolnym miejscu w wierszu polecenia CL, z wyjątkiem opcji/Link musi występować jako ostatnia. Kompilator zaczyna się od opcji określonych w [zmiennej środowiskowej CL](../../build/reference/cl-environment-variables.md) , a następnie odczytuje wiersza polecenia od lewej do prawej — przetwarzanie plików polecenia w kolejności ich wystąpienia. Każda opcja ma zastosowanie do wszystkich plików w wierszu polecenia. Jeśli CL napotka opcje powodujące konflikt, zostanie użyta opcja po prawej stronie.
+
+## <a name="see-also"></a>Zobacz też
+
+[Składnia wiersza polecenia kompilatora](../../build/reference/compiler-command-line-syntax.md)

@@ -15,15 +15,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 860a334274a3a1a4ac9e11c3e7b5e9a0f136ecc0
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 84406886c9aa0c0053ed7c183912bf8a7f1f4771
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32380553"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45723583"
 ---
 # <a name="toolsini-and-nmake"></a>Tools.ini i NMAKE
-NMAKE odczytuje Tools.ini przed odczytuje pliki reguł programu make, chyba że używana jest /R. Szuka Tools.ini najpierw w bieżącym katalogu, a następnie w katalogu określonym przez zmienną środowiskową INIT. W sekcji Ustawienia NMAKE pliku inicjującego rozpoczyna się od `[NMAKE]` i może zawierać żadnych informacji o pliku reguł programu make. Określ komentarz w osobnym wierszu rozpoczynający się od znaku numeru (#).  
-  
-## <a name="see-also"></a>Zobacz też  
- [Uruchomienie NMAKE](../build/running-nmake.md)
+
+NMAKE odczytuje Tools.ini przed odczytuje pliki reguł programu make, chyba że używana jest/r. Szuka Tools.ini najpierw w bieżącym katalogu, a następnie w katalogu określonym przez zmienną środowiskową INIT. Zaczyna się w sekcji Ustawienia NMAKE w pliku inicjującym `[NMAKE]` i mogą zawierać wszystkie informacje w pliku reguł programu make. Określ komentarz na oddzielnych wiersz zaczynający się od znaku numeru (#).
+
+## <a name="see-also"></a>Zobacz też
+
+[Uruchomienie NMAKE](../build/running-nmake.md)

@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 423cd4585fa6e9ae5a5fbb16cf7d5c43aaf7c152
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: 00ef28954a686dac72c8b7f55b86c88313e74643
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42605930"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45719723"
 ---
 # <a name="rdx"></a>rdx
 
@@ -43,8 +43,8 @@ Tworzy klucz rejestru lub modyfikuje istniejący klucz rejestru.
 *Klucz*  
 Nazwa klucza, który ma zostać utworzony lub otwarty.
 
-*VALUENAME* (opcjonalnie)  
-Określa pole wartości do ustawienia. Jeśli wartość pola o tej nazwie już istnieje w kluczu, zostanie dodany.
+*VALUENAME*  
+(Opcjonalnie) Określa pole wartości do ustawienia. Jeśli wartość pola o tej nazwie już istnieje w kluczu, zostanie dodany.
 
 *regtype*  
 Typ klucza rejestru dodawane. Może być jedną z następujących czynności: `text`, `dword`, `binary`, lub `CString`.

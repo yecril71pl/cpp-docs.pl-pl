@@ -1,5 +1,5 @@
 ---
-title: Stany modułu zwykłej biblioteki MFC DLL połączone dynamicznie z MFC | Dokumentacja firmy Microsoft
+title: Stany modułu zwykłej biblioteki MFC DLL łączonej dynamicznie z MFC | Dokumentacja firmy Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,37 +18,39 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d15f533473ebe90d6d105ddeb57dcdcddd90e87b
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: d458c445930896fb04cb339c7191f649be542faf
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32369373"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45717031"
 ---
-# <a name="module-states-of-a-regular-mfc-dll-dynamically-linked-to-mfc"></a>Stany modułu zwykłej biblioteki MFC DLL połączone dynamicznie z MFC
-Dynamicznie połączyć zwykły biblioteki MFC DLL biblioteki MFC DLL możliwości niektóre konfiguracje, które są bardzo skomplikowane. Na przykład regularną bibliotekę DLL MFC i plik wykonywalny, który używa zarówno dynamicznie połączyć do biblioteki MFC DLL i wszystkie biblioteki DLL rozszerzeń MFC.  
-  
- Ta konfiguracja stanowi problem w odniesieniu do danych globalnych MFC, takie jak wskaźnik do bieżącego `CWinApp` map obiekt i dojścia.  
-  
- Przed MFC w wersji 4.0 to dane globalne znajdowały się w bibliotece MFC DLL się i został udostępniony przez wszystkie moduły w procesie. Ponieważ każdy proces, za pomocą biblioteki DLL Win32 uzyskuje on osobną kopię danych DLL, ten schemat podać prosty sposób śledzenia danych dla procesu. Ponadto ponieważ AFXDLL model założyć, że może istnieć tylko jeden `CWinApp` obiekt i tylko jeden zestaw obsługi mapy w procesie, te elementy można można śledzić w bibliotece MFC DLL sam.  
-  
- Ale umożliwia dynamiczne łącze do biblioteki MFC DLL regularną bibliotekę DLL MFC, jest teraz możliwe co najmniej dwóch `CWinApp` obiektów w procesie —, a także co najmniej dwóch zestawów dojścia mapy. Jak MFC zachować informacje o te, które powinny używać?  
-  
- Rozwiązanie to podać własną kopię tych informacji globalny stan poszczególnych modułów (aplikacji lub regularnych bibliotek DLL MFC). W związku z tym wywołaniu **afxgetapp —** w zwykłej biblioteki MFC DLL zwraca wskaźnik do `CWinApp` obiektu w bibliotece DLL, a nie podano w pliku wykonywalnego. -Module kopii danych globalnych MFC nosi nazwę stanu modułu i jest opisany w [58 Uwaga techniczna MFC](../mfc/tn058-mfc-module-state-implementation.md).  
-  
- Procedurę okna wspólnych MFC automatycznie zmienia stan prawidłowy moduł, dzięki czemu nie trzeba martwić w dowolnej obsługi komunikatów w regularnych bibliotek DLL MFC. Jednak gdy wywołuje pliku wykonywalnego do regularne biblioteki DLL MFC, musisz jawnie Ustaw bieżący stan modułu dla biblioteki DLL. Aby to zrobić, użyj **afx_manage_state —** makra w każdej funkcji wyeksportowane z biblioteki DLL. Można to zrobić, dodając następujący wiersz kodu na początku funkcji wyeksportowanych z biblioteki DLL:  
-  
-```  
-AFX_MANAGE_STATE(AfxGetStaticModuleState( ))  
-```  
-  
-## <a name="what-do-you-want-to-know-more-about"></a>Co chcesz dowiedzieć się więcej o?  
-  
--   [Zarządzanie danymi stanu modułów MFC](../mfc/managing-the-state-data-of-mfc-modules.md)  
-  
--   [Regularne biblioteki DLL MFC połączone dynamicznie z MFC](../build/regular-dlls-dynamically-linked-to-mfc.md)  
-  
--   [Biblioteki DLL rozszerzeń MFC](../build/extension-dlls-overview.md)  
-  
-## <a name="see-also"></a>Zobacz też  
- [Biblioteki DLL w programie Visual C++](../build/dlls-in-visual-cpp.md)
+# <a name="module-states-of-a-regular-mfc-dll-dynamically-linked-to-mfc"></a>Stany modułu zwykłej biblioteki MFC DLL łączonej dynamicznie z MFC
+
+Możliwość dynamicznego połączyć zwykłej biblioteki MFC DLL biblioteki MFC DLL umożliwia pewne konfiguracje, które są bardzo skomplikowane. Na przykład zwykłej biblioteki MFC DLL i plik wykonywalny, który korzysta z niego można zarówno dynamiczne łącze do biblioteki MFC DLL i wszystkie biblioteki DLL rozszerzeń MFC.
+
+Konfiguracja ta stanowi problem w odniesieniu do danych globalnych MFC, takich jak wskaźnik do bieżącego `CWinApp` obiektu i obsługują mapy.
+
+Przed MFC w wersji 4.0 to dane globalne znajdowały się w bibliotece DLL MFC, się i został udostępniony przez wszystkie moduły w procesie. Ponieważ każdy proces, korzystając z biblioteki DLL systemu Win32 pobiera własną kopię danych biblioteki DLL, ten schemat zapewnić łatwy sposób śledzenia na przetwarzanie danych. Ponadto ponieważ AFXDLL model założyć, że będzie istnieć tylko jeden `CWinApp` obiektu i tylko jeden zestaw obsługi map w procesie, te elementy można śledzić w biblioteki MFC DLL, sam.
+
+Ale z możliwością połączyć dynamicznie zwykłej biblioteki MFC DLL biblioteki MFC DLL, obecnie istnieje możliwość mają co najmniej dwóch `CWinApp` obiektów w procesie — i również dwa lub więcej zestawów dojście do mapy. Jak MFC zachować informacje o te, które powinien używać?
+
+Rozwiązaniem jest zapewnienie własną kopię tych informacji globalny stan każdego modułu (aplikacji lub zwykłej biblioteki MFC DLL). W związku z tym, wywołanie **afxgetapp —** w zwykłej biblioteki MFC DLL zwraca wskaźnik do `CWinApp` obiektu w bibliotece DLL, nie jeden w pliku wykonywalnym. -Module kopii danych globalnych MFC jest znany jako stanu modułu i jest opisany w [58 Uwaga techniczna MFC](../mfc/tn058-mfc-module-state-implementation.md).
+
+MFC wspólnej procedury okna przełącza się do stanu do modułu, dzięki czemu nie trzeba już martwić się o go w dowolnej procedury obsługi komunikatów w zwykłej biblioteki MFC DLL. Jednak gdy plik wykonywalny wywołuje do zwykłej biblioteki MFC DLL, trzeba jawnie ustawione bieżący stan modułu dla biblioteki DLL. Aby to zrobić, należy użyć **AFX_MANAGE_STATE** makra w każdej funkcji wyeksportowane z biblioteki DLL. Można to zrobić, dodając następujący wiersz kodu na początku funkcji wyeksportowanych z biblioteki DLL:
+
+```
+AFX_MANAGE_STATE(AfxGetStaticModuleState( ))
+```
+
+## <a name="what-do-you-want-to-know-more-about"></a>Co chcesz dowiedzieć się więcej na temat?
+
+- [Zarządzanie danymi stanu modułów MFC](../mfc/managing-the-state-data-of-mfc-modules.md)
+
+- [Regularne biblioteki DLL MFC połączone dynamicznie z MFC](../build/regular-dlls-dynamically-linked-to-mfc.md)
+
+- [Biblioteki DLL rozszerzeń MFC](../build/extension-dlls-overview.md)
+
+## <a name="see-also"></a>Zobacz też
+
+[Biblioteki DLL w programie Visual C++](../build/dlls-in-visual-cpp.md)

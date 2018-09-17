@@ -11,12 +11,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 49d67f9a2e91e3a2e0a2731e61fc0e1c2ec55679
-ms.sourcegitcommit: 76fd30ff3e0352e2206460503b61f45897e60e4f
+ms.openlocfilehash: cc115fbc77ac68c774b85bb86fd0cf9eac1fa51b
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/13/2018
-ms.locfileid: "39028429"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45716641"
 ---
 # <a name="overview-of-arm64-abi-conventions"></a>Przegląd Konwencji ARM64 ABI
 
@@ -173,7 +173,7 @@ Dla każdego argumentu na liście następujące reguły są stosowane z kolei, d
 
 11. NGRN jest ustawiony na 8.
 
-12. NSAA jest zaokrąglana do większego z 8 lub naturalnego wyrównania składowej typu argumentu... 
+12. NSAA jest zaokrąglana do większego z 8 lub naturalnego wyrównania składowej typu argumentu...
 
 13. Jeśli argument jest typu złożonego argument jest kopiowany do pamięci na skorygowany NSAA. NSAA jest zwiększany o rozmiar argumentu. Argument została przydzielona.
 
@@ -189,7 +189,7 @@ Funkcje, które przyjmują zmienną liczbę argumentów są obsługiwane inaczej
 
 2. SIMD i rejestruje zmiennopozycyjna nie są używane.
 
-Skutecznie równa to następujące reguły C.12–C.15 przydzielić argumenty urojone stosu, gdzie pierwszy 64 bajtów stosu są ładowane do x0 x7 i wszelkie pozostałe argumenty stosu są umieszczane w zwykły sposób. 
+Skutecznie równa to następujące reguły C.12–C.15 przydzielić argumenty urojone stosu, gdzie pierwszy 64 bajtów stosu są ładowane do x0 x7 i wszelkie pozostałe argumenty stosu są umieszczane w zwykły sposób.
 
 ## <a name="return-values"></a>Zwracane wartości
 
@@ -231,5 +231,5 @@ Zwróć uwagę, że wartość licznika cyklu licznika cyklu wartość true, nie 
 
 ## <a name="see-also"></a>Zobacz także
 
-[Typowe problemy przy migracji Visual C++ ARM](../build/common-visual-cpp-arm-migration-issues.md)  
-[Obsługa wyjątków ARM64](../build/arm64-exception-handling.md)  
+[Typowe problemy przy migracji Visual C++ ARM](../build/common-visual-cpp-arm-migration-issues.md)<br/>
+[Obsługa wyjątków ARM64](../build/arm64-exception-handling.md)

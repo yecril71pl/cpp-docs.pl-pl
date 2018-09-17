@@ -142,12 +142,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 45b9b5bb5beae8599c360d35df878a38b591b1b4
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: afd9c9e8069d6140b66a38f4686f562533dd5c21
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43761020"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45722712"
 ---
 # <a name="cfiledialog-class"></a>Klasa CFileDialog
 Hermetyzuje wspólne okno dialogowe, które służy do otwarcia pliku lub pliku operacji zapisywania.  
@@ -522,29 +522,29 @@ explicit CFileDialog(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *bOpenFileDialog*  
- Parametr, który określa, jakiego rodzaju okno dialogowe, aby utworzyć. Ustaw ją na wartość TRUE, aby skonstruować **Otwórz plik** okno dialogowe. Ustaw ją na wartość FALSE, aby skonstruować **Zapisz plik jako** okno dialogowe.  
+*bOpenFileDialog*<br/>
+[in] Parametr, który określa, jakiego rodzaju okno dialogowe, aby utworzyć. Ustaw ją na wartość TRUE, aby skonstruować **Otwórz plik** okno dialogowe. Ustaw ją na wartość FALSE, aby skonstruować **Zapisz plik jako** okno dialogowe.  
   
- [in] *lpszDefExt*  
- Domyślne rozszerzenie nazwy pliku. Jeśli użytkownik nie ma rozszerzenie znanych (taki, który ma powiązanie na komputerze użytkownika) w polu Nazwa pliku, rozszerzenie określone przez *lpszDefExt* jest automatycznie dołączany do nazwy pliku. Jeśli ten parametr ma wartość NULL, jest dołączany bez rozszerzenia.  
+*lpszDefExt*<br/>
+[in] Domyślne rozszerzenie nazwy pliku. Jeśli użytkownik nie ma rozszerzenie znanych (taki, który ma powiązanie na komputerze użytkownika) w polu Nazwa pliku, rozszerzenie określone przez *lpszDefExt* jest automatycznie dołączany do nazwy pliku. Jeśli ten parametr ma wartość NULL, jest dołączany bez rozszerzenia.  
   
- [in] *lpszFileName*  
- Początkowa nazwa pliku, który pojawia się w polu Nazwa pliku. Jeśli ma wartość NULL, zostanie wyświetlone nie początkowa nazwa pliku.  
+*lpszFileName*<br/>
+[in] Początkowa nazwa pliku, który pojawia się w polu Nazwa pliku. Jeśli ma wartość NULL, zostanie wyświetlone nie początkowa nazwa pliku.  
   
- [in] *Flagidw*  
- Połączenie jednego lub więcej flagi, które służy do dostosowywania okna dialogowego. Aby uzyskać opis tych flag, zobacz [LPSTRFILE](/windows/desktop/api/commdlg/ns-commdlg-tagofna) struktury w zestawie Windows SDK. Jeśli zmodyfikujesz `m_ofn.Flags` struktury elementu członkowskiego, użyj operatora bitowego OR zmiany, aby zachować domyślne zachowanie.  
+*Flagidw*<br/>
+[in] Połączenie jednego lub więcej flagi, które służy do dostosowywania okna dialogowego. Aby uzyskać opis tych flag, zobacz [LPSTRFILE](/windows/desktop/api/commdlg/ns-commdlg-tagofna) struktury w zestawie Windows SDK. Jeśli zmodyfikujesz `m_ofn.Flags` struktury elementu członkowskiego, użyj operatora bitowego OR zmiany, aby zachować domyślne zachowanie.  
   
- [in] *lpszFilter*  
- Serii par ciągów, które określają, filtrów można zastosować do pliku. Jeśli określisz plik filtrów, tylko te pliki, które spełniają kryteria filtru pojawi się na liście plików. Zobacz sekcję Spostrzeżenia, aby uzyskać więcej informacji na temat sposobu pracy z pliku filtrów.  
+*lpszFilter*<br/>
+[in] Serii par ciągów, które określają, filtrów można zastosować do pliku. Jeśli określisz plik filtrów, tylko te pliki, które spełniają kryteria filtru pojawi się na liście plików. Zobacz sekcję Spostrzeżenia, aby uzyskać więcej informacji na temat sposobu pracy z pliku filtrów.  
   
- [in] *pParentWnd*  
- Wskaźnik do okna nadrzędnego lub właściciela, okno dialogowe pliku.  
+*pParentWnd*<br/>
+[in] Wskaźnik do okna nadrzędnego lub właściciela, okno dialogowe pliku.  
   
- [in] *niezerowego*  
- Rozmiar `OPENFILENAME` struktury. Ta wartość jest zależna od wersji systemu operacyjnego. MFC używana tego parametru, aby określić odpowiedni rodzaj okno dialogowe, aby utworzyć. Domyślny rozmiar 0 oznacza, że kod MFC określi rozmiar okno dialogowe poprawne do użycia na podstawie wersji systemu operacyjnego, na którym program jest uruchamiany.  
+*niezerowego*<br/>
+[in] Rozmiar `OPENFILENAME` struktury. Ta wartość jest zależna od wersji systemu operacyjnego. MFC używana tego parametru, aby określić odpowiedni rodzaj okno dialogowe, aby utworzyć. Domyślny rozmiar 0 oznacza, że kod MFC określi rozmiar okno dialogowe poprawne do użycia na podstawie wersji systemu operacyjnego, na którym program jest uruchamiany.  
   
- [in] *bVistaStyle*  
- **Uwaga** ten parametr jest dostępne w programie Visual Studio 2008 i nowszych wersjach i zostanie spowodować, że okno dialogowe Nowy styl ma być używany tylko wtedy, gdy są uruchomione w systemie Windows Vista lub nowszym.  
+*bVistaStyle*<br/>
+[in] **Uwaga** ten parametr jest dostępne w programie Visual Studio 2008 i nowszych wersjach i zostanie spowodować, że okno dialogowe Nowy styl ma być używany tylko wtedy, gdy są uruchomione w systemie Windows Vista lub nowszym.  
   
  Parametr, który określa styl okna dialogowego pliku. Ustaw wartość true, użyj nowego stylu Vista pliku w oknach dialogowych. W przeciwnym razie stary styl okna dialogowe będą używane. Zobacz sekcję Spostrzeżenia, aby uzyskać więcej informacji działających w ramach Vista.  
   
@@ -1346,11 +1346,11 @@ void SetControlText(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *nID*  
- Identyfikator kontrolki, dla której chcesz ustawić tekst.  
+*nID*<br/>
+[in] Identyfikator kontrolki, dla której chcesz ustawić tekst.  
   
- [in] *lpsz*  
- Wskaźnik do ciągu, który zawiera tekst, który ma wartość dla formantu.  
+*lpsz*<br/>
+[in] Wskaźnik do ciągu, który zawiera tekst, który ma wartość dla formantu.  
   
 ### <a name="remarks"></a>Uwagi  
  Obie wersje tej funkcji są prawidłowe dla aplikacji, które używają Unicode. Jednak tylko wersję z typem LPCSTR jest prawidłowy dla aplikacji, które używają ANSI.  
@@ -1435,17 +1435,17 @@ void SetTemplate(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *nWin3ID*  
- Zawiera identyfikator zasobu szablonu dla innego niż Eksploratora `CFileDialog` obiektu. Ten szablon jest używana tylko na Windows NT 3.51 lub styl OFN_EXPLORER nie jest obecny.  
+*nWin3ID*<br/>
+[in] Zawiera identyfikator zasobu szablonu dla innego niż Eksploratora `CFileDialog` obiektu. Ten szablon jest używana tylko na Windows NT 3.51 lub styl OFN_EXPLORER nie jest obecny.  
   
- [in] *nWin4ID*  
- Zawiera identyfikator zasobu szablon dla Eksploratora `CFileDialog` obiektu. Ten szablon jest używany tylko na Windows NT 4.0 i nowszy, Windows 95 i nowszymi wersjami lub gdy styl OFN_EXPLORER jest obecny.  
+*nWin4ID*<br/>
+[in] Zawiera identyfikator zasobu szablon dla Eksploratora `CFileDialog` obiektu. Ten szablon jest używany tylko na Windows NT 4.0 i nowszy, Windows 95 i nowszymi wersjami lub gdy styl OFN_EXPLORER jest obecny.  
   
- [in] *lpWin3ID*  
- Zawiera nazwę zasobu szablon dla innych Eksploratora `CFileDialog` obiektu. Ten szablon jest używana tylko na Windows NT 3.51 lub styl OFN_EXPLORER nie jest obecny.  
+*lpWin3ID*<br/>
+[in] Zawiera nazwę zasobu szablon dla innych Eksploratora `CFileDialog` obiektu. Ten szablon jest używana tylko na Windows NT 3.51 lub styl OFN_EXPLORER nie jest obecny.  
   
- [in] *lpWin4ID*  
- Zawiera nazwę zasobu szablon z poziomu Eksploratora `CFileDialog` obiektu. Ten szablon jest używany tylko na Windows NT 4.0 i nowszy, Windows 95 i nowszymi wersjami lub gdy styl OFN_EXPLORER jest obecny.  
+*lpWin4ID*<br/>
+[in] Zawiera nazwę zasobu szablon z poziomu Eksploratora `CFileDialog` obiektu. Ten szablon jest używany tylko na Windows NT 4.0 i nowszy, Windows 95 i nowszymi wersjami lub gdy styl OFN_EXPLORER jest obecny.  
   
 ### <a name="remarks"></a>Uwagi  
  System użyje tylko jednego z szablonów określony. System określi, jaki szablon do użycia na podstawie obecności styl OFN_EXPLORER i systemu operacyjnego, która aplikacja jest uruchomiona na. Określając-Explorer i szablon stylu Eksploratora, jest łatwy do obsługi systemu Windows NT 3.51, Windows NT 4.0 i nowsze wersje i Windows 95 i nowszych wersjach.  

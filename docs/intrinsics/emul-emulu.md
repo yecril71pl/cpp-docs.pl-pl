@@ -20,12 +20,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b6e9e7ee594f2587334d93173daa147d81dcebb2
-ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
+ms.openlocfilehash: 8f3bf997006d98cfbd05a47140baf53ef7032876
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "42464491"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45719423"
 ---
 # <a name="emul-emulu"></a>__emul, __emulu
 **Microsoft Specific**  
@@ -46,11 +46,11 @@ unsigned __int64 __emulu(
 ```  
   
 #### <a name="parameters"></a>Parametry  
- [in] `a`  
- Pierwszy operand całkowitą mnożenia.  
+*a*<br/>
+[in] Pierwszy operand całkowitą mnożenia.  
   
- [in] `b`  
- Drugi argument liczby całkowitej mnożenia.  
+*b*<br/>
+[in] Drugi argument liczby całkowitej mnożenia.  
   
 ## <a name="return-value"></a>Wartość zwracana  
  Wynik mnożenia.  

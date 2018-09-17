@@ -38,12 +38,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 02bd6b1c5ed9cf29b87dc2a218f7a5e9eda3e3dc
-ms.sourcegitcommit: f0c90000125a9497bf61e41624de189a043703c0
+ms.openlocfilehash: 9f95c9d85ab3649c1710881c73df1ae325f9cb60
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44319061"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45724818"
 ---
 # <a name="valarray-class"></a>valarray — Klasa
 
@@ -132,10 +132,10 @@ valarray<Type> apply(Type _Func(constType&)) const;
 ### <a name="parameters"></a>Parametry
 
 *_Func(Type)*<br/>
- Obiekt funkcji, które mają być stosowane do każdego elementu operand valarray.
+Obiekt funkcji, które mają być stosowane do każdego elementu operand valarray.
 
 *_Func(Const type&)*<br/>
- Obiekt funkcji dla stałej, które mają być stosowane do każdego elementu operand valarray.
+Obiekt funkcji dla stałej, które mają być stosowane do każdego elementu operand valarray.
 
 ### <a name="return-value"></a>Wartość zwracana
 
@@ -204,8 +204,8 @@ valarray<Type> cshift(int count) const;
 
 ### <a name="parameters"></a>Parametry
 
-*Liczba*  
- Liczba miejsc, które elementy są jest przesuwany do przodu.
+*Liczba*<br/>
+Liczba miejsc, które elementy są jest przesuwany do przodu.
 
 ### <a name="return-value"></a>Wartość zwracana
 
@@ -463,8 +463,8 @@ valarray<Type>& operator%=(const Type& right);
 
 ### <a name="parameters"></a>Parametry
 
-*right*  
- Valarray lub wartość taka sama jak w przypadku operand valarray, który polega ona na dzieleniu element-wise, operand valarray typu elementu.
+*right*<br/>
+Valarray lub wartość taka sama jak w przypadku operand valarray, który polega ona na dzieleniu element-wise, operand valarray typu elementu.
 
 ### <a name="return-value"></a>Wartość zwracana
 
@@ -528,8 +528,8 @@ valarray<Type>& operator&=(const Type& right);
 
 ### <a name="parameters"></a>Parametry
 
-*right*  
- Valarray lub wartości typu elementu, taka sama jak w przypadku operand valarray, który ma być łączone, element-wise, przez logicznej `AND` z operand valarray.
+*right*<br/>
+Valarray lub wartości typu elementu, taka sama jak w przypadku operand valarray, który ma być łączone, element-wise, przez logicznej `AND` z operand valarray.
 
 ### <a name="return-value"></a>Wartość zwracana
 
@@ -599,8 +599,8 @@ valarray<Type>& operator>>=(const Type& right);
 
 ### <a name="parameters"></a>Parametry
 
-*right*  
- Wartość wskazująca, wielkość przesunięcia bitowego w prawo lub wskazać element-wise ilość przesunięcia bitowego w prawo, której elementy w tablicy valarray.
+*right*<br/>
+Wartość wskazująca, wielkość przesunięcia bitowego w prawo lub wskazać element-wise ilość przesunięcia bitowego w prawo, której elementy w tablicy valarray.
 
 ### <a name="return-value"></a>Wartość zwracana
 
@@ -668,8 +668,8 @@ valarray<Type>& operator<<=(const Type& right);
 
 ### <a name="parameters"></a>Parametry
 
-*right*  
- Wartość wskazująca, wielkość przesunięcia w lewo lub wskazać element-wise ilość przesunięcia w lewo, której elementy w tablicy valarray.
+*right*<br/>
+Wartość wskazująca, wielkość przesunięcia w lewo lub wskazać element-wise ilość przesunięcia w lewo, której elementy w tablicy valarray.
 
 ### <a name="return-value"></a>Wartość zwracana
 
@@ -738,8 +738,8 @@ valarray<Type>& operator*=(const Type& right);
 
 ### <a name="parameters"></a>Parametry
 
-*right*  
- Valarray lub wartość taka sama jak w przypadku operand valarray, który jest do pomnożenia element-wise, operand valarray typu elementu.
+*right*<br/>
+Valarray lub wartość taka sama jak w przypadku operand valarray, który jest do pomnożenia element-wise, operand valarray typu elementu.
 
 ### <a name="return-value"></a>Wartość zwracana
 
@@ -854,8 +854,8 @@ valarray<Type>& operator+=(const Type& right);
 
 ### <a name="parameters"></a>Parametry
 
-*right*  
- Valarray lub wartość taka sama jak w przypadku operand valarray, który ma zostać dodany, element-wise, aby operand valarray typu elementu.
+*right*<br/>
+Valarray lub wartość taka sama jak w przypadku operand valarray, który ma zostać dodany, element-wise, aby operand valarray typu elementu.
 
 ### <a name="return-value"></a>Wartość zwracana
 
@@ -970,8 +970,8 @@ valarray<Type>& operator-=(const Type& right);
 
 ### <a name="parameters"></a>Parametry
 
-*right*  
- Valarray lub wartość taka sama jak w przypadku operand valarray, który jest należy odejmować, element-wise, operand valarray typu elementu.
+*right*<br/>
+Valarray lub wartość taka sama jak w przypadku operand valarray, który jest należy odejmować, element-wise, operand valarray typu elementu.
 
 ### <a name="return-value"></a>Wartość zwracana
 
@@ -1035,8 +1035,8 @@ valarray<Type>& operator/=(const Type& right);
 
 ### <a name="parameters"></a>Parametry
 
-*right*  
- Valarray lub wartość taka sama jak w przypadku operand valarray, który ma być podzielone, element-wise, operand valarray typu elementu.
+*right*<br/>
+Valarray lub wartość taka sama jak w przypadku operand valarray, który ma być podzielone, element-wise, operand valarray typu elementu.
 
 ### <a name="return-value"></a>Wartość zwracana
 
@@ -1110,23 +1110,23 @@ valarray<Type>& operator=(const indirect_array<Type>& _Indarray);
 
 ### <a name="parameters"></a>Parametry
 
-*right*  
- Valarray, który ma zostać skopiowana do operand valarray.
+*right*<br/>
+Valarray, który ma zostać skopiowana do operand valarray.
 
-*Val*  
- Wartość do przypisania do elementów tworzonej tablicy operand valarray.
+*Val*<br/>
+Wartość do przypisania do elementów tworzonej tablicy operand valarray.
 
-*_Slicearray*  
- Slice_array — ma zostać skopiowana do operand valarray.
+*_Slicearray*<br/>
+Slice_array — ma zostać skopiowana do operand valarray.
 
-*_Gslicearray*  
- Gslice_array — ma zostać skopiowana do operand valarray.
+*_Gslicearray*<br/>
+Gslice_array — ma zostać skopiowana do operand valarray.
 
-*_Maskarray*  
- Mask_array — ma zostać skopiowana do operand valarray.
+*_Maskarray*<br/>
+Mask_array — ma zostać skopiowana do operand valarray.
 
-*_Indarray*  
- Indirect_array — ma zostać skopiowana do operand valarray.
+*_Indarray*<br/>
+Indirect_array — ma zostać skopiowana do operand valarray.
 
 ### <a name="return-value"></a>Wartość zwracana
 
@@ -1228,20 +1228,20 @@ valarray<Type> operator[](const valarray<size_t>& _Indarray) const;
 
 ### <a name="parameters"></a>Parametry
 
-*_Off*  
- Indeks elementu, który ma zostać przypisana wartość.
+*_Off*<br/>
+Indeks elementu, który ma zostać przypisana wartość.
 
-*_Slicearray*  
- Tablica typu slice_array z tablicy valarray, określający podzbiór, która zostanie wybrana lub powrót do nowej tablicy valarray.
+*_Slicearray*<br/>
+Tablica typu slice_array z tablicy valarray, określający podzbiór, która zostanie wybrana lub powrót do nowej tablicy valarray.
 
-*_Gslicearray*  
- Tablica typu gslice_array z tablicy valarray, określający podzbiór, która zostanie wybrana lub powrót do nowej tablicy valarray.
+*_Gslicearray*<br/>
+Tablica typu gslice_array z tablicy valarray, określający podzbiór, która zostanie wybrana lub powrót do nowej tablicy valarray.
 
-*_Boolarray*  
- Bool_array valarray, określający podzbiór, która zostanie wybrana lub powrót do nowej tablicy valarray.
+*_Boolarray*<br/>
+Bool_array valarray, określający podzbiór, która zostanie wybrana lub powrót do nowej tablicy valarray.
 
-*_Indarray*  
- Indirect_array — z tablicy valarray, określający podzbiór, która zostanie wybrana lub powrót do nowej tablicy valarray.
+*_Indarray*<br/>
+Indirect_array — z tablicy valarray, określający podzbiór, która zostanie wybrana lub powrót do nowej tablicy valarray.
 
 ### <a name="return-value"></a>Wartość zwracana
 
@@ -1269,8 +1269,8 @@ valarray<Type>& operator|=(const Type& right);
 
 ### <a name="parameters"></a>Parametry
 
-*right*  
- Valarray lub wartości typu elementu, taka sama jak w przypadku operand valarray, który ma być łączone, element-wise, przez wyłącznie logiczne **XOR** z operand valarray.
+*right*<br/>
+Valarray lub wartości typu elementu, taka sama jak w przypadku operand valarray, który ma być łączone, element-wise, przez wyłącznie logiczne **XOR** z operand valarray.
 
 ### <a name="return-value"></a>Wartość zwracana
 
@@ -1342,8 +1342,8 @@ valarray<Type>& operator|=(const Type& right);
 
 ### <a name="parameters"></a>Parametry
 
-*right*  
- Valarray lub wartości typu elementu, taka sama jak w przypadku operand valarray, który ma być łączone, element-wise, przez operatora testu koniunkcji `OR` z operand valarray.
+*right*<br/>
+Valarray lub wartości typu elementu, taka sama jak w przypadku operand valarray, który ma być łączone, element-wise, przez operatora testu koniunkcji `OR` z operand valarray.
 
 ### <a name="return-value"></a>Wartość zwracana
 
@@ -1518,11 +1518,11 @@ void resize(
 
 ### <a name="parameters"></a>Parametry
 
-*_Newsize*  
- Liczba elementów w tablicy valarray o zmienionym rozmiarze.
+*_Newsize*<br/>
+Liczba elementów w tablicy valarray o zmienionym rozmiarze.
 
-*Val*  
- Wartość do elementów tworzonej tablicy valarray o zmienionym rozmiarze.
+*Val*<br/>
+Wartość do elementów tworzonej tablicy valarray o zmienionym rozmiarze.
 
 ### <a name="remarks"></a>Uwagi
 
@@ -1589,8 +1589,8 @@ valarray<Type> shift(int count) const;
 
 ### <a name="parameters"></a>Parametry
 
-*Liczba*  
- Liczba miejsc, które elementy są jest przesuwany do przodu.
+*Liczba*<br/>
+Liczba miejsc, które elementy są jest przesuwany do przodu.
 
 ### <a name="return-value"></a>Wartość zwracana
 
@@ -1839,32 +1839,32 @@ valarray(
 
 ### <a name="parameters"></a>Parametry
 
-*Liczba*  
- Liczba elementów, które mają się znaleźć w tablicy valarray.
+*Liczba*<br/>
+Liczba elementów, które mają się znaleźć w tablicy valarray.
 
-*Val*  
- Wartość, która ma być użyta do inicjowania elementów w tablicy valarray.
+*Val*<br/>
+Wartość, która ma być użyta do inicjowania elementów w tablicy valarray.
 
-*PTR*  
- Wskaźnik do wartości, które mają użyte do inicjowania elementów w tablicy valarray.
+*PTR*<br/>
+Wskaźnik do wartości, które mają użyte do inicjowania elementów w tablicy valarray.
 
-*po prawej stronie*  
- Istniejąca tablica valarray do zainicjowania nowej tablicy valarray.
+*po prawej stronie*<br/>
+Istniejąca tablica valarray do zainicjowania nowej tablicy valarray.
 
-*SliceArray*  
- Tablica typu slice_array, której wartości elementów mają być użyte do inicjowania elementów tworzonej tablicy valarray.
+*SliceArray*<br/>
+Tablica typu slice_array, której wartości elementów mają być użyte do inicjowania elementów tworzonej tablicy valarray.
 
-*GsliceArray*  
- Tablica typu gslice_array, której wartości elementów mają być użyte do inicjowania elementów tworzonej tablicy valarray.
+*GsliceArray*<br/>
+Tablica typu gslice_array, której wartości elementów mają być użyte do inicjowania elementów tworzonej tablicy valarray.
 
-*MaskArray*  
- Tablica typu mask_array, której wartości elementów mają być użyte do inicjowania elementów tworzonej tablicy valarray.
+*MaskArray*<br/>
+Tablica typu mask_array, której wartości elementów mają być użyte do inicjowania elementów tworzonej tablicy valarray.
 
-*IndArray*  
- Tablica typu indirect_array, której wartości elementów mają być użyte do inicjowania elementów tworzonej tablicy valarray.
+*IndArray*<br/>
+Tablica typu indirect_array, której wartości elementów mają być użyte do inicjowania elementów tworzonej tablicy valarray.
 
-*IList*  
- Lista initializer_list zawierająca elementy do skopiowania.
+*IList*<br/>
+Lista initializer_list zawierająca elementy do skopiowania.
 
 ### <a name="remarks"></a>Uwagi
 

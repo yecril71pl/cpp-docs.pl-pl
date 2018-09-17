@@ -48,12 +48,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 263667b96c052025550f4d366cd236d256e7f7a8
-ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
+ms.openlocfilehash: b9ba9f6c2de8260ea846b51e2192ecfb967c5502
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "42464836"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45719982"
 ---
 # <a name="cmfcautohidebar-class"></a>Klasa CMFCAutoHideBar
 `CMFCAutoHideBar` Klasa jest klasą specjalny pasek narzędzi, który implementuje funkcję automatycznego ukrywania.  
@@ -136,11 +136,11 @@ CMFCAutoHideButton* AddAutoHideWindow(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *pAutoHideWnd*  
- Okno, które chcesz ukryć.  
+*pAutoHideWnd*<br/>
+[in] Okno, które chcesz ukryć.  
   
- [in] *dwAlignment*  
- Wartość, która określa wyrównanie przycisku automatycznego ukrywania okna aplikacji.  
+*dwAlignment*<br/>
+[in] Wartość, która określa wyrównanie przycisku automatycznego ukrywania okna aplikacji.  
   
 ### <a name="return-value"></a>Wartość zwracana  
   
@@ -176,8 +176,8 @@ virtual CSize CalcFixedLayout(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *bStretch*  
- [in] *bHorz*  
+*bStretch*<br/>
+[in] [in] *bHorz*  
   
 ### <a name="return-value"></a>Wartość zwracana  
   
@@ -207,12 +207,12 @@ virtual BOOL Create(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *lpszClassName*  
- [in] *dwStyle*  
- [in] *rect*  
- [in] *pParentWnd*  
- [in] *nID*  
- [in] *dwControlBarStyle*  
+*lpszClassName*<br/>
+[in] [in] *dwStyle*  
+*Rect*<br/>
+[in] [in] *pParentWnd*  
+*nID*<br/>
+[in] [in] *dwControlBarStyle*  
  [in] *pContext*  
   
 ### <a name="return-value"></a>Wartość zwracana  
@@ -342,11 +342,11 @@ virtual CSize StretchPane(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *nLength*  
- Wartość jest nieużywana w podstawowej implementacji. W implementacji pochodnej Użyj tej wartości, aby wskazać długość o zmienionym rozmiarze okienka.  
+*nLength*<br/>
+[in] Wartość jest nieużywana w podstawowej implementacji. W implementacji pochodnej Użyj tej wartości, aby wskazać długość o zmienionym rozmiarze okienka.  
   
- [in] *bVert*  
- Wartość jest nieużywana w podstawowej implementacji. W implementacji pochodnej Użyj wartość true, uchwyt przypadek, gdzie na pasku autoukrywanie jest zwinięta w pionie, a wartość FALSE w przypadku, gdy pasek autoukrywanie jest zwinięta w poziomie.  
+*bVert*<br/>
+[in] Wartość jest nieużywana w podstawowej implementacji. W implementacji pochodnej Użyj wartość true, uchwyt przypadek, gdzie na pasku autoukrywanie jest zwinięta w pionie, a wartość FALSE w przypadku, gdy pasek autoukrywanie jest zwinięta w poziomie.  
   
 ### <a name="return-value"></a>Wartość zwracana  
  Wynikowy rozmiar okienka o zmienionym rozmiarze.  

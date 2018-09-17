@@ -19,45 +19,49 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 32c88fe00958a0fc767d8a316bfe4edab7b4fb0e
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: bb6849a4b30e903d05b5ac3d37fce558074110a5
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32372445"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45719631"
 ---
 # <a name="cgthreads-code-generation-threads"></a>/cgthreads (wątki generowania kodu)
-Ustawia liczbę wątków używanych podczas generowania optymalizacji i kod cl.exe.  
-  
-## <a name="syntax"></a>Składnia  
-  
-```  
-/cgthreads[1-8]  
-```  
-  
-## <a name="arguments"></a>Argumenty  
- liczba  
- Maksymalna liczba wątków dla cl.exe do użycia z zakresu od 1 do 8.  
-  
-## <a name="remarks"></a>Uwagi  
- **/Cgthreads** opcja określa maksymalną liczbę wątków cl.exe używa równolegle do optymalizacji i kodu generowania fazy kompilacji. Zwróć uwagę, że mogą być bez spacji między **/cgthreads** i `number` argumentu. Domyślnie cl.exe używa czterech wątków tak, jakby **/cgthreads4** zostały określone. Jeśli są dostępne, większej liczby rdzeni procesora większego `number` wartość może skrócić czas kompilacji. Ta opcja jest szczególnie przydatne, gdy jest połączona z [/GL (optymalizacja całego programu)](../../build/reference/gl-whole-program-optimization.md).  
-  
- Można określić wiele poziomów równoległości dla kompilacji. Przełącznik msbuild.exe **/maxcpucount** określa liczbę procesów MSBuild, które mogą być uruchamiane równolegle. [/MP (kompilacja z wieloma procesami)](../../build/reference/mp-build-with-multiple-processes.md) flagi kompilatora określa liczbę procesów cl.exe, jednocześnie kompilowane do plików źródłowych. **/Cgthreads** opcji określa liczbę wątków używanych przez każdy proces cl.exe. Ponieważ procesor można uruchamiać tylko jako wiele wątków jednocześnie jako rdzeni procesora, nie jest przydatne do określenia większe wartości dla wszystkich tych opcji, w tym samym czasie i mogą być unikają szkodliwych dla produkcji. Aby uzyskać więcej informacji na temat sposobu tworzenia projektów równolegle, zobacz [tworzenie wielu projektów równolegle](/visualstudio/msbuild/building-multiple-projects-in-parallel-with-msbuild).  
-  
-### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Aby ustawić tę opcję kompilatora w środowisku programowania Visual Studio  
-  
-1.  Otwórz projekt **strony właściwości** okno dialogowe. Aby uzyskać więcej informacji, zobacz [Praca z właściwościami projektu](../../ide/working-with-project-properties.md).  
-  
-2.  Wybierz **właściwości konfiguracji**, **C/C++** folderu.  
-  
-3.  Wybierz **wiersza polecenia** strony właściwości.  
-  
-4.  Modyfikowanie **dodatkowe opcje** właściwości, aby uwzględnić **/cgthreads**`N`, gdzie `N` jest wartość z zakresu od 1 do 8, a następnie wybierz **OK**.  
-  
-### <a name="to-set-this-compiler-option-programmatically"></a>Aby programowo ustawić tę opcję kompilatora  
-  
--   Zobacz <xref:Microsoft.VisualStudio.VCProjectEngine.VCCLCompilerTool.AdditionalOptions%2A>.  
-  
-## <a name="see-also"></a>Zobacz też  
- [Opcje kompilatora](../../build/reference/compiler-options.md)   
- [Ustawianie opcji kompilatora](../../build/reference/setting-compiler-options.md)
+
+Ustawia liczbę wątków cl.exe na potrzeby generowania optymalizacji i kodu.
+
+## <a name="syntax"></a>Składnia
+
+```
+/cgthreads[1-8]
+```
+
+## <a name="arguments"></a>Argumenty
+
+*Numer*<br/>
+Maksymalna liczba wątków dla cl.exe, aby korzystać z zakresu od 1 do 8.
+
+## <a name="remarks"></a>Uwagi
+
+**/Cgthreads** opcja określa maksymalną liczbę wątków cl.exe używa równolegle do optymalizacji i kodu generowania fazy kompilacji. Należy zauważyć, że może istnieć bez spacji między **/cgthreads** i `number` argumentu. Domyślnie program cl.exe używa cztery wątki tak, jakby **/cgthreads4** zostały określone. Jeśli więcej rdzeni procesora są dostępne, większego `number` wartość może skrócić czas kompilacji. Ta opcja jest szczególnie przydatne w połączeniu z [/GL (Optymalizacja Całoprogramowa)](../../build/reference/gl-whole-program-optimization.md).
+
+Można określić wiele poziomów równoległości dla kompilacji. Przełącznik msbuild.exe **/maxcpucount** określa liczbę procesów programu MSBuild, które mogą być uruchamiane równolegle. [/MP (kompilacja z wieloma procesami)](../../build/reference/mp-build-with-multiple-processes.md) flagi kompilatora określa liczbę procesów cl.exe, jednocześnie kompilowane do plików źródłowych. **/Cgthreads** opcja określa liczbę wątków używanych przez każdy proces cl.exe. Ponieważ procesor można uruchamiać tylko tyle wątków w tym samym czasie, są rdzenie procesora, nie jest to przydatne do określenia większe wartości dla wszystkich tych opcji, w tym samym czasie i mogą być unikają szkodliwych dla produkcji. Aby uzyskać więcej informacji na temat sposobu tworzenia projektów wykonywane równolegle, zobacz [tworzenie wielu projektów w sposób równoległy](/visualstudio/msbuild/building-multiple-projects-in-parallel-with-msbuild).
+
+### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Aby ustawić tę opcję kompilatora w środowisku programowania Visual Studio
+
+1. Otwórz projekt **stron właściwości** okno dialogowe. Aby uzyskać więcej informacji, zobacz [Praca z właściwościami projektu](../../ide/working-with-project-properties.md).
+
+1. Wybierz **właściwości konfiguracji**, **C/C++** folderu.
+
+1. Wybierz **wiersza polecenia** stronę właściwości.
+
+1. Modyfikowanie **dodatkowe opcje** właściwości do uwzględnienia **/cgthreads**`N`, gdzie `N` jest wartością z zakresu od 1 do 8, a następnie wybierz **OK**.
+
+### <a name="to-set-this-compiler-option-programmatically"></a>Aby programowo ustawić tę opcję kompilatora
+
+- Zobacz <xref:Microsoft.VisualStudio.VCProjectEngine.VCCLCompilerTool.AdditionalOptions%2A>.
+
+## <a name="see-also"></a>Zobacz też
+
+[Opcje kompilatora](../../build/reference/compiler-options.md)<br/>
+[Ustawianie opcji kompilatora](../../build/reference/setting-compiler-options.md)

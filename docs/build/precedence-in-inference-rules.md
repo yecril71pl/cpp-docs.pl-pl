@@ -16,21 +16,23 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 36d462d4222cbfc143dd7487d4cb6b1b8bb3ba3b
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: b4f2e7ff55e935b7e425b552ba85f47f134c6b80
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32368489"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45725234"
 ---
 # <a name="precedence-in-inference-rules"></a>Pierwszeństwo w zasadach wnioskowania
-Jeśli reguła wnioskowania został zdefiniowany wiele razy, NMAKE używa definicji najwyższy priorytet. Na poniższej liście przedstawiono kolejność pierwszeństwa od najwyższego do najniższego:  
-  
-1.  Reguła wnioskowania zdefiniowane w pliku reguł programu make; nowsze definicje mają pierwszeństwo.  
-  
-2.  Reguła wnioskowania zdefiniowane w Tools.ini; nowsze definicje mają pierwszeństwo.  
-  
-3.  Reguła wnioskowania wstępnie zdefiniowane.  
-  
-## <a name="see-also"></a>Zobacz też  
- [Zasady wnioskowania](../build/inference-rules.md)
+
+Jeśli zasada wnioskowania został zdefiniowany wiele razy, NMAKE używa definicji najwyższy priorytet. Na poniższej liście przedstawiono kolejność pierwszeństwa od najwyższego do najniższego:
+
+1. Reguła wnioskowania zdefiniowane w pliku reguł programu make; nowsze definicje mają pierwszeństwo.
+
+1. Reguła wnioskowania zdefiniowane w Tools.ini; nowsze definicje mają pierwszeństwo.
+
+1. Reguła wnioskowania wstępnie zdefiniowane.
+
+## <a name="see-also"></a>Zobacz też
+
+[Zasady wnioskowania](../build/inference-rules.md)

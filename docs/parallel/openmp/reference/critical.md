@@ -16,15 +16,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5cb5747530f4c3aaa7bcfddc7a44c0c8d91e1270
-ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
+ms.openlocfilehash: 90638ad00f120e23e4c9168710d1e099c2c74d09
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33691303"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45716953"
 ---
 # <a name="critical"></a>krytyczne
-Określa, czy kod jest można wykonywać tylko w jednym wątku w czasie.  
+Określa, czy kod jest wykonać tylko w jednym wątku w danym momencie.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -35,16 +35,15 @@ Określa, czy kod jest można wykonywać tylko w jednym wątku w czasie.
 }  
 ```  
   
+## <a name="arguments"></a>Argumenty
+
+*Nazwa*<br/>
+(Opcjonalnie) Nazwa do identyfikacji kodu krytycznego. Należy zauważyć, że tej nazwy muszą być ujęte w nawiasy.  
+  
 ## <a name="remarks"></a>Uwagi  
- w przypadku gdy  
+ **Krytyczne** dyrektywy nie obsługuje żadnych klauzule OpenMP.  
   
- (`name`) (opcjonalnie)  
- Nazwa do identyfikacji kodu krytycznego. Należy zauważyć, że ta nazwa musi być ujęta w nawiasy.  
-  
-## <a name="remarks"></a>Uwagi  
- **Krytyczne** dyrektywy obsługuje nie klauzule OpenMP.  
-  
- Aby uzyskać więcej informacji, zobacz [2.6.2 — krytyczne skonstruować](../../../parallel/openmp/2-6-2-critical-construct.md).  
+ Aby uzyskać więcej informacji, zobacz [konstruowania 2.6.2 krytyczne](../../../parallel/openmp/2-6-2-critical-construct.md).  
   
 ## <a name="example"></a>Przykład  
   

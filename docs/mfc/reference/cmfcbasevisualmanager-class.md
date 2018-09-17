@@ -38,12 +38,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b7b21651bdab6bf2e4603a8fa012480a6201e34b
-ms.sourcegitcommit: 6408139d5f5ff8928f056bde93d20eecb3520361
+ms.openlocfilehash: db5c1ee0a381d45ce951c627d5f59bfb6eb97ea3
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37336226"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45724831"
 ---
 # <a name="cmfcbasevisualmanager-class"></a>Klasa CMFCBaseVisualManager
 Warstwa między pochodnej menedżerów wizualnych oraz interfejsu API Windows motywu.  
@@ -136,25 +136,25 @@ virtual BOOL DrawCheckBox(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *podstawowego kontrolera domeny*  
- Wskaźnik do kontekstu urządzenia  
+*podstawowego kontrolera domeny*<br/>
+[in] Wskaźnik do kontekstu urządzenia  
   
- [in] *rect*  
- Prostokąt otaczający pole wyboru.  
+*Rect*<br/>
+[in] Prostokąt otaczający pole wyboru.  
   
- [in] *bHighlighted*  
- Określa, czy pole wyboru jest wyróżniona.  
+*bHighlighted*<br/>
+[in] Określa, czy pole wyboru jest wyróżniona.  
   
- [in] *nInformacje*  
- 0 nie jest zaznaczone, 1 dla zaznaczenia normalny  
+*nInformacje*<br/>
+[in] 0 nie jest zaznaczone, 1 dla zaznaczenia normalny  
   
  2-mieszane normalny.  
   
- [in] *bWłączony*  
- Określa, czy pole wyboru jest włączone.  
+*bWłączony*<br/>
+[in] Określa, czy pole wyboru jest włączone.  
   
- [in] *bPressed*  
- Określa, czy pole wyboru jest wciśnięty.  
+*bPressed*<br/>
+[in] Określa, czy pole wyboru jest wciśnięty.  
   
 ### <a name="return-value"></a>Wartość zwracana  
  Wartość TRUE, jeśli motyw interfejsu API jest włączony; w przeciwnym razie wartość FALSE.  
@@ -181,20 +181,20 @@ virtual BOOL DrawComboBorder(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *podstawowego kontrolera domeny*  
- Wskaźnik do kontekstu urządzenia.  
+*podstawowego kontrolera domeny*<br/>
+[in] Wskaźnik do kontekstu urządzenia.  
   
- [in] *rect*  
- Prostokąt otaczający obramowanie pola kombi.  
+*Rect*<br/>
+[in] Prostokąt otaczający obramowanie pola kombi.  
   
- [in] *bWyłączone*  
- Określa, czy obramowanie pola kombi jest wyłączona.  
+*bWyłączone*<br/>
+[in] Określa, czy obramowanie pola kombi jest wyłączona.  
   
- [in] *bIsDropped*  
- Określa, czy obramowanie pola kombi jest rozwijana.  
+*bIsDropped*<br/>
+[in] Określa, czy obramowanie pola kombi jest rozwijana.  
   
- [in] *bIsHighlighted*  
- Określa, czy obramowanie pola kombi jest wyróżniona.  
+*bIsHighlighted*<br/>
+[in] Określa, czy obramowanie pola kombi jest wyróżniona.  
   
 ### <a name="return-value"></a>Wartość zwracana  
  Wartość TRUE, jeśli motyw interfejsu API jest włączony; w przeciwnym razie wartość FALSE.  
@@ -215,11 +215,11 @@ virtual BOOL DrawComboDropButton(
   
 |Parametr|Opis|  
 |---------------|-----------------|  
-|[in] *podstawowego kontrolera domeny*|Wskaźnik do kontekstu urządzenia.|  
-|[in] *rect*|Prostokąt otaczający przycisku rozwijanego pola kombi.|  
-|[in] *bWyłączone*|Określa, czy przycisk listy rozwijanej pola kombi jest wyłączona.|  
-|[in] *bIsDropped*|Określa, czy przycisk listy rozwijanej pola kombi jest rozwijana.|  
-|[in] *bIsHighlighted*|Określa, czy przycisk listy rozwijanej pola kombi jest wyróżniona.|  
+|*podstawowego kontrolera domeny*|[in] Wskaźnik do kontekstu urządzenia.|  
+|*Rect*|[in] Prostokąt otaczający przycisku rozwijanego pola kombi.|  
+|*bWyłączone*|[in] Określa, czy przycisk listy rozwijanej pola kombi jest wyłączona.|  
+|*bIsDropped*|[in] Określa, czy przycisk listy rozwijanej pola kombi jest rozwijana.|  
+|*bIsHighlighted*|[in] Określa, czy przycisk listy rozwijanej pola kombi jest wyróżniona.|  
   
 ### <a name="return-value"></a>Wartość zwracana  
  Wartość TRUE, jeśli motyw interfejsu API jest włączony; w przeciwnym razie wartość FALSE.  
@@ -236,17 +236,17 @@ virtual BOOL DrawPushButton(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *podstawowego kontrolera domeny*  
- Wskaźnik do kontekstu urządzenia.  
+*podstawowego kontrolera domeny*<br/>
+[in] Wskaźnik do kontekstu urządzenia.  
   
- [in] *rect*  
- Prostokąt otaczający przycisku polecenia.  
+*Rect*<br/>
+[in] Prostokąt otaczający przycisku polecenia.  
   
- [in] *pButton*  
- Wskaźnik do [klasa CMFCButton](../../mfc/reference/cmfcbutton-class.md) obiektu do rysowania.  
+*pButton*<br/>
+[in] Wskaźnik do [klasa CMFCButton](../../mfc/reference/cmfcbutton-class.md) obiektu do rysowania.  
   
- [in] *uiState*  
- Ignorowane. Stan jest pobierana z *pButton*.  
+*uiState*<br/>
+[in] Ignorowane. Stan jest pobierana z *pButton*.  
   
 ### <a name="return-value"></a>Wartość zwracana  
  Wartość TRUE, jeśli motyw interfejsu API jest włączony; w przeciwnym razie wartość FALSE.  
@@ -265,23 +265,23 @@ virtual BOOL DrawRadioButton(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *podstawowego kontrolera domeny*  
- Wskaźnik do kontekstu urządzenia.  
+*podstawowego kontrolera domeny*<br/>
+[in] Wskaźnik do kontekstu urządzenia.  
   
- [in] *rect*  
- Prostokąt otaczający przycisku radiowego.  
+*Rect*<br/>
+[in] Prostokąt otaczający przycisku radiowego.  
   
- [in] *bHighlighted*  
- Określa, czy przycisk radiowy zostanie wyróżniona.  
+*bHighlighted*<br/>
+[in] Określa, czy przycisk radiowy zostanie wyróżniona.  
   
- [in] *bChecked*  
- Określa, czy zaznaczono opcję przycisku radiowego.  
+*bChecked*<br/>
+[in] Określa, czy zaznaczono opcję przycisku radiowego.  
   
- [in] *bWłączony*  
- Określa, czy włączono przycisku radiowego.  
+*bWłączony*<br/>
+[in] Określa, czy włączono przycisku radiowego.  
   
- [in] *bPressed*  
- Określa, czy naciśnięciu przycisku radiowego.  
+*bPressed*<br/>
+[in] Określa, czy naciśnięciu przycisku radiowego.  
   
 ### <a name="return-value"></a>Wartość zwracana  
  Wartość TRUE, jeśli motyw interfejsu API jest włączony; w przeciwnym razie wartość FALSE.  
@@ -303,32 +303,32 @@ virtual BOOL DrawStatusBarProgress(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *podstawowego kontrolera domeny*  
- Wskaźnik do kontekstu urządzenia.  
+*podstawowego kontrolera domeny*<br/>
+[in] Wskaźnik do kontekstu urządzenia.  
   
- [in] *pStatusBar*  
- Wskaźnik na pasku stanu. Ta wartość jest ignorowana.  
+*pStatusBar*<br/>
+[in] Wskaźnik na pasku stanu. Ta wartość jest ignorowana.  
   
- [in] *rectProgress*  
- Prostokąt otaczający pasek postępu w *kontrolera pDC* współrzędnych.  
+*rectProgress*<br/>
+[in] Prostokąt otaczający pasek postępu w *kontrolera pDC* współrzędnych.  
   
- [in] *nProgressTotal*  
- Całkowity postęp wartość.  
+*nProgressTotal*<br/>
+[in] Całkowity postęp wartość.  
   
- [in] *nProgressCurr*  
- Bieżąca wartość postępu.  
+*nProgressCurr*<br/>
+[in] Bieżąca wartość postępu.  
   
- [in] *clrBar*  
- Kolor początkowy. `CMFCBaseVisualManager` ignoruje to. Klasy pochodne go używać gradientów kolorów.  
+*clrBar*<br/>
+[in] Kolor początkowy. `CMFCBaseVisualManager` ignoruje to. Klasy pochodne go używać gradientów kolorów.  
   
- [in] *clrProgressBarDest*  
- Kolor końcowy. `CMFCBaseVisualManager` ignoruje to. Klasy pochodne go używać gradientów kolorów.  
+*clrProgressBarDest*<br/>
+[in] Kolor końcowy. `CMFCBaseVisualManager` ignoruje to. Klasy pochodne go używać gradientów kolorów.  
   
- [in] *clrProgressText*  
- Kolor tekstu w toku. `CMFCBaseVisualManager` ignoruje to. Kolor tekstu jest definiowany przez `afxGlobalData.clrBtnText`.  
+*clrProgressText*<br/>
+[in] Kolor tekstu w toku. `CMFCBaseVisualManager` ignoruje to. Kolor tekstu jest definiowany przez `afxGlobalData.clrBtnText`.  
   
- [in] *bProgressText*  
- Określa, czy ma być wyświetlany tekst dotyczący postępu.  
+*bProgressText*<br/>
+[in] Określa, czy ma być wyświetlany tekst dotyczący postępu.  
   
 ### <a name="return-value"></a>Wartość zwracana  
  Wartość TRUE, jeśli motyw interfejsu API jest włączony; w przeciwnym razie wartość FALSE.  
@@ -344,14 +344,14 @@ virtual void FillReBarPane(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *podstawowego kontrolera domeny*  
- Wskaźnik do kontekstu urządzenia.  
+*podstawowego kontrolera domeny*<br/>
+[in] Wskaźnik do kontekstu urządzenia.  
   
- [in] *pBar*  
- Wskaźnik do okienka, w których tło ma być rysowany.  
+*pBar*<br/>
+[in] Wskaźnik do okienka, w których tło ma być rysowany.  
   
- [in] *rectClient*  
- Obszar, który ma zostać wypełniony prostokąt otaczający.  
+*rectClient*<br/>
+[in] Obszar, który ma zostać wypełniony prostokąt otaczający.  
   
 ### <a name="return-value"></a>Wartość zwracana  
  Wartość TRUE, jeśli motyw interfejsu API jest włączony; w przeciwnym razie wartość FALSE.  

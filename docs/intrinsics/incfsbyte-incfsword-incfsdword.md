@@ -23,17 +23,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2813fd6d06d69ee346e234b73c96b8b2e782b95b
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: a80dc66f9626c87cef78a79b1c46a62afd0957d3
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33330986"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45719358"
 ---
 # <a name="incfsbyte-incfsword-incfsdword"></a>__incfsbyte, __incfsword, __incfsdword
 **Microsoft Specific**  
   
- Dodaj je do wartości w lokalizacji pamięci, określonej przez przesunięcie względem początku `FS` segmentu.  
+ Dodaj je do wartości w lokalizacji w pamięci określonej przez przesunięcie względem początku `FS` segmentu.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -50,21 +50,21 @@ void __incfsdword(
 ```  
   
 #### <a name="parameters"></a>Parametry  
- [in] `Offset`  
- Przesunięcie od początku `FS`.  
+*Przesunięcie*<br/>
+[in] Przesunięcie od początku `FS`.  
   
 ## <a name="requirements"></a>Wymagania  
   
-|— Wewnętrzne|Architektura|  
+|Wewnętrzne|Architektura|  
 |---------------|------------------|  
 |`__incfsbyte`|x86|  
 |`__incfsword`|x86|  
 |`__incfsdword`|x86|  
   
 ## <a name="remarks"></a>Uwagi  
- Te funkcje wewnętrzne są dostępne tylko w trybie jądra, i procedury są dostępne tylko jako funkcje wewnętrzne.  
+ Te funkcje wewnętrzne są dostępne tylko w trybie jądra i procedury są dostępne tylko jako funkcje wewnętrzne.  
   
-**KOŃCOWY określonych firmy Microsoft**  
+**END specyficzny dla Microsoft**  
   
 ## <a name="see-also"></a>Zobacz też  
  [__addfsbyte, \__addfsword, \__addfsdword](../intrinsics/addfsbyte-addfsword-addfsdword.md)   

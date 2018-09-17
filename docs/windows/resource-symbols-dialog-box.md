@@ -19,40 +19,48 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 064fb9adce8b41c13709819f7ce0b7c515fea12a
-ms.sourcegitcommit: f0c90000125a9497bf61e41624de189a043703c0
+ms.openlocfilehash: 09d34d0247f7fd039bca3ea9b643802856734926
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44313172"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45719306"
 ---
 # <a name="resource-symbols-dialog-box-c"></a>Okno dialogowe symboli zasobów (C++)
 
 **Symboli zasobów** C++, okno dialogowe umożliwia dodawanie nowych symboli zasobów, zmienianie symboli, które są wyświetlane, lub przejdź do lokalizacji w kodzie źródłowym, w której symbol jest używany.
 
-**Nazwa**  
-Wyświetla nazwę symbolu. Aby uzyskać więcej informacji, zobacz [ograniczenia dotyczące nazwy symbolu](../windows/symbol-name-restrictions.md).
+- **Nazwa**
 
-**Wartość**  
-Wyświetlana jest wartość liczbowa symbolu. Aby uzyskać więcej informacji, zobacz [ograniczenia dotyczące wartości symbolu](../windows/symbol-value-restrictions.md).
+   Wyświetla nazwę symbolu. Aby uzyskać więcej informacji, zobacz [ograniczenia dotyczące nazwy symbolu](../windows/symbol-name-restrictions.md).
 
-**W użyciu**  
-Po wybraniu Określa, czy symbol jest używany przez co najmniej jednego zasobu. Zasób lub zasoby są wymienione w używana przez pole.
+- **Wartość**
 
-**Pokaż symbole tylko do odczytu**  
-Po wybraniu Wyświetla zasoby tylko do odczytu. Domyślnie **Symbol zasobu** okno dialogowe wyświetla tylko zasoby można modyfikować w pliku skryptu zasobu, ale z wybraniu tej opcji można modyfikować zasoby są wyświetlane pogrubioną czcionką i zasoby tylko do odczytu są wyświetlane w postaci zwykłego tekstu.
+   Wyświetlana jest wartość liczbowa symbolu. Aby uzyskać więcej informacji, zobacz [ograniczenia dotyczące wartości symbolu](../windows/symbol-value-restrictions.md).
 
-**Używane przez**  
-Wyświetla zasobami przy użyciu symbolu zaznaczony na liście symboli. Aby przejść do edytora dla danego zasobu, wybierz zasób w **używane przez** pole, a następnie kliknij przycisk **Wyświetl użycie**. Aby uzyskać więcej informacji, zobacz [Otwieranie Edytora zasobów dla danego symbolu](../windows/opening-the-resource-editor-for-a-given-symbol.md).
+- **W użyciu**
 
-**Nowy**  
-Otwiera **nowy Symbol** okno dialogowe, w którym można zdefiniować nazwę i, jeśli to konieczne, wartość dla nowego identyfikatora zasobu symboliczne. Aby uzyskać więcej informacji, zobacz [tworzenie nowych symboli](../windows/creating-new-symbols.md).
+   Po wybraniu Określa, czy symbol jest używany przez co najmniej jednego zasobu. Zasób lub zasoby są wymienione w używana przez pole.
 
-**Zmiany**  
-Otwiera **Zmień Symbol** okno dialogowe, które umożliwia zmianę nazwy lub wartości symbolu. Jeśli symbol jest dla formantu lub zasobów w użyciu, symbolu można zmienić tylko za pomocą odpowiedniego edytora zasobów. Aby uzyskać więcej informacji, zobacz [zmiana nieprzypisanych symboli](../windows/changing-unassigned-symbols.md).
+- **Pokaż symbole tylko do odczytu**
 
-**Wyświetl użycie**  
-Zostanie otwarty zasób, który zawiera symbol w edytorze odpowiednich zasobów. Aby uzyskać więcej informacji, zobacz [Otwieranie Edytora zasobów dla danego symbolu](../windows/opening-the-resource-editor-for-a-given-symbol.md).
+   Po wybraniu Wyświetla zasoby tylko do odczytu. Domyślnie **Symbol zasobu** okno dialogowe wyświetla tylko zasoby można modyfikować w pliku skryptu zasobu, ale z wybraniu tej opcji można modyfikować zasoby są wyświetlane pogrubioną czcionką i zasoby tylko do odczytu są wyświetlane w postaci zwykłego tekstu.
+
+- **Używane przez**
+
+   Wyświetla zasobami przy użyciu symbolu zaznaczony na liście symboli. Aby przejść do edytora dla danego zasobu, wybierz zasób w **używane przez** pole, a następnie kliknij przycisk **Wyświetl użycie**. Aby uzyskać więcej informacji, zobacz [Otwieranie Edytora zasobów dla danego symbolu](../windows/opening-the-resource-editor-for-a-given-symbol.md).
+
+- **Nowy**
+
+   Otwiera **nowy Symbol** okno dialogowe, w którym można zdefiniować nazwę i, jeśli to konieczne, wartość dla nowego identyfikatora zasobu symboliczne. Aby uzyskać więcej informacji, zobacz [tworzenie nowych symboli](../windows/creating-new-symbols.md).
+
+- **Zmiany**
+
+   Otwiera **Zmień Symbol** okno dialogowe, które umożliwia zmianę nazwy lub wartości symbolu. Jeśli symbol jest dla formantu lub zasobów w użyciu, symbolu można zmienić tylko za pomocą odpowiedniego edytora zasobów. Aby uzyskać więcej informacji, zobacz [zmiana nieprzypisanych symboli](../windows/changing-unassigned-symbols.md).
+
+- **Wyświetl użycie**
+
+   Zostanie otwarty zasób, który zawiera symbol w edytorze odpowiednich zasobów. Aby uzyskać więcej informacji, zobacz [Otwieranie Edytora zasobów dla danego symbolu](../windows/opening-the-resource-editor-for-a-given-symbol.md).
 
 ## <a name="requirements"></a>Wymagania
 

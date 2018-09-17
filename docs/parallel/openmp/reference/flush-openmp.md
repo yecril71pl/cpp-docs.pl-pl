@@ -16,15 +16,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e6933c5d74e1277b209d15aefb93a159d55f93dd
-ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
+ms.openlocfilehash: 5ea89d4feb7a554c2495c11aa8acaeeaa8bc775f
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33696243"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45722062"
 ---
 # <a name="flush-openmp"></a>opróżnianie (OpenMP)
-Określa, że wszystkie wątki tego samego widoku pamięci dla wszystkich obiektów udostępnionych.  
+Określa, że wszystkie wątki mają tego samego widoku pamięci dla wszystkich obiektów udostępnionych.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -32,14 +32,13 @@ Określa, że wszystkie wątki tego samego widoku pamięci dla wszystkich obiekt
 #pragma omp flush [(var)]  
 ```  
   
-## <a name="remarks"></a>Uwagi  
- w przypadku gdy  
+## <a name="arguments"></a>Argumenty
+
+*var*<br/>
+(Opcjonalnie) Rozdzielana przecinkami lista zmiennych, które reprezentują obiekty, które mają być synchronizowane. Jeśli `var` nie zostanie określony, wszystkie pamięci jest opróżniany.  
   
- `var` (opcjonalnie)  
- Rozdzielana przecinkami lista zmiennych, które reprezentują obiekty, które mają być synchronizowane. Jeśli `var` nie zostanie określony, cała pamięć jest opróżniany.  
-  
 ## <a name="remarks"></a>Uwagi  
- **Opróżnić** dyrektywy obsługuje nie klauzule OpenMP.  
+ **Opróżniania** dyrektywy nie obsługuje żadnych klauzule OpenMP.  
   
  Aby uzyskać więcej informacji, zobacz [2.6.5 dyrektywa opróżniania](../../../parallel/openmp/2-6-5-flush-directive.md).  
   

@@ -16,15 +16,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6dd5349331ac23998511a8f1b838d2cd13b01998
-ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
+ms.openlocfilehash: 7ff1a255933b79d39b6eedbb9362ff76a34e0f8a
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33691862"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45716992"
 ---
 # <a name="single"></a>pojedyncze
-Umożliwia określenie, czy mają zostać wykonane sekcji kodu w jednym wątku, niekoniecznie głównego wątku.  
+Pozwala określić, że sekcji kodu powinna zostać wykonana w jednym wątku, niekoniecznie głównego wątku.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -36,8 +36,9 @@ Umożliwia określenie, czy mają zostać wykonane sekcji kodu w jednym wątku, 
 ```  
   
 #### <a name="parameters"></a>Parametry  
- `clause` (opcjonalnie)  
- Klauzule zero lub więcej. Zobacz sekcję uwag listę klauzule obsługiwane przez **pojedynczego**.  
+
+`clause`  
+(Opcjonalnie) Zero lub więcej klauzul. Zobacz sekcję Spostrzeżenia, aby uzyskać listę klauzul obsługiwane przez **pojedynczego**.  
   
 ## <a name="remarks"></a>Uwagi  
  **Pojedynczego** dyrektywy obsługuje następujące klauzule OpenMP:  
@@ -50,9 +51,9 @@ Umożliwia określenie, czy mają zostać wykonane sekcji kodu w jednym wątku, 
   
 -   [private](../../../parallel/openmp/reference/private-openmp.md)  
   
- [Wzorca](../../../parallel/openmp/reference/master.md) dyrektywy pozwala określić, że sekcji kodu mają zostać wykonane tylko w głównym wątku.  
+ [Wzorca](../../../parallel/openmp/reference/master.md) dyrektywy pozwala określić, że część kodu mają zostać wykonane tylko w wątku głównym.  
   
- Aby uzyskać więcej informacji, zobacz [skonstruować 2.4.3 pojedynczego](../../../parallel/openmp/2-4-3-single-construct.md).  
+ Aby uzyskać więcej informacji, zobacz [konstruowania 2.4.3 pojedynczego](../../../parallel/openmp/2-4-3-single-construct.md).  
   
 ## <a name="example"></a>Przykład  
   

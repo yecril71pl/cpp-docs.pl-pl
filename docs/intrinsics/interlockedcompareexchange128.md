@@ -18,17 +18,18 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3e5433e2d1ddf94f23a3f483a8857e3032c27be3
-ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
+ms.openlocfilehash: 7e7499bdb615edfb6c03c54ba7fe8272d0fa6b26
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "42465336"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45721126"
 ---
 # <a name="interlockedcompareexchange128"></a>_InterlockedCompareExchange128
+
 **Microsoft Specific**  
   
- Wykonuje porównanie blokowane 128-bitowego i exchange.  
+Wykonuje porównanie blokowane 128-bitowego i exchange.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -42,17 +43,17 @@ unsigned char _InterlockedCompareExchange128(
 ```  
   
 #### <a name="parameters"></a>Parametry  
- [out w] `Destination`  
- Wskaźnik do miejsca docelowego, który jest tablicą dwóch 64-bitowych liczb całkowitych są traktowane jako pola 128-bitowego. Dane docelowego musi być 16-bajtowy wyrównane, aby uniknąć błędów ogólnej ochrony.  
+*miejsce docelowe*<br/>
+[out w] Wskaźnik do miejsca docelowego, który jest tablicą dwóch 64-bitowych liczb całkowitych są traktowane jako pola 128-bitowego. Dane docelowego musi być 16-bajtowy wyrównane, aby uniknąć błędów ogólnej ochrony.  
   
- [in] `ExchangeHigh`  
- 64-bitowa liczba całkowita, która może być wymieniane z wysokiej część miejsca docelowego.  
+*ExchangeHigh*<br/>
+[in] 64-bitowa liczba całkowita, która może być wymieniane z wysokiej część miejsca docelowego.  
   
- [in] `ExchangeLow`  
- 64-bitowa liczba całkowita, która może być wymieniane o niskiej część miejsca docelowego.  
+*ExchangeLow*<br/>
+[in] 64-bitowa liczba całkowita, która może być wymieniane o niskiej część miejsca docelowego.  
   
- [out w] `ComparandResult`  
- Wskaźnik do tablicy dwóch 64-bitowych liczb całkowitych (traktowane jako pola 128-bitowy) do porównania z miejsca docelowego.  W danych wyjściowych to jest zastępowany oryginalnej wartości elementu docelowego.  
+*ComparandResult*<br/>
+[out w] Wskaźnik do tablicy dwóch 64-bitowych liczb całkowitych (traktowane jako pola 128-bitowy) do porównania z miejsca docelowego.  W danych wyjściowych to jest zastępowany oryginalnej wartości elementu docelowego.  
   
 ## <a name="return-value"></a>Wartość zwracana  
  1, jeśli wzorzec 128-bitowy jest równe oryginalnej wartości elementu docelowego. `ExchangeHigh` i `ExchangeLow` zastąpić docelowy 128-bitowego.  
@@ -128,8 +129,9 @@ int main(void)
 BigInt.Int[1] = 34, BigInt.Int[0] = 12  
 ```  
   
-**END specyficzny dla Microsoft**  
- Copyright 2007 zaawansowane Micro urządzeń, Inc. Wszelkie prawa zastrzeżone. Odtworzyć zgoda zaawansowane Micro urządzeń, Inc.  
+**END specyficzny dla Microsoft**
+
+Copyright 2007 zaawansowane Micro urządzeń, Inc. Wszelkie prawa zastrzeżone. Odtworzyć zgoda zaawansowane Micro urządzeń, Inc.  
   
 ## <a name="see-also"></a>Zobacz też  
  [Funkcje wewnętrzne kompilatora](../intrinsics/compiler-intrinsics.md)   

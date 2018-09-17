@@ -16,32 +16,34 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c3629b65b8f6373b20fc35dd6d90133d7377e674
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: cb248442a1d687b98e8e97c8846d07a50e484564
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43766564"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45717512"
 ---
 # <a name="interfaces-atl-control-wizard"></a>Interfejsy, Kreator kontrolki ATL
 
 Ta strona kreatora zidentyfikować interfejsy, które są obsługiwane przez kontrolkę. Domyślnie obsługiwanych interfejsów są zwykle używane przez większość kontenerów.
 
 > [!NOTE]
->  W przypadku wybrania **kontrolka minimalnego** na [opcje](../../atl/reference/options-atl-control-wizard.md) karcie interfejsy nie są wyświetlane domyślnie w **obsługiwane** pola listy.
+> W przypadku wybrania **kontrolka minimalnego** na [opcje](../../atl/reference/options-atl-control-wizard.md) karcie interfejsy nie są wyświetlane domyślnie w **obsługiwane** pola listy.
 
-**Nie jest obsługiwany**  
-Wskazuje dostępnych interfejsów, które nie są obecnie obsługiwane dla formantu.
+- **Nie jest obsługiwany**
 
-**Obsługiwane**  
-Wskazuje, interfejsy, które są obecnie obsługiwane dla formantu.
+   Wskazuje dostępnych interfejsów, które nie są obecnie obsługiwane dla formantu.
 
-|Przycisk transferu|Opis|
-|---------------------|-----------------|
-|**>**|Dodaje do **obsługiwane** Nazwa interfejsu, aktualnie wybrane w listy **nieobsługiwane** listy.|
-|**>>**|Dodaje do **obsługiwane** listy dostępny w wszystkich nazw interfejsu **nieobsługiwane** listy.|
-|**<**|Usuwa nazwę interfejsu aktualnie wybrany w **obsługiwane** listy.|
-|**<<**|Usuwa wszystkie interfejsu nazwy obecnie wymienione w **obsługiwane** listy.|
+- **Obsługiwane**
+
+   Wskazuje, interfejsy, które są obecnie obsługiwane dla formantu.
+
+   |Przycisk transferu|Opis|
+   |---------------------|-----------------|
+   |**>**|Dodaje do **obsługiwane** Nazwa interfejsu, aktualnie wybrane w listy **nieobsługiwane** listy.|
+   |**>>**|Dodaje do **obsługiwane** listy dostępny w wszystkich nazw interfejsu **nieobsługiwane** listy.|
+   |**\<**|Usuwa nazwę interfejsu aktualnie wybrany w **obsługiwane** listy.|
+   |**\<\<**|Usuwa wszystkie interfejsu nazwy obecnie wymienione w **obsługiwane** listy.|
 
 ## <a name="see-also"></a>Zobacz też
 

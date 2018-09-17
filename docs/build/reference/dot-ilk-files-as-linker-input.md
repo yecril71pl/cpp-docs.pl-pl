@@ -15,16 +15,18 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 01fea585b86114373017b6d73948cb1438b7185e
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: f3b8de3758daf59a543cdcc9f3b73e1d6c6f0ce8
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32371687"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45720593"
 ---
 # <a name="ilk-files-as-linker-input"></a>Pliki .Ilk — Wejście konsolidatora
-Podczas łączenia przyrostowo, LINK aktualizuje plik stanu .ilk utworzony podczas pierwszego konsolidowania przyrostowego. Ten plik ma taką samą nazwę podstawową jak pliku .exe lub .dll i ma .ilk rozszerzenia. Podczas kolejnych konsolidacji przyrostowej LINK aktualizuje plik .ilk. Jeśli brakuje pliku .ilk LINK wykonuje pełne łącza i tworzy nowy plik .ilk. Jeśli plik .ilk jest korzystanie z niej, LINK wykonuje nieprzyrostowa łącza. Aby uzyskać więcej informacji o konsolidowania przyrostowego, zobacz [przyrostowo łącza (/ INCREMENTAL)](../../build/reference/incremental-link-incrementally.md) opcji.  
-  
-## <a name="see-also"></a>Zobacz też  
- [Pliki wyjściowe LINK](../../build/reference/link-input-files.md)   
- [Opcje konsolidatora](../../build/reference/linker-options.md)
+
+Gdy łączenie przyrostowe, łącze aktualizuje plik .ilk stanu, utworzony podczas pierwszego konsolidowania przyrostowego. Ten plik ma taką samą nazwę jak plik .exe lub pliku .dll i ma .ilk rozszerzenia. Podczas kolejne łącza przyrostowe łącze aktualizuje plik .ilk. Jeśli brakuje pliku .ilk LINK wykonuje pełne połączenie i tworzy nowy plik .ilk. Jeśli plik .ilk jest bezużyteczny, LINK wykonuje nieprzyrostowa łącza. Szczegółowe informacje na temat konsolidowania przyrostowego, zobacz [łącza przyrostowe (/ INCREMENTAL)](../../build/reference/incremental-link-incrementally.md) opcji.
+
+## <a name="see-also"></a>Zobacz też
+
+[Pliki wejściowe LINK](../../build/reference/link-input-files.md)<br/>
+[Opcje konsolidatora](../../build/reference/linker-options.md)

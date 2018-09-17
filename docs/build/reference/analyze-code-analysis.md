@@ -21,12 +21,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4893f30bae3b29538c8bead637cb4d083087a57b
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 89f0402eedbe6e49d6ce4095dc8c91ec69e15447
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32376588"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45723609"
 ---
 # <a name="analyze-code-analysis"></a>/analyze (analiza kodu)
 
@@ -40,33 +40,25 @@ Włącza opcje analizy kodu i kontroli.
 
 ## <a name="arguments"></a>Argumenty
 
- /analyze  
- Włącza funkcję analizy w trybie domyślnym. Analizy danych wyjściowych przechodzi do **dane wyjściowe** okna, podobnie jak inne komunikaty o błędach. Użyj **/ analyze-** jawnie wyłączyć analizy.
+/ analyze włącza funkcję analizy w trybie domyślnym. Analiza danych wyjściowych trafia do **dane wyjściowe** okna, podobnie jak inne komunikaty o błędach. Użyj **/ analyze-** Aby jawnie wyłączyć analizę.
 
- /analyze:WX-  
- Określanie **/ analyze: WX -** oznacza, że ostrzeżeń analizy kodu nie są traktowane jako błędy podczas kompilowania przy użyciu **wx**. Aby uzyskać więcej informacji, zobacz [/w, /W0, /W1, /W2, /W3, / W4, /w1, /w2, /w3, / W4, / Wall, /wd, / możemy /wo, /Wv, wx (poziom ostrzegawczy)](../../build/reference/compiler-option-warning-level.md).
+/ analyze: WX-określanie **/ analyze: WX -** oznacza, że ostrzeżenia analizy kodu nie są traktowane jako błędy podczas kompilowania przy użyciu **/WX**. Aby uzyskać więcej informacji, zobacz [Wn /W0, / W1, / W2, / W3, / W4, / W1, / W2, / W3, / W4, / Wall / wo, WV, /WX (poziom ostrzegawczy)](../../build/reference/compiler-option-warning-level.md).
 
- / analyze: dziennika `filename`  
- Analizator szczegółowe wyniki są zapisywane jako XML do pliku określonego przez `filename`.
+/ analyze: log `filename` szczegółowe wyniki analizatora są zapisywane w formacie XML do pliku, który jest określony przez `filename`.
 
- /analyze:quiet  
- Wyłącza dane wyjściowe analizatora do **dane wyjściowe** okna.
+/ analyze: quiet włącza Wyłącz przesyłanie wyjścia analizatora do **dane wyjściowe** okna.
 
- / analyze: stacksize `number`  
- `number` Parametr, który jest używany z tą opcją Określa rozmiar w bajtach ramki stosu dla ostrzeżenia, które [C6262](/visualstudio/code-quality/c6262) jest generowany. Jeśli ten parametr nie jest określony, rozmiar ramki stosu to domyślnie 16 KB.
+/ analyze: stacksize `number` `number` parametr, który jest używany z tą opcją, określa rozmiar w bajtach ramki stosu, które ostrzeżenia [C6262](/visualstudio/code-quality/c6262) jest generowany. Jeśli ten parametr nie jest określony, rozmiar ramki stosu to domyślnie 16 KB.
 
- / analyze: max_paths `number`  
- `number` Parametr, który jest używany z tą opcją określa maksymalną liczbę ścieżek kodu do analizy. Jeśli ten parametr nie jest określony, domyślna liczba to 256. Większe wartości wykonują bardziej szczegółowe sprawdzanie, ale analiza może zająć więcej czasu.
+/ analyze: max_paths `number` `number` parametr, który jest używany z tą opcją, określa maksymalną liczbę ścieżek kodu do analizy. Jeśli ten parametr nie jest określony, domyślna liczba to 256. Większe wartości wykonują bardziej szczegółowe sprawdzanie, ale analiza może zająć więcej czasu.
 
- /analyze:only  
- Zazwyczaj po uruchomieniu analizatora kompilator generuje kod i wykonuje bardziej gruntowne sprawdzanie składni. **/ Analyze: tylko** opcja powoduje wyłączenie tego przebiegu generowania kodu; analizy dzięki temu szybsze, ale nie są emitowane kompilacji błędów i ostrzeżeń, które może być wykryte przez program przebiegu generowania kodu kompilator. Jeśli program nie jest wolny od błędów generowania kodu, wyniki analizy mogą być zawodne; dlatego zaleca się użycie tej opcji tylko wtedy, gdy kod już przechodzi sprawdzanie składni generowania kodu bez błędów.
+/ analyze: tylko zazwyczaj kompilator generuje kod i jest bardziej gruntowne sprawdzanie po uruchomieniu analizatora składni. **/ Analyze: tylko** opcja powoduje wyłączenie tego przebiegu generowania kodu; to sprawia, że analiza szybsze, ale nie są generowane błędy i ostrzeżenia, które mogą być wykryte przez przebieg generowania kodu kompilator kompilacji. Jeśli program nie jest wolny od błędów generowania kodu, wyniki analizy mogą być zawodne; dlatego zaleca się użycie tej opcji tylko wtedy, gdy kod już przechodzi sprawdzanie składni generowania kodu bez błędów.
 
- / analyze: zestaw reguł `<file_path>.ruleset`  
-Można określić reguły, które ustawia do analizy, w tym niestandardowych zestawów reguł, możesz utworzyć samodzielnie. Gdy ta opcja jest ustawiona, aparat reguł jest bardziej wydajne, ponieważ nie obejmuje on niebędących członkami określonej reguły ustawiona przed uruchomieniem. Jeśli przełącznik nie jest ustawiona, aparat sprawdza wszystkie reguły.
+/ analyze: ruleset `<file_path>.ruleset` można określić reguły, które ustawia w celu analizy, w tym niestandardowych zestawów reguł, można utworzyć samodzielnie. Gdy ta opcja jest ustawiona, aparat reguł jest bardziej wydajne, ponieważ nie obejmuje on niebędących członkami określoną regułą ustawiona przed uruchomieniem. Jeśli przełącznik nie jest ustawiona, aparat sprawdza, czy wszystkie reguły.
 
-Zestawy reguł, które są dostarczane z programem Visual Studio znajdują się w **%VSINSTALLDIR%\Team Tools\Static Analysis Tools\Rule Sets.**
+Zestawy reguł, które są dostarczane z programem Visual Studio znajdują się w **%VSINSTALLDIR%\Team Tools\Static analizy Tools\Rule zestawów.**
 
-Następujące przykładowe niestandardowego zestawu reguł informuje aparatu reguł, aby sprawdzić C6001 i C26494. Ten plik można umieścić w dowolnym tak długo, jak długo ma `.ruleset` rozszerzenie i należy wprowadzić pełną ścieżkę w argumencie.
+Poniższy przykład niestandardowego zestawu reguł informuje o tym aparat reguł w celu sprawdzenia dostępności C6001 i C26494. Ten plik można umieścić w dowolnym miejscu tak długo, jak przedstawiono w nim `.ruleset` rozszerzenie i możesz podać pełną ścieżkę w argumencie.
 
 ```xml
 <?xml version="1.0" encoding="utf-8"?>
@@ -78,32 +70,32 @@ Następujące przykładowe niestandardowego zestawu reguł informuje aparatu reg
 </RuleSet>
 ```
 
-/ analyze: wtyczki  
-Umożliwia określonej wtyczki programu PREfast podczas działania w ramach analizy kodu. LocalEspC.dll jest wtyczkę, która implementuje analizy współbieżności związane z kodu sprawdza się w zakresie C261XX ostrzeżenia. Na przykład [C26100](/visualstudio/code-quality/c26100), [C26101](/visualstudio/code-quality/c26101),..., [C26167](/visualstudio/code-quality/c26167).
+/ analyze: wtyczka umożliwia określona wtyczka PREfast po uruchomieniu część analizy kodu.
+LocalEspC.dll to dodatek, który implementuje analizy dotyczące współbieżności kodu sprawdza, czy w zakresie C261XX ostrzeżenia. Na przykład [C26100](/visualstudio/code-quality/c26100), [C26101](/visualstudio/code-quality/c26101),..., [C26167](/visualstudio/code-quality/c26167).
 
-Aby uruchomić LocalEspC.dll, użyj tej opcji kompilatora: **/ analyze: dodatek LocalEspC.dll**
+Aby uruchomić LocalEspC.dll, użyj tej opcji kompilatora: **/ analyze: wtyczka LocalEspC.dll**
 
-Aby uruchomić CppCoreCheck.dll, najpierw uruchom to polecenie z wiersza polecenia developer:
+Aby uruchomić CppCoreCheck.dll, najpierw uruchom następujące polecenie w wierszu polecenia dla deweloperów:
 
 ```cmd
 set Esp.Extensions=CppCoreCheck.dll
 ```
 
-Następnie użyj tej opcji kompilatora: **/ analyze: dodatek EspXEngine.dll**.
+Następnie użyj tej opcji kompilatora: **/ analyze: wtyczka EspXEngine.dll**.
 
 ## <a name="remarks"></a>Uwagi
 
-Aby uzyskać więcej informacji, zobacz [analizy kodu dla C/C++ — omówienie](/visualstudio/code-quality/code-analysis-for-c-cpp-overview) i [analizy kodu dla C/C++ — ostrzeżenia](/visualstudio/code-quality/code-analysis-for-c-cpp-warnings).
+Aby uzyskać więcej informacji, zobacz [analiza kodu C/C++ — Przegląd](/visualstudio/code-quality/code-analysis-for-c-cpp-overview) i [Code Analysis for C/C++ — ostrzeżenia](/visualstudio/code-quality/code-analysis-for-c-cpp-warnings).
 
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Aby ustawić tę opcję kompilatora w środowisku programowania Visual Studio
 
-1. Otwórz projekt **strony właściwości** okno dialogowe. Aby uzyskać więcej informacji, zobacz [Praca z właściwościami projektu](../../ide/working-with-project-properties.md).
+1. Otwórz projekt **stron właściwości** okno dialogowe. Aby uzyskać więcej informacji, zobacz [Praca z właściwościami projektu](../../ide/working-with-project-properties.md).
 
-1. Rozwiń węzeł **właściwości konfiguracji** węzła.
+1. Rozwiń **właściwości konfiguracji** węzła.
 
-1. Rozwiń węzeł **analizy kodu** węzła.
+1. Rozwiń **analizy kodu** węzła.
 
-1. Wybierz **ogólne** strony właściwości.
+1. Wybierz **ogólne** stronę właściwości.
 
 1. Zmodyfikuj jedną lub więcej **analizy kodu** właściwości.
 

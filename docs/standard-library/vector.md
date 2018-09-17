@@ -16,12 +16,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e49fcc87c4c074494164a085e01581077bbfe118
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: 3c4ec16ba621ee268be65bfee11798fb4b358673
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38953865"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45720294"
 ---
 # <a name="ltvectorgt"></a>&lt;Wektor&gt;
 
@@ -83,17 +83,17 @@ void swap (
 
 ### <a name="parameters"></a>Parametry
 
-*Typ*  
- Parametr szablonu dla typu danych przechowywanych w wektorze.
+*Typ*<br/>
+Parametr szablonu dla typu danych przechowywanych w wektorze.
 
-*Allocator*  
- Parametr szablonu, aby uzyskać przechowywany obiekt alokatora odpowiedzialny za alokacji i dezalokacji pamięci.
+*Allocator*<br/>
+Parametr szablonu, aby uzyskać przechowywany obiekt alokatora odpowiedzialny za alokacji i dezalokacji pamięci.
 
-*left*  
- Pierwszego wektora (po lewej stronie) w ramach operacji porównania
+*left*<br/>
+Pierwszego wektora (po lewej stronie) w ramach operacji porównania
 
-*right*  
- Drugi wektor (po prawej) w ramach operacji porównania.
+*right*<br/>
+Drugi wektor (po prawej) w ramach operacji porównania.
 
 ### <a name="operators"></a>Operatory
 

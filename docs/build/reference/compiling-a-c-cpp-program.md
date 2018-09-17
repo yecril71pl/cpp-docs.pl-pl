@@ -15,27 +15,27 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 708bbea963fc2ea8b46061553e7eac2832fd75f1
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 5923cad13464317f98d5500cb244449aa8537b63
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32369555"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45721230"
 ---
 # <a name="compiling-a-cc-program"></a>Kompilowanie programu C/C++
 
-Aby uzyskać informacje na temat używania kompilatora zobacz następujące sekcje:  
-  
--   [Ustawianie opcji kompilatora](../../build/reference/setting-compiler-options.md)  
-  
--   [Opcje kompilatora](../../build/reference/compiler-options.md)  
-  
--   [Tworzenie prekompilowanych plików nagłówka](../../build/reference/creating-precompiled-header-files.md)  
-  
--   [Obsługa formatu Unicode w kompilatorze i konsolidatorze](../../build/reference/unicode-support-in-the-compiler-and-linker.md)  
+Aby uzyskać informacje na temat korzystania z kompilatora zobacz następujące sekcje:
 
-Więcej informacji o wyborze Architektura źródłowa i docelowa kompilatora, zobacz [skonfigurować Visual C++ dla 64-bitowy, x64 cele](../../build/configuring-programs-for-64-bit-visual-cpp.md).  
-  
-## <a name="see-also"></a>Zobacz też  
+- [Ustawianie opcji kompilatora](../../build/reference/setting-compiler-options.md)
+
+- [Opcje kompilatora](../../build/reference/compiler-options.md)
+
+- [Tworzenie prekompilowanych plików nagłówka](../../build/reference/creating-precompiled-header-files.md)
+
+- [Obsługa formatu Unicode w kompilatorze i konsolidatorze](../../build/reference/unicode-support-in-the-compiler-and-linker.md)
+
+Informacji na temat wybierania kompilatora Architektura źródłowa i docelowa, zobacz [Konfigurowanie Visual C++ x64 64-bitowy, obiekty docelowe](../../build/configuring-programs-for-64-bit-visual-cpp.md).
+
+## <a name="see-also"></a>Zobacz też
 
 [Dokumentacja kompilacji w języku C/C++](../../build/reference/c-cpp-building-reference.md)

@@ -1,5 +1,5 @@
 ---
-title: -hotpatch (Utwórz obraz możliwych) | Dokumentacja firmy Microsoft
+title: -hotpatch (Utwórz obraz Hotpatchable) | Dokumentacja firmy Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -20,46 +20,50 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: cb0f27c8da03104ee3633d9ea1a5f1232407931e
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 97e1b6197ea60099457db7788ad7e24b96c9fcb8
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32376208"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45716979"
 ---
 # <a name="hotpatch-create-hotpatchable-image"></a>/hotpatch (Utwórz obraz możliwy do poprawiania w trakcie działania)
-Przygotowuje obraz do poprawiania.  
-  
-## <a name="syntax"></a>Składnia  
-  
-```  
-/hotpatch  
-```  
-  
-## <a name="remarks"></a>Uwagi  
- Gdy **/hotpatch** jest używany w kompilacji, kompilator zapewnia, że pierwsza instrukcja każdej funkcji jest co najmniej dwa bajty, co jest wymagane do poprawiania.  
-  
- Do ukończenia przygotowania do wprowadzania możliwych obraz, po użyciu **/hotpatch** Aby skompilować, należy użyć [/FUNCTIONPADMIN (Utwórz obraz możliwych)](../../build/reference/functionpadmin-create-hotpatchable-image.md) do połączenia. Podczas kompilowania i łączenie obrazu za pomocą jednego wywołania cl.exe, **/hotpatch** oznacza **/functionpadmin**.  
-  
- Ponieważ instrukcje są zawsze dwa bajty lub większym na architekturze ARM i dlatego x64 kompilacji jest zawsze traktowany tak, jakby **/hotpatch** został określony, nie trzeba określać **/hotpatch** podczas Kompiluj dla tych celów; jednak nadal należy połączyć za pomocą **/functionpadmin** do tworzenia obrazów możliwych dla nich. **/Hotpatch** kompilacji wpływa na x86 tylko opcję kompilatora.  
-  
-### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Aby ustawić tę opcję kompilatora w środowisku programowania Visual Studio  
-  
-1.  Otwórz projekt **strony właściwości** okno dialogowe. Aby uzyskać więcej informacji, zobacz [Praca z właściwościami projektu](../../ide/working-with-project-properties.md).  
-  
-2.  Wybierz **C/C++** folderu.  
-  
-3.  Wybierz **wiersza polecenia** strony właściwości.  
-  
-4.  Dodaj opcję kompilatora **dodatkowe opcje** pole.  
-  
-### <a name="to-set-this-compiler-option-programmatically"></a>Aby programowo ustawić tę opcję kompilatora  
-  
--   Zobacz <xref:Microsoft.VisualStudio.VCProjectEngine.VCCLCompilerTool.AdditionalOptions%2A>.  
-  
-## <a name="guidance"></a>Wskazówki  
- Aby uzyskać więcej informacji na temat zarządzania aktualizacjami, zobacz "Wskazówki dotyczące zabezpieczeń do zarządzania aktualizacji" w [ http://www.microsoft.com/technet/security/guidance/PatchManagement.mspx ](http://www.microsoft.com/technet/security/guidance/PatchManagement.mspx).  
-  
-## <a name="see-also"></a>Zobacz też  
- [Opcje kompilatora](../../build/reference/compiler-options.md)   
- [Ustawianie opcji kompilatora](../../build/reference/setting-compiler-options.md)
+
+Przygotowuje obraz do poprawki.
+
+## <a name="syntax"></a>Składnia
+
+```
+/hotpatch
+```
+
+## <a name="remarks"></a>Uwagi
+
+Gdy **/hotpatch** jest używany w zestawieniu, kompilator zapewnia, że pierwsza instrukcja każdej funkcji jest co najmniej dwa bajty, który jest wymagany dla poprawki.
+
+Aby zakończyć przygotowania do hotpatchable obraz po użyciu **/hotpatch** skompilować, należy użyć [/FUNCTIONPADMIN (Utwórz obraz Hotpatchable)](../../build/reference/functionpadmin-create-hotpatchable-image.md) połączyć. Gdy kompilujesz i łączysz obraz za pomocą jednego wywołanie cl.exe, **/hotpatch** oznacza **/functionpadmin**.
+
+Ponieważ instrukcje mają zawsze dwa bajty lub większym na architekturze ARM i dlatego x64 kompilacji jest zawsze traktowany tak, jakby **/hotpatch** została określona, nie trzeba określać **/hotpatch** po Kompiluj dla tych celów; Jednakże nadal należy połączyć przy użyciu **/functionpadmin** do tworzenia obrazów hotpatchable dla nich. **/Hotpatch** kompilacja wpływa na x86 tylko opcji kompilatora.
+
+### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Aby ustawić tę opcję kompilatora w środowisku programowania Visual Studio
+
+1. Otwórz projekt **stron właściwości** okno dialogowe. Aby uzyskać więcej informacji, zobacz [Praca z właściwościami projektu](../../ide/working-with-project-properties.md).
+
+1. Wybierz **C/C++** folderu.
+
+1. Wybierz **wiersza polecenia** stronę właściwości.
+
+1. Dodaj opcję kompilatora **dodatkowe opcje** pole.
+
+### <a name="to-set-this-compiler-option-programmatically"></a>Aby programowo ustawić tę opcję kompilatora
+
+- Zobacz <xref:Microsoft.VisualStudio.VCProjectEngine.VCCLCompilerTool.AdditionalOptions%2A>.
+
+## <a name="guidance"></a>Wskazówki
+
+Aby uzyskać więcej informacji na temat zarządzania aktualizacjami, zobacz "Wytyczne bezpieczeństwa do zarządzania aktualizacjami" w [ http://www.microsoft.com/technet/security/guidance/PatchManagement.mspx ](http://www.microsoft.com/technet/security/guidance/PatchManagement.mspx).
+
+## <a name="see-also"></a>Zobacz też
+
+[Opcje kompilatora](../../build/reference/compiler-options.md)<br/>
+[Ustawianie opcji kompilatora](../../build/reference/setting-compiler-options.md)

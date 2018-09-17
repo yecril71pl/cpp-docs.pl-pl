@@ -18,39 +18,44 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4fd1dc3ba92201567f24aa84ff8dddcd96798b38
-ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
+ms.openlocfilehash: 8ccd140a1e132cc260c47b00365e03c32acf5cdf
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "33339199"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45721588"
 ---
 # <a name="hlsl-property-pages-output-files"></a>Strony właściwości HLSL: pliki wyjściowe
-Aby skonfigurować następujące właściwości kompilatora HLSL (fxc.exe), użyj jej **pliki wyjściowe** właściwości. Aby uzyskać informacje dotyczące dostępu do **pliki wyjściowe** zobacz stronę właściwości w folderze HLSL [Praca z właściwościami projektu](../ide/working-with-project-properties.md).  
+Aby skonfigurować następujące właściwości kompilator HLSL (fxc.exe), użyj jej **pliki wyjściowe** właściwości. Aby uzyskać informacje o tym, jak uzyskać dostęp do **pliki wyjściowe** zobacz stronę właściwości w folderze HLSL [Praca z właściwościami projektu](../ide/working-with-project-properties.md).  
   
 ## <a name="uielement-list"></a>Lista elementów UI  
- **Nazwa zmiennej nagłówka**  
- Określa nazwę tablicy, która jest używana do zakodowanego kod obiektu HLSL. Tablica znajduje się w pliku nagłówka, który jest wysyłany przez kompilator HLSL. Nazwa pliku nagłówka jest określona przez **nazwę pliku nagłówka** właściwości.  
+- **Nazwa zmiennej nagłówka**
+
+   Określa nazwę tablicy, która jest używana do zakodowanego kod obiektowy HLSL. Tablica jest zawarty w pliku nagłówkowym, który jest wysyłany przez kompilator HLSL. Nazwa pliku nagłówkowego jest określona przez **nazwa pliku nagłówkowego** właściwości.  
   
- Ta właściwość odpowiada **/Vn [nazwa]** argumentu wiersza polecenia.  
+ Ta właściwość odnosi się do **/Vn [nazwa]** argument wiersza polecenia.  
   
- **Nazwa pliku nagłówka**  
- Określa nazwę pliku nagłówka, który jest wysyłany przez kompilator HLSL. Nagłówek zawiera HLSL kod obiektu, który jest zakodowany w tablicy. Nazwa tablicy jest określona przez **nazwa zmiennej nagłówka** właściwości.  
+- **Nazwa pliku nagłówkowego**
+
+   Określa nazwę pliku nagłówkowego, który jest wysyłany przez kompilator HLSL. Nagłówek zawiera kod obiektowy HLSL, który jest kodowany na tablicę. Nazwa tablicy jest określona przez **nazwa zmiennej nagłówka** właściwości.  
   
- Ta właściwość odpowiada **/Fh [nazwa]** argumentu wiersza polecenia.  
+ Ta właściwość odnosi się do **/Fh [nazwa]** argument wiersza polecenia.  
   
- **Nazwa pliku obiektu**  
- Określa nazwę pliku obiektu, który jest wysyłany przez kompilator HLSL. Domyślna wartość to **.cso % (nazwa pliku) $(OutDir)**.  
+- **Nazwa pliku obiektu**
+
+   Określa nazwę pliku obiektu, który jest wysyłany przez kompilator HLSL. Domyślna wartość to **.cso % (nazwa_pliku) $(OutDir)**.  
   
- Ta właściwość odpowiada **/Fo [nazwa]** argumentu wiersza polecenia.  
+ Ta właściwość odnosi się do **/Fo [nazwa]** argument wiersza polecenia.  
   
- **Wynik zestawów**  
- **Listowanie tylko zestawów (/ Fc)** do właśnie instrukcji języka zestawu wyjściowego. **Zestaw kodu i wartości szesnastkowej (/ Fx)** do wyjściowego zarówno instrukcji języka zestawu i odpowiedni kod operacji w formacie szesnastkowym. Domyślnie wyświetlana jest danych wyjściowych.  
+- **Produkt wyjściowy asemblera**
+
+   **Listowanie tylko zestawów (/ Fc)** służący do wypełniania wyjściowego po prostu instrukcje języka asemblera. **Kodem asemblera i zapisem szesnastkowym (/ Fx)** służący do wypełniania wyjściowego języka zestawu instrukcji i odpowiedni kod operacji w formacie szesnastkowym. Domyślnie wyświetlana jest dane wyjściowe.  
   
- **Plik wyjściowy asemblera**  
- Określa nazwę pliku listy zestawu, który jest wysyłany przez kompilator HLSL.  
+- **Plik wyjściowy zestawu**
+
+   Określa nazwę plik listingu asemblera, który jest wysyłany przez kompilator HLSL.  
   
- Ta właściwość odpowiada **/Fc [nazwa]** i **/Fx [nazwa]** argumenty wiersza polecenia.  
+   Ta właściwość odnosi się do **/Fc [name]** i **/Fx [name]** argumenty wiersza polecenia.  
   
 ## <a name="see-also"></a>Zobacz też  
  [Strony właściwości HLSL](../ide/hlsl-property-pages.md)   

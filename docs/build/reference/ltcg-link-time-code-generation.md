@@ -23,16 +23,16 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: dc4266e8b01201226c53584bed9f90ed9dcabef7
-ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
+ms.openlocfilehash: 0e60bb086adbb1c573b21cafb54c61203c888e9a
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34703736"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45725176"
 ---
 # <a name="ltcg-link-time-code-generation"></a>/LTCG (Generowanie łączonych kodów czasowych)
 
-Użyj **opcję/LTCG** do przeprowadzania optymalizacji całego programu lub do tworzenia Instrumentacji Optymalizacja sterowana profilem — (PGO), przeprowadzić szkolenie i utworzyć profilowana zoptymalizowanych pod kątem kompilacji.
+Użyj **opcję/LTCG** przeprowadzić optymalizacji całego programu, lub do tworzenia Instrumentacji profilowana Optymalizacja (PGO), wykonaj szkolenia i utworzyć sterowane profilem zoptymalizowane pod kątem kompilacji.
 
 ## <a name="syntax"></a>Składnia
 
@@ -44,29 +44,29 @@ Te opcje są przestarzałe, począwszy od programu Visual Studio 2015:
 
 ### <a name="arguments"></a>Argumenty
 
-**PRZYROSTOWE** (opcjonalnie)<br/>
-Określa, że konsolidator dotyczy tylko całego programu optymalizacji lub w czasie konsolidacji generowania kodu (LTCG) zestaw plików objętych edycji, zamiast całego projektu. Domyślnie ta flaga nie jest ustawiona podczas **opcję/LTCG** jest określony, a cały projekt jest połączony za pomocą optymalizacja całego programu.
+**PRZYROSTOWE**<br/>
+(Opcjonalnie) Określa, że konsolidator dotyczy tylko całego programu optymalizacji lub linku w czasie generowania kodu (LTCG) zestaw plików wpływ, zamiast całego projektu. Domyślnie ta flaga nie ustawiono kiedy **opcję/LTCG** jest określony, i cały projekt jest połączona za pomocą optymalizacji całego programu.
 
-**NOSTATUS** &#124; **stan** (opcjonalnie)<br/>
-Określa, czy konsolidator wyświetlany jest wskaźnik postępu, pokazujący, jaki procent konsolidacji została ukończona. Domyślnie te informacje o stanie nie jest wyświetlana.
+**NOSTATUS** &AMP;#124; **STANU**<br/>
+(Opcjonalnie) Określa, czy konsolidator wyświetla wskaźnik postępu, który pokazuje, jaki procent łącze zostało zakończone. Informacje o stanie nie jest wyświetlana domyślnie.
 
-**Wyłącz** (opcjonalnie)<br/>
-Powoduje wyłączenie generowania kodu w czasie konsolidacji. To zachowanie jest takie samo, jak kiedy **opcję/LTCG** nie jest określona w wierszu polecenia.
+**OFF**<br/>
+(Opcjonalnie) Wyłącza generowanie łączonych kodów czasowych. To zachowanie jest taka sama jak gdy **opcję/LTCG** nie jest określona w wierszu polecenia.
 
-**PGINSTRUMENT** (opcjonalnie)<br/>
-Ta opcja jest przestarzały, począwszy od programu Visual Studio 2015. Zamiast tego należy użyć **opcję/LTCG** i [opcji/genprofile lub /FASTGENPROFILE](genprofile-fastgenprofile-generate-profiling-instrumented-build.md) do generowania instrumentowanej kompilacji dla optymalizacji sterowanych profilem. Dane, które mają być zbierane z Instrumentacją uruchamia służy do utworzenia zoptymalizowanego obrazu. Aby uzyskać więcej informacji, zobacz [profilowana Optymalizacja](profile-guided-optimizations.md). Krótka forma ta opcja jest **/LTCG:PGI**.
+**PGINSTRUMENT**<br/>
+(Opcjonalnie) Ta opcja jest przestarzały, począwszy od programu Visual Studio 2015. Zamiast tego należy użyć **opcję/LTCG** i [przełączników/genprofile i/fastgenprofile](genprofile-fastgenprofile-generate-profiling-instrumented-build.md) do generowania instrumentowanej kompilacji dla optymalizacji sterowanej profilem. Dane, które są zbierane z instrumentowanych przebiegów jest używany do utworzenia zoptymalizowanego obrazu. Aby uzyskać więcej informacji, zobacz [profilowana Optymalizacja](profile-guided-optimizations.md). Formularz Skrócony tej opcji jest **/LTCG:PGI**.
 
-**PGOPTIMIZE** (opcjonalnie)<br/>
-Ta opcja jest przestarzały, począwszy od programu Visual Studio 2015. Zamiast tego należy użyć **opcję/LTCG** i [/USEPROFILE](useprofile.md) do utworzenia zoptymalizowanego obrazu. Aby uzyskać więcej informacji, zobacz [profilowana Optymalizacja](../../build/reference/profile-guided-optimizations.md). Krótka forma ta opcja jest **/LTCG:PGO**.
+**PGOPTIMIZE**<br/>
+(Opcjonalnie) Ta opcja jest przestarzały, począwszy od programu Visual Studio 2015. Zamiast tego należy użyć **opcję/LTCG** i [/USEPROFILE](useprofile.md) tworzenie zoptymalizowanego obrazu. Aby uzyskać więcej informacji, zobacz [profilowana Optymalizacja](../../build/reference/profile-guided-optimizations.md). Formularz Skrócony tej opcji jest **/LTCG:PGO**.
 
-**PGUPDATE** (opcjonalnie)<br/>
-Ta opcja jest przestarzały, począwszy od programu Visual Studio 2015. Zamiast tego należy użyć **opcję/LTCG** i **/USEPROFILE** odbudować zoptymalizowanego obrazu. Aby uzyskać więcej informacji, zobacz [profilowana Optymalizacja](../../build/reference/profile-guided-optimizations.md). Krótka forma ta opcja jest **/LTCG:PGU**.
+**PGUPDATE**<br/>
+(Opcjonalnie) Ta opcja jest przestarzały, począwszy od programu Visual Studio 2015. Zamiast tego należy użyć **opcję/LTCG** i **/USEPROFILE** Aby ponownie skompilować zoptymalizowany obraz. Aby uzyskać więcej informacji, zobacz [profilowana Optymalizacja](../../build/reference/profile-guided-optimizations.md). Formularz Skrócony tej opcji jest **/LTCG:PGU**.
 
 ## <a name="remarks"></a>Uwagi
 
-**Opcję/LTCG** opcja informuje konsolidator, aby wywołać kompilatora i wykonywać optymalizacji całego programu. Możesz również wykonać do optymalizacji profilowej. Aby uzyskać więcej informacji, zobacz [profilowana Optymalizacja](../../build/reference/profile-guided-optimizations.md).
+**Opcję/LTCG** opcja informuje konsolidator, wywołań kompilatora i wykonywać optymalizacji całego programu. Można również wykonać Optymalizacja sterowana profilem. Aby uzyskać więcej informacji, zobacz [profilowana Optymalizacja](../../build/reference/profile-guided-optimizations.md).
 
-Opcje konsolidatora z następującymi wyjątkami nie można dodać do PGO kombinację **opcję/LTCG** i **/USEPROFILE** nie zostały określone w poprzedniej PGO inicjowania kombinacja  **/ LTCG** i **opcji/genprofile** opcje:
+Z następującymi wyjątkami, nie można dodać opcje konsolidatora PGO kombinacji **opcję/LTCG** i **/USEPROFILE** nie zostały określone w poprzednim PGO inicjowania kombinacja  **/ LTCG** i **przełączników/genprofile** opcje:
 
 - [/ BASE](../../build/reference/base-base-address.md)
 
@@ -92,69 +92,69 @@ Opcje konsolidatora z następującymi wyjątkami nie można dodać do PGO kombin
 
 - [/VERBOSE](../../build/reference/verbose-print-progress-messages.md)
 
-Wszystkie opcje konsolidatora, które zostały określone razem z **opcję/LTCG** i **opcji/genprofile** nie trzeba można określić podczas tworzenia przy użyciu opcji, aby zainicjować PGO **opcję/LTCG** i **/USEPROFILE**; są one niejawnego.
+Wszelkie opcje konsolidatora, które są określone razem z **opcję/LTCG** i **przełączników/genprofile** nie trzeba można określić podczas kompilowania przy użyciu opcji, aby zainicjować PGO **opcję/LTCG** i **/USEPROFILE**; są też dorozumianych.
 
 Omówiono w dalszej części tego artykułu **opcję/LTCG** pod względem Generowanie łączonych kodów czasowych.
 
-**/ LTCG** technicznego z [/GL](../../build/reference/gl-whole-program-optimization.md).
+**/ LTCG** jest implikowane przy użyciu [/GL](../../build/reference/gl-whole-program-optimization.md).
 
-Konsolidator wywołuje Generowanie łączonych kodów czasowych, jeśli został przekazany moduł, który został skompilowany przy użyciu **/GL** lub moduł MSIL (zobacz [modułu .netmodule pliki jako dane wejściowe konsolidatora](../../build/reference/netmodule-files-as-linker-input.md)). Jeśli nie zostanie jawnie określony **opcję/LTCG** podczas przekazywania **/GL** lub moduł MSIL do konsolidatora, konsolidator ostatecznie wykryje to i uruchamia ponownie łącza za pomocą **opcję/LTCG**. Określ jawnie **opcję/LTCG** podczas przekazywania **/GL** i moduł MSIL do konsolidatora do ewentualnego najszybszym kompilacji wydajności.
+Konsolidator wywołuje Generowanie łączonych kodów czasowych, jeśli zostanie przekazana, moduł, który został skompilowany przy użyciu **/GL** lub moduł MSIL (zobacz [pliki .netmodule — wejście konsolidatora](../../build/reference/netmodule-files-as-linker-input.md)). Jeśli nie zostanie jawnie określony **opcję/LTCG** podczas przekazywania **/GL** lub modułów MSIL, aby konsolidator ostatecznie konsolidator wykryje to i uruchamia ponownie link przy użyciu **opcję/LTCG**. Jawnie określić **opcję/LTCG** podczas przekazywania **/GL** i moduł MSIL do konsolidatora do ewentualnego najszybszy tworzenie wydajnością.
 
-Nawet zwiększyć wydajność, można użyć **opcję/LTCG: PRZYROSTOWE**. Ta opcja nakazuje konsolidatorowi tylko ponownie zoptymalizować zestawu plików, których dotyczy zmiana pliku źródłowego, zamiast całego projektu. To znacznie ograniczyć czas łącza. To nie jest ta sama opcja jako konsolidowania przyrostowego.
+Nawet szybsze działanie, należy użyć **opcję/LTCG: PRZYROSTOWE**. Ta opcja nakazuje konsolidatorowi tylko ponownie zoptymalizować zbiór plików, które mają wpływ zmiany plików źródłowych, zamiast całego projektu. Może to znacznie zmniejszyć czas łącza. Nie jest ta sama opcja jako łączenie przyrostowe.
 
-**/ LTCG** nie nadaje się do użytku z [/INCREMENTAL](../../build/reference/incremental-link-incrementally.md).
+**/ LTCG** nie jest prawidłowa do stosowania z [/INCREMENTAL](../../build/reference/incremental-link-incrementally.md).
 
-Gdy **opcję/LTCG** służy do łączenia moduły skompilowane przy użyciu [/Og](../../build/reference/og-global-optimizations.md), [/O1](../../build/reference/o1-o2-minimize-size-maximize-speed.md), [/O2](../../build/reference/o1-o2-minimize-size-maximize-speed.md), lub [ox](../../build/reference/ox-full-optimization.md), wykonywane są następujące funkcje optymalizacji:
+Gdy **opcję/LTCG** służy do łączenia moduły skompilowane przy użyciu [/Og](../../build/reference/og-global-optimizations.md), [/O1](../../build/reference/o1-o2-minimize-size-maximize-speed.md), [/O2](../../build/reference/o1-o2-minimize-size-maximize-speed.md), lub [ox](../../build/reference/ox-full-optimization.md), następujące optymalizacje są wykonywane:
 
-- Między modułami
+- Optimalizaci Mezi wbudowanie
 
-- Alokacja rejestru interprocedural (tylko systemy operacyjne 64-bitowe)
+- Alokacja rejestru interprocedural (tylko systemy operacyjne 64-bitowy)
 
 - Konwencja wywoływania niestandardowych (tylko x86)
 
-- Mała przemieszczenie TLS (tylko x86)
+- Małe przemieszczenia protokołu TLS (tylko x86)
 
-- Wyrównanie podwójnego stosu (tylko x86)
+- Wyrównanie podwójny stos (tylko x86)
 
-- Ulepszone pamięci Uściślanie (lepsze zakłócenia informacje o zmiennych globalnych i parametry wejściowe)
+- Uściślanie ulepszone pamięci (lepsze informacje zakłócenia dla zmiennych globalnych i parametry wejściowe)
 
 > [!NOTE]
-> Konsolidator określa optymalizacji, które były używane do kompilowania poszczególnych funkcji i stosuje tej samej optymalizacji w czasie łącza.
+> Konsolidator określa optymalizacje, które były używane do kompilowania poszczególnych funkcji i stosuje ten sam optymalizacje w czasie połączenia.
 
-Przy użyciu **opcję/LTCG** i **/Ogt** powoduje wyrównanie o podwójnej precyzji optymalizacji.
+Za pomocą **opcję/LTCG** i **/Ogt** powoduje, że Optymalizacja wyrównanie podwójnej precyzji.
 
-Jeśli **opcję/LTCG** i **/Ogs** są określone wyrównanie double nie jest wykonywana. Jeśli większości funkcji w aplikacji są kompilowane dla danej szybkości, przy użyciu kilku funkcjach skompilowanych dla rozmiaru (na przykład za pomocą [zoptymalizować](../../preprocessor/optimize.md) pragma), kompilator o podwójnej precyzji wyrównuje funkcje, które są zoptymalizowane pod kątem rozmiaru, jeśli wywołanie Funkcje, które wymagają wyrównanie dwa razy.
+Jeśli **opcję/LTCG** i **/Ogs** są określone wyrównanie double nie jest wykonywane. Jeśli większości funkcji w aplikacji są kompilowane dla danej szybkości, z kilku funkcji skompilowany dla rozmiaru (na przykład za pomocą [zoptymalizować](../../preprocessor/optimize.md) pragma), kompilator double wyrównuje funkcje, które są zoptymalizowane pod kątem rozmiaru, jeśli wywołują Funkcje, które wymagają wyrównanie double.
 
-Jeśli kompilator może zidentyfikować wszystkich miejsc wywołania funkcji, kompilator ignoruje jawne modyfikatorów Konwencja wywoływania funkcji i próbuje zoptymalizować konwencja wywołania funkcji:
+Jeśli kompilator może zidentyfikować wszystkie witryny wywołania funkcji, kompilator ignoruje jawne modyfikatorów Konwencja wywoływania funkcji i próbuje zoptymalizować konwencja wywołania funkcji:
 
-- przekazywanie parametrów rejestrów
+- Parametry są przekazywane w rejestrach
 
-- zmiany kolejności parametrów dla wyrównania
+- Zmień kolejność parametrów wyrównanie
 
 - Usuń nieużywane parametry
 
-Czy funkcja jest wywoływana przez wskaźnik funkcji, czy funkcja jest wywoływana z poza moduł, który ma być kompilowana przy użyciu **/GL**, kompilator nie będzie podejmował prób optymalizacji konwencja wywołania funkcji.
+Jeśli funkcja jest wywoływana za pomocą wskaźnika funkcji lub jeśli funkcja jest wywoływana z poza modułem, który jest kompilowany przy użyciu **/GL**, kompilator nie jest podejmowana próba zoptymalizować konwencja wywołania funkcji.
 
 > [!NOTE]
-> Jeśli używasz **opcję/LTCG** i ponownie zdefiniować `mainCRTStartup`, aplikacja może mieć nieprzewidywalne zachowanie, które odnoszą się do kodu użytkownika, który jest wykonywany przed zainicjowaniem obiektów globalnych. Istnieją trzy sposoby rozwiązania tego problemu: nie ponownego zdefiniowania `mainCRTStartup`, nie skompilować pliku, który zawiera `mainCRTStartup` za pomocą **opcję/LTCG**, lub statycznie zainicjować zmienne globalne i obiektów.
+> Jeśli używasz **opcję/LTCG** i ponownie zdefiniować `mainCRTStartup`, aplikacja może mieć nieprzewidywalne zachowanie, które odnoszą się do kodu użytkownika, który jest wykonywany przed zainicjowaniem obiektów globalnych. Istnieją trzy sposoby, aby rozwiązać ten problem: nie przedefiniować `mainCRTStartup`, nie można skompilować pliku który zawiera `mainCRTStartup` przy użyciu **opcję/LTCG**, lub statycznie zainicjować zmienne globalne i obiektów.
 
 ### <a name="ltcg-and-msil-modules"></a>/ LTCG i modułów MSIL
 
-Moduły, które są kompilowane przy użyciu [/GL](../../build/reference/gl-whole-program-optimization.md) i [/CLR](../../build/reference/clr-common-language-runtime-compilation.md) mogą być używane jako dane wejściowe konsolidatora podczas **opcję/LTCG** jest określona.
+Moduły, które są kompilowane przy użyciu [/GL](../../build/reference/gl-whole-program-optimization.md) i [/CLR](../../build/reference/clr-common-language-runtime-compilation.md) może służyć jako dane wejściowe do konsolidatora podczas **opcję/LTCG** jest określony.
 
-- **/ LTCG** je zaakceptować, obiekt natywny, a mieszane natywną/zarządzaną obiekt plików (skompilowana przy użyciu **/CLR**). **/CLR: pure** i **/CLR: Safe** — opcje kompilatora są używane w programie Visual Studio 2015 i nieobsługiwane w programie Visual Studio 2017 r.
+- **/ LTCG** je zaakceptować, obiekt natywny, a mieszane natywnego/zarządzanego obiektu plików (skompilowany przy użyciu **/CLR**). **/CLR: pure** i **/CLR: Safe** opcje kompilatora są przestarzałe w programie Visual Studio 2015 i obsługiwane w programie Visual Studio 2017.
 
-- **/LTCG:PGI** nie akceptuje skompilowana przy użyciu modułów macierzystych **/GL** i   **/CLR**
+- **/LTCG:PGI** nie akceptuje skompilowane przy użyciu modułów macierzystych **/GL** i   **/CLR**
 
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Aby ustawić tę opcję kompilatora w środowisku programowania Visual Studio
 
-1. Otwórz projekt **strony właściwości** okno dialogowe. Zobacz [Praca z właściwościami projektu](../../ide/working-with-project-properties.md).
+1. Otwórz projekt **stron właściwości** okno dialogowe. Zobacz [Praca z właściwościami projektu](../../ide/working-with-project-properties.md).
 
-1. Wybierz **właściwości konfiguracji** > **ogólne** strony właściwości.
+1. Wybierz **właściwości konfiguracji** > **ogólne** stronę właściwości.
 
 1. Modyfikowanie **Optymalizacja Całoprogramowa** właściwości.
 
-Można także zastosować **opcję/LTCG** do określonej kompilacji, wybierając **kompilacji** > **profilowana Optymalizacja** paska menu lub przez wybranie jednej profilu Wskazówki optymalizacji opcje menu skrótów dla projektu.
+Można również zastosować **opcję/LTCG** określonej kompilacji, wybierając **kompilacji** > **profilowana Optymalizacja** na pasku menu lub wybierając jedną z profilu Profilowana Optymalizacja opcje menu skrótów dla projektu.
 
 ### <a name="to-set-this-compiler-option-programmatically"></a>Aby programowo ustawić tę opcję kompilatora
 

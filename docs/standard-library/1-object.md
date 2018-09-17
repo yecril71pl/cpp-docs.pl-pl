@@ -1,5 +1,5 @@
 ---
-title: _1 obiektu | Dokumentacja firmy Microsoft
+title: _1 obiektów | Dokumentacja firmy Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,16 +18,16 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: afb57f408c52f6884c68e93af88671d49815ef69
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 156eca047946ad13b1e4f09057edceb9f0bc6b34
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33840345"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45719189"
 ---
 # <a name="1-object"></a>_1 Object
 
-Symbole zastępcze dla argumentów do zastąpienia.
+Symbole zastępcze dla wymiennych argumentów.
 
 ## <a name="syntax"></a>Składnia
 
@@ -35,12 +35,12 @@ Symbole zastępcze dla argumentów do zastąpienia.
 namespace placeholders {
     extern unspecified _1,
     _2, ... _M
- } // namespace placeholders (within std)
+} // namespace placeholders (within std)
 ```
 
 ## <a name="remarks"></a>Uwagi
 
-Obiekty `_1, _2, ... _M` symbole zastępcze wybiera się pierwszy, drugi,..., argument mies, odpowiednio w wywołaniu funkcji obiektu zwróconego przez [powiązać](../standard-library/functional-functions.md#bind). Możesz użyć `_N` do określenia, gdzie n-ty argument powinien zostać wstawiony po Obliczanie wyrażenia powiązania.
+Obiekty `_1, _2, ... _M` jest symboli zastępczych wyznaczając pierwszy, drugi,..., argument wyznaczającymi odpowiednio w wywołaniu funkcji do obiektu zwróconego przez [powiązać](../standard-library/functional-functions.md#bind). Możesz użyć `_N` do określenia, gdzie n-ty argument powinien być wstawiany gdy obliczane jest wyrażenie bind.
 
 W tej implementacji wartość z `M` wynosi 20.
 
@@ -100,9 +100,9 @@ int main()
 
 **Nagłówek:** \<funkcjonalności >
 
-**Namespace:** Standard
+**Namespace:** standardowe
 
 ## <a name="see-also"></a>Zobacz także
 
-[BIND](../standard-library/functional-functions.md#bind)<br/>
+[powiązania](../standard-library/functional-functions.md#bind)<br/>
 [is_placeholder, klasa](../standard-library/is-placeholder-class.md)<br/>

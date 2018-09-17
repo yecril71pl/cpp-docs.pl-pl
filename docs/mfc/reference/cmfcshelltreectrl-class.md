@@ -38,12 +38,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7fc8ef005eea61597eb316090e26af7e83718dd8
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 126e23064bdc599ba230efc5dde472cd05a1aa69
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43760848"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45720749"
 ---
 # <a name="cmfcshelltreectrl-class"></a>Klasa CMFCShellTreeCtrl
 `CMFCShellTreeCtrl` Klasa rozszerza [klasa CTreeCtrl](../../mfc/reference/ctreectrl-class.md) funkcji, wyświetlając hierarchię elementów powłoki.  
@@ -104,8 +104,8 @@ void EnableShellContextMenu(BOOL bEnable = TRUE);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *bWłączenie*  
- Wartość logiczna określająca, czy włączyć menu skrótów.  
+*bWłączenie*<br/>
+[in] Wartość logiczna określająca, czy włączyć menu skrótów.  
   
 ##  <a name="getflags"></a>  CMFCShellTreeCtrl::GetFlags  
  Zwraca wartość flag ustawionych dla [klasa CMFCShellTreeCtrl](../../mfc/reference/cmfcshelltreectrl-class.md) obiektu.  
@@ -130,11 +130,11 @@ BOOL GetItemPath(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [out] *strPath*  
- Odwołanie do parametru ciągu. Metoda zapisuje ścieżka elementu do tego parametru.  
+*strPath*<br/>
+[out] Odwołanie do parametru ciągu. Metoda zapisuje ścieżka elementu do tego parametru.  
   
- [in] *htreeItem*  
- Metoda pobiera ścieżki dla tego elementu kontrolki drzewa.  
+*htreeItem*<br/>
+[in] Metoda pobiera ścieżki dla tego elementu kontrolki drzewa.  
   
 ### <a name="return-value"></a>Wartość zwracana  
  Wartość różną od zera, jeśli to się powiedzie; w przeciwnym razie 0.  
@@ -169,10 +169,10 @@ virtual BOOL OnChildNotify(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *wiadomości*  
- [in] *wParam*  
- [in] *lParam*  
- [in] *pLResult*  
+*komunikat*<br/>
+[in] [in] *wParam*  
+*lParam*<br/>
+[in] [in] *pLResult*  
   
 ### <a name="return-value"></a>Wartość zwracana  
   
@@ -188,8 +188,8 @@ virtual int OnGetItemIcon(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *pItem*  
- [in] *bSelected*  
+*pItem*<br/>
+[in] [in] *bSelected*  
   
 ### <a name="return-value"></a>Wartość zwracana  
   
@@ -228,11 +228,11 @@ BOOL SelectPath(LPCITEMIDLIST lpidl);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *lpszPath*  
- Ciąg, który określa ścieżkę elementu.  
+*lpszPath*<br/>
+[in] Ciąg, który określa ścieżkę elementu.  
   
- [in] *lpidl*  
- PIDL, która określa, że element  
+*lpidl*<br/>
+[in] PIDL, która określa, że element  
   
 ### <a name="return-value"></a>Wartość zwracana  
  S_OK w przypadku powodzenia; W przeciwnym razie E_FAIL.  
@@ -247,11 +247,11 @@ void SetFlags(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *Flagidw*  
- Flagi, aby ustawić.  
+*Flagidw*<br/>
+[in] Flagi, aby ustawić.  
   
- [in] *bRefresh*  
- Wartość logiczna określająca czy `CMFCShellTreeCtrl` powinny być natychmiast odświeżane.  
+*bRefresh*<br/>
+[in] Wartość logiczna określająca czy `CMFCShellTreeCtrl` powinny być natychmiast odświeżane.  
   
 ### <a name="remarks"></a>Uwagi  
  `CMFCShellTreeCtrl` Przekazuje wszystkie ustawione flagi na [IShellFolder::EnumObjects](https://msdn.microsoft.com/library/windows/desktop/bb775066). Aby uzyskać więcej informacji na temat wartości różnych flag zobacz [IShellFolder::EnumObjects](https://msdn.microsoft.com/library/windows/desktop/bb775066).  
@@ -264,8 +264,8 @@ void SetRelatedList(CMFCShellListCtrl* pShellList);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *pShellList*  
- Wskaźnik do `CMFCShellListCtrl` obiektu.  
+*pShellList*<br/>
+[in] Wskaźnik do `CMFCShellListCtrl` obiektu.  
   
 ### <a name="remarks"></a>Uwagi  
  Ta metoda kojarzy `CMFCShellListCtrl` z `CMFCShellTreeCtrl`. Te obiekty mogą być wyświetlane jako okno Eksploratora przypominającej: Jeśli użytkownik wybierze obiekt w `CMFCShellTreeCtrl`, skojarzone elementy w `CMFCShellListCtrl` zostaną automatycznie zaktualizowane.  

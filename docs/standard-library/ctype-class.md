@@ -46,12 +46,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e34df871a655515bf4399b136de32db61d66ae0c
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 24eb9bbad0e5732eaba523abcaa93eecd6e7c240
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43204870"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45719449"
 ---
 # <a name="ctype-class"></a>ctype — Klasa
 
@@ -67,7 +67,7 @@ class ctype : public ctype_base;
 ### <a name="parameters"></a>Parametry
 
 *CharType*<br/>
- Typ używany w programie do kodowania znaków.
+Typ używany w programie do kodowania znaków.
 
 ## <a name="remarks"></a>Uwagi
 
@@ -151,7 +151,7 @@ explicit ctype(size_t _Refs = 0);
 ### <a name="parameters"></a>Parametry
 
 *_Refs*<br/>
- Wartość liczby całkowitej, można określić typ zarządzania pamięci dla obiektu.
+Wartość liczby całkowitej, można określić typ zarządzania pamięci dla obiektu.
 
 ### <a name="remarks"></a>Uwagi
 
@@ -186,19 +186,19 @@ virtual const CharType *do_is(
 ### <a name="parameters"></a>Parametry
 
 *maskVal*<br/>
- Wartość maski, dla którego ma zostać przetestowana znak.
+Wartość maski, dla którego ma zostać przetestowana znak.
 
 *ch*<br/>
- Znak, w których atrybuty są badane.
+Znak, w których atrybuty są badane.
 
 *pierwszy*<br/>
- Wskaźnik do pierwszego znaku w zakresie, w których atrybuty, które mają być klasyfikowane.
+Wskaźnik do pierwszego znaku w zakresie, w których atrybuty, które mają być klasyfikowane.
 
 *ostatni*<br/>
- Wskaźnik do znaku zaraz po ostatnim znakiem z zakresu, w których atrybuty, które mają być klasyfikowane.
+Wskaźnik do znaku zaraz po ostatnim znakiem z zakresu, w których atrybuty, które mają być klasyfikowane.
 
 *dest*<br/>
- Wskaźnik do początku tablicy, gdzie mają być przechowywane wartości maski charakteryzujące atrybuty znaków.
+Wskaźnik do początku tablicy, gdzie mają być przechowywane wartości maski charakteryzujące atrybuty znaków.
 
 ### <a name="return-value"></a>Wartość zwracana
 
@@ -234,19 +234,19 @@ virtual const CharType* do_narrow(
 ### <a name="parameters"></a>Parametry
 
 *ch*<br/>
- Znak typu `Chartype` używane przez ustawienia regionalne do skonwertowania.
+Znak typu `Chartype` używane przez ustawienia regionalne do skonwertowania.
 
 *default*<br/>
- Wartość domyślna ma zostać przypisany przez funkcję elementu członkowskiego, aby znaki typu `CharType` nie mają odpowiednika znaki typu **char**.
+Wartość domyślna ma zostać przypisany przez funkcję elementu członkowskiego, aby znaki typu `CharType` nie mają odpowiednika znaki typu **char**.
 
 *pierwszy*<br/>
- Wskaźnik do pierwszego znaku w zakresie znaków ma zostać przekonwertowany.
+Wskaźnik do pierwszego znaku w zakresie znaków ma zostać przekonwertowany.
 
 *ostatni*<br/>
- Wskaźnik do znaku zaraz po ostatnim znakiem z zakresu znaków, które ma zostać przekonwertowany.
+Wskaźnik do znaku zaraz po ostatnim znakiem z zakresu znaków, które ma zostać przekonwertowany.
 
 *dest*<br/>
- Wskaźnika elementu const do pierwszego znaku typu **char** w zakresie docelowym, który przechowuje przekonwertowanego zakres znaków.
+Wskaźnika elementu const do pierwszego znaku typu **char** w zakresie docelowym, który przechowuje przekonwertowanego zakres znaków.
 
 ### <a name="return-value"></a>Wartość zwracana
 
@@ -276,13 +276,13 @@ virtual const CharType *do_scan_is(
 ### <a name="parameters"></a>Parametry
 
 *maskVal*<br/>
- Wartość maski mają być dopasowywane o znak.
+Wartość maski mają być dopasowywane o znak.
 
 *pierwszy*<br/>
- Wskaźnik do pierwszego znaku w zakresie do przeskanowania.
+Wskaźnik do pierwszego znaku w zakresie do przeskanowania.
 
 *ostatni*<br/>
- Wskaźnik do znaku zaraz po ostatni znak w zakresie do skanowania.
+Wskaźnik do znaku zaraz po ostatni znak w zakresie do skanowania.
 
 ### <a name="return-value"></a>Wartość zwracana
 
@@ -310,13 +310,13 @@ virtual const CharType *do_scan_not(
 ### <a name="parameters"></a>Parametry
 
 *maskVal*<br/>
- Wartość maski nie mają być dopasowywane znak.
+Wartość maski nie mają być dopasowywane znak.
 
 *pierwszy*<br/>
- Wskaźnik do pierwszego znaku w zakresie do przeskanowania.
+Wskaźnik do pierwszego znaku w zakresie do przeskanowania.
 
 *ostatni*<br/>
- Wskaźnik do znaku zaraz po ostatni znak w zakresie do skanowania.
+Wskaźnik do znaku zaraz po ostatni znak w zakresie do skanowania.
 
 ### <a name="return-value"></a>Wartość zwracana
 
@@ -346,13 +346,13 @@ virtual const CharType *do_tolower(
 ### <a name="parameters"></a>Parametry
 
 *ch*<br/>
- Znak, który ma zostać przekonwertowany na małe litery.
+Znak, który ma zostać przekonwertowany na małe litery.
 
 *pierwszy*<br/>
- Wskaźnik do pierwszego znaku w zakresie znaków, w których przypadki są ma zostać przekonwertowany.
+Wskaźnik do pierwszego znaku w zakresie znaków, w których przypadki są ma zostać przekonwertowany.
 
 *ostatni*<br/>
- Wskaźnik do znaku zaraz po ostatnim znakiem z zakresu znaków, w których przypadki są ma zostać przekonwertowany.
+Wskaźnik do znaku zaraz po ostatnim znakiem z zakresu znaków, w których przypadki są ma zostać przekonwertowany.
 
 ### <a name="return-value"></a>Wartość zwracana
 
@@ -382,13 +382,13 @@ virtual const CharType *do_toupper(
 ### <a name="parameters"></a>Parametry
 
 *ch*<br/>
- Znak, który ma zostać przekonwertowany na wielkie litery.
+Znak, który ma zostać przekonwertowany na wielkie litery.
 
 *pierwszy*<br/>
- Wskaźnik do pierwszego znaku w zakresie znaków, w których przypadki są ma zostać przekonwertowany.
+Wskaźnik do pierwszego znaku w zakresie znaków, w których przypadki są ma zostać przekonwertowany.
 
 *ostatni*<br/>
- Wskaźnik do znaku zaraz po ostatnim znakiem z zakresu znaków, w których przypadki są ma zostać przekonwertowany.
+Wskaźnik do znaku zaraz po ostatnim znakiem z zakresu znaków, w których przypadki są ma zostać przekonwertowany.
 
 ### <a name="return-value"></a>Wartość zwracana
 
@@ -419,16 +419,16 @@ virtual const char *do_widen(
 ### <a name="parameters"></a>Parametry
 
 *byte*<br/>
- Znak typu **char** w macierzystym zestawie znaków do skonwertowania.
+Znak typu **char** w macierzystym zestawie znaków do skonwertowania.
 
 *pierwszy*<br/>
- Wskaźnik do pierwszego znaku w zakresie znaków ma zostać przekonwertowany.
+Wskaźnik do pierwszego znaku w zakresie znaków ma zostać przekonwertowany.
 
 *ostatni*<br/>
- Wskaźnik do znaku zaraz po ostatnim znakiem z zakresu znaków, które ma zostać przekonwertowany.
+Wskaźnik do znaku zaraz po ostatnim znakiem z zakresu znaków, które ma zostać przekonwertowany.
 
 *dest*<br/>
- Wskaźnik do pierwszego znaku typu `CharType` w zakresie docelowym, który przechowuje przekonwertowanego zakres znaków.
+Wskaźnik do pierwszego znaku typu `CharType` w zakresie docelowym, który przechowuje przekonwertowanego zakres znaków.
 
 ### <a name="return-value"></a>Wartość zwracana
 
@@ -461,19 +461,19 @@ const CharType *is(
 ### <a name="parameters"></a>Parametry
 
 *maskVal*<br/>
- Wartość maski, dla którego ma zostać przetestowana znak.
+Wartość maski, dla którego ma zostać przetestowana znak.
 
 *ch*<br/>
- Znak, w których atrybuty są badane.
+Znak, w których atrybuty są badane.
 
 *pierwszy*<br/>
- Wskaźnik do pierwszego znaku w zakresie, w których atrybuty, które mają być klasyfikowane.
+Wskaźnik do pierwszego znaku w zakresie, w których atrybuty, które mają być klasyfikowane.
 
 *ostatni*<br/>
- Wskaźnik do znaku zaraz po ostatnim znakiem z zakresu, w których atrybuty, które mają być klasyfikowane.
+Wskaźnik do znaku zaraz po ostatnim znakiem z zakresu, w których atrybuty, które mają być klasyfikowane.
 
 *dest*<br/>
- Wskaźnik do początku tablicy, gdzie mają być przechowywane wartości maski charakteryzujące atrybuty znaków.
+Wskaźnik do początku tablicy, gdzie mają być przechowywane wartości maski charakteryzujące atrybuty znaków.
 
 ### <a name="return-value"></a>Wartość zwracana
 
@@ -542,19 +542,19 @@ const CharType* narrow(
 ### <a name="parameters"></a>Parametry
 
 *ch*<br/>
- Znak typu `Chartype` używane przez ustawienia regionalne do skonwertowania.
+Znak typu `Chartype` używane przez ustawienia regionalne do skonwertowania.
 
 *default*<br/>
- Wartość domyślna ma zostać przypisany przez funkcję elementu członkowskiego, aby znaki typu `CharType` nie mają odpowiednika znaki typu **char**.
+Wartość domyślna ma zostać przypisany przez funkcję elementu członkowskiego, aby znaki typu `CharType` nie mają odpowiednika znaki typu **char**.
 
 *pierwszy*<br/>
- Wskaźnik do pierwszego znaku w zakresie znaków ma zostać przekonwertowany.
+Wskaźnik do pierwszego znaku w zakresie znaków ma zostać przekonwertowany.
 
 *ostatni*<br/>
- Wskaźnik do znaku zaraz po ostatnim znakiem z zakresu znaków, które ma zostać przekonwertowany.
+Wskaźnik do znaku zaraz po ostatnim znakiem z zakresu znaków, które ma zostać przekonwertowany.
 
 *dest*<br/>
- Wskaźnika elementu const do pierwszego znaku typu **char** w zakresie docelowym, który przechowuje przekonwertowanego zakres znaków.
+Wskaźnika elementu const do pierwszego znaku typu **char** w zakresie docelowym, który przechowuje przekonwertowanego zakres znaków.
 
 ### <a name="return-value"></a>Wartość zwracana
 
@@ -606,13 +606,13 @@ const CharType *scan_is(
 ### <a name="parameters"></a>Parametry
 
 *maskVal*<br/>
- Wartość maski mają być dopasowywane o znak.
+Wartość maski mają być dopasowywane o znak.
 
 *pierwszy*<br/>
- Wskaźnik do pierwszego znaku w zakresie do przeskanowania.
+Wskaźnik do pierwszego znaku w zakresie do przeskanowania.
 
 *ostatni*<br/>
- Wskaźnik do znaku zaraz po ostatni znak w zakresie do skanowania.
+Wskaźnik do znaku zaraz po ostatni znak w zakresie do skanowania.
 
 ### <a name="return-value"></a>Wartość zwracana
 
@@ -662,13 +662,13 @@ const CharType *scan_not(
 ### <a name="parameters"></a>Parametry
 
 *maskVal*<br/>
- Wartość maski nie mają być dopasowywane znak.
+Wartość maski nie mają być dopasowywane znak.
 
 *pierwszy*<br/>
- Wskaźnik do pierwszego znaku w zakresie do przeskanowania.
+Wskaźnik do pierwszego znaku w zakresie do przeskanowania.
 
 *ostatni*<br/>
- Wskaźnik do znaku zaraz po ostatni znak w zakresie do skanowania.
+Wskaźnik do znaku zaraz po ostatni znak w zakresie do skanowania.
 
 ### <a name="return-value"></a>Wartość zwracana
 
@@ -718,13 +718,13 @@ const CharType *tolower(CharType* first, const CharType* last) const;
 ### <a name="parameters"></a>Parametry
 
 *ch*<br/>
- Znak, który ma zostać przekonwertowany na małe litery.
+Znak, który ma zostać przekonwertowany na małe litery.
 
 *pierwszy*<br/>
- Wskaźnik do pierwszego znaku w zakresie znaków, w których przypadki są ma zostać przekonwertowany.
+Wskaźnik do pierwszego znaku w zakresie znaków, w których przypadki są ma zostać przekonwertowany.
 
 *ostatni*<br/>
- Wskaźnik do znaku zaraz po ostatnim znakiem z zakresu znaków, w których przypadki są ma zostać przekonwertowany.
+Wskaźnik do znaku zaraz po ostatnim znakiem z zakresu znaków, w których przypadki są ma zostać przekonwertowany.
 
 ### <a name="return-value"></a>Wartość zwracana
 
@@ -773,13 +773,13 @@ const CharType *toupper(CharType* first, const CharType* last) const;
 ### <a name="parameters"></a>Parametry
 
 *ch*<br/>
- Znak, który ma zostać przekonwertowany na wielkie litery.
+Znak, który ma zostać przekonwertowany na wielkie litery.
 
 *pierwszy*<br/>
- Wskaźnik do pierwszego znaku w zakresie znaków, w których przypadki są ma zostać przekonwertowany.
+Wskaźnik do pierwszego znaku w zakresie znaków, w których przypadki są ma zostać przekonwertowany.
 
 *ostatni*<br/>
- Wskaźnik do znaku zaraz po ostatnim znakiem z zakresu znaków, w których przypadki są ma zostać przekonwertowany.
+Wskaźnik do znaku zaraz po ostatnim znakiem z zakresu znaków, w których przypadki są ma zostać przekonwertowany.
 
 ### <a name="return-value"></a>Wartość zwracana
 
@@ -828,16 +828,16 @@ const char *widen(const char* first, const char* last, CharType* dest) const;
 ### <a name="parameters"></a>Parametry
 
 *byte*<br/>
- Ustaw znaku typu char w macierzystym znaków ma zostać przekonwertowany.
+Ustaw znaku typu char w macierzystym znaków ma zostać przekonwertowany.
 
 *pierwszy*<br/>
- Wskaźnik do pierwszego znaku w zakresie znaków ma zostać przekonwertowany.
+Wskaźnik do pierwszego znaku w zakresie znaków ma zostać przekonwertowany.
 
 *ostatni*<br/>
- Wskaźnik do znaku zaraz po ostatnim znakiem z zakresu znaków, które ma zostać przekonwertowany.
+Wskaźnik do znaku zaraz po ostatnim znakiem z zakresu znaków, które ma zostać przekonwertowany.
 
 *dest*<br/>
- Wskaźnik do pierwszego znaku typu `CharType` w zakresie docelowym, który przechowuje przekonwertowanego zakres znaków.
+Wskaźnik do pierwszego znaku typu `CharType` w zakresie docelowym, który przechowuje przekonwertowanego zakres znaków.
 
 ### <a name="return-value"></a>Wartość zwracana
 

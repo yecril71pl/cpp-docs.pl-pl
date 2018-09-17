@@ -30,12 +30,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 44172ffdf7985b7ab304e232eb03b859313df6bc
-ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
+ms.openlocfilehash: a1e28b9c28823e77244bc6e686db163e5110a8fa
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/05/2018
-ms.locfileid: "37853767"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45719969"
 ---
 # <a name="cmfccmdusagecount-class"></a>Klasa CMFCCmdUsageCount
 Śledzi Licznik użycia komunikatów Windows, na przykład gdy użytkownik wybierze element menu.  
@@ -104,7 +104,7 @@ void AddCmd(UINT uiCmd);
 |||  
 |-|-|  
 |Parametr|Opis|  
-|[in] *uiCmd*|Określa licznik polecenie, aby dodać kolejne.|  
+|*uiCmd*|[in] Określa licznik polecenie, aby dodać kolejne.|  
   
 ### <a name="remarks"></a>Uwagi  
  Ta metoda dodaje nowy wpis do struktury mapy liczb polecenia `m_CmdUsage`, jeśli wpis nie istnieje.  
@@ -129,7 +129,7 @@ UINT GetCount(UINT uiCmd) const;
 |||  
 |-|-|  
 |Parametr|Opis|  
-|[in] *uiCmd*|Identyfikator licznika polecenia do pobrania.|  
+|*uiCmd*|[in] Identyfikator licznika polecenia do pobrania.|  
   
 ### <a name="return-value"></a>Wartość zwracana  
  Licznik użycia, który jest skojarzony z identyfikatora polecenia.  
@@ -161,7 +161,7 @@ BOOL IsFreqeuntlyUsedCmd(UINT uiCmd) const;
 |||  
 |-|-|  
 |Parametr|Opis|  
-|[in] *uiCmd*|Określa polecenie, aby sprawdzić.|  
+|*uiCmd*|[in] Określa polecenie, aby sprawdzić.|  
   
 ### <a name="return-value"></a>Wartość zwracana  
  Wartość różną od zera, jeśli polecenie jest często używane; w przeciwnym razie 0.  
@@ -193,7 +193,7 @@ virtual void Serialize(CArchive& ar);
 |||  
 |-|-|  
 |Parametr|Opis|  
-|[in] *ar*|Element `CArchive` obiektu do zserializowania z lub do.|  
+|*ar*|[in] Element `CArchive` obiektu do zserializowania z lub do.|  
   
 ### <a name="remarks"></a>Uwagi  
  Ta metoda wykonuje serializację struktury mapy liczb polecenia `m_CmdUsage`i użycie polecenia całkowita `m_nTotalUsage`, licznik, z lub do określonego archiwum.  
@@ -214,8 +214,8 @@ static BOOL __stdcall SetOptions(
 |||  
 |-|-|  
 |Parametr|Opis|  
-|[in] *nStartCount*|Początkowa liczba nowych poleceń wszystko można śledzić.|  
-|[in] *nMinUsagePercentage*|Nowe minimalnego użycia wartości procentowej.|  
+|*nStartCount*|[in] Początkowa liczba nowych poleceń wszystko można śledzić.|  
+|*nMinUsagePercentage*|[in] Nowe minimalnego użycia wartości procentowej.|  
   
 ### <a name="return-value"></a>Wartość zwracana  
  Wartość TRUE, jeśli metoda się powiedzie, wartość FALSE Jeśli *nMinUsagePercentage* parametru jest większy niż lub równa 100.  

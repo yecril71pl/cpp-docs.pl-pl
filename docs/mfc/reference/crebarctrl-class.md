@@ -108,12 +108,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 702cc504032f7c4702dcc1b317c517d53b9cccc9
-ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
+ms.openlocfilehash: 0b88e53d7f5cfdd03728f8d1a474ee5171ca5daa
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43693883"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45717590"
 ---
 # <a name="crebarctrl-class"></a>Klasa CReBarCtrl
 Hermetyzuje funkcje sterowania formantu rebar, który jest kontenerem dla okna podrzędnego.  
@@ -766,8 +766,8 @@ BOOL SetBandWidth(
   
 |Parametr|Opis|  
 |---------------|-----------------|  
-|[in] *uBand*|Liczony od zera indeks pasma paska pomocniczego.|  
-|[in] *cxWidth*|Nową szerokość paska pomocniczego poza pasmem, a w pikselach.|  
+|*uBand*|[in] Liczony od zera indeks pasma paska pomocniczego.|  
+|*cxWidth*|[in] Nową szerokość paska pomocniczego poza pasmem, a w pikselach.|  
   
 ### <a name="return-value"></a>Wartość zwracana  
  Wartość TRUE, jeśli metoda się powiedzie; w przeciwnym razie wartość FALSE.  
@@ -846,8 +846,8 @@ DWORD SetExtendedStyle(
   
 |Parametr|Opis|  
 |---------------|-----------------|  
-|[in] *dwMask*|Bitowa kombinacja (lub) flagi określające flag, które w *dwStyleEx* zastosować parametr. Użyj co najmniej jeden z następujących wartości:<br /><br /> RBS_EX_SPLITTER: Domyślnie pokazuj rozdzielacza na dole w poziomym trybie, a po prawej stronie w pionowym trybie.<br /><br /> RBS_EX_TRANSPARENT: Przekazuj [WM_ERASEBKGND](/windows/desktop/winmsg/wm-erasebkgnd) wiadomości do okna nadrzędnego.|  
-|[in] *dwStyleEx*|Bitowa kombinacja (lub) flagi określające, style, które mają zastosowanie. Aby ustawić stylu, podaj tę samą flagę, która jest używana w *dwMask* parametru. Aby zresetować stylu, należy określić binarne zero.|  
+|*dwMask*|[in] Bitowa kombinacja (lub) flagi określające flag, które w *dwStyleEx* zastosować parametr. Użyj co najmniej jeden z następujących wartości:<br /><br /> RBS_EX_SPLITTER: Domyślnie pokazuj rozdzielacza na dole w poziomym trybie, a po prawej stronie w pionowym trybie.<br /><br /> RBS_EX_TRANSPARENT: Przekazuj [WM_ERASEBKGND](/windows/desktop/winmsg/wm-erasebkgnd) wiadomości do okna nadrzędnego.|  
+|*dwStyleEx*|[in] Bitowa kombinacja (lub) flagi określające, style, które mają zastosowanie. Aby ustawić stylu, podaj tę samą flagę, która jest używana w *dwMask* parametru. Aby zresetować stylu, należy określić binarne zero.|  
   
 ### <a name="return-value"></a>Wartość zwracana  
  Poprzedni rozszerzone style.  

@@ -18,12 +18,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 052e9a55d443fa263ecf8443c9e3933baeb1f3b8
-ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
+ms.openlocfilehash: b9b9be3cd2de53c957074d2acdee18183d688852
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "42465044"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45719124"
 ---
 # <a name="codeseg"></a>code_seg
 Określa segment tekstu, w którym funkcje są przechowywane w pliku .obj.  
@@ -34,6 +34,25 @@ Określa segment tekstu, w którym funkcje są przechowywane w pliku .obj.
 #pragma code_seg( [ [ { push | pop }, ] [ identifier, ] ] [ "segment-name" [, "segment-class" ] )  
 ```  
   
+### <a name="paramters"></a>Parametry
+  
+**push**<br/>
+(Opcjonalnie) Umieszcza rekord na wewnętrznym stosie kompilatora. A **wypychania** może mieć *identyfikator* i *nazwą segmentu*.  
+  
+**POP**<br/>
+(Opcjonalnie) Usuwa rekord z góry wewnętrznego stosu kompilatora.  
+  
+*Identyfikator*<br/>
+(Opcjonalnie) Gdy jest używane z **wypychania**, przypisuje nazwę rekordowi na wewnętrznym stosie kompilatora. Gdy jest używane z **pop**, zdejmuje rekordy z wewnętrznego stosu aż do usunięcia *identyfikator* zostanie usunięta; Jeśli *identyfikator* nie zostanie znaleziony na wewnętrznym stosie, nic nie zostanie zdjęte.  
+  
+*Identyfikator* umożliwia wielu rekordów zostać zdjęte ze stosu przy użyciu tylko jednego **pop** polecenia.  
+  
+"*nazwą segmentu*"<br/>  
+(Opcjonalnie) Nazwa segmentu. Gdy jest używane z **pop**, stos jest zdejmowany i *nazwą segmentu* staje się aktywną nazwą segmentu tekstu.  
+  
+"*klasy segmentu*"<br/>
+(Opcjonalnie) Ignorowanie, ale włączone dla zachowania zgodności z c++ w wersji wcześniejszej niż wersja 2.0.  
+  
 ## <a name="remarks"></a>Uwagi  
  
 **Code_seg** dyrektywa pragmy nie kontroluje umieszczania kodu obiektowego wygenerowanego dla szablonów skonkretyzowanych ani kodu niejawnie wygenerowanego przez kompilator — na przykład funkcji specjalnych elementów członkowskich. Firma Microsoft zaleca użycie [__declspec(code_seg(...)) ](../cpp/code-seg-declspec.md) zamiast tego atrybutu, ponieważ daje on kontrolę nad umieszczaniem całego kodu obiektowego. Obejmuje to kod wygenerowany przez kompilator.  
@@ -43,24 +62,7 @@ A *segmentu* w .obj pliku to nazwany blok danych, który jest ładowany do pami�
 **Code_seg** dyrektywa pragmy informuje kompilator, aby umieścić cały kolejny kod obiektowy z jednostki translacji w segmencie tekstu o nazwie *nazwą segmentu*. Domyślnie segment tekstu używany dla funkcji w pliku .obj ma nazwę .text.  
   
 A **code_seg** dyrektywa pragmy bez parametrów resetuje nazwę segmentu tekstu dla kolejnego kodu obiektowego do postaci .text.  
-  
-*wypychane* (opcjonalnie)  
-Umieszcza rekord na wewnętrznym stosie kompilatora. A *wypychania* może mieć *identyfikator* i *nazwą segmentu*.  
-  
-*POP* (opcjonalnie)  
-Usuwa rekord z góry wewnętrznego stosu kompilatora.  
-  
-*Identyfikator* (opcjonalnie)  
-Gdy jest używane z *wypychania*, przypisuje nazwę rekordowi na wewnętrznym stosie kompilatora. Gdy jest używane z *pop*, zdejmuje rekordy z wewnętrznego stosu aż do usunięcia *identyfikator* zostanie usunięta; Jeśli *identyfikator* nie zostanie znaleziony na wewnętrznym stosie, nic nie zostanie zdjęte.  
-  
-*Identyfikator* umożliwia wielu rekordów zostać zdjęte ze stosu przy użyciu tylko jednego *pop* polecenia.  
-  
-"*nazwą segmentu*" (opcjonalne)  
-Nazwa segmentu. Gdy jest używane z *pop*, stos jest zdejmowany i *nazwą segmentu* staje się aktywną nazwą segmentu tekstu.  
-  
-"*klasy segmentu*" (opcjonalne)  
-Ignorowanie, ale włączone dla zachowania zgodności z C++ w wersji wcześniejszej niż wersja 2.0.  
-  
+
 Możesz użyć [DUMPBIN. Plik EXE](../build/reference/dumpbin-command-line.md) aplikacji, aby wyświetlić pliki .obj. Wersje DUMPBIN dla każdej obsługiwanej architektury docelowej są dołączone do programu Visual Studio.  
   
 ## <a name="example"></a>Przykład  

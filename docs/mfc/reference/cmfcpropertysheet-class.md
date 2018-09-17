@@ -50,12 +50,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a9e4d2bc62ffadb59565ba64e28311cd1283cb5d
-ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
+ms.openlocfilehash: bae44c3d92c2e27802c3c1b0849fa23266e2f753
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43691439"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45723531"
 ---
 # <a name="cmfcpropertysheet-class"></a>Klasa CMFCPropertySheet
 `CMFCPropertySheet` Klasy obsługuje arkusz właściwości, gdzie każda Strona właściwości jest określona przez kartę strony, przycisk paska narzędzi, węzeł formantu drzewa lub element listy.  
@@ -151,8 +151,8 @@ void AddPage(CPropertyPage* pPage);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *Strona_fizyczna*  
- Wskaźnik do obiektu strony. Ten parametr nie może mieć wartości NULL.  
+*Strona_fizyczna*<br/>
+[in] Wskaźnik do obiektu strony. Ten parametr nie może mieć wartości NULL.  
   
 ### <a name="remarks"></a>Uwagi  
  Metoda ta umożliwia dodanie strony określonej właściwości jako kartę po prawej stronie w arkuszu właściwości. W związku z tym, ta metoda umożliwia dodawanie stron w kolejności od lewej do prawej.  
@@ -171,17 +171,17 @@ void AddPageToTree(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *pCategory*  
- Wskaźnik do węzła nadrzędnego w drzewie lub wartość NULL, aby skojarzyć określonej strony z węzła najwyższego poziomu. Wywołaj [CMFCPropertySheet::AddTreeCategory](#addtreecategory) metodę, aby uzyskać ten wskaźnik.  
+*pCategory*<br/>
+[in] Wskaźnik do węzła nadrzędnego w drzewie lub wartość NULL, aby skojarzyć określonej strony z węzła najwyższego poziomu. Wywołaj [CMFCPropertySheet::AddTreeCategory](#addtreecategory) metodę, aby uzyskać ten wskaźnik.  
   
- [in] *Strona_fizyczna*  
- Wskaźnik do obiektu strony właściwości.  
+*Strona_fizyczna*<br/>
+[in] Wskaźnik do obiektu strony właściwości.  
   
- [in] *nIconNum*  
- Liczony od zera indeks ikony lub -1, jeśli ikona nie jest używana. Ikona jest wyświetlana obok na stronie właściwości formantu drzewa, gdy strona nie jest zaznaczona. Wartość domyślna to -1.  
+*nIconNum*<br/>
+[in] Liczony od zera indeks ikony lub -1, jeśli ikona nie jest używana. Ikona jest wyświetlana obok na stronie właściwości formantu drzewa, gdy strona nie jest zaznaczona. Wartość domyślna to -1.  
   
- [in] *nSelIconNum*  
- Liczony od zera indeks ikony lub -1, jeśli ikona nie jest używana. Ikona jest wyświetlana obok na stronie właściwości kontrolki drzewa, po stronie jest zaznaczona. Wartość domyślna to -1.  
+*nSelIconNum*<br/>
+[in] Liczony od zera indeks ikony lub -1, jeśli ikona nie jest używana. Ikona jest wyświetlana obok na stronie właściwości kontrolki drzewa, po stronie jest zaznaczona. Wartość domyślna to -1.  
   
 ### <a name="remarks"></a>Uwagi  
  Ta metoda dodaje strony właściwości jako liścia formantu drzewa. Aby dodać stronę właściwości, Utwórz `CMFCPropertySheet` obiektu, wywołaj [CMFCPropertySheet::SetLook](#setlook) metody z *Szukaj* parametr `CMFCPropertySheet::PropSheetLook_Tree`, a następnie użyć tej metody, aby dodać stronę właściwości .  
@@ -198,17 +198,17 @@ CMFCPropertySheetCategoryInfo* AddTreeCategory(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *lpszLabel*  
- Nazwa węzła.  
+*lpszLabel*<br/>
+[in] Nazwa węzła.  
   
- [in] *nIconNum*  
- Liczony od zera indeks ikony lub -1, jeśli ikona nie jest używana. Ikona jest wyświetlana obok na stronie właściwości formantu drzewa, gdy strona nie jest zaznaczona. Wartość domyślna to -1.  
+*nIconNum*<br/>
+[in] Liczony od zera indeks ikony lub -1, jeśli ikona nie jest używana. Ikona jest wyświetlana obok na stronie właściwości formantu drzewa, gdy strona nie jest zaznaczona. Wartość domyślna to -1.  
   
- [in] *nSelectedIconNum*  
- Liczony od zera indeks ikony lub -1, jeśli ikona nie jest używana. Ikona jest wyświetlana obok na stronie właściwości kontrolki drzewa, po stronie jest zaznaczona. Wartość domyślna to -1.  
+*nSelectedIconNum*<br/>
+[in] Liczony od zera indeks ikony lub -1, jeśli ikona nie jest używana. Ikona jest wyświetlana obok na stronie właściwości kontrolki drzewa, po stronie jest zaznaczona. Wartość domyślna to -1.  
   
- [in] *pParentCategory*  
- Wskaźnik do węzła nadrzędnego w drzewie lub wartość NULL, aby skojarzyć określonej strony z węzła najwyższego poziomu. Ustaw ten parametr z [CMFCPropertySheet::AddTreeCategory](#addtreecategory) metody.  
+*pParentCategory*<br/>
+[in] Wskaźnik do węzła nadrzędnego w drzewie lub wartość NULL, aby skojarzyć określonej strony z węzła najwyższego poziomu. Ustaw ten parametr z [CMFCPropertySheet::AddTreeCategory](#addtreecategory) metody.  
   
 ### <a name="return-value"></a>Wartość zwracana  
  Wskaźnik do nowego węzła w drzewie.  
@@ -234,17 +234,17 @@ CMFCPropertySheet(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *pszCaption*  
- Ciąg, który zawiera podpis arkusza właściwości. Nie może mieć wartości NULL.  
+*pszCaption*<br/>
+[in] Ciąg, który zawiera podpis arkusza właściwości. Nie może mieć wartości NULL.  
   
- [in] *nIDCaption*  
- Identyfikator zasobu, który zawiera podpis arkusza właściwości.  
+*nIDCaption*<br/>
+[in] Identyfikator zasobu, który zawiera podpis arkusza właściwości.  
   
- [in] *pParentWnd*  
- Wskaźnik do nadrzędnego okna arkusza właściwości, lub wartość NULL, jeśli okno nadrzędne jest głównego okna aplikacji. Wartością domyślną jest NULL.  
+*pParentWnd*<br/>
+[in] Wskaźnik do nadrzędnego okna arkusza właściwości, lub wartość NULL, jeśli okno nadrzędne jest głównego okna aplikacji. Wartością domyślną jest NULL.  
   
- [in] *iSelectPage*  
- Liczony od zera indeks strony najważniejsze właściwości. Wartość domyślna to 0.  
+*iSelectPage*<br/>
+[in] Liczony od zera indeks strony najważniejsze właściwości. Wartość domyślna to 0.  
   
 ### <a name="remarks"></a>Uwagi  
  Aby uzyskać więcej informacji, zobacz parametry [CPropertySheet::CPropertySheet](../../mfc/reference/cpropertysheet-class.md#cpropertysheet) konstruktora.  
@@ -257,8 +257,8 @@ void EnablePageHeader(int nHeaderHeight);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *nHeaderHeight*  
- Wysokość nagłówka, w pikselach.  
+*nHeaderHeight*<br/>
+[in] Wysokość nagłówka, w pikselach.  
   
 ### <a name="remarks"></a>Uwagi  
  Aby użyć wartości *nHeaderHeight* zastąpienie parametru, aby narysować niestandardowy nagłówek [CMFCPropertySheet::OnDrawPageHeader](#ondrawpageheader) metody.  
@@ -334,8 +334,8 @@ virtual void OnActivatePage(CPropertyPage* pPage);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *Strona_fizyczna*  
- Wskaźnik do obiektu strony właściwości, który reprezentuje stronę dla właściwości włączone.  
+*Strona_fizyczna*<br/>
+[in] Wskaźnik do obiektu strony właściwości, który reprezentuje stronę dla właściwości włączone.  
   
 ### <a name="remarks"></a>Uwagi  
  Domyślnie ta metoda zapewnia, że strony dla właściwości włączone jest przewijane do widoku. Styl bieżący arkusz właściwości zawiera okienku programu Microsoft Outlook, ta metoda ustawia odpowiedni przycisk Outlook zaznaczony stan.  
@@ -351,14 +351,14 @@ virtual void OnDrawPageHeader(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *podstawowego kontrolera domeny*  
- Wskaźnik do kontekstu urządzenia.  
+*podstawowego kontrolera domeny*<br/>
+[in] Wskaźnik do kontekstu urządzenia.  
   
- [in] *nPage*  
- Numer strony właściwości liczony od zera.  
+*nPage*<br/>
+[in] Numer strony właściwości liczony od zera.  
   
- [in] *rectHeader*  
- Prostokąt otaczający, który określa, gdzie można narysować nagłówka.  
+*rectHeader*<br/>
+[in] Prostokąt otaczający, który określa, gdzie można narysować nagłówka.  
   
 ### <a name="remarks"></a>Uwagi  
  Domyślnie ta metoda nie działa. Jeśli zastąpisz tę metodę należy wywołać [CMFCPropertySheet::EnablePageHeader](#enablepageheader) metoda przed struktura wywołuje tę metodę.  
@@ -371,8 +371,8 @@ virtual BOOL OnRemoveTreePage(CPropertyPage* pPage);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *Strona_fizyczna*  
- Wskaźnik do obiektu strony właściwości, który reprezentuje stronę właściwości do usunięcia.  
+*Strona_fizyczna*<br/>
+[in] Wskaźnik do obiektu strony właściwości, który reprezentuje stronę właściwości do usunięcia.  
   
 ### <a name="return-value"></a>Wartość zwracana  
  Wartość TRUE, jeśli ta metoda jest kończy się pomyślnie; w przeciwnym razie wartość FALSE.  
@@ -385,8 +385,8 @@ void RemoveCategory(CMFCPropertySheetCategoryInfo* pCategory);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *pCategory*  
- Wskaźnik do kategorii (node) do usunięcia.  
+*pCategory*<br/>
+[in] Wskaźnik do kategorii (node) do usunięcia.  
   
 ### <a name="remarks"></a>Uwagi  
  Użyj tej metody można usunąć węzła, który jest również nazywany kategorii z kontrolką drzewa. Użyj [CMFCPropertySheet::AddTreeCategory](#addtreecategory) metodę, aby dodać węzeł do formantu drzewa.  
@@ -400,11 +400,11 @@ void RemovePage(int nPage);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *Strona_fizyczna*  
- Wskaźnik do obiektu strony właściwości, który reprezentuje stronę właściwości do usunięcia. Nie może mieć wartości NULL.  
+*Strona_fizyczna*<br/>
+[in] Wskaźnik do obiektu strony właściwości, który reprezentuje stronę właściwości do usunięcia. Nie może mieć wartości NULL.  
   
- [in] *nPage*  
- Liczony od zera indeks strony do usunięcia.  
+*nPage*<br/>
+[in] Liczony od zera indeks strony do usunięcia.  
   
 ### <a name="remarks"></a>Uwagi  
  Ta metoda usuwa stronę określonej właściwości i niszczy okno skojarzone. Na stronie właściwości obiektu, który *Strona_fizyczna* parametr określa, nie jest niszczony, dopóki [CMFCPropertySheet](../../mfc/reference/cmfcpropertysheet-class.md) okno zostanie zamknięte.  
@@ -421,17 +421,17 @@ void SetIconsList(HIMAGELIST hIcons);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *uiImageListResID*  
- Identyfikator zasobu z listy obrazów.  
+*uiImageListResID*<br/>
+[in] Identyfikator zasobu z listy obrazów.  
   
- [in] *cx*  
- Szerokość w pikselach, ikony na liście obrazów.  
+*CX*<br/>
+[in] Szerokość w pikselach, ikony na liście obrazów.  
   
- [in] *clrTransparent*  
- Kolor przezroczysty obraz. Części obrazu, które są ten kolor ma być przezroczysty. Wartość domyślna to amarantowy kolorów, RGB(255,0,255).  
+*clrTransparent*<br/>
+[in] Kolor przezroczysty obraz. Części obrazu, które są ten kolor ma być przezroczysty. Wartość domyślna to amarantowy kolorów, RGB(255,0,255).  
   
- [in] *hIcons*  
- Dojście do istniejącej listy obrazów.  
+*hIcons*<br/>
+[in] Dojście do istniejącej listy obrazów.  
   
 ### <a name="return-value"></a>Wartość zwracana  
  W przypadku pierwszej metody przeciążenia składni, wartość TRUE jeśli ta metoda się powiedzie; w przeciwnym razie wartość FALSE.  
@@ -451,11 +451,11 @@ void SetLook(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *wyszukiwania*  
- Jedna z wartości wyliczenia, które określa wygląd arkusza właściwości. Jest to styl domyślny dla arkusza właściwości `CMFCPropertySheet::PropSheetLook_Tabs`. Aby uzyskać więcej informacji zobacz tabelę w sekcji uwag w tym temacie.  
+*wygląd*<br/>
+[in] Jedna z wartości wyliczenia, które określa wygląd arkusza właściwości. Jest to styl domyślny dla arkusza właściwości `CMFCPropertySheet::PropSheetLook_Tabs`. Aby uzyskać więcej informacji zobacz tabelę w sekcji uwag w tym temacie.  
   
- [in] *nNavControlWidth*  
- Szerokość Nawigacja kontrolki, w pikselach. Wartość domyślna to 100.  
+*nNavControlWidth*<br/>
+[in] Szerokość Nawigacja kontrolki, w pikselach. Wartość domyślna to 100.  
   
 ### <a name="remarks"></a>Uwagi  
  Aby wyświetlić arkusz właściwości stylu inną niż domyślna, tę metodę należy wywołać przed utworzeniem okna arkusza właściwości.  

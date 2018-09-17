@@ -17,12 +17,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 086fbbc2a25c4af2b09f40d83ac0b20399860ca1
-ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
+ms.openlocfilehash: 3777492212bbff368902acf589f0a3c46ea4ac18
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43679809"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45718682"
 ---
 # <a name="svmvmrun"></a>__svm_vmrun
 **Microsoft Specific**  
@@ -41,7 +41,7 @@ void __svm_vmrun(
   
 |Parametr|Opis|  
 |---------------|-----------------|  
-|[in] `VmcbPhysicalAddress`|Adres fizyczny VMCB.|  
+|*VmcbPhysicalAddress*|[in] Adres fizyczny VMCB.|  
   
 ## <a name="remarks"></a>Uwagi  
  `__svm_vmrun` Funkcja używa minimalnej ilości informacji w VMCB umożliwiającą wykonywanie kodu gościa maszyny wirtualnej. Użyj [__svm_vmsave](../intrinsics/svm-vmsave.md) lub [__svm_vmload](../intrinsics/svm-vmload.md) działać, jeśli potrzebujesz więcej informacji, do obsługi złożonych przerwania lub przełączyć się do innego gościa.  

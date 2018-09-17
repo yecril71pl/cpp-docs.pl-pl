@@ -140,12 +140,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e292ff062449fd53aba0c5f4775e1b2e0b8ff909
-ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
+ms.openlocfilehash: ee097dd95a1a88b8cf2cb3dc48c4406499001443
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/05/2018
-ms.locfileid: "37852396"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45721400"
 ---
 # <a name="cmfcribboncategory-class"></a>Klasa CMFCRibbonCategory
 `CMFCRibbonCategory` Klasa implementuje zakładkę wstążki, która zawiera grupę [paneli wstążki](../../mfc/reference/cmfcribbonpanel-class.md).  
@@ -275,8 +275,8 @@ void AddHidden(CMFCRibbonBaseElement* pElem);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *pElem*  
- Wskaźnik do elementu wstążki.  
+*pElem*<br/>
+[in] Wskaźnik do elementu wstążki.  
   
 ### <a name="remarks"></a>Uwagi  
  Elementy wstążki w oknie dialogowym dostosowywania są poleceniami, które można dodać do paska narzędzi Szybki dostęp.  
@@ -292,14 +292,14 @@ CMFCRibbonPanel* AddPanel(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *lpszPanelName*  
- Wskaźnik na nazwę nowego panelu wstążki.  
+*lpszPanelName*<br/>
+[in] Wskaźnik na nazwę nowego panelu wstążki.  
   
- [in] *hIcon*  
- Dojście do domyślną ikonę nowego panelu wstążki.  
+*hIcon*<br/>
+[in] Dojście do domyślną ikonę nowego panelu wstążki.  
   
- [in] *pRTI*  
- Wskaźnik do informacji o klasie czasu wykonywania panelu wstążki niestandardowych.  
+*pRTI*<br/>
+[in] Wskaźnik do informacji o klasie czasu wykonywania panelu wstążki niestandardowych.  
   
 ### <a name="return-value"></a>Wartość zwracana  
  Wskaźnik do nowego panelu wstążki, jeśli metoda zakończyła się pomyślnie; w przeciwnym razie wartość NULL, jeśli zespół nie został utworzony.  
@@ -330,23 +330,23 @@ CMFCRibbonCategory(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *pParenrRibbonBar*  
- Wskaźnik do paska wstążki nadrzędnego kategorii wstążki.  
+*pParenrRibbonBar*<br/>
+[in] Wskaźnik do paska wstążki nadrzędnego kategorii wstążki.  
   
- [in] *lpszName*  
- Nazwa kategorii wstążki.  
+*lpszName*<br/>
+[in] Nazwa kategorii wstążki.  
   
- [in] *uiSmallImagesResID*  
- Identyfikator zasobu z listy obrazów do małych obrazów, które są używane przez elementy wstążki w kategorii wstążki.  
+*uiSmallImagesResID*<br/>
+[in] Identyfikator zasobu z listy obrazów do małych obrazów, które są używane przez elementy wstążki w kategorii wstążki.  
   
- [in] *uiLargeImagesResID*  
- Identyfikator zasobu z listy obrazów do dużych obrazów, które są używane przez elementy wstążki w kategorii wstążki.  
+*uiLargeImagesResID*<br/>
+[in] Identyfikator zasobu z listy obrazów do dużych obrazów, które są używane przez elementy wstążki w kategorii wstążki.  
   
- [in] *sizeSmallImage*  
- Domyślny rozmiar małych obrazów dla elementów wstążki w kategorii wstążki.  
+*sizeSmallImage*<br/>
+[in] Domyślny rozmiar małych obrazów dla elementów wstążki w kategorii wstążki.  
   
- [in] *sizeLargeImage*  
- Domyślny rozmiar dużych obrazów dla elementów wstążki w kategorii wstążki.  
+*sizeLargeImage*<br/>
+[in] Domyślny rozmiar dużych obrazów dla elementów wstążki w kategorii wstążki.  
   
 ##  <a name="copyfrom"></a>  CMFCRibbonCategory::CopyFrom  
  Kopiuje określony stan [CMFCRibbonCategory](../../mfc/reference/cmfcribboncategory-class.md) do bieżącego [CMFCRibbonCategory](../../mfc/reference/cmfcribboncategory-class.md) obiektu.  
@@ -356,8 +356,8 @@ virtual void CopyFrom(CMFCRibbonCategory& src);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *src*  
- Źródło `CMFCRibbonCategory` obiektu.  
+*src*<br/>
+[in] Źródło `CMFCRibbonCategory` obiektu.  
   
 ### <a name="remarks"></a>Uwagi  
   
@@ -371,11 +371,11 @@ CMFCRibbonBaseElement* FindByData(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *dwData*  
- Dane skojarzone z elementem wstążki.  
+*dwData*<br/>
+[in] Dane skojarzone z elementem wstążki.  
   
- [in] *bVisibleOnly*  
- Wartość TRUE, aby uwzględnić elementy wstążki szybkiego dostępu w wyszukiwaniu; Wartość FAŁSZ, aby wykluczyć elementy wstążki szybki dostęp do wyszukiwania.  
+*bVisibleOnly*<br/>
+[in] Wartość TRUE, aby uwzględnić elementy wstążki szybkiego dostępu w wyszukiwaniu; Wartość FAŁSZ, aby wykluczyć elementy wstążki szybki dostęp do wyszukiwania.  
   
 ### <a name="return-value"></a>Wartość zwracana  
  Wskaźnik do elementu wstążki, jeśli metoda zakończyła się pomyślnie; w przeciwnym razie wartość NULL.  
@@ -392,11 +392,11 @@ CMFCRibbonBaseElement* FindByID(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *uiCmdID*  
- Identyfikator polecenia skojarzone z elementem wstążki.  
+*uiCmdID*<br/>
+[in] Identyfikator polecenia skojarzone z elementem wstążki.  
   
- [in] *bVisibleOnly*  
- Wartość TRUE, aby uwzględnić elementy wstążki szybkiego dostępu w wyszukiwaniu; Wartość FAŁSZ, aby wykluczyć elementy wstążki szybki dostęp do wyszukiwania.  
+*bVisibleOnly*<br/>
+[in] Wartość TRUE, aby uwzględnić elementy wstążki szybkiego dostępu w wyszukiwaniu; Wartość FAŁSZ, aby wykluczyć elementy wstążki szybki dostęp do wyszukiwania.  
   
 ### <a name="return-value"></a>Wartość zwracana  
  Wskaźnik do elementu wstążki, jeśli metoda zakończyła się pomyślnie; w przeciwnym razie wartość NULL.  
@@ -411,8 +411,8 @@ CMFCRibbonPanel* FindPanelWithElem(const CMFCRibbonBaseElement* pElement);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *pElement*  
- Wskaźnik do elementu wstążki.  
+*pElement*<br/>
+[in] Wskaźnik do elementu wstążki.  
   
 ### <a name="return-value"></a>Wartość zwracana  
  Wskaźnik do panelu wstążki, jeśli metoda zakończyła się pomyślnie; w przeciwnym razie wartość NULL.  
@@ -463,8 +463,8 @@ void GetElements(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [out w] *arElements*  
- Odwołanie do [CArray](../../mfc/reference/carray-class.md) elementów wstążki.  
+*arElements*<br/>
+[out w] Odwołanie do [CArray](../../mfc/reference/carray-class.md) elementów wstążki.  
   
 ### <a name="remarks"></a>Uwagi  
  Elementy wstążki, które są skonstruowane do użycia na pasku narzędzi Szybki dostęp, są uwzględnione w tablicy.  
@@ -479,11 +479,11 @@ void GetElementsByID(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *uiCmdID*  
- Identyfikator polecenia skojarzone z elementem wstążki.  
+*uiCmdID*<br/>
+[in] Identyfikator polecenia skojarzone z elementem wstążki.  
   
- [out w] *arElements*  
- Odwołanie do [CArray](../../mfc/reference/carray-class.md) elementów wstążki.  
+*arElements*<br/>
+[out w] Odwołanie do [CArray](../../mfc/reference/carray-class.md) elementów wstążki.  
   
 ### <a name="remarks"></a>Uwagi  
  Elementy wstążki, które są skonstruowane do użycia na pasku narzędzi Szybki dostęp, są uwzględnione w tablicy.  
@@ -532,8 +532,8 @@ int GetImageCount(BOOL bIsLargeImage) const;
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *bIsLargeImage*  
- Wartość TRUE dla liczbę obrazów na liście duży obraz Wartość FALSE dla liczby obrazów z listy małych obrazów.  
+*bIsLargeImage*<br/>
+[in] Wartość TRUE dla liczbę obrazów na liście duży obraz Wartość FALSE dla liczby obrazów z listy małych obrazów.  
   
 ### <a name="return-value"></a>Wartość zwracana  
  Liczba obrazów na liście określonego obrazu.  
@@ -548,8 +548,8 @@ CSize GetImageSize(BOOL bIsLargeImage) const;
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *bIsLargeImage*  
- Wartość TRUE dla rozmiaru duże obrazy; Wartość FALSE dla rozmiaru małe obrazy.  
+*bIsLargeImage*<br/>
+[in] Wartość TRUE dla rozmiaru duże obrazy; Wartość FALSE dla rozmiaru małe obrazy.  
   
 ### <a name="return-value"></a>Wartość zwracana  
  Rozmiar obrazu na liście określonego obrazu.  
@@ -567,11 +567,11 @@ void GetItemIDsList(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [out] *lstItems*  
- Lista identyfikatorów poleceń elementów wstążki w kategorii wstążki.  
+*lstItems*<br/>
+[out] Lista identyfikatorów poleceń elementów wstążki w kategorii wstążki.  
   
- [in] *bHiddenOnly*  
- Wartość TRUE, aby wykluczyć elementy wstążki wyświetlany na paneli wstążki w kategorii wstążki; Wartość FALSE, aby uwzględnić wszystkie elementy wstążki w kategorii wstążki.  
+*bHiddenOnly*<br/>
+[in] Wartość TRUE, aby wykluczyć elementy wstążki wyświetlany na paneli wstążki w kategorii wstążki; Wartość FALSE, aby uwzględnić wszystkie elementy wstążki w kategorii wstążki.  
   
 ### <a name="remarks"></a>Uwagi  
   
@@ -605,8 +605,8 @@ int GetMaxHeight(CDC* pDC);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *podstawowego kontrolera domeny*  
- Wskaźnik do kontekstu urządzenia do paneli wstążki.  
+*podstawowego kontrolera domeny*<br/>
+[in] Wskaźnik do kontekstu urządzenia do paneli wstążki.  
   
 ### <a name="return-value"></a>Wartość zwracana  
  Maksymalna wysokość paneli wstążki, które są zawarte w kategorii wstążki.  
@@ -634,8 +634,8 @@ CMFCRibbonPanel* GetPanel(int nIndex);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *nIndex*  
- Liczony od zera indeks panelu wstążki.  
+*nIndex*<br/>
+[in] Liczony od zera indeks panelu wstążki.  
   
 ### <a name="return-value"></a>Wartość zwracana  
  Wskaźnik do panelu wstążki, który jest umieszczony pod określonym indeksem.  
@@ -661,8 +661,8 @@ CMFCRibbonPanel* GetPanelFromPoint(CPoint point) const;
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *punktu*  
- Współrzędne x i y wskaźnika względem lewego górnego rogu okna.  
+*Punkt*<br/>
+[in] Współrzędne x i y wskaźnika względem lewego górnego rogu okna.  
   
 ### <a name="return-value"></a>Wartość zwracana  
  Wskaźnik do panelu wstążki, jeśli metoda zakończyła się pomyślnie; w przeciwnym razie wartość NULL.  
@@ -678,8 +678,8 @@ int GetPanelIndex(const CMFCRibbonPanel* pPanel) const;
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *pPanel*  
- Wskaźnik do panelu wstążki.  
+*pPanel*<br/>
+[in] Wskaźnik do panelu wstążki.  
   
 ### <a name="return-value"></a>Wartość zwracana  
  Liczony od zera indeks panelu wstążki określona, jeśli metoda zakończyła się pomyślnie; w przeciwnym razie wartość-1.  
@@ -822,11 +822,11 @@ CMFCRibbonPanel* HighlightPanel(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *pHLPanel*  
- Wskaźnik do panelu wstążki, aby wyróżnić.  
+*pHLPanel*<br/>
+[in] Wskaźnik do panelu wstążki, aby wyróżnić.  
   
- [in] *punktu*  
- Współrzędne x i y wskaźnika względem lewego górnego rogu okna.  
+*Punkt*<br/>
+[in] Współrzędne x i y wskaźnika względem lewego górnego rogu okna.  
   
 ### <a name="return-value"></a>Wartość zwracana  
  Wskaźnik do panelu wstążki wcześniej wyróżnione; w przeciwnym razie wartość NULL, jeśli nie panelu wstążki jest wyróżniona, gdy ta metoda jest wywoływana.  
@@ -844,11 +844,11 @@ CMFCRibbonBaseElement* HitTest(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *punktu*  
- Współrzędne x i y wskaźnika myszy względem lewego górnego rogu okna.  
+*Punkt*<br/>
+[in] Współrzędne x i y wskaźnika myszy względem lewego górnego rogu okna.  
   
- [in] *bCheckPanelCaption*  
- Wartość TRUE, aby przetestować podpis panelu wstążki; Wartość FALSE, aby wykluczyć podpis panelu wstążki.  
+*bCheckPanelCaption*<br/>
+[in] Wartość TRUE, aby przetestować podpis panelu wstążki; Wartość FALSE, aby wykluczyć podpis panelu wstążki.  
   
 ### <a name="return-value"></a>Wartość zwracana  
  Wskaźnik do elementu wstążki, jeśli metoda zakończyła się pomyślnie; w przeciwnym razie wartość NULL.  
@@ -864,8 +864,8 @@ int HitTestEx(CPoint point) const;
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *punktu*  
- Współrzędne x i y wskaźnika myszy względem lewego górnego rogu okna.  
+*Punkt*<br/>
+[in] Współrzędne x i y wskaźnika myszy względem lewego górnego rogu okna.  
   
 ### <a name="return-value"></a>Wartość zwracana  
  Liczony od zera indeks elementu wstążki, jeśli metoda zakończyła się pomyślnie; w przeciwnym razie wartość-1.  
@@ -881,8 +881,8 @@ CMFCRibbonBaseElement* HitTestScrollButtons(CPoint point) const;
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *punktu*  
- Punkt do testowania.  
+*Punkt*<br/>
+[in] Punkt do testowania.  
   
 ### <a name="return-value"></a>Wartość zwracana  
  Jeśli *punktu* mieści się w przycisk przewijania w prawo kategorii Wstążki lub prostokąt otaczający albo po lewej stronie, zwraca wskaźnik do tego przycisku lub w przeciwnym razie zwraca wartość NULL.  
@@ -939,17 +939,17 @@ virtual BOOL NotifyControlCommand(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *bAccelerator*  
- Wartość TRUE, jeśli polecenie pochodzi od akceleratorze lub wartość FALSE w przeciwnym razie.  
+*bAccelerator*<br/>
+[in] Wartość TRUE, jeśli polecenie pochodzi od akceleratorze lub wartość FALSE w przeciwnym razie.  
   
- [in] *nNotifyCode*  
- Kod powiadomienia.  
+*nNotifyCode*<br/>
+[in] Kod powiadomienia.  
   
- [in] *wParam*  
- Pole WPARAM wiadomości.  
+*wParam*<br/>
+[in] Pole WPARAM wiadomości.  
   
- [in] *lParam*  
- Pole LPARAM wiadomości.  
+*lParam*<br/>
+[in] Pole LPARAM wiadomości.  
   
 ### <a name="return-value"></a>Wartość zwracana  
  Zwraca wartość TRUE, jeśli komunikat został obsłużony, FALSE, jeśli nie.  
@@ -973,8 +973,8 @@ virtual void OnDraw(CDC* pDC);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *podstawowego kontrolera domeny*  
- Wskaźnik do kontekstu urządzenia dla kategorii wstążki.  
+*podstawowego kontrolera domeny*<br/>
+[in] Wskaźnik do kontekstu urządzenia dla kategorii wstążki.  
   
 ### <a name="remarks"></a>Uwagi  
   
@@ -992,23 +992,23 @@ virtual BOOL OnDrawImage(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *podstawowego kontrolera domeny*  
- Wskaźnik do kontekstu urządzenia dla obrazu.  
+*podstawowego kontrolera domeny*<br/>
+[in] Wskaźnik do kontekstu urządzenia dla obrazu.  
   
- [in] *rect*  
- Wyświetl prostokąt dla obrazu.  
+*Rect*<br/>
+[in] Wyświetl prostokąt dla obrazu.  
   
- [in] *pElement*  
- Wskaźnik do elementu wstążki, który zawiera obraz.  
+*pElement*<br/>
+[in] Wskaźnik do elementu wstążki, który zawiera obraz.  
   
- [in] *bIsLargeImage*  
- Wartość TRUE, jeśli obraz jest duży rozmiar; Wartość FALSE, jeśli obraz jest mała.  
+*bIsLargeImage*<br/>
+[in] Wartość TRUE, jeśli obraz jest duży rozmiar; Wartość FALSE, jeśli obraz jest mała.  
   
- [in] *nImageIndex*  
- Liczony od zera indeks obrazu w tablicy obrazu, który znajduje się w kategorii wstążki.  
+*nImageIndex*<br/>
+[in] Liczony od zera indeks obrazu w tablicy obrazu, który znajduje się w kategorii wstążki.  
   
- [in] *bCenter*  
- Wartość TRUE, aby wyśrodkować obrazu w prostokącie wyświetlania; Rysowanie obrazu w lewym górnym rogu prostokąta wyświetlana jest FALSE.  
+*bCenter*<br/>
+[in] Wartość TRUE, aby wyśrodkować obrazu w prostokącie wyświetlania; Rysowanie obrazu w lewym górnym rogu prostokąta wyświetlana jest FALSE.  
   
 ### <a name="return-value"></a>Wartość zwracana  
  Wartość TRUE, jeśli metoda zakończyła się pomyślnie; w przeciwnym razie wartość FALSE.  
@@ -1025,11 +1025,11 @@ virtual void OnDrawMenuBorder(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *podstawowego kontrolera domeny*  
- Ten parametr nie jest używany.  
+*podstawowego kontrolera domeny*<br/>
+[in] Ten parametr nie jest używany.  
   
- [in] *pMenuBar*  
- Ten parametr nie jest używany.  
+*pMenuBar*<br/>
+[in] Ten parametr nie jest używany.  
   
 ### <a name="remarks"></a>Uwagi  
  Domyślnie ta metoda nie działa. Zastępuje tę metodę, aby narysować obramowanie menu podręcznego.  
@@ -1055,8 +1055,8 @@ virtual CMFCRibbonBaseElement* OnLButtonDown(CPoint point);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *punktu*  
- Współrzędne x i y wskaźnika myszy względem lewego górnego rogu okna.  
+*Punkt*<br/>
+[in] Współrzędne x i y wskaźnika myszy względem lewego górnego rogu okna.  
   
 ### <a name="return-value"></a>Wartość zwracana  
  Wskaźnik do elementu wstążki, jeśli metoda zakończyła się pomyślnie; w przeciwnym razie wartość NULL.  
@@ -1071,8 +1071,8 @@ virtual void OnLButtonUp(CPoint point);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *punktu*  
- Współrzędne x i y wskaźnika względem lewego górnego rogu okna.  
+*Punkt*<br/>
+[in] Współrzędne x i y wskaźnika względem lewego górnego rogu okna.  
   
 ### <a name="remarks"></a>Uwagi  
   
@@ -1084,8 +1084,8 @@ virtual void OnMouseMove(CPoint point);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *punktu*  
- Współrzędne x i y wskaźnika względem lewego górnego rogu okna.  
+*Punkt*<br/>
+[in] Współrzędne x i y wskaźnika względem lewego górnego rogu okna.  
   
 ### <a name="remarks"></a>Uwagi  
   
@@ -1097,8 +1097,8 @@ virtual void OnRTLChanged(BOOL bIsRTL);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *bIsRTL*  
- Wartość TRUE, jeśli układ od prawej do lewej; Wartość FALSE, jeśli układ od lewej do prawej.  
+*bIsRTL*<br/>
+[in] Wartość TRUE, jeśli układ od prawej do lewej; Wartość FALSE, jeśli układ od lewej do prawej.  
   
 ### <a name="remarks"></a>Uwagi  
  Ta metoda dostosowuje układ wszystkich paneli Wstążki i elementy wstążki, które są zawarte w kategorii wstążki.  
@@ -1113,11 +1113,11 @@ virtual BOOL OnScrollHorz(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *bScrollLeft*  
- Wartość TRUE, aby przewijać w lewo; Wartość FALSE przewiń w prawo.  
+*bScrollLeft*<br/>
+[in] Wartość TRUE, aby przewijać w lewo; Wartość FALSE przewiń w prawo.  
   
- [in] *nScrollOffset*  
- Przewiń odległość w pikselach.  
+*nScrollOffset*<br/>
+[in] Przewiń odległość w pikselach.  
   
 ### <a name="return-value"></a>Wartość zwracana  
  Wartość TRUE, jeśli kategoria wstążki są przenoszone w kierunku poziomym; w przeciwnym razie wartość FALSE.  
@@ -1135,14 +1135,14 @@ virtual void OnUpdateCmdUI(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *pCmdUI*  
- Wskaźnik do `CMFCRibbonCmdUI` obiektu, który określa elementy interfejsu użytkownika mają być włączone i które mają być wyłączone.  
+*pCmdUI*<br/>
+[in] Wskaźnik do `CMFCRibbonCmdUI` obiektu, który określa elementy interfejsu użytkownika mają być włączone i które mają być wyłączone.  
   
- [in] *pTarget*  
- Wskaźnik do okna, które kontroluje, włączanie lub wyłączanie elementów interfejsu użytkownika.  
+*pTarget*<br/>
+[in] Wskaźnik do okna, które kontroluje, włączanie lub wyłączanie elementów interfejsu użytkownika.  
   
- [in] *bDisableIfNoHndler*  
- Wartość TRUE, aby wyłączyć elementu interfejsu użytkownika, jeśli żadna procedura obsługi nie jest zdefiniowany w mapie komunikatów; w przeciwnym razie wartość FALSE.  
+*bDisableIfNoHndler*<br/>
+[in] Wartość TRUE, aby wyłączyć elementu interfejsu użytkownika, jeśli żadna procedura obsługi nie jest zdefiniowany w mapie komunikatów; w przeciwnym razie wartość FALSE.  
   
 ### <a name="remarks"></a>Uwagi  
   
@@ -1154,8 +1154,8 @@ virtual void RecalcLayout(CDC* pDC);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *podstawowego kontrolera domeny*  
- Wskaźnik do kontekstu urządzenia dla kategorii wstążki.  
+*podstawowego kontrolera domeny*<br/>
+[in] Wskaźnik do kontekstu urządzenia dla kategorii wstążki.  
   
 ### <a name="remarks"></a>Uwagi  
   
@@ -1169,11 +1169,11 @@ BOOL RemovePanel(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *nIndex*  
- Numer indeksu panelu do usunięcia. Można uzyskać przez wywołanie [CMFCRibbonCategory::GetPanelIndex](#getpanelindex) metody.  
+*nIndex*<br/>
+[in] Numer indeksu panelu do usunięcia. Można uzyskać przez wywołanie [CMFCRibbonCategory::GetPanelIndex](#getpanelindex) metody.  
   
- [in] *bUsuń*  
- Wartość TRUE, aby usunąć obiekt panelu z pamięci. Wartość FALSE, aby usunąć obiekt panelu bez usuwania go.  
+*bUsuń*<br/>
+[in] Wartość TRUE, aby usunąć obiekt panelu z pamięci. Wartość FALSE, aby usunąć obiekt panelu bez usuwania go.  
   
 ### <a name="return-value"></a>Wartość zwracana  
  Wartość TRUE, jeśli metoda zakończyła się pomyślnie; w przeciwnym razie wartość FALSE.  
@@ -1186,8 +1186,8 @@ virtual void ReposPanels(CDC* pDC);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *podstawowego kontrolera domeny*  
- Wskaźnik do kontekstu urządzenia do paneli wstążki, które są zawarte w kategorii wstążki.  
+*podstawowego kontrolera domeny*<br/>
+[in] Wskaźnik do kontekstu urządzenia do paneli wstążki, które są zawarte w kategorii wstążki.  
   
 ### <a name="remarks"></a>Uwagi  
   
@@ -1199,8 +1199,8 @@ void SetCollapseOrder(const CArray<int,int>& arCollapseOrder);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *arCollapseOrder*  
- Określa kolejność Zwiń. Tablica zawiera indeksy od zera paneli wstążki.  
+*arCollapseOrder*<br/>
+[in] Określa kolejność Zwiń. Tablica zawiera indeksy od zera paneli wstążki.  
   
 ### <a name="remarks"></a>Uwagi  
  Biblioteka definiuje kolejność Zwiń. Jednak to zachowanie można dostosować, podając kategorię z listy indeksów, która określa kolejność Zwiń.  
@@ -1222,8 +1222,8 @@ void SetData(DWORD_PTR dwData);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *dwData*  
- Dane zdefiniowane przez użytkownika.  
+*dwData*<br/>
+[in] Dane zdefiniowane przez użytkownika.  
   
 ##  <a name="setkeys"></a>  CMFCRibbonCategory::SetKeys  
  Przypisuje poradę dotyczącą klawiszy kategoria wstążki.  
@@ -1233,8 +1233,8 @@ void SetKeys(LPCTSTR lpszKeys);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *lpszKeys*  
- Tekst, który poradę dotyczącą klawiszy.  
+*lpszKeys*<br/>
+[in] Tekst, który poradę dotyczącą klawiszy.  
   
 ### <a name="remarks"></a>Uwagi  
  Porady dotyczące klawiszy są wyświetlane, gdy użytkownik naciśnie klawisz F10 lub klawisza Alt.  
@@ -1247,8 +1247,8 @@ void SetName(LPCTSTR lpszName);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *lpszName*  
- Nazwa i poradę dotyczącą klawiszy kategorii wstążki.  
+*lpszName*<br/>
+[in] Nazwa i poradę dotyczącą klawiszy kategorii wstążki.  
   
 ### <a name="remarks"></a>Uwagi  
  Aby ustawić poradę dotyczącą klawiszy dla kategorii wstążki, Dołącz sekwencję ucieczki nowego wiersza, następują znaki poradę dotyczącą klawiszy, aby *lpszName*.  
@@ -1261,8 +1261,8 @@ void SetTabColor(AFX_RibbonCategoryColor color);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *kolorów*  
- Określa kolor nowej kategorii wstążki.  
+*Kolor*<br/>
+[in] Określa kolor nowej kategorii wstążki.  
   
 ### <a name="remarks"></a>Uwagi  
  Kolor może być jednym z następujących wartości:  

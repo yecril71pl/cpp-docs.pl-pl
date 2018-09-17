@@ -1,5 +1,5 @@
 ---
-title: Odwołanie (współbieżność środowiska wykonawczego) | Dokumentacja firmy Microsoft
+title: Odwołanie (środowisko uruchomieniowe współbieżności) | Dokumentacja firmy Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -463,21 +463,23 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3caa4ed0cb4a14cea913d141a88d9f2dd079f9bb
-ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
+ms.openlocfilehash: d06bac8aef674472b817817fde4191f1d655365e
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33693455"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45723232"
 ---
 # <a name="reference-concurrency-runtime"></a>Odwołanie (Współbieżność środowiska wykonawczego)
-Ta sekcja zawiera informacje dotyczące współbieżności środowiska wykonawczego.
-**Uwaga** języka C++ standardowe rezerwuje Użyj identyfikatorów, które zaczynają się od znaku podkreślenia (_) dla wdrożeń, takich jak biblioteki. Nie należy używać tych nazw w kodzie. Zachowanie kodu elementów, których nazwy wykonaj tę Konwencję nie ma gwarancji i mogą ulec zmianie w przyszłych wersjach. Z tego powodu takie elementy kodu zostały pominięte w dokumentacji współbieżność środowiska wykonawczego.
+Ta sekcja zawiera informacje dotyczące środowiska uruchomieniowego współbieżności.
+
+> [!Note]
+> Standard języka C++ zastrzega stosowanie identyfikatorów, które zaczynają się od znaku podkreślenia (_) do implementacji takich jak biblioteki. Nie należy używać tych nazw w kodzie. Zachowanie kodu, elementy, które stosują taką konwencję nazw, których nie jest gwarantowane i mogą ulec zmianie w przyszłych wersjach. Z tego względu takie elementy kodu zostały pominięte z dokumentacji współbieżność środowiska wykonawczego.
 
 ## <a name="in-this-section"></a>W tej sekcji
-[Współbieżność Namespace](concurrency-namespace.md) współbieżności przestrzeń nazw zawiera klasy i funkcje, które zapewniają dostęp do współbieżności środowiska wykonawczego, równoczesnych Architektura programowania dla języka C++. Aby uzyskać więcej informacji, zobacz [współbieżność środowiska wykonawczego](../concurrency-runtime.md).
 
-[przestrzeń nazw STD](std-namespace.md)
+[Współbieżność Namespace](concurrency-namespace.md) współbieżności przestrzeń nazw zawiera klasy i funkcje, które zapewniają dostęp do środowiska wykonawczego Concurrency, platformy programowania współbieżnego dla C++. Aby uzyskać więcej informacji, zobacz [współbieżność środowiska wykonawczego](../concurrency-runtime.md).
+
+[obszar nazw STD](std-namespace.md)
+
 [stdx — przestrzeń nazw](stdx-namespace.md)
-
-

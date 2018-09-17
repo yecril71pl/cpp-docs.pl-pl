@@ -18,39 +18,42 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 686b17a3db00175340e3490241c6c2e9f9325225
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 91f73af0c270be4452a4b556d2cb77c0d55bed33
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32377290"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45722595"
 ---
 # <a name="wx-treat-linker-warnings-as-errors"></a>/WX (Traktuj ostrzeżenia konsolidatora jak błędy)
-```  
-/WX[:NO]  
-```  
-  
-## <a name="remarks"></a>Uwagi  
- /WX powoduje, że plik wyjściowy nie zostanie wygenerowany, jeśli konsolidator wygeneruje ostrzeżenie.  
-  
- Jest to podobne do **wx** dla kompilatora (zobacz [/w, /W0, /W1, /W2, /W3, / W4, /w1, /w2, /w3, / W4, / Wall, /wd, / możemy /wo, /Wv, wx (poziom ostrzegawczy)](../../build/reference/compiler-option-warning-level.md) Aby uzyskać więcej informacji). Można jednak określić **wx** dla kompilacji nie oznacza, że **wx** również będą obowiązywać do przeprowadzenia w fazie łącze; należy jawnie określić **wx** każdego narzędzia.  
-  
- Domyślnie **wx** nie jest włączone. Aby Traktuj ostrzeżenia konsolidatora jako błędy, określ **wx**. **/WX:No** jest taka sama jak nieokreślenie **wx**.  
-  
-### <a name="to-set-this-linker-option-in-the-visual-studio-development-environment"></a>Aby ustawić tę opcję konsolidatora w środowisku programowania Visual Studio  
-  
-1.  Otwórz projekt **strony właściwości** okno dialogowe. Aby uzyskać więcej informacji, zobacz [Ustawianie właściwości projektu Visual C++](../../ide/working-with-project-properties.md).  
-  
-2.  Kliknij przycisk **konsolidatora** folderu.  
-  
-3.  Kliknij przycisk **wiersza polecenia** strony właściwości.  
-  
-4.  Typ opcji do **dodatkowe opcje** pole.  
-  
-### <a name="to-set-this-linker-option-programmatically"></a>Aby programowo ustawić tę opcję konsolidatora  
-  
-1.  Zobacz <xref:Microsoft.VisualStudio.VCProjectEngine.VCCLCompilerTool.AdditionalOptions%2A>.  
-  
-## <a name="see-also"></a>Zobacz też  
- [Ustawianie opcji konsolidatora](../../build/reference/setting-linker-options.md)   
- [Opcje konsolidatora](../../build/reference/linker-options.md)
+
+```
+/WX[:NO]
+```
+
+## <a name="remarks"></a>Uwagi
+
+/WX powoduje, że plik wyjściowy nie zostanie wygenerowany, jeśli konsolidator wygeneruje ostrzeżenie.
+
+Jest to podobne do **/WX** dla kompilatora (zobacz [Wn /W0, / W1, / W2, / W3, / W4, / W1, / W2, / W3, / W4, / Wall / wo, WV, /WX (poziom ostrzegawczy)](../../build/reference/compiler-option-warning-level.md) Aby uzyskać więcej informacji). Można jednak określić **/WX** dla kompilacji nie oznacza, że **/WX** również będą obowiązywały do przeprowadzenia w fazie łącze; Musisz jawnie określić **/WX** każdego narzędzia.
+
+Domyślnie **/WX** nie jest włączone. Aby Traktuj ostrzeżenia konsolidatora jako błędy, należy określić **/WX**. **/WX:No** jest taka sama jak brak określenia **/WX**.
+
+### <a name="to-set-this-linker-option-in-the-visual-studio-development-environment"></a>Aby ustawić tę opcję konsolidatora w środowisku programowania Visual Studio
+
+1. Otwórz projekt **stron właściwości** okno dialogowe. Aby uzyskać więcej informacji, zobacz [ustawienie właściwości projektu Visual C++](../../ide/working-with-project-properties.md).
+
+1. Kliknij przycisk **konsolidatora** folderu.
+
+1. Kliknij przycisk **wiersza polecenia** stronę właściwości.
+
+1. Wpisz opcje w **dodatkowe opcje** pole.
+
+### <a name="to-set-this-linker-option-programmatically"></a>Aby programowo ustawić tę opcję konsolidatora
+
+1. Zobacz <xref:Microsoft.VisualStudio.VCProjectEngine.VCCLCompilerTool.AdditionalOptions%2A>.
+
+## <a name="see-also"></a>Zobacz też
+
+[Ustawianie opcji konsolidatora](../../build/reference/setting-linker-options.md)<br/>
+[Opcje konsolidatora](../../build/reference/linker-options.md)

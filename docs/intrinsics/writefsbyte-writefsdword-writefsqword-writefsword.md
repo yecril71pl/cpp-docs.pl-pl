@@ -26,17 +26,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 85749ff1325c3535c265a445ce76d37522bc252a
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 77791bdf33f38417d38ebdec3c73b83d96bde36f
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33338305"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45718474"
 ---
-# <a name="writefsbyte-writefsdword-writefsqword-writefsword"></a>__writefsbyte, __writefsdword, __writefsqword, __writefsword
+# <a name="writefsbyte-writefsdword-writefsqword-writefsword"></a>__writefsbyte __writefsdword, __writefsqword, __writefsword
 **Microsoft Specific**  
   
- Do lokalizacji określonej przez przesunięcie względem początku segmentu FS zapisu pamięci.  
+ Napisz pamięci w lokalizacji określonej przez przesunięcie względem początku segmentu FS.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -60,27 +60,27 @@ void __writefsqword(
 ```  
   
 #### <a name="parameters"></a>Parametry  
- [in] `Offset`  
- Przesunięcie od początku FS do zapisu.  
+*Przesunięcie*<br/>
+[in] Przesunięcie od początku FS do zapisu.  
   
- [in] `Data`  
- Wartość do zapisu.  
+*Dane*<br/>
+[in] Wartość do zapisania.  
   
 ## <a name="requirements"></a>Wymagania  
   
-|— Wewnętrzne|Architektura|  
+|Wewnętrzne|Architektura|  
 |---------------|------------------|  
 |`__writefsbyte`|x86|  
 |`__writefsword`|x86|  
 |`__writefsdword`|x86|  
 |`__writefsqword`|x86|  
   
- **Plik nagłówka** \<intrin.h >  
+ **Plik nagłówkowy** \<intrin.h >  
   
 ## <a name="remarks"></a>Uwagi  
  Te procedury są dostępne tylko jako funkcje wewnętrzne.  
   
-**KOŃCOWY określonych firmy Microsoft**  
+**END specyficzny dla Microsoft**  
   
 ## <a name="see-also"></a>Zobacz też  
  [__readfsbyte, \__readfsdword, \__readfsqword, \__readfsword](../intrinsics/readfsbyte-readfsdword-readfsqword-readfsword.md)   

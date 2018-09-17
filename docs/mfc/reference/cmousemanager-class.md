@@ -32,12 +32,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d99f0b2ea50e84e3eb5e89d1f2e24a181653893c
-ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
+ms.openlocfilehash: 38dcb010df79e0a5c5a54079b4c98021cc406c8d
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/05/2018
-ms.locfileid: "37852480"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45720281"
 ---
 # <a name="cmousemanager-class"></a>Klasa CMouseManager
 Umożliwia użytkownikowi skojarzyć różne polecenia z określonym [CView](../../mfc/reference/cview-class.md) obiektu, kiedy użytkownik kliknie dwukrotnie wewnątrz tego widoku.  
@@ -93,20 +93,20 @@ BOOL AddView(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *iViewId*  
- Identyfikator widoku.  
+*iViewId*<br/>
+[in] Identyfikator widoku.  
   
- [in] *uiViewNameResId*  
- Identyfikator ciągu zasobu, który odwołuje się do nazwy widoku.  
+*uiViewNameResId*<br/>
+[in] Identyfikator ciągu zasobu, który odwołuje się do nazwy widoku.  
   
- [in] *uiIconId*  
- Identyfikator widoku ikon.  
+*uiIconId*<br/>
+[in] Identyfikator widoku ikon.  
   
- [in] *iId*  
- Identyfikator widoku.  
+*iId*<br/>
+[in] Identyfikator widoku.  
   
- [in] *lpszViewName*  
- Nazwa widoku.  
+*lpszViewName*<br/>
+[in] Nazwa widoku.  
   
 ### <a name="return-value"></a>Wartość zwracana  
  Wartość różną od zera, jeśli to się powiedzie; w przeciwnym razie 0.  
@@ -131,8 +131,8 @@ UINT GetViewDblClickCommand(int iId) const;
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *iId*  
- Identyfikator widoku.  
+*iId*<br/>
+[in] Identyfikator widoku.  
   
 ### <a name="return-value"></a>Wartość zwracana  
  Identyfikator polecenia, jeśli widok jest skojarzone z poleceniem; w przeciwnym razie 0.  
@@ -145,8 +145,8 @@ UINT GetViewIconId(int iViewId) const;
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *iViewId*  
- Identyfikator widoku.  
+*iViewId*<br/>
+[in] Identyfikator widoku.  
   
 ### <a name="return-value"></a>Wartość zwracana  
  Identyfikator zasobu ikony w przypadku powodzenia; w przeciwnym razie 0.  
@@ -162,8 +162,8 @@ int GetViewIdByName(LPCTSTR lpszName) const;
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *lpszName*  
- Nazwa widoku.  
+*lpszName*<br/>
+[in] Nazwa widoku.  
   
 ### <a name="return-value"></a>Wartość zwracana  
  Identyfikator widoku, jeśli to się powiedzie; w przeciwnym razie 0.  
@@ -179,8 +179,8 @@ void GetViewNames(CStringList& listOfNames) const;
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [out] *listOfNames*  
- Odwołanie do `CStringList` obiektu.  
+*listOfNames*<br/>
+[out] Odwołanie do `CStringList` obiektu.  
   
 ### <a name="remarks"></a>Uwagi  
  Ta metoda wypełni parametr `listOfNames` z nazwami wszystkich widoków, które są zarejestrowane przy użyciu [CMouseManager::AddView](#addview).  
@@ -193,8 +193,8 @@ BOOL LoadState(LPCTSTR lpszProfileName = NULL);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *lpszProfileName*  
- Ścieżki klucza rejestru.  
+*lpszProfileName*<br/>
+[in] Ścieżki klucza rejestru.  
   
 ### <a name="return-value"></a>Wartość zwracana  
  Wartość różną od zera, jeśli to się powiedzie; w przeciwnym razie 0.  
@@ -212,8 +212,8 @@ BOOL SaveState(LPCTSTR lpszProfileName = NULL);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *lpszProfileName*  
- Ścieżki klucza rejestru.  
+*lpszProfileName*<br/>
+[in] Ścieżki klucza rejestru.  
   
 ### <a name="return-value"></a>Wartość zwracana  
  Wartość różną od zera, jeśli to się powiedzie; w przeciwnym razie 0.  
@@ -233,11 +233,11 @@ void SetCommandForDblClk(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *iViewId*  
- Identyfikator widoku.  
+*iViewId*<br/>
+[in] Identyfikator widoku.  
   
- [in] *uiCmd*  
- Identyfikator polecenia.  
+*uiCmd*<br/>
+[in] Identyfikator polecenia.  
   
 ### <a name="remarks"></a>Uwagi  
  Aby można było skojarzyć polecenie niestandardowe przy użyciu widoku, najpierw musisz się zarejestrować widoku przy użyciu [CMouseManager::AddView](#addview). `AddView` Wymaga, aby identyfikator widoku, jako parametr wejściowy. Po zarejestrowaniu się widok, wywołując `CMouseManager::SetCommandForDblClk` przy użyciu tego samego widoku danych wejściowych parametr identyfikatora dostarczona do `AddView`. Później, gdy użytkownik kliknie dwukrotnie myszy w widoku zarejestrowanych, aplikacji spowoduje wykonanie polecenia wskazywanym przez *uiCmd.* Aby zapewnić obsługę zachowanie myszy niestandardowe, należy również dostosować widok zarejestrowane przy użyciu Menedżera myszy. Aby uzyskać więcej informacji o zachowanie myszy niestandardowych, zobacz [Dostosowywanie klawiatury i myszy](../keyboard-and-mouse-customization.md).  

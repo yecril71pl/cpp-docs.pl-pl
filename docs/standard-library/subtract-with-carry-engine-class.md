@@ -26,12 +26,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: bfb0c3c0544a9c58801f98567825e7e97e48b13c
-ms.sourcegitcommit: fb9448eb96c6351a77df04af16ec5c0fb9457d9e
+ms.openlocfilehash: a956212df2579298f1f947bf2388dec1532dff10
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/13/2018
-ms.locfileid: "43687990"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45721737"
 ---
 # <a name="subtractwithcarryengine-class"></a>subtract_with_carry_engine — Klasa
 
@@ -46,17 +46,17 @@ class subtract_with_carry_engine;
 
 ### <a name="parameters"></a>Parametry
 
-*UIntType*  
- Typ wyniku liczby całkowitej bez znaku. Aby możliwych typów, zobacz [ \<losowy >](../standard-library/random.md).
+*UIntType*<br/>
+Typ wyniku liczby całkowitej bez znaku. Aby możliwych typów, zobacz [ \<losowy >](../standard-library/random.md).
 
-*W*  
- **Word rozmiar**. Rozmiar każdego wyrazu w bitach sekwencji stanu. **Warunek wstępny**: `0 < W ≤ numeric_limits<UIntType>::digits`
+*W*<br/>
+**Word rozmiar**. Rozmiar każdego wyrazu w bitach sekwencji stanu. **Warunek wstępny**: `0 < W ≤ numeric_limits<UIntType>::digits`
 
-*S*  
- **Krótkie opóźnienie**. Liczba wartości całkowitych. **Warunek wstępny**: `0 < S < R`
+*S*<br/>
+**Krótkie opóźnienie**. Liczba wartości całkowitych. **Warunek wstępny**: `0 < S < R`
 
-*R*  
- **Opóźnione w długo**. Określa cyklu w serii wygenerowany.
+*R*<br/>
+**Opóźnione w długo**. Określa cyklu w serii wygenerowany.
 
 ## <a name="members"></a>Elementy członkowskie
 

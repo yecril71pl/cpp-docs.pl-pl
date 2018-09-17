@@ -12,37 +12,39 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f198b5627b7ee90741f7b15fc8202828dc5904ed
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: d2b2d06e6c5a24bec178cf24ff22dcb31ffce7d5
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32366864"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45723193"
 ---
 # <a name="calling-convention"></a>Konwencja wywoływania
-W tej sekcji opisano proces jednej funkcji (wywołujący) powoduje, że wywołanie na inną funkcję (wywoływany).  
-  
- Dla prototypowanych funkcji wszystkie argumenty są konwertowane na typy oczekiwanego wywoływany przed jego przesłaniem.  
-  
--   [Przekazywanie parametru](../build/parameter-passing.md)  
-  
--   [Elementy vararg](../build/varargs.md)  
-  
--   [Funkcje bez pierwowzoru](../build/unprototyped-functions.md)  
-  
--   [Wartości zwracane](../build/return-values-cpp.md)  
-  
--   [Zapisane rejestrowania wywołującego/wywoływanego](../build/caller-callee-saved-registers.md)  
-  
--   [Wskaźniki funkcji](../build/function-pointers.md)  
-  
--   [Obsługa modelu zmiennoprzecinkowego w przypadku starszego kodu (Visual C++)](../build/floating-point-support-for-older-code-visual-cpp.md)  
-  
--   [FpCsr](../build/fpcsr.md)  
-  
--   [MXCSR](../build/mxcsr.md)  
-  
--   [mechanizm setjmp/longjump](../build/setjmp-longjump.md)  
-  
-## <a name="see-also"></a>Zobacz też  
- [Konwencje kodowania x64](../build/x64-software-conventions.md)
+
+W tej sekcji opisano proces, który sprawia, że jedna funkcja (wywołujący) wywołania do innej funkcji (/ / wywoływany).
+
+Dla funkcji prototypowej wszystkie argumenty są konwertowane na typy oczekiwanego / / wywoływany przed przekazaniem.
+
+- [Przekazywanie parametru](../build/parameter-passing.md)
+
+- [Elementy vararg](../build/varargs.md)
+
+- [Funkcje bez pierwowzoru](../build/unprototyped-functions.md)
+
+- [Wartości zwracane](../build/return-values-cpp.md)
+
+- [Zapisane rejestrowania wywołującego/wywoływanego](../build/caller-callee-saved-registers.md)
+
+- [Wskaźniki funkcji](../build/function-pointers.md)
+
+- [Obsługa modelu zmiennoprzecinkowego w przypadku starszego kodu (Visual C++)](../build/floating-point-support-for-older-code-visual-cpp.md)
+
+- [FpCsr](../build/fpcsr.md)
+
+- [MXCSR REJESTRU](../build/mxcsr.md)
+
+- [mechanizm setjmp/longjump](../build/setjmp-longjump.md)
+
+## <a name="see-also"></a>Zobacz też
+
+[Konwencje kodowania x64](../build/x64-software-conventions.md)

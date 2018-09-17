@@ -35,12 +35,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c832ee24d500eba28c14713d1c0a092baf90a440
-ms.sourcegitcommit: d10a2382832373b900b1780e1190ab104175397f
+ms.openlocfilehash: c6a980a96198db80f0956895292d37f123d0351c
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43894619"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45723310"
 ---
 # <a name="building-an-import-library-and-export-file"></a>Kompilowanie biblioteki importowanej oraz pliku eksportowanego
 
@@ -60,7 +60,7 @@ Są to te same metody, które służy do określania eksporty podczas łączenia
 
 Następujące opcje dotyczą kompilowania biblioteki importowanej i eksportowanie pliku:
 
-> **/ OUT:** *importowania*  
+> **/ OUT:** *importowania*
 
 Przesłania domyślną nazwę pliku wyjściowego dla *zaimportować* biblioteki tworzona. Gdy out nie zostanie określony, domyślną nazwą jest podstawowa nazwa pierwszego pliku obiektu lub biblioteki w poleceniu LIB i rozszerzenia. lib. Plik eksportu otrzymuje taką samą nazwę jak biblioteki importowanej oraz rozszerzenie. oczekiwane.
 

@@ -42,12 +42,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4a12e5abcc02017acbd06c841cc9ab62a9d25bdf
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 810b59bb85d374b1cf65985a64be32c645e6f3b5
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43757104"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45718084"
 ---
 # <a name="cspinbuttonctrl-class"></a>Klasa CSpinButtonCtrl
 Oferuje funkcje formantu Windows typowego przycisku pokrętła.  
@@ -352,9 +352,10 @@ void SetRange32(
     int nUpper);
 ```  
   
-### <a name="parameters"></a>Parametry  
- *nLower* i *nUpper*  
- Górne i dolne granice formantu. Aby uzyskać `SetRange`, ani limit może być większa niż UD_MAXVAL lub mniejszą od UD_MINVAL; Ponadto różnica między dwoma limity nie może przekraczać UD_MAXVAL. `SetRange32` nie nakłada żadnych ograniczeń na granicach; użyć dowolnej liczby całkowite.  
+### <a name="parameters"></a>Parametry
+
+*nLower* i *nUpper*<br/>
+Górne i dolne granice formantu. Aby uzyskać `SetRange`, ani limit może być większa niż UD_MAXVAL lub mniejszą od UD_MINVAL; Ponadto różnica między dwoma limity nie może przekraczać UD_MAXVAL. `SetRange32` nie nakłada żadnych ograniczeń na granicach; użyć dowolnej liczby całkowite.  
   
 ### <a name="remarks"></a>Uwagi  
  Funkcja elementu członkowskiego `SetRange32` Ustawia zakres 32-bitowych dla kontrolki przycisku pokrętła.  

@@ -16,35 +16,38 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a2dd121909fbe0aa2f9305b7bd5779b995a69719
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: d86052d6ca6e40926ed8d99990520044cef351d3
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32375665"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45719319"
 ---
 # <a name="specifying-the-pathname"></a>Określanie nazwy ścieżki
-Każda opcja pliku wyjściowego akceptuje *pathname* argumentu, który można określić lokalizację i nazwę pliku wyjściowego. Argument może zawierać nazwy dysku, katalogu i nazwa pliku. Nie może być spacji między opcją i argument.  
-  
- Jeśli *pathname* zawiera nazwę pliku bez rozszerzenia, kompilator zapewnia dane wyjściowe domyślne rozszerzenie. Jeśli *pathname* obejmuje katalogu, ale brak nazwy pliku kompilatora tworzy plik o nazwie domyślnej w określonym katalogu. Domyślna nazwa opiera się na podstawową nazwę pliku źródłowego i domyślne rozszerzenie na podstawie typu pliku wyjściowego. Jeśli opuścisz *pathname* całkowicie, kompilator tworzy plik o nazwie domyślnej w domyślnym folderze.  
-  
- Alternatywnie *pathname* argument może być nazwa urządzenia (AUX, CON, PRN lub NUL), a nie nazwę pliku. Nie należy używać odstęp między opcji i nazwę urządzenia lub dwukropka jako część nazwy urządzenia.  
-  
-|Nazwa urządzenia|Reprezentuje|  
-|-----------------|----------------|  
-|AUX|Urządzenie pomocnicze|  
-|KON|Konsola|  
-|PRN|Drukarki|  
-|NUL|Urządzenie NULL (nie utworzony plik)|  
-  
-## <a name="example"></a>Przykład  
- Następujące polecenie w wierszu wysyła pliku mapowania do drukarki:  
-  
-```  
-CL /FmPRN HELLO.CPP  
-```  
-  
-## <a name="see-also"></a>Zobacz też  
- [Plik wyjściowy (/ F) opcje](../../build/reference/output-file-f-options.md)   
- [Opcje kompilatora](../../build/reference/compiler-options.md)   
- [Ustawianie opcji kompilatora](../../build/reference/setting-compiler-options.md)
+
+Każda opcja pliku wyjściowego przyjmuje *pathname* argument, który można określić lokalizację i nazwę pliku wyjściowego. Argument może zawierać nazwę dysku, katalogu i nazwa pliku. Nie może być spacji między opcją a argumentem.
+
+Jeśli *pathname* zawiera nazwę pliku bez rozszerzenia, kompilator zapewnia dane wyjściowe rozszerzenia domyślnego. Jeśli *pathname* zawiera katalog, ale nie nazwę pliku, kompilator tworzy plik o domyślnej nazwie w określonym katalogu. Nazwa domyślna jest oparta na Nazwa podstawowa pliku źródłowego i domyślnym rozszerzeniem, na podstawie typu pliku wyjściowego. Jeśli pozostawisz *pathname* całkowicie, kompilator tworzy plik z nazwą domyślną w domyślnym katalogu.
+
+Alternatywnie *pathname* argument może być nazwą urządzenia (AUX, CON, PRN lub NUL), a nie nazwę pliku. Nie używaj spacji między opcję i nazwę urządzenia lub dwukropek jako część nazwy urządzenia.
+
+|Nazwa urządzenia|Reprezentuje|
+|-----------------|----------------|
+|AUX|Urządzenie pomocnicze|
+|CON|Konsola|
+|PRN|Drukarki|
+|NUL|Urządzenie o wartości null (nie utworzony plik)|
+
+## <a name="example"></a>Przykład
+
+Następujące polecenie w wierszu pliku mapowania są wysyłane do drukarki:
+
+```
+CL /FmPRN HELLO.CPP
+```
+
+## <a name="see-also"></a>Zobacz też
+
+[Plik wyjściowy (/ F) opcje](../../build/reference/output-file-f-options.md)
+[opcje kompilatora](../../build/reference/compiler-options.md)<br/>
+[Ustawianie opcji kompilatora](../../build/reference/setting-compiler-options.md)

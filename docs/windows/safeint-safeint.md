@@ -19,12 +19,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 2ddb7092b1a5556485848d122e21ac54b6efe182
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: de318ab79638f63fae98856987340ad62534f695
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42606958"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45721348"
 ---
 # <a name="safeintsafeint"></a>SafeInt::SafeInt
 
@@ -56,14 +56,14 @@ SafeInt (
 
 ### <a name="parameters"></a>Parametry
 
-[in] *i*  
-Wartość dla nowej klasy **SafeInt** obiektu. Musi to być parametrem typu T lub U, w zależności od tego konstruktora.
+*i*<br/>
+[in] Wartość dla nowej klasy **SafeInt** obiektu. Musi to być parametrem typu T lub U, w zależności od tego konstruktora.
 
-[in] *b*  
-Wartość logiczna dla nowej **SafeInt** obiektu.
+*b*<br/>
+[in] Wartość logiczna dla nowej **SafeInt** obiektu.
 
-[in] *u*  
-A **SafeInt** z typu U. Nowy **SafeInt** obiekt będzie miał taką samą wartość jak *u*, ale będą typu T.
+*u*<br/>
+[in] A **SafeInt** z typu U. Nowy **SafeInt** obiekt będzie miał taką samą wartość jak *u*, ale będą typu T.
 
 U typu danych przechowywanych w **SafeInt**. Może to być atrybut typu wartość logiczna, znaku lub liczba całkowita typu. Jeśli typ liczby całkowitej, mogą być podpisane lub niepodpisane i mieć długość od 8 do 64 bitów.
 

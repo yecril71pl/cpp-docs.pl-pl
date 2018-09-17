@@ -37,12 +37,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: bc8f906c4c084ef4cabef9b26ef9e6b48e9e33cd
-ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
+ms.openlocfilehash: ba56cef1ecdcee246b9041b930eeb5bf04728def
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44106086"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45724610"
 ---
 # <a name="chartraits-struct"></a>char_traits — Struktura
 
@@ -120,7 +120,8 @@ static char_type *assign(char_type* strTo,
 *_CharTo*<br/>
 Element, który ma być przypisana wartość znaku.
 
-* strTo * tablicy ciąg lub znak, którego początkowe elementy mają można przypisać wartości znakowych.
+*strTo*<br/>
+Ciąg lub znak tablicy, którego początkowe elementy mają można przypisać wartości znakowych.
 
 *_Num*<br/>
 Liczba elementów, które można przypisać wartości.
@@ -198,9 +199,11 @@ static int compare(const char_type* str1,
 
 ### <a name="parameters"></a>Parametry
 
-* str1 * pierwszy dwóch ciągów, który można porównać ze sobą.
+*str1*<br/>
+Pierwsze dwa ciągi mają być porównane do siebie nawzajem.
 
-* str2 * drugi dwóch ciągów, który można porównać ze sobą.
+*str2*<br/>
+Drugi dwa ciągi, który można porównać ze sobą.
 
 *_Num*<br/>
 Liczba elementów w ciągach, które mają być porównane.

@@ -26,12 +26,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0ec8840e4a379ce50b9474c114f0a2879d2e7bca
-ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
+ms.openlocfilehash: e0294a16c13941d74ccd3955f78e22e33ef8fc7a
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43686160"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45725184"
 ---
 # <a name="cmfcfontcombobox-class"></a>Klasa CMFCFontComboBox
 `CMFCFontComboBox` Klasy tworzy formant pola kombi, która zawiera listę czcionek.  
@@ -132,14 +132,14 @@ BOOL SelectFont(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *pDesc*  
- Wskazuje obiekt opisu czcionki.  
+*pDesc*<br/>
+[in] Wskazuje obiekt opisu czcionki.  
   
- [in] *lpszName*  
- Określa nazwę czcionki.  
+*lpszName*<br/>
+[in] Określa nazwę czcionki.  
   
- [in] *nCharSet*  
- Określa zestaw znaków. Wartość domyślna to DEFAULT_CHARSET. Aby uzyskać więcej informacji, zobacz `lfCharSet` członkiem [LOGFONT](/windows/desktop/api/wingdi/ns-wingdi-taglogfonta) struktury.  
+*nCharSet*<br/>
+[in] Określa zestaw znaków. Wartość domyślna to DEFAULT_CHARSET. Aby uzyskać więcej informacji, zobacz `lfCharSet` członkiem [LOGFONT](/windows/desktop/api/wingdi/ns-wingdi-taglogfonta) struktury.  
   
 ### <a name="return-value"></a>Wartość zwracana  
  Wartość TRUE, jeśli element w polu kombi czcionki pasuje do określonej czcionki opis obiektu lub nazwa czcionki i zestaw znaków; w przeciwnym razie wartość FALSE.  
@@ -164,14 +164,14 @@ BOOL Setup(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *nFontType*  
- Określa typ czcionki. Wartością domyślną jest bitową kombinacją (lub) DEVICE_FONTTYPE RASTER_FONTTYPE i TRUETYPE_FONTTYPE.  
+*nFontType*<br/>
+[in] Określa typ czcionki. Wartością domyślną jest bitową kombinacją (lub) DEVICE_FONTTYPE RASTER_FONTTYPE i TRUETYPE_FONTTYPE.  
   
- [in] *nCharSet*  
- Określa zestaw znaków czcionek. Wartość domyślna to DEFAULT_CHARSET.  
+*nCharSet*<br/>
+[in] Określa zestaw znaków czcionek. Wartość domyślna to DEFAULT_CHARSET.  
   
- [in] *nPitchAndFamily*  
- Określa czcionkę gęstość i rodzinę. Wartość domyślna to DEFAULT_PITCH.  
+*nPitchAndFamily*<br/>
+[in] Określa czcionkę gęstość i rodzinę. Wartość domyślna to DEFAULT_PITCH.  
   
 ### <a name="return-value"></a>Wartość zwracana  
  Wartość TRUE, jeśli pole kombi czcionki zostało zainicjowane pomyślnie; w przeciwnym razie wartość FALSE.  
