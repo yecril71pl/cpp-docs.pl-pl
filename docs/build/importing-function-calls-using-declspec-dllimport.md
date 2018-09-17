@@ -20,66 +20,68 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1239ee3b33a9d6c8443161bacae6daea20260c1f
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: a3f7c1bf81b94eebbe32b40053fc5ce3aeaa0bd7
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32368538"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45715796"
 ---
 # <a name="importing-function-calls-using-declspecdllimport"></a>Importowanie wywołań funkcji przy użyciu atrybutu __declspec(dllimport)
-Poniższy przykładowy kod przedstawia sposób użycia **_declspec(dllimport)** do importowania wywołania funkcji z biblioteki DLL do aplikacji. Przyjęto założenie, że `func1` jest funkcją, która znajduje się w bibliotece DLL niezależnie od pliku .exe, który zawiera **głównego** funkcji.  
-  
- Bez **__declspec(dllimport)**, podane ten kod:  
-  
-```  
-int main(void)   
-{  
-   func1();  
-}  
-```  
-  
- Kompilator generuje kod, który wygląda następująco:  
-  
-```  
-call func1  
-```  
-  
- i konsolidator tłumaczy wywołanie na podobny do następującego:  
-  
-```  
-call 0x4000000         ; The address of 'func1'.  
-```  
-  
- Jeśli `func1` istnieje w innej bibliotece DLL, konsolidator nie można rozpoznać tego bezpośrednio, ponieważ go nie ma możliwości otrzymuje żadnej informacji o jakie adres `func1` jest. W środowiskach 16-bitowych konsolidator dodaje ten kod adres do listy w pliku .exe, który moduł ładujący może zastosować poprawki w czasie wykonywania z poprawnym adresem. W środowiskach 32-bitowe i 64-bitowych konsolidator generuje thunk, z których znać adres. W 32-bitowego środowiska thunk wygląda następująco:  
-  
-```  
-0x40000000:    jmp DWORD PTR __imp_func1  
-```  
-  
- W tym miejscu `imp_func1` adres `func1` gniazda tabelę adresów importu pliku .exe. Wszystkie adresy w związku z tym wiadomo, że konsolidator. Moduł ładujący ma tylko zaktualizować tabelę adresów importu pliku .exe w czasie ładowania dla wszystkie informacje niezbędne do prawidłowego działania.  
-  
- W związku z tym przy użyciu **__declspec(dllimport)** jest lepszym rozwiązaniem, ponieważ konsolidator nie generuje thunk, jeśli nie jest wymagana. Sekcje Thunk powiększyć kodu (w systemach RISC, może być kilka instrukcje) i może zmniejszyć wydajność pamięci podręcznej. Jeśli nakazuje kompilatorowi się, że funkcja jest w bibliotece DLL, może generować wywołanie pośrednie dla Ciebie.  
-  
- Dlatego teraz ten kod:  
-  
-```  
-__declspec(dllimport) void func1(void);  
-int main(void)   
-{  
-   func1();  
-}  
-```  
-  
- generuje tej instrukcji:  
-  
-```  
-call DWORD PTR __imp_func1  
-```  
-  
- Brak nie thunk i nie `jmp` instrukcji, dzięki czemu kod jest szybsze i mniejsze.  
-  
- Z drugiej strony dla wywołania funkcji wewnątrz biblioteki DLL, nie ma zostać umożliwia wywołanie pośrednie. Znasz już adresu funkcji. Ponieważ obciążenia i przechowywać adresu funkcji przed pośrednie wywołanie wymaga czasu i miejsca, bezpośrednie wywołanie jest zawsze szybsze i mniejsze. Chcesz użyć **__declspec(dllimport)** podczas wywoływania funkcji DLL z poza biblioteki DLL, do samej siebie. Nie używaj **__declspec(dllimport)** funkcji wewnątrz bibliotekę DLL, podczas tworzenia tej biblioteki DLL.  
-  
-## <a name="see-also"></a>Zobacz też  
- [Importowanie do aplikacji](../build/importing-into-an-application.md)
+
+Poniższy przykład kodu pokazuje sposób użycia **_declspec(dllimport)** importowanie wywołań funkcji z biblioteki DLL do aplikacji. Przyjęto założenie, że `func1` jest funkcją, która znajduje się w bibliotece DLL, które są niezależne od pliku .exe, który zawiera **głównego** funkcji.
+
+Bez **__declspec(dllimport)**, biorąc pod uwagę ten kod:
+
+```
+int main(void)
+{
+   func1();
+}
+```
+
+Kompilator generuje kod, który wygląda w następujący sposób:
+
+```
+call func1
+```
+
+i konsolidator tłumaczy wywołanie na podobny do poniższego:
+
+```
+call 0x4000000         ; The address of 'func1'.
+```
+
+Jeśli `func1` istnieje w innej bibliotece DLL, konsolidator nie może rozpoznać on bezpośrednio, ponieważ ma ona żadnej możliwość określenia jakiego adresu `func1` jest. W środowiskach 16-bitowych konsolidator dodaje ten kod adres do listy w pliku .exe, który moduł ładujący będzie poprawki w czasie wykonywania na prawidłowy adres. W 32-bitowych i 64-bitowego środowiska konsolidator generuje thunk, które znasz adresu. W środowisku 32-bitowych thunk wygląda następująco:
+
+```
+0x40000000:    jmp DWORD PTR __imp_func1
+```
+
+W tym miejscu `imp_func1` adres `func1` gniazdo w tabeli adresów importowania pliku .exe. Wszystkie adresy dlatego są znane do konsolidatora. Moduł ładujący ma tylko można zaktualizować tabeli adresów importowania pliku .exe w czasie ładowania wszystko działało poprawnie.
+
+W związku z tym, za pomocą **__declspec(dllimport)** jest lepsza, ponieważ konsolidator nie generuje sekcją thunk, jeśli nie jest wymagana. Sekcje Thunk powiększyć kodu (w systemach RISC, może być kilka instrukcji) i może zmniejszyć wydajność pamięci podręcznej. Jeśli kompilator jest stwierdzić, że funkcja znajduje się w bibliotece DLL, może generować wywołanie pośrednie dla Ciebie.
+
+Teraz ten kod:
+
+```
+__declspec(dllimport) void func1(void);
+int main(void)
+{
+   func1();
+}
+```
+
+generuje tę instrukcję:
+
+```
+call DWORD PTR __imp_func1
+```
+
+Istnieje nie thunk i nie `jmp` instrukcji, dzięki czemu kod jest mniejsze i szybsze.
+
+Z drugiej strony dla wywołań funkcji wewnątrz biblioteki DLL, nie będzie ma być konieczne użycie wywołanie pośrednie. Znasz już adresu funkcji. Ponieważ czas i miejsce są wymagane do ładowania i przechowywania adresu funkcji przed wywołanie pośrednie, bezpośrednie wywołanie jest zawsze szybszy i mniejszy. Chcesz użyć **__declspec(dllimport)** podczas wywoływania funkcji DLL z poza bibliotekę DLL, sam. Nie używaj **__declspec(dllimport)** funkcji wewnątrz biblioteki DLL, podczas tworzenia tej biblioteki DLL.
+
+## <a name="see-also"></a>Zobacz też
+
+[Importowanie do aplikacji](../build/importing-into-an-application.md)

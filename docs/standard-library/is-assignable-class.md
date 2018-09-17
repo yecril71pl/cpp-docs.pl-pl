@@ -16,12 +16,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d5666aca2d6a855b64af26d38a1ae834fecec5d6
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: 339b3cdb2e2470fea976ef8257e6a84f089d3dd9
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38958468"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45712559"
 ---
 # <a name="isassignable-class"></a>is_assignable, klasa
 
@@ -36,9 +36,11 @@ struct is_assignable;
 
 ### <a name="parameters"></a>Parametry
 
+*To*<br/>
 Typ obiektu, który odbiera przypisania.
 
-Od typu obiektu, który zawiera wartość.
+*From*<br/>
+Typ obiektu, który zawiera wartość.
 
 ## <a name="remarks"></a>Uwagi
 

@@ -20,16 +20,16 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 067ba5dad4e0751a86835ea56c536a5b7250485d
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: db9f0ff58108328979b945b32af0c0b884998639
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32379591"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45708535"
 ---
 # <a name="zcinline-remove-unreferenced-comdat"></a>/Zc:inline (usuwanie nieużywanej sekcji COMDAT)
 
-Usuwa funkcje nieużywane lub dane, które są Comdat lub mieć tylko powiązania wewnętrznego. Gdy **/Zc: inline** określono kompilatora wymaga jednostek tłumaczenia, korzystających z wbudowanym danych lub funkcji śródwierszowych musi także obejmować definicje danych lub funkcji.
+Usuwa nieużywane funkcje lub dane, które są Comdat lub mieć tylko powiązanie wewnętrzne. Gdy **/Zc: inline** jest określony, kompilator wymaga jednostki translacji, korzystające z danych wbudowane lub funkcji śródwierszowych należy również uwzględnić definicje danych lub funkcji.
 
 ## <a name="syntax"></a>Składnia
 
@@ -37,15 +37,15 @@ Usuwa funkcje nieużywane lub dane, które są Comdat lub mieć tylko powiązani
 
 ## <a name="remarks"></a>Uwagi
 
-Gdy **/Zc: inline** określono kompilator nie Emituj informacje o symbolach dla nieużywanej sekcji COMDAT funkcji lub danych lub funkcji lub dane, które mają tylko powiązanie wewnętrzne. Tego rodzaju optymalizacji upraszcza niektóre pracy wykonanej przez konsolidator w kompilacjach wydania lub gdy opcja konsolidatora [/OPT:REF](../../build/reference/opt-optimizations.md) jest określona. Gdy kompilator wykonuje tego rodzaju optymalizacji, można znacznie zmniejszyć rozmiar pliku .obj i poprawy szybkości konsolidatora. Ta opcja kompilatora nie jest włączona, gdy optymalizacje są wyłączone ([/Od](../../build/reference/od-disable-debug.md)) lub gdy [/GL (optymalizacja całego programu)](../../build/reference/gl-whole-program-optimization.md) jest określona.
+Gdy **/Zc: inline** jest określony, kompilator nie emituje informacje o symbolach dla nieużywanej sekcji COMDAT funkcji lub danych lub funkcji lub dane, które mają tylko powiązanie wewnętrzne. Tego rodzaju optymalizacji upraszcza część pracy wykonanej przez konsolidator w kompilacjach wydania lub opcji konsolidatora [/OPT: REF](../../build/reference/opt-optimizations.md) jest określony. Gdy kompilator wykonuje tego rodzaju optymalizacji, można znacznie zmniejszyć rozmiar pliku .obj i zwiększyć szybkość konsolidatora. Nie włączono tę opcję kompilatora, gdy są wyłączone optymalizacje ([/Od](../../build/reference/od-disable-debug.md)) lub gdy [/GL (Optymalizacja Całoprogramowa)](../../build/reference/gl-whole-program-optimization.md) jest określony.
 
-Domyślnie ta opcja jest wyłączona (**/Zc:inline-**). [/ Ograniczająca-](permissive-standards-conformance.md) nie obsługuje opcji **/Zc: inline**.
+Domyślnie ta opcja jest wyłączona (**/Zc:inline-**). [/ Permissive-](permissive-standards-conformance.md) opcji nie włącza **/Zc: inline**.
 
-Jeśli **/Zc: inline** określono kompilator wymusza C ++ 11 konieczność zgłoszonego przez wszystkie funkcje `inline` muszą być dostępne w tej samej jednostce tłumaczenia definicji, jeśli są one używane. Jeśli nie określono opcji, kompilator Microsoft umożliwia zgodność z systemem innym niż kod, który wywołuje funkcje zadeklarowany `inline` nawet, jeśli definicja nie jest widoczne. Aby uzyskać więcej informacji zobacz C ++ 11 standard, w wersji 3.2 i sekcji 7.1.2. Ta opcja kompilatora została wprowadzona w programie Visual Studio 2013 Update 2.
+Jeśli **/Zc: inline** jest określony, kompilator wymusza C ++ 11 wymogu, że wszystkie funkcje zadeklarowane `inline` muszą być dostępne w tej samej jednostce translacji definicji, jeśli są one używane. Gdy opcja nie jest określona, kompilator Microsoft umożliwia kod bez zgodności, który wywołuje funkcje zadeklarowane `inline` nawet, jeśli definicja nie jest widoczna. Aby uzyskać więcej informacji zobacz standard C ++ 11, w sekcji 7.1.2 i sekcji 3.2. Tę opcję kompilatora została wprowadzona w Visual Studio 2013 Update 2.
 
-Aby użyć **/Zc: inline** opcję Kod niezgodnych aktualizacji.
+Aby użyć **/Zc: inline** opcji kodu braku zgodności aktualizacji.
 
-W tym przykładzie pokazano sposób użycia niezgodnych deklaracji funkcji wbudowanej bez definicji nadal kompiluje i łączy, gdy domyślny **/Zc:inline-** jest używana opcja:
+Ten przykład przedstawia sposób niezgodny z użytkowania wbudowaną deklarację funkcji bez definicji nadal kompiluje i łączy, gdy domyślny **/Zc:inline-** jest używana opcja:
 
 ```cpp
 // example.h
@@ -67,11 +67,11 @@ public:
 #include "example.h"
 
 void Example::inline_call() {
-   printf("inline_call was called.\n"); 
+   printf("inline_call was called.\n");
 }
 
 void Example::normal_call() {
-   printf("normal_call was called.\n"); 
+   printf("normal_call was called.\n");
    inline_call(); // with /Zc:inline-, inline_call forced into .obj file
 }
 ```
@@ -87,9 +87,9 @@ void main() {
 }
 ```
 
-Gdy **/Zc: inline** jest włączona, taki sam kod przyczyny [LNK2019](../../error-messages/tool-errors/linker-tools-error-lnk2019.md) błąd, ponieważ kompilator nie Emituj treść kodu z systemem innym niż wbudowane `Example::inline_call` w example.obj. Powoduje to wywołanie z systemem innym niż wbudowane `main` do odwołania Niezdefiniowany symbol zewnętrzny.
+Gdy **/Zc: inline** jest włączona, taki sam kod przyczyny [LNK2019](../../error-messages/tool-errors/linker-tools-error-lnk2019.md) błąd, ponieważ kompilator nie emituje treść-śródwierszowych kodu `Example::inline_call` w example.obj. Powoduje to, że-śródwierszowych wywołania w `main` można odwoływać się do niezdefiniowanego symbolu zewnętrznego.
 
-Aby rozwiązać ten problem, można usunąć `inline` — słowo kluczowe z deklaracji `Example::inline_call`, Przenieś definicji `Example::inline_call` w nagłówku pliku, lub Przenieś wykonania `Example` do main.cpp. Kolejnym przykładzie przenosi definicji do pliku nagłówka, gdzie jest widoczny dla każdego obiektu wywołującego, który zawiera nagłówek.
+Aby rozwiązać ten problem, można usunąć `inline` słowo kluczowe z deklaracji `Example::inline_call`, Przenieś definicji `Example::inline_call` w nagłówku pliku lub przenieść wykonania `Example` do main.cpp. Następny przykład przenosi definicji do pliku nagłówka, w których jest ona widoczna na dowolny obiekt wywołujący, który zawiera nagłówek.
 
 ```cpp
 // example2.h
@@ -100,7 +100,7 @@ Aby rozwiązać ten problem, można usunąć `inline` — słowo kluczowe z dekl
 class Example2 {
 public:
    inline void inline_call() {
-      printf("inline_call was called.\n"); 
+      printf("inline_call was called.\n");
    }
    void normal_call();
    Example2() {};
@@ -113,8 +113,8 @@ public:
 #include "example2.h"
 
 void Example2::normal_call() {
-   printf("normal_call was called.\n"); 
-   inline_call(); 
+   printf("normal_call was called.\n");
+   inline_call();
 }
 ```
 
@@ -129,15 +129,15 @@ void main() {
 }
 ```
 
-Aby uzyskać więcej informacji na temat problemów zgodności w programie Visual C++, zobacz [niestandardowe zachowanie](../../cpp/nonstandard-behavior.md).
+Aby uzyskać więcej informacji na temat problemów ze zgodnością w języku Visual C++, zobacz [niestandardowe zachowanie](../../cpp/nonstandard-behavior.md).
 
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Aby ustawić tę opcję kompilatora w środowisku programowania Visual Studio
 
-1. Otwórz projekt **strony właściwości** okno dialogowe. Aby uzyskać więcej informacji, zobacz [Praca z właściwościami projektu](../../ide/working-with-project-properties.md).
+1. Otwórz projekt **stron właściwości** okno dialogowe. Aby uzyskać więcej informacji, zobacz [Praca z właściwościami projektu](../../ide/working-with-project-properties.md).
 
-1. Wybierz **właściwości konfiguracji** > **C/C++** > **języka** strony właściwości.
+1. Wybierz **właściwości konfiguracji** > **C/C++** > **języka** stronę właściwości.
 
-1. Modyfikowanie **Usuń nieużywane kod i dane** właściwości, a następnie wybierz pozycję **OK**.
+1. Modyfikowanie **Usuń nieużywany kod i dane** właściwości, a następnie wybierz **OK**.
 
 ## <a name="see-also"></a>Zobacz także
 

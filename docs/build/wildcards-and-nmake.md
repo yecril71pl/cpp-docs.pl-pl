@@ -15,15 +15,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6834e37c9f6624e231861fa28063cdbc7bec8508
-ms.sourcegitcommit: 7eadb968405bcb92ffa505e3ad8ac73483e59685
+ms.openlocfilehash: da3f7882a24d31f1a8560cdc9c038081324bf675
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/23/2018
-ms.locfileid: "39208627"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45715614"
 ---
 # <a name="wildcards-and-nmake"></a>Symbole wieloznaczne oraz NMAKE
-NMAKE rozwija, nazwa_pliku symboli wieloznacznych (\* i?) w wierszach zależności. Symbol wieloznaczny określono za pomocą polecenia są przekazywane do polecenia; NMAKE nie je rozwinąć.  
-  
-## <a name="see-also"></a>Zobacz też  
- [Zawartość pliku reguł programu Make](../build/contents-of-a-makefile.md)
+
+NMAKE rozwija, nazwa_pliku symboli wieloznacznych (\* i?) w wierszach zależności. Symbol wieloznaczny określono za pomocą polecenia są przekazywane do polecenia; NMAKE nie je rozwinąć.
+
+## <a name="see-also"></a>Zobacz też
+
+[Zawartość pliku reguł programu Make](../build/contents-of-a-makefile.md)

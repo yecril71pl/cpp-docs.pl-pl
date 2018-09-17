@@ -16,12 +16,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1a1d2d710631c01a39b910e7d9b15f14179b3125
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: dcda07b5d2ab499a769c389538e8f272fd8441a6
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38965746"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45713171"
 ---
 # <a name="ltallocatorsgt"></a>&lt;Buforów&gt;
 
@@ -47,9 +47,10 @@ Alokatora jest klasa szablonu opisująca obiekt, który zarządza alokacją pami
 
 Allocators — są wszystkie szablony tego typu:
 
-`template<class` `Type` `>`
-
-`class allocator;`
+```cpp
+template<class Type>
+class allocator;
+```
 
 gdy argument szablonu `Type` jest typu zarządzanego przez to wystąpienie programu przydzielania. Standardowa biblioteka C++ zawiera domyślnego programu przydzielania, szablon klasy [alokatora](../standard-library/allocator-class.md), który jest zdefiniowany w [ \<pamięci >](../standard-library/memory.md). \<Buforów > Nagłówek zawiera następujący buforów:
 

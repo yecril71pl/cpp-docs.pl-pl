@@ -18,27 +18,30 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: af4a9f3d898d0087f0e8e861ccfe72e4adadb1de
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 0ce0a33ebb0b8b9ba34ac241c8335e9524dec08b
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32368918"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45715577"
 ---
 # <a name="allowbind"></a>/ALLOWBIND
-Określa, czy biblioteka DLL może być powiązana.  
-  
-```  
-  
-/ALLOWBIND[:NO]  
-```  
-  
-## <a name="remarks"></a>Uwagi  
- **/ALLOWBIND** opcji nieco ustawia w nagłówku biblioteki DLL, który wskazuje plikowi Bind.exe obraz może być powiązane. Powiązanie można zezwolić na obraz, aby załadować szybciej, gdy moduł ładujący nie rebase i wykonywać naprawy adresów dla każdej biblioteki DLL, do którego istnieje odwołanie. Nie ma Biblioteka DLL była związana, jeśli został cyfrowo podpisany — powiązanie unieważnia podpis. Powiązanie nie ma efektu Jeśli randomizacji układu przestrzeni adresowej (ASLR) jest włączona dla obrazu przy użyciu **/DYNAMICBASE** w wersjach systemu Windows, która obsługuje ASLR.  
-  
- Użyj **/ALLOWBIND:NO** aby zapobiec Bind.exe powiązanie biblioteki DLL.  
-  
- Aby uzyskać więcej informacji, zobacz [/ALLOWBIND](../../build/reference/allowbind-prevent-dll-binding.md) — opcja konsolidatora.  
-  
-## <a name="see-also"></a>Zobacz też  
- [Opcje EDITBIN](../../build/reference/editbin-options.md)
+
+Określa, czy biblioteka DLL może być powiązana.
+
+```
+
+/ALLOWBIND[:NO]
+```
+
+## <a name="remarks"></a>Uwagi
+
+**/ALLOWBIND** opcja ustawia bit w nagłówku biblioteki DLL, który wskazuje Bind.exe, że obraz może być powiązana. Powiązania umożliwiają obraz, aby ładować się szybciej, gdy moduł ładujący nie rebase i wykonywać naprawy adresów dla każdej biblioteki DLL, do którego istnieje odwołanie. Nie ma Biblioteka DLL była związana, jeśli jego została podpisana cyfrowo — powiązanie unieważnia podpis. Powiązania nie ma wpływu Jeśli randomizacji układu przestrzeni adresowej (ASLR) jest włączony dla obrazu za pomocą **opcja/DynamicBase** w wersjach systemu Windows, która obsługuje ASLR.
+
+Użyj **/ALLOWBIND:NO** aby zapobiec Bind.exe powiązanie biblioteki DLL.
+
+Aby uzyskać więcej informacji, zobacz [/ALLOWBIND](../../build/reference/allowbind-prevent-dll-binding.md) — opcja konsolidatora.
+
+## <a name="see-also"></a>Zobacz też
+
+[Opcje EDITBIN](../../build/reference/editbin-options.md)

@@ -40,12 +40,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0816a490a4375504168b11d8055ddbe41dae2109
-ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
+ms.openlocfilehash: 165dbf85e22a6f30089bbf1523068057b972b7e8
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "42464479"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45709335"
 ---
 # <a name="cmfcribbonslider-class"></a>Klasa CMFCRibbonSlider
 `CMFCRibbonSlider` Klasa implementuje kontrolkę suwaka, możesz dodać do paska Wstążki lub paska stanu wstążki. Kontrolka suwaka wstążki przypomina suwaki zoomu, które pojawiają się w aplikacjach pakietu Office 2007.  
@@ -112,8 +112,8 @@ CMFCRibbonSlider(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *nID*  
- Identyfikator suwaka.  
+*nID*<br/>
+[in] Identyfikator suwaka.  
   
  [in]. *nWidth*  
  Suwak szerokość w pikselach.  
@@ -207,11 +207,11 @@ void SetPos(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *npos —*  
- Określa pozycję, aby ustawić suwak. Pozycja jest określana względem początku suwaka.  
+*npos —*<br/>
+[in] Określa pozycję, aby ustawić suwak. Pozycja jest określana względem początku suwaka.  
   
- [in] *bRedraw*  
- W przypadku opcji TRUE suwak zostanie narysowany ponownie.  
+*bRedraw*<br/>
+[in] W przypadku opcji TRUE suwak zostanie narysowany ponownie.  
   
 ##  <a name="setrange"></a>  CMFCRibbonSlider::SetRange  
  Ustaw zakres wartości dla kontrolki suwaka.  
@@ -223,11 +223,11 @@ void SetRange(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *Nmin.*  
- Określa minimalną wartość suwaka.  
+*Nmin.*<br/>
+[in] Określa minimalną wartość suwaka.  
   
- [in] *nmaks.*  
- Określa maksymalną wartość suwaka.  
+*nmaks.*<br/>
+[in] Określa maksymalną wartość suwaka.  
   
 ### <a name="remarks"></a>Uwagi  
  Określa zakres wartości dla kontrolki suwaka, ustawiając wartości minimalne i maksymalne.  
@@ -251,8 +251,8 @@ void SetZoomIncrement(int nZoomIncrement);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *nZoomIncrement*  
- Określa zmiany wielkości kontrolki suwaka.  
+*nZoomIncrement*<br/>
+[in] Określa zmiany wielkości kontrolki suwaka.  
   
 ## <a name="see-also"></a>Zobacz też  
  [Diagram hierarchii](../../mfc/hierarchy-chart.md)   

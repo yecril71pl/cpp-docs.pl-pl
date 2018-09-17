@@ -17,53 +17,56 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 15379914b4c4852e3065d1abc03c2ce1b17fb044
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 859ea4091502fa6c339a809a5b9e439c91462bd7
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32377121"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45707770"
 ---
 # <a name="profile-performance-tools-profiler"></a>/PROFILE (Profiler narzędzi do oceny wydajności)
-Tworzy plik wyjściowy, który może być używany z profilerem narzędzi wydajności.  
-  
-## <a name="syntax"></a>Składnia  
-  
-```  
-/PROFILE  
-```  
-  
-## <a name="remarks"></a>Uwagi  
- PROFIL wymaga następujących opcji konsolidatora:  
-  
--   [/ OPT: REF](../../build/reference/opt-optimizations.md)  
-  
--   / OPT: NOICF  
-  
--   [/ INCREMENTAL: NO](../../build/reference/incremental-link-incrementally.md)  
-  
--   [/ FIXED: NO](../../build/reference/fixed-fixed-base-address.md)  
-  
- Profil powoduje, że konsolidator, aby wygenerować sekcji relokacji w obrazie programu.  Sekcja relokacji umożliwia profiler do przekształcania obraz programu do pobierania danych profilu.  
-  
- **/ PROFILE** tylko jest dostępna tylko w wersjach Enterprise (Programowanie zespołowe).  Aby uzyskać więcej informacji o PREfast, zobacz [analizy kodu dla C/C++ — omówienie](/visualstudio/code-quality/code-analysis-for-c-cpp-overview).  
-  
-### <a name="to-set-this-linker-option-in-the-visual-studio-development-environment"></a>Aby ustawić tę opcję konsolidatora w środowisku programowania Visual Studio  
-  
-1.  Otwórz projekt **strony właściwości** okno dialogowe. Aby uzyskać więcej informacji, zobacz [Praca z właściwościami projektu](../../ide/working-with-project-properties.md).  
-  
-2.  Rozwiń węzeł **właściwości konfiguracji** węzła.  
-  
-3.  Rozwiń węzeł **konsolidatora** węzła.  
-  
-4.  Wybierz **zaawansowane** strony właściwości.  
-  
-5.  Modyfikowanie **profilu** właściwości.  
-  
-### <a name="to-set-this-linker-option-programmatically"></a>Aby programowo ustawić tę opcję konsolidatora  
-  
-1.  Zobacz <xref:Microsoft.VisualStudio.VCProjectEngine.VCLinkerTool.Profile%2A>.  
-  
-## <a name="see-also"></a>Zobacz też  
- [Ustawianie opcji konsolidatora](../../build/reference/setting-linker-options.md)   
- [Opcje konsolidatora](../../build/reference/linker-options.md)
+
+Tworzy plik wyjściowy, który może służyć z profilerem narzędzi wydajności.
+
+## <a name="syntax"></a>Składnia
+
+```
+/PROFILE
+```
+
+## <a name="remarks"></a>Uwagi
+
+PROFIL wymaga następujących opcji konsolidatora:
+
+- [/ OPT: REF](../../build/reference/opt-optimizations.md)
+
+- / OPT: NOICF
+
+- [/ INCREMENTAL: NO](../../build/reference/incremental-link-incrementally.md)
+
+- [/ FIXED: NO](../../build/reference/fixed-fixed-base-address.md)
+
+PROFIL, powoduje, że konsolidator generuje sekcji relokacji w obrazie programu.  Relokacji umożliwia profiler do przekształcania obrazu programu, który można pobrać danych profilu.
+
+**/ PROFILE** tylko jest dostępna tylko w wersjach Enterprise (Projektowanie zespołowe).  Aby uzyskać więcej informacji na temat PREfast, zobacz [analiza kodu C/C++ — Przegląd](/visualstudio/code-quality/code-analysis-for-c-cpp-overview).
+
+### <a name="to-set-this-linker-option-in-the-visual-studio-development-environment"></a>Aby ustawić tę opcję konsolidatora w środowisku programowania Visual Studio
+
+1. Otwórz projekt **stron właściwości** okno dialogowe. Aby uzyskać więcej informacji, zobacz [Praca z właściwościami projektu](../../ide/working-with-project-properties.md).
+
+1. Rozwiń **właściwości konfiguracji** węzła.
+
+1. Rozwiń **konsolidatora** węzła.
+
+1. Wybierz **zaawansowane** stronę właściwości.
+
+1. Modyfikowanie **profilu** właściwości.
+
+### <a name="to-set-this-linker-option-programmatically"></a>Aby programowo ustawić tę opcję konsolidatora
+
+1. Zobacz <xref:Microsoft.VisualStudio.VCProjectEngine.VCLinkerTool.Profile%2A>.
+
+## <a name="see-also"></a>Zobacz też
+
+[Ustawianie opcji konsolidatora](../../build/reference/setting-linker-options.md)<br/>
+[Opcje konsolidatora](../../build/reference/linker-options.md)

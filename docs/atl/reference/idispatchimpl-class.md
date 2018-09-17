@@ -24,12 +24,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 878fa1f530a73a9d872a1b094d0ea0ee1b822971
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 81feb345c25ea1c1e9d15dba8dceebb7a2cdb418
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43756366"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45709803"
 ---
 # <a name="idispatchimpl-class"></a>Klasa IDispatchImpl
 
@@ -52,23 +52,23 @@ class ATL_NO_VTABLE IDispatchImpl : public T
 
 #### <a name="parameters"></a>Parametry
 
-[in] *T*  
-Podwójnego interfejsu.
+*T*<br/>
+[in] Podwójnego interfejsu.
 
-[in] *piid*  
-Wskaźnik do identyfikatora IID z *T*.
+*piid*<br/>
+[in] Wskaźnik do identyfikatora IID z *T*.
 
-[in] *plibid*  
-Wskaźnik do identyfikatora LIBID biblioteki typów, który zawiera informacje o interfejsie. Domyślnie jest przekazywany biblioteki typów na poziomie serwera.
+*plibid*<br/>
+[in] Wskaźnik do identyfikatora LIBID biblioteki typów, który zawiera informacje o interfejsie. Domyślnie jest przekazywany biblioteki typów na poziomie serwera.
 
-[in] *wMajor*  
-Wersja główna biblioteki typów. Domyślna wartość to 1.
+*wMajor*<br/>
+[in] Wersja główna biblioteki typów. Domyślna wartość to 1.
 
-[in] *wMinor*  
-Wersja pomocnicza biblioteki typów. Domyślna wartość wynosi 0.
+*wMinor*<br/>
+[in] Wersja pomocnicza biblioteki typów. Domyślna wartość wynosi 0.
 
-[in] *tihclass*  
-Klasa używana do zarządzania informacji o typie *T*. Domyślna wartość to `CComTypeInfoHolder`.
+*tihclass*<br/>
+[in] Klasa używana do zarządzania informacji o typie *T*. Domyślna wartość to `CComTypeInfoHolder`.
 
 ## <a name="members"></a>Elementy członkowskie
 

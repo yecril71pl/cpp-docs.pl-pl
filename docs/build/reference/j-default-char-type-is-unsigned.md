@@ -23,45 +23,48 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a93172296b0e2e6d54dc428ffc62812ad979b160
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 400985751d9ceebf7cc2c5f632cb33c5ba847bfe
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32374469"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45714288"
 ---
 # <a name="j-default-char-type-is-unsigned"></a>/J (Domyślny typ char nie jest podpisany)
-Zmienia domyślny `char` typu z `signed char` do `unsigned char`i `char` typu jest rozszerzony zero, gdy zostanie rozszerzone do `int` typu.  
-  
-## <a name="syntax"></a>Składnia  
-  
-```  
-/J  
-```  
-  
-## <a name="remarks"></a>Uwagi  
- Jeśli `char` wartość jest jawnie zadeklarowana jako `signed`, **/J** opcja nie dotyczy, a wartość jest znakiem, gdy zostanie rozszerzone do `int` typu.  
-  
- **/J** opcja definiuje `_CHAR_UNSIGNED`, który jest używany z `#ifndef` w pliku Limits.h — można określić domyślnego `char` typu.  
-  
- ANSI C i C++ nie wymagają określonej implementacji `char` typu. Ta opcja jest przydatna podczas pracy z danymi znaków, które po pewnym czasie przekształcania w innym języku niż angielski.  
-  
+
+Zmienia domyślny `char` typ z `signed char` do `unsigned char`i `char` typu jest rozszerzony zero, gdy zostanie rozszerzone do `int` typu.
+
+## <a name="syntax"></a>Składnia
+
+```
+/J
+```
+
+## <a name="remarks"></a>Uwagi
+
+Jeśli `char` wartość jest jawnie zadeklarowana jako `signed`, **/j.** opcji nie ma wpływu na jego, a wartość jest rozszerzona o znak, gdy zostanie rozszerzone do `int` typu.
+
+**/J.** opcja definiuje `_CHAR_UNSIGNED`, który jest używany z `#ifndef` w pliku LIMITS.h, aby zdefiniować zakres domyślnych `char` typu.
+
+ANSI C i C++ nie wymagają określonej implementacji `char` typu. Ta opcja jest przydatna podczas pracy z danymi znaku, który ostatecznie zostanie zamieniona na język inny niż angielski.
+
 > [!NOTE]
->  Jeśli używasz tej opcji kompilatora z ATL/MFC, może być wygenerowany błąd. Mimo że można wyłączyć ten błąd, definiując `_ATL_ALLOW_CHAR_UNSIGNED`, to rozwiązanie nie jest obsługiwana i może nie zawsze działać.  
-  
-### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Aby ustawić tę opcję kompilatora w środowisku programowania Visual Studio  
-  
-1.  W **Eksploratora rozwiązań**, otwórz menu skrótów projektu, a następnie wybierz pozycję **właściwości**.  
-  
-2.  W projekcie **strony właściwości** okno dialogowe, w lewym okienku w obszarze **właściwości konfiguracji**, rozwiń węzeł **C/C++** , a następnie wybierz **wiersza polecenia**.  
-  
-3.  W **dodatkowe opcje** okienka, określ **/J** — opcja kompilatora.  
-  
-### <a name="to-set-this-compiler-option-programmatically"></a>Aby programowo ustawić tę opcję kompilatora  
-  
--   Zobacz <xref:Microsoft.VisualStudio.VCProjectEngine.VCCLCompilerTool.DefaultCharIsUnsigned%2A>.  
-  
-## <a name="see-also"></a>Zobacz też  
- [Opcje kompilatora](../../build/reference/compiler-options.md)   
- [Ustawianie opcji kompilatora](../../build/reference/setting-compiler-options.md)   
- [Praca z właściwościami projektu](../../ide/working-with-project-properties.md)
+>  Jeśli używasz tej opcji kompilatora przy użyciu ATL/MFC, może być wygenerowany błąd. Mimo że można wyłączyć ten błąd, definiując `_ATL_ALLOW_CHAR_UNSIGNED`, to rozwiązanie nie jest obsługiwana i może czasem nie działać.
+
+### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Aby ustawić tę opcję kompilatora w środowisku programowania Visual Studio
+
+1. W **Eksploratora rozwiązań**, otwórz menu skrótów dla projektu, a następnie wybierz **właściwości**.
+
+1. W projekcie **stron właściwości** okno dialogowe, w okienku po lewej stronie w obszarze **właściwości konfiguracji**, rozwiń węzeł **C/C++** , a następnie wybierz **wiersza polecenia**.
+
+1. W **dodatkowe opcje** okienku określ **/j.** — opcja kompilatora.
+
+### <a name="to-set-this-compiler-option-programmatically"></a>Aby programowo ustawić tę opcję kompilatora
+
+- Zobacz <xref:Microsoft.VisualStudio.VCProjectEngine.VCCLCompilerTool.DefaultCharIsUnsigned%2A>.
+
+## <a name="see-also"></a>Zobacz też
+
+[Opcje kompilatora](../../build/reference/compiler-options.md)<br/>
+[Ustawianie opcji kompilatora](../../build/reference/setting-compiler-options.md)<br/>
+[Praca z właściwościami projektu](../../ide/working-with-project-properties.md)

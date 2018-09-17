@@ -1,5 +1,5 @@
 ---
-title: _InterlockedAdd — funkcje | Dokumentacja firmy Microsoft
+title: _Interlockedadd — funkcje wewnętrzne | Dokumentacja firmy Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -36,17 +36,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c06e2f2b490aacc424e1c8ad0d31c0011bcf989b
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 7607083a50d98a1b531d6ea45e04866f253a7dfb
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33333950"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45709530"
 ---
 # <a name="interlockedadd-intrinsic-functions"></a>_InterlockedAdd — funkcje wewnętrzne
 **Microsoft Specific**  
   
- Wykonaj dodatek atomic gwarantuje, że działanie zostało ukończone pomyślnie Jeśli wiele wątków mają dostęp do udostępnionego zmiennej.  
+ Wykonaj dodatek atomic gwarantuje, że operacja zakończy się pomyślnie po wielu wątków mają dostęp do udostępnionej zmiennej.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -86,18 +86,18 @@ __int64 _InterlockedAdd64_rel(
 ```  
   
 #### <a name="parameters"></a>Parametry  
- [w, out] `Addend`  
- Wskaźnik do liczby całkowitej w celu dodania do; zastępuje wynik operacji dodawania.  
+*Składnik dodawania*<br/>
+[out w] Wskaźnik do liczby całkowitej, która ma zostać dodany do; zastępuje wynik dodawania.  
   
- [in] `Value`  
- Wartość do dodania.  
+*Wartość*<br/>
+[in] Wartość do dodania.  
   
 ## <a name="return-value"></a>Wartość zwracana  
- Obie funkcje zwracają wynik operacji dodawania.  
+ Obie funkcje zwracają wynik dodawania.  
   
 ## <a name="requirements"></a>Wymagania  
   
-|— Wewnętrzne|Architektura|  
+|Wewnętrzne|Architektura|  
 |---------------|------------------|  
 |`_InterlockedAdd`|ARM|  
 |`_InterlockedAdd_acq`|ARM|  
@@ -108,10 +108,10 @@ __int64 _InterlockedAdd64_rel(
 |`_InterlockedAdd64_nf`|ARM|  
 |`_InterlockedAdd64_rel`|ARM|  
   
- **Plik nagłówka** \<intrin.h >  
+ **Plik nagłówkowy** \<intrin.h >  
   
 ## <a name="remarks"></a>Uwagi  
- Wersje tych funkcji z `_acq` lub `_rel` sufiksy wykonać blokowanego dodatku po semantyki pobierania lub wersji. Możliwość nabycia semantyki oznacza, że wynik operacji są stają się widoczne dla wszystkich wątków i procesorów przed wszystkie kolejne pamięci operacji odczytu i zapisu. Możliwość nabycia jest przydatne podczas wprowadzania sekcja krytyczna. Wydaj semantykę oznacza, że wszystkie pamięci odczyty i zapisy wymuszono można stają się widoczne dla wszystkich wątków i procesorów przed wynik operacji stają się widoczne sam. Wersja jest przydatne podczas opuszczania sekcja krytyczna. Funkcje wewnętrzne z `_nf` sufiks ("nie ogranicznika") nie działają jako bariery pamięci.  
+ Wersje tych funkcji `_acq` lub `_rel` sufiksy przeprowadzić Dodawanie blokowane, zgodnie z semantyką nabywania lub wersji. Uzyskiwanie oznacza semantyki wynik operacji są widoczne we wszystkich wątkach i procesorów przed wszystkie kolejne pamięci operacji odczytu i zapisu. Uzyskiwanie jest przydatne w przypadku wprowadzania sekcję krytyczną. Semantyka wydania oznacza, że wszystkie pamięci, odczytów i zapisów wymuszono były widoczne dla wszystkich wątków i procesorów, zanim wynik operacji stają się widoczne dla samego. Wersja jest przydatne podczas opuszczania sekcję krytyczną. Funkcje wewnętrzne z `_nf` sufiks ("nie ogranicznika") nie działają jako czynnik blokujący pamięci.  
   
  Te procedury są dostępne tylko jako funkcje wewnętrzne.  
   
@@ -173,7 +173,7 @@ ff0000000000 + ff0000ffffffff = ffff00ffffffff
 Return value: ffff00ffffffff  
 ```  
   
-**KOŃCOWY określonych firmy Microsoft**  
+**END specyficzny dla Microsoft**  
   
 ## <a name="see-also"></a>Zobacz też  
  [Funkcje wewnętrzne kompilatora](../intrinsics/compiler-intrinsics.md)   

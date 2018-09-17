@@ -14,21 +14,25 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e6b8e397fecc8f14140cd7c86217421d5aa1a749
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: d95434c51bdfca07e48714c8c1e13bcdb64dc02f
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32371401"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45716004"
 ---
 # <a name="developing-your-own-helper-function"></a>Tworzenie własnej funkcji Pomocnik
-Możesz podać wersji procedury w celu przetwarzania specyficznego dla opartych na nazwach biblioteki DLL lub importowania. Istnieją dwie metody w ten sposób: kodowania własnych, najlepiej jest oparta na podany kod lub tylko Przechwytywanie przekazana wersja przy użyciu punkty zaczepienia powiadomień szczegółowe wcześniej.  
-  
- Kod własne  
- Jest to dość proste, ponieważ zasadniczo służy podany kod przyjąć nowego. Oczywiście muszą stosować się do konwencji wywoływania i zwraca go do osadzenia generowanych przez konsolidator, musi zwracać wskaźnika prawidłowego funkcji. Raz w kodzie, możesz to zrobić bardzo dużo dowolne w celu zaspokojenia wywołania lub wykorzystanie wywołania.  
-  
- Używać do uruchamiania przetwarzania punktu zaczepienia powiadomień  
- Będzie ona prawdopodobnie łatwiej wystarczy podać nowe wskaźnika do funkcji punktów zaczepienia powiadomień dostarczone przez użytkownika, która odbiera takie same wartości jak pomocnika domyślnej na dliStartProcessing powiadomień. W tym momencie funkcji punktów zaczepienia zasadniczo mogą pełnić nowej funkcji pomocnika, jak pomyślnie powrotu do pomocniczego domyślne pomijał wszystkie dalsze przetwarzanie w pomocnika domyślne.  
-  
-## <a name="see-also"></a>Zobacz też  
- [Obsługa konsolidatora dla bibliotek DLL załadowanych z opóźnieniem](../../build/reference/linker-support-for-delay-loaded-dlls.md)
+
+Można podać własną wersję procedury w celu przetwarzania specyficznego na podstawie nazw biblioteki DLL lub importuje. Istnieją dwie metody to zrobić: kodowanie własny, prawdopodobnie oparte na podany kod lub jedynie Przechwytywanie przekazana wersja przy użyciu punkty zaczepienia powiadomień, szczegółowo wcześniej.
+
+## <a name="code-your-own"></a>Własnego kodu
+
+Jest to dość proste, ponieważ zasadniczo służy podany kod należy przyjąć nowego. Oczywiście muszą stosować się do konwencji wywoływania, a jeśli zwróci ona sekcje Thunk generowanych przez konsolidator, aplikacja musi zwracać wskaźnik odpowiednich funkcji. Jeden raz w kodzie, możesz tworzyć właściwie dowolnie aby spełniał wywołania lub uzyskiwać dostęp do najważniejszych wywołania.
+
+## <a name="use-the-start-processing-notification-hook"></a>Użyj rozpoczęcia przetwarzania punktu zaczepienia powiadomień
+
+Prawdopodobnie będzie łatwiej wystarczy podać nowy wskaźnik do funkcji punktów zaczepienia powiadomień dostarczone przez użytkownika, która otrzymuje te same wartości pomocnika domyślne na dliStartProcessing powiadomień. W tym momencie funkcja podłączania można zasadniczo stają się nową funkcję pomocnika pomyślne wróć do domyślnego elementu pomocniczego pomijał wszystkie dalsze przetwarzanie w Pomocniku domyślne.
+
+## <a name="see-also"></a>Zobacz też
+
+[Obsługa konsolidatora dla bibliotek DLL załadowanych z opóźnieniem](../../build/reference/linker-support-for-delay-loaded-dlls.md)

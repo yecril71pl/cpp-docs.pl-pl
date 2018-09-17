@@ -11,12 +11,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7e24997fa2eb6e6e5c3d8438b137e168c2f70b1f
-ms.sourcegitcommit: 9ad287c88bdccee2747832659fe50c2e5d682a0b
+ms.openlocfilehash: 7dfcf1839048f3c110bbca6754d1549161b63301
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/13/2018
-ms.locfileid: "39034741"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45716565"
 ---
 # <a name="arm64-exception-handling"></a>Obsługa wyjątków ARM64
 
@@ -129,7 +129,7 @@ Dla funkcji ramki łańcuchowa parę fp i lr można zapisać w dowolnym miejscu 
         sub    sp,#framesz-72           // allocate the remaining local area
     ```
 
-    Tylko r19 zapisane:
+   Tylko r19 zapisane:
 
     ```asm
         sub    sp, sp, #16              // reg save area allocation*
@@ -636,5 +636,5 @@ Uwaga: Indeks EpilogStart [4] wskazuje środka prologu unwind kodu (częściowo 
 
 ## <a name="see-also"></a>Zobacz także
 
-[Przegląd Konwencji ARM64 ABI](arm64-windows-abi-conventions.md)  
-[Obsługa wyjątków ARM](../build/arm-exception-handling.md)  
+[Przegląd Konwencji ARM64 ABI](arm64-windows-abi-conventions.md)<br/>
+[Obsługa wyjątków ARM](../build/arm-exception-handling.md)

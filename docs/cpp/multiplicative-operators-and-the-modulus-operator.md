@@ -25,12 +25,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a51544f1e367e1db0b5ae72948af68fbedfa7504
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: cc842aa40b732543c496bb209b4b163635a19bb1
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43209731"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45713861"
 ---
 # <a name="multiplicative-operators-and-the-modulus-operator"></a>Operatory mnożenia i Operator modulo
 ## <a name="syntax"></a>Składnia  
@@ -72,11 +72,13 @@ f / 0.0
 > [!NOTE]
 >  Ponieważ konwersje wykonywane przez operatory multiplikatywne nie przewidują warunków przepełnienia lub niedomiaru, informacje mogą zostać utracone, jeśli wynik operacji multiplikatywnej nie może być przedstawiony w typie operandów po konwersji.  
   
-## <a name="microsoft-specific"></a>Specyficzne dla firmy Microsoft  
- W Microsoft C++, wynik wyrażenia modulo jest zawsze taki sam, jak znak pierwszego operandu.  
-  
-**END specyficzny dla Microsoft**  
- Jeśli obliczone dzielenie dwóch liczb całkowitych jest niedokładne i tylko jeden argument jest liczbą ujemną, wynik jest największą liczbą całkowitą (w wielkości, pomijając znak), mniejszą niż dokładna wartość, którą dałaby operacja dzielenia. Na przykład, obliczona wartość -11 / 3 to-3.666666666. Wynik takiego dzielenia jest -3.  
+**Microsoft Specific**
+
+W Microsoft C++, wynik wyrażenia modulo jest zawsze taki sam, jak znak pierwszego operandu.
+
+**END specyficzny dla Microsoft**
+
+Jeśli obliczone dzielenie dwóch liczb całkowitych jest niedokładne i tylko jeden argument jest liczbą ujemną, wynik jest największą liczbą całkowitą (w wielkości, pomijając znak), mniejszą niż dokładna wartość, którą dałaby operacja dzielenia. Na przykład, obliczona wartość -11 / 3 to-3.666666666. Wynik takiego dzielenia jest -3.  
   
  Relacja między operatory multiplikatywne otrzymuje tożsamość (*e1* / *e2*) \* *e2*  +  *e1* % *e2* == *e1*.  
   

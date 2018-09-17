@@ -16,12 +16,12 @@ helpviewer_keywords:
 - std::swap (unordered_map/multimap)
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 76210e9ae860f8a7de0f22db2b7108e90e09e5be
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: 3a6d8a925f493a8299cf1afd8e851456277a68e9
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38965555"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45715523"
 ---
 # <a name="ltunorderedmapgt-functions"></a>&lt;unordered_map —&gt; funkcji
 
@@ -42,26 +42,26 @@ void swap(
 
 ### <a name="parameters"></a>Parametry
 
-*Key*  
- Typ klucza.
+*Key*<br/>
+Typ klucza.
 
-*Ty*  
- Typ mapowany.
+*Ty*<br/>
+Typ mapowany.
 
-*Skrót*  
- Typ obiektu funkcji mieszania.
+*Skrót*<br/>
+Typ obiektu funkcji mieszania.
 
-*P.*  
- Typ obiektu funkcji porównywania równości.
+*P.*<br/>
+Typ obiektu funkcji porównywania równości.
 
-*Alokacji*  
- Klasa alokatora.
+*Alokacji*<br/>
+Klasa alokatora.
 
-*left*  
- Pierwszy kontener do wymiany.
+*left*<br/>
+Pierwszy kontener do wymiany.
 
-*right*  
- Drugi kontener do wymiany.
+*right*<br/>
+Drugi kontener do wymiany.
 
 ### <a name="remarks"></a>Uwagi
 
@@ -136,26 +136,26 @@ void swap(
 
 ### <a name="parameters"></a>Parametry
 
-*Key*  
- Typ klucza.
+*Key*<br/>
+Typ klucza.
 
-*Ty*  
- Typ mapowany.
+*Ty*<br/>
+Typ mapowany.
 
-*Skrót*  
- Typ obiektu funkcji mieszania.
+*Skrót*<br/>
+Typ obiektu funkcji mieszania.
 
-*P.*  
- Typ obiektu funkcji porównywania równości.
+*P.*<br/>
+Typ obiektu funkcji porównywania równości.
 
-*Alokacji*  
- Klasa alokatora.
+*Alokacji*<br/>
+Klasa alokatora.
 
-*left*  
- Pierwszy kontener do wymiany.
+*left*<br/>
+Pierwszy kontener do wymiany.
 
-*right*  
- Drugi kontener do wymiany.
+*right*<br/>
+Drugi kontener do wymiany.
 
 ### <a name="remarks"></a>Uwagi
 

@@ -56,12 +56,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 243881a2ca18ba54e3a6c9cafee407f07746baca
-ms.sourcegitcommit: 6408139d5f5ff8928f056bde93d20eecb3520361
+ms.openlocfilehash: 5cbdb880c7165f314c004a7cbcad44dd3b76fd36
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37336988"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45709842"
 ---
 # <a name="cdoctemplate-class"></a>Cdoctemplate — klasa
 Abstrakcyjna klasa podstawowa definiująca podstawowe funkcje dla szablonów dokumentów.  
@@ -431,11 +431,11 @@ virtual CDocument* OpenDocumentFile(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *lpszPathName*  
- Wskaźnik do ścieżki pliku który zawiera dokument, który ma zostać otwarty.  
+*lpszPathName*<br/>
+[in] Wskaźnik do ścieżki pliku który zawiera dokument, który ma zostać otwarty.  
   
- [in] *bAddToMRU*  
- Wartość TRUE wskazuje, że dokument jest jeden z najnowszych plików; Wartość FALSE wskazuje, że dokument nie jest jednym z najbardziej aktualne pliki.  
+*bAddToMRU*<br/>
+[in] Wartość TRUE wskazuje, że dokument jest jeden z najnowszych plików; Wartość FALSE wskazuje, że dokument nie jest jednym z najbardziej aktualne pliki.  
   
 ### <a name="return-value"></a>Wartość zwracana  
  Wskaźnik do dokumentu, w których plik jest nazwany przez *lpszPathName*; Wartość NULL, jeśli nie powiedzie.  

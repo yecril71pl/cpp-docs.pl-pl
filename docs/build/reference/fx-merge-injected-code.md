@@ -22,67 +22,70 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 078019be2a1f818e9dd41acd3db2bced5fbda258
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 0bd95ea00a63f28f04874f873cf0a4e991fac0fc
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32373871"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45710524"
 ---
 # <a name="fx-merge-injected-code"></a>/Fx (Scalaj wprowadzony kod)
-Tworzy kopię każdego pliku źródłowego z wprowadzony kod scalone w źródle.  
-  
-## <a name="syntax"></a>Składnia  
-  
-```  
-/Fx  
-```  
-  
-## <a name="remarks"></a>Uwagi  
- Aby odróżnić plik źródłowy scalone z oryginalnego pliku źródłowego, **/Fx** dodaje rozszerzenie .mrg między nazwę pliku i rozszerzenie pliku. Na przykład plik o nazwie MyCode.cpp oparte na atrybutach kodem i skompilowanej za pomocą **/Fx** tworzy plik o nazwie MyCode.mrg.cpp zawierający następujący kod:  
-  
-```  
-//+++ Start Injected Code  
-[no_injected_text(true)];      // Suppress injected text, it has   
-                               // already been injected  
-#pragma warning(disable: 4543) // Suppress warnings about skipping   
-                               // injected text  
-#pragma warning(disable: 4199) // Suppress warnings from attribute   
-                               // providers  
-//--- End Injected Code  
-```  
-  
- W pliku .mrg kod, który zostało spowodowane z powodu atrybut będzie przecinkami w następujący sposób:  
-  
-```  
-//+++ Start Injected Code  
-...  
-//--- End Injected Code  
-```  
-  
- [No_injected_text](../../windows/no-injected-text.md) atrybutu jest osadzony w pliku .mrg, dzięki czemu dla kompilacji pliku .mrg bez tekstu jest reinjected.  
-  
- Należy pamiętać, że plik źródłowy .mrg ma być reprezentację kodu źródłowego wstrzyknięte przez kompilator. Plik .mrg nie może skompilować lub uruchom dokładnie jako oryginalnego pliku źródłowego.  
-  
- Makra nie zostaną rozwinięte w pliku .mrg.  
-  
- Jeśli program zawiera nagłówek pliku, która używa wprowadzony kod **/Fx** generuje. plik mrg.h dla tego nagłówka. **/FX** scalania nie ma plików, które nie korzystają z wprowadzony kod.  
-  
-### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Aby ustawić tę opcję kompilatora w środowisku programowania Visual Studio  
-  
-1.  Otwórz projekt **strony właściwości** okno dialogowe. Aby uzyskać więcej informacji, zobacz [Praca z właściwościami projektu](../../ide/working-with-project-properties.md).  
-  
-2.  Kliknij przycisk **C/C++** folderu.  
-  
-3.  Kliknij przycisk **pliki wyjściowe** strony właściwości.  
-  
-4.  Modyfikowanie **Rozwiń źródło przypisanych** właściwości.  
-  
-### <a name="to-set-this-compiler-option-programmatically"></a>Aby programowo ustawić tę opcję kompilatora  
-  
--   Zobacz <xref:Microsoft.VisualStudio.VCProjectEngine.VCCLCompilerTool.ExpandAttributedSource%2A>.  
-  
-## <a name="see-also"></a>Zobacz też  
- [Plik wyjściowy (/ F) opcje](../../build/reference/output-file-f-options.md)   
- [Opcje kompilatora](../../build/reference/compiler-options.md)   
- [Ustawianie opcji kompilatora](../../build/reference/setting-compiler-options.md)
+
+Tworzy kopię każdego pliku źródłowego z kodem scalane w źródle.
+
+## <a name="syntax"></a>Składnia
+
+```
+/Fx
+```
+
+## <a name="remarks"></a>Uwagi
+
+Aby rozróżnić pliku źródłowego scalone z oryginalnego pliku źródłowego **/Fx** dodanie rozszerzenia .mrg między nazwę pliku i rozszerzenie pliku. Na przykład plik o nazwie MyCode.cpp zawierające kod opartego na atrybutach i utworzonych za pomocą **/Fx** tworzy plik o nazwie MyCode.mrg.cpp zawierający następujący kod:
+
+```
+//+++ Start Injected Code
+[no_injected_text(true)];      // Suppress injected text, it has
+                               // already been injected
+#pragma warning(disable: 4543) // Suppress warnings about skipping
+                               // injected text
+#pragma warning(disable: 4199) // Suppress warnings from attribute
+                               // providers
+//--- End Injected Code
+```
+
+W pliku .mrg kod, który został wprowadzony ze względu na atrybut będzie rozdzielonych w następujący sposób:
+
+```
+//+++ Start Injected Code
+...
+//--- End Injected Code
+```
+
+[No_injected_text](../../windows/no-injected-text.md) atrybutu jest osadzony w pliku .mrg, który umożliwia kompilacji pliku .mrg bez tekstu jest reinjected.
+
+Należy pamiętać, że plik źródłowy .mrg ma być reprezentację kodu źródłowego, które są wstrzykiwane przez kompilator. Plik .mrg mogą kompilacji albo nie działać dokładnie jako oryginalnego pliku źródłowego.
+
+Makra nie zostaną rozwinięte w pliku .mrg.
+
+Jeśli program obejmuje pliku nagłówka, który używa wprowadzonego kodu **/Fx** generuje. mrg.h w pliku nagłówka. **/FX** scalania nie obejmuje pliki, które nie korzystają z kodem.
+
+### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Aby ustawić tę opcję kompilatora w środowisku programowania Visual Studio
+
+1. Otwórz projekt **stron właściwości** okno dialogowe. Aby uzyskać więcej informacji, zobacz [Praca z właściwościami projektu](../../ide/working-with-project-properties.md).
+
+1. Kliknij przycisk **C/C++** folderu.
+
+1. Kliknij przycisk **pliki wyjściowe** stronę właściwości.
+
+1. Modyfikowanie **rozwiń źródła opartego na atrybutach** właściwości.
+
+### <a name="to-set-this-compiler-option-programmatically"></a>Aby programowo ustawić tę opcję kompilatora
+
+- Zobacz <xref:Microsoft.VisualStudio.VCProjectEngine.VCCLCompilerTool.ExpandAttributedSource%2A>.
+
+## <a name="see-also"></a>Zobacz też
+
+[Plik wyjściowy (/ F) opcje](../../build/reference/output-file-f-options.md)
+[opcje kompilatora](../../build/reference/compiler-options.md)<br/>
+[Ustawianie opcji kompilatora](../../build/reference/setting-compiler-options.md)

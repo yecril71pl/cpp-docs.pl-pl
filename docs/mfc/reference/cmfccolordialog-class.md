@@ -32,12 +32,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6a1d5c2d7bb2da2ba293ac29a59948f80c1bed59
-ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
+ms.openlocfilehash: 3cf85ec6de81ca18f32b8cd6bea015341f78287c
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43680613"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45715367"
 ---
 # <a name="cmfccolordialog-class"></a>Klasa CMFCColorDialog
 `CMFCColorDialog` Klasa przedstawia okno dialogowe wyboru kolorów.  
@@ -125,17 +125,17 @@ CMFCColorDialog(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *clrInit*  
- Domyślny wybór kolorów. Jeśli nie określono wartości, wartość domyślna to RGB(0,0,0) (czarny).  
+*clrInit*<br/>
+[in] Domyślny wybór kolorów. Jeśli nie określono wartości, wartość domyślna to RGB(0,0,0) (czarny).  
   
- [in] *Flagidw*  
- (Zastrzeżone).  
+*Flagidw*<br/>
+[in] Zastrzeżone.
   
- [in] *pParentWnd*  
- Wskaźnik do okna nadrzędnego lub właściciela okno dialogowe.  
+*pParentWnd*<br/>
+[in] Wskaźnik do okna nadrzędnego lub właściciela okno dialogowe.  
   
- [in] *hPal*  
- Dojście do palety kolorów.  
+*hPal*<br/>
+[in] Dojście do palety kolorów.  
   
 ### <a name="return-value"></a>Wartość zwracana  
   
@@ -182,8 +182,8 @@ void SetCurrentColor(COLORREF rgb);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *rgb*  
- Wartości kolorów RGB  
+*rgb*<br/>
+[in] Wartości kolorów RGB  
   
 ### <a name="remarks"></a>Uwagi  
   
@@ -195,8 +195,8 @@ void SetNewColor(COLORREF rgb);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *rgb*  
- A [COLORREF](/windows/desktop/gdi/colorref) , który określa kolor RGB.  
+*rgb*<br/>
+[in] A [COLORREF](/windows/desktop/gdi/colorref) , który określa kolor RGB.  
   
 ### <a name="remarks"></a>Uwagi  
   
@@ -211,14 +211,14 @@ void SetPageOne(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *R*  
- Określa składnik czerwony wartości RGB.  
+*R*<br/>
+[in] Określa składnik czerwony wartości RGB.  
   
- [in] *G*  
- Określa składnik zielony wartości RGB.  
+*G*<br/>
+[in] Określa składnik zielony wartości RGB.  
   
- [in] *B*  
- Określa składnik niebieski wartości RGB.  
+*B*<br/>
+[in] Określa składnik niebieski wartości RGB.  
   
 ### <a name="remarks"></a>Uwagi  
   
@@ -233,14 +233,14 @@ void SetPageTwo(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *R*  
- Określa składnik czerwony wartości RGB  
+*R*<br/>
+[in] Określa składnik czerwony wartości RGB  
   
- [in] *G*  
- Określa składnik zielony wartości RGB  
+*G*<br/>
+[in] Określa składnik zielony wartości RGB  
   
- [in] *B*  
- Określa składnik niebieski wartości RGB  
+*B*<br/>
+[in] Określa składnik niebieski wartości RGB  
   
 ### <a name="remarks"></a>Uwagi  
   

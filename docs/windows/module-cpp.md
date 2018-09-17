@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: a119ebcccea3881d7b595e0581e23f53c656b91c
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: ac443927c2dcbb00cc01dd3cd63a95441a4a1bf0
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43200221"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45711818"
 ---
 # <a name="module-c"></a>moduł (C++)
 
@@ -52,8 +52,8 @@ Określa blok biblioteki w pliku .idl.
 
 ### <a name="parameters"></a>Parametry
 
-*Typ* (opcjonalnie)  
-Może to być jeden z następujących elementów:
+*Typ*  
+(Opcjonalnie) Może być jedną z następujących czynności:
 
 - `dll` Dodaje funkcje i klasy, które umożliwiają wynikowy DLL do działania jako serwer COM w procesie. Jest to wartość domyślna.
 
@@ -63,11 +63,11 @@ Może to być jeden z następujących elementów:
 
 - `unspecified` Wyłącza iniekcji kodu biblioteki ATL, powiązany z atrybutem modułu: iniekcji modułu ATL klas, _AtlModule globalnego wystąpienia i wpis punktu funkcji. Nie wyłącza iniekcji kodu biblioteki ATL z powodu innych atrybutów w projekcie.
 
-*Nazwa* (opcjonalnie)  
-Nazwa bloku biblioteki.
+*Nazwa*  
+(Opcjonalnie) Nazwa bloku biblioteki.
 
-*Wersja* (opcjonalnie)  
-Numer wersji, którą chcesz przypisać do bloku biblioteki. Wartość domyślna to 1.0.
+*Wersja*  
+(Opcjonalnie) Numer wersji, którą chcesz przypisać do bloku biblioteki. Wartość domyślna to 1.0.
 
 *uuid*  
 Unikatowy identyfikator dla biblioteki. Jeżeli pominięto ten parametr zostanie automatycznie wygenerowany identyfikator biblioteki. Musisz pobrać *uuid* bloku Biblioteka można wykonać przy użyciu identyfikatora **__uuidof (** *libraryname* **)**.
@@ -75,32 +75,32 @@ Unikatowy identyfikator dla biblioteki. Jeżeli pominięto ten parametr zostanie
 *lcid*  
 Parametr lokalizacji. Zobacz [lcid](/windows/desktop/Midl/lcid) Aby uzyskać więcej informacji.
 
-*Kontrolka* (opcjonalnie)  
-Określa, że wszystkie klasy coclass w bibliotece kontrolek.
+*control*  
+(Opcjonalnie) Określa, że wszystkie klasy coclass w bibliotece kontrolek.
 
 *helpstring*  
 Określa plik biblioteki typów.
 
-*helpstringdll —* (opcjonalnie)  
-Określa nazwę pliku .dll, aby wykonać wyszukiwanie ciągu dokumentu. Zobacz [helpstringdll —](/windows/desktop/Midl/helpstringdll) Aby uzyskać więcej informacji.
+*helpstringdll*  
+(Opcjonalnie) Określa nazwę pliku .dll, aby wykonać wyszukiwanie ciągu dokumentu. Zobacz [helpstringdll —](/windows/desktop/Midl/helpstringdll) Aby uzyskać więcej informacji.
 
-*HelpFile —* (opcjonalnie)  
-Nazwa **pomocy** pliku biblioteki typów.
+*helpfile*  
+(Opcjonalnie) Nazwa **pomocy** pliku biblioteki typów.
 
-*helpcontext —* (opcjonalnie)  
-**Identyfikator pomocy** dla tego typu biblioteki.
+*helpcontext*  
+(Opcjonalnie) **Identyfikator pomocy** dla tego typu biblioteki.
 
-*helpstringcontext —* (opcjonalnie)  
-Zobacz [helpstringcontext —](../windows/helpstringcontext.md) Aby uzyskać więcej informacji.
+*helpstringcontext*  
+(Opcjonalnie) Zobacz [helpstringcontext —](../windows/helpstringcontext.md) Aby uzyskać więcej informacji.
 
-*ukryte* (opcjonalnie)  
-Uniemożliwia wyświetlanie całej biblioteki. To obciążenie jest przeznaczony do użytku z formantami. Hosty muszą Utwórz nową bibliotekę typu, który opakowuje formant z rozszerzonych właściwości. Zobacz [ukryte](/windows/desktop/Midl/hidden) atrybutu MIDL, aby uzyskać więcej informacji.
+*hidden*  
+(Opcjonalnie) Uniemożliwia wyświetlanie całej biblioteki. To obciążenie jest przeznaczony do użytku z formantami. Hosty muszą Utwórz nową bibliotekę typu, który opakowuje formant z rozszerzonych właściwości. Zobacz [ukryte](/windows/desktop/Midl/hidden) atrybutu MIDL, aby uzyskać więcej informacji.
 
-*ograniczone* (opcjonalnie)  
-Elementy członkowskie biblioteki nie może być wywoływana arbitralnie. Zobacz [ograniczeniami](/windows/desktop/Midl/restricted) atrybutu MIDL, aby uzyskać więcej informacji.
+*restricted*  
+(Opcjonalnie) Elementy członkowskie biblioteki nie może być wywoływana arbitralnie. Zobacz [ograniczeniami](/windows/desktop/Midl/restricted) atrybutu MIDL, aby uzyskać więcej informacji.
 
-*niestandardowe* (opcjonalnie)  
-Co najmniej jeden atrybut; jest to podobne do [niestandardowe](../windows/custom-cpp.md) atrybutu. Pierwszy parametr *niestandardowe* jest identyfikatorem GUID atrybutu. Na przykład:
+*custom*  
+(Opcjonalnie) Co najmniej jeden atrybut; jest to podobne do [niestandardowe](../windows/custom-cpp.md) atrybutu. Pierwszy parametr *niestandardowe* jest identyfikatorem GUID atrybutu. Na przykład:
 
 ```
 [module(custom={guid,1}, custom={guid1,2})]

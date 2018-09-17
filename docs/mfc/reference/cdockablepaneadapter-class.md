@@ -24,12 +24,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 71d89020869db10b45688dbaae71f38711d2667c
-ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
+ms.openlocfilehash: 68534770419bd8d688c282b6d837c55983e33c27
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43676366"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45712078"
 ---
 # <a name="cdockablepaneadapter-class"></a>Klasa CDockablePaneAdapter
 Dodano obsługę dokującej `CWnd`-pochodnych okienek.  
@@ -90,14 +90,14 @@ virtual BOOL LoadState(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *lpszProfileName*  
- Nazwa profilu.  
+*lpszProfileName*<br/>
+[in] Nazwa profilu.  
   
- [in] *nIndex*  
- Indeks profilu.  
+*nIndex*<br/>
+[in] Indeks profilu.  
   
- [in] *uiID*  
- Identyfikator okienka.  
+*uiID*<br/>
+[in] Identyfikator okienka.  
   
 ### <a name="return-value"></a>Wartość zwracana  
   
@@ -114,14 +114,14 @@ virtual BOOL SaveState(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *lpszProfileName*  
- Nazwa profilu.  
+*lpszProfileName*<br/>
+[in] Nazwa profilu.  
   
- [in] *nIndex*  
- Indeks profilu (wartość domyślna to identyfikator formantu okna).  
+*nIndex*<br/>
+[in] Indeks profilu (wartość domyślna to identyfikator formantu okna).  
   
- [in] *uiID*  
- Identyfikator okienka.  
+*uiID*<br/>
+[in] Identyfikator okienka.  
   
 ### <a name="return-value"></a>Wartość zwracana  
   
@@ -135,8 +135,8 @@ virtual BOOL SetWrappedWnd(CWnd* pWnd);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *pWnd*  
- Wskaźnik do okna karty okienko do opakowania.  
+*pWnd*<br/>
+[in] Wskaźnik do okna karty okienko do opakowania.  
   
 ### <a name="return-value"></a>Wartość zwracana  
   

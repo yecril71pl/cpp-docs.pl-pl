@@ -1,5 +1,5 @@
 ---
-title: . DEF, pliki jako dane wejściowe konsolidatora | Dokumentacja firmy Microsoft
+title: . Pliki DEF — wejście konsolidatora | Dokumentacja firmy Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -15,16 +15,18 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f1e7828154501a067c6b236929a18c51724d3f6c
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 5afb165b33dfa7911e01c1c4368946fd91915a35
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32370530"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45710277"
 ---
 # <a name="def-files-as-linker-input"></a>Pliki .Def — Wejście konsolidatora
-Zobacz [pliki definicji modułu (.def)](../../build/reference/module-definition-dot-def-files.md) Aby uzyskać więcej informacji. Użyj [/DEF](../../build/reference/def-specify-module-definition-file.md) opcję, aby określić nazwę pliku .def.  
-  
-## <a name="see-also"></a>Zobacz też  
- [Pliki wyjściowe LINK](../../build/reference/link-input-files.md)   
- [Opcje konsolidatora](../../build/reference/linker-options.md)
+
+Zobacz [pliki definicji modułu (.def)](../../build/reference/module-definition-dot-def-files.md) Aby uzyskać więcej informacji. Użyj [/DEF](../../build/reference/def-specify-module-definition-file.md) opcję, aby określić nazwę pliku .def.
+
+## <a name="see-also"></a>Zobacz też
+
+[Pliki wejściowe LINK](../../build/reference/link-input-files.md)<br/>
+[Opcje konsolidatora](../../build/reference/linker-options.md)

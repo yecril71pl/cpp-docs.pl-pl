@@ -20,39 +20,42 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d360ad7264cb66da140df340bc9d281a329c26c2
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 69439400ec58e2d41ef0359237b30ea09c5fd170
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32375155"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45710076"
 ---
 # <a name="release-set-the-checksum"></a>/RELEASE (Ustaw sumę kontrolną)
-```  
-/RELEASE  
-```  
-  
-## <a name="remarks"></a>Uwagi  
- Opcja/Release ustawia sumę kontrolną w nagłówku pliku .exe.  
-  
- System operacyjny wymaga sumy kontrolnej dla sterowników urządzeń. Wartość sumy kontrolnej dla wersji sterowników w celu zapewnienia zgodności z przyszłych systemów operacyjnych.  
-  
- Opcja/Release jest domyślnie ustawiany podczas [/SUBSYSTEM:NATIVE](../../build/reference/subsystem-specify-subsystem.md) określono opcję.  
-  
-### <a name="to-set-this-linker-option-in-the-visual-studio-development-environment"></a>Aby ustawić tę opcję konsolidatora w środowisku programowania Visual Studio  
-  
-1.  Otwórz projekt **strony właściwości** okno dialogowe. Aby uzyskać więcej informacji, zobacz [Ustawianie właściwości projektu Visual C++](../../ide/working-with-project-properties.md).  
-  
-2.  Kliknij przycisk **konsolidatora** folderu.  
-  
-3.  Kliknij przycisk **zaawansowane** strony właściwości.  
-  
-4.  Modyfikowanie **wartość sumy kontrolnej** właściwości.  
-  
-### <a name="to-set-this-linker-option-programmatically"></a>Aby programowo ustawić tę opcję konsolidatora  
-  
--   Zobacz <xref:Microsoft.VisualStudio.VCProjectEngine.VCLinkerTool.SetChecksum%2A>.  
-  
-## <a name="see-also"></a>Zobacz też  
- [Ustawianie opcji konsolidatora](../../build/reference/setting-linker-options.md)   
- [Opcje konsolidatora](../../build/reference/linker-options.md)
+
+```
+/RELEASE
+```
+
+## <a name="remarks"></a>Uwagi
+
+Opcja/Release ustawia sumę kontrolną w nagłówku pliku .exe.
+
+System operacyjny wymaga sumę kontrolną dla sterowników urządzeń. Ustaw sumę kontrolną wersji sterowników urządzeń, aby zapewnić zgodność z systemami operacyjnymi przyszłości.
+
+Opcja/Release jest domyślnie ustawiany podczas [Subsystem](../../build/reference/subsystem-specify-subsystem.md) określono opcję.
+
+### <a name="to-set-this-linker-option-in-the-visual-studio-development-environment"></a>Aby ustawić tę opcję konsolidatora w środowisku programowania Visual Studio
+
+1. Otwórz projekt **stron właściwości** okno dialogowe. Aby uzyskać więcej informacji, zobacz [ustawienie właściwości projektu Visual C++](../../ide/working-with-project-properties.md).
+
+1. Kliknij przycisk **konsolidatora** folderu.
+
+1. Kliknij przycisk **zaawansowane** stronę właściwości.
+
+1. Modyfikowanie **Ustaw sumę kontrolną** właściwości.
+
+### <a name="to-set-this-linker-option-programmatically"></a>Aby programowo ustawić tę opcję konsolidatora
+
+- Zobacz <xref:Microsoft.VisualStudio.VCProjectEngine.VCLinkerTool.SetChecksum%2A>.
+
+## <a name="see-also"></a>Zobacz też
+
+[Ustawianie opcji konsolidatora](../../build/reference/setting-linker-options.md)<br/>
+[Opcje konsolidatora](../../build/reference/linker-options.md)

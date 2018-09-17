@@ -18,12 +18,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1fda6ac3336b1f2a5e910355b5460633916b0803
-ms.sourcegitcommit: d10a2382832373b900b1780e1190ab104175397f
+ms.openlocfilehash: 378d8e6b43a391c6d94c55b278bc71789981d9e3
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43894658"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45712377"
 ---
 # <a name="yl-inject-pch-reference-for-debug-library"></a>/Yl (Wprowadź odnośnik PCH dla bibliotek debugowania)
 
@@ -31,16 +31,16 @@ ms.locfileid: "43894658"
 
 ## <a name="syntax"></a>Składnia
 
->**/Yl**  
->**/Yl**_nazwy_  
->**/Yl-**  
+>**/Yl**
+> **/Yl**_nazwa_
+> **/Yl-**
 
 ### <a name="arguments"></a>Argumenty
 
-*Nazwa*  
+*Nazwa*<br/>
 Opcjonalna nazwa używana jako część unikatowy symbol.
 
-*\-*  
+*\-*<br/>
 Łączniki (-) wyraźnie wyłącza **/Yl** — opcja kompilatora.
 
 ## <a name="remarks"></a>Uwagi
@@ -75,5 +75,5 @@ Aby uzyskać więcej informacji na temat wstępnie skompilowanych nagłówków z
 
 ## <a name="see-also"></a>Zobacz także
 
-[Opcje kompilatora](../../build/reference/compiler-options.md)  
-[Ustawianie opcji kompilatora](../../build/reference/setting-compiler-options.md)  
+[Opcje kompilatora](../../build/reference/compiler-options.md)<br/>
+[Ustawianie opcji kompilatora](../../build/reference/setting-compiler-options.md)

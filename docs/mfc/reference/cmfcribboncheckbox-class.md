@@ -34,12 +34,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 97b143311f6326e938e9ac61175b02c82d3c8c2c
-ms.sourcegitcommit: 76fd30ff3e0352e2206460503b61f45897e60e4f
+ms.openlocfilehash: 44ccd0c1625e971fd74e913b9618d7f3ae811be5
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/13/2018
-ms.locfileid: "39027183"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45712496"
 ---
 # <a name="cmfcribboncheckbox-class"></a>Klasa CMFCRibbonCheckBox
 `CMFCRibbonCheckBox` Klasa implementuje pole wyboru, które można dodać do menu panelu, pasek narzędzi Szybki dostęp lub okna podręcznego wstążki.  
@@ -103,11 +103,11 @@ CMFCRibbonCheckBox(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *nID*  
- Określa identyfikator polecenia.  
+*nID*<br/>
+[in] Określa identyfikator polecenia.  
   
- [in] *lpszText*  
- Określa etykietę tekstową.  
+*lpszText*<br/>
+[in] Określa etykietę tekstową.  
   
 ### <a name="return-value"></a>Wartość zwracana  
  Tworzy obiekt pola wyboru wstążki.  
@@ -125,8 +125,8 @@ virtual CSize GetCompactSize(CDC* pDC);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *podstawowego kontrolera domeny*  
- Wskaźnik do przechwytywania zmian danych skojarzony z polem wyboru.  
+*podstawowego kontrolera domeny*<br/>
+[in] Wskaźnik do przechwytywania zmian danych skojarzony z polem wyboru.  
   
 ### <a name="return-value"></a>Wartość zwracana  
  Zwraca `CSize` obiekt, który zawiera compact rozmiar pola wyboru.  
@@ -142,8 +142,8 @@ virtual CSize GetIntermediateSize(CDC* pDC);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *podstawowego kontrolera domeny*  
- Wskaźnik do przechwytywania zmian danych skojarzonych z tego pola wyboru.  
+*podstawowego kontrolera domeny*<br/>
+[in] Wskaźnik do przechwytywania zmian danych skojarzonych z tego pola wyboru.  
   
 ### <a name="return-value"></a>Wartość zwracana  
  A `CSize` obiekt zawierający pośredni rozmiar pola wyboru.  
@@ -159,8 +159,8 @@ virtual CSize GetRegularSize(CDC* pDC);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *podstawowego kontrolera domeny*  
- Wskaźnik do obiektu przechwytywania zmian danych skojarzonych z tego pola wyboru.  
+*podstawowego kontrolera domeny*<br/>
+[in] Wskaźnik do obiektu przechwytywania zmian danych skojarzonych z tego pola wyboru.  
   
 ### <a name="return-value"></a>Wartość zwracana  
  Zwraca `CSize` obiekt, który zawiera zwykłego rozmiaru pola wyboru.  
@@ -188,8 +188,8 @@ virtual void OnDraw(CDC* pDC);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *podstawowego kontrolera domeny*  
- Wskaźnik do przechwytywania zmian danych, w której ma zostać Rysuj pole wyboru.  
+*podstawowego kontrolera domeny*<br/>
+[in] Wskaźnik do przechwytywania zmian danych, w której ma zostać Rysuj pole wyboru.  
   
 ### <a name="remarks"></a>Uwagi  
   
@@ -204,8 +204,8 @@ virtual BOOL OnDrawMenuImage(CDC*, CRect);
  [in] *Przechwytywania zmian danych**  
  Wskaźnik do przechwytywania zmian danych skojarzony z polem wyboru.  
   
- [in] *CRect*  
- A `CRect` określający prostokąta do rysowania obraz menu.  
+*CRect*<br/>
+[in] A `CRect` określający prostokąta do rysowania obraz menu.  
   
 ### <a name="return-value"></a>Wartość zwracana  
  Zwraca wartość TRUE, jeśli obraz, który został wystawiony, lub FAŁSZ, jeśli nie.  
@@ -227,23 +227,23 @@ virtual void OnDrawOnList(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *podstawowego kontrolera domeny*  
- Wskaźnik do kontekstu urządzenia, w której ma zostać Rysuj pole wyboru.  
+*podstawowego kontrolera domeny*<br/>
+[in] Wskaźnik do kontekstu urządzenia, w której ma zostać Rysuj pole wyboru.  
   
- [in] *strText*  
- Tekst wyświetlany.  
+*strText*<br/>
+[in] Tekst wyświetlany.  
   
- [in] *nTextOffset*  
- Odległość w pikselach, po lewej stronie pola listy do wyświetlania tekstu.  
+*nTextOffset*<br/>
+[in] Odległość w pikselach, po lewej stronie pola listy do wyświetlania tekstu.  
   
- [in] *rect*  
- Prostokąt wyświetlana dla tego pola wyboru.  
+*Rect*<br/>
+[in] Prostokąt wyświetlana dla tego pola wyboru.  
   
- [in] *bIsSelected*  
- Wartość TRUE, jeśli pole nie zostanie wybrane, lub FAŁSZ, jeśli nie.  
+*bIsSelected*<br/>
+[in] Wartość TRUE, jeśli pole nie zostanie wybrane, lub FAŁSZ, jeśli nie.  
   
- [in] *bHighlighted*  
- Wartość TRUE, jeśli pole wyboru jest wyróżniony, lub FAŁSZ, jeśli nie.  
+*bHighlighted*<br/>
+[in] Wartość TRUE, jeśli pole wyboru jest wyróżniony, lub FAŁSZ, jeśli nie.  
   
 ### <a name="remarks"></a>Uwagi  
   

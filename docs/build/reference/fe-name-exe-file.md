@@ -20,12 +20,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0afd8a863c9b8482e2b7f3868047845818bd2923
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: ad2683f79fdca845245fd266555e688aa8cf7374
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32377060"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45716238"
 ---
 # <a name="fe-name-exe-file"></a>/Fe (Nazwij plik EXE)
 
@@ -33,8 +33,7 @@ Określa nazwę i katalog dla pliku .exe lub DLL utworzony przez kompilator.
 
 ## <a name="syntax"></a>Składnia
 
-> **/Fe**[_pathname_]  
-> **/ Fe:** _nazwy ścieżki_  
+> **/Fe**[_pathname_] **/Fe:** _nazwy ścieżki_
 
 ### <a name="arguments"></a>Argumenty
 
@@ -43,19 +42,19 @@ Względna lub bezwzględna ścieżka i nazwa pliku podstawowego lub względna lu
 
 ## <a name="remarks"></a>Uwagi
 
-**/Fe** opcji można określić katalog wyjściowy, nazwa pliku wykonywalnego dla danych wyjściowych lub dla wygenerowanego pliku wykonywalnego. Jeśli *pathname* kończy się separatorem ścieżki (**&#92;**), zakłada się, aby określić do katalogu wyjściowego. W przeciwnym razie ostatni składnik *pathname* jest używana jako Nazwa podstawowego pliku wyjściowego, a pozostałe *pathname* katalog wyjściowy. Jeśli *pathname* nie ma żadnych separatorów ścieżek, zakłada się, aby określić nazwę pliku wyjściowego w bieżącym katalogu. *Pathname* musi być ujęta w cudzysłów (**"**) zawiera znaki, które nie mogą być w krótkiej ścieżki, takie jak spacje, rozszerzony znaków lub składników ścieżki więcej niż osiem znaków długie.
+**/Fe** opcja umożliwia określenie katalogu wyjściowego, danych wyjściowych, nazwę pliku wykonywalnego lub oba for wygenerowany plik wykonywalny. Jeśli *pathname* kończy się separatorem ścieżki (**&#92;**), zakłada się, aby określić do katalogu wyjściowego. W przeciwnym razie ostatni składnik *pathname* jest używana jako nazwa podstawowa pliku danych wyjściowych, a pozostała część *pathname* Określa katalog danych wyjściowych. Jeśli *pathname* nie ma żadnych separatorów ścieżki, zakłada się, aby określić nazwę pliku wyjściowego w bieżącym katalogu. *Pathname* muszą być ujęte w podwójny cudzysłów (**"**) jeśli zawiera on żadnych znaków, które nie mogą znajdować się w krótkich ścieżkę, taką jak spacje, rozszerzone znaki lub składników ścieżki więcej niż 8 znaków długo.
 
-Gdy **/Fe** nie określono opcji lub gdy plik podstawowy nazwa nie jest określona w *pathname*, kompilator zapewnia pliku wyjściowego domyślną nazwę podstawową nazwę pierwszego źródła lub obiektu określonego pliku w wierszu polecenia i rozszerzenie .exe lub dll.
+Gdy **/Fe** nie zostanie podana opcja lub gdy plik podstawowy nie określono nazwy w *pathname*, kompilator nadaje plikowi wyjściowemu domyślną nazwę przy użyciu podstawowej nazwy pierwszego źródła lub obiektu określonego pliku w wierszu polecenia i rozszerzenie .exe lub .dll.
 
 Jeśli określisz [/c (Kompiluj bez konsolidacji)](c-compile-without-linking.md) opcji **/Fe** nie ma wpływu.
 
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Aby ustawić tę opcję kompilatora w środowisku programowania Visual Studio
 
-1. Otwórz projekt **strony właściwości** okno dialogowe. Aby uzyskać więcej informacji, zobacz [Praca z właściwościami projektu](../../ide/working-with-project-properties.md).
+1. Otwórz projekt **stron właściwości** okno dialogowe. Aby uzyskać więcej informacji, zobacz [Praca z właściwościami projektu](../../ide/working-with-project-properties.md).
 
-1. Otwórz **właściwości konfiguracji** > **konsolidatora** > **ogólne** strony właściwości.
+1. Otwórz **właściwości konfiguracji** > **konsolidatora** > **ogólne** stronę właściwości.
 
-1. Modyfikowanie **pliku wyjściowego** właściwości. Wybierz **OK** Aby zapisać zmiany.
+1. Modyfikowanie **plik wyjściowy** właściwości. Wybierz **OK** Aby zapisać zmiany.
 
 ### <a name="to-set-this-compiler-option-programmatically"></a>Aby programowo ustawić tę opcję kompilatora
 
@@ -63,7 +62,7 @@ Jeśli określisz [/c (Kompiluj bez konsolidacji)](c-compile-without-linking.md)
 
 ## <a name="example"></a>Przykład
 
-Następujące polecenie w wierszu kompiluje i łączy wszystkie pliki źródłowe C w bieżącym katalogu. Wynikowy plik wykonywalny nosi nazwę PROCESS.exe i jest tworzone w katalogu "C:\Users\User Name\repos\My Project\bin".
+Następujące polecenie w wierszu kompiluje i łączy wszystkie pliki źródłowe C w bieżącym katalogu. Wynikowy plik wykonywalny nosi nazwę PROCESS.exe i jest tworzony w katalogu "C:\Users\User Name\repos\My Project\bin".
 
 ```
 CL /Fe"C:\Users\User Name\repos\My Project\bin\PROCESS" *.C
@@ -71,7 +70,7 @@ CL /Fe"C:\Users\User Name\repos\My Project\bin\PROCESS" *.C
 
 ## <a name="example"></a>Przykład
 
-Następujące polecenie w wierszu tworzy plik wykonywalny w `C:\BIN` o takiej samej nazwie podstawowej jako pierwszy pliku źródłowego w bieżącym katalogu:
+Następujące polecenie tworzy plik wykonywalny w `C:\BIN` o tej samej nazwie podstawowej jako pierwszego pliku źródłowego w bieżącym katalogu:
 
 ```
 CL /FeC:\BIN\ *.C

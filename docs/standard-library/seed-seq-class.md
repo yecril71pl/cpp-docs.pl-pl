@@ -24,16 +24,16 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8e466d8a176d5c4c7fd1e2250373b42ee263a6d4
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 2c4e86ff5ad4e1ebdba728202904324d9dc9e66f
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33856335"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45711753"
 ---
 # <a name="seedseq-class"></a>seed_seq — Klasa
 
-Przechowuje wektor wartości całkowitej bez znaku, zapewniających losowego inicjatora dla aparatu liczb losowych.
+Przechowuje wektor wartości liczb całkowitych bez znaku, które mogą dostarczać losowo siewnego dla silnika liczb losowych.
 
 ## <a name="syntax"></a>Składnia
 
@@ -68,34 +68,67 @@ public:
 
 ## <a name="types"></a>Types
 
-`typedef unsigned int result_type;` Typ elementów sekwencji inicjatora. Typ 32-bitowej liczby całkowitej bez znaku.
+```cpp
+typedef unsigned int result_type;
+```
+
+Typ elementów sekwencji inicjatora. Typ 32-bitowej nieoznaczonej liczby całkowitej.
 
 ## <a name="constructors"></a>Konstruktorów
 
-`seed_seq();` Domyślny konstruktor inicjuje ma pustą sekwencją wewnętrznego.
+```cpp
+seed_seq();
+```
 
-`template<class T>` `seed_seq(initializer_list<T> initlist);` Używa `initlist` można ustawić wewnętrzny sekwencji.
+Domyślny konstruktor, inicjuje ma pustą sekwencją wewnętrznego.
+
+```cpp
+template<class T>
+seed_seq(initializer_list<T> initlist);
+```
+
+Używa `initlist` można ustawić sekwencję wewnętrznych.
 `T` musi być typu integer.
 
-`template<class InputIterator>` `seed_seq(InputIterator begin, InputIterator end);` Inicjuje sekwencja wewnętrznej przy użyciu wszystkie elementy w zakresie wejściowych iteratora podane.
+```cpp
+template<class InputIterator>
+seed_seq(InputIterator begin, InputIterator end);
+```
+
+Inicjuje sekwencję wewnętrznych przy użyciu wszystkich elementów w zakresie iterator danych wejściowych, pod warunkiem.
 `iterator_traits<InputIterator>::value_type` musi być typu integer.
 
 ## <a name="members"></a>Elementy członkowskie
 
 ### <a name="generating-functions"></a>Generowanie funkcji
 
-`template<class RandomAccessIterator> void generate(RandomAccessIterator begin,          RandomAccessIterator end);` Wypełnia elementy sekwencja podana przy użyciu wewnętrznego algorytmu. Ten algorytm wpływ wewnętrzny sekwencji, z którym `seed_seq` został zainicjowany.
+```cpp
+template<class RandomAccessIterator>
+void generate(RandomAccessIterator begin,
+          RandomAccessIterator end);
+```
+
+Zostaną wyświetlone wszystkie elementy podanej sekwencji, za pomocą wewnętrznego algorytmu. Ten algorytm jest zależna od wewnętrznego sekwencji za pomocą którego `seed_seq` został zainicjowany.
 Nie robi nic, jeśli `begin == end`.
 
 ### <a name="property-functions"></a>Funkcje właściwości
 
-`size_t size() const;` Zwraca liczbę elementów w `seed_seq`.
+```cpp
+size_t size() const;
+```
 
-`template<class OutputIterator> void param(OutputIterator dest) const;` Kopiuje wewnętrzny sekwencji do iteratora dane wyjściowe `dest`.
+Zwraca liczbę elementów w `seed_seq`.
+
+```cpp
+template<class OutputIterator>
+void param(OutputIterator dest) const;
+```
+
+Kopiuje wewnętrznego sekwencji do iteratora wyjściowego `dest`.
 
 ## <a name="example"></a>Przykład
 
-Poniższy przykład kodu wykonuje trzy konstruktory i generuje dane wyjściowe z powstałe w ten sposób `seed_seq` wystąpienia po przypisaniu do tablicy. Na przykład, który używa `seed_seq` generatora liczb losowych zobacz [ \<losowe >](../standard-library/random.md).
+Poniższy kod wykonuje trzy konstruktory i generuje dane wyjściowe z wynikowy `seed_seq` wystąpień po przypisaniu do tablicy. Aby uzyskać przykład, który używa `seed_seq` generator liczb losowych widoczne [ \<losowy >](../standard-library/random.md).
 
 ```cpp
 #include <iostream>
@@ -164,14 +197,14 @@ Generating a sequence of 5 elements into an array:
 
 ## <a name="remarks"></a>Uwagi
 
-Funkcje elementów członkowskich tej klasy nie zgłaszają wyjątki.
+Funkcje Członkowskie tej klasy nie zgłaszają wyjątki.
 
 ## <a name="requirements"></a>Wymagania
 
-**Nagłówek:** \<losowe >
+**Nagłówek:** \<losowy >
 
-**Namespace:** Standard
+**Namespace:** standardowe
 
 ## <a name="see-also"></a>Zobacz także
 
-[\<losowe >](../standard-library/random.md)<br/>
+[\<losowy >](../standard-library/random.md)<br/>

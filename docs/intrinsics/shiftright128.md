@@ -16,12 +16,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0aa5b4028863ff31084e8d01892a86b990de51fb
-ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
+ms.openlocfilehash: 15c166f51e8d512dd0c5ef8d98bf1e6cf991664f
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "42465979"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45714210"
 ---
 # <a name="shiftright128"></a>__shiftright128
 **Microsoft Specific**  
@@ -39,14 +39,14 @@ unsigned __int64 __shiftright128(
 ```  
   
 #### <a name="parameters"></a>Parametry  
- [in] `LowPart`  
- Niski 64 bity ilość 128-bitowe przesunięcie.  
+*LowPart*<br/>
+[in] Niski 64 bity ilość 128-bitowe przesunięcie.  
   
- [in] `HighPart`  
- Wysoka 64 bity ilość 128-bitowe przesunięcie.  
+*HighPart*<br/>
+[in] Wysoka 64 bity ilość 128-bitowe przesunięcie.  
   
- [in] `Shift`  
- Liczba bitów, aby przesunąć.  
+*SHIFT*<br/>
+[in] Liczba bitów, aby przesunąć.  
   
 ## <a name="return-value"></a>Wartość zwracana  
  Niski 64 bity wyniku.  

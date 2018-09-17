@@ -54,12 +54,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 40e943fd6c03838c8c14e202026e10d3c7b22ace
-ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
+ms.openlocfilehash: ab793b8c758b95c259c717a794436b59057d4273
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/05/2018
-ms.locfileid: "37852943"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45712988"
 ---
 # <a name="cmfccolormenubutton-class"></a>Klasa CMFCColorMenuButton
 `CMFCColorMenuButton` Klasa obsługuje polecenie menu lub przycisku paska narzędzi, który uruchamia okno dialogowe próbnika kolorów.  
@@ -143,14 +143,14 @@ CMFCColorMenuButton(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *uiCmdID*  
- Identyfikator przycisku polecenia.  
+*uiCmdID*<br/>
+[in] Identyfikator przycisku polecenia.  
   
- [in] *lpszText*  
- Tekst przycisku.  
+*lpszText*<br/>
+[in] Tekst przycisku.  
   
- [in] *pPalette*  
- Wskaźnik do palety kolorów przycisku.  
+*pPalette*<br/>
+[in] Wskaźnik do palety kolorów przycisku.  
   
 ### <a name="return-value"></a>Wartość zwracana  
   
@@ -167,8 +167,8 @@ virtual void CopyFrom(const CMFCToolBarButton& src);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *src*  
- Przycisk źródła do skopiowania.  
+*src*<br/>
+[in] Przycisk źródła do skopiowania.  
   
 ### <a name="remarks"></a>Uwagi  
  Zastąpienie tej metody kopiuje obiekty, które są uzyskiwane z `CMFCColorMenuButton` obiektu.  
@@ -197,14 +197,14 @@ void EnableAutomaticButton(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *lpszLabel*  
- Określa tekst przycisku, który jest wyświetlany, gdy przycisk staje się automatyczne.  
+*lpszLabel*<br/>
+[in] Określa tekst przycisku, który jest wyświetlany, gdy przycisk staje się automatyczne.  
   
- [in] *colorAutomatic*  
- Określa nowe kolorowi automatycznemu.  
+*colorAutomatic*<br/>
+[in] Określa nowe kolorowi automatycznemu.  
   
- [in] *bWłączenie*  
- Określa, czy przycisk jest automatyczna.  
+*bWłączenie*<br/>
+[in] Określa, czy przycisk jest automatyczna.  
   
 ### <a name="remarks"></a>Uwagi  
  Przycisk Automatyczny dotyczy bieżący kolor domyślny.  
@@ -219,11 +219,11 @@ void EnableDocumentColors(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *lpszLabel*  
- Określa tekst przycisku.  
+*lpszLabel*<br/>
+[in] Określa tekst przycisku.  
   
- [in] *bWłączenie*  
- Prawda w celu wyświetlania kolorów specyficzne dla dokumentu lub wartość FALSE, aby wyświetlić kolory systemowe.  
+*bWłączenie*<br/>
+[in] Prawda w celu wyświetlania kolorów specyficzne dla dokumentu lub wartość FALSE, aby wyświetlić kolory systemowe.  
   
 ### <a name="remarks"></a>Uwagi  
  Ta metoda umożliwia wyświetlanie kolorów bieżącego dokumentu lub palety kolorów systemu, gdy użytkownik kliknie przycisk menu Kolor.  
@@ -239,14 +239,14 @@ void EnableOtherButton(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *lpszLabel*  
- Określa tekst przycisku.  
+*lpszLabel*<br/>
+[in] Określa tekst przycisku.  
   
- [in] *bAltColorDlg*  
- Określ wartość TRUE, aby wyświetlić `CMFCColorDialog` okno dialogowe, lub wartość FALSE, aby wyświetlić okno dialogowe Kolor standardowy system.  
+*bAltColorDlg*<br/>
+[in] Określ wartość TRUE, aby wyświetlić `CMFCColorDialog` okno dialogowe, lub wartość FALSE, aby wyświetlić okno dialogowe Kolor standardowy system.  
   
- [in] *bWłączenie*  
- Określ wartość PRAWDA, aby wyświetlić przycisk "other"; w przeciwnym razie wartość FALSE. Wartość domyślna to TRUE.  
+*bWłączenie*<br/>
+[in] Określ wartość PRAWDA, aby wyświetlić przycisk "other"; w przeciwnym razie wartość FALSE. Wartość domyślna to TRUE.  
   
 ### <a name="remarks"></a>Uwagi  
   
@@ -261,14 +261,14 @@ void EnableTearOff(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *uiID*  
- Określa identyfikator dla tego okienka odrywania.  
+*uiID*<br/>
+[in] Określa identyfikator dla tego okienka odrywania.  
   
- [in] *nVertDockColumns*  
- Określa liczbę kolumn w okienku kolorów w pionie zadokowany w stanie odrywania.  
+*nVertDockColumns*<br/>
+[in] Określa liczbę kolumn w okienku kolorów w pionie zadokowany w stanie odrywania.  
   
- [in] *nHorzDockRows*  
- Określa liczbę wierszy dla okienko poziomo zadokowanych kolorów w stanie odrywania.  
+*nHorzDockRows*<br/>
+[in] Określa liczbę wierszy dla okienko poziomo zadokowanych kolorów w stanie odrywania.  
   
 ### <a name="remarks"></a>Uwagi  
  Wywołaj tę metodę, aby włączyć funkcję "odrywania" dla tego okienka kolorów, które pojawia się po `CMFCColorMenuButton` naciśnięciu przycisku.  
@@ -306,8 +306,8 @@ static COLORREF GetColorByCmdID(UINT uiCmdID);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *uiCmdID*  
- Identyfikator polecenia.  
+*uiCmdID*<br/>
+[in] Identyfikator polecenia.  
   
 ### <a name="return-value"></a>Wartość zwracana  
  Kolor, który odpowiada identyfikator określonego polecenia.  
@@ -336,8 +336,8 @@ virtual void OnChangeParentWnd(CWnd* pWndParent);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *pWndParent*  
- Wskaźnik do nowego okna nadrzędnego.  
+*pWndParent*<br/>
+[in] Wskaźnik do nowego okna nadrzędnego.  
   
 ### <a name="remarks"></a>Uwagi  
   
@@ -357,29 +357,29 @@ virtual void OnDraw(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *podstawowego kontrolera domeny*  
- Wskaźnik do kontekstu urządzenia.  
+*podstawowego kontrolera domeny*<br/>
+[in] Wskaźnik do kontekstu urządzenia.  
   
- [in] *rect*  
- Prostokąt, który zakresem obszaru do narysowania.  
+*Rect*<br/>
+[in] Prostokąt, który zakresem obszaru do narysowania.  
   
- [in] *pImages*  
- Przejść do listy obrazami paska narzędzi.  
+*pImages*<br/>
+[in] Przejść do listy obrazami paska narzędzi.  
   
- [in] *bHorz*  
- Wartość TRUE, aby określić, że pasek narzędzi jest w stanie zadokowania poziomy; w przeciwnym razie wartość FALSE. Wartość domyślna to TRUE.  
+*bHorz*<br/>
+[in] Wartość TRUE, aby określić, że pasek narzędzi jest w stanie zadokowania poziomy; w przeciwnym razie wartość FALSE. Wartość domyślna to TRUE.  
   
- [in] *bCustomizeMode*  
- Wartość TRUE, aby określić, że aplikacja jest w trybie dostosowywania; w przeciwnym razie wartość FALSE. Wartość domyślna to FALSE.  
+*bCustomizeMode*<br/>
+[in] Wartość TRUE, aby określić, że aplikacja jest w trybie dostosowywania; w przeciwnym razie wartość FALSE. Wartość domyślna to FALSE.  
   
- [in] *bHighlight*  
- Wartość TRUE, aby określić, czy przycisk jest wyróżniony; w przeciwnym razie wartość FALSE. Wartość domyślna to FALSE.  
+*bHighlight*<br/>
+[in] Wartość TRUE, aby określić, czy przycisk jest wyróżniony; w przeciwnym razie wartość FALSE. Wartość domyślna to FALSE.  
   
- [in] *bDrawBorder*  
- Wartość TRUE, aby określić, czy jest wyświetlany obramowanie przycisku; w przeciwnym razie wartość FALSE. Wartość domyślna to TRUE.  
+*bDrawBorder*<br/>
+[in] Wartość TRUE, aby określić, czy jest wyświetlany obramowanie przycisku; w przeciwnym razie wartość FALSE. Wartość domyślna to TRUE.  
   
- [in] *bGrayDisabledButtons*  
- Wartość TRUE Określa, czy wyłączone przyciski są wygaszone (wyszarzony). w przeciwnym razie wartość FALSE. Wartość domyślna to TRUE.  
+*bGrayDisabledButtons*<br/>
+[in] Wartość TRUE Określa, czy wyłączone przyciski są wygaszone (wyszarzony). w przeciwnym razie wartość FALSE. Wartość domyślna to TRUE.  
   
 ### <a name="remarks"></a>Uwagi  
   
@@ -394,14 +394,14 @@ virtual int OnDrawOnCustomizeList(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *podstawowego kontrolera domeny*  
- Wskaźnik do kontekstu urządzenia.  
+*podstawowego kontrolera domeny*<br/>
+[in] Wskaźnik do kontekstu urządzenia.  
   
- [in] *rect*  
- Prostokąt, który granic przycisku do narysowania.  
+*Rect*<br/>
+[in] Prostokąt, który granic przycisku do narysowania.  
   
- [in] *bSelected*  
- Wartość TRUE Określa, czy przycisk jest w stanie wybrania.; w przeciwnym razie wartość FALSE.  
+*bSelected*<br/>
+[in] Wartość TRUE Określa, czy przycisk jest w stanie wybrania.; w przeciwnym razie wartość FALSE.  
   
 ### <a name="return-value"></a>Wartość zwracana  
  Szerokość przycisku.  
@@ -419,11 +419,11 @@ virtual BOOL OpenColorDialog(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *colorDefault*  
- Domyślny kolor, który wybrano w oknie dialogowym koloru.  
+*colorDefault*<br/>
+[in] Domyślny kolor, który wybrano w oknie dialogowym koloru.  
   
- [out] *colorRes*  
- Zwraca kolor, który użytkownik wybiera z okna dialogowego kolorów.  
+*colorRes*<br/>
+[out] Zwraca kolor, który użytkownik wybiera z okna dialogowego kolorów.  
   
 ### <a name="return-value"></a>Wartość zwracana  
  Wartość różną od zera, jeśli użytkownik wybierze nowy kolor; w przeciwnym razie, wartość zero.  
@@ -441,11 +441,11 @@ virtual void SetColor(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *clr*  
- Wartość koloru RGB.  
+*CLR*<br/>
+[in] Wartość koloru RGB.  
   
- [in] *bNotify*  
- Wartość TRUE, aby zastosować *clr* parametru kolor przycisku związanych z menu lub przycisku paska narzędzi; w przeciwnym razie wartość FALSE.  
+*bNotify*<br/>
+[in] Wartość TRUE, aby zastosować *clr* parametru kolor przycisku związanych z menu lub przycisku paska narzędzi; w przeciwnym razie wartość FALSE.  
   
 ### <a name="remarks"></a>Uwagi  
  Wywołaj tę metodę, aby zmienić kolor przycisku bieżący kolor. Jeśli *bNotify* parametr ma wartość różną od zera, kolor odpowiedni przycisk na wszelkie skojarzone okno podręczne menu lub pasek narzędzi zostanie zmieniona na kolor określony przez *clr* parametru.  
@@ -460,11 +460,11 @@ static void SetColorByCmdID(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *uiCmdID*  
- Identyfikator zasobu przycisk menu Kolor.  
+*uiCmdID*<br/>
+[in] Identyfikator zasobu przycisk menu Kolor.  
   
- [in] *kolorów*  
- Wartość koloru RGB.  
+*Kolor*<br/>
+[in] Wartość koloru RGB.  
   
 ##  <a name="setcolorname"></a>  CMFCColorMenuButton::SetColorName  
  Określa nową nazwę dla określonego koloru.  
@@ -476,11 +476,11 @@ static void SetColorName(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *kolorów*  
- Wartość RGB kolorów, których nazwa zmienia się.  
+*Kolor*<br/>
+[in] Wartość RGB kolorów, których nazwa zmienia się.  
   
- [in] *strName*  
- Nowa nazwa koloru.  
+*strName*<br/>
+[in] Nowa nazwa koloru.  
   
 ### <a name="remarks"></a>Uwagi  
   
@@ -492,8 +492,8 @@ void SetColumnsNumber(int nColumns);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *nColumns*  
- Liczba kolumn do wyświetlenia.  
+*nColumns*<br/>
+[in] Liczba kolumn do wyświetlenia.  
   
 ### <a name="remarks"></a>Uwagi  
   

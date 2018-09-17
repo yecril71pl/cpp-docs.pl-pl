@@ -16,19 +16,21 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9cf3e87a50362c770d45f00c4dc17ac3d264f611
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 29a2899d7dba0b34c0ac3319c253c8056912d883
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32380917"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45713820"
 ---
 # <a name="where-to-define-macros"></a>Miejsce definiowania makr
-Definiowanie makr w wierszu polecenia, pliku polecenia, pliku reguł programu make lub w pliku Tools.ini.  
-  
- W pliku reguł programu make lub plik Tools.ini każdej definicji makra musi występować w osobnym wierszu i nie może zaczynać się od spacji lub kartę. Spacji ani karty wokół znaku równości są ignorowane. Wszystkie [ciąg znaków](../build/defining-an-nmake-macro.md) są literału, łącznie z otaczającego cudzysłowy i spacje.  
-  
- W wierszu polecenia lub pliku polecenia spacje i tabulatory argumenty powinny one, a nie całe znaku równości. Jeśli `string` osadzone spacji ani karty, ujmij sam ciąg lub całe makro w podwójny cudzysłów ("").  
-  
-## <a name="see-also"></a>Zobacz też  
- [Definiowanie makro NMAKE](../build/defining-an-nmake-macro.md)
+
+Wiersz polecenia "," pliku poleceń "," pliku reguł programu make "lub" plik Tools.ini do definiowania makra.
+
+W pliku reguł programu make lub pliku Tools.ini Każda definicja makra musi znajdować się w osobnym wierszu, a nie może rozpoczynać się od spacji lub tabulatorów. Spacje lub tabulatory wokół znaku równości są ignorowane. Wszystkie [ciąg znaków](../build/defining-an-nmake-macro.md) są literału, łącznie z otaczającego znaki cudzysłowu i spacji osadzonych.
+
+W wierszu polecenia lub w pliku poleceń spacji od znaków tabulacji argumenty one, a nie całe znaku równości. Jeśli `string` zawierający osadzone spacje lub tabulatory, należy ująć sam ciąg lub całe makro w podwójnym cudzysłowie ("").
+
+## <a name="see-also"></a>Zobacz też
+
+[Definiowanie makro NMAKE](../build/defining-an-nmake-macro.md)

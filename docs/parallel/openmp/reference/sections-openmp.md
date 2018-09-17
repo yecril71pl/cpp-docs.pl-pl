@@ -17,15 +17,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 60bc94685a7e6128e22cc3545ae8702abe6d472e
-ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
+ms.openlocfilehash: d3b369cfbd68edd32b644c9a4ec0520329507b6e
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33692080"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45708035"
 ---
 # <a name="sections-openmp"></a>sekcje (OpenMP)
-Identyfikuje sekcji kodu do podzielony wszystkie wątki.  
+Identyfikuje sekcje kodu w celu podzielone między wszystkie wątki.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -39,14 +39,13 @@ Identyfikuje sekcji kodu do podzielony wszystkie wątki.
 }  
 ```  
   
+## <a name="arguments"></a>Argumenty
+
+*Klauzula*<br/>
+(Opcjonalnie) Zero lub więcej klauzul. Zobacz sekcję Spostrzeżenia, aby uzyskać listę klauzul obsługiwane przez **sekcje**.
+
 ## <a name="remarks"></a>Uwagi  
- w przypadku gdy  
-  
- `clause` (opcjonalnie)  
- Klauzule zero lub więcej. Zobacz sekcję uwag listę klauzule obsługiwane przez **sekcje**.  
-  
-## <a name="remarks"></a>Uwagi  
- **Sekcje** dyrektywa może zawierać zero lub więcej **sekcji** dyrektywy.  
+ **Sekcje** dyrektywy może zawierać zero lub więcej **sekcji** dyrektywy.  
   
  **Sekcje** dyrektywy obsługuje następujące klauzule OpenMP:  
   
@@ -60,9 +59,9 @@ Identyfikuje sekcji kodu do podzielony wszystkie wątki.
   
 -   [reduction](../../../parallel/openmp/reference/reduction.md)  
   
- Jeśli **równoległych** jest określona, `clause` może zostać klauzuli zaakceptowane przez **równoległych** lub **sekcje** dyrektywy, z wyjątkiem `nowait`.  
+ Jeśli **równoległe** również jest określony, `clause` mogą być klauzuli akceptowane przez **równoległe** lub **sekcje** dyrektyw, z wyjątkiem `nowait`.  
   
- Aby uzyskać więcej informacji, zobacz [2.4.2 — konstrukcja sekcji](../../../parallel/openmp/2-4-2-sections-construct.md).  
+ Aby uzyskać więcej informacji, zobacz [2.4.2 konstrukcja sections](../../../parallel/openmp/2-4-2-sections-construct.md).  
   
 ## <a name="example"></a>Przykład  
   

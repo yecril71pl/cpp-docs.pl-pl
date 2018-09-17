@@ -18,12 +18,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0a1e2b25330bd326ac32dbe1c1b8abcc37c89d09
-ms.sourcegitcommit: d10a2382832373b900b1780e1190ab104175397f
+ms.openlocfilehash: 8458462304a9b739c61997505724d21bb56763f6
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43894762"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45708674"
 ---
 # <a name="cl-command-files"></a>Pliki poleceń CL
 
@@ -37,25 +37,25 @@ Plik poleceń jest określona przez znak (**\@**) następuje filename; Nazwa pli
 
 Jeśli na przykład następujące polecenie znajduje się w pliku o nazwie Odp.:
 
-```  
+```
 /Og /link LIBC.LIB
-```  
+```
 
 i podaj polecenie CL:
 
-```  
+```
 CL /Ob2 @RESP MYAPP.C
-```  
+```
 
 polecenie, aby CL jest następująca:
 
-```  
+```
 CL /Ob2 /Og MYAPP.C /link LIBC.LIB
-```  
+```
 
 Należy pamiętać, efektywnie połączone w wierszu polecenia i polecenia w pliku poleceń.
 
 ## <a name="see-also"></a>Zobacz też
 
-[Ustawianie opcji kompilatora](../../build/reference/setting-compiler-options.md)
-[opcje kompilatora](../../build/reference/compiler-options.md)
+[Ustawianie opcji kompilatora](../../build/reference/setting-compiler-options.md)<br/>
+[Opcje kompilatora](../../build/reference/compiler-options.md)

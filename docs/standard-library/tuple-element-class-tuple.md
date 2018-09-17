@@ -16,12 +16,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3ae46a78484a2ee2737f3d949e525ce89d8401cd
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: 4fb89f479320287ff238517cc649f199e0081ffa
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38959072"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45716196"
 ---
 # <a name="tupleelement-class"></a>tuple_element — Klasa
 
@@ -66,22 +66,22 @@ template <class T1, class T2>
 
 ### <a name="parameters"></a>Parametry
 
-*Index*  
+*Index*<br/>
 Indeks elementu wyznaczonym.
 
-*Krotki*  
+*Krotki*<br/>
 Typ spójnej kolekcji.
 
-*Elem*  
+*Elem*<br/>
 Typ elementu tablicy.
 
-*Rozmiar*  
+*Rozmiar*<br/>
 Rozmiar tablicy.
 
-*T1*  
+*T1*<br/>
 Typ pierwszego elementu w parę.
 
-*T2*  
+*T2*<br/>
 Typ drugiego elementu w parze.
 
 ## <a name="remarks"></a>Uwagi
@@ -184,8 +184,14 @@ int main() {
 
 ## <a name="requirements"></a>Wymagania
 
-**Nagłówek:** \<krotki > **nagłówka:** \<tablicy > (dla specjalizacji tablicy) **nagłówka:** \<Narzędzia > (dla pary specjalizacje)  **Namespace:** standardowe
+**Nagłówek:** \<krotki >
+
+**Nagłówek:** \<array > (dla specjalizacji array)
+
+**Nagłówek:** \<Narzędzia > (dla pary specjalizacje)
+
+**Namespace:** standardowe
 
 ## <a name="see-also"></a>Zobacz także
 
-[krotki ](../standard-library/tuple-class.md)<br/>
+[Krotki ](../standard-library/tuple-class.md)<br/>

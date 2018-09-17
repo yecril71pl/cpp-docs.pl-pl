@@ -13,12 +13,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 625b99751c570c47456aad4903de5b8c4049ac42
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 72c312bdec9248cdc38150163d914b2ac7036ab8
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43207605"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45711090"
 ---
 # <a name="enum-class--c-component-extensions"></a>enum class (C++ Component Extensions)
 
@@ -101,11 +101,11 @@ Rozdzielana przecinkami lista identyfikatorów (moduły wyliczające), która zn
 *Nazwa*  
 Nazwa wyliczenia. Anonimowe wyliczenia zarządzane nie są dozwolone.
 
-*Typ* (opcjonalnie)  
-Typ podstawowy elementu *identyfikatory*. Może to być dowolny typ skalarne, takie jak podpisane lub niepodpisane wersje **int**, **krótki**, lub **długie**.  **wartość logiczna** lub **char** jest również dozwolony.
+*Typ*  
+(Opcjonalnie) Typ podstawowy elementu *identyfikatory*. Może to być dowolny typ skalarne, takie jak podpisane lub niepodpisane wersje **int**, **krótki**, lub **długie**.  **wartość logiczna** lub **char** jest również dozwolony.
 
-*var* (opcjonalnie)  
-Nazwa zmiennej typu wyliczenia.
+*var*  
+(Opcjonalnie) Nazwa zmiennej typu wyliczenia.
 
 ### <a name="remarks"></a>Uwagi
 

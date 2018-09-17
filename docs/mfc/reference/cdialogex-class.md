@@ -22,12 +22,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5d941b112047dc8f90a8cdc4686e422f028b6d7e
-ms.sourcegitcommit: 6408139d5f5ff8928f056bde93d20eecb3520361
+ms.openlocfilehash: a3fa9720e519336b39299e84e3061860f34cf24a
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37335961"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45716309"
 ---
 # <a name="cdialogex-class"></a>Klasa CDialogEx
 `CDialogEx` Klasa określa kolor tła i obraz tła okna dialogowego.  
@@ -90,17 +90,17 @@ CDialogEx(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *nIDTemplate*  
- Identyfikator zasobu szablonu okna dialogowego.  
+*nIDTemplate*<br/>
+[in] Identyfikator zasobu szablonu okna dialogowego.  
   
- [in] *lpszTemplateName*  
- Nazwa zasobu szablonu okna dialogowego.  
+*lpszTemplateName*<br/>
+[in] Nazwa zasobu szablonu okna dialogowego.  
   
- [in] *pParent*  
- Wskaźnik do okna nadrzędnego. Wartością domyślną jest NULL.  
+*pParent*<br/>
+[in] Wskaźnik do okna nadrzędnego. Wartością domyślną jest NULL.  
   
- [in] *pParentWnd*  
- Wskaźnik do okna nadrzędnego. Wartością domyślną jest NULL.  
+*pParentWnd*<br/>
+[in] Wskaźnik do okna nadrzędnego. Wartością domyślną jest NULL.  
   
 ### <a name="return-value"></a>Wartość zwracana  
   
@@ -116,11 +116,11 @@ void SetBackgroundColor(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *kolorów*  
- Wartość koloru RGB.  
+*Kolor*<br/>
+[in] Wartość koloru RGB.  
   
- [in] *bRepaint*  
- Wartość TRUE, aby natychmiast zaktualizować ekran; w przeciwnym razie wartość FALSE. Wartość domyślna to TRUE.  
+*bRepaint*<br/>
+[in] Wartość TRUE, aby natychmiast zaktualizować ekran; w przeciwnym razie wartość FALSE. Wartość domyślna to TRUE.  
   
 ### <a name="remarks"></a>Uwagi  
   
@@ -142,20 +142,20 @@ BOOL SetBackgroundImage(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *hBitmap*  
- Dojście do obrazu tła.  
+*hBitmap*<br/>
+[in] Dojście do obrazu tła.  
   
- [in] *uiBmpResId*  
- Identyfikator zasobu obrazu tła.  
+*uiBmpResId*<br/>
+[in] Identyfikator zasobu obrazu tła.  
   
- [in] *lokalizacji*  
- Jedną z `CDialogEx::BackgroundLocation` wartości, które określają lokalizację obrazu. Prawidłowe wartości to BACKGR_TILE, BACKGR_TOPLEFT, BACKGR_TOPRIGHT, BACKGR_BOTTOMLEFT i BACKGR_BOTTOMRIGHT. Wartość domyślna to BACKGR_TILE.  
+*Lokalizacja*<br/>
+[in] Jedną z `CDialogEx::BackgroundLocation` wartości, które określają lokalizację obrazu. Prawidłowe wartości to BACKGR_TILE, BACKGR_TOPLEFT, BACKGR_TOPRIGHT, BACKGR_BOTTOMLEFT i BACKGR_BOTTOMRIGHT. Wartość domyślna to BACKGR_TILE.  
   
- [in] *bAutoDestroy*  
- Wartość TRUE, aby automatycznie zniszczyć obrazu tła. w przeciwnym razie wartość FALSE.  
+*bAutoDestroy*<br/>
+[in] Wartość TRUE, aby automatycznie zniszczyć obrazu tła. w przeciwnym razie wartość FALSE.  
   
- [in] *bRepaint*  
- Wartość TRUE, aby natychmiast odświeżyć okno dialogowe; w przeciwnym razie wartość FALSE.  
+*bRepaint*<br/>
+[in] Wartość TRUE, aby natychmiast odświeżyć okno dialogowe; w przeciwnym razie wartość FALSE.  
   
 ### <a name="return-value"></a>Wartość zwracana  
  W drugiej metodzie przeciążenia składni, wartość TRUE jeśli metoda się powiedzie; w przeciwnym razie wartość FALSE.  

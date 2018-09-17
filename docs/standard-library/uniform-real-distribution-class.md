@@ -36,12 +36,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c9a9661bc61d59d6ca5b0aff1889a6bb736a1001
-ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
+ms.openlocfilehash: 24a750afa3f4cbc84b4fbfe306c1f97be23200d7
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44103230"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45710804"
 ---
 # <a name="uniformrealdistribution-class"></a>uniform_real_distribution — Klasa
 
@@ -200,13 +200,13 @@ explicit uniform_real_distribution(const param_type& parm);
 
 ### <a name="parameters"></a>Parametry
 
-*a*  
+*a*<br/>
 Dolna granica wartości losowych, włącznie.
 
-*b*  
+*b*<br/>
 Górna granica wartości losowych wyłączności.
 
-*parm*  
+*parm*<br/>
 `param_type` Struktura używana do konstruowania dystrybucji.
 
 ### <a name="remarks"></a>Uwagi
@@ -235,13 +235,13 @@ struct param_type {
 
 ### <a name="parameters"></a>Parametry
 
-*a*  
+*a*<br/>
 Dolna granica wartości losowych, włącznie.
 
-*b*  
+*b*<br/>
 Górna granica wartości losowych wyłączności.
 
-*right*  
+*right*<br/>
 `param_type` Obiekt do porównania z tym.
 
 ### <a name="remarks"></a>Uwagi

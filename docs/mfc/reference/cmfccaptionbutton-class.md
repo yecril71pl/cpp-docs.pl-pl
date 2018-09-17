@@ -34,12 +34,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 356aa3448c3912c1842d5e04c697fc86fc9714c0
-ms.sourcegitcommit: 6408139d5f5ff8928f056bde93d20eecb3520361
+ms.openlocfilehash: c3e9c9e5122e4bef7007a767fb3225483984e11d
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37338402"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45711688"
 ---
 # <a name="cmfccaptionbutton-class"></a>Klasa CMFCCaptionButton
 `CMFCCaptionButton` Klasa implementuje przycisk, który jest wyświetlany na pasku podpisu dla okienka dokowania lub okna mini ramki. Typowo szablon tworzy przyciski podpisu automatycznie.  
@@ -106,11 +106,11 @@ CMFCCaptionButton(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *nHit*  
- Polecenie skojarzone z nim.  
+*nHit*<br/>
+[in] Polecenie skojarzone z nim.  
   
- [in] *bLeftAlign*  
- Określa, czy przycisk jest wyrównany do lewej.  
+*bLeftAlign*<br/>
+[in] Określa, czy przycisk jest wyrównany do lewej.  
   
  Poniższa tabela zawiera listę możliwych wartości dla *nHit* parametru.  
   
@@ -161,11 +161,11 @@ virtual CMenuImages::IMAGES_IDS GetIconID(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *bHorz*  
- Wartość TRUE dla obrazu Strzałka w lewo lub w prawo identyfikatory; Wartość FALSE dla w górę lub dół obrazu strzałkę identyfikatorów.  
+*bHorz*<br/>
+[in] Wartość TRUE dla obrazu Strzałka w lewo lub w prawo identyfikatory; Wartość FALSE dla w górę lub dół obrazu strzałkę identyfikatorów.  
   
- [in] *bMaximized*  
- Wartość TRUE dla Identyfikatora obrazu Maksymalizuj; Wartość FALSE dla identyfikatora Minimalizuj obrazu.  
+*bMaximized*<br/>
+[in] Wartość TRUE dla Identyfikatora obrazu Maksymalizuj; Wartość FALSE dla identyfikatora Minimalizuj obrazu.  
   
 ### <a name="return-value"></a>Wartość zwracana  
  Identyfikator obrazu.  
@@ -221,11 +221,11 @@ void Move(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *ptTo*  
- Nowa lokalizacja.  
+*ptTo*<br/>
+[in] Nowa lokalizacja.  
   
- [in] *bHide*  
- Określa, czy wyświetlać przycisk.  
+*bHide*<br/>
+[in] Określa, czy wyświetlać przycisk.  
   
 ##  <a name="ondraw"></a>  CMFCCaptionButton::OnDraw  
  Rysuje przycisk paska tytułowego.  
@@ -240,20 +240,20 @@ virtual void OnDraw(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *podstawowego kontrolera domeny*  
- Wskaźnik do kontekstu urządzenia dla przycisku.  
+*podstawowego kontrolera domeny*<br/>
+[in] Wskaźnik do kontekstu urządzenia dla przycisku.  
   
- [in] *bWykonywanie aktywnych*  
- Określa, czy rysować obraz z aktywnego przycisku.  
+*bWykonywanie aktywnych*<br/>
+[in] Określa, czy rysować obraz z aktywnego przycisku.  
   
- [in] *bHorz*  
- Zarezerwowany do użytku w klasie pochodnej.  
+*bHorz*<br/>
+[in] Zarezerwowany do użytku w klasie pochodnej.  
   
- [in] *bMaximized*  
- Określa, czy rysować obraz przycisku w trybie zmaksymalizowanym.  
+*bMaximized*<br/>
+[in] Określa, czy rysować obraz przycisku w trybie zmaksymalizowanym.  
   
- [in] *bWyłączone*  
- Określa, czy rysować obraz z aktywny przycisk.  
+*bWyłączone*<br/>
+[in] Określa, czy rysować obraz z aktywny przycisk.  
   
 ### <a name="remarks"></a>Uwagi  
  *BMaximized* parametr jest używany, gdy przycisk ma Maksymalizuj lub minimize — przycisk.  
@@ -266,8 +266,8 @@ void SetMiniFramebutton(BOOL bSet = TRUE);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *bUstawienie*  
- Wartość TRUE dla wysokość paska tytułu mini; Wartość FALSE dla domyślna wysokość paska tytułu.  
+*bUstawienie*<br/>
+[in] Wartość TRUE dla wysokość paska tytułu mini; Wartość FALSE dla domyślna wysokość paska tytułu.  
   
 ## <a name="see-also"></a>Zobacz też  
  [Diagram hierarchii](../../mfc/hierarchy-chart.md)   

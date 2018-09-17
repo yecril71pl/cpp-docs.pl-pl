@@ -15,36 +15,38 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 29eeedbdc2eaccb753751082a38736fa239837b2
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: f2f4b984bcfe1aa89fd8e0229c7381c0d01f8685
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32367667"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45714617"
 ---
 # <a name="dot-directives"></a>Dyrektywy Dot
-Określ dyrektywy dot poza blokiem opis na początku wiersza. Dyrektywy dot rozpoczynać się kropką (. ) i są z dwukropkiem (:). Karty i spacje są dozwolone. Nazwy dyrektywy dot jest uwzględniana wielkość liter i wielkimi literami.  
-  
-|Dyrektywy|Cel|  
-|---------------|-------------|  
-|**. IGNORUJ:**|Ignoruje kody wyjścia niezerową zwracane przez polecenia od miejsca, jest określana na końcu pliku reguł programu make. Domyślnie NMAKE zostaje zatrzymana, jeśli polecenie zwróci kod zakończenia różną od zera. Aby przywrócić sprawdzanie błędów, użyj **! CMDSWITCHES**. Aby zignorować kod zakończenia polecenia, użyj modyfikatora kreski (-). Aby Ignoruj kody wyjścia dla całego pliku, użyj / I.|  
-|**. SZLACHETNYCH:** *elementów docelowych*|Zachowuje *cele* na dysku czy polecenia ich aktualizacji są zatrzymane; nie ma efektu Jeśli polecenie obsługi przerwań przez usunięcie pliku. Rozdziel nazwy docelowej z spacji lub kart. Domyślnie NMAKE usuwa element docelowy, jeśli kompilacja zostanie przerwana przez kombinację klawiszy CTRL + C lub CTRL + BREAK. Każdy stosowania **. CENNY** ma zastosowanie do całego pliku reguł programu make; kumulują się wielu specyfikacji.|  
-|**. CICHY:**|Pomija wyświetlanie wykonać poleceń od miejsca, jest określana na końcu pliku reguł programu make. Domyślnie NMAKE Wyświetla polecenia, które wywołuje. Aby przywrócić wyświetlania, należy użyć **! CMDSWITCHES**. Aby uniknąć wyświetlania pojedynczego polecenia, użyj **@** modyfikator. Aby uniknąć wyświetlania dla całego pliku, użyj/S.|  
-|**. SUFIKSY NAZW:** `list`|Lista rozszerzeń do dopasowania reguła wnioskowania; wstępnie zdefiniowane uwzględnienie następujących rozszerzeń: .exe .obj .asm .c .cpp .cxx .bas .cbl .for .pas .res .rc .f .f90|  
-  
- Aby zmienić **. SUFIKSY** listy kolejności lub aby określić nową listę, wyczyść listy i określ nowe ustawienie. Aby wyczyścić listę, należy określić Brak rozszerzeń po dwukropkiem:  
-  
-```  
-.SUFFIXES :  
-```  
-  
- Aby dodać dodatkowe sufiksy na końcu listy, określ  
-  
-```  
-.SUFFIXES : suffixlist  
-```  
-  
- gdzie *suffixlist* znajduje się lista sufiksów oddzielone spacjami lub kart. Aby wyświetlić bieżące ustawienie **. SUFIKSY**, uruchom NMAKE z/p.  
-  
-## <a name="see-also"></a>Zobacz też  
- [NMAKE — dokumentacja](../build/nmake-reference.md)
+
+Określ dyrektywy dot poza blokiem opis na początku wiersza. Dyrektywy dot rozpoczyna się kropką (. ) i następują dwukropek (:). Karty i spacje są dozwolone. Nazwy dyrektyw kropka jest uwzględniana wielkość liter i są wielkie litery.
+
+|— Dyrektywa|Cel|
+|---------------|-------------|
+|**. IGNORUJ:**|Ignoruje kody zakończenia różny od zera, zwracane przez polecenia z miejscem, w którym jest określony na końcu pliku reguł programu make. Domyślnie NMAKE przerywa, jeśli polecenie zwróci kod zakończenia różny od zera. Aby przywrócić, sprawdzanie błędów, należy użyć **! CMDSWITCHES**. Ignorowanie kodu wyjścia dla jednego polecenia, użyj modyfikatora kreski (-). Aby zignorować kody zakończenia dla całego pliku, użyj / I.|
+|**. METALI:** *elementów docelowych*|Zachowuje *cele* na dysku, jeśli te polecenia, aby je zaktualizować jest zatrzymany; nie ma wpływu Jeśli polecenie obsługuje przerwania poprzez usunięcie pliku. Rozdziel nazwy docelowego miejsca do magazynowania lub karty. Domyślnie NMAKE usuwa obiekt docelowy, jeśli kompilacja zostanie przerwana, CTRL + C lub CTRL + BREAK. Każde użycie **. CENNEGO** ma zastosowanie do całego pliku reguł programu make; kumulują wielu specyfikacji.|
+|**. CICHY:**|Pomija wyświetlanie wykonane polecenia z miejscem, w którym jest określony na końcu pliku reguł programu make. Domyślnie NMAKE wyświetlane polecenia, który ją wywołuje. Aby przywrócić, wyświetlania, należy użyć **! CMDSWITCHES**. Aby pominąć wyświetlania dla jednego polecenia, należy użyć **@** modyfikator. Aby pominąć wyświetlania dla całego pliku, użyj/S.|
+|**. SUFIKSY NAZW:** `list`|Wyświetla listę rozszerzeń, reguła wnioskowania dopasowanie; wstępnie zdefiniowane uwzględnienie następujących rozszerzeń: .exe .obj .asm .c .cpp .cxx .bas .cbl tego .pas .res .rc .f .f90|
+
+Aby zmienić **. SUFIKSY** listy kolejności lub aby określić nową listę, wyczyść listę, a następnie określ nowe ustawienie. Aby wyczyścić listę, należy określić Brak rozszerzeń po dwukropku:
+
+```
+.SUFFIXES :
+```
+
+Aby dodać dodatkowe sufiksy na końcu listy, określ
+
+```
+.SUFFIXES : suffixlist
+```
+
+gdzie *suffixlist* znajduje się lista sufiksów, rozdzielone spacjami lub karty. Aby wyświetlić bieżące ustawienie **. SUFIKSY**, uruchomienie NMAKE z/p.
+
+## <a name="see-also"></a>Zobacz też
+
+[NMAKE — dokumentacja](../build/nmake-reference.md)

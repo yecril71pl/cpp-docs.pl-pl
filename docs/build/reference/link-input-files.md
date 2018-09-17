@@ -1,5 +1,5 @@
 ---
-title: Pliki wejściowe łącze | Dokumentacja firmy Microsoft
+title: Pliki wejściowe LINK | Dokumentacja firmy Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -24,43 +24,45 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8d61a24916c3b56cf666a85483414f86753f7f59
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 5974914e736278ebb336b6814661845740855fe6
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32374830"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45710245"
 ---
 # <a name="link-input-files"></a>Pliki wyjściowe LINK
-Konsolidator dostarczać pliki zawierające obiekty, importowania i standardowych bibliotek zasobów, definicje modułów i dane wejściowe polecenia. ŁĄCZE nie używaj rozszerzeń plików umożliwia założenia dotyczące zawartości pliku. Zamiast tego łącza sprawdza, czy każdy plik wejściowy ustalenie, jakiego rodzaju pliku jest.  
-  
- Pliki obiektów w wierszu polecenia są przetwarzane w kolejności, w jakiej znajdują się w wierszu polecenia. Biblioteki są przeszukiwane w kolejności wiersza polecenia, a także z następujące ostrzeżenie: nierozpoznane symbole, które są podczas wprowadzenia w pliku obiektu z biblioteki są wyszukiwane w tej bibliotece najpierw, a następnie polecenie następujące biblioteki z wiersza polecenia i [/DEFAULTLIB (Określanie domyślnej biblioteki)](../../build/reference/defaultlib-specify-default-library.md) dyrektywy, a następnie do żadnych bibliotek na początku wiersza polecenia.  
-  
+
+Konsolidator udostępniać pliki, które zawierają obiekty, importu i standardowych bibliotek, zasobów, definicje modułów i polecenia dane wejściowe. ŁĄCZE nie używa rozszerzeń plików umożliwiają założeń dotyczących zawartości pliku. Zamiast tego łącza sprawdza, czy każdy plik wejściowy, aby ustalić, jakiego typu pliku jest.
+
+Pliki obiektów w wierszu polecenia są przetwarzane w kolejności, w jakiej znajdują się w wierszu polecenia. Biblioteki są przeszukiwane w kolejności wiersza polecenia, za pomocą następujące ostrzeżenie: symboli, które są nierozwiązane, kiedy łączy w pliku obiektu z biblioteki są wyszukiwane w tej bibliotece najpierw, a następnie polecenie następujące biblioteki z wiersza polecenia i [/DEFAULTLIB (Określanie domyślnej biblioteki)](../../build/reference/defaultlib-specify-default-library.md) dyrektywy, a następnie do żadnych bibliotek na początku wiersza polecenia.
+
 > [!NOTE]
->  ŁĄCZE nie będzie akceptował średnikiem (lub innego znaku) jako początku komentarz w plikach odpowiedzi i kolejność plików. Średnikami są rozpoznawane tylko jako początek komentarze w plikach definicji modułu (.def).  
-  
- ŁĄCZE korzysta z następujących typów plików wejściowych:  
-  
--   [pliki .obj](../../build/reference/dot-obj-files-as-linker-input.md)  
-  
--   [pliki modułu .netmodule](../../build/reference/netmodule-files-as-linker-input.md)  
-  
--   [.lib — pliki](../../build/reference/dot-lib-files-as-linker-input.md)  
-  
--   [.EXP — pliki](../../build/reference/dot-exp-files-as-linker-input.md)  
-  
--   [.def — pliki](../../build/reference/dot-def-files-as-linker-input.md)  
-  
--   [.pdb, pliki](../../build/reference/dot-pdb-files-as-linker-input.md)  
-  
--   [pliki .res](../../build/reference/dot-res-files-as-linker-input.md)  
-  
--   [.exe — pliki](../../build/reference/dot-exe-files-as-linker-input.md)  
-  
--   [pliki txt](../../build/reference/dot-txt-files-as-linker-input.md)  
-  
--   [.ilk — pliki](../../build/reference/dot-ilk-files-as-linker-input.md)  
-  
-## <a name="see-also"></a>Zobacz też  
- [Ustawianie opcji konsolidatora](../../build/reference/setting-linker-options.md)   
- [Opcje konsolidatora](../../build/reference/linker-options.md)
+>  LINK nie będzie akceptował średnikiem (lub jakikolwiek inny znak) jako początek komentarza w plikach odpowiedzi i kolejność plików. Średnikami są rozpoznawane tylko jako początek komentarze w plikach definicji modułu (.def).
+
+ŁĄCZE używa następujących typów plików wejściowych:
+
+- [pliki .obj](../../build/reference/dot-obj-files-as-linker-input.md)
+
+- [pliki .netmodule](../../build/reference/netmodule-files-as-linker-input.md)
+
+- [pliki .lib](../../build/reference/dot-lib-files-as-linker-input.md)
+
+- [.EXP — pliki](../../build/reference/dot-exp-files-as-linker-input.md)
+
+- [.def — pliki](../../build/reference/dot-def-files-as-linker-input.md)
+
+- [pliki .pdb](../../build/reference/dot-pdb-files-as-linker-input.md)
+
+- [pliki .res](../../build/reference/dot-res-files-as-linker-input.md)
+
+- [pliki .exe](../../build/reference/dot-exe-files-as-linker-input.md)
+
+- [pliki txt](../../build/reference/dot-txt-files-as-linker-input.md)
+
+- [.ilk — pliki](../../build/reference/dot-ilk-files-as-linker-input.md)
+
+## <a name="see-also"></a>Zobacz też
+
+[Ustawianie opcji konsolidatora](../../build/reference/setting-linker-options.md)<br/>
+[Opcje konsolidatora](../../build/reference/linker-options.md)

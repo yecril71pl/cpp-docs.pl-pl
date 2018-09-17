@@ -22,12 +22,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9e6ec22be873dcec06f224913eb905a2779e4efd
-ms.sourcegitcommit: d4c803bd3a684d7951bf88dcecf1f14af43ae411
+ms.openlocfilehash: dac2df26f393b7491d94abdb6d987a8e424723e1
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/10/2018
-ms.locfileid: "42466035"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45715562"
 ---
 # <a name="region-endregion"></a>region, endregion
 `#pragma region` Pozwala określić bloku kodu, który można rozwinąć lub zwinąć, korzystając z [konspekt funkcji](/visualstudio/ide/outlining) Edytor kodu programu Visual Studio.  
@@ -40,11 +40,11 @@ ms.locfileid: "42466035"
 ```  
   
 ### <a name="parameters"></a>Parametry  
-*komentarz* (opcjonalnie)  
-Komentarz, która będzie wyświetlana w edytorze kodu.  
+*Komentarz*  
+(Opcjonalnie) Komentarz, która będzie wyświetlana w edytorze kodu.  
   
-*Nazwa* (opcjonalnie)  
-Nazwa regionu.  Ta nazwa będzie wyświetlana w edytorze kodu.  
+*Nazwa*  
+(Opcjonalnie) Nazwa regionu.  Ta nazwa będzie wyświetlana w edytorze kodu.  
   
 ## <a name="remarks"></a>Uwagi  
  

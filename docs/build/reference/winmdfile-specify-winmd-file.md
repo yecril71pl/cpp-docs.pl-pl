@@ -14,34 +14,37 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4eaf1bfc805db568a012c28d66361bbd99745a95
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: bdea558f1c9a56e68a8e2e61703b92ea569a0629
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32375600"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45709894"
 ---
 # <a name="winmdfile-specify-winmd-file"></a>/WINMDFILE (określ plik winmd)
-Określa nazwę pliku dla pliku wyjściowego metadane środowiska wykonawczego systemu Windows (.winmd), który jest generowany przez [/WINMD](../../build/reference/winmd-generate-windows-metadata.md) — opcja konsolidatora.  
-  
-```  
-/WINMDFILE:filename  
-```  
-  
-## <a name="remarks"></a>Uwagi  
- Użyj wartości określonej w `filename` do przesłaniania domyślnej nazwy pliku winmd (`binaryname`winmd). Zwróć uwagę, że nie dodawaj "winmd" do `filename`.  Jeśli wiele wartości nie są wyświetlane na **/WINMDFILE** wiersza polecenia, pierwszeństwo ma ostatnio.  
-  
-### <a name="to-set-this-linker-option-in-the-visual-studio-development-environment"></a>Aby ustawić tę opcję konsolidatora w środowisku programowania Visual Studio  
-  
-1.  Otwórz projekt **strony właściwości** okno dialogowe. Aby uzyskać więcej informacji, zobacz [Praca z właściwościami projektu](../../ide/working-with-project-properties.md).  
-  
-2.  Wybierz **konsolidatora** folderu.  
-  
-3.  Wybierz **metadanych systemu Windows** strony właściwości.  
-  
-4.  W **pliku metadanych systemu Windows** wprowadź lokalizację pliku.  
-  
-## <a name="see-also"></a>Zobacz też  
- [/ WINMD (Generuj metadane systemu Windows)](../../build/reference/winmd-generate-windows-metadata.md)   
- [Ustawianie opcji konsolidatora](../../build/reference/setting-linker-options.md)   
- [Opcje konsolidatora](../../build/reference/linker-options.md)
+
+Określa nazwę pliku dla pliku wyjściowego metadanych środowiska wykonawczego Windows (winmd), który jest generowany przez [/WINMD](../../build/reference/winmd-generate-windows-metadata.md) — opcja konsolidatora.
+
+```
+/WINMDFILE:filename
+```
+
+## <a name="remarks"></a>Uwagi
+
+Użyj wartości, który jest określony w `filename` do przesłaniania domyślnej nazwy pliku winmd (`binaryname`winmd). Należy zauważyć, że nie dołączaj ".winmd" do `filename`.  Jeśli wiele wartości nie są wyświetlane na **/winmdfile** wiersza polecenia, ostatni z nich ma pierwszeństwo.
+
+### <a name="to-set-this-linker-option-in-the-visual-studio-development-environment"></a>Aby ustawić tę opcję konsolidatora w środowisku programowania Visual Studio
+
+1. Otwórz projekt **stron właściwości** okno dialogowe. Aby uzyskać więcej informacji, zobacz [Praca z właściwościami projektu](../../ide/working-with-project-properties.md).
+
+1. Wybierz **konsolidatora** folderu.
+
+1. Wybierz **metadanych Windows** stronę właściwości.
+
+1. W **plik metadanych Windows** wpisz lokalizację pliku.
+
+## <a name="see-also"></a>Zobacz też
+
+[/ WINMD (Generuj metadane Windows)](../../build/reference/winmd-generate-windows-metadata.md)
+[Ustawianie opcji konsolidatora](../../build/reference/setting-linker-options.md)<br/>
+[Opcje konsolidatora](../../build/reference/linker-options.md)

@@ -18,17 +18,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f6afd5349595f849e8b7418fa1efb628c200b4b6
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 03c38c5328500394871bee937cbc05395eb44cd5
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33332029"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45715510"
 ---
 # <a name="stosq"></a>__stosq
 **Microsoft Specific**  
   
- Generuje instrukcji ciągu magazynu (`rep stosq`).  
+ Generuje instrukcję ciągu magazynu (`rep stosq`).  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -41,27 +41,27 @@ void __stosb(
 ```  
   
 #### <a name="parameters"></a>Parametry  
- [out] `Dest`  
- Miejsce docelowe operacji.  
+*docelowy*<br/>
+[out] Lokalizacja docelowa wykonać operację.  
   
- [in] `Data`  
- Dane, które mają być przechowywane.  
+*Dane*<br/>
+[in] Dane, które mają być przechowywane.  
   
- [in] `Count`  
- Długość bloku quadwords do zapisu.  
+*Liczba*<br/>
+[in] Długość bloku wyrazy w liczbie mnogiej do zapisania.  
   
 ## <a name="requirements"></a>Wymagania  
   
-|— Wewnętrzne|Architektura|  
+|Wewnętrzne|Architektura|  
 |---------------|------------------|  
 |`__stosq`|AMD64|  
   
- **Plik nagłówka** \<intrin.h >  
+ **Plik nagłówkowy** \<intrin.h >  
   
 ## <a name="remarks"></a>Uwagi  
- Wynik jest to, że quadword `Data` są zapisywane w bloku `Count` quadwords w `Dest` ciągu.  
+ Wynik jest fakt, że quadword `Data` są zapisywane w bloku `Count` wyrazy w liczbie mnogiej w `Dest` ciągu.  
   
- Ta procedura jest dostępna tylko wewnętrznie.  
+ Ta procedura jest dostępna wyłącznie jako wewnętrzna.  
   
 ## <a name="example"></a>Przykład  
   
@@ -89,7 +89,7 @@ int main()
 0 ffffffffffff ffffffffffff 0  
 ```  
   
-**KOŃCOWY określonych firmy Microsoft**  
+**END specyficzny dla Microsoft**  
   
 ## <a name="see-also"></a>Zobacz też  
  [Funkcje wewnętrzne kompilatora](../intrinsics/compiler-intrinsics.md)

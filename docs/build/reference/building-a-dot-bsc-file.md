@@ -1,5 +1,5 @@
 ---
-title: Tworzenie. Pliku BSC | Dokumentacja firmy Microsoft
+title: Tworzenie. Plik BSC | Dokumentacja firmy Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -15,19 +15,21 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 43ba461eb869a8f9401bd022cfc8eb1bad9f44fb
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 7a090eeb67d065c797abcb978f058ffeaff4ac57
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32369009"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45714664"
 ---
 # <a name="building-a-bsc-file"></a>Kompilowanie pliku .Bsc
-BSCMAKE można utworzyć nowego pliku informacyjnego przeglądarki z plików SBR nowo utworzony. Można także utrzymać istniejący plik .bsc przy użyciu plików SBR dla obiekt plików, które uległy zmianie od czasu ostatniej kompilacji.  
-  
--   [Tworzenie pliku .sbr](../../build/reference/creating-an-dot-sbr-file.md)  
-  
--   [Sposób BSCMAKE kompiluje plik .bsc](../../build/reference/how-bscmake-builds-a-dot-bsc-file.md)  
-  
-## <a name="see-also"></a>Zobacz też  
- [BSCMAKE — dokumentacja](../../build/reference/bscmake-reference.md)
+
+BSCMAKE, można utworzyć nowego pliku przeglądania informacji z plików SBR nowo utworzony. Można także utrzymać istniejącego pliku .bsc przy użyciu plików SBR dla plików obiektów, które uległy zmianie od czasu ostatniej kompilacji.
+
+- [Tworzenie pliku .sbr](../../build/reference/creating-an-dot-sbr-file.md)
+
+- [W jaki sposób BSCMAKE kompiluje plik .bsc](../../build/reference/how-bscmake-builds-a-dot-bsc-file.md)
+
+## <a name="see-also"></a>Zobacz też
+
+[BSCMAKE — dokumentacja](../../build/reference/bscmake-reference.md)

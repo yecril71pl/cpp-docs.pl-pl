@@ -12,12 +12,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e4ce0ef6ba923332d03972e2bd8b7ebb1f1cfb9e
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 2251aefebd6805cfd071d014ad6be30cbea065bb
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43205706"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45711233"
 ---
 # <a name="arm-exception-handling"></a>Obsługa wyjątków ARM
 
@@ -175,26 +175,26 @@ Format upakowaną odwijania jest niewystarczający do opisania rozwinięcia funk
 1. Nagłówek 1 lub 2-programu word opisujący całkowity rozmiar struktury .xdata i dostarcza danych kluczowa funkcja. Drugi word jest obecny tylko, jeśli *liczba epilogu* i *wyrazów* pola są ustawione na 0. Pola są podzielone w tej tabeli:
 
    |Word|Bity|Cel|
-    |----------|----------|-------------|
-    |0|0-17|*Funkcja długość* jest pole 18-bitowe, które wskazuje całkowita długość tej funkcji w bajtach, podzielonej przez 2. Jeśli funkcja jest większa niż 512 KB, wiele rekordów .pdata i .xdata musi używane do opisywania tej funkcji. Aby uzyskać szczegółowe informacje Zobacz sekcję długie funkcje, w tym dokumencie.|
-    |0|18-19|*Sterowniki* jest polem 2-bitowy, opisujący wersję pozostałe xdata. Wersja 0 jest obecnie zdefiniowany; wartości 1-3 są zastrzeżone.|
-    |0|20|*X* jest polem 1-bitowego, który wskazuje obecność (1) lub dane wyjątku braku (0).|
-    |0|21|*E* jest polem 1-bitowego, która wskazuje, że w nagłówku (1) zawiera informacje opisujące pojedynczego epilogu zamiast konieczności dodatkowego zakresu wyrazów nowszej (0).|
-    |0|22|*F* jest polem 1-bitowego, która wskazuje, czy ten rekord zawiera opis fragmentu — funkcja (1) lub pełne działanie (0). Fragment oznacza, że nie istnieje żadne prologu i całego procesu przetwarzania prologu mają być ignorowane.|
-    |0|23-27|*Liczba epilogu* jest polem 5-bitowy, który ma dwa znaczenia, w zależności od stanu *E* bitowych:<br /><br /> -Jeśli *E* wynosi 0, to pole jest liczba całkowita liczba zakresów wyjątek opisane w sekcji 3. Jeśli istnieje więcej niż 31-zakresami, w funkcji, a następnie tego pola i *wyrazów* pola musi mieć wartość 0 Aby wskazać, że wymagane jest rozszerzenie programu word.<br />-Jeśli *E* wynosi 1, w tym polu określa indeks pierwszego kodu odwijania, który opisuje tylko epilogu.|
-    |0|28-31|*Wyrazy kodu* pole 4-bitowy, określający liczbę wyrazów 32-bitowe muszą zawierać wszystkie kody unwind w sekcji 4. Jeśli więcej niż 15 wyrazy są wymagane dla więcej niż 63 unwind bajty kodu, w tym polu i *liczba epilogu* pola musi mieć wartość 0 Aby wskazać, że wymagane jest rozszerzenie programu word.|
-    |1|0-15|*Rozszerzony liczba epilogu* jest polem 16-bitowych, który zapewnia więcej miejsca na potrzeby kodowania niezwykle dużą liczbę epilogues. Słowo rozszerzenia, które zawiera to pole jest obecny tylko, jeśli *liczba epilogu* i *wyrazów* pól w pierwszy wyraz nagłówka są ustawione na 0.|
-    |1|16-23|*Rozszerzony wyrazów* jest pole 8-bitowych, które udostępnia więcej miejsca do kodowania niezwykle dużą liczbę wyrazów unwind. Słowo rozszerzenia, które zawiera to pole jest obecny tylko, jeśli *liczba epilogu* i *wyrazów* pól w pierwszy wyraz nagłówka są ustawione na 0.|
-    |1|24-31|Zastrzeżone|
+   |----------|----------|-------------|
+   |0|0-17|*Funkcja długość* jest pole 18-bitowe, które wskazuje całkowita długość tej funkcji w bajtach, podzielonej przez 2. Jeśli funkcja jest większa niż 512 KB, wiele rekordów .pdata i .xdata musi używane do opisywania tej funkcji. Aby uzyskać szczegółowe informacje Zobacz sekcję długie funkcje, w tym dokumencie.|
+   |0|18-19|*Sterowniki* jest polem 2-bitowy, opisujący wersję pozostałe xdata. Wersja 0 jest obecnie zdefiniowany; wartości 1-3 są zastrzeżone.|
+   |0|20|*X* jest polem 1-bitowego, który wskazuje obecność (1) lub dane wyjątku braku (0).|
+   |0|21|*E* jest polem 1-bitowego, która wskazuje, że w nagłówku (1) zawiera informacje opisujące pojedynczego epilogu zamiast konieczności dodatkowego zakresu wyrazów nowszej (0).|
+   |0|22|*F* jest polem 1-bitowego, która wskazuje, czy ten rekord zawiera opis fragmentu — funkcja (1) lub pełne działanie (0). Fragment oznacza, że nie istnieje żadne prologu i całego procesu przetwarzania prologu mają być ignorowane.|
+   |0|23-27|*Liczba epilogu* jest polem 5-bitowy, który ma dwa znaczenia, w zależności od stanu *E* bitowych:<br /><br /> -Jeśli *E* wynosi 0, to pole jest liczba całkowita liczba zakresów wyjątek opisane w sekcji 3. Jeśli istnieje więcej niż 31-zakresami, w funkcji, a następnie tego pola i *wyrazów* pola musi mieć wartość 0 Aby wskazać, że wymagane jest rozszerzenie programu word.<br />-Jeśli *E* wynosi 1, w tym polu określa indeks pierwszego kodu odwijania, który opisuje tylko epilogu.|
+   |0|28-31|*Wyrazy kodu* pole 4-bitowy, określający liczbę wyrazów 32-bitowe muszą zawierać wszystkie kody unwind w sekcji 4. Jeśli więcej niż 15 wyrazy są wymagane dla więcej niż 63 unwind bajty kodu, w tym polu i *liczba epilogu* pola musi mieć wartość 0 Aby wskazać, że wymagane jest rozszerzenie programu word.|
+   |1|0-15|*Rozszerzony liczba epilogu* jest polem 16-bitowych, który zapewnia więcej miejsca na potrzeby kodowania niezwykle dużą liczbę epilogues. Słowo rozszerzenia, które zawiera to pole jest obecny tylko, jeśli *liczba epilogu* i *wyrazów* pól w pierwszy wyraz nagłówka są ustawione na 0.|
+   |1|16-23|*Rozszerzony wyrazów* jest pole 8-bitowych, które udostępnia więcej miejsca do kodowania niezwykle dużą liczbę wyrazów unwind. Słowo rozszerzenia, które zawiera to pole jest obecny tylko, jeśli *liczba epilogu* i *wyrazów* pól w pierwszy wyraz nagłówka są ustawione na 0.|
+   |1|24-31|Zastrzeżone|
 
 2. Po dane wyjątku (Jeśli *E* bit w nagłówku został ustawiony na 0) znajduje się lista informacji o zakresach epilogu, które są pakowane do programu word i przechowywane w celu zwiększenia początkowe przesunięcie. Każdy zakres zawiera następujące pola:
 
    |Bity|Cel|
-    |----------|-------------|
-    |0-17|*Przesunięcie Start epilogu* jest polem 18-bitowe, opisujący przesunięcie epilogu, w bajtach podzielonej przez 2 względem początku funkcji.|
-    |18-19|*Res* jest polem 2-bitowy zarezerwowane dla przyszłego rozszerzenia. Musi wynosić 0.|
-    |20-23|*Warunek* pole 4-bitowy, zapewniająca warunek, pod którym jest wykonywany epilogu. Dla bezwarunkowe epilogues go powinna być równa 0xE, co oznacza "zawsze". (Epilogu musi być całkowicie warunkowych lub całkowicie bezwarunkowe, i w trybie Thumb-2 epilogu zaczyna się od pierwszej instrukcji po IT opcode).|
-    |24-31|*Indeks Start epilogu* jest pole 8-bitowych, które wskazuje indeks bajtu pierwszy kod unwind opisujący tego epilogu.|
+   |----------|-------------|
+   |0-17|*Przesunięcie Start epilogu* jest polem 18-bitowe, opisujący przesunięcie epilogu, w bajtach podzielonej przez 2 względem początku funkcji.|
+   |18-19|*Res* jest polem 2-bitowy zarezerwowane dla przyszłego rozszerzenia. Musi wynosić 0.|
+   |20-23|*Warunek* pole 4-bitowy, zapewniająca warunek, pod którym jest wykonywany epilogu. Dla bezwarunkowe epilogues go powinna być równa 0xE, co oznacza "zawsze". (Epilogu musi być całkowicie warunkowych lub całkowicie bezwarunkowe, i w trybie Thumb-2 epilogu zaczyna się od pierwszej instrukcji po IT opcode).|
+   |24-31|*Indeks Start epilogu* jest pole 8-bitowych, które wskazuje indeks bajtu pierwszy kod unwind opisujący tego epilogu.|
 
 3. Po listy zakresów epilogu zawiera tablicę bajtów, które zawierają kody odwijania, które są szczegółowo opisane w sekcji Unwind kody w tym artykule. Ta tablica jest uzupełniana na końcu do najbliższej granicy pełny wyraz. Bajty są przechowywane w kolejności little-endian, dzięki czemu mogą być bezpośrednio pobierane w trybie little-endian.
 
@@ -358,16 +358,16 @@ Jest szczególnym przypadkiem bardziej złożonych funkcji fragmenty *shrink-wra
 
 ```asm
 ShrinkWrappedFunction
-     push   {r4, lr}          ; A: save minimal non-volatiles
-     sub    sp, sp, #0x100    ; A: allocate all stack space up front
-     ...                     ; A:
-     add    r0, sp, #0xE4     ; A: prepare to do the inner save
-     stm    r0, {r5-r11}      ; A: save remaining non-volatiles
-     ...                     ; B:
-     add    r0, sp, #0xE4     ; B: prepare to do the inner restore
-     ldm    r0, {r5-r11}      ; B: restore remaining non-volatiles
-     ...                     ; C:
-     pop    {r4, pc}          ; C:
+    push   {r4, lr}          ; A: save minimal non-volatiles
+    sub    sp, sp, #0x100    ; A: allocate all stack space up front
+    ...                      ; A:
+    add    r0, sp, #0xE4     ; A: prepare to do the inner save
+    stm    r0, {r5-r11}      ; A: save remaining non-volatiles
+    ...                      ; B:
+    add    r0, sp, #0xE4     ; B: prepare to do the inner restore
+    ldm    r0, {r5-r11}      ; B: restore remaining non-volatiles
+    ...                      ; C:
+    pop    {r4, pc}          ; C:
 ```
 
 Funkcje porządnie zapakowane są zwykle wstępnie przydziel miejsce dla dodatkowych rejestru są zapisywane w regularnych prologu i następnie wykonać zapisuje rejestr przy użyciu `str` lub `stm` zamiast `push`. Dzięki temu wszystkie manipulacje wskaźnik stosu w oryginalnym prologu funkcji.
@@ -386,14 +386,14 @@ Alternatywnym podejściem może również współpracować, jeśli stosem wykona
 
 ```asm
 ShrinkWrappedFunction
-     push   {r4, lr}          ; A: save minimal non-volatile registers
-     sub    sp, sp, #0xE0     ; A: allocate minimal stack space up front
-     ...                     ; A:
-     push   {r4-r9}           ; A: save remaining non-volatiles
-     ...                     ; B:
-     pop    {r4-r9}           ; B: restore remaining non-volatiles
-     ...                     ; C:
-     pop    {r4, pc}          ; C: restore non-volatile registers
+    push   {r4, lr}          ; A: save minimal non-volatile registers
+    sub    sp, sp, #0xE0     ; A: allocate minimal stack space up front
+    ...                      ; A:
+    push   {r4-r9}           ; A: save remaining non-volatiles
+    ...                      ; B:
+    pop    {r4-r9}           ; B: restore remaining non-volatiles
+    ...                      ; C:
+    pop    {r4, pc}          ; C: restore non-volatile registers
 ```
 
 Tutaj klucz jest, czy w każdej granicy rozkazu stosu jest w pełni zgodna z kodami unwind dla regionu. Jeśli odwijania wystąpi przed wewnętrzny powiadomienia wypychane w tym przykładzie, jest on uznawany za część region A, a tylko regionu prologu jest rozwinięty. Sytuacji unwind po wewnętrzny wypychania uważa się, że część B, który ma nie prologu, ale ma kody odwijania, które opisują wewnętrzny wypychania i oryginalnego prologu z regionu A. podobnej logiki w regionie odnosi się do wewnętrznego pop.
@@ -749,6 +749,5 @@ Function:
 
 ## <a name="see-also"></a>Zobacz także
 
-[Przegląd konwencji ABI ARM](../build/overview-of-arm-abi-conventions.md)  
-[Typowe problemy przy migracji Visual C++ ARM](../build/common-visual-cpp-arm-migration-issues.md)  
-
+[Przegląd konwencji ABI ARM](../build/overview-of-arm-abi-conventions.md)<br/>
+[Typowe problemy przy migracji Visual C++ ARM](../build/common-visual-cpp-arm-migration-issues.md)

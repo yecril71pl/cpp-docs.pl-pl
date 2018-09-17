@@ -21,59 +21,61 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 331e490512afe8e9267eb1d0d370cbcf99aa99aa
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 0680f265214849c2e46c4ceb23dcb71bdff61c3f
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32376640"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45710843"
 ---
 # <a name="pdbstripped-strip-private-symbols"></a>/PDBSTRIPPED (Usuń symbole prywatne)
-```  
-/PDBSTRIPPED:pdb_file_name  
-```  
-  
-## <a name="remarks"></a>Uwagi  
- gdzie:  
-  
- *pdb_file_name*  
- Określone przez użytkownika nazwa pozbawionego włókien bazę danych programu (PDB) tworzonego przez konsolidatora.  
-  
-## <a name="remarks"></a>Uwagi  
- Opcja/pdbstripped tworzy drugi plik bazy danych (PDB) programu podczas tworzenia Twojej obraz programu przy użyciu opcji kompilatora lub konsolidatora opcje, które generują plik PDB ([/DEBUG](../../build/reference/debug-generate-debug-info.md), [/z7](../../build/reference/z7-zi-zi-debug-information-format.md), /Zd lub /Zi). Ten drugi plik PDB pomija symbole, których nie należy wysłać do klientów. Drugi plik PDB będzie zawierać tylko:  
-  
--   Symbole publiczne  
-  
--   Lista plików obiektów oraz części pliku wykonywalnego, do którego przyczyniają się  
-  
--   Ramki wskaźnika optymalizacji (FPO) używane do przechodzenia w stosie debugowania rekordów  
-  
- Pozbawionego włókien plik PDB nie zawiera:  
-  
--   Informacje o typie  
-  
--   Informacje o numerach wierszy  
-  
--   Symbole CodeView pliku dla obiektów, takich jak funkcje, zmienne lokalne i dane statyczne  
-  
- Pełny plik PDB będzie nadal generowane, gdy używasz/pdbstripped.  
-  
- Jeśli nie utworzysz plik PDB, / pdbstripped zostanie zignorowany.  
-  
-### <a name="to-set-this-linker-option-in-the-visual-studio-development-environment"></a>Aby ustawić tę opcję konsolidatora w środowisku programowania Visual Studio  
-  
-1.  Otwórz projekt **strony właściwości** okno dialogowe. Aby uzyskać więcej informacji, zobacz [Ustawianie właściwości projektu Visual C++](../../ide/working-with-project-properties.md).  
-  
-2.  Kliknij przycisk **konsolidatora** folderu.  
-  
-3.  Kliknij przycisk **debugowania** strony właściwości.  
-  
-4.  Modyfikowanie **Usuń symbole prywatne** właściwości.  
-  
-### <a name="to-set-this-linker-option-programmatically"></a>Aby programowo ustawić tę opcję konsolidatora  
-  
--   Zobacz <xref:Microsoft.VisualStudio.VCProjectEngine.VCLinkerTool.StripPrivateSymbols%2A>.  
-  
-## <a name="see-also"></a>Zobacz też  
- [Ustawianie opcji konsolidatora](../../build/reference/setting-linker-options.md)   
- [Opcje konsolidatora](../../build/reference/linker-options.md)
+
+```
+/PDBSTRIPPED:pdb_file_name
+```
+
+## <a name="arguments"></a>Argumenty
+
+*pdb_file_name*<br/>
+Określone przez użytkownika nazwa usuniętych bazy danych programu (PDB) tworzonego przez konsolidatora.
+
+## <a name="remarks"></a>Uwagi
+
+Opcja/pdbstripped tworzy drugi plik bazy danych (PDB) programu podczas tworzenia obrazu programu za pomocą kompilatora lub konsolidatora, opcje, które generują plik PDB ([/DEBUG](../../build/reference/debug-generate-debug-info.md), [/z7](../../build/reference/z7-zi-zi-debug-information-format.md), / zd, lub /Zi). Ten drugi plik PDB pomija symbole, których nie chcesz wysłać do klientów. Drugi plik PDB będzie zawierać tylko:
+
+- Symbole publiczne
+
+- Lista plików obiektów i części pliku wykonywalnego, do którego przyczyniają się
+
+- Ramka wskaźnika optymalizacji (ang.) debugowania rekordów służący do przechodzenia na stosie
+
+Usuniętych plików PDB nie będzie zawierać:
+
+- Informacje o typie
+
+- Informacje o numerze wiersza
+
+- Symbole CodeView pliku dla obiektów, takich jak te funkcje, zmienne lokalne i dane statyczne
+
+Pełny plik PDB będzie nadal generowane, gdy używasz/pdbstripped.
+
+Jeśli nie utworzysz plik PDB, / pdbstripped jest ignorowana.
+
+### <a name="to-set-this-linker-option-in-the-visual-studio-development-environment"></a>Aby ustawić tę opcję konsolidatora w środowisku programowania Visual Studio
+
+1. Otwórz projekt **stron właściwości** okno dialogowe. Aby uzyskać więcej informacji, zobacz [ustawienie właściwości projektu Visual C++](../../ide/working-with-project-properties.md).
+
+1. Kliknij przycisk **konsolidatora** folderu.
+
+1. Kliknij przycisk **debugowania** stronę właściwości.
+
+1. Modyfikowanie **Usuń symbole prywatne** właściwości.
+
+### <a name="to-set-this-linker-option-programmatically"></a>Aby programowo ustawić tę opcję konsolidatora
+
+- Zobacz <xref:Microsoft.VisualStudio.VCProjectEngine.VCLinkerTool.StripPrivateSymbols%2A>.
+
+## <a name="see-also"></a>Zobacz też
+
+[Ustawianie opcji konsolidatora](../../build/reference/setting-linker-options.md)<br/>
+[Opcje konsolidatora](../../build/reference/linker-options.md)

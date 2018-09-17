@@ -14,33 +14,36 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ba19ddd7a9ca1c313cc9f72e6cc8b77b4b565ceb
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: d688db3039681fc684e6344e4a27ae7a64544757
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32375639"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45714450"
 ---
 # <a name="winmdkeyfile-specify-winmd-key-file"></a>/WINMDKEYFILE (określ plik klucza winmd)
-Określa klucz lub parę kluczy do podpisywania pliku metadanych środowiska wykonawczego systemu Windows (.winmd).  
-  
-```  
-/WINMDKEYFILE:filename  
-```  
-  
-## <a name="remarks"></a>Uwagi  
- Podobny [/KeyFile](../../build/reference/keyfile-specify-key-or-key-pair-to-sign-an-assembly.md) — opcja konsolidatora zastosowanych do pliku winmd.  
-  
-### <a name="to-set-this-linker-option-in-the-visual-studio-development-environment"></a>Aby ustawić tę opcję konsolidatora w środowisku programowania Visual Studio  
-  
-1.  Otwórz projekt **strony właściwości** okno dialogowe. Aby uzyskać więcej informacji, zobacz [Praca z właściwościami projektu](../../ide/working-with-project-properties.md).  
-  
-2.  Wybierz **konsolidatora** folderu.  
-  
-3.  Wybierz **metadanych systemu Windows** strony właściwości.  
-  
-4.  W **plik klucza metadanych systemu Windows** wprowadź lokalizację pliku.  
-  
-## <a name="see-also"></a>Zobacz też  
- [Ustawianie opcji konsolidatora](../../build/reference/setting-linker-options.md)   
- [Opcje konsolidatora](../../build/reference/linker-options.md)
+
+Określa klucz lub parę kluczy do podpisania pliku metadanych środowiska wykonawczego Windows (winmd).
+
+```
+/WINMDKEYFILE:filename
+```
+
+## <a name="remarks"></a>Uwagi
+
+Przypomina [/KeyFile](../../build/reference/keyfile-specify-key-or-key-pair-to-sign-an-assembly.md) opcji konsolidatora, która jest stosowana do pliku winmd.
+
+### <a name="to-set-this-linker-option-in-the-visual-studio-development-environment"></a>Aby ustawić tę opcję konsolidatora w środowisku programowania Visual Studio
+
+1. Otwórz projekt **stron właściwości** okno dialogowe. Aby uzyskać więcej informacji, zobacz [Praca z właściwościami projektu](../../ide/working-with-project-properties.md).
+
+1. Wybierz **konsolidatora** folderu.
+
+1. Wybierz **metadanych Windows** stronę właściwości.
+
+1. W **plik klucza metadanych Windows** wpisz lokalizację pliku.
+
+## <a name="see-also"></a>Zobacz też
+
+[Ustawianie opcji konsolidatora](../../build/reference/setting-linker-options.md)<br/>
+[Opcje konsolidatora](../../build/reference/linker-options.md)

@@ -40,12 +40,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 041a207af69ac65646e1b30672250b84aa3a5d36
-ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
+ms.openlocfilehash: ee7c04ee4cd581395ff03763c2ebe50b421986d2
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/05/2018
-ms.locfileid: "37853972"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45711142"
 ---
 # <a name="cmfctaskspanetask-class"></a>Klasa CMFCTasksPaneTask
 `CMFCTasksPaneTask` Klasy jest pomocnikiem klasy, która reprezentuje zadania związane z formantem panelu zadań ( [CMFCTasksPane](../../mfc/reference/cmfctaskspane-class.md)). Obiekt zadania przedstawia element w grupie zadań ( [CMFCTasksPaneTaskGroup](../../mfc/reference/cmfctaskspanetaskgroup-class.md)). Każde zadanie może mieć polecenie, które wykonuje szablon, gdy użytkownik kliknie ikonę która pojawia się na lewo od nazwy zadania i zadania.  
@@ -252,11 +252,11 @@ virtual BOOL SetACCData(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *pParent*  
- Reprezentuje okna nadrzędnego bieżącego zadania.  
+*pParent*<br/>
+[in] Reprezentuje okna nadrzędnego bieżącego zadania.  
   
- [out] *danych*  
- Obiekt typu `CAccessibilityData` , jest wypełniana danymi ułatwień dostępu do bieżącego zadania.  
+*Dane*<br/>
+[out] Obiekt typu `CAccessibilityData` , jest wypełniana danymi ułatwień dostępu do bieżącego zadania.  
   
 ### <a name="return-value"></a>Wartość zwracana  
  Wartość TRUE, jeśli *danych* parametr został pomyślnie wypełnione danymi ułatwień dostępu do bieżącego zadania; w przeciwnym razie FALSE.  

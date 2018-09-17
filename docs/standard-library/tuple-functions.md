@@ -17,12 +17,12 @@ helpviewer_keywords:
 - std::get [C++]
 - std::make_tuple [C++]
 - std::tie [C++]
-ms.openlocfilehash: f0b995c4a966481e02ebd96748b247fd8844f19f
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: c9280de6a2fde3ce2758b5884437704a2cdd879f
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38966410"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45712767"
 ---
 # <a name="lttuplegt-functions"></a>&lt;Krotka&gt; funkcji
 
@@ -64,17 +64,17 @@ template <class T, class... Types>
 
 ### <a name="parameters"></a>Parametry
 
-*Index*  
- Indeks elementu do pobrania.
+*Index*<br/>
+Indeks elementu do pobrania.
 
-*Typy*  
- Sekwencja typów zadeklarowane w spójnej kolekcji, w kolejności deklaracji.
+*Typy*<br/>
+Sekwencja typów zadeklarowane w spójnej kolekcji, w kolejności deklaracji.
 
-*T*  
- Typ elementu do pobrania.
+*T*<br/>
+Typ elementu do pobrania.
 
-*Krotki*  
- Std::tuple, który zawiera dowolną liczbę elementów.
+*Krotki*<br/>
+Std::tuple, który zawiera dowolną liczbę elementów.
 
 ### <a name="remarks"></a>Uwagi
 
@@ -122,11 +122,11 @@ template <class T1, class T2, ..., class TN>
 
 ### <a name="parameters"></a>Parametry
 
-*TN*  
- Typ parametru funkcji n-ty.
+*TN*<br/>
+Typ parametru funkcji n-ty.
 
-*TN*  
- Wartość parametru funkcji n-ty.
+*TN*<br/>
+Wartość parametru funkcji n-ty.
 
 ### <a name="remarks"></a>Uwagi
 
@@ -180,8 +180,8 @@ tuple<T1&, T2&, ..., TN&> tie(T1& t1, T2& t2, ..., TN& tN);
 
 ### <a name="parameters"></a>Parametry
 
-*TN*  
- Podstawowy typ krotki n-ty element.
+*TN*<br/>
+Podstawowy typ krotki n-ty element.
 
 ### <a name="remarks"></a>Uwagi
 

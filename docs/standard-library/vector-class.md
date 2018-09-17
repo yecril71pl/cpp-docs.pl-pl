@@ -96,12 +96,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d60d47757bfcf1564d81dcb58c0727b1ca56b3ce
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 2fdb8fea78d62202dd460f5dd219f2686bd99c6b
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43199498"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45710238"
 ---
 # <a name="vector-class"></a>vector — Klasa
 
@@ -116,11 +116,11 @@ class vector
 
 ### <a name="parameters"></a>Parametry
 
-*Typ*  
- Typ danych elementu, który ma być przechowywany w wektora
+*Typ*<br/>
+Typ danych elementu, który ma być przechowywany w wektora
 
-*Allocator*  
- Typ reprezentujący przechowywany obiekt alokatora, który hermetyzuje szczegóły dotyczące alokacji i dezalokacji pamięci wektora. Ten argument jest opcjonalny, a wartość domyślna to `allocator<Type>`.
+*Allocator*<br/>
+Typ reprezentujący przechowywany obiekt alokatora, który hermetyzuje szczegóły dotyczące alokacji i dezalokacji pamięci wektora. Ten argument jest opcjonalny, a wartość domyślna to `allocator<Type>`.
 
 ## <a name="remarks"></a>Uwagi
 
@@ -234,20 +234,20 @@ void assign(InputIterator First, InputIterator Last);
 
 ### <a name="parameters"></a>Parametry
 
-*pierwszy*  
- Pozycja pierwszego elementu w zakresie elementów, które mają zostać skopiowane.
+*pierwszy*<br/>
+Pozycja pierwszego elementu w zakresie elementów, które mają zostać skopiowane.
 
-*ostatni*  
- Pozycja pierwszego elementu poza zakresem elementów, które mają zostać skopiowane.
+*ostatni*<br/>
+Pozycja pierwszego elementu poza zakresem elementów, które mają zostać skopiowane.
 
-*Liczba*  
- Liczba kopii element jest wstawiany do wektora.
+*Liczba*<br/>
+Liczba kopii element jest wstawiany do wektora.
 
-*Val*  
- Wartość elementu jest wstawiany do wektora.
+*Val*<br/>
+Wartość elementu jest wstawiany do wektora.
 
-*IList*  
- Lista initializer_list zawierająca elementy do wstawienia.
+*IList*<br/>
+Lista initializer_list zawierająca elementy do wstawienia.
 
 ### <a name="remarks"></a>Uwagi
 
@@ -313,8 +313,8 @@ const_reference at(size_type _Pos) const;
 
 ### <a name="parameters"></a>Parametry
 
-*_Pos*  
- Numer indeksu dolnego lub pozycji elementu, aby odwoływać się w wektorze.
+*_Pos*<br/>
+Numer indeksu dolnego lub pozycji elementu, aby odwoływać się w wektorze.
 
 ### <a name="return-value"></a>Wartość zwracana
 
@@ -1562,7 +1562,7 @@ void push_back(T&& Val);
 ### <a name="parameters"></a>Parametry
 
 *Val*<br/>
- Wartość do przypisania do elementu umieszczona na końcu wektora.
+Wartość do przypisania do elementu umieszczona na końcu wektora.
 
 ### <a name="example"></a>Przykład
 
@@ -1726,8 +1726,8 @@ void reserve(size_type count);
 
 ### <a name="parameters"></a>Parametry
 
-*Liczba*  
- Minimalna długość pamięci do przydzielenia w wektorze.
+*Liczba*<br/>
+Minimalna długość pamięci do przydzielenia w wektorze.
 
 ### <a name="example"></a>Przykład
 
@@ -1768,11 +1768,11 @@ void resize(size_type Newsize, Type Val);
 
 ### <a name="parameters"></a>Parametry
 
-*Newsize:*  
- Nowy rozmiar wektora.
+*Newsize:*<br/>
+Nowy rozmiar wektora.
 
-*Val*  
- Wartość inicjalizacji nowe elementy dodane do wektora, jeśli nowy rozmiar jest większy, oryginalny rozmiar. Jeśli wartość zostanie pominięty, nowe obiekty, użyj ich domyślnego konstruktora.
+*Val*<br/>
+Wartość inicjalizacji nowe elementy dodane do wektora, jeśli nowy rozmiar jest większy, oryginalny rozmiar. Jeśli wartość zostanie pominięty, nowe obiekty, użyj ich domyślnego konstruktora.
 
 ### <a name="remarks"></a>Uwagi
 
@@ -2010,11 +2010,11 @@ friend void swap(
 
 ### <a name="parameters"></a>Parametry
 
-*right*  
- Wektor zawierająca elementy, które mają być zamienione lub wektora, której elementy są wymieniane z tymi wektora *po lewej stronie*.
+*right*<br/>
+Wektor zawierająca elementy, które mają być zamienione lub wektora, której elementy są wymieniane z tymi wektora *po lewej stronie*.
 
-*left*  
- Wektor, w której elementy są wymieniane z tymi wektora *prawo*.
+*left*<br/>
+Wektor, w której elementy są wymieniane z tymi wektora *prawo*.
 
 ### <a name="example"></a>Przykład
 

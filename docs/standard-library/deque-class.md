@@ -98,12 +98,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3c77b232fe87a722194a21d60457a01051827a7e
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: afcf2528ba84edd90179ef6eb29d356466372633
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43214169"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45713309"
 ---
 # <a name="deque-class"></a>deque — Klasa
 
@@ -119,10 +119,10 @@ class deque
 ### <a name="parameters"></a>Parametry
 
 *Typ*<br/>
- Typ danych elementu, który ma być przechowywany w deque.
+Typ danych elementu, który ma być przechowywany w deque.
 
 *Allocator*<br/>
- Typ reprezentujący przechowywany obiekt alokatora, który hermetyzuje szczegóły dotyczące alokacji i dezalokacji pamięci deque. Ten argument jest opcjonalny, a wartość domyślna to **alokatora\<typ >**.
+Typ reprezentujący przechowywany obiekt alokatora, który hermetyzuje szczegóły dotyczące alokacji i dezalokacji pamięci deque. Ten argument jest opcjonalny, a wartość domyślna to **alokatora\<typ >**.
 
 ## <a name="remarks"></a>Uwagi
 
@@ -246,19 +246,19 @@ void assign(initializer_list<Type> IList);
 ### <a name="parameters"></a>Parametry
 
 *pierwszy*<br/>
- Pozycja pierwszego elementu w zakresie elementów, które mają być kopiowane z deque argumentu.
+Pozycja pierwszego elementu w zakresie elementów, które mają być kopiowane z deque argumentu.
 
 *ostatni*<br/>
- Pozycja pierwszego elementu poza zakresem elementów, które mają być kopiowane z deque argumentu.
+Pozycja pierwszego elementu poza zakresem elementów, które mają być kopiowane z deque argumentu.
 
 *Liczba*<br/>
- Liczba kopii element jest wstawiany do deque.
+Liczba kopii element jest wstawiany do deque.
 
 *Val*<br/>
- Wartość elementu jest wstawiany do deque.
+Wartość elementu jest wstawiany do deque.
 
 *IList*<br/>
- Lista initializer_list, jest wstawiany do deque.
+Lista initializer_list, jest wstawiany do deque.
 
 ### <a name="remarks"></a>Uwagi
 
@@ -333,7 +333,7 @@ const_reference at(size_type pos) const;
 ### <a name="parameters"></a>Parametry
 
 *punktu sprzedaży*<br/>
- Indeks dolny lub numer pozycji elementu odwoływać się w deque.
+Indeks dolny lub numer pozycji elementu odwoływać się w deque.
 
 ### <a name="return-value"></a>Wartość zwracana
 
@@ -1314,7 +1314,7 @@ int main( )
    cout << "The last integer of c1 is " << *c1_Iter << endl;
 
    c1_Iter--;
- *c1_Iter = 400;
+   *c1_Iter = 400;
    cout << "The new next-to-last integer of c1 is " << *c1_Iter << endl;
 
    // If a const iterator had been declared instead with the line:
@@ -1346,13 +1346,13 @@ iterator erase(iterator first, iterator last);
 ### <a name="parameters"></a>Parametry
 
 *_Where*<br/>
- Pozycja elementu do usunięcia z deque.
+Pozycja elementu do usunięcia z deque.
 
 *pierwszy*<br/>
- Pozycja pierwszego elementu są usuwane z deque.
+Pozycja pierwszego elementu są usuwane z deque.
 
 *ostatni*<br/>
- Pozycja tuż za ostatnim elementem usunięte z deque.
+Pozycja tuż za ostatnim elementem usunięte z deque.
 
 ### <a name="return-value"></a>Wartość zwracana
 
@@ -1603,7 +1603,7 @@ const_reference operator[](size_type pos) const;
 ### <a name="parameters"></a>Parametry
 
 *punktu sprzedaży*<br/>
- Położenie elementu deque można odwoływać się.
+Położenie elementu deque można odwoływać się.
 
 ### <a name="return-value"></a>Wartość zwracana
 
@@ -1714,7 +1714,7 @@ int main( )
 
    cout << "     ";
    S<MyDeque&&>::show ( move< MyDeque& > (d1) );
- }
+}
 ```
 
 ## <a name="pointer"></a>  deque::Pointer
@@ -1951,7 +1951,7 @@ int main( )
    cout << endl;
 
    c1_rIter = c1.rbegin( );
- *c1_rIter = 40;  // This would have caused an error if a
+   *c1_rIter = 40;  // This would have caused an error if a
                     // const_reverse iterator had been declared as
                     // noted above
    cout << "Last element in deque is now " << *c1_rIter << "." << endl;
@@ -2069,7 +2069,7 @@ int main( )
    c1_rIter = c1.rend( );
    c1_rIter--; // Decrementing the reverse iterator moves it backward
                // in the reversed deque (to the last element here)
- *c1_rIter = 40; // This modification of the last element would
+   *c1_rIter = 40; // This modification of the last element would
                    // have caused an error if a const_reverse
                    // iterator had been declared (as noted above)
    cout << "The modified reversed deque is: ";
@@ -2099,10 +2099,10 @@ void resize(size_type _Newsize, Type val);
 ### <a name="parameters"></a>Parametry
 
 *_Newsize*<br/>
- Nowy rozmiar deque.
+Nowy rozmiar deque.
 
 *Val*<br/>
- Wartość nowych elementów, które mają zostać dodane do deque, jeśli nowy rozmiar jest większy, oryginalnym rozmiarze. W przypadku pominięcia wartości, nowym elementom zostanie przypisana wartość domyślna dla klasy.
+Wartość nowych elementów, które mają zostać dodane do deque, jeśli nowy rozmiar jest większy, oryginalnym rozmiarze. W przypadku pominięcia wartości, nowym elementom zostanie przypisana wartość domyślna dla klasy.
 
 ### <a name="remarks"></a>Uwagi
 
@@ -2278,10 +2278,10 @@ void swap(deque<Type, Allocator>& left, deque<Type, Allocator>& right);
 ### <a name="parameters"></a>Parametry
 
 *right*<br/>
- Deque — zawierająca elementy, które mają być zamienione lub deque, której elementy są wymieniane z tymi deque `left`.
+Deque — zawierająca elementy, które mają być zamienione lub deque, której elementy są wymieniane z tymi deque `left`.
 
 *left*<br/>
- Deque, której elementy są wymieniane z tymi deque *prawo*.
+Deque, której elementy są wymieniane z tymi deque *prawo*.
 
 ### <a name="example"></a>Przykład
 

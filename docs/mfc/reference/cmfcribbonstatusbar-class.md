@@ -60,12 +60,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 378ecc3c02a78bc99fa999090119e75a45dc27a7
-ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
+ms.openlocfilehash: 3123206c90bd5dd901e25ff3fe26e48ba8809452
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "42465692"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45710511"
 ---
 # <a name="cmfcribbonstatusbar-class"></a>Klasa CMFCRibbonStatusBar
 `CMFCRibbonStatusBar` Klasa implementuje formant paska stanu, który może wyświetlać elementy wstążki.  
@@ -149,8 +149,8 @@ void AddDynamicElement(CMFCRibbonBaseElement* pElement);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *pElement*  
- Wskaźnik do elementu dynamicznych.  
+*pElement*<br/>
+[in] Wskaźnik do elementu dynamicznych.  
   
 ### <a name="remarks"></a>Uwagi  
  W przeciwieństwie do regularnych elementy dynamiczne elementy nie są możliwe do dostosowania i dostosowywanie menu na pasku stanu te nie są wyświetlane.  
@@ -166,14 +166,14 @@ void AddElement(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *pElement*  
- Wskaźnik do dodanego elementu.  
+*pElement*<br/>
+[in] Wskaźnik do dodanego elementu.  
   
- [in] *lpszLabel*  
- Etykieta tekstowa elementu.  
+*lpszLabel*<br/>
+[in] Etykieta tekstowa elementu.  
   
- [in] *bIsVisible*  
- Wartość TRUE, jeśli chcesz dodać element jako widoczny, FALSE, jeśli chcesz dodać element jako ukryty.  
+*bIsVisible*<br/>
+[in] Wartość TRUE, jeśli chcesz dodać element jako widoczny, FALSE, jeśli chcesz dodać element jako ukryty.  
   
 ##  <a name="addextendedelement"></a>  CMFCRibbonStatusBar::AddExtendedElement  
  Dodaje element wstążki do rozszerzonego obszar paska stanu wstążki.  
@@ -186,14 +186,14 @@ void AddExtendedElement(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *pElement*  
- Wskaźnik do dodanego elementu.  
+*pElement*<br/>
+[in] Wskaźnik do dodanego elementu.  
   
- [in] *lpszLabel*  
- Etykieta tekstowa elementu.  
+*lpszLabel*<br/>
+[in] Etykieta tekstowa elementu.  
   
- [in] *bIsVisible*  
- Wartość TRUE, jeśli chcesz dodać element jako widoczny, FALSE, jeśli chcesz dodać element jako ukryty.  
+*bIsVisible*<br/>
+[in] Wartość TRUE, jeśli chcesz dodać element jako widoczny, FALSE, jeśli chcesz dodać element jako ukryty.  
   
 ### <a name="remarks"></a>Uwagi  
  Obszar rozszerzonej jest po prawej stronie formantu paska stanu.  
@@ -219,14 +219,14 @@ BOOL Create(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *pParentWnd*  
- Wskaźnik do okna nadrzędnego.  
+*pParentWnd*<br/>
+[in] Wskaźnik do okna nadrzędnego.  
   
- [in] *dwStyle*  
- Logiczne OR kombinację style kontrolki.  
+*dwStyle*<br/>
+[in] Logiczne OR kombinację style kontrolki.  
   
- [in] *nID*  
- Identyfikator formantu paska stanu.  
+*nID*<br/>
+[in] Identyfikator formantu paska stanu.  
   
 ### <a name="return-value"></a>Wartość zwracana  
  Wartość TRUE, jeśli pasek stanu został utworzony pomyślnie, wartość FALSE w przeciwnym razie.  
@@ -266,8 +266,8 @@ CMFCRibbonBaseElement* FindByID(UINT uiCmdID, BOOL = TRUE);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *uiCmdID*  
- [in] *BOOL*  
+*uiCmdID*<br/>
+[in] [in] *BOOL*  
   
 ### <a name="return-value"></a>Wartość zwracana  
   
@@ -281,8 +281,8 @@ CMFCRibbonBaseElement* FindElement(UINT uiID);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *uiID*  
- Identyfikator elementu.  
+*uiID*<br/>
+[in] Identyfikator elementu.  
   
 ### <a name="return-value"></a>Wartość zwracana  
  Wskaźnik do elementu, który ma identyfikator określonego polecenia. Wartość NULL, jeśli nie ma żadnego takiego elementu.  
@@ -305,8 +305,8 @@ CMFCRibbonBaseElement* GetElement(int nIndex);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *nIndex*  
- Określa liczony od zera indeks elementu, który znajduje się w głównym obszarze formantu paska stanu.  
+*nIndex*<br/>
+[in] Określa liczony od zera indeks elementu, który znajduje się w głównym obszarze formantu paska stanu.  
   
 ### <a name="return-value"></a>Wartość zwracana  
  Wskaźnik do elementu, który jest umieszczony pod określonym indeksem. Wartość NULL, jeśli indeks jest ujemny lub większa niż liczba elementów w pasku stanu.  
@@ -331,8 +331,8 @@ CMFCRibbonBaseElement* GetExElement(int nIndex);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *nIndex*  
- Określa liczony od zera indeks elementu, który znajduje się w obszarze rozszerzonej formantu paska stanu.  
+*nIndex*<br/>
+[in] Określa liczony od zera indeks elementu, który znajduje się w obszarze rozszerzonej formantu paska stanu.  
   
 ### <a name="return-value"></a>Wartość zwracana  
  Wskaźnik do elementu, który jest umieszczony pod określonym indeksem w obszarze rozszerzonego paska stanu wstążki. Wartość NULL, jeśli *nIndex* jest ujemny lub większa niż liczba elementów w obszarze rozszerzonego paska stanu wstążki.  
@@ -413,14 +413,14 @@ virtual void OnDrawInformation(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *podstawowego kontrolera domeny*  
- Wskaźnik do kontekstu urządzenia.  
+*podstawowego kontrolera domeny*<br/>
+[in] Wskaźnik do kontekstu urządzenia.  
   
- [in] *strInfo*  
- Ciąg informacji.  
+*strInfo*<br/>
+[in] Ciąg informacji.  
   
- [in] *rectInfo*  
- Prostokąt otaczający.  
+*rectInfo*<br/>
+[in] Prostokąt otaczający.  
   
 ### <a name="remarks"></a>Uwagi  
  Należy przesłonić tę metodę w klasie pochodnej, jeśli chcesz dostosować wygląd ciągu informacji na pasku stanu. Użyj [CMFCRibbonStatusBar::SetInformation](#setinformation) metodę, aby umieścić na pasku stanu w trybie informacji. W tym trybie, na pasku stanu polega na schowaniu wszystkich okienek i wyświetla ciąg informacji określone przez *strInfo*.  
@@ -449,8 +449,8 @@ BOOL RemoveElement(UINT uiID);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *uiID*  
- Identyfikator elementu do usunięcia na pasku stanu.  
+*uiID*<br/>
+[in] Identyfikator elementu do usunięcia na pasku stanu.  
   
 ### <a name="return-value"></a>Wartość zwracana  
  Wartość TRUE, jeśli element z określonym *uiID* zostanie usunięty. Wartość FALSE w przeciwnym razie.  
@@ -463,8 +463,8 @@ void SetInformation(LPCTSTR lpszInfo);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *lpszInfo*  
- Ciąg informacji.  
+*lpszInfo*<br/>
+[in] Ciąg informacji.  
   
 ### <a name="remarks"></a>Uwagi  
  Ta metoda umożliwia umieszczanie paska stanu w trybie informacji. W tym trybie, na pasku stanu polega na schowaniu wszystkich okienek i wyświetla ciąg informacji określone przez *lpszInfo*.  

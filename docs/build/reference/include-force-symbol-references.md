@@ -22,47 +22,49 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: cfe65344e41b98841c3a4e7bca72b762197510b8
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 6528f6edc51a2dd01e8f91107827b570a44785de
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32375652"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45715783"
 ---
 # <a name="include-force-symbol-references"></a>/INCLUDE (Wymuszaj odwołania do symboli)
-```  
-/INCLUDE:symbol  
-```  
-  
-## <a name="remarks"></a>Uwagi  
- gdzie:  
-  
- `symbol`  
- Określa symbol ma zostać dodany do tabeli symboli.  
-  
-## <a name="remarks"></a>Uwagi  
- Opcja/include informuje konsolidator, aby dodał określony symbol do tabeli symboli.  
-  
- Aby określić wiele symboli, wpisz przecinka (,), średnikiem (;) lub odstęp między nazwami symbolu. W wierszu polecenia, określić/include:`symbol` raz dla każdego symbolu.  
-  
- Usuwa konsolidator `symbol` , dodając obiekt, który zawiera definicję symbolu do programu. Ta funkcja jest przydatna przy tym obiektu biblioteki, które w przeciwnym razie nie będzie można połączyć z programem.  
-  
- Określanie symbol z tą opcją zastąpienia usunięcie tego symbolu przez [/OPT:REF](../../build/reference/opt-optimizations.md).  
-  
-### <a name="to-set-this-linker-option-in-the-visual-studio-development-environment"></a>Aby ustawić tę opcję konsolidatora w środowisku programowania Visual Studio  
-  
-1.  Otwórz projekt **strony właściwości** okno dialogowe. Aby uzyskać więcej informacji, zobacz [Ustawianie właściwości projektu Visual C++](../../ide/working-with-project-properties.md).  
-  
-2.  Kliknij przycisk **konsolidatora** folderu.  
-  
-3.  Kliknij przycisk **dane wejściowe** strony właściwości.  
-  
-4.  Modyfikowanie **Wymuś odwołania do symboli** właściwości.  
-  
-### <a name="to-set-this-linker-option-programmatically"></a>Aby programowo ustawić tę opcję konsolidatora  
-  
--   Zobacz <xref:Microsoft.VisualStudio.VCProjectEngine.VCLinkerTool.ForceSymbolReferences%2A>.  
-  
-## <a name="see-also"></a>Zobacz też  
- [Ustawianie opcji konsolidatora](../../build/reference/setting-linker-options.md)   
- [Opcje konsolidatora](../../build/reference/linker-options.md)
+
+```
+/INCLUDE:symbol
+```
+
+## <a name="parameters"></a>Parametry
+
+*Symbol*<br/>
+Określa symbol do dodania do tabeli symboli.
+
+## <a name="remarks"></a>Uwagi
+
+Opcja/include informuje konsolidator, aby dodał określony symbol do tabeli symboli.
+
+Aby określić wiele symboli, wpisz przecinek (,), średnika (;) lub odstęp między nazwy symboli. W wierszu polecenia, należy określić/include:`symbol` jeden raz dla każdego symbolu.
+
+Konsolidator usuwa `symbol` , dodając obiekt, który zawiera definicję symbolu do programu. Ta funkcja jest przydatna, w tym obiektu biblioteki, które w przeciwnym razie nie będzie można połączone z tym programem.
+
+Określanie symbolu z tą opcją zastąpienia usunięcie tego symbolu przez [/OPT: REF](../../build/reference/opt-optimizations.md).
+
+### <a name="to-set-this-linker-option-in-the-visual-studio-development-environment"></a>Aby ustawić tę opcję konsolidatora w środowisku programowania Visual Studio
+
+1. Otwórz projekt **stron właściwości** okno dialogowe. Aby uzyskać więcej informacji, zobacz [ustawienie właściwości projektu Visual C++](../../ide/working-with-project-properties.md).
+
+1. Kliknij przycisk **konsolidatora** folderu.
+
+1. Kliknij przycisk **dane wejściowe** stronę właściwości.
+
+1. Modyfikowanie **Wymuszaj odwołania do symboli** właściwości.
+
+### <a name="to-set-this-linker-option-programmatically"></a>Aby programowo ustawić tę opcję konsolidatora
+
+- Zobacz <xref:Microsoft.VisualStudio.VCProjectEngine.VCLinkerTool.ForceSymbolReferences%2A>.
+
+## <a name="see-also"></a>Zobacz też
+
+[Ustawianie opcji konsolidatora](../../build/reference/setting-linker-options.md)<br/>
+[Opcje konsolidatora](../../build/reference/linker-options.md)

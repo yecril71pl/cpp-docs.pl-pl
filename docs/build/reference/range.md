@@ -17,38 +17,43 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d06d699500ba3ea441af61a2e2a5a0da3f96903a
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 47e7525b8c1872616182141d624bff8f94571952
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32374427"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45712195"
 ---
 # <a name="range"></a>/RANGE
-Modyfikuje dane wyjściowe polecenia dumpbin w przypadku użycia z innych opcji dumpbin, takie jak /RAWDATA lub /DISASM.  
-  
-## <a name="syntax"></a>Składnia  
-  
-```  
-/RANGE:vaMin[,vaMax]  
-```  
-  
-## <a name="flags"></a>Flagi  
- **vaMin**  
- Wirtualny adres, o której chcesz rozpocząć operację dumpbin.  
-  
- **vaMax** (opcjonalnie)  
- Wirtualny adres, jaką chcesz zakończyć operację dumpbin. Jeśli nie zostanie określony, dumpbin przejdzie do końca pliku.  
-  
-## <a name="remarks"></a>Uwagi  
- Aby wyświetlić wirtualne adresy obrazu, należy użyć pliku mapy obrazu (RVA + Base), **/DISASM** lub **/HEADERS** — opcja polecenia dumpbin lub z okna dezasemblacji w debugerze programu Visual Studio.  
-  
-## <a name="example"></a>Przykład  
- W tym przykładzie **/zakres** jest używane do modyfikowania wyświetlanie **/disasm** opcji. W tym przykładzie wartość początkową jest wyrażone jako liczba dziesiętna i wartości końcowej jest określony jako liczbę szesnastkową.  
-  
-```  
-dumpbin /disasm /range:4219334,0x004061CD t.exe  
-```  
-  
-## <a name="see-also"></a>Zobacz też  
- [Opcje DUMPBIN](../../build/reference/dumpbin-options.md)
+
+Modyfikuje dane wyjściowe polecenia dumpbin, gdy jest używana z innymi opcjami dumpbin, takie jak /RAWDATA lub /DISASM.
+
+## <a name="syntax"></a>Składnia
+
+```
+/RANGE:vaMin[,vaMax]
+```
+
+## <a name="parameters"></a>Parametry
+
+*vaMin*<br/>
+Wirtualny adres ma operacji dumpbin, aby rozpocząć.
+
+*vaMax*<br/>
+(Opcjonalnie) Wirtualny adres ma operacji dumpbin, aby zakończyć. Jeśli nie zostanie określony, dumpbin zaczną się na końcu pliku.
+
+## <a name="remarks"></a>Uwagi
+
+Aby wyświetlić wirtualne adresy obrazu, należy użyć pliku mapy obrazu (adres RVA + podstawowa), **/DISASM** lub **/HEADERS** — opcja polecenia dumpbin lub okna dezasemblacji w debugerze programu Visual Studio.
+
+## <a name="example"></a>Przykład
+
+W tym przykładzie **/zakresu** jest używane do modyfikowania wyświetlanie **/disasm** opcji. W tym przykładzie wartością początkową jest wyrażona jako liczba dziesiętna, a wartość końcowa jest określony jako liczba szesnastkowa.
+
+```
+dumpbin /disasm /range:4219334,0x004061CD t.exe
+```
+
+## <a name="see-also"></a>Zobacz też
+
+[Opcje DUMPBIN](../../build/reference/dumpbin-options.md)

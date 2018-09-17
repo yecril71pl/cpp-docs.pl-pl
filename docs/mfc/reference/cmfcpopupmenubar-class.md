@@ -56,12 +56,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b9dc88b6b4488115390f4e6be57fbba2caadcc01
-ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
+ms.openlocfilehash: 02806f26f623b2f4ad7f19cd67216018da984e42
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/05/2018
-ms.locfileid: "37853637"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45713703"
 ---
 # <a name="cmfcpopupmenubar-class"></a>Klasa CMFCPopupMenuBar
 Pasek menu wbudowany w menu podręcznym.  
@@ -140,8 +140,8 @@ virtual void AdjustSizeImmediate(BOOL bRecalcLayout);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *bRecalcLayout*  
- Wartość TRUE, aby automatycznie ponownie Oblicz układ w okienku paska menu podręcznego; w przeciwnym razie wartość FALSE.  
+*bRecalcLayout*<br/>
+[in] Wartość TRUE, aby automatycznie ponownie Oblicz układ w okienku paska menu podręcznego; w przeciwnym razie wartość FALSE.  
   
 ### <a name="remarks"></a>Uwagi  
   
@@ -153,8 +153,8 @@ BOOL BuildOrigItems(UINT uiMenuResID);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *uiMenuResID*  
- Określa identyfikator menu zasób menu do załadowania.  
+*uiMenuResID*<br/>
+[in] Określa identyfikator menu zasób menu do załadowania.  
   
 ### <a name="return-value"></a>Wartość zwracana  
  Zwraca wartość TRUE, jeśli to się powiedzie, lub FAŁSZ, jeśli nie.  
@@ -190,8 +190,8 @@ CMFCToolBar* FindDestintationToolBar(CPoint point);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *punktu*  
- Punkt na ekranie.  
+*Punkt*<br/>
+[in] Punkt na ekranie.  
   
 ### <a name="return-value"></a>Wartość zwracana  
  Zwraca uchwyt do paska narzędzi gdzie znajduje się punkt, jeśli istnieje, lub wartość NULL, jeśli nie.  
@@ -257,11 +257,11 @@ virtual BOOL ImportFromMenu(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *hMenu*  
- Menu, z którego chcesz zaimportować przycisków menu podręcznego.  
+*hMenu*<br/>
+[in] Menu, z którego chcesz zaimportować przycisków menu podręcznego.  
   
- [in] *bShowAllCommands*  
- Wartość TRUE, jeśli wszystkie polecenia w menu są importowane lub wartość FALSE, jeśli może być ukryta rzadko używane.  
+*bShowAllCommands*<br/>
+[in] Wartość TRUE, jeśli wszystkie polecenia w menu są importowane lub wartość FALSE, jeśli może być ukryta rzadko używane.  
   
 ### <a name="return-value"></a>Wartość zwracana  
  Zwraca wartość PRAWDA, jeśli przycisków menu zostały pomyślnie zaimportowane z menu, lub FAŁSZ, jeśli nie.  
@@ -325,8 +325,8 @@ BOOL LoadFromHash(HMENU hMenu);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *hMenu*  
- Dojście do menu zarchiwizowane do załadowania.  
+*hMenu*<br/>
+[in] Dojście do menu zarchiwizowane do załadowania.  
   
 ### <a name="return-value"></a>Wartość zwracana  
  Zwraca wartość PRAWDA, jeśli menu jest załadowany pomyślnie, lub FAŁSZ, jeśli nie.  
@@ -364,11 +364,11 @@ virtual void SetButtonStyle(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *nIndex*  
- Liczony od zera indeks przycisku paska narzędzi, którego styl ma być utworzony.  
+*nIndex*<br/>
+[in] Liczony od zera indeks przycisku paska narzędzi, którego styl ma być utworzony.  
   
- [in] *nStyle*  
- Styl przycisku. Zobacz [style formantu ToolBar](../../mfc/reference/toolbar-control-styles.md) listę narzędzi dostępnych stylów przycisków.  
+*nStyle*<br/>
+[in] Styl przycisku. Zobacz [style formantu ToolBar](../../mfc/reference/toolbar-control-styles.md) listę narzędzi dostępnych stylów przycisków.  
   
 ### <a name="remarks"></a>Uwagi  
   
@@ -380,8 +380,8 @@ void SetOffset(int iOffset);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *iOffset*  
- Liczba wierszy, przesunięcia paska menu podręcznego.  
+*iOffset*<br/>
+[in] Liczba wierszy, przesunięcia paska menu podręcznego.  
   
 ### <a name="remarks"></a>Uwagi  
   
@@ -395,11 +395,11 @@ void StartPopupMenuTimer(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *pMenuButton*  
- Wskaźnik na przycisku menu, do których chcesz skonfigurować czasomierz opóźnienia.  
+*pMenuButton*<br/>
+[in] Wskaźnik na przycisku menu, do których chcesz skonfigurować czasomierz opóźnienia.  
   
- [in] *nDelayFactor*  
- Współczynnik opóźnienie równe co najmniej jeden do pomnożenia przez czas opóźnienia standardowe menu (zwykle od pół sekundy i pięć sekund).  
+*nDelayFactor*<br/>
+[in] Współczynnik opóźnienie równe co najmniej jeden do pomnożenia przez czas opóźnienia standardowe menu (zwykle od pół sekundy i pięć sekund).  
   
 ### <a name="remarks"></a>Uwagi  
   

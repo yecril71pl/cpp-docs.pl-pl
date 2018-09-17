@@ -1,5 +1,5 @@
 ---
-title: 'Wskazówki: Kompilowanie programu C w wierszu polecenia | Dokumentacja firmy Microsoft'
+title: 'Przewodnik: Kompilowanie programu C w wierszu polecenia | Dokumentacja firmy Microsoft'
 ms.custom: conceptual
 ms.date: 06/21/2018
 ms.technology:
@@ -15,41 +15,41 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f3578fbc5a85757fedda3e9078e54934016607eb
-ms.sourcegitcommit: e013acba70aa29fed60ae7945162adee23e19c3b
+ms.openlocfilehash: 3f1390259838302a56e58397afa79fa8c458b939
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/22/2018
-ms.locfileid: "36322238"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45710336"
 ---
-# <a name="walkthrough-compile-a-c-program-on-the-command-line"></a>Wskazówki: Kompilowanie programu C w wierszu polecenia
+# <a name="walkthrough-compile-a-c-program-on-the-command-line"></a>Przewodnik: Kompilowanie programu C w wierszu polecenia
 
-Visual C++ obejmuje kompilatora C, który służy do tworzenia wszystko z programów podstawowe konsoli pełne aplikacje pulpitu systemu Windows, aplikacje mobilne i inne.
+Visual C++ obejmuje kompilator C, który służy do tworzenia wszystkiego, od programów podstawowa Konsola pełnej aplikacji komputerowych Windows, aplikacje mobilne i więcej.
 
-W tym przewodniku przedstawiono sposób tworzenia prostej "Hello, World" — styl C program przy użyciu tekstu Edytor i skompiluj go w wierszu polecenia. Czy raczej pracy w języku C++ w wierszu polecenia, zobacz [wskazówki: kompilowanie natywnego programu C++ w wierszu polecenia](../build/walkthrough-compiling-a-native-cpp-program-on-the-command-line.md). Jeśli chcesz spróbować programu Visual Studio IDE, a nie przy użyciu wiersza polecenia, zobacz [wskazówki: Praca z projektami i rozwiązaniami (C++)](../ide/walkthrough-working-with-projects-and-solutions-cpp.md) lub [za pomocą środowiska IDE programu Visual Studio dla programowania w języku C++ pulpitu](../ide/using-the-visual-studio-ide-for-cpp-desktop-development.md).
+W tym instruktażu przedstawiono sposób tworzenia podstawowego, "Hello, World"-stylu programu C przy użyciu typu text editor i skompilować go w wierszu polecenia. Jeśli wolisz przebiega w języku C++ w wierszu polecenia, zobacz [wskazówki: kompilowanie natywnego programu C++ w wierszu polecenia](../build/walkthrough-compiling-a-native-cpp-program-on-the-command-line.md). Jeśli chcesz wypróbować jej możliwości programu Visual Studio IDE, a nie przy użyciu wiersza polecenia, zobacz [wskazówki: Praca z projektami i rozwiązaniami (C++)](../ide/walkthrough-working-with-projects-and-solutions-cpp.md) lub [przy użyciu programu Visual Studio IDE dla programowanie aplikacji klasycznych w języku C++](../ide/using-the-visual-studio-ide-for-cpp-desktop-development.md).
 
 ## <a name="prerequisites"></a>Wymagania wstępne
 
-W tym przewodniku, należy zainstalować program Visual Studio i opcjonalnych składników programu Visual C++ lub Build Tools dla programu Visual Studio.
+Do przeprowadzenia tego instruktażu, należy zainstalowano program Visual Studio i opcjonalne składniki Visual C++ lub narzędzia Build Tools dla programu Visual Studio.
 
-Program Visual Studio jest wydajne zintegrowane środowisko projektowe obsługującego edytorze kompletne, menedżerowie zasobów, debugery i kompilatory dla wielu języków i platform. Aby uzyskać informacje o tych funkcjach i jak pobrać i zainstalować program Visual Studio, w tym bezpłatna wersja programu Visual Studio Community, zobacz [program Visual Studio](/visualstudio/install/install-visual-studio).
+Program Visual Studio jest zintegrowanego środowiska projektowego obsługującego edytora z w pełni funkcjonalne, menedżerów zasobów, debugery i kompilatorów dla wielu języków i platform. Aby uzyskać informacje na temat tych funkcji i jak pobrać i zainstalować program Visual Studio, w tym bezpłatnej wersji programu Visual Studio Community, zobacz [Zainstaluj program Visual Studio](/visualstudio/install/install-visual-studio).
 
-Narzędzia kompilacji dla programu Visual Studio w wersji programu Visual Studio instaluje tylko zestaw narzędzi wiersza polecenia, kompilatory, narzędzia i biblioteki należy utworzyć programów C i C++. Doskonale w laboratoriach kompilacji lub klasą wykonuje i instaluje stosunkowo szybko. Aby zainstalować tylko narzędzia wiersza polecenia, Pobierz [Build Tools for Visual Studio](https://go.microsoft.com/fwlink/p/?linkid=875721) i uruchom Instalatora.
+Narzędzia Build Tools dla programu Visual Studio w wersji programu Visual Studio instaluje tylko narzędzi wiersza polecenia, kompilatory, narzędzia i biblioteki wymagane do tworzenia programów C i C++. Jest doskonała do laboratoriów kompilacji lub klasą wykonuje i instaluje względnie szybko. Aby zainstalować tylko narzędzia wiersza polecenia, Pobierz [Build Tools for Visual Studio](https://go.microsoft.com/fwlink/p/?linkid=875721) i uruchom Instalatora.
 
-Przed dokonaniem kompilacji programu C lub C++ w wierszu polecenia, należy sprawdzić, czy są zainstalowane narzędzia i czy użytkownik może uzyskiwać do nich dostęp z poziomu wiersza polecenia. Visual C++ ma złożonych wymagań dotyczących środowiska wiersza polecenia, aby odnaleźć narzędzia nagłówków i bibliotek, które są używane. **Nie można użyć programu Visual C++ w oknie wiersza polecenia zwykły** bez pewne przygotowania. Należy *wiersza polecenia dewelopera* okno jest oknem regularne wiersza polecenia, które zawiera wszystkie zmienne środowiskowe wymagane, ustaw. Na szczęście Visual C++ instaluje skróty należy uruchomić wiersz polecenia dewelopera mających środowiska dla kompilacji wiersza polecenia. Niestety nazwy skrótów wiersza polecenia dewelopera i gdzie znajdują się różnią się w praktycznie każdej wersji programu Visual C++ i w różnych wersjach systemu Windows. Jest pierwsze zadanie wskazówki można znaleźć prawo skrótu do użycia.
+Przed dokonaniem kompilacji program C lub C++ w wierszu polecenia, należy sprawdzić, czy narzędzia są zainstalowane i czy użytkownik może uzyskiwać do nich dostęp z poziomu wiersza polecenia. Visual C++ posiada złożone wymagania dotyczące środowiska wiersza polecenia w celu znalezienia narzędzia, nagłówki i biblioteki, które są używane. **Nie można użyć Visual C++ w oknie wiersza polecenia zwykły** bez pewnych przygotowań. Potrzebujesz *wiersz polecenia dla deweloperów* okno jest oknem regularne wiersza polecenia, które zawiera wszystkie zmienne środowiskowe wymagane Ustaw. Na szczęście Visual C++ instaluje skróty dla Ciebie uruchomić wiersz polecenia dla deweloperów, które środowisko dla kompilacji z wiersza polecenia. Niestety nazwy skróty wiersza polecenia dla deweloperów i gdzie znajdują się różnią się w prawie każdym wersji programu Visual C++ i w innych wersjach systemu Windows. Jest pierwsze zadanie wskazówki można znaleźć odpowiednie skrótu do użycia.
 
 > [!NOTE]
-> Skrót do wiersza polecenia dewelopera automatycznie ustawia prawidłowe ścieżki do narzędzi i kompilatora i wszystkie wymagane nagłówków i bibliotek. Niektóre z tych wartości są różne dla każdej konfiguracji kompilacji. Należy ustawić te wartości środowiska użytkownika, jeśli nie używasz skróty. Aby uzyskać więcej informacji, zobacz [Ustawianie ścieżki i zmiennych środowiskowych dla kompilacji wiersza polecenia](../build/setting-the-path-and-environment-variables-for-command-line-builds.md). Ponieważ środowisko kompilacji jest złożone, zaleca się, że można użyć zamiast tworzenia własnych skrótów wiersza polecenia dewelopera.
+> Skrót do wiersza polecenia dla deweloperów automatycznie ustawia prawidłowe ścieżki dla kompilatora i narzędzi oraz wszelkie wymagane nagłówki i biblioteki. Niektóre z tych wartości różnią się dla każdej konfiguracji kompilacji. Należy ustawić te wartości środowiskowe samodzielnie, jeśli nie używasz skrótów klawiaturowych. Aby uzyskać więcej informacji, zobacz [Ustawianie ścieżki i zmiennych środowiskowych dla kompilacji wiersza polecenia](../build/setting-the-path-and-environment-variables-for-command-line-builds.md). Ponieważ środowisko kompilacji jest złożone, zdecydowanie zalecamy używasz skrót do wiersza polecenia dla deweloperów, zamiast tworzyć własne.
 
-## <a name="open-a-developer-command-prompt"></a>Otwórz okno wiersza polecenia dewelopera
+## <a name="open-a-developer-command-prompt"></a>Otwórz wiersz polecenia dla deweloperów
 
-1. Po zainstalowaniu programu Visual Studio 2017 w systemie Windows 10, otwórz Start menu, a następnie przewiń w dół a **programu Visual Studio 2017** folder (a nie aplikacji Visual Studio 2017). Wybierz **wiersz polecenia dla programu VS 2017 deweloperów** aby otworzyć okno wiersza polecenia.
+1. Po zainstalowaniu programu Visual Studio 2017 w systemie Windows 10, otwórz Start menu, a następnie przewiń w dół i Otwórz **programu Visual Studio 2017** folder (a nie aplikacji programu Visual Studio 2017). Wybierz **wiersz polecenia programisty dla programu VS 2017** aby otworzyć okno wiersza polecenia.
 
-   Jeśli zainstalowano program Microsoft Visual C++ kompilacji narzędzia 2015 w systemie Windows 10, otwórz **Start** menu, a następnie przewiń w dół i Otwórz **Visual C++ Build Tools** folderu. Wybierz **wiersz polecenia narzędzi natywnego programu Visual C++ 2015 x86** aby otworzyć okno wiersza polecenia.
+   Jeśli zainstalowano program Microsoft Visual C++ Build Tools 2015 w systemie Windows 10, otwórz **Start** menu, a następnie przewiń w dół i Otwórz **Visual C++ Build Tools** folderu. Wybierz **natywnych wiersz polecenia narzędzi Visual C++ 2015 x86** aby otworzyć okno wiersza polecenia.
 
-   Jeśli używasz innej wersji programu Visual Studio lub innej wersji systemu Windows, Szukaj w Start menu lub uruchomić strony do folderu narzędzi Visual Studio, który zawiera skrót do wiersza polecenia dewelopera. Funkcja wyszukiwania systemu Windows umożliwia również wyszukiwanie "wiersz polecenia dla deweloperów" i wybierz, który odpowiada zainstalowanej wersji programu Visual Studio. Użyj skrótu, aby otworzyć okno wiersza polecenia.
+   Jeśli używasz innej wersji programu Visual Studio lub działają innej wersji systemu Windows, Szukaj w Start menu lub uruchomić stronę folderu Narzędzia programu Visual Studio, który zawiera skrót do wiersza polecenia dla deweloperów. Funkcja wyszukiwania Windows umożliwia również wyszukiwanie "wiersz polecenia dla deweloperów" i wybierz jedną, która jest zgodna z zainstalowaną wersją programu Visual Studio. Użyj skrótu, aby otworzyć okno wiersza polecenia.
 
-2. Następnie sprawdź, czy wiersza polecenia dewelopera Visual C++ jest prawidłowo skonfigurowane. W oknie wiersza polecenia wprowadź `cl` i sprawdź, czy dane wyjściowe wygląda następująco:
+2. Następnie sprawdź, czy wiersz polecenia dla deweloperów Visual C++ są prawidłowo skonfigurowane. W oknie wiersza polecenia wprowadź `cl` i sprawdź, czy dane wyjściowe wyglądają następująco:
 
    ```Output
    C:\Program Files (x86)\Microsoft Visual Studio\2017\Enterprise>cl
@@ -61,21 +61,21 @@ Przed dokonaniem kompilacji programu C lub C++ w wierszu polecenia, należy spra
    C:\Program Files (x86)\Microsoft Visual Studio\2017\Enterprise>
    ```
 
-   Może to być różnic w bieżącym katalogu i numery wersji, w zależności od wersji programu Visual C++ i zainstalowane jakiekolwiek aktualizacje. Jeśli jest to podobne do zostanie wyświetlony, następnie można przystąpić do tworzenia programów C lub C++ w wierszu polecenia.
+   Może to być różnice w bieżącym katalogu lub numerów wersji, w zależności od wersji programu Visual C++ i zainstalowane jakiekolwiek aktualizacje. Jeśli jest to podobne do wyświetlanych, następnie można przystąpić do tworzenia programów C lub C++ w wierszu polecenia.
 
    > [!NOTE]
-   > Jeśli zostanie wyświetlony błąd, takie jak "'cl' nie jest rozpoznawana jako polecenie wewnętrzne lub zewnętrzne, program wykonywalny lub plik wsadowy" Błąd C1034 lub błąd LNK1104 po uruchomieniu **cl** polecenia, a następnie albo nie używasz wiersz polecenia dewelopera lub Czasami występują problemy z instalacją programu Visual C++. Przed kontynuowaniem musisz naprawić ten problem.
+   > Jeśli wystąpi błąd, takie jak "" cl"nie jest rozpoznawana jako polecenie wewnętrzne lub zewnętrzne, program wykonywalny lub plik wsadowy" Błąd C1034 lub błąd LNK1104 po uruchomieniu **cl** polecenia, a następnie albo nie używasz wiersz polecenia dla deweloperów lub coś jest nie tak z instalacji programu Visual C++. Należy rozwiązać ten problem, zanim będzie można kontynuować.
 
-   Jeśli nie możesz znaleźć dewelopera skrót do wiersza polecenia lub jeśli zostanie wyświetlony komunikat o błędzie podczas wprowadzania `cl`, a następnie instalację programu Visual C++ może wystąpić problem. Jeśli używasz programu Visual Studio 2017, spróbuj ponownie zainstalować **tworzenia klasycznych aplikacji w języku C++** obciążenia w Instalatorze programu Visual Studio. Aby uzyskać więcej informacji, zobacz [zainstalować obsługi języka C++ w programie Visual Studio](../build/vscpp-step-0-installation.md). Lub ponownie zainstalować [Build Tools for Visual Studio](https://go.microsoft.com/fwlink/p/?linkid=875721). Nie przejdź do następnej sekcji, dopóki działa to. Aby uzyskać więcej informacji o instalowaniu i rozwiązywanie problemów z programu Visual Studio, zobacz [program Visual Studio](/visualstudio/install/install-visual-studio).
+   Jeśli nie możesz znaleźć Deweloper skrót do wiersza polecenia lub jeśli zostanie wyświetlony komunikat o błędzie po wprowadzeniu `cl`, a następnie instalację programu Visual C++ może wystąpić problem. Jeśli używasz programu Visual Studio 2017, spróbuj zainstalować ponownie **programowanie aplikacji klasycznych w języku C++** obciążenie w Instalatorze programu Visual Studio. Aby uzyskać więcej informacji, zobacz [Instalowanie obsługi języka C++ w programie Visual Studio](../build/vscpp-step-0-installation.md). Czy ponownie zainstalować [Build Tools for Visual Studio](https://go.microsoft.com/fwlink/p/?linkid=875721). Nie przejdź do następnej sekcji, dopóki ta funkcja działa. Aby uzyskać więcej informacji na temat instalowania i rozwiązywanie problemów z programu Visual Studio, zobacz [Zainstaluj program Visual Studio](/visualstudio/install/install-visual-studio).
 
    > [!NOTE]
-   > W zależności od wersji systemu Windows na komputerze oraz konfiguracji zabezpieczeń systemu, może być konieczne kliknij prawym przyciskiem myszy, aby otworzyć menu skrótów dla deweloperów skrót do wiersza polecenia, a następnie wybierz pozycję **Uruchom jako Administrator** do pomyślnie skompilować i uruchomić program, który utworzonych za pomocą tego przewodnika.
+   > W zależności od wersji na komputerze oraz konfiguracji zabezpieczeń systemu Windows, może być konieczne, kliknij prawym przyciskiem myszy, aby otworzyć menu skrótów dla skrót do wiersza polecenia dla deweloperów, a następnie wybierz **Uruchom jako Administrator** do pomyślnie skompilować i uruchomić program, który utworzonych za pomocą tego przewodnika.
 
-## <a name="create-a-c-source-file-and-compile-it-on-the-command-line"></a>Tworzenie źródłowego pliku C i skompiluj go w wierszu polecenia
+## <a name="create-a-c-source-file-and-compile-it-on-the-command-line"></a>Utwórz plik źródłowy C i skompilować go w wierszu polecenia
 
-1. W oknie wiersza polecenia dewelopera wprowadź **cd c:\\**  można zmienić bieżący katalog roboczy na katalog główny dysku C:. Następnie wprowadź **md c:\simple** do tworzenia katalogu, a następnie wprowadź **cd c:\simple** zmiany do tego katalogu. To jest katalog, który będzie zawierać pliku źródłowego i skompilowany program.
+1. W oknie wiersza polecenia dla deweloperów, wprowadź **cd c:\\**  Aby zmienić bieżący katalog roboczy w folderze głównym dysku C:. Następnie wprowadź **md c:\simple** Utwórz katalog, a następnie wprowadź **cd c:\simple** zmiany do tego katalogu. Jest to katalog, który będzie zawierać pliku źródłowego i skompilowanego programu.
 
-2. Wprowadź **simple.c Notatnik** w wierszu polecenia dewelopera. W Notatniku alertu oknie wyskakującym, wybierz **tak** do utworzenia nowego pliku simple.c w katalogu roboczym.
+2. Wprowadź **simple.c Notatnik** w wierszu polecenia dla deweloperów. W programie Notatnik alertu wyświetlonego oknie dialogowym wybierz **tak** do utworzenia nowego pliku simple.c w katalogu roboczym.
 
 3. W programie Notatnik wprowadź następujące wiersze kodu:
 
@@ -86,12 +86,12 @@ Przed dokonaniem kompilacji programu C lub C++ w wierszu polecenia, należy spra
     {
         printf("Hello, World! This is a native C program compiled on the command line.\n");
         return 0;
-    } 
+    }
     ```
 
-4. Na pasku menu programu Notatnik wybierz **pliku**, **zapisać** zapisać simple.c w katalogu roboczym.
+4. Na pasku menu Notatnika wybierz **pliku**, **Zapisz** można zapisać simple.c w katalogu roboczym.
 
-5. Przejdź do okna wiersza polecenia dewelopera. Wprowadź **dir** w wierszu polecenia, aby wyświetlić zawartość katalogu c:\simple. Powinny pojawić się simple.c pliku źródłowego w liście zawartości katalogu, który wygląda następująco:
+5. Przejdź z powrotem do okna wiersza polecenia dla deweloperów. Wprowadź **dir** w wierszu polecenia, aby wyświetlić listę zawartości katalogu c:\simple. Powinny zostać wyświetlone simple.c pliku źródłowego w listy zawartości katalogu, który wygląda następująco:
 
     ```Output
     C:\simple>dir
@@ -108,11 +108,11 @@ Przed dokonaniem kompilacji programu C lub C++ w wierszu polecenia, należy spra
 
     ```
 
-   Daty i inne szczegóły różnią się na komputerze. Jeśli nie widzisz pliku kodu źródłowego, simple.c, upewnij się, że zostały zmienione, aby nowo utworzony katalog c:\simple i w programie Notatnik, upewnij się, zapisać pliku źródłowego w tym katalogu. Upewnij się również kod źródłowy został zapisany z rozszerzeniem nazwy pliku .c, nie rozszerzenia .txt.
+   Daty i inne szczegóły różnią się na tym komputerze. Jeśli nie widzisz pliku kodu źródłowego, simple.c, upewnij się, że zmiany zostały wprowadzone do katalogu c:\simple, w którym został utworzony i w programie Notatnik, upewnij się, zapisać pliku źródłowego w tym katalogu. Upewnij się również zapisać kodu źródłowego z rozszerzeniem nazwy pliku .c, nie rozszerzenia .txt.
 
-6. Aby skompilować programu, wprowadź **cl simple.c** w wierszu polecenia dewelopera.
+6. Aby skompilować program, należy wprowadzić **cl simple.c** w wierszu polecenia dla deweloperów.
 
-   Można wyświetlić nazwę programu wykonywalnego simple.exe w wierszach kompilator wyświetlane informacje danych wyjściowych:
+   Można wyświetlić nazwę programu wykonywalnego simple.exe w wierszach danych wyjściowych wyświetlanych przez kompilator:
 
     ```Output
     c:\simple>cl simple.c
@@ -128,26 +128,26 @@ Przed dokonaniem kompilacji programu C lub C++ w wierszu polecenia, należy spra
     ```
 
    > [!NOTE]
-   > Jeśli zostanie wyświetlony błąd, takie jak "'cl' nie jest rozpoznawana jako polecenie wewnętrzne lub zewnętrzne, program wykonywalny lub plik wsadowy" Błąd C1034 lub błąd LNK1104, wiersza polecenia dewelopera jest nieprawidłowo skonfigurowane. Aby uzyskać informacje na temat rozwiązać ten problem, przejdź wstecz do **Otwórz okno wiersza polecenia dewelopera** sekcji.
+   > Jeśli wystąpi błąd, takie jak "" cl"nie jest rozpoznawana jako polecenie wewnętrzne lub zewnętrzne, program wykonywalny lub plik wsadowy" Błąd C1034 lub błąd LNK1104, wiersza polecenia dla deweloperów nie jest skonfigurowany prawidłowo. Aby uzyskać informacje na temat rozwiązać ten problem, przejdź wstecz do **Otwórz wiersz polecenia dla deweloperów** sekcji.
 
    > [!NOTE]
-   > Jeśli inny kompilatora lub konsolidatora błąd lub ostrzeżenie, przejrzeć kod źródłowy poprawić błędy, zapisać go i ponownie uruchom kompilatora. Aby uzyskać informacje o określonych błędach Użyj pola wyszukiwania w górnej części strony do wyszukania numer błędu.
+   > Jeśli wystąpi inny kompilator lub konsolidator błędu lub ostrzeżenia, przejrzyj kod źródłowy, aby poprawić błędy, a następnie zapisz go i ponownie uruchomić kompilator. Aby uzyskać informacje o błędach Użyj pola wyszukiwania w górnej części tej strony do wyszukania numer błędu.
 
 7. Aby uruchomić program, należy wprowadzić **proste** w wierszu polecenia.
 
-   Program wyświetla ten tekst, a następnie kończy działanie:
+   Program wyświetla tekst, a następnie kończy działanie:
 
     ```Output
     Hello, World! This is a native C program compiled on the command line.
     ```
 
-   Gratulacje, zostały tylko skompilować i uruchomić C program za pomocą wiersza polecenia.
+   Gratulacje, udało po prostu skompilowane i uruchomić C program przy użyciu wiersza polecenia.
 
 ## <a name="next-steps"></a>Następne kroki
 
-W tym przykładzie "Hello, World" jest około tak proste, jak pobrać C program. Rzeczywistych programy posiadają pliki nagłówka i więcej plików źródłowych, łącze w bibliotekach i przydatne pracę.
+W tym przykładzie "Hello, World" to około tak proste, jak pobrać C program. Programy rzeczywistych mają pliki nagłówkowe i więcej plików źródłowych, link w bibliotekach i wykonywania użytecznej pracy.
 
-Kroki opisane w tym przewodniku służy do tworzenia własnego kodu C zamiast wpisywać kod przykładowych pokazano. Można również tworzyć wiele C kod przykładowy programy, które można znaleźć w innym miejscu. Aby skompilować program, który ma wiele plików kodu źródłowego, wprowadź je w wierszu polecenia następujący:
+Kroki opisane w tym przewodniku służy do tworzenia własnego kodu języka C, zamiast wpisywać pokazano przykładowy kod. Możesz także tworzyć wiele C przykładowych programów napisanych w których odnaleźć w innym miejscu. Aby skompilować program, który ma wiele plików kodu źródłowego, należy wprowadzić je wszystkie w wierszu polecenia, takie jak to:
 
 `cl file1.c file2.c file3.c`
 
@@ -155,21 +155,21 @@ Kompilator generuje program o nazwie file1.exe. Aby zmienić nazwę program1.exe
 
 `cl file1.c file2.c file3.c /link /out:program1.exe`
 
-I aby wykryć automatycznie więcej błędów programowania, zaleca się skompilować przy użyciu [/W3](../build/reference/compiler-option-warning-level.md) lub [/W4](../build/reference/compiler-option-warning-level.md) ostrzeżenie opcję poziomu:
+I aby automatycznie wykryć więcej błędów programowania, zaleca się skompilować przy użyciu [/W3](../build/reference/compiler-option-warning-level.md) lub [/W4](../build/reference/compiler-option-warning-level.md) ostrzeżenie opcję poziomu:
 
 `cl /W4 file1.c file2.c file3.c /link /out:program1.exe`
 
-Kompilator, cl.exe, ma wiele więcej opcji dotyczą kompilacji, optymalizacja, debugowania i analizowania kodu. Lista szybki, wprowadź **cl /?** w wierszu polecenia dewelopera. Można również skompilować i połączyć oddzielnie i zastosować opcje konsolidatora w bardziej złożonych scenariuszach kompilacji. Aby uzyskać więcej informacji na kompilatora i opcje konsolidatora i użycia, zobacz [odwołanie kompilacji C/C++](../build/reference/c-cpp-building-reference.md).
+Kompilator cl.exe, ma wiele więcej opcji się do kompilacji, optymalizowanie, Debuguj i Analizuj swój kod. Lista szybkich, wprowadź **cl /?** w wierszu polecenia dla deweloperów. Można również skompilować i połączyć oddzielnie i zastosować opcje konsolidatora w bardziej złożonych scenariuszy kompilacji. Aby uzyskać więcej informacji dotyczących kompilatora i opcje konsolidatora i jego użycia, zobacz [odwołanie kompilacji C/C++](../build/reference/c-cpp-building-reference.md).
 
-NMAKE i pliki reguł programu make lub MSBuild i pliki projektu można użyć do konfigurowania i kompilacji projektów bardziej złożone w wierszu polecenia. Aby uzyskać więcej informacji na temat używania tych narzędzi, zobacz [odwołanie NMAKE](../build/nmake-reference.md) i [MSBuild](../build/msbuild-visual-cpp.md).
+NMAKE i pliki reguł programu make lub MSBuild i pliki projektu można użyć do konfigurowania i tworzyć bardziej złożone projekty w wierszu polecenia. Aby uzyskać więcej informacji na temat korzystania z tych narzędzi, zobacz [odwołanie NMAKE](../build/nmake-reference.md) i [MSBuild](../build/msbuild-visual-cpp.md).
 
-Języki C i C++ są podobne, ale nie sam. Kompilator Visual C++ używa Prosta reguła, aby określić język, który będzie używany podczas kompiluje kod. Domyślnie kompilatora Visual C++ traktuje wszystkie pliki, które kończą się .c jako kodu źródłowego C i wszystkich plików, które kończą się .cpp jako kodu źródłowego języka C++. Aby wymusić kompilatorowi na traktowanie wszystkich plików c niezależnie od rozszerzenia nazwy pliku, użyj [/TC](../build/reference/tc-tp-tc-tp-specify-source-file-type.md) — opcja kompilatora.
+W językach C i C++ są podobne, ale nie sam. Kompilator języka Visual C++ używa prostej reguły, aby określić język, który będzie używany podczas kompiluje kod. Domyślnie kompilator języka Visual C++ traktuje wszystkie pliki, które kończą się na .c, jako kod źródłowy języka C i wszystkich plików, które kończą się na .cpp, jako kod źródłowy języka C++. Aby wymusić na kompilatorze traktowanie wszystkich plików jako C niezależnie od rozszerzenia nazwy pliku, należy użyć [TP](../build/reference/tc-tp-tc-tp-specify-source-file-type.md) — opcja kompilatora.
 
-Kompilator Visual C++ C jest zazwyczaj zgodne ze standardem ISO C99, ale nie jest ściśle zgodna. W większości przypadków przenośne kod w języku C skompilować i uruchomić zgodnie z oczekiwaniami. Visual C++ nie obsługuje większość zmian w ISO C11. Niektóre funkcje bibliotek i nazwy funkcji POSIX są używane przez kompilator języka Visual C++. Funkcje są obsługiwane, ale preferowaną nazwy zostały zmienione. Aby uzyskać więcej informacji, zobacz [funkcje zabezpieczeń w CRT](../c-runtime-library/security-features-in-the-crt.md) i [C4996 ostrzeżenie kompilatora (poziom 3)](../error-messages/compiler-warnings/compiler-warning-level-3-c4996.md).
+Kompilator Visual C++, C jest zazwyczaj zgodne ze standardem ISO C99, ale nie jest ściśle zgodna. W większości przypadków przenośny kod C skompilować i uruchomić zgodnie z oczekiwaniami. Visual C++ nie obsługuje większość zmian w ISO C11. Niektóre funkcje biblioteki i nazwy funkcji POSIX są przestarzałe przez kompilator Visual C++. Funkcje są obsługiwane, ale preferowane nazwy zostały zmienione. Aby uzyskać więcej informacji, zobacz [funkcje zabezpieczeń w CRT](../c-runtime-library/security-features-in-the-crt.md) i [ostrzeżenie kompilatora (poziom 3) C4996](../error-messages/compiler-warnings/compiler-warning-level-3-c4996.md).
 
 ## <a name="see-also"></a>Zobacz także
 
-[Przewodnik: tworzenie standardowego programu C++ (C++)](../windows/walkthrough-creating-a-standard-cpp-program-cpp.md)  
-[Dokumentacja języka C](../c-language/c-language-reference.md)  
-[Kompilowanie programów C/C++](../build/building-c-cpp-programs.md)  
-[Zgodność](../c-runtime-library/compatibility.md)  
+[Wskazówki: Tworzenie standardowego programu C++ (C++)](../windows/walkthrough-creating-a-standard-cpp-program-cpp.md)
+[Skorowidz języka c](../c-language/c-language-reference.md)<br/>
+[Kompilowanie programów C/C++](../build/building-c-cpp-programs.md)<br/>
+[Zgodność](../c-runtime-library/compatibility.md)

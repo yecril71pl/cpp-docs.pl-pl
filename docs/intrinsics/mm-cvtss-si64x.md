@@ -17,12 +17,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 947c9bf0892da52b44a99486b3ff0f1d59bc6fee
-ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
+ms.openlocfilehash: 1cba221f0944f840f9cdf76da86ec7ce37f37ca8
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "42466238"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45713781"
 ---
 # <a name="mmcvtsssi64x"></a>_mm_cvtss_si64x
 **Microsoft Specific**  
@@ -38,8 +38,8 @@ __int64 _mm_cvtss_si64x(
 ```  
   
 #### <a name="parameters"></a>Parametry  
- [in] `value`  
- `__m128` Struktury zawierającej — wartości zmiennoprzecinkowe.  
+*value*<br/>
+[in] `__m128` Struktury zawierającej — wartości zmiennoprzecinkowe.  
   
 ## <a name="return-value"></a>Wartość zwracana  
  64-bitową liczbę całkowitą, wynik konwersji pierwsza wartość zmiennoprzecinkowa do liczby całkowitej.  

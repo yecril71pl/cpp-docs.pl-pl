@@ -22,15 +22,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7e04bcdf797f7036d943219f9d067dcbf786cfa3
-ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
+ms.openlocfilehash: 7d87b7a2a76ea73989a9ab7dd845666625e91aa0
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/27/2018
-ms.locfileid: "37039784"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45711597"
 ---
 # <a name="cmfcacceleratorkey-class"></a>Klasa CMFCAcceleratorKey
-Klasa pomocy, która implementuje wirtualnego mapowania klucza i formatowania.  
+Klasa pomocnika, która implementuje wirtualne mapowanie i formatowanie kluczy.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -50,16 +50,16 @@ class CMFCAcceleratorKey : public CObject
   
 |Nazwa|Opis|  
 |----------|-----------------|  
-|[CMFCAcceleratorKey::Format](#format)|Wykonuje translację struktury AKCELERACJA do jego wizualnej reprezentacji.|  
+|[CMFCAcceleratorKey::Format](#format)|Wykonuje translację strukturę AKCELERACJA jego wizualnej reprezentacji.|  
 |[CMFCAcceleratorKey::SetAccelerator](#setaccelerator)|Ustawia klawisz skrótu `CMFCAcceleratorKey` obiektu.|  
   
 ## <a name="remarks"></a>Uwagi  
- Klawisze skrótów są również znane jako klawiszy skrótów. Jeśli chcesz wyświetlić skróty klawiaturowe, które użytkownik wprowadza, [klasy CMFCAcceleratorKeyAssignCtrl](../../mfc/reference/cmfcacceleratorkeyassignctrl-class.md) mapy skróty klawiaturowe, takie jak Alt + Shift + S, aby niestandardowym formacie tekstowym, takich jak "Alt + Shift + S". Każdy `CMFCAcceleratorKey` obiekt mapuje klawisza skrótu jednego do formatu tekstowego.  
+ Klawisze skrótów są również nazywane klawiszy skrótów. Jeśli chcesz wyświetlić skróty klawiaturowe, które użytkownik wprowadza, [klasa CMFCAcceleratorKeyAssignCtrl](../../mfc/reference/cmfcacceleratorkeyassignctrl-class.md) mapy skróty klawiaturowe, takich jak klawisze Alt + Shift + S do formatu niestandardowego tekstu, takie jak "Alt + Shift + S". Każdy `CMFCAcceleratorKey` obiektu mapy klawisza pojedynczego skrótu do formatu tekstowego.  
   
- Aby uzyskać więcej informacji o sposobie używania klawiszy skrótów i tabele akceleratora, zobacz [CKeyboardManager klasy](../../mfc/reference/ckeyboardmanager-class.md).  
+ Aby uzyskać więcej informacji o tym, jak używać klawiszy skrótów i tabel akceleratora, zobacz [klasa CKeyboardManager](../../mfc/reference/ckeyboardmanager-class.md).  
   
 ## <a name="example"></a>Przykład  
- W poniższym przykładzie pokazano sposób tworzenia `CMFCAcceleratorKey` obiektu i sposobu użycia jej `Format` metody.  
+ W poniższym przykładzie pokazano sposób tworzenia `CMFCAcceleratorKey` obiektu i sposobu używania jej `Format` metody.  
   
  [!code-cpp[NVC_MFC_RibbonApp#30](../../mfc/reference/codesnippet/cpp/cmfcacceleratorkey-class_1.cpp)]  
   
@@ -80,25 +80,25 @@ CMFCAcceleratorKey(LPACCEL lpAccel);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *lpAccel*  
- Wskaźnik do klawisza skrótu.  
+*lpAccel*<br/>
+[in] Wskaźnik do klawisza skrótu.  
   
 ### <a name="remarks"></a>Uwagi  
- Jeśli nie podasz klawisz skrótu podczas tworzenia `CMFCAccleratorKey`, użyj [CMFCAcceleratorKey::SetAccelerator](#setaccelerator) do kojarzenia klawisza skrótu z Twojej `CMFCAcceleratorKey` obiektu.  
+ Jeśli nie podasz klawisz skrótu podczas tworzenia `CMFCAccleratorKey`, użyj [CMFCAcceleratorKey::SetAccelerator](#setaccelerator) metoda powiązania klawisza skrótu z Twojej `CMFCAcceleratorKey` obiektu.  
   
 ##  <a name="format"></a>  CMFCAcceleratorKey::Format  
- Wykonuje translację struktury AKCELERACJA wartość ciągu skojarzone.  
+ Wykonuje translację struktury AKCELERACJA do wartości ciągu skojarzone.  
   
 ```  
 void Format(CString& str) const;  
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [out] *str*  
- Odwołanie do `CString` obiektu, którego metoda zapisuje klawisz skrótu przetłumaczonego.  
+*str*<br/>
+[out] Odwołanie do `CString` obiektu, którego metoda zapisuje klawisza skrótu tłumaczenia.  
   
 ### <a name="remarks"></a>Uwagi  
- Ta metoda pobiera ciąg formatu klawisz skrótu skojarzony. Można ustawić formatu ciągu [CMFCAcceleratorKey](../../mfc/reference/cmfcacceleratorkey-class.md) przy użyciu konstruktora lub metody [CMFCAcceleratorKey::SetAccelerator](#setaccelerator).  
+ Ta metoda pobiera format ciągu klawisza skrótu skojarzone. Można ustawić format ciągu [CMFCAcceleratorKey](../../mfc/reference/cmfcacceleratorkey-class.md) przy użyciu konstruktora lub metody [CMFCAcceleratorKey::SetAccelerator](#setaccelerator).  
   
 ##  <a name="setaccelerator"></a>  CMFCAcceleratorKey::SetAccelerator  
  Ustawia klawisz skrótu [CMFCAcceleratorKey](../../mfc/reference/cmfcacceleratorkey-class.md) obiektu.  
@@ -108,11 +108,11 @@ void SetAccelerator(LPACCEL lpAccel);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *lpAccel*  
- Wskaźnik do klawisza skrótu.  
+*lpAccel*<br/>
+[in] Wskaźnik do klawisza skrótu.  
   
 ### <a name="remarks"></a>Uwagi  
- Użyj tej metody, aby ustawić klawisz skrótu `CMFCAcceleratorKey` Jeśli nie podano klawisz skrótu podczas tworzenia `CMFCAcceleratorKey`.  
+ Ta metoda umożliwia ustawianie klawisz skrótu `CMFCAcceleratorKey` Jeśli nie podano klawisz skrótu podczas tworzenia `CMFCAcceleratorKey`.  
   
 ## <a name="see-also"></a>Zobacz też  
  [Diagram hierarchii](../../mfc/hierarchy-chart.md)   

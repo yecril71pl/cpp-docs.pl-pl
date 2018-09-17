@@ -74,12 +74,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ebe4b604958220a846ee3a91b1a6251f6f461de9
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 763849c2f13e88c11280ec7594385afd85552080
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43758859"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45712741"
 ---
 # <a name="cheaderctrl-class"></a>Klasa CHeaderCtrl
 Oferuje funkcje formantu typowego nagłówka Windows.  
@@ -490,8 +490,8 @@ BOOL GetItemDropDownRect(
   
 |Parametr|Opis|  
 |---------------|-----------------|  
-|[in] *towaru*|Liczony od zera indeks elementu nagłówek, którego styl jest HDF_SPLITBUTTON. Aby uzyskać więcej informacji, zobacz `fmt` członkiem [HDITEM](/windows/desktop/api/commctrl/ns-commctrl-_hd_itema) struktury.|  
-|[out] *lprect —*|Wskaźnik do [Prostokąt](https://msdn.microsoft.com/library/windows/desktop/dd162897) struktury do uzyskiwania informacji prostokąt otaczający.|  
+|*Towaru*|[in] Liczony od zera indeks elementu nagłówek, którego styl jest HDF_SPLITBUTTON. Aby uzyskać więcej informacji, zobacz `fmt` członkiem [HDITEM](/windows/desktop/api/commctrl/ns-commctrl-_hd_itema) struktury.|  
+|*lprect —*|[out] Wskaźnik do [Prostokąt](https://msdn.microsoft.com/library/windows/desktop/dd162897) struktury do uzyskiwania informacji prostokąt otaczający.|  
   
 ### <a name="return-value"></a>Wartość zwracana  
  Wartość TRUE, jeśli funkcja się powiedzie; w przeciwnym razie wartość FALSE.  
@@ -567,7 +567,7 @@ BOOL GetOverflowRect(LPRECT lpRect) const;
   
 |Parametr|Opis|  
 |---------------|-----------------|  
-|[out] *lprect —*|Wskaźnik do [Prostokąt](https://msdn.microsoft.com/library/windows/desktop/dd162897) strukturę, która otrzymuje informacje prostokąt otaczający.|  
+|*lprect —*|[out] Wskaźnik do [Prostokąt](https://msdn.microsoft.com/library/windows/desktop/dd162897) strukturę, która otrzymuje informacje prostokąt otaczający.|  
   
 ### <a name="return-value"></a>Wartość zwracana  
  Wartość TRUE, jeśli funkcja się powiedzie; w przeciwnym razie wartość FALSE.  
@@ -598,7 +598,7 @@ int HitTest(LPHDHITTESTINFO* phdhti);
   
 |Parametr|Opis|  
 |---------------|-----------------|  
-|[out w] *phdhti*|Wskaźnik do [HDHITTESTINFO](/windows/desktop/api/commctrl/ns-commctrl-_hd_hittestinfo) struktura, która określa punkt do testowania i otrzymuje wyniki testu.|  
+|*phdhti*|[out w] Wskaźnik do [HDHITTESTINFO](/windows/desktop/api/commctrl/ns-commctrl-_hd_hittestinfo) struktura, która określa punkt do testowania i otrzymuje wyniki testu.|  
   
 ### <a name="return-value"></a>Wartość zwracana  
  Liczony od zera indeks elementu nagłówka, jeśli istnieje w określonej pozycji; w przeciwnym razie, wartość -1.  
@@ -726,7 +726,7 @@ BOOL SetFocusedItem(int iItem);
   
 |Parametr|Opis|  
 |---------------|-----------------|  
-|[in] *towaru*|Liczony od zera indeks elementu nagłówka.|  
+|*Towaru*|[in] Liczony od zera indeks elementu nagłówka.|  
   
 ### <a name="return-value"></a>Wartość zwracana  
  Wartość TRUE, jeśli ta metoda jest kończy się pomyślnie; w przeciwnym razie wartość FALSE.  

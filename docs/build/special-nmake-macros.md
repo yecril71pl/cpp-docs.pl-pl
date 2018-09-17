@@ -16,23 +16,25 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1eb74d09c1facf664c39781f8134d653f3105c9c
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: fe854d4e3c625d23a5b83cee50ab468b76abcfff
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32380018"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45710206"
 ---
 # <a name="special-nmake-macros"></a>Specjalne makra NMAKE
-NMAKE zawiera kilka specjalne makra do reprezentowania różnych nazw plików i poleceń. Użycie jednego niektóre z tych makr jest w regułach wnioskowania wstępnie zdefiniowane. Podobnie jak wszystkie makra makra udostępniane przez NMAKE jest uwzględniana wielkość liter.  
-  
--   [Makra nazwy pliku](../build/filename-macros.md)  
-  
--   [Makra rekursji](../build/recursion-macros.md)  
-  
--   [Makra poleceń i makra opcji](../build/command-macros-and-options-macros.md)  
-  
--   [Makra zmiennych środowiskowych](../build/environment-variable-macros.md)  
-  
-## <a name="see-also"></a>Zobacz też  
- [Makra i NMAKE](../build/macros-and-nmake.md)
+
+NMAKE udostępnia kilka specjalne makra do reprezentowania różnych nazw plików i poleceń. Jest jednym z zastosowań niektóre z tych makr w zasadach wnioskowania wstępnie zdefiniowane. Podobnie jak wszystkie makra makra, dostarczone przez NMAKE uwzględniają wielkość liter.
+
+- [Makra nazwy pliku](../build/filename-macros.md)
+
+- [Makra rekursji](../build/recursion-macros.md)
+
+- [Makra poleceń i makra opcji](../build/command-macros-and-options-macros.md)
+
+- [Makra zmiennych środowiskowych](../build/environment-variable-macros.md)
+
+## <a name="see-also"></a>Zobacz też
+
+[Makra i NMAKE](../build/macros-and-nmake.md)

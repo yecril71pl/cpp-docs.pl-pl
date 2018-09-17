@@ -15,16 +15,18 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b174747b3153bb44f6850f251713f8f3fca168c4
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: be674af25fceec377d2d7b8979b3a52de91cf640
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32372406"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45712481"
 ---
 # <a name="exe-files-as-linker-input"></a>Pliki .Exe — Wejście konsolidatora
-[Nazwa pliku klasy zastępczej MS-DOS](../../build/reference/stub-ms-dos-stub-file-name.md) (/ STUB) opcja określa nazwę pliku .exe uruchamiane przy użyciu systemu MS-DOS. ŁĄCZE sprawdza, czy określony plik, należy upewnić się, że jest prawidłowy program systemu MS-DOS.  
-  
-## <a name="see-also"></a>Zobacz też  
- [Pliki wyjściowe LINK](../../build/reference/link-input-files.md)   
- [Opcje konsolidatora](../../build/reference/linker-options.md)
+
+[Nazwa pliku klasy zastępczej MS-DOS](../../build/reference/stub-ms-dos-stub-file-name.md) (/ STUB) opcja określa nazwę pliku .exe, który jest uruchamiany z systemem MS-DOS. ŁĄCZA sprawdza, czy określony plik, należy upewnić się, że jest to prawidłowy program systemu MS-DOS.
+
+## <a name="see-also"></a>Zobacz też
+
+[Pliki wejściowe LINK](../../build/reference/link-input-files.md)<br/>
+[Opcje konsolidatora](../../build/reference/linker-options.md)

@@ -25,71 +25,76 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7f26121c80378f4317d02f51582ad67033972765
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: c5288e748956a405073697ddd7331a73b95d8650
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32378665"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45714249"
 ---
 # <a name="yc-create-precompiled-header-file"></a>/Yc (Utwórz prekompilowany plik nagłówka)
-Instruuje kompilator, aby utworzyć plik prekompilowanego nagłówka (.pch), który reprezentuje stan kompilacji w określonym punkcie.  
-  
-## <a name="syntax"></a>Składnia  
-  
+
+Instruuje kompilator, aby utworzyć plik prekompilowanego pliku nagłówkowego (.pch), który reprezentuje stan kompilacji w pewnym momencie.
+
+## <a name="syntax"></a>Składnia
+
 > __/Yc__
->  __/Yc__*filename*  
-  
-  
-## <a name="arguments"></a>Argumenty  
-*Nazwa pliku*  
- Określa plik nagłówków (.h). Jeśli ten argument jest używany, kompilator kompiluje całego kodu, w tym pliku .h.  
-  
-## <a name="remarks"></a>Uwagi  
- Gdy **/Yc** został określony bez argumentu, kompilator kompiluje cały kod do końca pliku źródłowego podstawowej lub do punktu w pliku podstawowego gdzie [hdrstop](../../preprocessor/hdrstop.md) występuje dyrektywy. Wynikowy plik .pch ma taką samą nazwę podstawowej jako pliku źródłowego podstawowej, chyba że zostanie określony, nazwa inny plik za pomocą **hdrstop** pragma lub **/FP** opcji.  
-  
- Prekompilowany kod jest zapisywany w pliku o nazwie utworzone z podstawowej nazwy pliku określony za pomocą **/Yc** opcja i rozszerzenia .pch. Można również użyć [/Fp (nazwa. Plik pch)](../../build/reference/fp-name-dot-pch-file.md) opcję, aby określić nazwę dla prekompilowanego pliku nagłówkowego.  
-  
- Jeśli używasz __/Yc__*filename*, kompilator kompiluje całego kodu, w tym określony plik dla kolejnych [/Yu (Użyj Prekompilowanego pliku nagłówka)](../../build/reference/yu-use-precompiled-header-file.md) opcji.  
-  
- Jeśli opcje __/Yc__*filename* i __/Yu__*filename* występować w jednym wierszu polecenia i oba odwołania lub oznaczać taką samą nazwę, __/Yc__*filename* pierwszeństwo. Ta funkcja ułatwia zapisywanie pliki reguł programu make.  
-  
- Aby uzyskać więcej informacji o prekompilowanych nagłówków zobacz:  
-  
--   [/Y (Prekompilowane nagłówki)](../../build/reference/y-precompiled-headers.md)  
-  
--   [Tworzenie prekompilowanych plików nagłówka](../../build/reference/creating-precompiled-header-files.md)  
-  
-### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Aby ustawić tę opcję kompilatora w środowisku programowania Visual Studio  
-  
-1.  Wybierz plik .cpp. Plik .cpp może #include pliku .h, który zawiera informacje o prekompilowanego nagłówka. Projektu **/Yc** ustawienie można zastąpić na poziomie plików.  
-  
-2.  Otwórz projekt **strony właściwości** okno dialogowe. Aby uzyskać więcej informacji, zobacz [Praca z właściwościami projektu](../../ide/working-with-project-properties.md).  
-  
-3.  Otwórz **właściwości konfiguracji**, **C/C++**, **prekompilowanych nagłówków** strony właściwości.  
-  
-4.  Modyfikowanie **Prekompilowanego nagłówka** właściwości.  
-  
-5.  Aby ustawić nazwę pliku, należy zmodyfikować **Prekompilowanego pliku nagłówka** właściwości.
-  
-### <a name="to-set-this-compiler-option-programmatically"></a>Aby programowo ustawić tę opcję kompilatora  
-  
--   Zobacz <xref:Microsoft.VisualStudio.VCProjectEngine.VCCLCompilerTool.PrecompiledHeaderThrough%2A> i <xref:Microsoft.VisualStudio.VCProjectEngine.VCCLCompilerTool.UsePrecompiledHeader%2A>.  
-  
-## <a name="example"></a>Przykład  
- Rozważmy następujący kod:  
-  
-```cpp  
+>  __/Yc__*nazwy pliku*
+
+## <a name="arguments"></a>Argumenty
+
+*Nazwa pliku*<br/>
+Określa plik nagłówka (.h). Jeśli ten argument jest używany, kompilator kompiluje całego kodu, w tym plik .h klasy.
+
+## <a name="remarks"></a>Uwagi
+
+Gdy **/Yc** jest określona bez argumentu, kompilator kompiluje cały kod do końca pliku źródłowego podstawowej lub do punktu w pliku podstawowego gdzie [hdrstop](../../preprocessor/hdrstop.md) występuje dyrektywie. Wynikowy plik .pch ma taką samą nazwę podstawowej jako pliku źródłowego podstawowego, chyba że określono nazwę innego pliku za pomocą **hdrstop** pragma lub **/FP** opcji.
+
+Wstępnie skompilowany kod jest zapisywany w pliku o nazwie utworzone na podstawie podstawowej nazwy pliku określonego przez **/Yc** opcja i rozszerzeniem .pch. Można również użyć  [ /FP (nazwa. Plik pch)](../../build/reference/fp-name-dot-pch-file.md) opcję, aby określić nazwę pliku wstępnie skompilowanego nagłówka.
+
+Jeśli używasz __/Yc__*filename*, kompilator kompiluje całego kodu, w tym określony plik do późniejszego użytku z [/Yu (Użyj Prekompilowanego pliku nagłówka)](../../build/reference/yu-use-precompiled-header-file.md) opcji.
+
+Jeśli opcje __/Yc__*filename* i __/Yu__*filename* odbywa się na tym samym wierszu polecenia, a oba odwołania, lub w sposób sugerujący, taką samą nazwę pliku, __/Yc__*filename* ma pierwszeństwo. Ta funkcja ułatwia zapisywanie plików reguł programu make.
+
+Aby uzyskać więcej informacji na temat wstępnie skompilowanych nagłówków zobacz:
+
+- [/Y (Prekompilowane nagłówki)](../../build/reference/y-precompiled-headers.md)
+
+- [Tworzenie prekompilowanych plików nagłówka](../../build/reference/creating-precompiled-header-files.md)
+
+### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Aby ustawić tę opcję kompilatora w środowisku programowania Visual Studio
+
+1. Wybierz plik .cpp. Plik CPP musi #include plik .h, który zawiera informacje o wstępnie skompilowanego nagłówka. Projekt **/Yc** ustawienie można zastąpić na poziomie plików.
+
+1. Otwórz projekt **stron właściwości** okno dialogowe. Aby uzyskać więcej informacji, zobacz [Praca z właściwościami projektu](../../ide/working-with-project-properties.md).
+
+1. Otwórz **właściwości konfiguracji**, **C/C++**, **prekompilowanych nagłówków** stronę właściwości.
+
+1. Modyfikowanie **wstępnie skompilowany nagłówek** właściwości.
+
+1. Aby ustawić nazwę pliku, należy zmodyfikować **Prekompilowanego pliku nagłówkowego** właściwości.
+
+### <a name="to-set-this-compiler-option-programmatically"></a>Aby programowo ustawić tę opcję kompilatora
+
+- Zobacz <xref:Microsoft.VisualStudio.VCProjectEngine.VCCLCompilerTool.PrecompiledHeaderThrough%2A> i <xref:Microsoft.VisualStudio.VCProjectEngine.VCCLCompilerTool.UsePrecompiledHeader%2A>.
+
+## <a name="example"></a>Przykład
+
+Rozważmy poniższy kod:
+
+```cpp
 // prog.cpp
 // compile with: cl /c /Ycmyapp.h prog.cpp
-#include <afxwin.h>   // Include header for class library  
-#include "resource.h" // Include resource definitions  
-#include "myapp.h"    // Include information specific to this app  
-// ...  
-```  
-  
-Gdy ten kod jest skompilowana przy użyciu polecenia `CL /YcMYAPP.H PROG.CPP`, kompilator zapisuje wszystkie przetwarzania wstępnego dla AFXWIN.h, RESOURCE.h, i MYAPP.h w pliku prekompilowany nagłówek o nazwie MYAPP.pch.  
-  
-## <a name="see-also"></a>Zobacz też  
- [Opcje kompilatora](../../build/reference/compiler-options.md)   
- [Ustawianie opcji kompilatora](../../build/reference/setting-compiler-options.md) [tworzenie prekompilowanych plików nagłówka](../../build/reference/creating-precompiled-header-files.md)
+#include <afxwin.h>   // Include header for class library
+#include "resource.h" // Include resource definitions
+#include "myapp.h"    // Include information specific to this app
+// ...
+```
+
+Kiedy ten kod jest kompilowany przy użyciu polecenia `CL /YcMYAPP.H PROG.CPP`, kompilator zapisuje wszystkie przetwarzania wstępnego dla AFXWIN.h, RESOURCE.h, i MYAPP.h w pliku wstępnie skompilowanego nagłówka o nazwie MYAPP.pch.
+
+## <a name="see-also"></a>Zobacz też
+
+[Opcje kompilatora](../../build/reference/compiler-options.md)<br/>
+[Ustawianie opcji kompilatora](../../build/reference/setting-compiler-options.md)<br/>
+[Tworzenie prekompilowanych plików nagłówka](../../build/reference/creating-precompiled-header-files.md)

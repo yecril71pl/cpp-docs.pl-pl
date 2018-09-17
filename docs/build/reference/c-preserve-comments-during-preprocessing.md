@@ -22,57 +22,60 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 350addc63807a338eb451c14e52340ef67998f18
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 20973969385d0b5c61872a12f4d0168420bc2eef
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32371258"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45713187"
 ---
 # <a name="c-preserve-comments-during-preprocessing"></a>/C (Zachowaj komentarze podczas przetwarzania wstępnego)
-Zachowanie komentarzy podczas przetwarzania wstępnego.  
-  
-## <a name="syntax"></a>Składnia  
-  
-```  
-/C  
-```  
-  
-## <a name="remarks"></a>Uwagi  
- Ta opcja kompilatora wymaga **/E**, **/P**, lub **/EP** opcji.  
-  
- Poniższy przykładowy kod wyświetli komentarz do kodu źródłowego.  
-  
-```  
-// C_compiler_option.cpp  
-// compile with: /E /C /c  
-int i;   // a variable  
-```  
-  
- W tym przykładzie powoduje wygenerowanie następujących danych wyjściowych.  
-  
-```  
-#line 1 "C_compiler_option.cpp"  
-int i;   // a variable  
-```  
-  
-### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Aby ustawić tę opcję kompilatora w środowisku programowania Visual Studio  
-  
-1.  Otwórz projekt **strony właściwości** okno dialogowe. Aby uzyskać więcej informacji, zobacz [Praca z właściwościami projektu](../../ide/working-with-project-properties.md).  
-  
-2.  Kliknij przycisk **C/C++** folderu.  
-  
-3.  Kliknij przycisk **preprocesora** strony właściwości.  
-  
-4.  Modyfikowanie **Zachowaj komentarze** właściwości.  
-  
-### <a name="to-set-this-compiler-option-programmatically"></a>Aby programowo ustawić tę opcję kompilatora  
-  
--   Zobacz <xref:Microsoft.VisualStudio.VCProjectEngine.VCCLCompilerTool.KeepComments%2A>.  
-  
-## <a name="see-also"></a>Zobacz też  
- [Opcje kompilatora](../../build/reference/compiler-options.md)   
- [Ustawianie opcji kompilatora](../../build/reference/setting-compiler-options.md)   
- [/E (Przetwarzaj wstępnie do stdout)](../../build/reference/e-preprocess-to-stdout.md)   
- [/P (Przetwarzaj wstępnie do pliku)](../../build/reference/p-preprocess-to-a-file.md)   
- [/EP (Wstępnie przetwórz do stdout bez dyrektyw #line)](../../build/reference/ep-preprocess-to-stdout-without-hash-line-directives.md)
+
+Zachowuje komentarze podczas przetwarzania wstępnego.
+
+## <a name="syntax"></a>Składnia
+
+```
+/C
+```
+
+## <a name="remarks"></a>Uwagi
+
+Ta opcja kompilatora wymaga **/E**, **/P**, lub **/EP** opcji.
+
+Poniższy przykładowy kod wyświetli komentarz do kodu źródłowego.
+
+```
+// C_compiler_option.cpp
+// compile with: /E /C /c
+int i;   // a variable
+```
+
+Ten przykład generuje następujące dane wyjściowe.
+
+```
+#line 1 "C_compiler_option.cpp"
+int i;   // a variable
+```
+
+### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Aby ustawić tę opcję kompilatora w środowisku programowania Visual Studio
+
+1. Otwórz projekt **stron właściwości** okno dialogowe. Aby uzyskać więcej informacji, zobacz [Praca z właściwościami projektu](../../ide/working-with-project-properties.md).
+
+1. Kliknij przycisk **C/C++** folderu.
+
+1. Kliknij przycisk **preprocesora** stronę właściwości.
+
+1. Modyfikowanie **Zachowaj komentarze** właściwości.
+
+### <a name="to-set-this-compiler-option-programmatically"></a>Aby programowo ustawić tę opcję kompilatora
+
+- Zobacz <xref:Microsoft.VisualStudio.VCProjectEngine.VCCLCompilerTool.KeepComments%2A>.
+
+## <a name="see-also"></a>Zobacz też
+
+[Opcje kompilatora](../../build/reference/compiler-options.md)<br/>
+[Ustawianie opcji kompilatora](../../build/reference/setting-compiler-options.md)<br/>
+[/E (Przetwarzaj wstępnie do stdout)](../../build/reference/e-preprocess-to-stdout.md)
+[/P (Przetwarzaj wstępnie do pliku)](../../build/reference/p-preprocess-to-a-file.md)
+[/EP (wstępnie Przetwórz do stdout bez dyrektyw #line)](../../build/reference/ep-preprocess-to-stdout-without-hash-line-directives.md)

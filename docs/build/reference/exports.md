@@ -16,12 +16,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f3ea5c28fe54e5d117ef40430912ef3f8ea0efd8
-ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
+ms.openlocfilehash: 62b49c20248ca4825bcf2c95b6c7adc956a39025
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44104293"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45714530"
 ---
 # <a name="exports"></a>EKSPORTY
 
@@ -30,7 +30,7 @@ Wprowadza sekcji definicji eksportu, które określają nazwy eksportowanych lub
 ```DEF
 EXPORTS
    definition
-```  
+```
 
 ## <a name="remarks"></a>Uwagi
 
@@ -76,7 +76,7 @@ Optional-słowo kluczowe **danych** Określa, że Eksport danych, a nie kod. Ten
 ```DEF
 EXPORTS
    exported_global DATA
-```  
+```
 
 Istnieją cztery sposoby eksportowania definicji, wymienione w zalecanej kolejności:
 
@@ -95,7 +95,7 @@ Istnieją cztery sposoby eksportowania definicji, wymienione w zalecanej kolejno
 
 Dyrektywa #pragma jest przydatne, jeśli chcesz eksportować nazwy funkcji bez i eksportuje różne w zależności od konfiguracji kompilacji (na przykład w wersjach 32-bitową lub 64-bitowych).
 
-Wszystkie cztery metody może służyć w tym samym programie. Łączenie kompilacji program, który zawiera eksporty, powoduje również utworzenie biblioteki importowanej, chyba że. EXP, plik jest używany w kompilacji. 
+Wszystkie cztery metody może służyć w tym samym programie. Łączenie kompilacji program, który zawiera eksporty, powoduje również utworzenie biblioteki importowanej, chyba że. EXP, plik jest używany w kompilacji.
 
 Oto przykład sekcji:
 
@@ -106,7 +106,7 @@ EXPORTS
    DllGetClassObject    @4 NONAME   PRIVATE
    DllRegisterServer    @7
    DllUnregisterServer
-```  
+```
 
 Podczas eksportowania zmienną z biblioteki DLL za pomocą. Plik DEF, nie trzeba określić `__declspec(dllexport)` na zmiennej. Jednak w dowolnym pliku, który korzysta z biblioteki DLL, należy nadal używać `__declspec(dllimport)` w deklaracji danych.
 

@@ -1,5 +1,5 @@
 ---
-title: Eksportowanie funkcji języka C do użycia w C lub plików wykonywalnych języka C++ | Dokumentacja firmy Microsoft
+title: Eksportowanie funkcji języka C do użycia w plikach wykonywalnych języka C++ lub C | Dokumentacja firmy Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,61 +18,62 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ee1d572bbfaa31ac626bfeb2b6ed7f61604628c8
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 88d9b18620c2e648ab519a59745876569b66ec30
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32367709"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45708100"
 ---
-# <a name="exporting-c-functions-for-use-in-c-or-c-language-executables"></a>Eksportowanie funkcji języka C do użycia w plikach wykonywalnych języka C lub C++  
-  
-Jeśli w bibliotece DLL napisane w języku C, że chcesz uzyskać dostęp z języka C lub moduł języka C++, należy użyć funkcji **__cplusplus —** makro preprocesora, aby określić, jaki język jest kompilowany, a następnie je określić funkcje z powiązaniem C, jeśli jest używany moduł języka C++. Jeśli używasz tej techniki i udostępniają pliki nagłówka dla biblioteki DLL, tych funkcji mogą być używane przez użytkowników C i C++ bez żadnych zmian.  
-  
-Poniższy kod przedstawia plik nagłówka, które mogą być używane przez aplikacje klienckie C i C++:  
-  
-```h  
-// MyCFuncs.h  
-#ifdef __cplusplus  
-extern "C" {  // only need to export C interface if  
-              // used by C++ source code  
-#endif  
-  
-__declspec( dllimport ) void MyCFunc();  
-__declspec( dllimport ) void AnotherCFunc();  
-  
-#ifdef __cplusplus  
-}  
-#endif  
-```  
-  
-Jeśli musisz połączyć funkcje języka C do Twojego pliku wykonywalnego C++ i pliki nagłówków deklaracja funkcji bez użycia techniki powyżej, w pliku źródłowym C++, wykonaj następujące polecenie, aby uniemożliwić kompilatorowi dekoracji nazwy funkcji C:  
-  
-```cpp  
-extern "C" {  
-#include "MyCHeader.h"  
-}  
-```  
-  
-## <a name="what-do-you-want-to-do"></a>Co chcesz zrobić?  
-  
--   [Eksportowanie z biblioteki DLL przy użyciu .def — pliki](../build/exporting-from-a-dll-using-def-files.md)  
-  
--   [Eksportowanie z biblioteki DLL przy użyciu atrybutu __declspec(dllexport)](../build/exporting-from-a-dll-using-declspec-dllexport.md)  
-  
--   [Eksportowanie i importowanie przy użyciu makra AFX_EXT_CLASS](../build/exporting-and-importing-using-afx-ext-class.md)  
-  
--   [Określić jakiej metody eksportu użyć](../build/determining-which-exporting-method-to-use.md)  
-  
--   [Importowanie do aplikacji przy użyciu atrybutu __declspec(dllimport)](../build/importing-into-an-application-using-declspec-dllimport.md)  
-  
--   [Inicjowanie biblioteki DLL](../build/run-time-library-behavior.md#initializing-a-dll)  
-  
-## <a name="what-do-you-want-to-know-more-about"></a>Co chcesz dowiedzieć się więcej o?  
-  
--   [Nazwy ozdobione](../build/reference/decorated-names.md)  
-  
--   [Użycie zewnętrznie w celu określenia powiązania](../cpp/using-extern-to-specify-linkage.md)  
-  
-## <a name="see-also"></a>Zobacz też  
- [Eksportowanie z biblioteki DLL](../build/exporting-from-a-dll.md)
+# <a name="exporting-c-functions-for-use-in-c-or-c-language-executables"></a>Eksportowanie funkcji języka C do użycia w plikach wykonywalnych języka C lub C++
+
+W przypadku funkcji w bibliotece DLL w języku C, którego chcesz uzyskać dostęp z języka C lub modułu języka C++, należy użyć **__cplusplus** makro preprocesora Aby określić język, który jest kompilowany, a następnie je zadeklarować funkcji z powiązaniem C, jeśli są używane z modułu języka C++. Jeśli korzystasz z tej techniki i udostępniają pliki nagłówka dla biblioteki DLL, te funkcje można używane przez C i C++ użytkowników bez zmian.
+
+Poniższy kod przedstawia plik nagłówka, które mogą być używane przez aplikacje klienckie C i C++:
+
+```h
+// MyCFuncs.h
+#ifdef __cplusplus
+extern "C" {  // only need to export C interface if
+              // used by C++ source code
+#endif
+
+__declspec( dllimport ) void MyCFunc();
+__declspec( dllimport ) void AnotherCFunc();
+
+#ifdef __cplusplus
+}
+#endif
+```
+
+Jeśli musisz utworzyć link funkcji języka C do Twojego pliku wykonywalnego C++ oraz pliki nagłówkowe deklaracji funkcji nie użyto powyższej metody, w pliku źródłowego języka C++, wykonaj następujące polecenie, aby uniemożliwić kompilatorowi dekoracji nazwy funkcji C:
+
+```cpp
+extern "C" {
+#include "MyCHeader.h"
+}
+```
+
+## <a name="what-do-you-want-to-do"></a>Co chcesz zrobić?
+
+- [Eksportowanie z biblioteki DLL za pomocą plików .def](../build/exporting-from-a-dll-using-def-files.md)
+
+- [Eksportowanie z biblioteki DLL przy użyciu atrybutu __declspec(dllexport)](../build/exporting-from-a-dll-using-declspec-dllexport.md)
+
+- [Eksportowanie i importowanie przy użyciu makra AFX_EXT_CLASS](../build/exporting-and-importing-using-afx-ext-class.md)
+
+- [Określić, której metody eksportowania użyjesz](../build/determining-which-exporting-method-to-use.md)
+
+- [Importowanie do aplikacji przy użyciu atrybutu __declspec(dllimport)](../build/importing-into-an-application-using-declspec-dllimport.md)
+
+- [Zainicjuj bibliotekę DLL](../build/run-time-library-behavior.md#initializing-a-dll)
+
+## <a name="what-do-you-want-to-know-more-about"></a>Co chcesz dowiedzieć się więcej na temat?
+
+- [Nazwy ozdobione](../build/reference/decorated-names.md)
+
+- [Użycie zewnętrznie w celu określenia powiązania](../cpp/using-extern-to-specify-linkage.md)
+
+## <a name="see-also"></a>Zobacz też
+
+[Eksportowanie z biblioteki DLL](../build/exporting-from-a-dll.md)

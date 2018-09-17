@@ -34,12 +34,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d67f4fb4fdb6a46d00ef8cdf21559cf6043932e2
-ms.sourcegitcommit: 6408139d5f5ff8928f056bde93d20eecb3520361
+ms.openlocfilehash: 1339b291c92879beb7606b0dabe77904ad9f462e
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37336523"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45713599"
 ---
 # <a name="cfileexception-class"></a>Klasa CFileException
 Przedstawia warunek wyjątku dotyczący pliku.  
@@ -148,14 +148,14 @@ virtual BOOL GetErrorMessage(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [out w] *lpszError*  
- Wskaźnik do buforu, który odbiera komunikat o błędzie.  
+*lpszError*<br/>
+[out w] Wskaźnik do buforu, który odbiera komunikat o błędzie.  
   
- [in] *nMaxError*  
- Maksymalna liczba znaków, które może przechowywać określonego bufora. Dotyczy to również kończącego znaku null.  
+*nMaxError*<br/>
+[in] Maksymalna liczba znaków, które może przechowywać określonego bufora. Dotyczy to również kończącego znaku null.  
   
- [out w] *pnHelpContext*  
- Wskaźnik na liczbę całkowitą bez znaku, która odbiera identyfikator kontekstu pomocy Jeśli `NULL`, identyfikator nie jest zwracana.  
+*pnHelpContext*<br/>
+[out w] Wskaźnik na liczbę całkowitą bez znaku, która odbiera identyfikator kontekstu pomocy Jeśli `NULL`, identyfikator nie jest zwracana.  
   
 ### <a name="return-value"></a>Wartość zwracana  
  Wartość TRUE, jeśli metoda zakończyła się pomyślnie; w przeciwnym razie wartość FALSE.  

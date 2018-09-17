@@ -248,12 +248,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: dbd12c98014e2adfe9617f0bdaac891f33ebc600
-ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
+ms.openlocfilehash: 866cdc59157aa39a3c6ecbece225d1789cfec789
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43693929"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45712580"
 ---
 # <a name="cmfcbasetabctrl-class"></a>Klasa CMFCBaseTabCtrl
 Implementuje podstawowe funkcje dla okien z zakładkami.  
@@ -436,11 +436,11 @@ void AddIcon(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *hIcon*  
- Dojście do ikony, które mają zostać dodane.  
+*hIcon*<br/>
+[in] Dojście do ikony, które mają zostać dodane.  
   
- [in] *iIcon*  
- Liczony od zera indeks ikony w chronionym `CImageList m_Images` elementu członkowskiego.  
+*iIcon*<br/>
+[in] Liczony od zera indeks ikony w chronionym `CImageList m_Images` elementu członkowskiego.  
   
 ### <a name="remarks"></a>Uwagi  
   
@@ -463,20 +463,20 @@ virtual void AddTab(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *pTabWnd*  
- Wskaźnik do okna, reprezentujący przez tę metodę jako nową kartę.  
+*pTabWnd*<br/>
+[in] Wskaźnik do okna, reprezentujący przez tę metodę jako nową kartę.  
   
- [in] *lpszTabLabel*  
- Ciąg, który zawiera etykietę na nowej karcie.  
+*lpszTabLabel*<br/>
+[in] Ciąg, który zawiera etykietę na nowej karcie.  
   
- [in] *uiImageId*  
- Identyfikator obrazu z listy obrazów. Kontrolka karty używa tego obrazu jako ikona dla nowej karty.  
+*uiImageId*<br/>
+[in] Identyfikator obrazu z listy obrazów. Kontrolka karty używa tego obrazu jako ikona dla nowej karty.  
   
- [in] *uiResTabLabel*  
- Identyfikator zasobu dla etykiety.  
+*uiResTabLabel*<br/>
+[in] Identyfikator zasobu dla etykiety.  
   
- [in] *bDetachable*  
- Parametrów logiczny, który określa, czy nowa karta jest odłączane.  
+*bDetachable*<br/>
+[in] Parametrów logiczny, który określa, czy nowa karta jest odłączane.  
   
 ### <a name="remarks"></a>Uwagi  
  Jeśli *pTabWnd* wskazuje na obiekt, który nie pochodzi od [klasa CDockablePane](../../mfc/reference/cdockablepane-class.md) i, jeśli *bDetachable* ma wartość PRAWDA, szablon automatycznie tworzy otokę dla *pTabWnd* obiektu. Otoka sprawia, że *pTabWnd* odłączane obiektu. Domyślnie otoki jest wystąpieniem [klasa CDockablePaneAdapter](../../mfc/reference/cdockablepaneadapter-class.md). Jeśli funkcje oferowane przez domyślną otokę jest nieodpowiednia, należy użyć [CMFCBaseTabCtrl::SetDockingBarWrapperRTC](#setdockingbarwrapperrtc) metodę, aby określić różne otoki.  
@@ -546,14 +546,14 @@ virtual CWnd* CreateWrapper(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *pWndToWrap*  
- Wskaźnik do okna ramki, który jest otoczony.  
+*pWndToWrap*<br/>
+[in] Wskaźnik do okna ramki, który jest otoczony.  
   
- [in] *lpszTabLabel*  
- Ciąg, który zawiera etykietę dla okna.  
+*lpszTabLabel*<br/>
+[in] Ciąg, który zawiera etykietę dla okna.  
   
- [in] *bDetachable*  
- Parametr logiczny, który wskazuje, czy okno jest odłączane.  
+*bDetachable*<br/>
+[in] Parametr logiczny, który wskazuje, czy okno jest odłączane.  
   
 ### <a name="return-value"></a>Wartość zwracana  
  Wskaźnik do otoki pochodną `CDockablePane` klasy, jeśli `CreateWrapper` pomyślnie utworzy klasę otoki dla *pWndToWrap*. Jeśli metoda nie powiedzie się, jego retruns *pWndToWrap*.  
@@ -576,14 +576,14 @@ virtual BOOL DetachTab(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *dockMethod*  
- Wyliczany typ danych dostarczone przez [klasa CBasePane](../../mfc/reference/cbasepane-class.md). Ten typ danych określa metodę, który został użyty do Odłącz kartę.  
+*dockMethod*<br/>
+[in] Wyliczany typ danych dostarczone przez [klasa CBasePane](../../mfc/reference/cbasepane-class.md). Ten typ danych określa metodę, który został użyty do Odłącz kartę.  
   
- [in] *nTabNum*  
- Liczony od zera indeks karty, który ma zostać odłączony.  
+*nTabNum*<br/>
+[in] Liczony od zera indeks karty, który ma zostać odłączony.  
   
- [in] *bHide*  
- Parametr logiczny, który wskazuje, czy ramach ukrywał odłączone karty.  
+*bHide*<br/>
+[in] Parametr logiczny, który wskazuje, czy ramach ukrywał odłączone karty.  
   
 ### <a name="return-value"></a>Wartość zwracana  
  Wartość różną od zera, jeśli to się powiedzie; w przeciwnym razie 0.  
@@ -611,8 +611,8 @@ void EnableAutoColor(BOOL bEnable = TRUE);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *bWłączenie*  
- Parametrów logiczny, który określa, czy struktura używa automatycznego kolorów.  
+*bWłączenie*<br/>
+[in] Parametrów logiczny, który określa, czy struktura używa automatycznego kolorów.  
   
 ### <a name="remarks"></a>Uwagi  
  Kontrolka karty posiada szereg kilka wstępnie zdefiniowanych kolorów. Jeśli struktura używa automatycznego kolorów, każda karta w różnych zakładkach przypisywany następny kolor z tej tablicy.  
@@ -627,8 +627,8 @@ BOOL EnableCustomToolTips(BOOL bEnable = TRUE);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *bWłączenie*  
- Wartość logiczna określająca, czy używać niestandardowych etykietek narzędzi.  
+*bWłączenie*<br/>
+[in] Wartość logiczna określająca, czy używać niestandardowych etykietek narzędzi.  
   
 ### <a name="return-value"></a>Wartość zwracana  
  Wartość TRUE, jeśli to się powiedzie; w przeciwnym razie wartość FALSE.  
@@ -644,8 +644,8 @@ virtual void EnableInPlaceEdit(BOOL bEnable) = 0;
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *bWłączenie*  
- Parametr logiczny, który określa, czy włączyć bezpośredniego edytowania etykiet kartę.  
+*bWłączenie*<br/>
+[in] Parametr logiczny, który określa, czy włączyć bezpośredniego edytowania etykiet kartę.  
   
 ### <a name="remarks"></a>Uwagi  
  Domyślnie bezpośredniego edytowania etykiet karta jest wyłączona dla kontrolki karty.  
@@ -664,11 +664,11 @@ virtual BOOL EnableTabDetach(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *iTab*  
- Liczony od zera indeks karty.  
+*iTab*<br/>
+[in] Liczony od zera indeks karty.  
   
- [in] *bWłączenie*  
- Wartość logiczna wskazująca, czy na karcie odłączane.  
+*bWłączenie*<br/>
+[in] Wartość logiczna wskazująca, czy na karcie odłączane.  
   
 ### <a name="return-value"></a>Wartość zwracana  
  Wartość TRUE, jeśli to się powiedzie; w przeciwnym razie wartość FALSE.  
@@ -681,8 +681,8 @@ void EnableTabSwap(BOOL bEnable);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *bWłączenie*  
- Wartość logiczna wskazująca, czy ma zostać włączona karta zamianę.  
+*bWłączenie*<br/>
+[in] Wartość logiczna wskazująca, czy ma zostać włączona karta zamianę.  
   
 ### <a name="remarks"></a>Uwagi  
  Po włączeniu zamianę kartę użytkownik może przeciągnij kartę i zmień jego względne położenie w kontrolce karty.  
@@ -695,8 +695,8 @@ virtual BOOL EnsureVisible(int iTab);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *iTab*  
- Liczony od zera indeks karty.  
+*iTab*<br/>
+[in] Liczony od zera indeks karty.  
   
 ### <a name="return-value"></a>Wartość zwracana  
  Wartość różną od zera, jeśli to się powiedzie; w przeciwnym razie 0.  
@@ -723,8 +723,8 @@ virtual CWnd* FindTargetWnd(const CPoint& pt) = 0;
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *(czas pacyficzny)*  
- Współrzędne punktu, która jest zdefiniowana za pomocą obszaru klienckiego [CMFCBaseTabCtrl](../../mfc/reference/cmfcbasetabctrl-class.md) obiektu.  
+*(czas pacyficzny)*<br/>
+[in] Współrzędne punktu, która jest zdefiniowana za pomocą obszaru klienckiego [CMFCBaseTabCtrl](../../mfc/reference/cmfcbasetabctrl-class.md) obiektu.  
   
 ### <a name="return-value"></a>Wartość zwracana  
  Wskaźnik do [CWnd](../../mfc/reference/cwnd-class.md) obiektu, jeśli operacja się powiedzie; w przeciwnym razie wartość NULL.  
@@ -830,11 +830,11 @@ virtual CWnd* GetFirstVisibleTab(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [out] *iTabNum*  
- Odwołanie do wartości całkowitej. Ta metoda zapisuje liczony od zera indeks pierwszej karcie widoczne dla tego parametru.  
+*iTabNum*<br/>
+[out] Odwołanie do wartości całkowitej. Ta metoda zapisuje liczony od zera indeks pierwszej karcie widoczne dla tego parametru.  
   
- [in] *iStartFrom*  
- Liczony od zera indeks pierwszej karcie, aby sprawdzić.  
+*iStartFrom*<br/>
+[in] Liczony od zera indeks pierwszej karcie, aby sprawdzić.  
   
 ### <a name="return-value"></a>Wartość zwracana  
  Wskaźnik do pierwszej karcie widoczne w przypadku powodzenia; w przeciwnym razie wartość NULL.  
@@ -935,11 +935,11 @@ virtual void GetTabArea(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *rectTabAreaTop*  
- Odwołanie do `CRect` obiektu. `GetTabArea` używa tego obiektu do przechowywania, rozmiar i położenie obszaru górnej karty.  
+*rectTabAreaTop*<br/>
+[in] Odwołanie do `CRect` obiektu. `GetTabArea` używa tego obiektu do przechowywania, rozmiar i położenie obszaru górnej karty.  
   
- [in] *rectTabAreaBottom*  
- Odwołanie do `CRect` obiektu. `GetTabArea` używa tego obiektu, do przechowywania, rozmiar i położenie wartości obszar karty w dolnej.  
+*rectTabAreaBottom*<br/>
+[in] Odwołanie do `CRect` obiektu. `GetTabArea` używa tego obiektu, do przechowywania, rozmiar i położenie wartości obszar karty w dolnej.  
   
 ### <a name="remarks"></a>Uwagi  
  Po `GetTabArea` zwraca, `CRect` parametrów zawiera rozmiar i położenie wartości obszar karty we współrzędnych klienta formantu karty. Jeśli obszar nie karty u góry lub u dołu kontrolki karty `rectTabAreaTop` lub `rectTabAreaBottom` są puste.  
@@ -954,8 +954,8 @@ virtual COLORREF GetTabBkColor(int iTab) const;
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *iTab*  
- Liczony od zera indeks karty.  
+*iTab*<br/>
+[in] Liczony od zera indeks karty.  
   
 ### <a name="return-value"></a>Wartość zwracana  
  A [COLORREF](/windows/desktop/gdi/colorref) wartość, która określa kolor tła na określonej karcie; -1 Jeśli *iTab* znajduje się poza zakresem.  
@@ -981,8 +981,8 @@ virtual int GetTabByID(int id) const;
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *identyfikator*  
- Identyfikator karty  
+*id*<br/>
+[in] Identyfikator karty  
   
 ### <a name="return-value"></a>Wartość zwracana  
  Liczony od zera indeks karty, jeśli zostanie znaleziony; -1, jeśli nie znaleziono Identyfikatora kartę.  
@@ -1009,8 +1009,8 @@ virtual int GetTabFromHwnd(HWND hwnd) const;
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *hwnd*  
- Dojście do okna.  
+*hwnd*<br/>
+[in] Dojście do okna.  
   
 ### <a name="return-value"></a>Wartość zwracana  
  Liczony od zera indeks karty, jeśli to się powiedzie; -1, jeśli karta nie zawiera *hwnd*.  
@@ -1023,8 +1023,8 @@ virtual int GetTabFromPoint(CPoint& pt) const;
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *(czas pacyficzny)*  
- Punkt we współrzędnych klienta formant karty.  
+*(czas pacyficzny)*<br/>
+[in] Punkt we współrzędnych klienta formant karty.  
   
 ### <a name="return-value"></a>Wartość zwracana  
  Indeks kartę zawierającą *pt*; -1, jeśli karta nie zawiera *pt*.  
@@ -1051,8 +1051,8 @@ virtual HICON GetTabHicon(int iTab) const;
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *iTab*  
- Liczony od zera indeks dla karty.  
+*iTab*<br/>
+[in] Liczony od zera indeks dla karty.  
   
 ### <a name="return-value"></a>Wartość zwracana  
  HICON skojarzone z etykieta karty, jeśli to się powiedzie; Wartość NULL, jeśli nie ma żadnych HICON lub jeśli metoda nie powiedzie się.  
@@ -1065,8 +1065,8 @@ virtual UINT GetTabIcon(int iTab) const;
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *iTab*  
- Liczony od zera indeks karty.  
+*iTab*<br/>
+[in] Liczony od zera indeks karty.  
   
 ### <a name="return-value"></a>Wartość zwracana  
  Identyfikator ikony dla określonej karty, jeśli to się powiedzie; -1, jeśli ten indeks jest nieprawidłowy.  
@@ -1082,8 +1082,8 @@ int GetTabID(int iTab) const;
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *iTab*  
- Liczony od zera indeks karty.  
+*iTab*<br/>
+[in] Liczony od zera indeks karty.  
   
 ### <a name="return-value"></a>Wartość zwracana  
  Identyfikator karty lub wartość-1, jeśli *iTab* znajduje się poza zakresem.  
@@ -1098,11 +1098,11 @@ virtual BOOL GetTabLabel(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *iTab*  
- Liczony od zera indeks karty.  
+*iTab*<br/>
+[in] Liczony od zera indeks karty.  
   
- [out] *strLabel*  
- Odwołanie do `CString` obiektu. Ta metoda przechowuje etykietę karty, w tym parametrze.  
+*strLabel*<br/>
+[out] Odwołanie do `CString` obiektu. Ta metoda przechowuje etykietę karty, w tym parametrze.  
   
 ### <a name="return-value"></a>Wartość zwracana  
  Wartość TRUE, jeśli to się powiedzie; Wartość FALSE w przeciwnym razie.  
@@ -1122,11 +1122,11 @@ virtual BOOL GetTabRect(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *iTab*  
- Liczony od zera indeks karty.  
+*iTab*<br/>
+[in] Liczony od zera indeks karty.  
   
- [out] *rect*  
- Odwołanie do `CRect` obiektu. Ta metoda przechowuje rozmiar i położenie karty, w tym parametrze.  
+*Rect*<br/>
+[out] Odwołanie do `CRect` obiektu. Ta metoda przechowuje rozmiar i położenie karty, w tym parametrze.  
   
 ### <a name="return-value"></a>Wartość zwracana  
  Wartość TRUE, jeśli to się powiedzie; Wartość FALSE, jeśli kolejność tabulacji jest nieprawidłowa.  
@@ -1172,8 +1172,8 @@ virtual COLORREF GetTabTextColor(int iTab) const;
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *iTab*  
- Liczony od zera indeks karty.  
+*iTab*<br/>
+[in] Liczony od zera indeks karty.  
   
 ### <a name="return-value"></a>Wartość zwracana  
  A [COLORREF](/windows/desktop/gdi/colorref) parametrem, który wskazuje kolor tekstu w określoną kartę; -1 Jeśli *iTab* znajduje się poza zakresem.  
@@ -1186,8 +1186,8 @@ virtual CWnd* GetTabWnd(int iTab) const;
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *iTab*  
- Liczony od zera indeks karty.  
+*iTab*<br/>
+[in] Liczony od zera indeks karty.  
   
 ### <a name="return-value"></a>Wartość zwracana  
  Wskaźnik do [CWnd](../../mfc/reference/cwnd-class.md) obiekt, który znajduje się na karcie, *iTab* określa. Wartość NULL, jeśli *iTab* jest nieprawidłowy.  
@@ -1205,8 +1205,8 @@ virtual CWnd* GetTabWndNoWrapper(int iTab) const;
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *iTab*  
- Liczony od zera indeks karty.  
+*iTab*<br/>
+[in] Liczony od zera indeks karty.  
   
 ### <a name="return-value"></a>Wartość zwracana  
  Wskaźnik do [CWnd](../../mfc/reference/cwnd-class.md) obiekt, który znajduje się na określonej karcie; Wartość NULL, jeśli *iTab* jest nieprawidłowy.  
@@ -1258,8 +1258,8 @@ virtual void HideSingleTab(BOOL bHide = TRUE);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *bHide*  
- Wartość logiczna określająca, czy włączyć ukrywanie jednej karty.  
+*bHide*<br/>
+[in] Wartość logiczna określająca, czy włączyć ukrywanie jednej karty.  
   
 ### <a name="remarks"></a>Uwagi  
  Gdy aplikacja jest skonfigurowana do ukrywania jednej karty, struktura automatycznie wyświetla karty, gdy druga karta zostanie dodany do formantu karty.  
@@ -1285,23 +1285,23 @@ virtual void InsertTab(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *pNewWnd*  
- Wskaźnik do okna, które ta metoda dodaje się jako nowa karta.  
+*pNewWnd*<br/>
+[in] Wskaźnik do okna, które ta metoda dodaje się jako nowa karta.  
   
- [in] *lpszTabLabel*  
- Ciąg, który zawiera etykietę na nowej karcie.  
+*lpszTabLabel*<br/>
+[in] Ciąg, który zawiera etykietę na nowej karcie.  
   
- [in] *nInsertAt*  
- Liczony od zera indeks w nowej karcie.  
+*nInsertAt*<br/>
+[in] Liczony od zera indeks w nowej karcie.  
   
- [in] *uiImageId*  
- Identyfikator obrazu z listy obrazów. Kontrolka karty używa tego obrazu jako ikona dla nowej karty.  
+*uiImageId*<br/>
+[in] Identyfikator obrazu z listy obrazów. Kontrolka karty używa tego obrazu jako ikona dla nowej karty.  
   
- [in] *bDetachable*  
- Parametrów logiczny, który określa, czy nowa karta jest odłączane.  
+*bDetachable*<br/>
+[in] Parametrów logiczny, który określa, czy nowa karta jest odłączane.  
   
- [in] *uiResTabLabel*  
- Identyfikator zasobu dla etykiety.  
+*uiResTabLabel*<br/>
+[in] Identyfikator zasobu dla etykiety.  
   
 ### <a name="remarks"></a>Uwagi  
  Jeśli obiekt wskazywany przez *pNewWnd* nie pochodzi od [klasa CDockablePane](../../mfc/reference/cdockablepane-class.md) i, jeśli *bDetachable* parametr ma wartość PRAWDA, szablon tworzy otokę specjalne dla Nowa karta. Domyślnie otoki jest wystąpieniem [klasa CDockablePaneAdapter](../../mfc/reference/cdockablepaneadapter-class.md). Użyj [CMFCBaseTabCtrl::SetDockingBarWrapperRTC](#setdockingbarwrapperrtc) metodę, aby utworzyć klasę otoki różne. Każda klasa otoki niestandardowe musi pochodzić od `CDockablePaneAdapter`.  
@@ -1435,8 +1435,8 @@ BOOL IsIconAdded(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *hIcon*  
- [in] *iIcon*  
+*hIcon*<br/>
+[in] [in] *iIcon*  
   
 ### <a name="return-value"></a>Wartość zwracana  
   
@@ -1500,8 +1500,8 @@ virtual BOOL IsPtInTabArea(CPoint point) const = 0;
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *punktu*  
- Punkt do testowania.  
+*Punkt*<br/>
+[in] Punkt do testowania.  
   
 ### <a name="return-value"></a>Wartość zwracana  
  Wartość różną od zera, jeśli punkt znajduje się w obszarze karty; w przeciwnym razie 0.  
@@ -1539,8 +1539,8 @@ virtual BOOL IsTabDetachable(int iTab) const;
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *iTab*  
- Liczony od zera indeks karty do sprawdzenia.  
+*iTab*<br/>
+[in] Liczony od zera indeks karty do sprawdzenia.  
   
 ### <a name="return-value"></a>Wartość zwracana  
  Wartość TRUE, jeśli karta jest odłączane; Wartość FALSE w przeciwnym razie.  
@@ -1556,8 +1556,8 @@ virtual BOOL IsTabIconOnly(int iTab) const;
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *iTab*  
- Liczony od zera indeks karty.  
+*iTab*<br/>
+[in] Liczony od zera indeks karty.  
   
 ### <a name="return-value"></a>Wartość zwracana  
  Wartość TRUE, jeśli tylko ikony; etykieta karty Wartość FALSE w przeciwnym razie.  
@@ -1586,8 +1586,8 @@ virtual BOOL IsTabVisible(int iTab) const;
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *iTab*  
- Liczony od zera indeks karty do sprawdzenia.  
+*iTab*<br/>
+[in] Liczony od zera indeks karty do sprawdzenia.  
   
 ### <a name="return-value"></a>Wartość zwracana  
  Wartość różną od zera, jeśli określony karta jest widoczny; w przeciwnym razie 0.  
@@ -1633,8 +1633,8 @@ virtual void MoveTab(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *przekazywanie*  
- [in] *nDest*  
+*Przekazywanie*<br/>
+[in] [in] *nDest*  
   
 ### <a name="remarks"></a>Uwagi  
   
@@ -1660,8 +1660,8 @@ virtual BOOL OnDrop(
   
 ### <a name="parameters"></a>Parametry  
  [in] *COleDataObject**  
- [in] *DROPEFFECT*  
- [in] *CPoint*  
+*DROPEFFECT*<br/>
+[in] [in] *CPoint*  
   
 ### <a name="return-value"></a>Wartość zwracana  
   
@@ -1679,8 +1679,8 @@ virtual DROPEFFECT OnDragOver(
   
 ### <a name="parameters"></a>Parametry  
  [in] *COleDataObject**  
- [in] *Typu DWORD.*  
- [in] *CPoint*  
+*DWORD*<br/>
+[in] [in] *CPoint*  
   
 ### <a name="return-value"></a>Wartość zwracana  
   
@@ -1707,8 +1707,8 @@ virtual DROPEFFECT OnDragEnter(
   
 ### <a name="parameters"></a>Parametry  
  [in] *COleDataObject**  
- [in] *Typu DWORD.*  
- [in] *CPoint*  
+*DWORD*<br/>
+[in] [in] *CPoint*  
   
 ### <a name="return-value"></a>Wartość zwracana  
   
@@ -1722,8 +1722,8 @@ virtual BOOL OnRenameTab(int, CString&);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *int*  
- [in] *CString &*  
+*int*<br/>
+[in] [in] *CString &*  
   
 ### <a name="return-value"></a>Wartość zwracana  
   
@@ -1773,11 +1773,11 @@ virtual BOOL RemoveTab(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *iTab*  
- Liczony od zera indeks karty.  
+*iTab*<br/>
+[in] Liczony od zera indeks karty.  
   
- [in] *bRecalcLayout*  
- Parametr logiczny, który określa, czy należy ponownie Oblicz układ karty.  
+*bRecalcLayout*<br/>
+[in] Parametr logiczny, który określa, czy należy ponownie Oblicz układ karty.  
   
 ### <a name="return-value"></a>Wartość zwracana  
  Wartość TRUE, jeśli metoda usuwa kartę pomyślnie; w przeciwnym razie wartość FALSE.  
@@ -1823,8 +1823,8 @@ virtual BOOL SetActiveTab(int iTab) = 0;
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *iTab*  
- Liczony od zera indeks kartę `SetActiveTab` sprawia, że karty z ten indeks jest aktywny.  
+*iTab*<br/>
+[in] Liczony od zera indeks kartę `SetActiveTab` sprawia, że karty z ten indeks jest aktywny.  
   
 ### <a name="return-value"></a>Wartość zwracana  
  Wartość TRUE, jeśli to się powiedzie; w przeciwnym razie wartość FALSE.  
@@ -1840,8 +1840,8 @@ virtual void SetActiveTabColor(COLORREF clr);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *clr*  
- Określa nowy kolor tła.  
+*CLR*<br/>
+[in] Określa nowy kolor tła.  
   
 ### <a name="remarks"></a>Uwagi  
  Struktura uzyskuje domyślny kolor tła dla aktywnych kart z [GetSysColor](/windows/desktop/api/winuser/nf-winuser-getsyscolor)metody.  
@@ -1854,8 +1854,8 @@ virtual void SetActiveTabTextColor(COLORREF clr);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *clr*  
- A [COLORREF](/windows/desktop/gdi/colorref) parametr, który określa nowy kolor tekstu.  
+*CLR*<br/>
+[in] A [COLORREF](/windows/desktop/gdi/colorref) parametr, który określa nowy kolor tekstu.  
   
 ### <a name="remarks"></a>Uwagi  
  Domyślnie struktura uzyskuje kolor tekstu z [GetSysColor](/windows/desktop/api/winuser/nf-winuser-getsyscolor). Zastąpić ten kolor domyślny za pomocą `SetActiveTabTextColor` metody.  
@@ -1868,8 +1868,8 @@ void SetAutoColors(const CArray<COLORREF,COLORREF>& arColors);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *arColors*  
- Tablica kolorów RGB.  
+*arColors*<br/>
+[in] Tablica kolorów RGB.  
   
 ### <a name="remarks"></a>Uwagi  
  Jeśli podasz niestandardowe tablicę kolorów, domyślne tablicę kolorów jest ignorowany. Jeśli parametr *arColors* jest pusta, struktura zostanie przywrócona do domyślnego tablicę kolorów.  
@@ -1884,8 +1884,8 @@ void SetDockingBarWrapperRTC(CRuntimeClass* pRTC);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *pRTC*  
- Informacji o klasie czasu wykonywania dla nowej klasy otoki.  
+*pRTC*<br/>
+[in] Informacji o klasie czasu wykonywania dla nowej klasy otoki.  
   
 ### <a name="remarks"></a>Uwagi  
  Dodawanie kart do formantu karty przy użyciu metod [CMFCBaseTabCtrl::AddTab](#addtab) i [CMFCBaseTabCtrl::InsertTab](#inserttab). Po dodaniu karty, każdej kontrolki na tej karcie musi mieć możliwości dokowania. Wszystkie obiekty, które nie pochodzą z `CDockablePane` muszą być zapakowane. `AddTab` i `InsertTab` tworzy otokę dla tych obiektów. Domyślna klasa otoki jest [klasa CDockablePaneAdapter](../../mfc/reference/cdockablepaneadapter-class.md). Metoda `SetDockingBarWrapperRTC` umożliwia zmianę klasy, która jest używana jako klasa otoki. Klasa otoki, które należy podać musi pochodzić od `CDockablePaneAdapter`.  
@@ -1900,11 +1900,11 @@ void SetDrawNoPrefix(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *bNoPrefix*  
- Wartość TRUE, jeśli chce przetwarzać znaków prefiksu. w przeciwnym razie wartość FALSE.  
+*bNoPrefix*<br/>
+[in] Wartość TRUE, jeśli chce przetwarzać znaków prefiksu. w przeciwnym razie wartość FALSE.  
   
- [in] *bRedraw*  
- Wartość TRUE, jeśli chcesz ponownie narysować okno z kartami; w przeciwnym razie wartość FALSE.  
+*bRedraw*<br/>
+[in] Wartość TRUE, jeśli chcesz ponownie narysować okno z kartami; w przeciwnym razie wartość FALSE.  
   
 ### <a name="remarks"></a>Uwagi  
  Znak prefiks jest mnemoników znak, który jest poprzedzony handlowe "i" (&).  
@@ -1922,17 +1922,17 @@ virtual BOOL SetImageList(HIMAGELIST hImageList);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *uiID*  
- Identyfikator zasobu mapy bitowej. `SetImageList` ładuje listy obrazów z tego zasobu.  
+*uiID*<br/>
+[in] Identyfikator zasobu mapy bitowej. `SetImageList` ładuje listy obrazów z tego zasobu.  
   
- [in] *cx*  
- Szerokość każdego obrazu w pikselach.  
+*CX*<br/>
+[in] Szerokość każdego obrazu w pikselach.  
   
- [in] *clrTransp*  
- A [COLORREF](/windows/desktop/gdi/colorref) parametr, który określa przezroczysty kolor obrazu.  
+*clrTransp*<br/>
+[in] A [COLORREF](/windows/desktop/gdi/colorref) parametr, który określa przezroczysty kolor obrazu.  
   
- [in] *hImageList*  
- Dojście do listy wstępnie załadowanych obrazów.  
+*hImageList*<br/>
+[in] Dojście do listy wstępnie załadowanych obrazów.  
   
 ### <a name="return-value"></a>Wartość zwracana  
  Wartość różną od zera, jeśli metoda zakończyła się pomyślnie; w przeciwnym razie 0.  
@@ -1966,11 +1966,11 @@ virtual BOOL SetTabBkColor(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *iTab*  
- Liczony od zera indeks karty.  
+*iTab*<br/>
+[in] Liczony od zera indeks karty.  
   
- [in] *kolorów*  
- Kolor, aby ustawić.  
+*Kolor*<br/>
+[in] Kolor, aby ustawić.  
   
 ### <a name="return-value"></a>Wartość zwracana  
  Wartość TRUE, jeśli to się powiedzie; Wartość FALSE w przeciwnym razie.  
@@ -1985,11 +1985,11 @@ virtual void SetTabBorderSize(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *nTabBorderSize*  
- Nowy rozmiar obramowania, w pikselach.  
+*nTabBorderSize*<br/>
+[in] Nowy rozmiar obramowania, w pikselach.  
   
- [in] *bRepaint*  
- Parametr logiczny, który wskazuje, czy w ramach ponownie rysuje kontrolkę.  
+*bRepaint*<br/>
+[in] Parametr logiczny, który wskazuje, czy w ramach ponownie rysuje kontrolkę.  
   
 ##  <a name="settabhicon"></a>  CMFCBaseTabCtrl::SetTabHicon  
  Ustawia ikonę etykieta karty.  
@@ -2001,11 +2001,11 @@ virtual BOOL SetTabHicon(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *iTab*  
- Liczony od zera indeks karty. Ta metoda zmienia ikonę na tej karcie.  
+*iTab*<br/>
+[in] Liczony od zera indeks karty. Ta metoda zmienia ikonę na tej karcie.  
   
- [in] *hIcon*  
- Dojście do ikony.  
+*hIcon*<br/>
+[in] Dojście do ikony.  
   
 ### <a name="return-value"></a>Wartość zwracana  
  Wartość TRUE, jeśli to się powiedzie; w przeciwnym razie wartość FALSE.  
@@ -2020,11 +2020,11 @@ virtual BOOL SetTabIcon(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *iTab*  
- Liczony od zera indeks karty do zaktualizowania.  
+*iTab*<br/>
+[in] Liczony od zera indeks karty do zaktualizowania.  
   
- [in] *uiIcon*  
- Identyfikator ikony ikonę nowego elementu. Ten identyfikator odwołuje się do wewnętrznego [CImageList](../../mfc/reference/cimagelist-class.md) obiektu.  
+*uiIcon*<br/>
+[in] Identyfikator ikony ikonę nowego elementu. Ten identyfikator odwołuje się do wewnętrznego [CImageList](../../mfc/reference/cimagelist-class.md) obiektu.  
   
 ### <a name="return-value"></a>Wartość zwracana  
  Wartość TRUE, jeśli to się powiedzie; w przeciwnym razie wartość FALSE.  
@@ -2040,14 +2040,14 @@ virtual BOOL SetTabIconOnly(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *iTab*  
- Liczony od zera indeks kartę, aby zmienić.  
+*iTab*<br/>
+[in] Liczony od zera indeks kartę, aby zmienić.  
   
- [in] *bIconOnly*  
- Parametrów logiczny, który określa, czy mają być wyświetlane tylko ikony.  
+*bIconOnly*<br/>
+[in] Parametrów logiczny, który określa, czy mają być wyświetlane tylko ikony.  
   
- [in] *bShowTooltipAlways*  
- Parametr logiczny, który określa, czy ramach pokazuje etykietki narzędzi dla etykiety kartę, która wyświetla tylko ikony.  
+*bShowTooltipAlways*<br/>
+[in] Parametr logiczny, który określa, czy ramach pokazuje etykietki narzędzi dla etykiety kartę, która wyświetla tylko ikony.  
   
 ### <a name="return-value"></a>Wartość zwracana  
  Wartość TRUE, jeśli to się powiedzie; w przeciwnym razie wartość FALSE.  
@@ -2065,11 +2065,11 @@ virtual BOOL SetTabLabel(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *iTab*  
- Liczony od zera indeks karty do zaktualizowania.  
+*iTab*<br/>
+[in] Liczony od zera indeks karty do zaktualizowania.  
   
- [in] *strLabel*  
- Odwołanie do ciąg, który zawiera nowy tekst etykiety kartę.  
+*strLabel*<br/>
+[in] Odwołanie do ciąg, który zawiera nowy tekst etykiety kartę.  
   
 ### <a name="return-value"></a>Wartość zwracana  
  Wartość różną od zera, jeśli to się powiedzie; w przeciwnym razie 0.  
@@ -2091,8 +2091,8 @@ BOOL SetTabsOrder(const CArray<int,int>& arOrder);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *arOrder*  
- Tablica indeksowania zaczynającego się od zera definiuje nową kolejność.  
+*arOrder*<br/>
+[in] Tablica indeksowania zaczynającego się od zera definiuje nową kolejność.  
   
 ### <a name="return-value"></a>Wartość zwracana  
  Wartość TRUE, jeśli to się powiedzie; W przeciwnym razie niepowodzenie.  
@@ -2110,11 +2110,11 @@ virtual BOOL SetTabTextColor(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *iTab*  
- Liczony od zera indeks karty.  
+*iTab*<br/>
+[in] Liczony od zera indeks karty.  
   
- [in] *kolorów*  
- A [COLORREF](/windows/desktop/gdi/colorref) parametrem, który wskazuje na nowy kolor tekstu.  
+*Kolor*<br/>
+[in] A [COLORREF](/windows/desktop/gdi/colorref) parametrem, który wskazuje na nowy kolor tekstu.  
   
 ### <a name="return-value"></a>Wartość zwracana  
  Wartość różną od zera, jeśli to się powiedzie; w przeciwnym razie 0.  
@@ -2131,17 +2131,17 @@ virtual BOOL ShowTab(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *iTab*  
- Indeks karty, `ShowTab` będzie pokazać lub ukryć.  
+*iTab*<br/>
+[in] Indeks karty, `ShowTab` będzie pokazać lub ukryć.  
   
- [in] *bShow*  
- Parametrów logiczny, który wskazuje, czy ma być wyświetlana karta.  
+*bShow*<br/>
+[in] Parametrów logiczny, który wskazuje, czy ma być wyświetlana karta.  
   
- [in] *bRecalcLayout*  
- Parametrów logiczny, który wskazuje, czy natychmiast ponownie Oblicz układ okna.  
+*bRecalcLayout*<br/>
+[in] Parametrów logiczny, który wskazuje, czy natychmiast ponownie Oblicz układ okna.  
   
- [in] *bActivate*  
- Parametrów logiczny, który wskazuje, czy wybierz kartę, określony przez *iTab*.  
+*bActivate*<br/>
+[in] Parametrów logiczny, który wskazuje, czy wybierz kartę, określony przez *iTab*.  
   
 ### <a name="return-value"></a>Wartość zwracana  
  Wartość różną od zera, jeśli to się powiedzie; w przeciwnym razie 0.  
@@ -2173,8 +2173,8 @@ virtual void SwapTabs(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *nFisrtTabID*  
- [in] *nSecondTabID*  
+*nFisrtTabID*<br/>
+[in] [in] *nSecondTabID*  
   
 ### <a name="remarks"></a>Uwagi  
   

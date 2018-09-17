@@ -26,12 +26,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2991135d7cbb7e2e9df66e871b5d047e69b93d16
-ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
+ms.openlocfilehash: 717be77589e31292fe6adbb4920a704794979a57
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/05/2018
-ms.locfileid: "37852971"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45711636"
 ---
 # <a name="cmfctabdroptarget-class"></a>Klasa CMFCTabDropTarget
 Udostępnia mechanizm komunikacji między formantem karty i bibliotek OLE.  
@@ -100,10 +100,10 @@ virtual DROPEFFECT OnDragEnter(
 |||  
 |-|-|  
 |Parametr|Opis|  
-|[in] *pWnd*|Nieużywane.|  
-|[in] *pDataObject*|Wskaźnik do obiektu, który użytkownik przeciąga.|  
-|[in] *dwKeyState*|Zawiera stan klawisze modyfikujące. Jest to kombinacja pojawiły się następujące: MK_CONTROL, MK_SHIFT, MK_ALT MK_LBUTTON, MK_MBUTTON i MK_RBUTTON.|  
-|[in] *punktu*|Lokalizacja kursora w współrzędne klienta.|  
+|*pWnd*|[in] Nieużywane.|  
+|*pDataObject*|[in] Wskaźnik do obiektu, który użytkownik przeciąga.|  
+|*dwKeyState*|[in] Zawiera stan klawisze modyfikujące. Jest to kombinacja pojawiły się następujące: MK_CONTROL, MK_SHIFT, MK_ALT MK_LBUTTON, MK_MBUTTON i MK_RBUTTON.|  
+|*Punkt*|[in] Lokalizacja kursora w współrzędne klienta.|  
   
 ### <a name="return-value"></a>Wartość zwracana  
  Wpływ, jaki wyniki, jeśli listy występuje w lokalizacji określonej przez *punktu*. Może być co najmniej jeden z następujących czynności:  
@@ -135,7 +135,7 @@ virtual void OnDragLeave(CWnd* pWnd);
 |||  
 |-|-|  
 |Parametr|Opis|  
-|[in] *pWnd*|Nieużywane.|  
+|*pWnd*|[in] Nieużywane.|  
   
 ### <a name="remarks"></a>Uwagi  
  Ta metoda wywołuje `CMFCBaseTabCtrl::OnDragLeave` metody do wykonania tej operacji przeciągania.  
@@ -156,10 +156,10 @@ virtual DROPEFFECT OnDragOver(
 |||  
 |-|-|  
 |Parametr|Opis|  
-|[in] *pWnd*|Nieużywane.|  
-|[in] *pDataObject*|Wskaźnik do obiektu, który użytkownik przeciąga.|  
-|[in] *dwKeyState*|Zawiera stan klawisze modyfikujące. Jest to kombinacja pojawiły się następujące: MK_CONTROL, MK_SHIFT, MK_ALT MK_LBUTTON, MK_MBUTTON i MK_RBUTTON.|  
-|[in] *punktu*|Lokalizacja wskaźnik myszy na współrzędne klienta.|  
+|*pWnd*|[in] Nieużywane.|  
+|*pDataObject*|[in] Wskaźnik do obiektu, który użytkownik przeciąga.|  
+|*dwKeyState*|[in] Zawiera stan klawisze modyfikujące. Jest to kombinacja pojawiły się następujące: MK_CONTROL, MK_SHIFT, MK_ALT MK_LBUTTON, MK_MBUTTON i MK_RBUTTON.|  
+|*Punkt*|[in] Lokalizacja wskaźnik myszy na współrzędne klienta.|  
   
 ### <a name="return-value"></a>Wartość zwracana  
  Wpływ, jaki wyniki, jeśli listy występuje w lokalizacji określonej przez *punktu*. Może być co najmniej jeden z następujących czynności:  
@@ -196,11 +196,11 @@ virtual DROPEFFECT OnDropEx(
 |||  
 |-|-|  
 |Parametr|Opis|  
-|[in] *pWnd*|Nieużywane.|  
-|[in] *pDataObject*|Wskaźnik do obiektu, który użytkownik przeciąga.|  
-|[in] *dropEffect*|Limit czasu operacji listy domyślne.|  
-|[in] *listy rozwijanej*|Nieużywane.|  
-|[in] *punktu*|Lokalizacja wskaźnik myszy na współrzędne klienta.|  
+|*pWnd*|[in] Nieużywane.|  
+|*pDataObject*|[in] Wskaźnik do obiektu, który użytkownik przeciąga.|  
+|*dropEffect*|[in] Limit czasu operacji listy domyślne.|  
+|*listy rozwijanej*|[in] Nieużywane.|  
+|*Punkt*|[in] Lokalizacja wskaźnik myszy na współrzędne klienta.|  
   
 ### <a name="return-value"></a>Wartość zwracana  
  Ostateczny wynik listy. Może być co najmniej jeden z następujących czynności:  
@@ -232,7 +232,7 @@ BOOL Register(CMFCBaseTabCtrl *pOwner);
 |||  
 |-|-|  
 |Parametr|Opis|  
-|[in] *pOwner*|Kontrolka karty, aby zarejestrować się jako miejsca docelowego.|  
+|*pOwner*|[in] Kontrolka karty, aby zarejestrować się jako miejsca docelowego.|  
   
 ### <a name="return-value"></a>Wartość zwracana  
  Wartość różną od zera, jeśli rejestracja powiodła się; w przeciwnym razie 0.  

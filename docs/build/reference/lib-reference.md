@@ -20,30 +20,32 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4b6eb6e9a1b7be12d125a68d3873401ccdeb7be3
-ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
+ms.openlocfilehash: 6d73237ac5b4b2ab549de5dba19116aa4e743514
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "42465803"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45709426"
 ---
 # <a name="lib-reference"></a>Odwołanie do biblioteki LIB
-Menedżer biblioteki Microsoft (LIB.exe) tworzy i zarządza Biblioteka plików obiektów Common Object File Format (COFF). Lib — można również tworzyć pliki eksportu i Importuj biblioteki do definicji odwołanie, eksportowane.  
-  
+
+Menedżer biblioteki Microsoft (LIB.exe) tworzy i zarządza Biblioteka plików obiektów Common Object File Format (COFF). Lib — można również tworzyć pliki eksportu i Importuj biblioteki do definicji odwołanie, eksportowane.
+
 > [!NOTE]
->  To narzędzie można uruchomić tylko z poziomu wiersza polecenia programu Visual Studio. Nie można uruchomić go z wiersza poleceń systemu lub Eksploratora plików.  
-  
--   [Informacje o LIB](../../build/reference/overview-of-lib.md)  
-  
--   [Instrukcje: ustawianie opcji LIB.EXE w środowisku programowania Visual Studio](../../build/reference/how-to-set-lib-exe-options-in-the-visual-studio-development-environment.md)  
-  
--   [Uruchamianie LIB](../../build/reference/running-lib.md)  
-  
--   [Zarządzanie biblioteką](../../build/reference/managing-a-library.md)  
-  
--   [Wyodrębnianie składowej biblioteki](../../build/reference/extracting-a-library-member.md)  
-  
--   [Praca z bibliotekami importowanymi oraz plikami eksportowanymi](../../build/reference/working-with-import-libraries-and-export-files.md)  
-  
-## <a name="see-also"></a>Zobacz też  
- [Narzędzia kompilacji C/C++](../../build/reference/c-cpp-build-tools.md)
+>  To narzędzie można uruchomić tylko z poziomu wiersza polecenia programu Visual Studio. Nie można uruchomić go z wiersza poleceń systemu lub Eksploratora plików.
+
+- [Informacje o LIB](../../build/reference/overview-of-lib.md)
+
+- [Instrukcje: ustawianie opcji LIB.EXE w środowisku programowania Visual Studio](../../build/reference/how-to-set-lib-exe-options-in-the-visual-studio-development-environment.md)
+
+- [Uruchamianie LIB](../../build/reference/running-lib.md)
+
+- [Zarządzanie biblioteką](../../build/reference/managing-a-library.md)
+
+- [Wyodrębnianie składowej biblioteki](../../build/reference/extracting-a-library-member.md)
+
+- [Praca z bibliotekami importowanymi oraz plikami eksportowanymi](../../build/reference/working-with-import-libraries-and-export-files.md)
+
+## <a name="see-also"></a>Zobacz też
+
+[Narzędzia kompilacji C/C++](../../build/reference/c-cpp-build-tools.md)

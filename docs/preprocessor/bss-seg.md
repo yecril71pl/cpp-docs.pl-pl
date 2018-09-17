@@ -18,12 +18,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 08304a42b961f93b7d9e4e6e644e1514e34eb335
-ms.sourcegitcommit: d4c803bd3a684d7951bf88dcecf1f14af43ae411
+ms.openlocfilehash: 3c3a80e50bd0b012773a5e5a197674965f73b526
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/10/2018
-ms.locfileid: "42466332"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45711161"
 ---
 # <a name="bssseg"></a>bss_seg
 Określa segment, w którym niezainicjowane zmienne są przechowywane w pliku .obj.  
@@ -35,27 +35,27 @@ Określa segment, w którym niezainicjowane zmienne są przechowywane w pliku .o
 ```  
   
 ## <a name="remarks"></a>Uwagi  
- 
+
 Pliki obj mogą być wyświetlane z [dumpbin](../build/reference/dumpbin-command-line.md) aplikacji. Segment domyślnej w pliku .obj, niezainicjowanych danych jest .bss. W niektórych przypadkach użycie **bss_seg** można przyspieszyć czasów ładowania przez grupowanie niezainicjowanych danych w jednej sekcji.  
   
 **bss_seg** bez parametrów resetuje segmentu .bss.  
   
-*wypychane* (opcjonalnie)  
-Umieszcza rekord na wewnętrznym stosie kompilatora. A *wypychania* może mieć *identyfikator* i *nazwą segmentu*.  
+**push**<br/>
+(Opcjonalnie) Umieszcza rekord na wewnętrznym stosie kompilatora. A *pu*sh * może mieć *identyfikator* i *nazwą segmentu*.  
   
-*POP* (opcjonalnie)  
-Usuwa rekord z góry wewnętrznego stosu kompilatora.  
+**POP**<br/>
+(Opcjonalnie) Usuwa rekord z góry wewnętrznego stosu kompilatora.  
   
-*Identyfikator* (opcjonalnie)  
-Gdy jest używane z *wypychania*, przypisuje nazwę rekordowi na wewnętrznym stosie kompilatora. Gdy jest używane z *pop*, zdejmuje rekordy z wewnętrznego stosu aż do usunięcia *identyfikator* zostanie usunięta; Jeśli *identyfikator* nie zostanie znaleziony na wewnętrznym stosie, nic nie zostanie zdjęte.  
+*Identyfikator*<br/>
+(Opcjonalnie) Gdy jest używane z **wypychania**, przypisuje nazwę rekordowi na wewnętrznym stosie kompilatora. Gdy jest używane z **pop**, zdejmuje rekordy z wewnętrznego stosu aż do usunięcia *identyfikator* zostanie usunięta; Jeśli *identyfikator* nie zostanie znaleziony na wewnętrznym stosie, nic nie zostanie zdjęte.  
   
-*Identyfikator* umożliwia wielu rekordów zostać zdjęte ze stosu za pomocą jednego *pop* polecenia.  
+*Identyfikator* umożliwia wielu rekordów zostać zdjęte ze stosu za pomocą jednego **pop** polecenia.  
   
-*"segment-name"*(opcjonalnie)  
-Nazwa segmentu. Gdy jest używane z *pop*, stos jest zdejmowany i *nazwą segmentu* staje się nazwą aktywny segment.  
+*"segment-name"*<br/>
+(Opcjonalnie) Nazwa segmentu. Gdy jest używane z **pop**, stos jest zdejmowany i *nazwą segmentu* staje się nazwą aktywny segment.  
   
-*"klasy segmentu"* (opcjonalnie)  
-Uwzględnione na potrzeby utrzymywania zgodności z C++ wcześniejszych niż 2.0. Jest on ignorowany.  
+*"segmentu class"*<br/>
+(Opcjonalnie) Uwzględnione na potrzeby utrzymywania zgodności z C++ wcześniejszych niż 2.0. Jest on ignorowany.  
   
 ## <a name="example"></a>Przykład  
   

@@ -202,12 +202,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c940ec56b0f522e90410b786d595f4cbf929ed89
-ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
+ms.openlocfilehash: 1236cbdaca396aa6d52d4e30095d9a0df5379142
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43688548"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45712039"
 ---
 # <a name="cwinapp-class"></a>Klasa CWinApp
 
@@ -437,8 +437,8 @@ virtual DWORD ApplicationRecoveryCallback(LPVOID lpvParam);
 
 ### <a name="parameters"></a>Parametry
 
-[in] *lpvParam*  
-Zarezerwowane do użytku w przyszłości.
+*lpvParam*<br/>
+[in] Zarezerwowane do użytku w przyszłości.
 
 ### <a name="return-value"></a>Wartość zwracana
 
@@ -1745,11 +1745,11 @@ virtual CDocument* OpenDocumentFile(
 
 ### <a name="parameters"></a>Parametry
 
-[in] *lpszFileName*  
-Nazwa pliku, który ma zostać otwarty.
+*lpszFileName*<br/>
+[in] Nazwa pliku, który ma zostać otwarty.
 
-[in] *bAddToMRU*  
-Wartość TRUE wskazuje, że dokument jest jeden z najnowszych plików; Wartość FALSE wskazuje, że dokument nie jest jednym z najbardziej aktualne pliki.
+*bAddToMRU*<br/>
+[in] Wartość TRUE wskazuje, że dokument jest jeden z najnowszych plików; Wartość FALSE wskazuje, że dokument nie jest jednym z najbardziej aktualne pliki.
 
 ### <a name="return-value"></a>Wartość zwracana
 
@@ -1936,8 +1936,8 @@ void RegisterShellFileTypes(BOOL bCompat = FALSE);
 
 ### <a name="parameters"></a>Parametry
 
-[in] *bCompat*  
-PRAWDA Dodaje wpisy rejestracyjne dla poleceń powłoki wydruku i wydrukować do, pozwalając użytkownikom na drukowanie plików bezpośrednio z poziomu powłoki lub przeciągając go do obiektu drukarki. Dodaje klucz DefaultIcon. Domyślnie ten parametr ma wartość FALSE dla zgodności z poprzednimi wersjami.
+*bCompat*<br/>
+[in] PRAWDA Dodaje wpisy rejestracyjne dla poleceń powłoki wydruku i wydrukować do, pozwalając użytkownikom na drukowanie plików bezpośrednio z poziomu powłoki lub przeciągając go do obiektu drukarki. Dodaje klucz DefaultIcon. Domyślnie ten parametr ma wartość FALSE dla zgodności z poprzednimi wersjami.
 
 ### <a name="remarks"></a>Uwagi
 
@@ -1973,14 +1973,14 @@ virtual HRESULT RegisterWithRestartManager(
 |||
 |-|-|
 |Parametr|Opis|
-|[in] *bRegisterRecoveryCallback*|Wartość TRUE wskazuje, że to wystąpienie aplikacji używa funkcji wywołania zwrotnego odzyskiwania; Wartość FALSE wskazuje, czy nie. Struktura wywołuje funkcję wywołania zwrotnego odzyskiwania, gdy aplikacja jest nieoczekiwanie zamykany. Aby uzyskać więcej informacji, zobacz [CWinApp::ApplicationRecoveryCallback](#applicationrecoverycallback).|
-|[in] *strRestartIdentifier*|Unikatowy ciąg, który identyfikuje tego wystąpienia Menedżera ponownego uruchamiania. Identyfikator Menedżera ponownego uruchamiania jest unikatowy dla każdego wystąpienia aplikacji.|
-|[in] *pwzCommandLineArgs*|Ciąg, który zawiera wszelkie dodatkowe argumenty z wiersza polecenia.|
-|[in] *dwRestartFlags*|Flagi opcjonalne dla Menedżera ponownego uruchamiania. Aby uzyskać więcej informacji, zobacz sekcję: Uwagi.|
-|[in] *pRecoveryCallback*|Funkcja wywołania zwrotnego odzyskiwania. Ta funkcja musi przyjmować parametr LPVoid — jako dane wejściowe i zwraca wartość typu DWORD. Domyślnej funkcji wywołania zwrotnego odzyskiwania jest `CWinApp::ApplicationRecoveryCallback`.|
-|[in] *lpvParam*|Parametr wejściowy funkcji wywołania zwrotnego odzyskiwania. Aby uzyskać więcej informacji, zobacz [CWinApp::ApplicationRecoveryCallback](#applicationrecoverycallback).|
-|[in] *dwPingInterval*|Długość Czas oczekiwania menedżera ponownego uruchamiania dla funkcji wywołania zwrotnego odzyskiwania do zwrócenia. Ten parametr jest w milisekundach.|
-|[in] *dwCallbackFlags*|Flagi przekazywane do funkcji wywołania zwrotnego odzyskiwania. Zarezerwowane do użytku w przyszłości.|
+|*bRegisterRecoveryCallback*|[in] Wartość TRUE wskazuje, że to wystąpienie aplikacji używa funkcji wywołania zwrotnego odzyskiwania; Wartość FALSE wskazuje, czy nie. Struktura wywołuje funkcję wywołania zwrotnego odzyskiwania, gdy aplikacja jest nieoczekiwanie zamykany. Aby uzyskać więcej informacji, zobacz [CWinApp::ApplicationRecoveryCallback](#applicationrecoverycallback).|
+|*strRestartIdentifier*|[in] Unikatowy ciąg, który identyfikuje tego wystąpienia Menedżera ponownego uruchamiania. Identyfikator Menedżera ponownego uruchamiania jest unikatowy dla każdego wystąpienia aplikacji.|
+|*pwzCommandLineArgs*|[in] Ciąg, który zawiera wszelkie dodatkowe argumenty z wiersza polecenia.|
+|*dwRestartFlags*|[in] Flagi opcjonalne dla Menedżera ponownego uruchamiania. Aby uzyskać więcej informacji, zobacz sekcję: Uwagi.|
+|*pRecoveryCallback*|[in] Funkcja wywołania zwrotnego odzyskiwania. Ta funkcja musi przyjmować parametr LPVoid — jako dane wejściowe i zwraca wartość typu DWORD. Domyślnej funkcji wywołania zwrotnego odzyskiwania jest `CWinApp::ApplicationRecoveryCallback`.|
+|*lpvParam*|[in] Parametr wejściowy funkcji wywołania zwrotnego odzyskiwania. Aby uzyskać więcej informacji, zobacz [CWinApp::ApplicationRecoveryCallback](#applicationrecoverycallback).|
+|*dwPingInterval*|[in] Długość Czas oczekiwania menedżera ponownego uruchamiania dla funkcji wywołania zwrotnego odzyskiwania do zwrócenia. Ten parametr jest w milisekundach.|
+|*dwCallbackFlags*|[in] Flagi przekazywane do funkcji wywołania zwrotnego odzyskiwania. Zarezerwowane do użytku w przyszłości.|
 
 ### <a name="return-value"></a>Wartość zwracana
 

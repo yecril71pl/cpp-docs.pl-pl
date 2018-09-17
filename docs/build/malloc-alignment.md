@@ -1,5 +1,5 @@
 ---
-title: Wyrównanie — funkcja malloc | Dokumentacja firmy Microsoft
+title: malloc, wyrównanie | Dokumentacja firmy Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -12,19 +12,21 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d503d0dd891c651a405cb79bb5ce50996f46cff6
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: aa6e2748691eeb8a11834bcf8e6962252be7ab3f
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32368668"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45712065"
 ---
 # <a name="malloc-alignment"></a>Wyrównanie — funkcja malloc
-[malloc](../c-runtime-library/reference/malloc.md) może zwracać odpowiednio wyrównania przechowywania dowolny obiekt wyrównanie podstawowych i który może pasować ilości pamięci przydzielonej pamięci. A *podstawowych wyrównanie* jest wyrównania, która jest mniejsza niż największa wyrównania, która jest obsługiwana przez implementację bez wyrównania. (W programie Visual C++, to wyrównania, która jest wymagana dla `double`, lub 8 bajtów. W kodzie, przeznaczonego dla platformy 64-bitowych jest 16 bajtów). Na przykład alokacji 4 bajtowych może być wyrównany na granicy obsługuje dowolny obiekt 4 bajtowych lub mniejszy.  
-  
- Visual C++ pozwala na typy, które mają *rozszerzony wyrównanie*, które są nazywane również *nadmiernie wyrównane* typów. Na przykład typy SSE [__m128](../cpp/m128.md) i `__m256`oraz typy, które są zadeklarowane za pomocą `__declspec(align( n ))` gdzie `n` jest większa niż 8, rozszerzony wyrównania. Wyrównanie pamięci na granicy, które jest odpowiednie dla obiekt, który wymaga rozszerzonej wyrównanie nie jest gwarantowana przez `malloc`. Aby przydzielić pamięci dla typów nadmiernie wyrównane, użyj [_aligned_malloc —](../c-runtime-library/reference/aligned-malloc.md) i powiązane funkcje.  
-  
-## <a name="see-also"></a>Zobacz też  
- [Wykorzystanie stosu](../build/stack-usage.md)   
- [Dopasuj](../cpp/align-cpp.md)   
- [__declspec](../cpp/declspec.md)
+
+[malloc](../c-runtime-library/reference/malloc.md) gwarancję zwracania pamięci, który jest odpowiednio wyrównana do przechowywania dowolnego obiektu, który ma podstawowe wyrównanie i który może zmieścić ilość przydzielonej pamięci. A *podstawowe wyrównanie* jest wyrównanie, które jest mniejsze niż lub równe największemu wyrównaniu, która jest obsługiwana przez implementację bez specyfikacji wyrównania. (W programie Visual C++ to wyrównania, która jest wymagana dla `double`, lub 8 bajtów. W kodzie, który jest przeznaczony dla platform 64-bitowy to 16 bajtów.) Na przykład alokacja Czterobajtowa byłaby wyrównana do granicy, który obsługuje dowolny obiekt obiekty czterobajtowe lub mniejsze.
+
+Visual C++ pozwala na typy, które mają *rozszerzone wyrównanie*, które są również nazywane *nadmiernie wyrównanych* typów. Na przykład typy SSE [__m128](../cpp/m128.md) i `__m256`oraz typy, które są zadeklarowane za pomocą `__declspec(align( n ))` gdzie `n` jest większa niż 8, mają rozszerzone wyrównanie. Wyrównanie pamięci na granicy, która jest odpowiednia dla obiektu, który wymaga rozszerzonego wyrównania, nie jest zagwarantowana przez `malloc`. Aby przydzielić pamięć dla typów nadmiernie wyrównanych, użyj [_aligned_malloc](../c-runtime-library/reference/aligned-malloc.md) i pokrewnych funkcji.
+
+## <a name="see-also"></a>Zobacz też
+
+[Wykorzystanie stosu](../build/stack-usage.md)<br/>
+[align](../cpp/align-cpp.md)<br/>
+[__declspec](../cpp/declspec.md)

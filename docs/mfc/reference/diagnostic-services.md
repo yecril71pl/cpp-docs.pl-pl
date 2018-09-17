@@ -30,12 +30,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5be60ff1f0aa8b2ceff7517a9af968e0b7690478
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 6d3adeff7c0c242d9e83b2e71afff78ec130f950
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43214682"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45712961"
 ---
 # <a name="diagnostic-services"></a>Usługi diagnostyczne
 Biblioteki klas Microsoft Foundation dostarcza wiele usługi diagnostyczne, które programy łatwiejsze debugowanie. Te usługi diagnostyczne zawierają makra i funkcje globalne, które umożliwiają śledzenie pamięci programu alokacji, zrzutu zawartość obiektów w czasie wykonywania i Drukuj komunikaty debugowania w czasie wykonywania. Makra i funkcje globalne dla usługi diagnostyczne są podzielone na następujące kategorie:  
@@ -619,8 +619,8 @@ BOOL AFXAPI AfxEnableMemoryLeakDump(BOOL bDump);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *bDump*  
- Wartość TRUE wskazuje, że zrzut przecieku pamięci jest włączona; Wartość FALSE wskazuje, że zrzut przecieku pamięci jest wyłączona.  
+*bDump*<br/>
+[in] Wartość TRUE wskazuje, że zrzut przecieku pamięci jest włączona; Wartość FALSE wskazuje, że zrzut przecieku pamięci jest wyłączona.  
   
 ### <a name="return-value"></a>Wartość zwracana  
  Poprzedniej wartości tej flagi.  

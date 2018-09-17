@@ -20,69 +20,73 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: bdfd872b43fbabdb14457ca54e6c4dfbe039313f
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 1b3997f8beb414992464c51ca1c1fd944145c43d
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32377277"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45715146"
 ---
 # <a name="manifestuac-embeds-uac-information-in-manifest"></a>/MANIFESTUAC (Osadza informacje UAC w manifeście)
-Określa, czy informacje o kontroli konta użytkownika (UAC) jest osadzony w manifeście program.  
-  
-## <a name="syntax"></a>Składnia  
-  
-```  
-/MANIFESTUAC  
-/MANIFESTUAC:NO  
-/MANIFESTUAC:fragment  
-/MANIFESTUAC:level=_level  
-/MANIFESTUAC:uiAccess=_uiAccess  
-```  
-  
-#### <a name="parameters"></a>Parametry  
- `fragment`  
- Ciąg, który zawiera `level` i `uiAccess` wartości. Aby uzyskać więcej informacji zobacz sekcję uwag w dalszej części tego tematu.  
-  
- `_level`  
- Jeden z *asInvoker*, *highestAvailable*, lub *requireAdministrator*. Wartość domyślna to asInvoker. Aby uzyskać więcej informacji zobacz sekcję uwag w dalszej części tego tematu.  
-  
- `_uiAccess`  
- `true` Jeśli chcesz, aby aplikacja do obejścia poziomów ochrony interfejsu użytkownika i dysków danych wejściowych do systemu windows nowszej uprawnień na pulpit. w przeciwnym razie `false`. Domyślnie `false`. Ustaw `true` tylko dla aplikacji ułatwień dostępu interfejsu użytkownika.  
-  
-## <a name="remarks"></a>Uwagi  
- Jeśli określisz wiele opcji /MANIFESTUAC w wierszu polecenia, pierwszeństwo ma ostatnią wprowadzona.  
-  
- Dostępne są następujące opcje dla /MANIFESTUAC:level:  
-  
--   `asInvoker`: Aplikacja będzie uruchamiana z takimi samymi uprawnieniami jak proces, który je zainicjował. Aplikacja może podniesiony do wyższego poziomu uprawnień, wybierając **Uruchom jako Administrator**.  
-  
--   highestAvailable: aplikacja będzie uruchamiana z najwyższy poziom uprawnień, który może. Jeśli użytkownik uruchamia aplikację jest członkiem grupy Administratorzy, ta opcja jest taka sama jak requireAdministrator. Jeśli najwyższy poziom uprawnień dostępne jest wyższy niż poziom procesu otwierania, system wyświetli monit o podanie poświadczeń.  
-  
--   requireAdministrator: aplikacja będzie uruchamiana z uprawnieniami administratora. Użytkownik, który uruchamia aplikację musi być członkiem grupy Administratorzy. Jeśli proces otwierania nie jest uruchomiony z uprawnieniami administracyjnymi, system wyświetli monit o podanie poświadczeń.  
-  
- Można określić wartości poziomu i uiAccess w jednym kroku przy użyciu opcji /MANIFESTUAC:fragment. Fragment, musi być w następującym formacie:  
-  
-```  
-"level=[ asInvoker | highestAvailable | requireAdministrator ] uiAccess=[ true | false ]"  
-```  
-  
-### <a name="to-set-this-linker-option-in-the-visual-studio-development-environment"></a>Aby ustawić tę opcję konsolidatora w środowisku programowania Visual Studio  
-  
-1.  Otwórz projekt **strony właściwości** okno dialogowe. Aby uzyskać więcej informacji, zobacz [Praca z właściwościami projektu](../../ide/working-with-project-properties.md).  
-  
-2.  Rozwiń węzeł **właściwości konfiguracji** węzła.  
-  
-3.  Rozwiń węzeł **konsolidatora** węzła.  
-  
-4.  Wybierz **plik manifestu** strony właściwości.  
-  
-5.  Modyfikowanie **włączyć (Kontrola konta)**, **poziom wykonywania UAC**, i **ochrona Interfejsu użytkownika obejścia kontroli konta użytkownika** właściwości.  
-  
-### <a name="to-set-this-linker-option-programmatically"></a>Aby programowo ustawić tę opcję konsolidatora  
-  
-1.  Zobacz <xref:Microsoft.VisualStudio.VCProjectEngine.VCLinkerTool.EnableUAC%2A>, <xref:Microsoft.VisualStudio.VCProjectEngine.VCLinkerTool.UACExecutionLevel%2A>, i <xref:Microsoft.VisualStudio.VCProjectEngine.VCLinkerTool.UACUIAccess%2A>.  
-  
-## <a name="see-also"></a>Zobacz też  
- [Ustawianie opcji konsolidatora](../../build/reference/setting-linker-options.md)   
- [Opcje konsolidatora](../../build/reference/linker-options.md)
+
+Określa, czy informacje kontroli konta użytkownika (UAC) są osadzone w manifeście programu.
+
+## <a name="syntax"></a>Składnia
+
+```
+/MANIFESTUAC
+/MANIFESTUAC:NO
+/MANIFESTUAC:fragment
+/MANIFESTUAC:level=_level
+/MANIFESTUAC:uiAccess=_uiAccess
+```
+
+### <a name="parameters"></a>Parametry
+
+*Fragment*<br/>
+Ciąg, który zawiera `level` i `uiAccess` wartości. Aby uzyskać więcej informacji zobacz sekcję Uwagi w dalszej części tego tematu.
+
+*_level*<br/>
+Jedną z *asInvoker*, *highestAvailable*, lub *requireAdministrator*. Wartość domyślna to asInvoker. Aby uzyskać więcej informacji zobacz sekcję Uwagi w dalszej części tego tematu.
+
+*_uiAccess*<br/>
+`true` Jeśli chcesz, aby aplikacja, aby pominąć ochronę UI i dysków danych wejściowych do wyższych uprawnień systemu windows na pulpit. w przeciwnym razie `false`. Wartość domyślna to `false`. Ustaw `true` tylko dla aplikacji ułatwień dostępu interfejsu użytkownika.
+
+## <a name="remarks"></a>Uwagi
+
+Jeśli określisz wiele opcji /MANIFESTUAC w wierszu polecenia, ostatni z nich wprowadzono ma pierwszeństwo.
+
+Dostępne są następujące opcje dla /MANIFESTUAC:level:
+
+- `asInvoker`Aplikacja zostanie uruchomiona przy użyciu tych samych uprawnień jako proces, który je zainicjował. Aplikacja może być z podwyższonym poziomem uprawnień na wyższy poziom uprawnień, wybierając **Uruchom jako Administrator**.
+
+- highestAvailable: aplikacja zostanie uruchomiona przy użyciu najwyższy poziom uprawnień, który jest to możliwe. Jeśli użytkownik uruchamia aplikację jest członkiem grupy Administratorzy, ta opcja jest taka sama jak requireAdministrator. Jeśli najwyższy poziom uprawnień dostępne jest wyższy niż poziom procesu otwierania, system wyświetli monit o podanie poświadczeń.
+
+- requireAdministrator: aplikacja będzie uruchamiana z uprawnieniami administratora. Użytkownik, który uruchamia aplikację musi być członkiem grupy Administratorzy. Jeśli proces otwierania nie jest uruchomiony z uprawnieniami administracyjnymi, system wyświetli monit o podanie poświadczeń.
+
+Przy użyciu opcji /MANIFESTUAC:fragment, można określić poziom i uiAccess wartości w jednym kroku. Fragment musi mieć następującą formę:
+
+```
+"level=[ asInvoker | highestAvailable | requireAdministrator ] uiAccess=[ true | false ]"
+```
+
+### <a name="to-set-this-linker-option-in-the-visual-studio-development-environment"></a>Aby ustawić tę opcję konsolidatora w środowisku programowania Visual Studio
+
+1. Otwórz projekt **stron właściwości** okno dialogowe. Aby uzyskać więcej informacji, zobacz [Praca z właściwościami projektu](../../ide/working-with-project-properties.md).
+
+1. Rozwiń **właściwości konfiguracji** węzła.
+
+1. Rozwiń **konsolidatora** węzła.
+
+1. Wybierz **pliku manifestu** stronę właściwości.
+
+1. Modyfikowanie **Włącz (Kontrola konta)**, **poziom wykonywania UAC**, i **ochrona Interfejsu użytkownika obejścia kontroli konta użytkownika** właściwości.
+
+### <a name="to-set-this-linker-option-programmatically"></a>Aby programowo ustawić tę opcję konsolidatora
+
+1. Zobacz <xref:Microsoft.VisualStudio.VCProjectEngine.VCLinkerTool.EnableUAC%2A>, <xref:Microsoft.VisualStudio.VCProjectEngine.VCLinkerTool.UACExecutionLevel%2A>, i <xref:Microsoft.VisualStudio.VCProjectEngine.VCLinkerTool.UACUIAccess%2A>.
+
+## <a name="see-also"></a>Zobacz też
+
+[Ustawianie opcji konsolidatora](../../build/reference/setting-linker-options.md)<br/>
+[Opcje konsolidatora](../../build/reference/linker-options.md)

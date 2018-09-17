@@ -16,12 +16,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: bd865772b3629939306d835728e5033da763eaa9
-ms.sourcegitcommit: d10a2382832373b900b1780e1190ab104175397f
+ms.openlocfilehash: 73d6966844ae8dc6c41350aad57ad310310b3a32
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43895269"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45715004"
 ---
 # <a name="txt-files-as-linker-input"></a>Pliki .Txt — Wejście konsolidatora
 
@@ -29,5 +29,5 @@ LINK oczekuje różnych plików tekstowych jako dodatkowe dane wejściowe. [Plik
 
 ## <a name="see-also"></a>Zobacz też
 
-[Pliki wejściowe LINK](../../build/reference/link-input-files.md)   
+[Pliki wejściowe LINK](../../build/reference/link-input-files.md)<br/>
 [Opcje konsolidatora](../../build/reference/linker-options.md)

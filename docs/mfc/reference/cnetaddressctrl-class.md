@@ -30,12 +30,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 07581805edd92e5b577889c8dfb12c5cf08ac20b
-ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
+ms.openlocfilehash: b035f496a8daf34334d6e3a6690046c862795dc9
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43680762"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45714561"
 ---
 # <a name="cnetaddressctrl-class"></a>Klasa CNetAddressCtrl
 `CNetAddressCtrl` Klasa reprezentuje formant adresu sieciowego, który służy do wprowadzania i sprawdzania poprawności formatu IPv4, IPv6 i nazwanych adresów DNS.  
@@ -127,10 +127,10 @@ virtual BOOL Create(
   
 |Parametr|Opis|  
 |---------------|-----------------|  
-|[in] *dwStyle*|Bitowa kombinacja style, które mają być stosowane do formantu. Aby uzyskać więcej informacji, zobacz [Edytuj style](../../mfc/reference/styles-used-by-mfc.md#edit-styles).|  
-|[in] *rect*|Odwołanie do [Prostokąt](https://msdn.microsoft.com/library/windows/desktop/dd162897) strukturę, która zawiera położenie i rozmiar kontrolki.|  
-|[in] *pParentWnd*|Wskaźnik zerowy [CWnd](../../mfc/reference/cwnd-class.md) obiekt, który jest okno nadrzędne kontrolki.|  
-|[in] *nID*|Identyfikator kontrolki.|  
+|*dwStyle*|[in] Bitowa kombinacja style, które mają być stosowane do formantu. Aby uzyskać więcej informacji, zobacz [Edytuj style](../../mfc/reference/styles-used-by-mfc.md#edit-styles).|  
+|*Rect*|[in] Odwołanie do [Prostokąt](https://msdn.microsoft.com/library/windows/desktop/dd162897) strukturę, która zawiera położenie i rozmiar kontrolki.|  
+|*pParentWnd*|[in] Wskaźnik zerowy [CWnd](../../mfc/reference/cwnd-class.md) obiekt, który jest okno nadrzędne kontrolki.|  
+|*nID*|[in] Identyfikator kontrolki.|  
   
 ### <a name="return-value"></a>Wartość zwracana  
  Wartość TRUE, jeśli ta metoda jest kończy się pomyślnie; w przeciwnym razie wartość FALSE.  
@@ -151,11 +151,11 @@ virtual BOOL CreateEx(
   
 |Parametr|Opis|  
 |---------------|-----------------|  
-|[in] *dwExStyle*|Bitowa kombinacja (lub) rozszerzone style, które mają być stosowane do formantu. Aby uzyskać więcej informacji, zobacz *dwExStyle* parametru [elementu CreateWindowEx](/windows/desktop/api/winuser/nf-winuser-createwindowexa) funkcji.|  
-|[in] *dwStyle*|Bitowa kombinacja (lub) style, które mają być stosowane do formantu. Aby uzyskać więcej informacji, zobacz [Edytuj style](../../mfc/reference/styles-used-by-mfc.md#edit-styles).|  
-|[in] *rect*|Odwołanie do [Prostokąt](https://msdn.microsoft.com/library/windows/desktop/dd162897) strukturę, która zawiera położenie i rozmiar kontrolki.|  
-|[in] *pParentWnd*|Wskaźnik zerowy [CWnd](../../mfc/reference/cwnd-class.md) obiekt, który jest okno nadrzędne kontrolki.|  
-|[in] *nID*|Identyfikator kontrolki.|  
+|*dwExStyle*|[in] Bitowa kombinacja (lub) rozszerzone style, które mają być stosowane do formantu. Aby uzyskać więcej informacji, zobacz *dwExStyle* parametru [elementu CreateWindowEx](/windows/desktop/api/winuser/nf-winuser-createwindowexa) funkcji.|  
+|*dwStyle*|[in] Bitowa kombinacja (lub) style, które mają być stosowane do formantu. Aby uzyskać więcej informacji, zobacz [Edytuj style](../../mfc/reference/styles-used-by-mfc.md#edit-styles).|  
+|*Rect*|[in] Odwołanie do [Prostokąt](https://msdn.microsoft.com/library/windows/desktop/dd162897) strukturę, która zawiera położenie i rozmiar kontrolki.|  
+|*pParentWnd*|[in] Wskaźnik zerowy [CWnd](../../mfc/reference/cwnd-class.md) obiekt, który jest okno nadrzędne kontrolki.|  
+|*nID*|[in] Identyfikator kontrolki.|  
   
 ### <a name="return-value"></a>Wartość zwracana  
  Wartość TRUE, jeśli ta metoda jest kończy się pomyślnie; w przeciwnym razie wartość FALSE.  
@@ -183,10 +183,9 @@ HRESULT GetAddress(PNC_ADDRESS pAddress) const;
 ```  
   
 ### <a name="parameters"></a>Parametry  
-  
-|Parametr|Opis|  
-|---------------|-----------------|  
-|[out w] *pAddress*|Wskaźnik do [NC_ADDRESS](/windows/desktop/api/shellapi/ns-shellapi-tagnc_address) struktury.  Ustaw *pAddrInfo* członkiem tej struktury adres [NET_ADDRESS_INFO](https://msdn.microsoft.com/library/windows/desktop/bb773346) struktury przed wywołaniem getaddress — metoda.|  
+
+*pAddress*<br/>
+[out w] Wskaźnik do [NC_ADDRESS](/windows/desktop/api/shellapi/ns-shellapi-tagnc_address) struktury.  Ustaw *pAddrInfo* członkiem tej struktury adres [NET_ADDRESS_INFO](https://msdn.microsoft.com/library/windows/desktop/bb773346) struktury przed wywołaniem getaddress — metoda.
   
 ### <a name="return-value"></a>Wartość zwracana  
  Wartość S_OK, jeśli ta metoda się powiedzie; w przeciwnym razie kod błędu modelu COM. Aby uzyskać więcej informacji na temat możliwych kodów błędów, zobacz sekcję zwracają wartość [NetAddr_GetAddress](/windows/desktop/api/shellapi/nf-shellapi-netaddr_getaddress) makra.  
@@ -222,7 +221,7 @@ HRESULT SetAllowType(DWORD dwAddrMask);
   
 |Parametr|Opis|  
 |---------------|-----------------|  
-|[in] *dwAddrMask*|Bitowa kombinacja (lub) flagami określający typy adresów może obsługiwać formant adresu sieciowego. Aby uzyskać więcej informacji, zobacz [NET_STRING](https://msdn.microsoft.com/library/windows/desktop/bb762586).|  
+|*dwAddrMask*|[in] Bitowa kombinacja (lub) flagami określający typy adresów może obsługiwać formant adresu sieciowego. Aby uzyskać więcej informacji, zobacz [NET_STRING](https://msdn.microsoft.com/library/windows/desktop/bb762586).|  
   
 ### <a name="return-value"></a>Wartość zwracana  
  S_OK, jeśli ta metoda się powiedzie; w przeciwnym razie kod błędu modelu COM.  

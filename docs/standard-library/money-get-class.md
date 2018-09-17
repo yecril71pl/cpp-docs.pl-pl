@@ -26,12 +26,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4cae819ccffae37ca27d1e062ae9a766e7acba1f
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 991c8c9505485e84aa4e8e1e0e8955b5ad2ac23a
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43201754"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45712859"
 ---
 # <a name="moneyget-class"></a>money_get — Klasa
 
@@ -47,10 +47,10 @@ class money_get : public locale::facet;
 ### <a name="parameters"></a>Parametry
 
 *CharType*<br/>
- Typ używany w programie do kodowania znaków w ustawieniach regionalnych.
+Typ używany w programie do kodowania znaków w ustawieniach regionalnych.
 
 *InputIterator*<br/>
- Typ iteratora, z której funkcje get odczytują swoje dane wejściowe.
+Typ iteratora, z której funkcje get odczytują swoje dane wejściowe.
 
 ## <a name="remarks"></a>Uwagi
 
@@ -116,22 +116,22 @@ virtual iter_type do_get(iter_type first,
 ### <a name="parameters"></a>Parametry
 
 *pierwszy*<br/>
- Iterator danych wejściowych, odnoszący się na początku sekwencji, który ma zostać przekonwertowany.
+Iterator danych wejściowych, odnoszący się na początku sekwencji, który ma zostać przekonwertowany.
 
 *ostatni*<br/>
- Iterator danych wejściowych, odnoszący się koniec sekwencji, który ma zostać przekonwertowany.
+Iterator danych wejściowych, odnoszący się koniec sekwencji, który ma zostać przekonwertowany.
 
 *Wewnętrzna*<br/>
- Wartość logiczną wskazującą typ symbolu waluty, oczekiwano w sekwencji: **true** Jeśli międzynarodowe, **false** Jeśli krajowych.
+Wartość logiczną wskazującą typ symbolu waluty, oczekiwano w sekwencji: **true** Jeśli międzynarodowe, **false** Jeśli krajowych.
 
 *iosbase*<br/>
- Flagi formatu, który po zestaw wskazuje, że symbol waluty jest opcjonalna. w przeciwnym razie jest ona wymagana.
+Flagi formatu, który po zestaw wskazuje, że symbol waluty jest opcjonalna. w przeciwnym razie jest ona wymagana.
 
 *State*<br/>
- Ustawia elementy odpowiedniej maski bitów dla stanu strumień zgodnie z tego, czy operacje zakończyło się pomyślnie, czy nie.
+Ustawia elementy odpowiedniej maski bitów dla stanu strumień zgodnie z tego, czy operacje zakończyło się pomyślnie, czy nie.
 
 *Val*<br/>
- Ciąg przechowywania przekonwertowany sekwencji.
+Ciąg przechowywania przekonwertowany sekwencji.
 
 ### <a name="return-value"></a>Wartość zwracana
 
@@ -198,22 +198,22 @@ iter_type get(iter_type first,
 ### <a name="parameters"></a>Parametry
 
 *pierwszy*<br/>
- Iterator danych wejściowych, odnoszący się na początku sekwencji, który ma zostać przekonwertowany.
+Iterator danych wejściowych, odnoszący się na początku sekwencji, który ma zostać przekonwertowany.
 
 *ostatni*<br/>
- Iterator danych wejściowych, odnoszący się koniec sekwencji, który ma zostać przekonwertowany.
+Iterator danych wejściowych, odnoszący się koniec sekwencji, który ma zostać przekonwertowany.
 
 *Wewnętrzna*<br/>
- Wartość logiczną wskazującą typ symbolu waluty, oczekiwano w sekwencji: **true** Jeśli międzynarodowe, **false** Jeśli krajowych.
+Wartość logiczną wskazującą typ symbolu waluty, oczekiwano w sekwencji: **true** Jeśli międzynarodowe, **false** Jeśli krajowych.
 
 *iosbase*<br/>
- Flagi formatu, który po zestaw wskazuje, że symbol waluty jest opcjonalna. w przeciwnym razie jest wymagana
+Flagi formatu, który po zestaw wskazuje, że symbol waluty jest opcjonalna. w przeciwnym razie jest wymagana
 
 *State*<br/>
- Ustawia elementy odpowiedniej maski bitów dla stanu strumień zgodnie z tego, czy operacje zakończyło się pomyślnie.
+Ustawia elementy odpowiedniej maski bitów dla stanu strumień zgodnie z tego, czy operacje zakończyło się pomyślnie.
 
 *Val*<br/>
- Ciąg przechowywania przekonwertowany sekwencji.
+Ciąg przechowywania przekonwertowany sekwencji.
 
 ### <a name="return-value"></a>Wartość zwracana
 
@@ -295,7 +295,7 @@ explicit money_get(size_t _Refs = 0);
 ### <a name="parameters"></a>Parametry
 
 *_Refs*<br/>
- Wartość liczby całkowitej, można określić typ zarządzania pamięci dla obiektu.
+Wartość liczby całkowitej, można określić typ zarządzania pamięci dla obiektu.
 
 ### <a name="remarks"></a>Uwagi
 

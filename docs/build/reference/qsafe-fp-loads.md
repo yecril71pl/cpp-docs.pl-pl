@@ -11,16 +11,16 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1462303f9e178c70a845066bc7a0a3ce78a99e15
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 0af28b391390f28be4e111b55c909dcae66ca2f8
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32378288"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45713664"
 ---
 # <a name="qsafefploads"></a>/Qsafe_fp_loads
 
-Wymaga instrukcje przenoszenia całkowitą dla wartości zmiennoprzecinkowych i wyłącza optymalizacje niektórych zmiennoprzecinkowe obciążenia.
+Wymaga całkowitoliczbowych instrukcji przeniesienia dla wartości zmiennopozycyjnych i wyłącza niektóre optymalizację ładowania zmiennoprzecinkowych.
 
 ## <a name="syntax"></a>Składnia
 
@@ -28,21 +28,21 @@ Wymaga instrukcje przenoszenia całkowitą dla wartości zmiennoprzecinkowych i 
 
 ## <a name="remarks"></a>Uwagi
 
-**/ Qsafe_fp_loads** jest dostępna tylko w kompilatory który docelowe x86; nie jest dostępna w kompilatorów, które odnoszą się do x64 lub ARM.
+**/ Qsafe_fp_loads** jest dostępna tylko w kompilatorach przeznaczone na platformę x86; nie jest dostępna w kompilatorach, których platformą docelową x64 lub ARM.
 
-**/ Qsafe_fp_loads** wymusza kompilator, aby używał instrukcje przenoszenia całkowitą zamiast instrukcji zmiennoprzecinkowych Przenieś do przenoszenia danych między pamięci i MMX rejestruje. Ta opcja umożliwia wyłączenie rejestrowania obciążenia optymalizacji liczb zmiennoprzecinkowych wartości, które mogą być ładowane w wielu ścieżek formantu, gdy wartość może spowodować wyjątek przy ładowaniu — na przykład wartości NaN.
+**/ Qsafe_fp_loads** rejestruje kompilatorowi używanie całkowitoliczbowych instrukcji przeniesienia zamiast instrukcji zmiennoprzecinkowych przeniesienia do przenoszenia danych między pamięcią i MMX wymusza. Ta opcja powoduje wyłączenie optymalizacji obciążenia rejestru dla wartości zmiennoprzecinkowych, które mogą być ładowane w wielu ścieżek kontroli, gdy wartość może spowodować wyjątek podczas ładowania — na przykład, wartość NaN.
 
-Ta opcja jest zastępowana [/FP: except](../../build/reference/fp-specify-floating-point-behavior.md). **/ Qsafe_fp_loads** określa podzestaw zachowanie kompilatora, określonej przez **/FP: except**.
+Ta opcja jest zastępowany przez [/FP: except](../../build/reference/fp-specify-floating-point-behavior.md). **/ Qsafe_fp_loads** określa podzestaw zachowanie kompilatora, który jest określony przez **/FP: except**.
 
-**/ Qsafe_fp_loads** jest niezgodny z [/CLR](../../build/reference/clr-common-language-runtime-compilation.md) i [Fast](../../build/reference/fp-specify-floating-point-behavior.md). Aby uzyskać więcej informacji na temat ruchomy punkt — opcje kompilatora, zobacz [/fp (określenie zachowania Floating-Point)](../../build/reference/fp-specify-floating-point-behavior.md).
+**/ Qsafe_fp_loads** jest niezgodny z [/CLR](../../build/reference/clr-common-language-runtime-compilation.md) i [Fast](../../build/reference/fp-specify-floating-point-behavior.md). Aby uzyskać więcej informacji na temat punktu zmiennoprzecinkowego — opcje kompilatora, zobacz [/FP (określenie zachowania zmiennopozycyjna)](../../build/reference/fp-specify-floating-point-behavior.md).
 
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Aby ustawić tę opcję kompilatora w środowisku programowania Visual Studio
 
-1. Otwórz projekt **strony właściwości** okno dialogowe. Aby uzyskać więcej informacji, zobacz [Praca z właściwościami projektu](../../ide/working-with-project-properties.md).
+1. Otwórz projekt **stron właściwości** okno dialogowe. Aby uzyskać więcej informacji, zobacz [Praca z właściwościami projektu](../../ide/working-with-project-properties.md).
 
-1. Wybierz **właściwości konfiguracji** > **C/C++** > **wiersza polecenia** strony właściwości.
+1. Wybierz **właściwości konfiguracji** > **C/C++** > **wiersza polecenia** stronę właściwości.
 
-1. Wybierz opcję kompilatora w **dodatkowe opcje** pole. Wybierz **OK** do zastosowania zmiany.
+1. Wpisz opcję kompilatora w **dodatkowe opcje** pole. Wybierz **OK** do zastosowania zmiany.
 
 ### <a name="to-set-this-compiler-option-programmatically"></a>Aby programowo ustawić tę opcję kompilatora
 
@@ -50,6 +50,6 @@ Ta opcja jest zastępowana [/FP: except](../../build/reference/fp-specify-floati
 
 ## <a name="see-also"></a>Zobacz także
 
-[/Q Opcje (Operacje na niskim poziomie)](../../build/reference/q-options-low-level-operations.md)  
-[Opcje kompilatora](../../build/reference/compiler-options.md)  
-[Ustawianie opcji kompilatora](../../build/reference/setting-compiler-options.md)  
+[/Q opcje (operacje na niskim poziomie)](../../build/reference/q-options-low-level-operations.md)
+[opcje kompilatora](../../build/reference/compiler-options.md)<br/>
+[Ustawianie opcji kompilatora](../../build/reference/setting-compiler-options.md)

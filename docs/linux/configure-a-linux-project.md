@@ -14,12 +14,12 @@ ms.author: corob
 ms.workload:
 - cplusplus
 - linux
-ms.openlocfilehash: fbc0674a7659ffccd5ab5c655f74167acebdca97
-ms.sourcegitcommit: d10a2382832373b900b1780e1190ab104175397f
+ms.openlocfilehash: a66e2f6b6506d995859c89d9588b59056047220e
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43895204"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45713586"
 ---
 # <a name="configure-a-linux-project"></a>Konfigurowanie projektu systemu Linux
 
@@ -48,7 +48,8 @@ Aby zmienić ustawienia odnoszących się do komputera zdalnego systemu Linux, n
 
 ## <a name="include-directories-and-intellisense-support"></a>Katalogi i obsługę funkcji IntelliSense
 
-**Visual Studio 2017 w wersji 15.6 i wcześniejszych:** Domyślnie program Visual Studio nie zawiera wszystkie pliki dołączane w poziomie systemu, z komputera z systemem Linux.  Na przykład, elementy w **/usr/obejmują** katalogu nie są obecne w programie Visual Studio.
+**Visual Studio 2017 w wersji 15.6 i starszych:**<br/>
+Domyślnie program Visual Studio nie zawiera wszystkie pliki dołączane w poziomie systemu, z komputera z systemem Linux.  Na przykład, elementy w **/usr/obejmują** katalogu nie są obecne w programie Visual Studio.
 Aby uzyskać pełne [IntelliSense](/visualstudio/ide/using-intellisense) pomocy technicznej, należy skopiować te pliki do lokalizacji na komputerze deweloperskim i wskaż programu Visual Studio do tej lokalizacji.  Jedną z opcji jest kopiowanie plików za pomocą punktu połączenia usługi (Secure Copy).  W systemie Windows 10, możesz użyć [Bash on Windows](https://msdn.microsoft.com/commandline/wsl/about) do uruchomienia punktu połączenia usługi.  Dla starszych wersji systemu Windows, można użyć ciągu [narzędzia PSCP (PuTTY Secure Copy)](http://www.chiark.greenend.org.uk/~sgtatham/putty/download.html).
 
 Aby skopiować pliki, używając polecenia podobnego do następującego:
@@ -61,7 +62,8 @@ Gdy pliki są kopiowane, użyć **katalogi VC ++** elementu we właściwościach
 
 ![Katalogi VC ++](media/settings_directories.png)
 
-**Visual Studio 2017 w wersji 15.7 lub nowszej:** zobacz [zarządzać zdalnych nagłówków funkcji IntelliSense](#remote_intellisense).
+**Visual Studio 2017 w wersji 15.7 lub nowszej:**<br/>
+Zobacz [zarządzać zdalnych nagłówków funkcji IntelliSense](#remote_intellisense).
 
 ## <a name="copy-sources"></a>Kopiuj źródła
 

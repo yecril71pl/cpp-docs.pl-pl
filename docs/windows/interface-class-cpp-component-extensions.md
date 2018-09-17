@@ -18,12 +18,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: f9b5bc8568c3655d8c038d70d78f3887b2c3becc
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: 775fbe39edc9478b1fce3afb39ee2bf1f6d5ed36
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42607528"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45714314"
 ---
 # <a name="interface-class--c-component-extensions"></a>interface class (C++ Component Extensions)
 
@@ -50,8 +50,8 @@ Nazwa interfejsu.
 *inherit_access*  
 Dostępność *base_interface*.  Jedyna dozwolona w ułatwienia dostępu przypadku interfejs podstawowy **publicznych** (ustawienie domyślne).
 
-*base_interface* (opcjonalnie)  
-Podstawowy interfejs dla interfejsu *nazwa*.
+*base_interface*  
+(Opcjonalnie) Podstawowy interfejs dla interfejsu *nazwa*.
 
 ### <a name="remarks"></a>Uwagi
 

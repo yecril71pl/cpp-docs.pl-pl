@@ -42,12 +42,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c4d0f45498015006141591f7132ef38af52751f9
-ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
+ms.openlocfilehash: 9f395ae726725507bf27f5033b20a4ece2a226a6
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "42465898"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45715666"
 ---
 # <a name="cmfctooltipctrl-class"></a>Klasa CMFCToolTipCtrl
 Implementacja Rozszerzone etykietki narzędzia oparta na [klasa CToolTipCtrl](../../mfc/reference/ctooltipctrl-class.md). Etykietka narzędzia oparta na `CMFCToolTipCtrl` klasy może wyświetlać ikony, etykietę i opis. Jego wygląd można dostosować, używając wypełniacza gradientu, niestandardowego tekstu i kolorów obramowania, pogrubioną czcionką, zaokrąglonych rogów lub stylu balonowego.  
@@ -204,14 +204,14 @@ virtual void OnDrawBorder(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *podstawowego kontrolera domeny*  
- Wskaźnik do kontekstu urządzenia.  
+*podstawowego kontrolera domeny*<br/>
+[in] Wskaźnik do kontekstu urządzenia.  
   
- [in] *rect*  
- Prostokąt otaczający etykietki narzędzia.  
+*Rect*<br/>
+[in] Prostokąt otaczający etykietki narzędzia.  
   
- [in] *clrLine*  
- Kolor obramowania.  
+*clrLine*<br/>
+[in] Kolor obramowania.  
   
 ### <a name="remarks"></a>Uwagi  
  Należy przesłonić tę metodę w klasie pochodnej, aby dostosować wygląd obramowanie etykietki narzędziowej.  
@@ -227,8 +227,8 @@ virtual CSize OnDrawDescription(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *podstawowego kontrolera domeny*  
- [in] *rect*  
+*podstawowego kontrolera domeny*<br/>
+[in] [in] *rect*  
  [in] *bCalcOnly*  
   
 ### <a name="return-value"></a>Wartość zwracana  
@@ -245,11 +245,11 @@ virtual BOOL OnDrawIcon(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *podstawowego kontrolera domeny*  
- Wskaźnik do kontekstu urządzenia.  
+*podstawowego kontrolera domeny*<br/>
+[in] Wskaźnik do kontekstu urządzenia.  
   
- [in] *rectImage*  
- Współrzędne ikony.  
+*rectImage*<br/>
+[in] Współrzędne ikony.  
   
 ### <a name="return-value"></a>Wartość zwracana  
  Wartość TRUE, jeśli została narysowana ikony. W przeciwnym razie wartość FALSE.  
@@ -268,14 +268,14 @@ virtual CSize OnDrawLabel(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *podstawowego kontrolera domeny*  
- Wskaźnik do kontekstu urządzenia.  
+*podstawowego kontrolera domeny*<br/>
+[in] Wskaźnik do kontekstu urządzenia.  
   
- [in] *rect*  
- Prostokąt otaczający obszaru etykiety.  
+*Rect*<br/>
+[in] Prostokąt otaczający obszaru etykiety.  
   
- [in] *bCalcOnly*  
- W przypadku opcji TRUE etykiety nie będą pobierane.  
+*bCalcOnly*<br/>
+[in] W przypadku opcji TRUE etykiety nie będą pobierane.  
   
 ### <a name="return-value"></a>Wartość zwracana  
  Rozmiar etykiety, w pikselach.  
@@ -295,17 +295,17 @@ virtual void OnDrawSeparator(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *podstawowego kontrolera domeny*  
- Wskaźnik do kontekstu urządzenia.  
+*podstawowego kontrolera domeny*<br/>
+[in] Wskaźnik do kontekstu urządzenia.  
   
- [in] *x1*  
- Poziomy Współrzędna z lewej strony separatora.  
+*x1*<br/>
+[in] Poziomy Współrzędna z lewej strony separatora.  
   
- [in] *x2*  
- Poziomy Współrzędna prawej stronie separatora.  
+*x2*<br/>
+[in] Poziomy Współrzędna prawej stronie separatora.  
   
- [in] *Y*  
- Współrzędna pionowy separatora.  
+*Y*<br/>
+[in] Współrzędna pionowy separatora.  
   
 ### <a name="remarks"></a>Uwagi  
  Domyślna implementacja rysuje linię z punktu (x1, y) w punkcie (x2, y).  
@@ -324,17 +324,17 @@ virtual void OnFillBackground(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *podstawowego kontrolera domeny*  
- Wskaźnik do kontekstu urządzenia.  
+*podstawowego kontrolera domeny*<br/>
+[in] Wskaźnik do kontekstu urządzenia.  
   
- [in] *rect*  
- Określa obszar, aby wypełnić prostokąt otaczający.  
+*Rect*<br/>
+[in] Określa obszar, aby wypełnić prostokąt otaczający.  
   
- [in] *clrText*  
- Kolor pierwszego planu etykietki narzędzia.  
+*clrText*<br/>
+[in] Kolor pierwszego planu etykietki narzędzia.  
   
- [in] *clrLine*  
- Kolor obramowania i linii ogranicznik między etykietę i opis.  
+*clrLine*<br/>
+[in] Kolor obramowania i linii ogranicznik między etykietę i opis.  
   
 ### <a name="remarks"></a>Uwagi  
  Domyślna implementacja wypełnia prostokąt, który jest określony przez *prostokąt* z kolor lub deseń określony przez wywołanie najnowszych [CMFCToolTipCtrl::SetParams](#setparams).  
@@ -349,8 +349,8 @@ virtual void SetDescription(const CString strDesrciption);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *strDesrciption*  
- Tekst opisu.  
+*strDesrciption*<br/>
+[in] Tekst opisu.  
   
 ### <a name="remarks"></a>Uwagi  
  Tekst opisu jest wyświetlany na etykietki narzędzia w ramach separatora.  
@@ -365,8 +365,8 @@ void SetFixedWidth(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *nWidthRegular*  
- [in] *nWidthLargeImage*  
+*nWidthRegular*<br/>
+[in] [in] *nWidthLargeImage*  
   
 ### <a name="remarks"></a>Uwagi  
   
@@ -402,8 +402,8 @@ void SetParams(CMFCToolTipInfo* pParams);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *pParams*  
- Wskaźnik do [klasa CMFCToolTipInfo](../../mfc/reference/cmfctooltipinfo-class.md) obiekt zawierający parametry wyświetlania.  
+*pParams*<br/>
+[in] Wskaźnik do [klasa CMFCToolTipInfo](../../mfc/reference/cmfctooltipinfo-class.md) obiekt zawierający parametry wyświetlania.  
   
 ### <a name="remarks"></a>Uwagi  
  Zawsze, gdy zostanie wyświetlona etykietka narzędzia, jest rysowany przy użyciu kolory i style wizualizacji, które *pParams* określa. Wartość *pParams* znajduje się w chronionej składowej `m_Params`, który może zostać oceniony przez klasę pochodną, która zastępuje [CMFCToolTipCtrl::OnDrawBorder](#ondrawborder), [CMFCToolTipCtrl: : OnDrawIcon](#ondrawicon), [CMFCToolTipCtrl::OnDrawLabel](#ondrawlabel), [CMFCToolTipCtrl::OnDrawSeparator](#ondrawseparator), lub [CMFCToolTipCtrl::OnFillBackground](#onfillbackground)do obsługi określonego wygląd.  

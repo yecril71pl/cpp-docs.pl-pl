@@ -96,12 +96,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 27bdcea6f7ebd51f000310f4916f16bfec7840e5
-ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
+ms.openlocfilehash: 8d45b08ee356fd217207b625ffe7bf4fb0abffec
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43686630"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45708698"
 ---
 # <a name="multiset-class"></a>multiset — Klasa
 
@@ -117,15 +117,15 @@ class multiset
 ### <a name="parameters"></a>Parametry
 
 *Key*<br/>
- Typ danych elementu do przechowywania w zestawie wielokrotnym.
+Typ danych elementu do przechowywania w zestawie wielokrotnym.
 
 *Compare*<br/>
- Typ, który dostarcza obiekt funkcji, która może porównać dwie wartości elementów jako klucze sortowania, aby określić ich względną kolejność w zestawie wielokrotnym. Predykat dwuelementowy **mniej**\<Key > jest wartością domyślną.
+Typ, który dostarcza obiekt funkcji, która może porównać dwie wartości elementów jako klucze sortowania, aby określić ich względną kolejność w zestawie wielokrotnym. Predykat dwuelementowy **mniej**\<Key > jest wartością domyślną.
 
 W języku C ++ 14 można włączyć heterogeniczne wyszukiwanie, określając `std::less<>` lub `std::greater<>` predykat, który nie ma parametrów typu. Aby uzyskać więcej informacji, zobacz [heterogeniczne wyszukiwanie w kontenerach asocjacyjnych](../standard-library/stl-containers.md#sequence_containers)
 
 *Allocator*<br/>
- Typ reprezentujący przechowywany obiekt alokatora, który hermetyzuje szczegóły dotyczące alokacji zestawu wielokrotnego i dezalokacji pamięci. Wartość domyślna to `allocator<Key>`.
+Typ reprezentujący przechowywany obiekt alokatora, który hermetyzuje szczegóły dotyczące alokacji zestawu wielokrotnego i dezalokacji pamięci. Wartość domyślna to `allocator<Key>`.
 
 ## <a name="remarks"></a>Uwagi
 
@@ -482,7 +482,7 @@ size_type count(const Key& key) const;
 ### <a name="parameters"></a>Parametry
 
 *Klucz*<br/>
- Klucz elementy, które mają być dopasowywane w zestawie wielokrotnym.
+Klucz elementy, które mają być dopasowywane w zestawie wielokrotnym.
 
 ### <a name="return-value"></a>Wartość zwracana
 
@@ -878,7 +878,7 @@ pair <iterator, iterator> equal_range (const Key& key);
 ### <a name="parameters"></a>Parametry
 
 *Klucz*<br/>
- Argument klucza, który ma zostać porównane z klucza sortowania elementu w zestawie wielokrotnym wyszukiwany.
+Argument klucza, który ma zostać porównane z klucza sortowania elementu w zestawie wielokrotnym wyszukiwany.
 
 ### <a name="return-value"></a>Wartość zwracana
 
@@ -963,16 +963,16 @@ size_type erase(
 ### <a name="parameters"></a>Parametry
 
 *Where*<br/>
- Pozycja elementu, który ma zostać usunięty.
+Pozycja elementu, który ma zostać usunięty.
 
 *pierwszy*<br/>
- Pozycja pierwszego elementu do usunięcia.
+Pozycja pierwszego elementu do usunięcia.
 
 *ostatni*<br/>
- Pozycja tuż za ostatni element do usunięcia.
+Pozycja tuż za ostatni element do usunięcia.
 
 *Key*<br/>
- Wartość klucza elementów do usunięcia.
+Wartość klucza elementów do usunięcia.
 
 ### <a name="return-value"></a>Wartość zwracana
 
@@ -998,7 +998,7 @@ const_iterator find(const Key& key) const;
 ### <a name="parameters"></a>Parametry
 
 *Klucz*<br/>
- Wartość klucza, które mają być dopasowywane o klucz sortowania elementu w zestawie wielokrotnym wyszukiwany.
+Wartość klucza, które mają być dopasowywane o klucz sortowania elementu w zestawie wielokrotnym wyszukiwany.
 
 ### <a name="return-value"></a>Wartość zwracana
 
@@ -1441,7 +1441,7 @@ iterator lower_bound(const Key& key);
 ### <a name="parameters"></a>Parametry
 
 *Klucz*<br/>
- Argument klucza, który ma zostać porównane z klucza sortowania elementu w zestawie wielokrotnym wyszukiwany.
+Argument klucza, który ma zostać porównane z klucza sortowania elementu w zestawie wielokrotnym wyszukiwany.
 
 ### <a name="return-value"></a>Wartość zwracana
 
@@ -2048,7 +2048,7 @@ void swap(
 ### <a name="parameters"></a>Parametry
 
 *right*<br/>
- Zestaw wielokrotny argumentu, zawierająca elementy, które zamianę z docelowym zestawie wielokrotnym.
+Zestaw wielokrotny argumentu, zawierająca elementy, które zamianę z docelowym zestawie wielokrotnym.
 
 ### <a name="remarks"></a>Uwagi
 
@@ -2117,7 +2117,7 @@ iterator upper_bound(const Key& key);
 ### <a name="parameters"></a>Parametry
 
 *Klucz*<br/>
- Argument klucza, który ma zostać porównane z klucza sortowania elementu w zestawie wielokrotnym wyszukiwany.
+Argument klucza, który ma zostać porównane z klucza sortowania elementu w zestawie wielokrotnym wyszukiwany.
 
 ### <a name="return-value"></a>Wartość zwracana
 

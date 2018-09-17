@@ -1,5 +1,5 @@
 ---
-title: Definicji modułu (. Pliki DEF) | Dokumentacja firmy Microsoft
+title: Definicji modułów (. Pliki DEF) | Dokumentacja firmy Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,44 +16,46 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 57bad3a63e910918b6a22b6263f0df3faca0dcd1
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: f04035f3c5f0acd77fc197cbef3d2ab507feb0d4
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32374729"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45710193"
 ---
 # <a name="module-definition-def-files"></a>Pliki definicji modułu (.Def)
-Pliki definicji modułu (.def) podaj konsolidatora z informacjami o eksportu, atrybutów i innych informacji o programie być połączony. Plik .def jest najbardziej przydatna podczas tworzenia biblioteki DLL. Ponieważ istnieją [opcje konsolidatora](../../build/reference/linker-options.md) którego można użyć zamiast instrukcji definicji modułu .def — pliki nie są zazwyczaj konieczne. Można również użyć [__declspec(dllexport)](../../build/exporting-from-a-dll-using-declspec-dllexport.md) jako sposobu na określenie wyeksportowanych funkcji.  
-  
- Plik .def może wywołać w fazie konsolidatora z [/DEF (Określ plik definicji modułu)](../../build/reference/def-specify-module-definition-file.md) — opcja konsolidatora.  
-  
- Jeśli tworzysz plik .exe, który zawiera żadnego eksportu przy użyciu pliku .def spowoduje, że ładowanie z danych wyjściowych w pliku większych i wolniej.  
-  
- Na przykład zobacz [eksportowanie z biblioteki DLL przy użyciu DEF, pliki](../../build/exporting-from-a-dll-using-def-files.md).  
-  
- Znajduje się w następujących sekcjach, aby uzyskać więcej informacji:  
-  
--   [Zasady dla instrukcji definicji modułu](../../build/reference/rules-for-module-definition-statements.md)  
-  
--   [EXPORTS](../../build/reference/exports.md)  
-  
--   [HEAPSIZE](../../build/reference/heapsize.md)  
-  
--   [LIBRARY](../../build/reference/library.md)  
-  
--   [NAZWA](../../build/reference/name-c-cpp.md)  
-  
--   [SEKCJE](../../build/reference/sections-c-cpp.md)  
-  
--   [STACKSIZE](../../build/reference/stacksize.md)  
-  
--   [STUB](../../build/reference/stub.md)  
-  
--   [WERSJA](../../build/reference/version-c-cpp.md)  
-  
--   [Słowa zastrzeżone](../../build/reference/reserved-words.md)  
-  
-## <a name="see-also"></a>Zobacz też  
- [Odwołanie kompilacji C/C++](../../build/reference/c-cpp-building-reference.md)   
- [Opcje konsolidatora](../../build/reference/linker-options.md)  
+
+Pliki definicji modułu (.def) zapewniają konsolidatora z informacjami dotyczącymi eksportu, atrybuty i inne informacje o program ma być połączone. Plik .def jest najbardziej przydatne podczas tworzenia biblioteki DLL. Ponieważ istnieją [opcje konsolidatora](../../build/reference/linker-options.md) które mogą być używane zamiast instrukcji definicji modułu .def — pliki nie są zwykle wymagane. Można również użyć [__declspec(dllexport)](../../build/exporting-from-a-dll-using-declspec-dllexport.md) jako sposób określania wyeksportowanych funkcji.
+
+Plik .def można wywołać w fazie konsolidatora z [/DEF (Określ plik definicji modułu)](../../build/reference/def-specify-module-definition-file.md) — opcja konsolidatora.
+
+Jeśli tworzysz plik .exe, który nie eksportuje żadnych danych, używając pliku .def spowoduje, że Twoje dane wyjściowe pliku większych i wolniejszych podczas ładowania.
+
+Aby uzyskać przykład, zobacz [eksportowanie z biblioteki DLL przy użyciu DEF plików](../../build/exporting-from-a-dll-using-def-files.md).
+
+Zobacz następujące sekcje, aby uzyskać więcej informacji:
+
+- [Zasady dla instrukcji definicji modułu](../../build/reference/rules-for-module-definition-statements.md)
+
+- [EXPORTS](../../build/reference/exports.md)
+
+- [HEAPSIZE](../../build/reference/heapsize.md)
+
+- [LIBRARY](../../build/reference/library.md)
+
+- [NAZWA](../../build/reference/name-c-cpp.md)
+
+- [SEKCJE](../../build/reference/sections-c-cpp.md)
+
+- [STACKSIZE](../../build/reference/stacksize.md)
+
+- [STUB](../../build/reference/stub.md)
+
+- [WERSJA](../../build/reference/version-c-cpp.md)
+
+- [Słowa zastrzeżone](../../build/reference/reserved-words.md)
+
+## <a name="see-also"></a>Zobacz też
+
+[Dokumentacja kompilacji w języku C/C++](../../build/reference/c-cpp-building-reference.md)<br/>
+[Opcje konsolidatora](../../build/reference/linker-options.md)

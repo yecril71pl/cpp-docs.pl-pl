@@ -19,12 +19,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 122c9cc8f1500132f507eb3477e108c3a5c67768
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 861cb216dba1e8b3d451d6120dba897e06ba910a
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43217122"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45713196"
 ---
 # <a name="structured-exception-handling-cc"></a>Obsługa wyjątków strukturalnych (C/C++)
 
@@ -34,10 +34,10 @@ Obsługa wyjątków strukturalnych (SEH) jest rozszerzeniem firmy Microsoft do C
 
 ## <a name="grammar"></a>Gramatyka
 
-*instrukcji z wyjątkiem try* :  
+*instrukcji z wyjątkiem try* :<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;**__try** *compound-statement* **__except** **(** *wyrażenie* **)** *compound-statement*
 
-*Spróbuj na koniec instrukcji* :  
+*Spróbuj na koniec instrukcji* :<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;**__try** *compound-statement* **__finally** *compound-statement*
 
 ## <a name="remarks"></a>Uwagi

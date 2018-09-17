@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 9fc3be9fb25b6593f4b69f846394544b7b7d756a
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 73047962daf32eae6c01bb0ea6f6688a83e19402
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43220468"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45715536"
 ---
 # <a name="idlmodule"></a>idl_module
 
@@ -49,26 +49,26 @@ function declaration
 *Nazwa*  
 Zdefiniowana przez użytkownika nazwa dla bloku kodu, który będzie wyświetlany w pliku .idl.
 
-*Parametr DllName* (opcjonalnie)  
-Plik .dll, który zawiera eksportu.
+*Parametr DllName*  
+(Opcjonalnie) Plik .dll, który zawiera eksportu.
 
-*Identyfikator UUID* (opcjonalnie)  
-Unikatowy identyfikator.
+*uuid*  
+(Opcjonalnie) Unikatowy identyfikator.
 
-*HelpString —* (opcjonalnie)  
-Ciąg znaków używany do opisania biblioteki typów.
+*helpstring*  
+(Opcjonalnie) Ciąg znaków używany do opisania biblioteki typów.
 
-*helpstringcontext —* (opcjonalnie)  
-Identyfikator tematu pomocy w pliku hlp lub chm.
+*helpstringcontext*  
+(Opcjonalnie) Identyfikator tematu pomocy w pliku hlp lub chm.
 
-*helpcontext —* (opcjonalnie)  
-Identyfikator pomocy dla tego typu biblioteki.
+*helpcontext*  
+(Opcjonalnie) Identyfikator pomocy dla tego typu biblioteki.
 
-*ukryte* (opcjonalnie)  
-Parametr, który zapobiega wyświetlaniu w bibliotece. Zobacz [ukryte](/windows/desktop/Midl/hidden) atrybutu MIDL, aby uzyskać więcej informacji.
+*hidden*  
+(Opcjonalnie) Parametr, który zapobiega wyświetlaniu w bibliotece. Zobacz [ukryte](/windows/desktop/Midl/hidden) atrybutu MIDL, aby uzyskać więcej informacji.
 
-*ograniczone* (opcjonalnie)  
-Elementy członkowskie biblioteki nie można wywołać arbitralnie. Zobacz [ograniczeniami](/windows/desktop/Midl/restricted) atrybutu MIDL, aby uzyskać więcej informacji.
+*restricted*  
+(Opcjonalnie) Elementy członkowskie biblioteki nie można wywołać arbitralnie. Zobacz [ograniczeniami](/windows/desktop/Midl/restricted) atrybutu MIDL, aby uzyskać więcej informacji.
 
 *Deklaracja funkcji*  
 Funkcja, która będą definiować.

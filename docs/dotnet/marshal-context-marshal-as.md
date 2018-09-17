@@ -20,15 +20,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: 27f27b164d7a00e05e8d080a692f97b696776cbe
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: f88d086c76ea6b56f1bb049b886df70ceadbdbb9
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33136210"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45707905"
 ---
 # <a name="marshalcontextmarshalas"></a>marshal_context::marshal_as
-Wykonuje organizowanie na obiekt danych określonego można przełączać się między zarządzanego i typu danych w trybie macierzystym.  
+Wykonuje marshalingu obiektu określonych danych, aby przekonwertować go między zarządzanego i macierzystego typu danych.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -39,21 +39,21 @@ To_Type marshal_as<To_Type>(
 ```  
   
 #### <a name="parameters"></a>Parametry  
- [in] `input`  
- Wartość, która ma być kierować do `To_Type` zmiennej.  
+*Dane wejściowe*<br/>
+[in] Wartość, którą chcesz kierować do `To_Type` zmiennej.  
   
 ## <a name="return-value"></a>Wartość zwracana  
- Zmienna typu `To_Type` czyli przekonwertowanego wartość `input`.  
+ Zmienna typu `To_Type` oznacza to przekonwertowana wartości `input`.  
   
 ## <a name="remarks"></a>Uwagi  
- Ta funkcja wykonuje przekazywanie obiektu określonych danych. Za pomocą tej funkcji tylko konwersje wskazanych przez tabelę w [omówienie z Marshalingu w języku C++](../dotnet/overview-of-marshaling-in-cpp.md).  
+ Ta funkcja wykonuje marshalingu obiektu określonych danych. Za pomocą tej funkcji tylko konwersje wskazywanym przez tabelę w [Overview of Marshaling w C++](../dotnet/overview-of-marshaling-in-cpp.md).  
   
- Jeśli spróbujesz kierować dwa typy danych, które nie są obsługiwane, `marshal_as` wygeneruje błąd [C4996](../error-messages/compiler-warnings/compiler-warning-level-3-c4996.md) w czasie kompilacji. Przeczytaj wiadomość dostarczona dotyczącą tego błędu, aby uzyskać więcej informacji. `C4996` Błędu mogą być generowane dla więcej niż tylko przestarzałych funkcji. Dwa warunki, które spowoduje wygenerowanie tego błędu są próby skierowania dwa typy danych, które nie są obsługiwane i próbuje użyć `marshal_as` konwersji, która wymaga kontekstu.  
+ Jeśli zostanie podjęta próba kierować dwa typy danych, które nie są obsługiwane, `marshal_as` spowoduje wygenerowanie błędu [C4996](../error-messages/compiler-warnings/compiler-warning-level-3-c4996.md) w czasie kompilacji. Przeczytaj wiadomości podano dotyczącą tego błędu, aby uzyskać więcej informacji. `C4996` Błędu mogą być generowane dla więcej niż tylko przestarzałych funkcji. Dwa warunki, które będą generowały tego błędu są próby skierowania dwa typy danych, które nie są obsługiwane i próby użycia `marshal_as` konwersji, która wymaga kontekstu.  
   
- Biblioteka organizowania składa się z kilku plików nagłówka. Wszelkie konwersja wymaga tylko jednego pliku, ale może zawierać dodatkowe pliki, jeśli zachodzi konieczność dla innych konwersji. Tabela w `Marshaling Overview in C++` wskazuje, który zawiera plik powinny zostać uwzględnione w poszczególnych konwersji.  
+ Biblioteka dotycząca organizowania składa się z kilku plików nagłówkowych. Każda konwersja wymaga tylko jednego pliku, ale może zawierać dodatkowe pliki, jeśli potrzebujesz, w przypadku innych konwersji. W tabeli `Marshaling Overview in C++` wskazuje plik, który zawiera powinny zostać uwzględnione w poszczególnych konwersji.  
   
 ## <a name="example"></a>Przykład  
- W tym przykładzie jest tworzony organizowanie z kontekstem `System::String` do `const char *` typu zmiennej. Przekonwertowana danych nie będą prawidłowe po wierszu, który usuwa kontekstu.  
+ W tym przykładzie tworzy kontekst do kierowania z `System::String` do `const char *` typ zmiennej. Przekonwertowane dane nie będą prawidłowe po wierszu, który usuwa kontekst.  
   
 ```  
 // marshal_context_test.cpp  
@@ -82,5 +82,5 @@ int main() {
   
 ## <a name="see-also"></a>Zobacz też  
  [Omówienie Marshalingu w języku C++](../dotnet/overview-of-marshaling-in-cpp.md)   
- [marshal_as —](../dotnet/marshal-as.md)   
+ [marshal_as](../dotnet/marshal-as.md)   
  [marshal_context, klasa](../dotnet/marshal-context-class.md)

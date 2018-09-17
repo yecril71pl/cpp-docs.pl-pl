@@ -26,12 +26,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 11c83332c12daa6753add0618367b90f8c759532
-ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
+ms.openlocfilehash: a13c7971e65a926799cc0134c811845c292161d4
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/05/2018
-ms.locfileid: "37848771"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45709193"
 ---
 # <a name="cmfcribbonundobutton-class"></a>Klasa CMFCRibbonUndoButton
 `CMFCRibbonUndoButton` Klasa implementuje przycisk listy rozwijanej, który zawiera najnowsze polecenia użytkownika. Użytkownicy mogą wybrać co najmniej jednym z najbardziej aktualną poleceń, z listy rozwijanej, aby cofnąć lub ponowić.  
@@ -89,8 +89,8 @@ void AddUndoAction(LPCTSTR lpszLabel);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *lpszLabel*  
- Etykieta akcji, która będzie wyświetlana na liście rozwijanej.  
+*lpszLabel*<br/>
+[in] Etykieta akcji, która będzie wyświetlana na liście rozwijanej.  
   
 ##  <a name="cleanupundolist"></a>  CMFCRibbonUndoButton::CleanUpUndoList  
  Czyści listę akcji, która jest listy rozwijanej.  
@@ -117,20 +117,20 @@ CMFCRibbonUndoButton(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *nID*  
- Określa identyfikator polecenia.  
+*nID*<br/>
+[in] Określa identyfikator polecenia.  
   
- [in] *lpszText*  
- Określa tekst etykiety przycisku.  
+*lpszText*<br/>
+[in] Określa tekst etykiety przycisku.  
   
- [in] *nSmallImageIndex*  
- Liczony od zera indeks z listy obrazów obiektu nadrzędnego, która ma być mały obraz przycisku.  
+*nSmallImageIndex*<br/>
+[in] Liczony od zera indeks z listy obrazów obiektu nadrzędnego, która ma być mały obraz przycisku.  
   
- [in] *nLargeImageIndex*  
- Liczony od zera indeks, z listy obrazów obiektu nadrzędnego dla dużych obrazu przycisku.  
+*nLargeImageIndex*<br/>
+[in] Liczony od zera indeks, z listy obrazów obiektu nadrzędnego dla dużych obrazu przycisku.  
   
- [in] *hIcon*  
- Dojście do ikonę która służy jako obrazu przycisku.  
+*hIcon*<br/>
+[in] Dojście do ikonę która służy jako obrazu przycisku.  
   
 ##  <a name="getactionnumber"></a>  CMFCRibbonUndoButton::GetActionNumber  
  Określa liczbę elementów, które użytkownik wybrane z listy rozwijanej.  

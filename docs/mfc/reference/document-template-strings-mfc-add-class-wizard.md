@@ -16,60 +16,67 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 79de28847809a9b9d7e0a160f2a4a45375f0e1fe
-ms.sourcegitcommit: 208d445fd7ea202de1d372d3f468e784e77bd666
+ms.openlocfilehash: 247793199b1e865941659b970e4e59a688137a8e
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/29/2018
-ms.locfileid: "37121516"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45712234"
 ---
 # <a name="document-template-strings-mfc-add-class-wizard"></a>Ciągi szablonu dokumentu, kreator dodawania klas MFC
-Ta strona kreatora jest dostępna tylko dla klas spełniającego następujące kryteria:  
+Ta strona kreatora jest dostępna tylko dla klas, które spełniają następujące kryteria:  
   
--   Projekt MFC obsługuje architekturę dokument/widok.  
+-   Projekt MFC obsługuje architektury dokument/widok.  
   
--   Jest klasą bazową dla nowej klasy [CFormView](../../mfc/reference/cformview-class.md).  
+-   Klasa bazowa dla nowej klasy jest [CFormView](../../mfc/reference/cformview-class.md).  
   
--   Pole wyboru **opcję generowania zasobów** jest zaznaczony na **nazwy** sekcji [Kreator klas MFC](../../mfc/reference/mfc-add-class-wizard.md).  
+-   Pole wyboru **zasobów Generowanie tym** jest sprawdzane na **nazwy** części [Kreator klas MFC](../../mfc/reference/mfc-add-class-wizard.md).  
   
- Kreator udostępnia wartości domyślne dla następujących wartości do formularzy widok projektu, zarządzania i lokalizacji. Ponieważ większość ciągi szablonu dokumentu są widoczne i używane przez użytkowników formularza, są zlokalizowane w **języka zasobu** wskazane [typy aplikacji](../../mfc/reference/application-type-mfc-application-wizard.md) Kreatora aplikacji MFC Podczas tworzenia projektu.  
+ Kreator wyświetla ustawienia domyślne dla następujących wartości do projektu widoku formularzy, zarządzania i lokalizacji. Ponieważ większość ciągi szablonu dokumentu są widoczne i używane przez użytkowników formularza, są one zlokalizowane w **język zasobów** czcionką [typy aplikacji](../../mfc/reference/application-type-mfc-application-wizard.md) strony Kreatora aplikacji MFC Podczas tworzenia projektu.  
   
 > [!NOTE]
->  Kreator nie zapewnia automatycznego obsługę drukowania dla klasy wyprowadzone z `CFormView`.  
+>  Kreator nie zapewnia automatyczna obsługa drukowania dla klasy pochodne `CFormView`.  
   
- Zobacz [szablony dokumentów i proces tworzenia dokumentu/widoku](../../mfc/document-templates-and-the-document-view-creation-process.md) uzyskać więcej informacji.  
+ Zobacz [szablonów dokumentów i proces tworzenia dokumentu/widoku](../../mfc/document-templates-and-the-document-view-creation-process.md) Aby uzyskać więcej informacji.  
   
 ## <a name="nonlocalized-strings"></a>Niezlokalizowanej ciągów  
- Dotyczy aplikacji, które tworzą dokumenty użytkowników. Użytkownicy mogą otworzyć i zapisywać dokumenty więcej łatwo Jeśli typ dokumentu ma rozszerzenie pliku i identyfikator typu pliku Te elementy nie są zlokalizowane, ponieważ są one używane przez system, a nie przez użytkownika.  
+ Ma zastosowanie do aplikacji, które tworzą dokumentów użytkownika. Użytkownicy mogą otwierania i zapisywania dokumentów więcej łatwo Jeśli typ dokumentu ma rozszerzenie pliku i identyfikator typu pliku Te elementy nie są lokalizowane, ponieważ są one używane przez system, a nie przez użytkownika.  
   
- **Rozszerzenie pliku**  
- Określa rozszerzenie pliku skojarzone z typem dokumentu dla tej aplikacji formularzy. Domyślne rozszerzenie pliku na podstawie nazwy klasy. Na przykład, jeśli nosi nazwę nowej klasy MFC `CWidget`, domyślnie jest rozszerzeniem. wid. Rozszerzenie pliku jest używany w pliku filtrów i **Otwórz** i **Zapisz jako** okien dialogowych.  
+- **Rozszerzenie pliku**
+
+   Określa rozszerzenie pliku skojarzone z typem dokumentu dla tej aplikacji formularzy. Domyślne rozszerzenie pliku na podstawie nazwy klasy. Na przykład, jeśli nosi nazwę nowej klasy MFC `CWidget`, domyślnie jest rozszerzenie pliku. wid. Rozszerzenie pliku jest używane w filtrach plików i **Otwórz** i **Zapisz jako** okien dialogowych.  
   
- Jeśli zmienisz rozszerzenie pliku, zmiana ta jest uwzględniana w **nazwę filtru** pole.  
+   Jeśli zmienisz rozszerzenie pliku, zmiany są widoczne w **nazwy filtru** pole.  
   
-> [!NOTE]
->  Jeśli zmienisz domyślne rozszerzenie pliku nie dołączaj okresu.  
+   > [!NOTE]
+   > Jeśli zmienisz domyślne rozszerzenie pliku, nie dołączaj okresu.  
   
- **Identyfikator typu pliku**  
- Ustawia etykietę dla danego typu dokumentu w rejestrze systemu.  
+- **Identyfikator typu pliku**
+
+   Ustawia etykietę dla danego typu dokumentu w rejestrze systemowym.  
   
-## <a name="localized-strings"></a>Zlokalizowanych ciągów  
- Tworzy ciągi skojarzone z formularzy i dokumentów, które są odczytywanie oraz używane przez użytkowników aplikacji, więc są zlokalizowane ciągi.  
+## <a name="localized-strings"></a>Zlokalizowane ciągi  
+ Tworzy ciągi skojarzone z formularzami i dokumenty, które odczytują i używane przez użytkowników aplikacji, dzięki czemu są zlokalizowane ciągi.  
   
- **Nazwa typu dokumentu**  
- Określa typ dokumentu, pod którym można grupować dokumentów aplikacji. Domyślnie jest on oparty na nazwę klasy. Na przykład, jeśli nosi nazwę nowej klasy MFC **CWidget**, domyślnie nazwa typu dokumentu jest elementu Widget. Wartość domyślna nie zmiana dowolnych innych opcji, w tym oknie dialogowym.  
+- **Nazwa typu dokumentu**
+
+   Identyfikuje typ dokumentu, w którym mogą być grupowane dokumentu aplikacji. Domyślnie jest on oparty na nazwę klasy. Na przykład, jeśli nosi nazwę nowej klasy MFC **CWidget**, domyślnie, nazwa typu dokumentu jest element Widget. Zmienianie domyślnego nie powoduje zmiany innych opcji, w tym oknie dialogowym.  
   
- **Nazwa filtru**  
- Ustawia nazwę, która może wskazywać użytkownicy, można znaleźć plików określonego typu pliku. Ta opcja jest dostępna z **pliki typu** i **Zapisz jako typ** opcje w oknach standardowe **Otwórz** i **Zapisz jako** okien dialogowych. Domyślnie nazwa opiera się na nazwę projektu oraz pliki, a następnie przez rozszerzenie wskazanych w **rozszerzenie pliku**. Na przykład, jeśli projekt nosi nazwę elementu Widget i rozszerzenie pliku jest .wid **nazwę filtru** jest domyślnie pliki Widget (*.wid).  
+- **Nazwa filtru**
+
+   Ustawia nazwę, na który użytkownicy mogą wskazać do wyszukiwania plików określonego typu pliku. Ta opcja jest dostępna z **pliki typu** i **Zapisz jako typ** opcje w standardowych Windows **Otwórz** i **Zapisz jako** okien dialogowych. Domyślnie nazwa opiera się na nazwę projektu, a także plików, a następnie rozszerzenia wskazane w **rozszerzenie pliku**. Na przykład, jeśli projekt nosi nazwę elementu Widget i rozszerzenie pliku jest .wid **nazwy filtru** jest element Widget plików (*.wid) domyślnie.  
   
- **Krótka nazwa nowego pliku**  
- Ustawia nazwę znajdujących się w standardowych oknach **nowy** okno dialogowe, jeśli projekt zawiera więcej niż jeden szablon dokumentu. Jeśli aplikacja jest [serwer automatyzacji](../../mfc/automation-servers.md), ta nazwa jest używana jako krótka nazwa obiektu automatyzacji. Domyślnie ta nazwa jest oparta na nazwę klasy.  
+- **Krótka nazwa nowego pliku**
+
+   Ustawia nazwę w standardowych Windows **New** okno dialogowe, jeśli projekt zawiera więcej niż jeden szablon dokumentu. Jeśli aplikacja jest [serwer automatyzacji](../../mfc/automation-servers.md), ta nazwa jest używana jako krótka nazwa obiektu automatyzacji. Domyślnie ta nazwa opiera się na nazwę klasy.  
   
- **Długa nazwa typu pliku**  
- Ustawia nazwę typu pliku w rejestrze systemu. Jeśli aplikacja serwera automatyzacji, ta nazwa jest używana jako długa nazwa obiektu automatyzacji. Domyślnie ta nazwa opiera się na nazwę klasy plus. Dokument. Na przykład, jeśli nazwa klasy jest `CWidget`, **długa nazwa typu pliku** jest dokumentem elementu Widget.  
+- **Długa nazwa typu pliku**
+
+   Ustawia nazwę typu pliku w rejestrze systemowym. Jeśli aplikacja serwera automatyzacji, ta nazwa jest używana jako długa nazwa obiektu automatyzacji. Domyślnie ta nazwa opiera się na nazwę klasy znaku plus. Dokument. Na przykład, jeśli nazwa klasy jest `CWidget`, **długa nazwa typ pliku** jest dokumentem elementu Widget.  
   
- **Klasy dokumentów**  
- Wskazuje klasa dokumentu typu projektu. Domyślnie ta klasa jest klasa dokumentu aplikacji głównej, wymienione w [Przejrzyj wygenerowane klasy](../../mfc/reference/generated-classes-mfc-application-wizard.md) Kreatora aplikacji MFC. Jeśli dodano inne klasy dokumentu w projekcie, możesz wybrać inną klasę dokumentu z listy.  
+- **Klasy dokumentów**
+
+   Wskazuje, klasa dokumentów projektu. Domyślnie ta klasa jest klasa dokumentu aplikacji głównej, zgodnie z zaleceniami z [przeglądu wygenerowane klasy](../../mfc/reference/generated-classes-mfc-application-wizard.md) strony Kreatora aplikacji MFC. Po dodaniu innych klas dokumentu w projekcie, możesz wybrać inną klasę dokumentu z listy.  
   
 ## <a name="see-also"></a>Zobacz też  
  [Kreator dodawania klasy MFC](../../mfc/reference/mfc-add-class-wizard.md)   

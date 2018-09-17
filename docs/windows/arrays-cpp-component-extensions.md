@@ -22,12 +22,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: fa004d449190003f6438744c09c1c8023a0cbda3
-ms.sourcegitcommit: f0c90000125a9497bf61e41624de189a043703c0
+ms.openlocfilehash: dbfcedd2bc17e21b94de46c63edd95bf58f576a7
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44314433"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45714457"
 ---
 # <a name="arrays-c-component-extensions"></a>Tablice (C++ Component Extensions)
 
@@ -62,12 +62,14 @@ W pierwszym przykładzie składni użyto **ref nowe** agregacji — słowo klucz
     {initialization-list [,...]}
 ```
 
-*Kwalifikatory* [opcjonalnie] co najmniej jeden z tych specyfikatory klasy magazynowania: [mutable](../cpp/mutable-data-members-cpp.md), [volatile](../cpp/volatile-cpp.md), [const](../cpp/const-cpp.md), [extern](../cpp/using-extern-to-specify-linkage.md), [statyczne](../cpp/static-members-cpp.md).
+*Kwalifikatory*<br/>
+(Opcjonalnie) Co najmniej jeden z tych specyfikatory klasy magazynowania: [mutable](../cpp/mutable-data-members-cpp.md), [volatile](../cpp/volatile-cpp.md), [const](../cpp/const-cpp.md), [extern](../cpp/using-extern-to-specify-linkage.md), [statyczne](../cpp/static-members-cpp.md).
 
 *Typ tablicy*  
 Typ zmiennej tablicowej. Prawidłowe typy to klasy środowiska wykonawczego Windows i typów podstawowych, klasy ref i struktury, klasy wartości i struktury i natywnymi wskaźnikami (`type*`).
 
-*Ranga* [opcjonalnie] liczbę wymiarów tablicy. Musi mieć wartość 1.
+*Ranga*<br/>
+(Opcjonalnie) Liczba wymiarów tablicy. Musi mieć wartość 1.
 
 *Identyfikator*  
 Nazwa zmiennej tablicy.
@@ -75,7 +77,8 @@ Nazwa zmiennej tablicy.
 *typ inicjalizacji*  
 Typ wartości, które inicjalizacji tablicy. Zazwyczaj *typ tablicy* i *typ inicjalizacji* tego samego typu. Jednak może być inny, jeśli istnieje konwersja z typów *typ inicjalizacji* do *typ tablicy*— na przykład, jeśli *typ inicjalizacji* jest tworzony na podstawie *typ tablicy*.
 
-*listy inicjowania* [opcjonalnie] rozdzielana przecinkami lista wartości w nawiasy nawiasy kwadratowe tego zainicjować elementy tablicy. Na przykład jeśli *ranga rozmiar listy* zostały `(3)`, która deklaruje tablicę jednowymiarową 3 elementów *listy inicjowania* może być `{1,2,3}`.
+*listy inicjowania*<br/>
+(Opcjonalnie) Rozdzielana przecinkami lista wartości w nawiasach klamrowych, które zainicjować elementy tablicy. Na przykład jeśli *ranga rozmiar listy* zostały `(3)`, która deklaruje tablicę jednowymiarową 3 elementów *listy inicjowania* może być `{1,2,3}`.
 
 ### <a name="remarks"></a>Uwagi
 
@@ -115,12 +118,14 @@ W pierwszym przykładzie składni użyto **gcnew** — słowo kluczowe do przydz
     {initialization-list [,...]}
 ```
 
-*Kwalifikatory* [opcjonalnie] co najmniej jeden z tych specyfikatory klasy magazynowania: [mutable](../cpp/mutable-data-members-cpp.md), [volatile](../cpp/volatile-cpp.md), [const](../cpp/const-cpp.md), [extern](../cpp/using-extern-to-specify-linkage.md), [statyczne](../cpp/static-members-cpp.md).
+*Kwalifikatory*<br/>
+(Opcjonalnie) Co najmniej jeden z tych specyfikatory klasy magazynowania: [mutable](../cpp/mutable-data-members-cpp.md), [volatile](../cpp/volatile-cpp.md), [const](../cpp/const-cpp.md), [extern](../cpp/using-extern-to-specify-linkage.md), [statyczne](../cpp/static-members-cpp.md).
 
 *Typ tablicy*  
 Typ zmiennej tablicowej. Prawidłowe typy to klasy środowiska wykonawczego Windows i typów podstawowych, klasy i struktury, klasy wartości i struktury odwołania, natywnymi wskaźnikami (`type*`) i natywnych typów POD (zwykłe stare dane).
 
-*Ranga* [opcjonalnie] liczbę wymiarów tablicy. Wartość domyślna to 1; wartość maksymalna to 32. Każdy wymiar tablicy jest tablicą.
+*Ranga*<br/>
+(Opcjonalnie) Liczba wymiarów tablicy. Wartość domyślna to 1; wartość maksymalna to 32. Każdy wymiar tablicy jest tablicą.
 
 *Identyfikator*  
 Nazwa zmiennej tablicy.
@@ -131,7 +136,8 @@ Typ wartości, które inicjalizacji tablicy. Zazwyczaj *typ tablicy* i *typ inic
 *Ranga rozmiar listy*  
 Rozdzielana przecinkami lista rozmiar każdego wymiaru tablicy. Alternatywnie Jeśli *listy inicjowania* parametr jest określony, kompilator może wywnioskować rozmiaru każdego wymiaru i *ranga rozmiar listy* można pominąć.
 
-*listy inicjowania* [opcjonalnie] rozdzielana przecinkami lista wartości w nawiasy nawiasy kwadratowe tego zainicjować elementy tablicy. Lub rozdzielaną przecinkami listę zagnieżdżonych *listy inicjowania* elementy, które inicjowania elementów w tablicy wielowymiarowej.
+*listy inicjowania*<br/>
+(Opcjonalnie) Rozdzielana przecinkami lista wartości w nawiasach klamrowych, które zainicjować elementy tablicy. Lub rozdzielaną przecinkami listę zagnieżdżonych *listy inicjowania* elementy, które inicjowania elementów w tablicy wielowymiarowej.
 
 Na przykład jeśli *ranga rozmiar listy* zostały `(3)`, która deklaruje tablicę jednowymiarową 3 elementów *listy inicjowania* może być `{1,2,3}`. Jeśli *ranga rozmiar listy* zostały `(3,2,4)`, która deklaruje tablicę trójwymiarową 3 elementy pierwszego wymiaru, 2 elementów w drugim i 4 elementy w trzecim *listy inicjowania* może to być `{{1,2,3},{0,0},{-5,10,-21,99}}`.)
 

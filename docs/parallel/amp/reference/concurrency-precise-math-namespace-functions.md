@@ -98,12 +98,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8265b8c179f9e317fa3e2a66df4797660528f444
-ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
+ms.openlocfilehash: 60c2b85c3a5c1ca5e2da9b0ef3b42148510b59e1
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44107435"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45711064"
 ---
 # <a name="concurrencyprecisemath-namespace-functions"></a>CONCURRENCY::precise_math, funkcje przestrzeni nazw
 ||||
@@ -1564,8 +1564,8 @@ inline double modf(
 `_X`  
 Wartość zmiennoprzecinkowa
 
-`_Iptr` (parametr out)  
-Część całkowita `_X`, jako wartość zmiennoprzecinkowa.
+`_Iptr`  
+[out] Część całkowita `_X`, jako wartość zmiennoprzecinkowa.
 
 ### <a name="return-value"></a>Wartość zwracana
 Oznaczona ułamkowa część `_X`.
@@ -1891,8 +1891,8 @@ Pierwszy argument zmiennoprzecinkowy.
 `_Y`  
 Drugi argument zmiennoprzecinkowy.
 
-`_Quo` (parametr out)  
-Adres liczby całkowitej, która służy do zwracania ilorazu ułamków `_X` podzielona przez ułamków `_Y`.
+`_Quo`  
+[out] Adres liczby całkowitej, która służy do zwracania ilorazu ułamków `_X` podzielona przez ułamków `_Y`.
 
 ### <a name="return-value"></a>Wartość zwracana
 Zwraca resztę z `_X` podzielona przez `_Y`.
@@ -1914,8 +1914,8 @@ Pierwszy argument zmiennoprzecinkowy.
 `_Y`  
 Drugi argument zmiennoprzecinkowy.
 
-`_Quo` (parametr out)  
-Adres liczby całkowitej, która służy do zwracania ilorazu ułamków `_X` podzielona przez ułamków `_Y`.
+`_Quo`  
+[out] Adres liczby całkowitej, która służy do zwracania ilorazu ułamków `_X` podzielona przez ułamków `_Y`.
 
 ### <a name="return-value"></a>Wartość zwracana
 Zwraca resztę z `_X` podzielona przez `_Y`.

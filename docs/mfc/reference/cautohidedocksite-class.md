@@ -32,12 +32,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f36d6231cfce86314be082a77a39034b619741ad
-ms.sourcegitcommit: 6408139d5f5ff8928f056bde93d20eecb3520361
+ms.openlocfilehash: 5778b5be050fec50d30215a8b9cef2ca6e4b6dd4
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37336946"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45709686"
 ---
 # <a name="cautohidedocksite-class"></a>Klasa CAutoHideDockSite
 `CAutoHideDockSite` Rozszerza [klasa CDockSite](../../mfc/reference/cdocksite-class.md) do wdrożenia automatycznie ukrywanego zadokowanego okienka.  
@@ -115,7 +115,7 @@ virtual BOOL CanAcceptPane(const CBasePane* pBar) const;
 |||  
 |-|-|  
 |Parametr|Opis|  
-|[in] *pBar*|Okienko podstawowa struktura testów.|  
+|*pBar*|[in] Okienko podstawowa struktura testów.|  
   
 ### <a name="return-value"></a>Wartość zwracana  
  Wartość TRUE, jeśli *pBar* jest tworzony na podstawie `CMFCAutoHideBar`; Wartość FALSE w przeciwnym razie.  
@@ -138,9 +138,9 @@ virtual void DockPane(
 |||  
 |-|-|  
 |Parametr|Opis|  
-|[in] *pWnd*|Okienko w którym dokowane platformę.|  
-|[in] *dockMethod*|Dokowanie opcje okienka.|  
-|[in] *lprect —*|Prostokąt, który określa granice zadokowanego okienka.|  
+|*pWnd*|[in] Okienko w którym dokowane platformę.|  
+|*dockMethod*|[in] Dokowanie opcje okienka.|  
+|*lprect —*|[in] Prostokąt, który określa granice zadokowanego okienka.|  
   
 ### <a name="remarks"></a>Uwagi  
  Domyślna implementacja parametr nie *dockMethod*, które jest dostarczane do użytku w przyszłości.  
@@ -159,7 +159,7 @@ void GetAlignRect(CRect& rect) const;
 |||  
 |-|-|  
 |Parametr|Opis|  
-|[in] *rect*|Odwołanie do prostokąta. Metoda przechowuje rozmiar witryny dokowania w prostokąta.|  
+|*Rect*|[in] Odwołanie do prostokąta. Metoda przechowuje rozmiar witryny dokowania w prostokąta.|  
   
 ### <a name="remarks"></a>Uwagi  
  Prostokąt jest ustawione marginesy przesunięcia, tak, aby nie są uwzględniane.  
@@ -182,8 +182,8 @@ void SetOffsetLeft(int nOffset);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *nOffset*  
- Przesunięcie nowe.  
+*nOffset*<br/>
+[in] Przesunięcie nowe.  
   
 ### <a name="remarks"></a>Uwagi  
  [CMFCAutoHideBar](../../mfc/reference/cmfcautohidebar-class.md) obiekty są pozycjonowane statycznie na `CAutoHideDockSite` obiektu. Oznacza to, że użytkownik ręcznie nie można zmienić lokalizację `CMFCAutoHideBar` obiektów. `SetOffsetLeft` Metody Określa odstępy między po lewej stronie skrajnej lewej `CMFCAutoHideBar` i po lewej stronie `CAutoHideDockSite`.  
@@ -196,8 +196,8 @@ void SetOffsetRight(int nOffset);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *nOffset*  
- Przesunięcie nowe.  
+*nOffset*<br/>
+[in] Przesunięcie nowe.  
   
 ### <a name="remarks"></a>Uwagi  
  [CMFCAutoHideBar](../../mfc/reference/cmfcautohidebar-class.md) obiekty są pozycjonowane statycznie na `CAutoHideDockSite` obiektu. Oznacza to, że użytkownik ręcznie nie można zmienić lokalizację `CMFCAutoHideBar` obiektów. `SetOffsetRight` Metody Określa odstępy między po prawej stronie najdalej z prawej strony `CMFCAutoHideBar` i po prawej stronie `CAutoHideDockSite`.  
@@ -214,7 +214,7 @@ virtual void RepositionPanes(CRect& rectNewClientArea);
 |||  
 |-|-|  
 |Parametr|Opis|  
-|[in] *rectNewClientArea*|Zastrzeżonej wartości.|  
+|*rectNewClientArea*|[in] Zastrzeżonej wartości.|  
   
 ### <a name="remarks"></a>Uwagi  
  Domyślna implementacja używa *rectNewClientArea*. Jego odrysowuje okienek z marginesy paska narzędzi globalne i odstępy przycisku.  
@@ -231,7 +231,7 @@ void UnSetAutoHideMode(CMFCAutoHideBar* pAutoHideToolbar);
 |||  
 |-|-|  
 |Parametr|Opis|  
-|[in] *pAutoHideToolbar*|Wskaźnik do [CMFCAutoHideBar](../../mfc/reference/cmfcautohidebar-class.md) okienko obiektów znajdujących się na `CAutoHideDockSite`.|  
+|*pAutoHideToolbar*|[in] Wskaźnik do [CMFCAutoHideBar](../../mfc/reference/cmfcautohidebar-class.md) okienko obiektów znajdujących się na `CAutoHideDockSite`.|  
   
 ### <a name="remarks"></a>Uwagi  
  Metoda ta wyszukuje dla wiersza, który zawiera *pAutoHideToolbar*. Wywołuje `CMFCAutoHideBar.UnSetAutoHideMode` dla wszystkich `CMFCAutoHideBar` obiektów w tym wierszu. Jeśli *pAutoHideToolbar* nie można odnaleźć lub ma wartość NULL, ta metoda wywołuje `CMFCAutoHideBar.UnSetAutoHideMode` dla wszystkich `CMFCAutoHideBar` obiektów na `CAutoHideDockSite`.  

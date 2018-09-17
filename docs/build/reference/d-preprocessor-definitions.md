@@ -23,89 +23,92 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4b8b386d55804421fb6cb454b4818db52e7cea85
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 19da0c8e29a27734b23a01a1b2d3ffaa64a7fe05
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32376601"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45713802"
 ---
 # <a name="d-preprocessor-definitions"></a>/D (Definicje preprocesora)
-Definiuje symbol przetwarzania wstępnego dla pliku źródłowego.  
-  
-## <a name="syntax"></a>Składnia  
-  
-```  
-/Dname[= | # [{string | number}] ]  
-```  
-  
-## <a name="remarks"></a>Uwagi  
- Można użyć tego symbolu razem z `#if` lub `#ifdef` warunkowo skompilować kod źródłowy. Definicji symbolu pozostaje, dopóki zostało ponownie zdefiniowane w kodzie, lub jest niezdefiniowana w kodzie przez `#undef` dyrektywy.  
-  
- **/D** ma ten sam efekt co `#define` dyrektywy na początku pliku kodu źródłowego, z wyjątkiem **/D** usuwa znaki cudzysłowu w wierszu polecenia i `#define` je zachowuje.  
-  
- Domyślnie wartość skojarzona z symbolem to 1. Na przykład **/D** `name` jest odpowiednikiem **/D**`name`**= 1**. W tym przykładzie na końcu tego artykułu, definicji **testu** jest wyświetlany na drukowanie `1`.  
-  
- Kompilowanie przy użyciu **/D** `name` **=** powoduje, że symbol niezawierające skojarzone wartości. Mimo że nadal można używać symbolu, aby warunkowo skompilować kod, szacuje się on na wartość nothing. W tym przykładzie skompilować przy użyciu **/DTEST =**, wystąpi błąd. To zachowanie jest podobny do stosowania `#define` z lub bez wartości.  
-  
- To polecenie definiuje symbol DEBUG w TEST.c:  
-  
- **CL /DDEBUG TESTU. C**  
-  
- To polecenie usuwa wszystkie wystąpienia słowa kluczowego `__far` w TEST.c:  
-  
- **CL /D__far = TEST. C**  
-  
- **CL** zmienna środowiskowa nie można ustawić na ciąg, który zawiera znaku równości. Aby użyć **/D** razem z **CL** środowiska zmiennej, należy określić znak liczby zamiast znaku równości:  
-  
-```  
-SET CL=/DTEST#0  
-```  
-  
- Podczas definiowania symbolu przetwarzania wstępnego w wierszu polecenia, należy wziąć pod uwagę reguły analizy składni zarówno kompilatora, jak i powłoki. Na przykład, aby zdefiniować w programie symbol wstępnego przetwarzania znaku procenta (%), określ dwa znaki procenta (%%) w wierszu polecenia: Jeśli określisz tylko jeden, zostanie wygenerowany błąd analizy składni.  
-  
-```  
-CL /DTEST=%% TEST.C  
-```  
-  
-### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Aby ustawić tę opcję kompilatora w środowisku programowania Visual Studio  
-  
-1.  Otwórz projekt **strony właściwości** okno dialogowe. Aby uzyskać więcej informacji, zobacz [Praca z właściwościami projektu](../../ide/working-with-project-properties.md).  
-  
-2.  W okienku po lewej stronie wybierz **właściwości konfiguracji**, **C/C++**, **preprocesora**.  
-  
-3.  W prawym okienku w prawej kolumnie **definicje preprocesora** właściwości, otwórz menu rozwijane i wybierz polecenie **Edytuj**.  
-  
-4.  W **definicje preprocesora** okno dialogowe Dodawanie (każde w oddzielnym wierszu), zmodyfikować lub usunąć co najmniej jedną definicję. Wybierz **OK** Aby zapisać zmiany.  
-  
-### <a name="to-set-this-compiler-option-programmatically"></a>Aby programowo ustawić tę opcję kompilatora  
-  
--   Zobacz <xref:Microsoft.VisualStudio.VCProjectEngine.VCCLCompilerTool.PreprocessorDefinitions%2A>.  
-  
-## <a name="example"></a>Przykład  
-  
-```  
-// cpp_D_compiler_option.cpp  
-// compile with: /DTEST  
-#include <stdio.h>  
-  
-int main( )  
-{  
-    #ifdef TEST  
-        printf_s("TEST defined %d\n", TEST);  
-    #else  
-        printf_s("TEST not defined\n");  
-    #endif  
-}  
-```  
-  
-```Output  
-TEST defined 1  
-```  
-  
-## <a name="see-also"></a>Zobacz też  
- [Opcje kompilatora](../../build/reference/compiler-options.md)   
- [Ustawianie opcji kompilatora](../../build/reference/setting-compiler-options.md)   
- [/ U, /u (Usuń definicje symboli)](../../build/reference/u-u-undefine-symbols.md)   
- [#undef — dyrektywa (C/C++)](../../preprocessor/hash-undef-directive-c-cpp.md)   
- [#define, dyrektywa (C/C++)](../../preprocessor/hash-define-directive-c-cpp.md)
+
+Definiuje symbol przetwarzania wstępnego dla pliku źródłowego.
+
+## <a name="syntax"></a>Składnia
+
+```
+/Dname[= | # [{string | number}] ]
+```
+
+## <a name="remarks"></a>Uwagi
+
+Można użyć tego symbolu wraz z `#if` lub `#ifdef` aby warunkowo skompilować kod źródłowy. Definicja symbolu pozostaje, dopóki zostanie ponownie zdefiniowana w kodzie lub nie jest zdefiniowana w kodzie przez `#undef` dyrektywy.
+
+**/D** ma taki sam skutek jak `#define` dyrektywę na początku pliku kodu źródłowego, chyba że **/D** usuwa znaki cudzysłowu w wierszu polecenia i `#define` je zachowuje.
+
+Domyślnie wartość skojarzona z symbolem to 1. Na przykład **/D** `name` jest odpowiednikiem **/D**`name`**= 1**. W przykładzie na końcu tego artykułu, definicja **testu** jest wyświetlany na drukowanie `1`.
+
+Kompilowanie za pomocą **/D** `name` **=** powoduje, że symbol nie ma żadnej skojarzonej wartości. Mimo że nadal można używać symbolu, aby warunkowo skompilować kod, szacuje się on na wartość nothing. W tym przykładzie, jeśli kompilujesz przy użyciu **/DTEST =**, wystąpi błąd. To zachowanie jest podobne do stosowania `#define` z lub bez wartości.
+
+To polecenie definiuje symbol DEBUG w TEST.c:
+
+**CL /DDEBUG TEST. C**
+
+To polecenie usuwa wszystkie wystąpienia słowa kluczowego `__far` w TEST.c:
+
+**CL /D__far = TEST. C**
+
+**CL** zmienna środowiskowa nie można ustawić na ciąg, który zawiera znaku równości. Aby użyć **/D** wraz z **CL** środowiska zmiennych, należy określić znak numeru zamiast znaku równości:
+
+```
+SET CL=/DTEST#0
+```
+
+Podczas definiowania symbolu przetwarzania wstępnego w wierszu polecenia, należy wziąć pod uwagę reguły analizy składni zarówno kompilatora, jak i powłoki. Na przykład, aby zdefiniować w programie symbol wstępnego przetwarzania znaku procenta (%), określ dwa znaki procenta (%%) w wierszu polecenia: Jeśli określisz tylko jeden, zostanie wygenerowany błąd analizy składni.
+
+```
+CL /DTEST=%% TEST.C
+```
+
+### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Aby ustawić tę opcję kompilatora w środowisku programowania Visual Studio
+
+1. Otwórz projekt **stron właściwości** okno dialogowe. Aby uzyskać więcej informacji, zobacz [Praca z właściwościami projektu](../../ide/working-with-project-properties.md).
+
+1. W okienku po lewej stronie wybierz **właściwości konfiguracji**, **C/C++**, **preprocesora**.
+
+1. W okienku po prawej stronie, w kolumnie po prawej stronie **definicje preprocesora** właściwości, otwórz menu rozwijane i wybierz polecenie **Edytuj**.
+
+1. W **definicje preprocesora** okno dialogowe Dodawanie (po jednej na wiersz), zmodyfikować lub usunąć jedną lub więcej definicji. Wybierz **OK** Aby zapisać zmiany.
+
+### <a name="to-set-this-compiler-option-programmatically"></a>Aby programowo ustawić tę opcję kompilatora
+
+- Zobacz <xref:Microsoft.VisualStudio.VCProjectEngine.VCCLCompilerTool.PreprocessorDefinitions%2A>.
+
+## <a name="example"></a>Przykład
+
+```
+// cpp_D_compiler_option.cpp
+// compile with: /DTEST
+#include <stdio.h>
+
+int main( )
+{
+    #ifdef TEST
+        printf_s("TEST defined %d\n", TEST);
+    #else
+        printf_s("TEST not defined\n");
+    #endif
+}
+```
+
+```Output
+TEST defined 1
+```
+
+## <a name="see-also"></a>Zobacz też
+
+[Opcje kompilatora](../../build/reference/compiler-options.md)<br/>
+[Ustawianie opcji kompilatora](../../build/reference/setting-compiler-options.md)<br/>
+[/ U, /u (Usuń definicje symboli)](../../build/reference/u-u-undefine-symbols.md)
+[#undef — dyrektywa (C/C++)](../../preprocessor/hash-undef-directive-c-cpp.md)
+[#define — dyrektywa (C/C++)](../../preprocessor/hash-define-directive-c-cpp.md)

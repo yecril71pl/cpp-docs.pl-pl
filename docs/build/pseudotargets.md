@@ -18,17 +18,19 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 67dbc6ae3ad331ab3297b62d00044c3edf679994
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 56c0c0c93163759b604352a6e623f15726b8e7ec
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32368411"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45715835"
 ---
 # <a name="pseudotargets"></a>Pseudo cele
-Pseudotarget jest używany zamiast nazwy pliku w wierszu zależności etykiety. Jest interpretowany jako plik, który nie istnieje i dlatego jest nieaktualne. NMAKE przyjęto założenie, że sygnatura czasowa pseudotarget jest najnowsza wszystkich jego zależności. Jeśli ma ona nie zależności, przyjęto, że bieżący czas. Jeśli pseudotarget jest używana jako miejsce docelowe, jego polecenia są zawsze wykonywane. Pseudotarget, używany jako zależną musi być określone jako cel w innym zależności. Jednak Zależność ta nie musi być blokiem poleceń.  
-  
- Nazwy pseudotarget zgodne reguły Składnia nazwy pliku dla celów. Jednak jeśli nazwa nie ma rozszerzenia (to znaczy nie zawierają kropki), może przekroczyć limit 8 znaków w nazwach plików i może zawierać maksymalnie 256 znaków.  
-  
-## <a name="see-also"></a>Zobacz też  
- [Docelowe elementy](../build/targets.md)
+
+Pseudotarget jest używany zamiast nazwy pliku w wierszu zależności etykietę. Jest interpretowany jako plik, który nie istnieje i dlatego jest nieaktualna. NMAKE przyjęto założenie, że sygnatura czasowa pseudotarget jest najbardziej aktualną wszystkie jego zależności. Jeśli ma nie zależności, przyjmowana jest bieżący czas. Jeśli pseudotarget jest używany jako obiekt docelowy, wykonywane są zawsze jego poleceń. Pseudotarget, używane jako zależnych od ustawień lokalnych muszą również zostać wyświetlony jako cel w innym zależności. Jednak tej zależności nie musi być blokiem poleceń.
+
+Nazwy pseudotarget zgodne reguły Składnia nazwy pliku dla celów. Jednakże jeśli nazwa nie jest rozszerzeniem (czyli nie zawiera okresu), może przekroczyć ograniczenie 8 znaków w nazwach plików i może mieć maksymalnie 256 znaków.
+
+## <a name="see-also"></a>Zobacz też
+
+[Docelowe elementy](../build/targets.md)

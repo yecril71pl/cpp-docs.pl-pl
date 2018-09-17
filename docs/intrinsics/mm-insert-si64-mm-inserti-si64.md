@@ -19,17 +19,18 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 72597007922e78ab9b83687cb5b80bd6ecef7d01
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: a1c6b21ded6814492557ced792772508add06e53
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33338198"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45712849"
 ---
 # <a name="mminsertsi64-mminsertisi64"></a>_mm_insert_si64, _mm_inserti_si64
+
 **Microsoft Specific**  
   
- Generuje `insertq` instrukcji, aby wstawić usługi bits z jej drugi argument operacji do jego pierwszym argumentem.  
+Generuje `insertq` instrukcji, aby wstawić bitów z drugim argumentem operacji do swojego pierwszego operandu.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -47,38 +48,38 @@ __m128i _mm_inserti_si64(
 ```  
   
 #### <a name="parameters"></a>Parametry  
- [in] `Source1`  
- Pole 128-bitowego z danych wejściowych w jego dolnej 64-bitowej do których zostanie wstawiony pola.  
+*Źródło1*<br/>
+[in] Pole 128-bitowego z danymi wejściowymi w jej dolnej 64 bitów, w których zostanie wstawione pole.  
   
- [in]  `Source2`  
- Pole 128-bitowego z danymi do wstawienia w jego niski usługi bits.  Aby uzyskać `_mm_insert_si64`, zawiera także deskryptora pola w jego bitów.  
+*Źródło2*<br/>
+[in] Pole 128-bitowego z danymi można wstawić w jego bitów ma niski.  Aby uzyskać `_mm_insert_si64`, również zawiera pole deskryptor w jego bitów.  
   
- [in]  `Length`  
- Stała liczba całkowita określająca długość pola do wstawienia.  
+*Długość*<br/>
+[in] Stała liczba całkowita określająca długość pola do wstawienia.  
   
- [in]  `Index`  
- Stała liczba całkowita określająca indeks bitem pola, w którym zostaną umieszczone dane.  
+*Index*<br/>
+[in] Stała liczba całkowita, określająca indeks najmniej znaczący bit pola, do którego zostaną wstawione dane.  
   
 ## <a name="return-value"></a>Wartość zwracana  
- Pole 128-bitowego, którego niższe 64-bitowy zawierają oryginalnego niski 64 bity `Source1` z pola bitowego określonego zastępuje niski bity `Source2`. Górny 64-bitowy zwracanej wartości są niezdefiniowane.  
+ Pole 128-bitowego, którego dolnej 64-bitowy zawierają oryginalny niski 64 bity `Source1` za pomocą pola bitowego określonego zastępuje niski bity `Source2`. Górny 64-bitowy zwracanej wartości są niezdefiniowane.  
   
 ## <a name="requirements"></a>Wymagania  
   
-|— Wewnętrzne|Architektura|  
+|Wewnętrzne|Architektura|  
 |---------------|------------------|  
 |`_mm_insert_si64`|SSE4a|  
 |`_mm_inserti_si64`|SSE4a|  
   
- **Plik nagłówka** \<intrin.h >  
+ **Plik nagłówkowy** \<intrin.h >  
   
 ## <a name="remarks"></a>Uwagi  
- Generuje tym wewnętrzna `insertq` instrukcji, aby wstawić usługi bits z `Source2` do `Source1`. Istnieją dwie wersje tego wewnętrzne: `_mm_inserti_si64`, jest natychmiastowe wersja i `_mm_insert_si64` jest — natychmiastowe.  Każda wersja wyodrębnia pole bitowe o podanej długości z źródło2 i wstawia ją źródło1.  Bity wyodrębnionego są najmniej znaczący bity źródło2.  Źródło1 pola, w którym zostanie wstawiony tych bitów definiuje długość i indeks jego bitem.  Wartości długości i indeksu są pobierane mod 64, w związku z tym zarówno wartość -1 do 127 będą interpretowane jako 63. Jeśli sumy bitowej (zmniejszenie) indeks i długość pola (zmniejszenie) jest większy niż 64, wyniki są niezdefiniowane. Wartość zerowa długość pola jest interpretowany jako 64.  Jeśli indeks długość i bitowe pola są obie zerowe, 63:0 usługi bits z `Source2` są wstawiane do `Source1`.  Jeśli długość pola wynosi zero, ale indeks bit jest różna od zera, wyniki są niezdefiniowane.  
+ Generuje tym wewnętrzne `insertq` instrukcji, aby wstawić bitów z `Source2` do `Source1`. Wewnętrzne są dwie wersje to: `_mm_inserti_si64`, jest natychmiastowe wersji, a `_mm_insert_si64` jest — natychmiastowe.  Każda wersja wyodrębnia pola bitowe o podanej długości z źródło2 i wstawia ją źródło1.  Wyodrębnione bity są co najmniej znaczące bity źródło2.  Źródło1 pola, do którego zostanie wstawiony tych bitów jest definiowany przez długość i indeks jego najmniej znaczący bit.  Wartości długości i indeksu są pobierane mod 64, zatem zarówno wartość -1 do 127, są interpretowane jako 63. Jeśli suma indeksu bit (mniejsze) i długość pola (mniejsze) jest większa niż 64, wyniki są niezdefiniowane. Wartość zerowa długość pola jest interpretowany jako 64.  W przypadku pola długości i bitowe indeksu zarówno zero, usługa bits 63:0 z `Source2` są wstawiane do `Source1`.  Jeśli długość pola wynosi zero, ale indeks bit jest różna od zera, wyniki są niezdefiniowane.  
   
  W wywołaniu _mm_insert_si64 długość pola znajduje się w 77:72 bitów źródło2 i indeks w 69:64 usługi bits.  
   
- Jeśli należy wywołać `_mm_inserti_si64` z argumentami, że kompilator nie można określić jako stałe całkowite, kompilator generuje kod pakietu tych wartości w rejestrze XMM oraz wywołanie `_mm_insert_si64`.  
+ Jeśli wywołasz `_mm_inserti_si64` z argumentami, że kompilator nie można określić jako stałe całkowite, kompilator generuje kod, umieszczenie tych wartości w rejestrze XMM oraz wywołanie `_mm_insert_si64`.  
   
- Ustalenie sprzętu Obsługa `insertq` wywołanie instrukcji `__cpuid` wewnętrzne z `InfoType=0x80000001` i sprawdź bit 6 `CPUInfo[2] (ECX)`. Ten bit będzie 1, jeśli instrukcja jest obsługiwana i 0 w inny sposób. Jeśli możesz uruchomić kodu korzystającego z tym wewnętrzna na sprzęcie, który nie obsługuje `insertq` instrukcji są nieprzewidywalne wyniki.  
+ Aby określić, pomoc techniczna dotycząca sprzętu dla `insertq` wywołania instrukcji `__cpuid` wewnętrzne z `InfoType=0x80000001` i sprawdź bit 6 `CPUInfo[2] (ECX)`. Ten bit będzie 1, jeśli instrukcja jest obsługiwana lub 0 w inny sposób. Jeśli możesz uruchomić kod, który korzysta z tym wewnętrzne na sprzęcie, który nie obsługuje `insertq` instrukcji, wyniki są nieprzewidywalne.  
   
 ## <a name="example"></a>Przykład  
   
@@ -124,8 +125,9 @@ result2 = 0xfffffffff3210fff
 result3 = 0xfffffffff3210fff  
 ```  
   
-**KOŃCOWY określonych firmy Microsoft**  
- Copyright 2007 zaawansowane Micro urządzeń, Inc. Wszelkie prawa zastrzeżone. Odtworzyć z uprawnieniem z zaawansowanymi Micro urządzeń, Inc.  
+**END specyficzny dla Microsoft**  
+
+Copyright 2007 zaawansowane Micro urządzeń, Inc. Wszelkie prawa zastrzeżone. Odtworzyć zgoda zaawansowane Micro urządzeń, Inc.  
   
 ## <a name="see-also"></a>Zobacz też  
  [_mm_extract_si64, _mm_extracti_si64](../intrinsics/mm-extract-si64-mm-extracti-si64.md)   

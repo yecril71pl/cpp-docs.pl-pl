@@ -32,12 +32,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3cbcf6a1a48f32f5976483d5bb70e7c2e3f1d469
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: c56f9ea0770618e65f454acd23ea22f19d3cfa92
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38954854"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45711103"
 ---
 # <a name="wstringconvert-class"></a>wstring_convert — Klasa
 
@@ -52,11 +52,11 @@ class wstring_convert
 
 ### <a name="parameters"></a>Parametry
 
-*codecvt —*  
- [Ustawień regionalnych](../standard-library/locale-class.md) reguł, który reprezentuje obiekt konwersji.
+*codecvt —*<br/>
+[Ustawień regionalnych](../standard-library/locale-class.md) reguł, który reprezentuje obiekt konwersji.
 
-*Elem*  
- Typ elementu znaków dwubajtowych.
+*Elem*<br/>
+Typ elementu znaków dwubajtowych.
 
 ## <a name="remarks"></a>Uwagi
 

@@ -26,12 +26,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9de39d2054f3c75e00e8827ebb4aaefac9970d59
-ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
+ms.openlocfilehash: 81e027108d0f7b62ba707718c5396432396bdc5e
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "42464842"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45711883"
 ---
 # <a name="ctooltipmanager-class"></a>Klasa CTooltipManager
 Przechowuje informacje środowiska wykonawczego o podpowiedziach. `CTooltipManager` Klasy jest utworzona jeden raz w każdej aplikacji.  
@@ -76,14 +76,14 @@ static BOOL CreateToolTip(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [out] *pToolTip*  
- Odwołanie do wskaźnika etykietki narzędzia. Ustawiana jest punkt do nowo utworzonego etykietki narzędzia, gdy funkcja zwraca.  
+*pToolTip*<br/>
+[out] Odwołanie do wskaźnika etykietki narzędzia. Ustawiana jest punkt do nowo utworzonego etykietki narzędzia, gdy funkcja zwraca.  
   
- [in] *pWndParent*  
- Element nadrzędny elementu ToolTip.  
+*pWndParent*<br/>
+[in] Element nadrzędny elementu ToolTip.  
   
- [in] *nNie*  
- Typ elementu ToolTip.  
+*nNie*<br/>
+[in] Typ elementu ToolTip.  
   
 ### <a name="return-value"></a>Wartość zwracana  
  Różna od zera, jeśli etykietka narzędzia został pomyślnie utworzony.  
@@ -117,8 +117,8 @@ static void DeleteToolTip(CToolTipCtrl*& pToolTip);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [out w] *pToolTip*  
- Odwołanie do wskaźnika do etykietkę narzędzia do zniszczenia.  
+*pToolTip*<br/>
+[out w] Odwołanie do wskaźnika do etykietkę narzędzia do zniszczenia.  
   
 ### <a name="remarks"></a>Uwagi  
  Wywołanie tej metody dla każdego [klasa CToolTipCtrl](../../mfc/reference/ctooltipctrl-class.md) utworzony przez [CTooltipManager::CreateToolTip](#createtooltip). Kontrolki nadrzędnej powinna wywołać tę metodę z jego `OnDestroy` programu obsługi. Jest to wymagane, aby poprawnie usunąć etykietki narzędzia w ramach. Ta metoda ustawia *pToolTip* na wartość NULL, przed jego zwracaniem.  
@@ -134,14 +134,14 @@ void SetTooltipParams(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *nTypes*  
- Określa typy kontrolek.  
+*nTypes*<br/>
+[in] Określa typy kontrolek.  
   
- [in] *pRTC*  
- Klasa środowiska uruchomieniowego niestandardowa etykietka narzędzia.  
+*pRTC*<br/>
+[in] Klasa środowiska uruchomieniowego niestandardowa etykietka narzędzia.  
   
- [in] *pParams*  
- Parametry etykietki narzędzia.  
+*pParams*<br/>
+[in] Parametry etykietki narzędzia.  
   
 ### <a name="remarks"></a>Uwagi  
  Ta metoda zestawów środowiska uruchomieniowego klasy i parametry początkowe [CToolTipManager](../../mfc/reference/ctooltipmanager-class.md) używa podczas tworzenia etykietek narzędzi. Kiedy wywołuje kontrolki [CTooltipManager::CreateToolTip](#createtooltip) i przebiegów w etykietce narzędzia typ jednego z typów, wskazywanym przez *nTypes*, Menedżer etykietki narzędzia tworzy kontrolkę etykiety narzędzia, który jest wystąpieniem typu środowisko uruchomieniowe klasą określoną przez *pRTC* i przekazuje parametry określone przez *pParams* do nowego etykietki narzędzia.  
@@ -168,20 +168,20 @@ static void SetTooltipText(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *pTI*  
- Wskaźnik do obiektu TOOLINFO.  
+*pTI*<br/>
+[in] Wskaźnik do obiektu TOOLINFO.  
   
- [out w] *pToolTip*  
- Wskaźnik do kontrolki tooltip, dla której chcesz ustawić tekst i opis.  
+*pToolTip*<br/>
+[out w] Wskaźnik do kontrolki tooltip, dla której chcesz ustawić tekst i opis.  
   
- [in] *nNie*  
- Określa typ kontrolki, z którą skojarzony jest ten etykietki narzędzia.  
+*nNie*<br/>
+[in] Określa typ kontrolki, z którą skojarzony jest ten etykietki narzędzia.  
   
- [in] *strText*  
- Tekst, który ma być ustawiony jako tekst etykietki narzędzia.  
+*strText*<br/>
+[in] Tekst, który ma być ustawiony jako tekst etykietki narzędzia.  
   
- [in] *lpszDescr*  
- Wskaźnik do opis etykietki narzędzia. Może mieć wartości NULL.  
+*lpszDescr*<br/>
+[in] Wskaźnik do opis etykietki narzędzia. Może mieć wartości NULL.  
   
 ### <a name="remarks"></a>Uwagi  
  Wartość *nNie* musi być taka sama wartość jak *nNie* parametru [CTooltipManager::CreateToolTip](#createtooltip) podczas tworzenia etykietki narzędzia.  

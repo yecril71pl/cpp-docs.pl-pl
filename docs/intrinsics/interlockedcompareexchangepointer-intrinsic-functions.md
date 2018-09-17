@@ -34,12 +34,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 18f26f9ac0cd00758d1259ac368b2408a7a2e8cf
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: a8ea3976a510817e183271921c6730692e5b0b3c
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43214624"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45711076"
 ---
 # <a name="interlockedcompareexchangepointer-intrinsic-functions"></a>Funkcje wewnętrzne _interlockedcompareexchangepointer
 **Microsoft Specific**  
@@ -87,14 +87,14 @@ long _InterlockedCompareExchangePointer_rel (
 ```  
   
 #### <a name="parameters"></a>Parametry  
- [out w] `Destination`  
- Wskaźnik do wskaźnika do wartości docelowej. Znak jest ignorowany.  
+*miejsce docelowe*<br/>
+[out w] Wskaźnik do wskaźnika do wartości docelowej. Znak jest ignorowany.  
   
- [in] `Exchange`  
- Wskaźnik do programu Exchange. Znak jest ignorowany.  
+*Exchange*<br/>
+[in] Wskaźnik do programu Exchange. Znak jest ignorowany.  
   
- [in] `Comparand`  
- Wskaźnik do porównania do miejsca docelowego. Znak jest ignorowany.  
+*Wzorzec*<br/>
+[in] Wskaźnik do porównania do miejsca docelowego. Znak jest ignorowany.  
   
 ## <a name="return-value"></a>Wartość zwracana  
  Wartość zwracana jest wartość początkowa miejsca docelowego.  

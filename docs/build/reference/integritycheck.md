@@ -17,23 +17,23 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4b0adf9add2d191ae89aec0a5d756ade8e9f7725
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 062ce019fe1b622661be880d8a06eac9c5971103
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32370251"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45709206"
 ---
 # <a name="integritycheck"></a>/INTEGRITYCHECK
 
-Określa, że podpis cyfrowy obraz binarny, muszą zostać sprawdzone w czasie ładowania.
+Określa, czy podpis cyfrowy obrazu binarnego musi być zaznaczone w czasie ładowania.
 
 > **/ INTEGRITYCHECK**[**: NO**]
 
 ## <a name="remarks"></a>Uwagi
 
-W nagłówku pliku DLL lub pliku wykonywalnego ta opcja umożliwia ustawienie Flaga, która wymaga sprawdzenia podpisu cyfrowego, przez Menedżera pamięci można załadować obrazu w systemie Windows. Wersje systemu Windows starszych niż Windows Vista zignorować tę flagę. Tę opcję należy wybrać dla 64-bitowych bibliotek DLL, zaimplementować kod trybu jądra, które jest zalecane w przypadku wszystkich sterowników urządzeń. Aby uzyskać więcej informacji, zobacz [wymagania dotyczące podpisywania kodu w trybie jądra](/windows-hardware/drivers/install/kernel-mode-code-signing-requirements--windows-vista-and-later-).
+W nagłówku pliku DLL lub pliku wykonywalnego ta opcja ustawia flagę, która wymaga sprawdzenia podpisu cyfrowego przez Menedżera pamięci w celu załadowania obrazu w Windows. Wersje Windows przed Windows Vista, ignorują tę flagę. Tę opcję należy ustawić dla 64-bitowych bibliotek DLL, które implementują kod trybu jądra i jest zalecana dla wszystkich sterowników urządzeń. Aby uzyskać więcej informacji, zobacz [wymagania dotyczące podpisywania kodu trybu jądra](/windows-hardware/drivers/install/kernel-mode-code-signing-requirements--windows-vista-and-later-).
 
 ## <a name="see-also"></a>Zobacz także
 
-[Opcje EDITBIN](../../build/reference/editbin-options.md)  
+[Opcje EDITBIN](../../build/reference/editbin-options.md)

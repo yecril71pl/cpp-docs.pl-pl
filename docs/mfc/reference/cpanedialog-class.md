@@ -22,12 +22,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: cc74f89708132b0895c8980538b852c15087b5e6
-ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
+ms.openlocfilehash: 4e987910cf27135858d4fe272bc02da7c90f622f
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43682330"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45710154"
 ---
 # <a name="cpanedialog-class"></a>Klasa CPaneDialog
 `CPaneDialog` Klasa obsługuje niemodalne, dokowane okno dialogowe.  
@@ -122,32 +122,32 @@ BOOL Create(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *lpszWindowName*  
- Nazwa dokujące okno dialogowe.  
+*lpszWindowName*<br/>
+[in] Nazwa dokujące okno dialogowe.  
   
- [in] *pParentWnd*  
- Wskazuje okna nadrzędnego.  
+*pParentWnd*<br/>
+[in] Wskazuje okna nadrzędnego.  
   
- [in] *bHasGripper*  
- Wartość TRUE, aby utworzyć okno dialogowe dokowania z podpisami (uchwyt); w przeciwnym razie wartość FALSE.  
+*bHasGripper*<br/>
+[in] Wartość TRUE, aby utworzyć okno dialogowe dokowania z podpisami (uchwyt); w przeciwnym razie wartość FALSE.  
   
- [in] *lpszTemplateName*  
- Nazwa zasobu szablonu okna dialogowego.  
+*lpszTemplateName*<br/>
+[in] Nazwa zasobu szablonu okna dialogowego.  
   
- [in] *nStyle*  
- Windows style.  
+*nStyle*<br/>
+[in] Windows style.  
   
- [in] *nID*  
- Identyfikator kontrolki.  
+*nID*<br/>
+[in] Identyfikator kontrolki.  
   
- [in] *nIDTemplate*  
- Identyfikator zasobu szablonu okna dialogowego.  
+*nIDTemplate*<br/>
+[in] Identyfikator zasobu szablonu okna dialogowego.  
   
- [in] *dwTabbedStyle*  
- Styl okna z kartami, która powstaje, gdy użytkownik przeciągnie okienko sterowania innej na podpis w tym okienku kontroli. Wartość domyślna to AFX_CBRS_REGULAR_TABS. Aby uzyskać więcej informacji, zobacz sekcję Uwagi [CBasePane::CreateEx](../../mfc/reference/cbasepane-class.md#createex) metody.  
+*dwTabbedStyle*<br/>
+[in] Styl okna z kartami, która powstaje, gdy użytkownik przeciągnie okienko sterowania innej na podpis w tym okienku kontroli. Wartość domyślna to AFX_CBRS_REGULAR_TABS. Aby uzyskać więcej informacji, zobacz sekcję Uwagi [CBasePane::CreateEx](../../mfc/reference/cbasepane-class.md#createex) metody.  
   
- [in] *dwControlBarStyle*  
- Atrybuty stylu dodatkowe. Wartość domyślna to AFX_DEFAULT_DOCKING_PANE_STYLE. Aby uzyskać więcej informacji, zobacz sekcję Uwagi [CBasePane::CreateEx](../../mfc/reference/cbasepane-class.md#createex) metody.  
+*dwControlBarStyle*<br/>
+[in] Atrybuty stylu dodatkowe. Wartość domyślna to AFX_DEFAULT_DOCKING_PANE_STYLE. Aby uzyskać więcej informacji, zobacz sekcję Uwagi [CBasePane::CreateEx](../../mfc/reference/cbasepane-class.md#createex) metody.  
   
 ### <a name="return-value"></a>Wartość zwracana  
  Wartość TRUE, jeśli ta metoda zakończy się pomyślnie; w przeciwnym razie wartość FALSE.  
@@ -170,11 +170,11 @@ afx_msg LRESULT HandleInitDialog(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *wParam*  
- Dojście do formantu, który ma zostać ustawiony fokus klawiatury domyślne.  
+*wParam*<br/>
+[in] Dojście do formantu, który ma zostać ustawiony fokus klawiatury domyślne.  
   
- [in] *lParam*  
- Określa dodatkowe inicjowanie danych.  
+*lParam*<br/>
+[in] Określa dodatkowe inicjowanie danych.  
   
 ### <a name="return-value"></a>Wartość zwracana  
  Wartość TRUE, jeśli ta metoda jest kończy się pomyślnie; w przeciwnym razie wartość FALSE. Ponadto TRUE Ustawia fokus klawiatury do kontrolki określonej przez *wParam* parameter; FALSE zapobiega ustawienie domyślne fokus klawiatury.  
@@ -190,8 +190,8 @@ virtual BOOL SetOccDialogInfo(_AFX_OCC_DIALOG_INFO* pOccDialogInfo);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *pOccDialogInfo*  
- Wskaźnik do szablonu okna dialogowego, który jest używany do tworzenia obiektu okna dialogowego pole. Wartość tego parametru jest następnie przekazywany do [COccManager::CreateDlgControls](../../mfc/reference/coccmanager-class.md#createdlgcontrols) metody.  
+*pOccDialogInfo*<br/>
+[in] Wskaźnik do szablonu okna dialogowego, który jest używany do tworzenia obiektu okna dialogowego pole. Wartość tego parametru jest następnie przekazywany do [COccManager::CreateDlgControls](../../mfc/reference/coccmanager-class.md#createdlgcontrols) metody.  
   
 ### <a name="return-value"></a>Wartość zwracana  
  Zawsze TRUE.  

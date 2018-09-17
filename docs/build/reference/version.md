@@ -18,22 +18,25 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 854f0a4a5e24c10f7f9b6edf736f1c3349f72423
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 851a1f33dc5ed23b2c489650140768f26f009d9c
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32375246"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45715552"
 ---
 # <a name="version"></a>/VERSION
-```  
-/VERSION:left[,right]  
-```  
-  
-## <a name="remarks"></a>Uwagi  
- Ta opcja umieszcza numeru wersji w nagłówku obrazu.  
-  
- Część całkowitą wersji numer części z lewej strony punktu dziesiętnego jest reprezentowana przez `left`. Część ułamkowa wersji numer części z prawej strony punktu dziesiętnego jest reprezentowana przez `right`.  
-  
-## <a name="see-also"></a>Zobacz też  
- [Opcje EDITBIN](../../build/reference/editbin-options.md)
+
+```
+/VERSION:left[,right]
+```
+
+## <a name="remarks"></a>Uwagi
+
+Ta opcja umieszcza numeru wersji w nagłówku obrazu.
+
+Liczba całkowita część wersji numer części z lewej strony punktu dziesiętnego, jest reprezentowane przez `left`. Część ułamkową wersji numer części z prawej strony punktu dziesiętnego, jest reprezentowane przez `right`.
+
+## <a name="see-also"></a>Zobacz też
+
+[Opcje EDITBIN](../../build/reference/editbin-options.md)

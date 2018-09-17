@@ -38,12 +38,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8fcf4f2cb2c619b2dfe3dae4b669f6139382b2b4
-ms.sourcegitcommit: f923f667065cd6c4203d10ca9520600ee40e5f84
+ms.openlocfilehash: 5a73d5bb3ef67469ad1cc12b2a2c2757cf1ce137
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/24/2018
-ms.locfileid: "42901014"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45712840"
 ---
 # <a name="ctabbedpane-class"></a>Klasa CTabbedPane
 
@@ -201,8 +201,8 @@ static void EnableTabAutoColor(BOOL bEnable = TRUE);
 
 ### <a name="parameters"></a>Parametry
 
-[in] *bWłączenie*  
-Wartość TRUE, aby włączyć automatyczne kolorowanie kart; w przeciwnym razie wartość FALSE.
+*bWłączenie*<br/>
+[in] Wartość TRUE, aby włączyć automatyczne kolorowanie kart; w przeciwnym razie wartość FALSE.
 
 ### <a name="remarks"></a>Uwagi
 
@@ -224,10 +224,10 @@ virtual BOOL FloatTab(
 
 ### <a name="parameters"></a>Parametry
 
-[in] *pBar*  
-[in] *nTabID*  
-[in] *dockMethod*  
-[in] *bHide*  
+*pBar*<br/>
+[in] [in] *nTabID*  
+*dockMethod*<br/>
+[in] [in] *bHide*  
 
 ### <a name="return-value"></a>Wartość zwracana
 
@@ -245,11 +245,11 @@ virtual void GetTabArea(
 
 ### <a name="parameters"></a>Parametry
 
-[out] *rectTabAreaTop*  
-Zawiera rozmiar i położenie we współrzędnych ekranu obszaru górnej karty.
+*rectTabAreaTop*<br/>
+[out] Zawiera rozmiar i położenie we współrzędnych ekranu obszaru górnej karty.
 
-[out] *rectTabAreaBottom*  
-Zawiera rozmiar i położenie we współrzędnych ekranu wartości obszar karty w dolnej.
+*rectTabAreaBottom*<br/>
+[out] Zawiera rozmiar i położenie we współrzędnych ekranu wartości obszar karty w dolnej.
 
 ### <a name="remarks"></a>Uwagi
 
@@ -340,8 +340,8 @@ static void SetTabAutoColors(const CArray<COLORREF, COLORREF>& arColors);
 
 ### <a name="parameters"></a>Parametry
 
-[in] *arColors*  
-Zawiera tablicę kolorów do ustawienia.
+*arColors*<br/>
+[in] Zawiera tablicę kolorów do ustawienia.
 
 ### <a name="remarks"></a>Uwagi
 

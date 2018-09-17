@@ -36,12 +36,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 82c72a928c3f747251f4c02305cc61b83cfcedcb
-ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
+ms.openlocfilehash: 286c95b775b95d44ad8fd9dc216b161aed717796
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "42464742"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45711987"
 ---
 # <a name="cmfcribbonprogressbar-class"></a>Klasa CMFCRibbonProgressBar
 Implementuje formant, który wizualnie wskazuje postęp długiej operacji.  
@@ -106,14 +106,14 @@ CMFCRibbonProgressBar(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *nID*  
- Określa identyfikator polecenia dla paska postępu wstążki.  
+*nID*<br/>
+[in] Określa identyfikator polecenia dla paska postępu wstążki.  
   
- [in] *nWidth*  
- Określa szerokość w pikselach, na wstążce paska postępu.  
+*nWidth*<br/>
+[in] Określa szerokość w pikselach, na wstążce paska postępu.  
   
- [in] *nHeight*  
- Określa wysokość w pikselach, na wstążce paska postępu.  
+*nHeight*<br/>
+[in] Określa wysokość w pikselach, na wstążce paska postępu.  
   
 ##  <a name="getpos"></a>  CMFCRibbonProgressBar::GetPos  
  Zwraca bieżącą pozycję pasek postępu.  
@@ -197,8 +197,8 @@ void SetInfiniteMode(BOOL bSet = TRUE);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *bUstawienie*  
- Wartość TRUE, aby określić, że pasek postępu jest w trybie nieskończonej; w przeciwnym razie wartość FALSE.  
+*bUstawienie*<br/>
+[in] Wartość TRUE, aby określić, że pasek postępu jest w trybie nieskończonej; w przeciwnym razie wartość FALSE.  
   
 ### <a name="remarks"></a>Uwagi  
  Zwykle Jeśli pasek postępu jest w trybie nieskończoną, jego informacją dla użytkownika, trwa operacja, ale że czas ukończenia jest nieznany. W związku z tym pasek postępu wypełni wielokrotnie z minimalną wartość maksymalnej wartości.  
@@ -213,11 +213,11 @@ void SetPos(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *npos —*  
- Określa położenie, do którego ustawiono pasek postępu.  
+*npos —*<br/>
+[in] Określa położenie, do którego ustawiono pasek postępu.  
   
- [in] *bRedraw*  
- Określa, czy pasek postępu powinien być narysowany ponownie.  
+*bRedraw*<br/>
+[in] Określa, czy pasek postępu powinien być narysowany ponownie.  
   
 ### <a name="remarks"></a>Uwagi  
  Zakres ustawiania musi być w zakresie określonym przez [CMFCRibbonProgressBar::SetRange](#setrange) metody.  
@@ -232,11 +232,11 @@ void SetRange(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *Nmin.*  
- Określa wartość minimum zakresu.  
+*Nmin.*<br/>
+[in] Określa wartość minimum zakresu.  
   
- [in] *nmaks.*  
- Określa maksymalną wartość zakresu.  
+*nmaks.*<br/>
+[in] Określa maksymalną wartość zakresu.  
   
 ### <a name="remarks"></a>Uwagi  
  Ta metoda umożliwia zdefiniowanie zakresu pasek postępu, ustawiając wartości minimalne i maksymalne.  

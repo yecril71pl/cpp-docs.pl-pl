@@ -18,35 +18,32 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a8b18ba4ce00eb751d8f30debbab3e87b9cce53e
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 180586f55ea57100286c3c598ac62eb83107d7c9
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32378980"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45714379"
 ---
 # <a name="optimizing-your-code"></a>Optymalizacja kodu
 
-Dzięki optymalizacji pliku wykonywalnego, można osiągnąć kompromis między szybkość wykonywania szybkiego i rozmiar mały kod. W tym temacie omówiono niektóre mechanizmy, które Visual C++ w celu zapewnienia optymalizacji kodu.
+Dzięki optymalizacji pliku wykonywalnego, można osiągnąć kompromis między szybkiego wykonywania szybkości i rozmiaru mały kod. W tym temacie omówiono niektóre mechanizmy, które Visual C++ zapewnia ułatwiające optymalizację kodu.
 
 ## <a name="language-features"></a>Funkcje językowe
 
-W poniższych tematach opisano niektóre funkcje optymalizacji w języku C/C++.
+W następujących tematach opisano niektóre funkcje optymalizacji w języku C/C++.
 
-[Optymalizacja pragm i słów kluczowych](../../build/reference/optimization-pragmas-and-keywords.md)  
-Lista słowa kluczowe i pragmy, że można użyć w kodzie do zwiększenia wydajności.
+[Optymalizacja Pragm i słów kluczowych](../../build/reference/optimization-pragmas-and-keywords.md) listę słowa kluczowe i pragmy, można użyć w kodzie, aby zwiększyć wydajność.
 
-[Opcje kompilatora w rozbiciu na kategorie](../../build/reference/compiler-options-listed-by-category.md)  
-Lista **/O** opcje kompilatora, które dotyczą wykonywania rozmiar szybkości łącza lub kodu.
+[Opcje kompilatora wymienione według kategorii](../../build/reference/compiler-options-listed-by-category.md) listę **/O** opcje kompilatora, które dotyczą wykonywania rozmiar szybkość lub kodu.
 
-[Deklarator odwołania do wartości R: &&](../../cpp/rvalue-reference-declarator-amp-amp.md)  
-Odwołania wartościowane prawostronnie obsługuje wykonania *Przenieś semantyki*. Jeśli przeniesienie semantyki są używane do implementowania biblioteki szablonów i wydajności aplikacji korzystających z tych szablonów może znacznie poprawić.
+[Deklarator odwołania do wartości r: & &](../../cpp/rvalue-reference-declarator-amp-amp.md) odwołania Rvalue wspierają implementację *semantyki przenoszenia*. Jeśli przenoszenie semantyki są używane do implementowania biblioteki szablonów, wydajność aplikacji, które używają tych szablonów może znacznie poprawić.
 
-### <a name="the-optimize-pragma"></a>Pragma Optymalizacja
+### <a name="the-optimize-pragma"></a>Pragma — Optymalizuj
 
-Jeśli sekcji zoptymalizowanego kodu powoduje występowanie błędów i spowolnienie, możesz użyć [zoptymalizować](../../preprocessor/optimize.md) pragma, aby wyłączyć funkcję optymalizacji dla tej sekcji.
+Jeśli zoptymalizowane części kodu powoduje, że błędy lub spowalniają działanie, możesz użyć [zoptymalizować](../../preprocessor/optimize.md) pragma może wyłączyć optymalizację w tej sekcji.
 
-Dołączyć kod między dwoma pragm, jak pokazano poniżej:
+Należy wpisać kod między dwoma pragm, jak pokazano poniżej:
 
 ```cpp
 #pragma optimize("", off)
@@ -54,37 +51,35 @@ Dołączyć kod między dwoma pragm, jak pokazano poniżej:
 #pragma optimize("", on)
 ```
 
-## <a name="programming-practices"></a>Rozwiązania w zakresie programowania
+## <a name="programming-practices"></a>Programowanie rozwiązań
 
-Podczas kompilowania kodu przy użyciu optymalizacji można zauważyć dodatkowych komunikatów ostrzegawczych. Jest to zachowanie oczekiwane, ponieważ ostrzeżenia odnosić się tylko do zoptymalizowanego kodu. Wiele problemów optymalizacji można uniknąć, jeżeli uwzględnianie tych ostrzeżeń.
+Podczas kompilowania kodu za pomocą optymalizacji można zauważyć dodatkowych komunikatów ostrzegawczych. To zachowanie jest oczekiwane, ponieważ pewne ostrzeżenia dotyczą tylko w zoptymalizowanym kodzie. Można uniknąć wiele problemów z optymalizacją, jeżeli uwzględnianie tych ostrzeżeń.
 
-Paradoxically optymalizacji programu szybkości może spowodować kodu działać wolniej. Jest to spowodowane niektórych optymalizacji dla szybkości zwiększyć rozmiar kodu. Na przykład ze śródwierszowaniem funkcji eliminuje obciążenie wywołania funkcji. Jednak ze śródwierszowaniem zbyt dużej ilości kodu może Twoje program był tak duży, że numer strony pamięci wirtualnej błędów zwiększa. W związku z tym szybkości zdobytych wyeliminowanie wywołania funkcji mogą zostać utracone do wymiany pamięci.
+Paradoxically optymalizacji programu dla danej szybkości spowodować wolniejsze działanie kodu. Jest tak, ponieważ niektóre optymalizacje dla danej szybkości zwiększyć rozmiar kodu. Na przykład ze śródwierszowaniem funkcji eliminuje obciążenie wywołania funkcji. Jednakże wbudowanie zbyt dużej ilości kodu wprowadzać program tak duża, że numer strony pamięci wirtualnej błędów rośnie. W związku z tym szybkość, z wyeliminowanie wywołania funkcji, mogą zostać utracone na zamianę pamięci.
 
-W poniższych tematach opisano dobrych praktyk programowania.
+W poniższych tematach omówiono dobrych praktyk programowania.
 
-[Wskazówki dotyczące poprawiania kodu wrażliwego na czas](../../build/reference/tips-for-improving-time-critical-code.md)  
-Techniki tworzenia kodu lepiej może zapewnić lepszą wydajność. W tym temacie sugeruje kodowania techniki, które mogą pomóc Ci upewnij się, że pomyślnie wykonać części kodu wrażliwego na czas.
+[Wskazówki dotyczące poprawiania kodu wrażliwego na czas](../../build/reference/tips-for-improving-time-critical-code.md) lepiej techniki tworzenia kodu może zapewnić lepszą wydajność. W tym temacie sugeruje kodowania technik, które pomogą Ci upewnić się, czy pomyślnie wykonać czas ma istotne znaczenie fragmenty kodu.
 
-[Najlepsze rozwiązania dotyczące optymalizacji](../../build/reference/optimization-best-practices.md)  
-Zawiera ogólne wskazówki dotyczące jak najlepiej zoptymalizować aplikacji.
+[Najlepsze rozwiązania dotyczące optymalizacji](../../build/reference/optimization-best-practices.md) zawiera ogólne wytyczne dotyczące najlepszy sposób optymalizacji aplikacji.
 
 ## <a name="debugging-optimized-code"></a>Debugowanie zoptymalizowanego kodu
 
-Optymalizacja może zmienić kod, który został utworzony przez kompilator, dlatego zaleca debugowania aplikacji i mierzenie jego wydajności i następnie optymalizacji kodu.
+Ponieważ optymalizacji mogą ulec zmianie w kodzie, który został utworzony przez kompilator, firma Microsoft zaleca debugowania aplikacji i zmierzyć jej wydajność i następnie optymalizacji kodu.
 
-Podstawowe informacje o tym, jak można debugować można znaleźć w następujących tematach.
+Podstawowe informacje dotyczące debugowania można znaleźć w następujących tematach.
 
 - [Debugowanie w programie Visual Studio](/visualstudio/debugger/debugging-in-visual-studio)
 
 - [Typowe problemy podczas tworzenia kompilacji wydania](../../build/reference/common-problems-when-creating-a-release-build.md)
 
-Poniższe tematy zawierają bardziej zaawansowane informacje dotyczące debugowania.
+Bardziej zaawansowane informacje o tym, jak można debugować można znaleźć w następujących tematach.
 
-- [Porady: debugowanie zoptymalizowanego kodu](/visualstudio/debugger/how-to-debug-optimized-code)
+- [Instrukcje: debugowanie zoptymalizowanego kodu](/visualstudio/debugger/how-to-debug-optimized-code)
 
 - [Dlaczego liczby zmiennoprzecinkowe mogą tracić dokładność](../../build/reference/why-floating-point-numbers-may-lose-precision.md)
 
-Poniższe tematy zawierają informacje na temat optymalizacji tworzenia ładowania oraz wykonywania kodu.
+Poniższe tematy zawierają informacje o tym, jak zoptymalizować kompilowania, ładowanie i wykonywanie kodu.
 
 - [Poprawianie wydajności kompilatora](../../build/reference/improving-compiler-throughput.md)
 
@@ -94,8 +89,8 @@ Poniższe tematy zawierają informacje na temat optymalizacji tworzenia ładowan
 
 - [Określanie optymalizacji kompilatora dla projektu ATL](../../atl/reference/specifying-compiler-optimization-for-an-atl-project.md)
 
-- [Jakich technik optymalizacji należy użyć, aby zwiększyć wydajność aplikacji klienckiej podczas ładowania?](../../build/dll-frequently-asked-questions.md#mfc_optimization)
+- [Jakich technik optymalizacji należy używać, aby zwiększyć wydajność aplikacji klienckiej podczas ładowania?](../../build/dll-frequently-asked-questions.md#mfc_optimization)
 
 ## <a name="see-also"></a>Zobacz także
 
-[Dokumentacja kompilacji w języku C/C++](../../build/reference/c-cpp-building-reference.md)  
+[Dokumentacja kompilacji w języku C/C++](../../build/reference/c-cpp-building-reference.md)

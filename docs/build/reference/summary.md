@@ -18,22 +18,25 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 27c4824de941674f55e85bc702f442cfa2f45aa5
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: b960387aad13744ed8e0a83b10348e6e314c1d35
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32373751"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45715712"
 ---
 # <a name="summary"></a>/SUMMARY
-```  
-/SUMMARY  
-```  
-  
-## <a name="remarks"></a>Uwagi  
- Ta opcja powoduje wyświetlenie minimalne informacje o sekcji, w tym całkowity rozmiar. Ta opcja jest domyślnie, jeśli zostanie określona żadna inna opcja.  
-  
- Tylko [/HEADERS](../../build/reference/headers.md) — opcja polecenia DUMPBIN jest dostępny do użytku na pliki tworzone z [/GL](../../build/reference/gl-whole-program-optimization.md) — opcja kompilatora.  
-  
-## <a name="see-also"></a>Zobacz też  
- [Opcje DUMPBIN](../../build/reference/dumpbin-options.md)
+
+```
+/SUMMARY
+```
+
+## <a name="remarks"></a>Uwagi
+
+Ta opcja wyświetla minimalne informacje sekcje, w tym całkowity rozmiar. Ta opcja jest domyślnie, jeśli zostanie określona żadna inna opcja.
+
+Tylko [/HEADERS](../../build/reference/headers.md) — opcja polecenia DUMPBIN jest dostępna do użycia w plikach z [/GL](../../build/reference/gl-whole-program-optimization.md) — opcja kompilatora.
+
+## <a name="see-also"></a>Zobacz też
+
+[Opcje DUMPBIN](../../build/reference/dumpbin-options.md)

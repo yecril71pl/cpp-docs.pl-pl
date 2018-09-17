@@ -23,17 +23,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f4c2b4a9e185f709ff829a3b88ea9cb67741fa1c
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 08a9948bb986ae57e42e37253b3b54737cf4d3f9
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33330249"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45714223"
 ---
 # <a name="addfsbyte-addfsword-addfsdword"></a>__addfsbyte, __addfsword, __addfsdword
 **Microsoft Specific**  
   
- Dodaj wartość do lokalizacji pamięci określonej przez przesunięcie względem początku `FS` segmentu.  
+ Dodaj wartość do lokalizacji w pamięci określonej przez przesunięcie względem początku `FS` segmentu.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -53,15 +53,15 @@ void __addfsdword(
 ```  
   
 #### <a name="parameters"></a>Parametry  
- [in] `Offset`  
- Przesunięcie od początku `FS`.  
+*Przesunięcie*<br/>
+[in] Przesunięcie od początku `FS`.  
   
- [in] `Data`  
- Wartość do dodania do lokalizacji w pamięci.  
+*Dane*<br/>
+[in] Wartość do dodania do lokalizacji w pamięci.  
   
 ## <a name="requirements"></a>Wymagania  
   
-|— Wewnętrzne|Architektura|  
+|Wewnętrzne|Architektura|  
 |---------------|------------------|  
 |`__addfsbyte`|x86|  
 |`__addfsword`|x86|  
@@ -70,7 +70,7 @@ void __addfsdword(
 ## <a name="remarks"></a>Uwagi  
  Te procedury są dostępne tylko jako funkcje wewnętrzne.  
   
-**KOŃCOWY określonych firmy Microsoft**  
+**END specyficzny dla Microsoft**  
   
 ## <a name="see-also"></a>Zobacz też  
  [__incfsbyte, \__incfsword, \__incfsdword](../intrinsics/incfsbyte-incfsword-incfsdword.md)   

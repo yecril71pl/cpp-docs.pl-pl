@@ -124,12 +124,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ff14a4d8e013adc401b13daa68ffcb9a739706d8
-ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
+ms.openlocfilehash: 2649e7e4cbaa1ba7fe6f2fcc18a5c5e933fc1032
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "42464750"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45712968"
 ---
 # <a name="cmfcribbonbutton-class"></a>Klasa CMFCRibbonButton
 `CMFCRibbonButton` Klasa implementuje przycisków, które można umieścić na elementach paska wstążki np paneli, paskach narzędzi szybkiego dostępu i wyskakujących menu.  
@@ -261,11 +261,11 @@ void AddSubItem(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *pSubItem*  
- Określa wskaźnik do nowego elementu do dodania.  
+*pSubItem*<br/>
+[in] Określa wskaźnik do nowego elementu do dodania.  
   
- [in] *nIndex*  
- Określa indeks, od którego należy dodać element do tablicy elementów menu przycisku; -1, aby dodać element za końcem tablicy elementów menu.  
+*nIndex*<br/>
+[in] Określa indeks, od którego należy dodać element do tablicy elementów menu przycisku; -1, aby dodać element za końcem tablicy elementów menu.  
   
 ##  <a name="canbestretched"></a>  CMFCRibbonButton::CanBeStretched  
 
@@ -318,20 +318,20 @@ CMFCRibbonButton(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *nID*  
- Określa identyfikator przycisku polecenia.  
+*nID*<br/>
+[in] Określa identyfikator przycisku polecenia.  
   
- [in] *lpszText*  
- Określa tekst etykiety przycisku.  
+*lpszText*<br/>
+[in] Określa tekst etykiety przycisku.  
   
- [in] *nSmallImageIndex*  
- Określa liczony od zera indeks przycisk mały obraz z listy obrazów z kategorii nadrzędnej.  
+*nSmallImageIndex*<br/>
+[in] Określa liczony od zera indeks przycisk mały obraz z listy obrazów z kategorii nadrzędnej.  
   
- [in] *nLargeImageIndex*  
- Określa liczony od zera indeks duży obraz przycisku obrazu na liście kategorii nadrzędnej.  
+*nLargeImageIndex*<br/>
+[in] Określa liczony od zera indeks duży obraz przycisku obrazu na liście kategorii nadrzędnej.  
   
- [in] *hIcon*  
- Określa dojścia do ikonę, która aplikacja używa jako obrazu przycisku.  
+*hIcon*<br/>
+[in] Określa dojścia do ikonę, która aplikacja używa jako obrazu przycisku.  
   
 ### <a name="example"></a>Przykład  
  W poniższym przykładzie pokazano sposób tworzenia `CMFCRibbonButton` obiektu.  
@@ -348,8 +348,8 @@ CSize DrawBottomText(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *podstawowego kontrolera domeny*  
- [in] *bCalcOnly*  
+*podstawowego kontrolera domeny*<br/>
+[in] [in] *bCalcOnly*  
   
 ### <a name="return-value"></a>Wartość zwracana  
   
@@ -366,8 +366,8 @@ virtual void DrawImage(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *podstawowego kontrolera domeny*  
- [in] *typu*  
+*podstawowego kontrolera domeny*<br/>
+[in] [in] *typu*  
  [in] *rectImage*  
   
 ### <a name="remarks"></a>Uwagi  
@@ -385,10 +385,10 @@ virtual int DrawRibbonText(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *podstawowego kontrolera domeny*  
- [in] *strText*  
- [in] *rectText*  
- [in] *uiDTFlags*  
+*podstawowego kontrolera domeny*<br/>
+[in] [in] *strText*  
+*rectText*<br/>
+[in] [in] *uiDTFlags*  
  [in] *clrText*  
   
 ### <a name="return-value"></a>Wartość zwracana  
@@ -403,8 +403,8 @@ int FindSubItemIndexByID(UINT uiID) const;
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *uiID*  
- Określa identyfikator polecenia elementu menu podręcznego.  
+*uiID*<br/>
+[in] Określa identyfikator polecenia elementu menu podręcznego.  
   
 ### <a name="return-value"></a>Wartość zwracana  
  Liczony od zera indeks elementu podrzędnego, który jest skojarzony z *uiID*. wartość -1, jeśli nie ma takiego elementu podrzędnego.  
@@ -456,8 +456,8 @@ int GetImageIndex(BOOL bLargeImage) const;
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *bLargeImage*  
- W przypadku opcji TRUE zwraca indeks obrazu z listy obrazów, który zawiera duże obrazy; w przeciwnym razie zwraca indeks obrazu z listy obrazów, który zawiera małe obrazy.  
+*bLargeImage*<br/>
+[in] W przypadku opcji TRUE zwraca indeks obrazu z listy obrazów, który zawiera duże obrazy; w przeciwnym razie zwraca indeks obrazu z listy obrazów, który zawiera małe obrazy.  
   
 ### <a name="return-value"></a>Wartość zwracana  
  Indeks obrazu na przycisku na liście powiązanego obrazu.  
@@ -763,8 +763,8 @@ virtual void OnClick(CPoint point);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *punktu*  
- Określa położenie kliknięcie myszą.  
+*Punkt*<br/>
+[in] Określa położenie kliknięcie myszą.  
   
 ### <a name="remarks"></a>Uwagi  
  Należy przesłonić tę metodę w klasie pochodnej, jeśli chcesz obsługiwać to zdarzenie.  
@@ -822,8 +822,8 @@ BOOL RemoveSubItem(int nIndex);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *nIndex*  
- Określa liczony od zera indeks elementu menu, który chcesz usunąć.  
+*nIndex*<br/>
+[in] Określa liczony od zera indeks elementu menu, który chcesz usunąć.  
   
 ### <a name="return-value"></a>Wartość zwracana  
  Wartość TRUE, jeśli określony element został usunięty pomyślnie; w przeciwnym razie wartość FALSE, jeśli *nIndex* jest ujemny lub większa niż liczba elementów menu w menu podręcznym.  
@@ -857,8 +857,8 @@ void SetAlwaysLargeImage(BOOL bSet=TRUE);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *bUstawienie*  
- W przypadku opcji TRUE przycisk powoduje wyświetlenie duży obraz. W przeciwnym razie przycisk powoduje wyświetlenie mały obraz.  
+*bUstawienie*<br/>
+[in] W przypadku opcji TRUE przycisk powoduje wyświetlenie duży obraz. W przeciwnym razie przycisk powoduje wyświetlenie mały obraz.  
   
 ##  <a name="setdefaultcommand"></a>  CMFCRibbonButton::SetDefaultCommand  
  Umożliwia to polecenie domyślne dla przycisk na Wstążce.  
@@ -868,8 +868,8 @@ void SetDefaultCommand(BOOL bSet=TRUE);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *bUstawienie*  
- W przypadku opcji TRUE przycisku można wykonać jego domyślnego polecenia. W przypadku wartości FAŁSZ przycisku nie można wykonać polecenia domyślne.  
+*bUstawienie*<br/>
+[in] W przypadku opcji TRUE przycisku można wykonać jego domyślnego polecenia. W przypadku wartości FAŁSZ przycisku nie można wykonać polecenia domyślne.  
   
 ### <a name="remarks"></a>Uwagi  
  *bUstawienie* ma zastosowanie tylko wtedy, gdy przycisk ma menu. Jeśli *bUstawienie* ma wartość TRUE, przycisku można wykonać polecenia domyślne i przypisane menu podręcznego jest wyświetlana tylko wtedy, kiedy użytkownik kliknie strzałkę po prawej krawędzi przycisku. W przeciwnym razie przycisku nie można wykonać polecenia domyślne i wyskakujących menu pojawia się niezależnie od tego, w których obszar przycisku, użytkownik klika polecenie.  
@@ -896,11 +896,11 @@ void SetImageIndex(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *nIndex*  
- Określa indeks obrazu.  
+*nIndex*<br/>
+[in] Określa indeks obrazu.  
   
- [in] *bLargeImage*  
- W przypadku opcji TRUE przez określony indeks odnosi się do listy dużych obrazów. W przeciwnym razie indeks odnosi się do listy małych obrazów.  
+*bLargeImage*<br/>
+[in] W przypadku opcji TRUE przez określony indeks odnosi się do listy dużych obrazów. W przeciwnym razie indeks odnosi się do listy małych obrazów.  
   
 ##  <a name="setmenu"></a>  CMFCRibbonButton::SetMenu  
  Przypisuje menu podręcznego przycisk na Wstążce.  
@@ -953,8 +953,8 @@ void SetRightAlignMenu(BOOL bSet=TRUE);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *bUstawienie*  
- W przypadku opcji TRUE jest wyrównany do prawej. W przeciwnym razie menu jest wyrównany do lewej  
+*bUstawienie*<br/>
+[in] W przypadku opcji TRUE jest wyrównany do prawej. W przeciwnym razie menu jest wyrównany do lewej  
   
 ##  <a name="settext"></a>  CMFCRibbonButton::SetText  
 

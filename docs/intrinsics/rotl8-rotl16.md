@@ -18,12 +18,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0c8dc98e679de6255ae5762777fd51cbe3554a32
-ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
+ms.openlocfilehash: 8ec83d862c119645582a552b7685e5ca364be6f9
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "42466134"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45709146"
 ---
 # <a name="rotl8-rotl16"></a>_rotl8, _rotl16
 **Microsoft Specific**  
@@ -44,11 +44,11 @@ unsigned short _rotl16(
 ```  
   
 #### <a name="parameters"></a>Parametry  
- [in] `value`  
- Wartość, aby obrócić.  
+*value*<br/>
+[in] Wartość, aby obrócić.  
   
- [in] `shift`  
- Liczba bitów, aby obrócić.  
+*shift*<br/>
+[in] Liczba bitów, aby obrócić.  
   
 ## <a name="return-value"></a>Wartość zwracana  
  Obrócony wartość.  

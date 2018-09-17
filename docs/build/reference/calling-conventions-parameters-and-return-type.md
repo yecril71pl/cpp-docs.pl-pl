@@ -16,12 +16,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 077064b25f41648231f27085236fa13d1a662440
-ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
+ms.openlocfilehash: 74aa2e58b7285ced1b49efc7f54c1ec11ad606c1
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44110621"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45714756"
 ---
 # <a name="calling-conventions-parameters-and-return-type"></a>Konwencje wywoływania, parametry oraz zwracany typ
 
@@ -69,7 +69,7 @@ Wartość zwracana przez pomocnika obciążenia opóźnienia muszą być przecho
 Poniższy kod przedstawia sposób implementowania funkcji podłączania proste.
 
 ```C
-FARPROC WINAPI delayHook(unsigned dliNotify, PDelayLoadInfo pdli)  
+FARPROC WINAPI delayHook(unsigned dliNotify, PDelayLoadInfo pdli)
 {
     switch (dliNotify) {
         case dliStartProcessing :

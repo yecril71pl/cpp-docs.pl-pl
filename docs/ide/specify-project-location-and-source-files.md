@@ -1,5 +1,5 @@
 ---
-title: Nowy projekt z istniejących źródeł - pliki źródłowe (Visual C++) | Dokumentacja firmy Microsoft
+title: Nowy projekt z istniejącego kodu — pliki źródłowe (Visual C++) | Dokumentacja firmy Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -14,52 +14,62 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d85a7b85996ed307596865a31d55cf4b119e5bd5
-ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
+ms.openlocfilehash: 3647ad3211043a5356649cb5f350ec07009f2279
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "33338698"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45707840"
 ---
 # <a name="specify-project-location-and-source-files-create-new-project-from-existing-code-files-wizard"></a>Określ lokalizację projektu i plików źródłowych, Kreator Utwórz nowy projekt z istniejących plików z kodem
-Umożliwia określenie tej strony kreator Utwórz nowy projekt z istniejących plików kodu:  
+Użyj tej strony kreator Utwórz nowy projekt z istniejących plików kodu, aby określić:  
   
 -   Ścieżka katalogu nowego projektu  
   
--   Katalogi wyszukiwania istniejących plików źródłowych  
+-   Katalogi do wyszukiwania dla istniejących plików źródłowych  
   
--   Typy plików kreatora zostaną zaimportowane do nowego projektu  
+-   Rodzaje plików kreatora zostaną zaimportowane do nowego projektu  
   
 ## <a name="task-list"></a>Lista zadań  
- [Instrukcje: tworzenie projektu C++ z istniejącego kodu](../ide/how-to-create-a-cpp-project-from-existing-code.md)  
+[Instrukcje: tworzenie projektu C++ z istniejącego kodu](../ide/how-to-create-a-cpp-project-from-existing-code.md)  
   
 ## <a name="uielement-list"></a>Lista elementów UI  
- **Lokalizacja pliku projektu**  
- Określa ścieżkę katalogu nowego projektu. Ta lokalizacja jest, gdzie Kreator będzie złożenia wszystkich plików (i jego podkatalogach) nowy projekt.  
+- **Lokalizacja pliku projektu**
+
+   Określa ścieżkę katalogu nowy projekt. Ta lokalizacja jest, w której Kreator będzie złożenia, wszystkie pliki (i podkatalogi) nowego projektu.  
   
- **Przeglądaj**  
- Wyświetla **lokalizacja pliku projektu** okno dialogowe, które pomaga określić katalog, który będzie zawierać nowy projekt. Ten formant umożliwia przejdź do żądanego folderu.  
+- **Przeglądaj**
+
+   Wyświetla **lokalizacja pliku projektu** okno dialogowe, które pomaga określić katalog, który będzie zawierać nowy projekt. Ten formant umożliwia przejdź do żądanego folderu.  
   
- **Nazwa projektu**  
- Określa nazwę nowego projektu. Pliki projektu, które mają rozszerzenia plików, takich jak .vcxproj przyjmie tej nazwy. Istniejących plików kodu będzie przechowywać ich oryginalną nazwę.  
+- **Nazwa projektu**
+
+   Określa nazwę nowego projektu. Pliki projektu, które mają rozszerzenia pliku, takie jak vcxproj przyjmie tej nazwy. Istniejących plików kodu zostanie zachowana, aby ich oryginalną nazwę.  
   
- **Dodaj pliki do projektu z tych folderów**  
- Po zaznaczeniu tej opcji, ustawia kreatora, aby skopiować istniejących plików kodu z ich oryginalnego katalogów (które są określone na liście poniżej tego formantu) do nowego projektu.  
+- **Dodaj pliki do projektu z tych folderów**
+
+   Po zaznaczeniu tej opcji, ustawia pracę kreatora Aby skopiować istniejących plików kodu z ich oryginalnego katalogów, (które są określone w polu listy poniżej tego formantu) do nowego projektu.  
   
- **Dodaj podfoldery**  
- Określa, aby skopiować pliki kodu z wszystkie podkatalogi katalogu wymienione **folderu** kolumny do nowego projektu.  
+- **Dodaj podfoldery**
+
+   Określa, aby skopiować pliki kodu z wszystkie podkatalogi katalogu wymienione **folderu** kolumny do nowego projektu.  
   
- **Folder**  
- Określa ścieżkę do katalogu zawierającego istniejących plików kodu ma zostać skopiowany do nowego projektu. Ta kolumna zawiera wszystkie katalogi, które kreator umożliwia wyszukiwanie istniejących plików kodu.  
+- **Folder**
+
+   Określa ścieżkę do katalogu, który zawiera istniejących plików kodu, aby skopiować do nowego projektu. Ta kolumna zawiera listę wszystkich katalogów, które kreator umożliwia wyszukiwanie istniejących plików kodu.  
   
- **Dodaj**  
- Wyświetla **Dodaj pliki do projektu z tego folderu** okno dialogowe, które pomaga katalogi Określ, które kreator umożliwia wyszukiwanie istniejących plików kodu.  
+- **Add**
+
+   Wyświetla **Dodaj pliki do projektu z tego folderu** okno dialogowe, które ułatwi Ci katalogi Określ, które kreator umożliwia wyszukiwanie istniejących plików kodu.  
   
- **Usuń**  
- Usuwa ścieżki katalogu, który wybrano w lewo pole listy tego formantu.  
+- **Usuń**
+
+   Usuwa ścieżkę katalogu wybranego na liście pole po lewej stronie tej kontrolki.  
   
- **Typy plików do dodania do projektu**  
- Określa typy plików, które kreator doda do nowego projektu na podstawie rozszerzeń danego pliku. Rozszerzenia plików są poprzedzone znaku wieloznacznego gwiazdki i są rozdzielane na liście rozszerzeń nazw plików średnikiem.  
+- **Typy plików do dodania do projektu**
+
+   Określa typy plików, które kreator doda do nowego projektu na podstawie rozszerzeń danego pliku. Rozszerzenia plików są poprzedzone znakiem symbol wieloznaczny gwiazdka i są rozdzielane na liście rozszerzeń plików średnikiem.  
   
- **Pokaż wszystkie pliki w Eksploratorze rozwiązań**  
- Określa, że wszystkie pliki w nowym projekcie być widoczne i wyświetlane w oknie Eksploratora rozwiązań. Ta opcja jest domyślnie włączona.
+- **Pokaż wszystkie pliki w Eksploratorze rozwiązań**
+
+   Określa, że wszystkie pliki w nowym projekcie jako widoczny i wyświetlane w oknie Eksploratora rozwiązań. Ta opcja jest domyślnie włączona.

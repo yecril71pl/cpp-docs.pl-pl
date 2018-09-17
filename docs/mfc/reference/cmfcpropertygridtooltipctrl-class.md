@@ -30,12 +30,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: befbf65c8faa74e889d837a0b310eda4bc6fe576
-ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
+ms.openlocfilehash: 227c7d43334419326670dae5fabad28d18ec58a0
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43676783"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45716173"
 ---
 # <a name="cmfcpropertygridtooltipctrl-class"></a>Klasa CMFCPropertyGridToolTipCtrl
 Implementuje w etykietce narzędzia kontrolkę, która [klasa CMFCPropertyGridCtrl](../../mfc/reference/cmfcpropertygridctrl-class.md) używa w celu wyświetlenia etykietki narzędzi.  
@@ -106,8 +106,8 @@ BOOL Create(CWnd* pWndParent);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *pWndParent*  
- Wskaźnik do okna nadrzędnego.  
+*pWndParent*<br/>
+[in] Wskaźnik do okna nadrzędnego.  
   
 ### <a name="return-value"></a>Wartość zwracana  
  Wartość TRUE, jeśli okno został pomyślnie utworzony; w przeciwnym razie wartość FALSE.  
@@ -130,8 +130,8 @@ void GetLastRect(CRect& rect) const;
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [out] *rect*  
- Zawiera ostatnia pozycja kontrolki tooltip.  
+*Rect*<br/>
+[out] Zawiera ostatnia pozycja kontrolki tooltip.  
   
 ##  <a name="hide"></a>  CMFCPropertyGridToolTipCtrl::Hide  
  Ukrywa kontrolki tooltip.  
@@ -148,8 +148,8 @@ void SetTextMargin(int nTextMargin);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *nTextMargin*  
- Określa odstępy między tekst kontrolki etykietki narzędzia i krawędź okna etykiety narzędzi. Wartość domyślna to 10 pikseli.  
+*nTextMargin*<br/>
+[in] Określa odstępy między tekst kontrolki etykietki narzędzia i krawędź okna etykiety narzędzi. Wartość domyślna to 10 pikseli.  
   
 ##  <a name="track"></a>  CMFCPropertyGridToolTipCtrl::Track  
  Wyświetla kontrolki tooltip.  
@@ -161,11 +161,11 @@ void Track(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *rect*  
- Określa położenie i rozmiar kontrolki tooltip.  
+*Rect*<br/>
+[in] Określa położenie i rozmiar kontrolki tooltip.  
   
- [in] *strText*  
- Określa tekst wyświetlany w etykietce narzędzia.  
+*strText*<br/>
+[in] Określa tekst wyświetlany w etykietce narzędzia.  
   
 ### <a name="remarks"></a>Uwagi  
  Ta metoda Wy Wyświetla kontrolki tooltip na położenie i rozmiar określony przez *prostokąt*. Jeśli położenie, rozmiar i tekst nie uległy zmianie od czasu ostatniego wywołania tej metody, Metoda ta nie ma znaczenia.  

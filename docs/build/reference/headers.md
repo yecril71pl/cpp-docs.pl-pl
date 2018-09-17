@@ -18,22 +18,25 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 94d9b49983ff75af7064e89279209447d099f0d1
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: afc569f0c0158b1bab327dc0b6c32951fd28e483
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32370296"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45713612"
 ---
 # <a name="headers"></a>/HEADERS
-```  
-/HEADERS  
-```  
-  
-## <a name="remarks"></a>Uwagi  
- Ta opcja powoduje wyświetlenie pliku nagłówka i nagłówka dla każdej sekcji. W przypadku użycia z biblioteki, Wyświetla nagłówek dla każdego obiektu elementu członkowskiego.  
-  
- Tylko **/HEADERS** — opcja polecenia DUMPBIN jest dostępny do użytku na pliki tworzone z [/GL](../../build/reference/gl-whole-program-optimization.md) — opcja kompilatora.  
-  
-## <a name="see-also"></a>Zobacz też  
- [Opcje DUMPBIN](../../build/reference/dumpbin-options.md)
+
+```
+/HEADERS
+```
+
+## <a name="remarks"></a>Uwagi
+
+Ta opcja wyświetla nagłówka pliku i nagłówek dla każdej sekcji. W przypadku użycia z biblioteką, wyświetla nagłówka dla każdego elementu członkowskiego obiektu.
+
+Tylko **/HEADERS** — opcja polecenia DUMPBIN jest dostępna do użycia w plikach z [/GL](../../build/reference/gl-whole-program-optimization.md) — opcja kompilatora.
+
+## <a name="see-also"></a>Zobacz też
+
+[Opcje DUMPBIN](../../build/reference/dumpbin-options.md)

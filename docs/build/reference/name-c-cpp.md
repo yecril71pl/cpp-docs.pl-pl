@@ -16,24 +16,27 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a94b82a65cf68d9802d7bf9620e4128ab6b35071
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: bc37a96e50c6cd5bae2cc60661db04f3b92d162b
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32371817"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45715757"
 ---
 # <a name="name-cc"></a>NAZWA (C/C++)
-Określa nazwę pliku wyjściowego głównego.  
-  
-```  
-NAME [application][BASE=address]  
-```  
-  
-## <a name="remarks"></a>Uwagi  
- Odpowiednik sposobem określania nazwy pliku wyjściowego jest z [/OUT](../../build/reference/out-output-file-name.md) — opcja konsolidatora i sposób, aby ustawić adres podstawowy równoważny jest [/BASE](../../build/reference/base-base-address.md) — opcja konsolidatora. Jeśli określono oba/OUT zastępuje **nazwa**.  
-  
- W przypadku tworzenia biblioteki DLL, nazwa mają wpływ tylko na nazwę biblioteki DLL.  
-  
-## <a name="see-also"></a>Zobacz też  
- [Zasady dla instrukcji definicji modułu](../../build/reference/rules-for-module-definition-statements.md)
+
+Określa nazwę pliku głównego produktu.
+
+```
+NAME [application][BASE=address]
+```
+
+## <a name="remarks"></a>Uwagi
+
+Sposób równoważny, aby określić nazwę pliku wyjściowego jest za pomocą [/OUT](../../build/reference/out-output-file-name.md) — opcja konsolidatora i sposób równoważny, aby ustawić adres podstawowy jest [/BASE](../../build/reference/base-base-address.md) — opcja konsolidatora. Jeśli są określone oba/OUT przesłania **nazwa**.
+
+Jeśli tworzysz bibliotekę DLL, nazwa mają wpływ tylko na nazwy biblioteki DLL.
+
+## <a name="see-also"></a>Zobacz też
+
+[Zasady dla instrukcji definicji modułu](../../build/reference/rules-for-module-definition-statements.md)

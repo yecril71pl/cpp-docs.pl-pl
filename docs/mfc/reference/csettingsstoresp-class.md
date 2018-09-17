@@ -22,12 +22,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1cf84e2e7db6f829cb7afcd1831521b4f94535bd
-ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
+ms.openlocfilehash: 4223ce5c358f4e95ab94baac9d5cf0edda5ad73f
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/05/2018
-ms.locfileid: "37850788"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45716365"
 ---
 # <a name="csettingsstoresp-class"></a>Klasa CSettingsStoreSP
 `CSettingsStoreSP` Klasa to klasa pomocnika, która służy do tworzenia wystąpień [klasa CSettingsStore](../../mfc/reference/csettingsstore-class.md).  
@@ -88,11 +88,11 @@ CSettingsStore& CSettingsStoreSP Create(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *bŚcieżka*  
- Parametr logiczny, który określa, czy `CSettingsStore` obiekt zostanie utworzony w trybie administratora.  
+*bŚcieżka*<br/>
+[in] Parametr logiczny, który określa, czy `CSettingsStore` obiekt zostanie utworzony w trybie administratora.  
   
- [in] *bReadOnly*  
- Parametr logiczny, który określa, czy `CSettingsStore` obiekt zostanie utworzony, aby uzyskać dostęp tylko do odczytu.  
+*bReadOnly*<br/>
+[in] Parametr logiczny, który określa, czy `CSettingsStore` obiekt zostanie utworzony, aby uzyskać dostęp tylko do odczytu.  
   
 ### <a name="return-value"></a>Wartość zwracana  
  Odwołanie do nowo utworzonego `CSettingsStore` obiektu.  
@@ -117,8 +117,8 @@ CSettingsStoreSP::CSettingsStoreSP(DWORD dwUserData = 0);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *dwUserData*  
- Danych zdefiniowane przez użytkownika, `CSettingsStoreSP` obiektu magazynów.  
+*dwUserData*<br/>
+[in] Danych zdefiniowane przez użytkownika, `CSettingsStoreSP` obiektu magazynów.  
   
 ### <a name="remarks"></a>Uwagi  
  `CSettingsStoreSP` Obiekt przechowuje dane z *dwUserData* w zmiennej chroniony element członkowski `m_dwUserData`.  
@@ -131,8 +131,8 @@ static BOOL __stdcall CSettingsStoreSP::SetRuntimeClass(CRuntimeClass* pRTI);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *pRTI*  
- Wskaźnik do informacji o klasie czasu wykonywania dla klasy pochodnej z [klasa CSettingsStore](../../mfc/reference/csettingsstore-class.md).  
+*pRTI*<br/>
+[in] Wskaźnik do informacji o klasie czasu wykonywania dla klasy pochodnej z [klasa CSettingsStore](../../mfc/reference/csettingsstore-class.md).  
   
 ### <a name="return-value"></a>Wartość zwracana  
  Wartość TRUE, jeśli to się powiedzie; Wartość FALSE, jeśli klasa jest oznaczona *pRTI* nie pochodzi od `CSettingsStore`.  

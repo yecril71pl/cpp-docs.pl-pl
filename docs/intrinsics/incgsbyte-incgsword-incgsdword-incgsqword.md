@@ -26,12 +26,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 74e1b74c95f143aac7a915b3f148a85da9c5a3d3
-ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
+ms.openlocfilehash: 611786246df9da54d94e673da1a5e48940ca7241
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "42466248"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45711129"
 ---
 # <a name="incgsbyte-incgsword-incgsdword-incgsqword"></a>__incgsbyte, __incgsword, __incgsdword, __incgsqword
 **Microsoft Specific**  
@@ -56,8 +56,8 @@ void __incgsqword(
 ```  
   
 #### <a name="parameters"></a>Parametry  
- [in] `Offset`  
- Przesunięcie od początku `GS`.  
+*Przesunięcie*<br/>
+[in] Przesunięcie od początku `GS`.  
   
 ## <a name="requirements"></a>Wymagania  
   

@@ -18,12 +18,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b3be04079de11642b2641260fdfe997d3fcb48d6
-ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
+ms.openlocfilehash: 26fb2637c5a92a430d72e496cabeb8f5749ccaa1
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "42465789"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45711804"
 ---
 # <a name="readmsr"></a>__readmsr
 **Microsoft Specific**  
@@ -39,8 +39,8 @@ __int64 __readmsr(
 ```  
   
 #### <a name="parameters"></a>Parametry  
- [in] `register`  
- Rejestr określonego modelu do odczytu.  
+*register*<br/>
+[in] Rejestr określonego modelu do odczytu.  
   
 ## <a name="return-value"></a>Wartość zwracana  
  Wartość do określonego rejestru.  

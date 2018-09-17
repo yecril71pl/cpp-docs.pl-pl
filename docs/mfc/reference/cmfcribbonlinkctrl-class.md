@@ -42,12 +42,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 53e9396148a89a4778d7e12066a814f2065bbac6
-ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
+ms.openlocfilehash: c326a13e55ed14f93b35ed486f7ee4596c643758
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "42465802"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45712520"
 ---
 # <a name="cmfcribbonlinkctrl-class"></a>Klasa CMFCRibbonLinkCtrl
 Implementuje hiperłącze, które jest umieszczone na Wstążce. Hiperłącze otwiera stronę sieci Web, gdy zostanie kliknięte.  
@@ -106,14 +106,14 @@ CMFCRibbonLinkCtrl(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *nID*  
- Określa identyfikator polecenia polecenia, który jest wykonywany po kliknięciu kontrolki łącza.  
+*nID*<br/>
+[in] Określa identyfikator polecenia polecenia, który jest wykonywany po kliknięciu kontrolki łącza.  
   
- [in] *lpszText*  
- Określa etykietę do wyświetlenia w formancie łącza.  
+*lpszText*<br/>
+[in] Określa etykietę do wyświetlenia w formancie łącza.  
   
- [in] *lpszLink*  
- Określa hiperłącze skojarzonego z kontrolką łącza.  
+*lpszLink*<br/>
+[in] Określa hiperłącze skojarzonego z kontrolką łącza.  
   
 ### <a name="example"></a>Przykład  
  Poniższy przykład pokazuje, jak używać konstruktora `CMFCRibbonLinkCtrl` klasy. Ten fragment kodu jest częścią [przykładowe gadżetów wstążki](../../visual-cpp-samples.md).  
@@ -263,8 +263,8 @@ void SetLink(LPCTSTR lpszLink);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *lpszLink*  
- Określa tekst, hiperłącze.  
+*lpszLink*<br/>
+[in] Określa tekst, hiperłącze.  
   
 ## <a name="see-also"></a>Zobacz też  
  [Diagram hierarchii](../../mfc/hierarchy-chart.md)   

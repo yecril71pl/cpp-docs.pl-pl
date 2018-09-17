@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 499b621c804f13f6a56bc2ce9be0ba91ab824a48
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: 88f734cbcee303741858c933d1c3729720f0e76f
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42592403"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45710310"
 ---
 # <a name="safelessthan"></a>SafeLessThan
 
@@ -40,11 +40,11 @@ inline bool SafeLessThan (
 
 ### <a name="parameters"></a>Parametry
 
-[in] *t*  
-Pierwsza liczba. To musi być typu `T`.
+*t*<br/>
+[in] Pierwsza liczba. To musi być typu `T`.
 
-[in] *u*  
-Drugi numer. To musi być typu `U`.
+*u*<br/>
+[in] Drugi numer. To musi być typu `U`.
 
 ## <a name="return-value"></a>Wartość zwracana
 

@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: aee2c58d8763581987fec40b0cb486c67363697b
-ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
+ms.openlocfilehash: c8cd05dc5d4cdff535b8e571e94d9033d0220ccf
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "42465250"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45710167"
 ---
 # <a name="cmfcdragframeimpl-class"></a>Klasa CMFCDragFrameImpl
 `CMFCDragFrameImpl` Klasy rysuje przeciągnij prostokąt, który jest wyświetlany, gdy użytkownik przeciągnie okienko w trybie standardowego dokowania.  
@@ -92,8 +92,8 @@ void PlaceTabPreDocking(CWnd* pCBarToPlaceOn);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *pTabbedBar*  
- [in] *bFirstTime*  
+*pTabbedBar*<br/>
+[in] [in] *bFirstTime*  
  [in] *pCBarToPlaceOn*  
   
 ### <a name="remarks"></a>Uwagi  

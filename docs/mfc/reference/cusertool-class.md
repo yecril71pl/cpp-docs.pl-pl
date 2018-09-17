@@ -40,12 +40,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 90972e39bbad812f820452816ff3df982174539f
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 577e4b4e7bf54742035c8b4333d345ca894501ac
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43202979"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45708997"
 ---
 # <a name="cusertool-class"></a>Klasa CUserTool
 Narzędzie użytkownika jest element menu, który uruchamia aplikację zewnętrzną. **Narzędzia** karcie **Dostosuj** okno dialogowe ( [klasa CMFCToolBarsCustomizeDialog](../../mfc/reference/cmfctoolbarscustomizedialog-class.md)) umożliwia użytkownikowi dodawanie narzędzi użytkownika i określ nazwę, poleceń, argumentów i początkowy katalog dla każdego z narzędzi użytkownika.  
@@ -122,11 +122,11 @@ void DrawToolIcon(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *podstawowego kontrolera domeny*  
- Wskaźnik do kontekstu urządzenia.  
+*podstawowego kontrolera domeny*<br/>
+[in] Wskaźnik do kontekstu urządzenia.  
   
- [in] *rectImage*  
- Określa współrzędne obszaru, aby wyświetlić ikonę.  
+*rectImage*<br/>
+[in] Określa współrzędne obszaru, aby wyświetlić ikonę.  
   
 ##  <a name="getcommand"></a>  CUserTool::GetCommand  
  Zwraca ciąg zawierający tekst polecenia skojarzonego z narzędziem użytkownika.  
@@ -223,8 +223,8 @@ void SetCommand(LPCTSTR lpszCmd);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *lpszCmd*  
- Określa nową aplikację, która ma zostać skojarzony z narzędzia użytkownika.  
+*lpszCmd*<br/>
+[in] Określa nową aplikację, która ma zostać skojarzony z narzędzia użytkownika.  
   
 ### <a name="remarks"></a>Uwagi  
  Wywołaj tę metodę, aby ustawić nową aplikację, która uruchamia narzędzie użytkownika. Metoda niszczy stare ikonę i ładuje nową ikonę z danej aplikacji. Jeśli go nie można załadować ikony z aplikacji, ładuje domyślną ikonę narzędzie użytkownika, wywołując [CUserTool::LoadDefaultIcon](#loaddefaulticon).  

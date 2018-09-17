@@ -18,42 +18,45 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: adfda3d287bbea6c85ae6d4bcebe009b610d719e
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 63adaad4fe074225ef32d99edd2a1402acf5e045
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43219295"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45709127"
 ---
 # <a name="validate-charset-validate-for-compatible-characters"></a>/ Validate-Charset (Zweryfikuj zgodność znaków)
-Sprawdza, czy tekst plik źródłowy zawiera tylko znaki stałego jako UTF-8.  
-  
-## <a name="syntax"></a>Składnia  
-  
-```  
-/validate-charset[-]  
-```  
-  
-## <a name="remarks"></a>Uwagi  
- Możesz użyć **/Validate-Charset** opcję, aby zweryfikować, że kod źródłowy zawiera tylko do zestawu znaków, które mogą być reprezentowane w znaków źródła i zestaw znaków wykonania. Ten test jest włączana automatycznie po określeniu **/Source-Charset**, **/Execution-Charset**, lub **/UTF-8** opcje kompilatora. Można jawnie wyłączyć ten test, określając **/ validate-charset —** opcji.  
-  
- Domyślnie program Visual Studio wykrywa znacznika kolejności bajtów, aby określić, czy plik źródłowy jest w formacie zakodowanym Unicode, na przykład, UTF-16 lub UTF-8. Jeśli zostanie znaleziony Brak znacznika kolejności bajtów, zakłada się plik źródłowy jest zakodowane przy użyciu bieżącej stronie kodowej użytkownika, chyba że strona kodowa zostali zdefiniowani za pomocą **/UTF-8** lub **/Source-Charset** opcji. Program Visual Studio umożliwia zapisywanie kodu źródłowego języka C++ za pomocą jednej z kilku kodowania znaków. Aby uzyskać informacji na temat zestawów znaków źródła i wykonania, zobacz [zestawy znaków](../../cpp/character-sets.md) w dokumentacji języka. Aby uzyskać listę obsługiwanych identyfikatorami stronę kodu i nazwy zestawu znaków, zobacz [kodu strony identyfikatory](/windows/desktop/Intl/code-page-identifiers).  
-  
- Visual Studio używa UTF-8 jako wewnętrzne kodowanie znaków podczas konwersji między zestaw znaków źródła i wykonania zestawu znaków. Jeśli znak w pliku źródłowym, nie można przedstawić w zestawie znaków wykonywania, konwersja UTF-8 zastępuje znak zapytania '?' znaków. **/Validate-Charset** opcja powoduje, że kompilacji zgłosić ostrzeżenie, jeśli ten problem wystąpi.  
-  
-### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Aby ustawić tę opcję kompilatora w środowisku programowania Visual Studio  
-  
-1.  Otwórz projekt **stron właściwości** okno dialogowe. Aby uzyskać więcej informacji, zobacz [Praca z właściwościami projektu](../../ide/working-with-project-properties.md).  
-  
-2.  Rozwiń **właściwości konfiguracji**, **C/C++**, **wiersza polecenia** folderu.  
-  
-3.  W **zaawansowane opcje**, Dodaj **/Validate-Charset** opcji, a następnie określ preferowany kodowania.  
-  
-4.  Wybierz **OK** Aby zapisać zmiany.  
-  
-## <a name="see-also"></a>Zobacz też  
- [Opcje kompilatora](../../build/reference/compiler-options.md)   
- [Ustawianie opcji kompilatora](../../build/reference/setting-compiler-options.md)   
- [/ Execution-Charset (Ustaw zestaw znaków wykonywania)](../../build/reference/execution-charset-set-execution-character-set.md)   
- [/ Source-Charset (Ustaw źródłowy zestaw znaków)](../../build/reference/source-charset-set-source-character-set.md)   
- [/utf-8 (Ustaw źródłowy i wykonywalny zestaw znaków na UTF-8)](../../build/reference/utf-8-set-source-and-executable-character-sets-to-utf-8.md)
+
+Sprawdza, czy tekst plik źródłowy zawiera tylko znaki stałego jako UTF-8.
+
+## <a name="syntax"></a>Składnia
+
+```
+/validate-charset[-]
+```
+
+## <a name="remarks"></a>Uwagi
+
+Możesz użyć **/Validate-Charset** opcję, aby zweryfikować, że kod źródłowy zawiera tylko do zestawu znaków, które mogą być reprezentowane w znaków źródła i zestaw znaków wykonania. Ten test jest włączana automatycznie po określeniu **/Source-Charset**, **/Execution-Charset**, lub **/UTF-8** opcje kompilatora. Można jawnie wyłączyć ten test, określając **/ validate-charset —** opcji.
+
+Domyślnie program Visual Studio wykrywa znacznika kolejności bajtów, aby określić, czy plik źródłowy jest w formacie zakodowanym Unicode, na przykład, UTF-16 lub UTF-8. Jeśli zostanie znaleziony Brak znacznika kolejności bajtów, zakłada się plik źródłowy jest zakodowane przy użyciu bieżącej stronie kodowej użytkownika, chyba że strona kodowa zostali zdefiniowani za pomocą **/UTF-8** lub **/Source-Charset** opcji. Program Visual Studio umożliwia zapisywanie kodu źródłowego języka C++ za pomocą jednej z kilku kodowania znaków. Aby uzyskać informacji na temat zestawów znaków źródła i wykonania, zobacz [zestawy znaków](../../cpp/character-sets.md) w dokumentacji języka. Aby uzyskać listę obsługiwanych identyfikatorami stronę kodu i nazwy zestawu znaków, zobacz [kodu strony identyfikatory](/windows/desktop/Intl/code-page-identifiers).
+
+Visual Studio używa UTF-8 jako wewnętrzne kodowanie znaków podczas konwersji między zestaw znaków źródła i wykonania zestawu znaków. Jeśli znak w pliku źródłowym, nie można przedstawić w zestawie znaków wykonywania, konwersja UTF-8 zastępuje znak zapytania '?' znaków. **/Validate-Charset** opcja powoduje, że kompilacji zgłosić ostrzeżenie, jeśli ten problem wystąpi.
+
+### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Aby ustawić tę opcję kompilatora w środowisku programowania Visual Studio
+
+1. Otwórz projekt **stron właściwości** okno dialogowe. Aby uzyskać więcej informacji, zobacz [Praca z właściwościami projektu](../../ide/working-with-project-properties.md).
+
+1. Rozwiń **właściwości konfiguracji**, **C/C++**, **wiersza polecenia** folderu.
+
+1. W **zaawansowane opcje**, Dodaj **/Validate-Charset** opcji, a następnie określ preferowany kodowania.
+
+1. Wybierz **OK** Aby zapisać zmiany.
+
+## <a name="see-also"></a>Zobacz też
+
+[Opcje kompilatora](../../build/reference/compiler-options.md)<br/>
+[Ustawianie opcji kompilatora](../../build/reference/setting-compiler-options.md)<br/>
+[/ Execution-Charset (Ustaw zestaw znaków wykonywania)](../../build/reference/execution-charset-set-execution-character-set.md)
+[/Source-Charset (Ustaw źródłowy zestaw znaków)](../../build/reference/source-charset-set-source-character-set.md)
+ [ /UTF-8 (Ustaw źródłowy i wykonywalny zestawów na UTF-8 znaków)](../../build/reference/utf-8-set-source-and-executable-character-sets-to-utf-8.md)

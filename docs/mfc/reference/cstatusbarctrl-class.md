@@ -54,12 +54,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a555cc26e8857899690852743fa177a706afa0f2
-ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
+ms.openlocfilehash: 94d56a6defbc47a133e3f583daab188921622d84
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43677748"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45711811"
 ---
 # <a name="cstatusbarctrl-class"></a>Klasa CStatusBarCtrl
 Oferuje funkcje formantu Windows typowego paska stanu.  
@@ -261,7 +261,7 @@ HICON GetIcon(int iPart) const;
   
 |Parametr|Opis|  
 |---------------|-----------------|  
-|[in] *iPart*|Liczony od zera indeks części, który zawiera ikonę, które mają zostać pobrane. Jeśli ten parametr ma wartość -1, na pasku stanu jest zakłada się, że pasek stanu tryb prosty.|  
+|*iPart*|[in] Liczony od zera indeks części, który zawiera ikonę, które mają zostać pobrane. Jeśli ten parametr ma wartość -1, na pasku stanu jest zakłada się, że pasek stanu tryb prosty.|  
   
 ### <a name="return-value"></a>Wartość zwracana  
  Uchwyt ikony Jeśli metoda kończy się pomyślnie; w przeciwnym razie wartość NULL.  
@@ -521,8 +521,8 @@ BOOL SetSimple(BOOL bSimple = TRUE);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *bSimple*  
- Flaga typ wyświetlania. Jeśli ten parametr ma wartość TRUE, kontrolka ma wyświetlać prosty tekst; Jeśli jest to wartość FALSE, wyświetla wiele części.  
+*bSimple*<br/>
+[in] Flaga typ wyświetlania. Jeśli ten parametr ma wartość TRUE, kontrolka ma wyświetlać prosty tekst; Jeśli jest to wartość FALSE, wyświetla wiele części.  
   
 ### <a name="return-value"></a>Wartość zwracana  
  Zawsze zwraca wartość 0.  

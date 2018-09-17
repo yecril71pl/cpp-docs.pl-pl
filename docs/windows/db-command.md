@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: d0b34cbd2cebea2b1c4d6bf32e61a7f496b70d7a
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: 47fcbdb82501744c8155432e4f4cf220ed945dec
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42596271"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45709907"
 ---
 # <a name="dbcommand"></a>db_command
 
@@ -99,26 +99,26 @@ TCHAR m_state[3] = 'CA';
 ]
 ```
 
-*Nazwa* (opcjonalnie)  
-Nazwa uchwyt, używanej do pracy z zestawu wierszy. Jeśli określisz *nazwa*, **db_command —** generuje klasę o określonej *nazwa*, które mogą służyć do przechodzenia w zestawie wierszy lub wykonywać wiele zapytań akcji. Jeśli nie określisz *nazwa*, nie będzie możliwe do zwrócenia więcej niż jeden wiersz wyników użytkownikowi.
+*Nazwa*  
+(Opcjonalnie) Nazwa uchwyt, używanej do pracy z zestawu wierszy. Jeśli określisz *nazwa*, **db_command —** generuje klasę o określonej *nazwa*, które mogą służyć do przechodzenia w zestawie wierszy lub wykonywać wiele zapytań akcji. Jeśli nie określisz *nazwa*, nie będzie możliwe do zwrócenia więcej niż jeden wiersz wyników użytkownikowi.
 
-*source_name* (opcjonalnie)  
-`CSession` Zmiennej lub wystąpienia klasy, która ma `db_source` zastosowany do niego, w którym polecenie zostanie wykonane. Zobacz [db_source —](../windows/db-source.md).
+*source_name*  
+(Opcjonalnie) `CSession` Zmiennej lub wystąpienia klasy, która ma `db_source` zastosowany do niego, w którym polecenie zostanie wykonane. Zobacz [db_source —](../windows/db-source.md).
 
 **db_command —** kontrole, aby upewnić się, że zmienna umożliwiający *source_name* jest poprawny, dlatego należy określona zmienna w funkcji lub zakresu globalnego.
 
-*HRESULT* (opcjonalnie)  
-Identyfikuje zmienna, która otrzyma wartość HRESULT dla tego polecenia bazy danych. Jeśli zmienna nie istnieje, jego zostanie automatycznie dodany przez atrybut.
+*wartość HRESULT*  
+(Opcjonalnie) Identyfikuje zmienna, która otrzyma wartość HRESULT dla tego polecenia bazy danych. Jeśli zmienna nie istnieje, jego zostanie automatycznie dodany przez atrybut.
 
-*powiązania* (opcjonalnie)  
-Pozwala na oddzielne Parametry wiążące polecenia OLE DB.
+*Powiązania*  
+(Opcjonalnie) Pozwala na oddzielne Parametry wiążące polecenia OLE DB.
 
 Jeśli określono wartość dla *powiązania*, **db_command —** będzie analizować skojarzoną wartość i nie można przeanalizować \[ *bindtype*] parametru. Użycie tych umożliwia należy użyć składni dostawcy OLE DB. Aby wyłączyć analizy bez wiązania parametrów, należy określić `Bindings=""`.
 
 Jeśli nie określisz wartości *powiązania*, **db_command —** będzie analizować blok parametrów powiązania, wyszukiwanie "**(**", a następnie **\[** _bindtype_**]** w nawiasy kwadratowe, przez co najmniej jeden wcześniej zadeklarowanej C++ zmienne Członkowskie, a następnie "**)**". Cały tekst w nawiasach zostanie usunięta, a wynikowy polecenia, a te parametry, będą używane do konstruowania kolumny i parametru powiązania dla tego polecenia.
 
-*bulk_fetch* (opcjonalnie)  
-Wartość całkowita określająca liczbę wierszy do pobrania.
+*bulk_fetch*  
+(Opcjonalnie) Wartość całkowita określająca liczbę wierszy do pobrania.
 
 Wartość domyślna to 1, który określa pobieranie pojedynczego wiersza (zestaw wierszy będzie mieć typ [CRowset](../data/oledb/crowset-class.md)).
 

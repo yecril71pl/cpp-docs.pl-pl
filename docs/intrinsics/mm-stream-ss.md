@@ -17,18 +17,18 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b5058ac6c415f155b6a7cab712002d4769983d1f
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: ef5910f47fdf9c058cfb4493c9df486749da18fc
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33339491"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45714392"
 ---
 # <a name="mmstreamss"></a>_mm_stream_ss  
   
 **Microsoft Specific**  
   
- Zapisuje dane 32-bitowe w lokalizacji pamięci bez zanieczyszczenie pamięci podręcznych.  
+ Zapisuje 32-bitowych danych w lokalizacji pamięci bez zanieczyszczenie pamięci podręcznych.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -41,11 +41,11 @@ void _mm_stream_ss(
   
 #### <a name="parameters"></a>Parametry  
   
- [out] `Dest`  
- Wskaźnik do lokalizacji, w którym zapisywana jest źródło danych.  
+*docelowy*<br/>
+[out] Wskaźnik do lokalizacji, w którym zapisywana jest źródło danych.  
   
- [in] `Source`  
- Numer 128-bitowego, która zawiera `float` wartość ma zostać zapisany w jego dolnej 32-bitowy.  
+*Źródło*<br/>
+[in] 128-bitową liczbą, która zawiera `float` wartość do zapisania w jej dolnej 32-bitowy...  
   
 ## <a name="return-value"></a>Wartość zwracana  
   
@@ -53,17 +53,17 @@ void _mm_stream_ss(
   
 ## <a name="requirements"></a>Wymagania  
   
-|— Wewnętrzne|Architektura|  
+|Wewnętrzne|Architektura|  
 |---------------|------------------|  
 |`_mm_stream_ss`|SSE4a|  
   
- **Plik nagłówka** \<intrin.h >  
+ **Plik nagłówkowy** \<intrin.h >  
   
 ## <a name="remarks"></a>Uwagi  
   
-Generuje tym wewnętrzna `movntss` instrukcji. Aby określić obsługi sprzętowej w tej instrukcji, należy wywołać `__cpuid` wewnętrzne z `InfoType=0x80000001` i sprawdź bit 6 `CPUInfo[2] (ECX)`. Ten bit jest 1, jeśli instrukcja jest obsługiwana i 0, w przeciwnym razie wartość.  
+Generuje tym wewnętrzne `movntss` instrukcji. Aby ustalić, pomoc techniczna dotycząca sprzętu dla tej instrukcji, należy wywołać `__cpuid` wewnętrzne z `InfoType=0x80000001` i sprawdź bit 6 `CPUInfo[2] (ECX)`. Ten bit jest 1, jeśli instrukcja jest obsługiwana i 0.  
   
-Po uruchomieniu kodu korzystającego z `_mm_stream_ss` wewnętrznej na sprzęcie, który nie obsługuje `movntss` instrukcji są nieprzewidywalne wyniki.  
+Jeśli uruchamiasz kod, który używa `_mm_stream_ss` wewnętrzne na sprzęcie, który nie obsługuje `movntss` instrukcji, wyniki są nieprzewidywalne.  
   
 ## <a name="example"></a>Przykład  
   
@@ -97,9 +97,9 @@ f[0] = -1, f[1] = -2
 f[2] = -3, f[3] = 3  
 ```  
   
-**KOŃCOWY określonych firmy Microsoft**  
+**END specyficzny dla Microsoft**  
 
-Copyright 2007 zaawansowane Micro urządzeń, Inc. Wszelkie prawa zastrzeżone. Odtworzyć z uprawnieniem z zaawansowanymi Micro urządzeń, Inc.  
+Copyright 2007 zaawansowane Micro urządzeń, Inc. Wszelkie prawa zastrzeżone. Odtworzyć zgoda zaawansowane Micro urządzeń, Inc.  
   
 ## <a name="see-also"></a>Zobacz też  
  [_mm_stream_sd](../intrinsics/mm-stream-sd.md)   

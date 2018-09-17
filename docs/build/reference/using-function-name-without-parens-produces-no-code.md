@@ -14,39 +14,41 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 40aed3969ae0707b07f0912d7247b49886d0319d
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 13ca43386c9ef46f526538781a91fd1a81ade537
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32373985"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45710583"
 ---
 # <a name="using-function-name-without--produces-no-code"></a>Korzystanie z nazwy funkcji bez () nie tworzy kodu
-W przypadku zadeklarowany w programie nazwy funkcji bez nawiasów kompilator nie tworzy kodu. Dzieje się tak niezależnie od tego, czy funkcja przyjmuje parametry, ponieważ kompilator oblicza adresu funkcji; Jednak ponieważ operator wywołania funkcji (")" nie jest obecny, nie wywołanie. Ten wynik jest podobny do następującego:  
-  
-```  
-// compile with /Wall to generate a warning  
-int a;  
-a;      // no code generated here either  
-```  
-  
- W programie Visual C++ nawet za pomocą ostrzeżenie poziom 4 generuje nie diagnostycznych danych wyjściowych. Ostrzeżenie nie jest generowane; żaden kod jest generowany.  
-  
- Poniższy przykładowy kod kompiluje (za pomocą ostrzeżenie) i łączy poprawnie bez błędów, ale nie tworzy kodu reference do `funcn( )`. Dla tego działał prawidłowo należy dodać operator wywołania funkcji (")".  
-  
-```  
-#include <stdio.h>  
-void funcn();  
-  
-int main() {  
-   funcn;      /* missing function call operator;   
-                  call will fail.  Use funcn() */  
-   }  
-  
-void funcn() {  
-   printf("\nHello World\n");  
-}  
-```  
-  
-## <a name="see-also"></a>Zobacz też  
- [Optymalizacja kodu](../../build/reference/optimizing-your-code.md)
+
+Jeśli nazwy funkcji zadeklarowanych w programie jest używana bez nawiasów, kompilator nie generuje kodu. Dzieje się tak niezależnie od tego, czy funkcja przyjmuje parametry, ponieważ kompilator oblicza adresu funkcji; Jednak ponieważ operator wywołania funkcji (")" nie jest obecny, nie wykonano wywołanie. Ten wynik jest podobny do następującego:
+
+```
+// compile with /Wall to generate a warning
+int a;
+a;      // no code generated here either
+```
+
+W programie Visual C++ nawet przy użyciu poziom ostrzeżeń 4 generuje żadne diagnostyczne dane wyjściowe. Nie ostrzeżenie; żaden kod jest generowany.
+
+Poniższy przykładowy kod kompiluje (z ostrzeżeniem) i poprawnie łącza bez błędów, ale nie tworzy kodu reference do `funcn( )`. Aby to działało poprawnie Dodaj operator wywołania funkcji (")".
+
+```
+#include <stdio.h>
+void funcn();
+
+int main() {
+   funcn;      /* missing function call operator;
+                  call will fail.  Use funcn() */
+   }
+
+void funcn() {
+   printf("\nHello World\n");
+}
+```
+
+## <a name="see-also"></a>Zobacz też
+
+[Optymalizacja kodu](../../build/reference/optimizing-your-code.md)

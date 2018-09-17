@@ -18,22 +18,25 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e1b51f2038266fc8d821701554f43c5889070796
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: be2c0e79106d9ee1e0d704746494d9ca9195fefe
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32370153"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45708582"
 ---
 # <a name="errorreport-dumpbinexe"></a>/ERRORREPORT (dumpbin.exe)
-```  
-/ERRORREPORT[NONE | PROMPT | QUEUE | SEND ]  
-```  
-  
-## <a name="remarks"></a>Uwagi  
- Jeśli dumpbin.exe zakończy się niepowodzeniem w czasie wykonywania, możesz użyć **/errorreport** wysyłać informacje do firmy Microsoft informacji o tych błędach wewnętrznych.  
-  
- Aby uzyskać więcej informacji na temat **/errorreport**, zobacz [/errorreport (zgłaszaj wewnętrzne błędy kompilatora)](../../build/reference/errorreport-report-internal-compiler-errors.md).  
-  
-## <a name="see-also"></a>Zobacz też  
- [Opcje DUMPBIN](../../build/reference/dumpbin-options.md)
+
+```
+/ERRORREPORT[NONE | PROMPT | QUEUE | SEND ]
+```
+
+## <a name="remarks"></a>Uwagi
+
+Jeśli dumpbin.exe zakończy się niepowodzeniem w czasie wykonywania, możesz użyć **/errorreport** do wysyłania informacji do firmy Microsoft dotyczących tych błędów wewnętrznych.
+
+Aby uzyskać więcej informacji na temat **/errorreport**, zobacz [/errorreport (zgłaszaj wewnętrzne błędy kompilatora)](../../build/reference/errorreport-report-internal-compiler-errors.md).
+
+## <a name="see-also"></a>Zobacz też
+
+[Opcje DUMPBIN](../../build/reference/dumpbin-options.md)

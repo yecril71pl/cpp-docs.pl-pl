@@ -172,12 +172,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6ebae1828d102881d866e05d41f1831e35e01a51
-ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
+ms.openlocfilehash: e623c0990477c5ee24fb4dcc782a6f243dce3337
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43679250"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45712175"
 ---
 # <a name="ctreectrl-class"></a>Klasa CTreeCtrl
 Oferuje funkcje formantu Windows typowego widoku drzewa.  
@@ -465,7 +465,7 @@ BOOL EndEditLabelNow(BOOL fCancelWithoutSave);
   
 |Parametr|Opis|  
 |---------------|-----------------|  
-|[in] *fCancelWithoutSave*|Wartość TRUE, aby odrzucić zmiany do elementu widoku drzewa przed zawarciem operacji edycji, lub wartość FALSE, aby zapisać zmiany przed zawarciem operacji elementu widoku drzewa.|  
+|*fCancelWithoutSave*|[in] Wartość TRUE, aby odrzucić zmiany do elementu widoku drzewa przed zawarciem operacji edycji, lub wartość FALSE, aby zapisać zmiany przed zawarciem operacji elementu widoku drzewa.|  
   
 ### <a name="return-value"></a>Wartość zwracana  
  Wartość TRUE, jeśli ta metoda jest kończy się pomyślnie; w przeciwnym razie wartość FALSE.  
@@ -732,7 +732,7 @@ int GetItemExpandedImageIndex(HTREEITEM hItem)const;
   
 |Parametr|Opis|  
 |---------------|-----------------|  
-|[in] *hItem*|Dojście do elementu kontrolki widoku drzewa.|  
+|*hItem*|[in] Dojście do elementu kontrolki widoku drzewa.|  
   
 ### <a name="return-value"></a>Wartość zwracana  
  Indeks obrazu do wyświetlenia, gdy określony element jest w stanie rozwiniętym.  
@@ -798,9 +798,9 @@ BOOL GetItemPartRect(
   
 |Parametr|Opis|  
 |---------------|-----------------|  
-|[in] *hItem*|Dojście do elementu kontrolki widoku drzewa.|  
-|[in] *nPart*|Identyfikator dla części. Musi być równa TVGIPR_BUTTON.|  
-|[out] *lprect —*|Wskaźnik do [Prostokąt](https://msdn.microsoft.com/library/windows/desktop/dd162897) struktury. Jeśli ta metoda zakończy się pomyślnie, struktura odbiera współrzędnych prostokąta części określony przez *hItem* i *nPart*.|  
+|*hItem*|[in] Dojście do elementu kontrolki widoku drzewa.|  
+|*nPart*|[in] Identyfikator dla części. Musi być równa TVGIPR_BUTTON.|  
+|*lprect —*|[out] Wskaźnik do [Prostokąt](https://msdn.microsoft.com/library/windows/desktop/dd162897) struktury. Jeśli ta metoda zakończy się pomyślnie, struktura odbiera współrzędnych prostokąta części określony przez *hItem* i *nPart*.|  
   
 ### <a name="return-value"></a>Wartość zwracana  
  Wartość TRUE, jeśli ta metoda jest kończy się pomyślnie; w przeciwnym razie wartość FALSE.  
@@ -879,7 +879,7 @@ UINT GetItemStateEx(HTREEITEM hItem) const;
   
 |Parametr|Opis|  
 |---------------|-----------------|  
-|[in] *hItem*|Dojście do elementu kontrolki widoku drzewa.|  
+|*hItem*|[in] Dojście do elementu kontrolki widoku drzewa.|  
   
 ### <a name="return-value"></a>Wartość zwracana  
  Rozszerzonego stanu elementu. Aby uzyskać więcej informacji, zobacz `uStateEx` członkiem [TVITEMEX](/windows/desktop/api/commctrl/ns-commctrl-tagtvitemexa) struktury.  
@@ -1322,7 +1322,7 @@ HTREEITEM MapAccIdToItem(UINT uAccId) const;
   
 |Parametr|Opis|  
 |---------------|-----------------|  
-|[in] *uAccId*|Identyfikator ułatwień dostępu dla elementu w elemencie widoku drzewa.|  
+|*uAccId*|[in] Identyfikator ułatwień dostępu dla elementu w elemencie widoku drzewa.|  
   
 ### <a name="return-value"></a>Wartość zwracana  
  Dojście do elementu widoku drzewa ( `HTREEITEM`), który odpowiada *uAccId* parametru. Aby uzyskać więcej informacji, zobacz *hItem* członkiem [TVITEMEX](/windows/desktop/api/commctrl/ns-commctrl-tagtvitemexa) struktury.  
@@ -1353,7 +1353,7 @@ UINT MapItemToAccID(HTREEITEM hItem) const;
   
 |Parametr|Opis|  
 |---------------|-----------------|  
-|[in] *hItem*|Dojście elementu widoku drzewa w formancie. Aby uzyskać więcej informacji, zobacz *hItem* członkiem [TVITEMEX](/windows/desktop/api/commctrl/ns-commctrl-tagtvitemexa) struktury.|  
+|*hItem*|[in] Dojście elementu widoku drzewa w formancie. Aby uzyskać więcej informacji, zobacz *hItem* członkiem [TVITEMEX](/windows/desktop/api/commctrl/ns-commctrl-tagtvitemexa) struktury.|  
   
 ### <a name="return-value"></a>Wartość zwracana  
  Identyfikator ułatwień dostępu, który odpowiada *hItem* parametru.  
@@ -1474,8 +1474,8 @@ BOOL SetAutoscrollInfo(
   
 |Parametr|Opis|  
 |---------------|-----------------|  
-|[in] *uPixelsPerSec*|Liczba pikseli na sekundę do przewijania.|  
-|[in] *uUpdateTime*|Interwał aktualizacji formantu.|  
+|*uPixelsPerSec*|[in] Liczba pikseli na sekundę do przewijania.|  
+|*uUpdateTime*|[in] Interwał aktualizacji formantu.|  
   
 ### <a name="return-value"></a>Wartość zwracana  
  Zawsze zwraca wartość PRAWDA.  
@@ -1555,8 +1555,8 @@ DWORD SetExtendedStyle(
   
 |Parametr|Opis|  
 |---------------|-----------------|  
-|[in] *dwExMask*|Maska bitów, który określa, które style w kontrolce widok drzewa w bieżącego ma wpływ ta metoda. Jeśli ten parametr wynosi zero, jest ignorowany i wartość *dwExStyles* parametr jest przypisany do kontrolki widoku drzewa.<br /><br /> Określ zero lub bitową kombinację (lub) style, które opisano w [style rozszerzone kontrolki widoku drzewa](/windows/desktop/Controls/tree-view-control-window-extended-styles).|  
-|[in] *dwExStyles*|Maska bitów, który określa style, które w bieżącym widoku drzewa kontrolę ustawione lub wyczyść pole wyboru.<br /><br /> Aby ustawić kombinację style, określ bitowa kombinacja (lub) style, które opisano w [style rozszerzone kontrolki widoku drzewa](/windows/desktop/Controls/tree-view-control-window-extended-styles). Aby wyczyścić zestaw stylów, określ wartość zero.|  
+|*dwExMask*|[in] Maska bitów, który określa, które style w kontrolce widok drzewa w bieżącego ma wpływ ta metoda. Jeśli ten parametr wynosi zero, jest ignorowany i wartość *dwExStyles* parametr jest przypisany do kontrolki widoku drzewa.<br /><br /> Określ zero lub bitową kombinację (lub) style, które opisano w [style rozszerzone kontrolki widoku drzewa](/windows/desktop/Controls/tree-view-control-window-extended-styles).|  
+|*dwExStyles*|[in] Maska bitów, który określa style, które w bieżącym widoku drzewa kontrolę ustawione lub wyczyść pole wyboru.<br /><br /> Aby ustawić kombinację style, określ bitowa kombinacja (lub) style, które opisano w [style rozszerzone kontrolki widoku drzewa](/windows/desktop/Controls/tree-view-control-window-extended-styles). Aby wyczyścić zestaw stylów, określ wartość zero.|  
   
 ### <a name="return-value"></a>Wartość zwracana  
  Wartość, która zawiera poprzedniej rozszerzone style kontrolki.  
@@ -1747,8 +1747,8 @@ BOOL SetItemExpandedImageIndex(
   
 |Parametr|Opis|  
 |---------------|-----------------|  
-|[in] *hItem*|Dojście do elementu kontrolki widoku drzewa.|  
-|[in] *iExpandedImage*|Indeks obrazu do wyświetlenia, gdy określony element jest w stanie rozwiniętym.|  
+|*hItem*|[in] Dojście do elementu kontrolki widoku drzewa.|  
+|*iExpandedImage*|[in] Indeks obrazu do wyświetlenia, gdy określony element jest w stanie rozwiniętym.|  
   
 ### <a name="return-value"></a>Wartość zwracana  
  Wartość TRUE, jeśli ta metoda jest kończy się pomyślnie; w przeciwnym razie wartość FALSE.  
@@ -1858,8 +1858,8 @@ BOOL SetItemStateEx(
   
 |Parametr|Opis|  
 |---------------|-----------------|  
-|[in] *hItem*|Dojście do elementu kontrolki widoku drzewa.|  
-|[in] *uStateEx*|Rozszerzonego stanu elementu. Aby uzyskać więcej informacji, zobacz `uStateEx` członkiem [TVITEMEX](/windows/desktop/api/commctrl/ns-commctrl-tagtvitemexa) struktury.|  
+|*hItem*|[in] Dojście do elementu kontrolki widoku drzewa.|  
+|*uStateEx*|[in] Rozszerzonego stanu elementu. Aby uzyskać więcej informacji, zobacz `uStateEx` członkiem [TVITEMEX](/windows/desktop/api/commctrl/ns-commctrl-tagtvitemexa) struktury.|  
   
 ### <a name="return-value"></a>Wartość zwracana  
  Wartość TRUE, jeśli ta metoda jest kończy się pomyślnie; w przeciwnym razie wartość FALSE.  
@@ -1984,7 +1984,7 @@ void ShowInfoTip(HTREEITEM hItem);
   
 |Parametr|Opis|  
 |---------------|-----------------|  
-|[in] *hItem*|Dojście do elementu widoku drzewa w formancie. Aby uzyskać więcej informacji, zobacz `hItem` członkiem [TVITEMEX](/windows/desktop/api/commctrl/ns-commctrl-tagtvitemexa) struktury.|  
+|*hItem*|[in] Dojście do elementu widoku drzewa w formancie. Aby uzyskać więcej informacji, zobacz `hItem` członkiem [TVITEMEX](/windows/desktop/api/commctrl/ns-commctrl-tagtvitemexa) struktury.|  
   
 ### <a name="remarks"></a>Uwagi  
  Aby uzyskać więcej informacji na temat różnic między etykietki narzędzi i infotips wyszukiwania dla tematu "Etykietki narzędzi i Infotips" w [sieci Microsoft Developer Network](http://go.microsoft.com/fwlink/p/?linkid=56322).  

@@ -30,12 +30,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e63f13c07ceb6220ba3dc8e7932c7357ed649188
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 8e431b09d0eab84bd6b58e64f71d5f5d98b728fa
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43199241"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45714366"
 ---
 # <a name="priorityqueue-class"></a>priority_queue — Klasa
 
@@ -51,13 +51,13 @@ class priority_queue
 ### <a name="parameters"></a>Parametry
 
 *Typ*<br/>
- Typ danych elementu, który ma być przechowywany w priority_queue —.
+Typ danych elementu, który ma być przechowywany w priority_queue —.
 
 *Kontener*<br/>
- Typ podstawowy kontener używany do implementowania priority_queue —.
+Typ podstawowy kontener używany do implementowania priority_queue —.
 
 *Compare*<br/>
- Typ, który dostarcza obiekt funkcji, która może porównać dwie wartości elementów jako klucze sortowania, aby określić ich względną kolejność w priority_queue —. Ten argument jest opcjonalny i predykat dwuelementowy `less<typename Container::value_type>` jest wartością domyślną.
+Typ, który dostarcza obiekt funkcji, która może porównać dwie wartości elementów jako klucze sortowania, aby określić ich względną kolejność w priority_queue —. Ten argument jest opcjonalny i predykat dwuelementowy `less<typename Container::value_type>` jest wartością domyślną.
 
 ## <a name="remarks"></a>Uwagi
 
@@ -253,19 +253,19 @@ priority_queue(InputIterator first, InputIterator last, const Traits&_comp, cons
 ### <a name="parameters"></a>Parametry
 
 *_ comp*<br/>
- Funkcja porównywania typu **constTraits** porządkowania elementów w priority_queue — wartość domyślna to porównanie funkcji podstawowym kontenerem.
+Funkcja porównywania typu **constTraits** porządkowania elementów w priority_queue — wartość domyślna to porównanie funkcji podstawowym kontenerem.
 
 *_Cont*<br/>
- Podstawowy kontener, którego skonstruowany priority_queue — jest kopią.
+Podstawowy kontener, którego skonstruowany priority_queue — jest kopią.
 
 *right*<br/>
- Priority_queue — której zestaw zbudowany jest kopią.
+Priority_queue — której zestaw zbudowany jest kopią.
 
 *pierwszy*<br/>
- Pozycja pierwszego elementu w zakresie elementów, które mają zostać skopiowane.
+Pozycja pierwszego elementu w zakresie elementów, które mają zostać skopiowane.
 
 *ostatni*<br/>
- Pozycja pierwszego elementu poza zakresem elementów, które mają zostać skopiowane.
+Pozycja pierwszego elementu poza zakresem elementów, które mają zostać skopiowane.
 
 ### <a name="remarks"></a>Uwagi
 
@@ -397,7 +397,7 @@ void push(const Type& val);
 ### <a name="parameters"></a>Parametry
 
 *Val*<br/>
- Element dodany na początku priority_queue —.
+Element dodany na początku priority_queue —.
 
 ### <a name="remarks"></a>Uwagi
 

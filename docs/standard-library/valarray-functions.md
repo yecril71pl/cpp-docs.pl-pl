@@ -40,12 +40,12 @@ helpviewer_keywords:
 - std::swap [C++]
 - std::tan [C++]
 - std::tanh [C++]
-ms.openlocfilehash: 855b58c9a970b569da533d84ffb21728bdf90157
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: a770e240f28dbd8e904a288beb10a9a6abe7431c
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38962474"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45715679"
 ---
 # <a name="ltvalarraygt-functions"></a>&lt;valarray —&gt; funkcji
 
@@ -69,8 +69,8 @@ valarray<Type> abs(const valarray<Type>& left);
 
 ### <a name="parameters"></a>Parametry
 
-*left*  
- Valarray wejściowego, którego elementy mają być stosowane przez funkcję elementu członkowskiego.
+*left*<br/>
+Valarray wejściowego, którego elementy mają być stosowane przez funkcję elementu członkowskiego.
 
 ### <a name="return-value"></a>Wartość zwracana
 
@@ -124,8 +124,8 @@ valarray<Type> acos(const valarray<Type>& left);
 
 ### <a name="parameters"></a>Parametry
 
-*left*  
- Valarray wejściowego, którego elementy mają być stosowane przez funkcję elementu członkowskiego.
+*left*<br/>
+Valarray wejściowego, którego elementy mają być stosowane przez funkcję elementu członkowskiego.
 
 ### <a name="return-value"></a>Wartość zwracana
 
@@ -197,8 +197,8 @@ valarray<Type> asin(const valarray<Type>& left);
 
 ### <a name="parameters"></a>Parametry
 
-*left*  
- Valarray wejściowego, którego elementy mają być stosowane przez funkcję elementu członkowskiego.
+*left*<br/>
+Valarray wejściowego, którego elementy mają być stosowane przez funkcję elementu członkowskiego.
 
 ### <a name="return-value"></a>Wartość zwracana
 
@@ -270,8 +270,8 @@ valarray<Type> atan(const valarray<Type>& left);
 
 ### <a name="parameters"></a>Parametry
 
-*left*  
- Valarray wejściowego, którego elementy mają być stosowane przez funkcję elementu członkowskiego.
+*left*<br/>
+Valarray wejściowego, którego elementy mają być stosowane przez funkcję elementu członkowskiego.
 
 ### <a name="return-value"></a>Wartość zwracana
 
@@ -352,11 +352,11 @@ valarray<Type> atan2(const Type& left, const valarray<Type>& right);
 
 ### <a name="parameters"></a>Parametry
 
-*left*  
- Stałe dane liczbowe typu lub dane wejściowe tablicy valarray której elementy w artości współrzędną y arcus tangens argumentu.
+*left*<br/>
+Stałe dane liczbowe typu lub dane wejściowe tablicy valarray której elementy w artości współrzędną y arcus tangens argumentu.
 
-*right*  
- Stałe dane liczbowe typu lub dane wejściowe tablicy valarray której elementy w artości współrzędną x arcus tangens argumentu.
+*right*<br/>
+Stałe dane liczbowe typu lub dane wejściowe tablicy valarray której elementy w artości współrzędną x arcus tangens argumentu.
 
 ### <a name="return-value"></a>Wartość zwracana
 
@@ -440,8 +440,8 @@ valarray<Type> cos(const valarray<Type>& left);
 
 ### <a name="parameters"></a>Parametry
 
-*left*  
- Valarray wejściowego, którego elementy mają być stosowane przez funkcję elementu członkowskiego.
+*left*<br/>
+Valarray wejściowego, którego elementy mają być stosowane przez funkcję elementu członkowskiego.
 
 ### <a name="return-value"></a>Wartość zwracana
 
@@ -517,8 +517,8 @@ valarray<Type> cosh(const valarray<Type>& left);
 
 ### <a name="parameters"></a>Parametry
 
-*left*  
- Valarray wejściowego, którego elementy mają być stosowane przez funkcję elementu członkowskiego.
+*left*<br/>
+Valarray wejściowego, którego elementy mają być stosowane przez funkcję elementu członkowskiego.
 
 ### <a name="return-value"></a>Wartość zwracana
 
@@ -600,8 +600,8 @@ valarray<Type> exp(const valarray<Type>& left);
 
 ### <a name="parameters"></a>Parametry
 
-*left*  
- Valarray wejściowego, którego elementy mają być stosowane przez funkcję elementu członkowskiego.
+*left*<br/>
+Valarray wejściowego, którego elementy mają być stosowane przez funkcję elementu członkowskiego.
 
 ### <a name="return-value"></a>Wartość zwracana
 
@@ -663,8 +663,8 @@ valarray<Type> log(const valarray<Type>& left);
 
 ### <a name="parameters"></a>Parametry
 
-*left*  
- Valarray wejściowego, którego elementy mają być stosowane przez funkcję elementu członkowskiego.
+*left*<br/>
+Valarray wejściowego, którego elementy mają być stosowane przez funkcję elementu członkowskiego.
 
 ### <a name="return-value"></a>Wartość zwracana
 
@@ -726,8 +726,8 @@ valarray<Type> log10(const valarray<Type>& left);
 
 ### <a name="parameters"></a>Parametry
 
-*left*  
- Valarray wejściowego, którego elementy mają być stosowane przez funkcję elementu członkowskiego.
+*left*<br/>
+Valarray wejściowego, którego elementy mają być stosowane przez funkcję elementu członkowskiego.
 
 ### <a name="return-value"></a>Wartość zwracana
 
@@ -806,11 +806,11 @@ pow(
 
 ### <a name="parameters"></a>Parametry
 
-*left*  
- Wejściowy tablicy valarray, której elementy podać base, aby każdy element ma być exponentiated.
+*left*<br/>
+Wejściowy tablicy valarray, której elementy podać base, aby każdy element ma być exponentiated.
 
-*right*  
- Wejściowy tablicy valarray, której elementy dostaw energii do każdy element ma być exponentiated.
+*right*<br/>
+Wejściowy tablicy valarray, której elementy dostaw energii do każdy element ma być exponentiated.
 
 ### <a name="return-value"></a>Wartość zwracana
 
@@ -888,8 +888,8 @@ valarray<Type> sin(const valarray<Type>& left);
 
 ### <a name="parameters"></a>Parametry
 
-*left*  
- Valarray wejściowego, którego elementy mają być stosowane przez funkcję elementu członkowskiego.
+*left*<br/>
+Valarray wejściowego, którego elementy mają być stosowane przez funkcję elementu członkowskiego.
 
 ### <a name="return-value"></a>Wartość zwracana
 
@@ -965,8 +965,8 @@ valarray<Type> sinh(const valarray<Type>& left);
 
 ### <a name="parameters"></a>Parametry
 
-*left*  
- Valarray wejściowego, którego elementy mają być stosowane przez funkcję elementu członkowskiego.
+*left*<br/>
+Valarray wejściowego, którego elementy mają być stosowane przez funkcję elementu członkowskiego.
 
 ### <a name="return-value"></a>Wartość zwracana
 
@@ -1048,8 +1048,8 @@ valarray<Type> sqrt(const valarray<Type>& left);
 
 ### <a name="parameters"></a>Parametry
 
-*left*  
- Valarray wejściowego, którego elementy mają być stosowane przez funkcję elementu członkowskiego.
+*left*<br/>
+Valarray wejściowego, którego elementy mają być stosowane przez funkcję elementu członkowskiego.
 
 ### <a name="return-value"></a>Wartość zwracana
 
@@ -1124,8 +1124,8 @@ valarray<Type> tan(const valarray<Type>& left);
 
 ### <a name="parameters"></a>Parametry
 
-*left*  
- Valarray wejściowego, którego elementy mają być stosowane przez funkcję elementu członkowskiego.
+*left*<br/>
+Valarray wejściowego, którego elementy mają być stosowane przez funkcję elementu członkowskiego.
 
 ### <a name="return-value"></a>Wartość zwracana
 
@@ -1201,8 +1201,8 @@ valarray<Type> tanh(const valarray<Type>& left);
 
 ### <a name="parameters"></a>Parametry
 
-*left*  
- Valarray wejściowego, którego elementy mają być stosowane przez funkcję elementu członkowskiego.
+*left*<br/>
+Valarray wejściowego, którego elementy mają być stosowane przez funkcję elementu członkowskiego.
 
 ### <a name="return-value"></a>Wartość zwracana
 

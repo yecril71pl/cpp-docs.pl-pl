@@ -16,32 +16,37 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 764a87459df719903f5653c59422ed492db9a077
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: c6b8c6518489e1439930996089a412f0f7a2eb65
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33370835"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45715487"
 ---
 # <a name="generated-classes-mfc-application-wizard"></a>Klasy generowane, kreator aplikacji MFC
-Ten temat zawiera listę nazw klas podstawowych oraz pliki, które generuje projektu. Domyślnie nazw są oparte na nazwę projektu, do którego określony w **okno dialogowe Nowy projekt**. Większość tych nazw można zmienić, zgodnie z opisem w tym miejscu:  
+Ten temat zawiera listę nazw klas podstawowych i pliki, które generuje projekt. Domyślnie nazwy opierają się na nazwę projektu, który określiłeś w **okno dialogowe Nowy projekt**. Większość z tych nazw można zmienić, tak jak opisano tutaj:  
   
- **Wygenerowane klasy**  
- Nazwy klas utworzone dla projektu. Domyślnie nazw są oparte na nazwę projektu. Domyślny projekt MFC tworzy C*nazwa_projektu.nazwa_modułu.nazwa_procedury*wyświetlić klasy, a C*nazwa_projektu.nazwa_modułu.nazwa_procedury*klasy aplikacji, a C*nazwa_projektu.nazwa_modułu.nazwa_procedury*klasy Doc, cmainframe — klasa i klasy CChildFrame. Wszystkie wartości na tej stronie zawiera informacje o klasie aktualnie wybrane w **wygenerowane klasy** listy.  
+- **Wygenerowane klasy**
+
+   Nazwy klas utworzone dla projektu. Domyślnie nazwy są oparte na nazwę projektu. Domyślny projekt MFC tworzy C*ProjName*wyświetlić klasy, a C*ProjName*klasy aplikacji, a C*ProjName*klasy, cmainframe — klasa i klasy CChildFrame dokumentu. Wszystkie wartości na tej stronie zawierają informacje o klasie aktualnie wybrany w **wygenerowane klasy** listy.  
   
- Aby zmienić nazwę klasy, należy użyć **Nazwa klasy** pola tekstowego.  
+   Aby zmienić nazwę klasy, należy użyć **Nazwa klasy** pola tekstowego.  
   
- **Nazwa klasy**  
- Nazwa klasy, które jest aktualnie wybrane w **wygenerowane klasy** listy. Jeśli pole jest aktywna, można zmienić nazwę klasy. Po zmianie fokusu z **Nazwa klasy** , każda zmiana nazwy wybranej klasy pojawi się w **wygenerowane klasy** listy.  
+- **Nazwa klasy**
+
+   Nazwa klasy, która jest aktualnie wybrany w **wygenerowane klasy** listy. Jeśli pole jest aktywna, można zmienić nazwę klasy. Po zmianie fokusu w **Nazwa klasy** każdą zmianę nazwy wybranej klasy pojawia się w polu **wygenerowane klasy** listy.  
   
- **w pliku .h**  
- Nazwa pliku nagłówka klasy, które jest aktualnie wybrane w **wygenerowane klasy** listy. Jeśli pole tekstowe jest aktywna, można zmienić nazwę pliku nagłówka.  
+- **plik .h**
+
+   Nazwa pliku nagłówkowego klasy, która jest aktualnie wybrany w **wygenerowane klasy** listy. Jeśli pole tekstowe jest aktywne, możesz zmienić nazwę pliku nagłówka.  
   
- **Klasa podstawowa**  
- Nazwa klasy podstawowej aktualnie wybranej klasy w **wygenerowane klasy** listy. Jeśli pole jest aktywna, można wybrać z listy innej klasy dla klasy podstawowej.  
+- **Klasa bazowa**
+
+   Nazwa klasy bazowej klasy aktualnie wybranego w **wygenerowane klasy** listy. Jeśli okno jest aktywne, możesz wybierz z listy innej klasy dla klasy podstawowej.  
   
- **plik .cpp**  
- Nazwa pliku źródła kodu, który jest skojarzony z wybranej klasy. Jeśli pole tekstowe jest aktywna, można zmienić nazwę pliku implementacji.  
+- **Plik CPP**
+
+   Nazwa pliku źródła kodu, który jest skojarzony z wybraną klasę. Jeśli pole tekstowe jest aktywne, możesz zmienić nazwę pliku implementacji.  
   
 ## <a name="see-also"></a>Zobacz też  
  [Funkcje zaawansowane, Kreator aplikacji MFC](../../mfc/reference/advanced-features-mfc-application-wizard.md)   
