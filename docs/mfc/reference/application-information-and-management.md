@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b6793cbb120b44456a880a47ffd114c346662376
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: a3aee777cf7d003beb2d1f76d57bf029d358aba6
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43208888"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45726794"
 ---
 # <a name="application-information-and-management"></a>Informacje o aplikacji i zarządzanie nią
 Podczas pisania aplikacji, Utwórz jeden [CWinApp](../../mfc/reference/cwinapp-class.md)-pochodnych obiektu. Czasami możesz chcieć uzyskać informacje na temat tego obiektu wynikające ze poza `CWinApp`-pochodnych obiektu. Lub może być wymagany dostęp do innych obiektów globalnych "Manager".
@@ -406,8 +406,8 @@ Określa, czy dany okna jest obiekt w ramce rozszerzonej.
 BOOL AFXAPI AfxIsExtendedFrameClass( CWnd* pWnd );  
 ```
 ### <a name="parameters"></a>Parametry  
- [in] *pWnd*  
- Wskaźnik do obiektu, który jest tworzony na podstawie `CWnd`.  
+*pWnd*<br/>
+[in] Wskaźnik do obiektu, który jest tworzony na podstawie `CWnd`.  
    
 ### <a name="return-value"></a>Wartość zwracana  
  Wartość TRUE, jeśli podana okno jest obiekt w ramce rozszerzone; w przeciwnym razie wartość FALSE.  
@@ -442,8 +442,8 @@ Określa, czy dany okna jest obiekt paska narzędzi.
 BOOL AFXAPI AfxIsMFCToolBar(CWnd* pWnd);  
 ```
 ### <a name="parameters"></a>Parametry  
- [in] *pWnd*  
- Wskaźnik do obiektu, który jest tworzony na podstawie `CWnd`.  
+*pWnd*<br/>
+[in] Wskaźnik do obiektu, który jest tworzony na podstawie `CWnd`.  
    
 ### <a name="return-value"></a>Wartość zwracana  
  Wartość TRUE, jeśli podana okna jest obiektem paska narzędzi w przeciwnym razie wartość FALSE.  
@@ -636,8 +636,8 @@ void AFXAPI AfxSetPerUserRegistration(BOOL bEnable);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *bWłączenie*  
- Wartość TRUE wskazuje, że informacje rejestru zostaje skierowany do węzła HKCU; Wartość FALSE wskazuje, że aplikacja zapisze informacje rejestru do węzła domyślnego. Węzeł domyślny jest **HKEY_CLASSES_ROOT** ( **HKCR**).  
+*bWłączenie*<br/>
+[in] Wartość TRUE wskazuje, że informacje rejestru zostaje skierowany do węzła HKCU; Wartość FALSE wskazuje, że aplikacja zapisze informacje rejestru do węzła domyślnego. Węzeł domyślny jest **HKEY_CLASSES_ROOT** ( **HKCR**).  
   
 ### <a name="remarks"></a>Uwagi  
 

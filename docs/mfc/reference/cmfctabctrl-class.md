@@ -114,12 +114,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 758b2039168825ec95a14b84b1c4c589618e7c24
-ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
+ms.openlocfilehash: ad50deb1cb500abb532acac8c3c0d035c37b87ce
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43680107"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45726443"
 ---
 # <a name="cmfctabctrl-class"></a>Klasa CMFCTabCtrl
 `CMFCTabCtrl` Klasa oferuje funkcję dla formantu zakładki. Kontrolka karty wyświetla dokujące okno z płaskimi lub trójwymiarowymi kartami na górze i dole. Karty mogą wyświetlać tekst i obraz oraz zmieniać kolor, gdy jest ona aktywna.  
@@ -265,8 +265,8 @@ void ActivateMDITab(int nTab = -1);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *nTab*  
- Liczony od zera indeks karty do wyświetlania lub wartość -1, aby określić aktualnie aktywnej karty.  
+*nTab*<br/>
+[in] Liczony od zera indeks karty do wyświetlania lub wartość -1, aby określić aktualnie aktywnej karty.  
   
 ##  <a name="allowdestroyemptytabbedpane"></a>  CMFCTabCtrl::AllowDestroyEmptyTabbedPane  
  Aby uzyskać więcej informacji, zobacz kod źródłowy znajdujący się w **VC\\atlmfc\\src\\mfc** folder instalacji programu Visual Studio.  
@@ -288,8 +288,8 @@ void AutoSizeWindow(BOOL bAutoSize = TRUE);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *bAutoSize*  
- Wartość TRUE, aby automatycznie zmieniać rozmiar kartę formantu windows; w przeciwnym razie wartość FALSE. Wartość domyślna to TRUE.  
+*bAutoSize*<br/>
+[in] Wartość TRUE, aby automatycznie zmieniać rozmiar kartę formantu windows; w przeciwnym razie wartość FALSE. Wartość domyślna to TRUE.  
   
 ### <a name="remarks"></a>Uwagi  
   
@@ -307,23 +307,23 @@ BOOL Create(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *stylu*  
- Styl kontrolki karty. Aby uzyskać więcej informacji zobacz uwagi.  
+*Styl*<br/>
+[in] Styl kontrolki karty. Aby uzyskać więcej informacji zobacz uwagi.  
   
- [in] *rect*  
- Prostokąt, który granic formantu karty.  
+*Rect*<br/>
+[in] Prostokąt, który granic formantu karty.  
   
- [in] *pParentWnd*  
- Wskaźnik do okna nadrzędnego. Nie może mieć wartości NULL.  
+*pParentWnd*<br/>
+[in] Wskaźnik do okna nadrzędnego. Nie może mieć wartości NULL.  
   
- [in] *nID*  
- Identyfikator formantu karty.  
+*nID*<br/>
+[in] Identyfikator formantu karty.  
   
- [in] *lokalizacji*  
- Położenie karty. Wartość domyślna to LOCATION_BOTTOM. Aby uzyskać więcej informacji zobacz uwagi.  
+*Lokalizacja*<br/>
+[in] Położenie karty. Wartość domyślna to LOCATION_BOTTOM. Aby uzyskać więcej informacji zobacz uwagi.  
   
- [in] *bCloseBtn*  
- Wartość TRUE, aby wyświetlić przycisk zamknięcia na karcie; w przeciwnym razie wartość FALSE. Wartość domyślna to FALSE.  
+*bCloseBtn*<br/>
+[in] Wartość TRUE, aby wyświetlić przycisk zamknięcia na karcie; w przeciwnym razie wartość FALSE. Wartość domyślna to FALSE.  
   
 ### <a name="return-value"></a>Wartość zwracana  
  Wartość TRUE, jeśli to się powiedzie; w przeciwnym razie wartość FALSE.  
@@ -362,8 +362,8 @@ virtual void CalcRectEdit(CRect& rectEdit);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *rectEdit*  
- Prostokąt, który określa obszar karty.  
+*rectEdit*<br/>
+[in] Prostokąt, który określa obszar karty.  
   
 ### <a name="remarks"></a>Uwagi  
  Ta metoda jest wywoływana, gdy zmienią się etykieta karty. Ta metoda deflates lewej i prawej krawędzi prostokąta określony przez połowę Bieżąca wysokość karty i deflates górą a dołem o jedną jednostkę.  
@@ -376,8 +376,8 @@ void EnableActiveTabCloseButton(BOOL bEnable=TRUE);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *bWłączenie*  
- Wartość TRUE, aby wyświetlić przycisk Zamknij, na karcie aktywne; Wartość FALSE, aby wyświetlić przycisk zamykania w prawym górnym rogu obszaru karty. Wartość domyślna to TRUE.  
+*bWłączenie*<br/>
+[in] Wartość TRUE, aby wyświetlić przycisk Zamknij, na karcie aktywne; Wartość FALSE, aby wyświetlić przycisk zamykania w prawym górnym rogu obszaru karty. Wartość domyślna to TRUE.  
   
 ##  <a name="enableinplaceedit"></a>  CMFCTabCtrl::EnableInPlaceEdit  
  Włącza lub wyłącza można edytować etykiet.  
@@ -387,8 +387,8 @@ virtual void EnableInPlaceEdit(BOOL bEnable);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *bWłączenie*  
- Wartość TRUE, aby włączyć kartę można edytować etykiet. Wartość FALSE, aby wyłączyć kartę można edytować etykiet.  
+*bWłączenie*<br/>
+[in] Wartość TRUE, aby włączyć kartę można edytować etykiet. Wartość FALSE, aby wyłączyć kartę można edytować etykiet.  
   
 ### <a name="remarks"></a>Uwagi  
   
@@ -400,8 +400,8 @@ void EnableTabDocumentsMenu(BOOL bEnable=TRUE);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *bWłączenie*  
- Wartość TRUE, aby wyświetlić menu podręczne okno z kartami etykiet; Wartość FALSE, aby wyświetlić przyciski przewijania do przodu i do tyłu. Wartość domyślna to TRUE.  
+*bWłączenie*<br/>
+[in] Wartość TRUE, aby wyświetlić menu podręczne okno z kartami etykiet; Wartość FALSE, aby wyświetlić przyciski przewijania do przodu i do tyłu. Wartość domyślna to TRUE.  
   
 ### <a name="remarks"></a>Uwagi  
  Gdy użytkownik kliknie etykietę kartę, struktura wyświetla odpowiednie okno z kartami. Jeśli etykieta karty jest widoczny, bez konieczności zmieniania położenia otwierania okna z kartami. Jeśli użytkownik wybiera dokument z menu podręcznego i odpowiednie okno z kartami jest poza ekranem, okien z kartami staje się pierwsza karta.  
@@ -414,8 +414,8 @@ virtual BOOL EnsureVisible(int iTab);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *iTab*  
- Liczony od zera indeks karty.  
+*iTab*<br/>
+[in] Liczony od zera indeks karty.  
   
 ### <a name="return-value"></a>Wartość zwracana  
  Wartość TRUE, jeśli kończy się pomyślnie; FAŁSZ Jeśli *iTab* indeks parametru jest nieprawidłowa.  
@@ -431,8 +431,8 @@ static HICON __stdcall GetDocumentIcon(UINT nCmdID);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *nCmdID*  
- Identyfikator polecenia na karcie w menu podręcznym okien z kartami.  
+*nCmdID*<br/>
+[in] Identyfikator polecenia na karcie w menu podręcznym okien z kartami.  
   
 ### <a name="return-value"></a>Wartość zwracana  
  Uchwyt obrazu mapy bitowej.  
@@ -483,11 +483,11 @@ void GetTabArea(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [out] *rectTabAreaTop*  
- Po powrocie z tej metody, ta dokumentacja zawiera prostokąt, który zakresem obszaru etykiety górnej karty. Prostokąt stanie się we współrzędnych klienta. Ta dokumentacja jest pusta, jeśli nie obszaru etykieta karty istnieje w górnej części kontrolki karty.  
+*rectTabAreaTop*<br/>
+[out] Po powrocie z tej metody, ta dokumentacja zawiera prostokąt, który zakresem obszaru etykiety górnej karty. Prostokąt stanie się we współrzędnych klienta. Ta dokumentacja jest pusta, jeśli nie obszaru etykieta karty istnieje w górnej części kontrolki karty.  
   
- [out] *rectTabAreaBottom*  
- Gdy metoda zwróci wartość, ta dokumentacja obejmuje prostokąt, który granic dolny obszar okna etykieta karty. Prostokąt stanie się we współrzędnych klienta. Ta dokumentacja jest pusta, jeśli nie obszaru etykieta karty istnieje w dolnej części kontrolki karty.  
+*rectTabAreaBottom*<br/>
+[out] Gdy metoda zwróci wartość, ta dokumentacja obejmuje prostokąt, który granic dolny obszar okna etykieta karty. Prostokąt stanie się we współrzędnych klienta. Ta dokumentacja jest pusta, jeśli nie obszaru etykieta karty istnieje w dolnej części kontrolki karty.  
   
 ### <a name="remarks"></a>Uwagi  
  Metoda ta jest przydatna do ustalenia rozmiaru i położenia wartości obszar karty w oknie z kartami.  
@@ -523,8 +523,8 @@ virtual void GetTabsRect(CRect& rect) const;
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [out] *rect*  
- Po powrocie z tej metody *prostokąt* parametr zawiera prostokąt, który zakresem wartości obszar karty.  
+*Rect*<br/>
+[out] Po powrocie z tej metody *prostokąt* parametr zawiera prostokąt, który zakresem wartości obszar karty.  
   
 ##  <a name="getwndarea"></a>  CMFCTabCtrl::GetWndArea  
  Pobiera granic obszaru klienta do kontroli bieżącej karcie.  
@@ -534,8 +534,8 @@ void GetWndArea(CRect& rect) const;
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [out w] *rect*  
- Gdy metoda zwróci wartość, ten parametr zawiera prostokąt, który jest zakresem bieżącego formant karty.  
+*Rect*<br/>
+[out w] Gdy metoda zwróci wartość, ten parametr zawiera prostokąt, który jest zakresem bieżącego formant karty.  
   
 ### <a name="remarks"></a>Uwagi  
   
@@ -557,8 +557,8 @@ void HideInactiveWindow(BOOL bHide = TRUE);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *bHide*  
- Wartość TRUE, aby nie wyświetlać nieaktywnego okna; Wartość FALSE, aby wyświetlić nieaktywnego okna. Wartość domyślna to TRUE.  
+*bHide*<br/>
+[in] Wartość TRUE, aby nie wyświetlać nieaktywnego okna; Wartość FALSE, aby wyświetlić nieaktywnego okna. Wartość domyślna to TRUE.  
   
 ### <a name="remarks"></a>Uwagi  
   
@@ -570,8 +570,8 @@ void HideNoTabs(BOOL bHide=TRUE);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *bHide*  
- Wartość TRUE powoduje włączenie rysowania wartości obszar karty; Wartość FALSE umożliwia wyłączenie rysowania. Wartość domyślna to TRUE.  
+*bHide*<br/>
+[in] Wartość TRUE powoduje włączenie rysowania wartości obszar karty; Wartość FALSE umożliwia wyłączenie rysowania. Wartość domyślna to TRUE.  
   
 ### <a name="remarks"></a>Uwagi  
   
@@ -583,8 +583,8 @@ virtual void HideSingleTab(BOOL bHide=TRUE);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *bHide*  
- Wartość TRUE, aby nie Rysuj kartę dla jednego z kartami okna; Wartość FALSE, aby rysować na pojedynczej karcie. Wartość domyślna to TRUE.  
+*bHide*<br/>
+[in] Wartość TRUE, aby nie Rysuj kartę dla jednego z kartami okna; Wartość FALSE, aby rysować na pojedynczej karcie. Wartość domyślna to TRUE.  
   
 ### <a name="remarks"></a>Uwagi  
   
@@ -749,8 +749,8 @@ BOOL ModifyTabStyle(Style style);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *stylu*  
- Jedna z wartości wyliczenia, które określa wygląd kontrolki karty. Aby uzyskać więcej informacji zobacz tabelę w uwagi.  
+*Styl*<br/>
+[in] Jedna z wartości wyliczenia, które określa wygląd kontrolki karty. Aby uzyskać więcej informacji zobacz tabelę w uwagi.  
   
 ### <a name="return-value"></a>Wartość zwracana  
  Zawsze TRUE.  
@@ -780,14 +780,14 @@ virtual DROPEFFECT OnDragEnter(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *pDataObject*  
- Wskazuje obiekt danych, który zawiera dane, które użytkownik przeciąga.  
+*pDataObject*<br/>
+[in] Wskazuje obiekt danych, który zawiera dane, które użytkownik przeciąga.  
   
- [in] *dwKeyState*  
- Zawiera stan klawisze modyfikujące. Ten parametr jest bitową kombinacją (lub) następujące wartości: MK_CONTROL, MK_SHIFT, MK_ALT MK_LBUTTON, MK_MBUTTON i MK_RBUTTON. Aby uzyskać więcej informacji, zobacz **parametry komunikatu** części [o wejście myszy](/windows/desktop/inputdev/about-mouse-input).  
+*dwKeyState*<br/>
+[in] Zawiera stan klawisze modyfikujące. Ten parametr jest bitową kombinacją (lub) następujące wartości: MK_CONTROL, MK_SHIFT, MK_ALT MK_LBUTTON, MK_MBUTTON i MK_RBUTTON. Aby uzyskać więcej informacji, zobacz **parametry komunikatu** części [o wejście myszy](/windows/desktop/inputdev/about-mouse-input).  
   
- [in] *punktu*  
- Zawiera bieżącą lokalizację kursor w współrzędne klienta.  
+*Punkt*<br/>
+[in] Zawiera bieżącą lokalizację kursor w współrzędne klienta.  
   
 ### <a name="return-value"></a>Wartość zwracana  
  Zawsze DROPEFFECT_NONE, co oznacza, że miejsca docelowego nie może akceptować dane.  
@@ -808,14 +808,14 @@ virtual DROPEFFECT OnDragOver(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *pDataObject*  
- Wskaźnik do [COleDataObject](../../mfc/reference/coledataobject-class.md) obiekt, który jest przeciągany nad element docelowy upuszczania.  
+*pDataObject*<br/>
+[in] Wskaźnik do [COleDataObject](../../mfc/reference/coledataobject-class.md) obiekt, który jest przeciągany nad element docelowy upuszczania.  
   
- [in] *dwKeyState*  
- Stan klawisze modyfikujące, które jest bitową kombinacją (lub) MK_CONTROL, MK_SHIFT, MK_ALT MK_LBUTTON, MK_MBUTTON i MK_RBUTTON. Aby uzyskać więcej informacji, zobacz "Parametry komunikatu" w [o wejście myszy](/windows/desktop/inputdev/about-mouse-input).  
+*dwKeyState*<br/>
+[in] Stan klawisze modyfikujące, które jest bitową kombinacją (lub) MK_CONTROL, MK_SHIFT, MK_ALT MK_LBUTTON, MK_MBUTTON i MK_RBUTTON. Aby uzyskać więcej informacji, zobacz "Parametry komunikatu" w [o wejście myszy](/windows/desktop/inputdev/about-mouse-input).  
   
- [in] *punktu*  
- Bieżące położenie myszy.  
+*Punkt*<br/>
+[in] Bieżące położenie myszy.  
   
 ### <a name="return-value"></a>Wartość zwracana  
  Zawsze DROPEFFECT_NONE.  
@@ -831,8 +831,8 @@ virtual void OnShowTabDocumentsMenu(CPoint point);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *punktu*  
- Współrzędne miejsca wyświetlić menu podręcznego.  
+*Punkt*<br/>
+[in] Współrzędne miejsca wyświetlić menu podręcznego.  
   
 ### <a name="remarks"></a>Uwagi  
   
@@ -844,8 +844,8 @@ void SetActiveInMDITabGroup(BOOL bActive);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *bWykonywanie aktywnych*  
- Wartość TRUE, aby wprowadzić bieżącej karty aktywną kartę; Wartość FAŁSZ powoduje dezaktywowania bieżącej karty.  
+*bWykonywanie aktywnych*<br/>
+[in] Wartość TRUE, aby wprowadzić bieżącej karty aktywną kartę; Wartość FAŁSZ powoduje dezaktywowania bieżącej karty.  
   
 ### <a name="remarks"></a>Uwagi  
  Można organizować wiele okien dokumentu do obu grup kartę pionową lub poziomą i łatwe manipulowanie dokumentami z jednej karty, grupy, do innego.  
@@ -858,8 +858,8 @@ virtual BOOL SetActiveTab(int iTab);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *iTab*  
- Określa liczony od zera indeks kartę aby aktywować.  
+*iTab*<br/>
+[in] Określa liczony od zera indeks kartę aby aktywować.  
   
 ### <a name="return-value"></a>Wartość zwracana  
  Wartość TRUE, jeśli określony kartę zostało aktywowane; Wartość FALSE, jeśli określony *iTab* wartość parametru jest nieprawidłowa.  
@@ -877,8 +877,8 @@ void SetActiveTabBoldFont(BOOL bIsBold=TRUE);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *bIsBold*  
- Wartość TRUE, aby użyć pogrubioną czcionką, aby wyświetlić etykiety aktywną kartę; Wartość FAŁSZ, aby użyć standardowych czcionki, aby wyświetlić etykiety. Wartość domyślna to TRUE.  
+*bIsBold*<br/>
+[in] Wartość TRUE, aby użyć pogrubioną czcionką, aby wyświetlić etykiety aktywną kartę; Wartość FAŁSZ, aby użyć standardowych czcionki, aby wyświetlić etykiety. Wartość domyślna to TRUE.  
   
 ### <a name="remarks"></a>Uwagi  
   
@@ -890,8 +890,8 @@ void SetDrawFrame(BOOL bDraw=TRUE);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *bDraw*  
- Wartość TRUE, aby wyświetlić ramki prostokąt wokół osadzonym pasku; w przeciwnym razie wartość FALSE. Wartość domyślna to TRUE.  
+*bDraw*<br/>
+[in] Wartość TRUE, aby wyświetlić ramki prostokąt wokół osadzonym pasku; w przeciwnym razie wartość FALSE. Wartość domyślna to TRUE.  
   
 ### <a name="remarks"></a>Uwagi  
   
@@ -905,11 +905,11 @@ void SetFlatFrame(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *bFlat*  
- Wartość TRUE, aby narysować ramki płaskiej (2D) wokół wartości obszar karty; Wartość FAŁSZ, aby narysować trójwymiarowej ramki (3). Wartość domyślna to TRUE.  
+*bFlat*<br/>
+[in] Wartość TRUE, aby narysować ramki płaskiej (2D) wokół wartości obszar karty; Wartość FAŁSZ, aby narysować trójwymiarowej ramki (3). Wartość domyślna to TRUE.  
   
- [in] *bRepaint*  
- Wartość TRUE, aby od razu; ponownie narysować okno w przeciwnym razie wartość FALSE. Wartość domyślna to TRUE.  
+*bRepaint*<br/>
+[in] Wartość TRUE, aby od razu; ponownie narysować okno w przeciwnym razie wartość FALSE. Wartość domyślna to TRUE.  
   
 ### <a name="remarks"></a>Uwagi  
   
@@ -926,17 +926,17 @@ virtual BOOL SetImageList(HIMAGELIST hImageList);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *uiID*  
- Identyfikator zasobu mapy bitowej, który zawiera listy obrazów.  
+*uiID*<br/>
+[in] Identyfikator zasobu mapy bitowej, który zawiera listy obrazów.  
   
- [in] *cx*  
- Szerokość każdej obrazu w pikselach. Wartość domyślna to 15.  
+*CX*<br/>
+[in] Szerokość każdej obrazu w pikselach. Wartość domyślna to 15.  
   
- [in] *clrTransp*  
- Kolor przezroczysty obraz. Części obrazu, które są ten kolor ma być przezroczysty. Wartość domyślna to amarantowy kolorów, RGB(255,0,255).  
+*clrTransp*<br/>
+[in] Kolor przezroczysty obraz. Części obrazu, które są ten kolor ma być przezroczysty. Wartość domyślna to amarantowy kolorów, RGB(255,0,255).  
   
- [in] *hImageList*  
- Dojście do listy wstępnie załadowanych obrazów.  
+*hImageList*<br/>
+[in] Dojście do listy wstępnie załadowanych obrazów.  
   
 ### <a name="return-value"></a>Wartość zwracana  
  Wartość TRUE, jeśli ta metoda zakończy się pomyślnie. Wartość FALSE, jeśli kontrolka karty jest tworzona przy użyciu prostego stylu lub pierwsze przeciążenie metody nie można załadować mapy bitowej, który jest określony przez *uiID* parametru.  
@@ -954,8 +954,8 @@ void SetResizeMode(ResizeMode resizeMode);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *resizeMode*  
- Jedną z `CMFCTabCtrl::ResizeMode` wartości wyliczenia określających, w jaki sposób można zmienić rozmiar formantu karty. Aby uzyskać listę możliwych wartości zobacz tabelę w uwagi.  
+*resizeMode*<br/>
+[in] Jedną z `CMFCTabCtrl::ResizeMode` wartości wyliczenia określających, w jaki sposób można zmienić rozmiar formantu karty. Aby uzyskać listę możliwych wartości zobacz tabelę w uwagi.  
   
 ### <a name="remarks"></a>Uwagi  
  *ResizeMode* parametr może być jedną z następujących `ResizeMode` wartości wyliczenia.  
@@ -974,8 +974,8 @@ void SetTabMaxWidth(int nTabMaxWidth);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *nTabMaxWidth*  
- Karta maksymalną szerokość w pikselach.  
+*nTabMaxWidth*<br/>
+[in] Karta maksymalną szerokość w pikselach.  
   
 ### <a name="remarks"></a>Uwagi  
  Ta metoda umożliwia ograniczenie szerokości każda karta w oknie z kartami. Ta metoda jest przydatna, jeśli karty będą miały bardzo długich etykiet. [CMFCTabCtrl](../../mfc/reference/cmfctabctrl-class.md) konstruktora klasy inicjuje szerokość maksymalna kartę na 0, co oznacza w rzeczywistości szerokość nie jest ograniczona.  
@@ -988,8 +988,8 @@ void StopResize(BOOL bCancel);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *banulowanie*  
- Wartość TRUE, aby porzucić bieżącej operacji zmiany rozmiaru; Wartość FALSE, aby zakończyć bieżący rozmiar operacji. W obu przypadkach ramach zatrzymuje się Rysowanie prostokąta zmiany rozmiaru.  
+*banulowanie*<br/>
+[in] Wartość TRUE, aby porzucić bieżącej operacji zmiany rozmiaru; Wartość FALSE, aby zakończyć bieżący rozmiar operacji. W obu przypadkach ramach zatrzymuje się Rysowanie prostokąta zmiany rozmiaru.  
   
 ##  <a name="synchronizescrollbar"></a>  CMFCTabCtrl::SynchronizeScrollBar  
  Rysuje poziomy pasek przewijania na formant karty, który wyświetla płaską karty.  
@@ -999,8 +999,8 @@ BOOL SynchronizeScrollBar(SCROLLINFO* pScrollInfo = NULL);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [out] *pScrollInfo*  
- Wskaźnik do [SCROLLINFO](/windows/desktop/api/winuser/ns-winuser-tagscrollinfo) struktury lub o wartości NULL. Gdy metoda zwróci wartość, a ten parametr nie ma wartości NULL, struktura zawiera wszystkie parametry paska przewijania. Wartością domyślną jest NULL.  
+*pScrollInfo*<br/>
+[out] Wskaźnik do [SCROLLINFO](/windows/desktop/api/winuser/ns-winuser-tagscrollinfo) struktury lub o wartości NULL. Gdy metoda zwróci wartość, a ten parametr nie ma wartości NULL, struktura zawiera wszystkie parametry paska przewijania. Wartością domyślną jest NULL.  
   
 ### <a name="return-value"></a>Wartość zwracana  
  Wartość TRUE, jeśli ta metoda zakończy się pomyślnie; w przeciwnym razie wartość FALSE.  

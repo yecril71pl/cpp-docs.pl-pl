@@ -104,12 +104,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4d3c7f9e1d638c547b2b340a610a52af9318c714
-ms.sourcegitcommit: b4432d30f255f0cb58dce69cbc8cbcb9d44bc68b
+ms.openlocfilehash: e8442f771cda2b7130a60148582288a31977fa59
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/13/2018
-ms.locfileid: "45535408"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45726638"
 ---
 # <a name="cedit-class"></a>Klasa CEdit
 Oferuje funkcje formantu edycji Windows.  
@@ -445,11 +445,11 @@ CString GetCueBanner() const;
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [out] *lpszText*  
- Wskaźnik do ciągu, który zawiera tekst wskaźnika.  
+*lpszText*<br/>
+[out] Wskaźnik do ciągu, który zawiera tekst wskaźnika.  
   
- [in] *cchText*  
- Liczba znaków, które mogą być odbierane. Liczba ta obejmuje kończącego znaku NULL.  
+*cchText*<br/>
+[in] Liczba znaków, które mogą być odbierane. Liczba ta obejmuje kończącego znaku NULL.  
   
 ### <a name="return-value"></a>Wartość zwracana  
  Pierwsze przeciążenie wartość TRUE jeśli metoda się powiedzie; w przeciwnym razie wartość FALSE.  
@@ -513,8 +513,8 @@ BOOL GetHighlight(
   
 |Parametr|Opis|  
 |---------------|-----------------|  
-|[out] *pichStart*|Liczony od zera indeks pierwszego wystąpienia znaku w zakresie tekst, który zostanie wyróżniona.|  
-|[out] *pichEnd*|Liczony od zera indeks ostatniego znaku w zakresie tekst, który zostanie wyróżniona.|  
+|*pichStart*|[out] Liczony od zera indeks pierwszego wystąpienia znaku w zakresie tekst, który zostanie wyróżniona.|  
+|*pichEnd*|[out] Liczony od zera indeks ostatniego znaku w zakresie tekst, który zostanie wyróżniona.|  
   
 ### <a name="return-value"></a>Wartość zwracana  
  Wartość TRUE, jeśli ta metoda jest kończy się pomyślnie; w przeciwnym razie wartość FALSE.  
@@ -917,11 +917,11 @@ BOOL SetCueBanner(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *lpszText*  
- Wskaźnik na ciąg, który zawiera wskaźnik do wyświetlenia w kontrolce edycji.  
+*lpszText*<br/>
+[in] Wskaźnik na ciąg, który zawiera wskaźnik do wyświetlenia w kontrolce edycji.  
   
- [in] *fDrawWhenFocused*  
- W przypadku wartości FAŁSZ transparent wskaźnika nie jest narysowany, gdy użytkownik kliknie w formancie edycji i przenosi fokus na formant.  
+*fDrawWhenFocused*<br/>
+[in] W przypadku wartości FAŁSZ transparent wskaźnika nie jest narysowany, gdy użytkownik kliknie w formancie edycji i przenosi fokus na formant.  
   
  W przypadku opcji TRUE transparent wskaźnika jest rysowana nawet wtedy, gdy kontrolka jest ustawiony fokus. Transparent sygnalizacji znika, gdy użytkownik rozpoczyna się do typu w kontrolce.  
   
@@ -981,8 +981,8 @@ void SetHighlight(
   
 |Parametr|Opis|  
 |---------------|-----------------|  
-|[in] *ichStart*|Liczony od zera indeks pierwszego wystąpienia znaku w zakresie tekstu, aby wyróżnić.|  
-|[in] *ichEnd*|Liczony od zera indeks ostatniego znaku w zakresie tekstu, aby wyróżnić.|  
+|*ichStart*|[in] Liczony od zera indeks pierwszego wystąpienia znaku w zakresie tekstu, aby wyróżnić.|  
+|*ichEnd*|[in] Liczony od zera indeks ostatniego znaku w zakresie tekstu, aby wyróżnić.|  
   
 ### <a name="remarks"></a>Uwagi  
  Ta metoda wysyła [EM_SETHILITE](/windows/desktop/Controls/em-sethilite) komunikat, który jest opisany w zestawie Windows SDK.  Ta metoda wysyła [EM_SETHILITE](/windows/desktop/Controls/em-sethilite) komunikat, który jest opisany w zestawie Windows SDK. Zarówno `SetHighlight` i `GetHighlight` są włączone, UNICODE kompilacji tylko. 
@@ -1245,10 +1245,10 @@ BOOL ShowBalloonTip(
   
 |Parametr|Opis|  
 |---------------|-----------------|  
-|[in] *pEditBalloonTip*|Wskaźnik do [EDITBALLOONTIP](/windows/desktop/api/commctrl/ns-commctrl-_tageditballoontip) strukturę, która opisuje Porada dymek.|  
-|[in] *lpszTitle*|Wskaźnik na ciąg Unicode, który zawiera tytuł Porada dymek.|  
-|[in] *lpszText*|Wskaźnik do ciągu Unicode, który zawiera tekst porady dymek.|  
-|[in] *ttiIcon*|**INT** określająca typ ikonę, aby skojarzyć z końcówką dymek. Wartość domyślna to TTI_NONE. Aby uzyskać więcej informacji, zobacz `ttiIcon` członkiem [EDITBALLOONTIP](/windows/desktop/api/commctrl/ns-commctrl-_tageditballoontip) struktury.|  
+|*pEditBalloonTip*|[in] Wskaźnik do [EDITBALLOONTIP](/windows/desktop/api/commctrl/ns-commctrl-_tageditballoontip) strukturę, która opisuje Porada dymek.|  
+|*lpszTitle*|[in] Wskaźnik na ciąg Unicode, który zawiera tytuł Porada dymek.|  
+|*lpszText*|[in] Wskaźnik do ciągu Unicode, który zawiera tekst porady dymek.|  
+|*ttiIcon*|[in] **INT** określająca typ ikonę, aby skojarzyć z końcówką dymek. Wartość domyślna to TTI_NONE. Aby uzyskać więcej informacji, zobacz `ttiIcon` członkiem [EDITBALLOONTIP](/windows/desktop/api/commctrl/ns-commctrl-_tageditballoontip) struktury.|  
   
 ### <a name="return-value"></a>Wartość zwracana  
  Wartość TRUE, jeśli ta metoda jest kończy się pomyślnie; w przeciwnym razie wartość FALSE.  

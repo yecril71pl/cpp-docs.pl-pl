@@ -16,52 +16,54 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d502912a8aeee2e6b3782e7795f44238386e1dba
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 5a66b153a52da06cca14845b9a58fcef0f42676d
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32366978"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45725715"
 ---
 # <a name="cumulative-dependencies"></a>Zależności zbiorcze
-Zależności kumulują się w bloku opis, jeśli element docelowy jest powtarzany.  
-  
- Na przykład to ustawienie zasad,  
-  
-```Output  
-bounce.exe : jump.obj  
-bounce.exe : up.obj  
-   echo Building bounce.exe...  
-```  
-  
- jest szacowana jako to:  
-  
-```Output  
-bounce.exe : jump.obj up.obj  
-   echo Building bounce.exe...  
-```  
-  
- Wiele obiektów docelowych w wielu wierszach zależności w bloku jeden opis są oceniane tak, jakby każdego zostały określone w bloku oddzielne opis, ale obiektów docelowych, które nie znajdują się w ostatnim wierszu zależności nie należy używać poleceń bloku. NMAKE próbuje użyć reguły wnioskowania dla tych celów.  
-  
- Na przykład to ustawienie zasad,  
-  
-```Output  
-leap.exe bounce.exe : jump.obj  
-bounce.exe climb.exe : up.obj  
-   echo Building bounce.exe...  
-```  
-  
- jest szacowana jako to:  
-  
-```Output  
-  
-leap.exe : jump.obj  
-# invokes an inference rule  
-bounce.exe : jump.obj up.obj  
-   echo Building bounce.exe...  
-climb.exe : up.obj  
-   echo Building bounce.exe...  
-```  
-  
-## <a name="see-also"></a>Zobacz też  
- [Docelowe elementy](../build/targets.md)
+
+Zależności kumulują się w bloku opisu, jeśli obiekt docelowy jest powtarzany.
+
+Na przykład ten zestaw reguł
+
+```Output
+bounce.exe : jump.obj
+bounce.exe : up.obj
+   echo Building bounce.exe...
+```
+
+jest oceniane jako to:
+
+```Output
+bounce.exe : jump.obj up.obj
+   echo Building bounce.exe...
+```
+
+Wiele elementów docelowych w wielu wierszach zależności w bloku jeden opis są oceniane tak, jakby każdy zostały określone w bloku oddzielne opis, ale obiektów docelowych, które nie znajdują się w ostatnim wierszu zależności nie należy używać blok poleceń. NMAKE próbuje użyć reguły wnioskowania dla tych celów.
+
+Na przykład ten zestaw reguł
+
+```Output
+leap.exe bounce.exe : jump.obj
+bounce.exe climb.exe : up.obj
+   echo Building bounce.exe...
+```
+
+jest oceniane jako to:
+
+```Output
+
+leap.exe : jump.obj
+# invokes an inference rule
+bounce.exe : jump.obj up.obj
+   echo Building bounce.exe...
+climb.exe : up.obj
+   echo Building bounce.exe...
+```
+
+## <a name="see-also"></a>Zobacz też
+
+[Docelowe elementy](../build/targets.md)

@@ -43,12 +43,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: cc7d2b959bd8ad3ed89ae270e1f7d93406526695
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 2a0dd4f32f8c7b3a9e859e23fcc26e668fa87cdb
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43218389"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45726365"
 ---
 # <a name="popen-wpopen"></a>_popen, _wpopen
 
@@ -61,12 +61,12 @@ Tworzy potok i wykonuje polecenie.
 
 ```C
 FILE *_popen(
-const char *command,
-const char *mode
+    const char *command,
+    const char *mode
 );
 FILE *_wpopen(
-const wchar_t *command,
-const wchar_t *mode
+    const wchar_t *command,
+    const wchar_t *mode
 );
 ```
 
@@ -88,13 +88,12 @@ Aby uzyskać informacje na temat tych i innych kodów błędu, zobacz [_doserrno
 
 **_Popen —** funkcja tworzy potok i asynchronicznie wykonuje kopię zduplikowanych procesora poleceń przy użyciu określonego ciągu *polecenia*. Ciąg znaków *tryb* określa rodzaj dostępu, w następujący sposób.
 
-**"r"** proces wywołujący może odczytywać standardowe dane wyjściowe polecenia zduplikowanych przy użyciu zwróconym strumieniu.
-
-**"w"** proces wywołujący może zapisywać standardowe dane wejściowe polecenia zduplikowanych przy użyciu zwróconym strumieniu.
-
-**"b"** otwarte w trybie binarnym.
-
-**"t"** otwarte w trybie tekstowym.
+|Tryb dostępu|Opis|
+|-|-|
+|**"r"**|Proces wywołujący może odczytywać standardowe dane wyjściowe polecenia zduplikowanych przy użyciu zwróconym strumieniu.|
+|**"w"**|Proces wywołujący może zapisywać standardowe dane wejściowe polecenia zduplikowanych przy użyciu zwróconym strumieniu.|
+|**"b"**|Otwórz w trybie binarnym.|
+|**"t"**|Otwórz w trybie tekstowym.|
 
 > [!NOTE]
 > Jeśli używane w programie Windows **_popen —** funkcja zwraca wskaźnik nieprawidłowy plik, który powoduje, że program przestanie odpowiadać na czas nieokreślony. **_popen —** działa poprawnie, w aplikacji konsoli. Aby utworzyć aplikację Windows, który przekierowuje dane wejściowe i wyjściowe, zobacz [tworzenia procesu podrzędnego z przekierowanie danych wejściowych i wyjściowych](/windows/desktop/ProcThread/creating-a-child-process-with-redirected-input-and-output) w zestawie Windows SDK.

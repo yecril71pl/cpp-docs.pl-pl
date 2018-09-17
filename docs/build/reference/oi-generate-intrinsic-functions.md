@@ -1,5 +1,5 @@
 ---
-title: -OI-(Generuj funkcje wewnętrzne) | Dokumentacja firmy Microsoft
+title: -Oi (Generuj funkcje wewnętrzne) | Dokumentacja firmy Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -22,55 +22,58 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f28051f5d7aaaa4606fffa4d4c94fb2086031419
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 527f326d629bc8d41efcd73a938994570bed4d2e
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32375844"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45725923"
 ---
 # <a name="oi-generate-intrinsic-functions"></a>/Oi (Generuj funkcje wewnętrzne)
-Szybsze zastępuje niektórych funkcji wywołania z wewnętrznych lub w przeciwnym razie specjalnych formy funkcji pomagających w aplikacji.  
-  
-## <a name="syntax"></a>Składnia  
-  
-```  
-/Oi[-]  
-```  
-  
-## <a name="remarks"></a>Uwagi  
- Programy używające funkcji wewnętrznej są szybsze, ponieważ bez nakładów związanych z wywołania funkcji, ale może być większy z powodu dodatkowy kod utworzony.  
-  
- Zobacz [wewnętrzne](../../preprocessor/intrinsic.md) Aby uzyskać więcej informacji, które ma funkcje wewnętrzne formularzy.  
-  
- **/OI** jest tylko żądania do kompilatora zastąpić niektóre wywołania funkcji funkcje wewnętrzne; kompilator może wywołanie funkcji (i nie Zastąp wywołanie funkcji wewnętrznej) czy będzie zapewnia lepszą wydajność.  
-  
- **x86 Specific**  
-  
- Wewnętrzne funkcje liczb zmiennoprzecinkowych nie wykonywać żadnych specjalnych kontrole wartości wejściowe tak działają w ograniczonym zakresy danych wejściowych i mają różne wyjątków i warunków ograniczających niż procedury biblioteki o takiej samej nazwie. Za pomocą formularzy wewnętrzna wartość true oznacza utraty IEEE wyjątków i utratę `_matherr` i `errno` funkcjonalności; oznacza to drugie utraty zgodność ANSI. Jednak wewnętrzna formularze znacznie przyspieszyć floating point obciążający programy, a wiele programów problemy dotyczące zgodności są o niewielkiej wartości praktyczne.  
-  
- Można użyć [Za](../../build/reference/za-ze-disable-language-extensions.md) — opcja kompilatora do przesłonięcia generowania true wewnętrzne opcje zmiennoprzecinkowych. W takim przypadku funkcje są generowane jako procedury biblioteki, które przekazywać argumenty bezpośrednio do liczb zmiennoprzecinkowych mikroukładu zamiast wypychanie ich na stosie programu.  
-  
- **KOŃCOWY x86 określonych**  
-  
- Można również użyć [wewnętrzne](../../preprocessor/intrinsic.md) można utworzyć funkcje wewnętrzne lub [— funkcja (C/C++)](../../preprocessor/function-c-cpp.md) jawnie wymusić wywołania funkcji.  
-  
-### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Aby ustawić tę opcję kompilatora w środowisku programowania Visual Studio  
-  
-1.  Otwórz projekt **strony właściwości** okno dialogowe. Aby uzyskać więcej informacji, zobacz [Praca z właściwościami projektu](../../ide/working-with-project-properties.md).  
-  
-2.  Kliknij przycisk **C/C++** folderu.  
-  
-3.  Kliknij przycisk **optymalizacji** strony właściwości.  
-  
-4.  Modyfikowanie **Włącz funkcje wewnętrzne** właściwości.  
-  
-### <a name="to-set-this-compiler-option-programmatically"></a>Aby programowo ustawić tę opcję kompilatora  
-  
--   Zobacz <xref:Microsoft.VisualStudio.VCProjectEngine.VCCLCompilerTool.EnableIntrinsicFunctions%2A>.  
-  
-## <a name="see-also"></a>Zobacz też  
- [/O opcje (Optymalizuj kod)](../../build/reference/o-options-optimize-code.md)   
- [Opcje kompilatora](../../build/reference/compiler-options.md)   
- [Ustawianie opcji kompilatora](../../build/reference/setting-compiler-options.md)   
- [Funkcje wewnętrzne kompilatora](../../intrinsics/compiler-intrinsics.md)
+
+Zastępuje niektórych funkcji wywołuje w formularzach wewnętrzne lub w przeciwnym razie specjalnych funkcji, które pomagają aplikacji są wykonywane szybciej.
+
+## <a name="syntax"></a>Składnia
+
+```
+/Oi[-]
+```
+
+## <a name="remarks"></a>Uwagi
+
+Programy, które używają funkcje wewnętrzne są szybsze, ponieważ nie masz obciążenie związane z wywołania funkcji, ale może być większy ze względu na dodatkowy kod utworzony.
+
+Zobacz [wewnętrzne](../../preprocessor/intrinsic.md) Aby uzyskać więcej informacji, na którym funkcje mają wewnętrzne formularzy.
+
+**/OI** jest tylko żądania do kompilatora do zamiany wywołania funkcji, niektóre funkcje wewnętrzne; kompilator może wywołać funkcję (i nie Zamień na wywołanie funkcji wewnętrznej) Jeśli spowoduje lepszą wydajność.
+
+**x86 Specific**
+
+Wewnętrzne funkcje zmiennoprzecinkowe nie wykonywać żadnych specjalnych kontrole wartości wejściowe więc pracować w zakresach ograniczonych danych wejściowych i obsługę różnych wyjątków i warunków ograniczających niż biblioteki procedur o takiej samej nazwie. Za pomocą formularzy wewnętrzne true oznacza utraty IEEE wyjątków i utraty `_matherr` i `errno` funkcjonalności; jego oznacza utratę zgodność ANSI. Jednak wewnętrzne formularzy znacznie przyspieszyć floating-point intensywnie programów i wiele programów, problemów ze zgodnością są nieco praktyczne wartości.
+
+Możesz użyć [Za](../../build/reference/za-ze-disable-language-extensions.md) opcję kompilatora, aby zastąpić generowania true wewnętrzne opcje zmiennoprzecinkowych. W takich przypadkach funkcje są generowane jako biblioteki procedur, które argumenty przekazywane bezpośrednio do zmiennoprzecinkowych mikroukładu zamiast wypychanie ich na stosie program.
+
+**KONIEC x86 określonych**
+
+Możesz także użyć [wewnętrzne](../../preprocessor/intrinsic.md) tworzyć funkcje wewnętrzne lub [— funkcja (C/C++)](../../preprocessor/function-c-cpp.md) jawnie wymusić wywołanie funkcji.
+
+### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Aby ustawić tę opcję kompilatora w środowisku programowania Visual Studio
+
+1. Otwórz projekt **stron właściwości** okno dialogowe. Aby uzyskać więcej informacji, zobacz [Praca z właściwościami projektu](../../ide/working-with-project-properties.md).
+
+1. Kliknij przycisk **C/C++** folderu.
+
+1. Kliknij przycisk **optymalizacji** stronę właściwości.
+
+1. Modyfikowanie **Włącz funkcje wewnętrzne** właściwości.
+
+### <a name="to-set-this-compiler-option-programmatically"></a>Aby programowo ustawić tę opcję kompilatora
+
+- Zobacz <xref:Microsoft.VisualStudio.VCProjectEngine.VCCLCompilerTool.EnableIntrinsicFunctions%2A>.
+
+## <a name="see-also"></a>Zobacz też
+
+[/O opcje (Optymalizuj kod)](../../build/reference/o-options-optimize-code.md)
+[opcje kompilatora](../../build/reference/compiler-options.md)<br/>
+[Ustawianie opcji kompilatora](../../build/reference/setting-compiler-options.md)<br/>
+[Funkcje wewnętrzne kompilatora](../../intrinsics/compiler-intrinsics.md)

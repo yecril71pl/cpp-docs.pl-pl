@@ -21,24 +21,27 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b77c778017dc78235948e8d23db136c1f63ab12d
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: a47004ce41d6bae3d91a81c4a61a712bc31dfbdb
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32372438"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45725897"
 ---
 # <a name="bind"></a>/BIND
-```  
-/BIND[:PATH=path]  
-```  
-  
-## <a name="remarks"></a>Uwagi  
- Ta opcja umożliwia ustawienie adresy punktów wejścia w tabelę adresów importu dla pliku wykonywalnego lub DLL. Użyj tej opcji, aby skrócić czas obciążenia programu.  
-  
- Określ plik wykonywalny programu i bibliotek DLL w *pliki* argument w wierszu polecenia EDITBIN polecenia. Opcjonalny *ścieżki* argument /BIND Określa lokalizację biblioteki DLL używane przez określonych plików. Oddziel wiele katalogów średnikami (**;**). Jeśli *ścieżka* nie zostanie określony, polecenia EDITBIN wyszukuje katalogi określone w zmiennej środowiskowej PATH. Jeśli *ścieżki* określono polecenia EDITBIN ignoruje zmiennej PATH.  
-  
- Domyślnie program ładujący ustawia adresy punktów wejścia ładuje programu. Ilość czasu, przez ten proces trwa różni się w zależności od liczby bibliotek DLL i liczbę punktów wejścia, do którego odwołuje się ten program. Jeśli program został zmodyfikowany z /BIND i podstawowym adresy dla pliku wykonywalnego i jego biblioteki DLL nie powodują konfliktów z bibliotek DLL, które już są załadowane, system operacyjny nie trzeba ustawić tych adresów. W sytuacji, gdy pliki są niepoprawnie na podstawie system operacyjny przenosi bibliotek DLL programu i ponownie oblicza adresy punktu wejścia, który dodaje do czasu ładowania programu.  
-  
-## <a name="see-also"></a>Zobacz też  
- [Opcje EDITBIN](../../build/reference/editbin-options.md)
+
+```
+/BIND[:PATH=path]
+```
+
+## <a name="remarks"></a>Uwagi
+
+Ta opcja umożliwia ustawienie adresy punktów wejścia w tabeli adresów importowania dla pliku wykonywalnego lub biblioteki DLL. Użyj tej opcji, aby skrócić czas ładowania programu.
+
+Określ plik wykonywalny i biblioteki dll w programie *pliki* argument w wierszu polecenia EDITBIN. Opcjonalny *ścieżki* argument /BIND Określa lokalizację biblioteki DLL używane przez określone pliki. Wiele katalogów należy oddzielić średnikami (**;**). Jeśli *ścieżki* nie zostanie określony, EDITBIN przeszukuje katalogi określone w zmiennej środowiskowej PATH. Jeśli *ścieżki* określono EDITBIN ignoruje zmiennej PATH.
+
+Domyślnie moduł ładujący program ustawia adresy punktów wejścia, podczas ładowania programu. Ilość czasu potrzebnego przez ten proces różni się w zależności od szeregu bibliotek DLL i liczbę punktów wejścia, do którego odwołuje się program. Jeśli program został zmodyfikowany z /BIND i base adresów dla pliku wykonywalnego, a jego biblioteki DLL nie wchodzą w konflikt z biblioteki dll, które zostały już załadowane, system operacyjny nie trzeba ustawić te adresy. W sytuacji, w której pliki są niepoprawnie na podstawie system operacyjny przenosi bibliotek DLL programu i ponownie oblicza adresy punktu wejścia, który dodaje do czasu ładowania tego programu.
+
+## <a name="see-also"></a>Zobacz też
+
+[Opcje EDITBIN](../../build/reference/editbin-options.md)

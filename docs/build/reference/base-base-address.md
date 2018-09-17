@@ -30,12 +30,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4c43e01a1417710751bf0604e5365beaf143a293
-ms.sourcegitcommit: d10a2382832373b900b1780e1190ab104175397f
+ms.openlocfilehash: 1f6f287f98b542a3d8eb24f9cc2b5e725e27dceb
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43895217"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45725975"
 ---
 # <a name="base-base-address"></a>/BASE (Adres podstawowy)
 
@@ -60,11 +60,11 @@ W wierszu polecenia innym sposobem określenia adres podstawowy jest przy użyci
 
 *Klucz* ciąg znaków alfanumerycznych i nie jest uwzględniana wielkość liter. Zazwyczaj jest to nazwa biblioteki dll, ale nie muszą być. *Klucz* następuje podstawowej *adres* w notacji języka C, szesnastkowym lub dziesiętną i opcjonalnie maksymalnie *rozmiar*. Wszystkie trzy argumenty są oddzielone tabulacji lub spacji. Konsolidator generuje ostrzeżenie, jeśli określony *rozmiar* jest mniejsza niż wirtualnej przestrzeni adresowej wymagane przez program. A *komentarz* określono za pomocą średnika (**;**) i może być na tym samym lub w osobnym wierszu. Konsolidator ignoruje cały tekst z średnik z powrotem do końca wiersza. W tym przykładzie przedstawiono część tego pliku:
 
-```  
+```
 main   0x00010000    0x08000000    ; for PROJECT.exe
 one    0x28000000    0x00100000    ; for DLLONE.DLL
 two    0x28100000    0x00300000    ; for DLLTWO.DLL
-```  
+```
 
 Jeśli plik, który zawiera następujące wiersze, zostanie wywołany DLLS.txt, następujące przykładowe polecenie mają zastosowanie te informacje:
 
@@ -88,5 +88,5 @@ Innym sposobem, aby ustawić adres podstawowy jest za pomocą *podstawowy* argum
 
 ## <a name="see-also"></a>Zobacz też
 
-[Ustawianie opcji konsolidatora](../../build/reference/setting-linker-options.md)  
+[Ustawianie opcji konsolidatora](../../build/reference/setting-linker-options.md)<br/>
 [Opcje konsolidatora](../../build/reference/linker-options.md)

@@ -18,12 +18,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: e29b141ff89a37cee59f55624d7fecadbe6acc4c
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 04a632e657b57519d02c013d9c03e558b9aec8e1
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43215873"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45726625"
 ---
 # <a name="classes-and-structs--c-component-extensions"></a>Klasy i struktury (C++ Component Extensions)
 
@@ -46,20 +46,20 @@ class_accessvalue structnamemodifier :  inherit_accessbase_type {};
 
 ### <a name="parameters"></a>Parametry
 
-*class_access* (opcjonalnie)  
-Dostępność klasy lub struktury spoza zestawu. Możliwe wartości to **publicznych** i **prywatnej** (**prywatnej** jest ustawieniem domyślnym). Zagnieżdżone klasy lub struktury nie mogą mieć *class_access* specyfikator.
+*class_access*  
+(Opcjonalnie) Dostępność klasy lub struktury spoza zestawu. Możliwe wartości to **publicznych** i **prywatnej** (**prywatnej** jest ustawieniem domyślnym). Zagnieżdżone klasy lub struktury nie mogą mieć *class_access* specyfikator.
 
 *Nazwa*  
 Nazwa klasy lub struktury.
 
-*Modyfikator* (opcjonalnie)  
-[abstrakcyjna](../windows/abstract-cpp-component-extensions.md) i [zapieczętowanego](../windows/sealed-cpp-component-extensions.md) są prawidłowe modyfikatorów.
+*Modyfikator*  
+(Opcjonalnie) [abstrakcyjne](../windows/abstract-cpp-component-extensions.md) i [zapieczętowanego](../windows/sealed-cpp-component-extensions.md) są prawidłowe modyfikatorów.
 
-*inherit_access* (opcjonalnie)  
-Dostępność *base_type*. Tylko dozwolone ułatwień dostępu jest **publicznych** (**publicznych** jest ustawieniem domyślnym).
+*inherit_access*  
+(Opcjonalnie) Dostępność *base_type*. Tylko dozwolone ułatwień dostępu jest **publicznych** (**publicznych** jest ustawieniem domyślnym).
 
-*base_type* (opcjonalnie)  
-Typ podstawowy. Jednak typ wartościowy nie może działać jako typu podstawowego.
+*base_type*  
+(Opcjonalnie) Typ podstawowy. Jednak typ wartościowy nie może działać jako typu podstawowego.
 
 Aby uzyskać więcej informacji zobacz opisy specyficzny dla języka tego parametru w Windows środowiska uruchomieniowego i typowych Runtimesections języka.
 
@@ -97,8 +97,8 @@ Zobacz [klasy i struktury odwołania](../cppcx/ref-classes-and-structs-c-cx.md) 
 
 ### <a name="parameters"></a>Parametry
 
-*base_type* (opcjonalnie)  
-Typ podstawowy. A **klasy referencyjnej** lub **ref struct** może dziedziczyć z zero lub więcej interfejsów i zero lub jeden **ref** typów. A **klasę wartości** lub **struktury wartości** może dziedziczyć tylko z zero lub więcej interfejsów.
+*base_type*  
+(Opcjonalnie) Typ podstawowy. A **klasy referencyjnej** lub **ref struct** może dziedziczyć z zero lub więcej interfejsów i zero lub jeden **ref** typów. A **klasę wartości** lub **struktury wartości** może dziedziczyć tylko z zero lub więcej interfejsów.
 
 Kiedy Deklarujesz obiektu za pomocą **klasy referencyjnej** lub **ref struct** słów kluczowych, obiekt jest dostępny po dojścia do obiektu, czyli wskaźnik licznika odwołań do obiektu. Gdy zadeklarowana zmienna wykracza poza zakres, kompilator automatycznie usuwa obiekt źródłowy. Gdy obiekt jest używany jako parametr w wywołaniu lub jest przechowywana w zmiennej, dojścia do obiektu jest faktycznie przekazywane lub przechowywane.
 
@@ -116,8 +116,8 @@ W poniższej tabeli przedstawiono różnice w składni przedstawionej w **wszyst
 
 ### <a name="parameters"></a>Parametry
 
-*base_type* (opcjonalnie)  
-Typ podstawowy. A **klasy referencyjnej** lub **ref struct** może dziedziczyć od zera lub jednego zarządzanego, interfejsy i zero lub jeden ref typów. A **klasę wartości** lub **struktury wartości** może dziedziczyć tylko z zero lub więcej interfejsów zarządzanych.
+*base_type*  
+(Opcjonalnie) Typ podstawowy. A **klasy referencyjnej** lub **ref struct** może dziedziczyć od zera lub jednego zarządzanego, interfejsy i zero lub jeden ref typów. A **klasę wartości** lub **struktury wartości** może dziedziczyć tylko z zero lub więcej interfejsów zarządzanych.
 
 **Klasy referencyjnej** i **ref struct** słowa kluczowe poinformować kompilator, który ma zostać przydzielone na stercie klasy lub struktury. Gdy obiekt jest używany jako parametr w wywołaniu lub jest przechowywana w zmiennej, odwołanie do obiektu jest faktycznie przekazywane lub przechowywane.
 

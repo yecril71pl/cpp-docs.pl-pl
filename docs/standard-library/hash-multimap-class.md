@@ -96,12 +96,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 857c0614288240aeaf3001d03aa5d6372ccee1c9
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: ca81fa18bb5f63f57c057eaa9e64c35df01e33f1
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43196308"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45726768"
 ---
 # <a name="hashmultimap-class"></a>hash_multimap — Klasa
 
@@ -123,16 +123,16 @@ class hash_multimap
 ### <a name="parameters"></a>Parametry
 
 *Key*<br/>
- Typ danych klucza, który ma być przechowywany w hash_multimap.
+Typ danych klucza, który ma być przechowywany w hash_multimap.
 
 *Typ*<br/>
- Typ danych elementu, który ma być przechowywany w hash_multimap.
+Typ danych elementu, który ma być przechowywany w hash_multimap.
 
 *Cechy*<br/>
- Typ, który zawiera dwa obiekty funkcyjne, jednej klasy *cech* który będzie można porównać dwie wartości elementów jako klucze sortowania, aby określić ich względną kolejność i funkcję mieszania, która jest jednoargumentowy wartości klucza predykatu Mapowanie elementów do niepodpisane liczby całkowite typu `size_t`. Ten argument jest opcjonalny, a `hash_compare<Key, less<Key>>` jest wartością domyślną.
+Typ, który zawiera dwa obiekty funkcyjne, jednej klasy *cech* który będzie można porównać dwie wartości elementów jako klucze sortowania, aby określić ich względną kolejność i funkcję mieszania, która jest jednoargumentowy wartości klucza predykatu Mapowanie elementów do niepodpisane liczby całkowite typu `size_t`. Ten argument jest opcjonalny, a `hash_compare<Key, less<Key>>` jest wartością domyślną.
 
 *Allocator*<br/>
- Typ reprezentujący przechowywany obiekt alokatora, który hermetyzuje szczegóły dotyczące alokacji i dezalokacji pamięci hash_multimap. Ten argument jest opcjonalny, a wartość domyślna to `allocator<pair <const Key, Type>>`.
+Typ reprezentujący przechowywany obiekt alokatora, który hermetyzuje szczegóły dotyczące alokacji i dezalokacji pamięci hash_multimap. Ten argument jest opcjonalny, a wartość domyślna to `allocator<pair <const Key, Type>>`.
 
 ## <a name="remarks"></a>Uwagi
 
@@ -600,7 +600,7 @@ size_type count(const Key& key) const;
 ### <a name="parameters"></a>Parametry
 
 *Klucz*<br/>
- Klucz elementy, które mają być dopasowywane z hash_multimap.
+Klucz elementy, które mają być dopasowywane z hash_multimap.
 
 ### <a name="return-value"></a>Wartość zwracana
 
@@ -895,7 +895,7 @@ int main()
 
 ```Output
 After the emplace insertion, hm1 contains:
- 1 => a
+1 => a
 ```
 
 ## <a name="emplace_hint"></a>  hash_multimap::emplace_hint
@@ -955,7 +955,7 @@ int main()
 
 ```Output
 After the emplace insertion, hm1 contains:
- 1 => a
+1 => a
 ```
 
 ## <a name="empty"></a>  hash_multimap::Empty
@@ -1096,7 +1096,7 @@ pair <iterator, iterator> equal_range (const Key& key);
 ### <a name="parameters"></a>Parametry
 
 *Klucz*<br/>
- Argument klucz, który ma zostać porównane z klucza sortowania elementu z hash_multimap wyszukiwany.
+Argument klucz, który ma zostać porównane z klucza sortowania elementu z hash_multimap wyszukiwany.
 
 ### <a name="return-value"></a>Wartość zwracana
 
@@ -1187,16 +1187,16 @@ size_type erase(const key_type& key);
 ### <a name="parameters"></a>Parametry
 
 *_Where*<br/>
- Pozycja elementu do usunięcia z hash_multimap.
+Pozycja elementu do usunięcia z hash_multimap.
 
 *pierwszy*<br/>
- Pozycja pierwszego elementu są usuwane z hash_multimap.
+Pozycja pierwszego elementu są usuwane z hash_multimap.
 
 *ostatni*<br/>
- Pozycja tuż za ostatnim elementem usunięte z hash_multimap.
+Pozycja tuż za ostatnim elementem usunięte z hash_multimap.
 
 *Klucz*<br/>
- Klucz elementów do usunięcia z hash_multimap.
+Klucz elementów do usunięcia z hash_multimap.
 
 ### <a name="return-value"></a>Wartość zwracana
 
@@ -1311,7 +1311,7 @@ const_iterator find(const Key& key) const;
 ### <a name="parameters"></a>Parametry
 
 *Klucz*<br/>
- Klucz, które mają być dopasowywane o klucz sortowania elementu z hash_multimap wyszukiwany.
+Klucz, które mają być dopasowywane o klucz sortowania elementu z hash_multimap wyszukiwany.
 
 ### <a name="return-value"></a>Wartość zwracana
 
@@ -1505,18 +1505,18 @@ hash_multimap(
 
 template <class InputIterator>
 hash_multimap(
- InputIterator First,
+    InputIterator First,
     InputIterator Last);
 
 template <class InputIterator>
 hash_multimap(
- InputIterator First,
+    InputIterator First,
     InputIterator Last,
     const Compare& Comp);
 
 template <class InputIterator>
 hash_multimap(
- InputIterator First,
+    InputIterator First,
     InputIterator Last,
     const Compare& Comp,
     const Allocator& Al);
@@ -1762,7 +1762,7 @@ const_iterator lower_bound(const Key& key) const;
 ### <a name="parameters"></a>Parametry
 
 *Klucz*<br/>
- Argument klucz, który ma zostać porównane z klucza sortowania elementu z hash_multimap wyszukiwany.
+Argument klucz, który ma zostać porównane z klucza sortowania elementu z hash_multimap wyszukiwany.
 
 ### <a name="return-value"></a>Wartość zwracana
 
@@ -2316,7 +2316,7 @@ void swap(hash_multimap& right);
 ### <a name="parameters"></a>Parametry
 
 *right*<br/>
- Hash_multimap, zawierająca elementy, które mają być zamienione lub hash_multimap, której elementy są wymieniane z tymi hash_multimap.
+Hash_multimap, zawierająca elementy, które mają być zamienione lub hash_multimap, której elementy są wymieniane z tymi hash_multimap.
 
 ### <a name="remarks"></a>Uwagi
 
@@ -2390,7 +2390,7 @@ const_iterator upper_bound(const Key& key) const;
 ### <a name="parameters"></a>Parametry
 
 *Klucz*<br/>
- Argument klucz, który ma zostać porównane z klucza sortowania elementu z hash_multimap wyszukiwany.
+Argument klucz, który ma zostać porównane z klucza sortowania elementu z hash_multimap wyszukiwany.
 
 ### <a name="return-value"></a>Wartość zwracana
 

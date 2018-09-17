@@ -22,12 +22,12 @@ helpviewer_keywords:
 - std::operator&lt;&lt; (thread)
 - std::operator&lt;= (thread)
 - std::operator== (thread)
-ms.openlocfilehash: ac9a436637f9acf5f3818454706eb146d814b3bc
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: 5c9eba152ddaf0ab35fc1a331905a457ff339f28
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38964824"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45725988"
 ---
 # <a name="ltthreadgt-operators"></a>&lt;Wątek&gt; operatorów
 
@@ -49,11 +49,11 @@ bool operator>= (
 
 ### <a name="parameters"></a>Parametry
 
-*Po lewej stronie*  
- Po lewej stronie `thread::id` obiektu.
+*po lewej stronie*<br/>
+Po lewej stronie `thread::id` obiektu.
 
-*Po prawej stronie*  
- Po prawej stronie `thread::id` obiektu.
+*po prawej stronie*<br/>
+Po prawej stronie `thread::id` obiektu.
 
 ### <a name="return-value"></a>Wartość zwracana
 
@@ -75,11 +75,11 @@ bool operator> (
 
 ### <a name="parameters"></a>Parametry
 
-*Po lewej stronie*  
- Po lewej stronie `thread::id` obiektu.
+*po lewej stronie*<br/>
+Po lewej stronie `thread::id` obiektu.
 
-*Po prawej stronie*  
- Po prawej stronie `thread::id` obiektu.
+*po prawej stronie*<br/>
+Po prawej stronie `thread::id` obiektu.
 
 ### <a name="return-value"></a>Wartość zwracana
 
@@ -101,11 +101,11 @@ bool operator<= (
 
 ### <a name="parameters"></a>Parametry
 
-*Po lewej stronie*  
- Po lewej stronie `thread::id` obiektu.
+*po lewej stronie*<br/>
+Po lewej stronie `thread::id` obiektu.
 
-*Po prawej stronie*  
- Po prawej stronie `thread::id` obiektu.
+*po prawej stronie*<br/>
+Po prawej stronie `thread::id` obiektu.
 
 ### <a name="return-value"></a>Wartość zwracana
 
@@ -127,11 +127,11 @@ bool operator<(
 
 ### <a name="parameters"></a>Parametry
 
-*Po lewej stronie*  
- Po lewej stronie `thread::id` obiektu.
+*po lewej stronie*<br/>
+Po lewej stronie `thread::id` obiektu.
 
-*Po prawej stronie*  
- Po prawej stronie `thread::id` obiektu.
+*po prawej stronie*<br/>
+Po prawej stronie `thread::id` obiektu.
 
 ### <a name="return-value"></a>Wartość zwracana
 
@@ -155,11 +155,11 @@ bool operator!= (
 
 ### <a name="parameters"></a>Parametry
 
-*Po lewej stronie*  
- Po lewej stronie `thread::id` obiektu.
+*po lewej stronie*<br/>
+Po lewej stronie `thread::id` obiektu.
 
-*Po prawej stronie*  
- Po prawej stronie `thread::id` obiektu.
+*po prawej stronie*<br/>
+Po prawej stronie `thread::id` obiektu.
 
 ### <a name="return-value"></a>Wartość zwracana
 
@@ -180,12 +180,12 @@ bool operator== (
 ```
 
 ### <a name="parameters"></a>Parametry
- 
-*Po lewej stronie*  
- Po lewej stronie `thread::id` obiektu.
 
-*Po prawej stronie*  
- Po prawej stronie `thread::id` obiektu.
+*po lewej stronie*<br/>
+Po lewej stronie `thread::id` obiektu.
+
+*po prawej stronie*<br/>
+Po prawej stronie `thread::id` obiektu.
 
 ### <a name="return-value"></a>Wartość zwracana
 
@@ -207,11 +207,11 @@ basic_ostream<Elem, Tr>& operator<<(
 
 ### <a name="parameters"></a>Parametry
 
-*Ostr*  
- A [basic_ostream](../standard-library/basic-ostream-class.md) obiektu.
+*Ostr*<br/>
+A [basic_ostream](../standard-library/basic-ostream-class.md) obiektu.
 
-*Id*  
- Element `thread::id` obiektu.
+*Id*<br/>
+Element `thread::id` obiektu.
 
 ### <a name="return-value"></a>Wartość zwracana
 

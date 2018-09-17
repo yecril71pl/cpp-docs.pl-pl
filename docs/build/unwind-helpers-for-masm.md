@@ -12,22 +12,25 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6e7135802bdc91c611132760ebbee4e0619ba0de
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 9dd43318d19bafa2f69514f81e82da6d303528d2
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32380252"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45725624"
 ---
 # <a name="unwind-helpers-for-masm"></a>Pomocnicy operacji unwind dla MASM
-Aby można było zapisać procedury prawidłowego zestawu istnieje zestaw pseudo-operacji, które mogą służyć równolegle z instrukcjami rzeczywiste zestawu do utworzenia odpowiednich .pdata i .xdata. Istnieją także zestaw makra, które zapewniają uproszczone pseudo-operacji do ich najbardziej typowych zastosowań.  
-  
-## <a name="remarks"></a>Uwagi  
- W tej sekcji są następujące tematy:  
-  
--   [Pierwotne operacje Pseudo](../build/raw-pseudo-operations.md)  
-  
--   [Makra MASM](../build/masm-macros.md)  
-  
-## <a name="see-also"></a>Zobacz też  
- [Obsługa wyjątków (x64)](../build/exception-handling-x64.md)
+
+Do napisania procedury prawidłowego zestawu zestaw pseudo-operacji, które można równolegle z instrukcje montażu rzeczywiste tworzenie odpowiednich .pdata i .xdata. Istnieją również zestaw makra, które udostępniają uproszczone użycie pseudo-operacjami dotyczącymi ich najbardziej typowych zastosowań.
+
+## <a name="remarks"></a>Uwagi
+
+W tej sekcji są następujące tematy:
+
+- [Pierwotne operacje Pseudo](../build/raw-pseudo-operations.md)
+
+- [Makra MASM](../build/masm-macros.md)
+
+## <a name="see-also"></a>Zobacz też
+
+[Obsługa wyjątków (x64)](../build/exception-handling-x64.md)

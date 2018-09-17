@@ -52,12 +52,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6e119251b4d7ebfbfc6dd0cd0414d72c431555e0
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: a5b97912843f14c9bc73307145bd0e1542d2c01b
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43200657"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45726586"
 ---
 # <a name="cmfcdropdowntoolbarbutton-class"></a>Klasa CMFCDropDownToolbarButton
 Typ przycisku paska narzędzi, który zachowuje się jak zwykły przycisk po kliknięciu. Jednak otwiera rozwijany pasek narzędzi ( [klasa CMFCDropDownToolBar](../../mfc/reference/cmfcdropdowntoolbar-class.md) Jeśli naciśnięciu i przytrzymaniu przycisku paska narzędzi w dół.  
@@ -132,8 +132,8 @@ virtual void CopyFrom(const CMFCToolBarButton& src);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *src*  
- Odwołanie do przycisku źródła do skopiowania.  
+*src*<br/>
+[in] Odwołanie do przycisku źródła do skopiowania.  
   
 ### <a name="remarks"></a>Uwagi  
  Wywołaj tę metodę, aby skopiować inny przycisk paska narzędzi do tego przycisku paska narzędzi. *SRC* musi być typu `CMFCDropDownToolbarButton`.  
@@ -151,11 +151,11 @@ CMFCDropDownToolbarButton(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *lpszName*  
- Domyślny tekst przycisku.  
+*lpszName*<br/>
+[in] Domyślny tekst przycisku.  
   
- [in] *pToolBar*  
- Wskaźnik do `CMFCDropDownToolBar` obiekt, który jest wyświetlany, gdy użytkownik naciśnie przycisk.  
+*pToolBar*<br/>
+[in] Wskaźnik do `CMFCDropDownToolBar` obiekt, który jest wyświetlany, gdy użytkownik naciśnie przycisk.  
   
 ### <a name="remarks"></a>Uwagi  
  Drugie przeciążenie konstruktora kopiuje do przycisku rozwijanego pierwszy przycisk na pasku narzędzi, *pToolBar* określa.  
@@ -175,8 +175,8 @@ BOOL DropDownToolbar(CWnd* pWnd);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *pWnd*  
- Okno nadrzędne ramkę z listy rozwijanej lub wartości NULL na korzystanie z okna nadrzędnego przycisku paska narzędzi z listy rozwijanej.  
+*pWnd*<br/>
+[in] Okno nadrzędne ramkę z listy rozwijanej lub wartości NULL na korzystanie z okna nadrzędnego przycisku paska narzędzi z listy rozwijanej.  
   
 ### <a name="return-value"></a>Wartość zwracana  
  Wartość różną od zera, jeśli metoda się powiedzie; w przeciwnym razie 0.  
@@ -196,8 +196,8 @@ virtual BOOL ExportToMenuButton(CMFCToolBarMenuButton& menuButton) const;
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *przycisk menu*  
- Odwołanie do docelowego przycisku menu.  
+*Przycisk menu*<br/>
+[in] Odwołanie do docelowego przycisku menu.  
   
 ### <a name="return-value"></a>Wartość zwracana  
  Wartość różną od zera, jeśli metoda się powiedzie; w przeciwnym razie 0.  
@@ -267,14 +267,14 @@ virtual SIZE OnCalculateSize(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *podstawowego kontrolera domeny*  
- Kontekst urządzenia, które powoduje wyświetlenie przycisku.  
+*podstawowego kontrolera domeny*<br/>
+[in] Kontekst urządzenia, które powoduje wyświetlenie przycisku.  
   
- [in] *sizeDefault*  
- Domyślny rozmiar przycisku.  
+*sizeDefault*<br/>
+[in] Domyślny rozmiar przycisku.  
   
- [in] *bHorz*  
- Stan dokowania paska narzędzi nadrzędnej. Ten parametr jest wartość TRUE, jeśli pasek narzędzi jest zadokowany poziomo lub jest liczb zmiennoprzecinkowych, lub FAŁSZ, jeśli pasek narzędzi jest zadokowany w pionie.  
+*bHorz*<br/>
+[in] Stan dokowania paska narzędzi nadrzędnej. Ten parametr jest wartość TRUE, jeśli pasek narzędzi jest zadokowany poziomo lub jest liczb zmiennoprzecinkowych, lub FAŁSZ, jeśli pasek narzędzi jest zadokowany w pionie.  
   
 ### <a name="return-value"></a>Wartość zwracana  
  A `SIZE` strukturę, która zawiera wymiary przycisku w pikselach.  
@@ -290,8 +290,8 @@ virtual void OnChangeParentWnd(CWnd* pWndParent);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *pWndParent*  
- Nowe okno nadrzędne.  
+*pWndParent*<br/>
+[in] Nowe okno nadrzędne.  
   
 ### <a name="remarks"></a>Uwagi  
  Ta metoda zastępuje implementacji klasy podstawowej ( [CMFCToolBarButton::OnChangeParentWnd](../../mfc/reference/cmfctoolbarbutton-class.md#onchangeparentwnd)), czyszcząc Etykieta tekstowa ( [CMFCToolBarButton::m_strText](../../mfc/reference/cmfctoolbarbutton-class.md#m_strtext)) i ustawienie [ CMFCToolBarButton::m_bText](../../mfc/reference/cmfctoolbarbutton-class.md#m_btext) i [CMFCToolBarButton::m_bUserButton](../../mfc/reference/cmfctoolbarbutton-class.md#m_buserbutton) elementy członkowskie danych na wartość FALSE.  
@@ -306,11 +306,11 @@ virtual BOOL OnClick(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *pWnd*  
- Okno nadrzędne przycisku paska narzędzi.  
+*pWnd*<br/>
+[in] Okno nadrzędne przycisku paska narzędzi.  
   
- [in] *bDelay*  
- Wartość TRUE, jeśli komunikat powinien zostać obsłużony z opóźnieniem.  
+*bDelay*<br/>
+[in] Wartość TRUE, jeśli komunikat powinien zostać obsłużony z opóźnieniem.  
   
 ### <a name="return-value"></a>Wartość zwracana  
  Wartość różną od zera, jeśli przycisk przetwarza wiadomości kliknij; w przeciwnym razie 0.  
@@ -345,8 +345,8 @@ virtual BOOL OnContextHelp(CWnd* pWnd);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *pWnd*  
- Okno nadrzędne przycisku paska narzędzi.  
+*pWnd*<br/>
+[in] Okno nadrzędne przycisku paska narzędzi.  
   
 ### <a name="return-value"></a>Wartość zwracana  
  Wartość różną od zera, jeśli przycisk przetwarza komunikat pomocy; w przeciwnym razie 0.  
@@ -364,8 +364,8 @@ virtual BOOL OnCustomizeMenu(CMenu* pMenu);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *pMenu*  
- Menu aby dostosować.  
+*pMenu*<br/>
+[in] Menu aby dostosować.  
   
 ### <a name="return-value"></a>Wartość zwracana  
  Ta metoda zwraca wartość TRUE.  
@@ -401,29 +401,29 @@ virtual void OnDraw(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *podstawowego kontrolera domeny*  
- Kontekst urządzenia, które powoduje wyświetlenie przycisku.  
+*podstawowego kontrolera domeny*<br/>
+[in] Kontekst urządzenia, które powoduje wyświetlenie przycisku.  
   
- [in] *rect*  
- Prostokąt otaczający przycisku.  
+*Rect*<br/>
+[in] Prostokąt otaczający przycisku.  
   
- [in] *pImages*  
- Kolekcja paska narzędzi obrazów, która jest skojarzona z przyciskiem.  
+*pImages*<br/>
+[in] Kolekcja paska narzędzi obrazów, która jest skojarzona z przyciskiem.  
   
- [in] *bHorz*  
- Stan dokowania paska narzędzi nadrzędnej. Ten parametr ma wartość TRUE, gdy przycisk jest zadokowany w poziomie i wartość FALSE, gdy przycisk jest zadokowany w pionie.  
+*bHorz*<br/>
+[in] Stan dokowania paska narzędzi nadrzędnej. Ten parametr ma wartość TRUE, gdy przycisk jest zadokowany w poziomie i wartość FALSE, gdy przycisk jest zadokowany w pionie.  
   
- [in] *bCustomizeMode*  
- Określa, czy pasek narzędzi jest w trybie dostosowywania. Ten parametr ma wartość TRUE, gdy pasek narzędzi jest w trybie dostosowywania i wartość FALSE, gdy pasek narzędzi nie jest w trybie dostosowywania.  
+*bCustomizeMode*<br/>
+[in] Określa, czy pasek narzędzi jest w trybie dostosowywania. Ten parametr ma wartość TRUE, gdy pasek narzędzi jest w trybie dostosowywania i wartość FALSE, gdy pasek narzędzi nie jest w trybie dostosowywania.  
   
- [in] *bHighlight*  
- Określa, czy przycisk jest wyróżniona. Ten parametr jest wartość PRAWDA, jeśli przycisk jest wyróżniona i wartość FALSE, gdy przycisk nie jest wyróżniona.  
+*bHighlight*<br/>
+[in] Określa, czy przycisk jest wyróżniona. Ten parametr jest wartość PRAWDA, jeśli przycisk jest wyróżniona i wartość FALSE, gdy przycisk nie jest wyróżniona.  
   
- [in] *bDrawBorder*  
- Określa, czy przycisk powinien być wyświetlany jego obramowania. Ten parametr ma wartość TRUE, gdy przycisk powinien być wyświetlany jego krawędzi i wartość FALSE, gdy przycisk nie powinien być wyświetlany jego obramowania.  
+*bDrawBorder*<br/>
+[in] Określa, czy przycisk powinien być wyświetlany jego obramowania. Ten parametr ma wartość TRUE, gdy przycisk powinien być wyświetlany jego krawędzi i wartość FALSE, gdy przycisk nie powinien być wyświetlany jego obramowania.  
   
- [in] *bGrayDisabledButtons*  
- Określa, czy Cieniuj przyciski wyłączone lub użyć kolekcji obrazów wyłączone. Ten parametr ma wartość TRUE, gdy wyłączone przyciski powinny być przyciemnione i wartość FALSE w przypadku tej metody należy użyć kolekcji obrazów wyłączone.  
+*bGrayDisabledButtons*<br/>
+[in] Określa, czy Cieniuj przyciski wyłączone lub użyć kolekcji obrazów wyłączone. Ten parametr ma wartość TRUE, gdy wyłączone przyciski powinny być przyciemnione i wartość FALSE w przypadku tej metody należy użyć kolekcji obrazów wyłączone.  
   
 ### <a name="remarks"></a>Uwagi  
  Zastępuje tę metodę, aby dostosować rysowaniem przycisku paska narzędzi.  
@@ -439,14 +439,14 @@ virtual int OnDrawOnCustomizeList(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *podstawowego kontrolera domeny*  
- Kontekst urządzenia, które powoduje wyświetlenie przycisku.  
+*podstawowego kontrolera domeny*<br/>
+[in] Kontekst urządzenia, które powoduje wyświetlenie przycisku.  
   
- [in] *rect*  
- Prostokąt otaczający przycisku.  
+*Rect*<br/>
+[in] Prostokąt otaczający przycisku.  
   
- [in] *bSelected*  
- Czy przycisk jest zaznaczony. Jeśli ten parametr ma wartość TRUE, zostanie wybrany przycisk. Jeśli ten parametr ma wartość FALSE, przycisk nie jest zaznaczone.  
+*bSelected*<br/>
+[in] Czy przycisk jest zaznaczony. Jeśli ten parametr ma wartość TRUE, zostanie wybrany przycisk. Jeśli ten parametr ma wartość FALSE, przycisk nie jest zaznaczone.  
   
 ### <a name="return-value"></a>Wartość zwracana  
  Szerokość w pikselach, przycisk w kontekście określonego urządzenia.  
@@ -464,8 +464,8 @@ virtual void Serialize(CArchive& ar);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *ar*  
- `CArchive` Obiektu, z którego lub do którego ma zostać serializacji.  
+*ar*<br/>
+[in] `CArchive` Obiektu, z którego lub do którego ma zostać serializacji.  
   
 ### <a name="remarks"></a>Uwagi  
  Ta metoda jest rozszerzeniem implementacji klasy podstawowej ( [CMFCToolBarButton::Serialize](../../mfc/reference/cmfctoolbarbutton-class.md#serialize)), szeregując identyfikator zasobu nadrzędnego paska narzędzi. Podczas ładowania archiwum ( [CArchive::IsLoading](../../mfc/reference/carchive-class.md#isloading) zwraca wartość różną od zera), ta metoda ustawia `m_pToolBar` element członkowski danych do paska narzędzi, który zawiera identyfikator zasobu serializacji.  
@@ -478,8 +478,8 @@ void SetDefaultCommand(UINT uiCmd);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *uiCmd*  
- Identyfikator polecenia domyślne.  
+*uiCmd*<br/>
+[in] Identyfikator polecenia domyślne.  
   
 ### <a name="remarks"></a>Uwagi  
  Wywołaj tę metodę, aby określić polecenie domyślne, które wykonuje szablon, gdy użytkownik kliknie przycisk. Element o identyfikatorze polecenie określone przez *uiCmd* musi znajdować się na pasku narzędzi listy rozwijanej nadrzędnej.  

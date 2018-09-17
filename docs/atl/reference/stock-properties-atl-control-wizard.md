@@ -14,29 +14,31 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b84563c2576f4969acb4162bcaa92d6f62f97c72
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: eb123f6ca46841b59d178bba88b97ca44b55f621
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43767468"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45725884"
 ---
 # <a name="stock-properties-atl-control-wizard"></a>Kreator kontrolki ATL, właściwości podstawowe
 
 Ta strona kreatora identyfikuje właściwości podstawowe obsługiwane dla formantu. Domyślnie są identyfikowane żadnych właściwości.
 
-**Nie jest obsługiwany**  
-Wskazuje dostępnych właściwości, które nie są obecnie obsługiwane dla formantu.
+- **Nie jest obsługiwany**
 
-**Obsługiwane**  
-Określa właściwości, które są obecnie obsługiwane dla formantu.
+   Wskazuje dostępnych właściwości, które nie są obecnie obsługiwane dla formantu.
+
+- **Obsługiwane**
+
+   Określa właściwości, które są obecnie obsługiwane dla formantu.
 
 |Przycisk transferu|Opis|
 |---------------------|-----------------|
 |**>**|Dodaje do **obsługiwane** listy nazwy właściwości aktualnie wybrany w **nieobsługiwane** listy.|
 |**>>**|Dodaje do **obsługiwane** listę wszystkich nazw właściwości dostępne w **nieobsługiwane** listy.|
-|**<**|Usuwa nazwę właściwości aktualnie wybrany w **obsługiwane** listy.|
-|**<<**|Usuwa wszystkie nazwy właściwości, które obecnie na liście **obsługiwane** listy.|
+|**\<**|Usuwa nazwę właściwości aktualnie wybrany w **obsługiwane** listy.|
+|**\<\<**|Usuwa wszystkie nazwy właściwości, które obecnie na liście **obsługiwane** listy.|
 
 ## <a name="see-also"></a>Zobacz też
 

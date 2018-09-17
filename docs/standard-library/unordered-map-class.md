@@ -148,12 +148,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 28fbbce7c63e60bfdeb75c32b3c919b4f38b2b2a
-ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
+ms.openlocfilehash: 9082e4a8269e692bf9e1d9b8a27f61291b2707a9
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44107469"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45726235"
 ---
 # <a name="unorderedmap-class"></a>unordered_map — Klasa
 
@@ -561,7 +561,7 @@ size_type bucket_size(size_type nbucket) const;
 
 ### <a name="parameters"></a>Parametry
 
-*nbucket*  
+*nbucket*<br/>
 Numer przedziału.
 
 ### <a name="remarks"></a>Uwagi
@@ -925,7 +925,7 @@ size_type count(const Key& keyval) const;
 
 ### <a name="parameters"></a>Parametry
 
-*keyval*  
+*keyval*<br/>
 Wartość klucza do wyszukania.
 
 ### <a name="remarks"></a>Uwagi
@@ -1190,7 +1190,7 @@ std::pair<const_iterator, const_iterator>  equal_range(const Key& keyval) const;
 
 ### <a name="parameters"></a>Parametry
 
-*keyval*  
+*keyval*<br/>
 Wartość klucza do wyszukania.
 
 ### <a name="remarks"></a>Uwagi
@@ -1260,16 +1260,16 @@ size_type erase(const key_type& Key);
 
 ### <a name="parameters"></a>Parametry
 
-*Where*  
+*Where*<br/>
 Pozycja elementu, który ma zostać usunięty.
 
-*pierwszy*  
+*pierwszy*<br/>
 Pozycja pierwszego elementu do usunięcia.
 
-*ostatni*  
+*ostatni*<br/>
 Pozycja tuż za ostatni element do usunięcia.
 
-*Key*  
+*Key*<br/>
 Wartość klucza elementów do usunięcia.
 
 ### <a name="return-value"></a>Wartość zwracana
@@ -1292,7 +1292,7 @@ const_iterator find(const Key& keyval) const;
 
 ### <a name="parameters"></a>Parametry
 
-*keyval*  
+*keyval*<br/>
 Wartość klucza do wyszukania.
 
 ### <a name="remarks"></a>Uwagi
@@ -2009,7 +2009,7 @@ void max_load_factor(float factor);
 
 ### <a name="parameters"></a>Parametry
 
-*współczynnik*  
+*współczynnik*<br/>
 Nowy współczynnik maksymalnego obciążenia.
 
 ### <a name="remarks"></a>Uwagi
@@ -2381,7 +2381,7 @@ void rehash(size_type nbuckets);
 
 ### <a name="parameters"></a>Parametry
 
-*nbuckets*  
+*nbuckets*<br/>
 Żądaną liczbę przedziałów.
 
 ### <a name="remarks"></a>Uwagi
@@ -2565,7 +2565,7 @@ void swap(unordered_map& right);
 
 ### <a name="parameters"></a>Parametry
 
-*right*  
+*right*<br/>
 Kontener wymiany.
 
 ### <a name="remarks"></a>Uwagi

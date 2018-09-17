@@ -17,33 +17,35 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3f8de42480dae9be203a132561d722c18d6952c1
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: a31927bb1ce3667367eff8f38268b4b3b24ac82c
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32376393"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45726482"
 ---
 # <a name="rules-for-module-definition-statements"></a>Zasady dla instrukcji definicji modułu
-Wszystkie instrukcje w pliku .def mają zastosowanie następujące reguły składni. Inne zasady, które są stosowane do instrukcji określonych opisano z każdej instrukcji.  
-  
--   Instrukcje, atrybut słów kluczowych i identyfikatory określone przez użytkownika jest wielkość liter.  
-  
--   Długie nazwy zawierające spacje lub średnikami (;) plików musi być ujęta w znaki cudzysłowu (").  
-  
--   Aby rozdzielić słowo kluczowe instrukcji z jego argumentów i aby oddzielić od siebie — instrukcje, należy użyć co najmniej jeden spacje, tabulatory lub znakami nowego wiersza. Dwukropkiem (:) lub znak równości (=), który wyznacza argument będzie otoczona zero lub więcej spacje, tabulatory lub znakami nowego wiersza.  
-  
--   A **nazwa** lub **biblioteki** instrukcji, jeśli używany, musi poprzedzać wszystkie inne instrukcje.  
-  
--   **Sekcje** i **EKSPORTÓW** instrukcje może występować więcej niż raz w pliku .def. Każda instrukcja może zająć wiele specyfikacji, które muszą być oddzielone co najmniej jeden spacje, tabulatory lub znakami nowego wiersza. Instrukcja — słowo kluczowe musi występować po przed pierwszym specyfikacji i można powtarzać przed każdy dodatkowego specyfikacji.  
-  
--   Wiele instrukcji ma równoważnej łącze opcji wiersza polecenia. Zobacz opis odpowiedniej opcji łącze, aby uzyskać dodatkowe szczegóły.  
-  
--   Komentarze w pliku .def są oznaczane średnikiem (;) na początku każdego wiersza komentarza. Komentarz nie mogą współużytkować wiersz z instrukcją, ale może być wyświetlany między specyfikacjami w wielowierszowym instrukcji. (**Sekcje** i **EKSPORTÓW** są instrukcje wielowierszowy.)  
-  
--   Liczbowa argumenty są określone w podstawie 10 lub szesnastkową.  
-  
--   Jeśli argument ciągu odpowiada [słowa zarezerwowanego](../../build/reference/reserved-words.md), musi być ujęta w znaki cudzysłowu (").  
-  
-## <a name="see-also"></a>Zobacz też  
- [Pliki definicji modułu (.Def)](../../build/reference/module-definition-dot-def-files.md)  
+
+Następujące reguły składni dotyczą wszystkie instrukcje w pliku .def. Inne zasady, które są stosowane do instrukcji określonych są opisane za pomocą każdej instrukcji.
+
+- Instrukcje i identyfikatory określone przez użytkownika słowa atrybut uwzględniają wielkość liter.
+
+- Długie nazwy zawierające spacje lub średników (;) plików muszą być ujęte w znaki cudzysłowu (").
+
+- Do oddzielania słowem kluczowym instrukcji z jej argumentów i oddzielania instrukcji od siebie nawzajem, należy użyć jednego lub więcej miejsca do magazynowania, karty lub znakami nowego wiersza. Dwukropek (:) lub znak równości (=), która określa argument jest otoczona przez zero lub więcej miejsca do magazynowania, karty lub znakami nowego wiersza.
+
+- A **nazwa** lub **biblioteki** instrukcji, jeśli używany, musi poprzedzać wszystkie inne instrukcje.
+
+- **Sekcje** i **EKSPORTY** instrukcji może występować więcej niż jeden raz w pliku .def. Każda instrukcja może zająć wiele specyfikacje, które muszą być oddzielone jeden lub więcej miejsca do magazynowania, karty lub znakami nowego wiersza. Instrukcja — słowo kluczowe musi pojawić się jeden raz przed pierwszą specyfikację i można powtarzać przed każdego dodatkowego specyfikacji.
+
+- Wiele instrukcji mieć równoważne opcji wiersza polecenia łącza. Zobacz opis odpowiedniej opcji LINK, aby uzyskać więcej informacji.
+
+- Komentarze w pliku .def zostały oznaczone za pomocą średnika (;) na początku każdego wiersza komentarza. Komentarz nie można udostępniać wiersza po instrukcji, ale może być wyświetlany między specyfikacjami w wielowierszowym instrukcji. (**Sekcje** i **EKSPORTY** są instrukcje wielowierszowy.)
+
+- Liczbowe argumenty są określone w podstawie 10 lub szesnastkowego.
+
+- Jeśli argument ciągu pasuje [słowa zarezerwowanego](../../build/reference/reserved-words.md), muszą być ujęte w podwójny cudzysłów (").
+
+## <a name="see-also"></a>Zobacz też
+
+[Pliki definicji modułu (.Def)](../../build/reference/module-definition-dot-def-files.md)

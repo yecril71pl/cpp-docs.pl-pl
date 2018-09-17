@@ -18,12 +18,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d7601913b3940de8e6ade2c76100f4d773281db7
-ms.sourcegitcommit: d4c803bd3a684d7951bf88dcecf1f14af43ae411
+ms.openlocfilehash: ca2582e4c792e0ef60cb11d632c6f4e88891852d
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/10/2018
-ms.locfileid: "42464931"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45726053"
 ---
 # <a name="section"></a>sekcja
 Tworzy sekcję w pliku .obj.  
@@ -43,30 +43,17 @@ Po zdefiniowaniu sekcji pozostaje prawidłowe na pozostałą część kompilacji
 *Nazwa sekcji* jest wymaganym parametrem, który ma być nazwa sekcji. Nazwa nie może powodować konfliktu z nazwami standardowej sekcji. Zobacz [/SECTION](../build/reference/section-specify-section-attributes.md) listę nazw, nie należy używać podczas tworzenia sekcji.  
   
 *atrybuty* jest parametrem opcjonalnym składający się z co najmniej jeden rozdzielonych przecinkami atrybutów, które chcesz przypisać do sekcji. Możliwe *atrybuty* są:  
-  
-**read**  
-Umożliwia wykonywanie operacji odczytu na danych.  
-  
-**write**  
-Umożliwia wykonywanie operacji zapisu na danych.  
-  
-**execute**  
-Umożliwia wykonanie kodu.  
-  
-**Udostępnione**  
-Udostępnia sekcji między wszystkie procesy, które ładują obrazu.  
-  
-**nopage**  
-Oznacza sekcji nie stronicowanej; przydatne dla sterowników urządzeń systemu Win32.  
-  
-**nocache**  
-Oznacza sekcji nie podlega buforowaniu; przydatne dla sterowników urządzeń systemu Win32.  
-  
-**Odrzuć**  
-Oznacza sekcji discardable; przydatne dla sterowników urządzeń systemu Win32.  
-  
-**remove**  
-Oznacza sekcji, co nie rezydentnego; sterowniki urządzeń wirtualnych (V*x*D) tylko.  
+
+|Atrybut|Opis|
+|-|-|
+|**read**|Umożliwia wykonywanie operacji odczytu na danych.|
+|**write**|Umożliwia wykonywanie operacji zapisu na danych.|
+|**execute**|Umożliwia wykonanie kodu.|
+|**Udostępnione**|Udostępnia sekcji między wszystkie procesy, które ładują obrazu.|
+|**nopage**|Oznacza sekcji nie stronicowanej; przydatne dla sterowników urządzeń systemu Win32.|
+|**nocache**|Oznacza sekcji nie podlega buforowaniu; przydatne dla sterowników urządzeń systemu Win32.|
+|**Odrzuć**|Oznacza sekcji discardable; przydatne dla sterowników urządzeń systemu Win32.|
+|**remove**|Oznacza sekcji, co nie rezydentnego; sterowniki urządzeń wirtualnych (V*x*D) tylko.|
   
 Jeśli nie określisz atrybutów, sekcji będzie po ich przeczytaniu i Zapis atrybutów.  
   

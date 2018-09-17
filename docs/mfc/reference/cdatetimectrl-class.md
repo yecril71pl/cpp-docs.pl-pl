@@ -50,12 +50,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: bdf2134b334c259a6543af279ee058b659cf21d6
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 9eb3b70851cb5e51ef2ddc0e99347c81fe632b6d
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43210190"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45726664"
 ---
 # <a name="cdatetimectrl-class"></a>Klasa CDateTimeCtrl
 Hermetyzuje funkcjonalność formantu wyboru daty i godziny.  
@@ -192,7 +192,7 @@ BOOL GetDateTimePickerInfo(LPDATETIMEPICKERINFO pDateTimePickerInfo) const;
   
 |Parametr|Opis|  
 |---------------|-----------------|  
-|[out] *pDateTimePickerInfo*|Wskaźnik do [DATETIMEPICKERINFO](/windows/desktop/api/commctrl/ns-commctrl-tagdatetimepickerinfo) strukturę, która odbiera opis bieżącego kontrolka selektora daty i godziny.<br /><br /> Obiekt wywołujący jest odpowiedzialny za przydzielanie tej struktury. Jednak ta metoda inicjuje *elementu cbSize* elementu członkowskiego struktury.|  
+|*pDateTimePickerInfo*|[out] Wskaźnik do [DATETIMEPICKERINFO](/windows/desktop/api/commctrl/ns-commctrl-tagdatetimepickerinfo) strukturę, która odbiera opis bieżącego kontrolka selektora daty i godziny.<br /><br /> Obiekt wywołujący jest odpowiedzialny za przydzielanie tej struktury. Jednak ta metoda inicjuje *elementu cbSize* elementu członkowskiego struktury.|  
   
 ### <a name="return-value"></a>Wartość zwracana  
  Wartość TRUE, jeśli ta metoda jest kończy się pomyślnie; w przeciwnym razie wartość FALSE.  
@@ -347,7 +347,7 @@ BOOL GetIdealSize(LPSIZE psize) const;
   
 |Parametr|Opis|  
 |---------------|-----------------|  
-|[out] *psize*|Wskaźnik do [rozmiar](https://msdn.microsoft.com/library/windows/desktop/dd145106) strukturę, która zawiera rozmiar idealny dla formantu.|  
+|*psize*|[out] Wskaźnik do [rozmiar](https://msdn.microsoft.com/library/windows/desktop/dd145106) strukturę, która zawiera rozmiar idealny dla formantu.|  
   
 ### <a name="return-value"></a>Wartość zwracana  
  Wartość zwracana jest zawsze wartość TRUE.  
@@ -458,7 +458,7 @@ DWORD SetMonthCalStyle(DWORD dwStyle);
   
 |Parametr|Opis|  
 |---------------|-----------------|  
-|[in] *dwStyle*|Nowego miesiąca w kalendarzu stylu formantu, który jest bitową kombinacją (lub) style kontrolki kalendarza miesięcznego. Aby uzyskać więcej informacji, zobacz [style kontrolki kalendarza miesięcznego](/windows/desktop/Controls/month-calendar-control-styles).|  
+|*dwStyle*|[in] Nowego miesiąca w kalendarzu stylu formantu, który jest bitową kombinacją (lub) style kontrolki kalendarza miesięcznego. Aby uzyskać więcej informacji, zobacz [style kontrolki kalendarza miesięcznego](/windows/desktop/Controls/month-calendar-control-styles).|  
   
 ### <a name="return-value"></a>Wartość zwracana  
  Poprzednie styl formant kalendarza miesięcznego listy rozwijanej.  

@@ -122,12 +122,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3b103e2409da08dc67a55aae8ba8c5f49f377434
-ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
+ms.openlocfilehash: cc9965371de0ea75ece0cb31c7ec5187b9279cef
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43677694"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45726716"
 ---
 # <a name="cmdichildwndex-class"></a>Klasa CMDIChildWndEx
 `CMDIChildWndEx` Klasa oferuje funkcje Windows okna podrzędnego interfejsu (MDI) w usłudze wielu dokumentów. Rozszerza funkcjonalność [klasa CMDIChildWnd](../../mfc/reference/cmdichildwnd-class.md). Struktura wymaga tej klasy, gdy aplikacja MDI używa niektórych klas MFC.  
@@ -239,11 +239,11 @@ BOOL AddPane(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *pControlBar*  
- Wskaźnik do okienka.  
+*pControlBar*<br/>
+[in] Wskaźnik do okienka.  
   
- [in] *bTail*  
- Wartość TRUE, aby dodać w okienku na końcu listy okienka dokowania Menedżera; w przeciwnym razie wartość FALSE.  
+*bTail*<br/>
+[in] Wartość TRUE, aby dodać w okienku na końcu listy okienka dokowania Menedżera; w przeciwnym razie wartość FALSE.  
   
 ### <a name="return-value"></a>Wartość zwracana  
  Wartość TRUE, jeśli okienka został pomyślnie zarejestrowany za pomocą Menedżera dokowania; w przeciwnym razie wartość FALSE.  
@@ -256,8 +256,8 @@ void AddTabbedPane(CDockablePane* pControlBar);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *pControlBar*  
- Wskaźnik do okienka.  
+*pControlBar*<br/>
+[in] Wskaźnik do okienka.  
   
 ##  <a name="adjustdockinglayout"></a>  CMDIChildWndEx::AdjustDockingLayout  
  Dostosowuje układ dokowania.  
@@ -267,8 +267,8 @@ virtual void AdjustDockingLayout(HDWP hdwp = NULL);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *hdwp*  
- Dojście do struktury położenie okna odroczone.  
+*hdwp*<br/>
+[in] Dojście do struktury położenie okna odroczone.  
   
 ##  <a name="canshowonmditabs"></a>  CMDIChildWndEx::CanShowOnMDITabs  
 
@@ -305,14 +305,14 @@ void DockPane(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *pBar*  
- Wskaźnik do okienka.  
+*pBar*<br/>
+[in] Wskaźnik do okienka.  
   
- [in] *nDockBarID*  
- Identyfikator okienka.  
+*nDockBarID*<br/>
+[in] Identyfikator okienka.  
   
- [in] *lprect —*  
- Wskaźnik do prostokąta.  
+*lprect —*<br/>
+[in] Wskaźnik do prostokąta.  
   
 ### <a name="remarks"></a>Uwagi  
  *Lprect —* parametr nie jest używany.  
@@ -349,8 +349,8 @@ BOOL EnableAutoHidePanes(DWORD dwDockStyle);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *dwDockStyle*  
- Określa strony ramki głównego okna, który jest włączony. Użyj co najmniej jeden z następujących flag.  
+*dwDockStyle*<br/>
+[in] Określa strony ramki głównego okna, który jest włączony. Użyj co najmniej jeden z następujących flag.  
   
 - CBRS_ALIGN_LEFT  
   
@@ -371,8 +371,8 @@ BOOL EnableDocking(DWORD dwDockStyle);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *dwDockStyle*  
- Określa wyrównanie dokowania, aby włączyć.  
+*dwDockStyle*<br/>
+[in] Określa wyrównanie dokowania, aby włączyć.  
   
 ### <a name="return-value"></a>Wartość zwracana  
  Wartość TRUE, jeśli metoda się powiedzie; w przeciwnym razie wartość FALSE.  
@@ -453,8 +453,8 @@ CBasePane* GetPane(UINT nID);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *nID*  
- Identyfikator formantu okienku można znaleźć.  
+*nID*<br/>
+[in] Identyfikator formantu okienku można znaleźć.  
   
 ### <a name="return-value"></a>Wartość zwracana  
  Wskaźnik do okienka, jeśli znaleziono, w przeciwnym razie wartość NULL.  
@@ -506,14 +506,14 @@ BOOL InsertPane(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *pControlBar*  
- Wskaźnik do okienka do wstawienia.  
+*pControlBar*<br/>
+[in] Wskaźnik do okienka do wstawienia.  
   
- [in] *pTarget*  
- Wskaźnik do sąsiadujących okienka.  
+*pTarget*<br/>
+[in] Wskaźnik do sąsiadujących okienka.  
   
- [in] *bPo*  
- W przypadku opcji TRUE *pControlBar* po *pTarget*. W przypadku wartości FAŁSZ *pControlBar* jest wstawiany przed *pTarget*.  
+*bPo*<br/>
+[in] W przypadku opcji TRUE *pControlBar* po *pTarget*. W przypadku wartości FAŁSZ *pControlBar* jest wstawiany przed *pTarget*.  
   
 ### <a name="return-value"></a>Wartość zwracana  
  Wartość TRUE, jeśli metoda się powiedzie, wartość FALSE w przeciwnym razie.  
@@ -529,14 +529,14 @@ BOOL IsPointNearDockSite(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *punktu*  
- Określony punkt.  
+*Punkt*<br/>
+[in] Określony punkt.  
   
- [in] *dwBarAlignment*  
- Określa, które krawędzi punkt znajduje się w pobliżu. Możliwe wartości to CBRS_ALIGN_LEFT, CBRS_ALIGN_RIGHT, CBRS_ALIGN_TOP i CBRS_ALIGN_BOTTOM  
+*dwBarAlignment*<br/>
+[in] Określa, które krawędzi punkt znajduje się w pobliżu. Możliwe wartości to CBRS_ALIGN_LEFT, CBRS_ALIGN_RIGHT, CBRS_ALIGN_TOP i CBRS_ALIGN_BOTTOM  
   
- [in] *bOuterEdge*  
- Wartość TRUE, jeśli punkt znajduje się w pobliżu zewnętrznymi krawędziami witryny dokowania; Wartość FALSE w przeciwnym razie.  
+*bOuterEdge*<br/>
+[in] Wartość TRUE, jeśli punkt znajduje się w pobliżu zewnętrznymi krawędziami witryny dokowania; Wartość FALSE w przeciwnym razie.  
   
 ### <a name="return-value"></a>Wartość zwracana  
  Wartość TRUE, jeśli punkt znajduje się w pobliżu witryny dokowania; w przeciwnym razie wartość FALSE.  
@@ -580,8 +580,8 @@ virtual BOOL OnMoveMiniFrame(CWnd* pFrame);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *pFrame*  
- Wskaźnik do okna mini ramki.  
+*pFrame*<br/>
+[in] Wskaźnik do okna mini ramki.  
   
 ### <a name="return-value"></a>Wartość zwracana  
  Wartość TRUE, jeśli metoda się powiedzie, w przeciwnym razie wartość FALSE.  
@@ -596,11 +596,11 @@ virtual void OnSetPreviewMode(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *bPreview*  
- W przypadku opcji TRUE trybu podglądu wydruku. Jeśli jest to wartość FAŁSZ, Zamknij tryb podglądu wydruku.  
+*bPreview*<br/>
+[in] W przypadku opcji TRUE trybu podglądu wydruku. Jeśli jest to wartość FAŁSZ, Zamknij tryb podglądu wydruku.  
   
- [in] *stanu wydajności*  
- Wskaźnik do struktury stanu podglądu wydruku.  
+*stanu wydajności*<br/>
+[in] Wskaźnik do struktury stanu podglądu wydruku.  
   
 ##  <a name="onupdateframetitle"></a>  CMDIChildWndEx::OnUpdateFrameTitle  
  Metoda wywoływana przez platformę, aby zaktualizować tytuł ramki.  
@@ -610,8 +610,8 @@ virtual void OnUpdateFrameTitle(BOOL bAddToTitle);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *bAddToTitle*  
- Jeśli PRAWDA, Dodaj nazwę dokumentu do tytułu.  
+*bAddToTitle*<br/>
+[in] Jeśli PRAWDA, Dodaj nazwę dokumentu do tytułu.  
   
 ##  <a name="panefrompoint"></a>  CMDIChildWndEx::PaneFromPoint  
  Zwraca okienko, który zawiera danego punktu.  
@@ -631,20 +631,20 @@ CBasePane* PaneFromPoint(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *punktu*  
- Określa punkt, w układzie współrzędnych ekranu, aby sprawdzić.  
+*Punkt*<br/>
+[in] Określa punkt, w układzie współrzędnych ekranu, aby sprawdzić.  
   
- [in] *nSensitivity*  
- Zwiększanie obszaru search tę kwotę. Okienko spełnia kryteria wyszukiwania, jeśli dany punkt mieści się w obszarze zwiększone.  
+*nSensitivity*<br/>
+[in] Zwiększanie obszaru search tę kwotę. Okienko spełnia kryteria wyszukiwania, jeśli dany punkt mieści się w obszarze zwiększone.  
   
- [in] *bExactBar*  
- Wartość TRUE, aby zignorować *nSensitivity* parametru; w przeciwnym razie wartość FALSE.  
+*bExactBar*<br/>
+[in] Wartość TRUE, aby zignorować *nSensitivity* parametru; w przeciwnym razie wartość FALSE.  
   
- [in] *pRTCBarType*  
- Jeśli nie ma wartość NULL, metoda szuka tylko okienka określonego typu.  
+*pRTCBarType*<br/>
+[in] Jeśli nie ma wartość NULL, metoda szuka tylko okienka określonego typu.  
   
- [in] *dwAlignment*  
- Jeśli okienko zostanie znaleziony w określonym momencie, ten parametr zawiera strony panelu, który był najbardziej zbliżony do określonego punktu. Aby uzyskać więcej informacji, zobacz sekcję: Uwagi.  
+*dwAlignment*<br/>
+[in] Jeśli okienko zostanie znaleziony w określonym momencie, ten parametr zawiera strony panelu, który był najbardziej zbliżony do określonego punktu. Aby uzyskać więcej informacji, zobacz sekcję: Uwagi.  
   
 ### <a name="return-value"></a>Wartość zwracana  
  Wskaźnik do `CBasePane`-pochodnych obiekt, który zawiera dany punkt, lub wartość NULL, jeśli okienko nie został znaleziony.  
@@ -662,8 +662,8 @@ virtual void RecalcLayout(BOOL bNotify = TRUE);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *bNotify*  
- W przypadku opcji TRUE aktywny element w miejscu okna odbiera powiadomienie o zmianie układu.  
+*bNotify*<br/>
+[in] W przypadku opcji TRUE aktywny element w miejscu okna odbiera powiadomienie o zmianie układu.  
   
 ##  <a name="removepanefromdockmanager"></a>  CMDIChildWndEx::RemovePaneFromDockManager  
  Usuwa okienko dokowania menedżera.  
@@ -678,20 +678,20 @@ void RemovePaneFromDockManager(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *pControlBar*  
- Wskaźnik do okienka do usunięcia.  
+*pControlBar*<br/>
+[in] Wskaźnik do okienka do usunięcia.  
   
- [in] *bDestroy*  
- W przypadku opcji TRUE usunięto okienko zostanie zniszczony.  
+*bDestroy*<br/>
+[in] W przypadku opcji TRUE usunięto okienko zostanie zniszczony.  
   
- [in] *bAdjustLayout*  
- W przypadku opcji TRUE natychmiast dostosować układ dokowania.  
+*bAdjustLayout*<br/>
+[in] W przypadku opcji TRUE natychmiast dostosować układ dokowania.  
   
- [in] *bAutoHide*  
- W przypadku opcji TRUE układ dokowania jest powiązana z listy paski Autoukrywanie. W przypadku wartości FAŁSZ układ dokowania jest powiązana z listy regularne okienka.  
+*bAutoHide*<br/>
+[in] W przypadku opcji TRUE układ dokowania jest powiązana z listy paski Autoukrywanie. W przypadku wartości FAŁSZ układ dokowania jest powiązana z listy regularne okienka.  
   
- [in] *pBarReplacement*  
- Wskaźnik do okienka w którym zastępuje okienka usunięte.  
+*pBarReplacement*<br/>
+[in] Wskaźnik do okienka w którym zastępuje okienka usunięte.  
   
 ##  <a name="setrelatedtabgroup"></a>  CMDIChildWndEx::SetRelatedTabGroup  
 
@@ -717,10 +717,10 @@ void ShowPane(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *pBar*  
- [in] *bShow*  
- [in] *bDelay*  
- [in] *bActivate*  
+*pBar*<br/>
+[in] [in] *bShow*  
+*bDelay*<br/>
+[in] [in] *bActivate*  
   
 ### <a name="remarks"></a>Uwagi  
   

@@ -23,45 +23,48 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ee1bf99cdf27e432bf8bdf6b7c0e48a84aeaac21
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 6acffba952ad46e2b6051aed7effeb4a613bfc65
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32377472"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45725611"
 ---
 # <a name="verbose-print-progress-messages"></a>/VERBOSE (Drukuj komunikaty o postępie)
-```  
-/VERBOSE[:{ICF|INCR|LIB|REF|SAFESEH|UNUSEDLIBS}]  
-```  
-  
-## <a name="remarks"></a>Uwagi  
- Konsolidator wysyła informacje o postępie sesji połączeń do **dane wyjściowe** okna. W wierszu polecenia informacje są wysyłane na wyjście standardowe i mogą zostać przekierowane do pliku.  
-  
-|Opcja|Opis|  
-|------------|-----------------|  
-|/ VERBOSE|Wyświetla szczegółowe informacje o procesie łączenia.|  
-|/ VERBOSE: ICF|Wyświetlanie informacji o działaniu konsolidatora, będącą wynikiem użycia [/OPT: ICF](../../build/reference/opt-optimizations.md).|  
-|/ VERBOSE: INCR|Wyświetla informacje o procesie konsolidowania przyrostowego.|  
-|/ VERBOSE: LIB|Komunikaty o postępie Wyświetla wskazujące tylko bibliotek przeszukiwane.<br /><br /> Wyświetlane informacje obejmują proces wyszukiwania biblioteki i listy nazwy biblioteki i obiekt (z pełną ścieżką), rozpoznane symbol z biblioteki i listę obiektów, które odwołują się do symbolu.|  
-|/ VERBOSE: REF|Wyświetla informacje o działaniu konsolidatora, będącą wynikiem użycia [/OPT:REF](../../build/reference/opt-optimizations.md).|  
-|/ VERBOSE: SAFESEH|Wyświetla informacje dotyczące modułów, które nie są zgodne z bezpiecznym wyjątek podczas obsługi [opcja/SAFESEH](../../build/reference/safeseh-image-has-safe-exception-handlers.md) nie jest określona.|  
-|/ VERBOSE: UNUSEDLIBS|Wyświetla informacje o plikach wszystkie biblioteki, które nie są używane podczas tworzenia obrazu.|  
-  
-### <a name="to-set-this-linker-option-in-the-visual-studio-development-environment"></a>Aby ustawić tę opcję konsolidatora w środowisku programowania Visual Studio  
-  
-1.  Otwórz projekt **strony właściwości** okno dialogowe. Aby uzyskać więcej informacji, zobacz [Ustawianie właściwości projektu Visual C++](../../ide/working-with-project-properties.md).  
-  
-2.  Rozwiń węzeł **konsolidatora** folderu.  
-  
-3.  Wybierz **wiersza polecenia** strony właściwości.  
-  
-4.  Dodaj opcję **dodatkowe opcje** pole.  
-  
-### <a name="to-set-this-linker-option-programmatically"></a>Aby programowo ustawić tę opcję konsolidatora  
-  
--   Zobacz <xref:Microsoft.VisualStudio.VCProjectEngine.VCLinkerTool.ShowProgress%2A>.  
-  
-## <a name="see-also"></a>Zobacz też  
- [Ustawianie opcji konsolidatora](../../build/reference/setting-linker-options.md)   
- [Opcje konsolidatora](../../build/reference/linker-options.md)
+
+```
+/VERBOSE[:{ICF|INCR|LIB|REF|SAFESEH|UNUSEDLIBS}]
+```
+
+## <a name="remarks"></a>Uwagi
+
+Program łączący wysyła informacje o postępie łączenia sesji, do **dane wyjściowe** okna. W wierszu polecenia informacje są wysyłane do wyjścia standardowego i mogą zostać przekierowane do pliku.
+
+|Opcja|Opis|
+|------------|-----------------|
+|/ VERBOSE|Wyświetla szczegóły dotyczące proces łączenia.|
+|/ VERBOSE: ICF|Wyświetlanie informacji na temat aktywności konsolidatora, które powstały na skutek stosowania [/OPT: ICF](../../build/reference/opt-optimizations.md).|
+|/ VERBOSE: INCR|Wyświetla informacje na temat przyrostowego procesu łączenia.|
+|/ VERBOSE: LIB|Wyświetla wiadomości postępu, które wskazują wyłącznie biblioteki przeszukiwane.<br /><br /> Wyświetlane informacje obejmują proces wyszukiwania biblioteki i listy każdej nazwy biblioteki i obiektu (z pełną ścieżką), symbolu zamieniana z biblioteki i listy obiektów, które odwołują się symbol.|
+|/ VERBOSE: REF|Przedstawia informacje na temat aktywności konsolidatora, które powstały na skutek stosowania [/OPT: REF](../../build/reference/opt-optimizations.md).|
+|/ VERBOSE: SAFESEH|Wyświetla informacje dotyczące modułów, które nie są zgodne z wyjątkiem bezpiecznej obsługi, kiedy [opcja/SAFESEH](../../build/reference/safeseh-image-has-safe-exception-handlers.md) nie zostanie określony.|
+|/ VERBOSE: UNUSEDLIBS|Wyświetla informacje o dowolnych plikach bibliotek, które nie są używane podczas tworzenia obrazu.|
+
+### <a name="to-set-this-linker-option-in-the-visual-studio-development-environment"></a>Aby ustawić tę opcję konsolidatora w środowisku programowania Visual Studio
+
+1. Otwórz projekt **stron właściwości** okno dialogowe. Aby uzyskać więcej informacji, zobacz [ustawienie właściwości projektu Visual C++](../../ide/working-with-project-properties.md).
+
+1. Rozwiń **konsolidatora** folderu.
+
+1. Wybierz **wiersza polecenia** stronę właściwości.
+
+1. Dodaj opcję **dodatkowe opcje** pole.
+
+### <a name="to-set-this-linker-option-programmatically"></a>Aby programowo ustawić tę opcję konsolidatora
+
+- Zobacz <xref:Microsoft.VisualStudio.VCProjectEngine.VCLinkerTool.ShowProgress%2A>.
+
+## <a name="see-also"></a>Zobacz też
+
+[Ustawianie opcji konsolidatora](../../build/reference/setting-linker-options.md)<br/>
+[Opcje konsolidatora](../../build/reference/linker-options.md)

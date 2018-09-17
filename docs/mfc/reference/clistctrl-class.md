@@ -274,12 +274,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 094cf61c2535ef40991d2ab6ab9a1bc4a9dff014
-ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
+ms.openlocfilehash: f1e869fd70fb8f2d0b52d69dedb555c600fd390b
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43684960"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45726820"
 ---
 # <a name="clistctrl-class"></a>Klasa CListCtrl
 Hermetyzuje funkcjonalność "Wyświetl formant listy" który wyświetla zbiór elementów składających się z ikony (z listy obrazu) i etykiety.  
@@ -1276,8 +1276,8 @@ BOOL GetGroupInfoByIndex(
   
 |Parametr|Opis|  
 |---------------|-----------------|  
-|[in] *iIndex*|Liczony od zera indeks grupy.|  
-|[out] *pGroup*|Wskaźnik do [LVGROUP](/windows/desktop/api/commctrl/ns-commctrl-taglvgroup) strukturę, która otrzymuje informacje o grupie, określone przez *iIndex* parametru.<br /><br /> Obiekt wywołujący jest odpowiedzialny za inicjowanie elementów członkowskich [LVGROUP](/windows/desktop/api/commctrl/ns-commctrl-taglvgroup) struktury. Ustaw `cbSize` elementu członkowskiego rozmiar struktury i flagi o `mask` elementu członkowskiego, aby określić dane, które można pobrać.|  
+|*iIndex*|[in] Liczony od zera indeks grupy.|  
+|*pGroup*|[out] Wskaźnik do [LVGROUP](/windows/desktop/api/commctrl/ns-commctrl-taglvgroup) strukturę, która otrzymuje informacje o grupie, określone przez *iIndex* parametru.<br /><br /> Obiekt wywołujący jest odpowiedzialny za inicjowanie elementów członkowskich [LVGROUP](/windows/desktop/api/commctrl/ns-commctrl-taglvgroup) struktury. Ustaw `cbSize` elementu członkowskiego rozmiar struktury i flagi o `mask` elementu członkowskiego, aby określić dane, które można pobrać.|  
   
 ### <a name="return-value"></a>Wartość zwracana  
  Wartość TRUE, jeśli ta metoda jest kończy się pomyślnie; w przeciwnym razie wartość FALSE.  
@@ -1353,9 +1353,9 @@ BOOL GetGroupRect(
   
 |Parametr|Opis|  
 |---------------|-----------------|  
-|[in] *iGroupId*|Określa grupę.|  
-|[out w] *lprect —*|Wskaźnik do [Prostokąt](https://msdn.microsoft.com/library/windows/desktop/dd162897) struktury. Jeśli ta metoda zakończy się pomyślnie, struktura odbiera współrzędnych prostokąta grupy, który jest określony przez *iGroupId*.|  
-|[in] *iCoords*|Określa współrzędne prostokąta do pobrania. Użyj jednej z następujących wartości:<br /><br /> -LVGGR_GROUP - współrzędnych (ustawienie domyślne) rozwiniętej całej grupy.<br />-LVGGR_HEADER - współrzędne tylko nagłówek (zwinięte grupy).<br />-LVGGR_SUBSETLINK - współrzędne tylko łącze podzestawu (znaczników podzbioru).|  
+|*iGroupId*|[in] Określa grupę.|  
+|*lprect —*|[out w] Wskaźnik do [Prostokąt](https://msdn.microsoft.com/library/windows/desktop/dd162897) struktury. Jeśli ta metoda zakończy się pomyślnie, struktura odbiera współrzędnych prostokąta grupy, który jest określony przez *iGroupId*.|  
+|*iCoords*|[in] Określa współrzędne prostokąta do pobrania. Użyj jednej z następujących wartości:<br /><br /> -LVGGR_GROUP - współrzędnych (ustawienie domyślne) rozwiniętej całej grupy.<br />-LVGGR_HEADER - współrzędne tylko nagłówek (zwinięte grupy).<br />-LVGGR_SUBSETLINK - współrzędne tylko łącze podzestawu (znaczników podzbioru).|  
   
 ### <a name="return-value"></a>Wartość zwracana  
  Wartość TRUE, jeśli ta metoda jest kończy się pomyślnie; w przeciwnym razie wartość FALSE.  
@@ -1406,8 +1406,8 @@ UINT GetGroupState(
   
 |Parametr|Opis|  
 |---------------|-----------------|  
-|[in] *iGroupId*|Liczony od zera indeks grupy.|  
-|[in] *dwMask*|Maska, który określa wartość stanu do pobrania dla określonej grupy. Aby uzyskać więcej informacji, zobacz `mask` członkiem [LVGROUP](/windows/desktop/api/commctrl/ns-commctrl-taglvgroup) struktury.|  
+|*iGroupId*|[in] Liczony od zera indeks grupy.|  
+|*dwMask*|[in] Maska, który określa wartość stanu do pobrania dla określonej grupy. Aby uzyskać więcej informacji, zobacz `mask` członkiem [LVGROUP](/windows/desktop/api/commctrl/ns-commctrl-taglvgroup) struktury.|  
   
 ### <a name="return-value"></a>Wartość zwracana  
  Nie można odnaleźć żądanego stanu dla określonej grupy lub 0, jeśli grupa.  
@@ -1660,10 +1660,10 @@ BOOL GetItemIndexRect(
   
 |Parametr|Opis|  
 |---------------|-----------------|  
-|[in] *pItemIndex*|Wskaźnik do [LVITEMINDEX](https://msdn.microsoft.com/library/windows/desktop/bb774762) strukturę dla nadrzędnego elementu podelement.<br /><br /> Obiekt wywołujący jest odpowiedzialny za przydzielanie i ustawianie elementów członkowskich [LVITEMINDEX](https://msdn.microsoft.com/library/windows/desktop/bb774762) struktury. Ten parametr nie może mieć wartości NULL.|  
-|[in] *iColumn*|Liczony od zera indeks kolumny w kontrolce.|  
-|[in] *rectType*|Część podelement widoku listy, dla której jest pobierana prostokąt otaczający. Określ jedną z następujących wartości:<br /><br /> LVIR_BOUNDS — zwraca prostokąt otaczający podelement całego, w tym ikony oraz etykiety.<br /><br /> LVIR_ICON — zwraca prostokąt otaczający ikony lub małą ikonę podelement.<br /><br /> LVIR_LABEL — zwraca prostokąt otaczający podelement tekstu.|  
-|[out] *pRect*|Wskaźnik do [Prostokąt](https://msdn.microsoft.com/library/windows/desktop/dd162897) strukturę, która otrzymuje informacje na temat prostokąt otaczający podelement.<br /><br /> Obiekt wywołujący jest odpowiedzialny za przydzielanie [Prostokąt](https://msdn.microsoft.com/library/windows/desktop/dd162897) struktury. Ten parametr nie może mieć wartości NULL.|  
+|*pItemIndex*|[in] Wskaźnik do [LVITEMINDEX](https://msdn.microsoft.com/library/windows/desktop/bb774762) strukturę dla nadrzędnego elementu podelement.<br /><br /> Obiekt wywołujący jest odpowiedzialny za przydzielanie i ustawianie elementów członkowskich [LVITEMINDEX](https://msdn.microsoft.com/library/windows/desktop/bb774762) struktury. Ten parametr nie może mieć wartości NULL.|  
+|*iColumn*|[in] Liczony od zera indeks kolumny w kontrolce.|  
+|*rectType*|[in] Część podelement widoku listy, dla której jest pobierana prostokąt otaczający. Określ jedną z następujących wartości:<br /><br /> LVIR_BOUNDS — zwraca prostokąt otaczający podelement całego, w tym ikony oraz etykiety.<br /><br /> LVIR_ICON — zwraca prostokąt otaczający ikony lub małą ikonę podelement.<br /><br /> LVIR_LABEL — zwraca prostokąt otaczający podelement tekstu.|  
+|*pRect*|[out] Wskaźnik do [Prostokąt](https://msdn.microsoft.com/library/windows/desktop/dd162897) strukturę, która otrzymuje informacje na temat prostokąt otaczający podelement.<br /><br /> Obiekt wywołujący jest odpowiedzialny za przydzielanie [Prostokąt](https://msdn.microsoft.com/library/windows/desktop/dd162897) struktury. Ten parametr nie może mieć wartości NULL.|  
   
 ### <a name="return-value"></a>Wartość zwracana  
  Wartość TRUE, jeśli ta metoda jest kończy się pomyślnie; w przeciwnym razie wartość FALSE.  
@@ -1821,9 +1821,9 @@ BOOL GetItemSpacing(
   
 |Parametr|Opis|  
 |---------------|-----------------|  
-|[in] *fSmall*|Widok, dla którego mają zostać pobrane odstępy między elementami. Określ wartość TRUE dla widoku małych ikon, lub wartość FALSE dla widoku ikon.|  
-|[out] *pnHorzSpacing*|Zawiera poziome odstępy między elementami.|  
-|[out] *pnVertSpacing*|Zawiera pionowe odstępy między elementami.|  
+|*fSmall*|[in] Widok, dla którego mają zostać pobrane odstępy między elementami. Określ wartość TRUE dla widoku małych ikon, lub wartość FALSE dla widoku ikon.|  
+|*pnHorzSpacing*|[out] Zawiera poziome odstępy między elementami.|  
+|*pnVertSpacing*|[out] Zawiera pionowe odstępy między elementami.|  
   
 ### <a name="return-value"></a>Wartość zwracana  
  Wartość TRUE, jeśli ta metoda jest kończy się pomyślnie; w przeciwnym razie wartość FALSE.  
@@ -1944,8 +1944,8 @@ BOOL GetNextItemIndex(
   
 |Parametr|Opis|  
 |---------------|-----------------|  
-|[out w] *pItemIndex*|Wskaźnik do [LVITEMINDEX](https://msdn.microsoft.com/library/windows/desktop/bb774762) strukturę, która zawiera opis elementu, gdzie rozpoczyna się wyszukiwanie lub -1 do znalezienia pierwszego elementu, który odpowiada flagi w *nFlags* parametru.<br /><br /> Jeśli ta metoda zakończy się pomyślnie, `LVITEMINDEX` struktury w tym artykule opisano element znalezione przez wyszukiwanie.|  
-|[in] *nFlags*|Bitowa kombinacja (lub) flagi określające, jak wykonać wyszukiwanie.<br /><br /> Wyszukiwanie może zależeć od indeksu, stanu lub wygląd elementu docelowego lub element docelowy fizyczny pozycji względem elementu określonego przez *pItemIndex* parametru. Aby uzyskać więcej informacji, zobacz *flagi* parametru w [LVM_GETNEXTITEMINDEX](https://msdn.microsoft.com/library/windows/desktop/bb761059) wiadomości.|  
+|*pItemIndex*|[out w] Wskaźnik do [LVITEMINDEX](https://msdn.microsoft.com/library/windows/desktop/bb774762) strukturę, która zawiera opis elementu, gdzie rozpoczyna się wyszukiwanie lub -1 do znalezienia pierwszego elementu, który odpowiada flagi w *nFlags* parametru.<br /><br /> Jeśli ta metoda zakończy się pomyślnie, `LVITEMINDEX` struktury w tym artykule opisano element znalezione przez wyszukiwanie.|  
+|*nFlags*|[in] Bitowa kombinacja (lub) flagi określające, jak wykonać wyszukiwanie.<br /><br /> Wyszukiwanie może zależeć od indeksu, stanu lub wygląd elementu docelowego lub element docelowy fizyczny pozycji względem elementu określonego przez *pItemIndex* parametru. Aby uzyskać więcej informacji, zobacz *flagi* parametru w [LVM_GETNEXTITEMINDEX](https://msdn.microsoft.com/library/windows/desktop/bb761059) wiadomości.|  
   
 ### <a name="return-value"></a>Wartość zwracana  
  Wartość TRUE, jeśli ta metoda jest kończy się pomyślnie; w przeciwnym razie wartość FALSE.  
@@ -2647,7 +2647,7 @@ BOOL IsItemVisible(int index) const;
   
 |Parametr|Opis|  
 |---------------|-----------------|  
-|[in] *indeksu*|Liczony od zera indeks elementu w bieżącym kontrolka widoku listy.|  
+|*index*|[in] Liczony od zera indeks elementu w bieżącym kontrolka widoku listy.|  
   
 ### <a name="return-value"></a>Wartość zwracana  
  Wartość TRUE, jeśli określony element jest widoczny; w przeciwnym razie wartość FALSE.  
@@ -2666,7 +2666,7 @@ UINT MapIDToIndex(UINT id) const;
   
 |Parametr|Opis|  
 |---------------|-----------------|  
-|[in] *identyfikator*|Unikatowy identyfikator elementu.|  
+|*id*|[in] Unikatowy identyfikator elementu.|  
   
 ### <a name="return-value"></a>Wartość zwracana  
  Bieżący indeks dla określonego identyfikatora.  
@@ -2689,7 +2689,7 @@ UINT MapIndexToID(UINT index) const;
   
 |Parametr|Opis|  
 |---------------|-----------------|  
-|[in] *indeksu*|Liczony od zera indeks elementu.|  
+|*index*|[in] Liczony od zera indeks elementu.|  
   
 ### <a name="return-value"></a>Wartość zwracana  
  Unikatowy identyfikator dla określonego elementu.  
@@ -2773,11 +2773,11 @@ void MoveItemToGroup(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *idItemFrom*  
- Indeks elementu, który ma zostać przeniesiona.  
+*idItemFrom*<br/>
+[in] Indeks elementu, który ma zostać przeniesiona.  
   
- [in] *idGroupTo*  
- Identyfikator grupy element zostaną przeniesione do.  
+*idGroupTo*<br/>
+[in] Identyfikator grupy element zostaną przeniesione do.  
   
 ### <a name="remarks"></a>Uwagi  
   
@@ -3496,9 +3496,9 @@ BOOL SetItemIndexState(
   
 |Parametr|Opis|  
 |---------------|-----------------|  
-|[in] *pItemIndex*|Wskaźnik do [LVITEMINDEX](https://msdn.microsoft.com/library/windows/desktop/bb774762) strukturę, która zawiera opis elementu. Obiekt wywołujący jest odpowiedzialny za przydzielanie tej struktury i ustawienie jej członków.|  
-|[in] *dwState*|Stan, aby ustawić element, który jest bitową kombinacją [stanów elementu widoku listy](/windows/desktop/Controls/list-view-item-states). Określ zero do resetowania lub jeden do ustawiania stanu.|  
-|[in] *dwMask*|Maska prawidłowe liczby bitów stanu określonego przez *dwState* parametru. Bitowa kombinacja (lub) określ [stanów elementu widoku listy](/windows/desktop/Controls/list-view-item-states).|  
+|*pItemIndex*|[in] Wskaźnik do [LVITEMINDEX](https://msdn.microsoft.com/library/windows/desktop/bb774762) strukturę, która zawiera opis elementu. Obiekt wywołujący jest odpowiedzialny za przydzielanie tej struktury i ustawienie jej członków.|  
+|*dwState*|[in] Stan, aby ustawić element, który jest bitową kombinacją [stanów elementu widoku listy](/windows/desktop/Controls/list-view-item-states). Określ zero do resetowania lub jeden do ustawiania stanu.|  
+|*dwMask*|[in] Maska prawidłowe liczby bitów stanu określonego przez *dwState* parametru. Bitowa kombinacja (lub) określ [stanów elementu widoku listy](/windows/desktop/Controls/list-view-item-states).|  
   
 ### <a name="return-value"></a>Wartość zwracana  
  Wartość TRUE, jeśli ta metoda jest kończy się pomyślnie; w przeciwnym razie wartość FALSE.  
@@ -3838,13 +3838,13 @@ BOOL SortItems(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *pfnCompare*  
- Adres funkcji porównywania zdefiniowanych przez aplikację.  
+*pfnCompare*<br/>
+[in] Adres funkcji porównywania zdefiniowanych przez aplikację.  
   
  Operacja sortowania wywołuje funkcję porównania, każdym razem, gdy trzeba określić względną kolejność dwóch elementów listy. Musi być funkcją porównywania, statycznej składowej klasy lub autonomicznych funkcji, która nie jest elementem członkowskim każdej klasy.  
   
- [in] *dwData*  
- Wartość zdefiniowanych przez aplikację, która jest przekazywana do funkcji porównywania.  
+*dwData*<br/>
+[in] Wartość zdefiniowanych przez aplikację, która jest przekazywana do funkcji porównywania.  
   
 ### <a name="return-value"></a>Wartość zwracana  
  Wartość TRUE, jeśli metoda kończy się pomyślnie; w przeciwnym razie wartość FALSE.  
@@ -3899,8 +3899,8 @@ BOOL SortItemsEx(
   
 |Parametr|Opis|  
 |---------------|-----------------|  
-|[in] *pfnCompare*|Adres funkcji porównywania zdefiniowanych przez aplikację.<br /><br /> Operacja sortowania wywołuje funkcję porównania, każdym razem, gdy trzeba określić względną kolejność dwóch elementów listy. Musi być funkcją porównywania, statycznej składowej klasy lub autonomicznych funkcji, która nie jest elementem członkowskim każdej klasy.|  
-|[in] *dwData*|Zdefiniowane przez aplikację wartość przekazywana do funkcji porównywania.|  
+|*pfnCompare*|[in] Adres funkcji porównywania zdefiniowanych przez aplikację.<br /><br /> Operacja sortowania wywołuje funkcję porównania, każdym razem, gdy trzeba określić względną kolejność dwóch elementów listy. Musi być funkcją porównywania, statycznej składowej klasy lub autonomicznych funkcji, która nie jest elementem członkowskim każdej klasy.|  
+|*dwData*|[in] Zdefiniowane przez aplikację wartość przekazywana do funkcji porównywania.|  
   
 ### <a name="return-value"></a>Wartość zwracana  
  Wartość TRUE, jeśli ta metoda jest kończy się pomyślnie; w przeciwnym razie wartość FALSE.  

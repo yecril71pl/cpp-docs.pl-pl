@@ -20,12 +20,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e24a86ead18cde836fd52df4e0c279f69b4c67a1
-ms.sourcegitcommit: fb9448eb96c6351a77df04af16ec5c0fb9457d9e
+ms.openlocfilehash: e2fe0b0523fb411b8ef4700a7dea7832c1cdfc52
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/13/2018
-ms.locfileid: "43687938"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45726302"
 ---
 # <a name="loadlibrary-and-afxloadlibrary"></a>LoadLibrary i AfxLoadLibrary
 
@@ -39,7 +39,7 @@ Dla aplikacji MFC, które ładują biblioteki DLL rozszerzeń MFC, firma Microso
 
 Jeśli Windows nie może załadować biblioteki DLL, proces może próbować odzyskać sprawność po błędzie. Na przykład ten proces może powiadomić użytkownika o błędzie i poprosić użytkownika, aby określić inną ścieżkę do pliku DLL.
 
-> [!IMPORTANT]  
+> [!IMPORTANT]
 > Upewnij się określić pełną ścieżkę do każdej biblioteki dll. Bieżący katalog jest przeszukiwany w pierwszej kolejności gdy pliki są ładowane. Jeśli nie kwalifikuje się ścieżkę pliku, może załadować pliku, który nie jest to zamierzone. Innym sposobem, aby zapobiec takiej sytuacji jest za pomocą [/DEPENDENTLOADFLAG](../build/reference/dependentloadflag.md) — opcja konsolidatora.
 
 ## <a name="what-do-you-want-to-do"></a>Co chcesz zrobić?

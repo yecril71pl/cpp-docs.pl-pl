@@ -354,12 +354,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0eb6e8da3caa9286e14072726488ad1c16f47b1e
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: fa578e3abdaeb070e32d950887443855c2af8ba9
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43203645"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45726833"
 ---
 # <a name="cmfcvisualmanager-class"></a>Klasa CMFCVisualManager
 Oferuje obsługę zmian wyglądu aplikacji na poziomie globalnym. `CMFCVisualManager` Klasy działa razem z klasą, która zawiera instrukcje rysowania formantów graficznego interfejsu użytkownika aplikacji za pomocą jednolitego stylu. Inne z tych klas są określane jako menedżerów wizualnych i przejmują od `CMFCBaseVisualManager`.  
@@ -674,10 +674,10 @@ void DoDrawHeaderSortArrow(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *podstawowego kontrolera domeny*  
- [in] *rect*  
- [in] *bIsUp*  
- [in] *bDlgCtrl*  
+*podstawowego kontrolera domeny*<br/>
+[in] [in] *rect*  
+*bIsUp*<br/>
+[in] [in] *bDlgCtrl*  
   
 ### <a name="remarks"></a>Uwagi  
   
@@ -694,8 +694,8 @@ virtual BOOL DrawComboBorderWinXP(CDC*,
   
 ### <a name="parameters"></a>Parametry  
  [in] *Przechwytywania zmian danych**  
- [in] *CRect*  
- [in] *BOOL*  
+*CRect*<br/>
+[in] [in] *BOOL*  
   
 ### <a name="return-value"></a>Wartość zwracana  
   
@@ -714,8 +714,8 @@ virtual BOOL DrawComboDropButtonWinXP(CDC*,
   
 ### <a name="parameters"></a>Parametry  
  [in] *Przechwytywania zmian danych**  
- [in] *CRect*  
- [in] *BOOL*  
+*CRect*<br/>
+[in] [in] *BOOL*  
   
 ### <a name="return-value"></a>Wartość zwracana  
   
@@ -733,8 +733,8 @@ virtual BOOL DrawPushButtonWinXP(CDC*,
   
 ### <a name="parameters"></a>Parametry  
  [in] *Przechwytywania zmian danych**  
- [in] *CRect*  
- [in] *CMFCButton**  
+*CRect*<br/>
+[in] [in] *CMFCButton**  
  [in] *UINT*  
   
 ### <a name="return-value"></a>Wartość zwracana  
@@ -755,12 +755,12 @@ virtual BOOL DrawTextOnGlass(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *podstawowego kontrolera domeny*  
- [in] *strText*  
- [in] *rect*  
- [in] *Flagidw*  
- [in] *nGlowSize*  
- [in] *clrText*  
+*podstawowego kontrolera domeny*<br/>
+[in] [in] *strText*  
+*Rect*<br/>
+[in] [in] *Flagidw*  
+*nGlowSize*<br/>
+[in] [in] *clrText*  
   
 ### <a name="return-value"></a>Wartość zwracana  
   
@@ -786,8 +786,8 @@ virtual COLORREF GetAutoHideButtonTextColor(CMFCAutoHideButton* pButton);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *pButton*  
- Wskaźnik do przycisku automatycznego ukrywania.  
+*pButton*<br/>
+[in] Wskaźnik do przycisku automatycznego ukrywania.  
   
 ### <a name="return-value"></a>Wartość zwracana  
  A [COLORREF](/windows/desktop/gdi/colorref) parametr, który określa kolor tekstu *pButton*.  
@@ -816,8 +816,8 @@ virtual COLORREF GetCaptionBarTextColor(CMFCCaptionBar* pBar);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *pBar*  
- Wskaźnik do paska podpisu.  
+*pBar*<br/>
+[in] Wskaźnik do paska podpisu.  
   
 ### <a name="return-value"></a>Wartość zwracana  
  A [COLORREF](/windows/desktop/gdi/colorref) parametr, który określa kolor tekstu w *pBar*.  
@@ -924,8 +924,8 @@ virtual COLORREF GetMenuItemTextColor(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *pButton*  
- [in] *bHighlighted*  
+*pButton*<br/>
+[in] [in] *bHighlighted*  
  [in] *bWyłączone*  
   
 ### <a name="return-value"></a>Wartość zwracana  
@@ -953,8 +953,8 @@ virtual CSize GetNcBtnSize(BOOL bSmall) const;
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *bSmall*  
- Parametr logiczny, który wskazuje, czy `GetNcBtnSize` powinien pobrać rozmiar przycisku małych lub dużych systemu. Jeśli *bSmall* ma wartość PRAWDA, `GetNcBtnSize` zwraca rozmiar przycisku mały system. W przeciwnym razie zwraca rozmiar przycisku dużym systemie.  
+*bSmall*<br/>
+[in] Parametr logiczny, który wskazuje, czy `GetNcBtnSize` powinien pobrać rozmiar przycisku małych lub dużych systemu. Jeśli *bSmall* ma wartość PRAWDA, `GetNcBtnSize` zwraca rozmiar przycisku mały system. W przeciwnym razie zwraca rozmiar przycisku dużym systemie.  
   
 ### <a name="return-value"></a>Wartość zwracana  
  A [CSize](../../atl-mfc-shared/reference/csize-class.md) parametr, który będzie wskazywać wielkość przycisków systemowych.  
@@ -994,8 +994,8 @@ virtual COLORREF GetPropertyGridGroupColor(CMFCPropertyGridCtrl* pPropList);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *pPropList*  
- Wskaźnik do listy właściwości, która jest rysowanie platformę.  
+*pPropList*<br/>
+[in] Wskaźnik do listy właściwości, która jest rysowanie platformę.  
   
 ### <a name="return-value"></a>Wartość zwracana  
  A [COLORREF](/windows/desktop/gdi/colorref) parametr, który określa kolor tła *pPropList*.  
@@ -1011,8 +1011,8 @@ virtual COLORREF GetPropertyGridGroupTextColor(CMFCPropertyGridCtrl* pPropList);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *pPropList*  
- Wskaźnik do listy właściwości.  
+*pPropList*<br/>
+[in] Wskaźnik do listy właściwości.  
   
 ### <a name="return-value"></a>Wartość zwracana  
  A [COLORREF](/windows/desktop/gdi/colorref) parametrem, który wskazuje kolor tekstu, listy właściwości.  
@@ -1098,12 +1098,12 @@ virtual void GetRibbonSliderColors(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *pSlider*  
- [in] *bIsHighlighted*  
- [in] *bIsPressed*  
- [in] *bIsDisabled*  
- [in] *clrLine*  
- [in] *clrFill*  
+*pSlider*<br/>
+[in] [in] *bIsHighlighted*  
+*bIsPressed*<br/>
+[in] [in] *bIsDisabled*  
+*clrLine*<br/>
+[in] [in] *clrFill*  
   
 ### <a name="remarks"></a>Uwagi  
   
@@ -1131,8 +1131,8 @@ virtual int GetShowAllMenuItemsHeight(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *podstawowego kontrolera domeny*  
- [in] *sizeDefault*  
+*podstawowego kontrolera domeny*<br/>
+[in] [in] *sizeDefault*  
   
 ### <a name="return-value"></a>Wartość zwracana  
   
@@ -1148,8 +1148,8 @@ virtual void GetSmartDockingBaseGuideColors(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *clrBaseGroupBackground*  
- [in] *clrBaseGroupBorder*  
+*clrBaseGroupBackground*<br/>
+[in] [in] *clrBaseGroupBorder*  
   
 ### <a name="remarks"></a>Uwagi  
   
@@ -1186,8 +1186,8 @@ virtual COLORREF GetStatusBarPaneTextColor(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *pStatusBar*  
- [in] *pPane*  
+*pStatusBar*<br/>
+[in] [in] *pPane*  
   
 ### <a name="return-value"></a>Wartość zwracana  
   
@@ -1210,32 +1210,32 @@ virtual void GetTabFrameColors(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *pTabWnd*  
- Wskaźnik do okna z kartami, gdzie ramki jest rysowanie kartę.  
+*pTabWnd*<br/>
+[in] Wskaźnik do okna z kartami, gdzie ramki jest rysowanie kartę.  
   
- [out] *clrDark*  
- Odwołanie do [COLORREF](/windows/desktop/gdi/colorref) parametru, w której ta metoda przechowuje kolor ciemnego obramowania karty.  
+*clrDark*<br/>
+[out] Odwołanie do [COLORREF](/windows/desktop/gdi/colorref) parametru, w której ta metoda przechowuje kolor ciemnego obramowania karty.  
   
- [out] *clrBlack*  
- Odwołania do parametru COLORREF, w której ta metoda przechowuje kolor obramowania okna karty. Domyślny kolor obramowania jest czarny.  
+*clrBlack*<br/>
+[out] Odwołania do parametru COLORREF, w której ta metoda przechowuje kolor obramowania okna karty. Domyślny kolor obramowania jest czarny.  
   
- [out] *clrHighlight*  
- Odwołania do parametru COLORREF, w której ta metoda przechowuje kolor wyróżnienia stan okna karty.  
+*clrHighlight*<br/>
+[out] Odwołania do parametru COLORREF, w której ta metoda przechowuje kolor wyróżnienia stan okna karty.  
   
- [out] *clrFace*  
- Odwołania do parametru COLORREF, w której ta metoda przechowuje kolor twarzy okna karty.  
+*clrFace*<br/>
+[out] Odwołania do parametru COLORREF, w której ta metoda przechowuje kolor twarzy okna karty.  
   
- [out] *clrDarkShadow*  
- Odwołania do parametru COLORREF, w której ta metoda przechowuje kolor cienia okno karty.  
+*clrDarkShadow*<br/>
+[out] Odwołania do parametru COLORREF, w której ta metoda przechowuje kolor cienia okno karty.  
   
- [out] *clrLight*  
- Odwołania do parametru COLORREF, w której ta metoda przechowuje koloru światła krawędź okna karty.  
+*clrLight*<br/>
+[out] Odwołania do parametru COLORREF, w której ta metoda przechowuje koloru światła krawędź okna karty.  
   
- [out] *pbrFace*  
- Wskaźnik do odwołania dla pędzla. Ta metoda przechowuje pędzla, używaną do wypełniania twarzy okna karty, w tym parametrze.  
+*pbrFace*<br/>
+[out] Wskaźnik do odwołania dla pędzla. Ta metoda przechowuje pędzla, używaną do wypełniania twarzy okna karty, w tym parametrze.  
   
- [out] *pbrBlack*  
- Wskaźnik do odwołania dla pędzla. Ta metoda przechowuje pędzla, używanych do wypełnienia czarne krawędź okna karty, w tym parametrze.  
+*pbrBlack*<br/>
+[out] Wskaźnik do odwołania dla pędzla. Ta metoda przechowuje pędzla, używanych do wypełnienia czarne krawędź okna karty, w tym parametrze.  
   
 ### <a name="remarks"></a>Uwagi  
  Należy przesłonić tę funkcję, w klasie pochodnej, jeśli chcesz dostosować zestaw kolorów używanych w ramach do jego rysuje okno karty.  
@@ -1265,8 +1265,8 @@ virtual COLORREF GetTabTextColor(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *CMFCBaseTabCtrl&#42;*  
- [in] *int*  
+*CMFCBaseTabCtrl&#42;*<br/>
+[in] [in] *int*  
  [in] *BOOL*  
   
 ### <a name="return-value"></a>Wartość zwracana  
@@ -1382,11 +1382,11 @@ virtual COLORREF GetToolbarButtonTextColor(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *pButton*  
- Wskaźnik na przycisku paska narzędzi.  
+*pButton*<br/>
+[in] Wskaźnik na przycisku paska narzędzi.  
   
- [in] *stanu*  
- Stan przycisku paska narzędzi.  
+*state*<br/>
+[in] Stan przycisku paska narzędzi.  
   
 ### <a name="return-value"></a>Wartość zwracana  
  Kolor tekstu *pButton* kiedy ma stan wskazywanym przez *stanu*.  
@@ -1452,8 +1452,8 @@ virtual BOOL GetToolTipInfo(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *params*  
- [in] *nNie*  
+*params*<br/>
+[in] [in] *nNie*  
   
 ### <a name="return-value"></a>Wartość zwracana  
   
@@ -1691,8 +1691,8 @@ virtual void OnActivateApp(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *pWnd*  
- [in] *bWykonywanie aktywnych*  
+*pWnd*<br/>
+[in] [in] *bWykonywanie aktywnych*  
   
 ### <a name="remarks"></a>Uwagi  
   
@@ -1708,17 +1708,17 @@ virtual void OnDrawAutoHideButtonBorder(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *podstawowego kontrolera domeny*  
- Wskaźnik do kontekstu urządzenia.  
+*podstawowego kontrolera domeny*<br/>
+[in] Wskaźnik do kontekstu urządzenia.  
   
- [in] *rectBounds*  
- Rozmiar i położenie przycisku automatycznego ukrywania.  
+*rectBounds*<br/>
+[in] Rozmiar i położenie przycisku automatycznego ukrywania.  
   
- [in] *rectBorderSize*  
- A [CRect](../../atl-mfc-shared/reference/crect-class.md) parametr, który zawiera rozmiary obramowania.  
+*rectBorderSize*<br/>
+[in] A [CRect](../../atl-mfc-shared/reference/crect-class.md) parametr, który zawiera rozmiary obramowania.  
   
- [in] *pButton*  
- Wskaźnik do przycisku automatycznego ukrywania. Struktura jest rysowanie granicy dla tego przycisku.  
+*pButton*<br/>
+[in] Wskaźnik do przycisku automatycznego ukrywania. Struktura jest rysowanie granicy dla tego przycisku.  
   
 ### <a name="remarks"></a>Uwagi  
  Należy przesłonić tę metodę w klasie pochodnej, jeśli chcesz dostosować wygląd obramowania przycisku automatycznego ukrywania. Domyślnie ta metoda wypełnia prostego obramowanie z domyślny kolor w tle dla swojej aplikacji.  
@@ -1737,17 +1737,17 @@ virtual void OnDrawBarGripper(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *podstawowego kontrolera domeny*  
- Wskaźnik do kontekstu urządzenia dla paska sterowania.  
+*podstawowego kontrolera domeny*<br/>
+[in] Wskaźnik do kontekstu urządzenia dla paska sterowania.  
   
- [in] *rectGripper*  
- Prostokąt otaczający paska sterowania.  
+*rectGripper*<br/>
+[in] Prostokąt otaczający paska sterowania.  
   
- [in] *bHorz*  
- Parametr logiczny, który określa, czy pasek sterowania jest zadokowany poziomo czy pionowo.  
+*bHorz*<br/>
+[in] Parametr logiczny, który określa, czy pasek sterowania jest zadokowany poziomo czy pionowo.  
   
- [in] *pBar*  
- Wskaźnik do paska sterowania. Menedżer wizualny rysuje uchwytu ten pasek sterowania.  
+*pBar*<br/>
+[in] Wskaźnik do paska sterowania. Menedżer wizualny rysuje uchwytu ten pasek sterowania.  
   
 ### <a name="remarks"></a>Uwagi  
  Domyślna implementacja tej metody, wyświetla standardowe uchwytu. Aby dostosować wygląd uchwytu, należy przesłonić tę metodę w niestandardowej klasy pochodzącej od `CMFCVisualManager` klasy.  
@@ -1765,20 +1765,20 @@ virtual BOOL OnDrawBrowseButton(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *podstawowego kontrolera domeny*  
- Wskaźnik do kontekstu urządzenia.  
+*podstawowego kontrolera domeny*<br/>
+[in] Wskaźnik do kontekstu urządzenia.  
   
- [in] *rect*  
- Prostokąt, który określa granicę przycisk przeglądania.  
+*Rect*<br/>
+[in] Prostokąt, który określa granicę przycisk przeglądania.  
   
- [in] *pEdit*  
- Wskaźnik do kontrolki edycji. Menedżer wizualny rysuje przycisk przeglądania dla tej kontrolki edycji.  
+*pEdit*<br/>
+[in] Wskaźnik do kontrolki edycji. Menedżer wizualny rysuje przycisk przeglądania dla tej kontrolki edycji.  
   
- [in] *stanu*  
- Wartość wyliczana, który określa stan przycisku.  
+*state*<br/>
+[in] Wartość wyliczana, który określa stan przycisku.  
   
- [out] *clrText*  
- Odwołanie do [COLORREF](/windows/desktop/gdi/colorref) parametru. To jest zarezerwowaną wartość i jest aktualnie używana.  
+*clrText*<br/>
+[out] Odwołanie do [COLORREF](/windows/desktop/gdi/colorref) parametru. To jest zarezerwowaną wartość i jest aktualnie używana.  
   
 ### <a name="return-value"></a>Wartość zwracana  
  Wartość TRUE, jeśli to się powiedzie; w przeciwnym razie wartość FALSE.  
@@ -1798,17 +1798,17 @@ virtual void OnDrawButtonBorder(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *podstawowego kontrolera domeny*  
- Wskaźnik do kontekstu urządzenia przycisku paska narzędzi.  
+*podstawowego kontrolera domeny*<br/>
+[in] Wskaźnik do kontekstu urządzenia przycisku paska narzędzi.  
   
- [in] *pButton*  
- Wskaźnik na przycisku paska narzędzi. Struktura rysuje obramowanie tego przycisku.  
+*pButton*<br/>
+[in] Wskaźnik na przycisku paska narzędzi. Struktura rysuje obramowanie tego przycisku.  
   
- [in] *rect*  
- Prostokąt, który określa granice przycisku paska narzędzi.  
+*Rect*<br/>
+[in] Prostokąt, który określa granice przycisku paska narzędzi.  
   
- [in] *stanu*  
- Typ wyliczany danych, który określa bieżący stan przycisku paska narzędzi.  
+*state*<br/>
+[in] Typ wyliczany danych, który określa bieżący stan przycisku paska narzędzi.  
   
 ### <a name="remarks"></a>Uwagi  
  Domyślna implementacja tej metody, wyświetla standardowe obramowania. Należy przesłonić tę metodę w pochodnej Menedżer wizualnego, aby dostosować wygląd obramowania przycisku paska narzędzi.  
@@ -1828,10 +1828,10 @@ virtual void OnDrawButtonSeparator(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *podstawowego kontrolera domeny*  
- [in] *pButton*  
- [in] *rect*  
- [in] *stanu*  
+*podstawowego kontrolera domeny*<br/>
+[in] [in] *pButton*  
+*Rect*<br/>
+[in] [in] *stanu*  
  [in] *bHorz*  
   
 ### <a name="remarks"></a>Uwagi  
@@ -1849,20 +1849,20 @@ virtual void OnDrawCaptionBarBorder(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *podstawowego kontrolera domeny*  
- Wskaźnik do kontekstu urządzenia.  
+*podstawowego kontrolera domeny*<br/>
+[in] Wskaźnik do kontekstu urządzenia.  
   
- [in] *pBar*  
- Wskaźnik do `CMFCCaptionBar` obiektu. Struktura rysuje ten pasek podpisu.  
+*pBar*<br/>
+[in] Wskaźnik do `CMFCCaptionBar` obiektu. Struktura rysuje ten pasek podpisu.  
   
- [in] *rect*  
- Prostokąt, który określa granice pasek podpisu.  
+*Rect*<br/>
+[in] Prostokąt, który określa granice pasek podpisu.  
   
- [in] *clrBarBorder*  
- Kolor obramowania.  
+*clrBarBorder*<br/>
+[in] Kolor obramowania.  
   
- [in] *bFlatBorder*  
- Parametr logiczny, który określa, czy obramowanie wygląd stałą, 2D.  
+*bFlatBorder*<br/>
+[in] Parametr logiczny, który określa, czy obramowanie wygląd stałą, 2D.  
   
 ### <a name="remarks"></a>Uwagi  
  Należy przesłonić tę metodę w klasie pochodnej, aby dostosować wygląd obramowania paska podpisu.  
@@ -1883,14 +1883,14 @@ virtual void OnDrawCaptionBarButtonBorder(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *podstawowego kontrolera domeny*  
- [in] *pBar*  
- [in] *rect*  
- [in] *bIsPressed*  
- [in] *bIsHighlighted*  
- [in] *bIsDisabled*  
- [in] *bHasDropDownArrow*  
- [in] *bIsSysButton*  
+*podstawowego kontrolera domeny*<br/>
+[in] [in] *pBar*  
+*Rect*<br/>
+[in] [in] *bIsPressed*  
+*bIsHighlighted*<br/>
+[in] [in] *bIsDisabled*  
+*bHasDropDownArrow*<br/>
+[in] [in] *bIsSysButton*  
   
 ### <a name="remarks"></a>Uwagi  
   
@@ -1905,8 +1905,8 @@ virtual void OnDrawCaptionBarInfoArea(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *podstawowego kontrolera domeny*  
- [in] *pBar*  
+*podstawowego kontrolera domeny*<br/>
+[in] [in] *pBar*  
  [in] *rect*  
   
 ### <a name="remarks"></a>Uwagi  
@@ -1926,26 +1926,26 @@ virtual void OnDrawCaptionButton (
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *podstawowego kontrolera domeny*  
- Wskaźnik do kontekstu urządzenia.  
+*podstawowego kontrolera domeny*<br/>
+[in] Wskaźnik do kontekstu urządzenia.  
   
- [in] *pButton*  
- Wskaźnik do `CMFCCaptionButton` obiektu. Struktura rysuje ten przycisk paska tytułowego.  
+*pButton*<br/>
+[in] Wskaźnik do `CMFCCaptionButton` obiektu. Struktura rysuje ten przycisk paska tytułowego.  
   
- [in] *bWykonywanie aktywnych*  
- Parametr logiczny, który określa, czy przycisk jest aktywny.  
+*bWykonywanie aktywnych*<br/>
+[in] Parametr logiczny, który określa, czy przycisk jest aktywny.  
   
- [in] *bHorz*  
- Parametr logiczny, który określa, czy podpis jest poziomy.  
+*bHorz*<br/>
+[in] Parametr logiczny, który określa, czy podpis jest poziomy.  
   
- [in] *bMaximized*  
- Parametr logiczny, który określa, czy w okienku nadrzędnego jest zmaksymalizowane.  
+*bMaximized*<br/>
+[in] Parametr logiczny, który określa, czy w okienku nadrzędnego jest zmaksymalizowane.  
   
- [in] *bWyłączone*  
- Parametr logiczny, który określa, czy przycisk paska tytułowego jest wyłączona.  
+*bWyłączone*<br/>
+[in] Parametr logiczny, który określa, czy przycisk paska tytułowego jest wyłączona.  
   
- [in] *nImageID*  
- Indeks obrazu ikony dla przycisku. Jeśli *nImageID* wynosi -1, ta metoda używa indeks obrazu rejestrowane w *pButton*.  
+*nImageID*<br/>
+[in] Indeks obrazu ikony dla przycisku. Jeśli *nImageID* wynosi -1, ta metoda używa indeks obrazu rejestrowane w *pButton*.  
   
 ### <a name="remarks"></a>Uwagi  
  Domyślna implementacja tej metody zawiera mały przycisk z globalnego wystąpienia `CMenuImages` klasy. Przyciski są wymienione w pliku nagłówkowego `CMenuImages`. Niektóre przykłady `CMenuImages::IdClose`, `CMenuImages::IdArowLeft`, `CMenuImages::IdArowRight`, `CMenuImages::IdArowDown`, `CMenuImages::IdArowUp`, i `CMenuImages::IdPinHorz`.  
@@ -1965,10 +1965,10 @@ virtual void OnDrawCheckBox(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *podstawowego kontrolera domeny*  
- [in] *rect*  
- [in] *bHighlighted*  
- [in] *bChecked*  
+*podstawowego kontrolera domeny*<br/>
+[in] [in] *rect*  
+*bHighlighted*<br/>
+[in] [in] *bChecked*  
  [in] *bWłączony*  
   
 ### <a name="remarks"></a>Uwagi  
@@ -1987,12 +1987,12 @@ virtual void OnDrawCheckBoxEx(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *podstawowego kontrolera domeny*  
- [in] *rect*  
- [in] *nInformacje*  
- [in] *bHighlighted*  
- [in] *bPressed*  
- [in] *bWłączony*  
+*podstawowego kontrolera domeny*<br/>
+[in] [in] *rect*  
+*nInformacje*<br/>
+[in] [in] *bHighlighted*  
+*bPressed*<br/>
+[in] [in] *bWłączony*  
   
 ### <a name="remarks"></a>Uwagi  
   
@@ -2010,23 +2010,23 @@ virtual void OnDrawComboBorder(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *podstawowego kontrolera domeny*  
- Wskaźnik do kontekstu urządzenia przycisk pola kombi.  
+*podstawowego kontrolera domeny*<br/>
+[in] Wskaźnik do kontekstu urządzenia przycisk pola kombi.  
   
- [in] *rect*  
- Prostokąt, który określa granice przycisk pola kombi.  
+*Rect*<br/>
+[in] Prostokąt, który określa granice przycisk pola kombi.  
   
- [in] *bWyłączone*  
- Parametrów logiczny, który wskazuje, czy przycisk pola kombi jest niedostępny.  
+*bWyłączone*<br/>
+[in] Parametrów logiczny, który wskazuje, czy przycisk pola kombi jest niedostępny.  
   
- [in] *bIsDropped*  
- Parametr logiczny, który wskazuje, czy jest rozwijana pola kombi.  
+*bIsDropped*<br/>
+[in] Parametr logiczny, który wskazuje, czy jest rozwijana pola kombi.  
   
- [in] *bIsHighlighted*  
- Parametr logiczny, który wskazuje, czy przycisk pola kombi jest wyróżniona.  
+*bIsHighlighted*<br/>
+[in] Parametr logiczny, który wskazuje, czy przycisk pola kombi jest wyróżniona.  
   
- [in] *pButton*  
- Wskaźnik do `CMFCToolBarComboBoxButton` obiektu. Struktura rysuje ten przycisk pola kombi.  
+*pButton*<br/>
+[in] Wskaźnik do `CMFCToolBarComboBoxButton` obiektu. Struktura rysuje ten przycisk pola kombi.  
   
 ### <a name="remarks"></a>Uwagi  
  Należy przesłonić tę metodę w pochodnej Menedżera visual dostosować wygląd obramowania pola kombi.  
@@ -2045,23 +2045,23 @@ virtual void OnDrawComboDropButton(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *podstawowego kontrolera domeny*  
- Wskaźnik do kontekstu urządzenia.  
+*podstawowego kontrolera domeny*<br/>
+[in] Wskaźnik do kontekstu urządzenia.  
   
- [in] *rect*  
- Prostokąt, który określa granice przycisk listy.  
+*Rect*<br/>
+[in] Prostokąt, który określa granice przycisk listy.  
   
- [in] *bWyłączone*  
- Parametrów logiczny, który wskazuje, czy przycisk listy jest niedostępny.  
+*bWyłączone*<br/>
+[in] Parametrów logiczny, który wskazuje, czy przycisk listy jest niedostępny.  
   
- [in] *bIsDropped*  
- Parametr logiczny, który wskazuje, czy jest rozwijana pola kombi.  
+*bIsDropped*<br/>
+[in] Parametr logiczny, który wskazuje, czy jest rozwijana pola kombi.  
   
- [in] *bIsHighlighted*  
- Parametrów logiczny, który wskazuje, czy przycisk listy jest wyróżniony.  
+*bIsHighlighted*<br/>
+[in] Parametrów logiczny, który wskazuje, czy przycisk listy jest wyróżniony.  
   
- [in] *pButton*  
- Wskaźnik do `CMFCToolBarComboBoxButton` obiektu. Struktura rysuje listy przycisk to przycisk pola kombi.  
+*pButton*<br/>
+[in] Wskaźnik do `CMFCToolBarComboBoxButton` obiektu. Struktura rysuje listy przycisk to przycisk pola kombi.  
   
 ### <a name="remarks"></a>Uwagi  
  Należy przesłonić tę metodę w pochodnej Menedżera visual do dostosowywania wyglądu przycisku upuszczania przycisk pola kombi.  
@@ -2091,20 +2091,20 @@ virtual void OnDrawDefaultRibbonImage(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *podstawowego kontrolera domeny*  
- Wskaźnik do kontekstu urządzenia.  
+*podstawowego kontrolera domeny*<br/>
+[in] Wskaźnik do kontekstu urządzenia.  
   
- [in] *rectImage*  
- Prostokąt, który określa granice domyślnego obrazu.  
+*rectImage*<br/>
+[in] Prostokąt, który określa granice domyślnego obrazu.  
   
- [in] *bIsDisabled*  
- Parametrów logiczny, który wskazuje, czy przycisk na wstążce jest niedostępny.  
+*bIsDisabled*<br/>
+[in] Parametrów logiczny, który wskazuje, czy przycisk na wstążce jest niedostępny.  
   
- [in] *bIsPressed*  
- Parametrów logiczny, który wskazuje, czy jest wciśnięty przycisk na Wstążce.  
+*bIsPressed*<br/>
+[in] Parametrów logiczny, który wskazuje, czy jest wciśnięty przycisk na Wstążce.  
   
- [in] *bIsHighlighted*  
- Parametrów logiczny, który wskazuje, czy przycisk na Wstążce zostanie wyróżniona.  
+*bIsHighlighted*<br/>
+[in] Parametrów logiczny, który wskazuje, czy przycisk na Wstążce zostanie wyróżniona.  
   
 ### <a name="remarks"></a>Uwagi  
  Należy przesłonić tę metodę w pochodnej Menedżer wizualnego, jeśli chcesz dostosować obraz, który jest używany jako przycisk wstążki.  
@@ -2122,20 +2122,20 @@ virtual void OnDrawEditBorder(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *podstawowego kontrolera domeny*  
- Wskaźnik do kontekstu urządzenia.  
+*podstawowego kontrolera domeny*<br/>
+[in] Wskaźnik do kontekstu urządzenia.  
   
- [in] *rect*  
- Prostokąt, który określa granice `CMFCToolBarEditBoxButton` obiektu.  
+*Rect*<br/>
+[in] Prostokąt, który określa granice `CMFCToolBarEditBoxButton` obiektu.  
   
- [in] *bWyłączone*  
- Parametr logiczny, który wskazuje, czy przycisk jest niedostępny.  
+*bWyłączone*<br/>
+[in] Parametr logiczny, który wskazuje, czy przycisk jest niedostępny.  
   
- [in] *bIsHighlighted*  
- Parametr logiczny, który wskazuje, czy przycisk jest wyróżniona.  
+*bIsHighlighted*<br/>
+[in] Parametr logiczny, który wskazuje, czy przycisk jest wyróżniona.  
   
- [in] *pButton*  
- Wskaźnik do `CMFCToolBarEditBoxButton` obiektu. Struktura rysuje obramowanie tego przycisku w polu edycji.  
+*pButton*<br/>
+[in] Wskaźnik do `CMFCToolBarEditBoxButton` obiektu. Struktura rysuje obramowanie tego przycisku w polu edycji.  
   
 ### <a name="remarks"></a>Uwagi  
  Należy przesłonić tę metodę w pochodnej Menedżer wizualnego, aby dostosować obramowania `CMFCToolBarEditBoxButton` obiektu.  
@@ -2152,10 +2152,10 @@ virtual void OnDrawExpandingBox(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *podstawowego kontrolera domeny*  
- [in] *rect*  
- [in] *bIsOpened*  
- [in] *colorBox*  
+*podstawowego kontrolera domeny*<br/>
+[in] [in] *rect*  
+*bIsOpened*<br/>
+[in] [in] *colorBox*  
   
 ### <a name="remarks"></a>Uwagi  
   
@@ -2171,17 +2171,17 @@ virtual void OnDrawFloatingToolbarBorder(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *podstawowego kontrolera domeny*  
- Wskaźnik do kontekstu urządzenia.  
+*podstawowego kontrolera domeny*<br/>
+[in] Wskaźnik do kontekstu urządzenia.  
   
- [in] *pToolBar*  
- Wskaźnik do swobodny pasek narzędzi.  
+*pToolBar*<br/>
+[in] Wskaźnik do swobodny pasek narzędzi.  
   
- [in] *rectBorder*  
- Prostokąt, który określa granice swobodny pasek narzędzi.  
+*rectBorder*<br/>
+[in] Prostokąt, który określa granice swobodny pasek narzędzi.  
   
- [in] *rectBorderSize*  
- Prostokąt, który określa rozmiar obramowania paska narzędzi.  
+*rectBorderSize*<br/>
+[in] Prostokąt, który określa rozmiar obramowania paska narzędzi.  
   
 ### <a name="remarks"></a>Uwagi  
  Swobodny pasek narzędzi jest pasek narzędzi, który jest wyświetlany jako okno mini ramki. Zwykle dzieje się po użytkownik przeciąga paska narzędzi, dzięki czemu nie jest już jest zadokowany.  
@@ -2203,20 +2203,20 @@ virtual void OnDrawHeaderCtrlBorder(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *pCtrl*  
- Wskaźnik do `CMFCHeaderCtrl` obiektu. Struktura rysuje krawędzią tej kontrolki nagłówka.  
+*pCtrl*<br/>
+[in] Wskaźnik do `CMFCHeaderCtrl` obiektu. Struktura rysuje krawędzią tej kontrolki nagłówka.  
   
- [in] *podstawowego kontrolera domeny*  
- Wskaźnik do kontekstu urządzenia.  
+*podstawowego kontrolera domeny*<br/>
+[in] Wskaźnik do kontekstu urządzenia.  
   
- [in] *rect*  
- Prostokąt, który określa granice formantu nagłówka.  
+*Rect*<br/>
+[in] Prostokąt, który określa granice formantu nagłówka.  
   
- [in] *bIsPressed*  
- Parametr logiczny, który wskazuje, czy użytkownik naciśnie kontrolkę nagłówka.  
+*bIsPressed*<br/>
+[in] Parametr logiczny, który wskazuje, czy użytkownik naciśnie kontrolkę nagłówka.  
   
- [in] *bIsHighlighted*  
- Parametrów logiczny, który wskazuje, czy jest wyróżniony w formancie nagłówka.  
+*bIsHighlighted*<br/>
+[in] Parametrów logiczny, który wskazuje, czy jest wyróżniony w formancie nagłówka.  
   
 ### <a name="remarks"></a>Uwagi  
  Należy przesłonić tę metodę w pochodnej Menedżer wizualnego do dostosowywania obramowania formantu nagłówka.  
@@ -2233,17 +2233,17 @@ virtual void OnDrawHeaderCtrlSortArrow(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *pCtrl*  
- Wskaźnik do formantu nagłówka. Menedżer wizualny Rysuje strzałkę sortowania [klasa CMFCHeaderCtrl](../../mfc/reference/cmfcheaderctrl-class.md) obiektu.  
+*pCtrl*<br/>
+[in] Wskaźnik do formantu nagłówka. Menedżer wizualny Rysuje strzałkę sortowania [klasa CMFCHeaderCtrl](../../mfc/reference/cmfcheaderctrl-class.md) obiektu.  
   
- [in] *podstawowego kontrolera domeny*  
- Wskaźnik do kontekstu urządzenia.  
+*podstawowego kontrolera domeny*<br/>
+[in] Wskaźnik do kontekstu urządzenia.  
   
- [in] *rect*  
- Prostokąt, który określa granice strzałkę sortowania.  
+*Rect*<br/>
+[in] Prostokąt, który określa granice strzałkę sortowania.  
   
- [in] *bIsUp*  
- Wartość logiczna, który określa kierunek sortowania strzałkę.  
+*bIsUp*<br/>
+[in] Wartość logiczna, który określa kierunek sortowania strzałkę.  
   
 ### <a name="remarks"></a>Uwagi  
  Jeśli *bIsUp* ma wartość PRAWDA, Menedżer wizualny rysuje Strzałka w górę sortowania. Jeśli jest to wartość FALSE, Menedżer wizualny Rysuje strzałkę w dół sortowania. Zastąp `OnDrawHeaderCtrlSortArrow` w klasie pochodnej w celu dostosowania wyglądu przycisku sortowania.  
@@ -2259,8 +2259,8 @@ virtual void OnDrawMenuArrowOnCustomizeList(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *podstawowego kontrolera domeny*  
- [in] *rectCommand*  
+*podstawowego kontrolera domeny*<br/>
+[in] [in] *rectCommand*  
  [in] *bSelected*  
   
 ### <a name="remarks"></a>Uwagi  
@@ -2276,14 +2276,14 @@ virtual void OnDrawMenuBorder(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *podstawowego kontrolera domeny*  
- Wskaźnik do kontekstu urządzenia dla `CMFCPopupMenu` obiektu.  
+*podstawowego kontrolera domeny*<br/>
+[in] Wskaźnik do kontekstu urządzenia dla `CMFCPopupMenu` obiektu.  
   
- [in] *pMenu*  
- Wskaźnik do `CMFCPopupMenu` obiektu. Struktura rysuje obramowanie wokół tego menu podręcznego.  
+*pMenu*<br/>
+[in] Wskaźnik do `CMFCPopupMenu` obiektu. Struktura rysuje obramowanie wokół tego menu podręcznego.  
   
- [in] *rect*  
- Prostokąt, który określa granice z menu podręcznego.  
+*Rect*<br/>
+[in] Prostokąt, który określa granice z menu podręcznego.  
   
 ### <a name="remarks"></a>Uwagi  
  Domyślna implementacja tej metody, wyświetla standardowe menu obramowanie. Należy przesłonić tę metodę w pochodnej Menedżer wizualnego, aby dostosować wygląd obramowania menu.  
@@ -2301,10 +2301,10 @@ virtual void OnDrawMenuCheck(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *podstawowego kontrolera domeny*  
- [in] *pButton*  
- [in] *rect*  
- [in] *bHighlight*  
+*podstawowego kontrolera domeny*<br/>
+[in] [in] *pButton*  
+*Rect*<br/>
+[in] [in] *bHighlight*  
  [in] *bIsRadio*  
   
 ### <a name="remarks"></a>Uwagi  
@@ -2322,10 +2322,10 @@ virtual void OnDrawMenuItemButton(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *podstawowego kontrolera domeny*  
- [in] *pButton*  
- [in] *rectButton*  
- [in] *bHighlight*  
+*podstawowego kontrolera domeny*<br/>
+[in] [in] *pButton*  
+*rectButton*<br/>
+[in] [in] *bHighlight*  
  [in] *bWyłączone*  
   
 ### <a name="remarks"></a>Uwagi  
@@ -2340,8 +2340,8 @@ virtual COLORREF OnDrawMenuLabel(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *podstawowego kontrolera domeny*  
- [in] *rect*  
+*podstawowego kontrolera domeny*<br/>
+[in] [in] *rect*  
   
 ### <a name="return-value"></a>Wartość zwracana  
   
@@ -2358,8 +2358,8 @@ virtual void OnDrawMenuResizeBar(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *podstawowego kontrolera domeny*  
- [in] *rect*  
+*podstawowego kontrolera domeny*<br/>
+[in] [in] *rect*  
  [in] *nResizeFlags*  
   
 ### <a name="remarks"></a>Uwagi  
@@ -2378,23 +2378,23 @@ virtual void OnDrawMenuScrollButton(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *podstawowego kontrolera domeny*  
- Wskaźnik do kontekstu urządzenia.  
+*podstawowego kontrolera domeny*<br/>
+[in] Wskaźnik do kontekstu urządzenia.  
   
- [in] *rect*  
- Prostokąt, który określa granice przycisku przewijania.  
+*Rect*<br/>
+[in] Prostokąt, który określa granice przycisku przewijania.  
   
- [in] *bIsScrollDown*  
- Rysuje visual Menedżera atrybut typu wartość logiczna, która wskazuje, jakiego typu przycisku. Wartość TRUE wskazuje, że Menedżer wizualny rysuje przycisk w dół.  
+*bIsScrollDown*<br/>
+[in] Rysuje visual Menedżera atrybut typu wartość logiczna, która wskazuje, jakiego typu przycisku. Wartość TRUE wskazuje, że Menedżer wizualny rysuje przycisk w dół.  
   
- [in] *bIsHighlited*  
- Wartość logiczna, która wskazuje, czy przycisk jest wyróżniona.  
+*bIsHighlited*<br/>
+[in] Wartość logiczna, która wskazuje, czy przycisk jest wyróżniona.  
   
- [in] *bIsPressed*  
- Wartość logiczna, która wskazuje, czy przycisk jest wciśnięty.  
+*bIsPressed*<br/>
+[in] Wartość logiczna, która wskazuje, czy przycisk jest wciśnięty.  
   
- [in] *bIsDisabled*  
- Wartość logiczna, która wskazuje, czy przycisk jest wyłączony.  
+*bIsDisabled*<br/>
+[in] Wartość logiczna, która wskazuje, czy przycisk jest wyłączony.  
   
 ### <a name="remarks"></a>Uwagi  
  Należy przesłonić tę metodę w pochodnej Menedżer wizualnego, aby dostosować wygląd menu, przyciski przewijania. Menu, przyciski przewijania są wyświetlane na krawędzi wyskakujących menu, gdy całkowita wysokość elementów menu przekracza wysokości wyskakujące menu.  
@@ -2416,14 +2416,14 @@ virtual void OnDrawMenuShadow(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *podstawowego kontrolera domeny*  
- [in] *rectClient*  
- [in] *rectExclude*  
- [in] *nDepth*  
- [in] *iMinBrightness*  
- [in] *iMaxBrightness*  
- [in] *pBmpSaveBottom*  
- [in] *pBmpSaveRight*  
+*podstawowego kontrolera domeny*<br/>
+[in] [in] *rectClient*  
+*rectExclude*<br/>
+[in] [in] *nDepth*  
+*iMinBrightness*<br/>
+[in] [in] *iMaxBrightness*  
+*pBmpSaveBottom*<br/>
+[in] [in] *pBmpSaveRight*  
  [in] *bRTL*  
   
 ### <a name="remarks"></a>Uwagi  
@@ -2441,20 +2441,20 @@ virtual void OnDrawMenuSystemButton(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *podstawowego kontrolera domeny*  
- Wskaźnik do kontekstu urządzenia.  
+*podstawowego kontrolera domeny*<br/>
+[in] Wskaźnik do kontekstu urządzenia.  
   
- [in] *rect*  
- Prostokąt, który określa granice tego przycisku.  
+*Rect*<br/>
+[in] Prostokąt, który określa granice tego przycisku.  
   
- [in] *uiSystemCommand*  
- Flaga określająca, które poleceń systemowych jest skojarzony z przycisku. Możliwe wartości to SC_CLOSE SC_MINIMIZE i SC_RESTORE.  
+*uiSystemCommand*<br/>
+[in] Flaga określająca, które poleceń systemowych jest skojarzony z przycisku. Możliwe wartości to SC_CLOSE SC_MINIMIZE i SC_RESTORE.  
   
- [in] *nStyle*  
- Flaga, która określa bieżący styl przycisku. Możliwe wartości to TBBS_PRESSED, TBBS_DISABLED i 0.  
+*nStyle*<br/>
+[in] Flaga, która określa bieżący styl przycisku. Możliwe wartości to TBBS_PRESSED, TBBS_DISABLED i 0.  
   
- [in] *bHighlight*  
- Parametr logiczny, który określa, czy przycisk jest wyróżniona.  
+*bHighlight*<br/>
+[in] Parametr logiczny, który określa, czy przycisk jest wyróżniona.  
   
 ### <a name="remarks"></a>Uwagi  
  Przyciski system menu są **Zamknij**, **Minimalizuj**, **Maksymalizuj**, i **przywrócić** przyciski znajdujących się na pasku tytułu.  
@@ -2473,10 +2473,10 @@ virtual void OnDrawMiniFrameBorder(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *podstawowego kontrolera domeny*  
- [in] *pFrameWnd*  
- [in] *rectBorder*  
- [in] *rectBorderSize*  
+*podstawowego kontrolera domeny*<br/>
+[in] [in] *pFrameWnd*  
+*rectBorder*<br/>
+[in] [in] *rectBorderSize*  
   
 ### <a name="remarks"></a>Uwagi  
   
@@ -2490,11 +2490,11 @@ virtual void OnDrawOutlookBarSplitter(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *podstawowego kontrolera domeny*  
- Wskaźnik do kontekstu urządzenia.  
+*podstawowego kontrolera domeny*<br/>
+[in] Wskaźnik do kontekstu urządzenia.  
   
- [in] *rectSplitter*  
- Prostokąt, który określa granice rozdzielacza.  
+*rectSplitter*<br/>
+[in] Prostokąt, który określa granice rozdzielacza.  
   
 ### <a name="remarks"></a>Uwagi  
  Należy przesłonić tę metodę w pochodnej Menedżer wizualnego, aby dostosować wygląd rozdzielaczy pasek programu Outlook.  
@@ -2511,17 +2511,17 @@ virtual void OnDrawOutlookPageButtonBorder(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *podstawowego kontrolera domeny*  
- Wskaźnik do kontekstu urządzenia.  
+*podstawowego kontrolera domeny*<br/>
+[in] Wskaźnik do kontekstu urządzenia.  
   
- [in] *rectBtn*  
- Prostokąt, który określa granica przycisk Strona programu Outlook.  
+*rectBtn*<br/>
+[in] Prostokąt, który określa granica przycisk Strona programu Outlook.  
   
- [in] *bIsHighlighted*  
- Wartość logiczna określająca, czy przycisk jest wyróżniona.  
+*bIsHighlighted*<br/>
+[in] Wartość logiczna określająca, czy przycisk jest wyróżniona.  
   
- [in] *bIsPressed*  
- Wartość logiczna określająca, czy przycisk jest wciśnięty.  
+*bIsPressed*<br/>
+[in] Wartość logiczna określająca, czy przycisk jest wciśnięty.  
   
 ### <a name="remarks"></a>Uwagi  
  Należy przesłonić tę metodę w niestandardowych Menedżer wizualnego, aby zmienić wygląd programu Outlook przycisk Strona.  
@@ -2537,14 +2537,14 @@ virtual void OnDrawPaneBorder(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *podstawowego kontrolera domeny*  
- Wskaźnik do kontekstu urządzenia paska sterowania.  
+*podstawowego kontrolera domeny*<br/>
+[in] Wskaźnik do kontekstu urządzenia paska sterowania.  
   
- [in] *pBar*  
- Wskaźnik do okienka. Menedżer visual rysuje obramowanie to okienko.  
+*pBar*<br/>
+[in] Wskaźnik do okienka. Menedżer visual rysuje obramowanie to okienko.  
   
- [in] *rect*  
- Prostokąt, który wskazuje granice okienka.  
+*Rect*<br/>
+[in] Prostokąt, który wskazuje granice okienka.  
   
 ### <a name="remarks"></a>Uwagi  
  Domyślna implementacja tej metody, wyświetla standardowe obramowania. Należy przesłonić tę metodę w klasie pochodnej, aby dostosować wygląd obramowania.  
@@ -2562,20 +2562,20 @@ virtual COLORREF OnDrawPaneCaption(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *podstawowego kontrolera domeny*  
- Wskaźnik do kontekstu urządzenia.  
+*podstawowego kontrolera domeny*<br/>
+[in] Wskaźnik do kontekstu urządzenia.  
   
- [in] *pBar*  
- Wskaźnik do `CDockablePane` obiektu. Struktura rysuje podpis dla tego okienka.  
+*pBar*<br/>
+[in] Wskaźnik do `CDockablePane` obiektu. Struktura rysuje podpis dla tego okienka.  
   
- [in] *bWykonywanie aktywnych*  
- Parametrów logiczny, który wskazuje, czy pasek sterowania jest aktywna.  
+*bWykonywanie aktywnych*<br/>
+[in] Parametrów logiczny, który wskazuje, czy pasek sterowania jest aktywna.  
   
- [in] *rectCaption*  
- Prostokąt, który określa granice podpis.  
+*rectCaption*<br/>
+[in] Prostokąt, który określa granice podpis.  
   
- [in] *rectButtons*  
- Prostokąt, który określa granice przyciski podpisu.  
+*rectButtons*<br/>
+[in] Prostokąt, który określa granice przyciski podpisu.  
   
 ### <a name="return-value"></a>Wartość zwracana  
  A [COLORREF](/windows/desktop/gdi/colorref) parametrem, który wskazuje kolor tekstu podpis.  
@@ -2595,10 +2595,10 @@ virtual void OnDrawPaneDivider(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *podstawowego kontrolera domeny*  
- [in] *pSlider*  
- [in] *rect*  
- [in] *bAutoHideMode*  
+*podstawowego kontrolera domeny*<br/>
+[in] [in] *pSlider*  
+*Rect*<br/>
+[in] [in] *bAutoHideMode*  
   
 ### <a name="remarks"></a>Uwagi  
   
@@ -2612,8 +2612,8 @@ virtual void OnDrawPopupWindowBorder(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *podstawowego kontrolera domeny*  
- [in] *rect*  
+*podstawowego kontrolera domeny*<br/>
+[in] [in] *rect*  
   
 ### <a name="remarks"></a>Uwagi  
   
@@ -2628,8 +2628,8 @@ virtual void OnDrawPopupWindowButtonBorder(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *podstawowego kontrolera domeny*  
- [in] *rectClient*  
+*podstawowego kontrolera domeny*<br/>
+[in] [in] *rectClient*  
  [in] *pButton*  
   
 ### <a name="remarks"></a>Uwagi  
@@ -2645,8 +2645,8 @@ virtual COLORREF OnDrawPopupWindowCaption(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *podstawowego kontrolera domeny*  
- [in] *rectCaption*  
+*podstawowego kontrolera domeny*<br/>
+[in] [in] *rectCaption*  
  [in] *pPopupWnd*  
   
 ### <a name="return-value"></a>Wartość zwracana  
@@ -2663,11 +2663,11 @@ virtual void OnDrawRibbonApplicationButton(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *podstawowego kontrolera domeny*  
- Wskaźnik do kontekstu urządzenia.  
+*podstawowego kontrolera domeny*<br/>
+[in] Wskaźnik do kontekstu urządzenia.  
   
- [in] *pButton*  
- Wskaźnik do **główny przycisk** na Wstążce.  
+*pButton*<br/>
+[in] Wskaźnik do **główny przycisk** na Wstążce.  
   
 ### <a name="remarks"></a>Uwagi  
  Przesłonić tę metodę w pochodnej Menedżer wizualnego, jeśli chcesz dostosować wygląd **główny przycisk**.  
@@ -2682,11 +2682,11 @@ virtual void OnDrawRibbonButtonBorder(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *podstawowego kontrolera domeny*  
- Wskaźnik do kontekstu urządzenia.  
+*podstawowego kontrolera domeny*<br/>
+[in] Wskaźnik do kontekstu urządzenia.  
   
- [in] *pButton*  
- Wskaźnik do [CMFCRibbonButton](../../mfc/reference/cmfcribbonbutton-class.md) obiektu. Struktura rysuje obramowanie przycisk na Wstążce.  
+*pButton*<br/>
+[in] Wskaźnik do [CMFCRibbonButton](../../mfc/reference/cmfcribbonbutton-class.md) obiektu. Struktura rysuje obramowanie przycisk na Wstążce.  
   
 ### <a name="remarks"></a>Uwagi  
  Należy przesłonić tę metodę w pochodnej Menedżer wizualnego, aby dostosować wygląd `CMFCRibbonButton`.  
@@ -2702,14 +2702,14 @@ virtual COLORREF OnDrawRibbonButtonsGroup(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *podstawowego kontrolera domeny*  
- Wskaźnik do kontekstu urządzenia.  
+*podstawowego kontrolera domeny*<br/>
+[in] Wskaźnik do kontekstu urządzenia.  
   
- [in] *pGroup*  
- Wskaźnik do grupy przycisków na Wstążce. Struktura rysuje przycisków z tej grupy.  
+*pGroup*<br/>
+[in] Wskaźnik do grupy przycisków na Wstążce. Struktura rysuje przycisków z tej grupy.  
   
- [in] *rectGroup*  
- Prostokąt, który określa granice tej grupy.  
+*rectGroup*<br/>
+[in] Prostokąt, który określa granice tej grupy.  
   
 ### <a name="return-value"></a>Wartość zwracana  
  Zastrzeżonej wartości. Domyślna implementacja zwraca wartość -1.  
@@ -2729,17 +2729,17 @@ virtual void OnDrawRibbonCaption(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *podstawowego kontrolera domeny*  
- Wskaźnik do kontekstu urządzenia.  
+*podstawowego kontrolera domeny*<br/>
+[in] Wskaźnik do kontekstu urządzenia.  
   
- [in] *pBar*  
- Wskaźnik do paska wstążki. Menedżer wizualny rysuje ten pasek wstążki.  
+*pBar*<br/>
+[in] Wskaźnik do paska wstążki. Menedżer wizualny rysuje ten pasek wstążki.  
   
- [in] *rect*  
- Prostokąt, który określa granice paska wstążki.  
+*Rect*<br/>
+[in] Prostokąt, który określa granice paska wstążki.  
   
- [in] *rectText*  
- Prostokąt, który określa granice dla tekstu pasek podpisu.  
+*rectText*<br/>
+[in] Prostokąt, który określa granice dla tekstu pasek podpisu.  
   
 ### <a name="remarks"></a>Uwagi  
  Przesłonić tę funkcję w pochodnej Menedżer wizualnego, aby dostosować wygląd paska podpisu. Ta metoda ma wpływ na pasku podpisu, tylko wtedy, gdy Wstążka jest zintegrowany z ramką głównego okna.  
@@ -2774,14 +2774,14 @@ virtual void OnDrawRibbonCategory(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *podstawowego kontrolera domeny*  
- Wskaźnik do kontekstu urządzenia.  
+*podstawowego kontrolera domeny*<br/>
+[in] Wskaźnik do kontekstu urządzenia.  
   
- [in] *pCategory*  
- Wskaźnik do `CMFCRibbonCategory` obiektu. Struktura rysuje tej kategorii wstążki.  
+*pCategory*<br/>
+[in] Wskaźnik do `CMFCRibbonCategory` obiektu. Struktura rysuje tej kategorii wstążki.  
   
- [in] *rectCategory*  
- Prostokąt, który określa granica panele kategorii na Wstążce.  
+*rectCategory*<br/>
+[in] Prostokąt, który określa granica panele kategorii na Wstążce.  
   
 ### <a name="remarks"></a>Uwagi  
  Kategoria wstążki jest logiczną grupą poleceń menu. Aby uzyskać więcej informacji na temat kategorii wstążki, zobacz [klasa CMFCRibbonCategory](../../mfc/reference/cmfcribboncategory-class.md).  
@@ -2798,11 +2798,11 @@ virtual COLORREF OnDrawRibbonCategoryCaption(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *podstawowego kontrolera domeny*  
- Kontekst rysowania.  
+*podstawowego kontrolera domeny*<br/>
+[in] Kontekst rysowania.  
   
- [in] *pContextCaption*  
- Wskaźnik do paska podpisu. Menedżer wizualny rysuje to [klasa CMFCRibbonContextCaption](../../mfc/reference/cmfcribboncontextcaption-class.md) obiektu.  
+*pContextCaption*<br/>
+[in] Wskaźnik do paska podpisu. Menedżer wizualny rysuje to [klasa CMFCRibbonContextCaption](../../mfc/reference/cmfcribboncontextcaption-class.md) obiektu.  
   
 ### <a name="return-value"></a>Wartość zwracana  
  A [COLORREF](/windows/desktop/gdi/colorref) parametrem, który wskazuje koloru tekstu na pasku podpisu.  
@@ -2820,8 +2820,8 @@ virtual void OnDrawRibbonCategoryScroll(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *podstawowego kontrolera domeny*  
- [in] *pScroll*  
+*podstawowego kontrolera domeny*<br/>
+[in] [in] *pScroll*  
   
 ### <a name="remarks"></a>Uwagi  
   
@@ -2836,14 +2836,14 @@ virtual COLORREF OnDrawRibbonCategoryTab(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *podstawowego kontrolera domeny*  
- Wskaźnik do kontekstu urządzenia.  
+*podstawowego kontrolera domeny*<br/>
+[in] Wskaźnik do kontekstu urządzenia.  
   
- [in] *pTab*  
- Wskaźnik do wystąpienia `CMFCRibbonTab` klasy. Struktura rysuje na tej karcie.  
+*pTab*<br/>
+[in] Wskaźnik do wystąpienia `CMFCRibbonTab` klasy. Struktura rysuje na tej karcie.  
   
- [in] *bIsActive*  
- Parametr logiczny, który wskazuje, czy karta jest aktywny.  
+*bIsActive*<br/>
+[in] Parametr logiczny, który wskazuje, czy karta jest aktywny.  
   
 ### <a name="return-value"></a>Wartość zwracana  
  Kolor, który jest używany dla tekstu, na karcie kategorii wstążki.  
@@ -2864,10 +2864,10 @@ virtual void OnDrawRibbonCheckBoxOnList(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *podstawowego kontrolera domeny*  
- [in] *pCheckBox*  
- [in] *rect*  
- [in] *bIsSelected*  
+*podstawowego kontrolera domeny*<br/>
+[in] [in] *pCheckBox*  
+*Rect*<br/>
+[in] [in] *bIsSelected*  
  [in] *bHighlighted*  
   
 ### <a name="remarks"></a>Uwagi  
@@ -2890,16 +2890,16 @@ virtual void OnDrawRibbonColorPaletteBox(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *podstawowego kontrolera domeny*  
- [in] *pColorButton*  
- [in] *pIcon*  
- [in] *kolorów*  
- [in] *rect*  
- [in] *bDrawTopEdge*  
- [in] *bDrawBottomEdge*  
- [in] *bIsHighlighted*  
- [in] *bIsChecked*  
- [in] *bIsDisabled*  
+*podstawowego kontrolera domeny*<br/>
+[in] [in] *pColorButton*  
+*pIcon*<br/>
+[in] [in] *kolorów*  
+*Rect*<br/>
+[in] [in] *bDrawTopEdge*  
+*bDrawBottomEdge*<br/>
+[in] [in] *bIsHighlighted*  
+*bIsChecked*<br/>
+[in] [in] *bIsDisabled*  
   
 ### <a name="remarks"></a>Uwagi  
   
@@ -2913,11 +2913,11 @@ virtual void OnDrawRibbonDefaultPaneButton(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *podstawowego kontrolera domeny*  
- Wskaźnik do kontekstu urządzenia.  
+*podstawowego kontrolera domeny*<br/>
+[in] Wskaźnik do kontekstu urządzenia.  
   
- [in] *pButton*  
- Wskaźnik na domyślny przycisk okienka wstążki.  
+*pButton*<br/>
+[in] Wskaźnik na domyślny przycisk okienka wstążki.  
   
 ### <a name="remarks"></a>Uwagi  
  Struktura wyświetla przycisk domyślny, gdy zmieniany jest rozmiar panelu wstążki do jej minimalnego rozmiaru i nie ma obszaru do wyświetlania zawartości dla panelu. Gdy użytkownik kliknie przycisk domyślny, struktura Wyświetla rozwijanego menu z zawartością dla panelu.  
@@ -2934,8 +2934,8 @@ virtual void OnDrawRibbonDefaultPaneButtonContext(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *podstawowego kontrolera domeny*  
- [in] *pButton*  
+*podstawowego kontrolera domeny*<br/>
+[in] [in] *pButton*  
   
 ### <a name="remarks"></a>Uwagi  
   
@@ -2952,10 +2952,10 @@ virtual void OnDrawRibbonDefaultPaneButtonIndicator(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *podstawowego kontrolera domeny*  
- [in] *pButton*  
- [in] *rect*  
- [in] *bIsSelected*  
+*podstawowego kontrolera domeny*<br/>
+[in] [in] *pButton*  
+*Rect*<br/>
+[in] [in] *bIsSelected*  
  [in] *bHighlighted*  
   
 ### <a name="remarks"></a>Uwagi  
@@ -2971,8 +2971,8 @@ virtual void OnDrawRibbonGalleryBorder(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *podstawowego kontrolera domeny*  
- [in] *pButton*  
+*podstawowego kontrolera domeny*<br/>
+[in] [in] *pButton*  
  [in] *rectBorder*  
   
 ### <a name="remarks"></a>Uwagi  
@@ -2987,8 +2987,8 @@ virtual void OnDrawRibbonGalleryButton(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *podstawowego kontrolera domeny*  
- [in] *pButton*  
+*podstawowego kontrolera domeny*<br/>
+[in] [in] *pButton*  
   
 ### <a name="remarks"></a>Uwagi  
   
@@ -3004,10 +3004,10 @@ virtual void OnDrawRibbonKeyTip(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *podstawowego kontrolera domeny*  
- [in] *pElement*  
- [in] *rect*  
- [in] *str*  
+*podstawowego kontrolera domeny*<br/>
+[in] [in] *pElement*  
+*Rect*<br/>
+[in] [in] *str*  
   
 ### <a name="remarks"></a>Uwagi  
   
@@ -3022,14 +3022,14 @@ virtual void OnDrawRibbonLabel(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *podstawowego kontrolera domeny*  
- Wskaźnik do kontekstu urządzenia.  
+*podstawowego kontrolera domeny*<br/>
+[in] Wskaźnik do kontekstu urządzenia.  
   
- [in] *pLabel*  
- Wskaźnik do [CMFCRibbonLabel](../../mfc/reference/cmfcribbonlabel-class.md) obiektu. Struktura rysuje tej etykiety wstążki.  
+*pLabel*<br/>
+[in] Wskaźnik do [CMFCRibbonLabel](../../mfc/reference/cmfcribbonlabel-class.md) obiektu. Struktura rysuje tej etykiety wstążki.  
   
- [in] *rect*  
- Prostokąt, który określa granice panelu wstążki.  
+*Rect*<br/>
+[in] Prostokąt, który określa granice panelu wstążki.  
   
 ### <a name="remarks"></a>Uwagi  
  Należy przesłonić tę metodę w klasie pochodnej, aby dostosować etykiety wstążki.  
@@ -3044,11 +3044,11 @@ virtual void OnDrawRibbonMainPanelButtonBorder(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *podstawowego kontrolera domeny*  
- Wskaźnik do kontekstu urządzenia.  
+*podstawowego kontrolera domeny*<br/>
+[in] Wskaźnik do kontekstu urządzenia.  
   
- [in] *pButton*  
- Wskaźnik do `CMFCRibbonButton` znajdujących się na głównym panelu wstążki. Struktura rysuje obramowanie tego przycisku.  
+*pButton*<br/>
+[in] Wskaźnik do `CMFCRibbonButton` znajdujących się na głównym panelu wstążki. Struktura rysuje obramowanie tego przycisku.  
   
 ### <a name="remarks"></a>Uwagi  
  Należy przesłonić tę metodę w pochodnej Menedżer wizualnego, aby dostosować wygląd obramowania dla `CMFCRibbonButton` na **Main** panelu.  
@@ -3064,14 +3064,14 @@ virtual void OnDrawRibbonMainPanelFrame(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *podstawowego kontrolera domeny*  
- Wskaźnik do kontekstu urządzenia.  
+*podstawowego kontrolera domeny*<br/>
+[in] Wskaźnik do kontekstu urządzenia.  
   
- [in] *pPanel*  
- Wskaźnik do `CMFCRibbonMainPanel`.  
+*pPanel*<br/>
+[in] Wskaźnik do `CMFCRibbonMainPanel`.  
   
- [in] *rect*  
- Prostokąt, który określa granice `CMFCRibbonMainPanel`.  
+*Rect*<br/>
+[in] Prostokąt, który określa granice `CMFCRibbonMainPanel`.  
   
 ### <a name="remarks"></a>Uwagi  
  Należy przesłonić tę metodę w pochodnej Menedżer wizualnego, aby dostosować wygląd ramki dla `CMFCRibbonMainPanel`.  
@@ -3087,8 +3087,8 @@ virtual void OnDrawRibbonMenuCheckFrame(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *podstawowego kontrolera domeny*  
- [in] *pButton*  
+*podstawowego kontrolera domeny*<br/>
+[in] [in] *pButton*  
  [in] *rect*  
   
 ### <a name="remarks"></a>Uwagi  
@@ -3105,17 +3105,17 @@ virtual COLORREF OnDrawRibbonPanel(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *podstawowego kontrolera domeny*  
- Wskaźnik do kontekstu urządzenia.  
+*podstawowego kontrolera domeny*<br/>
+[in] Wskaźnik do kontekstu urządzenia.  
   
- [in] *pPanel*  
- Wskaźnik do `CMFCRibbonPanel` obiektu. Struktura rysuje tego panelu wstążki.  
+*pPanel*<br/>
+[in] Wskaźnik do `CMFCRibbonPanel` obiektu. Struktura rysuje tego panelu wstążki.  
   
- [in] *rectPanel*  
- Prostokąt, który określa granice panelu.  
+*rectPanel*<br/>
+[in] Prostokąt, który określa granice panelu.  
   
- [in] *rectCaption*  
- Prostokąt, który określa granice podpis dla panelu.  
+*rectCaption*<br/>
+[in] Prostokąt, który określa granice podpis dla panelu.  
   
 ### <a name="return-value"></a>Wartość zwracana  
  Kolor tekstu na panelu wstążki.  
@@ -3134,14 +3134,14 @@ virtual void OnDrawRibbonPanelCaption(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *podstawowego kontrolera domeny*  
- Wskaźnik do kontekstu urządzenia.  
+*podstawowego kontrolera domeny*<br/>
+[in] Wskaźnik do kontekstu urządzenia.  
   
- [in] *pPanel*  
- Wskaźnik do `CMFCRibbonPanel` obiektu. Struktura rysuje podpis dla tego panelu wstążki.  
+*pPanel*<br/>
+[in] Wskaźnik do `CMFCRibbonPanel` obiektu. Struktura rysuje podpis dla tego panelu wstążki.  
   
- [in] *rectCaption*  
- Prostokąt, który określa granice podpis panelu wstążki.  
+*rectCaption*<br/>
+[in] Prostokąt, który określa granice podpis panelu wstążki.  
   
 ### <a name="remarks"></a>Uwagi  
  Należy przesłonić tę metodę w klasie pochodnej, aby dostosować wygląd transkrypcji do paneli wstążki.  
@@ -3159,20 +3159,20 @@ virtual void OnDrawRibbonProgressBar(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *podstawowego kontrolera domeny*  
- Wskaźnik do kontekstu urządzenia.  
+*podstawowego kontrolera domeny*<br/>
+[in] Wskaźnik do kontekstu urządzenia.  
   
- [in] *pProgress*  
- Wskaźnik do `CMFCRibbonProgressBar` obiektu. Struktura rysuje ten pasek postępu.  
+*pProgress*<br/>
+[in] Wskaźnik do `CMFCRibbonProgressBar` obiektu. Struktura rysuje ten pasek postępu.  
   
- [in] *rectProgress*  
- Prostokąt, który określa granice pasek postępu.  
+*rectProgress*<br/>
+[in] Prostokąt, który określa granice pasek postępu.  
   
- [in] *rectChunk*  
- Prostokąt, który określa granice obszar otaczający pasek postępu.  
+*rectChunk*<br/>
+[in] Prostokąt, który określa granice obszar otaczający pasek postępu.  
   
- [in] *bInfiniteMode*  
- Parametrów logiczny, który wskazuje tryb pasek postępu. Wartość TRUE oznacza, że pasek jest w trybie nieskończone. Domyślna implementacja nie używać tego parametru.  
+*bInfiniteMode*<br/>
+[in] Parametrów logiczny, który wskazuje tryb pasek postępu. Wartość TRUE oznacza, że pasek jest w trybie nieskończone. Domyślna implementacja nie używać tego parametru.  
   
 ### <a name="remarks"></a>Uwagi  
  Należy przesłonić tę metodę w klasie pochodnej, aby dostosować wygląd paska postępu.  
@@ -3188,14 +3188,14 @@ virtual void OnDrawRibbonQuickAccessToolBarSeparator(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *podstawowego kontrolera domeny*  
- Wskaźnik do kontekstu urządzenia.  
+*podstawowego kontrolera domeny*<br/>
+[in] Wskaźnik do kontekstu urządzenia.  
   
- [in] *pSeparator*  
- Wskaźnik do [CMFCRibbonSeparator](../../mfc/reference/cmfcribbonseparator-class.md) obiektu. Struktura rysuje tego separatora wstążki.  
+*pSeparator*<br/>
+[in] Wskaźnik do [CMFCRibbonSeparator](../../mfc/reference/cmfcribbonseparator-class.md) obiektu. Struktura rysuje tego separatora wstążki.  
   
- [in] *rect*  
- Prostokąt, który określa granice separatora.  
+*Rect*<br/>
+[in] Prostokąt, który określa granice separatora.  
   
 ### <a name="remarks"></a>Uwagi  
  Należy przesłonić tę metodę w klasie pochodnej, aby dostosować wygląd separatory wstążki na **paska narzędzi szybkiego dostępu**.  
@@ -3211,14 +3211,14 @@ virtual void OnDrawRibbonRecentFilesFrame(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *podstawowego kontrolera domeny*  
- Wskaźnik do kontekstu urządzenia.  
+*podstawowego kontrolera domeny*<br/>
+[in] Wskaźnik do kontekstu urządzenia.  
   
- [in] *pPanel*  
- Wskaźnik do **Main** panelu na Wstążce.  
+*pPanel*<br/>
+[in] Wskaźnik do **Main** panelu na Wstążce.  
   
- [in] *rect*  
- Prostokąt, który określa granice ramkę, dla listy ostatnio używanych plików.  
+*Rect*<br/>
+[in] Prostokąt, który określa granice ramkę, dla listy ostatnio używanych plików.  
   
 ### <a name="remarks"></a>Uwagi  
  Należy przesłonić tę metodę w pochodnej Menedżer wizualnego, aby dostosować wygląd listy ostatnio używanych plików.  
@@ -3234,14 +3234,14 @@ virtual void OnDrawRibbonSliderChannel(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *podstawowego kontrolera domeny*  
- Wskaźnik do kontekstu urządzenia.  
+*podstawowego kontrolera domeny*<br/>
+[in] Wskaźnik do kontekstu urządzenia.  
   
- [in] *pSlider*  
- Wskaźnik do obiektu CMFCRibbonSlider. Struktura rysuje kanał dla tego suwaka wstążki.  
+*pSlider*<br/>
+[in] Wskaźnik do obiektu CMFCRibbonSlider. Struktura rysuje kanał dla tego suwaka wstążki.  
   
- [in] *rect*  
- Prostokąt, który określa granice dla kanału suwaka wstążki.  
+*Rect*<br/>
+[in] Prostokąt, który określa granice dla kanału suwaka wstążki.  
   
 ### <a name="remarks"></a>Uwagi  
  Należy przesłonić tę metodę w klasie pochodnej, aby dostosować wygląd kanał suwaka wstążki.  
@@ -3260,23 +3260,23 @@ virtual void OnDrawRibbonSliderThumb(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *podstawowego kontrolera domeny*  
- Wskaźnik do kontekstu urządzenia.  
+*podstawowego kontrolera domeny*<br/>
+[in] Wskaźnik do kontekstu urządzenia.  
   
- [in] *pSlider*  
- Wskaźnik do `CMFCRibbonSlider`. Struktura rysuje miniatury dla tego suwaka wstążki.  
+*pSlider*<br/>
+[in] Wskaźnik do `CMFCRibbonSlider`. Struktura rysuje miniatury dla tego suwaka wstążki.  
   
- [in] *rect*  
- Prostokąt, który określa granice miniatury dla suwaka wstążki.  
+*Rect*<br/>
+[in] Prostokąt, który określa granice miniatury dla suwaka wstążki.  
   
- [in] *bIsHighlighted*  
- Parametrów logiczny, który wskazuje na to, jeśli zostanie wyróżniona przycisku suwaka.  
+*bIsHighlighted*<br/>
+[in] Parametrów logiczny, który wskazuje na to, jeśli zostanie wyróżniona przycisku suwaka.  
   
- [in] *bIsPressed*  
- Parametrów logiczny, który wskazuje na to, jeśli naciśnięciu przycisku suwaka.  
+*bIsPressed*<br/>
+[in] Parametrów logiczny, który wskazuje na to, jeśli naciśnięciu przycisku suwaka.  
   
- [in] *bIsDisabled*  
- Parametrów logiczny, który wskazuje, czy przycisku suwaka jest niedostępny.  
+*bIsDisabled*<br/>
+[in] Parametrów logiczny, który wskazuje, czy przycisku suwaka jest niedostępny.  
   
 ### <a name="remarks"></a>Uwagi  
  Należy przesłonić tę metodę w pochodnej Menedżer wizualnego do dostosowywania wyglądu przycisku suwaka do `CMFCRibbonSlider`.  
@@ -3296,26 +3296,26 @@ virtual void OnDrawRibbonSliderZoomButton(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *podstawowego kontrolera domeny*  
- Wskaźnik do kontekstu urządzenia.  
+*podstawowego kontrolera domeny*<br/>
+[in] Wskaźnik do kontekstu urządzenia.  
   
- [in] *pSlider*  
- Wskaźnik do `CMFCRibbonSlider` obiektu. Struktura rysuje tego suwaka wstążki.  
+*pSlider*<br/>
+[in] Wskaźnik do `CMFCRibbonSlider` obiektu. Struktura rysuje tego suwaka wstążki.  
   
- [in] *rect*  
- Prostokąt, który określa granice przycisków powiększenia suwaka wstążki.  
+*Rect*<br/>
+[in] Prostokąt, który określa granice przycisków powiększenia suwaka wstążki.  
   
- [in] *bIsZoomOut*  
- Parametr logiczny, który wskazuje, który przycisk rysuje platformę. Wartość TRUE oznacza po lewej stronie przycisku, za pomocą "-" dla pomniejszenie. Wartość FALSE wskazuje, prawy przycisk "+" na powiększanie.  
+*bIsZoomOut*<br/>
+[in] Parametr logiczny, który wskazuje, który przycisk rysuje platformę. Wartość TRUE oznacza po lewej stronie przycisku, za pomocą "-" dla pomniejszenie. Wartość FALSE wskazuje, prawy przycisk "+" na powiększanie.  
   
- [in] *bIsHighlighted*  
- Parametr logiczny, który wskazuje, czy przycisk jest wyróżniona.  
+*bIsHighlighted*<br/>
+[in] Parametr logiczny, który wskazuje, czy przycisk jest wyróżniona.  
   
- [in] *bIsPressed*  
- Parametr logiczny, który wskazuje, czy przycisk jest wciśnięty.  
+*bIsPressed*<br/>
+[in] Parametr logiczny, który wskazuje, czy przycisk jest wciśnięty.  
   
- [in] *bIsDisabled*  
- Parametr logiczny, który wskazuje, czy przycisk jest niedostępny.  
+*bIsDisabled*<br/>
+[in] Parametr logiczny, który wskazuje, czy przycisk jest niedostępny.  
   
 ### <a name="remarks"></a>Uwagi  
  Domyślnie przycisków powiększenia na suwaku wstążki są koło z oboma + lub - zaloguj się w środku. Aby dostosować wygląd przycisków powiększenia, należy przesłonić tę metodę w pochodnej Menedżer wizualnego.  
@@ -3331,14 +3331,14 @@ virtual COLORREF OnDrawRibbonStatusBarPane(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *podstawowego kontrolera domeny*  
- Wskaźnik do kontekstu urządzenia.  
+*podstawowego kontrolera domeny*<br/>
+[in] Wskaźnik do kontekstu urządzenia.  
   
- [in] *pBar*  
- Wskaźnik do paska stanu, który zawiera okienka.  
+*pBar*<br/>
+[in] Wskaźnik do paska stanu, który zawiera okienka.  
   
- [in] *pPane*  
- Wskaźnik do okienka paska stanu. Struktura rysuje to [CMFCRibbonStatusBarPane](../../mfc/reference/cmfcribbonstatusbarpane-class.md) obiektu.  
+*pPane*<br/>
+[in] Wskaźnik do okienka paska stanu. Struktura rysuje to [CMFCRibbonStatusBarPane](../../mfc/reference/cmfcribbonstatusbarpane-class.md) obiektu.  
   
 ### <a name="return-value"></a>Wartość zwracana  
  Zastrzeżonej wartości. Domyślna implementacja zwraca wartość -1.  
@@ -3385,10 +3385,10 @@ virtual void OnDrawScrollButtons(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *podstawowego kontrolera domeny*  
- [in] *rect*  
- [in] *nBorderSize*  
- [in] *iImage*  
+*podstawowego kontrolera domeny*<br/>
+[in] [in] *rect*  
+*nBorderSize*<br/>
+[in] [in] *iImage*  
  [in] *bHilited*  
   
 ### <a name="remarks"></a>Uwagi  
@@ -3405,17 +3405,17 @@ virtual void OnDrawSeparator(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *podstawowego kontrolera domeny*  
- Wskaźnik do kontekstu urządzenia dla paska sterowania.  
+*podstawowego kontrolera domeny*<br/>
+[in] Wskaźnik do kontekstu urządzenia dla paska sterowania.  
   
- [in] *pBar*  
- Wskaźnik do okienka, który zawiera separatora.  
+*pBar*<br/>
+[in] Wskaźnik do okienka, który zawiera separatora.  
   
- [in] *rect*  
- Prostokąt, który określa granice separatora.  
+*Rect*<br/>
+[in] Prostokąt, który określa granice separatora.  
   
- [in] *bIsHoriz*  
- Parametr logiczny, który wskazuje orientację zadokowanego okienka. Wartość TRUE wskazuje, że okienka jest zadokowany w poziomie. Wartość FALSE wskazuje, że okienka jest zadokowany w pionie.  
+*bIsHoriz*<br/>
+[in] Parametr logiczny, który wskazuje orientację zadokowanego okienka. Wartość TRUE wskazuje, że okienka jest zadokowany w poziomie. Wartość FALSE wskazuje, że okienka jest zadokowany w pionie.  
   
 ### <a name="remarks"></a>Uwagi  
  Separatory są używane na paski sterowania do oddzielania grup powiązane ikony. Domyślna implementacja tej metody powoduje wyświetlenie standardowa separatora. Należy przesłonić tę metodę w pochodnej Menedżer wizualnego, aby dostosować wygląd separatora.  
@@ -3431,8 +3431,8 @@ virtual void OnDrawShowAllMenuItems(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *podstawowego kontrolera domeny*  
- [in] *rect*  
+*podstawowego kontrolera domeny*<br/>
+[in] [in] *rect*  
  [in] *stanu*  
   
 ### <a name="remarks"></a>Uwagi  
@@ -3450,20 +3450,20 @@ virtual void OnDrawSpinButtons(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *podstawowego kontrolera domeny*  
- Wskaźnik do kontekstu urządzenia.  
+*podstawowego kontrolera domeny*<br/>
+[in] Wskaźnik do kontekstu urządzenia.  
   
- [in] *rectSpin*  
- Prostokąt, który określa granice kontrolki pokrętła.  
+*rectSpin*<br/>
+[in] Prostokąt, który określa granice kontrolki pokrętła.  
   
- [in] *nInformacje*  
- Flaga, wskazujący stan kontrolki pokrętła. Zobacz sekcję Spostrzeżenia, aby uzyskać więcej informacji.  
+*nInformacje*<br/>
+[in] Flaga, wskazujący stan kontrolki pokrętła. Zobacz sekcję Spostrzeżenia, aby uzyskać więcej informacji.  
   
- [in] *bOrientation*  
- Parametr logiczny, który określa orientację przestrzenną kontrolki pokrętła. Wartość TRUE wskazuje, że kontrolka pokrętła jest poziomy. W przeciwnym razie jest pionowy.  
+*bOrientation*<br/>
+[in] Parametr logiczny, który określa orientację przestrzenną kontrolki pokrętła. Wartość TRUE wskazuje, że kontrolka pokrętła jest poziomy. W przeciwnym razie jest pionowy.  
   
- [in] *pSpinCtrl*  
- Wskaźnik do kontrolki pokrętła. Struktura rysuje przycisków dla tego formantu.  
+*pSpinCtrl*<br/>
+[in] Wskaźnik do kontrolki pokrętła. Struktura rysuje przycisków dla tego formantu.  
   
 ### <a name="remarks"></a>Uwagi  
  *NInformacje* parametr wskazuje stan kontrolki pokrętła. Parametr jest jednym z następujących wartości:  
@@ -3491,14 +3491,14 @@ virtual void OnDrawSplitterBorder(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *podstawowego kontrolera domeny*  
- Wskaźnik do kontekstu urządzenia.  
+*podstawowego kontrolera domeny*<br/>
+[in] Wskaźnik do kontekstu urządzenia.  
   
- [in] *pSplitterWnd*  
- Wskaźnik do okna rozdzielacza. Struktura rysuje obramowanie dla tego okna.  
+*pSplitterWnd*<br/>
+[in] Wskaźnik do okna rozdzielacza. Struktura rysuje obramowanie dla tego okna.  
   
- [in] *rect*  
- Prostokąt, który określa granice tego okna rozdzielacza.  
+*Rect*<br/>
+[in] Prostokąt, który określa granice tego okna rozdzielacza.  
   
 ### <a name="remarks"></a>Uwagi  
  Należy przesłonić tę metodę w pochodnej Menedżer wizualnego, aby dostosować wygląd obramowania okna rozdzielacza.  
@@ -3514,14 +3514,14 @@ virtual void OnDrawSplitterBox(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *podstawowego kontrolera domeny*  
- Wskaźnik do kontekstu urządzenia.  
+*podstawowego kontrolera domeny*<br/>
+[in] Wskaźnik do kontekstu urządzenia.  
   
- [in] *pSplitterWnd*  
- Wskaźnik do okna rozdzielacza. Struktura Rysuje pole to okno rozdzielacza.  
+*pSplitterWnd*<br/>
+[in] Wskaźnik do okna rozdzielacza. Struktura Rysuje pole to okno rozdzielacza.  
   
- [in] *rect*  
- Prostokąt, który określa granice tego okna rozdzielacza.  
+*Rect*<br/>
+[in] Prostokąt, który określa granice tego okna rozdzielacza.  
   
 ### <a name="remarks"></a>Uwagi  
  Należy przesłonić tę metodę w pochodnej Menedżer wizualnego, aby dostosować wygląd pola przeciągnij okno rozdzielacza.  
@@ -3539,20 +3539,20 @@ virtual void OnDrawStatusBarPaneBorder(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *podstawowego kontrolera domeny*  
- Wskaźnik do kontekstu urządzenia.  
+*podstawowego kontrolera domeny*<br/>
+[in] Wskaźnik do kontekstu urządzenia.  
   
- [in] *pBar*  
- Wskaźnik do `CMFCStatusBar` obiektu. Struktura rysuje ten obiekt paska stanu.  
+*pBar*<br/>
+[in] Wskaźnik do `CMFCStatusBar` obiektu. Struktura rysuje ten obiekt paska stanu.  
   
- [in] *rectPane*  
- Prostokąt, który określa granice na pasku stanu.  
+*rectPane*<br/>
+[in] Prostokąt, który określa granice na pasku stanu.  
   
- [in] *uiID*  
- Identyfikator na pasku stanu.  
+*uiID*<br/>
+[in] Identyfikator na pasku stanu.  
   
- [in] *nStyle*  
- Styl paska stanu.  
+*nStyle*<br/>
+[in] Styl paska stanu.  
   
 ### <a name="remarks"></a>Uwagi  
  Należy przesłonić tę metodę w pochodnej Menedżer wizualnego, aby dostosować wygląd obramowania dla `CMFCStatusBar` obiektu.  
@@ -3574,32 +3574,32 @@ virtual void OnDrawStatusBarProgress(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *podstawowego kontrolera domeny*  
- Wskaźnik do kontekstu urządzenia, na pasku stanu.  
+*podstawowego kontrolera domeny*<br/>
+[in] Wskaźnik do kontekstu urządzenia, na pasku stanu.  
   
- [in] *pStatusBar*  
- `CMFCStatusBar` Obiekt, który zawiera pasek postępu.  
+*pStatusBar*<br/>
+[in] `CMFCStatusBar` Obiekt, który zawiera pasek postępu.  
   
- [in] *rectProgress*  
- Prostokąt, który określa granice pasek postępu.  
+*rectProgress*<br/>
+[in] Prostokąt, który określa granice pasek postępu.  
   
- [in] *nProgressTotal*  
- Całkowita liczba pasek postępu.  
+*nProgressTotal*<br/>
+[in] Całkowita liczba pasek postępu.  
   
- [in] *nProgressCurr*  
- Bieżący postęp dla paska postępu.  
+*nProgressCurr*<br/>
+[in] Bieżący postęp dla paska postępu.  
   
- [in] *clrBar*  
- A [COLORREF](/windows/desktop/gdi/colorref) parametrem, który wskazuje kolor początkowy dla paska postępu. Wartość jest początek gradientu koloru albo pełny kolor paska postępu.  
+*clrBar*<br/>
+[in] A [COLORREF](/windows/desktop/gdi/colorref) parametrem, który wskazuje kolor początkowy dla paska postępu. Wartość jest początek gradientu koloru albo pełny kolor paska postępu.  
   
- [in] *clrProgressBarDest*  
- Parametr COLORREF, który wskazuje koniec gradientu koloru, aż pasek postępu. Jeśli *clrProgressBarDest* wynosi -1, struktura nie pobiera pasek postępu jako kolor gradientu. Zamiast tego umieszcza pasek postępu całego kolor określony przy użyciu *clrBar*.  
+*clrProgressBarDest*<br/>
+[in] Parametr COLORREF, który wskazuje koniec gradientu koloru, aż pasek postępu. Jeśli *clrProgressBarDest* wynosi -1, struktura nie pobiera pasek postępu jako kolor gradientu. Zamiast tego umieszcza pasek postępu całego kolor określony przy użyciu *clrBar*.  
   
- [in] *clrProgressText*  
- Parametr COLORREF, który określa kolor tekstu tekstową reprezentację wartości bieżącego postępu. Ten parametr jest ignorowany, jeśli *bProgressText* jest ustawiona na wartość FALSE.  
+*clrProgressText*<br/>
+[in] Parametr COLORREF, który określa kolor tekstu tekstową reprezentację wartości bieżącego postępu. Ten parametr jest ignorowany, jeśli *bProgressText* jest ustawiona na wartość FALSE.  
   
- [in] *bProgressText*  
- Parametrów logiczny, który wskazuje, czy mają być wyświetlane tekstową reprezentację wartości bieżącego postępu.  
+*bProgressText*<br/>
+[in] Parametrów logiczny, który wskazuje, czy mają być wyświetlane tekstową reprezentację wartości bieżącego postępu.  
   
 ### <a name="remarks"></a>Uwagi  
  Należy przesłonić tę metodę w pochodnej Menedżer wizualnego, aby dostosować wygląd `CMFCStatusBar` obiektu.  
@@ -3615,14 +3615,14 @@ virtual void OnDrawStatusBarSizeBox(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *podstawowego kontrolera domeny*  
- Wskaźnik do kontekstu urządzenia.  
+*podstawowego kontrolera domeny*<br/>
+[in] Wskaźnik do kontekstu urządzenia.  
   
- [in] *pStatBar*  
- Wskaźnik na pasku stanu. Struktura rysuje polu Rozmiar tego paska stanu.  
+*pStatBar*<br/>
+[in] Wskaźnik na pasku stanu. Struktura rysuje polu Rozmiar tego paska stanu.  
   
- [in] *rectSizeBox*  
- Prostokąt, który określa granice okno rozmiaru.  
+*rectSizeBox*<br/>
+[in] Prostokąt, który określa granice okno rozmiaru.  
   
 ### <a name="remarks"></a>Uwagi  
  Należy przesłonić tę metodę w pochodnej Menedżer wizualnego dostosować wygląd pola rozmiar na `CMFCStatusBar`.  
@@ -3640,20 +3640,20 @@ virtual void OnDrawTab(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *podstawowego kontrolera domeny*  
- Wskaźnik do kontekstu urządzenia.  
+*podstawowego kontrolera domeny*<br/>
+[in] Wskaźnik do kontekstu urządzenia.  
   
- [in] *rectTab*  
- Prostokąt, który określa granice formantu.  
+*rectTab*<br/>
+[in] Prostokąt, który określa granice formantu.  
   
- [in] *iTab*  
- Indeks karty, który rysuje platformę.  
+*iTab*<br/>
+[in] Indeks karty, który rysuje platformę.  
   
- [in] *bIsActive*  
- Parametr logiczny, który określa, czy karta jest aktywny.  
+*bIsActive*<br/>
+[in] Parametr logiczny, który określa, czy karta jest aktywny.  
   
- [in] *pTabWnd*  
- Wskaźnik do `CMFCBaseTabCtrl` obiektu. Struktura rysuje ten formant karty.  
+*pTabWnd*<br/>
+[in] Wskaźnik do `CMFCBaseTabCtrl` obiektu. Struktura rysuje ten formant karty.  
   
 ### <a name="remarks"></a>Uwagi  
  Element `CMFCBaseTabCtrl` obiektu wywołuje tę metodę, gdy przetwarza komunikat WM_PAINT.  
@@ -3674,23 +3674,23 @@ virtual void OnDrawTabCloseButton(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *podstawowego kontrolera domeny*  
- Wskaźnik do kontekstu urządzenia.  
+*podstawowego kontrolera domeny*<br/>
+[in] Wskaźnik do kontekstu urządzenia.  
   
- [in] *rect*  
- Prostokąt, który określa granice **Zamknij** przycisku.  
+*Rect*<br/>
+[in] Prostokąt, który określa granice **Zamknij** przycisku.  
   
- [in] *pTabWnd*  
- Wskaźnik do formantu karty. Rysuje w ramach **Zamknij** przycisk, aby ten formant karty.  
+*pTabWnd*<br/>
+[in] Wskaźnik do formantu karty. Rysuje w ramach **Zamknij** przycisk, aby ten formant karty.  
   
- [in] *bIsHighlighted*  
- Parametr logiczny, który wskazuje, czy **Zamknij** przycisku zostanie wyróżniona.  
+*bIsHighlighted*<br/>
+[in] Parametr logiczny, który wskazuje, czy **Zamknij** przycisku zostanie wyróżniona.  
   
- [in] *bIsPressed*  
- Parametr logiczny, który wskazuje, czy **Zamknij** naciśnięciu przycisku.  
+*bIsPressed*<br/>
+[in] Parametr logiczny, który wskazuje, czy **Zamknij** naciśnięciu przycisku.  
   
- [in] *bIsDisabled*  
- Parametr logiczny, który wskazuje, czy **Zamknij** przycisk jest wyłączony.  
+*bIsDisabled*<br/>
+[in] Parametr logiczny, który wskazuje, czy **Zamknij** przycisk jest wyłączony.  
   
 ### <a name="remarks"></a>Uwagi  
  Należy przesłonić tę metodę w pochodnej Menedżer wizualnego, aby dostosować wygląd **Zamknij** przycisk na aktywną kartę *pTabWnd*.  
@@ -3709,23 +3709,23 @@ virtual void OnDrawTabContent(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *podstawowego kontrolera domeny*  
- Wskaźnik do kontekstu urządzenia.  
+*podstawowego kontrolera domeny*<br/>
+[in] Wskaźnik do kontekstu urządzenia.  
   
- [in] *rectTab*  
- Prostokąt, który określa granice wewnętrznej karty.  
+*rectTab*<br/>
+[in] Prostokąt, który określa granice wewnętrznej karty.  
   
- [in] *iTab*  
- Liczony od zera indeks karty. Struktura rysuje wewnętrznych na tej karcie.  
+*iTab*<br/>
+[in] Liczony od zera indeks karty. Struktura rysuje wewnętrznych na tej karcie.  
   
- [in] *bIsActive*  
- Parametr logiczny, który wskazuje, czy karta jest aktywna.  
+*bIsActive*<br/>
+[in] Parametr logiczny, który wskazuje, czy karta jest aktywna.  
   
- [in] *pTabWnd*  
- Wskaźnik do kontrolki z kartami, zawierający kartę rysowania.  
+*pTabWnd*<br/>
+[in] Wskaźnik do kontrolki z kartami, zawierający kartę rysowania.  
   
- [in] *clrText*  
- Kolor tekstu na wewnętrznych karty.  
+*clrText*<br/>
+[in] Kolor tekstu na wewnętrznych karty.  
   
 ### <a name="remarks"></a>Uwagi  
  Wewnątrz karta zawiera tekst i ikony karty. Należy przesłonić tę metodę w pochodnej Menedżer wizualnego do dostosowywania wyglądu karty.  
@@ -3743,20 +3743,20 @@ virtual void OnDrawTabsButtonBorder(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *podstawowego kontrolera domeny*  
- Wskaźnik do kontekstu urządzenia.  
+*podstawowego kontrolera domeny*<br/>
+[in] Wskaźnik do kontekstu urządzenia.  
   
- [in] *rect*  
- Prostokąt, który określa granice przycisku kartę.  
+*Rect*<br/>
+[in] Prostokąt, który określa granice przycisku kartę.  
   
- [in] *pButton*  
- Wskaźnik do [CMFCButton](../../mfc/reference/cmfcbutton-class.md) obiektu. Struktura rysuje obramowanie tego `CMFCButton` wystąpienia.  
+*pButton*<br/>
+[in] Wskaźnik do [CMFCButton](../../mfc/reference/cmfcbutton-class.md) obiektu. Struktura rysuje obramowanie tego `CMFCButton` wystąpienia.  
   
- [in] *uiState*  
- Liczba całkowita bez znaku określający stan przycisku.  
+*uiState*<br/>
+[in] Liczba całkowita bez znaku określający stan przycisku.  
   
- [in] *pWndTab*  
- Wskaźnik do nadrzędnego okna karty.  
+*pWndTab*<br/>
+[in] Wskaźnik do nadrzędnego okna karty.  
   
 ### <a name="remarks"></a>Uwagi  
  Należy przesłonić tę metodę w pochodnej Menedżer wizualnego, aby dostosować wygląd obramowania przycisku kartę.  
@@ -3774,20 +3774,20 @@ virtual void OnDrawTask(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *podstawowego kontrolera domeny*  
- Wskaźnik do kontekstu urządzenia.  
+*podstawowego kontrolera domeny*<br/>
+[in] Wskaźnik do kontekstu urządzenia.  
   
- [in] *pTask*  
- Wskaźnik do [CMFCTasksPaneTask](../../mfc/reference/cmfctaskspanetask-class.md) obiektu. Struktura rysuje tego zadania.  
+*pTask*<br/>
+[in] Wskaźnik do [CMFCTasksPaneTask](../../mfc/reference/cmfctaskspanetask-class.md) obiektu. Struktura rysuje tego zadania.  
   
- [in] *pIcons*  
- Wskaźnik do listy obrazów skojarzone z okienka zadań. Każde zadanie zawiera indeks obrazu na tej liście.  
+*pIcons*<br/>
+[in] Wskaźnik do listy obrazów skojarzone z okienka zadań. Każde zadanie zawiera indeks obrazu na tej liście.  
   
- [in] *bIsHighlighted*  
- Parametrów logiczny, który określa, czy wyświetlane zadania zostanie wyróżniona.  
+*bIsHighlighted*<br/>
+[in] Parametrów logiczny, który określa, czy wyświetlane zadania zostanie wyróżniona.  
   
- [in] *bIsSelected*  
- Parametr logiczny, który określa, czy wybrana jest wyświetlane zadanie.  
+*bIsSelected*<br/>
+[in] Parametr logiczny, który określa, czy wybrana jest wyświetlane zadanie.  
   
 ### <a name="remarks"></a>Uwagi  
  Struktura wyświetla zadania, na pasku zadań jako ikonę i tekst. *PIcons* parametr zawiera ikonę wskazanego przez zadania *pTask*.  
@@ -3806,17 +3806,17 @@ virtual void OnDrawTasksGroupAreaBorder(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *podstawowego kontrolera domeny*  
- Wskaźnik do kontekstu urządzenia.  
+*podstawowego kontrolera domeny*<br/>
+[in] Wskaźnik do kontekstu urządzenia.  
   
- [in] *rect*  
- Prostokąt, który określa granice przestrzeni grupy w okienku zadań.  
+*Rect*<br/>
+[in] Prostokąt, który określa granice przestrzeni grupy w okienku zadań.  
   
- [in] *bOpcje specjalne*  
- Parametr logiczny określający, jeśli zostanie wyróżniona obramowania. Wartość TRUE wskazuje, że obramowanie jest wyróżniona.  
+*bOpcje specjalne*<br/>
+[in] Parametr logiczny określający, jeśli zostanie wyróżniona obramowania. Wartość TRUE wskazuje, że obramowanie jest wyróżniona.  
   
- [in] *bNoTitle*  
- Parametr logiczny, który określa, czy w obszarze grupy ma tytuł. Wartość TRUE oznacza, że w obszarze grupy ma tytuł.  
+*bNoTitle*<br/>
+[in] Parametr logiczny, który określa, czy w obszarze grupy ma tytuł. Wartość TRUE oznacza, że w obszarze grupy ma tytuł.  
   
 ### <a name="remarks"></a>Uwagi  
  Przesłonić tę funkcję w klasie pochodnej, aby dostosować obramowanie wokół obszaru grupy, w okienku zadań.  
@@ -3834,20 +3834,20 @@ virtual void OnDrawTasksGroupCaption(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *podstawowego kontrolera domeny*  
- Wskaźnik do kontekstu urządzenia.  
+*podstawowego kontrolera domeny*<br/>
+[in] Wskaźnik do kontekstu urządzenia.  
   
- [in] *pGroup*  
- Wskaźnik do `CMFCTasksPaneTaskGroup` obiektu. Struktura rysuje podpis dla tej grupy.  
+*pGroup*<br/>
+[in] Wskaźnik do `CMFCTasksPaneTaskGroup` obiektu. Struktura rysuje podpis dla tej grupy.  
   
- [in] *bIsHighlighted*  
- Parametr logiczny, który wskazuje, czy grupa jest wyróżniona.  
+*bIsHighlighted*<br/>
+[in] Parametr logiczny, który wskazuje, czy grupa jest wyróżniona.  
   
- [in] *bIsSelected*  
- Parametr logiczny, który wskazuje, czy grupa jest aktualnie wybrany.  
+*bIsSelected*<br/>
+[in] Parametr logiczny, który wskazuje, czy grupa jest aktualnie wybrany.  
   
- [in] *bCanCollapse*  
- Parametr logiczny, który wskazuje, czy grupa może zostać zwinięty.  
+*bCanCollapse*<br/>
+[in] Parametr logiczny, który wskazuje, czy grupa może zostać zwinięty.  
   
 ### <a name="remarks"></a>Uwagi  
  Grupy zadań są wyświetlane na [CMFCTasksPane](../../mfc/reference/cmfctaskspane-class.md) obiektu.  
@@ -3868,12 +3868,12 @@ virtual void OnDrawTasksGroupIcon(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *podstawowego kontrolera domeny*  
- [in] *pGroup*  
- [in] *nIconHOffset*  
- [in] *bIsHighlighted*  
- [in] *bIsSelected*  
- [in] *bCanCollapse*  
+*podstawowego kontrolera domeny*<br/>
+[in] [in] *pGroup*  
+*nIconHOffset*<br/>
+[in] [in] *bIsHighlighted*  
+*bIsSelected*<br/>
+[in] [in] *bCanCollapse*  
   
 ### <a name="remarks"></a>Uwagi  
   
@@ -3888,14 +3888,14 @@ virtual void OnDrawTearOffCaption(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *podstawowego kontrolera domeny*  
- Wskaźnik do kontekstu urządzenia.  
+*podstawowego kontrolera domeny*<br/>
+[in] Wskaźnik do kontekstu urządzenia.  
   
- [in] *rect*  
- Prostokąt, który określa granice podpis.  
+*Rect*<br/>
+[in] Prostokąt, który określa granice podpis.  
   
- [in] *bIsActive*  
- Wartość TRUE, jeśli podpis jest aktywny; Wartość FALSE w przeciwnym razie.  
+*bIsActive*<br/>
+[in] Wartość TRUE, jeśli podpis jest aktywny; Wartość FALSE w przeciwnym razie.  
   
 ### <a name="remarks"></a>Uwagi  
  Ta funkcja jest wywoływana przez platformę, gdy `CMFCPopupMenu` obiekt przetwarza komunikat WM_PAINT i należy narysować odrywania podpis.  
@@ -3912,8 +3912,8 @@ virtual void OnDrawToolBoxFrame(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *podstawowego kontrolera domeny*  
- [in] *rect*  
+*podstawowego kontrolera domeny*<br/>
+[in] [in] *rect*  
   
 ### <a name="remarks"></a>Uwagi  
   
@@ -3927,11 +3927,11 @@ virtual BOOL OnEraseMDIClientArea(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *podstawowego kontrolera domeny*  
- Wskaźnik do kontekstu urządzenia.  
+*podstawowego kontrolera domeny*<br/>
+[in] Wskaźnik do kontekstu urządzenia.  
   
- [in] *rectClient*  
- Prostokąt, który określa granice obszaru klienta MDI.  
+*rectClient*<br/>
+[in] Prostokąt, który określa granice obszaru klienta MDI.  
   
 ### <a name="return-value"></a>Wartość zwracana  
  Zastrzeżonej wartości. Domyślna implementacja zwraca wartość FALSE.  
@@ -3950,8 +3950,8 @@ virtual void OnErasePopupWindowButton(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *podstawowego kontrolera domeny*  
- [in] *rectClient*  
+*podstawowego kontrolera domeny*<br/>
+[in] [in] *rectClient*  
  [in] *pButton*  
   
 ### <a name="remarks"></a>Uwagi  
@@ -3967,14 +3967,14 @@ virtual void OnEraseTabsArea(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *podstawowego kontrolera domeny*  
- Wskaźnik do kontekstu urządzenia.  
+*podstawowego kontrolera domeny*<br/>
+[in] Wskaźnik do kontekstu urządzenia.  
   
- [in] *rect*  
- Prostokąt, który określa granice wartości obszar karty.  
+*Rect*<br/>
+[in] Prostokąt, który określa granice wartości obszar karty.  
   
- [in] *pTabWnd*  
- Wskaźnik do okna karty. Struktura usuwa obszaru karty w oknie zakładek.  
+*pTabWnd*<br/>
+[in] Wskaźnik do okna karty. Struktura usuwa obszaru karty w oknie zakładek.  
   
 ### <a name="remarks"></a>Uwagi  
  Ta funkcja jest wywoływana przez platformę, gdy [klasa CMFCBaseTabCtrl](../../mfc/reference/cmfcbasetabctrl-class.md) obiekt przetwarza komunikat WM_PAINT i usuwa wartości obszar karty.  
@@ -3993,17 +3993,17 @@ virtual void OnEraseTabsButton(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *podstawowego kontrolera domeny*  
- Wskaźnik do kontekstu urządzenia.  
+*podstawowego kontrolera domeny*<br/>
+[in] Wskaźnik do kontekstu urządzenia.  
   
- [in] *rect*  
- Prostokąt, który określa granice przycisku kartę.  
+*Rect*<br/>
+[in] Prostokąt, który określa granice przycisku kartę.  
   
- [in] *pButton*  
- Wskaźnik do przycisku kartę. Struktura Usuwa tekst i ikona dla tego przycisku.  
+*pButton*<br/>
+[in] Wskaźnik do przycisku kartę. Struktura Usuwa tekst i ikona dla tego przycisku.  
   
- [in] *pWndTab*  
- Wskaźnik do formantu karty, która zawiera przycisk kartę.  
+*pWndTab*<br/>
+[in] Wskaźnik do formantu karty, która zawiera przycisk kartę.  
   
 ### <a name="remarks"></a>Uwagi  
  Struktura Usuwa tekst i ikona przycisku po [CMFCBaseTabCtrl](../../mfc/reference/cmfcbasetabctrl-class.md) obiektu przetwarza komunikat WM_ERASEBKGND.  
@@ -4021,14 +4021,14 @@ virtual BOOL OnEraseTabsFrame(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *podstawowego kontrolera domeny*  
- Wskaźnik do kontekstu urządzenia.  
+*podstawowego kontrolera domeny*<br/>
+[in] Wskaźnik do kontekstu urządzenia.  
   
- [in] *rect*  
- Prostokąt, który określa granice tego okna karty.  
+*Rect*<br/>
+[in] Prostokąt, który określa granice tego okna karty.  
   
- [in] *pTabWnd*  
- Wskaźnik do okna karty. Struktura usuwa ramki, w tym `CMFCBaseTabCtrl`.  
+*pTabWnd*<br/>
+[in] Wskaźnik do okna karty. Struktura usuwa ramki, w tym `CMFCBaseTabCtrl`.  
   
 ### <a name="return-value"></a>Wartość zwracana  
  Wartość TRUE, jeśli metoda się powiedzie; Wartość FALSE w przeciwnym razie.  
@@ -4047,14 +4047,14 @@ virtual void OnFillAutoHideButtonBackground(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *podstawowego kontrolera domeny*  
- Wskaźnik do kontekstu urządzenia.  
+*podstawowego kontrolera domeny*<br/>
+[in] Wskaźnik do kontekstu urządzenia.  
   
- [in] *rect*  
- Prostokąt, który określa granice przycisk Autoukrywanie.  
+*Rect*<br/>
+[in] Prostokąt, który określa granice przycisk Autoukrywanie.  
   
- [in] *pButton*  
- Wskaźnik do [CMFCAutoHideButton](../../mfc/reference/cmfcautohidebutton-class.md) obiektu. Struktura wypełnienia tła dla tego przycisku automatycznego ukrywania.  
+*pButton*<br/>
+[in] Wskaźnik do [CMFCAutoHideButton](../../mfc/reference/cmfcautohidebutton-class.md) obiektu. Struktura wypełnienia tła dla tego przycisku automatycznego ukrywania.  
   
 ### <a name="remarks"></a>Uwagi  
  Należy przesłonić tę metodę w pochodnej Menedżer wizualnego do dostosowywania wyglądu przycisku automatycznego ukrywania.  
@@ -4072,20 +4072,20 @@ virtual void OnFillBarBackground(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *podstawowego kontrolera domeny*  
- Wskaźnik do kontekstu urządzenia dla paska sterowania.  
+*podstawowego kontrolera domeny*<br/>
+[in] Wskaźnik do kontekstu urządzenia dla paska sterowania.  
   
- [in] *pBar*  
- Wskaźnik do `CBasePane` obiektu. Struktura wypełnienia tła w tym okienku.  
+*pBar*<br/>
+[in] Wskaźnik do `CBasePane` obiektu. Struktura wypełnienia tła w tym okienku.  
   
- [in] *rectClient*  
- Prostokąt, który określa granice okienka.  
+*rectClient*<br/>
+[in] Prostokąt, który określa granice okienka.  
   
- [in] *rectClip*  
- Prostokąt, który określa obszar przycinania okienka.  
+*rectClip*<br/>
+[in] Prostokąt, który określa obszar przycinania okienka.  
   
- [in] *bNCArea*  
- Zastrzeżonej wartości.  
+*bNCArea*<br/>
+[in] Zastrzeżonej wartości.  
   
 ### <a name="remarks"></a>Uwagi  
  Domyślna implementacja tej metody wypełnienia tła paska kolorem tła 3d ze zmienną globalną `afxGlobalData`. Należy przesłonić tę metodę w pochodnej Menedżer wizualnego Dostosowywanie tła panelu.  
@@ -4107,17 +4107,17 @@ virtual void OnFillButtonInterior(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *podstawowego kontrolera domeny*  
- Wskaźnik do kontekstu urządzenia przycisku paska narzędzi.  
+*podstawowego kontrolera domeny*<br/>
+[in] Wskaźnik do kontekstu urządzenia przycisku paska narzędzi.  
   
- [in] *pButton*  
- Wskaźnik do [CMFCToolBarButton](../../mfc/reference/cmfctoolbarbutton-class.md). Struktura wypełnia tło tego przycisku.  
+*pButton*<br/>
+[in] Wskaźnik do [CMFCToolBarButton](../../mfc/reference/cmfctoolbarbutton-class.md). Struktura wypełnia tło tego przycisku.  
   
- [in] *rect*  
- Prostokąt, który określa granice przycisku paska narzędzi.  
+*Rect*<br/>
+[in] Prostokąt, który określa granice przycisku paska narzędzi.  
   
- [in] *stanu*  
- Stan przycisku paska narzędzi.  
+*state*<br/>
+[in] Stan przycisku paska narzędzi.  
   
 ### <a name="remarks"></a>Uwagi  
  Domyślna implementacja tej metody używa domyślny kolor do wypełnienia tła. Należy przesłonić tę metodę w pochodnej Menedżer wizualnego, aby dostosować tło przycisku paska narzędzi.  
@@ -4140,14 +4140,14 @@ virtual COLORREF OnFillCaptionBarButton(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *podstawowego kontrolera domeny*  
- [in] *pBar*  
- [in] *rect*  
- [in] *bIsPressed*  
- [in] *bIsHighlighted*  
- [in] *bIsDisabled*  
- [in] *bHasDropDownArrow*  
- [in] *bIsSysButton*  
+*podstawowego kontrolera domeny*<br/>
+[in] [in] *pBar*  
+*Rect*<br/>
+[in] [in] *bIsPressed*  
+*bIsHighlighted*<br/>
+[in] [in] *bIsDisabled*  
+*bHasDropDownArrow*<br/>
+[in] [in] *bIsSysButton*  
   
 ### <a name="return-value"></a>Wartość zwracana  
   
@@ -4164,14 +4164,14 @@ virtual COLORREF OnFillCommandsListBackground(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *podstawowego kontrolera domeny*  
- Wskaźnik do kontekstu urządzenia.  
+*podstawowego kontrolera domeny*<br/>
+[in] Wskaźnik do kontekstu urządzenia.  
   
- [in] *rect*  
- Prostokąt, który określa granice tego przycisku.  
+*Rect*<br/>
+[in] Prostokąt, który określa granice tego przycisku.  
   
- [in] *bIsSelected*  
- Parametr logiczny, który wskazuje, czy przycisk jest zaznaczony.  
+*bIsSelected*<br/>
+[in] Parametr logiczny, który wskazuje, czy przycisk jest zaznaczony.  
   
 ### <a name="return-value"></a>Wartość zwracana  
  Kolor tekstu przycisku paska narzędzi.  
@@ -4190,14 +4190,14 @@ virtual void OnFillHeaderCtrlBackground(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *pCtrl*  
- Wskaźnik do [CMFCHeaderCtrl](../../mfc/reference/cmfcheaderctrl-class.md) obiektu. Struktura wypełnienia tła dla tego formantu nagłówka.  
+*pCtrl*<br/>
+[in] Wskaźnik do [CMFCHeaderCtrl](../../mfc/reference/cmfcheaderctrl-class.md) obiektu. Struktura wypełnienia tła dla tego formantu nagłówka.  
   
- [in] *podstawowego kontrolera domeny*  
- Wskaźnik do kontekstu urządzenia.  
+*podstawowego kontrolera domeny*<br/>
+[in] Wskaźnik do kontekstu urządzenia.  
   
- [in] *rect*  
- Prostokąt, który określa granice formantu nagłówka.  
+*Rect*<br/>
+[in] Prostokąt, który określa granice formantu nagłówka.  
   
 ### <a name="remarks"></a>Uwagi  
  Należy przesłonić tę metodę w pochodnej Menedżer wizualnego do dostosowywania wyglądu formantu nagłówka.  
@@ -4214,17 +4214,17 @@ virtual COLORREF OnFillMiniFrameCaption(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *podstawowego kontrolera domeny*  
- Wskaźnik do kontekstu urządzenia.  
+*podstawowego kontrolera domeny*<br/>
+[in] Wskaźnik do kontekstu urządzenia.  
   
- [in] *rectCaption*  
- Prostokąt, który określa granice pasek podpisu.  
+*rectCaption*<br/>
+[in] Prostokąt, który określa granice pasek podpisu.  
   
- [in] *pFrameWnd*  
- Wskaźnik do okna mini ramki. Struktura rysuje pasek tytułu tego okna.  
+*pFrameWnd*<br/>
+[in] Wskaźnik do okna mini ramki. Struktura rysuje pasek tytułu tego okna.  
   
- [in] *bWykonywanie aktywnych*  
- Parametrów logiczny, który wskazuje, czy okno jest aktywne.  
+*bWykonywanie aktywnych*<br/>
+[in] Parametrów logiczny, który wskazuje, czy okno jest aktywne.  
   
 ### <a name="return-value"></a>Wartość zwracana  
  Kolor, który jest używany do wypełnienia tła paska podpisu.  
@@ -4243,14 +4243,14 @@ virtual void OnFillOutlookBarCaption(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *podstawowego kontrolera domeny*  
- Wskaźnik do kontekstu urządzenia.  
+*podstawowego kontrolera domeny*<br/>
+[in] Wskaźnik do kontekstu urządzenia.  
   
- [in] *rectCaption*  
- Prostokąt, który określa granice pasek podpisu.  
+*rectCaption*<br/>
+[in] Prostokąt, który określa granice pasek podpisu.  
   
- [out] *clrText*  
- Odwołanie do [COLORREF](/windows/desktop/gdi/colorref) parametru. Metoda zapisuje koloru tekstu na pasku podpisu tego parametru.  
+*clrText*<br/>
+[out] Odwołanie do [COLORREF](/windows/desktop/gdi/colorref) parametru. Metoda zapisuje koloru tekstu na pasku podpisu tego parametru.  
   
 ### <a name="remarks"></a>Uwagi  
  Domyślna implementacja tej metody wypełnia pasek podpisu przy użyciu koloru dla cieni, w oparciu o bieżące skórki. Należy przesłonić tę metodę w pochodnej Menedżer wizualnego dostosować kolor pasek podpisu programu Outlook.  
@@ -4268,20 +4268,20 @@ virtual void OnFillOutlookPageButton(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *podstawowego kontrolera domeny*  
- Wskaźnik do kontekstu urządzenia.  
+*podstawowego kontrolera domeny*<br/>
+[in] Wskaźnik do kontekstu urządzenia.  
   
- [in] *rect*  
- Prostokąt, który określa granice przycisk Strona programu Outlook.  
+*Rect*<br/>
+[in] Prostokąt, który określa granice przycisk Strona programu Outlook.  
   
- [in] *bIsHighlighted*  
- Parametr logiczny, który określa, czy przycisk jest wyróżniona.  
+*bIsHighlighted*<br/>
+[in] Parametr logiczny, który określa, czy przycisk jest wyróżniona.  
   
- [in] *bIsPressed*  
- Parametr logiczny, który określa, czy przycisk jest wciśnięty.  
+*bIsPressed*<br/>
+[in] Parametr logiczny, który określa, czy przycisk jest wciśnięty.  
   
- [out] *clrText*  
- Odwołanie do [COLORREF](/windows/desktop/gdi/colorref) parametru. Ta metoda przechowuje kolor tekstu przycisku Strona programu outlook, w tym parametrze.  
+*clrText*<br/>
+[out] Odwołanie do [COLORREF](/windows/desktop/gdi/colorref) parametru. Ta metoda przechowuje kolor tekstu przycisku Strona programu outlook, w tym parametrze.  
   
 ### <a name="remarks"></a>Uwagi  
  Przesłonić tę funkcję w pochodnej Menedżer wizualnego, aby dostosować wygląd przycisków strony programu Outlook.  
@@ -4296,11 +4296,11 @@ virtual void OnFillPopupWindowBackground(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *podstawowego kontrolera domeny*  
- Wskaźnik do kontekstu urządzenia.  
+*podstawowego kontrolera domeny*<br/>
+[in] Wskaźnik do kontekstu urządzenia.  
   
- [in] *rect*  
- Prostokąt, który określa granice tego okna podręcznego.  
+*Rect*<br/>
+[in] Prostokąt, który określa granice tego okna podręcznego.  
   
 ### <a name="remarks"></a>Uwagi  
  Należy przesłonić tę metodę w pochodnej Menedżer wizualnego do dostosowywania wyglądu wyskakujących okienek.  
@@ -4315,11 +4315,11 @@ virtual COLORREF OnFillRibbonButton(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *podstawowego kontrolera domeny*  
- Wskaźnik do kontekstu urządzenia.  
+*podstawowego kontrolera domeny*<br/>
+[in] Wskaźnik do kontekstu urządzenia.  
   
- [in] *pButton*  
- Wskaźnik do [CMFCRibbonButton](../../mfc/reference/cmfcribbonbutton-class.md) obiektu. Struktura wypełnia wewnętrznych przycisk na Wstążce.  
+*pButton*<br/>
+[in] Wskaźnik do [CMFCRibbonButton](../../mfc/reference/cmfcribbonbutton-class.md) obiektu. Struktura wypełnia wewnętrznych przycisk na Wstążce.  
   
 ### <a name="return-value"></a>Wartość zwracana  
  Kolor tekstu przycisku wstążki, określony przez *pButton* , gdy przycisk wstążki obsługuje tekst. Wartość -1, jeśli tekst jest nieprawidłowy dla przycisk na Wstążce.  
@@ -4344,32 +4344,32 @@ virtual void OnFillRibbonEdit(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *podstawowego kontrolera domeny*  
- Wskaźnik do kontekstu urządzenia.  
+*podstawowego kontrolera domeny*<br/>
+[in] Wskaźnik do kontekstu urządzenia.  
   
- [in] *pEdit*  
- Wskaźnik do `CMFCRibbonRichEditCtrl` obiektu. Struktura wypełnia wewnątrz tej kontrolki edycji.  
+*pEdit*<br/>
+[in] Wskaźnik do `CMFCRibbonRichEditCtrl` obiektu. Struktura wypełnia wewnątrz tej kontrolki edycji.  
   
- [in] *rect*  
- Prostokąt, który określa granice kontrolki edycji.  
+*Rect*<br/>
+[in] Prostokąt, który określa granice kontrolki edycji.  
   
- [in] *bIsHighlighted*  
- Parametr logiczny, który wskazuje, czy kontrolka edycji zostanie wyróżniona.  
+*bIsHighlighted*<br/>
+[in] Parametr logiczny, który wskazuje, czy kontrolka edycji zostanie wyróżniona.  
   
- [in] *bIsPaneHighlighted*  
- Parametrów logiczny, który wskazuje, czy jest wyróżniona w okienku nadrzędnej.  
+*bIsPaneHighlighted*<br/>
+[in] Parametrów logiczny, który wskazuje, czy jest wyróżniona w okienku nadrzędnej.  
   
- [in] *bIsDisabled*  
- Parametrów logiczny, który wskazuje, czy kontrolka edycji jest niedostępny.  
+*bIsDisabled*<br/>
+[in] Parametrów logiczny, który wskazuje, czy kontrolka edycji jest niedostępny.  
   
- [in] *clrText*  
- Odwołanie do koloru tekstu kontrolki edycji.  
+*clrText*<br/>
+[in] Odwołanie do koloru tekstu kontrolki edycji.  
   
- [in] *clrSelBackground*  
- Odwołanie do koloru tła formantu edycji, gdy jest wyróżniona.  
+*clrSelBackground*<br/>
+[in] Odwołanie do koloru tła formantu edycji, gdy jest wyróżniona.  
   
- [in] *clrSelText*  
- Odwołanie do koloru zaznaczony tekst w kontrolce edycji.  
+*clrSelText*<br/>
+[in] Odwołanie do koloru zaznaczony tekst w kontrolce edycji.  
   
 ### <a name="remarks"></a>Uwagi  
  `CMFCRibbonRichEditCtrl` Wskazywanym przez *pEdit* mogą być częścią przycisku pole kombi na Wstążce.  
@@ -4386,11 +4386,11 @@ virtual COLORREF OnFillRibbonMainPanelButton(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *podstawowego kontrolera domeny*  
- Wskaźnik do kontekstu urządzenia.  
+*podstawowego kontrolera domeny*<br/>
+[in] Wskaźnik do kontekstu urządzenia.  
   
- [in] *pButton*  
- Wskaźnik do [klasa CMFCRibbonButton](../../mfc/reference/cmfcribbonbutton-class.md) obiektu. Struktura wypełnia przycisk na Wstążce.  
+*pButton*<br/>
+[in] Wskaźnik do [klasa CMFCRibbonButton](../../mfc/reference/cmfcribbonbutton-class.md) obiektu. Struktura wypełnia przycisk na Wstążce.  
   
 ### <a name="return-value"></a>Wartość zwracana  
  Kolor tekstu przycisku wstążki, określony przez *pButton* , gdy przycisk wstążki obsługuje tekst. Wartość -1, jeśli tekst jest nieprawidłowy dla przycisk na Wstążce.  
@@ -4409,14 +4409,14 @@ virtual void OnFillRibbonMenuFrame(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *podstawowego kontrolera domeny*  
- Wskaźnik do kontekstu urządzenia.  
+*podstawowego kontrolera domeny*<br/>
+[in] Wskaźnik do kontekstu urządzenia.  
   
- [in] *pPanel*  
- Wskaźnik do wystąpienia [klasa CMFCRibbonMainPanel](../../mfc/reference/cmfcribbonmainpanel-class.md). Struktura wypełnia menu ramki tego panelu wstążki.  
+*pPanel*<br/>
+[in] Wskaźnik do wystąpienia [klasa CMFCRibbonMainPanel](../../mfc/reference/cmfcribbonmainpanel-class.md). Struktura wypełnia menu ramki tego panelu wstążki.  
   
- [in] *rect*  
- Prostokąt, który określa granice ramki menu.  
+*Rect*<br/>
+[in] Prostokąt, który określa granice ramki menu.  
   
 ### <a name="remarks"></a>Uwagi  
  Należy przesłonić tę metodę w pochodnej Menedżer wizualnego, aby dostosować wygląd paska menu, aby uzyskać `CMFCRibbonMainPanel`.  
@@ -4432,8 +4432,8 @@ virtual void OnFillRibbonQuickAccessToolBarPopup(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *podstawowego kontrolera domeny*  
- [in] *pMenuBar*  
+*podstawowego kontrolera domeny*<br/>
+[in] [in] *pMenuBar*  
  [in] *rect*  
   
 ### <a name="remarks"></a>Uwagi  
@@ -4449,14 +4449,14 @@ virtual void OnFillSplitterBackground(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *podstawowego kontrolera domeny*  
- Wskaźnik do kontekstu urządzenia.  
+*podstawowego kontrolera domeny*<br/>
+[in] Wskaźnik do kontekstu urządzenia.  
   
- [in] *pSplitterWnd*  
- Wskaźnik do wystąpienia [klasy CSplitterWndEx](csplitterwndex-class.md). Struktura wypełnienia tła dla tego okna rozdzielacza.  
+*pSplitterWnd*<br/>
+[in] Wskaźnik do wystąpienia [klasy CSplitterWndEx](csplitterwndex-class.md). Struktura wypełnienia tła dla tego okna rozdzielacza.  
   
- [in] *rect*  
- Prostokąt, który określa granice tego okna rozdzielacza.  
+*Rect*<br/>
+[in] Prostokąt, który określa granice tego okna rozdzielacza.  
   
 ### <a name="remarks"></a>Uwagi  
  Należy przesłonić tę metodę w pochodnej Menedżer wizualnego, aby dostosować wygląd okna rozdzielacza.  
@@ -4475,23 +4475,23 @@ virtual void OnFillTab(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *podstawowego kontrolera domeny*  
- Wskaźnik do kontekstu urządzenia.  
+*podstawowego kontrolera domeny*<br/>
+[in] Wskaźnik do kontekstu urządzenia.  
   
- [in] *rectFill*  
- Prostokąt, który określa granice dla okna karty.  
+*rectFill*<br/>
+[in] Prostokąt, który określa granice dla okna karty.  
   
- [in] *pbrFill*  
- Wskaźnik do pędzla. Struktura używa tego pędzla do wypełnienia okna karty.  
+*pbrFill*<br/>
+[in] Wskaźnik do pędzla. Struktura używa tego pędzla do wypełnienia okna karty.  
   
- [in] *iTab*  
- Liczony od zera indeks karty, dla którego ramach wypełnienia tła.  
+*iTab*<br/>
+[in] Liczony od zera indeks karty, dla którego ramach wypełnienia tła.  
   
- [in] *bIsActive*  
- Wartość TRUE, jeśli karta jest aktywny; w przeciwnym razie wartość FALSE.  
+*bIsActive*<br/>
+[in] Wartość TRUE, jeśli karta jest aktywny; w przeciwnym razie wartość FALSE.  
   
- [in] *pTabWnd*  
- Wskaźnik do kontrolki nadrzędnej karty.  
+*pTabWnd*<br/>
+[in] Wskaźnik do kontrolki nadrzędnej karty.  
   
 ### <a name="remarks"></a>Uwagi  
  Należy przesłonić tę metodę w pochodnej Menedżer wizualnego do dostosowywania wyglądu karty.  
@@ -4507,14 +4507,14 @@ virtual void OnFillTasksGroupInterior(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *podstawowego kontrolera domeny*  
- Wskaźnik do kontekstu urządzenia.  
+*podstawowego kontrolera domeny*<br/>
+[in] Wskaźnik do kontekstu urządzenia.  
   
- [in] *rect*  
- Prostokąt, który określa granice tej grupy zadań.  
+*Rect*<br/>
+[in] Prostokąt, który określa granice tej grupy zadań.  
   
- [in] *bOpcje specjalne*  
- Wartość logiczna wskazująca, jeśli wewnętrznych zostanie wypełniony kolorem specjalne.  
+*bOpcje specjalne*<br/>
+[in] Wartość logiczna wskazująca, jeśli wewnętrznych zostanie wypełniony kolorem specjalne.  
   
 ### <a name="remarks"></a>Uwagi  
  Należy przesłonić tę metodę w pochodnej Menedżer wizualnego, aby dostosować wygląd grupy zadań.  
@@ -4529,11 +4529,11 @@ virtual void OnFillTasksPaneBackground(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *podstawowego kontrolera domeny*  
- Wskaźnik do kontekstu urządzenia.  
+*podstawowego kontrolera domeny*<br/>
+[in] Wskaźnik do kontekstu urządzenia.  
   
- [in] *rectWorkArea*  
- Prostokąt, który określa granice okienka zadań.  
+*rectWorkArea*<br/>
+[in] Prostokąt, który określa granice okienka zadań.  
   
 ### <a name="remarks"></a>Uwagi  
  Należy przesłonić tę metodę w pochodnej Menedżer wizualnego, aby dostosować wygląd `CMFCTasksPane` obiektu.  
@@ -4550,17 +4550,17 @@ virtual void OnHighlightMenuItem(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *podstawowego kontrolera domeny*  
- Wskaźnik do kontekstu urządzenia do menu.  
+*podstawowego kontrolera domeny*<br/>
+[in] Wskaźnik do kontekstu urządzenia do menu.  
   
- [in] *pButton*  
- Wskaźnik do [CMFCToolBarMenuButton](../../mfc/reference/cmfctoolbarmenubutton-class.md) obiektu do wyświetlenia. Domyślna implementacja nie używać tego parametru.  
+*pButton*<br/>
+[in] Wskaźnik do [CMFCToolBarMenuButton](../../mfc/reference/cmfctoolbarmenubutton-class.md) obiektu do wyświetlenia. Domyślna implementacja nie używać tego parametru.  
   
- [in] *rect*  
- Prostokąt, który określa granice elementu menu.  
+*Rect*<br/>
+[in] Prostokąt, który określa granice elementu menu.  
   
- [in] *clrText*  
- Bieżący kolor tekstu elementów menu wyróżnione. Domyślna implementacja nie używać tego parametru.  
+*clrText*<br/>
+[in] Bieżący kolor tekstu elementów menu wyróżnione. Domyślna implementacja nie używać tego parametru.  
   
 ### <a name="remarks"></a>Uwagi  
  Domyślna implementacja tej metody nie są używane parametry *pButton* lub *clrText*. Umieszcza prostokąt określony przez *prostokąt* kolorem tła standardowych.  
@@ -4577,11 +4577,11 @@ virtual void OnHighlightRarelyUsedMenuItems(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *podstawowego kontrolera domeny*  
- Wskaźnik do kontekstu urządzenia.  
+*podstawowego kontrolera domeny*<br/>
+[in] Wskaźnik do kontekstu urządzenia.  
   
- [in] *rectRarelyUsed*  
- Prostokąt, który określa granice podświetlone polecenie.  
+*rectRarelyUsed*<br/>
+[in] Prostokąt, który określa granice podświetlone polecenie.  
   
 ### <a name="remarks"></a>Uwagi  
  Należy przesłonić tę metodę w pochodnej Menedżer wizualnego do dostosowywania wyglądu polecenia menu wyróżnione.  
@@ -4596,8 +4596,8 @@ virtual BOOL OnNcActivate(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *pWnd*  
- [in] *bWykonywanie aktywnych*  
+*pWnd*<br/>
+[in] [in] *bWykonywanie aktywnych*  
   
 ### <a name="return-value"></a>Wartość zwracana  
   
@@ -4614,14 +4614,14 @@ virtual BOOL OnNcPaint(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *pWnd*  
- Wskaźnik do okna, którego obszaru nieklienckiego rysuje platformę.  
+*pWnd*<br/>
+[in] Wskaźnik do okna, którego obszaru nieklienckiego rysuje platformę.  
   
- [in] *lstSysButtons*  
- Lista przycisków systemowych. Są one nazywane także przyciski podpisu.  
+*lstSysButtons*<br/>
+[in] Lista przycisków systemowych. Są one nazywane także przyciski podpisu.  
   
- [in] *rectRedraw*  
- Prostokąt, który określa granice obszaru nieklienckiego.  
+*rectRedraw*<br/>
+[in] Prostokąt, który określa granice obszaru nieklienckiego.  
   
 ### <a name="return-value"></a>Wartość zwracana  
  Zastrzeżonej wartości. Domyślna implementacja zwraca wartość FALSE.  
@@ -4639,11 +4639,11 @@ virtual BOOL OnSetWindowRegion(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *pWnd*  
- Wskaźnik do okna z regionem, która się zmieniła.  
+*pWnd*<br/>
+[in] Wskaźnik do okna z regionem, która się zmieniła.  
   
- [in] *sizeWindow*  
- Rozmiar okna.  
+*sizeWindow*<br/>
+[in] Rozmiar okna.  
   
 ### <a name="return-value"></a>Wartość zwracana  
  Wartość TRUE, jeśli metoda się powiedzie; Wartość FALSE w przeciwnym razie.  
@@ -4690,8 +4690,8 @@ static void SetDefaultManager(CRuntimeClass* pRTI);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *pRTI*  
- Wskaźnik do danych środowiska uruchomieniowego dla Menedżer wizualnego.  
+*pRTI*<br/>
+[in] Wskaźnik do danych środowiska uruchomieniowego dla Menedżer wizualnego.  
   
 ### <a name="remarks"></a>Uwagi  
  Użyj `CMFCVisualManager` klasy i wszystkie pochodne menedżerów wizualnych, aby dostosować wygląd aplikacji. Po ustawieniu domyślnego menedżera visual ta metoda odrysowuje aplikacji przy użyciu nowego Menedżera visual. Aby uzyskać więcej informacji o sposobie używania menedżerów wizualnych, zobacz [Menedżer wizualizacji](../../mfc/visualization-manager.md).  
@@ -4706,8 +4706,8 @@ void SetEmbossDisabledImage (BOOL bEmboss = TRUE);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *bEmboss*  
- Parametrów logiczny, który wskazuje, czy należy włączyć tryb wypukłe dla wyłączonego paska narzędzi obrazów.  
+*bEmboss*<br/>
+[in] Parametrów logiczny, który wskazuje, czy należy włączyć tryb wypukłe dla wyłączonego paska narzędzi obrazów.  
   
 ### <a name="remarks"></a>Uwagi  
  Użyj funkcji [CMFCVisualManager::IsEmbossDisabledImage](#isembossdisabledimage) do określenia, czy jest włączony tryb wypukłe.  
@@ -4720,8 +4720,8 @@ void SetFadeInactiveImage(BOOL bFade = TRUE);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *bFade*  
- Parametr logiczny, który określa, czy włączyć wpływ oświetlenia.  
+*bFade*<br/>
+[in] Parametr logiczny, który określa, czy włączyć wpływ oświetlenia.  
   
 ### <a name="remarks"></a>Uwagi  
  Kontrolek tej funkcji, czy pojawiają się nieaktywne obrazów pojawił się w menu lub paska narzędzi. Użyj metody [CMFCVisualManager::IsFadeInactiveImage](#isfadeinactiveimage) do określenia, czy ta funkcja jest włączona.  
@@ -4734,8 +4734,8 @@ void SetMenuFlatLook(BOOL bMenuFlatLook = TRUE);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *bMenuFlatLook*  
- Parametrów logiczny, który wskazuje, czy przyciski menu pojawiać się płaski.  
+*bMenuFlatLook*<br/>
+[in] Parametrów logiczny, który wskazuje, czy przyciski menu pojawiać się płaski.  
   
 ### <a name="remarks"></a>Uwagi  
  Ta funkcja nie jest włączona domyślnie.  
@@ -4748,8 +4748,8 @@ void SetMenuShadowDepth(int nDepth);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *nDepth*  
- Liczba całkowita, która określa głębokość w tle menu w pikselach.  
+*nDepth*<br/>
+[in] Liczba całkowita, która określa głębokość w tle menu w pikselach.  
   
 ### <a name="remarks"></a>Uwagi  
  Wysokość i szerokość menu w tle muszą być identyczne. Wartość domyślna to 7 pikseli.  
@@ -4762,8 +4762,8 @@ void SetShadowHighlightedImage(BOOL bShadow = TRUE);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *bShadow*  
- Parametrów logiczny, który wskazuje, czy Menedżer wizualny Wyświetla cienia w obszarze wyróżnionym obrazów.  
+*bShadow*<br/>
+[in] Parametrów logiczny, który wskazuje, czy Menedżer wizualny Wyświetla cienia w obszarze wyróżnionym obrazów.  
   
 ### <a name="remarks"></a>Uwagi  
  Ta funkcja jest domyślnie wyłączona.  

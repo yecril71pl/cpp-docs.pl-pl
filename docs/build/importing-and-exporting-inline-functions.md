@@ -1,5 +1,5 @@
 ---
-title: Importowanie i eksportowanie funkcji śródwierszowych | Dokumentacja firmy Microsoft
+title: Importowanie i eksportowanie wbudowanych funkcji | Dokumentacja firmy Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -22,36 +22,38 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b666d450766a5a285f02517d92d5eb4dc3f29c68
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 431b7c3becffb4e5b2543984fd66cae0a1507738
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32368580"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45726560"
 ---
 # <a name="importing-and-exporting-inline-functions"></a>Importowanie i eksportowanie funkcji śródwierszowych
-Funkcje importowanych można zdefiniować jako śródwierszowej. Efekt około jest taka sama jak definiowanie w tekście standardowa funkcja; wywołania funkcji są rozwijane do kodu wbudowanego, podobnie jak w makrze. Jest to przydatne głównie sposób obsługi języka C++ klasy w bibliotece DLL tym miejscu może niektóre z ich funkcji w celu zwiększenia wydajności.  
-  
- Jedna funkcja importowanych wbudowanej funkcji jest wykonanie adresu w języku C++. Kompilator zwraca adres kopię funkcji wbudowanej znajdującej się w bibliotece DLL. Inna funkcja funkcji śródwierszowych importowany jest zainicjować lokalnych danych statycznych funkcji importowane, w przeciwieństwie do importowanych danych globalnych.  
-  
+
+Zaimportowane funkcje mogą być definiowane jako wbudowane. Efekt jest mniej więcej taka sama jak definiowanie w tekście standardowej funkcji; wywołań funkcji są rozwijane kod wbudowane, podobnie jak makra. Jest to głównie przydatne, ponieważ sposób obsługi C++ klas w bibliotece DLL tym miejscu może niektóre z ich funkcji w celu zwiększenia wydajności.
+
+Jedna z funkcji importowanych wbudowanej funkcji jest wykonanie adresu w języku C++. Kompilator zwraca adres kopii znajdującej się w bibliotece DLL funkcja w tekście. Kolejną funkcją importowanych wbudowane funkcje jest, czy należy zainicjować lokalnych danych statycznych funkcji importowany, w przeciwieństwie do globalnych, importowanych danych.
+
 > [!CAUTION]
->  Szczególną uwagę należy postępować importowane zapewnianie funkcji śródwierszowych ponieważ mogą utworzyć konfliktów wersji. Funkcja wbudowana pobiera rozwinięty w kodzie aplikacji; w związku z tym jeśli później ponownego zapisywania funkcji go nie zostanie zaktualizowany, chyba że sama aplikacja jest ponownie kompilowana. (Zazwyczaj funkcji DLL może zostać zaktualizowana w bez odbudowywania aplikacje, które z nich korzystają.)  
-  
-## <a name="what-do-you-want-to-do"></a>Co chcesz zrobić?  
-  
--   [Eksportowanie z biblioteki DLL](../build/exporting-from-a-dll.md)  
-  
--   [Eksportowanie z biblioteki DLL przy użyciu. Pliki DEF](../build/exporting-from-a-dll-using-def-files.md)  
-  
--   [Eksportowanie z biblioteki DLL przy użyciu atrybutu __declspec(dllexport)](../build/exporting-from-a-dll-using-declspec-dllexport.md)  
-  
--   [Eksportowanie i importowanie przy użyciu makra AFX_EXT_CLASS](../build/exporting-and-importing-using-afx-ext-class.md)  
-  
--   [Eksportowanie funkcji języka C++ do użycia w plikach wykonywalnych języka C](../build/exporting-cpp-functions-for-use-in-c-language-executables.md)  
-  
--   [Określić jakiej metody eksportu użyć](../build/determining-which-exporting-method-to-use.md)  
-  
--   [Importowanie do aplikacji przy użyciu atrybutu __declspec(dllimport)](../build/importing-into-an-application-using-declspec-dllimport.md)  
-  
-## <a name="see-also"></a>Zobacz też  
- [Importowanie i eksportowanie](../build/importing-and-exporting.md)
+>  Opieka powinny uwzględniać importowane zapewniając wbudowane funkcje, ponieważ tworzą konfliktów wersji. Funkcja śródwierszowa rozwija się w kodzie aplikacji; w związku z tym jeśli przepiszesz później funkcji, go nie zostanie zaktualizowany, chyba że sama aplikacja jest ponownie kompilowana. (Zazwyczaj funkcji DLL można zaktualizować bez ponownie skompilować aplikacje, które z nich korzystają.)
+
+## <a name="what-do-you-want-to-do"></a>Co chcesz zrobić?
+
+- [Eksportowanie z biblioteki DLL](../build/exporting-from-a-dll.md)
+
+- [Eksportowanie z biblioteki DLL za pomocą. Pliki DEF](../build/exporting-from-a-dll-using-def-files.md)
+
+- [Eksportowanie z biblioteki DLL przy użyciu atrybutu __declspec(dllexport)](../build/exporting-from-a-dll-using-declspec-dllexport.md)
+
+- [Eksportowanie i importowanie przy użyciu makra AFX_EXT_CLASS](../build/exporting-and-importing-using-afx-ext-class.md)
+
+- [Eksportuj funkcje C++ do użycia w plikach wykonywalnych języka C](../build/exporting-cpp-functions-for-use-in-c-language-executables.md)
+
+- [Określić, której metody eksportowania użyjesz](../build/determining-which-exporting-method-to-use.md)
+
+- [Importowanie do aplikacji przy użyciu atrybutu __declspec(dllimport)](../build/importing-into-an-application-using-declspec-dllimport.md)
+
+## <a name="see-also"></a>Zobacz też
+
+[Importowanie i eksportowanie](../build/importing-and-exporting.md)

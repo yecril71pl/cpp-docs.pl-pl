@@ -22,44 +22,46 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0740f567f17c8d44069211274ab1a4c66da311c1
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 888d0ce0e53fef45df868e0980953ffb763d8771
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32369120"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45726294"
 ---
 # <a name="localized-resources-in-mfc-applications-satellite-dlls"></a>Zasoby zlokalizowane w aplikacjach MFC: biblioteki DLL Satellite
-MFC w wersji 7.0 lub nowszym obsługuje satelitarne bibliotek DLL, funkcją, która pomaga w tworzeniu aplikacji zlokalizowane dla wielu języków. Biblioteka DLL jest Satelita [DLL tylko z zasobami](../build/creating-a-resource-only-dll.md) zawierający zasoby aplikacji są zlokalizowane dla określonego języka. Po rozpoczęciu wykonywania aplikacji MFC automatycznie ładuje zlokalizowany zasób najbardziej odpowiednie dla środowiska. Na przykład można mieć aplikację z języka angielskiego zasobów przy użyciu dwóch satelitarne bibliotek DLL, zawierający francuskim tłumaczenie zasobów, a drugi zawierający translację niemieckiego. Gdy aplikacja jest uruchamiana w systemie język angielski, używa zasobów angielskiej wersji językowej. Jeśli działa w systemie francuskim, używa zasobów francuskim; Jeśli działa w systemie niemieckim, używa zasobów niemieckim.  
-  
- Aby obsługiwać zasoby zlokalizowane w aplikacji MFC próbuje załadować satelitarnej biblioteki DLL MFC zawierającego zasoby zlokalizowane dla określonego języka. Satelitarne biblioteki DLL są nazywane *ApplicationNameXXX*dll, gdzie *ApplicationName* jest nazwą .exe lub .dll za pomocą MFC, i *XXX* jest trzyliterowy kod języka zasoby (na przykład "ENU" lub "DEU").  
-  
- MFC próbuje załadować biblioteki DLL zasobów dla każdego z następujących języków w kolejności, zatrzymywanie, gdy zostanie znaleziony:  
-  
-1. Bieżący użytkownik domyślny język interfejsu użytkownika, ponieważ zwrócony z interfejsu API Win32 GetUserDefaultUILanguage().  
-  
-2.  Bieżący użytkownik w domyślny język interfejsu użytkownika, bez żadnych szczególnych odmianą języka (oznacza to, że ENC [kanadyjskich angielskim] staje się ENU [stany USA English]).  
-  
-3.  System domyślny język interfejsu użytkownika, ponieważ zwrócony z interfejsu API GetSystemDefaultUILanguage(). Na innych platformach jest język systemu operacyjnego, do samej siebie.  
-  
-4.  System domyślny język interfejsu użytkownika, bez żadnych odmianą określonego języka.  
-  
-5.  Fałszywych języka z 3-znakowy kod LOC.  
-  
- MFC nie może znaleźć żadnych satelitarne bibliotek DLL, używa, niezależnie od zasobów znajdują się w samej aplikacji.  
-  
- Na przykład załóżmy, że aplikacja LangExample.exe używa MFC i działa na wielu interfejsu użytkownika systemu. język interfejsu użytkownika systemu to ENU [stany USA Angielski] i FRC [kanadyjskich francuski] ustawiony jest język interfejsu użytkownika bieżącego użytkownika. MFC szuka następujących bibliotek DLL w następującej kolejności:  
-  
-1.  LangExampleFRC.dll (język interfejsu użytkownika dla użytkownika).  
-  
-2.  LangExampleFRA.dll (język Interfejsu użytkownika bez odmianą języka, w tym przykładzie francuski (Francja).  
-  
-3.  LangExampleENU.dll (język interfejsu użytkownika systemu).  
-  
-4.  LangExampleLOC.dll.  
-  
- Jeśli żaden z tych biblioteki DLL nie zostaną znalezione, MFC LangExample.exe używa zasobów.  
-  
-## <a name="see-also"></a>Zobacz też  
- [Biblioteki dll w programie Visual C++](../build/dlls-in-visual-cpp.md)   
- [TN057: lokalizacja składników MFC](../mfc/tn057-localization-of-mfc-components.md)
+
+MFC w wersji 7.0 lub nowszy zapewnia rozszerzoną obsługę satelitarnej biblioteki dll, funkcja, która pomaga w tworzeniu aplikacji zlokalizowanej w wielu językach. Satelitarne biblioteki DLL jest [DLL tylko dla zasobów](../build/creating-a-resource-only-dll.md) zawierający zasoby aplikacji są zlokalizowane dla określonego języka. Po rozpoczęciu wykonywania aplikacji MFC automatycznie ładuje zlokalizowany najbardziej odpowiednie dla środowiska. Na przykład może mieć aplikacji przy użyciu języka angielskiego zasobów przy użyciu dwóch satelickich bibliotek DLL, zawierające francuska tłumaczenie zasobów, a drugi zawierający niemieckiego tłumaczenia. Po uruchomieniu aplikacji w języku angielskim systemie używa zasobów w języku angielskim. Jeśli działa w systemie, francuskim, używa zasobów francuskim. Jeśli działa w systemie, niemieckim, używa zasobów niemieckim.
+
+Do obsługi zlokalizowanych zasobów w aplikacji MFC, MFC próbuje załadować satelitarną bibliotekę DLL zawierającą zasoby zlokalizowane dla określonego języka. Biblioteki DLL Satellite są nazywane *ApplicationNameXXX*.dll, gdzie *ApplicationName* nazywa się .exe lub .dll, za pomocą MFC, i *XXX* jest trzyliterowy kod języka zasoby (na przykład "ENU" lub "(DEU)").
+
+MFC próbuje załadować biblioteki DLL zasobów dla każdego z następujących języków, w kolejności, zatrzymując się, gdy zostanie znaleziony:
+
+1. Bieżący użytkownik domyślny język interfejsu użytkownika, ponieważ zwrócony z interfejsu API Win32 GetUserDefaultUILanguage().
+
+1. Bieżący użytkownik w domyślny język interfejsu użytkownika, bez żadnych szczególnych podjęzyk (czyli ENC [kanadyjski angielskiej] staje się ENU [US English]).
+
+1. System domyślny język interfejsu użytkownika, zwrócone z interfejsu API GetSystemDefaultUILanguage(). Na innych platformach jest to język systemu operacyjnego, sam.
+
+1. System domyślny język interfejsu użytkownika, bez żadnych szczególnych podjęzyk.
+
+1. Język fałszywych 3-literowy kod LOC.
+
+MFC nie może znaleźć wszystkie satelitarne bibliotek DLL, używa, niezależnie od zasobów znajdują się w samej aplikacji.
+
+Na przykład załóżmy, że aplikacja LangExample.exe używa biblioteki MFC i działa na wielu systemu interfejsu użytkownika. język interfejsu użytkownika systemu jest ENU [US Angielski] i FRC [francuski kanadyjski] ustawiony jest język interfejsu użytkownika bieżącego użytkownika. MFC szuka następujących bibliotek DLL w następującej kolejności:
+
+1. LangExampleFRC.dll (język interfejsu użytkownika dla użytkownika).
+
+1. LangExampleFRA.dll (język Interfejsu użytkownika bez podjęzyk, w tym przykładzie francuski (Francja).
+
+1. LangExampleENU.dll (język interfejsu użytkownika systemu).
+
+1. LangExampleLOC.dll.
+
+Jeśli nie zostaną znalezione żadne z tych bibliotek DLL, MFC wykorzystuje zasoby w LangExample.exe.
+
+## <a name="see-also"></a>Zobacz też
+
+[Biblioteki DLL w programie Visual C++](../build/dlls-in-visual-cpp.md)<br/>
+[TN057: lokalizacja składników MFC](../mfc/tn057-localization-of-mfc-components.md)
