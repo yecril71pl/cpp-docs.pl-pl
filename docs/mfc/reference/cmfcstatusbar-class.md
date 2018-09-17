@@ -82,12 +82,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5b153d733aca6b526150c2d149c1952811c994b4
-ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
+ms.openlocfilehash: 7150789756273f9d70b3dd6e156c63d0649d0957
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "42466437"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45708191"
 ---
 # <a name="cmfcstatusbar-class"></a>Klasa CMFCStatusBar
 `CMFCStatusBar` Klasa implementuje pasek stanu podobny do `CStatusBar` klasy. Jednak `CMFCStatusBar` klasa ma funkcje, które nie są oferowane przez `CStatusBar` klasę, takie jak możliwość wyświetlania obrazów, animacji i pasków postępu, a także zdolność do reagowania na dwukrotne kliknięcie myszy. 
@@ -197,8 +197,8 @@ virtual CSize CalcFixedLayout(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *bStretch*  
- [in] *bHorz*  
+*bStretch*<br/>
+[in] [in] *bHorz*  
   
 ### <a name="return-value"></a>Wartość zwracana  
   
@@ -229,8 +229,8 @@ BOOL Create(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *pParentWnd*  
- [in] *dwStyle*  
+*pParentWnd*<br/>
+[in] [in] *dwStyle*  
  [in] *nID*  
   
 ### <a name="return-value"></a>Wartość zwracana  
@@ -249,10 +249,10 @@ BOOL CreateEx(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *pParentWnd*  
- [in] *dwCtrlStyle*  
- [in] *dwStyle*  
- [in] *nID*  
+*pParentWnd*<br/>
+[in] [in] *dwCtrlStyle*  
+*dwStyle*<br/>
+[in] [in] *nID*  
   
 ### <a name="return-value"></a>Wartość zwracana  
   
@@ -277,8 +277,8 @@ void EnablePaneDoubleClick(BOOL bEnable=TRUE);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *bWłączenie*  
- W przypadku opcji TRUE Włącz przetwarzanie dwukrotnego kliknięcia myszą. W przeciwnym razie wyłączyć przetwarzanie dwukrotnego kliknięcia myszą.  
+*bWłączenie*<br/>
+[in] W przypadku opcji TRUE Włącz przetwarzanie dwukrotnego kliknięcia myszą. W przeciwnym razie wyłączyć przetwarzanie dwukrotnego kliknięcia myszą.  
   
 ### <a name="remarks"></a>Uwagi  
  Włączenie paska stanu do przetworzenia podwójnego kliknięcia Windows wysyła powiadomienie WM_COMMAND wraz z Identyfikatorem zasobu dla właściciela paska ilekroć dany użytkownik kliknie dwukrotnie w okienku paska stanu stanu.  
@@ -297,23 +297,23 @@ void EnablePaneProgressBar(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *nIndex*  
- Określa indeks części okienka paska postępu, w których włączyć.  
+*nIndex*<br/>
+[in] Określa indeks części okienka paska postępu, w których włączyć.  
   
- [in] *nLiczba*  
- Określa maksymalną wartość dla paska postępu.  
+*nLiczba*<br/>
+[in] Określa maksymalną wartość dla paska postępu.  
   
- [in] *bDisplayText*  
- Określa, czy bieżąca wartość postępu powinien być wyświetlany pasek postępu.  
+*bDisplayText*<br/>
+[in] Określa, czy bieżąca wartość postępu powinien być wyświetlany pasek postępu.  
   
- [in] *clrBar*  
- Określa kolor tła paska postępu.  
+*clrBar*<br/>
+[in] Określa kolor tła paska postępu.  
   
- [in] *clrBarDest*  
- Określa pomocniczy kolor tła paska postępu. Używana wartość inną niż *clrBar* do wypełnienia przez kolor mieszane do gradientu.  
+*clrBarDest*<br/>
+[in] Określa pomocniczy kolor tła paska postępu. Używana wartość inną niż *clrBar* do wypełnienia przez kolor mieszane do gradientu.  
   
- [in] *clrProgressText*  
- Określa kolor tekstu pasek postępu.  
+*clrProgressText*<br/>
+[in] Określa kolor tekstu pasek postępu.  
   
 ### <a name="remarks"></a>Uwagi  
  Jeśli chcesz wyłączyć połączenie paska postępu `EnablePaneProgressBar` z *nLiczba* ustawioną wartość -1. Domyślnie *nLiczba* jest ustawiony na 100. W związku z tym nie trzeba wszelkie dodatkowe obliczenia, aby wyświetlić postęp jako wartość procentowa.  
@@ -381,8 +381,8 @@ void GetItemRect(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *nIndex*  
- [in] *lprect —*  
+*nIndex*<br/>
+[in] [in] *lprect —*  
   
 ### <a name="remarks"></a>Uwagi  
   
@@ -398,10 +398,10 @@ void GetPaneInfo(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *nIndex*  
- [in] *nID*  
- [in] *nStyle*  
- [in] *cxWidth*  
+*nIndex*<br/>
+[in] [in] *nID*  
+*nStyle*<br/>
+[in] [in] *cxWidth*  
   
 ### <a name="remarks"></a>Uwagi  
   
@@ -445,8 +445,8 @@ CString GetPaneText(int nIndex) const;
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *nIndex*  
- [in] *s*  
+*nIndex*<br/>
+[in] [in] *s*  
   
 ### <a name="return-value"></a>Wartość zwracana  
   
@@ -460,8 +460,8 @@ int GetPaneWidth(int nIndex) const;
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *nIndex*  
- Określa indeks w okienku paska stanu.  
+*nIndex*<br/>
+[in] Określa indeks w okienku paska stanu.  
   
 ### <a name="return-value"></a>Wartość zwracana  
  Szerokość okienka paska stanu, *nIndex* określa; w przeciwnym wypadku zero, jeśli nie istnieje w okienku paska stanu.  
@@ -474,8 +474,8 @@ CString GetTipText(int nIndex) const;
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *nIndex*  
- Określa indeks okienka, dla którego mają zostać pobrane tekst wskazówki.  
+*nIndex*<br/>
+[in] Określa indeks okienka, dla którego mają zostać pobrane tekst wskazówki.  
   
 ### <a name="return-value"></a>Wartość zwracana  
  Tekst etykietki narzędzia w okienku paska stanu, *nIndex* określa. W przeciwnym razie pusty ciąg, jeśli nie istnieje w okienku paska stanu dla określonego *nIndex* lub jego tekst etykietki narzędzia jest pusty.  
@@ -488,8 +488,8 @@ void InvalidatePaneContent(int nIndex);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *nIndex*  
- Określa indeks okienka, którego zawartość ma zostać unieważnione i narysowany ponownie.  
+*nIndex*<br/>
+[in] Określa indeks okienka, którego zawartość ma zostać unieważnione i narysowany ponownie.  
   
 ### <a name="remarks"></a>Uwagi  
  Gdy zostaje unieważniony na pasku stanu, jest oznaczone do ponownego narysowania. Windows odrysowuje go podczas `UpdateWindow` metoda wysyła komunikat WM_PAINT `OnPaint` metody.  
@@ -504,11 +504,11 @@ virtual void OnDrawPane(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *podstawowego kontrolera domeny*  
- Wskaźnik do kontekstu urządzenia do rysowania.  
+*podstawowego kontrolera domeny*<br/>
+[in] Wskaźnik do kontekstu urządzenia do rysowania.  
   
- [in] *pPane*  
- Wskaźnik do `CMFCStatusBarPaneInfo` strukturę, która zawiera informacje na temat okienka do narysowania.  
+*pPane*<br/>
+[in] Wskaźnik do `CMFCStatusBarPaneInfo` strukturę, która zawiera informacje na temat okienka do narysowania.  
   
 ### <a name="remarks"></a>Uwagi  
  Domyślnie `OnDrawPane` odrysowuje okienka przy użyciu kontekstu urządzenia *kontrolera pDC* zgodnie z okienka styl i zawartości.  
@@ -551,8 +551,8 @@ BOOL SetIndicators(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *lpIDArray*  
- [in] *nIDCount*  
+*lpIDArray*<br/>
+[in] [in] *nIDCount*  
   
 ### <a name="return-value"></a>Wartość zwracana  
   
@@ -570,17 +570,17 @@ void SetPaneAnimation(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *nIndex*  
- Określa indeks okienka, do którego chcesz przypisać do niej animacji.  
+*nIndex*<br/>
+[in] Określa indeks okienka, do którego chcesz przypisać do niej animacji.  
   
- [in] *hImageList*  
- Określa dojścia do listy obrazów, który przechowuje ramek animacji.  
+*hImageList*<br/>
+[in] Określa dojścia do listy obrazów, który przechowuje ramek animacji.  
   
- [in] *nFrameRate*  
- Określa szybkość klatek w milisekundach dla animacji.  
+*nFrameRate*<br/>
+[in] Określa szybkość klatek w milisekundach dla animacji.  
   
- [in] *baktualizacji*  
- W przypadku opcji TRUE natychmiast zaktualizować zawartość okienka. W przeciwnym razie zawartość okienka jest aktualizowany, gdy zostaje unieważniony.  
+*baktualizacji*<br/>
+[in] W przypadku opcji TRUE natychmiast zaktualizować zawartość okienka. W przeciwnym razie zawartość okienka jest aktualizowany, gdy zostaje unieważniony.  
   
 ### <a name="remarks"></a>Uwagi  
  Jeśli chcesz wyłączyć bieżącej animacji, wywołaj `SetPaneAnimation` z `hImageList` wartość NULL.  
@@ -596,14 +596,14 @@ void SetPaneBackgroundColor(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *nIndex*  
- Określa indeks okienka, dla której chcesz ustawić nowy kolor tła.  
+*nIndex*<br/>
+[in] Określa indeks okienka, dla której chcesz ustawić nowy kolor tła.  
   
- [in] *clrBackground*  
- Określa nowy kolor tła.  
+*clrBackground*<br/>
+[in] Określa nowy kolor tła.  
   
- [in] *baktualizacji*  
- W przypadku opcji TRUE natychmiast zaktualizować zawartość okienka. W przeciwnym razie nie są uaktualniane w okienku zawartości do momentu unieważnienia okienka przy użyciu innej metody.  
+*baktualizacji*<br/>
+[in] W przypadku opcji TRUE natychmiast zaktualizować zawartość okienka. W przeciwnym razie nie są uaktualniane w okienku zawartości do momentu unieważnienia okienka przy użyciu innej metody.  
   
 ##  <a name="setpaneicon"></a>  CMFCStatusBar::SetPaneIcon  
  Ustaw ikonę w okienku paska stanu.  
@@ -623,20 +623,20 @@ void SetPaneIcon(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *nIndex*  
- Określa indeks okienka, dla którego ma zostać ustawiony na obrazie.  
+*nIndex*<br/>
+[in] Określa indeks okienka, dla którego ma zostać ustawiony na obrazie.  
   
- [in] *hIcon*  
- Określa dojścia do ikonę Aby ustawić jako obraz okienka.  
+*hIcon*<br/>
+[in] Określa dojścia do ikonę Aby ustawić jako obraz okienka.  
   
- [in] *baktualizacji*  
- Określa, czy natychmiast zaktualizować zawartość okienka.  
+*baktualizacji*<br/>
+[in] Określa, czy natychmiast zaktualizować zawartość okienka.  
   
- [in] *hBmp*  
- Określa dojścia do mapy bitowej, można ustawić jako obraz okienka.  
+*hBmp*<br/>
+[in] Określa dojścia do mapy bitowej, można ustawić jako obraz okienka.  
   
- [in] *clrTransparent*  
- Określa przezroczysty kolor mapy bitowej, *hBmp* wskazuje.  
+*clrTransparent*<br/>
+[in] Określa przezroczysty kolor mapy bitowej, *hBmp* wskazuje.  
   
 ### <a name="remarks"></a>Uwagi  
  Możesz przekazać HICON lub HBITMAP wraz z przezroczysty kolor, aby ustawić obraz okienka. Jeśli nie chcesz już wyświetlić obraz, należy przekazać wartość NULL jako uchwyt obrazu.  
@@ -655,10 +655,10 @@ void SetPaneInfo(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *nIndex*  
- [in] *nID*  
- [in] *nStyle*  
- [in] *cxWidth*  
+*nIndex*<br/>
+[in] [in] *nID*  
+*nStyle*<br/>
+[in] [in] *cxWidth*  
   
 ### <a name="remarks"></a>Uwagi  
   
@@ -673,14 +673,14 @@ void SetPaneProgress(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *nIndex*  
- Określa indeks okienka, do których chcesz zaktualizować wskaźnik postępu.  
+*nIndex*<br/>
+[in] Określa indeks okienka, do których chcesz zaktualizować wskaźnik postępu.  
   
- [in] *nCurr*  
- Określa bieżącą wartość wskaźnika postępu.  
+*nCurr*<br/>
+[in] Określa bieżącą wartość wskaźnika postępu.  
   
- [in] *baktualizacji*  
- Określa, czy okienka należy natychmiast zaktualizować.  
+*baktualizacji*<br/>
+[in] Określa, czy okienka należy natychmiast zaktualizować.  
   
 ### <a name="remarks"></a>Uwagi  
  Wywołaj tę metodę, gdy ma zostać zaktualizowany wskaźnik postępu, aż pasek postępu, w okienku określony.  
@@ -697,8 +697,8 @@ void SetPaneStyle(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *nIndex*  
- [in] *nStyle*  
+*nIndex*<br/>
+[in] [in] *nStyle*  
   
 ### <a name="remarks"></a>Uwagi  
   
@@ -713,8 +713,8 @@ virtual BOOL SetPaneText(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *nIndex*  
- [in] *lpszNewText*  
+*nIndex*<br/>
+[in] [in] *lpszNewText*  
  [in] *baktualizacji*  
   
 ### <a name="return-value"></a>Wartość zwracana  
@@ -732,14 +732,14 @@ void SetPaneTextColor(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *nIndex*  
- Określa indeks okienka, do którego chcesz przypisać nowy kolor tekstu.  
+*nIndex*<br/>
+[in] Określa indeks okienka, do którego chcesz przypisać nowy kolor tekstu.  
   
- [in] *clrText*  
- Określa kolor tekstu.  
+*clrText*<br/>
+[in] Określa kolor tekstu.  
   
- [in] *baktualizacji*  
- W przypadku opcji TRUE natychmiast zaktualizować zawartość okienka. W przeciwnym razie nie są uaktualniane w okienku zawartości do momentu unieważnienia okienka przy użyciu innej metody.  
+*baktualizacji*<br/>
+[in] W przypadku opcji TRUE natychmiast zaktualizować zawartość okienka. W przeciwnym razie nie są uaktualniane w okienku zawartości do momentu unieważnienia okienka przy użyciu innej metody.  
   
 ##  <a name="setpanewidth"></a>  CMFCStatusBar::SetPaneWidth  
  Ustaw szerokość okienka paska stanu.  
@@ -751,11 +751,11 @@ void SetPaneWidth(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *nIndex*  
- Indeks w okienku paska stanu, dla której chcesz ustawić nową szerokość.  
+*nIndex*<br/>
+[in] Indeks w okienku paska stanu, dla której chcesz ustawić nową szerokość.  
   
- [in] *cx*  
- Szerokość nowe okienko paska stanu, w pikselach.  
+*CX*<br/>
+[in] Szerokość nowe okienko paska stanu, w pikselach.  
   
 ##  <a name="settiptext"></a>  CMFCStatusBar::SetTipText  
  Ustaw tekst etykietki narzędzia w okienku paska stanu.  
@@ -767,11 +767,11 @@ void SetTipText(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *nIndex*  
- Indeks okienka, do którego chcesz przypisać tekst etykietki narzędzia.  
+*nIndex*<br/>
+[in] Indeks okienka, do którego chcesz przypisać tekst etykietki narzędzia.  
   
- [in] *pszTipText*  
- Nowy tekst etykietki narzędzia.  
+*pszTipText*<br/>
+[in] Nowy tekst etykietki narzędzia.  
   
 ## <a name="see-also"></a>Zobacz też  
  [Diagram hierarchii](../../mfc/hierarchy-chart.md)   

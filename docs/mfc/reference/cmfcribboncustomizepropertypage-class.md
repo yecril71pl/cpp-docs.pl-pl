@@ -22,15 +22,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 542c34fc02eca1f090072f49b9688d3edd4d78e6
-ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
+ms.openlocfilehash: 7bb2f799dedd11ed1c8e0e909e7a5b1dcbb7adc5
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/27/2018
-ms.locfileid: "37040678"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45707510"
 ---
 # <a name="cmfcribboncustomizepropertypage-class"></a>Klasa CMFCRibbonCustomizePropertyPage
-Implementuje niestandardowej strony dla **Dostosuj** okno dialogowe w aplikacjach opartych na Wstążce.  
+Implementuje niestandardowy strona **Dostosuj** okno dialogowe w aplikacjach opartych na Wstążce.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -55,14 +55,14 @@ class CMFCRibbonCustomizePropertyPage: public CMFCPropertyPage
 |Nazwa|Opis|  
 |[CMFCRibbonCustomizePropertyPage::AddCustomCategory](#addcustomcategory)|Dodaje kategorię niestandardową do **polecenia** pola kombi.|  
 |`CMFCRibbonCustomizePropertyPage::CreateObject`|Używane przez platformę do tworzenia dynamicznych wystąpienia tego typu klasy.|  
-|`CMFCRibbonCustomizePropertyPage::GetThisClass`|Używany przez platformę do uzyskania wskaźnik do [CRuntimeClass](../../mfc/reference/cruntimeclass-structure.md) obiekt, który jest skojarzony z tym typem klasy.|  
+|`CMFCRibbonCustomizePropertyPage::GetThisClass`|Używane przez architekturę, aby uzyskać wskaźnik do [CRuntimeClass](../../mfc/reference/cruntimeclass-structure.md) obiektu, który jest skojarzony z tym typem klasy.|  
 |[CMFCRibbonCustomizePropertyPage::OnOK](#onok)|Wywoływane przez system, gdy użytkownik kliknie **OK** na **Dostosuj** okno dialogowe.|  
   
 ## <a name="remarks"></a>Uwagi  
- Jeśli chcesz dodać niestandardowe polecenia do **Dostosuj** okno dialogowe, musi obsługiwać AFX_WM_ON_RIBBON_CUSTOMIZE wiadomości. Programu obsługi wiadomości, utworzenia wystąpienia `CMFCRibbonCustomizePropertyPage` obiektu na stosie. Utwórz listę niestandardowych poleceń, a następnie wywołać `AddCustomCategory` Aby dodać nową stronę do **Dostosuj** okno dialogowe.  
+ Jeśli chcesz dodać niestandardowe polecenia do **Dostosuj** okno dialogowe musi obsłużyć komunikat AFX_WM_ON_RIBBON_CUSTOMIZE. Programu obsługi wiadomości, utworzenia wystąpienia `CMFCRibbonCustomizePropertyPage` obiektów na stosie. Utwórz listę poleceń niestandardowych, a następnie wywołaj `AddCustomCategory` można dodać nowej strony do **Dostosuj** okno dialogowe.  
   
 ## <a name="example"></a>Przykład  
- W poniższym przykładzie pokazano sposób tworzenia `CMFCRibbonCustomizePropertyPage` obiektu i Dodaj kategorię niestandardową.  
+ W poniższym przykładzie pokazano sposób tworzenia `CMFCRibbonCustomizePropertyPage` obiektu i dodać kategorię niestandardową.  
   
  [!code-cpp[NVC_MFC_RibbonApp#22](../../mfc/reference/codesnippet/cpp/cmfcribboncustomizepropertypage-class_1.cpp)]  
   
@@ -98,11 +98,11 @@ void AddCustomCategory(
 |||  
 |-|-|  
 |Parametr|Opis|  
-|[in] *lpszName*|Określa nazwę kategorii niestandardowej.|  
-|[in] *lstIDS*|Zawiera polecenie wstążki identyfikatorów ma być wyświetlany w kategorii niestandardowej.|  
+|*lpszName*|[in] Określa nazwę kategorię niestandardową.|  
+|*lstIDS*|[in] Zawiera polecenie wstążki identyfikatorów mają być wyświetlane w kategorii niestandardowej.|  
   
 ### <a name="remarks"></a>Uwagi  
- Ta metoda dodaje kategorię o nazwie *lpszName* do **polecenia** pola kombi. Po wybraniu przez użytkownika kategorii, polecenia określone w *lstIDS* znajdują się na liście polecenia.  
+ Metoda ta umożliwia dodanie do kategorii o nazwie *lpszName* do **polecenia** pola kombi. Po wybraniu kategorii polecenia określone w *lstIDS* pojawiają się na liście poleceń.  
   
 ##  <a name="cmfcribboncustomizepropertypage"></a>  CMFCRibbonCustomizePropertyPage::CMFCRibbonCustomizePropertyPage  
  Konstruuje `CMFCRibbonCustomizePropertyPage` obiektu.  
@@ -112,8 +112,8 @@ CMFCRibbonCustomizePropertyPage(CMFCRibbonBar* pRibbonBar = NULL);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *pRibbonBar*  
- Wskaźnik do sterowania wstążki, dla którego opcje, aby dostosować.  
+*pRibbonBar*<br/>
+[in] Wskaźnik do formantu wstążki, dla której opcji, aby dostosować.  
   
 ##  <a name="onok"></a>  CMFCRibbonCustomizePropertyPage::OnOK  
  Calleld przez system, gdy użytkownik kliknie **OK** na **Dostosuj** okno dialogowe.  

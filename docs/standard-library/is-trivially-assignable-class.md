@@ -17,12 +17,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 47fabb7120cc13eeca38bc9d06428f686fc9f1b9
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: fd0a8bbffd3a6e0f03635b659dd3743e12c9f077
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38955569"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45700768"
 ---
 # <a name="istriviallyassignable-class"></a>is_trivially_assignable, klasa
 
@@ -37,9 +37,11 @@ struct is_trivially_assignable;
 
 ### <a name="parameters"></a>Parametry
 
+*To*<br/>
 Typ obiektu, który odbiera przypisania.
 
-Od typu obiektu, który zawiera wartość.
+*From*<br/>
+Typ obiektu, który zawiera wartość.
 
 ## <a name="remarks"></a>Uwagi
 

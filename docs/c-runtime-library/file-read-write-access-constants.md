@@ -20,45 +20,36 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f57ac6ffc3c13c640d7bdf6a2ec64912148bfbc3
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: cc0b7c9a2d8707d8a1939a47d4fae2ec896e4d2b
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32391145"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45700533"
 ---
 # <a name="file-readwrite-access-constants"></a>Odczyt/zapis pliku — Stałe dostępu
 ## <a name="syntax"></a>Składnia  
   
 ```  
-  
 #include <stdio.h>  
 ```  
   
 ## <a name="remarks"></a>Uwagi  
- Te stałe Określ typ dostępu ("a", "r" lub "w") żądanego pliku. Zarówno [tryb tłumaczenia](../c-runtime-library/file-translation-constants.md) ("b" lub "t") i [tryb commit-to-disk](../c-runtime-library/commit-to-disk-constants.md) ("c" lub "n") można określić typu dostępu.  
+
+Te stałe Określ typ dostępu ("a", "r" lub "t"), wnioskowany dla pliku. Zarówno [tryb translacji](../c-runtime-library/file-translation-constants.md) ("b" lub "t") i [tryb commit-to-disk](../c-runtime-library/commit-to-disk-constants.md) ("c" lub "n") można określić za pomocą typu dostępu.  
   
- Poniżej opisano typy dostępu.  
-  
- **""**  
- Zostanie otwarty do zapisu na końcu pliku (dołączanie); Tworzy plik, jeśli nie istnieje. Wszystkie zapisu operacje wykonywane na końcu pliku. Mimo że może być położenia wskaźnika pliku przy użyciu `fseek` lub **rewind**, on jest zawsze przeniesiony z powrotem do koniec pliku przed żadnego zapisu, wykonywane są wymienione.  
-  
- **"+"**  
- Takie same jak powyżej, ale również umożliwia odczyt.  
-  
- **"r"**  
- Zostanie otwarty do odczytu. Jeśli plik nie istnieje lub nie można odnaleźć, wywołania do otwierania pliku zakończy się niepowodzeniem.  
-  
- **"r +"**  
- Otwiera odczytywanie i zapisywanie. Jeśli plik nie istnieje lub nie można odnaleźć, wywołania do otwierania pliku zakończy się niepowodzeniem.  
-  
- **"w"**  
- Otwiera pusty plik do zapisu. Jeśli dany plik istnieje, jego zawartość zostaną zniszczone.  
-  
- **"w +"**  
- Otwiera pusty plik na odczytywanie i zapisywanie. Jeśli dany plik istnieje, jego zawartość zostaną zniszczone.  
-  
- Jeśli określono "r +", "w +" lub "+" typ, odczytywanie i zapisywanie są dozwolone (plik jest określany jako otwarte dla "update"). Jednak podczas przełączania się między odczytu i zapisu, musi być aktywne `fflush`, `fsetpos`, `fseek`, lub **rewind** operacji. Bieżąca pozycja można określić dla `fsetpos` lub `fseek` operacji.  
+W tej tabeli opisano typy dostępu:  
+
+|Typ dostępu|Opis|
+|----------|----------------|
+|**"r"**|Otwiera do odczytu. Jeśli plik nie istnieje lub nie można znaleźć, wywołanie do otwierania pliku kończy się niepowodzeniem.|
+|**"w"**|Otwiera pusty plik do zapisu. Jeśli dany plik istnieje, jego zawartość zostaje zniszczona.|
+|**""**|Zostanie otwarty do zapisu na końcu pliku (dołączanie); najpierw tworzy plik, jeśli nie istnieje. Zapisu wszystkie operacje są wykonywane na końcu pliku. Mimo że wskaźnik pliku może być przeniesiony za pomocą `fseek` lub `rewind`, on jest zawsze przenoszony z powrotem na koniec pliku przed wszelkie zapisu operacji jest przeprowadzane. |
+|**"r +"**|Otwiera Odczyt i zapis. Jeśli plik nie istnieje lub nie można znaleźć, wywołanie do otwierania pliku kończy się niepowodzeniem.|
+|**"w +"**|Otwiera pusty plik Odczyt i zapis. Jeśli dany plik istnieje, jego zawartość zostaje zniszczona.|
+|**"+"**|Taka sama jak **""** , ale również umożliwia odczyt.|
+
+Jeśli "r +", "w +" lub "+" typ jest określony, będą miały Odczyt i zapis (plik jest określany jako otwarty do "aktualizacji"). Jednak podczas przełączania się między Odczyt i zapis, musi istnieć interwencyjne `fflush`, `fsetpos`, `fseek`, lub `rewind` operacji. Bieżąca pozycja może być określona dla `fsetpos` lub `fseek` operacji.  
   
 ## <a name="see-also"></a>Zobacz też  
  [_fdopen —, _wfdopen —](../c-runtime-library/reference/fdopen-wfdopen.md)   

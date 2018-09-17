@@ -16,62 +16,75 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f0f59b802b5a24c1b449f78cccee4744538a5a0e
-ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
+ms.openlocfilehash: a75bb6034c8f4c5a80bb64238c26ea599395ff96
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "33338949"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45705618"
 ---
 # <a name="specify-project-settings-create-new-project-from-existing-code-files-wizard"></a>Określ ustawienia projektu, Kreator Utwórz nowy projekt z istniejących plików z kodem
-Umożliwia określenie tej strony kreator Utwórz nowy projekt z istniejących plików kodu:  
+Użyj tej strony kreator Utwórz nowy projekt z istniejących plików kodu, aby określić:  
   
 -   Środowisko kompilacji dla nowego projektu  
   
--   Ustawienia do dopasowania dla określonego typu nowy projekt, aby wygenerować kompilacji  
+-   Ustawienia, aby dopasować określonego typu nowy projekt, aby wygenerować kompilacji  
   
 ## <a name="task-list"></a>Lista zadań  
- [Instrukcje: tworzenie projektu C++ z istniejącego kodu](../ide/how-to-create-a-cpp-project-from-existing-code.md)  
+
+[Instrukcje: tworzenie projektu C++ z istniejącego kodu](../ide/how-to-create-a-cpp-project-from-existing-code.md)  
   
 ## <a name="uielement-list"></a>Lista elementów UI  
- **Program Visual Studio**  
- Określa, aby użyć narzędzia kompilacji, które są uwzględniane w programie Visual Studio do tworzenia nowego projektu. Ta opcja jest domyślnie wybrana.  
+- **Używanie programu Visual Studio**
+
+   Określa, aby użyć narzędzia do kompilacji, które znajdują się w programie Visual Studio do tworzenia nowego projektu. Ta opcja jest domyślnie wybrana.  
   
- **Typ projektu**  
- Określa typ projektu, który zostanie wygenerowany przez kreatora.  
+- **Typ projektu**
+
+   Określa typ projektu, który zostanie wygenerowany przez kreatora.  
   
- **Projekt aplikacji systemu Windows**  
- Wskazuje, że kreator wygeneruje projekt wykonywalny aplikacji systemu Windows. Ta opcja jest dostępna z **typu projektu** pole listy rozwijanej.  
+- **Projekt aplikacji Windows**
+
+   Wskazuje, że kreator wygeneruje projekt służący do pliku wykonywalnego aplikacji Windows. Ta opcja jest dostępna z **typu projektu** pole listy rozwijanej.  
   
- **Projekt aplikacji konsoli**  
- Wskazuje, że kreator wygeneruje projekt aplikacji konsoli. Ta opcja jest dostępna z **typu projektu** pole listy rozwijanej.  
+- **Projekt aplikacji konsoli**
+
+   Wskazuje, że kreator wygeneruje projekt aplikacji konsoli. Ta opcja jest dostępna z **typu projektu** pole listy rozwijanej.  
   
- **Połączone dynamicznie biblioteka (DLL) projektu**  
- Wskazuje, że kreator wygeneruje projekt aplikacji biblioteki dołączanej puste. Ta opcja jest dostępna z **typu projektu** pole listy rozwijanej.  
+- **Projekt dynamicznie łączonych bibliotek (DLL)**
+
+   Wskazuje, że kreator wygeneruje projekt aplikacji biblioteki dołączanej dynamicznie puste. Ta opcja jest dostępna z **typu projektu** pole listy rozwijanej.  
   
- **Biblioteka statyczna (LIB) projektu**  
- Wskazuje, że kreator wygeneruje projekt aplikacji biblioteki statycznej. Ta opcja jest dostępna z **typu projektu** pole listy rozwijanej.  
+- **Projekt biblioteki statycznej (LIB)**
+
+   Wskazuje, że kreator wygeneruje projekt aplikacji biblioteki statycznej. Ta opcja jest dostępna z **typu projektu** pole listy rozwijanej.  
   
- **Dodaj obsługę ATL**  
- Dodaje obsługę ATL do nowego projektu.  
+- **Dodaj obsługę ATL**
+
+   Dodaje obsługę ATL do nowego projektu.  
   
- **Dodawanie obsługi MFC**  
- Dodaje obsługę MFC do nowego projektu.  
+- **Dodawanie obsługi MFC**
+
+   Dodaje obsługę MFC do nowego projektu.  
   
- **Dodaj obsługę środowisko uruchomieniowe języka wspólnego**  
- Dodaje CLR programowania pomocy technicznej do nowego projektu.  
+- **Dodano obsługę środowiska uruchomieniowego języka wspólnego**
+
+   Dodaje CLR programowania pomocy technicznej do nowego projektu.  
   
- **Środowisko uruchomieniowe języka wspólnego**  
- Określa nowy projekt, aby było zgodne z funkcji CLR.  
+- **Środowisko uruchomieniowe języka wspólnego**
+
+   Określa nowy projekt, aby były zgodne z funkcjami CLR.  
   
- **Aparat plików wykonywalnych języka wspólnego (stara składnia)**  
- Określa nowy projekt, aby było zgodne z rozszerzeń zarządzanych dla składni języka C++, czyli CLR składni programowania przed Visual C++ 2005.  
+- **Środowisko uruchomieniowe języka wspólnego (stara składnia)**
+
+   Określa nowy projekt, aby zachować zgodność z zarządzanych rozszerzeń dla składni języka C++, który jest składnia programowania CLR przed Visual C++ 2005.  
   
- **Użyj zewnętrznego systemu do kompilacji**  
- Określa za pomocą narzędzi kompilacji, które nie znajdują się w programie Visual Studio do tworzenia nowego projektu. Gdy ta opcja jest zaznaczona, można określić wiersze poleceń kompilacji na **Określ ustawienia konfiguracji debugowania** i **Określ ustawienia konfiguracji wydania** stron.  
+- **Użyj zewnętrznego systemu kompilacji**
+
+   Określa, aby użyć narzędzia do kompilacji, które nie są uwzględnione w programie Visual Studio do tworzenia nowego projektu. Po wybraniu tej opcji można określić wiersze poleceń kompilacji na **Określ ustawienia konfiguracji debugowania** i **Określ ustawienia konfiguracji wydania** stron.  
   
-> [!NOTE]
->  Podczas **Użyj zewnętrznego systemu kompilacji** opcja jest zaznaczona, IDE nie kompiluje nowy projekt, więc /D, I, /FI, /AI lub /FU opcje nie są wymagane dla kompilacji. Jednak te opcje muszą być ustawione poprawnie Aby IntelliSense działać prawidłowo.  
+   > [!NOTE]
+   > Podczas **użycia zewnętrznego systemu kompilacji** opcja jest zaznaczona, IDE nie są kompilowane nowy projekt, więc /D, mogę, /FI, /AI lub /FU opcje nie są wymagane dla kompilacji. Jednak te opcje muszą być ustawione poprawnie aby technologia IntelliSense działała poprawnie.  
   
 ## <a name="see-also"></a>Zobacz też  
  [Określ ustawienia konfiguracji debugowania, Utwórz nowy projekt z istniejących Kreatora plików kodu](../ide/specify-debug-configuration-settings.md)   

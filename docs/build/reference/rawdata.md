@@ -19,31 +19,34 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 28691e636f01174ecfe2a9d48b016523fce67f14
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 38677b0e67ddaec5b6ef0e3fcffed1bed27826b6
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32375002"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45707177"
 ---
 # <a name="rawdata"></a>/RAWDATA
-```  
-/RAWDATA[:{1|2|4|8|NONE[,number]]  
-```  
-  
-## <a name="remarks"></a>Uwagi  
- Ta opcja powoduje wyświetlenie nieprzetworzonej zawartości każdej sekcji w pliku. Argumenty kontrolować format wyświetlania, jak pokazano poniżej:  
-  
-|Argument|Wynik|  
-|--------------|------------|  
-|1|Domyślnie. Zawartość jest wyświetlana w bajty szesnastkowe, a także jako znaki ASCII, gdy mają reprezentację wydruku.|  
-|2|Zawartość jest wyświetlana jako wartości szesnastkowe 2-bajtowych.|  
-|4|Zawartość jest wyświetlana jako wartości szesnastkowe 4-bajtowych.|  
-|8|Zawartość jest wyświetlana jako wartości szesnastkowe 8-bajtowych.|  
-|BRAK|Nieprzetworzone dane są pomijane. Ten argument jest przydatne do kontroli danych wyjściowych/ALL.|  
-|*Numer*|Wiersze są ustawione na szerokość, która przechowuje `number` wartości dla każdego wiersza.|  
-  
- Tylko [/HEADERS](../../build/reference/headers.md) — opcja polecenia DUMPBIN jest dostępny do użytku na pliki tworzone z [/GL](../../build/reference/gl-whole-program-optimization.md) — opcja kompilatora.  
-  
-## <a name="see-also"></a>Zobacz też  
- [Opcje DUMPBIN](../../build/reference/dumpbin-options.md)
+
+```
+/RAWDATA[:{1|2|4|8|NONE[,number]]
+```
+
+## <a name="remarks"></a>Uwagi
+
+Ta opcja wyświetla nieprzetworzonej zawartości każdej sekcji w pliku. Argumenty kontrolować format wyświetlania, jak pokazano poniżej:
+
+|Argument|Wynik|
+|--------------|------------|
+|1|Domyślnie. Zawartość jest wyświetlana bajty szesnastkowe, a także jako znaki ASCII, jeśli mają one reprezentację drukowanych.|
+|2|Zawartości są wyświetlane jako wartości szesnastkowych 2-bajtowych.|
+|4|Zawartości są wyświetlane jako wartości szesnastkowych 4-bajtowe.|
+|8|Zawartość jest wyświetlana jako wartości 8-bajtowych szesnastkowe.|
+|BRAK|Nieprzetworzone dane są pomijane. Ten argument jest przydatne do kontroli danych wyjściowych/ALL.|
+|*Numer*|Wyświetlane wiersze są ustawione na szerokość, który przechowuje `number` wartości w każdym wierszu.|
+
+Tylko [/HEADERS](../../build/reference/headers.md) — opcja polecenia DUMPBIN jest dostępna do użycia w plikach z [/GL](../../build/reference/gl-whole-program-optimization.md) — opcja kompilatora.
+
+## <a name="see-also"></a>Zobacz też
+
+[Opcje DUMPBIN](../../build/reference/dumpbin-options.md)

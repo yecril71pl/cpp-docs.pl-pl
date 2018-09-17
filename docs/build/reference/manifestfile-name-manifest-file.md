@@ -18,39 +18,42 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b95337afc790436187c547bba108da2161b0738b
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 7d3869b0cb656e7bde9a12fb028f84d1d4d09965
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32373351"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45706982"
 ---
 # <a name="manifestfile-name-manifest-file"></a>/MANIFESTFILE (Podaj nazwę pliku manifestu)
-```  
-/MANIFESTFILE:filename  
-```  
-  
-## <a name="remarks"></a>Uwagi  
- / Opcja MANIFESTFILE pozwala zmienić domyślną nazwę pliku manifestu.  Nazwa domyślnego pliku manifestu to nazwa pliku z dołączonym ".manifest".  
-  
- / MANIFESTFILE nie przyniesie efektu, jeśli nie utworzysz także łącza z [/MANIFEST](../../build/reference/manifest-create-side-by-side-assembly-manifest.md).  
-  
-### <a name="to-set-this-linker-option-in-the-visual-studio-development-environment"></a>Aby ustawić tę opcję konsolidatora w środowisku programowania Visual Studio  
-  
-1.  Otwórz projekt **strony właściwości** okno dialogowe. Aby uzyskać więcej informacji, zobacz [Praca z właściwościami projektu](../../ide/working-with-project-properties.md).  
-  
-2.  Rozwiń węzeł **właściwości konfiguracji** węzła.  
-  
-3.  Rozwiń węzeł **konsolidatora** węzła.  
-  
-4.  Wybierz **plik manifestu** strony właściwości.  
-  
-5.  Modyfikowanie **plik manifestu** właściwości.  
-  
-### <a name="to-set-this-linker-option-programmatically"></a>Aby programowo ustawić tę opcję konsolidatora  
-  
-1.  Zobacz <xref:Microsoft.VisualStudio.VCProjectEngine.VCLinkerTool.ManifestFile%2A>.  
-  
-## <a name="see-also"></a>Zobacz też  
- [Ustawianie opcji konsolidatora](../../build/reference/setting-linker-options.md)   
- [Opcje konsolidatora](../../build/reference/linker-options.md)
+
+```
+/MANIFESTFILE:filename
+```
+
+## <a name="remarks"></a>Uwagi
+
+/ Opcja MANIFESTFILE pozwala zmienić domyślną nazwę pliku manifestu.  Domyślna nazwa pliku manifestu to nazwa pliku, przy użyciu manifest dołączane.
+
+/ MANIFESTFILE będzie mieć efektu, jeśli nie możesz również połączyć za pomocą [/MANIFEST](../../build/reference/manifest-create-side-by-side-assembly-manifest.md).
+
+### <a name="to-set-this-linker-option-in-the-visual-studio-development-environment"></a>Aby ustawić tę opcję konsolidatora w środowisku programowania Visual Studio
+
+1. Otwórz projekt **stron właściwości** okno dialogowe. Aby uzyskać więcej informacji, zobacz [Praca z właściwościami projektu](../../ide/working-with-project-properties.md).
+
+1. Rozwiń **właściwości konfiguracji** węzła.
+
+1. Rozwiń **konsolidatora** węzła.
+
+1. Wybierz **pliku manifestu** stronę właściwości.
+
+1. Modyfikowanie **pliku manifestu** właściwości.
+
+### <a name="to-set-this-linker-option-programmatically"></a>Aby programowo ustawić tę opcję konsolidatora
+
+1. Zobacz <xref:Microsoft.VisualStudio.VCProjectEngine.VCLinkerTool.ManifestFile%2A>.
+
+## <a name="see-also"></a>Zobacz też
+
+[Ustawianie opcji konsolidatora](../../build/reference/setting-linker-options.md)<br/>
+[Opcje konsolidatora](../../build/reference/linker-options.md)

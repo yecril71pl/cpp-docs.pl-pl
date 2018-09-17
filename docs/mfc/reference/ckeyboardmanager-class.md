@@ -40,12 +40,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 82447c14209f2f47fb6224df7e1daeb18ed6048e
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 3026e614b00f48b7668420aee20fd5915c270da2
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43212894"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45707489"
 ---
 # <a name="ckeyboardmanager-class"></a>Klasa CKeyboardManager
 Zarządza tabelami klawiszy skrótów dla głównej ramki okna i okien ramek podrzędnych.  
@@ -134,17 +134,17 @@ static BOOL FindDefaultAccelerator(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *uiCmd*  
- Identyfikator polecenia.  
+*uiCmd*<br/>
+[in] Identyfikator polecenia.  
   
- [out] *str*  
- Odwołanie do `CString` obiektu.  
+*str*<br/>
+[out] Odwołanie do `CString` obiektu.  
   
- [in] *element pWndFrame*  
- Wskaźnik do ramki okna.  
+*Element pWndFrame*<br/>
+[in] Wskaźnik do ramki okna.  
   
- [in] *bIsDefaultFrame*  
- Określa, czy okno ramowe domyślnego ramki okna.  
+*bIsDefaultFrame*<br/>
+[in] Określa, czy okno ramowe domyślnego ramki okna.  
   
 ### <a name="return-value"></a>Wartość zwracana  
  Wartość różną od zera, jeśli skrót zostanie odnaleziony; w przeciwnym razie 0.  
@@ -168,10 +168,10 @@ static BOOL __stdcall IsKeyHandled(
 |||  
 |-|-|  
 |Parametr|Opis|  
-|[in] *nKey*|Klucz do sprawdzenia.|  
-|[in] *fVirt*|Określa zachowanie klawisza skrótu. Aby uzyskać listę możliwych wartości, zobacz [struktury AKCELERACJA](/windows/desktop/api/winuser/ns-winuser-tagaccel).|  
-|[in] *element pWndFrame*|Okno ramki. Ta metoda określa, czy klawisz skrótu jest obsługiwana w tej ramce.|  
-|[in] *bIsDefaultFrame*|Parametr logiczny, który wskazuje, czy *element pWndFrame* domyślny okna ramki.|  
+|*nKey*|[in] Klucz do sprawdzenia.|  
+|*fVirt*|[in] Określa zachowanie klawisza skrótu. Aby uzyskać listę możliwych wartości, zobacz [struktury AKCELERACJA](/windows/desktop/api/winuser/ns-winuser-tagaccel).|  
+|*Element pWndFrame*|[in] Okno ramki. Ta metoda określa, czy klawisz skrótu jest obsługiwana w tej ramce.|  
+|*bIsDefaultFrame*|[in] Parametr logiczny, który wskazuje, czy *element pWndFrame* domyślny okna ramki.|  
   
 ### <a name="return-value"></a>Wartość zwracana  
  Wartość TRUE, jeśli klawisz skrótu jest obsługiwany. Wartość FALSE, jeśli klucz nie jest obsługiwany lub *element pWndFrame* ma wartość NULL.  
@@ -191,7 +191,7 @@ static BOOL __stdcall IsKeyPrintable(const UINT nChar);
 |||  
 |-|-|  
 |Parametr|Opis|  
-|[in] *nChar*|Znak, który sprawdza, czy ta metoda.|  
+|*nChar*|[in] Znak, który sprawdza, czy ta metoda.|  
   
 ### <a name="return-value"></a>Wartość zwracana  
  Wartość różną od zera, jeśli znak jest druku, zero, jeśli nie jest.  
@@ -222,11 +222,11 @@ BOOL LoadState(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *lpszProfileName*  
- Ścieżka rejestru gdzie `CKeyboardManager` są zapisywane dane.  
+*lpszProfileName*<br/>
+[in] Ścieżka rejestru gdzie `CKeyboardManager` są zapisywane dane.  
   
- [in] *pDefaultFrame*  
- Wskaźnik do ramki okna do użycia jako domyślnego okna.  
+*pDefaultFrame*<br/>
+[in] Wskaźnik do ramki okna do użycia jako domyślnego okna.  
   
 ### <a name="return-value"></a>Wartość zwracana  
  Różna od zera, jeśli stan został pomyślnie załadowany lub równa 0 w przeciwnym razie.  
@@ -256,11 +256,11 @@ BOOL SaveState(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *lpszProfileName*  
- Ścieżka rejestru do zapisywania `CKeyboardManager` stanu.  
+*lpszProfileName*<br/>
+[in] Ścieżka rejestru do zapisywania `CKeyboardManager` stanu.  
   
- [in] *pDefaultFrame*  
- Wskaźnik do ramki okna, które staje się oknem domyślne.  
+*pDefaultFrame*<br/>
+[in] Wskaźnik do ramki okna, które staje się oknem domyślne.  
   
 ### <a name="return-value"></a>Wartość zwracana  
  Wartość różną od zera, jeśli stan Menedżera klawiatury została zapisana pomyślnie, lub w przeciwnym razie 0.  
@@ -280,11 +280,11 @@ static void ShowAllAccelerators(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *bShowAll*  
- W przypadku opcji TRUE będą wyświetlane wszystkie klawisze skrótów. Jeśli ma wartość FAŁSZ, zostanie wyświetlony tylko pierwszy klawisza skrótu.  
+*bShowAll*<br/>
+[in] W przypadku opcji TRUE będą wyświetlane wszystkie klawisze skrótów. Jeśli ma wartość FAŁSZ, zostanie wyświetlony tylko pierwszy klawisza skrótu.  
   
- [in] *lpszDelimiter*  
- Ciąg, które zostanie wstawione między klawiszy skrótów. To ogranicznik nie obowiązuje, jeśli tylko jeden klawisz skrótu jest wyświetlana.  
+*lpszDelimiter*<br/>
+[in] Ciąg, które zostanie wstawione między klawiszy skrótów. To ogranicznik nie obowiązuje, jeśli tylko jeden klawisz skrótu jest wyświetlana.  
   
 ### <a name="remarks"></a>Uwagi  
  Domyślnie jeśli polecenie ma więcej niż jeden klawisz skrótu skojarzony z nim, tylko pierwszy klawisz skrótu będą wyświetlane. Ta funkcja umożliwia listę wszystkich klawiszy skrótów, skojarzone z wszystkich poleceń.  
@@ -299,8 +299,8 @@ static UINT TranslateCharToUpper(const UINT nChar);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *nChar*  
- Znak, który ma zostać przekształcony.  
+*nChar*<br/>
+[in] Znak, który ma zostać przekształcony.  
   
 ### <a name="return-value"></a>Wartość zwracana  
  Znak, który jest górny rejestru parametr wejściowy.  
@@ -323,20 +323,20 @@ BOOL UpdateAccelTable(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *pTemplate*  
- Wskaźnik do szablonu dokumentu.  
+*pTemplate*<br/>
+[in] Wskaźnik do szablonu dokumentu.  
   
- [in] *lpAccel*  
- Wskaźnik do nowego klawisza skrótu.  
+*lpAccel*<br/>
+[in] Wskaźnik do nowego klawisza skrótu.  
   
- [in] *nSize*  
- Rozmiar nowa tabela skrótów.  
+*nSize*<br/>
+[in] Rozmiar nowa tabela skrótów.  
   
- [in] *pDefaultFrame*  
- Wskaźnik do domyślnego ramki okna.  
+*pDefaultFrame*<br/>
+[in] Wskaźnik do domyślnego ramki okna.  
   
- [in] *hAccelNew*  
- Dojście do nowej tabeli skrótów.  
+*hAccelNew*<br/>
+[in] Dojście do nowej tabeli skrótów.  
   
 ### <a name="return-value"></a>Wartość zwracana  
  Wartość różną od zera, jeśli metoda się powiedzie; w przeciwnym razie 0.  

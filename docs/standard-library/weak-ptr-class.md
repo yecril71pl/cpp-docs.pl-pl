@@ -38,12 +38,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5817d44657fa429bdce19f8641255d7db630eac7
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: 4aa0f8e94e0797badbae2a409ae1ce02caea6e81
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38954867"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45707541"
 ---
 # <a name="weakptr-class"></a>weak_ptr — Klasa
 
@@ -77,8 +77,8 @@ public:
 
 ### <a name="parameters"></a>Parametry
 
-*Ty*  
- Typ kontrolowany przez wskaźnik słabe.
+*Ty*<br/>
+Typ kontrolowany przez wskaźnik słabe.
 
 ## <a name="remarks"></a>Uwagi
 
@@ -290,14 +290,14 @@ weak_ptr& operator=(const shared_ptr<Other>& sp);
 
 ### <a name="parameters"></a>Parametry
 
-*Inne*  
- Typ kontrolowany przez wskaźnik argumentu udostępnione słabych.
+*Inne*<br/>
+Typ kontrolowany przez wskaźnik argumentu udostępnione słabych.
 
-*WP*  
- Słaby wskaźnik do skopiowania.
+*WP*<br/>
+Słaby wskaźnik do skopiowania.
 
-*SP*  
- Wspólny wskaźnik do skopiowania.
+*SP*<br/>
+Wspólny wskaźnik do skopiowania.
 
 ### <a name="remarks"></a>Uwagi
 
@@ -349,8 +349,8 @@ bool owner_before(const weak_ptr<Other>& ptr);
 
 ### <a name="parameters"></a>Parametry
 
-*ptr*  
- `lvalue` Odwołanie do albo `shared_ptr` lub `weak_ptr`.
+*ptr*<br/>
+`lvalue` Odwołanie do albo `shared_ptr` lub `weak_ptr`.
 
 ### <a name="remarks"></a>Uwagi
 
@@ -409,8 +409,8 @@ void swap(weak_ptr& wp);
 
 ### <a name="parameters"></a>Parametry
 
-*WP*  
- Słaby wskaźnik do wymiany.
+*WP*<br/>
+Słaby wskaźnik do wymiany.
 
 ### <a name="remarks"></a>Uwagi
 
@@ -529,14 +529,14 @@ weak_ptr(const shared_ptr<Other>& sp);
 
 ### <a name="parameters"></a>Parametry
 
-*Inne*  
- Typ kontrolowany przez wskaźnik argumentu udostępnione słabych.
+*Inne*<br/>
+Typ kontrolowany przez wskaźnik argumentu udostępnione słabych.
 
-*WP*  
- Słaby wskaźnik do skopiowania.
+*WP*<br/>
+Słaby wskaźnik do skopiowania.
 
-*SP*  
- Wspólny wskaźnik do skopiowania.
+*SP*<br/>
+Wspólny wskaźnik do skopiowania.
 
 ### <a name="remarks"></a>Uwagi
 

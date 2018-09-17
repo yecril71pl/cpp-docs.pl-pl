@@ -12,25 +12,27 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c76ea1bac491a7e9484ac88834c8e4b070c57ae5
-ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
+ms.openlocfilehash: fa17bd261a722e169b1a98f908fb9be0f1a591e1
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "42466241"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45700209"
 ---
 # <a name="types-and-storage"></a>Typy i magazyn
-W tej sekcji opisano wyliczenie i magazyn danych typów x64 architektury.  
-  
--   [Typy skalarne](../build/scalar-types.md)  
-  
--   [Agregacje i unie](../build/aggregates-and-unions.md)  
-  
--   [Przykłady wyrównania struktury](../build/examples-of-structure-alignment.md)  
-  
--   [Pola bitów](../build/bitfields.md)  
-  
--   [Konflikty z kompilatorem x86](../build/conflicts-with-the-x86-compiler.md)  
-  
-## <a name="see-also"></a>Zobacz też  
- [Konwencje kodowania x64](../build/x64-software-conventions.md)
+
+W tej sekcji opisano wyliczenie i magazyn danych typów x64 architektury.
+
+- [Typy skalarne](../build/scalar-types.md)
+
+- [Agregacje i unie](../build/aggregates-and-unions.md)
+
+- [Przykłady wyrównania struktury](../build/examples-of-structure-alignment.md)
+
+- [Pola bitów](../build/bitfields.md)
+
+- [Konflikty z kompilatorem x86](../build/conflicts-with-the-x86-compiler.md)
+
+## <a name="see-also"></a>Zobacz też
+
+[Konwencje kodowania x64](../build/x64-software-conventions.md)

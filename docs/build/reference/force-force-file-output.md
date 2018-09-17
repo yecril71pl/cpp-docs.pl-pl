@@ -20,47 +20,50 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d1daa27ce48590d4a122eafde9f63f7142271610
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 95a746a37183f26585fd013327a964b922589221
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32373703"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45699768"
 ---
 # <a name="force-force-file-output"></a>/FORCE (Wymuszaj produkt wyjściowy pliku)
-```  
-/FORCE:[MULTIPLE|UNRESOLVED]  
-```  
-  
-## <a name="remarks"></a>Uwagi  
- Opcja/Force informuje konsolidator, aby utworzył plik .exe prawidłowy lub biblioteki DLL nawet, jeśli symbol jest odwołania, a nie zdefiniowano lub wielokrotnie zdefiniowane.  
-  
- Opcja/Force może zająć opcjonalny argument:  
-  
--   Użyj /FORCE:MULTIPLE, aby utworzyć plik wyjściowy, czy Konsolidacja znajduje więcej niż jedną definicję symbolu.  
-  
--   Użyj opcji/Force: UNRESOLVED, aby utworzyć plik wyjściowy, czy Konsolidacja znajdzie Niezdefiniowany symbol. / FORCE: NIEROZPOZNANY jest ignorowana, jeśli symbol punktu wejścia nie został rozpoznany.  
-  
- / FORCE bez argumentów oznacza zarówno wielokrotne, nierozwiązany.  
-  
- Plik utworzony przy użyciu tej opcji może nie działać zgodnie z oczekiwaniami. Konsolidator nie będzie łącz stopniowo, gdy określona jest opcja/Force.  
-  
- Jeśli moduł został skompilowany przy **/CLR**, **/FORCE** nie utworzy obrazie.  
-  
-### <a name="to-set-this-linker-option-in-the-visual-studio-development-environment"></a>Aby ustawić tę opcję konsolidatora w środowisku programowania Visual Studio  
-  
-1.  Otwórz projekt **strony właściwości** okno dialogowe. Aby uzyskać więcej informacji, zobacz [Ustawianie właściwości projektu Visual C++](../../ide/working-with-project-properties.md).  
-  
-2.  Kliknij przycisk **konsolidatora** folderu.  
-  
-3.  Kliknij przycisk **wiersza polecenia** strony właściwości.  
-  
-4.  Typ opcji do **dodatkowe opcje** pole.  
-  
-### <a name="to-set-this-linker-option-programmatically"></a>Aby programowo ustawić tę opcję konsolidatora  
-  
--   Zobacz <xref:Microsoft.VisualStudio.VCProjectEngine.VCLinkerTool.AdditionalOptions%2A>.  
-  
-## <a name="see-also"></a>Zobacz też  
- [Ustawianie opcji konsolidatora](../../build/reference/setting-linker-options.md)   
- [Opcje konsolidatora](../../build/reference/linker-options.md)
+
+```
+/FORCE:[MULTIPLE|UNRESOLVED]
+```
+
+## <a name="remarks"></a>Uwagi
+
+Opcja/Force informuje konsolidator, aby utworzył plik .exe prawidłowe lub biblioteki DLL nawet wtedy, gdy symbolu występują odwołania, ale nie zdefiniowane lub mnożenia zdefiniowane.
+
+Opcja/Force można wykonać opcjonalny argument:
+
+- Użyj /FORCE:MULTIPLE, aby utworzyć plik wyjściowy, czy Konsolidacja znajduje więcej niż jedną definicję symbolu.
+
+- Użyj opcji/Force: UNRESOLVED, aby utworzyć plik wyjściowy, czy Konsolidacja znajdzie Niezdefiniowany symbol. / FORCE: NIEROZPOZNANY jest ignorowana, jeśli symbol punktu wejścia nie został rozwiązany.
+
+/ FORCE bez argumentów oznacza zarówno wielokrotne, nierozwiązany.
+
+Plik utworzony przy użyciu tej opcji może nie działać zgodnie z oczekiwaniami. Konsolidator nie będzie łączyć przyrostowo, jeśli nie określono opcji/Force.
+
+Jeśli moduł został skompilowany z **/CLR**, **/FORCE** nie utworzy obraz.
+
+### <a name="to-set-this-linker-option-in-the-visual-studio-development-environment"></a>Aby ustawić tę opcję konsolidatora w środowisku programowania Visual Studio
+
+1. Otwórz projekt **stron właściwości** okno dialogowe. Aby uzyskać więcej informacji, zobacz [ustawienie właściwości projektu Visual C++](../../ide/working-with-project-properties.md).
+
+1. Kliknij przycisk **konsolidatora** folderu.
+
+1. Kliknij przycisk **wiersza polecenia** stronę właściwości.
+
+1. Wpisz opcje w **dodatkowe opcje** pole.
+
+### <a name="to-set-this-linker-option-programmatically"></a>Aby programowo ustawić tę opcję konsolidatora
+
+- Zobacz <xref:Microsoft.VisualStudio.VCProjectEngine.VCLinkerTool.AdditionalOptions%2A>.
+
+## <a name="see-also"></a>Zobacz też
+
+[Ustawianie opcji konsolidatora](../../build/reference/setting-linker-options.md)<br/>
+[Opcje konsolidatora](../../build/reference/linker-options.md)

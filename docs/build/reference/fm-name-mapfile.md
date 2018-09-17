@@ -20,47 +20,50 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 94a499b943fcd3213aa76876c65c3aac2dd79060
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 3e69a273d523a78adc2b71652e5f13fb9141d3b1
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32374287"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45699912"
 ---
 # <a name="fm-name-mapfile"></a>/Fm (Nazwa Mapfile)
-Informuje konsolidator, aby utworzyć plik mapowania zawierającego listę segmentów w kolejności, w jakiej występują w odpowiedniego pliku .exe lub DLL.  
-  
-## <a name="syntax"></a>Składnia  
-  
-```  
-/Fmpathname  
-```  
-  
-## <a name="remarks"></a>Uwagi  
- Domyślnie mapfile podano nazwę podstawową odpowiadający mu plik źródłowy języka C lub C++ z. MAPOWANIA rozszerzenia.  
-  
- Określanie **/Fm** działa tak samo jak gdyby była określona [/map (Generowanie Mapfile)](../../build/reference/map-generate-mapfile.md) — opcja konsolidatora.  
-  
- Jeśli określisz [/c (Kompiluj bez konsolidacji)](../../build/reference/c-compile-without-linking.md) do pomijania łączenia **/Fm** nie ma wpływu.  
-  
- Symbole globalne w pliku mapowania zwykle mają co najmniej jeden wiodące znaki podkreślenia, ponieważ kompilator dodaje podkreśleniem początku do nazwy zmiennej. Wiele symboli globalne, które pojawiają się w pliku mapowania jest używana wewnętrznie przez kompilator i biblioteki standardowe.  
-  
-### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Aby ustawić tę opcję kompilatora w środowisku programowania Visual Studio  
-  
-1.  Otwórz projekt **strony właściwości** okno dialogowe. Aby uzyskać więcej informacji, zobacz [Praca z właściwościami projektu](../../ide/working-with-project-properties.md).  
-  
-2.  Kliknij przycisk **C/C++** folderu.  
-  
-3.  Kliknij przycisk **wiersza polecenia** strony właściwości.  
-  
-4.  Typ opcji kompilatora w **dodatkowe opcje** pole.  
-  
-### <a name="to-set-this-compiler-option-programmatically"></a>Aby programowo ustawić tę opcję kompilatora  
-  
--   Zobacz <xref:Microsoft.VisualStudio.VCProjectEngine.VCCLCompilerTool.AdditionalOptions%2A>.  
-  
-## <a name="see-also"></a>Zobacz też  
- [Plik wyjściowy (/ F) opcje](../../build/reference/output-file-f-options.md)   
- [Opcje kompilatora](../../build/reference/compiler-options.md)   
- [Ustawianie opcji kompilatora](../../build/reference/setting-compiler-options.md)   
- [Określanie nazwy ścieżki](../../build/reference/specifying-the-pathname.md)
+
+Informuje konsolidator, aby wygenerować plik mapy zawierającego listę segmentów w kolejności, w jakiej występują w odpowiedniego pliku .exe lub DLL.
+
+## <a name="syntax"></a>Składnia
+
+```
+/Fmpathname
+```
+
+## <a name="remarks"></a>Uwagi
+
+Domyślnie pliku mapfile znajduje się odpowiedni plik źródłowy C lub C++ z podstawowej nazwy. Rozszerzenie mapowania.
+
+Określanie **/Fm** ma ten sam efekt, tak, jakby była określona [/map (Generuj plik mapy)](../../build/reference/map-generate-mapfile.md) — opcja konsolidatora.
+
+Jeśli określisz [/c (Kompiluj bez konsolidacji)](../../build/reference/c-compile-without-linking.md) do pomijania, łączenie, **/Fm** nie ma wpływu.
+
+Symbole globalne w pliku mapowania zazwyczaj mają co najmniej jeden wiodące znaki podkreślenia, ponieważ kompilator sam doda do nazwy zmiennych wiodącego podkreślenia. Wiele symbole globalne, które pojawiają się w pliku mapfile są używane wewnętrznie przez kompilator i standardowych bibliotek.
+
+### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Aby ustawić tę opcję kompilatora w środowisku programowania Visual Studio
+
+1. Otwórz projekt **stron właściwości** okno dialogowe. Aby uzyskać więcej informacji, zobacz [Praca z właściwościami projektu](../../ide/working-with-project-properties.md).
+
+1. Kliknij przycisk **C/C++** folderu.
+
+1. Kliknij przycisk **wiersza polecenia** stronę właściwości.
+
+1. Wpisz opcje kompilatora w **dodatkowe opcje** pole.
+
+### <a name="to-set-this-compiler-option-programmatically"></a>Aby programowo ustawić tę opcję kompilatora
+
+- Zobacz <xref:Microsoft.VisualStudio.VCProjectEngine.VCCLCompilerTool.AdditionalOptions%2A>.
+
+## <a name="see-also"></a>Zobacz też
+
+[Plik wyjściowy (/ F) opcje](../../build/reference/output-file-f-options.md)
+[opcje kompilatora](../../build/reference/compiler-options.md)<br/>
+[Ustawianie opcji kompilatora](../../build/reference/setting-compiler-options.md)<br/>
+[Określanie nazwy ścieżki](../../build/reference/specifying-the-pathname.md)

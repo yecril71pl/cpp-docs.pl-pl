@@ -30,12 +30,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f9a518402d027ae128fcf403752fafb448461628
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 57b1cfca4740b3190c2afb8eb557fabded3895bd
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32390472"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45707619"
 ---
 # <a name="lock"></a>_lock
 Uzyskuje blokadę wielu wątków.  
@@ -52,11 +52,11 @@ void __cdecl _lock
 ```  
   
 #### <a name="parameters"></a>Parametry  
- [in] `locknum`  
- Identyfikator blokady do uzyskania dostępu.  
+*locknum*<br/>
+[in] Identyfikator blokady w celu uzyskania.  
   
 ## <a name="remarks"></a>Uwagi  
- Jeśli już uzyskano blokady, ta metoda uzyskuje blokadę mimo to i powoduje, że wystąpił błąd wewnętrzny C czasu wykonywania (CRT). Jeśli metoda nie może uzyskać blokady, kończy działanie z powodu błędu krytycznego i ustawia kod błędu: `_RT_LOCK`.  
+ Jeśli już pozyskany blokady, ta metoda uzyskuje blokadę mimo to i powoduje błąd wewnętrzny (CRT) środowiska wykonawczego języka C. Jeśli metoda nie może uzyskać blokady, kończy działanie z powodu błędu krytycznego i ustawia kod błędu: `_RT_LOCK`.  
   
 ## <a name="requirements"></a>Wymagania  
  **Źródło:** mlock.c  

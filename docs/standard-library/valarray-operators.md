@@ -34,12 +34,12 @@ helpviewer_keywords:
 - std::operator&lt; (valarray)
 - std::operator&lt;&lt; (valarray)
 - std::operator&lt;= (valarray), std::operator== (valarray)
-ms.openlocfilehash: b828081fea1f9886c1a661323e2d0e0c79d1ae96
-ms.sourcegitcommit: f0c90000125a9497bf61e41624de189a043703c0
+ms.openlocfilehash: 83958ee300143463a1da9b10d2edb6eb1707ec4f
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44315031"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45703563"
 ---
 # <a name="ltvalarraygt-operators"></a>&lt;valarray —&gt; operatorów
 
@@ -78,11 +78,11 @@ operator!=(
 
 ### <a name="parameters"></a>Parametry
 
-*left*  
- Pierwsza z dwóch valarrays, którego elementy mają być sprawdzane pod kątem nierówności.
+*left*<br/>
+Pierwsza z dwóch valarrays, którego elementy mają być sprawdzane pod kątem nierówności.
 
-*right*  
- Drugi dwóch valarrays, którego elementy mają być sprawdzane pod kątem nierówności.
+*right*<br/>
+Drugi dwóch valarrays, którego elementy mają być sprawdzane pod kątem nierówności.
 
 ### <a name="return-value"></a>Wartość zwracana
 
@@ -173,11 +173,11 @@ operator%(
 
 ### <a name="parameters"></a>Parametry
 
-*left*  
- Wartość lub tablicy valarray, która służy jako dzielna na inną wartość, która lub tablicy valarray jest podzielona.
+*left*<br/>
+Wartość lub tablicy valarray, która służy jako dzielna na inną wartość, która lub tablicy valarray jest podzielona.
 
-*right*  
- Wartość lub tablicy valarray, który służy jako dzielnik i który dzieli inną wartość lub tablicy valarray.
+*right*<br/>
+Wartość lub tablicy valarray, który służy jako dzielnik i który dzieli inną wartość lub tablicy valarray.
 
 ### <a name="return-value"></a>Wartość zwracana
 
@@ -256,11 +256,11 @@ operator&(
 
 ### <a name="parameters"></a>Parametry
 
-*left*  
- Pierwsza z dwóch valarrays, w której odpowiednie elementy, które mają być łączone za pomocą operatora testu koniunkcji `AND` lub określoną wartość typu elementu, który ma być wyłączny sumy bitowej połączona z każdego elementu tablicy valarray.
+*left*<br/>
+Pierwsza z dwóch valarrays, w której odpowiednie elementy, które mają być łączone za pomocą operatora testu koniunkcji `AND` lub określoną wartość typu elementu, który ma być wyłączny sumy bitowej połączona z każdego elementu tablicy valarray.
 
-*right*  
- Drugi dwóch valarrays, w której odpowiednie elementy, które mają być łączone za pomocą operatora testu koniunkcji `AND` lub określoną wartość typu elementu, który ma być wyłączny sumy bitowej połączona z każdego elementu tablicy valarray.
+*right*<br/>
+Drugi dwóch valarrays, w której odpowiednie elementy, które mają być łączone za pomocą operatora testu koniunkcji `AND` lub określoną wartość typu elementu, który ma być wyłączny sumy bitowej połączona z każdego elementu tablicy valarray.
 
 ### <a name="return-value"></a>Wartość zwracana
 
@@ -345,11 +345,11 @@ operator&&(
 
 ### <a name="parameters"></a>Parametry
 
-*left*  
- Pierwsza z dwóch valarrays, którego odpowiednie elementy, które mają być łączone z logicznym `AND` lub określoną wartość typu elementu, który ma być połączona z każdego elementu tablicy valarray.
+*left*<br/>
+Pierwsza z dwóch valarrays, którego odpowiednie elementy, które mają być łączone z logicznym `AND` lub określoną wartość typu elementu, który ma być połączona z każdego elementu tablicy valarray.
 
-*right*  
- Drugi dwóch valarrays, którego odpowiednie elementy, które mają być łączone z logicznym `AND` lub określoną wartość typu elementu, który ma być połączona z każdego elementu tablicy valarray.
+*right*<br/>
+Drugi dwóch valarrays, którego odpowiednie elementy, które mają być łączone z logicznym `AND` lub określoną wartość typu elementu, który ma być połączona z każdego elementu tablicy valarray.
 
 ### <a name="return-value"></a>Wartość zwracana
 
@@ -432,11 +432,11 @@ operator>(
 
 ### <a name="parameters"></a>Parametry
 
-*left*  
- Pierwsza z dwóch valarrays, którego elementy mają być porównane lub określoną wartość ma zostać porównane z każdego elementu tablicy valarray.
+*left*<br/>
+Pierwsza z dwóch valarrays, którego elementy mają być porównane lub określoną wartość ma zostać porównane z każdego elementu tablicy valarray.
 
-*right*  
- Drugi dwóch valarrays, którego elementy mają być porównane lub określoną wartość do porównania z każdego elementu tablicy valarray.
+*right*<br/>
+Drugi dwóch valarrays, którego elementy mają być porównane lub określoną wartość do porównania z każdego elementu tablicy valarray.
 
 ### <a name="return-value"></a>Wartość zwracana
 
@@ -523,11 +523,11 @@ operator>=(
 
 ### <a name="parameters"></a>Parametry
 
-*left*  
- Pierwsza z dwóch valarrays, którego elementy mają być porównane lub określoną wartość ma zostać porównane z każdego elementu tablicy valarray.
+*left*<br/>
+Pierwsza z dwóch valarrays, którego elementy mają być porównane lub określoną wartość ma zostać porównane z każdego elementu tablicy valarray.
 
-*right*  
- Drugi dwóch valarrays, którego elementy mają być porównane lub określoną wartość do porównania z każdego elementu tablicy valarray.
+*right*<br/>
+Drugi dwóch valarrays, którego elementy mają być porównane lub określoną wartość do porównania z każdego elementu tablicy valarray.
 
 ### <a name="return-value"></a>Wartość zwracana
 
@@ -614,11 +614,11 @@ operator>>(
 
 ### <a name="parameters"></a>Parametry
 
-*left*  
- Wartość jest przesuwany lub tablicy valarray, którego elementy mają zostać przesunięte.
+*left*<br/>
+Wartość jest przesuwany lub tablicy valarray, którego elementy mają zostać przesunięte.
 
-*right*  
- Wartość wskazująca, wielkość przesunięcia bitowego w prawo lub wskazać element-wise ilość przesunięcia bitowego w prawo, której elementy w tablicy valarray.
+*right*<br/>
+Wartość wskazująca, wielkość przesunięcia bitowego w prawo lub wskazać element-wise ilość przesunięcia bitowego w prawo, której elementy w tablicy valarray.
 
 ### <a name="return-value"></a>Wartość zwracana
 
@@ -701,11 +701,11 @@ operator<(
 
 ### <a name="parameters"></a>Parametry
 
-*left*  
- Pierwsza z dwóch valarrays, którego elementy mają być porównane lub określoną wartość ma zostać porównane z każdego elementu tablicy valarray.
+*left*<br/>
+Pierwsza z dwóch valarrays, którego elementy mają być porównane lub określoną wartość ma zostać porównane z każdego elementu tablicy valarray.
 
-*right*  
- Drugi dwóch valarrays, którego elementy mają być porównane lub określoną wartość do porównania z każdego elementu tablicy valarray.
+*right*<br/>
+Drugi dwóch valarrays, którego elementy mają być porównane lub określoną wartość do porównania z każdego elementu tablicy valarray.
 
 ### <a name="return-value"></a>Wartość zwracana
 
@@ -792,11 +792,11 @@ operator<=(
 
 ### <a name="parameters"></a>Parametry
 
-*left*  
- Pierwsza z dwóch valarrays, którego elementy mają być porównane lub określoną wartość ma zostać porównane z każdego elementu tablicy valarray.
+*left*<br/>
+Pierwsza z dwóch valarrays, którego elementy mają być porównane lub określoną wartość ma zostać porównane z każdego elementu tablicy valarray.
 
-*right*  
- Drugi dwóch valarrays, którego elementy mają być porównane lub określoną wartość do porównania z każdego elementu tablicy valarray.
+*right*<br/>
+Drugi dwóch valarrays, którego elementy mają być porównane lub określoną wartość do porównania z każdego elementu tablicy valarray.
 
 ### <a name="return-value"></a>Wartość zwracana
 
@@ -883,11 +883,11 @@ operator<<(
 
 ### <a name="parameters"></a>Parametry
 
-*left*  
- Wartość jest przesuwany lub tablicy valarray, którego elementy mają zostać przesunięte.
+*left*<br/>
+Wartość jest przesuwany lub tablicy valarray, którego elementy mają zostać przesunięte.
 
-*right*  
- Wartość wskazująca, wielkość przesunięcia w lewo lub wskazać element-wise ilość przesunięcia w lewo, której elementy w tablicy valarray.
+*right*<br/>
+Wartość wskazująca, wielkość przesunięcia w lewo lub wskazać element-wise ilość przesunięcia w lewo, której elementy w tablicy valarray.
 
 ### <a name="return-value"></a>Wartość zwracana
 
@@ -970,11 +970,11 @@ operator*(
 
 ### <a name="parameters"></a>Parametry
 
-*left*  
- Pierwsze dwa valarrays, którego elementy mają zostać pomnożona lub określoną wartość pomnożenie z każdego elementu tablicy valarray.
+*left*<br/>
+Pierwsze dwa valarrays, którego elementy mają zostać pomnożona lub określoną wartość pomnożenie z każdego elementu tablicy valarray.
 
-*right*  
- Drugi dwóch valarrays, którego elementy mają zostać pomnożona lub określoną wartość pomnożenie z każdego elementu tablicy valarray.
+*right*<br/>
+Drugi dwóch valarrays, którego elementy mają zostać pomnożona lub określoną wartość pomnożenie z każdego elementu tablicy valarray.
 
 ### <a name="return-value"></a>Wartość zwracana
 
@@ -1053,11 +1053,11 @@ operator+(
 
 ### <a name="parameters"></a>Parametry
 
-*left*  
- Pierwszego dnia dwóch valarrays, której elementy mają być dodawane lub określoną wartość do dodania z każdego elementu tablicy valarray.
+*left*<br/>
+Pierwszego dnia dwóch valarrays, której elementy mają być dodawane lub określoną wartość do dodania z każdego elementu tablicy valarray.
 
-*right*  
- Drugi dwóch valarrays, której elementy mają być dodawane lub określoną wartość do dodania z każdego elementu tablicy valarray.
+*right*<br/>
+Drugi dwóch valarrays, której elementy mają być dodawane lub określoną wartość do dodania z każdego elementu tablicy valarray.
 
 ### <a name="return-value"></a>Wartość zwracana
 
@@ -1136,11 +1136,11 @@ operator-(
 
 ### <a name="parameters"></a>Parametry
 
-*left*  
- Wartość lub tablicy valarray, która służy jako odjemna, z której można odejmować w stanowiące różnicę mają inne wartości lub valarrays.
+*left*<br/>
+Wartość lub tablicy valarray, która służy jako odjemna, z której można odejmować w stanowiące różnicę mają inne wartości lub valarrays.
 
-*right*  
- Wartość lub tablicy valarray, służąca jako odjemnik do odjęcia od innych wartości lub valarrays w stanowiące różnicę.
+*right*<br/>
+Wartość lub tablicy valarray, służąca jako odjemnik do odjęcia od innych wartości lub valarrays w stanowiące różnicę.
 
 ### <a name="return-value"></a>Wartość zwracana
 
@@ -1225,11 +1225,11 @@ operator/(
 
 ### <a name="parameters"></a>Parametry
 
-*left*  
- Wartość lub tablicy valarray, która służy jako dzielna na inną wartość, która lub tablicy valarray jest podzielona w tworzeniu ilorazu.
+*left*<br/>
+Wartość lub tablicy valarray, która służy jako dzielna na inną wartość, która lub tablicy valarray jest podzielona w tworzeniu ilorazu.
 
-*right*  
- Wartość lub tablicy valarray, który służy jako dzielnik i który dzieli inną wartość lub tablicy valarray w tworzeniu ilorazu.
+*right*<br/>
+Wartość lub tablicy valarray, który służy jako dzielnik i który dzieli inną wartość lub tablicy valarray w tworzeniu ilorazu.
 
 ### <a name="return-value"></a>Wartość zwracana
 
@@ -1314,11 +1314,11 @@ operator==(
 
 ### <a name="parameters"></a>Parametry
 
-*left*  
- Pierwsza z dwóch valarrays, którego elementy mają być sprawdzane pod kątem równości.
+*left*<br/>
+Pierwsza z dwóch valarrays, którego elementy mają być sprawdzane pod kątem równości.
 
-*right*  
- Drugi dwóch valarrays, którego elementy mają być sprawdzane pod kątem równości.
+*right*<br/>
+Drugi dwóch valarrays, którego elementy mają być sprawdzane pod kątem równości.
 
 ### <a name="return-value"></a>Wartość zwracana
 
@@ -1405,11 +1405,11 @@ operator^(
 
 ### <a name="parameters"></a>Parametry
 
-*left*  
- Pierwsza z dwóch valarrays, w której odpowiednie elementy, które mają być łączone za pomocą operatora testu koniunkcji **XOR** lub określoną wartość typu elementu, który ma być wyłączny sumy bitowej połączona z każdego elementu tablicy valarray.
+*left*<br/>
+Pierwsza z dwóch valarrays, w której odpowiednie elementy, które mają być łączone za pomocą operatora testu koniunkcji **XOR** lub określoną wartość typu elementu, który ma być wyłączny sumy bitowej połączona z każdego elementu tablicy valarray.
 
-*right*  
- Drugi dwóch valarrays, w której odpowiednie elementy, które mają być łączone za pomocą operatora testu koniunkcji **XOR** lub określoną wartość typu elementu, który ma być wyłączny sumy bitowej połączona z każdego elementu tablicy valarray.
+*right*<br/>
+Drugi dwóch valarrays, w której odpowiednie elementy, które mają być łączone za pomocą operatora testu koniunkcji **XOR** lub określoną wartość typu elementu, który ma być wyłączny sumy bitowej połączona z każdego elementu tablicy valarray.
 
 ### <a name="return-value"></a>Wartość zwracana
 
@@ -1498,11 +1498,11 @@ operator|(
 
 ### <a name="parameters"></a>Parametry
 
-*left*  
- Pierwsza z dwóch valarrays, w której odpowiednie elementy, które mają być łączone za pomocą operatora testu koniunkcji `OR` lub określoną wartość typu elementu, który ma być wyłączny sumy bitowej połączona z każdego elementu tablicy valarray.
+*left*<br/>
+Pierwsza z dwóch valarrays, w której odpowiednie elementy, które mają być łączone za pomocą operatora testu koniunkcji `OR` lub określoną wartość typu elementu, który ma być wyłączny sumy bitowej połączona z każdego elementu tablicy valarray.
 
-*right*  
- Drugi dwóch valarrays, w której odpowiednie elementy, które mają być łączone za pomocą operatora testu koniunkcji `OR` lub określoną wartość typu elementu, który ma być wyłączny sumy bitowej połączona z każdego elementu tablicy valarray.
+*right*<br/>
+Drugi dwóch valarrays, w której odpowiednie elementy, które mają być łączone za pomocą operatora testu koniunkcji `OR` lub określoną wartość typu elementu, który ma być wyłączny sumy bitowej połączona z każdego elementu tablicy valarray.
 
 ### <a name="return-value"></a>Wartość zwracana
 
@@ -1591,11 +1591,11 @@ operator||(
 
 ### <a name="parameters"></a>Parametry
 
-*left*  
- Pierwsza z dwóch valarrays, którego odpowiednie elementy, które mają być łączone z logicznym `OR` lub określoną wartość typu elementu, który ma być połączona z każdego elementu tablicy valarray.
+*left*<br/>
+Pierwsza z dwóch valarrays, którego odpowiednie elementy, które mają być łączone z logicznym `OR` lub określoną wartość typu elementu, który ma być połączona z każdego elementu tablicy valarray.
 
-*right*  
- Drugi dwóch valarrays, którego odpowiednie elementy, które mają być łączone z logicznym `OR` lub określoną wartość typu elementu, który ma być połączona z każdego elementu tablicy valarray.
+*right*<br/>
+Drugi dwóch valarrays, którego odpowiednie elementy, które mają być łączone z logicznym `OR` lub określoną wartość typu elementu, który ma być połączona z każdego elementu tablicy valarray.
 
 ### <a name="return-value"></a>Wartość zwracana
 

@@ -98,12 +98,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d2eb6baf664c2cac7bfc1ed2c95a5fbd204d289b
-ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
+ms.openlocfilehash: ccab97a7ac1fd0ad073a3f507dfa6687f311efc4
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43686802"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45703927"
 ---
 # <a name="map-class"></a>map — Klasa
 
@@ -124,18 +124,18 @@ class map;
 ### <a name="parameters"></a>Parametry
 
 *Key*<br/>
- Typ danych klucza, który ma być przechowywany w mapie.
+Typ danych klucza, który ma być przechowywany w mapie.
 
 *Typ*<br/>
- Typ danych elementu, który ma być przechowywany w mapie.
+Typ danych elementu, który ma być przechowywany w mapie.
 
 *Cechy*<br/>
- Typ, który dostarcza obiekt funkcji, która może porównać dwie wartości elementów jako klucze sortowania, aby określić ich względną kolejność w mapie. Ten argument jest opcjonalny i predykat dwuelementowy `less<Key>` jest wartością domyślną.
+Typ, który dostarcza obiekt funkcji, która może porównać dwie wartości elementów jako klucze sortowania, aby określić ich względną kolejność w mapie. Ten argument jest opcjonalny i predykat dwuelementowy `less<Key>` jest wartością domyślną.
 
 W języku C ++ 14 można włączyć heterogeniczne wyszukiwanie, określając predykatu <> std::less, który nie ma parametrów typu. Aby uzyskać więcej informacji, zobacz [heterogeniczne wyszukiwanie w kontenerach asocjacyjnych](../standard-library/stl-containers.md#sequence_containers)
 
 *Allocator*<br/>
- Typ reprezentujący przechowywany obiekt alokatora, który hermetyzuje szczegóły dotyczące alokacji mapy i dezalokacji pamięci. Ten argument jest opcjonalny, a wartość domyślna to `allocator<pair<const Key, Type> >`.
+Typ reprezentujący przechowywany obiekt alokatora, który hermetyzuje szczegóły dotyczące alokacji mapy i dezalokacji pamięci. Ten argument jest opcjonalny, a wartość domyślna to `allocator<pair<const Key, Type> >`.
 
 ## <a name="remarks"></a>Uwagi
 
@@ -577,7 +577,7 @@ size_type count(const Key& key) const;
 ### <a name="parameters"></a>Parametry
 
 *Klucz*<br/>
- Wartość klucza elementy, które mają być dopasowywane z mapy.
+Wartość klucza elementy, które mają być dopasowywane z mapy.
 
 ### <a name="return-value"></a>Wartość zwracana
 
@@ -1041,7 +1041,7 @@ pair <iterator, iterator> equal_range (const Key& key);
 ### <a name="parameters"></a>Parametry
 
 *Klucz*<br/>
- Wartość klucza argumentu ma być porównywana za pomocą klucza sortowania z mapy wyszukiwany element.
+Wartość klucza argumentu ma być porównywana za pomocą klucza sortowania z mapy wyszukiwany element.
 
 ### <a name="return-value"></a>Wartość zwracana
 
@@ -1128,16 +1128,16 @@ size_type erase(
 ### <a name="parameters"></a>Parametry
 
 *Where*<br/>
- Pozycja elementu, który ma zostać usunięty.
+Pozycja elementu, który ma zostać usunięty.
 
 *pierwszy*<br/>
- Pozycja pierwszego elementu do usunięcia.
+Pozycja pierwszego elementu do usunięcia.
 
 *ostatni*<br/>
- Pozycja tuż za ostatni element do usunięcia.
+Pozycja tuż za ostatni element do usunięcia.
 
 *Key*<br/>
- Wartość klucza elementów do usunięcia.
+Wartość klucza elementów do usunięcia.
 
 ### <a name="return-value"></a>Wartość zwracana
 
@@ -1240,7 +1240,7 @@ const_iterator find(const Key& key) const;
 ### <a name="parameters"></a>Parametry
 
 *Klucz*<br/>
- Wartość klucza, które mają być dopasowywane o klucz sortowania element z mapy wyszukiwany.
+Wartość klucza, które mają być dopasowywane o klucz sortowania element z mapy wyszukiwany.
 
 ### <a name="return-value"></a>Wartość zwracana
 
@@ -1702,7 +1702,7 @@ const_iterator lower_bound(const Key& key) const;
 ### <a name="parameters"></a>Parametry
 
 *Klucz*<br/>
- Wartość klucza argumentu ma być porównywana za pomocą klucza sortowania z mapy wyszukiwany element.
+Wartość klucza argumentu ma być porównywana za pomocą klucza sortowania z mapy wyszukiwany element.
 
 ### <a name="return-value"></a>Wartość zwracana
 
@@ -2492,7 +2492,7 @@ void swap(
 ### <a name="parameters"></a>Parametry
 
 *right*<br/>
- Mapa argumentu, zawierająca elementy, które mają być zamienione map docelowego.
+Mapa argumentu, zawierająca elementy, które mają być zamienione map docelowego.
 
 ### <a name="remarks"></a>Uwagi
 
@@ -2563,7 +2563,7 @@ const_iterator upper_bound(const Key& key) const;
 ### <a name="parameters"></a>Parametry
 
 *Klucz*<br/>
- Wartość klucza argumentu ma być porównywana z wartością klucza sortowania elementu z tablicy wyszukiwany.
+Wartość klucza argumentu ma być porównywana z wartością klucza sortowania elementu z tablicy wyszukiwany.
 
 ### <a name="return-value"></a>Wartość zwracana
 

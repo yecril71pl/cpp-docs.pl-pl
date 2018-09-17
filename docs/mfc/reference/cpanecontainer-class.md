@@ -130,12 +130,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d69a5cefa1cb43ad4f6c585b3cb7f7e021ae9183
-ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
+ms.openlocfilehash: ec78ed92829f8a8ac33e796687f812dc7ad444a1
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "42466142"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45701574"
 ---
 # <a name="cpanecontainer-class"></a>Klasa CPaneContainer
 `CPaneContainer` Klasa jest podstawowym składnikiem modelu dokowania zaimplementowanego przez MFC. Obiekt tej klasy przechowuje wskaźniki do dwóch tafli dokowania lub dwa wystąpienia `CPaneContainer.` przechowuje także wskaźnik do podziału, oddzielające tafle (lub kontenery). Przez zagnieżdżanie kontenerów wewnątrz kontenerów szablon może zbudować drzewo binarne, reprezentujące skomplikowanych układ dokowania. Katalog główny drzewa binarnego jest przechowywane w [CPaneContainerManager](../../mfc/reference/cpanecontainermanager-class.md) obiektu.  
@@ -267,8 +267,8 @@ BOOL AddSubPaneContainer(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *element pContainer*  
- [in] *bRightNodeNew*  
+*pContainer*<br/>
+[in] [in] *bRightNodeNew*  
   
 ### <a name="return-value"></a>Wartość zwracana  
   
@@ -286,10 +286,10 @@ virtual int CalcAvailablePaneSpace(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *nRequiredOffset*  
- [in] *pBar*  
- [in] *element pContainer*  
- [in] *bLeftBar*  
+*nRequiredOffset*<br/>
+[in] [in] *pBar*  
+*pContainer*<br/>
+[in] [in] *bLeftBar*  
   
 ### <a name="return-value"></a>Wartość zwracana  
   
@@ -305,8 +305,8 @@ virtual CSize CalcAvailableSpace(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *sizeStretch*  
- [in] *bLeftBar*  
+*sizeStretch*<br/>
+[in] [in] *bLeftBar*  
   
 ### <a name="return-value"></a>Wartość zwracana  
   
@@ -356,10 +356,10 @@ CPaneContainer(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *pManager*  
- [in] *pLeftBar*  
- [in] *pRightBar*  
- [in] *pSlider*  
+*pManager*<br/>
+[in] [in] *pLeftBar*  
+*pRightBar*<br/>
+[in] [in] *pSlider*  
   
 ### <a name="remarks"></a>Uwagi  
   
@@ -373,8 +373,8 @@ virtual void DeletePane(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *pBar*  
- [in] *barType*  
+*pBar*<br/>
+[in] [in] *barType*  
   
 ### <a name="remarks"></a>Uwagi  
   
@@ -388,8 +388,8 @@ CPaneContainer* FindSubPaneContainer(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *obiekt*  
- [in] *kryteria znajdowania*  
+*Obiekt*<br/>
+[in] [in] *kryteria znajdowania*  
   
 ### <a name="return-value"></a>Wartość zwracana  
   
@@ -612,8 +612,8 @@ virtual void GetWindowRect(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *rect*  
- [in] *bIgnoreVisibility*  
+*Rect*<br/>
+[in] [in] *bIgnoreVisibility*  
   
 ### <a name="remarks"></a>Uwagi  
   
@@ -725,8 +725,8 @@ void OnDeleteHidePane(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *pBar*  
- [in] *bHide*  
+*pBar*<br/>
+[in] [in] *bHide*  
   
 ### <a name="remarks"></a>Uwagi  
   
@@ -740,8 +740,8 @@ virtual int OnMoveInternalPaneDivider(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *nOffset*  
- [in] *hdwp*  
+*nOffset*<br/>
+[in] [in] *hdwp*  
   
 ### <a name="return-value"></a>Wartość zwracana  
   
@@ -757,8 +757,8 @@ virtual void OnShowPane(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *pBar*  
- [in] *bShow*  
+*pBar*<br/>
+[in] [in] *bShow*  
   
 ### <a name="remarks"></a>Uwagi  
   
@@ -814,8 +814,8 @@ virtual void Resize(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *rect*  
- [in] *hdwp*  
+*Rect*<br/>
+[in] [in] *hdwp*  
  [in] *bRedraw*  
   
 ### <a name="remarks"></a>Uwagi  
@@ -834,12 +834,12 @@ virtual void ResizePane(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *nOffset*  
- [in] *pBar*  
- [in] *element pContainer*  
- [in] *bHorz*  
- [in] *bLeftBar*  
- [in] *hdwp*  
+*nOffset*<br/>
+[in] [in] *pBar*  
+*pContainer*<br/>
+[in] [in] *bHorz*  
+*bLeftBar*<br/>
+[in] [in] *hdwp*  
   
 ### <a name="remarks"></a>Uwagi  
   
@@ -854,8 +854,8 @@ virtual void ResizePartOfPaneContainer(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *nOffset*  
- [in] *bLeftPart*  
+*nOffset*<br/>
+[in] [in] *bLeftPart*  
  [in] *hdwp*  
   
 ### <a name="remarks"></a>Uwagi  
@@ -882,8 +882,8 @@ void SetPane(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *pBar*  
- [in] *bLeft*  
+*pBar*<br/>
+[in] [in] *bLeft*  
   
 ### <a name="remarks"></a>Uwagi  
   
@@ -897,8 +897,8 @@ void SetPaneContainer(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *element pContainer*  
- [in] *bLeft*  
+*pContainer*<br/>
+[in] [in] *bLeft*  
   
 ### <a name="remarks"></a>Uwagi  
   
@@ -948,8 +948,8 @@ BOOL SetUpByID(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *nID*  
- [in] *pBar*  
+*nID*<br/>
+[in] [in] *pBar*  
   
 ### <a name="return-value"></a>Wartość zwracana  
   
@@ -980,10 +980,10 @@ virtual int StretchPaneContainer(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *nOffset*  
- [in] *bStretchHorz*  
- [in] *bLeftBar*  
- [in] *bMoveSlider*  
+*nOffset*<br/>
+[in] [in] *bStretchHorz*  
+*bLeftBar*<br/>
+[in] [in] *bMoveSlider*  
  [in] *hdwp*  
   
 ### <a name="return-value"></a>Wartość zwracana  

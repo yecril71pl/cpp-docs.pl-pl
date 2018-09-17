@@ -15,17 +15,19 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7519fb18ac7f24e79a5f7f664cb35f8eb5b3fd77
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 551028999d11379c06d3319f01e882a33ad57936
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32368931"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45705201"
 ---
 # <a name="binding-imports"></a>Powiązywanie importów
-Domyślnym zachowaniem konsolidatora jest utworzyć tabelę adresów importu można powiązać dla biblioteki DLL załadowanych z opóźnieniem. Jeśli plik DLL, który jest powiązany, funkcja pomocnika zostanie podjęta próba wykorzystania powiązane informacje zamiast wywoływać metodę **GetProcAddress** na wszystkich importów do którego istnieje odwołanie. Jeśli znacznik czasu lub preferowany adres nie pasują załadowanej biblioteki dll, funkcja pomocnika przyjmie tabelę adresów importu powiązane jest nieaktualna i będzie kontynuowane tak, jakby nie istnieje.  
-  
- Jeśli nie jest planowane powiązać Importy załadowane z opóźnieniem biblioteki DLL, określając [/delay](../../build/reference/delay-delay-load-import-settings.md): nobind w wierszu polecenia konsolidatora uniemożliwi tabelę adresów importu powiązane są generowane i spójniejsze miejsca w pliku obrazu.  
-  
-## <a name="see-also"></a>Zobacz też  
- [Obsługa konsolidatora dla bibliotek DLL załadowanych z opóźnieniem](../../build/reference/linker-support-for-delay-loaded-dlls.md)
+
+Zachowanie konsolidatora domyślne jest do utworzenia tabeli adresów importowania możliwej do wiązania dla bibliotek DLL ładowanych z opóźnieniem. Jeśli biblioteka DLL jest związany, funkcji pomocnika zostanie podjęta próba wykorzystania powiązane informacje, zamiast wywoływać metodę **GetProcAddress** na wszystkich importów odwołania. Jeśli znacznik czasu lub preferowany adres nie pasują załadowanej biblioteki dll, funkcja pomocnika przyjmie tabeli adresów importowania powiązanej jest nieaktualna i będzie kontynuowane tak, jakby nie istnieje.
+
+Jeśli nigdy nie zamierzasz powiązać importów załadowanych z opóźnieniem biblioteki DLL, określając [/opóźnienie](../../build/reference/delay-delay-load-import-settings.md): nobind w wierszu polecenia konsolidatora uniemożliwi tabeli adresów importowania powiązanej jest wygenerowany i korzystanie z nich miejsca w pliku obrazu.
+
+## <a name="see-also"></a>Zobacz też
+
+[Obsługa konsolidatora dla bibliotek DLL załadowanych z opóźnieniem](../../build/reference/linker-support-for-delay-loaded-dlls.md)

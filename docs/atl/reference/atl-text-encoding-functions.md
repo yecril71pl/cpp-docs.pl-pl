@@ -31,12 +31,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5043b421d4ca63b22cde0f413e68b3a666a483b3
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: a5147b8079d694e59141c244a860f12c59f42f7b
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43757474"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45706839"
 ---
 # <a name="atl-text-encoding-functions"></a>Funkcje kodowania tekstu ATL
 
@@ -494,20 +494,20 @@ inline BOOL QPDecode(
 
 ### <a name="parameters"></a>Parametry
 
-[in] *pbSrcData*  
-Bufor zawierające dane, które mają zostać zdekodowane.
+*pbSrcData*<br/>
+[in] Bufor zawierające dane, które mają zostać zdekodowane.
 
-[in] *nSrcLen*  
-Długość w bajtach *pbSrcData*.
+*nSrcLen*<br/>
+[in] Długość w bajtach *pbSrcData*.
 
-[out] *szDest*  
-Przydzielonej przez obiekt wywołujący bufor odbioru dekodowane dane.
+*szDest*<br/>
+[out] Przydzielonej przez obiekt wywołujący bufor odbioru dekodowane dane.
 
-[out] *pnDestLen*  
-Wskaźnik do zmiennej, która zawiera długość w bajtach *szDest*. Jeśli funkcja się powiedzie, zmienna odbiera liczba bajtów zapisanych w buforze. Jeśli funkcja zawiedzie, zmienna odbiera wymaganą długość w bajtach rozmiar buforu.
+*pnDestLen*<br/>
+[out] Wskaźnik do zmiennej, która zawiera długość w bajtach *szDest*. Jeśli funkcja się powiedzie, zmienna odbiera liczba bajtów zapisanych w buforze. Jeśli funkcja zawiedzie, zmienna odbiera wymaganą długość w bajtach rozmiar buforu.
 
-[in] *Flagidw*  
-Flagi ATLSMTP_QPENCODE opisujące, jak ma być wykonywane konwersji.
+*Flagidw*<br/>
+[in] Flagi ATLSMTP_QPENCODE opisujące, jak ma być wykonywane konwersji.
 
 ### <a name="return-value"></a>Wartość zwracana
 

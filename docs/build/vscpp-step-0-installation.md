@@ -14,12 +14,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4ee0763608edde0f7ceff81983a324190b605ff7
-ms.sourcegitcommit: f7703076b850c717c33d72fb0755fbb2215c5ddc
+ms.openlocfilehash: b3e0fef319fbe119118e3a915a66bea3546bbb9a
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/28/2018
-ms.locfileid: "43130894"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45702900"
 ---
 # <a name="install-c-support-in-visual-studio"></a>Instalowanie obsługi języka C++ w programie Visual Studio
 
@@ -37,9 +37,9 @@ Aby uzyskać szczegółowe informacje dotyczące miejsca na dysku i wymagania do
 
 ## <a name="visual-studio-2015-installation"></a>Instalacja programu Visual Studio 2015
 
- Aby zainstalować program Visual Studio 2015, przejdź do [pobieranie starszych wersji programu Visual Studio](https://www.visualstudio.com/vs/older-downloads/). Uruchom program instalacyjny, a następnie wybierz **Instalacja niestandardowa** , a następnie wybierz składnik C++. 
+Aby zainstalować program Visual Studio 2015, przejdź do [pobieranie starszych wersji programu Visual Studio](https://www.visualstudio.com/vs/older-downloads/). Uruchom program instalacyjny, a następnie wybierz **Instalacja niestandardowa** , a następnie wybierz składnik C++.
 
- Ogólnie rzecz biorąc zdecydowanie zaleca się użycie programu Visual Studio 2017, nawet wtedy, gdy należy przeprowadzić kompilowanie kodu przy użyciu kompilatora Visual Studio 2015. Aby uzyskać więcej informacji, zobacz [Użyj natywnej wielowersyjności kodu w programie Visual Studio do kompilacji starych projektów](../porting/use-native-multi-targeting.md).
+Ogólnie rzecz biorąc zdecydowanie zaleca się użycie programu Visual Studio 2017, nawet wtedy, gdy należy przeprowadzić kompilowanie kodu przy użyciu kompilatora Visual Studio 2015. Aby uzyskać więcej informacji, zobacz [Użyj natywnej wielowersyjności kodu w programie Visual Studio do kompilacji starych projektów](../porting/use-native-multi-targeting.md).
 
 ## <a name="visual-studio-2017-installation"></a>Instalacja programu Visual Studio 2017
 
@@ -59,13 +59,13 @@ Aby uzyskać szczegółowe informacje dotyczące miejsca na dysku i wymagania do
 
    ![Programowanie aplikacji klasycznych w języku C++](../build/media/desktop-development-with-cpp.png "programowanie aplikacji klasycznych w języku C++")
 
-    Dla języka C++, wybierz **programowanie aplikacji klasycznych w języku C++** obciążenia, a następnie wybierz **zainstalować**.
+   Dla języka C++, wybierz **programowanie aplikacji klasycznych w języku C++** obciążenia, a następnie wybierz **zainstalować**.
 
    ![Zainstaluj programowanie aplikacji klasycznych w języku C++](../build/media/vscpp-concierge-choose-workload.gif "zainstalować programowanie aplikacji klasycznych w języku C++")
 
 1. Po zakończeniu instalacji wybierz **Uruchom** przycisk, aby uruchomić program Visual Studio.
 
-   Podczas pierwszego uruchomienia programu Visual Studio, zostanie wyświetlony monit o zalogowanie Account firmy Microsoft. Jeśli nie masz, możesz go utworzyć za darmo. Należy także wybrać motyw. Nie martw się, możesz go zmienić później, jeśli chcesz. 
+   Podczas pierwszego uruchomienia programu Visual Studio, zostanie wyświetlony monit o zalogowanie Account firmy Microsoft. Jeśli nie masz, możesz go utworzyć za darmo. Należy także wybrać motyw. Nie martw się, możesz go zmienić później, jeśli chcesz.
 
    Visual Studio może potrwać kilka minut w celu przygotowania do użycia przy pierwszym uruchomieniu. Poniżej przedstawiono, jak to wygląda w ujęć poklatkowych szybkie:
 

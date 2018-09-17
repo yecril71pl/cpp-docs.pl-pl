@@ -48,12 +48,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e3ce4384ebce3140f8d3ccadf781f3d45b92340b
-ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
+ms.openlocfilehash: e9b2574010445f301a77d56adda11bff51f33267
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "42465338"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45705877"
 ---
 # <a name="cmfcvisualmanagervs2005-class"></a>Klasa CMFCVisualManagerVS2005
 `CMFCVisualManagerVS2005` Nadaje aplikacji wygląd programu Microsoft Visual Studio 2005.  
@@ -166,14 +166,14 @@ virtual void GetTabFrameColors(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *pTabWnd*  
- [in] *clrDark*  
- [in] *clrBlack*  
- [in] *clrHighlight*  
- [in] *clrFace*  
- [in] *clrDarkShadow*  
- [in] *clrLight*  
- [in] *pbrFace*  
+*pTabWnd*<br/>
+[in] [in] *clrDark*  
+*clrBlack*<br/>
+[in] [in] *clrHighlight*  
+*clrFace*<br/>
+[in] [in] *clrDarkShadow*  
+*clrLight*<br/>
+[in] [in] *pbrFace*  
  [in] *pbrBlack*  
   
 ### <a name="remarks"></a>Uwagi  
@@ -201,10 +201,10 @@ virtual void OnDrawAutoHideButtonBorder(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *podstawowego kontrolera domeny*  
- [in] *rectBounds*  
- [in] *rectBorderSize*  
- [in] *pButton*  
+*podstawowego kontrolera domeny*<br/>
+[in] [in] *rectBounds*  
+*rectBorderSize*<br/>
+[in] [in] *pButton*  
   
 ### <a name="remarks"></a>Uwagi  
   
@@ -223,12 +223,12 @@ virtual void OnDrawCaptionButton(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *podstawowego kontrolera domeny*  
- [in] *pButton*  
- [in] *bWykonywanie aktywnych*  
- [in] *bHorz*  
- [in] *bMaximized*  
- [in] *bWyłączone*  
+*podstawowego kontrolera domeny*<br/>
+[in] [in] *pButton*  
+*bWykonywanie aktywnych*<br/>
+[in] [in] *bHorz*  
+*bMaximized*<br/>
+[in] [in] *bWyłączone*  
  [in] *nImageID*  
   
 ### <a name="remarks"></a>Uwagi  
@@ -246,10 +246,10 @@ virtual COLORREF OnDrawPaneCaption(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *podstawowego kontrolera domeny*  
- [in] *pBar*  
- [in] *bWykonywanie aktywnych*  
- [in] *rectCaption*  
+*podstawowego kontrolera domeny*<br/>
+[in] [in] *pBar*  
+*bWykonywanie aktywnych*<br/>
+[in] [in] *rectCaption*  
  [in] *rectButtons*  
   
 ### <a name="return-value"></a>Wartość zwracana  
@@ -268,10 +268,10 @@ virtual void OnDrawSeparator(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *podstawowego kontrolera domeny*  
- [in] *pBar*  
- [in] *rect*  
- [in] *bIsHoriz*  
+*podstawowego kontrolera domeny*<br/>
+[in] [in] *pBar*  
+*Rect*<br/>
+[in] [in] *bIsHoriz*  
   
 ### <a name="remarks"></a>Uwagi  
   
@@ -288,10 +288,10 @@ virtual void OnDrawTab(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *podstawowego kontrolera domeny*  
- [in] *rectTab*  
- [in] *iTab*  
- [in] *bIsActive*  
+*podstawowego kontrolera domeny*<br/>
+[in] [in] *rectTab*  
+*iTab*<br/>
+[in] [in] *bIsActive*  
  [in] *pTabWnd*  
   
 ### <a name="remarks"></a>Uwagi  
@@ -306,8 +306,8 @@ virtual void OnDrawToolBoxFrame(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *podstawowego kontrolera domeny*  
- [in] *rect*  
+*podstawowego kontrolera domeny*<br/>
+[in] [in] *rect*  
   
 ### <a name="remarks"></a>Uwagi  
   
@@ -322,8 +322,8 @@ virtual void OnEraseTabsArea(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *podstawowego kontrolera domeny*  
- [in] *rect*  
+*podstawowego kontrolera domeny*<br/>
+[in] [in] *rect*  
  [in] *pTabWnd*  
   
 ### <a name="remarks"></a>Uwagi  
@@ -339,8 +339,8 @@ virtual void OnFillAutoHideButtonBackground(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *podstawowego kontrolera domeny*  
- [in] *rect*  
+*podstawowego kontrolera domeny*<br/>
+[in] [in] *rect*  
  [in] *pButton*  
   
 ### <a name="remarks"></a>Uwagi  
@@ -357,10 +357,10 @@ virtual void OnFillHighlightedArea(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *podstawowego kontrolera domeny*  
- [in] *rect*  
- [in] *pBrush*  
- [in] *pButton*  
+*podstawowego kontrolera domeny*<br/>
+[in] [in] *rect*  
+*pBrush*<br/>
+[in] [in] *pButton*  
   
 ### <a name="remarks"></a>Uwagi  
   
@@ -376,10 +376,10 @@ virtual COLORREF OnFillMiniFrameCaption(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *podstawowego kontrolera domeny*  
- [in] *rectCaption*  
- [in] *pFrameWnd*  
- [in] *bWykonywanie aktywnych*  
+*podstawowego kontrolera domeny*<br/>
+[in] [in] *rectCaption*  
+*pFrameWnd*<br/>
+[in] [in] *bWykonywanie aktywnych*  
   
 ### <a name="return-value"></a>Wartość zwracana  
   

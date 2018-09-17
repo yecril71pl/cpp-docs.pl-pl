@@ -19,12 +19,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ca7a39149969b7e85685930d6e901bf81db99d64
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: d14d00e57cbbb04c77f0b84c584ebb1c4f4260e5
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43759405"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45703212"
 ---
 # <a name="iserviceproviderimpl-class"></a>Klasa IServiceProviderImpl
 
@@ -83,14 +83,14 @@ STDMETHOD(QueryService)(
 
 ### <a name="parameters"></a>Parametry
 
-[IN] *guidService*  
-Wskaźnik do identyfikator usług (SID).
+*guidService*<br/>
+[in] Wskaźnik do identyfikator usług (SID).
 
-[IN] *riid*  
-Identyfikator interfejsu, do którego ma dostęp obiekt wywołujący.
+*Parametr riid*<br/>
+[in] Identyfikator interfejsu, do którego ma dostęp obiekt wywołujący.
 
-[OUT] *ppvObj*  
-Pośredni wskaźnik do żądanego interfejsu.
+*ppvObj*<br/>
+[out] Pośredni wskaźnik do żądanego interfejsu.
 
 ### <a name="return-value"></a>Wartość zwracana
 

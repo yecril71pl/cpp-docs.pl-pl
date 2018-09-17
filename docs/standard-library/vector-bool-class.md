@@ -25,12 +25,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d5f0d38ebd24c38579f73bceea0fff50ab361638
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: b158f6bedd2dba2d65f7b0778758eafe08e88851
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38962783"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45702913"
 ---
 # <a name="vectorltboolgt-class"></a>Wektor&lt;bool&gt; klasy
 
@@ -293,11 +293,11 @@ reference& operator=(bool Val);
 
 ### <a name="parameters"></a>Parametry
 
-*Po prawej stronie*  
- Odwołanie elementu, którego wartość ma być przypisana do bitu.
+*po prawej stronie*<br/>
+Odwołanie elementu, którego wartość ma być przypisana do bitu.
 
-*Val*  
- Wartość logiczna, który ma być przypisana do bitu.
+*Val*<br/>
+Wartość logiczna, który ma być przypisana do bitu.
 
 #### <a name="example"></a>Przykład
 
@@ -382,11 +382,11 @@ static void swap(
 
 ### <a name="parameters"></a>Parametry
 
-*Po lewej stronie*  
- Element wymieniane z *po prawej stronie* elementu.
+*po lewej stronie*<br/>
+Element wymieniane z *po prawej stronie* elementu.
 
-*Po prawej stronie*  
- Element wymieniane z *po lewej stronie* elementu.
+*po prawej stronie*<br/>
+Element wymieniane z *po lewej stronie* elementu.
 
 ### <a name="remarks"></a>Uwagi
 

@@ -16,15 +16,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8e0436dbbc75690d38b5930a491b7058ee095341
-ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
+ms.openlocfilehash: 1c8b1466eae343b6c644b6ecfbd919c3241259bf
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33692288"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45705968"
 ---
 # <a name="parallel"></a>równoległe
-Definiuje równoległego regionu jest kod, który zostanie wykonane przez wiele wątków jednocześnie.  
+Definiuje równoległego regionu, czyli kodu wykonywanego przez wiele wątków jednocześnie.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -35,14 +35,13 @@ Definiuje równoległego regionu jest kod, który zostanie wykonane przez wiele 
 }  
 ```  
   
-## <a name="remarks"></a>Uwagi  
- w przypadku gdy  
+## <a name="arguments"></a>Argumenty
+
+*Klauzula*<br/>
+(Opcjonalnie) Zero lub więcej klauzul.  Zobacz sekcję Spostrzeżenia, aby uzyskać listę klauzul obsługiwane przez **równoległe**.  
   
- `clause` (opcjonalnie)  
- Klauzule zero lub więcej.  Zobacz sekcję uwag listę klauzule obsługiwane przez **równoległych**.  
-  
 ## <a name="remarks"></a>Uwagi  
- **Równoległych** dyrektywy obsługuje następujące klauzule OpenMP:  
+ **Równoległe** dyrektywy obsługuje następujące klauzule OpenMP:  
   
 -   [copyin](../../../parallel/openmp/reference/copyin.md)  
   
@@ -58,14 +57,14 @@ Definiuje równoległego regionu jest kod, który zostanie wykonane przez wiele 
   
 -   [reduction](../../../parallel/openmp/reference/reduction.md)  
   
--   [udostępnione](../../../parallel/openmp/reference/shared-openmp.md)  
+-   [Udostępnione](../../../parallel/openmp/reference/shared-openmp.md)  
   
- **równoległe** można również używać razem [sekcje](../../../parallel/openmp/reference/sections-openmp.md) i [dla](../../../parallel/openmp/reference/for-openmp.md) dyrektywy.  
+ **równoległe** może również służyć za pomocą [sekcje](../../../parallel/openmp/reference/sections-openmp.md) i [dla](../../../parallel/openmp/reference/for-openmp.md) dyrektywy.  
   
  Aby uzyskać więcej informacji, zobacz [2.3 konstrukcja równoległa](../../../parallel/openmp/2-3-parallel-construct.md).  
   
 ## <a name="example"></a>Przykład  
- Poniższy przykład pokazuje, jak ustawić liczbę wątków i zdefiniowanie równoległego regionu. Domyślnie to liczba wątków jest równa liczbie procesorów logicznych na tym komputerze. Na przykład jeśli masz maszyny z jednego procesora fizycznego, który ma treading, będzie mieć dwa procesory logiczne oraz, w związku z tym dwoma wątkami.  
+ Poniższy przykład pokazuje, jak ustawić liczbę wątków i zdefiniuj równoległego regionu. Domyślnie liczba wątków jest równa liczbie procesorów logicznych na maszynie. Na przykład jeśli masz maszyny z jednego procesora fizycznego, który ma włączoną wielowątkowość, ma dwa procesory logiczne, a więc dwoma wątkami.  
   
 ```  
 // omp_parallel.cpp  
@@ -90,7 +89,7 @@ Hello from thread 3
 ```  
   
 ## <a name="comment"></a>Komentarz  
- Należy pamiętać, że kolejność danych wyjściowych może różnić się na różnych komputerach.  
+ Należy pamiętać, że kolejność danych wyjściowych może się różnić na różnych maszynach.  
   
 ## <a name="see-also"></a>Zobacz też  
  [Dyrektywy](../../../parallel/openmp/reference/openmp-directives.md)

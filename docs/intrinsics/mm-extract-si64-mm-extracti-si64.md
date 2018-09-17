@@ -19,17 +19,18 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a8ba4986abf097a5827d3db7f93dbbd0a9640862
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 0d4db2fa67924a6925a19d2714c604f2c9aaa4e7
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33331457"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45705656"
 ---
 # <a name="mmextractsi64-mmextractisi64"></a>_mm_extract_si64, _mm_extracti_si64
+
 **Microsoft Specific**  
   
- Generuje `extrq` instrukcji do wyodrębnienia określonym usługi bits z niskim 64-bitowy pierwszego argumentu.  
+Generuje `extrq` instrukcji do wyodrębnienia określonym usługi bits z niskim 64-bitowy swój pierwszy argument.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -46,38 +47,38 @@ __m128i _mm_extracti_si64(
 ```  
   
 #### <a name="parameters"></a>Parametry  
- [in] `Source`  
- Pole 128-bitowego z danych wejściowych w jego dolnej 64-bitowy.  
+*Źródło*<br/>
+[in] Pole 128-bitowego z danymi wejściowymi w jej dolnej 64-bitowy.  
   
- [in]  `Descriptor`  
- Pole 128-bitowego, opisujący pola bitowego do wyodrębnienia.  
+*Deskryptor*<br/>
+[in] Pole 128-bitowego, opisujący pola bitowego do wyodrębnienia.  
   
- [in]  `Length`  
- Liczba całkowita określająca długość pola do wyodrębnienia.  
+*Długość*<br/>
+[in] Liczba całkowita określająca długość pola do wyodrębnienia.  
   
- [in]  `Index`  
- Liczba całkowita określająca indeks pola do wyodrębnienia  
+*Index*<br/>
+[in] Liczba całkowita określająca indeks pola do wyodrębnienia  
   
 ## <a name="return-value"></a>Wartość zwracana  
- Pole 128-bitowego z polem wyodrębnione w jego najmniej znaczących bitów.  
+ Pole 128-bitowego na wyodrębniony pole z jego najmniej znaczące bity.  
   
 ## <a name="requirements"></a>Wymagania  
   
-|— Wewnętrzne|Architektura|  
+|Wewnętrzne|Architektura|  
 |---------------|------------------|  
 |`_mm_extract_si64`|SSE4a|  
 |`_mm_extracti_si64`|SSE4a|  
   
- **Plik nagłówka** \<intrin.h >  
+ **Plik nagłówkowy** \<intrin.h >  
   
 ## <a name="remarks"></a>Uwagi  
- Generuje tym wewnętrzna `extrq` instrukcji do wyodrębnienia usługi bits z `Source`. Istnieją dwie wersje tego wewnętrzne: `_mm_extracti_si64` jest natychmiastowe wersja i `_mm_extract_si64` jest — natychmiastowe.  Każda wersja wyodrębnia z `Source` pola bitowego zdefiniowany przez jego długość i indeks jego bitem. Wartości długości i indeksu są pobierane mod 64, w związku z tym zarówno wartość -1 do 127 będą interpretowane jako 63. Jeśli sum (mniejsze) indeks i długość pola (zmniejszenie) jest większa niż 64, wyniki są niezdefiniowane. Wartość zerowa długość pola jest interpretowany jako 64. Jeśli indeks długość i bitowe pola są obie zerowe, 63:0 usługi bits z `Source` są wyodrębniane. Jeśli długość pola wynosi zero, ale indeks bit jest różna od zera, wyniki są niezdefiniowane.  
+ Generuje tym wewnętrzne `extrq` instrukcji do wyodrębnienia bitów z `Source`. Wewnętrzne są dwie wersje to: `_mm_extracti_si64` jest natychmiastowe wersji, a `_mm_extract_si64` jest — natychmiastowe.  Każda wersja wyodrębnia z `Source` polem bitowym zdefiniowany przez jego długość i indeks jego najmniej znaczący bit. Wartości długości i indeksu są pobierane mod 64, zatem zarówno wartość -1 do 127, są interpretowane jako 63. Jeśli suma liczby (mniejsze) indeks i długość pola (mniejsze) jest większa niż 64, wyniki są niezdefiniowane. Wartość zerowa długość pola jest interpretowany jako 64. W przypadku pola długości i bitowe indeksu zarówno zero, usługa bits 63:0 z `Source` zostały wyodrębnione. Jeśli długość pola wynosi zero, ale indeks bit jest różna od zera, wyniki są niezdefiniowane.  
   
- W wywołaniu _mm_extract_si64 `Descriptor` zawiera indeks w 13:8 bitów i długość pola danych do wyodrębnienia w bitach 5:0..  
+ W wywołaniu _mm_extract_si64 `Descriptor` zawiera indeks 13:8 bitów i długość pola danych, który ma zostać wyodrębniony w bitach 5:0..  
   
- Jeśli należy wywołać `_mm_extracti_si64` z argumentami, że kompilator nie można określić jako stałe całkowite kompilator generuje kod, aby pakiet tych wartości w rejestrze XMM (`Descriptor`) oraz wywołanie `_mm_extract_si64`.  
+ Jeśli wywołasz `_mm_extracti_si64` z argumentami, że kompilator nie można określić jako stałe całkowite kompilator generuje kod, umieszczenie tych wartości w rejestrze XMM (`Descriptor`) oraz wywołanie `_mm_extract_si64`.  
   
- Aby określić obsługę sprzętu `extrq` instrukcji, wywołanie `__cpuid` wewnętrzne z `InfoType=0x80000001` i sprawdź bit 6 `CPUInfo[2] (ECX)`. Ten bit będzie 1, jeśli instrukcja jest obsługiwana i 0 w inny sposób. Jeśli uruchamianie kodu, który używa tego wewnętrzne sprzętu, który nie obsługuje `extrq` instrukcji są nieprzewidywalne wyniki.  
+ Aby określić, pomoc techniczna dotycząca sprzętu dla `extrq` instrukcji, wywołanie `__cpuid` wewnętrzne z `InfoType=0x80000001` i sprawdź bit 6 `CPUInfo[2] (ECX)`. Ten bit będzie 1, jeśli instrukcja jest obsługiwana lub 0 w inny sposób. Jeśli można uruchomić kod, który używa tego wewnętrzne sprzętu, który nie obsługuje `extrq` instrukcji, wyniki są nieprzewidywalne.  
   
 ## <a name="example"></a>Przykład  
   
@@ -114,8 +115,9 @@ result2 = 0x30eca86
 result3 = 0x30eca86  
 ```  
   
-**KOŃCOWY określonych firmy Microsoft**  
- Copyright 2007 zaawansowane Micro urządzeń, Inc. Wszelkie prawa zastrzeżone. Odtworzyć z uprawnieniem z zaawansowanymi Micro urządzeń, Inc.  
+**END specyficzny dla Microsoft**
+
+Copyright 2007 zaawansowane Micro urządzeń, Inc. Wszelkie prawa zastrzeżone. Odtworzyć zgoda zaawansowane Micro urządzeń, Inc.  
   
 ## <a name="see-also"></a>Zobacz też  
  [_mm_insert_si64, _mm_inserti_si64](../intrinsics/mm-insert-si64-mm-inserti-si64.md)   

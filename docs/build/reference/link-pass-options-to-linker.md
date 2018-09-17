@@ -1,5 +1,5 @@
 ---
-title: -link (przebiegu opcje do konsolidatora) | Dokumentacja firmy Microsoft
+title: -link (przepuść opcje do konsolidatora) | Dokumentacja firmy Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -21,43 +21,47 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5b22e21022162a0f9f75e41e3e0bfdce348947e1
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 663407e4948ebc4e3c0a1676c44e8d2b4bd53fcc
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32373296"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45704122"
 ---
 # <a name="link-pass-options-to-linker"></a>/link (Przepuść opcje do konsolidatora)
-Przekazuje jedną lub więcej opcji konsolidatora do konsolidatora.  
-  
-## <a name="syntax"></a>Składnia  
-  
-```  
-/link linkeroptions  
-```  
-  
-## <a name="arguments"></a>Argumenty  
- `linkeroptions`  
- — Opcja konsolidatora lub opcje do przekazania do konsolidatora.  
-  
-## <a name="remarks"></a>Uwagi  
- **/Link** opcja i jego opcje konsolidatora muszą występować po dowolnej nazwy pliku i opcji CL. Odstęp jest wymagany między **/link** i `linkeroptions`. Aby uzyskać więcej informacji, zobacz [Ustawianie opcji konsolidatora](../../build/reference/setting-linker-options.md).  
-  
-### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Aby ustawić tę opcję kompilatora w środowisku programowania Visual Studio  
-  
-1.  Otwórz projekt **strony właściwości** okno dialogowe. Aby uzyskać więcej informacji, zobacz [Praca z właściwościami projektu](../../ide/working-with-project-properties.md).  
-  
-2.  Kliknij przycisk **konsolidatora** folderu.  
-  
-3.  Kliknij przycisk strony właściwości konsolidatora.  
-  
-4.  Zmodyfikuj co najmniej jednej właściwości.  
-  
-### <a name="to-set-this-compiler-option-programmatically"></a>Aby programowo ustawić tę opcję kompilatora  
-  
--   Nie można zmienić tej opcji kompilatora programowo.  
-  
-## <a name="see-also"></a>Zobacz też  
- [Opcje kompilatora](../../build/reference/compiler-options.md)   
- [Ustawianie opcji kompilatora](../../build/reference/setting-compiler-options.md)
+
+Przekazuje co najmniej jedną opcję konsolidatora do konsolidatora.
+
+## <a name="syntax"></a>Składnia
+
+```
+/link linkeroptions
+```
+
+## <a name="arguments"></a>Argumenty
+
+*linkeroptions*<br/>
+— Opcja konsolidatora lub Opcje przekazywane do konsolidatora.
+
+## <a name="remarks"></a>Uwagi
+
+**/Link** opcji wraz z opcjami konsolidatora muszą występować po dowolnej nazwy plików i opcji CL. Obszar jest wymagany między **/link** i `linkeroptions`. Aby uzyskać więcej informacji, zobacz [Ustawianie opcji konsolidatora](../../build/reference/setting-linker-options.md).
+
+### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Aby ustawić tę opcję kompilatora w środowisku programowania Visual Studio
+
+1. Otwórz projekt **stron właściwości** okno dialogowe. Aby uzyskać więcej informacji, zobacz [Praca z właściwościami projektu](../../ide/working-with-project-properties.md).
+
+1. Kliknij przycisk **konsolidatora** folderu.
+
+1. Kliknij stronę właściwości konsolidatora.
+
+1. Zmodyfikuj jedną lub więcej właściwości.
+
+### <a name="to-set-this-compiler-option-programmatically"></a>Aby programowo ustawić tę opcję kompilatora
+
+- Nie można programowo zmienić tę opcję kompilatora.
+
+## <a name="see-also"></a>Zobacz też
+
+[Opcje kompilatora](../../build/reference/compiler-options.md)<br/>
+[Ustawianie opcji kompilatora](../../build/reference/setting-compiler-options.md)

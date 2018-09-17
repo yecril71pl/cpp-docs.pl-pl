@@ -20,12 +20,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ac06722b675af5e8ac8d4136cc2938ac772befc9
-ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
+ms.openlocfilehash: 9c519d4f6d903453ce9fea6965a8f954243bab97
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/05/2018
-ms.locfileid: "37848586"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45703836"
 ---
 # <a name="cmfcribbonlabel-class"></a>Klasa CMFCRibbonLabel
 Implementuje etykietę tekstową nieinteraktywną na Wstążce.  
@@ -80,11 +80,11 @@ CMFCRibbonLabel(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *lpszText*  
- Tekst wyświetlany w etykiecie.  
+*lpszText*<br/>
+[in] Tekst wyświetlany w etykiecie.  
   
- [in] *bIsMultiLine*  
- Wartość TRUE, aby określić, że etykieta jest etykieta wielowierszowe; w przeciwnym razie wartość FALSE.  
+*bIsMultiLine*<br/>
+[in] Wartość TRUE, aby określić, że etykieta jest etykieta wielowierszowe; w przeciwnym razie wartość FALSE.  
   
 ##  <a name="setaccdata"></a>  CMFCRibbonLabel::SetACCData  
  Określa dane ułatwień dostępu dla bieżącego elementu wstążki w etykiecie.  
@@ -96,11 +96,11 @@ virtual BOOL SetACCData(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *pParent*  
- Reprezentuje okno nadrzędne bieżącej etykiety wstążki.  
+*pParent*<br/>
+[in] Reprezentuje okno nadrzędne bieżącej etykiety wstążki.  
   
- [out] *danych*  
- Obiekt typu `CAccessibilityData` , jest wypełniana danymi dostępności bieżącej etykiety wstążki.  
+*Dane*<br/>
+[out] Obiekt typu `CAccessibilityData` , jest wypełniana danymi dostępności bieżącej etykiety wstążki.  
   
 ### <a name="return-value"></a>Wartość zwracana  
  Wartość TRUE, jeśli *danych* parametr został pomyślnie wypełnione danymi ułatwień dostępu w bieżącej etykiety wstążki; w przeciwnym razie FALSE.  

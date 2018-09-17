@@ -32,12 +32,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 77762fe12ed74f11f0b7e633f2a0c77523a7efaa
-ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
+ms.openlocfilehash: aae4caaa73970818a4c3deee9a82b94260629e17
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/05/2018
-ms.locfileid: "37849792"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45700917"
 ---
 # <a name="cmfcmenubutton-class"></a>Klasa CMFCMenuButton
 Przycisk, który wyświetla wyskakujące menu, a także sprawozdania wybory menu użytkownika.  
@@ -167,8 +167,8 @@ virtual BOOL PreTranslateMessage(MSG* pMsg);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *pMsg*  
- Wskazuje [MSG](../../mfc/reference/msg-structure1.md) strukturę, która zawiera komunikat, który ma przetwarzać.  
+*pMsg*<br/>
+[in] Wskazuje [MSG](../../mfc/reference/msg-structure1.md) strukturę, która zawiera komunikat, który ma przetwarzać.  
   
 ### <a name="return-value"></a>Wartość zwracana  
  Wartość różną od zera, jeśli komunikat został przetłumaczony i nie powinny być wysyłane; 0, jeśli wiadomość nie została przekonwertowana i powinny być wysyłane.  
@@ -183,8 +183,8 @@ virtual CSize SizeToContent(BOOL bCalcOnly = FALSE);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *bCalcOnly*  
- Parametr logiczny, który wskazuje, czy ta metoda zmienia rozmiar przycisku.  
+*bCalcOnly*<br/>
+[in] Parametr logiczny, który wskazuje, czy ta metoda zmienia rozmiar przycisku.  
   
 ### <a name="return-value"></a>Wartość zwracana  
  A [CSize](../../atl-mfc-shared/reference/csize-class.md) obiekt, który określa nowy rozmiar przycisku.  

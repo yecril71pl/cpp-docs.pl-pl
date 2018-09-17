@@ -1,5 +1,5 @@
 ---
-title: marshal_as — | Dokumentacja firmy Microsoft
+title: marshal_as | Dokumentacja firmy Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -19,15 +19,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: ebca4a94fa48feb4ff5fb897293303a395ac4eb8
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 2f57db502be6e34d275e3aba0e7705992b3c4d0d
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33133782"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45701626"
 ---
 # <a name="marshalas"></a>marshal_as
-Ta metoda konwertuje dane między środowiskach natywnych i zarządzanych.  
+Ta metoda konwertuje dane między środowiskami macierzystymi i zarządzanymi.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -38,21 +38,21 @@ To_Type marshal_as<To_Type>(
 ```  
   
 #### <a name="parameters"></a>Parametry  
- [in] `input`  
- Wartość, która ma być kierować do `To_Type` zmiennej.  
+*Dane wejściowe*<br/>
+[in] Wartość, którą chcesz kierować do `To_Type` zmiennej.  
   
 ## <a name="return-value"></a>Wartość zwracana  
- Zmienna typu `To_Type` czyli przekonwertowanego wartość `input`.  
+ Zmienna typu `To_Type` oznacza to przekonwertowana wartości `input`.  
   
 ## <a name="remarks"></a>Uwagi  
- Ta metoda jest uproszczony sposób konwertowania danych między typami natywnych i zarządzanych. Aby ustalić, jakie typy danych są obsługiwane, zobacz [omówienie z Marshalingu w języku C++](../dotnet/overview-of-marshaling-in-cpp.md). Konwersje niektórych danych wymaga kontekstu. Możesz przekształcić tych typów danych przy użyciu [marshal_context — klasa](../dotnet/marshal-context-class.md).  
+ Ta metoda jest uproszczony sposób konwertowania danych między typami macierzystym i zarządzanym. Aby określić, jakie typy danych są obsługiwane, zobacz [Overview of Marshaling w C++](../dotnet/overview-of-marshaling-in-cpp.md). Konwersje niektórych danych wymaga kontekstu. Te typy danych można przekonwertować, używając [marshal_context Class](../dotnet/marshal-context-class.md).  
   
- Jeśli spróbujesz kierować dwa typy danych, które nie są obsługiwane, `marshal_as` wygeneruje błąd [C4996](../error-messages/compiler-warnings/compiler-warning-level-3-c4996.md) w czasie kompilacji. Przeczytaj wiadomość dostarczona dotyczącą tego błędu, aby uzyskać więcej informacji. `C4996` Błędu mogą być generowane dla więcej niż tylko przestarzałych funkcji. Przykładem jest próby skierowania dwa typy danych, które nie są obsługiwane.  
+ Jeśli zostanie podjęta próba kierować dwa typy danych, które nie są obsługiwane, `marshal_as` spowoduje wygenerowanie błędu [C4996](../error-messages/compiler-warnings/compiler-warning-level-3-c4996.md) w czasie kompilacji. Przeczytaj wiadomości podano dotyczącą tego błędu, aby uzyskać więcej informacji. `C4996` Błędu mogą być generowane dla więcej niż tylko przestarzałych funkcji. Przykładem takiej próby kierować dwa typy danych, które nie są obsługiwane.  
   
- Biblioteka organizowania składa się z kilku plików nagłówka. Wszelkie konwersja wymaga tylko jednego pliku, ale może zawierać dodatkowe pliki, jeśli zachodzi konieczność dla innych konwersji. Konwersje, które są skojarzone z pliki, które obejrzeć w tabeli w `Marshaling Overview`. Niezależnie od tego jaki konwersji chcesz zrobić, obszaru nazw wymagane jest zawsze efektu.  
+ Biblioteka dotycząca organizowania składa się z kilku plików nagłówkowych. Każda konwersja wymaga tylko jednego pliku, ale może zawierać dodatkowe pliki, jeśli potrzebujesz, w przypadku innych konwersji. Aby zobaczyć, jakie konwersje są skojarzone z plików, Szukaj w tabeli w `Marshaling Overview`. Niezależnie od tego konwersji, jakie chcesz zrobić, wymaganie przestrzeni nazw jest zawsze w obiekcie.  
   
 ## <a name="example"></a>Przykład  
- W tym przykładzie marshals z `const char*` do `System::String` typu zmiennej.  
+ W tym przykładzie kieruje z `const char*` do `System::String` typ zmiennej.  
   
 ```  
 // marshal_as_test.cpp  

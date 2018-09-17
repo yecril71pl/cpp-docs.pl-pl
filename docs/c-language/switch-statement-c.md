@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 71fa5ae717963d8ab2afc0b290bb42a3de72c0b6
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 5d5a4598a83c448a36750dc1aac6b4a22ef3513f
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43760360"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45704356"
 ---
 # <a name="switch-statement-c"></a>switch — instrukcja (C)
 `switch` i **przypadek** instrukcji pomocy złożonych warunkowe i rozgałęzień operacje kontroli. `switch` Instrukcji przekazuje sterowanie do instrukcji w swojej treści.  
@@ -39,18 +39,20 @@ Kontrola przechodzi do instrukcji, których **przypadek** *wyrażenie_stałe* od
   
 Korzystanie z `switch` instrukcji zwykle wygląda następująco:  
 
-**Przełącz** ( *wyrażenie* )  
-**{**  
-&nbsp;&nbsp;&nbsp;&nbsp;*Deklaracje*  
-&nbsp;&nbsp;&nbsp;&nbsp;/\* . . . \*/  
-&nbsp;&nbsp;&nbsp;&nbsp;**przypadek** *wyrażenie_stałe* **:**  
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;/\* instrukcje wykonywane, jeśli wyrażenie jest równe \*/  
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;/\* wartość tego wyrażenia — stała \*/  
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**Przerwij;**  
-&nbsp;&nbsp;&nbsp;&nbsp;**Wartość domyślna:**  
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;/\* instrukcje wykonywane, jeśli wyrażenie nie jest równa. \*/  
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;/\* wszelkie case wyrażenia stałego \*/  
-**}**
+```C
+switch ( expression )
+{
+    // declarations
+    // . . .
+    case constant_expression:
+        // statements executed if the expression equals the
+        // value of this constant_expression
+        break;
+    default:
+        // statements executed if expression does not equal
+        // any case constant_expression
+}
+```
 
 Możesz użyć **podziału** instrukcję, aby zakończyć przetwarzanie określonego wielkość liter w obrębie `switch` instrukcji i gałęzi do końca `switch` instrukcji. Bez **podziału**, program przechodzi do następnego wystąpienia case wykonywania instrukcji do momentu **podziału** lub osiągnięty zostanie koniec instrukcji. W niektórych sytuacjach może być pożądane kontynuacji.
 

@@ -12,15 +12,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: cd7cbf955fbf795d06d9cd2448d0736dc435f3b5
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 7285325bf1a934afcef337da318d019ec6fe375c
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32367163"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45706813"
 ---
 # <a name="floating-point-support-for-older-code-visual-c"></a>Obsługa modelu zmiennoprzecinkowego w przypadku starszego kodu (Visual C++)
-MMX i rejestrów zmiennoprzecinkowych stosu (MM0-MM7/ST0-ST7) są zachowywane między przełączeń kontekstu.  Nie ma żadnych jawnej konwencji wywoływania dla tych rejestrów.  Użyj tych rejestrów jest zabronione w kod trybu jądra.  
-  
-## <a name="see-also"></a>Zobacz też  
- [Konwencja wywoływania](../build/calling-convention.md)
+
+MMX i rejestruje stosu zmiennoprzecinkowego (MM0-MM7/ST0-ST7) są zachowywane między przełączeń kontekstu.  Nie ma żadnych jawnej konwencji wywoływania dla tych rejestrów.  Korzystanie z tych rejestrów jest bezwzględnie zabronione w kod trybu jądra.
+
+## <a name="see-also"></a>Zobacz też
+
+[Konwencja wywoływania](../build/calling-convention.md)

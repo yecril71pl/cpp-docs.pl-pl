@@ -1,5 +1,5 @@
 ---
-title: '/ Zc: trigraphs (podstawianie trigramów) | Dokumentacja firmy Microsoft'
+title: '/ Zc: trigraphs (podstawianie Trigramów) | Dokumentacja firmy Microsoft'
 ms.custom: ''
 ms.date: 03/06/2018
 ms.technology:
@@ -19,36 +19,36 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3e465b62944b360d6fdb09da1230f3353658437b
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: ce8c9d13fa062ddac0f31eac0e20fba1266c7a8c
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32379874"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45707736"
 ---
 # <a name="zctrigraphs-trigraphs-substitution"></a>/Zc:trigraphs (Podstawianie trigramów)
 
-Gdy **/Zc: trigraphs** określono kompilator zastępuje sekwencja znaków — trigram przy użyciu odpowiedniego znak interpunkcyjny.
+Gdy **/Zc: trigraphs** jest określony, kompilator zamienia na sekwencję znaków — trigram przy użyciu odpowiedniego znaku interpunkcji.
 
 ## <a name="syntax"></a>Składnia
 
-> **/ Zc: trigraphs**[**-**]  
+> **/ Zc: trigraphs**[**-**]
 
 ## <a name="remarks"></a>Uwagi
 
-A *— trigram* składa się z dwóch następujących po sobie znaki zapytania ("?") następuje znak trzeci unikatowy. Standard języka C obsługuje trigramów dla plików źródłowych, które używają zestawu znaków, która nie zawiera graficzne przedstawienie wygodny dla niektórych znaków interpunkcyjnych. Na przykład, gdy trigramów są włączone, kompilator zastępuje "? = "— trigram za pomocą znaku"#". Za pomocą języka C ++ 14 trigramów są obsługiwane, jak C. C ++ 17 standardowe usuwa trigramów języka C++. W kodzie C++ **/Zc: trigraphs** — opcja kompilatora umożliwia zastąpienie sekwencji — trigram przez odpowiedni znak interpunkcyjny. **/Zc:trigraphs-** wyłącza — trigram podstawienia.
+A *trójznaków* składa się z dwóch następujących po sobie znaki zapytania ("??") następuje znak trzeci unikatowy. Standard języka C obsługuje trójznaków dla plików źródłowych, które używają zestawu znaków, który nie zawiera wygodnych reprezentacji graficznych dla niektórych znaków interpunkcyjnych. Na przykład, gdy trójznaków są włączone, kompilator zastępuje "? = "trójznaków za pomocą znaku"#". Za pomocą języka C ++ 14 trójznaków są obsługiwane w C. C ++ 17 standardowa usuwa trójznaków z języka C++. W przypadku kodu C++ **/Zc: trigraphs** — opcja kompilatora umożliwia zastąpienie sekwencje trójznakowe przez odpowiedni znak interpunkcyjny. **/Zc:trigraphs-** wyłącza podstawienia trójznaków.
 
-**/Zc: trigraphs** opcja jest domyślnie wyłączona i nie jest opcją wpływ, kiedy [/ ograniczająca-](permissive-standards-conformance.md) określono opcję.
+**/Zc: trigraphs** opcja jest domyślnie wyłączona i nie dotyczy, kiedy [/ permissive-](permissive-standards-conformance.md) określono opcję.
 
-Aby uzyskać listę trigramów C/C++ oraz przykład przedstawia sposób użycia trigramów, zobacz [Trigramów](../../c-language/trigraphs.md).
+Aby uzyskać listę trójznaków C/C++ i przykładowi, który pokazuje, jak używać trójznaków, zobacz [Trójznaków](../../c-language/trigraphs.md).
 
 ## <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Aby ustawić tę opcję kompilatora w środowisku programowania Visual Studio
 
-1. Otwórz projekt **strony właściwości** okno dialogowe. Aby uzyskać więcej informacji, zobacz [Praca z właściwościami projektu](../../ide/working-with-project-properties.md).
+1. Otwórz projekt **stron właściwości** okno dialogowe. Aby uzyskać więcej informacji, zobacz [Praca z właściwościami projektu](../../ide/working-with-project-properties.md).
 
-1. Wybierz **właściwości konfiguracji** > **C/C++** > **wiersza polecenia** strony właściwości.
+1. Wybierz **właściwości konfiguracji** > **C/C++** > **wiersza polecenia** stronę właściwości.
 
-1. Modyfikowanie **dodatkowe opcje** właściwości, aby uwzględnić **/Zc: trigraphs** lub **/Zc:trigraphs-** , a następnie wybierz **OK**.
+1. Modyfikowanie **dodatkowe opcje** właściwości do uwzględnienia **/Zc: trigraphs** lub **/Zc:trigraphs-** , a następnie wybierz **OK**.
 
 ## <a name="see-also"></a>Zobacz także
 

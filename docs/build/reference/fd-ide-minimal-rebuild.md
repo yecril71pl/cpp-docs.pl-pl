@@ -18,19 +18,21 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 18e31955b131e4ca22d23013565e53f83493275d
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 74fb35ec25bed808e2165498c00b65723aba5bac
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32373403"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45702445"
 ---
 # <a name="fd-ide-minimal-rebuild"></a>/FD (Minimalna ponowna kompilacja IDE)
-**/FD** nie jest widoczne dla użytkowników z wyjątkiem w [wiersza polecenia](../../ide/command-line-property-pages.md) strony właściwości projektu C++ **strony właściwości** okna dialogowego, w przypadku i tylko wtedy, gdy [/GM ponowną (Włącz minimalnego odbudować)](../../build/reference/gm-enable-minimal-rebuild.md) nie wybrano również. **/FD** nie obowiązuje, innego niż ze środowiska projektowego. **/FD** nie jest widoczna w danych wyjściowych **cl /?**.  
-  
- Jeśli nie włączysz **/GM ponowną** w środowisku programistycznym **/FD** będą używane. **/FD** gwarantuje, że plik .idb ma wystarczające informacji o zależnościach. **/FD** jest używana tylko przez środowisko deweloperskie i nie powinna być używana z wiersza polecenia lub skryptu kompilacji.  
-  
-## <a name="see-also"></a>Zobacz też  
- [Plik wyjściowy (/ F) opcje](../../build/reference/output-file-f-options.md)   
- [Opcje kompilatora](../../build/reference/compiler-options.md)   
- [Ustawianie opcji kompilatora](../../build/reference/setting-compiler-options.md)
+
+**/FD** nie jest widoczne dla użytkowników z wyjątkiem w [wiersza polecenia](../../ide/command-line-property-pages.md) strony właściwości projektu C++ **stron właściwości** okno dialogowe, w przypadku i tylko wtedy, gdy [/Gm (Włącz minimalną ponowną kompilację)](../../build/reference/gm-enable-minimal-rebuild.md) również nie jest zaznaczone. **/FD** nie obowiązuje, innego niż ze środowiska projektowego. **/FD** nie jest widoczny w danych wyjściowych **cl /?**.
+
+Jeśli nie włączysz **/Gm** w środowisku programistycznym **/FD** będą używane. **/FD** gwarantuje, że plik .idb ma wystarczające informacje o zależnościach. **/FD** jest używana tylko przez środowisko programistyczne i nie powinny być używane z wiersza polecenia lub skryptu kompilacji.
+
+## <a name="see-also"></a>Zobacz też
+
+[Plik wyjściowy (/ F) opcje](../../build/reference/output-file-f-options.md)
+[opcje kompilatora](../../build/reference/compiler-options.md)<br/>
+[Ustawianie opcji kompilatora](../../build/reference/setting-compiler-options.md)

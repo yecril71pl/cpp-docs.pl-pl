@@ -12,35 +12,37 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5e2a5af5d8db5974aa10595bbd3bac1cd032a0f4
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 294353baf8c15818ba836bd3093226a78aa6e44c
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32382026"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45700664"
 ---
 # <a name="unwind-procedure"></a>Procedura Unwind
-Tablica kodu unwind jest sortowany w kolejności malejącej. Po wystąpieniu wyjątku, pełną kontekst jest przechowywany przez system operacyjny w rekordu kontekstu. Następnie wywoływana jest logiki wysyłania wyjątek, który wielokrotnie wykonuje następujące czynności, aby znaleźć obsługi wyjątków.  
-  
-1.  Służy bieżącego RIP przechowywane w rekordu kontekstu do wyszukiwania dla wpisu tabeli RUNTIME_FUNCTION opisujący bieżącej funkcji (lub części funkcji, w przypadku wpisów UNWIND_INFO łańcuchowa).  
-  
-2.  Jeśli funkcja wpisu tabeli zostanie znaleziony, się ona w funkcją typu liść, a źródło bezpośrednio zajmie zwracany wskaźnika. Wskaźnik zwracany u [źródło] jest przechowywana w kontekście zaktualizowane, symulowane źródło jest zwiększany o 8 i jest powtarzany w kroku 1.  
-  
-3.  Jeśli zostanie znaleziony wpisu tabeli funkcji, RIP może znajdować się w obrębie trzech regionów, () w epilogu, (b) w prologu lub c) w kodzie, który może być objętych przez program obsługi wyjątku.  
-  
-    -   Wielkość) Jeśli RIP mieści się w epilogu kontroli opuszcza funkcji, nie mogą istnieć bez obsługi wyjątków skojarzonych z tym wyjątkiem dla tej funkcji i skutków epilogu musi być kontynuowana do obliczenia kontekście funkcji wywołującego. Do ustalenia, czy protokół RIP jest w obrębie epilogu strumień kodu z RIP na się zbadana. Jeśli strumieniu kodu można dopasować do końcowej części epilogu uzasadnione, to w epilogu i symulacji pozostałej części epilogu, z rekordu kontekstu zaktualizowany po każdej instrukcji przetworzeniem. Po tym kroku 1 jest powtarzany.  
-  
-    -   Przypadek b), jeśli protokół RIP mieści się w prologu, a następnie formant nie ma wprowadzona funkcja, nie mogą istnieć bez obsługi wyjątków skojarzonych z tym wyjątkiem dla tej funkcji i skutków prologu musi zostać cofnięte do obliczenia kontekście funkcji wywołującego. Protokół RIP znajduje się w prologu, jeśli odległość od początku funkcji RIP jest mniejsze lub równe rozmiarowi prologu zakodowane informacji unwind. Efekty prologu są odwinięty do przodu skanowanie za pomocą tablicy kody unwind dla pierwszej pozycji z przesunięciem mniejsze niż lub równe przesunięcie RIP od początku funkcji, a następnie cofanie efekt wszystkich pozostałych elementów w tablicy unwind kodu. Krok 1 jest następnie powtarzany.  
-  
-    -   Wielkość c) czy RPO nie znajduje się w prologu lub epilogu i funkcję, ma obsługi wyjątków (Ustaw UNW_FLAG_EHANDLER), a następnie jest nazywany Obsługa określonego języka. Program obsługi skanuje dane i wywołania filtru funkcji zależnie od potrzeb. Obsługa określonego języka może zwrócić, czy wyjątek został obsłużony, lub czy wyszukiwanie ma być kontynuowane. Go można także zainicjować unwind bezpośrednio.  
-  
-4.  Jeśli obsługa określonego języka zwraca stan obsługiwany, a następnie wykonanie jest kontynuowane przy użyciu oryginalnego rekordu kontekstu.  
-  
-5.  Jeśli nie istnieje żadne Obsługa określonego języka lub program obsługi zwraca stan "continue wyszukiwania", rekordu kontekstu musi być oddzielić stan obiektu wywołującego. Jest to osiągane przez wszystkie elementy tablicy unwind kodu, cofanie efekt każdego przetwarzania. Krok 1 jest następnie powtarzany.  
-  
- Gdy łańcuchowej unwind uczestniczy info, nadal zostaną wykonane następujące czynności. Jedyną różnicą jest to, że, przejście tablicy kodu unwind cofnąć prologu efekty, gdy zostanie osiągnięty koniec tablicy, jest następnie połączony informacji unwind nadrzędnej i jest udał tablicy kodu całego unwind Brak znaleziono. To połączenie jest kontynuowane do otrzymywanych informacji unwind bez flagi UNW_CHAINED_INFO i Zakończ przejście jego unwind kodu tablicy.  
-  
- Dane operacji unwind najmniejszy zestaw jest 8 bajtów. Spowoduje to reprezentuje funkcję, która tylko przydzielone 128 bajtów stosu lub mniej i prawdopodobnie zapisane jednego nieulotnej rejestru. Dotyczy to również rozmiar łańcuchowa unwind struktury informacji z żadnych kodów unwind prologu o zerowej długości.  
-  
-## <a name="see-also"></a>Zobacz też  
- [Obsługa wyjątków (x64)](../build/exception-handling-x64.md)
+
+Tablica kodu odwijania jest posortowana w kolejności malejącej. Gdy wystąpi wyjątek, pełnego kontekstu są przechowywane przez system operacyjny w rekordu kontekstu. Następnie wywoływana jest logiki wysyłania wyjątków, które regularnie wykonuje następujące kroki, aby znaleźć obsługi wyjątków.
+
+1. Użyj bieżącego RIP, przechowywane w rekordu kontekstu, aby wyszukać RUNTIME_FUNCTION wpis tabeli, który opisuje bieżącą funkcję (lub jej część funkcja, przypadku łańcuchowych wpisy UNWIND_INFO).
+
+1. Jeśli zostanie znaleziony żaden wpis tabeli funkcji, będzie ona wówczas w funkcji liścia i RSP sprostają bezpośrednio zwracana wskaźnika. Zwracany wskaźnik u [RSP] jest przechowywana w kontekście zaktualizowane symulowane RSP jest zwiększany o 8 i jest powtarzany w kroku 1.
+
+1. Jeśli wpis tabeli funkcji zostanie znaleziony, RIP może znajdować się w trzech regionach, () w epilogu, (b) w prologu lub c) w kodzie, który może być objętych przez program obsługi wyjątku.
+
+   - Wielkości liter) czy RPO w ramach epilogu, a następnie sterowania opuszcza funkcji, może być nie skojarzonych z tym wyjątkiem, dla tej funkcji program obsługi wyjątków, a skutki epilogu musi być kontynuowana do obliczenia kontekście wywołujący funkcję. Aby określić, jeśli protokół RIP mieści się w epilogu strumienia kodu z RIP na jest sprawdzany pod. Jeśli tego strumienia kodu można dopasować do końcowej części epilogu uzasadnione, to znajduje się w epilogu i pozostałej części epilogu jest symulowane, przy użyciu rekordu kontekstu aktualizować wraz z każdą instrukcję przetwarzania. Po tym kroku 1 jest powtarzany.
+
+   - Przypadku b) Jeśli RPO znajduje się w prologu, wówczas formantu nie wprowadzono funkcji, może być nie skojarzonych z tym wyjątkiem, dla tej funkcji program obsługi wyjątków, a skutki prologu muszą zostać cofnięte do obliczenia kontekście wywołujący funkcję. Protokół RIP znajduje się w prologu, jeśli odległość od początku funkcji RPO jest mniejsza niż lub równy rozmiarowi prologu zakodowane w informacji unwind. Efekty prologu są odwinięty do przodu skanowania przez tablicę kody unwind do pierwszej pozycji z przesunięciem mniejsze niż lub równe przesunięcia RPO od początku funkcji, a następnie cofnięcie efekt wszystkie pozostałe elementy w tablicy kodu unwind. Krok 1 jest następnie powtarzany.
+
+   - Wielkość c), jeśli RPO nie znajduje się w prologu i epilogu i funkcji ma program obsługi wyjątku (UNW_FLAG_EHANDLER jest ustawiona), a następnie jest wywoływana Obsługa określonego języka. Program obsługi skanuje dane i wywołania filtrowania funkcji zgodnie z potrzebami. Obsługa określonego języka może zwracać, czy wyjątek został obsłużony lub wyszukiwanie jest kontynuowane. Go może również inicjować unwind bezpośrednio.
+
+1. Obsługa określonego języka zwraca obsługiwane stan, a następnie wykonywanie jest kontynuowane przy użyciu oryginalnego rekordu kontekstu.
+
+1. Jeśli nie istnieje żadne Obsługa określonego języka lub program obsługi zwraca stan "Kontynuuj wyszukiwanie", rekordu kontekstu musi być rozwinięty do stanu obiektu wywołującego. Jest to realizowane przez wszystkie elementy tablicy unwind kodu, cofnięcie efektu każdej przetwarzanie. Krok 1 jest następnie powtarzany.
+
+Gdy łańcuchowej unwind uczestniczy info, te proste kroki, nadal po nim. Jedyną różnicą jest to, że, gdy zalet tablicy kodu unwind na odpoczynek efekty prologu, po osiągnięciu końca tablicy, jego jest następnie łączony z informacji unwind nadrzędnego i zostaje przeprowadzony unwind całej tablicy kodu znalezione. To połączenie jest kontynuowany aż do otrzymywanych unwind info, bez flagi UNW_CHAINED_INFO i Zakończ zalet jego tablica kodu unwind.
+
+Dane operacji unwind najmniejszy zestaw jest 8 bajtów. To reprezentuje funkcję, która tylko przydzielone 128 bajtów stosu lub mniej, a prawdopodobnie zapisywane jeden rejestr nieulotnej. Jest to również rozmiar łańcuchowych unwind info struktury prologu o zerowej długości z żadnych kodów unwind.
+
+## <a name="see-also"></a>Zobacz też
+
+[Obsługa wyjątków (x64)](../build/exception-handling-x64.md)

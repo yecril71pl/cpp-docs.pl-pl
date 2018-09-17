@@ -19,12 +19,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: fe0be424b07fd9d13eec63c56172b2b0195b83d9
-ms.sourcegitcommit: 889a75be1232817150be1e0e8d4d7f48f5993af2
+ms.openlocfilehash: e64a8a795181115652ab25750c1bac8712fabbad
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/30/2018
-ms.locfileid: "39338814"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45703131"
 ---
 # <a name="recordset-dynamically-binding-data-columns-odbc"></a>Zestaw rekordów: dynamiczne powiązanie kolumn danych (ODBC)
 Ten temat dotyczy klas MFC ODBC.  
@@ -91,19 +91,16 @@ Tworzenie listy kolumn, które można powiązać dynamicznie
      Jednym z podejść jest dodawanie pętli do głównego zestawu rekordów `DoFieldExchange` funkcja, która przetwarza listę nowych kolumn, wywołanie odpowiedniej funkcji RFX dla każdej kolumny na liście w pętli. Przy każdym wywołaniu RFX przekazać nazwę kolumny z listy nazwy kolumn i lokalizację magazynu w elemencie członkowskim odpowiednie listy wartości wyników.  
   
 ###  <a name="_core_lists_of_columns"></a> Listy kolumn  
- W poniższej tabeli przedstawiono cztery listy, które są potrzebne do pracy z.  
-  
- **Bieżącej tabeli kolumn (1 listy na ilustracji)** listy kolumn w tabeli w źródle danych. Ta lista może być jest zgodny z listą kolumn, które obecnie powiązany w twoim zestawie rekordów.  
-  
- **Powiązane z zestawu rekordów kolumn (2 listy na ilustracji)**  
- Powiązana lista kolumn w twoim zestawie rekordów. Tymi kolumnami już znajdują się instrukcje RFX w swojej `DoFieldExchange` funkcji.  
-  
- **Kolumny — do — powiązania-dynamicznie (3 listy na ilustracji)**  
- Lista kolumn w tabeli, ale nie w twoim zestawie rekordów. Są to kolumny, które chcesz powiązać dynamicznie.  
-  
- **Dynamiczne kolumny wartości (4 listy na ilustracji)**  
- Lista zawierająca magazynu dla wartości są pobierane z kolumny, które można powiązać dynamicznie. Elementy na tej liście odpowiadają w kolumnach — do — powiązania-dynamicznie, jeden-do-jednego.  
-  
+
+W poniższej tabeli przedstawiono cztery listy, które są potrzebne do pracy z.  
+
+|||
+|-|-|  
+**Kolumny w przypadku tabeli bieżącego**| (Lista 1 na ilustracji) Lista kolumn, które obecnie tabeli w źródle danych. Ta lista może być jest zgodny z listą kolumn, które obecnie powiązany w twoim zestawie rekordów.|
+|**Kolumny w przypadku zestawu rekordów powiązanego**| (Wyświetlanie 2 na ilustracji) Powiązana lista kolumn w twoim zestawie rekordów. Tymi kolumnami już znajdują się instrukcje RFX w swojej `DoFieldExchange` funkcji.|
+|**Kolumny — do — powiązania dynamicznie**| (Lista 3 na ilustracji) Lista kolumn w tabeli, ale nie w twoim zestawie rekordów. Są to kolumny, które chcesz powiązać dynamicznie.|
+|**Dynamiczne kolumny wartości**| (Lista 4 na ilustracji) Lista zawierająca magazynu dla wartości są pobierane z kolumny, które można powiązać dynamicznie. Elementy na tej liście odpowiadają w kolumnach — do — powiązania-dynamicznie, jeden-do-jednego.|
+
 ###  <a name="_core_building_your_lists"></a> Tworzenie list  
  Z ogólną strategią, pamiętając można włączyć do szczegółów. Procedury opisane w pozostałej części tego tematu dowiesz się, jak tworzyć listy pokazano w [listy kolumn](#_core_lists_of_columns). Procedury przeprowadzą Cię przez proces:  
   

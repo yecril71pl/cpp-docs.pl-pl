@@ -12,15 +12,17 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5d192234a2b3cd3d72bef15e11678ebc41ccede0
-ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
+ms.openlocfilehash: 54754e465f3a153b769b7619ff2bfb70a1872907
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/02/2018
-ms.locfileid: "39462891"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45699618"
 ---
 # <a name="definitions-and-declarations-c"></a>Definicje i deklaracje (C++)
-**Microsoft Specific** interfejsu biblioteki DLL, który odwołuje się do wszystkich elementów (funkcje i dane), które są znane, które mają zostać wyeksportowane przez program w systemie, czyli wszystkich elementów, które są zadeklarowane jako **dllimport** lub **dllexport** . Należy określić wszystkie deklaracje objęte interfejsu biblioteki DLL **dllimport** lub **dllexport** atrybutu. Jednak tylko określić definicję **dllexport** atrybutu. Na przykład następująca definicja funkcji generuje błąd kompilatora:
+**Microsoft Specific**
+
+ Interfejsu biblioteki DLL, który odwołuje się do wszystkich elementów (funkcje i dane), które są znane mają zostać wyeksportowane przez program w systemie; oznacza to, że wszystkie elementy, które są zadeklarowane jako **dllimport** lub **dllexport**. Należy określić wszystkie deklaracje objęte interfejsu biblioteki DLL **dllimport** lub **dllexport** atrybutu. Jednak tylko określić definicję **dllexport** atrybutu. Na przykład następująca definicja funkcji generuje błąd kompilatora:
 
 ```
 __declspec( dllimport ) int func() {   // Error; dllimport

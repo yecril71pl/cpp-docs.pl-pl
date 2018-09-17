@@ -84,12 +84,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e9932f8814855213f133323f2102e0cacf1e69c8
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: a55623c28ca7114f43f208e5c660b9df38d1242b
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43196714"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45701836"
 ---
 # <a name="cbutton-class"></a>Klasa CButton
 Oferuje funkcje kontrolek przycisku Windows.  
@@ -394,8 +394,8 @@ BOOL GetNote(
   
 |Parametr|Opis|  
 |---------------|-----------------|  
-|[out] *lpszNote*|Wskaźnik do buforu, który obiekt wywołujący jest odpowiedzialny za alokowanie i dealokowanie. Jeśli wartość zwracana jest wartość TRUE, buforu zawiera tekst notatki, który jest skojarzony z bieżącą kontroli łącza polecenia; w przeciwnym razie bufor jest bez zmian.|  
-|[out w] *cchNote*|Wskaźnik do zmiennej liczby całkowitej bez znaku.<br /><br /> Gdy ta metoda jest wywoływana, zmienna zawiera rozmiar buforu określony przez *lpszNote* parametru.<br /><br /> Gdy ta metoda zwraca, jeśli wartość zwracana jest wartość TRUE w zmiennej zawiera rozmiar Uwaga skojarzone z kontrolą bieżącą łącze polecenia. Jeśli wartość zwracana jest wartość FALSE, zmienna zawiera rozmiar buforu, muszą zawierać uwagi.|  
+|*lpszNote*|[out] Wskaźnik do buforu, który obiekt wywołujący jest odpowiedzialny za alokowanie i dealokowanie. Jeśli wartość zwracana jest wartość TRUE, buforu zawiera tekst notatki, który jest skojarzony z bieżącą kontroli łącza polecenia; w przeciwnym razie bufor jest bez zmian.|  
+|*cchNote*|[out w] Wskaźnik do zmiennej liczby całkowitej bez znaku.<br /><br /> Gdy ta metoda jest wywoływana, zmienna zawiera rozmiar buforu określony przez *lpszNote* parametru.<br /><br /> Gdy ta metoda zwraca, jeśli wartość zwracana jest wartość TRUE w zmiennej zawiera rozmiar Uwaga skojarzone z kontrolą bieżącą łącze polecenia. Jeśli wartość zwracana jest wartość FALSE, zmienna zawiera rozmiar buforu, muszą zawierać uwagi.|  
   
 ### <a name="return-value"></a>Wartość zwracana  
  W pierwsze przeciążenie [CString](../../atl-mfc-shared/using-cstring.md) obiekt, który zawiera tekst notatki skojarzone z kontrolą bieżącą łącze polecenia.  
@@ -467,7 +467,7 @@ BOOL GetSplitInfo(PBUTTON_SPLITINFO pInfo) const;
   
 |Parametr|Opis|  
 |---------------|-----------------|  
-|[out] *pInfo*|Wskaźnik do [BUTTON_SPLITINFO](/windows/desktop/api/commctrl/ns-commctrl-tagbutton_splitinfo) strukturę, która otrzymuje informacje o bieżącym kontrolki przycisku podziału. Obiekt wywołujący jest odpowiedzialny za przydzielanie struktury.|  
+|*pInfo*|[out] Wskaźnik do [BUTTON_SPLITINFO](/windows/desktop/api/commctrl/ns-commctrl-tagbutton_splitinfo) strukturę, która otrzymuje informacje o bieżącym kontrolki przycisku podziału. Obiekt wywołujący jest odpowiedzialny za przydzielanie struktury.|  
   
 ### <a name="return-value"></a>Wartość zwracana  
  Wartość TRUE, jeśli ta metoda jest kończy się pomyślnie; w przeciwnym razie wartość FALSE.  
@@ -488,7 +488,7 @@ BOOL GetSplitSize(LPSIZE pSize) const;
   
 |Parametr|Opis|  
 |---------------|-----------------|  
-|[out] *pSize*|Wskaźnik do [rozmiar](https://msdn.microsoft.com/library/windows/desktop/dd145106) struktury, która odbiera opis prostokąt.|  
+|*pSize*|[out] Wskaźnik do [rozmiar](https://msdn.microsoft.com/library/windows/desktop/dd145106) struktury, która odbiera opis prostokąt.|  
   
 ### <a name="return-value"></a>Wartość zwracana  
  Wartość TRUE, jeśli ta metoda jest kończy się pomyślnie; w przeciwnym razie wartość FALSE.  
@@ -687,7 +687,7 @@ BOOL SetDropDownState(BOOL fDropDown);
   
 |Parametr|Opis|  
 |---------------|-----------------|  
-|[in] *fDropDown*|Wartość TRUE, aby ustawić stan BST_DROPDOWNPUSHED; w przeciwnym razie wartość FALSE.|  
+|*fDropDown*|[in] Wartość TRUE, aby ustawić stan BST_DROPDOWNPUSHED; w przeciwnym razie wartość FALSE.|  
   
 ### <a name="return-value"></a>Wartość zwracana  
  Wartość TRUE, jeśli ta metoda jest kończy się pomyślnie; w przeciwnym razie wartość FALSE.  
@@ -718,7 +718,7 @@ BOOL SetElevationRequired(BOOL fElevationRequired);
   
 |Parametr|Opis|  
 |---------------|-----------------|  
-|[in] *fElevationRequired*|Wartość true, zestaw `elevation required` stanu; w przeciwnym razie wartość FALSE.|  
+|*fElevationRequired*|[in] Wartość true, zestaw `elevation required` stanu; w przeciwnym razie wartość FALSE.|  
   
 ### <a name="return-value"></a>Wartość zwracana  
  Wartość TRUE, jeśli ta metoda jest kończy się pomyślnie; w przeciwnym razie wartość FALSE.  
@@ -790,7 +790,7 @@ BOOL SetNote(LPCTSTR lpszNote);
   
 |Parametr|Opis|  
 |---------------|-----------------|  
-|[in] *lpszNote*|Wskaźnik do ciągu Unicode, który jest ustawiony jako tekstu Uwaga dla kontrolki linku polecenia.|  
+|*lpszNote*|[in] Wskaźnik do ciągu Unicode, który jest ustawiony jako tekstu Uwaga dla kontrolki linku polecenia.|  
   
 ### <a name="return-value"></a>Wartość zwracana  
  Wartość TRUE, jeśli ta metoda jest kończy się pomyślnie; w przeciwnym razie wartość FALSE.  
@@ -821,7 +821,7 @@ BOOL SetSplitGlyph(TCHAR chGlyph);
   
 |Parametr|Opis|  
 |---------------|-----------------|  
-|[in] *chGlyph*|Znak, który określa symbol do użycia jako strzałki listy rozwijanej przycisku podziału.|  
+|*chGlyph*|[in] Znak, który określa symbol do użycia jako strzałki listy rozwijanej przycisku podziału.|  
   
 ### <a name="return-value"></a>Wartość zwracana  
  Wartość TRUE, jeśli ta metoda jest kończy się pomyślnie; w przeciwnym razie wartość FALSE.  
@@ -844,7 +844,7 @@ BOOL SetSplitImageList(CImageList* pSplitImageList);
   
 |Parametr|Opis|  
 |---------------|-----------------|  
-|[in] *pSplitImageList*|Wskaźnik do [CImageList](../../mfc/reference/cimagelist-class.md) obiekt można przypisać do bieżącego kontrolki przycisku podziału.|  
+|*pSplitImageList*|[in] Wskaźnik do [CImageList](../../mfc/reference/cimagelist-class.md) obiekt można przypisać do bieżącego kontrolki przycisku podziału.|  
   
 ### <a name="return-value"></a>Wartość zwracana  
  Wartość TRUE, jeśli ta metoda jest kończy się pomyślnie; w przeciwnym razie wartość FALSE.  
@@ -865,7 +865,7 @@ BOOL SetSplitInfo(PBUTTON_SPLITINFO pInfo);
   
 |Parametr|Opis|  
 |---------------|-----------------|  
-|[in] *pInfo*|Wskaźnik do [BUTTON_SPLITINFO](/windows/desktop/api/commctrl/ns-commctrl-tagbutton_splitinfo) strukturę, która definiuje bieżącego kontrolki przycisku podziału.|  
+|*pInfo*|[in] Wskaźnik do [BUTTON_SPLITINFO](/windows/desktop/api/commctrl/ns-commctrl-tagbutton_splitinfo) strukturę, która definiuje bieżącego kontrolki przycisku podziału.|  
   
 ### <a name="return-value"></a>Wartość zwracana  
  Wartość TRUE, jeśli ta metoda jest kończy się pomyślnie; w przeciwnym razie wartość FALSE.  
@@ -896,7 +896,7 @@ BOOL SetSplitSize(LPSIZE pSize);
   
 |Parametr|Opis|  
 |---------------|-----------------|  
-|[in] *pSize*|Wskaźnik do [rozmiar](https://msdn.microsoft.com/library/windows/desktop/dd145106) strukturę, która opisuje prostokąt otaczający.|  
+|*pSize*|[in] Wskaźnik do [rozmiar](https://msdn.microsoft.com/library/windows/desktop/dd145106) strukturę, która opisuje prostokąt otaczający.|  
   
 ### <a name="return-value"></a>Wartość zwracana  
  Wartość TRUE, jeśli ta metoda jest kończy się pomyślnie; w przeciwnym razie wartość FALSE.  
@@ -929,7 +929,7 @@ BOOL SetSplitStyle(UINT uSplitStyle);
   
 |Parametr|Opis|  
 |---------------|-----------------|  
-|[in] *uSplitStyle*|Bitowa kombinacja style przycisku podziału. Aby uzyskać więcej informacji, zobacz `uSplitStyle` członkiem [BUTTON_SPLITINFO](/windows/desktop/api/commctrl/ns-commctrl-tagbutton_splitinfo) struktury.|  
+|*uSplitStyle*|[in] Bitowa kombinacja style przycisku podziału. Aby uzyskać więcej informacji, zobacz `uSplitStyle` członkiem [BUTTON_SPLITINFO](/windows/desktop/api/commctrl/ns-commctrl-tagbutton_splitinfo) struktury.|  
   
 ### <a name="return-value"></a>Wartość zwracana  
  Wartość TRUE, jeśli ta metoda jest kończy się pomyślnie; w przeciwnym razie wartość FALSE.  

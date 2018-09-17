@@ -32,15 +32,15 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d61b17bb597028bec55edb148897929f178392d7
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: de9ce3ad9d5f1a39fb1ed173dc430aa9a5c5127c
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32412335"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45701509"
 ---
 # <a name="setoutputformat"></a>_set_output_format
-Dostosowuje formatów wyjściowych przez sformatowany funkcje We/Wy.  
+Dostosowuje formaty danych wyjściowych używane przez funkcje sformatowane we/wy.  
   
 > [!IMPORTANT]
 >  Ta funkcja jest przestarzała. Począwszy od programu Visual Studio 2015, nie jest dostępna w CRT.  
@@ -54,18 +54,18 @@ unsigned int _set_output_format(
 ```  
   
 #### <a name="parameters"></a>Parametry  
- [in] `format`  
- Wartość reprezentująca formatu do użycia.  
+*Format*<br/>
+[in] Wartość reprezentująca formatu do użycia.  
   
 ## <a name="return-value"></a>Wartość zwracana  
  Poprzednie format danych wyjściowych.  
   
 ## <a name="remarks"></a>Uwagi  
- `_set_output_format` Służy do konfigurowania dane wyjściowe sformatowany funkcje We/Wy, takich jak [printf_s —](../c-runtime-library/reference/printf-s-printf-s-l-wprintf-s-wprintf-s-l.md). Obecnie tylko Konwencji formatowania, który może zostać zmieniona przez tę funkcję jest liczbę miejsc po przecinku wyświetlane w wykładniki w danych wyjściowych punktu liczb zmiennoprzecinkowych.  
+ `_set_output_format` Służy do konfigurowania dane wyjściowe sformatowane funkcje We/Wy, takich jak [printf_s](../c-runtime-library/reference/printf-s-printf-s-l-wprintf-s-wprintf-s-l.md). Obecnie jedyną Konwencji formatowania, która może zostać zmieniona przez tę funkcję, jest liczbę cyfr wyświetlanych w wykładniki w danych wyjściowych liczb zmiennoprzecinkowych.  
   
- Domyślnie dane wyjściowe zmiennoprzecinkową punktu numery przez funkcje takie jak `printf_s`, `wprintf_s`, i powiązane funkcje biblioteki Visual C++, C Standard drukuje trzech cyfr dla wykładnik, nawet jeśli trzech cyfr nie są wymagane do reprezentowania wartości wykładnik. Wartości zerowe są używane do konsoli wartość do trzech cyfr. `_set_output_format` Pozwala zmienić to zachowanie, dzięki czemu są podane dwie cyfry wykładnika, chyba że trzecia cyfra jest wymagany przez rozmiar wykładnik.  
+ Domyślnie dane wyjściowe pływających punktu numery przez funkcje takie jak `printf_s`, `wprintf_s`, i powiązane funkcje biblioteki standardowej C Visual C++ drukuje trzy cyfry wykładnika potęgi, nawet jeśli trzech cyfr nie są wymagane do reprezentowania wartości obiektu wykładnik potęgi. Wartości zerowe są używane do wypełnienia wartości do trzech cyfr. `_set_output_format` Pozwala zmienić to zachowanie, aby były drukowane tylko dwie cyfry wykładnika, chyba że trzecia cyfra jest wymagana przez rozmiar wykładnik potęgi.  
   
- Aby włączyć wykładniki dwucyfrowe, wywołanie tej funkcji z parametrem `_TWO_DIGIT_EXPONENT`, jak pokazano w przykładzie. Aby wyłączyć dwóch wykładniki cyfrę, wywołanie tej funkcji z argumentu o wartości 0.  
+ Aby włączyć wykładniki dwóch cyfr, wywołaj tę funkcję, za pomocą parametru `_TWO_DIGIT_EXPONENT`, jak pokazano w przykładzie. Aby wyłączyć dwie cyfry wykładniki, wywołaj tę funkcję, z nieprawidłowym argumentem 0.  
   
 ## <a name="requirements"></a>Wymagania  
   
@@ -73,7 +73,7 @@ unsigned int _set_output_format(
 |-------------|---------------------|  
 |`_set_output_format`|\<stdio.h>|  
   
- Aby uzyskać więcej informacji o zgodności, zobacz [zgodności](../c-runtime-library/compatibility.md) we wprowadzeniu.  
+ Aby uzyskać więcej informacji na temat zgodności, zobacz [zgodności](../c-runtime-library/compatibility.md) we wstępie.  
   
 ## <a name="example"></a>Przykład  
   

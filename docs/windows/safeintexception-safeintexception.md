@@ -19,12 +19,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 7c5fd1e2194ece9435b219a410c8ad49eb95137a
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: 749ef965520732c37457613f44e0a23e213023db
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42598561"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45700976"
 ---
 # <a name="safeintexceptionsafeintexception"></a>SafeIntException::SafeIntException
 
@@ -42,8 +42,8 @@ SafeIntException(
 
 ### <a name="parameters"></a>Parametry
 
-[in] *kodu*  
-Wartość danych wyliczany, który opisuje błąd, który wystąpił.
+*Kod*<br/>
+[in] Wartość danych wyliczany, który opisuje błąd, który wystąpił.
 
 ## <a name="remarks"></a>Uwagi
 

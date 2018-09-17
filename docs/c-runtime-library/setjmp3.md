@@ -29,15 +29,15 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 04d06bd7728347770bd17c48abc9898f2a2467a4
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 1db24214cde4358e55f86ce5ca60f3547220511f
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32408370"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45704317"
 ---
 # <a name="setjmp3"></a>_setjmp3
-Funkcji CRT wewnętrznej. Nowe implementacja `setjmp` funkcji.  
+Wewnętrzny funkcji CRT. Nową metodę implementacji `setjmp` funkcji.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -50,14 +50,14 @@ int _setjmp3(
 ```  
   
 #### <a name="parameters"></a>Parametry  
- [out] `env`  
- Adres buforu do przechowywania informacji o stanie.  
+*środowisko*<br/>
+[out] Adres buforu do przechowywania informacji o stanie.  
   
- [in] `count`  
- Liczba dodatkowych `DWORD`s informacje, które są przechowywane w `optional parameters`.  
+*Liczba*<br/>
+[in] Liczba dodatkowych `DWORD`s informacje, które są przechowywane w `optional parameters`.  
   
- [in] `optional parameters`  
- Dodatkowe dane przesuwana przez `setjmp` wewnętrznej. Pierwszy `DWORD` jest wskaźnik funkcji, służący do dodatkowe dane operacji unwind i wrócić do nieulotnej zarejestrować stanu. Drugi `DWORD` poziom spróbuj przywrócić. Wszystkie dalsze dane są zapisywane w tablicy danych typu ogólnego w `jmp_buf`.  
+*Następujące parametry opcjonalne*<br/>
+[in] Dodatkowe dane przekazywany przez `setjmp` wewnętrzne. Pierwszy `DWORD` jest używany do operacji unwind dodatkowe dane, a następnie wróć do nieulotnej wskaźnika funkcji rejestrowania stanu. Drugi `DWORD` jest poziom spróbuj przywrócić. Wszelkie dalsze dane są zapisywane w tablicy danych typu ogólnego `jmp_buf`.  
   
 ## <a name="return-value"></a>Wartość zwracana  
  Zawsze zwraca wartość 0.  

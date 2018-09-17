@@ -16,24 +16,28 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 63f945f90f6a862a3b16cd3dcc41859b0c21b984
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 10a57271c143a42f9bafaef5fa53f780fa03164f
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43761946"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45700657"
 ---
 # <a name="asp-atl-active-server-page-component-wizard"></a>ASP, Kreator składników stron Active Server ATL
 
 Ta strona ATL Active Server strona kreatora składników umożliwia określić opcjonalne ustawienia do obsługi informacji i stanu związane z składnik ASP.
 
-**Opcjonalny metody**  
-Dodaje metody opcjonalne ASP **OnStartPage** i **OnEndPage**, do obiektu. Należy wybrać tę opcję można ustawić wszystkie wewnętrzne obiekty Active Server Pages. Domyślnie jest zaznaczona.
+- **Opcjonalny metody**  
 
-- **Metoda OnStartPage/OnEndPage** [OnStartPage](https://msdn.microsoft.com/library/ms691624.aspx) jest wywoływana po raz pierwszy skrypt próbuje uzyskać dostęp do obiektu. **OnEndPage** jest wywoływana po zakończeniu operacji obiektu przetwarzania skryptu.
+   Dodaje metody opcjonalne ASP **OnStartPage** i **OnEndPage**, do obiektu. Należy wybrać tę opcję można ustawić wszystkie wewnętrzne obiekty Active Server Pages. Domyślnie jest zaznaczona.
 
-**Obiekt wewnętrzny**  
-Musisz wybrać **OnStartPage/OnEndPage** opcję, aby ustawić wszystkie obiekty wewnętrzne środowiska ASP.
+- **Metoda OnStartPage/OnEndPage**
+
+   [Metoda OnStartPage](https://msdn.microsoft.com/library/ms691624.aspx) jest wywoływana po raz pierwszy skrypt próbuje uzyskać dostęp do obiektu. **OnEndPage** jest wywoływana po zakończeniu operacji obiektu przetwarzania skryptu.
+
+- **Obiekt wewnętrzny**  
+
+   Musisz wybrać **OnStartPage/OnEndPage** opcję, aby ustawić wszystkie obiekty wewnętrzne środowiska ASP.
 
 |Opcja|Opis|
 |------------|-----------------|

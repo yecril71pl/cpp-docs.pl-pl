@@ -1,5 +1,5 @@
 ---
-title: Strony właściwości narzędzia Generator danych XML | Dokumentacja firmy Microsoft
+title: Strona właściwości narzędzie do Generator danych XML | Dokumentacja firmy Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,30 +18,33 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e13d56891c5df2c17234a434da9890842bfc54ce
-ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
+ms.openlocfilehash: 74c95c8e8364630416025242633126f91cafbc30
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "33329946"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45699937"
 ---
 # <a name="xml-data-generator-tool-property-page"></a>Strona właściwości Narzędzia generowania danych XML
-**Narzędzie generowania danych XML** strony właściwości stają się dostępne po Dodaj zestaw danych do projektu.  
+**Narzędzie generowania danych XML** strona właściwości staje się dostępna po dodaniu zestawu danych do projektu.  
   
- **Narzędzie generowania danych XML** strona zawiera następujące właściwości:  
+**Narzędzie generowania danych XML** strona właściwości zawiera następujące właściwości:  
   
- **Plik wyjściowy**  
- Określa nazwę pliku wyjściowego do użycia.  
+- **Plik wyjściowy**
+
+   Określa nazwę pliku wyjściowego do użycia.  
   
- **Pomiń Baner startowy**  
- Pomija wyświetlanie komunikatów uruchomienia transparent i informacji.  
+- **Pomijaj transparent startowy**
+
+   Pomija wyświetlanie komunikatów uruchomienia transparent i informacji.  
   
- **Język wygenerowany serwer Proxy**  
- Określa, czy nie można wyemitować kodu zarządzanego.  
+- **Język wygenerowany serwer Proxy**
+
+   Określa, czy nie można wyemitować kodu zarządzanego.  
   
- Aby uzyskać informacje dotyczące dostępu do **narzędzie generowania danych XML** strony właściwości, zobacz [Praca z właściwościami projektu](../ide/working-with-project-properties.md).  
+Aby uzyskać informacje dotyczące uzyskiwania dostępu do **narzędzie generowania danych XML** strony właściwości, zobacz [Praca z właściwościami projektu](../ide/working-with-project-properties.md).  
   
- Aby uzyskać informacje dotyczące sposobu uzyskania programowego dostępu do elementów członkowskich tego obiektu zobacz <xref:Microsoft.VisualStudio.VCProjectEngine.VCXMLDataGeneratorTool>  
+Aby uzyskać informacje na temat sposobu programowego dostępu do elementów członkowskich tego obiektu zobacz <xref:Microsoft.VisualStudio.VCProjectEngine.VCXMLDataGeneratorTool>  
   
 ## <a name="see-also"></a>Zobacz też  
  [Strony właściwości](../ide/property-pages-visual-cpp.md)

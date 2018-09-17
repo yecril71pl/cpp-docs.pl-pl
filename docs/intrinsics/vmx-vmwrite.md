@@ -17,12 +17,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 132841c8c24e2b625dad218aaaef2a19cba0a264
-ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
+ms.openlocfilehash: 1f52c2c2ca60f66218b669201f293ca377d4ca5a
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43680501"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45707021"
 ---
 # <a name="vmxvmwrite"></a>__vmx_vmwrite
 **Microsoft Specific**  
@@ -42,8 +42,8 @@ unsigned char __vmx_vmwrite(
   
 |Parametr|Opis|  
 |---------------|-----------------|  
-|[in] `Field`|Pole VMCS do zapisania.|  
-|[in] `FieldValue`|Wartość do zapisania się do pola VMCS.|  
+|*Pole*|[in] Pole VMCS do zapisania.|  
+|*Wartość FieldValue*|[in] Wartość do zapisania się do pola VMCS.|  
   
 ## <a name="return-value"></a>Wartość zwracana  
  0  

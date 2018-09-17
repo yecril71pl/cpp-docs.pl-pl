@@ -72,12 +72,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9be1d106257787d5a5dd919372726c8d31a1edc1
-ms.sourcegitcommit: 6408139d5f5ff8928f056bde93d20eecb3520361
+ms.openlocfilehash: 604ccf9ba0695cf9d17790f149be1f0738266076
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37339283"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45701769"
 ---
 # <a name="cdatarecoveryhandler-class"></a>Klasa CDataRecoveryHandler
 `CDataRecoveryHandler` Automatycznie zapisuje i przywraca dokumenty, jeśli aplikacja niespodziewanie kończy pracę.  
@@ -188,8 +188,8 @@ virtual BOOL AutosaveDocumentInfo(
 |||  
 |-|-|  
 |Parametr|Opis|  
-|[in] *pDocument*|Wskaźnik do `CDocument` do zapisania.|  
-|[in] *bResetModifiedFlag*|Wartość TRUE wskazuje, że `CDataRecoveryHandler` uwzględnia *pDocument* do zmodyfikowania; Wartość FALSE wskazuje, że struktura uwzględnia *pDocument* jako niezmodyfikowany. Zobacz sekcję Spostrzeżenia, aby uzyskać więcej informacji na temat wpływu tej flagi.|  
+|*pDocument*|[in] Wskaźnik do `CDocument` do zapisania.|  
+|*bResetModifiedFlag*|[in] Wartość TRUE wskazuje, że `CDataRecoveryHandler` uwzględnia *pDocument* do zmodyfikowania; Wartość FALSE wskazuje, że struktura uwzględnia *pDocument* jako niezmodyfikowany. Zobacz sekcję Spostrzeżenia, aby uzyskać więcej informacji na temat wpływu tej flagi.|  
   
 ### <a name="return-value"></a>Wartość zwracana  
  Wartość TRUE, jeśli ustawiono flagi odpowiednie i *pDocument* jest prawidłowym `CDocument` obiektu.  
@@ -218,8 +218,8 @@ CDataRecoveryHandler(
 |||  
 |-|-|  
 |Parametr|Opis|  
-|[in] *dwRestartManagerSupportFlags*|Wskazuje, które opcje Menedżera ponownego uruchamiania są obsługiwane.|  
-|[in] *nAutosaveInterval*|Czas między automatycznie zapisuje. Ten parametr jest w milisekundach.|  
+|*dwRestartManagerSupportFlags*|[in] Wskazuje, które opcje Menedżera ponownego uruchamiania są obsługiwane.|  
+|*nAutosaveInterval*|[in] Czas między automatycznie zapisuje. Ten parametr jest w milisekundach.|  
   
 ### <a name="remarks"></a>Uwagi  
  Struktura MFC automatycznie tworzy `CDataRecoveryHandler` obiektu dla twojej aplikacji, gdy używasz **nowy projekt** kreatora. Chyba że dostosowywania zachowania w zakresie odzyskiwania danych lub Menedżera ponownego uruchamiania, nie należy tworzyć `CDataRecoveryHandler` obiektu.  
@@ -237,7 +237,7 @@ virtual BOOL CreateDocumentInfo(CDocument* pDocument);
 |||  
 |-|-|  
 |Parametr|Opis|  
-|[in] *pDocument*|Wskaźnik do `CDocument`. Ta metoda tworzy informacje dokument na temat tego `CDocument`.|  
+|*pDocument*|[in] Wskaźnik do `CDocument`. Ta metoda tworzy informacje dokument na temat tego `CDocument`.|  
   
 ### <a name="return-value"></a>Wartość zwracana  
  Domyślna implementacja zwraca wartość PRAWDA.  
@@ -269,7 +269,7 @@ virtual BOOL DeleteAutosavedFile(const CString& strAutosavedFile);
 |||  
 |-|-|  
 |Parametr|Opis|  
-|[in] *strAutosavedFile*|Ciąg, który zawiera nazwę pliku automatycznie zapisany.|  
+|*strAutosavedFile*|[in] Ciąg, który zawiera nazwę pliku automatycznie zapisany.|  
   
 ### <a name="return-value"></a>Wartość zwracana  
  Domyślna implementacja zawsze zwraca wartość TRUE.  
@@ -285,8 +285,8 @@ virtual CString GenerateAutosaveFileName(const CString& strDocumentName) const;
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *strDocumentName*  
- Ciąg, który zawiera nazwę dokumentu. `GenerateAutosaveFileName` używa tej nazwy dokumentu, można wygenerować odpowiedniego nazwy pliku zapisywania.  
+*strDocumentName*<br/>
+[in] Ciąg, który zawiera nazwę dokumentu. `GenerateAutosaveFileName` używa tej nazwy dokumentu, można wygenerować odpowiedniego nazwy pliku zapisywania.  
   
 ### <a name="return-value"></a>Wartość zwracana  
  Nazwa pliku zapisywania wygenerowany na podstawie *strDocumentName*.  
@@ -326,7 +326,7 @@ virtual CString GetDocumentListName(CDocument* pDocument) const;
 |||  
 |-|-|  
 |Parametr|Opis|  
-|[in] *pDocument*|Wskaźnik do `CDocument`. `GetDocumentListName` pobiera nazwę dokumentu z tym `CDocument`.|  
+|*pDocument*|[in] Wskaźnik do `CDocument`. `GetDocumentListName` pobiera nazwę dokumentu z tym `CDocument`.|  
   
 ### <a name="return-value"></a>Wartość zwracana  
  Nazwa dokumentu z *pDocument*.  
@@ -346,7 +346,7 @@ virtual CString GetNormalDocumentTitle(CDocument* pDocument);
 |||  
 |-|-|  
 |Parametr|Opis|  
-|[in] *pDocument*|Wskaźnik do `CDocument`.|  
+|*pDocument*|[in] Wskaźnik do `CDocument`.|  
   
 ### <a name="return-value"></a>Wartość zwracana  
  Normalne tytuł dla określonego dokumentu.  
@@ -362,8 +362,8 @@ virtual CString GetRecoveredDocumentTitle(const CString& strDocumentTitle) const
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *strDocumentTitle*  
- Normalne tytuł dokumentu.  
+*strDocumentTitle*<br/>
+[in] Normalne tytuł dokumentu.  
   
 ### <a name="return-value"></a>Wartość zwracana  
  Tytuł dokumentu odzyskane.  
@@ -462,7 +462,7 @@ virtual BOOL RemoveDocumentInfo(CDocument* pDocument);
 |||  
 |-|-|  
 |Parametr|Opis|  
-|[in] *pDocument*|Wskaźnik do dokumentu, aby usunąć.|  
+|*pDocument*|[in] Wskaźnik do dokumentu, aby usunąć.|  
   
 ### <a name="return-value"></a>Wartość zwracana  
  Wartość TRUE, jeśli *pDocument* został usunięty z listy; Wartość FALSE, jeśli wystąpił błąd.  
@@ -529,8 +529,8 @@ Virtual void SetAutosaveInterval(int nAutosaveInterval);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *nAutosaveInterval*  
- Nowy interwał automatycznego zapisu w milisekundach.  
+*nAutosaveInterval*<br/>
+[in] Nowy interwał automatycznego zapisu w milisekundach.  
   
 ##  <a name="setautosavepath"></a>  CDataRecoveryHandler::SetAutosavePath  
  Ustawia katalog, w którym są przechowywane pliki automatycznie zapisany.  
@@ -544,7 +544,7 @@ virtual void SetAutosavePath(const CString& strAutosavePath);
 |||  
 |-|-|  
 |Parametr|Opis|  
-|[in] *strAutosavePath*|Ścieżka, w którym są przechowywane pliki zapisywania.|  
+|*strAutosavePath*|[in] Ścieżka, w którym są przechowywane pliki zapisywania.|  
   
 ### <a name="remarks"></a>Uwagi  
  Zmienianie katalogu zapisywania nie przenosi aktualnie automatycznie zapisany plików.  
@@ -561,7 +561,7 @@ virtual void SetRestartIdentifier(const CString& strRestartIdentifier);
 |||  
 |-|-|  
 |Parametr|Opis|  
-|[in] *strRestartIdentifier*|Unikatowy identyfikator dla Menedżera ponownego uruchamiania.|  
+|*strRestartIdentifier*|[in] Unikatowy identyfikator dla Menedżera ponownego uruchamiania.|  
   
 ### <a name="remarks"></a>Uwagi  
  Menedżera ponownego uruchamiania rejestruje informacje o otwartych dokumentów w rejestrze. Te informacje są przechowywane z identyfikatorem unikatowy ponowne uruchomienie jako klucz. Ponieważ identyfikator ponowne uruchomienie jest unikatowy dla każdego wystąpienia aplikacji, wielu wystąpień aplikacji może zostać nieoczekiwanie i Menedżera ponownego uruchamiania może odzyskać każdego z nich.  
@@ -578,7 +578,7 @@ virtual void SetSaveDocumentInfoOnIdle(BOOL bSaveOnIdle);
 |||  
 |-|-|  
 |Parametr|Opis|  
-|[in] *bSaveOnIdle*|Wartość TRUE, aby zapisać informacji o dokumencie podczas bieżącego cyklu bezczynności; Wartość FAŁSZ, aby nie wykonywać zapisywania.|  
+|*bSaveOnIdle*|[in] Wartość TRUE, aby zapisać informacji o dokumencie podczas bieżącego cyklu bezczynności; Wartość FAŁSZ, aby nie wykonywać zapisywania.|  
   
 ##  <a name="setshutdownbyrestartmanager"></a>  CDataRecoveryHandler::SetShutdownByRestartManager  
  Określa, czy poprzednie zakończenia aplikacji zostało spowodowane przez Menedżera ponownego uruchamiania.  
@@ -592,7 +592,7 @@ virtual void SetShutdownByRestartManager(BOOL bShutdownByRestartManager);
 |||  
 |-|-|  
 |Parametr|Opis|  
-|[in] *bShutdownByRestartManager*|Wartość TRUE, aby wskazać, że Menedżera ponownego uruchamiania leży aplikacji zakończyć działanie; Wartość FALSE, aby wskazać, że aplikacja zakończyła pracę z innego powodu.|  
+|*bShutdownByRestartManager*|[in] Wartość TRUE, aby wskazać, że Menedżera ponownego uruchamiania leży aplikacji zakończyć działanie; Wartość FALSE, aby wskazać, że aplikacja zakończyła pracę z innego powodu.|  
   
 ### <a name="remarks"></a>Uwagi  
  Struktura działa inaczej w zależności od tego, czy poprzednie zakończenia był nieoczekiwany lub czy został on zainicjowany przez Menedżera ponownego uruchamiania.  
@@ -609,7 +609,7 @@ virtual BOOL UpdateDocumentInfo(CDocument* pDocument);
 |||  
 |-|-|  
 |Parametr|Opis|  
-|[in] *pDocument*|Wskaźnik do zapisanego dokumentu.|  
+|*pDocument*|[in] Wskaźnik do zapisanego dokumentu.|  
   
 ### <a name="return-value"></a>Wartość zwracana  
  Wartość TRUE, jeśli ta metoda usunięte automatycznie zapisany dokument i zaktualizować informacje na temat dokumentu; Wartość FALSE, jeśli wystąpił błąd.  

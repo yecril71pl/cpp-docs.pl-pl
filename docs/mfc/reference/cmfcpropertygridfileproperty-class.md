@@ -18,12 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 79089a7457d1a3f08c58c374ae2501a48feca79d
-ms.sourcegitcommit: b92ca0b74f0b00372709e81333885750ba91f90e
+ms.openlocfilehash: 82d1b4c3790f50032ac9775febf920e0e8c6c547
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/16/2018
-ms.locfileid: "42465196"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45700841"
 ---
 # <a name="cmfcpropertygridfileproperty-class"></a>Klasa CMFCPropertyGridFileProperty
 `CMFCPropertyGridFileProperty` Klasa obsługuje element formantu listy właściwości, które otwiera okno dialogowe wyboru pliku.  
@@ -78,29 +78,29 @@ CMFCPropertyGridFileProperty(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *strName*  
- Nazwa właściwości.  
+*strName*<br/>
+[in] Nazwa właściwości.  
   
- [in] *bOpenFileDialog*  
- Wartość true, otwórz **Otwórz plik** okno dialogowe; Wartość FALSE, aby otworzyć **Zapisz plik** okno dialogowe.  
+*bOpenFileDialog*<br/>
+[in] Wartość true, otwórz **Otwórz plik** okno dialogowe; Wartość FALSE, aby otworzyć **Zapisz plik** okno dialogowe.  
   
- [in] *strFileName*  
- Początkowa nazwa pliku.  
+*strFileName*<br/>
+[in] Początkowa nazwa pliku.  
   
- [in] *lpszDefExt*  
- Ciąg o jeden lub więcej rozszerzeń nazw plików. Wartością domyślną jest NULL.  
+*lpszDefExt*<br/>
+[in] Ciąg o jeden lub więcej rozszerzeń nazw plików. Wartością domyślną jest NULL.  
   
- [in] *Flagidw*  
- Flagi okno dialogowe. Wartością domyślną jest bitową kombinacją (lub) OFN_HIDEREADONLY i OFN_OVERWRITEPROMPT.  
+*Flagidw*<br/>
+[in] Flagi okno dialogowe. Wartością domyślną jest bitową kombinacją (lub) OFN_HIDEREADONLY i OFN_OVERWRITEPROMPT.  
   
- [in] *lpszFilter*  
- Ciąg o co najmniej jeden filtr pliku. Wartością domyślną jest NULL.  
+*lpszFilter*<br/>
+[in] Ciąg o co najmniej jeden filtr pliku. Wartością domyślną jest NULL.  
   
- [in] *lpszDescr*  
- Opis elementu właściwości. Wartością domyślną jest NULL.  
+*lpszDescr*<br/>
+[in] Opis elementu właściwości. Wartością domyślną jest NULL.  
   
- [in] *dwData*  
- Dane specyficzne dla aplikacji, które jest skojarzone z elementem właściwości. Na przykład 32-bitowej liczby całkowitej lub wskaźnika z innymi danymi. Wartość domyślna to 0.  
+*dwData*<br/>
+[in] Dane specyficzne dla aplikacji, które jest skojarzone z elementem właściwości. Na przykład 32-bitowej liczby całkowitej lub wskaźnika z innymi danymi. Wartość domyślna to 0.  
   
 ### <a name="return-value"></a>Wartość zwracana  
   

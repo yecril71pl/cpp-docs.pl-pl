@@ -19,22 +19,25 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f9202d7f46dbd3a619e379d076db217544bd4291
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: c9b969f51733d9eb4c45ac5609b42920765a7ad5
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32371762"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45704057"
 ---
 # <a name="linenumbers"></a>/LINENUMBERS
-```  
-/LINENUMBERS  
-```  
-  
-## <a name="remarks"></a>Uwagi  
- Ta opcja powoduje wyświetlenie COFF numerów wierszy. Numery wierszy istnieje w pliku obiektu, jeśli został skompilowany z bazy danych programu (/ zi), C7 zgodne (/ Z7), lub numery tylko wiersz (/Zd). Plik wykonywalny lub biblioteka DLL zawiera numery wierszy COFF, jeśli został połączony z Generuj informacje o debugowaniu (/ DEBUG).  
-  
- Tylko [/HEADERS](../../build/reference/headers.md) — opcja polecenia DUMPBIN jest dostępny do użytku na pliki tworzone z [/GL](../../build/reference/gl-whole-program-optimization.md) — opcja kompilatora.  
-  
-## <a name="see-also"></a>Zobacz też  
- [Opcje DUMPBIN](../../build/reference/dumpbin-options.md)
+
+```
+/LINENUMBERS
+```
+
+## <a name="remarks"></a>Uwagi
+
+Ta opcja wyświetla numery wierszy COFF. Numery wierszy istnieje w pliku obiektu, jeśli został skompilowany przy użyciu bazy danych programu (/Zi) zgodne z C7 (/ Z7), lub liczby tylko wiersz (/ ZD). Plik wykonywalny lub biblioteka DLL zawiera numery wierszy COFF, jeśli został połączony z Generuj informacje o debugowaniu (/ DEBUG).
+
+Tylko [/HEADERS](../../build/reference/headers.md) — opcja polecenia DUMPBIN jest dostępna do użycia w plikach z [/GL](../../build/reference/gl-whole-program-optimization.md) — opcja kompilatora.
+
+## <a name="see-also"></a>Zobacz też
+
+[Opcje DUMPBIN](../../build/reference/dumpbin-options.md)

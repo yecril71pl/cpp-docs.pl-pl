@@ -17,67 +17,84 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: f99e743ccbb8e7eca65c092a85b0cc482226567d
-ms.sourcegitcommit: f0c90000125a9497bf61e41624de189a043703c0
+ms.openlocfilehash: ca37981352ddcef639b3e8ed5bbd00a14f56f126
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44315947"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45700716"
 ---
 # <a name="image-menu-c-image-editor-for-icons"></a>Menu obrazu (C++ edytor obrazów dla ikon)
 
 **Obraz** menu, która jest wyświetlana tylko wtedy, gdy **obraz** edytora jest aktywny, zawiera polecenia służące do edycji obrazów, zarządzanie palety kolorów i ustawienie **edytora obrazów** okna Opcje. Ponadto polecenia narzędzia obrazach urządzeń są dostępne podczas pracy z ikony i kursory.
 
-**Odwróć kolory**  
-Odwraca kolory. Aby uzyskać więcej informacji, zobacz [odwracanie kolorów w wyborze](../windows/inverting-the-colors-in-a-selection-image-editor-for-icons.md).
+- **Odwróć kolory**
 
-**Przerzuć w poziomie**  
-Przerzuca obraz lub zaznaczenie w poziomie. Aby uzyskać więcej informacji, zobacz [Przerzucanie obrazu](../windows/flipping-an-image-image-editor-for-icons.md).
+   Odwraca kolory. Aby uzyskać więcej informacji, zobacz [odwracanie kolorów w wyborze](../windows/inverting-the-colors-in-a-selection-image-editor-for-icons.md).
 
-**Przerzuć w pionie**  
-Przerzuca obraz lub zaznaczenie w pionie. Aby uzyskać więcej informacji, zobacz [Przerzucanie obrazu](../windows/flipping-an-image-image-editor-for-icons.md).
+- **Przerzuć w poziomie**
 
-**Obrót o 90 stopni**  
-Obraca obraz lub zaznaczenie o 90 stopni. Aby uzyskać więcej informacji, zobacz [Przerzucanie obrazu](../windows/flipping-an-image-image-editor-for-icons.md).
+   Przerzuca obraz lub zaznaczenie w poziomie. Aby uzyskać więcej informacji, zobacz [Przerzucanie obrazu](../windows/flipping-an-image-image-editor-for-icons.md).
 
-**Pokaż okno kolorów**  
-Otwiera [okno kolorów](../windows/colors-window-image-editor-for-icons.md), w którym możesz wybrać kolory używane dla obrazu. Aby uzyskać więcej informacji, zobacz [Praca z kolorem](../windows/working-with-color-image-editor-for-icons.md).
+- **Przerzuć w pionie**
 
-**Użyj zaznaczenia jako pędzla**  
-Umożliwia tworzenie pędzla niestandardowego na podstawie część obrazu. Wybór staje się pędzla niestandardowego, który rozdziela kolorów w wyborze między obrazu. Kopiuje zaznaczenie są pozostawiane w ścieżce przeciągania. Przeciągniesz wolniej, większej liczby kopii zostały wprowadzone. Aby uzyskać więcej informacji, zobacz [Tworzenie pędzla niestandardowego](../windows/creating-a-custom-brush-image-editor-for-icons.md).
+   Przerzuca obraz lub zaznaczenie w pionie. Aby uzyskać więcej informacji, zobacz [Przerzucanie obrazu](../windows/flipping-an-image-image-editor-for-icons.md).
 
-**Kopiuj i wybór konspektu**  
-Tworzy kopię bieżącego zaznaczenia i zakreśla ją. Jeśli kolor tła znajduje się w bieżącym zaznaczeniu, będzie on wykluczony, jeśli masz [przezroczyste](../windows/choosing-a-transparent-or-opaque-background-image-editor-for-icons.md) wybrane.
+- **Obrót o 90 stopni**
 
-**Dostosuj kolory**  
-Otwiera [selektor kolorów niestandardowych](../windows/custom-color-selector-dialog-box-image-editor-for-icons.md), co pozwala dostosować kolory używane dla obrazu. Aby uzyskać więcej informacji, zobacz [Dostosowywanie lub zmiana kolorów](../windows/customizing-or-changing-colors-image-editor-for-icons.md).
+   Obraca obraz lub zaznaczenie o 90 stopni. Aby uzyskać więcej informacji, zobacz [Przerzucanie obrazu](../windows/flipping-an-image-image-editor-for-icons.md).
 
-**Załaduj paletę**  
-Otwiera [Załaduj paletę kolorów, okno dialogowe](../windows/load-palette-colors-dialog-box-image-editor-for-icons.md), co umożliwia ładowanie kolorów palety wcześniej zapisane w pliku .pal.
+- **Pokaż okno kolorów**
 
-**Zapisz paletę**  
-Zapisuje w pliku .pal kolorów palety.
+   Otwiera [okno kolorów](../windows/colors-window-image-editor-for-icons.md), w którym możesz wybrać kolory używane dla obrazu. Aby uzyskać więcej informacji, zobacz [Praca z kolorem](../windows/working-with-color-image-editor-for-icons.md).
 
-**Rysuj nieprzezroczyste**  
-Po wybraniu sprawia, że bieżące zaznaczenie nieprzezroczystości. Po wyczyszczeniu, sprawia, że bieżące zaznaczenie przezroczyste. Aby uzyskać więcej informacji, zobacz [wybierania nieprzezroczyste lub przezroczyste tło](../windows/choosing-a-transparent-or-opaque-background-image-editor-for-icons.md).
+- **Użyj zaznaczenia jako pędzla**
 
-**Edytor paska narzędzi**  
-Otwiera [okno dialogowe Nowy zasób paska narzędzi](../windows/new-toolbar-resource-dialog-box.md).
+   Umożliwia tworzenie pędzla niestandardowego na podstawie część obrazu. Wybór staje się pędzla niestandardowego, który rozdziela kolorów w wyborze między obrazu. Kopiuje zaznaczenie są pozostawiane w ścieżce przeciągania. Przeciągniesz wolniej, większej liczby kopii zostały wprowadzone. Aby uzyskać więcej informacji, zobacz [Tworzenie pędzla niestandardowego](../windows/creating-a-custom-brush-image-editor-for-icons.md).
 
-**Ustawienia siatki**  
-Otwiera [okno dialogowe Ustawienia siatki](../windows/grid-settings-dialog-box-image-editor-for-icons.md) w którym można określić siatki dla obrazu.
+- **Kopiuj i wybór konspektu**
 
-**Nowy typ obrazu**  
-Otwiera [New \<urządzenia > okno dialogowe typu obrazu](../windows/new-device-image-type-dialog-box-image-editor-for-icons.md). Zasób pojedyncza ikona może zawierać kilka obrazów o różnych rozmiarach; Windows użyć rozmiaru odpowiednią ikonę w zależności od tego, jak będzie mają być wyświetlane. Nowy typ urządzenia nie powoduje modyfikacji rozmiar ikony, ale raczej tworzy nowy obraz w ramach ikony. Dotyczy tylko ikony i kursory.
+   Tworzy kopię bieżącego zaznaczenia i zakreśla ją. Jeśli kolor tła znajduje się w bieżącym zaznaczeniu, będzie on wykluczony, jeśli masz [przezroczyste](../windows/choosing-a-transparent-or-opaque-background-image-editor-for-icons.md) wybrane.
 
-**Bieżący typ obrazu ikony/kursora**  
-Spowoduje otwarcie podmenu zawierającego pierwszy dostępnych kursorem lub ikonę obrazów (dziewięć pierwszy). Ostatnie polecenie, w podmenu, **więcej...** , otwiera [Otwórz \<urządzenia > okno dialogowe obrazu](../windows/open-device-image-dialog-box-image-editor-for-icons.md).
+- **Dostosuj kolory**
 
-**Usuń typ obrazu**  
-Usuwa obraz wybranego urządzenia.
+   Otwiera [selektor kolorów niestandardowych](../windows/custom-color-selector-dialog-box-image-editor-for-icons.md), co pozwala dostosować kolory używane dla obrazu. Aby uzyskać więcej informacji, zobacz [Dostosowywanie lub zmiana kolorów](../windows/customizing-or-changing-colors-image-editor-for-icons.md).
 
-**Narzędzia**  
-Uruchamia podmenu, który zawiera wszystkie dostępne narzędzia [paska narzędzi edytora obrazów](../windows/toolbar-image-editor-for-icons.md).
+- **Załaduj paletę**
+
+   Otwiera [Załaduj paletę kolorów, okno dialogowe](../windows/load-palette-colors-dialog-box-image-editor-for-icons.md), co umożliwia ładowanie kolorów palety wcześniej zapisane w pliku .pal.
+
+- **Zapisz paletę**
+
+   Zapisuje w pliku .pal kolorów palety.
+
+- **Rysuj nieprzezroczyste**
+
+   Po wybraniu sprawia, że bieżące zaznaczenie nieprzezroczystości. Po wyczyszczeniu, sprawia, że bieżące zaznaczenie przezroczyste. Aby uzyskać więcej informacji, zobacz [wybierania nieprzezroczyste lub przezroczyste tło](../windows/choosing-a-transparent-or-opaque-background-image-editor-for-icons.md).
+
+- **Edytor paska narzędzi**
+
+   Otwiera [okno dialogowe Nowy zasób paska narzędzi](../windows/new-toolbar-resource-dialog-box.md).
+
+- **Ustawienia siatki**
+
+   Otwiera [okno dialogowe Ustawienia siatki](../windows/grid-settings-dialog-box-image-editor-for-icons.md) w którym można określić siatki dla obrazu.
+
+- **Nowy typ obrazu**
+
+   Otwiera [New \<urządzenia > okno dialogowe typu obrazu](../windows/new-device-image-type-dialog-box-image-editor-for-icons.md). Zasób pojedyncza ikona może zawierać kilka obrazów o różnych rozmiarach; Windows użyć rozmiaru odpowiednią ikonę w zależności od tego, jak będzie mają być wyświetlane. Nowy typ urządzenia nie powoduje modyfikacji rozmiar ikony, ale raczej tworzy nowy obraz w ramach ikony. Dotyczy tylko ikony i kursory.
+
+- **Bieżący typ obrazu ikony/kursora**
+
+   Spowoduje otwarcie podmenu zawierającego pierwszy dostępnych kursorem lub ikonę obrazów (dziewięć pierwszy). Ostatnie polecenie, w podmenu, **więcej...** , otwiera [Otwórz \<urządzenia > okno dialogowe obrazu](../windows/open-device-image-dialog-box-image-editor-for-icons.md).
+
+- **Usuń typ obrazu**
+
+   Usuwa obraz wybranego urządzenia.
+
+- **Narzędzia**
+
+   Uruchamia podmenu, który zawiera wszystkie dostępne narzędzia [paska narzędzi edytora obrazów](../windows/toolbar-image-editor-for-icons.md).
 
 ## <a name="requirements"></a>Wymagania
 

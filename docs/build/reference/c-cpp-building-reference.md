@@ -17,70 +17,55 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2d26f729f660b3e51677303bb91b99e665a1a950
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 116ddca6ed9f5e0b3ea02652958931f88cc8fc13
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32375487"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45703225"
 ---
 # <a name="cc-building-reference"></a>Odwołanie kompilacji C/C++
-Visual C++ udostępnia dwa sposoby tworzenia programu C/C++. Sposób najprostszym (i najbardziej typowych) polega na [kompilacji w środowisku programowania Visual C++](../../ide/building-cpp-projects-in-visual-studio.md). Innym sposobem jest [kompilacji z wiersza polecenia przy użyciu narzędzia wiersza polecenia](../../build/building-on-the-command-line.md). W obu przypadkach można utworzyć plików źródłowych, za pomocą edytora źródła Visual C++ lub dowolnego edytora innych firm.  
-  
- Jeśli program używa pliku reguł programu make zamiast pliku .vcxproj, można nadal jego tworzenia w środowisku programistycznym jako [projektu zewnętrznego](../../ide/building-external-projects.md).  
-  
-## <a name="in-this-section"></a>W tej sekcji  
- [Kompilowanie programu C/C++](../../build/reference/compiling-a-c-cpp-program.md)  
- W tym artykule opisano kompilatora, która tworzy plik obiektu zawierającego kod maszynowy, dyrektywy konsolidatora, sekcje, odwołań zewnętrznych i nazwy funkcji i danych.  
-  
- [Konsolidacja](../../build/reference/linking.md)  
- Opisuje konsolidator, która łączy kodu z plików obiekt utworzony przez kompilator i biblioteki statycznie połączonej, usuwa odwołania do nazwy i tworzy plik wykonywalny.  
-  
- [Kompilacje wydania](../../build/reference/release-builds.md)  
- Przedstawia informacje na kiedy i dlaczego należy zmienić debugowania kompilacji do kompilacji wydania i omówiono także niektóre problemy, które można napotkać podczas zmiany z debugowanie kompilacji wydania.  
-  
- [Optymalizacja kodu](../../build/reference/optimizing-your-code.md)  
- Zawiera łącza do tematów dyskutować mechanizmu optymalizacji kodu:  
-  
- [Narzędzia kompilacji C/C++](../../build/reference/c-cpp-build-tools.md)  
- Udostępnia następujące narzędzia wiersza polecenia do wyświetlania lub modyfikowania danych wyjściowych kompilacji:  
-  
- [Błędy kompilacji C/C++](../../error-messages/compiler-errors-1/c-cpp-build-errors.md)  
- Wprowadza sekcji błędy kompilacji w tabeli treści.  
-  
-## <a name="related-sections"></a>Sekcje pokrewne  
- [Dokumentacja preprocesora języka C/C++](../../preprocessor/c-cpp-preprocessor-reference.md)  
- W tym artykule omówiono preprocesora, który przygotowuje pliki źródłowe dla kompilatora przez tłumaczenie makra, Operatorzy i dyrektywy.  
-  
- [Ogólne informacje o niestandardowych krokach budowania lub zdarzeniach kompilacji](../../ide/understanding-custom-build-steps-and-build-events.md)  
- W tym artykule omówiono Dostosowywanie procesu kompilacji.  
-  
- [Kompilowanie programu C/C++](../../build/building-c-cpp-programs.md)  
- Zawiera łącza do tematów opisujących kompilowania programu z wiersza polecenia lub zintegrowane środowisko programistyczne Visual Studio.  
-  
- [Ustawianie opcji kompilatora](../../build/reference/setting-compiler-options.md)  
- Zawiera opis opcji kompilatora ustawienie w środowisku programistycznym lub w wierszu polecenia.  
-  
- [Opcje kompilatora](../../build/reference/compiler-options.md)  
- Zawiera łącza do tematów dyskutować przy użyciu opcji kompilatora.  
-  
- [Ustawianie opcji konsolidatora](../../build/reference/setting-linker-options.md)  
- Opisuje opcje konsolidatora ustawienie wewnątrz lub na zewnątrz zintegrowane środowisko programistyczne.  
-  
- [Opcje konsolidatora](../../build/reference/linker-options.md)  
- Zawiera łącza do tematów dyskutować przy użyciu opcji konsolidatora.  
-  
- [BSCMAKE — dokumentacja](../../build/reference/bscmake-reference.md)  
- W tym artykule opisano narzędzie konserwacji przeglądarki Microsoft informacji (BSCMAKE. (EXE), które kompilacje pliku informacyjnego przeglądarki (.bsc) z .sbr plików utworzonych podczas kompilacji.  
-  
- [LIB — dokumentacja](../../build/reference/lib-reference.md)  
- W tym artykule opisano menedżera biblioteki Microsoft (LIB.exe), który tworzy i którymi zarządza biblioteki plików obiektów wspólnej obiektu pliku formatu (COFF).  
-  
- [EDITBIN — dokumentacja](../../build/reference/editbin-reference.md)  
- W tym artykule opisano edytora pliku binarnego Microsoft COFF (polecenia EDITBIN. (EXE), który modyfikuje pliki binarne wspólnej obiektu pliku formatu (COFF).  
-  
- [DUMPBIN — dokumentacja](../../build/reference/dumpbin-reference.md)  
- W tym artykule opisano Microsoft COFF plik binarny zrzutu (DUMPBIN. (EXE), który wyświetla informacje o pliki binarne wspólnej obiektu pliku formatu (COFF).  
-  
- [NMAKE — dokumentacja](../../build/nmake-reference.md)  
- W tym artykule opisano narzędzie do konserwacji programów firmy Microsoft (NMAKE. EXE), który jest narzędziem do kompilacji projekty oparte na polecenia zawarte w pliku opisu.
+
+Visual C++ zapewnia dwa sposoby kompilowanie programu C/C++. Najłatwiejszym (i najbardziej powszechnym) sposobem jest [kompilacji w środowisku deweloperskim Visual C++](../../ide/building-cpp-projects-in-visual-studio.md). Drugi sposób to [kompilacji z wiersza polecenia przy użyciu narzędzia wiersza polecenia](../../build/building-on-the-command-line.md). W obu przypadkach można utworzyć plików źródłowych, za pomocą edytora źródła Visual C++ lub ulubionego edytora w innych firm.
+
+Jeśli program używa pliku reguł programu make, a nie plik .vcxproj, nadal tworzyć go w środowisku programistycznym jako [projektu zewnętrznego](../../ide/building-external-projects.md).
+
+## <a name="in-this-section"></a>W tej sekcji
+
+[Kompilowanie programu C/C++](../../build/reference/compiling-a-c-cpp-program.md) opisuje kompilator tworzy plik obiektu zawierającego kod maszynowy, dyrektywy konsolidatora, sekcje, odwołania zewnętrzne i nazwy funkcji/danych.
+
+[Łączenie](../../build/reference/linking.md) opisuje konsolidatora, która łączy kod z plikami obiekt utworzony przez kompilator i statycznie łączonych bibliotek, jest rozpoznawana jako odwołania do nazwy i tworzy plik wykonywalny.
+
+[Kompilacje wydania](../../build/reference/release-builds.md) umożliwia wyświetlanie informacji na temat kiedy i dlaczego chcesz zmienić z kompilacji debugowania do kompilacji wydania i również w tym artykule omówiono niektóre problemy mogą wystąpić w przypadku zmiany z debugowania na kompilację wydania.
+
+[Optymalizacja kodu](../../build/reference/optimizing-your-code.md) zawiera łącza do tematów omawiających mechanizmy optymalizacji kodu:
+
+[Narzędzia kompilacji C/C++](../../build/reference/c-cpp-build-tools.md) zawiera następujące narzędzia wiersza polecenia do wyświetlania lub modyfikowania dane wyjściowe kompilacji:
+
+[Błędy kompilacji C/C++](../../error-messages/compiler-errors-1/c-cpp-build-errors.md) wprowadza sekcję błędy kompilacji w tabeli treści.
+
+## <a name="related-sections"></a>Sekcje pokrewne
+
+[C/C++ Preprocessor Reference](../../preprocessor/c-cpp-preprocessor-reference.md) w tym artykule omówiono preprocesora, który przygotowuje pliki źródłowe dla kompilatora zamieniane makra, operatorów i dyrektywy.
+
+[Kroki tworzenia niestandardowych interpretacji i zdarzenia kompilacji](../../ide/understanding-custom-build-steps-and-build-events.md) Discusses Dostosowywanie procesu kompilacji.
+
+[Kompilowanie programu C/C++](../../build/building-c-cpp-programs.md) zawiera łącza do tematów opisujących, tworzenie programu z wiersza polecenia lub zintegrowanego środowiska projektowego programu Visual Studio.
+
+[Ustawianie opcji kompilatora](../../build/reference/setting-compiler-options.md) w tym artykule opisano ustawienia Opcje kompilatora w środowisku programistycznym lub w wierszu polecenia.
+
+[Opcje kompilatora](../../build/reference/compiler-options.md) zawiera łącza do tematów omawiających używanie opcji kompilatora.
+
+[Ustawianie opcji konsolidatora](../../build/reference/setting-linker-options.md) w tym artykule opisano opcje konsolidatora ustawienie wewnątrz lub na zewnątrz zintegrowanego środowiska programistycznego.
+
+[Opcje konsolidatora](../../build/reference/linker-options.md) zawiera łącza do tematów omawiających używanie opcji konsolidatora.
+
+[Bscmake — dokumentacja](../../build/reference/bscmake-reference.md) opisano narzędzie konserwacji przeglądania firmy Microsoft informacje (BSCMAKE. Z rozszerzeniem EXE), które kompilacje pliku informacyjnego przeglądarki (.bsc) z .sbr pliki tworzone podczas kompilacji.
+
+[Odwołanie do biblioteki LIB](../../build/reference/lib-reference.md) opisuje menedżera biblioteki Microsoft (LIB.exe), który tworzy i którymi zarządza Biblioteka plików obiektów Common Object File Format (COFF).
+
+[Odwołanie EDITBIN](../../build/reference/editbin-reference.md) opisuje edytora pliku binarnego Microsoft COFF (EDITBIN. Z rozszerzeniem EXE), który modyfikuje pliki binarne Common Object File Format (COFF).
+
+[Odwołanie DUMPBIN](../../build/reference/dumpbin-reference.md) opisuje Microsoft COFF plik binarny zrzutu (DUMPBIN. Z rozszerzeniem EXE), który wyświetla informacje dotyczące plików binarnych Common Object File Format (COFF).
+
+[NMAKE — dokumentacja](../../build/nmake-reference.md) Opisuje narzędzie do konserwacji programów firmy Microsoft (NMAKE. Z rozszerzeniem EXE), czyli narzędzie, które kompilacje projektów oparte na polecenia zawarte w pliku opisu.

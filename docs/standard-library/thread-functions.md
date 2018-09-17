@@ -16,12 +16,12 @@ helpviewer_keywords:
 - std::sleep_until [C++]
 - std::swap [C++]
 - std::yield [C++]
-ms.openlocfilehash: 948c00f7c0b773bf366f4ea9e102c832e9878d9b
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: 25c03be7ffb504f2bec47677aec70360d0f8b38f
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38960453"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45704263"
 ---
 # <a name="ltthreadgt-functions"></a>&lt;Wątek&gt; funkcji
 
@@ -54,8 +54,8 @@ inline void sleep_for(const chrono::duration<Rep, Period>& Rel_time);
 
 ### <a name="parameters"></a>Parametry
 
-*Rel_time*  
- A [czas trwania](../standard-library/duration-class.md) obiekt, który określa przedział czasu.
+*Rel_time*<br/>
+A [czas trwania](../standard-library/duration-class.md) obiekt, który określa przedział czasu.
 
 ### <a name="remarks"></a>Uwagi
 
@@ -74,8 +74,8 @@ void sleep_until(const xtime *Abs_time);
 
 ### <a name="parameters"></a>Parametry
 
-*Abs_time*  
- Reprezentuje punkt w czasie.
+*Abs_time*<br/>
+Reprezentuje punkt w czasie.
 
 ### <a name="remarks"></a>Uwagi
 
@@ -91,11 +91,11 @@ void swap(thread& Left, thread& Right) noexcept;
 
 ### <a name="parameters"></a>Parametry
 
-*Po lewej stronie*  
- Po lewej stronie **wątku** obiektu.
+*po lewej stronie*<br/>
+Po lewej stronie **wątku** obiektu.
 
-*Po prawej stronie*  
- Po prawej stronie **wątku** obiektu.
+*po prawej stronie*<br/>
+Po prawej stronie **wątku** obiektu.
 
 ### <a name="remarks"></a>Uwagi
 

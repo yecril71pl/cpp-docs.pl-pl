@@ -8,14 +8,14 @@ f1_keywords:
 - future/std::future_status
 - future/std::launch
 ms.assetid: 8c675645-db47-4cab-bc0e-7b87f8a302df
-ms.openlocfilehash: 6e228eb538a0d281dff8066390b0c6dd2e7ea4d8
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 0056d54844e9396d517fd44c3649f1bc9605829b
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33843850"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45700560"
 ---
-# <a name="ltfuturegt-enums"></a>&lt;przyszłe&gt; wyliczenia
+# <a name="ltfuturegt-enums"></a>&lt;przyszłe&gt; Typy wyliczeniowe
 
 ||||
 |-|-|-|
@@ -23,25 +23,39 @@ ms.locfileid: "33843850"
 
 ## <a name="future_errc"></a>  future_errc — wyliczenie
 
-Dostarcza nazw symbolicznych wszystkie błędy, które są zgłaszane przez [future_error —](../standard-library/future-error-class.md) klasy.
+Dostarcza symbolicznych nazw dla wszystkich błędów, które są zgłaszane przez [future_error](../standard-library/future-error-class.md) klasy.
 
-future_errc klasy — {broken_promise, future_already_retrieved, promise_already_satisfied, no_state};
+```cpp
+class future_errc {
+   broken_promise,
+   future_already_retrieved,
+   promise_already_satisfied,
+   no_state
+   };
+```
 
 ## <a name="future_status"></a>  future_status — wyliczenie
 
-Dostarcza nazw symbolicznych z powodów zwracających w funkcji czasu oczekiwania.
+Dostarcza nazw symbolicznych dla przyczyn, które może zwracać funkcja Przekroczono limit czasu oczekiwania.
 
 ```cpp
-enum future_status{    ready,
+enum future_status{
+    ready,
     timeout,
- deferred};
+    deferred
+};
 ```
 
 ## <a name="launch"></a>  Launch — wyliczenie
 
-Reprezentuje typ maski, który opisuje możliwe tryby funkcji szablonu [async](../standard-library/future-functions.md#async).
+Reprezentuje typ maski bitów, który opisuje możliwe tryby funkcji szablonu [async](../standard-library/future-functions.md#async).
 
-Klasa uruchamiania {asynchroniczne, odroczone};
+```cpp
+class launch{
+   async,
+   deferred
+   };
+```
 
 ## <a name="see-also"></a>Zobacz także
 

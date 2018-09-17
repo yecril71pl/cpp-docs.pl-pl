@@ -16,12 +16,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9a6f3d8f8a3527e193ed1bec0f7dc4b563593b84
-ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
+ms.openlocfilehash: 8c01e10a77278f0a02658778ec178f0a4226eb36
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "42465621"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45704863"
 ---
 # <a name="writeeflags"></a>__writeeflags
 Zapisuje określoną wartość do programu, stan i kontroli (EFLAGS) rejestru.  
@@ -37,7 +37,7 @@ void __writeeflags(unsigned __int64 Value);
   
 |Parametr|Opis|  
 |---------------|-----------------|  
-|[in] `Value`|Wartość do zapisu do rejestru EFLAGS. `Value` Parametr jest 32-bitowy długa dla platform 32-bitowych i 64-bitowy na platformie 64-bitowej.|  
+|*Wartość*|[in] Wartość do zapisu do rejestru EFLAGS. `Value` Parametr jest 32-bitowy długa dla platform 32-bitowych i 64-bitowy na platformie 64-bitowej.|  
   
 ## <a name="remarks"></a>Uwagi  
  Te procedury są dostępne tylko jako funkcje wewnętrzne.  

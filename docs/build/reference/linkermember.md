@@ -18,22 +18,25 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ac961f985de65bb7eea9a4ad0f5d10b75fbe60d3
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 0979009260381eb210e7992377bab8b5ae613338
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32371502"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45700612"
 ---
 # <a name="linkermember"></a>/LINKERMEMBER
-```  
-/LINKERMEMBER[:{1|2}]  
-```  
-  
-## <a name="remarks"></a>Uwagi  
- Ta opcja powoduje wyświetlenie symbole publiczne zdefiniowane w bibliotece. Należy określić argument 1 do wyświetlenia symboli w kolejności obiektu, wraz z ich przesunięcia. Należy określić argument 2, aby wyświetlić przesunięcia i liczby indeksu obiektów, a następnie wyświetlić symbole w kolejności alfabetycznej, wraz z indeksu obiektu dla każdego. Aby uzyskać zarówno dane wyjściowe, należy określić /LINKERMEMBER bez argument liczbowy.  
-  
- Tylko [/HEADERS](../../build/reference/headers.md) — opcja polecenia DUMPBIN jest dostępny do użytku na pliki tworzone z [/GL](../../build/reference/gl-whole-program-optimization.md) — opcja kompilatora.  
-  
-## <a name="see-also"></a>Zobacz też  
- [Opcje DUMPBIN](../../build/reference/dumpbin-options.md)
+
+```
+/LINKERMEMBER[:{1|2}]
+```
+
+## <a name="remarks"></a>Uwagi
+
+Ta opcja wyświetla symbole publiczne zdefiniowane w bibliotece. Należy określić argument 1, aby wyświetlić symbole w kolejności obiektu, wraz z ich przesunięcia. Należy określić argument 2 przesunięcia i numery indeksu obiektów, a następnie wyświetlona lista symboli w kolejności alfabetycznej, wraz z indeks obiektów dla każdego. Aby uzyskać zarówno dane wyjściowe, należy określić /LINKERMEMBER bez argumentów o liczbie.
+
+Tylko [/HEADERS](../../build/reference/headers.md) — opcja polecenia DUMPBIN jest dostępna do użycia w plikach z [/GL](../../build/reference/gl-whole-program-optimization.md) — opcja kompilatora.
+
+## <a name="see-also"></a>Zobacz też
+
+[Opcje DUMPBIN](../../build/reference/dumpbin-options.md)

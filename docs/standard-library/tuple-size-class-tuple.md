@@ -18,12 +18,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0c03c47502fdd9309b3d6553c3f46f9685d4eaa9
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: 883e7bdefe4bc1424dfea343d8d473015e6387d6
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38958269"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45700222"
 ---
 # <a name="tuplesize-class"></a>tuple_size — klasa;
 
@@ -66,22 +66,22 @@ template <class Tuple>
 
 ### <a name="parameters"></a>Parametry
 
-*Krotki*  
+*Krotki*<br/>
 Typ spójnej kolekcji.
 
-*Elem*  
+*Elem*<br/>
 Typ elementów tablicy.
 
-*Rozmiar*  
+*Rozmiar*<br/>
 Rozmiar tablicy.
 
-*T1*  
+*T1*<br/>
 Typ pierwszego elementu członkowskiego pary.
 
-*T2*  
+*T2*<br/>
 Typ drugiego elementu członkowskiego pary.
 
-*Typy*  
+*Typy*<br/>
 Typy elementów krotki.
 
 ## <a name="remarks"></a>Uwagi
@@ -129,5 +129,5 @@ int main()
 ## <a name="see-also"></a>Zobacz także
 
 [\<tuple>](../standard-library/tuple.md)<br/>
-[krotki](../standard-library/tuple-class.md)<br/>
+[Krotki](../standard-library/tuple-class.md)<br/>
 [tuple_element — klasa](../standard-library/tuple-element-class-tuple.md)<br/>

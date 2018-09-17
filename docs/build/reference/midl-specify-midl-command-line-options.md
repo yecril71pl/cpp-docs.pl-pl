@@ -21,12 +21,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e513b0397a41a19c9a8088332eb3d1793b6b6647
-ms.sourcegitcommit: d10a2382832373b900b1780e1190ab104175397f
+ms.openlocfilehash: ce4c5159a66963268ae83e0c0adfdc082dfcc81c
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43894593"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45706943"
 ---
 # <a name="midl-specify-midl-command-line-options"></a>/MIDL (Określ opcje wiersza polecenia MIDL)
 
@@ -38,7 +38,7 @@ Określa plik odpowiedzi opcji wiersza polecenia MIDL
 
 ## <a name="arguments"></a>Argumenty
 
-*Plik*  
+*Plik*<br/>
 Nazwa pliku, który zawiera [opcje wiersza polecenia MIDL](/windows/desktop/Midl/general-midl-command-line-syntax).
 
 ## <a name="remarks"></a>Uwagi
@@ -61,9 +61,9 @@ Ten plik powinien zawierać jedną opcję wiersza polecenia MIDL na wiersz.
 
 ## <a name="see-also"></a>Zobacz też
 
-[Ustawianie opcji konsolidatora](../../build/reference/setting-linker-options.md)   
-[Opcje konsolidatora](../../build/reference/linker-options.md)   
-[/ IDLOUT (nazwij wyjściowe pliki MIDL)](../../build/reference/idlout-name-midl-output-files.md)   
-[/ IGNOREIDL (nie Przetwarzaj atrybutów w MIDL)](../../build/reference/ignoreidl-don-t-process-attributes-into-midl.md)   
-[/ TLBOUT (nazwa. Plik TLB)](../../build/reference/tlbout-name-dot-tlb-file.md)   
-[Kompilowanie programu opartego na atrybutach](../../windows/building-an-attributed-program.md)
+[Ustawianie opcji konsolidatora](../../build/reference/setting-linker-options.md)<br/>
+[Opcje konsolidatora](../../build/reference/linker-options.md)<br/>
+[/ IDLOUT (nazwij wyjściowe pliki MIDL)](../../build/reference/idlout-name-midl-output-files.md)
+[/IGNOREIDL (nie Przetwarzaj atrybutów w MIDL)](../../build/reference/ignoreidl-don-t-process-attributes-into-midl.md)
+ [ /tlbout (nazwa. Plik TLB)](../../build/reference/tlbout-name-dot-tlb-file.md)
+[kompilowanie programu opartego na atrybutach](../../windows/building-an-attributed-program.md)

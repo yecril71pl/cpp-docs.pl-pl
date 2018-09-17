@@ -16,12 +16,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 9d3e54f13f6b165288402bbb1d783a2f1979f4ac
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: abad906c7fcc5c86a6901757ddfbb5dfeff2ec29
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42607702"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45704903"
 ---
 # <a name="generic-interfaces-visual-c"></a>Interfejsy ogólne (Visual C++)
 
@@ -42,8 +42,8 @@ Aby uzyskać więcej informacji na temat interfejsów, zobacz [interfejsu klasy]
 
 ## <a name="remarks"></a>Uwagi
 
-*atrybuty* (opcjonalnie)  
-Dodatkowe informacje deklaratywnego. Aby uzyskać więcej informacji na temat atrybuty i klasy atrybutów, zobacz **atrybuty**.
+*Atrybuty*  
+(Opcjonalnie) Dodatkowe informacje deklaratywnego. Aby uzyskać więcej informacji na temat atrybuty i klasy atrybutów, zobacz **atrybuty**.
 
 *klucz klasy*  
 **Klasa** lub **typename**
@@ -54,20 +54,20 @@ Lista identyfikatorów rozdzielonych przecinkami.
 *Typ — parametr ograniczenia — klauzule*  
 Ma postać określone w [ograniczenia dotyczące parametrów typu ogólnego (C + +/ CLI)](../windows/constraints-on-generic-type-parameters-cpp-cli.md)
 
-*modyfikatory dostępności* (opcjonalnie)  
-Modyfikatory dostępności (np. **publiczne, prywatne**).
+*modyfikatory dostępności*  
+(Opcjonalnie) Modyfikatory dostępności (np. **publiczne, prywatne**).
 
 *Identyfikator*  
 Nazwa interfejsu.
 
-*Lista podstawowego* (opcjonalnie)  
-Lista, która zawiera co najmniej jeden jawne interfejsy podstawowe rozdzielonych przecinkami.
+*Lista podstawowego*  
+(Opcjonalnie) Lista, która zawiera co najmniej jeden jawne interfejsy podstawowe rozdzielonych przecinkami.
 
 *treść_interfejsu*  
 Deklaracje członków interfejsu.
 
-*deklaratory* (opcjonalnie)  
-Deklaracje zmiennych na podstawie tego typu.
+*deklaratory*  
+(Opcjonalnie) Deklaracje zmiennych na podstawie tego typu.
 
 ## <a name="example"></a>Przykład
 

@@ -23,46 +23,50 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c5d246c43a1f234426b33ac640b3e1bb706d2f72
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 994568d74c63e612b55d1101ce957e646c555e4a
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32376471"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45707437"
 ---
 # <a name="x-ignore-standard-include-paths"></a>/X (Ignoruj standardowe ścieżki dołączanych plików)
-Zabezpiecza kompilator przed wyszukiwaniem dołączonych plików w katalogach określonych w zmiennych środowiskowych PATH lub INCLUDE.  
-  
-## <a name="syntax"></a>Składnia  
-  
-```  
-/X  
-```  
-  
-## <a name="remarks"></a>Uwagi  
- Można użyć tej opcji z [/I (dodatkowe katalogi dołączenia)](../../build/reference/i-additional-include-directories.md) (**/I**`directory`) opcja.  
-  
-### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Aby ustawić tę opcję kompilatora w środowisku programowania Visual Studio  
-  
-1.  Otwórz projekt **strony właściwości** okno dialogowe. Aby uzyskać więcej informacji, zobacz [Praca z właściwościami projektu](../../ide/working-with-project-properties.md).  
-  
-2.  Kliknij przycisk **C/C++** folderu.  
-  
-3.  Kliknij przycisk **preprocesora** strony właściwości.  
-  
-4.  Modyfikowanie **Ignoruj standardową ścieżkę obejmują** właściwości.  
-  
-### <a name="to-set-this-compiler-option-programmatically"></a>Aby programowo ustawić tę opcję kompilatora  
-  
--   Zobacz <xref:Microsoft.VisualStudio.VCProjectEngine.VCCLCompilerTool.IgnoreStandardIncludePath%2A>.  
-  
-## <a name="example"></a>Przykład  
- W poniższym poleceniu `/X` informuje kompilator, aby zignorować lokalizacji określonej przez zmiennych środowiskowych PATH lub INCLUDE i `/I` Określa katalog, w którym znajdują się pliki dołączane:  
-  
-```  
-CL /X /I \ALT\INCLUDE MAIN.C  
-```  
-  
-## <a name="see-also"></a>Zobacz też  
- [Opcje kompilatora](../../build/reference/compiler-options.md)   
- [Ustawianie opcji kompilatora](../../build/reference/setting-compiler-options.md)
+
+Zabezpiecza kompilator przed wyszukiwaniem dołączonych plików w katalogach określonych w zmiennych środowiskowych PATH lub INCLUDE.
+
+## <a name="syntax"></a>Składnia
+
+```
+/X
+```
+
+## <a name="remarks"></a>Uwagi
+
+Można użyć tej opcji z [/I (dodatkowe katalogi dołączenia)](../../build/reference/i-additional-include-directories.md) (**/I**`directory`) opcji.
+
+### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Aby ustawić tę opcję kompilatora w środowisku programowania Visual Studio
+
+1. Otwórz projekt **stron właściwości** okno dialogowe. Aby uzyskać więcej informacji, zobacz [Praca z właściwościami projektu](../../ide/working-with-project-properties.md).
+
+1. Kliknij przycisk **C/C++** folderu.
+
+1. Kliknij przycisk **preprocesora** stronę właściwości.
+
+1. Modyfikowanie **Ignoruj standardową ścieżkę obejmują** właściwości.
+
+### <a name="to-set-this-compiler-option-programmatically"></a>Aby programowo ustawić tę opcję kompilatora
+
+- Zobacz <xref:Microsoft.VisualStudio.VCProjectEngine.VCCLCompilerTool.IgnoreStandardIncludePath%2A>.
+
+## <a name="example"></a>Przykład
+
+W poniższym poleceniu `/X` informuje kompilator, aby zignorować lokalizacjach, określonych przez zmienne środowiskowe PATH lub INCLUDE i `/I` Określa katalog, w którym znajdują się pliki dołączane:
+
+```
+CL /X /I \ALT\INCLUDE MAIN.C
+```
+
+## <a name="see-also"></a>Zobacz też
+
+[Opcje kompilatora](../../build/reference/compiler-options.md)<br/>
+[Ustawianie opcji kompilatora](../../build/reference/setting-compiler-options.md)

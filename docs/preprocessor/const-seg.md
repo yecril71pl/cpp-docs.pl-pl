@@ -1,7 +1,7 @@
 ---
 title: const_seg | Dokumentacja firmy Microsoft
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 09/17/2018
 ms.technology:
 - cpp-tools
 ms.topic: reference
@@ -18,12 +18,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a3081837cc4516750f8c2c0d75cfc37eef208f9d
-ms.sourcegitcommit: d4c803bd3a684d7951bf88dcecf1f14af43ae411
+ms.openlocfilehash: db73d212a11fe096c07a7e14d033c21e6b61311c
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/10/2018
-ms.locfileid: "42465584"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45705214"
 ---
 # <a name="constseg"></a>const_seg
 Określa segment gdzie [const](../cpp/const-cpp.md) zmienne są przechowywane w pliku .obj.  
@@ -34,33 +34,35 @@ Określa segment gdzie [const](../cpp/const-cpp.md) zmienne są przechowywane w 
 #pragma const_seg ( [ [ { push | pop}, ] [ identifier, ] ] [ "segment-name" [, "segment-class" ] )  
 ```  
   
-## <a name="remarks"></a>Uwagi  
- 
+### <a name="parameters"></a>Parametry
+
+**push**<br/>
+(Opcjonalnie) Umieszcza rekord na wewnętrznym stosie kompilatora. A **wypychania** może mieć *identyfikator* i *nazwą segmentu*.  
+  
+**POP**<br/>
+(Opcjonalnie) Usuwa rekord z góry wewnętrznego stosu kompilatora.  
+  
+*Identyfikator*<br/>
+(Opcjonalnie) Gdy jest używane z **wypychania**, przypisuje nazwę rekordowi na wewnętrznym stosie kompilatora. Gdy jest używane z **pop**, zdejmuje rekordy z wewnętrznego stosu aż do usunięcia *identyfikator* zostanie usunięta; Jeśli *identyfikator* nie zostanie znaleziony na wewnętrznym stosie, nic nie zostanie zdjęte.  
+  
+Za pomocą *identyfikator* umożliwia wielu rekordów zostać zdjęte ze stosu za pomocą jednego **pop** polecenia.  
+  
+"*nazwą segmentu*"<br/>  
+(Opcjonalnie) Nazwa segmentu. Gdy jest używane z **pop**, stos jest zdejmowany i *nazwą segmentu* staje się nazwą aktywny segment.  
+  
+"*klasy segmentu*"<br/>
+(Opcjonalnie) Uwzględnione na potrzeby utrzymywania zgodności z C++ wcześniejszych niż 2.0. Jest on ignorowany.  
+  
+## <a name="remarks"></a>Uwagi
+
 Znaczenie terminów *segmentu* i *sekcji* są wymienne, w tym temacie.  
   
 Pliki OBJ mogą być wyświetlane z [dumpbin](../build/reference/dumpbin-command-line.md) aplikacji. Segment domyślnej w pliku .obj `const` zmiennych jest .rdata. Niektóre `const` zmienne, takie jak wartości skalarnych, są automatycznie śródwierszowe w strumieniu kodu. Śródwierszowe kodu nie będą widoczne w .rdata.  
   
 Definiowanie obiektu wymagające dynamiczna Inicjalizacja w `const_seg` powoduje zachowanie niezdefiniowane.  
   
-`#pragma const_seg` bez parametrów resetuje segmentu .rdata.  
-  
-*wypychane* (opcjonalnie)  
-Umieszcza rekord na wewnętrznym stosie kompilatora. A *wypychania* może mieć *identyfikator* i *nazwą segmentu*.  
-  
-*POP* (opcjonalnie)  
-Usuwa rekord z góry wewnętrznego stosu kompilatora.  
-  
-*Identyfikator* (opcjonalnie)  
-Gdy jest używane z *wypychania*, przypisuje nazwę rekordowi na wewnętrznym stosie kompilatora. Gdy jest używane z *pop*, zdejmuje rekordy z wewnętrznego stosu aż do usunięcia *identyfikator* zostanie usunięta; Jeśli *identyfikator* nie zostanie znaleziony na wewnętrznym stosie, nic nie zostanie zdjęte.  
-  
-Za pomocą *identyfikator* umożliwia wielu rekordów zostać zdjęte ze stosu za pomocą jednego *pop* polecenia.  
-  
-"*nazwą segmentu*" (opcjonalne)  
-Nazwa segmentu. Gdy jest używane z *pop*, stos jest zdejmowany i *nazwą segmentu* staje się nazwą aktywny segment.  
-  
-"*klasy segmentu*" (opcjonalne)  
-Uwzględnione na potrzeby utrzymywania zgodności z C++ wcześniejszych niż 2.0. Jest on ignorowany.  
-  
+`#pragma const_seg` bez parametrów resetuje segmentu .rdata.
+
 ## <a name="example"></a>Przykład  
   
 ```cpp  

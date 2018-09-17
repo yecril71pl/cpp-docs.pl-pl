@@ -16,36 +16,43 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 544ce4cd0f4ed9a7f3592e5ec1691fb3734b8772
-ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
+ms.openlocfilehash: 4c2ff441fc38d460e27039d7825753a2011dac3e
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "33340011"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45702770"
 ---
 # <a name="event-handler-wizard"></a>Kreator obsługi zdarzeń
-Ten kreator dodaje program obsługi zdarzeń dla kontrolka okna dialogowego do wybranej klasy. Po dodaniu obsługi zdarzeń z [okna właściwości](/visualstudio/ide/reference/properties-window), można dodać go tylko do klasy, która implementuje okno dialogowe. Zobacz [Dodawanie obsługi zdarzeń dla formantów okna dialogowego](../windows/adding-event-handlers-for-dialog-box-controls.md) Aby uzyskać więcej informacji.  
+Ten kreator dodaje program obsługi zdarzeń dla formantu pola okna dialogowego do klasy wybranych przez użytkownika. Po dodaniu programu obsługi zdarzeń z [okno właściwości](/visualstudio/ide/reference/properties-window), można go dodać tylko do klasy, która implementuje okno dialogowe. Zobacz [Dodawanie obsługi zdarzeń dla formantów okna dialogowego](../windows/adding-event-handlers-for-dialog-box-controls.md) Aby uzyskać więcej informacji.  
   
- **Nazwa polecenia**  
- Określa wybrany formant, do którego jest dodawany program obsługi zdarzeń. To pole jest niedostępne.  
+- **Nazwa polecenia**
+
+   Identyfikuje zaznaczonego formantu, do którego jest dodawany program obsługi zdarzeń. To pole jest niedostępne.  
   
- **Typ komunikatu**  
- Wyświetla listę bieżącej obsługi komunikatów możliwe zaznaczonego formantu.  
+- **Typ komunikatu**
+
+   Wyświetla listę bieżącej obsługi komunikatów możliwe dla zaznaczonej kontrolki.  
   
- **Nazwa programu obsługi — funkcja**  
- Wyświetla nazwę funkcji, która jest dodawana do obsługi zdarzenia. Domyślnie nazwa opiera się na typ komunikatu i polecenia reprezentowana przez "On". Na przykład przycisk o nazwie `IDC_BUTTON1`, typ komunikatu `BN_CLICKED` Wyświetla nazwę obsługi funkcji `OnBnClickedButton1`.  
+- **Nazwa procedury obsługi — funkcja**
+
+   Wyświetla nazwę funkcji, który jest dodawany do obsługi zdarzeń. Domyślnie nazwa opiera się na typ komunikatu i polecenia dołączony przez "Włączone". Na przykład dla przycisku o nazwie `IDC_BUTTON1`, typ komunikatu `BN_CLICKED` Wyświetla nazwę procedury obsługi funkcji `OnBnClickedButton1`.  
   
- **Lista klas**  
- Wyświetla dostępne klasy, do których można dodać obsługi zdarzeń. Klasy dla okna dialogowego wybranego jest wyświetlany na czerwono.  
+- **Lista klas**
+
+   Wyświetla dostępne klasy, do których można dodać program obsługi zdarzeń. Klasa wybranego okna dialogowego jest wyświetlany w kolorze czerwonym.  
   
- **Opis programu obsługi**  
- Zawiera opis elementu zaznaczonego w **typ komunikatu** pole. To pole jest niedostępne.  
+- **Opis procedury obsługi**
+
+   Zawiera opis elementu zaznaczonego w **typ komunikatu** pole. To pole jest niedostępne.  
   
- **Dodawanie i edytowanie**  
- Dodaje program obsługi komunikatów do wybranej klasy lub obiekt, a następnie otworzeniem nowa funkcja w edytorze tekstu, można dodać kod obsługi powiadamiania kontrolki.  
+- **Dodawanie i edytowanie**
+
+   Dodaje program obsługi komunikatów do wybranej klasy lub obiekt, a następnie otwiera edytor tekstu na nową funkcję, więc można dodać kod procedury obsługi powiadamiania kontrolki.  
   
- **Edytowanie kodu**  
- Zostanie otwarty w edytorze tekstu wybranej istniejącej funkcji, można dodawać lub edytować kod obsługi powiadamiania kontrolki.  
+- **Edytowanie kodu**
+
+   Zostanie otwarty Edytor tekstów, aby wybrane istniejącą funkcję, dzięki czemu można dodawać lub edytować kod procedury obsługi powiadamiania kontrolki.  
   
 ## <a name="see-also"></a>Zobacz też  
  [Dodawanie obsługi zdarzeń](../ide/adding-an-event-handler-visual-cpp.md)

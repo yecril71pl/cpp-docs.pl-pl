@@ -14,17 +14,19 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6eff0000aef01790106b44b49b4855218fcf9332
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 03c2c66d45ee415ddc4f3ba27b6a100c5e2ec1dc
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32373104"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45702107"
 ---
 # <a name="structure-of-a-library"></a>Struktura biblioteki
-Biblioteka zawiera obiekty COFF. Obiekty w bibliotece zawierać funkcje i dane, które można odwoływać się zewnętrznie przez inne obiekty w programie. Obiekt w bibliotece jest czasami określane jako członka biblioteki.  
-  
- Można uzyskać dodatkowe informacje o zawartości biblioteki, uruchamiając narzędzie DUMPBIN z opcją /LINKERMEMBER. Aby uzyskać więcej informacji na temat tej opcji, zobacz [odwołanie DUMPBIN](../../build/reference/dumpbin-reference.md).  
-  
-## <a name="see-also"></a>Zobacz też  
- [Informacje o LIB](../../build/reference/overview-of-lib.md)
+
+Biblioteka zawiera obiekty COFF. Obiekty w bibliotece zawierają funkcje i dane, który może być zewnętrznie przywoływany przez inne obiekty w programie. Obiekt w bibliotece jest czasami określane jako członka biblioteki.
+
+Dodatkowe informacje na temat zawartości biblioteki można uzyskać, uruchamiając narzędzie DUMPBIN z opcją /LINKERMEMBER. Aby uzyskać więcej informacji na temat tej opcji, zobacz [odwołanie DUMPBIN](../../build/reference/dumpbin-reference.md).
+
+## <a name="see-also"></a>Zobacz też
+
+[Informacje o LIB](../../build/reference/overview-of-lib.md)

@@ -34,12 +34,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b05c93bbdfd09bc28288b27a55520c5ac664b723
-ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
+ms.openlocfilehash: 0ca3af6aba4c208672038de2ca663efdb2cc9d9a
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "42465800"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45700937"
 ---
 # <a name="cmenutearoffmanager-class"></a>Klasa CMenuTearOffManager
 Zarządza menu odrywania. Menu odrywania jest menu na pasku menu. Użytkownik może usunąć zrywalne menu z paska menu, powodując unoszenie się menu zrywalnego.  
@@ -99,8 +99,8 @@ void Build(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *uiTearOffBarID*  
- [in] *strText*  
+*uiTearOffBarID*<br/>
+[in] [in] *strText*  
   
 ### <a name="remarks"></a>Uwagi  
   
@@ -136,14 +136,14 @@ BOOL Initialize(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *lpszRegEntry*  
- Ciąg, który zawiera ścieżkę wpisu rejestru. Aplikacje są przechowywane ustawienia odrywania słupków tego wpisu rejestru.  
+*lpszRegEntry*<br/>
+[in] Ciąg, który zawiera ścieżkę wpisu rejestru. Aplikacje są przechowywane ustawienia odrywania słupków tego wpisu rejestru.  
   
- [in] *uiTearOffMenuFirst*  
- Pierwszy identyfikator menu menu odrywania.  
+*uiTearOffMenuFirst*<br/>
+[in] Pierwszy identyfikator menu menu odrywania.  
   
- [in] *uiTearOffMenuLast*  
- Identyfikator ostatniego menu do menu odrywania.  
+*uiTearOffMenuLast*<br/>
+[in] Identyfikator ostatniego menu do menu odrywania.  
   
 ### <a name="return-value"></a>Wartość zwracana  
  Wartość różną od zera, jeśli to się powiedzie; w przeciwnym razie 0.  
@@ -201,8 +201,8 @@ void SetInUse(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *uiCmdId*  
- [in] *bUżyj*  
+*uiCmdId*<br/>
+[in] [in] *bUżyj*  
   
 ### <a name="remarks"></a>Uwagi  
   

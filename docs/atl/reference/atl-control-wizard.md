@@ -18,12 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2744777a6f464181f5a9e8734af1d2bb023024dd
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 381bb9505745331d2ef470c5fd4e8d55e5e742f8
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43767181"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45705812"
 ---
 # <a name="atl-control-wizard"></a>Kreator kontrolki ATL
 
@@ -52,49 +52,58 @@ Określ nazwy dla obiektu, interfejsów i klas, które mają zostać dodane do p
 
 Zawiera informacje dla klasy języka C++ utworzona w celu wdrożenia obiektu.
 
-**Krótka nazwa**  
-Ustawia skróconą nazwę dla obiektu. Należy podać nazwę określa klasę i **Coclass** nazywa plik (. CPP i. H) nazw, nazwę interfejsu i **typu** nazwy, chyba że zmienił się tych pól indywidualnie.
+- **Krótka nazwa**
 
-**Class**  
-Ustawia nazwę klasy, która implementuje obiektu. Ta nazwa jest oparta na nazwę, która zapewnia w **krótką nazwę**, poprzedzającą "C", typowy prefiks dla nazwy klasy.
+   Ustawia skróconą nazwę dla obiektu. Należy podać nazwę określa klasę i **Coclass** nazywa plik (. CPP i. H) nazw, nazwę interfejsu i **typu** nazwy, chyba że zmienił się tych pól indywidualnie.
 
-**plik .h**  
-Określa nazwę pliku nagłówkowego klasy nowego obiektu. Domyślnie ta nazwa opiera się na nazwę, która zapewnia w **krótką nazwę**. Kliknij przycisk wielokropka, aby zapisać nazwę pliku na lokalizację lub dołączyć deklaracji klasy do istniejącego pliku. Jeśli wybierzesz istniejący plik, Kreator nie zapisze go w wybranej lokalizacji do momentu kliknij **Zakończ**.
+- **Class**
 
-Kreator nie powoduje zastąpienia pliku. Jeśli wybierasz nazwę istniejącego pliku, po kliknięciu **Zakończ**, Kreator wyświetli monit o wskazują, czy deklaracja klasy powinna zostać dołączona do zawartości pliku. Kliknij przycisk **tak** można dołączyć pliku kliknij przycisk **nie** aby powrócić do kreatora i podaj inną nazwę pliku.
+   Ustawia nazwę klasy, która implementuje obiektu. Ta nazwa jest oparta na nazwę, która zapewnia w **krótką nazwę**, poprzedzającą "C", typowy prefiks dla nazwy klasy.
 
-**Plik CPP**  
-Określa nazwę pliku implementacji dla nowego obiektu klasy. Domyślnie ta nazwa opiera się na nazwę, która zapewnia w **krótką nazwę**. Kliknij przycisk wielokropka, aby zapisać nazwę pliku w wybranej lokalizacji. Plik nie jest zapisywany w wybranej lokalizacji, dopóki nie klikniesz **Zakończ** w kreatorze.
+- **plik .h**
 
-Kreator nie powoduje zastąpienia pliku. Jeśli wybierasz nazwę istniejącego pliku, po kliknięciu **Zakończ**, Kreator wyświetli monit o wskazują, czy Implementacja klasy powinna zostać dołączona do zawartości pliku. Kliknij przycisk **tak** można dołączyć pliku kliknij przycisk **nie** aby powrócić do kreatora i podaj inną nazwę pliku.
+   Określa nazwę pliku nagłówkowego klasy nowego obiektu. Domyślnie ta nazwa opiera się na nazwę, która zapewnia w **krótką nazwę**. Kliknij przycisk wielokropka, aby zapisać nazwę pliku na lokalizację lub dołączyć deklaracji klasy do istniejącego pliku. Jeśli wybierzesz istniejący plik, Kreator nie zapisze go w wybranej lokalizacji do momentu kliknij **Zakończ**.
 
-**Opartego na atrybutach**  
-Wskazuje, czy obiekt używa atrybutów. W przypadku dodawania obiektu do projekcie ATL z atrybutami, ta opcja jest zaznaczone i nie można zmienić. Oznacza to, że można dodać tylko opartego na atrybutach obiekty do projektu utworzonego za pomocą atrybutu pomocy technicznej.
+   Kreator nie powoduje zastąpienia pliku. Jeśli wybierasz nazwę istniejącego pliku, po kliknięciu **Zakończ**, Kreator wyświetli monit o wskazują, czy deklaracja klasy powinna zostać dołączona do zawartości pliku. Kliknij przycisk **tak** można dołączyć pliku kliknij przycisk **nie** aby powrócić do kreatora i podaj inną nazwę pliku.
 
-Obiekt opartego na atrybutach można dodać tylko do projektu ATL, który używa atrybutów. Jeśli wybierzesz tę opcję, aby Projekt ATL, który nie ma atrybutu pomocy technicznej, w kreatora zostanie wyświetlony monit o określenie, czy chcesz dodać obsługę atrybutu do projektu.
+- **Plik CPP**
 
-Domyślnie wszystkie obiekty, które możesz dodać po ustawieniu tej opcji są oznaczone jako opartego na atrybutach (pole wyboru jest zaznaczone). Aby wyczyścić to pole, aby dodać obiekt, który nie korzysta z atrybutów.
+   Określa nazwę pliku implementacji dla nowego obiektu klasy. Domyślnie ta nazwa opiera się na nazwę, która zapewnia w **krótką nazwę**. Kliknij przycisk wielokropka, aby zapisać nazwę pliku w wybranej lokalizacji. Plik nie jest zapisywany w wybranej lokalizacji, dopóki nie klikniesz **Zakończ** w kreatorze.
 
-Zobacz [ustawienia aplikacji, Kreator projektów ATL](../../atl/reference/application-settings-atl-project-wizard.md) i [podstawowa mechanika atrybutów](../../windows/basic-mechanics-of-attributes.md) Aby uzyskać więcej informacji.
+   Kreator nie powoduje zastąpienia pliku. Jeśli wybierasz nazwę istniejącego pliku, po kliknięciu **Zakończ**, Kreator wyświetli monit o wskazują, czy Implementacja klasy powinna zostać dołączona do zawartości pliku. Kliknij przycisk **tak** można dołączyć pliku kliknij przycisk **nie** aby powrócić do kreatora i podaj inną nazwę pliku.
+
+- **Opartego na atrybutach**
+
+   Wskazuje, czy obiekt używa atrybutów. W przypadku dodawania obiektu do projekcie ATL z atrybutami, ta opcja jest zaznaczone i nie można zmienić. Oznacza to, że można dodać tylko opartego na atrybutach obiekty do projektu utworzonego za pomocą atrybutu pomocy technicznej.
+
+   Obiekt opartego na atrybutach można dodać tylko do projektu ATL, który używa atrybutów. Jeśli wybierzesz tę opcję, aby Projekt ATL, który nie ma atrybutu pomocy technicznej, w kreatora zostanie wyświetlony monit o określenie, czy chcesz dodać obsługę atrybutu do projektu.
+
+   Domyślnie wszystkie obiekty, które możesz dodać po ustawieniu tej opcji są oznaczone jako opartego na atrybutach (pole wyboru jest zaznaczone). Aby wyczyścić to pole, aby dodać obiekt, który nie korzysta z atrybutów.
+
+   Zobacz [ustawienia aplikacji, Kreator projektów ATL](../../atl/reference/application-settings-atl-project-wizard.md) i [podstawowa mechanika atrybutów](../../windows/basic-mechanics-of-attributes.md) Aby uzyskać więcej informacji.
 
 ### <a name="com"></a>Model COM
 
 Zawiera informacje dotyczące funkcji COM dla obiektu.
 
-**Klasa coclass**  
-Ustawia nazwę klasy składnika, który zawiera listę interfejsów, obsługiwane przez obiekt.
+- **Klasa coclass**
 
-> [!NOTE]
->  Jeśli tworzysz projekt za pomocą atrybutów lub jeśli na tej stronie kreatora wskazujesz, że kontrolka używa atrybutów, nie można zmienić tej opcji, ponieważ nie ma ATL **coclass** atrybutu.
+   Ustawia nazwę klasy składnika, który zawiera listę interfejsów, obsługiwane przez obiekt.
 
-**Interface**  
-Ustawia nazwę interfejsu dla obiektu. Domyślnie nazwa interfejsu jest poprzedzona przedrostkiem "I".
+   > [!NOTE]
+   > Jeśli tworzysz projekt za pomocą atrybutów lub jeśli na tej stronie kreatora wskazujesz, że kontrolka używa atrybutów, nie można zmienić tej opcji, ponieważ nie ma ATL **coclass** atrybutu.
 
-**Typ**  
-Określa opis obiektu, który będzie wyświetlany w rejestrze
+- **Interface**
 
-**Identyfikator programu**  
-Ustawia nazwę, która kontenerów można użyć zamiast identyfikatora CLSID obiektu. To pole nie jest automatycznie wypełnione. Jeśli to pole nie ręcznie wypełnić formant nie może być dostępne dla innych narzędzi. Na przykład formanty ActiveX, które są generowane, bez `ProgID` nie są dostępne w **Wstawianie formantu ActiveX** okno dialogowe. Aby uzyskać więcej informacji na temat okna dialogowego, zobacz [okno dialogowe Wstawianie kontrolki ActiveX](../../windows/insert-activex-control-dialog-box.md).
+   Ustawia nazwę interfejsu dla obiektu. Domyślnie nazwa interfejsu jest poprzedzona przedrostkiem "I".
+
+- **Typ**
+
+   Określa opis obiektu, który będzie wyświetlany w rejestrze
+
+- **Identyfikator programu**
+
+   Ustawia nazwę, która kontenerów można użyć zamiast identyfikatora CLSID obiektu. To pole nie jest automatycznie wypełnione. Jeśli to pole nie ręcznie wypełnić formant nie może być dostępne dla innych narzędzi. Na przykład formanty ActiveX, które są generowane, bez `ProgID` nie są dostępne w **Wstawianie formantu ActiveX** okno dialogowe. Aby uzyskać więcej informacji na temat okna dialogowego, zobacz [okno dialogowe Wstawianie kontrolki ActiveX](../../windows/insert-activex-control-dialog-box.md).
 
 ## <a name="see-also"></a>Zobacz też
 

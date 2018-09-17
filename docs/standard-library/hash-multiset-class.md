@@ -96,12 +96,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c02db557f877f43f39286856de02d68b87959fee
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 767c57db8f9af90ab997b0e75ce40461a2494725
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43210435"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45701874"
 ---
 # <a name="hashmultiset-class"></a>hash_multiset — Klasa
 
@@ -120,13 +120,13 @@ class hash_multiset
 ### <a name="parameters"></a>Parametry
 
 *Key*<br/>
- Typ danych elementu, który ma być przechowywany w hash_multiset.
+Typ danych elementu, który ma być przechowywany w hash_multiset.
 
 *Cechy*<br/>
- Typu, który obejmuje dwa obiekty funkcji, jednej klasy porównania oznacza to predykat binarny, która może porównać dwie wartości elementów jako klucze sortowania, aby określić ich względną kolejność i funkcję mieszania, która jest jednoargumentowy predykatu mapowania klucza wartości elementów na typy bez znaku liczby całkowite typu `size_t`. Ten argument jest opcjonalny, a `hash_compare<Key, less<Key> >` jest wartością domyślną.
+Typu, który obejmuje dwa obiekty funkcji, jednej klasy porównania oznacza to predykat binarny, która może porównać dwie wartości elementów jako klucze sortowania, aby określić ich względną kolejność i funkcję mieszania, która jest jednoargumentowy predykatu mapowania klucza wartości elementów na typy bez znaku liczby całkowite typu `size_t`. Ten argument jest opcjonalny, a `hash_compare<Key, less<Key> >` jest wartością domyślną.
 
 *Allocator*<br/>
- Typ reprezentujący przechowywany obiekt alokatora, który hermetyzuje szczegóły dotyczące alokacji i dezalokacji pamięci hash_multiset. Ten argument jest opcjonalny, a wartość domyślna to `allocator<Key>`.
+Typ reprezentujący przechowywany obiekt alokatora, który hermetyzuje szczegóły dotyczące alokacji i dezalokacji pamięci hash_multiset. Ten argument jest opcjonalny, a wartość domyślna to `allocator<Key>`.
 
 ## <a name="remarks"></a>Uwagi
 
@@ -555,7 +555,7 @@ size_type count(const Key& key) const;
 ### <a name="parameters"></a>Parametry
 
 *Klucz*<br/>
- Klucz elementy, które mają być dopasowywane z hash_multiset.
+Klucz elementy, które mają być dopasowywane z hash_multiset.
 
 ### <a name="return-value"></a>Wartość zwracana
 
@@ -1022,7 +1022,7 @@ pair <iterator, iterator> equal_range (const Key& key);
 ### <a name="parameters"></a>Parametry
 
 *Klucz*<br/>
- Argument klucz, który ma zostać porównane z klucza sortowania elementu z hash_multiset wyszukiwany.
+Argument klucz, który ma zostać porównane z klucza sortowania elementu z hash_multiset wyszukiwany.
 
 ### <a name="return-value"></a>Wartość zwracana
 
@@ -1111,16 +1111,16 @@ size_type erase(const key_type& key);
 ### <a name="parameters"></a>Parametry
 
 *_Where*<br/>
- Pozycja elementu do usunięcia z hash_multiset.
+Pozycja elementu do usunięcia z hash_multiset.
 
 *pierwszy*<br/>
- Pozycja pierwszego elementu są usuwane z hash_multiset.
+Pozycja pierwszego elementu są usuwane z hash_multiset.
 
 *ostatni*<br/>
- Pozycja tuż za ostatnim elementem usunięte z hash_multiset.
+Pozycja tuż za ostatnim elementem usunięte z hash_multiset.
 
 *Klucz*<br/>
- Klucz elementów do usunięcia z hash_multiset.
+Klucz elementów do usunięcia z hash_multiset.
 
 ### <a name="return-value"></a>Wartość zwracana
 
@@ -1232,7 +1232,7 @@ const_iterator find(const Key& key) const;
 ### <a name="parameters"></a>Parametry
 
 *Klucz*<br/>
- Klucz argumentu mają być dopasowywane o klucz sortowania elementu z hash_multiset wyszukiwany.
+Klucz argumentu mają być dopasowywane o klucz sortowania elementu z hash_multiset wyszukiwany.
 
 ### <a name="return-value"></a>Wartość zwracana
 
@@ -1667,7 +1667,7 @@ iterator lower_bound(const Key& key);
 ### <a name="parameters"></a>Parametry
 
 *Klucz*<br/>
- Argument klucz, który ma zostać porównane z klucza sortowania elementu z hash_multiset wyszukiwany.
+Argument klucz, który ma zostać porównane z klucza sortowania elementu z hash_multiset wyszukiwany.
 
 ### <a name="return-value"></a>Wartość zwracana
 
@@ -2150,7 +2150,7 @@ void swap(hash_multiset& right);
 ### <a name="parameters"></a>Parametry
 
 *right*<br/>
- Hash_multiset — argument, zawierająca elementy, które mają być zamienione z hash_multiset docelowej.
+Hash_multiset — argument, zawierająca elementy, które mają być zamienione z hash_multiset docelowej.
 
 ### <a name="remarks"></a>Uwagi
 
@@ -2226,7 +2226,7 @@ iterator upper_bound(const Key& key);
 ### <a name="parameters"></a>Parametry
 
 *Klucz*<br/>
- Argument klucz, który ma zostać porównane z klucza sortowania elementu z hash_multiset wyszukiwany.
+Argument klucz, który ma zostać porównane z klucza sortowania elementu z hash_multiset wyszukiwany.
 
 ### <a name="return-value"></a>Wartość zwracana
 

@@ -18,21 +18,23 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f5e0296b994f7944d5b26e98ba1b0545a03ec55b
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: efa9a5cf17a4578fc7be9cbadc51605ee32c1650
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32360116"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45706254"
 ---
 # <a name="active-technology-and-dlls"></a>Technologia Active i biblioteki DLL
-Technologia Active umożliwia serwerom obiektu do zaimplementowania całości wewnątrz biblioteki DLL. Ten typ serwera nosi nazwę serwera w procesie. MFC nie całkowicie obsługuje serwery wewnątrzprocesowe dla wszystkich funkcji edycja wizualna głównie, ponieważ jest to technologia Active nie umożliwiają serwerowi przyłączanie się do pętli komunikatów głównego kontenera. MFC wymaga dostępu do aplikacji kontenera pętli komunikatów do obsługi klawisze skrótów i przetwarzania w czasie bezczynności.  
-  
- Jeśli piszesz serwera automatyzacji i serwer nie ma interfejsu użytkownika, możesz wprowadzić serwer server wewnątrzprocesowe i całkowicie umieszcza je do biblioteki DLL.  
-  
-## <a name="what-do-you-want-to-know-more-about"></a>Co chcesz dowiedzieć się więcej o?  
-  
--   [Serwery automatyzacji](../mfc/automation-servers.md)  
-  
-## <a name="see-also"></a>Zobacz też  
- [Biblioteki DLL w programie Visual C++](../build/dlls-in-visual-cpp.md)
+
+Technologia Active umożliwia serwerów obiektów wewnątrz biblioteki DLL całkowite wdrożenie. Ten typ serwera jest nazywany serwerem w procesie. MFC nie całkowicie obsługuje serwery wewnątrzprocesowe dla wszystkich funkcji edycja wizualna przede wszystkim, ponieważ technologia Active nie zapewnia sposób, aby serwer mógł dołączyć do kontenera główna pętla wiadomości. MFC wymaga dostępu do aplikacji kontenera pętli komunikatów do obsługi klawiszy i przetwarzanie w czasie bezczynności (%).
+
+Jeśli piszesz serwera automatyzacji, a serwer nie ma interfejsu użytkownika, można utworzyć serwera wewnątrz procesowego i umieść je całkowicie biblioteki DLL.
+
+## <a name="what-do-you-want-to-know-more-about"></a>Co chcesz dowiedzieć się więcej na temat?
+
+- [Serwery automatyzacji](../mfc/automation-servers.md)
+
+## <a name="see-also"></a>Zobacz też
+
+[Biblioteki DLL w programie Visual C++](../build/dlls-in-visual-cpp.md)

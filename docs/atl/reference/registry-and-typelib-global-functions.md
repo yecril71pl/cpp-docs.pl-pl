@@ -27,12 +27,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 84e8a7e2cd3d05795e35b97069491f3fdc57c3f1
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: c01adc1893d73840ecbec7a2e2251c8e55beb582
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43753269"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45701730"
 ---
 # <a name="registry-and-typelib-global-functions"></a>Funkcje globalne rejestru i elementu TypeLib
 
@@ -78,8 +78,8 @@ ATLINLINE ATLAPI AtlGetPerUserRegistration(bool* pEnabled);
 
 ### <a name="parameters"></a>Parametry
 
-[out] *pEnabled*  
-Wartość TRUE wskazuje, że informacje rejestru zostanie skierowany do **HKCU** węzła; Wartość FALSE wskazuje, że aplikacja zapisze informacje rejestru do węzła domyślnego. Węzeł domyślny jest **HKEY_CLASSES_ROOT** (**HKCR**).
+*pEnabled*<br/>
+[out] Wartość TRUE wskazuje, że informacje rejestru zostanie skierowany do **HKCU** węzła; Wartość FALSE wskazuje, że aplikacja zapisze informacje rejestru do węzła domyślnego. Węzeł domyślny jest **HKEY_CLASSES_ROOT** (**HKCR**).
 
 ### <a name="return-value"></a>Wartość zwracana
 
@@ -309,8 +309,8 @@ ATLINLINE ATLAPI AtlSetPerUserRegistration(bool bEnable);
 
 ### <a name="parameters"></a>Parametry
 
-[in] *bWłączenie*  
-Wartość TRUE wskazuje, że informacje rejestru zostanie skierowany do **HKCU** węzła; Wartość FALSE wskazuje, że aplikacja zapisze informacje rejestru do węzła domyślnego. Węzeł domyślny jest **HKEY_CLASSES_ROOT** (**HKCR**).
+*bWłączenie*  
+[in] Wartość TRUE wskazuje, że informacje rejestru zostanie skierowany do **HKCU** węzła; Wartość FALSE wskazuje, że aplikacja zapisze informacje rejestru do węzła domyślnego. Węzeł domyślny jest **HKEY_CLASSES_ROOT** (**HKCR**).
 
 ### <a name="return-value"></a>Wartość zwracana
 

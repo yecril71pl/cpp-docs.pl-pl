@@ -17,17 +17,18 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3e8a65066ad19b78319867782255d70da8d5b721
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 2fb8608e03a514228ecdbaf321124c17a00aeb5c
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33333147"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45700170"
 ---
 # <a name="mmstreamsd"></a>_mm_stream_sd
+
 **Microsoft Specific**  
   
- Zapisuje 64-bitowych danych do lokalizacji w pamięci bez zanieczyszczenie pamięci podręcznych.  
+ Zapisuje 64-bitowych danych w lokalizacji pamięci bez zanieczyszczenie pamięci podręcznych.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -39,27 +40,27 @@ void _mm_stream_sd(
 ```  
   
 #### <a name="parameters"></a>Parametry  
- [out] `Dest`  
- Wskaźnik do lokalizacji, w którym będą zapisywane źródło danych.  
+*docelowy*<br/>
+[out] Wskaźnik do lokalizacji, w której będą zapisywane dane źródłowe.  
   
- [in] `Source`  
- 128-bitowej wartości zawierające `double` wartość ma zostać zapisany w jego dolnej 64-bitowy.  
+*Źródło*<br/>
+[in] 128-bitowej wartości zawierające `double` wartość do zapisania w jej dolnej 64-bitowy...  
   
 ## <a name="return-value"></a>Wartość zwracana  
  Brak.  
   
 ## <a name="requirements"></a>Wymagania  
   
-|— Wewnętrzne|Architektura|  
+|Wewnętrzne|Architektura|  
 |---------------|------------------|  
 |`_mm_stream_sd`|SSE4a|  
   
- **Plik nagłówka** \<intrin.h >  
+ **Plik nagłówkowy** \<intrin.h >  
   
 ## <a name="remarks"></a>Uwagi  
- Generuje tym wewnętrzna `movntsd` instrukcji. Aby określić obsługi sprzętowej w tej instrukcji, należy wywołać `__cpuid` wewnętrzne z `InfoType=0x80000001` i sprawdź bit 6 `CPUInfo[2] (ECX)`. Ten bit jest 1, jeśli sprzęt obsługuje tej instrukcji i 0 w przeciwnym razie wartość.  
+ Generuje tym wewnętrzne `movntsd` instrukcji. Aby ustalić, pomoc techniczna dotycząca sprzętu dla tej instrukcji, należy wywołać `__cpuid` wewnętrzne z `InfoType=0x80000001` i sprawdź bit 6 `CPUInfo[2] (ECX)`. Ten bit jest 1, jeśli sprzęt obsługuje tej instrukcji i 0 w przeciwnym razie.  
   
- Po uruchomieniu kodu korzystającego z `_mm_stream_sd` wewnętrznej na sprzęcie, który nie obsługuje `movntsd` instrukcji są nieprzewidywalne wyniki.  
+ Jeśli uruchamiasz kod, który używa `_mm_stream_sd` wewnętrzne na sprzęcie, który nie obsługuje `movntsd` instrukcji, wyniki są nieprzewidywalne.  
   
 ## <a name="example"></a>Przykład  
   
@@ -88,8 +89,9 @@ int main()
 d[0] = -1, d[1] = 1  
 ```  
   
-**KOŃCOWY określonych firmy Microsoft**  
- Copyright 2007 zaawansowane Micro urządzeń, Inc. Wszelkie prawa zastrzeżone. Odtworzyć z uprawnieniem z zaawansowanymi Micro urządzeń, Inc.  
+**END specyficzny dla Microsoft**  
+
+Copyright 2007 zaawansowane Micro urządzeń, Inc. Wszelkie prawa zastrzeżone. Odtworzyć zgoda zaawansowane Micro urządzeń, Inc.  
   
 ## <a name="see-also"></a>Zobacz też  
  [_mm_stream_ss](../intrinsics/mm-stream-ss.md)   

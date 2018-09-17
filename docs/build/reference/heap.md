@@ -1,5 +1,5 @@
 ---
-title: -STERCIE | Dokumentacja firmy Microsoft
+title: -STERTY | Dokumentacja firmy Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -19,28 +19,31 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5306df647801d7d1467aa0f44bfacca18fccaff3
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 22698760ba23dc60b64002f0f728bb7a036f6731
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32372220"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45699819"
 ---
 # <a name="heap"></a>/HEAP
-Ustawia rozmiar sterty w bajtach. Ta opcja ma zastosowanie tylko do plików wykonywalnych.  
-  
-```  
-  
-/HEAP:  
-reserve[,commit]  
-```  
-  
-## <a name="remarks"></a>Uwagi  
- `reserve` Argument określa Alokacja całkowita początkowej sterty w pamięci wirtualnej. Domyślnie rozmiar sterty to 1 MB. [Odwołanie EDITBIN](../../build/reference/editbin-reference.md) Zaokrągla liczbę w górę do najbliższej wielokrotności 4 bajty określona wartość.  
-  
- Opcjonalny `commit` argument podlega interpretacji przez system operacyjny. W systemie operacyjnym Windows Określa początkowy ilość pamięci fizycznej do przydzielenia, a ilość więcej pamięci, aby przydzielić, gdy stos musi być rozwinięty. Zadeklarowanej pamięci wirtualnej spowoduje, że miejsca, które mają zostać zarezerwowane w pliku stronicowania. Wyższy `commit` wartość umożliwia systemowi można przydzielić pamięci mniej często w przypadku, gdy aplikacja potrzebuje więcej miejsca na stercie, ale zwiększa wymagania dotyczące pamięci i być może czas trwania uruchomienia aplikacji. `commit` Wartość musi być mniejsza lub równa `reserve` wartość.  
-  
- Określ `reserve` i `commit` wartości dziesiętne lub notacji języka C szesnastkową lub ósemkowo. Na przykład wartość 1 MB można określić jako 1048576 dziesiątkowo, lub 0x100000 w formacie szesnastkowym lub 04000000 w ósemkowo.  
-  
-## <a name="see-also"></a>Zobacz też  
- [Opcje EDITBIN](../../build/reference/editbin-options.md)
+
+Ustawia rozmiar stosu w bajtach. Ta opcja dotyczy tylko plików wykonywalnych.
+
+```
+
+/HEAP:
+reserve[,commit]
+```
+
+## <a name="remarks"></a>Uwagi
+
+`reserve` Argument określa Alokacja łączna liczba początkowa sterty w pamięci wirtualnej. Domyślnie rozmiar stosu jest 1 MB. [Odwołanie EDITBIN](../../build/reference/editbin-reference.md) zaokrągla w górę określoną wartość do najbliższej wielokrotności 4 bajty.
+
+Opcjonalny `commit` argument podlega interpretacji przez system operacyjny. W systemie operacyjnym Windows określa początkowej ilość pamięci fizycznej do przydzielenia, a ilość dodatkowej pamięci do przydzielenia, gdy stos musi być rozwinięty. Zadeklarowanej pamięci wirtualnej powoduje, że miejsce, które mają zostać zarezerwowane w pliku stronicowania. Uzyskanie lepszej `commit` wartość umożliwia systemowi można przydzielić pamięci na mniejsze często, gdy aplikacja potrzebuje więcej miejsca na stercie, ale zwiększa wymagania dotyczące pamięci i ewentualnie czas trwania uruchomienia aplikacji. `commit` Wartość musi być mniejsza lub równa `reserve` wartość.
+
+Określ `reserve` i `commit` wartości dziesiętnych lub języka C notacji szesnastkowej lub ósemkowo. Na przykład wartość 1 MB można określić jako 1048576 w zapisie dziesiętnym, lub 0x100000 w formacie szesnastkowym lub 04000000 w ósemkowej.
+
+## <a name="see-also"></a>Zobacz też
+
+[Opcje EDITBIN](../../build/reference/editbin-options.md)

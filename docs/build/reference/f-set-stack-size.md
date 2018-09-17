@@ -20,14 +20,15 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 952933f72ae5d3f65aa646964ec6e04e758a27c6
-ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
+ms.openlocfilehash: 244fea4b776f0713b6fb2281563e39d27a910a2d
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44103778"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45704258"
 ---
 # <a name="f-set-stack-size"></a>/F (Ustaw rozmiar stosu)
+
 Ustawia rozmiar stosu w bajtach.
 
 ## <a name="syntax"></a>Składnia
@@ -47,9 +48,9 @@ Może być konieczne zwiększenie rozmiaru stosu, jeśli program pobiera komunik
 
 Można również ustawić rozmiar stosu:
 
--   Za pomocą **/STACK** — opcja konsolidatora. Aby uzyskać więcej informacji, zobacz [/STACK](../../build/reference/stack.md).
+- Za pomocą **/STACK** — opcja konsolidatora. Aby uzyskać więcej informacji, zobacz [/STACK](../../build/reference/stack.md).
 
--   Za pomocą polecenia EDITBIN w pliku .exe. Aby uzyskać więcej informacji, zobacz [odwołanie EDITBIN](../../build/reference/editbin-reference.md).
+- Za pomocą polecenia EDITBIN w pliku .exe. Aby uzyskać więcej informacji, zobacz [odwołanie EDITBIN](../../build/reference/editbin-reference.md).
 
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Aby ustawić tę opcję kompilatora w środowisku programowania Visual Studio
 
@@ -65,5 +66,5 @@ Można również ustawić rozmiar stosu:
 
 ## <a name="see-also"></a>Zobacz też
 
-[Opcje kompilatora](../../build/reference/compiler-options.md)   
+[Opcje kompilatora](../../build/reference/compiler-options.md)<br/>
 [Ustawianie opcji kompilatora](../../build/reference/setting-compiler-options.md)

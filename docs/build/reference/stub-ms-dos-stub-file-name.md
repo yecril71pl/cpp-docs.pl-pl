@@ -22,53 +22,55 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4302040f7d18dcffc07ddd054c34b62c22e400d2
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 0c279d6f33befb4c308afe0c92b7dcca3d45ba66
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32379019"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45707723"
 ---
 # <a name="stub-ms-dos-stub-file-name"></a>/STUB (Nazwa pliku klasy zastępczej MS-DOS)
-```  
-/STUB:filename  
-```  
-  
-## <a name="remarks"></a>Uwagi  
- gdzie:  
-  
- *Nazwa pliku*  
- Aplikacja systemu MS-DOS.  
-  
-## <a name="remarks"></a>Uwagi  
- Opcja/stub dołącza program szczątkowy systemu MS-DOS do programu systemu Win32.  
-  
- Program szczątkowy jest wywoływana, jeśli plik zostanie wykonany w systemu MS-DOS. Zwykle wyświetla odpowiedni komunikat; Jednak wszystkie prawidłową aplikacją systemu MS-DOS można program szczątkowy.  
-  
- Określ *filename* programu klasy zastępczej po dwukropkiem (:) w wierszu polecenia. Sprawdzanie konsolidatora *filename* i generuje komunikat o błędzie, jeśli plik nie jest plikiem wykonywalnym. Program musi być pliku .exe; plik .com jest nieprawidłowa dla programu klasy zastępczej.  
-  
- Jeśli ta opcja nie jest używana, konsolidator dołącza domyślny program szczątkowy, który wystawia następujący komunikat:  
-  
-```  
-This program cannot be run in MS-DOS mode.  
-```  
-  
- Podczas kompilowania sterownik urządzenia wirtualnego *filename* umożliwia użytkownikowi określenie nazwy pliku, która zawiera struktura IMAGE_DOS_HEADER (zdefiniowany w Windows NT. H) do użycia w VXD zamiast domyślnego nagłówka.  
-  
-### <a name="to-set-this-linker-option-in-the-visual-studio-development-environment"></a>Aby ustawić tę opcję konsolidatora w środowisku programowania Visual Studio  
-  
-1.  Otwórz projekt **strony właściwości** okno dialogowe. Aby uzyskać więcej informacji, zobacz [Ustawianie właściwości projektu Visual C++](../../ide/working-with-project-properties.md).  
-  
-2.  Kliknij przycisk **konsolidatora** folderu.  
-  
-3.  Kliknij przycisk **wiersza polecenia** strony właściwości.  
-  
-4.  Typ opcji do **dodatkowe opcje** pole.  
-  
-### <a name="to-set-this-linker-option-programmatically"></a>Aby programowo ustawić tę opcję konsolidatora  
-  
--   Zobacz <xref:Microsoft.VisualStudio.VCProjectEngine.VCLinkerTool.AdditionalOptions%2A>.  
-  
-## <a name="see-also"></a>Zobacz też  
- [Ustawianie opcji konsolidatora](../../build/reference/setting-linker-options.md)   
- [Opcje konsolidatora](../../build/reference/linker-options.md)
+
+```
+/STUB:filename
+```
+
+## <a name="arguments"></a>Argumenty
+
+*Nazwa pliku*<br/>
+Aplikacja systemu MS-DOS.
+
+## <a name="remarks"></a>Uwagi
+
+Opcja/stub dołącza program szczątkowy systemu MS-DOS do programu systemu Win32.
+
+Program szczątkowy jest wywoływana, jeśli plik jest wykonywane w systemie MS-DOS. Zazwyczaj wyświetli odpowiedni komunikat i; Jednak wszystkie prawidłowe aplikacji systemu MS-DOS może być programu klasy zastępczej.
+
+Określ *filename* programu klasy zastępczej po dwukropek (:) w wierszu polecenia. Sprawdzanie konsolidatora *filename* i wysyła komunikat o błędzie, jeśli plik nie jest plikiem wykonywalnym. Program musi być plik .exe; plik .com jest nieprawidłowa dla programu klasy zastępczej.
+
+Jeśli ta opcja nie jest używany, konsolidator dołącza domyślnego programu klasy zastępczej wysyłający następujący komunikat:
+
+```
+This program cannot be run in MS-DOS mode.
+```
+
+Podczas kompilowania sterownik urządzenia wirtualnego, *filename* umożliwia użytkownikowi określić nazwę pliku, który zawiera strukturę IMAGE_DOS_HEADER (zdefiniowany w Windows NT. H) można używać w VXD, a nie nagłówek domyślny.
+
+### <a name="to-set-this-linker-option-in-the-visual-studio-development-environment"></a>Aby ustawić tę opcję konsolidatora w środowisku programowania Visual Studio
+
+1. Otwórz projekt **stron właściwości** okno dialogowe. Aby uzyskać więcej informacji, zobacz [ustawienie właściwości projektu Visual C++](../../ide/working-with-project-properties.md).
+
+1. Kliknij przycisk **konsolidatora** folderu.
+
+1. Kliknij przycisk **wiersza polecenia** stronę właściwości.
+
+1. Wpisz opcje w **dodatkowe opcje** pole.
+
+### <a name="to-set-this-linker-option-programmatically"></a>Aby programowo ustawić tę opcję konsolidatora
+
+- Zobacz <xref:Microsoft.VisualStudio.VCProjectEngine.VCLinkerTool.AdditionalOptions%2A>.
+
+## <a name="see-also"></a>Zobacz też
+
+[Ustawianie opcji konsolidatora](../../build/reference/setting-linker-options.md)<br/>
+[Opcje konsolidatora](../../build/reference/linker-options.md)

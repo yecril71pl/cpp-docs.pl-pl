@@ -22,12 +22,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 1ea89cdd21f4debfa23716a04630e34e3b9203c1
-ms.sourcegitcommit: f0c90000125a9497bf61e41624de189a043703c0
+ms.openlocfilehash: 1263b5037d9e5ed3cf81eaa55f6e4accb8737e6b
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44313341"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45705851"
 ---
 # <a name="resource-includes-dialog-box-c"></a>Zasób zawiera okno dialogowe (C++)
 
@@ -35,14 +35,17 @@ Możesz użyć **zasób zawiera** okno dialogowe w projekcie C++, aby zmodyfikow
 
 Aby otworzyć **zasób zawiera** okno dialogowe, kliknij prawym przyciskiem myszy .rc w pliku [widok zasobów](../windows/resource-view-window.md), następnie wybierz **zasób zawiera** z menu skrótów.
 
-**Plik nagłówkowy symboli**  
-Umożliwia zmianę nazwy pliku nagłówkowego, w którym przechowywane są definicje symboli dla Twojego pliku zasobu. Aby uzyskać więcej informacji, zobacz [zmiana nazwy pliki nagłówkowe symboli](../windows/changing-the-names-of-symbol-header-files.md).
+- **Plik nagłówkowy symboli**
 
-**Dyrektywy symboli tylko do odczytu**  
-Można dołączyć plików nagłówkowych, które zawierają symbole, które nie powinny być modyfikowane podczas sesji. Na przykład można uwzględnić plik symboli, która jest współużytkowana przez wiele projektów. Może również obejmować pliki .h MFC. Aby uzyskać więcej informacji, zobacz [tym udostępnionych (tylko do odczytu) lub symbole obliczane](../windows/including-shared-read-only-or-calculated-symbols.md).
+   Umożliwia zmianę nazwy pliku nagłówkowego, w którym przechowywane są definicje symboli dla Twojego pliku zasobu. Aby uzyskać więcej informacji, zobacz [zmiana nazwy pliki nagłówkowe symboli](../windows/changing-the-names-of-symbol-header-files.md).
 
-**Dyrektywy czasu kompilacji**  
-Pozwala dołączyć pliki zasobów, które są tworzone oraz edytowane oddzielnie z zasobów w głównego pliku zasobów, zawierać dyrektywy czasu kompilacji (takich jak te, które zostaną umieszczone zasoby warunkowo) lub zasobów w niestandardowym formacie. Można również użyć **pole dyrektywy czasu kompilacji** obejmujący standardowe pliki zasobów biblioteki MFC. Aby uzyskać więcej informacji, zobacz [tym zasobów w czasie kompilowania](../windows/how-to-include-resources-at-compile-time.md).
+- **Dyrektywy symboli tylko do odczytu**
+
+   Można dołączyć plików nagłówkowych, które zawierają symbole, które nie powinny być modyfikowane podczas sesji. Na przykład można uwzględnić plik symboli, która jest współużytkowana przez wiele projektów. Może również obejmować pliki .h MFC. Aby uzyskać więcej informacji, zobacz [tym udostępnionych (tylko do odczytu) lub symbole obliczane](../windows/including-shared-read-only-or-calculated-symbols.md).
+
+- **Dyrektywy czasu kompilacji**
+
+   Pozwala dołączyć pliki zasobów, które są tworzone oraz edytowane oddzielnie z zasobów w głównego pliku zasobów, zawierać dyrektywy czasu kompilacji (takich jak te, które zostaną umieszczone zasoby warunkowo) lub zasobów w niestandardowym formacie. Można również użyć **pole dyrektywy czasu kompilacji** obejmujący standardowe pliki zasobów biblioteki MFC. Aby uzyskać więcej informacji, zobacz [tym zasobów w czasie kompilowania](../windows/how-to-include-resources-at-compile-time.md).
 
 > [!NOTE]
 > Wpisy w tych polach tekstowych pojawiają się w pliku .rc, oznaczony za `TEXTINCLUDE 1`, `TEXTINCLUDE 2`, i `TEXTINCLUDE 3` odpowiednio. Aby uzyskać więcej informacji, zobacz [TN035: przy użyciu wielu plików zasobów i plików nagłówkowych przy użyciu języka Visual C++](../mfc/tn035-using-multiple-resource-files-and-header-files-with-visual-cpp.md).

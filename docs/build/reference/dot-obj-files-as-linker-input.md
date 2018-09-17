@@ -19,12 +19,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: bd1fbd635b1d3d3a5f9963edaa9f22e22472dad1
-ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
+ms.openlocfilehash: decd015a184b66fa5867435177c07fdf23ad53ae
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43691754"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45704382"
 ---
 # <a name="obj-files-as-linker-input"></a>Pliki .Obj — Wejście konsolidatora
 
@@ -42,9 +42,9 @@ Aby uzyskać więcej informacji dotyczących kompilatora i konsolidatora, zobacz
 
 ## <a name="see-also"></a>Zobacz także
 
-[Pliki wejściowe LINK](../../build/reference/link-input-files.md)  
-[Opcje konsolidatora](../../build/reference/linker-options.md)  
-[Obsługa formatu Unicode](../../text/support-for-unicode.md)  
-[Obsługa formatu Unicode w kompilatorze i konsolidatorze](../../build/reference/unicode-support-in-the-compiler-and-linker.md)  
-[Unicode standard](http://www.unicode.org/)  
-[Formatu PE](/windows/desktop/Debug/pe-format)  
+[Pliki wejściowe LINK](../../build/reference/link-input-files.md)<br/>
+[Opcje konsolidatora](../../build/reference/linker-options.md)<br/>
+[Obsługa formatu Unicode](../../text/support-for-unicode.md)<br/>
+[Obsługa formatu Unicode w kompilatorze i konsolidatorze](../../build/reference/unicode-support-in-the-compiler-and-linker.md)<br/>
+[Unicode standard](http://www.unicode.org/)<br/>
+[Formatu PE](/windows/desktop/Debug/pe-format)

@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9a139efed1fadd8f7b821363b7cb9cdbf97c9a29
-ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
+ms.openlocfilehash: d9beadf4f532d24ca1f4023ad95dd8583d653c11
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/01/2018
-ms.locfileid: "39408645"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45707773"
 ---
 # <a name="comma-operator-"></a>Operator przecinkowy: ,
 Umożliwia grupowanie dwóch instrukcji, gdzie oczekiwany jest jeden wiersz.  
@@ -37,11 +37,7 @@ expression , expression
   
  Przecinki może służyć jako separatorów w niektórych kontekstach, takich jak listy argumentów funkcji. Nie należy mylić użycie przecinka jako separatora przy jego użyciu jako operator; używa dwóch całkowicie różnią się.  
   
- Rozważ wyrażenie  
-  
- *E1* , *e2*  
-  
- Typ i wartość wyrażenia są typu i wartości *e2*; wynik obliczania wartości *e1* jest odrzucany. Wynik jest wartością l, jeśli prawy operand jest l wartością.  
+ Rozważ wyrażenie `e1, e2`. Typ i wartość wyrażenia są typu i wartości *e2*; wynik obliczania wartości *e1* jest odrzucany. Wynik jest wartością l, jeśli prawy operand jest l wartością.  
   
  W przypadku, gdy przecinek jest zwykle używany jako separator (na przykład w rzeczywiste argumenty do funkcji lub inicjatory agregacji), operatora przecinka i jego operandy muszą być ujęte w nawiasy. Na przykład:  
   

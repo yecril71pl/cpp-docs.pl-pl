@@ -26,42 +26,40 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5003695c5ae2b16faf8aa80f68928858a3a48288
-ms.sourcegitcommit: 4cdfff1114829599ab54178767f57664ad3424d1
+ms.openlocfilehash: 832ea689b2db9a34b55664b695747079ac277bae
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/20/2018
-ms.locfileid: "36270555"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45702562"
 ---
 # <a name="o1-o2-minimize-size-maximize-speed"></a>/O1, /O2 (Minimalizuj rozmiar, maksymalizuj szybkość)
 
-Wybiera wstępnie zdefiniowane opcje, które mają wpływ na rozmiar i szybkość wygenerowanego kodu.
+Wybiera zestaw wstępnie zdefiniowanych opcji, które wpływają na rozmiar i prędkość wygenerowanego kodu.
 
 ## <a name="syntax"></a>Składnia
 
-> / O1  
-> / O2
+> / O1, / O2
 
 ## <a name="remarks"></a>Uwagi
 
-**/O1** i **/O2** — opcje kompilatora są szybko ustawić kilka opcji optymalizacji określone jednocześnie. **/O1** opcji ustawia opcje optymalizacji poszczególnych utworzonych najmniejszą kodu w większości przypadków. **/O2** opcji ustawia opcje, które utworzyć najszybszy kod w większości przypadków. **/O2** opcja jest ustawieniem domyślnym dla wersji kompilacji. W poniższej tabeli zamieszczono określone opcje, które są ustawiane przez **/O1** i **/O2**:
+**/O1** i **/O2** opcje kompilatora są szybko ustawić kilka opcji optymalizacji określone jednocześnie. **/O1** opcja ustawia opcje optymalizacji poszczególnych Utwórz najmniejszych kod w większości przypadków. **/O2** opcja ustawia opcje tworzenia najszybszy kod w większości przypadków. **/O2** opcji jest ustawieniem domyślnym dla kompilacji wydania. W poniższej tabeli przedstawiono określone opcje, które są ustawiane przez **/O1** i **/O2**:
 
-|Opcja|Wartość równoważna wartości|
+|Opcja|Wartość równoważna|
 |------------|-------------------|
-|**/ O1** (Minimalizuj rozmiar)|[/Og](../../build/reference/og-global-optimizations.md) [/OS](../../build/reference/os-ot-favor-small-code-favor-fast-code.md) [/Oy](../../build/reference/oy-frame-pointer-omission.md) [/ob2](../../build/reference/ob-inline-function-expansion.md) [/GF](../../build/reference/gf-eliminate-duplicate-strings.md) [/Gy](../../build/reference/gy-enable-function-level-linking.md)|
+|**/ O1** (minimalizacja rozmiaru)|[/Og](../../build/reference/og-global-optimizations.md) [/Os](../../build/reference/os-ot-favor-small-code-favor-fast-code.md) [/Oy](../../build/reference/oy-frame-pointer-omission.md) [/ob2](../../build/reference/ob-inline-function-expansion.md) [/GF](../../build/reference/gf-eliminate-duplicate-strings.md) [/Gy](../../build/reference/gy-enable-function-level-linking.md)|
 |**/ O2** (Maksymalizuj szybkość)|[/Og](../../build/reference/og-global-optimizations.md) [/Oi](../../build/reference/oi-generate-intrinsic-functions.md) [/Ot](../../build/reference/os-ot-favor-small-code-favor-fast-code.md) [/Oy](../../build/reference/oy-frame-pointer-omission.md) [/ob2](../../build/reference/ob-inline-function-expansion.md) [/GF](../../build/reference/gf-eliminate-duplicate-strings.md) [/Gy](../../build/reference/gy-enable-function-level-linking.md)|
 
-**/ O1** i **/O2** wykluczają się wzajemnie.
+**/ O1** i **/O2** wzajemnie się wykluczają.
 
-> [!NOTE]  
-> **x86 Specific**  
-> Te opcje oznaczać użycia pominięcie wskaźnika ramki ([/Oy](../../build/reference/oy-frame-pointer-omission.md)) opcja.
+> [!NOTE]
+> **x86 określonych** te opcje oznaczają użytkowania pominięcie wskaźnika ramki ([/Oy](../../build/reference/oy-frame-pointer-omission.md)) opcji.
 
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Aby ustawić tę opcję kompilatora w środowisku programowania Visual Studio
 
-1. Otwórz projekt **strony właściwości** okno dialogowe. Aby uzyskać więcej informacji, zobacz [Praca z właściwościami projektu](../../ide/working-with-project-properties.md).
+1. Otwórz projekt **stron właściwości** okno dialogowe. Aby uzyskać więcej informacji, zobacz [Praca z właściwościami projektu](../../ide/working-with-project-properties.md).
 
-1. W obszarze **właściwości konfiguracji**, otwórz **C/C++** , a następnie wybierz **optymalizacji** strony właściwości.
+1. W obszarze **właściwości konfiguracji**, otwórz **C/C++** , a następnie wybierz **optymalizacji** stronę właściwości.
 
 1. Modyfikowanie **optymalizacji** właściwości.
 
@@ -71,7 +69,7 @@ Wybiera wstępnie zdefiniowane opcje, które mają wpływ na rozmiar i szybkoś�
 
 ## <a name="see-also"></a>Zobacz też
 
-[/O Opcje (Optymalizuj kod)](../../build/reference/o-options-optimize-code.md)  
-[Opcje kompilatora](../../build/reference/compiler-options.md)  
-[Ustawianie opcji kompilatora](../../build/reference/setting-compiler-options.md)  
+[/O opcje (Optymalizuj kod)](../../build/reference/o-options-optimize-code.md)
+[opcje kompilatora](../../build/reference/compiler-options.md)<br/>
+[Ustawianie opcji kompilatora](../../build/reference/setting-compiler-options.md)<br/>
 [/EH (Model obsługi wyjątku)](../../build/reference/eh-exception-handling-model.md)

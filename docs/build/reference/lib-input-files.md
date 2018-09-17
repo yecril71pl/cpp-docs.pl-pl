@@ -16,24 +16,26 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 140a0f1d9ef6fdb3ca5e6d6977804684c88af1fb
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 952c3345234192e3798fea483d527cd3afec4bff
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32371970"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45702471"
 ---
 # <a name="lib-input-files"></a>Pliki wyjściowe LIB
-Pliki wejściowe oczekiwany przez LIB zależą od tryb, w którym jest on używany, jak pokazano w poniższej tabeli.  
-  
-|Tryb|Dane wejściowe|  
-|----------|-----------|  
-|Domyślne (Tworzenie lub modyfikowanie biblioteki)|COFF, pliki obiektu (.obj), bibliotekami COFF (lib), 32-bitowe pliki obiektu (.obj) Format modelu obiektu (OMF)|  
-|Wyodrębnianie członka o/extract|Biblioteka COFF (lib)|  
-|Tworzenie eksportu pliku i zaimportować biblioteki z/DEF|Plik definicji modułu (.def), COFF, pliki obiektu (.obj), bibliotekami COFF (lib), 32-bitowe pliki obiektu (.obj) OMF|  
-  
+
+Pliki wejściowe, oczekiwany przez LIB zależą od trybu, w którym jest on używany, jak pokazano w poniższej tabeli.
+
+|Tryb|Dane wejściowe|
+|----------|-----------|
+|Domyślne (Tworzenie lub modyfikowanie biblioteki)|Pliki obiektowych (.obj) COFF, bibliotekami COFF (lib), 32-bitowych plików obiektu (.obj) Format modelu obiektu (OMF)|
+|Wyodrębnianie do członka za pomocą/extract|COFF biblioteki (lib)|
+|Tworzenie eksportu pliku i zaimportować biblioteki z/DEF|Plik definicji modułu (.def), plikach obiektowych (.obj) COFF, bibliotekami COFF (lib), plikach obiektowych (.obj) OMF 32-bitowy|
+
 > [!NOTE]
->  Biblioteki OMF utworzone przez 16-bitową wersję LIB nie może służyć jako dane wejściowe do 32-bitowej wersji LIB.  
-  
-## <a name="see-also"></a>Zobacz też  
- [Informacje o LIB](../../build/reference/overview-of-lib.md)
+>  Biblioteki OMF utworzone przez 16-bitową wersję biblioteki nie można użyć jako dane wejściowe do 32-bitowej wersji LIB.
+
+## <a name="see-also"></a>Zobacz też
+
+[Informacje o LIB](../../build/reference/overview-of-lib.md)

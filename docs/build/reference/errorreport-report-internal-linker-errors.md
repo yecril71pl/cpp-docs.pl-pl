@@ -19,12 +19,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 72e620e5347d422a8de66cba3ea9cfd601bb3f29
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 30cc9cbab9a3575eee2f791b0af7dfcaffc1538d
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32374339"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45701093"
 ---
 # <a name="errorreport-report-internal-linker-errors"></a>/ERRORREPORT (Zgłaszaj wewnętrzne błędy konsolidatora)
 
@@ -32,29 +32,29 @@ ms.locfileid: "32374339"
 
 ## <a name="arguments"></a>Argumenty
 
-**Brak**  
-Raporty o błędach wewnętrznych kompilatora nie będą zbierane lub wysyłane do firmy Microsoft.
+**Brak**<br/>
+Raporty o błędach wewnętrznych kompilatora nie będą zbierane ani wysyłane do firmy Microsoft.
 
-**wiersz**  
+**wiersz**<br/>
 Monituje o wysłanie raportu po pojawieniu się błędu wewnętrznego kompilatora. **wiersz** jest domyślną kolekcją podczas kompilowania aplikacji w środowisku programistycznym.
 
-**Kolejki**  
-Kolejkuje raport o błędzie. Podczas logowania się z uprawnieniami administratora, wyświetlane jest okno, aby wszelkie błędy mogą raportować od czasu ostatniego zalogowania w (zostanie nie się monit o wysłanie raportu błędów więcej niż raz na trzy dni). **kolejka** jest domyślną kolekcją podczas kompilowania aplikacji w wierszu polecenia.
+**kolejki**<br/>
+Kolejkuje raport o błędach. Po zalogowaniu się przy użyciu uprawnień administratora, wyświetlane jest okno, dzięki czemu możesz zgłaszać błędów od czasu ostatniego zostały zarejestrowane w (użytkownik nie jest monitowany o wysłanie raportu błędów więcej niż raz na trzy dni). **kolejka** jest domyślną kolekcją podczas kompilowania aplikacji w wierszu polecenia.
 
-**Wyślij**  
-Automatycznie wysyła raporty błędów wewnętrznych kompilatora do firmy Microsoft, jeśli za pomocą ustawień usługi raportowania błędów systemu Windows jest włączone raportowanie.
+**Wyślij**<br/>
+Automatycznie wysyła raporty błędów wewnętrznych kompilatora do firmy Microsoft, jeśli za pomocą ustawień usługi Windows Error Reporting jest włączone raportowanie.
 
 ## <a name="remarks"></a>Uwagi
 
-**/Errorreport** opcja pozwala zapewnić wewnętrznych kompilatora informacje o błędzie (ICE) bezpośrednio do firmy Microsoft.
+**/Errorreport** opcja umożliwia dostarczanie wewnętrznych kompilatora-informacje o błędzie (ICE) bezpośrednio do firmy Microsoft.
 
-Opcja **/errorreport: Send** automatyczne wysyłanie informacji o błędach do firmy Microsoft, włączenie ustawienia usługi raportowania błędów systemu Windows.
+Opcja **/errorreport: Send** automatycznie wysyła informacje o błędzie do firmy Microsoft, jeśli włączone za pomocą ustawień usługi Windows Error Reporting.
 
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Aby ustawić tę opcję kompilatora w środowisku programowania Visual Studio
 
-1. Otwórz projekt **strony właściwości** okno dialogowe. Aby uzyskać więcej informacji, zobacz [Praca z właściwościami projektu](../../ide/working-with-project-properties.md).
+1. Otwórz projekt **stron właściwości** okno dialogowe. Aby uzyskać więcej informacji, zobacz [Praca z właściwościami projektu](../../ide/working-with-project-properties.md).
 
-1. Otwórz **właściwości konfiguracji** > **konsolidatora** > **zaawansowane** strony właściwości.
+1. Otwórz **właściwości konfiguracji** > **konsolidatora** > **zaawansowane** stronę właściwości.
 
 1. Modyfikowanie **raportowanie błędów** właściwości.
 
@@ -64,6 +64,6 @@ Opcja **/errorreport: Send** automatyczne wysyłanie informacji o błędach do f
 
 ## <a name="see-also"></a>Zobacz także
 
-[/errorReport (Zgłaszaj wewnętrzne błędy kompilatora)](../../build/reference/errorreport-report-internal-compiler-errors.md)  
-[Ustawianie opcji konsolidatora](../../build/reference/setting-linker-options.md)  
-[Opcje konsolidatora](../../build/reference/linker-options.md)  
+[/ errorreport (zgłaszaj wewnętrzne błędy kompilatora)](../../build/reference/errorreport-report-internal-compiler-errors.md)
+[Ustawianie opcji konsolidatora](../../build/reference/setting-linker-options.md)<br/>
+[Opcje konsolidatora](../../build/reference/linker-options.md)

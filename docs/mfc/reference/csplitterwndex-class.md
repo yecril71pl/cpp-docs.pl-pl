@@ -18,18 +18,18 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0ae4a24424acc4385927e0f7c99735bd50a6d472
-ms.sourcegitcommit: 208d445fd7ea202de1d372d3f468e784e77bd666
+ms.openlocfilehash: a2b7abb9cbc3f75c2b4f50f87a1bfdd818e6a3f8
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/29/2018
-ms.locfileid: "37121653"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45707346"
 ---
 # <a name="csplitterwndex-class"></a>Klasa CSplitterWndEx
 
 
 
-Reprezentuje okna dzielącego dostosowane.  
+Przedstawia dostosowane okno rozdzielacza.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -50,12 +50,12 @@ class CSplitterWndEx : public CSplitterWnd
   
 |Nazwa|Opis|  
 |----------|-----------------|  
-|[CSplitterWndEx::OnDrawSplitter](#ondrawsplitter)|Wywoływane przez platformę, by narysować okno podziału. (Przesłania [CSplitterWnd::OnDrawSplitter](csplitterwnd-class.md#ondrawsplitter).)|  
+|[CSplitterWndEx::OnDrawSplitter](#ondrawsplitter)|Metoda wywoływana przez platformę, by narysować okno rozdzielacza. (Przesłania [CSplitterWnd::OnDrawSplitter](csplitterwnd-class.md#ondrawsplitter).)|  
   
 ## <a name="remarks"></a>Uwagi  
- Zastąpienie `OnDrawSplitter` metodę w celu dostosowania wyglądu graficznego składników okna podziału.  
+ Zastąp `OnDrawSplitter` metodę w celu dostosowania wyglądu graficznego składniki okno rozdzielacza.  
   
- `CSplitterWndEx` Klasa jest używana razem z [OnDrawSplitterBorder](cmfcvisualmanager-class.md#ondrawsplitterborder), [OnDrawSplitterBox](cmfcvisualmanager-class.md#ondrawsplitterbox), i [OnFillSplitterBackground](cmfcvisualmanager-class.md#onfillsplitterbackground) metody, które są implementowana przez Menedżera visual. Powoduje visual Menedżera do rysowania okna dzielącego w aplikacji, należy zastąpić deklaracje `CSplitterWnd` klasy z `CSplitterWndEx` klasy. W przypadku ramki okna aplikacji klasy okna podziału jest zadeklarowana w cmainframe — klasa, która znajduje się w mainfrm.h. Na przykład zobacz `OutlookDemo` przykładowa w katalogu przykładów.  
+ `CSplitterWndEx` Klasa jest używana razem z [OnDrawSplitterBorder](cmfcvisualmanager-class.md#ondrawsplitterborder), [OnDrawSplitterBox](cmfcvisualmanager-class.md#ondrawsplitterbox), i [OnFillSplitterBackground](cmfcvisualmanager-class.md#onfillsplitterbackground) metody, które są implementowany przez Menedżer wizualnego. Aby spowodować, że Menedżer wizualnego narysować okno rozdzielacza, w aplikacji, należy zastąpić deklaracje `CSplitterWnd` klasy `CSplitterWndEx` klasy. W przypadku aplikacji okna ramki klasy okna podziału jest zadeklarowany w cmainframe — klasa, która znajduje się w mainfrm.h. Aby uzyskać przykład, zobacz `OutlookDemo` próbki w katalogu przykładów.  
   
 ## <a name="inheritance-hierarchy"></a>Hierarchia dziedziczenia  
  [CObject](cobject-class.md)  
@@ -70,7 +70,7 @@ class CSplitterWndEx : public CSplitterWnd
  **Nagłówek:** afxsplitterwndex.h  
   
 ##  <a name="ondrawsplitter"></a>  CSplitterWndEx::OnDrawSplitter  
- Wywoływane przez platformę, by narysować okno podziału.  
+ Metoda wywoływana przez platformę, by narysować okno rozdzielacza.  
   
 ```  
 virtual void OnDrawSplitter(  
@@ -81,14 +81,14 @@ virtual void OnDrawSplitter(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *podstawowego kontrolera domeny*  
- Wskaźnik do kontekstu urządzenia. Jeśli ten parametr ma wartość NULL, w ramach ponownie rysuje aktywne okno.  
+*podstawowego kontrolera domeny*<br/>
+[in] Wskaźnik do kontekstu urządzenia. Jeśli ten parametr ma wartość NULL, w ramach odrysowuje aktywnego okna.  
   
- [in] *Npowiadomienia*  
- Jeden z `CSplitterWnd::ESplitType` wartości wyliczenia, które określa element okna podziału do rysowania. Prawidłowe wartości to `splitBox`, `splitBar`, `splitIntersection`, i `splitBorder`.  
+*nNie*<br/>
+[in] Jedną z `CSplitterWnd::ESplitType` wartości wyliczenia określających element okno rozdzielacza, aby narysować. Prawidłowe wartości to `splitBox`, `splitBar`, `splitIntersection`, i `splitBorder`.  
   
- [in] *rect*  
- Prostokąt ograniczający Określa wymiary i lokalizację do rysowania elementu okna podziału określony.  
+*Rect*<br/>
+[in] Prostokąt otaczający, określający, wymiary i lokalizację, aby rysować element okno rozdzielacza określony.  
   
 ### <a name="remarks"></a>Uwagi  
   

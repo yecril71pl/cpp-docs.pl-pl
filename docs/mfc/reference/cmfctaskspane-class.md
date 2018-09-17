@@ -204,12 +204,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c0477bb2dfa60b8a3803c6aff2502de7fd0ad15c
-ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
+ms.openlocfilehash: 453bbb5d99d87a03a8627d231e45316cb5456794
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43686460"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45702056"
 ---
 # <a name="cmfctaskspane-class"></a>Klasa CMFCTasksPane
 Aby uzyskać więcej informacji, zobacz kod źródłowy znajdujący się w **VC\\atlmfc\\src\\mfc** folder instalacji programu Visual Studio.  
@@ -399,20 +399,20 @@ int AddGroup(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *nPageIdx*  
- Określa indeks strony liczony od zera.  
+*nPageIdx*<br/>
+[in] Określa indeks strony liczony od zera.  
   
- [in] *lpszGroupName*  
- Określa nazwę grupy.  
+*lpszGroupName*<br/>
+[in] Określa nazwę grupy.  
   
- [in] *bBottomLocation*  
- Wartość TRUE, aby utworzyć grupę w dolnej części z formantem panelu zadań; w przeciwnym razie wartość FALSE.  
+*bBottomLocation*<br/>
+[in] Wartość TRUE, aby utworzyć grupę w dolnej części z formantem panelu zadań; w przeciwnym razie wartość FALSE.  
   
- [in] *bOpcje specjalne*  
- Wartość TRUE, aby oznaczyć tej grupy jako *specjalne* grupy; w przeciwnym razie wartość FALSE. Aby uzyskać więcej informacji na temat specjalnych grup, zobacz sekcję Uwagi `CMFCTasksPane`.  
+*bOpcje specjalne*<br/>
+[in] Wartość TRUE, aby oznaczyć tej grupy jako *specjalne* grupy; w przeciwnym razie wartość FALSE. Aby uzyskać więcej informacji na temat specjalnych grup, zobacz sekcję Uwagi `CMFCTasksPane`.  
   
- [in] *hIcon*  
- Określa ikonę do wyświetlenia w podpisie grupy.  
+*hIcon*<br/>
+[in] Określa ikonę do wyświetlenia w podpisie grupy.  
   
 ### <a name="return-value"></a>Wartość zwracana  
  Liczony od zera indeks grupy na liście wewnętrznych grup, które obsługuje klasa.  
@@ -434,17 +434,17 @@ int AddLabel(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *Rozgrupuj*  
- Określa indeks grupy, gdzie etykieta jest dodawany.  
+*Rozgrupuj*<br/>
+[in] Określa indeks grupy, gdzie etykieta jest dodawany.  
   
- [in] *lpszLabelName*  
- Określa nazwę etykiety.  
+*lpszLabelName*<br/>
+[in] Określa nazwę etykiety.  
   
- [in] *nTaskIcon*  
- Określa ikonę do wyświetlenia obok etykiety. Struktura przechowuje ikony na liście obrazów. Ten parametr jest indeks do tej listy.  
+*nTaskIcon*<br/>
+[in] Określa ikonę do wyświetlenia obok etykiety. Struktura przechowuje ikony na liście obrazów. Ten parametr jest indeks do tej listy.  
   
- [in] *bIsBold*  
- Wartość TRUE, aby wyświetlić etykiety pogrubioną czcionką; w przeciwnym razie wartość FALSE.  
+*bIsBold*<br/>
+[in] Wartość TRUE, aby wyświetlić etykiety pogrubioną czcionką; w przeciwnym razie wartość FALSE.  
   
 ### <a name="return-value"></a>Wartość zwracana  
  Liczony od zera indeks grupy, której etykieta została dodana lub -1, jeśli określona grupa przez *Rozgrupuj* nie istnieje.  
@@ -462,11 +462,11 @@ int AddMRUFilesList(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *Rozgrupuj*  
- Określa indeks grupy. Metoda ta umożliwia dodanie listy ostatnio używanych plików do grupy określonej w tym parametrze.  
+*Rozgrupuj*<br/>
+[in] Określa indeks grupy. Metoda ta umożliwia dodanie listy ostatnio używanych plików do grupy określonej w tym parametrze.  
   
- [in] *nMaxFiles*  
- Określa liczbę plików do wyświetlenia na liście ostatnio używanych plików.  
+*nMaxFiles*<br/>
+[in] Określa liczbę plików do wyświetlenia na liście ostatnio używanych plików.  
   
 ### <a name="return-value"></a>Wartość zwracana  
  Liczony od zera indeks grupy, w której została dodana listy ostatnio używanych plików lub -1, jeśli określona grupa przez *Rozgrupuj* nie istnieje.  
@@ -479,8 +479,8 @@ int AddPage(LPCTSTR lpszPageLabel);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *lpszPageLabel*  
- Określa etykietę dla strony.  
+*lpszPageLabel*<br/>
+[in] Określa etykietę dla strony.  
   
 ### <a name="return-value"></a>Wartość zwracana  
  Liczony od zera indeks nowej strony.  
@@ -512,20 +512,20 @@ int AddTask(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *Rozgrupuj*  
- Określa indeks grupy, w których zadanie zostanie dodane.  
+*Rozgrupuj*<br/>
+[in] Określa indeks grupy, w których zadanie zostanie dodane.  
   
- [in] *lpszTaskName*  
- Określa nazwę zadania.  
+*lpszTaskName*<br/>
+[in] Określa nazwę zadania.  
   
- [in] *nTaskIcon*  
- Określa ikonę do wyświetlenia obok zadania. Struktura przechowuje ikony na liście obrazów. Ten parametr jest indeks do tej listy.  
+*nTaskIcon*<br/>
+[in] Określa ikonę do wyświetlenia obok zadania. Struktura przechowuje ikony na liście obrazów. Ten parametr jest indeks do tej listy.  
   
- [in] *uiCommandID*  
- Określa identyfikator polecenia polecenie do wykonania, gdy użytkownik kliknie zadania. Zadanie jest traktowany jako etykieta *uiCommandID* wynosi 0.  
+*uiCommandID*<br/>
+[in] Określa identyfikator polecenia polecenie do wykonania, gdy użytkownik kliknie zadania. Zadanie jest traktowany jako etykieta *uiCommandID* wynosi 0.  
   
- [in] *dwUserData*  
- Określa dane użytkownika do skojarzenia z zadaniem.  
+*dwUserData*<br/>
+[in] Określa dane użytkownika do skojarzenia z zadaniem.  
   
 ### <a name="return-value"></a>Wartość zwracana  
  Liczony od zera indeks grupy, w którym zadanie zostało dodane lub -1, jeśli określona grupa przez *Rozgrupuj* nie istnieje.  
@@ -543,20 +543,20 @@ int AddWindow(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *Rozgrupuj*  
- Określa indeks grupy, w której zostanie dodany okna.  
+*Rozgrupuj*<br/>
+[in] Określa indeks grupy, w której zostanie dodany okna.  
   
- [in] *hwndTask*  
- Określa uchwyt okna, aby dodać.  
+*hwndTask*<br/>
+[in] Określa uchwyt okna, aby dodać.  
   
- [in] *nWndHeight*  
- Określa wysokość okna.  
+*nWndHeight*<br/>
+[in] Określa wysokość okna.  
   
- [in] *bAutoDestroyWindow*  
- Wartość TRUE, aby zniszczyć okna, gdy zadanie zostanie usunięta; w przeciwnym razie wartość FALSE.  
+*bAutoDestroyWindow*<br/>
+[in] Wartość TRUE, aby zniszczyć okna, gdy zadanie zostanie usunięta; w przeciwnym razie wartość FALSE.  
   
- [in] *dwUserData*  
- Określa dane zdefiniowane przez użytkownika skojarzonych z zadaniem.  
+*dwUserData*<br/>
+[in] Określa dane zdefiniowane przez użytkownika skojarzonych z zadaniem.  
   
 ### <a name="return-value"></a>Wartość zwracana  
  Liczony od zera indeks grupy, w której zostało dodane okno lub -1, jeśli określona grupa przez *Rozgrupuj* nie istnieje.  
@@ -584,8 +584,8 @@ void CollapseAllGroups(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *bCollapse*  
- [in] *nPageIdx*  
+*bCollapse*<br/>
+[in] [in] *nPageIdx*  
   
 ### <a name="remarks"></a>Uwagi  
   
@@ -604,14 +604,14 @@ BOOL CollapseGroup(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *pGroup*  
- Określa grupę, aby zwinąć.  
+*pGroup*<br/>
+[in] Określa grupę, aby zwinąć.  
   
- [in] *bCollapse*  
- Wartość TRUE, aby zwinąć grupy; Wartość FALSE, aby rozwinąć grupę.  
+*bCollapse*<br/>
+[in] Wartość TRUE, aby zwinąć grupy; Wartość FALSE, aby rozwinąć grupę.  
   
- [in] *Rozgrupuj*  
- Określa liczony od zera indeks grupy, aby zwinąć w wewnętrznej listy grup.  
+*Rozgrupuj*<br/>
+[in] Określa liczony od zera indeks grupy, aby zwinąć w wewnętrznej listy grup.  
   
 ### <a name="return-value"></a>Wartość zwracana  
  Wartość TRUE, jeśli grupa zwija lub rozszerza się pomyślnie; w przeciwnym razie wartość FALSE.  
@@ -656,8 +656,8 @@ void EnableAnimation(BOOL bEnable = TRUE);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *bWłączenie*  
- Wartość TRUE, aby włączyć animacji, który występuje, gdy grupa zadań rozwija lub zwija; w przeciwnym razie wartość FALSE.  
+*bWłączenie*<br/>
+[in] Wartość TRUE, aby włączyć animacji, który występuje, gdy grupa zadań rozwija lub zwija; w przeciwnym razie wartość FALSE.  
   
 ### <a name="remarks"></a>Uwagi  
  Domyślnie, gdy grupa zadań rozwija lub zwija animacji jest włączone.  
@@ -670,8 +670,8 @@ void EnableGroupCollapse(BOOL bEnable);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *bWłączenie*  
- Wartość TRUE, jeśli użytkowników można zwinąć grupy zadań; w przeciwnym razie wartość FALSE.  
+*bWłączenie*<br/>
+[in] Wartość TRUE, jeśli użytkowników można zwinąć grupy zadań; w przeciwnym razie wartość FALSE.  
   
 ### <a name="remarks"></a>Uwagi  
  Grupa zadań, która jest zwinięta wyświetla tylko podpis grupy; Lista zadań jest ukryta.  
@@ -684,8 +684,8 @@ void EnableHistoryMenuButtons(BOOL bEnable = TRUE);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *bWłączenie*  
- Wartość true, Włącz menu rozwijane na **dalej** i **Wstecz** przycisków nawigacji; w przeciwnym razie wartość FALSE.  
+*bWłączenie*<br/>
+[in] Wartość true, Włącz menu rozwijane na **dalej** i **Wstecz** przycisków nawigacji; w przeciwnym razie wartość FALSE.  
   
 ### <a name="remarks"></a>Uwagi  
  Domyślnie menu rozwijane na **dalej** i **Wstecz** przyciski są wyłączone.  
@@ -706,17 +706,17 @@ void EnableNavigationToolbar(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *bWłączenie*  
- Wartość TRUE powoduje włączenie pasku nawigacji; w przeciwnym razie wartość FALSE.  
+*bWłączenie*<br/>
+[in] Wartość TRUE powoduje włączenie pasku nawigacji; w przeciwnym razie wartość FALSE.  
   
- [in] *uiToolbarBmpRes*  
- Określa identyfikator zasobu mapy bitowej, który zawiera obrazy do wyświetlania na pasku narzędzi.  
+*uiToolbarBmpRes*<br/>
+[in] Określa identyfikator zasobu mapy bitowej, który zawiera obrazy do wyświetlania na pasku narzędzi.  
   
- [in] *sizeToolbarImage*  
- Określa rozmiar obrazu paska narzędzi.  
+*sizeToolbarImage*<br/>
+[in] Określa rozmiar obrazu paska narzędzi.  
   
- [in] *sizeToolbarButton*  
- Określa rozmiar przycisku paska narzędzi.  
+*sizeToolbarButton*<br/>
+[in] Określa rozmiar przycisku paska narzędzi.  
   
 ### <a name="remarks"></a>Uwagi  
  Pasek narzędzi nawigacji jest pasek narzędzi, który ramach wyświetli u góry okienka zadań. Pasek nawigacyjny zawiera **ponownie**, **do przodu**, i **Home** przycisków nawigacji i menu przycisku, który zawiera listę dostępnych stron.  
@@ -743,8 +743,8 @@ void EnableScrollButtons(BOOL bEnable = TRUE);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *bWłączenie*  
- Wartość TRUE, aby wyświetlić przyciski przewijania w okienku zadań, a nie paska przewijania; w przeciwnym razie wartość FALSE.  
+*bWłączenie*<br/>
+[in] Wartość TRUE, aby wyświetlić przyciski przewijania w okienku zadań, a nie paska przewijania; w przeciwnym razie wartość FALSE.  
   
 ### <a name="remarks"></a>Uwagi  
  Domyślnie Struktura wyświetla przyciski przewijania w okienku zadań.  
@@ -757,8 +757,8 @@ void EnableWrapLabels(BOOL bEnable = TRUE);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *bWłączenie*  
- Wartość true, zawijania tekstu w etykiecie, które są wyświetlane w okienku zadań. w przeciwnym razie wartość FALSE.  
+*bWłączenie*<br/>
+[in] Wartość true, zawijania tekstu w etykiecie, które są wyświetlane w okienku zadań. w przeciwnym razie wartość FALSE.  
   
 ### <a name="remarks"></a>Uwagi  
  Domyślnie struktura nie jest zawijany tekstu w etykiecie. Po włączeniu zawijania tekstu w etykiecie może znajdować się w wielu wierszach. Etykieta może zawierać podziały znaczniki takich jak `\n` i znacznika podkreślenie `&`.  
@@ -771,8 +771,8 @@ void EnableWrapTasks(BOOL bEnable = TRUE);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *bWłączenie*  
- Wartość TRUE, aby opakować zadań w okienku zadań. w przeciwnym razie wartość FALSE.  
+*bWłączenie*<br/>
+[in] Wartość TRUE, aby opakować zadań w okienku zadań. w przeciwnym razie wartość FALSE.  
   
 ### <a name="remarks"></a>Uwagi  
  Domyślnie zawijanie wyrazów zadania jest wyłączona.  
@@ -840,11 +840,11 @@ BOOL GetGroupLocation(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *pGroup*  
- Określa grupę zadań, którego lokalizacja jest pobierany.  
+*pGroup*<br/>
+[in] Określa grupę zadań, którego lokalizacja jest pobierany.  
   
- [out] *Rozgrupuj*  
- Zawiera liczony od zera indeks grupy zadań.  
+*Rozgrupuj*<br/>
+[out] Zawiera liczony od zera indeks grupy zadań.  
   
 ### <a name="return-value"></a>Wartość zwracana  
  Wartość TRUE, jeśli w grupie zadań został znaleziony; w przeciwnym razie wartość FALSE.  
@@ -894,11 +894,11 @@ BOOL GetPageByGroup(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *Rozgrupuj*  
- Określa liczony od zera indeks grupy zadań.  
+*Rozgrupuj*<br/>
+[in] Określa liczony od zera indeks grupy zadań.  
   
- [out] *nPage*  
- Zawiera indeks strony dla określonej grupy. Jeśli grupa zadań zawiera tylko domyślną stronę, zwrócona wartość to 0.  
+*nPage*<br/>
+[out] Zawiera indeks strony dla określonej grupy. Jeśli grupa zadań zawiera tylko domyślną stronę, zwrócona wartość to 0.  
   
 ### <a name="return-value"></a>Wartość zwracana  
  Wartość TRUE, jeśli grupa *Rozgrupuj* istnieje; w przeciwnym razie wartość FALSE.  
@@ -949,11 +949,11 @@ CMFCTasksPaneTask* GetTask(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *Rozgrupuj*  
- Określa liczony od zera indeks grupy, która zawiera zadania.  
+*Rozgrupuj*<br/>
+[in] Określa liczony od zera indeks grupy, która zawiera zadania.  
   
- [in] *nNie*  
- Określa liczony od zera indeks zadanie na liście określone przez *Rozgrupuj*.  
+*nNie*<br/>
+[in] Określa liczony od zera indeks zadanie na liście określone przez *Rozgrupuj*.  
   
 ### <a name="return-value"></a>Wartość zwracana  
  Zadanie w określonym indeksie.  
@@ -966,8 +966,8 @@ int GetTaskCount(int nGroup) const;
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *Rozgrupuj*  
- Określa indeks grupy zadań.  
+*Rozgrupuj*<br/>
+[in] Określa indeks grupy zadań.  
   
 ### <a name="return-value"></a>Wartość zwracana  
  Liczba zadań w określonej grupie lub 0, jeśli *Rozgrupuj* jest nieprawidłowy.  
@@ -980,8 +980,8 @@ CMFCTasksPaneTaskGroup* GetTaskGroup(int nGroup) const;
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *Rozgrupuj*  
- Określa liczony od zera indeks grupy do pobrania.  
+*Rozgrupuj*<br/>
+[in] Określa liczony od zera indeks grupy do pobrania.  
   
 ### <a name="return-value"></a>Wartość zwracana  
  Grupa zadań pod określonym indeksem.  
@@ -1007,20 +1007,20 @@ BOOL GetTaskLocation(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *uiCommandID*  
- Określa identyfikator polecenia tego zadania można znaleźć.  
+*uiCommandID*<br/>
+[in] Określa identyfikator polecenia tego zadania można znaleźć.  
   
- [out] *Rozgrupuj*  
- Zawiera indeks grupy zadania.  
+*Rozgrupuj*<br/>
+[out] Zawiera indeks grupy zadania.  
   
- [out] *nNie*  
- Zawiera indeks tego zadania w grupie zadań.  
+*nNie*<br/>
+[out] Zawiera indeks tego zadania w grupie zadań.  
   
- [in] *hwndTask*  
- Określa okna skojarzonych z zadaniem.  
+*hwndTask*<br/>
+[in] Określa okna skojarzonych z zadaniem.  
   
- [in] *pTask*  
- Określa zadanie, aby znaleźć.  
+*pTask*<br/>
+[in] Określa zadanie, aby znaleźć.  
   
 ### <a name="return-value"></a>Wartość zwracana  
  Wartość TRUE, jeśli lokalizacja zadania został znaleziony; Wartość FALSE, jeśli nie ma określonego zadania.  
@@ -1199,8 +1199,8 @@ virtual BOOL LoadState(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *lpszProfileName*  
- [in] *nIndex*  
+*lpszProfileName*<br/>
+[in] [in] *nIndex*  
  [in] *uiID*  
   
 ### <a name="return-value"></a>Wartość zwracana  
@@ -1238,17 +1238,17 @@ virtual void OnClickTask(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *nGroupNumber*  
- Określa liczony od zera indeks grupy, która zawiera kliknięto zadanie.  
+*nGroupNumber*<br/>
+[in] Określa liczony od zera indeks grupy, która zawiera kliknięto zadanie.  
   
- [in] *nTaskNumber*  
- Określa liczony od zera indeks kliknięto zadania.  
+*nTaskNumber*<br/>
+[in] Określa liczony od zera indeks kliknięto zadania.  
   
- [in] *uiCommandID*  
- Określa identyfikator polecenia skojarzonych z zadaniem.  
+*uiCommandID*<br/>
+[in] Określa identyfikator polecenia skojarzonych z zadaniem.  
   
- [in] *dwUserData*  
- Zawiera dane użytkownika, skojarzone z zadaniem kliknięto.  
+*dwUserData*<br/>
+[in] Zawiera dane użytkownika, skojarzone z zadaniem kliknięto.  
   
 ### <a name="remarks"></a>Uwagi  
  Struktura wywołuje tę metodę, gdy użytkownik kliknie zadania. Domyślnie struktura sprawdza, czy identyfikator polecenia skojarzonych z zadaniem kliknięto i, jeśli nie wynosi zero, wysyła komunikat WM_COMMAND do właściciela z formantem panelu zadań.  
@@ -1310,8 +1310,8 @@ virtual void OnPressOtherButton(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *pbtn*  
- [in] *pWndOwner*  
+*pbtn*<br/>
+[in] [in] *pWndOwner*  
   
 ### <a name="remarks"></a>Uwagi  
   
@@ -1339,8 +1339,8 @@ virtual void OnUpdateCmdUI(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *pTarget*  
- [in] *bDisableIfNoHndler*  
+*pTarget*<br/>
+[in] [in] *bDisableIfNoHndler*  
   
 ### <a name="remarks"></a>Uwagi  
   
@@ -1378,8 +1378,8 @@ void RemoveAllGroups(int nPageIdx = 0);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *nPageIdx*  
- Określa liczony od zera indeks strony.  
+*nPageIdx*<br/>
+[in] Określa liczony od zera indeks strony.  
   
 ### <a name="remarks"></a>Uwagi  
  Usuwa wszystkie grupy na stronie określony przez *nPageIdx*, lub wszystkie grupy, jeśli istnieje strona domyślna.  
@@ -1399,8 +1399,8 @@ void RemoveAllTasks(int nGroup);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *Rozgrupuj*  
- Określa liczony od zera indeks grupy.  
+*Rozgrupuj*<br/>
+[in] Określa liczony od zera indeks grupy.  
   
 ##  <a name="removegroup"></a>  CMFCTasksPane::RemoveGroup  
  Usuwa grupę.  
@@ -1410,8 +1410,8 @@ void RemoveGroup(int nGroup);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *Rozgrupuj*  
- Określa liczony od zera indeks grupy do usunięcia.  
+*Rozgrupuj*<br/>
+[in] Określa liczony od zera indeks grupy do usunięcia.  
   
 ### <a name="remarks"></a>Uwagi  
  Ta metoda usuwa pojedynczej grupy. Aby usunąć wszystkie grupy, należy wywołać [CMFCTasksPane::RemoveAllGroups](#removeallgroups) zamiast tego.  
@@ -1426,8 +1426,8 @@ void RemovePage(int nPageIdx);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *nPageIdx*  
- Określa liczony od zera indeks strony Aby usunąć.  
+*nPageIdx*<br/>
+[in] Określa liczony od zera indeks strony Aby usunąć.  
   
 ##  <a name="removetask"></a>  CMFCTasksPane::RemoveTask  
  Usuwa zadania z grupy zadań.  
@@ -1440,14 +1440,14 @@ BOOL RemoveTask(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *Rozgrupuj*  
- Określa liczony od zera indeks grupy zadań, która zawiera zadanie do usunięcia.  
+*Rozgrupuj*<br/>
+[in] Określa liczony od zera indeks grupy zadań, która zawiera zadanie do usunięcia.  
   
- [in] *nNie*  
- Określa liczony od zera indeks zadanie do usunięcia.  
+*nNie*<br/>
+[in] Określa liczony od zera indeks zadanie do usunięcia.  
   
- [in] *bRedraw*  
- Wartość TRUE, by narysować ponownie w okienku zadań. w przeciwnym razie wartość FALSE.  
+*bRedraw*<br/>
+[in] Wartość TRUE, by narysować ponownie w okienku zadań. w przeciwnym razie wartość FALSE.  
   
 ### <a name="return-value"></a>Wartość zwracana  
  Wartość TRUE, jeśli funkcja się powiedzie; FAŁSZ Jeśli *Rozgrupuj* lub *nNie* jest nieprawidłowy.  
@@ -1463,8 +1463,8 @@ virtual BOOL SaveState(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *lpszProfileName*  
- [in] *nIndex*  
+*lpszProfileName*<br/>
+[in] [in] *nIndex*  
  [in] *uiID*  
   
 ### <a name="return-value"></a>Wartość zwracana  
@@ -1491,8 +1491,8 @@ void SetActivePage(int nPageIdx);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *nPageIdx*  
- Określa liczony od zera indeks strony, aby wyświetlić.  
+*nPageIdx*<br/>
+[in] Określa liczony od zera indeks strony, aby wyświetlić.  
   
 ### <a name="remarks"></a>Uwagi  
  Ta metoda potwierdza Jeśli *nPageIdx* jest nieprawidłowy.  
@@ -1505,8 +1505,8 @@ void SetCaption(LPCTSTR lpszName);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *lpszName*  
- Określa nazwę podpisu.  
+*lpszName*<br/>
+[in] Określa nazwę podpisu.  
   
 ### <a name="remarks"></a>Uwagi  
  Jeśli okienko zadań zawiera wiele stron, domyślna strona zawiera podpis, która została ustawiona za pomocą tej funkcji.  
@@ -1519,8 +1519,8 @@ void SetGroupCaptionHeight(int n = -1);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *n*  
- Określa wysokość podpis.  
+*N*<br/>
+[in] Określa wysokość podpis.  
   
 ### <a name="remarks"></a>Uwagi  
  Wywołaj tę metodę, aby dostosować elementy w okienku zadania marginesów.  
@@ -1535,8 +1535,8 @@ void SetGroupCaptionHorzOffset(int n = -1);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *n*  
- Określa przesunięcie w poziomie podpis grupy.  
+*N*<br/>
+[in] Określa przesunięcie w poziomie podpis grupy.  
   
 ##  <a name="setgroupcaptionvertoffset"></a>  CMFCTasksPane::SetGroupCaptionVertOffset  
  Określa przesunięcie w pionie podpis grupy.  
@@ -1546,8 +1546,8 @@ void SetGroupCaptionVertOffset(int n = -1);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *n*  
- Określa przesunięcie w pionie, w pikselach, podpis grupy.  
+*N*<br/>
+[in] Określa przesunięcie w pionie, w pikselach, podpis grupy.  
   
 ##  <a name="setgroupname"></a>  CMFCTasksPane::SetGroupName  
  Określa nazwę grupy.  
@@ -1559,11 +1559,11 @@ BOOL SetGroupName(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *Rozgrupuj*  
- Określa liczony od zera indeks grupy.  
+*Rozgrupuj*<br/>
+[in] Określa liczony od zera indeks grupy.  
   
- [in] *lpszGroupName*  
- Określa nazwę grupy.  
+*lpszGroupName*<br/>
+[in] Określa nazwę grupy.  
   
 ### <a name="return-value"></a>Wartość zwracana  
  Wartość TRUE, jeśli nazwa grupy została ustawiona pomyślnie; w przeciwnym razie wartość FALSE.  
@@ -1579,14 +1579,14 @@ BOOL SetGroupTextColor(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *Rozgrupuj*  
- Określa liczony od zera indeks grupy.  
+*Rozgrupuj*<br/>
+[in] Określa liczony od zera indeks grupy.  
   
- [in] *kolorów*  
- Określa kolor tekstu.  
+*Kolor*<br/>
+[in] Określa kolor tekstu.  
   
- [in] *colorHot*  
- Określa kolor tekstu grupy wyróżnione. Jeśli wartość-1, używany jest domyślny kolor wyróżnienia.  
+*colorHot*<br/>
+[in] Określa kolor tekstu grupy wyróżnione. Jeśli wartość-1, używany jest domyślny kolor wyróżnienia.  
   
 ### <a name="return-value"></a>Wartość zwracana  
  Wartość TRUE, jeśli kolor tekstu grupy zostało pomyślnie zmienione; w przeciwnym razie wartość FALSE.  
@@ -1599,8 +1599,8 @@ void SetGroupVertOffset(int n = -1);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *n*  
- Określa przesunięcie w pionie.  
+*N*<br/>
+[in] Określa przesunięcie w pionie.  
   
 ### <a name="remarks"></a>Uwagi  
  Przesunięcie w pionie jest odległość między grupy zadań i krawędź okienka zadań.  
@@ -1615,8 +1615,8 @@ void SetHorzMargin(int n = -1);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *n*  
- Margines, określa w pikselach.  
+*N*<br/>
+[in] Margines, określa w pikselach.  
   
 ### <a name="remarks"></a>Uwagi  
  Poziomy margines jest odległość między górną lub dolną krawędzią obszaru klienckiego okienka zadań.  
@@ -1636,17 +1636,17 @@ void SetIconsList(HIMAGELIST hIcons);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *uiImageListResID*  
- Określa identyfikator zasobu listy obrazów.  
+*uiImageListResID*<br/>
+[in] Określa identyfikator zasobu listy obrazów.  
   
- [in] *cx*  
- Określa rozmiar ikon z listy obrazów.  
+*CX*<br/>
+[in] Określa rozmiar ikon z listy obrazów.  
   
- [in] *clrTransparent*  
- Określa przezroczysty kolor.  
+*clrTransparent*<br/>
+[in] Określa przezroczysty kolor.  
   
- [in] *hIcons*  
- Określa listę obrazu który zawiera ikony okienka zadań.  
+*hIcons*<br/>
+[in] Określa listę obrazu który zawiera ikony okienka zadań.  
   
 ### <a name="remarks"></a>Uwagi  
  Struktura przechowuje ikony w listy obrazów. Podzadania są skojarzone z ikonami, które są przechowywane na tej liście.  
@@ -1663,11 +1663,11 @@ void SetPageCaption(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *nPageIdx*  
- Określa liczony od zera indeks strony.  
+*nPageIdx*<br/>
+[in] Określa liczony od zera indeks strony.  
   
- [in] *lpszName*  
- Określa tekst podpisu, aby wyświetlić na stronie.  
+*lpszName*<br/>
+[in] Określa tekst podpisu, aby wyświetlić na stronie.  
   
 ### <a name="remarks"></a>Uwagi  
  Jeśli okienko zadań zawiera wiele stron, domyślna strona zawiera podpis, która została ustawiona za pomocą tej metody.  
@@ -1683,14 +1683,14 @@ BOOL SetTaskName(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *Rozgrupuj*  
- Określa liczony od zera indeks grupy zadań.  
+*Rozgrupuj*<br/>
+[in] Określa liczony od zera indeks grupy zadań.  
   
- [in] *nNie*  
- Określa liczony od zera indeks tego zadania.  
+*nNie*<br/>
+[in] Określa liczony od zera indeks tego zadania.  
   
- [in] *lpszTaskName*  
- Określa nazwę zadania.  
+*lpszTaskName*<br/>
+[in] Określa nazwę zadania.  
   
 ### <a name="return-value"></a>Wartość zwracana  
  Wartość TRUE, jeśli nazwa zadania została ustawiona pomyślnie; w przeciwnym razie wartość FALSE.  
@@ -1703,8 +1703,8 @@ void SetTasksHorzOffset(int n = -1);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *n*  
- Określa przesunięcie w poziomie.  
+*N*<br/>
+[in] Określa przesunięcie w poziomie.  
   
 ### <a name="remarks"></a>Uwagi  
  Przesunięcie w poziomie jest odległość w pikselach, z lewej i prawej krawędzi grupy.  
@@ -1749,17 +1749,17 @@ BOOL SetTaskTextColor(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *Rozgrupuj*  
- Określa liczony od zera indeks grupy zadań, która zawiera zadania.  
+*Rozgrupuj*<br/>
+[in] Określa liczony od zera indeks grupy zadań, która zawiera zadania.  
   
- [in] *nNie*  
- Określa liczony od zera indeks tego zadania.  
+*nNie*<br/>
+[in] Określa liczony od zera indeks tego zadania.  
   
- [in] *kolorów*  
- Określa kolor tekstu dla zadania.  
+*Kolor*<br/>
+[in] Określa kolor tekstu dla zadania.  
   
- [in] *colorHot*  
- Określa kolor tekstu grupy wyróżnione. Jeśli wartość-1, ta metoda używa domyślny kolor wyróżnienia.  
+*colorHot*<br/>
+[in] Określa kolor tekstu grupy wyróżnione. Jeśli wartość-1, ta metoda używa domyślny kolor wyróżnienia.  
   
 ### <a name="return-value"></a>Wartość zwracana  
  Wartość TRUE, jeśli pomyślnie ustawiono kolor tekstu dla zadania; w przeciwnym razie wartość FALSE.  
@@ -1772,8 +1772,8 @@ void SetVertMargin(int n = -1);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *n*  
- Określa pionowego marginesu do ustawienia.  
+*N*<br/>
+[in] Określa pionowego marginesu do ustawienia.  
   
 ### <a name="remarks"></a>Uwagi  
  Pionowego marginesu jest odległość między okienka zadań i pionowy krawędzi obszaru klienta.  
@@ -1796,14 +1796,14 @@ BOOL SetWindowHeight(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *Rozgrupuj*  
- Określa liczony od zera indeks grupy, który zawiera formant okna.  
+*Rozgrupuj*<br/>
+[in] Określa liczony od zera indeks grupy, który zawiera formant okna.  
   
- [in] *hwndTask*  
- Określa dojścia do kontrolki okna.  
+*hwndTask*<br/>
+[in] Określa dojścia do kontrolki okna.  
   
- [in] *nWndHeight*  
- Określa wysokość, aby ustawić.  
+*nWndHeight*<br/>
+[in] Określa wysokość, aby ustawić.  
   
 ### <a name="return-value"></a>Wartość zwracana  
  Wartość TRUE, jeśli pomyślnie ustawiono wysokość kontrolki okna; FAŁSZ Jeśli *Rozgrupuj* jest nieprawidłowa lub jeśli *hwndTask* nie istnieje.  
@@ -1835,17 +1835,17 @@ BOOL ShowTask(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *Rozgrupuj*  
- Określa liczony od zera indeks grupy.  
+*Rozgrupuj*<br/>
+[in] Określa liczony od zera indeks grupy.  
   
- [in] *nNie*  
- Określa liczony od zera indeks zadania, aby pokazać lub ukryć.  
+*nNie*<br/>
+[in] Określa liczony od zera indeks zadania, aby pokazać lub ukryć.  
   
- [in] *bShow*  
- Wartość TRUE, aby wyświetlić zadania; Wartość FALSE, aby ukryć zadanie.  
+*bShow*<br/>
+[in] Wartość TRUE, aby wyświetlić zadania; Wartość FALSE, aby ukryć zadanie.  
   
- [in] *bRedraw*  
- Wartość TRUE, by narysować ponownie w okienku zadań. w przeciwnym razie wartość FALSE.  
+*bRedraw*<br/>
+[in] Wartość TRUE, by narysować ponownie w okienku zadań. w przeciwnym razie wartość FALSE.  
   
 ### <a name="return-value"></a>Wartość zwracana  
  Wartość TRUE, jeśli zadanie zostało pomyślnie pokazane lub ukryte; Wartość FALSE, jeśli nie ma określonej grupy lub zadania.  
@@ -1864,14 +1864,14 @@ BOOL ShowTaskByCmdId(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *uiCommandID*  
- Określa identyfikator polecenia zadania, aby pokazać lub ukryć.  
+*uiCommandID*<br/>
+[in] Określa identyfikator polecenia zadania, aby pokazać lub ukryć.  
   
- [in] *bShow*  
- Wartość TRUE, aby wyświetlić zadania; Wartość FALSE, aby ukryć zadanie.  
+*bShow*<br/>
+[in] Wartość TRUE, aby wyświetlić zadania; Wartość FALSE, aby ukryć zadanie.  
   
- [in] *bRedraw*  
- Wartość TRUE, by narysować ponownie w okienku zadań. w przeciwnym razie wartość FALSE.  
+*bRedraw*<br/>
+[in] Wartość TRUE, by narysować ponownie w okienku zadań. w przeciwnym razie wartość FALSE.  
   
 ### <a name="return-value"></a>Wartość zwracana  
  Wartość TRUE, jeśli zadanie zostało pomyślnie pokazane lub ukryte; Wartość FALSE, jeśli zadania za pomocą polecenia określony identyfikator nie istnieje.  

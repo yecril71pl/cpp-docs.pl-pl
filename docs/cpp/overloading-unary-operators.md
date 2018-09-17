@@ -21,12 +21,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c00f9d40fedd084afa2da6e2e7bfaf0ee831b3a9
-ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
+ms.openlocfilehash: 54529bed25fc60815f80ea8660bcf5786cb2887c
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/01/2018
-ms.locfileid: "39401883"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45700688"
 ---
 # <a name="overloading-unary-operators"></a>Przeładowanie operatorów jednoargumentowych
 Operatory jednoargumentowe, które mogą być przeciążone, są następujące:  
@@ -55,15 +55,15 @@ Operatory jednoargumentowe, które mogą być przeciążone, są następujące:
   
  Następujące reguły są prawdziwe dla wszystkich innych operatorów jednoargumentowych. Aby zadeklarować funkcję operatora jednoargumentowego jako niestatyczny element członkowski, należy zadeklarować ją w postaci:  
   
- `ret-type operator` `op` `()`  
+> *RET-type* **operator** *op* **)**  
   
- gdzie `ret-type` jest typem zwracanym i `op` jest jeden z operatorów wymienionych w powyższej tabeli.  
+ gdzie *ret-type* jest typem zwracanym i *op* jest jeden z operatorów wymienionych w powyższej tabeli.  
   
  Aby zadeklarować funkcję operatora jednoargumentowego jako funkcję globalną, należy zadeklarować ją w postaci:  
   
- `ret-type operator` `op` (`arg` )  
+> *RET-type* **operator** *op* **(** *arg* **)**  
   
- gdzie `ret-type` i `op` są opisane dla funkcji operatora składowej i `arg` jest argumentem typu klasy, na którym będą wykonywane.  
+ gdzie *ret-type* i *op* są opisane dla funkcji operatora składowej i *arg* jest argumentem typu klasy, na którym będą wykonywane.  
   
 > [!NOTE]
 >  Nie ma żadnych ograniczeń pod względem typów zwracanych operatorów jednoargumentowych. Na przykład, dobrym pomysłem dla logicznego nie (`!`) do zwrócenia wartości całkowitoliczbowej, ale to nie jest wymuszana.  

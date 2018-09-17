@@ -102,12 +102,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: faf782f4386cf2b2640ed65f3a2b24bbf4c5d693
-ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
+ms.openlocfilehash: c339ffcf3fb32c7ff8ad45fca792a91c96848d9e
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "42464845"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45703732"
 ---
 # <a name="irowsetimpl-class"></a>IRowsetImpl — Klasa
 Udostępnia implementację `IRowset` interfejsu.  
@@ -244,11 +244,11 @@ virtual DBSTATUS GetDBStatus(RowClass* currentRow,
 ```  
   
 #### <a name="parameters"></a>Parametry  
- [in] *TableRow*  
- Bieżący wiersz.  
+*TableRow*<br/>
+[in] Bieżący wiersz.  
   
- [in] *columnNames*  
- Kolumna, dla którego wnioskuje się stan.  
+*columnNames*<br/>
+[in] Kolumna, dla którego wnioskuje się stan.  
   
 ### <a name="return-value"></a>Wartość zwracana  
  [DBSTATUS](/previous-versions/windows/desktop/ms722617\(v=vs.85\)) flagi dla kolumny. 

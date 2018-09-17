@@ -50,12 +50,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 84f62346d12c978a466de14357352f78345e99f1
-ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
+ms.openlocfilehash: bc03777a490613cb3da111e4a3b678311f09f678
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43691111"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45706540"
 ---
 # <a name="cmfcoutlookbarpane-class"></a>Klasa CMFCOutlookBarPane
 Aby uzyskać więcej informacji, zobacz kod źródłowy znajdujący się w **VC\\atlmfc\\src\\mfc** folder instalacji programu Visual Studio.  
@@ -184,32 +184,32 @@ BOOL AddButton(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *uiImage*  
- Określa identyfikator zasobu mapy bitowej.  
+*uiImage*<br/>
+[in] Określa identyfikator zasobu mapy bitowej.  
   
- [in] *lpszLabel*  
- Określa tekst na przycisku.  
+*lpszLabel*<br/>
+[in] Określa tekst na przycisku.  
   
- [in] *iIdCommand*  
- Określa identyfikator kontrolki przycisku.  
+*iIdCommand*<br/>
+[in] Określa identyfikator kontrolki przycisku.  
   
- [in] *iInsertAt*  
- Określa liczony od zera indeks, na stronie pasek programu outlook, w której mają zostać wstawione przycisku.  
+*iInsertAt*<br/>
+[in] Określa liczony od zera indeks, na stronie pasek programu outlook, w której mają zostać wstawione przycisku.  
   
- [in] *uiLabel*  
- Identyfikator zasobu ciągu.  
+*uiLabel*<br/>
+[in] Identyfikator zasobu ciągu.  
   
- [in] *szBmpFileName*  
- Określa nazwę pliku obrazu dysku do załadowania.  
+*szBmpFileName*<br/>
+[in] Określa nazwę pliku obrazu dysku do załadowania.  
   
- [in] *szLabel*  
- Określa tekst na przycisku.  
+*szLabel*<br/>
+[in] Określa tekst na przycisku.  
   
- [in] *hBmp*  
- Dojście do mapy bitowej przycisku.  
+*hBmp*<br/>
+[in] Dojście do mapy bitowej przycisku.  
   
- [in] *hIcon*  
- Dojście do ikony przycisków.  
+*hIcon*<br/>
+[in] Dojście do ikony przycisków.  
   
 ### <a name="return-value"></a>Wartość zwracana  
  Wartość TRUE, jeśli przycisk został dodany pomyślnie; w przeciwnym razie wartość FALSE.  
@@ -254,17 +254,17 @@ virtual BOOL Create(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *pParentWnd*  
- Określa okno nadrzędne kontrolki okienko paska Outlook. Nie może mieć wartości NULL.  
+*pParentWnd*<br/>
+[in] Określa okno nadrzędne kontrolki okienko paska Outlook. Nie może mieć wartości NULL.  
   
- [in] *dwStyle*  
- Styl okna.  Aby uzyskać listę Style okna zobacz [Style okna ramowego](../../mfc/reference/styles-used-by-mfc.md#window-styles).  
+*dwStyle*<br/>
+[in] Styl okna.  Aby uzyskać listę Style okna zobacz [Style okna ramowego](../../mfc/reference/styles-used-by-mfc.md#window-styles).  
   
- [in] *uiID*  
- Identyfikator kontrolki. Musi być unikatowa, aby umożliwić zapisanie stanu formantu.  
+*uiID*<br/>
+[in] Identyfikator kontrolki. Musi być unikatowa, aby umożliwić zapisanie stanu formantu.  
   
- [in] *dwControlBarStyle*  
- Określa specjalne style, które definiują zachowania formantu okienko paska Outlook, gdy jest ona odłączona od paska Outlook.  
+*dwControlBarStyle*<br/>
+[in] Określa specjalne style, które definiują zachowania formantu okienko paska Outlook, gdy jest ona odłączona od paska Outlook.  
   
 ### <a name="return-value"></a>Wartość zwracana  
  Wartość TRUE, jeśli metoda zakończyła się pomyślnie; w przeciwnym razie wartość FALSE.  
@@ -284,11 +284,11 @@ virtual BOOL EnableContextMenuItems(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *pButton*  
- Wskaźnik na przycisku paska narzędzi, który użytkownik kliknął element.  
+*pButton*<br/>
+[in] Wskaźnik na przycisku paska narzędzi, który użytkownik kliknął element.  
   
- [in] *pPopup*  
- Wskaźnik do menu skrótów.  
+*pPopup*<br/>
+[in] Wskaźnik do menu skrótów.  
   
 ### <a name="return-value"></a>Wartość zwracana  
  Zwraca wartość PRAWDA, jeśli powinien być wyświetlany w menu skrótów; w przeciwnym razie wartość FALSE.  
@@ -309,8 +309,8 @@ void EnablePageScrollMode(BOOL bPageScroll=TRUE);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *bPageScroll*  
- W przypadku opcji TRUE, należy włączyć tryb przewiń stronę. W przypadku wartości FAŁSZ, wyłącz tryb przewijania strony.  
+*bPageScroll*<br/>
+[in] W przypadku opcji TRUE, należy włączyć tryb przewiń stronę. W przypadku wartości FAŁSZ, wyłącz tryb przewijania strony.  
   
 ##  <a name="getregularcolor"></a>  CMFCOutlookBarPane::GetRegularColor  
  Zwraca zwykłych (czyli niezaznaczone) kolor tekstu okienko paska Outlook.  
@@ -365,8 +365,8 @@ BOOL RemoveButton(UINT iIdCommand);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *iIdCommand*  
- Określa identyfikator polecenia przycisk Usuń.  
+*iIdCommand*<br/>
+[in] Określa identyfikator polecenia przycisk Usuń.  
   
 ### <a name="return-value"></a>Wartość zwracana  
  Wartość TRUE, jeśli przycisk został pomyślnie usunięty; Wartość FALSE, jeśli polecenie o określonym identyfikatorze nie jest prawidłowy.  
@@ -379,8 +379,8 @@ void SetBackColor(COLORREF color);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *kolorów*  
- Określa nowy kolor tła.  
+*Kolor*<br/>
+[in] Określa nowy kolor tła.  
   
 ### <a name="remarks"></a>Uwagi  
  Wywołaj tę funkcję, aby ustawić bieżący kolor tła paska Outlook. Kolor tła jest używana tylko wtedy, gdy nie ma żadnego obrazu tła.  
@@ -393,8 +393,8 @@ void SetBackImage(UINT uiImageID);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *uiImageID*  
- Określa identyfikator obrazu zasobu.  
+*uiImageID*<br/>
+[in] Określa identyfikator obrazu zasobu.  
   
 ### <a name="remarks"></a>Uwagi  
  Wywołanie tej metody można ustawić w programie Outlook obrazu tła paska. Lista obrazów tła jest zarządzana przez osadzonego [klasa CMFCToolBarImages](../../mfc/reference/cmfctoolbarimages-class.md) obiektu.  
@@ -426,11 +426,11 @@ void SetTextColor(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *clrRegText*  
- Określa nowy kolor tekstu niezaznaczone.  
+*clrRegText*<br/>
+[in] Określa nowy kolor tekstu niezaznaczone.  
   
- [in] *clrSelText*  
- Określa nowy kolor dla zaznaczonego tekstu.  
+*clrSelText*<br/>
+[in] Określa nowy kolor dla zaznaczonego tekstu.  
   
 ##  <a name="settransparentcolor"></a>  CMFCOutlookBarPane::SetTransparentColor  
  Określa przezroczysty kolor okienko paska Outlook.  

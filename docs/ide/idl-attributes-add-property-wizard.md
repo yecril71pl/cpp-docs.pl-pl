@@ -14,27 +14,31 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 12fee7eadecbd81e3c4e410d254de50bcf3a9ac0
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 7da654321dfae520f458374654a21a9e8ebb98f5
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43208829"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45706657"
 ---
 # <a name="idl-attributes-add-property-wizard"></a>Atrybuty IDL, Dodaj kreatora właściwości
 Ta strona kreatora dodawania właściwości umożliwia Określ jakiekolwiek ustawienia interfejsu definicja języka (IDL) dla właściwości.  
   
- **id**  
- Określa numeryczny identyfikator, który identyfikuje właściwość. Ta opcja nie jest dostępne dla właściwości niestandardowych interfejsów. Zobacz [identyfikator](/windows/desktop/Midl/id) w *odwołania MIDL*.  
+- **id**
+
+   Określa numeryczny identyfikator, który identyfikuje właściwość. Ta opcja nie jest dostępne dla właściwości niestandardowych interfejsów. Zobacz [identyfikator](/windows/desktop/Midl/id) w *odwołania MIDL*.  
   
- **helpcontext**  
- Określa identyfikator kontekstu, który pozwala użytkownikowi oglądać informacje o tej właściwości w pliku pomocy. Zobacz [helpcontext —](/windows/desktop/Midl/helpcontext) w *odwołania MIDL*.  
+- **helpcontext**
+
+   Określa identyfikator kontekstu, który pozwala użytkownikowi oglądać informacje o tej właściwości w pliku pomocy. Zobacz [helpcontext —](/windows/desktop/Midl/helpcontext) w *odwołania MIDL*.  
   
- **helpstring**  
- Określa ciąg znaków, który jest używany do opisania elementu, do której jest stosowany. Domyślnie jest ustawiona "właściwość *nazwa właściwości*." Zobacz [HelpString —](/windows/desktop/Midl/helpstring) w *odwołania MIDL*.  
+- **helpstring**
+
+   Określa ciąg znaków, który jest używany do opisania elementu, do której jest stosowany. Domyślnie jest ustawiona "właściwość *nazwa właściwości*." Zobacz [HelpString —](/windows/desktop/Midl/helpstring) w *odwołania MIDL*.  
   
 ## <a name="other-options"></a>Inne opcje  
- Nie wszystkie opcje są dostępne dla wszystkich typów właściwości.  
+
+Nie wszystkie opcje są dostępne dla wszystkich typów właściwości.  
   
 |Opcja|Opis|  
 |------------|-----------------|  

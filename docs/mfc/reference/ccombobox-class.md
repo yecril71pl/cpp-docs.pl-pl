@@ -118,12 +118,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c4fc2eb252c81e903174d99d4a55b2f3c1eed321
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 4b0226e38b34268217b4f21a1f5262cd1f1afbec
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43205290"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45702094"
 ---
 # <a name="ccombobox-class"></a>Ccombobox — klasa
 Oferuje funkcje pola kombi Windows.  
@@ -612,8 +612,8 @@ BOOL GetCueBanner(
   
 |Parametr|Opis|  
 |---------------|-----------------|  
-|[out] *lpszText*|Wskaźnik do buforu, który otrzymuje Tekst transparentu wskaźnika.|  
-|[in] *cchText*|Rozmiar buforu, który *lpszText* parametr wskazuje.|  
+|*lpszText*|[out] Wskaźnik do buforu, który otrzymuje Tekst transparentu wskaźnika.|  
+|*cchText*|[in] Rozmiar buforu, który *lpszText* parametr wskazuje.|  
   
 ### <a name="return-value"></a>Wartość zwracana  
  W pierwsze przeciążenie [CString](../../atl-mfc-shared/using-cstring.md) obiekt, który zawiera tekst transparentu oznak aktywacji, jeśli istnieje; w przeciwnym razie `CString` obiekt, który ma zerową długość.  
@@ -1048,7 +1048,7 @@ BOOL SetCueBanner(LPCTSTR lpszText);
   
 |Parametr|Opis|  
 |---------------|-----------------|  
-|[in] *lpszText*|Wskaźnik do buforu zakończony znakiem null, zawierający tekst wskaźnika.|  
+|*lpszText*|[in] Wskaźnik do buforu zakończony znakiem null, zawierający tekst wskaźnika.|  
   
 ### <a name="return-value"></a>Wartość zwracana  
  Wartość TRUE, jeśli metoda się powiedzie; w przeciwnym razie wartość FALSE.  
@@ -1291,7 +1291,7 @@ BOOL SetMinVisibleItems(int iMinVisible);
   
 |Parametr|Opis|  
 |---------------|-----------------|  
-|[in] *iMinVisible*|Określa minimalną liczbę widocznych elementów.|  
+|*iMinVisible*|[in] Określa minimalną liczbę widocznych elementów.|  
   
 ### <a name="return-value"></a>Wartość zwracana  
  Wartość TRUE, jeśli ta metoda jest kończy się pomyślnie; w przeciwnym razie wartość FALSE.  

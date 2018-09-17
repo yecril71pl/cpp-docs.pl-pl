@@ -65,12 +65,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 60b38ae134d761ea186b50545f9886275700dbc3
-ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
+ms.openlocfilehash: 0f5297b6764ba29805b842329403557ad2aa4c3b
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43677460"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45701925"
 ---
 # <a name="afxglobaldata-structure"></a>AFX_GLOBAL_DATA — Struktura
 `AFX_GLOBAL_DATA` Struktura zawiera pola i metody, które są używane do zarządzania w ramach lub dostosować wygląd i działanie aplikacji.  
@@ -220,14 +220,14 @@ BOOL DrawParentBackground(
 ```  
   
 ### <a name="parameters"></a>Parametry   
- [in] *pWnd*  
- Wskaźnik do kontrolki okna.  
+*pWnd*<br/>
+[in] Wskaźnik do kontrolki okna.  
   
- [in] *podstawowego kontrolera domeny*  
- Wskaźnik do kontekstu urządzenia.  
+*podstawowego kontrolera domeny*<br/>
+[in] Wskaźnik do kontekstu urządzenia.  
   
- [in] *lprect —*  
- Wskaźnik do granic obszaru, aby narysować prostokąt. Wartością domyślną jest NULL.  
+*lprect —*<br/>
+[in] Wskaźnik do granic obszaru, aby narysować prostokąt. Wartością domyślną jest NULL.  
   
 ### <a name="return-value"></a>Wartość zwracana  
  Wartość TRUE, jeśli ta metoda jest kończy się pomyślnie; w przeciwnym razie wartość FALSE.  
@@ -250,36 +250,36 @@ BOOL DrawTextOnGlass(
 ```  
   
 ### <a name="parameters"></a>Parametry   
- [in] *hTheme*  
- Dojście do danych motyw okna, lub wartość NULL. Środowisko wykorzystuje określony motyw ma zostać narysowany tekst, jeśli ten parametr nie ma wartości NULL i motywów są obsługiwane. W przeciwnym razie ramach nie używa motyw ma zostać narysowany tekst.  
+*hTheme*<br/>
+[in] Dojście do danych motyw okna, lub wartość NULL. Środowisko wykorzystuje określony motyw ma zostać narysowany tekst, jeśli ten parametr nie ma wartości NULL i motywów są obsługiwane. W przeciwnym razie ramach nie używa motyw ma zostać narysowany tekst.  
   
  Użyj [OpenThemeData](/windows/desktop/api/uxtheme/nf-uxtheme-openthemedata) metodę w celu utworzenia HTHEME.  
   
- [in] *podstawowego kontrolera domeny*  
- Wskaźnik do kontekstu urządzenia.  
+*podstawowego kontrolera domeny*<br/>
+[in] Wskaźnik do kontekstu urządzenia.  
   
- [in] *iPartId*  
- Część kontroli, która ma wygląd odpowiedni tekst. Aby uzyskać więcej informacji, zobacz części kolumny tabeli w [części i Stany](https://msdn.microsoft.com/library/windows/desktop/bb773210). Jeśli ta wartość wynosi 0, tekstu jest rysowana w domyślnej czcionki lub czcionki, zaznaczone w kontekście urządzenia.  
+*iPartId*<br/>
+[in] Część kontroli, która ma wygląd odpowiedni tekst. Aby uzyskać więcej informacji, zobacz części kolumny tabeli w [części i Stany](https://msdn.microsoft.com/library/windows/desktop/bb773210). Jeśli ta wartość wynosi 0, tekstu jest rysowana w domyślnej czcionki lub czcionki, zaznaczone w kontekście urządzenia.  
   
- [in] *iStateId*  
- Stan kontrolki, która ma wygląd odpowiedni tekst. Aby uzyskać więcej informacji, zobacz kolumnę stany w tabeli w [części i Stany](https://msdn.microsoft.com/library/windows/desktop/bb773210).  
+*iStateId*<br/>
+[in] Stan kontrolki, która ma wygląd odpowiedni tekst. Aby uzyskać więcej informacji, zobacz kolumnę stany w tabeli w [części i Stany](https://msdn.microsoft.com/library/windows/desktop/bb773210).  
   
- [in] *strText*  
- Tekst do rysowania.  
+*strText*<br/>
+[in] Tekst do rysowania.  
   
- [in] *rect*  
- Granica obszaru, w którym jest rysowana określony tekst.  
+*Rect*<br/>
+[in] Granica obszaru, w którym jest rysowana określony tekst.  
   
- [in] *Flagidw*  
- Bitowa kombinacja (lub) flagi określające, jak jest rysowana określony tekst.  
+*Flagidw*<br/>
+[in] Bitowa kombinacja (lub) flagi określające, jak jest rysowana określony tekst.  
   
  Jeśli *hTheme* parametr jest `NULL` czy motywy nie są obsługiwane i włączony, *nFormat* parametru [CDC::DrawText](../../mfc/reference/cdc-class.md#drawtext) metoda opisuje prawidłowe flagi. Jeśli są obsługiwane motywy, *Flagidw* parametru [DrawThemeTextEx](/windows/desktop/api/uxtheme/nf-uxtheme-drawthemetextex) metoda opisuje prawidłowe flagi.  
   
- [in] *nGlowSize*  
- Rozmiar wpływ poświata, jaki jest rysowana na tle przed narysowaniem określony tekst. Wartość domyślna to 0.  
+*nGlowSize*<br/>
+[in] Rozmiar wpływ poświata, jaki jest rysowana na tle przed narysowaniem określony tekst. Wartość domyślna to 0.  
   
- [in] *clrText*  
- Kolor, w którym jest rysowana określony tekst. Wartość domyślna to domyślny kolor.  
+*clrText*<br/>
+[in] Kolor, w którym jest rysowana określony tekst. Wartość domyślna to domyślny kolor.  
   
 ### <a name="return-value"></a>Wartość zwracana  
  Wartość TRUE, jeśli motywu jest używany do rysowania określonego tekstu. w przeciwnym razie wartość FALSE.  
@@ -305,8 +305,8 @@ void EnableAccessibilitySupport(BOOL bEnable=TRUE);
 ```  
   
 ### <a name="parameters"></a>Parametry   
- [in] *bWłączenie*  
- Wartość TRUE, aby włączyć obsługę ułatwień dostępu; Wartość FALSE, aby wyłączyć funkcję ułatwień dostępu pomocy technicznej. Wartość domyślna to TRUE.  
+*bWłączenie*<br/>
+[in] Wartość TRUE, aby włączyć obsługę ułatwień dostępu; Wartość FALSE, aby wyłączyć funkcję ułatwień dostępu pomocy technicznej. Wartość domyślna to TRUE.  
   
 ### <a name="remarks"></a>Uwagi  
  Active Accessibility jest technologii opartych na modelu COM, zwiększający programy sposób i pracy systemu operacyjnego Windows wraz z produktów technologii pomocniczej. Zapewnia niezawodne metody do ujawnienia informacji na temat elementów interfejsu użytkownika. Jednakże nowy model dostępności o nazwie automatyzacji interfejsu użytkownika firmy Microsoft jest teraz dostępna. Dla porównania dwóch technologii, zobacz [automatyzacji interfejsu użytkownika a Microsoft Active Accessibility](/dotnet/framework/ui-automation/ui-automation-and-microsoft-active-accessibility).  
@@ -331,17 +331,17 @@ BOOL ExcludeTag(
 ```  
   
 ### <a name="parameters"></a>Parametry   
- [in] *strBuffer*  
- Bufor tekstowy.  
+*strBuffer*<br/>
+[in] Bufor tekstowy.  
   
- [in] *lpszTag*  
- Nazwa pary otwierające i zamykające znaczniki XML.  
+*lpszTag*<br/>
+[in] Nazwa pary otwierające i zamykające znaczniki XML.  
   
- [out] *strTag*  
- Po powrocie z tej metody *strTag* parametr zawiera tekst, który jest między otwierającym i zamykającym XML tagi, które są reprezentowane przez *lpszTag* parametru. Żadnych spacji wiodących i końcowych jest usuwane z wynikiem.  
+*strTag*<br/>
+[out] Po powrocie z tej metody *strTag* parametr zawiera tekst, który jest między otwierającym i zamykającym XML tagi, które są reprezentowane przez *lpszTag* parametru. Żadnych spacji wiodących i końcowych jest usuwane z wynikiem.  
   
- [in] *bIsCharsList*  
- Wartość PRAWDA, aby przekonwertować symboli dla znaków ucieczki w *strTag* parametru na znaki ucieczki rzeczywiste; Wartość FALSE nie w celu wykonania konwersji. Wartość domyślna to FALSE. Aby uzyskać więcej informacji zobacz uwagi.  
+*bIsCharsList*<br/>
+[in] Wartość PRAWDA, aby przekonwertować symboli dla znaków ucieczki w *strTag* parametru na znaki ucieczki rzeczywiste; Wartość FALSE nie w celu wykonania konwersji. Wartość domyślna to FALSE. Aby uzyskać więcej informacji zobacz uwagi.  
   
 ### <a name="return-value"></a>Wartość zwracana  
  Wartość TRUE, jeśli ta metoda jest kończy się pomyślnie; w przeciwnym razie wartość FALSE.  
@@ -370,8 +370,8 @@ COLORREF GetColor(int nColor);
 ```  
   
 ### <a name="parameters"></a>Parametry   
- [in] *nColor*  
- Wartość, która określa element interfejsu użytkownika, którego kolor są pobierane. Aby uzyskać listę prawidłowych wartości, zobacz *nIndex* parametru [GetSysColor](/windows/desktop/api/winuser/nf-winuser-getsyscolor) metody.  
+*nColor*<br/>
+[in] Wartość, która określa element interfejsu użytkownika, którego kolor są pobierane. Aby uzyskać listę prawidłowych wartości, zobacz *nIndex* parametru [GetSysColor](/windows/desktop/api/winuser/nf-winuser-getsyscolor) metody.  
   
 ### <a name="return-value"></a>Wartość zwracana  
  Wartość koloru RGB element interfejsu użytkownika. Aby uzyskać więcej informacji zobacz uwagi.  
@@ -416,8 +416,8 @@ BOOL GetNonClientMetrics(NONCLIENTMETRICS& info);
 ```  
   
 ### <a name="parameters"></a>Parametry   
- [out w] *informacji*  
- A [NONCLIENTMETRICS](https://msdn.microsoft.com/library/windows/desktop/ff729175) strukturę, która zawiera metryki skalowalne, skojarzone z nieklienckim obszarze okna nonminimized.  
+*Informacje o*<br/>
+[out w] A [NONCLIENTMETRICS](https://msdn.microsoft.com/library/windows/desktop/ff729175) strukturę, która zawiera metryki skalowalne, skojarzone z nieklienckim obszarze okna nonminimized.  
   
 ### <a name="return-value"></a>Wartość zwracana  
  Wartość TRUE, jeśli ta metoda zakończy się pomyślnie; w przeciwnym razie wartość FALSE.  
@@ -435,8 +435,8 @@ int GetTextHeight(BOOL bHorz = TRUE);
 ```  
   
 ### <a name="parameters"></a>Parametry   
- [in] *bHorz*  
- Wartość TRUE, aby pobrać wysokość znaków, gdy tekst działa jedynie w pionie. Wartość FALSE, aby pobrać wysokość znaków, gdy tekst jest uruchamiany w pionie. Wartość domyślna to TRUE.  
+*bHorz*<br/>
+[in] Wartość TRUE, aby pobrać wysokość znaków, gdy tekst działa jedynie w pionie. Wartość FALSE, aby pobrać wysokość znaków, gdy tekst jest uruchamiany w pionie. Wartość domyślna to TRUE.  
   
 ### <a name="return-value"></a>Wartość zwracana  
  Wysokość bieżącej czcionki jest mierzony od jego Wydłużenie górne do jej w dół.  
@@ -693,8 +693,8 @@ CString RegisterWindowClass(LPCTSTR lpszClassNamePrefix);
 ```  
   
 ### <a name="parameters"></a>Parametry   
- [in] *lpszClassNamePrefix*  
- Nazwa klasy okna do zarejestrowania.  
+*lpszClassNamePrefix*<br/>
+[in] Nazwa klasy okna do zarejestrowania.  
   
 ### <a name="return-value"></a>Wartość zwracana  
  Kwalifikowana nazwa klasy zarejestrowane, jeśli ta metoda zakończy się powodzeniem; w przeciwnym razie [wyjątek zasobu](exception-processing.md#afxthrowresourceexception).  
@@ -733,17 +733,17 @@ BOOL SetLayeredAttrib(
 ```  
   
 ### <a name="parameters"></a>Parametry   
- [in] *hwnd*  
- Dojście do okna warstwowej.  
+*hwnd*<br/>
+[in] Dojście do okna warstwowej.  
   
- [in] *crKey*  
- Przezroczysty kolor klucza [Menedżera okien pulpitu](/windows/desktop/dwm/dwm-overview) używa do tworzenia warstwowych okna.  
+*crKey*<br/>
+[in] Przezroczysty kolor klucza [Menedżera okien pulpitu](/windows/desktop/dwm/dwm-overview) używa do tworzenia warstwowych okna.  
   
- [in] *bAlpha*  
- Wartość alfa używany do opisania nieprzezroczystość warstwowej okna.  
+*bAlpha*<br/>
+[in] Wartość alfa używany do opisania nieprzezroczystość warstwowej okna.  
   
- [in] *Flagidw*  
- Bitowa kombinacja (lub) flagi określające, które parametry metody do użycia. Określ LWA_COLORKEY używać *crKey* parametru jako przezroczysty kolor. Określ LWA_ALPHA używać *bAlpha* parametru do określenia nieprzezroczystość warstwowej okna.  
+*Flagidw*<br/>
+[in] Bitowa kombinacja (lub) flagi określające, które parametry metody do użycia. Określ LWA_COLORKEY używać *crKey* parametru jako przezroczysty kolor. Określ LWA_ALPHA używać *bAlpha* parametru do określenia nieprzezroczystość warstwowej okna.  
   
 ### <a name="return-value"></a>Wartość zwracana  
  Wartość TRUE, jeśli ta metoda zakończy się pomyślnie; w przeciwnym razie wartość FALSE.   
@@ -763,11 +763,11 @@ BOOL SetMenuFont(
 ```  
   
 ### <a name="parameters"></a>Parametry   
- [in] *lpLogFont*  
- Wskaźnik do struktury, która zawiera atrybuty czcionki.  
+*lpLogFont*<br/>
+[in] Wskaźnik do struktury, która zawiera atrybuty czcionki.  
   
- [in] *bHorz*  
- Wartość TRUE, aby określić, czy tekst ma być ułożony; Wartość FALSE, aby określić, że tekst jest uruchamiany w pionie.  
+*bHorz*<br/>
+[in] Wartość TRUE, aby określić, czy tekst ma być ułożony; Wartość FALSE, aby określić, że tekst jest uruchamiany w pionie.  
   
 ### <a name="return-value"></a>Wartość zwracana  
  Wartość TRUE, jeśli ta metoda zakończy się pomyślnie; w przeciwnym razie wartość FALSE. W trybie debugowania ta metoda potwierdza, jeśli ta metoda zakończy się niepowodzeniem.  

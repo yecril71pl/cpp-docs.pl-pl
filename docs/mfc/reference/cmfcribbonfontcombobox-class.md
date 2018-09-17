@@ -32,12 +32,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3a53dd239d2c6cdba77f977cc94642828c5e91b7
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 79facf2498769c0f4385f6dbc84133c3773fe0e7
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43216477"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45705708"
 ---
 # <a name="cmfcribbonfontcombobox-class"></a>Klasa CMFCRibbonFontComboBox
 Implementuje pole kombi, która zawiera listę czcionek. Pole kombi jest umieścić na panelu wstążki.  
@@ -106,14 +106,14 @@ void BuildFonts(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *nFontType*  
- Określa krój czcionki, aby dodać.  
+*nFontType*<br/>
+[in] Określa krój czcionki, aby dodać.  
   
- [in] *nCharSet*  
- Określa zestaw znaków czcionek, które można dodać.  
+*nCharSet*<br/>
+[in] Określa zestaw znaków czcionek, które można dodać.  
   
- [in] *nPitchAndFamily*  
- Określa gęstość i rodzinę czcionek, które można dodać.  
+*nPitchAndFamily*<br/>
+[in] Określa gęstość i rodzinę czcionek, które można dodać.  
   
 ##  <a name="cmfcribbonfontcombobox"></a>  CMFCRibbonFontComboBox::CMFCRibbonFontComboBox  
  Tworzy i inicjuje [CMFCRibbonFontComboBox](../../mfc/reference/cmfcribbonfontcombobox-class.md) obiektu.  
@@ -128,20 +128,20 @@ CMFCRibbonFontComboBox(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *nID*  
- Identyfikator polecenia polecenia, który jest wykonywany, gdy użytkownik wybierze element z pola kombi.  
+*nID*<br/>
+[in] Identyfikator polecenia polecenia, który jest wykonywany, gdy użytkownik wybierze element z pola kombi.  
   
- [in] *nFontType*  
- Określa, które czcionki typów do wyświetlenia w polu kombi. Prawidłowe opcje to DEVICE_FONTTYPE, RASTER_FONTTYPE i TRUETYPE_FONTTYPE lub dowolne bitowe.  
+*nFontType*<br/>
+[in] Określa, które czcionki typów do wyświetlenia w polu kombi. Prawidłowe opcje to DEVICE_FONTTYPE, RASTER_FONTTYPE i TRUETYPE_FONTTYPE lub dowolne bitowe.  
   
- [in] *nCharSet*  
- Filtry czcionek w polu kombi do tych, które należą do określonego zestawu znaków...  
+*nCharSet*<br/>
+[in] Filtry czcionek w polu kombi do tych, które należą do określonego zestawu znaków...  
   
- [in] *nPitchAndFamily*  
- Określa gęstość i rodzinę czcionek, które są wyświetlane w polu kombi.  
+*nPitchAndFamily*<br/>
+[in] Określa gęstość i rodzinę czcionek, które są wyświetlane w polu kombi.  
   
- [in] *nWidth*  
- Określa szerokość w pikselach, pola kombi.  
+*nWidth*<br/>
+[in] Określa szerokość w pikselach, pola kombi.  
   
 ### <a name="remarks"></a>Uwagi  
  Aby uzyskać więcej informacji o możliwych *nFontType* wartości parametrów, zobacz [EnumFontFamProc](https://msdn.microsoft.com/library/windows/desktop/dd162621) w dokumentacji zestawu Windows SDK.  

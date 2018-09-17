@@ -1,5 +1,5 @@
 ---
-title: Biblioteki DLL MFC regularne połączone statycznie z MFC | Dokumentacja firmy Microsoft
+title: Zwykłe biblioteki DLL MFC połączone statycznie z MFC | Dokumentacja firmy Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -19,75 +19,77 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c48fdfb0b10541c1643ec49038e29cfa60c633d9
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 1039d0690c52d2e41a919836b1c1a615e32b0107
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32383751"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45705727"
 ---
-# <a name="regular-mfc-dlls-statically-linked-to-mfc"></a>Biblioteki DLL MFC regularne połączone statycznie z MFC
-Regularne, które biblioteki MFC DLL połączone statycznie z MFC jest bibliotekę DLL, która MFC jest używane wewnętrznie i eksportowanych funkcji w bibliotece DLL może być wywoływany przez pliki wykonywalne MFC lub innego typu niż MFC. Zgodnie z opisem w nazwę, tego rodzaju biblioteki DLL jest utworzony przy użyciu wersji biblioteki dołączanej statycznie z MFC. Funkcje eksportowane są zazwyczaj ze standardowych biblioteki MFC DLL przy użyciu standardowych interfejsów C. Na przykład sposobu zapisu, tworzenia i używania regularną bibliotekę DLL MFC Zobacz przykład [DLLScreenCap](https://github.com/Microsoft/VCSamples/tree/master/VC2010Samples/MFC/advanced/DllScreenCap).  
-  
- Należy pamiętać, że termin USRDLL nie jest już używany w dokumentacji Visual C++. Regularne biblioteki DLL MFC, która jest połączone statycznie z MFC ma takie same charakterystyki jak wcześniejsze USRDLL.  
-  
- Regularne biblioteki DLL MFC, połączone statycznie z MFC, zawiera następujące funkcje:  
-  
--   Plik wykonywalny klienta mogą być napisane w dowolnym języku, który obsługuje korzystanie z biblioteki dll (C, C++ Pascal, Visual Basic i tak dalej); nie ma być aplikacji MFC.  
-  
--   Biblioteki DLL można połączyć z tej samej biblioteki dołączanej statycznie MFC używane przez aplikacje. Nie ma osobną wersję biblioteki dołączanej statycznie dla bibliotek DLL.  
-  
--   Przed wersja 4.0 MFC USRDLLs dostarczony do tego samego typu funkcji jako MFC DLL połączone statycznie z MFC. Począwszy od programu Visual C++ w wersji 4.0 termin USRDLL jest przestarzała.  
-  
- Regularne biblioteki DLL MFC, połączone statycznie z MFC, ma następujące wymagania:  
-  
--   Tego typu biblioteki DLL należy utworzyć wystąpienia klasy pochodzącej od `CWinApp`.  
-  
--   Ten typ korzysta z biblioteki DLL `DllMain` dostarczonych przez MFC. Umieścić cały kod inicjowania specyficznej dla biblioteki DLL w `InitInstance` funkcji i kończenie działania kod elementu członkowskiego w `ExitInstance` jak normalne aplikacji MFC.  
-  
--   Mimo że termin USRDLL jest przestarzały, nadal należy zdefiniować "**_usrdll —**" w wierszu polecenia kompilatora. Ta definicja Określa, które deklaracje dołączana z plików nagłówek MFC.  
-  
- Regularne biblioteki DLL MFC musi mieć `CWinApp`-pochodzi z klasy i pojedynczego obiektu dla tej klasy aplikacji, tak jak w przypadku aplikacji MFC. Jednak `CWinApp` obiekt biblioteki DLL nie ma pompa głównej wiadomości, tak jak w przypadku `CWinApp` obiektu aplikacji.  
-  
- Należy pamiętać, że `CWinApp::Run` mechanizm nie ma zastosowania do biblioteki DLL, ponieważ aplikacja jest właścicielem pompa głównej wiadomości. Ma główne okno ramowe własnej biblioteki DLL lub otwiera Niemodalne okna dialogowe, przekazywanie komunikatów głównego aplikacji, należy wywołać procedury wyeksportowane przez bibliotekę DLL, która z kolei wywołuje `CWinApp::PreTranslateMessage` funkcji członkowskiej klasy obiektu aplikacji DLL.  
-  
- Na przykład tej funkcji, zobacz przykład DLLScreenCap.  
-  
- Symbole zwykle są eksportowane z zwykły biblioteki MFC DLL przy użyciu standardowych interfejsów C. Deklaracja funkcji wyeksportowanej z regularną bibliotekę DLL MFC będzie wyglądać mniej więcej tak:  
-  
-```  
-extern "C" __declspec(dllexport) MyExportedFunction( );  
-```  
-  
- Alokacja pamięci w regularnych bibliotek DLL MFC powinny pozostać w pliku DLL; biblioteki DLL nie należy przekazać do ani otrzymywać wywołanie pliku wykonywalnego jedną z następujących czynności:  
-  
--   Wskaźniki do obiektów MFC  
-  
--   Wskaźniki do pamięci przydzielonej przez MFC  
-  
- Jeśli musisz wykonać żadnej z powyższych lub muszą podawać pochodnych MFC obiektów między wywołanie pliku wykonywalnego i Biblioteka DLL, należy utworzyć bibliotekę DLL rozszerzenia MFC.  
-  
- Jest to bezpieczne przekazać wskaźników do pamięci, które zostały przydzielone przez biblioteki wykonawcze języka C między aplikacją a biblioteki DLL tylko wtedy, gdy wykonanie kopii danych. Nie musisz usunąć lub zmienić rozmiar te wskaźniki lub z nich korzystać bez kopii pamięci.  
-  
- Biblioteki DLL, która jest połączone statycznie z MFC również dynamicznie nie można połączyć z udostępnionej biblioteki DLL MFC. Biblioteki DLL, która jest połączone statycznie z MFC dynamicznie jest powiązany z aplikacji, podobnie jak inne biblioteki DLL; aplikacje link jej podobnie jak inne biblioteki DLL.  
-  
- Standardowe biblioteki dołączanej statycznie MFC są nazywane zgodnie z Konwencją opisanego w [konwencje nazewnictwa bibliotek MFC dll](../mfc/mfc-library-versions.md#mfc-static-library-naming-conventions). Jednak z MFC w wersji 3.0 i nowszych go nie trzeba już ręcznie określić do konsolidatora wersji biblioteki MFC, które mają zostać połączone w. Zamiast tego pliki nagłówków MFC automatycznie określić poprawną wersję biblioteki MFC, aby połączyć w oparciu o preprocesora definiuje, takich jak  **\_debugowania** lub **_unicode —**. Pliki nagłówka MFC Dodaj dyrektywy /DEFAULTLIB poinstruowanie konsolidator łącze w określonej wersji biblioteki MFC.  
-  
-## <a name="what-do-you-want-to-do"></a>Co chcesz zrobić?  
-  
--   [Inicjowanie MFC dll](../build/run-time-library-behavior.md#initializing-regular-dlls)  
-  
-## <a name="what-do-you-want-to-know-more-about"></a>Co chcesz dowiedzieć się więcej o?  
-  
--   [Używanie MFC jako części biblioteki DLL](../mfc/tn011-using-mfc-as-part-of-a-dll.md)  
-  
--   [Używanie bibliotek DLL baz danych, OLE i rozszerzeń MFC gniazd w zwykłych bibliotekach MFC DLL](../build/using-database-ole-and-sockets-extension-dlls-in-regular-dlls.md)  
-  
--   [Tworzenie biblioteki DLL MFC](../mfc/reference/mfc-dll-wizard.md)  
-  
--   [Zwykłe biblioteki DLL MFC połączone dynamicznie z MFC](../build/regular-dlls-dynamically-linked-to-mfc.md)  
-  
--   [Biblioteki DLL rozszerzeń MFC](../build/extension-dlls-overview.md)  
-  
-## <a name="see-also"></a>Zobacz też  
- [Rodzaje bibliotek DLL](../build/kinds-of-dlls.md)
+# <a name="regular-mfc-dlls-statically-linked-to-mfc"></a>Zwykłe biblioteki DLL MFC połączone statycznie z MFC
+
+Wyrażenie, które biblioteki DLL MFC połączone statycznie z MFC jest biblioteki DLL, która używa wewnętrznie MFC i eksportowanych funkcji w bibliotece DLL może być wywoływany przez pliki wykonywalne MFC lub inne niż MFC. Zgodnie z opisem w nazwę tego rodzaju DLL został skompilowany przy użyciu wersji biblioteki dołączanej MFC. Funkcje eksportowane są zwykle od zwykłej biblioteki MFC DLL za pomocą standardowego interfejsu C. Na przykład sposobu pisania, kompilacji i użyć regularnej biblioteki DLL MFC, zobacz przykład [DLLScreenCap](https://github.com/Microsoft/VCSamples/tree/master/VC2010Samples/MFC/advanced/DllScreenCap).
+
+Pamiętaj, że termin USRDLL nie jest już używany w dokumentacji języka Visual C++. Regularne biblioteki DLL MFC, która jest połączone statycznie z MFC ma takie same charakterystyki jak dawny USRDLL.
+
+Regularne DLL MFC połączone statycznie z MFC, ma następujące cechy:
+
+- Klient wykonywalny mogą być napisane w dowolnym języku, który obsługuje korzystanie z biblioteki dll (C, C++, Pascal, Visual Basic i tak dalej); nie ma być aplikacji MFC.
+
+- Biblioteka DLL można połączyć z tej samej biblioteki dołączanej MFC używane przez aplikacje. Nie ma już oddzielnych wersji biblioteki dołączanej biblioteki dll.
+
+- Przed wersją 4.0, MFC Usrdll podać ten sam typ funkcjonalność, jak regularne biblioteki DLL MFC połączone statycznie z MFC. Począwszy od Visual C++ w wersji 4.0 termin USRDLL jest przestarzała.
+
+Regularne DLL MFC połączone statycznie z MFC, ma następujące wymagania:
+
+- Tego rodzaju DLL należy utworzyć wystąpienie klasy pochodzącej od `CWinApp`.
+
+- Ten typ korzysta z biblioteki DLL `DllMain` dostarczonych przez MFC. Umieszczenie całego kodu inicjowania biblioteki DLL określonej w `InitInstance` kod funkcji i kończenie działania elementu członkowskiego w `ExitInstance` jak normalna Aplikacja MFC.
+
+- Mimo że termin USRDLL jest przestarzały, nadal należy zdefiniować "**_usrdll —**" w wierszu polecenia kompilatora. Ta definicja Określa, które deklaracji jest pobierane z plikach nagłówkowych MFC.
+
+regularne biblioteki DLL MFC musi mieć `CWinApp`-pochodne klasy i pojedynczy obiekt tej klasy aplikacji, tak jak w aplikacji MFC. Jednak `CWinApp` obiekt biblioteki DLL nie ma pompa głównego wiadomości, tak jak `CWinApp` obiektu aplikacji.
+
+Należy pamiętać, że `CWinApp::Run` mechanizm nie ma zastosowania do biblioteki DLL, ponieważ aplikacja jest właścicielem pompy komunikatów głównego. Jeśli biblioteka DLL otwiera Niemodalne okna dialogowe albo główne okno ramowe własne, pompy komunikatów główny aplikacji musi wywołać procedurę eksportowanych przez DLL, która z kolei wywołuje `CWinApp::PreTranslateMessage` funkcja elementu członkowskiego obiektu aplikacji DLL.
+
+Na przykład tę funkcję, zobacz przykładową DLLScreenCap.
+
+Symbole zwykle są eksportowane z zwykłej biblioteki MFC DLL za pomocą standardowego interfejsu C. Deklaracja funkcji wyeksportowanej z zwykłej biblioteki MFC DLL będzie wyglądać mniej więcej tak:
+
+```
+extern "C" __declspec(dllexport) MyExportedFunction( );
+```
+
+Wszystkie alokacje pamięci w ramach regularnej biblioteki DLL MFC powinno pozostać w bibliotece DLL; biblioteki DLL należy przekazać do lub nie otrzymywać wywoływania pliku wykonywalnego, dowolny z następujących czynności:
+
+- Wskaźniki do obiektów MFC
+
+- Wskaźniki do pamięci przydzielonej przez MFC
+
+Jeśli musisz wykonać żadnej z powyższych lub potrzebujesz przekazać obiekty pochodzące z MFC między wywoływania pliku wykonywalnego i biblioteki DLL, należy utworzyć rozszerzenia MFC biblioteki DLL.
+
+Jest bezpieczne przekazać wskaźniki do pamięci, która została przydzielona przez biblioteki wykonawczej C między aplikacją a biblioteki DLL tylko wtedy, gdy wykonanie kopii danych. Nie musisz usunąć lub zmienić rozmiar tych wskaźników lub używać ich bez powiększania kopiowania pamięci.
+
+Biblioteka DLL, która jest połączone statycznie z MFC również dynamiczne nie można połączyć z udostępnionej biblioteki MFC DLL. Biblioteka DLL, która jest połączone statycznie z MFC dynamicznie jest powiązany z aplikacją, podobnie jak inne biblioteki DLL; aplikacje przejść do niego, podobnie jak inne biblioteki DLL.
+
+Standardowe biblioteki dołączanej MFC są określane według Konwencji opisanego w [konwencje nazewnictwa bibliotek MFC dll](../mfc/mfc-library-versions.md#mfc-static-library-naming-conventions). Jednak z MFC w wersji 3.0 i nowszych należy już ręcznie określić konsolidatora wersji biblioteki MFC, który ma być połączone w. Zamiast tego w plikach nagłówkowych MFC automatycznie określić definiuje poprawnej wersji biblioteki MFC, łącze w oparciu preprocesora, takich jak  **\_debugowania** lub **_UNICODE**. W plikach nagłówkowych MFC Dodaj dyrektywy /DEFAULTLIB poinstruowanie konsolidator łącze w określonej wersji biblioteki MFC.
+
+## <a name="what-do-you-want-to-do"></a>Co chcesz zrobić?
+
+- [Zainicjuj regularną bibliotekę DLL MFC](../build/run-time-library-behavior.md#initializing-regular-dlls)
+
+## <a name="what-do-you-want-to-know-more-about"></a>Co chcesz dowiedzieć się więcej na temat?
+
+- [Używanie MFC jako części biblioteki DLL](../mfc/tn011-using-mfc-as-part-of-a-dll.md)
+
+- [Używanie bibliotek DLL baz danych, OLE i rozszerzeń MFC gniazd w zwykłych bibliotekach MFC DLL](../build/using-database-ole-and-sockets-extension-dlls-in-regular-dlls.md)
+
+- [Tworzenie biblioteki DLL MFC](../mfc/reference/mfc-dll-wizard.md)
+
+- [Zwykłe biblioteki DLL MFC połączone dynamicznie z MFC](../build/regular-dlls-dynamically-linked-to-mfc.md)
+
+- [Biblioteki DLL rozszerzeń MFC](../build/extension-dlls-overview.md)
+
+## <a name="see-also"></a>Zobacz też
+
+[Rodzaje bibliotek DLL](../build/kinds-of-dlls.md)

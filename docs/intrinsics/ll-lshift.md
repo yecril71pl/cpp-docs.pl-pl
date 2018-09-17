@@ -18,12 +18,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 364ad39bfe47ff04c4a1eefb52b32ed4bddb7809
-ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
+ms.openlocfilehash: 4bfb567774191edb86a9eb34a38be69344f19575
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "42464660"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45702081"
 ---
 # <a name="lllshift"></a>__ll_lshift
 **Microsoft Specific**  
@@ -40,11 +40,11 @@ unsigned __int64 __ll_lshift(
 ```  
   
 #### <a name="parameters"></a>Parametry  
- [in] `Mask`  
- Wartość 64-bitową liczbę całkowitą na przesunięcie w lewo.  
+*Maska*<br/>
+[in] Wartość 64-bitową liczbę całkowitą na przesunięcie w lewo.  
   
- [in] `nBit`  
- Liczba bitów, aby przesunąć.  
+*nBit*<br/>
+[in] Liczba bitów, aby przesunąć.  
   
 ## <a name="return-value"></a>Wartość zwracana  
  Maska przesunięte w lewo przez `nBit` usługi bits.  

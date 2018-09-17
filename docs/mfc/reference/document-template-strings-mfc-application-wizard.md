@@ -16,35 +16,37 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 32d684d7b9b5f8057893d79b864be7b6d9b512fc
-ms.sourcegitcommit: 208d445fd7ea202de1d372d3f468e784e77bd666
+ms.openlocfilehash: a2b1e30ac1e4381cdcd80eddd7fdd4ea27bde5a4
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/29/2018
-ms.locfileid: "37122199"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45700573"
 ---
 # <a name="document-template-strings-mfc-application-wizard"></a>Ciągi szablonu dokumentu, kreator aplikacji MFC
-Na tej stronie Kreatora aplikacji MFC Podaj lub Popraw następujące opcje ułatwiające zarządzanie dokumentami i lokalizacja. Ciągi szablonu dokumentu są dostępne dla aplikacji, które obejmują **wsparcie dla architektury dokument/widok** w [typu aplikacji](../../mfc/reference/application-type-mfc-application-wizard.md). Nie są one dostępne w oknach dialogowych. Ponieważ większość ciągi szablonu dokumentu są widoczne i używane przez użytkowników aplikacji, są zlokalizowane w **języka zasobu** wskazane **typu aplikacji** stronie kreatora.  
+Na tej stronie Kreatora aplikacji MFC Podaj lub zawęzić poniższych opcji, aby ułatwić zarządzanie dokumentami i lokalizacji. Ciągi szablonu dokumentu są dostępne dla aplikacji, które zawierają **Obsługa architektury dokument/widok** w [typ aplikacji](../../mfc/reference/application-type-mfc-application-wizard.md). Nie są one dostępne dla okien dialogowych. Ponieważ większość ciągi szablonu dokumentu są widoczne i używane przez użytkowników aplikacji, są one zlokalizowane w **język zasobów** czcionką **typ aplikacji** strony kreatora.  
   
- **Niezlokalizowanej ciągów**  
- Dotyczy aplikacji, które tworzą dokumenty użytkowników. Użytkownicy mogą otworzyć, drukowania i zapisywać dokumenty więcej łatwo Jeśli należy podać rozszerzenie pliku i identyfikator typu pliku Te elementy nie są zlokalizowane, ponieważ są one używane przez system, a nie przez użytkownika.  
+- **Niezlokalizowanej ciągów**
+
+   Ma zastosowanie do aplikacji, które tworzą dokumentów użytkownika. Użytkownicy mogą otworzyć, drukowanie i zapisywanie dokumentów więcej łatwo Jeśli podasz rozszerzenie pliku i identyfikator typu pliku Te elementy nie są lokalizowane, ponieważ są one używane przez system, a nie przez użytkownika.  
   
-|Opcja|Opis|  
-|------------|-----------------|  
-|**Rozszerzenie pliku**|Określa rozszerzenie pliku skojarzone z dokumentów, które użytkownik zapisuje w przypadku korzystania z aplikacji. Na przykład w projekcie ma nazwę elementu Widget, można nazwę .wgt rozszerzenia pliku. (Po wprowadzeniu rozszerzenie pliku nie dołączaj okres.)<br /><br /> Należy podać rozszerzenie pliku, Eksploratora wydrukować dokumentów aplikacji bez konieczności uruchamiania aplikacji, gdy użytkownik porzuca ikonę dokumentu ikonę drukarki.<br /><br /> Jeśli nie określisz rozszerzenie, podczas zapisywania plików należy podać rozszerzenie pliku. Kreator nie zapewnia domyślne rozszerzenie pliku.|  
-|**Identyfikator typu pliku**|Ustawia etykietę dla danego typu dokumentu w rejestrze systemu.|  
+   |Opcja|Opis|  
+   |------------|-----------------|  
+   |**Rozszerzenie pliku**|Określa rozszerzenie pliku, skojarzone z dokumentów, które użytkownik zapisuje w przypadku korzystania z aplikacji. Na przykład jeśli element Widget nosi nazwę projektu, możesz nazwać .wgt rozszerzenia pliku. (Po wprowadzeniu rozszerzenie pliku, nie dołączaj okres.)<br /><br /> Jeśli podasz rozszerzenie pliku, programu Explorer można wydrukować dokumentów aplikacji bez uruchamiania aplikacji, gdy użytkownik porzuca ikony dokumentu na ikonie drukarki.<br /><br /> Jeśli rozszerzenie nie jest określony, użytkownik musi określić rozszerzenie pliku, podczas zapisywania plików. Kreator nie zapewnia domyślne rozszerzenie pliku.|  
+   |**Identyfikator typu pliku**|Ustawia etykietę dla danego typu dokumentu w rejestrze systemowym.|  
   
- **Zlokalizowanych ciągów**  
- Tworzy ciągi skojarzone z aplikacją i dokument do odczytu i używane przez użytkowników aplikacji, więc są zlokalizowane ciągi.  
+- **Zlokalizowane ciągi**
+
+   Tworzy ciągi skojarzone z aplikacji i dokumentu, który odczytu i używane przez użytkowników aplikacji, dzięki czemu są zlokalizowane ciągi.  
   
-|Opcja|Opis|  
-|------------|-----------------|  
-|**Język**|Określa język, w którym ciągów są wyświetlane dla wszystkich pól w obszarze **zlokalizowane ciągi**. Aby zmienić wartość w tym polu, wybierz odpowiedni język, w obszarze **języka zasobu** w [typu aplikacji](../../mfc/reference/application-type-mfc-application-wizard.md) Kreatora aplikacji MFC.|  
-|**Podpis ramki głównej**|Ustawia tekst znajdujący się w górnej części głównej ramki aplikacji. Domyślnie nazwa projektu.|  
-|**Nazwa typu dokumentu**|Określa typ dokumentu, pod którym można grupować dokumentów aplikacji. Domyślnie nazwa projektu. Wartość domyślna nie zmiana dowolnych innych opcji, w tym oknie dialogowym.|  
-|**Nazwa filtru**|Ustawia nazwę, którą można wskazać użytkowników, można znaleźć plików tego typu pliku. Ta opcja jest dostępna z **pliki typu** i **Zapisz jako typ** opcje w oknach standardowe **Otwórz** i **Zapisz jako** okien dialogowych. Przez domyślną nazwę projektu i plików, a następnie rozszerzenia zawarte w **rozszerzenie pliku**. Na przykład, jeśli projekt nosi nazwę elementu Widget i rozszerzenie pliku jest .wgt **nazwę filtru** jest domyślnie pliki Widget (*.wgt).|  
-|**Krótka nazwa nowego pliku**|Ustawia nazwę znajdujących się w standardowych oknach **nowy** okno dialogowe, jeśli istnieje więcej niż jeden nowy szablon dokumentu. Jeśli aplikacja jest [serwer automatyzacji](../../mfc/automation-servers.md), ta nazwa jest używana jako krótka nazwa obiektu automatyzacji. Domyślnie nazwa projektu.|  
-|**Długa nazwa typu pliku**|Ustawia nazwę typu pliku w rejestrze systemu. Jeśli aplikacja serwera automatyzacji, ta nazwa jest używana jako długa nazwa obiektu automatyzacji. Domyślnie nazwa projektu plus. Dokument.|  
+   |Opcja|Opis|  
+   |------------|-----------------|  
+   |**Język**|Określa język, w którym ciągi są wyświetlane dla wszystkich pól w obszarze **zlokalizowane ciągi**. Aby zmienić wartości w tym polu, wybierz odpowiedni język, w obszarze **język zasobów** w [typ aplikacji](../../mfc/reference/application-type-mfc-application-wizard.md) strony Kreatora aplikacji MFC.|  
+   |**Podpis ramki głównej**|Określa tekst wyświetlany u góry strony ramki głównego aplikacji. Domyślnie nazwa projektu.|  
+   |**Nazwa typu dokumentu**|Identyfikuje typ dokumentu, w którym mogą być grupowane dokumentu aplikacji. Domyślnie nazwa projektu. Zmienianie domyślnego nie powoduje zmiany innych opcji, w tym oknie dialogowym.|  
+   |**Nazwa filtru**|Ustawia nazwę, którą można wskazać użytkowników, do wyszukiwania plików tego typu pliku. Ta opcja jest dostępna z **pliki typu** i **Zapisz jako typ** opcje w standardowych Windows **Otwórz** i **Zapisz jako** okien dialogowych. Przez domyślny, nazwę projektu oraz pliki, a następnie rozszerzenia w **rozszerzenie pliku**. Na przykład, jeśli projekt nosi nazwę elementu Widget i rozszerzenie pliku jest .wgt **nazwy filtru** jest element Widget plików (*.wgt) domyślnie.|  
+   |**Krótka nazwa nowego pliku**|Ustawia nazwę w standardowych Windows **New** okno dialogowe, jeśli istnieje więcej niż jeden nowy szablon dokumentu. Jeśli aplikacja jest [serwer automatyzacji](../../mfc/automation-servers.md), ta nazwa jest używana jako krótka nazwa obiektu automatyzacji. Domyślnie nazwa projektu.|  
+   |**Długa nazwa typu pliku**|Ustawia nazwę typu pliku w rejestrze systemowym. Jeśli aplikacja serwera automatyzacji, ta nazwa jest używana jako długa nazwa obiektu automatyzacji. Domyślnie nazwa projektu plus. Dokument.|  
   
 ## <a name="see-also"></a>Zobacz też  
  [Kreator aplikacji MFC](../../mfc/reference/mfc-application-wizard.md)

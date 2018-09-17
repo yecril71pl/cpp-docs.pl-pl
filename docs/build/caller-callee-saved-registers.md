@@ -12,17 +12,19 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8f65e88c8609d6a2097e9e54c3f52cbd27dce36d
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: e8e877387dbb5b0be865e11017a3ac71a0c38faa
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32366799"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45707658"
 ---
 # <a name="callercallee-saved-registers"></a>Zapisane rejestrowania wywołującego/wywoływanego
-Rejestruje RAX, RCX, RDX, R8, R9, R10, R11 są traktowane jako nietrwałe i muszą być traktowane jako zniszczona na wywołania funkcji (chyba że w przeciwnym razie bezpieczeństwa-możliwością ich kontrolowania podczas analizy, takie jak optymalizacja całego programu).  
-  
- Rejestry RBX, RBP RDI, RSI, źródło, R12, R13, R14 i R15 są uznawane za nieulotnej i musi zostać zapisany i przywrócony przez funkcję używającą je.  
-  
-## <a name="see-also"></a>Zobacz też  
- [Konwencja wywoływania](../build/calling-convention.md)
+
+Rejestry RAX RCX, RDX, R8, R9, R10, R11 są traktowane jako nietrwałe oraz muszą być rozważone zniszczona na wywołania funkcji (chyba że inaczej bezpieczeństwa sprawdzalnych podczas analizy, takie jak optymalizacja całego programu).
+
+Rejestrów RBX RBP, RDI, RSI, RSP, R12, R13, R14 i R15 są traktowane jako trwałej i muszą zostać zapisane i przywrócone przez funkcję używającą je.
+
+## <a name="see-also"></a>Zobacz też
+
+[Konwencja wywoływania](../build/calling-convention.md)

@@ -17,16 +17,18 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 71344bb752ff7a328ddd5f718a5de1c1f42b65be
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 5a6a572013a29420670a2aef8c91c9c4bc64e871
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32370670"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45706323"
 ---
 # <a name="res-files-as-linker-input"></a>Pliki .Res — Wejście konsolidatora
-Można określić plik .res, podczas łączenia programu. Plik .res jest tworzony przez kompilator zasobów (RC). ŁĄCZE automatycznie konwertuje pliki .res COFF. Narzędzie CVTRES.exe musi być w tym samym katalogu co LINK.exe lub w katalogu określonym w zmiennej środowiskowej PATH.  
-  
-## <a name="see-also"></a>Zobacz też  
- [Pliki wyjściowe LINK](../../build/reference/link-input-files.md)   
- [Opcje konsolidatora](../../build/reference/linker-options.md)
+
+Podczas łączenia programu, można określić plik res. Plik .res jest tworzony przez kompilator zasobów (RC). POŁĄCZ automatycznie konwertuje pliki .res do formatu COFF. Narzędzie CVTRES.exe musi być w tym samym katalogu co LINK.exe lub w katalogu, w określonym w zmiennej środowiskowej PATH.
+
+## <a name="see-also"></a>Zobacz też
+
+[Pliki wejściowe LINK](../../build/reference/link-input-files.md)<br/>
+[Opcje konsolidatora](../../build/reference/linker-options.md)

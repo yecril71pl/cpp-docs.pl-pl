@@ -33,12 +33,12 @@ helpviewer_keywords:
 - std::thread [C++], swap
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 47afdbd5e4a5045ec5f91f8f766b45d3d547ba3e
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: f0606258ada9a3b4298bdb9710f3c3021e793b8e
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38958208"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45706891"
 ---
 # <a name="thread-class"></a>thread — Klasa
 
@@ -200,8 +200,8 @@ thread& operator=(thread&& Other) noexcept;
 
 ### <a name="parameters"></a>Parametry
 
-*Inne*  
- A **wątku** obiektu.
+*Inne*<br/>
+A **wątku** obiektu.
 
 ### <a name="return-value"></a>Wartość zwracana
 
@@ -223,8 +223,8 @@ void swap(thread& Other) noexcept;
 
 ### <a name="parameters"></a>Parametry
 
-*Inne*  
- A **wątku** obiektu.
+*Inne*<br/>
+A **wątku** obiektu.
 
 ## <a name="thread"></a>  Thread::Thread — Konstruktor
 
@@ -240,14 +240,14 @@ thread(thread&& Other) noexcept;
 
 ### <a name="parameters"></a>Parametry
 
-*F*  
- Zdefiniowane przez aplikację funkcji wykonywanej przez wątek.
+*F*<br/>
+Zdefiniowane przez aplikację funkcji wykonywanej przez wątek.
 
-*A*  
- Lista argumentów do przekazania do *F*.
+*A*<br/>
+Lista argumentów do przekazania do *F*.
 
-*Inne*  
- Istniejące **wątku** obiektu.
+*Inne*<br/>
+Istniejące **wątku** obiektu.
 
 ### <a name="remarks"></a>Uwagi
 

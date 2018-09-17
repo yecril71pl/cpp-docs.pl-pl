@@ -27,36 +27,40 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ae68de707ece35825a32a404ce14032d4bbd3141
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 5ca32769d7797446dbb0766c41867da1554b037f
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32376731"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45706215"
 ---
 # <a name="link-output"></a>Dane wyjściowe LINK
-Dane wyjściowe Link zawiera pliki .exe, biblioteki DLL mapfiles i komunikatów.  
-  
-##  <a name="_core_output_files"></a> Pliki wyjściowe  
- Domyślny plik wyjściowy z łącza jest pliku .exe. Jeśli [/dll](../../build/reference/dll-build-a-dll.md) zostanie określona opcja, LINK tworzy plik dll. Można kontrolować, nazwa pliku wyjściowego z [nazwę pliku wyjściowego (/ OUT)](../../build/reference/out-output-file-name.md) opcji.  
-  
- W trybie przyrostowe łącze tworzy plik .ilk do przechowywania informacji o stanie dla nowszej kompilacji przyrostowej programu. Aby uzyskać więcej informacji o plikach .ilk, zobacz [.ilk — pliki](../../build/reference/dot-ilk-files-as-linker-input.md). Aby uzyskać więcej informacji na temat konsolidowania przyrostowego zobacz [przyrostowo łącza (/ INCREMENTAL)](../../build/reference/incremental-link-incrementally.md) opcji.  
-  
- Gdy łącze tworzy program, który zawiera eksportuje (zazwyczaj DLL), także program tworzy plik .lib, chyba że użyto pliku .exp w kompilacji. Można kontrolować, nazwa pliku biblioteki importu z [/IMPLIB](../../build/reference/implib-name-import-library.md) opcji.  
-  
- Jeśli [Generowanie Mapfile (/ MAP)](../../build/reference/map-generate-mapfile.md) zostanie określona opcja, łącze tworzy plik mapowania.  
-  
- Jeśli [Generuj informacje o debugowaniu (/ DEBUG)](../../build/reference/debug-generate-debug-info.md) zostanie określona opcja, łącze tworzy PDB zawierają informacje o debugowaniu dla programu.  
-  
-##  <a name="_core_other_output"></a> Inne dane wyjściowe  
- Podczas wpisywania `link` bez żadnych innych danych wiersza polecenia, LINK wyświetla instrukcji użycia, która zawiera podsumowanie jej opcji.  
-  
- Wyświetla komunikat o prawach autorskich i wersji i zwraca plik poleceń do wprowadzania, chyba że łącze [Pomijaj transparent startowy (/ NOLOGO)](../../build/reference/nologo-suppress-startup-banner-linker.md) jest używana opcja.  
-  
- Można użyć [Drukuj komunikaty o postępie (/ VERBOSE)](../../build/reference/verbose-print-progress-messages.md) opcję, aby wyświetlić dodatkowe informacje o kompilacji.  
-  
- ŁĄCZE wystawia błędu i ostrzeżenia wiadomości w postaci LNK*nnnn*. Ten błąd prefiks i zakres numerów są również używane przez LIB, DUMPBIN i polecenia EDITBIN.  
-  
-## <a name="see-also"></a>Zobacz też  
- [Ustawianie opcji konsolidatora](../../build/reference/setting-linker-options.md)   
- [Opcje konsolidatora](../../build/reference/linker-options.md)
+
+Dane wyjściowe Link zawiera pliki .exe, biblioteki dll, mapfile i komunikatów.
+
+##  <a name="_core_output_files"></a> Pliki wyjściowe
+
+Domyślny plik wyjściowy z LINKU jest plik .exe. Jeśli [/dll](../../build/reference/dll-build-a-dll.md) opcja zostanie określona, LINK tworzy plik dll. Można kontrolować nazwę pliku wyjściowego z [nazwę pliku wyjściowego (/ OUT)](../../build/reference/out-output-file-name.md) opcji.
+
+W trybie przyrostowym LINK tworzy plik .ilk do przechowywania informacji o stanie na później kompilacje przyrostowe programu. Aby uzyskać szczegółowe informacje o plikach .ilk, zobacz [.ilk — pliki](../../build/reference/dot-ilk-files-as-linker-input.md). Aby uzyskać więcej informacji na temat przyrostowe konsolidowanie Zobacz [łącza przyrostowe (/ INCREMENTAL)](../../build/reference/incremental-link-incrementally.md) opcji.
+
+Gdy LINK tworzy program, który zawiera eksportuje (zazwyczaj DLL), ale sprzyja wytwarzaniu plik .lib, o ile nie użyto pliku .exp w kompilacji. Możesz kontrolować, nazwa pliku biblioteki importu za pomocą [/IMPLIB](../../build/reference/implib-name-import-library.md) opcji.
+
+Jeśli [Generowanie Mapfile (/ MAP)](../../build/reference/map-generate-mapfile.md) opcja zostanie określona, LINK tworzy plik mapy.
+
+Jeśli [Generuj informacje o debugowaniu (/ DEBUG)](../../build/reference/debug-generate-debug-info.md) opcja zostanie określona, LINK tworzy PDB w celu uwzględnienia informacji o debugowaniu dla programu.
+
+##  <a name="_core_other_output"></a> Inne dane wyjściowe
+
+Podczas wpisywania `link` bez żadnych innych wiersza polecenia danych wejściowych, LINK będzie wyświetlać instrukcję użycia, który podsumowuje opcje.
+
+LINK wyświetla komunikat o prawach autorskich i wersji i funkcją pliku poleceń do wprowadzania, chyba że [Pomijaj transparent startowy (/ NOLOGO)](../../build/reference/nologo-suppress-startup-banner-linker.md) jest używana opcja.
+
+Możesz użyć [Drukuj komunikaty o postępie (/ VERBOSE)](../../build/reference/verbose-print-progress-messages.md) opcję, aby wyświetlić dodatkowe szczegóły dotyczące kompilacji.
+
+ŁĄCZE wysyła komunikaty błędu i ostrzeżenia w postaci LNK*nnnn*. Ten prefiks błąd i zakres liczb są również używane przez LIB, DUMPBIN i polecenia EDITBIN.
+
+## <a name="see-also"></a>Zobacz też
+
+[Ustawianie opcji konsolidatora](../../build/reference/setting-linker-options.md)<br/>
+[Opcje konsolidatora](../../build/reference/linker-options.md)

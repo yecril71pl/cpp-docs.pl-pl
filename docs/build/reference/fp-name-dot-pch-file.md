@@ -25,57 +25,62 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 723bf8d6f49157a2cdc02376e1a628ba697eceb2
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 54968c551a79dbda1f81af682222e22ced5fdf0f
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43217994"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45700090"
 ---
 # <a name="fp-name-pch-file"></a>/Fp (Nazwa pliku .Pch)
-Zawiera nazwę ścieżki dla prekompilowanego nagłówka, zamiast używać domyślnej nazwy ścieżki.  
-  
-## <a name="syntax"></a>Składnia  
-  
-> **/ FP**<em>nazwy ścieżki</em>  
-  
-## <a name="remarks"></a>Uwagi  
- Użyj tej opcji z [/Yc (Utwórz prekompilowany plik nagłówkowy)](../../build/reference/yc-create-precompiled-header-file.md) lub [/Yu (Korzystaj Prekompilowanego pliku nagłówka)](../../build/reference/yu-use-precompiled-header-file.md) o podanie nazwy ścieżki dla prekompilowanego nagłówka, zamiast używać domyślnej nazwy ścieżki. Można również użyć **/FP** z **/Yc** Aby określić plik prekompilowanego pliku nagłówkowego, która różni się od **/Yc**<em>filename</em> argumentów i z podstawowej nazwy pliku źródłowego.  
-  
- Jeśli nie określisz rozszerzenie jako część nazwy ścieżki, przyjmowana jest rozszerzeniem .pch. Jeśli określisz katalogu bez nazwy pliku, domyślna nazwa pliku jest VC*x*0.pch, gdzie *x* jest główną wersją Visual C++ w użyciu.  
-  
- Można również użyć **/FP** z opcją **/Yu**.  
-  
-### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Aby ustawić tę opcję kompilatora w środowisku programowania Visual Studio  
-  
-1.  Otwórz projekt **stron właściwości** okno dialogowe. Aby uzyskać więcej informacji, zobacz [Praca z właściwościami projektu](../../ide/working-with-project-properties.md).  
-  
-2.  Kliknij przycisk **C/C++** folderu.  
-  
-3.  Kliknij przycisk **prekompilowanych nagłówków** stronę właściwości.  
-  
-4.  Modyfikowanie **Prekompilowanego pliku nagłówkowego** właściwości.  
-  
-### <a name="to-set-this-compiler-option-programmatically"></a>Aby programowo ustawić tę opcję kompilatora  
-  
--   Zobacz <xref:Microsoft.VisualStudio.VCProjectEngine.VCCLCompilerTool.PrecompiledHeaderFile%2A>.  
-  
-## <a name="example"></a>Przykład  
- Jeśli chcesz utworzyć prekompilowany plik nagłówka dla wersji debugowania programu i kompilacja kodu źródłowego i pliki nagłówkowe, należy określić polecenia takie jak:  
-  
-```  
-CL /DDEBUG /Zi /Yc /FpDPROG.PCH PROG.CPP  
-```  
-  
-## <a name="example"></a>Przykład  
- Poniższe polecenie Określa użycie pliku wstępnie skompilowanego nagłówka o nazwie MYPCH.pch. Kompilator zakłada wstępnie kodu źródłowego w PROG.cpp za pośrednictwem MYAPP.h i że wstępnie skompilowany kod znajduje się w MYPCH.pch. Używa zawartości MYPCH.pch i kompiluje pozostałą część PROG.cpp, aby utworzyć plik .obj. W tym przykładzie danych wyjściowych jest plik o nazwie PROG.exe.  
-  
-```  
-CL /YuMYAPP.H /FpMYPCH.PCH PROG.CPP  
-```  
-  
-## <a name="see-also"></a>Zobacz też  
- [Plik wyjściowy (/ F) opcje](../../build/reference/output-file-f-options.md)   
- [Opcje kompilatora](../../build/reference/compiler-options.md)   
- [Ustawianie opcji kompilatora](../../build/reference/setting-compiler-options.md)   
- [Określanie nazwy ścieżki](../../build/reference/specifying-the-pathname.md)
+
+Zawiera nazwę ścieżki dla prekompilowanego nagłówka, zamiast używać domyślnej nazwy ścieżki.
+
+## <a name="syntax"></a>Składnia
+
+> **/ FP**<em>nazwy ścieżki</em>
+
+## <a name="remarks"></a>Uwagi
+
+Użyj tej opcji z [/Yc (Utwórz prekompilowany plik nagłówkowy)](../../build/reference/yc-create-precompiled-header-file.md) lub [/Yu (Korzystaj Prekompilowanego pliku nagłówka)](../../build/reference/yu-use-precompiled-header-file.md) o podanie nazwy ścieżki dla prekompilowanego nagłówka, zamiast używać domyślnej nazwy ścieżki. Można również użyć **/FP** z **/Yc** Aby określić plik prekompilowanego pliku nagłówkowego, która różni się od **/Yc**<em>filename</em> argumentów i z podstawowej nazwy pliku źródłowego.
+
+Jeśli nie określisz rozszerzenie jako część nazwy ścieżki, przyjmowana jest rozszerzeniem .pch. Jeśli określisz katalogu bez nazwy pliku, domyślna nazwa pliku jest VC*x*0.pch, gdzie *x* jest główną wersją Visual C++ w użyciu.
+
+Można również użyć **/FP** z opcją **/Yu**.
+
+### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Aby ustawić tę opcję kompilatora w środowisku programowania Visual Studio
+
+1. Otwórz projekt **stron właściwości** okno dialogowe. Aby uzyskać więcej informacji, zobacz [Praca z właściwościami projektu](../../ide/working-with-project-properties.md).
+
+1. Kliknij przycisk **C/C++** folderu.
+
+1. Kliknij przycisk **prekompilowanych nagłówków** stronę właściwości.
+
+1. Modyfikowanie **Prekompilowanego pliku nagłówkowego** właściwości.
+
+### <a name="to-set-this-compiler-option-programmatically"></a>Aby programowo ustawić tę opcję kompilatora
+
+- Zobacz <xref:Microsoft.VisualStudio.VCProjectEngine.VCCLCompilerTool.PrecompiledHeaderFile%2A>.
+
+## <a name="example"></a>Przykład
+
+Jeśli chcesz utworzyć prekompilowany plik nagłówka dla wersji debugowania programu i kompilacja kodu źródłowego i pliki nagłówkowe, należy określić polecenia takie jak:
+
+```
+CL /DDEBUG /Zi /Yc /FpDPROG.PCH PROG.CPP
+```
+
+## <a name="example"></a>Przykład
+
+Poniższe polecenie Określa użycie pliku wstępnie skompilowanego nagłówka o nazwie MYPCH.pch. Kompilator zakłada wstępnie kodu źródłowego w PROG.cpp za pośrednictwem MYAPP.h i że wstępnie skompilowany kod znajduje się w MYPCH.pch. Używa zawartości MYPCH.pch i kompiluje pozostałą część PROG.cpp, aby utworzyć plik .obj. W tym przykładzie danych wyjściowych jest plik o nazwie PROG.exe.
+
+```
+CL /YuMYAPP.H /FpMYPCH.PCH PROG.CPP
+```
+
+## <a name="see-also"></a>Zobacz też
+
+[Plik wyjściowy (/ F) opcje](../../build/reference/output-file-f-options.md)
+[opcje kompilatora](../../build/reference/compiler-options.md)<br/>
+[Ustawianie opcji kompilatora](../../build/reference/setting-compiler-options.md)<br/>
+[Określanie nazwy ścieżki](../../build/reference/specifying-the-pathname.md)

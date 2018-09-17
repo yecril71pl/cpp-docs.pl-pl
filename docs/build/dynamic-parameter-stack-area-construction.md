@@ -12,15 +12,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 39c5aa2bd844a70848583ef8304cdb2fd57befc6
-ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
+ms.openlocfilehash: 9c121a2e15f7020db141dc64e9a3dc9735149c65
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "42465428"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45704967"
 ---
 # <a name="dynamic-parameter-stack-area-construction"></a>Konstrukcja obszaru stosu parametru dynamicznego
-Jeśli jest używany wskaźnik ramki, istnieje możliwość umożliwia dynamiczne tworzenie obszaru stosu parametru. Nie jest to aktualnie wykonywane w x64 kompilatora.  
-  
-## <a name="see-also"></a>Zobacz też  
- [Wykorzystanie stosu](../build/stack-usage.md)
+
+Jeśli jest używany wskaźnik ramki, istnieje możliwość umożliwia dynamiczne tworzenie obszaru stosu parametru. Nie jest to aktualnie wykonywane w x64 kompilatora.
+
+## <a name="see-also"></a>Zobacz też
+
+[Wykorzystanie stosu](../build/stack-usage.md)

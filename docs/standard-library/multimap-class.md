@@ -96,12 +96,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: de4fa70eb4be67eb9ec29fbd24b7b1476681f7bd
-ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
+ms.openlocfilehash: 3d69497092ba89b91a4dbfaf56ac842fa8e07236
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43678567"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45707457"
 ---
 # <a name="multimap-class"></a>multimap — Klasa
 
@@ -120,18 +120,18 @@ class multimap;
 ### <a name="parameters"></a>Parametry
 
 *Key*<br/>
- Typ danych klucza, który ma być przechowywany w mapie wielokrotnej.
+Typ danych klucza, który ma być przechowywany w mapie wielokrotnej.
 
 *Typ*<br/>
- Typ danych elementu, który ma być przechowywany w mapie wielokrotnej.
+Typ danych elementu, który ma być przechowywany w mapie wielokrotnej.
 
 *Cechy*<br/>
- Typ, który dostarcza obiekt funkcji, która może porównać dwie wartości elementów jako klucze sortowania, aby określić ich względną kolejność w mapie wielokrotnej. Predykat dwuelementowy `less<Key>` jest wartością domyślną.
+Typ, który dostarcza obiekt funkcji, która może porównać dwie wartości elementów jako klucze sortowania, aby określić ich względną kolejność w mapie wielokrotnej. Predykat dwuelementowy `less<Key>` jest wartością domyślną.
 
 W języku C ++ 14 można włączyć heterogeniczne wyszukiwanie, określając `std::less<>` lub `std::greater<>` predykat, który nie ma parametrów typu. Aby uzyskać więcej informacji, zobacz [heterogeniczne wyszukiwanie w kontenerach asocjacyjnych](../standard-library/stl-containers.md#heterogeneous-lookup-in-associative-containers-c14)
 
 *Allocator*<br/>
- Typ reprezentujący przechowywany obiekt alokatora, który hermetyzuje szczegóły dotyczące alokacji mapy i dezalokacji pamięci. Ten argument jest opcjonalny, a wartość domyślna to `allocator<pair <const Key, Type> >`.
+Typ reprezentujący przechowywany obiekt alokatora, który hermetyzuje szczegóły dotyczące alokacji mapy i dezalokacji pamięci. Ten argument jest opcjonalny, a wartość domyślna to `allocator<pair <const Key, Type> >`.
 
 ## <a name="remarks"></a>Uwagi
 
@@ -515,7 +515,7 @@ size_type count(const Key& key) const;
 ### <a name="parameters"></a>Parametry
 
 *Klucz*<br/>
- Klucz elementy, które mają być dopasowywane w mapie wielokrotnej.
+Klucz elementy, które mają być dopasowywane w mapie wielokrotnej.
 
 ### <a name="return-value"></a>Wartość zwracana
 
@@ -916,7 +916,7 @@ pair <iterator, iterator> equal_range (const Key& key);
 ### <a name="parameters"></a>Parametry
 
 *Klucz*<br/>
- Argument klucza, który ma zostać porównane z klucza sortowania elementu w mapie wielokrotnej wyszukiwany.
+Argument klucza, który ma zostać porównane z klucza sortowania elementu w mapie wielokrotnej wyszukiwany.
 
 ### <a name="return-value"></a>Wartość zwracana
 
@@ -1003,16 +1003,16 @@ size_type erase(
 ### <a name="parameters"></a>Parametry
 
 *Where*<br/>
- Pozycja elementu, który ma zostać usunięty.
+Pozycja elementu, który ma zostać usunięty.
 
 *pierwszy*<br/>
- Pozycja pierwszego elementu do usunięcia.
+Pozycja pierwszego elementu do usunięcia.
 
 *ostatni*<br/>
- Pozycja tuż za ostatni element do usunięcia.
+Pozycja tuż za ostatni element do usunięcia.
 
 *Key*<br/>
- Klucz elementów do usunięcia.
+Klucz elementów do usunięcia.
 
 ### <a name="return-value"></a>Wartość zwracana
 
@@ -1038,7 +1038,7 @@ const_iterator find(const Key& key) const;
 ### <a name="parameters"></a>Parametry
 
 *Klucz*<br/>
- Wartość klucza, które mają być dopasowywane o klucz sortowania elementu w mapie wielokrotnej wyszukiwany.
+Wartość klucza, które mają być dopasowywane o klucz sortowania elementu w mapie wielokrotnej wyszukiwany.
 
 ### <a name="return-value"></a>Wartość zwracana
 
@@ -1493,7 +1493,7 @@ const_iterator lower_bound(const Key& key) const;
 ### <a name="parameters"></a>Parametry
 
 *Klucz*<br/>
- Argument klucza, który ma zostać porównane z klucza sortowania elementu w mapie wielokrotnej wyszukiwany.
+Argument klucza, który ma zostać porównane z klucza sortowania elementu w mapie wielokrotnej wyszukiwany.
 
 ### <a name="return-value"></a>Wartość zwracana
 
@@ -2189,7 +2189,7 @@ void swap(
 ### <a name="parameters"></a>Parametry
 
 *right*<br/>
- Multimap, zawierająca elementy, które mają być zamienione lub multimap, której elementy są wymieniane z tymi Mapa wielokrotna `left`.
+Multimap, zawierająca elementy, które mają być zamienione lub multimap, której elementy są wymieniane z tymi Mapa wielokrotna `left`.
 
 ### <a name="remarks"></a>Uwagi
 
@@ -2259,7 +2259,7 @@ const_iterator upper_bound(const Key& key) const;
 ### <a name="parameters"></a>Parametry
 
 *Klucz*<br/>
- Argument klucza, który ma zostać porównane z klucza sortowania elementu w mapie wielokrotnej wyszukiwany.
+Argument klucza, który ma zostać porównane z klucza sortowania elementu w mapie wielokrotnej wyszukiwany.
 
 ### <a name="return-value"></a>Wartość zwracana
 

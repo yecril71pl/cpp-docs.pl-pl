@@ -12,23 +12,25 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c5961159ab87426a26b31afcc09a16fece0a81b2
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 0196d30f0634d37db976dab9416d7a5d23f8b719
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32380436"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45707385"
 ---
 # <a name="unwind-data-for-exception-handling-debugger-support"></a>Dane operacji Unwind dla obsługi wyjątków, obsługa debugera
-W tej sekcji omówiono struktur danych wymagane dla wyjątków, obsługa i obsługa debugowania.  
-  
--   [struktura RUNTIME_FUNCTION](../build/struct-runtime-function.md)  
-  
--   [struktura UNWIND_INFO](../build/struct-unwind-info.md)  
-  
--   [struktura UNWIND_CODE](../build/struct-unwind-code.md)  
-  
--   [Struktury informacji o operacji łańcuchowej unwind](../build/chained-unwind-info-structures.md)  
-  
-## <a name="see-also"></a>Zobacz też  
- [Obsługa wyjątków (x64)](../build/exception-handling-x64.md)
+
+W tej sekcji omówiono struktur danych wymagane dla wyjątków, obsługa i obsługi debugowania.
+
+- [struktura RUNTIME_FUNCTION](../build/struct-runtime-function.md)
+
+- [struktura UNWIND_INFO](../build/struct-unwind-info.md)
+
+- [struktura UNWIND_CODE](../build/struct-unwind-code.md)
+
+- [Struktury informacji o operacji łańcuchowej unwind](../build/chained-unwind-info-structures.md)
+
+## <a name="see-also"></a>Zobacz też
+
+[Obsługa wyjątków (x64)](../build/exception-handling-x64.md)

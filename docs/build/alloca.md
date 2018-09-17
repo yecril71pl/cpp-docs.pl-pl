@@ -12,17 +12,19 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2f58d0c959008196798087d139b44715a67f567b
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: e0c73abcb52b991ee6bd4de839861aa4ef684181
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32360423"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45702749"
 ---
 # <a name="alloca"></a>alloca
-[_alloca](../c-runtime-library/reference/alloca.md) musi być 16-bajtowych wyrównane, a ponadto trzeba używać wskaźnika ramki.  
-  
- Stos, który jest przydzielony musi zawierać miejsca poniżej parametrów funkcji następnie wywołana, zgodnie z opisem w [alokacji stosu](../build/stack-allocation.md).  
-  
-## <a name="see-also"></a>Zobacz też  
- [Wykorzystanie stosu](../build/stack-usage.md)
+
+[_alloca](../c-runtime-library/reference/alloca.md) musi być 16-bajtowy wyrównany, a ponadto trzeba użyć wskaźnika ramki.
+
+Stos, który jest przydzielany musi zawierać przestrzeń poniżej parametrów później wywoływanej funkcji, zgodnie z opisem w [alokacji stosu](../build/stack-allocation.md).
+
+## <a name="see-also"></a>Zobacz też
+
+[Wykorzystanie stosu](../build/stack-usage.md)

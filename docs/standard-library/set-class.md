@@ -96,12 +96,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f7a04710d900aa9eb5889c19fbdc419a3b7f3cbc
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: b3b697901ac564a88f48cdbc3154f29089c23acc
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43204613"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45706163"
 ---
 # <a name="set-class"></a>set — Klasa
 
@@ -119,15 +119,15 @@ class set
 ### <a name="parameters"></a>Parametry
 
 *Key*<br/>
- Typ danych elementu, który ma być przechowywany w zestawie.
+Typ danych elementu, który ma być przechowywany w zestawie.
 
 *Cechy*<br/>
- Typ, który dostarcza obiekt funkcji, która może porównać dwie wartości elementów jako klucze sortowania, aby określić ich względną kolejność w zestawie. Ten argument jest opcjonalny, a predykat binarny **mniej**  *\<Key >* jest wartością domyślną.
+Typ, który dostarcza obiekt funkcji, która może porównać dwie wartości elementów jako klucze sortowania, aby określić ich względną kolejność w zestawie. Ten argument jest opcjonalny, a predykat binarny **mniej**  *\<Key >* jest wartością domyślną.
 
 W języku C ++ 14 można włączyć heterogeniczne wyszukiwanie, określając `std::less<>` lub `std::greater<>` predykat, który nie ma parametrów typu. Aby uzyskać więcej informacji, zobacz [heterogeniczne wyszukiwanie w kontenerach asocjacyjnych](../standard-library/stl-containers.md#sequence_containers)
 
 *Allocator*<br/>
- Typ reprezentujący przechowywany obiekt alokatora, który hermetyzuje szczegóły dotyczące alokacji zestawu i dezalokacji pamięci. Ten argument jest opcjonalny, a wartość domyślna to `allocator<Key>`.
+Typ reprezentujący przechowywany obiekt alokatora, który hermetyzuje szczegóły dotyczące alokacji zestawu i dezalokacji pamięci. Ten argument jest opcjonalny, a wartość domyślna to `allocator<Key>`.
 
 ## <a name="remarks"></a>Uwagi
 
@@ -488,7 +488,7 @@ size_type count(const Key& key) const;
 ### <a name="parameters"></a>Parametry
 
 *Klucz*<br/>
- Klucz elementy, które mają być dopasowywane z zestawu.
+Klucz elementy, które mają być dopasowywane z zestawu.
 
 ### <a name="return-value"></a>Wartość zwracana
 
@@ -934,7 +934,7 @@ pair <iterator, iterator> equal_range (const Key& key);
 ### <a name="parameters"></a>Parametry
 
 *Klucz*<br/>
- Argument klucza, który ma zostać porównane z klucza sortowania elementu z zestawu, przeszukiwany.
+Argument klucza, który ma zostać porównane z klucza sortowania elementu z zestawu, przeszukiwany.
 
 ### <a name="return-value"></a>Wartość zwracana
 
@@ -1019,16 +1019,16 @@ size_type erase(
 ### <a name="parameters"></a>Parametry
 
 *Where*<br/>
- Pozycja elementu, który ma zostać usunięty.
+Pozycja elementu, który ma zostać usunięty.
 
 *pierwszy*<br/>
- Pozycja pierwszego elementu do usunięcia.
+Pozycja pierwszego elementu do usunięcia.
 
 *ostatni*<br/>
- Pozycja tuż za ostatni element do usunięcia.
+Pozycja tuż za ostatni element do usunięcia.
 
 *Key*<br/>
- Wartość klucza elementów do usunięcia.
+Wartość klucza elementów do usunięcia.
 
 ### <a name="return-value"></a>Wartość zwracana
 
@@ -1131,7 +1131,7 @@ const_iterator find(const Key& key) const;
 ### <a name="parameters"></a>Parametry
 
 *Klucz*<br/>
- Wartość klucza, które mają być dopasowywane o klucz sortowania elementu z zestawu, przeszukiwany.
+Wartość klucza, które mają być dopasowywane o klucz sortowania elementu z zestawu, przeszukiwany.
 
 ### <a name="return-value"></a>Wartość zwracana
 
@@ -1595,7 +1595,7 @@ iterator lower_bound(const Key& key);
 ### <a name="parameters"></a>Parametry
 
 *Klucz*<br/>
- Argument klucza, który ma zostać porównane z klucza sortowania elementu z zestawu, przeszukiwany.
+Argument klucza, który ma zostać porównane z klucza sortowania elementu z zestawu, przeszukiwany.
 
 ### <a name="return-value"></a>Wartość zwracana
 
@@ -2215,7 +2215,7 @@ void swap(
 ### <a name="parameters"></a>Parametry
 
 *right*<br/>
- Ustaw argument Ustaw zawierająca elementy, które mają być zamienione z obiektem docelowym.
+Ustaw argument Ustaw zawierająca elementy, które mają być zamienione z obiektem docelowym.
 
 ### <a name="remarks"></a>Uwagi
 
@@ -2284,7 +2284,7 @@ iterator upper_bound(const Key& key);
 ### <a name="parameters"></a>Parametry
 
 *Klucz*<br/>
- Argument klucza, który ma zostać porównane z klucza sortowania elementu z zestawu, przeszukiwany.
+Argument klucza, który ma zostać porównane z klucza sortowania elementu z zestawu, przeszukiwany.
 
 ### <a name="return-value"></a>Wartość zwracana
 

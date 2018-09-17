@@ -23,12 +23,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6b0f4660e9221855c93835a0a5ba5e0557178a66
-ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
+ms.openlocfilehash: b46f61ef727c1b283137bb3d537d2dbad416c1d8
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44109865"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45703823"
 ---
 # <a name="clr-common-language-runtime-compilation"></a>/clr (Kompilacja środowiska uruchomieniowego języka wspólnego)
 
@@ -40,7 +40,7 @@ Umożliwia aplikacji i składników korzystać z funkcji z środowisko uruchomie
 
 ## <a name="arguments"></a>Argumenty
 
-*Opcje*  
+*Opcje*<br/>
 Co najmniej jeden z następujących przełączników rozdzielaną przecinkami.
 
 - brak
@@ -140,5 +140,5 @@ Jeśli masz kod, który używa zarządzanych rozszerzeń języka C++, firma Micr
 
 ## <a name="see-also"></a>Zobacz też
 
-[Opcje kompilatora](../../build/reference/compiler-options.md)   
+[Opcje kompilatora](../../build/reference/compiler-options.md)<br/>
 [Ustawianie opcji kompilatora](../../build/reference/setting-compiler-options.md)

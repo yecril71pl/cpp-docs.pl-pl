@@ -16,30 +16,32 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9ebebb6e7d237746f96c7ac7e27c249244ff825b
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: cebb544b1d8fc8489de298bf7512cc612a6dfef2
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32367436"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45701171"
 ---
 # <a name="environment-variable-macros"></a>Makra zmiennych środowiskowych
-NMAKE dziedziczy definicji makra zmiennych środowiskowych, które istnieją przed rozpoczęciem sesji. Jeśli zmienna została ustawiona w środowisku systemu operacyjnego, jest dostępna jako makro NMAKE. Dziedziczony nazwy są konwertowane na wielkie litery. Dziedziczenie występuje przed przetwarzania wstępnego. Opcja /E spowodować makra odziedziczone zmiennych środowiskowych, aby zastąpić makr o takiej samej nazwie w pliku reguł programu make.  
-  
- Makra zmiennych środowiskowych można ponownie zdefiniować w sesji i spowoduje to zmianę odpowiednich zmiennej środowiskowej. Można również zmienić zmiennych środowiskowych przy użyciu polecenia SET. Aby zmienić zmienną środowiskową w sesji przy użyciu polecenia SET nie odpowiednie makro, jednak zmienić.  
-  
- Na przykład:  
-  
-```  
-PATH=$(PATH);\nonesuch  
-  
-all:  
-    echo %PATH%  
-```  
-  
- W tym przykładzie zmiana `PATH` zmiany odpowiednich zmiennej środowiskowej `PATH`; dołącza `\nonesuch` do ścieżki.  
-  
- Jeśli zmienna środowiskowa jest zdefiniowany jako ciąg, który jest nieprawidłowy w pliku reguł programu make, makro nie jest tworzony, i jest generowany bez ostrzeżenia. Jeśli wartość zmiennej zawiera znak dolara ($), NMAKE zinterpretuje ją jako początku wywołanie makra. Użycie makra może spowodować nieoczekiwane zachowanie.  
-  
-## <a name="see-also"></a>Zobacz też  
- [Specjalne makra NMAKE](../build/special-nmake-macros.md)
+
+NMAKE dziedziczy definicji makra zmiennych środowiskowych, występujących przed rozpoczęciem sesji. Jeśli zmienna została ustawiona w środowisku systemu operacyjnego, jest ona dostępna jako makro NMAKE. Odziedziczone nazwy są konwertowane na wielkie litery. Dziedziczenie wcześniejsza przetwarzania wstępnego. Opcja /E umożliwia powodują, że makra odziedziczone zmiennych środowiskowych w celu zastąpienia makra o tej samej nazwie w pliku reguł programu make.
+
+Makra zmiennych środowiskowych można ponownie zdefiniować w sesji, a spowoduje to zmianę odpowiednich zmiennej środowiskowej. Można również zmienić zmienne środowiskowe w poleceniu SET. Aby zmienić zmienną środowiskową w sesji przy użyciu polecenia SET nie zmienia się odpowiednie makro, jednak.
+
+Na przykład:
+
+```
+PATH=$(PATH);\nonesuch
+
+all:
+    echo %PATH%
+```
+
+W tym przykładzie, zmieniając `PATH` zmienia odpowiednią zmienną środowiska `PATH`; dołącza `\nonesuch` do ścieżki.
+
+Jeśli zmienna środowiskowa jest zdefiniowana jako ciąg, który jest nieprawidłowy w pliku reguł programu make, makro nie zostanie utworzony i jest generowany bez ostrzeżenia. Jeśli wartość zmiennej zawiera znak dolara ($), NMAKE zinterpretuje ją jako początek wywołanie makra. Za pomocą makra może spowodować nieoczekiwane zachowanie.
+
+## <a name="see-also"></a>Zobacz też
+
+[Specjalne makra NMAKE](../build/special-nmake-macros.md)

@@ -12,17 +12,19 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 55cf6a2503367777464f09f92e3e3614c3d9f11b
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: f53160a5deeb3ea0db111fc0aae7429b19b7cc86
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32379838"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45703277"
 ---
 # <a name="setjmplongjump"></a>setjmp/longjump
-Po dołączeniu setjmpex.h lub setjmp.h wszystkich wywołań [setjmp](../c-runtime-library/reference/setjmp.md) lub [longjmp](../c-runtime-library/reference/longjmp.md) spowoduje unwind wywołuje destruktory, który wywołuje finally.  To różni się od x86, gdzie tym setjmp.h wyniki w klauzulach finally i destruktory nie wywołana.  
-  
- Wywołanie `setjmp` zachowuje bieżący wskaźnik stosu, trwałej rejestrów i MxCsr rejestrów.  Wywołań `longjmp` powrót do ostatniego `setjmp` wywoływać lokacji i resetuje wskaźnik stosu, trwałej rejestrów i MxCsr rejestruje, do stanu zachowanego przez najnowszej `setjmp` wywołania.  
-  
-## <a name="see-also"></a>Zobacz też  
- [Konwencja wywoływania](../build/calling-convention.md)
+
+Po włączeniu setjmpex.h lub setjmp.h wszystkie wywołania [setjmp](../c-runtime-library/reference/setjmp.md) lub [longjmp](../c-runtime-library/reference/longjmp.md) spowoduje rozwinięcie, który wywołuje destruktory i na koniec wywołania.  To różni się od x86, w przypadku, gdy tym setjmp.h wyniki w klauzulach finally i destruktory nie są wywoływane.
+
+Wywołanie `setjmp` zachowuje bieżący wskaźnik stosu, rejestrów trwała i MxCsr rejestrów.  Wywołania `longjmp` wróć do najnowszych, ostatnio `setjmp` wywołań lokacji i resetuje wskaźnik stosu, rejestrów trwała i MxCsr rejestruje, do stanu zachowanego przez najnowszych, ostatnio `setjmp` wywołania.
+
+## <a name="see-also"></a>Zobacz też
+
+[Konwencja wywoływania](../build/calling-convention.md)

@@ -40,15 +40,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 01fec88a49852ba46c8feb68f18842d2a1de437f
-ms.sourcegitcommit: be0e3457f2884551f18e183ef0ea65c3ded7f689
+ms.openlocfilehash: 42fd0c5df1731ded5e48bda74cb280b282e6b0cb
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/28/2018
-ms.locfileid: "37079003"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45702614"
 ---
 # <a name="crecentdocksiteinfo-class"></a>Klasa CRecentDockSiteInfo
-`CRecentDockSiteInfo` Klasy to klasa pomocy, która przechowuje najnowsze informacje o stanie [CPane klasy](../../mfc/reference/cpane-class.md).  
+`CRecentDockSiteInfo` Klasy to klasa pomocnika przechowująca ostatnie informacje o stanie dla [klasa CPane](../../mfc/reference/cpane-class.md).  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -83,9 +83,9 @@ class CRecentDockSiteInfo : public CObject
 |[CRecentDockSiteInfo::StoreDockInfo](#storedockinfo)||  
   
 ## <a name="remarks"></a>Uwagi  
- `CRecentDockSiteInfo` Klasa jest klasą danych zarządzania. Śledzi stan ostatniego `CPane` zgodnie z jego przejścia między jest zadokowane i przestawne. Po kliknięciu dwukrotnie okienka dokującego przestawne, staje się on zadokowany. Dwukrotne kliknięcie zadokowanego panelu zwraca go do poprzedniej lokalizacji, rozmiaru i stanu. Podobnie gdy okienko jest zadokowany ponownie zwraca do poprzedniej lokalizacji dokowania. Ta klasa danych jest, co umożliwia który. Ponieważ elementy członkowskie tej klasy zapisać informacji o stanie dla zadokowanego panelu, ich nie powinien być bezpośrednio modyfikowany przez aplikację.  
+ `CRecentDockSiteInfo` Klasa jest klasą danych zarządzania. Śledzi stan ostatniego `CPane` jako przechodzi między są zadokowane i przestawne. Po kliknięciu dwukrotnie unoszącego dokowalne, staje się zadokowany. Dwukrotne kliknięcie zadokowanego okienka zwraca go do poprzedniej lokalizacji, rozmiaru i stanu. Podobnie po ponownym zadokowanego okienka zwraca do poprzedniej lokalizacji dokowania. Ta klasa danych to, co sprawia, że, to możliwe. Ponieważ elementy członkowskie tej klasy są przechowywane informacje o stanie dla zadokowanego okienka, ich powinna nie można zmodyfikować bezpośrednio przez aplikację.  
   
- A `CRecentDockSiteInfo` zawsze tworzona okienko zostanie utworzony obiekt. Każdy `CPane` charakteryzuje się zmienną członkowską [CPane::m_recentDockInfo](../../mfc/reference/cpane-class.md#m_recentdockinfo), aby przechowywać tych informacji.  
+ A `CRecentDockSiteInfo` co godzina utworzenia okienko jest tworzony jest obiekt. Każdy `CPane` obiekt ma zmienną członkowską [CPane::m_recentDockInfo](../../mfc/reference/cpane-class.md#m_recentdockinfo), do przechowywania tych informacji.  
   
 ## <a name="inheritance-hierarchy"></a>Hierarchia dziedziczenia  
  [CObject](../../mfc/reference/cobject-class.md)  
@@ -244,8 +244,8 @@ void SaveListOfRecentPanes(CList<HWND,
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *Clist — < HWND*  
- [in] *lstOrg*  
+*CList < HWND*<br/>
+[in] [in] *lstOrg*  
  [in] *bForSlider*  
   
 ### <a name="remarks"></a>Uwagi  
@@ -260,8 +260,8 @@ virtual void SetInfo(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *bForSlider*  
- [in] *srcInfo*  
+*bForSlider*<br/>
+[in] [in] *srcInfo*  
   
 ### <a name="remarks"></a>Uwagi  
   
@@ -275,8 +275,8 @@ virtual void StoreDockInfo(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *pRecentContainer*  
- [in] *pTabbedBar*  
+*pRecentContainer*<br/>
+[in] [in] *pTabbedBar*  
   
 ### <a name="remarks"></a>Uwagi  
   

@@ -36,12 +36,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: af6e9ce4c252e2d798615292291dcd3e21cbd72a
-ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
+ms.openlocfilehash: 810a375fce13d8628db5ff00d89964d84c83b525
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/05/2018
-ms.locfileid: "37853673"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45704050"
 ---
 # <a name="cmfckeymapdialog-class"></a>Klasa CMFCKeyMapDialog
 `CMFCKeyMapDialog` Klasy obsługuje formant, który mapuje polecenia na klawisze klawiatury.  
@@ -110,11 +110,11 @@ CMFCKeyMapDialog(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *pWndParentFrame*  
- Wskaźnik do okna nadrzędnego `CMFCKeyMapDialog` obiektu.  
+*pWndParentFrame*<br/>
+[in] Wskaźnik do okna nadrzędnego `CMFCKeyMapDialog` obiektu.  
   
- [in] *bEnablePrint*  
- Wartość TRUE, jeśli lista klawiszy skrótów, może zostać zrealizowane; w przeciwnym razie wartość FALSE. Wartość domyślna to FALSE.  
+*bEnablePrint*<br/>
+[in] Wartość TRUE, jeśli lista klawiszy skrótów, może zostać zrealizowane; w przeciwnym razie wartość FALSE. Wartość domyślna to FALSE.  
   
 ### <a name="remarks"></a>Uwagi  
   
@@ -144,8 +144,8 @@ virtual CString FormatItem(int nItem) const;
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *nItem*  
- Liczony od zera indeks elementu na liście wewnętrznych mapowań klucza.  
+*nItem*<br/>
+[in] Liczony od zera indeks elementu na liście wewnętrznych mapowań klucza.  
   
 ### <a name="return-value"></a>Wartość zwracana  
  A `CString` obiekt, który zawiera tekst sformatowany elementu.  
@@ -160,8 +160,8 @@ virtual CString GetCommandKeys(UINT uiCmdID) const;
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *uiCmdID*  
- Identyfikator polecenia.  
+*uiCmdID*<br/>
+[in] Identyfikator polecenia.  
   
 ### <a name="return-value"></a>Wartość zwracana  
  Rozdzielana średnikami (";") lista klawiszy skrótu, który jest skojarzony z określonym poleceniem.  
@@ -178,11 +178,11 @@ virtual void OnInsertItem(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *pButton*  
- Wskaźnik na przycisku paska narzędzi, który służy do mapowania klawiatury kombinacji klawiszy polecenia nazwę i opis. Element mapy kluczy są przechowywane w kontrolce listy wewnętrznej.  
+*pButton*<br/>
+[in] Wskaźnik na przycisku paska narzędzi, który służy do mapowania klawiatury kombinacji klawiszy polecenia nazwę i opis. Element mapy kluczy są przechowywane w kontrolce listy wewnętrznej.  
   
- [in] *nItem*  
- Liczony od zera indeks, który określa lokalizację wstawić nowy element mapy kluczy w formancie listy wewnętrznej.  
+*nItem*<br/>
+[in] Liczony od zera indeks, który określa lokalizację wstawić nowy element mapy kluczy w formancie listy wewnętrznej.  
   
 ### <a name="remarks"></a>Uwagi  
   
@@ -197,14 +197,14 @@ virtual int OnPrintHeader(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *kontrolera domeny*  
- Kontekst urządzenia dla drukarki.  
+*Kontroler domeny*<br/>
+[in] Kontekst urządzenia dla drukarki.  
   
- [in] *nPage*  
- Numer strony do wydrukowania.  
+*nPage*<br/>
+[in] Numer strony do wydrukowania.  
   
- [in] *cx*  
- Przesunięcie w poziomie nagłówka, w pikselach.  
+*CX*<br/>
+[in] Przesunięcie w poziomie nagłówka, w pikselach.  
   
 ### <a name="return-value"></a>Wartość zwracana  
  Jeśli to się powiedzie, wysokość drukowanego tekstu. Aby uzyskać więcej informacji, zobacz sekcję zwracają wartość [CDC::DrawText](../../mfc/reference/cdc-class.md#drawtext).  
@@ -225,20 +225,20 @@ virtual int OnPrintItem(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *kontrolera domeny*  
- Kontekst urządzenia drukarki.  
+*Kontroler domeny*<br/>
+[in] Kontekst urządzenia drukarki.  
   
- [in] *nItem*  
- Liczony od zera indeks elementu do drukowania.  
+*nItem*<br/>
+[in] Liczony od zera indeks elementu do drukowania.  
   
- [in] *y*  
- Przesunięcie w pionie między górnej części strony i pozycja elementu.  
+*y*<br/>
+[in] Przesunięcie w pionie między górnej części strony i pozycja elementu.  
   
- [in] *cx*  
- Przesunięcie w poziomie między lewym rogu strony i pozycja elementu.  
+*CX*<br/>
+[in] Przesunięcie w poziomie między lewym rogu strony i pozycja elementu.  
   
- [in] *bCalcHeight*  
- Wartość TRUE, aby obliczyć najlepsze wysokość elementu wydruku; Wartość FAŁSZ, aby obciąć drukowania elementu, tak aby zmieścił domyślna przestrzeń.  
+*bCalcHeight*<br/>
+[in] Wartość TRUE, aby obliczyć najlepsze wysokość elementu wydruku; Wartość FAŁSZ, aby obciąć drukowania elementu, tak aby zmieścił domyślna przestrzeń.  
   
 ### <a name="return-value"></a>Wartość zwracana  
  Wysokość elementu drukowanych.  

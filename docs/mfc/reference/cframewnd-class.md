@@ -116,12 +116,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 991b8c55c02272613ce329be9a053ff0110f1926
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 817c828c56fe2e95756e517c3d930d365714ad99
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43764878"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45701717"
 ---
 # <a name="cframewnd-class"></a>Klasa CFrameWnd
 Oferuje funkcje Windows interfejsu pojedynczego dokumentu (SDI) nachodzącego lub wyskakującego ramki okna, wraz z elementami członkowskimi do zarządzania oknem.  
@@ -986,7 +986,7 @@ virtual BOOL SetMenuBarState(DWORD nState);
   
 |Parametr|Opis|  
 |---------------|-----------------|  
-|[in] *nInformacje*|Określa, czy chcesz wyświetlić lub ukryć menu. *NInformacje* parametr może mieć następujące wartości:<br /><br /> -AFX_MBS_VISIBLE (0x01) - Wyświetla menu, jeśli jest ukryty, ale nie obowiązuje, jeśli jest on widoczny.<br />-AFX_MBS_HIDDEN (0x02) - powoduje ukrycie opcji menu, jeśli jest widoczny, ale nie obowiązuje, jeśli jest on ukryty.|  
+|*nInformacje*|[in] Określa, czy chcesz wyświetlić lub ukryć menu. *NInformacje* parametr może mieć następujące wartości:<br /><br /> -AFX_MBS_VISIBLE (0x01) - Wyświetla menu, jeśli jest ukryty, ale nie obowiązuje, jeśli jest on widoczny.<br />-AFX_MBS_HIDDEN (0x02) - powoduje ukrycie opcji menu, jeśli jest widoczny, ale nie obowiązuje, jeśli jest on ukryty.|  
   
 ### <a name="return-value"></a>Wartość zwracana  
  Wartość TRUE, jeśli ta metoda pomyślnie zmieni stan menu; w przeciwnym razie wartość FALSE.  
@@ -1005,7 +1005,7 @@ virtual void SetMenuBarVisibility(DWORD nStyle);
   
 |Parametr|Opis|  
 |---------------|-----------------|  
-|[in] *nStyle*|Określa, czy menu jest domyślnie ukryta, lub jest widoczna i ma fokus. *NStyle* parametr może mieć następujące wartości:<br /><br /> -AFX_MBV_KEEPVISIBLE (0X01) —<br />     W menu wyświetlanym przez cały czas i domyślnie nie ma fokusu.<br />-AFX_MBV_DISPLAYONFOCUS (0X02) —<br />     Menu jest domyślnie ukryty. Jeśli menu jest ukryty, naciśnij klawisz ALT, aby wyświetlić menu, a następnie uzyskuje fokus. Jeśli zostanie wyświetlone menu, naciśnij klawisz ALT lub klawisz ESC, aby ukryć menu.<br />-AFX_MBV_ DISPLAYONFOCUS (0x02) &#124; AFX_MBV_DISPLAYONF10 (0x04)<br />     (bitowe połączenie (lub)) — menu jest domyślnie ukryty. Jeśli menu jest ukryty, naciśnij klawisz F10, aby wyświetlić menu, a następnie uzyskuje fokus. Jeśli zostanie wyświetlone menu, naciśnij klawisz F10, aby przełączać fokus lub Wyłącz menu. Zostanie wyświetlone menu, naciśnij klawisz ALT lub klawisz ESC, aby je ukryć.|  
+|*nStyle*|[in] Określa, czy menu jest domyślnie ukryta, lub jest widoczna i ma fokus. *NStyle* parametr może mieć następujące wartości:<br /><br /> -AFX_MBV_KEEPVISIBLE (0X01) —<br />     W menu wyświetlanym przez cały czas i domyślnie nie ma fokusu.<br />-AFX_MBV_DISPLAYONFOCUS (0X02) —<br />     Menu jest domyślnie ukryty. Jeśli menu jest ukryty, naciśnij klawisz ALT, aby wyświetlić menu, a następnie uzyskuje fokus. Jeśli zostanie wyświetlone menu, naciśnij klawisz ALT lub klawisz ESC, aby ukryć menu.<br />-AFX_MBV_ DISPLAYONFOCUS (0x02) &#124; AFX_MBV_DISPLAYONF10 (0x04)<br />     (bitowe połączenie (lub)) — menu jest domyślnie ukryty. Jeśli menu jest ukryty, naciśnij klawisz F10, aby wyświetlić menu, a następnie uzyskuje fokus. Jeśli zostanie wyświetlone menu, naciśnij klawisz F10, aby przełączać fokus lub Wyłącz menu. Zostanie wyświetlone menu, naciśnij klawisz ALT lub klawisz ESC, aby je ukryć.|  
   
 ### <a name="remarks"></a>Uwagi  
  Jeśli wartość *nStyle* parametr jest nieprawidłowy, ta metoda potwierdzenia w trybie debugowania i zgłasza [CInvalidArgException](../../mfc/reference/cinvalidargexception-class.md) w trybie wydania. W przypadku innych błędów środowiska uruchomieniowego, ta metoda potwierdzenia w trybie debugowania i zgłasza wyjątek pochodzi od [CException](../../mfc/reference/cexception-class.md) klasy.  

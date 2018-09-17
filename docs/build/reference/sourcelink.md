@@ -16,12 +16,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 876373b5646790f9f8de0042442b2ab56d9d2971
-ms.sourcegitcommit: 7f3df9ff0310a4716b8136ca20deba699ca86c6c
+ms.openlocfilehash: dff53f7a4db12e32bca2494ba99f5b3b8203d48f
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/21/2018
-ms.locfileid: "40242842"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45706670"
 ---
 # <a name="sourcelink-include-sourcelink-file-in-pdb"></a>/ SOURCELINK (Sourcelink obejmują pliki w pliku PDB)
 
@@ -33,7 +33,7 @@ Określa plik konfiguracji SourceLink do uwzględnienia w pliku PDB wygenerowany
 
 ## <a name="arguments"></a>Argumenty
 
-*Nazwa pliku*  
+*Nazwa pliku*<br/>
 Określa sformatowanego JSON konfiguracji pliku, który zawiera prostego mapowanie ścieżki pliku lokalnego do adresów URL, gdzie można pobrać pliku źródłowego do wyświetlenia przez debuger. Aby uzyskać więcej informacji na temat formatu tego pliku, zobacz [schematu JSON Linku źródłowego](https://github.com/dotnet/designs/blob/master/accepted/diagnostics/source-link.md#source-link-json-schema).
 
 ## <a name="remarks"></a>Uwagi
@@ -48,11 +48,11 @@ SourceLink jest systemem niezależny od języka i kontroli źródła, zapewniaj�
 
 1. W **dodatkowe opcje** Dodaj **/sourcelink:**_filename_ , a następnie wybierz **OK** lub **Zastosuj**Aby zapisać zmiany.
 
-### <a name="to-set-this-linker-option-programmatically"></a>Aby programowo ustawić tę opcję konsolidatora  
-  
+### <a name="to-set-this-linker-option-programmatically"></a>Aby programowo ustawić tę opcję konsolidatora
+
 - Ta opcja nie ma programowy odpowiednik.
 
 ## <a name="see-also"></a>Zobacz także
 
-[Ustawianie opcji konsolidatora](../../build/reference/setting-linker-options.md)  
-[Opcje konsolidatora](../../build/reference/linker-options.md)  
+[Ustawianie opcji konsolidatora](../../build/reference/setting-linker-options.md)<br/>
+[Opcje konsolidatora](../../build/reference/linker-options.md)

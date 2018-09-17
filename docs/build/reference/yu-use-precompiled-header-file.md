@@ -1,5 +1,5 @@
 ---
-title: -Yu (Użyj Prekompilowanego pliku nagłówka) | Dokumentacja firmy Microsoft
+title: -Yu (Korzystaj z prekompilowanego pliku nagłówkowego pliku) | Dokumentacja firmy Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -21,87 +21,92 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d115017e843e7f03455e1eef2b384b3475a1b798
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: a0b2935c10b5d99f4fa97163310a3e2cba3006b3
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32378720"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45707749"
 ---
 # <a name="yu-use-precompiled-header-file"></a>/Yu (Korzystaj z prekompilowanego pliku nagłówka)
-Instruuje kompilator, aby wykorzystywała istniejący plik prekompilowanego nagłówka (.pch) w bieżącej kompilacji.  
-  
-## <a name="syntax"></a>Składnia  
-  
-```  
-/Yu[filename]  
-```  
-  
-## <a name="arguments"></a>Argumenty  
- *Nazwa pliku*  
- Nazwa pliku nagłówka, który znajduje się w pliku źródłowym przy użyciu **#include** dyrektywy preprocesora.  
-  
-## <a name="remarks"></a>Uwagi  
- Nazwa pliku dołączanego musi być takie same dla **/Yc** opcja, która tworzy prekompilowany nagłówek i wszystkie kolejne **/Yu** opcję rezygnacji z używaniem prekompilowanego nagłówka.  
-  
- Dla **/Yc**, `filename` określa punkt zatrzymuje które wstępnej kompilacji; kompilator precompiles całego kodu, mimo że `filename` i wynikowy prekompilowanego nagłówka przy użyciu podstawowej nazwy pliku dołączanego i rozszerzenie nazwy z .pch.  
-  
- Pliku .pch muszą zostać utworzone przy użyciu **/Yc**.  
-  
- Kompilator traktuje wszystkie kod występuje przed pliku .h jako wstępnie skompilowana. Pomija się tylko ponad **#include** dyrektywy skojarzone z plikiem .h używa kod zawarty w pliku .pch, a następnie kompiluje cały kod po `filename`.  
-  
- W wierszu polecenia nie może być spacji między **/Yu** i `filename`.  
-  
- Po określeniu **/Yu** bez nazwy pliku, program źródłowy musi zawierać [#pragma hdrstop](../../preprocessor/hdrstop.md) pragma, który określa nazwę pliku nagłówka prekompilowanego pliku .pch. W takim przypadku kompilator użyje prekompilowanego nagłówka (pliku .pch) o nazwie [/Fp (nazwa. Plik pch)](../../build/reference/fp-name-dot-pch-file.md). Kompilator przejdzie do lokalizacji tej pragmy przywraca stan skompilowanych z prekompilowanego pliku nagłówkowego określony przez wartość dyrektywy pragma i następnie kompiluje tylko kodu, która pragma. Jeśli **#pragma hdrstop** nie określa nazwę pliku, kompilator szuka pliku o nazwie pochodzące z podstawowej nazwy pliku źródłowego z rozszerzeniem .pch. Można również użyć **/FP** opcję, aby określić .pch inny plik.  
-  
- Jeśli określisz **/Yu** opcję bez nazwy pliku i nie można określić **hdrstop** pragma, zostanie wygenerowany komunikat o błędzie i kompilacja zakończy się niepowodzeniem.  
-  
- Jeśli **/Yc** `filename` i **/Yu** `filename` opcje są dokonywane na tym samym wierszu polecenia, a oba odwołania dotyczą jednej nazwy pliku **/Yc** `filename` przyjmuje priorytet, do wstępnej kompilacji kodu wszystkich i, w tym wskazanego pliku. Ta funkcja ułatwia zapisywanie pliki reguł programu make.  
-  
- Ponieważ .pch — pliki zawierają informacje o środowisku maszyny, a także informacje dotyczące adresów pamięci o programie, należy używać tylko plik pch na komputerze, w której został utworzony.  
-  
- Aby uzyskać więcej informacji o prekompilowanych nagłówków zobacz:  
-  
--   [/Y (Prekompilowane nagłówki)](../../build/reference/y-precompiled-headers.md)  
-  
--   [Tworzenie prekompilowanych plików nagłówka](../../build/reference/creating-precompiled-header-files.md)  
-  
-### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Aby ustawić tę opcję kompilatora w środowisku programowania Visual Studio  
-  
-1.  Określ [/Yc (Utwórz prekompilowany plik nagłówka)](../../build/reference/yc-create-precompiled-header-file.md) pliku .cpp w projekcie.  
-  
-2.  Otwórz projekt **strony właściwości** okno dialogowe. Aby uzyskać więcej informacji, zobacz [Praca z właściwościami projektu](../../ide/working-with-project-properties.md).  
-  
-3.  Kliknij przycisk **C/C++** folderu.  
-  
-4.  Kliknij przycisk **prekompilowanych nagłówków** strony właściwości.  
-  
-5.  Modyfikowanie **Utwórz/Użyj PCH za pośrednictwem pliku** właściwości lub **Utwórz/Użyj Prekompilowanego nagłówka** właściwości.  
-  
-### <a name="to-set-this-compiler-option-programmatically"></a>Aby programowo ustawić tę opcję kompilatora  
-  
--   Zobacz <xref:Microsoft.VisualStudio.VCProjectEngine.VCCLCompilerTool.PrecompiledHeaderThrough%2A> i <xref:Microsoft.VisualStudio.VCProjectEngine.VCCLCompilerTool.UsePrecompiledHeader%2A>.  
-  
-## <a name="examples"></a>Przykłady  
- Jeśli następujący kod:  
-  
-```  
-#include <afxwin.h>   // Include header for class library  
-#include "resource.h" // Include resource definitions  
-#include "myapp.h"    // Include information specific to this app  
-...  
-```  
-  
- jest skompilowana przy użyciu wiersza polecenia `CL /YuMYAPP.H PROG.CPP`, kompilator nie może przetwarzać trzy zawierają instrukcje, ale kod używa wstępnie skompilowana z MYAPP.pch, co zostanie zapisany czas objętego wstępne przetwarzanie wszystkich trzech plików (i wszystkie pliki, mogą one obejmować).  
-  
- Można użyć [/Fp (nazwa. Plik pch)](../../build/reference/fp-name-dot-pch-file.md) opcję z **/Yu** opcję, aby określić nazwę pliku .pch, jeśli nazwa jest inna niż albo argument nazwy pliku do **/Yc** lub podstawowa nazwa pliku źródłowego, jak w następujące:  
-  
-```  
-CL /YuMYAPP.H /FpMYPCH.pch PROG.CPP  
-```  
-  
- To polecenie Określa plik prekompilowany nagłówek o nazwie MYPCH.pch. Kompilator używa jego zawartość w celu przywrócenia stanu prekompilowany wszystkich plików nagłówka do i MYAPP.h włącznie. Kompilator następnie kompiluje kod, który występuje po MYAPP.h **obejmują** instrukcji.  
-  
-## <a name="see-also"></a>Zobacz też  
- [Opcje kompilatora](../../build/reference/compiler-options.md)   
- [Ustawianie opcji kompilatora](../../build/reference/setting-compiler-options.md)
+
+Instruuje kompilator, aby użyć istniejącego pliku prekompilowanego pliku nagłówkowego (.pch) w bieżącej kompilacji.
+
+## <a name="syntax"></a>Składnia
+
+```
+/Yu[filename]
+```
+
+## <a name="arguments"></a>Argumenty
+
+*Nazwa pliku*<br/>
+Nazwa pliku nagłówkowego, który jest dostępny w pliku źródłowego używająca **#include** dyrektywy preprocesora.
+
+## <a name="remarks"></a>Uwagi
+
+Nazwa dołączanego pliku musi być takie same dla obu **/Yc** opcji, która tworzy prekompilowany plik nagłówkowy i wszystkich kolejnych **/Yu** opcję rezygnacji z używaniem prekompilowanego nagłówka.
+
+Dla **/Yc**, `filename` określa punkt, w które wstępnej kompilacji zatrzymuje; kompilator jednak wstępnie kompiluje kod wszystkich `filename` i wynikowy prekompilowanego pliku nagłówkowego, przy użyciu podstawowej nazwy dołączanego pliku i rozszerzenie nazwy z .pch.
+
+Plik .pch muszą zostać utworzone za pomocą **/Yc**.
+
+Kompilator traktuje cały kod przed plik .h jako wstępnie skompilowane. Pomija można po prostu wykorzystywane **#include** dyrektywy skojarzone z plikiem .h używa kod zawarty w pliku .pch, a następnie kompiluje cały kod po `filename`.
+
+W wierszu polecenia nie może być spacji między **/Yu** i `filename`.
+
+Po określeniu **/Yu** opcji bez nazwy pliku, program źródłowy musi zawierać [#pragma hdrstop](../../preprocessor/hdrstop.md) pragma, który określa nazwę pliku prekompilowanego pliku nagłówkowego pliku .pch. W tym przypadku kompilator będzie używał prekompilowanego pliku nagłówkowego (pliku .pch) o nazwie określonej przez  [ /FP (nazwa. Plik pch)](../../build/reference/fp-name-dot-pch-file.md). Kompilator pomija do lokalizacji pragmy tego przywraca stan kompilacji z prekompilowanego pliku nagłówkowego określone przez dyrektywę i następnie kompiluje kod, który następuje po pragmie. Jeśli **#pragma hdrstop** nie określa nazwę pliku, kompilator szuka pliku o nazwie pochodzące z podstawowej nazwy pliku źródłowego z rozszerzeniem .pch. Można również użyć **/FP** opcję, aby określić plik .pch różne.
+
+Jeśli określisz **/Yu** opcji bez nazwy pliku i nie można określić **hdrstop** pragma, generowany jest komunikat o błędzie i kompilacja zakończy się niepowodzeniem.
+
+Jeśli **/Yc** `filename` i **/Yu** `filename` opcji wystąpiły na tym samym wierszu polecenia i zarówno odwoływać się do tej samej nazwie pliku, **/Yc** `filename` przyjmuje pierwszeństwo, do wstępnej kompilacji całego kodu, w tym wskazanego pliku. Ta funkcja ułatwia zapisywanie plików reguł programu make.
+
+Ponieważ .pch — pliki zawierają informacje o środowisku komputera, a także informacji na temat programu, informacje o adresie pamięci, należy używać tylko plik pch na komputerze, w której został utworzony.
+
+Aby uzyskać więcej informacji na temat wstępnie skompilowanych nagłówków zobacz:
+
+- [/Y (Prekompilowane nagłówki)](../../build/reference/y-precompiled-headers.md)
+
+- [Tworzenie prekompilowanych plików nagłówka](../../build/reference/creating-precompiled-header-files.md)
+
+### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Aby ustawić tę opcję kompilatora w środowisku programowania Visual Studio
+
+1. Określ [/Yc (Utwórz prekompilowany plik nagłówkowy)](../../build/reference/yc-create-precompiled-header-file.md) pliku .cpp w projekcie.
+
+1. Otwórz projekt **stron właściwości** okno dialogowe. Aby uzyskać więcej informacji, zobacz [Praca z właściwościami projektu](../../ide/working-with-project-properties.md).
+
+1. Kliknij przycisk **C/C++** folderu.
+
+1. Kliknij przycisk **prekompilowanych nagłówków** stronę właściwości.
+
+1. Modyfikowanie **Utwórz/Użyj PCH za pośrednictwem pliku** właściwości lub **Utwórz/użycie Prekompilowanego nagłówka** właściwości.
+
+### <a name="to-set-this-compiler-option-programmatically"></a>Aby programowo ustawić tę opcję kompilatora
+
+- Zobacz <xref:Microsoft.VisualStudio.VCProjectEngine.VCCLCompilerTool.PrecompiledHeaderThrough%2A> i <xref:Microsoft.VisualStudio.VCProjectEngine.VCCLCompilerTool.UsePrecompiledHeader%2A>.
+
+## <a name="examples"></a>Przykłady
+
+Jeśli następujący kod:
+
+```
+#include <afxwin.h>   // Include header for class library
+#include "resource.h" // Include resource definitions
+#include "myapp.h"    // Include information specific to this app
+...
+```
+
+jest skompilowany przy użyciu wiersza polecenia `CL /YuMYAPP.H PROG.CPP`, kompilator nie może przetwarzać trzy obejmują instrukcji, ale używa wstępnie skompilowany kod z MYAPP.pch, a tym samym zapisywanie czasu zaangażowanych w przetwarzaniu wstępnym wszystkie trzy pliki (i wszystkie pliki, mogą one obejmować).
+
+Możesz użyć  [ /FP (nazwa. Plik pch)](../../build/reference/fp-name-dot-pch-file.md) z opcją **/Yu** opcję, aby określić nazwę pliku .pch, jeśli nazwa jest inna niż albo argument nazwy pliku do **/Yc** lub podstawowej nazwy pliku źródłowego, jak następujące:
+
+```
+CL /YuMYAPP.H /FpMYPCH.pch PROG.CPP
+```
+
+To polecenie Określa prekompilowany plik nagłówka o nazwie MYPCH.pch. Kompilator używa jego zawartość w celu przywrócenia stanu wstępnie skompilowane, wszystkie pliki nagłówkowe do i łącznie MYAPP.h. Kompilator następnie kompiluje kod, który następuje po MYAPP.h **obejmują** instrukcji.
+
+## <a name="see-also"></a>Zobacz też
+
+[Opcje kompilatora](../../build/reference/compiler-options.md)<br/>
+[Ustawianie opcji kompilatora](../../build/reference/setting-compiler-options.md)

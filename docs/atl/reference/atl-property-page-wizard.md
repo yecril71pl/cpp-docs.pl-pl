@@ -17,12 +17,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 94bca969b150718450da166501abaea9c89b75d7
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 671cb2fa19d920b0e60acd8d34623a05fe4a048e
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43760386"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45703798"
 ---
 # <a name="atl-property-page-wizard"></a>Kreator strony właściwości ATL
 
@@ -56,17 +56,20 @@ Zawiera informacje dla klasy języka C++ utworzona w celu wdrożenia obiektu.
 
 Zawiera informacje dotyczące funkcji COM dla obiektu.
 
-**Klasa coclass**  
-Ustawia nazwę klasy składnika, który zawiera listę interfejsów, obsługiwane przez obiekt.
+- **Klasa coclass**
 
-> [!NOTE]
->  Jeśli tworzysz projekt za pomocą atrybutów lub jeśli na tej stronie kreatora wskazujesz, że na stronie właściwości używa atrybutów, nie można zmienić tej opcji, ponieważ nie ma ATL `coclass` atrybutu.
+   Ustawia nazwę klasy składnika, który zawiera listę interfejsów, obsługiwane przez obiekt.
 
-**Typ**  
-Określa opis obiektu, który będzie wyświetlany w rejestrze
+   > [!NOTE]
+   > Jeśli tworzysz projekt za pomocą atrybutów lub jeśli na tej stronie kreatora wskazujesz, że na stronie właściwości używa atrybutów, nie można zmienić tej opcji, ponieważ nie ma ATL `coclass` atrybutu.
 
-**Identyfikator programu**  
-Ustawia nazwę, która kontenerów można użyć zamiast identyfikatora CLSID obiektu.
+- **Typ**
+
+   Określa opis obiektu, który będzie wyświetlany w rejestrze
+
+- **Identyfikator programu**
+
+   Ustawia nazwę, która kontenerów można użyć zamiast identyfikatora CLSID obiektu.
 
 ## <a name="see-also"></a>Zobacz też
 

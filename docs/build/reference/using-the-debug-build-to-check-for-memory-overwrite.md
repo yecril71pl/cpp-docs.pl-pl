@@ -14,39 +14,41 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4c89242a63484eaccd0330eddac28c4e543ec61b
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 96afeb6be9aac754c952824716322c55d4819d6e
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32376696"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45706358"
 ---
 # <a name="using-the-debug-build-to-check-for-memory-overwrite"></a>Korzystanie z kompilacji debugowania do sprawdzania nadpisywania pamięci
-Aby korzystać z kompilacji debugowania do sprawdzania nadpisywania pamięci, należy najpierw ponownie skompiluj projekt do debugowania. Następnie przejdź do początku części aplikacji `InitInstance` funkcji i Dodaj następujący wiersz:  
-  
-```  
-afxMemDF |= checkAlwaysMemDF;  
-```  
-  
- Debugowanie alokatora umieszcza bajtów guard wokół wszystkich alokacji pamięci. Jednak te zabezpieczenia bajtów nie wykonuj żadnych dobrej, należy sprawdzić, czy zostały zmienione (co oznaczałoby Zastąp pamięci). W przeciwnym razie po prostu zapewnia buforu, który może być w rzeczywistości pozwalają na pobranie nieobecności z Zastąp pamięci.  
-  
- Przez włączenie `checkAlwaysMemDF`, zostanie wymuszone MFC do wywoływania `AfxCheckMemory` funkcji zawsze wywołanie **nowe** lub **usunąć** staje się. Jeśli został wykryty zastępowania pamięci, wygeneruje komunikat śledzenia, która wygląda podobnie do następującego:  
-  
-```  
-Damage Occurred! Block=0x5533  
-```  
-  
- Jeśli zostanie wyświetlony jeden z tych wiadomości, należy do wykonania kroków opisanych swój kod, aby określić, w którym wystąpiło uszkodzenie. Aby wyizolować dokładniej, gdzie Zastąp pamięci wystąpił, należy wybrać jawnego wywołania `AfxCheckMemory` samodzielnie. Na przykład:  
-  
-```  
-ASSERT(AfxCheckMemory());  
-    DoABunchOfStuff();  
-    ASSERT(AfxCheckMemory());  
-```  
-  
- Jeśli pierwszy ASSERT zakończy się pomyślnie, a drugi ulegnie awarii, oznacza to, że Zastąp pamięci musi wystąpiły w funkcji między dwoma wywołania.  
-  
- W zależności od charakteru aplikacji może się okazać, że `afxMemDF` powoduje, że program do uruchomienia zbyt wolno, aby przetestować nawet. `afxMemDF` Powoduje, że zmienna `AfxCheckMemory` można wywołać dla każdego wywołania do nowych i usuwania. W takim przypadku należy punktowy wywołania do `AfxCheckMemory`(), jak pokazano powyżej i spróbuj do izolowania pamięć zastąpić w ten sposób.  
-  
-## <a name="see-also"></a>Zobacz też  
- [Naprawianie problemów kompilacji wydania](../../build/reference/fixing-release-build-problems.md)
+
+Aby użyć kompilacji debugowania do sprawdzania nadpisywania pamięci, należy przebudować projekt do debugowania. Następnie przejdź do początku aplikacji `InitInstance` działać, a następnie dodaj następujący wiersz:
+
+```
+afxMemDF |= checkAlwaysMemDF;
+```
+
+Debugowanie alokatora pamięci umieszcza wokół wszystkie alokacje pamięci w bajtach guard. Jednak te je przed nieprzewidzianymi bajtów nie wykonuj żadnych dobrze, należy sprawdzić, czy zostały zmienione (co oznaczałoby Zastąp pamięci). W przeciwnym razie po prostu zapewnia buforu, który może w rzeczywistości umożliwiają uzyskanie natychmiast za pomocą zastąpienia pamięci.
+
+Dzięki włączeniu `checkAlwaysMemDF`, wymusi MFC, aby wywołać `AfxCheckMemory` funkcji każdym razem, gdy wywołanie **nowe** lub **Usuń** składa się. Zastąp pamięci zostało wykryte, wygeneruje komunikat śledzenia, który wygląda podobnie do następującego:
+
+```
+Damage Occurred! Block=0x5533
+```
+
+Jeśli zostanie wyświetlony jeden z następujących komunikatów, należy przejrzeć swój kod definiujący, w którym wystąpiło uszkodzenie. Aby wyizolować, bardziej precyzyjne, gdzie chcesz go zastąpić pamięci wystąpiło, może wykonać jawnych wywołań `AfxCheckMemory` samodzielnie. Na przykład:
+
+```
+ASSERT(AfxCheckMemory());
+    DoABunchOfStuff();
+    ASSERT(AfxCheckMemory());
+```
+
+Jeśli pierwszy ASSERT zakończy się pomyślnie, i drugi kończy się niepowodzeniem, oznacza to, czy chcesz go zastąpić pamięci muszą miały miejsce w funkcji między dwoma połączeniami.
+
+W zależności od charakteru aplikacji może się okazać, że `afxMemDF` powoduje uruchamianie zbyt wolno, aby przetestować nawet przez program. `afxMemDF` Powoduje, że zmienna `AfxCheckMemory` można wywołać za każde wywołanie do nowego i usuwania. W takim przypadku należy punktowy wywołania względem `AfxCheckMemory`(), jak pokazano powyżej, a następnie spróbuj izolowania pamięć zastąpić w ten sposób.
+
+## <a name="see-also"></a>Zobacz też
+
+[Naprawianie problemów kompilacji wydania](../../build/reference/fixing-release-build-problems.md)

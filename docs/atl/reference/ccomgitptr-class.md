@@ -24,12 +24,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5782cf051fe680cb99dcd99c8e9c2d050c4184cc
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 7bfa501834102e37c14de11ee1af84a21e82c35f
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43758134"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45703849"
 ---
 # <a name="ccomgitptr-class"></a>Klasa CComGITPtr
 
@@ -130,17 +130,17 @@ CComGITPtr(CComGITPtr&& rv);
 
 ### <a name="parameters"></a>Parametry
 
-[in] *p*  
-Wskaźnik interfejsu do przechowywania w tabeli interfejsu globalnego (GIT).
+*p*<br/>
+[in] Wskaźnik interfejsu do przechowywania w tabeli interfejsu globalnego (GIT).
 
-[in] *git*  
-Odwołanie do istniejącego `CComGITPtr` obiektu.
+*usługi git*<br/>
+[in] Odwołanie do istniejącego `CComGITPtr` obiektu.
 
-[in] *dwCookie*  
-Plik cookie używany do identyfikowania wskaźnika interfejsu.
+*dwCookie*<br/>
+[in] Plik cookie używany do identyfikowania wskaźnika interfejsu.
 
-[in] *rv*  
-Źródło `CComGITPtr` przeniesienia danych z obiektu.
+*Rv*<br/>
+[in] Źródło `CComGITPtr` przeniesienia danych z obiektu.
 
 ### <a name="remarks"></a>Uwagi
 
@@ -238,17 +238,17 @@ CComGITPtr& operator= (CComGITPtr&& rv);
 
 ### <a name="parameters"></a>Parametry
 
-[in] *p*  
-Wskaźnik do interfejsu.
+*p*<br/>
+[in] Wskaźnik do interfejsu.
 
-[in] *git*  
-Odwołanie do `CComGITPtr` obiektu.
+*usługi git*<br/>
+[in] Odwołanie do `CComGITPtr` obiektu.
 
-[in] *dwCookie*  
-Plik cookie używany do identyfikowania wskaźnika interfejsu.
+*dwCookie*<br/>
+[in] Plik cookie używany do identyfikowania wskaźnika interfejsu.
 
-[in] *rv*  
-`CComGITPtr` Do przenoszenia danych z.
+*Rv*<br/>
+[in] `CComGITPtr` Do przenoszenia danych z.
 
 ### <a name="return-value"></a>Wartość zwracana
 

@@ -26,17 +26,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a2dc016dbd2b17552d50dfdedd1208dcd3e6af22
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 9a1a60bde6b522cbd42ac458e79e153450e09030
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33333199"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45705700"
 ---
 # <a name="readfsbyte-readfsdword-readfsqword-readfsword"></a>__readfsbyte, __readfsdword, __readfsqword, __readfsword
 **Microsoft Specific**  
   
- Odczytać pamięci z lokalizacji określonej przez przesunięcie względem początku FS segmentu.  
+ Odczyt pamięci z lokalizacji określonej przez przesunięcie względem początku segmentu FS.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -56,27 +56,27 @@ unsigned __int64 __readfsqword(
 ```  
   
 #### <a name="parameters"></a>Parametry  
- [in] `Offset`  
- Przesunięcie od początku `FS` do odczytu.  
+*Przesunięcie*<br/>
+[in] Przesunięcie od początku `FS` do odczytu.  
   
 ## <a name="return-value"></a>Wartość zwracana  
- Zawartość pamięci bajt, word, bitowego lub quadword (wskazywanego przez nazwę funkcji o nazwie) w lokalizacji `FS:[Offset]`.  
+ Zawartość pamięci bajt, wyraz, bitowego lub quadword (co zostało wskazane przez nazwę funkcji o nazwie) w lokalizacji `FS:[Offset]`.  
   
 ## <a name="requirements"></a>Wymagania  
   
-|— Wewnętrzne|Architektura|  
+|Wewnętrzne|Architektura|  
 |---------------|------------------|  
 |`__readfsbyte`|x86|  
 |`__readfsdword`|x86|  
 |`__readfsqword`|x86|  
 |`__readfsword`|x86|  
   
- **Plik nagłówka** \<intrin.h >  
+ **Plik nagłówkowy** \<intrin.h >  
   
 ## <a name="remarks"></a>Uwagi  
  Te procedury są dostępne tylko jako funkcje wewnętrzne.  
   
-**KOŃCOWY określonych firmy Microsoft**  
+**END specyficzny dla Microsoft**  
   
 ## <a name="see-also"></a>Zobacz też  
  [__writefsbyte, \__writefsdword, \__writefsqword, \__writefsword](../intrinsics/writefsbyte-writefsdword-writefsqword-writefsword.md)   

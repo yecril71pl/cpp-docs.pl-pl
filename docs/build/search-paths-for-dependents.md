@@ -15,24 +15,27 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 577fc7e44bfff35cf7efdcff20dc4cdca1c7001e
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: d1fd407f99abb98fb949b6d5bcc45b10c6ff9121
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32380488"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45706312"
 ---
 # <a name="search-paths-for-dependents"></a>Przeszukuj ścieżki pod kątem zależności
-Każdy zależne od ma ścieżkę wyszukiwania opcjonalne określone w następujący sposób:  
-  
-## <a name="syntax"></a>Składnia  
-  
-```  
-{directory[;directory...]}dependent  
-```  
-  
-## <a name="remarks"></a>Uwagi  
- NMAKE szuka zależnego najpierw w bieżącym katalogu, a następnie w katalogach w określonej kolejności. Makra można określić część lub całość ścieżki wyszukiwania. Umieść w nawiasach klamrowych ({}); nazwy katalogów wiele katalogów należy oddzielić średnikiem (;). Bez spacji i karty są dozwolone.  
-  
-## <a name="see-also"></a>Zobacz też  
- [Zależności](../build/dependents.md)
+
+Każdy zależnych od ustawień lokalnych ma ścieżkę wyszukiwania opcjonalne, określone w następujący sposób:
+
+## <a name="syntax"></a>Składnia
+
+```
+{directory[;directory...]}dependent
+```
+
+## <a name="remarks"></a>Uwagi
+
+NMAKE szuka zależnych od ustawień lokalnych pierwszy w bieżącym katalogu, a następnie w katalogach w określonej kolejności. Makra można określić część lub całość ścieżki wyszukiwania. Katalog nazw należy ujmować w nawiasy klamrowe ({}); Oddziel wiele katalogów przy użyciu średnika (;). Nie spacje lub tabulatory są dozwolone.
+
+## <a name="see-also"></a>Zobacz też
+
+[Zależności](../build/dependents.md)

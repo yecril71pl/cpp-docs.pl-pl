@@ -30,12 +30,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: dfeb1453cffac6cfe338f42da8b8efe60e18c9f8
-ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
+ms.openlocfilehash: fa2aa8fb79a0590c437699bcf887f2a7e1c1bb21
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "42464656"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45705019"
 ---
 # <a name="interlockedexchangepointer-intrinsic-functions"></a>Funkcje wewnętrzne _interlockedexchangepointer
 **Microsoft Specific**  
@@ -72,11 +72,11 @@ void * _InterlockedExchangePointer_HLERelease(
 ```  
   
 #### <a name="parameters"></a>Parametry  
- [out w] `Target`  
- Wskaźnik do wskaźnika do wartości do programu exchange. Funkcja ustawia wartość `Value` i zwraca jego poprzednią wartość.  
+*Docelowy*<br/>
+[out w] Wskaźnik do wskaźnika do wartości do programu exchange. Funkcja ustawia wartość `Value` i zwraca jego poprzednią wartość.  
   
- [in] `Value`  
- Wartość wymienianych z wartością wskazywany przez `Target`.  
+*Wartość*<br/>
+[in] Wartość wymienianych z wartością wskazywany przez `Target`.  
   
 ## <a name="return-value"></a>Wartość zwracana  
  Funkcja zwraca wartość początkową wskazywany przez `Target`.  

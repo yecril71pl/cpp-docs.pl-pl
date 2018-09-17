@@ -29,15 +29,15 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0e8253db3ce5a1ec60001bb32b241bfebe000502
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 664de5ad25fcce2bf744fb9365542d63f3d91e51
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32389410"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45699903"
 ---
 # <a name="excepthandler3"></a>_except_handler3
-Funkcji CRT wewnętrznej. Użyć przez platformę w celu znalezienia odpowiednich wyjątków program obsługi przetwarzał bieżącego wyjątku.  
+Wewnętrzny funkcji CRT. Używane przez platformę, można znaleźć odpowiedni wyjątek program obsługi przetwarzał bieżący wyjątek.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -50,24 +50,25 @@ int _except_handler3(
 );  
 ```  
   
-#### <a name="parameters"></a>Parametry  
- [in] `exception_record`  
- Informacje dotyczące określonego wyjątku.  
+#### <a name="parameters"></a>Parametry
+
+*exception_record*<br/>
+[in] Informacje na temat określonego wyjątku.  
   
- [in] `registration`  
- Rekord, który wskazuje tabelę, z której zakres powinien być używany do znalezienia obsługi wyjątków.  
+*Rejestracja*<br/>
+[in] Rekord, który wskazuje zakres tabeli, która powinna być używana, można znaleźć programu obsługi wyjątków.  
   
- [in] `context`  
- Zastrzeżone.  
+*Kontekst*<br/>
+[in] Zastrzeżone.  
   
- [in] `dispatcher`  
- Zastrzeżone.  
+*Dyspozytor*<br/>
+[in] Zastrzeżone.  
   
 ## <a name="return-value"></a>Wartość zwracana  
- Jeśli wyjątek powinien być ukryty, zwraca `DISPOSITION_DISMISS`. Jeśli wyjątek powinien zostać przekazany wyższy poziom do hermetyzowany programy obsługi wyjątków, zwraca `DISPOSITION_CONTINUE_SEARCH`.  
+ Jeśli wyjątek powinien zostać odwołany, zwraca `DISPOSITION_DISMISS`. Jeśli wyjątek powinien zostać przekazany w górę o jeden poziom, do hermetyzowany obsługi wyjątków, zwraca `DISPOSITION_CONTINUE_SEARCH`.  
   
 ## <a name="remarks"></a>Uwagi  
- Jeśli ta metoda umożliwia znalezienie obsługi wyjątków odpowiednie, przekazuje wyjątek do programu obsługi. W takim przypadku ta metoda nie powróci do kodu, który wywołał go i wartości zwracanej nie ma znaczenia.  
+ Jeśli ta metoda umożliwia znalezienie obsługi wyjątków odpowiednie, przekazuje wyjątek do programu obsługi. W takiej sytuacji ta metoda nie zwraca do kodu, który ją wywołuje, i wartość zwracana jest bez znaczenia.  
   
 ## <a name="see-also"></a>Zobacz też  
  [Alfabetyczne zestawienie funkcji](../c-runtime-library/reference/crt-alphabetical-function-reference.md)

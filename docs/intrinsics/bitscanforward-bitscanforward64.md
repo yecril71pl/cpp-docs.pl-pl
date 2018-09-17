@@ -21,12 +21,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4720ca4a65a543ca09412ac0c1eb1e65bf6cdd23
-ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
+ms.openlocfilehash: e563e7240c1797bf863ee0762f923e91a6f05bb0
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "42464460"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45699895"
 ---
 # <a name="bitscanforward-bitscanforward64"></a>_BitScanForward, _BitScanForward64
 **Microsoft Specific**  
@@ -47,11 +47,11 @@ unsigned char _BitScanForward64(
 ```  
   
 #### <a name="parameters"></a>Parametry  
- [out] `Index`  
- Pozycja bitu pierwszego ustawionego bitu [1], znaleziono załadowana.  
+*Index*<br/>
+[out] Pozycja bitu pierwszego ustawionego bitu [1], znaleziono załadowana.  
   
- [in] `Mask`  
- 32-bitowy lub 64-bitową wartość do wyszukania.  
+*Maska*<br/>
+[in] 32-bitowy lub 64-bitową wartość do wyszukania.  
   
 ## <a name="return-value"></a>Wartość zwracana  
  0, jeśli maska jest równa zeru; wartość różną od zera w przeciwnym razie.  

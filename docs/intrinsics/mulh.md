@@ -16,12 +16,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6bf4cc0ce245b6b80165ced5a9649586f9214639
-ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
+ms.openlocfilehash: 853666f6dee7bae68b03ccc1d9d9c23ce765925b
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "42466355"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45699964"
 ---
 # <a name="mulh"></a>__mulh
 **Microsoft Specific**  
@@ -38,11 +38,11 @@ __int64 __mulh(
 ```  
   
 #### <a name="parameters"></a>Parametry  
- [in] `a`  
- Pierwszy numer do pomnożenia.  
+*a*<br/>
+[in] Pierwszy numer do pomnożenia.  
   
- [in] `b`  
- Druga liczba do pomnożenia.  
+*b*<br/>
+[in] Druga liczba do pomnożenia.  
   
 ## <a name="return-value"></a>Wartość zwracana  
  Wysoka 64 bity 128-bitowego wynik mnożenia.  

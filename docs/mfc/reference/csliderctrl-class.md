@@ -84,12 +84,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6bd20852f1dfd278d4ae58cc6c67d6047579cd08
-ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
+ms.openlocfilehash: 9e06ff5301af07ff123954060053296839118d11
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43693195"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45703966"
 ---
 # <a name="csliderctrl-class"></a>Klasa CSliderCtrl
 Oferuje funkcje formantu typowego suwaka Windows.  
@@ -633,7 +633,7 @@ void SetThumbLength(int nLength);
   
 |Parametr|Opis|  
 |---------------|-----------------|  
-|[in] *nLength*|Długość suwaka, w pikselach.|  
+|*nLength*|[in] Długość suwaka, w pikselach.|  
   
 ### <a name="remarks"></a>Uwagi  
  Ta metoda wymaga, że trackbar, kontrolka być równa [TBS_FIXEDLENGTH](/windows/desktop/Controls/trackbar-control-styles) stylu.  

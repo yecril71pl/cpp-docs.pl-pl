@@ -20,44 +20,46 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 274c4a3742d99b1e4702ed332206b78dacebccbd
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 1c9d93ef38ba444fd716bd3363a6605eae66dfec
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32373671"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45699678"
 ---
 # <a name="pdbpath"></a>/PDBPATH
-```  
-/PDBPATH[:VERBOSE] filename  
-```  
-  
-## <a name="remarks"></a>Uwagi  
- gdzie:  
-  
- *Nazwa pliku*  
- Nazwa pliku .dll lub .exe, dla której chcesz znaleźć odpowiedniego pliku PDB.  
-  
- PEŁNE (opcjonalnie)  
- Raportuje wszystkie katalogi, gdy nastąpiła próba można znaleźć pliku PDB.  
-  
-## <a name="remarks"></a>Uwagi  
- / PDBPATH umożliwia wyszukiwanie komputera wzdłuż tej samej ścieżki, które debuger będzie wyszukiwać plik PDB i zgłasza odpowiadające, jeśli taki występuje, .pdb, pliki określonego w pliku *filename*.  
-  
- Korzystając z debuger programu Visual Studio, może wystąpić problem z faktu, że debuger jest używany plik PDB dla innej wersji pliku, który debugowania.  
-  
- / PDBPATH wyszuka .pdb, pliki wzdłuż następujących ścieżkach:  
-  
--   Sprawdź lokalizację, w której znajduje się plik wykonywalny.  
-  
--   Sprawdź lokalizację pliku PDB zapisana w pliku wykonywalnego. Jest to zwykle lokalizacji w momencie obraz był połączony.  
-  
--   Sprawdź na ścieżce wyszukiwania skonfigurowane w programie Visual Studio IDE.  
-  
--   Sprawdź wzdłuż ścieżki _NT_SYMBOL_PATH i _NT_ALT_SYMBOL_PATH zmiennych środowiskowych.  
-  
--   Sprawdź w katalogu systemu Windows.  
-  
-## <a name="see-also"></a>Zobacz też  
- [Opcje DUMPBIN](../../build/reference/dumpbin-options.md)   
- [/PDBALTPATH (Użyj alternatywnej ścieżki PDB)](../../build/reference/pdbaltpath-use-alternate-pdb-path.md)
+
+```
+/PDBPATH[:VERBOSE] filename
+```
+
+### <a name="parameters"></a>Parametry
+
+*Nazwa pliku*<br/>
+Nazwa pliku .dll lub .exe, dla którego chcesz znaleźć odpowiedniego pliku PDB.
+
+**: PEŁNE**<br/>
+(Opcjonalnie) Raportuje wszystkie katalogi, w którym nastąpiła próba można odnaleźć pliku .pdb.
+
+## <a name="remarks"></a>Uwagi
+
+/ PDBPATH wyszuka komputera wzdłuż tej samej ścieżki które debuger będzie szukać pliku .pdb i będzie zgłaszać które, jeśli pliki .pdb odnoszą się do pliku określonego w *filename*.
+
+W przypadku używania debugera programu Visual Studio, może wystąpić problem z faktu, że debuger jest używany plik .pdb dla innej wersji pliku, który debugujesz.
+
+/ PDBPATH wyszuka pliki .pdb wzdłuż następującej ścieżki:
+
+- Sprawdź lokalizację, w której znajduje się plik wykonywalny.
+
+- Sprawdź lokalizację pliku PDB zapisana w pliku wykonywalnego. Jest to zazwyczaj lokalizacji w momencie, których obraz został połączony.
+
+- Sprawdź skonfigurowane w środowisku IDE programu Visual Studio na ścieżce wyszukiwania.
+
+- Sprawdź wzdłuż ścieżek _NT_SYMBOL_PATH i _NT_ALT_SYMBOL_PATH zmiennych środowiskowych.
+
+- Sprawdź w katalogu Windows.
+
+## <a name="see-also"></a>Zobacz też
+
+[Opcje DUMPBIN](../../build/reference/dumpbin-options.md)<br/>
+[/PDBALTPATH (Użyj alternatywnej ścieżki PDB)](../../build/reference/pdbaltpath-use-alternate-pdb-path.md)

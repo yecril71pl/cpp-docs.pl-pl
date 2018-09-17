@@ -1,5 +1,5 @@
 ---
-title: Zerowe i niezdefiniowane makra | Dokumentacja firmy Microsoft
+title: Makra zerowe i niezdefiniowane | Dokumentacja firmy Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,15 +18,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 494a084ee5ba1da29c132aa632b647b37f305855
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: eee6e713715e4709af990878224261a41f5470e3
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32368473"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45702640"
 ---
 # <a name="null-and-undefined-macros"></a>Makra niezdefiniowane oraz makra o wartości zerowej
-Zarówno zerowe i niezdefiniowane makra Rozwiń do ciągów o wartości null, ale makra zdefiniowane jako ciąg pusty jest uznawany za zdefiniowane w przetwarzaniu wstępnym wyrażenia. Aby zdefiniować makro jako ciąg pusty, określ żadne znaki z wyjątkiem spacji ani karty po znaku równości (=) w wierszu polecenia lub pliku polecenia, a ciąg null lub definicji ująć w podwójny cudzysłów (""). Aby nie zdefiniowany makra, należy użyć **! UNDEF.** Aby uzyskać więcej informacji, zobacz [dyrektywy przetwarzania wstępnego pliku reguł programu make](../build/makefile-preprocessing-directives.md).  
-  
-## <a name="see-also"></a>Zobacz też  
- [Definiowanie makro NMAKE](../build/defining-an-nmake-macro.md)
+
+Zarówno zerowe i niezdefiniowane makra rozbudowywać ciągów o wartości null, ale makro zdefiniowany jako pusty ciąg jest uważany za zdefiniowany w przetwarzaniu wstępnym wyrażeń. Aby zdefiniować makro jako ciąg pusty, należy określić żadnych znaków, z wyjątkiem znaków tabulacji lub spacji po znaku równości (=), w wierszu polecenia lub pliku poleceń i ująć w znaki cudzysłowu pusty ciąg lub definicji (""). Aby Usuń definicję makra, należy użyć **! UNDEF.** Aby uzyskać więcej informacji, zobacz [dyrektywy przetwarzania wstępnego pliku reguł programu make](../build/makefile-preprocessing-directives.md).
+
+## <a name="see-also"></a>Zobacz też
+
+[Definiowanie makro NMAKE](../build/defining-an-nmake-macro.md)

@@ -1,5 +1,5 @@
 ---
-title: 'Porady: Ustawianie LIB. Opcje EXE w środowisku programowania Visual Studio | Dokumentacja firmy Microsoft'
+title: 'Porady: Ustawianie LIB. Opcje pliku EXE w środowisku programowania Visual Studio | Dokumentacja firmy Microsoft'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -14,23 +14,25 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 38b04fb40c62efdf5a8dd0ae3e3d8b6b4529b017
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: d8319ac7a40af4b43248c402306040c15f04a225
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32372363"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45707222"
 ---
 # <a name="how-to-set-libexe-options-in-the-visual-studio-development-environment"></a>Porady: ustawianie opcji LIB.EXE w środowisku programowania Visual Studio
-### <a name="to-set-libexe-options-in-the-visual-studio-development-environment"></a>Aby ustawić LIB. Opcje EXE w środowisku projektowym Visual Studio  
-  
-1.  Dostęp do projektu [strony właściwości](../../ide/working-with-project-properties.md) okno dialogowe.  
-  
-2.  Z aktywnego projektu biblioteki statycznej, wybierz **Bibliotekarza** węzła.  
-  
-3.  Wybierz stronę właściwości ogólne albo wejścia/wyjścia.  
-  
-4.  Modyfikuj właściwości zgodnie z potrzebami.  
-  
-## <a name="see-also"></a>Zobacz też  
- [LIB — dokumentacja](../../build/reference/lib-reference.md)
+
+### <a name="to-set-libexe-options-in-the-visual-studio-development-environment"></a>Aby ustawić LIB. Opcje pliku EXE w środowisku programowania Visual Studio
+
+1. Dostęp do projektu [strona właściwości](../../ide/working-with-project-properties.md) okno dialogowe.
+
+1. Wybierz aktywny projekt biblioteki statycznej **Bibliotekarza** węzła.
+
+1. Wybierz stronę właściwości ogólne lub wejścia/wyjścia.
+
+1. Zmodyfikuj właściwości zgodnie z potrzebami.
+
+## <a name="see-also"></a>Zobacz też
+
+[LIB — dokumentacja](../../build/reference/lib-reference.md)

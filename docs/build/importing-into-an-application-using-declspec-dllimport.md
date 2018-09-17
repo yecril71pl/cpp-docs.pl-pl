@@ -18,49 +18,51 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 82974ec688fbe688c98188c2e99a54462da81165
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 08a406c8884cdcb9d4b2ead2e61d416ac580fd73
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32368838"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45704089"
 ---
 # <a name="importing-into-an-application-using-declspecdllimport"></a>Importowanie do aplikacji przy użyciu atrybutu __declspec(dllimport)
-Program, który używa publicznego symboli zdefiniowanych przez bibliotekę DLL jest nazywany ich importowania. Po utworzeniu pliki nagłówkowe dla aplikacji, które korzystają z bibliotek DLL do skompilowania z użyciem, użyj **__declspec(dllimport)** w deklaracjach symbole publiczne. Słowo kluczowe **__declspec(dllimport)** działa, czy możesz wyeksportować z .def — pliki lub **__declspec(dllexport)** — słowo kluczowe.  
-  
- Aby zwiększyć czytelność kodu, zdefiniuj makro **__declspec(dllimport)** , a następnie użyć do zadeklarowania każdego zaimportowanego symbol makra:  
-  
-```  
-#define DllImport   __declspec( dllimport )  
-  
-DllImport int  j;  
-DllImport void func();  
-```  
-  
- Przy użyciu **__declspec(dllimport)** jest opcjonalna w deklaracjach funkcji, ale kompilator tworzy kodu bardziej wydajne użycie słowa kluczowego. Jednak należy użyć **__declspec(dllimport)** importowania pliku wykonywalnego, dostęp do danych publicznych symbole DLL i obiektów. Należy zauważyć, że użytkownicy biblioteki DLL nadal do połączenia z biblioteką importu.  
-  
- Można użyć tego samego pliku nagłówka dla biblioteki DLL i aplikacji klienckiej. Aby to zrobić, Użyj specjalnych symbol preprocesora, która wskazuje, czy tworzenie biblioteki DLL lub tworzenie aplikacji klienckich. Na przykład:  
-  
-```  
-#ifdef _EXPORTING  
-   #define CLASS_DECLSPEC    __declspec(dllexport)  
-#else  
-   #define CLASS_DECLSPEC    __declspec(dllimport)  
-#endif  
-  
-class CLASS_DECLSPEC CExampleA : public CObject  
-{ ... class definition ... };  
-```  
-  
-## <a name="what-do-you-want-to-do"></a>Co chcesz zrobić?  
-  
--   [Inicjowanie biblioteki DLL](../build/run-time-library-behavior.md#initializing-a-dll)  
-  
-## <a name="what-do-you-want-to-know-more-about"></a>Co chcesz dowiedzieć się więcej o?  
-  
--   [Importowanie i eksportowanie funkcji śródwierszowych](../build/importing-and-exporting-inline-functions.md)  
-  
--   [Importy wzajemne](../build/mutual-imports.md)  
-  
-## <a name="see-also"></a>Zobacz też  
- [Importowanie do aplikacji](../build/importing-into-an-application.md)
+
+Program, który używa symboli publicznych, zdefiniowane przez bibliotekę DLL jest nazywany je zaimportować. Po utworzeniu pliki nagłówkowe dla aplikacji korzystających z biblioteki dll do kompilacji, użyj **__declspec(dllimport)** w deklaracjach symboli publicznych. Słowo kluczowe **__declspec(dllimport)** działa, czy w przypadku eksportowania za pomocą plików .def lub za pomocą **__declspec(dllexport)** — słowo kluczowe.
+
+Aby zwiększyć czytelność kodu, zdefiniuj makro dla **__declspec(dllimport)** , a następnie użyj makra do deklarowania każdy symbol zaimportowane:
+
+```
+#define DllImport   __declspec( dllimport )
+
+DllImport int  j;
+DllImport void func();
+```
+
+Za pomocą **__declspec(dllimport)** jest opcjonalna w deklaracjach funkcji, ale kompilator generuje kod, bardziej wydajne, jeśli używasz tego słowa kluczowego. Jednakże, należy użyć **__declspec(dllimport)** importowania pliku wykonywalnego, dostęp do biblioteki DLL symbole publiczne dane i obiekty. Należy pamiętać, że użytkownicy biblioteki DLL muszą nadal łączyć się z biblioteki importowanej.
+
+Można użyć tego samego pliku nagłówka dla biblioteki DLL i aplikacji klienckiej. Aby to zrobić, należy użyć specjalnego symbol preprocesora, która wskazuje, czy kompilowanie biblioteki DLL lub tworzenia aplikacji klienckiej. Na przykład:
+
+```
+#ifdef _EXPORTING
+   #define CLASS_DECLSPEC    __declspec(dllexport)
+#else
+   #define CLASS_DECLSPEC    __declspec(dllimport)
+#endif
+
+class CLASS_DECLSPEC CExampleA : public CObject
+{ ... class definition ... };
+```
+
+## <a name="what-do-you-want-to-do"></a>Co chcesz zrobić?
+
+- [Zainicjuj bibliotekę DLL](../build/run-time-library-behavior.md#initializing-a-dll)
+
+## <a name="what-do-you-want-to-know-more-about"></a>Co chcesz dowiedzieć się więcej na temat?
+
+- [Importowanie i eksportowanie funkcji śródwierszowych](../build/importing-and-exporting-inline-functions.md)
+
+- [Importy wzajemne](../build/mutual-imports.md)
+
+## <a name="see-also"></a>Zobacz też
+
+[Importowanie do aplikacji](../build/importing-into-an-application.md)

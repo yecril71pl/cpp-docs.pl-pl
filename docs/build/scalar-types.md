@@ -12,42 +12,44 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6af598ec6e27138f4e666007018ce803177697b3
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 8ad0fa75380ca971f7ac2dfa4c370c076f7d552e
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43211144"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45700963"
 ---
 # <a name="scalar-types"></a>Typy skalarne
-Mimo że dostępu do danych może wynikać z dowolnej wyrównanie, zaleca się, że dane być wyrównane do jego granicę fizycznych, aby uniknąć utraty wydajności (lub jej wielokrotność). Typy wyliczeniowe są stałych liczb całkowitych i są traktowane jako 32-bitowych liczb całkowitych. W poniższej tabeli opisano definicji typu i zalecany magazyn dla niego w odniesieniu do wyrównania, używając następujących wartości wyrównania:  
-  
--   Byte — 8 bitów  
-  
--   Word — 16 bitów  
-  
--   Podwójne słowo — 32-bitowy  
-  
--   Word Quad - 64-bitowy  
-  
--   Word ośmiu - 128 bitów  
-  
-|||||  
-|-|-|-|-|  
-|Typ skalarny|Typ danych C|Rozmiar magazynu (w bajtach)|Zalecane wyrównania|  
-|**INT8**|**char**|1|Byte|  
-|**UINT8**|**unsigned char**|1|Byte|  
-|**INT16**|**short**|2|Word|  
-|**UINT16**|**short bez znaku**|2|Word|  
-|**INT32**|**int**, **długi**|4|Bitowego|  
-|**UINT32**|**unsigned int, niepodpisane długa**|4|Bitowego|  
-|**INT64**|**__int64**|8|Quadword|  
-|**UINT64 —**|**__int64 bez znaku**|8|Quadword|  
-|**FP32 (Pojedyncza precyzja)**|**float**|4|Bitowego|  
-|**FP64 (Podwójna precyzja)**|**double**|8|Quadword|  
-|**WSKAŹNIK**|<strong>\*</strong>|8|Quadword|  
-|**__m64**|**__m64 — struktura**|8|Quadword|  
-|**__m128**|**__m128 — struktura**|16|Octaword|  
-  
-## <a name="see-also"></a>Zobacz też  
- [Typy i magazyn](../build/types-and-storage.md)
+
+Mimo że dostępu do danych może wynikać z dowolnej wyrównanie, zaleca się, że dane być wyrównane do jego granicę fizycznych, aby uniknąć utraty wydajności (lub jej wielokrotność). Typy wyliczeniowe są stałych liczb całkowitych i są traktowane jako 32-bitowych liczb całkowitych. W poniższej tabeli opisano definicji typu i zalecany magazyn dla niego w odniesieniu do wyrównania, używając następujących wartości wyrównania:
+
+- Byte — 8 bitów
+
+- Word — 16 bitów
+
+- Podwójne słowo — 32-bitowy
+
+- Word Quad - 64-bitowy
+
+- Word ośmiu - 128 bitów
+
+|||||
+|-|-|-|-|
+|Typ skalarny|Typ danych C|Rozmiar magazynu (w bajtach)|Zalecane wyrównania|
+|**INT8**|**char**|1|Byte|
+|**UINT8**|**unsigned char**|1|Byte|
+|**INT16**|**short**|2|Word|
+|**UINT16**|**short bez znaku**|2|Word|
+|**INT32**|**int**, **długi**|4|Bitowego|
+|**UINT32**|**unsigned int, niepodpisane długa**|4|Bitowego|
+|**INT64**|**__int64**|8|Quadword|
+|**UINT64 —**|**__int64 bez znaku**|8|Quadword|
+|**FP32 (Pojedyncza precyzja)**|**float**|4|Bitowego|
+|**FP64 (Podwójna precyzja)**|**double**|8|Quadword|
+|**WSKAŹNIK**|<strong>\*</strong>|8|Quadword|
+|**__m64**|**__m64 — struktura**|8|Quadword|
+|**__m128**|**__m128 — struktura**|16|Octaword|
+
+## <a name="see-also"></a>Zobacz też
+
+[Typy i magazyn](../build/types-and-storage.md)

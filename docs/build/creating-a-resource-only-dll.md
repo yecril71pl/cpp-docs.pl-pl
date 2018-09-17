@@ -1,5 +1,5 @@
 ---
-title: Tworzenie biblioteki DLL tylko z zasobami | Dokumentacja firmy Microsoft
+title: Tworzenie biblioteki DLL z samymi zasobami | Dokumentacja firmy Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -15,48 +15,48 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5249f4528038771162bb96b714524ed751ff39a7
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 8ea6590a57a336740be0a9439c959ebe32239d4e
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32367550"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45703464"
 ---
-# <a name="creating-a-resource-only-dll"></a>Tworzenie biblioteki DLL z samymi zasobami  
-  
-Biblioteki DLL tylko z zasobami jest bibliotekę DLL, która zawiera jednak zasoby, takie jak ikony, mapy bitowe, ciągi i oknach dialogowych. Za pomocą biblioteki DLL tylko z zasobami jest dobry sposób na współużytkowanie tego samego zestawu zasobów między wiele programów. Istnieje również sposób zapewnić aplikacji zasoby zlokalizowane dla wielu języków (zobacz [zlokalizowanych zasobów w aplikacjach MFC: satelitarne biblioteki dll](../build/localized-resources-in-mfc-applications-satellite-dlls.md)).  
-  
-Aby utworzyć biblioteki DLL tylko z zasobami, Utwórz nowy projekt Win32 DLL (z systemem innym niż MFC) i Dodaj zasoby do projektu.  
-  
--   Wybierz projekt Win32 w **nowy projekt** okna dialogowego i określić typ projektu biblioteki DLL w Kreatorze projektu Win32.  
-  
--   Utwórz nowy skrypt zasobu, który zawiera zasoby (na przykład ciąg lub menu) biblioteki dll i Zapisz plik .rc.  
-  
--   Na **projektu** menu, kliknij przycisk **Dodaj istniejący element**, a następnie Włóż nowy plik .rc do projektu.  
-  
--   Określ [/noentry](../build/reference/noentry-no-entry-point.md) — opcja konsolidatora. / NOENTRY Zapobiega łączeniu odwołania do konsolidator `_main` w bibliotece DLL; ta opcja jest wymagana do utworzenia biblioteki DLL tylko z zasobami.  
-  
--   Skompiluj bibliotekę DLL.  
-  
-Aplikacji korzystającej z biblioteki DLL tylko z zasobami powinny wywoływać [LoadLibrary](../build/loadlibrary-and-afxloadlibrary.md) jawnie powiązać biblioteki DLL. Dostęp do zasobów, wywołaj funkcje ogólne `FindResource` i `LoadResource`, które działają na dowolny rodzaj zasobu lub wywoływanie jednego z następujących funkcji określonych zasobów:  
-  
--   `FormatMessage`  
-  
--   `LoadAccelerators`  
-  
--   `LoadBitmap`  
-  
--   `LoadCursor`  
-  
--   `LoadIcon`  
-  
--   `LoadMenu`  
-  
--   `LoadString`  
-  
-Aplikacja powinna wywołać `FreeLibrary` po zakończeniu przy użyciu zasobów.  
-  
-## <a name="see-also"></a>Zobacz też  
-  
-[Praca z plikami zasobów](../windows/working-with-resource-files.md)  
+# <a name="creating-a-resource-only-dll"></a>Tworzenie biblioteki DLL z samymi zasobami
+
+Tylko zasoby biblioteki DLL jest biblioteki DLL, która zawiera zasoby, takie jak ikony, mapy bitowe, ciągi i okna dialogowe. Przy użyciu tylko zasoby biblioteki DLL jest dobrym sposobem na udostępnianie tego samego zestawu zasobów w wielu programów. Jest również dobrym sposobem na udostępnianie aplikacji zlokalizowanej w wielu językach zasoby (zobacz [zlokalizowane zasoby w aplikacjach MFC: satelitarne biblioteki dll](../build/localized-resources-in-mfc-applications-satellite-dlls.md)).
+
+Aby utworzyć bibliotekę DLL tylko do zasobów, Utwórz nowy projekt biblioteki DLL systemu Win32 (inne niż MFC) i Dodaj zasoby do projektu.
+
+- Wybierz projekt systemu Win32 w **nowy projekt** okna dialogowego pole, a następnie określ typ projektu biblioteki DLL w Kreatorze projektu Win32.
+
+- Utwórz nowy skrypt zasobu, który zawiera zasoby (na przykład ciąg lub menu) biblioteki dll i Zapisz plik .rc.
+
+- Na **projektu** menu, kliknij przycisk **Dodaj istniejący element**, a następnie Wstaw nowy plik .rc w projekcie.
+
+- Określ [/noentry](../build/reference/noentry-no-entry-point.md) — opcja konsolidatora. / NOENTRY Zapobiega łączeniu odwołania do konsolidatora `_main` do biblioteki DLL; ta opcja jest wymagana do utworzenia DLL tylko dla zasobów.
+
+- Skompiluj bibliotekę DLL.
+
+Aplikacji, która używa tylko zasoby biblioteki DLL powinny wywoływać [LoadLibrary](../build/loadlibrary-and-afxloadlibrary.md) jawne łącze do biblioteki DLL. Dostęp do zasobów, należy wywołać funkcje ogólne `FindResource` i `LoadResource`, które działają na dowolny rodzaj zasobu lub wywołać jedną z następujących funkcji specyficznych dla zasobów:
+
+- `FormatMessage`
+
+- `LoadAccelerators`
+
+- `LoadBitmap`
+
+- `LoadCursor`
+
+- `LoadIcon`
+
+- `LoadMenu`
+
+- `LoadString`
+
+Aplikacja powinna wywołać `FreeLibrary` po zakończeniu korzystania z zasobów.
+
+## <a name="see-also"></a>Zobacz też
+
+[Praca z plikami zasobów](../windows/working-with-resource-files.md)<br/>
 [Biblioteki DLL w programie Visual C++](../build/dlls-in-visual-cpp.md)

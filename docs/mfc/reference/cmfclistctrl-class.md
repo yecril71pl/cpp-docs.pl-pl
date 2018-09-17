@@ -38,12 +38,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 04eccb2d1472afb1c04daac8ab23c2ce6fe97c58
-ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
+ms.openlocfilehash: 9e1339c1696483a3150337a9d2670763e075f7ce
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/05/2018
-ms.locfileid: "37851448"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45702680"
 ---
 # <a name="cmfclistctrl-class"></a>Klasa CMFCListCtrl
 `CMFCListCtrl` Klasa rozszerza funkcjonalność [klasie CListCtrl](../../mfc/reference/clistctrl-class.md) klasy dzięki obsłudze zaawansowanych funkcji kontroli nagłówka z [klasa CMFCHeaderCtrl](../../mfc/reference/cmfcheaderctrl-class.md).  
@@ -105,11 +105,11 @@ void EnableMarkSortedColumn(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *bMark*  
- Parametrów logiczny, który określa, czy włączyć inny kolor tła.  
+*bMark*<br/>
+[in] Parametrów logiczny, który określa, czy włączyć inny kolor tła.  
   
- [in] *bRedraw*  
- Parametrów logiczny, który określa, czy należy niezwłocznie odświeżyć formantu.  
+*bRedraw*<br/>
+[in] Parametrów logiczny, który określa, czy należy niezwłocznie odświeżyć formantu.  
   
 ### <a name="remarks"></a>Uwagi  
  `EnableMarkSortedColumn` używa metody `CDrawingManager::PixelAlpha` do obliczania, jaki kolor ma być używany dla sortowane kolumny. Kolor wybrany opiera się na kolor tła regularne.  
@@ -122,8 +122,8 @@ void EnableMultipleSort(BOOL bEnable = TRUE);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *bWłączenie*  
- Wartość logiczna określająca, czy włączyć tryb sortowanie wielu kolumn.  
+*bWłączenie*<br/>
+[in] Wartość logiczna określająca, czy włączyć tryb sortowanie wielu kolumn.  
   
 ### <a name="remarks"></a>Uwagi  
  Po włączeniu sortowania oparte na wielu kolumnach kolumny ma hierarchii. Wiersze danych zostaną najpierw posortowane według kolumny podstawowego. Wszelkie wartości równoważne są posortowane według każdej kolejnej kolumny, na podstawie priorytetu.  
@@ -165,14 +165,14 @@ virtual int OnCompareItems(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *lParam1*  
- Pierwszy element do porównania.  
+*lParam1*<br/>
+[in] Pierwszy element do porównania.  
   
- [in] *lParam2*  
- Drugi element do porównania.  
+*lParam2*<br/>
+[in] Drugi element do porównania.  
   
- [in] *iColumn*  
- Indeks kolumny, która jest sortowanie tej metody.  
+*iColumn*<br/>
+[in] Indeks kolumny, która jest sortowanie tej metody.  
   
 ### <a name="return-value"></a>Wartość zwracana  
  Liczba całkowita, która wskazuje względne położenie tych elementów. Wartość ujemna wskazuje, że pierwszy element powinien poprzedzać drugi, dodatnią wartość wskazuje, że pierwszy element powinien być zgodny z drugiego, a wartość zero oznacza, że dwa elementy są równoważne.  
@@ -190,11 +190,11 @@ virtual COLORREF OnGetCellBkColor(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *nRow*  
- Wiersz w komórce.  
+*nRow*<br/>
+[in] Wiersz w komórce.  
   
- [in] *nColumn*  
- Kolumna w komórce.  
+*nColumn*<br/>
+[in] Kolumna w komórce.  
   
 ### <a name="return-value"></a>Wartość zwracana  
  Wartość COLOREF, która określa kolor tła komórki.  
@@ -213,14 +213,14 @@ virtual HFONT OnGetCellFont(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *nRow*  
- Wiersz w komórce.  
+*nRow*<br/>
+[in] Wiersz w komórce.  
   
- [in] *nColumn*  
- Kolumna w komórce.  
+*nColumn*<br/>
+[in] Kolumna w komórce.  
   
- [in] *dwData*  
- Dane zdefiniowane przez użytkownika. Domyślna implementacja nie używać tego parametru.  
+*dwData*<br/>
+[in] Dane zdefiniowane przez użytkownika. Domyślna implementacja nie używać tego parametru.  
   
 ### <a name="return-value"></a>Wartość zwracana  
  Dojście do czcionki używanej do bieżącej komórki.  
@@ -238,11 +238,11 @@ virtual COLORREF OnGetCellTextColor(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *nRow*  
- Wiersz w komórce.  
+*nRow*<br/>
+[in] Wiersz w komórce.  
   
- [in] *nColumn*  
- Kolumna w komórce.  
+*nColumn*<br/>
+[in] Kolumna w komórce.  
   
 ### <a name="return-value"></a>Wartość zwracana  
  Wartość COLOREF, która określa kolor tekstu komórki.  
@@ -258,8 +258,8 @@ void RemoveSortColumn(int iColumn);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *iColumn*  
- Kolumny do usunięcia.  
+*iColumn*<br/>
+[in] Kolumny do usunięcia.  
   
 ### <a name="remarks"></a>Uwagi  
  Ta metoda usuwa kolumnę sortowania w formancie nagłówka. Wywołuje [CMFCHeaderCtrl::RemoveSortColumn](../../mfc/reference/cmfcheaderctrl-class.md#removesortcolumn).  
@@ -275,14 +275,14 @@ void SetSortColumn(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *iColumn*  
- Kolumna sortowania.  
+*iColumn*<br/>
+[in] Kolumna sortowania.  
   
- [in] *bAscending*  
- Wartość logiczna, która określa kolejność sortowania.  
+*bAscending*<br/>
+[in] Wartość logiczna, która określa kolejność sortowania.  
   
- [in] *bDodaj*  
- Wartość logiczna określająca, czy metoda dodaje kolumnę wskazywanym przez *iColumn* do listy kolumn sortowania.  
+*bDodaj*<br/>
+[in] Wartość logiczna określająca, czy metoda dodaje kolumnę wskazywanym przez *iColumn* do listy kolumn sortowania.  
   
 ### <a name="remarks"></a>Uwagi  
  Ta metoda przekazuje parametry wejściowe do formantu nagłówka przy użyciu metody [CMFCHeaderCtrl::SetSortColumn](../../mfc/reference/cmfcheaderctrl-class.md#setsortcolumn).  
@@ -298,14 +298,14 @@ virtual void Sort(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *iColumn*  
- Kolumna sortowania.  
+*iColumn*<br/>
+[in] Kolumna sortowania.  
   
- [in] *bAscending*  
- Wartość logiczna, która określa kolejność sortowania.  
+*bAscending*<br/>
+[in] Wartość logiczna, która określa kolejność sortowania.  
   
- [in] *bDodaj*  
- Wartość logiczna określająca, czy metoda ta umożliwia dodanie kolumny wskazywanym przez *iColumn* do listy kolumn sortowania.  
+*bDodaj*<br/>
+[in] Wartość logiczna określająca, czy metoda ta umożliwia dodanie kolumny wskazywanym przez *iColumn* do listy kolumn sortowania.  
   
 ## <a name="see-also"></a>Zobacz też  
  [Diagram hierarchii](../../mfc/hierarchy-chart.md)   

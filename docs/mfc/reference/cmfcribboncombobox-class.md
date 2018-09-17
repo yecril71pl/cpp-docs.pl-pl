@@ -50,12 +50,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a2ccefbc435cac5b48cd2c9509831699dcec70af
-ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
+ms.openlocfilehash: 68746d76c9c7842e9fc8c16addeca2cb44f31211
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/05/2018
-ms.locfileid: "37849672"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45701743"
 ---
 # <a name="cmfcribboncombobox-class"></a>Klasa CMFCRibbonComboBox
 `CMFCRibbonComboBox` Klasa implementuje formant pola kombi, które można dodać do paska wstążki, panelu Wstążki lub menu podręcznego wstążki.  
@@ -127,11 +127,11 @@ virtual INT_PTR AddItem(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *lpszItem*  
- Ciąg element do dodania.  
+*lpszItem*<br/>
+[in] Ciąg element do dodania.  
   
- [in] *dwData*  
- Dane skojarzone z elementem do dodania.  
+*dwData*<br/>
+[in] Dane skojarzone z elementem do dodania.  
   
 ### <a name="return-value"></a>Wartość zwracana  
  Liczony od zera indeks elementu dołączonych.  
@@ -153,20 +153,20 @@ CMFCRibbonComboBox();
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *nID*  
- Identyfikator pola kombi.  
+*nID*<br/>
+[in] Identyfikator pola kombi.  
   
- [in] *bHasEditBox*  
- Wartość TRUE, jeśli chcesz, aby pole edycji w ramach kontroli. Wartość FALSE w przeciwnym razie.  
+*bHasEditBox*<br/>
+[in] Wartość TRUE, jeśli chcesz, aby pole edycji w ramach kontroli. Wartość FALSE w przeciwnym razie.  
   
- [in] *nWidth*  
- Szerokość pola kombi w pikselach; lub wartość -1 dla domyślnej szerokości.  
+*nWidth*<br/>
+[in] Szerokość pola kombi w pikselach; lub wartość -1 dla domyślnej szerokości.  
   
- [in] *lpszLabel*  
- Wyświetl etykietę pola kombi.  
+*lpszLabel*<br/>
+[in] Wyświetl etykietę pola kombi.  
   
- [in] *Nokreślono*  
- Indeks mały obraz pola kombi.  
+*Nokreślono*<br/>
+[in] Indeks mały obraz pola kombi.  
   
 ### <a name="remarks"></a>Uwagi  
  Domyślna szerokość to 108 pikseli.  
@@ -182,14 +182,14 @@ BOOL DeleteItem(LPCTSTR lpszText);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *iIndex*  
- Liczony od zera indeks elementu do usunięcia.  
+*iIndex*<br/>
+[in] Liczony od zera indeks elementu do usunięcia.  
   
- [in] *dwData*  
- Dane skojarzone z elementem do usunięcia.  
+*dwData*<br/>
+[in] Dane skojarzone z elementem do usunięcia.  
   
- [in] *lpszText*  
- Ciąg elementu do usunięcia. W przypadku wielu elementów przy użyciu tych samych parametrach pierwszy element zostanie usunięty.  
+*lpszText*<br/>
+[in] Ciąg elementu do usunięcia. W przypadku wielu elementów przy użyciu tych samych parametrach pierwszy element zostanie usunięty.  
   
 ### <a name="return-value"></a>Wartość zwracana  
  Wartość TRUE, jeśli określony element został usunięty; w przeciwnym razie wartość FALSE.  
@@ -204,8 +204,8 @@ void EnableDropDownListResize(BOOL bEnable=FALSE);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *bWłączenie*  
- Wartość true, zmiany rozmiaru Włącz; Wartość FALSE, aby wyłączyć zmiany rozmiaru.  
+*bWłączenie*<br/>
+[in] Wartość true, zmiany rozmiaru Włącz; Wartość FALSE, aby wyłączyć zmiany rozmiaru.  
   
 ### <a name="remarks"></a>Uwagi  
  Po włączeniu rozmiaru pola listy ulegnie zmianie rozmiaru elementów, które są wyświetlane.  
@@ -218,8 +218,8 @@ int FindItem(LPCTSTR lpszText) const;
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *lpszText*  
- Ciąg, który elementu w polu listy.  
+*lpszText*<br/>
+[in] Ciąg, który elementu w polu listy.  
   
 ### <a name="return-value"></a>Wartość zwracana  
  Liczony od zera indeks elementu; lub -1, jeśli element nie zostanie znaleziony.  
@@ -268,8 +268,8 @@ virtual CSize GetIntermediateSize(CDC* pDC);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *podstawowego kontrolera domeny*  
- Wskaźnik do kontekstu urządzenia dla tego pola kombi.  
+*podstawowego kontrolera domeny*<br/>
+[in] Wskaźnik do kontekstu urządzenia dla tego pola kombi.  
   
 ### <a name="return-value"></a>Wartość zwracana  
  Rozmiar pola kombi.  
@@ -285,8 +285,8 @@ LPCTSTR GetItem(int iIndex) const;
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *iIndex*  
- Liczony od zera indeks elementu w polu listy.  
+*iIndex*<br/>
+[in] Liczony od zera indeks elementu w polu listy.  
   
 ### <a name="return-value"></a>Wartość zwracana  
  Wskaźnik do ciągu, który jest skojarzony z elementem; w przeciwnym razie wartość NULL, jeśli parametr indeksu jest nieprawidłowy lub parametr indeksu jest wartość -1, jeśli nie ma żadnych elementów wybrane w polu kombi.  
@@ -301,8 +301,8 @@ DWORD_PTR GetItemData(int iIndex) const;
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *iIndex*  
- Liczony od zera indeks elementu w polu listy.  
+*iIndex*<br/>
+[in] Liczony od zera indeks elementu w polu listy.  
   
 ### <a name="return-value"></a>Wartość zwracana  
  Dane skojarzone z elementem; lub równa 0, jeśli element nie istnieje lub parametr indeksu jest wartość -1, jeśli nie ma żadnych wybranego elementu w polu listy.  
@@ -340,8 +340,8 @@ virtual void OnSelectItem(int nItem);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *nItem*  
- Indeks zaznaczonego elementu.  
+*nItem*<br/>
+[in] Indeks zaznaczonego elementu.  
   
 ### <a name="remarks"></a>Uwagi  
  Należy przesłonić tę metodę, aby przetworzyć wybór danych wejściowych użytkownika.  
@@ -366,14 +366,14 @@ BOOL SelectItem(LPCTSTR lpszText);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *iIndex*  
- Liczony od zera indeks elementu w polu listy.  
+*iIndex*<br/>
+[in] Liczony od zera indeks elementu w polu listy.  
   
- [in] *dwData*  
- Dane skojarzone z elementem w polu listy.  
+*dwData*<br/>
+[in] Dane skojarzone z elementem w polu listy.  
   
- [in] *lpszText*  
- Ciąg, który elementu w polu listy.  
+*lpszText*<br/>
+[in] Ciąg, który elementu w polu listy.  
   
 ### <a name="return-value"></a>Wartość zwracana  
  Wartość TRUE, jeśli metoda zakończyła się pomyślnie; w przeciwnym razie wartość FALSE.  
@@ -388,8 +388,8 @@ void SetDropDownHeight(int nHeight);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *nHeight*  
- Wysokość w pikselach, pola listy.  
+*nHeight*<br/>
+[in] Wysokość w pikselach, pola listy.  
   
 ### <a name="remarks"></a>Uwagi  
  Domyślna wysokość jest 150 pikseli.  

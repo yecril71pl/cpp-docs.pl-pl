@@ -16,36 +16,41 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ef2f7efa92de3714170e403ea50b5f486c8367d6
-ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
+ms.openlocfilehash: 9f3c92fa219c32ca00050597dab5adfcec17e86b
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "33323761"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45703550"
 ---
 # <a name="implement-connection-point-wizard"></a>Kreator implementacji punktu połączenia
-Ten kreator implementuje punkt połączenia dla obiekt COM. Obiekt składnika (źródło) mogą uwidaczniać punktu połączenia dla własnej interfejsów lub dla dowolnego interfejsu wychodzących. Visual C++ i system Windows zarówno zapewniają biblioteki typu, w których interfejsy wychodzących. Każdy interfejs wychodzącej może być zaimplementowany przez klienta do obiektu (zbiornika).  
+
+Ten kreator implementuje punkt połączenia dla obiektów COM. Obiekt łączności (źródła) można uwidocznić punkt połączenia dla swoich własnych interfejsów lub dowolnego interfejsu wychodzącego. Visual C++ Windows zarówno i zapewniają bibliotek typów, które mają wychodzących interfejsów. Każdego interfejsu wychodzącego może być implementowana przez klienta do obiektu (ujścia).  
   
- Aby uzyskać więcej informacji, zobacz [punkty połączenia ATL](../atl/atl-connection-points.md).  
+Aby uzyskać więcej informacji, zobacz [punkty połączenia ATL](../atl/atl-connection-points.md).  
   
- **Biblioteki typów dostępne**  
- Wyświetla dostępne type libraries zawierający definicje interfejsu, dla których można zaimplementować punkty połączenia. Kliknij przycisk wielokropka, aby zlokalizować plik zawierający typ bibliotekę do użycia.  
+- **Biblioteki typów dostępne**
+
+   Wyświetla bibliotek dostępnych typów zawierający definicje interfejsu, dla których można wdrożyć punktów połączenia. Kliknij przycisk wielokropka, aby zlokalizować pliku zawierającego bibliotekę typów, aby użyć.  
   
- **Lokalizacja**  
- Wyświetla lokalizację biblioteki typów aktualnie wybrane w **bibliotek typów dostępne** listy.  
+- **Lokalizacja**
+
+   Wyświetla lokalizację biblioteki typów, aktualnie wybrane w **bibliotek typów dostępnych** listy.  
   
- **Interfejsy**  
- Wyświetla interfejsy, w których definicje znajdują się w bibliotece typów aktualnie wybrane w **bibliotek typów dostępne** pole.  
+- **Interfejsy**
+
+   Wyświetla interfejsy, których definicje znajdują się w aktualnie wybranego w bibliotece typów **bibliotek typów dostępnych** pole.  
   
-|Przycisk transferu|Opis|  
-|---------------------|-----------------|  
-|**>**|Dodaje do **zaimplementować punkty połączenia** listy z nazwą interfejsu aktualnie wybrane w **interfejsów** listy.|  
-|**>>**|Dodaje do **zaimplementować punkty połączenia** listę wszystkich nazw interfejsu dostępne w **interfejsów** listy.|  
-|**<**|Usuwa nazwę interfejsu aktualnie wybrane w **zaimplementować punkty połączenia** listy.|  
-|**<<**|Usuwa wszystkie interfejsu nazw znajdujących się na liście w **zaimplementować punkty połączenia** listy.|  
+   |Przycisk transferu|Opis|  
+   |---------------------|-----------------|  
+   |**>**|Dodaje do **zaimplementować punkty połączenia** Nazwa interfejsu, aktualnie wybrane w listy **interfejsów** listy.|  
+   |**>>**|Dodaje do **zaimplementować punkty połączenia** listy dostępny w wszystkich nazw interfejsu **interfejsów** listy.|  
+   |**\<**|Usuwa nazwę interfejsu aktualnie wybrany w **zaimplementować punkty połączenia** listy.|  
+   |**\<\<**|Usuwa wszystkie interfejsu nazwy obecnie wymienione w **zaimplementować punkty połączenia** listy.|  
   
- **Implementowanie punkty połączenia**  
- Wyświetla nazwy interfejsów, które można zaimplementować punkty połączenia po kliknięciu **Zakończ**.  
+- **Implementowanie punkty połączenia**
+
+   Wyświetla nazwy interfejsów, które można zaimplementować punkty połączenia po kliknięciu **Zakończ**.  
   
 ## <a name="see-also"></a>Zobacz też  
  [Implementacja punktu połączenia](../ide/implementing-a-connection-point-visual-cpp.md)

@@ -52,12 +52,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7c4ea8cf95298918088f54c3099a8f41d9c16ca9
-ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
+ms.openlocfilehash: f20a5f2767da015bb92a8e64491c2e5226f58aa5
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43690155"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45705916"
 ---
 # <a name="cprogressctrl-class"></a>Klasa CProgressCtrl
 Oferuje funkcje formantu Windows typowego paska postępu.  
@@ -347,7 +347,7 @@ COLORREF SetBarColor(COLORREF clrBar);
   
 |Parametr|Opis|  
 |---------------|-----------------|  
-|[in] *clrBar*|A [COLORREF](/windows/desktop/gdi/colorref) wartość, która określa nowy kolor paska wskaźnika postępu. Określ CLR_DEFAULT do powodują pasek postępu używać jej domyślny kolor.|  
+|*clrBar*|[in] A [COLORREF](/windows/desktop/gdi/colorref) wartość, która określa nowy kolor paska wskaźnika postępu. Określ CLR_DEFAULT do powodują pasek postępu używać jej domyślny kolor.|  
   
 ### <a name="return-value"></a>Wartość zwracana  
 
@@ -399,8 +399,8 @@ BOOL SetMarquee(
   
 |Parametr|Opis|  
 |---------------|-----------------|  
-|[in] *fMarqueeMode*|Wartość true, Włącz tryb zaznaczenia na, lub FAŁSZ, aby wyłączyć tryb zaznaczenia.|  
-|[in] *Ninterwał*|Czas w milisekundach między aktualizacjami ramki animacji.|  
+|*fMarqueeMode*|[in] Wartość true, Włącz tryb zaznaczenia na, lub FAŁSZ, aby wyłączyć tryb zaznaczenia.|  
+|*Ninterwał*|[in] Czas w milisekundach między aktualizacjami ramki animacji.|  
   
 ### <a name="return-value"></a>Wartość zwracana  
  Ta metoda zawsze zwraca wartość TRUE.  
@@ -478,7 +478,7 @@ int SetState(int iState);
   
 |Parametr|Opis|  
 |---------------|-----------------|  
-|[in] *iState*|Stan, aby ustawić pasek postępu. Użyj jednej z następujących wartości:<br /><br /> -PBST_NORMAL — w toku<br />-PBST_ERROR — błąd<br />-PBST_PAUSED - wstrzymana|  
+|*iState*|[in] Stan, aby ustawić pasek postępu. Użyj jednej z następujących wartości:<br /><br /> -PBST_NORMAL — w toku<br />-PBST_ERROR — błąd<br />-PBST_PAUSED - wstrzymana|  
   
 ### <a name="return-value"></a>Wartość zwracana  
  Poprzedni stan bieżący formant paska postępu.  

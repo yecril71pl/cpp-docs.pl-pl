@@ -16,27 +16,30 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0784f08c479a8c8f3968ef61a01431cd9e0ca71e
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: d83e010f690f96afa5a57eb89ca1e8f4cf444225
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32367111"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45699663"
 ---
 # <a name="description-blocks"></a>Bloki opisów
-Blok opis znajduje się w wierszu zależności opcjonalnie umieszczając za blok poleceń:  
-  
-```  
-targets... : dependents...  
-    commands...  
-```  
-  
- Wiersz zależności określa jeden lub więcej elementów docelowych i zero lub więcej elementów zależnych. Element docelowy musi być na początku wiersza. Oddzielne elementów docelowych z zależności dwukropkiem (:); spacji lub karty są dozwolone. Podział wiersza, należy użyć ukośnik odwrotny (\) po docelowej lub zależnym od. Jeśli element docelowy nie istnieje, ma wcześniejszą sygnatury czasowej niż zależną lub jest [pseudotarget](../build/pseudotargets.md), NMAKE wykonuje polecenia. Jeśli zależną jest celem odrębnie i nie istnieje lub jest nieaktualny w stosunku do jego własnej zależności, NMAKE aktualizuje zależnego przed zaktualizowaniem bieżącego zależności.  
-  
-## <a name="what-do-you-want-to-know-more-about"></a>Co chcesz dowiedzieć się więcej o?  
- [Docelowe elementy](../build/targets.md)  
-  
- [Zależności](../build/dependents.md)  
-  
-## <a name="see-also"></a>Zobacz też  
- [NMAKE — dokumentacja](../build/nmake-reference.md)
+
+Blok opis znajduje się w wierszu zależności, opcjonalnie, blok poleceń:
+
+```
+targets... : dependents...
+    commands...
+```
+
+Wiersz zależności określa jeden lub więcej obiektów docelowych i zero lub więcej elementów zależnych. Obiekt docelowy musi być na początku wiersza. Oddzielne obiekty docelowe z zależności za pomocą dwukropka (:); spacje lub tabulatory są dozwolone. Podział wiersza, należy użyć kreski ułamkowej odwróconej (\) po docelowego lub zależnych od ustawień lokalnych. Jeśli obiekt docelowy nie istnieje, ma sygnaturą czasową wcześniejszych niż zależnych od ustawień lokalnych lub jest [pseudotarget](../build/pseudotargets.md), NMAKE wykonuje polecenia. Jeśli zależnych od ustawień lokalnych jest ona lokalizacją docelową, gdzie indziej i nie istnieje lub jest nieaktualna w odniesieniu do jego własnej zależności NMAKE aktualizacji zależnych od ustawień lokalnych przed rozpoczęciem aktualizacji bieżący zależności.
+
+## <a name="what-do-you-want-to-know-more-about"></a>Co chcesz dowiedzieć się więcej na temat?
+
+[Docelowe elementy](../build/targets.md)
+
+[Zależności](../build/dependents.md)
+
+## <a name="see-also"></a>Zobacz też
+
+[NMAKE — dokumentacja](../build/nmake-reference.md)

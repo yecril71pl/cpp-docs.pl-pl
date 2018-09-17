@@ -34,12 +34,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e2f53aa98d7743ccee804ed7a89df160368c8a23
-ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
+ms.openlocfilehash: 57c7c55ae2214c4123973e93c65f5e189d32b99a
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/05/2018
-ms.locfileid: "37849168"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45701652"
 ---
 # <a name="cmfctaskspanetaskgroup-class"></a>Klasa CMFCTasksPaneTaskGroup
 `CMFCTasksPaneTaskGroup` Klasa jest klasą pomocnika używaną przez [CMFCTasksPane](../../mfc/reference/cmfctaskspane-class.md) kontroli. Obiekty typu `CMFCTasksPaneTaskGroup` reprezentują *grupy zadań*. Grupa zadań to lista elementów wyświetlanych w osobnym oknie z przyciskiem rozwijania. To pole może mieć opcjonalny podpisem (nazwa grupy). Jeśli grupa jest zwinięta, lista zadań nie jest widoczny.  
@@ -216,11 +216,11 @@ virtual BOOL SetACCData(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *pParent*  
- Reprezentuje okno nadrzędne bieżącej grupy zadań.  
+*pParent*<br/>
+[in] Reprezentuje okno nadrzędne bieżącej grupy zadań.  
   
- [out] *danych*  
- Obiekt typu `CAccessibilityData` , jest wypełniana danymi dostępności bieżącej grupy zadań.  
+*Dane*<br/>
+[out] Obiekt typu `CAccessibilityData` , jest wypełniana danymi dostępności bieżącej grupy zadań.  
   
 ### <a name="return-value"></a>Wartość zwracana  
  Wartość TRUE, jeśli *danych* parametr został pomyślnie wypełnione danymi ułatwień dostępu w bieżącej grupy zadań; w przeciwnym razie FALSE.  

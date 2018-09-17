@@ -17,12 +17,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 77ada66d0478996eac30c8218793d962e8fcf7ca
-ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
+ms.openlocfilehash: c2f962ec4a348cca7ffdf43852cb01d673f3fb18
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43680091"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45706605"
 ---
 # <a name="svminvlpga"></a>__svm_invlpga
 **Microsoft Specific**  
@@ -41,8 +41,8 @@ void __svm_invlpga(
   
 |Parametr|Opis|  
 |---------------|-----------------|  
-|[in] `Va`|Wirtualny adres strony do unieważnienia.|  
-|[in] `ASID`|Adres miejsca identyfikator (ASID) strony do unieważnienia.|  
+|*oceny luk w zabezpieczeniach*|[in] Wirtualny adres strony do unieważnienia.|  
+|*ASID*|[in] Adres miejsca identyfikator (ASID) strony do unieważnienia.|  
   
 ## <a name="remarks"></a>Uwagi  
  `__svm_invlpga` Funkcji jest odpowiednikiem `INVLPGA` machine instrukcji. Ta funkcja obsługuje interakcji monitor maszyny wirtualnej hosta z gościa operacyjnego i jego aplikacji. Aby uzyskać więcej informacji, wyszukaj dokumentu, "AMD64 architektury programisty ręczne woluminie 2: programowania systemu" numer 24593, wersji 3.11, dokumentu w [AMD corporation](https://developer.amd.com/resources/developer-guides-manuals/) lokacji.  

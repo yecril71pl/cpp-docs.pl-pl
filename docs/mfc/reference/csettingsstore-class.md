@@ -32,12 +32,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1731c32506ec0e9c4c392ff9429e28e5b71b3c7c
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: c1cd37ee2ad7fe09e2838d5e3cecb3488594d2c9
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43221135"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45706631"
 ---
 # <a name="csettingsstore-class"></a>Klasa CSettingsStore
 Opakowuje funkcje Windows API, zapewniając interfejs zorientowany obiektowo, który umożliwia dostępu do rejestru.  
@@ -102,8 +102,8 @@ virtual BOOL CreateKey(LPCTSTR pszPath);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *pszPath*  
- Określa nazwę klucza, który ma zostać utworzony lub otwarty.  
+*pszPath*<br/>
+[in] Określa nazwę klucza, który ma zostać utworzony lub otwarty.  
   
 ### <a name="return-value"></a>Wartość zwracana  
  0 w przypadku powodzenia; w przeciwnym razie wartość różną od zera.  
@@ -121,11 +121,11 @@ CSettingsStore(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *bŚcieżka*  
- Parametr logiczny, który określa, czy `CSettingsStore` obiektu działa w trybie administratora.  
+*bŚcieżka*<br/>
+[in] Parametr logiczny, który określa, czy `CSettingsStore` obiektu działa w trybie administratora.  
   
- [in] *bReadOnly*  
- Parametr logiczny, który określa, czy `CSettingsStore` obiekt zostanie utworzony w trybie tylko do odczytu.  
+*bReadOnly*<br/>
+[in] Parametr logiczny, który określa, czy `CSettingsStore` obiekt zostanie utworzony w trybie tylko do odczytu.  
   
 ### <a name="remarks"></a>Uwagi  
  Jeśli *bŚcieżka* jest ustawiona na wartość TRUE, `m_hKey` element członkowski, zmienna jest ustawiona na **HKEY_LOCAL_MACHINE**. Jeśli ustawisz *bŚcieżka* na wartość FALSE, `m_hKey` ustawiono **HKEY_CURRENT_USER**.  
@@ -144,11 +144,11 @@ virtual BOOL DeleteKey(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *pszPath*  
- Nazwa klucza do usunięcia.  
+*pszPath*<br/>
+[in] Nazwa klucza do usunięcia.  
   
- [in] *bŚcieżka*  
- Przełącznik, który określa lokalizację klucza do usunięcia.  
+*bŚcieżka*<br/>
+[in] Przełącznik, który określa lokalizację klucza do usunięcia.  
   
 ### <a name="return-value"></a>Wartość zwracana  
  Wartość różną od zera, jeśli to się powiedzie; w przeciwnym razie 0.  
@@ -166,8 +166,8 @@ virtual BOOL DeleteValue(LPCTSTR pszValue);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *pszValue*  
- Określa pole wartości do usunięcia.  
+*pszValue*<br/>
+[in] Określa pole wartości do usunięcia.  
   
 ### <a name="return-value"></a>Wartość zwracana  
  Wartość różną od zera, jeśli to się powiedzie; w przeciwnym razie 0.  
@@ -180,8 +180,8 @@ virtual BOOL Open(LPCTSTR pszPath);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *pszPath*  
- Nazwa klucza rejestru.  
+*pszPath*<br/>
+[in] Nazwa klucza rejestru.  
   
 ### <a name="return-value"></a>Wartość zwracana  
  Wartość różną od zera, jeśli to się powiedzie; w przeciwnym razie 0.  
@@ -265,53 +265,53 @@ virtual BOOL Read(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *pszKey*  
- Wskaźnik na ciąg zakończony znakiem null, zawierającego nazwę wartości, które można odczytać z rejestru.  
+*pszKey*<br/>
+[in] Wskaźnik na ciąg zakończony znakiem null, zawierającego nazwę wartości, które można odczytać z rejestru.  
   
- [out] *iVal*  
- Odwołanie do zmiennej całkowitej, który odbiera wartość odczytu z klucza rejestru.  
+*iVal*<br/>
+[out] Odwołanie do zmiennej całkowitej, który odbiera wartość odczytu z klucza rejestru.  
   
- [out] *dwVal*  
- Odwołanie do zmiennej 32-bitowych podwójne słowo, który odbiera wartość odczytu z klucza rejestru.  
+*dwVal*<br/>
+[out] Odwołanie do zmiennej 32-bitowych podwójne słowo, który odbiera wartość odczytu z klucza rejestru.  
   
- [out] *sVal*  
- Odwołanie do zmiennej ciągu, który odbiera wartość odczytu z klucza rejestru.  
+*sVal*<br/>
+[out] Odwołanie do zmiennej ciągu, który odbiera wartość odczytu z klucza rejestru.  
   
- [out] *scStringList*  
- Odwołanie do zmiennej listy ciągu, który odbiera wartość odczytu z klucza rejestru.  
+*scStringList*<br/>
+[out] Odwołanie do zmiennej listy ciągu, który odbiera wartość odczytu z klucza rejestru.  
   
- [out] *scArray*  
- Odwołanie do zmiennej tablicowej ciąg, który odbiera wartość odczytu z klucza rejestru.  
+*scArray*<br/>
+[out] Odwołanie do zmiennej tablicowej ciąg, który odbiera wartość odczytu z klucza rejestru.  
   
- [out] *dwcArray*  
- Odwołanie do zmiennej tablicowej 32-bitowych podwójne słowo, który odbiera wartość odczytu z klucza rejestru.  
+*dwcArray*<br/>
+[out] Odwołanie do zmiennej tablicowej 32-bitowych podwójne słowo, który odbiera wartość odczytu z klucza rejestru.  
   
- [out] *wcArray*  
- Odwołanie do zmiennej tablicowej 16-bitowe słowo, który odbiera wartość odczytu z klucza rejestru.  
+*wcArray*<br/>
+[out] Odwołanie do zmiennej tablicowej 16-bitowe słowo, który odbiera wartość odczytu z klucza rejestru.  
   
- [out] *bcArray*  
- Odwołanie do zmiennej tablicy bajtów, który odbiera wartość odczytu z klucza rejestru.  
+*bcArray*<br/>
+[out] Odwołanie do zmiennej tablicy bajtów, który odbiera wartość odczytu z klucza rejestru.  
   
- [out] *lppoint —*  
- Odwołanie do wskaźnika do `POINT` strukturę, która otrzymuje wartość odczytu z klucza rejestru.  
+*lppoint —*<br/>
+[out] Odwołanie do wskaźnika do `POINT` strukturę, która otrzymuje wartość odczytu z klucza rejestru.  
   
- [out] *rect*  
- Odwołanie do [CRect](../../atl-mfc-shared/reference/crect-class.md) zmiennej, która otrzymuje wartość odczytu z klucza rejestru.  
+*Rect*<br/>
+[out] Odwołanie do [CRect](../../atl-mfc-shared/reference/crect-class.md) zmiennej, która otrzymuje wartość odczytu z klucza rejestru.  
   
- [out] *ppData*  
- Wskaźnik do wskaźnika do danych, który odbiera wartość odczytu z klucza rejestru.  
+*ppData*<br/>
+[out] Wskaźnik do wskaźnika do danych, który odbiera wartość odczytu z klucza rejestru.  
   
- [out] *pBytes*  
- Wskaźnik do zmiennej liczby całkowitej bez znaku. Zmienna ta otrzymuje rozmiar buforu, który *ppData* wskazuje.  
+*pBytes*<br/>
+[out] Wskaźnik do zmiennej liczby całkowitej bez znaku. Zmienna ta otrzymuje rozmiar buforu, który *ppData* wskazuje.  
   
- [out] *listy*  
- Odwołanie do [CObList](../../mfc/reference/coblist-class.md) zmiennej, która otrzymuje wartość odczytu z klucza rejestru.  
+*list*<br/>
+[out] Odwołanie do [CObList](../../mfc/reference/coblist-class.md) zmiennej, która otrzymuje wartość odczytu z klucza rejestru.  
   
- [out] *obj*  
- Odwołanie do [CObject](../../mfc/reference/cobject-class.md) zmiennej, która otrzymuje wartość odczytu z klucza rejestru.  
+*obj*<br/>
+[out] Odwołanie do [CObject](../../mfc/reference/cobject-class.md) zmiennej, która otrzymuje wartość odczytu z klucza rejestru.  
   
- [out] *pObj*  
- Odwołanie do wskaźnika do `CObject` zmiennej, która otrzymuje wartość odczytu z klucza rejestru.  
+*pObj*<br/>
+[out] Odwołanie do wskaźnika do `CObject` zmiennej, która otrzymuje wartość odczytu z klucza rejestru.  
   
 ### <a name="return-value"></a>Wartość zwracana  
  Wartość różną od zera, jeśli to się powiedzie; w przeciwnym razie 0.  
@@ -395,53 +395,53 @@ virtual BOOL Write(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *pszKey*  
- Wskaźnik do ciągu, który zawiera nazwę wartość do ustawienia.  
+*pszKey*<br/>
+[in] Wskaźnik do ciągu, który zawiera nazwę wartość do ustawienia.  
   
- [in] *iVal*  
- Odwołanie do zmiennej całkowitej, która zawiera dane, które mają być przechowywane.  
+*iVal*<br/>
+[in] Odwołanie do zmiennej całkowitej, która zawiera dane, które mają być przechowywane.  
   
- [in] *dwVal*  
- Odwołanie do zmiennej 32-bitowych podwójne słowo, która zawiera dane, które mają być przechowywane.  
+*dwVal*<br/>
+[in] Odwołanie do zmiennej 32-bitowych podwójne słowo, która zawiera dane, które mają być przechowywane.  
   
- [in] *pszVal*  
- Wskaźnik do zmiennej ciągu zakończonego znakiem null, która zawiera dane, które mają być przechowywane.  
+*pszVal*<br/>
+[in] Wskaźnik do zmiennej ciągu zakończonego znakiem null, która zawiera dane, które mają być przechowywane.  
   
- [in] *scStringList*  
- Odwołanie do [CStringList](../../mfc/reference/cstringlist-class.md) zmiennej, która zawiera dane, które mają być przechowywane.  
+*scStringList*<br/>
+[in] Odwołanie do [CStringList](../../mfc/reference/cstringlist-class.md) zmiennej, która zawiera dane, które mają być przechowywane.  
   
- [in] *bcArray*  
- Odwołanie do zmiennej tablicy bajtów, która zawiera dane, które mają być przechowywane.  
+*bcArray*<br/>
+[in] Odwołanie do zmiennej tablicy bajtów, która zawiera dane, które mają być przechowywane.  
   
- [in] *scArray*  
- Odwołanie do zmiennej tablicowej ciąg, który zawiera dane, które mają być przechowywane.  
+*scArray*<br/>
+[in] Odwołanie do zmiennej tablicowej ciąg, który zawiera dane, które mają być przechowywane.  
   
- [in] *dwcArray*  
- Odwołanie do zmiennej tablicowej 32-bitowych podwójne słowo, który zawiera dane, które mają być przechowywane.  
+*dwcArray*<br/>
+[in] Odwołanie do zmiennej tablicowej 32-bitowych podwójne słowo, który zawiera dane, które mają być przechowywane.  
   
- [in] *wcArray*  
- Odwołanie do zmiennej tablicowej 16-bitowe słowo, który zawiera dane, które mają być przechowywane.  
+*wcArray*<br/>
+[in] Odwołanie do zmiennej tablicowej 16-bitowe słowo, który zawiera dane, które mają być przechowywane.  
   
- [in] *rect*  
- Odwołanie do [CRect](../../atl-mfc-shared/reference/crect-class.md) zmiennej, która zawiera dane, które mają być przechowywane.  
+*Rect*<br/>
+[in] Odwołanie do [CRect](../../atl-mfc-shared/reference/crect-class.md) zmiennej, która zawiera dane, które mają być przechowywane.  
   
- [in] *lppoint —*  
- Odwołanie do wskaźnika do `POINT` zmiennej, która zawiera dane, które mają być przechowywane.  
+*lppoint —*<br/>
+[in] Odwołanie do wskaźnika do `POINT` zmiennej, która zawiera dane, które mają być przechowywane.  
   
- [in] *pData*  
- Wskaźnik do buforu, który zawiera dane, które mają być przechowywane.  
+*pData*<br/>
+[in] Wskaźnik do buforu, który zawiera dane, które mają być przechowywane.  
   
- [in] *nBytes*  
- Określa rozmiar w bajtach, danych, do których *pData* punktów parametru.  
+*nBytes*<br/>
+[in] Określa rozmiar w bajtach, danych, do których *pData* punktów parametru.  
   
- [in] *listy*  
- Odwołanie do [CObList](../../mfc/reference/coblist-class.md) zmiennej, która zawiera dane, które mają być przechowywane.  
+*list*<br/>
+[in] Odwołanie do [CObList](../../mfc/reference/coblist-class.md) zmiennej, która zawiera dane, które mają być przechowywane.  
   
- [in] *obj*  
- Odwołanie do [CObject](../../mfc/reference/cobject-class.md) zmiennej, która zawiera dane, które mają być przechowywane.  
+*obj*<br/>
+[in] Odwołanie do [CObject](../../mfc/reference/cobject-class.md) zmiennej, która zawiera dane, które mają być przechowywane.  
   
- [in] *pObj*  
- Wskaźnik do wskaźnika do `CObject` zmiennej, która zawiera dane, które mają być przechowywane.  
+*pObj*<br/>
+[in] Wskaźnik do wskaźnika do `CObject` zmiennej, która zawiera dane, które mają być przechowywane.  
   
 ### <a name="return-value"></a>Wartość zwracana  
  Wartość TRUE, jeśli to się powiedzie; w przeciwnym razie wartość FALSE.  

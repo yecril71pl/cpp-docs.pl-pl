@@ -18,12 +18,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 61050f8fc1924f6d2a143893af5bd1918df94394
-ms.sourcegitcommit: d10a2382832373b900b1780e1190ab104175397f
+ms.openlocfilehash: d6a685633b6e23a21d46ad3256188fea3ee16ccc
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43895191"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45700782"
 ---
 # <a name="stosb"></a>__stosb
 
@@ -43,14 +43,14 @@ void __stosb(
 
 #### <a name="parameters"></a>Parametry
 
-[out] `Dest`  
-Lokalizacja docelowa wykonać operację.
+*docelowy*<br/>
+[out] Lokalizacja docelowa wykonać operację.
 
-[in] `Data`  
-Dane, które mają być przechowywane.
+*Dane*<br/>
+[in] Dane, które mają być przechowywane.
 
-[in] `Count`  
-Długość bloku bajtów do zapisania.
+*Liczba*<br/>
+[in] Długość bloku bajtów do zapisania.
 
 ## <a name="requirements"></a>Wymagania
 

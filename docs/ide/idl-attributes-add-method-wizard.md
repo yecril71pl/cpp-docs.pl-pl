@@ -17,46 +17,51 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2c7f7784e57f0dc66b6a4c77565016d17420eb55
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: ea2f0cd3ae445c4804738567b5bd9265363995e3
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43219125"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45705174"
 ---
 # <a name="idl-attributes-add-method-wizard"></a>Atrybuty IDL, Kreator dodawania metody
 Ta strona kreatora dodawania metody umożliwia Określ jakiekolwiek ustawienia interfejsu definicja języka (IDL) dla metody.  
   
- **id**  
- Ustawia identyfikator numeryczny, który identyfikuje metodę. Zobacz [identyfikator](/windows/desktop/Midl/id) w *odwołania MIDL*.  
+- **id**
+
+   Ustawia identyfikator numeryczny, który identyfikuje metodę. Zobacz [identyfikator](/windows/desktop/Midl/id) w *odwołania MIDL*.  
   
- To pole jest niedostępna dla interfejsów niestandardowych i nie jest dostępna dla MFC dispinterfaces.  
+   To pole jest niedostępna dla interfejsów niestandardowych i nie jest dostępna dla MFC dispinterfaces.  
   
- **call_as**  
- Określa nazwę metody zdalnej, do którego ta metoda lokalne mogą być mapowane. Zobacz [call_as](/windows/desktop/Midl/call-as) w *odwołania MIDL*.  
+- **call_as**
+
+   Określa nazwę metody zdalnej, do którego ta metoda lokalne mogą być mapowane. Zobacz [call_as](/windows/desktop/Midl/call-as) w *odwołania MIDL*.  
   
- Niedostępne dla MFC dispinterfaces.  
+   Niedostępne dla MFC dispinterfaces.  
   
- **helpcontext**  
- Określa identyfikator kontekstu, który pozwala użytkownikowi oglądać informacje o tej metody w pliku pomocy. Zobacz [helpcontext —](/windows/desktop/Midl/helpcontext) w *odwołania MIDL*.  
+- **helpcontext**
+
+   Określa identyfikator kontekstu, który pozwala użytkownikowi oglądać informacje o tej metody w pliku pomocy. Zobacz [helpcontext —](/windows/desktop/Midl/helpcontext) w *odwołania MIDL*.  
   
- Niedostępne dla MFC dispinterfaces.  
+   Niedostępne dla MFC dispinterfaces.  
   
- **helpstring**  
- Określa ciąg znaków, który jest używany do opisania elementu, do której jest stosowany. Domyślnie jest ustawiona "Metoda *nazwę metody*." Zobacz [HelpString —](/windows/desktop/Midl/helpstring) w *odwołania MIDL*.  
+- **helpstring**
+
+   Określa ciąg znaków, który jest używany do opisania elementu, do której jest stosowany. Domyślnie jest ustawiona "Metoda *nazwę metody*." Zobacz [HelpString —](/windows/desktop/Midl/helpstring) w *odwołania MIDL*.  
   
- Niedostępne dla MFC dispinterfaces.  
+   Niedostępne dla MFC dispinterfaces.  
   
- **Dodatkowe atrybuty**  
- Niedostępne dla MFC dispinterfaces.  
+- **Dodatkowe atrybuty**
+
+   Niedostępne dla MFC dispinterfaces.  
   
-|Atrybut|Opis|  
-|---------------|-----------------|  
-|**hidden**|Wskazuje, że metoda istnieje, ale nie powinien być wyświetlany w przeglądarce zorientowanej na użytkownika. Zobacz [ukryte](/windows/desktop/Midl/hidden) w *odwołania MIDL*.|  
-|**source**|Wskazuje, że członek metoda jest źródłem zdarzeń. Zobacz [źródła](/windows/desktop/Midl/source) w *odwołania MIDL*.|  
-|`local`|Określa kompilatorowi MIDL, metoda nie jest zdalny. Zobacz [lokalnego](/windows/desktop/Midl/local) w *odwołania MIDL*.|  
-|**restricted**|Określa, że metoda nie może być wywoływana arbitralnie. Zobacz [ograniczeniami](/windows/desktop/Midl/restricted) w *odwołania MIDL*.|  
-|**vararg**|Określa, że ta metoda przyjmuje zmienną liczbę argumentów. Aby to osiągnąć, ostatni argument musi być bezpieczną tablicą o **VARIANT** typ, który zawiera wszystkie pozostałe argumenty. Zobacz [vararg](/windows/desktop/Midl/vararg) w *odwołania MIDL*.|  
+   |Atrybut|Opis|  
+   |---------------|-----------------|  
+   |**hidden**|Wskazuje, że metoda istnieje, ale nie powinien być wyświetlany w przeglądarce zorientowanej na użytkownika. Zobacz [ukryte](/windows/desktop/Midl/hidden) w *odwołania MIDL*.|  
+   |**source**|Wskazuje, że członek metoda jest źródłem zdarzeń. Zobacz [źródła](/windows/desktop/Midl/source) w *odwołania MIDL*.|  
+   |`local`|Określa kompilatorowi MIDL, metoda nie jest zdalny. Zobacz [lokalnego](/windows/desktop/Midl/local) w *odwołania MIDL*.|  
+   |**restricted**|Określa, że metoda nie może być wywoływana arbitralnie. Zobacz [ograniczeniami](/windows/desktop/Midl/restricted) w *odwołania MIDL*.|  
+   |**vararg**|Określa, że ta metoda przyjmuje zmienną liczbę argumentów. Aby to osiągnąć, ostatni argument musi być bezpieczną tablicą o **VARIANT** typ, który zawiera wszystkie pozostałe argumenty. Zobacz [vararg](/windows/desktop/Midl/vararg) w *odwołania MIDL*.|  
   
 ## <a name="see-also"></a>Zobacz też  
  [Dodawanie metody](../ide/adding-a-method-visual-cpp.md)   

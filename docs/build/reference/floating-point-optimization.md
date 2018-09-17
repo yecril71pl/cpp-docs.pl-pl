@@ -11,12 +11,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 082cd3a7721f1bc72899130159b724b292e5e217
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: 6208e425ce4a2e1b5738932b8acaf6b11b7db24b
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42595051"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45706683"
 ---
 # <a name="microsoft-visual-c-floating-point-optimization"></a>Microsoft Visual C++ optymalizacji zmiennoprzecinkowych
 
@@ -757,7 +757,6 @@ float sum = f1 + f2;
 Tego rodzaju zaokrąglenie dodatkowe mogą wynikać z przy użyciu niższe dokładności jednostki zmiennoprzecinkowej, takich jak SSE2, do wykonywania niektórych obliczeń pośrednich. Dokładność zaokrąglania FP: Fast jest zatem platformy zależnych; Kod, który kompiluje dobrze sprawdza się w jednym procesorze mogą działać dobrze w przypadku innego procesora. Pozostawia się użytkownika w celu ustalenia, jeśli korzyści szybkość przewyższają wszelkie problemy dokładności.
 
 Jeśli optymalizacji FP: Fast jest szczególnie problematyczny dla określonych funkcji, tryb zmiennoprzecinkowych może być lokalnie ich fp: precise przy użyciu `float_control` dyrektywy kompilatora.
-
 
 ### <a name="algebraic-transformations-under-fpfast"></a>Przekształcenia algebraiczne w obszarze FP: Fast
 

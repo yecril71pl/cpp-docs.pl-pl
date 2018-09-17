@@ -20,12 +20,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: eddce134c3cda27e57a6a20d709bc4eab08d6e80
-ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
+ms.openlocfilehash: 17efa63488a736089c988e6cfbb7bd97330816aa
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/05/2018
-ms.locfileid: "37849018"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45701392"
 ---
 # <a name="cmfcribbonapplicationbutton-class"></a>Klasa CMFCRibbonApplicationButton
 Implementacja specjalny przycisk znajdujący się w lewym górnym rogu okna aplikacji. Po kliknięciu przycisku powoduje otwarcie menu, które zwykle zawiera wspólne **pliku** poleceń, takich jak **Otwórz**, **Zapisz**, i **zakończenia**.  
@@ -98,11 +98,11 @@ void SetImage(HBITMAP hBmp);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *uiBmpResID*  
- Identyfikator zasobu obrazu do wyświetlania na przycisku aplikacji.  
+*uiBmpResID*<br/>
+[in] Identyfikator zasobu obrazu do wyświetlania na przycisku aplikacji.  
   
- [in] *hBmp*  
- Dojście do mapy bitowej do wyświetlenia na przycisku aplikacji.  
+*hBmp*<br/>
+[in] Dojście do mapy bitowej do wyświetlenia na przycisku aplikacji.  
   
 ### <a name="remarks"></a>Uwagi  
  Ta metoda umożliwia przypisywanie nowego obrazu do przycisk wstążki w aplikacji, po utworzeniu przycisku. Przycisk aplikacji znajduje się w lewym górnym rogu okna aplikacji.  

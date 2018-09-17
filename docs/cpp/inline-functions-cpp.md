@@ -18,12 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5b39a6889dfd8a28d65aebcab04881d4bc28ce1e
-ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
+ms.openlocfilehash: b86c2c4031e1257e2a8a8e0f7b504686ea1c4588
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/01/2018
-ms.locfileid: "39403670"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45701692"
 ---
 # <a name="inline-functions-c"></a>Funkcje śródwierszowe (C++)
 Funkcję zdefiniowaną w treści deklaracji klasy jest funkcją śródwierszową.  
@@ -156,7 +156,8 @@ private:
   
  Funkcje rekursywne mogą być wbudowane podstawione o szerokości określonej przez [inline_depth](../preprocessor/inline-depth.md) pragma maksymalnie 16 wywołań. Po tym głębokość wywołania funkcji rekursywnych są traktowane jako wywołania wystąpienie funkcji.  Głębokość do cyklicznego, które funkcje są sprawdzane przez Algorytm heurystyczny tekście nie może przekraczać 16. [Inline_recursion](../preprocessor/inline-recursion.md) pragma kontroluje wbudowane rozwijanie funkcji umieszczono rozszerzenia. Zobacz [rozszerzenie funkcji wbudowanej](../build/reference/ob-inline-function-expansion.md) (/ Ob) opcję kompilatora, aby uzyskać powiązane informacje.  
   
-**END specyficzny dla Microsoft**  
+**END specyficzny dla Microsoft**
+
  Aby uzyskać więcej informacji na temat korzystania z **wbudowane** specyfikator, zobacz:  
   
 -   [Funkcje Członkowskie klasy wewnętrznej](../cpp/inline-functions-cpp.md)  

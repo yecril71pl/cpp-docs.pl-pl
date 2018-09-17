@@ -16,24 +16,27 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1b2093762b3c6f21d319c53a85da5ec5b430a1fd
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 7d9b61febedde1a2647df6312a8588b08c6bdad7
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32376250"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45705565"
 ---
 # <a name="stacksize"></a>STACKSIZE
-Ustawia rozmiar stosu w bajtach.  
-  
-```  
-STACKSIZE reserve[,commit]  
-```  
-  
-## <a name="remarks"></a>Uwagi  
- Odpowiednik sposobem ustawienia stosu jest z [alokacji stosu](../../build/reference/stack-stack-allocations.md) (/ STACK) opcja. W dokumentacji tej opcji, aby uzyskać szczegółowe informacje *zarezerwować* i `commit` argumentów.  
-  
- Ta opcja nie ma wpływu na biblioteki dll.  
-  
-## <a name="see-also"></a>Zobacz też  
- [Zasady dla instrukcji definicji modułu](../../build/reference/rules-for-module-definition-statements.md)
+
+Ustawia rozmiar stosu w bajtach.
+
+```
+STACKSIZE reserve[,commit]
+```
+
+## <a name="remarks"></a>Uwagi
+
+Jest równoważne sposobem ustawienia stosu [twórz stos z alokacji](../../build/reference/stack-stack-allocations.md) (/ STACK) opcji. Zobacz dokumentację dotyczącą tej opcji, aby uzyskać szczegółowe informacje na temat *zarezerwować* i `commit` argumentów.
+
+Ta opcja nie ma wpływu na biblioteki dll.
+
+## <a name="see-also"></a>Zobacz też
+
+[Zasady dla instrukcji definicji modułu](../../build/reference/rules-for-module-definition-statements.md)

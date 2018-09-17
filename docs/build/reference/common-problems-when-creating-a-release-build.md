@@ -28,46 +28,52 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8860783a2cf9fb88b28e24e0bc16eb16c0dd5d77
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: b423f173bfa2d7fdc3fd8e97fe9eb42cf8e76f3d
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32373169"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45702458"
 ---
 # <a name="common-problems-when-creating-a-release-build"></a>Typowe problemy podczas tworzenia kompilacji wydania
-Podczas tworzenia będzie zazwyczaj kompilacji i testowania z kompilacji debugowania projektu. Jeśli późniejszego kompilowania aplikacji dla kompilacji wydania, mogą wystąpić naruszenie zasad dostępu.  
-  
- Poniższa lista zawiera podstawowe różnice między debugowania i kompilacji wydania (nondebug). Istnieją inne różnice, ale poniżej przedstawiono podstawowe różnice, które mogłyby spowodować awarię aplikacji w kompilacji wydania, jeśli działa w trybie debugowania.  
-  
--   [Układ sterty](#_core_heap_layout)  
-  
--   [Kompilacja](#_core_compilation)  
-  
--   [Obsługa wskaźnika](#_core_pointer_support)  
-  
--   [Optymalizacje](#_core_optimizations)  
-  
- Zobacz [GZ (Catch błędy kompilacji wydania w kompilacji debugowania)](../../build/reference/gz-enable-stack-frame-run-time-error-checking.md) błędy w kompilacjach debugowania kompilacji opcję kompilatora, aby uzyskać informacje o wersji catch.  
-  
-##  <a name="_core_heap_layout"></a> Układ sterty  
- Układ sterty będzie przyczynę około dziewięćdziesięciu procent widocznych problemów, gdy aplikacja działa w debugowania, ale nie wersji.  
-  
- Podczas kompilowania projektu do debugowania używasz alokatora debugowania. To oznacza, że wszystkie alokacji pamięci mają bajtów guard umieszczona wokół nich. Te bajtów guard wykryć Zastąp pamięci. Układ sterty różni się od wersji i debugowania wersje, Zastąp pamięci nie może utworzyć wszelkie problemy w kompilacji debugowania, ale mogą mieć wpływ krytyczny w kompilacji wydania.  
-  
- Aby uzyskać więcej informacji, zobacz [Sprawdź, czy zastąpić pamięci](../../build/reference/checking-for-memory-overwrites.md) i [na użytek debugowania kompilacji do sprawdzenia zastąpić pamięci](../../build/reference/using-the-debug-build-to-check-for-memory-overwrite.md).  
-  
-##  <a name="_core_compilation"></a> Kompilacja  
- Wiele makr MFC i wielu zmian implementacji MFC podczas kompilacji w wersji. W szczególności ASSERT — makro daje w wyniku postanowienia kompilacji wydania, więc brak znaleziono w potwierdzenia kodu zostaną wykonane. Aby uzyskać więcej informacji, zobacz [zbadać instrukcje ASSERT](../../build/reference/using-verify-instead-of-assert.md).  
-  
- Niektóre funkcje są wbudowane, zwiększenia szybkości w kompilacji wydania. Ogólnie rzecz biorąc optymalizacji są włączone w kompilacji wydania. Różne alokatora jest również używana.  
-  
-##  <a name="_core_pointer_support"></a> Obsługa wskaźnika  
- Brak informacji o debugowaniu usuwa Dopełnienie z aplikacji. W kompilacji wydania wskaźniki stray mają większe prawdopodobieństwo wskazujący niezainicjowanej pamięci zamiast wskazujące na informacje o debugowaniu.  
-  
-##  <a name="_core_optimizations"></a> Optymalizacje  
- W zależności od charakteru niektórych segmenty kodu optymalizacji kompilatora może wygenerować nieoczekiwany kod. Jest to najmniej prawdopodobną przyczyną problemów kompilacji wydania, ale czasami wystąpić. Rozwiązania, zobacz [optymalizacji kodu](../../build/reference/optimizing-your-code.md).  
-  
-## <a name="see-also"></a>Zobacz też  
- [Kompilacje wydania](../../build/reference/release-builds.md)   
- [Naprawianie problemów kompilacji wydania](../../build/reference/fixing-release-build-problems.md)
+
+Podczas tworzenia aplikacji będzie zazwyczaj kompilowania i testowania z kompilacji debugowania projektu. Jeśli następnie utworzysz aplikację dla kompilacji oficjalnej, może zostać naruszenie zasad dostępu.
+
+Poniższa lista zawiera podstawowe różnice między debugowania, jak i kompilację wydania (nondebug). Istnieją inne różnice, ale poniżej przedstawiono podstawowe różnice, które mogłoby spowodować awarię aplikacji kompilację wydania, gdy działa w kompilacji debugowania.
+
+- [Układ stosu](#_core_heap_layout)
+
+- [Kompilacja](#_core_compilation)
+
+- [Obsługa wskaźnika](#_core_pointer_support)
+
+- [Optymalizacje](#_core_optimizations)
+
+Zobacz [GZ (przechwytywać błędy kompilacji wydania w kompilacji debugowania)](../../build/reference/gz-enable-stack-frame-run-time-error-checking.md) — opcja kompilatora informacji na temat sposobu catch wersji kompilacji błędy w kompilacjach do debugowania.
+
+##  <a name="_core_heap_layout"></a> Układ stosu
+
+Układ stosu jest przyczyną około 90% widocznych problemów, jeśli aplikacja działa w debugowania, ale nie wersji.
+
+Podczas kompilowania projektu do debugowania używają alokatora pamięci debugowania. Oznacza to, czy wszystkie alokacje pamięci mają bajtów guard umieszczone wokół nich. Te bajtów guard wykryć Zastąp pamięci. Ponieważ układ sterty różni się między Zwolnij i Debuguj wersje, Zastąp pamięci nie może utworzyć wszelkie problemy w kompilacji debugowania, ale mogą mieć wpływ krytycznego kompilację wydania.
+
+Aby uzyskać więcej informacji, zobacz [sprawdzaj zastąpić pamięci](../../build/reference/checking-for-memory-overwrites.md) i [na użytek debugowanie kompilacji Aby sprawdzić zastąpić pamięci](../../build/reference/using-the-debug-build-to-check-for-memory-overwrite.md).
+
+##  <a name="_core_compilation"></a> Kompilacja
+
+Wiele z makr MFC i większość zmian implementacji MFC, podczas tworzenia wersji. W szczególności ASSERT — makro daje w wyniku nic w kompilacji wydania, więc żaden kod w potwierdzenia zostaną wykonane. Aby uzyskać więcej informacji, zobacz [zbadać instrukcjami ASSERT](../../build/reference/using-verify-instead-of-assert.md).
+
+Niektóre funkcje są śródwierszowych dla zwiększona szybkość w kompilacji wydania. Optymalizacje ogólnie są włączone w kompilacji wydania. Alokator pamięci różnych jest również używany.
+
+##  <a name="_core_pointer_support"></a> Obsługa wskaźnika
+
+Brak informacji o debugowaniu usuwa uzupełnienie z aplikacji. W kompilacji wydania wskaźniki stray mają większe prawdopodobieństwo wskazujący niezainicjowanej pamięci, a nie wskazuje na informacje o debugowaniu.
+
+##  <a name="_core_optimizations"></a> Optymalizacje
+
+W zależności od charakteru niektórych fragmentów kodu kompilatora optymalizującego może generować nieoczekiwany kod. To jest najmniej prawdopodobne przyczyny problemów kompilacji wydania, ale czasami wystąpić. Dla rozwiązania, zobacz [optymalizacji kodu](../../build/reference/optimizing-your-code.md).
+
+## <a name="see-also"></a>Zobacz też
+
+[Kompilacje wydania](../../build/reference/release-builds.md)<br/>
+[Naprawianie problemów kompilacji wydania](../../build/reference/fixing-release-build-problems.md)

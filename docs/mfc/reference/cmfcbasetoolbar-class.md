@@ -22,15 +22,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 597adf6d7a32b537f31f9a824049dc9ffedf899f
-ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
+ms.openlocfilehash: 6cececaa0380f2e3806348e40debbf9b9ca2c351
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/27/2018
-ms.locfileid: "37037847"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45705240"
 ---
 # <a name="cmfcbasetoolbar-class"></a>Klasa CMFCBaseToolBar
-Klasa podstawowa dla pasków narzędzi.  
+Klasa bazowa dla pasków narzędzi.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -54,7 +54,7 @@ class CMFCBaseToolBar : public CPane
 |`CMFCBaseToolBar::CreateObject`|Używane przez platformę do tworzenia dynamicznych wystąpienia tego typu klasy.|  
 |[CMFCBaseToolBar::GetDockingMode](#getdockingmode)|Zwraca tryb dokowania. (Przesłania [CBasePane::GetDockingMode](../../mfc/reference/cbasepane-class.md#getdockingmode).)|  
 |[CMFCBaseToolBar::GetMinSize](#getminsize)|Zwraca minimalny rozmiar paska narzędzi. (Przesłania [CPane::GetMinSize](../../mfc/reference/cpane-class.md#getminsize).)|  
-|[CMFCBaseToolBar::OnAfterChangeParent](#onafterchangeparent)|Wywoływane przez platformę po wprowadzeniu zmian w okienku nadrzędnej. (Przesłania [CBasePane::OnAfterChangeParent](../../mfc/reference/cbasepane-class.md#onafterchangeparent).)|  
+|[CMFCBaseToolBar::OnAfterChangeParent](#onafterchangeparent)|Wywoływane przez platformę, po wprowadzeniu zmian nadrzędnego tego okienka. (Przesłania [CBasePane::OnAfterChangeParent](../../mfc/reference/cbasepane-class.md#onafterchangeparent).)|  
   
 ## <a name="inheritance-hierarchy"></a>Hierarchia dziedziczenia  
  [CObject](../../mfc/reference/cobject-class.md)  
@@ -90,19 +90,19 @@ virtual void GetMinSize(CSize& size) const;
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [out] *rozmiar*  
- Minimalny rozmiar paska narzędzi.  
+*Rozmiar*<br/>
+[out] Minimalny rozmiar paska narzędzi.  
   
 ##  <a name="onafterchangeparent"></a>  CMFCBaseToolBar::OnAfterChangeParent  
- Wywoływane przez platformę po wprowadzeniu zmian w okienku nadrzędnej.  
+ Wywoływane przez platformę, po wprowadzeniu zmian nadrzędnego tego okienka.  
   
 ```  
 virtual void OnAfterChangeParent(CWnd* pWndOldParent);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *pWndOldParent*  
- Wskaźnik do poprzedniego okna nadrzędnego.  
+*pWndOldParent*<br/>
+[in] Wskaźnik do poprzedniego okna nadrzędnego.  
   
 ## <a name="see-also"></a>Zobacz też  
  [Diagram hierarchii](../../mfc/hierarchy-chart.md)   

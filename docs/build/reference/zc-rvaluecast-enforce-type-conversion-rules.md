@@ -22,16 +22,16 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d730563d01a3b59d4f2ac6bbadc980ca51112203
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 626cabbec169d541a63dd65c22a7380718613b79
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32379887"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45706592"
 ---
 # <a name="zcrvaluecast-enforce-type-conversion-rules"></a>/Zc:rvalueCast (Wymuszanie zasad konwersji typów)
 
-Gdy **/Zc: rvaluecast** zostanie określona opcja, kompilator prawidłowo identyfikuje typu odwołania wartościowanego prawostronnie jako wyniku operacji rzutowania zgodnie ze standardem C ++ 11. Jeśli nie określono opcji, zachowanie kompilatora jest taki sam jak Visual Studio 2012.
+Gdy **/Zc: rvaluecast** opcja zostanie określona, kompilator poprawnie identyfikuje typ odwołania rvalue jako wynik operacji rzutowania zgodnie ze standardem C ++ 11. Jeśli nie określono opcji, zachowanie kompilatora jest taka sama, jak w programie Visual Studio 2012.
 
 ## <a name="syntax"></a>Składnia
 
@@ -39,11 +39,11 @@ Gdy **/Zc: rvaluecast** zostanie określona opcja, kompilator prawidłowo identy
 
 ## <a name="remarks"></a>Uwagi
 
-Jeśli **/Zc: rvaluecast** jest określony, kompilator następuje sekcji 5.4 standardem C ++ 11 i traktuje tylko rzutowanie wyrażeń, które powoduje w typach odwołań z systemem innym niż i wyrażeń, które powodują powstanie odwołania do r-wartości dla typów innych niż funkcja rzutowania jako typów wartości. Domyślnie lub jeśli **/Zc:rvalueCast-** jest określona, kompilator jest zgodna z systemem innym niż i traktuje wszystkie wyrażenia rzutowania, które powodują powstanie odwołania do r-wartości jako rvalues. Dla zgodności i wyeliminować błędy w przypadku użycia rzutowania, firma Microsoft zaleca użycie **/Zc: rvaluecast**.
+Jeśli **/Zc: rvaluecast** jest określony, kompilator postępuje ppkt 5.4 standardem C ++ 11 i traktuje tylko rzutowane wyrażenia, które powodują typy niebędące odwołaniami i rzutowane wyrażenia, które skutkują odwołaniami rvalue do typów niebędących funkcjami jako typy rvalue. Domyślnie lub jeśli **/Zc:rvalueCast-** jest określony, kompilator nie jest zgodny i traktuje wszystkie wyrażenia cast, które skutkują odwołaniami rvalue jako rvalue. Dla zgodności i wyeliminowania błędów w stosowaniu rzutowań zaleca się używanie **/Zc: rvaluecast**.
 
-Domyślnie **/Zc: rvaluecast** jest wyłączone (**/Zc:rvalueCast-**). [/ Ograniczająca-](permissive-standards-conformance.md) — opcja kompilatora niejawnie ustawia tę opcję, ale może być zastąpiona przy użyciu **/Zc:rvalueCast-**.
+Domyślnie **/Zc: rvaluecast** jest wyłączona (**/Zc:rvalueCast-**). [/ Permissive-](permissive-standards-conformance.md) — opcja kompilatora niejawnie ustawia tę opcję, ale może być zastąpiona przy użyciu **/Zc:rvalueCast-**.
 
-Użyj **/Zc: rvaluecast** przekazania wyrażeniem rzutowania jako argument do funkcji, która ma typ referencyjny wartościowany prawostronnie. Błąd kompilatora powoduje zachowanie domyślne [C2664](../../error-messages/compiler-errors-2/compiler-error-c2664.md) gdy kompilator niepoprawnie określa typ wyrażenie cast. W tym przykładzie pokazano wystąpi błąd kompilatora poprawne kodu, gdy **/Zc: rvaluecast** nie określono:
+Użyj **/Zc: rvaluecast** w przypadku przekazywania wyrażenia rzutowania jako argumentu do funkcji, która przyjmuje typ odwołania rvalue. Domyślne zachowanie powoduje błąd kompilatora [C2664](../../error-messages/compiler-errors-2/compiler-error-c2664.md) Kiedy kompilator niepoprawnie określa typ wyrażenia rzutującego. Ten przykład pokazuje błąd kompilatora poprawne kodu, gdy **/Zc: rvaluecast** nie zostanie określony:
 
 ```cpp
 // Test of /Zc:rvalueCast
@@ -63,8 +63,8 @@ struct Thing {
    T& thing2;
 };
 
-// Create a Thing, using move semantics if possible  
-template <typename T>  
+// Create a Thing, using move semantics if possible
+template <typename T>
 Thing<T> make_thing(T&& t1, T&& t2)
 {
    return (Thing<T>(std::forward<T>(t1), std::forward<T>(t2)));
@@ -74,33 +74,33 @@ struct Test1 {
    long a;
    long b;
 
-   Thing<long> test() { 
+   Thing<long> test() {
       // Use identity casts to create rvalues as arguments
       return make_thing(static_cast<long>(a), static_cast<long>(b));
    }
 };
 ```
 
-Domyślne zachowanie kompilatora nie może zgłaszać błąd C2102, gdy jest to konieczne. W tym przykładzie kompilator nie zgłaszać błąd, gdy wykonywana jest adres r-wartości utworzone przez rzutowanie tożsamości, gdy **/Zc: rvaluecast** nie określono:
+Domyślne zachowanie kompilatora może nie zgłaszać błędu C2102, gdy jest to konieczne. W tym przykładzie, kompilator nie zgłasza błędu, jeśli adres rvalue utworzony przez rzutowanie tożsamości zostanie podjęta, gdy **/Zc: rvaluecast** nie zostanie określony:
 
 ```cpp
 int main() {
    int a = 1;
-   int *p = &a;   // Okay, take address of lvalue 
+   int *p = &a;   // Okay, take address of lvalue
                   // Identity cast creates rvalue from lvalue;
    p = &(int)a;   // problem: should cause C2102: '&' requires l-value
 }
 ```
 
-Aby uzyskać więcej informacji na temat problemów zgodności w programie Visual C++, zobacz [niestandardowe zachowanie](../../cpp/nonstandard-behavior.md).
+Aby uzyskać więcej informacji na temat problemów ze zgodnością w języku Visual C++, zobacz [niestandardowe zachowanie](../../cpp/nonstandard-behavior.md).
 
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Aby ustawić tę opcję kompilatora w środowisku programowania Visual Studio
 
-1. Otwórz projekt **strony właściwości** okno dialogowe. Aby uzyskać więcej informacji, zobacz [Praca z właściwościami projektu](../../ide/working-with-project-properties.md).
+1. Otwórz projekt **stron właściwości** okno dialogowe. Aby uzyskać więcej informacji, zobacz [Praca z właściwościami projektu](../../ide/working-with-project-properties.md).
 
-1. Wybierz **właściwości konfiguracji** > **C/C++** > **wiersza polecenia** strony właściwości.
+1. Wybierz **właściwości konfiguracji** > **C/C++** > **wiersza polecenia** stronę właściwości.
 
-1. Modyfikowanie **dodatkowe opcje** właściwości, aby uwzględnić **/Zc: rvaluecast** , a następnie wybierz **OK**.
+1. Modyfikowanie **dodatkowe opcje** właściwości do uwzględnienia **/Zc: rvaluecast** , a następnie wybierz **OK**.
 
 ## <a name="see-also"></a>Zobacz także
 

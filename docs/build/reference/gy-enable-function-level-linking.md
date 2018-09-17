@@ -1,5 +1,5 @@
 ---
-title: -Gy (włączenie łączenia poziomie funkcji) | Dokumentacja firmy Microsoft
+title: -Gy (Włącz łączenie poziomie funkcji) | Dokumentacja firmy Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -23,48 +23,51 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 36e939a12cf23a9d9e476b676a5b068889414497
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 09faa1a1d2b6743b7fce31af32ba4fe1572b592e
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32376302"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45705006"
 ---
 # <a name="gy-enable-function-level-linking"></a>/Gy (Włączenie łączenia na poziomie funkcji)
-Umożliwia kompilatorowi pakowanie indywidualnych funkcji w formę spakowanych funkcji (Comdat).  
-  
-## <a name="syntax"></a>Składnia  
-  
-```  
-/Gy[-]  
-```  
-  
-## <a name="remarks"></a>Uwagi  
- Konsolidator wymaga, aby funkcje oddzielnie umieszczone jako Comdat wykluczyć lub pojedynczych funkcji w pliku DLL lub .exe kolejność.  
-  
- Opcja konsolidatora [(optymalizacje) od](../../build/reference/opt-optimizations.md) do wykluczenia nieużywane spakowanych funkcji z pliku .exe.  
-  
- Opcja konsolidatora [/order (Put funkcje w kolejności)](../../build/reference/order-put-functions-in-order.md) uwzględnienie spakowanych funkcji w kolejności określonej w pliku .exe.  
-  
- Wbudowane funkcje zawsze są dostarczane, jeśli są one tworzone jako wywołania (co ma miejsce, na przykład, jeśli ze śródwierszowaniem jest wyłączone lub podjąć adresu funkcji). Ponadto funkcji Członkowskich C++, zdefiniowane w deklaracji klasy automatycznie pakiecie; nie są inne funkcje, i wybranie tej opcji jest wymagany do kompilacji je jako spakowanych funkcji.  
-  
+
+Umożliwia kompilatorowi pakowanie indywidualnych funkcji w formę spakowanych funkcji (Comdat).
+
+## <a name="syntax"></a>Składnia
+
+```
+/Gy[-]
+```
+
+## <a name="remarks"></a>Uwagi
+
+Konsolidator wymaga, że funkcje można osobno spakowany jako Comdat aby wykluczyło lub kolejność poszczególnych funkcji w pliku DLL lub .exe.
+
+Możesz użyć opcji konsolidatora [od (optymalizacje)](../../build/reference/opt-optimizations.md) wykluczyć nieużywane spakowane funkcje z pliku .exe.
+
+Możesz użyć opcji konsolidatora [/order (umieścić funkcje w kolejności)](../../build/reference/order-put-functions-in-order.md) obejmujący opakowane funkcje w kolejności określonej w pliku .exe.
+
+Funkcje śródwierszowe zawsze są pakowane, jeśli są one tworzone jako wywołania (która pojawia się, na przykład, jeśli jest to wbudowanie jest wyłączony lub zapoznasz się z adresu funkcji). Ponadto funkcji składowych języka C++ zdefiniowane w deklaracji klasy, automatycznie są pakowane; inne funkcje nie są, a wybranie tej opcji jest wymagany do kompilowania ich jako spakowane funkcje.
+
 > [!NOTE]
->  [/Zi](../../build/reference/z7-zi-zi-debug-information-format.md) , używane Edytuj i Kontynuuj, powoduje **/Gy** opcji.  
-  
-### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Aby ustawić tę opcję kompilatora w środowisku programowania Visual Studio  
-  
-1.  Otwórz projekt **strony właściwości** okno dialogowe. Aby uzyskać więcej informacji, zobacz [Praca z właściwościami projektu](../../ide/working-with-project-properties.md).  
-  
-2.  Kliknij przycisk **C/C++** folderu.  
-  
-3.  Kliknij przycisk **generowania kodu** strony właściwości.  
-  
-4.  Modyfikowanie **włączyć konsolidacje poziomu funkcji** właściwości.  
-  
-### <a name="to-set-this-compiler-option-programmatically"></a>Aby programowo ustawić tę opcję kompilatora  
-  
--   Zobacz <xref:Microsoft.VisualStudio.VCProjectEngine.VCCLCompilerTool.EnableFunctionLevelLinking%2A>.  
-  
-## <a name="see-also"></a>Zobacz też  
- [Opcje kompilatora](../../build/reference/compiler-options.md)   
- [Ustawianie opcji kompilatora](../../build/reference/setting-compiler-options.md)
+>  [/Zi](../../build/reference/z7-zi-zi-debug-information-format.md) , używane do edycji i kontynuowania oraz powoduje **/Gy** opcji.
+
+### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Aby ustawić tę opcję kompilatora w środowisku programowania Visual Studio
+
+1. Otwórz projekt **stron właściwości** okno dialogowe. Aby uzyskać więcej informacji, zobacz [Praca z właściwościami projektu](../../ide/working-with-project-properties.md).
+
+1. Kliknij przycisk **C/C++** folderu.
+
+1. Kliknij przycisk **generowania kodu** stronę właściwości.
+
+1. Modyfikowanie **Włącz łączenie na poziomie dla funkcji** właściwości.
+
+### <a name="to-set-this-compiler-option-programmatically"></a>Aby programowo ustawić tę opcję kompilatora
+
+- Zobacz <xref:Microsoft.VisualStudio.VCProjectEngine.VCCLCompilerTool.EnableFunctionLevelLinking%2A>.
+
+## <a name="see-also"></a>Zobacz też
+
+[Opcje kompilatora](../../build/reference/compiler-options.md)<br/>
+[Ustawianie opcji kompilatora](../../build/reference/setting-compiler-options.md)
