@@ -22,12 +22,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8c3e29c3eed99c95ee92841413ceaca6e17e8565
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 277951a5425a75c9769c5a2c4104421303f677c2
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43755069"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46065344"
 ---
 # <a name="ccomobjectstack-class"></a>Klasa CComObjectStack
 
@@ -36,13 +36,13 @@ Ta klasa tworzy tymczasowy obiekt COM i dostarcza mu szkieletowych implementacji
 ## <a name="syntax"></a>Składnia
 
 ```
-template <class  Base>  
+template <class  Base>
 class CComObjectStack : public Base
 ```
 
 #### <a name="parameters"></a>Parametry
 
-*podstawowy*  
+*podstawowy*<br/>
 Z klasą pochodną [CComObjectRoot](../../atl/reference/ccomobjectroot-class.md) lub [CComObjectRootEx](../../atl/reference/ccomobjectrootex-class.md), jak również od innych interfejsu mają być obsługiwane w obiekcie.
 
 ## <a name="members"></a>Elementy członkowskie
@@ -170,7 +170,7 @@ W trybie debugowania, wywołuje `_ASSERTE`.
 
 ## <a name="see-also"></a>Zobacz też
 
-[Klasa CComAggObject](../../atl/reference/ccomaggobject-class.md)   
-[Klasa CComObject](../../atl/reference/ccomobject-class.md)   
-[Klasa CComObjectGlobal](../../atl/reference/ccomobjectglobal-class.md)   
+[Klasa CComAggObject](../../atl/reference/ccomaggobject-class.md)<br/>
+[Klasa CComObject](../../atl/reference/ccomobject-class.md)<br/>
+[Klasa CComObjectGlobal](../../atl/reference/ccomobjectglobal-class.md)<br/>
 [Klasa — Przegląd](../../atl/atl-class-overview.md)

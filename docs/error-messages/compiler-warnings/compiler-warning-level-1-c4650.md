@@ -1,5 +1,5 @@
 ---
-title: Kompilatora (poziom 1) ostrzeżenie C4650 | Dokumentacja firmy Microsoft
+title: Kompilator ostrzeżenie (poziom 1) C4650 | Dokumentacja firmy Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,18 +16,19 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6cb1c9979141e7958b6c2802aaf321efe41e9570
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: d49b21452465f26d6e696f928c04c20dc0e33307
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33283088"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46052899"
 ---
-# <a name="compiler-warning-level-1-c4650"></a>Kompilator C4650 ostrzegawcze (poziom 1)
-informacje o debugowaniu nie znajduje się w prekompilowanym nagłówkiem; tylko symbole globalne nagłówka będą dostępne  
-  
- Prekompilowanego pliku nagłówkowego nie został skompilowany z Microsoft symboliczna informacja o debugowaniu.  
-  
- Gdy są połączone, wynikowy plik wykonywalny lub dołączanej biblioteki nie będzie zawierał informacji debugowania dla symboli lokalnych zawarte we prekompilowanym nagłówku.  
-  
- To ostrzeżenie można uniknąć przez kompilację prekompilowanego pliku nagłówkowego z [/zi](../../build/reference/z7-zi-zi-debug-information-format.md) opcji wiersza polecenia.
+# <a name="compiler-warning-level-1-c4650"></a>Kompilator ostrzeżenie (poziom 1) C4650
+
+informacje o debugowaniu nie znajduje się w prekompilowanym nagłówkiem; tylko symbole globalne z nagłówka będą dostępne
+
+Prekompilowanego pliku nagłówkowego nie został skompilowany przy użyciu Microsoft symboliczne informacje debugowania.
+
+Jeśli połączone, wynikowy plik wykonywalny lub dołączana dynamicznie biblioteka nie będzie zawierać informacji debugowania dla zawartych w prekompilowany plik nagłówkowy symboli lokalnych.
+
+To ostrzeżenie można uniknąć przez kompilację prekompilowanego pliku nagłówkowego z [/zi](../../build/reference/z7-zi-zi-debug-information-format.md) opcji wiersza polecenia.

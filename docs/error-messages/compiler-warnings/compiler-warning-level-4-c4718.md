@@ -1,5 +1,5 @@
 ---
-title: Kompilatora (poziom 4) ostrzeżenie C4718 | Dokumentacja firmy Microsoft
+title: Kompilator ostrzeżenie (poziom 4) C4718 | Dokumentacja firmy Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,14 +16,15 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a92ab7a32babd181f282c799568e3a9dea436c49
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 8736902f4c3a1cfac7313806fde65d1b253716b3
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33294037"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46054236"
 ---
-# <a name="compiler-warning-level-4-c4718"></a>Kompilator C4718 ostrzegawcze (poziom 4)
-"wywołanie funkcji": wywołanie cykliczne nie ma żadnych efektów ubocznych, usuwanie  
-  
- Funkcja zawiera wywołanie cykliczne, ale w przeciwnym razie nie ma skutków ubocznych. Wywołanie tej funkcji jest usuwany. Nie dotyczy poprawność program, ale jest zachowanie. Natomiast pozostawienie wywołanie może spowodować wyjątek czasu wykonywania przepełnienie stosu, wywołanie usunięcie tej możliwości.
+# <a name="compiler-warning-level-4-c4718"></a>Kompilator ostrzeżenie (poziom 4) C4718
+
+"wywołanie funkcji": wywołanie cykliczne nie ma żadnych efektów ubocznych, usuwanie
+
+Funkcja zawiera wywołanie cykliczne, a w przeciwnym razie ma żadnych efektów ubocznych. Wywołanie tej funkcji jest usuwana. Poprawność program nie ma wpływu, ale jest to zachowanie. Natomiast opuszczania wywołanie może spowodować wyjątek przepełnienia stosu środowiska uruchomieniowego, usuwając wywołanie usuwa tę możliwość.

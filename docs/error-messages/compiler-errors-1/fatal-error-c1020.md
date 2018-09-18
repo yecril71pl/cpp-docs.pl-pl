@@ -16,30 +16,31 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1c70727b5e0d83b03099b637e0f768f65d271b05
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 3ab0da342e575c0af452ec70d1759fe34188db9a
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33224642"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46066872"
 ---
 # <a name="fatal-error-c1020"></a>Błąd krytyczny C1020
-Nieoczekiwany #endif  
-  
- `#endif` Dyrektywy nie posiada odpowiadającego `#if`, `#ifdef`, lub `#ifndef` dyrektywy. Należy się, że każdy `#endif` ma pasującego dyrektywy.  
-  
- Poniższy przykład generuje C1020:  
-  
-```  
-// C1020.cpp  
-#endif     // C1020  
-```  
-  
- Możliwe rozwiązanie:  
-  
-```  
-// C1020b.cpp  
-// compile with: /c  
-#if 1  
-#endif  
+
+Nieoczekiwany #endif
+
+`#endif` Dyrektywy nie ma odpowiadającego `#if`, `#ifdef`, lub `#ifndef` dyrektywy. Można się, że każdy `#endif` ma pasujące dyrektywy.
+
+Poniższy przykład spowoduje wygenerowanie C1020:
+
+```
+// C1020.cpp
+#endif     // C1020
+```
+
+Możliwe rozwiązanie:
+
+```
+// C1020b.cpp
+// compile with: /c
+#if 1
+#endif
 ```

@@ -30,41 +30,45 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 410677f252dca6ff3d7fba4969b27cf3a18b12ce
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 5e34147c5d8990b9ec47f2a2b6ab3d2689190252
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32392240"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46065923"
 ---
 # <a name="getoutputformat"></a>_get_output_format
-Pobiera bieżącą wartość flagi format danych wyjściowych.  
-  
+
+Pobiera bieżącą wartość flagi formatu danych wyjściowych.
+
 > [!IMPORTANT]
->  Ta funkcja jest przestarzała. Począwszy od programu Visual Studio 2015, nie jest dostępna w CRT.  
-  
-## <a name="syntax"></a>Składnia  
-  
-```  
-unsigned int _get_output_format();  
-```  
-  
-## <a name="return-value"></a>Wartość zwracana  
- Bieżąca wartość flagi format danych wyjściowych.  
-  
-## <a name="remarks"></a>Uwagi  
- Flaga format danych wyjściowych Określa funkcje sformatowany operacji We/Wy. Obecnie flaga ma dwa możliwe wartości: 0 i `_TWO_DIGIT_EXPONENT`. Jeśli `_TWO_DIGIT_EXPONENT` ustawiono wartość zmiennoprzecinkowa drukowane numery punktu z dwie cyfry wykładnika, chyba że trzecia cyfra jest wymagany przez rozmiar wykładnik. Flaga wynosi zero, zmiennoprzecinkowych danych wyjściowych zawiera trzy cyfry wykładnik, przy użyciu wartości zerowe, jeśli to konieczne uzupełnić wartość do trzech cyfr.  
-  
-## <a name="requirements"></a>Wymagania  
-  
-|Procedura|Wymagany nagłówek|  
-|-------------|---------------------|  
-|`_get_output_format`|\<stdio.h>|  
-  
- Aby uzyskać więcej informacji o zgodności, zobacz [zgodności](../c-runtime-library/compatibility.md) we wprowadzeniu.  
-  
-## <a name="see-also"></a>Zobacz też  
-[Składnia specyfikacji formatu: funkcje printf i wprintf](../c-runtime-library/format-specification-syntax-printf-and-wprintf-functions.md)  
- [printf, _printf_l, wprintf, _wprintf_l](../c-runtime-library/reference/printf-printf-l-wprintf-wprintf-l.md)   
- [printf_s, _printf_s_l, wprintf_s, _wprintf_s_l](../c-runtime-library/reference/printf-s-printf-s-l-wprintf-s-wprintf-s-l.md)   
- [_set_output_format](../c-runtime-library/set-output-format.md)  
+>  Ta funkcja jest przestarzała. Począwszy od programu Visual Studio 2015, nie jest dostępna w CRT.
+
+## <a name="syntax"></a>Składnia
+
+```
+unsigned int _get_output_format();
+```
+
+## <a name="return-value"></a>Wartość zwracana
+
+Bieżąca wartość flagi formatu danych wyjściowych.
+
+## <a name="remarks"></a>Uwagi
+
+Flagi formatu danych wyjściowych steruje funkcjami sformatowane we/wy. Obecnie flaga nie wywiera dwóch wartości: 0 i `_TWO_DIGIT_EXPONENT`. Jeśli `_TWO_DIGIT_EXPONENT` ustawiono wartość zmiennoprzecinkowa liczb zmiennoprzecinkowych zostanie wydrukowany tylko dwie cyfry wykładnika, chyba że trzecia cyfra jest wymagana przez rozmiar wykładnik potęgi. Jeśli flaga wynosi zero, dane wyjściowe zmiennoprzecinkowych, wyświetla trzy cyfry wykładnika, za pomocą zera, jeśli jest to niezbędne do wypełnienia wartości do trzech cyfr.
+
+## <a name="requirements"></a>Wymagania
+
+|Procedura|Wymagany nagłówek|
+|-------------|---------------------|
+|`_get_output_format`|\<stdio.h>|
+
+Aby uzyskać więcej informacji na temat zgodności, zobacz [zgodności](../c-runtime-library/compatibility.md) we wstępie.
+
+## <a name="see-also"></a>Zobacz też
+
+[Składnia specyfikacji formatu: funkcje printf i wprintf](../c-runtime-library/format-specification-syntax-printf-and-wprintf-functions.md)<br/>
+[printf, _printf_l, wprintf, _wprintf_l](../c-runtime-library/reference/printf-printf-l-wprintf-wprintf-l.md)<br/>
+[printf_s, _printf_s_l, wprintf_s, _wprintf_s_l](../c-runtime-library/reference/printf-s-printf-s-l-wprintf-s-wprintf-s-l.md)<br/>
+[_set_output_format](../c-runtime-library/set-output-format.md)

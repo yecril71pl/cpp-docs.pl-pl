@@ -18,12 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 381bb9505745331d2ef470c5fd4e8d55e5e742f8
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: dfadbfb887959aaad01c88cba7c3c04ef5f27873
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45705812"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46066137"
 ---
 # <a name="atl-control-wizard"></a>Kreator kontrolki ATL
 
@@ -107,7 +107,7 @@ Zawiera informacje dotyczące funkcji COM dla obiektu.
 
 ## <a name="see-also"></a>Zobacz też
 
-[Kontrolka ATL](../../atl/reference/adding-an-atl-control.md)   
-[Dodawanie funkcji do kontrolek złożonych](../../atl/adding-functionality-to-the-composite-control.md)   
+[Kontrolka ATL](../../atl/reference/adding-an-atl-control.md)<br/>
+[Dodawanie funkcji do kontrolek złożonych](../../atl/adding-functionality-to-the-composite-control.md)<br/>
 [Podstawowe informacje na temat obiektów COM ATL](../../atl/fundamentals-of-atl-com-objects.md)
 

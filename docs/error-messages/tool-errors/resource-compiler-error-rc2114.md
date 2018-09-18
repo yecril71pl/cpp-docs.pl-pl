@@ -16,14 +16,15 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7c9a60b0620a116b67faefbdf35fb708f1ac4f3a
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 115231944ce9f56e0fcec472bed29a2d5ba9d9ad
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33317625"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46063074"
 ---
 # <a name="resource-compiler-error-rc2114"></a>Błąd kompilatora zasobów RC2114
-Nazwa klasy oczekiwanego formantu  
-  
- `class` Pole instrukcji kontroli w **okna DIALOGOWEGO** instrukcja musi być jedną z następujących typów: przycisk, COMBOBOX, Edycja, LISTBOX, pasek PRZEWIJANIA, STATYCZNEJ, lub zdefiniowanej przez użytkownika. Upewnij się, że klasa jest poprawna.
+
+Nazwa klasy kontrolki oczekiwanego
+
+`class` Pola w instrukcji sterowania **okna DIALOGOWEGO** instrukcja musi być jednym z następujących typów: przycisk, COMBOBOX, Edytuj, pola listy, pasek PRZEWIJANIA, statyczna, lub zdefiniowany przez użytkownika. Upewnij się, że klasa jest poprawna.

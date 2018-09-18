@@ -1,5 +1,5 @@
 ---
-title: C3200 błąd kompilatora | Dokumentacja firmy Microsoft
+title: Błąd kompilatora C3200 | Dokumentacja firmy Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,32 +16,33 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6aa34ea006b06138290417387bd393589b630aa4
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 77be23b92d5237d2fa65557bdf36de31cd27d9d3
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33251310"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46062647"
 ---
-# <a name="compiler-error-c3200"></a>C3200 błąd kompilatora
-"template": nieprawidłowy argument szablonu dla parametru szablonu "parameter", oczekiwano szablonu klasy  
-  
- Nieprawidłowy argument jest przekazywany do szablonu klasy. Szablon klasy oczekuje szablonu jako parametr. W poniższym przykładzie wywołanie `Y<int, int> aY` wygeneruje C3200. Pierwszy parametr musi być szablonu, takie jak `Y<X, int> aY`.  
-  
-```  
-// C3200.cpp  
-template<typename T>  
-class X  
-{  
-};  
-  
-template<template<typename U> class T1, typename T2>  
-class Y  
-{  
-};  
-  
-int main()  
-{  
-   Y<int, int> y;   // C3200  
-}  
+# <a name="compiler-error-c3200"></a>Błąd kompilatora C3200
+
+"template": nieprawidłowy argument szablonu dla parametru szablonu "parametru", oczekiwano szablonu klasy
+
+Nieprawidłowy argument jest przekazywany do szablonu klasy. Szablon klasy oczekuje, że szablon jako parametr. W poniższym przykładzie wywołanie `Y<int, int> aY` wygeneruje C3200. Pierwszy parametr musi być szablonem, takich jak `Y<X, int> aY`.
+
+```
+// C3200.cpp
+template<typename T>
+class X
+{
+};
+
+template<template<typename U> class T1, typename T2>
+class Y
+{
+};
+
+int main()
+{
+   Y<int, int> y;   // C3200
+}
 ```

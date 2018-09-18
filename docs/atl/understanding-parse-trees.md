@@ -14,37 +14,37 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 561bfa3e307a08c6a3560a6a8b6d3bebd8598343
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 08c92d86cbbfd38ed4ae852ce52e3b70735812e9
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43751198"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46028093"
 ---
 # <a name="understanding-parse-trees"></a>Opis drzew analizy
 
 Można zdefiniować co najmniej jeden drzew analizy skryptu rejestratora, gdzie każdy drzewo analizy ma następującą postać:
 
-```  
-<root key>{<registry expression>}+  
+```
+<root key>{<registry expression>}+
 ```
 
 gdzie:
 
-```  
+```
 <root key> ::= HKEY_CLASSES_ROOT | HKEY_CURRENT_USER |  
     HKEY_LOCAL_MACHINE | HKEY_USERS |  
     HKEY_PERFORMANCE_DATA | HKEY_DYN_DATA |  
     HKEY_CURRENT_CONFIG | HKCR | HKCU |  
-    HKLM | HKU | HKPD | HKDD | HKCC  
-<registry expression> ::= <Add Key> | <Delete Key>  
-<Add Key> ::= [ForceRemove | NoRemove | val]<Key Name> [<Key Value>][{<Add Key>}]  
-<Delete Key> ::= Delete<Key Name>  
-<Key Name> ::= '<AlphaNumeric>+'  
-<AlphaNumeric> ::= any character not NULL, i.e. ASCII 0  
-<Key Value> ::== <Key Type><Key Name>  
-<Key Type> ::= s | d  
-<Key Value> ::= '<AlphaNumeric>'  
+    HKLM | HKU | HKPD | HKDD | HKCC
+<registry expression> ::= <Add Key> | <Delete Key>
+<Add Key> ::= [ForceRemove | NoRemove | val]<Key Name> [<Key Value>][{<Add Key>}]
+<Delete Key> ::= Delete<Key Name>
+<Key Name> ::= '<AlphaNumeric>+'
+<AlphaNumeric> ::= any character not NULL, i.e. ASCII 0
+<Key Value> ::== <Key Type><Key Name>
+<Key Type> ::= s | d
+<Key Value> ::= '<AlphaNumeric>'
 ```
 
 > [!NOTE]
@@ -52,8 +52,8 @@ gdzie:
 
 Drzewo analizy można dodać wiele kluczy i podkluczy do \<klucz główny >. W ten sposób zapewnia podklucz dojście otwartego dopóki nie zakończy się analizator składni podczas analizowania wszystkich jego podkluczy. To podejście jest bardziej wydajne niż wykonywanie operacji na jeden klucz w czasie, jak pokazano w poniższym przykładzie:
 
-```  
-HKEY_CLASSES_ROOT  
+```
+HKEY_CLASSES_ROOT
 {  
     'MyVeryOwnKey'  
     {  
@@ -61,8 +61,8 @@ HKEY_CLASSES_ROOT
         {  
             'PrettyCool'  
         }  
-    }  
-}  
+    }
+}
 ```
 
 W tym miejscu Rejestrator początkowo otwiera (tworzy) `HKEY_CLASSES_ROOT\MyVeryOwnKey`. Go następnie przygląda się, że `MyVeryOwnKey` ma podklucza. Zamiast klawisz, aby zamknąć `MyVeryOwnKey`, Rejestrator przechowuje dojście i otwiera (tworzy) `HasASubKey` przy użyciu tego uchwytu nadrzędnej. (Rejestru systemowego może być wolniejsze gdy brak dojścia nadrzędny jest otwarty). W związku z tym, otwierając `HKEY_CLASSES_ROOT\MyVeryOwnKey` , a następnie otwarcie `HasASubKey` z `MyVeryOwnKey` jako element nadrzędny jest szybsza niż otwierania `MyVeryOwnKey`, zamykanie `MyVeryOwnKey`i otwierając `MyVeryOwnKey\HasASubKey`.

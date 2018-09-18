@@ -1,5 +1,5 @@
 ---
-title: C2988 błąd kompilatora | Dokumentacja firmy Microsoft
+title: Błąd kompilatora C2988 | Dokumentacja firmy Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,14 +16,15 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 94a55b8a2fc1d272163ec65b6d8be0f06dcbca47
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 472d0cf999628b021cc3617b6454f1bfb7f0f976
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33242305"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46061778"
 ---
-# <a name="compiler-error-c2988"></a>C2988 błąd kompilatora
-Deklaracja/definicja szablonu nierozpoznawalną  
-  
- Deklaracja szablonu nie analizuje poprawnie. Sprawdź ograniczników.
+# <a name="compiler-error-c2988"></a>Błąd kompilatora C2988
+
+Deklaracja/definicja szablonu nierozpoznawalną
+
+Deklaracja szablonu nie analizuje poprawnie. Sprawdź ograniczników.

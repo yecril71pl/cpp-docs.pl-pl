@@ -1,5 +1,5 @@
 ---
-title: C3488 błąd kompilatora | Dokumentacja firmy Microsoft
+title: Błąd kompilatora C3488 | Dokumentacja firmy Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,68 +16,72 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d1f872e308c5c80e806ed13d94cd46fb27cdbd47
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 15e1a21781eed96ee3a2a1430da8e43013393912
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33257247"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46061801"
 ---
-# <a name="compiler-error-c3488"></a>C3488 błąd kompilatora
-"var" nie jest dozwolona, gdy domyślny tryb przechwytywania odbywa się przez odwołanie  
-  
- Po określeniu dla wyrażenia lambda domyślny tryb przechwytywania odbywa się przez odwołanie, nie można przekazać zmiennej w odniesieniu do klauzuli przechwytywania tego wyrażenia.  
-  
-### <a name="to-correct-this-error"></a>Aby poprawić ten błąd  
-  
--   Nie są jawnie przekazywane zmienna klauzuli przechwytywania, lub  
-  
--   Nie należy określać-reference jako domyślny tryb przechwytywania, lub  
-  
--   Określ przez wartość jako domyślny tryb przechwytywania, lub  
-  
--   Przekazanie przez wartość zmiennej, do klauzuli przechwytywania. (Może to zmianę zachowania wyrażenia lambda).  
-  
-## <a name="example"></a>Przykład  
- Poniższy przykład generuje C3488, ponieważ odwołanie do zmiennej `n` pojawia się w klauzuli przechwytywania wyrażenia lambda, którego domyślny tryb odbywa się przez odwołanie:  
-  
-```  
-// C3488a.cpp  
-  
-int main()  
-{  
-   int n = 5;  
-   [&, &n]() { return n; } (); // C3488  
-}  
-```  
-  
-## <a name="example"></a>Przykład  
- W poniższym przykładzie przedstawiono cztery możliwe rozwiązania do C3488:  
-  
-```  
-// C3488b.cpp  
-  
-int main()  
-{  
-   int n = 5;  
-  
-   // Possible resolution 1:  
-   // Do not explicitly pass &n to the capture clause.  
-   [&]() { return n; } ();  
-  
-   // Possible resolution 2:  
-   // Do not specify by-reference as the default capture mode.  
-   [&n]() { return n; } ();  
-  
-   // Possible resolution 3:  
-   // Specify by-value as the default capture mode.  
-   [=, &n]() { return n; } ();  
-  
-   // Possible resolution 4:  
-   // Pass n by value to the capture clause.  
-   [n]() { return n; } ();  
-}  
-```  
-  
-## <a name="see-also"></a>Zobacz też  
- [Wyrażenia lambda](../../cpp/lambda-expressions-in-cpp.md)
+# <a name="compiler-error-c3488"></a>Błąd kompilatora C3488
+
+"var" nie jest dozwolone, gdy domyślny tryb przechwytywania to przez odwołanie
+
+Po określeniu, czy domyślny tryb przechwytywania wyrażenia lambda jest przez odwołanie, nie można przekazać zmiennej w odniesieniu do klauzuli przechwytywania tego wyrażenia.
+
+### <a name="to-correct-this-error"></a>Aby poprawić ten błąd
+
+- Nie jawnie przekazać zmienną do klauzuli przechwytywania, lub
+
+- Nie określaj przez odwołanie jako domyślny tryb przechwytywania, lub
+
+- Określ przez wartość jako domyślny tryb przechwytywania, lub
+
+- Przekazać wartość zmiennej do klauzuli przechwytywania. (Może to zmienić zachowanie Wyrażenie lambda).
+
+## <a name="example"></a>Przykład
+
+Poniższy przykład generuje C3488, ponieważ odwołanie do zmiennej `n` występuje w klauzuli przechwytywania wyrażenia lambda, w których domyślny tryb to przez odwołanie:
+
+```
+// C3488a.cpp
+
+int main()
+{
+   int n = 5;
+   [&, &n]() { return n; } (); // C3488
+}
+```
+
+## <a name="example"></a>Przykład
+
+Poniższy przykład przedstawia cztery możliwych rozwiązań do C3488:
+
+```
+// C3488b.cpp
+
+int main()
+{
+   int n = 5;
+
+   // Possible resolution 1:
+   // Do not explicitly pass &n to the capture clause.
+   [&]() { return n; } ();
+
+   // Possible resolution 2:
+   // Do not specify by-reference as the default capture mode.
+   [&n]() { return n; } ();
+
+   // Possible resolution 3:
+   // Specify by-value as the default capture mode.
+   [=, &n]() { return n; } ();
+
+   // Possible resolution 4:
+   // Pass n by value to the capture clause.
+   [n]() { return n; } ();
+}
+```
+
+## <a name="see-also"></a>Zobacz też
+
+[Wyrażenia lambda](../../cpp/lambda-expressions-in-cpp.md)

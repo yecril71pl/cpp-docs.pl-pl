@@ -1,5 +1,5 @@
 ---
-title: Kompilatora (poziom 1) ostrzeżenie C4677 | Dokumentacja firmy Microsoft
+title: Kompilator ostrzeżenie (poziom 1) C4677 | Dokumentacja firmy Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,30 +16,32 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3511ad3100bf695cec5df97703b39e5926c71c11
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: b6a3f57ba0e3d4c15c83711a86bb8482fa8b0596
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33281697"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46049392"
 ---
-# <a name="compiler-warning-level-1-c4677"></a>Kompilator C4677 ostrzegawcze (poziom 1)
-"Funkcja": podpis elementu z systemem innym niż nieprywatnego elementu członkowskiego zawiera prywatny typ zestawu "private_type"  
-  
- Typ, który ma powszechnej dostępności poza zestaw używa typu, który ma dostęp prywatnej poza zestaw. Składnik, który odwołuje się do typu publicznego zestawu nie będzie mógł używać elementu członkowskiego typu lub elementy członkowskie, które odwołują się prywatny typ zestawu.  
-  
-## <a name="example"></a>Przykład  
- Poniższy przykład generuje C4677.  
-  
-```  
-// C4677.cpp  
-// compile with: /clr /c /W1  
-delegate void TestDel();  
-public delegate void TestDel2();  
-  
-public ref class MyClass {  
-public:  
-   static event TestDel^ MyClass_Event;   // C4677  
-   static event TestDel2^ MyClass_Event2;   // OK  
-};  
+# <a name="compiler-warning-level-1-c4677"></a>Kompilator ostrzeżenie (poziom 1) C4677
+
+'Funkcja': podpis z nieprywatnej składowej zawiera prywatny typ zestawu "private_type"
+
+Typ, który ma dostęp publiczny spoza zestawu, używa typ, który ma dostęp prywatny spoza zestawu. Składnik, który odwołuje się do typu publicznego zestawu nie będzie używać składowej typu lub elementów członkowskich, które odwołują się prywatny typ zestawu.
+
+## <a name="example"></a>Przykład
+
+Poniższy przykład spowoduje wygenerowanie C4677.
+
+```
+// C4677.cpp
+// compile with: /clr /c /W1
+delegate void TestDel();
+public delegate void TestDel2();
+
+public ref class MyClass {
+public:
+   static event TestDel^ MyClass_Event;   // C4677
+   static event TestDel2^ MyClass_Event2;   // OK
+};
 ```

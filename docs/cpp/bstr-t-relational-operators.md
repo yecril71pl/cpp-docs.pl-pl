@@ -39,34 +39,37 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 97595b29c2d79cd6209479e39987208cafe6f0f8
-ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
+ms.openlocfilehash: 0804e2a3e9d2f1fc37fae1eb72599f481e6b8c7e
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/01/2018
-ms.locfileid: "39401785"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46021007"
 ---
 # <a name="bstrt-relational-operators"></a>_bstr_t — Operatory relacyjne
-**Microsoft Specific**  
-  
- Porównuje dwa `_bstr_t` obiektów.  
-  
-## <a name="syntax"></a>Składnia  
-  
-```  
-bool operator!( ) const throw( );   
-bool operator==(const _bstr_t& str) const throw( );  
-bool operator!=(const _bstr_t& str) const throw( );  
-bool operator<(const _bstr_t& str) const throw( );  
-bool operator>(const _bstr_t& str) const throw( );  
-bool operator<=(const _bstr_t& str) const throw( );  
-bool operator>=(const _bstr_t& str) const throw( );  
-```  
-  
-## <a name="remarks"></a>Uwagi  
- Te operatory porównania dwóch `_bstr_t` leksykograficznie obiektów. Operatory zwraca wartość TRUE, jeśli mają porównania, w przeciwnym razie zwraca wartość FALSE.  
-  
- **END specyficzny dla Microsoft**  
-  
-## <a name="see-also"></a>Zobacz także  
- [_bstr_t, klasa](../cpp/bstr-t-class.md)
+
+**Microsoft Specific**
+
+Porównuje dwa `_bstr_t` obiektów.
+
+## <a name="syntax"></a>Składnia
+
+```
+bool operator!( ) const throw( ); 
+bool operator==(const _bstr_t& str) const throw( );
+bool operator!=(const _bstr_t& str) const throw( );
+bool operator<(const _bstr_t& str) const throw( );
+bool operator>(const _bstr_t& str) const throw( );
+bool operator<=(const _bstr_t& str) const throw( );
+bool operator>=(const _bstr_t& str) const throw( );
+```
+
+## <a name="remarks"></a>Uwagi
+
+Te operatory porównania dwóch `_bstr_t` leksykograficznie obiektów. Operatory zwraca wartość TRUE, jeśli mają porównania, w przeciwnym razie zwraca wartość FALSE.
+
+**END specyficzny dla Microsoft**
+
+## <a name="see-also"></a>Zobacz także
+
+[_bstr_t, klasa](../cpp/bstr-t-class.md)

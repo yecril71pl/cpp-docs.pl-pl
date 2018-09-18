@@ -16,14 +16,15 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 285994620225f5752ec9a32c510add71593c11f8
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 9b9ba2a0e7fb984468d0d6e9d75fc10cdbad3c80
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33225332"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46062530"
 ---
 # <a name="fatal-error-c1079"></a>Błąd krytyczny C1079
-ograniczenie kompilatora: Przekroczono limit rozmiaru pliku PCH  
-  
- Plik PCH przekracza limit rozmiaru 4 GB.
+
+ograniczenie kompilatora: Przekroczono limit rozmiaru pliku PCH
+
+Plik PCH przekracza limit rozmiaru 4 GB.

@@ -17,43 +17,45 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 90a6334ae0c00378f5162274dab499f3cb10bc3e
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 187c176aa90997e4841bc22e468fab079f9e8b2a
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32386933"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46062764"
 ---
 # <a name="recursive-functions"></a>Funkcje rekursywne
-Dowolnej funkcji programu C można wywołać rekursywnie; oznacza to, że może wywołać się. Liczba wywołań cyklicznych jest ograniczona do rozmiaru stosu. Zobacz [/STACK (twórz stos z alokacji)](../build/reference/stack-stack-allocations.md) (/ STACK) — opcja konsolidatora informacji o konsolidatora opcje tego Ustaw rozmiar stosu. Każdorazowo po wywołaniu funkcji nowego magazynu jest przydzielona dla parametrów i **automatycznie** i **zarejestrować** zmienne, tak aby ich wartości w poprzedniej, niedokończone wywołania nie zostaną zastąpione. Parametry są tylko bezpośrednio dostępny dla wystąpienia funkcji, w którym są tworzone. Poprzednie parametry nie są bezpośrednio dostępne dla następujących wystąpień funkcji.  
-  
- Należy pamiętać, że zmienne zadeklarowane z **statycznych** magazynu nowego magazynu z każde wywołanie cykliczne nie jest wymagana. Okres istnienia program istnieje ich magazyn. Każde odwołanie do zmiennej takie uzyskuje dostęp do tego samego obszaru magazynu.  
-  
-## <a name="example"></a>Przykład  
- W tym przykładzie przedstawiono wywołania cykliczne:  
-  
-```  
-int factorial( int num );      /* Function prototype */  
-  
-int main()  
-{  
-    int result, number;  
-    .  
-    .  
-    .  
-    result = factorial( number );  
-}  
-  
-int factorial( int num )      /* Function definition */  
-{  
-    .  
-    .  
-    .  
-    if ( ( num > 0 ) || ( num <= 10 ) )  
-        return( num * factorial( num - 1 ) );  
-}  
-  
-```  
-  
-## <a name="see-also"></a>Zobacz też  
- [Wywołania funkcji](../c-language/function-calls.md)
+
+Można wywołać dowolną funkcję w programie C rekursywnie; oznacza to może wywołać sam. Liczba wywołań rekurencyjnych jest ograniczona do rozmiaru stosu. Zobacz [/STACK (twórz stos z alokacji)](../build/reference/stack-stack-allocations.md) (/ STACK) — opcja konsolidatora uzyskać informacji na temat konsolidatora opcje tego Ustaw rozmiar stosu. Każdym wywołaniu funkcji nowy magazyn jest przydzielany dla parametrów i **automatycznie** i **zarejestrować** zmienne, tak aby ich wartości w wywołaniach poprzedniej, niedokończone nie są zastępowane. Parametry są bezpośrednio dostępne jedynie z wystąpieniem funkcji, w którym są tworzone. Poprzednie parametry nie są dostępne dla następujących wystąpień funkcji.
+
+Należy pamiętać, że zmienne zadeklarowane za pomocą **statyczne** magazynu nie wymagają nowego magazynu z każde wywołanie cykliczne. Istnieje ich przechowywania przez okres istnienia programu. Każde odwołanie do zmiennej takie uzyskuje dostęp do tego samego obszaru pamięci masowej.
+
+## <a name="example"></a>Przykład
+
+Ten przykład ilustruje rekursywne wywołania:
+
+```C
+int factorial( int num );      /* Function prototype */
+
+int main()
+{
+    int result, number;
+    .
+    .
+    .
+    result = factorial( number );
+}
+
+int factorial( int num )      /* Function definition */
+{
+    .
+    .
+    .
+    if ( ( num > 0 ) || ( num <= 10 ) )
+        return( num * factorial( num - 1 ) );
+}
+```
+
+## <a name="see-also"></a>Zobacz też
+
+[Wywołania funkcji](../c-language/function-calls.md)

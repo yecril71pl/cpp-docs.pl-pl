@@ -1,5 +1,5 @@
 ---
-title: C2074 błąd kompilatora | Dokumentacja firmy Microsoft
+title: Błąd kompilatora C2074 | Dokumentacja firmy Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,14 +16,15 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 278783563d883d150f61d4c1e54ffef8287e24b5
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 9f8beea0aa8ff319ab6bd5b33e8111a85e474549
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33163438"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46063960"
 ---
-# <a name="compiler-error-c2074"></a>C2074 błąd kompilatora
-"identyfikator": "klucz klasy" inicjowania wymaga nawiasów klamrowych  
-  
- Nie znaleziono żadnych nawiasy klamrowe wokół określonej klasy, struktury lub Unii inicjatora.
+# <a name="compiler-error-c2074"></a>Błąd kompilatora C2074
+
+'Identyfikator': "klucz klasy" Inicjowanie wymaga nawiasów klamrowych
+
+Nie było żadnych nawiasów klamrowych wokół określonej klasy, struktury lub Unii inicjatora.

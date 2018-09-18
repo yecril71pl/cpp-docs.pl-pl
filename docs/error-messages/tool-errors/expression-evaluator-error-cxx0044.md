@@ -1,5 +1,5 @@
 ---
-title: Błąd cxx0044 programu Expression Evaluator | Dokumentacja firmy Microsoft
+title: Błąd ewaluatora wyrażeń CXX0044 | Dokumentacja firmy Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,16 +17,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e7499c970396ce907a79fa5a666dd7dc1ab1e8c3
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 34adab6500683d8b78a4ce9c990eaf04c143e424
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33297898"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46064714"
 ---
 # <a name="expression-evaluator-error-cxx0044"></a>Błąd CXX0044 programu Expression Evaluator
-użycie wskaźnika _based(void) wymaga: > — operator  
-  
- Na podstawie wskaźnik `void` nie można używać bezpośrednio. Muszą tworzyć przy użyciu wskaźnika pełną **: >** operatora.  
-  
- Ten błąd jest taki sam jak CAN0044.
+
+Użyj wskaźnika _based(void) wymaga: > — operator
+
+Wskaźnik na podstawie `void` nie można używać bezpośrednio. Muszą tworzyć za pomocą wskaźnika pełną **: >** operatora.
+
+Ten błąd jest taka sama jak CAN0044.

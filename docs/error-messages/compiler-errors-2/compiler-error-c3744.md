@@ -1,5 +1,5 @@
 ---
-title: C3744 błąd kompilatora | Dokumentacja firmy Microsoft
+title: Błąd kompilatora C3744 | Dokumentacja firmy Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,18 +16,19 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f96b8445c343bdd4f606157e692c4d6ce262e369
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: d644a621fc6d8e460e1b97e5baec360de8662365
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33265886"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46063726"
 ---
-# <a name="compiler-error-c3744"></a>C3744 błąd kompilatora
-__unhook musi mieć co najmniej 3 argumenty dla zdarzeń zarządzanych  
-  
- [__Unhook](../../cpp/unhook.md) funkcja przyjmuje trzy parametry, gdy jest używany w programie, który jest kompilowany dla rozszerzeń zarządzanych dla języka C++.  
-  
- `__hook` i `__unhook` nie są zgodne z/CLR programowania. Zamiast tego użyj operatory += i-=.  
-  
- C3744 jest tylko przy użyciu opcji kompilatora przestarzałe **: oldsyntax**.  
+# <a name="compiler-error-c3744"></a>Błąd kompilatora C3744
+
+__unhook musi mieć co najmniej 3 argumenty dla zdarzeń zarządzanych
+
+[__Unhook](../../cpp/unhook.md) funkcji, należy wykonać trzy parametry, gdy jest używana w programie, który jest kompilowany dla zarządzanych rozszerzeń języka C++.
+
+`__hook` i `__unhook` nie są zgodne z/CLR programowania. Zamiast tego użyj operatorów += i-=.
+
+C3744 jest dostępna, przy użyciu opcji kompilatora przestarzałe **: oldsyntax**.

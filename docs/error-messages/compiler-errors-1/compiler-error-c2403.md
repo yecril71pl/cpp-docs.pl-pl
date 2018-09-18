@@ -1,5 +1,5 @@
 ---
-title: C2403 błąd kompilatora | Dokumentacja firmy Microsoft
+title: Błąd kompilatora C2403 | Dokumentacja firmy Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,14 +16,15 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7ed937f2b6d0ca15b1c16470c239484a4996b019
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 99de310b70b351730f181f332fc9ce8d68b7d45a
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33195623"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46041886"
 ---
-# <a name="compiler-error-c2403"></a>C2403 błąd kompilatora
-"identyfikator": rejestr musi być podstawowy/indeksem w "context"  
-  
- Rejestr używane w operand pośrednie pamięci musi być podstawowy lub indeks rejestru w tym kontekście.
+# <a name="compiler-error-c2403"></a>Błąd kompilatora C2403
+
+'Identyfikator': rejestr musi być podstawowy/indeksem w "context"
+
+Zarejestruj używane w argumencie operacji pośrednich pamięci musi być podstawowy lub indeks rejestru w tym kontekście.

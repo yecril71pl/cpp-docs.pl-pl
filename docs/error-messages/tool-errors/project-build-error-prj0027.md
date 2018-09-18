@@ -16,16 +16,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4a1c25f87913de312ca766b05edbac39f7191ff0
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: c642c678c7db29b9826449731f07ad90bc865294
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33318990"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46062062"
 ---
 # <a name="project-build-error-prj0027"></a>Błąd PRJ0027 kompilacji projektu
-Wiadomości dziennika Unicode "zawartość" zawiera zawartość, która nie mogą być przekonwertowana na stronę kodową ANSI użytkownika.  
-  
- Zwykle wyświetlany tylko to ostrzeżenie w połączeniu z błędami w tworzenie plików wsadowych i/lub odpowiedzi.  
-  
- Rozwiązanie dotyczące tego błędu jest zawartość dziennika kompilacji do użycia ANSI lub do Zainstaluj stronę kodową na komputerze i ustawić go jako domyślny system aktualizowanie.
+
+Wiadomości dziennika Unicode "treść" zawiera zawartość, która nie mogą być przekonwertowana na stronę kodową ANSI użytkownika.
+
+Zwykle widoczne są tylko to ostrzeżenie w połączeniu z błędami podczas tworzenia plików wsadowych i/lub odpowiedzi.
+
+To rozwiązanie dotyczące tego błędu można zaktualizować zawartości dziennika kompilacji, aby użyć ANSI lub Zainstaluj stronę kodową na swoim komputerze i jest ustawiony jako domyślny system.

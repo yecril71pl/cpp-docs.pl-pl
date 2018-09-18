@@ -15,17 +15,19 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9c250cba9e26d82ba129a842b61006783d13f6e3
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 0f97b28067d6257ea14255d3e049adcae99f73ef
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32382731"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46060944"
 ---
 # <a name="expression-evaluation-c"></a>Szacowanie wyrażeń (C)
-Wyrażeń zawierających przypisania, przyrost jednoargumentowe, dekrementacja jednoargumentowy lub wywołanie funkcji może mieć skutki uboczne ich oceny (efekty uboczne). Po osiągnięciu "punktu sekwencji" wszystko poprzedzających punktu sekwencji, w tym żadnych efektów ubocznych, jest gwarantowane zostało obliczone przed rozpoczęciem oceny na niczego następującego punktu sekwencji.  
-  
- "Efekty uboczne" modyfikacje spowodowane przez ocenę wyrażenia. Efekty uboczne występuje po zmianie wartości zmiennej przez Obliczanie wyrażenia. Wszystkie operacje przypisania mieć skutki uboczne. Wywołania funkcji również może mieć efekty uboczne, ich zmiany wartości elementu widoczne na zewnątrz przypisania bezpośredniego lub pośredniego przypisania za pomocą wskaźnika.  
-  
-## <a name="see-also"></a>Zobacz też  
- [Operandy i wyrażenia](../c-language/operands-and-expressions.md)
+
+Wyrażeniami przypisania, przyrost Jednoelementowy, dekrementacja jednoargumentowe lub wywołanie funkcji może mieć skutki uboczne ich oceny (efekty uboczne). Po osiągnięciu "punktu sekwencji" wszystko, czego poprzedzających punktu sekwencji, w tym wszelkie efekty uboczne, jest gwarantowane poddane ocenie, przed rozpoczęciem oceny sporządzania następującego punktu sekwencji.
+
+"Efekty uboczne" zmian spowodowanych wyniku obliczenia wyrażenia. Efekty uboczne występuje po zmianie wartości zmiennej przez Obliczanie wyrażenia. Wszystkie operacje przypisania mają skutki uboczne. Wywołania funkcji można również mieć skutki uboczne w przypadku zmiany wartości elementu widocznego na zewnątrz, przypisania bezpośredniego lub pośredniego przypisania za pomocą wskaźnika.
+
+## <a name="see-also"></a>Zobacz też
+
+[Operandy i wyrażenia](../c-language/operands-and-expressions.md)

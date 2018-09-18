@@ -42,12 +42,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b81ace9c9fe5cf21d93f7e7dd4a8b5f2f2c5d726
-ms.sourcegitcommit: 6e3cf8df676d59119ce88bf5321d063cf479108c
+ms.openlocfilehash: 73abd8ef0ca29ee9e7f2312cc44a8178fc464261
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/22/2018
-ms.locfileid: "34451553"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46064636"
 ---
 # <a name="chdir-wchdir"></a>_chdir, _wchdir
 
@@ -66,26 +66,26 @@ int _wchdir(
 
 ### <a name="parameters"></a>Parametry
 
-*DirName*<br/>
-Ścieżka katalogu roboczego nowych.
+*nazwa_kat*<br/>
+Ścieżka do nowego katalogu roboczego.
 
 ## <a name="return-value"></a>Wartość zwracana
 
-Funkcje te zwracają wartość 0 w przypadku powodzenia. Zwracana wartość -1 oznacza błąd. Jeśli nie można odnaleźć określonej ścieżki, **errno** ustawiono **enoent —**. Jeśli *dirname* jest **NULL**, program obsługi nieprawidłowych parametrów zostanie wywołany, zgodnie z opisem w [sprawdzanie poprawności parametru](../../c-runtime-library/parameter-validation.md). Jeśli jest dozwolone wykonywanie, aby kontynuować, **errno** ustawiono **einval —** i funkcja zwraca wartość -1.
+Te funkcje zwracają wartość 0, jeśli kończy się pomyślnie. Zwracana wartość-1 wskazuje błąd. Jeśli nie można odnaleźć określonej ścieżki, **errno** ustawiono **ENOENT**. Jeśli *nazwa_kat* jest **NULL**, procedura obsługi nieprawidłowego parametru zostanie wywołana, zgodnie z opisem w [Parameter Validation](../../c-runtime-library/parameter-validation.md). Jeśli wykonanie może być kontynuowane, **errno** ustawiono **EINVAL** a funkcja zwraca wartość -1.
 
 ## <a name="remarks"></a>Uwagi
 
-**_Chdir —** funkcja zmienia bieżący katalog roboczy na katalog określony przez *dirname*. *Dirname* parametru musi odwoływać się do istniejącego katalogu. Tej funkcji można zmienić bieżący katalog roboczy na dowolnym dysku. Jeśli określono litera dysku w *dirname*, również zmiany domyślną literę dysku. Na przykład A to litera dysku domyślne \BIN jest bieżący katalog roboczy, następujące wywołanie zmiany bieżącego katalogu roboczego na dysku C i ustanawia C jako nowego dysku domyślne:
+**_Chdir —** funkcji zmienia bieżący katalog roboczy do katalogu określonego przez *nazwa_kat*. *Nazwa_kat* parametru musi odwoływać się do istniejącego katalogu. Tę funkcję można zmienić bieżący katalog roboczy na dowolnym dysku. Jeśli litera dysku została określona w *nazwa_kat*, również zmiany domyślną literę dysku. Na przykład jeśli jest domyślną literę dysku i \BIN jest bieżący katalog roboczy, poniższe wywołanie zmienia bieżący katalog roboczy na dysku C i ustanawia C jako nowego dysku domyślne:
 
 ```C
 _chdir("c:\temp");
 ```
 
-Jeśli używasz opcjonalne ukośnika odwrotnego (**&#92;**) w ścieżkach, należy umieścić dwa razy (**&#92;&#92;**) ciągu C do reprezentowania pojedynczego ukośnika odwrotnego ( **&#92;**).
+Jeśli używasz opcjonalne ukośnika odwrotnego (**&#92;**) w ścieżkach, należy umieścić dwa ukośniki odwrotne (**&#92;&#92;**) ciągu języka C do reprezentowania pojedynczy ukośnik odwrotny ( **&#92;**).
 
-**_wchdir —** jest wersja znaków dwubajtowych **_chdir —**; *dirname* argument **_wchdir —** jest ciągiem znaków dwubajtowych. **_wchdir —** i **_chdir —** zachowują się tak samo w przeciwnym razie wartość.
+**_wchdir —** to wersja znaku dwubajtowego **_chdir —**; *nazwa_kat* argument **_wchdir —** jest ciągiem znaku dwubajtowego. **_wchdir —** i **_chdir —** zachowują się identycznie.
 
-### <a name="generic-text-routine-mapping"></a>Rutynowe mapowanie — zwykły tekst:
+### <a name="generic-text-routine-mapping"></a>Mapowania procedur zwykłego tekstu:
 
 |Procedura tchar.h|_UNICODE i _MBCS niezdefiniowane|_MBCS zdefiniowano|_UNICODE zdefiniowano|
 |---------------------|--------------------------------------|--------------------|-----------------------|
@@ -98,7 +98,7 @@ Jeśli używasz opcjonalne ukośnika odwrotnego (**&#92;**) w ścieżkach, nale�
 |**_chdir**|\<direct.h>|\<errno.h>|
 |**_wchdir**|\<Direct.h > lub \<wchar.h >|\<errno.h>|
 
-Aby uzyskać więcej informacji o zgodności, zobacz [zgodności](../../c-runtime-library/compatibility.md).
+Aby uzyskać więcej informacji na temat zgodności, zobacz [zgodności](../../c-runtime-library/compatibility.md).
 
 ## <a name="example"></a>Przykład
 
@@ -137,10 +137,10 @@ int main( int argc, char *argv[] )
 ```
 
 ```Output
- Volume in drive C has no label.
- Volume Serial Number is 2018-08A1
+Volume in drive C has no label.
+Volume Serial Number is 2018-08A1
 
- Directory of c:\windows
+Directory of c:\windows
 
 08/29/2002  04:00 AM         1,004,032 explorer.exe
 12/17/2002  04:43 PM            10,752 hh.exe

@@ -1,5 +1,5 @@
 ---
-title: C3384 błąd kompilatora | Dokumentacja firmy Microsoft
+title: Błąd kompilatora C3384 | Dokumentacja firmy Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,28 +16,30 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ab09df08edb9f1d5808f2214535c76b20fda62b3
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 75c904556951838de0308aea499980132440cbdb
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33251409"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46061607"
 ---
-# <a name="compiler-error-c3384"></a>C3384 błąd kompilatora
-"type_parameter": wartość ograniczenia i ograniczenie ref wzajemnie się wykluczają  
-  
- Nie można ograniczyć typu ogólnego zarówno `value class` i `ref class`.  
-  
- Zobacz [ograniczenia dotyczące parametrów typu ogólnego (C + +/ CLI)](../../windows/constraints-on-generic-type-parameters-cpp-cli.md) Aby uzyskać więcej informacji.  
-  
-## <a name="example"></a>Przykład  
- Poniższy przykład generuje C3384.  
-  
-```  
-// C3384.cpp  
-// compile with: /c /clr  
-generic <typename T>  
-where T : ref class  
-where T : value class   // C3384  
-ref class List {};  
+# <a name="compiler-error-c3384"></a>Błąd kompilatora C3384
+
+"type_parameter": wartość ograniczenia i ograniczenie ref wzajemnie się wykluczają
+
+Nie można ograniczyć typu ogólnego, zarówno `value class` i `ref class`.
+
+Zobacz [ograniczenia dotyczące parametrów typu ogólnego (C + +/ CLI)](../../windows/constraints-on-generic-type-parameters-cpp-cli.md) Aby uzyskać więcej informacji.
+
+## <a name="example"></a>Przykład
+
+Poniższy przykład spowoduje wygenerowanie C3384.
+
+```
+// C3384.cpp
+// compile with: /c /clr
+generic <typename T>
+where T : ref class
+where T : value class   // C3384
+ref class List {};
 ```

@@ -1,5 +1,5 @@
 ---
-title: C2599 błąd kompilatora | Dokumentacja firmy Microsoft
+title: Błąd kompilatora C2599 | Dokumentacja firmy Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,35 +16,36 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ce7741e878b8743346bf9a088d973d65c4d7c290
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 515e380ea87b8ea648a00644ce8bca6428903f18
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33232942"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46044486"
 ---
-# <a name="compiler-error-c2599"></a>C2599 błąd kompilatora
-Instrukcja "enum": deklaracja przekazująca dalej typ wyliczenia jest niedozwolone.  
-  
- Kompilator nie obsługuje już deklaracja przekazująca dalej wyliczenie zarządzanych.  
-  
- Deklaracja przekazująca dalej typ wyliczeniowy nie jest dozwolona w obszarze [/Za](../../build/reference/za-ze-disable-language-extensions.md).  
-  
- Poniższy przykład generuje C2599:  
-  
-```  
-// C2599.cpp  
-// compile with: /clr /c  
-enum class Status;   // C2599  
-  
-enum class Status2 { stop2, hold2, go2};   
-  
-ref struct MyStruct {  
-   // Delete the following line to resolve.  
-   Status m_status;  
-  
-   Status2 m_status2;   // OK  
-};  
-  
-enum class Status { stop, hold, go };  
+# <a name="compiler-error-c2599"></a>Błąd kompilatora C2599
+
+"enum": deklaracja typu wyliczenia jest niedozwolone.
+
+Kompilator nie obsługuje już deklaracją do przodu zarządzanych wyliczenia.
+
+Deklaracja typu wyliczeniowego jest niedozwolona w [/Za](../../build/reference/za-ze-disable-language-extensions.md).
+
+Poniższy przykład spowoduje wygenerowanie C2599:
+
+```
+// C2599.cpp
+// compile with: /clr /c
+enum class Status;   // C2599
+
+enum class Status2 { stop2, hold2, go2};
+
+ref struct MyStruct {
+   // Delete the following line to resolve.
+   Status m_status;
+
+   Status2 m_status2;   // OK
+};
+
+enum class Status { stop, hold, go };
 ```

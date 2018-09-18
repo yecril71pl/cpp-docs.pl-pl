@@ -30,34 +30,37 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: fcc842ef134d5f61cf634debe9dd16449b48bbb8
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: 84ca3e752f91a058b0b344b5862f2ea7e45bcf48
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45724025"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46064920"
 ---
 # <a name="unlock"></a>_unlock
-Zwalnia blokadę wielu wątków.  
-  
+
+Zwalnia blokadę wielu wątków.
+
 > [!IMPORTANT]
->  Ta funkcja jest przestarzała. Począwszy od programu Visual Studio 2015, nie jest dostępna w CRT.  
-  
-## <a name="syntax"></a>Składnia  
-  
-```  
-void __cdecl _unlock(  
-   int locknum  
-);  
-```  
-  
-#### <a name="parameters"></a>Parametry  
+>  Ta funkcja jest przestarzała. Począwszy od programu Visual Studio 2015, nie jest dostępna w CRT.
+
+## <a name="syntax"></a>Składnia
+
+```
+void __cdecl _unlock(
+   int locknum
+);
+```
+
+#### <a name="parameters"></a>Parametry
+
 *locknum*<br/>
-[in] Identyfikator blokady do wydania.  
-  
-## <a name="requirements"></a>Wymagania  
- **Źródło:** mlock.c  
-  
-## <a name="see-also"></a>Zobacz też  
- [Alfabetyczne odwołanie funkcji](../c-runtime-library/reference/crt-alphabetical-function-reference.md)   
- [_lock](../c-runtime-library/lock.md)
+[in] Identyfikator blokady do wydania.
+
+## <a name="requirements"></a>Wymagania
+ **Źródło:** mlock.c
+
+## <a name="see-also"></a>Zobacz też
+
+[Alfabetyczne zestawienie funkcji](../c-runtime-library/reference/crt-alphabetical-function-reference.md)<br/>
+[_lock](../c-runtime-library/lock.md)

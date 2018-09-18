@@ -25,12 +25,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 92a6bb4cbd80cf0fa36b65d81a327b822493e264
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: e2c3e0eb625c492cb9f0e9a1234d33149ac201a1
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43752700"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46040235"
 ---
 # <a name="cworkerthread-class"></a>Klasa CWorkerThread
 
@@ -42,13 +42,13 @@ Ta klasa tworzy wątek roboczy lub korzysta z istniejącą grupę, czeka na co n
 ## <a name="syntax"></a>Składnia
 
 ```
-template <class ThreadTraits = DefaultThreadTraits>  
+template <class ThreadTraits = DefaultThreadTraits>
 class CWorkerThread
 ```
 
 #### <a name="parameters"></a>Parametry
 
-*ThreadTraits*  
+*ThreadTraits*<br/>
 Klasa dostarczanie funkcji tworzenia wątku, takich jak [CRTThreadTraits](../../atl/reference/crtthreadtraits-class.md) lub [Win32ThreadTraits](../../atl/reference/win32threadtraits-class.md).
 
 ## <a name="members"></a>Elementy członkowskie
@@ -115,13 +115,13 @@ HRESULT AddHandle(
 
 ### <a name="parameters"></a>Parametry
 
-*hObject*  
+*hObject*<br/>
 Dojście do obiektu oczekujący.
 
-*pClient*  
+*pClient*<br/>
 Wskaźnik do [IWorkerThreadClient](../../atl/reference/iworkerthreadclient-interface.md) interfejsu na obiekt wywoływany, gdy jest sygnalizowane uchwytu.
 
-*dwParam*  
+*dwParam*<br/>
 Parametr do przekazania do [IWorkerThreadClient::Execute](../../atl/reference/iworkerthreadclient-interface.md#execute) po zasygnalizowania uchwytu.
 
 ### <a name="return-value"></a>Wartość zwracana
@@ -146,16 +146,16 @@ HRESULT AddTimer(
 
 ### <a name="parameters"></a>Parametry
 
-*dwInterval*  
+*dwInterval*<br/>
 Określa okres czasomierza w milisekundach.
 
-*pClient*  
+*pClient*<br/>
 Wskaźnik do [IWorkerThreadClient](../../atl/reference/iworkerthreadclient-interface.md) interfejsu na obiekt wywoływany, gdy jest sygnalizowane uchwytu.
 
-*dwParam*  
+*dwParam*<br/>
 Parametr do przekazania do [IWorkerThreadClient::Execute](../../atl/reference/iworkerthreadclient-interface.md#execute) po zasygnalizowania uchwytu.
 
-*phTimer*  
+*phTimer*<br/>
 [out] Adres dojście do zmiennej, w przypadku powodzenia odbiera uchwyt do nowo utworzonego czasomierza.
 
 ### <a name="return-value"></a>Wartość zwracana
@@ -224,7 +224,7 @@ HRESULT Initialize(CWorkerThread<ThreadTraits>* pThread) throw();
 
 ### <a name="parameters"></a>Parametry
 
-*pThread*  
+*pThread*<br/>
 Istniejącego wątku roboczego.
 
 ### <a name="return-value"></a>Wartość zwracana
@@ -249,7 +249,7 @@ HRESULT RemoveHandle(HANDLE hObject) throw();
 
 ### <a name="parameters"></a>Parametry
 
-*hObject*  
+*hObject*<br/>
 Dojście do usunięcia.
 
 ### <a name="return-value"></a>Wartość zwracana
@@ -270,7 +270,7 @@ HRESULT Shutdown(DWORD dwWait = ATL_WORKER_THREAD_WAIT) throw();
 
 ### <a name="parameters"></a>Parametry
 
-*dwWait*  
+*dwWait*<br/>
 Czas w milisekundach czas oczekiwania, aż wątek procesu roboczego zamknąć. ATL_WORKER_THREAD_WAIT wartość domyślna to 10 sekund. Jeśli to konieczne, można zdefiniować własne wartości dla tego symbolu, przed dołączeniem atlutil.h.
 
 ### <a name="return-value"></a>Wartość zwracana
@@ -285,7 +285,7 @@ Należy pamiętać, że wywołanie `Shutdown` inicjowane za pomocą wskaźnika d
 
 ## <a name="see-also"></a>Zobacz też
 
-[DefaultThreadTraits](atl-typedefs.md#defaultthreadtraits)   
-[Klasy](../../atl/reference/atl-classes.md)   
-[Wielowątkowość: Tworzenie wątków roboczych](../../parallel/multithreading-creating-worker-threads.md)   
+[DefaultThreadTraits](atl-typedefs.md#defaultthreadtraits)<br/>
+[Klasy](../../atl/reference/atl-classes.md)<br/>
+[Wielowątkowość: tworzenie wątków roboczych](../../parallel/multithreading-creating-worker-threads.md)<br/>
 [Interfejs IWorkerThreadClient](../../atl/reference/iworkerthreadclient-interface.md)

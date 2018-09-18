@@ -1,5 +1,5 @@
 ---
-title: C2815 błąd kompilatora | Dokumentacja firmy Microsoft
+title: Błąd kompilatora C2815 | Dokumentacja firmy Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,27 +16,28 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 43eadfe636250c0acab9bcb2cd09323292f26a43
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 192c991cfee9fb1925601719ea61c47c5227c753
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33240821"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46057664"
 ---
-# <a name="compiler-error-c2815"></a>C2815 błąd kompilatora
-"operator delete": pierwszy formalny parametr musi być "void *", ale zostało użyte "param"  
-  
- Zdefiniowanych przez użytkownika [operatora delete](../../standard-library/new-operators.md#op_delete) funkcja przyjmuje pierwszy formalny parametr typu `void *`.  
-  
- Poniższy przykład generuje C2815:  
-  
-```  
-// C2815.cpp  
-// compile with: /c  
-class CMyClass {  
-public:  
-   void mf1(int *a);  
-   void operator delete(CMyClass *);   // C2815  
-   void operator delete(void *);   
-};  
+# <a name="compiler-error-c2815"></a>Błąd kompilatora C2815
+
+"operator delete": pierwszy formalny parametr musi być "void *", ale zostało użyte "param"
+
+Dowolny zdefiniowany przez użytkownika [operatora delete](../../standard-library/new-operators.md#op_delete) funkcji, należy wykonać pierwszy formalny parametr typu `void *`.
+
+Poniższy przykład spowoduje wygenerowanie C2815:
+
+```
+// C2815.cpp
+// compile with: /c
+class CMyClass {
+public:
+   void mf1(int *a);
+   void operator delete(CMyClass *);   // C2815
+   void operator delete(void *);
+};
 ```

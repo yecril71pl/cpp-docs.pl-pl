@@ -17,18 +17,20 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 6da4067766eddab40bac75ee73d825dc5886dd0f
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: d9db21b7531f71ba40be64018b71c4e2e3e555e2
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33088280"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46064974"
 ---
 # <a name="data-source-determining-the-schema-of-the-data-source-odbc"></a>Źródło danych: określanie schematu źródła danych (ODBC)
-Ten temat dotyczy klasach MFC ODBC.  
+
+Ten temat dotyczy klas MFC ODBC.  
   
- Aby skonfigurować elementy członkowskie danych w sieci `CRecordset` obiekty, musisz wiedzieć schematu źródła danych, z którym chcesz się połączyć. Określanie schematu źródła danych polega na uzyskaniu listę tabel w źródle danych, lista kolumn w każdej tabeli, typ danych kolumn i istnienie żadnych indeksów.  
+Do skonfigurowania elementów członkowskich danych w Twojej `CRecordset` obiektów, musisz znać schematu źródła danych, z którym chcesz się połączyć. Określanie schematu źródła danych polega na uzyskiwanie listę tabel w źródle danych, lista kolumn w każdej tabeli, typ danych w każdej kolumnie i istnienie żadnych indeksów.  
   
 ## <a name="see-also"></a>Zobacz też  
- [Źródła danych (ODBC)](../../data/odbc/data-source-odbc.md)   
- [Źródło danych: zarządzanie połączeniami (ODBC)](../../data/odbc/data-source-managing-connections-odbc.md)
+
+[Źródło danych (ODBC)](../../data/odbc/data-source-odbc.md)<br/>
+[Źródło danych: zarządzanie połączeniami (ODBC)](../../data/odbc/data-source-managing-connections-odbc.md)

@@ -1,5 +1,5 @@
 ---
-title: C3217 błąd kompilatora | Dokumentacja firmy Microsoft
+title: Błąd kompilatora C3217 | Dokumentacja firmy Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,44 +16,45 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9eb8ee0f6e00ac1bfb2ad531f2236bb2d9208d27
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: c407e8f77990bdbeea143c252a27292ac282497e
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33251297"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46063492"
 ---
-# <a name="compiler-error-c3217"></a>C3217 błąd kompilatora
-"param": parametr generyczny nie ograniczony w tej deklaracji  
-  
- Ograniczenie został dotknięty uformowany; ograniczenia parametru ogólnego należy uzgodnić z parametru szablonu klasy ogólnej.  
-  
- Poniższy przykład generuje C3217:  
-  
-```  
-// C3217.cpp  
-// compile with: /clr  
-interface struct A {};  
-  
-generic <class T>  
-ref class C {  
-   generic <class T1>  
-   where T : A   // C3217  
-   void f();  
-};  
-```  
-  
- W poniższym przykładzie pokazano możliwe rozwiązania:  
-  
-```  
-// C3217b.cpp  
-// compile with: /clr /c  
-interface struct A {};  
-  
-generic <class T>  
-ref class C {  
-   generic <class T1>  
-   where T1 : A  
-   void f();  
-};  
+# <a name="compiler-error-c3217"></a>Błąd kompilatora C3217
+
+"param": parametr generyczny nie może być ograniczony w tej deklaracji
+
+Ograniczenie zostało ill sformułowany; Parametr ogólny ograniczenia należy uzgodnić z parametru szablonu klasy ogólnej.
+
+Poniższy przykład spowoduje wygenerowanie C3217:
+
+```
+// C3217.cpp
+// compile with: /clr
+interface struct A {};
+
+generic <class T>
+ref class C {
+   generic <class T1>
+   where T : A   // C3217
+   void f();
+};
+```
+
+W poniższym przykładzie pokazano możliwe rozwiązania:
+
+```
+// C3217b.cpp
+// compile with: /clr /c
+interface struct A {};
+
+generic <class T>
+ref class C {
+   generic <class T1>
+   where T1 : A
+   void f();
+};
 ```

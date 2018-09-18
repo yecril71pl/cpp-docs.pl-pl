@@ -1,5 +1,5 @@
 ---
-title: C3017 błąd kompilatora | Dokumentacja firmy Microsoft
+title: Błąd kompilatora C3017 | Dokumentacja firmy Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,34 +16,35 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 74028dc1d1dd96d2e84ff153fcf9b51fa20f1e13
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 694c4f57df22184c1a6981953d1057252c94030a
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33242473"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46061685"
 ---
-# <a name="compiler-error-c3017"></a>C3017 błąd kompilatora
-test końcowy w OpenMP instrukcji "for" posiada niewłaściwy formularz  
-  
- A `for` pętli w instrukcji OpenMP musi być w pełni i jawnie określona.  
-  
- Poniższy przykład generuje C3017:  
-  
-```  
-// C3017.cpp  
-// compile with: /openmp  
-int main()  
-{  
-   int i = 0, j = 10;  
-  
-   #pragma omp parallel  
-   {  
-      #pragma omp for  
-      for (i = 0; i; ++i)   // C3017  
-      // Try the following line instead:  
-      // for (i = 0; i < 10; ++i)  
-         ;  
-   }  
-}  
+# <a name="compiler-error-c3017"></a>Błąd kompilatora C3017
+
+test końcowy w OpenMP instrukcji "for" posiada niewłaściwy formularz
+
+A `for` pętli w instrukcji OpenMP musi być w pełni i jawnie określona.
+
+Poniższy przykład spowoduje wygenerowanie C3017:
+
+```
+// C3017.cpp
+// compile with: /openmp
+int main()
+{
+   int i = 0, j = 10;
+
+   #pragma omp parallel
+   {
+      #pragma omp for
+      for (i = 0; i; ++i)   // C3017
+      // Try the following line instead:
+      // for (i = 0; i < 10; ++i)
+         ;
+   }
+}
 ```

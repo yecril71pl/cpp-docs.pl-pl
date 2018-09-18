@@ -1,5 +1,5 @@
 ---
-title: Kompilatora (poziom 1) ostrzeżenie C4715 | Dokumentacja firmy Microsoft
+title: Kompilator ostrzeżenie (poziom 1) C4715 | Dokumentacja firmy Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,59 +16,60 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 57bd7f86a06c060a469d31e5fbdfcfbd7afb8c80
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 7b3de829992bfa650280768a2fcd761feaeaece0
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33283027"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46061373"
 ---
-# <a name="compiler-warning-level-1-c4715"></a>Kompilator C4715 ostrzegawcze (poziom 1)
-"Funkcja": nie niewszystkie ścieżki kodu zwracają wartość  
-  
- Określona funkcja potencjalnie nie może zwracać wartości.  
-  
-## <a name="example"></a>Przykład  
-  
-```  
-// C4715a.cpp  
-// compile with: /W1 /LD  
-int func1( int i )  
-{  
-   if( i )  
-   return 3;  // C4715 warning, nothing returned if i == 0  
-}  
-```  
-  
- Aby uniknąć tego ostrzeżenia, należy zmodyfikować kod, tak aby wszystkie ścieżki przypisać wartość zwracaną funkcji:  
-  
-```  
-// C4715b.cpp  
-// compile with: /LD  
-int func1( int i )  
-{  
-   if( i ) return 3;  
-   else return 0;     // OK, always returns a value  
-}  
-```  
-  
- Istnieje możliwość, że kod może zawierać wywołania funkcji, które nigdy nie powraca, jak w poniższym przykładzie:  
-  
-```  
-// C4715c.cpp  
-// compile with: /W1 /LD  
-void fatal()  
-{  
-}  
-int glue()  
-{  
-   if(0)  
-      return 1;  
-   else if(0)  
-      return 0;  
-   else  
-      fatal();   // C4715  
-}  
-```  
-  
- Ten kod również generuje ostrzeżenie, ponieważ wiadomo, że kompilator `fatal` nigdy nie zwraca. Aby uniknąć tego kodu generuje komunikat o błędzie, należy zadeklarować `fatal` przy użyciu [__declspec(noreturn)](../../cpp/noreturn.md).
+# <a name="compiler-warning-level-1-c4715"></a>Kompilator ostrzeżenie (poziom 1) C4715
+
+'Funkcja': niewszystkie ścieżki kodu zwracają wartość
+
+Określona funkcja potencjalnie nie może zwracać wartość.
+
+## <a name="example"></a>Przykład
+
+```
+// C4715a.cpp
+// compile with: /W1 /LD
+int func1( int i )
+{
+   if( i )
+   return 3;  // C4715 warning, nothing returned if i == 0
+}
+```
+
+Aby uniknąć tego ostrzeżenia, należy zmodyfikować kod, tak aby wszystkie ścieżki przypisać wartość zwracaną do funkcji:
+
+```
+// C4715b.cpp
+// compile with: /LD
+int func1( int i )
+{
+   if( i ) return 3;
+   else return 0;     // OK, always returns a value
+}
+```
+
+Istnieje możliwość, że Twój kod może zawierać wywołania do funkcji, która nigdy nie wraca, jak w poniższym przykładzie:
+
+```
+// C4715c.cpp
+// compile with: /W1 /LD
+void fatal()
+{
+}
+int glue()
+{
+   if(0)
+      return 1;
+   else if(0)
+      return 0;
+   else
+      fatal();   // C4715
+}
+```
+
+Ten kod generuje również ostrzeżenie, ponieważ kompilator nie może określić, że `fatal` nigdy nie zwraca. Aby zapobiec sytuacji, w której ten kod generuje komunikat o błędzie, Zadeklaruj `fatal` przy użyciu [__declspec(noreturn)](../../cpp/noreturn.md).

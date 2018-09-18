@@ -1,5 +1,5 @@
 ---
-title: C3076 błąd kompilatora | Dokumentacja firmy Microsoft
+title: Błąd kompilatora C3076 | Dokumentacja firmy Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,33 +16,35 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 465dd45c4ddfc41e3ba7a059619028711d6f73e2
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: f2d507e13c6dde451e6693774f708333a9301f8b
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33247582"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46064064"
 ---
-# <a name="compiler-error-c3076"></a>C3076 błąd kompilatora
-"instance": nie można osadzić wystąpienia typu referencyjnego "type" w typie natywnym  
-  
- Typ natywny nie może zawierać wystąpienia typu CLR.  
-  
- Aby uzyskać więcej informacji, zobacz [semantyka stosu C++ dla typów referencyjnych](../../dotnet/cpp-stack-semantics-for-reference-types.md).  
-  
-## <a name="example"></a>Przykład  
- Poniższy przykład generuje C3076.  
-  
-```  
-// C3076.cpp  
-// compile with: /clr /c  
-ref struct U {};  
-  
-struct V {  
-   U y;   // C3076  
-};  
-  
-ref struct W {  
-   U y;   // OK  
-};  
+# <a name="compiler-error-c3076"></a>Błąd kompilatora C3076
+
+'instancja': nie można osadzić wystąpienia typu referencyjnego "type" w typie natywnym
+
+Typ natywny nie może zawierać wystąpienia typu CLR.
+
+Aby uzyskać więcej informacji, zobacz [semantyka stosu C++ dla typów odwołań](../../dotnet/cpp-stack-semantics-for-reference-types.md).
+
+## <a name="example"></a>Przykład
+
+Poniższy przykład spowoduje wygenerowanie C3076.
+
+```
+// C3076.cpp
+// compile with: /clr /c
+ref struct U {};
+
+struct V {
+   U y;   // C3076
+};
+
+ref struct W {
+   U y;   // OK
+};
 ```

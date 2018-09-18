@@ -33,36 +33,39 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1bb491e8073acf2af525814b595ce79365df0fa1
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 63da23d30b12859c79427432bce38e1156e190de
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32389042"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46063336"
 ---
 # <a name="math-error-constants"></a>Stałe błędów matematycznych
-## <a name="syntax"></a>Składnia  
-  
-```  
-  
-#include <math.h>  
-  
-```  
-  
-## <a name="remarks"></a>Uwagi  
- Procedury matematyczne biblioteki wykonawczej mogą generować stałe błędów matematycznych.  
-  
- Te błędy, opisane w następujący sposób odpowiadają typów wyjątków zdefiniowane w MATEMATYCZNYCH. H i są zwracane przez `_matherr` działać, jeśli wystąpi błąd matematyczny.  
-  
-|Stała|Znaczenie|  
-|--------------|-------------|  
-|`_DOMAIN`|Argument funkcji jest poza domeną funkcji.|  
-|`_OVERFLOW`|Wynik jest za duży, aby mogły być reprezentowane w zwracanego typu funkcji.|  
-|`_PLOSS`|Wystąpił częściowo utraciła istotności.|  
-|`_SING`|Argument singularity: argument funkcji ma nieprawidłową wartość. (Na przykład wartość 0 jest przekazywany do funkcji, która wymaga wartości niezerowych.)|  
-|`_TLOSS`|Wystąpił całkowitej utraty istotności.|  
-|`_UNDERFLOW`|Wynik jest za mały, aby mogła być przedstawiana.|  
-  
-## <a name="see-also"></a>Zobacz też  
- [_matherr](../c-runtime-library/reference/matherr.md)   
- [Stałe globalne](../c-runtime-library/global-constants.md)
+
+## <a name="syntax"></a>Składnia
+
+```
+
+#include <math.h>
+
+```
+
+## <a name="remarks"></a>Uwagi
+
+Procedury matematyczne biblioteki wykonawczej może generować stałe błędów matematycznych.
+
+Te błędy, poniżej opisano odpowiadają typów wyjątków zdefiniowanych w MATEMATYCE. Godz. i są zwracane przez `_matherr` działać, jeśli wystąpi błąd matematyczny.
+
+|Stała|Znaczenie|
+|--------------|-------------|
+|`_DOMAIN`|Argument funkcji jest spoza domeny funkcji.|
+|`_OVERFLOW`|Wynik jest za duży, aby mogły być reprezentowane w zwracanego typu funkcji.|
+|`_PLOSS`|Częściowe utrata znaczenia wystąpił.|
+|`_SING`|Argument singularity: argument funkcji ma nieprawidłową wartość. (Na przykład, wartość 0 jest przekazywany do funkcji, która wymaga wartość różną od zera.)|
+|`_TLOSS`|Całkowita utrata znaczenia wystąpił.|
+|`_UNDERFLOW`|Wynik jest za mały, aby mogły być reprezentowane.|
+
+## <a name="see-also"></a>Zobacz też
+
+[_matherr](../c-runtime-library/reference/matherr.md)<br/>
+[Stałe globalne](../c-runtime-library/global-constants.md)

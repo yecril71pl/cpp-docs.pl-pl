@@ -14,30 +14,31 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 688e62cc82446a2e52dc1b75a439881a4f2d8eed
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 276e82a7768520c6a75c87cb49fcb26ce1f01253
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32381434"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46066469"
 ---
 # <a name="c-primary-expressions"></a>Wyrażenia podstawowe języka C
-Argumenty operacji w wyrażeniach są nazywane "wyrażenia podstawowe".  
-  
-## <a name="syntax"></a>Składnia  
- *wyrażenia podstawowe*:  
- *Identyfikator*  
-  
- *Stała*  
-  
- *literał ciągu*  
-  
- **(***wyrażenie***)**   
-  
- *wyrażenie*:  
- *assignment-expression*  
-  
- *wyrażenie***,***wyrażenia przypisania*   
-  
-## <a name="see-also"></a>Zobacz też  
- [Operandy i wyrażenia](../c-language/operands-and-expressions.md)
+
+Argumenty operacji w wyrażeniach są nazywane "wyrażenia podstawowe".
+
+## <a name="syntax"></a>Składnia
+
+*wyrażenia podstawowe*: *identyfikator*
+
+*Stałe*
+
+*literał ciągu*
+
+**(***wyrażenie***)** 
+
+*wyrażenie*: *wyrażenia przypisania*
+
+*wyrażenie***,***wyrażenia przypisania* 
+
+## <a name="see-also"></a>Zobacz też
+
+[Operandy i wyrażenia](../c-language/operands-and-expressions.md)

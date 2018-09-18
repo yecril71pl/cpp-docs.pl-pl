@@ -16,14 +16,15 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6640f288bef2601bedeb33fa9fad4b2f3e4389f8
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: d00c23eab3e21064076b9bd8663b0c3a593d997b
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33298197"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46057102"
 ---
 # <a name="linker-tools-error-lnk1282"></a>Błąd narzędzi konsolidatora LNK1282
-Nie można /REBASE pliku. jest on podpisany  
-  
- Próbowano zmienić adres podstawowy podpisem zestawu z opcją /REBASE [polecenia editbin](../../build/reference/editbin-reference.md). Aby to zrobić, najpierw zmień adres podstawowy, a następnie zaloguj zestawu.
+
+Nie można /REBASE pliku. jest on podpisany
+
+Próbowano zmienić adres bazowy zestawu podpisanego z opcją /REBASE [editbin](../../build/reference/editbin-reference.md). Aby to zrobić, należy najpierw zmienić adres podstawowy, a następnie zaloguj zestawu.

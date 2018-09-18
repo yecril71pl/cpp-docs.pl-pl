@@ -1,5 +1,5 @@
 ---
-title: C2402 błąd kompilatora | Dokumentacja firmy Microsoft
+title: Błąd kompilatora C2402 | Dokumentacja firmy Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,14 +16,15 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a6e60d57942981aef6e613c1b4df36facfe27c71
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 74f61d7ca557ece5d15150022550288aa60eb922
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33196221"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46063271"
 ---
-# <a name="compiler-error-c2402"></a>C2402 błąd kompilatora
-"identyfikator": rejestr musi być indeksem w "context"  
-  
- Rejestr używane w operand pośrednie pamięci musi być indeks rejestru w tym kontekście.
+# <a name="compiler-error-c2402"></a>Błąd kompilatora C2402
+
+'Identyfikator': rejestr musi być indeksem w "context"
+
+Zarejestruj używane w argumencie operacji pośrednich pamięci musi być indeks rejestru w tym kontekście.

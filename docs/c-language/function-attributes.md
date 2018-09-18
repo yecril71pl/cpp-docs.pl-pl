@@ -1,5 +1,5 @@
 ---
-title: Atrybuty funkcji | Dokumentacja firmy Microsoft
+title: Funkcja atrybutów | Dokumentacja firmy Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,19 +17,21 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ff628dc0d4cca2d42401a1cc83a89926e42404e4
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 0a2d1ff03041f83a3106553d69b6c111fb6f4a36
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32382945"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46066911"
 ---
 # <a name="function-attributes"></a>Atrybuty funkcji
-**Microsoft Specific**  
-  
- Opcjonalny *seq atrybutu* nonterminal umożliwia wybranie konwencji wywoływania na podstawie poszczególnych funkcji. Można również określić działa jako `__fastcall` lub `__inline`.  
-  
- **KOŃCOWY określonych firmy Microsoft**  
-  
-## <a name="see-also"></a>Zobacz też  
- [Definicje funkcji języka C](../c-language/c-function-definitions.md)
+
+**Microsoft Specific**
+
+Opcjonalny *atrybutu seq* nieterminalnych umożliwia wybranie konwencji wywoływania, na podstawie poszczególnych funkcji. Można również określić, że funkcje jako `__fastcall` lub `__inline`.
+
+**END specyficzny dla Microsoft**
+
+## <a name="see-also"></a>Zobacz też
+
+[Definicje funkcji języka C](../c-language/c-function-definitions.md)

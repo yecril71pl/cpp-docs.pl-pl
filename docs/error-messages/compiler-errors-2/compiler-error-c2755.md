@@ -1,5 +1,5 @@
 ---
-title: C2755 błąd kompilatora | Dokumentacja firmy Microsoft
+title: Błąd kompilatora C2755 | Dokumentacja firmy Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,27 +16,28 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0a018554de91003b54ffc403f1527ca07f2d4a75
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 56ecf997df2aeb1a41b5021d61b24073e871b55f
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33233536"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46064921"
 ---
-# <a name="compiler-error-c2755"></a>C2755 błąd kompilatora
-"param": stała parametryzująca składowej specjalizacji musi być prostym identyfikatorem  
-  
- Parametr-type musi być prostym identyfikatorem coś kompilator może zostać rozwiązany w czasie kompilacji do jednego identyfikatora lub wartości stałej.  
-  
- Poniższy przykład generuje C2755:  
-  
-```  
-// C2755.cpp  
-template<int I, int J>  
-struct A {};  
-  
-template<int I>   
-struct A<I,I*5> {};   // C2755  
-// try the following line instead  
-// struct A<I,5> {};  
+# <a name="compiler-error-c2755"></a>Błąd kompilatora C2755
+
+"param": parametr typu innego niż stała parametryzująca składowej specjalizacji musi być prostym identyfikatorem
+
+Parametr-type musi być prostym identyfikatorem, przez kompilator może rozpoznać w czasie kompilacji do jednego identyfikatora lub wartości stałej.
+
+Poniższy przykład spowoduje wygenerowanie C2755:
+
+```
+// C2755.cpp
+template<int I, int J>
+struct A {};
+
+template<int I>
+struct A<I,I*5> {};   // C2755
+// try the following line instead
+// struct A<I,5> {};
 ```

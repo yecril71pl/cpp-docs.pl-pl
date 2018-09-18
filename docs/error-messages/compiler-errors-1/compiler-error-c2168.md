@@ -1,5 +1,5 @@
 ---
-title: C2168 błąd kompilatora | Dokumentacja firmy Microsoft
+title: Błąd kompilatora C2168 | Dokumentacja firmy Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,14 +16,15 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 313a07ba10275f4e9abed9442e3a8a82995d9577
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 06cb491974d6a13e5690401092222f0832313018
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33165990"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46066144"
 ---
-# <a name="compiler-error-c2168"></a>C2168 błąd kompilatora
-"Funkcja": zbyt mało rzeczywistych parametrów w wewnętrznej funkcji  
-  
- Odwołanie do `intrinsic` funkcja ma za mało parametrów.
+# <a name="compiler-error-c2168"></a>Błąd kompilatora C2168
+
+'Funkcja': zbyt mało rzeczywistych parametrów w wewnętrznej funkcji
+
+Odwołanie do `intrinsic` funkcji ma za mało parametrów.

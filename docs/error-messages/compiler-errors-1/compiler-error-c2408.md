@@ -1,5 +1,5 @@
 ---
-title: C2408 błąd kompilatora | Dokumentacja firmy Microsoft
+title: Błąd kompilatora C2408 | Dokumentacja firmy Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,14 +16,15 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a20a965fba2f914c0d6e4e940479963485bf9926
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: aaafc5bac40a7322afb54675c7774231edd324f4
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33195454"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46021463"
 ---
-# <a name="compiler-error-c2408"></a>C2408 błąd kompilatora
-Niedozwolony typ na operatorze PTR w "context"  
-  
- Pierwszy parametr `PTR` operator nie jest częścią specyfikacji typu prawnych.
+# <a name="compiler-error-c2408"></a>Błąd kompilatora C2408
+
+Niedozwolony typ na operatorze PTR w "context"
+
+Pierwszy parametr `PTR` operator nie jest specyfikacja typu prawnych.

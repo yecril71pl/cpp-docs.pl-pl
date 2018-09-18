@@ -16,19 +16,21 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 71b0fc4468ea98f04c87c8389021f2e12d9cae69
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: c3a1a245511f0ab849c28ab9a03ba76903609643
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32384499"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46065663"
 ---
 # <a name="function-call-conversions"></a>Konwersje wywołania funkcji
-Typ konwersji w argumentów w wywołaniu funkcji zależy od obecności prototypu funkcji (deklaracja przekazująca dalej) z typami argumentów zadeklarowany dla funkcji o nazwie.  
-  
- Jeśli prototyp funkcji jest dostępny i zawiera typy argumentów zadeklarowane, kompilator wykonuje sprawdzanie typu (zobacz [funkcje](../c-language/functions-c.md)).  
-  
- Jeśli występuje bez prototypu funkcji tylko popularne konwersje arytmetyczne są wykonywane na argumentów w wywołaniu funkcji. Konwersje te są wykonywane niezależnie na każdy argument w wywołaniu. Oznacza to, że **float** wartość jest konwertowana na **podwójne**; `char` lub **krótki** wartość jest konwertowana na `int`; i `unsigned char` lub **niepodpisane krótko** jest konwertowana na `unsigned int`.  
-  
-## <a name="see-also"></a>Zobacz też  
- [Konwersje typów](../c-language/type-conversions-c.md)
+
+Typ konwersji wykonywane względem argumentów w wywołaniu funkcji zależy od obecności prototypu funkcji (deklaracja) z typami argumentów zadeklarowane dla wywołanej funkcji.
+
+Jeśli prototyp funkcji jest obecny i zawiera typy argumentów zadeklarowane, kompilator wykonuje sprawdzanie typu (zobacz [funkcje](../c-language/functions-c.md)).
+
+Jeśli nie prototypu funkcji jest obecny, tylko zwykle konwersje arytmetyczne są wykonywane na argumentów w wywołaniu funkcji. Te konwersje są wykonywane niezależnie dla każdego argumentu w wywołaniu. Oznacza to, że **float** wartość jest konwertowana na **double**; `char` lub **krótki** wartość jest konwertowana na `int`; i `unsigned char` lub **typ unsigned short** jest konwertowana na `unsigned int`.
+
+## <a name="see-also"></a>Zobacz też
+
+[Konwersje typów](../c-language/type-conversions-c.md)

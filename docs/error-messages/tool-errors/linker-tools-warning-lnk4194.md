@@ -16,14 +16,15 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 98a6c4803138a0f4fbfc71f17ed4e963478af684
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 530bcc0dab9182d0c194f23f6aa5575e431edb03
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33299191"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46060606"
 ---
 # <a name="linker-tools-warning-lnk4194"></a>Ostrzeżenie LNK4194 narzędzi konsolidatora
-Nazwa /DELAYLOAD:dll zignorowana  
-  
- Nie można konsolidator [opóźnionego ładowania](../../build/reference/delayload-delay-load-import.md) żądanej biblioteki DLL.
+
+Nazwa /DELAYLOAD:dll zignorowana
+
+Konsolidator nie [opóźnionego ładowania](../../build/reference/delayload-delay-load-import.md) żądanego pliku DLL.

@@ -16,29 +16,30 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: fee2105cb0c12287cd2b47636f0e47011854a608
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 73a1643d10ea9adc6ac6979eb2de023593ba8d01
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33298353"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46060710"
 ---
 # <a name="linker-tools-error-lnk1107"></a>Błąd narzędzi konsolidatora LNK1107
-nieprawidłowy lub uszkodzony plik: nie można odczytać w lokalizacji  
-  
- Narzędzie nie może odczytać pliku. Utwórz ponownie plik.  
-  
- LNK1107 mógł także wystąpić, jeśli próba przekazania modułu (rozszerzenie .dll lub moduł .netmodule utworzone za pomocą [/clr:noAssembly](../../build/reference/clr-common-language-runtime-compilation.md) lub [/noassembly](../../build/reference/noassembly-create-a-msil-module.md)) do konsolidatora; przekazać plik .obj zamiast tego.  
-  
- Jeśli kompilacja następującym przykładowym:  
-  
-```  
-// LNK1107.cpp  
-// compile with: /clr /LD  
-public ref class MyClass {  
-public:  
-   void Test(){}  
-};  
-```  
-  
- a następnie określ **link LNK1107.dll** w wierszu polecenia, zostanie wyświetlony LNK1107.  Aby rozwiązać problem, określ **link LNK1107.obj** zamiast tego.
+
+nieprawidłowy lub uszkodzony plik: nie można odczytać lokalizacji
+
+Narzędzie nie może odczytać pliku. Utwórz ponownie plik.
+
+LNK1107 mógł także wystąpić, Jeśli spróbujesz przekazać modułu (rozszerzenie .dll lub moduł .netmodule utworzone za pomocą [/clr:noAssembly](../../build/reference/clr-common-language-runtime-compilation.md) lub [/noassembly](../../build/reference/noassembly-create-a-msil-module.md)) do konsolidatora; Przekaż plik .obj zamiast tego.
+
+Jeśli kompilujesz z poniższego przykładu:
+
+```
+// LNK1107.cpp
+// compile with: /clr /LD
+public ref class MyClass {
+public:
+   void Test(){}
+};
+```
+
+a następnie określ **link LNK1107.dll** w wierszu polecenia zostanie wyświetlony LNK1107.  Aby naprawić błąd, należy określić **link LNK1107.obj** zamiast tego.

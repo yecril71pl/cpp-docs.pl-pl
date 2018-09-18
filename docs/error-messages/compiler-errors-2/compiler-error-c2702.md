@@ -1,5 +1,5 @@
 ---
-title: C2702 błąd kompilatora | Dokumentacja firmy Microsoft
+title: Błąd kompilatora C2702 | Dokumentacja firmy Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,29 +16,30 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 813833b5c3aeb7da0651fecb879ac12ca0713d13
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: cbec8fe50c87cfc609cad5098779bc22ddae84cb
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33234648"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46061243"
 ---
-# <a name="compiler-error-c2702"></a>C2702 błąd kompilatora
-__except mogą być niewidoczne w bloku końcowym  
-  
- Obsługa wyjątków (`__try`/`__except`) nie mogą być zagnieżdżone wewnątrz `__finally` bloku.  
-  
- Poniższy przykład generuje C2702:  
-  
-```  
-// C2702.cpp  
-// processor: x86 IPF  
-int Counter;  
-int main() {  
-   __try {}  
-   __finally {  
-      __try {}   // C2702  
-      __except( Counter ) {}   // C2702  
-   }  
-}  
+# <a name="compiler-error-c2702"></a>Błąd kompilatora C2702
+
+__except mogą nie są wyświetlane w bloku
+
+Program obsługi wyjątku (`__try`/`__except`) nie mogą być zagnieżdżone wewnątrz `__finally` bloku.
+
+Poniższy przykład spowoduje wygenerowanie C2702:
+
+```
+// C2702.cpp
+// processor: x86 IPF
+int Counter;
+int main() {
+   __try {}
+   __finally {
+      __try {}   // C2702
+      __except( Counter ) {}   // C2702
+   }
+}
 ```

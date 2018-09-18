@@ -1,5 +1,5 @@
 ---
-title: C3372 błąd kompilatora | Dokumentacja firmy Microsoft
+title: Błąd kompilatora C3372 | Dokumentacja firmy Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,36 +16,37 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 29cad4056a06a3070808bfcd92bc6d17bde9333d
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: a7a0395442c3118840a70942e270d34a40fe50a4
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33257586"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46062640"
 ---
-# <a name="compiler-error-c3372"></a>C3372 błąd kompilatora
-należy określić co najmniej 1 interfejs dla atrybutu 'source' klasy coclass  
-  
- Dla pewnych atrybutów, należy podać nazwę interfejsu jako parametr.  
-  
- Poniższy przykład generuje C3372:  
-  
-```  
-// C3372.cpp  
-#include <windows.h>  
-[module(name="MyModule")];  
-  
-[ object, uuid(373a1a4c-469b-11d3-a6b0-00c04f79ae8f) ]  
-__interface IMyIface {  
-   HRESULT f1();  
-};  
-// to resolve, pass an interface name to the source attribute  
-// for example, source(IMyIface)  
-[ coclass, uuid(373a1a4d-469b-11d3-a6b0-00c04f79ae8f), source,   
-  default(IMyIface) ] // C3372  
-class CMyClass {  
-};  
-  
-int main() {  
-}  
+# <a name="compiler-error-c3372"></a>Błąd kompilatora C3372
+
+należy określić co najmniej 1 interfejs dla atrybutu "źródło" coclass
+
+W przypadku niektórych atrybutów, musisz przekazać interfejsu nazwę jako parametr.
+
+Poniższy przykład spowoduje wygenerowanie C3372:
+
+```
+// C3372.cpp
+#include <windows.h>
+[module(name="MyModule")];
+
+[ object, uuid(373a1a4c-469b-11d3-a6b0-00c04f79ae8f) ]
+__interface IMyIface {
+   HRESULT f1();
+};
+// to resolve, pass an interface name to the source attribute
+// for example, source(IMyIface)
+[ coclass, uuid(373a1a4d-469b-11d3-a6b0-00c04f79ae8f), source,
+  default(IMyIface) ] // C3372
+class CMyClass {
+};
+
+int main() {
+}
 ```

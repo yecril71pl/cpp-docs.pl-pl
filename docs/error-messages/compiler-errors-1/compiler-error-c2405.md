@@ -1,5 +1,5 @@
 ---
-title: C2405 błąd kompilatora | Dokumentacja firmy Microsoft
+title: Błąd kompilatora C2405 | Dokumentacja firmy Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,14 +16,15 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6e864d4e85b3422431cdf14dabd7083fafe04c04
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 3f4993b32839fbd1dcdb18522021da685b865ed8
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33195818"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46058383"
 ---
-# <a name="compiler-error-c2405"></a>C2405 błąd kompilatora
-niedozwolone krótkie przekazane odwołanie z przemieszczeniem  
-  
- Krótki odwołania w przód musi odwoływać się tylko z etykietą. Nie można użyć dodatkowych przesunięcia.
+# <a name="compiler-error-c2405"></a>Błąd kompilatora C2405
+
+niedozwolone krótkie przekazane odwołanie z przemieszczeniem
+
+Krótkie odwołania w przód musi odwoływać się tylko na etykietę. Nie można użyć dodatkowych przesunięcia.

@@ -1,5 +1,5 @@
 ---
-title: C2241 błąd kompilatora | Dokumentacja firmy Microsoft
+title: Błąd kompilatora C2241 | Dokumentacja firmy Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,20 +16,21 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9d1a4404d3f7e60adc2d8f9ff0c8ccb3d154b26d
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: cd97551e0feaecce776cc552353716c67822f273
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33170609"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46055900"
 ---
-# <a name="compiler-error-c2241"></a>C2241 błąd kompilatora
-'Identyfikator': dostęp do elementu członkowskiego jest ograniczony  
-  
- Kod próbuje uzyskać dostępu do członka prywatne lub chronione.  
-  
-### <a name="to-fix-by-using-the-following-possible-solutions"></a>Aby rozwiązać problem przy użyciu następujących możliwych rozwiązań  
-  
-1.  Zmień poziom dostępu do elementu członkowskiego.  
-  
-2.  Deklaruje element członkowski `friend` podczas uzyskiwania dostępu do funkcji.
+# <a name="compiler-error-c2241"></a>Błąd kompilatora C2241
+
+'Identyfikator': dostęp do składowej jest ograniczony
+
+Kod próbuje uzyskać dostępu do członka prywatnych lub chronionych.
+
+### <a name="to-fix-by-using-the-following-possible-solutions"></a>Aby rozwiązać problem, korzystając z poniższymi możliwymi rozwiązaniami
+
+1. Zmień poziom dostępu elementu członkowskiego.
+
+1. Deklaruje składowej `friend` uzyskiwania dostępu do funkcji.

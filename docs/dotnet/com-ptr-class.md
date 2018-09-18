@@ -1,5 +1,5 @@
 ---
-title: COM::PTR — klasa | Dokumentacja firmy Microsoft
+title: COM::PTR, klasa | Dokumentacja firmy Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -20,15 +20,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: 27adaa2d91bac38c587ee7e4ec9c805c102d4883
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 3cd5b4115d50f9e2db9b1e3dc8a03818e2c8252f
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33108293"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46066730"
 ---
 # <a name="comptr-class"></a>com::ptr — Klasa
-Otoka dla obiekt COM, który może być używany jako element członkowski klasy CLR.  Otoka automatyzuje również zarządzanie okresem istnienia obiektu modelu COM, zwolnienie wszystkich należących do odwołania do obiektu, gdy jego destruktora jest wywoływana. Odpowiednikiem [CComPtr klasy](../atl/reference/ccomptr-class.md).  
+Otoka dla obiektu COM, który może służyć jako członek klasy CLR.  Otoka także automatyzuje zarządzanie okresem istnienia obiektu COM, zwalniając wszystkie należące do firmy odwołania do obiektu, gdy jego destruktor jest wywoływany. Odpowiednikiem [klasa CComPtr](../atl/reference/ccomptr-class.md).  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -38,18 +38,18 @@ ref class ptr;
 ```  
   
 #### <a name="parameters"></a>Parametry  
- `_interface_type`  
- Interfejs COM.  
+*_interface_type*<br/>
+Interfejs COM.  
   
 ## <a name="remarks"></a>Uwagi  
- A `com::ptr` mogą służyć jako funkcja lokalna zmienna uproszczenia różnych zadań COM i automatyczne zarządzanie okresem istnienia.  
+ Element `com::ptr` można również jako funkcja lokalna zmienna Aby uprościć różne zadania COM i automatyzować zarządzanie okresem istnienia.  
   
- A `com::ptr` nie można użyć bezpośrednio jako parametru funkcji; Użyj [Operator odwołania śledzenia](../windows/tracking-reference-operator-cpp-component-extensions.md) lub [Operator uchwytu do obiektu (^)](../windows/handle-to-object-operator-hat-cpp-component-extensions.md) zamiast tego.  
+ A `com::ptr` nie można używać bezpośrednio jako parametru funkcji; Użyj [Tracking Reference Operator](../windows/tracking-reference-operator-cpp-component-extensions.md) lub [Operator uchwytu do obiektu (^)](../windows/handle-to-object-operator-hat-cpp-component-extensions.md) zamiast tego.  
   
- A `com::ptr` nie może być bezpośrednio zwrócona przez funkcję; zamiast nich używaj dojścia.  
+ Element `com::ptr` nie może być bezpośrednio zwracana przez funkcję; zamiast tego użyj dojście.  
   
 ## <a name="example"></a>Przykład  
- W tym przykładzie implementuje klasy CLR, która używa `com::ptr` opakowywać jego prywatnego elementu członkowskiego `IXMLDOMDocument` obiektu.  Wywoływanie metody publiczne wyników klasy w wywołaniach zamkniętego `IXMLDOMDocument` obiektu.  Próbka tworzy wystąpienie dokumentu XML, wypełnia niektóre proste XML i jest uproszczone przeszukiwania węzłów w drzewie dokumentu przeanalizowany do drukowania pliku XML do konsoli.  
+ W tym przykładzie implementuje klasę CLR, która używa `com::ptr` opakowywać jej prywatnego elementu członkowskiego `IXMLDOMDocument` obiektu.  Wywoływanie metody publiczne klas wyników w wywołaniach do zamkniętego `IXMLDOMDocument` obiektu.  Próbka tworzy wystąpienie dokumentu XML, wypełnia niektóre prostego formatu XML i jest uproszczone przeszukiwania węzłów w drzewie przeanalizowany do drukowania pliku XML do konsoli.  
   
 ```  
 // comptr.cpp  
@@ -164,7 +164,7 @@ int main() {
 ```  
   
 ## <a name="requirements"></a>Wymagania  
- **Plik nagłówka** \<msclr\com\ptr.h >  
+ **Plik nagłówkowy** \<msclr\com\ptr.h >  
   
  **Namespace** msclr::com  
   

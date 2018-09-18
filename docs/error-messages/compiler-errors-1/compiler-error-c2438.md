@@ -1,5 +1,5 @@
 ---
-title: C2438 błąd kompilatora | Dokumentacja firmy Microsoft
+title: Błąd kompilatora C2438 | Dokumentacja firmy Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,30 +16,31 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: bf42740c137953007cab2c5301bff122b553e5f6
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 4f5153e3ff6626f3ea1b1155f14bc9ef96441e7d
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33225541"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46066079"
 ---
-# <a name="compiler-error-c2438"></a>C2438 błąd kompilatora
-'Identyfikator': nie można zainicjować danych statycznej klasy poprzez Konstruktor  
-  
- Konstruktor służy do inicjowania statyczny element członkowski klasy. Statyczne elementy członkowskie muszą zostać zainicjowane w definicji poza deklaracją klasy.  
-  
- Poniższy przykład generuje C2438:  
-  
-```  
-// C2438.cpp  
-struct X {  
-   X(int i) : j(i) {}   // C2438  
-   static int j;  
-};  
-  
-int X::j;  
-  
-int main() {  
-   X::j = 1;  
-}  
+# <a name="compiler-error-c2438"></a>Błąd kompilatora C2438
+
+'Identyfikator': nie można zainicjować danych statycznej klasy poprzez Konstruktor
+
+Konstruktor jest używany do inicjowania statycznej składowej klasy. Statyczne elementy członkowskie muszą być zainicjowane w definicji poza deklaracją klasy.
+
+Poniższy przykład spowoduje wygenerowanie C2438:
+
+```
+// C2438.cpp
+struct X {
+   X(int i) : j(i) {}   // C2438
+   static int j;
+};
+
+int X::j;
+
+int main() {
+   X::j = 1;
+}
 ```

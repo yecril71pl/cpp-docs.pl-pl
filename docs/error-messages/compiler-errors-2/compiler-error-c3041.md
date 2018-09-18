@@ -1,5 +1,5 @@
 ---
-title: C3041 błąd kompilatora | Dokumentacja firmy Microsoft
+title: Błąd kompilatora C3041 | Dokumentacja firmy Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,34 +16,35 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 766536426a0b183299d5028d90197fd058fb6126
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: cc19c13804eefe88b20542d4eb8c9bc8ead101e4
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33247633"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46066924"
 ---
-# <a name="compiler-error-c3041"></a>C3041 błąd kompilatora
-"var": zmienna w klauzuli "copyprivate" musi być prywatna w załączonym kontekście  
-  
- Zmienna przekazany do [copyprivate](../../parallel/openmp/reference/copyprivate.md) nie może zostać udostępniony w otaczającym kontekście.  
-  
- Poniższy przykład generuje C3041:  
-  
-```  
-// C3041.cpp  
-// compile with: /openmp /c  
-#include "omp.h"  
-double d;  
-int main() {  
-   #pragma omp parallel shared(d)  
-   // try the following line instead  
-   // #pragma omp parallel private(d)  
-   {  
-      // or don't make d copyprivate  
-      #pragma omp single copyprivate(d)   // C3041  
-      {  
-      }  
-   }  
-}  
+# <a name="compiler-error-c3041"></a>Błąd kompilatora C3041
+
+"var": zmienna w klauzuli "copyprivate" musi być prywatna w załączonym kontekście
+
+Zmienna jest przekazywana do [copyprivate](../../parallel/openmp/reference/copyprivate.md) nie może być współużytkowana w otaczającym kontekście.
+
+Poniższy przykład spowoduje wygenerowanie C3041:
+
+```
+// C3041.cpp
+// compile with: /openmp /c
+#include "omp.h"
+double d;
+int main() {
+   #pragma omp parallel shared(d)
+   // try the following line instead
+   // #pragma omp parallel private(d)
+   {
+      // or don't make d copyprivate
+      #pragma omp single copyprivate(d)   // C3041
+      {
+      }
+   }
+}
 ```

@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5144a11f0b035822e6f729692569e5e861c44dcc
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 281b767151726f695e23c4cf2b2df26f8690c5c5
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43758313"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46063999"
 ---
 # <a name="atl-support-for-dhtml-controls"></a>Obsługa ALT dla kontrolek DHTML
 
@@ -41,26 +41,26 @@ Kontrolki ATL DHTML można wyświetlić w przeglądarce sieci Web lub innych kon
 
 ## <a name="in-this-section"></a>W tej sekcji
 
-[Identyfikowanie elementów projektu kontrolki DHTML](../atl/identifying-the-elements-of-the-dhtml-control-project.md)  
+[Identyfikowanie elementów projektu kontrolki DHTML](../atl/identifying-the-elements-of-the-dhtml-control-project.md)<br/>
 Opisano elementy projektu kontrolki DHTML.
 
-[Wywoływanie kodu C++ z elementu DHTML](../atl/calling-cpp-code-from-dhtml.md)  
+[Wywoływanie kodu C++ z elementu DHTML](../atl/calling-cpp-code-from-dhtml.md)<br/>
 Przykład wywołania kodu w języku C++ z kontrolki DHTML.
 
-[Tworzenie kontrolki DHTML ATL](../atl/creating-an-atl-dhtml-control.md)  
+[Tworzenie kontrolki DHTML ATL](../atl/creating-an-atl-dhtml-control.md)<br/>
 Lista czynności prowadzących do tworzenia kontrolki DHTML.
 
-[Testowanie kontrolki DHTML ATL](../atl/testing-the-atl-dhtml-control.md)  
+[Testowanie kontrolki DHTML ATL](../atl/testing-the-atl-dhtml-control.md)<br/>
 Przedstawia sposób tworzenia i testowania początkowego projektu kontrolki DHTML.
 
-[Modyfikowanie kontrolki DHTML ATL](../atl/modifying-the-atl-dhtml-control.md)  
+[Modyfikowanie kontrolki DHTML ATL](../atl/modifying-the-atl-dhtml-control.md)<br/>
 Pokazuje, jak dodawać funkcjonalność do formantu.
 
-[Testowanie kontrolki DHTML ATL zmieniony](../atl/testing-the-modified-atl-dhtml-control.md)  
+[Testowanie kontrolki DHTML ATL zmieniony](../atl/testing-the-modified-atl-dhtml-control.md)<br/>
 Pokazuje, jak tworzyć i testować dodatkowa funkcjonalność formantu.
 
 ## <a name="related-sections"></a>Sekcje pokrewne
 
-[ATL](../atl/active-template-library-atl-concepts.md)  
+[ATL](../atl/active-template-library-atl-concepts.md)<br/>
 Zawiera łącza do tematów pojęciowych dotyczące programowania przy użyciu biblioteki Active Template Library.
 

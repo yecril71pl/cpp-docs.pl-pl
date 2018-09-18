@@ -1,5 +1,5 @@
 ---
-title: Kompilatora (poziom 1) ostrzeżenie C4089 | Dokumentacja firmy Microsoft
+title: Kompilator ostrzeżenie (poziom 1) C4089 | Dokumentacja firmy Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,14 +16,15 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 713d22baa84cc612509b71b74ee7fba054ff8c25
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: a321745e539a6e34ae04a80cefc15100c925d52f
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33277049"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46066586"
 ---
-# <a name="compiler-warning-level-1-c4089"></a>Kompilator C4089 ostrzegawcze (poziom 1)
-"Funkcja": różne typy w rzeczywistym parametrze "number", "number" parametrów formalnych  
-  
- Odpowiednie parametry formalne i rzeczywiste mają różne typy. Rzeczywisty parametr jest przekazywany bez zmian. Funkcja rzutuje rzeczywistego parametru na typ określony w definicji funkcji.
+# <a name="compiler-warning-level-1-c4089"></a>Kompilator ostrzeżenie (poziom 1) C4089
+
+'Funkcja': różne typy w rzeczywistym parametrze "number", parametr formalny "liczba"
+
+Odpowiednie parametry formalne i rzeczywiste mają różne typy. Rzeczywisty parametr jest przekazywany bez zmian. Funkcja rzutuje rzeczywistego parametru na typ określony w definicji funkcji.

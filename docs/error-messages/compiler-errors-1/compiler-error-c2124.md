@@ -1,5 +1,5 @@
 ---
-title: C2124 błąd kompilatora | Dokumentacja firmy Microsoft
+title: Błąd kompilatora C2124 | Dokumentacja firmy Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,24 +16,25 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 79936fc45e2dbf7fc7af4bfe64cf3fc92512122b
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 7810565a8f7bfdac49f2c53815b9063e2e034df7
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33167856"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46062325"
 ---
-# <a name="compiler-error-c2124"></a>C2124 błąd kompilatora
-Dzielenie lub dzielenie modulo przez zero  
-  
- Stałe wyrażenie nie ma zerowy mianownik. Aby rozwiązać problem, nie dzielenia przez zero.  
-  
- Poniższy przykład generuje C2124:  
-  
-```  
-// C2124.cpp  
-int main() {  
-  int i = 1 / 0;   // C2124  do not divide by zero  
-  int i2 = 12 / 2;   // OK  
-}  
+# <a name="compiler-error-c2124"></a>Błąd kompilatora C2124
+
+Dzielenie lub dzielenie modulo przez zero
+
+Wyrażenie stałej ma zero mianownik. Aby naprawić błąd, nie dzielenie przez zero.
+
+Poniższy przykład spowoduje wygenerowanie C2124:
+
+```
+// C2124.cpp
+int main() {
+  int i = 1 / 0;   // C2124  do not divide by zero
+  int i2 = 12 / 2;   // OK
+}
 ```

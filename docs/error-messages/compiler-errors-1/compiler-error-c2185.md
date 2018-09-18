@@ -1,5 +1,5 @@
 ---
-title: C2185 błąd kompilatora | Dokumentacja firmy Microsoft
+title: Błąd kompilatora C2185 | Dokumentacja firmy Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,14 +16,15 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 078860f39ff75c9475678a95adabfdc8ba1a91c7
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 29d7fd5a94122de9950ea6bcec3888a70b743c74
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33172148"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46063947"
 ---
-# <a name="compiler-error-c2185"></a>C2185 błąd kompilatora
-"identyfikator": niedozwolona Alokacja  
-  
- Zmiennej rejestru lub automatyczne (lokalne) zmienna jest zadeklarowana `__based`. Mogą być deklarowane tylko zmienne globalne `__based`.
+# <a name="compiler-error-c2185"></a>Błąd kompilatora C2185
+
+'Identyfikator': niedozwolona Alokacja
+
+Zadeklarowano zmienną rejestru lub zmienna automatyczne (lokalne) `__based`. Można zadeklarować tylko zmienne globalne `__based`.

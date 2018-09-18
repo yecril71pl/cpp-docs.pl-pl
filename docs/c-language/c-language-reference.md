@@ -1,5 +1,5 @@
 ---
-title: Dokumentacja języka C | Dokumentacja firmy Microsoft
+title: Skorowidz języka c | Dokumentacja firmy Microsoft
 ms.custom: index-page
 ms.date: 11/04/2016
 ms.technology:
@@ -19,25 +19,27 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: df262ab37c8b7e565a947819c2340c310711fa0c
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: cde4759b6148894a0ca963a7266355c5939c3051
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32381190"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46063206"
 ---
 # <a name="c-language-reference"></a>Materiały referencyjne dotyczące języka C
-*Dokumentacja języka C* opisuje język programowania C, zgodnie z implementacją w Microsoft C. Książki organizacji jest oparta na ANSI C standard (nazywane czasami C89) z dodatkowe materiały na rozszerzenia Microsoft do ANSI C standard.  
-  
--   [Organizacja dokumentacji języka C](../c-language/organization-of-the-c-language-reference.md)  
-  
-Aby uzyskać odwołanie dodatkowe materiały w C++ i preprocesora zobacz:  
-  
--   [Dokumentacja języka C++](../cpp/cpp-language-reference.md)  
-  
--   [Odwołania preprocesora](../preprocessor/c-cpp-preprocessor-reference.md)  
-  
-Opcje kompilatora i konsolidatora są udokumentowane w artykule [odwołanie kompilacji C/C++](../build/reference/c-cpp-building-reference.md).  
-  
-## <a name="see-also"></a>Zobacz też  
-[Dokumentacja języka C++](../cpp/cpp-language-reference.md)   
+
+*Skorowidz języka c* opisuje języka programowania C zaimplementowanego w Microsoft C. Organizacja książki opiera się na standardzie ANSI C (czasami określane jako C89) z dodatkowymi materiałami na temat rozszerzenia Microsoft do standardu ANSI C.
+
+- [Organizacja dokumentacji języka C](../c-language/organization-of-the-c-language-reference.md)
+
+Aby uzyskać dodatkowe materiały dotyczące języka C++ i preprocesora zobacz:
+
+- [Dokumentacja języka C++](../cpp/cpp-language-reference.md)
+
+- [Odwołanie preprocesora](../preprocessor/c-cpp-preprocessor-reference.md)
+
+Opcje kompilatora i konsolidatora są udokumentowane w artykule [odwołanie kompilacji C/C++](../build/reference/c-cpp-building-reference.md).
+
+## <a name="see-also"></a>Zobacz też
+
+[Dokumentacja języka C++](../cpp/cpp-language-reference.md)

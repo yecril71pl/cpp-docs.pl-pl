@@ -12,29 +12,31 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 85cf817a4d50346b9d10a9a9d1bc27abb5904433
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 5cf3b52b8a4e76062d06b0b9ca3d4535b79595c5
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32382393"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46061516"
 ---
 # <a name="character-sequences"></a>Sekwencje znaków
-**ANSI 3.8.2** mapowanie sekwencje znaków pliku źródłowego  
-  
- Instrukcje preprocesora używać tego samego znaku ustawić jako instrukcji pliku źródłowego z powodu wyjątku, które sekwencjach specjalnych nie są obsługiwane.  
-  
- W związku z tym aby określić ścieżkę do plików dołączanych, użyj tylko jeden ukośnik odwrotny:  
-  
-```  
-#include "path1\path2\myfile"  
-```  
-  
- W kodu źródłowego wymagane są dwa razy:  
-  
-```  
-fil = fopen( "path1\\path2\\myfile", "rt" );  
-```  
-  
-## <a name="see-also"></a>Zobacz też  
- [Dyrektywy przetwarzania wstępnego](../c-language/preprocessing-directives.md)
+
+**ANSI 3.8.2** mapowanie sekwencje znaków pliku źródłowego
+
+Instrukcje preprocesora używają ten sam znak, ustaw jak instrukcje pliku źródłowego z powodu wyjątku, sekwencje unikowe, które nie są obsługiwane.
+
+W związku z tym aby określić ścieżkę dla pliku dołączanego, należy użyć tylko jednej kreski ułamkowej odwróconej:
+
+```
+#include "path1\path2\myfile"
+```
+
+W kodzie źródłowym niezbędne są dwa ukośniki odwrotne:
+
+```
+fil = fopen( "path1\\path2\\myfile", "rt" );
+```
+
+## <a name="see-also"></a>Zobacz też
+
+[Dyrektywy przetwarzania wstępnego](../c-language/preprocessing-directives.md)

@@ -1,5 +1,5 @@
 ---
-title: C2396 błąd kompilatora | Dokumentacja firmy Microsoft
+title: Błąd kompilatora C2396 | Dokumentacja firmy Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,30 +16,31 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: fd9007d15cb5b6f9badf8f0962c8c1aa29df5bf7
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 0d69dfc1e296532f00ce9f44a178a366dca41e2e
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33197458"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46061633"
 ---
-# <a name="compiler-error-c2396"></a>C2396 błąd kompilatora
-"your_type::operator'type": CLR lub WinRT functionnot zdefiniowane przez użytkownika konwersja prawidłowe. Należy konwertować z albo konwertować na: t ^ ", t ^ %", t ^ & ", gdzie T ="your_type"  
-  
- Funkcji konwersji w środowiska wykonawczego systemu Windows lub typ zarządzany nie ma co najmniej jeden parametr, którego typ jest taki sam jak typ zawierający funkcję konwersji.  
-  
- Poniższy przykład generuje C2396 i pokazuje, jak rozwiązywanie problemu:  
-  
-```  
-// C2396.cpp  
-// compile with: /clr /c  
-  
-ref struct Y {  
-   static operator int(char c);   // C2396  
-  
-   // OK  
-   static operator int(Y^ hY);  
-   // or  
-   static operator Y^(char c);  
-};  
+# <a name="compiler-error-c2396"></a>Błąd kompilatora C2396
+
+"your_type::operator'type'': CLR lub WinRT functionnot konwersja zdefiniowana przez użytkownika prawidłowe. Należy konwertować z albo konwertować na: t ^', t ^ % ", t ^ &", gdzie T = "your_type"
+
+Funkcja konwersji w Windows Runtime lub typ zarządzany nie miał co najmniej jeden parametr, którego typ jest taki sam jak typ zawierający funkcję konwersji.
+
+Poniższy przykład generuje C2396 i pokazuje, jak go naprawić:
+
+```
+// C2396.cpp
+// compile with: /clr /c
+
+ref struct Y {
+   static operator int(char c);   // C2396
+
+   // OK
+   static operator int(Y^ hY);
+   // or
+   static operator Y^(char c);
+};
 ```

@@ -16,14 +16,15 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: bb2a826103bd7055a9655c75b82a58fcf53b1d42
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: eff4520c86332b3d547568fd643debdcdb61bf45
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33278165"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46060827"
 ---
-# <a name="compiler-warning-level-1-c4411"></a>Kompilator C4411 ostrzegawcze (poziom 1)
-'Identyfikator': symbol rozpoznawany jako przemieszczenie rejestru  
-  
- Identyfikator jest lokalnego symbol rozpoznawany jako przemieszczenie rejestru i mogą być używane dla argumentu operacji z innego symbolu.
+# <a name="compiler-warning-level-1-c4411"></a>Kompilatora (poziom 1) ostrzeżenie C4411
+
+'Identyfikator': symbol rozpoznawany jako przemieszczenie rejestru
+
+Identyfikator jest symbol lokalnego, który jest rozpoznawany jako przemieszczenie rejestru i mogą być używane dla argumentu operacji za pomocą innego symbolu.

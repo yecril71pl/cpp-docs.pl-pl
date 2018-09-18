@@ -1,5 +1,5 @@
 ---
-title: Błąd cxx0051 programu Expression Evaluator | Dokumentacja firmy Microsoft
+title: Błąd ewaluatora wyrażeń CXX0051 | Dokumentacja firmy Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,16 +17,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7a922738aa9ba3672e1f8f7c801f02d13a90a99c
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 3b89fb8de6bd9331a85d79ec8d8e21ba746c5c88
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33301798"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46065052"
 ---
 # <a name="expression-evaluator-error-cxx0051"></a>Błąd CXX0051 programu Expression Evaluator
-więcej niż jeden przeciążony symbol w punkcie przerwania określono  
-  
- Ewaluator wyrażeń nie można ustalić które z więcej niż jeden przeciążony symbol do użycia jako punkt przerwania.  
-  
- Ten błąd jest taki sam jak CAN0051.
+
+więcej niż jeden przeciążone symbolowi określonemu w parametrze punktu przerwania
+
+Ewaluator wyrażeń nie może określić które z więcej niż jeden przeciążona symbol do użycia jako punkt przerwania.
+
+Ten błąd jest taka sama jak CAN0051.

@@ -18,12 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6d3463b9eaad5134f68fbe533e50431ef3a91cf5
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 1c33c3524d0fb6b39208e2cb7be57805a3ff043f
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43761202"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46046761"
 ---
 # <a name="cautoptrlist-class"></a>Klasa CAutoPtrList
 
@@ -35,14 +35,14 @@ Ta klasa dostarcza metody przydatne podczas tworzenia listy inteligentne wskaźn
 ## <a name="syntax"></a>Składnia
 
 ```
-template<typename E>  
-class CAutoPtrList : 
+template<typename E>
+class CAutoPtrList :
    public CAtlList<ATL::CAutoPtr<E>, CAutoPtrElementTraits<E>>
 ```
 
 #### <a name="parameters"></a>Parametry
 
-*E*  
+*E*<br/>
 Typ wskaźnika.
 
 ## <a name="members"></a>Elementy członkowskie
@@ -79,7 +79,7 @@ CAutoPtrList(UINT nBlockSize = 10) throw();
 
 ### <a name="parameters"></a>Parametry
 
-*nBlockSize*  
+*nBlockSize*<br/>
 Rozmiar bloku z domyślną 10.
 
 ### <a name="remarks"></a>Uwagi
@@ -88,6 +88,6 @@ Rozmiar bloku jest miarą ilość pamięci przydzielonej, gdy nowy element jest 
 
 ## <a name="see-also"></a>Zobacz też
 
-[Klasa CAtlList](../../atl/reference/catllist-class.md)   
-[Klasa CAutoPtrElementTraits](../../atl/reference/cautoptrelementtraits-class.md)   
+[Klasa CAtlList](../../atl/reference/catllist-class.md)<br/>
+[Klasa CAutoPtrElementTraits](../../atl/reference/cautoptrelementtraits-class.md)<br/>
 [Klasa — Przegląd](../../atl/atl-class-overview.md)

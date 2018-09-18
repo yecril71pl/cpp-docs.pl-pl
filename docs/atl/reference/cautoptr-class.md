@@ -22,12 +22,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a312ca8aa7afe39a301607e6b091341adbb89bc4
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: c3066f4586d34c4742cc03511d7f8739b642ccbd
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43761085"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46066248"
 ---
 # <a name="cautoptr-class"></a>Klasa CAutoPtr
 
@@ -39,13 +39,13 @@ Ta klasa reprezentuje obiekt inteligentnego wskaźnika.
 ## <a name="syntax"></a>Składnia
 
 ```
-template <typename T>  
+template <typename T>
 class CAutoPtr
 ```
 
 #### <a name="parameters"></a>Parametry
 
-*T*  
+*T*<br/>
 Typ wskaźnika.
 
 ## <a name="members"></a>Elementy członkowskie
@@ -109,7 +109,7 @@ void Attach(T* p) throw();
 
 ### <a name="parameters"></a>Parametry
 
-*p*  
+*p*<br/>
 `CAutoPtr` Obiekt będzie przejęcie na własność ten wskaźnik.
 
 ### <a name="remarks"></a>Uwagi
@@ -133,16 +133,16 @@ explicit CAutoPtr(T* p) throw();
 template<typename TSrc>
 CAutoPtr(CAutoPtr<TSrc>& p) throw();
 
-template<> 
+template<>
 CAutoPtr(CAutoPtr<T>& p) throw();
 ```
 
 ### <a name="parameters"></a>Parametry
 
-*p*  
+*p*<br/>
 Istniejącego wskaźnika.
 
-*TSrc*  
+*TSrc*<br/>
 Typ zarządzany przez inną `CAutoPtr`, który jest używany do zainicjowania bieżący obiekt.
 
 ### <a name="remarks"></a>Uwagi
@@ -223,10 +223,10 @@ CAutoPtr<T>& operator= (CAutoPtr<TSrc>& p);
 
 ### <a name="parameters"></a>Parametry
 
-*p*  
+*p*<br/>
 Wskaźnik.
 
-*TSrc*  
+*TSrc*<br/>
 Typ klasy.
 
 ### <a name="return-value"></a>Wartość zwracana
@@ -265,7 +265,7 @@ Zobacz przykład w [Przegląd CAutoPtr](../../atl/reference/cautoptr-class.md).
 
 Operator rzutowania.
 
-```  
+```
 operator T* () const throw();
 ```
 
@@ -279,6 +279,6 @@ Zobacz przykład w [Przegląd CAutoPtr](../../atl/reference/cautoptr-class.md).
 
 ## <a name="see-also"></a>Zobacz też
 
-[Klasa CHeapPtr](../../atl/reference/cheapptr-class.md)   
-[Klasa CAutoVectorPtr](../../atl/reference/cautovectorptr-class.md)   
+[Klasa CHeapPtr](../../atl/reference/cheapptr-class.md)<br/>
+[Klasa CAutoVectorPtr](../../atl/reference/cautovectorptr-class.md)<br/>
 [Klasa — Przegląd](../../atl/atl-class-overview.md)

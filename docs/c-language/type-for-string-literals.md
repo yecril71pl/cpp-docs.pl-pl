@@ -15,15 +15,17 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1bfabc412c46a5fa73bf0cd3d000bb3823e5a389
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 7773882d6fb04341a6f6d3a2cbcfda1d05f85d17
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32386774"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46063284"
 ---
 # <a name="type-for-string-literals"></a>Typy literałów ciągów
-Literały ciągu mieć typu tablicy `char` (to znaczy **char []**). (Ciągi znaków dwubajtowych są typu tablicy `wchar_t` (to znaczy **wchar_t [**).) Oznacza to, że ciąg tablicy elementami typu `char`. Liczba elementów w tablicy jest równa liczbie znaków w ciągu plus jeden dla znak końcowy null.  
-  
-## <a name="see-also"></a>Zobacz też  
- [Literały ciągu języka C](../c-language/c-string-literals.md)
+
+Literały ciągu być tablicą typu `char` (czyli **char []**). (Ciągi znaków dwubajtowych mają typu tablicy `wchar_t` (czyli **[] wchar_t**).) Oznacza, że ciąg tablicy o liczbie elementów typu `char`. Liczba elementów w tablicy jest równa liczbie znaków w ciągu plus jeden w przypadku końcowego znaku null.
+
+## <a name="see-also"></a>Zobacz też
+
+[Literały ciągu języka C](../c-language/c-string-literals.md)

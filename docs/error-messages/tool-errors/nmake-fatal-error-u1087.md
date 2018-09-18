@@ -16,16 +16,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f07309c64066b0a17aab110035c700c229c439df
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 2f0e094c720222990ee90af7de900d8cf6ba4051
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33319725"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46036803"
 ---
 # <a name="nmake-fatal-error-u1087"></a>Błąd krytyczny NMAKE U1087
-nie może mieć: i:: elementów zależnych dla tego samego obiektu docelowego  
-  
- Nie można określić obiektu docelowego w obu jednym dwukropkiem (**:**) i podwójnego dwukropka (`::`) zależności.  
-  
- Aby określić cel w blokach opisów, użyj `::` w każdym wierszu zależności.
+
+nie może mieć: i:: elementów zależnych dla tego samego obiektu docelowego.
+
+Element docelowy nie można określić w obu pojedynczego dwukropek (**:**) i podwójnego dwukropka (`::`) zależności.
+
+Aby określić obiekt docelowy w blokach opisów, użyj `::` w każdym wierszu zależności.

@@ -1,5 +1,5 @@
 ---
-title: C2419 błąd kompilatora | Dokumentacja firmy Microsoft
+title: Błąd kompilatora C2419 | Dokumentacja firmy Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,14 +16,15 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a456a4844c596a7cacad6ca85af8923d23d480f7
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 6fa3e6c562fe526df506a0f3aaf6944850f303b8
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33223737"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46041340"
 ---
-# <a name="compiler-error-c2419"></a>C2419 błąd kompilatora
-dzielenie modulo przez zero w "context"  
-  
- Parametr z prawej strony `MOD` operator wynosi zero w tym kontekście.
+# <a name="compiler-error-c2419"></a>Błąd kompilatora C2419
+
+dzielenie modulo przez zero w "context"
+
+Parametr po prawej stronie `MOD` operator ma wartość zero, w tym kontekście.

@@ -1,5 +1,5 @@
 ---
-title: C3063 błąd kompilatora | Dokumentacja firmy Microsoft
+title: Błąd kompilatora C3063 | Dokumentacja firmy Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,29 +16,31 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 68809002b2c895387cd10d33615ec9d6c7a6b861
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 9adea484416b85f027693b59acb343d4ca19cf6e
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33248983"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46021645"
 ---
-# <a name="compiler-error-c3063"></a>C3063 błąd kompilatora
-operator "operator": wszystkie operandy muszą posiadać ten sam typ wyliczeniowy  
-  
-Używając operatory na moduły wyliczające, obydwa argumenty operacji musi być typem wyliczenia. Aby uzyskać więcej informacji, zobacz [porady: Definiowanie wyliczeń i korzystanie w języku C + +/ CLI](../../dotnet/how-to-define-and-consume-enums-in-cpp-cli.md).  
-  
-## <a name="example"></a>Przykład  
-Poniższy przykład generuje C3063 i pokazuje, jak rozwiązywanie problemu:  
-  
-```  
-// C3063.cpp  
-// compile with: /clr  
-enum class E { a, b } e, mask;  
-int main() {  
-   if ( ( e & mask ) != 0 ) ;   // C3063 no operator!= (E, int)  
-  
-   if ( ( e & mask ) != E() )   // OK  
-      ;  
-}  
+# <a name="compiler-error-c3063"></a>Błąd kompilatora C3063
+
+operator 'operator': wszystkie operandy muszą posiadać ten sam typ wyliczeniowy
+
+Korzystając z operatorów na modułach wyliczających, oba operandy musi być typem wyliczenia. Aby uzyskać więcej informacji, zobacz [porady: Definiowanie oraz stosowanie wyliczeń w języku C + +/ CLI](../../dotnet/how-to-define-and-consume-enums-in-cpp-cli.md).
+
+## <a name="example"></a>Przykład
+
+Poniższy przykład generuje C3063 i pokazuje, jak go naprawić:
+
+```
+// C3063.cpp
+// compile with: /clr
+enum class E { a, b } e, mask;
+int main() {
+   if ( ( e & mask ) != 0 ) ;   // C3063 no operator!= (E, int)
+
+   if ( ( e & mask ) != E() )   // OK
+      ;
+}
 ```

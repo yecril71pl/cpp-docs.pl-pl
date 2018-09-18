@@ -1,5 +1,5 @@
 ---
-title: C3481 błąd kompilatora | Dokumentacja firmy Microsoft
+title: Błąd kompilatora C3481 | Dokumentacja firmy Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,33 +16,36 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 77fc0f542a74cb077e59882e31dd1acb10c7b7e9
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 25634bb455a032ceff51d5e35f7a16e00e020326
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33250488"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46066898"
 ---
-# <a name="compiler-error-c3481"></a>C3481 błąd kompilatora
-"var": nie znaleziono zmiennej przechwytującej lambdę  
-  
- Kompilator nie można odnaleźć definicji zmiennej, który został przekazany do listy przechwytywania wyrażenia lambda.  
-  
-### <a name="to-correct-this-error"></a>Aby poprawić ten błąd  
-  
--   Usuń zmienną z listy przechwytywania lambda wyrażenia.  
-  
-## <a name="example"></a>Przykład  
- Poniższy przykład generuje C3481, ponieważ zmienna `n` nie jest zdefiniowana:  
-  
-```  
-// C3481.cpp  
-  
-int main()  
-{  
-   [n] {}(); // C3481  
-}  
-```  
-  
-## <a name="see-also"></a>Zobacz też  
- [Wyrażenia lambda](../../cpp/lambda-expressions-in-cpp.md)
+# <a name="compiler-error-c3481"></a>Błąd kompilatora C3481
+
+"var": zmienna przechwytująca lambdę nie znaleziono
+
+Kompilator nie można odnaleźć definicji zmiennej, które przekazałeś do listy przechwytywania wyrażenia lambda.
+
+### <a name="to-correct-this-error"></a>Aby poprawić ten błąd
+
+- Usuń zmienną z listy przechwytywania wyrażenia lambda.
+
+## <a name="example"></a>Przykład
+
+Poniższy przykład generuje C3481, ponieważ zmienna `n` nie jest zdefiniowany:
+
+```
+// C3481.cpp
+
+int main()
+{
+   [n] {}(); // C3481
+}
+```
+
+## <a name="see-also"></a>Zobacz też
+
+[Wyrażenia lambda](../../cpp/lambda-expressions-in-cpp.md)

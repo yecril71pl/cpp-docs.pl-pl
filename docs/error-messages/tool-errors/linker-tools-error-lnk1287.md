@@ -16,14 +16,15 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 944702897021f50ff1e7fea2931a9aa16c9d080a
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 61f016c9fb8de12dd690dee7dbcd2aec1ecf3a97
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33299295"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46060775"
 ---
 # <a name="linker-tools-error-lnk1287"></a>Błąd narzędzi konsolidatora LNK1287
-Nieprawidłowy wpis zarządzanych punktu — funkcja  
-  
- Punkt wejścia nie jest prawidłowa dla zarządzanego obrazu. Zwracany typ funkcji punktu wejścia zarządzanych może być tylko `void` lub `int`. Typ parametru funkcji punktu wejścia zarządzanych może być tylko `void` lub `String []`.
+
+Funkcja punktu wejścia zarządzanych nieprawidłowy
+
+Punkt wejścia nie jest prawidłowe dla obrazu zarządzanego. Zwracany typ funkcji punktu wejścia zarządzanych może składać się wyłącznie `void` lub `int`. Typ parametru funkcji punktu wejścia zarządzanych może składać się wyłącznie `void` lub `String []`.

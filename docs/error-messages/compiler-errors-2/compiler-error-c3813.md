@@ -1,5 +1,5 @@
 ---
-title: C3813 błąd kompilatora | Dokumentacja firmy Microsoft
+title: Błąd kompilatora C3813 | Dokumentacja firmy Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,31 +16,33 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e947b281c90c4d2ace83971f1de972c29bde72ac
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: b8984feb5b657c26d2137eb9a3c648f1bcf442bf
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33273110"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46066274"
 ---
-# <a name="compiler-error-c3813"></a>C3813 błąd kompilatora
-Deklaracja właściwości może wystąpić tylko wewnątrz definicji zarządzanego lub typu WinRT  
-  
-A [właściwości](../../dotnet/how-to-use-properties-in-cpp-cli.md) mogą być deklarowane tylko w ramach zarządzanego lub środowiska wykonawczego systemu Windows typu. Typy natywne nie obsługują `property` — słowo kluczowe.  
-  
-## <a name="example"></a>Przykład  
-Poniższy przykład generuje C3813 i pokazuje, jak rozwiązywanie problemu:  
-  
-```cpp  
-// C3813.cpp  
-// compile by using: cl /c /clr C3813.cpp  
-class A  
-{  
-   property int Int; // C3813  
-};  
-  
-ref class B  
-{  
-   property int Int; // OK - declared within managed type  
-};  
+# <a name="compiler-error-c3813"></a>Błąd kompilatora C3813
+
+Deklaracja właściwości może wystąpić tylko wewnątrz definicji zarządzanej lub typu WinRT
+
+A [właściwości](../../dotnet/how-to-use-properties-in-cpp-cli.md) mogą być deklarowane tylko w zarządzanej lub Windows Runtime typu. Typy natywne nie obsługują `property` — słowo kluczowe.
+
+## <a name="example"></a>Przykład
+
+Poniższy przykład generuje C3813 i pokazuje, jak go naprawić:
+
+```cpp
+// C3813.cpp
+// compile by using: cl /c /clr C3813.cpp
+class A
+{
+   property int Int; // C3813
+};
+
+ref class B
+{
+   property int Int; // OK - declared within managed type
+};
 ```

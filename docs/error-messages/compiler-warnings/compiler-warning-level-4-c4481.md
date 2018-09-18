@@ -1,5 +1,5 @@
 ---
-title: Kompilatora (poziom 4) ostrzeżenie C4481 | Dokumentacja firmy Microsoft
+title: Kompilator ostrzeżenie (poziom 4) C4481 | Dokumentacja firmy Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,34 +16,36 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: aeef5f2121808c5444af942fac0e3b72919f2354
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 48ed2ba08423f7540f4e0a855aacbcab993d41aa
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33293122"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46063765"
 ---
-# <a name="compiler-warning-level-4-c4481"></a>Kompilator C4481 ostrzegawcze (poziom 4)
-użyto niestandardowego rozszerzenia: specyfikator "— słowo kluczowe" override  
-  
- Słowo kluczowe użyto nie znajduje się w standard C++, na przykład jeden specyfikatorów zastąpienia, które działa także w/CLR.  Aby uzyskać więcej informacji, zobacz,  
-  
--   [/clr (Kompilacja środowiska uruchomieniowego języka wspólnego)](../../build/reference/clr-common-language-runtime-compilation.md)  
-  
--   [Specyfikatory zastąpienia](../../windows/override-specifiers-cpp-component-extensions.md)  
-  
-## <a name="example"></a>Przykład  
- Poniższy przykład generuje C4481.  
-  
-```  
-// C4481.cpp  
-// compile with: /W4 /c  
-class B {  
-   virtual void f(unsigned);  
-};  
-  
-class C : B {  
-   void f(unsigned) override;   // C4481  
-   void f2(unsigned);  
-};  
+# <a name="compiler-warning-level-4-c4481"></a>Kompilator ostrzeżenie (poziom 4) C4481
+
+użyte rozszerzenie niestandardowe: specyfikator "— słowo kluczowe" override
+
+Słowo kluczowe użyto nie znajduje się w C++, standardowa, na przykład jeden specyfikatorów przesłonięć, które działa także w ramach/CLR.  Aby uzyskać więcej informacji, zobacz,
+
+- [/clr (Kompilacja środowiska uruchomieniowego języka wspólnego)](../../build/reference/clr-common-language-runtime-compilation.md)
+
+- [Specyfikatory przesłonięć](../../windows/override-specifiers-cpp-component-extensions.md)
+
+## <a name="example"></a>Przykład
+
+Poniższy przykład spowoduje wygenerowanie C4481.
+
+```
+// C4481.cpp
+// compile with: /W4 /c
+class B {
+   virtual void f(unsigned);
+};
+
+class C : B {
+   void f(unsigned) override;   // C4481
+   void f2(unsigned);
+};
 ```

@@ -16,16 +16,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 19890e290c98fd9602d755ad35f9d47204bd6c24
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: e0a83c62bedf995708d5e99fee19f05696d05c2d
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33316559"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46065702"
 ---
 # <a name="nmake-fatal-error-u1056"></a>Błąd krytyczny NMAKE U1056
-Nie można znaleźć procesora poleceń  
-  
- Procesor poleceń nie znajdowała się w ścieżce określonej w **COMSPEC** lub **ścieżki** zmiennych środowiskowych.  
-  
- NMAKE używa COMMAND.COM lub CMD. EXE jako procesora poleceń, podczas wykonywania polecenia. Szuka procesora poleceń najpierw w ścieżce w **COMSPEC**. Jeśli **COMSPEC** nie istnieje, wyszukiwanie NMAKE katalogi określone w **ścieżki**.
+
+Nie można znaleźć procesora poleceń
+
+Procesor poleceń nie znajdowała się w ścieżce określonej w **COMSPEC** lub **ścieżki** zmiennych środowiskowych.
+
+NMAKE używa COMMAND.COM lub CMD. EXE jako podmiot przetwarzający polecenia podczas wykonywania polecenia. Szuka procesora poleceń najpierw w ścieżce w **COMSPEC**. Jeśli **COMSPEC** nie istnieje, NMAKE wyszukiwania katalogów określonych w **ścieżki**.

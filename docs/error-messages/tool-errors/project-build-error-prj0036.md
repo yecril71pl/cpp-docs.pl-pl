@@ -16,18 +16,19 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 55ca9c282cbf36111bbc6b5d4316745508ccbb0c
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 32b73fb8d86ff537912218ea35089382a93aec4c
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33317352"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46065195"
 ---
 # <a name="project-build-error-prj0036"></a>Błąd PRJ0036 kompilacji projektu
-Właściwość 'Dodatkowe pliki' narzędzia wdrażania Web zawiera niepoprawny wpis.  
-  
- Właściwość dodatkowe pliki na stronie właściwości sieci Web Deployment zawiera błąd, prawdopodobnie z powodu problemu ocena makra. Ten błąd może również oznaczać czy ścieżka jest nieprawidłowo sformułowany, zawierające znaki lub kombinacji znaków, które są niedozwolone w ścieżce pliku.  
-  
- Aby rozwiązać ten problem, Usuń makro lub usuń specyfikacji ścieżki. Obliczane ścieżka jest ścieżką bezwzględną od katalogu projektu.  
-  
- Ten błąd może również oznaczać jeden z plików, do których odwołuje się nie istnieje.
+
+Właściwość 'Dodatkowe pliki' narzędzia wdrażania Web zawiera niepoprawny wpis.
+
+Właściwość dodatkowe pliki na stronie właściwości sieci Web Deployment zawiera błąd, prawdopodobnie z powodu problemu z oceny makra. Ten błąd może również oznaczać, że ścieżka jest nieprawidłowo sformułowany, zawierające znaki lub kombinacje znaków, które nie są dozwolone w ścieżce pliku.
+
+Aby rozwiązać ten problem, napraw makra, lub usuń specyfikację ścieżki. Oceniono ścieżka jest ścieżką bezwzględną z katalogu projektu.
+
+Ten błąd może również oznaczać, że jeden z plików, do których odwołuje się nie istnieje.

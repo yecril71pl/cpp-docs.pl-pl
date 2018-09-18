@@ -17,21 +17,23 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f0ba2e8452defef14816993a2c1851de58bf624f
-ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
+ms.openlocfilehash: a22b97e730a40e8ebe71ea766919f946ac4dcb84
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/01/2018
-ms.locfileid: "39407286"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46064366"
 ---
 # <a name="program-termination"></a>Kończenie działania programu
-W języku C++ istnieje kilka sposobów, aby zakończyć program:  
-  
--   Wywołaj [wyjść](../cpp/exit-function.md) funkcji.  
-  
--   Wywołaj [przerwać](../cpp/abort-function.md) funkcji.  
-  
--   Wykonaj [zwracają](../cpp/return-statement-in-program-termination-cpp.md) instrukcji z `main`.  
-  
-## <a name="see-also"></a>Zobacz także  
- [main: uruchamianie programu](../cpp/main-program-startup.md)
+
+W języku C++ istnieje kilka sposobów, aby zakończyć program:
+
+- Wywołaj [wyjść](../cpp/exit-function.md) funkcji.
+
+- Wywołaj [przerwać](../cpp/abort-function.md) funkcji.
+
+- Wykonaj [zwracają](../cpp/return-statement-in-program-termination-cpp.md) instrukcji z `main`.
+
+## <a name="see-also"></a>Zobacz także
+
+[main: uruchamianie programu](../cpp/main-program-startup.md)

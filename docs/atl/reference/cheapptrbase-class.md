@@ -23,12 +23,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 849e7ced8889cb46195946cca68243c37e1299a2
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: f2a6ab9e03a44f48acca9b949193ceec85eb3ef6
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43760126"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46063115"
 ---
 # <a name="cheapptrbase-class"></a>Klasa CHeapPtrBase
 
@@ -40,16 +40,16 @@ Ta klasa stanowi podstawę kilka klas wskaźnika inteligentnego sterty.
 ## <a name="syntax"></a>Składnia
 
 ```
-template <class T, class Allocator = CCRTAllocator>  
+template <class T, class Allocator = CCRTAllocator>
 class CHeapPtrBase
 ```
 
 #### <a name="parameters"></a>Parametry
 
-*T*  
+*T*<br/>
 Typ obiektu, który ma być przechowywany na stosie.
 
-*Allocator*  
+*Allocator*<br/>
 Klasa alokacji pamięci do użycia. Domyślnie CRT procedury służą do przydzielają i zwalniają pamięć.
 
 ## <a name="members"></a>Elementy członkowskie
@@ -102,7 +102,7 @@ bool AllocateBytes(size_t nBytes) throw();
 
 ### <a name="parameters"></a>Parametry
 
-*nBytes*  
+*nBytes*<br/>
 Liczba bajtów pamięci do przydzielenia.
 
 ### <a name="return-value"></a>Wartość zwracana
@@ -123,7 +123,7 @@ void Attach(T* pData) throw();
 
 ### <a name="parameters"></a>Parametry
 
-*pData*  
+*pData*<br/>
 `CHeapPtrBase` Obiekt będzie przejęcie na własność ten wskaźnik.
 
 ### <a name="remarks"></a>Uwagi
@@ -216,7 +216,7 @@ Użyj tego operatora do wywołania metody w klasie, do których prowadzą `CHeap
 
 Operator rzutowania.
 
-```  
+```
 operator T*() const throw();
 ```
 
@@ -234,7 +234,7 @@ bool ReallocateBytes(size_t nBytes) throw();
 
 ### <a name="parameters"></a>Parametry
 
-*nBytes*  
+*nBytes*<br/>
 Nowe ilość pamięci do przydzielenia, w bajtach.
 
 ### <a name="return-value"></a>Wartość zwracana
@@ -243,6 +243,6 @@ Zwraca wartość PRAWDA, jeśli pamięć jest pomyślnie przydzielone, wartość
 
 ## <a name="see-also"></a>Zobacz też
 
-[Klasa CHeapPtr](../../atl/reference/cheapptr-class.md)   
-[Klasa CComHeapPtr](../../atl/reference/ccomheapptr-class.md)   
+[Klasa CHeapPtr](../../atl/reference/cheapptr-class.md)<br/>
+[Klasa CComHeapPtr](../../atl/reference/ccomheapptr-class.md)<br/>
 [Klasa — Przegląd](../../atl/atl-class-overview.md)

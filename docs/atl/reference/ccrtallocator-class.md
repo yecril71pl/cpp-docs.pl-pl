@@ -20,12 +20,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0f89df62f35e37e1ab74fc177167cbd82f92f7d9
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: bfd7d5a040da4d27838e8045b6c4c64950e515dc
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43752888"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46054847"
 ---
 # <a name="ccrtallocator-class"></a>Klasa CCRTAllocator
 
@@ -65,7 +65,7 @@ static __declspec(allocator) void* Allocate(size_t nBytes) throw();
 
 ### <a name="parameters"></a>Parametry
 
-*nBytes*  
+*nBytes*<br/>
 Liczba bajtów do przydzielenia.
 
 ### <a name="return-value"></a>Wartość zwracana
@@ -86,7 +86,7 @@ static void Free(void* p) throw();
 
 ### <a name="parameters"></a>Parametry
 
-*p*  
+*p*<br/>
 Wskaźnik do alokacji pamięci.
 
 ### <a name="remarks"></a>Uwagi
@@ -103,10 +103,10 @@ static __declspec(allocator) void* Reallocate(void* p, size_t nBytes) throw();
 
 ### <a name="parameters"></a>Parametry
 
-*p*  
+*p*<br/>
 Wskaźnik do alokacji pamięci.
 
-*nBytes*  
+*nBytes*<br/>
 Liczba bajtów w celu ponownego przydzielenia.
 
 ### <a name="return-value"></a>Wartość zwracana
@@ -119,6 +119,6 @@ Zmienia rozmiar ilość ilość przydzielonej pamięci. Zobacz [realloc](../../c
 
 ## <a name="see-also"></a>Zobacz też
 
-[Klasa CHeapPtr](../../atl/reference/cheapptr-class.md)   
-[Klasa CComAllocator](../../atl/reference/ccomallocator-class.md)   
+[Klasa CHeapPtr](../../atl/reference/cheapptr-class.md)<br/>
+[Klasa CComAllocator](../../atl/reference/ccomallocator-class.md)<br/>
 [Klasa — Przegląd](../../atl/atl-class-overview.md)

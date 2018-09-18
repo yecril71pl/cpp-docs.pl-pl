@@ -18,28 +18,31 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: cecc47bc4633aa40f38bda23d1aee0007ea34ab4
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: f79f8648c2c0d12bf521c38e2db025a8841ab927
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43201885"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46061087"
 ---
 # <a name="argument-description"></a>Opis argumentu
-`argc` Parametru w **głównego** i **wmain** funkcji jest liczbą całkowitą, określając, ile argumentów są przekazywane do programu z poziomu wiersza polecenia. Ponieważ nazwa programu jest uznawany za argument, a wartość `argc` co najmniej jeden.  
-  
-## <a name="remarks"></a>Uwagi  
- `argv` Parametr jest tablicą wskaźników do ciągów znaków zakończony znakiem null, reprezentujący argumenty programu. Każdy element punktów tablicy na ciąg reprezentujący argument przekazany do **głównego** (lub **wmain**). (Aby uzyskać informacje na temat tablic, zobacz [deklaracje tablicy](../c-language/array-declarations.md).) `argv` Parametru może być zadeklarowana jako tablica wskaźników do typu `char` (`char *argv[]`) lub jako wskaźnik do wskaźników do typu `char` (`char **argv`). Aby uzyskać **wmain**, `argv` parametru może być zadeklarowana jako tablica wskaźników do typu `wchar_t` (`wchar_t *argv[]`) lub jako wskaźnik do wskaźników do typu `wchar_t` (`wchar_t **argv`).  
-  
- Zgodnie z Konwencją `argv` **[0]** jest poleceniem, z którym wywoływany jest program.  Jednak jest możliwe, aby utworzyć proces przy użyciu [CreateProcess](/windows/desktop/api/processthreadsapi/nf-processthreadsapi-createprocessa) i jeśli korzystasz z pierwszego i drugiego argumentu (`lpApplicationName` i `lpCommandLine`), `argv` **[0]** może nie być Nazwa pliku wykonywalnego; Użyj [Funkcja GetModuleFileName](https://msdn.microsoft.com/library/windows/desktop/ms683197) można pobrać nazwy pliku wykonywalnego.  
-  
- Ostatnie wskaźnika (`argv[argc]`) jest **NULL**. (Zobacz [getenv](../c-runtime-library/reference/getenv-wgetenv.md) w *odwołanie do biblioteki wykonawczej* dla alternatywną metodę w celu uzyskania informacji o zmiennej środowiska.)  
-  
- **Microsoft Specific**  
-  
- `envp` Parametr jest wskaźnikiem do tablicy zakończony znakiem null ciągi znaków reprezentujące wartości zmiennych środowiskowych użytkownika. `envp` Parametru mogą być deklarowane jako tablicę wskaźników do `char` (`char *envp[]`) lub jako wskaźnik do wskaźników do `char` (`char **envp`). W **wmain** funkcji `envp` parametru mogą być deklarowane jako tablicę wskaźników do `wchar_t` (`wchar_t *envp[]`) lub jako wskaźnik do wskaźników do `wchar_t` (`wchar_t **envp`). Końca tablicy jest wskazywana przez **NULL** \*wskaźnika. Należy zauważyć, że blok środowiska przekazany do **głównego** lub **wmain** jest "zamrożoną" kopią bieżącego środowiska. Jeśli następnie zmienisz środowisko przez wywołanie _**putenv** lub `_wputenv`, bieżące środowisko (zwrócone przez `getenv` / `_wgetenv` i `_environ` lub `_wenviron` zmienne) ulegnie zmianie, ale blok wskazywany przez `envp` nie ulegnie zmianie. `envp` Parametr jest zgodny w języku C, ale nie w języku C++ ze standardem ANSI.  
-  
- **END specyficzny dla Microsoft**  
-  
-## <a name="see-also"></a>Zobacz też  
- [Funkcja main i wykonywanie programu](../c-language/main-function-and-program-execution.md)
+
+`argc` Parametru w **głównego** i **wmain** funkcji jest liczbą całkowitą, określając, ile argumentów są przekazywane do programu z poziomu wiersza polecenia. Ponieważ nazwa programu jest uznawany za argument, a wartość `argc` co najmniej jeden.
+
+## <a name="remarks"></a>Uwagi
+
+`argv` Parametr jest tablicą wskaźników do ciągów znaków zakończony znakiem null, reprezentujący argumenty programu. Każdy element punktów tablicy na ciąg reprezentujący argument przekazany do **głównego** (lub **wmain**). (Aby uzyskać informacje na temat tablic, zobacz [deklaracje tablicy](../c-language/array-declarations.md).) `argv` Parametru może być zadeklarowana jako tablica wskaźników do typu `char` (`char *argv[]`) lub jako wskaźnik do wskaźników do typu `char` (`char **argv`). Aby uzyskać **wmain**, `argv` parametru może być zadeklarowana jako tablica wskaźników do typu `wchar_t` (`wchar_t *argv[]`) lub jako wskaźnik do wskaźników do typu `wchar_t` (`wchar_t **argv`).
+
+Zgodnie z Konwencją `argv` **[0]** jest poleceniem, z którym wywoływany jest program.  Jednak jest możliwe, aby utworzyć proces przy użyciu [CreateProcess](/windows/desktop/api/processthreadsapi/nf-processthreadsapi-createprocessa) i jeśli korzystasz z pierwszego i drugiego argumentu (`lpApplicationName` i `lpCommandLine`), `argv` **[0]** może nie być Nazwa pliku wykonywalnego; Użyj [Funkcja GetModuleFileName](https://msdn.microsoft.com/library/windows/desktop/ms683197) można pobrać nazwy pliku wykonywalnego.
+
+Ostatnie wskaźnika (`argv[argc]`) jest **NULL**. (Zobacz [getenv](../c-runtime-library/reference/getenv-wgetenv.md) w *odwołanie do biblioteki wykonawczej* dla alternatywną metodę w celu uzyskania informacji o zmiennej środowiska.)
+
+**Microsoft Specific**
+
+`envp` Parametr jest wskaźnikiem do tablicy zakończony znakiem null ciągi znaków reprezentujące wartości zmiennych środowiskowych użytkownika. `envp` Parametru mogą być deklarowane jako tablicę wskaźników do `char` (`char *envp[]`) lub jako wskaźnik do wskaźników do `char` (`char **envp`). W **wmain** funkcji `envp` parametru mogą być deklarowane jako tablicę wskaźników do `wchar_t` (`wchar_t *envp[]`) lub jako wskaźnik do wskaźników do `wchar_t` (`wchar_t **envp`). Końca tablicy jest wskazywana przez **NULL** \*wskaźnika. Należy zauważyć, że blok środowiska przekazany do **głównego** lub **wmain** jest "zamrożoną" kopią bieżącego środowiska. Jeśli następnie zmienisz środowisko przez wywołanie _**putenv** lub `_wputenv`, bieżące środowisko (zwrócone przez `getenv` / `_wgetenv` i `_environ` lub `_wenviron` zmienne) ulegnie zmianie, ale blok wskazywany przez `envp` nie ulegnie zmianie. `envp` Parametr jest zgodny w języku C, ale nie w języku C++ ze standardem ANSI.
+
+**END specyficzny dla Microsoft**
+
+## <a name="see-also"></a>Zobacz też
+
+[Funkcja main i wykonywanie programu](../c-language/main-function-and-program-execution.md)

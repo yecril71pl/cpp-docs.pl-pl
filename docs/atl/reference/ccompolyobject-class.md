@@ -27,12 +27,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ec995026b0142fc30470836b29697457be91937e
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 6fcf62e142c99fad15bec667534bc60b4d19e43d
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43764813"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46045058"
 ---
 # <a name="ccompolyobject-class"></a>Klasa CComPolyObject
 
@@ -41,14 +41,14 @@ Ta klasa implementuje `IUnknown` zagregowane lub nieagregowane w obiekcie.
 ## <a name="syntax"></a>Składnia
 
 ```
-template<class contained>  
+template<class contained>
 class CComPolyObject : public IUnknown,
       public CComObjectRootEx<contained::_ThreadModel::ThreadModelNoCS>
 ```
 
 #### <a name="parameters"></a>Parametry
 
-*zawiera*  
+*zawiera*<br/>
 Z klasą pochodną [CComObjectRoot](../../atl/reference/ccomobjectroot-class.md) lub [CComObjectRootEx](../../atl/reference/ccomobjectrootex-class.md), jak również od innych interfejsów, które chcesz obsługiwać obiektu.
 
 ## <a name="members"></a>Elementy członkowskie
@@ -127,7 +127,7 @@ CComPolyObject(void* pv);
 
 ### <a name="parameters"></a>Parametry
 
-*Wa*  
+*Wa*<br/>
 [in] Wskaźnik do nieznanego zewnętrzne, jeśli obiekt jest agregowane, lub wartość NULL, jeśli obiekt, jeśli obiekt nie jest agregowany.
 
 ### <a name="remarks"></a>Uwagi
@@ -160,7 +160,7 @@ static HRESULT WINAPI CreateInstance(
 
 ### <a name="parameters"></a>Parametry
 
-*strony*  
+*strony*<br/>
 [out] Wskaźnik do **CComPolyObject <** `contained` **>** wskaźnika. Jeśli `CreateInstance` zakończy się niepowodzeniem, *pp* ma wartość NULL.
 
 ### <a name="return-value"></a>Wartość zwracana
@@ -203,7 +203,7 @@ CComContainedObject<contained> m_contained;
 
 ### <a name="parameters"></a>Parametry
 
-*zawiera*  
+*zawiera*<br/>
 [in] Z klasą pochodną [CComObjectRoot](../../atl/reference/ccomobjectroot-class.md) lub [CComObjectRootEx](../../atl/reference/ccomobjectrootex-class.md), jak również od innych interfejsów, które chcesz obsługiwać obiektu.
 
 ### <a name="remarks"></a>Uwagi
@@ -216,22 +216,22 @@ Pobiera wskaźnik do żądanego interfejsu.
 
 ```
 STDMETHOD(QueryInterface)(REFIID iid, void** ppvObject);
-template <class Q>  
+template <class Q>
 HRESULT QueryInterface(Q** pp);
 ```
 
 ### <a name="parameters"></a>Parametry
 
-*PYTANIA I ODPOWIEDZI*  
+*PYTANIA I ODPOWIEDZI*<br/>
 Interfejs COM.
 
-*IID*  
+*IID*<br/>
 [in] Identyfikator interfejsu żądanej.
 
-*ppvObject*  
+*ppvObject*<br/>
 [out] Wskaźnik do wskaźnika interfejsu identyfikowane przez *iid*. Jeśli obiekt nie obsługuje ten interfejs *ppvObject* ma wartość NULL.
 
-*strony*  
+*strony*<br/>
 [out] Wskaźnik do interfejsu identyfikowane przez `__uuidof(Q)`.
 
 ### <a name="return-value"></a>Wartość zwracana
@@ -256,6 +256,6 @@ W kompilacjach do debugowania `Release` zwraca wartość, która może być uży
 
 ## <a name="see-also"></a>Zobacz też
 
-[Klasa CComObjectRootEx](../../atl/reference/ccomobjectrootex-class.md)   
-[DECLARE_POLY_AGGREGATABLE](aggregation-and-class-factory-macros.md#declare_poly_aggregatable)   
+[Klasa CComObjectRootEx](../../atl/reference/ccomobjectrootex-class.md)<br/>
+[DECLARE_POLY_AGGREGATABLE](aggregation-and-class-factory-macros.md#declare_poly_aggregatable)<br/>
 [Klasa — Przegląd](../../atl/atl-class-overview.md)

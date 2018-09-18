@@ -17,12 +17,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f5254adbf533a30da65349f2f8aadd100b8776d7
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: ef670aca60b2e3156ea70480a1dafc315ae60624
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43755555"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46061479"
 ---
 # <a name="do-while-statement-c"></a>do-while — instrukcja (C)
 
@@ -30,8 +30,7 @@ ms.locfileid: "43755555"
 
 ## <a name="syntax"></a>Składnia
 
-*instrukcji iteracji*:  
-&nbsp;&nbsp;&nbsp;&nbsp;**czy***instrukcji***podczas (***wyrażenie***);**
+*instrukcji iteracji*: &nbsp; &nbsp; &nbsp; &nbsp; **czy***instrukcji***podczas (** *wyrażenie***);** 
 
 *Wyrażenie* w *czy-podczas* instrukcji jest oceniane, po wykonaniu treść pętli. W związku z tym treść pętli jest zawsze wykonywana co najmniej raz.
 
@@ -47,10 +46,10 @@ Jest to przykład *czy-podczas* instrukcji:
 
 ```C
 do
-{  
-    y = f( x );  
-    x--;  
-} while ( x > 0 );  
+{
+    y = f( x );
+    x--;
+} while ( x > 0 );
 ```
 
 W tym *czy — gdy* instrukcji, dwie instrukcje `y = f( x );` i `x--;` są wykonywane, bez względu na wartość początkową `x`. Następnie `x > 0` jest oceniany. Jeśli `x` jest większa niż 0, instrukcja zostaje wykonana ponownie i `x > 0` jest ponownie oceniane. Instrukcja zostaje wykonana wielokrotnie tak długo, jak `x` większe niż 0. Wykonywanie *czy — gdy* instrukcji skończy się, gdy `x` staje się 0 ani ujemna. Treść pętli jest wykonywane co najmniej raz.

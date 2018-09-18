@@ -17,18 +17,20 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 58a4d6618aeea9cc07731ba814644cf31b4a6941
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 73bbc4d8c80b6fa617710344f570da3498f3a94a
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32381932"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46062023"
 ---
 # <a name="c-language-syntax-summary"></a>Podsumowanie dotyczące składni języka C
-W tej sekcji przedstawiono pełen opis języka C i funkcje języka C specyficzne dla firmy Microsoft. Notacja składni w tej sekcji służy do określenia dokładna składnia dla każdego składnika języka. Wyjaśnienie składni pojawia się w sekcji tego podręcznika w którym omówiono tematu.  
-  
+
+W tej sekcji przedstawiono pełny opis języka C i funkcje języka C specyficzne dla firmy Microsoft. Notacja składni w tej sekcji służy do określenia dokładna składnia dla każdego składnika języka. Opis składni pojawia się w części tego podręcznika, gdzie omówiono tematu.
+
 > [!NOTE]
->  Ta składnia podsumowania nie jest częścią standardowej ANSI-C, ale jest on dołączony do tylko informacje. Składnia specyficzne dla firmy Microsoft jest odnotowany w komentarzach składni.  
-  
-## <a name="see-also"></a>Zobacz też  
- [Dokumentacja języka C](../c-language/c-language-reference.md)
+>  Ta składnia podsumowania nie jest częścią standardu ANSI C, ale jest uwzględniane wyłącznie w celach informacyjnych. Składnia specyficzne dla firmy Microsoft należy zauważyć w komentarzach składni.
+
+## <a name="see-also"></a>Zobacz też
+
+[Dokumentacja języka C](../c-language/c-language-reference.md)

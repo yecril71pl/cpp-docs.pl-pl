@@ -1,5 +1,5 @@
 ---
-title: Kompilatora (poziom 1) ostrzeżenie C4119 | Dokumentacja firmy Microsoft
+title: Kompilator ostrzeżenie (poziom 1) C4119 | Dokumentacja firmy Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,14 +16,15 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 14a6f53c77c3139c6634f771a09eacb3027b74de
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: d42e04feece0184ba0d36888c4daa4ccade45abe
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33271178"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46061335"
 ---
-# <a name="compiler-warning-level-1-c4119"></a>Kompilator C4119 ostrzegawcze (poziom 1)
-różnych podstaw "base1" i "base2" określony  
-  
- Dwa wskaźniki bazowe są niezgodne, ponieważ mają one różnych typów podstawowych. Kompilator nie można konwertować między nimi.
+# <a name="compiler-warning-level-1-c4119"></a>Kompilator ostrzeżenie (poziom 1) C4119
+
+base1 różnych podstaw "—" i "base2 —" określone
+
+Dwa wskaźniki bazowe są niezgodne, ponieważ mają one różnych podstaw. Kompilator nie można konwertować między nimi.

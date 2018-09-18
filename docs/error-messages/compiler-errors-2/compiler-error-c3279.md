@@ -1,5 +1,5 @@
 ---
-title: C3279 błąd kompilatora | Dokumentacja firmy Microsoft
+title: Błąd kompilatora C3279 | Dokumentacja firmy Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,25 +16,26 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0a86f3dd637f84901559c4be8443a81425347237
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 89c537da9bcf91e7774353cc1516a4c44e28649c
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33256825"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46056771"
 ---
-# <a name="compiler-error-c3279"></a>C3279 błąd kompilatora
-częściowe i jawne specjalizacje jak również jawne utworzenia wystąpień szablonów klasy zadeklarowany w przestrzeni nazw cli są niedozwolone.  
-  
- `cli` Przestrzeń nazw jest zdefiniowana przez firmę Microsoft i zawiera pseudo-szablonów. Kompilator Visual C++ pozwala zdefiniowane przez użytkownika, częściowe i jawne specjalizacje i jawne utworzenia wystąpień szablonów klasy w tej przestrzeni nazw.  
-  
- Poniższy przykład generuje C3279:  
-  
-```  
-// C3279.cpp  
-// compile with: /clr  
-namespace cli {  
-   template <> ref class array<int> {};   // C3279  
-   template <typename T> ref class array<T, 2> {};   // C3279  
-}  
+# <a name="compiler-error-c3279"></a>Błąd kompilatora C3279
+
+częściowe i jawne specjalizacje jak również jawne utworzenia wystąpień szablonów klasy zadeklarowanych w przestrzeni nazw cli są niedozwolone.
+
+`cli` Przestrzeni nazw jest zdefiniowana przez firmę Microsoft i zawiera pseudo-szablony. Kompilator języka Visual C++ nie zezwala na zdefiniowanych przez użytkownika, częściowe i jawne specjalizacje i jawne utworzenia wystąpień szablonów klasy w tej przestrzeni nazw.
+
+Poniższy przykład spowoduje wygenerowanie C3279:
+
+```
+// C3279.cpp
+// compile with: /clr
+namespace cli {
+   template <> ref class array<int> {};   // C3279
+   template <typename T> ref class array<T, 2> {};   // C3279
+}
 ```

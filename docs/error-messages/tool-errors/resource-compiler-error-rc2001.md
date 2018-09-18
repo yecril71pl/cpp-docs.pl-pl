@@ -16,22 +16,23 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0ef1fd5d29fc5784ee418a8456cacec37e943b73
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: d75d0f906ba0d7be75ca5177bc1f58bccd226251
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33322422"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46039975"
 ---
 # <a name="resource-compiler-error-rc2001"></a>Błąd kompilatora zasobów RC2001
-nowy wiersz w stałej  
-  
- Stała znakowa była kontynuowana w drugim wierszu bez ukośnik odwrotny (**\\**) lub zamknięcia i otwarcia podwójny cudzysłów (**"**).  
-  
- Aby przerwać stałą typu string, który znajduje się na dwa wiersze w pliku źródłowym, wykonaj jedną z następujących czynności:  
-  
--   Zakończenie pierwszy wiersz z znak kontynuacji wiersza, ukośnik odwrotny.  
-  
--   Zamknij ten ciąg w pierwszym wierszu podwójny cudzysłów i otwórz ciągu w następnym wierszu innego znaku cudzysłowu.  
-  
- Nie jest wystarczające, aby zakończyć pierwszy wiersz z \n, sekwencja specjalna osadzania znaku nowego wiersza w stałą typu string.
+
+Nowy wiersz w stałej
+
+Stała typu string była kontynuowana w drugim wierszu bez kreski ułamkowej odwróconej (**\\**) lub zamknięcie i otwarcie podwójnego cudzysłowu (**"**).
+
+Aby przerwać stała ciągu, która znajduje się na dwa wiersze w pliku źródłowym, wykonaj jedną z następujących czynności:
+
+- Koniec pierwszy wiersz od znaku kontynuacji wiersza, ukośnika odwrotnego.
+
+- Zamknij ciąg znaków w pierwszym wierszu za pomocą podwójnego cudzysłowu i otwórz ciągu w następnym wierszu, kolejny znak cudzysłowu.
+
+Nie jest wystarczające, aby zakończyć pierwszy wiersz z \n, sekwencja unikowa osadzania znak nowego wiersza w stałą typu string.

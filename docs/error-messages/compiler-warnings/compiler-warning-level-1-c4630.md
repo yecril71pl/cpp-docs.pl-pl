@@ -1,5 +1,5 @@
 ---
-title: Kompilatora (poziom 1) ostrzeżenie C4630 | Dokumentacja firmy Microsoft
+title: Kompilator ostrzeżenie (poziom 1) C4630 | Dokumentacja firmy Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,25 +16,26 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6d3db4e42e4bd54e1d2bd5af0eb6b19ce0fea1e2
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: dadfd4cd38d1b1d0e67e49e81102135a8ced1d00
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33283315"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46054730"
 ---
-# <a name="compiler-warning-level-1-c4630"></a>Kompilator C4630 ostrzegawcze (poziom 1)
-"symbol": Specyfikator klasy magazynu "extern" niedozwolony w definicji elementu członkowskiego  
-  
- Element członkowski danych lub funkcja członkowska jest zdefiniowany jako `extern`. Elementy członkowskie nie może być zewnętrzny, mimo że można całych obiektów. Kompilator ignoruje `extern` — słowo kluczowe. Poniższy przykład generuje C4630:  
-  
-```  
-// C4630.cpp  
-// compile with: /W1 /LD  
-class A {  
-   void func();  
-};  
-  
-extern void A::func() {   // C4630, remove 'extern' to resolve  
-}  
+# <a name="compiler-warning-level-1-c4630"></a>Kompilator ostrzeżenie (poziom 1) C4630
+
+'symbol': Specyfikator klasy magazynu "extern" niedozwolony w definicji składowej
+
+Element członkowski danych lub funkcji składowej jest zdefiniowany jako `extern`. Składowe nie mogą być zewnętrznych, mimo że można całe obiekty. Kompilator ignoruje `extern` — słowo kluczowe. Poniższy przykład spowoduje wygenerowanie C4630:
+
+```
+// C4630.cpp
+// compile with: /W1 /LD
+class A {
+   void func();
+};
+
+extern void A::func() {   // C4630, remove 'extern' to resolve
+}
 ```

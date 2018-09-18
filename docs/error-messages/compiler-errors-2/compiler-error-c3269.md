@@ -1,5 +1,5 @@
 ---
-title: C3269 błąd kompilatora | Dokumentacja firmy Microsoft
+title: Błąd kompilatora C3269 | Dokumentacja firmy Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,34 +16,35 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 98e4e2a2df4271a3a0213b8abedc385f22c871aa
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 84cb9acdd6444b934e7ec51691d87a6912880de2
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33249745"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46061815"
 ---
-# <a name="compiler-error-c3269"></a>C3269 błąd kompilatora
-"Funkcja": nie można zadeklarować funkcji członkowskiej zarządzanego lub WinRTtype z "..."  
-  
-Zarządzane i funkcje elementu członkowskiego klasy WinRT nie może deklarować listy parametrów o zmiennej długości.  
-  
-Poniższy przykład generuje C3269 i pokazuje, jak rozwiązywanie problemu:  
-  
-```  
-// C3269_2.cpp  
-// compile with: /clr  
-  
-ref struct A  
-{  
-   void func(int i, ...)   // C3269  
-   // try the following line instead  
-   // void func(int i )  
-   {  
-   }  
-};  
-  
-int main()  
-{  
-}  
-```  
+# <a name="compiler-error-c3269"></a>Błąd kompilatora C3269
+
+'Funkcja': nie można zadeklarować funkcji składowej typu zarządzanego lub WinRTtype przy użyciu "..."
+
+Funkcje składowych klasy WinRT nie może deklarować parametrów o zmiennej długości, list i zarządzane.
+
+Poniższy przykład generuje C3269 i pokazuje, jak go naprawić:
+
+```
+// C3269_2.cpp
+// compile with: /clr
+
+ref struct A
+{
+   void func(int i, ...)   // C3269
+   // try the following line instead
+   // void func(int i )
+   {
+   }
+};
+
+int main()
+{
+}
+```

@@ -1,5 +1,5 @@
 ---
-title: Kompilatora (poziom 1) ostrzeżenie C4190 | Dokumentacja firmy Microsoft
+title: Kompilator ostrzeżenie (poziom 1) C4190 | Dokumentacja firmy Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,33 +16,34 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e62f6bcfaa499338d5fde1d09cb91574241ce8a0
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: d398331c159c6fc639160dbe54d6ab5f969d3dbd
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33277897"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46063739"
 ---
-# <a name="compiler-warning-level-1-c4190"></a>Kompilator C4190 ostrzegawcze (poziom 1)
-"identifier1" ma określone powiązanie C, ale zwraca UDT identifier2, co jest niezgodne z C  
-  
- Funkcja lub wskaźnika do funkcji ma UDT (zdefiniowane przez użytkownika typ, który jest klasy, struktury, wyliczenia lub union) jako zwracany typ i `extern` powiązania "C". Jest to dozwolony jeśli:  
-  
--   Wszystkie wywołania tej funkcji występują z C++.  
-  
--   Definicja funkcji jest w języku C++.  
-  
-## <a name="example"></a>Przykład  
-  
-```cpp  
-// C4190.cpp  
-// compile with: /W1 /LD  
-struct X  
-{  
-   int i;  
-   X ();  
-   virtual ~X ();  
-};  
-  
-extern "C" X func ();   // C4190  
+# <a name="compiler-warning-level-1-c4190"></a>Kompilator ostrzeżenie (poziom 1) C4190
+
+"identifier1" ma określone powiązanie C, ale zwraca UDT identifier2, co jest niezgodne z C
+
+Funkcja lub wskaźnikiem do funkcji ma UDT (typ zdefiniowany przez użytkownika, który jest klasy, struktury, wyliczenia lub Unii) jako typ zwracany i `extern` powiązania "C". To jest legalna jeśli:
+
+- Wszystkie wywołania do tej funkcji występują w języku C++.
+
+- Jest definicją funkcji w języku C++.
+
+## <a name="example"></a>Przykład
+
+```cpp
+// C4190.cpp
+// compile with: /W1 /LD
+struct X
+{
+   int i;
+   X ();
+   virtual ~X ();
+};
+
+extern "C" X func ();   // C4190
 ```

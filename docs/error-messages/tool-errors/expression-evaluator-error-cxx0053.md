@@ -1,5 +1,5 @@
 ---
-title: Błąd cxx0053 programu Expression Evaluator | Dokumentacja firmy Microsoft
+title: Błąd ewaluatora wyrażeń CXX0053 | Dokumentacja firmy Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,16 +17,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 91e2668f950e6b2553113e74061994d1855ce7bc
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 5a3215c0e9dd7a76364c31a59f0f0d923092f686
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33295551"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46060736"
 ---
 # <a name="expression-evaluator-error-cxx0053"></a>Błąd CXX0053 programu Expression Evaluator
-zgodne symbolu niefunkcjonalnego podczas wiązania punktów przerwania  
-  
- Symbol używany jako punkt przerwania nie była funkcja. Określanie elementu członkowskiego danych jako punkt przerwania może być przyczyną tego błędu.  
-  
- Ten błąd jest taki sam jak CAN0053.
+
+nonfunction symbol odpowiadać podczas tworzenie powiązań punktów przerwania
+
+Symbol używany jako punkt przerwania nie funkcji. Określając element członkowski danych jako punkt przerwania może być przyczyną tego błędu.
+
+Ten błąd jest taka sama jak CAN0053.

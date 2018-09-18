@@ -16,40 +16,41 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e1d39d4c35ec66d405d51d601b7c5d2b2ab37b02
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 7492e5fd77f8e88b2191174f84c298c6166d8d89
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33319273"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46066385"
 ---
 # <a name="nmake-fatal-error-u1033"></a>Błąd krytyczny NMAKE U1033
-Błąd składniowy: "string" Nieoczekiwany  
-  
- Ciąg nie jest częścią nieprawidłowa składnia dla pliku reguł programu make.  
-  
-### <a name="to-fix-by-checking-the-following-possible-causes"></a>Aby rozwiązać problem, sprawdzając następujące możliwe przyczyny  
-  
-1.  Jeśli zestaw zamykającego nawiasu ostrego (**<<**) dla pliku wbudowanego nie są na początku wiersza, wystąpił następujący błąd:  
-  
-    ```  
-    syntax error : 'EOF' unexpected  
-    ```  
-  
-2.  Jeśli elementem definicji makra w pliku reguł programu make zawiera znak równości (**=**) bez poprzedzających nazw lub jeśli nazwa definiowany jest makrem rozwijający na wartość nothing, wystąpił następujący błąd:  
-  
-    ```  
-    syntax error : '=' unexpected  
-    ```  
-  
-3.  Jeśli średnik (**;**) w wierszu komentarza, w menu Narzędzia. INI nie jest na początku wiersza, wystąpił następujący błąd:  
-  
-    ```  
-    syntax error : ';' unexpected  
-    ```  
-  
-4.  Jeśli plik makefile został sformatowany przy użyciu edytora tekstu, może wystąpić następujący błąd:  
-  
-    ```  
-    syntax error : ':' unexpected  
+
+Błąd składniowy: "string" Nieoczekiwany
+
+Ciąg nie jest częścią prawidłowej składni dla pliku reguł programu make.
+
+### <a name="to-fix-by-checking-the-following-possible-causes"></a>Aby rozwiązać problem, sprawdzając następujące możliwe przyczyny
+
+1. Jeśli zestaw zamykający nawias ostry (**<<**) dla pliku wbudowanego nie są wyświetlane na początku wiersza, wystąpi następujący błąd:
+
+    ```
+    syntax error : 'EOF' unexpected
+    ```
+
+1. Jeśli definicji makra w pliku reguł programu make zawiera znak równości (**=**) bez poprzedza nazwę lub jeśli nazwa definiowanego to makro, które rozszerza się na wartość nothing, wystąpi następujący błąd:
+
+    ```
+    syntax error : '=' unexpected
+    ```
+
+1. Jeśli średnik (**;**) w wierszu komentarza, w menu Narzędzia. INI nie jest na początku wiersza, wystąpi następujący błąd:
+
+    ```
+    syntax error : ';' unexpected
+    ```
+
+1. Jeśli w pliku reguł programu make został sformatowany przy użyciu edytora tekstu, może wystąpić następujący błąd:
+
+    ```
+    syntax error : ':' unexpected
     ```

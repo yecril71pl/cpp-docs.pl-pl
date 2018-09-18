@@ -1,5 +1,5 @@
 ---
-title: C2032 błąd kompilatora | Dokumentacja firmy Microsoft
+title: Błąd kompilatora C2032 | Dokumentacja firmy Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,34 +16,35 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1db268222f3b9f7ca6f9ce297680866185e6661d
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 6ab02ca695ec94f25054e3490232b782a46a53a4
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33167219"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46064012"
 ---
-# <a name="compiler-error-c2032"></a>C2032 błąd kompilatora
-"identyfikator": funkcja nie może być członkiem struktury/Unii "structorunion"  
-  
- Struktura lub związek miała funkcji członkowskiej, co jest dozwolone w języku C++, ale nie w C. Aby rozwiązać problem, skompiluj jako program w języku C++ lub Usuń funkcję elementu członkowskiego.  
-  
- Poniższy przykład generuje C2032:  
-  
-```  
-// C2032.c  
-struct z {  
-   int i;  
-   void func();   // C2032  
-};  
-```  
-  
- Możliwe rozwiązanie:  
-  
-```  
-// C2032b.c  
-// compile with: /c  
-struct z {  
-   int i;  
-};  
+# <a name="compiler-error-c2032"></a>Błąd kompilatora C2032
+
+'Identyfikator': funkcja nie może być składową "structorunion" struct/union
+
+Struktura lub Unia miała funkcją składową, która jest dozwolona w języku C++, ale nie w C. Aby naprawić błąd, skompiluj jako program w języku C++ lub Usuń tę funkcję elementu członkowskiego.
+
+Poniższy przykład spowoduje wygenerowanie C2032:
+
+```
+// C2032.c
+struct z {
+   int i;
+   void func();   // C2032
+};
+```
+
+Możliwe rozwiązanie:
+
+```
+// C2032b.c
+// compile with: /c
+struct z {
+   int i;
+};
 ```

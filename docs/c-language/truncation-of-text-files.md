@@ -15,17 +15,19 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 837361ce7116deb0b425e380959de3acb6dafa57
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: ed3d760989d131ecdc2491d0b1952e657949fb03
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32385579"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46065676"
 ---
 # <a name="truncation-of-text-files"></a>Obcięcie plików tekstowych
-**ANSI 4.9.3** czy zapis w strumieniu tekstu powoduje skojarzony plik do skrócenia poza ten punkt  
-  
- Zapisywanie w strumieniu tekstu nie obciąć pliku poza ten punkt.  
-  
-## <a name="see-also"></a>Zobacz też  
- [Funkcje bibliotek](../c-language/library-functions.md)
+
+**ANSI 4.9.3** czy zapisu w strumieniu tekstu powoduje, że skojarzony plik się być obcięty po przekroczeniu tego punktu
+
+Zapis w strumieniu tekstu nie obciąć pliku poza ten punkt.
+
+## <a name="see-also"></a>Zobacz też
+
+[Funkcje bibliotek](../c-language/library-functions.md)

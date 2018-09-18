@@ -1,5 +1,5 @@
 ---
-title: C2296 błąd kompilatora | Dokumentacja firmy Microsoft
+title: Błąd kompilatora C2296 | Dokumentacja firmy Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,51 +16,52 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c154073e0ea64527e444a7c46d13ba14ce05d63c
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: faa78781445f94a92b5bfa6f72d9a8d2f1c18060
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33171900"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46051181"
 ---
-# <a name="compiler-error-c2296"></a>C2296 błąd kompilatora
-"operator": Nieprawidłowy lewy operand  
-  
- Lewy operand używane z `operator` jest nieprawidłowy.  
-  
- Na przykład kompilator może zostać wyświetlony deklaracji zamierzonego wywołania funkcji.  
-  
- Poniższy przykład generuje C2296:  
-  
-```  
-// C2296.cpp  
-struct MyStruct {  
-   struct Help {  
-      Help(float f) : m_f(f) {}  
-      float m_f;  
-   };  
-  
-   MyStruct(const Help &h) : m_f(h.m_f) {}  
-   MyStruct(float f) : m_f(f) {}  
-   MyStruct operator*(const MyStruct &f1) const {   
-      return MyStruct(m_f * f1.m_f);  
-   }  
-  
-private:  
-   float m_f;  
-};  
-  
-int main() {  
-   float f1 = 1.0f;  
-  
-   MyStruct m_MyStruct1 ( MyStruct::Help( f1 ) );  
-   // try the following line instead  
-   // MyStruct m_MyStruct1 = MyStruct::Help( f1 );  
-  
-   MyStruct m_MyStruct2 ( MyStruct::Help( f1 ) );  
-   // try the following line instead  
-   // MyStruct m_MyStruct2 = MyStruct::Help( f1 );  
-  
-   MyStruct m_MyStruct3 = m_MyStruct1 * m_MyStruct2;   // C2296  
-}  
+# <a name="compiler-error-c2296"></a>Błąd kompilatora C2296
+
+'operator': Nieprawidłowy lewy operand
+
+Lewy operand używane z `operator` jest nieprawidłowy.
+
+Na przykład kompilator może zostać wyświetlony deklarację zamierzonego wywołania funkcji.
+
+Poniższy przykład spowoduje wygenerowanie C2296:
+
+```
+// C2296.cpp
+struct MyStruct {
+   struct Help {
+      Help(float f) : m_f(f) {}
+      float m_f;
+   };
+
+   MyStruct(const Help &h) : m_f(h.m_f) {}
+   MyStruct(float f) : m_f(f) {}
+   MyStruct operator*(const MyStruct &f1) const {
+      return MyStruct(m_f * f1.m_f);
+   }
+
+private:
+   float m_f;
+};
+
+int main() {
+   float f1 = 1.0f;
+
+   MyStruct m_MyStruct1 ( MyStruct::Help( f1 ) );
+   // try the following line instead
+   // MyStruct m_MyStruct1 = MyStruct::Help( f1 );
+
+   MyStruct m_MyStruct2 ( MyStruct::Help( f1 ) );
+   // try the following line instead
+   // MyStruct m_MyStruct2 = MyStruct::Help( f1 );
+
+   MyStruct m_MyStruct3 = m_MyStruct1 * m_MyStruct2;   // C2296
+}
 ```

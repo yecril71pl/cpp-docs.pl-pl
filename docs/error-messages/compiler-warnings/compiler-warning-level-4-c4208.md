@@ -1,5 +1,5 @@
 ---
-title: Kompilatora (poziom 4) ostrzeżenie C4208 | Dokumentacja firmy Microsoft
+title: Kompilator ostrzeżenie (poziom 4) C4208 | Dokumentacja firmy Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,28 +16,29 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b61f8b0a6a0ac61982bee79abb81f083d40a48f1
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 8ee87ad1d43b20c4d0a72b877b05b1ba4c084a1a
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33292366"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46064626"
 ---
-# <a name="compiler-warning-level-4-c4208"></a>Kompilator C4208 ostrzegawcze (poziom 4)
-użyto niestandardowego rozszerzenia: delete [exp] - exp obliczono, ale zignorowano  
-  
- Rozszerzenia Microsoft (/Ze), możesz usunąć tablicy przy użyciu wartości w nawiasach kwadratowych z [delete operator](../../cpp/delete-operator-cpp.md). Wartość jest ignorowana.  
-  
-```  
-// C4208.cpp  
-// compile with: /W4  
-int main()  
-{  
-   int * MyArray = new int[18];  
-   delete [18] MyArray;      // C4208  
-   MyArray = new int[18];  
-   delete [] MyArray;        // ok  
-}  
-```  
-  
- Wartości te są nieprawidłowe w obszarze Zgodność ANSI ([/Za](../../build/reference/za-ze-disable-language-extensions.md)).
+# <a name="compiler-warning-level-4-c4208"></a>Kompilator ostrzeżenie (poziom 4) C4208
+
+użyto niestandardowego rozszerzenia: delete [exp] - exp obliczono, ale zignorowano
+
+Rozszerzenia Microsoft (/Ze), możesz usunąć tablicy przy użyciu wartości w nawiasach z [delete operator](../../cpp/delete-operator-cpp.md). Wartość jest ignorowana.
+
+```
+// C4208.cpp
+// compile with: /W4
+int main()
+{
+   int * MyArray = new int[18];
+   delete [18] MyArray;      // C4208
+   MyArray = new int[18];
+   delete [] MyArray;        // ok
+}
+```
+
+Wartości te są nieprawidłowe w obszarze zgodności ANSI ([/Za](../../build/reference/za-ze-disable-language-extensions.md)).

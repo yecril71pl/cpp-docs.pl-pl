@@ -16,14 +16,15 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1dbb5032e49c0522fed1127a68cc27fe9135f777
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 5526ba4578895f401ddc2fb177539bc025ca364f
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33327830"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46063258"
 ---
 # <a name="nmake-warning-u4006"></a>Ostrzeżenie NMAKE U4006
-Niezdefiniowane makra specjalnego: "makra"  
-  
- Nazwa danego makra specjalnego nie jest zdefiniowana i rozszerza na wartość nothing.
+
+niezdefiniowane makro specjalne: "makra"
+
+Nazwa danej specjalne — makro jest niezdefiniowane i rozwijany do elementu pustego.

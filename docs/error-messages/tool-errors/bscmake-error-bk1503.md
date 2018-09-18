@@ -16,21 +16,23 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 06d4a05a8f2d04c3f8a991d4444b35295408a7b3
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 16bf228804cb24f4fe7a2428dc581116d4cec91d
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33294797"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46064675"
 ---
 # <a name="bscmake-error-bk1503"></a>Błąd BSCMAKE BK1503
-Nie można zapisać do pliku "filename" [: Przyczyna]  
-  
- BSCMAKE łączy pliki SBR generowanych podczas kompilacji w przeglądarce baz danych. Jeśli wynikowy przeglądarki bazy danych przekroczy 64 MB lub 4092 przekracza liczbę plików danych wejściowych (.sbr), ten błąd będzie emitowany.  
-  
- Jeśli przyczyną problemu jest więcej niż 4092 pliki SBR, należy zmniejszyć liczbę plików wejściowych. Z poziomu programu Visual Studio można to zrobić przez [/FR](../../build/reference/fr-fr-create-dot-sbr-file.md) Twojego cały projekt, a następnie sprawdź ponownie na podstawie pliku przez plik.  
-  
- Jeśli przyczyną problemu jest większy niż 64MB pliku .bsc, zmniejszenie liczby plików SBR jako dane wejściowe zmniejszy rozmiar wynikowego pliku .bsc. Ponadto ilości informacji o przeglądaniu może zostać zmniejszony /Em (Wyklucz makro rozwinięty symboli), /El (zmiennych lokalnych Wyklucz) i /Es (wyklucz pliki systemowe).  
-  
-## <a name="see-also"></a>Zobacz też  
- [Opcje BSCMAKE](../../build/reference/bscmake-options.md)
+
+Nie można zapisać do pliku 'NazwaPliku' [: przyczyny]
+
+BSCMAKE łączy pliki SBR, wygenerowane podczas kompilacji w jednej bazy danych dla przeglądarki. Jeśli wynikowe baza danych przeglądarki przekracza 64 MB lub jeżeli liczba plików wejściowych (.sbr) przekracza 4092, ten błąd będzie emitowane.
+
+Jeśli ten problem jest spowodowany przez więcej niż 4092 pliki SBR, należy zmniejszyć liczbę plików wejściowych. Z poziomu programu Visual Studio, można to osiągnąć przez [/FR](../../build/reference/fr-fr-create-dot-sbr-file.md) swoje całego projektu, a następnie ponowne na podstawie przez plik.
+
+Jeśli ten problem jest spowodowany przez plik .bsc większym niż 64MB, zmniejszenie liczby plików SBR jako dane wejściowe zmniejszy rozmiar wynikowego pliku .bsc. Ponadto ilość informacji o przeglądaniu może zostać zmniejszony /Em (Wyklucz — makro rozwinięte symbole), /El (zmienne lokalne Wyklucz) i /Es (wyklucz pliki systemu).
+
+## <a name="see-also"></a>Zobacz też
+
+[Opcje BSCMAKE](../../build/reference/bscmake-options.md)

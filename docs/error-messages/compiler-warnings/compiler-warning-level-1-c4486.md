@@ -1,5 +1,5 @@
 ---
-title: Kompilatora (poziom 1) ostrzeżenie C4486 | Dokumentacja firmy Microsoft
+title: Kompilator ostrzeżenie (poziom 1) C4486 | Dokumentacja firmy Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,54 +16,57 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 91ad3659660dbe17552dc46caa66afe274ace9cc
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: c86f821855a0686b66c93db22ca6e200064142d1
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33280780"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46047073"
 ---
-# <a name="compiler-warning-level-1-c4486"></a>Kompilator C4486 ostrzegawcze (poziom 1)
-"Funkcja": prywatna metoda wirtualna klasy referencyjnej lub klasy wartości powinna być oznaczona jako "sealed"  
-  
- Ponieważ prywatna wirtualna funkcja członkowska klasy zarządzanej lub struktury nie może uzyskać dostępu do lub zastąpione, powinien być oznaczony [zapieczętowanego](../../windows/sealed-cpp-component-extensions.md).  
-  
-## <a name="example"></a>Przykład  
- Poniższy przykład generuje C4486.  
-  
-```  
-// C4486.cpp  
-// compile with: /clr /c /W1  
-ref class B {  
-private:  
-   virtual void f() {}   // C4486  
-   virtual void f1() sealed {}   // OK  
-};  
-```  
-  
-## <a name="example"></a>Przykład  
- Poniższy przykład przedstawia jedną wykorzystanie prywatnej funkcji zapieczętowanym, wirtualne.  
-  
-```  
-// C4486_b.cpp  
-// compile with: /clr /c  
-ref class B {};  
-  
-ref class D : B {};  
-  
-interface class I {  
-   B^ mf();  
-};  
-  
-ref class E : I {  
-private:  
-   virtual B^ g() sealed = I::mf {  
-      return gcnew B;  
-   }  
-  
-public:  
-   virtual D^ mf() {  
-      return gcnew D;  
-   }  
-};  
+# <a name="compiler-warning-level-1-c4486"></a>Kompilator ostrzeżenie (poziom 1) C4486
+
+'Funkcja': prywatna metoda wirtualna klasy referencyjnej lub klasy wartości powinna być oznaczona jako "sealed"
+
+Ponieważ prywatna wirtualna funkcja składowa klasy zarządzanej lub struktury, nie można uzyskać dostępu do lub zastąpić, powinien być oznaczony [zapieczętowanego](../../windows/sealed-cpp-component-extensions.md).
+
+## <a name="example"></a>Przykład
+
+Poniższy przykład spowoduje wygenerowanie C4486.
+
+```
+// C4486.cpp
+// compile with: /clr /c /W1
+ref class B {
+private:
+   virtual void f() {}   // C4486
+   virtual void f1() sealed {}   // OK
+};
+```
+
+## <a name="example"></a>Przykład
+
+Poniższy przykład demonstruje jedno użycie możliwe prywatnej funkcji sealed, wirtualne.
+
+```
+// C4486_b.cpp
+// compile with: /clr /c
+ref class B {};
+
+ref class D : B {};
+
+interface class I {
+   B^ mf();
+};
+
+ref class E : I {
+private:
+   virtual B^ g() sealed = I::mf {
+      return gcnew B;
+   }
+
+public:
+   virtual D^ mf() {
+      return gcnew D;
+   }
+};
 ```

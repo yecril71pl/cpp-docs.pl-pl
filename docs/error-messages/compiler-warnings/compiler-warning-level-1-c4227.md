@@ -16,23 +16,24 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0f3c0cced0e27d3f981c30251d4b9e1d78169559
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: fda3a31b228f16b27f4bdefd3131a0ddcb90f5b5
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33273592"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46060862"
 ---
-# <a name="compiler-warning-level-1-c4227"></a>Kompilator C4227 ostrzegawcze (poziom 1)
-użyto konstrukcji przestarzałej: kwalifikatory dla odwołania są ignorowane.  
-  
- Przy użyciu kwalifikatory, takich jak `const` lub `volatile` z odwołaniami C++ jest przestarzała metoda.  
-  
-## <a name="example"></a>Przykład  
-  
-```  
-// C4227.cpp  
-// compile with: /W1 /c  
-int j = 0;  
-int &const i = j;   // C4227  
+# <a name="compiler-warning-level-1-c4227"></a>Kompilatora (poziom 1) ostrzeżenie C4227
+
+użyto konstrukcji przestarzałej: kwalifikatory dla odwołania są ignorowane.
+
+Za pomocą kwalifikatorów, takich jak `const` lub `volatile` z odwołań w języku C++ jest nieaktualny.
+
+## <a name="example"></a>Przykład
+
+```
+// C4227.cpp
+// compile with: /W1 /c
+int j = 0;
+int &const i = j;   // C4227
 ```

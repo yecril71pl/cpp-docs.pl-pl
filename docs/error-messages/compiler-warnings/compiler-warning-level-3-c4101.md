@@ -1,5 +1,5 @@
 ---
-title: Kompilatora (poziom 3) ostrzeżenie C4101 | Dokumentacja firmy Microsoft
+title: Kompilator ostrzeżenie (poziom 3) C4101 | Dokumentacja firmy Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,49 +16,50 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 973b966e4b589cb35ffc92da9031779b14d448e3
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 1549a327329d438cb30bd6908e07419eb1b6bc1a
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33291118"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46060840"
 ---
-# <a name="compiler-warning-level-3-c4101"></a>Kompilator C4101 ostrzegawcze (poziom 3)
-'Identyfikator': nieużywane zmiennej lokalnej  
-  
- Zmienna lokalna nie jest używany. To ostrzeżenie odbędzie się oczywiste sytuacji:  
-  
-```  
-// C4101a.cpp  
-// compile with: /W3  
-int main() {  
-int i;   // C4101  
-}  
-```  
-  
- To ostrzeżenie odbywa się jednak również podczas wywoływania metody **statycznych** funkcji członkowskiej przez wystąpienie klasy:  
-  
-```  
-// C4101b.cpp  
-// compile with:  /W3  
-struct S {  
-   static int func()  
-   {  
-      return 1;  
-   }  
-};  
-  
-int main() {  
-   S si;   // C4101, si is never used  
-   int y = si.func();  
-   return y;  
-}  
-```  
-  
- W takim przypadku kompilator używa informacji o `si` dostępu **statycznych** funkcji, ale wystąpienie klasy nie jest wymagane do wywołania **statycznych** funkcji; dlatego ostrzeżenia. Aby usunąć to ostrzeżenie, możesz:  
-  
--   Dodaj Konstruktor, w którym kompilator użyje wystąpienia `si` w wywołaniu `func`.  
-  
--   Usuń **statycznych** — słowo kluczowe w definicji `func`.  
-  
--   Wywołanie **statycznych** funkcji jawnie: `int y = S::func();`.
+# <a name="compiler-warning-level-3-c4101"></a>Kompilator ostrzeżenie (poziom 3) C4101
+
+'Identyfikator': nieużywanej zmienna lokalna
+
+Zmienna lokalna nigdy nie jest używany. To ostrzeżenie wystąpi w oczywisty sytuacji:
+
+```
+// C4101a.cpp
+// compile with: /W3
+int main() {
+int i;   // C4101
+}
+```
+
+Jednak to ostrzeżenie wystąpi również podczas wywoływania **statyczne** funkcja elementu członkowskiego przez wystąpienie klasy:
+
+```
+// C4101b.cpp
+// compile with:  /W3
+struct S {
+   static int func()
+   {
+      return 1;
+   }
+};
+
+int main() {
+   S si;   // C4101, si is never used
+   int y = si.func();
+   return y;
+}
+```
+
+W takiej sytuacji, kompilator używa informacji o `si` dostęp do **statyczne** funkcji, ale wystąpienia klasy nie jest potrzebna do wywołania **statyczne** funkcji; dlatego ostrzeżenia. Aby rozwiązać tego ostrzeżenia, można wykonać następujące akcje:
+
+- Dodaj Konstruktor, w którym kompilator użyje wystąpienia `si` w wywołaniu `func`.
+
+- Usuń **statyczne** — słowo kluczowe w definicji `func`.
+
+- Wywołaj **statyczne** funkcji jawnie: `int y = S::func();`.

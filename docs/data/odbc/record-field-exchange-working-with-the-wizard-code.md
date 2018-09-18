@@ -26,29 +26,31 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 94faf8a2d36b7e91e83166af1e83ce834b308af3
-ms.sourcegitcommit: 889a75be1232817150be1e0e8d4d7f48f5993af2
+ms.openlocfilehash: ee89644251122d97ea2e042270d2d965a56f47bd
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/30/2018
-ms.locfileid: "39339042"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46065429"
 ---
 # <a name="record-field-exchange-working-with-the-wizard-code"></a>Wymiana pól rekordów: praca z kodem kreatora
+
 W tym temacie opisano kod, Kreator aplikacji MFC i **Dodaj klasę** (zgodnie z opisem w [Dodawanie konsumenta MFC ODBC](../../mfc/reference/adding-an-mfc-odbc-consumer.md)) zapisu do obsługi RFX i jak możesz chcieć zmienić kod.  
   
 > [!NOTE]
 >  Ten temat dotyczy klasy pochodne `CRecordset` w wierszu zbiorczego, które podczas pobierania nie została zaimplementowana. Jeśli używasz zbiorcze pobieranie z wiersza zbiorcza wymiana pól rekordów (zbiorcze RFX) jest zaimplementowana. Zbiorcze RFX przypomina RFX. Aby poznać różnice, zobacz [zestaw rekordów: pobieranie rekordów w zbiorcze (ODBC)](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md).  
   
- Po utworzeniu klasy zestawu rekordów za pomocą Kreatora aplikacji MFC lub **Dodaj klasę**, kreator zapisuje następujące elementy związane z RFX dla użytkownika, na podstawie źródła danych tabeli, a wybór kolumny wprowadzić w Kreatorze:  
+Po utworzeniu klasy zestawu rekordów za pomocą Kreatora aplikacji MFC lub **Dodaj klasę**, kreator zapisuje następujące elementy związane z RFX dla użytkownika, na podstawie źródła danych tabeli, a wybór kolumny wprowadzić w Kreatorze:  
   
--   Deklaracje elementy członkowskie danych pola zestawu rekordów w klasie zestawu rekordów  
+- Deklaracje elementy członkowskie danych pola zestawu rekordów w klasie zestawu rekordów  
   
--   Zastąpieniu obiektu `CRecordset::DoFieldExchange`  
+- Zastąpieniu obiektu `CRecordset::DoFieldExchange`  
   
--   Inicjowanie elementy członkowskie danych pola zestawu rekordów w konstruktorze klasy zestawu rekordów  
+- Inicjowanie elementy członkowskie danych pola zestawu rekordów w konstruktorze klasy zestawu rekordów  
   
 ##  <a name="_core_the_field_data_member_declarations"></a> Deklaracje członków danych pola  
- Kreatorzy zapisu deklarację klasy zestawu rekordów w pliku .h, który jest podobny do następującego dla klasy `CSections`:  
+
+Kreatorzy zapisu deklarację klasy zestawu rekordów w pliku .h, który jest podobny do następującego dla klasy `CSections`:  
   
 ```cpp  
 class CSections : public CRecordset  
@@ -80,15 +82,15 @@ public:
 };  
 ```  
   
- Jeśli dodasz elementy członkowskie danych parametru lub nowe elementy członkowskie pola, które można powiązać samodzielnie, należy je dodać po nich generowane przez kreatora.  
+Jeśli dodasz elementy członkowskie danych parametru lub nowe elementy członkowskie pola, które można powiązać samodzielnie, należy je dodać po nich generowane przez kreatora.  
   
- Ponadto w przypadku Zauważ, że kreator zastępuje `DoFieldExchange` funkcji składowej klasy typu `CRecordset`.  
+Ponadto w przypadku Zauważ, że kreator zastępuje `DoFieldExchange` funkcji składowej klasy typu `CRecordset`.  
   
 ##  <a name="_core_the_dofieldexchange_override"></a> Dofieldexchange — zastąpienie  
 
- [Dofieldexchange —](../../mfc/reference/crecordset-class.md#dofieldexchange) jest sercem RFX. Struktura wywołuje `DoFieldExchange` wszelkie czas potrzebny do przenoszenia danych ze źródła danych do zestawu rekordów lub z zestawu rekordów do źródła danych. `DoFieldExchange` również obsługuje uzyskiwania informacji na temat pól składowych danych za pośrednictwem [IsFieldDirty](../../mfc/reference/crecordset-class.md#isfielddirty) i [IsFieldNull](../../mfc/reference/crecordset-class.md#isfieldnull) funkcji elementów członkowskich.  
+[Dofieldexchange —](../../mfc/reference/crecordset-class.md#dofieldexchange) jest sercem RFX. Struktura wywołuje `DoFieldExchange` wszelkie czas potrzebny do przenoszenia danych ze źródła danych do zestawu rekordów lub z zestawu rekordów do źródła danych. `DoFieldExchange` również obsługuje uzyskiwania informacji na temat pól składowych danych za pośrednictwem [IsFieldDirty](../../mfc/reference/crecordset-class.md#isfielddirty) i [IsFieldNull](../../mfc/reference/crecordset-class.md#isfieldnull) funkcji elementów członkowskich.  
   
- Następujące `DoFieldExchange` jest zastąpienie `CSections` klasy. Kreator zapisuje funkcji w pliku .cpp dla swojej klasy zestawu rekordów.  
+Następujące `DoFieldExchange` jest zastąpienie `CSections` klasy. Kreator zapisuje funkcji w pliku .cpp dla swojej klasy zestawu rekordów.  
   
 ```cpp  
 void CSections::DoFieldExchange(CFieldExchange* pFX)  
@@ -102,27 +104,28 @@ void CSections::DoFieldExchange(CFieldExchange* pFX)
 }  
 ```  
   
- Zwróć uwagę, następujące kluczowe funkcje tej funkcji:  
+Zwróć uwagę, następujące kluczowe funkcje tej funkcji:  
   
--   Ta sekcja funkcja jest wywoływana mapowanie pola.  
+- Ta sekcja funkcja jest wywoływana mapowanie pola.  
   
--   Wywołanie `CFieldExchange::SetFieldType`za pośrednictwem `pFX` wskaźnika. To wywołanie określa, że wszystkie funkcje RFX wywołuje na końcu `DoFieldExchange` lub następnym wywołaniu `SetFieldType` kolumn w danych wyjściowych. Aby uzyskać więcej informacji, zobacz [CFieldExchange::SetFieldType](../../mfc/reference/cfieldexchange-class.md#setfieldtype).  
+- Wywołanie `CFieldExchange::SetFieldType`za pośrednictwem `pFX` wskaźnika. To wywołanie określa, że wszystkie funkcje RFX wywołuje na końcu `DoFieldExchange` lub następnym wywołaniu `SetFieldType` kolumn w danych wyjściowych. Aby uzyskać więcej informacji, zobacz [CFieldExchange::SetFieldType](../../mfc/reference/cfieldexchange-class.md#setfieldtype).  
   
--   Kilka wywołań `RFX_Text` funkcja globalna — jednym w każdym polu element członkowski danych (wszystkie są `CString` zmiennych w przykładzie). Te wywołania Określ relację między nazwę kolumny w źródle danych i element członkowski danych pola. Funkcje RFX do transferu danych rzeczywistych. Biblioteka klas dostarcza funkcje RFX wszystkie popularne typy danych. Aby uzyskać więcej informacji na temat funkcji RFX zobacz [wymiana pól rekordów: używanie funkcji RFX](../../data/odbc/record-field-exchange-using-the-rfx-functions.md).  
+- Kilka wywołań `RFX_Text` funkcja globalna — jednym w każdym polu element członkowski danych (wszystkie są `CString` zmiennych w przykładzie). Te wywołania Określ relację między nazwę kolumny w źródle danych i element członkowski danych pola. Funkcje RFX do transferu danych rzeczywistych. Biblioteka klas dostarcza funkcje RFX wszystkie popularne typy danych. Aby uzyskać więcej informacji na temat funkcji RFX zobacz [wymiana pól rekordów: używanie funkcji RFX](../../data/odbc/record-field-exchange-using-the-rfx-functions.md).  
   
     > [!NOTE]
     >  Kolejność kolumn w zestawie wyników musi być zgodna z kolejnością wywołań funkcji RFX w `DoFieldExchange`.  
   
--   `pFX` Wskaźnik do [CFieldExchange](../../mfc/reference/cfieldexchange-class.md) obiekt, który przekazuje platformę, gdy wywołuje `DoFieldExchange`. `CFieldExchange` Obiektu określa operację, `DoFieldExchange` jest wykonanie kierunek transferu i innymi informacjami kontekstu.  
+- `pFX` Wskaźnik do [CFieldExchange](../../mfc/reference/cfieldexchange-class.md) obiekt, który przekazuje platformę, gdy wywołuje `DoFieldExchange`. `CFieldExchange` Obiektu określa operację, `DoFieldExchange` jest wykonanie kierunek transferu i innymi informacjami kontekstu.  
   
 ##  <a name="_core_the_recordset_constructor"></a> Konstruktor zestawu rekordów  
- Konstruktor zestawu rekordów, który kreatorów zapisu zawiera dwie czynności związane z RFX:  
+
+Konstruktor zestawu rekordów, który kreatorów zapisu zawiera dwie czynności związane z RFX:  
   
--   Inicjowanie dla każdego elementu członkowskiego danych pola  
+- Inicjowanie dla każdego elementu członkowskiego danych pola  
   
--   Inicjowanie [m_nfields —](../../mfc/reference/crecordset-class.md#m_nfields) element członkowski danych, która zawiera liczbę elementów członkowskich danych pola  
+- Inicjowanie [m_nfields —](../../mfc/reference/crecordset-class.md#m_nfields) element członkowski danych, która zawiera liczbę elementów członkowskich danych pola  
   
- Konstruktor `CSections` przykład zestawu rekordów wygląda następująco:  
+Konstruktor `CSections` przykład zestawu rekordów wygląda następująco:  
   
 ```cpp  
 CSections::CSections(CDatabase* pdb)  
@@ -144,7 +147,8 @@ CSections::CSections(CDatabase* pdb)
 m_nFields += 3;  
 ```  
 
- Jest to kod dodaje trzy nowe pola. Jeśli dodasz wszystkie elementy członkowskie danych parametru, należy zainicjować [m_nparams —](../../mfc/reference/crecordset-class.md#m_nparams) element członkowski danych, która zawiera liczbę elementy członkowskie danych parametru. Umieść `m_nParams` inicjowania poza nawiasy kwadratowe.  
+Jest to kod dodaje trzy nowe pola. Jeśli dodasz wszystkie elementy członkowskie danych parametru, należy zainicjować [m_nparams —](../../mfc/reference/crecordset-class.md#m_nparams) element członkowski danych, która zawiera liczbę elementy członkowskie danych parametru. Umieść `m_nParams` inicjowania poza nawiasy kwadratowe.  
 
 ## <a name="see-also"></a>Zobacz też  
- [Wymiana pól rekordów (RFX)](../../data/odbc/record-field-exchange-rfx.md)
+
+[Wymiana pól rekordów (RFX)](../../data/odbc/record-field-exchange-rfx.md)

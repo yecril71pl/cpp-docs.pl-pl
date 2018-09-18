@@ -1,5 +1,5 @@
 ---
-title: C2550 błąd kompilatora | Dokumentacja firmy Microsoft
+title: Błąd kompilatora C2550 | Dokumentacja firmy Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,34 +16,35 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d215f708513fd7313e0ff82f5b8853b1e00835af
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: dd132184a993f27ec04a913cfef2aed07f8bd4a8
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33228017"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46062517"
 ---
-# <a name="compiler-error-c2550"></a>C2550 błąd kompilatora
-'Identyfikator': listy inicjatorów konstruktora są dozwolone tylko dla definicji konstruktora  
-  
- W definicji funkcji, która nie jest konstruktorem jest używana lista inicjatora klasy podstawowej.  
-  
- Poniższy przykład generuje C2550:  
-  
-```  
-// C2550.cpp  
-// compile with: /c  
-class C {  
-public:  
-   C();  
-};  
-  
-class D : public C {  
-public:  
-   D();  
-   void func();  
-};  
-  
-void D::func() : C() {}  // C2550  
-D::D() : C() {}   // OK  
+# <a name="compiler-error-c2550"></a>Błąd kompilatora C2550
+
+'Identyfikator': listy inicjatorów konstruktora są dozwolone tylko dla definicji konstruktora
+
+Listy inicjatorów klasy bazowej jest używany w definicji funkcji, która nie jest konstruktorem.
+
+Poniższy przykład spowoduje wygenerowanie C2550:
+
+```
+// C2550.cpp
+// compile with: /c
+class C {
+public:
+   C();
+};
+
+class D : public C {
+public:
+   D();
+   void func();
+};
+
+void D::func() : C() {}  // C2550
+D::D() : C() {}   // OK
 ```

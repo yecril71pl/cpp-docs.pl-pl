@@ -1,5 +1,5 @@
 ---
-title: C2014 błąd kompilatora | Dokumentacja firmy Microsoft
+title: Błąd kompilatora C2014 | Dokumentacja firmy Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,30 +16,31 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 839fececb10897c799473ae328afb9f422b4c390
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 4a9167d71e717490b89c1861abe9a9da9e0ab6a8
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33165964"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46064857"
 ---
-# <a name="compiler-error-c2014"></a>C2014 błąd kompilatora
-polecenie preprocesora musi zaczynać się niebiałym znakiem  
-  
- `#` Znak dyrektywy preprocesora musi być pierwszy znak wiersza, który nie jest białym znakiem.  
-  
- Poniższy przykład generuje C2014:  
-  
-```  
-// C2014.cpp  
-int k; #include <stdio.h>   // C2014  
-```  
-  
- Możliwe rozwiązanie:  
-  
-```  
-// C2014b.cpp  
-// compile with: /c  
-int k;   
-#include <stdio.h>  
+# <a name="compiler-error-c2014"></a>Błąd kompilatora C2014
+
+polecenie preprocesora musi zaczynać się niebiałym
+
+`#` Logowania dyrektywy preprocesora musi być pierwszym znakiem w wierszu, który nie jest biały znak.
+
+Poniższy przykład spowoduje wygenerowanie C2014:
+
+```
+// C2014.cpp
+int k; #include <stdio.h>   // C2014
+```
+
+Możliwe rozwiązanie:
+
+```
+// C2014b.cpp
+// compile with: /c
+int k;
+#include <stdio.h>
 ```
