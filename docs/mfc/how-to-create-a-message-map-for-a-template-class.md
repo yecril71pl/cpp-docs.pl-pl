@@ -15,58 +15,56 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f7867cc40ae837da5fad957b6a1d584fb7c2c4ce
-ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
+ms.openlocfilehash: 701e6f2912c3f9a8b5f138d8f188003f9db43021
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/25/2018
-ms.locfileid: "36929903"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46096147"
 ---
 # <a name="how-to-create-a-message-map-for-a-template-class"></a>Porady: tworzenie mapy komunikatów dla klasy szablonów
-Mapowanie komunikatów w MFC zapewnia efektywną bezpośrednie komunikaty systemu Windows do odpowiedniego wystąpienia obiektu języka C++. Przykładami cele mapy komunikatów MFC klasy aplikacji, dokumentów i widoku klasy, klasy formantów i tak dalej.  
+Mapowanie komunikatów w MFC zapewnia skuteczny sposób przekierowywania komunikatów Windows odpowiednie wystąpienia obiektu języka C++. Przykłady celów mapy komunikatów MFC klasy aplikacji, dokument i widok klasy, klasy kontrolek i tak dalej.  
   
- Mapy komunikatów MFC tradycyjnych zadeklarowane za pomocą [begin_message_map —](reference/message-map-macros-mfc.md#begin_message_map) makra, aby zadeklarować początku mapę komunikatów wpisem makro dla każdej metody klasy obsługi wiadomości i w końcu [end_message_map —](reference/message-map-macros-mfc.md#end_message_map)makra, aby zadeklarować koniec mapy komunikatów.  
+ Tradycyjne mapy komunikatów MFC są deklarowane przy użyciu [BEGIN_MESSAGE_MAP](reference/message-map-macros-mfc.md#begin_message_map) makra, aby zadeklarować początek mapie komunikatów wpis — makro dla poszczególnych metod klasy programu obsługi komunikatów, a na koniec [END_MESSAGE_MAP](reference/message-map-macros-mfc.md#end_message_map)makra, aby zadeklarować koniec mapie komunikatów.  
   
- Jednym z ograniczeń z [begin_message_map —](reference/message-map-macros-mfc.md#begin_message_map) makro występuje, gdy jest używany w połączeniu z klasa zawierająca argumentów szablonu. W przypadku użycia z klasy szablonu, to makro spowoduje błąd kompilacji ze względu na Brak parametrów szablonu w rozwinięciu makra. [BEGIN_TEMPLATE_MESSAGE_MAP](reference/message-map-macros-mfc.md#begin_template_message_map) — makro zaprojektowano tak, aby umożliwić mapuje klasy zawierające argument jednego szablonu, aby zadeklarować własnych wiadomości.  
+ Jednym z ograniczeń za pomocą [BEGIN_MESSAGE_MAP](reference/message-map-macros-mfc.md#begin_message_map) makra występuje, gdy jest używany w połączeniu z klasą zawierającą argumenty szablonu. Używane z klasą szablonu, to makro spowoduje błąd kompilacji, ze względu na brakujące parametry szablonu w rozwinięciu makra. [BEGIN_TEMPLATE_MESSAGE_MAP](reference/message-map-macros-mfc.md#begin_template_message_map) — makro zaprojektowano tak, aby umożliwić mapuje klasy zawierające argument jednego szablonu do deklarowania własne wiadomości.  
   
 ## <a name="example"></a>Przykład  
- Rozważ przykład gdzie MFC [clistbox —](../mfc/reference/clistbox-class.md) klasa jest rozszerzona, aby zapewnić synchronizację z zewnętrznego źródła danych. Fikcyjne `CSyncListBox` klasy jest zadeklarowany w następujący sposób:  
+ Rozważmy przykład, gdzie MFC [CListBox](../mfc/reference/clistbox-class.md) klasa jest rozszerzona zapewnienie synchronizacji z zewnętrznego źródła danych. Fikcyjnej `CSyncListBox` klasy jest zadeklarowana w następujący sposób:  
   
  [!code-cpp[NVC_MFC_CListBox#42](../mfc/codesnippet/cpp/how-to-create-a-message-map-for-a-template-class_1.h)]  
   
- `CSyncListBox` Klasa znajduje się na jednym typie, który opisuje źródła danych zostaną zsynchronizowane z szablonem. Również deklaruje trzy metody, które będą uczestniczyć w mapie komunikatów klasy: `OnPaint`, `OnDestroy`, i `OnSynchronize`. `OnSynchronize` Metoda jest zaimplementowana w następujący sposób:  
+ `CSyncListBox` Klasa jest oparte na szablonach na jednym typie, który opisuje źródła danych zostaną zsynchronizowane z. Deklaruje również trzy metody, które będą uczestniczyć w mapie komunikatów klasy: `OnPaint`, `OnDestroy`, i `OnSynchronize`. `OnSynchronize` Metoda jest implementowana w następujący sposób:  
   
  [!code-cpp[NVC_MFC_CListBox#43](../mfc/codesnippet/cpp/how-to-create-a-message-map-for-a-template-class_2.cpp)]  
   
- Umożliwia wykonania powyższych `CSyncListBox` klasy być specjalizowany w dowolnego typu klasy, który implementuje `GetCount` metody, takie jak `CArray`, `CList`, i `CMap`. `StringizeElement` Funkcja jest funkcją szablonu prototypowana co następuje:  
+ Zezwala na wykonanie powyższych `CSyncListBox` klasy można wyspecjalizować z każdym typem klasy, która implementuje `GetCount` metody, takie jak `CArray`, `CList`, i `CMap`. `StringizeElement` Funkcja jest funkcją szablonu prototypowane przez następujące:  
   
  [!code-cpp[NVC_MFC_CListBox#44](../mfc/codesnippet/cpp/how-to-create-a-message-map-for-a-template-class_3.cpp)]  
   
- Zazwyczaj mapy komunikatów dla tej klasy może być zdefiniowana jako:  
+ Mapy komunikatów dla tej klasy będzie zazwyczaj zdefiniowane jako:  
   
- `BEGIN_MESSAGE_MAP(CSyncListBox, CListBox)`  
+```cpp
+BEGIN_MESSAGE_MAP(CSyncListBox, CListBox)
+  ON_WM_PAINT()
+  ON_WM_DESTROY()
+  ON_MESSAGE(LBN_SYNCHRONIZE, OnSynchronize)
+END_MESSAGE_MAP()
+```
   
- `ON_WM_PAINT()`  
-  
- `ON_WM_DESTROY()`  
-  
- `ON_MESSAGE(LBN_SYNCHRONIZE, OnSynchronize)`  
-  
- `END_MESSAGE_MAP()`  
-  
- gdzie **LBN_SYNCHRONIZE** komunikat użytkownika niestandardowego zdefiniowane przez aplikację, takich jak:  
+ gdzie **LBN_SYNCHRONIZE** komunikat użytkownika niestandardowego zdefiniowany przez aplikację, takie jak:  
   
  [!code-cpp[NVC_MFC_CListBox#45](../mfc/codesnippet/cpp/how-to-create-a-message-map-for-a-template-class_4.cpp)]  
   
- Powyżej mapy makro nie zostanie skompilowany, wynika z faktu, że w specyfikacji szablonu `CSyncListBox` klasy będą niedostępne w rozwinięciu makra. **BEGIN_TEMPLATE_MESSAGE_MAP** makro rozwiązuje ten problem, dołączając parametr określonego szablonu do mapy makro rozwinięte. Staje się mapy komunikatów dla tej klasy:  
+ Powyżej mapy — makro nie zostanie skompilowany, wynika z faktu, że w specyfikacji szablonu `CSyncListBox` klasy będą niedostępne w rozwinięciu makra. **BEGIN_TEMPLATE_MESSAGE_MAP** — makro rozwiązuje ten problem, dołączając parametru określonego szablonu do mapy rozwiniętej — makro. Staje się mapy komunikatów dla tej klasy:  
   
  [!code-cpp[NVC_MFC_CListBox#46](../mfc/codesnippet/cpp/how-to-create-a-message-map-for-a-template-class_5.cpp)]  
   
- Następujące przedstawiono przykładowe użycie `CSyncListBox` przy użyciu `CStringList` obiektu:  
+ Następujące przedstawiono przykładowe zastosowanie `CSyncListBox` przy użyciu `CStringList` obiektu:  
   
  [!code-cpp[NVC_MFC_CListBox#47](../mfc/codesnippet/cpp/how-to-create-a-message-map-for-a-template-class_6.cpp)]  
   
- Aby ukończyć test, `StringizeElement` funkcja musi być specjalizowany do pracy z `CStringList` klasy:  
+ Aby ukończyć test, `StringizeElement` — funkcja musi być przeznaczone specjalnie do pracy z `CStringList` klasy:  
   
  [!code-cpp[NVC_MFC_CListBox#48](../mfc/codesnippet/cpp/how-to-create-a-message-map-for-a-template-class_7.cpp)]  
   

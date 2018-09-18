@@ -17,49 +17,43 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b414110b0f3367c2b589f82915f417ea7389d738
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 79e515a3f108d0857d2f8860566e14ee0acdefe3
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32381286"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46097578"
 ---
 # <a name="based-pointers-c"></a>Wskaźniki bazowe (C)
-**Microsoft Specific**  
-  
- [__based — (odwołanie w języku C++)](../cpp/based-pointers-cpp.md)  
-  
- Kompilatory C Microsoft 32-bitowe i 64-bitowe wskaźnik bazowy jest 32-bitowy lub 64-bitowe przesunięcie z 32-bitowy lub 64-bitowych wskaźnik podstawowy. Adresowanie na podstawie jest przydatne w przypadku sprawowanie kontroli nad sekcje, w których obiekty są przydzielone, a tym samym zmniejszenie rozmiaru pliku wykonywalnego i zwiększenia szybkości wykonywania. Ogólnie rzecz biorąc jest formularz służący do określania oparte na wskaźnik  
-  
-```  
-  
-type  
-__based(  
-base  
-)  
-declarator  
-  
-```  
-  
- "Na podstawie wskaźnika" wariant oparte na rozwiązaniu umożliwia specyfikacji wskaźnikiem jako podstawy. Wskaźnik bazowy, wówczas przesunięcie w sekcji Pamięć początkowa wskaźnika, na którym jest oparty na początku. Wskaźniki oparte na adresach wskaźnika są jedynymi `__based` — słowo kluczowe prawidłowy w kompilacjach kodu 32-bitowe i 64-bitowych. W takich kompilacje są przemieszczanie 32-bitowy lub 64-bitowym z podstawowej 32-bitowy lub 64-bitowej.  
-  
- Jeden na użytek wskaźniki oparte na wskaźnikach jest trwały identyfikatorów, które zawierają wskaźniki. Listy połączonej, która składa się z wskaźniki oparte na wskaźnik można można zapisywane na dysku, a następnie ponownie załadować do innego miejsca w pamięci, za pomocą wskaźniki pozostałych prawidłowe.  
-  
- W poniższym przykładzie przedstawiono wskaźnika, w oparciu o wskaźnik.  
-  
-```  
-void *vpBuffer;  
-  
-struct llist_t  
-{  
-    void __based( vpBuffer ) *vpData;  
-    struct llist_t __based( vpBuffer ) *llNext;  
-};  
-```  
-  
- Wskaźnik `vpBuffer` ma przypisany adres pamięci przydzielonej w pewnym momencie nowsze w programie. Listy połączonej został przeniesiony z uwzględnieniem wartości `vpBuffer`.  
-  
- **KOŃCOWY określonych firmy Microsoft**  
-  
-## <a name="see-also"></a>Zobacz też  
- [Deklaratory i deklaracje zmiennych](../c-language/declarators-and-variable-declarations.md)
+
+**Microsoft Specific**
+
+[__based — (odwołanie w języku C++)](../cpp/based-pointers-cpp.md)
+
+Kompilatory C Microsoft 32-bitowych i 64-bitowe wskaźnik bazowy jest 32-bitową lub 64-bitowe przesunięcie z 32-bitową lub 64-bitowego wskaźnika podstawowego. Adresowanie na podstawie jest przydatne w przypadku sprawowanie kontroli nad sekcje, w których obiekty są przydzielane, a tym samym zmniejszenie rozmiaru pliku wykonywalnego i zwiększyć szybkość realizacji. Ogólnie rzecz biorąc jest formularz do określania wskaźnik bazowy
+
+> *Typ* **__based (** *podstawowy* **)** *deklaratora*
+
+"Na podstawie wskaźnika" typ variant adresowania w oparciu o umożliwia specyfikację wskaźnika jako podstawy. Wskaźnik bazowy jest następnie przesunięcie do sekcji pamięci, zaczynając od początku wskaźnik, na którym bazuje. Wskaźniki oparte wskaźnikiem adresów są jedynymi `__based` — słowo kluczowe prawidłowy w kompilacjach kodu 32-bitowych i 64-bitowych. W takich kompilacje są 32-bitową lub 64-bitowych przemieszczanie od podstawy 32-bitową lub 64-bitowych.
+
+Jednym z zastosowań wskaźniki oparte na wskaźnikach jest trwały identyfikatorów, które zawierają wskaźniki. Połączonej listy, która składa się z wskaźniki oparte na wskaźnik może można zapisywany na dysku, a następnie ponownie załadowany do innego miejsca w pamięci, za pomocą wskaźników pozostałe prawidłowe.
+
+Poniższy przykład pokazuje wskaźnika, w oparciu o wskaźnik.
+
+```C
+void *vpBuffer;
+
+struct llist_t
+{
+    void __based( vpBuffer ) *vpData;
+    struct llist_t __based( vpBuffer ) *llNext;
+};
+```
+
+Wskaźnik `vpBuffer` ma przypisany adres pamięci przydzielonej w pewnym momencie później w programie. Połączonej listy jest przenoszony z uwzględnieniem wartości `vpBuffer`.
+
+**END specyficzny dla Microsoft**
+
+## <a name="see-also"></a>Zobacz też
+
+[Deklaratory i deklaracje zmiennych](../c-language/declarators-and-variable-declarations.md)

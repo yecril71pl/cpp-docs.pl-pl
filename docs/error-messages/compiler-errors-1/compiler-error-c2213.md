@@ -1,5 +1,5 @@
 ---
-title: C2213 błąd kompilatora | Dokumentacja firmy Microsoft
+title: Błąd kompilatora C2213 | Dokumentacja firmy Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,25 +16,26 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f51f734c8d795729b035d3b550e3cfdceea902a6
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 55bf3cb315ff2b65f4c65ff1091cd530cd810fd7
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33173727"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46096069"
 ---
-# <a name="compiler-error-c2213"></a>C2213 błąd kompilatora
-"modyfikator": niedozwolony argument dla __based  
-  
- Modyfikowanie argumentu `__based` jest nieprawidłowy.  
-  
- Poniższy przykład generuje C2213:  
-  
-```  
-// C2213.cpp  
-// compile with: /c  
-int i;  
-int *j;  
-char __based(i) *p;   // C2213  
-char __based(j) *p2;   // OK  
+# <a name="compiler-error-c2213"></a>Błąd kompilatora C2213
+
+"modyfikator": niedozwolony argument dla __based
+
+Modyfikowanie argument `__based` jest nieprawidłowy.
+
+Poniższy przykład spowoduje wygenerowanie C2213:
+
+```
+// C2213.cpp
+// compile with: /c
+int i;
+int *j;
+char __based(i) *p;   // C2213
+char __based(j) *p2;   // OK
 ```

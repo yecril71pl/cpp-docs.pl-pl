@@ -35,12 +35,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f09bafd0bbda8a64b7a60fe6cacf996106385787
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: c08387d5c1a2a9b9b757bab7a8112783a3810065
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43753015"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46097799"
 ---
 # <a name="catlarray-class"></a>Klasa CAtlArray
 
@@ -55,10 +55,10 @@ class CAtlArray
 
 #### <a name="parameters"></a>Parametry
 
-*E*  
+*E*<br/>
 Typ danych, które mają być przechowywane w tablicy.
 
-*ETraits*  
+*ETraits*<br/>
 Kod używany do kopiowania lub przenoszenia elementów.
 
 ## <a name="members"></a>Elementy członkowskie
@@ -124,7 +124,7 @@ size_t Add();
 
 ### <a name="parameters"></a>Parametry
 
-*Element*  
+*Element*<br/>
 Element, który ma zostać dodany do tablicy.
 
 ### <a name="return-value"></a>Wartość zwracana
@@ -149,7 +149,7 @@ size_t Append(const CAtlArray<E, ETraits>& aSrc);
 
 ### <a name="parameters"></a>Parametry
 
-*aSrc*  
+*aSrc*<br/>
 Tablica do dołączenia.
 
 ### <a name="return-value"></a>Wartość zwracana
@@ -222,7 +222,7 @@ void Copy(const CAtlArray<E, ETraits>& aSrc);
 
 ### <a name="parameters"></a>Parametry
 
-*aSrc*  
+*aSrc*<br/>
 Źródło elementy do skopiowania do tablicy.
 
 ### <a name="remarks"></a>Uwagi
@@ -265,7 +265,7 @@ E& GetAt(size_t iElement) throw();
 
 ### <a name="parameters"></a>Parametry
 
-*iElement*  
+*iElement*<br/>
 Wartość indeksu elementu tablicy do zwrócenia.
 
 ### <a name="return-value"></a>Wartość zwracana
@@ -335,10 +335,10 @@ void InsertArrayAt(size_t iStart, const CAtlArray<E, ETraits>* paNew);
 
 ### <a name="parameters"></a>Parametry
 
-*iStart*  
+*iStart*<br/>
 Indeks, w którym ma zostać wstawiony tablicy.
 
-*paNew*  
+*paNew*<br/>
 Tablica, która ma zostać wstawiony.
 
 ### <a name="remarks"></a>Uwagi
@@ -364,13 +364,13 @@ void InsertAt(size_t iElement, INARGTYPE element, size_t nCount = 1);
 
 ### <a name="parameters"></a>Parametry
 
-*iElement*  
+*iElement*<br/>
 Indeks, w którym element lub elementy mają zostać wstawione.
 
-*Element*  
+*Element*<br/>
 Wartość elementu lub elementów do wstawienia.
 
-*nCount*  
+*nCount*<br/>
 Liczba elementów do dodania.
 
 ### <a name="remarks"></a>Uwagi
@@ -414,7 +414,7 @@ const E& operator[](size_t ielement) const throw();
 
 ### <a name="parameters"></a>Parametry
 
-*iElement*  
+*iElement*<br/>
 Wartość indeksu elementu tablicy do zwrócenia.
 
 ### <a name="return-value"></a>Wartość zwracana
@@ -463,10 +463,10 @@ void RemoveAt(size_t iElement, size_t nCount = 1);
 
 ### <a name="parameters"></a>Parametry
 
-*iElement*  
+*iElement*<br/>
 Indeks pierwszego elementu do usunięcia.
 
-*nCount*  
+*nCount*<br/>
 Liczba elementów do usunięcia.
 
 ### <a name="remarks"></a>Uwagi
@@ -489,10 +489,10 @@ void SetAt(size_t iElement, INARGTYPE element);
 
 ### <a name="parameters"></a>Parametry
 
-*iElement*  
+*iElement*<br/>
 Indeks wskazujący element tablicy do ustawienia.
 
-*Element*  
+*Element*<br/>
 Nowa wartość określonego elementu.
 
 ### <a name="remarks"></a>Uwagi
@@ -513,10 +513,10 @@ bool SetCount(size_t nNewSize, int nGrowBy = - 1);
 
 ### <a name="parameters"></a>Parametry
 
-*nNewSize*  
+*nNewSize*<br/>
 Wymagany rozmiar tablicy.
 
-*nGrowBy*  
+*nGrowBy*<br/>
 Wartość używana do określenia wielkość bufora. Wartość -1 powoduje, że wewnętrznie obliczoną wartość ma być używany.
 
 ### <a name="return-value"></a>Wartość zwracana
@@ -543,10 +543,10 @@ void SetAtGrow(size_t iElement, INARGTYPE element);
 
 ### <a name="parameters"></a>Parametry
 
-*iElement*  
+*iElement*<br/>
 Indeks wskazujący element tablicy do ustawienia.
 
-*Element*  
+*Element*<br/>
 Nowa wartość określonego elementu.
 
 ### <a name="remarks"></a>Uwagi
@@ -559,9 +559,9 @@ Zamienia wartość elementu wskazywanego przez indeks. Jeśli *iElement* jest wi
 
 ## <a name="see-also"></a>Zobacz też
 
-[Przykładowe MMXSwarm](../../visual-cpp-samples.md)   
-[Przykładowe DynamicConsumer](../../visual-cpp-samples.md)   
-[Przykładowe UpdatePV](../../visual-cpp-samples.md)   
-[Przykładowe Neon](../../visual-cpp-samples.md)   
-[Carray — klasa](../../mfc/reference/carray-class.md)   
+[Przykładowe MMXSwarm](../../visual-cpp-samples.md)<br/>
+[Przykładowe DynamicConsumer](../../visual-cpp-samples.md)<br/>
+[Przykładowe UpdatePV](../../visual-cpp-samples.md)<br/>
+[Przykładowe Neon](../../visual-cpp-samples.md)<br/>
+[Klasa CArray](../../mfc/reference/carray-class.md)<br/>
 [Klasa — Przegląd](../../atl/atl-class-overview.md)

@@ -17,26 +17,26 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1aa9c72cbb8724da00b2d370884bd7ddbf7264cc
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 4dfda5807aab0c9930780b8374ffc934dde001c0
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43763243"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46096811"
 ---
 # <a name="while-statement-c"></a>while — instrukcja (C)
 
-`while` Instrukcji umożliwia Powtórz instrukcji, dopóki określone wyrażenie przestaje być prawdziwy.  
-  
+`while` Instrukcji umożliwia Powtórz instrukcji, dopóki określone wyrażenie przestaje być prawdziwy.
+
 ## <a name="syntax"></a>Składnia
 
 *instrukcji iteracji*:<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;**gdy (***wyrażenie***)***— instrukcja*
-  
-*Wyrażenie* musi mieć typ arytmetyczny lub wskaźnika. Wykonanie działa w następujący sposób:  
-  
-1. *Wyrażenie* jest oceniany.  
-  
+
+*Wyrażenie* musi mieć typ arytmetyczny lub wskaźnika. Wykonanie działa w następujący sposób:
+
+1. *Wyrażenie* jest oceniany.
+
 2. Jeśli *wyrażenie* początkowo wartość false, treść `while` nigdy nie zostaje wykonana instrukcja i kontrola przechodzi z `while` instrukcji do następnej instrukcji w programie.
 
    Jeśli *wyrażenie* jest wartość true (niezerową), zostaje wykonana instrukcji i proces jest powtarzany, zaczynając od kroku 1.

@@ -1,5 +1,5 @@
 ---
-title: D9024 dla wiersza ostrzeżenie polecenia | Dokumentacja firmy Microsoft
+title: Ostrzeżenie wiersza polecenia D9024 | Dokumentacja firmy Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,30 +16,31 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 47089a580285a7d2d0f49848e7e8e5ad90f32616
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: dae28f28a07049fa19b56af7efcf43285b2a751b
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33296916"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46092686"
 ---
 # <a name="command-line-warning-d9024"></a>Ostrzeżenie D9024 dla wiersza polecenia
-Nierozpoznany źródła plików typu "filename", ponieważ obiekt zakłada, że plik  
-  
- Rozszerzenie pliku nie został rozpoznany. Plik został zakłada się, że plik obiektu i została przekazana do konsolidatora.  
-  
- Następujące rozszerzenia są rozpoznawane:  
-  
--   .c (plik źródłowy C)  
-  
--   .cxx (plik źródłowy C++)  
-  
--   .cpp (plik źródłowy C++)  
-  
--   .obj (pliku obiektu)  
-  
--   .lib (plik biblioteki)  
-  
--   .def (plik definicji modułu)  
-  
--   .EXP (konsolidator eksportuje plik utworzony przez łącze/lib)
+
+Nierozpoznany źródło pliku typu "filename", ponieważ obiekt zakłada, że plik
+
+Rozszerzenie określony plik nie został rozpoznany. Plik został zakłada się, że plik obiektu i została przekazana do konsolidatora.
+
+Rozpoznawane są następujące rozszerzenia:
+
+- .c (plik źródłowy C)
+
+- .cxx (pliku źródłowego języka C++)
+
+- .cpp (pliku źródłowego języka C++)
+
+- .obj (pliku obiektu)
+
+- lib (plik biblioteki)
+
+- .def (plik definicji modułu)
+
+- EXP (konsolidator eksportuje plik tworzony przez łącze/lib)

@@ -1,5 +1,5 @@
 ---
-title: Indeks klasy | Dokumentacja firmy Microsoft
+title: INDEX, klasa | Dokumentacja firmy Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,15 +18,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 594ee94bbbfc19bc6fcceb9ae7f0760d9ec877dc
-ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
+ms.openlocfilehash: da6dae3aa76e593a3a98ff25b4d327faf284459e
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33695340"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46097136"
 ---
 # <a name="index-class"></a>index — Klasa
-Definiuje *N*-wymiarowy indeksu pographics-cpp-amp.md.  
+Definiuje *N*-wymiarowej indeksu pographics-cpp-amp.md.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -36,8 +36,8 @@ class index;
 ```  
   
 #### <a name="parameters"></a>Parametry  
- `_Rank`  
- Ranga lub liczbę wymiarów.  
+*_Rank*<br/>
+Ranga lub liczba wymiarów.  
   
 ## <a name="members"></a>Elementy członkowskie  
   
@@ -45,24 +45,24 @@ class index;
   
 |Nazwa|Opis|  
 |----------|-----------------|  
-|[Indeks — Konstruktor](#ctor)|Inicjuje nowe wystąpienie klasy `index` klasy.|  
+|[Indeks konstruktora](#ctor)|Inicjuje nowe wystąpienie klasy `index` klasy.|  
   
 ### <a name="public-operators"></a>Operatory publiczne  
   
 |Nazwa|Opis|  
 |----------|-----------------|  
-|[operator--](#operator--)|Zmniejsza każdy element `index` obiektu.|  
-|[Operator(MOD) =](#operator_mod_eq)|Oblicza modułu (reszty) poszczególnych elementów `index` obiektu, gdy ten element jest dzielona przez liczbę.|  
-|[operator*=](#operator_star_eq)|Mnoży każdy element `index` obiektu liczbą.|  
-|[/ = — operator](#operator_div_eq)|Dzieli każdy element `index` obiektu liczbą.|  
-|[index::operator\[\]](#operator_at)|Zwraca element pod określonym indeksem.|  
-|[operator++](#operator_add_add)|Zwiększa każdy element `index` obiektu.|  
+|[operator--](#operator--)|Zmniejsza o jeden każdy element obiektu `index` obiektu.|  
+|[Operator(MOD) =](#operator_mod_eq)|Oblicza moduł (resztę) każdego elementu w `index` obiektu, gdy ten element jest dzielona przez liczbę.|  
+|[operator*=](#operator_star_eq)|Mnoży każdy element obiektu `index` przez liczbę.|  
+|[operator / =](#operator_div_eq)|Dzieli każdy element obiektu `index` przez liczbę.|  
+|[index::operator\[\]](#operator_at)|Zwraca element, który jest umieszczony pod określonym indeksem.|  
+|[operator++](#operator_add_add)|Zwiększa każdy element obiektu `index` obiektu.|  
 |[operator+=](#operator_add_eq)|Dodaje określoną liczbę do każdego elementu `index` obiektu.|  
-|[operator=](#operator_eq)|Kopiuje zawartość określonego `index` obiektu do tego.|  
-|[operator-=](#operator_-_eq)|Odejmuje określoną liczbą z każdego elementu `index` obiektu.|  
+|[operator=](#operator_eq)|Kopiuje zawartość określonego `index` obiektu do wskazanego.|  
+|[operator-=](#operator_-_eq)|Odejmuje określoną liczbę od każdego elementu obiektu `index` obiektu.|  
 
   
-### <a name="public-constants"></a>Publiczny — stałe  
+### <a name="public-constants"></a>Publiczne stałe  
   
 |Nazwa|Opis|  
 |----------|-----------------|  
@@ -72,7 +72,7 @@ class index;
  `index`  
   
 ## <a name="remarks"></a>Uwagi  
- `index` Struktury reprezentuje współrzędnych wektor *N* liczb całkowitych, które określają unikatowe położenie w *N*-przestrzeni trójwymiarowej. Wartości w wektorze są uporządkowane od najważniejszych do najmniej znaczący. Można pobrać wartości składników za pomocą [operatora =](#operator_eq).  
+ `index` Struktury reprezentuje wektor współrzędnych *N* liczb całkowitych, które określa unikatową pozycję w *N*-wymiarowej przestrzeni. Wartości w wektorze są uporządkowane od najbardziej do najmniej znaczących. Można pobrać wartości składników za pomocą [operator =](#operator_eq).  
   
 ## <a name="requirements"></a>Wymagania  
  **Nagłówek:** amp.h  
@@ -80,7 +80,7 @@ class index;
  **Namespace:** współbieżności  
 
 
-## <a name="index_ctor"></a> Indeks — Konstruktor
+## <a name="index_ctor"></a> Indeks konstruktora
 Inicjuje nowe wystąpienie klasy indeksu.
 
 ```  
@@ -113,20 +113,20 @@ explicit index(
 ### <a name="parameters"></a>Parametry
 
 _Array  
-Jednowymiarowa tablica o wartości klasyfikacji.  
+Jednowymiarowa tablica wartości rangi.  
 _I  
-Lokalizacja indeksu w indeksie jednowymiarowa.  
+Lokalizacja indeksu w indeksie jednowymiarowym.  
 _I0  
-Długość najważniejszych wymiaru.  
+Długość najbardziej znaczącego wymiaru.  
 _I1  
-Długość dalej do większość — znaczące wymiaru.  
+Długość następnego do najbardziej znaczący wymiar.  
 _I2  
-Długość najmniej znaczący wymiaru.  
-_Other  
-Obiekt indeksu, na której oparto nowy obiekt indeksu.  
+Długość najmniej znaczącego wymiaru.  
+_Inne  
+Obiekt indeksu, na którym opiera się nowy obiekt indeksu.  
 
 ## <a name="operator--"></a>  operator--
-Zmniejsza każdy element obiekt indeksu.  
+Zmniejsza o jeden każdy element obiektu indeksu.  
 ```  
 index<_Rank>& operator--() restrict(amp,cpu);  
 
@@ -135,10 +135,10 @@ index operator--(
 ) restrict(amp,cpu);
 ```  
 ### <a name="return-values"></a>Zwracane wartości
-Dla operatora prefiksu, obiekt indeksu (* to). Dla operatora sufiks nowy obiekt w indeksie.
+Dla operatora prefiksowego obiekt indeksu (* to). Dla operatora sufiksowego, nowy obiekt indeksu.
 
 ## <a name="operator_mod_eq"></a>  Operator(MOD) =   
-Oblicza modułu (reszty) każdego elementu w obiekcie indeksu, gdy ten element jest dzielona o określoną liczbę.
+Oblicza moduł (resztę) każdego elementu w obiekcie indeksu, gdy ten element jest dzielona przez określoną liczbę.
 
 ```  
 index<_Rank>& operator%=(
@@ -146,11 +146,11 @@ index<_Rank>& operator%=(
 ) restrict(cpu, amp);
 ```  
 ### <a name="parameters"></a>Parametry
-_Rhs liczbę do dzielenia przez, aby znaleźć resztę.
+_Rhs liczba do podzielenia przez, aby znaleźć resztę.
 Zwraca wartość obiektu indeksu.
 
 ## <a name="operator_star_eq"></a>  operator * =   
-Mnoży każdego elementu w obiekcie indeksu o określoną liczbę.
+Mnoży każdy element w obiekcie indeksu przez określoną liczbę.
 ```
 index<_Rank>& operator*=(
    int _Rhs
@@ -160,8 +160,8 @@ index<_Rank>& operator*=(
 ### <a name="parameters"></a>Parametry
 _Rhs liczbę Aby pomnożyć.
 
-## <a name="operator_div_eq"></a>  / = — operator 
-Dzieli każdego elementu w obiekcie indeksu o określoną liczbę.
+## <a name="operator_div_eq"></a>  operator / = 
+Dzieli każdy element w obiekcie indeksu przez określoną liczbę.
 
 ```
 index<_Rank>& operator/=(
@@ -169,10 +169,10 @@ index<_Rank>& operator/=(
 ) restrict(amp,cpu);
 ``` 
 ### <a name="parameters"></a>Parametry
-_Rhs liczbę do dzielenia przez.
+Liczba do podzielenia przez _Rhs.
 
 ## <a name="operator_at"></a>  Operator\[\]  
-Zwraca składnik w określonej lokalizacji indeksu.
+Zwraca składnik indeksu w określonej lokalizacji.
 
 ```
 int operator[] (
@@ -185,13 +185,13 @@ int& operator[] (
 ```
 
 ### <a name="parameters"></a>Parametry
-_Index całkowitą z przedziału od 0 do rangi pomniejszonej o 1.
+Parametr _Index liczbą całkowitą z zakresu od 0 do rangi minus 1.
 
 ### <a name="return-value"></a>Wartość zwracana
-Element pod określonym indeksem.
+Element, który jest umieszczony pod określonym indeksem.
 
 ### <a name="remarks"></a>Uwagi
-Poniższy przykład przedstawia wartości składnik indeksu.
+Poniższy przykład wyświetla wartości składnika indeksu.
 ```  
 // Prints 1 2 3.
 concurrency::index<3> idx(1, 2, 3);
@@ -201,7 +201,7 @@ std::cout << idx[2] << "\n";
 ```
 
 ## <a name="operator_add_add"></a>  operator ++   
-Zwiększa każdy element obiekt indeksu.
+Zwiększa każdy element obiektu indeksu.
 ```  
 index<_Rank>& operator++() restrict(amp,cpu);
 
@@ -210,10 +210,10 @@ index<_Rank> operator++(
 ) restrict(amp,cpu);
 ```  
 ### <a name="return-value"></a>Wartość zwracana
-Dla operatora prefiksu, obiekt indeksu (* to). Dla operatora sufiks nowy obiekt w indeksie.
+Dla operatora prefiksowego obiekt indeksu (* to). Dla operatora sufiksowego, nowy obiekt indeksu.
 
 ## <a name="operator_add_eq"></a>  += — operator   
-Dodaje określoną liczbę do każdego elementu obiekt indeksu.
+Dodaje określoną liczbę do każdego elementu obiektu indeksu.
 ```  
 index<_Rank>& operator+=(
    const index<_Rank>& _Rhs
@@ -230,20 +230,20 @@ _Rhs numer do dodania.
 Obiekt indeksu.
 
 ## <a name="operator_eq"></a>  operator =   
-Kopiuje zawartość w określonym indeksie obiektu do tego.
+Kopiuje zawartość obiektu określonego indeksu do wskazanego.
 ```  
 index<_Rank>& operator=(
    const index<_Rank>& _Other
 ) restrict(amp,cpu);
 ``` 
 ### <a name="parameters"></a>Parametry
-_Other obiekt indeksu do skopiowania.
+_Inne obiektu indeksu do skopiowania.
 
 ### <a name="return-value"></a>Wartość zwracana
 Odwołanie do tego obiektu indeksu.
 
 ## <a name="operator_-_eq"></a>  operator-=
-Odejmuje określonej liczby z każdego elementu obiekt indeksu.
+Odejmuje określoną liczbę od każdego elementu obiektu indeksu.
 ```  
 index<_Rank>& operator-=(
    const index<_Rank>& _Rhs
@@ -254,13 +254,13 @@ index<_Rank>& operator-=(
 ) restrict(amp,cpu);
 ```  
 ### <a name="parameters"></a>Parametry
-_Rhs numer do odjęcia.
+_Rhs liczba odejmowana.
 
 ### <a name="return-value"></a>Wartość zwracana
 Obiekt indeksu.   
 
 ## <a name="rank"></a>  Ranga  
-  Pobiera pozycję obiekt indeksu.
+  Pobiera liczbę wymiarów obiektu indeksu.
 ```
 static const int rank = _Rank;
 ``` 

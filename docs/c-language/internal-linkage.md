@@ -15,17 +15,19 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0b5703ca23a30cdb1d080e1dc379dabfc6c0df1f
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 09b5a02b7892bff0233e37bbd63020a4d2904ec3
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32383998"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46094211"
 ---
 # <a name="internal-linkage"></a>Połączenie wewnętrzne
-Jeśli zawiera deklarację identyfikatora zakres pliku dla obiekt lub funkcji *Specyfikator klasy magazynu* **statycznych**, identyfikator ma połączenie zewnętrzne. W przeciwnym razie identyfikator ma połączenie zewnętrzne. Zobacz [klasy magazynu](../c-language/c-storage-classes.md) omówienie *Specyfikator klasy magazynu* nonterminal.  
-  
- W ramach jednej jednostki tłumaczenia każde wystąpienie identyfikatora z powiązaniem wewnętrznym oznacza tego samego identyfikatora lub funkcji. Wewnętrznie połączonego identyfikatory są unikatowe w jednostce tłumaczenia.  
-  
-## <a name="see-also"></a>Zobacz też  
- [Użycie zewnętrznie w celu określenia powiązania](../cpp/using-extern-to-specify-linkage.md)
+
+Jeśli zawiera deklaracji z zakresem pliku identyfikator obiektu lub funkcji *storage-class-specifier* **statyczne**, identyfikator ma powiązania wewnętrznego. W przeciwnym razie identyfikator ma powiązania zewnętrzne. Zobacz [klasy magazynu](../c-language/c-storage-classes.md) dyskusję na temat *storage-class-specifier* nieterminalnych.
+
+W ramach jednej jednostki translacji każde wystąpienie identyfikatora z wewnętrznym powiązaniem wskazuje ten sam identyfikator lub funkcji. Wewnętrznie połączone identyfikatory są unikatowe dla jednostki translacji.
+
+## <a name="see-also"></a>Zobacz też
+
+[Użycie zewnętrznie w celu określenia powiązania](../cpp/using-extern-to-specify-linkage.md)

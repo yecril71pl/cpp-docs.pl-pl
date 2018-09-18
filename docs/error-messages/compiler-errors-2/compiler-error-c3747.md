@@ -1,5 +1,5 @@
 ---
-title: C3747 błąd kompilatora | Dokumentacja firmy Microsoft
+title: Błąd kompilatora C3747 | Dokumentacja firmy Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,31 +16,32 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6ca36074f33299b1a55da0fe7b42786a05dd6c49
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: f1f657e6d3f64a4d8a2244ab2927a9a712c14b1a
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33264119"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46091676"
 ---
-# <a name="compiler-error-c3747"></a>C3747 błąd kompilatora
-Brak domyślnego parametru typu: parametr param  
-  
- Określono opcję ogólne lub szablonu parametrów mających wartości domyślne nie może następować na liście parametrów parametrów, które nie mają przypisane wartości domyślne.  
-  
- Poniższy przykład generuje C3747:  
-  
-```  
-// C3747.cpp  
-template <class T1 = int, class T2>   // C3747  
-struct MyStruct {};  
-```  
-  
- Możliwe rozwiązanie:  
-  
-```  
-// C3747b.cpp  
-// compile with: /c  
-template <class T1, class T2 = int>  
-struct MyStruct {};  
+# <a name="compiler-error-c3747"></a>Błąd kompilatora C3747
+
+Brak domyślnego typu parametru: parametr param
+
+Generyczny lub szablonu parametrów mających wartości domyślne nie może występować na liście parametrów parametry, które nie mają wartości domyślne.
+
+Poniższy przykład spowoduje wygenerowanie C3747:
+
+```
+// C3747.cpp
+template <class T1 = int, class T2>   // C3747
+struct MyStruct {};
+```
+
+Możliwe rozwiązanie:
+
+```
+// C3747b.cpp
+// compile with: /c
+template <class T1, class T2 = int>
+struct MyStruct {};
 ```

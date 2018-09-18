@@ -1,5 +1,5 @@
 ---
-title: C2212 błąd kompilatora | Dokumentacja firmy Microsoft
+title: Błąd kompilatora C2212 | Dokumentacja firmy Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,14 +16,15 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 152b38be30b50684684bb0c2c39a035b748915b6
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 773dff4c731830d300c97f1960b24923d2b7d67f
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33168740"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46089882"
 ---
-# <a name="compiler-error-c2212"></a>C2212 błąd kompilatora
-"identyfikator": __based nie jest dostępny dla wskaźników do funkcji  
-  
- Nie można zadeklarować jako wskaźników do funkcji `__based`. Jeśli potrzebujesz danych opartych na kodzie użyj `__declspec` — słowo kluczowe lub `data_seg` pragma.
+# <a name="compiler-error-c2212"></a>Błąd kompilatora C2212
+
+'Identyfikator': __based nie jest dostępny dla wskaźników do funkcji
+
+Nie można zadeklarować jako wskaźniki do funkcji `__based`. Jeśli potrzebujesz danych oparte na kodzie, należy użyć `__declspec` — słowo kluczowe lub `data_seg` pragmy.

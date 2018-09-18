@@ -16,22 +16,23 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3b53fba3743d6d072930e430c15b79e0e31d68d2
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 7d8deaf8bfb10d3ceb56380560320ebb2cf9a7b8
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33302610"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46090324"
 ---
 # <a name="linker-tools-error-lnk2023"></a>Błąd narzędzi konsolidatora LNK2023
-Nieprawidłowy plik dll lub punkt wejścia \<biblioteki dll lub punkt wejście >  
-  
- Konsolidator ładuje nieprawidłową wersję msobj90.dll. Upewnij się, że link.exe i msobj90.dll w ścieżce mają tę samą wersję.  
-  
- Zależność msobj90.dll może nie być obecny. Na liście zależności msobj90.dll jest:  
-  
--   Msvcr90.dll  
-  
--   Kernel32.dll  
-  
- Sprawdź komputer dla wszystkich kopii msobj90.dll, które mogą być nieaktualne.
+
+Zły biblioteki dll lub punkt wejścia \<biblioteki dll lub punkt wejście >
+
+Konsolidator ładuje nieprawidłową wersję msobj90.dll. Upewnij się, że link.exe i msobj90.dll w ścieżce mają tę samą wersję.
+
+Zależność msobj90.dll nie może być obecny. Na liście zależności dla msobj90.dll jest:
+
+- Msvcr90.dll
+
+- Kernel32.dll.
+
+Sprawdź swojej maszyny, wszelkie pozostałe kopie msobj90.dll, które mogą być nieaktualne.

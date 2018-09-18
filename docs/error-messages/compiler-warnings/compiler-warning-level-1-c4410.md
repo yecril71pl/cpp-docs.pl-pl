@@ -1,5 +1,5 @@
 ---
-title: Kompilatora (poziom 1) ostrzeżenie C4410 | Dokumentacja firmy Microsoft
+title: Kompilator ostrzeżenie (poziom 1) C4410 | Dokumentacja firmy Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,14 +16,15 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2d5c091134a8641e35dc3865eeb5ae02fb7bb5d2
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 8f9ad2f178a7bc83229736c4bcc48058b6f0f5f6
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33271751"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46089603"
 ---
-# <a name="compiler-warning-level-1-c4410"></a>Kompilator C4410 ostrzegawcze (poziom 1)
-Niedozwolony rozmiar operandu  
-  
- Jeden z argumentów na instrukcja miała niepoprawny rozmiar. Najmniejszy rozmiar prawne argument był używany.
+# <a name="compiler-warning-level-1-c4410"></a>Kompilator ostrzeżenie (poziom 1) C4410
+
+Niedozwolony rozmiar operandu
+
+Jeden z argumentów na instrukcja miała niepoprawny rozmiar. Najmniejszy rozmiar prawne dla argument był używany.

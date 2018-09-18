@@ -16,36 +16,39 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 748276ed8fa459c41174f23d32bcef127cbdd510
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 335a3976675f36e3da295bc23c8e17440a56a505
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33300449"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46088656"
 ---
 # <a name="linker-tools-error-lnk1312"></a>Błąd narzędzi konsolidatora LNK1312
-nieprawidłowy lub uszkodzony plik: nie można zaimportować zestawu  
-  
- Podczas kompilowania zestawu, plików innych niż moduł lub zestawu skompilowanego z **/CLR** został przekazany do **/assemblymodule** — opcja konsolidatora.  Jeśli przekazany plik obiektu do **/assemblymodule**, po prostu Przekaż obiekt bezpośrednio do konsolidatora, a nie do **/assemblymodule**.  
-  
-## <a name="example"></a>Przykład  
- Poniższy przykład utworzony plik .obj.  
-  
-```  
-// LNK1312.cpp  
-// compile with: /clr /LD  
-public ref class A {  
-public:  
-   int i;  
-};  
-```  
-  
-## <a name="example"></a>Przykład  
- Poniższy przykład generuje LNK1312.  
-  
-```  
-// LNK1312_b.cpp  
-// compile with: /clr /LD /link /assemblymodule:LNK1312.obj  
-// LNK1312 error expected  
-public ref class M {};  
+
+nieprawidłowy lub uszkodzony plik: nie można zaimportować zestawu
+
+Podczas tworzenia zestawu, pliki inne niż moduł lub zestawu skompilowanego z **/CLR** został przekazany do **assemblymodule** — opcja konsolidatora.  Jeśli przekazany plik do obiektu **assemblymodule**, po prostu Przekaż obiekt bezpośrednio do konsolidatora, zamiast do **assemblymodule**.
+
+## <a name="example"></a>Przykład
+
+Poniższy przykład utworzono plik .obj.
+
+```
+// LNK1312.cpp
+// compile with: /clr /LD
+public ref class A {
+public:
+   int i;
+};
+```
+
+## <a name="example"></a>Przykład
+
+Poniższy przykład spowoduje wygenerowanie LNK1312.
+
+```
+// LNK1312_b.cpp
+// compile with: /clr /LD /link /assemblymodule:LNK1312.obj
+// LNK1312 error expected
+public ref class M {};
 ```

@@ -1,5 +1,5 @@
 ---
-title: C2668 błąd kompilatora | Dokumentacja firmy Microsoft
+title: Błąd kompilatora C2668 | Dokumentacja firmy Microsoft
 ms.custom: ''
 ms.date: 03/28/2017
 ms.technology:
@@ -16,136 +16,143 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ea6cb5f53d3d4d0971398dbba10e24b579ce6c62
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: c3b318c663bb036629086d0bca9a67641e3c4c4e
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33236404"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46093756"
 ---
-# <a name="compiler-error-c2668"></a>C2668 błąd kompilatora
-"Funkcja": niejednoznaczne wywołanie przeciążonej funkcji  
-  
- Nie można rozpoznać wywołania określonej przeciążonej funkcji. Można jawnie rzutować co najmniej jeden z parametrów rzeczywistych.  
-  
- Ten błąd można również uzyskać za pomocą szablonu. Jeśli w tej samej klasie są funkcją członkowską regularnych i funkcję szablonem elementu członkowskiego o tej samej sygnaturze, co opartego na szablonie muszą pochodzić pierwszy. Jest to ograniczenie bieżąca implementacja Visual C++.  
-  
- Zobacz artykuł bazy wiedzy Knowledge Base Q240869, aby uzyskać więcej informacji na częściowe porządkowanie szablonów funkcji.  
-  
- Jeśli tworzysz Projekt ATL zawierający obsługi obiektu COM `ISupportErrorInfo`, zobacz artykuł bazy wiedzy Knowledge Base Q243298.  
-  
-## <a name="example"></a>Przykład  
- Poniższy przykład generuje C2668:  
-  
-```  
-// C2668.cpp  
-struct A {};  
-struct B : A {};  
-struct X {};  
-struct D : B, X {};  
-  
-void func( X, X ){}  
-void func( A, B ){}  
-D d;  
-int main() {  
-   func( d, d );   // C2668 D has an A, B, and X   
-   func( (X)d, (X)d );   // OK, uses func( X, X )  
-}  
-```  
-  
-## <a name="example"></a>Przykład  
- Inny sposób, aby rozwiązać ten problem dotyczy [za pomocą deklaracji](../../cpp/using-declaration.md):  
-  
-```  
-// C2668b.cpp  
-// compile with: /EHsc /c  
-// C2668 expected  
-#include <iostream>  
-class TypeA {  
-public:  
-   TypeA(int value) {}  
-};  
-  
-class TypeB {  
-   TypeB(int intValue);  
-   TypeB(double dbValue);  
-};  
-  
-class TestCase {  
-public:  
-   void AssertEqual(long expected, long actual, std::string  
-                    conditionExpression = "");  
-};  
-  
-class AppTestCase : public TestCase {  
-public:  
-   // Uncomment the following line to resolve.  
-   // using TestCase::AssertEqual;  
-   void AssertEqual(const TypeA expected, const TypeA actual,  
-                    std::string conditionExpression = "");  
-   void AssertEqual(const TypeB expected, const TypeB actual,  
-                    std::string conditionExpression = "");  
-};  
-  
-class MyTestCase : public AppTestCase {  
-   void TestSomething() {  
-      int actual = 0;  
-      AssertEqual(0, actual, "Value");  
-   }  
-};  
-```  
-  
-## <a name="example"></a>Przykład  
- Ten błąd może być również generowany w wyniku pracy zgodność kompilatora, która została wykonana dla programu Visual Studio .NET 2003: niejednoznaczne konwersji na rzutowanie stała 0.  
-  
- Konwersja na rzutowanie przy użyciu stałej 0 jest niejednoznaczne, ponieważ int wymaga konwersji zarówno do długo, jak i do void *. Aby rozwiązać ten problem, należy rzutować 0, aby dokładnie typ parametru funkcji, który jest używany dla dzięki czemu ma konwersji musi nastąpić (ten kod będzie prawidłowy w wersjach programu Visual Studio .NET 2003 i Visual Studio .NET Visual C++).  
-  
-```  
-// C2668c.cpp  
-#include "stdio.h"  
-void f(long) {  
-   printf_s("in f(long)\n");  
-}  
-void f(void*) {  
-   printf_s("in f(void*)\n");  
-}  
-int main() {  
-   f((int)0);   // C2668  
-  
-   // OK  
-   f((long)0);  
-   f((void*)0);  
-}  
-```  
-  
-## <a name="example"></a>Przykład  
- Ten błąd może wystąpić, ponieważ CRT ma teraz zmiennoprzecinkowych i podwójne formularze wszystkich funkcji matematycznych.  
-  
-```  
-// C2668d.cpp  
-#include <math.h>  
-int main() {  
-   int i = 0;  
-   float f;  
-   f = cos(i);   // C2668  
-   f = cos((float)i);   // OK  
-}  
-```  
-  
-## <a name="example"></a>Przykład  
- Ten błąd może wystąpić, ponieważ pow (int, int) został usunięty z math.h w CRT.  
-  
-```  
-// C2668e.cpp  
-#include <math.h>  
-int main() {  
-   pow(9,9);   // C2668  
-   pow((double)9,9);   // OK  
-}  
+# <a name="compiler-error-c2668"></a>Błąd kompilatora C2668
+
+'Funkcja': niejednoznaczne wywołanie przeciążonej funkcji
+
+Nie można rozpoznać wywołania określonej przeciążonej funkcji. Można jawnie rzutowane co najmniej jeden z parametrów rzeczywistych.
+
+Ten błąd można także uzyskać za pomocą szablonu. W przypadku, w tej samej klasie funkcja regularny członek i oparte na szablonach składowa o tej samej sygnaturze, oparte na szablonach jeden musi umieszczone jako pierwsze. To ograniczenie bieżąca implementacja języka Visual C++.
+
+Zobacz artykuł bazy wiedzy Q240869 Aby uzyskać więcej informacji na częściowe porządkowanie szablonów funkcji.
+
+Jeśli tworzysz Projekt ATL, zawierający obsługujący obiekt COM `ISupportErrorInfo`, zobacz artykuł bazy wiedzy Q243298.
+
+## <a name="example"></a>Przykład
+
+Poniższy przykład spowoduje wygenerowanie C2668:
+
+```
+// C2668.cpp
+struct A {};
+struct B : A {};
+struct X {};
+struct D : B, X {};
+
+void func( X, X ){}
+void func( A, B ){}
+D d;
+int main() {
+   func( d, d );   // C2668 D has an A, B, and X
+   func( (X)d, (X)d );   // OK, uses func( X, X )
+}
 ```
 
-## <a name="example"></a>Przykład  
-Ten kod powiedzie się w programie Visual Studio 2015, ale nie powiedzie się w programie Visual Studio 2017 i później z C2668. W programie Visual Studio 2015 kompilator błędnego traktowane Inicjalizacja listy kopii na w taki sam sposób jak regularne inicjacja kopii; uważa się jedynie konwertowanie konstruktorów Rozpoznanie przeciążenia. 
+## <a name="example"></a>Przykład
+
+Innym sposobem, aby rozwiązać ten problem jest [użycie — deklaracja](../../cpp/using-declaration.md):
+
+```
+// C2668b.cpp
+// compile with: /EHsc /c
+// C2668 expected
+#include <iostream>
+class TypeA {
+public:
+   TypeA(int value) {}
+};
+
+class TypeB {
+   TypeB(int intValue);
+   TypeB(double dbValue);
+};
+
+class TestCase {
+public:
+   void AssertEqual(long expected, long actual, std::string
+                    conditionExpression = "");
+};
+
+class AppTestCase : public TestCase {
+public:
+   // Uncomment the following line to resolve.
+   // using TestCase::AssertEqual;
+   void AssertEqual(const TypeA expected, const TypeA actual,
+                    std::string conditionExpression = "");
+   void AssertEqual(const TypeB expected, const TypeB actual,
+                    std::string conditionExpression = "");
+};
+
+class MyTestCase : public AppTestCase {
+   void TestSomething() {
+      int actual = 0;
+      AssertEqual(0, actual, "Value");
+   }
+};
+```
+
+## <a name="example"></a>Przykład
+
+Ten błąd może być też wygenerowany w wyniku pracy zgodności kompilatora, która została wykonana dla Visual Studio .NET 2003: niejednoznaczne konwersję na rzutowanie stała 0.
+
+Konwersja na rzutowanie za pomocą stała 0 jest niejednoznaczny, ponieważ int wymaga konwersji zarówno do czasu i typ void *. Aby rozwiązać ten problem, należy rzutować 0, aby dokładnie typ parametru funkcji, który jest używany dla tak, aby konwersji muszą mieć miejsce (ten kod będzie prawidłowy w wersjach programu Visual Studio .NET 2003 i Visual Studio .NET, Visual c++).
+
+```
+// C2668c.cpp
+#include "stdio.h"
+void f(long) {
+   printf_s("in f(long)\n");
+}
+void f(void*) {
+   printf_s("in f(void*)\n");
+}
+int main() {
+   f((int)0);   // C2668
+
+   // OK
+   f((long)0);
+   f((void*)0);
+}
+```
+
+## <a name="example"></a>Przykład
+
+Ten błąd może wystąpić, ponieważ CRT ma teraz zmiennoprzecinkowe i podwójne formularze wszystkich funkcji matematycznych.
+
+```
+// C2668d.cpp
+#include <math.h>
+int main() {
+   int i = 0;
+   float f;
+   f = cos(i);   // C2668
+   f = cos((float)i);   // OK
+}
+```
+
+## <a name="example"></a>Przykład
+
+Ten błąd może wystąpić, ponieważ pow (int, int) został usunięty z math.h w CRT.
+
+```
+// C2668e.cpp
+#include <math.h>
+int main() {
+   pow(9,9);   // C2668
+   pow((double)9,9);   // OK
+}
+```
+
+## <a name="example"></a>Przykład
+
+Ten kod zakończy się pomyślnie w programie Visual Studio 2015, ale nie powiedzie się w programie Visual Studio 2017 i nowszym z C2668. W programie Visual Studio 2015 kompilator błędnie traktowane listy Inicjalizacja kopiowania na w taki sam sposób, jak regularne Inicjowanie kopiowania; uznaje się jedynie konwertowanie konstruktory przeciążeń z późnym wiązaniem.
 
 ```
 C++

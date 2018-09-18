@@ -22,12 +22,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 37df260d16c04210fb7e66c0ec9a747a3dad7da4
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 11c391e6ad467c835cd8c65ec872db74b85404a2
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43760165"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46097617"
 ---
 # <a name="ccomcoclass-class"></a>Klasa CComCoClass
 
@@ -36,16 +36,16 @@ Ta klasa dostarcza metody do tworzenia wystąpienia klasy i uzyskania jej właś
 ## <a name="syntax"></a>Składnia
 
 ```
-template <class T, const CLSID* pclsid = &CLSID_NULL>  
+template <class T, const CLSID* pclsid = &CLSID_NULL>
 class CComCoClass
 ```
 
 #### <a name="parameters"></a>Parametry
 
-*T*  
+*T*<br/>
 Z klasą pochodną `CComCoClass`.
 
-*pclsid*  
+*pclsid*<br/>
 Wskaźnik do identyfikatora CLSID obiektu.
 
 ## <a name="members"></a>Elementy członkowskie
@@ -91,13 +91,13 @@ static HRESULT CreateInstance(IUnknown* punkOuter, Q** pp);
 
 ### <a name="parameters"></a>Parametry
 
-*PYTANIA I ODPOWIEDZI*  
+*PYTANIA I ODPOWIEDZI*<br/>
 Interfejs COM, który ma zostać zwrócone za pośrednictwem *pp*.
 
-*punkOuter*  
+*punkOuter*<br/>
 [in] Nieznany zewnętrznego lub kontrolowanie nieznane agregacji.
 
-*strony*  
+*strony*<br/>
 [out] Adres zmiennej wskaźnika, który otrzymuje wskaźnik żądanego interfejsu, jeśli tworzenie zakończy się powodzeniem.
 
 ### <a name="return-value"></a>Wartość zwracana
@@ -166,24 +166,25 @@ static HRESULT Error(
 
 ### <a name="parameters"></a>Parametry
 
-*lpszDesc*  
-[in] Ciąg opisujący błąd. Wersja Unicode `Error` Określa, że *lpszDesc* jest typ LPCOLESTR; wersji ANSI Określa typ LPCSTR.  
-*IID*  
+*lpszDesc*<br/>
+[in] Ciąg opisujący błąd. Wersja Unicode `Error` Określa, że *lpszDesc* jest typ LPCOLESTR; wersji ANSI Określa typ LPCSTR.
+
+*IID*<br/>
 [in] Identyfikator IID interfejsu Definiowanie błąd lub GUID_NULL (wartość domyślna), jeśli ten błąd jest zdefiniowany przez system operacyjny.
 
-*parametrem typu HRESULT*  
+*parametrem typu HRESULT*<br/>
 [in] Wartość HRESULT, które mają zwracany do obiektu wywołującego. Wartość domyślna to 0. Aby uzyskać więcej informacji na temat *parametrem typu HRESULT*, zobacz uwagi.
 
-*nID*  
+*nID*<br/>
 [in] Identyfikator zasobu, gdzie znajduje się ciąg opisu błędu. Ta wartość musi zawierać się między 0x0200 i 0xFFFF, włącznie. W kompilacjach do debugowania **ASERCJA** spowoduje, że jeśli *nID* indeksowania prawidłowy ciąg. W kompilacjach do wydania ciąg opisu błędu zostanie ustawiony na "Nieznany błąd."
 
-*dwHelpID*  
+*dwHelpID*<br/>
 [in] Identyfikator kontekstu pomocy dla błędu.
 
-*lpszHelpFile*  
+*lpszHelpFile*<br/>
 [in] Ścieżka i nazwa pliku pomocy, opisujący błąd.
 
-*hInst*  
+*hInst*<br/>
 [in] Dojście do zasobu. Domyślnie ten parametr jest `_AtlModule::GetResourceInstance`, gdzie `_AtlModule` jest globalne wystąpienie [CAtlModule](../../atl/reference/catlmodule-class.md).
 
 ### <a name="return-value"></a>Wartość zwracana

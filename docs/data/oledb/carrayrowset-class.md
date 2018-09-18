@@ -54,14 +54,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: b7975c91631df24ab12858677a770c38dc0f6411
-ms.sourcegitcommit: 889a75be1232817150be1e0e8d4d7f48f5993af2
+ms.openlocfilehash: e13f262b90ff46955d6ba63fb83a941d712b017a
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/30/2018
-ms.locfileid: "39338915"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46087880"
 ---
 # <a name="carrayrowset-class"></a>CArrayRowset — Klasa
+
 Uzyskuje dostęp do elementów zestawu wierszy, za pomocą składni tablicy.  
   
 ## <a name="syntax"></a>Składnia
@@ -74,11 +75,13 @@ class CArrayRowset :
 ```  
   
 ### <a name="parameters"></a>Parametry  
- *TAccessor*  
- Typ metody dostępu klasę zestawu wierszy do użycia.  
+
+*TAccessor*<br/>
+Typ metody dostępu klasę zestawu wierszy do użycia.  
 
 ## <a name="requirements"></a>Wymagania  
- **Nagłówek:** atldbcli.h  
+
+**Nagłówek:** atldbcli.h  
   
 ## <a name="members"></a>Elementy członkowskie  
   
@@ -102,6 +105,7 @@ class CArrayRowset :
 |[CArrayRowset::m_nRowsRead](#nrowsread)|Liczba wierszy, które znasz.|  
   
 ## <a name="carrayrowset"></a> CArrayRowset::CArrayRowset
+
 Tworzy nową `CArrayRowset` obiektu.  
   
 ### <a name="syntax"></a>Składnia  
@@ -111,10 +115,12 @@ CArrayRowset(int nMax = 100000);
 ```  
   
 #### <a name="parameters"></a>Parametry  
- *nmaks.*  
- [in] Maksymalna liczba wierszy w zestawie wierszy. 
+
+*nmaks.*<br/>
+[in] Maksymalna liczba wierszy w zestawie wierszy. 
 
 ## <a name="snapshot"></a> CArrayRowset::Snapshot
+
 Odczytuje całego zestawu wierszy do pamięci, tworzenia obrazu lub migawkę go.  
   
 ### <a name="syntax"></a>Składnia  
@@ -124,6 +130,7 @@ HRESULT Snapshot() throw();
 ```  
 
 ## <a name="operator"></a> CArrayRowset::operator
+
 Udostępnia składni tablicy do uzyskiwania dostępu do wierszy w zestawie wierszy.  
   
 ### <a name="syntax"></a>Składnia  
@@ -133,19 +140,23 @@ TAccessor & operator[](int nrow);
 ```  
   
 #### <a name="parameters"></a>Parametry  
- *TAccessor*  
- Oparte na szablonach parametr, który określa typ metody dostępu przechowywane w zestawie wierszy.  
+
+*TAccessor*<br/>
+Oparte na szablonach parametr, który określa typ metody dostępu przechowywane w zestawie wierszy.  
   
- *nRow*  
- [in] Numer wiersza (element tablicy), po którym chcesz uzyskać dostęp.  
+*nRow*<br/>
+[in] Numer wiersza (element tablicy), po którym chcesz uzyskać dostęp.  
   
 ### <a name="return-value"></a>Wartość zwracana  
- Zawartość żądanych wierszy.  
+
+Zawartość żądanych wierszy.  
   
 ### <a name="remarks"></a>Uwagi  
- Jeśli *nRow* przekracza liczbę wierszy w zestawie wierszy, zgłaszany jest wyjątek.  
+
+Jeśli *nRow* przekracza liczbę wierszy w zestawie wierszy, zgłaszany jest wyjątek.  
 
 ## <a name="nrowsread"></a> CArrayRowset::m_nRowsRead
+
 Zawiera liczbę wierszy w zestawie wierszy, które już przeczytana.  
   
 ### <a name="syntax"></a>Składnia  
@@ -155,6 +166,7 @@ ULONG m_nRowsRead;
 ```  
   
 ## <a name="see-also"></a>Zobacz też  
- [Szablony konsumentów OLE DB](../../data/oledb/ole-db-consumer-templates-cpp.md)   
- [OLE DB — Kompendium szablonów konsumentów](../../data/oledb/ole-db-consumer-templates-reference.md)   
- [CRowset, klasa](../../data/oledb/crowset-class.md)
+
+[Szablony konsumentów OLE DB](../../data/oledb/ole-db-consumer-templates-cpp.md)<br/>
+[Szablony konsumentów OLE DB — dokumentacja](../../data/oledb/ole-db-consumer-templates-reference.md)<br/>
+[CRowset, klasa](../../data/oledb/crowset-class.md)

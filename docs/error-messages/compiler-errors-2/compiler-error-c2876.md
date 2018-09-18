@@ -1,5 +1,5 @@
 ---
-title: C2876 błąd kompilatora | Dokumentacja firmy Microsoft
+title: Błąd kompilatora C2876 | Dokumentacja firmy Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,31 +16,32 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 10021c707873c7c4db449bd04ebeae392fc3f27a
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 47ad5d4da16cc584101b0bab4f26d78fdfe71002
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33244296"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46091949"
 ---
-# <a name="compiler-error-c2876"></a>C2876 błąd kompilatora
-"class::symbol": nie wszystkie przeciążenia są dostępne  
-  
- Wszystkie formularze przeciążonej funkcji w klasie podstawowej muszą być dostępne dla klasy pochodnej.  
-  
- Poniższy przykład generuje C2876:  
-  
-```  
-// C2876.cpp  
-// compile with: /c  
-class A {  
-public:     
-   double a(double);  
-private:  
-   int a(int);  
-};  
-  
-class B : public A {  
-   using A::a;   // C2876 one overload is private in base class  
-};  
+# <a name="compiler-error-c2876"></a>Błąd kompilatora C2876
+
+"class::symbol": nie wszystkie przeciążenia są dostępne
+
+Wszystkie formularze przeciążonej funkcji w klasie podstawowej musi być dostępna dla klasy pochodnej.
+
+Poniższy przykład spowoduje wygenerowanie C2876:
+
+```
+// C2876.cpp
+// compile with: /c
+class A {
+public:
+   double a(double);
+private:
+   int a(int);
+};
+
+class B : public A {
+   using A::a;   // C2876 one overload is private in base class
+};
 ```

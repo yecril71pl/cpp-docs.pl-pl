@@ -1,5 +1,5 @@
 ---
-title: C2784 błąd kompilatora | Dokumentacja firmy Microsoft
+title: Błąd kompilatora C2784 | Dokumentacja firmy Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,30 +16,31 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: beca5e3db426828eeec884cfc8e5e6048006fcd5
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: ed0e5dd7628031a7ad5ac66d2b691ee52dda62f2
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33233321"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46091312"
 ---
-# <a name="compiler-error-c2784"></a>C2784 błąd kompilatora
-"deklaracją": nie może wywnioskować argumentu szablonu dla 'type' z 'type'  
-  
- Kompilator nie może określić argument szablonu z argumentów funkcji podana.  
-  
- Poniższy przykład generuje C2784 i pokazuje, jak rozwiązywanie problemu:  
-  
-```  
-// C2784.cpp  
-template<class T> class X {};  
-template<class T> void f(X<T>) {}  
-  
-int main() {  
-   X<int> x;  
-   f(1);   // C2784  
-  
-   // To fix it, try the following line instead  
-   f(x);  
-}  
+# <a name="compiler-error-c2784"></a>Błąd kompilatora C2784
+
+"deklaracją": nie można wywnioskować argumentu szablonu dla "type" z "type"
+
+Kompilator nie może określić argument szablonu z argumentów funkcji podana.
+
+Poniższy przykład generuje C2784 i pokazuje, jak go naprawić:
+
+```
+// C2784.cpp
+template<class T> class X {};
+template<class T> void f(X<T>) {}
+
+int main() {
+   X<int> x;
+   f(1);   // C2784
+
+   // To fix it, try the following line instead
+   f(x);
+}
 ```

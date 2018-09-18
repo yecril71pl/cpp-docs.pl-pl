@@ -16,14 +16,15 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c6f5619a7c2a6ccf671845b27bbedf93d8eb2d69
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 941773fbcf65a3b1c1a6041a1e7a067cfc286823
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33298554"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46097058"
 ---
 # <a name="bscmake-error-bk1517"></a>Błąd BSCMAKE BK1517
-plik źródłowy sbrfile skompilowana przy użyciu opcji /Yc i /Yu  
-  
- Plik .sbr odwołuje się do siebie. Go została prawdopodobnie ponownie skompilowana z /Yu po kompilacji z /Yc. Przywrócić /Yc — opcja kompilatora dla pliku źródłowego, a następnie wybierz **odbudować** wygenerować nowe pliki .sbr. Nie zostanie ponownie skompilowana z /Yu pliku źródłowego.
+
+plik źródłowy sbrfile skompilowany przy użyciu opcji /Yc i /Yu
+
+Plik .sbr odwołuje się do siebie. Jego została prawdopodobnie ponownie skompilowana przy użyciu /Yu po kompilacji z parametrem/yc. Przywrócić /Yc — opcja kompilatora dla pliku źródłowego, a następnie wybierz **odbudować** wygenerować nowe pliki .sbr. Nie zostanie ponownie skompilowana pliku źródłowego z /Yu.

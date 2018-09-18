@@ -17,23 +17,25 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 83eb2373119002c2d206d40ace25bff8bf767081
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: afd523bad5d70cdfc80a6e8a532b2409be535c6b
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32410518"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46091871"
 ---
 # <a name="required-and-optional-header-files"></a>Wymagane i opcjonalne nagłówki plików
-Opis każdej procedury czasu wykonywania zawiera listę wymaganych i opcjonalnych obejmują, lub nagłówek (. H), pliki dla tej procedury. Pliki nagłówkowe wymagane należy dołączone w celu uzyskania deklaracji funkcji dla procedury lub definicji używany przez inny procedury wywoływana wewnętrznie. Opcjonalne nagłówki plików znajdują się zwykle mógł korzystać z wstępnie zdefiniowanych stałe, definicje typów lub makra w tekście. W poniższej tabeli wymieniono niektóre przykłady opcjonalne nagłówki plików zawartości:  
-  
-|Definicja|Przykład|  
-|----------------|-------------|  
-|Definicji makra|Procedury biblioteki jest zaimplementowany jako makra, definicji makra, mogą znajdować się w pliku nagłówka niż pliku nagłówka dla oryginalnego procedury. Na przykład `_toupper` makro jest zdefiniowana w pliku nagłówka CTYPE. H, podczas funkcji `toupper` jest zadeklarowana w STDLIB. H.|  
-|Wstępnie zdefiniowane stała|Wiele procedury biblioteki można znaleźć na stałe, które są zdefiniowane w nagłówku plików. Na przykład `_open` procedury używa stałe, takie jak `_O_CREAT`, która jest zdefiniowana w pliku nagłówka FCNTL. H.|  
-|Definicja typu|Niektóre procedury biblioteki powrócić, strukturą lub podjąć struktury jako argument. Na przykład procedury we/wy strumienia użyć struktura typu `FILE`, która jest zdefiniowana w stdio —. H.|  
-  
- Pliki nagłówka biblioteki wykonawczej Podaj deklaracje funkcji w standardowej stylu zalecane ANSI/ISO C. Kompilator wykonuje sprawdzanie na wszystkich odwołań rutynowych występujący po jego deklaracji funkcji skojarzonego typu. Deklaracje funkcji są szczególnie ważne w przypadku procedury, które zwracają wartości typu innego niż `int`, co jest ustawieniem domyślnym. Procedury, które nie określają ich zwraca wartość w deklaracji będą uznawane za przez kompilator do zwrócenia `int`, co może spowodować nieoczekiwane wyniki. Zobacz [Sprawdzanie typu](../c-runtime-library/type-checking-crt.md) Aby uzyskać więcej informacji.  
-  
-## <a name="see-also"></a>Zobacz też  
- [Biblioteka CRT, funkcje](../c-runtime-library/crt-library-features.md)
+
+Opis każdej procedury czasu wykonywania zawiera listę wymaganych i opcjonalnych uwzględnić, lub nagłówka (. Godz.), pliki do tej procedury. Pliki nagłówkowe wymagane konieczne w celu uzyskania deklaracji funkcji dla procedury lub definicji używany przez inny procedury metoda wywoływana wewnętrznie. Pliki opcjonalne nagłówki są zazwyczaj dołączone, aby móc korzystać z wstępnie zdefiniowanych stałych, definicje typów lub makra w tekście. W poniższej tabeli wymieniono kilka przykładów zawartości pliku w opcjonalnym nagłówku:
+
+|Definicja|Przykład|
+|----------------|-------------|
+|Definicja makra|Procedury biblioteki jest implementowany jako makra, definicji makra, mogą znajdować się w pliku nagłówka innego niż plik nagłówkowy dla oryginalnego procedury. Na przykład `_toupper` — makro jest zdefiniowany w pliku nagłówkowym CTYPE. Godz., podczas funkcja `toupper` jest zadeklarowana w STDLIB. H.|
+|Wstępnie zdefiniowanej stałej|Wiele procedur biblioteki można znaleźć na stałe, które są zdefiniowane w plikach nagłówkowych. Na przykład `_open` procedura używa stałych, takich jak `_O_CREAT`, która została zdefiniowana w pliku nagłówkowym FCNTL. H.|
+|Definicja typu|Niektóre procedury biblioteki zwracają struktury lub użyj strukturę jako argument. Na przykład procedury we/wy strumienia użyć struktury typu `FILE`, który jest zdefiniowany w stdio —. H.|
+
+Pliki nagłówkowe biblioteki wykonawczej zapewniają deklaracje funkcji w stylu ANSI/ISO C-standardowa zalecane. Kompilator przeprowadza kontrolę typów dla procedur odwołania, występujący po jej deklaracji funkcji skojarzonej. Deklaracje funkcji są szczególnie ważne w przypadku procedur, które zwracają wartość pewnego typu innego niż `int`, co jest ustawieniem domyślnym. Procedur, które nie należy określać ich odpowiednich zwracają wartości w jego deklarację będą uznawane za przez kompilator do zwrócenia `int`, która może spowodować nieoczekiwane rezultaty. Zobacz [sprawdzania typu](../c-runtime-library/type-checking-crt.md) Aby uzyskać więcej informacji.
+
+## <a name="see-also"></a>Zobacz też
+
+[Biblioteka CRT, funkcje](../c-runtime-library/crt-library-features.md)

@@ -16,16 +16,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e5573943fc2c274d48768933a634b2c052361a8f
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 4240bf2c553957e73d5ead0bdd03ea129450645b
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33332143"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46093002"
 ---
 # <a name="nmake-fatal-error-u1064"></a>Błąd krytyczny NMAKE U1064
-Nie znaleziono polecenia MAKEFILE i nie określono elementu docelowego  
-  
- W wierszu polecenia NMAKE nie określono pliku reguł programu make lub element docelowy, a bieżący katalog nie zawiera plik o nazwie pliku reguł programu MAKE.  
-  
- NMAKE wymaga pliku reguł programu make lub element docelowy wiersza polecenia (lub obie). Aby udostępnić pliku reguł programu make NMAKE, określ opcję /F lub umieścić plik o nazwie pliku reguł programu MAKE w bieżącym katalogu. NMAKE można utworzyć obiektu docelowego wiersza polecenia przy użyciu reguły wnioskowania, jeśli nie podano pliku reguł programu make.
+
+Nie znaleziono polecenia MAKEFILE i nie określono elementu docelowego
+
+W wierszu polecenia NMAKE nie określono pliku reguł programu make lub obiektu docelowego, a bieżący katalog nie zawiera plik o nazwie pliku reguł programu MAKE.
+
+NMAKE wymaga pliku reguł programu make lub wiersza polecenia docelowego (lub obu). Aby udostępnić pliku reguł programu make NMAKE, określ opcję /F albo umieścić plik o nazwie pliku reguł programu MAKE w bieżącym katalogu. NMAKE można utworzyć obiektu docelowego wiersza polecenia przy użyciu reguły wnioskowania, jeśli nie podano pliku reguł programu make.

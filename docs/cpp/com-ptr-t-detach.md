@@ -16,28 +16,31 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: cf38e433f7042707b502a4cba2088db9412adb29
-ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
+ms.openlocfilehash: a7f2f44df96ca339e5d8e4b251b5f2d259cb606b
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/01/2018
-ms.locfileid: "39405837"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46092144"
 ---
 # <a name="comptrtdetach"></a>_com_ptr_t::Detach
-**Microsoft Specific**  
-  
- Wyodrębnia i zwraca wskaźnik zhermetyzowany interfejs.  
-  
-## <a name="syntax"></a>Składnia  
-  
-```  
-Interface* Detach( ) throw( );  
-```  
-  
-## <a name="remarks"></a>Uwagi  
- Wyodrębnia i zwraca wskaźnik zhermetyzowany interfejs, a następnie czyści magazyn zhermetyzowanego wskaźnika o wartości NULL. Spowoduje to usunięcie wskaźnika interfejsu z hermetyzacji. Aby wywołać to `Release` na wskaźnik interfejsu zwrócone.  
-  
- **END specyficzny dla Microsoft**  
-  
-## <a name="see-also"></a>Zobacz także  
- [_com_ptr_t, klasa](../cpp/com-ptr-t-class.md)
+
+**Microsoft Specific**
+
+Wyodrębnia i zwraca wskaźnik zhermetyzowany interfejs.
+
+## <a name="syntax"></a>Składnia
+
+```
+Interface* Detach( ) throw( );
+```
+
+## <a name="remarks"></a>Uwagi
+
+Wyodrębnia i zwraca wskaźnik zhermetyzowany interfejs, a następnie czyści magazyn zhermetyzowanego wskaźnika o wartości NULL. Spowoduje to usunięcie wskaźnika interfejsu z hermetyzacji. Aby wywołać to `Release` na wskaźnik interfejsu zwrócone.
+
+**END specyficzny dla Microsoft**
+
+## <a name="see-also"></a>Zobacz także
+
+[_com_ptr_t, klasa](../cpp/com-ptr-t-class.md)

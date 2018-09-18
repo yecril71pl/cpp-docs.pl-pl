@@ -1,5 +1,5 @@
 ---
-title: C3865 błąd kompilatora | Dokumentacja firmy Microsoft
+title: Błąd kompilatora C3865 | Dokumentacja firmy Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,30 +16,31 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 99a872d4cf7ed285a0798461c77adf904cfa3e71
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 8fd5c83d922601ca4cdffe0f3772723b31e630b6
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33275502"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46090844"
 ---
-# <a name="compiler-error-c3865"></a>C3865 błąd kompilatora
-"calling_convention": można używać tylko w natywnych funkcjach Członkowskich  
-  
- Konwencja wywoływania została użyta w funkcję, która została globalnej funkcji lub funkcja zarządzanego elementu członkowskiego. Konwencja wywoływania może służyć tylko w funkcji natywnej (nie zarządzanego) elementu członkowskiego.  
-  
- Aby uzyskać więcej informacji, zobacz [konwencji wywoływania](../../cpp/calling-conventions.md).  
-  
- Poniższy przykład generuje C3865:  
-  
-```  
-// C3865.cpp  
-// compile with: /clr  
-// processor: x86  
-void __thiscall Func(){}   // C3865  
-  
-// OK  
-struct MyType {  
-   void __thiscall Func(){}  
-};  
+# <a name="compiler-error-c3865"></a>Błąd kompilatora C3865
+
+"calling_convention": należy używać tylko w natywnych funkcjach składowych
+
+Konwencja wywoływania był używany w funkcji, która została każda funkcja globalna lub funkcji składowej zarządzanej. Konwencja wywoływania należy używać tylko w funkcji natywnej (niezarządzane) elementu członkowskiego.
+
+Aby uzyskać więcej informacji, zobacz [Konwencje wywoływania](../../cpp/calling-conventions.md).
+
+Poniższy przykład spowoduje wygenerowanie C3865:
+
+```
+// C3865.cpp
+// compile with: /clr
+// processor: x86
+void __thiscall Func(){}   // C3865
+
+// OK
+struct MyType {
+   void __thiscall Func(){}
+};
 ```

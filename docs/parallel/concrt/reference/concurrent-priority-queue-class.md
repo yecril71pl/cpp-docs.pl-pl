@@ -25,15 +25,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ed193eea8209611640b6d125d79ffec1748a7f7f
-ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
+ms.openlocfilehash: d52598f5ef987ce05eb664c6d3ef24ab86e002d0
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33693669"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46096155"
 ---
 # <a name="concurrentpriorityqueue-class"></a>concurrent_priority_queue — Klasa
-`concurrent_priority_queue` Klasy to kontener udostępniający wiele wątków jednocześnie elementów wypychania i pop. Elementy są zdjęte ze stosu w kolejności priorytetu, której priorytet jest określana przez obiekt podana jako argument szablonu.  
+`concurrent_priority_queue` Klasy jest kontenerem, który zezwala na wiele wątków jednocześnie elementów wypychania i pop. Elementy są zdjęte ze stosu w kolejności priorytetów, których priorytet jest określana przez funktorem dostarczone jako argument szablonu.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -46,53 +46,53 @@ template <typename T,
 ```  
   
 #### <a name="parameters"></a>Parametry  
- `T`  
- Typ danych elementów, które mają być przechowywane w kolejce priorytet.  
+*T*<br/>
+Typ danych elementów, które mają być przechowywane w kolejce priorytetu.  
   
- `_Compare`  
- Typ obiektu funkcji, które można porównać dwóch wartości elementu jako klucze sortowania, aby określić ich kolejność względny priorytet kolejki. Ten argument jest opcjonalny i binarne predykatu `less<T>` jest wartością domyślną.  
+*_Porównaj*<br/>
+Typ obiektu funkcji, która może porównać dwie wartości elementów jako klucze sortowania, aby określić ich względną kolejność w kolejce priorytetu. Ten argument jest opcjonalny i predykat dwuelementowy `less<T>` jest wartością domyślną.  
   
- `_Ax`  
- Typ reprezentujący obiekt alokatora przechowywane, który hermetyzuje szczegółowe informacje dotyczące alokacji i cofania alokacji pamięci dla kolejki równoczesnych priorytet. Ten argument jest opcjonalny, a wartość domyślna to `allocator<T>`.  
+*_Ax*<br/>
+Typ reprezentujący przechowywany obiekt alokatora, który hermetyzuje szczegóły dotyczące alokacji i dezalokacji pamięci dla kolejki priorytetowej współbieżnych. Ten argument jest opcjonalny, a wartość domyślna to `allocator<T>`.  
   
 ## <a name="members"></a>Elementy członkowskie  
   
-### <a name="public-typedefs"></a>Definicje typów publicznych  
+### <a name="public-typedefs"></a>Publiczne definicje typów  
   
 |Nazwa|Opis|  
 |----------|-----------------|  
-|`allocator_type`|Typ, który reprezentuje klasę alokatora równoczesnych priorytet kolejki.|  
-|`const_reference`|Typ, który reprezentuje typu const odwołanie do elementu typu przechowywane w kolejce równoczesnych priorytet.|  
-|`reference`|Typ, który reprezentuje odwołanie do elementu typu przechowywane w kolejce równoczesnych priorytet.|  
-|`size_type`|Typ, który oblicza liczbę elementów w kolejce równoczesnych priorytet.|  
-|`value_type`|Typ, który reprezentuje typ danych przechowywanych w kolejce równoczesnych priorytet.|  
+|`allocator_type`|Typ, który reprezentuje klasę alokatora dla kolejki priorytetowej współbieżnych.|  
+|`const_reference`|Typ, który reprezentuje stałą odwołanie do elementu typu przechowywane w kolejce priorytetu współbieżnych.|  
+|`reference`|Typ, który reprezentuje odwołanie do elementu typu przechowywane w kolejce priorytetu współbieżnych.|  
+|`size_type`|Typ, który zlicza liczbę elementów w kolejce priorytetu współbieżnych.|  
+|`value_type`|Typ, który reprezentuje typ danych przechowywanych w kolejce priorytetu współbieżnych.|  
   
 ### <a name="public-constructors"></a>Konstruktory publiczne  
   
 |Nazwa|Opis|  
 |----------|-----------------|  
-|[concurrent_priority_queue](#ctor)|Przeciążone. Tworzy kolejkę równoczesnych priorytet.|  
+|[concurrent_priority_queue](#ctor)|Przeciążone. Tworzy kolejki priorytetowej współbieżnych.|  
   
 ### <a name="public-methods"></a>Metody publiczne  
   
 |Nazwa|Opis|  
 |----------|-----------------|  
-|[Wyczyść](#clear)|Usuwa wszystkie elementy w równoczesnych priorytet. Ta metoda nie jest bezpieczne współbieżności.|  
-|[pusty](#empty)|Testy, jeśli kolejka równoczesnych priorytet jest pusta w momencie ta metoda jest wywoływana. Ta metoda jest bezpieczne współbieżności.|  
-|[get_allocator](#get_allocator)|Zwraca kopię alokatora użyta do skonstruowania równoczesnych priorytet kolejki. Ta metoda jest bezpieczne współbieżności.|  
-|[push](#push)|Przeciążone. Dodaje element do kolejki równoczesnych priorytet. Ta metoda jest bezpieczne współbieżności.|  
-|[Rozmiar](#size)|Zwraca liczbę elementów w kolejce równoczesnych priorytet. Ta metoda jest bezpieczne współbieżności.|  
-|[swap](#swap)|Zamienia zawartość dwie równoczesne priorytet kolejki. Ta metoda nie jest bezpieczne współbieżności.|  
-|[try_pop](#try_pop)|Usuwa i zwraca element najwyższy priorytet z kolejki, jeśli kolejka jest pusta. Ta metoda jest bezpieczne współbieżności.|  
+|[Usuń zaznaczenie](#clear)|Usuwa wszystkie elementy z priorytetem współbieżnych. Ta metoda nie jest bezpieczna pod kątem współbieżności.|  
+|[pusty](#empty)|Sprawdza, czy kolejka priorytetowa współbieżnych jest pusta w czasie ta metoda jest wywoływana. Ta metoda jest bezpieczna pod kątem współbieżności.|  
+|[get_allocator](#get_allocator)|Zwraca kopię obiektu alokator używany do utworzenia kolejki priorytetowej współbieżnych. Ta metoda jest bezpieczna pod kątem współbieżności.|  
+|[push](#push)|Przeciążone. Dodaje element do kolejki priorytetowej współbieżnych. Ta metoda jest bezpieczna pod kątem współbieżności.|  
+|[Rozmiar](#size)|Zwraca liczbę elementów w kolejce priorytetu współbieżnych. Ta metoda jest bezpieczna pod kątem współbieżności.|  
+|[swap](#swap)|Zamienia zawartości dwóch jednoczesnych priorytet kolejki. Ta metoda nie jest bezpieczna pod kątem współbieżności.|  
+|[try_pop](#try_pop)|Usuwa i zwraca najwyższy element priorytet z kolejki, jeśli kolejka jest pusta. Ta metoda jest bezpieczna pod kątem współbieżności.|  
   
 ### <a name="public-operators"></a>Operatory publiczne  
   
 |Nazwa|Opis|  
 |----------|-----------------|  
-|[operator=](#operator_eq)|Przeciążone. Przypisuje zawartość innego `concurrent_priority_queue` obiektu do tego. Ta metoda nie jest bezpieczne współbieżności.|  
+|[operator=](#operator_eq)|Przeciążone. Przypisuje zawartość innego `concurrent_priority_queue` obiektu do wskazanego. Ta metoda nie jest bezpieczna pod kątem współbieżności.|  
   
 ## <a name="remarks"></a>Uwagi  
- Aby uzyskać szczegółowe informacje na temat `concurrent_priority_queue` , zobacz [równoległe kontenery oraz obiekty](../../../parallel/concrt/parallel-containers-and-objects.md).  
+ Aby uzyskać szczegółowe informacje na temat `concurrent_priority_queue` klasy, zobacz [równoległe kontenery oraz obiekty](../../../parallel/concrt/parallel-containers-and-objects.md).  
   
 ## <a name="inheritance-hierarchy"></a>Hierarchia dziedziczenia  
  `concurrent_priority_queue`  
@@ -102,20 +102,20 @@ template <typename T,
   
  **Namespace:** współbieżności  
   
-##  <a name="clear"></a> Wyczyść 
+##  <a name="clear"></a> Usuń zaznaczenie 
 
- Usuwa wszystkie elementy w równoczesnych priorytet. Ta metoda nie jest bezpieczne współbieżności.  
+ Usuwa wszystkie elementy z priorytetem współbieżnych. Ta metoda nie jest bezpieczna pod kątem współbieżności.  
   
 ```
 void clear();
 ```  
   
 ### <a name="remarks"></a>Uwagi  
- `clear` nie jest bezpieczne współbieżności. Należy się upewnić, że nie ma innych wątków są wywoływanie metod w kolejce równoczesnych priorytet podczas wywoływania tej metody. `clear` nie spowoduje zwolnienia pamięci.  
+ `clear` nie jest bezpieczna pod kątem współbieżności. Należy się upewnić, że nie ma innych wątków są wywoływanie metod na kolejki priorytetowej współbieżnych, po wywołaniu tej metody. `clear` nie spowoduje zwolnienia pamięci.  
   
 ##  <a name="ctor"></a> concurrent_priority_queue — 
 
- Tworzy kolejkę równoczesnych priorytet.  
+ Tworzy kolejki priorytetowej współbieżnych.  
   
 ```
 explicit concurrent_priority_queue(
@@ -146,62 +146,62 @@ concurrent_priority_queue(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `_InputIterator`  
- Typ iteratora wejściowego.  
+*_InputIterator*<br/>
+Typ iteratora wejściowego.  
   
- `_Al`  
- Klasa alokatora do wykorzystania z tym obiektem.  
+*_Al*<br/>
+Klasa alokatora do wykorzystania z tym obiektem.  
   
- `_Init_capacity`  
- Początkowa pojemność `concurrent_priority_queue` obiektu.  
+*_Init_capacity*<br/>
+Pojemność `concurrent_priority_queue` obiektu.  
   
- `_Begin`  
- Pozycja pierwszego elementu w zakresie elementów do skopiowania.  
+*_Rozpocznij*<br/>
+Pozycja pierwszego elementu w zakresie elementów, które mają zostać skopiowane.  
   
- `_End`  
- Pozycja pierwszego elementu poza zakres elementów do skopiowania.  
+*_Zakończ*<br/>
+Pozycja pierwszego elementu poza zakresem elementów, które mają zostać skopiowane.  
   
- `_Src`  
- Źródło `concurrent_priority_queue` obiekt, aby skopiować lub przenieść elementy z.  
+*_Src*<br/>
+Źródło `concurrent_priority_queue` obiektu do kopiowania lub przenoszenia elementów z.  
   
 ### <a name="remarks"></a>Uwagi  
- Wszystkie konstruktory zapisania obiektu alokatora `_Al` i zainicjuj priorytet kolejki.  
+ Wszystkie konstruktory zapisują obiekt programu przydzielania `_Al` i zainicjuj kolejkę priorytetów.  
   
- Pierwszy Konstruktor określa priorytet początkowa pusta kolejki i opcjonalnie określa przydzielania.  
+ Pierwszy Konstruktor Określa kolejki pusty priorytet początkowego i opcjonalnie określa alokatora.  
   
- Drugi Konstruktor określa priorytet kolejki z początkowej pojemności `_Init_capacity` i opcjonalnie określa przydzielania.  
+ Drugi Konstruktor Określa kolejki priorytetowej za pomocą początkową pojemność `_Init_capacity` i opcjonalnie określa alokatora.  
   
- Trzeci konstruktora określa wartości dostarczone przez zakres iteratora [ `_Begin`, `_End`) i opcjonalnie określa przydzielania.  
+ Trzeci Konstruktor określa wartości dostarczone przez zakres iteratora [ `_Begin`, `_End`) i opcjonalnie określa alokatora.  
   
- Konstruktory czwartym i piątym Określ kopię kolejki priorytet `_Src`.  
+ Czwarty i piąty Konstruktor określają kopię kolejki priorytetowej `_Src`.  
   
- Konstruktory szóstego lub siódmego Określ przenoszenia kolejki priorytet `_Src`.  
+ Szósty i siódmego Konstruktor określają przeniesienie kolejki priorytetowej `_Src`.  
   
 ##  <a name="empty"></a> pusty 
 
- Testy, jeśli kolejka równoczesnych priorytet jest pusta w momencie ta metoda jest wywoływana. Ta metoda jest bezpieczne współbieżności.  
+ Sprawdza, czy kolejka priorytetowa współbieżnych jest pusta w czasie ta metoda jest wywoływana. Ta metoda jest bezpieczna pod kątem współbieżności.  
   
 ```
 bool empty() const;
 ```  
   
 ### <a name="return-value"></a>Wartość zwracana  
- `true` Jeśli kolejka priorytetów była pusta w momencie wywołano funkcję `false` inaczej.  
+ `true` Jeśli kolejka priorytetowa był pusty w tej chwili funkcja została wywołana, `false` inaczej.  
   
-##  <a name="get_allocator"></a> get_allocator 
+##  <a name="get_allocator"></a> get_allocator — 
 
- Zwraca kopię alokatora użyta do skonstruowania równoczesnych priorytet kolejki. Ta metoda jest bezpieczne współbieżności.  
+ Zwraca kopię obiektu alokator używany do utworzenia kolejki priorytetowej współbieżnych. Ta metoda jest bezpieczna pod kątem współbieżności.  
   
 ```
 allocator_type get_allocator() const;
 ```  
   
 ### <a name="return-value"></a>Wartość zwracana  
- Kopia programu przydzielania użyta do skonstruowania `concurrent_priority_queue` obiektu.  
+ Kopię alokator używany do budowy `concurrent_priority_queue` obiektu.  
   
 ##  <a name="operator_eq"></a> operator = 
 
- Przypisuje zawartość innego `concurrent_priority_queue` obiektu do tego. Ta metoda nie jest bezpieczne współbieżności.  
+ Przypisuje zawartość innego `concurrent_priority_queue` obiektu do wskazanego. Ta metoda nie jest bezpieczna pod kątem współbieżności.  
   
 ```
 concurrent_priority_queue& operator= (const concurrent_priority_queue& _Src);
@@ -210,15 +210,15 @@ concurrent_priority_queue& operator= (concurrent_priority_queue&& _Src);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `_Src`  
- Źródło `concurrent_priority_queue` obiektu.  
+*_Src*<br/>
+Źródło `concurrent_priority_queue` obiektu.  
   
 ### <a name="return-value"></a>Wartość zwracana  
- Odwołanie do tego `concurrent_priority_queue` obiektu.  
+ Odwołanie do `concurrent_priority_queue` obiektu.  
   
-##  <a name="push"></a> Push 
+##  <a name="push"></a> wypychania 
 
- Dodaje element do kolejki równoczesnych priorytet. Ta metoda jest bezpieczne współbieżności.  
+ Dodaje element do kolejki priorytetowej współbieżnych. Ta metoda jest bezpieczna pod kątem współbieżności.  
   
 ```
 void push(const value_type& _Elem);
@@ -227,12 +227,12 @@ void push(value_type&& _Elem);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `_Elem`  
- Element ma zostać dodana do kolejki równoczesnych priorytet.  
+*_Elem*<br/>
+Element, który ma zostać dodany do kolejki priorytetowej współbieżnych.  
   
 ##  <a name="size"></a> Rozmiar 
 
- Zwraca liczbę elementów w kolejce równoczesnych priorytet. Ta metoda jest bezpieczne współbieżności.  
+ Zwraca liczbę elementów w kolejce priorytetu współbieżnych. Ta metoda jest bezpieczna pod kątem współbieżności.  
   
 ```
 size_type size() const;
@@ -242,31 +242,31 @@ size_type size() const;
  Liczba elementów w tym `concurrent_priority_queue` obiektu.  
   
 ### <a name="remarks"></a>Uwagi  
- Zwrócony rozmiar jest gwarantowana aby uwzględnić wszystkie elementy dodane przez wywołania funkcji `push`. Jednak mogą nie uwzględniać wyniki oczekujących współbieżnych operacji.  
+ Rozmiar zwrócony jest gwarantowane, obejmują wszystkie elementy dodane przez wywołań funkcji `push`. Jednakże mogą nie odzwierciedlać wyniki oczekujących współbieżnych operacji.  
   
-##  <a name="swap"></a> Swap 
+##  <a name="swap"></a> swap 
 
- Zamienia zawartość dwie równoczesne priorytet kolejki. Ta metoda nie jest bezpieczne współbieżności.  
+ Zamienia zawartości dwóch jednoczesnych priorytet kolejki. Ta metoda nie jest bezpieczna pod kątem współbieżności.  
   
 ```
 void swap(concurrent_priority_queue& _Queue);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `_Queue`  
- `concurrent_priority_queue` Obiekt do wymiany zawartości z.  
+*_Fronty*<br/>
+`concurrent_priority_queue` Obiekt do wymiany zawartości z.  
   
-##  <a name="try_pop"></a> try_pop 
+##  <a name="try_pop"></a> try_pop — 
 
- Usuwa i zwraca element najwyższy priorytet z kolejki, jeśli kolejka jest pusta. Ta metoda jest bezpieczne współbieżności.  
+ Usuwa i zwraca najwyższy element priorytet z kolejki, jeśli kolejka jest pusta. Ta metoda jest bezpieczna pod kątem współbieżności.  
   
 ```
 bool try_pop(reference _Elem);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `_Elem`  
- Odwołanie do zmiennej, która zostanie wypełniona elementu najwyższy priorytet, jeśli kolejka jest pusta.  
+*_Elem*<br/>
+Odwołanie do zmiennej, która zostanie wypełniona element najwyższy priorytet, jeśli kolejka jest pusta.  
   
 ### <a name="return-value"></a>Wartość zwracana  
  `true` Jeśli wartość została zdjęte ze stosu, `false` inaczej.  

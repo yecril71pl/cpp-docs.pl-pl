@@ -19,12 +19,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0da9a0299679ec140888e9536329f0957a786279
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 208c89cad441a1fae70f5532204ec7856459de7f
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43760006"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46095862"
 ---
 # <a name="atl-com-property-pages"></a>Strony właściwości ALT COM
 
@@ -38,18 +38,18 @@ Aby uzyskać więcej informacji, zobacz [arkusze właściwości i strony właśc
 
 ## <a name="in-this-section"></a>W tej sekcji
 
-[Określanie stron właściwości](../atl/specifying-property-pages.md)  
+[Określanie stron właściwości](../atl/specifying-property-pages.md)<br/>
 Lista czynności prowadzących do określanie stron właściwości dla sterować i przedstawia przykład klasy.
 
-[Implementowanie stron właściwości](../atl/implementing-property-pages.md)  
+[Implementowanie stron właściwości](../atl/implementing-property-pages.md)<br/>
 Lista czynności prowadzących do Implementowanie stron właściwości, włączając w to metody do przesłonięcia. Przeprowadzi Cię przez kompletny przykład, w oparciu o ATLPages przykładowy program.
 
 ## <a name="related-sections"></a>Sekcje pokrewne
 
-[Przykładowe ATLPages](../visual-cpp-samples.md)  
+[Przykładowe ATLPages](../visual-cpp-samples.md)<br/>
 Abstrakcyjny próbki dla przykładu ATLPages, która implementuje stronę właściwości przy użyciu `IPropertyPageImpl`.
 
-[ATL](../atl/active-template-library-atl-concepts.md)  
+[ATL](../atl/active-template-library-atl-concepts.md)<br/>
 Zawiera łącza do tematów pojęciowych dotyczące programowania przy użyciu biblioteki Active Template Library.
 
 ## <a name="see-also"></a>Zobacz też

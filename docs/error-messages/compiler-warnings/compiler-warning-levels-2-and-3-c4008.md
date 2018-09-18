@@ -1,5 +1,5 @@
 ---
-title: Kompilatora (poziom 2 i 3) ostrzeżenie C4008 | Dokumentacja firmy Microsoft
+title: Kompilator ostrzeżenie (poziomy 2 i 3) C4008 | Dokumentacja firmy Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,20 +16,21 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4cdc88f222f9e5ce3829a63c131c955ce2abdd7d
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: bd052b8dd6a0b70dd90ca076d0085675b33dc621
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33294261"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46091182"
 ---
-# <a name="compiler-warning-levels-2-and-3-c4008"></a>Kompilator C4008 ostrzegawcze (poziom 2 i 3)
-'Identyfikator': atrybutu ' atrybut ' ignorowane  
-  
- Kompilator ignorowane `__fastcall`, **statycznych**, lub **wbudowanego** atrybutu dla funkcji (ostrzeżenia poziomu 3) lub danych (ostrzeżenie poziom 2).  
-  
-### <a name="to-fix-by-checking-the-following-possible-causes"></a>Aby rozwiązać problem, sprawdzając następujące możliwe przyczyny  
-  
-1.  `__fastcall` atrybut z danymi.  
-  
-2.  **statyczne** lub **wbudowanego** atrybutem **głównego** funkcji.
+# <a name="compiler-warning-levels-2-and-3-c4008"></a>Kompilator ostrzeżenie (poziomy 2 i 3) C4008
+
+'Identyfikator': atrybut "attribute" został zignorowany
+
+Kompilator ignorowane `__fastcall`, **statyczne**, lub **wbudowane** atrybutu dla funkcji (ostrzeżenie poziom 3) lub dane (ostrzeżenie poziom 2).
+
+### <a name="to-fix-by-checking-the-following-possible-causes"></a>Aby rozwiązać problem, sprawdzając następujące możliwe przyczyny
+
+1. `__fastcall` atrybut z danymi.
+
+1. **statyczne** lub **wbudowane** atrybutem **głównego** funkcji.

@@ -1,5 +1,5 @@
 ---
-title: C2191 błąd kompilatora | Dokumentacja firmy Microsoft
+title: Błąd kompilatora C2191 | Dokumentacja firmy Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,25 +16,27 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: aa4b590b494355450909032c78822553004beddc
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 6e739c5c9fc77c4c9658afb2f5f6d9568c6f43bb
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33169439"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46088361"
 ---
-# <a name="compiler-error-c2191"></a>C2191 błąd kompilatora
-druga lista parametrów dłuższa niż pierwsza  
-  
- Funkcja C zadeklarowano z listą parametrów dłużej po raz drugi. C nie obsługuje funkcji przeciążenia.  
-  
-## <a name="example"></a>Przykład  
- Poniższy przykład generuje C2191:  
-  
-```  
-// C2191.c  
-// compile with: /Za /c  
-void func( int );  
-void func( int, float );   // C2191 different parameter list  
-void func2( int, float );   // OK  
+# <a name="compiler-error-c2191"></a>Błąd kompilatora C2191
+
+druga lista parametrów dłuższa niż pierwsza
+
+Funkcja języka C został zadeklarowany po raz drugi z dłuższą listę parametrów. C nie obsługuje przeciążonych funkcji.
+
+## <a name="example"></a>Przykład
+
+Poniższy przykład spowoduje wygenerowanie C2191:
+
+```
+// C2191.c
+// compile with: /Za /c
+void func( int );
+void func( int, float );   // C2191 different parameter list
+void func2( int, float );   // OK
 ```

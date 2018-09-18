@@ -14,17 +14,19 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3fcdb309e65c822e511b9cfd4a9ce7255be235a4
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 62ed952113f3d8b3db46ac735ade4d2e9850dc97
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32380930"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46090857"
 ---
 # <a name="addition-"></a>Dodawanie (+)
-Operator dodawania (**+**) powoduje, że jego dwóch argumentów operacji do dodania. Oba argumenty mogą być typy całkowitą lub zmiennoprzecinkową lub jeden argument może być wskaźnik i inne liczbą całkowitą.  
-  
- Po dodaniu całkowitą na wskaźnik, całkowita (*i*) jest konwertowana mnożąc przez rozmiar wartość, która dotyczy wskaźnika. Po przeprowadzeniu konwersji, wartość całkowita reprezentuje *i* pozycji pamięci, gdzie każda pozycja ma długości określonej przez typ wskaźnika. Woluminowi wartość całkowita przekonwertowana na wartość wskaźnika wynik jest dostępna nowa wartość wskaźnika, reprezentująca adres *i* pozycji z oryginalnego adresu. Nowa wartość wskaźnika adresów wartości tego samego typu, jak oryginalna wartość wskaźnika i dlatego jest taka sama jak indeksowanie tablicy (zobacz [tablice One-Dimensional](../c-language/one-dimensional-arrays.md) i [tablice wielowymiarowe](../c-language/multidimensional-arrays-c.md)). Jeśli suma wskaźnik wskazuje poza tablicy, z wyjątkiem w pierwszym lokalizacji poza górną granicę wynik jest niezdefiniowany. Aby uzyskać więcej informacji, zobacz [arytmetyki wskaźnika](../c-language/pointer-arithmetic.md).  
-  
-## <a name="see-also"></a>Zobacz też  
- [Operatory dodawania języka C](../c-language/c-additive-operators.md)
+
+Operator dodawania (**+**) powoduje, że dwóch argumentów operacji do dodania. Oba operandy może być typu całkowitego lub zmiennoprzecinkowego typy, lub jeden argument może być wskaźnika, a drugi liczbą całkowitą.
+
+Po dodaniu do wskaźnika, wartość całkowitą liczbą całkowitą (*i*) jest konwertowana mnożąc przez rozmiar wartości, odnoszący się do wskaźnika. Po konwersji na wartość całkowitą reprezentuje *i* pozycji pamięci, w którym każdej pozycji ma długość określona przez typ wskaźnika. Gdy wartość przekonwertowana liczba całkowita jest dodawana do wartości wskaźnika, wynik jest wartością wskaźnika reprezentująca adres *i* pozycji z oryginalnego adresu. Nowa wartość wskaźnika adresów wartości tego samego typu jak oryginalna wartość wskaźnika, a w związku z tym jest taka sama jak indeksowanie tablicy (zobacz [tablic One-Dimensional](../c-language/one-dimensional-arrays.md) i [tablic wielowymiarowych](../c-language/multidimensional-arrays-c.md)). Jeżeli wskaźnik Suma punktów spoza tablicy, z wyjątkiem w pierwszej lokalizacji poza najwyższych, wynik jest niezdefiniowany. Aby uzyskać więcej informacji, zobacz [arytmetyki wskaźnika](../c-language/pointer-arithmetic.md).
+
+## <a name="see-also"></a>Zobacz też
+
+[Operatory dodawania języka C](../c-language/c-additive-operators.md)

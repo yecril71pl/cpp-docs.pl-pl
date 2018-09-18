@@ -17,69 +17,73 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ff47c9a1b5aed197381a0d3ab0f24456fe75bad4
-ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
+ms.openlocfilehash: 28e5d247c866247b42da8937894fed878985be44
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/01/2018
-ms.locfileid: "39405152"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46090096"
 ---
 # <a name="lvalue-reference-declarator-amp"></a>Deklarator odwołania do wartości: &amp;
-Przechowuje adres obiektu, ale składniowo zachowuje się jak obiekt.  
-  
-## <a name="syntax"></a>Składnia  
-  
-```  
-type-id & cast-expression  
-```  
-  
-## <a name="remarks"></a>Uwagi  
- Odwołanie lvalue można traktować jako inną nazwę dla obiektu. Deklaracja odwołania wartościowanego lewostronnie składa się z opcjonalną listę specyfikatorów następuje deklarator odwołania. Odwołanie musi zostać zainicjowany i nie można jej zmienić.  
-  
- Można też przekonwertować dowolnego obiektu, którego adres można przekonwertować na typ wskaźnika danego podobne typem odwołania. Na przykład dowolnego obiektu, którego adres można przekonwertować na typ `char *` można też przekonwertować na typ `char &`.  
-  
- Nie należy mylić deklaracje odwołania przy użyciu [operatora address-of](../cpp/address-of-operator-amp.md). Gdy `&` *identyfikator* jest poprzedzony przez typ, takich jak **int** lub **char**, *identyfikator* jest zadeklarowany jako odwołanie do Typ. Gdy `&` *identyfikator* nie jest poprzedzony przez typ, użycie jest operator address-of.  
-  
-## <a name="example"></a>Przykład  
- W poniższym przykładzie pokazano deklarator odwołania do przez zadeklarowanie `Person` obiektu i odwołanie do tego obiektu. Ponieważ `rFriend` jest odwołaniem do `myFriend`, aktualizowanie albo zmiennej zmiany tego samego obiektu.  
-  
-```cpp 
-// reference_declarator.cpp  
-// compile with: /EHsc  
-// Demonstrates the reference declarator.  
-#include <iostream>  
-using namespace std;  
-  
-struct Person  
-{  
-    char* Name;  
-    short Age;  
-};  
-  
-int main()  
-{  
-   // Declare a Person object.  
-   Person myFriend;  
-  
-   // Declare a reference to the Person object.  
-   Person& rFriend = myFriend;  
-  
-   // Set the fields of the Person object.  
-   // Updating either variable changes the same object.  
-   myFriend.Name = "Bill";  
-   rFriend.Age = 40;  
-  
-   // Print the fields of the Person object to the console.  
-   cout << rFriend.Name << " is " << myFriend.Age << endl;  
-}  
-```  
-  
-```Output  
-Bill is 40  
-```  
-  
-## <a name="see-also"></a>Zobacz także  
- [Odwołania](../cpp/references-cpp.md)   
- [Argumenty funkcji typu odwołania](../cpp/reference-type-function-arguments.md)   
- [Zwracanie funkcji typu odwołania](../cpp/reference-type-function-returns.md)   
- [Odwołania do wskaźników](../cpp/references-to-pointers.md)
+
+Przechowuje adres obiektu, ale składniowo zachowuje się jak obiekt.
+
+## <a name="syntax"></a>Składnia
+
+```
+type-id & cast-expression
+```
+
+## <a name="remarks"></a>Uwagi
+
+Odwołanie lvalue można traktować jako inną nazwę dla obiektu. Deklaracja odwołania wartościowanego lewostronnie składa się z opcjonalną listę specyfikatorów następuje deklarator odwołania. Odwołanie musi zostać zainicjowany i nie można jej zmienić.
+
+Można też przekonwertować dowolnego obiektu, którego adres można przekonwertować na typ wskaźnika danego podobne typem odwołania. Na przykład dowolnego obiektu, którego adres można przekonwertować na typ `char *` można też przekonwertować na typ `char &`.
+
+Nie należy mylić deklaracje odwołania przy użyciu [operatora address-of](../cpp/address-of-operator-amp.md). Gdy `&` *identyfikator* jest poprzedzony przez typ, takich jak **int** lub **char**, *identyfikator* jest zadeklarowany jako odwołanie do Typ. Gdy `&` *identyfikator* nie jest poprzedzony przez typ, użycie jest operator address-of.
+
+## <a name="example"></a>Przykład
+
+W poniższym przykładzie pokazano deklarator odwołania do przez zadeklarowanie `Person` obiektu i odwołanie do tego obiektu. Ponieważ `rFriend` jest odwołaniem do `myFriend`, aktualizowanie albo zmiennej zmiany tego samego obiektu.
+
+```cpp
+// reference_declarator.cpp
+// compile with: /EHsc
+// Demonstrates the reference declarator.
+#include <iostream>
+using namespace std;
+
+struct Person
+{
+    char* Name;
+    short Age;
+};
+
+int main()
+{
+   // Declare a Person object.
+   Person myFriend;
+
+   // Declare a reference to the Person object.
+   Person& rFriend = myFriend;
+
+   // Set the fields of the Person object.
+   // Updating either variable changes the same object.
+   myFriend.Name = "Bill";
+   rFriend.Age = 40;
+
+   // Print the fields of the Person object to the console.
+   cout << rFriend.Name << " is " << myFriend.Age << endl;
+}
+```
+
+```Output
+Bill is 40
+```
+
+## <a name="see-also"></a>Zobacz także
+
+[Odwołania](../cpp/references-cpp.md)<br/>
+[Argumenty funkcji będące odwołaniami](../cpp/reference-type-function-arguments.md)<br/>
+[Wartości zwracane przez funkcje będące odwołaniami](../cpp/reference-type-function-returns.md)<br/>
+[Odwołania do wskaźników](../cpp/references-to-pointers.md)

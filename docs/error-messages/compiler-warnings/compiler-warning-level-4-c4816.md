@@ -1,5 +1,5 @@
 ---
-title: Kompilatora (poziom 4) ostrzeżenie C4816 | Dokumentacja firmy Microsoft
+title: Kompilator ostrzeżenie (poziom 4) C4816 | Dokumentacja firmy Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,51 +16,53 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 74386e980171ce1b54c8256ad505b363df7830d8
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: c0d70204e61f1e37157b9e1b23664cf1f5d24b2c
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33303592"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46096005"
 ---
-# <a name="compiler-warning-level-4-c4816"></a>Kompilator C4816 ostrzegawcze (poziom 4)
-"param": parametr ma zerowy rozmiar tablicy, która zostanie obcięta (chyba że obiekt jest przekazywana przez odwołanie)  
-  
- Parametr do obiektu z tablicą o rozmiarze zerowym nie został przekazany przez odwołanie. Tablicy nie będą uzyskać kopiowane, gdy obiekt został przekazany.  
-  
-## <a name="example"></a>Przykład  
- Poniższy przykład generuje C4816:  
-  
-```  
-// C4816.cpp  
-// compile with: /W4  
-#include <stdio.h>  
-  
-extern "C" int printf_s(const char *, ...);  
-  
-#pragma warning(disable : 4200)  
-  
-struct S1  
-{  
-    int i;  
-    char cArr[];  
-};  
-  
-void TestErr(S1 s1)   // C4816 param with zero-array   
-                      // not passed by reference  
-{  
-    printf_s("%d %c %c\n", s1.i, s1.cArr[0], s1.cArr[1]);  
-}  
-  
-void TestOk(S1 &s1)  
-{  
-    printf_s("%d %c %c\n", s1.i, s1.cArr[0], s1.cArr[1]);  
-}  
-  
-int main()  
-{  
-    S1 myS_1 = { 6, 'a', 'b', 'c' };  
-    TestErr(myS_1);  
-    TestOk(myS_1);  
-}  
+# <a name="compiler-warning-level-4-c4816"></a>Kompilator ostrzeżenie (poziom 4) C4816
+
+"param": parametr ma tablicę o rozmiarze zerowym, która zostanie obcięta (chyba że obiekt jest przekazywany przez odwołanie)
+
+Parametr do obiektu z tablicy o rozmiarze zerowym nie został przekazany przez odwołanie. Gdy obiekt jest przekazywany tablicy nie spowoduje skopiowania.
+
+## <a name="example"></a>Przykład
+
+Poniższy przykład spowoduje wygenerowanie C4816:
+
+```
+// C4816.cpp
+// compile with: /W4
+#include <stdio.h>
+
+extern "C" int printf_s(const char *, ...);
+
+#pragma warning(disable : 4200)
+
+struct S1
+{
+    int i;
+    char cArr[];
+};
+
+void TestErr(S1 s1)   // C4816 param with zero-array
+                      // not passed by reference
+{
+    printf_s("%d %c %c\n", s1.i, s1.cArr[0], s1.cArr[1]);
+}
+
+void TestOk(S1 &s1)
+{
+    printf_s("%d %c %c\n", s1.i, s1.cArr[0], s1.cArr[1]);
+}
+
+int main()
+{
+    S1 myS_1 = { 6, 'a', 'b', 'c' };
+    TestErr(myS_1);
+    TestOk(myS_1);
+}
 ```

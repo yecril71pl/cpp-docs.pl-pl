@@ -31,29 +31,31 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: eafe81dc684300cb7fdf65137c2f7e45010285b0
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 14c8483671e806adb9170429f2e17d4487de0cfd
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32388118"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46090493"
 ---
 # <a name="storage-of-basic-types"></a>Magazyn typów podstawowych
-Poniższa tabela zawiera podsumowanie magazynem skojarzonym z każdego typu podstawowego.  
-  
-### <a name="sizes-of-fundamental-types"></a>Rozmiary typów podstawowych  
-  
-|Typ|Magazyn|  
-|----------|-------------|  
-|`char`, `unsigned char`, **podpisany char**|1 bajt|  
-|**krótki**, **krótko bez znaku**|2 bajty|  
-|`int`, `unsigned int`|4 bajty|  
-|**długie**, `unsigned long`|4 bajty|  
-|**float**|4 bajty|  
-|**double**|8 bajtów|  
-|`long double`|8 bajtów|  
-  
- Typy danych C można podzielić na ogólne kategorie. "Typy całkowite" obejmują `char`, `int`, **krótki**, **długi**, **podpisany**, `unsigned`, i `enum`. "Typów zmiennoprzecinkowych" obejmują **float**, **podwójne**, i `long double`. "Typów arytmetycznych" obejmują wszystkich typów całkowitych i zmiennoprzecinkowych.  
-  
-## <a name="see-also"></a>Zobacz też  
- [Deklaracje i typy](../c-language/declarations-and-types.md)
+
+Poniższa tabela zawiera podsumowanie magazynu skojarzone z poszczególnymi typami podstawowe.
+
+### <a name="sizes-of-fundamental-types"></a>Rozmiary typów podstawowych
+
+|Typ|Magazyn|
+|----------|-------------|
+|`char`, `unsigned char`, **podpisany char**|1 bajt|
+|**krótki**, **typ unsigned short**|2 bajty|
+|`int`, `unsigned int`|4 bajty|
+|**długi**, `unsigned long`|4 bajty|
+|**float**|4 bajty|
+|**double**|8 bajtów|
+|`long double`|8 bajtów|
+
+Typy danych C można podzielić na kategorie ogólne. "Typów całkowitych" obejmują `char`, `int`, **krótki**, **długie**, **podpisany**, `unsigned`, i `enum`. Obejmują "Typy zmiennoprzecinkowe" **float**, **double**, i `long double`. "Typy arytmetyczne" to wszystkich typów całkowitych i zmiennoprzecinkowych.
+
+## <a name="see-also"></a>Zobacz też
+
+[Deklaracje i typy](../c-language/declarations-and-types.md)

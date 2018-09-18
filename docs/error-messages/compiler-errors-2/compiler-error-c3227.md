@@ -1,5 +1,5 @@
 ---
-title: C3227 błąd kompilatora | Dokumentacja firmy Microsoft
+title: Błąd kompilatora C3227 | Dokumentacja firmy Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,39 +16,41 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0c4d156e70a1ac2c0b05e212ace81b8ccc32d8f2
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: ddf2ec945a8bdbe103631d8346641e1370eda216
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33249538"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46096629"
 ---
-# <a name="compiler-error-c3227"></a>C3227 błąd kompilatora
-"parametr": nie można użyć "— słowo kluczowe" przydzielić typu ogólnego  
-  
- Do tworzenia wystąpienia typu, wymagana jest odpowiedni konstruktor. Jednak kompilator nie jest w stanie upewnić się, że odpowiedni konstruktor jest dostępny.  
-  
- Szablony można użyć zamiast ogólne, aby rozwiązać ten problem, lub można użyć jednej z kilku metod można utworzyć wystąpienia typu.  
-  
-## <a name="example"></a>Przykład  
- Poniższy przykład generuje C3227.  
-  
-```  
-// C3227.cpp  
-// compile with: /clr /c  
-generic<class T> interface class ICreate {  
-   static T Create();  
-};  
-  
-generic <class T>  
-where T : ICreate<T>  
-ref class C {  
-   void f() {  
-      T t = new T;   // C3227  
-  
-      // OK  
-      T t2 = ICreate<T>::Create();  
-      T t3 = safe_cast<T>( System::Activator::CreateInstance(T::typeid) );  
-   }  
-};  
+# <a name="compiler-error-c3227"></a>Błąd kompilatora C3227
+
+"parametru": nie można użyć "— słowo kluczowe", aby alokować typ generyczny
+
+Aby utworzyć wystąpienia typu, odpowiedniego konstruktora jest wymagany. Jednak kompilator nie jest w stanie upewnić się, że odpowiedniego konstruktora jest dostępny.
+
+Szablony można użyć zamiast ogólnych, aby rozwiązać ten problem, możesz też jedną z kilku metod do utworzenia wystąpienia typu.
+
+## <a name="example"></a>Przykład
+
+Poniższy przykład spowoduje wygenerowanie C3227.
+
+```
+// C3227.cpp
+// compile with: /clr /c
+generic<class T> interface class ICreate {
+   static T Create();
+};
+
+generic <class T>
+where T : ICreate<T>
+ref class C {
+   void f() {
+      T t = new T;   // C3227
+
+      // OK
+      T t2 = ICreate<T>::Create();
+      T t3 = safe_cast<T>( System::Activator::CreateInstance(T::typeid) );
+   }
+};
 ```

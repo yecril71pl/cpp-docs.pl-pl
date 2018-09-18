@@ -26,12 +26,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3c8081b5a85b09f513152861cb09758b61df8d9b
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: d3b10648a3251a705085e31559a98b6ee4957c72
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43763256"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46088478"
 ---
 # <a name="cwin32heap-class"></a>Klasa CWin32Heap
 
@@ -101,7 +101,7 @@ virtual __declspec(allocator) void* Allocate(size_t nBytes) throw();
 
 ### <a name="parameters"></a>Parametry
 
-*nBytes*  
+*nBytes*<br/>
 Żądana liczba bajtów w nowy blok pamięci.
 
 ### <a name="return-value"></a>Wartość zwracana
@@ -124,10 +124,10 @@ void Attach(HANDLE hHeap, bool bTakeOwnership) throw();
 
 ### <a name="parameters"></a>Parametry
 
-*hHeap*  
+*hHeap*<br/>
 Istniejący uchwyt sterty.
 
-*bTakeOwnership*  
+*bTakeOwnership*<br/>
 Jeśli wskazujące flagi `CWin32Heap` celem jest przejęcie na własność nad zasobami sterty.
 
 ### <a name="remarks"></a>Uwagi
@@ -149,16 +149,16 @@ CWin32Heap(
 
 ### <a name="parameters"></a>Parametry
 
-*hHeap*  
+*hHeap*<br/>
 Istniejący obiekt sterty.
 
-*Flagidw*  
+*Flagidw*<br/>
 Flagi używane do tworzenia sterty.
 
-*nInitialSize*  
+*nInitialSize*<br/>
 Początkowy rozmiar sterty.
 
-*nMaxSize*  
+*nMaxSize*<br/>
 Maksymalny rozmiar sterty.
 
 ### <a name="remarks"></a>Uwagi
@@ -213,7 +213,7 @@ virtual void Free(void* p) throw();
 
 ### <a name="parameters"></a>Parametry
 
-*p*  
+*p*<br/>
 Wskaźnik do bloku pamięci, aby zwolnić. Wartość NULL jest prawidłową wartością i nic nie robi.
 
 ##  <a name="getsize"></a>  CWin32Heap::GetSize
@@ -226,7 +226,7 @@ virtual size_t GetSize(void* p) throw();
 
 ### <a name="parameters"></a>Parametry
 
-*p*  
+*p*<br/>
 Wskaźnik do bloku pamięci, której rozmiar osiągnie metody. Jest to wskaźnik zwracany przez [CWin32Heap::Allocate](#allocate) lub [CWin32Heap::Reallocate](#reallocate).
 
 ### <a name="return-value"></a>Wartość zwracana
@@ -263,10 +263,10 @@ virtual __declspec(allocator) void* Reallocate(void* p, size_t nBytes) throw();
 
 ### <a name="parameters"></a>Parametry
 
-*p*  
+*p*<br/>
 Wskaźnik do bloku pamięci w celu ponownego przydzielenia.
 
-*nBytes*  
+*nBytes*<br/>
 Nowy rozmiar w bajtach przydzielonego bloku. Blok jest możliwe większy lub mniejszy.
 
 ### <a name="return-value"></a>Wartość zwracana
@@ -279,9 +279,9 @@ Jeśli *p* ma wartość NULL, zakłada się, że blok pamięci nie jest jeszcze 
 
 ## <a name="see-also"></a>Zobacz też
 
-[Klasa — Przegląd](../../atl/atl-class-overview.md)   
-[Klasa IAtlMemMgr](../../atl/reference/iatlmemmgr-class.md)   
-[Klasa CLocalHeap](../../atl/reference/clocalheap-class.md)   
-[Klasa CGlobalHeap](../../atl/reference/cglobalheap-class.md)   
-[Klasa CCRTHeap](../../atl/reference/ccrtheap-class.md)   
+[Klasa — Przegląd](../../atl/atl-class-overview.md)<br/>
+[Klasa IAtlMemMgr](../../atl/reference/iatlmemmgr-class.md)<br/>
+[Klasa CLocalHeap](../../atl/reference/clocalheap-class.md)<br/>
+[Klasa CGlobalHeap](../../atl/reference/cglobalheap-class.md)<br/>
+[Klasa CCRTHeap](../../atl/reference/ccrtheap-class.md)<br/>
 [Klasa CComHeap](../../atl/reference/ccomheap-class.md)

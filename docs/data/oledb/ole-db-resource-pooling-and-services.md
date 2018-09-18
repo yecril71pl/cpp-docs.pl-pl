@@ -20,23 +20,25 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: c2a04d0b990906f9f124edc9dbda71d65127e4ed
-ms.sourcegitcommit: 889a75be1232817150be1e0e8d4d7f48f5993af2
+ms.openlocfilehash: 3cf18d1b06c6a738659bf30bf58fc10c48aa0ce5
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/30/2018
-ms.locfileid: "39338564"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46091039"
 ---
 # <a name="ole-db-resource-pooling-and-services"></a>Buforowanie zasobów i usługi OLE DB
+
 Do pracy oraz buforowanie OLE DB lub z dowolnej usługi OLE DB, Twój dostawca musi obsługiwać agregacji wszystkich obiektów. Jest to wymagane, OLE DB w wersji 1.5 lub nowszej dostawcy. Usługi za pomocą bardzo ważne jest. Puli dostawców, które nie obsługują agregacji i znajdują się żadnych dodatkowych usług.  
   
- Do puli, dostawców musi obsługiwać model wątku bezpłatne. Pula zasobów Określa model wątku dostawcy zgodnie z opisem w `DBPROP_THREADMODEL` właściwości.  
+Do puli, dostawców musi obsługiwać model wątku bezpłatne. Pula zasobów Określa model wątku dostawcy zgodnie z opisem w `DBPROP_THREADMODEL` właściwości.  
   
- Jeśli dostawca ma stan połączenia globalnego, które mogą ulec zmianie, gdy źródło danych jest w stanie zainicjowania, powinien obsługiwać nowe `DBPROP_RESETDATASOURCE` właściwości. Ta właściwość jest wywoływana przed połączenie jest ponownie i daje możliwość wyczyścić stanu przed jego użyciem dalej w dostawcy. Jeśli dostawca nie można wyczyścić pewnego stanu skojarzonych z tym połączeniem, może zwrócić `DBPROPSTATUS_NOTSETTABLE` dla właściwości i połączenie nie zostanie ponownie.  
+Jeśli dostawca ma stan połączenia globalnego, które mogą ulec zmianie, gdy źródło danych jest w stanie zainicjowania, powinien obsługiwać nowe `DBPROP_RESETDATASOURCE` właściwości. Ta właściwość jest wywoływana przed połączenie jest ponownie i daje możliwość wyczyścić stanu przed jego użyciem dalej w dostawcy. Jeśli dostawca nie można wyczyścić pewnego stanu skojarzonych z tym połączeniem, może zwrócić `DBPROPSTATUS_NOTSETTABLE` dla właściwości i połączenie nie zostanie ponownie.  
   
- Dostawcy połączenia ze zdalną bazą danych, które może wykryć, czy możesz stracić połączenia powinien obsługiwać `DBPROP_CONNECTIONSTATUS` właściwości. Ta właściwość umożliwia usług OLE DB wykrywania nieaktywnych połączeń i upewnij się, że nie są zwracane do puli.  
+Dostawcy połączenia ze zdalną bazą danych, które może wykryć, czy możesz stracić połączenia powinien obsługiwać `DBPROP_CONNECTIONSTATUS` właściwości. Ta właściwość umożliwia usług OLE DB wykrywania nieaktywnych połączeń i upewnij się, że nie są zwracane do puli.  
   
- Na koniec rejestracji automatycznej transakcji ogólnie nie działa, o ile nie jest zaimplementowana na tym samym poziomie, występujący buforowanie. Dostawcy, obsługujące rejestracji automatycznej transakcji, samodzielnie powinien obsługiwać wyłączenie tej rejestracji uwidaczniając `DBPROP_INIT_OLEDBSERVICES` właściwości i wyłączanie rejestracji, jeśli `DBPROPVAL_OS_TXNENLISTMENT` zaznaczenie jest usunięte.  
+Na koniec rejestracji automatycznej transakcji ogólnie nie działa, o ile nie jest zaimplementowana na tym samym poziomie, występujący buforowanie. Dostawcy, obsługujące rejestracji automatycznej transakcji, samodzielnie powinien obsługiwać wyłączenie tej rejestracji uwidaczniając `DBPROP_INIT_OLEDBSERVICES` właściwości i wyłączanie rejestracji, jeśli `DBPROPVAL_OS_TXNENLISTMENT` zaznaczenie jest usunięte.  
   
 ## <a name="see-also"></a>Zobacz też  
- [Zaawansowane techniki dostawcy](../../data/oledb/advanced-provider-techniques.md)
+
+[Zaawansowane techniki dostawcy](../../data/oledb/advanced-provider-techniques.md)

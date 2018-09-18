@@ -20,15 +20,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: dd25661fc14cb9539d4b8e68f42c29895ce0d70e
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 2a3416f057d32a003eba1b9776456a60d915de95
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33160969"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46090143"
 ---
 # <a name="ptrqueryinterface"></a>ptr::QueryInterface
-Wysyła kwerendy należących do obiektu COM dla interfejsu i dołącza wynik do innego `com::ptr`.  
+Wykonuje kwerendę należących do obiektu COM dla interfejsu i dołącza wynik do innego `com::ptr`.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -40,17 +40,17 @@ void QueryInterface(
 ```  
   
 #### <a name="parameters"></a>Parametry  
- `other`  
- `com::ptr` Otrzymujących interfejsu.  
+*other*<br/>
+`com::ptr` , Zostanie wyświetlony interfejs.  
   
 ## <a name="exceptions"></a>Wyjątki  
- Wewnętrznie `QueryInterface` wywołano należących do obiektu COM i wszelkich błędów `HRESULT` jest konwertowana na wyjątek przez <xref:System.Runtime.InteropServices.Marshal.ThrowExceptionForHR%2A>.  
+ Wewnętrznie `QueryInterface` nosi nazwę na należących do obiektu COM i wszelkie błędy `HRESULT` jest konwertowana na wyjątek przez <xref:System.Runtime.InteropServices.Marshal.ThrowExceptionForHR%2A>.  
   
 ## <a name="remarks"></a>Uwagi  
- Ta metoda umożliwia utworzenie otoka COM dla innego interfejsu obiektu COM należy do bieżącego otoki. Ta metoda wywołuje `QueryInterface` za pośrednictwem obiektu COM należących do żądania wskaźnik do określonego interfejsu COM obiektu i dołącza wskaźnika interfejsu zwrócony do przekazany do `com::ptr`.  
+ Ta metoda umożliwia utworzenie otoka COM dla innego interfejsu obiektu COM należące do bieżącego otoki. Ta metoda wywołuje `QueryInterface` za pośrednictwem obiektu COM należących do żądania wskaźnika z określonego interfejsu COM obiektu i dołącza wskaźnika interfejsu zwrócone do przekazanego `com::ptr`.  
   
 ## <a name="example"></a>Przykład  
- W tym przykładzie implementuje klasy CLR, która używa `com::ptr` opakowywać jego prywatnego elementu członkowskiego `IXMLDOMDocument` obiektu. `WriteTopLevelNode` Korzysta z funkcji członkowskiej `QueryInterface` do wypełnienia lokalnym `com::ptr` z `IXMLDOMNode` , a następnie przekazuje `com::ptr` (przez odwołanie śledzące) funkcji prywatnego elementu członkowskiego, które zapisuje właściwości nazwy i tekst węzła do konsoli.  
+ W tym przykładzie implementuje klasę CLR, która używa `com::ptr` opakowywać jej prywatnego elementu członkowskiego `IXMLDOMDocument` obiektu. `WriteTopLevelNode` Funkcja członkowska używa `QueryInterface` do wypełnienia lokalnym `com::ptr` z `IXMLDOMNode` i następnie przekazuje `com::ptr` (przez odwołanie śledzenia) do funkcji prywatnego elementu członkowskiego, która zapisuje nazwę i tekstu — właściwości węzła do konsoli.  
   
 ```  
 // comptr_queryinterface.cpp  
@@ -156,7 +156,7 @@ int main() {
 ```  
   
 ## <a name="requirements"></a>Wymagania  
- **Plik nagłówka** \<msclr\com\ptr.h >  
+ **Plik nagłówkowy** \<msclr\com\ptr.h >  
   
  **Namespace** msclr::com  
   

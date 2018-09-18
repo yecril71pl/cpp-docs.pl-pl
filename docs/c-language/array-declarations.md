@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9ee1c3be0ecc06dd2ccfb28882b6dc99912d7e13
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: d776adab3404bf1244c7365e905866b4d041fc00
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43762479"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46091916"
 ---
 # <a name="array-declarations"></a>Deklaracje tablicy
 
@@ -48,9 +48,9 @@ ms.locfileid: "43762479"
 
 Ponieważ *wyrażenie_stałe* jest opcjonalne, składnia ma dwie formy:
 
--   Pierwszy formularz definiuje zmienną tablicową. *Wyrażenie_stałe* argument w nawiasach kwadratowych określa liczbę elementów w tablicy. *Wyrażenie_stałe*, jeśli jest obecna, musi mieć typ całkowitoliczbowy i wartość większą od zera. Każdy element ma typu podanego przez *Specyfikator typu*, które mogą być dowolnego typu z wyjątkiem `void`. Do elementu tablicy nie może być typu funkcji.
+- Pierwszy formularz definiuje zmienną tablicową. *Wyrażenie_stałe* argument w nawiasach kwadratowych określa liczbę elementów w tablicy. *Wyrażenie_stałe*, jeśli jest obecna, musi mieć typ całkowitoliczbowy i wartość większą od zera. Każdy element ma typu podanego przez *Specyfikator typu*, które mogą być dowolnego typu z wyjątkiem `void`. Do elementu tablicy nie może być typu funkcji.
 
--   Druga forma deklaruje zmienną, która została zdefiniowana w innym miejscu. Pomija *wyrażenie_stałe* argumentu w nawiasy kwadratowe, ale nie nawiasy kwadratowe. Można użyć tego formularza, tylko jeśli wcześniej zainicjowana Tablica zadeklarowana jako parametr, lub zadeklarowana jako odwołanie do tablicy jawnie definiowane w innym miejscu w programie.
+- Druga forma deklaruje zmienną, która została zdefiniowana w innym miejscu. Pomija *wyrażenie_stałe* argumentu w nawiasy kwadratowe, ale nie nawiasy kwadratowe. Można użyć tego formularza, tylko jeśli wcześniej zainicjowana Tablica zadeklarowana jako parametr, lub zadeklarowana jako odwołanie do tablicy jawnie definiowane w innym miejscu w programie.
 
 W obu formach *deklaratora bezpośrednio* nazwy zmiennej i może modyfikować typ zmiennej. Nawiasy kwadratowe (**[**) następujących *deklaratora bezpośrednio* modyfikowania deklaratorów typ tablicy.
 
@@ -75,6 +75,7 @@ Trzy kolumny pierwszego wiersza są przechowywane najpierw następuje trzy kolum
 Aby odwołać się do pojedynczego elementu tablicy, należy użyć wyrażenie indeksu dolnego, zgodnie z opisem w [przyrostkowe operatory](../c-language/postfix-operators.md).
 
 ## <a name="examples"></a>Przykłady
+
 Te przykłady ilustrują deklaracje tablicy:
 
 ```C

@@ -15,26 +15,28 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 7a982702ce01a7f979d8bd868a781c2134ece160
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: ebe324ce569077654db8d9462a9c32b570748bba
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33088875"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46092404"
 ---
 # <a name="advanced-provider-techniques"></a>Zaawansowane techniki dostawcy
+
 Aby uzyskać więcej informacji na temat zaawansowane techniki dostawcy zobacz następujące tematy:  
   
--   [Obsługa powiadomień](../../data/oledb/supporting-notifications.md)  
+- [Obsługa powiadomień](../../data/oledb/supporting-notifications.md)  
   
--   [Obsługa zestawów wierszy schematu](../../data/oledb/supporting-schema-rowsets.md)  
+- [Obsługa zestawów wierszy schematu](../../data/oledb/supporting-schema-rowsets.md)  
   
--   [Obsługa dostawców dla zakładek](../../data/oledb/provider-support-for-bookmarks.md)  
+- [Obsługa dostawców dla zakładek](../../data/oledb/provider-support-for-bookmarks.md)  
   
--   [Przechodzenie testów zgodności z OLE DB](../../data/oledb/passing-ole-db-conformance-tests.md)  
+- [Przechodzenie testów zgodności z OLE DB](../../data/oledb/passing-ole-db-conformance-tests.md)  
   
--   [Buforowanie zasobów i usługi OLE DB](../../data/oledb/ole-db-resource-pooling-and-services.md)  
+- [Buforowanie zasobów i usługi OLE DB](../../data/oledb/ole-db-resource-pooling-and-services.md)  
   
 ## <a name="see-also"></a>Zobacz też  
- [Dokumentacja szablonów OLE DB Provider](../../data/oledb/ole-db-provider-templates-reference.md)   
- [Szablony konsumentów OLE DB](../../data/oledb/ole-db-consumer-templates-cpp.md)
+
+[Szablony dostawców OLE DB — dokumentacja](../../data/oledb/ole-db-provider-templates-reference.md)<br/>
+[Szablony konsumentów OLE DB](../../data/oledb/ole-db-consumer-templates-cpp.md)

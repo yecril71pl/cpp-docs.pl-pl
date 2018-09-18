@@ -1,5 +1,5 @@
 ---
-title: C2113 błąd kompilatora | Dokumentacja firmy Microsoft
+title: Błąd kompilatora C2113 | Dokumentacja firmy Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,14 +16,15 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 92ad712fa27d6350b672a7bfc1636d0fb3b80b7b
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 94dd75ad7df782a92dfe359ebabf0abe1175ad75
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33166338"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46096175"
 ---
-# <a name="compiler-error-c2113"></a>C2113 błąd kompilatora
-"-": wskaźnik może zostać odjęty tylko od innego wskaźnika  
-  
- Prawy argument operacji w ramach operacji odejmowania został wskaźnika, ale nie był Lewy argument operacji.
+# <a name="compiler-error-c2113"></a>Błąd kompilatora C2113
+
+"-": wskaźnik może zostać odjęty tylko od innego wskaźnika
+
+Prawy operand w operacji odejmowania był wskaźnikiem, ale nie jest lewy operand.

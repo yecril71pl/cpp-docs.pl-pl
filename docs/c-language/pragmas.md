@@ -14,25 +14,27 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 924e273e7d49778c3b20c065415883488456b4a3
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 8dfdf894cca16c7c8a6a82ca5f5910aa31cd4bed
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32385022"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46090506"
 ---
 # <a name="pragmas"></a>Pragma — dyrektywy
-**ANSI 3.8.6** zachowanie w dyrektywie #pragma rozpoznany.  
-  
- Następujące [Pragm C](../c-language/c-pragmas.md) są definiowane dla kompilatora C firmy Microsoft:  
-  
-|||||  
-|-|-|-|-|  
-|**alloc_text**|**data_seg**|**include_alias**|`setlocale`|  
-|**auto_inline**|**Funkcja**|**intrinsic**|**ostrzeżenie**|  
-|**check_stack**|**hdrstop**|**komunikat**||  
-|**code_seg**|**inline_depth**|**optymalizuj**||  
-|**Komentarz**|**inline_recursion**|`pack`||  
-  
-## <a name="see-also"></a>Zobacz też  
- [Dyrektywy przetwarzania wstępnego](../c-language/preprocessing-directives.md)
+
+**ANSI 3.8.6** zachowanie w dyrektywie #pragma rozpoznane.
+
+Następujące [Pragm C](../c-language/c-pragmas.md) są zdefiniowane dla kompilatora Microsoft C:
+
+|||||
+|-|-|-|-|
+|**alloc_text**|**data_seg**|**include_alias**|`setlocale`|
+|**auto_inline**|**— Funkcja**|**intrinsic**|**ostrzeżenie**|
+|**check_stack**|**hdrstop**|**komunikat**||
+|**code_seg**|**inline_depth**|**optymalizuj**||
+|**Komentarz**|**inline_recursion**|`pack`||
+
+## <a name="see-also"></a>Zobacz też
+
+[Dyrektywy przetwarzania wstępnego](../c-language/preprocessing-directives.md)

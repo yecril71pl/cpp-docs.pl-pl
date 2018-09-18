@@ -17,33 +17,27 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0f65b94294b3b3d55f9839dffa99a18be61c5639
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 82c06b98acec18e845fd1353875c1453c4bee8b1
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43195987"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46097162"
 ---
 # <a name="tooltiptext-structure"></a>Struktura TOOLTIPTEXT
 Na piśmie swoje [obsługi powiadomień Porada narzędzie](../mfc/handling-ttn-needtext-notification-for-tool-tips.md), należy użyć **TOOLTIPTEXT** struktury. Elementy członkowskie **TOOLTIPTEXT** struktury są:  
   
- `typedef struct {`  
-  
- `NMHDR     hdr;        // required for all WM_NOTIFY messages`  
-  
- `LPTSTR    lpszText;   // see below`  
-  
- `TCHAR     szText[80]; // buffer for tool tip text`  
-  
- `HINSTANCE hinst;      // see below`  
-  
- `UINT      uflags;     // flag indicating how to interpret the`  
-  
- `// idFrom member of the NMHDR structure`  
-  
- `// that is included in the structure`  
-  
- `} TOOLTIPTEXT, FAR *LPTOOLTIPTEXT;`  
+```cpp
+typedef struct {
+    NMHDR     hdr;        // required for all WM_NOTIFY messages
+    LPTSTR    lpszText;   // see below
+    TCHAR     szText[80]; // buffer for tool tip text
+    HINSTANCE hinst;      // see below
+    UINT      uflags;     // flag indicating how to interpret the
+                          // idFrom member of the NMHDR structure
+                          // that is included in the structure
+} TOOLTIPTEXT, FAR *LPTOOLTIPTEXT;
+```
   
  *HDR*  
  Określa narzędzie, które wymaga tekstu. Jedynym członkiem tej struktury, który może być konieczne jest identyfikator formantu polecenia. Identyfikator polecenia kontrolki będą znajdować się w *idFrom* członkiem **NMHDR** struktury, uzyskać dostęp przy użyciu składni `hdr.idFrom`. Zobacz [NMHDR](/windows/desktop/api/richedit/ns-richedit-_nmhdr) dyskusję na temat elementów członkowskich **NMHDR** struktury.  
@@ -57,7 +51,7 @@ Na piśmie swoje [obsługi powiadomień Porada narzędzie](../mfc/handling-ttn-n
  *hinst*  
  Dojście wystąpienia, które zawiera ciąg, który ma być używany jako tekst wskazówki. Jeśli *lpszText* to adres elementu tekst wskazówki ten element członkowski ma wartość NULL.  
   
- Podczas obsługi `TTN_NEEDTEXT` powiadomień wiadomości, określ ciąg, który ma być wyświetlany w jednym z następujących sposobów:  
+Podczas obsługi `TTN_NEEDTEXT` powiadomień wiadomości, określ ciąg, który ma być wyświetlany w jednym z następujących sposobów:  
   
 -   Skopiuj tekst do buforu określonego przez *szText* elementu członkowskiego.  
   

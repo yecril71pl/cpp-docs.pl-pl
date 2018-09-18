@@ -16,16 +16,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8211ef39b3524dbb1c0c3e8d25cabb84ee5f6b5e
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 3abb7472e37edbec80381bbf6b4329d9da718d19
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33298223"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46095442"
 ---
 # <a name="linker-tools-error-lnk1103"></a>Błąd narzędzi konsolidatora LNK1103
-informacje debugowania uszkodzone; Skompiluj ponownie moduł  
-  
- Ten błąd może być spowodowany kompilacji zostało zakończone, zanim plik prawidłowy obiekt został utworzony.  
-  
- Skompiluj ponownie plik danego obiektu. Jeśli ponownej kompilacji nie rozwiąże problemu, należy zwrócić uwagę okoliczności błąd, spróbuj ustalić przyczynę problemu, a następnie utwórz przypadek testowy odtworzenia. Następnie można znaleźć pliku pomocy technicznej firmy lub sekcji Pomoc techniczna w jednej instrukcji.
+
+informacje debugowania uszkodzone; Skompiluj ponownie moduł
+
+Ten błąd może być spowodowany, ponieważ kompilacja zostało zakończone, zanim plik prawidłowy obiekt został utworzony.
+
+Skompiluj ponownie plik danego obiektu. Jeśli ponownej kompilacji nie rozwiąże problemu, należy pamiętać, okoliczności wystąpienia błędu, spróbuj ustalić przyczynę problemu, a następnie utwórz przypadek testowy do odtworzenia. Następnie zapoznaj się z plikiem pomocy technicznej firmy lub w sekcji Pomoc techniczna w jednej instrukcji.

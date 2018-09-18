@@ -14,17 +14,19 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 268496c676aa0c324fa434879e9147eef180dd30
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: c8e66c811571f22c263193ffad676052b34b7f72
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32382250"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46087100"
 ---
 # <a name="deleting-open-files"></a>Usuwanie otwartych plików
-**ANSI 4.9.4.1** wpływ funkcji Usuń na plik  
-  
- Funkcja Usuń Usuwa plik. Jeśli plik jest otwarty, funkcja ta nie powiedzie się i zwraca wartość -1.  
-  
-## <a name="see-also"></a>Zobacz też  
- [Funkcje bibliotek](../c-language/library-functions.md)
+
+**ANSI 4.9.4.1** wpływ funkcji usuwania na otwartego pliku
+
+Funkcja usuwania usuwa plik. Jeśli plik jest otwarty, funkcja ta nie powiedzie się i zwraca wartość -1.
+
+## <a name="see-also"></a>Zobacz też
+
+[Funkcje bibliotek](../c-language/library-functions.md)

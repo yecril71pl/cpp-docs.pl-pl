@@ -1,5 +1,5 @@
 ---
-title: C3857 błąd kompilatora | Dokumentacja firmy Microsoft
+title: Błąd kompilatora C3857 | Dokumentacja firmy Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,51 +16,52 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4a9277ccd6a4e1e71faaf634498ccf32378fc961
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 279ed343b57380df9db9180aa475e4d77ddf5ae5
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33267829"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46097604"
 ---
-# <a name="compiler-error-c3857"></a>C3857 błąd kompilatora
-'type': wiele listy parametrów typu są niedozwolone.  
-  
- Więcej niż jeden szablon lub ogólny został określony dla tego samego typu, co jest niedozwolone.  
-  
- Poniższy przykład generuje C3857:  
-  
-```  
-// C3857.cpp  
-template <class T, class TT>  
-template <class T2>    // C3857  
-struct B {};  
-```  
-  
- Możliwe rozwiązanie:  
-  
-```  
-// C3857b.cpp  
-// compile with: /c  
-template <class T, class TT, class T2>   
-struct B {};  
-```  
-  
- C3857 może również wystąpić, gdy użycie typów ogólnych:  
-  
-```  
-// C3857c.cpp  
-// compile with: /clr  
-generic <typename T>  
-generic <typename U>  
-ref class GC;   // C3857  
-```  
-  
- Możliwe rozwiązanie:  
-  
-```  
-// C3857d.cpp  
-// compile with: /clr /c  
-generic <typename U>  
-ref class GC;  
+# <a name="compiler-error-c3857"></a>Błąd kompilatora C3857
+
+"type": wiele list parametrów typu nie są dozwolone.
+
+Określono więcej niż jeden szablon lub ogólny tego samego typu, co jest niedozwolone.
+
+Poniższy przykład spowoduje wygenerowanie C3857:
+
+```
+// C3857.cpp
+template <class T, class TT>
+template <class T2>    // C3857
+struct B {};
+```
+
+Możliwe rozwiązanie:
+
+```
+// C3857b.cpp
+// compile with: /c
+template <class T, class TT, class T2>
+struct B {};
+```
+
+C3857 może również wystąpić, gdy za pomocą typów ogólnych:
+
+```
+// C3857c.cpp
+// compile with: /clr
+generic <typename T>
+generic <typename U>
+ref class GC;   // C3857
+```
+
+Możliwe rozwiązanie:
+
+```
+// C3857d.cpp
+// compile with: /clr /c
+generic <typename U>
+ref class GC;
 ```

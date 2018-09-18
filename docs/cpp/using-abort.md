@@ -16,15 +16,17 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e63c3134dee6c316519dfcc34cff30b591b56460
-ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
+ms.openlocfilehash: 3edc24b2b8dc869022039d4aaaea73af06eac16b
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/02/2018
-ms.locfileid: "39465399"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46092545"
 ---
 # <a name="using-abort"></a>Użycie przerywania
-Wywoływanie [przerwać](../c-runtime-library/reference/abort.md) funkcja powoduje natychmiastowe przerwanie działania. Pomija się zniszczenie normalny proces zainicjowane statycznych obiektów globalnych. Pomija również specjalnego przetwarzania, który został określony przy użyciu `atexit` funkcji.  
-  
-## <a name="see-also"></a>Zobacz także  
- [Dodatkowe zagadnienia dotyczące kończenia](../cpp/additional-termination-considerations.md)
+
+Wywoływanie [przerwać](../c-runtime-library/reference/abort.md) funkcja powoduje natychmiastowe przerwanie działania. Pomija się zniszczenie normalny proces zainicjowane statycznych obiektów globalnych. Pomija również specjalnego przetwarzania, który został określony przy użyciu `atexit` funkcji.
+
+## <a name="see-also"></a>Zobacz także
+
+[Dodatkowe zagadnienia dotyczące kończenia](../cpp/additional-termination-considerations.md)

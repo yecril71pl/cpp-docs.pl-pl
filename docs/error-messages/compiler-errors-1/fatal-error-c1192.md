@@ -16,14 +16,15 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 45880594a3a9aa64fd62099b5b1eea342107e3dd
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 31e372db05d39bb7559fc3ee4390b8886e070b46
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33227424"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46091936"
 ---
 # <a name="fatal-error-c1192"></a>Błąd krytyczny C1192
-\#przy użyciu nie powiodło się na 'Plik'.  
-  
- Tylko plik w formacie Microsoft języka pośredniego (MSIL) mogą zostać przekazane do [#using](../../preprocessor/hash-using-directive-cpp.md) dyrektywy. [/CLR](../../build/reference/clr-common-language-runtime-compilation.md) — opcja kompilatora pozwala utworzyć plik wyjściowy MSIL. Inne języki Visual Studio również utworzyć różne pliki MSIL.
+
+\#nie powiodło się na "file"
+
+Tylko plik w formacie Microsoft Intermediate Language (MSIL) mogą być przekazywane do [#using](../../preprocessor/hash-using-directive-cpp.md) dyrektywy. [/CLR](../../build/reference/clr-common-language-runtime-compilation.md) — opcja kompilatora pozwala utworzyć plik wyjściowy MSIL. Inne języki Visual Studio generuje również pliki MSIL.

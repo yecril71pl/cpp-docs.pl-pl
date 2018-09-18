@@ -27,55 +27,60 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 90c68ed56b52b57deb234717b3b95ec197d26318
-ms.sourcegitcommit: 6e3cf8df676d59119ce88bf5321d063cf479108c
+ms.openlocfilehash: 5f94d60d4c6e804a9bd27293bb0eff67b29a1e8a
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/22/2018
-ms.locfileid: "34450937"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46092066"
 ---
 # <a name="rtdynamiccast"></a>__RTDynamicCast
-Implementacja interfejsu środowiska wykonawczego [dynamic_cast](../cpp/dynamic-cast-operator.md) operatora.  
-  
-## <a name="syntax"></a>Składnia  
-  
-```cpp  
-PVOID __RTDynamicCast (  
-   PVOID inptr,   
-   LONG VfDelta,  
-   PVOID SrcType,  
-   PVOID TargetType,   
-   BOOL isReference  
-   ) throw(...)  
-```  
-  
-#### <a name="parameters"></a>Parametry  
- `inptr`  
- Wskaźnik do obiektu polimorficznym.  
-  
- `VfDelta`  
- Przesunięcie wskaźnika funkcji wirtualnego w obiekcie.  
-  
- `SrcType`  
- Typ statyczny obiektu wskazywana przez `inptr` parametru.  
-  
- `TargetType`  
- Żądany wynik rzutowania.  
-  
- `isReference`  
- `true` Jeśli dane wejściowe jest odwołaniem; `false` Jeśli wejściowy jest wskaźnik.  
-  
-## <a name="return-value"></a>Wartość zwracana  
- Wskaźnik do odpowiedniego obiektu podrzędnego, w przypadku powodzenia; w przeciwnym razie **NULL**.  
-  
-## <a name="exceptions"></a>Wyjątki  
- `bad_cast()` Jeśli w danych wejściowych `dynamic_cast<>` jest odwołaniem i Rzutowanie nie powiedzie się.  
-  
-## <a name="remarks"></a>Uwagi  
- Konwertuje `inptr` do obiektu typu `TargetType`. Typ `inptr` musi być wskaźnikiem, jeśli `TargetType` jest wskaźnikiem lub l wartość, jeśli `TargetType` to odwołanie. `TargetType` musi być wskaźnikiem lub odwołaniem do typu klasy uprzednio zdefiniowany lub wskaźnika do typu void.  
-  
-## <a name="requirements"></a>Wymagania  
-  
-|Procedura|Wymagany nagłówek|  
-|-------------|---------------------|  
+
+Implementacja środowiska uruchomieniowego [dynamic_cast](../cpp/dynamic-cast-operator.md) operatora.
+
+## <a name="syntax"></a>Składnia
+
+```cpp
+PVOID __RTDynamicCast (
+   PVOID inptr,
+   LONG VfDelta,
+   PVOID SrcType,
+   PVOID TargetType,
+   BOOL isReference
+   ) throw(...)
+```
+
+#### <a name="parameters"></a>Parametry
+
+*inptr*<br/>
+Wskaźnik do obiektu polimorficznych.
+
+*VfDelta*<br/>
+Przesunięcie wskaźnika funkcji wirtualnej w obiekcie.
+
+*SrcType*<br/>
+Typ statyczny obiekt wskazywany przez `inptr` parametru.
+
+*TargetType*<br/>
+Zamierzony wynik rzutowania.
+
+*isReference*<br/>
+`true` Jeśli dane wejściowe to odwołanie; `false` Jeśli danych wejściowych jest wskaźnikiem.
+
+## <a name="return-value"></a>Wartość zwracana
+
+Wskaźnik do odpowiedniego obiektu podrzędnego, jeśli to się powiedzie; w przeciwnym razie **NULL**.
+
+## <a name="exceptions"></a>Wyjątki
+
+`bad_cast()` Jeśli dane wejściowe `dynamic_cast<>` jest odwołaniem i rzutowania zakończy się niepowodzeniem.
+
+## <a name="remarks"></a>Uwagi
+
+Konwertuje `inptr` do obiektu typu `TargetType`. Typ `inptr` musi być wskaźnikiem, jeśli `TargetType` jest wskaźnikiem lub l wartością, jeśli `TargetType` to odwołanie. `TargetType` musi to być wskaźnik lub odwołanie do typu klasy uprzednio zdefiniowany lub wskaźnika do typu void.
+
+## <a name="requirements"></a>Wymagania
+
+|Procedura|Wymagany nagłówek|
+|-------------|---------------------|
 |__RTDynamicCast|rtti.h|

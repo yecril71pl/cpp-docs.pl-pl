@@ -19,70 +19,63 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3608e40db2aa3eb0c49942de278c1d428e26689f
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: e4ceed8fa38ae2b6801fa13c65e54f1cd1cc711d
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32385100"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46097695"
 ---
 # <a name="c-floating-point-constants"></a>Stałe zmiennoprzecinkowe języka C
-"Stałej zmiennoprzecinkowej" jest liczbą dziesiętną, reprezentujący podpisem liczba rzeczywista. Reprezentacja podpisem liczba rzeczywista zawiera część całkowitą część ułamkowa i wykładnik. Stałe zmiennoprzecinkowe umożliwia reprezentują wartości zmiennoprzecinkowych, których nie można zmienić.  
-  
-## <a name="syntax"></a>Składnia  
- *Floating point stała*:  
- &nbsp;&nbsp; *wykładnik części ułamkowych stała*<sub>opt</sub> *zmiennoprzecinkową sufiks*<sub>opcjonalnych</sub>  
- &nbsp;&nbsp; *wykładnik części sekwencji cyfr zmiennoprzecinkową sufiks*<sub>opcjonalnych</sub>  
-  
- *Stała ułamkowych*:  
- &nbsp;&nbsp; *cyfra sekwencji*<sub>opt</sub> **.** *cyfra sekwencji*  
- &nbsp;&nbsp; *cyfra sekwencji***.**   
-  
- *wykładnik części*:  
- &nbsp;&nbsp; **e***znak*<sub>opt</sub> *sekwencji cyfr*   
- &nbsp;&nbsp; **E***znak*<sub>opt</sub> *sekwencji cyfr*   
-  
- *znak* : jeden z  
- &nbsp;&nbsp; **+ -**  
-  
- *cyfra sekwencji*:  
- &nbsp;&nbsp; *Cyfra*  
- &nbsp;&nbsp; *cyfra sekwencji cyfr*  
-  
- *przestawne sufiks* : jeden z  
- &nbsp;&nbsp; **f, g F L**  
-  
- Można pominąć cyfr przed separatorem dziesiętnym (część całkowitą wartość) albo cyfry po przecinku (część ułamkowa), ale nie obie. Możesz pozostawić limit dziesiętnego tylko wtedy, gdy obejmują wykładnik. Żadne znaki odstępu można oddzielić cyfr lub znaków stałej.  
-  
- Poniższe przykłady przedstawiają niektóre rodzaje wyrażeń i stałe zmiennoprzecinkowe:  
-  
-```  
-15.75  
-1.575E1   /* = 15.75   */  
-1575e-2   /* = 15.75   */  
--2.5e-3   /* = -0.0025 */  
-25E-4     /* =  0.0025 */  
-```  
-  
- Stałe zmiennoprzecinkowe są dodatnie, chyba że są poprzedzone znakiem minus (**-**). W takim przypadku znak minus jest traktowany jako Jednoargumentowy operator negacji arytmetyczne. Stałe zmiennoprzecinkowe ma typ `float`, `double`, lub `long double`.  
-  
- Stała zmiennoprzecinkowa bez **f**, **F**, **l**, lub **L** sufiks ma typ `double`. Jeśli litera **f** lub **F** jest sufiks stałej ma typ `float`. Jeśli sufiks litera **l** lub **L**, ma typ `long double`. Na przykład:  
-  
-```  
-100L  /* Has type long double  */  
-100F  /* Has type float        */  
-```  
-  
- Należy pamiętać, że kompilator Microsoft C wewnętrznie reprezentuje `long double` taki sam jak typ `double`. Zobacz [magazyn typów podstawowych](../c-language/storage-of-basic-types.md) informacji o typie `double`, `float`, i `long double`.  
-  
- Część całkowitą wartość stałej zmiennoprzecinkowej, można pominąć, jak pokazano w poniższych przykładach. Liczba.75 może być wyrażona na wiele sposobów, łącznie z następujących czynności:  
-  
-```  
-.0075e2  
-0.075e1  
-.075e1  
-75e-2  
-```  
-  
-## <a name="see-also"></a>Zobacz też  
- [Stałe języka C](../c-language/c-constants.md)
+
+"Stała zmiennoprzecinkowa" to liczba dziesiętna, która reprezentuje podpisaną liczba rzeczywista. Reprezentacja liczbą rzeczywistą podpisem zawiera całkowitą część ułamkowa część i wykładnik. Użyj stałych zmiennoprzecinkowych do reprezentowania wartości zmiennoprzecinkowych, których nie można zmienić.
+
+## <a name="syntax"></a>Składnia
+
+*Floating point-constant*: &nbsp; &nbsp; *wykładnik części ułamkowych — stała*<sub>zoptymalizowany pod kątem</sub> *liczb zmiennoprzecinkowych sufiks* <sub>zoptymalizowany pod kątem</sub> &nbsp; &nbsp; *sekwencję cyfr części wykładnik liczb zmiennoprzecinkowych sufiks*<sub>zoptymalizowany pod kątem</sub>
+
+*Stała ułamkowe*: &nbsp; &nbsp; *sekwencję cyfr*<sub>zoptymalizowany pod kątem</sub> **.** *sekwencja cyfr* &nbsp; &nbsp; *sekwencję cyfr***.** 
+
+*wykładnik część*: &nbsp; &nbsp; **e***logowania*<sub>zoptymalizowany pod kątem</sub> *sekwencję cyfr* &nbsp; &nbsp; **E***logowania*<sub>zoptymalizowany pod kątem</sub> *sekwencję cyfr* 
+
+*znak* : jeden z &nbsp; &nbsp; **+ -**
+
+*sekwencja cyfr*: &nbsp; &nbsp; *cyfrę* &nbsp; &nbsp; *cyfrę sekwencję cyfr*
+
+*sufiks liczb zmiennoprzecinkowych* : jeden z &nbsp; &nbsp; **f, g F, G**
+
+Możesz pominąć cyfr przed przecinkiem dziesiętnym (część całkowitą wartość) albo cyfr po punkcie dziesiętnym (część ułamkowa), ale nie oba. Tylko wtedy, gdy zawierają wykładnik, można pozostawić się punktu dziesiętnego. Żadne znaki odstępu, można oddzielić cyfr lub znaków, stałej.
+
+W poniższych przykładach pokazano niektóre formy stałych zmiennoprzecinkowych i wyrażenia:
+
+```
+15.75
+1.575E1   /* = 15.75   */
+1575e-2   /* = 15.75   */
+-2.5e-3   /* = -0.0025 */
+25E-4     /* =  0.0025 */
+```
+
+Stałe zmiennoprzecinkowe są pozytywne, chyba że są poprzedzone znakiem minus (**-**). W tym przypadku znak minus jest traktowany jako Jednoargumentowy operator arytmetyczny negacji. Stałe zmiennoprzecinkowe mają typ `float`, `double`, lub `long double`.
+
+Stała zmiennoprzecinkowa bez **f**, **F**, **l**, lub **L** sufiks ma typ `double`. Jeśli litera **f** lub **F** jest sufiksem, stałej ma typ `float`. Jeśli sufiks za pomocą litery **l** lub **L**, ma typ `long double`. Na przykład:
+
+```
+100L  /* Has type long double  */
+100F  /* Has type float        */
+```
+
+Należy zauważyć, że kompilator Microsoft C: wewnętrznie reprezentuje `long double` taki sam jak typ `double`. Zobacz [magazyn typów podstawowych](../c-language/storage-of-basic-types.md) informacji o typie `double`, `float`, i `long double`.
+
+Jak pokazano w poniższych przykładach, można pominąć część całkowitą stałej zmiennoprzecinkowej. Liczba.75 może być wyrażona w na wiele sposobów, w tym następujące:
+
+```
+.0075e2
+0.075e1
+.075e1
+75e-2
+```
+
+## <a name="see-also"></a>Zobacz też
+
+[Stałe języka C](../c-language/c-constants.md)

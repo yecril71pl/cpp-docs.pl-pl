@@ -16,24 +16,25 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e19ec77818c8017387519b03e400c09d47021bc5
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 26201a894212701cca19ab2192676b37a69e8b57
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33300426"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46088699"
 ---
 # <a name="bscmake-error-bk1506"></a>Błąd BSCMAKE BK1506
-Nie można otworzyć pliku "filename" [: Przyczyna]  
-  
- Bscmake — nie można otworzyć pliku.  
-  
-### <a name="to-fix-by-checking-the-following-possible-causes"></a>Aby rozwiązać problem, sprawdzając następujące możliwe przyczyny  
-  
-1.  Plik jest zablokowany przez inny proces. Jeśli `reason` mówi **pozwolono**, przeglądarka może korzystać z pliku. Zamknij okno przeglądania i spróbuj ponownie kompilacji.  
-  
-2.  Dysk pełny.  
-  
-3.  Błąd sprzętowy.  
-  
-4.  Określony plik wyjściowy ma taką samą nazwę jak podkatalog istniejących.
+
+Nie można otworzyć pliku 'NazwaPliku' [: przyczyny]
+
+BSCMAKE, nie można otworzyć pliku.
+
+### <a name="to-fix-by-checking-the-following-possible-causes"></a>Aby rozwiązać problem, sprawdzając następujące możliwe przyczyny
+
+1. Plik jest zablokowany przez inny proces. Jeśli `reason` mówi **pozwolono**, przeglądarka może korzystać z pliku. Zamknij okno przeglądania i ponów próbę kompilacji.
+
+1. Pełne dysku.
+
+1. Błąd sprzętowy.
+
+1. Określony plik wyjściowy ma taką samą nazwę jak istniejący podkatalogu.

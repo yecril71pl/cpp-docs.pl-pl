@@ -1,5 +1,5 @@
 ---
-title: C3554 błąd kompilatora | Dokumentacja firmy Microsoft
+title: Błąd kompilatora C3554 | Dokumentacja firmy Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,19 +16,20 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4fb374e028097157ae72b621593a899af9fe2f91
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 4b1760607a335d4dd56ec711eef76f5a68550d64
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33255456"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46089505"
 ---
-# <a name="compiler-error-c3554"></a>C3554 błąd kompilatora
-"decltype" nie można łączyć z jakimkolwiek innym specyfikatorem typu  
-  
- Nie może kwalifikować `decltype()` — słowo kluczowe z dowolnym specyfikatora typu. Na przykład poniższy fragment kodu zwraca błąd C3554.  
-  
-```  
-int x;  
-unsigned decltype(x); // C3554  
+# <a name="compiler-error-c3554"></a>Błąd kompilatora C3554
+
+"decltype" nie można łączyć z jakimkolwiek innym specyfikatorem typu
+
+Nie kwalifikujesz się do `decltype()` — słowo kluczowe ze specyfikatorem dowolnego typu. Na przykład poniższy fragment kodu powoduje błąd C3554.
+
+```
+int x;
+unsigned decltype(x); // C3554
 ```

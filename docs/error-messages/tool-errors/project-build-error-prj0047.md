@@ -16,16 +16,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: df87dd3da4ce77f5ce0e88d992e34c3dbc68c66a
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 72e7e8f80d4db4c005dc57085ccfadcffee640aa
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33326049"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46088666"
 ---
 # <a name="project-build-error-prj0047"></a>Błąd PRJ0047 kompilacji projektu
-Nie można wznowić zawieszonego procesu.  Kompilacja nie powiodła się.  
-  
- Wystąpił błąd w środowisku programistycznym.  
-  
- Aby rozwiązać ten problem, zamknij i ponownie Załaduj projekt. W razie potrzeby, zamknij i uruchom ponownie program Visual Studio.
+
+Nie można wznowić procesu wstrzymania.  Kompilacja nie powiodła się.
+
+Wystąpił błąd w środowisku programistycznym.
+
+Aby rozwiązać ten problem, zamknij i ponownie Załaduj projekt. Jeśli to konieczne, zamknij i ponownie uruchom program Visual Studio.

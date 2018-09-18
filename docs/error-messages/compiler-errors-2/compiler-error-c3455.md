@@ -1,5 +1,5 @@
 ---
-title: C3455 błąd kompilatora | Dokumentacja firmy Microsoft
+title: Błąd kompilatora C3455 | Dokumentacja firmy Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,30 +16,32 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 61f48f16164327645eb0c1982e9e11e8ea394276
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 5d26a8f3e404eaa19a102be4cb3f11350c4fe674
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33253383"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46089362"
 ---
-# <a name="compiler-error-c3455"></a>C3455 błąd kompilatora
-"attribute": żaden z konstruktorów atrybutu nie pasuje argumentów  
-  
- Nieprawidłowa wartość została użyta do zadeklarowania atrybutu.  Zobacz [atrybutu](../../windows/attribute.md) Aby uzyskać więcej informacji.  
-  
-## <a name="example"></a>Przykład  
- Poniższy przykład generuje C3455.  
-  
-```  
-// C3455.cpp  
-// compile with: /clr /c  
-using namespace System;  
-  
-[attribute("MyAt")]   // C3455  
-// try the following line instead  
-// [attribute(All)]  
-ref struct MyAttr {  
-   MyAttr() {}  
-};  
+# <a name="compiler-error-c3455"></a>Błąd kompilatora C3455
+
+"attribute": żaden z konstruktorów atrybutu odpowiada tym argumentom
+
+Nieprawidłowa wartość został użyty do deklarowania atrybutu.  Zobacz [atrybut](../../windows/attribute.md) Aby uzyskać więcej informacji.
+
+## <a name="example"></a>Przykład
+
+Poniższy przykład spowoduje wygenerowanie C3455.
+
+```
+// C3455.cpp
+// compile with: /clr /c
+using namespace System;
+
+[attribute("MyAt")]   // C3455
+// try the following line instead
+// [attribute(All)]
+ref struct MyAttr {
+   MyAttr() {}
+};
 ```

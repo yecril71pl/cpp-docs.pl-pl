@@ -16,35 +16,35 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ed4b14ae2f3af3218909d6cd4609f1f45d3d7cc2
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: b5a19c27731192a5fe2930aec3e78fb66d790484
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33293637"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46090910"
 ---
-# <a name="compiler-warning-level-3-c4800"></a>Ostrzeżenie (poziom 3) kompilatora C4800  
-  
-> "*typu*": Wymuszanie wartości logicznej "true" lub "fałsz" (ostrzeżenie wydajności)  
-  
-To ostrzeżenie jest generowany, gdy wartość, która nie jest `bool` jest przypisany lub przekształcić na typ `bool`. Zazwyczaj ten komunikat jest spowodowany przez przypisanie `int` zmienne do `bool` zmienne gdzie `int` zmiennej zawiera tylko wartości **true** i **false**i może być ponownie zadeklarowany jako typ `bool`. Jeśli nie można zmodyfikować wyrażenie, tak aby użyć typu `bool`, następnie można dodać "`!=0`" na wyrażenie, które zapewnia typ wyrażenia `bool`. Rzutowanie na typ wyrażenia `bool` nie wyłączać ostrzeżenie, co jest zgodne z projektem.  
-  
-To ostrzeżenie nie jest generowany w programie Visual Studio 2017 r.  
-  
+# <a name="compiler-warning-level-3-c4800"></a>Ostrzeżenie (poziom 3) kompilatora C4800
+
+> "*typu*": Wymuszenie wartość logiczna "prawda" lub "fałsz" (ostrzeżenie dotyczące wydajności)
+
+To ostrzeżenie jest generowane, gdy wartość to nie `bool` jest przypisany lub przekształcić na typ `bool`. Zazwyczaj ten komunikat jest spowodowany przez przypisywanie `int` zmienne `bool` zmienne gdzie `int` zmienna zawiera tylko wartości **true** i **false**i można go ponownie zadeklarowany jako typ `bool`. Jeśli nie Napisz ponownie wyrażenie typu `bool`, następnie można dodać "`!=0`" na wyrażenie, które zapewnia typ wyrażenia `bool`. Rzutowanie wyrażenia na typ `bool` nie wyłącza ostrzeżenie, co jest zgodne z projektem.
+
+To ostrzeżenie nie jest generowany w programie Visual Studio 2017.
+
 ## <a name="example"></a>Przykład
-  
- Poniższy przykład generuje C4800 i pokazuje, jak rozwiązywanie problemu:  
-  
-```cpp  
-// C4800.cpp  
-// compile with: /W3  
-int main() {  
-   int i = 0;  
-  
-   // To fix, instead try:  
-   // bool i = 0;  
-  
-   bool j = i;   // C4800  
-   j++;  
-}  
+
+Poniższy przykład generuje C4800 i pokazuje, jak go naprawić:
+
+```cpp
+// C4800.cpp
+// compile with: /W3
+int main() {
+   int i = 0;
+
+   // To fix, instead try:
+   // bool i = 0;
+
+   bool j = i;   // C4800
+   j++;
+}
 ```

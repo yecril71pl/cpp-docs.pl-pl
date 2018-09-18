@@ -31,12 +31,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a5147b8079d694e59141c244a860f12c59f42f7b
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: b77c814b3ce2f372ae34e3c0293951ec23cdf6a6
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45706839"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46090753"
 ---
 # <a name="atl-text-encoding-functions"></a>Funkcje kodowania tekstu ATL
 
@@ -44,7 +44,7 @@ Funkcje te obsługują tekstu, kodowania i dekodowania.
 
 |||
 |-|-|
-|[AtlGetHexValue](#atlgethexvalue)|Wywołaj tę funkcję, aby uzyskać wartość liczbową z liczby szesnastkowej.|   
+|[AtlGetHexValue](#atlgethexvalue)|Wywołaj tę funkcję, aby uzyskać wartość liczbową z liczby szesnastkowej.|
 |[AtlGetVersion](#atlgetversion)|Wywołaj tę funkcję, aby pobrać wersję biblioteki ATL, którego używasz.  |
 |[AtlHexDecode](#atlhexdecode)|Dekoduje ciąg danych, który został zakodowany jako tekst szesnastkowy, np. przez poprzednie wywołanie [AtlHexEncode](#atlhexencode).|
 |[AtlHexDecodeGetRequiredLength](#atlhexdecodegetrequiredlength)|Wywołaj tę funkcję, aby uzyskać rozmiar (w bajtach) bufora, który może zawierać dane zdekodowane z ciągu zakodowanego szesnastkowo o określonej długości.|
@@ -70,19 +70,19 @@ Funkcje te obsługują tekstu, kodowania i dekodowania.
 
 ## <a name="requirements"></a>Wymagania
 
-**Nagłówek:** atlenc.h  
+**Nagłówek:** atlenc.h
 
 ## <a name="atlgethexvalue"></a> AtlGetHexValue
 
 Wywołaj tę funkcję, aby uzyskać wartość liczbową z liczby szesnastkowej.
 
 ```
-inline char AtlGetHexValue(char chIn) throw();  
+inline char AtlGetHexValue(char chIn) throw();
 ```
 
 ### <a name="parameters"></a>Parametry
 
-*chIn*  
+*chIn*<br/>
 Znaków szesnastkowych "0" – "9", "A"-"F", lub od 'a'-'f'.
 
 ### <a name="return-value"></a>Wartość zwracana
@@ -93,13 +93,13 @@ Wartość liczbowa wprowadzanych znaków, które są interpretowane jako cyfry s
 
 Wywołaj tę funkcję, aby pobrać wersję biblioteki ATL, którego używasz.
 
-```  
-ATLAPI_(DWORD) AtlGetVersion(void* pReserved);  
+```
+ATLAPI_(DWORD) AtlGetVersion(void* pReserved);
 ```
 
 ### <a name="parameters"></a>Parametry
 
-*Zachowane*  
+*Zachowane*<br/>
 Wskaźnik zastrzeżone.
 
 ### <a name="return-value"></a>Wartość zwracana
@@ -114,32 +114,32 @@ Funkcja powinna być wywoływana w następujący sposób.
 
 ### <a name="requirements"></a>Wymagania
 
-**Nagłówek:** atlbase.h  
+**Nagłówek:** atlbase.h
 
 ## <a name="atlhexdecode"></a> AtlHexDecode
 
 Dekoduje ciąg danych, który został zakodowany jako tekst szesnastkowy, np. przez poprzednie wywołanie [AtlHexEncode](#atlhexencode).
 
-```    
-inline BOOL AtlHexDecode(  
-   LPCSTR pSrcData,  
-   int nSrcLen,  
-   LPBYTE pbDest,  
-   int* pnDestLen) throw();  
+```
+inline BOOL AtlHexDecode(
+   LPCSTR pSrcData,
+   int nSrcLen,
+   LPBYTE pbDest,
+   int* pnDestLen) throw();
 ```
 
 ### <a name="parameters"></a>Parametry
 
-*pSrcData*  
+*pSrcData*<br/>
 Ciąg zawierający dane, które mają zostać zdekodowane.
 
-*nSrcLen*  
+*nSrcLen*<br/>
 Długość w znakach *pSrcData*.
 
-*pbDest*  
+*pbDest*<br/>
 Przydzielonej przez obiekt wywołujący bufor odbioru dekodowane dane.
 
-*pnDestLen*  
+*pnDestLen*<br/>
 Wskaźnik do zmiennej, która zawiera długość w bajtach *pbDest*. Jeśli funkcja się powiedzie, zmienna odbiera liczba bajtów zapisanych w buforze. Jeśli funkcja zawiedzie, zmienna odbiera wymaganą długość w bajtach rozmiar buforu.
 
 ### <a name="return-value"></a>Wartość zwracana
@@ -150,13 +150,13 @@ Zwraca wartość TRUE w przypadku powodzenia, wartość FALSE w przypadku niepow
 
 Wywołaj tę funkcję, aby uzyskać rozmiar (w bajtach) bufora, który może zawierać dane zdekodowane z ciągu zakodowanego szesnastkowo o określonej długości.
 
-```  
-inline int AtlHexDecodeGetRequiredLength(int nSrcLen) throw();  
+```
+inline int AtlHexDecodeGetRequiredLength(int nSrcLen) throw();
 ```
 
 ### <a name="parameters"></a>Parametry
 
-*nSrcLen*  
+*nSrcLen*<br/>
 Liczba znaków w ciąg zakodowany.
 
 ### <a name="return-value"></a>Wartość zwracana
@@ -167,26 +167,26 @@ Liczba bajtów potrzebnych dla buforu, który może przechowywać Dekodowany ci�
 
 Wywołaj tę funkcję, aby zakodować dane jako ciąg tekstu szesnastkowego.
 
-```  
-inline BOOL AtlHexEncode(  
-   const BYTE * pbSrcData,  
-   int nSrcLen,  
-   LPSTR szDest,  
-int * pnDestLen) throw();  
+```
+inline BOOL AtlHexEncode(
+   const BYTE * pbSrcData,
+   int nSrcLen,
+   LPSTR szDest,
+int * pnDestLen) throw();
 ```
 
 ### <a name="parameters"></a>Parametry
 
-*pbSrcData*  
+*pbSrcData*<br/>
 Bufor zawierający dane do zakodowania.
 
-*nSrcLen*  
+*nSrcLen*<br/>
 Długość w bajtach danych do zakodowania.
 
-*szDest*  
+*szDest*<br/>
 Przydzielonej przez obiekt wywołujący bufor odbioru dane zakodowane.
 
-*pnDestLen*  
+*pnDestLen*<br/>
 Wskaźnik do zmiennej, która zawiera długość w znakach *szDest*. Jeśli funkcja się powiedzie, zmienna odbiera liczbę znaków zapisanych w buforze. Jeśli funkcja zawiedzie, zmienna odbiera wymaganą długość w znakach buforu.
 
 ### <a name="return-value"></a>Wartość zwracana
@@ -201,13 +201,13 @@ Poszczególne bajty dane źródłowe są kodowane jako 2 znaków szesnastkowych.
 
 Wywołaj tę funkcję, aby uzyskać rozmiar (w znakach) bufora, który może zawierać ciąg zakodowany z danych o określonej długości.
 
-```  
-inline int AtlHexEncodeGetRequiredLength(int nSrcLen) throw();  
+```
+inline int AtlHexEncodeGetRequiredLength(int nSrcLen) throw();
 ```
 
 ### <a name="parameters"></a>Parametry
 
-*nSrcLen*  
+*nSrcLen*<br/>
 Liczba bajtów danych do zakodowania.
 
 ### <a name="return-value"></a>Wartość zwracana
@@ -218,13 +218,13 @@ Liczbę znaków wymaganą dla buforu, który może przechowywać dane zakodowane
 
 Wywołaj tę funkcję, aby uzyskać wartość liczbową z liczby szesnastkowej.
 
-```  
-inline short AtlHexValue(char chIn) throw();  
+```
+inline short AtlHexValue(char chIn) throw();
 ```
 
 ### <a name="parameters"></a>Parametry
 
-*chIn*  
+*chIn*<br/>
 Znaków szesnastkowych "0" – "9", "A"-"F", lub od 'a'-'f'.
 
 ### <a name="return-value"></a>Wartość zwracana
@@ -235,26 +235,26 @@ Wartość liczbowa wprowadzanych znaków, które są interpretowane jako cyfry s
 
 Wywołaj tę funkcję, aby przekonwertować ciąg Unicode na UTF-8.
 
-```  
-ATL_NOINLINE inline int AtlUnicodeToUTF8(  
-   LPCWSTR wszSrc,  
-   int nSrc,  
-   LPSTR szDest,  
-   int nDest) throw();  
+```
+ATL_NOINLINE inline int AtlUnicodeToUTF8(
+   LPCWSTR wszSrc,
+   int nSrc,
+   LPSTR szDest,
+   int nDest) throw();
 ```
 
 ### <a name="parameters"></a>Parametry
 
-*wszSrc*  
+*wszSrc*<br/>
 Ciąg Unicode, który ma zostać przekonwertowany
 
-*nSrc*  
+*nSrc*<br/>
 Długość w znakach ciąg Unicode.
 
-*szDest*  
+*szDest*<br/>
 Przydzielonej przez obiekt wywołujący bufor odbioru przekonwertowany ciąg.
 
-*nDest*  
+*nDest*<br/>
 Długość w bajtach rozmiar buforu.
 
 ### <a name="return-value"></a>Wartość zwracana
@@ -269,30 +269,30 @@ Aby określić rozmiar buforu wymaganych do ciągu przekonwertowanego, należy w
 
 Wywołaj tę funkcję, aby skonwertować dane przy użyciu kodowania „B”.
 
-```  
-inline BOOL BEncode(  
-   BYTE* pbSrcData,  
-   int nSrcLen,  
-   LPSTR szDest,  
-   int* pnDestLen,  
-   LPCSTR pszCharSet) throw();  
+```
+inline BOOL BEncode(
+   BYTE* pbSrcData,
+   int nSrcLen,
+   LPSTR szDest,
+   int* pnDestLen,
+   LPCSTR pszCharSet) throw();
 ```
 
 ### <a name="parameters"></a>Parametry
 
-*pbSrcData*  
+*pbSrcData*<br/>
 Bufor zawierający dane do zakodowania.
 
-*nSrcLen*  
+*nSrcLen*<br/>
 Długość w bajtach danych do zakodowania.
 
-*szDest*  
+*szDest*<br/>
 Przydzielonej przez obiekt wywołujący bufor odbioru dane zakodowane.
 
-*pnDestLen*  
+*pnDestLen*<br/>
 Wskaźnik do zmiennej, która zawiera długość w znakach *szDest*. Jeśli funkcja się powiedzie, zmienna odbiera liczbę znaków zapisanych w buforze. Jeśli funkcja zawiedzie, zmienna odbiera wymaganą długość w znakach buforu.
 
-*pszCharSet*  
+*pszCharSet*<br/>
 Zestaw znaków na potrzeby konwersji.
 
 ### <a name="return-value"></a>Wartość zwracana
@@ -307,16 +307,16 @@ Schemat kodowania "B" jest opisana w dokumencie RFC 2047 ([http://www.ietf.org/r
 
 Wywołaj tę funkcję, aby uzyskać rozmiar (w znakach) bufora, który może zawierać ciąg zakodowany z danych o określonej długości.
 
-```  
-inline int BEncodeGetRequiredLength(int nSrcLen, int nCharsetLen) throw();  
+```
+inline int BEncodeGetRequiredLength(int nSrcLen, int nCharsetLen) throw();
 ```
 
 ### <a name="parameters"></a>Parametry
 
-*nSrcLen*  
+*nSrcLen*<br/>
 Liczba bajtów danych do zakodowania.
 
-*nCharsetLen*  
+*nCharsetLen*<br/>
 Długość w znakach zestawu na potrzeby konwersji znaków.
 
 ### <a name="return-value"></a>Wartość zwracana
@@ -331,31 +331,31 @@ Schemat kodowania "B" jest opisana w dokumencie RFC 2047 ([http://www.ietf.org/r
 
 Wywołaj tę funkcję, aby skonwertować znaki niebezpieczne w XML na ich bezpieczne odpowiedniki.
 
-```  
-inline int EscapeXML(  
-   const wchar_t * szIn,  
-   int nSrcLen,  
-   wchar_t * szEsc,  
-   int nDestLen,  
-   DWORD dwFlags = ATL_ESC_FLAG_NONE) throw();  
+```
+inline int EscapeXML(
+   const wchar_t * szIn,
+   int nSrcLen,
+   wchar_t * szEsc,
+   int nDestLen,
+   DWORD dwFlags = ATL_ESC_FLAG_NONE) throw();
 ```
 
 ### <a name="parameters"></a>Parametry
 
-*szIn*  
+*szIn*<br/>
 Ciąg, który ma zostać przekonwertowany.
 
-*nSrclen*  
+*nSrclen*<br/>
 Długość w znakach ciąg do konwersji.
 
-*szEsc*  
+*szEsc*<br/>
 Przydzielonej przez obiekt wywołujący bufor odbioru przekonwertowany ciąg.
 
-*nDestLen*  
+*nDestLen*<br/>
 Długość w znakach buforu przydzielonej przez obiekt wywołujący.
 
-*Flagidw*  
-Flagi ATL_ESC opisujące, jak ma być wykonywane konwersji. 
+*Flagidw*<br/>
+Flagi ATL_ESC opisujące, jak ma być wykonywane konwersji.
 
 - ATL_ESC_FLAG_NONE domyślne zachowanie. Cudzysłów znaków i apostrofy nie są przekształcane.
 - Znaki cudzysłowu ATL_ESC_FLAG_ATTR apostrofów i są konwertowane na `&quot;` i `&apos;` odpowiednio.
@@ -380,16 +380,16 @@ W tabeli przedstawiono możliwe konwersje wykonywane przez tę funkcję:
 
 Wywołaj tę funkcję, aby uzyskać liczbę znaków rozszerzonych w ciągu.
 
-```  
-inline int GetExtendedChars(LPCSTR szSrc, int nSrcLen) throw();  
+```
+inline int GetExtendedChars(LPCSTR szSrc, int nSrcLen) throw();
 ```
 
 ### <a name="parameters"></a>Parametry
 
-*szSrc*  
+*szSrc*<br/>
 Ciąg do analizy.
 
-*nSrcLen*  
+*nSrcLen*<br/>
 Długość ciągu znaków.
 
 ### <a name="return-value"></a>Wartość zwracana
@@ -400,13 +400,13 @@ Zwraca liczbę znaków rozszerzonych, można znaleźć w ciągu zgodnie z ustale
 
 Wywołaj tę funkcję, aby się dowiedzieć, czy dany znak to znak rozszerzony (mniej niż 32, więcej niż 126 i nie znak tabulacji, znak nowego wiersza lub znak powrotu karetki)
 
-```  
-inline int IsExtendedChar(char ch) throw();  
+```
+inline int IsExtendedChar(char ch) throw();
 ```
 
 ### <a name="parameters"></a>Parametry
 
-*ch*  
+*ch*<br/>
 Znak do zbadania
 
 ### <a name="return-value"></a>Wartość zwracana
@@ -417,34 +417,34 @@ Wartość TRUE, jeśli znak zostanie przedłużony, wartość FALSE w przeciwnym
 
 Wywołaj tę funkcję, aby skonwertować dane przy użyciu kodowania „Q”.
 
-```  
-inline BOOL QEncode(  
-   BYTE* pbSrcData,  
-   int nSrcLen,  
-   LPSTR szDest,  
-   int* pnDestLen,  
-   LPCSTR pszCharSet,  
-   int* pnNumEncoded = NULL) throw();  
+```
+inline BOOL QEncode(
+   BYTE* pbSrcData,
+   int nSrcLen,
+   LPSTR szDest,
+   int* pnDestLen,
+   LPCSTR pszCharSet,
+   int* pnNumEncoded = NULL) throw();
 ```
 
 ### <a name="parameters"></a>Parametry
 
-*pbSrcData*  
+*pbSrcData*<br/>
 Bufor zawierający dane do zakodowania.
 
-*nSrcLen*  
+*nSrcLen*<br/>
 Długość w bajtach danych do zakodowania.
 
-*szDest*  
+*szDest*<br/>
 Przydzielonej przez obiekt wywołujący bufor odbioru dane zakodowane.
 
-*pnDestLen*  
+*pnDestLen*<br/>
 Wskaźnik do zmiennej, która zawiera długość w znakach *szDest*. Jeśli funkcja się powiedzie, zmienna odbiera liczbę znaków zapisanych w buforze. Jeśli funkcja zawiedzie, zmienna odbiera wymaganą długość w znakach buforu.
 
-*pszCharSet*  
+*pszCharSet*<br/>
 Zestaw znaków na potrzeby konwersji.
 
-*pnNumEncoded*  
+*pnNumEncoded*<br/>
 Wskaźnik do zmiennej, która zawiera liczbę niebezpiecznych znaków, w których ma zostać przekonwertowany na zwrot.
 
 ### <a name="return-value"></a>Wartość zwracana
@@ -459,16 +459,16 @@ Schemat kodowania "Q" jest opisana w dokumencie RFC 2047 ([http://www.ietf.org/r
 
 Wywołaj tę funkcję, aby uzyskać rozmiar (w znakach) bufora, który może zawierać ciąg zakodowany z danych o określonej długości.
 
-```  
-inline int QEncodeGetRequiredLength(int nSrcLen, int nCharsetLen) throw();  
+```
+inline int QEncodeGetRequiredLength(int nSrcLen, int nCharsetLen) throw();
 ```
 
 ### <a name="parameters"></a>Parametry
 
-*nSrcLen*  
+*nSrcLen*<br/>
 Liczba bajtów danych do zakodowania.
 
-*nCharsetLen*  
+*nCharsetLen*<br/>
 Długość w znakach zestawu na potrzeby konwersji znaków.
 
 ### <a name="return-value"></a>Wartość zwracana
@@ -483,13 +483,13 @@ Schemat kodowania "Q" jest opisana w dokumencie RFC 2047 ([http://www.ietf.org/r
 
 Dekoduje ciąg danych, który został zakodowany w formacie quoted-printable, np. przez poprzednie wywołanie [QPEncode](#qpencode).
 
-```  
-inline BOOL QPDecode(  
-   BYTE* pbSrcData,  
-   int nSrcLen,  
-   LPSTR szDest,  
-   int* pnDestLen,  
-   DWORD dwFlags = 0) throw();  
+```
+inline BOOL QPDecode(
+   BYTE* pbSrcData,
+   int nSrcLen,
+   LPSTR szDest,
+   int* pnDestLen,
+   DWORD dwFlags = 0) throw();
 ```
 
 ### <a name="parameters"></a>Parametry
@@ -521,13 +521,13 @@ Quoted-printable schemat kodowania jest opisana w dokumencie RFC 2045 ([http://w
 
 Wywołaj tę funkcję, aby uzyskać rozmiar (w bajtach) bufora, który może zawierać dane zdekodowane z ciągu zakodowanego w quoted-printable o określonej długości.
 
-```  
-inline int QPDecodeGetRequiredLength(int nSrcLen) throw();  
+```
+inline int QPDecodeGetRequiredLength(int nSrcLen) throw();
 ```
 
 ### <a name="parameters"></a>Parametry
 
-*nSrcLen*  
+*nSrcLen*<br/>
 Liczba znaków w ciąg zakodowany.
 
 ### <a name="return-value"></a>Wartość zwracana
@@ -542,32 +542,34 @@ Quoted-printable schemat kodowania jest opisana w dokumencie RFC 2045 ([http://w
 
 Wywołaj tę funkcję, aby zakodować dane w formacie quoted-printable.
 
-```  
-inline BOOL QPEncode(  
-   BYTE* pbSrcData,  
-   int nSrcLen,  
-   LPSTR szDest,  
-   int* pnDestLen,  
-   DWORD dwFlags = 0) throw ();  
+```
+inline BOOL QPEncode(
+   BYTE* pbSrcData,
+   int nSrcLen,
+   LPSTR szDest,
+   int* pnDestLen,
+   DWORD dwFlags = 0) throw ();
 ```
 
 ### <a name="parameters"></a>Parametry
 
-*pbSrcData*  
+*pbSrcData*<br/>
 Bufor zawierający dane do zakodowania.
 
-*nSrcLen*  
+*nSrcLen*<br/>
 Długość w bajtach danych do zakodowania.
 
-*szDest*  
+*szDest*<br/>
 Przydzielonej przez obiekt wywołujący bufor odbioru dane zakodowane.
 
-*pnDestLen*  
+*pnDestLen*<br/>
 Wskaźnik do zmiennej, która zawiera długość w znakach *szDest*. Jeśli funkcja się powiedzie, zmienna odbiera liczbę znaków zapisanych w buforze. Jeśli funkcja zawiedzie, zmienna odbiera wymaganą długość w znakach buforu.
 
-*Flagidw*  
-Flagi ATLSMTP_QPENCODE opisujące, jak ma być wykonywane konwersji. 
+*Flagidw*<br/>
+Flagi ATLSMTP_QPENCODE opisujące, jak ma być wykonywane konwersji.
+
 - ATLSMTP_QPENCODE_DOT Jeśli okres pojawia się na początku wiersza, jego jest dodawane do wyników, a także zakodowany.
+
 - Dołącza ATLSMTP_QPENCODE_TRAILING_SOFT `=\r\n` ciąg zakodowany.
 
 Opisano w quoted-printable schemat kodowania [RFC 2045](http://www.ietf.org/rfc/rfc2045.txt).
@@ -584,13 +586,13 @@ Quoted-printable schemat kodowania jest opisana w dokumencie RFC 2045 ([http://w
 
 Wywołaj tę funkcję, aby uzyskać rozmiar (w znakach) bufora, który może zawierać ciąg zakodowany z danych o określonej długości.
 
-```  
-inline int QPEncodeGetRequiredLength(int nSrcLen) throw ();  
+```
+inline int QPEncodeGetRequiredLength(int nSrcLen) throw ();
 ```
 
 ### <a name="parameters"></a>Parametry
 
-*nSrcLen*  
+*nSrcLen*<br/>
 Liczba bajtów danych do zakodowania.
 
 ### <a name="return-value"></a>Wartość zwracana
@@ -605,26 +607,26 @@ Quoted-printable schemat kodowania jest opisana w dokumencie RFC 2045 ([http://w
 
 Dekoduje ciąg danych, który został zakodowany w UUENCODE takich jak przez poprzednie wywołanie [UUEncode](#uuencode).
 
-```  
-inline BOOL UUDecode(  
-   BYTE* pbSrcData,  
-   int nSrcLen,  
-   BYTE* pbDest,  
-   int* pnDestLen) throw ();  
+```
+inline BOOL UUDecode(
+   BYTE* pbSrcData,
+   int nSrcLen,
+   BYTE* pbDest,
+   int* pnDestLen) throw ();
 ```
 
 ### <a name="parameters"></a>Parametry
 
-*pbSrcData*  
+*pbSrcData*<br/>
 Ciąg zawierający dane, które mają zostać zdekodowane.
 
-*nSrcLen*  
+*nSrcLen*<br/>
 Długość w bajtach *pbSrcData*.
 
-*pbDest*  
+*pbDest*<br/>
 Przydzielonej przez obiekt wywołujący bufor odbioru dekodowane dane.
 
-*pnDestLen*  
+*pnDestLen*<br/>
 Wskaźnik do zmiennej, która zawiera długość w bajtach *pbDest*. Jeśli funkcja się powiedzie, zmienna odbiera liczba bajtów zapisanych w buforze. Jeśli funkcja zawiedzie, zmienna odbiera wymaganą długość w bajtach rozmiar buforu.
 
 ### <a name="return-value"></a>Wartość zwracana
@@ -639,13 +641,13 @@ Ta implementacja uuencoding zgodna ze specyfikacją modelu POSIX P1003.2b/D11.
 
 Wywołaj tę funkcję, aby uzyskać rozmiar (w bajtach) bufora, który może zawierać dane zdekodowane z ciągu zakodowanego w uuencode o określonej długości.
 
-```  
-inline int UUDecodeGetRequiredLength(int nSrcLen) throw ();  
+```
+inline int UUDecodeGetRequiredLength(int nSrcLen) throw ();
 ```
 
 ### <a name="parameters"></a>Parametry
 
-*nSrcLen*  
+*nSrcLen*<br/>
 Liczba znaków w ciąg zakodowany.
 
 ### <a name="return-value"></a>Wartość zwracana
@@ -660,37 +662,40 @@ Ta implementacja uuencoding zgodna ze specyfikacją modelu POSIX P1003.2b/D11.
 
 Wywołaj tę funkcję, aby zakodować dane w uuencode.
 
-```  
-inline BOOL UUEncode(  
-   const BYTE* pbSrcData,  
-   int nSrcLen,  
-   LPSTR szDest,  
-   int* pnDestLen,  
-   LPCTSTR lpszFile = _T("file"),  
-   DWORD dwFlags = 0) throw ();  
+```
+inline BOOL UUEncode(
+   const BYTE* pbSrcData,
+   int nSrcLen,
+   LPSTR szDest,
+   int* pnDestLen,
+   LPCTSTR lpszFile = _T("file"),
+   DWORD dwFlags = 0) throw ();
 ```
 
 ### <a name="parameters"></a>Parametry
 
-*pbSrcData*  
+*pbSrcData*<br/>
 Bufor zawierający dane do zakodowania.
 
-*nSrcLen*  
+*nSrcLen*<br/>
 Długość w bajtach danych do zakodowania.
 
-*szDest*  
+*szDest*<br/>
 Przydzielonej przez obiekt wywołujący bufor odbioru dane zakodowane.
 
-*pnDestLen*  
+*pnDestLen*<br/>
 Wskaźnik do zmiennej, która zawiera długość w znakach *szDest*. Jeśli funkcja się powiedzie, zmienna odbiera liczbę znaków zapisanych w buforze. Jeśli funkcja zawiedzie, zmienna odbiera wymaganą długość w znakach buforu.
 
-*lpszFile*  
+*lpszFile*<br/>
 Plik, który ma zostać dodany do nagłówka, gdy ATLSMTP_UUENCODE_HEADER jest określona w *Flagidw*.
 
-*Flagidw*  
-Flagi sterujące zachowaniem tej funkcji. 
+*Flagidw*<br/>
+Flagi sterujące zachowaniem tej funkcji.
+
 - ATLSMTP_UUENCODE_HEADE nagłówek będzie zakodowany.
+
 - ATLSMTP_UUENCODE_END koniec będzie zakodowany.
+
 - Wypychania danych ATLSMTP_UUENCODE_DOT zostaną wykonane.
 
 ### <a name="return-value"></a>Wartość zwracana
@@ -705,13 +710,13 @@ Ta implementacja uuencoding zgodna ze specyfikacją modelu POSIX P1003.2b/D11.
 
 Wywołaj tę funkcję, aby uzyskać rozmiar (w znakach) bufora, który może zawierać ciąg zakodowany z danych o określonej długości.
 
-```  
-inline int UUEncodeGetRequiredLength(int nSrcLen) throw ();  
+```
+inline int UUEncodeGetRequiredLength(int nSrcLen) throw ();
 ```
 
 ### <a name="parameters"></a>Parametry
 
-*nSrcLen*  
+*nSrcLen*<br/>
 Liczba bajtów danych do zakodowania.
 
 ### <a name="return-value"></a>Wartość zwracana
@@ -724,5 +729,5 @@ Ta implementacja uuencoding zgodna ze specyfikacją modelu POSIX P1003.2b/D11.
 
 ### <a name="see-also"></a>Zobacz też
 
-[Pojęcia](../../atl/active-template-library-atl-concepts.md)   
-[Składniki ATL COM pulpitu](../../atl/atl-com-desktop-components.md)   
+[Pojęcia](../../atl/active-template-library-atl-concepts.md)<br/>
+[Składniki ATL COM pulpitu](../../atl/atl-com-desktop-components.md)

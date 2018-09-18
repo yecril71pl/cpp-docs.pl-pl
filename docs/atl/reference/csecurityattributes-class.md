@@ -19,12 +19,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8642bf2bb6b2db06ecb33fa6ec1cc44d5e68317c
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 672da1c98ebc51a7440e29234950be2adb5e1c0e
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43766233"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46093073"
 ---
 # <a name="csecurityattributes-class"></a>Klasa CSecurityAttributes
 
@@ -80,10 +80,10 @@ explicit CSecurityAttributes(const CSecurityDesc& rSecurityDescriptor, bool bInh
 
 ### <a name="parameters"></a>Parametry
 
-*rSecurityDescriptor*  
+*rSecurityDescriptor*<br/>
 Odwołanie do deskryptora zabezpieczeń.
 
-*bInheritsHandle*  
+*bInheritsHandle*<br/>
 Określa, czy zwracany uchwyt jest dziedziczone, po utworzeniu nowego procesu. Jeśli ten element członkowski ma wartość true, nowy proces dziedziczy uchwytu.
 
 ##  <a name="set"></a>  CSecurityAttributes::Set
@@ -96,10 +96,10 @@ void Set(const CSecurityDesc& rSecurityDescriptor, bool bInheritHandle = false) 
 
 ### <a name="parameters"></a>Parametry
 
-*rSecurityDescriptor*  
+*rSecurityDescriptor*<br/>
 Odwołanie do deskryptora zabezpieczeń.
 
-*bInheritHandle*  
+*bInheritHandle*<br/>
 Określa, czy zwracany uchwyt jest dziedziczone, po utworzeniu nowego procesu. Jeśli ten element członkowski ma wartość true, nowy proces dziedziczy uchwytu.
 
 ### <a name="remarks"></a>Uwagi
@@ -108,8 +108,8 @@ Ta metoda jest używana przez konstruktora, aby zainicjować `CSecurityAttribute
 
 ## <a name="see-also"></a>Zobacz też
 
-[Zabezpieczenia — przykład](../../visual-cpp-samples.md)   
-[SECURITY_ATTRIBUTES](https://msdn.microsoft.com/library/windows/desktop/aa379560)   
-[Deskryptor zabezpieczeń](/windows/desktop/api/winnt/ns-winnt-_security_descriptor)   
-[Klasa — Przegląd](../../atl/atl-class-overview.md)   
+[Zabezpieczenia — przykład](../../visual-cpp-samples.md)<br/>
+[SECURITY_ATTRIBUTES](https://msdn.microsoft.com/library/windows/desktop/aa379560)<br/>
+[Deskryptor zabezpieczeń](/windows/desktop/api/winnt/ns-winnt-_security_descriptor)<br/>
+[Klasa — Przegląd](../../atl/atl-class-overview.md)<br/>
 [Funkcje globalne zabezpieczeń](../../atl/reference/security-global-functions.md)

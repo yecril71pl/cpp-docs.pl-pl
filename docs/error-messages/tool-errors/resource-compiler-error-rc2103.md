@@ -16,14 +16,15 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c70c89c927dca59f9bc242245d19f91e9e4a3894
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 4bfdfefa0ee66093708ea7f839d7fbe8630ffe81
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33332094"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46093470"
 ---
 # <a name="resource-compiler-error-rc2103"></a>Błąd kompilatora zasobów RC2103
-Nieoczekiwany koniec pliku w ciągu literału  
-  
- Znaleziono koniec pliku przed końcem ciągu. Ten ciąg jest prawdopodobnie brakuje podwójnego cudzysłowu zamykającego (**"**).
+
+Nieoczekiwany koniec pliku w literale ciągu
+
+Koniec pliku, znaleziono przed końcem ciągu. Ten ciąg jest prawdopodobnie brakuje podwójnego cudzysłowu zamykającego (**"**).

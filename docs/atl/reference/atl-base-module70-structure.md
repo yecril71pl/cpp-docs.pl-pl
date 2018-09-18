@@ -19,12 +19,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: fb7218d7fc8886cffdcce13f09a682fdc635f84f
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: a8ee35df4b6ee792cd91f1b294259544e8944509
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43759931"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46089050"
 ---
 # <a name="atlbasemodule70-structure"></a>Struktura _ATL_BASE_MODULE70
 
@@ -47,28 +47,28 @@ struct _ATL_BASE_MODULE70 {
 
 ## <a name="members"></a>Elementy członkowskie
 
-`cbSize`  
+`cbSize`<br/>
 Rozmiar struktury, używane do obsługi wersji.
 
-`m_hInst`  
+`m_hInst`<br/>
 `hInstance` Dla tego modułu (plik exe lub dll).
 
-`m_hInstResource`  
+`m_hInstResource`<br/>
 Dojście do zasobu wystąpienie domyślne.
 
-`m_bNT5orWin98`  
+`m_bNT5orWin98`<br/>
 Informacje o wersji systemu operacyjnego. Używane wewnętrznie przez ATL.
 
-`dwAtlBuildVer`  
+`dwAtlBuildVer`<br/>
 Przechowuje wersję ATL. Obecnie 0x0700.
 
-`pguidVer`  
+`pguidVer`<br/>
 ATL wewnętrzny identyfikator GUID.
 
-`m_csResource`  
+`m_csResource`<br/>
 Używane do synchronizowania dostępu do `m_rgResourceInstance` tablicy. Używane wewnętrznie przez ATL.
 
-`m_rgResourceInstance`  
+`m_rgResourceInstance`<br/>
 Tablica używanych do wyszukiwania zasobów we wszystkich wystąpieniach zasobów, których ATL zdaje sobie sprawę. Używane wewnętrznie przez ATL.
 
 ## <a name="remarks"></a>Uwagi

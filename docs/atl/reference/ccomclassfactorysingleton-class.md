@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: debb983c-382b-487b-8d42-7ea26dc158b8
 author: mikeblome
 ms.author: mblome
-ms.openlocfilehash: 6b812ddd4dbd3c81d9018be926d9103bca3ec796
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 7f26a9d603238c83aa4243092e88719d1de4fda1
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43755976"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46093080"
 ---
 # <a name="ccomclassfactorysingleton-class"></a>Klasa CComClassFactorySingleton
 
@@ -34,13 +34,13 @@ Ta klasa jest pochodną [CComClassFactory](../../atl/reference/ccomclassfactory-
 ## <a name="syntax"></a>Składnia
 
 ```
-template<class T>  
+template<class T>
 class CComClassFactorySingleton : public CComClassFactory
 ```
 
 #### <a name="parameters"></a>Parametry
 
-*T*  
+*T*<br/>
 Klasa.
 
 `CComClassFactorySingleton` pochodzi od klasy [CComClassFactory](../../atl/reference/ccomclassfactory-class.md) i używa [CComObjectGlobal](../../atl/reference/ccomobjectglobal-class.md) skonstruowanie pojedynczego obiektu. Każde wywołanie `CreateInstance` metoda po prostu wysyła zapytanie dotyczące wskaźnika interfejsu tego obiektu.
@@ -91,13 +91,13 @@ STDMETHOD(CreateInstance)(LPUNKNOWN pUnkOuter, REFIID riid, void** ppvObj);
 
 ### <a name="parameters"></a>Parametry
 
-*pUnkOuter*  
+*pUnkOuter*<br/>
 [in] Jeśli obiekt jest tworzony jako część agregacji, następnie *pUnkOuter* musi być zewnętrzny nieznany. W przeciwnym razie *pUnkOuter* musi mieć wartość NULL.
 
-*Parametr riid*  
+*Parametr riid*<br/>
 [in] Identyfikator IID żądanego interfejsu. Jeśli *pUnkOuter* jest różna od NULL, *riid* musi być `IID_IUnknown`.
 
-*ppvObj*  
+*ppvObj*<br/>
 [out] Wskaźnik do wskaźnika interfejsu identyfikowane przez *riid*. Jeśli obiekt nie obsługuje ten interfejs *ppvObj* ma wartość NULL.
 
 ### <a name="return-value"></a>Wartość zwracana
@@ -120,9 +120,9 @@ Należy pamiętać, że formularzu bieżącego `m_spObj` przedstawia istotną zm
 
 ## <a name="see-also"></a>Zobacz też
 
-[IClassFactory](/windows/desktop/api/unknwnbase/nn-unknwnbase-iclassfactory)   
-[Klasa CComClassFactory2](../../atl/reference/ccomclassfactory2-class.md)   
-[Klasa CComClassFactoryAutoThread](../../atl/reference/ccomclassfactoryautothread-class.md)   
-[Klasa CComObjectRootEx](../../atl/reference/ccomobjectrootex-class.md)   
-[CComGlobalsThreadModel](atl-typedefs.md#ccomglobalsthreadmodel)   
+[IClassFactory](/windows/desktop/api/unknwnbase/nn-unknwnbase-iclassfactory)<br/>
+[Klasa CComClassFactory2](../../atl/reference/ccomclassfactory2-class.md)<br/>
+[Klasa CComClassFactoryAutoThread](../../atl/reference/ccomclassfactoryautothread-class.md)<br/>
+[Klasa CComObjectRootEx](../../atl/reference/ccomobjectrootex-class.md)<br/>
+[CComGlobalsThreadModel](atl-typedefs.md#ccomglobalsthreadmodel)<br/>
 [Klasa — Przegląd](../../atl/atl-class-overview.md)

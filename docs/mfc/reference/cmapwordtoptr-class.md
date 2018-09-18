@@ -44,12 +44,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 08ea48b13b92959652f67c39c05a6ced30e77b2c
-ms.sourcegitcommit: 6408139d5f5ff8928f056bde93d20eecb3520361
+ms.openlocfilehash: 7dd5a76e08d85e75f7e48e63927ef7b07e85fb40
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37337996"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46089258"
 ---
 # <a name="cmapwordtoptr-class"></a>Klasa CMapWordToPtr
 Obsługuje mapy wskaźników typu void opartych na kluczach słów 16-bitowych.  
@@ -63,9 +63,7 @@ class CMapWordToPtr : public CObject
 ## <a name="members"></a>Elementy członkowskie  
  Funkcje elementów członkowskich `CMapWordToPtr` są podobne do funkcji elementów członkowskich klasy [CMapStringToOb](../../mfc/reference/cmapstringtoob-class.md). Ze względu na to podobieństwa można użyć `CMapStringToOb` dokumentacji kątem specyfiki funkcja elementu członkowskiego. Po wyświetleniu `CObject` wskaźnik jako funkcja parametru lub zwracanej wartości, Wstaw wskaźnik do **void**. Po wyświetleniu `CString` lub **const** wskaźnik do **char** jako parametr funkcji lub wartości zwracanej, podstaw programu WORD.  
   
- `BOOL CMapStringToOb::Lookup( const char* <key>,`  
-  
- `CObject*& <rValue> ) const;`  
+ `BOOL CMapStringToOb::Lookup( const char* <key>, CObject*& <rValue> ) const;`  
   
  na przykład przekłada się na  
   

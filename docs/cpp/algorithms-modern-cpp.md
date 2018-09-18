@@ -12,12 +12,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 604b58f7f8f6074c16effa3220d17bc00c44f5b8
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 872644533a0fab73768392efa2c5cd016b6bb980
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43214317"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46095660"
 ---
 # <a name="algorithms-modern-c"></a>Algorytmy (Modern C++)
 
@@ -31,13 +31,13 @@ Nowoczesnym programowaniu C++, zaleca się używanie algorytmów w [standardowej
 
 Aby zapisać komparator, należy użyć ściśle **<** i użyj *o nazwie lambdas* kiedy to możliwe.
 
-```cpp  
+```cpp
 auto comp = [](const widget& w1, const widget& w2)
      { return w1.weight() < w2.weight(); }
 
 sort( v.begin(), v.end(), comp );
 
-auto i = lower_bound( v.begin(), v.end(), comp );  
+auto i = lower_bound( v.begin(), v.end(), comp );
 ```
 
 ## <a name="loops"></a>Pętle
@@ -46,26 +46,26 @@ Jeśli to możliwe, należy użyć opartej na zakresie **dla** pętli lub wywoł
 
 Zamiast starego C++ następująco:
 
-```cpp  
+```cpp
 for ( auto i = strings.begin(); i != strings.end(); ++i ) {
-    /* ... */  
+    /* ... */
 }
 
 auto i = v.begin();
 
 for ( ; i != v.end(); ++i ) {
-    if (*i > x && *i < y) break;  
-}  
+    if (*i > x && *i < y) break;
+}
 ```
 
 Użyj nowoczesnego C++ następująco:
 
-```cpp  
+```cpp
 for_each( begin(strings), end(strings), [](string& s) {
-  // ...  
+  // ...
 } );
 
-auto i = find_if( begin(v), end(v),  [=](int i) { return i > x && i < y; } );  
+auto i = find_if( begin(v), end(v),  [=](int i) { return i > x && i < y; } );
 ```
 
 ### <a name="range-based-for-loops"></a>Zakresu pętli for opierających

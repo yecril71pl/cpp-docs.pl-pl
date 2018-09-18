@@ -31,44 +31,46 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c99b951e0cbbb5d2a295eb336a856bdb6c4cc0e1
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 0f99d7dac7878f46fceea4435703a55f2199f374
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32391951"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46094510"
 ---
 # <a name="format-specification-fields-scanf-and-wscanf-functions"></a>Pola specyfikacji formatu dla funkcji wscanf
-Informacje w tym miejscu ma zastosowanie do całej `scanf` rodziny funkcji, łącznie z wersjami bezpiecznego i opisano symbole używane mówić `scanf` działa jak przeanalizować strumienia wejściowego, takich jak strumień wejściowy `stdin` dla `scanf`, na wartości, które są wstawiane do zmiennych programu.  
-  
- Specyfikacji formatu ma następujący format:  
-  
- `%`[`*`] [[szerokość](../c-runtime-library/scanf-width-specification.md)] [{[h &#124; l &#124; ll &#124; komputerach 64 &#124; L](../c-runtime-library/scanf-width-specification.md)}][typu](../c-runtime-library/scanf-type-field-characters.md)  
-  
- `format` Argument określa interpretacji danych wejściowych i może zawierać jeden lub więcej z następujących czynności:  
-  
--   Znak odstępu: pusty (""); Karta ("\t"); lub nowego wiersza ("\n"). Biały znak powoduje, że `scanf` do odczytu, ale nie przechowywane, wszystkich kolejnych znaków odstępu w danych wejściowych do następny znak z systemem innym niż biały. Biały znak w formacie dopasowuje dowolną liczbę (w tym 0) i kombinację znaków odstępu w danych wejściowych.  
-  
--   Znaki inne niż biały znak, z wyjątkiem znaku procentu (`%`). Powoduje, że system inny niż biały znak `scanf` do odczytu, ale nie przechowywane, zgodnych z systemem innym niż — biały znak. Niezgodna następny znak w strumieniu wejściowym `scanf` kończy.  
-  
--   Format specyfikacje wprowadzone przez znaku procentu (`%`). Powoduje, że specyfikacji formatu `scanf` do odczytywania i konwertować znaków w danych wejściowych do wartości określonego typu. Wartość jest przypisany do argumentu na liście argumentów.  
-  
- Format jest odczytywany od lewej do prawej. Znaki poza specyfikacje formatu powinny odpowiadać sekwencja znaków w strumieniu wejściowym; pasujących znaków w strumieniu wejściowym są skanowane, ale nie są przechowywane. Jeśli znak w strumieniu wejściowym niezgodne ze specyfikacją formatu `scanf` kończy, i pozostanie znak w strumieniu wejściowym tak, jakby była nie został odczytany.  
-  
- W przypadku pierwszego specyfikacji formatu wartość pierwszego pola wejściowego jest konwertowane zgodnie ze specyfikacją i przechowywane w lokalizacji określonej przez pierwszy `argument`. Drugi specyfikacji formatu powoduje, że drugie pole wejściowe przekonwertować i przechowywać w ciągu sekundy `argument`, i tak dalej do końca ciągu formatu.  
-  
- Nie zdefiniowano pola wejściowego jako wszystkie znaki do pierwszego znaku spacji (miejsce, karty lub nowego wiersza) lub do pierwszego znaku, której nie można przekonwertować zgodnie ze specyfikacją formatu lub do szerokości pola (Jeśli określono) zostanie osiągnięty. Jeśli istnieje za dużo argumentów dla danego specyfikacje, dodatkowe argumenty zostały obliczone, ale ignorowane. Wyniki są nieprzewidywalne, jeśli nie ma za mało argumentów dla specyfikacji formatu.  
-  
- Każdego pola specyfikacji formatu jest pojedynczy znak lub oznaczający opcja określony format liczby. `type` Znak, który pojawia się po ostatnim pole opcjonalne format, określa, czy pole wejściowe jest interpretowana jako znak, ciągu lub liczbą.  
-  
- Najprostsza specyfikacji formatu zawiera znak procentu i `type` znaku (na przykład `%s`). Jeśli znaku procentu (`%`) następuje znak czy ma znaczenia jako znaku kontrolnego formatu, który znak i następujące znaki (do następnej znak procentu) są traktowane jako zwykłej sekwencji znaków, to znaczy sekwencji znaki, które muszą być zgodne z danych wejściowych. Na przykład aby określić procent znak ma być danych wejściowych, należy użyć `%%`.  
-  
- Znak gwiazdki (`*`) po znaku procentu pomija przypisania dalej pola wejściowego, który jest interpretowany jako pole określonego typu. Pole jest skanowany, ale nie są przechowywane.  
-  
- Bezpieczne wersji (z `_s` sufiks) z `scanf` rodziny funkcji wymagają, aby parametr rozmiaru buforu można przekazać bezpośrednio po każdego parametru typu `c`, `C`, `s`, `S`lub `[`. Aby uzyskać więcej informacji o wersjach bezpiecznego `scanf` rodziny funkcji, zobacz [scanf_s —, _scanf_s_l —, wscanf_s —, _wscanf_s_l —](../c-runtime-library/reference/scanf-s-scanf-s-l-wscanf-s-wscanf-s-l.md).  
-  
-## <a name="see-also"></a>Zobacz też  
- [scanf — specyfikacje szerokości](../c-runtime-library/scanf-width-specification.md)   
- [scanf — znaki pola typu](../c-runtime-library/scanf-type-field-characters.md)   
- [scanf, _scanf_l —, wscanf — _wscanf_l —](../c-runtime-library/reference/scanf-scanf-l-wscanf-wscanf-l.md)   
- [scanf_s, _scanf_s_l, wscanf_s, _wscanf_s_l](../c-runtime-library/reference/scanf-s-scanf-s-l-wscanf-s-wscanf-s-l.md)
+
+Informacje w tym miejscu ma zastosowanie do całej `scanf` rodziny funkcji, w tym bezpieczne wersje i symbole używane, aby poinformować opisuje `scanf` działa jak przeanalizować strumienia wejściowego, takich jak strumień wejściowy `stdin` dla `scanf`, do wartości, które są wstawiane do zmiennych program.
+
+Specyfikacja formatu ma następującą postać:
+
+`%`[`*`] [[szerokość](../c-runtime-library/scanf-width-specification.md)] [{[h &#124; l &#124; ll &#124; I64 &#124; L](../c-runtime-library/scanf-width-specification.md)}][typu](../c-runtime-library/scanf-type-field-characters.md)
+
+`format` Argument określa interpretacji danych wejściowych i może zawierać jeden lub więcej z następujących czynności:
+
+- Znaki odstępu: pusty (""); Karta ("\t"); lub nowego wiersza (\n). Powoduje, że znak odstępu `scanf` do odczytu, ale nie są przechowywane, wszystkich następujących po sobie znaki odstępu w danych wejściowych do następnego znaku bez odstępu. Jeden znak odstępu, w formacie dopasowuje dowolną liczbę, o których (w tym 0) i kombinacji znaków odstępu w danych wejściowych.
+
+- -Non białe znaki z wyjątkiem znaku procentu (`%`). Powoduje, że znak inny niż biały `scanf` do odczytu, ale nie są przechowywane, pasującego znaku bez odstępu. Jeśli następny znak w strumieniu wejściowym nie jest zgodny, `scanf` kończy.
+
+- Format specyfikacji, wprowadzone przez znak procentu (`%`). Specyfikacja formatu powoduje konwersję `scanf` odczytu i konwertowania znaków w danych wejściowych na wartości określonego typu. Wartość jest przypisywana do argumentu na liście argumentów.
+
+Format jest odczytywany od lewej do prawej. Znaki spoza specyfikacji formatu powinny pasuje do sekwencji znaków w strumieniu wejściowym; pasujących znaków w strumieniu wejściowym są skanowane, ale nie jest przechowywane. Jeśli znak w strumieniu wejściowym powoduje konflikt z specyfikacji formatu `scanf` kończy działanie, a znak pozostanie w strumieniu wejściowym tak, jakby były nie został odczytany.
+
+Po napotkaniu pierwszą specyfikację formatu wartość pierwszego pola wejściowego jest konwertowane zgodnie z tą specyfikacją i przechowywane w lokalizacji, który jest określony przez pierwszy `argument`. Druga specyfikacja formatu powoduje konwersję drugiego pole wejściowe przekonwertować i przechowywać w drugim `argument`, i tak dalej do końca ciągu formatu.
+
+Pola wejściowego jest zdefiniowany jako wszystkie znaki do pierwszego znaku odstępu (miejsca, tabulatorem ani), lub do pierwszego znaku, który nie może zostać skonwertowany według specyfikacji formatu lub do szerokości pola (Jeśli określono) zostanie osiągnięty. W przypadku zbyt wiele argumentów dla danego specyfikacje dodatkowe argumenty są obliczono, ale zignorowano. Wyniki są nieprzewidywalne, jeśli nie ma wystarczającej liczby argumentów dla specyfikacji formatu.
+
+Każde pole specyfikacji formatu jest pojedynczym znakiem lub liczbą oznaczającą opcję formatu. `type` Znak, który następuje po ostatnim polu format opcjonalne, określa, czy pole wejściowe, jest interpretowany jako znak, ciąg lub liczba.
+
+Najprostsza specyfikacji formatu zawiera tylko znak procentu i `type` znaków (na przykład `%s`). Jeśli znak procentu (`%`) jest poprzedzony znakiem, ma znaczenia jako znaku kontrolnego formatu, że znak i następujące znaki (maksymalnie następny znak procentu) są traktowane jako zwykły ciąg znaków, oznacza to, sekwencji znaki, które muszą być zgodne z danych wejściowych. Na przykład aby określić, że znak procentu ma być użyty jako wejście, należy użyć `%%`.
+
+Znak gwiazdki (`*`) po znaku procentu pomija przypisania dalej pola wejściowego jest interpretowany jako pola określonego typu. Pole jest skanowany, ale nie są przechowywane.
+
+Bezpieczne wersje (z `_s` sufiks) z `scanf` rodzinę funkcji wymagają, że parametr rozmiaru buforu można przekazać bezpośrednio po każdego parametru typu `c`, `C`, `s`, `S`lub `[`. Aby uzyskać więcej informacji na temat bezpieczne wersje `scanf` rodzinę funkcji, zobacz [scanf_s, _scanf_s_l —, wscanf_s —, _wscanf_s_l —](../c-runtime-library/reference/scanf-s-scanf-s-l-wscanf-s-wscanf-s-l.md).
+
+## <a name="see-also"></a>Zobacz też
+
+[scanf, specyfikacje szerokości](../c-runtime-library/scanf-width-specification.md)<br/>
+[scanf, znaki pola typu](../c-runtime-library/scanf-type-field-characters.md)<br/>
+[scanf, _scanf_l, wscanf, _wscanf_l](../c-runtime-library/reference/scanf-scanf-l-wscanf-wscanf-l.md)<br/>
+[scanf_s, _scanf_s_l, wscanf_s, _wscanf_s_l](../c-runtime-library/reference/scanf-s-scanf-s-l-wscanf-s-wscanf-s-l.md)

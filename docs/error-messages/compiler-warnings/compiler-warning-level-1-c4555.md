@@ -1,5 +1,5 @@
 ---
-title: Kompilatora (poziom 1) ostrzeżenie C4555 | Dokumentacja firmy Microsoft
+title: Kompilator ostrzeżenie (poziom 1) C4555 | Dokumentacja firmy Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,39 +16,40 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 019423685bb92ddb4b9d4bafc58bb4ba4eb2d708
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 99adbc75bc6663e9f30950866a0c258be6e10164
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33278912"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46097266"
 ---
-# <a name="compiler-warning-level-1-c4555"></a>Kompilator C4555 ostrzegawcze (poziom 1)
-wyrażenie nie przynosi efektu; oczekiwane wyrażenie, który przynosi efekt  
-  
- To ostrzeżenie informuje o tym, gdy wyrażenie nie ma wpływu.  
-  
- To ostrzeżenie jest domyślnie wyłączone. Zobacz [kompilatora ostrzeżeń czy są wyłączone domyślnie](../../preprocessor/compiler-warnings-that-are-off-by-default.md) Aby uzyskać więcej informacji.  
-  
- Na przykład:  
-  
-```  
-// C4555.cpp  
-// compile with: /W1  
-#pragma warning(default:4555)  
-  
-void func1()  
-{  
-   1;   // C4555  
-}  
-  
-void func2()  
-{  
-   int x;  
-   x;   // C4555  
-}  
-  
-int main()  
-{  
-}  
+# <a name="compiler-warning-level-1-c4555"></a>Kompilator ostrzeżenie (poziom 1) C4555
+
+wyrażenie nie przynosi efektu; oczekiwane wyrażenie, który przynosi efekt
+
+To ostrzeżenie informuje, kiedy wyrażenie nie przynosi efektu.
+
+To ostrzeżenie jest domyślnie wyłączona. Zobacz [kompilatora ostrzeżenia, są wyłączone domyślnie](../../preprocessor/compiler-warnings-that-are-off-by-default.md) Aby uzyskać więcej informacji.
+
+Na przykład:
+
+```
+// C4555.cpp
+// compile with: /W1
+#pragma warning(default:4555)
+
+void func1()
+{
+   1;   // C4555
+}
+
+void func2()
+{
+   int x;
+   x;   // C4555
+}
+
+int main()
+{
+}
 ```

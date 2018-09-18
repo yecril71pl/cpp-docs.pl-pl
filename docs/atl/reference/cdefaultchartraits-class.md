@@ -19,12 +19,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 080a7b9f5da71535f8b141555ec1890a521fe715
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 69b6a7b94e993641452154ede11d65929424df5e
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43761985"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46095758"
 ---
 # <a name="cdefaultchartraits-class"></a>Klasa CDefaultCharTraits
 
@@ -33,13 +33,13 @@ Ta klasa udostępnia dwie funkcje statyczne konwersję znaków między wielkimi 
 ## <a name="syntax"></a>Składnia
 
 ```
-template <typename T>  
+template <typename T>
 class CDefaultCharTraits
 ```
 
 #### <a name="parameters"></a>Parametry
 
-*T*  
+*T*<br/>
 Typ danych, które mają być przechowywane w kolekcji.
 
 ## <a name="members"></a>Elementy członkowskie
@@ -64,13 +64,13 @@ Ta klasa udostępnia funkcje, które są wykorzystywane przez klasę [CStringEle
 Wywołaj tę funkcję w celu konwersji znaków na małe litery.
 
 ```
-static wchar_t CharToLower(wchar_t x);  
+static wchar_t CharToLower(wchar_t x);
 static char CharToLower(char x);
 ```
 
 ### <a name="parameters"></a>Parametry
 
-*x*  
+*x*<br/>
 Znak do przekonwertowania na małe litery.
 
 ### <a name="example"></a>Przykład
@@ -82,13 +82,13 @@ Znak do przekonwertowania na małe litery.
 Wywołaj tę funkcję w celu konwersji znaków na wielkie litery.
 
 ```
-static wchar_t CharToUpper(wchar_t x);  
+static wchar_t CharToUpper(wchar_t x);
 static char CharToUpper(char x);
 ```
 
 ### <a name="parameters"></a>Parametry
 
-*x*  
+*x*<br/>
 Znak do przekonwertowania na wielkie litery.
 
 ## <a name="see-also"></a>Zobacz też

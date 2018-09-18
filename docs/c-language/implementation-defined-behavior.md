@@ -17,20 +17,22 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: dd276b110645dbb868d24315208052a6d05355a4
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 496403f21ddd7e55aa5a504dd12e2c1e5e423a88
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32383441"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46095538"
 ---
 # <a name="implementation-defined-behavior"></a>Zachowanie zdefiniowane w implementacji
-ANSI X3.159-1989, *American National standardowe systemów informatycznych* - *języka programowania* - *C*, zawiera sekcję o nazwie "Problemy związane z przenośnością." W sekcji ANSI przedstawiono obszary języka C ANSI pozostawia otwarte dla każdej określonej implementacji. W tej sekcji opisano, jak Microsoft C obsługuje tych obszarów zdefiniowane w implementacji języka C.  
-  
- W tej sekcji następuje takiej samej kolejności jak w sekcji ANSI. Każdy element objęty zawiera odwołania do ANSI, który objaśnia, zachowanie zdefiniowane w implementacji.  
-  
+
+ANSI X3.159-1989 r. *American National Standard systemów informacyjnych* - *język programowania* - *C*, zawiera sekcję o nazwie "Problemy z przenośnością." W sekcji ANSI przedstawiono obszary języka C, który ANSI pozostawia otwarte dla każdej konkretnej implementacji. W tej sekcji opisano sposób obsługi tych obszarów zdefiniowanych w implementacji języka C w Microsoft C.
+
+W tej sekcji następuje po takiej samej kolejności jak w sekcji ANSI. Każdy element objęty zawiera odwołania do ANSI, który objaśnia, zachowanie zdefiniowane w implementacji.
+
 > [!NOTE]
->  W tej sekcji opisano USA Wersję kompilatora C tylko w języku angielskim. Implementacje Microsoft C dla innych języków mogą się nieznacznie różnić.  
-  
-## <a name="see-also"></a>Zobacz też  
- [Dokumentacja języka C](../c-language/c-language-reference.md)
+>  W tej sekcji opisano Stanów Zjednoczonych Tylko kompilator języka C w wersji na język angielski. Implementacje Microsoft C w przypadku pozostałych języków mogą się nieznacznie różnić.
+
+## <a name="see-also"></a>Zobacz też
+
+[Dokumentacja języka C](../c-language/c-language-reference.md)

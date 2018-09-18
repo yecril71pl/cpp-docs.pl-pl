@@ -16,20 +16,21 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 23f1c72760f0597709de430588052445366e434d
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 20f66c5c48547e92aef00568d5488a6293303be1
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33302279"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46094718"
 ---
 # <a name="bscmake-error-bk1514"></a>Błąd BSCMAKE BK1514
-wszystkie. Pliki SBR obcięty, nie odnaleziono w nazwie pliku  
-  
- Żaden plików SBR dla aktualizacji nie był część oryginalnego pliku przeglądania informacji (.bsc). Aby znaleźć nazwy plików SBR, które spowodowało ten błąd, przeczytaj [BK4502](../../error-messages/tool-errors/bscmake-warning-bk4502.md) ostrzeżenia, które należy poprzedzić go.  
-  
-### <a name="to-fix-by-checking-the-following-possible-causes"></a>Aby rozwiązać problem, sprawdzając następujące możliwe przyczyny  
-  
-1.  Określono .sbr lub .bsc nieprawidłową nazwę pliku.  
-  
-2.  Plik .bsc uszkodzony wymagany BSCMAKE skompilować go ponownie.
+
+wszystkie. Przycięty pliki SBR, nie znaleziono w nazwie pliku
+
+Żaden z plików SBR dla aktualizacji były częścią oryginalnego pliku informacyjnego przeglądarki (.bsc). Aby znaleźć nazwy plików SBR, będących przyczyną tego błędu, przeczytaj [BK4502](../../error-messages/tool-errors/bscmake-warning-bk4502.md) ostrzeżeń, które należy poprzedzić go.
+
+### <a name="to-fix-by-checking-the-following-possible-causes"></a>Aby rozwiązać problem, sprawdzając następujące możliwe przyczyny
+
+1. Problem nie określono nazwy pliku SBR lub .bsc.
+
+1. Plik .bsc uszkodzony wymagany BSCMAKE skompilować go ponownie.

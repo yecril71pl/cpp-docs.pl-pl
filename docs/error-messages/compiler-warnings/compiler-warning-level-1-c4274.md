@@ -1,5 +1,5 @@
 ---
-title: Kompilatora (poziom 1) ostrzeżenie C4274 | Dokumentacja firmy Microsoft
+title: Kompilator ostrzeżenie (poziom 1) C4274 | Dokumentacja firmy Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,26 +16,28 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 39b941fc0cb32e268e33d3b0e1ae66079e8decaf
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 5f6db0ee96674beda51ab02c8651e6f4960a0bf8
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33286149"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46094692"
 ---
-# <a name="compiler-warning-level-1-c4274"></a>Kompilator C4274 ostrzegawcze (poziom 1)
-\#Ident ignorowane. zobacz dokumentację dla #pragma comment (exestr, "string")  
-  
- `#ident` Dyrektywa, która wstawia ciąg określone przez użytkownika w obiekcie lub pliku wykonywalnego, jest przestarzały. W rezultacie Kompilator ignoruje dyrektywy.  
-  
+# <a name="compiler-warning-level-1-c4274"></a>Kompilator ostrzeżenie (poziom 1) C4274
+
+\#Ident ignorowane. zobacz dokumentację dla #pragma comment (exestr, "string")
+
+`#ident` Dyrektywy, który wstawia ciągiem zdefiniowanym przez użytkownika w obiekcie lub plik wykonywalny jest przestarzały. W związku z tym Kompilator ignoruje dyrektywy.
+
 > [!CAUTION]
->  Ostrzeżenie C4274 informacją o tym, aby użyć [#pragma comment (exestr, "string")](../../preprocessor/comment-c-cpp.md) dyrektywy. Jednak ta informacja jest przestarzała i zostanie zaktualizowany w przyszłej wersji kompilatora. Jeśli używasz `#pragma` dyrektywy, narzędzi konsolidatora (LINK.exe) ignoruje rekordu komentarz utworzonego przez dyrektywę i ostrzeżenie [LNK4229](../../error-messages/tool-errors/linker-tools-warning-lnk4229.md). Zamiast `#ident` dyrektywy, firma Microsoft zaleca się używanie ciąg zasobu wersji pliku w aplikacji.  
-  
-## <a name="to-correct-this-error"></a>Aby poprawić ten błąd  
-  
--   Usuń `#ident "` *ciąg* `"` dyrektywy.  
-  
-## <a name="see-also"></a>Zobacz też  
- [komentarz (C/C++)](../../preprocessor/comment-c-cpp.md)   
- [Ostrzeżenie LNK4229 narzędzi konsolidatora](../../error-messages/tool-errors/linker-tools-warning-lnk4229.md)   
- [Praca z plikami zasobów](../../windows/working-with-resource-files.md)
+>  C4274 ostrzeżenie z informacją o tym przy użyciu [#pragma comment (exestr, "string")](../../preprocessor/comment-c-cpp.md) dyrektywy. Jednak ta informacja jest przestarzały i zostanie zaktualizowany w przyszłej wersji kompilatora. Jeśli używasz `#pragma` dyrektywy, narzędzie program łączący (LINK.exe) ignoruje rekordu komentarz produkowane przez dyrektywę i ostrzeżenie [LNK4229](../../error-messages/tool-errors/linker-tools-warning-lnk4229.md). Zamiast `#ident` dyrektywy, firma Microsoft zaleca użycie ciąg zasobu wersji pliku w aplikacji.
+
+## <a name="to-correct-this-error"></a>Aby poprawić ten błąd
+
+- Usuń `#ident "` *ciąg* `"` dyrektywy.
+
+## <a name="see-also"></a>Zobacz też
+
+[komentarz (C/C++)](../../preprocessor/comment-c-cpp.md)<br/>
+[Ostrzeżenie narzędzi konsolidatora LNK4229](../../error-messages/tool-errors/linker-tools-warning-lnk4229.md)<br/>
+[Praca z plikami zasobów](../../windows/working-with-resource-files.md)

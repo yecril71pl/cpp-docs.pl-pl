@@ -1,5 +1,5 @@
 ---
-title: C2414 błąd kompilatora | Dokumentacja firmy Microsoft
+title: Błąd kompilatora C2414 | Dokumentacja firmy Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,18 +16,19 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 22710e0056a7dea65130a65a3ccb9c5310f1c39f
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 642cb00605ed13146288edf5d39cb5d0c14c6e9f
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33226166"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46089921"
 ---
-# <a name="compiler-error-c2414"></a>C2414 błąd kompilatora
-Niedozwolona liczba operandów  
-  
-### <a name="to-fix-by-checking-the-following-possible-causes"></a>Aby rozwiązać problem, sprawdzając następujące możliwe przyczyny  
-  
-1.  Kod operacji nie obsługuje liczby argumentów operacji używane. Sprawdź podręcznika języka zestawu w celu określenia poprawnej liczby argumentów operacji.  
-  
-2.  Procesor nowszej obsługuje instrukcji z różną liczbą argumentów operacji. Dostosuj [/arch (minimalna architektura Procesora)](../../build/reference/arch-minimum-cpu-architecture.md) możliwość użycia nowszego procesora.
+# <a name="compiler-error-c2414"></a>Błąd kompilatora C2414
+
+Niedozwolona liczba operandów
+
+### <a name="to-fix-by-checking-the-following-possible-causes"></a>Aby rozwiązać problem, sprawdzając następujące możliwe przyczyny
+
+1. Opcode nie obsługuje liczby operandów używane. Sprawdź podręcznika język asemblera, aby określić poprawną liczbę argumentów.
+
+1. Procesor nowsza obsługuje instrukcji z różną liczbę argumentów. Dostosuj [/arch (minimalna architektura Procesora)](../../build/reference/arch-minimum-cpu-architecture.md) możliwość użycia procesora nowsze.

@@ -16,33 +16,34 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c226b61dd722eb4ed32de6c8885c575b64ba2448
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: e2890177619500e7041d5edb0993789e244d17e4
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33226494"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46095589"
 ---
 # <a name="fatal-error-c1310"></a>Błąd krytyczny C1310
-Optymalizacje profilowe z przewodnikiem nie są dostępne z OpenMP  
-  
- Nie można połączyć z [/LTCG:PGI](../../build/reference/ltcg-link-time-code-generation.md) każdy moduł, który został skompilowany z [/GL](../../build/reference/gl-whole-program-optimization.md).  
-  
- Poniższy przykład generuje C1310:  
-  
-```  
-// C1310.cpp  
-// compile with: /openmp /GL /link /LTCG:PGI  
-// C1310 expected  
-int main()  
-{  
-   int i = 0, j = 10;  
-  
-   #pragma omp parallel  
-   {  
-      #pragma omp for  
-      for (i = 0; i < 0; i++)   
-         --j;  
-   }  
-}  
+
+Optymalizacje profilowe z przewodnikiem nie są dostępne z OpenMP
+
+Nie można połączyć z [/LTCG:PGI](../../build/reference/ltcg-link-time-code-generation.md) dowolny moduł, który został skompilowany przy użyciu [/GL](../../build/reference/gl-whole-program-optimization.md).
+
+Poniższy przykład spowoduje wygenerowanie C1310:
+
+```
+// C1310.cpp
+// compile with: /openmp /GL /link /LTCG:PGI
+// C1310 expected
+int main()
+{
+   int i = 0, j = 10;
+
+   #pragma omp parallel
+   {
+      #pragma omp for
+      for (i = 0; i < 0; i++)
+         --j;
+   }
+}
 ```

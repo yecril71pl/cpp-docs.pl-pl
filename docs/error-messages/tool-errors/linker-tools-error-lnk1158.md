@@ -16,16 +16,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 71cee2a31d1a7b05104031fbf41e8e3addb82d7d
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 0ce319aa4529c74cad00342b09aa0ed98bb49ce7
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33300189"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46094172"
 ---
 # <a name="linker-tools-error-lnk1158"></a>Błąd narzędzi konsolidatora LNK1158
-Nie można uruchomić "filename"  
-  
- Dany plik wykonywalny wywoływane przez [łącze](../../build/reference/linker-command-line-syntax.md) nie w katalogu, który zawiera łącze ani w katalogu określonym w zmiennej środowiskowej PATH.  
-  
- Na przykład, Jeśli spróbujesz użyć parametru PGOPTIMIZE zostanie umieszczony błąd [opcję/LTCG](../../build/reference/ltcg-link-time-code-generation.md) — opcja konsolidatora na komputerze z 32-bitowym systemie operacyjnym.
+
+Nie można uruchomić "filename"
+
+Podanego pliku wykonywalnego o nazwie [łącze](../../build/reference/linker-command-line-syntax.md) jest nie w katalogu, który zawiera łącze, ani w katalogu określonego w zmiennej środowiskowej PATH.
+
+Na przykład, otrzymasz ten błąd przy próbie użyć parametru PGOPTIMIZE do [opcję/LTCG](../../build/reference/ltcg-link-time-code-generation.md) — opcja konsolidatora na komputerze z 32-bitowym systemie operacyjnym.

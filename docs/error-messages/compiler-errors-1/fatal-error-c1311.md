@@ -16,23 +16,24 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 53b3759a5fec4b072f9a9b300670d61cb0d101c5
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: d93aa28d0cef3c07fd469349d485c4009fa4771d
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33226681"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46091065"
 ---
 # <a name="fatal-error-c1311"></a>Błąd krytyczny C1311
-COFF format statycznie nie może zainicjować "var" z numerów bajtem(ów) adresu  
-  
- Adres, którego wartość nie jest znany w czasie kompilacji nie statycznie przypisane do zmiennej, którego typ ma magazynu mniej niż cztery bajtów.  
-  
- Ten błąd może wystąpić na kod, który jest prawidłowy C++.  
-  
- W poniższym przykładzie przedstawiono jeden warunek, który może spowodować C1311.  
-  
-```  
-char c = (char)"Hello, world";   // C1311  
-char *d = (char*)"Hello, world";   // OK  
+
+COFF format statycznie nie może zainicjować "var" przy użyciu numeru bajtem(ów) adresu
+
+Adres, którego wartość nie jest znany w czasie kompilacji nie statycznie przypisany do zmiennej, którego typ ma magazynu mniej niż cztery bajty.
+
+Ten błąd może wystąpić na kod, który jest prawidłowy w języku C++.
+
+Poniższy przykład przedstawia jeden warunek, który może spowodować C1311.
+
+```
+char c = (char)"Hello, world";   // C1311
+char *d = (char*)"Hello, world";   // OK
 ```

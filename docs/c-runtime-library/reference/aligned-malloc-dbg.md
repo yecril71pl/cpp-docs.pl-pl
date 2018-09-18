@@ -32,12 +32,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1f8786af730567155ca865440e612bb983e2bea8
-ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
+ms.openlocfilehash: 076ccfcf164eb17e2a855f175c8714cd63a91817
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/01/2018
-ms.locfileid: "39402981"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46093057"
 ---
 # <a name="alignedmallocdbg"></a>_aligned_malloc_dbg
 
@@ -56,16 +56,16 @@ void * _aligned_malloc_dbg(
 
 ### <a name="parameters"></a>Parametry
 
-*Rozmiar*  
+*Rozmiar*<br/>
 Rozmiar żądanej alokacji pamięci.
 
-*Wyrównanie*  
+*Wyrównanie*<br/>
 Wartość wyrównania, która musi być całkowitą potęgą liczby 2.
 
-*Nazwa pliku*  
+*Nazwa pliku*<br/>
 Wskaźnik na nazwę pliku źródłowego, który zażądał operacji alokacji lub NULL.
 
-*numer wiersza*  
+*numer wiersza*<br/>
 Numer wiersza w pliku źródłowym, gdzie zażądano operacji alokacji lub NULL.
 
 ## <a name="return-value"></a>Wartość zwracana
@@ -96,4 +96,4 @@ Debuguj wersje [biblioteki wykonawczej C](../../c-runtime-library/crt-library-fe
 
 ## <a name="see-also"></a>Zobacz także
 
-[Procedury debugowania](../../c-runtime-library/debug-routines.md)  
+[Procedury debugowania](../../c-runtime-library/debug-routines.md)

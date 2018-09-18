@@ -17,12 +17,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2870b2958f2e18b711ea568fdda2ae01d41e37f6
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: ca5ef287ad853387635bbcc349374e1f174b4fd6
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43752726"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46095940"
 ---
 # <a name="pointer-declarations"></a>Deklaracje wskaźników
 
@@ -59,6 +59,7 @@ Podejmując *Specyfikator typu* **void**, można opóźnić Specyfikacja typu, d
 Można zadeklarować wskaźnik do struktury, Unii lub typu wyliczeniowego, przed zdefiniowaniem struktury, Unii lub typ wyliczenia. Możesz zadeklarować wskaźnik przy użyciu tagu struktury lub Unii, jak pokazano w poniższych przykładach. Deklaracje te są dozwolone, ponieważ kompilator nie musi wiedzieć, rozmiar struktury lub Unii, można przydzielić obszaru do zmiennej wskaźnika.
 
 ## <a name="examples"></a>Przykłady
+
 Poniższe przykłady ilustrują deklaracje wskaźników.
 
 ```

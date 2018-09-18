@@ -1,5 +1,5 @@
 ---
-title: C2308 błąd kompilatora | Dokumentacja firmy Microsoft
+title: Błąd kompilatora C2308 | Dokumentacja firmy Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,14 +16,15 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4523fd23f0900172e80cf71fd748a9f939deb044
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 24c01565f03bafa1b0bf1c20c4fb967cde3fc5b7
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33169078"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46091975"
 ---
-# <a name="compiler-error-c2308"></a>C2308 błąd kompilatora
-łączenie ciągów niezgodne  
-  
- Oba ciągi znaków szeroki i z systemem innym niż całej zostały określone dla łączenia. Nie można łączyć ciągiem znaków dwubajtowych, a ciąg znaków innych niż całej.
+# <a name="compiler-error-c2308"></a>Błąd kompilatora C2308
+
+konkatenacja niedopasowanych ciągów znaków
+
+Oba ciągi znaków szerokości i — do całego zostały określone dla łączenia. Nie można łączyć szeroki ciąg znaków, a ciąg znaków bez sieci.

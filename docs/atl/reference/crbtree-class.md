@@ -37,12 +37,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 18c8221b7e379d739dda3ebfa9cbc205d9f88af6
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: de307c1b4f3d910615061915a240bf7b2c61b337
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43759548"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46090363"
 ---
 # <a name="crbtree-class"></a>Klasa CRBTree
 
@@ -54,22 +54,22 @@ Ta klasa dostarcza metody do tworzenia i przy użyciu drzewa Red czarny.
 template <typename K,
           typename V, 
           class KTraits = CElementTraits<K>, 
-          class VTraits = CElementTraits<V>> 
+          class VTraits = CElementTraits<V>>
 class CRBTree
 ```
 
 #### <a name="parameters"></a>Parametry
 
-*K*  
+*K*<br/>
 Typ klucza elementu.
 
-*V*  
+*V*<br/>
 Typ elementu wartości.
 
-*KTraits*  
+*KTraits*<br/>
 Kod używany, aby skopiować lub przenieść kluczowe elementy. Zobacz [klasa CElementTraits](../../atl/reference/celementtraits-class.md) Aby uzyskać więcej informacji.
 
-*VTraits*  
+*VTraits*<br/>
 Kod używany do kopiowania lub przenoszenia elementów wartości.
 
 ## <a name="members"></a>Elementy członkowskie
@@ -169,7 +169,7 @@ POSITION FindFirstKeyAfter(KINARGTYPE key) const throw();
 
 ### <a name="parameters"></a>Parametry
 
-*Klucz*  
+*Klucz*<br/>
 Wartość klucza.
 
 ### <a name="return-value"></a>Wartość zwracana
@@ -192,13 +192,13 @@ void GetAt(POSITION pos, KOUTARGTYPE key, VOUTARGTYPE value) const;
 
 ### <a name="parameters"></a>Parametry
 
-*punktu sprzedaży*  
+*punktu sprzedaży*<br/>
 Wartość pozycji.
 
-*Klucz*  
+*Klucz*<br/>
 Zmienna, która odbiera klucz.
 
-*value*  
+*value*<br/>
 Zmienna, która otrzymuje wartość.
 
 ### <a name="return-value"></a>Wartość zwracana
@@ -249,7 +249,7 @@ const K& GetKeyAt(POSITION pos) const throw();
 
 ### <a name="parameters"></a>Parametry
 
-*punktu sprzedaży*  
+*punktu sprzedaży*<br/>
 Wartość pozycji.
 
 ### <a name="return-value"></a>Wartość zwracana
@@ -271,7 +271,7 @@ CPair* GetNext(POSITION& pos) throw();
 
 ### <a name="parameters"></a>Parametry
 
-*punktu sprzedaży*  
+*punktu sprzedaży*<br/>
 Licznik pozycji, zwrócony przez poprzednie wywołanie metody, takie jak [CRBTree::GetHeadPosition](#getheadposition) lub [CRBTree::FindFirstKeyAfter](#findfirstkeyafter).
 
 ### <a name="return-value"></a>Wartość zwracana
@@ -295,13 +295,13 @@ void GetNextAssoc(
 
 ### <a name="parameters"></a>Parametry
 
-*punktu sprzedaży*  
+*punktu sprzedaży*<br/>
 Licznik pozycji, zwrócony przez poprzednie wywołanie metody, takie jak [CRBTree::GetHeadPosition](#getheadposition) lub [CRBTree::FindFirstKeyAfter](#findfirstkeyafter).
 
-*Klucz*  
+*Klucz*<br/>
 Parametr szablonu określający typ klucza drzewa.
 
-*value*  
+*value*<br/>
 Parametr szablonu określający typ wartości drzewa.
 
 ### <a name="remarks"></a>Uwagi
@@ -318,7 +318,7 @@ const K& GetNextKey(POSITION& pos) const throw();
 
 ### <a name="parameters"></a>Parametry
 
-*punktu sprzedaży*  
+*punktu sprzedaży*<br/>
 Licznik pozycji, zwrócony przez poprzednie wywołanie metody, takie jak [CRBTree::GetHeadPosition](#getheadposition) lub [CRBTree::FindFirstKeyAfter](#findfirstkeyafter).
 
 ### <a name="return-value"></a>Wartość zwracana
@@ -340,7 +340,7 @@ V& GetNextValue(POSITION& pos) throw();
 
 ### <a name="parameters"></a>Parametry
 
-*punktu sprzedaży*  
+*punktu sprzedaży*<br/>
 Licznik pozycji, zwrócony przez poprzednie wywołanie metody, takie jak [CRBTree::GetHeadPosition](#getheadposition) lub [CRBTree::FindFirstKeyAfter](#findfirstkeyafter).
 
 ### <a name="return-value"></a>Wartość zwracana
@@ -362,7 +362,7 @@ CPair* GetPrev(POSITION& pos) throw();
 
 ### <a name="parameters"></a>Parametry
 
-*punktu sprzedaży*  
+*punktu sprzedaży*<br/>
 Licznik pozycji, zwrócony przez poprzednie wywołanie metody, takie jak [CRBTree::GetHeadPosition](#getheadposition) lub [CRBTree::FindFirstKeyAfter](#findfirstkeyafter).
 
 ### <a name="return-value"></a>Wartość zwracana
@@ -400,7 +400,7 @@ V& GetValueAt(POSITION pos) throw();
 
 ### <a name="parameters"></a>Parametry
 
-*punktu sprzedaży*  
+*punktu sprzedaży*<br/>
 Licznik pozycji, zwrócony przez poprzednie wywołanie metody, takie jak [CRBTree::GetHeadPosition](#getheadposition) lub [CRBTree::FindFirstKeyAfter](#findfirstkeyafter).
 
 ### <a name="return-value"></a>Wartość zwracana
@@ -457,7 +457,7 @@ void RemoveAt(POSITION pos) throw();
 
 ### <a name="parameters"></a>Parametry
 
-*punktu sprzedaży*  
+*punktu sprzedaży*<br/>
 Licznik pozycji, zwrócony przez poprzednie wywołanie metody, takie jak [CRBTree::GetHeadPosition](#getheadposition) lub [CRBTree::FindFirstKeyAfter](#findfirstkeyafter).
 
 ### <a name="remarks"></a>Uwagi
@@ -474,10 +474,10 @@ void SetValueAt(POSITION pos, VINARGTYPE value);
 
 ### <a name="parameters"></a>Parametry
 
-*punktu sprzedaży*  
+*punktu sprzedaży*<br/>
 Licznik pozycji, zwrócony przez poprzednie wywołanie metody, takie jak [CRBTree::GetHeadPosition](#getheadposition) lub [CRBTree::FindFirstKeyAfter](#findfirstkeyafter).
 
-*value*  
+*value*<br/>
 Wartość do dodania `CRBTree` obiektu.
 
 ### <a name="remarks"></a>Uwagi

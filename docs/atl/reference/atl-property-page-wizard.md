@@ -17,12 +17,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 671cb2fa19d920b0e60acd8d34623a05fe4a048e
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: b5a150a81ea26e34e05cbfb9199c734a1ccad9b7
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45703798"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46094198"
 ---
 # <a name="atl-property-page-wizard"></a>Kreator strony właściwości ATL
 
@@ -73,7 +73,7 @@ Zawiera informacje dotyczące funkcji COM dla obiektu.
 
 ## <a name="see-also"></a>Zobacz też
 
-[Opcje, Kreator strony właściwości ATL](../../atl/reference/options-atl-property-page-wizard.md)   
-[Ciągi, Kreator strony właściwości ATL](../../atl/reference/strings-atl-property-page-wizard.md)   
+[Opcje, Kreator strony właściwości ATL](../../atl/reference/options-atl-property-page-wizard.md)<br/>
+[Ciągi, Kreator strony właściwości ATL](../../atl/reference/strings-atl-property-page-wizard.md)<br/>
 [Przykład: Implementowanie strony właściwości](../../atl/example-implementing-a-property-page.md)
 

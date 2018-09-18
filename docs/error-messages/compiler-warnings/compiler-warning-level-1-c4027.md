@@ -16,14 +16,15 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: cbad35c43f602dcaa83f550db887275db3e5213c
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: b919eeece5529d1914fadf5724088e3e64e73db9
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33272246"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46089518"
 ---
-# <a name="compiler-warning-level-1-c4027"></a>Kompilator C4027 ostrzegawcze (poziom 1)
-Funkcja zadeklarowana bez formalnej listy parametrów  
-  
- Deklaracja funkcji żadnych formalnych parametrów, ale ma formalnych parametrów w definicji funkcji lub rzeczywistych parametrów połączenia. Kolejne wywołania tej funkcji założono, że funkcja przyjmuje rzeczywistych parametrów typów w definicji funkcji lub wywołania.
+# <a name="compiler-warning-level-1-c4027"></a>Kompilatora (poziom 1) ostrzeżenie C4027
+
+Funkcja zadeklarowana bez formalnej listy parametrów
+
+Deklaracja funkcji żadnych formalnych parametrów, ale istnieją parametrów formalnych w definicji funkcji lub rzeczywistych parametrów połączenia. Kolejne wywołania tej funkcji przyjęto założenie, że funkcja przyjmuje rzeczywistych parametrów typów znalezionych w definicji funkcji lub wywołanie.

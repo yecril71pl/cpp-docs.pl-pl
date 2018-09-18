@@ -1,5 +1,5 @@
 ---
-title: C2941 błąd kompilatora | Dokumentacja firmy Microsoft
+title: Błąd kompilatora C2941 | Dokumentacja firmy Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,14 +16,15 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9904bd4f4d6a48169590ff43e7b229dc3a3eb2f2
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 46fc923c058c59d64bf1fca37ffff97554d645e9
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33241863"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46091416"
 ---
-# <a name="compiler-error-c2941"></a>C2941 błąd kompilatora
-"class": typ klasy identyfikator ponownie zdefiniować jako lokalną "item"  
-  
- Klasy ogólne lub szablonu nie można użyć jako element.
+# <a name="compiler-error-c2941"></a>Błąd kompilatora C2941
+
+"class": typ klasy identyfikator zostało ponownie zdefiniowane jako lokalną "item"
+
+Nie można użyć klasy generyczny lub szablonu jako element.

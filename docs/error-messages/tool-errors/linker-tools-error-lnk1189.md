@@ -16,16 +16,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 220c54181c042d51dc0a3317c81978b25b33d936
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 9527c7a741c34f9f75967d9d5465b65cbd1dcfe5
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33301440"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46087932"
 ---
 # <a name="linker-tools-error-lnk1189"></a>Błąd narzędzi konsolidatora LNK1189
-LIBTOOMANYMEMBERS:: biblioteki ograniczyć liczba obiektów przekroczony  
-  
- Przekroczono limit 65535 obiektów lub elementy członkowskie w bibliotece.  
-  
- Aby rozwiązać ten problem, Podziel biblioteki na dwóch lub więcej bibliotek z mniejszą liczbę obiektów lub elementy członkowskie.
+
+LIBTOOMANYMEMBERS:: biblioteki ograniczyć liczba obiektów przekroczony
+
+Przekroczono limit 65535 obiektów lub elementów członkowskich w bibliotece.
+
+Aby rozwiązać ten problem, należy podzielić biblioteki na dwóch lub więcej bibliotek z mniejszą liczbę obiektów lub elementów członkowskich.

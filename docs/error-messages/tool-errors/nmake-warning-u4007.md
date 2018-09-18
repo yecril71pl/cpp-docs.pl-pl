@@ -16,16 +16,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 54c28bf0918e61f3819865f65458ce78e5cdc4eb
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 40c186e222edbb3b141fd13d8a5964e4a696edd8
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33320590"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46087516"
 ---
 # <a name="nmake-warning-u4007"></a>Ostrzeżenie NMAKE U4007
-Nazwa pliku "filename" zbyt długie. Obcinanie do Konwencji 8.3  
-  
- Nazwę podstawową dany plik zawiera więcej niż osiem znaków lub rozszerzenie ma więcej niż trzy znaki. NMAKE skrócone nazwy podstawowej ośmiu znaków i rozszerzenie trzy znaki.  
-  
- Jeśli długie nazwy plików są obsługiwane przez system plików, nazwę należy ująć w podwójny cudzysłów (**"**).
+
+Nazwa pliku 'NazwaPliku' zbyt długie. Obcinanie do Konwencji 8.3
+
+Podstawowa nazwa dany plik ma więcej niż osiem znaków lub rozszerzenie ma więcej niż trzy znaki. NMAKE obcięte nazwę aby base osiem znaków i rozszerzenie trzy znaki.
+
+Jeśli długie nazwy plików są obsługiwane przez system plików, nazwę należy ująć w znaki podwójnego cudzysłowu (**"**).

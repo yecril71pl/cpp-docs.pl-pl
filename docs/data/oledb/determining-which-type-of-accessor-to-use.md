@@ -16,21 +16,22 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: e8dbfecf52e974330360714763da3bd4c81117ad
-ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
+ms.openlocfilehash: 720a72406bec5672757c1b2c5713586b7fc7f1ca
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43679727"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46086970"
 ---
 # <a name="determining-which-type-of-accessor-to-use"></a>Ustalanie, jakiego typu metody dostępu użyć
+
 W czasie kompilacji lub w czasie wykonywania, można określić typy danych w zestawie wierszy.  
   
- Jeśli potrzebujesz określić typy danych w czasie kompilacji, należy użyć statycznej metody dostępu (takich jak `CAccessor`). Typy danych można określić ręcznie lub przy użyciu biblioteki ATL OLE DB Kreator konsumenta.  
+Jeśli potrzebujesz określić typy danych w czasie kompilacji, należy użyć statycznej metody dostępu (takich jak `CAccessor`). Typy danych można określić ręcznie lub przy użyciu biblioteki ATL OLE DB Kreator konsumenta.  
   
- Jeśli potrzebujesz określić typy danych w czasie wykonywania, użyj dynamiczny (`CDynamicAccessor` lub jego elementy podrzędne) lub ręczne metody dostępu (`CManualAccessor`). W takich przypadkach można wywołać `GetColumnInfo` na wierszy, aby zwrócić informacje o powiązaniu kolumny, z której można określić typy.  
+Jeśli potrzebujesz określić typy danych w czasie wykonywania, użyj dynamiczny (`CDynamicAccessor` lub jego elementy podrzędne) lub ręczne metody dostępu (`CManualAccessor`). W takich przypadkach można wywołać `GetColumnInfo` na wierszy, aby zwrócić informacje o powiązaniu kolumny, z której można określić typy.  
   
- W poniższej tabeli wymieniono typy metod dostępu w szablonami konsumentów. Metoda dostępu do każdego ma zalety i wady. W zależności od sytuacji jeden typ metody dostępu powinny odpowiadać Twoim potrzebom.  
+W poniższej tabeli wymieniono typy metod dostępu w szablonami konsumentów. Metoda dostępu do każdego ma zalety i wady. W zależności od sytuacji jeden typ metody dostępu powinny odpowiadać Twoim potrzebom.  
   
 |Klasa metody dostępu|Powiązanie|Parametr|Komentarz|  
 |--------------------|-------------|---------------|-------------|  
@@ -42,4 +43,5 @@ W czasie kompilacji lub w czasie wykonywania, można określić typy danych w ze
 |`CXMLAccessor`|Automatyczne.|Nie.|Pobiera dane otwierane z magazynu danych jako dane ciągu i formatuje ją danych oznaczone jako XML.|  
   
 ## <a name="see-also"></a>Zobacz też  
- [Korzystanie z metod dostępu](../../data/oledb/using-accessors.md)
+
+[Korzystanie z metod dostępu](../../data/oledb/using-accessors.md)

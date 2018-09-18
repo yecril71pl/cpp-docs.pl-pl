@@ -1,5 +1,5 @@
 ---
-title: C2022 błąd kompilatora | Dokumentacja firmy Microsoft
+title: Błąd kompilatora C2022 | Dokumentacja firmy Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,14 +16,15 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 47e13dddc1cba93afe8c51b2bca3efdd58e75f85
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: dc92e683c3def2378912db5011049924696b7f59
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33165613"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46089661"
 ---
-# <a name="compiler-error-c2022"></a>C2022 błąd kompilatora
-"numer": zbyt duży dla znaku  
-  
- Liczba ósemkowa po ukośnik odwrotny (\\) w znaku lub stała ciągu jest zbyt duży do reprezentowania znak.
+# <a name="compiler-error-c2022"></a>Błąd kompilatora C2022
+
+"numer": zbyt duży dla znaku
+
+Liczba ósemkowa ukośniku odwrotnym (\\) znakiem lub stałą ciągu jest zbyt duży do reprezentowania znaku.

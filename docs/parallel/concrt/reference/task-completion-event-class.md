@@ -20,15 +20,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7b22b77affd41aa60769543ae2bea2ed495084ae
-ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
+ms.openlocfilehash: 71dd2ba071f345622d4058b9fb687dcdeaa50a62
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33687884"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46088998"
 ---
 # <a name="taskcompletionevent-class"></a>task_completion_event — Klasa
-`task_completion_event` Klasa umożliwia opóźnienie wykonania zadania, dopóki spełniony jest warunek lub uruchomić zadanie w odpowiedzi na zdarzenie zewnętrzne.  
+`task_completion_event` Klasa umożliwia opóźnienie wykonania zadania, dopóki nie zostanie spełniony jakiś warunek, lub uruchomić zadanie w odpowiedzi na zdarzenie zewnętrzne.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -41,10 +41,9 @@ class task_completion_event<void>;
 ```  
   
 #### <a name="parameters"></a>Parametry  
- `_ResultType`  
- Typ wyniku `task_completion_event` klasy.  
-  
- `T`  
+*_ResultType*<br/>
+Typ wyniku `task_completion_event` klasy.  
+
   
 ## <a name="members"></a>Elementy członkowskie  
   
@@ -58,15 +57,15 @@ class task_completion_event<void>;
   
 |Nazwa|Opis|  
 |----------|-----------------|  
-|[set](#set)|Przeciążone. Ustawia zdarzenie ukończenia zadania.|  
-|[set_exception](#set_exception)|Przeciążone. Propaguje wyjątek, aby wszystkie zadania skojarzone z tym zdarzeniem.|  
+|[set](#set)|Przeciążone. Ustawia zdarzenie zakończenia zadania.|  
+|[set_exception](#set_exception)|Przeciążone. Propaguje wyjątek wszystkie zadań skojarzonych z tym zdarzeniem.|  
   
 ## <a name="remarks"></a>Uwagi  
- Należy użyć zadania utworzone na podstawie zdarzenie ukończenia zadania podczas danego scenariusza należy utworzyć zadanie, które zostanie ukończona, a tym samym jego kontynuacje zaplanowane do wykonania w pewnym momencie w przyszłości. `task_completion_event` Musi mieć taki sam typ jak zadań możesz utworzyć i wywołanie metody set zdarzenie ukończenia zadania o wartości tego typu będą spowodować zakończenie zadania skojarzone i podaj tę wartość, w związku z tym do jego kontynuacje.  
+ Użyj zadania utworzonego z zdarzenie zakończenia zadania w przypadku danego scenariusza należy utworzyć zadanie, które zostanie ukończone, a tym samym mają jego kontynuacje zostaną zaplanowane do wykonania w pewnym momencie w przyszłości. `task_completion_event` Muszą mieć taki sam jak zadania, tworzenie i wywoływanie metody set na zdarzenie zakończenia zadania z wartością tego typu będą spowodować zakończenie zadania skojarzonego i w efekcie dostarczy tę wartość do jego kontynuacji.  
   
- Jeśli nigdy nie zostanie zasygnalizowane zdarzenie ukończenia zadania, gdy jest on niszczone zostaną anulowane wszystkie zadania utworzone na podstawie jego.  
+ Jeśli nigdy nie jest sygnalizowane zdarzenie zakończenia zadania, każde zadanie utworzone na jego podstawie zostanie anulowane, gdy jest usuwane.  
   
- `task_completion_event` zachowuje się jak wskaźnika inteligentnego i powinien zostać przekazany przez wartość.  
+ `task_completion_event` zachowuje się jak inteligentny wskaźnik i powinien być przekazywany przez wartość.  
   
 ## <a name="inheritance-hierarchy"></a>Hierarchia dziedziczenia  
  `task_completion_event`  
@@ -76,9 +75,9 @@ class task_completion_event<void>;
   
  **Namespace:** współbieżności  
   
-##  <a name="set"></a> zestaw 
+##  <a name="set"></a> Zestaw 
 
- Ustawia zdarzenie ukończenia zadania.  
+ Ustawia zdarzenie zakończenia zadania.  
   
 ```
 bool set(_ResultType _Result) const ;
@@ -87,18 +86,18 @@ bool set() const ;
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `_Result`  
- Wynik można ustawić tego zdarzenia z.  
+*_Result*<br/>
+Wynik, który ma ustawione to zdarzenie z.  
   
 ### <a name="return-value"></a>Wartość zwracana  
- Metoda zwraca `true` czy było pomyślne podczas ustawiania zdarzenia. Zwraca `false` Jeśli zdarzenie jest już ustawiony.  
+ Metoda ta zwraca `true` Jeśli pomyślnie ustawiła zdarzenie. Zwraca `false` Jeśli zdarzenie jest już ustawiona.  
   
 ### <a name="remarks"></a>Uwagi  
- Obecności wielu lub równoczesnych wywołań `set`, pierwsze wywołanie powiedzie się i jego wynik (jeśli istnieje), które będą przechowywane w zdarzenie ukończenia zadania. Pozostałe zestawy są ignorowane, a metoda zwróci wartość false. Jeśli zdarzenie ukończenia zadania, wszystkie zadania utworzone na podstawie zdarzeń natychmiast zostanie ukończona, czy jego kontynuacje, jeśli istnieje, zostanie zaplanowane. Zadanie ukończenia obiektów, które mają `_ResultType` innych niż `void` przekazuje wartość do ich kontynuacje.  
+ Obecności wielu lub współbieżnych wywołań `set`, tylko pierwsze wywołanie zostanie wykonane pomyślnie i jego wynik (jeśli istnieje), które będą przechowywane na zdarzenie zakończenia zadania. Pozostałe zestawy są ignorowane, a metoda zwróci wartość false. Po ustawieniu zdarzenia zakończenia zadania, wszystkie zadania utworzone na podstawie że zdarzenia zostaną natychmiast ukończone, a jego kontynuacje, jeśli istnieje, zostanie zaplanowana. Obiekty ukończenia, które mają zadań `_ResultType` innych niż `void` przekazują wartość do ich kontynuacji.  
   
 ##  <a name="set_exception"></a> set_exception 
 
- Propaguje wyjątek, aby wszystkie zadania skojarzone z tym zdarzeniem.  
+ Propaguje wyjątek wszystkie zadań skojarzonych z tym zdarzeniem.  
   
 ```
 template<typename _E>
@@ -108,9 +107,14 @@ __declspec(noinline) bool set_exception(std::exception_ptr _ExceptionPtr) const 
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `_E`  
- `_Except`  
- `_ExceptionPtr`  
+*_E*<br/>
+Typ wyjątku.
+
+*_Except*<br/>
+Wyjątek, aby ustawić.
+
+*_ExceptionPtr*<br/>
+Wskaźnik wyjątek, aby ustawić.
   
 ### <a name="return-value"></a>Wartość zwracana  
   

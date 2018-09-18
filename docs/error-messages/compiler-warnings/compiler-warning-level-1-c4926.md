@@ -1,5 +1,5 @@
 ---
-title: Kompilatora (poziom 1) ostrzeżenie C4926 | Dokumentacja firmy Microsoft
+title: Kompilator ostrzeżenie (poziom 1) C4926 | Dokumentacja firmy Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,32 +16,33 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 527c03d4f71048064c2120f7cfa9730de198fd46
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 1942c334f06dce7a8f208f01cae6e2da1b6bb6cf
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33290858"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46087945"
 ---
-# <a name="compiler-warning-level-1-c4926"></a>Kompilator C4926 ostrzegawcze (poziom 1)
-'Identyfikator': symbol jest już zdefiniowany: atrybuty zostały zignorowane  
-  
- Deklaracja przekazująca dalej został znaleziony, ale oparte na atrybutach konstrukcję o tej samej nazwie już istnieje. Deklaracja przekazująca dalej atrybuty są ignorowane.  
-  
- Poniższy przykład generuje C4926:  
-  
-```  
-// C4926.cpp  
-// compile with: /W1  
-[module(name="MyLib")];  
-  
-[coclass]  
-struct a {  
-};  
-  
-[coclass]  
-struct a;   // C4926  
-  
-int main() {  
-}  
+# <a name="compiler-warning-level-1-c4926"></a>Kompilator ostrzeżenie (poziom 1) C4926
+
+'Identyfikator': symbol jest już zdefiniowany: atrybuty zostały zignorowane
+
+Znaleziono deklaracją do przodu, ale konstrukcja opartego na atrybutach o takiej samej nazwie już istnieje. Wartości atrybutów deklaracją do przodu są ignorowane.
+
+Poniższy przykład spowoduje wygenerowanie C4926:
+
+```
+// C4926.cpp
+// compile with: /W1
+[module(name="MyLib")];
+
+[coclass]
+struct a {
+};
+
+[coclass]
+struct a;   // C4926
+
+int main() {
+}
 ```

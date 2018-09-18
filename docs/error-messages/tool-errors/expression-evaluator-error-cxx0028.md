@@ -1,5 +1,5 @@
 ---
-title: Błąd cxx0028 programu Expression Evaluator | Dokumentacja firmy Microsoft
+title: Błąd ewaluatora wyrażeń CXX0028 | Dokumentacja firmy Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,18 +17,19 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ffb894a9960e74fe2b6c2569aab01b66a0de077e
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 023c43f33491d17d4500b8d7e668ed9bce5013bd
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33298840"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46087444"
 ---
 # <a name="expression-evaluator-error-cxx0028"></a>Błąd CXX0028 programu Expression Evaluator
-element nie struktury/Unii  
-  
- Wyrażenie w postaci "Struct.Member" lub "pStruct -> elementu członkowskiego" został określony, ale \<elementu członkowskiego > nie jest elementem struktury.  
-  
- Wyrażenie nie można poprawnie ujętego w nawiasy.  
-  
- Ten błąd jest taki sam jak CAN0028.
+
+element nie struct/union
+
+Wyrażenie w formie "Struct.Member" lub "pStruct -> elementu członkowskiego" został określony, ale \<składowej > nie jest elementem struktury.
+
+Wyrażenie może być poprawnie ujęty w nawiasy.
+
+Ten błąd jest taka sama jak CAN0028.

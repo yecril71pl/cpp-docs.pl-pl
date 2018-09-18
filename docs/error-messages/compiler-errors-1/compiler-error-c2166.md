@@ -1,5 +1,5 @@
 ---
-title: C2166 błąd kompilatora | Dokumentacja firmy Microsoft
+title: Błąd kompilatora C2166 | Dokumentacja firmy Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,24 +16,25 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4b0be5dbf9326618826fb8daca062c8a09060b99
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 9902110832c3c8c8126fcb45e21881449206941c
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33167193"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46096863"
 ---
-# <a name="compiler-error-c2166"></a>C2166 błąd kompilatora
-wartość l Określa obiekt const  
-  
- Kod próbuje zmodyfikować elementu zadeklarowane `const`.  
-  
- Poniższy przykład generuje C2166:  
-  
-```  
-// C2166.cpp  
-int f();  
-int main() {  
-   ( (const int&) 1 ) = 5;   // C2166  
-}  
+# <a name="compiler-error-c2166"></a>Błąd kompilatora C2166
+
+wartość l Określa obiekt const
+
+Kod próbuje zmodyfikować element zadeklarowany `const`.
+
+Poniższy przykład spowoduje wygenerowanie C2166:
+
+```
+// C2166.cpp
+int f();
+int main() {
+   ( (const int&) 1 ) = 5;   // C2166
+}
 ```

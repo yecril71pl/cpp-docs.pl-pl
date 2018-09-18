@@ -37,12 +37,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c56f8fe711980e038281baca7618bff08f0d3d9b
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 042fe1a446137546654c8f0cfd5ee9be8072dcee
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43764946"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46091832"
 ---
 # <a name="csnapinitemimpl-class"></a>Klasa CSnapInItemImpl
 
@@ -54,16 +54,16 @@ Ta klasa dostarcza metody implementacji obiektu przystawki węzła.
 ## <a name="syntax"></a>Składnia
 
 ```
-template <class T, BOOL bIsExtension = FALSE>  
+template <class T, BOOL bIsExtension = FALSE>
 class ATL_NO_VTABLE CSnapInItemImpl : public CSnapInItem
 ```
 
 #### <a name="parameters"></a>Parametry
 
-*T*  
+*T*<br/>
 Z klasą pochodną `CSnapInItemImpl`.
 
-*bIsExtension*  
+*bIsExtension*<br/>
 Wartość TRUE, jeśli obiekt jest rozszerzeniem przystawki; w przeciwnym razie wartość FALSE.
 
 ## <a name="members"></a>Elementy członkowskie
@@ -127,10 +127,10 @@ AddMenuItems(
 
 ### <a name="parameters"></a>Parametry
 
-*piCallback*  
+*piCallback*<br/>
 [in] Wskaźnik do `IContextMenuCallback` , można dodać elementy do menu kontekstowego.
 
-*pInsertionAllowed*  
+*pInsertionAllowed*<br/>
 [out w] Identyfikuje programu Microsoft Management Console MMC zdefiniowane przez element menu punkty wstawienia, które mogą być używane. Może to być kombinacją następujących flag:
 
 - CCM_INSERTIONALLOWED_TOP elementy mogą być wstawiane w górnej części menu kontekstowego.
@@ -141,7 +141,7 @@ AddMenuItems(
 
 - W menu Widok paska narzędzi lub w podmenu Wyświetl menu kontekstowe w okienku wyników można wstawiać CCM_INSERTIONALLOWED_VIEW elementów.
 
-*Typ*  
+*Typ*<br/>
 [in] Określa typ obiektu. Może mieć jedną z następujących wartości:
 
 - Obiekt danych CCT_SCOPE zakresu okienka kontekstu.
@@ -162,10 +162,10 @@ Command(long lCommandID, DATA_OBJECT_TYPES type);
 
 ### <a name="parameters"></a>Parametry
 
-*lCommandID*  
+*lCommandID*<br/>
 [in] Określa identyfikator polecenia elementu menu.
 
-*Typ*  
+*Typ*<br/>
 [in] Określa typ obiektu. Może mieć jedną z następujących wartości:
 
 - Obiekt danych CCT_SCOPE zakresu okienka kontekstu.
@@ -190,16 +190,16 @@ CreatePropertyPages(
 
 ### <a name="parameters"></a>Parametry
 
-*lpProvider*  
+*lpProvider*<br/>
 [in] Wskaźnik do `IPropertySheetCallback` interfejsu.
 
-*uchwyt*  
+*uchwyt*<br/>
 [in] Określa dojście przekierowywać MMCN_PROPERTY_CHANGE komunikatu powiadomienia do klasy odpowiednie dane.
 
-*pUnk*  
+*pUnk*<br/>
 [in] Wskaźnik do `IExtendPropertySheet` interfejsu na obiekt, który zawiera informacje o kontekście dotyczące węzła.
 
-*Typ*  
+*Typ*<br/>
 [in] Określa typ obiektu. Może mieć jedną z następujących wartości:
 
 - Obiekt danych CCT_SCOPE zakresu okienka kontekstu.
@@ -228,10 +228,10 @@ FillData(CLIPFORMAT cf, LPSTREAM pStream);
 
 ### <a name="parameters"></a>Parametry
 
-*usługi CF*  
+*usługi CF*<br/>
 [in] Format (tekst, tekst sformatowany lub tekstu sformatowanego przy użyciu elementów OLE) ze Schowka.
 
-*pStream*  
+*pStream*<br/>
 [in] Wskaźnik do strumienia, zawierający dane obiektu.
 
 ### <a name="remarks"></a>Uwagi
@@ -250,10 +250,10 @@ GetResultViewType(
 
 ### <a name="parameters"></a>Parametry
 
-*ppViewType*  
+*ppViewType*<br/>
 [out] Wskaźnik na adres typu zwracanego widoku.
 
-*pViewOptions*  
+*pViewOptions*<br/>
 [out] Wskaźnik do wyliczenia MMC_VIEW_OPTIONS zapewnia opcje określone przez właściciela przystawkę konsoli. Ta wartość może być jedną z następujących czynności:
 
 - MMC_VIEW_OPTIONS_NOLISTVIEWS = 0x00000001 nakazuje konsoli Powstrzymaj się od prezentacji opcji widoku listy standardowych w **widoku** menu. Umożliwia wyświetlić swoje własne widoki niestandardowe tylko w okienku widoku wyników przystawki. Jest to tylko flagi opcji zdefiniowane w tej chwili.
@@ -270,7 +270,7 @@ GetScopePaneInfo (SCOPEDATAITEM* pScopeDataItem);
 
 ### <a name="parameters"></a>Parametry
 
-*pScopeDataItem*  
+*pScopeDataItem*<br/>
 [out] Wskaźnik do `SCOPEDATAITEM` struktury `CSnapInItemImpl` obiektu.
 
 ##  <a name="getresultpaneinfo"></a>  CSnapInItemImpl::GetResultPaneInfo
@@ -283,7 +283,7 @@ GetResultPaneInfo (RESULTDATAITEM* pResultDataItem);
 
 ### <a name="parameters"></a>Parametry
 
-*pResultDataItem*  
+*pResultDataItem*<br/>
 [out] Wskaźnik do `RESULTDATAITEM` struktury `CSnapInItemImpl` obiektu.
 
 ##  <a name="m_bstrdisplayname"></a>  CSnapInItemImpl::m_bstrDisplayName
@@ -326,7 +326,7 @@ STDMETHOD(Notify)(
 
 ### <a name="parameters"></a>Parametry
 
-*event*  
+*event*<br/>
 [in] Określa akcję podejmowaną przez użytkownika. Możliwe są następujące powiadomienia:
 
 - MMCN_ACTIVATE wysyłane, gdy okno jest aktywowane i dezaktywowane.
@@ -357,19 +357,19 @@ STDMETHOD(Notify)(
 
 - MMCN_VIEW_CHANGE wysyłany, gdy ta przystawka można zaktualizować wszystkich widoków po wprowadzeniu zmiany.
 
-*ARG*  
+*ARG*<br/>
 [in] Zależy od typu powiadomienia.
 
-*param*  
+*param*<br/>
 [in] Zależy od typu powiadomienia.
 
-*pComponentData*  
+*pComponentData*<br/>
 [out] Wskaźnik do obiektu implementującego `IComponentData`. Ten parametr ma wartość NULL, jeśli powiadomienia nie są przekazywane z `IComponentData::Notify`.
 
-*pComponent*  
+*pComponent*<br/>
 [out] Wskaźnik do obiektu, który implementuje `IComponent`. Ten parametr ma wartość NULL, jeśli powiadomienia nie są przekazywane z `IComponent::Notify`.
 
-*Typ*  
+*Typ*<br/>
 [in] Określa typ obiektu. Może mieć jedną z następujących wartości:
 
 - Obiekt danych CCT_SCOPE zakresu okienka kontekstu.
@@ -400,10 +400,10 @@ void SetMenuInsertionFlags(
 
 ### <a name="parameters"></a>Parametry
 
-*bBeforeInsertion*  
+*bBeforeInsertion*<br/>
 [in] Wartość różną od zera, jeśli funkcja powinna być wywoływana przed elementy są dodawane do menu kontekstowego. w przeciwnym razie 0.
 
-*pInsertionAllowed*  
+*pInsertionAllowed*<br/>
 [out w] Identyfikuje programu Microsoft Management Console MMC zdefiniowane przez element menu punkty wstawienia, które mogą być używane. Może to być kombinacją następujących flag:
 
 - CCM_INSERTIONALLOWED_TOP elementy mogą być wstawiane w górnej części menu kontekstowego.
@@ -433,10 +433,10 @@ void SetToolbarButtonInfo(
 
 ### <a name="parameters"></a>Parametry
 
-*id*  
+*id*<br/>
 [in] Identyfikator przycisku paska narzędzi, należy ustawić.
 
-*fsState*  
+*fsState*<br/>
 [in] Flagi stanu przycisku. Może być co najmniej jeden z następujących czynności:
 
 - TBSTATE_CHECKED przycisku styl TBSTYLE_CHECKED i jest naciskana.
@@ -451,7 +451,7 @@ void SetToolbarButtonInfo(
 
 - Podział wiersza A TBSTATE_WRAP poniżej przycisku. Przycisk musi mieć również TBSTATE_ENABLED.
 
-*fsType*  
+*fsType*<br/>
 [in] Flagi stanu przycisku. Może być co najmniej jeden z następujących czynności:
 
 - TBSTYLE_BUTTON tworzy standardowy przycisku polecenia.
@@ -477,13 +477,13 @@ void UpdateMenuState(
 
 ### <a name="parameters"></a>Parametry
 
-*id*  
+*id*<br/>
 [in] Identyfikator elementu menu, należy ustawić.
 
-*pBuf*  
+*pBuf*<br/>
 [in] Wskaźnik do ciągu dla elementu menu aktualizacji.
 
-*flagi*  
+*flagi*<br/>
 [in] Określa nowy stan flagi. Może to być kombinacją następujących flag:
 
 - MF_POPUP Określa, że jest to podmenu w menu kontekstowym. Elementy menu, punkty wstawienia i dalsze podmenu, które mogą być dodawane do tego podmenu przy użyciu jego `lCommandID` jako ich `IInsertionPointID`.
@@ -524,10 +524,10 @@ BOOL UpdateToolbarButton(UINT id, BYTE fsState);
 
 ### <a name="parameters"></a>Parametry
 
-*id*  
+*id*<br/>
 Określa identyfikator przycisku przycisku paska narzędzi do zaktualizowania.
 
-*fsState*  
+*fsState*<br/>
 Określa stan przycisku paska narzędzi. Zwraca wartość TRUE, jeśli ten stan do ustawienia. Może to być kombinacją następujących flag:
 
 - WŁĄCZONO przycisku akceptuje dane wejściowe użytkownika. Przycisk, który nie ma w tym stanie nie akceptuje dane wejściowe użytkownika i jest niedostępna.

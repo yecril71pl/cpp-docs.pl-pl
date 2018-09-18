@@ -16,16 +16,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 338612527555dff6331ceaeef5e3b3dba0949d51
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 1438473ff4fa45bf4000cb273ad3817d5673f219
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33300101"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46094428"
 ---
 # <a name="command-line-error-d8022"></a>Błąd D8022 wiersza polecenia
-Nie można otworzyć "messagefile"  
-  
- Dany plik był nie w bieżącym katalogu lub w katalogu określonym w zmiennej środowiskowej PATH. Plik wiadomości zawiera krótkie podsumowanie opcji i składnia wiersza polecenia kompilatora.  
-  
- Przenieść ten plik do bieżącego katalogu lub katalog w bieżącej ścieżce. Jeśli nie można odnaleźć tego pliku, uruchom Instalatora, aby skopiować plik z dysków dystrybucji.
+
+Nie można otworzyć "messagefile"
+
+Podany plik był nie w bieżącym katalogu lub w katalogu określonego w zmiennej środowiskowej PATH. Plik wiadomości zawiera krótkie podsumowanie składnia wiersza polecenia kompilatora i opcje.
+
+Przenieść ten plik do bieżącego katalogu lub katalog w bieżącej ścieżce. Jeśli nie można odnaleźć tego pliku, należy uruchomić program INSTALACYJNY, aby skopiować plik z dysków dystrybucyjnych.

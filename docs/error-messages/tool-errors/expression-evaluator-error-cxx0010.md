@@ -1,5 +1,5 @@
 ---
-title: Błąd cxx0010 programu Expression Evaluator | Dokumentacja firmy Microsoft
+title: Błąd ewaluatora wyrażeń CXX0010 | Dokumentacja firmy Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,16 +17,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9ed62ecba1d25882a95f6555c48d43b3ae405110
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 2bcc7231f3dca4c46c2ace410b9444c472880ff7
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33298411"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46086801"
 ---
 # <a name="expression-evaluator-error-cxx0010"></a>Błąd CXX0010 programu Expression Evaluator
-Brak nawiasu otwierającego  
-  
- Wyrażenie zawiera nawiasy kwadratowe równowagi. Wpisz wyrażenie w nawiasy kwadratowe zrównoważone.  
-  
- Ten błąd jest taki sam jak CAN0010.
+
+Brak nawiasu otwierającego
+
+Wyrażenie zawiera niezrównoważone nawiasami kwadratowymi. Wpisz ponownie wyrażenia w nawiasy kwadratowe o zrównoważonym obciążeniu.
+
+Ten błąd jest taka sama jak CAN0010.

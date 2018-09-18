@@ -1,5 +1,5 @@
 ---
-title: C3888 błąd kompilatora | Dokumentacja firmy Microsoft
+title: Błąd kompilatora C3888 | Dokumentacja firmy Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,21 +16,23 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c11c897f35a6c395c4bc6ee6a64be51fa810911b
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: b9292f54fee467a5f8d01202b6ed7ca991b52d43
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33270667"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46096463"
 ---
-# <a name="compiler-error-c3888"></a>C3888 błąd kompilatora
-"Nazwa": wyrażenie const powiązane z tym literałem elementu członkowskiego danych nie jest obsługiwane przez C + +/ CLI  
-  
- *Nazwa* element członkowski danych, która jest zadeklarowana za pomocą [literału](../../windows/literal-cpp-component-extensions.md) — słowo kluczowe jest zainicjowany z wartością kompilator nie obsługuje. Kompilator obsługuje stałej typu całkowitego, wyliczeniowego lub typu string. Prawdopodobną przyczyną **C3888** błąd jest, że element członkowski danych jest inicjowany z tablicy bajtów.  
-  
-### <a name="to-correct-this-error"></a>Aby poprawić ten błąd  
-  
-1.  Sprawdź, czy zadeklarowane literał elementu członkowskiego danych jest nieobsługiwany.  
-  
-## <a name="see-also"></a>Zobacz też  
- [Literału](../../windows/literal-cpp-component-extensions.md)
+# <a name="compiler-error-c3888"></a>Błąd kompilatora C3888
+
+"name": wyrażenie const powiązane z tym literałem składowej danych nie jest obsługiwana przez C + +/ CLI
+
+*Nazwa* składowej danych, która jest zadeklarowana za pomocą [literału](../../windows/literal-cpp-component-extensions.md) — słowo kluczowe jest inicjowany z wartością, kompilator nie obsługuje. Kompilator obsługuje tylko stałe całkowite, enum lub typu ciągu. Prawdopodobną przyczyną **C3888** błąd to, że element członkowski danych jest inicjowany z tablicy typu byte.
+
+### <a name="to-correct-this-error"></a>Aby poprawić ten błąd
+
+1. Sprawdź, czy zadeklarowane literał składowej danych jest nieobsługiwany.
+
+## <a name="see-also"></a>Zobacz też
+
+[literał](../../windows/literal-cpp-component-extensions.md)

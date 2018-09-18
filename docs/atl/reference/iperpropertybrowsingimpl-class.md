@@ -23,12 +23,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: eb4b35d851858eaab5ba0df471cc2d0bd30f19bc
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: a8fc5cc44eeb06c5afec23b6a0a094c14987c599
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43763084"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46096096"
 ---
 # <a name="iperpropertybrowsingimpl-class"></a>Klasa IPerPropertyBrowsingImpl
 
@@ -48,7 +48,7 @@ class ATL_NO_VTABLE IPerPropertyBrowsingImpl :
 
 #### <a name="parameters"></a>Parametry
 
-*T*  
+*T*<br/>
 Z klasą pochodną `IPerPropertyBrowsingImpl`.
 
 ## <a name="members"></a>Elementy członkowskie
@@ -153,6 +153,6 @@ Zobacz [IPerPropertyBrowsing::MapPropertyToPage](/windows/desktop/api/ocidl/nf-o
 
 ## <a name="see-also"></a>Zobacz też
 
-[Klasa IPropertyPageImpl](../../atl/reference/ipropertypageimpl-class.md)   
-[Klasa ISpecifyPropertyPagesImpl](../../atl/reference/ispecifypropertypagesimpl-class.md)   
+[Klasa IPropertyPageImpl](../../atl/reference/ipropertypageimpl-class.md)<br/>
+[Klasa ISpecifyPropertyPagesImpl](../../atl/reference/ispecifypropertypagesimpl-class.md)<br/>
 [Klasa — Przegląd](../../atl/atl-class-overview.md)

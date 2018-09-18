@@ -19,21 +19,23 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e9a04dec046435478ca621ad8f5e2e3c4323f3e2
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: f3056b90f3c6f0f62158a9b6dcfe145cda9740c6
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32386241"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46092196"
 ---
 # <a name="backward-compatibility"></a>Zgodność ze starszymi wersjami
-Zgodność między wersjami, biblioteki OLDNAMES. LIB mapuje nazwy stare na nowe nazwy. Na przykład `open` mapuje `_open`. Należy jawnie połączyć z OLDNAMES. LIB tylko w przypadku kompilacji z następujących kombinacji opcji wiersza polecenia:  
-  
--   `/Zl` (Pomiń domyślną nazwę biblioteki z pliku obiektu) i `/Ze` (wartość domyślna — za pomocą rozszerzeń firmy Microsoft)  
-  
--   `/link` (konsolidator control), `/NOD` (nie wyszukiwania biblioteka domyślna), a `/Ze`  
-  
- Aby uzyskać więcej informacji na temat opcji wiersza polecenia kompilatora, zobacz [kompilatora](../build/reference/compiler-options.md).  
-  
-## <a name="see-also"></a>Zobacz też  
- [Zgodność](../c-runtime-library/compatibility.md)
+
+Zgodność między wersjami produktów, biblioteka OLDNAMES. LIB mapuje starych nazw na nowe nazwy. Na przykład `open` mapuje `_open`. Musisz jawnie połączyć za pomocą OLDNAMES. Lib — tylko wtedy, gdy kompilujesz przy użyciu następujących kombinacji opcji wiersza polecenia:
+
+- `/Zl` (Pomiń domyślną nazwę biblioteki z pliku obiektu) i `/Ze` (wartość domyślna — korzystanie z rozszerzeń firmy Microsoft)
+
+- `/link` (formant konsolidatora), `/NOD` (bez wyszukiwania bibliotekę domyślną), i `/Ze`
+
+Aby uzyskać więcej informacji na temat opcji wiersza polecenia kompilatora, zobacz [odwołanie do kompilatora](../build/reference/compiler-options.md).
+
+## <a name="see-also"></a>Zobacz też
+
+[Zgodność](../c-runtime-library/compatibility.md)

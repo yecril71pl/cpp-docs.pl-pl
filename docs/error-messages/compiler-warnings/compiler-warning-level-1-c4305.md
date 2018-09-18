@@ -1,5 +1,5 @@
 ---
-title: Kompilatora (poziom 1) ostrzeżenie C4305 | Dokumentacja firmy Microsoft
+title: Kompilator ostrzeżenie (poziom 1) C4305 | Dokumentacja firmy Microsoft
 ms.custom: ''
 ms.date: 1/17/2018
 ms.technology:
@@ -15,20 +15,20 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7694c511f57b6907227d62f969b61218f836cb14
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 88ae0fb38b7e6af14525906e90486a68ce22ee56
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33277826"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46086827"
 ---
-# <a name="compiler-warning-level-1-c4305"></a>Kompilator C4305 ostrzegawcze (poziom 1)
+# <a name="compiler-warning-level-1-c4305"></a>Kompilator ostrzeżenie (poziom 1) C4305
 
-> "*kontekstu*": obcięcie z "*type1*"do"*type2*"  
+> "*kontekstu*': obcinanie z '*type1*"to"*type2*"
 
 ## <a name="remarks"></a>Uwagi
 
-To ostrzeżenie zostanie wyświetlone, gdy wartość jest konwertowana na mniejszy typ podczas inicjowania lub jako argument konstruktora, co doprowadzi do utraty danych.
+To ostrzeżenie zostanie wyświetlone, gdy wartość jest konwertowana na mniejszy typ podczas inicjowania lub jako argument konstruktora, co spowoduje utratę informacji.
 
 ## <a name="example"></a>Przykład
 
@@ -51,4 +51,4 @@ int main()
 }
 ```
 
-Aby rozwiązać ten problem, zainicjować za pomocą wartości prawidłowego typu lub Użyj rzutowania jawnego do poprawnego typu. Na przykład użyć **float** literału, takich jak 2.71828f zamiast **podwójne** (domyślny typ dla literałów liczb zmiennoprzecinkowych) zainicjować **float** zmiennej, lub do przekazania do Konstruktor pobierający **float** argumentu.
+Aby rozwiązać ten problem, inicjowanie przy użyciu poprawnego typu wartości lub użyć jawnego rzutowania do poprawnego typu. Na przykład użyć **float** literału, takich jak 2.71828f zamiast **double** (domyślny typ zmiennoprzecinkowych literałów) do zainicjowania **float** zmiennej, lub do przekazania do Konstruktor pobierający **float** argumentu.

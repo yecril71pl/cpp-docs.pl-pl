@@ -17,23 +17,25 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f95f4cb279c7e13d9500fbf5ce90a8ed82d55307
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 82bf6ef1f868ee182d3bef038ba87b07e85419db
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32386106"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46095551"
 ---
 # <a name="maximum-string-length"></a>Maksymalna długość ciągu
-**Microsoft Specific**  
-  
- Zgodność ANSI wymaga kompilatora, aby zaakceptować 509 do znaków w literale ciągu po łączenia. Maksymalna długość literału ciągu znaków dozwolonych w Microsoft C wynosi około 2048 bajtów. Jednak jeśli literał ciągu zawiera części ujęta w znaki cudzysłowu, preprocesora łączy części w jeden ciąg i dla każdego wiersza połączonych dodaje dodatkowy bajt całkowitą liczbę bajtów.  
-  
- Załóżmy na przykład ciąg składa się z 40 wiersze z 50 znaków w wierszu (2000 znaków) i jeden wiersz z 7 znaków, a każdy wiersz jest ujęta w znaki podwójnego cudzysłowu. Spowoduje to dodanie do 2,007 bajtów oraz jeden bajt znak końcowy null dla danych całkowitych 2,008 bajtów. Na łączenia nadmiarowe znaki jest dodawany do każdego wiersza najpierw 40. Dzięki temu łącznie 2048 bajtów. Uwaga, jednak, że jeśli wiersz kontynuacje (\\) są używane zamiast znaki cudzysłowu, preprocesora nie dodaje dodatkowy znak dla każdego wiersza.  
-  
- Gdy osoba ciąg nie może być dłuższa niż 2048 bajtów, literału ciągu około 65 535 bajtów można konstruować przez łączenie ciągów.  
-  
- **KOŃCOWY określonych firmy Microsoft**  
-  
-## <a name="see-also"></a>Zobacz też  
- [Literały ciągu języka C](../c-language/c-string-literals.md)
+
+**Microsoft Specific**
+
+Zgodność ANSI wymaga kompilatora do akceptowania 509 do znaków w literale ciągu po łączenia. Maksymalna długość literału ciągu znaków dozwolonych w Microsoft C to około 2048 bajtów. Jednak jeśli literał ciągu składa się z części ujęty w znaki podwójnego cudzysłowu, preprocesor łączy części w jeden ciąg i dla każdego wiersza połączonych dodaje dodatkowy bajt całkowitą liczbę bajtów.
+
+Załóżmy na przykład, ciąg, który składa się z 40 wiersze z 50 znaków dla każdego wiersza (2000 znaków) i jeden wiersz 7 znaków, a każdy wiersz jest ujęty w podwójny cudzysłów. Spowoduje to dodanie maksymalnie 2,007 bajtów oraz jeden bajt kończącego znaku null dla danych całkowitych 2,008 bajtów. Na łączenia nadmiarowe znaki jest dodawany dla każdej linii najpierw 40. Dzięki temu daje w sumie 2048 bajtów. Należy pamiętać, jednak, że jeśli wierszy kontynuacji (\\) są używane zamiast znaki cudzysłowu, preprocesor nie powoduje dodania dodatkowych znaków dla każdego wiersza.
+
+Gdy osoba ciąg w cudzysłowach nie może być dłuższa niż 2048 bajtów, literał ciągu około 65 535 bajtów można konstruować przez łączenie ciągów.
+
+**END specyficzny dla Microsoft**
+
+## <a name="see-also"></a>Zobacz też
+
+[Literały ciągu języka C](../c-language/c-string-literals.md)

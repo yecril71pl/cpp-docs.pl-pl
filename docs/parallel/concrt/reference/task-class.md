@@ -24,15 +24,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5887350d9ccdf6fc4a41d72ae8a70fa38d939390
-ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
+ms.openlocfilehash: 3cd783baafec4171618a6994ac4fde13dfe41f56
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33694098"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46097500"
 ---
 # <a name="task-class-concurrency-runtime"></a>task — Klasa (współbieżność środowiska wykonawczego)
-Biblioteka równoległych wzorców (PLL) `task` klasy. A `task` obiekt reprezentuje pracy, które mogą być wykonywane asynchronicznie, a równocześnie z innymi zadaniami i współbieżność środowiska wykonawczego pracy równoległej utworzonych przez algorytmy równoległe. Tworzy wynik typu `_ResultType` na pomyślne zakończenie. Zadania typu `task<void>` utworzyć żadnego wyniku. Zadania można czas potrzebny na i anulowane niezależnie od innych zadań. Mogą być składane również z innymi zadaniami za pomocą kontynuacje ( `then`), a sprzężenia ( `when_all`) i wyboru ( `when_any`) wzorce.  
+Biblioteka równoległych wzorców (PPL) `task` klasy. A `task` obiekt reprezentuje prac, które mogą być wykonywane asynchronicznie, a równocześnie z innymi zadaniami i w środowisku uruchomieniowym współbieżności: pracy równoległej produkowane przez algorytmy równoległe. Daje wynik o typie `_ResultType` po pomyślnym ukończeniu. Zadania typu `task<void>` nie generują żadnego wyniku. Zadanie można wstrzymywać i anulować niezależnie od innych zadań. Może również składać z innymi zadaniami za pomocą kontynuacji ( `then`) i sprzężenia ( `when_all`) i wyboru ( `when_any`) wzorców.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -48,14 +48,16 @@ class task;
 ```  
   
 #### <a name="parameters"></a>Parametry  
- `T`  
- `T`  
- `_ReturnType`  
- Typ wyniku tego zadania.  
+
+*T*<br/>
+Typ obiektu zadania.
+
+*_ReturnType*<br/>
+Typ wyniku tego zadania.  
   
 ## <a name="members"></a>Elementy członkowskie  
   
-### <a name="public-typedefs"></a>Definicje typów publicznych  
+### <a name="public-typedefs"></a>Publiczne definicje typów  
   
 |Nazwa|Opis|  
 |----------|-----------------|  
@@ -71,20 +73,20 @@ class task;
   
 |Nazwa|Opis|  
 |----------|-----------------|  
-|[get](#get)|Przeciążone. Zwraca wynik tego zadania utworzone. Jeśli zadanie nie jest w terminalu, stan, wywołanie `get` będzie czekać na zakończenie zadania. Ta metoda nie zwraca wartości, gdy jest wywoływana dla zadania z `result_type` z `void`.|  
-|[is_apartment_aware](#is_apartment_aware)|Określa, czy zadanie dekoduje Windows Runtime `IAsyncInfo` interfejsu lub podrzędne takich zadań.|  
-|[is_done](#is_done)|Określa, czy zadanie zostało ukończone.|  
-|[scheduler](#scheduler)|Zwraca harmonogramu dla tego zadania|  
-|[następnie](#then)|Przeciążone. Dodaje zadania kontynuacji do tego zadania.|  
-|[oczekiwania](#wait)|Czeka na to zadanie do przejścia terminala. Istnieje możliwość `wait` do wykonania zadania w tekście, jeśli spełnione są wszystkie zależności zadania i jego ma nie już pobrane do wykonania w tle proces roboczy.|  
+|[get](#get)|Przeciążone. Zwraca wynik tego zadania. Jeśli zadanie nie jest w terminalu, stan, wywołanie `get` będzie czekać na zakończenie zadania. Ta metoda nie zwraca wartości, gdy jest wywoływana w zadaniu o `result_type` z `void`.|  
+|[is_apartment_aware](#is_apartment_aware)|Określa, czy zadanie dekoduje środowiska uruchomieniowego Windows `IAsyncInfo` interfejsu, lub czy wywodzi się z takiego zadania.|  
+|[is_done](#is_done)|Określa, jeśli zadanie zostało ukończone.|  
+|[scheduler](#scheduler)|Zwraca harmonogram tego zadania|  
+|[Następnie](#then)|Przeciążone. Dodaje zadanie kontynuacji do wykonania takiego zadania.|  
+|[Czekaj](#wait)|Czeka, aż zadanie osiągnie stan końcowy. Możliwe jest `wait` do wykonywania zadań w tekście, jeśli spełnione są wszystkie współzależności zadań i jej nie już zostało odebrane do wykonania przez pracownika tła.|  
   
 ### <a name="public-operators"></a>Operatory publiczne  
   
 |Nazwa|Opis|  
 |----------|-----------------|  
-|[operator!=](#operator_neq)|Przeciążone. Określa, czy dwa `task` reprezentować różnych zadań wewnętrznych.|  
-|[operator=](#operator_eq)|Przeciążone. Zastępuje zawartość jednej `task` obiekt z inną.|  
-|[operator==](#operator_eq_eq)|Przeciążone. Określa, czy dwa `task` obiekty reprezentują tego samego zadania wewnętrznego.|  
+|[operator!=](#operator_neq)|Przeciążone. Określa, czy dwa `task` obiekty reprezentują różne zadania wewnętrzne.|  
+|[operator=](#operator_eq)|Przeciążone. Zastępuje zawartość jednego `task` obiektu na inny.|  
+|[operator==](#operator_eq_eq)|Przeciążone. Określa, czy dwa `task` obiekty reprezentują te same zadania wewnętrzne.|  
   
 ## <a name="remarks"></a>Uwagi  
  Aby uzyskać więcej informacji, zobacz [równoległość zadań](../../../parallel/concrt/task-parallelism-concurrency-runtime.md).  
@@ -99,7 +101,7 @@ class task;
   
 ##  <a name="get"></a> Pobierz 
 
- Zwraca wynik tego zadania utworzone. Jeśli zadanie nie jest w terminalu, stan, wywołanie `get` będzie czekać na zakończenie zadania. Ta metoda nie zwraca wartości, gdy jest wywoływana dla zadania z `result_type` z `void`.  
+ Zwraca wynik tego zadania. Jeśli zadanie nie jest w terminalu, stan, wywołanie `get` będzie czekać na zakończenie zadania. Ta metoda nie zwraca wartości, gdy jest wywoływana w zadaniu o `result_type` z `void`.  
   
 ```
 _ReturnType get() const;
@@ -111,38 +113,38 @@ void get() const;
  Wynik zadania.  
   
 ### <a name="remarks"></a>Uwagi  
- Jeśli zadanie zostało anulowane, wywołanie `get` zgłosi [task_canceled —](task-canceled-class.md) wyjątku. Jeśli zadanie napotkał wyjątek różnych lub wyjątek pochodzi z antecedent do niego task, wywołanie `get` zgłosi ten wyjątek.  
+ Jeśli zadanie zostanie anulowane, wywołanie `get` zgłosi [task_canceled](task-canceled-class.md) wyjątku. Jeśli zadanie napotkało inny wyjątek lub wyjątek został rozpropagowany do niego z poprzedzającego zadania, wywołanie `get` spowoduje zgłoszenie tego wyjątku.  
   
 > [!IMPORTANT]
->  Nie należy wywoływać w aplikacji Windows platformy Uniwersalnej [concurrency::task::wait](#wait) lub `get` ( `wait` wywołania `get`) w kodzie, który jest uruchamiany na pozostaje tryb komórek jednowątkowych W przeciwnym razie zwraca środowiska uruchomieniowego [concurrency::invalid_operation](invalid-operation-class.md) ponieważ metody te zablokować bieżącego wątku i może spowodować, że aplikacja przestanie odpowiadać. Jednak możesz wywołać `get` metodę, aby odbierać wynik zadania poprzedzających kontynuację opartego na zadaniach, ponieważ wynik jest natychmiast dostępna.  
+>  W aplikacji platformy uniwersalnej Windows (UWP), nie należy wywoływać metody [CONCURRENCY::Task](#wait) lub `get` ( `wait` wywołania `get`) w kodzie, który działa w komórce jednowątkowej W przeciwnym wypadku środowisko wykonawcze zgłasza [concurrency::invalid_operation](invalid-operation-class.md) ponieważ te metody blokują bieżący wątek i może spowodować, że aplikacja przestanie odpowiadać. Jednak można wywoływać `get` metodę do uzyskania wyniku zadania poprzedzającego w kontynuacji opartej na zadaniach, ponieważ wynik jest natychmiast dostępna.  
   
-##  <a name="is_apartment_aware"></a> is_apartment_aware 
+##  <a name="is_apartment_aware"></a> is_apartment_aware — 
 
- Określa, czy zadanie dekoduje Windows Runtime `IAsyncInfo` interfejsu lub podrzędne takich zadań.  
+ Określa, czy zadanie dekoduje środowiska uruchomieniowego Windows `IAsyncInfo` interfejsu, lub czy wywodzi się z takiego zadania.  
   
 ```
 bool is_apartment_aware() const;
 ```  
   
 ### <a name="return-value"></a>Wartość zwracana  
- `true` Jeśli zadanie odkodowuje `IAsyncInfo` interfejsu lub podrzędne takich zadań `false` inaczej.  
+ `true` Jeśli zadanie dekoduje `IAsyncInfo` interfejsu, lub czy wywodzi się z takiego zadania `false` inaczej.  
   
 ##  <a name="is_done"></a>  Task::is_done — metoda (współbieżność środowiska wykonawczego)  
- Określa, czy zadanie zostało ukończone.  
+ Określa, jeśli zadanie zostało ukończone.  
   
 ```
 bool is_done() const;
 ```  
   
 ### <a name="return-value"></a>Wartość zwracana  
- Wartość true, jeśli zadanie zostało ukończone, wartość false w przeciwnym razie wartość.  
+ Wartość true, jeśli zadanie zostało ukończone, wartość false w przeciwnym razie.  
   
 ### <a name="remarks"></a>Uwagi  
- Funkcja zwraca wartość true, jeśli zadanie zostało zakończone lub anulowane (z lub bez wyjątku użytkownika).  
+ Funkcja zwraca wartość true, jeśli zadanie jest ukończone lub anulowane (z wyjątkiem użytkownika lub bez).  
   
 ##  <a name="operator_neq"></a> operator! = 
 
- Określa, czy dwa `task` reprezentować różnych zadań wewnętrznych.  
+ Określa, czy dwa `task` obiekty reprezentują różne zadania wewnętrzne.  
   
 ```
 bool operator!= (const task<_ReturnType>& _Rhs) const;
@@ -151,14 +153,15 @@ bool operator!= (const task<void>& _Rhs) const;
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `_Rhs`  
+*_Rhs*<br/>
+Zadanie do porównania.
   
 ### <a name="return-value"></a>Wartość zwracana  
- `true` Jeśli obiekty odwołują się do różnych zadań podstawowej, a `false` inaczej.  
+ `true` Jeśli obiekty odnoszą się do różnych zadań podstawowych, a `false` inaczej.  
   
 ##  <a name="operator_eq"></a> operator = 
 
- Zastępuje zawartość jednej `task` obiekt z inną.  
+ Zastępuje zawartość jednego `task` obiektu na inny.  
   
 ```
 task& operator= (const task& _Other);
@@ -167,17 +170,17 @@ task& operator= (task&& _Other);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `_Other`  
- Źródło `task` obiektu.  
+*_Inne*<br/>
+Źródło `task` obiektu.  
   
 ### <a name="return-value"></a>Wartość zwracana  
   
 ### <a name="remarks"></a>Uwagi  
- Jako `task` zachowuje się jak wskaźnika inteligentnego, po przypisaniu kopiowania to `task` obiektów reprezentuje to samo zadanie rzeczywiste `_Other` jest.  
+ Jako `task` zachowuje się jak wskaźnik inteligentny, po przydzieleniu kopii to `task` obiektów reprezentuje to samo zadanie rzeczywiste `_Other` jest.  
   
 ##  <a name="operator_eq_eq"></a> operator == 
 
- Określa, czy dwa `task` obiekty reprezentują tego samego zadania wewnętrznego.  
+ Określa, czy dwa `task` obiekty reprezentują te same zadania wewnętrzne.  
   
 ```
 bool operator== (const task<_ReturnType>& _Rhs) const;
@@ -186,13 +189,14 @@ bool operator== (const task<void>& _Rhs) const;
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `_Rhs`  
+*_Rhs*<br/>
+Zadanie do porównania.
   
 ### <a name="return-value"></a>Wartość zwracana  
- `true` Jeśli obiekty odwołują się do tego samego zadania podstawowej i `false` inaczej.  
+ `true` Jeśli obiekty odnoszą się do tego samego zadania podstawowego, a `false` inaczej.  
   
 ##  <a name="scheduler"></a>  Task::Scheduler — metoda (współbieżność środowiska wykonawczego)  
- Zwraca harmonogramu dla tego zadania  
+ Zwraca harmonogram tego zadania  
   
 ```
 scheduler_ptr scheduler() const;
@@ -224,36 +228,36 @@ task(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `T`  
- Typ parametru, z którego ma zostać wykonane zadanie.  
+*T*<br/>
+Typ parametru, z którego ma zostać skonstruowane zadanie.  
   
- `_Param`  
- Parametr, z którego ma zostać wykonane zadanie. Może to być wyrażenie lambda obiektem funkcji `task_completion_event<result_type>` obiektu lub Windows::Foundation::IAsyncInfo, korzystając z zadania w aplikacji środowiska wykonawczego systemu Windows. Obiekt lambda lub funkcja powinien być typem odpowiednikiem `std::function<X(void)>`, gdzie X może być zmienną typu `result_type`, `task<result_type>`, lub Windows::Foundation::IAsyncInfo w aplikacjach środowiska wykonawczego systemu Windows.  
+*_Param*<br/>
+Parametr, z którego ma zostać skonstruowane zadanie. Może to być wyrażenie lambda, obiektów funkcyjnych `task_completion_event<result_type>` obiektu lub interfejs Windows::Foundation:: iasyncinfo, jeśli używasz zadań w aplikacji środowiska wykonawczego Windows. Obiekt wyrażenia lambda lub funkcji powinien być typem równoważnym z `std::function<X(void)>`, gdzie X może być zmienną typu `result_type`, `task<result_type>`, lub interfejs Windows::Foundation:: iasyncinfo w aplikacjach Windows Runtime.  
   
- `_TaskOptions`  
- Dostępne są następujące opcje zadania harmonogramu tokenem anulowania itp.  
+*_TaskOptions*<br/>
+Opcje zadania obejmują token anulowania, harmonogram itp.  
   
- `_Other`  
- Źródło `task` obiektu.  
+*_Inne*<br/>
+Źródło `task` obiektu.  
   
 ### <a name="remarks"></a>Uwagi  
- Domyślny konstruktor `task` występuje tylko w celu umożliwienia zadań do użycia w kontenerach. Nie można użyć zadania wykonane domyślne, dopóki nie zostanie przypisana do niego prawidłowe zadanie. Metody, takie jak `get`, `wait` lub `then` zgłosi [invalid_argument —](../../../standard-library/invalid-argument-class.md) wyjątku, gdy wywołać dla zadania domyślne skonstruowany.  
+ Domyślny konstruktor dla `task` tylko znajduje się w celu umożliwienia zadań, które jest używane w kontenerach. Nie można użyć zadanie domyślne, dopóki nie zostanie przypisana do niego prawidłowego zadania. Metody takie jak `get`, `wait` lub `then` zgłosi [invalid_argument](../../../standard-library/invalid-argument-class.md) wyjątek przy wywołaniu nad zadaniem domyślne.  
   
- Zadanie, które jest tworzona na podstawie `task_completion_event` ukończy (i jego kontynuacje zaplanowane), gdy zdarzenie ukończenia zadań jest ustawiona.  
+ Zadanie, które jest tworzona na podstawie `task_completion_event` zostanie ukończone (i mają jego kontynuacje zostaną zaplanowane) po ustawieniu zdarzenia zakończenia zadania.  
   
- Wersja Konstruktor, który pobiera token anulowania tworzy zadanie, które mogą zostać anulowane przy użyciu `cancellation_token_source` token został uzyskany. Nie są można anulować zadania utworzone bez token anulowania.  
+ Wersja Konstruktor, który pobiera token anulowania, tworzy zadanie, które można anulować przy użyciu `cancellation_token_source` otrzymanego tokenu. Zadań utworzonych bez tokenu anulowania nie są można anulować.  
   
- Zadania utworzone na podstawie `Windows::Foundation::IAsyncInfo` interfejsu lub wyrażenie lambda, która zwraca `IAsyncInfo` interfejsu przejścia ich terminali po zakończeniu objętego operację asynchroniczną środowiska wykonawczego systemu Windows lub akcji. Podobnie, zadania utworzone na podstawie lambda, która zwraca `task<result_type>` przejścia ich terminali wewnętrzny zadań osiągnie stanu terminali, a nie zwraca lambda.  
+ Zadania utworzone z `Windows::Foundation::IAsyncInfo` interfejsu lub wyrażenia lambda, która zwraca `IAsyncInfo` interfejsu osiągają swój stan końcowy, po ukończeniu operacji asynchronicznej środowiska wykonawczego Windows zamknięte lub akcji. Podobnie, zadania utworzone z wyrażenia lambda, która zwraca `task<result_type>` osiągają swój stan końcowy, gdy zadanie wewnętrzne osiągnie swój stan końcowy, a nie w przypadku, gdy wyrażenie lambda zwraca.  
   
- `task` zachowuje się jak wskaźnika inteligentnego i bezpiecznie przekazać wokół przez wartość. Są dostępne przez wiele wątków bez konieczności blokad.  
+ `task` zachowuje się jak inteligentny wskaźnik i można bezpiecznie przekazywać go przez wartość. Może zostać oceniony przez wiele wątków, bez potrzeby blokad.  
   
- Przeciążeń konstruktora, które przyjmują interfejsu Windows::Foundation::IAsyncInfo lub wyrażenia lambda zwracanie interfejsu, są dostępne tylko do aplikacji środowiska wykonawczego systemu Windows.  
+ Przeciążenia konstruktora, które przyjmują interfejs Windows::Foundation:: iasyncinfo lub wyrażenia lambda zwraca ten interfejs, są dostępne tylko dla aplikacji środowiska wykonawczego Windows.  
   
  Aby uzyskać więcej informacji, zobacz [równoległość zadań](../../../parallel/concrt/task-parallelism-concurrency-runtime.md).  
   
-##  <a name="then"></a> następnie 
+##  <a name="then"></a> Następnie 
 
- Dodaje zadania kontynuacji do tego zadania.  
+ Dodaje zadanie kontynuacji do wykonania takiego zadania.  
   
 ```
 template<typename _Function>
@@ -289,44 +293,44 @@ __declspec(
 ```   
   
 ### <a name="parameters"></a>Parametry  
- `_Function`  
- Typ obiektu funkcja, która zostanie wywołana przez to zadanie.  
+*_Function*<br/>
+Typ obiektu funkcji, która zostanie wywołany przez to zadanie.  
   
- `_Func`  
- Funkcja kontynuacji do wykonania po zakończeniu zadania. Ta funkcja kontynuacji musi przyjmować jako danych wejściowych zmiennej albo `result_type` lub `task<result_type>`, gdzie `result_type` jest typ wyniku to zadanie tworzy.  
+*_Func*<br/>
+Funkcja kontynuacji do wykonania po zakończeniu tego zadania. Ta funkcja kontynuacji musi przyjmować jako dane wejściowe zmienną `result_type` lub `task<result_type>`, gdzie `result_type` jest typ wyniku tego zadania.  
   
- `_TaskOptions`  
- Opcje zadania obejmują token, harmonogram i kontynuacji kontekst anulowania. Domyślnie wcześniejsze 3 opcje są dziedziczone z poprzedzających zadań  
+*_TaskOptions*<br/>
+Opcje zadania obejmują anulowania tokenu, harmonogram i kontekst kontynuacji. Domyślnie poprzednie 3 opcje są dziedziczone od zadania poprzedzającego  
   
- `_CancellationToken`  
- Token anulowania do skojarzenia z zadania kontynuacji. Utworzony bez token anulowania zadania kontynuacji będzie dziedziczyć token poprzedzających zadania.  
+*_CancellationToken*<br/>
+Token anulowania do skojarzenia z zadaniem kontynuacji. Zadanie kontynuacji, który jest tworzony bez tokena odwołania, będzie dziedziczyć token zadania poprzedzającego.  
   
- `_ContinuationContext`  
- Zmienna, która określa, gdzie powinien zostać wykonany kontynuacji. Ta zmienna jest przydatna, gdy jest używany w aplikacji platformy uniwersalnej systemu Windows. Aby uzyskać więcej informacji, zobacz [task_continuation_context —](task-continuation-context-class.md)  
+*_ContinuationContext*<br/>
+Zmienna, która określa, gdzie należy realizować kontynuację. Ta zmienna jest przydatna, gdy są używane w aplikacji platformy uniwersalnej systemu Windows. Aby uzyskać więcej informacji, zobacz [task_continuation_context](task-continuation-context-class.md)  
   
 ### <a name="return-value"></a>Wartość zwracana  
- Zadania kontynuacji nowo utworzony. Typ wyniku zwrócone zadania jest określany przez co `_Func` zwraca.  
+ Nowo utworzone zadanie kontynuacji. Typ wyniku zwracanego zadania jest określana przez wartość, jaką `_Func` zwraca.  
   
 ### <a name="remarks"></a>Uwagi  
- Przeciążeń `then` który lambda lub obiekt, który zwraca interfejs Windows::Foundation::IAsyncInfo, są dostępne tylko dla aplikacji środowiska wykonawczego systemu Windows.  
+ Przeciążenia `then` , wyrażenia lambda lub funktora zwracającego interfejs Windows::Foundation:: iasyncinfo, są dostępne tylko dla aplikacji środowiska wykonawczego Windows.  
   
- Aby uzyskać więcej informacji na temat korzystania z zadań kontynuacje utworzenie asynchroniczne, zobacz [równoległość zadań](../../../parallel/concrt/task-parallelism-concurrency-runtime.md).  
+ Aby uzyskać więcej informacji na temat sposobu używania kontynuacji zadań do redagowania prac asynchronicznych, zobacz [równoległość zadań](../../../parallel/concrt/task-parallelism-concurrency-runtime.md).  
   
-##  <a name="wait"></a> oczekiwania 
+##  <a name="wait"></a> Czekaj 
 
- Czeka na to zadanie do przejścia terminala. Istnieje możliwość `wait` do wykonania zadania w tekście, jeśli spełnione są wszystkie zależności zadania i jego ma nie już pobrane do wykonania w tle proces roboczy.  
+ Czeka, aż zadanie osiągnie stan końcowy. Możliwe jest `wait` do wykonywania zadań w tekście, jeśli spełnione są wszystkie współzależności zadań i jej nie już zostało odebrane do wykonania przez pracownika tła.  
   
 ```
 task_status wait() const;
 ```  
   
 ### <a name="return-value"></a>Wartość zwracana  
- A `task_status` wartość, która może być albo `completed` lub `canceled`. Zadania wystąpił wyjątek podczas wykonywania, czy wyjątek pochodzi z poprzedzających zadania do niego `wait` zgłosi ten wyjątek.  
+ A `task_status` wartość, która może być `completed` lub `canceled`. Jeśli zadanie napotkało wyjątek podczas wykonywania lub wyjątek został rozpropagowany do niego z poprzedzającego zadania, `wait` spowoduje zgłoszenie tego wyjątku.  
   
 ### <a name="remarks"></a>Uwagi  
   
 > [!IMPORTANT]
->  Nie należy wywoływać w aplikacji Windows platformy Uniwersalnej `wait` w kodzie, który jest uruchamiany na pozostaje tryb komórek jednowątkowych W przeciwnym razie zwraca środowiska uruchomieniowego [concurrency::invalid_operation](invalid-operation-class.md) , ponieważ ta metoda umożliwia blokowanie bieżącego wątku i może spowodować, że aplikacja przestanie odpowiadać. Jednak możesz wywołać [concurrency::task::get](#get) metodę, aby odbierać wynik zadania poprzedzających kontynuację opartego na zadaniach.  
+>  W aplikacji platformy uniwersalnej Windows (UWP), nie należy wywoływać metody `wait` w kodzie, który działa w komórce jednowątkowej W przeciwnym wypadku środowisko wykonawcze zgłasza [concurrency::invalid_operation](invalid-operation-class.md) , ponieważ ta metoda blokują bieżący wątek i może spowodować, że aplikacja przestanie odpowiadać. Jednak można wywoływać [CONCURRENCY::Task:: GET](#get) metodę do uzyskania wyniku zadania poprzedzającego w kontynuacji opartej na zadaniach.  
   
 ## <a name="see-also"></a>Zobacz też  
  [Przestrzeń nazw współbieżności](concurrency-namespace.md)

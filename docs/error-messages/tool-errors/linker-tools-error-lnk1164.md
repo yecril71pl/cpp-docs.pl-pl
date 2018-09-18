@@ -16,16 +16,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f85ad1c223c9d4b22e3763f1d24a6c2631f6342d
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 4b07dcf360a58b07b84abe655641b758d6137d0e
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33297423"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46087443"
 ---
 # <a name="linker-tools-error-lnk1164"></a>Błąd narzędzi konsolidatora LNK1164
-sekcja wyrównanie sekcji (numer) większa niż wartość opcji/align  
-  
- Rozmiar wyrównania dla podanej sekcji w pliku obiektu przekracza wartość określony za pomocą [/ALIGN](../../build/reference/align-section-alignment.md) opcji. **/ALIGN** wartość musi być potęgą liczby 2 i musi być równa lub przekracza wyrównanie sekcji podany w pliku obiektu.  
-  
- Albo Skompiluj ponownie z mniejszym wyrównanie sekcji lub zwiększ **/ALIGN** wartość.
+
+sekcja wyrównanie sekcji (numer) większa niż wartość opcji/align
+
+Rozmiar wyrównania sekcji podanej w pliku obiektu przekracza wartość określoną za pomocą [/ALIGN](../../build/reference/align-section-alignment.md) opcji. **/ALIGN** wartość musi być potęgą liczby 2 i musi być równa lub przekracza wyrównanie sekcji podany w pliku obiektu.
+
+Albo Skompiluj ponownie z mniejszych wyrównanie sekcji lub zwiększ **/ALIGN** wartość.

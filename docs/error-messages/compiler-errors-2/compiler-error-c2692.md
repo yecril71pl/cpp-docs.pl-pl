@@ -1,5 +1,5 @@
 ---
-title: C2692 błąd kompilatora | Dokumentacja firmy Microsoft
+title: Błąd kompilatora C2692 | Dokumentacja firmy Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,14 +16,15 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a02110750a748b5c520df7d202a87957f227a802
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 03a9006889c5853e77b5603484ea9d18f2474241
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33230999"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46088374"
 ---
-# <a name="compiler-error-c2692"></a>C2692 błąd kompilatora
-"nazwa_funkcji": funkcje wymagane w kompilatorze języka C z w pełni prototypowane "/ clr" opcja  
-  
- Podczas kompilowania dla platformy .NET kodu zarządzanego kompilatora C wymaga deklaracji funkcji ANSI. Ponadto, jeśli funkcja nie przyjmuje żadnych parametrów, go jawnie zadeklarować `void` jako typ parametru.
+# <a name="compiler-error-c2692"></a>Błąd kompilatora C2692
+
+"nazwa_funkcji": wymagano w pełni prototypowanych funkcji w kompilatorze języka C z "/ clr" opcja
+
+W przypadku kodu zarządzanego kompilowania dla platformy .NET, kompilator języka C wymaga deklaracji funkcji ANSI. Ponadto, jeśli funkcja nie przyjmuje żadnych parametrów, go jawnie zadeklarować `void` jako typ parametru.

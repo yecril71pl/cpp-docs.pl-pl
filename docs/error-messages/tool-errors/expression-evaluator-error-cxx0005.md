@@ -1,5 +1,5 @@
 ---
-title: Błąd cxx0005 programu Expression Evaluator | Dokumentacja firmy Microsoft
+title: Błąd ewaluatora wyrażeń CXX0005 | Dokumentacja firmy Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,16 +17,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 203af51226bddd09e67f1d04efba7f97f19f0850
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: d2dc22555b84a0726aa9ce0da8ce225c00a9d037
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33294976"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46094576"
 ---
 # <a name="expression-evaluator-error-cxx0005"></a>Błąd CXX0005 programu Expression Evaluator
-operator nie jest obsługiwane  
-  
- W wyrażeniu określono nieobsługiwany operator C. Wpisz wyrażenie równoważne przy użyciu operatorów obsługiwanych C.  
-  
- Ten błąd jest taki sam jak CAN0005.
+
+operator nie jest obsługiwane
+
+W wyrażeniu określono nieobsługiwany operator C. Wyrażenia równoważne użyciu obsługiwane operatory języka C.
+
+Ten błąd jest taka sama jak CAN0005.

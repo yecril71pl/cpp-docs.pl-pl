@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e25369f18f542198638e324110ba14d10b8ddc69
-ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
+ms.openlocfilehash: 39f45b9c81d5339b2b6afe4c77fdc9bac6b5d731
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33691771"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46091169"
 ---
 # <a name="ompnumthreads"></a>OMP_NUM_THREADS
 Ustawia maksymalną liczbę wątków w równoległego regionu, chyba że zostaną zastąpione [omp_set_num_threads](../../../parallel/openmp/reference/omp-set-num-threads.md) lub [num_threads](../../../parallel/openmp/reference/num-threads.md).  
@@ -32,16 +32,15 @@ Ustawia maksymalną liczbę wątków w równoległego regionu, chyba że zostan�
 set OMP_NUM_THREADS[=num]  
 ```  
   
+### <a name="parameters"></a>Parametry
+  
+*num*<br/>
+Maksymalna liczba wątków w równoległego regionu, maksymalnie 64 w implementacji Visual C++.  
+  
 ## <a name="remarks"></a>Uwagi  
- w przypadku gdy  
+ **OMP_NUM_THREADS** zmiennej środowiskowej, może zostać przesłonięta przez [omp_set_num_threads](../../../parallel/openmp/reference/omp-set-num-threads.md) funkcji lub [num_threads](../../../parallel/openmp/reference/num-threads.md).  
   
- `num`  
- Maksymalna liczba wątków w równoległego regionu, maksymalnie 64 w implementacji Visual C++.  
-  
-## <a name="remarks"></a>Uwagi  
- **OMP_NUM_THREADS** zmiennej środowiskowej może zostać przesłonięta przez [omp_set_num_threads](../../../parallel/openmp/reference/omp-set-num-threads.md) funkcji lub [num_threads](../../../parallel/openmp/reference/num-threads.md).  
-  
- Wartość domyślna `num` w programie Visual C++ implementacja standardu OpenMP jest liczba procesorów wirtualnych, w tym wielowątkowość procesorów.  
+ Wartość domyślna `num` w programie Visual C++ implementacja standardu OpenMP jest liczba procesorów wirtualnych, w tym procesory CPU wielowątkowość.  
   
  Aby uzyskać więcej informacji, zobacz [4.2 OMP_NUM_THREADS](../../../parallel/openmp/4-2-omp-num-threads.md).  
   
@@ -52,7 +51,7 @@ set OMP_NUM_THREADS[=num]
 set OMP_NUM_THREADS=16  
 ```  
   
- Następujące polecenie wyświetla bieżące ustawienie **OMP_NUM_THREADS** zmiennej środowiskowej:  
+ Następujące polecenie wyświetla bieżące ustawienie **OMP_NUM_THREADS** zmienną środowiskową:  
   
 ```  
 set OMP_NUM_THREADS  

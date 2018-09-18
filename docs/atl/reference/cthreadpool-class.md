@@ -30,12 +30,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9753599f08d1e8ee238097027c501a0b56e40300
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 9a5541613bddd1e6a4fbac3a5555e54ce30fb94c
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43757397"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46091702"
 ---
 # <a name="cthreadpool-class"></a>Klasa CThreadPool
 
@@ -44,16 +44,16 @@ Ta klasa dostarcza puli wątków roboczych, które przetwarzają kolejki element
 ## <a name="syntax"></a>Składnia
 
 ```
-template <class Worker, class ThreadTraits = DefaultThreadTraits>  
+template <class Worker, class ThreadTraits = DefaultThreadTraits>
 class CThreadPool : public IThreadPoolConfig
 ```
 
 #### <a name="parameters"></a>Parametry
 
-*Proces roboczy*  
+*Proces roboczy*<br/>
 Klasa odpowiadające [archetyp procesu roboczego](../../atl/reference/worker-archetype.md) dostarczanie kodu używani do przetwarzania elementów w kolejce w puli wątków roboczych.
 
-*ThreadTraits*  
+*ThreadTraits*<br/>
 Klasa, zapewniając funkcja używana do tworzenia wątków w puli.
 
 ## <a name="members"></a>Elementy członkowskie
@@ -180,7 +180,7 @@ HRESULT STDMETHODCALLTYPE GetSize(int* pnNumThreads) throw();
 
 ### <a name="parameters"></a>Parametry
 
-*pnNumThreads*  
+*pnNumThreads*<br/>
 [out] Adres zmiennej, która w przypadku powodzenia, otrzyma liczbę wątków w puli.
 
 ### <a name="return-value"></a>Wartość zwracana
@@ -197,7 +197,7 @@ HRESULT STDMETHODCALLTYPE GetTimeout(DWORD* pdwMaxWait) throw();
 
 ### <a name="parameters"></a>Parametry
 
-*pdwMaxWait*  
+*pdwMaxWait*<br/>
 [out] Adres zmiennej, która w przypadku powodzenia odbiera maksymalny czas (w milisekundach) oczekiwania na wątek zamknąć puli wątków.
 
 ### <a name="return-value"></a>Wartość zwracana
@@ -222,20 +222,20 @@ HRESULT Initialize(
 
 ### <a name="parameters"></a>Parametry
 
-*pvWorkerParam*  
+*pvWorkerParam*<br/>
 Parametr procesu roboczego do przekazania do obiektu wątku roboczego `Initialize`, `Execute`, i `Terminate` metody.
 
-*nNumThreads*  
+*nNumThreads*<br/>
 Żądana liczba wątków w puli.
 
 Jeśli *nNumThreads* jest ujemna, jego wartość bezwzględna będzie pomnożona przez liczbę procesorów w komputerze, aby uzyskać łączna liczba wątków.
 
 Jeśli *nNumThreads* wynosi zero, ATLS_DEFAULT_THREADSPERPROC zostanie pomnożona przez liczbę procesorów w komputerze, aby uzyskać łączna liczba wątków.  Wartość domyślna to 2 wątków na procesor. Jeśli to konieczne, można zdefiniować własne dodatnią liczbą całkowitą dla tego symbolu, przed dołączeniem atlutil.h.
 
-*dwStackSize*  
+*dwStackSize*<br/>
 Rozmiar stosu dla każdego wątku w puli.
 
-*hCompletion*  
+*hCompletion*<br/>
 Uchwyt obiektu do skojarzenia z portu zakończenia.
 
 ### <a name="return-value"></a>Wartość zwracana
@@ -264,7 +264,7 @@ BOOL QueueRequest(Worker::RequestType request) throw();
 
 ### <a name="parameters"></a>Parametry
 
-*Żądanie*  
+*Żądanie*<br/>
 Żądanie do umieszczone w kolejce.
 
 ### <a name="return-value"></a>Wartość zwracana
@@ -301,7 +301,7 @@ HRESULT STDMETHODCALLTYPE SetSizeint nNumThreads) throw();
 
 ### <a name="parameters"></a>Parametry
 
-*nNumThreads*  
+*nNumThreads*<br/>
 Żądana liczba wątków w puli.
 
 Jeśli *nNumThreads* jest ujemna, jego wartość bezwzględna będzie pomnożona przez liczbę procesorów w komputerze, aby uzyskać łączna liczba wątków.
@@ -326,7 +326,7 @@ HRESULT STDMETHODCALLTYPE SetTimeout(DWORD dwMaxWait) throw();
 
 ### <a name="parameters"></a>Parametry
 
-*dwMaxWait*  
+*dwMaxWait*<br/>
 Żądany maksymalny czas (w milisekundach) oczekiwania na wątek zamknąć puli wątków.
 
 ### <a name="return-value"></a>Wartość zwracana
@@ -349,7 +349,7 @@ void Shutdown(DWORD dwMaxWait = 0) throw();
 
 ### <a name="parameters"></a>Parametry
 
-*dwMaxWait*  
+*dwMaxWait*<br/>
 Żądany maksymalny czas (w milisekundach) oczekiwania na wątek zamknąć puli wątków. Jeśli 0 lub wartość nie zostanie podany, ta metoda użyje limit czasu ustawiony [CThreadPool::SetTimeout](#settimeout).
 
 ### <a name="remarks"></a>Uwagi
@@ -358,6 +358,6 @@ Ta metoda wysyła żądanie zamknięcia do wszystkich wątków w puli. Jeśli up
 
 ## <a name="see-also"></a>Zobacz też
 
-[Interfejs IThreadPoolConfig](../../atl/reference/ithreadpoolconfig-interface.md)   
-[DefaultThreadTraits](atl-typedefs.md#defaultthreadtraits)   
+[Interfejs IThreadPoolConfig](../../atl/reference/ithreadpoolconfig-interface.md)<br/>
+[DefaultThreadTraits](atl-typedefs.md#defaultthreadtraits)<br/>
 [Klasy](../../atl/reference/atl-classes.md)

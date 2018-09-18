@@ -20,19 +20,21 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: f7ba3e7b64a8c65678830593098ef658b3495c75
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 7ff1759203593cd556a91cbe17b93388488a2b07
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33104701"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46091247"
 ---
 # <a name="schema--mfc-data-access"></a>Schemat (dostęp do danych MFC)
-Schemat bazy danych w tym artykule opisano bieżącej struktury tabel i widoków bazy danych w bazie danych. Ogólnie rzecz biorąc kod generowane przez kreatora przyjęto założenie, że nie spowoduje zmiany schematu tabeli lub tabel, dostęp do zestawu rekordów, ale klasy baz danych może rozwiązać niektóre zmiany schematu, takie jak dodawanie, zmienianie kolejności lub usuwanie niepowiązanych kolumn. W przypadku zmiany tabeli, należy ręcznie zaktualizować rekordów dla tabeli, a następnie ponownie skompilować aplikację.  
+
+Schemat bazy danych w tym artykule opisano bieżącej struktury tabele i widoki bazy danych w bazie danych. Ogólnie rzecz biorąc kodu generowane przez kreatora przyjęto założenie, że schematu dla tabeli lub tabel, które uzyskują dostęp do zestawu rekordów nie ulegnie zmianie, ale klas baz danych poradzenie sobie z niektórych zmiany schematu, takie jak dodawanie, zmienianie kolejności lub usuwanie niepowiązanych kolumn. Jeśli zmieni się tabeli, należy ręcznie zaktualizować zestaw rekordów w tabeli, a następnie ponownie skompilować aplikację.  
   
- Można również uzupełnić radzenia sobie z bazy danych, których schematu nie jest całkowicie znany w czasie kompilacji kodu generowane przez kreatora. Aby uzyskać więcej informacji, zobacz [zestaw rekordów: dynamiczne wiązanie danych kolumn (ODBC)](../data/odbc/recordset-dynamically-binding-data-columns-odbc.md).  
+Można także uzupełnić kod generowane przez kreatora, aby poradzić sobie z bazą danych, którego schemat jest całkowicie nieznany w czasie kompilacji. Aby uzyskać więcej informacji, zobacz [zestaw rekordów: dynamiczne powiązanie danych kolumn (ODBC)](../data/odbc/recordset-dynamically-binding-data-columns-odbc.md).  
   
 ## <a name="see-also"></a>Zobacz też  
- [Dostęp do danych programowania (MFC/ATL)](../data/data-access-programming-mfc-atl.md)   
- [SQL](../data/odbc/sql.md)   
- [Zestaw rekordów (ODBC)](../data/odbc/recordset-odbc.md)
+
+[Programowanie (MFC/ATL) dostępu do danych](../data/data-access-programming-mfc-atl.md)<br/>
+[SQL](../data/odbc/sql.md)<br/>
+[Zestaw rekordów (ODBC)](../data/odbc/recordset-odbc.md)

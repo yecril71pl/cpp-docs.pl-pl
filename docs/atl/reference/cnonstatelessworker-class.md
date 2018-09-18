@@ -21,12 +21,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: eb3b6411e9ce34ba0196d25c8a63f3f066d78549
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: a4aa07273e68f0320823d258f324bb8631aef77a
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43765125"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46095602"
 ---
 # <a name="cnonstatelessworker-class"></a>Klasa CNonStatelessWorker
 
@@ -38,13 +38,13 @@ Odbiera żądania z puli wątków i przekazuje je do obiektu procesu roboczego, 
 ## <a name="syntax"></a>Składnia
 
 ```
-template <class Worker>  
+template <class Worker>
 class CNonStatelessWorker
 ```
 
 #### <a name="parameters"></a>Parametry
 
-*Proces roboczy*  
+*Proces roboczy*<br/>
 Klasa wątek procesu roboczego zgodnych z [archetyp procesu roboczego](../../atl/reference/worker-archetype.md) nadających się do obsługi żądań w kolejce na [CThreadPool](../../atl/reference/cthreadpool-class.md).
 
 ## <a name="members"></a>Elementy członkowskie
@@ -130,6 +130,6 @@ Ta klasa wykonanie oczyszczania `Terminate`.
 
 ## <a name="see-also"></a>Zobacz też
 
-[Klasa CThreadPool](../../atl/reference/cthreadpool-class.md)   
-[Archetyp procesu roboczego](../../atl/reference/worker-archetype.md)   
+[Klasa CThreadPool](../../atl/reference/cthreadpool-class.md)<br/>
+[Archetyp procesu roboczego](../../atl/reference/worker-archetype.md)<br/>
 [Klasy](../../atl/reference/atl-classes.md)

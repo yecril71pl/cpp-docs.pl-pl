@@ -28,40 +28,44 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ef848de1219ae86f447ddf67efb8af6b8e184cc4
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: a35486b271822cb9c7d0dc1bed1e885c13f1dd12
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32390635"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46087672"
 ---
 # <a name="lccodepagefunc"></a>___lc_codepage_func
-Funkcji CRT wewnętrznej. Pobiera bieżącej stronie kodowej wątku.  
-  
-## <a name="syntax"></a>Składnia  
-  
-```cpp  
-UINT ___lc_codepage_func(void);  
-```  
-  
-## <a name="return-value"></a>Wartość zwracana  
- Strona kodowa bieżącego wątku.  
-  
-## <a name="remarks"></a>Uwagi  
- `___lc_codepage_func` jest wewnętrzny funkcji CRT, która jest używana przez inne funkcje CRT można uzyskać z magazynu lokalnego wątku CRT danych bieżącej stronie kodowej. Informacje te są również dostępne za pomocą [_get_current_locale —](../c-runtime-library/reference/get-current-locale.md) funkcji.  
-  
- A *strona kodowa* mapowanie kody znaki jednobajtowe lub znaków dwubajtowych. Inny kod strony zawierają różne znaków specjalnych, zwykle dostosowywane do języka lub grupy języków. Aby uzyskać więcej informacji na temat stron kodowych, zobacz [stron kodowych](../c-runtime-library/code-pages.md).  
-  
- Funkcje CRT wewnętrznej są specyficzne dla implementacji i może ulec zmianie z każdym wersję. Nie zaleca się ich użycie w kodzie.  
-  
-## <a name="requirements"></a>Wymagania  
-  
-|Procedura|Wymagany nagłówek|  
-|-------------|---------------------|  
-|`___lc_codepage_func`|crt\src\setlocal.h|  
-  
-## <a name="see-also"></a>Zobacz też  
- [_get_current_locale](../c-runtime-library/reference/get-current-locale.md)   
- [setLocale, _wsetlocale —](../c-runtime-library/reference/setlocale-wsetlocale.md)   
- [_create_locale, _wcreate_locale](../c-runtime-library/reference/create-locale-wcreate-locale.md)   
- [_free_locale](../c-runtime-library/reference/free-locale.md)
+
+Wewnętrzny funkcji CRT. Pobiera bieżący strona kodowa wątku.
+
+## <a name="syntax"></a>Składnia
+
+```cpp
+UINT ___lc_codepage_func(void);
+```
+
+## <a name="return-value"></a>Wartość zwracana
+
+Bieżąca strona kodowa wątku.
+
+## <a name="remarks"></a>Uwagi
+
+`___lc_codepage_func` jest wewnętrzny funkcji CRT, który jest używany przez inne funkcje CRT, można uzyskać z magazynu lokalnego wątku CRT danych bieżącej stronie kodowej. Te informacje są dostępne również za pomocą [_get_current_locale —](../c-runtime-library/reference/get-current-locale.md) funkcji.
+
+A *strony kodowej* mapowania kodów pojedynczych znaków jednobajtowych lub znaków dwubajtowych. Różne strony kodowe obejmują różne znaki specjalne, zwykle dostosowane do języka lub grupy z języków. Aby uzyskać więcej informacji dotyczących stron kodowych, zobacz [stron kodowych](../c-runtime-library/code-pages.md).
+
+Wewnętrzne funkcje CRT są specyficzne dla implementacji i może ulec zmianie z każdej wersji. Nie zalecamy ich użycie w kodzie.
+
+## <a name="requirements"></a>Wymagania
+
+|Procedura|Wymagany nagłówek|
+|-------------|---------------------|
+|`___lc_codepage_func`|crt\src\setlocal.h|
+
+## <a name="see-also"></a>Zobacz też
+
+[_get_current_locale](../c-runtime-library/reference/get-current-locale.md)<br/>
+[setlocale, _wsetlocale](../c-runtime-library/reference/setlocale-wsetlocale.md)<br/>
+[_create_locale, _wcreate_locale](../c-runtime-library/reference/create-locale-wcreate-locale.md)<br/>
+[_free_locale](../c-runtime-library/reference/free-locale.md)

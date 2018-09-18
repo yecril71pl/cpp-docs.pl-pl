@@ -16,14 +16,15 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 63ba6a62610e4cc22a7b1e49695e3b730ee20957
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: a4e28be01c0f38579f09204a9b1312fdfe287851
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33321457"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46097123"
 ---
 # <a name="resource-compiler-error-rc2116"></a>Błąd kompilatora zasobów RC2116
-oczekiwany numer dla Identyfikatora  
-  
- Oczekiwany numer dla `id` pole w instrukcji sterowania **okna DIALOGOWEGO** instrukcji. Upewnij się, że masz liczbą lub `#define` instrukcji dla identyfikatora formantu.
+
+Oczekiwano liczby dla Identyfikatora
+
+Oczekiwano liczby dla `id` pola w instrukcji sterowania **okna DIALOGOWEGO** instrukcji. Upewnij się, że masz wiele lub `#define` poufności informacji dotyczące Identyfikator kontrolki.

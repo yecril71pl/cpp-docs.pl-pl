@@ -30,38 +30,41 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 41060a9dbd3d2bc8176a2b13233db54933a6428b
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 05226ffcc5a10785391969f8162a76034efc4d92
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32409706"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46097309"
 ---
 # <a name="sharing-constants"></a>Udostępnianie stałych
-Stałe dla udostępniania plików trybów.  
-  
-## <a name="syntax"></a>Składnia  
-  
-```  
-  
-#include <share.h>  
-  
-```  
-  
-## <a name="remarks"></a>Uwagi  
- *Shflag* argument określa tryb współdzielenia, która składa się z co najmniej jedną stałą manifestu. Może być łączone z *oflag* argumentów (zobacz [plik — stałe](../c-runtime-library/file-constants.md)).  
-  
- W poniższej tabeli wymieniono stałe i ich znaczenie:  
-  
-|Stała|Znaczenie|  
-|--------------|-------------|  
-|`_SH_DENYRW`|Nie zezwala na odczyt i zapis do pliku|  
-|`_SH_DENYWR`|Nie zezwala na dostęp do zapisu do pliku|  
-|`_SH_DENYRD`|Nie zezwala na dostęp do odczytu do plików|  
-|`_SH_DENYNO`|Zezwoleń do odczytu i zapisu|  
-|`_SH_SECURE`|Ustawia tryb bezpieczny (odczyt udostępnionego, wyłączny dostęp do zapisu).|  
-  
-## <a name="see-also"></a>Zobacz też  
- [_sopen —, _wsopen —](../c-runtime-library/reference/sopen-wsopen.md)   
- [_fsopen —, _wfsopen —](../c-runtime-library/reference/fsopen-wfsopen.md)   
- [Stałe globalne](../c-runtime-library/global-constants.md)
+
+Stałe do udostępniania plików tryby.
+
+## <a name="syntax"></a>Składnia
+
+```
+
+#include <share.h>
+
+```
+
+## <a name="remarks"></a>Uwagi
+
+*Shflag* argument określa tryb współdzielenia, która składa się z jednego lub więcej stałych manifestu. Może być łączone z *oflag* argumentów (patrz [plik — stałe](../c-runtime-library/file-constants.md)).
+
+W poniższej tabeli wymieniono stałe i ich znaczenie:
+
+|Stała|Znaczenie|
+|--------------|-------------|
+|`_SH_DENYRW`|Nie zezwala na odczyt i zapis do pliku|
+|`_SH_DENYWR`|Nie zezwala na dostęp do zapisu do pliku|
+|`_SH_DENYRD`|Nie zezwala na dostęp do odczytu do pliku|
+|`_SH_DENYNO`|Zezwala uprawnienia odczytu i zapisu|
+|`_SH_SECURE`|Ustawia tryb bezpieczny (odczytu udostępnionego, wyłączny dostęp do zapisu).|
+
+## <a name="see-also"></a>Zobacz też
+
+[_sopen, _wsopen](../c-runtime-library/reference/sopen-wsopen.md)<br/>
+[_fsopen, _wfsopen](../c-runtime-library/reference/fsopen-wfsopen.md)<br/>
+[Stałe globalne](../c-runtime-library/global-constants.md)

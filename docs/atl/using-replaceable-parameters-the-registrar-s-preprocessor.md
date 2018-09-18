@@ -17,12 +17,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 828c3881771aa37181822859cc54894e8771c2cb
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: eddeb6467dfb3bf578c0287161de989e8ba12483
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43767597"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46097474"
 ---
 # <a name="using-replaceable-parameters-the-registrar39s-preprocessor"></a>Używanie wymiennych parametrów (Rejestrator&#39;preprocesora s)
 
@@ -36,8 +36,8 @@ Parametry wymienne pozwalają rejestratora klientów określić dane czasu wykon
 
 Innym zastosowaniem preprocesora jest łączenie danych czasu wykonywania przy użyciu danych skryptu. Załóżmy, że wpis jest potrzebny zawierającą pełną ścieżkę do modułu z ciągiem "`, 1`" dołączany na końcu. Najpierw należy zdefiniować następujące rozszerzenia:
 
-```  
-'MySampleKey' = s '%MODULE%, 1'  
+```
+'MySampleKey' = s '%MODULE%, 1'
 ```
 
 Następnie przed wywołaniem skryptu przetwarzania metody wymienionej w [wywoływanie skryptów](../atl/invoking-scripts.md), dodać zamiennika do mapy:
@@ -53,8 +53,8 @@ Podczas analizowania skryptu rejestratora rozwija `'%MODULE%, 1'` do `c:\mycode\
 >  Aby zastąpić wartości zastępcze w czasie wykonywania, Usuń wywołanie funkcji w skrypcie [DECLARE_REGISTRY_RESOURCE](../atl/reference/registry-macros.md#declare_registry_resource) lub [DECLARE_REGISTRY_RESOURCEID](../atl/reference/registry-macros.md#declare_registry_resourceid) makra. Zamiast tego należy zastąpić własnymi `UpdateRegistry` metodę, która wywołuje [CAtlModule::UpdateRegistryFromResourceD](../atl/reference/catlmodule-class.md#updateregistryfromresourced) lub [CAtlModule::UpdateRegistryFromResourceS](../atl/reference/catlmodule-class.md#updateregistryfromresources)i przekazać macierz _ATL_REGMAP_ Struktury wpisu. Macierz _ATL_REGMAP_ENTRY musi mieć co najmniej jeden wpis, który jest ustawiony na {wartość NULL, NULL}, a ten wpis powinien zawsze być ostatni wpis. W przeciwnym razie błąd naruszenia zasad dostępu będzie generowany, jeśli `UpdateRegistryFromResource` jest wywoływana.
 
 > [!NOTE]
->  Podczas kompilowania projektu, który generuje plik wykonywalny, ATL automatycznie dodaje znaki cudzysłowu otaczające tworzony w czasie wykonywania za pomocą nazwy ścieżki **modułu %** parametru skryptu rejestratora. Jeśli chcesz, aby nazwę ścieżki aby używać znaków cudzysłowu, użyj nowego **MODULE_RAW %** parametru zamiast tego.  
->   
+>  Podczas kompilowania projektu, który generuje plik wykonywalny, ATL automatycznie dodaje znaki cudzysłowu otaczające tworzony w czasie wykonywania za pomocą nazwy ścieżki **modułu %** parametru skryptu rejestratora. Jeśli chcesz, aby nazwę ścieżki aby używać znaków cudzysłowu, użyj nowego **MODULE_RAW %** parametru zamiast tego.
+>
 >  Podczas kompilowania projektu, który wyprowadza biblioteki DLL, ATL nie doda znaków cudzysłowu do nazwy ścieżki Jeśli **modułu %** lub **MODULE_RAW %** jest używany.
 
 ## <a name="see-also"></a>Zobacz też

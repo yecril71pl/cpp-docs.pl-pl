@@ -1,5 +1,5 @@
 ---
-title: C2198 błąd kompilatora | Dokumentacja firmy Microsoft
+title: Błąd kompilatora C2198 | Dokumentacja firmy Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,26 +16,27 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a6f69874b5c324250338baf480b6bd1cf1c36a1f
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 1a4e391f35a4487246ca074d218391348c83e0d2
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33170053"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46096824"
 ---
-# <a name="compiler-error-c2198"></a>C2198 błąd kompilatora
-"Funkcja": zbyt mało argumentów dla wywołania  
-  
- Kompilator odnaleziono za mało parametrów dla wywołania funkcji lub deklaracji Niepoprawna funkcja.  
-  
- Poniższy przykład generuje C2198:  
-  
-```  
-// C2198.c  
-// compile with: /c  
-void func( int, int );  
-int main() {  
-   func( 1 );   // C2198 only one actual parameter  
-   func( 1, 1 );   // OK  
-}  
+# <a name="compiler-error-c2198"></a>Błąd kompilatora C2198
+
+'Funkcja': za mało argumentów dla wywołania
+
+Kompilator odnaleziono za mało parametrów dla wywołania funkcji lub deklaracji Niepoprawna funkcja.
+
+Poniższy przykład spowoduje wygenerowanie C2198:
+
+```
+// C2198.c
+// compile with: /c
+void func( int, int );
+int main() {
+   func( 1 );   // C2198 only one actual parameter
+   func( 1, 1 );   // OK
+}
 ```

@@ -1,5 +1,5 @@
 ---
-title: C błąd w czasie wykonywania R6026 | Dokumentacja firmy Microsoft
+title: R6026 błąd środowiska uruchomieniowego języka C | Dokumentacja firmy Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,28 +16,29 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c7c8bea41b946db67ce24a52393d87873926f3f8
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 824649a28edc1b630eb2fbacd7beec05d74975a9
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33298132"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46087445"
 ---
-# <a name="c-runtime-error-r6026"></a>C R6026 błąd w czasie wykonywania
-Brak wystarczającej ilości miejsca dla stdio — inicjowanie  
-  
+# <a name="c-runtime-error-r6026"></a>R6026 błąd środowiska uruchomieniowego języka C
+
+Brak wystarczającej ilości miejsca do zainicjowania stdio —
+
 > [!NOTE]
->  Jeśli wystąpią ten komunikat o błędzie podczas uruchamiania aplikacji aplikacji został wyłączony, ponieważ wystąpił problem wewnętrzny pamięci. Istnieje kilka możliwych przyczyn tego błędu, ale zazwyczaj spowodowane warunek bardzo małej ilości pamięci. Może być również spowodowane przez usterkę w aplikacji, uszkodzenie bibliotek języka Visual C++, których używa lub sterownika.  
->   
->  Możesz wypróbować następujące kroki, aby naprawić ten błąd:  
->   
->  -   Zamknij inne uruchomione aplikacje lub uruchom ponownie komputer, aby zwolnić pamięć.  
-> -   Użyj **aplikacje i funkcje** lub **programy i funkcje** strony **Panelu sterowania** do naprawy lub ponownej instalacji programu.  
-> -   Jeśli aplikacja pracy przed Ostatnia instalacja innej aplikacji lub sterownika, użyj **aplikacje i funkcje** lub **programy i funkcje** strony **Panelu sterowania** do usunięcia Nowa aplikacja lub sterowników i spróbuj ponownie aplikację.  
-> -   Użyj **aplikacje i funkcje** lub **programy i funkcje** strony **Panelu sterowania** do naprawy lub ponownej instalacji wszystkich kopii programu Microsoft Visual C++ Redistributable.  
-> -   Sprawdź **usługi Windows Update** w **Panelu sterowania** aktualizacji oprogramowania.  
-> -   Sprawdź, czy zaktualizowaną wersję aplikacji. Jeśli problem będzie się powtarzać, skontaktuj się z dostawcą aplikacji.  
-  
- **Informacje dla programistów**  
-  
- Ten błąd występuje, gdy nie ma wystarczającej ilości pamięci do zainicjować standard obsługi operacji We/Wy w środowisku wykonawczym C. Ten błąd zazwyczaj występuje podczas uruchamiania aplikacji. Upewnij się, że aplikacji i sterowników i bibliotek DLL, który ładuje nie uszkodzenie sterty przy uruchamianiu.
+>  Jeśli napotkasz ten komunikat o błędzie podczas działania aplikacji, aplikacji został zamknięty, ponieważ ma on wewnętrzny problem z pamięcią. Istnieje kilka możliwych przyczyn tego błędu, ale zazwyczaj jest to spowodowane przez warunek bardzo małej ilości pamięci. Może być także spowodowane przez usterkę w aplikacji, uszkodzenie bibliotek Visual C++, których używa lub sterownika.
+>
+>  Możesz wypróbować następujące kroki, aby naprawić ten błąd:
+>
+>  -   Zamknij inne aplikacje uruchomione lub uruchom ponownie komputer, aby zwolnić pamięć.
+> -   Użyj **aplikacje i funkcje** lub **programy i funkcje** strony w **Panelu sterowania** naprawić lub zainstalować ponownie program.
+> -   Jeśli aplikacja była praca przed Ostatnia instalacja innej aplikacji lub sterownika, użyj **aplikacje i funkcje** lub **programy i funkcje** strony w **Panelu sterowania** do usunięcia Nowa aplikacja lub sterownika i spróbuj ponownie aplikację.
+> -   Użyj **aplikacje i funkcje** lub **programy i funkcje** strony w **Panelu sterowania** naprawić lub zainstalować ponownie wszystkie kopie Microsoft Visual C++ Redistributable.
+> -   Sprawdź **Windows Update** w **Panelu sterowania** aktualizacji oprogramowania.
+> -   Sprawdź, czy zaktualizowaną wersję aplikacji. Jeśli problem będzie się powtarzać, skontaktuj się z dostawcą aplikacji.
+
+**Informacje dla programistów**
+
+Ten błąd występuje, gdy nie ma wystarczającej ilości pamięci do zainicjowania pomocy technicznej standard operacji We/Wy w środowisku uruchomieniowym języka C. Ten błąd zazwyczaj występuje podczas uruchamiania aplikacji. Upewnij się, że Twoja aplikacja i sterowniki i bibliotek DLL, która ładuje nie spowodują uszkodzenia sterty przy uruchamianiu.

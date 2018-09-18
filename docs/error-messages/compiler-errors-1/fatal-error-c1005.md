@@ -16,16 +16,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 13ff7f5dbc1f9ecb66c54f52fae4a38d1e4d4664
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 888bdaf2eaddc0d4178affa1ccc4ae77c34f4617
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33197718"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46092313"
 ---
 # <a name="fatal-error-c1005"></a>Błąd krytyczny C1005
-zbyt długi ciąg dla buforu  
-  
- Ciąg w pośredniego pliku kompilatora nastąpiło przepełnienie buforu.  
-  
- Ten błąd można uzyskać po parametr przekazywany do jednej [/Fd](../../build/reference/fd-program-database-file-name.md) lub [/Yl](../../build/reference/yl-inject-pch-reference-for-debug-library.md) — opcje kompilatora jest większy niż 256 bajtów.
+
+ciąg zbyt duże dla buforu
+
+Ciąg w pośredniego pliku kompilatora nastąpiło przepełnienie buforu.
+
+Ten błąd może wystąpić podczas parametr, który zostanie przekazany do jednej [/Fd](../../build/reference/fd-program-database-file-name.md) lub [/Yl](../../build/reference/yl-inject-pch-reference-for-debug-library.md) opcje kompilatora jest większa niż 256 bajtów.

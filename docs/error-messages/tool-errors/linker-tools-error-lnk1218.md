@@ -16,16 +16,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c0a0596a648c44be928e6bbbae89734911550c27
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: a8808a52724aa3dc1bdfd33fec5945ba40680ca3
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33298892"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46095329"
 ---
 # <a name="linker-tools-error-lnk1218"></a>Błąd narzędzi konsolidatora LNK1218
-Ostrzeżenie traktowane jako błąd; Nie wygenerowano pliku wyjściowego  
-  
- Kiedy należy połączyć z **wx**, wszelkie ostrzeżenia konsolidatora będą traktowane jako błędy, a plik wyjściowy nie zostanie utworzony.  
-  
- Zobacz [/WX (Traktuj ostrzeżenia konsolidatora jako błędy)](../../build/reference/wx-treat-linker-warnings-as-errors.md) Aby uzyskać więcej informacji.
+
+Ostrzeżenie traktowane jako błąd; Nie wygenerowano pliku wyjściowego
+
+Kiedy łączysz się z **/WX**, wszelkie ostrzeżenia konsolidatora będą traktowane jako błędy, a plik wyjściowy nie zostanie utworzony.
+
+Zobacz [/WX (Traktuj ostrzeżenia konsolidatora jak błędy)](../../build/reference/wx-treat-linker-warnings-as-errors.md) Aby uzyskać więcej informacji.

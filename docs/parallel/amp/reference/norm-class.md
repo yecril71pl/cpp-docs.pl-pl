@@ -1,5 +1,5 @@
 ---
-title: norm — klasa | Dokumentacja firmy Microsoft
+title: norm, klasa | Dokumentacja firmy Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,15 +16,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f23ea5d40ecca7ee47d7eae659bfd3da286d8831
-ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
+ms.openlocfilehash: 71e9baa101eb87ac10171722fa76fc462a154ad2
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33705396"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46087486"
 ---
 # <a name="norm-class"></a>norm — Klasa
-Reprezentuje numer normy. Każdy element jest liczbą zmiennoprzecinkową wskaż liczbę z zakresu [-1,0 f, 1,0 f].  
+Reprezentuje liczby normy. Każdy element jest zmiennoprzecinkowy numer punktu z zakresu [-1.0f, 1.0f].  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -38,7 +38,7 @@ class norm;
   
 |Nazwa|Opis|  
 |----------|-----------------|  
-|[norm — Konstruktor](#ctor)|Przeciążone. Domyślny konstruktor. Zainicjuj do 0,0.|  
+|[norm konstruktora](#ctor)|Przeciążone. Domyślny konstruktor. Zainicjuj 0,0.|  
   
 ### <a name="public-operators"></a>Operatory publiczne  
   
@@ -46,7 +46,7 @@ class norm;
 |----------|-----------------|  
 |norm::operator-||  
 |norm::operator--||  
-|norm::operator float|Operator konwersji. Konwertowanie liczby normy zmiennoprzecinkowej wartości.|  
+|norm::operator float|Operator konwersji. Konwertowanie liczby norm zmiennoprzecinkowej wartości.|  
 |norm::operator * =||  
 |norm::operator / =||  
 |norm::operator ++||  
@@ -62,9 +62,9 @@ class norm;
   
  **Namespace:** Concurrency::graphics  
   
-##  <a name="ctor"></a> norm — 
+##  <a name="ctor"></a> norm 
 
- Domyślny konstruktor. Zainicjuj do 0,0.  
+ Domyślny konstruktor. Zainicjuj 0,0.  
   
 ```  
 norm(
@@ -103,11 +103,11 @@ norm(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `_V`  
- Wartość używaną do inicjalizacji.  
+*_V*<br/>
+Wartość wykorzystana do zainicjowania.  
   
- `_Other`  
- Obiekt używany do inicjowania.  
+*_Inne*<br/>
+Obiekt używany do inicjowania.  
   
 ## <a name="see-also"></a>Zobacz też  
  [Concurrency::graphics, przestrzeń nazw](concurrency-graphics-namespace.md)

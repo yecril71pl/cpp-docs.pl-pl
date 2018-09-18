@@ -1,5 +1,5 @@
 ---
-title: C4430 ostrzeżenia kompilatora | Dokumentacja firmy Microsoft
+title: Ostrzeżenie kompilatora C4430 | Dokumentacja firmy Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,36 +16,38 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 311c75ed1fcacdf8b40f096a759d669c9331c2ca
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 79c0045b568a24ad6702e748e82a8ebd88c41044
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33272116"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46093925"
 ---
-# <a name="compiler-warning-c4430"></a>C4430 ostrzeżenia kompilatora
-brak specyfikatora typu — zakładany int. Uwaga: C++ nie obsługuje domyślnie typu int  
-  
- Ten błąd może być wygenerowanego w wyniku pracy zgodność kompilatora, która została wykonana dla Visual C++ 2005: wszystkie deklaracje jawnie określić typ; jest już założono, że.  
-  
- C4430 jest zawsze wystawione jako błąd.  Możesz wyłączyć to ostrzeżenie o `#pragma warning` lub **/wd**; zobacz [ostrzeżenie](../../preprocessor/warning.md) lub [/w, /W0, /W1, /W2, /W3, / W4, /w1, /w2, /w3, / W4, / Wall, /wd, / możemy /wo, /Wv, wx (poziom ostrzegawczy)](../../build/reference/compiler-option-warning-level.md)Aby uzyskać więcej informacji.  
-  
-## <a name="example"></a>Przykład  
- Poniższy przykład generuje C4430.  
-  
-```  
-// C4430.cpp  
-// compile with: /c  
-struct CMyClass {  
-   CUndeclared m_myClass;  // C4430  
-   int m_myClass;  // OK  
-};  
-  
-typedef struct {  
-   POINT();   // C4430  
-   // try the following line instead  
-   // int POINT();  
-   unsigned x;  
-   unsigned y;  
-} POINT;  
+# <a name="compiler-warning-c4430"></a>Ostrzeżenie kompilatora C4430
+
+brak specyfikatora typu — zakładany int. Uwaga: C++ nie obsługuje domyślnie typu int
+
+Ten błąd można wygenerować w wyniku pracy zgodności kompilatora, która została wykonana dla programu Visual C++ 2005: wszystkie deklaracje należy jawnie określić typ; jest już założono, że.
+
+C4430 zawsze jest wystawiany jako błąd.  Możesz wyłączyć to ostrzeżenie za pomocą `#pragma warning` lub **/wd**; zobacz [ostrzeżenie](../../preprocessor/warning.md) lub [Wn /W0, / W1, / W2, / W3, / W4, / W1, / W2, / W3, / W4, / Wall / wo, WV, /WX (poziom ostrzegawczy)](../../build/reference/compiler-option-warning-level.md)Aby uzyskać więcej informacji.
+
+## <a name="example"></a>Przykład
+
+Poniższy przykład spowoduje wygenerowanie C4430.
+
+```
+// C4430.cpp
+// compile with: /c
+struct CMyClass {
+   CUndeclared m_myClass;  // C4430
+   int m_myClass;  // OK
+};
+
+typedef struct {
+   POINT();   // C4430
+   // try the following line instead
+   // int POINT();
+   unsigned x;
+   unsigned y;
+} POINT;
 ```

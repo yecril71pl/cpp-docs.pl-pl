@@ -25,12 +25,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3814dacff2861bf78800adb8a019b696ce2756b7
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: ecbf2b415b93526fe856e21411431eb1f20b4c42
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43752765"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46089583"
 ---
 # <a name="ccomtearoffobject-class"></a>Klasa CComTearOffObject
 
@@ -45,7 +45,7 @@ class CComTearOffObject : public Base
 
 #### <a name="parameters"></a>Parametry
 
-*podstawowy*  
+*podstawowy*<br/>
 Twoje odrywania klasą pochodną `CComTearOffObjectBase` i interfejsy odrywania obiektu do obsługi.
 
 ATL implementuje interfejsy odrywania w dwóch fazach — `CComTearOffObjectBase` metody obsługują licznik odwołań i `QueryInterface`, podczas gdy `CComTearOffObject` implementuje [IUnknown](/windows/desktop/api/unknwn/nn-unknwn-iunknown).
@@ -123,7 +123,7 @@ CComTearOffObject(void* pv);
 
 ### <a name="parameters"></a>Parametry
 
-*Wa*  
+*Wa*<br/>
 [in] Wskaźnik, który zostanie przekonwertowany na wskaźnik do `CComObject<Owner>` obiektu.
 
 ### <a name="remarks"></a>Uwagi
@@ -164,7 +164,7 @@ CComObject<Owner>* m_pOwner;
 
 ### <a name="parameters"></a>Parametry
 
-*Właściciel*  
+*Właściciel*<br/>
 [in] Klasa, dla którego odrywania jest implementowana.
 
 ### <a name="remarks"></a>Uwagi
@@ -181,10 +181,10 @@ STDMETHOD(QueryInterface)(REFIID iid, void** ppvObject);
 
 ### <a name="parameters"></a>Parametry
 
-*IID*  
+*IID*<br/>
 [in] Identyfikator IID interfejsu żądanej.
 
-*ppvObject*  
+*ppvObject*<br/>
 [out] Wskaźnik do wskaźnika interfejsu identyfikowane przez *iid*, lub wartość NULL, jeśli nie można odnaleźć interfejsu.
 
 ### <a name="return-value"></a>Wartość zwracana
@@ -209,5 +209,5 @@ W kompilacjach nieprzeznaczonych do debugowania zawsze zwraca wartość zero. W 
 
 ## <a name="see-also"></a>Zobacz też
 
-[Klasa CComCachedTearOffObject](../../atl/reference/ccomcachedtearoffobject-class.md)   
+[Klasa CComCachedTearOffObject](../../atl/reference/ccomcachedtearoffobject-class.md)<br/>
 [Klasa — Przegląd](../../atl/atl-class-overview.md)

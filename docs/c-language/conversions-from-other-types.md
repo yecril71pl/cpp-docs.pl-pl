@@ -15,27 +15,27 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e919782022ee64f657611a14d6eae6173a67b8c0
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: b443526248eb09accce8b35133235c71c06c2627
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32382682"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46094588"
 ---
 # <a name="conversions-from-other-types"></a>Konwersje z innych typów
 
-Ponieważ **wyliczenia** wartość jest **int** wartości zgodnie z definicją konwersje do i z **wyliczenia** wartości są takie same jak te dotyczące **int** typu. Dla kompilatora Microsoft C całkowitą jest taka sama jak **długi**.
+Ponieważ **wyliczenia** wartość **int** wartość zgodnie z definicją, konwersje do i z **wyliczenia** wartości są takie same jak w przypadku **int** typu. Dla kompilatora Microsoft C, liczba całkowita jest taka sama jak **długie**.
 
 **Microsoft Specific**
 
-Nie konwersji między typami struktura lub związek są dozwolone.
+Nie konwersji między typami struktury lub Unii są dozwolone.
 
-Każda wartość może zostać przekonwertowana na typ **void**, ale wynik takich konwersji może być używana wyłącznie w kontekście, gdzie wartość wyrażenia jest usuwane, takie jak instrukcja wyrażenia.
+Każda wartość może zostać przekonwertowana na typ **void**, ale wynik konwersji elementu mogą być używane wyłącznie w kontekście wartości wyrażenia w przypadku odrzuconych, na przykład instrukcja wyrażenia.
 
-**Void** typ nie ma wartości, zgodnie z definicją. W związku z tym nie można przekonwertować żadnego innego typu, i innych typów nie można przekonwertować na **void** przez przypisanie. Jednak jawnie rzutowania wartości na typ **void**, zgodnie z opisem w [konwersje rzutowania typów](../c-language/type-cast-conversions.md).
+**Void** typu nie ma wartości, zgodnie z definicją. Dlatego nie można przekonwertować żadnego innego typu i innych typów, nie można przekonwertować na **void** przez przypisanie. Jednak jawne Rzutowanie wartości na typ **void**, zgodnie z opisem w [konwersje rzutowania typów](../c-language/type-cast-conversions.md).
 
-**KOŃCOWY określonych firmy Microsoft**
+**END specyficzny dla Microsoft**
 
 ## <a name="see-also"></a>Zobacz także
 
-[Konwersje przypisań](../c-language/assignment-conversions.md)  
+[Konwersje przypisań](../c-language/assignment-conversions.md)

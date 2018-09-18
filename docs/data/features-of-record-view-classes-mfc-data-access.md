@@ -16,24 +16,26 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 9b6717c0ef1167e01df2f5e8de14408b23a9dbb1
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: b1c99b8b271b4948584d9bdb25c74518fe835573
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33089575"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46093223"
 ---
 # <a name="features-of-record-view-classes--mfc-data-access"></a>Funkcje klas widoków rekordów (dostęp do danych MFC)
-Możliwość programowania opartej na formularzu dostępu do danych za pomocą klasy [CFormView](../mfc/reference/cformview-class.md), ale [CRecordView](../mfc/reference/crecordview-class.md) jest zazwyczaj pochodzi od klasy lepsze. Oprócz jego `CFormView` funkcje, `CRecordView`:  
+
+Możecie programowania opartego na formularzach dostępu do danych za pomocą klasy [CFormView](../mfc/reference/cformview-class.md), ale [CRecordView](../mfc/reference/crecordview-class.md) ogólnie jest lepiej klasy pochodzi od. W uzupełnieniu do jego `CFormView` funkcji `CRecordView`:  
   
--   Udostępnia wymiana danych okna dialogowego (DDX) między formantami formularza i obiektów skojarzonych rekordów.  
+- Udostępnia wymiana danych okna dialogowego (DDX) między formanty formularza i obiekt skojarzony zestaw rekordów.  
   
--   Obsługuje Przenieś pierwszy, Przenieś następny Przenieś poprzedniej i Przenieś ostatni poleceń do przechodzenia między rekordy w obiekcie skojarzonych rekordów.  
+- Obsługuje przenieść pierwszy, Przenieś dalej, przenieś poprzednie i przenieść ostatniego polecenia do nawigowania między rekordami w obiekcie skojarzony zestaw rekordów.  
   
--   Aktualizacje zostanie zmieniona dla bieżącego rekordu, gdy użytkownik przejdzie do innego rekordu.  
+- Po użytkownik przejdzie do innego rekordu aktualizacji zmienia się w bieżącym rekordzie.  
   
- Aby uzyskać więcej informacji na temat nawigacji, zobacz [widoków rekordów: Obsługa nawigacji w widoku rekordu](../data/supporting-navigation-in-a-record-view-mfc-data-access.md).  
+Aby uzyskać więcej informacji o nawigacji, zobacz [widoków rekordów: Obsługa nawigacji w widoku rekordu](../data/supporting-navigation-in-a-record-view-mfc-data-access.md).  
   
 ## <a name="see-also"></a>Zobacz też  
- [Widoki rekordów (dostęp do danych MFC)](../data/record-views-mfc-data-access.md)   
- [Lista sterowników ODBC](../data/odbc/odbc-driver-list.md)
+
+[Widoki rekordów (dostęp do danych MFC)](../data/record-views-mfc-data-access.md)<br/>
+[Lista sterowników ODBC](../data/odbc/odbc-driver-list.md)

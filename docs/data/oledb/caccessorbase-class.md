@@ -36,14 +36,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 18199a700cbc5065d987a57cc076a5d0cf670577
-ms.sourcegitcommit: 889a75be1232817150be1e0e8d4d7f48f5993af2
+ms.openlocfilehash: 6de23571f30373e5ddd3940bcae4be9fa176539a
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/30/2018
-ms.locfileid: "39340667"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46086840"
 ---
 # <a name="caccessorbase-class"></a>CAccessorBase — Klasa
+
 Wszystkie metody dostępu przesłanianej w szablonach OLE DB pochodzi od tej klasy. `CAccessorBase` Umożliwia jeden zestaw wierszy do zarządzania wielu metod dostępu. Umożliwia także powiązanie dla kolumny wyjściowe i parametry.  
   
 ## <a name="syntax"></a>Składnia
@@ -65,9 +66,11 @@ Wszystkie metody dostępu przesłanianej w szablonach OLE DB pochodzi od tej kla
 |[Releaseaccessors —](#release)|Udostępnia metody dostępu.|  
 
 ## <a name="requirements"></a>Wymagania  
- **Nagłówek:** atldbcli.h  
+
+**Nagłówek:** atldbcli.h  
 
 ## <a name="close"></a> CAccessorBase::Close
+
 Zamyka metod dostępu.  
   
 ### <a name="syntax"></a>Składnia  
@@ -77,9 +80,11 @@ void Close();
 ```  
   
 ### <a name="remarks"></a>Uwagi  
- Należy wywołać [releaseaccessors —](../../data/oledb/caccessorbase-releaseaccessors.md) pierwszy.  
+
+Należy wywołać [releaseaccessors —](../../data/oledb/caccessorbase-releaseaccessors.md) pierwszy.  
 
 ## <a name="geth"></a> CAccessorBase::GetHAccessor
+
 Pobiera dojście metody dostępu określonej metody dostępu.  
   
 ### <a name="syntax"></a>Składnia  
@@ -89,13 +94,16 @@ HACCESSOR GetHAccessor(ULONG nAccessor) const;
 ```  
   
 #### <a name="parameters"></a>Parametry  
- *nAccessor*  
- [in] Numer przesunięcie zero akcesor.  
+
+*nAccessor*<br/>
+[in] Numer przesunięcie zero akcesor.  
   
 ### <a name="return-value"></a>Wartość zwracana  
- Dojście metody dostępu.  
+
+Dojście metody dostępu.  
 
 ## <a name="getnum"></a> CAccessorBase::GetNumAccessors
+
 Pobiera liczbę metod dostępu tworzone przez klasę.  
   
 ### <a name="syntax"></a>Składnia  
@@ -105,9 +113,11 @@ ULONG GetNumAccessors() const;
 ```  
   
 ### <a name="return-value"></a>Wartość zwracana  
- Liczba metod dostępu tworzone przez klasę.  
+
+Liczba metod dostępu tworzone przez klasę.  
 
 ## <a name="isauto"></a> CAccessorBase::IsAutoAccessor
+
 Zwraca wartość PRAWDA, jeśli dane są automatycznie pobierane dla metody dostępu podczas operacji przenoszenia.  
   
 ### <a name="syntax"></a>Składnia  
@@ -117,13 +127,16 @@ bool IsAutoAccessor(ULONG nAccessor) const;
 ```  
   
 #### <a name="parameters"></a>Parametry  
- *nAccessor*  
- [in] Numer przesunięcie zero akcesor.  
+
+*nAccessor*<br/>
+[in] Numer przesunięcie zero akcesor.  
   
 ### <a name="return-value"></a>Wartość zwracana  
- Zwraca **true** autoaccessor przypadku akcesor. W przeciwnym razie zwraca **false**.  
+
+Zwraca **true** autoaccessor przypadku akcesor. W przeciwnym razie zwraca **false**.  
 
 ## <a name="release"></a> CAccessorBase::ReleaseAccessors
+
 Udostępnia metody dostępu tworzone przez klasę.  
   
 ### <a name="syntax"></a>Składnia  
@@ -133,16 +146,20 @@ HRESULT ReleaseAccessors(IUnknown* pUnk);
 ```  
   
 #### <a name="parameters"></a>Parametry  
- *pUnk*  
- [in] Wskaźnik do `IUnknown` interfejs dla obiektu COM, dla którego utworzono metody dostępu.  
+
+*pUnk*<br/>
+[in] Wskaźnik do `IUnknown` interfejs dla obiektu COM, dla którego utworzono metody dostępu.  
   
 ### <a name="return-value"></a>Wartość zwracana  
- Standardowa HRESULT.  
+
+Standardowa HRESULT.  
   
 ### <a name="remarks"></a>Uwagi  
- Wywoływane z [CAccessorRowset::Close](../../data/oledb/caccessorrowset-close.md). 
+
+Wywoływane z [CAccessorRowset::Close](../../data/oledb/caccessorrowset-close.md). 
   
 ## <a name="see-also"></a>Zobacz też  
- [Szablony konsumentów OLE DB](../../data/oledb/ole-db-consumer-templates-cpp.md)   
- [OLE DB — Kompendium szablonów konsumentów](../../data/oledb/ole-db-consumer-templates-reference.md)   
- [CAccessorBase, klasa](../../data/oledb/caccessorbase-class.md)
+
+[Szablony konsumentów OLE DB](../../data/oledb/ole-db-consumer-templates-cpp.md)<br/>
+[Szablony konsumentów OLE DB — dokumentacja](../../data/oledb/ole-db-consumer-templates-reference.md)<br/>
+[CAccessorBase, klasa](../../data/oledb/caccessorbase-class.md)

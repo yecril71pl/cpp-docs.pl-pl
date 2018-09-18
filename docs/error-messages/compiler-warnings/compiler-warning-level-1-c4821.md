@@ -1,5 +1,5 @@
 ---
-title: Kompilatora (poziom 1) ostrzeżenie C4821 | Dokumentacja firmy Microsoft
+title: Kompilator ostrzeżenie (poziom 1) C4821 | Dokumentacja firmy Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,15 +16,15 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 25b9aec771c6183149adee95c0860113e075c670
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 859a83aedc6f5c6f5bcbc3ad948939dc5cb763b1
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33281768"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46086781"
 ---
-# <a name="compiler-warning-level-1-c4821"></a>Kompilator C4821 ostrzegawcze (poziom 1)  
-  
-> Nie można określić typu kodowania Unicode, Zapisz plik z podpisem (znacznik BOM)  
-  
-Kompilator nie można określić typu kodowania pliku. Aby usunąć to ostrzeżenie, Zapisz plik z znacznika kolejności bajtów. Zobacz [zarządzania plikami z kodowaniem](/sql/ssms/solution/manage-files-with-encoding) Aby uzyskać więcej informacji.  
+# <a name="compiler-warning-level-1-c4821"></a>Kompilator ostrzeżenie (poziom 1) C4821
+
+> Nie można określić typu kodowania Unicode, Zapisz plik z podpisem (znacznik BOM)
+
+Kompilator nie może określić typu kodowania pliku. Aby rozwiązać tego ostrzeżenia, należy zapisać plik za pomocą znacznika kolejności bajtów. Zobacz [zarządzania plikami z kodowaniem](/sql/ssms/solution/manage-files-with-encoding) Aby uzyskać więcej informacji.

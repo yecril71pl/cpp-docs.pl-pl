@@ -1,5 +1,5 @@
 ---
-title: Kompilatora (poziom 4) ostrzeżenie C4057 | Dokumentacja firmy Microsoft
+title: Kompilator ostrzeżenie (poziom 4) C4057 | Dokumentacja firmy Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,20 +16,21 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3217ccb0a96fbe02e152ff82dedeb7e8e54b89ea
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: b10ce6b67fd24b4b8db01177af0225deab9dba4b
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33292282"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46088010"
 ---
-# <a name="compiler-warning-level-4-c4057"></a>Kompilator C4057 ostrzegawcze (poziom 4)
-"operator": operator pośredni "identifier1" do nieco innych typów podstawowych z "identifier2"  
-  
- Wyrażenia wskaźników dwa odwoływać się do innych typów podstawowych. Wyrażenia są używane bez użycia konwersji.  
-  
-### <a name="to-fix-by-checking-the-following-possible-causes"></a>Aby rozwiązać problem, sprawdzając następujące możliwe przyczyny  
-  
-1.  Łączenie typów znakiem i bez znaku.  
-  
-2.  Mieszanie **krótki** i **długi** typów.
+# <a name="compiler-warning-level-4-c4057"></a>Kompilator ostrzeżenie (poziom 4) C4057
+
+'operator': operator pośredni "identifier1" do nieco innych typów podstawowych z "identifier2"
+
+Dwa wyrażenia wskaźnika odwoływać się do innych typów podstawowych. Wyrażenia są używane bez konwersji.
+
+### <a name="to-fix-by-checking-the-following-possible-causes"></a>Aby rozwiązać problem, sprawdzając następujące możliwe przyczyny
+
+1. Mieszanie typów ze znakiem i bez znaku.
+
+1. Mieszanie **krótki** i **długie** typów.

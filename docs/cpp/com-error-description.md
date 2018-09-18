@@ -16,31 +16,35 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 848709fa6cbbbfb4166750f86540de2433a73023
-ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
+ms.openlocfilehash: 90208866ee08d6990d8f1b5322a38fbd2d63a651
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/01/2018
-ms.locfileid: "39404031"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46091793"
 ---
 # <a name="comerrordescription"></a>_com_error::Description
-**Microsoft Specific**  
-  
- Wywołania `IErrorInfo::GetDescription` funkcji.  
-  
-## <a name="syntax"></a>Składnia  
-  
-```  
-_bstr_t Description( ) const;  
-```  
-  
-## <a name="return-value"></a>Wartość zwracana  
- Zwraca wynik `IErrorInfo::GetDescription` dla `IErrorInfo` obiektu rejestrować się w ramach `_com_error` obiektu. Wartość wynikowa `BSTR` jest hermetyzowany w `_bstr_t` obiektu. Jeśli nie `IErrorInfo` jest rejestrowane, zwraca pustą `_bstr_t`.  
-  
-## <a name="remarks"></a>Uwagi  
- Wywołania `IErrorInfo::GetDescription` funkcji i pobiera `IErrorInfo` zarejestrowanych w ramach `_com_error` obiektu. Jakiekolwiek niepowodzenie podczas wywoływania `IErrorInfo::GetDescription` metody jest ignorowana.  
-  
- **END specyficzny dla Microsoft**  
-  
-## <a name="see-also"></a>Zobacz także  
- [_com_error, klasa](../cpp/com-error-class.md)
+
+**Microsoft Specific**
+
+Wywołania `IErrorInfo::GetDescription` funkcji.
+
+## <a name="syntax"></a>Składnia
+
+```
+_bstr_t Description( ) const;
+```
+
+## <a name="return-value"></a>Wartość zwracana
+
+Zwraca wynik `IErrorInfo::GetDescription` dla `IErrorInfo` obiektu rejestrować się w ramach `_com_error` obiektu. Wartość wynikowa `BSTR` jest hermetyzowany w `_bstr_t` obiektu. Jeśli nie `IErrorInfo` jest rejestrowane, zwraca pustą `_bstr_t`.
+
+## <a name="remarks"></a>Uwagi
+
+Wywołania `IErrorInfo::GetDescription` funkcji i pobiera `IErrorInfo` zarejestrowanych w ramach `_com_error` obiektu. Jakiekolwiek niepowodzenie podczas wywoływania `IErrorInfo::GetDescription` metody jest ignorowana.
+
+**END specyficzny dla Microsoft**
+
+## <a name="see-also"></a>Zobacz także
+
+[_com_error, klasa](../cpp/com-error-class.md)

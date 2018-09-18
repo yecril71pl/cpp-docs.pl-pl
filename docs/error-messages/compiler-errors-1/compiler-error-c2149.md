@@ -1,5 +1,5 @@
 ---
-title: C2149 błąd kompilatora | Dokumentacja firmy Microsoft
+title: Błąd kompilatora C2149 | Dokumentacja firmy Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,25 +16,26 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e02d69aa89c77c72685ef0db3125dab2cbf1898b
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 38ebb710cc9f4d5f546c40d84909dbe23805f2f7
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33167827"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46094926"
 ---
-# <a name="compiler-error-c2149"></a>C2149 błąd kompilatora
-"identyfikator": nazwane pole bitowe nie może mieć zerowej szerokości  
-  
- Pola bitowe może mieć zerowej szerokości tylko wtedy, gdy bez nazwy.  
-  
- Poniższy przykład generuje C2149:  
-  
-```  
-// C2149.cpp  
-// compile with: /c  
-struct C {  
-   int i : 0;   // C2149  
-   int j : 2;   // OK  
-};  
+# <a name="compiler-error-c2149"></a>Błąd kompilatora C2149
+
+'Identyfikator': nazwane pole bitowe nie może mieć zerowej szerokości
+
+Pola bitowe może mieć zerowej szerokości, tylko wtedy, gdy bez nazwy.
+
+Poniższy przykład spowoduje wygenerowanie C2149:
+
+```
+// C2149.cpp
+// compile with: /c
+struct C {
+   int i : 0;   // C2149
+   int j : 2;   // OK
+};
 ```

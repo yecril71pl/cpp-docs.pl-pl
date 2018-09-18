@@ -18,12 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d0e44475d7d9eee547e0e9d47c8d49c439d91bd1
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 1990de6165e50397f11d84cb0486c1d5d5d67fce
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43766623"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46089235"
 ---
 # <a name="cheapptrlist-class"></a>Klasa CHeapPtrList
 
@@ -35,7 +35,7 @@ Ta klasa dostarcza metody przydatne podczas tworzenia listy wskaźników sterty.
 ## <a name="syntax"></a>Składnia
 
 ```
-template<typename E, class Allocator = ATL::CCRTAllocator>  
+template<typename E, class Allocator = ATL::CCRTAllocator>
 class CHeapPtrList 
    : public CAtlList<ATL::CHeapPtr<E, Allocator>,
                      CHeapPtrElementTraits<E, Allocator>>
@@ -43,10 +43,10 @@ class CHeapPtrList
 
 #### <a name="parameters"></a>Parametry
 
-*E*  
+*E*<br/>
 Typ obiektu, który ma być przechowywany w klasie kolekcji.
 
-*Allocator*  
+*Allocator*<br/>
 Klasa alokacji pamięci do użycia. Wartość domyślna to [CCRTAllocator](../../atl/reference/ccrtallocator-class.md).
 
 ## <a name="members"></a>Elementy członkowskie
@@ -81,7 +81,7 @@ CHeapPtrList(UINT nBlockSize = 10) throw();
 
 ### <a name="parameters"></a>Parametry
 
-*nBlockSize*  
+*nBlockSize*<br/>
 Rozmiar bloku.
 
 ### <a name="remarks"></a>Uwagi
@@ -90,7 +90,7 @@ Rozmiar bloku jest miarą ilość pamięci przydzielonej, gdy nowy element jest 
 
 ## <a name="see-also"></a>Zobacz też
 
-[Klasa CAtlList](../../atl/reference/catllist-class.md)   
-[Klasa CHeapPtr](../../atl/reference/cheapptr-class.md)   
-[Klasa CHeapPtrElementTraits](../../atl/reference/cheapptrelementtraits-class.md)   
+[Klasa CAtlList](../../atl/reference/catllist-class.md)<br/>
+[Klasa CHeapPtr](../../atl/reference/cheapptr-class.md)<br/>
+[Klasa CHeapPtrElementTraits](../../atl/reference/cheapptrelementtraits-class.md)<br/>
 [Klasa — Przegląd](../../atl/atl-class-overview.md)

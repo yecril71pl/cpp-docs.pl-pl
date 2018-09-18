@@ -29,38 +29,40 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 854873987cd83b89efc5c9006c1e091023c91226
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 22d4c6da3b897d0158f790a0146e3f10f7aa385c
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32389065"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46093128"
 ---
 # <a name="setapptype"></a>__set_app_type
-Ustawia bieżący typ aplikacji.  
-  
-## <a name="syntax"></a>Składnia  
-  
-```cpp  
-void __set_app_type (  
-   int at  
-   )  
-```  
-  
-#### <a name="parameters"></a>Parametry  
- `at`  
- Wartość, która wskazuje typ aplikacji. Możliwe wartości to:  
-  
-|Wartość|Opis|  
-|-----------|-----------------|  
-|_UNKNOWN_APP|Typ nieznanej aplikacji.|  
-|_CONSOLE_APP|Aplikacja konsoli (wiersza polecenia).|  
-|_GUI_APP|Aplikacja graficznego interfejsu użytkownika (Windows).|  
-  
-## <a name="remarks"></a>Uwagi  
-  
-## <a name="requirements"></a>Wymagania  
-  
-|Procedura|Wymagany nagłówek|  
-|-------------|---------------------|  
+
+Ustawia bieżący typ aplikacji.
+
+## <a name="syntax"></a>Składnia
+
+```cpp
+void __set_app_type (
+   int at
+   )
+```
+
+#### <a name="parameters"></a>Parametry
+
+*at*<br/>
+Wartość, która wskazuje typ aplikacji. Możliwe wartości to:
+
+|Wartość|Opis|
+|-----------|-----------------|
+|_UNKNOWN_APP|Nieznany typ aplikacji.|
+|_CONSOLE_APP|Aplikacja konsoli (wiersza polecenia).|
+|_GUI_APP|Aplikacja graficznego interfejsu użytkownika (Windows).|
+
+## <a name="remarks"></a>Uwagi
+
+## <a name="requirements"></a>Wymagania
+
+|Procedura|Wymagany nagłówek|
+|-------------|---------------------|
 |__set_app_type|internal.h|

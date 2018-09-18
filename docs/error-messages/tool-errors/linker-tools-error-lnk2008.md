@@ -16,18 +16,19 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c4ee6a8a4c4cc6d33f47d5335daa9fccd4e5fd99
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 18eda06e7f133ada4de1b7ec28ac21be205a71f7
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33299568"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46086814"
 ---
 # <a name="linker-tools-error-lnk2008"></a>Błąd narzędzi konsolidatora LNK2008
-Cel naprawy nie jest wyrównany symbol_name  
-  
- ŁĄCZE znaleziono cel naprawy w pliku obiektu, który nie został prawidłowo wyrównane.  
-  
- Przyczyną tego błędu może być wyrównanie sekcji niestandardowe (na przykład #pragma [pakietu](../../preprocessor/pack.md)), [Dopasuj](../../cpp/align-cpp.md) modyfikator, lub za pomocą kodu języka zestawu, który modyfikuje wyrównanie sekcji.  
-  
- Jeśli kod nie wykorzystuje dowolne z powyższych, może być spowodowane przez kompilator.
+
+Cel naprawy nie jest wyrównany symbol_name
+
+LINK znaleziono cel naprawy w pliku obiektu, który nie został prawidłowo wyrównane.
+
+Ten błąd może być spowodowany przez wyrównanie sekcji niestandardowej (na przykład #pragma [pakiet](../../preprocessor/pack.md)), [wyrównać](../../cpp/align-cpp.md) modyfikator, lub przy użyciu kodu języka zestawu, który modyfikuje wyrównanie sekcji.
+
+Jeśli Twój kod nie korzysta z żadnego z powyższych, może to być spowodowane przez kompilator.

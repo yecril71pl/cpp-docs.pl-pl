@@ -1,5 +1,5 @@
 ---
-title: C3231 błąd kompilatora | Dokumentacja firmy Microsoft
+title: Błąd kompilatora C3231 | Dokumentacja firmy Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,29 +16,30 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4925055caac0f3d26922eebf6a043ad51c83efa2
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 57727fbd71314201ec76119d37ab9c73b01d471d
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33257999"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46097318"
 ---
-# <a name="compiler-error-c3231"></a>C3231 błąd kompilatora
-"argument": argument typu szablonu nie można użyć parametru typu ogólnego  
-  
- Szablony są tworzone w czasie kompilacji, ale typy ogólne są tworzone w czasie wykonywania. W związku z tym nie jest możliwe do generowania kodu ogólnego, który można wywołać szablonu, ponieważ szablon nie można utworzyć wystąpienia w czasie wykonywania, gdy finally jest znany typu ogólnego.  
-  
- Poniższy przykład generuje C3231:  
-  
-```  
-// C3231.cpp  
-// compile with: /clr /LD  
-template <class T> class A;  
-  
-generic <class T>  
-ref class C {  
-   void f() {  
-      A<T> a;   // C3231  
-   }  
-};  
+# <a name="compiler-error-c3231"></a>Błąd kompilatora C3231
+
+"argument": argument typu szablonu nie można użyć parametru typu ogólnego
+
+Szablony są tworzone w czasie kompilacji, ale typy ogólne są tworzone w czasie wykonywania. W związku z tym nie jest możliwe wygenerować kod ogólny, który można wywołać tego szablonu, ponieważ nie można utworzyć wystąpienia szablonu w czasie wykonywania, gdy na koniec jest znany typ ogólny.
+
+Poniższy przykład spowoduje wygenerowanie C3231:
+
+```
+// C3231.cpp
+// compile with: /clr /LD
+template <class T> class A;
+
+generic <class T>
+ref class C {
+   void f() {
+      A<T> a;   // C3231
+   }
+};
 ```

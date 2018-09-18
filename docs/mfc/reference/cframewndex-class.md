@@ -188,12 +188,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 62bb1ca2cc4ba07e3f3262f6babee3ed4c52caa2
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: db4e6a01fbf7384cfbc2e1ef2b3c5ed48991998d
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45708217"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46095457"
 ---
 # <a name="cframewndex-class"></a>Klasa CFrameWndEx
 Implementuje funkcje Windows pojedynczego dokumentu (SDI) okna nachodzącego lub interfejsu okna podręcznego ramki i oferuje elementy członkowskie do zarządzania oknem. Rozszerza [CFrameWnd](../../mfc/reference/cframewnd-class.md) klasy.  
@@ -1198,17 +1198,12 @@ afx_msg LRESULT OnMenuChar(
   
 ### <a name="return-value"></a>Wartość zwracana  
  Word wyższego rzędu musi mieć jedną z następujących wartości.  
-  
- `0`  
- Struktura powinien ignorować naciśnięcia klawisza.  
-  
- `1`  
- Struktura należy zamknąć menu.  
-  
- `2`  
- Struktura wybrać jeden z elementów wyświetlanych w menu. Word niskiego rzędu zawiera identyfikator polecenie, aby wybrać.  
-  
-### <a name="remarks"></a>Uwagi  
+
+|||
+|-|-|
+ `0` | Struktura powinien ignorować naciśnięcia klawisza.  
+ `1`  | Struktura należy zamknąć menu.  
+ `2`  | Struktura wybrać jeden z elementów wyświetlanych w menu. Word niskiego rzędu zawiera identyfikator polecenie, aby wybrać.  
   
 ##  <a name="onmousemove"></a>  CFrameWndEx::OnMouseMove  
  Struktura wywołuje tę metodę, gdy wskaźnik myszy jest przesuwany.  

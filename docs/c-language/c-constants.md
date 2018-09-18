@@ -15,27 +15,29 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 310d80f92b2648c0a5711c304b3a1b5bc32413be
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 557c7f3c423821a069f2aff3dff228ce9632c30f
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32381658"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46089531"
 ---
 # <a name="c-constants"></a>Stałe języka C
-"Stała" to liczby, znak lub ciąg znaków, które mogą być używane jako wartości w programie. Użyj stałych do reprezentowania liczb zmiennoprzecinkowych, integer, wyliczenie lub wartości znaków, których nie można zmodyfikować.  
-  
-## <a name="syntax"></a>Składnia  
- `constant`:  
- *Floating point — stała*  
-  
- *Stała liczba całkowita*  
-  
- *Stała wyliczenia*  
-  
- *Stała znakowa*  
-  
- Stałe charakteryzują się o wartości i typ. [Zmiennoprzecinkowe](../c-language/c-floating-point-constants.md), [całkowitą](../c-language/c-integer-constants.md), i [znak stałe](../c-language/c-character-constants.md) w trzech kolejnych sekcjach omówiono. Wyliczenie stałe są opisane w [deklaracje modułów Wyliczających](../c-language/c-enumeration-declarations.md).  
-  
-## <a name="see-also"></a>Zobacz też  
- [Elementy języka C](../c-language/elements-of-c.md)
+
+"Stałe" jest liczby, znak lub ciąg znaków, który może służyć jako wartość w programie. Użyj stałych do reprezentowania zmiennoprzecinkowych, liczba całkowita, wyliczenie lub wartości znaków, które nie mogą być modyfikowane.
+
+## <a name="syntax"></a>Składnia
+
+`constant`: *floating point — stała*
+
+*stała całkowita*
+
+*Stała wyliczenia*
+
+*Stała znakowa*
+
+Stałe charakteryzują się o wartości i typu. [Zmiennoprzecinkowe](../c-language/c-floating-point-constants.md), [całkowitą](../c-language/c-integer-constants.md), i [stałych znakowych](../c-language/c-character-constants.md) zostały omówione w trzech kolejnych sekcjach. Stałe wyliczeń są opisane w [deklaracje modułów Wyliczających](../c-language/c-enumeration-declarations.md).
+
+## <a name="see-also"></a>Zobacz też
+
+[Elementy języka C](../c-language/elements-of-c.md)

@@ -1,5 +1,5 @@
 ---
-title: C2506 błąd kompilatora | Dokumentacja firmy Microsoft
+title: Błąd kompilatora C2506 | Dokumentacja firmy Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,28 +16,30 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a5369a6a5bf904f7a7492037fbad4df44de92e66
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 4967c410dfdce781a4191c9ac848883228ba4d3a
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33228521"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46093418"
 ---
-# <a name="compiler-error-c2506"></a>C2506 błąd kompilatora
-"członek": "__declspec(modifier)" nie można zastosować do tego symbolu  
-  
- Nie można zadeklarować dla procesu lub domeny appdomain dla statycznych elementów członkowskich klasy zarządzanej.  
-  
- Zobacz [elementu appdomain](../../cpp/appdomain.md) Aby uzyskać więcej informacji.  
-  
-## <a name="example"></a>Przykład  
- Poniższy przykład generuje C2506.  
-  
-```  
-// C2506.cpp  
-// compile with: /clr /c  
-ref struct R {  
-   __declspec(process) static int n;   // C2506  
-   int o;   // OK  
-};  
+# <a name="compiler-error-c2506"></a>Błąd kompilatora C2506
+
+'składowa': "__declspec(modifier)" nie można zastosować do tego symbolu
+
+Nie można zadeklarować każdego procesu lub dla domeny appdomain dla statycznych elementów członkowskich klasy zarządzanej.
+
+Zobacz [appdomain](../../cpp/appdomain.md) Aby uzyskać więcej informacji.
+
+## <a name="example"></a>Przykład
+
+Poniższy przykład spowoduje wygenerowanie C2506.
+
+```
+// C2506.cpp
+// compile with: /clr /c
+ref struct R {
+   __declspec(process) static int n;   // C2506
+   int o;   // OK
+};
 ```

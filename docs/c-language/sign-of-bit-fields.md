@@ -12,17 +12,19 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6f8e09aea98c63015e86eeacf8f3458723aa4e61
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 351fb7704faf8a168d13cde2558015c340e44d72
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32385844"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46090064"
 ---
 # <a name="sign-of-bit-fields"></a>Znaki pól bitowych
-**ANSI 3.5.2.1** czy "zwykły" `int` pole jest traktowany jako **podpisany int** bit pole lub jako pole bitowe unsigned int  
-  
- Pola bitowe można podpisu lub bez znaku. Pola bitowe zwykły są traktowane jako podpisany.  
-  
-## <a name="see-also"></a>Zobacz też  
- [Struktury, złożenia, wyliczenia i pola bitowe](../c-language/structures-unions-enumerations-and-bit-fields.md)
+
+**ANSI 3.5.2.1** czy "zwykły" `int` pola jest traktowany jako **podpisany int** bit pola lub jako pole bitowe unsigned int
+
+Pola bitowe mogą być podpisane lub niepodpisane. Pola bitowe zwykły jest traktowany jako podpisany.
+
+## <a name="see-also"></a>Zobacz też
+
+[Struktury, złożenia, wyliczenia i pola bitowe](../c-language/structures-unions-enumerations-and-bit-fields.md)

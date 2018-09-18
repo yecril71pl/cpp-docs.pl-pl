@@ -39,12 +39,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 54677e573f36fca65cc46dc5207e8812e4fa4fa6
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: d2045a6c14a37d270d895a5eeb4fa455711e7354
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43752933"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46097682"
 ---
 # <a name="ccombstr-class"></a>CComBSTR, klasa
 
@@ -141,16 +141,16 @@ HRESULT Append(LPCOLESTR lpsz, int nLen) throw();
 
 ### <a name="parameters"></a>Parametry
 
-*bstrSrc*  
+*bstrSrc*<br/>
 [in] Element `CComBSTR` obiektu do dołączenia.
 
-*ch*  
+*ch*<br/>
 [in] Znak do dołączenia.
 
-*lpsz*  
+*lpsz*<br/>
 [in] Ciąg znaków zakończony zerem do dołączenia. Ciąg Unicode można przekazać za pomocą przeciążenia LPCOLESTR lub na ciąg ANSI za pomocą wersji LPCSTR.
 
-*nLen*  
+*nLen*<br/>
 [in] Liczba znaków z *lpsz* do dołączenia.
 
 ### <a name="return-value"></a>Wartość zwracana
@@ -175,7 +175,7 @@ HRESULT AppendBSTR(BSTR p) throw();
 
 ### <a name="parameters"></a>Parametry
 
-*p*  
+*p*<br/>
 [in] Ciąg BSTR do dołączenia.
 
 ### <a name="return-value"></a>Wartość zwracana
@@ -200,10 +200,10 @@ HRESULT AppendBytes(const char* lpsz, int nLen) throw();
 
 ### <a name="parameters"></a>Parametry
 
-*lpsz*  
+*lpsz*<br/>
 [in] Wskaźnik do tablicy bajtów do dołączenia.
 
-*p*  
+*p*<br/>
 [in] Liczba bajtów do dołączenia.
 
 ### <a name="return-value"></a>Wartość zwracana
@@ -224,7 +224,7 @@ HRESULT ArrayToBSTR(const SAFEARRAY* pSrc) throw();
 
 ### <a name="parameters"></a>Parametry
 
-*pSrc*  
+*pSrc*<br/>
 [in] Safearray, zawierający elementy służące do tworzenia ciągu.
 
 ### <a name="return-value"></a>Wartość zwracana
@@ -241,7 +241,7 @@ HRESULT AssignBSTR(const BSTR bstrSrc) throw();
 
 ### <a name="parameters"></a>Parametry
 
-*bstrSrc*  
+*bstrSrc*<br/>
 [in] Ciąg BSTR można przypisać do bieżącego `CComBSTR` obiektu.
 
 ### <a name="return-value"></a>Wartość zwracana
@@ -258,7 +258,7 @@ void Attach(BSTR src) throw();
 
 ### <a name="parameters"></a>Parametry
 
-*src*  
+*src*<br/>
 [in] BSTR do dołączenia do obiektu.
 
 ### <a name="remarks"></a>Uwagi
@@ -282,7 +282,7 @@ HRESULT BSTRToArray(LPSAFEARRAY* ppArray) throw();
 
 ### <a name="parameters"></a>Parametry
 
-*ppArray*  
+*ppArray*<br/>
 [out] Wskaźnik do elementu safearray używane do przechowywania wyników funkcji.
 
 ### <a name="return-value"></a>Wartość zwracana
@@ -315,31 +315,31 @@ Konstruktor. Ustawia konstruktora domyślnego [m_str](#m_str) elementu członkow
 
 ```
 CComBSTR() throw();
-CComBSTR(const CComBSTR& src);  
-CComBSTR(REFGUID  guid);  
-CComBSTR(int nSize);  
-CComBSTR(int nSize, LPCOLESTR sz);  
-CComBSTR(int nSize, LPCSTR sz);  
-CComBSTR(LPCOLESTR pSrc);  
-CComBSTR(LPCSTR pSrc);  
+CComBSTR(const CComBSTR& src);
+CComBSTR(REFGUID  guid);
+CComBSTR(int nSize);
+CComBSTR(int nSize, LPCOLESTR sz);
+CComBSTR(int nSize, LPCSTR sz);
+CComBSTR(LPCOLESTR pSrc);
+CComBSTR(LPCSTR pSrc);
 CComBSTR(CComBSTR&& src) throw(); // (Visual Studio 2017)
 ```
 
 ### <a name="parameters"></a>Parametry
 
-*nSize*  
+*nSize*<br/>
 [in] Liczba znaków do skopiowania *sz* lub początkowy rozmiar w znakach `CComBSTR`.
 
-*Sz*  
+*Sz*<br/>
 [in] Ciąg do skopiowania. Wersja Unicode określa LPCOLESTR; wersji ANSI określa LPCSTR.
 
-*pSrc*  
+*pSrc*<br/>
 [in] Ciąg do skopiowania. Wersja Unicode określa LPCOLESTR; wersji ANSI określa LPCSTR.
 
-*src*  
+*src*<br/>
 [in] Element `CComBSTR` obiektu.
 
-*Identyfikator GUID*  
+*Identyfikator GUID*<br/>
 [in] Odwołanie do `GUID` struktury.
 
 ### <a name="remarks"></a>Uwagi
@@ -396,10 +396,10 @@ HRESULT CopyTo(VARIANT* pvarDest) throw();
 
 ### <a name="parameters"></a>Parametry
 
-*pbstr*  
+*pbstr*<br/>
 [out] Adres BSTR, w których ma zostać zwrócony ciąg przydzielone przez tę metodę.
 
-*pvarDest*  
+*pvarDest*<br/>
 [out] Adres typu Variant, w których ma zostać zwrócony ciąg przydzielone przez tę metodę.
 
 ### <a name="return-value"></a>Wartość zwracana
@@ -499,7 +499,7 @@ BSTR m_str;
 
 Rzutowania `CComBSTR` obiekt na ciąg BSTR.
 
-```  
+```
 operator BSTR() const throw();
 ```
 
@@ -544,13 +544,13 @@ bool operator!= (int nNull) const throw();
 
 ### <a name="parameters"></a>Parametry
 
-*bstrSrc*  
+*bstrSrc*<br/>
 [in] Element `CComBSTR` obiektu.
 
-*pszSrc*  
+*pszSrc*<br/>
 [in] Ciąg zakończony zerem.
 
-*nNull*  
+*nNull*<br/>
 [in] Musi mieć wartość NULL.
 
 ### <a name="return-value"></a>Wartość zwracana
@@ -586,16 +586,16 @@ Ta asercja nie jest włączona domyślnie. Zdefiniuj ATL_CCOMBSTR_ADDRESS_OF_ASS
 Dołącza ciąg `CComBSTR` obiektu.
 
 ```
-CComBSTR& operator+= (const CComBSTR& bstrSrc);  
+CComBSTR& operator+= (const CComBSTR& bstrSrc);
 CComBSTR& operator+= (const LPCOLESTR pszSrc);
 ```
 
 ### <a name="parameters"></a>Parametry
 
-*bstrSrc*  
+*bstrSrc*<br/>
 [in] Element `CComBSTR` obiektu do dołączenia.
 
-*pszSrc*  
+*pszSrc*<br/>
 [in] Ciąg zakończony zerem do dołączenia.
 
 ### <a name="remarks"></a>Uwagi
@@ -629,8 +629,8 @@ Porównanie jest wykonywane przy użyciu jego domyślne ustawienia regionalne.
 Zestawy [m_str](#m_str) elementu członkowskiego kopię *pSrc* lub kopię BSTR członkiem *src*. Operator przypisania przenoszenia przenosi `src` bez kopiowania go.
 
 ```
-CComBSTR& operator= (const CComBSTR& src);  
-CComBSTR& operator= (LPCOLESTR pSrc);  
+CComBSTR& operator= (const CComBSTR& src);
+CComBSTR& operator= (LPCOLESTR pSrc);
 CComBSTR& operator= (LPCSTR pSrc);
 CComBSTR& operator= (CComBSTR&& src) throw(); // (Visual Studio 2017)
 ```
@@ -656,13 +656,13 @@ bool operator== (int nNull) const throw();
 
 ### <a name="parameters"></a>Parametry
 
-*bstrSrc*  
+*bstrSrc*<br/>
 [in] Element `CComBSTR` obiektu.
 
-*pszSrc*  
+*pszSrc*<br/>
 [in] Ciąg zakończony zerem.
 
-*nNull*  
+*nNull*<br/>
 [in] Musi mieć wartość NULL.
 
 ### <a name="return-value"></a>Wartość zwracana
@@ -699,7 +699,7 @@ HRESULT ReadFromStream(IStream* pStream) throw();
 
 ### <a name="parameters"></a>Parametry
 
-*pStream*  
+*pStream*<br/>
 [in] Wskaźnik do [IStream](/windows/desktop/api/objidl/nn-objidl-istream) interfejsu w usłudze stream, zawierającą dane.
 
 ### <a name="return-value"></a>Wartość zwracana
@@ -756,7 +756,7 @@ HRESULT WriteToStream(IStream* pStream) throw();
 
 ### <a name="parameters"></a>Parametry
 
-*pStream*  
+*pStream*<br/>
 [in] Wskaźnik do [IStream](/windows/desktop/api/objidl/nn-objidl-istream) interfejsu dla strumienia.
 
 ### <a name="return-value"></a>Wartość zwracana
@@ -773,5 +773,5 @@ Można odtworzyć BSTR z zawartości strumienia z wykorzystaniem [ReadFromStream
 
 ## <a name="see-also"></a>Zobacz też
 
-[Klasa — Przegląd](../../atl/atl-class-overview.md)   
+[Klasa — Przegląd](../../atl/atl-class-overview.md)<br/>
 [ATL i makr konwersji ciągu MFC](string-conversion-macros.md)

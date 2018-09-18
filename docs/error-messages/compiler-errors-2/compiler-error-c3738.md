@@ -1,5 +1,5 @@
 ---
-title: C3738 błąd kompilatora | Dokumentacja firmy Microsoft
+title: Błąd kompilatora C3738 | Dokumentacja firmy Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,38 +16,40 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1bf54ba4114c0184871f1c79ca8f1757ae7e78b9
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 07a71ae25f62d50ec52860e61e195f1c19f78030
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33265677"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46096564"
 ---
-# <a name="compiler-error-c3738"></a>C3738 błąd kompilatora
-"calling_convention": jawne utworzenie wystąpienia konwencja wywołania musi być zgodna z wystąpienia szablonu  
-  
- Zaleca się nieokreślenia Konwencja wywoływania na jawne utworzenie wystąpienia. Jeśli użytkownik musi jednak konwencji wywoływania muszą być zgodne.  
-  
-## <a name="example"></a>Przykład  
- Poniższy przykład generuje C3738.  
-  
-```  
-// C3738.cpp  
-// compile with: /clr  
-// processor: x86  
-#include <stdio.h>  
-template< class T >  
-void f ( T arg ) {   // by default calling convention is __cdecl  
-   printf ( "f: %s\n", __FUNCSIG__ );  
-}  
-  
-template   
-void __stdcall f< int > ( int arg );   // C3738  
-// try the following line instead  
-// void f< int > ( int arg );  
-  
-int main () {  
-   f(1);  
-   f< int > ( 1 );  
-}  
+# <a name="compiler-error-c3738"></a>Błąd kompilatora C3738
+
+"calling_convention": Konwencja wywołania jawnego utworzenia wystąpienia musi być zgodna z szablonu wystąpienia
+
+Zaleca się, że nie należy określać Konwencja wywoływania na jawne utworzenie wystąpienia. Jeśli trzeba, jednak konwencji wywoływania muszą być zgodne.
+
+## <a name="example"></a>Przykład
+
+Poniższy przykład spowoduje wygenerowanie C3738.
+
+```
+// C3738.cpp
+// compile with: /clr
+// processor: x86
+#include <stdio.h>
+template< class T >
+void f ( T arg ) {   // by default calling convention is __cdecl
+   printf ( "f: %s\n", __FUNCSIG__ );
+}
+
+template
+void __stdcall f< int > ( int arg );   // C3738
+// try the following line instead
+// void f< int > ( int arg );
+
+int main () {
+   f(1);
+   f< int > ( 1 );
+}
 ```

@@ -16,28 +16,30 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1fe39a5d6f6074596561cd8e32f7b9428bc60f6d
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: b6eb462e5c3c7e497cde55151bf92c62ffb2afcd
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33327044"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46087022"
 ---
 # <a name="nmake-fatal-error-u1070"></a>Błąd krytyczny NMAKE U1070
-cykl w definicji makra "makra"  
-  
- Definicji makra danego zawiera makra, którego definicja zawiera danego makra. Definicje makr cykliczne są nieprawidłowe.  
-  
-## <a name="example"></a>Przykład  
- Poniższe definicje makr  
-  
-```  
-ONE=$(TWO)  
-TWO=$(ONE)  
-```  
-  
- spowodować następujący błąd:  
-  
-```  
-cycle in macro definition 'TWO'  
+
+cykl w definicji makra "makra"
+
+Makro, którego definicja zawiera danego — makro znajdujących się w definicji makra danego. Definicje makr cykliczne są nieprawidłowe.
+
+## <a name="example"></a>Przykład
+
+Następujące definicje — makro
+
+```
+ONE=$(TWO)
+TWO=$(ONE)
+```
+
+powodują następujący błąd:
+
+```
+cycle in macro definition 'TWO'
 ```

@@ -28,12 +28,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 866f6832869675f3c92d09642064e5aafce9a449
-ms.sourcegitcommit: 87d317ac62620c606464d860aaa9e375a91f4c99
+ms.openlocfilehash: 8a0864c87b33937fe18c3e4c3083e63bde23ac06
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/14/2018
-ms.locfileid: "45601538"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46092248"
 ---
 # <a name="crt-library-features"></a>Biblioteka CRT — Funkcje
 
@@ -65,7 +65,7 @@ Poniższa tabela zawiera listę bibliotek, które implementują biblioteki vcrun
 |vcruntime.lib|vcruntime\<version>.dll|Importuj biblioteki DLL vcruntime.|**/MD**|_MT, _DLL|
 |vcruntimed.lib|vcruntime\<version>d.dll|Importuj biblioteki DLL vcruntime debugowania. Nie do dystrybucji.|**/MDd**|_DEBUG, _MT, _DLL|
 
-> [!NOTE] 
+> [!NOTE]
 > Podczas refaktoryzacji UCRT wystąpienia funkcji środowiska uruchomieniowego współbieżności zostało przeniesionych do concrt140.dll, który został dodany do pakietu redystrybucyjnego języka C++. Ta biblioteka DLL jest wymagany dla kontenerów równoległych C++ i algorytmy, takie jak `concurrency::parallel_for`. Oprócz standardowej biblioteki C++ wymaga tej biblioteki DLL w systemie Windows XP do obsługi podstawowych synchronizacji, ponieważ Windows XP nie ma zmiennych warunków.
 
 Kod, który inicjuje CRT ma jeden z kilku bibliotek, na podstawie informacji o tego, czy biblioteka CRT statycznie lub dynamicznie połączone, lub natywnego, zarządzanego lub mieszanym kodu. Ten kod obsługuje uruchamianie CRT, wątek wewnętrznych danych inicjowanie i kończenie działania. Odnosi się do wersji kompilatora używane. Ta biblioteka jest zawsze połączone statycznie, nawet w przypadku używania UCRT połączone dynamicznie.

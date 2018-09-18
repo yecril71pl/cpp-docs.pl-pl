@@ -1,5 +1,5 @@
 ---
-title: Kompilatora (poziom 4) ostrzeżenie C4611 | Dokumentacja firmy Microsoft
+title: Kompilator ostrzeżenie (poziom 4) C4611 | Dokumentacja firmy Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,18 +16,19 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5946c10b5e0e0e7e08f1ee37c77120896937adb1
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 723976dc8b7085ede9b3157445ff3026de6fc4b9
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33293156"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46091052"
 ---
-# <a name="compiler-warning-level-4-c4611"></a>Kompilator C4611 ostrzegawcze (poziom 4)
-Interakcja między "function" i zniszczeniem obiektu języka C++ nie jest przenośna  
-  
- Na niektórych platformach, funkcje, które obejmują **catch** może nie obsługiwać semantyki obiektu C++ likwidacji, gdy znajdują się poza zakresem.  
-  
- Aby uniknąć nieoczekiwanego zachowania, należy unikać **catch** w funkcje, które mają konstruktory i destruktory.  
-  
- To ostrzeżenie zostanie wyświetlone tylko raz; zobacz [warning elementu pragma](../../preprocessor/warning.md).
+# <a name="compiler-warning-level-4-c4611"></a>Kompilator ostrzeżenie (poziom 4) C4611
+
+Interakcja między "function" i zniszczeniem obiektu języka C++ nie jest przenośna
+
+Na niektórych platformach funkcje, które obejmują **catch** mogą nie obsługiwać semantyki obiektów języka C++ likwidacji, gdy komputer znajduje się poza zakresem.
+
+Aby uniknąć nieoczekiwanego zachowania, należy unikać **catch** w funkcjach, które mają konstruktory i destruktory.
+
+To ostrzeżenie zostanie wyświetlone tylko raz; zobacz [warning elementu pragma](../../preprocessor/warning.md).

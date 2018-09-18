@@ -1,5 +1,5 @@
 ---
-title: C3820 błąd kompilatora | Dokumentacja firmy Microsoft
+title: Błąd kompilatora C3820 | Dokumentacja firmy Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,22 +16,24 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d6a21afc6831c0fb51c96fa6ff8c43de1bebb812
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 4332b48ea9ea0a69c1545fbfac8b7df5cf5f8be3
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33272077"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46093353"
 ---
-# <a name="compiler-error-c3820"></a>C3820 błąd kompilatora
-"Nazwa": inicjatory muszą być zarządzane  
-  
- *Nazwa* inicjator dla typu zarządzanego musi być także zarządzane.  
-  
-### <a name="to-correct-this-error"></a>Aby poprawić ten błąd  
-  
-1.  Określ metodę zarządzanych inicjatora.  
-  
-## <a name="see-also"></a>Zobacz też  
- [Inicjatory](../../cpp/initializers.md)   
- [Dodatkowe zagadnienia dotyczące uruchamiania](../../cpp/additional-startup-considerations.md)
+# <a name="compiler-error-c3820"></a>Błąd kompilatora C3820
+
+"name": inicjatory muszą być zarządzane
+
+*Nazwa* inicjator dla typu zarządzanego musi być także zarządzane.
+
+### <a name="to-correct-this-error"></a>Aby poprawić ten błąd
+
+1. Określ metodę zarządzanych inicjatora.
+
+## <a name="see-also"></a>Zobacz też
+
+[Inicjatory](../../cpp/initializers.md)<br/>
+[Dodatkowe zagadnienia dotyczące uruchamiania](../../cpp/additional-startup-considerations.md)

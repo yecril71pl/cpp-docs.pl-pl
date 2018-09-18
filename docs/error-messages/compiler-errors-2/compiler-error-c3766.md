@@ -1,5 +1,5 @@
 ---
-title: C3766 błąd kompilatora | Dokumentacja firmy Microsoft
+title: Błąd kompilatora C3766 | Dokumentacja firmy Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,38 +16,40 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e1467f36757495734018c1ebac9c0a8b115d2919
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: d96fa83f072d0c0b86854400753f0b798ac73d14
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33267074"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46094682"
 ---
-# <a name="compiler-error-c3766"></a>C3766 błąd kompilatora
-'type' musi dostarczyć implementację interfejsu "function" — Metoda  
-  
- Klasa, która dziedziczy po interfejsie musi implementować członków interfejsu.  
-  
-## <a name="example"></a>Przykład  
- Poniższy przykład generuje C3766.  
-  
-```  
-// C3766.cpp  
-// compile with: /clr /c  
-  
-delegate void MyDel();  
-  
-interface struct IFace {  
-   virtual event MyDel ^ E;  
-};  
-  
-ref struct Class1 : public IFace {};   // C3766  
-  
-// OK  
-ref struct Class2 : public IFace {  
-   virtual event MyDel ^ E {  
-      void add(MyDel ^) {}  
-      void remove(MyDel ^) {}  
-   }  
-};  
+# <a name="compiler-error-c3766"></a>Błąd kompilatora C3766
+
+"type" musi dostarczyć implementację interfejsu metody "function"
+
+Klasa, która dziedziczy interfejs musi implementować członków interfejsu.
+
+## <a name="example"></a>Przykład
+
+Poniższy przykład spowoduje wygenerowanie C3766.
+
+```
+// C3766.cpp
+// compile with: /clr /c
+
+delegate void MyDel();
+
+interface struct IFace {
+   virtual event MyDel ^ E;
+};
+
+ref struct Class1 : public IFace {};   // C3766
+
+// OK
+ref struct Class2 : public IFace {
+   virtual event MyDel ^ E {
+      void add(MyDel ^) {}
+      void remove(MyDel ^) {}
+   }
+};
 ```

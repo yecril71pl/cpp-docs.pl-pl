@@ -20,12 +20,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5cbd0031e9291edc39b2b437acb014c6f0424fa4
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: f58b5936ab9f73ce2fe351d078e61bddfda54d6c
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43753893"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46097825"
 ---
 # <a name="crtthreadtraits-class"></a>Klasa CRTThreadTraits
 
@@ -80,22 +80,22 @@ static HANDLE CreateThread(
 
 ### <a name="parameters"></a>Parametry
 
-*lpsa*  
+*lpsa*<br/>
 Atrybuty zabezpieczeń dla nowego wątku.
 
-*dwStackSize*  
+*dwStackSize*<br/>
 Rozmiar stosu dla nowego wątku.
 
-*pfnThreadProc*  
+*pfnThreadProc*<br/>
 Procedura wątku nowego wątku.
 
-*pvParam*  
+*pvParam*<br/>
 Parametr, który zostanie przekazany do procedury wątku.
 
-*dwCreationFlags*  
+*dwCreationFlags*<br/>
 Tworzenie flagi (0 lub CREATE_SUSPENDED).
 
-*pdwThreadId*  
+*pdwThreadId*<br/>
 [out] Adres zmiennej typu DWORD, że w przypadku powodzenia odbiera identyfikator wątku dla nowo utworzonego wątku.
 
 ### <a name="return-value"></a>Wartość zwracana

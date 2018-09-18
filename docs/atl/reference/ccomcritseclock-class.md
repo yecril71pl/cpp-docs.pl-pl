@@ -20,12 +20,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d06b34099ecdb9c61d3580586bcb3bcd73eaf709
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: ab3c4b349b64b96b8aeb7a53d6bf8809f41cea7b
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43755050"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46097786"
 ---
 # <a name="ccomcritseclock-class"></a>Klasa CComCritSecLock
 
@@ -39,7 +39,7 @@ template<class TLock> class CComCritSecLock
 
 #### <a name="parameters"></a>Parametry
 
-*TLock*  
+*TLock*<br/>
 Obiekt, który może zostać zablokowany i odblokować.
 
 ## <a name="members"></a>Elementy członkowskie
@@ -76,10 +76,10 @@ CComCritSecLock(TLock& cs, bool bInitialLock = true);
 
 ### <a name="parameters"></a>Parametry
 
-*CS*  
+*CS*<br/>
 Obiekt sekcję krytyczną.
 
-*bInitialLock*  
+*bInitialLock*<br/>
 Stan początkowy blokady: **true** oznacza, że zablokowane.
 
 ### <a name="remarks"></a>Uwagi
@@ -128,5 +128,5 @@ Jeśli obiekt jest już odblokowane, wystąpi błąd ASERCJI w kompilacjach do d
 
 ## <a name="see-also"></a>Zobacz też
 
-[Klasa CComCriticalSection](../../atl/reference/ccomcriticalsection-class.md)   
+[Klasa CComCriticalSection](../../atl/reference/ccomcriticalsection-class.md)<br/>
 [Klasa CComAutoCriticalSection](../../atl/reference/ccomautocriticalsection-class.md)

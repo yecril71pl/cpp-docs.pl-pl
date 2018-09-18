@@ -16,22 +16,24 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f8558ae80fa3c21d01f276e010409dd9d47a67af
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: b256c61b9e9de6bf19e754054de1f55fcdec5f0b
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33299789"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46094523"
 ---
 # <a name="linker-tools-error-lnk1332"></a>Błąd narzędzi konsolidatora LNK1332
-Wykryto\<count > typów środowiska wykonawczego systemu Windows zaimportowanych w jednym module i zdefiniowanych w innym module  
-  
- Gdy wyprodukował bieżącą lokalizację docelową, konsolidator wykryty <`count`> typów środowiska wykonawczego systemu Windows, z których każdy jest zaimportowanych w jednym module i również zdefiniowanych w innym module.  
-  
-### <a name="to-correct-this-error"></a>Aby poprawić ten błąd  
-  
--   Popraw błędy LNK2039 w kompilacji zgodnie z sugestii w komunikacie o błędzie.  
-  
-## <a name="see-also"></a>Zobacz też  
- [Błąd narzędzi konsolidatora LNK2039](../../error-messages/tool-errors/linker-tools-error-lnk2039.md)   
- [Błędy i ostrzeżenia narzędzi konsolidatora](../../error-messages/tool-errors/linker-tools-errors-and-warnings.md)
+
+Wykryto\<liczba > typów środowiska wykonawczego Windows zaimportowanych w jednym module i zdefiniowanych w innym module
+
+Gdy wygenerowane bieżącą lokalizację docelową, konsolidator wykryty <`count`> typów środowiska wykonawczego Windows, z których każdy jest zaimportowanych w jednym module i również zdefiniowanej w innym module.
+
+### <a name="to-correct-this-error"></a>Aby poprawić ten błąd
+
+- Popraw błędy LNK2039 w kompilacji, zgodnie z sugestią w komunikacie o błędzie.
+
+## <a name="see-also"></a>Zobacz też
+
+[Błąd narzędzi konsolidatora LNK2039](../../error-messages/tool-errors/linker-tools-error-lnk2039.md)<br/>
+[Błędy i ostrzeżenia narzędzi konsolidatora](../../error-messages/tool-errors/linker-tools-errors-and-warnings.md)

@@ -23,12 +23,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ac922526abec73d7219f64cb1004319e9547fef6
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 815a276cb07a91da73acb68a32cceef4b2138325
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43757884"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46093851"
 ---
 # <a name="idispeventimpl-class"></a>Klasa IDispEventImpl
 
@@ -45,31 +45,31 @@ template <UINT nID, class T,
     const GUID* plibid = &GUID_NULL,
     WORD wMajor = 0,
     WORD wMinor = 0, 
-    class tihclass = CcomTypeInfoHolder>  
+    class tihclass = CcomTypeInfoHolder>
 class ATL_NO_VTABLE IDispEventImpl : public IDispEventSimpleImpl<nID, T, pdiid>
 ```
 
 #### <a name="parameters"></a>Parametry
 
-*nID*  
+*nID*<br/>
 Unikatowy identyfikator obiektu źródłowego. Gdy `IDispEventImpl` jest klasą bazową dla kontrolki złożonej, skorzystaj z zasobów żądaną kontrolki zawartej dla tego parametru. W innych przypadkach należy użyć dowolną dodatnią liczbą całkowitą.
 
-*T*  
+*T*<br/>
 Klasa użytkownika, która jest pochodną `IDispEventImpl`.
 
-*pdiid*  
+*pdiid*<br/>
 Wskaźnik do identyfikatora IID z Interfejs rozdzielania zdarzeń, zaimplementowane przez tę klasę. Ten interfejs musi być zdefiniowany w bibliotece typów wskazywane przez *plibid*, *wMajor*, i *wMinor*.
 
-*plibid*  
+*plibid*<br/>
 Wskaźnik do biblioteki typów, który definiuje interfejs ekspedycji wskazywany przez *pdiid*. Jeśli **& GUID_NULL**, biblioteka typów zostanie załadowana z obiektu określania źródła zdarzeń.
 
-*wMajor*  
+*wMajor*<br/>
 Wersja główna biblioteki typów. Wartość domyślna to 0.
 
-*wMinor*  
+*wMinor*<br/>
 Wersja pomocnicza biblioteki typów. Wartość domyślna to 0.
 
-*tihclass*  
+*tihclass*<br/>
 Klasa używana do zarządzania informacji o typie *T*. Wartość domyślna to klasy typu `CComTypeInfoHolder`; jednak można zastąpić przy użyciu tego parametru szablonu, zapewniając klasy typu innego niż `CComTypeInfoHolder`.
 
 ## <a name="members"></a>Elementy członkowskie
@@ -143,16 +143,16 @@ HRESULT GetFuncInfoFromId(
 
 ### <a name="parameters"></a>Parametry
 
-*IID*  
+*IID*<br/>
 [in] Odwołanie do Identyfikatora funkcji.
 
-*dispidMember*  
+*dispidMember*<br/>
 [in] Identyfikator wysyłania funkcji.
 
-*lcid*  
+*lcid*<br/>
 [in] Ustawienia regionalne kontekstu identyfikatorem funkcji.
 
-*Informacje o*  
+*Informacje o*<br/>
 [in] Struktura, wskazujący, jak wywołania funkcji.
 
 ### <a name="return-value"></a>Wartość zwracana
@@ -213,10 +213,10 @@ VARTYPE GetUserDefinedType(
 
 ### <a name="parameters"></a>Parametry
 
-*pTI*  
+*pTI*<br/>
 [in] Wskaźnik do [ITypeInfo](/previous-versions/windows/desktop/api/oaidl/nn-oaidl-itypeinfo) interfejs, zawierający typ zdefiniowany przez użytkownika.
 
-*hrt*  
+*hrt*<br/>
 [in] Dojście do opisu typu do pobrania.
 
 ### <a name="return-value"></a>Wartość zwracana
@@ -249,10 +249,10 @@ Domyślnie klasa jest `CComTypeInfoHolder`. `CComTypeInfoHolder` zarządza infor
 
 ## <a name="see-also"></a>Zobacz też
 
-[Struktura _ATL_FUNC_INFO](../../atl/reference/atl-func-info-structure.md)   
-[Klasa IDispatchImpl](../../atl/reference/idispatchimpl-class.md)   
-[Klasa IDispEventSimpleImpl](../../atl/reference/idispeventsimpleimpl-class.md)   
-[SINK_ENTRY](composite-control-macros.md#sink_entry)   
-[SINK_ENTRY_EX](composite-control-macros.md#sink_entry_ex)   
-[SINK_ENTRY_INFO](composite-control-macros.md#sink_entry_info)   
+[Struktura _ATL_FUNC_INFO](../../atl/reference/atl-func-info-structure.md)<br/>
+[Klasa IDispatchImpl](../../atl/reference/idispatchimpl-class.md)<br/>
+[Klasa IDispEventSimpleImpl](../../atl/reference/idispeventsimpleimpl-class.md)<br/>
+[SINK_ENTRY](composite-control-macros.md#sink_entry)<br/>
+[SINK_ENTRY_EX](composite-control-macros.md#sink_entry_ex)<br/>
+[SINK_ENTRY_INFO](composite-control-macros.md#sink_entry_info)<br/>
 [Klasa — Przegląd](../../atl/atl-class-overview.md)

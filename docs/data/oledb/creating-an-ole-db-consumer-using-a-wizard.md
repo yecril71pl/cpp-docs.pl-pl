@@ -15,27 +15,29 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: fa7b9323630307aaf959cd55267a918bbd628bc4
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 2f9a301d6e8b2c26d5be7c4234550ba4af7eefd3
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33097003"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46097902"
 ---
 # <a name="creating-an-ole-db-consumer-using-a-wizard"></a>Tworzenie konsumenta OLE DB przy użyciu kreatora
-W tej procedurze pokazano, jak służy Kreator projektu ATL i OLE DB Kreator konsumenta ATL do wygenerowania konsumenta szablony OLE DB, a następnie zmodyfikować głównego kodu aplikacji konsoli do pobierania i wyświetlania danych z tabeli bazy danych.  
+
+Ta procedura pokazuje, jak można użyć Kreator projektów ATL i OLE DB Kreator konsumenta ATL do wygenerowania konsumenta szablony OLE DB, a następnie zmodyfikuj główny kod aplikacji konsoli, aby pobrać i wyświetlić dane z tabeli bazy danych.  
   
- W ostatnich dwóch sekcjach opisano kod generowane przez kreatora konsumenta OLE DB.  
+Ostatnie dwie sekcje zawierają opis kodu generowane przez kreatora konsumenta OLE DB.  
   
- W tej sekcji omówiono następujące tematy:  
+W tej sekcji omówiono następujące tematy:  
   
--   [Tworzenie prostego konsumenta](../../data/oledb/creating-a-simple-consumer.md)  
+- [Tworzenie prostego konsumenta](../../data/oledb/creating-a-simple-consumer.md)  
   
--   [Implementowanie prostego konsumenta](../../data/oledb/implementing-a-simple-consumer.md)  
+- [Implementowanie prostego konsumenta](../../data/oledb/implementing-a-simple-consumer.md)  
   
--   [Klasy konsumentów generowane przez kreatora](../../data/oledb/consumer-wizard-generated-classes.md)  
+- [Klasy konsumentów generowane przez kreatora](../../data/oledb/consumer-wizard-generated-classes.md)  
   
--   [Metody konsumenta generowane przez kreatora](../../data/oledb/consumer-wizard-generated-methods.md)  
+- [Metody konsumenta generowane przez kreatora](../../data/oledb/consumer-wizard-generated-methods.md)  
   
 ## <a name="see-also"></a>Zobacz też  
- [Tworzenie konsumenta OLE DB](../../data/oledb/creating-an-ole-db-consumer.md)
+
+[Tworzenie konsumenta OLE DB](../../data/oledb/creating-an-ole-db-consumer.md)

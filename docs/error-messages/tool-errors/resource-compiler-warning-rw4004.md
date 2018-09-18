@@ -16,18 +16,19 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 94bd1c043ac5660c5cb8fc8b2bfa1dd2f6968b55
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 33305f1f86c0cc1722e4a235ec27927f6e70675f
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33337109"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46095992"
 ---
 # <a name="resource-compiler-warning-rw4004"></a>Ostrzeżenie RW4004 kompilatora zasobów
-Nie są równoważne wirtualnego kod klucza znaków ASCII  
-  
- Literał ciągu została użyta dla wirtualnego kodu klucza skrótów typu VIRTKEY.  
-  
- To ostrzeżenie pozwala kontynuować, ale należy pamiętać, klawisze skrótów wygenerowany może nie odpowiadać wskazana ciąg. (VIRTKEYs użyć różnych kodów klucza niż ASCII akceleratorów).  
-  
- Literały ciągu są nieprawidłową składnię, użytkownik może tylko mieć pewność, że akceleratora przy użyciu **VK_\* #define** wartości WINDOWS.h.
+
+Znak ASCII nie są równoważne kod klawisza wirtualnego
+
+Literał ciągu użyto wirtualnego kod klucza w akceleratorze typu VIRTKEY.
+
+To ostrzeżenie można kontynuować, ale należy pamiętać, klawisze skrótów generowane może nie odpowiadać ciągu, wskazane przez Ciebie. (VIRTKEYs używają różnych kody klawiszy niż akceleratory ASCII).
+
+Literały ciągów są nieprawidłową składnię, należy można tylko mieć pewność, że akcelerator, za pomocą **VK_\* #define** wartości WINDOWS.h.

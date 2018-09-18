@@ -1,5 +1,5 @@
 ---
-title: C2735 błąd kompilatora | Dokumentacja firmy Microsoft
+title: Błąd kompilatora C2735 | Dokumentacja firmy Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,21 +16,22 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1ab970aa4e46ed0206f311e100f7ee777907aff8
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 732b75c8988f879af230e0513a751b8cd9c4ae67
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33232672"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46093129"
 ---
-# <a name="compiler-error-c2735"></a>C2735 błąd kompilatora
-słowo kluczowe "— słowo kluczowe" nie jest dozwolone w specyfikatorze typu formalnego parametru  
-  
- Słowo kluczowe jest nieprawidłowy w tym kontekście.  
-  
- Poniższy przykład generuje C2735:  
-  
-```  
-// C2735.cpp  
-void f(inline int){}   // C2735  
+# <a name="compiler-error-c2735"></a>Błąd kompilatora C2735
+
+słowo kluczowe "— słowo kluczowe" nie jest dozwolone w specyfikatorze typu formalnego parametru
+
+Słowo kluczowe jest nieprawidłowy w tym kontekście.
+
+Poniższy przykład spowoduje wygenerowanie C2735:
+
+```
+// C2735.cpp
+void f(inline int){}   // C2735
 ```

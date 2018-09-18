@@ -16,19 +16,21 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 048500cbf41eebdbb5a58d6622f7a351172e6f7c
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 9cd950504297909f9c3839df5781a6db4753f085
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32383020"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46095407"
 ---
 # <a name="dll-import-and-export"></a>Importowanie i eksportowanie bibliotek DLL
-**Microsoft Specific**  
-  
- Modyfikatory klasy magazynowania dllimport i dllexport są rozszerzenia specyficzne dla firmy Microsoft dla języka C. Te Modyfikatory zdefiniuj interfejsu biblioteki DLL do klienta (plik wykonywalny lub innej bibliotece DLL). Aby uzyskać szczegółowe informacje dotyczące tych modyfikatory, zobacz [dllexport i dllimport](../cpp/dllexport-dllimport.md).  
-  
- **KOŃCOWY określonych firmy Microsoft**  
-  
-## <a name="see-also"></a>Zobacz też  
- [Rozszerzone atrybuty klasy magazynu języka C](../c-language/c-extended-storage-class-attributes.md)
+
+**Microsoft Specific**
+
+Modyfikatorów klasy magazynowania dllimport i dllexport są specyficzne dla Microsoft rozszerzenia języka C. Następujące Modyfikatory definiują interfejs DLL dla jego klienta (plik wykonywalny lub innej biblioteki DLL). Aby uzyskać szczegółowe informacje dotyczące tych modyfikatorów, zobacz [dllexport i dllimport](../cpp/dllexport-dllimport.md).
+
+**END specyficzny dla Microsoft**
+
+## <a name="see-also"></a>Zobacz też
+
+[Rozszerzone atrybuty klasy magazynu języka C](../c-language/c-extended-storage-class-attributes.md)

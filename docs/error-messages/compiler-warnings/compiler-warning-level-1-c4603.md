@@ -1,5 +1,5 @@
 ---
-title: Kompilatora (poziom 1) ostrzeżenie C4603 | Dokumentacja firmy Microsoft
+title: Kompilator ostrzeżenie (poziom 1) C4603 | Dokumentacja firmy Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,17 +16,19 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 54247238e522afb057c19fc407e0c3951e6b30cf
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 7c5100bdac5589747d948597baa35658df9da4ff
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33282301"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46087867"
 ---
-# <a name="compiler-warning-level-1-c4603"></a>Kompilator C4603 ostrzegawcze (poziom 1)
-"\<identyfikator >": makro jest niezdefiniowane lub definicja różni się po użyciu prekompilowanego nagłówka  
-  
- Makro określone przez *identyfikator* symbol zastępczy jest różne lub nie jest już zdefiniowany po prekompilowanych nagłówków jest używany.  
-  
-## <a name="see-also"></a>Zobacz też  
- [Tworzenie prekompilowanych plików nagłówka](../../build/reference/creating-precompiled-header-files.md)
+# <a name="compiler-warning-level-1-c4603"></a>Kompilator ostrzeżenie (poziom 1) C4603
+
+"\<identyfikator >": makro jest niezdefiniowane lub definicja różni się po użyciu prekompilowanego nagłówka
+
+Określone przez makro *identyfikator* różnych lub nie jest już zdefiniowany jest symbol zastępczy po nagłówków prekompilowanych jest używana.
+
+## <a name="see-also"></a>Zobacz też
+
+[Tworzenie prekompilowanych plików nagłówka](../../build/reference/creating-precompiled-header-files.md)

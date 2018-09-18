@@ -26,12 +26,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 98f7edcf115a6fadc741c7f1bcde8f240c93abcc
-ms.sourcegitcommit: d10a2382832373b900b1780e1190ab104175397f
+ms.openlocfilehash: db047c2b16eb67f086bc26976783e829189d4266
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43895126"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46095108"
 ---
 # <a name="is-isw-routines"></a>is, isw — Procedury
 
@@ -61,75 +61,75 @@ Wartość wyjściowa jest zależna od ustawienia `LC_CTYPE` ustawienia kategorii
 
 W ustawieniach regionalnych "języka C", warunki badania dla **jest** procedury są następujące:
 
-`isalnum`  
+`isalnum`<br/>
 Alfanumeryczne (- Z, - z lub 0 - 9).
 
-`isalpha`  
+`isalpha`<br/>
 Alfabetyczne (A - Z lub a - z).
 
-`__isascii`  
+`__isascii`<br/>
 Znak ASCII (0x00 - 0x7F).
 
-`isblank`  
+`isblank`<br/>
 Poziomy lub znak spacji (0x09 lub 0x20).
 
-`iscntrl`  
+`iscntrl`<br/>
 Znak sterujący (0x00-0x1F or 0x7F).
 
-`__iscsym`  
+`__iscsym`<br/>
 Litera, podkreślenie lub cyfra.
 
-`__iscsymf`  
+`__iscsymf`<br/>
 Litera lub podkreślenie.
 
-`isdigit`  
+`isdigit`<br/>
 Cyfra dziesiętna (0 – 9).
 
-`isgraph`  
+`isgraph`<br/>
 Znak drukowalny z wyjątkiem spacją.
 
-`islower`  
+`islower`<br/>
 Mała litera (- z).
 
-`isprint`  
+`isprint`<br/>
 Znak drukowalny zawierający przestrzeń (0x20 — 0x7E).
 
-`ispunct`  
+`ispunct`<br/>
 Znak interpunkcyjny.
 
-`isspace`  
+`isspace`<br/>
 Odstęp (0x09 — 0x0D lub 0x20).
 
-`isupper`  
+`isupper`<br/>
 Wielkie litery (- Z).
 
-`isxdigit`  
+`isxdigit`<br/>
 Cyfra szesnastkowa (A - F, - f lub 0 – 9).
 
 Aby uzyskać **isw** procedur, wynik testu dla określonego warunku zależy od ustawień regionalnych. Warunki badania dla **isw** dostępne są następujące funkcje:
 
-`iswalnum`  
+`iswalnum`<br/>
 `iswalpha` lub `iswdigit`.
 
-`iswalpha`  
+`iswalpha`<br/>
 Każdy znak dwubajtowy, który jest jednym z zestawów zdefiniowanych w implementacji dla którego żadna `iswcntrl`, `iswdigit`, `iswpunct`, lub `iswspace` jest różna od zera. `iswalpha` Zwraca wartość różną od zera dla znaków dwubajtowych, dla których `iswupper` lub `iswlower` jest różna od zera.
 
-`iswascii`  
+`iswascii`<br/>
 Przedstawienie szerokiego znaku ASCII (0x0000 - 0x007F).
 
-`iswblank`  
+`iswblank`<br/>
 Szeroki znak, który odnosi się do standardowych znaków spacji lub jest jednym ze zdefiniowanych w implementacji zestawu znaków dwubitowych, dla którego `iswalnum` ma wartość false. Standardowe znaki puste są spacjami (L' ') i tabulatorami poziomy (L "\t").
 
-`iswcntrl`  
+`iswcntrl`<br/>
 Steruj znakiem dwubajtowym.
 
-`__iswcsym`  
+`__iswcsym`<br/>
 Każdy znak dwubajtowy, dla którego `isalnum` ma wartość true lub znakiem "_".
 
-`__iswcsymf`  
+`__iswcsymf`<br/>
 Każdy znak dwubajtowy, dla którego `iswalpha` ma wartość true lub znakiem "_".
 
-`iswctype`  
+`iswctype`<br/>
 Znak ma właściwość określoną przez `desc` argumentu. Dla każdej prawidłowej wartości `desc` argument `iswctype`, istnieje równoważna znaków dwubajtowych procedura klasyfikacji, jak pokazano w poniższej tabeli:
 
 ### <a name="equivalence-of-iswctypec-desc-to-other-isw-testing-routines"></a>Równoważność iswctype (c, desc) do innych procedur badania Isw
@@ -150,28 +150,28 @@ Znak ma właściwość określoną przez `desc` argumentu. Dla każdej prawidło
 |**_UPPER**|**iswupper — (** `c` **)**|
 |**_HEX**|**iswxdigit — (** `c` **)**|
 
-`iswdigit`  
+`iswdigit`<br/>
 Znak dwubajtowy odpowiadający znakowi cyfry dziesiętnej.
 
-`iswgraph`  
+`iswgraph`<br/>
 Szeroki znak drukowalny z wyjątkiem miejsca szerokość znaków (L' ").
 
-`iswlower`  
+`iswlower`<br/>
 Mała litera lub jeden z zdefiniowanych w implementacji zestawu szerokich znaków, dla którego żadna `iswcntrl`, `iswdigit`, `iswpunct`, lub `iswspace` jest różna od zera. `iswlower` Zwraca wartość różną od zera dla znaków dwubajtowych, które odpowiadają literom.
 
-`iswprint`  
+`iswprint`<br/>
 Szeroki znak drukowalny zawierający, łącznie z miejsca szerokość znaków (L' ").
 
-`iswpunct`  
+`iswpunct`<br/>
 Drukowalnym znakiem dwubajtowym, który jest ani miejsca szerokość znaków (L' ') ani szerokości znaków, dla którego `iswalnum` jest różna od zera.
 
-`iswspace`  
+`iswspace`<br/>
 Szeroki znak, który odnosi się do standardowych znaków spacji lub jest jednym ze zdefiniowanych w implementacji zestawu szerokich znaków, dla którego `iswalnum` ma wartość false. Standardowe znaki odstępu są: miejsce (L' '), Wysuw strony (L "\f"), nowy wiersz (L '\n'), znak powrotu karetki (L '\r'), tabulator poziomy (L "\t") i tabulacji pionowej (L '\v').
 
-`iswupper`  
+`iswupper`<br/>
 Szeroki znak, który jest wielką literą lub jest jednym ze zdefiniowanych w implementacji zestawu szerokich znaków, dla którego żadna `iswcntrl`, `iswdigit`, `iswpunct`, lub `iswspace` jest różna od zera. `iswupper` Zwraca wartość różną od zera dla znaków dwubajtowych, które odpowiadają na wielkie litery.
 
-`iswxdigit`  
+`iswxdigit`<br/>
 Znak dwubajtowy odpowiadający znakowi cyfry szesnastkowej.
 
 ## <a name="example"></a>Przykład
@@ -181,16 +181,16 @@ Znak dwubajtowy odpowiadający znakowi cyfry szesnastkowej.
 /* This program tests all characters between 0x0
 * and 0x7F, then displays each character with abbreviations
 * for the character-type codes that apply.
-*/  
+*/
 
 #include <stdio.h>
 #include <ctype.h>
 
-int main( void )  
-{  
+int main( void )
+{
    int ch;
-   for( ch = 0; ch <= 0x7F; ch++ )  
-   {  
+   for( ch = 0; ch <= 0x7F; ch++ )
+   {
       printf( "%.2x  ", ch );
       printf( " %c", isprint( ch )  ? ch   : ' ' );
       printf( "%4s", isalnum( ch )  ? "AN" : "" );
@@ -208,9 +208,9 @@ int main( void )
       printf( "%3s", isupper( ch )  ? "U"  : "" );
       printf( "%3s", isxdigit( ch ) ? "X"  : "" );
       printf( ".\n" );
-   }  
-}  
-```  
+   }
+}
+```
 
 ## <a name="output"></a>Dane wyjściowe
 
@@ -347,8 +347,8 @@ int main( void )
 
 ## <a name="see-also"></a>Zobacz też
 
-[Klasyfikacja znaków](../c-runtime-library/character-classification.md)   
-[Ustawienia regionalne](../c-runtime-library/locale.md)   
-[setLocale, _wsetlocale](../c-runtime-library/reference/setlocale-wsetlocale.md)   
-[Interpretacja wielobajtowych sekwencji znaków](../c-runtime-library/interpretation-of-multibyte-character-sequences.md)   
+[Klasyfikacja znaków](../c-runtime-library/character-classification.md)<br/>
+[Wersja regionalna](../c-runtime-library/locale.md)<br/>
+[setlocale, _wsetlocale](../c-runtime-library/reference/setlocale-wsetlocale.md)<br/>
+[Interpretacja wielobajtowych sekwencji znaków](../c-runtime-library/interpretation-of-multibyte-character-sequences.md)<br/>
 [to, funkcje](../c-runtime-library/to-functions.md)

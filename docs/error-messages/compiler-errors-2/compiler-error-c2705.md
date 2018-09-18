@@ -1,5 +1,5 @@
 ---
-title: C2705 błąd kompilatora | Dokumentacja firmy Microsoft
+title: Błąd kompilatora C2705 | Dokumentacja firmy Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,30 +16,31 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8dce6bdb0a5c20fbe54b04eaf83ee8f90427017c
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 1c0eefd19645ee6ac06664249f7953d904cd5896
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33235458"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46093704"
 ---
-# <a name="compiler-error-c2705"></a>C2705 błąd kompilatora
-"etykieta": niedozwolony skok do zakresu "bloku obsługi wyjątków"  
-  
- Wykonanie przechodzi do etykiety w `try` / `catch`, `__try` / `__except`, `__try` / `__finally` bloku. Aby uzyskać więcej informacji, zobacz [obsługi wyjątków](../../cpp/exception-handling-in-visual-cpp.md).  
-  
- Poniższy przykład generuje C2705:  
-  
-```  
-// C2705.cpp  
-int main() {  
-goto trouble;  
-   __try {  
-      trouble: ;   // C2705  
-   }  
-   __finally {}  
-  
-   // try the following line instead  
-   // trouble: ;  
-}  
+# <a name="compiler-error-c2705"></a>Błąd kompilatora C2705
+
+"etykieta": niedozwolony skok do zakresu "bloku obsługi wyjątków"
+
+Wykonywanie przeskakuje etykietę w ramach `try` / `catch`, `__try` / `__except`, `__try` / `__finally` bloku. Aby uzyskać więcej informacji, zobacz [wyjątków](../../cpp/exception-handling-in-visual-cpp.md).
+
+Poniższy przykład spowoduje wygenerowanie C2705:
+
+```
+// C2705.cpp
+int main() {
+goto trouble;
+   __try {
+      trouble: ;   // C2705
+   }
+   __finally {}
+
+   // try the following line instead
+   // trouble: ;
+}
 ```

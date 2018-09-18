@@ -18,15 +18,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8d3d5b7a89a3725ae9dee2065bcd21d8f114ca00
-ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
+ms.openlocfilehash: 03724e6f1ad0c85ad70e464786a7393b3f2f61e8
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "33323943"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46094991"
 ---
 # <a name="ltexceptiongt-visual-c"></a>&lt;wyjątek&gt; (Visual C++)
-\<Wyjątku > należy określić, które wyjątki może zostać wygenerowany. Ten tag jest stosowany do definicji metody.  
+\<Wyjątku > należy określić, które wyjątki mogą zostać wygenerowane. Ten tag jest stosowany do definicji metody.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -35,20 +35,20 @@ ms.locfileid: "33323943"
 ```  
   
 #### <a name="parameters"></a>Parametry  
- `member`  
- Odwołanie do wyjątek, który jest dostępny w bieżącym środowisku kompilacji. Przy użyciu nazwy wyszukiwania reguł, kompilator sprawdza, czy dany wyjątek istnieje i wykonuje translację `member` nazwę kanoniczną element wyjściowy element XML.  Kompilator generuje ostrzeżenie, jeśli nie znajdzie `member`.  
+*Element członkowski*<br/>
+Odwołanie do wyjątek, który jest dostępny w bieżącym środowisku kompilacji. Przy użyciu reguł wyszukiwania nazwy, kompilator sprawdza, czy dany wyjątek istnieje i tłumaczy `member` nazwę kanoniczną element w danych wyjściowych XML.  Kompilator generuje ostrzeżenie, jeśli nie znajdzie `member`.  
   
- Nazwę należy ująć w cudzysłów pojedynczym lub podwójnym.  
+ Nazwę należy ująć w pojedyncze lub podwójne znaki cudzysłowu.  
   
  Aby uzyskać informacje na temat tworzenia cref odwołanie do typu ogólnego, zobacz [ \<zobacz >](../ide/see-visual-cpp.md).  
   
- `description`  
- Opis.  
+*Opis elementu*<br/>
+Opis.  
   
 ## <a name="remarks"></a>Uwagi  
- Kompiluj z użyciem [/doc](../build/reference/doc-process-documentation-comments-c-cpp.md) na przetwarzanie komentarzy dokumentacji do pliku.  
+ Kompiluj przy użyciu [/doc](../build/reference/doc-process-documentation-comments-c-cpp.md) do Przetwarzaj komentarze dokumentacji do pliku.  
   
- Kompilator Visual C++ podejmie próbę rozpoznawania odwołań cref w jednym przebiegu za pośrednictwem komentarzy do dokumentacji.  W związku z tym jeśli przy użyciu reguł wyszukiwania C++, symbol nie znaleziono przez kompilator, odwołanie zostanie oznaczona jako nierozwiązane. Zobacz [ \<seealso >](../ide/seealso-visual-cpp.md) Aby uzyskać więcej informacji.  
+ Kompilator języka Visual C++ będzie próbował rozpoznać odwołania cref w jednym przebiegu za pomocą komentarzy dokumentacji.  W związku z tym, jeśli przy użyciu reguł wyszukiwania C++, symbolu nie można odnaleźć kompilatora odwołania zostaną oznaczone jako nierozwiązane. Zobacz [ \<SeeAlso — >](../ide/seealso-visual-cpp.md) Aby uzyskać więcej informacji.  
   
 ## <a name="example"></a>Przykład  
   
