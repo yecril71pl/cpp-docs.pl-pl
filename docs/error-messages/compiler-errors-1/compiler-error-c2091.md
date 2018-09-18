@@ -1,5 +1,5 @@
 ---
-title: C2091 błąd kompilatora | Dokumentacja firmy Microsoft
+title: Błąd kompilatora C2091 | Dokumentacja firmy Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,14 +16,15 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f2c115ea47f87a59c7412ed057675ccf893467cc
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: c47d7e99099632313fd561a4e08af52644693c95
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33166364"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46077012"
 ---
-# <a name="compiler-error-c2091"></a>C2091 błąd kompilatora
-funkcja zwraca funkcję  
-  
- Funkcja nie może zwracać funkcji. Zamiast tego zwraca wskaźnik do funkcji.
+# <a name="compiler-error-c2091"></a>Błąd kompilatora C2091
+
+funkcja zwraca funkcję
+
+Funkcja nie może zwrócić funkcję. Zamiast tego zwracają wskaźnik do funkcji.

@@ -17,12 +17,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 67904ec0c16fb1eddcf182d34f10cb09219dfc6e
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 7f9dff61a62eec37a503b1c0018ead6dce33065a
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43767419"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46077116"
 ---
 # <a name="ccomenum-class"></a>Klasa CComEnum
 
@@ -32,7 +32,7 @@ Ta klasa definiuje obiekt modułu wyliczającego COM, na podstawie tablicy.
 
 ```
 template <class Base,
-    const IID* piid, class T, class Copy, class ThreadModel = CcomObjectThreadModel>  
+    const IID* piid, class T, class Copy, class ThreadModel = CcomObjectThreadModel>
 class ATL_NO_VTABLE CComEnum : public CComEnumImpl<Base, piid,
 T,
     Copy>,
@@ -41,19 +41,19 @@ public CComObjectRootEx<ThreadModel>
 
 #### <a name="parameters"></a>Parametry
 
-*podstawowy*  
+*podstawowy*<br/>
 Moduł wyliczający interfejsu COM. Zobacz [IEnumString](/windows/desktop/api/objidl/nn-objidl-ienumstring) przykład.
 
-*piid*  
+*piid*<br/>
 Wskaźnik do Identyfikatora interfejsu interfejsu modułu wyliczającego.
 
-*T*  
+*T*<br/>
 Typ elementu udostępnianych przez interfejs modułu wyliczającego.
 
-*Kopiuj*  
+*Kopiuj*<br/>
 Jednorodnej [kopiowania klasy zasad](../../atl/atl-copy-policy-classes.md).
 
-*ThreadModel*  
+*ThreadModel*<br/>
 Model wątkowości klasy. Ten parametr używany w projekcie modelu wątku obiektów globalnych.
 
 ## <a name="remarks"></a>Uwagi
@@ -102,7 +102,7 @@ Ten kod tworzy **typedef** dla `CComEnum` który uwidacznia wektor wariantów za
 
 ## <a name="see-also"></a>Zobacz też
 
-[Klasa — Przegląd](../../atl/atl-class-overview.md)   
-[CComObjectThreadModel](atl-typedefs.md#ccomobjectthreadmodel)   
-[Klasa CComEnumImpl](../../atl/reference/ccomenumimpl-class.md)   
+[Klasa — Przegląd](../../atl/atl-class-overview.md)<br/>
+[CComObjectThreadModel](atl-typedefs.md#ccomobjectthreadmodel)<br/>
+[Klasa CComEnumImpl](../../atl/reference/ccomenumimpl-class.md)<br/>
 [Klasa CComObjectRootEx](../../atl/reference/ccomobjectrootex-class.md)

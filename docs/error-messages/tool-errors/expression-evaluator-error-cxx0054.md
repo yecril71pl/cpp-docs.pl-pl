@@ -1,5 +1,5 @@
 ---
-title: Błąd cxx0054 programu Expression Evaluator | Dokumentacja firmy Microsoft
+title: Błąd ewaluatora wyrażeń CXX0054 | Dokumentacja firmy Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,16 +17,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 11f5306f7cd3385c9ca302cd186de5591b448ea6
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 7aaf1a55ffee1d06eb4807381ad2cf1315420dbd
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33294313"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46074698"
 ---
 # <a name="expression-evaluator-error-cxx0054"></a>Błąd CXX0054 programu Expression Evaluator
-Zarejestruj w wyrażeniu punktu przerwania jest niedozwolony  
-  
- Rejestr nie można użyć w wyrażeniu punktu przerwania.  
-  
- Ten błąd jest taki sam jak CAN0054.
+
+Zarejestruj w wyrażeniu punkt przerwania jest niedozwolony
+
+Rejestr nie można użyć w wyrażeniu punktu przerwania.
+
+Ten błąd jest taka sama jak CAN0054.

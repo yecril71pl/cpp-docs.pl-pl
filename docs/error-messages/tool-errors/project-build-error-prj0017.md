@@ -16,14 +16,15 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 769c7b2d6c20fdc6daba6f1df2f576987c146641
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 28348626417f6b4c961be4486f6d7573a0a67780
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33320898"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46076063"
 ---
 # <a name="project-build-error-prj0017"></a>Błąd PRJ0017 kompilacji projektu
-Bieżący katalog roboczy jest nieprawidłowy.  
-  
- Ścieżka do bieżącego katalogu roboczego jest dłuższa niż _MAXPATH. Aby rozwiązać ten problem, nie należy tworzyć projektu na poziomie bezpośrednich.
+
+Bieżący katalog roboczy jest nieprawidłowy.
+
+Ścieżka do bieżącego katalogu roboczego jest dłuższa niż _MAXPATH. Aby rozwiązać ten problem, nie należy tworzyć projektu na poziomie głębokiego.

@@ -1,5 +1,5 @@
 ---
-title: _cabs — | Dokumentacja firmy Microsoft
+title: _cabs | Dokumentacja firmy Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -38,16 +38,16 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 80ea966b748407d51283823073a0c10a40717cf5
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: cad3c873dd7e0bab2a7b75e785fb91c704e616de
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32393540"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46085290"
 ---
 # <a name="cabs"></a>_cabs
 
-Oblicza wartość bezwzględną liczby złożonej.
+Oblicza wartość bezwzględną liczby zespolonej.
 
 ## <a name="syntax"></a>Składnia
 
@@ -64,11 +64,11 @@ Liczba złożonych.
 
 ## <a name="return-value"></a>Wartość zwracana
 
-**_cabs —** zwraca wartość bezwzględną liczby argumentu, w przypadku powodzenia. Na przepełnienia **_cabs —** zwraca **huge_val —** i ustawia **errno** do **erange —**. Można zmienić błąd obsługi z [_matherr —](matherr.md).
+**_cabs** zwraca wartość bezwzględną argumentu, jeśli to się powiedzie. W przepełnieniu **_cabs** zwraca **HUGE_VAL** i ustawia **errno** do **ERANGE**. Można zmienić błąd obsługi z [_matherr](matherr.md).
 
 ## <a name="remarks"></a>Uwagi
 
-**_Cabs —** funkcja oblicza wartość bezwzględna liczby złożonej, który musi być struktura typu [_complex](../../c-runtime-library/standard-types.md). Struktura *z* składa się z rzeczywistą składnika *x* i składnika urojony *y*. Wywołanie **_cabs —** daje wartość odpowiadającą wyrażenie `sqrt( z.x * z.x + z.y * z.y )`.
+**_Cabs** funkcja oblicza wartość bezwzględną liczby zespolonej musi być strukturą typu [_complex —](../../c-runtime-library/standard-types.md). Struktura *z* składa się z rzeczywisty składnik *x* i urojone części *y*. Wywołanie **_cabs** generuje wartość odpowiadającą wyrażenia `sqrt( z.x * z.x + z.y * z.y )`.
 
 ## <a name="requirements"></a>Wymagania
 
@@ -76,7 +76,7 @@ Liczba złożonych.
 |-------------|---------------------|
 |**_cabs**|\<math.h>|
 
-Aby uzyskać więcej informacji o zgodności, zobacz [zgodności](../../c-runtime-library/compatibility.md).
+Aby uzyskać więcej informacji na temat zgodności, zobacz [zgodności](../../c-runtime-library/compatibility.md).
 
 ## <a name="example"></a>Przykład
 
@@ -107,4 +107,4 @@ The absolute value of 3.000000 + 4.000000i is 5.000000
 
 [Obsługa liczb zmiennoprzecinkowych](../../c-runtime-library/floating-point-support.md)<br/>
 [abs, labs, llabs, _abs64](abs-labs-llabs-abs64.md)<br/>
-[fabs, fabsf, fabsl](fabs-fabsf-fabsl.md)   
+[fabs, fabsf, fabsl](fabs-fabsf-fabsl.md)

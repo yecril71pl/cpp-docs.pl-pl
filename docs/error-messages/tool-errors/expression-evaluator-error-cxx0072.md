@@ -1,5 +1,5 @@
 ---
-title: Błąd cxx0072 programu Expression Evaluator | Dokumentacja firmy Microsoft
+title: Błąd ewaluatora wyrażeń CXX0072 | Dokumentacja firmy Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,16 +17,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9e28fe0f27834b1ec18236ab8734b24601baef72
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 0ae9ef1017068fb2c515949110905a65e822d93a
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33295720"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46074464"
 ---
 # <a name="expression-evaluator-error-cxx0072"></a>Błąd CXX0072 programu Expression Evaluator
-Błąd: Brak informacji o typie lub są one nieznane  
-  
- Pliku .pch pobrać dołączane lub kod odwołuje się do typu, który znajduje się w module nie został skompilowany z opcją /Zi.  
-  
- Ten błąd jest taki sam jak CAN0067.
+
+Błąd: Brak informacji o typie lub nieznany
+
+Nie uzyskać dołączane pliku .pch lub kod odwołuje się do typu, który jest w module nie skompilowany przy użyciu/zi.
+
+Ten błąd jest taka sama jak CAN0067.

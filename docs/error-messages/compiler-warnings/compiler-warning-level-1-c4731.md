@@ -1,5 +1,5 @@
 ---
-title: Kompilatora (poziom 1) ostrzeżenie C4731 | Dokumentacja firmy Microsoft
+title: Kompilator ostrzeżenie (poziom 1) C4731 | Dokumentacja firmy Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,36 +16,37 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 31bdf972ef3791760469251dc4d0bf19627bded2
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 75117b34e63694cfa6aeec97abf178ff8e61a7da
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33283884"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46086489"
 ---
-# <a name="compiler-warning-level-1-c4731"></a>Kompilator C4731 ostrzegawcze (poziom 1)
-"wskaźnik": "register" zmodyfikowany przez wbudowany kod asemblera rejestr wskaźnika ramki  
-  
- Rejestr wskaźnika ramki została zmodyfikowana. Należy zapisać i przywrócić rejestr w wbudowanego zestawu bloku lub ramki zmiennej użytkownika (lokalnego lub parametru, w zależności od zmodyfikować rejestr) lub kod może nie działać prawidłowo.  
-  
- Poniższy przykład generuje C4731:  
-  
-```  
-// C4731.cpp  
-// compile with: /W1 /LD  
-// processor: x86  
-// C4731 expected  
-void bad(int p) {  
-   __asm  
-   {  
-      mov ebp, 1  
-   }  
-  
-   if (p == 1)  
-   {  
-      // ...  
-   }  
-}  
-```  
-  
- EBP jest wskaźnika ramki (niedopuszczalne FPO) i jest modyfikowana. Gdy `p` jest nowsza odwołać się do odwołuje się do względem `EBP`. Ale `EBP` został zastąpiony przez kod, więc program nie będzie działać prawidłowo i może nawet fault.
+# <a name="compiler-warning-level-1-c4731"></a>Kompilator ostrzeżenie (poziom 1) C4731
+
+"wskaźnik": rejestr wskaźnika "register" zmodyfikowany przez wbudowany kod asemblera ramki
+
+Rejestr wskaźnika ramki zostało zmodyfikowane. Należy zapisać i przywrócić rejestr w tekście zestawu bloku lub ramki zmiennej (lokalnego lub parametru, w zależności od rejestru modyfikacji) lub Twój kod może nie działać prawidłowo.
+
+Poniższy przykład spowoduje wygenerowanie C4731:
+
+```
+// C4731.cpp
+// compile with: /W1 /LD
+// processor: x86
+// C4731 expected
+void bad(int p) {
+   __asm
+   {
+      mov ebp, 1
+   }
+
+   if (p == 1)
+   {
+      // ...
+   }
+}
+```
+
+EBP jest wskaźnik ramki (niedopuszczalne FPO) i jest modyfikowana. Gdy `p` jest późniejsza odwołania, jest ona przywoływana względem `EBP`. Ale `EBP` został zastąpiony przez kod, dzięki czemu program nie będzie działać prawidłowo i może nawet błędów.

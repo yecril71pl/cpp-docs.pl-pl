@@ -16,14 +16,15 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 129bde75de99e979edd2bb5c7f23acd4ddbdb12f
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 4e46196bdf7b3fea7d5884c3805b7244b516271a
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33197263"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46071877"
 ---
 # <a name="fatal-error-c1121"></a>Błąd krytyczny C1121
-Wywołanie CryptoAPI nie powiodło się  
-  
- Kompilator złożonych wywołanie interfejsu CryptoAPI i wywołanie nie powiodło się. Zainstaluj pakiet Visual Studio i prawdopodobnie ponowna instalacja systemu operacyjnego.
+
+Wywołanie CryptoAPI nie powiodło się
+
+Kompilator wykonane po wywołaniu interfejsu CryptoAPI, wywołanie nie powiodło się. Zainstaluj ponownie program Visual Studio i ewentualnie ponownego zainstalowania systemu operacyjnego.

@@ -1,5 +1,5 @@
 ---
-title: Kompilatora (poziom 1) ostrzeżenie C4175 | Dokumentacja firmy Microsoft
+title: Kompilator ostrzeżenie (poziom 1) C4175 | Dokumentacja firmy Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,14 +16,15 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e94b85a65f95353498c144eb4d55abdf83daa2c4
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 61cf0471bd4308feb7be3a789f03e4355d6f7366
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33278170"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46080288"
 ---
-# <a name="compiler-warning-level-1-c4175"></a>Kompilator C4175 ostrzegawcze (poziom 1)
-\#pragma component(browser, on): informacje o przeglądarce początkowo muszą zostać określone w wierszu polecenia  
-  
- Aby użyć [składnika](../../preprocessor/component.md) pragma, należy wygenerować informacje o przeglądaniu podczas kompilacji ([/FR](../../build/reference/fr-fr-create-dot-sbr-file.md)).
+# <a name="compiler-warning-level-1-c4175"></a>Kompilator ostrzeżenie (poziom 1) C4175
+
+\#pragma component(browser, on): informacje o przeglądarce początkowo muszą zostać określone w wierszu polecenia
+
+Aby użyć [składnika](../../preprocessor/component.md) pragma, należy wygenerować informacji o przeglądaniu podczas kompilacji ([/FR](../../build/reference/fr-fr-create-dot-sbr-file.md)).

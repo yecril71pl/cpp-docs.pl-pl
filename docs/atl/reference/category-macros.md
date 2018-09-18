@@ -35,12 +35,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b8f07a559c6353bb66a210bf450c15376720cdac
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: cc13285549543eeab07bed6372f8f7d529f90a32
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43753038"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46078702"
 ---
 # <a name="category-macros"></a>Makra kategorii
 
@@ -67,7 +67,7 @@ BEGIN_CATEGORY_MAP(theClass)
 
 ### <a name="parameters"></a>Parametry
 
-*theClass*  
+*theClass*<br/>
 [in] Nazwa klasy zawierającej mapy kategorii.
 
 ### <a name="remarks"></a>Uwagi
@@ -109,7 +109,7 @@ IMPLEMENTED_CATEGORY(catID)
 
 ### <a name="parameters"></a>Parametry
 
-*Identyfikator catID*  
+*Identyfikator catID*<br/>
 [in] CATID stałą lub zmienną zawierający Unikatowy identyfikator globalny (GUID) dla kategorii zaimplementowano. Adres *catID* zostanie wykonane i dodany do mapy. Zobacz tabelę poniżej w przypadku wyboru akcji kategorii.
 
 ### <a name="remarks"></a>Uwagi
@@ -146,7 +146,7 @@ REQUIRED_CATEGORY( catID )
 
 ### <a name="parameters"></a>Parametry
 
-*Identyfikator catID*  
+*Identyfikator catID*<br/>
 [in] CATID stałą lub zmienną zawierający Unikatowy identyfikator globalny (GUID) dla kategorii wymagane. Adres *catID* zostanie wykonane i dodany do mapy. Zobacz tabelę poniżej w przypadku wyboru akcji kategorii.
 
 ### <a name="remarks"></a>Uwagi

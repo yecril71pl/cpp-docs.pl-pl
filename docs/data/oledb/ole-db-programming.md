@@ -17,21 +17,22 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: f3f447c2cc45e0ccc96a1480b9d521f1bde09c9e
-ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
+ms.openlocfilehash: 99d647e2e5a98c7e4c4433baaface66d1f987b32
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43677212"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46073677"
 ---
 # <a name="ole-db-programming"></a>Programowanie OLE DB
+
 Microsoft OLE DB jest technologią starszą; w przypadku nowych aplikacji jest wymaganego dostępu do danych interfejsu API dla połączonych serwerów SQL. Wszystkie inne nowe aplikacje powinny używać ODBC. Bieżący dostawca OLE DB dla programu SQL Server jest SQLNCLI11. BIBLIOTEKI DLL. Dostawcy jest nadal wysyłania w programie SQL Server 2016. Ta dokumentacja jest przeznaczona dla deweloperów, którzy są utrzymywanie istniejących aplikacji, które już używają OLE DB.
   
- Szablony OLE DB są szablonów języka C++, które ułatwiają technologii baz danych OLE DB o wysokiej wydajności wpisując klas które implementują wiele powszechnie używanych interfejsów OLE DB. Ta biblioteka szablonów jest podzielony na szablony konsumentów i dostawcy.  
+Szablony OLE DB są szablonów języka C++, które ułatwiają technologii baz danych OLE DB o wysokiej wydajności wpisując klas które implementują wiele powszechnie używanych interfejsów OLE DB. Ta biblioteka szablonów jest podzielony na szablony konsumentów i dostawcy.  
   
- Visual C++ ma również obsługę Kreatora tworzenia aplikacji starter OLE DB.  
+Visual C++ ma również obsługę Kreatora tworzenia aplikacji starter OLE DB.  
   
- Ponadto można użyć atrybutów do zaimplementowania szablony konsumentów OLE DB.  
+Ponadto można użyć atrybutów do zaimplementowania szablony konsumentów OLE DB.  
   
 |Aby dowiedzieć się więcej o|Zobacz|  
 |-------------------------|---------|  
@@ -45,4 +46,5 @@ Microsoft OLE DB jest technologią starszą; w przypadku nowych aplikacji jest w
 |Tematy dotyczące pojęć ODBC|[Open Database Connectivity (ODBC)](../../data/odbc/open-database-connectivity-odbc.md)|  
 
 ## <a name="see-also"></a>Zobacz też  
- [Dostęp do danych](../data-access-in-cpp.md)
+
+[Dostęp do danych](../data-access-in-cpp.md)

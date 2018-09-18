@@ -16,20 +16,21 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: bce9ebf0281981264c3abeb1485cdffb89410e68
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: e518cacdeb8db133ff6378e6569ee868312b8333
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33227896"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46081497"
 ---
 # <a name="fatal-error-c1209"></a>Błąd krytyczny C1209
-Przyjazne zestawy nie jest obsługiwana przez wersję środowiska uruchomieniowego zainstalowany  
-  
- C1208 występuje, gdy masz kompilatora dla bieżącej wersji, ale środowisko uruchomieniowe języka wspólnego z poprzedniej wersji.  
-  
- Niektóre funkcje kompilator może nie działać w poprzedniej wersji czasu wykonywania.  
-  
- Aby rozwiązać C1209, należy zainstalować środowisko uruchomieniowe języka wspólnego dostarczonej przez kompilator, którego używasz.  
-  
- Aby uzyskać więcej informacji, zobacz [przyjazne zestawy (C++)](../../dotnet/friend-assemblies-cpp.md).
+
+Przyjazne zestawy nie są obsługiwane przez wersję zainstalowanego środowiska uruchomieniowego
+
+C1208 występuje, gdy masz kompilatora dla bieżącej wersji, ale środowisko uruchomieniowe języka wspólnego z poprzedniej wersji.
+
+Niektóre funkcje kompilatora może nie działać w poprzedniej wersji w czasie wykonywania.
+
+Aby rozwiązać C1209, należy zainstalować środowisko uruchomieniowe języka wspólnego dostarczanej przez kompilator, którego używasz.
+
+Aby uzyskać więcej informacji, zobacz [przyjazne zestawy (C++)](../../dotnet/friend-assemblies-cpp.md).

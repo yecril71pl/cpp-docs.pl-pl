@@ -1,5 +1,5 @@
 ---
-title: Kompilatora (poziom 1) ostrzeżenie C4600 | Dokumentacja firmy Microsoft
+title: Kompilator ostrzeżenie (poziom 1) C4600 | Dokumentacja firmy Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,25 +16,26 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7866268cffce31467e5306a969e981f310e91ace
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 27b020fdd87e35633b6a6da74d8c51c63fc1604e
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33287517"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46079365"
 ---
-# <a name="compiler-warning-level-1-c4600"></a>Kompilator C4600 ostrzegawcze (poziom 1)
-\#pragma "Nazwa makra": Oczekiwano prawidłowym ciągiem niepustym  
-  
- Nie można określić pustego ciągu podczas wypychania lub Powiększ nazwę makra w trybie [pop_macro](../../preprocessor/pop-macro.md) lub [dyrektywy push_macro](../../preprocessor/push-macro.md).  
-  
- Poniższy przykład generuje C4600:  
-  
-```  
-// C4600.cpp  
-// compile with: /W1  
-int main()  
-{  
-   #pragma push_macro("")   // C4600 passing an empty string  
-}  
+# <a name="compiler-warning-level-1-c4600"></a>Kompilator ostrzeżenie (poziom 1) C4600
+
+\#pragma "makra name": oczekiwano prawidłowego ciągu niepustego
+
+Nie można określić pustego ciągu, podczas wypychania lub nazwę makra z oboma pop [pop_macro](../../preprocessor/pop-macro.md) lub [push_macro](../../preprocessor/push-macro.md).
+
+Poniższy przykład spowoduje wygenerowanie C4600:
+
+```
+// C4600.cpp
+// compile with: /W1
+int main()
+{
+   #pragma push_macro("")   // C4600 passing an empty string
+}
 ```

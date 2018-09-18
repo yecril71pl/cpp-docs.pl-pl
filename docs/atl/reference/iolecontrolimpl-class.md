@@ -21,12 +21,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c27d327fbac5e92ddb2fee50c30d57a46658e889
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 28404c4f8dddeafb624b873448d4dc7aaa5dc0d8
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43754608"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46076817"
 ---
 # <a name="iolecontrolimpl-class"></a>Klasa IOleControlImpl
 
@@ -44,7 +44,7 @@ class IOleControlImpl
 
 #### <a name="parameters"></a>Parametry
 
-*T*  
+*T*<br/>
 Z klasą pochodną `IOleControlImpl`.
 
 ## <a name="members"></a>Elementy członkowskie
@@ -138,6 +138,6 @@ Zobacz [IOleControl::OnMnemonic](/windows/desktop/api/ocidl/nf-ocidl-iolecontrol
 
 ## <a name="see-also"></a>Zobacz też
 
-[Klasa IOleObjectImpl](../../atl/reference/ioleobjectimpl-class.md)   
-[Interfejsy kontrolki ActiveX](/windows/desktop/com/activex-controls-interfaces)   
+[Klasa IOleObjectImpl](../../atl/reference/ioleobjectimpl-class.md)<br/>
+[Interfejsy kontrolki ActiveX](/windows/desktop/com/activex-controls-interfaces)<br/>
 [Klasa — Przegląd](../../atl/atl-class-overview.md)

@@ -1,5 +1,5 @@
 ---
-title: C2462 błąd kompilatora | Dokumentacja firmy Microsoft
+title: Błąd kompilatora C2462 | Dokumentacja firmy Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,23 +16,24 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e4ce82ed15bdb8844f69abc260446c1af2fd4a0f
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 65df7f4fe7f3822f2723a1709751e3b9b0f23ade
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33198563"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46082859"
 ---
-# <a name="compiler-error-c2462"></a>C2462 błąd kompilatora
-'Identyfikator': nie można zdefiniować typu w "nowe wyrażenie"  
-  
- Nie można zdefiniować typu w polu operand `new` operatora. Definicja typu należy umieścić w osobnych instrukcji.  
-  
- Poniższy przykład generuje C2462:  
-  
-```  
-// C2462.cpp  
-int main() {  
-   new struct S { int i; };   // C2462  
-}  
+# <a name="compiler-error-c2462"></a>Błąd kompilatora C2462
+
+'Identyfikator': nie można zdefiniować typu w "nowe wyrażenie"
+
+Nie można zdefiniować typu w dziedzinie operand `new` operatora. Definicja typu należy umieścić w osobnych instrukcji.
+
+Poniższy przykład spowoduje wygenerowanie C2462:
+
+```
+// C2462.cpp
+int main() {
+   new struct S { int i; };   // C2462
+}
 ```

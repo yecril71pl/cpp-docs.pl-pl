@@ -15,15 +15,17 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ec6657762a1bd896b78eea85f217ad68f887263e
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 3aa487ee277954470cdd8b16f9f64f465c195897
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32386962"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46055705"
 ---
 # <a name="white-space-characters"></a>Znak odstępu
-Miejsca, karta, wysuwu wiersza, powrotu karetki, wysuwu strony, karta pionowego i znaki nowego wiersza są nazywane "białe znaki", ponieważ służą one tę samą funkcję co spacji między wyrazami i wiersze na wydrukowaną stroną — one ułatwić czytanie. Tokeny są rozdzielane (ograniczone) za pomocą spacji i innych tokenów, takie jak operatory i znaków interpunkcyjnych. Podczas analizowania kodu, kompilator języka C ignoruje białe znaki, tylko w przypadku ich jako separatorów lub składniki stałe znakowe lub literałów ciągów. Użyj białe znaki, aby był bardziej czytelny programu. Należy pamiętać, że kompilator również traktuje komentarze jako biały znak.  
-  
-## <a name="see-also"></a>Zobacz też  
- [Tokeny języka C](../c-language/c-tokens.md)
+
+Miejsca, karta, wysuwu wiersza, powrotu karetki, Wysuw strony, kartę w pionie i znaki nowego wiersza są nazywane "białe znaki", ponieważ służą one tę samą funkcję co spacji między wyrazami i wierszy na stronie wydruku — mogą ułatwić odczytywanie. Tokeny są rozdzielone (ograniczone), spacji i innych tokenów, takich jak operatory i znaki interpunkcyjne. Podczas analizowania kodu, kompilator języka C ignoruje znaki odstępu, chyba, że korzystasz z nich jako separatory lub składniki stałe znakowe i literały ciągów znaków. Aby zwiększyć czytelność program, należy użyć białe znaki. Należy pamiętać, że kompilator traktuje komentarze jako biały znak.
+
+## <a name="see-also"></a>Zobacz też
+
+[Tokeny języka C](../c-language/c-tokens.md)

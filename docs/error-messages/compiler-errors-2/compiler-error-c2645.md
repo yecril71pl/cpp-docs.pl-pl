@@ -1,5 +1,5 @@
 ---
-title: C2645 błąd kompilatora | Dokumentacja firmy Microsoft
+title: Błąd kompilatora C2645 | Dokumentacja firmy Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,25 +16,26 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0330f9f678da58648c2fd445f7a291b02c167a89
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 2ada345b79c061c71bc716bf7baf96116444bcc7
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33229151"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46076830"
 ---
-# <a name="compiler-error-c2645"></a>C2645 błąd kompilatora
-Nazwa niekwalifikowana dla wskaźnika do elementu członkowskiego (znaleziono ':: * ")  
-  
- W deklaracji wskaźnika do elementu członkowskiego klasy nie została określona.  
-  
- Poniższy przykład generuje C2645:  
-  
-```  
-// C2645.cpp  
-class A {};  
-int main() {  
-   int B::* bp;   // C2645 B not defined  
-   int A::* ap;   // OK  
-}  
+# <a name="compiler-error-c2645"></a>Błąd kompilatora C2645
+
+Nazwa niekwalifikowana dla wskaźnika do składowej (znaleziono ":: *")
+
+Deklaracja wskaźnik do elementu członkowskiego nie określa klasę.
+
+Poniższy przykład spowoduje wygenerowanie C2645:
+
+```
+// C2645.cpp
+class A {};
+int main() {
+   int B::* bp;   // C2645 B not defined
+   int A::* ap;   // OK
+}
 ```

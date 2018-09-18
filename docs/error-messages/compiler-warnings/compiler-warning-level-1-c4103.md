@@ -1,5 +1,5 @@
 ---
-title: Kompilatora (poziom 1) ostrzeżenie C4103 | Dokumentacja firmy Microsoft
+title: Kompilator ostrzeżenie (poziom 1) C4103 | Dokumentacja firmy Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,36 +16,37 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f072db4a260d2c83d1dd4b373630cd6e585efc2b
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 1942acc2d9c5c274806e06127f9f98d4bfcb5077
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33284735"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46085540"
 ---
-# <a name="compiler-warning-level-1-c4103"></a>Kompilator C4103 ostrzegawcze (poziom 1)
-"filename": wyrównanie zmieniono po dołączeniu nagłówka, może być spowodowany brakiem elementu #pragma pack(pop)  
-  
- Pakowanie ma wpływ na układ klasy, a często, jeśli pakowania zmian przez pliki nagłówkowe, mogą być problemy.  
-  
- Użyj #pragma [pakietu](../../preprocessor/pack.md)(pop) przed zamknięciem pliku nagłówka do rozwiązania to ostrzeżenie.  
-  
- Poniższy przykład generuje C4103:  
-  
-```  
-// C4103.h  
-#pragma pack(push, 4)  
-  
-// defintions and declarations  
-  
-// uncomment the following line to resolve  
-// #pragma pack(pop)  
-```  
-  
- a następnie  
-  
-```  
-// C4103.cpp  
-// compile with: /LD /W1  
-#include "c4103.h"   // C4103  
+# <a name="compiler-warning-level-1-c4103"></a>Kompilator ostrzeżenie (poziom 1) C4103
+
+"filename": wyrównanie zmieniono po dołączeniu nagłówka, może to być spowodowane brakiem elementu #pragma pack(pop)
+
+Pakowanie wpływa na układ klas, a często, jeśli pakowania zmian w plikach nagłówkowych, mogą wystąpić problemy.
+
+Użyj #pragma [pakiet](../../preprocessor/pack.md)(pop) przed zamknięciem pliku nagłówka, aby rozwiązać tego ostrzeżenia.
+
+Poniższy przykład spowoduje wygenerowanie C4103:
+
+```
+// C4103.h
+#pragma pack(push, 4)
+
+// defintions and declarations
+
+// uncomment the following line to resolve
+// #pragma pack(pop)
+```
+
+Następnie wyszukaj maszynę
+
+```
+// C4103.cpp
+// compile with: /LD /W1
+#include "c4103.h"   // C4103
 ```

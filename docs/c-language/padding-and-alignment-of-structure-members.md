@@ -14,23 +14,25 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: fb090fc283da0a8aa86dac524272d308127059ba
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 959d6296c563958a0c8bdd1ecca660680941755f
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32385380"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46074854"
 ---
 # <a name="padding-and-alignment-of-structure-members"></a>Wypełnienie i wyrównanie struktur członkowskich
-**ANSI 3.5.2.1** wypełnienie i wyrównanie członków struktur i czy pole bitowe można wokół granic jednostkę magazynową  
-  
- Elementy członkowskie struktur są przechowywane sekwencyjnie, w kolejności, w której były zadeklarowane: pierwszy element członkowski ma najniższy adres pamięci, a ostatni element członkowski – najwyższy.  
-  
- Każdy obiekt danych ma wymaganie wyrównania. Wyrównanie wymagań dla wszystkich danych z wyjątkiem struktur, związków i tablice jest rozmiar obiektu lub bieżący rozmiar pakowania (określony za pomocą obu /Zp lub `pack` pragma, ta wartość jest mniejsza). W przypadku struktur, związków i tablice wymaganie wyrównania jest największego zapotrzebowania wyrównanie jego elementów członkowskich. Każdy obiekt został przydzielony przesunięcia, aby  
-  
- *Przesunięcie* `%` *wyrównanie wymaganie* `==` 0    
-  
- Sąsiadujące pola bitowe są pakowane w takie same 1-, 2- lub 4-bajtowe jednostki alokacji, jeśli typy całkowite mają taki sam rozmiar i jeśli następne pole bitowe pasuje do bieżącej jednostki alokacji bez przekraczania granicy nałożonej przez wspólne wymagania wyrównania pól bitowych.  
-  
-## <a name="see-also"></a>Zobacz też  
- [Struktury, złożenia, wyliczenia i pola bitowe](../c-language/structures-unions-enumerations-and-bit-fields.md)
+
+**ANSI 3.5.2.1** wypełnienie i wyrównanie składowych struktur i tego, czy pole bitowe mogą wokół granicy jednostki magazynu
+
+Elementy członkowskie struktur są przechowywane sekwencyjnie, w kolejności, w której były zadeklarowane: pierwszy element członkowski ma najniższy adres pamięci, a ostatni element członkowski – najwyższy.
+
+Każdy obiekt danych posiada wymóg wyrównania. Wymóg wyrównania dla wszystkich danych z wyjątkiem struktur, Unii i tablice jest rozmiar obiektu lub bieżącego rozmiarem pakowania (określony za pomocą obu/ZP lub `pack` pragma, ta wartość jest mniejsza). Struktury, Unii i tablice wymóg wyrównania jest największy wymóg wyrównania składowych. Każdy obiekt jest przydzielany przesunięcie tak, aby
+
+*Przesunięcie* `%` *wymóg wyrównania* `==` 0  
+
+Sąsiadujące pola bitowe są pakowane w takie same 1-, 2- lub 4-bajtowe jednostki alokacji, jeśli typy całkowite mają taki sam rozmiar i jeśli następne pole bitowe pasuje do bieżącej jednostki alokacji bez przekraczania granicy nałożonej przez wspólne wymagania wyrównania pól bitowych.
+
+## <a name="see-also"></a>Zobacz też
+
+[Struktury, złożenia, wyliczenia i pola bitowe](../c-language/structures-unions-enumerations-and-bit-fields.md)

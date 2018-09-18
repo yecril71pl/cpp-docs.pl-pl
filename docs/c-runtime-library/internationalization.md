@@ -1,5 +1,5 @@
 ---
-title: Przystosowywanie do warunków międzynarodowych | Dokumentacja firmy Microsoft
+title: Internacjonalizacja | Dokumentacja firmy Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -19,18 +19,18 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f0107e163a7435a2434852868687b5e386d324d2
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: f2aa28d8974fe34f9824617a1f2c86181443397e
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32389796"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46084591"
 ---
 # <a name="internationalization"></a>Internacjonalizacja
 
-Biblioteka środowiska uruchomieniowego Microsoft udostępnia wiele procedur, które są przydatne do tworzenia różnych wersji programu na rynki międzynarodowe. Obejmuje to [procedury dotyczące ustawień regionalnych](../c-runtime-library/locale.md), procedury znaków dwubajtowych, procedury znaków wielobajtowych i procedury zwykłego tekstu. Dla wygody, większość procedur związanych z ustawieniami regionalnymi również została ujęta wśród kategorii tego dokumentu odniesienia, zgodnie z operacjami, które wykonują. W tej sekcji, w kolejności alfabetycznej, opisano procedury obsługi znaków wielobajtowych i dwubajtowych, wraz z odpowiednikami dla znaków jednobajtowych, jeśli takie istnieją.
+Biblioteka środowiska uruchomieniowego Microsoft udostępnia wiele procedur, które są przydatne do tworzenia różnych wersji programu na rynki międzynarodowe. Obejmuje to [procedury związane z ustawieniami regionalnymi](../c-runtime-library/locale.md), znaków dwubajtowych, procedury obsługi znaków wielobajtowych i procedury zwykłego tekstu. Dla wygody, większość procedur związanych z ustawieniami regionalnymi również została ujęta wśród kategorii tego dokumentu odniesienia, zgodnie z operacjami, które wykonują. W tej sekcji, w kolejności alfabetycznej, opisano procedury obsługi znaków wielobajtowych i dwubajtowych, wraz z odpowiednikami dla znaków jednobajtowych, jeśli takie istnieją.
 
- Omówiono też alternatywy operatora ISO646.
+Omówiono też alternatywy operatora ISO646.
 
 ## <a name="see-also"></a>Zobacz też
 

@@ -47,12 +47,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2c1095df6caae94cac86e5e205507e0ed9eeb98e
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 564ff010756a2afa9210fc71dd47fce2b72dcbca
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43755089"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46075725"
 ---
 # <a name="catlmap-class"></a>Klasa CAtlMap
 
@@ -70,15 +70,16 @@ class CAtlMap
 
 #### <a name="parameters"></a>Parametry
 
-*K*  
+*K*<br/>
 Typ klucza elementu.
 
-*V* typ elementu wartości.
+*V*<br/>
+Typ elementu wartości.
 
-*KTraits*  
+*KTraits*<br/>
 Kod używany, aby skopiować lub przenieść kluczowe elementy. Zobacz [klasa CElementTraits](../../atl/reference/celementtraits-class.md) Aby uzyskać więcej informacji.
 
-*VTraits*  
+*VTraits*<br/>
 Kod używany do kopiowania lub przenoszenia elementów wartości.
 
 ## <a name="members"></a>Elementy członkowskie
@@ -195,19 +196,19 @@ CAtlMap(
 
 ### <a name="parameters"></a>Parametry
 
-*nBins*  
+*nBins*<br/>
 Liczba pojemników, zapewniając wskaźników do elementów przechowywanych. Zobacz uwagi w dalszej części tego tematu objaśnienia dotyczące pojemniki.
 
-*fOptimalLoad*  
+*fOptimalLoad*<br/>
 Stosunek optymalnego obciążenia.
 
-*fLoThreshold*  
+*fLoThreshold*<br/>
 Próg niższy współczynnik obciążenia.
 
-*fHiThreshold*  
+*fHiThreshold*<br/>
 Górny próg współczynnik obciążenia.
 
-*nBlockSize*  
+*nBlockSize*<br/>
 Rozmiar bloku.
 
 ### <a name="remarks"></a>Uwagi
@@ -297,13 +298,13 @@ CPair* GetAt(POSITION& pos) throw();
 
 ### <a name="parameters"></a>Parametry
 
-*punktu sprzedaży*  
+*punktu sprzedaży*<br/>
 Pozycja licznika, zwracane przez poprzednie wywołanie [CAtlMap::GetNextAssoc](#getnextassoc) lub [CAtlMap::GetStartPosition](#getstartposition).
 
-*Klucz*  
+*Klucz*<br/>
 Parametr szablonu określający typ klucza mapy.
 
-*value*  
+*value*<br/>
 Parametr szablonu określający typ wartości mapy.
 
 ### <a name="return-value"></a>Wartość zwracana
@@ -352,7 +353,7 @@ const K& GetKeyAt(POSITION pos) const throw();
 
 ### <a name="parameters"></a>Parametry
 
-*punktu sprzedaży*  
+*punktu sprzedaży*<br/>
 Pozycja licznika, zwracane przez poprzednie wywołanie [CAtlMap::GetNextAssoc](#getnextassoc) lub [CAtlMap::GetStartPosition](#getstartposition).
 
 ### <a name="return-value"></a>Wartość zwracana
@@ -374,7 +375,7 @@ const CPair* GetNext(POSITION& pos) const throw();
 
 ### <a name="parameters"></a>Parametry
 
-*punktu sprzedaży*  
+*punktu sprzedaży*<br/>
 Pozycja licznika, zwracane przez poprzednie wywołanie [CAtlMap::GetNextAssoc](#getnextassoc) lub [CAtlMap::GetStartPosition](#getstartposition).
 
 ### <a name="return-value"></a>Wartość zwracana
@@ -394,13 +395,13 @@ void GetNextAssoc(
 
 ### <a name="parameters"></a>Parametry
 
-*punktu sprzedaży*  
+*punktu sprzedaży*<br/>
 Pozycja licznika, zwracane przez poprzednie wywołanie [CAtlMap::GetNextAssoc](#getnextassoc) lub [CAtlMap::GetStartPosition](#getstartposition).
 
-*Klucz*  
+*Klucz*<br/>
 Parametr szablonu określający typ klucza mapy.
 
-*value*  
+*value*<br/>
 Parametr szablonu określający typ wartości mapy.
 
 ### <a name="remarks"></a>Uwagi
@@ -417,7 +418,7 @@ const K& GetNextKey(POSITION& pos) const throw();
 
 ### <a name="parameters"></a>Parametry
 
-*punktu sprzedaży*  
+*punktu sprzedaży*<br/>
 Pozycja licznika, zwracane przez poprzednie wywołanie [CAtlMap::GetNextAssoc](#getnextassoc) lub [CAtlMap::GetStartPosition](#getstartposition).
 
 ### <a name="return-value"></a>Wartość zwracana
@@ -439,7 +440,7 @@ const V& GetNextValue(POSITION& pos) const throw();
 
 ### <a name="parameters"></a>Parametry
 
-*punktu sprzedaży*  
+*punktu sprzedaży*<br/>
 Pozycja licznika, zwracane przez poprzednie wywołanie [CAtlMap::GetNextAssoc](#getnextassoc) lub [CAtlMap::GetStartPosition](#getstartposition).
 
 ### <a name="return-value"></a>Wartość zwracana
@@ -488,7 +489,7 @@ const V& GetValueAt(POSITION pos) const throw();
 
 ### <a name="parameters"></a>Parametry
 
-*punktu sprzedaży*  
+*punktu sprzedaży*<br/>
 Pozycja licznika, zwracane przez poprzednie wywołanie [CAtlMap::GetNextAssoc](#getnextassoc) lub [CAtlMap::GetStartPosition](#getstartposition).
 
 ### <a name="return-value"></a>Wartość zwracana
@@ -507,10 +508,10 @@ bool InitHashTable(
 
 ### <a name="parameters"></a>Parametry
 
-*nBins*  
+*nBins*<br/>
 Liczba pojemników używane przez tabelę mieszania. Zobacz [CAtlMap::CAtlMap](#catlmap) objaśnienia.
 
-*bAllocNow*  
+*bAllocNow*<br/>
 Wskazanie flagi, gdy można przydzielić pamięci.
 
 ### <a name="return-value"></a>Wartość zwracana
@@ -567,10 +568,10 @@ CPair* Lookup(KINARGTYPE key) throw();
 
 ### <a name="parameters"></a>Parametry
 
-*Klucz*  
+*Klucz*<br/>
 Określa klucz, który identyfikuje elementu, który ma być wyszukiwana.
 
-*value*  
+*value*<br/>
 Zmienna, która otrzymuje wartość oglądałem się w górę.
 
 ### <a name="return-value"></a>Wartość zwracana
@@ -591,7 +592,7 @@ V& operator[](kinargtype key) throw();
 
 ### <a name="parameters"></a>Parametry
 
-*Klucz*  
+*Klucz*<br/>
 Klucz elementu do dodania lub zamiany.
 
 ### <a name="return-value"></a>Wartość zwracana
@@ -612,7 +613,7 @@ void Rehash(UINT nBins = 0);
 
 ### <a name="parameters"></a>Parametry
 
-*nBins*  
+*nBins*<br/>
 Nowy numer pojemniki do użycia w tabeli wyznaczania wartości skrótu. Zobacz [CAtlMap::CAtlMap](#catlmap) objaśnienia.
 
 ### <a name="remarks"></a>Uwagi
@@ -641,7 +642,7 @@ void RemoveAtPos(POSITION pos) throw();
 
 ### <a name="parameters"></a>Parametry
 
-*punktu sprzedaży*  
+*punktu sprzedaży*<br/>
 Pozycja licznika, zwracane przez poprzednie wywołanie [CAtlMap::GetNextAssoc](#getnextassoc) lub [CAtlMap::GetStartPosition](#getstartposition).
 
 ### <a name="remarks"></a>Uwagi
@@ -658,7 +659,7 @@ bool RemoveKey(KINARGTYPE key) throw();
 
 ### <a name="parameters"></a>Parametry
 
-*Klucz*  
+*Klucz*<br/>
 Klucz odpowiadający para elementów chcesz usunąć.
 
 ### <a name="return-value"></a>Wartość zwracana
@@ -681,10 +682,10 @@ POSITION SetAt(
 
 ### <a name="parameters"></a>Parametry
 
-*Klucz*  
+*Klucz*<br/>
 Wartość klucza do dodania do `CAtlMap` obiektu.
 
-*value*  
+*value*<br/>
 Wartość do dodania `CAtlMap` obiektu.
 
 ### <a name="return-value"></a>Wartość zwracana
@@ -709,16 +710,16 @@ void SetOptimalLoad(
 
 ### <a name="parameters"></a>Parametry
 
-*fOptimalLoad*  
+*fOptimalLoad*<br/>
 Stosunek optymalnego obciążenia.
 
-*fLoThreshold*  
+*fLoThreshold*<br/>
 Próg niższy współczynnik obciążenia.
 
-*fHiThreshold*  
+*fHiThreshold*<br/>
 Górny próg współczynnik obciążenia.
 
-*bRehashNow*  
+*bRehashNow*<br/>
 Flaga wskazująca, czy w tabeli wyznaczania wartości skrótu powinny zostać ponownie obliczone.
 
 ### <a name="remarks"></a>Uwagi
@@ -737,10 +738,10 @@ void SetValueAt(
 
 ### <a name="parameters"></a>Parametry
 
-*punktu sprzedaży*  
+*punktu sprzedaży*<br/>
 Pozycja licznika, zwracane przez poprzednie wywołanie [CAtlMap::GetNextAssoc](#getnextassoc) lub [CAtlMap::GetStartPosition](#getstartposition).
 
-*value*  
+*value*<br/>
 Wartość do dodania `CAtlMap` obiektu.
 
 ### <a name="remarks"></a>Uwagi
@@ -773,7 +774,7 @@ const K m_key;
 
 ### <a name="parameters"></a>Parametry
 
-*K*  
+*K*<br/>
 Typ klucza elementu.
 
 ##  <a name="m_value"></a>  CAtlMap::CPair::m_value
@@ -786,11 +787,11 @@ V  m_value;
 
 ### <a name="parameters"></a>Parametry
 
-*V*  
+*V*<br/>
 Typ elementu wartości.
 
 ## <a name="see-also"></a>Zobacz też
 
-[Przykładowe Neon](../../visual-cpp-samples.md)   
-[Przykładowe UpdatePV](https://github.com/Microsoft/VCSamples/tree/master/VC2010Samples/ATL/OLEDB/Provider/UPDATEPV)   
+[Przykładowe Neon](../../visual-cpp-samples.md)<br/>
+[Przykładowe UpdatePV](https://github.com/Microsoft/VCSamples/tree/master/VC2010Samples/ATL/OLEDB/Provider/UPDATEPV)<br/>
 [Klasa — Przegląd](../../atl/atl-class-overview.md)

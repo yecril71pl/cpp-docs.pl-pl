@@ -20,12 +20,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5e837e15f934e53f7b1d06a94efb4a320f2e8407
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 48303c6115ac1d2314e3038556b8f98330a6182e
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43757897"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46062673"
 ---
 # <a name="cwintraitsor-class"></a>Klasa CWinTraitsOR
 
@@ -45,10 +45,10 @@ class CWinTraitsOR
 
 #### <a name="parameters"></a>Parametry
 
-*t_dwStyle*  
+*t_dwStyle*<br/>
 Style okna ramowego domyślne.
 
-*t_dwExStyle*  
+*t_dwExStyle*<br/>
 Domyślnie rozszerzone Style okna.
 
 ## <a name="members"></a>Elementy członkowskie
@@ -82,7 +82,7 @@ static DWORD GetWndStyle(DWORD dwStyle);
 
 ### <a name="parameters"></a>Parametry
 
-*dwStyle*  
+*dwStyle*<br/>
 Style służy do tworzenia okna.
 
 ### <a name="return-value"></a>Wartość zwracana
@@ -99,7 +99,7 @@ static DWORD GetWndExStyle(DWORD dwExStyle);
 
 ### <a name="parameters"></a>Parametry
 
-*dwExStyle*  
+*dwExStyle*<br/>
 Rozszerzone style służy do tworzenia okna.
 
 ### <a name="return-value"></a>Wartość zwracana
@@ -108,6 +108,6 @@ Kombinacja rozszerzone style, które są przekazywane w *dwExStyle* i określony
 
 ## <a name="see-also"></a>Zobacz też
 
-[Klasa — Przegląd](../../atl/atl-class-overview.md)   
+[Klasa — Przegląd](../../atl/atl-class-overview.md)<br/>
 [Opis cech okna](../../atl/understanding-window-traits.md)
 

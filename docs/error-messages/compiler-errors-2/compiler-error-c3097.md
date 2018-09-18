@@ -1,5 +1,5 @@
 ---
-title: C3097 błąd kompilatora | Dokumentacja firmy Microsoft
+title: Błąd kompilatora C3097 | Dokumentacja firmy Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,38 +16,40 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 817e6095a0141d33352946acf52a765578dafcb3
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: c99e6667e696c2ae1cff36e0d4dfcf771c060080
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33247482"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46075192"
 ---
-# <a name="compiler-error-c3097"></a>C3097 błąd kompilatora
-"attribute': atrybut musi być do zakresu" zestawu: "lub" module: "  
-  
- Atrybut globalny zostało niepoprawnie użyte.  
-  
- Aby uzyskać więcej informacji, zobacz [zdefiniowane przez użytkownika atrybuty](../../windows/user-defined-attributes-cpp-component-extensions.md).  
-  
-## <a name="example"></a>Przykład  
- Poniższy przykład generuje C3097.  
-  
-```  
-// C3097.cpp  
-// compile with: /clr /c  
-using namespace System;   
-  
-[AttributeUsage(AttributeTargets::All, AllowMultiple = true)]  
-public ref class Attr : public Attribute {  
-public:  
-   Attr(int t) : m_t(t) {}  
-   int m_t;  
-};  
-  
-[Attr(10)];   // C3097  
-[assembly:Attr(10)];   // OK  
-  
-[Attr(10)]   // OK  
-public ref class MyClass {};  
+# <a name="compiler-error-c3097"></a>Błąd kompilatora C3097
+
+"attribute": atrybut musi być objęty zakresem "zestawu:" lub "module:"
+
+Atrybut globalny zostało niepoprawnie użyte.
+
+Aby uzyskać więcej informacji, zobacz [atrybuty zdefiniowane przez użytkownika](../../windows/user-defined-attributes-cpp-component-extensions.md).
+
+## <a name="example"></a>Przykład
+
+Poniższy przykład spowoduje wygenerowanie C3097.
+
+```
+// C3097.cpp
+// compile with: /clr /c
+using namespace System;
+
+[AttributeUsage(AttributeTargets::All, AllowMultiple = true)]
+public ref class Attr : public Attribute {
+public:
+   Attr(int t) : m_t(t) {}
+   int m_t;
+};
+
+[Attr(10)];   // C3097
+[assembly:Attr(10)];   // OK
+
+[Attr(10)]   // OK
+public ref class MyClass {};
 ```

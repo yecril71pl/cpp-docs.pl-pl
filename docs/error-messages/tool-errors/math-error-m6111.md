@@ -16,26 +16,27 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3b03937ed442b169b960d573b44c0eb6ebca9660
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 95a55ec6b7cdf0b6e4c15bd283dde77c610698fa
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33317999"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46074828"
 ---
 # <a name="math-error-m6111"></a>Błąd matematyczny M6111
-przepełnienie stosu  
-  
- Operacja zmiennoprzecinkowa spowodowała przepełnienie stosu w Koprocesor 8087/287/387 lub emulator.  
-  
- Ten błąd jest często spowodowane przez wywołanie do `long double` funkcja, która nie zwraca wartości. Na przykład następujące generuje ten błąd podczas skompilowany i uruchom:  
-  
-```  
-long double ld() {};  
-main ()  
-{  
-  ld();  
-}  
-```  
-  
- Program kończy się z kodem zakończenia 139.
+
+Niedopełnienie stosu
+
+W wyniku operacji zmiennoprzecinkowej Niedopełnienie stosu w Koprocesor 8087/287/387 lub emulator.
+
+Ten błąd jest często spowodowane przez wywołanie `long double` funkcja, która nie zwraca wartości. Na przykład następujące generuje ten błąd, gdy skompilowane i uruchom:
+
+```
+long double ld() {};
+main ()
+{
+  ld();
+}
+```
+
+Program kończy się z kodem zakończenia 139.

@@ -22,12 +22,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4198e08a4c126a180006a088d4fc1509643824f6
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 141940ef5d5c7d23ea3cf049e64e9f4c6974fce0
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43764933"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46076661"
 ---
 # <a name="ccomobjectglobal-class"></a>Klasa CComObjectGlobal
 
@@ -42,7 +42,7 @@ class CComObjectGlobal : public Base
 
 #### <a name="parameters"></a>Parametry
 
-*podstawowy*  
+*podstawowy*<br/>
 Z klasą pochodną [CComObjectRoot](../../atl/reference/ccomobjectroot-class.md) lub [CComObjectRootEx](../../atl/reference/ccomobjectrootex-class.md), jak również od innych interfejsu mają być obsługiwane w obiekcie.
 
 ## <a name="members"></a>Elementy członkowskie
@@ -142,10 +142,10 @@ STDMETHOD(QueryInterface)(REFIID iid, void** ppvObject);
 
 ### <a name="parameters"></a>Parametry
 
-*IID*  
+*IID*<br/>
 [in] Identyfikator GUID interfejsu żądanej.
 
-*ppvObject*  
+*ppvObject*<br/>
 [out] Wskaźnik do wskaźnika interfejsu identyfikowane przez identyfikator iid lub wartość NULL, jeśli nie można odnaleźć interfejsu.
 
 ### <a name="return-value"></a>Wartość zwracana
@@ -174,7 +174,7 @@ Domyślnie `Release` wywołania `_Module::Unlock`, gdzie `_Module` jest globalne
 
 ## <a name="see-also"></a>Zobacz też
 
-[Klasa CComObjectStack](../../atl/reference/ccomobjectstack-class.md)   
-[Klasa CComAggObject](../../atl/reference/ccomaggobject-class.md)   
-[Klasa CComObject](../../atl/reference/ccomobject-class.md)   
+[Klasa CComObjectStack](../../atl/reference/ccomobjectstack-class.md)<br/>
+[Klasa CComAggObject](../../atl/reference/ccomaggobject-class.md)<br/>
+[Klasa CComObject](../../atl/reference/ccomobject-class.md)<br/>
 [Klasa — Przegląd](../../atl/atl-class-overview.md)

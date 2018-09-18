@@ -16,17 +16,19 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8aaa6595fa9d7e87c7021368125af7a3bc53128e
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 2a2b8221976dc00666a24cfc2627dad35e73f3ce
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32382656"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46076024"
 ---
 # <a name="file-buffering"></a>Buforowanie plików
-**ANSI 4.9.3** właściwości buforowanie plików  
-  
- W pełni buforowane są dostępne za pośrednictwem standardowych funkcji We/Wy plików na dysku. Domyślnie bufor ma 512 bajtów.  
-  
-## <a name="see-also"></a>Zobacz też  
- [Funkcje bibliotek](../c-language/library-functions.md)
+
+**ANSI 4.9.3** cechy buforowanie plików
+
+Dostępne za pośrednictwem standardowych funkcji We/Wy plików na dysku w pełni są buforowane. Domyślny rozmiar buforu przechowuje 512 bajtów.
+
+## <a name="see-also"></a>Zobacz też
+
+[Funkcje bibliotek](../c-language/library-functions.md)

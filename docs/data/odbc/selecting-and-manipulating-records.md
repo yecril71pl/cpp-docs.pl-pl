@@ -17,31 +17,33 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 2a4b76d0b4273e5afb32206336b4aabbfe9294eb
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 3220fe505bc4f4478fa663eab41f99f01d0f15d7
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33090081"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46072098"
 ---
 # <a name="selecting-and-manipulating-records"></a>Wybieranie rekordów i operowanie nimi
-Zwykle po wybraniu rekordy ze źródła danych przy użyciu SQL **wybierz** instrukcji, możesz uzyskać zestaw wyników, który jest zestaw rekordów z tabeli lub zapytania. Z klasami baz danych umożliwia obiekty zestawów rekordów wybierz i korzystać z zestawu wyników. To jest obiekt klasy specyficzne dla aplikacji, która pochodzi z klasy [crecordset —](../../mfc/reference/crecordset-class.md). Podczas definiowania klasy zestawu rekordów, określ źródło danych, aby skojarzyć ją z tabeli używanej i kolumn tabeli. Kreator aplikacji MFC lub **Dodaj klasę** (zgodnie z opisem w [Dodawanie konsumenta MFC ODBC](../../mfc/reference/adding-an-mfc-odbc-consumer.md)) tworzy klasę z połączeniem z określonego źródła danych. Kreatorzy zapisu [GetDefaultSQL](../../mfc/reference/crecordset-class.md#getdefaultsql) funkcji członkowskiej klasy `CRecordset` do zwracania nazwy tabeli. Aby uzyskać więcej informacji na temat Korzystanie z kreatorów, aby utworzyć zestaw rekordów klas, zobacz [obsługi bazy danych, Kreator aplikacji MFC](../../mfc/reference/database-support-mfc-application-wizard.md) i [Dodawanie konsumenta MFC ODBC](../../mfc/reference/adding-an-mfc-odbc-consumer.md).  
+
+Zwykle po wybraniu rekordów ze źródła danych przy użyciu języka SQL **wybierz** instrukcji, otrzymasz zestaw wyników, czyli zestaw rekordów z tabeli lub zapytanie. Z klasami bazy danych obiekt zestawu rekordów jest używany do wybierz i dostępu do zestawu wyników. To jest obiekt klasy specyficzne dla aplikacji, która pochodzi od klasy [CRecordset](../../mfc/reference/crecordset-class.md). Podczas definiowania klasy zestawu rekordów, należy określić źródło danych, aby skojarzyć ją z, tabeli, aby używać i kolumn tabeli. Kreator aplikacji MFC lub **Dodaj klasę** (zgodnie z opisem w [Dodawanie konsumenta MFC ODBC](../../mfc/reference/adding-an-mfc-odbc-consumer.md)) tworzy klasę z połączeniem z określonego źródła danych. Kreatorzy zapisu [GetDefaultSQL](../../mfc/reference/crecordset-class.md#getdefaultsql) funkcji składowej klasy typu `CRecordset` aby zwrócić nazwę tabeli. Aby uzyskać więcej informacji na temat za pomocą kreatorów, aby utworzyć zestaw rekordów klasy, zobacz [obsługi bazy danych, Kreator aplikacji MFC](../../mfc/reference/database-support-mfc-application-wizard.md) i [Dodawanie konsumenta MFC ODBC](../../mfc/reference/adding-an-mfc-odbc-consumer.md).  
   
- Przy użyciu [crecordset —](../../mfc/reference/crecordset-class.md) obiektów w czasie wykonywania, można wykonywać następujące czynności:  
+Za pomocą [CRecordset](../../mfc/reference/crecordset-class.md) obiektu w czasie wykonywania, możesz:  
   
--   Sprawdź, czy pola danych bieżącego rekordu.  
+- Sprawdź pola danych bieżącego rekordu.  
   
--   Filtrować i sortować zestawu rekordów.  
+- Filtrować i sortować zestawu rekordów.  
   
--   Dostosuj domyślne SQL **wybierz** instrukcji.  
+- Dostosuj domyślny kod SQL **wybierz** instrukcji.  
   
--   Przewijanie rekordów.  
+- Przewiń wybrane rekordy.  
   
--   Dodawanie, aktualizowanie lub usuwanie rekordów (Jeśli źródło danych jak zestaw rekordów są aktualizowalne).  
+- Dodawanie, aktualizowanie lub usuwanie rekordów (Jeśli źródło danych i zestaw rekordów można aktualizować).  
   
--   Sprawdź, czy zestaw rekordów umożliwia ponowne wysyłanie zapytania, a następnie Odśwież zawartość w zestawie rekordów.  
+- Sprawdź, czy zestaw rekordów umożliwia ponowne wysyłanie zapytania, a następnie Odśwież zawartość w zestawie rekordów.  
   
- Po zakończeniu przy użyciu obiektu zestawu rekordów, zamknij i zniszcz go. Aby uzyskać więcej informacji na temat zestawów rekordów, zobacz [zestawu rekordów (ODBC)](../../data/odbc/recordset-odbc.md).  
+Po zakończeniu korzystania z obiektu zestawu rekordów, zamknij i zniszcz go. Aby uzyskać więcej informacji na temat zestawów rekordów, zobacz [zestawu rekordów (ODBC)](../../data/odbc/recordset-odbc.md).  
   
 ## <a name="see-also"></a>Zobacz też  
- [ODBC i MFC](../../data/odbc/odbc-and-mfc.md)
+
+[ODBC i MFC](../../data/odbc/odbc-and-mfc.md)

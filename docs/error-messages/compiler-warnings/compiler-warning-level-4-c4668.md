@@ -1,5 +1,5 @@
 ---
-title: Kompilatora (poziom 4) ostrzeżenie C4668 | Dokumentacja firmy Microsoft
+title: Kompilator ostrzeżenie (poziom 4) C4668 | Dokumentacja firmy Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,36 +16,38 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 08a6349e867382a327f53676583f5daad7df80dd
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: c960eb2cc79298977c8d7c91808b0a5492d05758
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33294339"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46074011"
 ---
-# <a name="compiler-warning-level-4-c4668"></a>Kompilator C4668 ostrzegawcze (poziom 4)
-'symbol' nie jest zdefiniowany jako makro preprocesora, zastępowanie przez '0' dla 'dyrektywy'  
-  
- Symbol, który nie został zdefiniowany została użyta z dyrektywy preprocesora. Symbol zwróci wartość false. Aby zdefiniować symbolu, możesz użyć dowolnej [#define — dyrektywa](../../preprocessor/hash-define-directive-c-cpp.md) lub [/D](../../build/reference/d-preprocessor-definitions.md) — opcja kompilatora.  
-  
- To ostrzeżenie jest domyślnie wyłączone. Zobacz [kompilatora ostrzeżeń czy są wyłączone domyślnie](../../preprocessor/compiler-warnings-that-are-off-by-default.md) Aby uzyskać więcej informacji.  
-  
-## <a name="example"></a>Przykład  
- Poniższy przykład generuje C4668:  
-  
-```  
-// C4668.cpp  
-// compile with: /W4  
-#include <stdio.h>  
-  
-#pragma warning (default : 4668)   // turn warning on  
-  
-int main()   
-{  
-    #if q   // C4668, q is not defined  
-        printf_s("defined");  
-    #else  
-        printf_s("undefined");  
-    #endif  
-}  
+# <a name="compiler-warning-level-4-c4668"></a>Kompilator ostrzeżenie (poziom 4) C4668
+
+'symbol' nie jest zdefiniowany jako makro preprocesora, zastępowanie przez '0' dla 'dyrektywy'
+
+Symbol, który nie został zdefiniowany był używany za pomocą dyrektywy preprocesora. Symbol ocenia się na wartość false. Aby zdefiniować symbol, można użyć albo [#define — dyrektywa](../../preprocessor/hash-define-directive-c-cpp.md) lub [/D](../../build/reference/d-preprocessor-definitions.md) — opcja kompilatora.
+
+To ostrzeżenie jest domyślnie wyłączona. Zobacz [kompilatora ostrzeżenia, są wyłączone domyślnie](../../preprocessor/compiler-warnings-that-are-off-by-default.md) Aby uzyskać więcej informacji.
+
+## <a name="example"></a>Przykład
+
+Poniższy przykład spowoduje wygenerowanie C4668:
+
+```
+// C4668.cpp
+// compile with: /W4
+#include <stdio.h>
+
+#pragma warning (default : 4668)   // turn warning on
+
+int main()
+{
+    #if q   // C4668, q is not defined
+        printf_s("defined");
+    #else
+        printf_s("undefined");
+    #endif
+}
 ```

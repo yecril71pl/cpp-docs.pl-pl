@@ -16,36 +16,36 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: be5afa2dc4980f9393deb498c7a5decdc56aece5
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 127438da4929e58e07e10701dd64869b084fe4c5
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32387375"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46078585"
 ---
 # <a name="inline-functions"></a>Funkcje śródwierszowe
 
 **Microsoft Specific**
 
-`__inline` — Słowo kluczowe informuje kompilator, aby zastąpić kod w definicji funkcji dla każdego wystąpienia wywołania funkcji. Jednak podstawienia występuje tylko według uznania kompilatora. Na przykład kompilator nie niewyrównane funkcję Jeśli wykonywana jest jego adresu lub jest zbyt duży, aby wbudowanego.
+`__inline` — Słowo kluczowe informuje kompilator, aby zastąpić kod w definicji funkcji dla każdego wystąpienia w wywołaniu funkcji. Jednak podstawieniem tylko według uznania kompilatora. Na przykład kompilator wykonuje niewyrównane funkcji adresu jest zajęta lub jest zbyt duży, aby wbudowanego.
 
-Dla funkcji wziąć pod uwagę jako potencjalny ze śródwierszowaniem, należy użyć definicji stylu nowych funkcji.
+Dla funkcji, należy uznać kandydatem do wstawienia, zrównoważenia musi używać definicji stylu nowych funkcji.
 
-Ten formularz umożliwia określenie wbudowanej funkcji:
+Ten formularz służy do określania wbudowanej funkcji:
 
-> **__inline** *typu*<sub>opt</sub> *definicji funkcji*
+> **__inline** *typu*<sub>zoptymalizowany pod kątem</sub> *definicji funkcji*
 
-Korzystanie z funkcji śródwierszowych generuje kod szybszy i czasami może wygenerować kod mniejsze niż generuje wywołania funkcji równoważne z następujących powodów:
+Korzystanie z funkcji śródwierszowych generuje kod szybszy i czasami może generować kod mniejszych niż wywołanie funkcji równoważnej generuje z następujących powodów:
 
-- Zaoszczędzić czas wymagany do wykonania wywołania funkcji.
+- Można zaoszczędzić czas wymagany do wykonania wywołania funkcji.
 
-- W tekście małych funkcji, być może trzy wiersze lub mniej, utworzyć mniejsza ilość kodu niż wywołania funkcji równoważne, ponieważ kompilator nie generuje kod obsługi argumentów i wartości zwracanej.
+- Małe wbudowane funkcje, być może trzy wiersze lub mniej, utworzyć mniejszej ilości kodu niż wywołanie funkcji równoważne, ponieważ kompilator nie generuje kod służący do obsługi argumenty i wartość zwracana.
 
-- Wbudowane funkcje generowane podlegają optymalizacji kodu nie jest dostępny do normalnej pracy, ponieważ kompilator nie przeprowadza interprocedural optymalizacji.
+- Wbudowane funkcje generowane jest zależna od optymalizacji kodu nie jest dostępna do normalnej pracy, ponieważ kompilator nie wykonuje optymalizacje interprocedural.
 
-Funkcje przy użyciu `__inline` nie należy mylić z wbudowanego kodu asemblera. Zobacz [asemblera wbudowanego](../c-language/inline-assembler-c.md) Aby uzyskać więcej informacji.
+Funkcje przy użyciu `__inline` nie należy mylić z kodem wbudowanego asemblera. Zobacz [asemblera wbudowanego](../c-language/inline-assembler-c.md) Aby uzyskać więcej informacji.
 
-**KOŃCOWY określonych firmy Microsoft**  
+**END specyficzny dla Microsoft**
 
 ## <a name="see-also"></a>Zobacz też
 

@@ -16,15 +16,17 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e76adb397c9131bbaa7c2c40124de31348c56a31
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: c074ddd193765029a2925e1a98c4ab1787f9a82a
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32382828"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46082680"
 ---
 # <a name="execution-character-set"></a>Zestaw znaków wykonania
-Ta zawartość dotyczy często "wykonywania zestaw znaków". Zestaw znaków wykonania nie jest zawsze taki sam jak źródłowy zestaw znaków używany do zapisywania C — programy. Zestaw znaków wykonania zawiera wszystkie znaki w zestaw znaków źródła oraz znak null, znaku nowego wiersza, backspace, tabulator poziomy, tabulator pionowy, znaków powrotu karetki i sekwencje specjalne. Zestawy znaków źródła i wykonania może różnić się w innych implementacjach.  
-  
-## <a name="see-also"></a>Zobacz też  
- [Stałe znakowe języka C](../c-language/c-character-constants.md)
+
+Ta zawartość dotyczy często "wykonania zestawu znaków". Zestaw znaków wykonania nie jest zawsze taki sam jak źródłowy zestaw znaków używany do pisania programów C. Zestaw znaków wykonania zawiera wszystkie znaki w zestawie oraz znak null znaków źródła, znak nowego wiersza, backspace, tabulator poziomy, tabulator pionowy, znaku powrotu karetki i sekwencje ucieczki. Zestawy znaków źródła i wykonania może różnić się w innych wdrożeniach.
+
+## <a name="see-also"></a>Zobacz też
+
+[Stałe znakowe języka C](../c-language/c-character-constants.md)

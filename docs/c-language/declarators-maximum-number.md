@@ -14,17 +14,19 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 124863b551729c590dbbd9724a266201d0bff851
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 6c5675c62f4cdef11366ecbe640a2e84dc78282a
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32382149"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46075218"
 ---
 # <a name="declarators-maximum-number"></a>Deklaratory: maksymalna liczba
-**ANSI 3.5.4** maksymalną liczbę deklaratorów, które można modyfikować arytmetyczne, struktury lub Unii  
-  
- Microsoft C nie ogranicza liczby deklaratorów. Liczba jest ograniczona tylko przez ilość dostępnej pamięci.  
-  
-## <a name="see-also"></a>Zobacz też  
- [Zachowanie zdefiniowane w implementacji](../c-language/implementation-defined-behavior.md)
+
+**ANSI 3.5.4** maksymalną liczbę deklaratory, które można modyfikować operacje arytmetyczne, struktury lub Unii
+
+Microsoft C nie ogranicza liczby deklaratorów. Liczba jest ograniczona jedynie ilością dostępnej pamięci.
+
+## <a name="see-also"></a>Zobacz też
+
+[Zachowanie zdefiniowane w implementacji](../c-language/implementation-defined-behavior.md)

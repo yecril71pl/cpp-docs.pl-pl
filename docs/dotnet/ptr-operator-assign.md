@@ -1,5 +1,5 @@
 ---
-title: PTR::operator — wartość = | Dokumentacja firmy Microsoft
+title: PTR::operator, wartość = | Dokumentacja firmy Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -20,12 +20,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: c4f9e54ce2bcd6ff402e6ad239b269a3e314286d
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: a8a8b87afba71836876554e1abbe04014cb09772
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33161034"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46075087"
 ---
 # <a name="ptroperator"></a>ptr::operator=
 Dołącza do obiektów COM `com::ptr`.  
@@ -39,22 +39,22 @@ ptr<_interface_type> % operator=(
 ```  
   
 #### <a name="parameters"></a>Parametry  
- `_right`  
- Wskaźnika interfejsu COM do dołączenia.  
+*z _prawej*<br/>
+Wskaźnik interfejsu COM do dołączenia.  
   
 ## <a name="return-value"></a>Wartość zwracana  
- Odwołanie śledzące na `com::ptr`.  
+ Odwołanie śledzenia na `com::ptr`.  
   
 ## <a name="exceptions"></a>Wyjątki  
  Jeśli `com::ptr` już posiada odwołanie do obiektu COM `operator=` zgłasza <xref:System.InvalidOperationException>.  
   
 ## <a name="remarks"></a>Uwagi  
- Przypisywanie obiektu COM, aby `com::ptr` odwołuje się do obiektu modelu COM, ale nie zwalnia wywołującego odwołania do niego.  
+ Przypisywanie obiektu COM, aby `com::ptr` odwołuje się do obiektu COM, ale nie spowoduje zwolnienia obiektu wywołującego odwołanie do niej.  
   
- Ten operator ma ten sam efekt co `Attach`.  
+ Ten operator ma taki sam skutek jak `Attach`.  
   
 ## <a name="example"></a>Przykład  
- W tym przykładzie implementuje klasy CLR, która używa `com::ptr` opakowywać jego prywatnego elementu członkowskiego `IXMLDOMDocument` obiektu.  `ReplaceDocument` Pierwszego wywołania funkcji Członkowskich `Release` na dowolnym wcześniej należące do obiektu, a następnie używa `operator=` dołączyć nowy obiekt dokumentu.  
+ W tym przykładzie implementuje klasę CLR, która używa `com::ptr` opakowywać jej prywatnego elementu członkowskiego `IXMLDOMDocument` obiektu.  `ReplaceDocument` Wywołania pierwszej funkcji elementu członkowskiego `Release` na dowolnym wcześniej należały do obiektu, a następnie używa `operator=` można dołączyć nowy obiekt dokumentu.  
   
 ```  
 // comptr_op_assign.cpp  
@@ -129,7 +129,7 @@ int main() {
 ```  
   
 ## <a name="requirements"></a>Wymagania  
- **Plik nagłówka** \<msclr\com\ptr.h >  
+ **Plik nagłówkowy** \<msclr\com\ptr.h >  
   
  **Namespace** msclr::com  
   

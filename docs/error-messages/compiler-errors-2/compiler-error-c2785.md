@@ -1,5 +1,5 @@
 ---
-title: C2785 błąd kompilatora | Dokumentacja firmy Microsoft
+title: Błąd kompilatora C2785 | Dokumentacja firmy Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,30 +16,32 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: dc0ca6235e0fd4bdd22330e807464e96280ae461
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: cfae8a58d9c42c9ddc3ef7779fc86f7157ba41b0
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33234032"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46080860"
 ---
-# <a name="compiler-error-c2785"></a>C2785 błąd kompilatora
-"declaration1" i "declaration2" mają różne typy zwracane  
-  
- Zwracany typ specjalizacja szablonu funkcji różni się od zwracanego typu szablonu podstawowej funkcji.  
-  
-### <a name="to-correct-this-error"></a>Aby poprawić ten błąd  
-  
-1.  Sprawdź wszystkie specjalizacji szablonu funkcji spójności.  
-  
-## <a name="example"></a>Przykład  
- Poniższy przykład generuje C2785:  
-  
-```  
-// C2785.cpp  
-// compile with: /c  
-template<class T> void f(T);  
-  
-template<> int f(int); // C2785  
-template<> void f(int); // OK  
+# <a name="compiler-error-c2785"></a>Błąd kompilatora C2785
+
+"declaration1" i "declaration2" mają różne typy zwracane
+
+Zwracany typ specjalizacja szablonu funkcji różni się od zwracany typ szablonu podstawowej funkcji.
+
+### <a name="to-correct-this-error"></a>Aby poprawić ten błąd
+
+1. Sprawdź wszystkie specjalizacje szablonu funkcji w celu zachowania spójności.
+
+## <a name="example"></a>Przykład
+
+Poniższy przykład spowoduje wygenerowanie C2785:
+
+```
+// C2785.cpp
+// compile with: /c
+template<class T> void f(T);
+
+template<> int f(int); // C2785
+template<> void f(int); // OK
 ```

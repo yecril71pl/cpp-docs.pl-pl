@@ -16,14 +16,15 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d97bed1bdc81c738ff20bb85038153181ddb06ee
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: a5c975960310136729620ae8304364667f6e8e60
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33198784"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46045045"
 ---
 # <a name="fatal-error-c1099"></a>Błąd krytyczny C1099
-Edytuj i Kontynuuj kończy kompilację aparatu  
-  
- Edytuj i Kontynuuj załadować prekompilowanego pliku nagłówkowego w ramach przygotowania do kompilacji zmian w kodzie, ale kolejne czynności (takie jak zmiany kodu przed prekompilowany nagłówek `#include` instrukcji lub zatrzymanie debugera) uniemożliwił Edytuj i Kontynuuj z kończenie kompilacji z tym procesem. Nie trzeba podejmować żadnych działań, aby naprawić ten błąd.
+
+Edytuj i Kontynuuj kończy kompilację aparatu
+
+Edytuj i Kontynuuj załadowane z prekompilowanego pliku nagłówka w ramach przygotowania do kompilowania zmian w kodzie, ale kolejne czynności (takie jak zmiany kodu przed prekompilowanego pliku nagłówkowego `#include` instrukcji lub zatrzymanie debugera) uniemożliwił Edytuj i Kontynuuj z kończenie kompilacji za pomocą tego procesu. Nie trzeba podejmować żadnych działań, aby naprawić ten błąd.

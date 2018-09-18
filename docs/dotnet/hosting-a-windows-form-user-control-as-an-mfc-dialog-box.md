@@ -1,5 +1,5 @@
 ---
-title: Hosting systemu Windows formant użytkownika jako okna dialogowego MFC formularza | Dokumentacja firmy Microsoft
+title: Hosting Windows kontrolka formularz, która użytkownika jako okna dialogowego MFC | Dokumentacja firmy Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,71 +17,72 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: b356bff4974b43445524d9bc07e1e37c62a6f8d4
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 47914a73880f5cea13f1bc64c231604a0d5d05dd
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33138681"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46073817"
 ---
 # <a name="hosting-a-windows-form-user-control-as-an-mfc-dialog-box"></a>Hostowanie kontrolki użytkownika formularza systemu Windows jako okna dialogowego MFC
-MFC zawiera klasy szablonu [CWinFormsDialog](../mfc/reference/cwinformsdialog-class.md) , dzięki czemu mogą być hostowane kontrolki użytkownika formularza systemu Windows (<xref:System.Windows.Forms.UserControl>) w oknie dialogowym MFC modalne i niemodalne. `CWinFormsDialog` pochodzi od klasy MFC [cdialog —](../mfc/reference/cdialog-class.md), więc jako modalne lub niemodalny można uruchomić okna dialogowego.  
+Biblioteka MFC zawiera klasę szablonu [CWinFormsDialog](../mfc/reference/cwinformsdialog-class.md) tak, że można obsługiwać formant użytkownika interfejsu Windows Forms (<xref:System.Windows.Forms.UserControl>) w modalnym lub niemodalnym oknie dialogowym MFC. `CWinFormsDialog` pochodzi od klasy MFC [CDialog](../mfc/reference/cdialog-class.md), dzięki czemu można uruchomić jako modalne lub niemodalne okno dialogowe.  
   
- Proces który `CWinFormsDialog` używa do hostowania kontrolki użytkownika jest podobny do opisanego w [hostowanie formantu użytkownika formularza systemu Windows w oknie dialogowym MFC](../dotnet/hosting-a-windows-form-user-control-in-an-mfc-dialog-box.md). Jednak `CWinFormsDialog` zarządza inicjowania i hosting kontrolki użytkownika, dzięki czemu nie trzeba programowane ręcznie.  
+ Ten proces, `CWinFormsDialog` używa do hostowania formantu użytkownika jest podobny do tego opisanego w [hostowanie kontrolki użytkownika formularzy Windows w oknie dialogowym MFC](../dotnet/hosting-a-windows-form-user-control-in-an-mfc-dialog-box.md). Jednak `CWinFormsDialog` zarządza inicjowaniem i hostingiem kontroli użytkownika, tak aby nie musi być programowana ręcznie.  
   
- Dla przykładowej aplikacji, która zawiera formularze systemu Windows używana z MFC, zobacz [MFC i integracja z formularzy systemu Windows](http://www.microsoft.com/downloads/details.aspx?FamilyID=987021bc-e575-4fe3-baa9-15aa50b0f599&displaylang=en).  
+ Dla przykładowej aplikacji, który pokazuje formularze Windows używane z biblioteką MFC, zobacz [MFC i integracji formularzy Windows](http://www.microsoft.com/downloads/details.aspx?FamilyID=987021bc-e575-4fe3-baa9-15aa50b0f599&displaylang=en).  
   
 ### <a name="to-create-the-mfc-host-application"></a>Aby utworzyć aplikację hosta MFC  
   
 1.  Utwórz projekt aplikacji MFC.  
   
-     Na **pliku** menu, wybierz opcję **nowy**, a następnie kliknij przycisk **projektu**. W **Visual C++** folderu, wybierz opcję **aplikacji MFC**.  
+     Na **pliku** menu, wybierz opcję **New**, a następnie kliknij przycisk **projektu**. W **Visual C++** folderu, wybierz **aplikacji MFC**.  
   
-     W **nazwa** wprowadź `MFC03` i zmień ustawienie rozwiązania na **dodać do rozwiązania**. Kliknij przycisk **OK**.  
+     W **nazwa** wprowadź `MFC03` i zmień ustawienie rozwiązanie na **Dodaj do rozwiązania**. Kliknij przycisk **OK**.  
   
-     W **Kreator aplikacji MFC**Zaakceptuj wszystkie ustawienia domyślne, a następnie kliknij przycisk **Zakończ**. Spowoduje to utworzenie aplikacji MFC z interfejsem wielu dokumentów.  
+     W **Kreator aplikacji MFC**Zaakceptuj wszystkie ustawienia domyślne, a następnie kliknij przycisk **Zakończ**. Tworzy to aplikację MFC z interfejsem wielu dokumentów.  
   
 2.  Konfigurowanie projektu.  
   
-     W **Eksploratora rozwiązań**, kliknij prawym przyciskiem myszy **MFC03** węzeł projektu i wybierz polecenie **właściwości**. **Strony właściwości** zostanie wyświetlone okno dialogowe.  
+     W **Eksploratora rozwiązań**, kliknij prawym przyciskiem myszy **MFC03** węzła projektu, a następnie wybierz **właściwości**. **Stron właściwości** pojawi się okno dialogowe.  
   
-     W **strony właściwości** okna dialogowego, **właściwości konfiguracji** formantu drzewa, wybierz opcję **ogólne**, a następnie w **projektu domyślne**sekcji, ustaw **Obsługa środowisko uruchomieniowe języka wspólnego** do **obsługuje wspólnego języka środowiska uruchomieniowego (/ clr)**. Kliknij przycisk **OK**.  
+     W **stron właściwości** dialogowym **właściwości konfiguracji** formantu drzewa, wybierz opcję **ogólne**, a następnie w obszarze **domyślnewartościprojektu**sekcji, ustaw **Obsługa środowiska uruchomieniowego języka wspólnego** do **wsparcie (/ clr)**. Kliknij przycisk **OK**.  
   
 3.  Dodaj odwołanie do formantu .NET.  
   
-     W **Eksploratora rozwiązań**, kliknij prawym przyciskiem myszy **MFC03** węzeł projektu i wybierz polecenie **Dodaj**, **odwołania**. W **strony właściwości**, kliknij przycisk **Dodaj nowe odwołanie**, wybierz WindowsControlLibrary1 (w obszarze **projekty** kartę) i kliknij przycisk **OK**. To spowoduje dodanie odwołania w formie [/FU](../build/reference/fu-name-forced-hash-using-file.md) — opcja kompilatora, aby program zostanie skompilowany; kopiuje również WindowsControlLibrary1.dll do `MFC03` projektu katalogu, dzięki czemu program będzie uruchamiany.  
+     W **Eksploratora rozwiązań**, kliknij prawym przyciskiem myszy **MFC03** węzeł projektu i wybierz polecenie **Dodaj**, **odwołania**. W **strona właściwości**, kliknij przycisk **Dodaj nowe odwołanie**, zaznacz pozycję WindowsControlLibrary1 (w obszarze **projektów** karty) i kliknij przycisk **OK**. Dodaje to odwołanie w formie [/FU](../build/reference/fu-name-forced-hash-using-file.md) — opcja kompilatora tak, aby program został skompilowany; kopiuje również WindowsControlLibrary1.dll do `MFC03` katalogu projektu, dzięki czemu program będzie uruchamiany.  
   
-4.  Dodaj `#include <afxwinforms.h>` do stdafx.h na końcu istniejące `#include` instrukcje.  
+4.  Dodaj `#include <afxwinforms.h>` do stdafx.h, na końcu istniejącej `#include` instrukcji.  
   
-5.  Dodaj nową klasę o tym podklasy `CDialog`.  
+5.  Dodaj nową klasę tej podklasy `CDialog`.  
   
-     Kliknij prawym przyciskiem myszy nazwę projektu i dodawanie klasy MFC (o nazwie CHostForWinForm) tego podklasy `CDialog`. Ponieważ zasobów okno dialogowe nie jest konieczne, można usunąć Identyfikatora zasobu (Wybierz widok zasobów, rozwiń folder okna dialogowego i Usuń IDD_HOSTFORWINFORM zasobów.  Następnie należy usunąć wszystkie odwołania do Identyfikatora w kodzie.).  
+     Kliknij prawym przyciskiem myszy nazwę projektu i dodać klasę MFC (o nazwie chostforwinform podzieloną) na podklasy `CDialog`. Ponieważ zasobu okna dialogowego pole nie jest potrzebne, można usunąć Identyfikatora zasobu (zaznacz widok zasobu, rozwiń Dialog folder i Usuń zasób IDD_HOSTFORWINFORM.  Następnie usuń wszelkie odwołania do Identyfikatora w kodzie.).  
   
 6.  Zastąp `CDialog` w plikach CHostForWinForm.h i CHostForWinForm.cpp z `CWinFormsDialog<WindowsControlLibrary1::UserControl1>`.  
   
-7.  Wywołać DoModal w klasie CHostForWinForm.  
+7.  Wywołanie DoModal klasy CHostForWinForm.  
   
-     W MFC03.cpp, Dodaj `#include "HostForWinForm.h"`.  
+     W pliku MFC03.cpp Dodaj `#include "HostForWinForm.h"`.  
   
-     Przed instrukcji return w definicji CMFC03App::InitInstance należy dodać:  
+     Przed instrukcją powrotu w definicji cmfc03app::initinstance należy dodać:  
   
-     `CHostForWinForm m_HostForWinForm;`  
+    ```cpp
+    CHostForWinForm m_HostForWinForm;
+    m_HostForWinForm.DoModal();
+    ```
   
-     `m_HostForWinForm.DoModal();`  
-  
-8.  Tworzenie i uruchamianie projektu.  
+8.  Skompiluj i uruchom projekt.  
   
      Na **kompilacji** menu, kliknij przycisk **Kompiluj rozwiązanie**.  
   
-     Na **debugowania** menu, kliknij przycisk **uruchomienie bez debugowania**.  
+     Na **debugowania** menu, kliknij przycisk **Uruchom bez debugowania**.  
   
-     Następnie dodasz kod umożliwiający monitorowanie stanu formantu w formularzach systemu Windows z aplikacji MFC.  
+     Następnie dodasz kod do monitorowania stanu formantu w interfejsie Windows Forms z aplikacji MFC.  
   
-9. Dodaj obsługę OnInitDialog.  
+9. Dodawanie obsługi dla OnInitDialog.  
   
-     Wyświetl **właściwości** okna (F4). W **widoku klasy**, wybierz CHostForWinForm. W **właściwości** okna, wybierz zastąpienia w wierszu OnInitDialog, kliknij kolumnę po lewej stronie i wybierz \< Dodaj >. Spowoduje to dodanie następujący wiersz do CHostForWinForm.h:  
+     Wyświetlanie **właściwości** okna (F4). W **Widok klas**, wybierz pozycję CHostForWinForm. W **właściwości** okna, zaznacz zastąpienia i w wierszu zdarzenia OnInitDialog kliknij w lewej kolumnie i zaznacz \< Dodaj >. Spowoduje to dodanie następujący wiersz do CHostForWinForm.h:  
   
-    ```  
+    ```cpp  
     virtual BOOL OnInitDialog();  
     ```  
   
@@ -95,7 +96,7 @@ MFC zawiera klasy szablonu [CWinFormsDialog](../mfc/reference/cwinformsdialog-cl
     }  
     ```  
   
-11. Następnie Dodaj program obsługi OnButton1. Dodaj następujące wiersze do sekcji publicznej klasy CHostForWinForm w CHostForWinForm.h:  
+11. Następnie Dodaj program obsługi OnButton1. Dodaj następujące wiersze do sekcji publicznej klasy CHostForWinForm w obiekcie CHostForWinForm.h:  
   
     ```  
     virtual void OnButton1( System::Object^ sender, System::EventArgs^ e );  
@@ -105,7 +106,7 @@ MFC zawiera klasy szablonu [CWinFormsDialog](../mfc/reference/cwinformsdialog-cl
     END_DELEGATE_MAP()  
     ```  
   
-     W CHostForWinForm.cpp Dodaj tę definicję:  
+     W pliku CHostForWinForm.cpp Dodaj tę definicję:  
   
     ```  
     void CHostForWinForm::OnButton1( System::Object^ sender, System::EventArgs^ e )   
@@ -114,17 +115,17 @@ MFC zawiera klasy szablonu [CWinFormsDialog](../mfc/reference/cwinformsdialog-cl
     }  
     ```  
   
-12. Tworzenie i uruchamianie projektu. Po kliknięciu przycisku, który znajduje się w formularzu systemu Windows, zostanie uruchomiony kodu w aplikacji MFC.  
+12. Skompiluj i uruchom projekt. Po kliknięciu przycisku, który znajduje się w formularzu Windows, uruchomi się kod w aplikacji MFC.  
   
-     Następnie dodasz kod, aby wyświetlić kod MFC wartość w polu tekstowym w formularzu systemu Windows.  
+     Następnie dodasz kod, aby wyświetlić z kodu MFC wartość w polu tekstowym w formularzu Windows.  
   
-13. W sekcji publicznej klasy CHostForWinForm w CHostForWinForm.h Dodaj następujące oświadczenie:  
+13. W sekcji publicznej klasy CHostForWinForm w obiekcie CHostForWinForm.h należy dodać następującą deklarację:  
   
     ```  
     CString m_sEditBoxOnWinForm;  
     ```  
   
-14. W definicji DoDataExchange w CHostForWinForm.cpp należy dodać następujące trzy wiersze na końcu funkcji:  
+14. W definicji elementu DoDataExchange w pliku CHostForWinForm.cpp należy dodać następujące trzy wiersze na końcu funkcji:  
   
     ```  
     if (pDX->m_bSaveAndValidate)  
@@ -133,7 +134,7 @@ MFC zawiera klasy szablonu [CWinFormsDialog](../mfc/reference/cwinformsdialog-cl
        GetControl()->textBox1->Text = gcnew System::String(m_sEditBoxOnWinForm);  
     ```  
   
-15. W definicji OnButton1 w CHostForWinForm.cpp należy dodać następujące trzy wiersze na końcu funkcji:  
+15. W definicji elementu OnButton1 w pliku CHostForWinForm.cpp należy dodać następujące trzy wiersze na końcu funkcji:  
   
     ```  
     this->UpdateData(TRUE);  
@@ -141,7 +142,7 @@ MFC zawiera klasy szablonu [CWinFormsDialog](../mfc/reference/cwinformsdialog-cl
     System::Windows::Forms::MessageBox::Show(z);  
     ```  
   
-16. Tworzenie i uruchamianie projektu.  
+16. Skompiluj i uruchom projekt.  
   
 ## <a name="see-also"></a>Zobacz też  
  <xref:System.Windows.Forms.UserControl?displayProperty=fullName>   

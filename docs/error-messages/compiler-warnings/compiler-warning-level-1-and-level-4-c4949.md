@@ -1,5 +1,5 @@
 ---
-title: Kompilator C4949 ostrzegawcze (poziom 1 i 4) | Dokumentacja firmy Microsoft
+title: Kompilator ostrzeżenie (poziom 1 i 4) C4949 | Dokumentacja firmy Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,32 +16,33 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3dbf80f85db7334d4bcb46402851cac601d258f2
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: f806912188ada3a4f97f0b1500e811d1271f40fe
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33279649"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46077311"
 ---
-# <a name="compiler-warning-level-1-and-level-4-c4949"></a>Kompilator C4949 ostrzegawcze (poziom 1 i 4)
-dyrektywy pragma "managed" i "unmanaged" mają znaczenie, tylko wtedy, gdy skompilowano z opcją "/ clr [: option]"  
-  
- Kompilator ignoruje [zarządzane](../../preprocessor/managed-unmanaged.md) i niezarządzanych pragm, jeśli kod źródłowy nie jest skompilowana przy użyciu [/CLR](../../build/reference/clr-common-language-runtime-compilation.md). To ostrzeżenie ma charakter informacyjny.  
-  
- Poniższy przykład generuje C4949:  
-  
-```  
-// C4949.cpp  
-// compile with: /LD /W1  
-#pragma managed   // C4949  
-```  
-  
- Gdy **#pragma niezarządzanych** jest używana bez **/CLR**, C4949 to ostrzeżenie poziom 4.  
-  
- Poniższy przykład generuje C4949:  
-  
-```  
-// C4949b.cpp  
-// compile with: /LD /W4  
-#pragma unmanaged   // C4949  
+# <a name="compiler-warning-level-1-and-level-4-c4949"></a>Kompilator ostrzeżenie (poziom 1 i 4) C4949
+
+dyrektywy pragma "managed" i "unmanaged" mają znaczenie, tylko wtedy, gdy skompilowano z opcją "/ clr [: option]"
+
+Kompilator ignoruje [zarządzane](../../preprocessor/managed-unmanaged.md) i niezarządzane pragm, jeśli kod źródłowy nie jest skompilowany przy użyciu [/CLR](../../build/reference/clr-common-language-runtime-compilation.md). To ostrzeżenie ma charakter informacyjny.
+
+Poniższy przykład spowoduje wygenerowanie C4949:
+
+```
+// C4949.cpp
+// compile with: /LD /W1
+#pragma managed   // C4949
+```
+
+Gdy **niezarządzanych #pragma** jest używany bez **/CLR**, C4949 to ostrzeżenie poziom 4.
+
+Poniższy przykład spowoduje wygenerowanie C4949:
+
+```
+// C4949b.cpp
+// compile with: /LD /W4
+#pragma unmanaged   // C4949
 ```

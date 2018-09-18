@@ -18,12 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 47b7063dc9156e8feb41d447283ee457a13f1f4d
-ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
+ms.openlocfilehash: dae0eef25b11d49e5f869d88862e602d862135c1
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43692305"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46082251"
 ---
 # <a name="ltsummarygt-visual-c"></a>&lt;Podsumowanie&gt; (Visual C++)
 \<Podsumowania > tag powinien być używany do opisu typu lub składowej typu. Użyj [ \<Uwagi >](../ide/remarks-visual-cpp.md) można dodać dodatkowe informacje do opisu typu.  
@@ -35,8 +35,8 @@ ms.locfileid: "43692305"
 ```  
   
 #### <a name="parameters"></a>Parametry  
- `description`  
- Podsumowanie obiektu.  
+*Opis elementu*<br/>
+Podsumowanie obiektu.  
   
 ## <a name="remarks"></a>Uwagi  
  Tekst dla \<podsumowania > tag to jedyne źródło informacji o typie w technologii IntelliSense i jest wyświetlany na [przeglądarki obiektów](/visualstudio/ide/viewing-the-structure-of-code) i w raporcie Web komentarzy kodu.  

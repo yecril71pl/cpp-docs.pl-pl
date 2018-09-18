@@ -20,18 +20,18 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 733d090073fe2ed08a0499ea205c2377b4bdb289
-ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
+ms.openlocfilehash: eb9d21eee8e561e2caa8a7c4088774435d3ce273
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43679700"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46080444"
 ---
 # <a name="scope-c"></a>Zakres (C++)
 
 Kiedy Deklarujesz element programu, takie jak klasy, funkcji lub zmienna, jego nazwa tylko można "widoczne" i używane w niektórych części programu. Kontekst, w której nazwa jest widoczna jest nazywany jego *zakres*. Na przykład, jeśli zadeklarujemy zmienną `x` w obrębie danej funkcji `x` tylko jest widoczny w obrębie danej treści funkcji. Ma ona *zakres lokalny*. Masz inne zmienne o tej samej nazwie w programach; tak długo, jak są one w różnych zakresach, naruszają reguły jednej definicji, a nie błąd.
 
-Automatycznych zmiennych niestatyczna zakres określa także gdy są tworzone i niszczone w pamięci programu. 
+Automatycznych zmiennych niestatyczna zakres określa także gdy są tworzone i niszczone w pamięci programu.
 
 Istnieje sześć rodzaje zakresów:
 
@@ -51,9 +51,9 @@ Istnieje sześć rodzaje zakresów:
 
 Nazwę można ukryć, deklarując go w zamkniętej bloku. Na poniższej ilustracji `i` jest ponownie zadeklarowany w ramach wewnętrznego bloku, w tym samym ukrywanie zmienną związaną z `i` w zakresie zewnętrznym bloku.
 
- ![Blok&#45;zakresu ukrywaniem nazwy](../cpp/media/vc38sf1.png "vc38SF1") zasięgu bloku i ukrywanie nazw
+![Blok&#45;zakresu ukrywaniem nazwy](../cpp/media/vc38sf1.png "vc38SF1") zasięgu bloku i ukrywanie nazw
 
- Dane wyjściowe programu pokazano na rysunku przedstawiono:
+Dane wyjściowe programu pokazano na rysunku przedstawiono:
 
 ```cpp
 i = 0
@@ -67,7 +67,7 @@ i = 0
 
 ## <a name="hiding-class-names"></a>Ukrywanie nazw klas
 
- Aby ukryć nazwy klas, deklarowania funkcji, obiekt lub zmienna lub modułu wyliczającego, w tym samym zakresie. Jednak nazwa klasy jest nadal dostępny przy poprzedzona słowem kluczowym **klasy**.
+Aby ukryć nazwy klas, deklarowania funkcji, obiekt lub zmienna lub modułu wyliczającego, w tym samym zakresie. Jednak nazwa klasy jest nadal dostępny przy poprzedzona słowem kluczowym **klasy**.
 
 ```cpp
 // hiding_class_names.cpp
@@ -91,7 +91,7 @@ double Account = 15.37;            // Hides class name Account
 
 int main()
 {
-    class Account Checking( Account ); // Qualifies Account as 
+    class Account Checking( Account ); // Qualifies Account as
                                        //  class name
 
     cout << "Opening account with balance of: "
@@ -103,13 +103,13 @@ int main()
 > [!NOTE]
 > Miejsce nazwy klasy (`Account`) jest wywoływana dla klasy — słowo kluczowe może służyć do odróżnić go od konta zmiennej zakresu globalnego. Ta zasada nie ma zastosowania w przypadku nazwy klasy po lewej stronie operatora rozpoznawania zakresu (:). Nazwy po lewej stronie operatora rozpoznawania zakresu są zawsze traktowane jako nazwy klas.
 
- Poniższy przykład pokazuje, jak zadeklarować wskaźnika do obiektu typu `Account` przy użyciu **klasy** — słowo kluczowe:
+Poniższy przykład pokazuje, jak zadeklarować wskaźnika do obiektu typu `Account` przy użyciu **klasy** — słowo kluczowe:
 
 ```cpp
 class Account *Checking = new class Account( Account );
 ```
 
- `Account` w inicjatorze (w nawiasach) w poprzednich instrukcji się zakresie globalnym; jest on typu **double**.
+`Account` w inicjatorze (w nawiasach) w poprzednich instrukcji się zakresie globalnym; jest on typu **double**.
 
 > [!NOTE]
 > Ponowne użycie nazwy identyfikatora, jak pokazano w poniższym przykładzie jest uważany za słabe stylu programowania.
@@ -118,7 +118,7 @@ Aby uzyskać informacje na temat deklaracji i inicjowania obiektów klas, zobacz
 
 ## <a name="hiding-names-with-global-scope"></a>Ukrywanie nazw o zakresie globalnym
 
- Aby ukryć nazwy o zakresie globalnym, jawnie Zadeklarowanie tej samej nazwie w zakresie bloku. Jednak nazwy zakresu globalnego jest możliwy za pomocą operatora rozpoznawania zakresu (`::`).
+Aby ukryć nazwy o zakresie globalnym, jawnie Zadeklarowanie tej samej nazwie w zakresie bloku. Jednak nazwy zakresu globalnego jest możliwy za pomocą operatora rozpoznawania zakresu (`::`).
 
 ```cpp
 #include <iostream>
@@ -139,4 +139,5 @@ Global-scoped i has the value: 7
 ```
 
 ## <a name="see-also"></a>Zobacz także
- [Podstawowe pojęcia](../cpp/basic-concepts-cpp.md)
+
+[Podstawowe pojęcia](../cpp/basic-concepts-cpp.md)

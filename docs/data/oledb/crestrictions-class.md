@@ -24,14 +24,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: b9dc35df928d53d7d5ca5d833db8e87c96e1c7f4
-ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
+ms.openlocfilehash: c66200acab5fc1be509136fc45895fdf08e40fdb
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "42465710"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46072085"
 ---
 # <a name="crestrictions-class"></a>Klasa CRestrictions
+
 Ogólna klasa, która pozwala określić ograniczenia dla zestawów wierszy schematu.  
   
 ## <a name="syntax"></a>Składnia
@@ -43,17 +44,19 @@ class CRestrictions :
 ```  
   
 ### <a name="parameters"></a>Parametry  
- *T*  
- Klasa, używane do dostępu.  
+
+*T*<br/>
+Klasa, używane do dostępu.  
   
- *nRestrictions*  
- Liczba kolumn ograniczeń dla zestawu wierszy schematu.  
+*nRestrictions*<br/>
+Liczba kolumn ograniczeń dla zestawu wierszy schematu.  
   
- *pguid*  
- Wskaźnik do identyfikatora GUID dla schematu.  
+*pguid*<br/>
+Wskaźnik do identyfikatora GUID dla schematu.  
 
 ## <a name="requirements"></a>Wymagania  
- **Nagłówek:** atldbsch.h 
+
+**Nagłówek:** atldbsch.h 
   
 ## <a name="members"></a>Elementy członkowskie  
   
@@ -64,6 +67,7 @@ class CRestrictions :
 |[Otwórz](#open)|Zwraca wynik ustawione zgodnie z ograniczeniami dostarczone przez użytkownika.|   
 
 ## <a name="open"></a> CRestrictions::Open
+
 Zwraca wynik ustawione zgodnie z ograniczeniami dostarczone przez użytkownika.  
   
 ### <a name="syntax"></a>Składnia  
@@ -81,24 +85,28 @@ HRESULT Open(const CSession& session,
 ```  
   
 #### <a name="parameters"></a>Parametry  
- *Sesji*  
- [in] Określa istniejącego obiektu sesji używane do połączenia ze źródłem danych.  
+
+*Sesji*<br/>
+[in] Określa istniejącego obiektu sesji używane do połączenia ze źródłem danych.  
   
- *lpszParam*  
- [in] Określa ograniczenia na zestaw wierszy schematu.  
+*lpszParam*<br/>
+[in] Określa ograniczenia na zestaw wierszy schematu.  
   
- *bBind*  
- [in] Określa, czy należy automatycznie powiązania na mapie kolumny. Wartość domyślna to **true**, co powoduje, że mapa kolumny z oświadczeniem automatycznie. Ustawienie *bBind* do **false** uniemożliwia automatyczne powiązania mapy kolumnę tak, aby można powiązać ręcznie. (Ręczne powiązanie to szczególne znaczenie w odniesieniu do użytkowników OLAP).  
+*bBind*<br/>
+[in] Określa, czy należy automatycznie powiązania na mapie kolumny. Wartość domyślna to **true**, co powoduje, że mapa kolumny z oświadczeniem automatycznie. Ustawienie *bBind* do **false** uniemożliwia automatyczne powiązania mapy kolumnę tak, aby można powiązać ręcznie. (Ręczne powiązanie to szczególne znaczenie w odniesieniu do użytkowników OLAP).  
   
 ### <a name="return-value"></a>Wartość zwracana  
- Jedna z wartości HRESULT standardowych.  
+
+Jedna z wartości HRESULT standardowych.  
   
 ### <a name="remarks"></a>Uwagi  
- Można określić maksymalnie siedem ograniczeń w zestawie wierszy schematu.  
+
+Można określić maksymalnie siedem ograniczeń w zestawie wierszy schematu.  
   
- Zobacz [IDBSchemaRowset](/previous-versions/windows/desktop/ms713686\(v=vs.85\)) informacji o zdefiniowanych ograniczenia na każdy zestaw wierszy schematu.  
+Zobacz [IDBSchemaRowset](/previous-versions/windows/desktop/ms713686\(v=vs.85\)) informacji o zdefiniowanych ograniczenia na każdy zestaw wierszy schematu.  
   
 ## <a name="see-also"></a>Zobacz też  
- [Szablony konsumentów OLE DB](../../data/oledb/ole-db-consumer-templates-cpp.md)   
- [OLE DB — Kompendium szablonów konsumentów](../../data/oledb/ole-db-consumer-templates-reference.md)    
- [Klasy zestawów wierszy schematu i klasy Typedef](../../data/oledb/schema-rowset-classes-and-typedef-classes.md)
+
+[Szablony konsumentów OLE DB](../../data/oledb/ole-db-consumer-templates-cpp.md)<br/>
+[Szablony konsumentów OLE DB — dokumentacja](../../data/oledb/ole-db-consumer-templates-reference.md)<br/>
+[Klasy zestawów wierszy schematu i klasy Typedef](../../data/oledb/schema-rowset-classes-and-typedef-classes.md)

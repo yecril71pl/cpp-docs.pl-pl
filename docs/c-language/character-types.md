@@ -15,25 +15,27 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1cd26eea35da463211b144e98faa0636f5204f6f
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 0c62633d8c7532f15d725018d80f045cf3a37838
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32383696"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46081003"
 ---
 # <a name="character-types"></a>Typy znaku
-Stała znakowa całkowitą nie poprzedzony literą **L** ma typ `int`. Wartość stała znakowa liczba całkowita zawierająca pojedynczy znak jest wartością liczbową znaku interpretowane jako liczba całkowita. Na przykład wartość liczbową znaku `a` 97 dziesiętnie i 61 w formacie szesnastkowym.  
-  
- Składnia, "szerokich znaków stała" jest stałą znak poprzedzony literą **L**. Szerokich znaków stała ma typ `wchar_t`, integer — typ zdefiniowany w STDDEF. Plik nagłówka H. Na przykład:  
-  
-```  
-char    schar =  'x';   /* A character constant          */  
-wchar_t wchar = L'x';   /* A wide-character constant for   
-                            the same character           */  
-```  
-  
- Stałe znaków dwubajtowych 16 bitów szerokości i określić członkami zestaw znaków wykonania rozszerzonej. Umożliwiają one express znaków w małych liter, które są za duże, aby mogły być reprezentowane przez typ `char`. Zobacz [wielobajtowe i dwubajtowe znaki](../c-language/multibyte-and-wide-characters.md) Aby uzyskać więcej informacji na temat znaki dwubajtowe.  
-  
-## <a name="see-also"></a>Zobacz też  
- [Stałe znakowe języka C](../c-language/c-character-constants.md)
+
+Stała liczba całkowita znak nie jest poprzedzony przez literę **L** ma typ `int`. Wartość całkowitą wartością stałą znaku zawierający pojedynczy znak jest wartością liczbową znaków interpretowana jako liczba całkowita. Na przykład, wartość liczbową znaków `a` jest 97 w zapisie dziesiętnym i 61 to sekundy w formacie szesnastkowym.
+
+Syntaktycznie, "szerokich znaków stała" jest stałą znak poprzedzony literę **L**. Stała dwubajtowego znaku ma typ `wchar_t`, zdefiniowane w STDDEF typ liczby całkowitej. Plik nagłówkowy H. Na przykład:
+
+```
+char    schar =  'x';   /* A character constant          */
+wchar_t wchar = L'x';   /* A wide-character constant for
+                            the same character           */
+```
+
+Stałe znaki dwubajtowe są 16 bitów szeroki i określić elementy członkowski rozszerzonego wykonania zestawu znaków. Umożliwiają one express znaków alfabetów, które są zbyt duże, aby mogły być reprezentowane przez typ `char`. Zobacz [wielobajtowe i dwubajtowe znaki](../c-language/multibyte-and-wide-characters.md) Aby uzyskać więcej informacji na temat znaków dwubajtowych.
+
+## <a name="see-also"></a>Zobacz też
+
+[Stałe znakowe języka C](../c-language/c-character-constants.md)

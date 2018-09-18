@@ -16,14 +16,15 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4f92c7faf3c5c2d58aabba5ecf4d8d401470cfc5
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 2be0a62b08b361f1cfa423fa3999a440e2fe4709
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33320134"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46073190"
 ---
 # <a name="resource-compiler-fatal-error-rc1102"></a>Błąd krytyczny kompilatora zasobów RC1102
-Błąd wewnętrzny: za dużo argumentów elementu RCPP  
-  
- Zbyt wiele argumentów zostało przekazanych do preprocesora kompilatora zasobów. Zmniejsz liczbę symbole zdefiniowane przy użyciu symboli zdefiniuj (/ d) opcja, definiując je w źródle. Ten błąd może być również spowodowane określenie zbyt wiele zawiera ścieżki wyszukiwania plików przy użyciu opcji zawierają ścieżki wyszukiwania (/ i).
+
+Błąd wewnętrzny: za dużo argumentów dla RCPP
+
+Zbyt wiele argumentów zostało przekazanych do preprocesora kompilatora zasobów. Zmniejsz liczbę symboli zdefiniowanych z symbolami zdefiniować (/ d) opcja, definiując je w źródle. Ten błąd, również może być spowodowany określając zbyt wiele zawiera ścieżki wyszukiwania pliku przy użyciu opcji zawierają ścieżkę wyszukiwania (/ i).

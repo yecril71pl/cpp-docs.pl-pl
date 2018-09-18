@@ -16,14 +16,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 36cb39b467cb413cdf74bef52430cf8caf746199
-ms.sourcegitcommit: 889a75be1232817150be1e0e8d4d7f48f5993af2
+ms.openlocfilehash: a5db612c836e4b902e7cad83017661246f4b649e
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/30/2018
-ms.locfileid: "39340693"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46079391"
 ---
 # <a name="enabling-and-disabling-services-for-a-provider"></a>Włączanie i wyłączanie usług dla dostawcy
+
 Poszczególne usługi OLE DB można włączać lub wyłączać domyślnie dla wszystkich aplikacji uzyskujących dostęp do jednego dostawcy. Jest to realizowane przez dodanie wpisu rejestru OLEDB_SERVICES CLSID dostawcy z `DWORD` wartość określającą usług, aby włączyć lub wyłączyć, jak pokazano w poniższej tabeli.  
   
 |Włączone usługi domyślne|Wartość — słowo kluczowe|  
@@ -36,4 +37,5 @@ Poszczególne usługi OLE DB można włączać lub wyłączać domyślnie dla ws
 |Brak agregacji wszystkie usługi wyłączone|\<Brak klucza >|  
   
 ## <a name="see-also"></a>Zobacz też  
- [Włączanie i wyłączanie usług OLE DB](../../data/oledb/enabling-and-disabling-ole-db-services.md)
+
+[Włączanie i wyłączanie usług OLE DB](../../data/oledb/enabling-and-disabling-ole-db-services.md)

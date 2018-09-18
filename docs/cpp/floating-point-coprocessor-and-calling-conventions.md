@@ -15,15 +15,17 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 66ccd54c4abb1d8d9761d5ded88beba76bfae043
-ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
+ms.openlocfilehash: e9f45f73e3cb1910bfc604c8a0fde871cef973a9
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/01/2018
-ms.locfileid: "39401357"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46075959"
 ---
 # <a name="floating-point-coprocessor-and-calling-conventions"></a>Koprocesor zmiennoprzecinkowy i konwencje wywoływania
-Jeśli piszesz zestawu procedury dla zmiennoprzecinkowego punktu Koprocesor, należy zachować wartość zmiennoprzecinkowa punktem słowa sterującego i wyczyścić stosu Koprocesor, chyba że jest zwracany **float** lub **double** wartość (która funkcja powinna zwrócić w ST(0)).  
-  
-## <a name="see-also"></a>Zobacz także  
- [Konwencje wywoływania](../cpp/calling-conventions.md)
+
+Jeśli piszesz zestawu procedury dla zmiennoprzecinkowego punktu Koprocesor, należy zachować wartość zmiennoprzecinkowa punktem słowa sterującego i wyczyścić stosu Koprocesor, chyba że jest zwracany **float** lub **double** wartość (która funkcja powinna zwrócić w ST(0)).
+
+## <a name="see-also"></a>Zobacz także
+
+[Konwencje wywoływania](../cpp/calling-conventions.md)

@@ -19,18 +19,18 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9d5983795dbb5711452db2f59b07cb6aa8b22a8c
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: f63bfe358e3f077bff780e2c5b4436fb841fd145
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43200208"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46083980"
 ---
 # <a name="time-management"></a>Zarządzanie czasem
 
 Za pomocą tych funkcji można pobrać bieżącego czasu i konwersji, dostosować i zapisać ją w razie potrzeby. Bieżący czas to czas systemowy.
 
- **_Ftime** i **localtime** użyć procedur **TZ** zmiennej środowiskowej. Jeśli **TZ** nie jest ustawiona, biblioteka środowiska uruchomieniowego podejmują próbę użycia informacji o strefie czasowej, określonych przez system operacyjny. Jeśli te informacje są niedostępne, te funkcje Użyj PST8PDT wartość domyślną. Aby uzyskać więcej informacji na temat **TZ**, zobacz [_tzset —](../c-runtime-library/reference/tzset.md); Zobacz też [_daylight, strefa czasowa i _tzname](../c-runtime-library/daylight-dstbias-timezone-and-tzname.md).
+**_Ftime** i **localtime** użyć procedur **TZ** zmiennej środowiskowej. Jeśli **TZ** nie jest ustawiona, biblioteka środowiska uruchomieniowego podejmują próbę użycia informacji o strefie czasowej, określonych przez system operacyjny. Jeśli te informacje są niedostępne, te funkcje Użyj PST8PDT wartość domyślną. Aby uzyskać więcej informacji na temat **TZ**, zobacz [_tzset —](../c-runtime-library/reference/tzset.md); Zobacz też [_daylight, strefa czasowa i _tzname](../c-runtime-library/daylight-dstbias-timezone-and-tzname.md).
 
 ### <a name="time-routines"></a>Procedury czasu
 

@@ -15,12 +15,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 476dd8b3eeb7174c7584a58ccb5d53bf251adbcc
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: b6a2e6c334016c79f02dc43e9790d7dfc4645212
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43768011"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46075621"
 ---
 # <a name="programming-with-ccombstr-atl"></a>Programowanie przy użyciu CComBSTR (ALT)
 
@@ -88,8 +88,8 @@ Należy pamiętać, że ten sam kod nie mogłoby spowodować przeciek, jeśli pa
 
 ## <a name="see-also"></a>Zobacz też
 
-[Pojęcia](../atl/active-template-library-atl-concepts.md)   
-[CStringT, klasa](../atl-mfc-shared/reference/cstringt-class.md)   
-[wstring](../standard-library/basic-string-class.md)   
+[Pojęcia](../atl/active-template-library-atl-concepts.md)<br/>
+[CStringT, klasa](../atl-mfc-shared/reference/cstringt-class.md)<br/>
+[wstring](../standard-library/basic-string-class.md)<br/>
 [Makra konwersji ciągów](../atl/reference/string-conversion-macros.md)
 

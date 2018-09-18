@@ -18,15 +18,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7c09234cbf41201df14aec4993174e6313c6a7d1
-ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
+ms.openlocfilehash: 01988097d2b05daa6fc056c16f34ec00b45d6893
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/27/2018
-ms.locfileid: "37040837"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46071786"
 ---
 # <a name="cmultidoctemplate-class"></a>Klasa CMultiDocTemplate
-Definiuje szablonu dokumentu, który implementuje interfejs dokumentu wielokrotnego (MDI).  
+Określa szablon dokumentu, który implementuje interfejs dokumentu wielokrotnego (MDI).  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -43,30 +43,30 @@ class CMultiDocTemplate : public CDocTemplate
 |[CMultiDocTemplate::CMultiDocTemplate](#cmultidoctemplate)|Konstruuje `CMultiDocTemplate` obiektu.|  
   
 ## <a name="remarks"></a>Uwagi  
- Aplikacja MDI wykorzystuje głównego okna ramowego jako obszaru roboczego, w którym użytkownik może otwierać okien ramowych dokumentu zero lub więcej, z których każdy zawiera dokument. Aby uzyskać bardziej szczegółowy opis MDI, zobacz *Windows interfejsu wskazówki dotyczące projektowania oprogramowania*.  
+ Aplikacja MDI używa ramką głównego okna jako obszar roboczy, w którym użytkownik może otwierać zero lub więcej okien ramowych dokumentu, z których każdy zawiera dokument. Aby uzyskać bardziej szczegółowy opis MDI, zobacz *Windows interfejsu wytyczne dotyczące projektowania oprogramowania*.  
   
- Szablon dokumentu definiuje relacje trzy typy klas:  
+ Szablon dokumentu zdefiniuje relacje między trzy typy klas:  
   
--   Klasy dokumentów, który pochodzi od [CDocument](../../mfc/reference/cdocument-class.md).  
+-   Klasy dokumentów, które pochodzą z [CDocument](../../mfc/reference/cdocument-class.md).  
   
--   Klasy widoku, która zawiera dane z klasy dokumentu wymienionych powyżej. Można pochodzi ta klasa z [CView](../../mfc/reference/cview-class.md), `CScrollView`, `CFormView`, lub `CEditView`. (Można również użyć `CEditView` bezpośrednio.)  
+-   Klasy widoku, która wyświetla dane z klasy dokumentu wymienionych powyżej. Utworzeniu klasy pochodnej tej klasy z [CView](../../mfc/reference/cview-class.md), `CScrollView`, `CFormView`, lub `CEditView`. (Możesz również użyć `CEditView` bezpośrednio.)  
   
--   Klasy okna ramki, który zawiera widok. Dla szablonu dokumentów MDI może pochodzi ta klasa z `CMDIChildWnd`, lub jeśli nie potrzebujesz dostosować zachowanie okien ramowych dokumentu, można użyć [CMDIChildWnd](../../mfc/reference/cmdichildwnd-class.md) bezpośrednio, bez wyprowadzanie własne klasy.  
+-   Klasy okna ramki, który zawiera widok. W przypadku szablonu dokumentu MDI utworzeniu klasy pochodnej tej klasy z `CMDIChildWnd`, lub jeśli nie potrzebujesz dostosować zachowanie okien ramowych dokumentu, można użyć [CMDIChildWnd](../../mfc/reference/cmdichildwnd-class.md) bezpośrednio, bez wyprowadzanie własne klasy.  
   
- Aplikacja MDI może obsługiwać więcej niż jednego typu dokumentu, a dokumenty różnych typów może być otwarty, w tym samym czasie. Aplikacja ma jeden szablon dokumentu dla każdego typu dokumentu, który go obsługuje. Na przykład jeśli aplikacja MDI obsługuje arkusze kalkulacyjne i dokumenty tekstowe, aplikacja ma dwa `CMultiDocTemplate` obiektów.  
+ Aplikacja MDI może obsługiwać więcej niż jednego typu dokumentu i dokumenty o różnych typach może być otwarty, w tym samym czasie. Twoja aplikacja ma jeden szablon dokumentu dla każdego typu dokumentu, który ją obsługuje. Na przykład, jeśli aplikacja MDI obsługuje arkuszy kalkulacyjnych i dokumenty tekstowe, aplikacja ma dwa `CMultiDocTemplate` obiektów.  
   
- Aplikacja używa szablony dokumentu, podczas tworzenia nowego dokumentu. Jeśli aplikacja obsługuje więcej niż jednego typu dokumentu, ramach pobiera nazwy typów obsługiwanych dokumentu z szablonów dokumentów i wyświetla je na liście w oknie dialogowym Nowy plik. Gdy użytkownik wybrał typu dokumentu, aplikacja tworzy obiekt klasy dokumentu, obiekt window ramki i obiekt widoku i dołącza je do siebie.  
+ Aplikacja używa szablony dokumentu, gdy użytkownik tworzy nowy dokument. Jeśli aplikacja obsługuje więcej niż jeden typ dokumentu, struktura pobiera nazwy typów obsługiwanych dokumentu z szablonów dokumentów i wyświetla je na liście w oknie dialogowym Nowy plik. Po użytkownik wybrał typu dokumentu, aplikacja tworzy obiekt klasy dokumentu, obiekt okna ramki i obiekt widoku i dołącza je do siebie nawzajem.  
   
- Nie należy wywołać żadnego członka funkcji `CMultiDocTemplate` z wyjątkiem konstruktora. Uchwyty framework `CMultiDocTemplate` obiekty wewnętrznie.  
+ Nie musisz wywołać dowolny członek funkcji `CMultiDocTemplate` z wyjątkiem konstruktora. Uchwyty framework `CMultiDocTemplate` obiekty wewnętrznie.  
   
- Aby uzyskać więcej informacji na temat `CMultiDocTemplate`, zobacz [szablony dokumentów i proces tworzenia dokumentu/widoku](../../mfc/document-templates-and-the-document-view-creation-process.md).  
+ Aby uzyskać więcej informacji na temat `CMultiDocTemplate`, zobacz [szablonów dokumentów i proces tworzenia dokumentu/widoku](../../mfc/document-templates-and-the-document-view-creation-process.md).  
   
 ## <a name="inheritance-hierarchy"></a>Hierarchia dziedziczenia  
  [CObject](../../mfc/reference/cobject-class.md)  
   
  [CCmdTarget](../../mfc/reference/ccmdtarget-class.md)  
   
- [Cdoctemplate —](../../mfc/reference/cdoctemplate-class.md)  
+ [CDocTemplate](../../mfc/reference/cdoctemplate-class.md)  
   
  `CMultiDocTemplate`  
   
@@ -86,40 +86,38 @@ CMultiDocTemplate(
   
 ### <a name="parameters"></a>Parametry  
  *nIDResource*  
- Określa identyfikator zasoby używane do typu dokumentu. Może to obejmować menu, ikona tabeli akceleratora i zasoby ciągów.  
+ Określa identyfikator zasoby używane za pomocą typu dokumentu. Może to obejmować menu, ikony, tabeli akceleratora i zasoby w postaci ciągów.  
   
- Zasób ciągu składa się z maksymalnie siedem podciągów oddzielone znakiem "\n" (znak "\n" jest potrzebny jako symbolu zastępczego, jeśli nie dołączono podciągu jednak znakami "\n" nie są konieczne); te podciągów opisu typu dokumentu. Aby uzyskać informacje na podciągów, zobacz [CDocTemplate::GetDocString](../../mfc/reference/cdoctemplate-class.md#getdocstring). Ten zasób ciągu znajduje się w pliku zasobów aplikacji. Na przykład:  
+ Zasób ciągu składa się z maksymalnie siedem podciągów oddzielone znakiem "\n" (znak '\n' jest wymagane jako symbolu zastępczego, jeśli podciąg nie jest uwzględniony jednak nie są konieczne znaki końcowe '\n'); te podciągów opisują typ dokumentu. Aby uzyskać informacji na temat podciągów, zobacz [CDocTemplate::GetDocString](../../mfc/reference/cdoctemplate-class.md#getdocstring). Ten zasób ciągu znajduje się w pliku zasobów aplikacji. Na przykład:  
   
- `// MYCALC.RC`  
+```RC
+// MYCALC.RC
+STRINGTABLE PRELOAD DISCARDABLE
+BEGIN
+  IDR_SHEETTYPE "\nSheet\nWorksheet\nWorksheets (*.myc)\n.myc\n MyCalcSheet\nMyCalc Worksheet"
+END
+```
   
- `STRINGTABLE PRELOAD DISCARDABLE`  
-  
- `BEGIN`  
-  
- `IDR_SHEETTYPE "\nSheet\nWorksheet\nWorksheets (*.myc)\n.myc\n MyCalcSheet\nMyCalc Worksheet"`  
-  
- `END`  
-  
- Należy pamiętać, że ciąg rozpoczyna się od znaku "\n"; jest to spowodowane pierwszego podciągu nie jest używany przez aplikacje MDI i dlatego nie jest dołączana. Można edytować tego ciągu za pomocą Edytora ciągu; cały ciąg jest wyświetlany jako pojedynczy wpis w edytorze ciągu nie jako siedmiu oddzielne wpisy.  
+ Należy zauważyć, że ciąg rozpoczyna się od znaku '\n'; jest to spowodowane pierwszego podciągu nie jest używana dla aplikacji MDI, a zatem nie jest dołączony. Możesz edytować ten ciąg przy użyciu edytora ciągów; cały ciąg pojawi się jako pojedynczy wpis w edytorze ciągu nie jako siedmiu osobnych wpisów.  
   
  Aby uzyskać więcej informacji na temat tych typów zasobów, zobacz [edytory zasobów](../../windows/resource-editors.md).  
   
  *pDocClass*  
- Wskazuje `CRuntimeClass` obiekt klasy dokumentu. Ta klasa jest `CDocument`-klasy definiowane w celu odzwierciedlenia dokumentów.  
+ Wskazuje `CRuntimeClass` obiekt klasy dokumentu. Ta klasa jest `CDocument`— zdefiniuj do reprezentowania dokumentów klasy pochodnej.  
   
  *pFrameClass*  
- Wskazuje `CRuntimeClass` obiekt klasy okien ramowych. Ta klasa może być `CMDIChildWnd`-klasy lub może być `CMDIChildWnd` sam Jeśli domyślne zachowanie dla Twojego okien ramowych dokumentu.  
+ Wskazuje `CRuntimeClass` obiekt klasy okien ramowych. Ta klasa może być `CMDIChildWnd`-klasy pochodnej lub może być `CMDIChildWnd` sam chcącym domyślne zachowanie dla Twojego okien ramowych dokumentu.  
   
  *pViewClass*  
- Wskazuje `CRuntimeClass` obiekt klasy widoku. Ta klasa jest `CView`-klasy zdefiniuj do wyświetlania dokumentów.  
+ Wskazuje `CRuntimeClass` obiekt klasy widoku. Ta klasa jest `CView`— należy zdefiniować, aby wyświetlić swoje dokumenty klasy pochodnej.  
   
 ### <a name="remarks"></a>Uwagi  
- Dynamiczne przydzielanie jedną `CMultiDocTemplate` obiekt dla każdego typu dokumentu, który obsługuje i każdy z nich do przekazania aplikacji `CWinApp::AddDocTemplate` z `InitInstance` funkcji członkowskiej klasy aplikacji.  
+ Dynamiczne przydzielanie jeden `CMultiDocTemplate` obiekt dla każdego typu dokumentu, który obsługuje i przekazać każdy z nich w aplikacji `CWinApp::AddDocTemplate` z `InitInstance` funkcji składowej klasy aplikacji.  
   
 ### <a name="example"></a>Przykład  
  [!code-cpp[NVC_MFCDocView#92](../../mfc/codesnippet/cpp/cmultidoctemplate-class_1.cpp)]  
   
- Oto przykład drugiego.  
+ Oto przykład drugi.  
   
  [!code-cpp[NVC_MFCDocView#93](../../mfc/codesnippet/cpp/cmultidoctemplate-class_2.cpp)]  
   

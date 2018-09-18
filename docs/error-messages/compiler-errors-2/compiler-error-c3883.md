@@ -1,5 +1,5 @@
 ---
-title: C3883 błąd kompilatora | Dokumentacja firmy Microsoft
+title: Błąd kompilatora C3883 | Dokumentacja firmy Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,51 +16,52 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6841a0ab5b5f1c61159b11d2aa559863189580e2
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 4387eacb4e35c82af5c2617771b8c887dae42c4e
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33268856"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46045474"
 ---
-# <a name="compiler-error-c3883"></a>C3883 błąd kompilatora
-"var": element członkowski danych statycznych initonly musi zostać zainicjowany  
-  
- Oznaczonej jako zmienną [initonly](../../dotnet/initonly-cpp-cli.md) nie został poprawnie zainicjowany.  
-  
- Poniższy przykład generuje C3883:  
-  
-```  
-// C3883.cpp  
-// compile with: /clr  
-ref struct Y1 {  
-   initonly  
-   static int staticConst1;   // C3883  
-};  
-```  
-  
- W poniższym przykładzie pokazano możliwe rozwiązania:  
-  
-```  
-// C3883b.cpp  
-// compile with: /clr /c  
-ref struct Y1 {  
-   initonly  
-   static int staticConst2 = 0;  
-};  
-```  
-  
- Poniższy przykład pokazuje, jak zainicjować w konstruktorze statycznym:  
-  
-```  
-// C3883c.cpp  
-// compile with: /clr /LD  
-ref struct Y1 {  
-   initonly  
-   static int staticConst1;  
-  
-   static Y1() {  
-      staticConst1 = 0;  
-   }  
-};  
+# <a name="compiler-error-c3883"></a>Błąd kompilatora C3883
+
+"var": statyczna składowa danych initonly musi zostać zainicjowany
+
+Zmienna jest oznaczona za pomocą [initonly](../../dotnet/initonly-cpp-cli.md) nie został poprawnie zainicjowany.
+
+Poniższy przykład spowoduje wygenerowanie C3883:
+
+```
+// C3883.cpp
+// compile with: /clr
+ref struct Y1 {
+   initonly
+   static int staticConst1;   // C3883
+};
+```
+
+W poniższym przykładzie pokazano możliwe rozwiązania:
+
+```
+// C3883b.cpp
+// compile with: /clr /c
+ref struct Y1 {
+   initonly
+   static int staticConst2 = 0;
+};
+```
+
+Poniższy przykład pokazuje, jak zainicjować w konstruktorze statycznym:
+
+```
+// C3883c.cpp
+// compile with: /clr /LD
+ref struct Y1 {
+   initonly
+   static int staticConst1;
+
+   static Y1() {
+      staticConst1 = 0;
+   }
+};
 ```

@@ -1,5 +1,5 @@
 ---
-title: C3456 błąd kompilatora | Dokumentacja firmy Microsoft
+title: Błąd kompilatora C3456 | Dokumentacja firmy Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,16 +16,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 51a01c5bcb431f790d04526b6e8d20e9632eb7b3
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 2b0b98f62613bfec653375516e8e4157f239acd1
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33256499"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46075036"
 ---
-# <a name="compiler-error-c3456"></a>C3456 błąd kompilatora
-[source_annotation_attribute] niedozwolone w zarządzanych lub deklaracji klasy WinRT  
-  
- source_annotation_attribute służy do definiowania atrybutów niestandardowych, które mają być używane przez analizę kodu.  
-  
- Te atrybuty niestandardowe tylko są przydatne, jeśli istnieje odpowiedni wtyczkę, która obsługuje usługę atrybutu.
+# <a name="compiler-error-c3456"></a>Błąd kompilatora C3456
+
+[source_annotation_attribute] nie może w zarządzanych lub deklaracji klasy WinRT
+
+source_annotation_attribute jest używane do definiowania atrybutów niestandardowych, który będzie używany przez analizę kodu.
+
+Te atrybuty niestandardowe są użyteczne tylko w przypadku odpowiedni dodatek, który rozumie atrybutu.

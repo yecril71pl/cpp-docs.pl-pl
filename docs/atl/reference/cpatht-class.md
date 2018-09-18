@@ -59,12 +59,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 60541891832a3d466f7396086ac0918108991582
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: d95a8f6b28b638b65191bc04ad094cc128f7b247
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43753165"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46080314"
 ---
 # <a name="cpatht-class"></a>Klasa CPathT
 
@@ -82,7 +82,7 @@ class CPathT
 
 #### <a name="parameters"></a>Parametry
 
-*StringType*  
+*StringType*<br/>
 Klasa string ATL i MFC do użycia dla ścieżki (zobacz [CStringT](../../atl-mfc-shared/reference/cstringt-class.md)).
 
 ## <a name="members"></a>Elementy członkowskie
@@ -194,7 +194,7 @@ BOOL AddExtension(PCXSTR pszExtension);
 
 ### <a name="parameters"></a>Parametry
 
-*pszExtension*  
+*pszExtension*<br/>
 Rozszerzenie pliku do dodania.
 
 ### <a name="return-value"></a>Wartość zwracana
@@ -215,7 +215,7 @@ BOOL Append(PCXSTR pszMore);
 
 ### <a name="parameters"></a>Parametry
 
-*pszMore*  
+*pszMore*<br/>
 Ciąg do dołączenia.
 
 ### <a name="return-value"></a>Wartość zwracana
@@ -236,7 +236,7 @@ void BuildRoot(int iDrive);
 
 ### <a name="parameters"></a>Parametry
 
-*iDrive*  
+*iDrive*<br/>
 Liczba dysków (0 oznacza A:, to 1, b i tak dalej).
 
 ### <a name="remarks"></a>Uwagi
@@ -265,10 +265,10 @@ void Combine(PCXSTR pszDir, PCXSTR  pszFile);
 
 ### <a name="parameters"></a>Parametry
 
-*pszDir*  
+*pszDir*<br/>
 Ścieżka katalogu.
 
-*pszFile*  
+*pszFile*<br/>
 Ścieżka do pliku.
 
 ### <a name="remarks"></a>Uwagi
@@ -285,7 +285,7 @@ CPathT<StringType> CommonPrefix(PCXSTR pszOther);
 
 ### <a name="parameters"></a>Parametry
 
-*pszOther*  
+*pszOther*<br/>
 Ścieżka do porównania z bieżącym.
 
 ### <a name="return-value"></a>Wartość zwracana
@@ -306,10 +306,10 @@ BOOL CompactPath(HDC hDC, UINT nWidth);
 
 ### <a name="parameters"></a>Parametry
 
-*elementu hDC*  
+*elementu hDC*<br/>
 Kontekst urządzenia używane do miar czcionek.
 
-*nWidth*  
+*nWidth*<br/>
 Szerokość w pikselach, który ten ciąg zostanie wymuszone jego mieści się w.
 
 ### <a name="return-value"></a>Wartość zwracana
@@ -330,10 +330,10 @@ BOOL CompactPathEx(UINT nMaxChars, DWORD dwFlags = 0);
 
 ### <a name="parameters"></a>Parametry
 
-*nMaxChars*  
+*nMaxChars*<br/>
 Maksymalna liczba znaków, które mają być zawarte w nowy ciąg, w tym kończącego znaku NULL.
 
-*Flagidw*  
+*Flagidw*<br/>
 Zastrzeżone.
 
 ### <a name="return-value"></a>Wartość zwracana
@@ -356,10 +356,10 @@ CPathT() throw();
 
 ### <a name="parameters"></a>Parametry
 
-*pszPath*  
+*pszPath*<br/>
 Wskaźnik do ciągu ścieżki.
 
-*Ścieżka*  
+*Ścieżka*<br/>
 Ciąg ścieżki.
 
 ##  <a name="fileexists"></a>  CPathT::FileExists
@@ -480,7 +480,7 @@ BOOL IsPrefix(PCXSTR pszPrefix) const;
 
 ### <a name="parameters"></a>Parametry
 
-*pszPrefix*  
+*pszPrefix*<br/>
 Prefiks do wyszukania. Prefiks, który jest jednym z następujących typów: "C:\\\\",".","..",".. \\\\".
 
 ### <a name="return-value"></a>Wartość zwracana
@@ -533,7 +533,7 @@ BOOL IsSameRoot(PCXSTR pszOther) const;
 
 ### <a name="parameters"></a>Parametry
 
-*pszOther*  
+*pszOther*<br/>
 Innej ścieżki.
 
 ### <a name="return-value"></a>Wartość zwracana
@@ -630,7 +630,7 @@ BOOL MatchSpec(PCXSTR pszSpec) const;
 
 ### <a name="parameters"></a>Parametry
 
-*pszSpec*  
+*pszSpec*<br/>
 Wskaźnik na ciąg zakończony wartością null z typem pliku, który chcesz wyszukać. Na przykład, aby sprawdzić, czy plik w bieżącej ścieżce znajduje się plik DOC *pszSpec* powinna być ustawiona na "* .doc".
 
 ### <a name="return-value"></a>Wartość zwracana
@@ -651,7 +651,7 @@ CPathT<StringType>& operator+=(PCXSTR pszMore);
 
 ### <a name="parameters"></a>Parametry
 
-*pszMore*  
+*pszMore*<br/>
 Ciąg do dołączenia.
 
 ### <a name="return-value"></a>Wartość zwracana
@@ -744,16 +744,16 @@ BOOL RelativePathTo(
 
 ### <a name="parameters"></a>Parametry
 
-*pszFrom*  
+*pszFrom*<br/>
 Początek ścieżki względnej.
 
-*dwAttrFrom*  
+*dwAttrFrom*<br/>
 Atrybuty pliku *pszFrom*. Jeśli ta wartość zawiera FILE_ATTRIBUTE_DIRECTORY, *pszFrom* jest zakładanego katalogiem; w przeciwnym razie *pszFrom* zakłada, że plik.
 
-*pszTo*  
+*pszTo*<br/>
 Punkt końcowy ścieżki względnej.
 
-*dwAttrTo*  
+*dwAttrTo*<br/>
 Atrybuty pliku *pszTo*. Jeśli ta wartość zawiera FILE_ATTRIBUTE_DIRECTORY, *pszTo* jest zakładanego katalogiem; w przeciwnym razie *pszTo* zakłada, że plik.
 
 ### <a name="return-value"></a>Wartość zwracana
@@ -838,7 +838,7 @@ BOOL RenameExtension(PCXSTR pszExtension);
 
 ### <a name="parameters"></a>Parametry
 
-*pszExtension*  
+*pszExtension*<br/>
 Nowe rozszerzenie nazwy pliku jest poprzedzony przez "." znaków.
 
 ### <a name="return-value"></a>Wartość zwracana
@@ -919,5 +919,5 @@ typedef StringType::XCHAR XCHAR;
 
 ## <a name="see-also"></a>Zobacz też
 
-[Klasy](../../atl/reference/atl-classes.md)   
+[Klasy](../../atl/reference/atl-classes.md)<br/>
 [CStringT, klasa](../../atl-mfc-shared/reference/cstringt-class.md)

@@ -1,5 +1,5 @@
 ---
-title: C2082 błąd kompilatora | Dokumentacja firmy Microsoft
+title: Błąd kompilatora C2082 | Dokumentacja firmy Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,24 +16,25 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: bbbaa7f59b8853dd1b1ad0f2e839b00086db8eac
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: f6939bf628072fc1c5c4e72c0012e4a190d43864
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33172053"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46082407"
 ---
-# <a name="compiler-error-c2082"></a>C2082 błąd kompilatora
-ponowne zdefiniowanie formalnego parametru "identifier"  
-  
- Formalny parametr do funkcji jest ponownie zadeklarować w treści funkcji. Aby rozwiązać problem, Usuń zmiana definicji.  
-  
- Poniższy przykład generuje C2082:  
-  
-```  
-// C2082.cpp  
-void func(int i) {  
-   int i;   // C2082  
-   int ii;   // OK  
-}  
+# <a name="compiler-error-c2082"></a>Błąd kompilatora C2082
+
+ponowne zdefiniowanie formalnego parametru 'Identyfikator'
+
+Formalny parametr do funkcji jest ponownie zadeklarowany w treści funkcji. Aby naprawić błąd, należy usunąć ponowne zdefiniowanie.
+
+Poniższy przykład spowoduje wygenerowanie C2082:
+
+```
+// C2082.cpp
+void func(int i) {
+   int i;   // C2082
+   int ii;   // OK
+}
 ```

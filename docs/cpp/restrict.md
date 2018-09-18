@@ -17,12 +17,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b3eb361d0b92a3977547388ebfd612915431ec98
-ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
+ms.openlocfilehash: 955c3574358d59d23b644a31e42ee91ce6ce76eb
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/02/2018
-ms.locfileid: "39463684"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46068341"
 ---
 # <a name="restrict"></a>ograniczenie
 
@@ -32,21 +32,21 @@ W przypadku zastosowania do deklaracji lub definicji funkcji zwracającej wskaź
 
 ## <a name="syntax"></a>Składnia
 
-> **__declspec(restrict)** *pointer_return_type* *function*();  
-  
+> **__declspec(restrict)** *pointer_return_type* *function*();
+
 ## <a name="remarks"></a>Uwagi
 
 Kompilator propaguje **__declspec(restrict)**. Na przykład CRT `malloc` funkcja ma **__declspec(restrict)** dekoracji i dlatego kompilator zakłada, zainicjowanej do lokalizacji pamięci przez wskaźniki `malloc` nie jest także aliasowany przez wcześniej istniejące wskaźniki.
 
-Kompilator nie sprawdza, że zwrócony wskaźnik nie jest faktycznie aliasem. Jest odpowiedzialność deweloperów, aby upewnić się, program nie alias jest oznaczona za pomocą wskaźnika **ograniczyć __declspec** modyfikator.  
-  
+Kompilator nie sprawdza, że zwrócony wskaźnik nie jest faktycznie aliasem. Jest odpowiedzialność deweloperów, aby upewnić się, program nie alias jest oznaczona za pomocą wskaźnika **ograniczyć __declspec** modyfikator.
+
 Aby uzyskać podobną semantyką zmiennych, zobacz [element __restrict](../cpp/extension-restrict.md).
- 
+
 Dla innego adnotacji stosowaną w przypadku aliasów w funkcji, zobacz [__declspec(noalias)](../cpp/noalias.md).
-  
-Aby uzyskać informacje o **ograniczyć** Zobacz — słowo kluczowe, który jest częścią C++ AMP [ograniczenie (C++ AMP)](../cpp/restrict-cpp-amp.md).  
- 
-## <a name="example"></a>Przykład  
+
+Aby uzyskać informacje o **ograniczyć** Zobacz — słowo kluczowe, który jest częścią C++ AMP [ograniczenie (C++ AMP)](../cpp/restrict-cpp-amp.md).
+
+## <a name="example"></a>Przykład
 
 W poniższym przykładzie pokazano użycie **__declspec(restrict)**.
 
@@ -122,6 +122,7 @@ int main()
 **END specyficzny dla Microsoft**
 
 ## <a name="see-also"></a>Zobacz także
- [Słowa kluczowe](../cpp/keywords-cpp.md)  
- [__declspec](../cpp/declspec.md)  
- [__declspec(noalias)](../cpp/noalias.md)  
+
+[Słowa kluczowe](../cpp/keywords-cpp.md)<br/>
+[__declspec](../cpp/declspec.md)<br/>
+[__declspec(noalias)](../cpp/noalias.md)

@@ -1,5 +1,5 @@
 ---
-title: Kompilatora (poziom 4) ostrzeżenie C4295 | Dokumentacja firmy Microsoft
+title: Kompilator ostrzeżenie (poziom 4) C4295 | Dokumentacja firmy Microsoft
 ms.custom: ''
 ms.date: 1/09/2018
 ms.technology:
@@ -16,24 +16,24 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 815a669bc359121b13b1d636009cad81dc332304
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 36c6ac4d8c3e2899b744d1c456ae3079ec031698
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33296305"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46053586"
 ---
-# <a name="compiler-warning-level-4-c4295"></a>Kompilator C4295 ostrzegawcze (poziom 4)
-  
-> "*tablicy*": tablica jest zbyt mała, aby uwzględnić znak końcowy null  
-  
-Tablica został zainicjowany, ale ostatni znak w tablicy nie jest wartość null; Uzyskiwanie dostępu do tablicy jako ciąg może dać nieoczekiwane wyniki.  
-  
-## <a name="example"></a>Przykład  
-  
-Poniższy przykład generuje C4295. Aby rozwiązać ten problem, można deklarowaniu rozmiar tablicy większy, aby pomieścić zakończenia null z ciągu inicjatora, lub można użyć listy inicjatora tablicy można dokonać konwersji wyczyść zaznaczenie, że jest to tablica `char`, nie ciągu zakończonego wartością null.  
-  
-```C  
+# <a name="compiler-warning-level-4-c4295"></a>Kompilator ostrzeżenie (poziom 4) C4295
+
+> "*tablicy*": tablica jest zbyt mała, aby uwzględnić znak końcowy null
+
+Tablica został zainicjowany, ale ostatni znak w tablicy nie ma wartość null; Uzyskiwanie dostępu do tablicy jako ciąg może dać nieoczekiwane wyniki.
+
+## <a name="example"></a>Przykład
+
+Poniższy przykład spowoduje wygenerowanie C4295. Aby rozwiązać ten problem, można zadeklarować rozmiar tablicy większe, aby pomieścić zakończenia o wartości null z ciągu inicjatora lub możesz użyć listy inicjatora tablicy się wyczyść intencji, że jest to tablica `char`, nie ciąg zakończony znakiem null.
+
+```C
 // C4295.c
 // compile with: /W4
 

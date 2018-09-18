@@ -16,16 +16,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 96e95fbce8bb87638365c534f906de5c7ede282f
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: c84f65909ed17060ec4347975b7e7f34a782da95
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33199823"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46079027"
 ---
 # <a name="fatal-error-c1904"></a>Błąd krytyczny C1904
-Zły dostawcy interakcji: 'Plik'.  
-  
- Ten błąd wskazuje niepowodzenie dostawcy atrybutu.  
-  
- Uwaga okoliczności błąd, spróbuj ustalić przyczynę problemu, a następnie utwórz odtworzenia przypadek testowy, następnie skontaktuj się z [Porozmawiaj z nami](/visualstudio/ide/talk-to-us).
+
+Zły dostawca interakcji: 'Plik'
+
+Ten błąd wskazuje niepowodzenie dostawcę atrybutu.
+
+Należy pamiętać, okoliczności wystąpienia błędu, spróbuj ustalić przyczynę problemu, a następnie utwórz przypadek testowy do odtworzenia, skontaktuj się z [Porozmawiaj z nami](/visualstudio/ide/talk-to-us).

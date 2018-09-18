@@ -24,12 +24,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 43581995e8979ec733d8c82374896009c843166b
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 2359bb3909c803e4df1efdeef9058a3553908ff9
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43766649"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46074061"
 ---
 # <a name="cstringelementtraits-class"></a>Klasa CStringElementTraits
 
@@ -38,13 +38,13 @@ Ta klasa udostępnia statyczne funkcje używane przez klasy kolekcji przechowywa
 ## <a name="syntax"></a>Składnia
 
 ```
-template <typename T>  
+template <typename T>
 class CStringElementTraits
 ```
 
 #### <a name="parameters"></a>Parametry
 
-*T*  
+*T*<br/>
 Typ danych, które mają być przechowywane w kolekcji.
 
 ## <a name="members"></a>Elementy członkowskie
@@ -86,10 +86,10 @@ static bool CompareElements(INARGTYPE str1, INARGTYPE str2);
 
 ### <a name="parameters"></a>Parametry
 
-*str1*  
+*str1*<br/>
 Pierwszy ciąg elementu.
 
-*str2*  
+*str2*<br/>
 Drugi ciąg elementu.
 
 ### <a name="return-value"></a>Wartość zwracana
@@ -106,10 +106,10 @@ static int CompareElementsOrdered(INARGTYPE str1, INARGTYPE str2);
 
 ### <a name="parameters"></a>Parametry
 
-*str1*  
+*str1*<br/>
 Pierwszy ciąg elementu.
 
-*str2*  
+*str2*<br/>
 Drugi ciąg elementu.
 
 ### <a name="return-value"></a>Wartość zwracana
@@ -129,13 +129,13 @@ static void CopyElements(
 
 ### <a name="parameters"></a>Parametry
 
-*pDest*  
+*pDest*<br/>
 Wskaźnik do pierwszego elementu, który będzie otrzymywać dane skopiowane.
 
-*pSrc*  
+*pSrc*<br/>
 Wskaźnik do pierwszego elementu, aby skopiować.
 
-*nElements*  
+*nElements*<br/>
 Liczba elementów do skopiowania.
 
 ### <a name="remarks"></a>Uwagi
@@ -152,7 +152,7 @@ static ULONG Hash(INARGTYPE str);
 
 ### <a name="parameters"></a>Parametry
 
-*str*  
+*str*<br/>
 Element ciągu.
 
 ### <a name="return-value"></a>Wartość zwracana
@@ -188,13 +188,13 @@ static void RelocateElements(
 
 ### <a name="parameters"></a>Parametry
 
-*pDest*  
+*pDest*<br/>
 Wskaźnik do pierwszego elementu, który będzie otrzymywać dane przenoszone.
 
-*pSrc*  
+*pSrc*<br/>
 Wskaźnik do pierwszego elementu przenosić.
 
-*nElements*  
+*nElements*<br/>
 Liczba elementów do przeniesienia.
 
 ### <a name="remarks"></a>Uwagi
@@ -203,6 +203,6 @@ Ta funkcja statyczna wywołuje [memmove](../../c-runtime-library/reference/memmo
 
 ## <a name="see-also"></a>Zobacz też
 
-[Klasa CElementTraitsBase](../../atl/reference/celementtraitsbase-class.md)   
-[Klasa CStringElementTraitsI](../../atl/reference/cstringelementtraitsi-class.md)   
+[Klasa CElementTraitsBase](../../atl/reference/celementtraitsbase-class.md)<br/>
+[Klasa CStringElementTraitsI](../../atl/reference/cstringelementtraitsi-class.md)<br/>
 [Klasa — Przegląd](../../atl/atl-class-overview.md)

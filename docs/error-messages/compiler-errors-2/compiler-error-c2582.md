@@ -1,5 +1,5 @@
 ---
-title: C2582 błąd kompilatora | Dokumentacja firmy Microsoft
+title: Błąd kompilatora C2582 | Dokumentacja firmy Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,35 +16,36 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: bc8a926297f9b0762c629f031da6e12cbe528e87
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 11a78b03794da1e8178c7a65bb0ca5f3cc50867b
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33228816"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46083993"
 ---
-# <a name="compiler-error-c2582"></a>C2582 błąd kompilatora
-Funkcja "function" jest niedostępna w "type"  
-  
- Nastąpiła próba można przypisać do obiektu, który nie ma operatora przypisania.  
-  
- Poniższy przykład generuje C2582:  
-  
-```  
-// C2582.cpp  
-// compile with: /clr  
-using namespace System;  
-  
-struct N {};  
-ref struct O {};  
-ref struct R {  
-   property O prop;   // C2582  
-   property O ^ prop2;   // OK  
-};  
-  
-int main() {  
-   String ^ st1 = gcnew String("");  
-   ^st1 = gcnew String("");   // C2582  
-   st1 = "xxx";   // OK  
-}  
+# <a name="compiler-error-c2582"></a>Błąd kompilatora C2582
+
+Funkcja "function" jest niedostępna w "type"
+
+Nastąpiła próba można przypisać do obiektu, który nie ma operatora przypisania.
+
+Poniższy przykład spowoduje wygenerowanie C2582:
+
+```
+// C2582.cpp
+// compile with: /clr
+using namespace System;
+
+struct N {};
+ref struct O {};
+ref struct R {
+   property O prop;   // C2582
+   property O ^ prop2;   // OK
+};
+
+int main() {
+   String ^ st1 = gcnew String("");
+   ^st1 = gcnew String("");   // C2582
+   st1 = "xxx";   // OK
+}
 ```

@@ -16,32 +16,33 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e8f5b5d903fe1fb2d3182a7b08f7bf82ddf334fb
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 9852b7b3d695d5414e52727ce672ee3258f6840b
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33199252"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46077155"
 ---
 # <a name="fatal-error-c1092"></a>Błąd krytyczny C1092
-Edytuj i Kontynuuj nie obsługuje zmiany typów danych. Tworzenie wymagane  
-  
- Zmienione lub dodane do typu danych od czasu ostatniej zakończonej pomyślnie kompilacji.  
-  
--   Edytuj i Kontynuuj nie obsługuje zmian do istniejących typów danych, w tym definicje klasy, struktury lub wyliczenia. Musisz zatrzymać debugowanie i kompilowania aplikacji.  
-  
--   Edytuj i Kontynuuj nie obsługuje dodawania nowych typów danych, jeśli plik bazy danych programu, takie jak vc*x*pdb 0 (gdzie *x* jest wersję główną programu Visual C++ w użyciu) jest tylko do odczytu. Aby dodać typy danych, kompilator otworzyć plik PDB w trybie zapisu.  
-  
-### <a name="to-remove-this-error-without-ending-the-current-debug-session"></a>Aby usunąć ten błąd bez przerywania bieżącej sesji debugowania  
-  
-1.  Zmień typ danych do stanu sprzed rozpoczęcia błędu.  
-  
-2.  Z **debugowania** menu, wybierz **zastosowanie zmian kodu**.  
-  
-### <a name="to-remove-this-error-without-changing-your-source-code"></a>Aby usunąć ten błąd, bez konieczności zmieniania kodu źródłowego  
-  
-1.  Z **debugowania** menu, wybierz **Zatrzymaj debugowanie**.  
-  
-2.  Z **kompilacji** menu, wybierz **kompilacji**.  
-  
- Aby uzyskać więcej informacji, zobacz [obsługiwane zmiany kodu](/visualstudio/debugger/supported-code-changes-cpp).
+
+Edytuj i Kontynuuj nie obsługuje zmiany typów danych; Tworzenie wymagane
+
+Zmienione lub dodane typu danych od czasu ostatniej zakończonej pomyślnie kompilacji.
+
+- Edytuj i Kontynuuj nie obsługuje zmian do istniejących typów danych, w tym definicji klasy, struktury lub typu wyliczeniowego. Należy zatrzymać debugowanie i skompilować aplikację.
+
+- Edytuj i Kontynuuj nie obsługuje dodawania nowych typów danych, jeśli plik bazy danych programu, takie jak vc*x*pdb 0 (gdzie *x* jest główną wersją Visual C++ w użyciu) jest tylko do odczytu. Aby dodać typy danych, kompilator należy otworzyć plik .pdb w trybie zapisu.
+
+### <a name="to-remove-this-error-without-ending-the-current-debug-session"></a>Aby usunąć ten błąd nie kończy bieżącą sesję debugowania
+
+1. Zmiana typu danych, wróć do stanu przed błędu.
+
+1. Z **debugowania** menu, wybierz **zastosowanie zmian kodu**.
+
+### <a name="to-remove-this-error-without-changing-your-source-code"></a>Aby usunąć ten błąd bez wprowadzania zmian w kodzie źródłowym
+
+1. Z **debugowania** menu, wybierz **Zatrzymaj debugowanie**.
+
+1. Z **kompilacji** menu, wybierz **kompilacji**.
+
+Aby uzyskać więcej informacji, zobacz [obsługiwane zmiany kodu](/visualstudio/debugger/supported-code-changes-cpp).

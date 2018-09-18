@@ -1,5 +1,5 @@
 ---
-title: C4950 ostrzeżenia kompilatora | Dokumentacja firmy Microsoft
+title: Ostrzeżenie kompilatora C4950 | Dokumentacja firmy Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,35 +16,37 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 55221cc233c74e612dd4a521641be90a6dbf9314
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 750295da5d2da42ae4c2aac4fbb04dd208a7f32c
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33272028"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46072215"
 ---
-# <a name="compiler-warning-c4950"></a>C4950 ostrzeżenia kompilatora
-"type_or_member": oznaczony jako przestarzały  
-  
-Element członkowski lub typ był oznaczony jako przestarzały z <xref:System.ObsoleteAttribute> atrybutu.  
-  
-C4950 jest zawsze wystawione jako błąd. To ostrzeżenie można wyłączyć za pomocą [ostrzeżenie](../../preprocessor/warning.md) dyrektywa pragma lub [/wd](../../build/reference/compiler-option-warning-level.md) — opcja kompilatora.  
-  
-## <a name="example"></a>Przykład  
-Poniższy przykład generuje C4950:  
-  
-```cpp  
-// C4950.cpp  
-// compile with: /clr  
-using namespace System;  
-  
-// Any reference to Func3 should generate an error with message  
-[System::ObsoleteAttribute("Will be removed in next version", true)]  
-Int32 Func3(Int32 a, Int32 b) {  
-   return (a + b);  
-}  
-  
-int main() {  
-   Int32 MyInt3 = ::Func3(2, 2);   // C4950  
-}  
+# <a name="compiler-warning-c4950"></a>Ostrzeżenie kompilatora C4950
+
+"type_or_member": oznaczony jako przestarzały
+
+Element członkowski lub typ został oznaczony jako przestarzały z <xref:System.ObsoleteAttribute> atrybutu.
+
+C4950 zawsze jest wystawiany jako błąd. Możesz wyłączyć to ostrzeżenie używając [ostrzeżenie](../../preprocessor/warning.md) dyrektywa pragmy lub [/wd](../../build/reference/compiler-option-warning-level.md) — opcja kompilatora.
+
+## <a name="example"></a>Przykład
+
+Poniższy przykład spowoduje wygenerowanie C4950:
+
+```cpp
+// C4950.cpp
+// compile with: /clr
+using namespace System;
+
+// Any reference to Func3 should generate an error with message
+[System::ObsoleteAttribute("Will be removed in next version", true)]
+Int32 Func3(Int32 a, Int32 b) {
+   return (a + b);
+}
+
+int main() {
+   Int32 MyInt3 = ::Func3(2, 2);   // C4950
+}
 ```

@@ -20,12 +20,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e67849da9eebf9f150c4363e05a6f3fdcb943c0d
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: a13ec85cc393b1d7bff39f26866e48525e46d336
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43756392"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46071032"
 ---
 # <a name="atl-window-classes"></a>Klasy okien ALT
 
@@ -35,29 +35,29 @@ Ta sekcja zawiera opis klas okien ATL i wyjaśniono, jak z nich korzystać.
 
 ## <a name="in-this-section"></a>W tej sekcji
 
-[Wprowadzenie do klas okien ATL](../atl/introduction-to-atl-window-classes.md)  
+[Wprowadzenie do klas okien ATL](../atl/introduction-to-atl-window-classes.md)<br/>
 Krótko opisano każdej klasy okien ATL i zawiera łącza do materiał odniesienia na nich.
 
-[Korzystanie z okna](../atl/using-a-window.md)  
+[Korzystanie z okna](../atl/using-a-window.md)<br/>
 W tym artykule omówiono sposób używania `CWindow` manipulowanie oknem.
 
-[Implementowanie okna](../atl/implementing-a-window.md)  
+[Implementowanie okna](../atl/implementing-a-window.md)<br/>
 W tym artykule omówiono procedury obsługi komunikatów, mapy komunikatów i przy użyciu `CWindowImpl`. Zawiera szczegółowe informacje na temat superclassing i podklasy.
 
-[Implementowanie okna dialogowego](../atl/implementing-a-dialog-box.md)  
+[Implementowanie okna dialogowego](../atl/implementing-a-dialog-box.md)<br/>
 W tym artykule omówiono te dwie metody dodawania pola klasy okien dialogowych i zawiera przykładowy kod.
 
-[Używanie okien zawartych](../atl/using-contained-windows.md)  
+[Używanie okien zawartych](../atl/using-contained-windows.md)<br/>
 W tym artykule omówiono okien zawartych w ATL, których system Windows, który deleguje swoje wiadomości do obiektu kontenera, zamiast ich obsługę w swojej klasy.
 
-[Opis cech okna](../atl/understanding-window-traits.md)  
+[Opis cech okna](../atl/understanding-window-traits.md)<br/>
 W tym artykule omówiono klasy cech okna w ATL. Te klasy oferują prostą metodę standaryzacji stylów używany do utworzenia obiektu okna.
 
 ## <a name="related-sections"></a>Sekcje pokrewne
 
-[ATL](../atl/active-template-library-atl-concepts.md)  
+[ATL](../atl/active-template-library-atl-concepts.md)<br/>
 Zawiera łącza do tematów pojęciowych dotyczące programowania przy użyciu biblioteki Active Template Library.
 
-[Klasy obsługi okien](../atl/windows-support-classes.md)  
+[Klasy obsługi okien](../atl/windows-support-classes.md)<br/>
 Zawiera listę dodatkowych klasy ATL, które obsługują system windows i mapy komunikatów w ATL.
 

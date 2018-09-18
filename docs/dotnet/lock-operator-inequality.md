@@ -1,5 +1,5 @@
 ---
-title: Lock::operator — wartość! = | Dokumentacja firmy Microsoft
+title: Lock::operator, wartość! = | Dokumentacja firmy Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -20,12 +20,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: 6b34eb410e05bd102f7a10205e57b3731b8f476d
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: ca39249a73df4519c741182827036158169fd3ee
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33130350"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46043017"
 ---
 # <a name="lockoperator"></a>lock::operator!=
 Operator nierówności.  
@@ -39,8 +39,8 @@ template<class T> bool operator!=(
 ```  
   
 #### <a name="parameters"></a>Parametry  
- `t`  
- Obiekt do porównania pod kątem nierówności.  
+*t*<br/>
+Obiekt do porównania pod kątem nierówności.  
   
 ## <a name="return-value"></a>Wartość zwracana  
  Zwraca `true` Jeśli `t` różni się od obiektu blokady `false` inaczej.  
@@ -71,10 +71,10 @@ Inequal!
 ```  
   
 ## <a name="requirements"></a>Wymagania  
- **Plik nagłówka** \<msclr\lock.h >  
+ **Plik nagłówkowy** \<msclr\lock.h >  
   
  **Namespace** msclr  
   
 ## <a name="see-also"></a>Zobacz też  
- [elementy członkowskie Lock](../dotnet/lock-members.md)   
+ [Lock, składowe](../dotnet/lock-members.md)   
  [lock::operator==](../dotnet/lock-operator-equality.md)

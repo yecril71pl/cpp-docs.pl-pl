@@ -1,5 +1,5 @@
 ---
-title: C2670 błąd kompilatora | Dokumentacja firmy Microsoft
+title: Błąd kompilatora C2670 | Dokumentacja firmy Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,16 +16,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0579e22906e2acfa2d8aa3f2952ae05a7a44a5f6
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 7c3c41ff5e8aba8011a4e82c870f53a3f65455b8
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33233060"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46083187"
 ---
-# <a name="compiler-error-c2670"></a>C2670 błąd kompilatora
-"identyfikator": funkcja szablonu nie można skonwertować numer parametru typu "type"  
-  
- Nie można przekonwertować na wymagany typ parametru.  
-  
- Ten błąd może być ustalony w przypadku utworzenia jawnej konwersji.
+# <a name="compiler-error-c2670"></a>Błąd kompilatora C2670
+
+'Identyfikator': szablon funkcji nie można konwertować numeru parametru z typu "type"
+
+Nie można przekonwertować na wymagany typ parametru.
+
+Ten błąd może być ustalony, jeśli tworzysz jawnej konwersji.

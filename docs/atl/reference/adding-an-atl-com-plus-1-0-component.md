@@ -17,12 +17,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 537755ff7162c30c586eb813fecf643de816a351
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 099844710080d2c500996d5918a32c6eb4426541
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43751463"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46078143"
 ---
 # <a name="adding-an-atl-com-10-component"></a>Dodawanie składnika ATL COM + 1.0
 
@@ -38,6 +38,6 @@ Ten kreator dodaje obiekt do projektu, który obsługuje usługi COM + 1.0, w ty
 
 ## <a name="see-also"></a>Zobacz też
 
-[Dodawanie klasy](../../ide/adding-a-class-visual-cpp.md)   
+[Dodawanie klasy](../../ide/adding-a-class-visual-cpp.md)<br/>
 [Dodawanie metody](../../ide/adding-a-method-visual-cpp.md)
 

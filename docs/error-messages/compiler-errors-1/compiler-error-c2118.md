@@ -1,5 +1,5 @@
 ---
-title: C2118 błąd kompilatora | Dokumentacja firmy Microsoft
+title: Błąd kompilatora C2118 | Dokumentacja firmy Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,24 +16,25 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c27b4b253e2696b88763c2a9f99c0476f9c46dd5
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 91e79e396f707dc1462b17d9dd470527f199ad10
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33165246"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46081640"
 ---
-# <a name="compiler-error-c2118"></a>C2118 błąd kompilatora
-Indeks dolny ujemna  
-  
- Definiowanie rozmiaru tablicy wartości jest większy niż rozmiar maksymalny tablicy lub mniejszy od zera.  
-  
- Poniższy przykład generuje C2118:  
-  
-```  
-// C2118.cpp  
-int main() {  
-   int array1[-1];   // C2118  
-   int array2[3];   // OK  
-}  
+# <a name="compiler-error-c2118"></a>Błąd kompilatora C2118
+
+ujemny indeks dolny
+
+Wartość definiujący rozmiar tablicy jest większy niż maksymalny rozmiar tablicy lub mniejsza niż zero.
+
+Poniższy przykład spowoduje wygenerowanie C2118:
+
+```
+// C2118.cpp
+int main() {
+   int array1[-1];   // C2118
+   int array2[3];   // OK
+}
 ```

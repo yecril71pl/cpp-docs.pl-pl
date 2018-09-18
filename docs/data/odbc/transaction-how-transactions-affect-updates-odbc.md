@@ -19,23 +19,25 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: e540b68b820234ee6d30295b40c7e0f4cb7c806d
-ms.sourcegitcommit: 889a75be1232817150be1e0e8d4d7f48f5993af2
+ms.openlocfilehash: 21e6511a66129cb172ff10fedfa563bc4d663d19
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/30/2018
-ms.locfileid: "39338593"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46078520"
 ---
 # <a name="transaction-how-transactions-affect-updates-odbc"></a>Transakcja: jak transakcje wpływają na aktualizacje (ODBC)
+
 Aktualizacje [źródła danych](../../data/odbc/data-source-odbc.md) odbywa się podczas transakcji za pomocą edycji buforu (tej samej metody poza transakcji). Elementy członkowskie danych pola zestawu rekordów zbiorczo służyć jako bufor edycji, który zawiera rekord bieżący zestaw rekordów, tworzy kopię zapasową tymczasowego podczas `AddNew` lub `Edit`. Podczas `Delete` operacji, bieżący rekord nie jest obsługiwane w obrębie transakcji. Aby uzyskać więcej informacji na temat buforu edycji i jak aktualizacje przechowywać bieżącego rekordu, zobacz [zestaw rekordów: jak zestawy rekordów uaktualniają rekordy (ODBC)](../../data/odbc/recordset-how-recordsets-update-records-odbc.md).  
   
 > [!NOTE]
 >  Jeśli zaimplementowano zbiorcze pobieranie z wiersza, nie można wywołać `AddNew`, `Edit`, lub `Delete`. Zamiast tego trzeba napisać własne funkcje do wykonywania aktualizacji do źródła danych. Aby uzyskać więcej informacji na temat zbiorcze pobieranie z wiersza, zobacz [zestaw rekordów: pobieranie rekordów w zbiorcze (ODBC)](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md).  
   
- Podczas transakcji `AddNew`, `Edit`, i `Delete` operacji może być przekazana lub wycofana. Efekty `CommitTrans` i `Rollback` może spowodować, że nie można przywrócić do usługi buffer Edytuj bieżący rekord. Aby upewnić się, że bieżący rekord zostaną prawidłowo przywrócone, jest ważne, aby zrozumieć sposób, w jaki `CommitTrans` i `Rollback` funkcje elementów członkowskich `CDatabase` działają z funkcji aktualizacji `CRecordset`.  
+Podczas transakcji `AddNew`, `Edit`, i `Delete` operacji może być przekazana lub wycofana. Efekty `CommitTrans` i `Rollback` może spowodować, że nie można przywrócić do usługi buffer Edytuj bieżący rekord. Aby upewnić się, że bieżący rekord zostaną prawidłowo przywrócone, jest ważne, aby zrozumieć sposób, w jaki `CommitTrans` i `Rollback` funkcje elementów członkowskich `CDatabase` działają z funkcji aktualizacji `CRecordset`.  
   
 ##  <a name="_core_how_committrans_affects_updates"></a> Jak CommitTrans wpływa na aktualizacje  
- W poniższej tabeli opisano wpływ `CommitTrans` transakcji.  
+
+W poniższej tabeli opisano wpływ `CommitTrans` transakcji.  
   
 ### <a name="how-committrans-affects-updates"></a>Jak CommitTrans wpływa na aktualizacje  
   
@@ -48,7 +50,8 @@ Aktualizacje [źródła danych](../../data/odbc/data-source-odbc.md) odbywa się
 |`Delete` Następnie `CommitTrans`|Rekordy zostały usunięte ze źródła danych.|  
   
 ##  <a name="_core_how_rollback_affects_updates"></a> Wpływ wycofywania transakcji  
- W poniższej tabeli opisano wpływ `Rollback` transakcji.  
+
+W poniższej tabeli opisano wpływ `Rollback` transakcji.  
   
 ### <a name="how-rollback-affects-transactions"></a>Wpływ wycofywania transakcji  
   
@@ -61,8 +64,9 @@ Aktualizacje [źródła danych](../../data/odbc/data-source-odbc.md) odbywa się
 |`Delete` Następnie `Rollback`|Zawartość bieżącego rekordu zostanie usunięta.|Wywołaj `Requery` Aby przywrócić zawartość bieżący rekord ze źródła danych.|Usunięcie danych ze źródła danych zostanie odwrócony.|  
   
 ## <a name="see-also"></a>Zobacz też  
- [Transakcja (ODBC)](../../data/odbc/transaction-odbc.md)   
- [Transakcja (ODBC)](../../data/odbc/transaction-odbc.md)   
- [Transakcja: Wykonywanie transakcji w zestawie rekordów (ODBC)](../../data/odbc/transaction-performing-a-transaction-in-a-recordset-odbc.md)   
- [Klasa CDatabase](../../mfc/reference/cdatabase-class.md)   
- [Klasa CRecordset](../../mfc/reference/crecordset-class.md)
+
+[Transakcja (ODBC)](../../data/odbc/transaction-odbc.md)<br/>
+[Transakcja (ODBC)](../../data/odbc/transaction-odbc.md)<br/>
+[Transakcja: wykonywanie transakcji w zestawie rekordów (ODBC)](../../data/odbc/transaction-performing-a-transaction-in-a-recordset-odbc.md)<br/>
+[Klasa CDatabase](../../mfc/reference/cdatabase-class.md)<br/>
+[Klasa CRecordset](../../mfc/reference/crecordset-class.md)

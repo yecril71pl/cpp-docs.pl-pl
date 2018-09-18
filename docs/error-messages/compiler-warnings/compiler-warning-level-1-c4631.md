@@ -1,5 +1,5 @@
 ---
-title: Kompilatora (poziom 1) ostrzeżenie C4631 | Dokumentacja firmy Microsoft
+title: Kompilator ostrzeżenie (poziom 1) C4631 | Dokumentacja firmy Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,14 +16,15 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: dc158f56344e3c81d48deba3fe1c5cf29efa1404
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: c20493005933570df97a8e03bab7acc8bd4ae28f
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33284033"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46053807"
 ---
-# <a name="compiler-warning-level-1-c4631"></a>Kompilator C4631 ostrzegawcze (poziom 1)
-Oprogramowanie MSXML lub XPath niedostępny, nie będą przetwarzane komentarze dokumentu XML. Przyczyna  
-  
- Instalacji środowiska uruchomieniowego języka wspólnego nie miał pliki niezbędne do obsługi przetwarzania dokumentów komentarza. Zainstaluj ponownie środowisko uruchomieniowe języka wspólnego.
+# <a name="compiler-warning-level-1-c4631"></a>Kompilator ostrzeżenie (poziom 1) C4631
+
+Oprogramowanie MSXML lub XPath niedostępna, dokumentu XML, które nie będą przetwarzane komentarze. Przyczyna
+
+Nie ma pliki niezbędne do obsługi przetwarzania komentarza dokumentacji instalacji środowiska uruchomieniowego języka wspólnego. W takiej sytuacji zainstaluj ponownie środowisko uruchomieniowe języka wspólnego.

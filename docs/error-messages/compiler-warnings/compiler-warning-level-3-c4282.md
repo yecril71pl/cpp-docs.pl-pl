@@ -1,5 +1,5 @@
 ---
-title: Kompilatora (poziom 3) ostrzeżenie C4282 | Dokumentacja firmy Microsoft
+title: Kompilator ostrzeżenie (poziom 3) C4282 | Dokumentacja firmy Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,14 +16,15 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ed5c72ba0e90389bbae09473bf25454aa1901149
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 1025648a71d96f758a6444984f7c682df9d7904e
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33289597"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46080951"
 ---
-# <a name="compiler-warning-level-3-c4282"></a>Kompilator C4282 ostrzegawcze (poziom 3)
-następnie za pomocą typu "type"  
-  
- Ta kontynuacji ostrzeżenie C4281shows który **operator ->** wywołuje się za pośrednictwem `type`.
+# <a name="compiler-warning-level-3-c4282"></a>Kompilator ostrzeżenie (poziom 3) C4282
+
+następnie za pośrednictwem typu "type"
+
+Ostrzeżenie C4281shows kontynuacji, **operator ->** wywołuje sam siebie za pośrednictwem `type`.

@@ -1,5 +1,5 @@
 ---
-title: C2222 błąd kompilatora | Dokumentacja firmy Microsoft
+title: Błąd kompilatora C2222 | Dokumentacja firmy Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,14 +16,15 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 78679021289e41ed9c584abdd94348b55e30184e
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 4f97e96a7a5548de25ba9b0b45f76e4cdef87baa
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33170040"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46072592"
 ---
-# <a name="compiler-error-c2222"></a>C2222 błąd kompilatora
-Nieoczekiwany typ 'type': Oczekiwano klasy bazowej lub elementu członkowskiego  
-  
- Na liście inicjatora tylko można zainicjować klasy podstawowej lub elementy członkowskie typu. Aby naprawić ten błąd, sprawdź, czy tylko bazowe klasy lub elementy członkowskie tego typu są inicjowane na liście inicjatora.
+# <a name="compiler-error-c2222"></a>Błąd kompilatora C2222
+
+Nieoczekiwany typ "type": Oczekiwano klasy bazowej lub składowej
+
+Listy inicjatorów tylko można zainicjować klas podstawowych lub elementów członkowskich typu. Aby naprawić ten błąd, sprawdź, czy tylko podstawowe klasy lub elementy członkowskie tego typu są inicjowane na liście inicjatora.

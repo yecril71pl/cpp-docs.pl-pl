@@ -45,12 +45,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: fff071ad298d379dd8d063d5f71287da9a567b49
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 74d36c7b13be3653a0c17f763e37447d5541c5a3
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43755566"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46086463"
 ---
 # <a name="catlservicemodulet-class"></a>Klasa CAtlServiceModuleT
 
@@ -62,16 +62,16 @@ Ta klasa implementuje usługi.
 ## <a name="syntax"></a>Składnia
 
 ```
-template <class T, UINT nServiceNameID>  
+template <class T, UINT nServiceNameID>
 class ATL_NO_VTABLE CAtlServiceModuleT : public CAtlExeModuleT<T>
 ```
 
 #### <a name="parameters"></a>Parametry
 
-*T*  
+*T*<br/>
 Klasa jest pochodną `CAtlServiceModuleT`.
 
-*nServiceNameID*  
+*nServiceNameID*<br/>
 Identyfikator zasobu usługi.
 
 ## <a name="members"></a>Elementy członkowskie
@@ -163,7 +163,7 @@ void Handler(DWORD dwOpcode) throw();
 
 ### <a name="parameters"></a>Parametry
 
-*dwOpcode*  
+*dwOpcode*<br/>
 Przełącznik, który definiuje procedurę obsługi operacji. Aby uzyskać szczegółowe informacje Zobacz uwagi.
 
 ### <a name="remarks"></a>Uwagi
@@ -246,10 +246,10 @@ void __cdecl LogEvent(LPCTSTR pszFormat, ...) throw();
 
 ### <a name="parameters"></a>Parametry
 
-*pszFormat*  
+*pszFormat*<br/>
 Ciąg do zapisu w dzienniku zdarzeń.
 
-...  
+*...*<br/>
 Opcjonalne dodatkowe ciągi są zapisywane w dzienniku zdarzeń.
 
 ### <a name="remarks"></a>Uwagi
@@ -366,7 +366,7 @@ void OnUnknownRequest(DWORD /* dwOpcode*/) throw();
 
 ### <a name="parameters"></a>Parametry
 
-*dwOpcode*  
+*dwOpcode*<br/>
 Zastrzeżone.
 
 ##  <a name="parsecommandline"></a>  CAtlServiceModuleT::ParseCommandLine
@@ -379,10 +379,10 @@ bool ParseCommandLine(LPCTSTR lpCmdLine, HRESULT* pnRetCode) throw();
 
 ### <a name="parameters"></a>Parametry
 
-*lpCmdLine*  
+*lpCmdLine*<br/>
 Wiersz polecenia.
 
-*pnRetCode*  
+*pnRetCode*<br/>
 Wartość HRESULT odpowiadający rejestracji (jeśli miało to miejsce).
 
 ### <a name="return-value"></a>Wartość zwracana
@@ -403,7 +403,7 @@ HRESULT PreMessageLoop(int nShowCmd) throw();
 
 ### <a name="parameters"></a>Parametry
 
-*nShowCmd*  
+*nShowCmd*<br/>
 Ten parametr jest przekazywany do [CAtlExeModuleT::PreMessageLoop](../../atl/reference/catlexemodulet-class.md#premessageloop).
 
 ### <a name="return-value"></a>Wartość zwracana
@@ -424,7 +424,7 @@ inline HRESULT RegisterAppId(bool bService = false) throw();
 
 ### <a name="parameters"></a>Parametry
 
-*bUsługa*  
+*bUsługa*<br/>
 Muszą być spełnione, aby zarejestrować się jako usługa.
 
 ### <a name="return-value"></a>Wartość zwracana
@@ -441,7 +441,7 @@ HRESULT Run(int nShowCmd = SW_HIDE) throw();
 
 ### <a name="parameters"></a>Parametry
 
-*nShowCmd*  
+*nShowCmd*<br/>
 Określa, jak ma być wyświetlana okna. Ten parametr może być jedną z wartości omówione w [WinMain](https://msdn.microsoft.com/library/windows/desktop/ms633559) sekcji. Wartość domyślna to SW_HIDE.
 
 ### <a name="return-value"></a>Wartość zwracana
@@ -462,10 +462,10 @@ void ServiceMain(DWORD dwArgc, LPTSTR* lpszArgv) throw();
 
 ### <a name="parameters"></a>Parametry
 
-*dwArgc*  
+*dwArgc*<br/>
 Argc — argument.
 
-*lpszArgv*  
+*lpszArgv*<br/>
 ARGV — argument.
 
 ### <a name="remarks"></a>Uwagi
@@ -484,7 +484,7 @@ void SetServiceStatus(DWORD dwState) throw();
 
 ### <a name="parameters"></a>Parametry
 
-*dwState*  
+*dwState*<br/>
 Nowy stan. Zobacz [SetServiceStatus](/windows/desktop/api/winsvc/nf-winsvc-setservicestatus) uzyskać odpowiednie wartości.
 
 ### <a name="remarks"></a>Uwagi
@@ -501,7 +501,7 @@ HRESULT Start(int nShowCmd) throw();
 
 ### <a name="parameters"></a>Parametry
 
-*nShowCmd*  
+*nShowCmd*<br/>
 Określa, jak ma być wyświetlana okna. Ten parametr może być jedną z wartości omówione w [WinMain](https://msdn.microsoft.com/library/windows/desktop/ms633559) sekcji.
 
 ### <a name="return-value"></a>Wartość zwracana
@@ -562,7 +562,7 @@ int WinMain(int nShowCmd) throw();
 
 ### <a name="parameters"></a>Parametry
 
-*nShowCmd*  
+*nShowCmd*<br/>
 Określa, jak ma być wyświetlana okna. Ten parametr może być jedną z wartości omówione w [WinMain](https://msdn.microsoft.com/library/windows/desktop/ms633559) sekcji.
 
 ### <a name="return-value"></a>Wartość zwracana
@@ -575,5 +575,5 @@ Ta metoda przetwarza wiersza polecenia (przy użyciu [CAtlServiceModuleT::ParseC
 
 ## <a name="see-also"></a>Zobacz też
 
-[Klasa CAtlExeModuleT](../../atl/reference/catlexemodulet-class.md)   
+[Klasa CAtlExeModuleT](../../atl/reference/catlexemodulet-class.md)<br/>
 [Klasa — Przegląd](../../atl/atl-class-overview.md)

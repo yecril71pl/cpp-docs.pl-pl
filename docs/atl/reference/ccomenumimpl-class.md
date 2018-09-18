@@ -28,12 +28,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: aab6e168970ff740f68d1338a05d51c691fd116d
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 2cf80d51cdf45b6298255a252124ace9568953b1
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43759990"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46082530"
 ---
 # <a name="ccomenumimpl-class"></a>Klasa CComEnumImpl
 
@@ -43,22 +43,22 @@ Ta klasa zawiera implementację interfejsu modułu wyliczającego COM, gdzie ele
 
 ```
 template <class Base,
-    const IID* piid, class T, class Copy>  
+    const IID* piid, class T, class Copy>
 class ATL_NO_VTABLE CComEnumImpl : public Base
 ```
 
 #### <a name="parameters"></a>Parametry
 
-*podstawowy*  
+*podstawowy*<br/>
 Moduł wyliczający interfejsu COM. Zobacz [IEnumString](/windows/desktop/api/objidl/nn-objidl-ienumstring) przykład.
 
-*piid*  
+*piid*<br/>
 Wskaźnik do Identyfikatora interfejsu interfejsu modułu wyliczającego.
 
-*T*  
+*T*<br/>
 Typ elementu udostępnianych przez interfejs modułu wyliczającego.
 
-*Kopiuj*  
+*Kopiuj*<br/>
 Jednorodnej [kopiowania klasy zasad](../../atl/atl-copy-policy-classes.md).
 
 ## <a name="members"></a>Elementy członkowskie
@@ -143,16 +143,16 @@ HRESULT Init(
 
 ### <a name="parameters"></a>Parametry
 
-*begin*  
+*begin*<br/>
 Wskaźnik do pierwszego elementu tablicy, zawierające elementy do wyliczenia.
 
-*koniec*  
+*koniec*<br/>
 Wskaźnik do lokalizacji tuż za ostatnim elementem tablicę zawierającą elementy do wyliczenia.
 
-*pUnk*  
+*pUnk*<br/>
 [in] `IUnknown` Wskaźnika obiektu, który musi znajdować się aktywne w okresie istnienia modułu wyliczającego. Przekaż wartość NULL, jeśli taki obiekt nie istnieje.
 
-*flagi*  
+*flagi*<br/>
 Flagi, określające, czy moduł wyliczający należy przejęcie na własność tablicy lub utworzyć kopię. Możliwe wartości są opisane poniżej.
 
 ### <a name="return-value"></a>Wartość zwracana
@@ -167,13 +167,13 @@ Jeśli przekazać wskaźniki do elementów w tablicy przechowywane w innym obiek
 
 *Flagi* parametr umożliwia określenie, jak moduł wyliczający powinny traktować przekazany do niej elementy tablicy. *flagi* może mieć jedną z wartości z `CComEnumFlags` wyliczenie pokazano poniżej:
 
-```  
-enum CComEnumFlags  
-   {  
-   AtlFlagNoCopy = 0,  
-   AtlFlagTakeOwnership = 2, // BitOwn  
-   AtlFlagCopy = 3           // BitOwn | BitCopy  
-   };  
+```
+enum CComEnumFlags
+   {
+   AtlFlagNoCopy = 0,
+   AtlFlagTakeOwnership = 2, // BitOwn
+   AtlFlagCopy = 3           // BitOwn | BitCopy
+   };
 ```
 
 `AtlFlagNoCopy` oznacza to, że okres istnienia tablicy nie są kontrolowane przez moduł wyliczający. W tym przypadku tablica będzie statyczny lub obiekt identyfikowane przez *pUnk* będzie odpowiedzialny za opłacenie zwalnianie tablicy, gdy nie jest już potrzebny.
@@ -195,7 +195,7 @@ STDMETHOD(Clone)(Base** ppEnum);
 
 ### <a name="parameters"></a>Parametry
 
-*ppEnum*  
+*ppEnum*<br/>
 [out] Sklonowany interfejsu modułu wyliczającego na nowo utworzony obiekt z bieżącego modułu wyliczającego.
 
 ### <a name="return-value"></a>Wartość zwracana
@@ -256,13 +256,13 @@ STDMETHOD(Next)(ULONG celt, T* rgelt, ULONG* pceltFetched);
 
 ### <a name="parameters"></a>Parametry
 
-*celt*  
+*celt*<br/>
 [in] Liczba elementów żądanie.
 
-*rgelt*  
+*rgelt*<br/>
 [out] Tablica, która ma zostać wypełniony przy użyciu elementów.
 
-*pceltFetched*  
+*pceltFetched*<br/>
 [out] Liczba elementów, które faktycznie są zwracane w *rgelt*. Może to być mniejszy niż *celt* Jeśli mniej niż *celt* elementy pozostają na liście.
 
 ### <a name="return-value"></a>Wartość zwracana
@@ -291,7 +291,7 @@ STDMETHOD(Skip)(ULONG celt);
 
 ### <a name="parameters"></a>Parametry
 
-*celt*  
+*celt*<br/>
 [in] Liczba elementów do pominięcia.
 
 ### <a name="return-value"></a>Wartość zwracana
@@ -304,6 +304,6 @@ Zwraca E_INVALIDARG, jeśli *celt* wynosi zero, zwraca wartość S_FALSE, jeśli
 
 ## <a name="see-also"></a>Zobacz też
 
-[Klasa IEnumOnSTLImpl](../../atl/reference/ienumonstlimpl-class.md)   
-[Klasa CComEnum](../../atl/reference/ccomenum-class.md)   
+[Klasa IEnumOnSTLImpl](../../atl/reference/ienumonstlimpl-class.md)<br/>
+[Klasa CComEnum](../../atl/reference/ccomenum-class.md)<br/>
 [Klasa — Przegląd](../../atl/atl-class-overview.md)

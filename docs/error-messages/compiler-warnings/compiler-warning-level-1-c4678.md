@@ -1,5 +1,5 @@
 ---
-title: Kompilatora (poziom 1) ostrzeżenie C4678 | Dokumentacja firmy Microsoft
+title: Kompilator ostrzeżenie (poziom 1) C4678 | Dokumentacja firmy Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,16 +16,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 73871d69198752e12a629d441982c2da47146517
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 81eb7df618f97300c2654cc0f4f7a58d18215b26
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33284241"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46076102"
 ---
-# <a name="compiler-warning-level-1-c4678"></a>Kompilator C4678 ostrzegawcze (poziom 1)
-Klasa podstawowa "base_type" jest mniej dostępny niż "derived_type"  
-  
-Publiczny typ pochodzi z typu prywatne. Jeśli wystąpienia typu publicznego w przywoływanym zestawie członków prywatnych typu podstawowego nie będą dostępne.  
-  
-C4678 jest tylko przy użyciu opcji kompilatora przestarzałe **: oldsyntax**. Jest to błąd, używając **/CLR**, aby mieć klasy podstawowej, która jest mniej dostępny który jego klasy pochodnej.  
+# <a name="compiler-warning-level-1-c4678"></a>Kompilator ostrzeżenie (poziom 1) C4678
+
+Klasa bazowa "base_type" jest mniej dostępny niż "derived_type"
+
+Typ publiczny pochodzi od typu prywatnego. Typ publiczny jest tworzone wystąpienie w przywoływanym zestawie elementów członkowskich prywatnych typu podstawowego nie będzie dostępny.
+
+C4678 jest dostępna, przy użyciu opcji kompilatora przestarzałe **: oldsyntax**. Jest to błąd, korzystając z **/CLR**, aby mieć klasę bazową, która jest mniej dostępny, jego klasy pochodnej.

@@ -16,21 +16,22 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 7be7709baadff35c10cec861b4a0bca94c8cbe5f
-ms.sourcegitcommit: 889a75be1232817150be1e0e8d4d7f48f5993af2
+ms.openlocfilehash: 681aa3ef5a1434ab191854f23a9e7bc908b65728
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/30/2018
-ms.locfileid: "39337173"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46082420"
 ---
 # <a name="implementing-a-simple-consumer"></a>Implementowanie prostego konsumenta
+
 Poniższe tematy przedstawiają sposób edytowania plików utworzonych przez Kreatora aplikacji MFC i ATL OLE DB Kreator konsumenta Tworzenie prostego konsumenta. W tym przykładzie ma następujące elementy:  
   
--   "Pobieranie danych z konsumentem" pokazuje, jak zaimplementować kod u odbiorcy, która odczytuje dane, wiersz po wierszu z tabeli bazy danych.  
+- "Pobieranie danych z konsumentem" pokazuje, jak zaimplementować kod u odbiorcy, która odczytuje dane, wiersz po wierszu z tabeli bazy danych.  
   
--   "Dodawanie pozycję obsługują zakładki do odbiorcy" pokazuje, jak dodać obsługę zakładki do konsumenta.  
+- "Dodawanie pozycję obsługują zakładki do odbiorcy" pokazuje, jak dodać obsługę zakładki do konsumenta.  
   
--   "Dodawanie obsługi XML do odbiorcy" pokazuje, jak zmodyfikować kod klienta do wysyłania danych odzyskanych wierszy danych XML.  
+- "Dodawanie obsługi XML do odbiorcy" pokazuje, jak zmodyfikować kod klienta do wysyłania danych odzyskanych wierszy danych XML.  
   
 > [!NOTE]
 >  Aplikacji konsumentów, opisane w tej sekcji służy do testowania dostawcy próbki MyProv i dostawcy.  
@@ -45,7 +46,7 @@ Poniższe tematy przedstawiają sposób edytowania plików utworzonych przez Kre
   
 #### <a name="to-modify-the-console-application-to-use-the-ole-db-consumer"></a>Aby zmodyfikować aplikację konsolową używać konsumenta OLE DB  
   
-1.  W MyCons.cpp Zmień głównego kodu, wstawiając pogrubioną czcionką w następujący sposób:  
+1. W MyCons.cpp Zmień głównego kodu, wstawiając pogrubioną czcionką w następujący sposób:  
   
     ```cpp  
     // MyCons.cpp : Defines the entry point for the console application.  
@@ -73,30 +74,31 @@ Poniższe tematy przedstawiają sposób edytowania plików utworzonych przez Kre
     ```  
   
 ## <a name="adding-bookmark-support-to-the-consumer"></a>Dodawanie obsługi zakładki do konsumenta  
- Zakładka jest kolumna, która unikatowo identyfikuje wierszy w tabeli. Zazwyczaj jest kolumna klucza, ale nie zawsze; jest specyficzny dla dostawcy. W tej sekcji dowiesz się, jak dodać obsługę zakładki. Aby to zrobić, należy wykonać następujące czynności w klasie rekord użytkownika:  
+
+Zakładka jest kolumna, która unikatowo identyfikuje wierszy w tabeli. Zazwyczaj jest kolumna klucza, ale nie zawsze; jest specyficzny dla dostawcy. W tej sekcji dowiesz się, jak dodać obsługę zakładki. Aby to zrobić, należy wykonać następujące czynności w klasie rekord użytkownika:  
   
--   Tworzy zakładki. Są to obiekty typu [CBookmark](../../data/oledb/cbookmark-class.md).  
+- Tworzy zakładki. Są to obiekty typu [CBookmark](../../data/oledb/cbookmark-class.md).  
   
--   Żądanie kolumnę zakładki z dostawcy, ustawiając `DBPROP_IRowsetLocate` właściwości.  
+- Żądanie kolumnę zakładki z dostawcy, ustawiając `DBPROP_IRowsetLocate` właściwości.  
   
--   Dodaj wpis zakładki do mapy kolumny przy użyciu [BOOKMARK_ENTRY](../../data/oledb/bookmark-entry.md) makra.  
+- Dodaj wpis zakładki do mapy kolumny przy użyciu [BOOKMARK_ENTRY](../../data/oledb/bookmark-entry.md) makra.  
   
- Poprzednie kroki umożliwiają Obsługa zakładek i obiekt zakładki, z którą chcesz pracować. Ten przykład kodu pokazuje zakładki w następujący sposób:  
+Poprzednie kroki umożliwiają Obsługa zakładek i obiekt zakładki, z którą chcesz pracować. Ten przykład kodu pokazuje zakładki w następujący sposób:  
   
--   Otwórz plik do zapisu.  
+- Otwórz plik do zapisu.  
   
--   Zestaw wierszy dane wyjściowe do pliku wiersz po wierszu.  
+- Zestaw wierszy dane wyjściowe do pliku wiersz po wierszu.  
   
--   Przesunięcie kursora wierszy do zakładki, wywołując [movetobookmark —](../../data/oledb/crowset-movetobookmark.md).  
+- Przesunięcie kursora wierszy do zakładki, wywołując [movetobookmark —](../../data/oledb/crowset-movetobookmark.md).  
   
--   Dane wyjściowe wiersza zakładką, dołączenie jej do końca pliku.  
+- Dane wyjściowe wiersza zakładką, dołączenie jej do końca pliku.  
   
 > [!NOTE]
 >  Jeśli używasz tej aplikacji klienta do testowania Przykładowa aplikacja dostawcy dostawcy Opuść Obsługa zakładek, opisane w tej sekcji.  
   
 #### <a name="to-instantiate-the-bookmark"></a>Aby utworzyć wystąpienie zakładki  
   
-1.  Metoda dostępu musi zawierać obiektu typu [CBookmark](../../data/oledb/cbookmark-class.md). *NSize* parametr określa rozmiar buforu zakładki w bajtach (zwykle 4 dla platform 32-bitowe) i 8 na platformach 64-bitowych. Do elementów członkowskich danych kolumny w klasie rekord użytkownika, należy dodać następującą deklarację:  
+1. Metoda dostępu musi zawierać obiektu typu [CBookmark](../../data/oledb/cbookmark-class.md). *NSize* parametr określa rozmiar buforu zakładki w bajtach (zwykle 4 dla platform 32-bitowe) i 8 na platformach 64-bitowych. Do elementów członkowskich danych kolumny w klasie rekord użytkownika, należy dodać następującą deklarację:  
   
     ```cpp  
     //////////////////////////////////////////////////////////////////////  
@@ -111,7 +113,7 @@ Poniższe tematy przedstawiają sposób edytowania plików utworzonych przez Kre
   
 #### <a name="to-request-a-bookmark-column-from-the-provider"></a>Żądanie kolumnę zakładki z dostawcy  
   
-1.  Dodaj następujący kod w `GetRowsetProperties` metody w klasie rekordu użytkownika:  
+1. Dodaj następujący kod w `GetRowsetProperties` metody w klasie rekordu użytkownika:  
   
     ```cpp  
     // Set the DBPROP_IRowsetLocate property.  
@@ -125,7 +127,7 @@ Poniższe tematy przedstawiają sposób edytowania plików utworzonych przez Kre
   
 #### <a name="to-add-a-bookmark-entry-to-the-column-map"></a>Aby dodać wpis zakładki do mapy kolumny  
   
-1.  Dodaj następujący wpis do mapy kolumny w klasie rekord użytkownika:  
+1. Dodaj następujący wpis do mapy kolumny w klasie rekord użytkownika:  
   
     ```cpp  
     // Set a bookmark entry in the column map.  
@@ -139,7 +141,7 @@ Poniższe tematy przedstawiają sposób edytowania plików utworzonych przez Kre
   
 #### <a name="to-use-a-bookmark-in-your-main-code"></a>Aby użyć zakładki w kodzie głównego  
   
-1.  W pliku MyCons.cpp z aplikacji konsoli, który został wcześniej utworzony Zmień głównego kodu do odczytu w następujący sposób. Aby użyć zakładek, trzeba utworzyć swój własny obiektu zakładki głównego kodu (`myBookmark`); jest to zakładki innego niż ten, w metodzie dostępu (`m_bookmark`).  
+1. W pliku MyCons.cpp z aplikacji konsoli, który został wcześniej utworzony Zmień głównego kodu do odczytu w następujący sposób. Aby użyć zakładek, trzeba utworzyć swój własny obiektu zakładki głównego kodu (`myBookmark`); jest to zakładki innego niż ten, w metodzie dostępu (`m_bookmark`).  
   
     ```cpp  
     ///////////////////////////////////////////////////////////////////////  
@@ -208,14 +210,15 @@ Poniższe tematy przedstawiają sposób edytowania plików utworzonych przez Kre
     }  
     ```  
   
- Aby uzyskać więcej informacji na temat zakładek, zobacz [przy użyciu zakładki](../../data/oledb/using-bookmarks.md). Przykłady zakładki są także wyświetlane w [aktualizowanie zestawów wierszy](../../data/oledb/updating-rowsets.md).  
+Aby uzyskać więcej informacji na temat zakładek, zobacz [przy użyciu zakładki](../../data/oledb/using-bookmarks.md). Przykłady zakładki są także wyświetlane w [aktualizowanie zestawów wierszy](../../data/oledb/updating-rowsets.md).  
   
 ## <a name="adding-xml-support-to-the-consumer"></a>Dodawanie obsługi XML do konsumenta  
- Zgodnie z opisem w [uzyskiwania dostępu do danych XML](../../data/oledb/accessing-xml-data.md), istnieją dwa sposoby, aby pobrać dane XML ze źródła danych: za pomocą [cstreamrowset —](../../data/oledb/cstreamrowset-class.md) lub za pomocą [CXMLAccessor](../../data/oledb/cxmlaccessor-class.md). W tym przykładzie użyto `CStreamRowset`, który jest bardziej wydajne, ale wymagane jest posiadanie programu SQL Server 2000 uruchomionej na komputerze, w którym są wykonywane tej przykładowej aplikacji.  
+
+Zgodnie z opisem w [uzyskiwania dostępu do danych XML](../../data/oledb/accessing-xml-data.md), istnieją dwa sposoby, aby pobrać dane XML ze źródła danych: za pomocą [cstreamrowset —](../../data/oledb/cstreamrowset-class.md) lub za pomocą [CXMLAccessor](../../data/oledb/cxmlaccessor-class.md). W tym przykładzie użyto `CStreamRowset`, który jest bardziej wydajne, ale wymagane jest posiadanie programu SQL Server 2000 uruchomionej na komputerze, w którym są wykonywane tej przykładowej aplikacji.  
   
 #### <a name="to-modify-the-command-class-to-inherit-from-cstreamrowset"></a>Aby zmodyfikować klasy polecenia, aby dziedziczyć cstreamrowset —  
   
-1.  W aplikacji konsumentów, została wcześniej utworzona, należy zmienić swoje `CCommand` deklaracji, aby określić `CStreamRowset` jako zestaw wierszy klasy w następujący sposób:  
+1. W aplikacji konsumentów, została wcześniej utworzona, należy zmienić swoje `CCommand` deklaracji, aby określić `CStreamRowset` jako zestaw wierszy klasy w następujący sposób:  
   
     ```cpp  
     class CProducts : public CCommand<CAccessor<CProductsAccessor>, CStreamRowset >  
@@ -223,7 +226,7 @@ Poniższe tematy przedstawiają sposób edytowania plików utworzonych przez Kre
   
 #### <a name="to-modify-the-main-code-to-retrieve-and-output-the-xml-data"></a>Aby zmodyfikować głównego kodu do pobierania i zwracania danych XML  
   
-1.  W pliku MyCons.cpp z aplikacji konsoli, który został wcześniej utworzony Zmień głównego kodu do odczytu w następujący sposób:  
+1. W pliku MyCons.cpp z aplikacji konsoli, który został wcześniej utworzony Zmień głównego kodu do odczytu w następujący sposób:  
   
     ```cpp  
     ///////////////////////////////////////////////////////////////////////  
@@ -279,4 +282,5 @@ Poniższe tematy przedstawiają sposób edytowania plików utworzonych przez Kre
     ```  
   
 ## <a name="see-also"></a>Zobacz też  
- [Tworzenie konsumenta OLE DB przy użyciu kreatora](../../data/oledb/creating-an-ole-db-consumer-using-a-wizard.md)
+
+[Tworzenie konsumenta OLE DB przy użyciu kreatora](../../data/oledb/creating-an-ole-db-consumer-using-a-wizard.md)

@@ -16,39 +16,44 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f0ddac28c4f39cdf11abbdf38c3af5d00c22413a
-ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
+ms.openlocfilehash: c39b638451aa8ea89191e323eae5f2c140563990
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/01/2018
-ms.locfileid: "39401909"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46082069"
 ---
 # <a name="comerrorhresulttowcode"></a>_com_error::HRESULTToWCode
-**Microsoft Specific**  
-  
- Mapuje HRESULT 32-bitowego do 16-bitowych `wCode`.  
-  
-## <a name="syntax"></a>Składnia  
-  
-```  
-static WORD HRESULTToWCode(  
-   HRESULT hr   
-) throw( );  
-```  
-  
-#### <a name="parameters"></a>Parametry  
- *godz.*  
- HRESULT 32-bitowe mają być mapowane do 16-bitowych `wCode`.  
-  
-## <a name="return-value"></a>Wartość zwracana  
- 16-bitowych `wCode` mapowane z HRESULT 32-bitowych.  
-  
-## <a name="remarks"></a>Uwagi  
- Zobacz [_com_error::WCode](../cpp/com-error-wcode.md) Aby uzyskać więcej informacji.  
-  
- **END specyficzny dla Microsoft**  
-  
-## <a name="see-also"></a>Zobacz także  
- [_com_error::WCode](../cpp/com-error-wcode.md)   
- [_com_error::WCodeToHRESULT](../cpp/com-error-wcodetohresult.md)   
- [_com_error, klasa](../cpp/com-error-class.md)
+
+**Microsoft Specific**
+
+Mapuje HRESULT 32-bitowego do 16-bitowych `wCode`.
+
+## <a name="syntax"></a>Składnia
+
+```
+static WORD HRESULTToWCode(
+   HRESULT hr
+) throw( );
+```
+
+#### <a name="parameters"></a>Parametry
+
+*godz.*<br/>
+HRESULT 32-bitowe mają być mapowane do 16-bitowych `wCode`.
+
+## <a name="return-value"></a>Wartość zwracana
+
+16-bitowych `wCode` mapowane z HRESULT 32-bitowych.
+
+## <a name="remarks"></a>Uwagi
+
+Zobacz [_com_error::WCode](../cpp/com-error-wcode.md) Aby uzyskać więcej informacji.
+
+**END specyficzny dla Microsoft**
+
+## <a name="see-also"></a>Zobacz także
+
+[_com_error::WCode](../cpp/com-error-wcode.md)<br/>
+[_com_error::WCodeToHRESULT](../cpp/com-error-wcodetohresult.md)<br/>
+[_com_error, klasa](../cpp/com-error-class.md)

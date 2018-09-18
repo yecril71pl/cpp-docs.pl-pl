@@ -18,15 +18,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3ef53ed9fa69dc77c93b90f9f24fa8628d589b07
-ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
+ms.openlocfilehash: 98c4c82bcf858215ceba31e2ddd0770511446f72
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33705266"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46075647"
 ---
 # <a name="simplepartitioner-class"></a>simple_partitioner — Klasa
-`simple_partitioner` Klasa reprezentuje partycjonowania statycznego zakresu iterowane przez `parallel_for`. Obiekt partitioner dzieli zakres fragmentów tak, aby każdy fragment jest co najmniej liczby iteracji określony przez rozmiar fragmentu.  
+`simple_partitioner` Klasa reprezentuje partycjonowania statycznego zakresu postanowiliśmy za pośrednictwem przez `parallel_for`. Partycjonera dzieli zakres na fragmenty w taki sposób, że każdy fragment ma co najmniej liczba iteracji, określony przez rozmiar fragmentu.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -51,7 +51,7 @@ class simple_partitioner;
   
  **Namespace:** współbieżności  
   
-##  <a name="dtor"></a> ~ simple_partitioner — 
+##  <a name="dtor"></a> ~ simple_partitioner 
 
  Niszczy `simple_partitioner` obiektu.  
   
@@ -68,7 +68,8 @@ explicit simple_partitioner(_Size_type _Chunk_size);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `_Chunk_size`  
+*_Chunk_size*<br/>
+Minimalny rozmiar partycji.
   
 ## <a name="see-also"></a>Zobacz też  
  [Przestrzeń nazw współbieżności](concurrency-namespace.md)

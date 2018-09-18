@@ -13,12 +13,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 41859ae16ecd7f4c3261d644ce37d86fe416ec94
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: dcc942bc69ebb37a7aba59e722b1a4cebbbab3ff
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42589645"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46071369"
 ---
 # <a name="how-to-use-winmdidlexe-and-midlrtexe-to-create-h-files-from-windows-metadata"></a>Porady: Użyj winmdidl.exe i midlrt.exe, aby utworzyć pliki .h z metadanych systemu Windows
 
@@ -42,24 +42,25 @@ Domyślnie w [Windows 8.1, winmdidl.exe i midlrt.exe, które znajdują się w \W
 Winmdidl.exe [/nologo] [/supressversioncheck] [/time] [/outdir:dir] [/banner:file] [/utf8] Winmdfile
 ```
 
-`/nologo`  
+**/nologo**<br/>
 Uniemożliwia wyświetlanie konsoli winmdidl komunikat o prawach autorskich oraz numeru wersji.
 
-`/supressversioncheck`  
+**/supressversioncheck**<br/>
 Nie używany.
 
-`/time`  
+**/ Godzina**<br/>
 Przedstawia całkowity czas wykonywania w danych wyjściowych konsoli.
 
-do pliku klucza:\<dir > określa katalog danych wyjściowych. Jeśli ścieżka zawiera spacje, użyj znaków cudzysłowu. Domyślny katalog danych wyjściowych jest  *\<dysku >*: \Users\\*\<username >* \AppData\Local\VirtualStore\Program Files (x86) \Microsoft Visual Studio 12.0\\.
+**do pliku klucza:**<em>dir</em><br/>
+Określa katalog danych wyjściowych. Jeśli ścieżka zawiera spacje, użyj znaków cudzysłowu. Domyślny katalog danych wyjściowych jest  *\<dysku >*: \Users\\*\<username >* \AppData\Local\VirtualStore\Program Files (x86) \Microsoft Visual Studio 12.0\\.
 
-`/banner:<file>`  
+**/ Baner:**<em>pliku</em><br/>
 Określa plik, który zawiera niestandardowy tekst być dołączana do domyślny komunikat o prawach autorskich oraz winmdidl numer wersji w górnej części pliku .idl wygenerowany. Jeśli ścieżka zawiera spacje, użyj znaków cudzysłowu.
 
-`/utf8`  
+**/UTF8**<br/>
 Powoduje, że plik aby być w formacie UTF-8.
 
-`Winmdfile`  
+*Winmdfile*<br/>
 Nazwa pliku winmd, które można przeanalizować. Jeśli ścieżka zawiera spacje, użyj znaków cudzysłowu.
 
 ## <a name="midlrt-command-line-arguments"></a>Argumenty wiersza polecenia Midlrt

@@ -1,5 +1,5 @@
 ---
-title: Kompilatora (poziom 4) ostrzeżenie C4960 | Dokumentacja firmy Microsoft
+title: Kompilator ostrzeżenie (poziom 4) C4960 | Dokumentacja firmy Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,16 +16,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1281bc86ad363c02df5c39ed41f616a6fff1a9b3
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: ed6ba083017c84cd6af05b917ff8417b0394d7c2
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33294430"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46085722"
 ---
-# <a name="compiler-warning-level-4-c4960"></a>Kompilator C4960 ostrzegawcze (poziom 4)
-"Funkcja" jest zbyt duży, aby zostać profilowanym  
-  
- Korzystając z [/LTCG:PGOPTIMIZE](../../build/reference/ltcg-link-time-code-generation.md), kompilator wykryto wejściowych modułu przy użyciu funkcji większy niż 65 535 instrukcje. Duże funkcja nie jest dostępna dla optymalizacji sterowanych profilem.  
-  
- Aby usunąć to ostrzeżenie, Zmniejsz rozmiar funkcji.
+# <a name="compiler-warning-level-4-c4960"></a>Kompilator ostrzeżenie (poziom 4) C4960
+
+'Funkcja' jest zbyt duży do profilowania
+
+Korzystając z [/LTCG:PGOPTIMIZE](../../build/reference/ltcg-link-time-code-generation.md), kompilator wykrył moduł danych wejściowych przy użyciu funkcji, które są większe niż 65 535 instrukcje. Duże funkcja nie jest dostępna dla optymalizacje sterowane profilem.
+
+Aby rozwiązać tego ostrzeżenia, należy zmniejszyć rozmiar funkcji.

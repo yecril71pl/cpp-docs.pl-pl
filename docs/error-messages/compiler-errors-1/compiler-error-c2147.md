@@ -1,5 +1,5 @@
 ---
-title: C2147 błąd kompilatora | Dokumentacja firmy Microsoft
+title: Błąd kompilatora C2147 | Dokumentacja firmy Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,25 +16,26 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 60047795428aad2da94b117882f351375fed4545
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 786d47e23986962575567b8afdc2eefd5aac5be6
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33167986"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46082433"
 ---
-# <a name="compiler-error-c2147"></a>C2147 błąd kompilatora
-Błąd składniowy: "identyfikator" jest nowym słowem kluczowym  
-  
- Identyfikator użyto teraz jest zarezerwowanym słowem kluczowym w języku.  
-  
- Poniższy przykład generuje C2147:  
-  
-```  
-// C2147.cpp  
-// compile with: /clr  
-int main() {  
-   int gcnew = 0;   // C2147  
-   int i = 0;   // OK  
-}  
+# <a name="compiler-error-c2147"></a>Błąd kompilatora C2147
+
+Błąd składniowy: 'Identyfikator' to nowe słowo kluczowe
+
+Użyto identyfikatora, który teraz jest zastrzeżonym słowem kluczowym w języku.
+
+Poniższy przykład spowoduje wygenerowanie C2147:
+
+```
+// C2147.cpp
+// compile with: /clr
+int main() {
+   int gcnew = 0;   // C2147
+   int i = 0;   // OK
+}
 ```

@@ -17,12 +17,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1e591ad979d6c995fd5559b22a826766b02d50dd
-ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
+ms.openlocfilehash: 177fdb46971a0e932a41881cb9e6a08a800a60bb
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/01/2018
-ms.locfileid: "39405873"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46076297"
 ---
 # <a name="align-c"></a>align (C++)
 
@@ -34,7 +34,7 @@ Użyj `__declspec(align(#))` Aby precyzyjnie kontrolować wyrównanie danych zde
 
 ## <a name="syntax"></a>Składnia
 
-> **__declspec (Wyrównaj (** *#* **))** *deklaratora*  
+> **__declspec (Wyrównaj (** *#* **))** *deklaratora*
 
 ## <a name="remarks"></a>Uwagi
 
@@ -251,6 +251,7 @@ Przesunięcie obiektu bazuje na przesunięciu poprzedniego obiektu i bieżącemu
 **END specyficzny dla Microsoft**
 
 ## <a name="see-also"></a>Zobacz także
-[__declspec](../cpp/declspec.md)  
-[Przegląd konwencji ABI ARM](../build/overview-of-arm-abi-conventions.md)  
-[Przegląd konwencji wywoływania x64](../build/overview-of-x64-calling-conventions.md)  
+
+[__declspec](../cpp/declspec.md)<br/>
+[Przegląd konwencji ABI ARM](../build/overview-of-arm-abi-conventions.md)<br/>
+[Przegląd konwencji wywoływania x64](../build/overview-of-x64-calling-conventions.md)

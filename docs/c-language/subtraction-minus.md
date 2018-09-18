@@ -15,19 +15,21 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6b27eead70963665e1dd3079cf5c2b49bcfda863
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 8b09683592ca7fe897c8477a17c14fbc72d11f7e
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43751634"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46079963"
 ---
 # <a name="subtraction--"></a>Odejmowania (-)
-Operator odejmowania (**-**) odejmuje drugiego operandu od pierwszego. Oba operandy może być typu całkowitego lub zmiennoprzecinkowego typy, lub jeden argument może być wskaźnika, a drugi liczbą całkowitą.  
-  
-Gdy dwa wskaźniki są odejmowane, różnica jest konwertowana na wartość całkowitą ze znakiem przez podzielenie otrzymanej różnicy przez rozmiar wartość typu, adres wskaźników. Rozmiar wartość całkowitą jest definiowany przez typ **ptrdiff_t —** w standardowych dołączonych plików STDDEF. H. Wynik przedstawia liczbę pozycji pamięci tego typu między dwoma adresami. Wynik jest tylko gwarantowane jest zrozumiałe dla dwóch elementów w tej samej tablicy, zgodnie z opisem w [arytmetyki wskaźnika](../c-language/pointer-arithmetic.md).  
-  
-Gdy wartość jest odejmowany od wartości wskaźnika, operator odejmowania konwertuje wartość całkowitą (*i*) mnożąc przez rozmiar wartości, odnoszący się do wskaźnika. Po konwersji na wartość całkowitą reprezentuje *i* pozycji pamięci, w którym każdej pozycji ma długość określona przez typ wskaźnika. Gdy wartość przekonwertowana liczba całkowita jest odejmowany od wartości wskaźnika, wynik jest adres pamięci *i* pozycji przed oryginalnego adresu. Nowy wskaźnik wskazuje na wartość typu opisany w oryginalnej wartości wskaźnika.  
-  
-## <a name="see-also"></a>Zobacz też  
+
+Operator odejmowania (**-**) odejmuje drugiego operandu od pierwszego. Oba operandy może być typu całkowitego lub zmiennoprzecinkowego typy, lub jeden argument może być wskaźnika, a drugi liczbą całkowitą.
+
+Gdy dwa wskaźniki są odejmowane, różnica jest konwertowana na wartość całkowitą ze znakiem przez podzielenie otrzymanej różnicy przez rozmiar wartość typu, adres wskaźników. Rozmiar wartość całkowitą jest definiowany przez typ **ptrdiff_t —** w standardowych dołączonych plików STDDEF. H. Wynik przedstawia liczbę pozycji pamięci tego typu między dwoma adresami. Wynik jest tylko gwarantowane jest zrozumiałe dla dwóch elementów w tej samej tablicy, zgodnie z opisem w [arytmetyki wskaźnika](../c-language/pointer-arithmetic.md).
+
+Gdy wartość jest odejmowany od wartości wskaźnika, operator odejmowania konwertuje wartość całkowitą (*i*) mnożąc przez rozmiar wartości, odnoszący się do wskaźnika. Po konwersji na wartość całkowitą reprezentuje *i* pozycji pamięci, w którym każdej pozycji ma długość określona przez typ wskaźnika. Gdy wartość przekonwertowana liczba całkowita jest odejmowany od wartości wskaźnika, wynik jest adres pamięci *i* pozycji przed oryginalnego adresu. Nowy wskaźnik wskazuje na wartość typu opisany w oryginalnej wartości wskaźnika.
+
+## <a name="see-also"></a>Zobacz też
+
 [Operatory dodawania języka C](../c-language/c-additive-operators.md)

@@ -16,16 +16,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 474d4ad146edf4411bd9734a6ec4482273c065dd
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 6aa86a9fd3c2d6d19482ba5ce5c866ab660e742e
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33298155"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46073090"
 ---
 # <a name="linker-tools-error-lnk1166"></a>Błąd narzędzi konsolidatora LNK1166
-Nie można dostosować kodu przy przesunięciu = przesunięcie, va = wartość  
-  
- ŁĄCZE nie konsoli kodu zgodnie z potrzebami.  
-  
- Niektóre instrukcje są niedozwolone przetnie granice strony na niektórych procesorach. ŁĄCZE próbuje dodać konsole, aby naprawić tę sytuację. W takim przypadku łącze nie można obejść problem.
+
+Nie można dostosować kodu przy przesunięciu = przesunięcie, oceny luk w zabezpieczeniach = wartość
+
+ŁĄCZE nie może uzupełnianie kodu zgodnie z potrzebami.
+
+Niektóre instrukcje nie są dozwolone do przekroczenia granic strony na niektórych procesorach. LINK podejmuje próbę dodania okienka, aby naprawić tę sytuację. W tym przypadku LINKU nie można obejść ten problem.

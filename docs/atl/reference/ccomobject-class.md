@@ -22,12 +22,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0600d675d37e2fed1d318645daaedcce5f80ed89
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: e7a6f4f014d609e8b650951d459c23b07fd4a006
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43752374"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46085449"
 ---
 # <a name="ccomobject-class"></a>Klasa CComObject
 
@@ -36,13 +36,13 @@ Ta klasa implementuje `IUnknown` nieagregowane obiektu.
 ## <a name="syntax"></a>Składnia
 
 ```
-template<class Base>  
+template<class Base>
 class CComObject : public Base
 ```
 
 #### <a name="parameters"></a>Parametry
 
-*podstawowy*  
+*podstawowy*<br/>
 Z klasą pochodną [CComObjectRoot](../../atl/reference/ccomobjectroot-class.md) lub [CComObjectRootEx](../../atl/reference/ccomobjectrootex-class.md), jak również od innych interfejsów, które chcesz obsługiwać obiektu.
 
 ## <a name="members"></a>Elementy członkowskie
@@ -101,7 +101,7 @@ CComObject(void* = NULL);
 
 ### <a name="parameters"></a>Parametry
 
-<em>Void\*</em>  
+<em>Void\*</em><br/>
 [in] Ten parametr nienazwany nie jest używany. Istnieje symetrii z innymi `CComXXXObjectXXX` konstruktorów.
 
 ### <a name="remarks"></a>Uwagi
@@ -132,7 +132,7 @@ static HRESULT WINAPI CreateInstance(CComObject<Base>** pp);
 
 ### <a name="parameters"></a>Parametry
 
-*strony*  
+*strony*<br/>
 [out] Wskaźnik do **CComObject <** `Base` **>** wskaźnika. Jeśli `CreateInstance` zakończy się niepowodzeniem, *pp* ma wartość NULL.
 
 ### <a name="return-value"></a>Wartość zwracana
@@ -157,19 +157,19 @@ Pobiera wskaźnik do żądanego interfejsu.
 
 ```
 STDMETHOD(QueryInterface)(REFIID iid, void** ppvObject);
-template <class Q>  
+template <class Q>
 HRESULT STDMETHODCALLTYPE QueryInterface(Q** pp);
 ```
 
 ### <a name="parameters"></a>Parametry
 
-*IID*  
+*IID*<br/>
 [in] Identyfikator interfejsu żądanej.
 
-*ppvObject*  
+*ppvObject*<br/>
 [out] Wskaźnik do wskaźnika interfejsu identyfikowane przez *iid*. Jeśli obiekt nie obsługuje ten interfejs *ppvObject* ma wartość NULL.
 
-*strony*  
+*strony*<br/>
 [out] Wskaźnik do wskaźnika interfejsu identyfikowanych według typu `Q`. Jeśli obiekt nie obsługuje ten interfejs *pp* ma wartość NULL.
 
 ### <a name="return-value"></a>Wartość zwracana
@@ -190,8 +190,8 @@ Ta funkcja zwraca nowy licznik odwołań wraz z przydzielaniem obiektu. W kompil
 
 ## <a name="see-also"></a>Zobacz też
 
-[Klasa CComAggObject](../../atl/reference/ccomaggobject-class.md)   
-[Klasa CComPolyObject](../../atl/reference/ccompolyobject-class.md)   
-[DECLARE_AGGREGATABLE](aggregation-and-class-factory-macros.md#declare_aggregatable)   
-[DECLARE_NOT_AGGREGATABLE](aggregation-and-class-factory-macros.md#declare_not_aggregatable)   
+[Klasa CComAggObject](../../atl/reference/ccomaggobject-class.md)<br/>
+[Klasa CComPolyObject](../../atl/reference/ccompolyobject-class.md)<br/>
+[DECLARE_AGGREGATABLE](aggregation-and-class-factory-macros.md#declare_aggregatable)<br/>
+[DECLARE_NOT_AGGREGATABLE](aggregation-and-class-factory-macros.md#declare_not_aggregatable)<br/>
 [Klasa — Przegląd](../../atl/atl-class-overview.md)

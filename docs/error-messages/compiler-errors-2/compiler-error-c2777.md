@@ -1,5 +1,5 @@
 ---
-title: C2777 błąd kompilatora | Dokumentacja firmy Microsoft
+title: Błąd kompilatora C2777 | Dokumentacja firmy Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,28 +16,29 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: cc3eebe5d3fe12bf102adff0cc77b6647fcf2059
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 57dc92e267004cbb41fa9a6153ddc09f9aeb6fc5
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33234110"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46077441"
 ---
-# <a name="compiler-error-c2777"></a>C2777 błąd kompilatora
-tylko jedna metoda "put" może być określona dla właściwości  
-  
- A [właściwości](../../cpp/property-cpp.md) declspec modyfikator ma więcej niż jeden `put` właściwości.  
-  
- Poniższy przykład generuje C2777:  
-  
-```  
-// C2777.cpp  
-struct A {  
-   __declspec(property(put=PutProp,put=PutPropToo))   // C2777  
-   // try the following line instead  
-   // __declspec(property(put=PutProp))  
-      int prop;  
-   int PutProp(void);  
-   int PutPropToo(void);  
-};  
+# <a name="compiler-error-c2777"></a>Błąd kompilatora C2777
+
+tylko jedna metoda "put" może być określona dla właściwości
+
+A [właściwość](../../cpp/property-cpp.md) modyfikator declspec ma więcej niż jedną `put` właściwości.
+
+Poniższy przykład spowoduje wygenerowanie C2777:
+
+```
+// C2777.cpp
+struct A {
+   __declspec(property(put=PutProp,put=PutPropToo))   // C2777
+   // try the following line instead
+   // __declspec(property(put=PutProp))
+      int prop;
+   int PutProp(void);
+   int PutPropToo(void);
+};
 ```

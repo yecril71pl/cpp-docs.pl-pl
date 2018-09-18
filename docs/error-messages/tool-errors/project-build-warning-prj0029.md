@@ -16,22 +16,23 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: cd6e7b738785d9cfacfb2128e03d3a3123da4fa1
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 854120bf6021295348ff2e28b36f7b44007017b1
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33320223"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46026025"
 ---
 # <a name="project-build-warning-prj0029"></a>Ostrzeżenie PRJ0029 dotyczące kompilacji projektu
-Nie ustawiono właściwość 'Wyniki' dla projektów na poziomie niestandardowego kroku kompilacji. Niestandardowy krok kompilacji będzie pominięty.  
-  
- Nie można wykonać niestandardowego kroku kompilacji, nie podano żadnych danych wyjściowych.  
-  
- Aby rozwiązać ten problem, wykonaj jedną z następujących czynności:  
-  
--   Wyklucz kroku kompilacji niestandardowej kompilacji.  
-  
--   Dodawanie danych wyjściowych.  
-  
--   Usuń zawartość tego polecenia kroku kompilacji niestandardowej.
+
+Nie ustawiono właściwość 'Wyniki' dla projektów na poziomie niestandardowego kroku kompilacji. Niestandardowy krok kompilacji będzie pominięty.
+
+Niestandardowy krok kompilacji nie został wykonany, ponieważ określono żadnych danych wyjściowych.
+
+Aby rozwiązać ten problem, wykonaj jedną z następujących czynności:
+
+- Wykluczanie niestandardowego kroku kompilacji z kompilacji.
+
+- Dodaj dane wyjściowe.
+
+- Usuń zawartość polecenie kroku kompilacji niestandardowej.

@@ -50,12 +50,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3198a2d3ef91df80429f7cd245e5616ebe7af43a
-ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
+ms.openlocfilehash: f02f6a2810f5ac3a51abb80245c22a7f0c2df434
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44110634"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46074152"
 ---
 # <a name="codecvt-class"></a>codecvt — Klasa
 
@@ -91,21 +91,24 @@ Wersje szablonów z [do_in](#do_in) i [do_out](#do_out) zawsze zwracają `codecv
 
 Standardowa biblioteka C++ definiuje kilka jawnych specjalizacji:
 
-`template<>`
-
-`codecvt<wchar_t, char, mbstate_t>`
+```cpp
+template<>
+codecvt<wchar_t, char, mbstate_t>
+```
 
 wykonuje konwersję między **wchar_t** i **char** sekwencji.
 
-`template<>`
-
-`codecvt<char16_t, char, mbstate_t>`
+```cpp
+template<>
+codecvt<char16_t, char, mbstate_t>
+```
 
 wykonuje konwersję między `char16_t` zakodowanymi w formacie UTF-16 i **char** zakodowanymi w formacie UTF-8.
 
-`template<>`
-
-`codecvt<char32_t, char, mbstate_t>`
+```cpp
+template<>
+codecvt<char32_t, char, mbstate_t>
+```
 
 wykonuje konwersję między `char32_t` zakodowanymi w formacie UTF-32 (UCS-4) i **char** zakodowanymi w formacie UTF-8.
 

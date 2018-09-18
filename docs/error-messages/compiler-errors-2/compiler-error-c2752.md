@@ -1,5 +1,5 @@
 ---
-title: C2752 błąd kompilatora | Dokumentacja firmy Microsoft
+title: Błąd kompilatora C2752 | Dokumentacja firmy Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,40 +16,41 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9ff4ee5060f0fa3cfd657daf9e05759e64b15bd2
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: ea33ef80847a8699115a92e316fec156c3c51607
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33233477"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46081653"
 ---
-# <a name="compiler-error-c2752"></a>C2752 błąd kompilatora
-"template": więcej niż jedna składowa specjalizacji pasuje do szablonu listy argumentów  
-  
- Podczas tworzenia wystąpienia jest niejednoznaczna.  
-  
- Poniższy przykład generuje C2752:  
-  
-```  
-// C2752.cpp  
-template<class T, class U>   
-struct A {};  
-  
-template<class T, class U>   
-struct A<T*, U> {};  
-  
-template<class T, class U>   
-struct A<T,U*> {};  
-  
-// try the following line instead  
-// template<class T, class U> struct A<T*,U*> {};  
-  
-int main() {  
-   A<char*,int*> a;   // C2752 an instantiation  
-  
-   // OK  
-   A<char*,int> a1;  
-   A<char,int*> a2;  
-   A<char,int> a3;  
-}  
+# <a name="compiler-error-c2752"></a>Błąd kompilatora C2752
+
+"template": więcej niż jedna składowa specjalizacji pasuje do listy argumentów szablonu
+
+Tworzenie wystąpienia było niejednoznaczne.
+
+Poniższy przykład spowoduje wygenerowanie C2752:
+
+```
+// C2752.cpp
+template<class T, class U>
+struct A {};
+
+template<class T, class U>
+struct A<T*, U> {};
+
+template<class T, class U>
+struct A<T,U*> {};
+
+// try the following line instead
+// template<class T, class U> struct A<T*,U*> {};
+
+int main() {
+   A<char*,int*> a;   // C2752 an instantiation
+
+   // OK
+   A<char*,int> a1;
+   A<char,int*> a2;
+   A<char,int> a3;
+}
 ```

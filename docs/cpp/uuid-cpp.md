@@ -17,38 +17,41 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 93ae3ac7f0d6fff700e1c89aad197d5f03734cf5
-ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
+ms.openlocfilehash: 44799b507fb9c27cb1d9f166e86228ed6003a0d8
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/02/2018
-ms.locfileid: "39467111"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46086190"
 ---
 # <a name="uuid-c"></a>uuid (C++)
-**Microsoft Specific**  
-  
- Kompilator dołącza identyfikator GUID do klasy lub struktury zadeklarowane lub zdefiniowane (pełna COM definicje obiektów tylko) za pomocą **uuid** atrybutu.  
-  
-## <a name="syntax"></a>Składnia  
-  
-```  
-__declspec( uuid("ComObjectGUID") ) declarator  
-```  
-  
-## <a name="remarks"></a>Uwagi  
- **Uuid** atrybut przyjmuje ciąg jako argumentem. Ten ciąg nazwy identyfikatora GUID w formacie normalne rejestru z lub bez **{}** ograniczników. Na przykład:  
-  
-```cpp 
-struct __declspec(uuid("00000000-0000-0000-c000-000000000046")) IUnknown;  
-struct __declspec(uuid("{00020400-0000-0000-c000-000000000046}")) IDispatch;  
-```  
-  
- Ten atrybut można stosować w ponowna deklaracja. Dzięki temu nagłówki systemu, aby dostarczyć definicje interfejsów, takich jak `IUnknown`i ponowna deklaracja niektórych innych nagłówka (takie jak \<comdef.h >) umożliwiają określanie wartości identyfikatora GUID.  
-  
- Słowo kluczowe [__uuidof](../cpp/uuidof-operator.md) mogą być stosowane do pobrania — stała identyfikator GUID jest dołączony do typu zdefiniowanego przez użytkownika.  
-  
- **END specyficzny dla Microsoft**  
-  
-## <a name="see-also"></a>Zobacz także  
- [__declspec](../cpp/declspec.md)   
- [Słowa kluczowe](../cpp/keywords-cpp.md)
+
+**Microsoft Specific**
+
+Kompilator dołącza identyfikator GUID do klasy lub struktury zadeklarowane lub zdefiniowane (pełna COM definicje obiektów tylko) za pomocą **uuid** atrybutu.
+
+## <a name="syntax"></a>Składnia
+
+```
+__declspec( uuid("ComObjectGUID") ) declarator
+```
+
+## <a name="remarks"></a>Uwagi
+
+**Uuid** atrybut przyjmuje ciąg jako argumentem. Ten ciąg nazwy identyfikatora GUID w formacie normalne rejestru z lub bez **{}** ograniczników. Na przykład:
+
+```cpp
+struct __declspec(uuid("00000000-0000-0000-c000-000000000046")) IUnknown;
+struct __declspec(uuid("{00020400-0000-0000-c000-000000000046}")) IDispatch;
+```
+
+Ten atrybut można stosować w ponowna deklaracja. Dzięki temu nagłówki systemu, aby dostarczyć definicje interfejsów, takich jak `IUnknown`i ponowna deklaracja niektórych innych nagłówka (takie jak \<comdef.h >) umożliwiają określanie wartości identyfikatora GUID.
+
+Słowo kluczowe [__uuidof](../cpp/uuidof-operator.md) mogą być stosowane do pobrania — stała identyfikator GUID jest dołączony do typu zdefiniowanego przez użytkownika.
+
+**END specyficzny dla Microsoft**
+
+## <a name="see-also"></a>Zobacz także
+
+[__declspec](../cpp/declspec.md)<br/>
+[Słowa kluczowe](../cpp/keywords-cpp.md)

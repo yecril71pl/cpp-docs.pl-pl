@@ -1,5 +1,5 @@
 ---
-title: C3630 błąd kompilatora | Dokumentacja firmy Microsoft
+title: Błąd kompilatora C3630 | Dokumentacja firmy Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,14 +16,15 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e8e38e06f2a32e9a95421ac113cdd0b5f1371334
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 53d7b895c25a847e8abe1b9db11b8b413d3342d0
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33265210"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46066121"
 ---
-# <a name="compiler-error-c3630"></a>C3630 błąd kompilatora
-Błąd podczas przetwarzania tokenu "token"  
-  
- Nie można przetworzyć tokenu w kodzie źródłowym.
+# <a name="compiler-error-c3630"></a>Błąd kompilatora C3630
+
+Błąd podczas przetwarzania tokenu "token"
+
+Nie można przetworzyć tokenu w kodzie źródłowym.

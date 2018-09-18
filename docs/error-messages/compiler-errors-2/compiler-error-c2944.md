@@ -1,5 +1,5 @@
 ---
-title: C2944 błąd kompilatora | Dokumentacja firmy Microsoft
+title: Błąd kompilatora C2944 | Dokumentacja firmy Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,39 +16,40 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c93cde44e7e7816117cc20e4418c57fbf51048d7
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: be9052ddc42c2f13e971c8655ac3382e3e1c89a7
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33244270"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46083083"
 ---
-# <a name="compiler-error-c2944"></a>C2944 błąd kompilatora
-"class": typ klasy identyfikator ponownie zdefiniować jako wartość argumentu szablonu  
-  
- Klasy ogólne lub szablonu nie można użyć zamiast symbolu, jako wartość argumentu szablonu.  
-  
- Poniższy przykład generuje C2944:  
-  
-```  
-// C2944.cpp  
-// compile with: /c  
-template<class T>  
-class TC { };   
-  
-template <int TC<int> > struct X1 { };   // C2944  
-  
-template <class T > struct X2 {};  
-```  
-  
- C2944 może również wystąpić, gdy użycie typów ogólnych:  
-  
-```  
-// C2944b.cpp  
-// compile with: /clr /c  
-generic<class T>  
-ref class GC {};  
-  
-template <int GC<int> > struct X2 { };   // C2944  
-template <class T> struct X3 {};   // OK  
+# <a name="compiler-error-c2944"></a>Błąd kompilatora C2944
+
+"class": typ klasy identyfikator ponownie definiowana jako wartość argumentu szablonu
+
+Generyczny lub szablonu klasy nie można użyć zamiast symbol, jako wartość argumentu szablonu.
+
+Poniższy przykład spowoduje wygenerowanie C2944:
+
+```
+// C2944.cpp
+// compile with: /c
+template<class T>
+class TC { };
+
+template <int TC<int> > struct X1 { };   // C2944
+
+template <class T > struct X2 {};
+```
+
+C2944 może również wystąpić, gdy za pomocą typów ogólnych:
+
+```
+// C2944b.cpp
+// compile with: /clr /c
+generic<class T>
+ref class GC {};
+
+template <int GC<int> > struct X2 { };   // C2944
+template <class T> struct X3 {};   // OK
 ```

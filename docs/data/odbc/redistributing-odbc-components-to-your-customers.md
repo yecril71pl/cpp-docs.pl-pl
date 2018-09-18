@@ -20,28 +20,30 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: e0427228b8fb3e852cf1d9ee66a10c9290b860b2
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 737343a57a852e8bd6a11116fa0d123502208b88
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33090227"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46079833"
 ---
 # <a name="redistributing-odbc-components-to-your-customers"></a>Redystrybucja składników ODBC wśród klientów
-Jeśli funkcje programów ODBC Administrator należy dołączyć do aplikacji, należy rozproszyć użytkownikom również pliki, które uruchamiać te programy. Te pliki ODBC znajdują się w katalogu \OS\System dysku CD programu Visual C++. Plik Redistrb.wri i umowy licencyjnej, w tym samym katalogu zawierają listę plików ODBC, które można było ponownie dystrybuować.  
+
+Jeśli funkcje programów ODBC Administrator jest uwzględnienie w aplikacji, musisz również przeprowadzić dystrybucję użytkownikom pliki, które uruchamiania tych programów. Te pliki ODBC znajdują się w katalogu \OS\System dysk CD z Visual C++. Plik Redistrb.wri i umowę licencyjną, w tym samym katalogu zawiera listę plików ODBC, które można redystrybuować.  
   
- Zajrzyj do dokumentacji wszystkich sterowników ODBC, które mają zostać wysłane. Należy określić, które biblioteki dll i inne pliki do wysłania. Należy przeczytać [Redystrybucja składników ODBC wśród klientów](../../data/odbc/redistributing-odbc-components-to-your-customers.md), które wyjaśniono, jak wykonać ponowną dystrybucję składników ODBC.  
+Zajrzyj do dokumentacji dla wszystkich sterowników ODBC, który będzie dostarczany. Należy określić, które biblioteki dll i inne pliki do wysłania. Należy również przeczytać [Redystrybucja składników ODBC wśród klientów](../../data/odbc/redistributing-odbc-components-to-your-customers.md), która wyjaśnia, jak Redystrybucja składników ODBC.  
   
- Ponadto należy dołączyć inny plik w większości przypadków. Odbccr32.dll jest z biblioteki kursorów ODBC. Ta biblioteka zawiera sterowniki poziomu 1 możliwości przewijanie do przodu i do tyłu. Udostępnia możliwość obsługi migawek. Aby uzyskać więcej informacji na temat z biblioteki kursorów ODBC, zobacz [ODBC: Biblioteka kursorów ODBC](../../data/odbc/odbc-the-odbc-cursor-library.md).  
+Ponadto konieczne jest uwzględnienie jednego pliku w większości przypadków. Odbccr32.dll jest z biblioteki kursorów ODBC. Ta biblioteka zapewnia sterowniki 1 poziom możliwości przewijanie do przodu i Wstecz. Zapewnia również możliwość obsługi migawek. Aby uzyskać więcej informacji na temat z biblioteki kursorów ODBC, zobacz [ODBC: Biblioteka kursorów ODBC](../../data/odbc/odbc-the-odbc-cursor-library.md).  
   
- Więcej informacji o korzystaniu z klasami baz danych ODBC można znaleźć w następujących tematach:  
+Więcej informacji o używaniu ODBC z klasami bazy danych można znaleźć w następujących tematach:  
   
--   [ODBC: biblioteka kursorów ODBC](../../data/odbc/odbc-the-odbc-cursor-library.md)  
+- [ODBC: biblioteka kursorów ODBC](../../data/odbc/odbc-the-odbc-cursor-library.md)  
   
--   [ODBC: konfigurowanie źródła danych ODBC](../../data/odbc/odbc-configuring-an-odbc-data-source.md)  
+- [ODBC: konfigurowanie źródła danych ODBC](../../data/odbc/odbc-configuring-an-odbc-data-source.md)  
   
--   [ODBC: bezpośrednie wywoływanie funkcji ODBC API](../../data/odbc/odbc-calling-odbc-api-functions-directly.md)  
+- [ODBC: bezpośrednie wywoływanie funkcji ODBC API](../../data/odbc/odbc-calling-odbc-api-functions-directly.md)  
   
 ## <a name="see-also"></a>Zobacz też  
- [Podstawy ODBC](../../data/odbc/odbc-basics.md)   
- [Administrator ODBC](../../data/odbc/odbc-administrator.md)
+
+[Podstawy ODBC](../../data/odbc/odbc-basics.md)<br/>
+[Administrator ODBC](../../data/odbc/odbc-administrator.md)

@@ -1,5 +1,5 @@
 ---
-title: C2511 błąd kompilatora | Dokumentacja firmy Microsoft
+title: Błąd kompilatora C2511 | Dokumentacja firmy Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,37 +16,38 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d97cbbd75d3b39b55ff640ed99e261ba349043d3
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: b628adda383baee0f2ec03ace715d94c6cca764c
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33199631"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46058149"
 ---
-# <a name="compiler-error-c2511"></a>C2511 błąd kompilatora
-"identyfikator": przeciążona funkcja członkowska nie można odnaleźć w "class"  
-  
- Brak wersji funkcji jest zadeklarowana z określonymi parametrami.  Możliwe przyczyny:  
-  
-1.  Nieprawidłowe parametry przekazane do funkcji.  
-  
-2.  Parametry przekazywane w niewłaściwej kolejności.  
-  
-3.  Niepoprawne pisownię nazwy parametrów.  
-  
- Poniższy przykład generuje C2511:  
-  
-```  
-// C2511.cpp  
-// compile with: /c  
-class C {  
-   int c_2;  
-   int Func(char *, char *);  
-};  
-  
-int C::Func(char *, char *, int i) {   // C2511  
-// try the following line instead  
-// int C::Func(char *, char *) {  
-   return 0;  
-}  
+# <a name="compiler-error-c2511"></a>Błąd kompilatora C2511
+
+"identyfikator": przeciążona funkcja składowa nie znaleziono w "class"
+
+Brak wersji funkcja jest zadeklarowana z określonymi parametrami.  Możliwe przyczyny:
+
+1. Nieprawidłowe parametry przekazane do funkcji.
+
+1. Parametry są przekazywane w nieprawidłowej kolejności.
+
+1. Niepoprawne pisownię nazwy parametrów.
+
+Poniższy przykład spowoduje wygenerowanie C2511:
+
+```
+// C2511.cpp
+// compile with: /c
+class C {
+   int c_2;
+   int Func(char *, char *);
+};
+
+int C::Func(char *, char *, int i) {   // C2511
+// try the following line instead
+// int C::Func(char *, char *) {
+   return 0;
+}
 ```

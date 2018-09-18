@@ -14,12 +14,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 39b712b44c2908df1163380a76909884e4ab87d8
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 788188814de37214f397632161de55b54a28421e
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43755758"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46073268"
 ---
 # <a name="default-atl-project-configurations"></a>Domyślne konfiguracje projektu ATL
 
@@ -34,8 +34,8 @@ Domyślnie Kreator projektów ATL tworzy dwie konfiguracje projektu:
 
 ## <a name="see-also"></a>Zobacz też
 
-[Programowanie za pomocą kodu ATL i C Run-Time](../../atl/programming-with-atl-and-c-run-time-code.md)   
-[Praca z właściwościami projektu](../../ide/working-with-project-properties.md)   
-[Okno dialogowe programu Configuration Manager](/visualstudio/ide/understanding-build-configurations)   
+[Programowanie za pomocą kodu ATL i C Run-Time](../../atl/programming-with-atl-and-c-run-time-code.md)<br/>
+[Praca z właściwościami projektu](../../ide/working-with-project-properties.md)<br/>
+[Okno dialogowe programu Configuration Manager](/visualstudio/ide/understanding-build-configurations)<br/>
 [Kompilowanie i tworzenie](/visualstudio/ide/compiling-and-building-in-visual-studio)
 

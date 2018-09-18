@@ -1,5 +1,5 @@
 ---
-title: C2765 błąd kompilatora | Dokumentacja firmy Microsoft
+title: Błąd kompilatora C2765 | Dokumentacja firmy Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,25 +16,26 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 926cc1657db67530f866a2b2e00e4b23f4ccd0bb
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 708a4c326e87cf580208e26ef5ffe540afd52f95
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33234587"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46085137"
 ---
-# <a name="compiler-error-c2765"></a>C2765 błąd kompilatora
-"Funkcja": jawna specjalizacja szablonu funkcji nie może mieć argumentów domyślnych  
-  
- Argumenty domyślne są niedozwolone w jawnej specjalizacji szablonu funkcji. Aby uzyskać więcej informacji, zobacz [jawna specjalizacja szablonów funkcji](../../cpp/explicit-specialization-of-function-templates.md).  
-  
- Poniższy przykład generuje C2765:  
-  
-```  
-// C2765.cpp  
-template<class T> void f(T t) {};  
-  
-template<> void f<char>(char c = 'a') {}   // C2765  
-// try the following line instead  
-// template<> void f<char>(char c) {}  
+# <a name="compiler-error-c2765"></a>Błąd kompilatora C2765
+
+'Funkcja': jawna specjalizacja szablonu funkcji nie może mieć żadnych argumentów domyślnych
+
+Argumenty domyślne nie są dozwolone w jawnej specjalizacji szablonu funkcji. Aby uzyskać więcej informacji, zobacz [jawna specjalizacja szablonów funkcji](../../cpp/explicit-specialization-of-function-templates.md).
+
+Poniższy przykład spowoduje wygenerowanie C2765:
+
+```
+// C2765.cpp
+template<class T> void f(T t) {};
+
+template<> void f<char>(char c = 'a') {}   // C2765
+// try the following line instead
+// template<> void f<char>(char c) {}
 ```

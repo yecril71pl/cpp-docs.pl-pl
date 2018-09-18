@@ -21,12 +21,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 747fe2cd742686a7fda1f5031224cf7ab1607fb2
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 156a0a827a67e80369ca8b834b62bcf0e431ab14
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43754621"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46076349"
 ---
 # <a name="ithreadpoolconfig-interface"></a>Interfejs IThreadPoolConfig
 
@@ -71,7 +71,7 @@ STDMETHOD(GetSize)(int* pnNumThreads);
 
 ### <a name="parameters"></a>Parametry
 
-*pnNumThreads*  
+*pnNumThreads*<br/>
 [out] Adres zmiennej, która w przypadku powodzenia, otrzyma liczbę wątków w puli.
 
 ### <a name="return-value"></a>Wartość zwracana
@@ -92,7 +92,7 @@ STDMETHOD(GetTimeout)(DWORD* pdwMaxWait);
 
 ### <a name="parameters"></a>Parametry
 
-*pdwMaxWait*  
+*pdwMaxWait*<br/>
 [out] Adres zmiennej, która w przypadku powodzenia odbiera maksymalny czas (w milisekundach) oczekiwania na wątek zamknąć puli wątków.
 
 ### <a name="return-value"></a>Wartość zwracana
@@ -113,7 +113,7 @@ STDMETHOD(SetSize)int nNumThreads);
 
 ### <a name="parameters"></a>Parametry
 
-*nNumThreads*  
+*nNumThreads*<br/>
 Żądana liczba wątków w puli.
 
 Jeśli *nNumThreads* jest ujemna, jego wartość bezwzględna będzie pomnożona przez liczbę procesorów w komputerze, aby uzyskać łączna liczba wątków.
@@ -138,7 +138,7 @@ STDMETHOD(SetTimeout)(DWORD dwMaxWait);
 
 ### <a name="parameters"></a>Parametry
 
-*dwMaxWait*  
+*dwMaxWait*<br/>
 Żądany maksymalny czas (w milisekundach) oczekiwania na wątek zamknąć puli wątków.
 
 ### <a name="return-value"></a>Wartość zwracana
@@ -151,5 +151,5 @@ Zobacz [IThreadPoolConfig::GetSize](#getsize).
 
 ## <a name="see-also"></a>Zobacz też
 
-[Klasy](../../atl/reference/atl-classes.md)   
+[Klasy](../../atl/reference/atl-classes.md)<br/>
 [Klasa CThreadPool](../../atl/reference/cthreadpool-class.md)

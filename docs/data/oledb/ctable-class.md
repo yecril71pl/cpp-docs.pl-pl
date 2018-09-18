@@ -24,14 +24,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 34eb8cb8a6b839f8a4dcd8d699c7fcb4851d57f6
-ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
+ms.openlocfilehash: c94152a9322b64acafe91e1fb0eb34ab82aa2902
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "42464490"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46081302"
 ---
 # <a name="ctable-class"></a>Klasa CTable
+
 Zapewnia to uzyskać bezpośredni dostęp do prostego zestawu wierszy (bez parametrów).  
   
 ## <a name="syntax"></a>Składnia
@@ -44,14 +45,16 @@ class CTable :
 ```  
   
 ### <a name="parameters"></a>Parametry  
- *TAccessor*  
- Klasa metody dostępu.  
+
+*TAccessor*<br/>
+Klasa metody dostępu.  
   
- *TRowset*  
- Klasy zestawów wierszy.  
+*TRowset*<br/>
+Klasy zestawów wierszy.  
 
 ## <a name="requirements"></a>Wymagania  
- **Nagłówek:** atldbcli.h  
+
+**Nagłówek:** atldbcli.h  
   
 ## <a name="members"></a>Elementy członkowskie  
   
@@ -62,9 +65,11 @@ class CTable :
 |[Otwórz](#open)|Zostanie otwarty tabeli.|  
   
 ## <a name="remarks"></a>Uwagi  
- Zobacz [CCommand](../../data/oledb/ccommand-class.md) informacji na temat sposobu wykonania polecenia do dostępu do zestawu wierszy.  
+
+Zobacz [CCommand](../../data/oledb/ccommand-class.md) informacji na temat sposobu wykonania polecenia do dostępu do zestawu wierszy.  
 
 ## <a name="open"></a> CTable::Open
+
 Zostanie otwarty tabeli.  
   
 ### <a name="syntax"></a>Składnia  
@@ -87,30 +92,34 @@ HRESULT Open(const CSession& session,
 ```  
   
 #### <a name="parameters"></a>Parametry  
- *Sesji*  
- [in] Sesja otwieraniu tabeli.  
+
+*Sesji*<br/>
+[in] Sesja otwieraniu tabeli.  
   
- *wszTableName*  
- [in] Nazwa tabeli, aby otworzyć, jest przekazywany jako ciąg Unicode.  
+*wszTableName*<br/>
+[in] Nazwa tabeli, aby otworzyć, jest przekazywany jako ciąg Unicode.  
   
- *szTableName*  
- [in] Nazwa tabeli, aby otworzyć, jest przekazywany jako ciąg ANSI.  
+*szTableName*<br/>
+[in] Nazwa tabeli, aby otworzyć, jest przekazywany jako ciąg ANSI.  
   
- *dbid*  
- [in] `DBID` Tabeli, aby otworzyć.  
+*dbid*<br/>
+[in] `DBID` Tabeli, aby otworzyć.  
   
- *pPropSet*  
- [in] Wskaźnik do tablicy [DBPROPSET](/previous-versions/windows/desktop/ms714367\(v=vs.85\)) struktury zawierający właściwości i wartości do ustawienia. Zobacz [zestawy właściwości i właściwości grupy](/previous-versions/windows/desktop/ms713696\(v=vs.85\)) w *OLE DB Podręcznik programisty* w Windows SDK. Domyślna wartość NULL określa Brak właściwości.  
+*pPropSet*<br/>
+[in] Wskaźnik do tablicy [DBPROPSET](/previous-versions/windows/desktop/ms714367\(v=vs.85\)) struktury zawierający właściwości i wartości do ustawienia. Zobacz [zestawy właściwości i właściwości grupy](/previous-versions/windows/desktop/ms713696\(v=vs.85\)) w *OLE DB Podręcznik programisty* w Windows SDK. Domyślna wartość NULL określa Brak właściwości.  
   
- *ulPropSets*  
- [in] Liczba [DBPROPSET](/previous-versions/windows/desktop/ms714367\(v=vs.85\)) struktury przekazany *pPropSet* argumentu.  
+*ulPropSets*<br/>
+[in] Liczba [DBPROPSET](/previous-versions/windows/desktop/ms714367\(v=vs.85\)) struktury przekazany *pPropSet* argumentu.  
   
 ### <a name="return-value"></a>Wartość zwracana  
- Standardowa HRESULT.  
+
+Standardowa HRESULT.  
   
 ### <a name="remarks"></a>Uwagi  
- Aby uzyskać więcej informacji, zobacz [IOpenRowset::OpenRowset](/previous-versions/windows/desktop/ms716724\(v=vs.85\)) w *OLE DB Podręcznik programisty*.  
+
+Aby uzyskać więcej informacji, zobacz [IOpenRowset::OpenRowset](/previous-versions/windows/desktop/ms716724\(v=vs.85\)) w *OLE DB Podręcznik programisty*.  
   
 ## <a name="see-also"></a>Zobacz też  
- [Szablony konsumentów OLE DB](../../data/oledb/ole-db-consumer-templates-cpp.md)   
- [Szablony konsumentów OLE DB — dokumentacja](../../data/oledb/ole-db-consumer-templates-reference.md)   
+
+[Szablony konsumentów OLE DB](../../data/oledb/ole-db-consumer-templates-cpp.md)<br/>
+[Szablony konsumentów OLE DB — dokumentacja](../../data/oledb/ole-db-consumer-templates-reference.md)   

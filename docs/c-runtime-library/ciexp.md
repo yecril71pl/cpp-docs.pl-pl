@@ -1,5 +1,5 @@
 ---
-title: _CIexp | Dokumentacja firmy Microsoft
+title: _Ciexp — | Dokumentacja firmy Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -29,30 +29,33 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 88f74e34a75698f95906de23d7093f6680a0d127
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 227aca74ef64884c64ba83c9f36eb16417041fd4
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32386621"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46081562"
 ---
 # <a name="ciexp"></a>_CIexp
-Oblicza wykładniczej górnej wartości na stosie.  
-  
-## <a name="syntax"></a>Składnia  
-  
-```  
-void __cdecl _CIexp();  
-```  
-  
-## <a name="remarks"></a>Uwagi  
- Ta wersja `exp` funkcja ma specjalne Konwencja wywoływania obsługującą przez kompilator. Przyspiesza wykonywanie, ponieważ uniemożliwia kopie generowany, a ułatwia alokacja rejestru.  
-  
- Wartość wynikową spoczywa na wierzchu stosu.  
-  
-## <a name="requirements"></a>Wymagania  
- **Platforma:** x86  
-  
-## <a name="see-also"></a>Zobacz też  
- [Alfabetyczne odwołanie funkcji](../c-runtime-library/reference/crt-alphabetical-function-reference.md)   
- [exp, expf, expl](../c-runtime-library/reference/exp-expf.md)
+
+Oblicza wartość wykładniczą najwyższą wartość na stosie.
+
+## <a name="syntax"></a>Składnia
+
+```
+void __cdecl _CIexp();
+```
+
+## <a name="remarks"></a>Uwagi
+
+Ta wersja `exp` funkcja ma specjalne Konwencja wywoływania obsługującą przez kompilator. Jego przyspiesza wykonywanie, ponieważ uniemożliwia kopie generowany i pomaga w alokacja rejestru.
+
+Wartość wynikowa są wypychane na górze stosu.
+
+## <a name="requirements"></a>Wymagania
+ **Platforma:** x86
+
+## <a name="see-also"></a>Zobacz też
+
+[Alfabetyczne zestawienie funkcji](../c-runtime-library/reference/crt-alphabetical-function-reference.md)<br/>
+[exp, expf, expl](../c-runtime-library/reference/exp-expf.md)

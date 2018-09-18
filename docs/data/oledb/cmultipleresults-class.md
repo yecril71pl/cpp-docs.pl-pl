@@ -19,15 +19,16 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: c2b4f147943e09c0203f863d7514566de8466acf
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: f3dc76e7d3557f777bb8d521de968671defdde8d
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33096223"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46071565"
 ---
 # <a name="cmultipleresults-class"></a>CMultipleResults — Klasa
-Polecenia do obsługi wielu zestawów wyników, należy użyć `CMultipleResults` dla `CCommand` argument szablonu *TMultiple*.  
+
+Jeśli chcesz, aby polecenia do obsługi wielu zestawów wyników, użyj `CMultipleResults` dla `CCommand` argument szablonu *TMultiple*.  
   
 ## <a name="syntax"></a>Składnia
 
@@ -36,11 +37,14 @@ class CMultipleResults
 ```  
   
 ## <a name="remarks"></a>Uwagi  
- Do obsługi wielu wyników ustawia [CCommand](../../data/oledb/ccommand-class.md) musi dziedziczyć po tej klasie.  
+
+Do obsługi wielu wyników ustawia [CCommand](../../data/oledb/ccommand-class.md) musi dziedziczyć z tej klasy.  
   
 ## <a name="requirements"></a>Wymagania  
- **Nagłówek:** atldbcli  
+
+**Nagłówek:** atldbcli  
   
 ## <a name="see-also"></a>Zobacz też  
- [Szablony konsumentów OLE DB](../../data/oledb/ole-db-consumer-templates-cpp.md)   
- [Szablony konsumentów OLE DB — dokumentacja](../../data/oledb/ole-db-consumer-templates-reference.md)
+
+[Szablony konsumentów OLE DB](../../data/oledb/ole-db-consumer-templates-cpp.md)<br/>
+[Szablony konsumentów OLE DB — dokumentacja](../../data/oledb/ole-db-consumer-templates-reference.md)

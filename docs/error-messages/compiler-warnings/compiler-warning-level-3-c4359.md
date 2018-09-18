@@ -1,5 +1,5 @@
 ---
-title: Kompilatora (poziom 3) ostrzeżenie C4359 | Dokumentacja firmy Microsoft
+title: Kompilator ostrzeżenie (poziom 3) C4359 | Dokumentacja firmy Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,26 +16,28 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d7ddc48294734e5a180014ea20cf98b9d7374f25
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: e97d321b0df8856aadd58f7d27f6339a5776d0f8
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33292987"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46084162"
 ---
-# <a name="compiler-warning-level-3-c4359"></a>Kompilator C4359 ostrzegawcze (poziom 3)
-'type': rzeczywiste wyrównanie (8) jest większa niż wartość określona w __declspec(align())  
-  
- Wyrównanie określone dla typu jest mniejsza niż wyrównanie typ jednego z jego elementów członkowskich danych.  Aby uzyskać więcej informacji, zobacz [Dopasuj](../../cpp/align-cpp.md).  
-  
-## <a name="example"></a>Przykład  
- Poniższy przykład generuje C4359.  
-  
-```  
-// C4359.cpp  
-// compile with: /W3 /c  
-struct __declspec(align(8)) C8 { __int64 i; };  
-struct __declspec(align(4)) C4  { C8 m8; };   // C4359  
-struct __declspec(align(8)) C8_b  { C8 m8; };   // OK  
-struct __declspec(align(16)) C16  { C8 m8; };   // OK  
+# <a name="compiler-warning-level-3-c4359"></a>Kompilator ostrzeżenie (poziom 3) C4359
+
+"type": rzeczywiste wyrównanie (8) jest większa niż wartość określona w __declspec(align())
+
+Wyrównanie określona dla typu jest mniejsza niż wyrównanie typu jednego z jej składowych danych.  Aby uzyskać więcej informacji, zobacz [wyrównać](../../cpp/align-cpp.md).
+
+## <a name="example"></a>Przykład
+
+Poniższy przykład spowoduje wygenerowanie C4359.
+
+```
+// C4359.cpp
+// compile with: /W3 /c
+struct __declspec(align(8)) C8 { __int64 i; };
+struct __declspec(align(4)) C4  { C8 m8; };   // C4359
+struct __declspec(align(8)) C8_b  { C8 m8; };   // OK
+struct __declspec(align(16)) C16  { C8 m8; };   // OK
 ```

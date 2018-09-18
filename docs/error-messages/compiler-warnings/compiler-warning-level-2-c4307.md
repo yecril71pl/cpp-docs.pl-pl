@@ -1,5 +1,5 @@
 ---
-title: Kompilatora (poziom 2) ostrzeżenie C4307 | Dokumentacja firmy Microsoft
+title: Kompilator ostrzeżenie (poziom 2) C4307 | Dokumentacja firmy Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,27 +16,28 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 52914fc5825bda5647308c006b853538f3d6225e
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: ed18c213b35e79aaae98efa5932ac404a8d84bff
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33292035"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46079196"
 ---
-# <a name="compiler-warning-level-2-c4307"></a>Kompilator C4307 ostrzegawcze (poziom 2)
-"operator": przepełnienie stałej  
-  
- Operator jest używany w wyrażeniu, którego wynikiem stałej całkowitej przepełnienia przestrzeń przydzielona dla niego. Użytkownik może być konieczne użycie typu większych dla stałej. A **podpisany int** ma wartość mniejszą niż `unsigned int` ponieważ **podpisany int** używa jeden bit do reprezentowania logowania.  
-  
- Poniższy przykład generuje C4307:  
-  
-```  
-// C4307.cpp  
-// compile with: /W2  
-int i = 2000000000 + 2000000000;   // C4307  
-int j = (unsigned)2000000000 + 2000000000;   // OK  
-  
-int main()  
-{  
-}  
+# <a name="compiler-warning-level-2-c4307"></a>Kompilator ostrzeżenie (poziom 2) C4307
+
+'operator': przepełnienie stałej całkowitej
+
+Operator jest używany w wyrażeniu, które powoduje stała liczba całkowita ilość miejsca przydzielonego dla niego przepełnienia. Użytkownik może być konieczne użycie większych typ stałej. A **podpisany int** przechowuje wartość mniejszą niż `unsigned int` ponieważ **podpisany int** używa jeden bit, który reprezentuje znak.
+
+Poniższy przykład spowoduje wygenerowanie C4307:
+
+```
+// C4307.cpp
+// compile with: /W2
+int i = 2000000000 + 2000000000;   // C4307
+int j = (unsigned)2000000000 + 2000000000;   // OK
+
+int main()
+{
+}
 ```

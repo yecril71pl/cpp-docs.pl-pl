@@ -30,12 +30,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ec4fa860387068dd345c19467583922ebaeb49ab
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: ef1469c40de8aae06460f1874905c53e91a47ca1
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43763676"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46079339"
 ---
 # <a name="catlpreviewctrlimpl-class"></a>Klasa CAtlPreviewCtrlImpl
 
@@ -144,10 +144,10 @@ virtual BOOL Create(HWND hWndParent, const RECT* prc);
 
 ### <a name="parameters"></a>Parametry
 
-*hWndParent*  
+*hWndParent*<br/>
 Dojście do okna hosta, dostarczone przez powłokę podglądu sformatowanego.
 
-*Chińska Republika Ludowa*  
+*Chińska Republika Ludowa*<br/>
 Określa początkowy rozmiar i położenie okna.
 
 ### <a name="return-value"></a>Wartość zwracana
@@ -176,7 +176,7 @@ virtual void DoPaint(HDC hdc);
 
 ### <a name="parameters"></a>Parametry
 
-*elementu hdc*  
+*elementu hdc*<br/>
 Dojście do kontekstu urządzenia dla malowania.
 
 ### <a name="remarks"></a>Uwagi
@@ -235,16 +235,16 @@ LRESULT OnPaint(
 
 ### <a name="parameters"></a>Parametry
 
-*nMsg*  
+*nMsg*<br/>
 Ustaw WM_PAINT.
 
-*wParam*  
+*wParam*<br/>
 Ten parametr nie jest używany.
 
-*lParam*  
+*lParam*<br/>
 Ten parametr nie jest używany.
 
-*bHandled*  
+*bHandled*<br/>
 Gdy ta funkcja zwróci wartość, zawiera wartość TRUE.
 
 ### <a name="return-value"></a>Wartość zwracana
@@ -273,7 +273,7 @@ virtual void SetHost(HWND hWndParent);
 
 ### <a name="parameters"></a>Parametry
 
-*hWndParent*  
+*hWndParent*<br/>
 Dojście do nowego okna nadrzędnego.
 
 ### <a name="remarks"></a>Uwagi
@@ -291,13 +291,13 @@ virtual void SetPreviewVisuals(
 
 ### <a name="parameters"></a>Parametry
 
-*clrBack*  
+*clrBack*<br/>
 Kolor tła okna podglądu.
 
-*clrText*  
+*clrText*<br/>
 Kolor tekstu w oknie podglądu.
 
-*PLF*  
+*PLF*<br/>
 Czcionka używana do wyświetlania tekstu w oknie podglądu.
 
 ### <a name="remarks"></a>Uwagi
@@ -312,10 +312,10 @@ virtual void SetRect(const RECT* prc, BOOL bRedraw);
 
 ### <a name="parameters"></a>Parametry
 
-*Chińska Republika Ludowa*  
+*Chińska Republika Ludowa*<br/>
 Określa nowy rozmiar i położenie formantu w wersji zapoznawczej.
 
-*bRedraw*  
+*bRedraw*<br/>
 Określa, czy formant powinien być narysowany ponownie.
 
 ### <a name="remarks"></a>Uwagi

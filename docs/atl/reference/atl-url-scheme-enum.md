@@ -14,32 +14,31 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ee13d34bcea1e7ce2e53b0659739ee730152f287
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: d2883232d673bd52a9afff0cd5e76ea29ceb4120
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43755414"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46074412"
 ---
-# <a name="atlurlscheme"></a>ATL_URL_SCHEME  
+# <a name="atlurlscheme"></a>ATL_URL_SCHEME
 
 Członkowie to wyliczenie zapewnia stałe dla schematów zrozumiałe [CUrl](curl-class.md).
 
 ## <a name="syntax"></a>Składnia
 
 ```
-
-      enum ATL_URL_SCHEME{  
-   ATL_URL_SCHEME_UNKNOWN = -1,  
-   ATL_URL_SCHEME_FTP     = 0,  
-   ATL_URL_SCHEME_GOPHER  = 1,  
-   ATL_URL_SCHEME_HTTP    = 2,  
-   ATL_URL_SCHEME_HTTPS   = 3,  
-   ATL_URL_SCHEME_FILE    = 4,  
-   ATL_URL_SCHEME_NEWS    = 5,  
-   ATL_URL_SCHEME_MAILTO  = 6,  
-   ATL_URL_SCHEME_SOCKS   = 7  
-};  
+enum ATL_URL_SCHEME{
+   ATL_URL_SCHEME_UNKNOWN = -1,
+   ATL_URL_SCHEME_FTP     = 0,
+   ATL_URL_SCHEME_GOPHER  = 1,
+   ATL_URL_SCHEME_HTTP    = 2,
+   ATL_URL_SCHEME_HTTPS   = 3,
+   ATL_URL_SCHEME_FILE    = 4,
+   ATL_URL_SCHEME_NEWS    = 5,
+   ATL_URL_SCHEME_MAILTO  = 6,
+   ATL_URL_SCHEME_SOCKS   = 7
+};
 ```
 
 ## <a name="requirements"></a>Wymagania
@@ -48,6 +47,6 @@ Członkowie to wyliczenie zapewnia stałe dla schematów zrozumiałe [CUrl](curl
 
 ## <a name="see-also"></a>Zobacz też
 
-[Pojęcia](../active-template-library-atl-concepts.md)   
-[CUrl::SetScheme](curl-class.md#setscheme)   
+[Pojęcia](../active-template-library-atl-concepts.md)<br/>
+[CUrl::SetScheme](curl-class.md#setscheme)<br/>
 [CUrl::GetScheme](curl-class.md#getscheme)

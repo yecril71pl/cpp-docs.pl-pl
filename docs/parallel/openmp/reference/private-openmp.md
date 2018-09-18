@@ -16,15 +16,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4af88f450ce6c77a6b0753917516719331199dfd
-ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
+ms.openlocfilehash: 7bd5b85e563f8160dd4490b650caf4f146a09410
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33692681"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46071240"
 ---
 # <a name="private-openmp"></a>prywatne (OpenMP)
-Określa, że każdy wątek powinien mieć własne wystąpienie zmiennej.  
+Określa, że każdy wątek ma własne wystąpienie zmiennej.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -32,14 +32,13 @@ Określa, że każdy wątek powinien mieć własne wystąpienie zmiennej.
 private(var)  
 ```  
   
-## <a name="remarks"></a>Uwagi  
- w przypadku gdy  
+### <a name="parameters"></a>Parametry
   
- `var`  
- Zmienna w celu zapewnienia wystąpień każdy wątek.  
+*var*<br/>
+Zmienna wystąpienia znajdują się w każdym wątku.  
   
 ## <a name="remarks"></a>Uwagi  
- **prywatne** dotyczy następujących dyrektyw:  
+ **prywatne** dotyczy następujących dyrektywach:  
   
 -   [for](../../../parallel/openmp/reference/for-openmp.md)  
   
@@ -53,7 +52,7 @@ private(var)
   
 ## <a name="example"></a>Przykład  
   
-```  
+```C  
 // openmp_private.c  
 // compile with: /openmp  
 #include <windows.h>  

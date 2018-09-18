@@ -16,32 +16,33 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 151c22bf13c13de21e89a5c96185cf1c4c1ca349
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 264b2f90a2d778b1545117ce5c3b1272626ebad6
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33317482"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46073255"
 ---
 # <a name="project-build-error-prj0006"></a>Błąd PRJ0006 kompilacji projektu
-Nie można otworzyć pliku tymczasowego 'Plik'. Upewnij się, że plik istnieje i że katalog jest nie zabezpieczony przed zapisem.  
-  
- Visual C++ nie można utworzyć pliku tymczasowego podczas procesu kompilacji. Powody mogą być następujące:  
-  
--   Nie katalogu tymczasowego.  
-  
--   Tylko do odczytu katalogu tymczasowego.  
-  
--   Brak miejsca na dysku.  
-  
--   $(IntDir) folder jest tylko do odczytu lub zawiera pliki tymczasowe, które są tylko do odczytu.  
-  
- Ten błąd wystąpi następujący błąd PRJ0007: nie można utworzyć katalogu "katalog wyjściowy'. Błąd PRJ0007 oznacza, że nie można utworzyć katalogu $(IntDir), co oznacza tworzenie plików tymczasowo również zakończą się.  
-  
- Pliki tymczasowe są tworzone przy każdym należy określić:  
-  
--   Plik odpowiedzi.  
-  
--   Niestandardowy krok kompilacji.  
-  
--   Zdarzenia kompilacji.
+
+Nie można otworzyć pliku tymczasowego 'Plik'. Upewnij się, że plik istnieje i że katalog jest nie zabezpieczony przed zapisem.
+
+Visual C++ nie można utworzyć pliku tymczasowego w procesie kompilacji. Przyczyny są między innymi:
+
+- Nie katalogu tymczasowego.
+
+- Tylko do odczytu katalogu tymczasowego.
+
+- Brak miejsca na dysku.
+
+- $(IntDir) folder jest tylko do odczytu lub zawiera pliki tymczasowe, które są przeznaczone tylko do odczytu.
+
+Ten błąd wystąpi następujący błąd PRJ0007: nie można utworzyć katalogu wyjściowego 'katalog'. Błąd PRJ0007 oznacza, że nie można utworzyć katalogu $(IntDir) obszaru tworzenie tymczasowo plików będą również zakończyć się niepowodzeniem.
+
+Pliki tymczasowe są tworzone w każdym przypadku, gdy należy określić:
+
+- Plik odpowiedzi.
+
+- Niestandardowego kroku kompilacji.
+
+- To zdarzenie kompilacji.

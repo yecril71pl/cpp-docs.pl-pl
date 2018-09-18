@@ -1,5 +1,5 @@
 ---
-title: C3623 błąd kompilatora | Dokumentacja firmy Microsoft
+title: Błąd kompilatora C3623 | Dokumentacja firmy Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,32 +16,33 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 231826dbcb38bb6bdae490c2f86954e1a56c2b77
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 90198a3ea7cfb96b75717550b551c55915187211
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33254900"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46085306"
 ---
-# <a name="compiler-error-c3623"></a>C3623 błąd kompilatora
-"Zmienna": pola bitowe nie są obsługiwane w zarządzanych lub typów WinRT  
-  
- Pola bitowego jest niedozwolony w zmiennych w zarządzanych lub klasy WinRT.  
-  
- Poniższy przykład generuje C3623:  
-  
-```  
-// C3623.cpp  
-// compile with: /clr  
-using namespace System;  
-ref class CMyClass {  
-public:  
-   int i : 1;   // C3623  
-};  
-  
-int main() {  
-   CMyClass^ pMyClass = gcnew CMyClass();  
-   pMyClass->i = 3;  
-   Console::Out->WriteLine(pMyClass->i);  
-}  
-```  
+# <a name="compiler-error-c3623"></a>Błąd kompilatora C3623
+
+'Zmienna': pola bitowe nie są obsługiwane w zarządzanych lub typów WinRT
+
+Użyj pól bitowych nie jest dozwolona w zmiennych w zarządzanej lub klasa WinRT.
+
+Poniższy przykład spowoduje wygenerowanie C3623:
+
+```
+// C3623.cpp
+// compile with: /clr
+using namespace System;
+ref class CMyClass {
+public:
+   int i : 1;   // C3623
+};
+
+int main() {
+   CMyClass^ pMyClass = gcnew CMyClass();
+   pMyClass->i = 3;
+   Console::Out->WriteLine(pMyClass->i);
+}
+```

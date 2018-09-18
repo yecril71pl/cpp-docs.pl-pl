@@ -1,5 +1,5 @@
 ---
-title: C3734 błąd kompilatora | Dokumentacja firmy Microsoft
+title: Błąd kompilatora C3734 | Dokumentacja firmy Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,26 +16,27 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: af0b27f449e61d6b80ad2d19eb09a3a55c5f3ad1
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: d304b3853986b54f9844f9e4968f7bb7d6a8af5a
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33264197"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46072748"
 ---
-# <a name="compiler-error-c3734"></a>C3734 błąd kompilatora
-"class": zarządzanego lub klasy WinRT nie może być klasą coclass  
-  
- [Coclass](../../windows/coclass.md) atrybut nie może być używany z zarządzanego lub klasach WinRT.  
-  
- Poniższy przykład generuje C3734 i pokazuje, jak rozwiązywanie problemu:  
-  
-```  
-// C3734.cpp  
-// compile with: /clr /c  
-[module(name="x")];  
-  
-[coclass]  
-ref class CMyClass {   // C3734 remove the ref keyword to resolve  
-};  
-```  
+# <a name="compiler-error-c3734"></a>Błąd kompilatora C3734
+
+"class": zarządzanej lub klasa WinRT nie może być klasą coclass
+
+[Coclass](../../windows/coclass.md) atrybut nie może być używany z zarządzanego lub klasach WinRT.
+
+Poniższy przykład generuje C3734 i pokazuje, jak go naprawić:
+
+```
+// C3734.cpp
+// compile with: /clr /c
+[module(name="x")];
+
+[coclass]
+ref class CMyClass {   // C3734 remove the ref keyword to resolve
+};
+```

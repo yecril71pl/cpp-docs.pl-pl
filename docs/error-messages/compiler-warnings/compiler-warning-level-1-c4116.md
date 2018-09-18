@@ -1,5 +1,5 @@
 ---
-title: Kompilatora (poziom 1) ostrzeżenie C4116 | Dokumentacja firmy Microsoft
+title: Kompilator ostrzeżenie (poziom 1) C4116 | Dokumentacja firmy Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,16 +16,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f17a61dd39c458091216bc2bde89c84ec2307956
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 5f91892bd28733761c187705b8f576007862027b
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33276208"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46080704"
 ---
-# <a name="compiler-warning-level-1-c4116"></a>Kompilator C4116 ostrzegawcze (poziom 1)
-Nienazwana definicja typu w nawiasach  
-  
- Struktura, Unią lub typ wyliczeniowy bez nazwy jest zdefiniowany w wyrażeniu dopasowania. Definicja typu jest bez znaczenia.  
-  
- W wywołaniu funkcji C definicja ma zasięg globalny. W wywołaniu funkcji C++ definicji jest tym samym zakresie co wywołanie funkcji.
+# <a name="compiler-warning-level-1-c4116"></a>Kompilator ostrzeżenie (poziom 1) C4116
+
+Nienazwana definicja typu w nawiasach
+
+Struktura, Unia lub Typy wyliczeniowe bez nazwy jest zdefiniowany w nawiasach wyrażenia. Definicja typu jest bez znaczenia.
+
+W wywołaniu funkcji C definicja ma zakres globalny. W wywołaniu funkcji C++ definicja ma taki sam zakres jak wywoływanej funkcji.

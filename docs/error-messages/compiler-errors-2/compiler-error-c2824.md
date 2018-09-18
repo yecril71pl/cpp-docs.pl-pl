@@ -1,5 +1,5 @@
 ---
-title: C2824 błąd kompilatora | Dokumentacja firmy Microsoft
+title: Błąd kompilatora C2824 | Dokumentacja firmy Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,26 +16,27 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: bc654f60d9494480e0551f4de3ec1e041938cea2
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 310156e82f69622a5c4a2315e204ccaa146e2c00
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33237167"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46077415"
 ---
-# <a name="compiler-error-c2824"></a>C2824 błąd kompilatora
-typem zwracanym dla "operator new" musi być "void *"  
-  
- Z innych wskaźników overloads operatora `new` musi zwracać `void *`.  
-  
- Poniższy przykład generuje C2824:  
-  
-```  
-// C2824.cpp  
-// compile with: /c  
-class   A {  
-   A* operator new(size_t i, char *m);   // C2824  
-   // try the following line instead  
-   // void* operator new(size_t i, char *m);  
-};  
+# <a name="compiler-error-c2824"></a>Błąd kompilatora C2824
+
+typem zwracanym dla "operator new" musi być "void *"
+
+Za pomocą — na podstawie wskaźników, przeciążenia operatora `new` musi zwracać `void *`.
+
+Poniższy przykład spowoduje wygenerowanie C2824:
+
+```
+// C2824.cpp
+// compile with: /c
+class   A {
+   A* operator new(size_t i, char *m);   // C2824
+   // try the following line instead
+   // void* operator new(size_t i, char *m);
+};
 ```

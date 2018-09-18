@@ -16,14 +16,15 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 68ef867a966df027ff918db209ec6e46a5ca9d9b
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 18ebfff81eed0268501c268cc6704914ebf054ef
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33296825"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46084747"
 ---
 # <a name="linker-tools-error-lnk1196"></a>Błąd narzędzi konsolidatora LNK1196
-nieprawidłowy lub uszkodzony obiekt importu: Nieznana wersja  
-  
- Importuj biblioteki jest uszkodzony. Odbuduj biblioteki.
+
+nieprawidłowy lub uszkodzony obiekt importu: Nieznana wersja
+
+Biblioteka importowana jest uszkodzony. Ponownie skompiluj bibliotekę.

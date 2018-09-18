@@ -1,5 +1,5 @@
 ---
-title: C2104 błąd kompilatora | Dokumentacja firmy Microsoft
+title: Błąd kompilatora C2104 | Dokumentacja firmy Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,29 +16,30 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 28f3a9173f1141c055547149bc18b5f96a3a475b
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: e35be180be7ded6a65585566dff6173a13ba7821
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33165912"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46083382"
 ---
-# <a name="compiler-error-c2104"></a>C2104 błąd kompilatora
-"&" na pole bitowe ignorowane  
-  
- Nie można przyjąć adresu pola bitowego.  
-  
- Poniższy przykład generuje C2104:  
-  
-```  
-// C2104.cpp  
-struct X {  
-   int sb : 1;  
-};  
-  
-int main() {  
-   X x;  
-   &x.sb;   // C2104   
-   x.sb;   // OK  
-}  
+# <a name="compiler-error-c2104"></a>Błąd kompilatora C2104
+
+"&" na pole bitowe ignorowane
+
+Nie można przyjąć adresu polem bitowym.
+
+Poniższy przykład spowoduje wygenerowanie C2104:
+
+```
+// C2104.cpp
+struct X {
+   int sb : 1;
+};
+
+int main() {
+   X x;
+   &x.sb;   // C2104
+   x.sb;   // OK
+}
 ```

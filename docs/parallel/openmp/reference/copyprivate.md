@@ -16,15 +16,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 96b1516970afb8729dc4e35c2226eb6ff00f5c2e
-ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
+ms.openlocfilehash: 1f698114fc1f2285cdcdb91ec1e8317ad1585a6b
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33692941"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46071136"
 ---
 # <a name="copyprivate"></a>copyprivate
-Określa, że co najmniej jedną zmienną powinna być współużytkowane przez wszystkie wątki.  
+Określa, czy co najmniej jednej zmiennej powinien być współużytkowane przez wszystkie wątki.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -32,11 +32,10 @@ Określa, że co najmniej jedną zmienną powinna być współużytkowane przez 
 copyprivate(var)  
 ```  
   
-## <a name="remarks"></a>Uwagi  
- w przypadku gdy  
+### <a name="parameters"></a>Parametry
   
- `var`  
- Co najmniej jedną zmienną do udostępniania. Jeśli określono więcej niż jednej zmiennej, oddziel przecinkami nazwy zmiennych.  
+*var*<br/>
+Co najmniej jednej zmiennej do udostępniania. Jeżeli określono więcej niż jedną zmienną, oddziel przecinkami nazw zmiennych.  
   
 ## <a name="remarks"></a>Uwagi  
  `copyprivate` dotyczy [pojedynczego](../../../parallel/openmp/reference/single.md) dyrektywy.  

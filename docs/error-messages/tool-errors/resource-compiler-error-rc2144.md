@@ -16,16 +16,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8b6f83f937e881cdee16c22120e6ac1839f7ad76
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 62f9eb2b25919a2336c36a459ef41eece447a490
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33320489"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46080496"
 ---
 # <a name="resource-compiler-error-rc2144"></a>Błąd kompilatora zasobów RC2144
-PODSTAWOWY identyfikator języka nie liczba  
-  
- PODSTAWOWY identyfikator języka musi być identyfikatorem języka szesnastkowe Zobacz [języka i ciągi Kraj/Region](../../c-runtime-library/locale-names-languages-and-country-region-strings.md) w *odwołanie do biblioteki wykonawczej* listę poprawnych identyfikatorów języka.  
-  
- Ten błąd może również wystąpić, jeśli zasoby zostały dodawane i usuwane z. RC plik przy użyciu narzędzia. Aby rozwiązać ten problem, Otwórz. RC plik w edytorze tekstów i czyszczenie wszystkich nieużywanych zasobów ręcznie.
+
+PODSTAWOWY identyfikator języka nie jest liczbą
+
+PODSTAWOWY identyfikator języka musi być identyfikatorem szesnastkowe języka. Zobacz [język i Kraj/Region Strings](../../c-runtime-library/locale-names-languages-and-country-region-strings.md) w *odwołanie do biblioteki wykonawczej* listę poprawnych identyfikatorów języka.
+
+Ten błąd może również wystąpić, jeśli zasoby zostały dodane i usunięta z. Plik RC przy użyciu narzędzia. Aby rozwiązać ten problem, Otwórz. RC plik ręcznie w edytorze tekstów i wyczyścić wszystkie nieużywane zasoby.

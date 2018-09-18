@@ -16,18 +16,19 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4b28db2573ac58ee46b9ac5466d341a4a1690fc3
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: a8042782477b402f2e09d1d67c8fd5c126647285
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33227398"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46072631"
 ---
 # <a name="fatal-error-c1207"></a>Błąd krytyczny C1207
-Zarządzane szablony nie są obsługiwane przez wersję środowiska uruchomieniowego zainstalowany  
-  
- C1207 występuje, gdy masz kompilatora dla bieżącej wersji, ale środowisko uruchomieniowe języka wspólnego z poprzedniej wersji.  
-  
- Niektóre funkcje kompilator może nie działać w poprzedniej wersji czasu wykonywania.  
-  
- Aby rozwiązać typowe wersja środowiska uruchomieniowego CLR, który jest przeznaczony do użytku z kompilujący C1207 instalacji.
+
+Zarządzane szablony nie są obsługiwane przez wersję zainstalowanego środowiska uruchomieniowego
+
+C1207 występuje, gdy masz kompilatora dla bieżącej wersji, ale środowisko uruchomieniowe języka wspólnego z poprzedniej wersji.
+
+Niektóre funkcje kompilatora może nie działać w poprzedniej wersji w czasie wykonywania.
+
+Aby rozwiązać C1207 Zainstaluj wspólnej wersję środowiska wykonawczego języka jest przeznaczona do użytku z kompilatora.

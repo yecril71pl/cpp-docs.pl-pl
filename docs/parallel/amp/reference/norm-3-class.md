@@ -1,5 +1,5 @@
 ---
-title: norm_3 — klasa | Dokumentacja firmy Microsoft
+title: norm_3, klasa | Dokumentacja firmy Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -82,15 +82,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 822ef062dbde18dcdb285d2358d10f4a6ae2b566
-ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
+ms.openlocfilehash: fe4852313d6eb445b3ea242f13e5dc5f6e90def2
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33688664"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46074386"
 ---
 # <a name="norm3-class"></a>norm_3 — Klasa
-Reprezentuje krótki wektor trzy normalnej liczby.  
+Reprezentuje krótki Wektor trzech liczb normalnych.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -100,7 +100,7 @@ class norm_3;
   
 ## <a name="members"></a>Elementy członkowskie  
   
-### <a name="public-typedefs"></a>Definicje typów publicznych  
+### <a name="public-typedefs"></a>Publiczne definicje typów  
   
 |Nazwa|Opis|  
 |----------|-----------------|  
@@ -110,7 +110,7 @@ class norm_3;
   
 |Nazwa|Opis|  
 |----------|-----------------|  
-|[norm_3 — Konstruktor](#ctor)|Przeciążone. Domyślny konstruktor, inicjuje wszystkie elementy z 0.|  
+|[norm_3 — Konstruktor](#ctor)|Przeciążone. Domyślny konstruktor, inicjuje wszystkie elementy wartością 0.|  
   
 ### <a name="public-methods"></a>Metody publiczne  
   
@@ -166,11 +166,11 @@ class norm_3;
 |norm_3::operator =||  
 |norm_3::operator-=||  
   
-### <a name="public-constants"></a>Publiczny — stałe  
+### <a name="public-constants"></a>Publiczne stałe  
   
 |Nazwa|Opis|  
 |----------|-----------------|  
-|[Size — stała](#size)||  
+|[rozmiar — stała](#size)||  
   
 ### <a name="public-data-members"></a>Publiczne elementy członkowskie danych  
   
@@ -216,7 +216,7 @@ class norm_3;
  **Namespace:** Concurrency::graphics  
 
 ## <a name="ctor"></a> norm_3 — Konstruktor
-Domyślny konstruktor, inicjuje wszystkie elementy z 0.  
+Domyślny konstruktor, inicjuje wszystkie elementy wartością 0.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -264,22 +264,22 @@ explicit inline norm_3(
 ```  
   
 #### <a name="parameters"></a>Parametry  
- `_V0`  
- Wartość do zainicjowania elementu 0.  
+*_V0*<br/>
+Wartość do zainicjowania elementu 0.  
   
- `_V1`  
- Wartość zainicjować element 1.  
+*_V1*<br/>
+Wartość do zainicjowania elementu 1.  
   
- `_V2`  
- Wartość zainicjować element 2.  
+*_V2*<br/>
+Wartość można zainicjować element 2.  
   
- `_V`  
- Wartość dla inicjowania.  
+*_V*<br/>
+Wartość inicjalizacji.  
   
- `_Other`  
- Obiekt używany do inicjowania.  
+*_Inne*<br/>
+Obiekt używany do inicjowania.  
   
-## <a name="a-namesize-size-constant"></a><a name="size"> Size — stała
+## <a name="a-namesize-size-constant"></a><a name="size"> rozmiar — stała
 ### <a name="syntax"></a>Składnia  
   
 ```  

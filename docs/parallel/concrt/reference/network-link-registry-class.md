@@ -22,15 +22,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: dab0ad6aff391eb89ac59198fb8c173ecb362bbd
-ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
+ms.openlocfilehash: ae551c934c4286a321772fb01a21260c36dfccff
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33688300"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46080327"
 ---
 # <a name="networklinkregistry-class"></a>network_link_registry — Klasa
-`network_link_registry` Abstrakcyjna klasa podstawowa zarządza łącza między bloki źródłowe i docelowe.  
+`network_link_registry` Abstrakcyjna klasa bazowa zarządza łącza między źródłowym i docelowym bloki.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -40,32 +40,32 @@ class network_link_registry;
 ```  
   
 #### <a name="parameters"></a>Parametry  
- `_Block`  
- Typ danych bloku są przechowywane w `network_link_registry`.  
+*_Blok*<br/>
+Typ danych bloku znajdujących się w `network_link_registry`.  
   
 ## <a name="members"></a>Elementy członkowskie  
   
-### <a name="public-typedefs"></a>Definicje typów publicznych  
+### <a name="public-typedefs"></a>Publiczne definicje typów  
   
 |Nazwa|Opis|  
 |----------|-----------------|  
 |`const_pointer`|Typ, który dostarcza wskaźnik do `const` element `network_link_registry` obiektu.|  
-|`const_reference`|Typ, który zawiera odwołanie do `const` element przechowywane w `network_link_registry` obiektu za odczytywanie i wykonywanie operacji na stałe.|  
-|`iterator`|Typ, który udostępnia iteratora, które mogą odczytywać lub modyfikować dowolny element w `network_link_registry` obiektu.|  
-|`type`|Typ reprezentujący typ bloku, przechowywane w `network_link_registry` obiektu.|  
+|`const_reference`|Typ, który zawiera odwołanie do `const` przechowywanego w `network_link_registry` obiektu do odczytu i wykonywania operacji const.|  
+|`iterator`|Typ zapewniający iterator, który może odczytać lub zmodyfikować dowolny element w `network_link_registry` obiektu.|  
+|`type`|Typ, który reprezentuje typ bloku, przechowywane w `network_link_registry` obiektu.|  
   
 ### <a name="public-methods"></a>Metody publiczne  
   
 |Nazwa|Opis|  
 |----------|-----------------|  
-|[add](#add)|W przypadku przesłonięcia w klasie pochodnej, dodaje łącze do `network_link_registry` obiektu.|  
-|[begin](#begin)|W przypadku przesłonięcia w klasie pochodnej zwraca iteratora do pierwszego elementu w `network_link_registry` obiektu.|  
+|[add](#add)|W przypadku przesłonięcia w klasie pochodnej, dodaje link do `network_link_registry` obiektu.|  
+|[begin](#begin)|Po przesłonięciu w klasie pochodnej zwraca iterator do pierwszego elementu w `network_link_registry` obiektu.|  
 |[zawiera](#contains)|W przypadku przesłonięcia w klasie pochodnej, wyszukuje `network_link_registry` obiektu dla określonego bloku.|  
 |[Liczba](#count)|W przypadku przesłonięcia w klasie pochodnej zwraca liczbę elementów w `network_link_registry` obiektu.|  
-|[remove](#remove)|W przypadku przesłonięcia w klasie pochodnej usuwa określony blok z `network_link_registry` obiektu.|  
+|[remove](#remove)|W przypadku przesłonięcia w klasie pochodnej, usuwa określony blok z `network_link_registry` obiektu.|  
   
 ## <a name="remarks"></a>Uwagi  
- `network link registry` Nie jest bezpieczne dla współbieżny dostęp.  
+ `network link registry` Nie jest bezpieczny dla równoczesny dostęp.  
   
 ## <a name="inheritance-hierarchy"></a>Hierarchia dziedziczenia  
  `network_link_registry`  
@@ -77,29 +77,29 @@ class network_link_registry;
   
 ##  <a name="add"></a> Dodaj 
 
- W przypadku przesłonięcia w klasie pochodnej, dodaje łącze do `network_link_registry` obiektu.  
+ W przypadku przesłonięcia w klasie pochodnej, dodaje link do `network_link_registry` obiektu.  
   
 ```
 virtual void add(_EType _Link) = 0;
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `_Link`  
- Wskaźnik do bloku do dodania.  
+*_Link*<br/>
+Wskaźnik do bloku, który ma zostać dodana.  
   
 ##  <a name="begin"></a> Rozpocznij 
 
- W przypadku przesłonięcia w klasie pochodnej zwraca iteratora do pierwszego elementu w `network_link_registry` obiektu.  
+ Po przesłonięciu w klasie pochodnej zwraca iterator do pierwszego elementu w `network_link_registry` obiektu.  
   
 ```
 virtual iterator begin() = 0;
 ```  
   
 ### <a name="return-value"></a>Wartość zwracana  
- Iteratora adresowania pierwszym elementem w `network_link_registry` obiektu.  
+ Iterator odnoszący się do pierwszego elementu w `network_link_registry` obiektu.  
   
 ### <a name="remarks"></a>Uwagi  
- Wskazuje stan końcowy iteratora `NULL` łącza.  
+ Stan końcowy iterator który jest wskazywany przez `NULL` łącza.  
   
 ##  <a name="contains"></a> zawiera 
 
@@ -110,11 +110,11 @@ virtual bool contains(_EType _Link) = 0;
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `_Link`  
- Wskaźnik do bloku, który jest przeszukiwany dla w `network_link_registry` obiektu.  
+*_Link*<br/>
+Wskaźnik do bloku, który jest wyszukiwana w `network_link_registry` obiektu.  
   
 ### <a name="return-value"></a>Wartość zwracana  
- `true` Jeśli znaleziono bloku, `false` inaczej.  
+ `true` Jeśli blok został znaleziony, `false` inaczej.  
   
 ##  <a name="count"></a> Liczba 
 
@@ -129,18 +129,18 @@ virtual size_t count() = 0;
   
 ##  <a name="remove"></a> Usuń 
 
- W przypadku przesłonięcia w klasie pochodnej usuwa określony blok z `network_link_registry` obiektu.  
+ W przypadku przesłonięcia w klasie pochodnej, usuwa określony blok z `network_link_registry` obiektu.  
   
 ```
 virtual bool remove(_EType _Link) = 0;
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `_Link`  
- Wskaźnik do bloku, który ma zostać usunięty, jeśli znaleziono.  
+*_Link*<br/>
+Wskaźnik do bloku, który ma zostać usunięty, jeśli znaleziono.  
   
 ### <a name="return-value"></a>Wartość zwracana  
- `true` Jeśli łącze zostało odnalezione i usunięte, `false` inaczej.  
+ `true` Jeśli łącze zostało znalezione i usuwane, `false` inaczej.  
   
 ## <a name="see-also"></a>Zobacz też  
  [Współbieżność Namespace](concurrency-namespace.md)   

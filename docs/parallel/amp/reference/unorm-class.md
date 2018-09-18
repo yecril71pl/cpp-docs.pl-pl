@@ -1,5 +1,5 @@
 ---
-title: unorm — klasa | Dokumentacja firmy Microsoft
+title: unorm, klasa | Dokumentacja firmy Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,15 +16,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e235930b73c4e9c2bc110d142ad734669f9c6ccc
-ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
+ms.openlocfilehash: 1d0769697dfbb0c43be9fb7326a5ad4361a2aecd
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33695684"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46071227"
 ---
 # <a name="unorm-class"></a>unorm — Klasa
-Reprezentuje numer unorm —. Każdy element jest liczbą zmiennoprzecinkową wskaż liczbę z zakresu [0.0f, 1,0 f].  
+Reprezentuje liczby unorm. Każdy element jest zmiennoprzecinkowy numer punktu z zakresu [0.0f, 1,0 f].  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -38,14 +38,14 @@ class unorm;
   
 |Nazwa|Opis|  
 |----------|-----------------|  
-|[unorm — Konstruktor](#ctor)|Przeciążone. Domyślny konstruktor. Zainicjuj do 0,0.|  
+|[unorm konstruktora](#ctor)|Przeciążone. Domyślny konstruktor. Zainicjuj 0,0.|  
   
 ### <a name="public-operators"></a>Operatory publiczne  
   
 |Nazwa|Opis|  
 |----------|-----------------|  
 |unorm::operator--||  
-|unorm::operator float|Operator konwersji. Konwertowanie liczby unorm — zmiennoprzecinkowej wartości.|  
+|unorm::operator float|Operator konwersji. Konwertowanie liczby unorm zmiennoprzecinkowej wartości.|  
 |unorm::operator * =||  
 |unorm::operator / =||  
 |unorm::operator ++||  
@@ -61,9 +61,9 @@ class unorm;
   
  **Namespace:** Concurrency::graphics  
   
-##  <a name="ctor"></a> unorm — 
+##  <a name="ctor"></a> unorm 
 
- Domyślny konstruktor. Zainicjuj do 0,0.  
+ Domyślny konstruktor. Zainicjuj 0,0.  
   
 ```  
 unorm(
@@ -102,11 +102,11 @@ inline explicit unorm(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `_V`  
- Wartość używaną do inicjalizacji.  
+*_V*<br/>
+Wartość wykorzystana do zainicjowania.  
   
- `_Other`  
- Obiekt normy używaną do inicjalizacji.  
+*_Inne*<br/>
+Norm obiekt używany do inicjowania.  
   
 ## <a name="see-also"></a>Zobacz też  
  [Concurrency::graphics, przestrzeń nazw](concurrency-graphics-namespace.md)

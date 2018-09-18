@@ -27,33 +27,36 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c520f81062f1bbbb295f17c6bc041afb8b5f2877
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 6c4dcea9e3f35bf5fd8dbfbed9273562ac3db551
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32389839"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46056342"
 ---
 # <a name="pfmode"></a>__p__fmode
-Wskazuje `_fmode` zmiennej globalnej, która określa domyślny *tryb tłumaczenia pliku* dla operacji We/Wy pliku.  
-  
-## <a name="syntax"></a>Składnia  
-  
-```cpp  
-int* __p__fmode(  
-   );  
-```  
-  
-## <a name="return-value"></a>Wartość zwracana  
- Wskaźnik do `_fmode` zmiennej globalnej.  
-  
-## <a name="remarks"></a>Uwagi  
- `__p__fmode` Funkcji jest tylko do użytku wewnętrznego i nie powinna być wywoływana z kodu użytkownika.  
-  
- Określa tryb tłumaczenia pliku `binary` lub `text` Translacja [_otwórz](../c-runtime-library/reference/open-wopen.md) i [_pipe —](../c-runtime-library/reference/pipe.md) operacji We/Wy. Aby uzyskać więcej informacji, zobacz [_fmode —](../c-runtime-library/fmode.md).  
-  
-## <a name="requirements"></a>Wymagania  
-  
-|Procedura|Wymagany nagłówek|  
-|-------------|---------------------|  
-|__p\__fmode —|stdlib.h|
+
+Wskazuje `_fmode` zmienna globalna, która określa domyślny *tryb tłumaczenia pliku* dla operacji We/Wy pliku.
+
+## <a name="syntax"></a>Składnia
+
+```cpp
+int* __p__fmode(
+   );
+```
+
+## <a name="return-value"></a>Wartość zwracana
+
+Wskaźnik do `_fmode` zmiennej globalnej.
+
+## <a name="remarks"></a>Uwagi
+
+`__p__fmode` Funkcji jest tylko do użytku wewnętrznego i nie powinna być wywoływana z kodu użytkownika.
+
+Tryb tłumaczenia pliku określa albo `binary` lub `text` Translacja [_otwórz](../c-runtime-library/reference/open-wopen.md) i [_pipe —](../c-runtime-library/reference/pipe.md) operacji We/Wy. Aby uzyskać więcej informacji, zobacz [_fmode](../c-runtime-library/fmode.md).
+
+## <a name="requirements"></a>Wymagania
+
+|Procedura|Wymagany nagłówek|
+|-------------|---------------------|
+|__p\__fmode|stdlib.h|

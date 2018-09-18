@@ -1,5 +1,5 @@
 ---
-title: Kompilatora (poziom 3) ostrzeżenie C4543 | Dokumentacja firmy Microsoft
+title: Kompilator ostrzeżenie (poziom 3) C4543 | Dokumentacja firmy Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,16 +16,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8434f6ce0a1f57e144bd4f58d2f19c4f3639fb66
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: d2f0c076da0beb765a84485968dd57f72abb9824
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33301895"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46075469"
 ---
-# <a name="compiler-warning-level-3-c4543"></a>Kompilator C4543 ostrzegawcze (poziom 3)
-Tekst wstrzyknięty pominięty przez atrybut "no_injected_text"  
-  
- [No_injected_text](../../windows/no-injected-text.md) atrybutu znajdowały się w kodzie źródłowym, co oznacza, że kompilator uniemożliwi atrybuty wstrzyknięcie kodu.  
-  
- To ostrzeżenie jest celu odnotowania, że atrybuty nie będzie można wstrzyknąć kodu.
+# <a name="compiler-warning-level-3-c4543"></a>Kompilator ostrzeżenie (poziom 3) C4543
+
+Tekst wstrzyknięty pominięty przez atrybut "no_injected_text"
+
+[No_injected_text](../../windows/no-injected-text.md) atrybut pojawiły się w kodzie źródłowym, co oznacza, że kompilator uniemożliwi atrybuty wprowadzanie kodu.
+
+Ostrzeżenie to jest przypomnienie, że atrybuty nie będą mogli wstrzyknięcie kodu.

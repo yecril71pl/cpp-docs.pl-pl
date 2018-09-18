@@ -1,5 +1,5 @@
 ---
-title: C3501 błąd kompilatora | Dokumentacja firmy Microsoft
+title: Błąd kompilatora C3501 | Dokumentacja firmy Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,14 +16,15 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a74c3f06165765f971a8999dfe80412dd99dc719
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: bdf614c8b04dc9695d870aa8254cff8a2b75ca26
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33253429"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46086281"
 ---
-# <a name="compiler-error-c3501"></a>C3501 błąd kompilatora
-Brak żadnych zarejestrowanych typelib dla identyfikatora ProgID "progid"  
-  
- Identyfikator klasy dla danego identyfikatora progid nie ma skojarzonego typu biblioteki. W związku z tym nie można przekazać tego identyfikatora progid do `#import` instrukcji.
+# <a name="compiler-error-c3501"></a>Błąd kompilatora C3501
+
+ma żadnych zarejestrowanych typelib dla identyfikatora ProgID "progid"
+
+Identyfikator klasy dla danego identyfikatora progid nie ma skojarzony typ biblioteki. W związku z tym, nie można przekazać ten identyfikator progid do `#import` instrukcji.

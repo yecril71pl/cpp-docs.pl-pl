@@ -16,14 +16,15 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 585dc9b7aaa189d5f9726d1519687849991fc701
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 0d6b5a0ebda3cdfa553510f526368b05348c7ab0
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33321691"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46086075"
 ---
 # <a name="resource-compiler-error-rc2127"></a>Błąd kompilatora zasobów RC2127
-Wersja wyrazy oddzielone przecinkami, oczekiwano  
-  
- Numery wersji w zasobie wersji powinien być typu **WORD**i oddzielone przecinkami.
+
+Wersja wyrazy oddzielone przecinkami, oczekiwano
+
+Numery wersji w zasobach wersji powinny być typu **WORD**i oddzielone przecinkami.

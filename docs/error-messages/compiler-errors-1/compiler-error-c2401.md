@@ -1,5 +1,5 @@
 ---
-title: C2401 błąd kompilatora | Dokumentacja firmy Microsoft
+title: Błąd kompilatora C2401 | Dokumentacja firmy Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,14 +16,15 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 04c5531e0ccce6e90f106d80143a885e64c759ff
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 74a1ad33de97993a6d773834b1637376efcedb33
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33195571"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46060268"
 ---
-# <a name="compiler-error-c2401"></a>C2401 błąd kompilatora
-"identyfikator": rejestr musi być podstawowy w "context"  
-  
- Rejestr używane w operand pośrednie pamięci musi być podstawowy rejestru w tym kontekście.
+# <a name="compiler-error-c2401"></a>Błąd kompilatora C2401
+
+'Identyfikator': rejestr musi być podstawowy w "context"
+
+Rejestru używane w argumencie operacji pośrednich pamięci musi być podstawowy rejestru w tym kontekście.

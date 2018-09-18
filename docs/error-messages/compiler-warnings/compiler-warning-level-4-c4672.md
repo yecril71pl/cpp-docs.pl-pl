@@ -1,5 +1,5 @@
 ---
-title: Kompilatora (poziom 4) ostrzeżenie C4672 | Dokumentacja firmy Microsoft
+title: Kompilator ostrzeżenie (poziom 4) C4672 | Dokumentacja firmy Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,14 +16,15 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d084a85a57afc530536c7e5dc6305b4390dc6cd0
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: bc31e2bad7a7d00f137611327f818341d28fbae1
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33292743"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46075211"
 ---
-# <a name="compiler-warning-level-4-c4672"></a>Kompilator C4672 ostrzegawcze (poziom 4)
-"identifier1": niejednoznaczne. Pierwszy raz widziane jako "identifier2"  
-  
- Określony obiekt zostanie wygenerowany **spróbuj** blok jest niejednoznaczna. Nie można ich rozróżnić obiektu, jeśli generowany jest.
+# <a name="compiler-warning-level-4-c4672"></a>Kompilator ostrzeżenie (poziom 4) C4672
+
+"identifier1": niejednoznaczne. Pierwszy raz widziane jako "identifier2"
+
+Określony obiekt, aby były generowane w **spróbuj** bloku jest niejednoznaczna. Obiekt nie rozróżniane, jeśli zostanie on zgłoszony.

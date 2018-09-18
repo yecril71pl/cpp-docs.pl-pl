@@ -26,12 +26,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7a9ee4c25932064ddb76078701a1a6606f27cb1a
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: a2cdeef97b92550731b06dcb4a1d425d77f5920a
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43766437"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46075164"
 ---
 # <a name="security-global-functions"></a>Funkcje globalne zabezpieczeń
 
@@ -72,13 +72,13 @@ inline bool AtlGetDacl(
 
 ### <a name="parameters"></a>Parametry
 
-*hObject*  
+*hObject*<br/>
 Uchwytu do obiektu, dla którego mają zostać pobrane informacje o zabezpieczeniach.
 
-*Typ obiektu*  
+*Typ obiektu*<br/>
 Określa wartość z zakresu od [SE_OBJECT_TYPE](/windows/desktop/api/accctrl/ne-accctrl-_se_object_type) wyliczenie, które wskazuje typ obiektu identyfikowane przez *hObject* parametru.
 
-*pDacl*  
+*pDacl*<br/>
 Wskaźnik do obiektu DACL, który będzie zawierać informacji o zabezpieczeniach pobrane.
 
 ### <a name="return-value"></a>Wartość zwracana
@@ -106,16 +106,16 @@ inline bool AtlSetDacl(
 
 ### <a name="parameters"></a>Parametry
 
-*hObject*  
+*hObject*<br/>
 Uchwytu do obiektu, dla której chcesz ustawić informacje o zabezpieczeniach.
 
-*Typ obiektu*  
+*Typ obiektu*<br/>
 Określa wartość z zakresu od [SE_OBJECT_TYPE](/windows/desktop/api/accctrl/ne-accctrl-_se_object_type) wyliczenie, które wskazuje typ obiektu identyfikowane przez *hObject* parametru.
 
-*rDacl*  
+*rDacl*<br/>
 Lista DACL zawierającego nowe informacje o zabezpieczeniach.
 
-*dwInheritanceFlowControl*  
+*dwInheritanceFlowControl*<br/>
 Sterowanie przepływem dziedziczenia. Ta wartość może być 0 (domyślnie), PROTECTED_DACL_SECURITY_INFORMATION lub UNPROTECTED_DACL_SECURITY_INFORMATION.
 
 ### <a name="return-value"></a>Wartość zwracana
@@ -124,7 +124,7 @@ Zwraca wartość true w przypadku powodzenia; wartość false w razie niepowodze
 
 ### <a name="remarks"></a>Uwagi
 
-W kompilacjach debugowania, wystąpi błąd asercji Jeśli *hObject* jest nieprawidłowa lub jeśli *dwInheritanceFlowControl* nie jest jednym z trzech wartości dozwolonych.  
+W kompilacjach debugowania, wystąpi błąd asercji Jeśli *hObject* jest nieprawidłowa lub jeśli *dwInheritanceFlowControl* nie jest jednym z trzech wartości dozwolonych.
 ### <a name="requirements"></a>Wymagania
 
 **Nagłówek:** atlsecurity.h 
@@ -145,13 +145,13 @@ inline bool AtlGetGroupSid(
 
 ### <a name="parameters"></a>Parametry
 
-*hObject*  
+*hObject*<br/>
 Uchwytu do obiektu, z którego można pobrać informacji o zabezpieczeniach.
 
-*Typ obiektu*  
+*Typ obiektu*<br/>
 Określa wartość z zakresu od [SE_OBJECT_TYPE](/windows/desktop/api/accctrl/ne-accctrl-_se_object_type) wyliczenie, które wskazuje typ obiektu identyfikowane przez *hObject* parametru.
 
-*pSid*  
+*pSid*<br/>
 Wskaźnik do `CSid` obiektu, który będzie zawierać nowe informacje o zabezpieczeniach.
 
 ### <a name="return-value"></a>Wartość zwracana
@@ -178,13 +178,13 @@ inline bool AtlSetGroupSid(
 
 ### <a name="parameters"></a>Parametry
 
-*hObject*  
+*hObject*<br/>
 Uchwytu do obiektu, dla której chcesz ustawić informacje o zabezpieczeniach.
 
-*Typ obiektu*  
+*Typ obiektu*<br/>
 Określa wartość z zakresu od [SE_OBJECT_TYPE](/windows/desktop/api/accctrl/ne-accctrl-_se_object_type) wyliczenie, które wskazuje typ obiektu identyfikowane przez *hObject* parametru.
 
-*rSid*  
+*rSid*<br/>
 `CSid` Obiektu zawierającego nowe informacje o zabezpieczeniach.
 
 ### <a name="return-value"></a>Wartość zwracana
@@ -211,13 +211,13 @@ inline bool AtlGetOwnerSid(
 
 ### <a name="parameters"></a>Parametry
 
-*hObject*  
+*hObject*<br/>
 Uchwytu do obiektu, z którego można pobrać informacji o zabezpieczeniach.
 
-*Typ obiektu*  
+*Typ obiektu*<br/>
 Określa wartość z zakresu od [SE_OBJECT_TYPE](/windows/desktop/api/accctrl/ne-accctrl-_se_object_type) wyliczenie, które wskazuje typ obiektu identyfikowane przez *hObject* parametru.
 
-*pSid*  
+*pSid*<br/>
 Wskaźnik do `CSid` obiektu, który będzie zawierać nowe informacje o zabezpieczeniach.
 
 ### <a name="return-value"></a>Wartość zwracana
@@ -244,13 +244,13 @@ inline bool AtlSetOwnerSid(
 
 ### <a name="parameters"></a>Parametry
 
-*hObject*  
+*hObject*<br/>
 Uchwytu do obiektu, dla której chcesz ustawić informacje o zabezpieczeniach.
 
-*Typ obiektu*  
+*Typ obiektu*<br/>
 Określa wartość z zakresu od [SE_OBJECT_TYPE](/windows/desktop/api/accctrl/ne-accctrl-_se_object_type) wyliczenie, które wskazuje typ obiektu identyfikowane przez *hObject* parametru.
 
-*rSid*  
+*rSid*<br/>
 `CSid` Obiektu zawierającego nowe informacje o zabezpieczeniach.
 
 ### <a name="return-value"></a>Wartość zwracana
@@ -278,16 +278,16 @@ inline bool AtlGetSacl(
 
 ### <a name="parameters"></a>Parametry
 
-*hObject*  
+*hObject*<br/>
 Uchwytu do obiektu, z którego można pobrać informacji o zabezpieczeniach.
 
-*Typ obiektu*  
+*Typ obiektu*<br/>
 Określa wartość z zakresu od [SE_OBJECT_TYPE](/windows/desktop/api/accctrl/ne-accctrl-_se_object_type) wyliczenie, które wskazuje typ obiektu identyfikowane przez *hObject* parametru.
 
-*pSacl*  
+*pSacl*<br/>
 Wskaźnik do obiektu SACL, który będzie zawierać informacji o zabezpieczeniach pobrane.
 
-*bRequestNeededPrivileges*  
+*bRequestNeededPrivileges*<br/>
 W przypadku opcji true funkcja będzie podejmować próby włączenia uprawnień SE_SECURITY_NAME i przywrócić ją po zakończeniu.
 
 ### <a name="return-value"></a>Wartość zwracana
@@ -320,19 +320,19 @@ inline bool AtlSetSacl(
 
 ### <a name="parameters"></a>Parametry
 
-*hObject*  
+*hObject*<br/>
 Uchwytu do obiektu, dla której chcesz ustawić informacje o zabezpieczeniach.
 
-*Typ obiektu*  
+*Typ obiektu*<br/>
 Określa wartość z zakresu od [SE_OBJECT_TYPE](/windows/desktop/api/accctrl/ne-accctrl-_se_object_type) wyliczenie, które wskazuje typ obiektu identyfikowane przez *hObject* parametru.
 
-*rSacl*  
+*rSacl*<br/>
 SACL, zawierającego nowe informacje o zabezpieczeniach.
 
-*dwInheritanceFlowControl*  
+*dwInheritanceFlowControl*<br/>
 Sterowanie przepływem dziedziczenia. Ta wartość może być 0 (domyślnie), PROTECTED_SACL_SECURITY_INFORMATION lub UNPROTECTED_SACL_SECURITY_INFORMATION.
 
-*bRequestNeededPrivileges*  
+*bRequestNeededPrivileges*<br/>
 W przypadku opcji true funkcja będzie podejmować próby włączenia uprawnień SE_SECURITY_NAME i przywrócić ją po zakończeniu.
 
 ### <a name="return-value"></a>Wartość zwracana
@@ -369,19 +369,19 @@ bool bRequestNeededPrivileges = true) throw(...);
 
 ### <a name="parameters"></a>Parametry
 
-*pszObjectName*  
+*pszObjectName*<br/>
 Wskaźnik na ciąg zakończony znakiem null, który określa nazwę obiektu, z którego można pobrać informacji o zabezpieczeniach.
 
-*Typ obiektu*  
+*Typ obiektu*<br/>
 Określa wartość z zakresu od [SE_OBJECT_TYPE](/windows/desktop/api/accctrl/ne-accctrl-_se_object_type) wyliczenie, które wskazuje typ obiektu identyfikowane przez *pszObjectName* parametru.
 
-*pSecurityDescriptor*  
+*pSecurityDescriptor*<br/>
 Obiekt, który odbiera deskryptora zabezpieczeń żądanej.
 
-*requestedInfo*  
+*requestedInfo*<br/>
 Zbiór [SECURITY_INFORMATION](/windows/desktop/SecAuthZ/security-information) bit flagi wskazujące rodzaj informacji o zabezpieczeniach do pobrania. Ten parametr może być kombinacją następujących wartości.
 
-*bRequestNeededPrivileges*  
+*bRequestNeededPrivileges*<br/>
 W przypadku opcji true funkcja będzie podejmować próby włączenia uprawnień SE_SECURITY_NAME i przywrócić ją po zakończeniu.
 
 ### <a name="return-value"></a>Wartość zwracana

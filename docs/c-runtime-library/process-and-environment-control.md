@@ -21,12 +21,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0fbbe1f7feca0b2c8d21bfaf5da3e758e2c6c0bb
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 0c314decf15886f8d99ed8be3b7bafe4fff3e36b
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43200966"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46085761"
 ---
 # <a name="process-and-environment-control"></a>Procedury kontroli środowiska
 
@@ -77,11 +77,11 @@ Procedury kontroli procesu umożliwiają uruchamianie, zatrzymywanie i zarządza
 |[_spawnvpe, _wspawnvpe](../c-runtime-library/reference/spawnvpe-wspawnvpe.md)|Tworzenie i wykonywanie nowego procesu przy użyciu **ścieżki** zmienną, określonego środowiska i Tablica argumentów|
 |[system, _wsystem](../c-runtime-library/reference/system-wsystem.md)|Wykonanie polecenia systemu operacyjnego|
 
- W systemie operacyjnym Windows procesu rozmnożonego odpowiada ikrę procesu. Żaden proces, można użyć **_cwait** czekać na inne procesy, dla którego jest znany identyfikator procesu.
+W systemie operacyjnym Windows procesu rozmnożonego odpowiada ikrę procesu. Żaden proces, można użyć **_cwait** czekać na inne procesy, dla którego jest znany identyfikator procesu.
 
- Różnica między **_exec** i **_spawn** rodzin jest fakt, że **_spawn** funkcji mogą zwracać kontrolki z nowego procesu do procesu wywołującego. W **_spawn** funkcji procesu wywołującego i nowego procesu znajdują się w pamięci chyba że **_P_OVERLAY** jest określony. W **_exec** funkcji, nowe nakładki proces wywołujący przetwarzania, dzięki czemu formant nie może zwrócić do procesu wywołującego, chyba że wystąpi błąd podczas próby rozpoczęcia realizacji nowego procesu.
+Różnica między **_exec** i **_spawn** rodzin jest fakt, że **_spawn** funkcji mogą zwracać kontrolki z nowego procesu do procesu wywołującego. W **_spawn** funkcji procesu wywołującego i nowego procesu znajdują się w pamięci chyba że **_P_OVERLAY** jest określony. W **_exec** funkcji, nowe nakładki proces wywołujący przetwarzania, dzięki czemu formant nie może zwrócić do procesu wywołującego, chyba że wystąpi błąd podczas próby rozpoczęcia realizacji nowego procesu.
 
- Różnice między funkcje w **_exec** rodziny, a także między programami znajdującymi się na **_spawn** rodziny, obejmuje metodę lokalizowania pliku do wykonania jako nowy proces, formularza, w której argumenty są przekazywane do nowego procesu i metody konfiguracji środowiska, jak pokazano w poniższej tabeli. Funkcja, która przekazuje listy argumentów, gdy liczba argumentów jest stałe, lub jest znany w czasie kompilacji. Funkcja, która przekazuje wskaźnik do tablica zawierająca argumenty, gdy liczba argumentów jest ustalany w czasie wykonywania. Informacje przedstawione w poniższej tabeli dotyczą również odpowiedniki o znakach szerokich z **_spawn** i **_exec** funkcji.
+Różnice między funkcje w **_exec** rodziny, a także między programami znajdującymi się na **_spawn** rodziny, obejmuje metodę lokalizowania pliku do wykonania jako nowy proces, formularza, w której argumenty są przekazywane do nowego procesu i metody konfiguracji środowiska, jak pokazano w poniższej tabeli. Funkcja, która przekazuje listy argumentów, gdy liczba argumentów jest stałe, lub jest znany w czasie kompilacji. Funkcja, która przekazuje wskaźnik do tablica zawierająca argumenty, gdy liczba argumentów jest ustalany w czasie wykonywania. Informacje przedstawione w poniższej tabeli dotyczą również odpowiedniki o znakach szerokich z **_spawn** i **_exec** funkcji.
 
 ### <a name="spawn-and-exec-function-families"></a>_spawn i _exec rodzin — funkcja
 

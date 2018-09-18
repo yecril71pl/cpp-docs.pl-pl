@@ -1,5 +1,5 @@
 ---
-title: C2762 błąd kompilatora | Dokumentacja firmy Microsoft
+title: Błąd kompilatora C2762 | Dokumentacja firmy Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,29 +16,30 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: eb2ab9324639cb4f1e47858f9601c314b25fb96f
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 2eebc34608a718e2e1a70f5d8c7e8f02193221cc
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33234071"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46086216"
 ---
-# <a name="compiler-error-c2762"></a>C2762 błąd kompilatora
-"class": nieprawidłowe wyrażenie jako argument szablonu dla "argumentu"  
-  
- Korzystając z [/Za](../../build/reference/za-ze-disable-language-extensions.md), kompilator nie przekonwertuje typu całkowitego na wskaźnik.  
-  
- Poniższy przykład generuje C2762:  
-  
-```  
-// C2762.cpp  
-// compile with: /Za  
-template<typename T, T *pT>  
-class X2 {};  
-  
-void f2() {  
-   X2<int, 0> x21;   // C2762  
-   // try the following line instead  
-   // X2<int, static_cast<int *>(0)> x22;  
-}  
+# <a name="compiler-error-c2762"></a>Błąd kompilatora C2762
+
+"class": nieprawidłowe wyrażenie jako argument szablonu dla "argumentu"
+
+Korzystając z [/Za](../../build/reference/za-ze-disable-language-extensions.md), kompilator nie przekonwertuje całkowitego na wskaźnik.
+
+Poniższy przykład spowoduje wygenerowanie C2762:
+
+```
+// C2762.cpp
+// compile with: /Za
+template<typename T, T *pT>
+class X2 {};
+
+void f2() {
+   X2<int, 0> x21;   // C2762
+   // try the following line instead
+   // X2<int, static_cast<int *>(0)> x22;
+}
 ```

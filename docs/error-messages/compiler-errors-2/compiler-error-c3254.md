@@ -1,5 +1,5 @@
 ---
-title: C3254 błąd kompilatora | Dokumentacja firmy Microsoft
+title: Błąd kompilatora C3254 | Dokumentacja firmy Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,39 +16,40 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e58976b1562e6cca9aa343401b5d2c3f856de1a9
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: e9e42071c55ef3c7a4fc950b1b25656cf68d4024
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33255611"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46081185"
 ---
-# <a name="compiler-error-c3254"></a>C3254 błąd kompilatora
-"jawne przesłonięcie": klasa zawiera jawne przesłonięcie "override", ale nie pochodzi z interfejsu, który zawiera deklarację funkcji  
-  
- Gdy użytkownik [jawnie przesłonić](../../cpp/explicit-overrides-cpp.md) metody, klasy, która zawiera zastąpienie musi pochodzić, bezpośrednio lub pośrednio, z typu, który zawiera funkcję zastępowania.  
-  
- Poniższy przykład generuje C3254:  
-  
-```  
-// C3254.cpp  
-__interface I  
-{  
-   void f();  
-};  
-  
-__interface I1 : I  
-{  
-};  
-  
-struct A /* : I1 */  
-{  
-   void I1::f()  
-   {   // C3254, uncomment : I1 to resolve this C3254  
-   }  
-};  
-  
-int main()  
-{  
-}  
+# <a name="compiler-error-c3254"></a>Błąd kompilatora C3254
+
+"jawnego przesłaniania": klasa zawiera jawne przesłonięcie "override", ale nie pochodzi z interfejsu, który zawiera deklarację funkcji
+
+Gdy użytkownik [jawnie przesłonić](../../cpp/explicit-overrides-cpp.md) metody, klasy, która zawiera przesłonięcie muszą pochodzić, bezpośrednio lub pośrednio, z typu, który zawiera funkcję zastępowania.
+
+Poniższy przykład spowoduje wygenerowanie C3254:
+
+```
+// C3254.cpp
+__interface I
+{
+   void f();
+};
+
+__interface I1 : I
+{
+};
+
+struct A /* : I1 */
+{
+   void I1::f()
+   {   // C3254, uncomment : I1 to resolve this C3254
+   }
+};
+
+int main()
+{
+}
 ```

@@ -16,52 +16,54 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b1ed49662b28f2ac84fc8c53f677b2deada974d3
-ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
+ms.openlocfilehash: 3d9754f8b0b218fc4d627eb0e27504e8521bf776
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/01/2018
-ms.locfileid: "39403508"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46076440"
 ---
 # <a name="restrict"></a>__restrict
-Podobnie jak **__declspec ( [ograniczyć](../cpp/restrict.md) )** , modyfikator **element __restrict** słowo kluczowe wskazuje, że symbol nie jest aliasem w bieżącym zakresie. **Element __restrict** — słowo kluczowe różni się od `__declspec ( restrict )` modyfikator w następujący sposób:  
-  
--   **Element __restrict** — słowo kluczowe jest prawidłowy tylko w zmiennych i `__declspec ( restrict )` jest prawidłowy tylko w deklaracji i definicji funkcji.  
-  
--   **Element __restrict** jest podobny do **ograniczyć** ze specyfikacji C99, ale **element __restrict** mogą być używane w programach języka C++ lub C.  
-  
--   Gdy **element __restrict** jest używany, kompilator nie będzie propagowany właściwość alias nie zmiennej. Oznacza to Jeśli przypiszesz **element __restrict** zmiennej do innej niż**element __restrict** zmiennej, kompilator będzie nadal zezwalają na innych niż-element __restrict zmienną aliasem. To różni się od zachowania **ograniczyć** słowo kluczowe z specyfikacją C99.  
-  
- Ogólnie rzecz biorąc, jeśli mają wpływ na zachowanie całej funkcji, lepiej jest używać `__declspec ( restrict )` niż słowa kluczowego.  
-  
- W programie Visual Studio 2015 i nowszych **element __restrict** mogą być używane na odwołań w języku C++.  
-  
+
+Podobnie jak **__declspec ( [ograniczyć](../cpp/restrict.md) )** , modyfikator **element __restrict** słowo kluczowe wskazuje, że symbol nie jest aliasem w bieżącym zakresie. **Element __restrict** — słowo kluczowe różni się od `__declspec ( restrict )` modyfikator w następujący sposób:
+
+- **Element __restrict** — słowo kluczowe jest prawidłowy tylko w zmiennych i `__declspec ( restrict )` jest prawidłowy tylko w deklaracji i definicji funkcji.
+
+- **Element __restrict** jest podobny do **ograniczyć** ze specyfikacji C99, ale **element __restrict** mogą być używane w programach języka C++ lub C.
+
+- Gdy **element __restrict** jest używany, kompilator nie będzie propagowany właściwość alias nie zmiennej. Oznacza to Jeśli przypiszesz **element __restrict** zmiennej do innej niż**element __restrict** zmiennej, kompilator będzie nadal zezwalają na innych niż-element __restrict zmienną aliasem. To różni się od zachowania **ograniczyć** słowo kluczowe z specyfikacją C99.
+
+Ogólnie rzecz biorąc, jeśli mają wpływ na zachowanie całej funkcji, lepiej jest używać `__declspec ( restrict )` niż słowa kluczowego.
+
+W programie Visual Studio 2015 i nowszych **element __restrict** mogą być używane na odwołań w języku C++.
+
 > [!NOTE]
->  Gdy jest używana w zmiennej, która także ma [volatile](../cpp/volatile-cpp.md) — słowo kluczowe, **volatile** mają wyższy priorytet.  
-  
-## <a name="example"></a>Przykład  
-  
-```cpp 
-// __restrict_keyword.c  
-// compile with: /LD  
-// In the following function, declare a and b as disjoint arrays  
-// but do not have same assurance for c and d.  
-void sum2(int n, int * __restrict a, int * __restrict b,   
-          int * c, int * d) {  
-   int i;  
-   for (i = 0; i < n; i++) {  
-      a[i] = b[i] + c[i];  
-      c[i] = b[i] + d[i];  
-    }  
-}  
-  
-// By marking union members as __restrict, tell compiler that  
-// only z.x or z.y will be accessed in any given scope.  
-union z {  
-   int * __restrict x;  
-   double * __restrict y;  
-};  
-```  
-  
-## <a name="see-also"></a>Zobacz także  
- [Słowa kluczowe](../cpp/keywords-cpp.md)
+>  Gdy jest używana w zmiennej, która także ma [volatile](../cpp/volatile-cpp.md) — słowo kluczowe, **volatile** mają wyższy priorytet.
+
+## <a name="example"></a>Przykład
+
+```cpp
+// __restrict_keyword.c
+// compile with: /LD
+// In the following function, declare a and b as disjoint arrays
+// but do not have same assurance for c and d.
+void sum2(int n, int * __restrict a, int * __restrict b,
+          int * c, int * d) {
+   int i;
+   for (i = 0; i < n; i++) {
+      a[i] = b[i] + c[i];
+      c[i] = b[i] + d[i];
+    }
+}
+
+// By marking union members as __restrict, tell compiler that
+// only z.x or z.y will be accessed in any given scope.
+union z {
+   int * __restrict x;
+   double * __restrict y;
+};
+```
+
+## <a name="see-also"></a>Zobacz także
+
+[Słowa kluczowe](../cpp/keywords-cpp.md)

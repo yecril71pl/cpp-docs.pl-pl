@@ -16,16 +16,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c5c47c83c75a9bdb62bf0cb6594399e5a551bb76
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: e8e0e0f153b5eed21f906dd228072a4239dec63e
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33317132"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46076453"
 ---
 # <a name="resource-compiler-error-rc2111"></a>Błąd kompilatora zasobów RC2111
-Nieprawidłowy typ formantu  
-  
- Każda instrukcja kontroli w **okna DIALOGOWEGO** instrukcja musi być jedną z następujących: 3STATE, AUTO3, postaci AUTOCHECK, AUTORADIO, BEDYCJA, pole wyboru, COMBOBOX, kontroli, CTEXT, DEFPUSHBUTTON, typu części EDITTEXT, GROUPBOX, HEDIT, IKONA, IEDIT, LISTBOX, LTEXT, PUSHBOX, PRZYCISKU POLECENIA, RADIOBUTTON, RTEXT, PASEK PRZEWIJANIA, USERBUTTON.  
-  
- Upewnij się, że te instrukcje sterowania są poprawne.
+
+Nieprawidłowy typ formantu
+
+Każdej instrukcji kontroli w **okna DIALOGOWEGO** instrukcja musi być jedną z następujących: 3STATE, AUTO3, postaci AUTOCHECK, AUTORADIO, BEDYCJA, zaznacz pole wyboru, COMBOBOX, KONTROLKA, CTEXT, DEFPUSHBUTTON, typu części EDITTEXT, GROUPBOX, HEDIT, IKONĘ, IEDIT, LISTBOX, LTEXT, PUSHBOX PRZYCISK, RADIOBUTTON, RTEXT, PASEK PRZEWIJANIA, USERBUTTON.
+
+Upewnij się, że oświadczenia te KONTROLKI jest poprawna.

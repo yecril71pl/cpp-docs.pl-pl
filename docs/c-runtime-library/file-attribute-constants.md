@@ -35,46 +35,40 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 178082356eb08130879cd3b4f2118cbf75e451ce
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 42745d25c0f743fa1a11226d5cfe433327c8ff2a
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32390269"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46077051"
 ---
 # <a name="file-attribute-constants"></a>Stałe atrybutów pliku
-## <a name="syntax"></a>Składnia  
-  
-```  
-  
-#include <io.h>  
-```  
-  
-## <a name="remarks"></a>Uwagi  
- Te stałe są określane atrybuty bieżącego pliku lub katalogu określonym przez funkcję.  
-  
- Atrybuty są reprezentowane przez następujących stałych manifestu:  
-  
- `_A_ARCH`  
- Archiwum. Zestaw zawsze, gdy plik jest zmienione i wyczyszczone za pomocą polecenia tworzenia kopii zapasowej. Wartość: wartości 0x20  
-  
- `_A_HIDDEN`  
- Plik ukryty. Zwykle widoczne polecenie DIR, chyba że używana jest opcja /AH. Zwraca informacje o normalne pliki, a także pliki z tym atrybutem. Wartość: 0x02  
-  
- `_A_NORMAL`  
- Normalny. Plik można odczytać lub zapisywane bez ograniczeń. Wartość: 0x00  
-  
- `_A_RDONLY`  
- Tylko do odczytu. Nie można otworzyć pliku do zapisu i nie można utworzyć pliku o tej samej nazwie. Wartość: 0x01  
-  
- `_A_SUBDIR`  
- Podkatalog. Wartość: 0x10  
-  
- `_A_SYSTEM`  
- System plików. Zwykle widoczne polecenie DIR, chyba że używana jest opcja /AS. Wartość: 0x04  
-  
- Wiele stałych można używać operatora OR (&#124;).  
-  
-## <a name="see-also"></a>Zobacz też  
- [Funkcje wyszukiwania nazwy pliku](../c-runtime-library/filename-search-functions.md)   
- [Stałe globalne](../c-runtime-library/global-constants.md)
+
+## <a name="syntax"></a>Składnia
+
+```
+
+#include <io.h>
+```
+
+## <a name="remarks"></a>Uwagi
+
+Te stałe określić atrybuty bieżącego pliku lub katalogu określonym przez funkcję.
+
+Atrybuty są reprezentowane przez następujących stałych manifestu:
+
+|Stała|Opis|
+|-|-|
+|`_A_ARCH`| Archiwum. Ustaw zawsze wtedy, gdy plik jest zmienione i obsadzona przez użycie polecenia BACKUP. Wartość: 0x20|
+|`_A_HIDDEN`| Ukryty plik. Zwykle widoczne przy użyciu polecenia DIR, chyba że używana jest opcja /AH. Zwraca informacje o normalne pliki, a także plików za pomocą tego atrybutu. Wartość: 0x02|
+|`_A_NORMAL`| Normalny. Plik można odczytać lub zapisywane bez ograniczeń. Wartość: 0x00|
+|`_A_RDONLY`| Tylko do odczytu. Nie można otworzyć pliku do zapisu, a nie można utworzyć pliku o takiej samej nazwie. Wartość: 0x01|
+|`_A_SUBDIR`| Podkatalog. Wartość: 0x10|
+|`_A_SYSTEM`| System plików. Zwykle widoczne przy użyciu polecenia DIR, chyba że używana jest opcja /AS. Wartość: 0x04|
+
+Kilka stałych, które można łączyć za pomocą operatora OR (&#124;).
+
+## <a name="see-also"></a>Zobacz też
+
+[Funkcje wyszukiwania nazwy pliku](../c-runtime-library/filename-search-functions.md)<br/>
+[Stałe globalne](../c-runtime-library/global-constants.md)

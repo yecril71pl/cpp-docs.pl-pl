@@ -1,5 +1,5 @@
 ---
-title: C3666 błąd kompilatora | Dokumentacja firmy Microsoft
+title: Błąd kompilatora C3666 | Dokumentacja firmy Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,26 +16,28 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4672cad0f1c0b67b58233c6394e98324a9c32aaf
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 8637caadbe439b2da3b64593655ddd75177f353b
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33264816"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46084084"
 ---
-# <a name="compiler-error-c3666"></a>C3666 błąd kompilatora
-"konstruktora": specyfikator "— słowo kluczowe" nie jest dozwolony na konstruktorze przesłonięcia  
-  
- Specyfikator przesłonięcia została użyta w konstruktorze, a nie jest dozwolone. Aby uzyskać więcej informacji, zobacz [specyfikatory Override](../../windows/override-specifiers-cpp-component-extensions.md).  
-  
-## <a name="example"></a>Przykład  
- Poniższy przykład generuje C3666.  
-  
-```  
-// C3666.cpp  
-// compile with: /clr /c  
-ref struct R {  
-   R() new {}   // C3666  
-   R(int i) {}   // OK  
-};  
+# <a name="compiler-error-c3666"></a>Błąd kompilatora C3666
+
+"Konstruktor": specyfikator "— słowo kluczowe" nie jest dozwolony na konstruktorze override
+
+Specyfikator przesłonięcia był używany w konstruktorze, a nie jest dozwolone. Aby uzyskać więcej informacji, zobacz [zastąpienie specyfikatorów](../../windows/override-specifiers-cpp-component-extensions.md).
+
+## <a name="example"></a>Przykład
+
+Poniższy przykład spowoduje wygenerowanie C3666.
+
+```
+// C3666.cpp
+// compile with: /clr /c
+ref struct R {
+   R() new {}   // C3666
+   R(int i) {}   // OK
+};
 ```

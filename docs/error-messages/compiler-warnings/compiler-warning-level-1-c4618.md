@@ -1,5 +1,5 @@
 ---
-title: Kompilatora (poziom 1) ostrzeżenie C4618 | Dokumentacja firmy Microsoft
+title: Kompilator ostrzeżenie (poziom 1) C4618 | Dokumentacja firmy Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,24 +16,25 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e53f8542983a6e15f353ff181efa280815fea9d8
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 0ff6080d6315156a1dbaeb89fae1d5cb10865405
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33282525"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46074269"
 ---
-# <a name="compiler-warning-level-1-c4618"></a>Kompilator C4618 ostrzegawcze (poziom 1)
-Parametry dyrektywy pragma zawierają ciąg pusty; dyrektywa pragma została zignorowana  
-  
- Pusty ciąg został podany jako argument **#pragma**.  
-  
- Pragma została przetworzona bez argumentu.  
-  
- Poniższy przykład generuje C4618:  
-  
-```  
-// C4618.cpp  
-// compile with: /W1 /LD  
-#pragma code_seg("")   // C4618  
+# <a name="compiler-warning-level-1-c4618"></a>Kompilator ostrzeżenie (poziom 1) C4618
+
+Parametry dyrektywy pragma zawierają dołączony ciąg pusty; dyrektywa pragma została zignorowana
+
+Przekazano pusty ciąg jako argument do **#pragma**.
+
+Dyrektywa pragma została przetworzona, bez argumentu.
+
+Poniższy przykład spowoduje wygenerowanie C4618:
+
+```
+// C4618.cpp
+// compile with: /W1 /LD
+#pragma code_seg("")   // C4618
 ```

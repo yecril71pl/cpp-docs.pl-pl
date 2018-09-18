@@ -1,5 +1,5 @@
 ---
-title: Błąd cxx0022 programu Expression Evaluator | Dokumentacja firmy Microsoft
+title: Błąd ewaluatora wyrażeń CXX0022 | Dokumentacja firmy Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,16 +17,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 822e07c9173d9010bb8ab63b6ca4837b9c52e066
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 1bf067a1024b8ac344c1490bc9ec25b0b7d57540
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33297657"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46082355"
 ---
 # <a name="expression-evaluator-error-cxx0022"></a>Błąd CXX0022 programu Expression Evaluator
-Wywołanie funkcji przed elementem _main  
-  
- Ewaluator wyrażeń C nie można ocenić funkcji, zanim debuger została wprowadzona funkcja **metody _main**. Program nie został poprawnie zainicjowany do **metody _main** została wywołana.  
-  
- Ten błąd jest taki sam jak CAN0022.
+
+Wywołanie funkcji przed _main
+
+Ewaluator wyrażeń C nie można obliczyć funkcję, aby debuger wszedł funkcja **_main**. Program nie został prawidłowo zainicjowany do momentu **_main** została wywołana.
+
+Ten błąd jest taka sama jak CAN0022.

@@ -1,5 +1,5 @@
 ---
-title: Event — klasa | Dokumentacja firmy Microsoft
+title: Event, klasa | Dokumentacja firmy Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -22,15 +22,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: fb02865b20d1603be38192e770eb26627e6900e7
-ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
+ms.openlocfilehash: 7f4156720d7d02b0c96ab36101d88c941dbfbfdd
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33692870"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46071541"
 ---
 # <a name="event-class"></a>event — Klasa
-Zdarzenie resetowania ręcznego, która jawnie rozpoznaje współbieżności środowiska wykonawczego.  
+Zdarzenie resetowania ręcznego, które jest jawnie świadome współbieżności środowiska wykonawczego.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -44,22 +44,22 @@ class event;
   
 |Nazwa|Opis|  
 |----------|-----------------|  
-|[~ event — destruktor](#dtor)|Niszczy zdarzenia.|  
+|[~ event — destruktor](#dtor)|Niszczy zdarzenie.|  
   
 ### <a name="public-methods"></a>Metody publiczne  
   
 |Nazwa|Opis|  
 |----------|-----------------|  
-|[Resetowanie](#reset)|Resetuje zdarzenia do stanu sygnalizowane.|  
-|[set](#set)|Sygnalizuje zdarzenia.|  
-|[oczekiwania](#wait)|Czeka na zdarzenie sygnalizuje stają się.|  
-|[wait_for_multiple](#wait_for_multiple)|Czeka na wiele zdarzeń stać się sygnalizowane.|  
+|[Resetuj](#reset)|Resetuje zdarzenia do stanu zasygnalizowane.|  
+|[set](#set)|Sygnalizuje zdarzenie.|  
+|[Czekaj](#wait)|W tym czasie czeka na zdarzenie zostało zasygnalizowane.|  
+|[wait_for_multiple](#wait_for_multiple)|W tym czasie czeka na wiele zdarzeń zostało zasygnalizowane.|  
   
-### <a name="public-constants"></a>Publiczny — stałe  
+### <a name="public-constants"></a>Publiczne stałe  
   
 |Nazwa|Opis|  
 |----------|-----------------|  
-|[timeout_infinite](#timeout_infinite)|Wartość wskazująca, której oczekiwania nigdy nie ma limitu czasu.|  
+|[timeout_infinite](#timeout_infinite)|Wartość wskazująca, że oczekiwania nigdy nie powinny wygasać.|  
   
 ## <a name="remarks"></a>Uwagi  
  Aby uzyskać więcej informacji, zobacz [struktury danych synchronizacji](../../../parallel/concrt/synchronization-data-structures.md).  
@@ -84,63 +84,63 @@ _CRTIMP event();
   
 ##  <a name="dtor"></a> ~ zdarzeń 
 
- Niszczy zdarzenia.  
+ Niszczy zdarzenie.  
   
 ```
 ~event();
 ```  
   
 ### <a name="remarks"></a>Uwagi  
- Oczekuje się, że nie istnieją nie wątków oczekujących na zdarzenie, gdy działa destruktor. Stosowanie zdarzenia destruct z wątków, które nadal oczekuje na nim powoduje niezdefiniowane zachowanie.  
+ Oczekuje się, że nie istnieją wątki oczekujące na zdarzenie po uruchomieniu destruktora. Zezwalanie na zdarzenie niszczenia z wątkami, nadal oczekuje powoduje zachowanie niezdefiniowane.  
   
-##  <a name="reset"></a> Resetowanie 
+##  <a name="reset"></a> Resetuj 
 
- Resetuje zdarzenia do stanu sygnalizowane.  
+ Resetuje zdarzenia do stanu zasygnalizowane.  
   
 ```
 void reset();
 ```  
   
-##  <a name="set"></a> zestaw 
+##  <a name="set"></a> Zestaw 
 
- Sygnalizuje zdarzenia.  
+ Sygnalizuje zdarzenie.  
   
 ```
 void set();
 ```  
   
 ### <a name="remarks"></a>Uwagi  
- Sygnalizowanie zdarzenie może spowodować dowolnej liczby kontekstów oczekiwanie na zdarzenia stają się do uruchomienia.  
+ Sygnalizacja zdarzenie może spowodować dowolną liczbę kontekstów oczekujących aż zdarzenie stanie się możliwe do uruchomienia.  
   
 ##  <a name="timeout_infinite"></a> timeout_infinite 
 
- Wartość wskazująca, której oczekiwania nigdy nie ma limitu czasu.  
+ Wartość wskazująca, że oczekiwania nigdy nie powinny wygasać.  
   
 ```
 static const unsigned int timeout_infinite = COOPERATIVE_TIMEOUT_INFINITE;
 ```  
   
-##  <a name="wait"></a> oczekiwania 
+##  <a name="wait"></a> Czekaj 
 
- Czeka na zdarzenie sygnalizuje stają się.  
+ W tym czasie czeka na zdarzenie zostało zasygnalizowane.  
   
 ```
 size_t wait(unsigned int _Timeout = COOPERATIVE_TIMEOUT_INFINITE);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `_Timeout`  
- Wskazuje wyrażony w milisekundach czas, zanim upłynie limit czasu oczekiwania. Wartość `COOPERATIVE_TIMEOUT_INFINITE` oznacza brak limitu czasu.  
+*_Limit czasu*<br/>
+Wskazuje liczbę milisekund przed upływem limitu czasu oczekiwania. Wartość `COOPERATIVE_TIMEOUT_INFINITE` oznacza brak limitu czasu.  
   
 ### <a name="return-value"></a>Wartość zwracana  
- Jeśli czas oczekiwania zostały spełnione, wartość `0` zwrócony, a w przeciwnym razie wartość `COOPERATIVE_WAIT_TIMEOUT` wskazująca, że czas oczekiwania upłynął limit czasu bez zdarzenia sygnalizuje staje się.  
+ Jeśli czas oczekiwania był zadawalający, wartość `0` jest zwracana; w przeciwnym razie wartość `COOPERATIVE_WAIT_TIMEOUT` do wskazania, że upłynął limit czasu oczekiwania bez zasygnalizowania zdarzenia.  
   
 > [!IMPORTANT]
->  Nie należy wywoływać w aplikacji Windows platformy Uniwersalnej `wait` na ASTA wątku, ponieważ to wywołanie można zablokować bieżącego wątku i może spowodować, że aplikacja przestanie odpowiadać.  
+>  W aplikacji platformy uniwersalnej Windows (UWP), nie należy wywoływać metody `wait` na wątku ASTA, ponieważ to wywołanie może zablokować bieżący wątek i może spowodować, że aplikacja przestanie odpowiadać.  
   
-##  <a name="wait_for_multiple"></a> wait_for_multiple 
+##  <a name="wait_for_multiple"></a> wait_for_multiple — 
 
- Czeka na wiele zdarzeń stać się sygnalizowane.  
+ W tym czasie czeka na wiele zdarzeń zostało zasygnalizowane.  
   
 ```
 static size_t __cdecl wait_for_multiple(
@@ -151,26 +151,26 @@ static size_t __cdecl wait_for_multiple(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `_PPEvents`  
- Tablica zdarzeń oczekiwania. Liczba zdarzeń w tablicy jest określane przez `count` parametru.  
+*_PPEvents*<br/>
+Tablica zdarzeń oczekiwania. Liczba zdarzeń w tablicy jest wskazywana przez `count` parametru.  
   
- `count`  
- Liczba zdarzeń w podanym w tablicy `_PPEvents` parametru.  
+*Liczba*<br/>
+Liczba zdarzeń w tablicy dostarczana w `_PPEvents` parametru.  
   
- `_FWaitAll`  
- Jeśli ustawiono wartość `true`, parametr określa, że wszystkie zdarzenia w tablicy podane w `_PPEvents` parametru musi się sygnalizowane w celu spełnienia czas oczekiwania. Jeśli ustawiono wartość `false`, określa, że wszystkie zdarzenia w tablicy podane w `_PPEvents` parametru staje się sygnalizowane będą spełniały warunki czas oczekiwania.  
+*_FWaitAll*<br/>
+Jeśli ustawiona na wartość `true`, parametr określa, że wszystkie zdarzenia w tablicy dostarczanej w `_PPEvents` parametru muszą być sygnalizowane, aby spełniać oczekiwanie. Jeśli ustawiona na wartość `false`, określa, że każde zdarzenie w tablicy dostarczanej w `_PPEvents` parametr, który jest sygnalizowany, będzie spełniać oczekiwania.  
   
- `_Timeout`  
- Wskazuje wyrażony w milisekundach czas, zanim upłynie limit czasu oczekiwania. Wartość `COOPERATIVE_TIMEOUT_INFINITE` oznacza brak limitu czasu.  
+*_Limit czasu*<br/>
+Wskazuje liczbę milisekund przed upływem limitu czasu oczekiwania. Wartość `COOPERATIVE_TIMEOUT_INFINITE` oznacza brak limitu czasu.  
   
 ### <a name="return-value"></a>Wartość zwracana  
- Jeśli czas oczekiwania zostały spełnione, indeks w tablicy dostarczane w `_PPEvents` parametr, który spełnia warunek oczekiwania; w przeciwnym razie wartość `COOPERATIVE_WAIT_TIMEOUT` wskazująca, że czas oczekiwania upłynął limit czasu bez warunek jest spełniony.  
+ Jeśli czas oczekiwania był zadawalający, indeks w tablicy dostarczany w `_PPEvents` parametr, który spełniającym warunek oczekiwania; w przeciwnym razie wartość `COOPERATIVE_WAIT_TIMEOUT` do wskazania, że upłynął limit czasu oczekiwania bez spełnienia warunku.  
   
 ### <a name="remarks"></a>Uwagi  
- Jeśli parametr `_FWaitAll` jest ustawiona na wartość `true` wskaż, czy wszystkie zdarzenia musi stają się informowany spełniają oczekiwania, indeks zwracane przez funkcję niesie nie specjalne znaczenie niż fakt, że nie jest wartością `COOPERATIVE_WAIT_TIMEOUT`.  
+ Jeśli parametr `_FWaitAll` jest ustawiona na wartość `true` wskazujący, że wszystkie zdarzenia muszą być sygnalizowane, aby zaspokoić oczekiwania, wskaźnik zwracany przez funkcję niesie ze sobą nie specjalnego znaczenie poza tym, że nie jest wartością `COOPERATIVE_WAIT_TIMEOUT`.  
   
 > [!IMPORTANT]
->  Nie należy wywoływać w aplikacji Windows platformy Uniwersalnej `wait_for_multiple` na ASTA wątku, ponieważ to wywołanie można zablokować bieżącego wątku i może spowodować, że aplikacja przestanie odpowiadać.  
+>  W aplikacji platformy uniwersalnej Windows (UWP), nie należy wywoływać metody `wait_for_multiple` na wątku ASTA, ponieważ to wywołanie może zablokować bieżący wątek i może spowodować, że aplikacja przestanie odpowiadać.  
   
 ## <a name="see-also"></a>Zobacz też  
  [Przestrzeń nazw współbieżności](concurrency-namespace.md)

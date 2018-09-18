@@ -1,5 +1,5 @@
 ---
-title: C2569 błąd kompilatora | Dokumentacja firmy Microsoft
+title: Błąd kompilatora C2569 | Dokumentacja firmy Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,26 +16,27 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4869f13d972cea80bd590633b3aae2ea0c96f392
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 9309576439a772427c6adcb6f94826a8f9230058
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33230345"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46078858"
 ---
-# <a name="compiler-error-c2569"></a>C2569 błąd kompilatora
-"EnumOrUnion": enum/union nie można użyć jako klasa podstawowa  
-  
- Jeśli typ musi pochodzić od określonego Unii lub wyliczenia, zmień Unii lub wyliczenia klasy lub struktury.  
-  
- Poniższy przykład generuje C2569:  
-  
-```  
-// C2569.cpp  
-// compile with: /c  
-union ubase {};  
-class cHasPubUBase : public ubase {};   // C2569  
-// OK  
-struct sbase {};  
-class cHasPubUBase : public sbase {};  
+# <a name="compiler-error-c2569"></a>Błąd kompilatora C2569
+
+"EnumOrUnion": wyliczenia/Unii nie można użyć jako klasa bazowa
+
+Typ musi pochodzić od określonego Unii lub wyliczenia, zmiana związek lub wyliczenie do klasy lub struktury.
+
+Poniższy przykład spowoduje wygenerowanie C2569:
+
+```
+// C2569.cpp
+// compile with: /c
+union ubase {};
+class cHasPubUBase : public ubase {};   // C2569
+// OK
+struct sbase {};
+class cHasPubUBase : public sbase {};
 ```

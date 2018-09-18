@@ -1,5 +1,5 @@
 ---
-title: C4986 ostrzeżenia kompilatora | Dokumentacja firmy Microsoft
+title: Ostrzeżenie kompilatora C4986 | Dokumentacja firmy Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,42 +16,45 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b5c5342a65e9f900582246bb007d9dd67338dd8e
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 3f464f2a6e1f76c7d8b9de8bcc2353766aff0854
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33275165"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46077064"
 ---
-# <a name="compiler-warning-c4986"></a>C4986 ostrzeżenia kompilatora
-"Funkcja": specyfikacja wyjątku jest niezgodna z poprzednią deklaracją  
-  
- To ostrzeżenie mogą być generowane, gdy brak specyfikacji wyjątku w jednej deklaracji i nie innych.  
-  
- Domyślnie C4986 jest wyłączone. Aby uzyskać więcej informacji, zobacz [kompilatora ostrzeżeń czy są wyłączone domyślnie](../../preprocessor/compiler-warnings-that-are-off-by-default.md).  
-  
-## <a name="example"></a>Przykład  
- Poniższy przykład generuje C4986.  
-  
-```cpp  
-class X { };  
-void f1() throw (X*);  
-// ...  
-void f1()  
-{  
-    // ...  
-}    
-```  
-  
-## <a name="example"></a>Przykład  
- Poniższy przykład eliminuje to ostrzeżenie.  
-  
-```cpp  
-class X { };  
-void f1() throw (X*);  
-// ...  
-void f1() throw (X*)  
-{  
-    // ...  
-}    
+# <a name="compiler-warning-c4986"></a>Ostrzeżenie kompilatora C4986
+
+'Funkcja': specyfikacja wyjątku jest niezgodna z poprzednią deklaracją
+
+To ostrzeżenie mogą być generowane po specyfikacji wyjątku w jednej deklaracji, a nie drugą.
+
+Domyślnie C4986 jest wyłączona. Aby uzyskać więcej informacji, zobacz [kompilatora ostrzeżenia, są wyłączone domyślnie](../../preprocessor/compiler-warnings-that-are-off-by-default.md).
+
+## <a name="example"></a>Przykład
+
+Poniższy przykład spowoduje wygenerowanie C4986.
+
+```cpp
+class X { };
+void f1() throw (X*);
+// ...
+void f1()
+{
+    // ...
+}
+```
+
+## <a name="example"></a>Przykład
+
+Poniższy przykład eliminuje to ostrzeżenie.
+
+```cpp
+class X { };
+void f1() throw (X*);
+// ...
+void f1() throw (X*)
+{
+    // ...
+}
 ```

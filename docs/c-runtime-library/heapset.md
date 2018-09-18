@@ -32,106 +32,106 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c45c4cc3e6e6ffe23378ce0b4f26383369e92058
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 6b9700ce3f003488ba394302ac011937ea116a90
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32391590"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46085215"
 ---
 # <a name="heapset"></a>_heapset
-Sprawdza stosów minimalnego spójności i ustawia wolnego wpisy na określoną wartość.  
-  
+
+Sprawdza sterty minimalny sprawdzania spójności i ustawia wolnych wpisów określoną wartość.
+
 > [!IMPORTANT]
->  Ta funkcja jest przestarzała. Począwszy od programu Visual Studio 2015, nie jest dostępna w CRT.  
-  
-## <a name="syntax"></a>Składnia  
-  
-```  
-int _heapset(   
-   unsigned int fill   
-);  
-```  
-  
-#### <a name="parameters"></a>Parametry  
- `fill`  
- Należy podać znak.  
-  
-## <a name="return-value"></a>Wartość zwracana  
- `_heapset` Zwraca jedną z następujących manifestu stałe całkowite zdefiniowane w Malloc.h.  
-  
- `_HEAPBADBEGIN`  
- Informacje o nagłówku początkowej nieprawidłowy lub nie została znaleziona.  
-  
- `_HEAPBADNODE`  
- Stercie odnaleziono uszkodzony lub nieprawidłowy węzeł.  
-  
- `_HEAPEMPTY`  
- Stos nie jest zainicjowany.  
-  
- `_HEAPOK`  
- Sterty wydaje się być zgodne.  
-  
- Ponadto, jeśli wystąpi błąd `_heapset` ustawia `errno` do `ENOSYS`.  
-  
-## <a name="remarks"></a>Uwagi  
- `_heapset` Funkcja wykazuje lokalizacje wolnej pamięci lub węzłów, które zostały zastąpione przypadkowo.  
-  
- `_heapset` sprawdza, czy minimalny spójności na stosie, a następnie ustawia każdego bajtu wpisów wolnego sterty `fill` wartość. Ta wartość znane zawiera lokalizacje pamięci sterty zawierać wolnych węzłów i które zawierają dane przypadkowo napisanych zwolnionych pamięci. Jeśli system operacyjny nie obsługuje `_heapset`(na przykład Windows 98), funkcja zwraca `_HEAPOK` i ustawia `errno` do `ENOSYS`.  
-  
-## <a name="requirements"></a>Wymagania  
-  
-|Procedura|Wymagany nagłówek|Opcjonalne nagłówki|  
-|-------------|---------------------|---------------------|  
-|`_heapset`|\<malloc.h>|\<errno.h>|  
-  
- Aby uzyskać więcej informacji o zgodności, zobacz [zgodności](../c-runtime-library/compatibility.md) we wprowadzeniu.  
-  
-## <a name="example"></a>Przykład  
-  
-```  
-// crt_heapset.c  
-// This program checks the heap and  
-// fills in free entries with the character 'Z'.  
-  
-#include <malloc.h>  
-#include <stdio.h>  
-#include <stdlib.h>  
-  
-int main( void )  
-{  
-   int heapstatus;  
-   char *buffer;  
-  
-   if( (buffer = malloc( 1 )) == NULL ) // Make sure heap is   
-      exit( 0 );                        //    initialized       
-   heapstatus = _heapset( 'Z' );        // Fill in free entries   
-   switch( heapstatus )  
-   {  
-   case _HEAPOK:  
-      printf( "OK - heap is fine\n" );  
-      break;  
-   case _HEAPEMPTY:  
-      printf( "OK - heap is empty\n" );  
-      break;  
-   case _HEAPBADBEGIN:  
-      printf( "ERROR - bad start of heap\n" );  
-      break;  
-   case _HEAPBADNODE:  
-      printf( "ERROR - bad node in heap\n" );  
-      break;  
-   }  
-   free( buffer );  
-}  
-```  
-  
-```Output  
-OK - heap is fine  
-```  
-  
-## <a name="see-also"></a>Zobacz też  
- [Alokacja pamięci](../c-runtime-library/memory-allocation.md)   
- [_heapadd —](../c-runtime-library/heapadd.md)   
- [_heapchk](../c-runtime-library/reference/heapchk.md)   
- [_heapmin —](../c-runtime-library/reference/heapmin.md)   
- [_heapwalk](../c-runtime-library/reference/heapwalk.md)
+>  Ta funkcja jest przestarzała. Począwszy od programu Visual Studio 2015, nie jest dostępna w CRT.
+
+## <a name="syntax"></a>Składnia
+
+```
+int _heapset(
+   unsigned int fill
+);
+```
+
+#### <a name="parameters"></a>Parametry
+
+*Wypełnienie*<br/>
+Wprowadź znak.
+
+## <a name="return-value"></a>Wartość zwracana
+
+`_heapset` Zwraca jedną z następujących stałych całkowitych manifestu w Malloc.h.
+
+|||
+|-|-|
+| `_HEAPBADBEGIN`  | Informacje początkowego nagłówka nieprawidłowe lub nie został odnaleziony.  |
+| `_HEAPBADNODE`  | Sterty uszkodzony lub zły węzeł, do których odnaleźć.  |
+| `_HEAPEMPTY`  | Nie zainicjowano stosu.  |
+| `_HEAPOK`  | Sterty wydaje się być zgodne.  |
+
+Ponadto, jeśli wystąpi błąd `_heapset` ustawia `errno` do `ENOSYS`.
+
+## <a name="remarks"></a>Uwagi
+
+`_heapset` Funkcja wykazuje lokalizacje wolnej pamięci albo przez węzły, które zostały przypadkowo zastąpione.
+
+`_heapset` sprawdza, czy minimalny spójności na stosie, a następnie ustawia poszczególne bajty sterty bezpłatne wpisów, aby `fill` wartość. Tej znanej wartości pokazuje lokalizacji, w których pamięci sterty zawiera węzły w warstwie bezpłatna i które zawierają dane, które przypadkowo polegają na zwolnionej pamięci. Jeśli system operacyjny nie obsługuje `_heapset`(na przykład Windows 98), funkcja zwraca `_HEAPOK` i ustawia `errno` do `ENOSYS`.
+
+## <a name="requirements"></a>Wymagania
+
+|Procedura|Wymagany nagłówek|Opcjonalne nagłówki|
+|-------------|---------------------|---------------------|
+|`_heapset`|\<malloc.h>|\<errno.h>|
+
+Aby uzyskać więcej informacji na temat zgodności, zobacz [zgodności](../c-runtime-library/compatibility.md) we wstępie.
+
+## <a name="example"></a>Przykład
+
+```
+// crt_heapset.c
+// This program checks the heap and
+// fills in free entries with the character 'Z'.
+
+#include <malloc.h>
+#include <stdio.h>
+#include <stdlib.h>
+
+int main( void )
+{
+   int heapstatus;
+   char *buffer;
+
+   if( (buffer = malloc( 1 )) == NULL ) // Make sure heap is
+      exit( 0 );                        //    initialized
+   heapstatus = _heapset( 'Z' );        // Fill in free entries
+   switch( heapstatus )
+   {
+   case _HEAPOK:
+      printf( "OK - heap is fine\n" );
+      break;
+   case _HEAPEMPTY:
+      printf( "OK - heap is empty\n" );
+      break;
+   case _HEAPBADBEGIN:
+      printf( "ERROR - bad start of heap\n" );
+      break;
+   case _HEAPBADNODE:
+      printf( "ERROR - bad node in heap\n" );
+      break;
+   }
+   free( buffer );
+}
+```
+
+```Output
+OK - heap is fine
+```
+
+## <a name="see-also"></a>Zobacz też
+
+[Alokacja pamięci](../c-runtime-library/memory-allocation.md)<br/>
+[_heapadd](../c-runtime-library/heapadd.md)<br/>
+[_heapchk](../c-runtime-library/reference/heapchk.md)<br/>
+[_heapmin](../c-runtime-library/reference/heapmin.md)<br/>
+[_heapwalk](../c-runtime-library/reference/heapwalk.md)

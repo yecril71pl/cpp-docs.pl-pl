@@ -18,23 +18,25 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: bfd37a3d76a39748efc0352df829a7b5c57146a9
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 716e597be5d337d11d58df944bbba468e496f078
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32388290"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46078065"
 ---
 # <a name="control-flags"></a>Flagi kontrolne
-Wersja do debugowania biblioteki wykonawcze języka Microsoft C używa następujących flag kontroli alokacji sterty i proces raportowania. Aby uzyskać więcej informacji, zobacz [techniki testowania CRT](/visualstudio/debugger/crt-debugging-techniques).  
-  
-|Flaga|Opis|  
-|----------|-----------------|  
-|[_CRTDBG_MAP_ALLOC](../c-runtime-library/crtdbg-map-alloc.md)|Funkcje sterty podstawowej, aby ich odpowiedniki wersji debugowania mapy|  
-|[_DEBUG](../c-runtime-library/debug.md)|Umożliwia korzystanie z debugowania wersje funkcji środowiska wykonawczego|  
-|[_crtDbgFlag](../c-runtime-library/crtdbgflag.md)|Określa, jak Menedżer sterty debugowania śledzi alokacji|  
-  
- Te flagi można zdefiniować za pomocą opcji wiersza polecenia /D lub z `#define` dyrektywy. Jeśli flaga jest zdefiniowana z `#define`, dyrektywa musi występować przed instrukcji dla deklaracji procedury obejmują plik nagłówka.  
-  
-## <a name="see-also"></a>Zobacz też  
- [Zmienne globalne i typy standardowe](../c-runtime-library/global-variables-and-standard-types.md)
+
+Wersja do debugowania biblioteki wykonawczej C firmy Microsoft korzysta z następujących flag do kontroli Alokacja sterty i proces raportowania. Aby uzyskać więcej informacji, zobacz [techniki testowania CRT](/visualstudio/debugger/crt-debugging-techniques).
+
+|Flaga|Opis|
+|----------|-----------------|
+|[_CRTDBG_MAP_ALLOC](../c-runtime-library/crtdbg-map-alloc.md)|Mapuje ich odpowiedniki wersji debugowania funkcji stosu podstawowego|
+|[_DEBUG](../c-runtime-library/debug.md)|Umożliwia korzystanie z wersji debugowania funkcji wykonawczej|
+|[_crtDbgFlag](../c-runtime-library/crtdbgflag.md)|Określa, jak Menedżer stosu debugowania śledzi alokacje|
+
+Te flagi mogą być definiowane za pomocą opcji wiersza polecenia/d. lub za pomocą `#define` dyrektywy. Jeśli flaga jest zdefiniowana za pomocą `#define`, dyrektywa musi znajdować się przed plik nagłówkowy obejmują instrukcji dla procedury deklaracji.
+
+## <a name="see-also"></a>Zobacz też
+
+[Zmienne globalne i typy standardowe](../c-runtime-library/global-variables-and-standard-types.md)

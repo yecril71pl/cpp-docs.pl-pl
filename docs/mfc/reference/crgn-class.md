@@ -56,12 +56,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d4ac334221f22dcd80434c1be2f59998709aae5e
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: dcf5cbf6522d90b6338b817eebac434c81bf7c9a
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43204883"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46080691"
 ---
 # <a name="crgn-class"></a>Klasa CRgn
 Hermetyzuje region Windows graphics urządzenia interface (GDI).  
@@ -326,13 +326,12 @@ BOOL CreatePolygonRgn(
  *lpPoints*  
  Wskazuje na tablicę `POINT` struktury lub tablicę `CPoint` obiektów. Każda struktura określa współrzędne x i y współrzędne jednego wierzchołka wielokąta. `POINT` Struktura ma następującą postać:  
   
- `typedef struct tagPOINT {`  
-  
- `int x;`  
-  
- `int y;`  
-  
- `} POINT;`  
+```cpp
+typedef struct tagPOINT {
+    int x;
+    int y;
+} POINT;
+```
   
  *nCount*  
  Określa liczbę `POINT` struktury lub `CPoint` obiektów w tablicy, wskazywana przez *lpPoints*.  
@@ -372,13 +371,12 @@ BOOL CreatePolyPolygonRgn(
  *lpPoints*  
  Wskazuje na tablicę `POINT` struktury lub tablicę `CPoint` obiektów, które definiuje wierzchołki wielokątów. Każdy Wielokąt musi być jawnie zamknięty, ponieważ system nie Zamknij je automatycznie. Wielokąty podano pod rząd. `POINT` Struktura ma następującą postać:  
   
- `typedef struct tagPOINT {`  
-  
- `int x;`  
-  
- `int y;`  
-  
- `} POINT;`  
+```cpp
+typedef struct tagPOINT {
+    int x;
+    int y;
+} POINT;
+```
   
  *lpPolyCounts*  
  Wskazuje tablicy liczb całkowitych. Pierwsza liczba całkowita. określa liczbę wierzchołków w pierwszym wielokąta w *lpPoints* tablicy, a drugi liczbą całkowitą określa liczbę wierzchołki wielokąta drugi, i tak dalej.  
@@ -453,17 +451,14 @@ BOOL CreateRectRgnIndirect(LPCRECT lpRect);
  *lprect —*  
  Wskazuje `RECT` struktury lub `CRect` obiekt, który zawiera współrzędne logiczne lewym i prawym dolnym rogu regionu. `RECT` Struktura ma następującą postać:  
   
- `typedef struct tagRECT {`  
-  
- `int left;`  
-  
- `int top;`  
-  
- `int right;`  
-  
- `int bottom;`  
-  
- `} RECT;`  
+```cpp
+typedef struct tagRECT {
+    int left;
+    int top;
+    int right;
+    int bottom;
+} RECT;
+```
   
 ### <a name="return-value"></a>Wartość zwracana  
  Wartość różną od zera, jeśli operacja się powiedzie; w przeciwnym razie 0.  
@@ -715,17 +710,14 @@ BOOL RectInRegion(LPCRECT lpRect) const;
  *lprect —*  
  Wskazuje `RECT` struktury lub `CRect` obiektu. `RECT` Struktura ma następującą postać:  
   
- `typedef struct tagRECT {`  
-  
- `int left;`  
-  
- `int top;`  
-  
- `int right;`  
-  
- `int bottom;`  
-  
- `} RECT;`  
+```cpp
+typedef struct tagRECT {
+    int left;
+    int top;
+    int right;
+    int bottom;
+} RECT;
+```
   
 ### <a name="return-value"></a>Wartość zwracana  
  Wartość różną od zera, jeśli jakakolwiek część określonego prostokąta znajduje się w granicach regionu; w przeciwnym razie 0.  

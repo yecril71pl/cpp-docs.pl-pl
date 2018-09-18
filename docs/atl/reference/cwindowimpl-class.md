@@ -28,12 +28,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3582f3fff0ee683889e1b0403554c59835293889
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 39a0938f6faadc05b2fdb3d716417a56512768b7
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43756109"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46084563"
 ---
 # <a name="cwindowimpl-class"></a>Klasa CWindowImpl
 
@@ -45,19 +45,19 @@ Zawiera metody służące do tworzenia lub Tworzenie podklasy okna.
 ## <a name="syntax"></a>Składnia
 
 ```
-template <class T, class TBase = CWindow, class TWinTraits = CControlWinTraits>  
+template <class T, class TBase = CWindow, class TWinTraits = CControlWinTraits>
 class ATL_NO_VTABLE CWindowImpl : public CWindowImplBaseT<TBase, TWinTraits>
 ```
 
 #### <a name="parameters"></a>Parametry
 
-*T*  
+*T*<br/>
 Nowa klasa jest pochodną `CWindowImpl`.
 
-*Tpodstawowe*  
+*Tpodstawowe*<br/>
 Klasa bazowa, klasy. Domyślnie klasa bazowa jest [CWindow](../../atl/reference/cwindow-class.md).
 
-*TWinTraits*  
+*TWinTraits*<br/>
 A [klasa cech](../../atl/understanding-window-traits.md) definiujący Style okna. Wartość domyślna to `CControlWinTraits`.
 
 ## <a name="members"></a>Elementy członkowskie
@@ -153,25 +153,25 @@ HWND Create(
 
 ### <a name="parameters"></a>Parametry
 
-*hWndParent*  
+*hWndParent*<br/>
 [in] Dojście do okna nadrzędnego lub właściciela.
 
-*Rect*  
+*Rect*<br/>
 [in] A [Prostokąt](https://msdn.microsoft.com/library/windows/desktop/dd162897) Struktura określająca położenie okna. `RECT` Mogą być przekazywane przez wskaźnik lub przez odwołanie.
 
-*szWindowName*  
+*szWindowName*<br/>
 [in] Określa nazwę okna. Wartością domyślną jest NULL.
 
-*dwStyle*  
+*dwStyle*<br/>
 [in] Styl okna. Ta wartość zostanie połączona z style zapewniany przez klasę cech okna. Wartość domyślna zapewnia cech klasy pełną kontrolę nad stylu. Aby uzyskać listę możliwych wartości, zobacz [CreateWindow](/windows/desktop/api/winuser/nf-winuser-createwindowa) w zestawie Windows SDK.
 
-*dwExStyle*  
+*dwExStyle*<br/>
 [in] Styl okna rozszerzonej. Ta wartość zostanie połączona z style zapewniany przez klasę cech okna. Wartość domyślna zapewnia cech klasy pełną kontrolę nad stylu. Aby uzyskać listę możliwych wartości, zobacz [elementu CreateWindowEx](/windows/desktop/api/winuser/nf-winuser-createwindowexa) w zestawie Windows SDK.
 
-*MenuOrID*  
+*MenuOrID*<br/>
 [in] Dla okna podrzędnego identyfikator okna. Aby uzyskać oknem najwyższego poziomu uchwyt menu dla okna. Wartość domyślna to **0U**.
 
-*lpCreateParam*  
+*lpCreateParam*<br/>
 [in] Wskaźnik do danych tworzenie okien. Aby uzyskać pełny opis, zobacz opis ostatni parametr do [elementu CreateWindowEx](/windows/desktop/api/winuser/nf-winuser-createwindowexa).
 
 ### <a name="return-value"></a>Wartość zwracana
@@ -205,13 +205,13 @@ LRESULT DefWindowProc();
 
 ### <a name="parameters"></a>Parametry
 
-*uMsg*  
+*uMsg*<br/>
 [in] Komunikat wysyłany do okna.
 
-*wParam*  
+*wParam*<br/>
 [in] Dodatkowe informacje specyficzne dla wiadomości.
 
-*lParam*  
+*lParam*<br/>
 [in] Dodatkowe informacje specyficzne dla wiadomości.
 
 ### <a name="return-value"></a>Wartość zwracana
@@ -300,7 +300,7 @@ virtual void OnFinalMessage(HWND hWnd);
 
 ### <a name="parameters"></a>Parametry
 
-*hWnd*  
+*hWnd*<br/>
 [in] Dojście do okna niszczone.
 
 ### <a name="remarks"></a>Uwagi
@@ -317,7 +317,7 @@ BOOL SubclassWindow(HWND hWnd);
 
 ### <a name="parameters"></a>Parametry
 
-*hWnd*  
+*hWnd*<br/>
 [in] Uchwyt okna jest podklasą klasy.
 
 ### <a name="return-value"></a>Wartość zwracana
@@ -357,16 +357,16 @@ static LRESULT CALLBACK WindowProc(
 
 ### <a name="parameters"></a>Parametry
 
-*hWnd*  
+*hWnd*<br/>
 [in] Dojście do okna.
 
-*uMsg*  
+*uMsg*<br/>
 [in] Komunikat wysyłany do okna.
 
-*wParam*  
+*wParam*<br/>
 [in] Dodatkowe informacje specyficzne dla wiadomości.
 
-*lParam*  
+*lParam*<br/>
 [in] Dodatkowe informacje specyficzne dla wiadomości.
 
 ### <a name="return-value"></a>Wartość zwracana
@@ -387,6 +387,6 @@ Można zastąpić `WindowProc` inny mechanizm obsługi wiadomości.
 
 ## <a name="see-also"></a>Zobacz też
 
-[BEGIN_MSG_MAP](message-map-macros-atl.md#begin_msg_map)   
-[Klasa CComControl](../../atl/reference/ccomcontrol-class.md)   
+[BEGIN_MSG_MAP](message-map-macros-atl.md#begin_msg_map)<br/>
+[Klasa CComControl](../../atl/reference/ccomcontrol-class.md)<br/>
 [Klasa — Przegląd](../../atl/atl-class-overview.md)

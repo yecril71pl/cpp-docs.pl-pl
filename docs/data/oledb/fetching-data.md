@@ -18,21 +18,22 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 1dca3cc2d51f0e165e9b17d9fe630752a427590f
-ms.sourcegitcommit: 889a75be1232817150be1e0e8d4d7f48f5993af2
+ms.openlocfilehash: 05cfcb59100f1778b0266636fb3930fd9489e917
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/30/2018
-ms.locfileid: "39339159"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46067080"
 ---
 # <a name="fetching-data"></a>Pobieranie danych
+
 Po otwarciu źródła danych, sesji i rowset — obiekty można pobrać danych. W zależności od typu dostępu, którego używasz może być konieczne powiązanie kolumn.  
   
 ### <a name="to-fetch-data"></a>Można pobrać danych  
   
-1.  Otwórz zestaw wierszy przy użyciu odpowiedniego **Otwórz** polecenia.  
+1. Otwórz zestaw wierszy przy użyciu odpowiedniego **Otwórz** polecenia.  
   
-2.  Jeśli używasz `CManualAccessor`, powiąż kolumny wyjściowe, jeśli nie zostały już wykonane. Aby powiązać kolumny, należy wywołać `GetColumnInfo`, a następnie utwórz metody dostępu z powiązaniami, jak pokazano w poniższym przykładzie:  
+1. Jeśli używasz `CManualAccessor`, powiąż kolumny wyjściowe, jeśli nie zostały już wykonane. Aby powiązać kolumny, należy wywołać `GetColumnInfo`, a następnie utwórz metody dostępu z powiązaniami, jak pokazano w poniższym przykładzie:  
   
     ```cpp  
     // From the DBViewer Sample CDBTreeView::OnQueryEdit  
@@ -49,7 +50,7 @@ Po otwarciu źródła danych, sesji i rowset — obiekty można pobrać danych. 
     rs.Bind();  
     ```  
   
-3.  Zapis `while` pętli do pobierania danych. W pętli, wywołaj `MoveNext` aby poszerzyć kursor i przetestować wartość zwracaną względem S_OK, jak pokazano w poniższym przykładzie:  
+1. Zapis `while` pętli do pobierania danych. W pętli, wywołaj `MoveNext` aby poszerzyć kursor i przetestować wartość zwracaną względem S_OK, jak pokazano w poniższym przykładzie:  
   
     ```cpp  
     while (rs.MoveNext() == S_OK)  
@@ -59,7 +60,7 @@ Po otwarciu źródła danych, sesji i rowset — obiekty można pobrać danych. 
     }  
     ```  
   
-4.  W ramach `while` pętli, możesz pobrać dane według typu dostępu.  
+1. W ramach `while` pętli, możesz pobrać dane według typu dostępu.  
   
     -   Jeśli używasz [CAccessor](../../data/oledb/caccessor-class.md) klasy, powinny mieć rekord użytkownika, który zawiera elementy członkowskie danych. Jak pokazano w poniższym przykładzie, aby uzyskać dostęp do danych przy użyciu tych składowych danych:  
   
@@ -101,4 +102,5 @@ Po otwarciu źródła danych, sesji i rowset — obiekty można pobrać danych. 
         ```  
   
 ## <a name="see-also"></a>Zobacz też  
- [Praca z szablonami konsumentów OLE DB](../../data/oledb/working-with-ole-db-consumer-templates.md)
+
+[Praca z szablonami konsumentów OLE DB](../../data/oledb/working-with-ole-db-consumer-templates.md)

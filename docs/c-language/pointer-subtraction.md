@@ -14,17 +14,19 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 576a8d9252db3d5733775a7a0c348b428462aa0f
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 9756861fd1204a05179ac77dfa648822ed83e5a3
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32383735"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46079543"
 ---
 # <a name="pointer-subtraction"></a>Odejmowanie wskaźnika
-**ANSI 3.3.6, 4.1.1** typu Liczba całkowita wymagane do przechowywania różnica dwóch wskaźników do elementów tej samej tablicy **ptrdiff_t —**  
-  
- `ptrdiff_t` Element typedef jest `int` na x86 32-bitowych platform. Na platformach 64-bitowych `ptrdiff_t` element typedef jest `__int64`.
-  
-## <a name="see-also"></a>Zobacz też  
- [Tablice i wskaźniki](../c-language/arrays-and-pointers.md)
+
+**ANSI 3.3.6, 4.1.1** typu liczby całkowitej do przeprowadzenia różnica między dwa wskaźniki do elementów w tej samej tablicy **ptrdiff_t —**
+
+`ptrdiff_t` Jest typedef `int` na x86 32-bitowych platform. Na platformach 64-bitowych `ptrdiff_t` jest typedef `__int64`.
+
+## <a name="see-also"></a>Zobacz też
+
+[Tablice i wskaźniki](../c-language/arrays-and-pointers.md)

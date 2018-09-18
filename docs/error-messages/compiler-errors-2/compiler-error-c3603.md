@@ -1,5 +1,5 @@
 ---
-title: C3603 błąd kompilatora | Dokumentacja firmy Microsoft
+title: Błąd kompilatora C3603 | Dokumentacja firmy Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,14 +16,15 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: eec4b4b1df536a176fa05ea9095878ab5e1492cb
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 67adc99491a15503ee5580df37a612eb73013686
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33253370"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46075894"
 ---
-# <a name="compiler-error-c3603"></a>C3603 błąd kompilatora
-"Symbol": typ "Type" nie jest jeszcze obsługiwane  
-  
- Podjęto próbę użycia typu danych, który nie jest jeszcze obsługiwany przez środowisko uruchomieniowe platformy .NET w zarządzanego obiektu.
+# <a name="compiler-error-c3603"></a>Błąd kompilatora C3603
+
+'Symbol': typ "Type" nie jest jeszcze obsługiwany
+
+Podjęto próbę użycia typu danych, który nie jest jeszcze obsługiwany przez środowisko uruchomieniowe platformy .NET w zarządzanego obiektu.

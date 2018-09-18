@@ -21,41 +21,43 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8f45b6ee85924106e949a7487f133b8e3fbe0b9e
-ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
+ms.openlocfilehash: 59131994708f2cb78f00b05611c1db7f550f6a87
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/02/2018
-ms.locfileid: "39465012"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46076921"
 ---
 # <a name="timing-of-exception-handling-a-summary"></a>Chronometraż dla obsługi wyjątków: podsumowanie
-Program obsługi przerwania jest wykonywany niezależnie od tego, jak **__try** został przerwany blok instrukcji. Przyczyny obejmują skok na zewnątrz **__try** bloku `longjmp` instrukcję, która przenosi sterowanie na zewnątrz bloku i odwinięcie stosu wskutek obsługi wyjątku.  
-  
+
+Program obsługi przerwania jest wykonywany niezależnie od tego, jak **__try** został przerwany blok instrukcji. Przyczyny obejmują skok na zewnątrz **__try** bloku `longjmp` instrukcję, która przenosi sterowanie na zewnątrz bloku i odwinięcie stosu wskutek obsługi wyjątku.
+
 > [!NOTE]
->  Język Visual C++ obsługuje dwie postacie instrukcji `setjmp` i `longjmp`. Szybka wersja omija obsługę przerwania, ale jest bardziej wydajna. Aby użyć tej wersji, Dołącz plik \<setjmp.h >. Druga wersja zapewnia obsługę przerwania opisaną w poprzednim akapicie. Aby użyć tej wersji, Dołącz plik \<setjmpex.h >. Wzrost wydajności z użycia wersji szybkiej zależy od konfiguracji sprzętowej.  
-  
- System operacyjny wykonuje wszystkie programy obsługi przerwania w odpowiedniej kolejności, zanim wykonany będzie jakikolwiek inny kod, włączając w to treść programu obsługi wyjątków.  
-  
- Gdy przyczyną przerwania jest wyjątek, system musi najpierw wykonać część filtru przynajmniej jednego programu obsługi wyjątku, zanim zdecyduje co przerwać. Kolejność zdarzeń jest następująca:  
-  
-1.  Zgłaszany jest wyjątek.  
-  
-2.  System przeszukuje hierarchię aktywnych programów obsługi wyjątków i wykonuje filtr programu obsługi o najwyższym priorytecie; jest to ostatnio zainstalowany, najgłębiej zagnieżdżony względem bloków i wywołań funkcji, program obsługi wyjątków.  
-  
-3.  Jeśli filtr przekaże sterowanie (zwróci 0), proces jest kontynuowany, dopóki nie zostanie znaleziony filtr, który nie przekaże sterowania.  
-  
-4.  Jeśli filtr zwróci wartość -1, wykonywanie jest kontynuowane, gdy wyjątek został zgłoszony, a przerwanie nie zachodzi miejsce.  
-  
-5.  Jeśli filtr zwróci 1, zachodzą następujące zdarzenia:  
-  
-    -   System rozwija stos, czyszcząc wszystkie ramki stosu między kodem wykonywanym w bieżącym momencie (w którym został zgłoszony wyjątek), a ramką stosu, która zawiera program obsługi wyjątków uzyskujący kontrolę.  
-  
-    -   Gdy stos jest rozwinięty, wykonywany jest każdy znajdujący się na nim program obsługi przerwania.  
-  
-    -   Wykonywany jest właściwy program obsługi przerwania.  
-  
-    -   Sterowanie jest przekazywane do wiersza kodu następującego po programie obsługi wyjątków.  
-  
-## <a name="see-also"></a>Zobacz także  
- [Pisanie programu obsługi zakończenia](../cpp/writing-a-termination-handler.md)   
- [Obsługa wyjątków strukturalnych (C/C++)](../cpp/structured-exception-handling-c-cpp.md)
+>  Język Visual C++ obsługuje dwie postacie instrukcji `setjmp` i `longjmp`. Szybka wersja omija obsługę przerwania, ale jest bardziej wydajna. Aby użyć tej wersji, Dołącz plik \<setjmp.h >. Druga wersja zapewnia obsługę przerwania opisaną w poprzednim akapicie. Aby użyć tej wersji, Dołącz plik \<setjmpex.h >. Wzrost wydajności z użycia wersji szybkiej zależy od konfiguracji sprzętowej.
+
+System operacyjny wykonuje wszystkie programy obsługi przerwania w odpowiedniej kolejności, zanim wykonany będzie jakikolwiek inny kod, włączając w to treść programu obsługi wyjątków.
+
+Gdy przyczyną przerwania jest wyjątek, system musi najpierw wykonać część filtru przynajmniej jednego programu obsługi wyjątku, zanim zdecyduje co przerwać. Kolejność zdarzeń jest następująca:
+
+1. Zgłaszany jest wyjątek.
+
+1. System przeszukuje hierarchię aktywnych programów obsługi wyjątków i wykonuje filtr programu obsługi o najwyższym priorytecie; jest to ostatnio zainstalowany, najgłębiej zagnieżdżony względem bloków i wywołań funkcji, program obsługi wyjątków.
+
+1. Jeśli filtr przekaże sterowanie (zwróci 0), proces jest kontynuowany, dopóki nie zostanie znaleziony filtr, który nie przekaże sterowania.
+
+1. Jeśli filtr zwróci wartość -1, wykonywanie jest kontynuowane, gdy wyjątek został zgłoszony, a przerwanie nie zachodzi miejsce.
+
+1. Jeśli filtr zwróci 1, zachodzą następujące zdarzenia:
+
+   - System rozwija stos, czyszcząc wszystkie ramki stosu między kodem wykonywanym w bieżącym momencie (w którym został zgłoszony wyjątek), a ramką stosu, która zawiera program obsługi wyjątków uzyskujący kontrolę.
+
+   - Gdy stos jest rozwinięty, wykonywany jest każdy znajdujący się na nim program obsługi przerwania.
+
+   - Wykonywany jest właściwy program obsługi przerwania.
+
+   - Sterowanie jest przekazywane do wiersza kodu następującego po programie obsługi wyjątków.
+
+## <a name="see-also"></a>Zobacz także
+
+[Pisanie programu obsługi zakończenia](../cpp/writing-a-termination-handler.md)<br/>
+[Obsługa wyjątków strukturalnych (C/C++)](../cpp/structured-exception-handling-c-cpp.md)

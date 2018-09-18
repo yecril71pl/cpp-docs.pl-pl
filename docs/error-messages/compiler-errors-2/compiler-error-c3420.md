@@ -1,5 +1,5 @@
 ---
-title: C3420 błąd kompilatora | Dokumentacja firmy Microsoft
+title: Błąd kompilatora C3420 | Dokumentacja firmy Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,27 +16,29 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6d7614d07cf98ae9fe857809bf9400d36a48ab0b
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 3997bc0744bf1e1db34fe7ce1de666ebd3e3b8cd
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33255061"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46078572"
 ---
-# <a name="compiler-error-c3420"></a>C3420 błąd kompilatora
-"finalizator": finalizator nie może być wirtualny  
-  
- Finalizator można wywołać tylko-niemal z jego typ otaczający. W związku z tym jest błędem deklarować finalizator wirtualnego.  
-  
- Aby uzyskać więcej informacji, zobacz [destruktory i finalizatory w porady: Definiowanie oraz stosowanie klas i struktur (C + +/ CLI)](../../dotnet/how-to-define-and-consume-classes-and-structs-cpp-cli.md#BKMK_Destructors_and_finalizers).  
-  
-## <a name="example"></a>Przykład  
- Poniższy przykład generuje C3420.  
-  
-```  
-// C3420.cpp  
-// compile with: /clr /c  
-ref class R {  
-   virtual !R() {}   // C3420  
-};  
+# <a name="compiler-error-c3420"></a>Błąd kompilatora C3420
+
+"finalizator": finalizator nie może być wirtualny
+
+Finalizator może zostać wywołana tylko-niemal z jego typie otaczającym. Dlatego jest błędem jest deklaracja finalizatora wirtualnego.
+
+Aby uzyskać więcej informacji, zobacz [destruktory i finalizatory w instrukcje: Definiowanie oraz stosowanie klas i struktur (C + +/ CLI)](../../dotnet/how-to-define-and-consume-classes-and-structs-cpp-cli.md#BKMK_Destructors_and_finalizers).
+
+## <a name="example"></a>Przykład
+
+Poniższy przykład spowoduje wygenerowanie C3420.
+
+```
+// C3420.cpp
+// compile with: /clr /c
+ref class R {
+   virtual !R() {}   // C3420
+};
 ```

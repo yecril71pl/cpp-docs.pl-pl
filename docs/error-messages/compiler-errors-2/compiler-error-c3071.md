@@ -1,5 +1,5 @@
 ---
-title: C3071 błąd kompilatora | Dokumentacja firmy Microsoft
+title: Błąd kompilatora C3071 | Dokumentacja firmy Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,34 +16,36 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 163cb170953c444789e39b906ff4d408739f7514
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 5f004de3ed133ea77d543014ae1adcdc4e1eddef
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33247680"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46077805"
 ---
-# <a name="compiler-error-c3071"></a>C3071 błąd kompilatora
-operator "operator" można stosować do wystąpienia klasy ref lub typu wartościowego  
-  
- Nie można używać operatora CLR na typ macierzysty. Operator może służyć w klasie ref lub ref struct (typ wartości), ale nie: Typ macierzysty takich jak int lub alias dla typu macierzystego, takich jak System::Int32. Te typy nie można spakować z kodu C++ w taki sposób, który odwołuje się do zmiennej macierzystego, więc nie można używać operatora.  
-  
- Aby uzyskać więcej informacji, zobacz [Operator odwołania śledzenia](../../windows/tracking-reference-operator-cpp-component-extensions.md).  
-  
-## <a name="example"></a>Przykład  
- Poniższy przykład generuje C3071.  
-  
-```  
-// C3071.cpp  
-// compile with: /clr  
-class N {};  
-ref struct R {};  
-  
-int main() {  
-   N n;  
-   %n;   // C3071  
-  
-   R r;  
-   R ^ r2 = %r;   // OK  
-}  
+# <a name="compiler-error-c3071"></a>Błąd kompilatora C3071
+
+operator "operator" można stosować tylko do wystąpienia klasy ref lub typu wartościowego
+
+Nie można używać operatora CLR na typ macierzysty. Operator może służyć klasy referencyjnej lub struktury ref (typu wartości), ale nie: Typ macierzysty takie jak int lub alias dla typu macierzystego, takich jak System::Int32. Te typy nie może zostać opakowany z kodu C++ w sposób, który odwołuje się do zmiennej natywnych, więc nie można używać operatora.
+
+Aby uzyskać więcej informacji, zobacz [Tracking Reference Operator](../../windows/tracking-reference-operator-cpp-component-extensions.md).
+
+## <a name="example"></a>Przykład
+
+Poniższy przykład spowoduje wygenerowanie C3071.
+
+```
+// C3071.cpp
+// compile with: /clr
+class N {};
+ref struct R {};
+
+int main() {
+   N n;
+   %n;   // C3071
+
+   R r;
+   R ^ r2 = %r;   // OK
+}
 ```

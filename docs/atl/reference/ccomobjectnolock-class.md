@@ -21,12 +21,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5af4f2ce063c817ee4bf0c9f8ee4fea3beffb075
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 76b8b3b329f3282a53eacb4fe27d6cfa79e08b7e
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43762908"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46078962"
 ---
 # <a name="ccomobjectnolock-class"></a>Klasa CComObjectNoLock
 
@@ -35,13 +35,13 @@ Ta klasa implementuje `IUnknown` nieagregowane obiektu, ale ma nie przyrostu lic
 ## <a name="syntax"></a>Składnia
 
 ```
-template<class Base>  
+template<class Base>
 class CComObjectNoLock : public Base
 ```
 
 #### <a name="parameters"></a>Parametry
 
-*podstawowy*  
+*podstawowy*<br/>
 Z klasą pochodną [CComObjectRoot](../../atl/reference/ccomobjectroot-class.md) lub [CComObjectRootEx](../../atl/reference/ccomobjectrootex-class.md), jak również od innych interfejsu mają być obsługiwane w obiekcie.
 
 ## <a name="members"></a>Elementy członkowskie
@@ -99,7 +99,7 @@ CComObjectNoLock(void* = NULL);
 
 ### <a name="parameters"></a>Parametry
 
-<em>Void\*</em>  
+<em>Void\*</em><br/>
 [in] Ten parametr nienazwany nie jest używany. Istnieje symetrii z innymi `CComXXXObjectXXX` konstruktorów.
 
 ##  <a name="dtor"></a>  CComObjectNoLock:: ~ CComObjectNoLock
@@ -124,10 +124,10 @@ STDMETHOD(QueryInterface)(REFIID iid, void** ppvObject);
 
 ### <a name="parameters"></a>Parametry
 
-*IID*  
+*IID*<br/>
 [in] Identyfikator interfejsu żądanej.
 
-*ppvObject*  
+*ppvObject*<br/>
 [out] Wskaźnik do wskaźnika interfejsu identyfikowane przez *iid*. Jeśli obiekt nie obsługuje ten interfejs *ppvObject* ma wartość NULL.
 
 ### <a name="return-value"></a>Wartość zwracana

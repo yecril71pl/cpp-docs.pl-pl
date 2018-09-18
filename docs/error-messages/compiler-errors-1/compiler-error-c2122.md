@@ -1,5 +1,5 @@
 ---
-title: C2122 błąd kompilatora | Dokumentacja firmy Microsoft
+title: Błąd kompilatora C2122 | Dokumentacja firmy Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,14 +16,15 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6651bda63ab011fd7ef50eb6f71c3df27bb95ccd
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 4eab9412be46949845e1ed16bb701ae8621fac42
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33166182"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46072247"
 ---
-# <a name="compiler-error-c2122"></a>C2122 błąd kompilatora
-"identyfikator": parametr prototypu w liście nazw jest niedozwolony  
-  
- Parametr nie jest dozwolonym typem. ANSI C nie obsługuje typów zdefiniowanych przez użytkownika.
+# <a name="compiler-error-c2122"></a>Błąd kompilatora C2122
+
+'Identyfikator': parametr prototypu w liście nazw jest niedozwolony
+
+Parametr nie jest typem prawnych. ANSI C nie obsługuje typów zdefiniowanych przez użytkownika.

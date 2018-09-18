@@ -25,12 +25,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0a6835cb1f8fb6365149b91c30881b4966b4b644
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 40dddf2bb1619bd896ecf50008f80fca968ef8c9
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43765661"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46075712"
 ---
 # <a name="ccomcachedtearoffobject-class"></a>Klasa CComCachedTearOffObject
 
@@ -49,7 +49,7 @@ public CComObjectRootEx<contained
 
 #### <a name="parameters"></a>Parametry
 
-`contained`  
+*zawiera*<br/>
 Twoje odrywania klasą pochodną `CComTearOffObjectBase` i interfejsy odrywania obiektu do obsługi.
 
 ## <a name="members"></a>Elementy członkowskie
@@ -121,7 +121,7 @@ CComCachedTearOffObject(void* pv);
 
 ### <a name="parameters"></a>Parametry
 
-*Wa*  
+*Wa*<br/>
 [in] Wskaźnik do `IUnknown` z `CComCachedTearOffObject`.
 
 ### <a name="remarks"></a>Uwagi
@@ -170,7 +170,7 @@ CcomContainedObject <contained> m_contained;
 
 ### <a name="parameters"></a>Parametry
 
-*zawiera*  
+*zawiera*<br/>
 [in] Twoje odrywania klasą pochodną `CComTearOffObjectBase` i interfejsy odrywania obiektu do obsługi.
 
 ### <a name="remarks"></a>Uwagi
@@ -187,10 +187,10 @@ STDMETHOD(QueryInterface)(REFIID iid, void** ppvObject);
 
 ### <a name="parameters"></a>Parametry
 
-*IID*  
+*IID*<br/>
 [in] Identyfikator GUID interfejsu żądanej.
 
-*ppvObject*  
+*ppvObject*<br/>
 [out] Wskaźnik do wskaźnika interfejsu identyfikowane przez *iid*, lub wartość NULL, jeśli nie można odnaleźć interfejsu.
 
 ### <a name="return-value"></a>Wartość zwracana
@@ -215,6 +215,6 @@ W kompilacjach nieprzeznaczonych do debugowania zawsze zwraca wartość 0. W prz
 
 ## <a name="see-also"></a>Zobacz też
 
-[Klasa CComTearOffObject](../../atl/reference/ccomtearoffobject-class.md)   
-[Klasa CComObjectRootEx](../../atl/reference/ccomobjectrootex-class.md)   
+[Klasa CComTearOffObject](../../atl/reference/ccomtearoffobject-class.md)<br/>
+[Klasa CComObjectRootEx](../../atl/reference/ccomobjectrootex-class.md)<br/>
 [Klasa — Przegląd](../../atl/atl-class-overview.md)

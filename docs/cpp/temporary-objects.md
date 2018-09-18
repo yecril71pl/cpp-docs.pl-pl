@@ -15,42 +15,43 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3a34fa07431892493e12a6f38603965da1dbc824
-ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
+ms.openlocfilehash: 3aea9e17d17008642f9421beb47be38cac401132
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/02/2018
-ms.locfileid: "39466858"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46071318"
 ---
 # <a name="temporary-objects"></a>Obiekty tymczasowe
-W niektórych przypadkach, konieczne jest utworzenie obiektów tymczasowych przez kompilator. Takie obiekty tymczasowe mogą być utworzone z następujących powodów:  
-  
--   Aby zainicjować **const** odwołanie za pomocą inicjatora o typie różniącym się od tego typu podstawowego inicjowanego odwołania.  
-  
--   Aby przechowywać wartość zwracaną przez funkcję, która zwraca typ zdefiniowany przez użytkownika. Takie obiekty tymczasowe są tworzone tylko wtedy, gdy program nie kopiuje wartości zwracanej do obiektu. Na przykład:  
-  
-    ```cpp 
-    UDT Func1();    //  Declare a function that returns a user-defined  
-                    //   type.  
-  
-    ...  
-  
-    Func1();        //  Call Func1, but discard return value.  
-                    //  A temporary object is created to store the return  
-                    //   value.  
-    ```  
-  
-     Ponieważ wartość zwracana nie jest kopiowana do innego obiektu, tworzony jest obiekt tymczasowy. Częstszy przypadek tworzenia obiektów tymczasowych występuje w trakcie obliczania wyrażenia, w którym muszą zostać wywołane funkcje przeciążonego operatora. Takie funkcje przeciążonego operatora zwracają typ zdefiniowany przez użytkownika, który często nie jest kopiowany do innego obiektu.  
-  
-     Rozważ wyrażenie `ComplexResult = Complex1 + Complex2 + Complex3`. Obliczane jest wyrażenie `Complex1 + Complex2`, a wynik jest przechowywany w obiekcie tymczasowym. Następnie, wyrażenie *tymczasowe* `+ Complex3` zostało ocenione, a wynik jest kopiowany do `ComplexResult` (zakładając, że operator przypisania nie jest przeciążony).  
-  
--   Aby przechować wynik rzutowania na typ zdefiniowany przez użytkownika. Gdy obiekt danego typu jest jawnie konwertowany na typ zdefiniowany przez użytkownika, nowy obiekt jest konstruowany jako obiekt tymczasowy.  
-  
- Obiekty tymczasowe mają okres istnienia zdefiniowany w punkcie utworzenia oraz punkt, w którym są niszczone. Dowolne wyrażenie, które tworzy co najmniej jeden obiekt tymczasowy, ostatecznie niszczy takie obiekty w kolejności odwrotnej do utworzenia. Punkty, w których występuje niszczenie obiektów pokazano w następującej tabeli.  
-  
-### <a name="destruction-points-for-temporary-objects"></a>Punkty niszczenia obiektów tymczasowych  
-  
-|Powód utworzenia obiektów tymczasowych|Punkt niszczenia|  
-|------------------------------|-----------------------|  
-|Wynik obliczania wyrażenia|Wszystkie obiekty tymczasowe, utworzone w wyniku obliczenia wyrażenia są niszczone na końcu instrukcji wyrażenia (to znaczy w średniku), lub na końcu wyrażeń sterujących **dla**, **Jeśli**, **podczas**, **czy**, i **Przełącz** instrukcji.|  
-|Inicjowanie **const** odwołania|Jeśli inicjator nie jest l-wartością tego samego typu co inicjowane odwołanie, tworzony jest obiekt tymczasowy o typie podstawowym obiektu i inicjowany za pomocą wyrażenia inicjowania. Obiekt tymczasowy jest niszczony natychmiast po zniszczeniu odwoływanego obiektu z którym jest powiązany.|  
+
+W niektórych przypadkach, konieczne jest utworzenie obiektów tymczasowych przez kompilator. Takie obiekty tymczasowe mogą być utworzone z następujących powodów:
+
+- Aby zainicjować **const** odwołanie za pomocą inicjatora o typie różniącym się od tego typu podstawowego inicjowanego odwołania.
+
+- Aby przechowywać wartość zwracaną przez funkcję, która zwraca typ zdefiniowany przez użytkownika. Takie obiekty tymczasowe są tworzone tylko wtedy, gdy program nie kopiuje wartości zwracanej do obiektu. Na przykład:
+
+    ```cpp
+    UDT Func1();    //  Declare a function that returns a user-defined
+                    //   type.
+
+    ...
+
+    Func1();        //  Call Func1, but discard return value.
+                    //  A temporary object is created to store the return
+                    //   value.
+    ```
+
+     Ponieważ wartość zwracana nie jest kopiowana do innego obiektu, tworzony jest obiekt tymczasowy. Częstszy przypadek tworzenia obiektów tymczasowych występuje w trakcie obliczania wyrażenia, w którym muszą zostać wywołane funkcje przeciążonego operatora. Takie funkcje przeciążonego operatora zwracają typ zdefiniowany przez użytkownika, który często nie jest kopiowany do innego obiektu.
+
+     Rozważ wyrażenie `ComplexResult = Complex1 + Complex2 + Complex3`. Obliczane jest wyrażenie `Complex1 + Complex2`, a wynik jest przechowywany w obiekcie tymczasowym. Następnie, wyrażenie *tymczasowe* `+ Complex3` zostało ocenione, a wynik jest kopiowany do `ComplexResult` (zakładając, że operator przypisania nie jest przeciążony).
+
+- Aby przechować wynik rzutowania na typ zdefiniowany przez użytkownika. Gdy obiekt danego typu jest jawnie konwertowany na typ zdefiniowany przez użytkownika, nowy obiekt jest konstruowany jako obiekt tymczasowy.
+
+Obiekty tymczasowe mają okres istnienia zdefiniowany w punkcie utworzenia oraz punkt, w którym są niszczone. Dowolne wyrażenie, które tworzy co najmniej jeden obiekt tymczasowy, ostatecznie niszczy takie obiekty w kolejności odwrotnej do utworzenia. Punkty, w których występuje niszczenie obiektów pokazano w następującej tabeli.
+
+### <a name="destruction-points-for-temporary-objects"></a>Punkty niszczenia obiektów tymczasowych
+
+|Powód utworzenia obiektów tymczasowych|Punkt niszczenia|
+|------------------------------|-----------------------|
+|Wynik obliczania wyrażenia|Wszystkie obiekty tymczasowe, utworzone w wyniku obliczenia wyrażenia są niszczone na końcu instrukcji wyrażenia (to znaczy w średniku), lub na końcu wyrażeń sterujących **dla**, **Jeśli**, **podczas**, **czy**, i **Przełącz** instrukcji.|
+|Inicjowanie **const** odwołania|Jeśli inicjator nie jest l-wartością tego samego typu co inicjowane odwołanie, tworzony jest obiekt tymczasowy o typie podstawowym obiektu i inicjowany za pomocą wyrażenia inicjowania. Obiekt tymczasowy jest niszczony natychmiast po zniszczeniu odwoływanego obiektu z którym jest powiązany.|

@@ -1,5 +1,5 @@
 ---
-title: C3010 błąd kompilatora | Dokumentacja firmy Microsoft
+title: Błąd kompilatora C3010 | Dokumentacja firmy Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,31 +16,32 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3421a7611bd7e749670c62e52526e296fd3f6c14
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: d68be11a510ba41197cb9645484a10ca8dae6d77
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33242062"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46075127"
 ---
-# <a name="compiler-error-c3010"></a>C3010 błąd kompilatora
-"etykieta": wyskok ze strukturalnego bloku OpenMP jest niedozwolony  
-  
- Kod nie można przeskoczyć do lub z bloku OpenMP.  
-  
- Poniższy przykład generuje C3010:  
-  
-```  
-// C3010.c  
-// compile with: /openmp  
-int main() {  
-   #pragma omp parallel   
-   {  
-      #pragma omp parallel  
-      {  
-         goto lbl3;  
-      }  
-   }  
-   lbl3:;   // C3010  
-}  
+# <a name="compiler-error-c3010"></a>Błąd kompilatora C3010
+
+"etykieta": wyskok strukturalnego bloku OpenMP jest niedozwolony
+
+Kod nie może wykonać skok do lub z bloku OpenMP jest.
+
+Poniższy przykład spowoduje wygenerowanie C3010:
+
+```
+// C3010.c
+// compile with: /openmp
+int main() {
+   #pragma omp parallel
+   {
+      #pragma omp parallel
+      {
+         goto lbl3;
+      }
+   }
+   lbl3:;   // C3010
+}
 ```

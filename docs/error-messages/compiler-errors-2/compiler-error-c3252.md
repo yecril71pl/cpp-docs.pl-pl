@@ -1,5 +1,5 @@
 ---
-title: C3252 błąd kompilatora | Dokumentacja firmy Microsoft
+title: Błąd kompilatora C3252 | Dokumentacja firmy Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,33 +16,34 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4bc7ca0ccf3c973363e4427c89ccf497c20d1791
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 70a38090bcbe1a984e643d6d995abe2c79339163
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33256535"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46080626"
 ---
-# <a name="compiler-error-c3252"></a>C3252 błąd kompilatora
-"metoda": nie można zredukować dostępności wirtualnej metody w zarządzanych lub typu WinRT  
-  
- Klasa, która implementuje metody wirtualnej po klasie podstawowej lub dowolnej metody z interfejsu nie można zmniejszyć dostęp do tej metody.  
-  
- Należy pamiętać, że wszystkie metody w interfejsie są publiczne.  
-  
- Poniższy przykład generuje C3252 i pokazuje, jak rozwiązywanie problemu:  
-  
-```  
-// C3252.cpp  
-// compile with: /clr /c  
-ref class A {  
-public:  
-   virtual void f1() {}  
-};  
-  
-ref class B : public A {  
-// To fix, uncomment the following line:   
-// public:      
-   virtual void f1() override sealed {}   // C3252, make this method public  
-};  
+# <a name="compiler-error-c3252"></a>Błąd kompilatora C3252
+
+"method": nie można zredukować dostępności wirtualnej metody w zarządzanej lub typu WinRT
+
+Klasa, która implementuje metodę wirtualną z klasy bazowej lub metody w interfejsie nie można zmniejszyć dostępu do tej metody.
+
+Należy pamiętać, że wszystkie metody w interfejsie są publiczne.
+
+Poniższy przykład generuje C3252 i pokazuje, jak go naprawić:
+
+```
+// C3252.cpp
+// compile with: /clr /c
+ref class A {
+public:
+   virtual void f1() {}
+};
+
+ref class B : public A {
+// To fix, uncomment the following line:
+// public:
+   virtual void f1() override sealed {}   // C3252, make this method public
+};
 ```

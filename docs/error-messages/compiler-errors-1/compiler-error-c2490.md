@@ -1,5 +1,5 @@
 ---
-title: C2490 błąd kompilatora | Dokumentacja firmy Microsoft
+title: Błąd kompilatora C2490 | Dokumentacja firmy Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,24 +16,25 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: bc366178c31f900b031aacca278e39cc0c2eb493
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 36e4a44a6a2288ce712c77538edbd710f22f5315
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33198706"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46071812"
 ---
-# <a name="compiler-error-c2490"></a>C2490 błąd kompilatora
-"— słowo kluczowe" nie jest dozwolona w funkcji z atrybutem "naked"  
-  
- Funkcji zdefiniowanej jako [naked](../../cpp/naked-cpp.md) nie można użyć Obsługa wyjątków strukturalnych.  
-  
- Poniższy przykład generuje C2490:  
-  
-```  
-// C2490.cpp  
-// processor: x86  
-__declspec( naked ) int func() {  
-   __try{}   // C2490, structured exception handling  
-}  
+# <a name="compiler-error-c2490"></a>Błąd kompilatora C2490
+
+"— słowo kluczowe" nie jest dozwolony w funkcji z atrybutem "naked"
+
+Funkcja zdefiniowana jako ["naked"](../../cpp/naked-cpp.md) nie można użyć obsługi wyjątków strukturalnych.
+
+Poniższy przykład spowoduje wygenerowanie C2490:
+
+```
+// C2490.cpp
+// processor: x86
+__declspec( naked ) int func() {
+   __try{}   // C2490, structured exception handling
+}
 ```

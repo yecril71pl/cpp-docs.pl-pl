@@ -1,5 +1,5 @@
 ---
-title: Błąd cxx0055 programu Expression Evaluator | Dokumentacja firmy Microsoft
+title: Błąd ewaluatora wyrażeń CXX0055 | Dokumentacja firmy Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,18 +17,19 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: dce01ecbc6913c844cadcf2d3f761cfe815f68a2
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 4ee5fc5467e656bd811c89f78ecf7d36f6df1b54
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33301531"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46066390"
 ---
 # <a name="expression-evaluator-error-cxx0055"></a>Błąd CXX0055 programu Expression Evaluator
-niejednoznaczny symbol w operatorze kontekstu  
-  
- Symbol w operatorze kontekstu (**{}**) określony więcej niż jeden symbol w programie.  
-  
- Operator rozpoznawania zakresów (`::`) można usunąć niejednoznaczności.  
-  
- Ten błąd jest taki sam jak CAN0055.
+
+niejednoznaczny symbol w operator kontekstu
+
+Symbol w operator kontekstu (**{}**) określone więcej niż jeden symbol w programie.
+
+Operator rozpoznawania zakresu (`::`) może być w stanie rozstrzygnąć niejednoznaczność.
+
+Ten błąd jest taka sama jak CAN0055.

@@ -16,14 +16,15 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3f5267011eea32929b85e6ca60fb26ea34b2c371
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 638af9b85aecdd4eaba712cee68bf4ec96f3ab56
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33321509"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46081458"
 ---
 # <a name="resource-compiler-fatal-error-rc1203"></a>Błąd krytyczny kompilatora zasobów RC1203
-Określony identyfikator języka nieprawidłowy domyślny szesnastkową.  
-  
- Określ język domyślny (/ l) opcja została następuje identyfikator nieprawidłowy język szesnastkową. Zobacz [języka i ciągi Kraj/Region](../../c-runtime-library/locale-names-languages-and-country-region-strings.md) w *odwołanie do biblioteki wykonawczej* listę identyfikatorów języka prawidłowe.
+
+Nieprawidłowa domyślna szesnastkowe określono identyfikator języka.
+
+Określ język domyślny (/ l) opcja była następuje nieprawidłowy język szesnastkowy identyfikator. Zobacz [język i Kraj/Region Strings](../../c-runtime-library/locale-names-languages-and-country-region-strings.md) w *odwołanie do biblioteki wykonawczej* listę identyfikatorów języka prawidłowe.

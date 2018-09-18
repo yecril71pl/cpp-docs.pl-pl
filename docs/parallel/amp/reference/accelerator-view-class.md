@@ -31,15 +31,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1aa0e365ac531a5e1bb7b87a38fc86fb20032d20
-ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
+ms.openlocfilehash: 82ce81319212a833e66357cdf343489cb4108b67
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33692720"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46084721"
 ---
 # <a name="acceleratorview-class"></a>accelerator_view — Klasa
-Reprezentuje abstrakcji urządzenia wirtualnego na akceleratora równoległe danych C++ AMP.  
+Reprezentuje abstrakcję urządzenia wirtualnego na akceleratorze danych równoległych C++ AMP.  
   
 ### <a name="syntax"></a>Składnia  
   
@@ -53,58 +53,58 @@ class accelerator_view;
   
 |Nazwa|Opis|  
 |----------|-----------------|  
-|[accelerator_view — Konstruktor](#ctor)|Inicjuje nowe wystąpienie klasy `accelerator_view` klasy.|  
+|[Obiekt accelerator_view, Konstruktor](#ctor)|Inicjuje nowe wystąpienie klasy `accelerator_view` klasy.|  
 |[~ accelerator_view — destruktor](#dtor)|Niszczy `accelerator_view` obiektu.|  
   
 ### <a name="public-methods"></a>Metody publiczne  
   
 |Nazwa|Opis|  
 |----------|-----------------|  
-|[create_marker](#create_marker)|Zwraca przyszłości na ukończenie wszystkich poleceń przesłane do tej pory tej ścieżki `accelerator_view` obiektu.|  
-|[flush](#flush)|Przesyła wszystkie oczekujące poleceń w kolejce w celu `accelerator_view` obiekt do skrótów do wykonania.|  
-|[get_accelerator](#get_accelerator)|Zwraca `accelerator` obiekt do `accelerator_view` obiektu.|  
-|[get_is_auto_selection](#get_is_auto_selection)|Zwraca wartość logiczną wskazującą, czy środowisko uruchomieniowe automatycznie wybiera odpowiednią akcelerator podczas `accelerator_view` obiekt jest przekazywany do [parallel_for_each](concurrency-namespace-functions-amp.md#parallel_for_each).|  
-|[get_is_debug](#get_is_debug)|Zwraca wartość logiczną wskazującą, czy `accelerator_view` obiektu jest włączone dla usługi raportowania błędów szeroką gamę warstwy debugowania.|  
-|[get_queuing_mode](#get_queuing_mode)|Zwraca tryb kolejkowania `accelerator_view` obiektu.|  
+|[create_marker](#create_marker)|Zwraca stan w przyszłości do śledzenia wykonania wszystkich poleceń dotychczas przekazanych do tego `accelerator_view` obiektu.|  
+|[flush](#flush)|Przesyła wszystkie oczekujące polecenia w kolejce do `accelerator_view` obiektu do akceleratora do wykonania.|  
+|[get_accelerator](#get_accelerator)|Zwraca `accelerator` dla obiektu `accelerator_view` obiektu.|  
+|[get_is_auto_selection](#get_is_auto_selection)|Zwraca wartość logiczną wskazującą, czy środowisko wykonawcze automatycznie wybiera odpowiedni akcelerator podczas `accelerator_view` obiekt jest przekazywany do [parallel_for_each](concurrency-namespace-functions-amp.md#parallel_for_each).|  
+|[get_is_debug](#get_is_debug)|Zwraca wartość logiczną wskazującą, czy `accelerator_view` obiekt ma włączoną warstwę debugowanie dla obszernego raportowania błędów.|  
+|[get_queuing_mode](#get_queuing_mode)|Zwraca tryb kolejkowania dla `accelerator_view` obiektu.|  
 |[get_version](#get_version)|Zwraca wersję `accelerator_view`.|  
-|[oczekiwania](#wait)|Czeka na wszystkie polecenia przesłane do `accelerator_view` obiekt, aby zakończyć.|  
+|[Czekaj](#wait)|Czeka, aż wszystkie polecenia przesłane do `accelerator_view` obiektu, aby zakończyć.|  
   
 ### <a name="public-operators"></a>Operatory publiczne  
   
 |Nazwa|Opis|  
 |----------|-----------------|  
-|[operator!=](#operator_neq)|Porównuje to `accelerator_view` obiekt z inną i zwraca `false` , jeśli są takie same; w przeciwnym razie zwraca `true`.|  
-|[operator=](#operator_eq)|Kopiuje zawartość określonego `accelerator_view` obiektu do tego.|  
-|[operator==](#operator_eq_eq)|Porównuje to `accelerator_view` obiekt z inną i zwraca `true` , jeśli są takie same; w przeciwnym razie zwraca `false`.|  
+|[operator!=](#operator_neq)|Porównuje ten `accelerator_view` obiekt z innym i zwraca `false` jeśli są one takie same; w przeciwnym razie zwraca `true`.|  
+|[operator=](#operator_eq)|Kopiuje zawartość określonego `accelerator_view` obiektu do wskazanego.|  
+|[operator==](#operator_eq_eq)|Porównuje ten `accelerator_view` obiekt z innym i zwraca `true` jeśli są one takie same; w przeciwnym razie zwraca `false`.|  
   
 ### <a name="public-data-members"></a>Publiczne elementy członkowskie danych  
   
 |Nazwa|Opis|  
 |----------|-----------------|  
-|[accelerator](#accelerator)|Pobiera `accelerator` obiekt do `accelerator_view` obiektu.|  
-|[is_auto_selection](#is_auto_selection)|Pobiera wartość logiczną wskazującą, czy środowisko uruchomieniowe automatycznie wybiera odpowiednią akcelerator podczas `accelerator_view` obiekt jest przekazywany do [parallel_for_each](concurrency-namespace-functions-amp.md#parallel_for_each).|  
-|[is_debug](#is_debug)|Pobiera wartość logiczną wskazującą, czy `accelerator_view` obiektu jest włączone dla usługi raportowania błędów szeroką gamę warstwy debugowania.|  
-|[queuing_mode](#queuing_mode)|Pobiera tryb kolejkowania `accelerator_view` obiektu.|  
+|[accelerator](#accelerator)|Pobiera `accelerator` dla obiektu `accelerator_view` obiektu.|  
+|[is_auto_selection](#is_auto_selection)|Pobiera wartość logiczną, wskazującą, czy środowisko wykonawcze automatycznie wybiera odpowiedni akcelerator podczas `accelerator_view` obiekt jest przekazywany do [parallel_for_each](concurrency-namespace-functions-amp.md#parallel_for_each).|  
+|[is_debug](#is_debug)|Pobiera wartość logiczną, wskazującą, czy `accelerator_view` obiekt ma włączoną warstwę debugowanie dla obszernego raportowania błędów.|  
+|[queuing_mode](#queuing_mode)|Pobiera tryb kolejkowania dla `accelerator_view` obiektu.|  
 |[Wersja](#version)|Pobiera wersję akceleratora.|  
   
 ## <a name="inheritance-hierarchy"></a>Hierarchia dziedziczenia  
  `accelerator_view`  
   
 ### <a name="remarks"></a>Uwagi  
- `accelerator_view` Obiekt reprezentuje logiczne, izolowanego widok akceleratora. Urządzenie jednego fizycznego obliczeń może mieć wiele logicznych, izolowanego `accelerator_view` obiektów. Każdy akceleratora ma wartość domyślną `accelerator_view` obiektu. Dodatkowe `accelerator_view` obiekty mogą być tworzone.  
+ `accelerator_view` Obiekt reprezentuje logiczny, izolowany widok akceleratora. Pojedynczy fizyczne urządzenie do obliczeń może mieć wiele logicznych, izolowanych `accelerator_view` obiektów. Każdy akcelerator ma wartość domyślną `accelerator_view` obiektu. Dodatkowe `accelerator_view` obiekty mogą być tworzone.  
   
- Fizyczne urządzenia mogą być współużytkowane przez wiele wątków klienta. Wątki klientów wspólnie można używać tego samego `accelerator_view` obiektu akceleratora lub każdy klient może komunikować się z urządzenie obliczeniowe za pośrednictwem niezależne `accelerator_view` obiektu dla odizolowanie od innych wątków klienta.  
+ Urządzenia fizyczne mogą być współużytkowane przez wiele wątków klienta. Wątki klienta mogą wspólnie używać takie same `accelerator_view` obiektu akceleratorze lub każdy klient może komunikować się z urządzeniem obliczeniowym przez niezależny `accelerator_view` obiektu w celu izolacji od innych wątków klienta.  
   
- `accelerator_view` Obiekt może mieć jedną z dwóch [queuing_mode — wyliczenie](concurrency-namespace-enums-amp.md#queuing_mode) stanów. Jeśli tryb kolejkowania wiadomości jest `immediate`, takich jak polecenia `copy` i `parallel_for_each` są wysyłane do odpowiedniego urządzenia akceleratora, jak tylko zostaną zwrócone do obiektu wywołującego. Jeśli tryb kolejkowania wiadomości jest `deferred`, tych poleceń są umieszczone w kolejce w kolejce polecenia, który odpowiada `accelerator_view` obiektu. Polecenia faktycznie nie wysyłane do urządzenia do momentu `flush()` jest wywoływana.  
+ `accelerator_view` Obiekt może mieć jeden z dwóch [queuing_mode — wyliczenie](concurrency-namespace-enums-amp.md#queuing_mode) stanów. Jeśli tryb kolejkowania to `immediate`, polecenia takie jak `copy` i `parallel_for_each` są wysyłane do odpowiadającego urządzenia akceleratora, jak tylko powrócą do wywołującego. Jeśli tryb kolejkowania to `deferred`, takie polecenia są kolejkowane w kolejce poleceń, który odpowiada `accelerator_view` obiektu. Polecenia nie są faktycznie przesyłane do urządzenia, dopóki nie `flush()` jest wywoływana.  
   
 ## <a name="requirements"></a>Wymagania  
  **Nagłówek:** amprt.h  
   
  **Namespace:** współbieżności  
 
-## <a name="accelerator"></a> klawiszy skrótów 
+## <a name="accelerator"></a> Akcelerator 
 
-Pobiera obiekt akceleratora dla obiekt accelerator_view.  
+Pobiera obiekt akceleratora dla obiektu accelerator_view.  
   
 ### <a name="syntax"></a>Składnia  
   
@@ -114,7 +114,7 @@ __declspec(property(get= get_accelerator)) Concurrency::accelerator accelerator;
   
 ## <a name="ctor"></a> accelerator_view 
 
-Inicjuje nowe wystąpienie klasy accelerator_view przez skopiowanie istniejącej `accelerator_view` obiektu.  
+Inicjuje nowe wystąpienie klasy accelerator_view przez skopiowanie istniejącego `accelerator_view` obiektu.  
   
 ### <a name="syntax"></a>Składnia  
   
@@ -123,12 +123,12 @@ accelerator_view( const accelerator_view & _Other );
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `_Other`  
- `accelerator_view` Obiektu do skopiowania.  
+*_Inne*<br/>
+`accelerator_view` Obiektu do skopiowania.  
   
 ## <a name="accelerator_view__create_marker"></a> create_marker 
 
-Zwraca przyszłości na ukończenie wszystkich poleceń przesłane do tej pory tej ścieżki `accelerator_view` obiektu.  
+Zwraca stan w przyszłości do śledzenia wykonania wszystkich poleceń dotychczas przekazanych do tego `accelerator_view` obiektu.  
   
 ### <a name="syntax"></a>Składnia  
   
@@ -137,11 +137,11 @@ concurrency::completion_future create_marker();
 ```  
   
 ### <a name="return-value"></a>Wartość zwracana  
- Przyszłe na ukończenie wszystkich poleceń przesłane do tej pory tej ścieżki `accelerator_view` obiektu.  
+ Stan w przyszłości do śledzenia wykonania wszystkich poleceń dotychczas przekazanych do tego `accelerator_view` obiektu.  
   
 ## <a name="flush"></a> Flush 
 
-Przesyła się, że wszystkie polecenia oczekujących w kolejce do obiektu accelerator_view do skrótów do wykonania.  
+Przesyła się, że wszystkie oczekujące polecenia w kolejce do obiektu accelerator_view do akceleratora do wykonania.  
   
 ### <a name="syntax"></a>Składnia  
   
@@ -152,19 +152,19 @@ void flush();
 ### <a name="return-value"></a>Wartość zwracana  
  Zwraca `void`.  
 
-## <a name="accelerator_view__get_accelerator"></a> get_accelerator 
+## <a name="accelerator_view__get_accelerator"></a> get_accelerator — 
 
-Zwraca obiekt akceleratora dla obiekt accelerator_view.
+Zwraca obiekt akceleratora dla obiektu accelerator_view.
 ### <a name="syntax"></a>Składnia
 ```
 accelerator get_accelerator() const;
 ```
 ### <a name="return-value"></a>Wartość zwracana
-Obiekt akceleratora dla obiekt accelerator_view.
+Obiekt akceleratora dla obiektu accelerator_view.
 
 ## <a name="accelerator_view__get_is_auto_selection"></a> get_is_auto_selection 
 
-Zwraca wartość logiczną wskazującą, czy środowisko uruchomieniowe automatycznie wybiera odpowiednie akcelerator podczas accelerator_view jest przekazywana do [parallel_for_each](concurrency-namespace-functions-amp.md#parallel_for_each).  
+Zwraca wartość logiczną wskazującą, czy środowisko wykonawcze automatycznie wybiera odpowiedni akcelerator, gdy accelerator_view jest przekazywany do [parallel_for_each](concurrency-namespace-functions-amp.md#parallel_for_each).  
   
 ### <a name="syntax"></a>Składnia  
   
@@ -173,11 +173,11 @@ bool get_is_auto_selection() const;
 ```  
   
 ### <a name="return-value"></a>Wartość zwracana  
- `true` Jeśli środowisko uruchomieniowe automatycznie wybierze odpowiednie akcelerator; w przeciwnym razie `false`.  
+ `true` Jeśli środowisko wykonawcze automatycznie wybiera odpowiedni akcelerator; w przeciwnym razie `false`.  
   
-## <a name="accelerator_view__get_is_debug"></a> get_is_debug 
+## <a name="accelerator_view__get_is_debug"></a> get_is_debug — 
 
-Zwraca wartość logiczną, wskazującą, czy obiekt accelerator_view ma włączone dla usługi raportowania błędów szeroką gamę warstwy debugowania.  
+Zwraca wartość logiczną wskazującą, czy obiekt accelerator_view ma włączoną warstwę debugowanie dla obszernego raportowania błędów.  
   
 ### <a name="syntax"></a>Składnia  
   
@@ -186,11 +186,11 @@ bool get_is_debug() const;
 ```  
   
 ### <a name="return-value"></a>Wartość zwracana  
- Wartość logiczna, która wskazuje, czy `accelerator_view` obiektu jest włączone dla usługi raportowania błędów szeroką gamę warstwy debugowania.  
+ Wartość logiczna, która wskazuje, czy `accelerator_view` obiekt ma włączoną warstwę debugowanie dla obszernego raportowania błędów.  
 
 ## <a name="accelerator_view__get_queuing_mode"></a> get_queuing_mode 
 
-Zwraca tryb kolejkowania dla obiekt accelerator_view.  
+Zwraca tryb kolejkowania dla obiektu accelerator_view.  
   
 ### <a name="syntax"></a>Składnia  
   
@@ -199,9 +199,9 @@ queuing_mode get_queuing_mode() const;
 ```  
   
 ### <a name="return-value"></a>Wartość zwracana  
- Tryb kolejkowania `accelerator_view` obiektu.  
+ Tryb kolejkowania dla `accelerator_view` obiektu.  
   
-## <a name="accelerator_view__get_version"></a> get_version 
+## <a name="accelerator_view__get_version"></a> get_version — 
 
 Zwraca wersję accelerator_view.  
   
@@ -216,7 +216,7 @@ unsigned int get_version() const;
   
 ## <a name="accelerator_view__is_auto_selection"></a> is_auto_selection 
 
-Pobiera wartość logiczną wskazującą, czy środowisko uruchomieniowe automatycznie wybiera odpowiednie akcelerator podczas accelerator_view jest przekazywana do [parallel_for_each](concurrency-namespace-functions-amp.md#parallel_for_each).  
+Pobiera wartość logiczną, wskazującą, czy środowisko wykonawcze automatycznie wybiera odpowiedni akcelerator, gdy accelerator_view jest przekazywany do [parallel_for_each](concurrency-namespace-functions-amp.md#parallel_for_each).  
   
 ### <a name="syntax"></a>Składnia  
   
@@ -226,7 +226,7 @@ __declspec(property(get= get_is_auto_selection)) bool is_auto_selection;
   
 ## <a name="accelerator_view__is_debug"></a> is_debug — 
 
-Pobiera wartość logiczną wskazującą, czy obiekt accelerator_view ma włączone dla usługi raportowania błędów szeroką gamę warstwy debugowania.  
+Pobiera wartość logiczną, wskazującą, czy obiekt accelerator_view ma włączoną warstwę debugowanie dla obszernego raportowania błędów.  
   
 ### <a name="syntax"></a>Składnia  
   
@@ -236,7 +236,7 @@ __declspec(property(get= get_is_debug)) bool is_debug;
   
 ## <a name="accelerator_view__operator_neq"></a> operator! = 
 
-Ten obiekt accelerator_view innym porównuje i zwraca `false` , jeśli są takie same; w przeciwnym razie zwraca `true`.  
+Porównuje ten obiekt accelerator_view, z innym i zwraca `false` jeśli są one takie same; w przeciwnym razie zwraca `true`.  
   
 ### <a name="syntax"></a>Składnia  
   
@@ -245,15 +245,15 @@ bool operator!= (    const accelerator_view & _Other ) const;
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `_Other`  
- `accelerator_view` Obiekt do porównania z tym kontem.  
+*_Inne*<br/>
+`accelerator_view` Obiekt do porównania z tym kontem.  
   
 ### <a name="return-value"></a>Wartość zwracana  
  `false` Jeśli dwa obiekty są takie same; w przeciwnym razie `true`.  
   
 ## <a name="accelerator_view__operator_eq"></a> operator = 
 
-Kopiuje zawartość accelerator_view określony obiekt do tego.  
+Kopiuje zawartość określonego obiektu accelerator_view obiektu do wskazanego.  
   
 ### <a name="syntax"></a>Składnia  
   
@@ -262,15 +262,15 @@ accelerator_view & operator= (    const accelerator_view & _Other );
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `_Other`  
- `accelerator_view` Obiektu do skopiowania.  
+*_Inne*<br/>
+`accelerator_view` Obiektu do skopiowania.  
   
 ### <a name="return-value"></a>Wartość zwracana  
- Odwołanie do modyfikacji `accelerator_view` obiektu.  
+ Odwołanie do zmodyfikowanego `accelerator_view` obiektu.  
   
 ## <a name="accelerator_view__operator_eq_eq"></a> operator == 
 
-Ten obiekt accelerator_view innym porównuje i zwraca `true` , jeśli są takie same; w przeciwnym razie zwraca `false`.  
+Porównuje ten obiekt accelerator_view, z innym i zwraca `true` jeśli są one takie same; w przeciwnym razie zwraca `false`.  
   
 ### <a name="syntax"></a>Składnia  
   
@@ -279,15 +279,15 @@ bool operator= = (    const accelerator_view & _Other ) const;
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `_Other`  
- `accelerator_view` Obiekt do porównania z tym kontem.  
+*_Inne*<br/>
+`accelerator_view` Obiekt do porównania z tym kontem.  
   
 ### <a name="return-value"></a>Wartość zwracana  
  `true` Jeśli dwa obiekty są takie same; w przeciwnym razie `false`.  
   
 ## <a name="accelerator_view__queuing_mode"></a> queuing_mode 
 
-Pobiera tryb kolejkowania dla obiekt accelerator_view.  
+Pobiera tryb kolejkowania dla obiektu accelerator_view.  
   
 ### <a name="syntax"></a>Składnia  
   
@@ -305,9 +305,9 @@ Pobiera wersję accelerator_view.
 __declspec(property(get= get_version)) unsigned int version;  
 ```  
   
-## <a name="accelerator_view__wait"></a> oczekiwania 
+## <a name="accelerator_view__wait"></a> Czekaj 
 
-Czeka na wszystkie polecenia przesłane do obiektów accelerator_view zakończyć.  
+Czeka, aż wszystkie polecenia przesłane do obiektu accelerator_view zakończyć.  
   
 ### <a name="syntax"></a>Składnia  
   
@@ -319,11 +319,11 @@ void wait();
  Zwraca `void`.  
   
 #### <a name="remarks"></a>Uwagi  
- Jeśli [queuing_mode —](concurrency-namespace-enums-amp.md#queuing_mode) jest `immediate`, ta metoda zwraca się natychmiast bez blokowania.  
+ Jeśli [queuing_mode —](concurrency-namespace-enums-amp.md#queuing_mode) jest `immediate`, ta metoda zwraca natychmiast bez blokowania.  
   
 ##  <a name="dtor"></a> ~ accelerator_view 
 
- Niszczy obiektów accelerator_view.  
+ Niszczy obiekt accelerator_view.  
   
 #### <a name="syntax"></a>Składnia  
   

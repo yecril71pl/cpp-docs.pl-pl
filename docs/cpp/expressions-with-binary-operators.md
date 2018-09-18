@@ -16,89 +16,91 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c7e7b426d3bc4f0913422f508279db9727f6e1f8
-ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
+ms.openlocfilehash: 2386f11aaff3a38501751b9966f8e187f3429478
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/01/2018
-ms.locfileid: "39406822"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46072033"
 ---
 # <a name="expressions-with-binary-operators"></a>Wyrażenia z operatorami dwuargumentowymi
-Operatory dwuargumentowe oddziałują na dwa operandy w wyrażeniu. Operatory dwuargumentowe to:  
-  
--   [Operatory mnożenia](../cpp/multiplicative-operators-and-the-modulus-operator.md)  
-  
-    -   Mnożenie (*)  
-  
-    -   Dzielenie (/)  
-  
-    -   Modulo (%)  
-  
--   [Operatory addytywne](../cpp/additive-operators-plus-and.md)  
-  
-    -   Dodawanie (+)  
-  
-    -   Odejmowania (-)  
-  
--   [Operatory przesunięcia](../cpp/left-shift-and-right-shift-operators-input-and-output.md)  
-  
-    -   Przesunięcia w prawo (>>)  
-  
-    -   Przesunięcie w lewo (<<)  
-  
--   [Operatory relacyjne i porównania](../cpp/relational-operators-equal-and-equal.md)  
-  
-    -   Mniej niż (\<)  
-  
-    -   Większe niż (>)  
-  
-    -   Mniejsze niż lub równe (\<=)  
-  
-    -   Większa niż lub równe (> =)  
-  
-    -   Równa się (==)  
-  
-    -   Nie równa się (!=)  
-  
--   Operatory bitowe  
-  
-    -   [Bitowe AND (&)](../cpp/bitwise-and-operator-amp.md)  
-  
-    -   [Bitowe or wykluczające OR (^)](../cpp/bitwise-exclusive-or-operator-hat.md)  
-  
-    -   [Bitowe alternatywne OR (&#124;)](../cpp/bitwise-inclusive-or-operator-pipe.md)  
-  
--   Operatory logiczne  
-  
-    -   [Logiczne AND (& &)](../cpp/logical-and-operator-amp-amp.md)  
-  
-    -   [Operator logiczny lub (&#124;&#124;)](../cpp/logical-or-operator-pipe-pipe.md)  
-  
--   [Operatory przypisania](../cpp/assignment-operators.md)  
-  
-    -   Przypisanie (=)  
-  
-    -   Dodawanie i przypisanie (+=)  
-  
-    -   Przypisanie odejmowania (-)  
-  
-    -   Mnożenie i przypisanie (*=)  
-  
-    -   Dzielenie i przypisanie (/=)  
-  
-    -   Modulo i przypisanie (%=)  
-  
-    -   Przypisanie przesunięcia w lewo (<\<=)  
-  
-    -   Przypisanie przesunięcia bitowego w prawo (>> =)  
-  
-    -   Bitowe and i przypisanie (& =)  
-  
-    -   Bitowe OR wykluczające i przypisanie (^=)  
-  
-    -   Bitowe or alternatywne i przypisanie (&#124;=)  
-  
--   [Operator przecinkowy](../cpp/comma-operator.md) (,)  
-  
-## <a name="see-also"></a>Zobacz także  
- [Typy wyrażeń](../cpp/types-of-expressions.md)
+
+Operatory dwuargumentowe oddziałują na dwa operandy w wyrażeniu. Operatory dwuargumentowe to:
+
+- [Operatory mnożenia](../cpp/multiplicative-operators-and-the-modulus-operator.md)
+
+   - Mnożenie (*)
+
+   - Dzielenie (/)
+
+   - Modulo (%)
+
+- [Operatory addytywne](../cpp/additive-operators-plus-and.md)
+
+   - Dodawanie (+)
+
+   - Odejmowania (-)
+
+- [Operatory przesunięcia](../cpp/left-shift-and-right-shift-operators-input-and-output.md)
+
+   - Przesunięcia w prawo (>>)
+
+   - Przesunięcie w lewo (<<)
+
+- [Operatory relacyjne i porównania](../cpp/relational-operators-equal-and-equal.md)
+
+   - Mniej niż (\<)
+
+   - Większe niż (>)
+
+   - Mniejsze niż lub równe (\<=)
+
+   - Większa niż lub równe (> =)
+
+   - Równa się (==)
+
+   - Nie równa się (!=)
+
+- Operatory bitowe
+
+   - [Bitowe AND (&)](../cpp/bitwise-and-operator-amp.md)
+
+   - [Bitowe or wykluczające OR (^)](../cpp/bitwise-exclusive-or-operator-hat.md)
+
+   - [Bitowe alternatywne OR (&#124;)](../cpp/bitwise-inclusive-or-operator-pipe.md)
+
+- Operatory logiczne
+
+   - [Logiczne AND (& &)](../cpp/logical-and-operator-amp-amp.md)
+
+   - [Operator logiczny lub (&#124;&#124;)](../cpp/logical-or-operator-pipe-pipe.md)
+
+- [Operatory przypisania](../cpp/assignment-operators.md)
+
+   - Przypisanie (=)
+
+   - Dodawanie i przypisanie (+=)
+
+   - Przypisanie odejmowania (-)
+
+   - Mnożenie i przypisanie (*=)
+
+   - Dzielenie i przypisanie (/=)
+
+   - Modulo i przypisanie (%=)
+
+   - Przypisanie przesunięcia w lewo (<\<=)
+
+   - Przypisanie przesunięcia bitowego w prawo (>> =)
+
+   - Bitowe and i przypisanie (& =)
+
+   - Bitowe OR wykluczające i przypisanie (^=)
+
+   - Bitowe or alternatywne i przypisanie (&#124;=)
+
+- [Operator przecinkowy](../cpp/comma-operator.md) (,)
+
+## <a name="see-also"></a>Zobacz także
+
+[Typy wyrażeń](../cpp/types-of-expressions.md)

@@ -1,5 +1,5 @@
 ---
-title: C3619 błąd kompilatora | Dokumentacja firmy Microsoft
+title: Błąd kompilatora C3619 | Dokumentacja firmy Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,16 +16,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a75fed82a989691bc63911b87b9264ed95512dce
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 1ae68bd0fef3f43bfbc430ea2d41cead339424c9
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33249564"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46086713"
 ---
-# <a name="compiler-error-c3619"></a>C3619 błąd kompilatora
-Szablon nie może zostać zadeklarowany wewnątrz zarządzanego lub WinRT typu  
-  
-Szablony klas nie są dozwolone w zarządzanych lub WinRT klasy lub interfejsu.  
-  
-C3619 jest tylko przy użyciu opcji kompilatora przestarzałe **: oldsyntax**.  
+# <a name="compiler-error-c3619"></a>Błąd kompilatora C3619
+
+Nie można deklarować szablonu w ramach zarządzanej lub WinRT typu
+
+Szablony klas nie są dozwolone w zarządzanej lub WinRT klasy lub interfejsu.
+
+C3619 jest dostępna, przy użyciu opcji kompilatora przestarzałe **: oldsyntax**.

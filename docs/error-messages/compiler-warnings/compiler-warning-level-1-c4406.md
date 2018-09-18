@@ -1,5 +1,5 @@
 ---
-title: Kompilatora (poziom 1) ostrzeżenie C4406 | Dokumentacja firmy Microsoft
+title: Kompilator ostrzeżenie (poziom 1) C4406 | Dokumentacja firmy Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,16 +16,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 64cded5192c62687006b37363c4bad6e3e001a19
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 26ccf67d5e80134254268d00f46181a8b5c9d9bd
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33272204"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46084916"
 ---
-# <a name="compiler-warning-level-1-c4406"></a>Kompilator C4406 ostrzegawcze (poziom 1)
-Zignorowano operand na dyrektywę  
-  
- Dyrektywa nie przyjmuje żadnych argumentów operacji, ale określono argumentu operacji.  
-  
- Kompilator ignorowane podany argument lub argumentów operacji.
+# <a name="compiler-warning-level-1-c4406"></a>Kompilator ostrzeżenie (poziom 1) C4406
+
+Zignorowano operand na dyrektywę
+
+Dyrektywa nie przyjmuje żadnych argumentów, ale określono operand.
+
+Kompilator ignorowane danego operatora lub argumentów operacji.

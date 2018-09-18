@@ -31,42 +31,45 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5087fd42a5fd1c104d8587091996e58f78442b1e
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 12162e7d6eabfc60b3b4c028b990b720a502f516
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32392318"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46077883"
 ---
 # <a name="locale-categories"></a>Kategorie regionalne
-## <a name="syntax"></a>Składnia  
-  
-```  
-  
-#include <locale.h>  
-  
-```  
-  
-## <a name="remarks"></a>Uwagi  
- Kategorie regionalne są stałe manifestu używane przez procedury lokalizacji do określenia, która część informacji o ustawieniach regionalnych programu, który będzie używany. Ustawienia regionalne odwołuje się do lokalizacji (lub Kraj/Region) dla której niektórych aspektów programu można dostosować. Obszary zależnych od ustawień regionalnych to na przykład formatowania dat lub format wyświetlania wartości monetarnych.  
-  
-|Kategoria ustawień regionalnych|Części programu, których to dotyczy|  
-|---------------------|-------------------------------|  
-|`LC_ALL`|Wszystkie zachowania ustawień regionalnych (wszystkie kategorie)|  
-|`LC_COLLATE`|Zachowanie `strcoll` i `strxfrm` funkcji|  
-|`LC_CTYPE`|Zachowanie funkcji obsługi znaków (z wyjątkiem **isdigit —**, `isxdigit`, `mbstowcs`, i `mbtowc`, którego dotyczy to)|  
-|`LC_MAX`|Identyczny `LC_TIME`|  
-|`LC_MIN`|Identyczny `LC_ALL`|  
-|`LC_MONETARY`|Walutowa formatowania informacje zwracane przez `localeconv` — funkcja|  
-|`LC_NUMERIC`|Dziesiętnego znak dla procedury sformatowane dane wyjściowe (na przykład `printf`), procedury konwersji danych i niewalutowych formatowania informacje zwracane przez `localeconv` — funkcja|  
-|`LC_TIME`|Zachowanie `strftime` — funkcja|  
-  
- Zobacz [setlocale, _wsetlocale —](../c-runtime-library/reference/setlocale-wsetlocale.md) przykład.  
-  
-## <a name="see-also"></a>Zobacz też  
- [localeconv —](../c-runtime-library/reference/localeconv.md)   
- [setLocale, _wsetlocale —](../c-runtime-library/reference/setlocale-wsetlocale.md)   
- [strcoll — funkcje](../c-runtime-library/strcoll-functions.md)   
- [strftime, wcsftime, _strftime_l, _wcsftime_l](../c-runtime-library/reference/strftime-wcsftime-strftime-l-wcsftime-l.md)   
- [strxfrm, wcsxfrm, _strxfrm_l, _wcsxfrm_l](../c-runtime-library/reference/strxfrm-wcsxfrm-strxfrm-l-wcsxfrm-l.md)   
- [Stałe globalne](../c-runtime-library/global-constants.md)
+
+## <a name="syntax"></a>Składnia
+
+```
+
+#include <locale.h>
+
+```
+
+## <a name="remarks"></a>Uwagi
+
+Kategorie ustawień regionalnych są stałe manifestu, używane przez procedury lokalizacji, aby określić, która część informacji o ustawieniach regionalnych programu, który będzie używany. Ustawienia regionalne odnosi się do lokalizacji (lub Kraj/Region), dla którego można dostosować niektóre aspekty programu. Obszary zależne od ustawień regionalnych obejmują na przykład, formatowanie daty lub format wyświetlania wartości pieniężnych.
+
+|Kategorii ustawień regionalnych|Części programu, w których to dotyczy|
+|---------------------|-------------------------------|
+|`LC_ALL`|Wszystkie zachowania specyficzne dla ustawień regionalnych (wszystkie kategorie)|
+|`LC_COLLATE`|Zachowanie `strcoll` i `strxfrm` funkcji|
+|`LC_CTYPE`|Zachowanie funkcje obsługi znaków (z wyjątkiem **isdigit**, `isxdigit`, `mbstowcs`, i `mbtowc`, które są bez zmian)|
+|`LC_MAX`|Takie same jak `LC_TIME`|
+|`LC_MIN`|Takie same jak `LC_ALL`|
+|`LC_MONETARY`|Zwrócone przez informacje o formatowaniu walutowym `localeconv` — funkcja|
+|`LC_NUMERIC`|Znak dla sformatowanych procedur danych wyjściowych dziesiętny (na przykład `printf`), procedury konwersji danych i niewalutowych informacji formatowania zwracanych przez `localeconv` — funkcja|
+|`LC_TIME`|Zachowanie `strftime` — funkcja|
+
+Zobacz [setlocale, _wsetlocale](../c-runtime-library/reference/setlocale-wsetlocale.md) przykład.
+
+## <a name="see-also"></a>Zobacz też
+
+[localeconv](../c-runtime-library/reference/localeconv.md)<br/>
+[setlocale, _wsetlocale](../c-runtime-library/reference/setlocale-wsetlocale.md)<br/>
+[strcoll, funkcje](../c-runtime-library/strcoll-functions.md)<br/>
+[strftime, wcsftime, _strftime_l, _wcsftime_l](../c-runtime-library/reference/strftime-wcsftime-strftime-l-wcsftime-l.md)<br/>
+[strxfrm, wcsxfrm, _strxfrm_l, _wcsxfrm_l](../c-runtime-library/reference/strxfrm-wcsxfrm-strxfrm-l-wcsxfrm-l.md)<br/>
+[Stałe globalne](../c-runtime-library/global-constants.md)

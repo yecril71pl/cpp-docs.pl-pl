@@ -28,33 +28,36 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9e91c03f619be1d0f1d8ad23f3b8d60e1be30cfb
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 5f610b26c79201f3431b6263a002b59df7456cfe
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32388068"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46082446"
 ---
 # <a name="pcommode"></a>__p__commode
-Wskazuje `_commode` zmiennej globalnej, która określa domyślny *tryb zatwierdzania pliku* dla operacji We/Wy pliku.  
-  
-## <a name="syntax"></a>Składnia  
-  
-```cpp  
-int * __p__commode(  
-   );  
-```  
-  
-## <a name="return-value"></a>Wartość zwracana  
- Wskaźnik do `_commode` zmiennej globalnej.  
-  
-## <a name="remarks"></a>Uwagi  
- `__p__commode` Funkcji jest tylko do użytku wewnętrznego i nie powinna być wywoływana z kodu użytkownika.  
-  
- Tryb zatwierdzania pliku Określa, kiedy krytyczne dane są zapisywane na dysku. Aby uzyskać więcej informacji, zobacz [fflush —](../c-runtime-library/reference/fflush.md).  
-  
-## <a name="requirements"></a>Wymagania  
-  
-|Procedura|Wymagany nagłówek|  
-|-------------|---------------------|  
+
+Wskazuje `_commode` zmienna globalna, która określa domyślny *tryb zatwierdzania plików* dla operacji We/Wy pliku.
+
+## <a name="syntax"></a>Składnia
+
+```cpp
+int * __p__commode(
+   );
+```
+
+## <a name="return-value"></a>Wartość zwracana
+
+Wskaźnik do `_commode` zmiennej globalnej.
+
+## <a name="remarks"></a>Uwagi
+
+`__p__commode` Funkcji jest tylko do użytku wewnętrznego i nie powinna być wywoływana z kodu użytkownika.
+
+Tryb zatwierdzania pliku Określa, kiedy krytyczne dane są zapisywane na dysku. Aby uzyskać więcej informacji, zobacz [fflush —](../c-runtime-library/reference/fflush.md).
+
+## <a name="requirements"></a>Wymagania
+
+|Procedura|Wymagany nagłówek|
+|-------------|---------------------|
 |__p\__commode|internal.h|

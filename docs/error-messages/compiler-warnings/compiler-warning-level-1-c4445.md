@@ -1,5 +1,5 @@
 ---
-title: Kompilatora (poziom 1) ostrzeżenie C4445 | Dokumentacja firmy Microsoft
+title: Kompilator ostrzeżenie (poziom 1) C4445 | Dokumentacja firmy Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,14 +16,15 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: abd0d15113373f752bb861d73e48091687b2f0d2
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 80b3e13f0f7271a38d71c65efa65f104e44aa475
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33274592"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46079950"
 ---
-# <a name="compiler-warning-level-1-c4445"></a>Kompilator C4445 ostrzegawcze (poziom 1)
-"Funkcja": WinRT lub typu zarządzanego metodą wirtualną nie mogą być prywatne  
-  
- Jeśli funkcji wirtualnej jest oznaczony jako prywatny, nie jest dostępna przez typ pochodny. Aby naprawić ten błąd, zmień dostępność elementu wirtualnej funkcji członkowskiej do chronionych i publicznej.
+# <a name="compiler-warning-level-1-c4445"></a>Kompilator ostrzeżenie (poziom 1) C4445
+
+'Funkcja': WinRT lub typu zarządzanego metoda wirtualna nie może być prywatny
+
+Jeśli funkcja wirtualna jest prywatny, nie jest dostępna przez typ pochodny. Aby naprawić ten błąd, zmień dostępność elementu funkcja wirtualna elementu członkowskiego do chronionych i publicznych.

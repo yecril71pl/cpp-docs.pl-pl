@@ -16,17 +16,18 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 28150a39042305ab96c4dba7746c0b79dbec9509
-ms.sourcegitcommit: 889a75be1232817150be1e0e8d4d7f48f5993af2
+ms.openlocfilehash: d3b7d20fb82399f3778c751de28858b93f81071a
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/30/2018
-ms.locfileid: "39340459"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46080886"
 ---
 # <a name="dynamically-determining-columns-returned-to-the-consumer"></a>Dynamicznie określanie kolumn zwracanych do konsumenta
+
 Makra PROVIDER_COLUMN_ENTRY zwykle obsłużyć `IColumnsInfo::GetColumnsInfo` wywołania. Jednak ponieważ konsumenta wybrać korzystanie z zakładek, dostawca musi mieć możliwość zmiany kolumn zwrócone w zależności od tego, czy użytkownik poprosi o podanie zakładki.  
   
- Do obsługi `IColumnsInfo::GetColumnsInfo` wywołania, Usuń PROVIDER_COLUMN_MAP, który definiuje funkcję `GetColumnInfo`, z `CAgentMan` użytkownika rekord w MyProviderRS.h i zastąp go własną definicję `GetColumnInfo` funkcji:  
+Do obsługi `IColumnsInfo::GetColumnsInfo` wywołania, Usuń PROVIDER_COLUMN_MAP, który definiuje funkcję `GetColumnInfo`, z `CAgentMan` użytkownika rekord w MyProviderRS.h i zastąp go własną definicję `GetColumnInfo` funkcji:  
   
 ```cpp
 ////////////////////////////////////////////////////////////////////////  
@@ -49,11 +50,11 @@ public:
 };  
 ```  
   
- Następnie należy zaimplementować `GetColumnInfo` funkcji w MyProviderRS.cpp, jak pokazano w poniższym kodzie.  
+Następnie należy zaimplementować `GetColumnInfo` funkcji w MyProviderRS.cpp, jak pokazano w poniższym kodzie.  
   
- `GetColumnInfo` najpierw sprawdza, czy właściwość OLE DB `DBPROP_BOOKMARKS` jest ustawiona. Pobrać właściwości, `GetColumnInfo` używa wskaźnika (`pRowset`) do obiektu zestawu wierszy. `pThis` Wskaźnika reprezentuje klasę, która utworzony zestaw wierszy, jest to klasa przechowywania map właściwości. `GetColumnInfo` rzutowaniach typu `pThis` wskaźnik do `RMyProviderRowset` wskaźnika.  
+`GetColumnInfo` najpierw sprawdza, czy właściwość OLE DB `DBPROP_BOOKMARKS` jest ustawiona. Pobrać właściwości, `GetColumnInfo` używa wskaźnika (`pRowset`) do obiektu zestawu wierszy. `pThis` Wskaźnika reprezentuje klasę, która utworzony zestaw wierszy, jest to klasa przechowywania map właściwości. `GetColumnInfo` rzutowaniach typu `pThis` wskaźnik do `RMyProviderRowset` wskaźnika.  
   
- Pod kątem `DBPROP_BOOKMARKS` właściwości `GetColumnInfo` używa `IRowsetInfo` interfejs, który można uzyskać wywołując `QueryInterface` na `pRowset` interfejsu. Alternatywnie, można użyć ATL [CComQIPtr](../../atl/reference/ccomqiptr-class.md) metody zamiast tego.  
+Pod kątem `DBPROP_BOOKMARKS` właściwości `GetColumnInfo` używa `IRowsetInfo` interfejs, który można uzyskać wywołując `QueryInterface` na `pRowset` interfejsu. Alternatywnie, można użyć ATL [CComQIPtr](../../atl/reference/ccomqiptr-class.md) metody zamiast tego.  
   
 ```cpp
 ////////////////////////////////////////////////////////////////////  
@@ -114,7 +115,7 @@ ATLCOLUMNINFO* CAgentMan::GetColumnInfo(void* pThis, ULONG* pcCols)
 }  
 ```  
   
- W tym przykładzie użyto tablicy statycznej w celu uwzględnienia informacji o kolumnie. Jeśli użytkownik nie chce kolumna zakładki, jeden wpis w tablicy jest nieużywany. Aby obsługiwać informacje, należy utworzyć dwa makra tablicy: ADD_COLUMN_ENTRY i ADD_COLUMN_ENTRY_EX. ADD_COLUMN_ENTRY_EX przyjmuje jako dodatkowy parametr `flags`, która jest wymagane, jeśli należy wyznaczyć kolumna zakładki.  
+W tym przykładzie użyto tablicy statycznej w celu uwzględnienia informacji o kolumnie. Jeśli użytkownik nie chce kolumna zakładki, jeden wpis w tablicy jest nieużywany. Aby obsługiwać informacje, należy utworzyć dwa makra tablicy: ADD_COLUMN_ENTRY i ADD_COLUMN_ENTRY_EX. ADD_COLUMN_ENTRY_EX przyjmuje jako dodatkowy parametr `flags`, która jest wymagane, jeśli należy wyznaczyć kolumna zakładki.  
   
 ```cpp
 ////////////////////////////////////////////////////////////////////////  
@@ -145,7 +146,7 @@ ATLCOLUMNINFO* CAgentMan::GetColumnInfo(void* pThis, ULONG* pcCols)
    _rgColumns[ulCols].columnid.uName.pwszName = (LPOLESTR)name;  
 ```  
   
- W `GetColumnInfo` służy funkcja i makra zakładki następująco:  
+W `GetColumnInfo` służy funkcja i makra zakładki następująco:  
   
 ```cpp  
 ADD_COLUMN_ENTRY_EX(ulCols, OLESTR("Bookmark"), 0, sizeof(DWORD),  
@@ -153,7 +154,8 @@ ADD_COLUMN_ENTRY_EX(ulCols, OLESTR("Bookmark"), 0, sizeof(DWORD),
    DBCOLUMNFLAGS_ISBOOKMARK)  
 ```  
   
- Teraz możesz skompilować i uruchomić ulepszony dostawca. Aby przetestować dostawcę, zmodyfikować konsumenta testu, zgodnie z opisem w [Implementowanie prostego konsumenta](../../data/oledb/implementing-a-simple-consumer.md). Uruchom klienta testowego z dostawcą. Sprawdź, czy odbiorcy test pobiera odpowiednie ciągi od dostawcy, po kliknięciu **Uruchom** znajdujący się w **Test konsumenta** okno dialogowe.  
+Teraz możesz skompilować i uruchomić ulepszony dostawca. Aby przetestować dostawcę, zmodyfikować konsumenta testu, zgodnie z opisem w [Implementowanie prostego konsumenta](../../data/oledb/implementing-a-simple-consumer.md). Uruchom klienta testowego z dostawcą. Sprawdź, czy odbiorcy test pobiera odpowiednie ciągi od dostawcy, po kliknięciu **Uruchom** znajdujący się w **Test konsumenta** okno dialogowe.  
   
 ## <a name="see-also"></a>Zobacz też  
- [Udoskonalanie prostego dostawcy tylko do odczytu](../../data/oledb/enhancing-the-simple-read-only-provider.md)
+
+[Udoskonalanie prostego dostawcy tylko do odczytu](../../data/oledb/enhancing-the-simple-read-only-provider.md)

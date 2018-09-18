@@ -21,14 +21,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: e92c9bfb49bbb64faca633f04bb87f40028b6e1e
-ms.sourcegitcommit: 889a75be1232817150be1e0e8d4d7f48f5993af2
+ms.openlocfilehash: a838bc904a4f09f72962ce7c991bab8e5ac8fcbf
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/30/2018
-ms.locfileid: "39339565"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46074841"
 ---
 # <a name="cnorowset-class"></a>CNoRowset — Klasa
+
 Może służyć jako argument szablonu (`TRowset`) dla [CCommand](../../data/oledb/ccommand-class.md) lub [CTable](../../data/oledb/ctable-class.md).  
   
 ## <a name="syntax"></a>Składnia
@@ -39,31 +40,35 @@ class CNoRowset
 ```  
   
 ### <a name="parameters"></a>Parametry  
- *TAccessor*  
- Klasa metody dostępu. Wartość domyślna to `CAccessorBase`.  
+
+*TAccessor*<br/>
+Klasa metody dostępu. Wartość domyślna to `CAccessorBase`.  
   
 ## <a name="remarks"></a>Uwagi  
- Użyj `CNoRowset` jako argument szablonu, jeśli polecenie nie zwraca zestawu wierszy.  
+
+Użyj `CNoRowset` jako argument szablonu, jeśli polecenie nie zwraca zestawu wierszy.  
   
- `CNoRowset` implementuje następujących metod klasy zastępczej, z których każdy odnoszą się do innych metod klasy dostępu:  
+`CNoRowset` implementuje następujących metod klasy zastępczej, z których każdy odnoszą się do innych metod klasy dostępu:  
   
--   `BindFinished` — Wskazuje, kiedy powiązania jest ukończone (zwraca `S_OK`).  
+- `BindFinished` — Wskazuje, kiedy powiązania jest ukończone (zwraca `S_OK`).  
   
--   `Close` -Zwalnia wierszy i bieżącego interfejsu IRowset.  
+- `Close` -Zwalnia wierszy i bieżącego interfejsu IRowset.  
   
--   `GetIID` -Pobiera identyfikator interfejsu punktu połączenia.  
+- `GetIID` -Pobiera identyfikator interfejsu punktu połączenia.  
   
--   `GetInterface` -Pobiera interfejs.  
+- `GetInterface` -Pobiera interfejs.  
   
--   `GetInterfacePtr` -Pobiera wskaźnik zhermetyzowany interfejsu.  
+- `GetInterfacePtr` -Pobiera wskaźnik zhermetyzowany interfejsu.  
   
--   `SetAccessor` -Ustawia wskaźnik akcesor.  
+- `SetAccessor` -Ustawia wskaźnik akcesor.  
   
--   `SetupOptionalRowsetInterfaces` -Konfiguruje interfejsy opcjonalne dla zestawu wierszy.  
+- `SetupOptionalRowsetInterfaces` -Konfiguruje interfejsy opcjonalne dla zestawu wierszy.  
   
 ## <a name="requirements"></a>Wymagania  
- **Nagłówek:** atldbcli.h  
+
+**Nagłówek:** atldbcli.h  
   
 ## <a name="see-also"></a>Zobacz też  
- [Szablony konsumentów OLE DB](../../data/oledb/ole-db-consumer-templates-cpp.md)   
- [Szablony konsumentów OLE DB — dokumentacja](../../data/oledb/ole-db-consumer-templates-reference.md)
+
+[Szablony konsumentów OLE DB](../../data/oledb/ole-db-consumer-templates-cpp.md)<br/>
+[Szablony konsumentów OLE DB — dokumentacja](../../data/oledb/ole-db-consumer-templates-reference.md)

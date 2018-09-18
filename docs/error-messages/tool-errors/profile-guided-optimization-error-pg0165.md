@@ -1,5 +1,5 @@
 ---
-title: PG0165 błąd optymalizacji sterowanych profilem | Dokumentacja firmy Microsoft
+title: Błąd optymalizacji PG0165 sterowane profilem | Dokumentacja firmy Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,16 +16,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: acad97411480112d06dadd454d1368dcfdf2c87f
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 332751a123bf7d6414c40b79870b5edf27a3d8a7
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33318418"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46084214"
 ---
 # <a name="profile-guided-optimization-error-pg0165"></a>Błąd optymalizacji sterowanej profilem PG0165
-Odczytywanie "Filename.pgd": "nie jest obsługiwana wersja pliku PGD (niezgodność wersji)".  
-  
- Pliki PGD są specyficzne dla kompilatora określonego zestawu narzędzi. Ten błąd jest generowany, korzystając z różnych kompilatora niż to używane do *Filename*.pgd. Ten błąd wskazuje, że ten zestaw narzędzi kompilatora nie można użyć danych z *Filename*.pgd do optymalizacji bieżącego programu.  
-  
- Aby rozwiązać ten problem, ponownie wygenerować *Filename*.pgd przy użyciu bieżącego zestawu narzędzi kompilatora.
+
+Odczytywanie "Filename.pgd": "nie jest obsługiwana wersja pliku PGD (niezgodność wersji)".
+
+Pliki PGD są specyficzne dla kompilatora określonego zestawu narzędzi. Ten błąd jest generowany, gdy używasz innego kompilatora niż ten używany do *Filename*.pgd. Ten błąd wskazuje, że ten zestaw narzędzi kompilatora nie mogą używać danych z *Filename*.pgd do optymalizacji bieżącego programu.
+
+Aby rozwiązać ten problem, należy ponownie wygenerować *Filename*.pgd przy użyciu bieżącego zestawu narzędzi kompilatora.

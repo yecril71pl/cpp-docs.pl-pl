@@ -20,15 +20,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: d2ff59b6fc9c4f893f87fbb59b0531c5ba8917fb
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: f461958a09212f5beb562b5b8e92fa6f39711ec5
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33106378"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46082277"
 ---
 # <a name="autogcrootreset"></a>auto_gcroot::reset
-Zniszcz bieżący obiekt należące do firmy i opcjonalnie wykonać posiadania nowego obiektu.  
+Zniszczenie bieżącego obiektu należące do firmy, a następnie opcjonalnie zająć posiadania nowego obiektu.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -39,8 +39,8 @@ void reset(
 ```  
   
 #### <a name="parameters"></a>Parametry  
- `_new_ptr`  
- (Opcjonalnie) Nowy obiekt.  
+*_new_ptr*<br/>
+(Opcjonalnie) Nowy obiekt.  
   
 ## <a name="example"></a>Przykład  
   
@@ -93,11 +93,11 @@ done
 ```  
   
 ## <a name="requirements"></a>Wymagania  
- **Plik nagłówka** \<msclr\auto_gcroot.h >  
+ **Plik nagłówkowy** \<msclr\auto_gcroot.h >  
   
  **Namespace** msclr  
   
 ## <a name="see-also"></a>Zobacz też  
- [auto_gcroot — członkowie](../dotnet/auto-gcroot-members.md)   
+ [auto_gcroot, składowe](../dotnet/auto-gcroot-members.md)   
  [auto_gcroot::Release](../dotnet/auto-gcroot-release.md)   
  [auto_gcroot::attach](../dotnet/auto-gcroot-attach.md)

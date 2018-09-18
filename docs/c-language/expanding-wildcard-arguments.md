@@ -17,28 +17,30 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 69d7a9fc75e23a03e4db232bc798c89f89083e62
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 9d78b23f81b72d04e9299616b0273bc97bb7a4e0
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32383634"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46078156"
 ---
 # <a name="expanding-wildcard-arguments"></a>Rozszerzanie argumentów z symbolami wieloznacznymi
-**Microsoft Specific**  
-  
- Po uruchomieniu programu C, można użyć jednej z dwóch symboli wieloznacznych — znak zapytania (?) i gwiazdki (*), aby określić nazwę pliku i ścieżkę argumenty wiersza polecenia.  
-  
- Symbole wieloznaczne nie zostaną domyślnie rozwinięte w argumentach wiersza polecenia. Można zastąpić wektora normalnego argument `argv` ładowania procedury z wersją rozwiń symboli wieloznacznych, łącząc się z plikiem setargv.obj lub wsetargv.obj. Jeśli używany przez program `main` funkcji, Połącz z biblioteką setargv.obj. Jeśli używany przez program `wmain` funkcji, Połącz z biblioteką wsetargv.obj. Oba te mają równoważne zachowanie.  
-  
- Aby połączyć się z setargv.obj lub wsetargv.obj, należy użyć **/link** opcji. Na przykład:  
-  
- **setargv.obj/Link example.c cl**  
-  
- Symbole wieloznaczne są rozwijane w taki sam sposób jak poleceń systemu operacyjnego. (Zobacz Podręcznik użytkownika systemu operacyjnego, jeśli nie znasz z symbolami wieloznacznymi).  
-  
- **KOŃCOWY określonych firmy Microsoft**  
-  
-## <a name="see-also"></a>Zobacz też  
- [Opcje łącz](../c-runtime-library/link-options.md)   
- [Funkcja main i wykonywanie programu](../c-language/main-function-and-program-execution.md)
+
+**Microsoft Specific**
+
+Kiedy uruchamiasz C program, można użyć jednej z dwóch symboli wieloznacznych — znak zapytania (?) i gwiazdki (*), aby określić nazwę pliku i ścieżkę argumenty wiersza polecenia.
+
+Symbole wieloznaczne nie zostaną domyślnie rozwinięte w argumentach wiersza polecenia. Możesz zastąpić wektor normalne argument `argv` ładowania procedury przy użyciu obowiązującej wersji rozwiń symboli wieloznacznych, łącząc się z plikiem setargv.obj lub wsetargv.obj. Jeśli program używa `main` funkcji, Połącz z biblioteką setargv.obj. Jeśli program używa `wmain` funkcji, Połącz z biblioteką wsetargv.obj. Oba te mają równoważne zachowanie.
+
+Aby połączyć z setargv.obj lub wsetargv.obj, użyj **/link** opcji. Na przykład:
+
+**setargv.obj/Link example.c cl**
+
+Symbole wieloznaczne są rozwijane w taki sam sposób jak poleceń systemu operacyjnego. (Zobacz Podręcznik użytkownika systemu operacyjnego, jeśli nie jesteś zaznajomiony z symbolami wieloznacznymi).
+
+**END specyficzny dla Microsoft**
+
+## <a name="see-also"></a>Zobacz też
+
+[Opcje łącz](../c-runtime-library/link-options.md)<br/>
+[Funkcja main i wykonywanie programu](../c-language/main-function-and-program-execution.md)

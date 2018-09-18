@@ -1,5 +1,5 @@
 ---
-title: C2958 błąd kompilatora | Dokumentacja firmy Microsoft
+title: Błąd kompilatora C2958 | Dokumentacja firmy Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,16 +16,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 006e19565f6e7393bb081be72ef64aae03361a6d
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 1eb7743fed9f7269e3d81ddd7cefdd37c9a7b2a0
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33256951"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46075161"
 ---
-# <a name="compiler-error-c2958"></a>C2958 błąd kompilatora
-Lewy ogranicznik w 'lokalizacji' nie został poprawnie dopasowany  
-  
- Ogranicznik nie jest poprawnie dopasować.  
-  
- Przyczyną tego błędu może być niezgodne nawias w deklaracji szablonu funkcji.
+# <a name="compiler-error-c2958"></a>Błąd kompilatora C2958
+
+Lewy ogranicznik adrese "location" nie został poprawnie dopasowany
+
+Ogranicznik nie jest poprawnie dopasowany.
+
+Ten błąd może być spowodowany przez niezgodną nawias w deklaracji szablonu funkcji.

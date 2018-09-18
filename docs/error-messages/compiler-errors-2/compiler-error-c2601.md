@@ -1,5 +1,5 @@
 ---
-title: C2601 błąd kompilatora | Dokumentacja firmy Microsoft
+title: Błąd kompilatora C2601 | Dokumentacja firmy Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,29 +16,30 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 49598223c3f68271065cc6212da19767020c51e9
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 522abe9c3cb4b9922a6b307055a3d85f40253793
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33230828"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46062959"
 ---
-# <a name="compiler-error-c2601"></a>C2601 błąd kompilatora
-"Funkcja": definicje funkcji lokalnych są niedozwolone  
-  
- Kod próbuje zdefiniować funkcję w funkcji.  
-  
- Lub może być dodatkowe nawias klamrowy w kodzie źródłowym przed lokalizację błędu C2601.  
-  
- Poniższy przykład generuje C2601:  
-  
-```  
-// C2601.cpp  
-int main() {  
-   int i = 0;  
-  
-   void funcname(int j) {   // C2601  
-      j++;  
-   }  
-}  
+# <a name="compiler-error-c2601"></a>Błąd kompilatora C2601
+
+'Funkcja': definicje funkcji lokalnych są niedozwolone
+
+Kod próbuje zdefiniować funkcję w funkcji.
+
+Lub w kodzie źródłowym przed lokalizacji błędu C2601 może być dodatkowe nawiasu klamrowego.
+
+Poniższy przykład spowoduje wygenerowanie C2601:
+
+```
+// C2601.cpp
+int main() {
+   int i = 0;
+
+   void funcname(int j) {   // C2601
+      j++;
+   }
+}
 ```

@@ -16,16 +16,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d088acfe817dc2980f593d3e013a021646586f8c
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 3dc13a7eb9a9b86ac57c66ff8c09c03ea9b3f3e3
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33316160"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46074747"
 ---
 # <a name="project-build-error-prj0014"></a>Błąd PRJ0014 kompilacji projektu
-Obiekt zadania, użyty do kontroli uruchomionego procesu nie powiodło się.  Kompilacja nie może kontynuować.  
-  
- Wystąpił błąd w środowisku programistycznym.  
-  
- Aby rozwiązać ten problem, zamknij i ponownie Załaduj projekt. W razie potrzeby, zamknij i uruchom ponownie program Visual Studio.
+
+Obiekt zadania użyty do kontroli procesu rozmnożonego nie powiodło się.  Nie można kontynuować kompilacji.
+
+Wystąpił błąd w środowisku programistycznym.
+
+Aby rozwiązać ten problem, zamknij i ponownie Załaduj projekt. Jeśli to konieczne, zamknij i ponownie uruchom program Visual Studio.

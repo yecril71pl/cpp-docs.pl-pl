@@ -16,24 +16,26 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 954ea12eb9b49c2bdf59b31a1ec2ec2e66c124ef
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: ac4fdde90911427a1a193bfb6f3a950a7bdcf180
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33302100"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46081796"
 ---
 # <a name="linker-tools-error-lnk2039"></a>Błąd narzędzi konsolidatora LNK2039
-Importowanie klasy referencyjnej\<typu > "zdefiniowanego w another.obj; powinien być albo importowanych albo zdefiniowana, ale nie oba  
-  
- Klasa ref "<`type`>" jest importowany w pliku .obj określony, ale jest także zdefiniowana w innym pliku .obj. Ten warunek może spowodować błąd czasu wykonywania lub inne nieoczekiwane zachowania.  
-  
-### <a name="to-correct-this-error"></a>Aby poprawić ten błąd  
-  
-1.  Sprawdź, czy "`type`" musi być zdefiniowana w pliku obj. i sprawdź, czy należy zaimportować z pliku winmd.  
-  
-2.  Usuń definicję lub importu.  
-  
-## <a name="see-also"></a>Zobacz też  
- [Błędy i ostrzeżenia narzędzi konsolidatora](../../error-messages/tool-errors/linker-tools-errors-and-warnings.md)   
- [Błąd narzędzi konsolidatora LNK1332](../../error-messages/tool-errors/linker-tools-error-lnk1332.md)
+
+Importowanie klasy referencyjnej\<typu > "zdefiniowanego w another.obj, powinna to być albo importowanych albo zdefiniowana, ale nie oba
+
+Klasa ref "<`type`>" są importowane w pliku .obj określony, ale również jest zdefiniowany w innym pliku .obj. Ten stan może spowodować błąd czasu wykonywania lub inne nieoczekiwane zachowania.
+
+### <a name="to-correct-this-error"></a>Aby poprawić ten błąd
+
+1. Sprawdź, czy "`type`" musi być zdefiniowana w pliku .obj i sprawdź, czy należy zaimportować z pliku winmd.
+
+1. Usuń definicję lub importu.
+
+## <a name="see-also"></a>Zobacz też
+
+[Błędy i ostrzeżenia narzędzi konsolidatora](../../error-messages/tool-errors/linker-tools-errors-and-warnings.md)<br/>
+[Błąd narzędzi konsolidatora LNK1332](../../error-messages/tool-errors/linker-tools-error-lnk1332.md)

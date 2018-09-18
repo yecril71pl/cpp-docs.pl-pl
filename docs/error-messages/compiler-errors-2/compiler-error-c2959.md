@@ -1,5 +1,5 @@
 ---
-title: C2959 błąd kompilatora | Dokumentacja firmy Microsoft
+title: Błąd kompilatora C2959 | Dokumentacja firmy Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,25 +16,27 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ce13a340812bce7cd6e5a0e4f8b2601b530fd3a2
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: f225dccc917e34fba690064d66cf1cda36219877
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33243796"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46078975"
 ---
-# <a name="compiler-error-c2959"></a>C2959 błąd kompilatora
-Klasa generyczna lub funkcja nie może być elementem członkowskim szablonu  
-  
- Aby uzyskać więcej informacji, zobacz [środowiska wykonawczego systemu Windows i zarządzane szablony](../../windows/windows-runtime-and-managed-templates-cpp-component-extensions.md) i [ogólne](../../windows/generics-cpp-component-extensions.md).  
-  
-## <a name="example"></a>Przykład  
- Poniższy przykład generuje C2959.  
-  
-```  
-// C2959.cpp  
-// compile with: /clr /c  
-template <class T> ref struct S {  
-   generic <class U> ref struct GR1;   // C2959  
-};  
+# <a name="compiler-error-c2959"></a>Błąd kompilatora C2959
+
+Ogólna klasa lub funkcja nie może być składowej szablonu
+
+Aby uzyskać więcej informacji, zobacz [środowisko wykonawcze Windows i zarządzane szablony](../../windows/windows-runtime-and-managed-templates-cpp-component-extensions.md) i [ogólne](../../windows/generics-cpp-component-extensions.md).
+
+## <a name="example"></a>Przykład
+
+Poniższy przykład spowoduje wygenerowanie C2959.
+
+```
+// C2959.cpp
+// compile with: /clr /c
+template <class T> ref struct S {
+   generic <class U> ref struct GR1;   // C2959
+};
 ```

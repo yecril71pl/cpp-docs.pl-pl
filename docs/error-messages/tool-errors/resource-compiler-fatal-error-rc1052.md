@@ -16,18 +16,19 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6e0651f8c2b48ea69e7137ffa3415ddaffd8fe44
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: ef276bdecf675a178f43f22e3aef88f4ed1c73cd
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33319913"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46071188"
 ---
 # <a name="resource-compiler-fatal-error-rc1052"></a>Błąd krytyczny kompilatora zasobów RC1052
-ograniczenie kompilatora: bloki #if lub #ifdef są zagnieżdżone zbyt głęboko  
-  
- Program przekroczył maksymalny dopuszczalny poziomów zagnieżdżenia w `#if` i `#ifdef` dyrektywy.  
-  
- Ten błąd może być spowodowany przez pliki dołączania, które dyrektywy preprocesora.  
-  
- Aby rozwiązać ten problem, Zmniejsz liczbę zagnieżdżonych `#if` i `#ifdef` dyrektywy w pliku zasobów. Jeśli przyczyną problemu jest pliki nagłówkowe, które znajdują się w pliku zasobów, Zmniejsz liczbę zagnieżdżonych `#if` i `#ifdef` dyrektywy w pliku nagłówka. Jeśli nie jest to możliwe, należy rozważyć utworzenie i uruchamiając preprocesora na istniejące pliki dołączony nagłówek w tym pliku nagłówka w pliku zasobów. Aby uzyskać więcej informacji, zobacz [/P (Przetwarzaj wstępnie do pliku)](../../build/reference/p-preprocess-to-a-file.md) — opcja kompilatora.
+
+ograniczenie kompilatora: bloki #if lub #ifdef są zagnieżdżone zbyt głęboko
+
+Program przekroczył maksymalny dopuszczalny rozmiar poziomów zagnieżdżenia w `#if` i `#ifdef` dyrektywy.
+
+Ten błąd może być spowodowany przez obejmują pliki, które zawiera dyrektywy preprocesora.
+
+Aby rozwiązać ten problem, Zmniejsz liczbę zagnieżdżonych `#if` i `#ifdef` dyrektywy w pliku zasobów. Jeśli ten problem jest spowodowany przez pliki nagłówkowe, które znajdują się w pliku zasobów, Zmniejsz liczbę zagnieżdżonych `#if` i `#ifdef` dyrektywy w plikach nagłówkowych. Jeśli nie jest to możliwe, należy wziąć pod uwagę tworzenia i dołączania nowy plik nagłówkowy w pliku zasobów, uruchamiając polecenie preprocesora do istniejących plików dołączony nagłówek. Aby uzyskać więcej informacji, zobacz [/P (Przetwarzaj wstępnie do pliku)](../../build/reference/p-preprocess-to-a-file.md) — opcja kompilatora.

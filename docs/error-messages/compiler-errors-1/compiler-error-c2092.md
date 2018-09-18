@@ -1,5 +1,5 @@
 ---
-title: C2092 błąd kompilatora | Dokumentacja firmy Microsoft
+title: Błąd kompilatora C2092 | Dokumentacja firmy Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,33 +16,36 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 22b33680258358648737a9ae235c6f45f3592992
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 3a0b8f65f58ffe65abee0f15eb511f7857657597
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33169624"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46072488"
 ---
-# <a name="compiler-error-c2092"></a>C2092 błąd kompilatora
-Typ elementu tablicy 'Nazwa tablicy' nie może być funkcją  
-  
- Tablice funkcje nie są dozwolone. Użyj tablicy wskaźników do funkcji.  
-  
-## <a name="example"></a>Przykład  
- Poniższy przykład generuje C2092:  
-  
-```  
-// C2092.cpp  
-typedef void (F) ();  
-typedef F AT[10];   // C2092  
-```  
-  
-## <a name="example"></a>Przykład  
- Możliwe rozwiązanie:  
-  
-```  
-// C2092b.cpp  
-// compile with: /c  
-typedef void (F) ();  
-typedef F * AT[10];  
+# <a name="compiler-error-c2092"></a>Błąd kompilatora C2092
+
+Typ elementu tablicy "tablicy name" nie może być funkcją
+
+Tablice funkcje nie są dozwolone. Skorzystaj z tablicy wskaźników do funkcji.
+
+## <a name="example"></a>Przykład
+
+Poniższy przykład spowoduje wygenerowanie C2092:
+
+```
+// C2092.cpp
+typedef void (F) ();
+typedef F AT[10];   // C2092
+```
+
+## <a name="example"></a>Przykład
+
+Możliwe rozwiązanie:
+
+```
+// C2092b.cpp
+// compile with: /c
+typedef void (F) ();
+typedef F * AT[10];
 ```

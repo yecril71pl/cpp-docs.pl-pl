@@ -1,5 +1,5 @@
 ---
-title: Kompilatora (poziom 2) ostrzeżenie C4094 | Dokumentacja firmy Microsoft
+title: Kompilator ostrzeżenie (poziom 2) C4094 | Dokumentacja firmy Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,30 +16,31 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9deae6a0e21fcb7dd4f09de07e65445dc9595932
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 2b9317cbc31ef8bddb14da11af1087a148fd3188
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33290507"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46078715"
 ---
-# <a name="compiler-warning-level-2-c4094"></a>Kompilator C4094 ostrzegawcze (poziom 2)
-nieoznakowanego 'token' zadeklarowany żadnych symboli  
-  
- Kompilator wykryto pustej deklaracji przy użyciu struktury nieoznakowanego, Unią lub klasy. Deklaracja jest ignorowana.  
-  
-## <a name="example"></a>Przykład  
-  
-```  
-// C4094.cpp  
-// compile with: /W2  
-struct  
-{  
-};   // C4094  
-  
-int main()  
-{  
-}  
-```  
-  
- Ten warunek generuje błąd w obszarze Zgodność ANSI ([/Za](../../build/reference/za-ze-disable-language-extensions.md)).
+# <a name="compiler-warning-level-2-c4094"></a>Kompilator ostrzeżenie (poziom 2) C4094
+
+nieoznakowany "token" nie zadeklarował żadnych symboli
+
+Kompilator wykrył pusta deklaracja, za pomocą nieoznakowany struktura, Unia lub klasa. Deklaracja jest ignorowany.
+
+## <a name="example"></a>Przykład
+
+```
+// C4094.cpp
+// compile with: /W2
+struct
+{
+};   // C4094
+
+int main()
+{
+}
+```
+
+Ten warunek generuje błąd w obszarze zgodności ANSI ([/Za](../../build/reference/za-ze-disable-language-extensions.md)).

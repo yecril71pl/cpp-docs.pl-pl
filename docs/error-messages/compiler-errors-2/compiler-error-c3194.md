@@ -1,5 +1,5 @@
 ---
-title: C3194 błąd kompilatora | Dokumentacja firmy Microsoft
+title: Błąd kompilatora C3194 | Dokumentacja firmy Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,29 +16,31 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: cd6fad304dc4e400d6ca25c7e835b2d0a6935117
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 923e4d5535a1be4f4c8a3f7b60730eb6a656ac33
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33247803"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46077103"
 ---
-# <a name="compiler-error-c3194"></a>C3194 błąd kompilatora
-"członek": typ wartościowy nie może mieć operatora przypisania  
-  
- Specjalne funkcje Członkowskie wymagające automatycznego wywołania przez kompilator, takich jak Konstruktor kopiujący lub kopia operatora przypisania nie są obsługiwane w klasie wartości.  
-  
-## <a name="example"></a>Przykład  
- Poniższy przykład generuje C3194.  
-  
-```  
-// C3194.cpp  
-// compile with: /clr /c  
-value struct MyStruct {  
-   MyStruct& operator= (const MyStruct& i) { return *this; }   // C3194  
-};  
-  
-ref struct MyStruct2 {  
-   MyStruct2% operator= (const MyStruct2% i) { return *this; }   // OK  
-};  
+# <a name="compiler-error-c3194"></a>Błąd kompilatora C3194
+
+"członek": typ wartościowy nie może mieć operatora przypisania
+
+Specjalne funkcje Członkowskie, które wymagają automatyczne wywołanie przez kompilator, takich jak Konstruktor kopiujący lub kopia operatora przypisania nie są obsługiwane w klasie wartości.
+
+## <a name="example"></a>Przykład
+
+Poniższy przykład spowoduje wygenerowanie C3194.
+
+```
+// C3194.cpp
+// compile with: /clr /c
+value struct MyStruct {
+   MyStruct& operator= (const MyStruct& i) { return *this; }   // C3194
+};
+
+ref struct MyStruct2 {
+   MyStruct2% operator= (const MyStruct2% i) { return *this; }   // OK
+};
 ```

@@ -16,14 +16,15 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0b5a5a01458c4117fb6cb49c967cc8ca94a77226
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 5ef826dcdb439a28630221bdc9b4a90e9f6f324f
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33319972"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46072969"
 ---
 # <a name="resource-compiler-error-rc2109"></a>Błąd kompilatora zasobów RC2109
-Oczekiwano stałej liczbowej okna dialogowego  
-  
- A **okna DIALOGOWEGO** instrukcja wymaga wartości całkowite dla *x, y, szerokość*, i *wysokość* pola. Upewnij się, że te wartości są objęte po **okna DIALOGOWEGO** — słowo kluczowe i że nie są one ujemna.
+
+Oczekiwano stałej wartości liczbowych okna dialogowego
+
+A **okna DIALOGOWEGO** instrukcja wymaga wartości całkowitoliczbowe dla *x, y, szerokość*, i *wysokość* pola. Upewnij się, że te wartości są objęte po **okna DIALOGOWEGO** — słowo kluczowe i że nie są one ujemna.

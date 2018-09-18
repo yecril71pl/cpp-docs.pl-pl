@@ -1,5 +1,5 @@
 ---
-title: Kompilatora (poziom 1) ostrzeżenie C4685 | Dokumentacja firmy Microsoft
+title: Kompilator ostrzeżenie (poziom 1) C4685 | Dokumentacja firmy Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,14 +16,15 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 31ba410d0ed0434109ce01733e8f3874b8ecbc00
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 898b9e31e252d8298ef341d9290baf1104a1aa7c
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33274287"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46084682"
 ---
-# <a name="compiler-warning-level-1-c4685"></a>Kompilator C4685 ostrzegawcze (poziom 1)
-Oczekiwano ">>" znaleziono ' >> ' podczas analizowania parametrów szablonu  
-  
- Definicja szablonu nie została zakończona prawidłowo.
+# <a name="compiler-warning-level-1-c4685"></a>Kompilator ostrzeżenie (poziom 1) C4685
+
+Oczekiwano znaku ">>" znaleziono ">>" podczas analizowania parametrów szablonu
+
+Definicja szablonu nie został prawidłowo zakończony.

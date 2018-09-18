@@ -19,12 +19,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: cfb885a5d29c26f4a40d5b93490a06652eff1ffc
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 6253b52d322982efe8beafc45c9942fb3787818a
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43216675"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46082498"
 ---
 # <a name="format-specification-syntax-printf-and-wprintf-functions"></a>Składnia specyfikacji formatu: funkcje printf i wprintf
 
@@ -58,8 +58,7 @@ Argumenty, które należy wykonać w ciągu formatu są interpretowane zgodnie z
 Liczba całkowita typów, takich jak `short`, `int`, `long`, `long long`i ich `unsigned` wariantów, są określane za pomocą **d**, **i**, **o**, **u**, **x**, i **X**. Zmiennoprzecinkowe takich jak typy `float`, `double`, i `long double`, są określane przy użyciu **a**, **A**, **e**, **E**, **f**, **F**, **g**, i **G**. Domyślnie chyba że zostaną one zmienione przez *rozmiar* prefiksu, argumenty liczby całkowitej są zmuszone do `int` typu i argumenty zmiennoprzecinkowe są zmuszone do `double`. W systemach 64-bitowych `int` jest 32-bitową wartością; w związku z tym, 64-bitowe liczby całkowite zostanie obcięta podczas formatowania danych wyjściowych chyba że *rozmiar* prefiks **ll** lub **I64**jest używany. Typy wskaźników, które są określone przez **p** użyć domyślnego rozmiaru wskaźnika platformy.
 
 > [!NOTE]
-> **Microsoft Specific**  
-> **Z** wpisz znak i zachowanie **c**, **C**, **s**, i **S** typ znaków, kiedy ich są używane wraz z `printf` i `wprintf` funkcje, są rozszerzeniami Microsoft. Standard ISO C używa **c** i **s** spójnie na wąski znaków i ciągów, i **C** i **S** dla znaków dwubajtowych i ciągów, w wszystkie funkcje formatowania.
+> **Microsoft Specific** **Z** wpisz znak i zachowanie **c**, **C**, **s**, i **S** wpisywanie znaków, gdy są one używane z `printf` i `wprintf` funkcje, są rozszerzeniami Microsoft. Standard ISO C używa **c** i **s** spójnie na wąski znaków i ciągów, i **C** i **S** dla znaków dwubajtowych i ciągów, w wszystkie funkcje formatowania.
 
 ### <a name="type-field-characters"></a>Znaki pola typu
 
@@ -212,11 +211,10 @@ W programie Visual C++ mimo że `long double` jest typ samodzielnym, ma taką sa
 **Hc** lub **hC** Specyfikator typu jest synonimem **c** w `printf` funkcje i **C** w `wprintf` funkcji. **Lc**, **lC**, **wc** lub **wC** Specyfikator typu jest synonimem **C** w `printf` Funkcje i **c** w `wprintf` funkcji. **Hs** lub **hS** Specyfikator typu jest synonimem **s** w `printf` funkcje i **S** w `wprintf` funkcji. **Ls**, **lS**, **ws** lub **wS** Specyfikator typu jest synonimem **S** w `printf` Funkcje i **s** w `wprintf` funkcji.
 
 > [!NOTE]
-> **Microsoft Specific**  
-> **I** (wielkie litery i), **I32**, **I64**, i **w** argumentu rozmiaru modyfikatora prefiksów to rozszerzenia Microsoft i nie są zgodne z ISO C. **h** prefiksu, gdy jest używany z danymi typu `char` i **l** (mała litera L) prefiksu, gdy jest używany z danymi typu `double` są rozszerzeniami Microsoft.
+> **Microsoft Specific** **I** (wielkie litery i), **I32**, **I64**, i **w** argumentu rozmiaru modyfikatora prefiksów to firmy Microsoft rozszerzenia i są nie zgodne ISO C. **h** prefiksu, gdy jest używany z danymi typu `char` i **l** (mała litera L) prefiksu, gdy jest używany z danymi typu `double` są rozszerzeniami Microsoft.
 
 ## <a name="see-also"></a>Zobacz też
 
-[printf, _printf_l, wprintf, _wprintf_l](../c-runtime-library/reference/printf-printf-l-wprintf-wprintf-l.md)  
-[printf_s, _printf_s_l, wprintf_s, _wprintf_s_l](../c-runtime-library/reference/printf-s-printf-s-l-wprintf-s-wprintf-s-l.md)  
-[printf_p Parametry pozycyjne](../c-runtime-library/printf-p-positional-parameters.md)  
+[printf, _printf_l, wprintf, _wprintf_l](../c-runtime-library/reference/printf-printf-l-wprintf-wprintf-l.md)<br/>
+[printf_s, _printf_s_l, wprintf_s, _wprintf_s_l](../c-runtime-library/reference/printf-s-printf-s-l-wprintf-s-wprintf-s-l.md)<br/>
+[printf_p Parametry pozycyjne](../c-runtime-library/printf-p-positional-parameters.md)

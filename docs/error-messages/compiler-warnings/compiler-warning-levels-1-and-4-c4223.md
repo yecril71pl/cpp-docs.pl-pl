@@ -1,5 +1,5 @@
 ---
-title: Kompilator ostrzeżenie (poziomy 1 i 4) C4223 | Dokumentacja firmy Microsoft
+title: Ostrzeżenie kompilatora (poziomy 1 i 4) C4223 | Dokumentacja firmy Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,14 +16,15 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b3ac6890a5a51d7448c3317a8cf37f23791d27f0
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: a04ccf80bac123a3d2c6f28a063c274fe40a7e58
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33294898"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46075441"
 ---
 # <a name="compiler-warning-levels-1-and-4-c4223"></a>Ostrzeżenie kompilatora (poziomy 1 i 4) C4223
-użyto niestandardowego rozszerzenia: tablica wartości niebędących wartościowanymi lewostronnie skonwertowano na wskaźnik  
-  
- W języku C standard nie można przekonwertować tablicy niebędącej l-wartością wskaźnika. Rozszerzenia Microsoft domyślne ([/Ze](../../build/reference/za-ze-disable-language-extensions.md)), można wykonywać następujące czynności.
+
+użyto niestandardowego rozszerzenia: tablica l-wartości przekonwertować wskaźnik
+
+W standardowej C nie można przekonwertować tablicę l-wartości do wskaźnika. Przy użyciu domyślnych rozszerzeń firmy Microsoft ([/Ze](../../build/reference/za-ze-disable-language-extensions.md)), możesz.

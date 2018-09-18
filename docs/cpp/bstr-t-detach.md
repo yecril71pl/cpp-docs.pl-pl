@@ -16,31 +16,35 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 30d17c929316efe5e3b6c8c71f90591bb05868c3
-ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
+ms.openlocfilehash: df0c86b6210b883e8d7b1cbe9e814a7683ce020c
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/01/2018
-ms.locfileid: "39401411"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46084669"
 ---
 # <a name="bstrtdetach"></a>_bstr_t::Detach
-**Microsoft Specific**  
-  
- Zwraca `BSTR` opakowane przez `_bstr_t` oraz odłącza `BSTR` z `_bstr_t`.  
-  
-## <a name="syntax"></a>Składnia  
-  
-```  
-BSTR Detach( ) throw;  
-```  
-  
-## <a name="return-value"></a>Wartość zwracana  
- `BSTR` Opakowane przez `_bstr_t`.  
-  
-## <a name="example"></a>Przykład  
- Zobacz [_bstr_t::przypisanie](../cpp/bstr-t-assign.md) na przykład użycie **Odłącz**.  
-  
- **END specyficzny dla Microsoft**  
-  
-## <a name="see-also"></a>Zobacz także  
- [_bstr_t, klasa](../cpp/bstr-t-class.md)
+
+**Microsoft Specific**
+
+Zwraca `BSTR` opakowane przez `_bstr_t` oraz odłącza `BSTR` z `_bstr_t`.
+
+## <a name="syntax"></a>Składnia
+
+```
+BSTR Detach( ) throw;
+```
+
+## <a name="return-value"></a>Wartość zwracana
+
+`BSTR` Opakowane przez `_bstr_t`.
+
+## <a name="example"></a>Przykład
+
+Zobacz [_bstr_t::przypisanie](../cpp/bstr-t-assign.md) na przykład użycie **Odłącz**.
+
+**END specyficzny dla Microsoft**
+
+## <a name="see-also"></a>Zobacz także
+
+[_bstr_t, klasa](../cpp/bstr-t-class.md)

@@ -27,15 +27,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f8e17626fc870242c97a9ad66a77e5e3b77b1ed1
-ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
+ms.openlocfilehash: ff869fb93d5dae39a924c3d4133f5a6bc6fb824f
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33691290"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46059800"
 ---
 # <a name="sourcelinkmanager-class"></a>source_link_manager — Klasa
-`source_link_manager` Obiektu zarządza komunikatów łączy sieciowych bloku do `ISource` bloków.  
+`source_link_manager` Obiektu zarządza komunikatów blok połączeń sieciowych z `ISource` bloków.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -45,19 +45,19 @@ class source_link_manager;
 ```  
   
 #### <a name="parameters"></a>Parametry  
- `_LinkRegistry`  
- Rejestr łącze sieci.  
+*_LinkRegistry*<br/>
+Rejestr łącza sieci.  
   
 ## <a name="members"></a>Elementy członkowskie  
   
-### <a name="public-typedefs"></a>Definicje typów publicznych  
+### <a name="public-typedefs"></a>Publiczne definicje typów  
   
 |Nazwa|Opis|  
 |----------|-----------------|  
 |`const_pointer`|Typ, który dostarcza wskaźnik do `const` element `source_link_manager` obiektu.|  
-|`const_reference`|Typ, który zawiera odwołanie do `const` element przechowywane w `source_link_manager` obiektu za odczytywanie i wykonywanie operacji na stałe.|  
-|`iterator`|Typ, który udostępnia iteratora, które mogą odczytywać lub modyfikować dowolny element w `source_link_manager` obiektu.|  
-|`type`|Typ rejestru łącze zarządzany przez `source_link_manager` obiektu.|  
+|`const_reference`|Typ, który zawiera odwołanie do `const` przechowywanego w `source_link_manager` obiektu do odczytu i wykonywania operacji const.|  
+|`iterator`|Typ zapewniający iterator, który może odczytać lub zmodyfikować dowolny element w `source_link_manager` obiektu.|  
+|`type`|Typ rejestru łącze, które są zarządzane przez `source_link_manager` obiektu.|  
   
 ### <a name="public-constructors"></a>Konstruktory publiczne  
   
@@ -70,18 +70,18 @@ class source_link_manager;
   
 |Nazwa|Opis|  
 |----------|-----------------|  
-|[add](#add)|Dodaje link do źródła `source_link_manager` obiektu.|  
-|[begin](#begin)|Zwraca pierwszy element w iteratora `source_link_manager` obiektu.|  
-|[zawiera](#contains)|Wyszukiwanie `network_link_registry` w ramach tego `source_link_manager` obiektu dla określonego bloku.|  
-|[Liczba](#count)|Zlicza połączonego bloków w `source_link_manager` obiektu.|  
-|[Odwołanie](#reference)|Uzyskuje odwołania na `source_link_manager` obiektu.|  
-|[register_target_block](#register_target_block)|Rejestruje blok docelowy przechowujący to `source_link_manager` obiektu.|  
-|[Zlecenia](#release)|Zwalnia odwołania na `source_link_manager` obiektu.|  
-|[remove](#remove)|Usuwa link z `source_link_manager` obiektu.|  
+|[add](#add)|Dodaje źródło łącza do `source_link_manager` obiektu.|  
+|[begin](#begin)|Zwraca iterator do pierwszego elementu w `source_link_manager` obiektu.|  
+|[zawiera](#contains)|Wyszukiwanie `network_link_registry` w ramach tej `source_link_manager` obiektu dla określonego bloku.|  
+|[Liczba](#count)|Zlicza liczbę połączonych bloków w `source_link_manager` obiektu.|  
+|[Odwołanie](#reference)|Uzyskuje odwołanie na `source_link_manager` obiektu.|  
+|[register_target_block](#register_target_block)|Rejestruje blok docelowy, który zawiera ten `source_link_manager` obiektu.|  
+|[Wydania](#release)|Wydaje odniesienie na `source_link_manager` obiektu.|  
+|[remove](#remove)|Usuwa łącze między `source_link_manager` obiektu.|  
 |[set_bound](#set_bound)|Ustawia maksymalną liczbę łączy źródła, które mogą zostać dodane do tego `source_link_manager` obiektu.|  
   
 ## <a name="remarks"></a>Uwagi  
- Obecnie bloki źródła są zliczane odwołania. Ta opcja jest włączona otoka `network_link_registry` obiekt, który umożliwia równoczesny dostęp do łącza i zapewnia możliwość odwołania łącza za pomocą wywołania zwrotne. Bloki komunikatów ( `target_block`s lub `propagator_block`s) powinny używać tej klasy dla łączy ich źródła.  
+ Obecnie bloków źródła jest liczona liczba odwołań. Jest to otokę `network_link_registry` obiekt, który umożliwia równoczesnego dostępu do łączy i umożliwia odwołanie łącza za pomocą wywołania zwrotne. Bloki komunikatów ( `target_block`s lub `propagator_block`s) należy używać tej klasy ich źródło łącza.  
   
 ## <a name="inheritance-hierarchy"></a>Hierarchia dziedziczenia  
  `source_link_manager`  
@@ -93,48 +93,48 @@ class source_link_manager;
   
 ##  <a name="add"></a> Dodaj 
 
- Dodaje link do źródła `source_link_manager` obiektu.  
+ Dodaje źródło łącza do `source_link_manager` obiektu.  
   
 ```
 void add(_EType _Link);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `_Link`  
- Wskaźnik do bloku do dodania.  
+*_Link*<br/>
+Wskaźnik do bloku, który ma zostać dodana.  
   
 ##  <a name="begin"></a> Rozpocznij 
 
- Zwraca pierwszy element w iteratora `source_link_manager` obiektu.  
+ Zwraca iterator do pierwszego elementu w `source_link_manager` obiektu.  
   
 ```
 iterator begin();
 ```  
   
 ### <a name="return-value"></a>Wartość zwracana  
- Iteratora adresowania pierwszym elementem w `source_link_manager` obiektu.  
+ Iterator odnoszący się do pierwszego elementu w `source_link_manager` obiektu.  
   
 ### <a name="remarks"></a>Uwagi  
- Wskazuje stan końcowy iteratora `NULL` łącza.  
+ Stan końcowy iterator który jest wskazywany przez `NULL` łącza.  
   
 ##  <a name="contains"></a> zawiera 
 
- Wyszukiwanie `network_link_registry` w ramach tego `source_link_manager` obiektu dla określonego bloku.  
+ Wyszukiwanie `network_link_registry` w ramach tej `source_link_manager` obiektu dla określonego bloku.  
   
 ```
 bool contains(_EType _Link);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `_Link`  
- Wskaźnik do bloku, który ma zostać wyszukany w `source_link_manager` obiektu.  
+*_Link*<br/>
+Wskaźnik do bloku, który ma zostać wyszukany w `source_link_manager` obiektu.  
   
 ### <a name="return-value"></a>Wartość zwracana  
- `true` Jeśli został określony blok `false` inaczej.  
+ `true` Jeśli określony blok został znaleziony, `false` inaczej.  
   
 ##  <a name="count"></a> Liczba 
 
- Zlicza połączonego bloków w `source_link_manager` obiektu.  
+ Zlicza liczbę połączonych bloków w `source_link_manager` obiektu.  
   
 ```
 size_t count();
@@ -145,27 +145,27 @@ size_t count();
   
 ##  <a name="reference"></a> Odwołanie 
 
- Uzyskuje odwołania na `source_link_manager` obiektu.  
+ Uzyskuje odwołanie na `source_link_manager` obiektu.  
   
 ```
 void reference();
 ```  
   
-##  <a name="register_target_block"></a> register_target_block 
+##  <a name="register_target_block"></a> register_target_block — 
 
- Rejestruje blok docelowy przechowujący to `source_link_manager` obiektu.  
+ Rejestruje blok docelowy, który zawiera ten `source_link_manager` obiektu.  
   
 ```
 void register_target_block(_Inout_ ITarget<typename _Block::source_type>* _PTarget);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `_PTarget`  
- Blok docelowy przechowujący to `source_link_manager` obiektu.  
+*_PTarget*<br/>
+Blok docelowy, przechowywania to `source_link_manager` obiektu.  
   
-##  <a name="release"></a> Zlecenia 
+##  <a name="release"></a> Wydania 
 
- Zwalnia odwołania na `source_link_manager` obiektu.  
+ Wydaje odniesienie na `source_link_manager` obiektu.  
   
 ```
 void release();
@@ -173,20 +173,20 @@ void release();
   
 ##  <a name="remove"></a> Usuń 
 
- Usuwa link z `source_link_manager` obiektu.  
+ Usuwa łącze między `source_link_manager` obiektu.  
   
 ```
 bool remove(_EType _Link);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `_Link`  
- Wskaźnik do bloku, który ma zostać usunięty, jeśli znaleziono.  
+*_Link*<br/>
+Wskaźnik do bloku, który ma zostać usunięty, jeśli znaleziono.  
   
 ### <a name="return-value"></a>Wartość zwracana  
- `true` Jeśli łącze zostało odnalezione i usunięte, `false` inaczej.  
+ `true` Jeśli łącze zostało znalezione i usuwane, `false` inaczej.  
   
-##  <a name="set_bound"></a> set_bound 
+##  <a name="set_bound"></a> set_bound — 
 
  Ustawia maksymalną liczbę łączy źródła, które mogą zostać dodane do tego `source_link_manager` obiektu.  
   
@@ -195,8 +195,8 @@ void set_bound(size_t _MaxLinks);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `_MaxLinks`  
- Maksymalna liczba łącza.  
+*_MaxLinks*<br/>
+Maksymalna liczba łączy.  
   
 ##  <a name="ctor"></a> source_link_manager 
 

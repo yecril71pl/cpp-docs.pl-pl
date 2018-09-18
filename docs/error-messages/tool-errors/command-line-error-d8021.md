@@ -16,14 +16,15 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 27cac655dc716904c1d4bf6c9f0aff092c902853
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 57a5bb6ac27192b8e5b0ffe6c1c343bbeab5a508
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33293978"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46043875"
 ---
 # <a name="command-line-error-d8021"></a>Błąd D8021 wiersza polecenia
-Nieprawidłowy argument numeryczny "number"  
-  
- Liczba większa niż 65 534 został określony jako argument numeryczny.
+
+Nieprawidłowy argument numeryczny "liczba"
+
+Liczba większa niż 65,534 została określona jako argument liczbowy.

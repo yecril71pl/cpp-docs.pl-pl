@@ -1,5 +1,5 @@
 ---
-title: C2640 błąd kompilatora | Dokumentacja firmy Microsoft
+title: Błąd kompilatora C2640 | Dokumentacja firmy Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,24 +16,25 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d6951d6d56fa0e93e75725c5ce5b13fec7f3d78f
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: ad39b2a9e3397f97ddc4a900bc45d1983ebbf574
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33228878"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46085289"
 ---
-# <a name="compiler-error-c2640"></a>C2640 błąd kompilatora
-"identyfikator": modyfikator __based jest niedozwolony dla odwołania  
-  
- `__based` Modyfikatora można używać na wskaźnikach tylko.  
-  
- Poniższy przykład generuje C2640:  
-  
-```  
-// C2640.cpp  
-void f(int i) {  
-    void *vp;  
-    int _based(vp) &vr = I;  // C2640  
-}  
+# <a name="compiler-error-c2640"></a>Błąd kompilatora C2640
+
+"identyfikator": modyfikator __based niedozwolony dla odwołania
+
+`__based` Modyfikatora można używać na wskaźnikach tylko.
+
+Poniższy przykład spowoduje wygenerowanie C2640:
+
+```
+// C2640.cpp
+void f(int i) {
+    void *vp;
+    int _based(vp) &vr = I;  // C2640
+}
 ```

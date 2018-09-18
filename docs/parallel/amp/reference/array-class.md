@@ -32,12 +32,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 13ce6a5f26cba69aff8ebb296a6f4a716adf1c46
-ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
+ms.openlocfilehash: abf907fe12f55b44e7f2e184b8752d2e09a326f8
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44107682"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46071734"
 ---
 # <a name="array-class"></a>array — Klasa
 Reprezentuje kontener danych służący do przenoszenia danych do akceleratora.
@@ -50,10 +50,10 @@ friend class array;
 ```  
 
 #### <a name="parameters"></a>Parametry
-`value_type`  
+*value_type*<br/>
 Typ elementu danych.
 
-`_Rank`  
+*_Rank*<br/>
 Ranga tablicy.
 
 ## <a name="members"></a>Elementy członkowskie
@@ -404,46 +404,46 @@ array(array&& _Other) restrict(cpu);
 ```  
 
 ### <a name="parameters"></a>Parametry
-`_Associated_Av`  
+*_Associated_Av*<br/>
 Obiekt accelerator_view, który określa preferowaną lokalizację docelową tablicy.
 
-`_Av`  
+*_Av*<br/>
 [Accelerator_view](accelerator-view-class.md) obiektu, który określa lokalizację tablicy.
 
-`_Cpu_access_type`  
+*_Cpu_access_type*<br/>
 Żądany [access_type](concurrency-namespace-enums-amp.md#access_type) dla tablicy na CPU. Ten parametr ma wartość domyślną `access_type_auto` opuszczania Procesora `access_type` oznaczanie do środowiska uruchomieniowego. Rzeczywiste użycie procesora CPU `access_type` dla tablicy może być odpytywany za pomocą `get_cpu_access_type` metody.
 
-`_Extent`  
+*_Extent*<br/>
 Zakres każdego wymiaru tablicy.
 
-`_E0`  
+*_E0*<br/>
 Najbardziej znaczący składnik z zakresu sekcji.
 
-`_E1`  
+*_E1*<br/>
 Dalej do najbardziej znaczący składnik z zakresu sekcji.
 
-`_E2`  
+*_E2*<br/>
 Najmniej znaczący składnik z zakresu sekcji.
 
-`_InputIterator`  
+*_InputIterator*<br/>
 Typ iteratora wejściowego.
 
-`_Src`  
+*_Src*<br/>
 Obiekt do skopiowania.
 
-`_Src_first`  
+*_Src_first*<br/>
 Początkowy iterator do kontenera źródłowego.
 
-`_Src_last`  
+*_Src_last*<br/>
 Końcowy iterator do kontenera źródłowego.
 
-`_Other`  
+*_Inne*<br/>
 Inne źródła danych.
 
-`_Rank`  
+*_Rank*<br/>
 Ranga sekcji.
 
-`value_type`  
+*value_type*<br/>
 Typ danych elementów, które są kopiowane.
 
 ##  <a name="associated_accelerator_view"></a> associated_accelerator_view —
@@ -467,7 +467,7 @@ void copy_to(
 ```  
 
 ### <a name="parameters"></a>Parametry
-`_Dest`  
+*_Dest*<br/>
 [Array_view](array-view-class.md) kopiowanego.
 
 ##  <a name="cpu_access_type"></a> cpu_access_type
@@ -551,7 +551,7 @@ operator std::vector<value_type>() const restrict(cpu);
 ```  
 
 ### <a name="parameters"></a>Parametry
-`value_type`  
+*value_type*<br/>
 Typ danych elementów wektora.
 
 ### <a name="return-value"></a>Wartość zwracana
@@ -580,19 +580,19 @@ typename details::_Projection_result_type<value_type,_Rank>::_Const_result_type 
 ```  
 
 ### <a name="parameters"></a>Parametry
-`_Index`  
+*Parametr _Index*<br/>
 Lokalizacja elementu.
 
-`_I0`  
+*_I0*<br/>
 Najbardziej znaczący składnik pochodzenia tej sekcji.
 
-`_I1`  
+*_I1*<br/>
 Dalej do najbardziej znaczący składnik pochodzenia tej sekcji.
 
-`_I2`  
+*_I2*<br/>
 Najmniej znaczący składnik pochodzenia tej sekcji.
 
-`_I`  
+*_I*<br/>
 Lokalizacja elementu.
 
 ### <a name="return-value"></a>Wartość zwracana
@@ -614,10 +614,10 @@ typename details::_Projection_result_type<value_type,_Rank>::_Const_result_type 
 ```  
 
 ### <a name="parameters"></a>Parametry
-`_Index`  
+*Parametr _Index*<br/>
 Indeks.
 
-`_I`  
+*_I*<br/>
 Indeks.
 
 ### <a name="return-value"></a>Wartość zwracana
@@ -637,10 +637,10 @@ array& operator= (
 ```  
 
 ### <a name="parameters"></a>Parametry
-`_Other`  
+*_Inne*<br/>
 `array` Obiektu do skopiowania.
 
-`_Src`  
+*_Src*<br/>
 `array` Obiektu do skopiowania.
 
 ### <a name="return-value"></a>Wartość zwracana
@@ -752,40 +752,40 @@ array_view<const value_type,3> section(
 ```  
 
 ### <a name="parameters"></a>Parametry
-`_E0`  
+*_E0*<br/>
 Najbardziej znaczący składnik z zakresu sekcji.
 
-`_E1`  
+*_E1*<br/>
 Dalej do najbardziej znaczący składnik z zakresu sekcji.
 
-`_E2`  
+*_E2*<br/>
 Najmniej znaczący składnik z zakresu sekcji.
 
-`_Ext`  
+*_Ext*<br/>
 [Zakres](extent-class.md) obiektu, który określa zakres sekcji. Wartość pierwotna wynosi 0.
 
-`_Idx`  
+*_Idx*<br/>
 [Indeksu](index-class.md) obiektu, który określa lokalizację pochodzenia. Podsekcja jest pozostałą częścią zakresu.
 
-`_I0`  
+*_I0*<br/>
 Najbardziej znaczący składnik pochodzenia tej sekcji.
 
-`_I1`  
+*_I1*<br/>
 Dalej do najbardziej znaczący składnik pochodzenia tej sekcji.
 
-`_I2`  
+*_I2*<br/>
 Najmniej znaczący składnik pochodzenia tej sekcji.
 
-`_Rank`  
+*_Rank*<br/>
 Ranga sekcji.
 
-`_Section_extent`  
+*_Section_extent*<br/>
 [Zakres](extent-class.md) obiektu, który określa zakres sekcji.
 
-`_Section_origin`  
+*_Section_origin*<br/>
 [Indeksu](index-class.md) obiektu, który określa lokalizację pochodzenia.
 
-`value_type`  
+*value_type*<br/>
 Typ danych elementów, które są kopiowane.
 
 ### <a name="return-value"></a>Wartość zwracana
@@ -807,13 +807,13 @@ array_view<const value_type,_New_rank> view_as(
 ```  
 
 ### <a name="parameters"></a>Parametry
-`_New_rank`  
+*_New_rank*<br/>
 Ranga `extent` przekazano obiekt jako parametr.
 
-`_View_extent`  
+*_View_extent*<br/>
 Zakres, który jest używany do utworzenia nowego [array_view](array-view-class.md) obiektu.
 
-`value_type`  
+*value_type*<br/>
 Typ danych elementów w pierwotnym `array` obiektu i zwracanym `array_view` obiektu.
 
 ### <a name="return-value"></a>Wartość zwracana

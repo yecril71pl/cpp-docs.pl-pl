@@ -1,5 +1,5 @@
 ---
-title: Kompilatora (poziom 4) ostrzeżenie C4053 | Dokumentacja firmy Microsoft
+title: Kompilator ostrzeżenie (poziom 4) C4053 | Dokumentacja firmy Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,14 +16,15 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6d884355d3f1e8b0c4507ff345718628804092b5
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 2f608d3248f3294178fbabc5c81a6145e4cf3fb2
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33291508"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46086502"
 ---
-# <a name="compiler-warning-level-4-c4053"></a>Kompilator C4053 ostrzegawcze (poziom 4)
-jeden operand void dla "?:"  
-  
- `?:` Uzyskuje operator wyrażenia typu `void`. Wartość `void` argument operacji jest niezdefiniowany.
+# <a name="compiler-warning-level-4-c4053"></a>Kompilator ostrzeżenie (poziom 4) C4053
+
+jeden operand void dla "?:"
+
+`?:` Operator otrzymuje wyrażenie typu `void`. Wartość `void` operand jest niezdefiniowana.

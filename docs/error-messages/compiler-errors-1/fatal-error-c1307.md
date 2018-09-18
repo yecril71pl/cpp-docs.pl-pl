@@ -16,16 +16,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9d06ce51ada7cd9159b8e02ff627bf12ebb7293d
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 65f398dd9885c571ea0d66171889f20d3321a3b9
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33227138"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46085865"
 ---
 # <a name="fatal-error-c1307"></a>Błąd krytyczny C1307
-Program został wyedytowany od czasu zebrania danych profilu  
-  
- Korzystając z [/LTCG:PGOPTIMIZE](../../build/reference/ltcg-link-time-code-generation.md), konsolidator wykryto moduł wejściowy kompilowanej po /LTCG:PGINSTRUMENT i że moduł został zmieniony do punktu, w którym istniejące dane profilu jest już nieaktualny. Na przykład po zmianie wykresu wywołań w module ponownej kompilacji, kompilator wygeneruje C1307.  
-  
- Aby rozwiązać ten problem, uruchom /LTCG:PGINSTRUMENT, wykonaj ponownie wszystkie uruchomień testów i uruchom /LTCG:PGOPTIMIZE. Jeśli nie możesz uruchomić /LTCG:PGINSTRUMENT i powtórz test wszystkie działa, należy użyć /LTCG:PGUPDATE zamiast /LTCG:PGOPTIMIZE do utworzenia zoptymalizowanego obrazu.
+
+Program został wyedytowany od czasu zebrania danych profilowych
+
+Korzystając z [/LTCG:PGOPTIMIZE](../../build/reference/ltcg-link-time-code-generation.md), konsolidator wykryto moduł wejściowy nie kompilowanej po pginstrument, i że moduł został zmieniony w punkcie, w którym istniejące dane profilu nie są już odpowiednie. Na przykład jeśli zmienione wykresu wywołań w module ponownej kompilacji, kompilator wygeneruje C1307.
+
+Aby rozwiązać ten problem, uruchom pginstrument, wykonaj ponownie wszystkie przebiegi testowe i uruchom /LTCG:PGOPTIMIZE. Jeśli nie możesz uruchomić pginstrument i powtórz test wszystkich przebiegów, zamiast /LTCG:PGUPDATE /LTCG:PGOPTIMIZE do utworzenia zoptymalizowanego obrazu.

@@ -1,5 +1,5 @@
 ---
-title: C3656 błąd kompilatora | Dokumentacja firmy Microsoft
+title: Błąd kompilatora C3656 | Dokumentacja firmy Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,30 +16,31 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9f361cc4356989b22b973972a506b28e97f39cac
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: c04e99d137d4235a0890cca56757f2e6fad70760
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33263989"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46072717"
 ---
-# <a name="compiler-error-c3656"></a>C3656 błąd kompilatora
-"override": Zastąp specyfikator nie może powtarzać  
-  
- Jawne przesłanianie — słowo kluczowe można określić tylko raz. Aby uzyskać więcej informacji, zobacz [jawne zastąpienia](../../windows/explicit-overrides-cpp-component-extensions.md).  
-  
- Poniższy przykład generuje C3656:  
-  
-```  
-// C3656.cpp  
-// compile with: /clr /c  
-public interface struct O {  
-   int f();  
-};  
-  
-public ref struct V : O {  
-   int f() override override { return 0; }   // C3656  
-   // try the following line instead  
-   // int f() override { return 0; }  
-};  
+# <a name="compiler-error-c3656"></a>Błąd kompilatora C3656
+
+"override": Zastąp specyfikator nie może powtarzać się
+
+Słowo kluczowe jawnego przesłaniania można określić tylko raz. Aby uzyskać więcej informacji, zobacz [jawne zastępowanie](../../windows/explicit-overrides-cpp-component-extensions.md).
+
+Poniższy przykład spowoduje wygenerowanie C3656:
+
+```
+// C3656.cpp
+// compile with: /clr /c
+public interface struct O {
+   int f();
+};
+
+public ref struct V : O {
+   int f() override override { return 0; }   // C3656
+   // try the following line instead
+   // int f() override { return 0; }
+};
 ```

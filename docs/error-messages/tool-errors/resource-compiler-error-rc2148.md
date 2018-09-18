@@ -16,20 +16,21 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d10e18eef4691c0a018feb583ffb93499e86ccb6
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 4b78bf8e9eb9ebe86dae75856ea3c0b6f5d34a26
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33320209"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46075911"
 ---
 # <a name="resource-compiler-error-rc2148"></a>Błąd kompilatora zasobów RC2148
-Identyfikator odmianą języka jest za duży  
-  
- Wartość Identyfikatora odmianą języka jest poza zakresem.  
-  
- **Języka** instrukcji należy użyć następującej składni:  
-  
- **JĘZYK** *primary_language_ID*,*secondary_language_ID*  
-  
- Prawidłowe identyfikatory odmianą języka są zdefiniowane jako **SUBLANG_** stałe w pliku WINNT.h pliku.
+
+Identyfikator PODJĘZYK jest zbyt duży
+
+Wartość Identyfikatora PODJĘZYK jest poza zakresem.
+
+**Języka** instrukcji należy użyć następującej składni:
+
+**JĘZYK** *primary_language_ID*,*secondary_language_ID*
+
+Poprawnych identyfikatorów PODJĘZYK są definiowane jako **SUBLANG_** stałe w pliku opis pliku WINNT.h.

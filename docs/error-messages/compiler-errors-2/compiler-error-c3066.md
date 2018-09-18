@@ -1,5 +1,5 @@
 ---
-title: C3066 błąd kompilatora | Dokumentacja firmy Microsoft
+title: Błąd kompilatora C3066 | Dokumentacja firmy Microsoft
 ms.custom: ''
 ms.date: 03/28/2017
 ms.technology:
@@ -16,54 +16,56 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 603b947e0f390de5dfb13a46bbe6c66db1d4e804
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 35600fae9a689b32cca9c327645a0e0c1bb91a25
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33248314"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46084617"
 ---
-# <a name="compiler-error-c3066"></a>C3066 błąd kompilatora
-istnieje wiele sposobów, że obiekt tego typu może być wywoływana z tymi argumentami  
-  
- Kompilator Wykryto wywołanie niejednoznaczną funkcję obejmujące części znaku dwuskładnikowego.  
-  
- Poniższy przykład generuje C3066:  
-  
-```  
-// C3066.cpp  
-template <class T, class U> void func(T*, U*){}  
-  
-typedef void (*PF)(const int*, const char*);  
-typedef void (*PF1)(const int*, volatile char*);  
-  
-struct A {  
-   operator PF() const {  
-      return func;  
-   }  
-  
-   operator PF1() {  
-      return func;  
-   }  
-  
-   operator PF1() const  {  
-      return func;  
-   }  
-  
-};  
-  
-int main() {  
-   A a;  
-   int i;  
-   char c;  
-  
-   a(&i, &c);   // C3066  
-   a(&i, (const char *) &c);   // OK  
-}  
+# <a name="compiler-error-c3066"></a>Błąd kompilatora C3066
+
+istnieje wiele sposobów obiektu tego typu można wywołać z tymi argumentami
+
+Kompilator wykrył wywołanie niejednoznaczną funkcję obejmujące surogaty.
+
+Poniższy przykład spowoduje wygenerowanie C3066:
+
+```
+// C3066.cpp
+template <class T, class U> void func(T*, U*){}
+
+typedef void (*PF)(const int*, const char*);
+typedef void (*PF1)(const int*, volatile char*);
+
+struct A {
+   operator PF() const {
+      return func;
+   }
+
+   operator PF1() {
+      return func;
+   }
+
+   operator PF1() const  {
+      return func;
+   }
+
+};
+
+int main() {
+   A a;
+   int i;
+   char c;
+
+   a(&i, &c);   // C3066
+   a(&i, (const char *) &c);   // OK
+}
 ```
 
 ## <a name="copy-list-initialization"></a>Copy-list-initialization
-W programie Visual Studio 2015 kompilator błędnego traktowane Inicjalizacja listy kopii na w taki sam sposób jak regularne inicjacja kopii; uważa się jedynie konwertowanie konstruktorów Rozpoznanie przeciążenia. W poniższym przykładzie programu Visual Studio 2015 wybiera MyInt(23), ale 2017 usługi Visual Studio niepoprawnie zgłasza błąd.
+
+W programie Visual Studio 2015 kompilator błędnie traktowane listy Inicjalizacja kopiowania na w taki sam sposób, jak regularne Inicjowanie kopiowania; uznaje się jedynie konwertowanie konstruktory przeciążeń z późnym wiązaniem. W poniższym przykładzie Visual Studio 2015 wybiera MyInt(23), ale Visual Studio 2017 niepoprawnie zgłasza błąd.
 
 ```
 // From http://www.open-std.org/jtc1/sc22/wg21/docs/cwg_closed.html#1228

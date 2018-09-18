@@ -15,21 +15,23 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6d892aac81efa8c2628c8662558b52cc1eb2e21c
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 5fe77d3775c489399bb8b9032e645eee17d70b0a
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32386514"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46076596"
 ---
 # <a name="storage-of-addresses"></a>Magazynowanie adresów
-Ilości miejsca wymaganego dla adresu i znaczenie adresu są zależne od implementacji kompilatora. Wskaźniki do różnych typów nie ma gwarancji ma taką samą długość. W związku z tym **sizeof (char \*)** nie jest zawsze równa **sizeof (int \*)**.  
-  
- **Microsoft Specific**  
-  
- Dla kompilatora Microsoft C **sizeof (char \*)** jest równa **sizeof (int \*)**.  
-  
- **KOŃCOWY określonych firmy Microsoft**  
-  
-## <a name="see-also"></a>Zobacz też  
- [Deklaracje wskaźników](../c-language/pointer-declarations.md)
+
+Ilość miejsca wymaganego dla adresu i znaczenie adres są zależne od implementacji kompilatora. Wskaźniki do różnych typów nie musi mieć tę samą długość. W związku z tym **sizeof (char \*)** nie jest zawsze równa **sizeof (int \*)**.
+
+**Microsoft Specific**
+
+Dla kompilatora Microsoft C **sizeof (char \*)** jest równa **sizeof (int \*)**.
+
+**END specyficzny dla Microsoft**
+
+## <a name="see-also"></a>Zobacz też
+
+[Deklaracje wskaźników](../c-language/pointer-declarations.md)

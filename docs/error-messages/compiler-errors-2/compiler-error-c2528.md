@@ -1,5 +1,5 @@
 ---
-title: C2528 błąd kompilatora | Dokumentacja firmy Microsoft
+title: Błąd kompilatora C2528 | Dokumentacja firmy Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,23 +16,24 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 347330600e9b912d50522532f0c64e789e385520
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 3c588457743c601e31c24fd0a53de652477fbf05
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33229477"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46072605"
 ---
-# <a name="compiler-error-c2528"></a>C2528 błąd kompilatora
-"Nazwa": wskaźnik do odwołania jest niedozwolony  
-  
- Nie można zadeklarować wskaźnik do odwołania. Przed zadeklarowaniem wskaźnik do niego, należy usunąć odwołania do zmiennej.  
-  
- Poniższy przykład generuje C2528:  
-  
-```  
-// C2528.cpp  
-int i;  
-int &ir = i;  
-int & (*irptr) = ir;    // C2528  
+# <a name="compiler-error-c2528"></a>Błąd kompilatora C2528
+
+"name": wskaźnik do odwołania jest niedozwolone
+
+Nie można zadeklarować wskaźnik do odwołania. Dereference zmiennej przed zadeklarowaniem wskaźnika do niego.
+
+Poniższy przykład spowoduje wygenerowanie C2528:
+
+```
+// C2528.cpp
+int i;
+int &ir = i;
+int & (*irptr) = ir;    // C2528
 ```

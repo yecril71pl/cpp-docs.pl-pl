@@ -1,5 +1,5 @@
 ---
-title: C2928 błąd kompilatora | Dokumentacja firmy Microsoft
+title: Błąd kompilatora C2928 | Dokumentacja firmy Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,14 +16,15 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0e88e3c86bb88f8b46c6e88f55cb57799ccf42bd
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 77f1b71d47ecd8cbf110367ccf00ed0f936978ae
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33241807"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46076037"
 ---
-# <a name="compiler-error-c2928"></a>C2928 błąd kompilatora
-jawne utworzenie wystąpienia; 'Identyfikator' nie jest funkcją lub statyczny elementem członkowskim danych szablonu klasy "class"  
-  
- Nie można jawnie utworzyć wystąpienia członkiem `class` oznacza to nie funkcja lub `static` zmiennej.
+# <a name="compiler-error-c2928"></a>Błąd kompilatora C2928
+
+jawne wystąpienie; 'Identyfikator' nie jest funkcją lub statyczną składową danych szablonu klasy "class"
+
+Nie można jawnie utworzyć wystąpienia członkiem `class` oznacza to nie jest funkcją lub `static` zmiennej.

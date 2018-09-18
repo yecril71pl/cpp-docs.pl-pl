@@ -1,5 +1,5 @@
 ---
-title: Kompilatora (poziom 1) ostrzeżenie C4186 | Dokumentacja firmy Microsoft
+title: Kompilator ostrzeżenie (poziom 1) C4186 | Dokumentacja firmy Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,24 +16,25 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: cc40d2b9f43d041c7b04ba2bc77a0aba0630274c
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 0bfc722a07d2ddb10e5be8c6d8fde60956b297c8
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33277595"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46079781"
 ---
-# <a name="compiler-warning-level-1-c4186"></a>Kompilator C4186 ostrzegawcze (poziom 1)
-\#Atrybut import "attribute" wymaga argumentów, liczba; ignorowane  
-  
- A `#import` atrybut ma nieprawidłową liczbę argumentów.  
-  
-## <a name="example"></a>Przykład  
-  
-```  
-// C4186.cpp  
-// compile with: /W1 /c  
-#import "stdole2.tlb" no_namespace("abc") rename("a","b","c")  // C4186  
-```  
-  
- `no_namespace` Atrybutu nie przyjmuje żadnych argumentów. **Zmienić** atrybut przyjmuje tylko dwa argumenty.
+# <a name="compiler-warning-level-1-c4186"></a>Kompilator ostrzeżenie (poziom 1) C4186
+
+\#Atrybut import "attribute" wymaga argumentów liczba; ignorowane
+
+A `#import` atrybut ma nieprawidłową liczbę argumentów.
+
+## <a name="example"></a>Przykład
+
+```
+// C4186.cpp
+// compile with: /W1 /c
+#import "stdole2.tlb" no_namespace("abc") rename("a","b","c")  // C4186
+```
+
+`no_namespace` Atrybutu nie przyjmuje żadnych argumentów. **Zmień nazwę** atrybut przyjmuje tylko dwa argumenty.

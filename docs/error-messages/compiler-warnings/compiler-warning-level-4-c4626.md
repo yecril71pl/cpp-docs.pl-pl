@@ -1,5 +1,5 @@
 ---
-title: Kompilatora (poziom 4) ostrzeżenie C4626 | Dokumentacja firmy Microsoft
+title: Kompilator ostrzeżenie (poziom 4) C4626 | Dokumentacja firmy Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,44 +16,45 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4e43aa93a2f40d97ef3db5c2f556b04e84512724
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 16ae3e9d9e54d54a419bfde2250fc02f780e8e54
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33295139"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46083668"
 ---
-# <a name="compiler-warning-level-4-c4626"></a>Kompilator C4626 ostrzegawcze (poziom 4)
-"pochodzi z klasy": operator przypisania został niejawnie zdefiniowany jako usunięty, ponieważ operator przypisania klasa podstawowa jest niedostępne lub zostały usunięte  
-  
- Operator przypisania został usunięty lub nie jest dostępna w klasie podstawowej i dlatego nie został wygenerowany dla klasy pochodnej. Błąd kompilatora spowoduje, że wszelkie próby przypisać obiekty tego typu.  
-  
- To ostrzeżenie jest domyślnie wyłączone. Zobacz [kompilatora ostrzeżeń czy są wyłączone domyślnie](../../preprocessor/compiler-warnings-that-are-off-by-default.md) Aby uzyskać więcej informacji.  
-  
- Poniższy przykład generuje C4626 i pokazuje, jak rozwiązywanie problemu:  
-  
-```  
-// C4626  
-// compile with: /W4  
-#pragma warning(default : 4626)  
-class B  
-{  
-// public:  
-   B& operator = (const B&)  
-   {  
-      return *this;  
-   }  
-};  
-  
-class D : public B  
-{  
-  
-}; // C4626 - to fix, make B's copy constructor public  
-  
-int main()  
-{  
-   D m;  
-   D n;  
-   // m = n;   // this line will cause an error  
-}  
+# <a name="compiler-warning-level-4-c4626"></a>Kompilator ostrzeżenie (poziom 4) C4626
+
+"Klasa pochodna": operator przypisania został niejawnie zdefiniowany jako usunięty, ponieważ operator przypisania klasy bazowej jest niedostępne lub zostały usunięte
+
+Operator przypisania został usunięty lub nie jest dostępna w klasie bazowej, a w związku z tym nie został wygenerowany dla klasy pochodnej. Błąd kompilatora spowoduje, że każda próba przypisywać obiektów tego typu.
+
+To ostrzeżenie jest domyślnie wyłączona. Zobacz [kompilatora ostrzeżenia, są wyłączone domyślnie](../../preprocessor/compiler-warnings-that-are-off-by-default.md) Aby uzyskać więcej informacji.
+
+Poniższy przykład generuje C4626 i pokazuje, jak go naprawić:
+
+```
+// C4626
+// compile with: /W4
+#pragma warning(default : 4626)
+class B
+{
+// public:
+   B& operator = (const B&)
+   {
+      return *this;
+   }
+};
+
+class D : public B
+{
+
+}; // C4626 - to fix, make B's copy constructor public
+
+int main()
+{
+   D m;
+   D n;
+   // m = n;   // this line will cause an error
+}
 ```

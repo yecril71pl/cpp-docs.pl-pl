@@ -1,5 +1,5 @@
 ---
-title: C2945 błąd kompilatora | Dokumentacja firmy Microsoft
+title: Błąd kompilatora C2945 | Dokumentacja firmy Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,14 +16,15 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4e5695ac6184d7f31eadf0f5ed1bbd2260a0f4ff
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 992064c75493b15dd4e1b382f2789131dd4f05db
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33241516"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46075370"
 ---
-# <a name="compiler-error-c2945"></a>C2945 błąd kompilatora
-jawne utworzenie wystąpienia nie odnosi się do specjalizacji szablonu klasy  
-  
- Nie można jawnie wystąpienia elementu, który nie jest szablonem.
+# <a name="compiler-error-c2945"></a>Błąd kompilatora C2945
+
+jawne utworzenie wystąpienia nie odnosi się do specjalizacji szablonu klasy
+
+Nie można jawnie tworzy coś, co nie jest oparte na szablonach.

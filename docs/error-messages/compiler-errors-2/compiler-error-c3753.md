@@ -1,5 +1,5 @@
 ---
-title: C3753 błąd kompilatora | Dokumentacja firmy Microsoft
+title: Błąd kompilatora C3753 | Dokumentacja firmy Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,28 +16,30 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b0d9cb2db2729e5ccb1787e2505fdf0aed1f7a12
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 90462bf9487a60ddcd1add092492e390f7ea71a1
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33271963"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46086689"
 ---
-# <a name="compiler-error-c3753"></a>C3753 błąd kompilatora
-Właściwość generyczna nie jest dozwolone.  
-  
- Listy generyczne parametrów może występować tylko w zarządzanej klasy, struktury lub funkcji.  
-  
- Aby uzyskać więcej informacji, zobacz [ogólne](../../windows/generics-cpp-component-extensions.md) i [właściwości](../../windows/property-cpp-component-extensions.md).  
-  
-## <a name="example"></a>Przykład  
- Poniższy przykład generuje C3753.  
-  
-```  
-// C3753.cpp  
-// compile with: /clr /c  
-ref struct A {  
-   generic <typename T>  
-   property int i;   // C3753 error  
-};  
+# <a name="compiler-error-c3753"></a>Błąd kompilatora C3753
+
+Właściwość generyczna nie jest dozwolona.
+
+Listy generyczne parametrów może wystąpić tylko w zarządzanej klasy, struktury lub funkcji.
+
+Aby uzyskać więcej informacji, zobacz [ogólne](../../windows/generics-cpp-component-extensions.md) i [właściwość](../../windows/property-cpp-component-extensions.md).
+
+## <a name="example"></a>Przykład
+
+Poniższy przykład spowoduje wygenerowanie C3753.
+
+```
+// C3753.cpp
+// compile with: /clr /c
+ref struct A {
+   generic <typename T>
+   property int i;   // C3753 error
+};
 ```

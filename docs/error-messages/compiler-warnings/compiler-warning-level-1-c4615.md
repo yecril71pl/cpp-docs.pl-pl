@@ -16,25 +16,26 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c631a8a08b643a7f5daba62d991c338161692805
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: cd260e37fb3f98f3e23d1c99c9ff53cae4f0198f
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33282070"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46073710"
 ---
-# <a name="compiler-warning-level-1-c4615"></a>Kompilator C4615 ostrzegawcze (poziom 1)
-\#warning elementu pragma: Nieznany typ ostrzeżenia użytkownika  
-  
- Nieprawidłowy specyfikator ostrzeżenie została użyta z **pragma** [ostrzeżenie](../../preprocessor/warning.md). Aby rozwiązać problem, należy użyć Nieprawidłowy specyfikator ostrzeżenie.  
-  
- Poniższy przykład generuje C4615:  
-  
-```  
-// C4615.cpp  
-// compile with: /W1 /LD  
-#pragma warning(enable : 4401)   // C4615, 'enable' not valid specifier  
-  
-// use the code below to resolve the error  
-// #pragma warning(default : 4401)  
+# <a name="compiler-warning-level-1-c4615"></a>Kompilatora (poziom 1) ostrzeżenie C4615
+
+\#warning elementu pragma: Nieznany typ ostrzeżenia użytkownika
+
+Nieprawidłowy specyfikator ostrzeżenie był używany z **pragma** [ostrzeżenie](../../preprocessor/warning.md). Aby naprawić błąd, należy użyć Nieprawidłowy specyfikator ostrzeżenie.
+
+Poniższy przykład spowoduje wygenerowanie C4615:
+
+```
+// C4615.cpp
+// compile with: /W1 /LD
+#pragma warning(enable : 4401)   // C4615, 'enable' not valid specifier
+
+// use the code below to resolve the error
+// #pragma warning(default : 4401)
 ```

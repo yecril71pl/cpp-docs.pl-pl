@@ -14,17 +14,19 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c52afb596def0e4da2e2080280bef161d284977f
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 7c6d83a597716ed86870cc11ef2f063edd34642b
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32380368"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46081952"
 ---
 # <a name="abort-function-c"></a>abort — funkcja (C)
-**ANSI 4.10.4.1** zachowanie **przerwać** względem otwarte i tymczasowe pliki — funkcja  
-  
- **Przerwać** funkcja nie zamyka pliki, które są otwarte lub tymczasowych. Nie opróżnia bufory strumienia.  
-  
-## <a name="see-also"></a>Zobacz też  
- [Funkcje bibliotek](../c-language/library-functions.md)
+
+**ANSI 4.10.4.1** zachowanie **przerwać** funkcji w odniesieniu do otwartego i tymczasowych plików
+
+**Przerwać** funkcji nie zamyka pliki, które są otwarte lub tymczasowego. Go nie opróżnia buforów strumienia.
+
+## <a name="see-also"></a>Zobacz też
+
+[Funkcje bibliotek](../c-language/library-functions.md)

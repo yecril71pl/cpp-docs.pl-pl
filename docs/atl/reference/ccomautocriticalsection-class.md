@@ -18,12 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 91d52b51de263be8f6de82a38e4d774c669dbef9
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: ff8687783907cb84af36122c5d7828f8845d595d
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43753587"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46073463"
 ---
 # <a name="ccomautocriticalsection-class"></a>Klasa CComAutoCriticalSection
 
@@ -88,6 +88,6 @@ Wywołania destruktora [DeleteCriticalSection](/windows/desktop/api/synchapi/nf-
 
 ## <a name="see-also"></a>Zobacz też
 
-[Klasa CComFakeCriticalSection](../../atl/reference/ccomfakecriticalsection-class.md)   
-[Klasa — Przegląd](../../atl/atl-class-overview.md)   
+[Klasa CComFakeCriticalSection](../../atl/reference/ccomfakecriticalsection-class.md)<br/>
+[Klasa — Przegląd](../../atl/atl-class-overview.md)<br/>
 [Klasa CComCriticalSection](../../atl/reference/ccomcriticalsection-class.md)
