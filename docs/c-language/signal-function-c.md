@@ -14,17 +14,19 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d397beb6744594d6af898ce3e7dd832587a2ee30
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 3195894d3c01c90c503d7bf124cbee2d91124aa3
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32385845"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46038688"
 ---
 # <a name="signal-function-c"></a>signal — funkcja
-**ANSI 4.7.1.1** zestawu sygnałów dla **sygnału** — funkcja  
-  
- Pierwszy argument przekazany do **sygnału** musi mieć jedną z stałe symboliczne opisanego w *odwołanie do biblioteki wykonawczej* dla **sygnału** funkcji. Informacje zawarte w *odwołanie do biblioteki wykonawczej* zawiera także listę działania obsługi trybu dla każdego sygnału. Stałe również są definiowane w sygnału. H.  
-  
-## <a name="see-also"></a>Zobacz też  
- [Funkcje bibliotek](../c-language/library-functions.md)
+
+**ANSI 4.7.1.1** zestaw sygnałów do **sygnału** — funkcja
+
+Pierwszy argument przekazany do **sygnału** musi być jednym z należy stosować stałe symboliczne opisanego w *odwołanie do biblioteki wykonawczej* dla **sygnału** funkcji. Informacje przedstawione w *odwołanie do biblioteki wykonawczej* zawiera również listę operacyjnych trybu obsługi poszczególnych sygnałów. Stałe są również określone w sygnału. H.
+
+## <a name="see-also"></a>Zobacz też
+
+[Funkcje bibliotek](../c-language/library-functions.md)

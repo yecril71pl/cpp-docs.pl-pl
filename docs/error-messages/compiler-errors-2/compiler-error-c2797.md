@@ -16,70 +16,71 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ea98ab3e6aed4f683fcedad144582e8e946f6d59
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 701ec194c968b9f1d17269573b33e78d69fbb256
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33238166"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46035373"
 ---
 # <a name="compiler-error-c2797"></a>Błąd kompilatora C2797
-(Przestarzałe) Inicjalizacja listy wewnątrz listy inicjatorów elementu członkowskiego lub inicjator elementu członkowskiego danych niestatycznych nie jest zaimplementowana.  
-  
- To ostrzeżenie jest przestarzała w programie Visual Studio 2015. W programie Visual Studio 2013 i wcześniejszych wersji kompilatora Visual C++ nie implementuje Inicjalizacja listy wewnątrz listy inicjatorów elementu członkowskiego lub inicjator elementu członkowskiego danych niestatycznych. Przed Visual Studio 2013 Update 3 zostało to dyskretnie przekształcone na wywołanie funkcji, która może spowodować wygenerowanie złego kodu. Program Visual Studio 2013 Update 3 raportuje ten błąd.  
-  
- W tym przykładzie generuje C2797:  
-  
-```  
-#include <vector>  
-struct S {  
-    S() : v1{1} {} // C2797, VS2013 RTM incorrectly calls 'vector(size_type)'  
-  
-    std::vector<int> v1;  
-    std::vector<int> v2{1, 2}; // C2797, VS2013 RTM incorrectly calls 'vector(size_type, const int &)'  
-};  
-  
-```  
-  
- W tym przykładzie również generuje C2797:  
-  
-```  
-struct S1 {  
-    int i;  
-};  
-  
-struct S2 {  
-    S2() : s1{0} {} // C2797, VS2013 RTM interprets as S2() : s1(0) {} causing C2664  
-    S1 s1;  
-    S1 s2{0}; // C2797, VS2013 RTM interprets as S1 s2 = S1(0); causing C2664  
-};  
-  
-```  
-  
- Aby rozwiązać ten problem, można użyć jawna konstrukcja wewnętrzny list. Na przykład:  
-  
-```  
-#include <vector>  
-typedef std::vector<int> Vector;  
-struct S {  
-    S() : v1(Vector{1}) {}  
-  
-    Vector v1;  
-    Vector v2 = Vector{1, 2};  
-};  
-  
-```  
-  
- Jeśli nie wymagają Inicjalizacja listy:  
-  
-```  
-struct S {  
-    S() : s1("") {}  
-  
-    std::string s1;  
-    std::string s2 = std::string("");  
-};  
-  
-```  
-  
- (Kompilator programu Visual Studio 2013 robi to niejawnie przed Visual Studio 2013 Update 3.)
+
+(Przestarzałe) Inicjowanie listy wewnątrz listy inicjatorów składowych lub inicjatora składowej danych niestatycznych nie jest zaimplementowana.
+
+To ostrzeżenie jest przestarzała w programie Visual Studio 2015. W programie Visual Studio 2013 i wcześniejszych wersjach kompilator języka Visual C++ nie implementuje Inicjowanie listy wewnątrz listy inicjatorów składowej lub inicjatora składowej danych niestatycznych. Przed Visual Studio 2013 Update 3 to był dyskretnie konwertowane wywołanie funkcji, która może spowodować wygenerowanie złego kodu. Visual Studio 2013 Update 3 to raporty jako błąd.
+
+Ten przykład generuje C2797:
+
+```
+#include <vector>
+struct S {
+    S() : v1{1} {} // C2797, VS2013 RTM incorrectly calls 'vector(size_type)'
+
+    std::vector<int> v1;
+    std::vector<int> v2{1, 2}; // C2797, VS2013 RTM incorrectly calls 'vector(size_type, const int &)'
+};
+
+```
+
+Ten przykład generuje również C2797:
+
+```
+struct S1 {
+    int i;
+};
+
+struct S2 {
+    S2() : s1{0} {} // C2797, VS2013 RTM interprets as S2() : s1(0) {} causing C2664
+    S1 s1;
+    S1 s2{0}; // C2797, VS2013 RTM interprets as S1 s2 = S1(0); causing C2664
+};
+
+```
+
+Aby rozwiązać ten problem, można użyć konstrukcji jawnych list wewnętrzny. Na przykład:
+
+```
+#include <vector>
+typedef std::vector<int> Vector;
+struct S {
+    S() : v1(Vector{1}) {}
+
+    Vector v1;
+    Vector v2 = Vector{1, 2};
+};
+
+```
+
+Jeśli nie potrzebujesz inicjalizacji listy:
+
+```
+struct S {
+    S() : s1("") {}
+
+    std::string s1;
+    std::string s2 = std::string("");
+};
+
+```
+
+(Kompilator programu Visual Studio 2013 robi to niejawnie przed Visual Studio 2013 Update 3.)

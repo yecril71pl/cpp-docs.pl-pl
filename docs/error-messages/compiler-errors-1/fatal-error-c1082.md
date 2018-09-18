@@ -16,14 +16,15 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9ec81258606cc7af67e8e9e4708a056cccb7eea5
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 12b722c6c36c600acc5c098c1e4907386cd7c3c4
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33227738"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46044460"
 ---
 # <a name="fatal-error-c1082"></a>Błąd krytyczny C1082
-Nie można zamknąć pliku filetype: 'Plik': wiadomości  
-  
- Jeśli komunikat jest wyświetlany komunikat "zły numer pliku" plik może mieć zostały zamykania na pierwszym planie podczas kompilowania w tle.
+
+Nie można zamknąć pliku typu: 'Plik': komunikat
+
+Jeśli komunikat jest wyświetlany komunikat "zły numer pliku", plik może mieć zostały zamknięcia na pierwszym planie podczas kompilowania w tle.

@@ -16,14 +16,15 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8ca145addc16306d613817643e363ecd9c95069a
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 84aa73120dabd261d54e764d1e0bfe8bc9c561a0
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33292191"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46039617"
 ---
-# <a name="compiler-warning-level-4-c4092"></a>Kompilator C4092 ostrzegawcze (poziom 4)
-Zwraca "unsigned long" sizeof  
-  
- Argument operacji `sizeof` operator jest bardzo duży, dlatego `sizeof` zwrócił niepodpisany **długi**. To ostrzeżenie występuje w ramach rozszerzenia Microsoft ([/Ze](../../build/reference/za-ze-disable-language-extensions.md)). W obszarze Zgodność ANSI (/Za) zamiast tego zostanie obcięta wynik.
+# <a name="compiler-warning-level-4-c4092"></a>Kompilatora (poziom 4) ostrzeżenie C4092
+
+Operator sizeof zwraca "unsigned long"
+
+Argument operacji `sizeof` operator był bardzo duży, dlatego `sizeof` zwracany typ unsigned **długie**. Ostrzeżenie to pojawia się w obszarze rozszerzenia Microsoft ([/Ze](../../build/reference/za-ze-disable-language-extensions.md)). W obszarze zgodności ANSI (/Za) zamiast tego zostanie obcięta wynik.

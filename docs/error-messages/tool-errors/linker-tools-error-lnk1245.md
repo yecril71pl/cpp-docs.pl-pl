@@ -16,20 +16,21 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 47a1c2e5f7bf66946dcc5816d7a20fd485b59b45
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: ef7bace5cec937399d7a2ed440e21b9b751f4141
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33299243"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46041795"
 ---
 # <a name="linker-tools-error-lnk1245"></a>Błąd narzędzi konsolidatora LNK1245
-Nieprawidłowy podsystem "podsystemu" określono; / SUBSYSTEM musi być systemu WINDOWS, WINDOWSCE lub CONSOLE  
-  
- [/ CLR](../../build/reference/clr-common-language-runtime-compilation.md) była używana do kompilowania obiektu i odnosi się jeden z następujących warunków:  
-  
--   Punkt wejścia niestandardowych został zdefiniowany ([/Entry](../../build/reference/entry-entry-point-symbol.md)), w taki sposób, że konsolidator nie można wywnioskować podsystemu.  
-  
--   Wartość został przekazany do [/Subsystem](../../build/reference/subsystem-specify-subsystem.md) opcji konsolidatora, która jest nieprawidłowa dla obiektów w/CLR.  
-  
- Dla obu sytuacjach rozdzielczość jest Określ prawidłową wartość do/Subsystem — opcja konsolidatora.
+
+Nieprawidłowy podsystem "podsystemu" określone; / SUBSYSTEM musi być WINDOWS, WINDOWSCE lub CONSOLE
+
+[/ CLR](../../build/reference/clr-common-language-runtime-compilation.md) został użyty do kompilowania obiektu, ale jeden z następujących warunków true:
+
+- Został zdefiniowany punkt wejścia niestandardowe ([/Entry](../../build/reference/entry-entry-point-symbol.md)), w taki sposób, że konsolidator nie można wywnioskować podsystemu.
+
+- Wartość został przekazany do [/Subsystem](../../build/reference/subsystem-specify-subsystem.md) opcji konsolidatora, która nie jest prawidłowa dla obiektów w/CLR.
+
+Dla obu sytuacjach rozwiązania jest Określ prawidłową wartość, aby opcja/Subsystem — opcja konsolidatora.

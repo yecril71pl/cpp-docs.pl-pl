@@ -44,12 +44,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 284efeda739f3282bf0ae23f11f950971538645d
-ms.sourcegitcommit: 6408139d5f5ff8928f056bde93d20eecb3520361
+ms.openlocfilehash: 3d3e6ca79794eafe64ee2797c12ec8a82a3bb064
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37335721"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46038223"
 ---
 # <a name="cmapptrtoptr-class"></a>Klasa CMapPtrToPtr
 Obsługuje mapy wskaźników typu void opartych na kluczach wskaźników typu void.  
@@ -63,9 +63,7 @@ class CMapPtrToPtr : public CObject
 ## <a name="members"></a>Elementy członkowskie  
  Funkcje elementów członkowskich `CMapPtrToPtr` są podobne do funkcji elementów członkowskich klasy [CMapStringToOb](../../mfc/reference/cmapstringtoob-class.md). Ze względu na to podobieństwa można użyć `CMapStringToOb` dokumentacji kątem specyfiki funkcja elementu członkowskiego. Po wyświetleniu `CObject` wskaźnik jako funkcja parametru lub zwracanej wartości, Wstaw wskaźnik do **void**. Po wyświetleniu `CString` lub **const** wskaźnik do **char** jako parametr funkcji lub wartości zwracanej, Wstaw wskaźnik do **void**.  
   
- `BOOL CMapStringToOb::Lookup( const char* <key>,`  
-  
- `CObject*& <rValue> ) const;`  
+ `BOOL CMapStringToOb::Lookup( const char* <key>, CObject*& <rValue> ) const;`  
   
  na przykład przekłada się na  
   

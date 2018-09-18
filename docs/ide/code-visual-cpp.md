@@ -18,15 +18,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 331828f5c2cd3001cef50a29388a10c0a6a26f1d
-ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
+ms.openlocfilehash: 508f6b41c791cdb3a62e7c6e3de8a8a633dff3e9
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "33330122"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46038883"
 ---
 # <a name="ltcodegt-visual-c"></a>&lt;Kod&gt; (Visual C++)
-\<Kod > tagu umożliwia aby wskazywał jeden lub więcej wierszy kodu.  
+\<Kod > tag zapewnia sposób, aby wskazać jeden lub więcej wierszy w kodzie.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -35,16 +35,16 @@ ms.locfileid: "33330122"
 ```  
   
 #### <a name="parameters"></a>Parametry  
- `content`  
- Tekst, który ma być oznaczona jako kod.  
+*Zawartość*<br/>
+Tekst, który ma zostać oznaczona jako kod.  
   
 ## <a name="remarks"></a>Uwagi  
- Użyj [ \<c >](../ide/c-visual-cpp.md) wskazująca część tekstu, powinien być oznaczony jako kod.  
+ Użyj [ \<c >](../ide/c-visual-cpp.md) do wskazania część tekstu powinien być oznaczony jako kod.  
   
- Kompiluj z użyciem [/doc](../build/reference/doc-process-documentation-comments-c-cpp.md) na przetwarzanie komentarzy dokumentacji do pliku.  
+ Kompiluj przy użyciu [/doc](../build/reference/doc-process-documentation-comments-c-cpp.md) do Przetwarzaj komentarze dokumentacji do pliku.  
   
 ## <a name="example"></a>Przykład  
- Zobacz [ \<przykład >](../ide/example-visual-cpp.md) tematu, na przykład dotyczące używania \<kod > tagu.  
+ Zobacz [ \<przykład >](../ide/example-visual-cpp.md) tematu, aby uzyskać przykład sposobu użycia \<kodu > tag.  
   
 ## <a name="see-also"></a>Zobacz też  
  [Dokumentacja XML](../ide/xml-documentation-visual-cpp.md)

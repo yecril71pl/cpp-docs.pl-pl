@@ -1,5 +1,5 @@
 ---
-title: C2512 błąd kompilatora | Dokumentacja firmy Microsoft
+title: Błąd kompilatora C2512 | Dokumentacja firmy Microsoft
 ms.custom: ''
 ms.date: 02/09/2018
 ms.technology:
@@ -16,24 +16,24 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 286be19ca407039a77d51503a34c7a27da1c3d5b
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: ba1fbba98237879927fd82d6535c0c2688c1c304
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33230477"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46036926"
 ---
-# <a name="compiler-error-c2512"></a>C2512 błąd kompilatora
+# <a name="compiler-error-c2512"></a>Błąd kompilatora C2512
 
-> "*identyfikator*": nie niedostępny odpowiedni konstruktor domyślny  
+> "*identyfikator*": nie niedostępny odpowiedni konstruktor domyślny
 
-A *domyślnego konstruktora*, konstruktora, który wymaga bez argumentów nie jest dostępna dla określonej klasy, struktury lub związku. Kompilator udostępnia domyślny konstruktor tylko wtedy, gdy znajdują się ma konstruktorów zdefiniowanych przez użytkownika.
+A *domyślnego konstruktora*, Konstruktor, który wymaga żadnych argumentów, nie jest dostępna dla określonej klasy, struktury lub Unii. Tylko wtedy, gdy znajdują się zdefiniowane przez użytkownika konstruktorów, kompilator dostarcza Konstruktor domyślny.
 
-Jeśli podasz konstruktora, który przyjmuje parametr inny niż void, a chcesz zezwolić na klasie ma zostać utworzony bez parametrów (na przykład jako elementy tablicy), musisz także podać konstruktora domyślnego. Domyślny konstruktor może być konstruktora z wartościami domyślnymi dla wszystkich parametrów.
+Jeśli podasz konstruktora, który przyjmuje parametr niż void, a chcesz zezwolić na klasy do utworzenia bez parametrów (na przykład, jako elementów tablicy), należy również podać domyślnego konstruktora. Konstruktor domyślny może być konstruktorem z wartościami domyślnymi dla wszystkich parametrów.
 
 ## <a name="example"></a>Przykład
 
-Jest częstą przyczyną błędu C2512 podczas definiowania konstruktora klasy lub struktury, która przyjmuje argumenty, a następnie spróbujesz Zadeklaruj wystąpienie klasy lub struktury bez żadnych argumentów. Na przykład `struct B` poniżej deklaruje konstruktora, który wymaga `char *` argumentu, ale nie taki, który nie przyjmuje żadnych argumentów. W `main`, zadeklarowano wystąpienia b, ale nie podano argumentu. Kompilator generuje C2512, ponieważ nie można odnaleźć domyślnego konstruktora dla B.
+Częstą przyczyną błędu C2512 jest podczas definiowania konstruktora klasy lub struktury, która przyjmuje argumenty, a następnie spróbujesz deklarować wystąpienia klasy lub struktury, bez żadnych argumentów. Na przykład `struct B` poniżej deklaruje Konstruktor, który wymaga `char *` argumentów, ale nie jedna, która nie przyjmuje żadnych argumentów. W `main`, wystąpienie B jest zadeklarowana, ale nie zostaną dostarczone argumenty. Kompilator generuje C2512, ponieważ nie można odnaleźć domyślnego konstruktora dla B.
 
 ```cpp
 // C2512.cpp
@@ -50,4 +50,4 @@ int main() {
 }
 ```
 
-Można rozwiązać ten problem, definiując domyślnego konstruktora dla struktury lub klasy, takich jak `B() {}`, lub konstruktora, w którym wszystkie argumenty mają przypisane wartości domyślne, takie jak `B (char * = nullptr) {}`.
+Możesz rozwiązać ten problem, definiując domyślnego konstruktora dla klasy lub struktury, takich jak `B() {}`, lub konstruktora, w którym wszystkie argumenty mają przypisane wartości domyślne, takie jak `B (char * = nullptr) {}`.

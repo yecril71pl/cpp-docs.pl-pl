@@ -1,5 +1,5 @@
 ---
-title: Kompilatora (poziom 2) ostrzeżenie C4007 | Dokumentacja firmy Microsoft
+title: Kompilator ostrzeżenie (poziom 2) C4007 | Dokumentacja firmy Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,14 +16,15 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 82e902b3e2f18332ac6a9804a14c1c39b58d74c4
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: e3c9903af3537e9e4003a913fc12412c9b87d614
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33291729"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46044421"
 ---
-# <a name="compiler-warning-level-2-c4007"></a>Kompilator C4007 ostrzegawcze (poziom 2)
-"Funkcja": musi być "atrybutu"  
-  
- Nie podano jawnie wymaganego atrybutu dla funkcji. Na przykład funkcja **głównego** musi mieć `__cdecl` atrybutu. Kompilator wymusza atrybutu.
+# <a name="compiler-warning-level-2-c4007"></a>Kompilator ostrzeżenie (poziom 2) C4007
+
+'Funkcja': musi być "atrybut"
+
+Wymaganego atrybutu dla funkcji nie został jawnie określony. Na przykład funkcja **głównego** musi mieć `__cdecl` atrybutu. Kompilator wymusza atrybutu.

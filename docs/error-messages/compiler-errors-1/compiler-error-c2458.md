@@ -1,5 +1,5 @@
 ---
-title: C2458 błąd kompilatora | Dokumentacja firmy Microsoft
+title: Błąd kompilatora C2458 | Dokumentacja firmy Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,23 +16,24 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0822c12e109cd5a89a8e1050197367b12a24efa9
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 94a95ab1eab00424774d5117e3ae37685a2ac1fc
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33196769"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46035472"
 ---
-# <a name="compiler-error-c2458"></a>C2458 błąd kompilatora
-"identyfikator": ponowna definicja w ramach definicji  
-  
- Klasy, struktury, Unią lub wyliczenie zostało ponownie zdefiniowane w jego własnej deklaracji.  
-  
- Poniższy przykład generuje C2458:  
-  
-```  
-// C2458.cpp  
-class C {  
-   enum i { C };   // C2458  
-};  
+# <a name="compiler-error-c2458"></a>Błąd kompilatora C2458
+
+'Identyfikator': ponowna definicja w ramach definicji
+
+Klasy, struktury, Unii lub wyliczenie zostanie ponownie zdefiniowana w jego własnej deklaracji.
+
+Poniższy przykład spowoduje wygenerowanie C2458:
+
+```
+// C2458.cpp
+class C {
+   enum i { C };   // C2458
+};
 ```

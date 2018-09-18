@@ -21,12 +21,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f1943895b8db663239ed1bfb27b8e97fc3c416e5
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 1173633cd720ed6ee0e4aacdf75a8b305fdbfe4d
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43767909"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46043368"
 ---
 # <a name="celementtraitsbase-class"></a>Klasa CElementTraitsBase
 
@@ -35,13 +35,13 @@ Ta klasa zawiera kopię domyślnego i przenoszenie metody do klasy kolekcji.
 ## <a name="syntax"></a>Składnia
 
 ```
-template<typename T>  
+template<typename T>
 class CElementTraitsBase
 ```
 
 #### <a name="parameters"></a>Parametry
 
-*T*  
+*T*<br/>
 Typ danych, które mają być przechowywane w kolekcji.
 
 ## <a name="members"></a>Elementy członkowskie
@@ -83,13 +83,13 @@ static void CopyElements(
 
 ### <a name="parameters"></a>Parametry
 
-*pDest*  
+*pDest*<br/>
 Wskaźnik do pierwszego elementu, który będzie otrzymywać dane skopiowane.
 
-*pSrc*  
+*pSrc*<br/>
 Wskaźnik do pierwszego elementu, aby skopiować.
 
-*nElements*  
+*nElements*<br/>
 Liczba elementów do skopiowania.
 
 ### <a name="remarks"></a>Uwagi
@@ -125,13 +125,13 @@ static void RelocateElements(
 
 ### <a name="parameters"></a>Parametry
 
-*pDest*  
+*pDest*<br/>
 Wskaźnik do pierwszego elementu, który będzie otrzymywać dane przenoszone.
 
-*pSrc*  
+*pSrc*<br/>
 Wskaźnik do pierwszego elementu przenosić.
 
-*nElements*  
+*nElements*<br/>
 Liczba elementów do przeniesienia.
 
 ### <a name="remarks"></a>Uwagi

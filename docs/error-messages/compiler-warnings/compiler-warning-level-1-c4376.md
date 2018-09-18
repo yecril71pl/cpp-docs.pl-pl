@@ -1,5 +1,5 @@
 ---
-title: Kompilatora (poziom 1) ostrzeżenie C4376 | Dokumentacja firmy Microsoft
+title: Kompilator ostrzeżenie (poziom 1) C4376 | Dokumentacja firmy Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,31 +16,33 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 615faaaa586e60a32ce670cd554a8b0b1c157a25
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 1923f2aed19de5e7f438407c25640821a2fa49c2
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33277143"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46039624"
 ---
-# <a name="compiler-warning-level-1-c4376"></a>Kompilator C4376 ostrzegawcze (poziom 1)
-Specyfikator dostępu "old_specifier:" nie jest już obsługiwany: Użyj "new_specifier:" zamiast niego  
-  
- Aby uzyskać więcej informacji na temat określania typu i element członkowski ułatwień dostępu w metadanych, zobacz [wpisz widoczność](../../dotnet/how-to-define-and-consume-classes-and-structs-cpp-cli.md#BKMK_Type_visibility) i [widoczności elementów członkowskich](../../dotnet/how-to-define-and-consume-classes-and-structs-cpp-cli.md#BKMK_Member_visibility) w [jak: Zdefiniuj i korzystać z klas i struktur (C + +/ CLI) ](../../dotnet/how-to-define-and-consume-classes-and-structs-cpp-cli.md).  
-  
-## <a name="example"></a>Przykład  
- Poniższy przykład generuje C4376.  
-  
-```  
-// C4376.cpp  
-// compile with: /clr /W1 /c  
-public ref class G {  
-public public:   // C4376  
-   void m2();  
-};  
-  
-public ref class H {  
-public:   // OK  
-   void m2();  
-};  
+# <a name="compiler-warning-level-1-c4376"></a>Kompilator ostrzeżenie (poziom 1) C4376
+
+Specyfikator dostępu "old_specifier:" nie jest już obsługiwany: Użyj "new_specifier:" zamiast niego
+
+Aby uzyskać więcej informacji na temat określania dostępność typów i elementów członkowskich w metadanych, zobacz [typ widoczności](../../dotnet/how-to-define-and-consume-classes-and-structs-cpp-cli.md#BKMK_Type_visibility) i [widoczności składowych](../../dotnet/how-to-define-and-consume-classes-and-structs-cpp-cli.md#BKMK_Member_visibility) w [porady: definiowanie i Consume Classes and Structs (C + +/ interfejsu wiersza polecenia) ](../../dotnet/how-to-define-and-consume-classes-and-structs-cpp-cli.md).
+
+## <a name="example"></a>Przykład
+
+Poniższy przykład spowoduje wygenerowanie C4376.
+
+```
+// C4376.cpp
+// compile with: /clr /W1 /c
+public ref class G {
+public public:   // C4376
+   void m2();
+};
+
+public ref class H {
+public:   // OK
+   void m2();
+};
 ```

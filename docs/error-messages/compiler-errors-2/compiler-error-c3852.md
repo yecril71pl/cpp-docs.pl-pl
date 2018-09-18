@@ -1,5 +1,5 @@
 ---
-title: C3852 błąd kompilatora | Dokumentacja firmy Microsoft
+title: Błąd kompilatora C3852 | Dokumentacja firmy Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,48 +16,49 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 439e6518c1e1f94918671f2e710ccf1a86621f16
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 63bbc18adbe9efb4236763efad9d943809db0547
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33272269"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46039603"
 ---
-# <a name="compiler-error-c3852"></a>C3852 błąd kompilatora
-"członek" o typie 'type': Inicjalizacja agregująca nie może zainicjować tego elementu członkowskiego  
-  
- Nastąpiła próba można przypisać inicjowania domyślnej w ramach inicjalizacji agregacji do elementu członkowskiego danych, który nie może zostać wyświetlony inicjowanie domyślnych w inicjalizacji agregacji.  
-  
- Poniższe przykłady Generowanie C3852:  
-  
-```  
-// C3852.cpp  
-struct S  
-{  
-   short s;  
-};  
-  
-struct S1  
-{  
-   int i;  
-   const S s;  
-};  
-  
-struct S2  
-{  
-   int i;  
-   char & rc;  
-};  
-  
-int main()  
-{  
-   S1 s1 = { 1 };   // C3852 const member   
-   // try the following line instead  
-   // S1 s1 = { 1, 2 };  
-  
-   S2 s2 = { 2 };   // C3852 reference member  
-   // try the following line instead  
-   // char c = 'a';  
-   S2 s2 = { 2, c };  
-}  
+# <a name="compiler-error-c3852"></a>Błąd kompilatora C3852
+
+"członek" o typie "type": inicjowanie agregacji nie może zainicjować tej składowej
+
+Próbowano przypisać inicjowanie domyślne jako część agregacji element członkowski danych, który nie może otrzymać inicjowanie domyślne podczas inicjowania agregacji.
+
+Poniższe przykłady generują C3852:
+
+```
+// C3852.cpp
+struct S
+{
+   short s;
+};
+
+struct S1
+{
+   int i;
+   const S s;
+};
+
+struct S2
+{
+   int i;
+   char & rc;
+};
+
+int main()
+{
+   S1 s1 = { 1 };   // C3852 const member
+   // try the following line instead
+   // S1 s1 = { 1, 2 };
+
+   S2 s2 = { 2 };   // C3852 reference member
+   // try the following line instead
+   // char c = 'a';
+   S2 s2 = { 2, c };
+}
 ```

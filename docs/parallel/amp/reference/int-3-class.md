@@ -1,5 +1,5 @@
 ---
-title: int_3 — klasa | Dokumentacja firmy Microsoft
+title: int_3, klasa | Dokumentacja firmy Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -82,15 +82,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 26add4a57fac2cb2dfed2a5bd32f2fe0a477e938
-ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
+ms.openlocfilehash: 2d1f0f26856d6da002f5ba74bbfa8e98f27e4f02
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33688950"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46042588"
 ---
 # <a name="int3-class"></a>int_3 — Klasa
-Reprezentuje krótki wektorem liczb całkowitych trzy.  
+Reprezentuje krótki Wektor trzech liczb całkowitych.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -100,7 +100,7 @@ class int_3;
   
 ## <a name="members"></a>Elementy członkowskie  
   
-### <a name="public-typedefs"></a>Definicje typów publicznych  
+### <a name="public-typedefs"></a>Publiczne definicje typów  
   
 |Nazwa|Opis|  
 |----------|-----------------|  
@@ -110,7 +110,7 @@ class int_3;
   
 |Nazwa|Opis|  
 |----------|-----------------|  
-|[int_3 Constructor](#ctor)|Przeciążone. Domyślny konstruktor, inicjuje wszystkie elementy z 0.|  
+|[int_3 Constructor](#ctor)|Przeciążone. Domyślny konstruktor, inicjuje wszystkie elementy wartością 0.|  
   
 ### <a name="public-methods"></a>Metody publiczne  
   
@@ -173,11 +173,11 @@ class int_3;
 |int_3::operator-=||  
 |int_3::operator >> =||  
   
-### <a name="public-constants"></a>Publiczny — stałe  
+### <a name="public-constants"></a>Publiczne stałe  
   
 |Nazwa|Opis|  
 |----------|-----------------|  
-|[Size — stała](#size)||  
+|[rozmiar — stała](#size)||  
   
 ### <a name="public-data-members"></a>Publiczne elementy członkowskie danych  
   
@@ -224,7 +224,7 @@ class int_3;
 
 ## <a name="ctor"></a> int_3 
 
-Domyślny konstruktor, inicjuje wszystkie elementy z 0.  
+Domyślny konstruktor, inicjuje wszystkie elementy wartością 0.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -259,20 +259,20 @@ explicit inline int_3(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `_V0`  
- Wartość do zainicjowania elementu 0.  
+*_V0*<br/>
+Wartość do zainicjowania elementu 0.  
   
- `_V1`  
- Wartość zainicjować element 1.  
+*_V1*<br/>
+Wartość do zainicjowania elementu 1.  
   
- `_V2`  
- Wartość zainicjować element 2.  
+*_V2*<br/>
+Wartość można zainicjować element 2.  
   
- `_V`  
- Wartość dla inicjowania.  
+*_V*<br/>
+Wartość inicjalizacji.  
   
- `_Other`  
- Obiekt używany do inicjowania.  
+*_Inne*<br/>
+Obiekt używany do inicjowania.  
   
 ## <a name="size"></a> Rozmiar 
 

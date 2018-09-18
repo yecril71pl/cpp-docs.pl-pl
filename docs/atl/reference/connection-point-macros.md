@@ -17,12 +17,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 226c0b0d0f1fc316d5b78884a4d6e260296c52f9
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: a5b025e29c93cffe9c600646a2475f7e3230fd03
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43752196"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46039546"
 ---
 # <a name="connection-point-macros"></a>Makra punktów połączenia
 
@@ -49,7 +49,7 @@ BEGIN_CONNECTION_POINT_MAP(x)
 
 ### <a name="parameters"></a>Parametry
 
-*x*  
+*x*<br/>
 [in] Nazwa klasy zawierającej punktów połączenia.
 
 ### <a name="remarks"></a>Uwagi
@@ -73,10 +73,10 @@ CONNECTION_POINT_ENTRY_P(piid) // (Visual Studio 2017)
 
 ### <a name="parameters"></a>Parametry
 
-*IID*  
+*IID*<br/>
 [in] Identyfikator GUID interfejsu dodawany do mapy punktu połączenia. 
 
-*piid*  
+*piid*<br/>
 [in] Wskaźnik do interfejsu są adde identyfikatora GUID.
 
 ### <a name="remarks"></a>Uwagi
@@ -111,5 +111,5 @@ Aby uzyskać więcej informacji na temat punktów połączenia ATL, zobacz artyk
 
 ## <a name="see-also"></a>Zobacz też
 
-[Makra](../../atl/reference/atl-macros.md)   
+[Makra](../../atl/reference/atl-macros.md)<br/>
 [Funkcje globalne punktu połączenia](../../atl/reference/connection-point-global-functions.md)

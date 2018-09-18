@@ -16,22 +16,23 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7f121310318cbb91b1f983ec240b42d5d9ea34b8
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: f9c533ada388f876443021fbf159320f171a07a5
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33299965"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46041848"
 ---
 # <a name="command-line-error-d8036"></a>Błąd D8036 wiersza polecenia
-"/ opcja" nie jest dozwolony z wieloma plikami źródłowymi  
-  
- Nie można użyć tych opcji kompilatora z wieloma plikami źródłowymi:  
-  
--   Nazwa zestawu pliku listy (/ Fa)  
-  
--   Zmień nazwę pliku obiektu (/ Fo)  
-  
--   Tworzenie źródła informacji przeglądarki bez zmienne lokalne (/ Fr)  
-  
--   Tworzenie źródła informacji przeglądarki, zawierający zmienne lokalne (/ FR)
+
+"/ opcja" nie jest dozwolony z wieloma plikami źródłowymi
+
+Te opcje kompilatora nie można używać z wieloma plikami źródłowymi:
+
+- Nazwa zestawu pliku listy (/ Fa)
+
+- Zmień nazwę pliku obiektu (/ Fo)
+
+- Utwórz informacje o przeglądarce źródła bez zmiennych lokalnych (/ Fr)
+
+- Tworzenie informacji o przeglądarce źródła, które obejmują zmienne lokalne (/ FR)

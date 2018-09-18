@@ -18,15 +18,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8e78c8ace8b482baa29fbabaf102a8a1bccadd06
-ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
+ms.openlocfilehash: 0a194e45fd79ae59dc91abb21a9fb038d3ec4008
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "33325399"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46041691"
 ---
 # <a name="ltvaluegt-visual-c"></a>&lt;wartość&gt; (Visual C++)
-\<Wartość > znacznik umożliwia opis właściwości i metod dostępu właściwości. Należy pamiętać, że podczas dodawania właściwości za pomocą Kreatora kodu w programie Visual Studio zintegrowane środowisko programistyczne, spowoduje to dodanie [ \<podsumowania >](../ide/summary-visual-cpp.md) tag nowej właściwości. Następnie należy ręcznie dodać \<wartość > tag do opisywania wartość, która reprezentuje właściwość.  
+\<Wartość > znacznik umożliwia opisują właściwości i metod dostępu właściwości. Należy pamiętać, że po dodaniu właściwości za pomocą Kreatora kodu w programie Visual Studio zintegrowanego środowiska programistycznego, spowoduje to dodanie [ \<podsumowania >](../ide/summary-visual-cpp.md) tag w przypadku nowej właściwości. Następnie należy ręcznie dodać \<wartość > tag do opisania wartość, która reprezentuje właściwość.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -35,11 +35,11 @@ ms.locfileid: "33325399"
 ```  
   
 #### <a name="parameters"></a>Parametry  
- `property-description`  
- Opis właściwości.  
+*Opis właściwości*<br/>
+Opis właściwości.  
   
 ## <a name="remarks"></a>Uwagi  
- Kompiluj z użyciem [/doc](../build/reference/doc-process-documentation-comments-c-cpp.md) na przetwarzanie komentarzy dokumentacji do pliku.  
+ Kompiluj przy użyciu [/doc](../build/reference/doc-process-documentation-comments-c-cpp.md) do Przetwarzaj komentarze dokumentacji do pliku.  
   
 ## <a name="example"></a>Przykład  
   

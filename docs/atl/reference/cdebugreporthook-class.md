@@ -23,12 +23,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 00a7bfd149bb83dc31327e3ea235479532213e03
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: fb0bf24657a47cbe1cf1129f0202d120fb1d017e
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43760835"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46039067"
 ---
 # <a name="cdebugreporthook-class"></a>Klasa CDebugReportHook
 
@@ -84,13 +84,13 @@ CDebugReportHook(
 
 ### <a name="parameters"></a>Parametry
 
-*szMachineName*  
+*szMachineName*<br/>
 Nazwa maszyny, do którego mają być wysyłane dane wyjściowe debugowania. Wartość domyślna to komputer lokalny.
 
-*szPipeName*  
+*szPipeName*<br/>
 Nazwa nazwanego potoku, do którego mają być wysyłane dane wyjściowe debugowania.
 
-*dwTimeout*  
+*dwTimeout*<br/>
 Czas w milisekundach, że ta klasa będzie czekać nazwany potok staną się dostępne.
 
 ##  <a name="dtor"></a>  CDebugReportHook:: ~ CDebugReportHook
@@ -114,13 +114,13 @@ static int __cdecl CDebugReportHookProc(
 
 ### <a name="parameters"></a>Parametry
 
-*reportType*  
+*reportType*<br/>
 Typ raportu (_CRT_WARN, _CRT_ERROR lub _CRT_ASSERT).
 
-*komunikat*  
+*komunikat*<br/>
 Ciąg komunikatu.
 
-*returnValue*  
+*returnValue*<br/>
 Wartość, która ma zostać zwrócony przez [_CrtDbgReport](../../c-runtime-library/reference/crtdbgreport-crtdbgreportw.md).
 
 ### <a name="return-value"></a>Wartość zwracana
@@ -169,10 +169,10 @@ BOOL SetPipeName(
 
 ### <a name="parameters"></a>Parametry
 
-*szMachineName*  
+*szMachineName*<br/>
 Nazwa maszyny, do którego mają być wysyłane dane wyjściowe debugowania.
 
-*szPipeName*  
+*szPipeName*<br/>
 Nazwa nazwanego potoku, do którego mają być wysyłane dane wyjściowe debugowania.
 
 ### <a name="return-value"></a>Wartość zwracana
@@ -189,7 +189,7 @@ void SetTimeout(DWORD dwTimeout);
 
 ### <a name="parameters"></a>Parametry
 
-*dwTimeout*  
+*dwTimeout*<br/>
 Czas w milisekundach, że ta klasa będzie czekać nazwany potok staną się dostępne.
 
 ## <a name="see-also"></a>Zobacz też

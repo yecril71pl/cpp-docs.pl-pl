@@ -1,5 +1,5 @@
 ---
-title: C2362 błąd kompilatora | Dokumentacja firmy Microsoft
+title: Błąd kompilatora C2362 | Dokumentacja firmy Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,42 +16,43 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 53b0b77930acba6ecf2d0f3c6748ba52e9b28e0a
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: f78b850f95614255fed372570742a0f88a9e30e2
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33222179"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46035984"
 ---
-# <a name="compiler-error-c2362"></a>C2362 błąd kompilatora
-Inicjalizacja "identyfikatora" jest pomijana przy "etykieta goto"  
-  
- Podczas kompilowania za pomocą [/Za](../../build/reference/za-ze-disable-language-extensions.md), przeskakiwanie do etykiet uniemożliwia zainicjowanie identyfikator.  
-  
- Nie można przeskoczyć poza deklaracji z inicjatora, chyba że deklaracja jest ujęte w blok nie zostanie wprowadzona lub zmiennej został już zainicjowany.  
-  
- Poniższy przykład generuje C2326:  
-  
-```  
-// C2362.cpp  
-// compile with: /Za  
-int main() {  
-   goto label1;  
-   int i = 1;      // C2362, initialization skipped  
-label1:;  
-}  
-```  
-  
- Możliwe rozwiązanie:  
-  
-```  
-// C2362b.cpp  
-// compile with: /Za  
-int main() {  
-   goto label1;  
-   {  
-      int j = 1;   // OK, this block is never entered  
-   }  
-label1:;  
-}  
+# <a name="compiler-error-c2362"></a>Błąd kompilatora C2362
+
+Inicjalizacja 'Identyfikator' jest pomijana przy "Przejdź do etykiety"
+
+Podczas kompilowania za pomocą [/Za](../../build/reference/za-ze-disable-language-extensions.md), przeskakiwanie do etykiety zapobiega inicjowany przez identyfikator.
+
+Nie można przeskoczyć poza deklaracją za pomocą inicjatora, chyba że deklaracja jest ujęty w bloku, który nie jest wprowadzone lub zmiennej został już zainicjowany.
+
+Poniższy przykład spowoduje wygenerowanie C2326:
+
+```
+// C2362.cpp
+// compile with: /Za
+int main() {
+   goto label1;
+   int i = 1;      // C2362, initialization skipped
+label1:;
+}
+```
+
+Możliwe rozwiązanie:
+
+```
+// C2362b.cpp
+// compile with: /Za
+int main() {
+   goto label1;
+   {
+      int j = 1;   // OK, this block is never entered
+   }
+label1:;
+}
 ```

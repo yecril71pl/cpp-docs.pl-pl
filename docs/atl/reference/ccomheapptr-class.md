@@ -18,12 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c7a5b30ca507387b1529c9e9726e48735c844fac
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 3455e88c5a9852c902702544a0f915e8d20dc64e
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43764832"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46043238"
 ---
 # <a name="ccomheapptr-class"></a>Klasa CComHeapPtr
 
@@ -32,13 +32,13 @@ Klasa inteligentnego wskaźnika do zarządzania wskaźniki stosu.
 ## <a name="syntax"></a>Składnia
 
 ```
-template<typename T>  
+template<typename T>
 class CComHeapPtr : public CHeapPtr<T, CComAllocator>
 ```
 
 #### <a name="parameters"></a>Parametry
 
-*T*  
+*T*<br/>
 Typ obiektu, który ma być przechowywany na stosie.
 
 ## <a name="members"></a>Elementy członkowskie
@@ -76,7 +76,7 @@ explicit CComHeapPtr(T* pData) throw();
 
 ### <a name="parameters"></a>Parametry
 
-*pData*  
+*pData*<br/>
 Istniejące `CComHeapPtr` obiektu.
 
 ### <a name="remarks"></a>Uwagi
@@ -85,7 +85,7 @@ Opcjonalnie można utworzyć wskaźnik stosu przy użyciu istniejącego `CComHea
 
 ## <a name="see-also"></a>Zobacz też
 
-[Klasa CHeapPtr](../../atl/reference/cheapptr-class.md)   
-[Klasa CHeapPtrBase](../../atl/reference/cheapptrbase-class.md)   
-[Klasa CComAllocator](../../atl/reference/ccomallocator-class.md)   
+[Klasa CHeapPtr](../../atl/reference/cheapptr-class.md)<br/>
+[Klasa CHeapPtrBase](../../atl/reference/cheapptrbase-class.md)<br/>
+[Klasa CComAllocator](../../atl/reference/ccomallocator-class.md)<br/>
 [Klasa — Przegląd](../../atl/atl-class-overview.md)

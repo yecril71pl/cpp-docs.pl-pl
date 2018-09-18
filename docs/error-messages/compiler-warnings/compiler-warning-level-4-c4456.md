@@ -1,5 +1,5 @@
 ---
-title: Kompilatora (poziom 4) ostrzeżenie C4456 | Dokumentacja firmy Microsoft
+title: Kompilator ostrzeżenie (poziom 4) C4456 | Dokumentacja firmy Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,24 +16,24 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2ca4af4e7353595dc687b77fa87acf70861bcb6f
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 9ab6939fe37260b906a43c4e2ff6683733348952
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33295915"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46039897"
 ---
-# <a name="compiler-warning-level-4-c4456"></a>Kompilator C4456 ostrzegawcze (poziom 4)
-  
+# <a name="compiler-warning-level-4-c4456"></a>Kompilator ostrzeżenie (poziom 4) C4456
+
 > Deklaracja "*identyfikator*" powoduje ukrycie poprzedniej deklaracji lokalnej
-  
-Deklaracja *identyfikator* w zakresie lokalnej powoduje ukrycie deklaracji poprzedniej deklaracji lokalnej o tej samej nazwie. To ostrzeżenie informuje o tym, który odwołuje się do *identyfikator* w zakresie lokalnym rozpoznać do lokalnie zgłoszonego wersji nie poprzedniej lokalny, który może lub nie jest celem użytkownika. Aby rozwiązać ten problem, zaleca się, że możesz nadać nazwy zmiennych lokalnych, które nie są w konflikcie z innych lokalnych nazw.  
-    
+
+Deklaracja *identyfikator* w zakresie lokalnym ukrywa deklarację poprzedniej deklaracji lokalnej o tej samej nazwie. To ostrzeżenie informuje o tym, który odwołuje się do *identyfikator* w zakresie lokalnym rozpoznać lokalnie zadeklarowanych wersji, a nie lokalny poprzedniej, która może być lub może nie być zgodne z zamiarami użytkownika. Aby rozwiązać ten problem, zalecane jest nadać nazwy zmiennych lokalnych, które nie wchodzą w konflikt z nazwami innych lokalnych.
+
 ## <a name="example"></a>Przykład
-  
-Poniższy przykład generuje C4456, ponieważ pętli kontrolować zmiennej `int x` i zmienna lokalna `double x` w `member_fn` o takich samych nazwach. Aby rozwiązać ten problem, użyj różnych nazw dla zmiennych lokalnych.  
-  
-```cpp  
+
+Poniższy przykład generuje C4456, ponieważ kontrolować pętli, zmienna `int x` i zmienną lokalną `double x` w `member_fn` takich samych nazwach. Aby rozwiązać ten problem, należy użyć innej nazwy dla zmiennych lokalnych.
+
+```cpp
 // C4456_hide.cpp
 // compile with: cl /W4 /c C4456_hide.cpp
 
@@ -42,8 +42,8 @@ struct S {
         double x = 0;
         for (int x = 0; x < 10; ++x) {  // C4456
             u += x; // uses local int x
-        } 
+        }
         x += u; // uses local double x
     }
 } s;
-```  
+```

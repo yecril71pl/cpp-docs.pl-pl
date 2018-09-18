@@ -16,14 +16,15 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 39835900b1286fbc4e23f10b6135c625646c6a0f
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 8481b23970bb95125258fde680897b9cb2bbd67d
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33198368"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46040970"
 ---
 # <a name="fatal-error-c1603"></a>Błąd krytyczny C1603
-obiekt docelowy gałęzi zestawu wbudowanego poza zakresem według bajtów "number"  
-  
- Obliczona odległość między JCXZ lub JECXZ instrukcję i jego etykiety określonego obiektu docelowego była większa niż 128 bajtów. Zaktualizuj kod, aby bliżej instrukcję etykiety.
+
+cel rozgałęzienia zestawu wbudowanego poza zakresem według bajtów "liczba"
+
+Obliczona odległość między JCXZ lub JECXZ instrukcję etykiety określonego obiektu docelowego była większa niż 128 bajtów. Należy zaktualizować kod, aby etykieta jest bliżej instrukcji.

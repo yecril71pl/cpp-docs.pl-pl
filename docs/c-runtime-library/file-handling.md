@@ -18,12 +18,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a54e0ba354e76996d03503e116008aa200b0905b
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: a471d6743da0cf803de72a9f257dfa67bc0dcbd1
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43199360"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46036361"
 ---
 # <a name="file-handling"></a>Obsługa plików
 
@@ -86,7 +86,7 @@ Te procedury umożliwiają zmienić reprezentację pliku między `FILE` struktur
 |[_get_osfhandle](../c-runtime-library/reference/get-osfhandle.md)|Uchwyt zwracany plików systemu operacyjnego skojarzony z istniejącego deskryptora pliku środowiska wykonawczego języka C|
 |[_open_osfhandle](../c-runtime-library/reference/open-osfhandle.md)|Powoduje skojarzenie deskryptora pliku środowiska wykonawczego języka C z istniejący uchwyt pliku systemu operacyjnego.|
 
- Następujące funkcje systemu Win32 jest również otworzyć pliki i potoki:
+Następujące funkcje systemu Win32 jest również otworzyć pliki i potoki:
 
 - [CreateFile](/windows/desktop/api/fileapi/nf-fileapi-createfilea)
 

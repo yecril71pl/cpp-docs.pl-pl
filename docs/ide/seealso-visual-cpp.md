@@ -1,5 +1,5 @@
 ---
-title: '&lt;SeeAlso&gt; (Visual C++) | Dokumentacja firmy Microsoft'
+title: '&lt;SeeAlso —&gt; (Visual C++) | Dokumentacja firmy Microsoft'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,15 +18,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6a726a2fa1694fd346a6632fdc5e40bd53547fc8
-ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
+ms.openlocfilehash: 9983ace79dd12b656f2dd9a1c5cb8887b0816c5b
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "33334311"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46044005"
 ---
-# <a name="ltseealsogt-visual-c"></a>&lt;SeeAlso&gt; (Visual C++)
-\<Seealso > należy określić tekst, który ma być wyświetlane w sekcji Zobacz też. Użyj [ \<zobacz >](../ide/see-visual-cpp.md) można określić łącze od w tekście.  
+# <a name="ltseealsogt-visual-c"></a>&lt;SeeAlso —&gt; (Visual C++)
+\<SeeAlso — > należy określić tekst, który możesz chcieć pojawiają się w sekcji Zobacz też. Użyj [ \<zobacz >](../ide/see-visual-cpp.md) określić łącze między w tekście.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -35,22 +35,22 @@ ms.locfileid: "33334311"
 ```  
   
 #### <a name="parameters"></a>Parametry  
- `member`  
- Odwołanie do elementu członkowskiego lub pola, które jest dostępne do wywoływania z bieżącym środowisku kompilacji.  Nazwę należy ująć w cudzysłów pojedynczym lub podwójnym.  
+*Element członkowski*<br/>
+Odwołanie do elementu członkowskiego lub pola, które są dostępne do wywoływania z bieżącym środowisku kompilacji.  Nazwę należy ująć w pojedyncze lub podwójne znaki cudzysłowu.  
   
- Kompilator sprawdza, czy element podanego kodu istnieje i jest rozpoznawany jako `member` do nazwy elementu w danych wyjściowych XML.  Kompilator generuje ostrzeżenie, jeśli nie znajdzie `member`.  
+ Kompilator sprawdza, czy dany element kodu istnieje i jest rozpoznawana jako `member` do nazwy elementu w danych wyjściowych XML.  Kompilator generuje ostrzeżenie, jeśli nie znajdzie `member`.  
   
  Aby uzyskać informacje na temat tworzenia cref odwołanie do typu ogólnego, zobacz [ \<zobacz >](../ide/see-visual-cpp.md).  
   
 ## <a name="remarks"></a>Uwagi  
- Kompiluj z użyciem [/doc](../build/reference/doc-process-documentation-comments-c-cpp.md) na przetwarzanie komentarzy dokumentacji do pliku.  
+ Kompiluj przy użyciu [/doc](../build/reference/doc-process-documentation-comments-c-cpp.md) do Przetwarzaj komentarze dokumentacji do pliku.  
   
- Zobacz [ \<podsumowania >](../ide/summary-visual-cpp.md) przykład za pomocą \<seealso >.  
+ Zobacz [ \<podsumowania >](../ide/summary-visual-cpp.md) na przykład za pomocą \<SeeAlso — >.  
   
- Kompilator Visual C++ podejmie próbę rozpoznawania odwołań cref w jednym przebiegu za pośrednictwem komentarzy do dokumentacji.  W związku z tym jeśli przy użyciu reguł wyszukiwania C++, symbol nie znaleziono przez kompilator, odwołanie zostanie oznaczona jako nierozwiązane.  
+ Kompilator języka Visual C++ będzie próbował rozpoznać odwołania cref w jednym przebiegu za pomocą komentarzy dokumentacji.  W związku z tym, jeśli przy użyciu reguł wyszukiwania C++, symbolu nie można odnaleźć kompilatora odwołania zostaną oznaczone jako nierozwiązane.  
   
 ## <a name="example"></a>Przykład  
- W poniższym przykładzie cref odwołuje się nierozwiązane symbolu. Komentarz XML dla cref do B::Test będzie `<seealso cref="!:B::Test" />`, podczas gdy odwołanie do A::Test jest poprawnie sformułowanym `<seealso cref="M:A.Test" />`.  
+ W poniższym przykładzie nierozpoznanych symboli jest przywoływany w cref. Komentarz XML dla cref do B::Test będzie `<seealso cref="!:B::Test" />`, odwołanie do A::Test jest poprawnie sformułowanym `<seealso cref="M:A.Test" />`.  
   
 ```  
 // xml_seealso_tag.cpp  

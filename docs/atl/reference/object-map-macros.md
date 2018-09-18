@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1061b105b7fd1e344223da3850275910c164774b
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 3b85d157cd6124bb0ef6e6167a415c018e14b046
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43761855"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46040443"
 ---
 # <a name="object-map-macros"></a>Makra mapy obiektów
 
@@ -47,7 +47,7 @@ DECLARE_OBJECT_DESCRIPTION( x )
 
 ### <a name="parameters"></a>Parametry
 
-*x*  
+*x*<br/>
 [in] Opis obiektu klasy.
 
 ### <a name="remarks"></a>Uwagi
@@ -74,10 +74,10 @@ OBJECT_ENTRY_AUTO( clsid, class )
 
 ### <a name="parameters"></a>Parametry
 
-*Identyfikator klasy*  
+*Identyfikator klasy*<br/>
 [in] Identyfikator CLSID klasy COM, zaimplementowany przez klasę C++ o nazwie *klasy*.
 
-*class*  
+*class*<br/>
 [in] Nazwa klasy języka C++, implementacja klasy COM, reprezentowane przez *clsid*.
 
 ### <a name="remarks"></a>Uwagi
@@ -106,10 +106,10 @@ OBJECT_ENTRY_NON_CREATEABLE_EX_AUTO( clsid, class )
 
 ### <a name="parameters"></a>Parametry
 
-*Identyfikator klasy*  
+*Identyfikator klasy*<br/>
 [in] Identyfikator CLSID klasy COM, zaimplementowany przez klasę C++ o nazwie *klasy*.
 
-*class*  
+*class*<br/>
 [in] Nazwa klasy języka C++, implementacja klasy COM, reprezentowane przez *clsid*.
 
 ### <a name="remarks"></a>Uwagi

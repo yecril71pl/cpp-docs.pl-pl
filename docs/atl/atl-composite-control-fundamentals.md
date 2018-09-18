@@ -14,12 +14,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6d44abba005295fbc328f005c48a16611a2b5f25
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 16358128c2da3c021b392bb4b461996ad38320e8
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43765833"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46045565"
 ---
 # <a name="atl-composite-control-fundamentals"></a>Podstawy złożonych kontrolek ALT
 
@@ -39,7 +39,7 @@ Kreator projektu ATL i **Dodaj klasę** okno dialogowe zautomatyzować tworzenie
 
 ## <a name="see-also"></a>Zobacz też
 
-[Pojęcia](../atl/active-template-library-atl-concepts.md)   
-[Funkcje globalne kontrolek złożonych](../atl/reference/composite-control-global-functions.md)   
+[Pojęcia](../atl/active-template-library-atl-concepts.md)<br/>
+[Funkcje globalne kontrolek złożonych](../atl/reference/composite-control-global-functions.md)<br/>
 [Makra kontrolek złożonych](../atl/reference/composite-control-macros.md)
 

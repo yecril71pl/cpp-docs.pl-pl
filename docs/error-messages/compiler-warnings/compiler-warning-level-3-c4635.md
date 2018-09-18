@@ -1,5 +1,5 @@
 ---
-title: Kompilatora (poziom 3) ostrzeżenie C4635 | Dokumentacja firmy Microsoft
+title: Kompilator ostrzeżenie (poziom 3) C4635 | Dokumentacja firmy Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,32 +16,33 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2dcc4b7466ed53a187b7f34ec45084a94adb59b4
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 7651012d4c48d420734a9c6ec2ff051718f82007
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33291775"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46038116"
 ---
-# <a name="compiler-warning-level-3-c4635"></a>Kompilator C4635 ostrzegawcze (poziom 3)
-Docelowy komentarza dokumentu XML: nieprawidłowo sformułowany kod XML: Przyczyna  
-  
- Kompilator znaleziono problem związany z tagów XML.  Rozwiąż problem i skompiluj ponownie  
-  
- Poniższy przykład generuje C4635:  
-  
-```  
-// C4635.cpp  
-// compile with: /doc /clr /W3 /c  
-/// <summary>     
-/// The contents of the folder have changed.  
-/// <summary/>   // C4635  
-  
-// try the following line instead  
-// /// </summary>  
-public ref class Test {};  
-```  
-  
- Należy zauważyć, że dane wyjściowe dla tego przykładu mówi: **tag końcowy "członek" nie pasuje do tagu początkowego "Podsumowanie".**  
-  
- Problem z tym przykładzie jest tagu końcowego dla \<podsumowania > jest źle sformułowana, i kompilator nie rozpoznaje ją jako \<podsumowania > tagu końcowego.  \<Elementu członkowskiego > tag jest osadzony w pliku .xdc przez kompilator w każdej kompilacji/doc.  Tak, w tym miejscu problemu jest to, że tag końcowy \</member >, jest niezgodny z poprzednich tagiem początkowym przetwarzany przez kompilator (\<podsumowania >.
+# <a name="compiler-warning-level-3-c4635"></a>Kompilator ostrzeżenie (poziom 3) C4635
+
+Docelowy komentarza dokumentu XML: niewłaściwie sformułowany kod XML: Przyczyna
+
+Kompilator znaleziono problem związany z tagów XML.  Rozwiąż problem i ponowna kompilacja
+
+Poniższy przykład spowoduje wygenerowanie C4635:
+
+```
+// C4635.cpp
+// compile with: /doc /clr /W3 /c
+/// <summary>
+/// The contents of the folder have changed.
+/// <summary/>   // C4635
+
+// try the following line instead
+// /// </summary>
+public ref class Test {};
+```
+
+Należy zauważyć, że dane wyjściowe, w tym przykładzie jest wyświetlany komunikat: **tag końcowy "członek" pasuje do tagu początkowego "Podsumowanie".**
+
+Problem z tego przykładu jest tagu końcowego dla \<podsumowania > jest źle sformułowany i kompilator rozpoznaje je jako \<podsumowania > tagu końcowego.  \<Składowej > tag jest osadzony w pliku .xdc przez kompilator w każdej kompilacji/doc.  Dlatego problem polega na tym, tagu końcowego \</member >, pasuje do poprzedniego tagu początkowego, które kompilator przetwarzane (\<podsumowania >.

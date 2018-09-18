@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 37564920e2ffb4c2526631cd04864db1971a6f02
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 4a2434257290c673ca4e18be2e5ec70877e72e67
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43757214"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46039091"
 ---
 # <a name="messagehandler"></a>MessageHandler
 
@@ -39,16 +39,16 @@ LRESULT MessageHandler(
 
 ### <a name="parameters"></a>Parametry
 
-*uMsg*  
+*uMsg*<br/>
 Określa komunikat.
 
-*wParam*  
+*wParam*<br/>
 Dodatkowe informacje specyficzne dla wiadomości.
 
-*lParam*  
+*lParam*<br/>
 Dodatkowe informacje specyficzne dla wiadomości.
 
-*bHandled*  
+*bHandled*<br/>
 Ustawia mapy wiadomości *bHandled* na wartość TRUE, przed `MessageHandler` jest wywoływana. Jeśli `MessageHandler` nie obsługuje w pełni komunikat, należy ją ustawić *bHandled* na wartość FAŁSZ, aby wiadomość wymaga dalszego przetwarzania.
 
 ## <a name="return-value"></a>Wartość zwracana
@@ -61,6 +61,6 @@ Aby uzyskać przykład korzystania z tej obsługi wiadomości w mapie komunikat�
 
 ## <a name="see-also"></a>Zobacz też
 
-[Implementowanie okna](../atl/implementing-a-window.md)   
-[Mapy komunikatów](../atl/message-maps-atl.md)   
+[Implementowanie okna](../atl/implementing-a-window.md)<br/>
+[Mapy komunikatów](../atl/message-maps-atl.md)<br/>
 [WM_NOTIFY](https://msdn.microsoft.com/library/windows/desktop/bb775583)

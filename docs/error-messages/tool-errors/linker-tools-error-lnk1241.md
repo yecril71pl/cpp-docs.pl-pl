@@ -16,16 +16,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b02b1d9d06706c70478d958dd3c2af8dbc9c2c03
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: e4c11a97dd99515ff7623b77ff31de5fb8577b5d
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33299178"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46040625"
 ---
 # <a name="linker-tools-error-lnk1241"></a>Błąd narzędzi konsolidatora LNK1241
-Plik zasobów 'Plik zasobów' już określony  
-  
- Ten błąd jest generowany po uruchomieniu **cvtres** ręcznie z poziomu wiersza polecenia i jeśli następnie przekazać .obj wynikowego pliku do konsolidatora dodatkowo do innych plików .res.  
-  
- Aby określić wiele plików .res, należy przekazać je wszystkie do konsolidatora jako pliki .res, nie za pomocą plików .obj utworzony przez **cvtres**.
+
+Plik zasobów 'plik zasobu' już określony
+
+Ten błąd jest generowany, gdy uruchamiasz **cvtres** ręcznie z poziomu wiersza polecenia i jeśli następnie przekazać .obj wynikowy plik konsolidatora dodatkowo do innych plików .res.
+
+Do określenia wielu plików .res, przekazać je wszystkie do konsolidatora jako pliki .res, nie z poziomu plików .obj utworzony przez **cvtres**.

@@ -1,5 +1,5 @@
 ---
-title: C2019 błąd kompilatora | Dokumentacja firmy Microsoft
+title: Błąd kompilatora C2019 | Dokumentacja firmy Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,29 +16,30 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b8f9f36bef278edc4c40c732b86c012180535f74
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: e6f1ae1b22cca0d00e990f64ccaf469359563f8e
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33164244"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46038701"
 ---
-# <a name="compiler-error-c2019"></a>C2019 błąd kompilatora
-Oczekiwano dyrektywy preprocesora, znaleziono "znak"  
-  
- Po znaku `#` logowania, ale nie jest pierwszą literę dyrektywy preprocesora.  
-  
- Poniższy przykład generuje C2019:  
-  
-```  
-// C2019.cpp  
-#!define TRUE 1   // C2019  
-```  
-  
- Możliwe rozwiązanie:  
-  
-```  
-// C2019b.cpp  
-// compile with: /c  
-#define TRUE 1  
+# <a name="compiler-error-c2019"></a>Błąd kompilatora C2019
+
+Oczekiwano dyrektywy preprocesora, znaleziono "znak"
+
+Znak, a następnie `#` logowania, ale nie jest pierwszą literą dyrektywy preprocesora.
+
+Poniższy przykład spowoduje wygenerowanie C2019:
+
+```
+// C2019.cpp
+#!define TRUE 1   // C2019
+```
+
+Możliwe rozwiązanie:
+
+```
+// C2019b.cpp
+// compile with: /c
+#define TRUE 1
 ```

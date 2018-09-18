@@ -16,14 +16,15 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f4e4c1c6c922983635bacfb997ba991f57dbc52b
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 4a5c1f21052cab8b9441865c835e7e3cc26ade5f
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33318301"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46039741"
 ---
 # <a name="resource-compiler-fatal-error-rc1208"></a>Błąd krytyczny kompilatora zasobów RC1208
-Plik wejściowy ma. Rozszerzenie RES  
-  
- . Rozszerzenie RES jest używane dla danych wyjściowych kompilatora zasobów. . Rozszerzeń RC powinien być używany dla kompilatora zasobów skryptów.
+
+Plik wejściowy ma. Rozszerzenie RES
+
+. Rozszerzenie RES jest używane dla danych wyjściowych kompilatora zasobów. . Należy używać rozszerzeń RC dla skryptów kompilator zasobów.

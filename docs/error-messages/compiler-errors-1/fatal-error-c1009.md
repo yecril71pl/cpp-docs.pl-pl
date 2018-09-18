@@ -16,14 +16,15 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 665d868aeacbaf5c62bf59a4400baa2b31569972
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: b1fbd8994be6fd86a764db400d8761a5d697079b
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33198732"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46037336"
 ---
 # <a name="fatal-error-c1009"></a>Błąd krytyczny C1009
-ograniczenie kompilatora: makra są zagnieżdżone zbyt głęboko  
-  
- Kompilator próbował rozwiń zbyt wiele makra w tym samym czasie. Kompilator ma limit 256 poziomów zagnieżdżonych makra. Podziel zagnieżdżonych makra na łatwiejsze makra.
+
+ograniczenie kompilatora: makra są zagnieżdżone zbyt głęboko
+
+Kompilator próbował rozwinąć makra zbyt wiele, w tym samym czasie. Kompilator ma limit wynoszący 256 poziomów zagnieżdżonych makra. Podziel zagnieżdżonych makra na łatwiejsze makra.

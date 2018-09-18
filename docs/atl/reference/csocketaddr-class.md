@@ -23,12 +23,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f0eba14e7b8a251fdc1287fc413e2c4ebcd7ae77
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 2c39ca72136db7c11e925f28cc3413a5f7b77002
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43766181"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46040859"
 ---
 # <a name="csocketaddr-class"></a>Klasa CSocketAddr
 
@@ -106,25 +106,25 @@ int FindAddr(
 
 ### <a name="parameters"></a>Parametry
 
-*szHost*  
+*szHost*<br/>
 Nazwa hosta lub kropkowana adresu IP.
 
-*szPortOrServiceName*  
+*szPortOrServiceName*<br/>
 Numer portu lub nazwy usługi na hoście.
 
-*nPortNo*  
+*nPortNo*<br/>
 Numer portu.
 
-*flagi*  
+*flagi*<br/>
 0 lub kombinacji AI_PASSIVE, AI_CANONNAME lub AI_NUMERICHOST.
 
-*addr_family*  
+*addr_family*<br/>
 Rodzina (na przykład PF_INET) adresów.
 
-*sock_type*  
+*sock_type*<br/>
 Typ gniazda (na przykład SOCK_STREAM).
 
-*ai_proto*  
+*ai_proto*<br/>
 Protokół (na przykład IPPROTO_IP lub IPPROTO_IPV6).
 
 ### <a name="return-value"></a>Wartość zwracana
@@ -149,16 +149,16 @@ int FindINET4Addr(
 
 ### <a name="parameters"></a>Parametry
 
-*szHost*  
+*szHost*<br/>
 Nazwa hosta lub kropkowana adresu IP.
 
-*nPortNo*  
+*nPortNo*<br/>
 Numer portu.
 
-*flagi*  
+*flagi*<br/>
 0 lub kombinacji AI_PASSIVE, AI_CANONNAME lub AI_NUMERICHOST.
 
-*sock_type*  
+*sock_type*<br/>
 Typ gniazda (na przykład SOCK_STREAM).
 
 ### <a name="return-value"></a>Wartość zwracana
@@ -183,16 +183,16 @@ int FindINET6Addr(
 
 ### <a name="parameters"></a>Parametry
 
-*szHost*  
+*szHost*<br/>
 Nazwa hosta lub kropkowana adresu IP.
 
-*nPortNo*  
+*nPortNo*<br/>
 Numer portu.
 
-*flagi*  
+*flagi*<br/>
 0 lub kombinacji AI_PASSIVE, AI_CANONNAME lub AI_NUMERICHOST.
 
-*sock_type*  
+*sock_type*<br/>
 Typ gniazda (na przykład SOCK_STREAM).
 
 ### <a name="return-value"></a>Wartość zwracana
@@ -213,7 +213,7 @@ addrinfo* const GetAddrInfoint nIndex = 0) const;
 
 ### <a name="parameters"></a>Parametry
 
-*nIndex*  
+*nIndex*<br/>
 Odwołanie do określonego elementu w [addrinfo](https://msdn.microsoft.com/library/windows/desktop/ms737530) listy.
 
 ### <a name="return-value"></a>Wartość zwracana

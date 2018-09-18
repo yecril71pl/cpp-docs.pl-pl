@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4b76250926ab89c14dfa26f0df3bb5571c1dae10
-ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
+ms.openlocfilehash: 6c5ad5997657ce9f8a61383a2cd7e685f0a28751
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/01/2018
-ms.locfileid: "39408534"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46036556"
 ---
 # <a name="binary-operators"></a>Operatory binarne
 
@@ -80,4 +80,5 @@ gdzie *ret-type* i *op* są opisane dla funkcji operatora składowej i *arg1* i 
 > Nie ma żadnych ograniczeń względem typów zwracanych operatorów binarnych; Jednak większość zdefiniowanych przez użytkownika operatory dwuargumentowe Zwróć odwołanie do typu klasy lub typu klasy.
 
 ## <a name="see-also"></a>Zobacz także
- [Przeładowanie operatora](../cpp/operator-overloading.md)
+
+[Przeładowanie operatora](../cpp/operator-overloading.md)

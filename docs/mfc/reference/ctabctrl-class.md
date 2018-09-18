@@ -82,12 +82,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ac6e8215cc46fd190703981869a065df8d46b18d
-ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
+ms.openlocfilehash: 8ad44aaaf22adce58cfdf01d108f172dc7cdf372
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43690474"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46043940"
 ---
 # <a name="ctabctrl-class"></a>Klasa CTabCtrl
 Oferuje funkcje formantu typowej zakładki Windows.  
@@ -391,30 +391,34 @@ BOOL GetItem(int nItem,   TCITEM* pTabCtrlItem) const;
 ### <a name="remarks"></a>Uwagi  
  Po wysłaniu wiadomości `mask` elementu członkowskiego określa atrybuty do zwrócenia. Jeśli `mask` elementu członkowskiego określa wartość TCIF_TEXT `pszText` elementu członkowskiego musi zawierać adres buforu, który otrzymuje tekstu elementu i `cchTextMax` element członkowski, należy określić rozmiar buforu.  
   
- `mask`  
- Wartość określająca, które `TCITEM` elementy członkowskie można pobrać lub ustawić struktury. Ten element członkowski może być zero lub kombinacją następujących wartości:  
+- `mask`
+
+   Wartość określająca, które `TCITEM` elementy członkowskie można pobrać lub ustawić struktury. Ten element członkowski może być zero lub kombinacją następujących wartości:  
   
-- TCIF_TEXT `pszText` elementu członkowskiego jest nieprawidłowy.  
+   - TCIF_TEXT `pszText` elementu członkowskiego jest nieprawidłowy.  
   
-- TCIF_IMAGE `iImage` elementu członkowskiego jest nieprawidłowy.  
+   - TCIF_IMAGE `iImage` elementu członkowskiego jest nieprawidłowy.  
   
-- TCIF_PARAM `lParam` elementu członkowskiego jest nieprawidłowy.  
+   - TCIF_PARAM `lParam` elementu członkowskiego jest nieprawidłowy.  
   
-- TCIF_RTLREADING tekst z `pszText` jest wyświetlana przy użyciu kolejność czytania od prawej do lewej w systemach hebrajskiego i arabskiego.  
+   - TCIF_RTLREADING tekst z `pszText` jest wyświetlana przy użyciu kolejność czytania od prawej do lewej w systemach hebrajskiego i arabskiego.  
   
-- TCIF_STATE `dwState` elementu członkowskiego jest nieprawidłowy.  
+   - TCIF_STATE `dwState` elementu członkowskiego jest nieprawidłowy.  
   
- `pszText`  
- Wskaźnik na ciąg zakończony wartością null zawierający tekst kartę, jeśli struktura zawiera informacje o karcie. Ten element członkowski, jeśli struktura otrzymuje informacje, określa adres buforu, który otrzymuje tekstu karty.  
+- `pszText`  
+
+   Wskaźnik na ciąg zakończony wartością null zawierający tekst kartę, jeśli struktura zawiera informacje o karcie. Ten element członkowski, jeśli struktura otrzymuje informacje, określa adres buforu, który otrzymuje tekstu karty.  
   
- `cchTextMax`  
- Rozmiar buforu wskazywany przez `pszText`. Ten element członkowski jest ignorowana, jeśli struktura nie otrzymuje informacji.  
+- `cchTextMax`  
+
+   Rozmiar buforu wskazywany przez `pszText`. Ten element członkowski jest ignorowana, jeśli struktura nie otrzymuje informacji.  
   
- `iImage`  
+- `iImage`  
  Indeksuj do formantu karty listy obrazów lub - 1, jeśli nie ma żadnego obrazu dla karty.  
   
- lParam  
- Zdefiniowane przez aplikację dane skojarzone z kartą. Jeśli istnieje więcej niż czterech bajtów danych zdefiniowanych przez aplikację na znak tabulacji, aplikacji, należy zdefiniować strukturę i używać go zamiast `TCITEM` struktury. Pierwszego elementu członkowskiego struktury zdefiniowany przez aplikację muszą być [TCITEMHEADER](/windows/desktop/api/commctrl/ns-commctrl-tagtcitemheadera)struktury. `TCITEMHEADER` Struktura jest taka sama jak `TCITEM` strukturę, ale bez `lParam` elementu członkowskiego. Różnica między rozmiarem struktury i rozmiar `TCITEMHEADER` struktury powinna być równa liczbie dodatkowych bajtów na znak tabulacji.  
+- `lParam`  
+
+   Zdefiniowane przez aplikację dane skojarzone z kartą. Jeśli istnieje więcej niż czterech bajtów danych zdefiniowanych przez aplikację na znak tabulacji, aplikacji, należy zdefiniować strukturę i używać go zamiast `TCITEM` struktury. Pierwszego elementu członkowskiego struktury zdefiniowany przez aplikację muszą być [TCITEMHEADER](/windows/desktop/api/commctrl/ns-commctrl-tagtcitemheadera)struktury. `TCITEMHEADER` Struktura jest taka sama jak `TCITEM` strukturę, ale bez `lParam` elementu członkowskiego. Różnica między rozmiarem struktury i rozmiar `TCITEMHEADER` struktury powinna być równa liczbie dodatkowych bajtów na znak tabulacji.  
   
 ### <a name="example"></a>Przykład  
  [!code-cpp[NVC_MFC_CTabCtrl#4](../../mfc/reference/codesnippet/cpp/ctabctrl-class_4.cpp)]  

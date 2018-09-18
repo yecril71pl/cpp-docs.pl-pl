@@ -1,5 +1,5 @@
 ---
-title: C2932 błąd kompilatora | Dokumentacja firmy Microsoft
+title: Błąd kompilatora C2932 | Dokumentacja firmy Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,42 +16,43 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5884ca64c51fec699b870f909f23c2e2148092be
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 48c7655703774661ef6a5586f83a05e79585ce9f
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33241598"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46043004"
 ---
-# <a name="compiler-error-c2932"></a>C2932 błąd kompilatora
-"class": typ klasy identyfikator ponownie zdefiniować jako element członkowski danych klasy 'Identyfikator'  
-  
- Klasy ogólne lub szablonu nie można użyć jako element członkowski danych.  
-  
- Poniższy przykład generuje C2932:  
-  
-```  
-// C2932.cpp  
-// compile with: /c  
-template<class T>   
-struct TC {};   
-  
-struct MyStruct {  
-   int TC<int>;   // C2932  
-   int TC;   // OK  
-};  
-```  
-  
- C2932 może również wystąpić, gdy użycie typów ogólnych:  
-  
-```  
-// C2932b.cpp  
-// compile with: /clr /c  
-generic<class T>  
-ref struct GC {};  
-  
-struct MyStruct {  
-   int GC<int>;   // C2932  
-   int GC;   // OK  
-};  
+# <a name="compiler-error-c2932"></a>Błąd kompilatora C2932
+
+"class": typ klasy identyfikator ponownie definiowana jako składowa danych klasy 'Identyfikator'
+
+Generyczny lub szablonu klasy nie można użyć jako element członkowski danych.
+
+Poniższy przykład spowoduje wygenerowanie C2932:
+
+```
+// C2932.cpp
+// compile with: /c
+template<class T>
+struct TC {};
+
+struct MyStruct {
+   int TC<int>;   // C2932
+   int TC;   // OK
+};
+```
+
+C2932 może również wystąpić, gdy za pomocą typów ogólnych:
+
+```
+// C2932b.cpp
+// compile with: /clr /c
+generic<class T>
+ref struct GC {};
+
+struct MyStruct {
+   int GC<int>;   // C2932
+   int GC;   // OK
+};
 ```

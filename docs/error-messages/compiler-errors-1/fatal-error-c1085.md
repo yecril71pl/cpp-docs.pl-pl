@@ -16,22 +16,23 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9affdfab4650402d210cea94457075d2e129e308
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: ab28c633ac7579e39f89d94d1c50e20cc156004a
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33226410"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46043732"
 ---
 # <a name="fatal-error-c1085"></a>Błąd krytyczny C1085
-Nie można zapisać pliku filetype: 'Plik': wiadomości  
-  
-### <a name="to-fix-by-checking-the-following-possible-causes"></a>Aby rozwiązać problem, sprawdzając następujące możliwe przyczyny  
-  
-1.  Dysk jest tylko do odczytu.  
-  
-2.  Dysk jest pełny.  
-  
-3.  Nastąpiło naruszenie zasad współużytkowania.  
-  
-4.  Jeśli komunikat jest wyświetlany komunikat "zły numer pliku" plik może mieć zostały zamykania na pierwszym planie podczas kompilowania w tle.
+
+Nie można zapisać pliku typu: 'Plik': komunikat
+
+### <a name="to-fix-by-checking-the-following-possible-causes"></a>Aby rozwiązać problem, sprawdzając następujące możliwe przyczyny
+
+1. Dysk jest tylko do odczytu.
+
+1. Dysk jest pełny.
+
+1. Naruszenie zasad współużytkowania.
+
+1. Jeśli komunikat jest wyświetlany komunikat "zły numer pliku", plik może mieć zostały zamknięcia na pierwszym planie podczas kompilowania w tle.

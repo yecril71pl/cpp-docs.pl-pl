@@ -1,5 +1,5 @@
 ---
-title: C4335 ostrzeżenia kompilatora | Dokumentacja firmy Microsoft
+title: Ostrzeżenie kompilatora C4335 | Dokumentacja firmy Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,27 +16,29 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: adb8a7b484ce0946f385c3b2a8669ba1b5ccf0d0
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: d2b28909d0c4b663fffeacbec58ad694131bb008
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33270512"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46036582"
 ---
-# <a name="compiler-warning-c4335"></a>C4335 ostrzeżenia kompilatora
-Wykryto format pliku Mac: Skonwertuj plik źródłowy do formatu DOS lub systemu UNIX  
-  
- Znak zakończenia wiersza pierwszego wiersza pliku źródłowego jest styl Macintosh (\r) zamiast systemu UNIX (\n) lub DOS ("\r\n").  
-  
- To zawsze ostrzeżenie jako błąd.  Zobacz [ostrzeżenie](../../preprocessor/warning.md) pragma informacji o sposobie Wyłącz to ostrzeżenie.  Ponadto to tylko ostrzeżenie raz na compiland. W związku z tym jeśli dostępnych jest wiele `#include` dyrektywy, które określają pliki w formacie Macintosh C4335 będzie być wystawiane tylko raz.  
-  
- Jednym ze sposobów na wygenerowanie plików w formacie Macintosh jest przy użyciu **zaawansowane opcje zapisywania** (na **pliku** menu) w programie Visual Studio.  
-  
-## <a name="example"></a>Przykład  
- Poniższy przykład generuje C4335.  
-  
-```  
-// C4335 expected  
-#include "c4335.h"   // assume both include files are in Macintosh format  
-#include "c4335_2.h"  
+# <a name="compiler-warning-c4335"></a>Ostrzeżenie kompilatora C4335
+
+Wykryto format pliku Mac: Skonwertuj plik źródłowy do formatu DOS lub systemu UNIX
+
+Znak zakończenia wiersza pierwszego wiersza pliku źródłowego jest styl dla komputerów Macintosh ('\r'), w przeciwieństwie do systemu UNIX ('\n') lub systemu DOS ("\r\n").
+
+To jest zawsze ostrzeżenie jako błąd.  Zobacz [ostrzeżenie](../../preprocessor/warning.md) pragma, aby uzyskać informacje o sposobie wyłączyć to ostrzeżenie.  Ponadto to tylko ostrzeżenie raz na compiland —. W związku z tym jeśli dostępnych jest wiele `#include` dyrektyw, które określają pliki w formacie dla komputerów Macintosh, C4335 tylko pojawi się jeden raz.
+
+Jednym ze sposobów ma generować pliki w formacie dla komputerów Macintosh polega na użyciu **zaawansowane opcje zapisywania** (na **pliku** menu) w programie Visual Studio.
+
+## <a name="example"></a>Przykład
+
+Poniższy przykład spowoduje wygenerowanie C4335.
+
+```
+// C4335 expected
+#include "c4335.h"   // assume both include files are in Macintosh format
+#include "c4335_2.h"
 ```

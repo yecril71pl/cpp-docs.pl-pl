@@ -18,15 +18,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c964701f9a26c655bbb9529a112f036c7c9f0bf5
-ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
+ms.openlocfilehash: 54911e3e9c696cd2a390dc2f5b42e3917b08014f
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33685752"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46037479"
 ---
 # <a name="contextunblockunbalanced-class"></a>context_unblock_unbalanced — Klasa
-Ta klasa opisuje wyjątek zgłoszony podczas wywołania do `Block` i `Unblock` metody `Context` obiektu nie są poprawnie skojarzone.  
+Ta klasa opisuje wyjątek generowany, gdy wywołuje w celu `Block` i `Unblock` metody `Context` obiektu nie są prawidłowo skojarzone.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -43,7 +43,7 @@ class context_unblock_unbalanced : public std::exception;
 |[context_unblock_unbalanced](#ctor)|Przeciążone. Konstruuje `context_unblock_unbalanced` obiektu.|  
   
 ## <a name="remarks"></a>Uwagi  
- Wywołuje się `Block` i `Unblock` metody `Context` obiektu muszą zawsze prawidłowo łączyć. Współbieżność środowiska wykonawczego zezwala na wykonywanie operacji w każdej kolejności. Na przykład wywołanie `Block` może występować przez wywołanie do `Unblock`, lub na odwrót. Ten wyjątek może zostać zgłoszony, jeśli na przykład dwa wywołań `Unblock` metodę wprowadzono w wierszu na `Context` obiektu, który nie został zablokowany.  
+ Wywołania `Block` i `Unblock` metody `Context` obiektu muszą zawsze być prawidłowo skojarzone. Współbieżność środowiska umożliwia wykonywanie operacji do wykonania w obu kolejności. Na przykład, wywołanie `Block` może następować po wywołaniu `Unblock`, lub na odwrót. Ten wyjątek będzie zgłaszany, jeśli na przykład dwa wywołania `Unblock` metody zostały wprowadzone w wierszu, a na `Context` obiektu, który nie został zablokowany.  
   
 ## <a name="inheritance-hierarchy"></a>Hierarchia dziedziczenia  
  `exception`  
@@ -67,8 +67,8 @@ context_unblock_unbalanced() throw();
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `_Message`  
- Komunikat opisowy błędu.  
+*_Message*<br/>
+Opisowy komunikat dotyczący błędu.  
   
 ## <a name="see-also"></a>Zobacz też  
  [Przestrzeń nazw współbieżności](concurrency-namespace.md)

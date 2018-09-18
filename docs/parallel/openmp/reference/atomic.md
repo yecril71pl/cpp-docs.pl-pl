@@ -16,15 +16,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: bf6287ff3c44d508a3e4293340e652edb201282f
-ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
+ms.openlocfilehash: e7e9e9ecad2f6ea53e2f922799340eee47dd4a7e
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33694410"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46037492"
 ---
 # <a name="atomic"></a>niepodzielne
-Określa, że lokalizacji pamięci, która zostanie automatycznie zaktualizowany.  
+Określa, że lokalizacji w pamięci, który będzie aktualizowany niepodzielne.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -34,13 +34,13 @@ Określa, że lokalizacji pamięci, która zostanie automatycznie zaktualizowany
 ```  
   
 #### <a name="parameters"></a>Parametry  
- `expression`  
- Instrukcja zawierająca l-wartością którego lokalizację pamięci, który chcesz chronić przed wiele operacji zapisu. Aby uzyskać więcej informacji o wyrażenie prawne formularzy zobacz specyfikację OpenMP.  
+*Wyrażenie*<br/>
+Oświadczenie zawierające l-wartości, którego lokalizacja pamięci chcesz zapewnić ochronę przed wieloma zapisów. Aby uzyskać więcej informacji o formularzach prawne wyrażenia zobacz specyfikację OpenMP.  
   
 ## <a name="remarks"></a>Uwagi  
- `atomic` Dyrektywy obsługuje nie klauzule OpenMP.  
+ `atomic` Dyrektywy nie obsługuje żadnych klauzule OpenMP.  
   
- Aby uzyskać więcej informacji, zobacz [2.6.4 — atomic skonstruować](../../../parallel/openmp/2-6-4-atomic-construct.md).  
+ Aby uzyskać więcej informacji, zobacz [konstruowania 2.6.4 atomic](../../../parallel/openmp/2-6-4-atomic-construct.md).  
   
 ## <a name="example"></a>Przykład  
   

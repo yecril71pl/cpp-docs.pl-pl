@@ -16,20 +16,21 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: edab70ebb0e6abcf3761034e7ee8ed19b16dad57
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 06ea422a272b43f7e6226b330a210c0c6ea3f977
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33340089"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46038090"
 ---
 # <a name="project-build-error-prj0019"></a>Błąd PRJ0019 kompilacji projektu
-Narzędzie zwróciło kod błędu z  
-  
- Błąd poziomu jest różna od zera dla niestandardowego kroku budowania lub zdarzenia kompilacji.  
-  
- Widoczne będzie także PRJ0019 gdy narzędzie zwróciło kod błędu, ale żaden komunikat o błędzie. Może to nastąpić, na przykład, jeśli dane wyjściowe MIDL zostanie przekierowany do NUL.  
-  
- Zobacz [informacje dotyczące rozwiązywania problemów niestandardowej kompilacji i zdarzeń kompilacji](../../ide/troubleshooting-build-customizations.md) Aby uzyskać więcej informacji.  
-  
- Ten błąd może również wystąpić, gdy są uruchomione jako członek grupy użytkowników, a wymagany jest dostęp administracyjny. Aby uzyskać więcej informacji, zobacz [uruchamianie jako członek grupy Użytkownicy](../../security/running-as-a-member-of-the-users-group.md).
+
+Narzędzie zwróciło kod błędu z
+
+Błąd poziomu była wartość różną od zera dla niestandardowego kroku budowania lub zdarzenia kompilacji.
+
+Zobaczysz również PRJ0019 gdy narzędzie zwróciło kod błędu, ale bez komunikatu o błędzie. Może to nastąpić, na przykład, jeśli przekierować dane wyjściowe MIDL do NUL.
+
+Zobacz [Rozwiązywanie problemów z niestandardowe kroki kompilacji i zdarzenia kompilacji](../../ide/troubleshooting-build-customizations.md) Aby uzyskać więcej informacji.
+
+Ten błąd może również wystąpić, gdy są uruchomione jako członek grupy Użytkownicy i potrzebny jest dostęp administracyjny do. Aby uzyskać więcej informacji, zobacz [uruchamianie jako członek grupy Użytkownicy](../../security/running-as-a-member-of-the-users-group.md).

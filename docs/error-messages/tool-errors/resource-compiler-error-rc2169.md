@@ -16,14 +16,15 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 41a75132f77fab59aa8ac5646269b2d7e6c4cef4
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 6fe86335415e0e7df9da6831cf0bb097e2342074
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33317690"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46039936"
 ---
 # <a name="resource-compiler-error-rc2169"></a>Błąd kompilatora zasobów RC2169
-nazwę pliku zasobu nie jest w formacie 2.03  
-  
- Określony zasób używany format starszych niż w wersji 2.03. Plik zasobów muszą zostać skonwertowane lub przy użyciu formatu dla wersji 3.00 lub nowszej.
+
+zasób, nazwa_pliku pliku nie jest w formacie 2.03
+
+Określony zasób używany format starszych niż w wersji 2.03. Plik zasobu musi zostać skonwertowany lub ponownie utworzony przy użyciu formatu dla wersji 3.00 lub nowszej.

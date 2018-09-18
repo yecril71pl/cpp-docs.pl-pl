@@ -1,5 +1,5 @@
 ---
-title: Błąd cxx0047 programu Expression Evaluator | Dokumentacja firmy Microsoft
+title: Błąd ewaluatora wyrażeń CXX0047 | Dokumentacja firmy Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,18 +17,19 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 31597324c81675c268787915c4cb5ad2cfcb7db2
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 42e40abb4b14bc821c043b79cf7ff7786c0dcc14
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33296812"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46040872"
 ---
 # <a name="expression-evaluator-error-cxx0047"></a>Błąd CXX0047 programu Expression Evaluator
-Lista argumentów jest niezgodny z funkcją  
-  
- Wyrażenie wywołuje funkcję z listy rzeczywisty parametr, który nie odpowiada liście parametrów formalnych jakiejkolwiek funkcji o takiej samej nazwie, zdefiniowane w programie.  
-  
- Funkcje przeciążone można wywołać tylko wtedy, gdy parametr dokładnego dopasowania lub dopasowanie, które nie wymaga konstrukcji obiektu.  
-  
- Ten błąd jest taki sam jak CAN0047.
+
+Lista argumentów jest niezgodna z funkcją
+
+Wyrażenie wywołuje funkcję z listy rzeczywisty parametr, które nie pasuje do listy parametrów formalnych żadnej funkcji o tej samej nazwie, zdefiniowane w programie.
+
+Przeciążone funkcje mogą być wywoływane tylko wtedy, gdy parametr dokładne dopasowanie lub dopasowania, które nie wymagają do budowy obiektu.
+
+Ten błąd jest taka sama jak CAN0047.

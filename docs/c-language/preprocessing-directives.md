@@ -15,25 +15,27 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6ff05b108e0debe2e408586e63bed244f87f6b76
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 47157fadca913cb436c84219bf1b4117aba619eb
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32385614"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46035581"
 ---
 # <a name="preprocessing-directives"></a>Dyrektywy przetwarzania wstępnego
--   [Znaki stałej i dołączenie warunkowe](../c-language/character-constants-and-conditional-inclusion.md)  
-  
--   [Łącznie z nazwami plików w nawiasach](../c-language/including-bracketed-filenames.md)  
-  
--   [Łącznie z nazwami plików w cudzysłowie](../c-language/including-quoted-filenames.md)  
-  
--   [Sekwencje znaków](../c-language/character-sequences.md)  
-  
--   [Pragmy](../c-language/pragmas.md)  
-  
--   [Domyślne data i godzina](../c-language/default-date-and-time.md)  
-  
-## <a name="see-also"></a>Zobacz też  
- [Zachowanie zdefiniowane w implementacji](../c-language/implementation-defined-behavior.md)
+
+- [Znaki stałej i dołączenie warunkowe](../c-language/character-constants-and-conditional-inclusion.md)
+
+- [Łącznie z nazwami plików w nawiasach](../c-language/including-bracketed-filenames.md)
+
+- [Łącznie z nazwami plików w cudzysłowie](../c-language/including-quoted-filenames.md)
+
+- [Sekwencje znaków](../c-language/character-sequences.md)
+
+- [Pragmy](../c-language/pragmas.md)
+
+- [Domyślne data i godzina](../c-language/default-date-and-time.md)
+
+## <a name="see-also"></a>Zobacz też
+
+[Zachowanie zdefiniowane w implementacji](../c-language/implementation-defined-behavior.md)

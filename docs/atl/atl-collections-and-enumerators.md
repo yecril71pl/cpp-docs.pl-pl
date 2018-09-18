@@ -17,12 +17,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6e70e744ca4eb9cfa4b84ac0cca58be2452a8e25
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 4da59a76ccc4d51e82fd43805daa73d513fcde17
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43756954"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46044278"
 ---
 # <a name="atl-collections-and-enumerators"></a>Kolekcje i wyliczenia ATL
 
@@ -36,21 +36,21 @@ Dowiedz się więcej na temat interfejsy modułu wyliczającego, zapoznając si�
 
 ## <a name="in-this-section"></a>W tej sekcji
 
-[Klasy kolekcji i wyliczeń ATL](../atl/atl-collection-and-enumerator-classes.md)  
+[Klasy kolekcji i wyliczeń ATL](../atl/atl-collection-and-enumerator-classes.md)<br/>
 Krótko opisano i udostępnia łącza do klas ATL, które pomoże Ci zaimplementować kolekcje i wyliczenia.
 
-[Zasady projektowania interfejsów kolekcji i wyliczeń](../atl/design-principles-for-collection-and-enumerator-interfaces.md)  
+[Zasady projektowania interfejsów kolekcji i wyliczeń](../atl/design-principles-for-collection-and-enumerator-interfaces.md)<br/>
 W tym artykule omówiono zasady projektowania za każdy typ interfejsu.
 
-[Implementowanie kolekcji opartej na standardowej bibliotece C++](../atl/implementing-an-stl-based-collection.md)  
+[Implementowanie kolekcji opartej na standardowej bibliotece C++](../atl/implementing-an-stl-based-collection.md)<br/>
 Przykładem rozszerzonego przeprowadzi Cię przez implementację kolekcję na podstawie standardowej biblioteki języka C++.
 
 ## <a name="related-sections"></a>Sekcje pokrewne
 
-[ATL](../atl/active-template-library-atl-concepts.md)  
+[ATL](../atl/active-template-library-atl-concepts.md)<br/>
 Zawiera łącza do tematów pojęciowych dotyczące programowania przy użyciu biblioteki Active Template Library.
 
-[Przykładowe ATLCollections](../visual-cpp-samples.md)  
+[Przykładowe ATLCollections](../visual-cpp-samples.md)<br/>
 Przykład demonstruje użycie `ICollectionOnSTLImpl` i `CComEnumOnSTL`i wykonania kopii niestandardowych zasad klas.
 
 ## <a name="see-also"></a>Zobacz też

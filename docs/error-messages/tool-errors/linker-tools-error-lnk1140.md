@@ -16,22 +16,23 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: fc0d59589a1882aca4ef2deb419e1e4f1081e52b
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 9f850360bc749a41e548cebae9f58f9fc7d3d420
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33302740"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46044707"
 ---
 # <a name="linker-tools-error-lnk1140"></a>Błąd narzędzi konsolidatora LNK1140
-za dużo modułów dla bazy danych programu; Połącz z opcją/PDB: NONE  
-  
- Projekt zawiera więcej niż 4096 modułów.  
-  
-### <a name="to-fix-by-using-the-following-possible-solutions"></a>Aby rozwiązać problem przy użyciu następujących możliwych rozwiązań  
-  
-1.  Połącz ponownie przy użyciu [/PDB: NONE](../../build/reference/pdb-use-program-database.md).  
-  
-2.  Kompiluj niektóre moduły bez informacji debugowania.  
-  
-3.  Zmniejsz liczbę modułów.
+
+za dużo modułów dla bazy danych programu; Link z opcją/PDB: NONE
+
+Projekt zawiera więcej niż 4096 modułów.
+
+### <a name="to-fix-by-using-the-following-possible-solutions"></a>Aby rozwiązać problem, korzystając z poniższymi możliwymi rozwiązaniami
+
+1. Połącz ponownie przy użyciu [/PDB: NONE](../../build/reference/pdb-use-program-database.md).
+
+1. Skompilować niektórych modułów bez informacji debugowania.
+
+1. Zmniejsz liczbę modułów.

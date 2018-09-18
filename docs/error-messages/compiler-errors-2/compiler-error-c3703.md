@@ -1,5 +1,5 @@
 ---
-title: C3703 błąd kompilatora | Dokumentacja firmy Microsoft
+title: Błąd kompilatora C3703 | Dokumentacja firmy Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,55 +16,56 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 344554875e771a1a5c3412613fd77307651a5c7d
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 730409d9db313294e23693b6d50d4b0aff0f8869
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33264793"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46043888"
 ---
-# <a name="compiler-error-c3703"></a>C3703 błąd kompilatora
-"program obsługi zdarzeń": metoda obsługi zdarzeń musi mieć tą samą klasę magazynu jako źródło "event"  
-  
- [Zdarzeń](../../cpp/event-handling.md) ma klasę magazynu innego niż program obsługi zdarzeń, do którego argumentów podłączono. Na przykład ten błąd występuje, jeśli program obsługi zdarzeń jest statycznej funkcji członkowskiej i zdarzenie nie jest statyczne. Aby naprawić ten błąd, należy podać zdarzenia i program obsługi zdarzeń do tej samej klasy magazynu.  
-  
- Poniższy przykład generuje C3703:  
-  
-```  
-// C3703.cpp  
-// C3703 expected  
-#include <stdio.h>  
-  
-[event_source(type=native)]  
-class CEventSrc {  
-public:  
-   __event static void MyEvent();  
-};  
-  
-[event_receiver(type=native)]  
-class CEventHandler {  
-public:  
-   // delete the following line to resolve  
-   void MyHandler() {}  
-  
-   // try the following line instead  
-   // static void MyHandler() {}  
-  
-   void HookIt(CEventSrc* pSource) {  
-      __hook(CEventSrc::MyEvent, pSource, &CEventHandler::MyHandler);  
-   }  
-  
-   void UnhookIt(CEventSrc* pSource) {  
-      __unhook(CEventSrc::MyEvent, pSource, &CEventHandler::MyHandler);  
-   }  
-};  
-  
-int main() {  
-   CEventSrc src;  
-   CEventHandler hnd;  
-  
-   hnd.HookIt(&src);  
-   __raise src.MyEvent();  
-   hnd.UnhookIt(&src);  
-}  
+# <a name="compiler-error-c3703"></a>Błąd kompilatora C3703
+
+"program obsługi zdarzeń": metoda obsługi zdarzeń musi mieć tą samą klasę magazynu jako źródła "event"
+
+[Zdarzeń](../../cpp/event-handling.md) ma klasę magazynu innego niż program obsługi zdarzeń, do którego jest podłączone. Na przykład ten błąd występuje, jeśli procedura obsługi zdarzeń jest statyczną funkcją składową, a zdarzenie nie jest statyczne. Aby naprawić ten błąd, zapewniają zdarzenia i tą samą klasę magazynu programu obsługi zdarzeń.
+
+Poniższy przykład spowoduje wygenerowanie C3703:
+
+```
+// C3703.cpp
+// C3703 expected
+#include <stdio.h>
+
+[event_source(type=native)]
+class CEventSrc {
+public:
+   __event static void MyEvent();
+};
+
+[event_receiver(type=native)]
+class CEventHandler {
+public:
+   // delete the following line to resolve
+   void MyHandler() {}
+
+   // try the following line instead
+   // static void MyHandler() {}
+
+   void HookIt(CEventSrc* pSource) {
+      __hook(CEventSrc::MyEvent, pSource, &CEventHandler::MyHandler);
+   }
+
+   void UnhookIt(CEventSrc* pSource) {
+      __unhook(CEventSrc::MyEvent, pSource, &CEventHandler::MyHandler);
+   }
+};
+
+int main() {
+   CEventSrc src;
+   CEventHandler hnd;
+
+   hnd.HookIt(&src);
+   __raise src.MyEvent();
+   hnd.UnhookIt(&src);
+}
 ```

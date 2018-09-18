@@ -16,18 +16,19 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6e845967b0a7116d6edade98b571de5bc1bcd9a1
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 7677c5718783065f64e52f98f7ddbed76e905d2a
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33318064"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46038142"
 ---
 # <a name="project-build-warning-prj0041"></a>Ostrzeżenie PRJ0041 dotyczące kompilacji projektu
-Nie można odnaleźć brakującej zależności 'zależności' dla pliku 'Plik'. Projekt może się skompilować poprawnie, ale mogą w dalszym ciągu oznaczony jako nieaktualny aż do znalezienia tego pliku.  
-  
- Pliku (pliku zasobu lub.idl/.odl, na przykład zawierała instrukcję include, który system projektu nie można rozpoznać.  
-  
- Ponieważ system projektów nie przetwarza instrukcje preprocesora (na przykład #if), ataku instrukcja może nie być faktycznie częścią kompilacji.  
-  
- Aby usunąć to ostrzeżenie, usunąć wszystkie zbędne kodu w .RC — pliki lub Dodaj pliki symbolu zastępczego odpowiednią nazwę.
+
+Nie można odnaleźć brakującej zależności 'zależności' dla pliku 'Plik'. Projekt może się skompilować poprawnie, ale mogą w dalszym ciągu oznaczony jako nieaktualny aż do znalezienia tego pliku.
+
+Plik (plik zasobu lub.idl/.odl pliku, na przykład zawierała instrukcję include, system projektu nie można rozpoznać.
+
+Ponieważ system projektu nie przetwarza instrukcje preprocesora (na przykład #if), problematycznych instrukcji może nie być naprawdę częścią kompilacji.
+
+Aby rozwiązać to ostrzeżenie, Usuń wszystkie zbędny kod w plikach .rc, lub Dodaj pliki zastępcze z odpowiednią nazwę.

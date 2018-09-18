@@ -1,5 +1,5 @@
 ---
-title: C2444 błąd kompilatora | Dokumentacja firmy Microsoft
+title: Błąd kompilatora C2444 | Dokumentacja firmy Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,16 +16,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 80af78ffbf0d51a9ae8e7f4090aa5c6aa0d9045f
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 061abaef158e309246528374b375b20fa75978f5
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33196535"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46041114"
 ---
-# <a name="compiler-error-c2444"></a>C2444 błąd kompilatora
-'Identyfikator': używany prototyp ANSI, znaleziono "type", oczekiwano "{" lub ";"  
-  
- Prototyp funkcji następuje typu.  
-  
- Przyczyną tego błędu może być Brak średnika lub nawias klamrowy.
+# <a name="compiler-error-c2444"></a>Błąd kompilatora C2444
+
+'Identyfikator': używany prototyp ANSI, znaleziono "type", oczekiwano "{" lub ";"
+
+Prototyp funkcji następuje typu.
+
+Ten błąd może być spowodowany przez Brak średnika lub nawiasu klamrowego.

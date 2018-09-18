@@ -1,5 +1,5 @@
 ---
-title: C2656 błąd kompilatora | Dokumentacja firmy Microsoft
+title: Błąd kompilatora C2656 | Dokumentacja firmy Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,16 +16,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d6e4dbae6232f50b9241f5542928311e8944501e
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: cd4b0e4ee89bc2cd2c31e476bdc4ee19bfb8a3aa
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33229128"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46043771"
 ---
-# <a name="compiler-error-c2656"></a>C2656 błąd kompilatora
-"Funkcja": funkcja nie jest dozwolona jako pole bitowe  
-  
- Funkcja jest zadeklarowany jako członek pola bitowego.  
-  
- Ten błąd może być spowodowany przez błąd składniowy na liście inicjatora konstruktora.
+# <a name="compiler-error-c2656"></a>Błąd kompilatora C2656
+
+'Funkcja': funkcja nie jest dozwolona jako pole bitowe
+
+Funkcja jest zadeklarowana jako członek polem bitowym.
+
+Ten błąd może być spowodowany przez błąd składniowy na liście inicjatora konstruktora.

@@ -1,5 +1,5 @@
 ---
-title: Kompilatora (poziom 1) ostrzeżenie C4508 | Dokumentacja firmy Microsoft
+title: Kompilator ostrzeżenie (poziom 1) C4508 | Dokumentacja firmy Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,26 +16,27 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 53f152c2f3573e5f3bd7b8e9be0603ed6d3f11bb
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: e5abc1d81c3e94c02a63f73c84f3f5e5c7e9b0b0
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33283199"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46038948"
 ---
-# <a name="compiler-warning-level-1-c4508"></a>Kompilator C4508 ostrzegawcze (poziom 1)
-"Funkcja": funkcja powinna zwrócić wartość; Założono typ zwracany "void"  
-  
- Funkcja nie ma zwracanego typu określony. W takim przypadku C4430 również powinny wyzwalać i kompilator implementuje poprawka zgłoszone przez C4430 (wartość domyślna to int).  
-  
- Aby usunąć to ostrzeżenie, jawnie deklarować zwracany typ funkcji.  
-  
- Poniższy przykład generuje C4508:  
-  
-```  
-// C4508.cpp  
-// compile with: /W1 /c  
-#pragma warning (disable : 4430)  
-func() {}   // C4508  
-void func2() {}   // OK  
+# <a name="compiler-warning-level-1-c4508"></a>Kompilator ostrzeżenie (poziom 1) C4508
+
+'Funkcja': funkcja powinna zwrócić wartość; Założono typ zwracany "void"
+
+Funkcja nie ma zwracanego określonego typu. W tym przypadku C4430 powinien również wyzwalać i kompilator implementuje rozwiązać zgłaszane przez C4430 (wartość domyślna to int).
+
+Aby rozwiązać tego ostrzeżenia, należy jawnie deklarować typ zwracany funkcji.
+
+Poniższy przykład spowoduje wygenerowanie C4508:
+
+```
+// C4508.cpp
+// compile with: /W1 /c
+#pragma warning (disable : 4430)
+func() {}   // C4508
+void func2() {}   // OK
 ```

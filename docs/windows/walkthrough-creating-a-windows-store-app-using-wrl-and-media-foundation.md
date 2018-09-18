@@ -1,7 +1,7 @@
 ---
 title: 'Przewodnik: Tworzenie aplikacji platformy uniwersalnej systemu Windows z użyciem biblioteki WRL i platformy Media Foundation | Dokumentacja firmy Microsoft'
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 09/17/2018
 ms.technology:
 - cpp-windows
 ms.topic: reference
@@ -13,12 +13,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 2775e0348f6bfe1e7fe960a105ebf0c31fcaae96
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 3eb82c5c86411af63ea79a4dbcf2e54d2d3ce5f5
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43214834"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46038311"
 ---
 # <a name="walkthrough-creating-a-uwp-app-using-wrl-and-media-foundation"></a>Przewodnik: Tworzenie aplikacji platformy uniwersalnej systemu Windows z użyciem biblioteki WRL i platformy Media Foundation
 
@@ -101,7 +101,7 @@ W większości przypadków można użyć C + +/ CX, aby utworzyć środowisko Wi
 
    1. W obszarze **dane wejściowe**, aby uzyskać **plik definicji modułu**, określ `GrayScaleTransform.def`.
 
-   2. Również w **dane wejściowe**, Dodaj `runtimeobject.lib`, `mfuuid.lib`, i `mfplatf.lib` do **dodatkowe zależności** właściwości.
+   2. Również w **dane wejściowe**, Dodaj `runtimeobject.lib`, `mfuuid.lib`, i `mfplat.lib` do **dodatkowe zależności** właściwości.
 
    3. W obszarze **metadanych Windows**ustaw **Generowanie metadanych Windows** do **tak (/ WINMD)**.
 

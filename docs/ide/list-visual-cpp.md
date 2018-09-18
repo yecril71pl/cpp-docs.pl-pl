@@ -18,15 +18,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: bff8e3588e31414f50cb6d150c0e8c9f2603586b
-ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
+ms.openlocfilehash: 15133673a33930222d5bf4c621c9ec9361e31f24
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "33323982"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46046410"
 ---
 # <a name="ltlistgt-visual-c"></a>&lt;Lista&gt; (Visual C++)
-\<Listheader > Blok służy do definiowania wiersz nagłówka tabeli lub definicji listy. Podczas definiowania tabeli, wystarczy podać wpis termin w nagłówku.  
+\<Listheader > Blokuj służy do definiowania wiersz nagłówka tabeli lub definicji listy. Podczas definiowania tabeli, wystarczy podać wpis termin w nagłówku.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -44,22 +44,22 @@ ms.locfileid: "33323982"
 ```  
   
 #### <a name="parameters"></a>Parametry  
- `term`  
- Termin, aby zdefiniować, który zostanie zdefiniowany w `description`.  
+*Termin*<br/>
+Termin, aby zdefiniować, które są definiowane w `description`.  
   
- `description`  
- Element punktora lub Lista numerowana definicji `term`.  
+*Opis elementu*<br/>
+Element w punktora lub Lista numerowana lub definicji `term`.  
   
 ## <a name="remarks"></a>Uwagi  
- Każdy element na liście zostanie określony z \<elementu > bloku. Podczas tworzenia listy definicji, należy określić zarówno `term` i `description`. Jednak dla tabeli, lista punktowana lub Lista numerowana, tylko należy podać wpis dotyczący `description`.  
+ Każdy element na liście jest określony za pomocą \<elementu > bloku. Podczas tworzenia listy definicji, musisz podać obydwie wartości `term` i `description`. Jednak dla tabeli, listy punktowanej lub numerowanej, wystarczy podać wpis dla `description`.  
   
- Listy lub tabeli może mieć tyle \<elementu > blokuje zgodnie z potrzebami.  
+ Masz tyle listy lub tabeli \<elementu > blokuje zgodnie z potrzebami.  
   
- Kompiluj z użyciem [/doc](../build/reference/doc-process-documentation-comments-c-cpp.md) na przetwarzanie komentarzy dokumentacji do pliku.  
+ Kompiluj przy użyciu [/doc](../build/reference/doc-process-documentation-comments-c-cpp.md) do Przetwarzaj komentarze dokumentacji do pliku.  
   
 ## <a name="example"></a>Przykład  
   
-```  
+```cpp  
 // xml_list_tag.cpp  
 // compile with: /doc /LD  
 // post-build command: xdcmake xml_list_tag.dll  

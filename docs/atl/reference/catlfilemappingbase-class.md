@@ -26,12 +26,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e272c9674270c1c600fee697dd77d050d6adb4e0
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 79cace12447eccb9ac7dc560b6add45bd0dc81c5
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43759832"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46045084"
 ---
 # <a name="catlfilemappingbase-class"></a>Klasa CAtlFileMappingBase
 
@@ -89,13 +89,13 @@ Aby uzyskać więcej informacji, zobacz [mapowania pliku](/windows/desktop/Memor
 Konstruktor.
 
 ```
-CAtlFileMappingBase(CAtlFileMappingBase& orig);  
+CAtlFileMappingBase(CAtlFileMappingBase& orig);
 CAtlFileMappingBase() throw();
 ```
 
 ### <a name="parameters"></a>Parametry
 
-*ORIG*  
+*ORIG*<br/>
 Oryginalnego obiektu mapowania pliku do skopiowania można utworzyć nowego obiektu.
 
 ### <a name="remarks"></a>Uwagi
@@ -128,7 +128,7 @@ HRESULT CopyFrom(CAtlFileMappingBase& orig) throw();
 
 ### <a name="parameters"></a>Parametry
 
-*ORIG*  
+*ORIG*<br/>
 Oryginalnego obiektu mapowania pliku do skopiowania.
 
 ### <a name="return-value"></a>Wartość zwracana
@@ -190,19 +190,19 @@ HRESULT MapFile(
 
 ### <a name="parameters"></a>Parametry
 
-*hFile —*  
+*hFile —*<br/>
 Dojście do pliku, z którego można utworzyć obiektu mapowania. *hFile* musi być prawidłowy i nie można ustawić INVALID_HANDLE_VALUE.
 
-*nMappingSize*  
+*nMappingSize*<br/>
 Rozmiar mapowania. Jeśli jest to 0, maksymalny rozmiar obiektu mapowania pliku jest równy rozmiarowi bieżącemu pliku identyfikowane przez *hFile.*
 
-*nOffset*  
+*nOffset*<br/>
 Przesunięcie w pliku, gdy mapowanie jest rozpoczęcie. Wartość przesunięcia musi być wielokrotnością stopnia szczegółowości alokacji pamięci systemu.
 
-*dwMappingProtection*  
+*dwMappingProtection*<br/>
 Ochrona żądanego widoku pliku, gdy plik jest zamapowany. Zobacz *flProtect* w [funkcja CreateFileMapping](/windows/desktop/api/winbase/nf-winbase-createfilemappinga) w zestawie Windows SDK.
 
-*dwViewDesiredAccess*  
+*dwViewDesiredAccess*<br/>
 Określa typ dostępu do widoku pliku, a więc ochrony stron zamapowane przy użyciu pliku. Zobacz *dwDesiredAccess* w [funkcja MapViewOfFileEx](https://msdn.microsoft.com/library/windows/desktop/aa366763) w zestawie Windows SDK.
 
 ### <a name="return-value"></a>Wartość zwracana
@@ -233,22 +233,22 @@ HRESULT MapSharedMem(
 
 ### <a name="parameters"></a>Parametry
 
-*nMappingSize*  
+*nMappingSize*<br/>
 Rozmiar mapowania. Jeśli jest to 0, maksymalny rozmiar obiektu mapowania pliku jest równy rozmiarowi bieżącemu identyfikowane za pomocą obiektu mapowania pliku *szName*.
 
-*szName*  
+*szName*<br/>
 Nazwa obiektu mapowania.
 
-*pbAlreadyExisted*  
+*pbAlreadyExisted*<br/>
 Wskazuje wartość logiczna, która jest ustawiona na wartość TRUE, jeśli mapowanie obiektu już istnieje.
 
-*lpsa*  
+*lpsa*<br/>
 Wskaźnik do `SECURITY_ATTRIBUTES` strukturę, która określa, czy zwracany uchwyt może być dziedziczony przez procesy podrzędne. Zobacz *lpAttributes* w [funkcja CreateFileMapping](/windows/desktop/api/winbase/nf-winbase-createfilemappinga) w zestawie Windows SDK.
 
-*dwMappingProtection*  
+*dwMappingProtection*<br/>
 Ochrona żądanego widoku pliku, gdy plik jest zamapowany. Zobacz *flProtect* w `CreateFileMapping` w zestawie Windows SDK.
 
-*dwViewDesiredAccess*  
+*dwViewDesiredAccess*<br/>
 Określa typ dostępu do widoku pliku, a więc ochrony stron zamapowane przy użyciu pliku. Zobacz *dwDesiredAccess* w [funkcja MapViewOfFileEx](https://msdn.microsoft.com/library/windows/desktop/aa366763) w zestawie Windows SDK.
 
 ### <a name="return-value"></a>Wartość zwracana
@@ -273,16 +273,16 @@ HRESULT OpenMapping(
 
 ### <a name="parameters"></a>Parametry
 
-*szName*  
+*szName*<br/>
 Nazwa obiektu mapowania. Jeśli jest otwarte dojście do obiektu mapowania pliku przy użyciu tej nazwy, a deskryptora zabezpieczeń obiektu mapowania nie powoduje konfliktu z *dwViewDesiredAccess* parametru, operacja otwierania zakończy się pomyślnie.
 
-*nMappingSize*  
+*nMappingSize*<br/>
 Rozmiar mapowania. Jeśli jest to 0, maksymalny rozmiar obiektu mapowania pliku jest równy rozmiarowi bieżącemu identyfikowane za pomocą obiektu mapowania pliku *szName*.
 
-*nOffset*  
+*nOffset*<br/>
 Przesunięcie w pliku, gdy mapowanie jest rozpoczęcie. Wartość przesunięcia musi być wielokrotnością stopnia szczegółowości alokacji pamięci systemu.
 
-*dwViewDesiredAccess*  
+*dwViewDesiredAccess*<br/>
 Określa typ dostępu do widoku pliku, a więc ochrony stron zamapowane przy użyciu pliku. Zobacz *dwDesiredAccess* w [funkcja MapViewOfFileEx](https://msdn.microsoft.com/library/windows/desktop/aa366763) w zestawie Windows SDK.
 
 ### <a name="return-value"></a>Wartość zwracana
@@ -303,7 +303,7 @@ CAtlFileMappingBase& operator=(CAtlFileMappingBase& orig);
 
 ### <a name="parameters"></a>Parametry
 
-*ORIG*  
+*ORIG*<br/>
 Bieżący obiekt pliku mapowania.
 
 ### <a name="return-value"></a>Wartość zwracana
@@ -328,5 +328,5 @@ Zobacz [UnmapViewOfFile](https://msdn.microsoft.com/library/windows/desktop/aa36
 
 ## <a name="see-also"></a>Zobacz też
 
-[Klasa CAtlFileMapping](../../atl/reference/catlfilemapping-class.md)   
+[Klasa CAtlFileMapping](../../atl/reference/catlfilemapping-class.md)<br/>
 [Klasa — Przegląd](../../atl/atl-class-overview.md)

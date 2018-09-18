@@ -1,5 +1,5 @@
 ---
-title: C3068 błąd kompilatora | Dokumentacja firmy Microsoft
+title: Błąd kompilatora C3068 | Dokumentacja firmy Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,46 +16,48 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8f378a60c79defed4fb1738515ca5b65b2851056
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: fdea26e204032c27f00639ee46a928c7bf084a4e
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33256558"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46035627"
 ---
-# <a name="compiler-error-c3068"></a>C3068 błąd kompilatora
-"Funkcja": funkcja "naked" nie może zawierać obiekty, które wymagałyby rozwinięcia gdy wystąpi wyjątek C++  
-  
- Kompilator nie może wykonać odwijanie stosu w [naked](../../cpp/naked-cpp.md) funkcja, która zgłosiła wyjątek, ponieważ tymczasowy obiekt został utworzony w funkcji i C++, obsługa wyjątków ([/ehsc](../../build/reference/eh-exception-handling-model.md)) został określony.  
-  
- Aby rozwiązać ten problem, wykonaj co najmniej jedną z następujących czynności:  
-  
--   Kompiluje z/ehsc.  
-  
--   Nie oznaczaj funkcji jako `naked`.  
-  
--   Nie należy tworzyć tymczasowego obiektu w funkcji.  
-  
- Jeśli funkcja tworzy tymczasowy obiekt na stosie, funkcja zwraca wyjątek, a obsługa wyjątków C++ jest włączona, kompilator wyczyścić stosu, jeśli jest zgłaszany wyjątek.  
-  
- Gdy jest zgłaszany wyjątek, kod wywołuje prologu wygenerowany przez kompilator i epilogu, które nie są obecne w funkcji naked, jest wykonywane dla funkcji.  
-  
-## <a name="example"></a>Przykład  
- Poniższy przykład generuje C3068:  
-  
-```  
-// C3068.cpp  
-// compile with: /EHsc  
-// processor: x86  
-class A {  
-public:  
-   A(){}  
-   ~A(){}  
-};  
-  
-void b(A){}  
-  
-__declspec(naked) void c() {  
-   b(A());   // C3068   
-};  
+# <a name="compiler-error-c3068"></a>Błąd kompilatora C3068
+
+'Funkcja': funkcja "naked" nie może zawierać obiekty, które wymagałyby rozwinięcia gdy wystąpi wyjątek C++
+
+Kompilator nie może wykonać odwijanie stosu w ["naked"](../../cpp/naked-cpp.md) funkcja, która zgłosiła wyjątek, ponieważ obiekt tymczasowy został utworzony w funkcji i obsługa wyjątków języka C++ ([/ehsc](../../build/reference/eh-exception-handling-model.md)) został określony.
+
+Aby rozwiązać ten problem, wykonaj co najmniej jeden z następujących czynności:
+
+- Nie można skompilować przy użyciu/ehsc.
+
+- Nie oznaczaj funkcji jako `naked`.
+
+- Nie należy tworzyć tymczasowego obiektu w funkcji.
+
+Jeśli funkcja tworzy tymczasowy obiekt na stosie, funkcja zgłasza wyjątek, a obsługa wyjątków języka C++ jest włączona, kompilator Oczyszczanie stosu, jeśli wyjątek jest zgłaszany.
+
+Gdy jest zgłaszany wyjątek, generowane przez kompilator kodu, nazywanych prologu i epilogu oraz tych, które nie są obecne w funkcji "naked", jest wykonywany dla funkcji.
+
+## <a name="example"></a>Przykład
+
+Poniższy przykład spowoduje wygenerowanie C3068:
+
+```
+// C3068.cpp
+// compile with: /EHsc
+// processor: x86
+class A {
+public:
+   A(){}
+   ~A(){}
+};
+
+void b(A){}
+
+__declspec(naked) void c() {
+   b(A());   // C3068
+};
 ```

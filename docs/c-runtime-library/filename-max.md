@@ -1,5 +1,5 @@
 ---
-title: FILENAME_MAX — | Dokumentacja firmy Microsoft
+title: FILENAME_MAX | Dokumentacja firmy Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,22 +16,24 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 70edb3e7d8cf774a052837e62bdfc92e9981ba63
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: f725e0f121e628a1cb8d28ca425d17abccfb397d
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32387573"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46038648"
 ---
 # <a name="filenamemax"></a>FILENAME_MAX
-Maksymalna dopuszczalna długość `filename` ciągu rozmiaru buforu.  
-  
-## <a name="syntax"></a>Składnia  
-  
-```  
-#include <stdio.h>  
-```  
-  
-## <a name="see-also"></a>Zobacz też  
- [Stałe pola ścieżki](../c-runtime-library/path-field-limits.md)   
- [Stałe globalne](../c-runtime-library/global-constants.md)
+
+Maksymalna dopuszczalna długość `filename` rozmiar buforu ciągu.
+
+## <a name="syntax"></a>Składnia
+
+```
+#include <stdio.h>
+```
+
+## <a name="see-also"></a>Zobacz też
+
+[Stałe pola ścieżki](../c-runtime-library/path-field-limits.md)<br/>
+[Stałe globalne](../c-runtime-library/global-constants.md)

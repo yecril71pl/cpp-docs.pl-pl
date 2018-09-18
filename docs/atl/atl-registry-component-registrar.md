@@ -20,12 +20,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b5bf01db5baff0bda6cda1d47ffb6f64e7d9bac1
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 7d3f8f52e237fe364f73057c81eb17c8fd3def18
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43759434"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46041041"
 ---
 # <a name="atl-registry-component-registrar"></a>Składnik rejestru ALT (Rejestrator)
 
@@ -36,14 +36,14 @@ Rejestrator ALT udostępnia zoptymalizowane do rejestru systemowego za pomocą n
 
 ## <a name="in-this-section"></a>W tej sekcji
 
-[Tworzenie skryptów rejestratora](../atl/creating-registrar-scripts.md)  
+[Tworzenie skryptów rejestratora](../atl/creating-registrar-scripts.md)<br/>
 Przewodnik dotyczący tworzenia skryptów rejestratora. Zawiera tematy dotyczące składni BNF, drzew analizy rejestru przykłady, używanie wymiennych parametrów i wywoływanie skryptów skryptu.
 
-[Konfigurowanie statycznego Linku do kodu rejestratora (tylko C++)](../atl/setting-up-a-static-link-to-the-registrar-code-cpp-only.md)  
+[Konfigurowanie statycznego Linku do kodu rejestratora (tylko C++)](../atl/setting-up-a-static-link-to-the-registrar-code-cpp-only.md)<br/>
 Zawiera instrukcje dotyczące konfigurowania łączenia statycznego do rejestratora.
 
 ## <a name="related-sections"></a>Sekcje pokrewne
 
-[ATL](../atl/active-template-library-atl-concepts.md)  
+[ATL](../atl/active-template-library-atl-concepts.md)<br/>
 Zawiera łącza do tematów pojęciowych dotyczące programowania przy użyciu biblioteki Active Template Library.
 

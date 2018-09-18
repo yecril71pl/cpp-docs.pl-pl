@@ -16,18 +16,19 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 27b690cf055d059d5088edba407c93b4a8ae85fd
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 79aa3f33f076b6576363b0bdda63e55c5d9f13fd
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33227385"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46046462"
 ---
 # <a name="fatal-error-c1206"></a>Błąd krytyczny C1206
-Danych domeny appdomain nie jest obsługiwana przez wersję środowiska uruchomieniowego zainstalowany  
-  
- Niektóre funkcje, takie zgodnie z harmonogramem danych domeny aplikacji, są obsługiwane tylko przez środowisko uruchomieniowe języka wspólnego obsługującej funkcję.  
-  
- C1206 wskazuje, że na tym komputerze nie jest zainstalowana najnowsza wersja środowiska uruchomieniowego. Zainstaluj wspólnej wersja środowiska uruchomieniowego CLR, który jest przeznaczony do użytku z kompilujący.  
-  
- Zobacz [elementu appdomain](../../cpp/appdomain.md) Aby uzyskać więcej informacji.
+
+Dane dla domeny appdomain nie są obsługiwane przez wersję zainstalowanego środowiska uruchomieniowego
+
+Niektóre funkcje, takie zgodnie z danych domeny aplikacji, są obsługiwane tylko przez środowisko uruchomieniowe języka wspólnego, obsługuje tę funkcję.
+
+C1206 wskazuje, że na komputerze nie zainstalowano najnowszej wersji środowiska uruchomieniowego. Zainstaluj wspólnej wersję środowiska wykonawczego języka jest przeznaczona do użytku z kompilatora.
+
+Zobacz [appdomain](../../cpp/appdomain.md) Aby uzyskać więcej informacji.

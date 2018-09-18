@@ -20,15 +20,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: 6ab5f7309da1a037f7066d44815cafc934b162cf
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: a55425c891999142fe32ae08125cce22728daffa
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33111946"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46040699"
 ---
 # <a name="for-each-in"></a>for each, in
-Wykonuje iterację przez tablicę lub kolekcję. To niestandardowe słowo kluczowe jest dostępne zarówno w projektach C++/CLI, jak i macierzystych projektach C++. Jego stosowanie nie jest jednak zalecane. Należy rozważyć użycie standardowego [opartej na zakresie — instrukcja (C++)](../cpp/range-based-for-statement-cpp.md) zamiast tego.  
+Wykonuje iterację przez tablicę lub kolekcję. To niestandardowe słowo kluczowe jest dostępne zarówno w projektach C++/CLI, jak i macierzystych projektach C++. Jego stosowanie nie jest jednak zalecane. Rozważ użycie standardowego [Range-based for Statement (C++)](../cpp/range-based-for-statement-cpp.md) zamiast tego.  
   
 ## <a name="all-runtimes"></a>Wszystkie środowiska wykonawcze  
  **Składnia**  
@@ -43,25 +43,25 @@ Wykonuje iterację przez tablicę lub kolekcję. To niestandardowe słowo kluczo
   
  **Parametry**  
   
- `type`  
- Typ `identifier`.  
+*Typ*<br/>
+Typ `identifier`.  
   
- `identifier`  
- Zmienna iteracyjna, która reprezentuje element kolekcji.  Gdy `identifier` jest [Operator odwołania śledzenia](../windows/tracking-reference-operator-cpp-component-extensions.md), można zmodyfikować elementu.  
+*Identyfikator*<br/>
+Zmienna iteracyjna, która reprezentuje element kolekcji.  Gdy `identifier` jest [Tracking Reference Operator](../windows/tracking-reference-operator-cpp-component-extensions.md), można zmodyfikować element.  
   
- `expression`  
- Wyrażenie tablicy lub kolekcja. Element kolekcji musi być w taki sposób, że kompilator można przekonwertować go na `identifier` typu.  
+*Wyrażenie*<br/>
+Wyrażenie tablicy lub kolekcja. Element kolekcji musi być tak, aby kompilator mógł go konwertować do `identifier` typu.  
   
- `statements`  
- Jedna lub więcej instrukcji do wykonania.  
+*Instrukcje*<br/>
+Jedna lub więcej instrukcji do wykonania.  
   
  **Uwagi**  
   
- `for each` Instrukcji jest używany do iterowania po kolekcji. Możesz modyfikować elementy w kolekcji, ale nie możesz dodawać ani usuwać elementów.  
+ `for each` Instrukcja jest używane do iterowania po kolekcji. Możesz modyfikować elementy w kolekcji, ale nie możesz dodawać ani usuwać elementów.  
   
- *Instrukcje* są wykonywane dla każdego elementu w tablicy lub kolekcji. Po ukończeniu iteracji dla wszystkich elementów w kolekcji, sterowanie jest przekazywane do instrukcji następującej `for each` bloku.  
+ *Instrukcji* są wykonywane dla każdego elementu w tablicy lub kolekcji. Po zakończeniu iteracji wszystkich elementów w kolekcji formant jest przekazywany do kolejnej instrukcji `for each` bloku.  
   
- `for each` i `in` są [kontekstowe słowa kluczowe](../windows/context-sensitive-keywords-cpp-component-extensions.md).  
+ `for each` i `in` są [kontekstowymi słowami kluczowymi](../windows/context-sensitive-keywords-cpp-component-extensions.md).  
   
  Informacje dodatkowe:  
   
@@ -79,7 +79,7 @@ Wykonuje iterację przez tablicę lub kolekcję. To niestandardowe słowo kluczo
  — Opcja kompilatora: **/ZW**  
   
 ### <a name="example"></a>Przykład  
- Ten przykład przedstawia sposób użycia `for each` do iterowania po ciągu.  
+ W tym przykładzie pokazano, jak używać `for each` do iteracji przez ciąg.  
   
 ```  
 // for_each_string1.cpp  
@@ -118,18 +118,18 @@ Testing
 ## <a name="common-language-runtime"></a>środowiska uruchomieniowe w trakcie wykonania 
  **Uwagi**  
   
- Składnia CLR jest taka sama jak **wszystkich środowisk uruchomieniowych** składni, z wyjątkiem w następujący sposób.  
+ Składnia CLR jest taka sama jak **wszystkie środowiska wykonawcze** składnię, z wyjątkiem w następujący sposób.  
   
- *wyrażenie*  
- Wyrażenie tablicy zarządzanej lub kolekcja. Element kolekcji musi być tak, aby przekonwertować ją z kompilatora <xref:System.Object> do *identyfikator* typu.  
+ *Wyrażenie*  
+ Wyrażenie tablicy zarządzanej lub kolekcja. Element kolekcji musi być tak, aby kompilator mógł go skonwertować z <xref:System.Object> do *identyfikator* typu.  
   
- *wyrażenie* obliczane do typu, który implementuje <xref:System.Collections.IEnumerable>, <xref:System.Collections.Generic.IEnumerable%601>, lub typu, który definiuje `GetEnumerator` implementującej metody albo zwraca wartość typu <xref:System.Collections.IEnumerator> lub deklaruje wszystkie metody, które są zdefiniowane w `IEnumerator`.  
+ *wyrażenie* daje w wyniku typ implementujący <xref:System.Collections.IEnumerable>, <xref:System.Collections.Generic.IEnumerable%601>, lub typ, który definiuje `GetEnumerator` metody, która albo zwraca typ, który implementuje <xref:System.Collections.IEnumerator> albo deklaruje wszystkie metody, które są zdefiniowane w `IEnumerator`.  
   
 ### <a name="requirements"></a>Wymagania  
  — Opcja kompilatora:   **/CLR**  
   
 ### <a name="example"></a>Przykład  
- Ten przykład przedstawia sposób użycia `for each` do iterowania po ciągu.  
+ W tym przykładzie pokazano, jak używać `for each` do iteracji przez ciąg.  
   
 ```  
 // for_each_string2.cpp  

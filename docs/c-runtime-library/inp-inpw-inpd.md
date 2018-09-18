@@ -39,61 +39,67 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a24996fbf2aea97581038bed28297416541ce9da
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 23e3f28ddb96bb34b38b3dd90ff6720edb1d9224
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32389852"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46041353"
 ---
 # <a name="inp-inpw-inpd"></a>_inp, _inpw, _inpd
-Dane wejściowe z portu, byte (`_inp`), wyraz (`_inpw`), lub word o podwójnej precyzji (`_inpd`).  
-  
+
+Dane wejściowe z portu, bajt (`_inp`), słowo (`_inpw`), lub podwójne słowo (`_inpd`).
+
 > [!IMPORTANT]
->  Te funkcje są przestarzałe. Począwszy od programu Visual Studio 2015, ich nie są dostępne w CRT.  
-  
+>  Te funkcje są przestarzałe. Począwszy od programu Visual Studio 2015, nie są one dostępne w CRT.
+
 > [!IMPORTANT]
->  Nie można używać tego interfejsu API w aplikacjach, które są wykonywane w środowisku wykonawczym systemu Windows. Aby uzyskać więcej informacji, zobacz [funkcje CRT, nie są obsługiwane w aplikacjach platformy uniwersalnej systemu Windows](../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).  
-  
-## <a name="syntax"></a>Składnia  
-  
-```  
-int _inp(   
-   unsigned short port   
-);  
-unsigned short _inpw(   
-   unsigned short port   
-);  
-unsigned long _inpd(   
-   unsigned short port   
-);  
-```  
-  
-#### <a name="parameters"></a>Parametry  
- `port`  
- Numer portu We/Wy.  
-  
-## <a name="return-value"></a>Wartość zwracana  
- Zwracają byte, word, lub słowa podwójne odczytywać `port`. Nie ma żadnych zwracany błąd.  
-  
-## <a name="remarks"></a>Uwagi  
- `_inp`, `_inpw`, I `_inpd` funkcje odczytywać bajt, word i word o podwójnej precyzji, odpowiednio, określony port wejściowy. Wartość wejściowa można żadnych krótkich liczbę całkowitą bez znaku z zakresu 0 – 65 535.  
-  
- Ponieważ te funkcje odczytu bezpośrednio z portem We/Wy, nie można użyć w kodzie użytkownika.  
-  
-## <a name="requirements"></a>Wymagania  
-  
-|Procedura|Wymagany nagłówek|  
-|-------------|---------------------|  
-|`_inp`|\<conio.h>|  
-|`_inpw`|\<conio.h>|  
-|`_inpd`|\<conio.h>|  
-  
- Aby uzyskać więcej informacji o zgodności, zobacz [zgodności](../c-runtime-library/compatibility.md).  
-  
-## <a name="libraries"></a>Biblioteki  
- Wszystkie wersje [biblioteki wykonawcze języka C](../c-runtime-library/crt-library-features.md).  
-  
-## <a name="see-also"></a>Zobacz też  
- [We/Wy konsoli i portu](../c-runtime-library/console-and-port-i-o.md)   
- [_outp, _outpw, _outpd](../c-runtime-library/outp-outpw-outpd.md)
+>  Tego API nie można używać w aplikacjach korzystających ze środowiska wykonawczego Windows. Aby uzyskać więcej informacji, zobacz [funkcje CRT nieobsługiwane w aplikacjach platformy uniwersalnej Windows](../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
+
+## <a name="syntax"></a>Składnia
+
+```
+int _inp(
+   unsigned short port
+);
+unsigned short _inpw(
+   unsigned short port
+);
+unsigned long _inpd(
+   unsigned short port
+);
+```
+
+#### <a name="parameters"></a>Parametry
+
+*Port*<br/>
+Numer portu We/Wy.
+
+## <a name="return-value"></a>Wartość zwracana
+
+Funkcje zwracają wartość bajtu, słowa lub podwójnego słowa odczytanego z `port`. Nie będzie zwrotu błędu.
+
+## <a name="remarks"></a>Uwagi
+
+`_inp`, `_inpw`, I `_inpd` funkcje odczytują bajt, wyraz i podwójne słowo, odpowiednio, z określonego portu wejściowego. Wartość wejściowa może być dowolnym niepodpisana krótka liczba całkowita z zakresu 0 - 65 535.
+
+Ponieważ te funkcje czytają bezpośrednio z portu We/Wy, nie można użyć w kodzie użytkownika.
+
+## <a name="requirements"></a>Wymagania
+
+|Procedura|Wymagany nagłówek|
+|-------------|---------------------|
+|`_inp`|\<conio.h>|
+|`_inpw`|\<conio.h>|
+|`_inpd`|\<conio.h>|
+
+Aby uzyskać więcej informacji na temat zgodności, zobacz [zgodności](../c-runtime-library/compatibility.md).
+
+## <a name="libraries"></a>Biblioteki
+
+Wszystkie wersje [biblioteki wykonawczej C](../c-runtime-library/crt-library-features.md).
+
+## <a name="see-also"></a>Zobacz też
+
+[We/Wy konsoli i portu](../c-runtime-library/console-and-port-i-o.md)<br/>
+[_outp, _outpw, _outpd](../c-runtime-library/outp-outpw-outpd.md)

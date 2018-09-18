@@ -29,36 +29,40 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4774156f36e5f929db1c5ddd35f423caa5cf7831
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: 47227d4be0ad1c5145a9064d11b4ea633c7d7fc1
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45702510"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46035789"
 ---
 # <a name="localunwind2"></a>_local_unwind2
-Wewnętrzny funkcji CRT. Uruchamia wszystkie programy obsługi przerwania, które są wymienione w tabeli wskazany zakres.  
-  
-## <a name="syntax"></a>Składnia  
-  
-```  
-void _local_unwind2(  
-   PEXCEPTION_REGISTRATION xr,  
-   int stop  
-);  
-```  
-  
-#### <a name="parameters"></a>Parametry  
+
+Wewnętrzny funkcji CRT. Uruchamia wszystkie programy obsługi przerwania, które są wymienione w tabeli wskazany zakres.
+
+## <a name="syntax"></a>Składnia
+
+```
+void _local_unwind2(
+   PEXCEPTION_REGISTRATION xr,
+   int stop
+);
+```
+
+#### <a name="parameters"></a>Parametry
+
 *XR*<br/>
-[in] Rekord rejestracji, który jest skojarzony z tabelą jeden zakres.  
-  
+[in] Rekord rejestracji, który jest skojarzony z tabelą jeden zakres.
+
 *Zatrzymaj*<br/>
-[in] Poziom leksykalne, która wskazuje, gdzie `_local_unwind2` powinna zostać przerwana.  
-  
-## <a name="remarks"></a>Uwagi  
- Ta metoda jest używana tylko w środowisku uruchomieniowym. Nie wywołuj metody w kodzie.  
-  
- Ta metoda jest wykonywana programy obsługi zakończenia, uruchamia na bieżącym poziomie leksykalne i działa w drodze się leksykalne poziomów, aż do napotkania poziom jest wskazywany przez `stop`. Nie wykonuj programy obsługi zakończenia na poziomie, który jest wskazywany przez `stop`.  
-  
-## <a name="see-also"></a>Zobacz też  
- [Alfabetyczne zestawienie funkcji](../c-runtime-library/reference/crt-alphabetical-function-reference.md)
+[in] Poziom leksykalne, która wskazuje, gdzie `_local_unwind2` powinna zostać przerwana.
+
+## <a name="remarks"></a>Uwagi
+
+Ta metoda jest używana tylko w środowisku uruchomieniowym. Nie wywołuj metody w kodzie.
+
+Ta metoda jest wykonywana programy obsługi zakończenia, uruchamia na bieżącym poziomie leksykalne i działa w drodze się leksykalne poziomów, aż do napotkania poziom jest wskazywany przez `stop`. Nie wykonuj programy obsługi zakończenia na poziomie, który jest wskazywany przez `stop`.
+
+## <a name="see-also"></a>Zobacz też
+
+[Alfabetyczne zestawienie funkcji](../c-runtime-library/reference/crt-alphabetical-function-reference.md)

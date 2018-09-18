@@ -1,5 +1,5 @@
 ---
-title: C3721 błąd kompilatora | Dokumentacja firmy Microsoft
+title: Błąd kompilatora C3721 | Dokumentacja firmy Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,16 +16,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e0bd4942dba3c49ecc06b015d6ed14b297d09ac2
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: df6c2ff97e44ab679e59b3377e80e78398f12211
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33275200"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46039560"
 ---
-# <a name="compiler-error-c3721"></a>C3721 błąd kompilatora
-"sygnatura": niezgodny podpis dla zdarzenia  
-  
- Zdarzenie zostało niepoprawnie zadeklarowany. Aby uzyskać więcej informacji, zobacz [__event](../../cpp/event.md).  
-  
- C3721 jest tylko przy użyciu opcji kompilatora przestarzałe **: oldsyntax**.  
+# <a name="compiler-error-c3721"></a>Błąd kompilatora C3721
+
+"podpis": niezgodny podpis dla zdarzenia
+
+Zdarzenie zostało zadeklarowane niepoprawnie. Aby uzyskać więcej informacji, zobacz [__event](../../cpp/event.md).
+
+C3721 jest dostępna, przy użyciu opcji kompilatora przestarzałe **: oldsyntax**.

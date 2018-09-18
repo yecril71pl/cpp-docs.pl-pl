@@ -16,57 +16,60 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4faf0130ab34b61dc19f5ac3bd615e2e6162b616
-ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
+ms.openlocfilehash: db00272a6fa779458871814bd51ccab7b3e309c6
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/02/2018
-ms.locfileid: "39467384"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46040177"
 ---
 # <a name="super"></a>__super
-**Microsoft Specific**  
-  
- Można jawnie określać dla funkcji, które są zastępowanie wywołujesz implementacji klasy podstawowej.  
-  
-## <a name="syntax"></a>Składnia  
-  
-```  
-__super::member_function();  
-```  
-  
-## <a name="remarks"></a>Uwagi  
- Wszystkie dostępne metody klasy podstawowej są traktowane jako fazie rozdzielczość przeciążenia, a funkcja, która udostępnia najlepsze dopasowanie jest tą, która jest wywoływana.  
-  
- **__super** może wystąpić tylko wewnątrz treści funkcji składowej.  
-  
- **__super** nie można używać z za pomocą deklaracji. Zobacz [użycie — deklaracja](../cpp/using-declaration.md) Aby uzyskać więcej informacji.  
-  
- Wraz z wprowadzeniem [atrybuty](../windows/cpp-attributes-reference.md) , wstrzyknięcie kodu, Twój kod może zawierać jeden lub więcej klas bazowych, których nazwy, może nie wiesz, ale które zawierają metody, które chcesz wywołać.  
-  
-## <a name="example"></a>Przykład  
-  
-```cpp 
-// deriv_super.cpp  
-// compile with: /c  
-struct B1 {  
-   void mf(int) {}  
-};  
-  
-struct B2 {  
-   void mf(short) {}  
-  
-   void mf(char) {}  
-};  
-  
-struct D : B1, B2 {  
-   void mf(short) {  
-      __super::mf(1);   // Calls B1::mf(int)  
-      __super::mf('s');   // Calls B2::mf(char)  
-   }  
-};  
-```  
-  
- **END specyficzny dla Microsoft**  
-  
-## <a name="see-also"></a>Zobacz także  
- [Słowa kluczowe](../cpp/keywords-cpp.md)
+
+**Microsoft Specific**
+
+Można jawnie określać dla funkcji, które są zastępowanie wywołujesz implementacji klasy podstawowej.
+
+## <a name="syntax"></a>Składnia
+
+```
+__super::member_function();
+```
+
+## <a name="remarks"></a>Uwagi
+
+Wszystkie dostępne metody klasy podstawowej są traktowane jako fazie rozdzielczość przeciążenia, a funkcja, która udostępnia najlepsze dopasowanie jest tą, która jest wywoływana.
+
+**__super** może wystąpić tylko wewnątrz treści funkcji składowej.
+
+**__super** nie można używać z za pomocą deklaracji. Zobacz [użycie — deklaracja](../cpp/using-declaration.md) Aby uzyskać więcej informacji.
+
+Wraz z wprowadzeniem [atrybuty](../windows/cpp-attributes-reference.md) , wstrzyknięcie kodu, Twój kod może zawierać jeden lub więcej klas bazowych, których nazwy, może nie wiesz, ale które zawierają metody, które chcesz wywołać.
+
+## <a name="example"></a>Przykład
+
+```cpp
+// deriv_super.cpp
+// compile with: /c
+struct B1 {
+   void mf(int) {}
+};
+
+struct B2 {
+   void mf(short) {}
+
+   void mf(char) {}
+};
+
+struct D : B1, B2 {
+   void mf(short) {
+      __super::mf(1);   // Calls B1::mf(int)
+      __super::mf('s');   // Calls B2::mf(char)
+   }
+};
+```
+
+**END specyficzny dla Microsoft**
+
+## <a name="see-also"></a>Zobacz także
+
+[Słowa kluczowe](../cpp/keywords-cpp.md)

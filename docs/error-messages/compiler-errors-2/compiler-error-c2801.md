@@ -1,5 +1,5 @@
 ---
-title: C2801 błąd kompilatora | Dokumentacja firmy Microsoft
+title: Błąd kompilatora C2801 | Dokumentacja firmy Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,40 +16,41 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f68b3f575fcb8b909f58ac2ffbcaca26580279da
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: d57ee5bf5f5152ef55852c9f9b829bc4a1d17d41
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33237095"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46040638"
 ---
-# <a name="compiler-error-c2801"></a>C2801 błąd kompilatora
-"operator operator" musi być niestatycznego elementu członkowskiego  
-  
- Tylko jako członków Niestatyczne można przeciążać następujące operatory:  
-  
--   Przypisania `=`  
-  
--   Dostęp do elementu członkowskiego klasy `->`  
-  
--   Tworzenie indeksów dolnych `[]`  
-  
--   Wywołania funkcji `()`  
-  
- Możliwe przyczyny C2801:  
-  
--   Przeciążony operator nie jest klasą, strukturą lub elementu członkowskiego typu union.  
-  
--   Przeciążony operator zadeklarowano `static`.  
-  
--   Poniższy przykład generuje C2801:  
-  
-```  
-// C2801.cpp  
-// compile with: /c  
-operator[]();   // C2801 not a member  
-class A {  
-   static operator->();   // C2801 static  
-   operator()();   // OK  
-};  
+# <a name="compiler-error-c2801"></a>Błąd kompilatora C2801
+
+"operator operator" musi być niestatycznego elementu członkowskiego
+
+Następujące operatory mogą być przeciążone tylko jako niestatycznych elementów członkowskich:
+
+- Przypisania `=`
+
+- Dostęp do składowej klasy `->`
+
+- Subscripting `[]`
+
+- Wywołanie funkcji `()`
+
+Możliwe przyczyny C2801:
+
+- Przeciążony operator nie jest klasy, struktury lub Unii.
+
+- Przeciążony operator jest zadeklarowany jako `static`.
+
+- Poniższy przykład spowoduje wygenerowanie C2801:
+
+```
+// C2801.cpp
+// compile with: /c
+operator[]();   // C2801 not a member
+class A {
+   static operator->();   // C2801 static
+   operator()();   // OK
+};
 ```

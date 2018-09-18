@@ -1,5 +1,5 @@
 ---
-title: Funkcje przestrzeń nazw CONCURRENCY::Graphics | Dokumentacja firmy Microsoft
+title: CONCURRENCY::Graphics, funkcje przestrzeni nazw | Dokumentacja firmy Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
 ms.topic: reference
@@ -13,20 +13,20 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8fc00f1754358eca0d6e90d484153b79c0a67130
-ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
+ms.openlocfilehash: 6a31a205a90480ae91740ecaf859f411c331bd69
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33687052"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46037986"
 ---
-# <a name="concurrencygraphics-namespace-functions"></a>Funkcje przestrzeń nazw CONCURRENCY::Graphics
+# <a name="concurrencygraphics-namespace-functions"></a>CONCURRENCY::Graphics, funkcje przestrzeni nazw
 |||  
 |-|-|  
 |[Kopiuj](#copy)|[copy_async](#copy_async)|  
   
 ##  <a name="copy"></a>  copy — funkcja (Namespace Concurrency::graphics)  
- Kopiuje tekstury źródła do buforu docelowego lub kopiuje bufor źródłowy do bufor docelowy. Formularz ogólny tej funkcji jest `copy(src, dest)`.  
+ Kopiuje źródłową teksturę do buforu docelowego lub kopiuje bufor źródłowy do bufora docelowego. Ogólna postać tej funkcji jest `copy(src, dest)`.  
   
 ```  
 template <
@@ -132,47 +132,47 @@ void copy (
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `_Copy_extent`  
- Zakres sekcji tekstury do skopiowania.  
+*_Copy_extent*<br/>
+Zakres sekcji tekstury do skopiowania.  
   
- `_Dst`  
- Obiekt przeznaczony do skopiowania do.  
+*_Dst*<br/>
+Obiekt, który można skopiować do.  
   
- `_Dst_byte_size`  
- Liczba bajtów w lokalizacji docelowej.  
+*_Dst_byte_size*<br/>
+Liczba bajtów w miejscu docelowym.  
   
- `_Dst_type`  
- Typ obiektu docelowego.  
+*_Dst_type*<br/>
+Typ obiektu docelowego.  
   
- `_Dst_offset`  
- Przesunięcie do miejsca docelowego, od którego należy zacząć kopiowanie.  
+*_Dst_offset*<br/>
+Przesunięcie do miejsca docelowego, w którym chcesz rozpocząć kopiowanie.  
   
- `InputIterator`  
- Typ wejściowy interator.  
+*InputIterator*<br/>
+Typ iteratora wejściowego.  
   
- `OutputIterator`  
- Typ iteratora danych wyjściowych.  
+*OutputIterator*<br/>
+Typ iteratora wyjściowego.  
   
- `_Src`  
- Aby obiekt do skopiowania.  
+*_Src*<br/>
+Obiekt do skopiowania.  
   
- `_Src_byte_size`  
- Liczba bajtów w źródle.  
+*_Src_byte_size*<br/>
+Liczba bajtów w źródle.  
   
- `_Src_type`  
- Typ obiektu źródłowego.  
+*_Src_type*<br/>
+Typ obiektu źródłowego.  
   
- `_Src_offset`  
- Przesunięcie do źródło, z którego należy zacząć kopiowanie.  
+*_Src_offset*<br/>
+Przesunięcie do źródła z którego chcesz rozpocząć kopiowanie.  
   
- `first`  
- Iterator początek w kontenerze źródła.  
+*pierwszy*<br/>
+Początkowy iterator do kontenera źródłowego.  
   
- `last`  
- Końcowy iteratora w kontenerze źródła.  
+*ostatni*<br/>
+Końcowy iterator do kontenera źródłowego.  
   
 ##  <a name="copy_async"></a>  copy_async — funkcja (Namespace Concurrency::graphics)  
- Asynchronicznie kopiuje tekstury źródła do bufor docelowy, lub kopiuje bufor źródłowy do bufor docelowy, a następnie zwraca [completion_future](completion-future-class.md) obiekt, który może być obsługiwane. Nie można skopiować danych, gdy kod działa z akceleratora. Formularz ogólny tej funkcji jest `copy(src, dest)`.  
+ Asynchronicznie kopiuje źródłową teksturę do buforu docelowego lub kopiuje bufor źródłowy do bufora docelowego, a następnie zwraca [completion_future](completion-future-class.md) obiekt, który może być oczekiwany. Nie można skopiować danych, gdy kod jest wykonywany na akceleratorze. Ogólna postać tej funkcji jest `copy(src, dest)`.  
   
 ```  
 template<
@@ -274,44 +274,44 @@ concurrency::completion_future copy_async(_Src_type& _Src,
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `_Copy_extent`  
- Zakres sekcji tekstury do skopiowania.  
+*_Copy_extent*<br/>
+Zakres sekcji tekstury do skopiowania.  
   
- `_Dst`  
- Obiekt przeznaczony do skopiowania do.  
+*_Dst*<br/>
+Obiekt, który można skopiować do.  
   
- `_Dst_byte_size`  
- Liczba bajtów w lokalizacji docelowej.  
+*_Dst_byte_size*<br/>
+Liczba bajtów w miejscu docelowym.  
   
- `_Dst_type`  
- Typ obiektu docelowego.  
+*_Dst_type*<br/>
+Typ obiektu docelowego.  
   
- `_Dst_offset`  
- Przesunięcie do miejsca docelowego, od którego należy zacząć kopiowanie.  
+*_Dst_offset*<br/>
+Przesunięcie do miejsca docelowego, w którym chcesz rozpocząć kopiowanie.  
   
- `InputIterator`  
- Typ wejściowy interator.  
+*InputIterator*<br/>
+Typ iteratora wejściowego.  
   
- `OutputIterator`  
- Typ iteratora danych wyjściowych.  
+*OutputIterator*<br/>
+Typ iteratora wyjściowego.  
   
- `_Src`  
- Aby obiekt do skopiowania.  
+*_Src*<br/>
+Obiekt do skopiowania.  
   
- `_Src_byte_size`  
- Liczba bajtów w źródle.  
+*_Src_byte_size*<br/>
+Liczba bajtów w źródle.  
   
- `_Src_type`  
- Typ obiektu źródłowego.  
+*_Src_type*<br/>
+Typ obiektu źródłowego.  
   
- `_Src_offset`  
- Przesunięcie do źródło, z którego należy zacząć kopiowanie.  
+*_Src_offset*<br/>
+Przesunięcie do źródła z którego chcesz rozpocząć kopiowanie.  
   
- `first`  
- Iterator początek w kontenerze źródła.  
+*pierwszy*<br/>
+Początkowy iterator do kontenera źródłowego.  
   
- `last`  
- Końcowy iteratora w kontenerze źródła.  
+*ostatni*<br/>
+Końcowy iterator do kontenera źródłowego.  
 
 ## <a name="requirements"></a>Wymagania  
  **Nagłówek:** amp_graphics.h  

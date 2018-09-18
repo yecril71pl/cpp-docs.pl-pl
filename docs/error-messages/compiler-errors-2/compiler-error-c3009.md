@@ -1,5 +1,5 @@
 ---
-title: C3009 błąd kompilatora | Dokumentacja firmy Microsoft
+title: Błąd kompilatora C3009 | Dokumentacja firmy Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,28 +16,29 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d96fe2eea79f1b5c292664bf13b70c8bde945c7e
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 9dd26f94ecb97e578073f2c3991ed13ebdc592fc
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33241774"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46035242"
 ---
-# <a name="compiler-error-c3009"></a>C3009 błąd kompilatora
-"etykieta": skok do strukturalnego bloku OpenMP jest niedozwolony  
-  
- Kod nie można przeskoczyć do lub z bloku OpenMP.  
-  
- Poniższy przykład generuje C3009:  
-  
-```  
-// C3009.c  
-// compile with: /openmp  
-int main() {  
-   #pragma omp parallel   
-   {  
-   lbl2:;  
-   }  
-   goto lbl2;   // C3009  
-}  
+# <a name="compiler-error-c3009"></a>Błąd kompilatora C3009
+
+"etykieta": realizowanie strukturalnego bloku OpenMP jest niedozwolony
+
+Kod nie może wykonać skok do lub z bloku OpenMP jest.
+
+Poniższy przykład spowoduje wygenerowanie C3009:
+
+```
+// C3009.c
+// compile with: /openmp
+int main() {
+   #pragma omp parallel
+   {
+   lbl2:;
+   }
+   goto lbl2;   // C3009
+}
 ```

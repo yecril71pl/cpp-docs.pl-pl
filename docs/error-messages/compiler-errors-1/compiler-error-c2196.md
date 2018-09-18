@@ -1,5 +1,5 @@
 ---
-title: C2196 błąd kompilatora | Dokumentacja firmy Microsoft
+title: Błąd kompilatora C2196 | Dokumentacja firmy Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,31 +16,32 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 378e8dccb5f5f0735cb941b3c0b3a791ba3c06a3
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: ea1de27a27b76e208c5559ebdc5677d12efb5d30
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33167882"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46035252"
 ---
-# <a name="compiler-error-c2196"></a>C2196 błąd kompilatora
-wartość Case 'value' jest już używana.  
-  
- Instrukcji switch używa tej samej wartości case więcej niż raz.  
-  
- Poniższy przykład generuje C2196:  
-  
-```  
-// C2196.cpp  
-int main() {  
-   int i = 0;  
-   switch( i ) {  
-   case 0:  
-      break;  
-   case 0:   // C2196  
-   // try the following line instead  
-   // case 1:  
-      break;  
-   }  
-}  
+# <a name="compiler-error-c2196"></a>Błąd kompilatora C2196
+
+wartość Case 'value' jest już używana.
+
+Instrukcja switch używa tę samą wartość w przypadku więcej niż jeden raz.
+
+Poniższy przykład spowoduje wygenerowanie C2196:
+
+```
+// C2196.cpp
+int main() {
+   int i = 0;
+   switch( i ) {
+   case 0:
+      break;
+   case 0:   // C2196
+   // try the following line instead
+   // case 1:
+      break;
+   }
+}
 ```

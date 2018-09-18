@@ -14,12 +14,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8f5027fa4b84d84bf07766c7ac4e75f140706f0c
-ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
+ms.openlocfilehash: 0741cd65924a2c968153333aa1a557c31f429d45
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44103713"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46039780"
 ---
 # <a name="atl-operators"></a>Operatory ATL
 
@@ -42,16 +42,16 @@ Ta sekcja zawiera tematy referencyjne dla operatorów globalnych ATL.
 
 Porównuje `CSid` obiektów lub `SID` struktur (identyfikator zabezpieczeń) pod kątem równości.
 
-```   
+```
 bool operator==(const CSid& lhs, const CSid& rhs) throw();
 ```
 
 ### <a name="parameters"></a>Parametry
 
-*Lewa strona reguły przepisywania*  
+*Lewa strona reguły przepisywania*<br/>
 Pierwszy `CSid` obiektu lub `SID` struktury do porównania.
 
-*RHS*  
+*RHS*<br/>
 Drugi `CSid` obiektu lub `SID` struktury do porównania.
 
 ### <a name="return-value"></a>Wartość zwracana
@@ -62,16 +62,16 @@ Zwraca wartość TRUE, jeśli obiekty są równe, wartość FALSE, jeśli nie s�
 
 Porównuje `CSid` obiektów lub `SID` struktur (identyfikator zabezpieczeń) pod kątem nierówności.
 
-```   
+```
 bool operator==(const CSid& lhs, const CSid& rhs) throw();
 ```
 
 ### <a name="parameters"></a>Parametry
 
-*Lewa strona reguły przepisywania*  
+*Lewa strona reguły przepisywania*<br/>
 Pierwszy `CSid` obiektu lub `SID` struktury do porównania.
 
-*RHS*  
+*RHS*<br/>
 Drugi `CSid` obiektu lub `SID` struktury do porównania.
 
 ### <a name="return-value"></a>Wartość zwracana
@@ -82,16 +82,16 @@ Zwraca wartość TRUE, jeśli obiekty nie są równe, wartość FALSE, jeśli s�
 
 Sprawdza, czy `CSid` obiektu lub `SID` struktura po lewej stronie operatora jest mniejszy od `CSid` obiektu lub `SID` struktury z prawej strony (w przypadku zgodności standardowa biblioteka C++).
 
-```   
+```
 bool operator<(const CSid& lhs, const CSid& rhs) throw();
 ```
 
 ### <a name="parameters"></a>Parametry
 
-*Lewa strona reguły przepisywania*  
+*Lewa strona reguły przepisywania*<br/>
 Pierwszy `CSid` obiektu lub `SID` struktury do porównania.
 
-*RHS*  
+*RHS*<br/>
 Drugi `CSid` obiektu lub `SID` struktury do porównania.
 
 ### <a name="return-value"></a>Wartość zwracana
@@ -106,16 +106,16 @@ Ten operator działa na adres `CSid` obiektu lub `SID` struktury i jest implemen
 
 Sprawdza, czy `CSid` obiektu lub `SID` struktury po lewej stronie operatora jest większy niż `CSid` obiektu lub `SID` struktury z prawej strony (w przypadku zgodności standardowa biblioteka C++).
 
-```   
+```
 bool operator<(const CSid& lhs, const CSid& rhs) throw();
 ```
 
 ### <a name="parameters"></a>Parametry
 
-*Lewa strona reguły przepisywania*  
+*Lewa strona reguły przepisywania*<br/>
 Pierwszy `CSid` obiektu lub `SID` struktury do porównania.
 
-*RHS*  
+*RHS*<br/>
 Drugi `CSid` obiektu lub `SID` struktury do porównania.
 
 ### <a name="return-value"></a>Wartość zwracana
@@ -130,16 +130,16 @@ Ten operator działa na adres `CSid` obiektu lub `SID` struktury i jest implemen
 
 Sprawdza, czy `CSid` obiektu lub `SID` struktury po lewej stronie operatora jest mniejszy niż lub równe `CSid` obiektu lub `SID` struktury z prawej strony (w przypadku zgodności standardowa biblioteka C++).
 
-```   
+```
 bool operator<(const CSid& lhs, const CSid& rhs) throw();
 ```
 
 ### <a name="parameters"></a>Parametry
 
-*Lewa strona reguły przepisywania*  
+*Lewa strona reguły przepisywania*<br/>
 Pierwszy `CSid` obiektu lub `SID` struktury do porównania.
 
-*RHS*  
+*RHS*<br/>
 Drugi `CSid` obiektu lub `SID` struktury do porównania.
 
 ### <a name="return-value"></a>Wartość zwracana
@@ -154,16 +154,16 @@ Ten operator działa na adres `CSid` obiektu lub `SID` struktury i jest implemen
 
 Sprawdza, czy `CSid` obiektu lub `SID` struktury po lewej stronie operatora jest większy niż lub równa `CSid` obiektu lub `SID` struktury z prawej strony (w przypadku zgodności standardowa biblioteka C++).
 
-```   
+```
 bool operator<(const CSid& lhs, const CSid& rhs) throw();
 ```
 
 ### <a name="parameters"></a>Parametry
 
-*Lewa strona reguły przepisywania*  
+*Lewa strona reguły przepisywania*<br/>
 Pierwszy `CSid` obiektu lub `SID` struktury do porównania.
 
-*RHS*  
+*RHS*<br/>
 Drugi `CSid` obiektu lub `SID` struktury do porównania.
 
 ### <a name="return-value"></a>Wartość zwracana

@@ -22,15 +22,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 14fe0fa284a56c45404d8b568acf3b0d360fa27a
-ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
+ms.openlocfilehash: b0828d1d8698cb696b257e6730e4aea3961dd159
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33687946"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46042234"
 ---
 # <a name="message-class"></a>message — Klasa
-Koperty wiadomości podstawowe zawierającego ładunek danych są przekazywane między bloki komunikatów.  
+Koperty wiadomości podstawowe zawierającego ładunek danych przekazywany pomiędzy blokami obsługi komunikatów.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -40,12 +40,12 @@ class message : public ::Concurrency::details::_Runtime_object;
 ```  
   
 #### <a name="parameters"></a>Parametry  
- `T`  
- Typ danych ładunku w komunikacie.  
+*T*<br/>
+Typ danych ładunku w komunikacie.  
   
 ## <a name="members"></a>Elementy członkowskie  
   
-### <a name="public-typedefs"></a>Definicje typów publicznych  
+### <a name="public-typedefs"></a>Publiczne definicje typów  
   
 |Nazwa|Opis|  
 |----------|-----------------|  
@@ -62,9 +62,9 @@ class message : public ::Concurrency::details::_Runtime_object;
   
 |Nazwa|Opis|  
 |----------|-----------------|  
-|[add_ref](#add_ref)|Dodaje do liczebności referencyjnej dla `message` obiektu. Używany dla bloków komunikatów, wymagające zliczanie ustalenie okresy istnienia komunikatu.|  
+|[add_ref](#add_ref)|Dodaje do licznika odwołań do `message` obiektu. Używane dla bloków komunikatów, wymagających zliczania odniesień, by określić okres istnienia komunikatu.|  
 |[msg_id](#msg_id)|Zwraca identyfikator `message` obiektu.|  
-|[remove_ref](#remove_ref)|Odejmuje z licznika odwołań do `message` obiektu. Używany dla bloków komunikatów, wymagające zliczanie ustalenie okresy istnienia komunikatu.|  
+|[remove_ref](#remove_ref)|Odejmuje z licznikiem odwołań do `message` obiektu. Używane dla bloków komunikatów, wymagających zliczania odniesień, by określić okres istnienia komunikatu.|  
   
 ### <a name="public-data-members"></a>Publiczne elementy członkowskie danych  
   
@@ -83,16 +83,16 @@ class message : public ::Concurrency::details::_Runtime_object;
   
  **Namespace:** współbieżności  
   
-##  <a name="add_ref"></a> add_ref 
+##  <a name="add_ref"></a> add_ref — 
 
- Dodaje do liczebności referencyjnej dla `message` obiektu. Używany dla bloków komunikatów, wymagające zliczanie ustalenie okresy istnienia komunikatu.  
+ Dodaje do licznika odwołań do `message` obiektu. Używane dla bloków komunikatów, wymagających zliczania odniesień, by określić okres istnienia komunikatu.  
   
 ```
 long add_ref();
 ```  
   
 ### <a name="return-value"></a>Wartość zwracana  
- Nowa wartość liczebności referencyjnej.  
+ Nowa wartość licznika odwołań.  
   
 ##  <a name="ctor"></a> Komunikat 
 
@@ -114,17 +114,17 @@ message(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `_P`  
- Obciążenie tego komunikatu.  
+*_P*<br/>
+Obciążenie tego komunikatu.  
   
- `_Id`  
- Unikatowy identyfikator tej wiadomości.  
+*_Identyfikator*<br/>
+Unikatowy identyfikator tego komunikatu.  
   
- `_Msg`  
- Odwołanie lub wskaźnik do `message` obiektu.  
+*_Msg*<br/>
+Odwołanie lub wskaźnik do `message` obiektu.  
   
 ### <a name="remarks"></a>Uwagi  
- Konstruktor, który pobiera wskaźnik do `message` obiekt jako argument zgłasza [invalid_argument —](../../../standard-library/invalid-argument-class.md) wyjątek Jeśli parametr `_Msg` jest `NULL`.  
+ Konstruktor, który pobiera wskaźnik do `message` obiekt jako argument zgłasza [invalid_argument](../../../standard-library/invalid-argument-class.md) wyjątek Jeśli parametr `_Msg` jest `NULL`.  
   
 ##  <a name="dtor"></a> ~ wiadomości 
 
@@ -153,16 +153,16 @@ runtime_object_identity msg_id() const;
 T const payload;
 ```  
   
-##  <a name="remove_ref"></a> remove_ref 
+##  <a name="remove_ref"></a> remove_ref — 
 
- Odejmuje z licznika odwołań do `message` obiektu. Używany dla bloków komunikatów, wymagające zliczanie ustalenie okresy istnienia komunikatu.  
+ Odejmuje z licznikiem odwołań do `message` obiektu. Używane dla bloków komunikatów, wymagających zliczania odniesień, by określić okres istnienia komunikatu.  
   
 ```
 long remove_ref();
 ```  
   
 ### <a name="return-value"></a>Wartość zwracana  
- Nowa wartość liczebności referencyjnej.  
+ Nowa wartość licznika odwołań.  
   
 ## <a name="see-also"></a>Zobacz też  
  [Przestrzeń nazw współbieżności](concurrency-namespace.md)

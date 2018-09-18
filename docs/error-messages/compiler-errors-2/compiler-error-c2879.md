@@ -1,5 +1,5 @@
 ---
-title: C2879 błąd kompilatora | Dokumentacja firmy Microsoft
+title: Błąd kompilatora C2879 | Dokumentacja firmy Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,24 +16,25 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ba1738da7d349ecafd9f10f31d8f05ac1f12df0a
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 632142ea0efd8a9d009f18b898213cfa92514b16
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33243166"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46042479"
 ---
-# <a name="compiler-error-c2879"></a>C2879 błąd kompilatora
-"symbol": tylko do istniejącej przestrzeni nazw można przypisać alternatywną nazwę poprzez definicję aliasu przestrzeni nazw  
-  
- Nie można utworzyć [alias przestrzeni nazw](../../cpp/namespaces-cpp.md#namespace_aliases) do symbolu innego niż przestrzeni nazw.  
-  
- Poniższy przykład generuje C2879:  
-  
-```  
-// C2879.cpp  
-int main() {  
-   int i;  
-   namespace A = i;   // C2879 i is not a namespace  
-}  
+# <a name="compiler-error-c2879"></a>Błąd kompilatora C2879
+
+'symbol': tylko do istniejącej przestrzeni nazw można przypisać alternatywną nazwę przez definicję aliasu przestrzeni nazw
+
+Nie można utworzyć [alias przestrzeni nazw](../../cpp/namespaces-cpp.md#namespace_aliases) do symbolu innego niż przestrzeni nazw.
+
+Poniższy przykład spowoduje wygenerowanie C2879:
+
+```
+// C2879.cpp
+int main() {
+   int i;
+   namespace A = i;   // C2879 i is not a namespace
+}
 ```

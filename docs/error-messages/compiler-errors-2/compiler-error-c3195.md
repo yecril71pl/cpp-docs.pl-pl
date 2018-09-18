@@ -1,5 +1,5 @@
 ---
-title: C3195 błąd kompilatora | Dokumentacja firmy Microsoft
+title: Błąd kompilatora C3195 | Dokumentacja firmy Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,26 +16,27 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6ce3c51da68b971c34d651826a9c84974957ac46
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 3c299704b595ca6e6f6b81fb56ffad5534f81e6b
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33256894"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46040599"
 ---
-# <a name="compiler-error-c3195"></a>C3195 błąd kompilatora
-"operator": jest zarezerwowany i nie można użyć jako element członkowski typu klasy lub wartość ref. Operatory środowiska CLR lub WinRT musi być zdefiniowana przy użyciu słowa kluczowego "operator"  
-  
-Kompilator wykryto definicja operatora przy użyciu rozszerzeń zarządzanych dla składni języka C++. Należy użyć składni języka C++ dla operatorów.  
-  
-Poniższy przykład generuje C3195 i pokazuje, jak rozwiązywanie problemu:  
-  
-```  
-// C3195.cpp  
-// compile with: /clr /LD  
-#using <mscorlib.dll>  
-value struct V {  
-   static V op_Addition(V v, int i);   // C3195  
-   static V operator +(V v, char c);   // OK for new C++ syntax   
-};  
+# <a name="compiler-error-c3195"></a>Błąd kompilatora C3195
+
+'operator': jest zarezerwowany i nie można użyć jako elementem członkowskim klasy lub wartości typu ref. Operatory środowiska CLR lub WinRT musi być zdefiniowana za pomocą słowa kluczowego 'operator'
+
+Kompilator wykrył definicję operatora, przy użyciu zarządzanych rozszerzeń dla składni języka C++. Dla operatorów, należy użyć składni języka C++.
+
+Poniższy przykład generuje C3195 i pokazuje, jak go naprawić:
+
+```
+// C3195.cpp
+// compile with: /clr /LD
+#using <mscorlib.dll>
+value struct V {
+   static V op_Addition(V v, int i);   // C3195
+   static V operator +(V v, char c);   // OK for new C++ syntax
+};
 ```

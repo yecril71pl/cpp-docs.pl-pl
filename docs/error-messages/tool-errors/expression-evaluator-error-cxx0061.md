@@ -1,5 +1,5 @@
 ---
-title: Błąd cxx0061 programu Expression Evaluator | Dokumentacja firmy Microsoft
+title: Błąd ewaluatora wyrażeń CXX0061 | Dokumentacja firmy Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,16 +17,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 67e5edff0556b5105a57d3cb8de1c644959d65a4
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 13f6954ce13c1a4b52b6d52e5f381f8732cc7b1a
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33315610"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46047385"
 ---
 # <a name="expression-evaluator-error-cxx0061"></a>Błąd CXX0061 programu Expression Evaluator
-Przekroczono dozwoloną głębokość zagnieżdżania funkcji  
-  
- Wyrażenie zawiera funkcję zagnieżdżania głębokość przekracza limit. Zmodyfikuj wyrażenie zmniejszenie głębokości zagnieżdżania.  
-  
- Ten błąd jest taki sam jak CAN0061.
+
+Funkcja głębokość zagnieżdżenia przekracza
+
+Wyrażenie zawiera funkcję, większa niż limit głębokości zagnieżdżania. Należy zmodyfikować wyrażenie zmniejszenie głębokość zagnieżdżenia.
+
+Ten błąd jest taka sama jak CAN0061.

@@ -1,5 +1,5 @@
 ---
-title: C2709 błąd kompilatora | Dokumentacja firmy Microsoft
+title: Błąd kompilatora C2709 | Dokumentacja firmy Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,14 +16,15 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2ea21e5344b9eb20cc4dfd10103f4535f666c437
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: d2962303eeb32f6aae33c08fc7e9be31af03f880
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33230140"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46035685"
 ---
-# <a name="compiler-error-c2709"></a>C2709 błąd kompilatora
-'Identyfikator': długość parametrów formalnych w bajtach różni się od poprzedniej deklaracji  
-  
- Podpis w wywołaniu określona funkcja różni się od prototypu.
+# <a name="compiler-error-c2709"></a>Błąd kompilatora C2709
+
+'Identyfikator': długość parametrów formalnych w bajtach różni się od poprzedniej deklaracji
+
+Podpis w wywołaniu określonej funkcji różni się od prototypu.

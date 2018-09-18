@@ -1,5 +1,5 @@
 ---
-title: C2861 błąd kompilatora | Dokumentacja firmy Microsoft
+title: Błąd kompilatora C2861 | Dokumentacja firmy Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,30 +16,32 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4e1f7010ca6d98c4c27f85ecc858cf7703a87e90
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 94210350e0483b46eb86579b837501a5291bda4d
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33247103"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46037258"
 ---
-# <a name="compiler-error-c2861"></a>C2861 błąd kompilatora
-"Nazwa funkcji": funkcja członkowska interfejsu nie może być zdefiniowana  
-  
- Kompilator napotkał interfejs — słowo kluczowe lub ustalona struktury jako interfejs, ale można odnaleźć członka definicji funkcji.  Interfejs nie może zawierać definicji funkcji członkowskiej.  
-  
-## <a name="example"></a>Przykład  
- Poniższy przykład generuje C2861:  
-  
-```  
-// C2861.cpp  
-// compile with: /c  
-#include <objbase.h>   // required for IUnknown definition  
-[ object, uuid("00000000-0000-0000-0000-000000000001") ]  
-__interface IMyInterface : IUnknown {  
-   HRESULT mf(int a);  
-};  
-  
-HRESULT IMyInterface::mf(int a) {}   // C2861  
-  
+# <a name="compiler-error-c2861"></a>Błąd kompilatora C2861
+
+"Nazwa funkcji": funkcja składowa interfejsu nie może być zdefiniowana
+
+Kompilator napotkał interface — słowo kluczowe lub wywnioskowany; dotyczy to struktura jako interfejs, ale następnie znaleziono członka definicji funkcji.  Interfejs nie może zawierać definicję dla funkcji członkowskiej.
+
+## <a name="example"></a>Przykład
+
+Poniższy przykład spowoduje wygenerowanie C2861:
+
+```
+// C2861.cpp
+// compile with: /c
+#include <objbase.h>   // required for IUnknown definition
+[ object, uuid("00000000-0000-0000-0000-000000000001") ]
+__interface IMyInterface : IUnknown {
+   HRESULT mf(int a);
+};
+
+HRESULT IMyInterface::mf(int a) {}   // C2861
+
 ```

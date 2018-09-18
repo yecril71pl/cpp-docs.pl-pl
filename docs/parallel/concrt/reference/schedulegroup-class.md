@@ -21,15 +21,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: cf679abbeb1134332d98ef0bd2ba8f2b845d30a4
-ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
+ms.openlocfilehash: 5df2ad30fca410a71bc6333e34948bc938ca38d2
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33688690"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46039997"
 ---
 # <a name="schedulegroup-class"></a>ScheduleGroup — Klasa
-Reprezentuje abstrakcję do grupy harmonogramu. Grupy harmonogramu uporządkowania zbioru powiązanych pracy tego korzyści z planowany blisko siebie tymczasowo, wykonując inne zadanie w tej samej grupy przed przejściem do innej grupy lub od, wykonując wielu elementów w tej samej grupie na tym samym Lub gniazda fizycznego węzła NUMA.  
+Reprezentuje klasą abstrakcyjną dla grupy harmonogramów. Harmonogram grup organizuje zestaw powiązanych prac, które mają korzyści z zaplanowane blisko siebie czasowo, przez wykonywanie innego zadania w tej samej grupie przed przeniesieniem do innej grupy lub przestrzennie, wykonując wiele elementów w tej samej grupie na tym samym Węzeł NUMA lub fizycznym gnieździe.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -49,10 +49,10 @@ class ScheduleGroup;
   
 |Nazwa|Opis|  
 |----------|-----------------|  
-|[Id](#id)|Zwraca identyfikator grupy harmonogram, który jest unikatowy w ramach harmonogramu, do której należy grupa.|  
-|[Dokumentacja](#reference)|Zwiększa liczbę harmonogram grupy odwołania.|  
-|[Wersja](#release)|Zmniejsza liczba odwołanie do grupy harmonogramu.|  
-|[ScheduleTask](#scheduletask)|Zaplanowane zadania lekki w obrębie grupy harmonogramu.|  
+|[Id](#id)|Zwraca identyfikator grupy harmonogramu, który jest unikatowy w obrębie harmonogramu, do której należy grupa.|  
+|[Dokumentacja](#reference)|Zwiększa liczbę odwołań harmonogramu grupy.|  
+|[Wersja](#release)|Dekrementuje liczbę odwołań harmonogramu grupy.|  
+|[Scheduletask —](#scheduletask)|Planuje pharmonogramy zadań wagi lekkiej w ramach harmonogramu grupy.|  
   
 ## <a name="inheritance-hierarchy"></a>Hierarchia dziedziczenia  
  `ScheduleGroup`  
@@ -64,18 +64,18 @@ class ScheduleGroup;
   
 ##  <a name="id"></a> Id 
 
- Zwraca identyfikator grupy harmonogram, który jest unikatowy w ramach harmonogramu, do której należy grupa.  
+ Zwraca identyfikator grupy harmonogramu, który jest unikatowy w obrębie harmonogramu, do której należy grupa.  
   
 ```
 virtual unsigned int Id() const = 0;
 ```  
   
 ### <a name="return-value"></a>Wartość zwracana  
- Identyfikator grupy harmonogram, który jest unikatowy w ramach harmonogramu, do której należy grupa.  
+ Identyfikator grupy harmonogramu, który jest unikatowy w obrębie harmonogramu, do której należy grupa.  
   
 ##  <a name="operator_delete"></a> Usuwanie operatora 
 
- A `ScheduleGroup` obiekt zostanie zniszczony wewnętrznie przez środowisko uruchomieniowe po udostępnieniu wszystkie zewnętrzne odwołania do niego. Nie można być jawnie usunąć.  
+ A `ScheduleGroup` obiekt jest niszczony, wewnętrznie przez środowisko uruchomieniowe po udostępnieniu wszystkie odwołania zewnętrzne do niego. Go nie może zostać jawnie usunięte.  
   
 ```
 void operator delete(
@@ -89,38 +89,38 @@ void operator delete(
 ```    
   
 ### <a name="parameters"></a>Parametry  
- `_PObject`  
- Wskaźnik do obiektu, który ma zostać usunięty.  
+*_PObject*<br/>
+Wskaźnik do obiektu, który ma zostać usunięty.  
   
 ##  <a name="reference"></a> Odwołanie 
 
- Zwiększa liczbę harmonogram grupy odwołania.  
+ Zwiększa liczbę odwołań harmonogramu grupy.  
   
 ```
 virtual unsigned int Reference() = 0;
 ```  
   
 ### <a name="return-value"></a>Wartość zwracana  
- Liczba odwołań nowo zwiększany.  
+ Licznik odwołań nowo zwiększona.  
   
 ### <a name="remarks"></a>Uwagi  
- Służy to zwykle zarządzać okresem istnienia grupy harmonogramu dla kompozycji. Grupy harmonogramu liczebności referencyjnej grupy harmonogramu przypada na zero, są usuwane w czasie wykonywania. Grupy harmonogramu utworzone za pomocą [CurrentScheduler::CreateScheduleGroup](currentscheduler-class.md#createschedulegroup) metody, lub [Scheduler::CreateScheduleGroup](scheduler-class.md#createschedulegroup) metody rozpoczyna się od jednego licznika odwołań.  
+ Służy to zazwyczaj zarządzania okresem istnienia grupy harmonogramu dla kompozycji. Licznik odwołań harmonogramu grupy spadnie do zera, grupa harmonogramu są usuwane w czasie wykonywania. Grupy harmonogramu, utworzony za pomocą [currentscheduler::createschedulegroup —](currentscheduler-class.md#createschedulegroup) metody lub [Scheduler::createschedulegroup —](scheduler-class.md#createschedulegroup) metoda rozpoczyna się od jednego licznika odwołań.  
   
-##  <a name="release"></a> Zlecenia 
+##  <a name="release"></a> Wydania 
 
- Zmniejsza liczba odwołanie do grupy harmonogramu.  
+ Dekrementuje liczbę odwołań harmonogramu grupy.  
   
 ```
 virtual unsigned int Release() = 0;
 ```  
   
 ### <a name="return-value"></a>Wartość zwracana  
- Liczba odwołań nowo zmniejszany.  
+ Licznik odwołań nowo zmniejszony.  
   
 ### <a name="remarks"></a>Uwagi  
- Służy to zwykle zarządzać okresem istnienia grupy harmonogramu dla kompozycji. Grupy harmonogramu liczebności referencyjnej grupy harmonogramu przypada na zero, są usuwane w czasie wykonywania. Po wywołaniu `Release` metody określoną liczbę razy, aby usunąć Tworzenie odwołania liczbę i wszelkie dodatkowe informacje umieszczona przy użyciu `Reference` metody, nie może wykorzystywać grupę harmonogram dalej. W ten sposób spowoduje niezdefiniowane zachowanie.  
+ Służy to zazwyczaj zarządzania okresem istnienia grupy harmonogramu dla kompozycji. Licznik odwołań harmonogramu grupy spadnie do zera, grupa harmonogramu są usuwane w czasie wykonywania. Po wywołaniu `Release` metody określonej liczby razy, aby usunąć tworzenia odwoływać się do liczby i wszelkie dodatkowe informacje, umieszczona przy użyciu `Reference` metody, nie możesz wykorzystywać dodatkowo grupa harmonogramu. Ten sposób spowoduje niezdefiniowane zachowanie.  
   
- Grupy harmonogramu jest skojarzony z wystąpieniem określonego harmonogramu. Należy się upewnić, że wszystkie odwołania do grupy harmonogramu są wydawane zanim wszystkie odwołania do harmonogramu są wydawane, ponieważ to drugie może skutkować harmonogramu niszczony. Wykonywanie w przeciwnym razie wynikiem niezdefiniowane zachowanie.  
+ Grupy harmonogramu jest skojarzony z wystąpieniem określonego harmonogramu. Należy się upewnić, że wszystkie odwołania do grupy harmonogramu są wydawane zanim wszystkie odwołania do usługi scheduler zostaną zwolnione, ponieważ ten ostatni może spowodować harmonogramu niszczone. Sposób, w przeciwnym razie powoduje niezdefiniowane zachowanie.  
   
 ##  <a name="dtor"></a> ~ScheduleGroup 
 
@@ -128,9 +128,9 @@ virtual unsigned int Release() = 0;
 virtual ~ScheduleGroup();
 ```  
   
-##  <a name="scheduletask"></a> ScheduleTask 
+##  <a name="scheduletask"></a> Scheduletask — 
 
- Zaplanowane zadania lekki w obrębie grupy harmonogramu.  
+ Planuje pharmonogramy zadań wagi lekkiej w ramach harmonogramu grupy.  
   
 ```
 virtual void ScheduleTask(
@@ -139,19 +139,19 @@ virtual void ScheduleTask(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `_Proc`  
- Wskaźnik do funkcji w celu wykonania do wykonywania zadań lekki treści.  
+*_Proc*<br/>
+Wskaźnik do funkcji wykonać, aby wykonać treści zadania lekki.  
   
- `_Data`  
- Void wskaźnik do danych, który zostanie przekazany jako parametr do treści zadania.  
+*_Dane*<br/>
+Pusty wskaźnik do danych, które zostaną przekazane jako parametr do treści zadania.  
   
 ### <a name="remarks"></a>Uwagi  
- Wywoływanie `ScheduleTask` metoda niejawnie umieszcza liczba odwołań w grupie harmonogram, który zostanie usunięty w czasie wykonywania w odpowiednim czasie po wykonaniu zadania.  
+ Wywoływanie `ScheduleTask` metoda niejawnie umieszcza licznik odwołań na grupy harmonogramu, który zostanie usunięty w czasie wykonywania w odpowiednim czasie po wykonaniu zadania.  
   
 ## <a name="see-also"></a>Zobacz też  
  [Współbieżność Namespace](concurrency-namespace.md)   
  [Currentscheduler — klasa](currentscheduler-class.md)   
- [Klasa harmonogramu](scheduler-class.md)   
+ [Scheduler — klasa](scheduler-class.md)   
  [Harmonogram zadań](../../../parallel/concrt/task-scheduler-concurrency-runtime.md)
 
 

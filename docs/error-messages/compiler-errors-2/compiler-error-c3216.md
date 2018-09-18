@@ -1,5 +1,5 @@
 ---
-title: C3216 błąd kompilatora | Dokumentacja firmy Microsoft
+title: Błąd kompilatora C3216 | Dokumentacja firmy Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,40 +16,41 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 19091b0e200bb44ca6c1ec7c9a8ee359a95fad1e
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 4eb1fb93335dc6fb61e8e73ea11cfc91c6b461b8
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33247651"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46043693"
 ---
-# <a name="compiler-error-c3216"></a>C3216 błąd kompilatora
-ograniczenie musi być parametrem generycznym, nie 'type'  
-  
- Ograniczenie został niewłaściwie sformatowany.  
-  
- Poniższy przykład generuje C3216:  
-  
-```  
-// C3216.cpp  
-// compile with: /clr  
-interface struct A {};  
-  
-generic <class T>  
-where F : A   // C3216  
-// Try the following line instead:  
-// where T : A    // C3216  
-ref class C {};  
-```  
-  
- W poniższym przykładzie pokazano możliwe rozwiązania:  
-  
-```  
-// C3216b.cpp  
-// compile with: /clr /c  
-interface struct A {};  
-  
-generic <class T>  
-where T : A  
-ref class C {};  
+# <a name="compiler-error-c3216"></a>Błąd kompilatora C3216
+
+ograniczenie musi być parametrem generycznym, nie "type"
+
+Ograniczenie został niewłaściwie sformatowany.
+
+Poniższy przykład spowoduje wygenerowanie C3216:
+
+```
+// C3216.cpp
+// compile with: /clr
+interface struct A {};
+
+generic <class T>
+where F : A   // C3216
+// Try the following line instead:
+// where T : A    // C3216
+ref class C {};
+```
+
+W poniższym przykładzie pokazano możliwe rozwiązania:
+
+```
+// C3216b.cpp
+// compile with: /clr /c
+interface struct A {};
+
+generic <class T>
+where T : A
+ref class C {};
 ```

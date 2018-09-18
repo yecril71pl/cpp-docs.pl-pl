@@ -16,14 +16,15 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7d15a90bf1a17bb07c06c2bcfc74a12368ffcdbc
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 5cd86b4634808d74e8aa094884d16dcc2e2cecab
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33225368"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46043407"
 ---
 # <a name="fatal-error-c1087"></a>Błąd krytyczny C1087
-Nie można sprawdzić pliku filetype: 'Plik': wiadomości  
-  
- Kompilator nie może ukończyć operacji We/Wy.
+
+Nie można rozróżnić pliku typu: 'Plik': komunikat
+
+Kompilator nie może ukończyć operacji We/Wy.

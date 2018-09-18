@@ -16,16 +16,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: cffb9c4c67bc3003b8dcdda0ad3a2e8d55abe932
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 644e7a9ba26dab15e2bfa2a269f62c04f0510180
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33300374"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46041002"
 ---
 # <a name="linker-tools-warning-lnk4022"></a>Ostrzeżenie LNK4022 narzędzi konsolidatora
-Nie można znaleźć unikatowego dopasowania dla symbolu "symbol"  
-  
- ŁĄCZE lub znaleziono wiele LIB odpowiada dla podanego symbolu bez i nie można rozpoznać niejednoznaczności. Nie pliku wyjściowego (.exe, .dll, .exp lub lib) jest tworzony. To ostrzeżenie występuje jeden ostrzeżenie [LNK4002](../../error-messages/tool-errors/linker-tools-warning-lnk4002.md) dla każdego zduplikowany symbol i na koniec następuje błąd krytyczny [LNK1152](../../error-messages/tool-errors/linker-tools-error-lnk1152.md).  
-  
- Aby uniknąć tego ostrzeżenia, należy określić symbol w postaci dekorowany. Uruchom [DUMPBIN](../../build/reference/dumpbin-options.md) na obiekcie, aby wyświetlić nazwy ozdobione.
+
+Nie można znaleźć unikatowego dopasowania dla symbolu "symbol"
+
+ŁĄCZE lub LIB znaleziono wiele odpowiada danym niedekorowanego symbolu i nie można rozpoznać niejednoznaczności. Nie pliku wyjściowego (.exe, .dll, .exp lub .lib) jest generowany. To ostrzeżenie jest poprzedzony jedną ostrzeżenie [LNK4002](../../error-messages/tool-errors/linker-tools-warning-lnk4002.md) dla każdego duplikować symboli, a na koniec następuje błąd krytyczny [LNK1152](../../error-messages/tool-errors/linker-tools-error-lnk1152.md).
+
+Aby uniknąć tego ostrzeżenia, należy określić symbol w formie urządzonej. Uruchom [DUMPBIN](../../build/reference/dumpbin-options.md) w obiekcie, aby wyświetlić nazwy dekorowane.

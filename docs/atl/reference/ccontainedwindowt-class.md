@@ -32,12 +32,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: cc9ac9fc7e638655b7b6b812d347ac26b8cf6967
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 1c64db5a041845bbd068bab1a72ad461740170b8
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43755804"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46040482"
 ---
 # <a name="ccontainedwindowt-class"></a>Klasa CContainedWindowT
 
@@ -49,16 +49,16 @@ Ta klasa implementuje okno znajdujących się w innym obiekcie.
 ## <a name="syntax"></a>Składnia
 
 ```
-template <class TBase = CWindow, class TWinTraits = CControlWinTraits>  
+template <class TBase = CWindow, class TWinTraits = CControlWinTraits>
 class CContainedWindowT : public TBase
 ```
 
 #### <a name="parameters"></a>Parametry
 
-*Tpodstawowe*  
+*Tpodstawowe*<br/>
 Klasa bazowa nowej klasie. Domyślna klasa bazowa jest `CWindow`.
 
-*TWinTraits*  
+*TWinTraits*<br/>
 Klasa cech, który definiuje Style okna. Wartość domyślna to `CControlWinTraits`.
 
 > [!NOTE]
@@ -148,13 +148,13 @@ CContainedWindowT(
 
 ### <a name="parameters"></a>Parametry
 
-*lpszClassName*  
+*lpszClassName*<br/>
 [in] Nazwa istniejącej klasy okna, na którym będzie zależeć zawartego okna.
 
-*Obiekt*  
+*Obiekt*<br/>
 [in] Wskaźnik do obiektu zawierającego, która deklaruje mapy komunikatów. Klasa ten obiekt musi pochodzić od klasy [CMessageMap](../../atl/reference/cmessagemap-class.md).
 
-*dwMsgMapID*  
+*dwMsgMapID*<br/>
 [in] Identyfikuje mapy komunikatów, który będzie przetwarzał zawartego okna komunikatów. Wartość domyślna: 0, określa mapy komunikatów domyślne, które są zadeklarowane za pomocą [BEGIN_MSG_MAP](message-map-macros-atl.md#begin_msg_map). Można użyć mapy wiadomości alternatywny zadeklarowane za pomocą [ALT_MSG_MAP(msgMapID)](message-map-macros-atl.md#alt_msg_map), przekazać `msgMapID`.
 
 ### <a name="remarks"></a>Uwagi
@@ -211,34 +211,34 @@ HWND Create(
 
 ### <a name="parameters"></a>Parametry
 
-*lpszClassName*  
+*lpszClassName*<br/>
 [in] Nazwa istniejącej klasy okna, na którym będzie zależeć zawartego okna.
 
-*Obiekt*  
+*Obiekt*<br/>
 [in] Wskaźnik do obiektu zawierającego, która deklaruje mapy komunikatów. Klasa ten obiekt musi pochodzić od klasy [CMessageMap](../../atl/reference/cmessagemap-class.md).
 
-*dwMsgMapID*  
+*dwMsgMapID*<br/>
 [in] Identyfikuje mapy komunikatów, który będzie przetwarzał zawartego okna komunikatów. Wartość domyślna: 0, określa mapy komunikatów domyślne, które są zadeklarowane za pomocą [BEGIN_MSG_MAP](message-map-macros-atl.md#begin_msg_map). Można użyć mapy wiadomości alternatywny zadeklarowane za pomocą [ALT_MSG_MAP(msgMapID)](message-map-macros-atl.md#alt_msg_map), przekazać `msgMapID`.
 
-*hWndParent*  
+*hWndParent*<br/>
 [in] Dojście do okna nadrzędnego lub właściciela.
 
-*Rect*  
+*Rect*<br/>
 [in] A [Prostokąt](https://msdn.microsoft.com/library/windows/desktop/dd162897) Struktura określająca położenie okna. `RECT` Mogą być przekazywane przez wskaźnik lub przez odwołanie.
 
-*szWindowName*  
+*szWindowName*<br/>
 [in] Określa nazwę okna. Wartością domyślną jest NULL.
 
-*dwStyle*  
+*dwStyle*<br/>
 [in] Styl okna. Wartość domyślna to WS_CHILD &#124; WS_VISIBLE. Aby uzyskać listę możliwych wartości, zobacz [CreateWindow](/windows/desktop/api/winuser/nf-winuser-createwindowa) w zestawie Windows SDK.
 
-*dwExStyle*  
+*dwExStyle*<br/>
 [in] Styl okna rozszerzonej. Wartość domyślna to 0, co oznacza nie rozszerzonego stylu. Aby uzyskać listę możliwych wartości, zobacz [elementu CreateWindowEx](/windows/desktop/api/winuser/nf-winuser-createwindowexa) w zestawie Windows SDK.
 
-*MenuOrID*  
+*MenuOrID*<br/>
 [in] Dla okna podrzędnego identyfikator okna. Aby uzyskać oknem najwyższego poziomu uchwyt menu dla okna. Wartość domyślna to **0U**.
 
-*lpCreateParam*  
+*lpCreateParam*<br/>
 [in] Wskaźnik do danych tworzenie okien. Aby uzyskać pełny opis, zobacz opis ostatni parametr do [elementu CreateWindowEx](/windows/desktop/api/winuser/nf-winuser-createwindowexa).
 
 ### <a name="return-value"></a>Wartość zwracana
@@ -269,13 +269,13 @@ LRESULT DefWindowProc(
 
 ### <a name="parameters"></a>Parametry
 
-*uMsg*  
+*uMsg*<br/>
 [in] Komunikat wysyłany do okna.
 
-*wParam*  
+*wParam*<br/>
 [in] Dodatkowe informacje specyficzne dla wiadomości.
 
-*lParam*  
+*lParam*<br/>
 [in] Dodatkowe informacje specyficzne dla wiadomości.
 
 ### <a name="return-value"></a>Wartość zwracana
@@ -382,7 +382,7 @@ BOOL SubclassWindow(HWND hWnd);
 
 ### <a name="parameters"></a>Parametry
 
-*hWnd*  
+*hWnd*<br/>
 [in] Uchwyt okna jest podklasą klasy.
 
 ### <a name="return-value"></a>Wartość zwracana
@@ -406,7 +406,7 @@ void SwitchMessageMap(DWORD dwMsgMapID);
 
 ### <a name="parameters"></a>Parametry
 
-*dwMsgMapID*  
+*dwMsgMapID*<br/>
 [in] Identyfikator mapy wiadomości. Aby użyć domyślnej mapy komunikatów zadeklarowane za pomocą [BEGIN_MSG_MAP](message-map-macros-atl.md#begin_msg_map), Przekaż wartość zero. Można użyć mapy wiadomości alternatywny zadeklarowane za pomocą [ALT_MSG_MAP(msgMapID)](message-map-macros-atl.md#alt_msg_map), przekazać `msgMapID`.
 
 ### <a name="remarks"></a>Uwagi
@@ -425,7 +425,7 @@ HWND UnsubclassWindow(BOOL bForce = FALSE);
 
 ### <a name="parameters"></a>Parametry
 
-*bForce*  
+*bForce*<br/>
 [in] Ustaw na wartość true, wymuś oryginalnego procedurę okna do przywrócenia nawet wtedy, gdy procedura okna, w tym `CContainedWindowT` obiekt nie jest obecnie aktywny. Jeśli *bForce* jest ustawiona na FALSE i procedurę okna, w tym `CContainedWindowT` obiekt nie jest obecnie aktywny, oryginalnym procedurę okna nie zostanie przywrócony.
 
 ### <a name="return-value"></a>Wartość zwracana
@@ -450,16 +450,16 @@ static LRESULT CALLBACK WindowProc(
 
 ### <a name="parameters"></a>Parametry
 
-*hWnd*  
+*hWnd*<br/>
 [in] Dojście do okna.
 
-*uMsg*  
+*uMsg*<br/>
 [in] Komunikat wysyłany do okna.
 
-*wParam*  
+*wParam*<br/>
 [in] Dodatkowe informacje specyficzne dla wiadomości.
 
-*lParam*  
+*lParam*<br/>
 [in] Dodatkowe informacje specyficzne dla wiadomości.
 
 ### <a name="return-value"></a>Wartość zwracana
@@ -472,9 +472,9 @@ Wynik przetwarzania wiadomości.
 
 ## <a name="see-also"></a>Zobacz też
 
-[Klasa CWindow](../../atl/reference/cwindow-class.md)   
-[Klasa CWindowImpl](../../atl/reference/cwindowimpl-class.md)   
-[Klasa CMessageMap](../../atl/reference/cmessagemap-class.md)   
-[BEGIN_MSG_MAP](message-map-macros-atl.md#begin_msg_map)   
-[ALT_MSG_MAP(msgMapID)](message-map-macros-atl.md#alt_msg_map)   
+[Klasa CWindow](../../atl/reference/cwindow-class.md)<br/>
+[Klasa CWindowImpl](../../atl/reference/cwindowimpl-class.md)<br/>
+[Klasa CMessageMap](../../atl/reference/cmessagemap-class.md)<br/>
+[BEGIN_MSG_MAP](message-map-macros-atl.md#begin_msg_map)<br/>
+[ALT_MSG_MAP(msgMapID)](message-map-macros-atl.md#alt_msg_map)<br/>
 [Klasa — Przegląd](../../atl/atl-class-overview.md)

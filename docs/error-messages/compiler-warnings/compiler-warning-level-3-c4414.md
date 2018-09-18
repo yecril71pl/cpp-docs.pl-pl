@@ -1,5 +1,5 @@
 ---
-title: Kompilatora (poziom 3) ostrzeżenie C4414 | Dokumentacja firmy Microsoft
+title: Kompilator ostrzeżenie (poziom 3) C4414 | Dokumentacja firmy Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,34 +16,35 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a1526b20732d7a1b08ec8d753cb64e33e42dd809
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: fd0868fea89cd868178956c0aba171ce6525bd75
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33289711"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46043212"
 ---
-# <a name="compiler-warning-level-3-c4414"></a>Kompilator C4414 ostrzegawcze (poziom 3)
-"Funkcja": krótki przeskok do funkcji konwertowanej do umieszczonej blisko  
-  
- Krótki przechodzi Generowanie instrukcji compact gałęzi do adresu w ograniczonym zakresie z instrukcji. Instrukcja zawiera krótki offset reprezentującą odległość między skok i adresu docelowego definicji funkcji. Podczas łączenia funkcja może być przeniesiony lub w czasie konsolidacji funkcje optymalizacji, które spowodować funkcji do przeniesienia poza zakresem osiągalny z krótkim przesunięcie. Kompilator należy wygenerować specjalne rekord skok, co wymaga instrukcji skok do NAJBLIŻSZEJ lub do tej PORY. Kompilator dokonać konwersji.  
-  
- Na przykład następujący kod generuje C4414:  
-  
-```  
-// C4414.cpp  
-// compile with: /W3 /c  
-// processor: x86  
-int DoParityEven();  
-int DoParityOdd();  
-unsigned char global;  
-int __declspec(naked) DoParityEither()  
-{  
-   __asm  
-   {  
-      test global,0  
-      jpe SHORT DoParityEven  // C4414  
-      jmp SHORT DoParityOdd   // C4414  
-   }  
-}  
+# <a name="compiler-warning-level-3-c4414"></a>Kompilator ostrzeżenie (poziom 3) C4414
+
+'Funkcja': krótki przeskok do funkcji konwertowanej do umieszczonej blisko
+
+Krótkie przechodzi Generowanie compact instrukcji, co gałęzi na adres w ramach ograniczonego zakresu z instrukcji. Instrukcja zawiera krótki przesunięcie, reprezentującą odległość między skok, a także adres docelowy, definicji funkcji. Podczas łączenia funkcji może być przenoszony lub w czasie konsolidowania funkcje optymalizacji, które spowodować, że funkcja, która ma zostać przeniesiona poza zakresem dostępny od krótkich przesunięcia. Kompilator musi wygenerować to rekord specjalny dla szybkie, co wymaga instrukcji element jmp do NAJBLIŻSZEJ lub DALEKO. Kompilator dokonać konwersji.
+
+Na przykład poniższy kod generuje C4414:
+
+```
+// C4414.cpp
+// compile with: /W3 /c
+// processor: x86
+int DoParityEven();
+int DoParityOdd();
+unsigned char global;
+int __declspec(naked) DoParityEither()
+{
+   __asm
+   {
+      test global,0
+      jpe SHORT DoParityEven  // C4414
+      jmp SHORT DoParityOdd   // C4414
+   }
+}
 ```

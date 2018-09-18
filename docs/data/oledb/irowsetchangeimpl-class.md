@@ -43,14 +43,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: c64d6cc460d068a5d0acf90795cb405a920b867f
-ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
+ms.openlocfilehash: 3cac23621959fb71247b649171309ec9d12cf35b
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "42464946"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46038752"
 ---
 # <a name="irowsetchangeimpl-class"></a>IRowsetChangeImpl — Klasa
+
 Szablony OLE DB implementacji [IRowsetChange](/previous-versions/windows/desktop/ms715790\(v=vs.85\)) interfejsu w specyfikacji OLE DB.  
   
 ## <a name="syntax"></a>Składnia
@@ -66,23 +67,25 @@ class ATL_NO_VTABLE IRowsetChangeImpl : public BaseInterface
 ```  
   
 ### <a name="parameters"></a>Parametry  
- *T*  
- Klasa pochodząca z `IRowsetChangeImpl`.  
+
+*T*<br/>
+Klasa pochodząca z `IRowsetChangeImpl`.  
   
- *Magazyn*  
- Rekordzie użytkownika.  
+*Magazyn*<br/>
+Rekordzie użytkownika.  
   
- *BaseInterface*  
- Klasy dla interfejsu, takich jak bazowej `IRowsetChange`.  
+*BaseInterface*<br/>
+Klasy dla interfejsu, takich jak bazowej `IRowsetChange`.  
   
- *RowClass*  
- Jednostka magazynu dojście do wiersza.  
+*RowClass*<br/>
+Jednostka magazynu dojście do wiersza.  
   
- *MapClass*  
- Jednostki magazynu na potrzeby wszystkich dojść do wierszy są przechowywane przez dostawcę.  
+*MapClass*<br/>
+Jednostki magazynu na potrzeby wszystkich dojść do wierszy są przechowywane przez dostawcę.  
 
 ## <a name="requirements"></a>Wymagania  
- **Nagłówek:** atldb.h  
+
+**Nagłówek:** atldb.h  
   
 ## <a name="members"></a>Elementy członkowskie  
   
@@ -101,22 +104,24 @@ class ATL_NO_VTABLE IRowsetChangeImpl : public BaseInterface
 |[FlushData](#flushdata)|Overidden przez dostawcę, aby zatwierdzić jego magazynu danych.|  
   
 ## <a name="remarks"></a>Uwagi  
- Ten interfejs jest odpowiedzialny za operacje zapisu natychmiastowego do magazynu danych. "Natychmiastowymi" oznacza, że po użytkownik końcowy (osoby za pomocą konsumenta) sprawia, że wszelkie zmiany, te zmiany zostaną natychmiast przesłane do dane przechowywane (i nie można cofnąć).  
+
+Ten interfejs jest odpowiedzialny za operacje zapisu natychmiastowego do magazynu danych. "Natychmiastowymi" oznacza, że po użytkownik końcowy (osoby za pomocą konsumenta) sprawia, że wszelkie zmiany, te zmiany zostaną natychmiast przesłane do dane przechowywane (i nie można cofnąć).  
   
- `IRowsetChangeImpl` implementuje OLE DB `IRowsetChange` interfejs, który umożliwia aktualizowanie wartości kolumn w istniejących wierszy: usuwanie wierszy, a następnie wstawianie nowych wierszy.  
+`IRowsetChangeImpl` implementuje OLE DB `IRowsetChange` interfejs, który umożliwia aktualizowanie wartości kolumn w istniejących wierszy: usuwanie wierszy, a następnie wstawianie nowych wierszy.  
   
- Implementacja szablony OLE DB obsługuje podstawowych metod (`SetData`, `InsertRow`, i `DeleteRows`).  
+Implementacja szablony OLE DB obsługuje podstawowych metod (`SetData`, `InsertRow`, i `DeleteRows`).  
   
 > [!IMPORTANT]
 >  Zdecydowanie zaleca się przeczytanie poniższej dokumentacji przed podjęciem próby wdrożenia dostawcy:  
   
--   [Tworzenie aktualizowalnego dostawcy](../../data/oledb/creating-an-updatable-provider.md)  
+- [Tworzenie aktualizowalnego dostawcy](../../data/oledb/creating-an-updatable-provider.md)  
   
--   Rozdział 6 *OLE DB Podręcznik programisty*  
+- Rozdział 6 *OLE DB Podręcznik programisty*  
   
--   Zobacz też sposób, w jaki `RUpdateRowset` klasa jest używana w [UpdatePV](https://github.com/Microsoft/VCSamples/tree/master/VC2010Samples/ATL/OLEDB/Provider/UPDATEPV) próbki.  
+- Zobacz też sposób, w jaki `RUpdateRowset` klasa jest używana w [UpdatePV](https://github.com/Microsoft/VCSamples/tree/master/VC2010Samples/ATL/OLEDB/Provider/UPDATEPV) próbki.  
   
 ## <a name="deleterows"></a> IRowsetChangeImpl::DeleteRows
+
 Usuwa wiersze z zestawu wierszy.  
   
 ### <a name="syntax"></a>Składnia  
@@ -129,9 +134,11 @@ STDMETHOD (DeleteRows )(HCHAPTER /* hReserved */,
 ```  
   
 #### <a name="parameters"></a>Parametry  
- Zobacz [IRowsetChange::DeleteRows](/previous-versions/windows/desktop/ms724362(v%3dvs.85)) w *OLE DB Podręcznik programisty*. 
+
+Zobacz [IRowsetChange::DeleteRows](/previous-versions/windows/desktop/ms724362(v%3dvs.85)) w *OLE DB Podręcznik programisty*. 
 
 ## <a name="insertrow"></a> IRowsetChangeImpl::InsertRow
+
 Tworzy i inicjuje nowy wiersz w zestawie wierszy.  
   
 ### <a name="syntax"></a>Składnia  
@@ -144,9 +151,11 @@ STDMETHOD (InsertRow )(HCHAPTER /* hReserved */,
 ```  
   
 #### <a name="parameters"></a>Parametry  
- Zobacz [IRowsetChange::InsertRow](/previous-versions/windows/desktop/ms716921\(v=vs.85\)) w *OLE DB Podręcznik programisty*. 
+
+Zobacz [IRowsetChange::InsertRow](/previous-versions/windows/desktop/ms716921\(v=vs.85\)) w *OLE DB Podręcznik programisty*. 
 
 ## <a name="setdata"></a> IRowsetChangeImpl::SetData
+
 Ustawia wartości danych w co najmniej jedną kolumnę.  
   
 ### <a name="syntax"></a>Składnia  
@@ -158,9 +167,11 @@ STDMETHOD (SetData )(HROW hRow,
 ```  
   
 #### <a name="parameters"></a>Parametry  
- Zobacz [IRowsetChange::SetData](/previous-versions/windows/desktop/ms721232\(v=vs.85\)) w *OLE DB Podręcznik programisty*. 
+
+Zobacz [IRowsetChange::SetData](/previous-versions/windows/desktop/ms721232\(v=vs.85\)) w *OLE DB Podręcznik programisty*. 
 
 ## <a name="flushdata"></a> IRowsetChangeImpl::FlushData
+
 Overidden przez dostawcę, aby zatwierdzić jego magazynu danych.  
   
 ### <a name="syntax"></a>Składnia  
@@ -171,15 +182,18 @@ HRESULT FlushData(HROW hRowToFlush,
 ```  
   
 #### <a name="parameters"></a>Parametry  
- *hRowToFlush*  
- [in] Dojście do wierszy danych. Typ ten wiersz jest określana na podstawie *RowClass* argument szablonu `IRowsetImpl` klasy (`CSimpleRow` domyślnie).  
+
+*hRowToFlush*<br/>
+[in] Dojście do wierszy danych. Typ ten wiersz jest określana na podstawie *RowClass* argument szablonu `IRowsetImpl` klasy (`CSimpleRow` domyślnie).  
   
- *hAccessorToFlush*  
- [in] Dojście do metody dostępu, który zawiera informacje o powiązaniu i informacje o typie w jego `PROVIDER_MAP` (zobacz [iaccessorimpl —](../../data/oledb/iaccessorimpl-class.md)).  
+*hAccessorToFlush*<br/>
+[in] Dojście do metody dostępu, który zawiera informacje o powiązaniu i informacje o typie w jego `PROVIDER_MAP` (zobacz [iaccessorimpl —](../../data/oledb/iaccessorimpl-class.md)).  
   
 ### <a name="return-value"></a>Wartość zwracana  
- Standardowa HRESULT.  
+
+Standardowa HRESULT.  
   
 ## <a name="see-also"></a>Zobacz też  
- [Szablony dostawców OLE DB](../../data/oledb/ole-db-provider-templates-cpp.md)   
- [Architektura szablonu dostawcy OLE DB](../../data/oledb/ole-db-provider-template-architecture.md)
+
+[Szablony dostawców OLE DB](../../data/oledb/ole-db-provider-templates-cpp.md)<br/>
+[Architektura szablonu dostawcy OLE DB](../../data/oledb/ole-db-provider-template-architecture.md)

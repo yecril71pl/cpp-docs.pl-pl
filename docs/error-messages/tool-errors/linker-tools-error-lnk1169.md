@@ -16,16 +16,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 79682f58111804b3c1340aa7dc5ab5f0c97e0d68
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: d30171eedd43695b26be24f6c7e2c9751ae8fcdb
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33302701"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46036049"
 ---
 # <a name="linker-tools-error-lnk1169"></a>Błąd narzędzi konsolidatora LNK1169
-co najmniej jeden wielokrotnie zdefiniowany symbol znaleziono  
-  
- Kompilacja nie powiodła się ze względu na wiele definicji jednego lub więcej symboli. Ten błąd jest poprzedzony błąd [LNK2005](../../error-messages/tool-errors/linker-tools-error-lnk2005.md).  
-  
- [/FORCE](../../build/reference/force-force-file-output.md) lub **/FORCE:MULTIPLE** opcja przesłania tego błędu.
+
+co najmniej jeden wielokrotnie zdefiniowane symbole znajdujące się
+
+Kompilacja nie powiodła się ze względu na wiele definicji jednego lub wielu symboli. Ten błąd jest poprzedzony przez błąd [LNK2005](../../error-messages/tool-errors/linker-tools-error-lnk2005.md).
+
+[/FORCE](../../build/reference/force-force-file-output.md) lub **/FORCE:MULTIPLE** opcja przesłania tego błędu.

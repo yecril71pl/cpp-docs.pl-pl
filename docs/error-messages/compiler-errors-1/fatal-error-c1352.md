@@ -16,18 +16,19 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 524b0bf5d25953c5c38cbe0e23dc5c7d9f3cb7be
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: f4f1f062e11651e4d851231e16569412f95b90d4
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33226822"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46042939"
 ---
 # <a name="fatal-error-c1352"></a>Błąd krytyczny C1352
-Nieprawidłowe lub uszkodzone MSIL w funkcji "function" z modułu 'Plik'.  
-  
- Przekazano modułu .netmodule do kompilatora, ale kompilator wykryła uszkodzenie w pliku.  Poproś osobę, która wyprodukowanych modułu .netmodule do sprawdzania, czy.  
-  
- Kompilator nie sprawdza modułu .netmodule plików dla wszystkich typów uszkodzenia.  Jednak Sprawdź, czy wszystkie ścieżki kontroli w funkcji zawiera instrukcję return.  
-  
- Aby uzyskać więcej informacji, zobacz [modułu .netmodule pliki jako dane wejściowe konsolidatora](../../build/reference/netmodule-files-as-linker-input.md).
+
+Nieprawidłowe lub uszkodzone MSIL w funkcji "function" z modułu 'Plik'
+
+.Netmodule został przekazany do kompilatora, ale kompilator wykrył uszkodzenie w pliku.  Poproś osobę, kto produkowane .netmodule do badania.
+
+Kompilator nie sprawdza pliki .netmodule dla wszystkich typów uszkodzenia.  Jednak Sprawdź, czy wszystkie ścieżki kontroli w funkcji zawiera instrukcję return.
+
+Aby uzyskać więcej informacji, zobacz [pliki .netmodule — wejście konsolidatora](../../build/reference/netmodule-files-as-linker-input.md).

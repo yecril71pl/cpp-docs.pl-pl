@@ -18,12 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 64b6266ac31e2d6dec6eabc847b67b080b250837
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 533458b35e4589e04d95a4618a04a90aa1994c35
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43751426"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46039338"
 ---
 # <a name="cinterfacearray-class"></a>Klasa CInterfaceArray
 
@@ -32,7 +32,7 @@ Ta klasa dostarcza metody przydatne przy konstruowaniu tablicy wskaźników inte
 ## <a name="syntax"></a>Składnia
 
 ```
-template <class I, const IID* piid=& __uuidof(I)>  
+template <class I, const IID* piid=& __uuidof(I)>
 class CInterfaceArray : 
    public CAtlArray<ATL::CComQIPtr<I, piid>,
                     CComQIPtrElementTraits<I, piid>>
@@ -40,10 +40,10 @@ class CInterfaceArray :
 
 #### <a name="parameters"></a>Parametry
 
-*I*  
+*I*<br/>
 Interfejs COM, określając typ wskaźnika, które mają być przechowywane.
 
-*piid*  
+*piid*<br/>
 Wskaźnik do identyfikatora IID z *I*.
 
 ## <a name="members"></a>Elementy członkowskie
@@ -84,7 +84,7 @@ Inicjuje tablicę inteligentnego wskaźnika.
 
 ## <a name="see-also"></a>Zobacz też
 
-[Klasa CAtlArray](../../atl/reference/catlarray-class.md)   
-[Klasa CComQIPtr](../../atl/reference/ccomqiptr-class.md)   
-[Klasa CComQIPtrElementTraits](../../atl/reference/ccomqiptrelementtraits-class.md)   
+[Klasa CAtlArray](../../atl/reference/catlarray-class.md)<br/>
+[Klasa CComQIPtr](../../atl/reference/ccomqiptr-class.md)<br/>
+[Klasa CComQIPtrElementTraits](../../atl/reference/ccomqiptrelementtraits-class.md)<br/>
 [Klasa — Przegląd](../../atl/atl-class-overview.md)

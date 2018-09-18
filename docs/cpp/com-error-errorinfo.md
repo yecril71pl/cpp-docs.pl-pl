@@ -16,31 +16,35 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f3f4d105efb7269c0c1344d6a9399ebbe4fa9fd2
-ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
+ms.openlocfilehash: 1fc2906827e6a465106a3dbdcb8b63c7b53a39ee
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/01/2018
-ms.locfileid: "39404297"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46039351"
 ---
 # <a name="comerrorerrorinfo"></a>_com_error::ErrorInfo
-**Microsoft Specific**  
-  
- Pobiera `IErrorInfo` obiekt przekazany do konstruktora.  
-  
-## <a name="syntax"></a>Składnia  
-  
-```  
-IErrorInfo * ErrorInfo( ) const throw( );  
-```  
-  
-## <a name="return-value"></a>Wartość zwracana  
- Nieprzetworzone `IErrorInfo` element przekazany do konstruktora.  
-  
-## <a name="remarks"></a>Uwagi  
- Pobiera zhermetyzowany `IErrorInfo` pozycja `_com_error` obiekt lub wartość NULL, jeśli nie `IErrorInfo` elementu są rejestrowane. Obiekt wywołujący musi wywołać `Release` na zwracanym obiekcie po zakończeniu korzystania z niego.  
-  
- **END specyficzny dla Microsoft**  
-  
-## <a name="see-also"></a>Zobacz także  
- [_com_error, klasa](../cpp/com-error-class.md)
+
+**Microsoft Specific**
+
+Pobiera `IErrorInfo` obiekt przekazany do konstruktora.
+
+## <a name="syntax"></a>Składnia
+
+```
+IErrorInfo * ErrorInfo( ) const throw( );
+```
+
+## <a name="return-value"></a>Wartość zwracana
+
+Nieprzetworzone `IErrorInfo` element przekazany do konstruktora.
+
+## <a name="remarks"></a>Uwagi
+
+Pobiera zhermetyzowany `IErrorInfo` pozycja `_com_error` obiekt lub wartość NULL, jeśli nie `IErrorInfo` elementu są rejestrowane. Obiekt wywołujący musi wywołać `Release` na zwracanym obiekcie po zakończeniu korzystania z niego.
+
+**END specyficzny dla Microsoft**
+
+## <a name="see-also"></a>Zobacz także
+
+[_com_error, klasa](../cpp/com-error-class.md)

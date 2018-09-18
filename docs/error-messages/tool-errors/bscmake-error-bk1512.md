@@ -16,20 +16,21 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b161375d9f8396854cc491e038e39d096d30d246
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 6ce429c0c4cf0300b3818a9be9d28fd03e95f5eb
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33306468"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46039858"
 ---
 # <a name="bscmake-error-bk1512"></a>Błąd BSCMAKE BK1512
-Nazwa pliku: Przekroczono pojemność  
-  
- BSCMAKE nie może utworzyć pliku informacyjnego przeglądarki, ponieważ liczba definicje, odwołań, modułów lub inne informacje przekracza limit.  
-  
-### <a name="to-fix-by-using-the-following-possible-solutions"></a>Aby rozwiązać problem przy użyciu następujących możliwych rozwiązań  
-  
-1.  Wykluczyć pewne informacje przy użyciu /Em, /Es lub /Ei.  
-  
-2.  Pomiń opcję /Iu.
+
+Nazwa pliku: Przekroczono pojemność
+
+BSCMAKE nie może utworzyć pliku informacyjnego przeglądarki, ponieważ liczba definicje, odwołania, modułów lub inne informacje przekracza limit.
+
+### <a name="to-fix-by-using-the-following-possible-solutions"></a>Aby rozwiązać problem, korzystając z poniższymi możliwymi rozwiązaniami
+
+1. Wykluczyć pewne informacje przy użyciu /Em, /Es lub /Ei.
+
+1. Pominięto opcję /Iu.

@@ -16,20 +16,21 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 09b36d7210a3ed81b7049c1ab011a38c64f7d196
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 391414365549b462952045a7d9efe080097f3af6
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33198394"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46036757"
 ---
 # <a name="fatal-error-c1506"></a>Błąd krytyczny C1506
-Błąd w zakresie bloku nieodwracalny  
-  
- Blok jest zbyt duży do skompilowania.  
-  
-### <a name="to-fix-by-checking-the-following-possible-causes"></a>Aby rozwiązać problem, sprawdzając następujące możliwe przyczyny  
-  
-1.  Niedopasowane nawiasy klamrowe  
-  
-2.  Funkcja zbyt duża lub klasy
+
+Błąd w zakresie bloku nieodwracalny
+
+Blok była zbyt duża, aby skompilować.
+
+### <a name="to-fix-by-checking-the-following-possible-causes"></a>Aby rozwiązać problem, sprawdzając następujące możliwe przyczyny
+
+1. Niezgodne nawiasy klamrowe
+
+1. Nietypowo dużej funkcji lub klasy

@@ -1,5 +1,5 @@
 ---
-title: Kompilatora (poziom 3) ostrzeżenie C4334 | Dokumentacja firmy Microsoft
+title: Kompilator ostrzeżenie (poziom 3) C4334 | Dokumentacja firmy Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,26 +16,28 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f26749c968c3cac18b509046633ba3d91d15a4be
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 4b7bb16ea38b2c2112c12c561398341a7d1adbfc
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33292688"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46044018"
 ---
-# <a name="compiler-warning-level-3-c4334"></a>Kompilator C4334 ostrzegawcze (poziom 3)
-"operator": wynik 32-bitowe przesunięcia niejawnie skonwertowano do 64 bitów (czy 64-bitowe przesunięcie było zamierzone?)  
-  
- Wynik 32-bitowe przesunięcia niejawnie został przekonwertowany na 64-bitowej i podejrzewa kompilatora czy 64-bitowe przesunięcie było zamierzone.  Aby usunąć to ostrzeżenie, użyj 64-bitowe przesunięcie lub jawnie Rzutuj wynik przesunięcia do 64-bitowej.  
-  
-## <a name="example"></a>Przykład  
- Poniższy przykład generuje C4334.  
-  
-```  
-// C4334.cpp  
-// compile with: /W3 /c  
-void SetBit(unsigned __int64 *p, int i) {  
-   *p |= (1 << i);   // C4334  
-   *p |= (1i64 << i);   // OK  
-}  
+# <a name="compiler-warning-level-3-c4334"></a>Kompilator ostrzeżenie (poziom 3) C4334
+
+'operator': wynik 32-bitowe przesunięcia niejawnie skonwertowano do 64 bitów (była 64-bitowe przesunięcie przeznaczone?)
+
+Wynik 32-bitowe przesunięcia niejawnie został przekonwertowany na 64-bitowej i kompilatora podejrzewa, że 64-bitowe przesunięcie było zamierzone.  Aby rozwiązać to ostrzeżenie, użyj 64-bitowe przesunięcie albo jawnie rzutowane wynik przesunięcia do 64-bitowej.
+
+## <a name="example"></a>Przykład
+
+Poniższy przykład spowoduje wygenerowanie C4334.
+
+```
+// C4334.cpp
+// compile with: /W3 /c
+void SetBit(unsigned __int64 *p, int i) {
+   *p |= (1 << i);   // C4334
+   *p |= (1i64 << i);   // OK
+}
 ```

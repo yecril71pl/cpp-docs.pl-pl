@@ -25,14 +25,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: ed8cc8fc2b61a3a85beb7297317c5b266557268c
-ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
+ms.openlocfilehash: 1431fb9b35ab83f6cb0fc167eff4ba4508f2e301
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "42465887"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46036192"
 ---
 # <a name="irowsetidentityimpl-class"></a>IRowsetIdentityImpl — Klasa
+
 Implementuje OLE DB [IRowsetIdentity](/previous-versions/windows/desktop/ms715913\(v=vs.85\)) interfejs, który umożliwia testowanie pod kątem tożsamość wiersza.  
   
 ## <a name="syntax"></a>Składnia
@@ -44,14 +45,16 @@ class ATL_NO_VTABLE IRowsetIdentityImpl
 ```  
   
 ### <a name="parameters"></a>Parametry  
- *T*  
- Klasa pochodząca z `IRowsetIdentityImpl`.  
+
+*T*<br/>
+Klasa pochodząca z `IRowsetIdentityImpl`.  
   
- *RowClass*  
- Jednostki magazynu na potrzeby `HROW`.  
+*RowClass*<br/>
+Jednostki magazynu na potrzeby `HROW`.  
 
 ## <a name="requirements"></a>Wymagania  
- **Nagłówek:** atldb.h  
+
+**Nagłówek:** atldb.h  
   
 ## <a name="members"></a>Elementy członkowskie  
   
@@ -62,6 +65,7 @@ class ATL_NO_VTABLE IRowsetIdentityImpl
 |[Issamerow —](#issamerow)|Porównuje dwa uchwytów wierszy, aby sprawdzić, czy odnoszą się do tego samego wiersza.|  
   
 ## <a name="issamerow"></a> IRowsetIdentityImpl::IsSameRow
+
 Porównuje dwa uchwytów wierszy, aby sprawdzić, czy odnoszą się do tego samego wiersza.  
   
 ### <a name="syntax"></a>Składnia  
@@ -72,11 +76,14 @@ STDMETHOD(IsSameRow )(HROW hThisRow,
 ```  
   
 #### <a name="parameters"></a>Parametry  
- Zobacz [IRowsetIdentity::IsSameRow](/previous-versions/windows/desktop/ms719629\(v=vs.85\)) w *OLE DB Podręcznik programisty*.  
+
+Zobacz [IRowsetIdentity::IsSameRow](/previous-versions/windows/desktop/ms719629\(v=vs.85\)) w *OLE DB Podręcznik programisty*.  
   
 ### <a name="remarks"></a>Uwagi  
- Aby porównać dojść do wierszy, ta metoda rzutuje `HROW` uchwytów na `RowClass` elementów członkowskich i wywołania `memcmp` na wskaźniki.  
+
+Aby porównać dojść do wierszy, ta metoda rzutuje `HROW` uchwytów na `RowClass` elementów członkowskich i wywołania `memcmp` na wskaźniki.  
   
 ## <a name="see-also"></a>Zobacz też  
- [Szablony dostawców OLE DB](../../data/oledb/ole-db-provider-templates-cpp.md)   
- [Architektura szablonu dostawcy OLE DB](../../data/oledb/ole-db-provider-template-architecture.md)
+
+[Szablony dostawców OLE DB](../../data/oledb/ole-db-provider-templates-cpp.md)<br/>
+[Architektura szablonu dostawcy OLE DB](../../data/oledb/ole-db-provider-template-architecture.md)

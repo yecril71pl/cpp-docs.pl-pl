@@ -17,35 +17,35 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: fffc1ceef1f67dadde61190ccb12ce1cd5b7ba9b
-ms.sourcegitcommit: 7f3df9ff0310a4716b8136ca20deba699ca86c6c
+ms.openlocfilehash: cbf1c696a66024ec1d3b3022b1e3a03445e9b6fe
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/21/2018
-ms.locfileid: "42464893"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46043303"
 ---
 # <a name="creating-an-updatable-provider"></a>Tworzenie aktualizowalnego dostawcy
 
 Visual C++ obsługuje aktualizowalni dostawcy lub dostawców, które można zaktualizować (zapisu) do magazynu danych. W tym temacie omówiono sposób tworzenia aktualizowalni dostawcy za pomocą szablonów OLE DB.  
   
- W tym temacie założono, że rozpoczynasz korzystanie z dostawcy wymagającego. Istnieją dwa kroki, aby tworzenie aktualizowalnego dostawcy. Należy najpierw zdecyduj, jak dostawca wprowadzi zmiany w przechowalni danych; ściślej mówiąc czy zmiany mają być wykonywane od razu lub odroczone do czasu wydano polecenie aktualizacji. Sekcja "[tworzenie aktualizowalnego dostawcy](#vchowmakingprovidersupdatable)" opisano zmiany i ustawienia, które należy wykonać w kodzie dostawcy.  
+W tym temacie założono, że rozpoczynasz korzystanie z dostawcy wymagającego. Istnieją dwa kroki, aby tworzenie aktualizowalnego dostawcy. Należy najpierw zdecyduj, jak dostawca wprowadzi zmiany w przechowalni danych; ściślej mówiąc czy zmiany mają być wykonywane od razu lub odroczone do czasu wydano polecenie aktualizacji. Sekcja "[tworzenie aktualizowalnego dostawcy](#vchowmakingprovidersupdatable)" opisano zmiany i ustawienia, które należy wykonać w kodzie dostawcy.  
   
- Następnie należy musi upewnij się, że Twój dostawca zawiera wszystkie funkcje do obsługi wszystkich danych, które użytkownik może zażądać jej. Jeśli użytkownik chce, aby zaktualizować magazynu danych, dostawca musi zawierać kod, który utrzymuje danych do magazynu danych. Na przykład może użyć biblioteki wykonawczej języka C lub MFC do wykonywania takich operacji na źródle danych. Sekcja "[zapisu w źródle danych](#vchowwritingtothedatasource)" opisano, jak zapisać źródła danych, postępowania z wartościami NULL i domyślne i Ustaw flagi kolumny.  
+Następnie należy musi upewnij się, że Twój dostawca zawiera wszystkie funkcje do obsługi wszystkich danych, które użytkownik może zażądać jej. Jeśli użytkownik chce, aby zaktualizować magazynu danych, dostawca musi zawierać kod, który utrzymuje danych do magazynu danych. Na przykład może użyć biblioteki wykonawczej języka C lub MFC do wykonywania takich operacji na źródle danych. Sekcja "[zapisu w źródle danych](#vchowwritingtothedatasource)" opisano, jak zapisać źródła danych, postępowania z wartościami NULL i domyślne i Ustaw flagi kolumny.  
   
 > [!NOTE]
 >  [UpdatePV](https://github.com/Microsoft/VCSamples/tree/master/VC2010Samples/ATL/OLEDB/Provider/UPDATEPV) jest przykładem aktualizowalnego dostawcy. UpdatePV jest taka sama, jak MyProv, ale z obsługą nadaje się do aktualizacji.  
   
 ##  <a name="vchowmakingprovidersupdatable"></a> Tworzenie aktualizowalnego dostawcy  
 
- Klucz w tworzenie aktualizowalnego dostawcy jest zrozumienie, jakie operacje ma dostawcy do wykonania w magazynie danych oraz sposób dostawcy w celu przeprowadzania tych operacji. W szczególności poważnym problemem jest, czy aktualizacje do magazynu danych mają być wykonywane od razu lub odroczone (wsadowe) do momentu wydano polecenie aktualizacji.  
+Klucz w tworzenie aktualizowalnego dostawcy jest zrozumienie, jakie operacje ma dostawcy do wykonania w magazynie danych oraz sposób dostawcy w celu przeprowadzania tych operacji. W szczególności poważnym problemem jest, czy aktualizacje do magazynu danych mają być wykonywane od razu lub odroczone (wsadowe) do momentu wydano polecenie aktualizacji.  
   
- Należy najpierw określić, czy chcesz dziedziczyć `IRowsetChangeImpl` lub `IRowsetUpdateImpl` w swojej klasy zestawu wierszy. W zależności od tego, który z nich wybierzesz do zaimplementowania, będzie mieć wpływ na funkcjonalność z trzech metod: `SetData`, `InsertRows`, i `DeleteRows`.  
+Należy najpierw określić, czy chcesz dziedziczyć `IRowsetChangeImpl` lub `IRowsetUpdateImpl` w swojej klasy zestawu wierszy. W zależności od tego, który z nich wybierzesz do zaimplementowania, będzie mieć wpływ na funkcjonalność z trzech metod: `SetData`, `InsertRows`, i `DeleteRows`.  
   
 - Jeśli dziedziczą z [irowsetchangeimpl —](../../data/oledb/irowsetchangeimpl-class.md), wywoływanie tych trzech metod natychmiast zmienia się z magazynem danych.  
   
 - Jeśli dziedziczą z [irowsetupdateimpl —](../../data/oledb/irowsetupdateimpl-class.md), metody Odrocz zmiany w magazynie danych, dopóki nie zostanie wywołana `Update`, `GetOriginalData`, lub `Undo`. Jeśli aktualizacja obejmuje kilka zmian, są wykonywane w trybie wsadowym (Zauważ, że przetwarzanie wsadowe zmiany można dodać pamięć znaczne obciążenie).  
   
- Należy pamiętać, że `IRowsetUpdateImpl` pochodzi od klasy `IRowsetChangeImpl`. W efekcie `IRowsetUpdateImpl` zapewnia zmienić możliwości, a także możliwości usługi batch.  
+Należy pamiętać, że `IRowsetUpdateImpl` pochodzi od klasy `IRowsetChangeImpl`. W efekcie `IRowsetUpdateImpl` zapewnia zmienić możliwości, a także możliwości usługi batch.  
   
 #### <a name="to-support-updatability-in-your-provider"></a>Do obsługi aktualizacji w dostawcy  
   
@@ -72,21 +72,21 @@ Visual C++ obsługuje aktualizowalni dostawcy lub dostawców, które można zakt
     > [!NOTE]
     >  Należy usunąć `IRowsetChangeImpl` wiersz z swój łańcuch dziedziczenia. To jeden wyjątek od dyrektywy wcześniej wspomniano, musi zawierać kod `IRowsetChangeImpl`.  
   
-2.  Dodaj następujący element do mapy COM (`BEGIN_COM_MAP ... END_COM_MAP`):  
+1. Dodaj następujący element do mapy COM (`BEGIN_COM_MAP ... END_COM_MAP`):  
   
     |W przypadku zastosowania|Dodaj do mapy COM|  
     |----------------------|--------------------|  
     |`IRowsetChangeImpl`|`COM_INTERFACE_ENTRY(IRowsetChange)`|  
     |`IRowsetUpdateImpl`|`COM_INTERFACE_ENTRY(IRowsetChange)COM_INTERFACE_ENTRY(IRowsetUpdate)`|  
   
-3.  W poleceniu, Dodaj następujący element do mapy zestaw właściwości (`BEGIN_PROPSET_MAP ... END_PROPSET_MAP`):  
+1. W poleceniu, Dodaj następujący element do mapy zestaw właściwości (`BEGIN_PROPSET_MAP ... END_PROPSET_MAP`):  
   
     |W przypadku zastosowania|Dodaj do mapy zestaw właściwości|  
     |----------------------|-----------------------------|  
     |`IRowsetChangeImpl`|`PROPERTY_INFO_ENTRY_VALUE(IRowsetChange, VARIANT_FALSE)`|  
     |`IRowsetUpdateImpl`|`PROPERTY_INFO_ENTRY_VALUE(IRowsetChange, VARIANT_FALSE)PROPERTY_INFO_ENTRY_VALUE(IRowsetUpdate, VARIANT_FALSE)`|  
   
-4.  Na mapie zestaw właściwości należy także uwzględnić wszystkie z następujących ustawień, w jakiej występują poniżej:  
+1. Na mapie zestaw właściwości należy także uwzględnić wszystkie z następujących ustawień, w jakiej występują poniżej:  
   
     ```cpp  
     PROPERTY_INFO_ENTRY_VALUE(UPDATABILITY, DBPROPVAL_UP_CHANGE |   
@@ -145,7 +145,8 @@ Visual C++ obsługuje aktualizowalni dostawcy lub dostawców, które można zakt
         >  Jeśli obsługujesz powiadomienia, może również być pewne inne właściwości, jak również; zobacz sekcję dotyczącą `IRowsetNotifyCP` dla tej listy.  
   
 ##  <a name="vchowwritingtothedatasource"></a> Zapisywanie do źródła danych  
- Aby zapoznać się ze źródła danych, należy wywołać `Execute` funkcji. Aby zapisać źródła danych, należy wywołać `FlushData` funkcji. (W ogólnym sensie opróżnienie oznacza, że aby zapisać zmiany wprowadzone do tabeli lub indeksu na dysku).  
+
+Aby zapoznać się ze źródła danych, należy wywołać `Execute` funkcji. Aby zapisać źródła danych, należy wywołać `FlushData` funkcji. (W ogólnym sensie opróżnienie oznacza, że aby zapisać zmiany wprowadzone do tabeli lub indeksu na dysku).  
 
 ```cpp
 
@@ -158,6 +159,7 @@ Dojście do wiersza (HROW) i argumenty uchwytu (HACCESSOR) dostępu umożliwiaj�
 `FlushData` Metoda zapisuje dane w formacie, w której została oryginalnie zapisane. Jeśli nie zastąpisz tej funkcji, Twój dostawca będzie działać prawidłowo, ale zmiany nie zostaną opróżnione do magazynu danych.
 
 ### <a name="when-to-flush"></a>Kiedy opróżniania
+
 Szablony dostawców wywołać flushdata — zawsze wtedy, gdy dane muszą być zapisywane do magazynu danych; to zwykle (ale nie zawsze) występuje w wyniku wywołania do następujących funkcji:
 
 - `IRowsetChange::DeleteRows`
@@ -312,6 +314,7 @@ Jako deweloper dostawcy należy wziąć pod uwagę, jak będą przechowywane te 
 Spójrz na kod w przykładzie UpdatePV; przykład ilustruje jak dostawca może obsłużyć danych o wartości NULL. W UpdatePV dostawca przechowuje dane o wartości NULL, pisząc ciąg "NULL" w magazynie danych. Podczas wczytywania danych o wartości NULL z magazynu danych, będzie widział te parametry, a następnie opróżnia bufor, tworząc pusty ciąg. Ma on także nadpisanie `IRowsetImpl::GetDBStatus` w której ta zwraca DBSTATUS_S_ISNULL, jeśli ta wartość danych jest pusta.
 
 ### <a name="marking-nullable-columns"></a>Oznaczanie kolumn dopuszczających wartości null
+
 Jeśli również wdrożenia zestawów wierszy schematu (zobacz `IDBSchemaRowsetImpl`), w zestawie wierszy DBSCHEMA_COLUMNS (zwykle oznaczony w dostawcy za CxxxSchemaColSchemaRowset) należy określić implementacji, że kolumna jest dopuszczającego wartość null.
 
 Należy również określić, że wszystkie kolumny dopuszczające wartość null, zawierają wartość DBCOLUMNFLAGS_ISNULLABLE w używanej wersji programu `GetColumnInfo`.
@@ -441,4 +444,5 @@ m_rgRowData.Add(trData[0]);
 Ten kod określa, między innymi, że kolumna obsługuje wartości domyślnej 0, że jest zapisywalny, i że wszystkie dane w kolumnie mają tę samą długość. Jeśli chcesz, aby dane w kolumnie o zmiennej długości, nie ustawi tę flagę.
 
 ## <a name="see-also"></a>Zobacz też
+
 [Tworzenie dostawcy OLE DB](creating-an-ole-db-provider.md)

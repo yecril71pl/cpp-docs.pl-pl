@@ -1,5 +1,5 @@
 ---
-title: C2605 błąd kompilatora | Dokumentacja firmy Microsoft
+title: Błąd kompilatora C2605 | Dokumentacja firmy Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,26 +16,28 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 52653aa1d8aea68d455617870792ecb9bfcae930
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 3689e7f0784c847d260c2e97c502b57db99a8918
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33236199"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46044330"
 ---
-# <a name="compiler-error-c2605"></a>C2605 błąd kompilatora
-"Nazwa": Ta metoda jest zastrzeżony w obrębie zarządzanego lub WinRT — klasa  
-  
- Niektórych nazw są zastrzeżone przez kompilator dla funkcji wewnętrznych.  Aby uzyskać więcej informacji, zobacz [destruktory i finalizatory](../../dotnet/how-to-define-and-consume-classes-and-structs-cpp-cli.md#BKMK_Destructors_and_finalizers).  
-  
-## <a name="example"></a>Przykład  
- Poniższy przykład generuje C2605.  
-  
-```  
-// C2605.cpp  
-// compile with: /clr /c  
-ref class R {  
-protected:  
-   void Finalize() {}   // C2605  
-};  
+# <a name="compiler-error-c2605"></a>Błąd kompilatora C2605
+
+"name": Ta metoda jest zastrzeżona w obrębie zarządzanego lub WinRT klasy
+
+Niektórych nazw są zarezerwowane przez kompilator dla funkcji wewnętrznych.  Aby uzyskać więcej informacji, zobacz [destruktory i finalizatory](../../dotnet/how-to-define-and-consume-classes-and-structs-cpp-cli.md#BKMK_Destructors_and_finalizers).
+
+## <a name="example"></a>Przykład
+
+Poniższy przykład spowoduje wygenerowanie C2605.
+
+```
+// C2605.cpp
+// compile with: /clr /c
+ref class R {
+protected:
+   void Finalize() {}   // C2605
+};
 ```

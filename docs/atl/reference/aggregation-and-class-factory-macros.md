@@ -27,12 +27,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ba2c1b96a1ce4db7c16695c51d946ecb98827271
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 9a9cc4a142a0aefc4937df493fa87552464b4294
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43752791"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46043420"
 ---
 # <a name="aggregation-and-class-factory-macros"></a>Agregacji i makra fabryki klas
 
@@ -67,7 +67,7 @@ DECLARE_AGGREGATABLE( x )
 
 ### <a name="parameters"></a>Parametry
 
-*x*  
+*x*<br/>
 [in] Nazwa klasy są definiowane jako się agregowaniu.
 
 ### <a name="remarks"></a>Uwagi
@@ -131,7 +131,7 @@ DECLARE_CLASSFACTORY_EX( cf )
 
 ### <a name="parameters"></a>Parametry
 
-*usługi CF*  
+*usługi CF*<br/>
 [in] Nazwa klasy, który implementuje obiekt fabryki klas.
 
 ### <a name="remarks"></a>Uwagi
@@ -154,7 +154,7 @@ DECLARE_CLASSFACTORY2( lic )
 
 ### <a name="parameters"></a>Parametry
 
-*— Umowa licencyjna*  
+*— Umowa licencyjna*<br/>
 [in] Klasa, która implementuje `VerifyLicenseKey`, `GetLicenseKey`, i `IsLicenseValid`.
 
 ### <a name="remarks"></a>Uwagi
@@ -178,7 +178,7 @@ class  CComClassFactory2 : public IClassFactory2,
 
 ### <a name="parameters"></a>Parametry
 
-*Licencja*  
+*Licencja*<br/>
 Klasa, która implementuje następujące funkcje statyczne:
 
 - `static BOOL VerifyLicenseKey( BSTR bstr );`
@@ -249,7 +249,7 @@ DECLARE_CLASSFACTORY_SINGLETON( obj )
 
 ### <a name="parameters"></a>Parametry
 
-*obj*  
+*obj*<br/>
 [in] Nazwa obiektu klasy.
 
 ### <a name="remarks"></a>Uwagi
@@ -274,7 +274,7 @@ class CComClassFactorySingleton : public CComClassFactory
 
 ### <a name="parameters"></a>Parametry
 
-*T*  
+*T*<br/>
 Klasa.
 
 `CComClassFactorySingleton` pochodzi od klasy [CComClassFactory](../../atl/reference/ccomclassfactory-class.md) i używa [CComObjectGlobal](../../atl/reference/ccomobjectglobal-class.md) skonstruowanie pojedynczego obiektu. Każde wywołanie `CreateInstance` metoda po prostu wysyła zapytanie dotyczące wskaźnika interfejsu tego obiektu.
@@ -307,7 +307,7 @@ DECLARE_NOT_AGGREGATABLE( x )
 
 ### <a name="parameters"></a>Parametry
 
-*x*  
+*x*<br/>
 [in] Nazwa obiektu klasy, które są definiowane jako nie się agregowaniu.
 
 ### <a name="remarks"></a>Uwagi
@@ -330,7 +330,7 @@ DECLARE_ONLY_AGGREGATABLE( x )
 
 ### <a name="parameters"></a>Parametry
 
-*x*  
+*x*<br/>
 [in] Nazwa obiektu klasy, które są definiowane jako tylko się agregowaniu.
 
 ### <a name="remarks"></a>Uwagi
@@ -353,7 +353,7 @@ DECLARE_POLY_AGGREGATABLE( x )
 
 ### <a name="parameters"></a>Parametry
 
-*x*  
+*x*<br/>
 [in] Nazwa obiektu klasy są definiowane jako się agregowaniu lub nie się agregowaniu.
 
 ### <a name="remarks"></a>Uwagi
@@ -382,7 +382,7 @@ DECLARE_VIEW_STATUS( statusFlags )
 
 ### <a name="parameters"></a>Parametry
 
-*statusFlags*  
+*statusFlags*<br/>
 [in] Stan flagi. Zobacz [stan](/windows/desktop/api/ocidl/ne-ocidl-tagviewstatus) listę flag.
 
 ### <a name="example"></a>Przykład

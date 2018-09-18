@@ -28,12 +28,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 91de6c09128acd3ef1a008437ae418b96b45ef66
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 54e4ab00a0d0df90601d06d9e2ffa100d82d4c03
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43762895"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46037362"
 ---
 # <a name="composite-control-global-functions"></a>Funkcje globalne kontrolek złożonych
 
@@ -77,19 +77,19 @@ ATLAPI_(int) AtlAxDialogBox(
 
 ### <a name="parameters"></a>Parametry
 
-*hInstance*  
+*hInstance*<br/>
 [in] Identyfikuje wystąpienia modułu, którego pliku wykonywalnego zawiera szablonu okna dialogowego.
 
-*lpTemplateName*  
+*lpTemplateName*<br/>
 [in] Identyfikuje szablonu okna dialogowego. Ten parametr jest wskaźnik do ciągu zakończonego znakiem null, który określa nazwę szablonu okna dialogowego lub wartość całkowitą, która określa identyfikator zasobu szablonu okna dialogowego. Jeśli parametr określa identyfikator zasobu, jego word wyższego rzędu musi mieć wartość zero, a jego word niskiego rzędu musi zawierać identyfikator. Możesz użyć [MAKEINTRESOURCE](https://msdn.microsoft.com/library/windows/desktop/ms648029) makra w celu utworzenia tej wartości.
 
-*hWndParent*  
+*hWndParent*<br/>
 [in] Identyfikuje okna, który jest właścicielem okno dialogowe.
 
-*lpDialogProc*  
+*lpDialogProc*<br/>
 [in] Wskazuje procedury okno dialogowe. Aby uzyskać więcej informacji na temat procedury okno dialogowe, zobacz [DialogProc](https://msdn.microsoft.com/library/windows/desktop/ms645469).
 
-*dwInitParam*  
+*dwInitParam*<br/>
 [in] Określa wartość do przekazania do okna dialogowego w *lParam* parametr / / Złap wiadomości.
 
 ### <a name="return-value"></a>Wartość zwracana
@@ -100,9 +100,9 @@ Jedna z wartości HRESULT standardowych.
 
 Do użycia `AtlAxDialogBox` z szablonu okna dialogowego, który zawiera formant ActiveX, Określ prawidłowy ciąg identyfikatora CLSID, APPID lub adresu URL jako *tekstu* pole **kontroli** części zasobu okna dialogowego wraz z " AtlAxWin80 "jako *Nazwa klasy* pola w ramach tej samej sekcji. Następujące pokazuje, jakie prawidłową **kontroli** sekcja może wyglądać tak jak:
 
-```  
+```
 CONTROL    "{04FE35E9-ADBC-4f1d-83FE-8FA4D1F71C7F}", IDC_TEST,  
-    "AtlAxWin80", WS_GROUP | WS_TABSTOP, 0, 0, 100, 100  
+    "AtlAxWin80", WS_GROUP | WS_TABSTOP, 0, 0, 100, 100
 ```
 
 Aby uzyskać więcej informacji na temat edytowania skryptów zasobów, zobacz [porady: otwieranie pliku skryptu zasobu w formacie tekstowym](../../windows/how-to-open-a-resource-script-file-in-text-format.md). Aby uzyskać więcej informacji na temat instrukcji definicji zasobu kontroli, zobacz [wspólne parametry sterujące](/windows/desktop/menurc/common-control-parameters) w ramach zestawu Windows SDK *: SDK Tools*.
@@ -124,19 +124,19 @@ ATLAPI_(HWND) AtlAxCreateDialog(
 
 ### <a name="parameters"></a>Parametry
 
-*hInstance*  
+*hInstance*<br/>
 [in] Identyfikuje wystąpienia modułu, którego pliku wykonywalnego zawiera szablonu okna dialogowego.
 
-*lpTemplateName*  
+*lpTemplateName*<br/>
 [in] Identyfikuje szablonu okna dialogowego. Ten parametr jest wskaźnik do ciągu zakończonego znakiem null, który określa nazwę szablonu okna dialogowego lub wartość całkowitą, która określa identyfikator zasobu szablonu okna dialogowego. Jeśli parametr określa identyfikator zasobu, jego word wyższego rzędu musi mieć wartość zero, a jego word niskiego rzędu musi zawierać identyfikator. Możesz użyć [MAKEINTRESOURCE](https://msdn.microsoft.com/library/windows/desktop/ms648029) makra w celu utworzenia tej wartości.
 
-*hWndParent*  
+*hWndParent*<br/>
 [in] Identyfikuje okna, który jest właścicielem okno dialogowe.
 
-*lpDialogProc*  
+*lpDialogProc*<br/>
 [in] Wskazuje procedury okno dialogowe. Aby uzyskać więcej informacji na temat procedury okno dialogowe, zobacz [DialogProc](https://msdn.microsoft.com/library/windows/desktop/ms645469).
 
-*dwInitParam*  
+*dwInitParam*<br/>
 [in] Określa wartość do przekazania do okna dialogowego w *lParam* parametr / / Złap wiadomości.
 
 ### <a name="return-value"></a>Wartość zwracana
@@ -163,7 +163,7 @@ ATLAPI AtlAxCreateControl(
 
 ### <a name="parameters"></a>Parametry
 
-*lpszName*  
+*lpszName*<br/>
 Wskaźnik do ciągu do przekazania do formantu. Musi być sformatowany w jednym z następujących sposobów:
 
 - Identyfikator ProgID takich jak "MSCAL. Calendar.7 "
@@ -179,13 +179,13 @@ Wskaźnik do ciągu do przekazania do formantu. Musi być sformatowany w jednym 
    > [!NOTE]
    > "MSHTML:" musi poprzedzać fragment kodu HTML, dzięki czemu jest wyznaczony jako strumień MSHTML.
 
-*hWnd*  
+*hWnd*<br/>
 [in] Obsługa do kontrolki zostanie dołączony do okna.
 
-*pStream*  
+*pStream*<br/>
 [in] Wskaźnik do strumienia, który służy do inicjowania właściwości formantu. Może mieć wartości NULL.
 
-*ppUnkContainer*  
+*ppUnkContainer*<br/>
 [out] Adres wskaźnika, który będzie otrzymywał `IUnknown` kontenera. Może mieć wartości NULL.
 
 ### <a name="return-value"></a>Wartość zwracana
@@ -215,7 +215,7 @@ ATLAPI AtlAxCreateControlEx(
 
 ### <a name="parameters"></a>Parametry
 
-*lpszName*  
+*lpszName*<br/>
 Wskaźnik do ciągu do przekazania do formantu. Musi być sformatowany w jednym z następujących sposobów:
 
 - Identyfikator ProgID takich jak "MSCAL. Calendar.7 "
@@ -231,22 +231,22 @@ Wskaźnik do ciągu do przekazania do formantu. Musi być sformatowany w jednym 
    > [!NOTE]
    > "MSHTML:" musi poprzedzać fragment kodu HTML, dzięki czemu jest wyznaczony jako strumień MSHTML.
 
-*hWnd*  
+*hWnd*<br/>
 [in] Obsługa do kontrolki zostanie dołączony do okna.
 
-*pStream*  
+*pStream*<br/>
 [in] Wskaźnik do strumienia, który służy do inicjowania właściwości formantu. Może mieć wartości NULL.
 
-*ppUnkContainer*  
+*ppUnkContainer*<br/>
 [out] Adres wskaźnika, który będzie otrzymywał `IUnknown` kontenera. Może mieć wartości NULL.
 
-*ppUnkControl*  
+*ppUnkControl*<br/>
 [out] Adres wskaźnika, który będzie otrzymywał `IUnknown` utworzonego formantu. Może mieć wartości NULL.
 
-*iidSink*  
+*iidSink*<br/>
 Identyfikator interfejsu interfejsu wychodzącego w zawartego w nim obiektu.
 
-*punkSink*  
+*punkSink*<br/>
 Wskaźnik do `IUnknown` interfejs obiektu sink do podłączenia do punktu połączenia z określonym przez *iidSink* zamkniętego obiektu po pomyślnym utworzeniu zawartego w nim obiektu.
 
 ### <a name="return-value"></a>Wartość zwracana
@@ -274,7 +274,7 @@ ATLAPI AtlAxCreateControlLic(
 
 ### <a name="parameters"></a>Parametry
 
-*lpszName*  
+*lpszName*<br/>
 Wskaźnik do ciągu do przekazania do formantu. Musi być sformatowany w jednym z następujących sposobów:
 
 - Identyfikator ProgID takich jak "MSCAL. Calendar.7 "
@@ -290,16 +290,16 @@ Wskaźnik do ciągu do przekazania do formantu. Musi być sformatowany w jednym 
    > [!NOTE]
    > "MSHTML:" musi poprzedzać fragment kodu HTML, dzięki czemu jest wyznaczony jako strumień MSHTML.
 
-*hWnd*  
+*hWnd*<br/>
 Obsługa do kontrolki zostanie dołączony do okna.
 
-*pStream*  
+*pStream*<br/>
 Wskaźnik do strumienia, który służy do inicjowania właściwości formantu. Może mieć wartości NULL.
 
-*ppUnkContainer*  
+*ppUnkContainer*<br/>
 Adres wskaźnika, który będzie otrzymywał `IUnknown` kontenera. Może mieć wartości NULL.
 
-*bstrLic*  
+*bstrLic*<br/>
 BSTR, zawierający licencji dla formantu.
 
 ### <a name="return-value"></a>Wartość zwracana
@@ -328,7 +328,7 @@ ATLAPI AtlAxCreateControlLicEx(
 
 ### <a name="parameters"></a>Parametry
 
-*lpszName*  
+*lpszName*<br/>
 Wskaźnik do ciągu do przekazania do formantu. Musi być sformatowany w jednym z następujących sposobów:
 
 - Identyfikator ProgID takich jak "MSCAL. Calendar.7 "
@@ -344,25 +344,25 @@ Wskaźnik do ciągu do przekazania do formantu. Musi być sformatowany w jednym 
    > [!NOTE]
    > "MSHTML:" musi poprzedzać fragment kodu HTML, dzięki czemu jest wyznaczony jako strumień MSHTML.
 
-*hWnd*  
+*hWnd*<br/>
 Obsługa do kontrolki zostanie dołączony do okna.
 
-*pStream*  
+*pStream*<br/>
 Wskaźnik do strumienia, który służy do inicjowania właściwości formantu. Może mieć wartości NULL.
 
-*ppUnkContainer*  
+*ppUnkContainer*<br/>
 Adres wskaźnika, który będzie otrzymywał `IUnknown` kontenera. Może mieć wartości NULL.
 
-*ppUnkControl*  
+*ppUnkControl*<br/>
 [out] Adres wskaźnika, który będzie otrzymywał `IUnknown` utworzonego formantu. Może mieć wartości NULL.
 
-*iidSink*  
+*iidSink*<br/>
 Identyfikator interfejsu interfejsu wychodzącego w zawartego w nim obiektu.
 
-*punkSink*  
+*punkSink*<br/>
 Wskaźnik do `IUnknown` interfejs obiektu sink do podłączenia do punktu połączenia z określonym przez *iidSink* zamkniętego obiektu po pomyślnym utworzeniu zawartego w nim obiektu.
 
-*bstrLic*  
+*bstrLic*<br/>
 BSTR, zawierający licencji dla formantu.
 
 ### <a name="return-value"></a>Wartość zwracana
@@ -390,13 +390,13 @@ ATLAPI AtlAxAttachControl(
 
 ### <a name="parameters"></a>Parametry
 
-*pControl*  
+*pControl*<br/>
 [in] Wskaźnik do `IUnknown` formantu.
 
-*hWnd*  
+*hWnd*<br/>
 [in] Dojście do okna, które będą obsługiwać formant.
 
-*ppUnkContainer*  
+*ppUnkContainer*<br/>
 [out] Wskaźnik do wskaźnika do `IUnknown` obiektu kontenera.
 
 ### <a name="return-value"></a>Wartość zwracana
@@ -420,10 +420,10 @@ ATLAPI AtlAxGetHost(HWND h, IUnknown** pp);
 
 ### <a name="parameters"></a>Parametry
 
-*h*  
+*h*<br/>
 [in] Dojście do okna, który jest hostem formantu.
 
-*strony*  
+*strony*<br/>
 [out] `IUnknown` Kontenera kontrolki.
 
 ### <a name="return-value"></a>Wartość zwracana
@@ -440,10 +440,10 @@ ATLAPI AtlAxGetControl(HWND h, IUnknown** pp);
 
 ### <a name="parameters"></a>Parametry
 
-*h*  
+*h*<br/>
 [in] Dojście do okna, który jest hostem formantu.
 
-*strony*  
+*strony*<br/>
 [out] `IUnknown` Kontrolki hostowany.
 
 ### <a name="return-value"></a>Wartość zwracana
@@ -460,10 +460,10 @@ HRESULT AtlSetChildSite(IUnknown* punkChild, IUnknown* punkParent);
 
 ### <a name="parameters"></a>Parametry
 
-*punkChild*  
+*punkChild*<br/>
 [in] Wskaźnik do `IUnknown` interfejsu elementu podrzędnego.
 
-*punkParent*  
+*punkParent*<br/>
 [in] Wskaźnik do `IUnknown` interfejsu elementu nadrzędnego.
 
 ### <a name="return-value"></a>Wartość zwracana
@@ -519,19 +519,19 @@ ATLAPI AtlGetObjectSourceInterface(
 
 ### <a name="parameters"></a>Parametry
 
-*punkObj*  
+*punkObj*<br/>
 [in] Wskaźnik do obiektu, dla którego ma zostać zwrócone informacje.
 
-*plibid*  
+*plibid*<br/>
 [out] Wskaźnik do identyfikatora LIBID biblioteki typów z definicją interfejs źródłowy.
 
-*piid*  
+*piid*<br/>
 [out] Wskaźnik do interfejsu identyfikator obiektu domyślnym interfejsie źródła.
 
-*pdwMajor*  
+*pdwMajor*<br/>
 [out] Wskaźnik do główny numer wersji biblioteki typów z definicją interfejs źródłowy.
 
-*pdwMinor*  
+*pdwMinor*<br/>
 [out] Wskaźnik do pomocniczy numer wersji biblioteki typów z definicją interfejs źródłowy.
 
 ### <a name="return-value"></a>Wartość zwracana
@@ -553,5 +553,5 @@ W poniższym przykładzie pokazano, jak można zdefiniować klasę obiektu sink 
 
 ## <a name="see-also"></a>Zobacz też
 
-[Funkcje](../../atl/reference/atl-functions.md)   
+[Funkcje](../../atl/reference/atl-functions.md)<br/>
 [Makra kontrolek złożonych](../../atl/reference/composite-control-macros.md)

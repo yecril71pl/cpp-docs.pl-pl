@@ -1,5 +1,5 @@
 ---
-title: Kompilatora (poziom 1) ostrzeżenie C4381 | Dokumentacja firmy Microsoft
+title: Kompilator ostrzeżenie (poziom 1) C4381 | Dokumentacja firmy Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,14 +16,15 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e5cb72c373b5c0808b4b1600871cd8148bcc9c9d
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 81c61dcbf49beeb41780cdaeff669cf21bfffee9
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33277995"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46037830"
 ---
-# <a name="compiler-warning-level-1-c4381"></a>Kompilator C4381 ostrzegawcze (poziom 1)
-"function1": metoda interfejsu nie będzie zaimplementowana przez niewirtualną metodę "function2"  
-  
- Klasa musi implementować wszystkich funkcji w interfejsie. Klasa może spełnić tego warunku, jeśli implementuje jednej z jej klas podstawowych funkcji. Jednak funkcja musi być implementowana w publicznych funkcji.
+# <a name="compiler-warning-level-1-c4381"></a>Kompilator ostrzeżenie (poziom 1) C4381
+
+"function1": metoda interfejsu nie będzie zaimplementowana przez niepubliczna metoda "function2"
+
+Klasa musi implementować funkcji all w interfejsie. Klasa może spełnić ten warunek, jeśli jeden z jej klas podstawowych implementuje funkcję. Jednak funkcja musi zostać wdrożony jako publiczną funkcję.

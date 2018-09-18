@@ -16,16 +16,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5a421f57ca5ab896669c653b5031cc528a9aea87
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: ea3213c01ce86f6d78a9d7b6f4cf81fe17495c72
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33321642"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46038211"
 ---
 # <a name="resource-compiler-error-rc2170"></a>Błąd kompilatora zasobów RC2170
-Nazwa pliku plik mapy bitowej nie jest w formacie 3.00  
-  
- Mapy bitowe przy użyciu formatu 2.x wersji systemu Windows nie można używać w wersji 3.x zasobów plików.  
-  
- Aby rozwiązać ten problem, ponownie narysuj lub konwersji do formatu 3.x mapy bitowej.
+
+Mapa bitowa plik filename nie jest w formacie 3.00
+
+Nie można używać mapy bitowej w formacie Windows w wersji 2.x pliki w wersji 3.x zasobów.
+
+Aby rozwiązać ten problem, odświeżyć lub przekonwertować mapy bitowej na 3.x format.

@@ -1,5 +1,5 @@
 ---
-title: C3375 błąd kompilatora | Dokumentacja firmy Microsoft
+title: Błąd kompilatora C3375 | Dokumentacja firmy Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,34 +16,36 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 11805b7ef714c65ff9816828aeea10baa2217ff6
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: f63d7eb7ef4633f01b65337c9546af260ca50fb4
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33256473"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46044070"
 ---
-# <a name="compiler-error-c3375"></a>C3375 błąd kompilatora
-"Funkcja": niejednoznaczna funkcja delegata  
-  
- Wystąpienia obiektu delegowanego mogło być do statycznej funkcji członkowskiej lub jako niezwiązanego delegata funkcji wystąpienia, kompilator wystawiony tego błędu.  
-  
- Aby uzyskać więcej informacji, zobacz [delegata (C++ Component Extensions)](../../windows/delegate-cpp-component-extensions.md).  
-  
-## <a name="example"></a>Przykład  
- Poniższy przykład generuje C3375.  
-  
-```  
-// C3375.cpp  
-// compile with: /clr  
-ref struct R {  
-   static void f(R^) {}  
-   void f() {}  
-};  
-  
-delegate void Del(R^);  
-  
-int main() {  
-   Del ^ a = gcnew Del(&R::f);   // C3375  
-}  
+# <a name="compiler-error-c3375"></a>Błąd kompilatora C3375
+
+'Funkcja': niejednoznaczna funkcja delegata
+
+Podczas tworzenia wystąpienia delegata mogło być do statycznej funkcji członkowskiej lub jako niezwiązanego delegata do funkcji wystąpienia, kompilator wydany tego błędu.
+
+Aby uzyskać więcej informacji, zobacz [delegate (C++ Component Extensions)](../../windows/delegate-cpp-component-extensions.md).
+
+## <a name="example"></a>Przykład
+
+Poniższy przykład spowoduje wygenerowanie C3375.
+
+```
+// C3375.cpp
+// compile with: /clr
+ref struct R {
+   static void f(R^) {}
+   void f() {}
+};
+
+delegate void Del(R^);
+
+int main() {
+   Del ^ a = gcnew Del(&R::f);   // C3375
+}
 ```

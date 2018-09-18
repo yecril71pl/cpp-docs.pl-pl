@@ -1,5 +1,5 @@
 ---
-title: C2499 błąd kompilatora | Dokumentacja firmy Microsoft
+title: Błąd kompilatora C2499 | Dokumentacja firmy Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,23 +16,24 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6933d27a1f396dc08275c3f5149212be7abeaaf1
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 27f10cc2f48a72222a6e9a2a7187ba9a1f6fb450
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33225728"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46043953"
 ---
-# <a name="compiler-error-c2499"></a>C2499 błąd kompilatora
-"class": klasa nie może być własną klasy podstawowej  
-  
- Została podjęta w celu określenia klasy, które są definiowane jako klasę podstawową.  
-  
- Poniższy przykład generuje C2499:  
-  
-```  
-// C2499.cpp  
-// compile with: /c  
-class CMyClass : public CMyClass {};   // C2499  
-class CMyClass{};   // OK  
+# <a name="compiler-error-c2499"></a>Błąd kompilatora C2499
+
+"class": klasa nie może być siebie klasą bazową
+
+Podjęto próbę określenia klasy, który jest definiowany jako klasę bazową.
+
+Poniższy przykład spowoduje wygenerowanie C2499:
+
+```
+// C2499.cpp
+// compile with: /c
+class CMyClass : public CMyClass {};   // C2499
+class CMyClass{};   // OK
 ```

@@ -16,16 +16,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 77a4afa4d5cd0be19163204d48e0a29b3b359a40
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 8863c22bea588417025164bf2d303d01cfe6d7b6
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33301112"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46042952"
 ---
 # <a name="linker-tools-error-lnk1314"></a>Błąd narzędzi konsolidatora LNK1314
-uszkodzona lub Nieprawidłowa tabela symboli COFF (Niezdefiniowany statyczny lub symbol etykiety)  
-  
- Generowane przez kompilator zawartości dla części dany obiekt jest prawdopodobnie uszkodzony.  
-  
- Ten błąd może reprezentować błędu kompilatora.
+
+uszkodzona lub Nieprawidłowa tabela symboli COFF (Niezdefiniowany statyczny lub symbol etykiety)
+
+Zawartość generowanych przez kompilator do sekcji w dany obiekt jest prawdopodobnie uszkodzony.
+
+Ten błąd może reprezentować błędu kompilatora.

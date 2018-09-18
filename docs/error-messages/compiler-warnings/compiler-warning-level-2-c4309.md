@@ -1,5 +1,5 @@
 ---
-title: Kompilatora (poziom 2) ostrzeżenie C4309 | Dokumentacja firmy Microsoft
+title: Kompilator ostrzeżenie (poziom 2) C4309 | Dokumentacja firmy Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,25 +16,26 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3cb98faf0c84210deb1a4c5164959d2ba4c08db9
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 8b7eba833b547a54adc0644303ab51d3852740a8
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33300150"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46041977"
 ---
-# <a name="compiler-warning-level-2-c4309"></a>Kompilator C4309 ostrzegawcze (poziom 2)
-"konwersji": obcięcie stałej wartości  
-  
- Konwersja typów powoduje, że stała przekracza ilość miejsca przydzielonego dla niego. Użytkownik może być konieczne użycie typu większych dla stałej.  
-  
- Poniższy przykład generuje C4309:  
-  
-```  
-// C4309.cpp  
-// compile with: /W2  
-int main()  
-{  
-   char c = 128;   // C4309  
-}  
+# <a name="compiler-warning-level-2-c4309"></a>Kompilator ostrzeżenie (poziom 2) C4309
+
+'conversion': obcięcie stałej wartości
+
+Konwersja typu powoduje, że stała przekracza ilość miejsca przydzielonego dla niego. Użytkownik może być konieczne użycie większych typ stałej.
+
+Poniższy przykład spowoduje wygenerowanie C4309:
+
+```
+// C4309.cpp
+// compile with: /W2
+int main()
+{
+   char c = 128;   // C4309
+}
 ```

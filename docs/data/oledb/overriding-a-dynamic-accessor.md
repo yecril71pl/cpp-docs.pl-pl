@@ -17,17 +17,18 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: e1d6d3277f27c20f7b1c002590fd26e1e2f08eb7
-ms.sourcegitcommit: 889a75be1232817150be1e0e8d4d7f48f5993af2
+ms.openlocfilehash: 3602711a880bbfe97c2fe357982bb60a55299044
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/30/2018
-ms.locfileid: "39340033"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46035542"
 ---
 # <a name="overriding-a-dynamic-accessor"></a>Zastępowanie dynamicznej metody dostępu
+
 Kiedy używać dynamicznej metody dostępu takich jak `CDynamicAccessor`, polecenie `Open` metoda tworzy metodę dostępu, możesz automatycznie na podstawie informacji o kolumnie otwartego zestawu wierszy. Można zastąpić dynamicznej metody dostępu do kontrolowania, dokładnie tak, jak kolumny są powiązane.  
   
- Aby zastąpić dynamicznej metody dostępu, należy przekazać **false** jako ostatni parametr `CCommand::Open` metody. Zapobiega to `Open` z automatycznego tworzenia metody dostępu. Następnie możesz wywołać `GetColumnInfo` i wywołać `AddBindEntry` dla każdej kolumny, które chcesz powiązać. Poniższy kod pokazuje, jak to zrobić:  
+Aby zastąpić dynamicznej metody dostępu, należy przekazać **false** jako ostatni parametr `CCommand::Open` metody. Zapobiega to `Open` z automatycznego tworzenia metody dostępu. Następnie możesz wywołać `GetColumnInfo` i wywołać `AddBindEntry` dla każdej kolumny, które chcesz powiązać. Poniższy kod pokazuje, jak to zrobić:  
   
 ```cpp  
 USES_CONVERSION;  
@@ -80,4 +81,5 @@ while (product.MoveNext() == S_OK)
 ```  
   
 ## <a name="see-also"></a>Zobacz też  
- [Korzystanie z metod dostępu](../../data/oledb/using-accessors.md)
+
+[Korzystanie z metod dostępu](../../data/oledb/using-accessors.md)

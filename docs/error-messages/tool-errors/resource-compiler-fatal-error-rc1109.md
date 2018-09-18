@@ -16,14 +16,15 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e71123230318d2da006be3c09fdb5855f713220f
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 61197a4322690646bf3f89d155fbb526b00ba0de
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33325893"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46044811"
 ---
 # <a name="resource-compiler-fatal-error-rc1109"></a>Błąd krytyczny kompilatora zasobów RC1109
-Wystąpił błąd podczas tworzenia nazwy zasobu  
-  
- Nie można utworzyć .res określonego pliku. Upewnij się, że nie został on utworzony na dysku tylko do odczytu. Aby dowiedzieć się, czy plik jest tworzony, należy użyć opcji /V.
+
+Wystąpił błąd podczas tworzenia nazwy zasobu
+
+Nie można utworzyć plik .res określony. Upewnij się, że nie jest on tworzony na dysku tylko do odczytu. Użyj opcji /V, aby dowiedzieć się, czy plik jest tworzona.

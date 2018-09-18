@@ -1,5 +1,5 @@
 ---
-title: C3223 błąd kompilatora | Dokumentacja firmy Microsoft
+title: Błąd kompilatora C3223 | Dokumentacja firmy Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,30 +16,32 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b57ede45c2b7b2271f1f6d347f97f7d33334c13b
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 18a035d5a5be5e74d6925277dc1dc62bec8639c2
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33250224"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46036504"
 ---
-# <a name="compiler-error-c3223"></a>C3223 błąd kompilatora
-"właściwość": nie można zastosować "typeid" do właściwości  
-  
- Nie można zastosować [typeid](../../windows/typeid-cpp-component-extensions.md) do właściwości.  
-  
-## <a name="example"></a>Przykład  
- Poniższy przykład generuje C3223.  
-  
-```  
-// C3223.cpp  
-// compile with: /clr  
-ref class R {  
-public:  
-   property int myprop;  
-};  
-  
-int main() {  
-   System::Type^ type2 = R::myprop::typeid;   // C3223  
-}  
+# <a name="compiler-error-c3223"></a>Błąd kompilatora C3223
+
+"właściwość": nie można zastosować "typeid" właściwością
+
+Nie można zastosować [typeid](../../windows/typeid-cpp-component-extensions.md) z właściwością.
+
+## <a name="example"></a>Przykład
+
+Poniższy przykład spowoduje wygenerowanie C3223.
+
+```
+// C3223.cpp
+// compile with: /clr
+ref class R {
+public:
+   property int myprop;
+};
+
+int main() {
+   System::Type^ type2 = R::myprop::typeid;   // C3223
+}
 ```

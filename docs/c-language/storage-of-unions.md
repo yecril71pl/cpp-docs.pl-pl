@@ -16,25 +16,27 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a741444aa9b0e9af1e1eb344a8ac7029127af3f9
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 516de9411a91f4bb8dd5f8775544ef32e7863bb3
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32386570"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46038272"
 ---
 # <a name="storage-of-unions"></a>Magazyn złożeń
-Magazyn skojarzone ze zmienną Unii jest magazynu wymaganego przez największy element członkowski Unii. Gdy mniejszych elementu członkowskiego jest przechowywana, union zmienna może zawierać miejsca nieużywanej pamięci. Wszystkie elementy członkowskie są przechowywane w tym samym obszarze pamięci i Rozpocznij od tego samego adresu. Wartość przechowywana jest zastępowany zawsze, gdy wartość jest przypisany do innego członka. Na przykład:  
-  
-```  
-union         /* Defines a union named x */  
-{  
-    char *a, b;  
-    float f[20];  
-} x;  
-```  
-  
- Elementy członkowskie `x` są Unii, w kolejności ich deklaracji wskaźnika do `char` wartości, `char` wartość i tablicę **float** wartości. Magazyn przydzielony do `x` jest magazynu wymaganego przez 20-elementowa tablica `f`, ponieważ `f` jest najdłuższym element członkowski Unii. Ponieważ brak tagu jest skojarzona z Unii, jego typ jest bez nazwy lub "anonymous".  
-  
-## <a name="see-also"></a>Zobacz też  
- [Deklaracje złożeń](../c-language/union-declarations.md)
+
+Magazyn skojarzony ze zmienną typu Unia jest magazynu wymaganego dla największego elementu Członkowskiego Unii. Gdy członek mniejszych są przechowywane, union zmienna może zawierać miejsca nieużywanej pamięci. Wszystkie elementy członkowskie są przechowywane w tej samej przestrzeni pamięci i rozpoczynają się od tego samego adresu. Wartość przechowywana jest zastąpione każdorazowo, gdy wartość jest przypisywana do innego członka. Na przykład:
+
+```
+union         /* Defines a union named x */
+{
+    char *a, b;
+    float f[20];
+} x;
+```
+
+Elementy członkowskie `x` Unii są w kolejności ich deklaracji, wskaźnik do `char` wartość `char` wartość i tablicę **float** wartości. Magazyn przydzielony do `x` magazynu wymaganych do 20-elementowej tablicy `f`, ponieważ `f` jest najdłuższym składowej Unii. Ponieważ żaden tag jest skojarzony z Unią, jego typ jest bez nazwy i "anonymous".
+
+## <a name="see-also"></a>Zobacz też
+
+[Deklaracje złożeń](../c-language/union-declarations.md)

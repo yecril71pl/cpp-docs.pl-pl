@@ -1,5 +1,5 @@
 ---
-title: C3551 błąd kompilatora | Dokumentacja firmy Microsoft
+title: Błąd kompilatora C3551 | Dokumentacja firmy Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,21 +16,23 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4f9f69adcf071415d3c1760294bdaaaec7b71f8e
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: b45a6f66ab7cf2a5ebb7ae6b2a2f78e664092604
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33257865"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46035737"
 ---
-# <a name="compiler-error-c3551"></a>C3551 błąd kompilatora
-"Oczekiwano, że późne określony zwracany typ"  
-  
- Jeśli używasz `auto` słowa kluczowego jako symbol zastępczy dla zwracanego typu funkcji, należy podać późne określony typ zwracany. W poniższym przykładzie późne określonym przez typ zwracany funkcji `myFunction` wskaźnika do tablicy cztery elementy typu `int`.  
-  
-```  
-auto myFunction()->int(*)[4];   
-```  
-  
-## <a name="see-also"></a>Zobacz też  
- [auto](../../cpp/auto-cpp.md)
+# <a name="compiler-error-c3551"></a>Błąd kompilatora C3551
+
+"Oczekiwano, że późno określony zwracany typ"
+
+Jeśli używasz `auto` słowa kluczowego jako symbol zastępczy dla zwracanego typu funkcji, musisz podać późno określony typ zwracany. W poniższym przykładzie późno określony zwracany typ funkcji `myFunction` jest wskaźnikiem do tablicy czterech elementów typu `int`.
+
+```
+auto myFunction()->int(*)[4];
+```
+
+## <a name="see-also"></a>Zobacz też
+
+[auto](../../cpp/auto-cpp.md)

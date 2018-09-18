@@ -15,27 +15,29 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 928f80375ecdd33902a0586cf31091d5764ee160
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 90e77f4bd1eddaa11762b9449a54cb7127498bae
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32381837"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46038183"
 ---
 # <a name="assignment-conversions"></a>Konwersje przypisań
-W operacjach przypisania typ wartości jest przypisany jest konwertowana na typ zmiennej, która odbiera przypisania. C umożliwia konwersje przez przypisanie między typów całkowitych i zmiennoprzecinkowych, nawet wtedy, gdy informacje są tracone w konwersji. Metodę konwersji zależy od typów objętego przypisania, zgodnie z opisem w [popularne konwersje arytmetyczne](../c-language/usual-arithmetic-conversions.md) i w następujących sekcjach:  
-  
--   [Konwersje z podpisanych typów całkowitych](../c-language/conversions-from-signed-integral-types.md)  
-  
--   [Konwersje z niepodpisanych typów całkowitych](../c-language/conversions-from-unsigned-integral-types.md)  
-  
--   [Konwersje z typów zmiennoprzecinkowych](../c-language/conversions-from-floating-point-types.md)  
-  
--   [Konwersje do i z typów wskaźnika](../c-language/conversions-to-and-from-pointer-types.md)  
-  
--   [Konwersje z innych typów](../c-language/conversions-from-other-types.md)  
-  
- Kwalifikatory typu nie mają wpływu na istoty konwersji, mimo że **const** l wartości nie można używać po lewej stronie przypisania.  
-  
-## <a name="see-also"></a>Zobacz też  
- [Konwersje typów](../c-language/type-conversions-c.md)
+
+W operacji przypisania typ wartości jest przypisane jest konwertowany na typ zmiennej, która odbiera przypisania. C umożliwia konwersje przez przypisanie między typów całkowitych i zmiennoprzecinkowych, nawet wtedy, gdy informacje są tracone w konwersji. Metodę konwersji zależy od typów, które są związane z przypisania, zgodnie z opisem w [zwykle konwersje arytmetyczne](../c-language/usual-arithmetic-conversions.md) i w poniższych sekcjach:
+
+- [Konwersje z podpisanych typów całkowitych](../c-language/conversions-from-signed-integral-types.md)
+
+- [Konwersje z niepodpisanych typów całkowitych](../c-language/conversions-from-unsigned-integral-types.md)
+
+- [Konwersje z typów zmiennoprzecinkowych](../c-language/conversions-from-floating-point-types.md)
+
+- [Konwersje do i z typów wskaźnika](../c-language/conversions-to-and-from-pointer-types.md)
+
+- [Konwersje z innych typów](../c-language/conversions-from-other-types.md)
+
+Kwalifikatory typów nie wpływają na istoty konwersji mimo że **const** l wartością, nie można użyć po lewej stronie przypisania.
+
+## <a name="see-also"></a>Zobacz też
+
+[Konwersje typów](../c-language/type-conversions-c.md)

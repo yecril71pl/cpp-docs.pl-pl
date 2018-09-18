@@ -16,16 +16,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9dc1d1064e6ed18870d60e3a421ceec0c54ca855
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: ae8ee21b8cb8f2a5bffe471019e65d32c8872af3
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33316764"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46037505"
 ---
 # <a name="math-error-m6102"></a>Błąd matematyczny M6102
-Brak reprezentacji zmiennoprzecinkowej  
-  
- Operacja wygenerowała bardzo małej liczby zmiennoprzecinkowe, który jest nieprawidłowy z powodu utraty istotności. Brak reprezentacji zmiennoprzecinkowej wyjątki zmiennoprzecinkowe zwykle są maskowane, co powoduje ich kolor i po.  
-  
- Program kończy się z kodem zakończenia 130.
+
+zdenormalizowany
+
+Operacja wygenerowała bardzo mała liczba zmiennoprzecinkowa, który jest nieprawidłowy ze względu utrata znaczenia. Zdenormalizowany wyjątki zmiennoprzecinkowe zwykle są maskowane, powoduje zablokował i wykonywane działania.
+
+Program kończy się z kodem zakończenia 130.

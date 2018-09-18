@@ -19,12 +19,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9c465e5da4d3822782bd9c7b81e497ea544e3bd1
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 000e43926a83bdd7457c33c656383ae44dce6259
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43759957"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46046280"
 ---
 # <a name="ustringorid-class"></a>Klasa _U_STRINGorID
 
@@ -76,16 +76,16 @@ LPCTSTR m_lpstr;
 Konstruktor UINT konwertuje jej argument niezgodny z funkcji zarządzania zasobami Windows przy użyciu makra MAKEINTRESOURCE typu zasobu, a wynik jest przechowywany w elemencie członkowskim danych jednego tej klasy, [m_lpstr](#_u_stringorid__m_lpstr).
 
 ```
-_U_STRINGorID(UINT nID);  
+_U_STRINGorID(UINT nID);
 _U_STRINGorID(LPCTSTR lpString);
 ```
 
 ### <a name="parameters"></a>Parametry
 
-*nID*  
+*nID*<br/>
 Identyfikator zasobu.
 
-*lpString*  
+*lpString*<br/>
 Nazwa zasobu.
 
 ### <a name="remarks"></a>Uwagi

@@ -1,5 +1,5 @@
 ---
-title: C2267 błąd kompilatora | Dokumentacja firmy Microsoft
+title: Błąd kompilatora C2267 | Dokumentacja firmy Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,24 +16,25 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: fc117bd692408773a2ef93ed319221b78646ba4b
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 080f6ebfda8dbdaa1f0bf70faa3b6d5c7545d66e
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33169910"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46035269"
 ---
-# <a name="compiler-error-c2267"></a>C2267 błąd kompilatora
-"Funkcja": funkcje statyczne w zakresie bloku są niedozwolone  
-  
- Funkcja lokalna jest zadeklarowany jako `static`. Statyczne funkcje musi mieć zakresu globalnego.  
-  
- Poniższy przykład generuje C2267:  
-  
-```  
-// C2267.cpp  
-static int func2();   // OK  
-int main() {  
-    static int func1();   // C2267  
-}  
+# <a name="compiler-error-c2267"></a>Błąd kompilatora C2267
+
+'Funkcja': funkcje statyczne w zakresie bloku są niedozwolone
+
+Funkcja lokalna jest zadeklarowana `static`. Statyczne funkcje muszą mieć zakresu globalnego.
+
+Poniższy przykład spowoduje wygenerowanie C2267:
+
+```
+// C2267.cpp
+static int func2();   // OK
+int main() {
+    static int func1();   // C2267
+}
 ```
