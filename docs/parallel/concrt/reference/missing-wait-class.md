@@ -18,15 +18,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b5ebd607dc207975e7d38e3217c275d3d5d18bb8
-ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
+ms.openlocfilehash: a2a44cbdb5abeed7d5dbd7be7dfaba37ba1d0145
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33686350"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46024960"
 ---
 # <a name="missingwait-class"></a>missing_wait — Klasa
-Ta klasa opisuje wyjątek wywoływany, gdy nadal zaplanowane zadania `task_group` lub `structured_task_group` obiektów w czasie tego obiektu wykonuje destruktora. Ten wyjątek nigdy nie zostanie wygenerowany, jeśli osiągnięto destruktor ze względu na stosie rozwinięcia wyniku Wystąpił wyjątek.  
+Ta klasa opisuje wyjątek generowany, gdy istnieją zadania zaplanowane nadal `task_group` lub `structured_task_group` obiektu w czasie tego obiektu wykonuje destruktora. Ten wyjątek nigdy nie zostanie zgłoszony, jeśli zostanie osiągnięty destruktor, ze względu na stosie rozwinięcia jako wynik wyjątku.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -43,7 +43,7 @@ class missing_wait : public std::exception;
 |[missing_wait](#ctor)|Przeciążone. Konstruuje `missing_wait` obiektu.|  
   
 ## <a name="remarks"></a>Uwagi  
- Brak przepływu wyjątek jest odpowiedzialny za wywoływanie albo `wait` lub `run_and_wait` metody `task_group` lub `structured_task_group` obiektu przed zezwoleniem na destruct tego obiektu. Środowisko uruchomieniowe zgłasza tego wyjątku, ponieważ oznacza to, że pamiętasz wywołać `wait` lub `run_and_wait` metody.  
+ Nieobecny przepływu wyjątek odpowiedzialność za wywołanie dowolnej `wait` lub `run_and_wait` metody `task_group` lub `structured_task_group` obiektu przed zezwoleniem na ten obiekt do niszczenia. Środowisko wykonawcze zgłasza ten wyjątek w celu wskazania, że pamiętasz wywołać `wait` lub `run_and_wait` metody.  
   
 ## <a name="inheritance-hierarchy"></a>Hierarchia dziedziczenia  
  `exception`  
@@ -66,12 +66,12 @@ missing_wait() throw();
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `_Message`  
- Komunikat opisowy błędu.  
+*_Message*<br/>
+Opisowy komunikat dotyczący błędu.  
   
 ## <a name="see-also"></a>Zobacz też  
  [Współbieżność Namespace](concurrency-namespace.md)   
  [task_group — klasa](task-group-class.md)   
- [oczekiwania](task-group-class.md)   
+ [Czekaj](task-group-class.md)   
  [run_and_wait](task-group-class.md)   
  [structured_task_group, klasa](structured-task-group-class.md)

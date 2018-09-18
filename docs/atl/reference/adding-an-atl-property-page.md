@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d86adf69aef269e1bde04c0962ca383754fe803e
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: dfb5ec444be55d7b595660f7777ae54e19143fd4
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43764133"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46021619"
 ---
 # <a name="adding-an-atl-property-page"></a>Dodawanie strony właściwości ATL
 
@@ -44,7 +44,7 @@ Po utworzeniu strony właściwości kontrolki, należy podać [PROP_PAGE](proper
 
 ## <a name="see-also"></a>Zobacz też
 
-[Strony właściwości](../../atl/atl-com-property-pages.md)   
-[Podstawowe informacje na temat obiektów COM ATL](../../atl/fundamentals-of-atl-com-objects.md)   
+[Strony właściwości](../../atl/atl-com-property-pages.md)<br/>
+[Podstawowe informacje na temat obiektów COM ATL](../../atl/fundamentals-of-atl-com-objects.md)<br/>
 [Przykład: Implementowanie strony właściwości](../../atl/example-implementing-a-property-page.md)
 

@@ -1,5 +1,5 @@
 ---
-title: C3096 błąd kompilatora | Dokumentacja firmy Microsoft
+title: Błąd kompilatora C3096 | Dokumentacja firmy Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,16 +16,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 781d032875a0edc042eb8f8031d5d035c1ab40eb
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 84d2b1a51073c49f0300e6b43a4575309a0dfc17
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33243783"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46026351"
 ---
-# <a name="compiler-error-c3096"></a>C3096 błąd kompilatora
-"attribute": atrybut jest dozwolony w elementach członkowskich danych atrybutu klas  
-  
- Atrybut zastosowano niepoprawnie.  
-  
- Aby uzyskać więcej informacji, zobacz [zdefiniowane przez użytkownika atrybuty](../../windows/user-defined-attributes-cpp-component-extensions.md).
+# <a name="compiler-error-c3096"></a>Błąd kompilatora C3096
+
+"attribute": atrybut jest dozwolony na składowych danych klas atrybutów tylko
+
+Atrybut została zastosowana niepoprawnie.
+
+Aby uzyskać więcej informacji, zobacz [atrybuty zdefiniowane przez użytkownika](../../windows/user-defined-attributes-cpp-component-extensions.md).

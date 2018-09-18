@@ -1,5 +1,5 @@
 ---
-title: C2882 błąd kompilatora | Dokumentacja firmy Microsoft
+title: Błąd kompilatora C2882 | Dokumentacja firmy Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,26 +16,27 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d2885d00f31dbb9e057317e12b43b838579b33aa
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 59110c6c196bfed2a268484af8a2de1e15552041
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33242196"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46025792"
 ---
-# <a name="compiler-error-c2882"></a>C2882 błąd kompilatora
-"Nazwa": niedozwolone użycie identyfikatora przestrzeni nazw w wyrażeniu  
-  
- Próbowano użyć nazwy przestrzeni nazw w wyrażeniu.  
-  
- Poniższy przykład generuje C2882:  
-  
-```  
-// C2882.cpp  
-// compile with: /c  
-namespace A {  
-   int k;  
-}  
-  
-int i = A;   // C2882, can't assign A to i  
+# <a name="compiler-error-c2882"></a>Błąd kompilatora C2882
+
+"name": niedozwolone użycie identyfikatora przestrzeni nazw w wyrażeniu
+
+Próbowano użyć nazwy przestrzeni nazw w wyrażeniu.
+
+Poniższy przykład spowoduje wygenerowanie C2882:
+
+```
+// C2882.cpp
+// compile with: /c
+namespace A {
+   int k;
+}
+
+int i = A;   // C2882, can't assign A to i
 ```

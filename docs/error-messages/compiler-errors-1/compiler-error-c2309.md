@@ -1,5 +1,5 @@
 ---
-title: C2309 błąd kompilatora | Dokumentacja firmy Microsoft
+title: Błąd kompilatora C2309 | Dokumentacja firmy Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,31 +16,32 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 52be559b2e5991e647425b99a1795866046d9050
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: bf9c6fcbef97f9541b95945a52a36e25ab7229fd
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33174899"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46026104"
 ---
-# <a name="compiler-error-c2309"></a>C2309 błąd kompilatora
-przy obsłudze catch Oczekiwano deklaracji wyjątku ujętego w nawiasy  
-  
- Obsługa catch nie ma ujętego w nawiasy typu.  
-  
- Poniższy przykład generuje C2309:  
-  
-```  
-// C2309.cpp  
-// compile with: /EHsc  
-#include <eh.h>  
-class C {};  
-int main() {  
-   try {  
-      throw "ooops!";  
-   }  
-   catch C {}   // C2309  
-   // try the following line instead  
-   // catch( C ) {}  
-}  
+# <a name="compiler-error-c2309"></a>Błąd kompilatora C2309
+
+przy obsłudze catch Oczekiwano deklaracji wyjątku ujętego w nawiasy
+
+Procedury obsługi catch nie ma ujęty w nawiasy typu.
+
+Poniższy przykład spowoduje wygenerowanie C2309:
+
+```
+// C2309.cpp
+// compile with: /EHsc
+#include <eh.h>
+class C {};
+int main() {
+   try {
+      throw "ooops!";
+   }
+   catch C {}   // C2309
+   // try the following line instead
+   // catch( C ) {}
+}
 ```

@@ -1,5 +1,5 @@
 ---
-title: C2893 błąd kompilatora | Dokumentacja firmy Microsoft
+title: Błąd kompilatora C2893 | Dokumentacja firmy Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,44 +16,46 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: db3b71a05ece6b79672d47699dc68e0eb5bb1f60
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 73d4f838f030db3667b08295006c2ea1df94c87b
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33246701"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46026182"
 ---
-# <a name="compiler-error-c2893"></a>C2893 błąd kompilatora
-Nie powiodła się specjalizacja szablonu funkcji "Nazwa szablonu"  
-  
- Kompilator nie powiodło się specjalizacja szablonu funkcji. Może istnieć wiele przyczyn tego błędu.  
-  
- Ogólnie rzecz biorąc sposób, aby rozwiązać problem C2893 jest Przejrzyj podpisu funkcji i upewnij się, że można utworzyć wystąpienia każdego typu.  
-  
-## <a name="example"></a>Przykład  
- C2893 występuje, ponieważ `f`w parametr szablonu `T` jest ustalona jako `std::map<int,int>`, ale `std::map<int,int>` ma elementu członkowskiego `data_type` (`T::data_type` nie można utworzyć wystąpienia z `T = std::map<int,int>`.). Poniższy przykład generuje C2893.  
-  
-```  
-// C2893.cpp  
-// compile with: /c /EHsc  
-#include<map>  
-using namespace std;  
-class MyClass {};  
-  
-template<class T>   
-inline typename T::data_type  
-// try the following line instead  
-// inline typename  T::mapped_type  
-f(T const& p1, MyClass const& p2);  
-  
-template<class T>  
-void bar(T const& p1) {  
-    MyClass r;  
-    f(p1,r);   // C2893  
-}  
-  
-int main() {  
-   map<int,int> m;  
-   bar(m);  
-}  
+# <a name="compiler-error-c2893"></a>Błąd kompilatora C2893
+
+Nie powiodła się specjalizacja szablonu funkcji "Nazwa szablonu"
+
+Kompilator nie powiodła się specjalizacja szablonu funkcji. Może istnieć wiele przyczyn tego błędu.
+
+Ogólnie rzecz biorąc sposób, aby rozwiązać błąd C2893 jest Przejrzyj podpisu funkcji i upewnij się, że można utworzyć wystąpienie każdego typu.
+
+## <a name="example"></a>Przykład
+
+C2893 występuje, ponieważ `f`firmy parametru szablonu `T` jest wywnioskowano `std::map<int,int>`, ale `std::map<int,int>` nie ma składowej `data_type` (`T::data_type` nie może zostać utworzona za pomocą `T = std::map<int,int>`.). Poniższy przykład spowoduje wygenerowanie C2893.
+
+```
+// C2893.cpp
+// compile with: /c /EHsc
+#include<map>
+using namespace std;
+class MyClass {};
+
+template<class T>
+inline typename T::data_type
+// try the following line instead
+// inline typename  T::mapped_type
+f(T const& p1, MyClass const& p2);
+
+template<class T>
+void bar(T const& p1) {
+    MyClass r;
+    f(p1,r);   // C2893
+}
+
+int main() {
+   map<int,int> m;
+   bar(m);
+}
 ```

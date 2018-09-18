@@ -21,15 +21,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 95e95cc84ca999402e0d64c0699750bb92203cef
-ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
+ms.openlocfilehash: f720ad2590a731792f79ef66a68dd2894a15517d
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33689392"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46026923"
 ---
 # <a name="messageprocessor-class"></a>message_processor — Klasa
-`message_processor` Klasa jest abstrakcyjna klasa podstawowa dla przetwarzania `message` obiektów. Nie ma żadnej gwarancji z kolejnością wiadomości.  
+`message_processor` Klasa jest abstrakcyjna klasa bazowa dla przetwarzania `message` obiektów. Nie ma żadnej gwarancji, w kolejności wiadomości.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -39,12 +39,12 @@ class message_processor;
 ```  
   
 #### <a name="parameters"></a>Parametry  
- `T`  
- Typ danych ładunku w komunikaty obsługiwane przez to `message_processor` obiektu.  
+*T*<br/>
+Typ danych ładunku w komunikatach obsługiwanych przez to `message_processor` obiektu.  
   
 ## <a name="members"></a>Elementy członkowskie  
   
-### <a name="public-typedefs"></a>Definicje typów publicznych  
+### <a name="public-typedefs"></a>Publiczne definicje typów  
   
 |Nazwa|Opis|  
 |----------|-----------------|  
@@ -54,15 +54,15 @@ class message_processor;
   
 |Nazwa|Opis|  
 |----------|-----------------|  
-|[async_send](#async_send)|W przypadku przesłonięcia w klasie pochodnej, umieszcza wiadomości w bloku asynchronicznie.|  
-|[sync_send](#sync_send)|W przypadku przesłonięcia w klasie pochodnej, umieszcza wiadomości w bloku synchronicznie.|  
-|[oczekiwania](#wait)|W przypadku przesłonięcia w klasie pochodnej, czeka na zakończenie wszystkich operacji asynchronicznych.|  
+|[async_send](#async_send)|W przypadku przesłonięcia w klasie pochodnej, umieszcza komunikaty w bloku asynchronicznie.|  
+|[sync_send](#sync_send)|W przypadku przesłonięcia w klasie pochodnej, umieszcza komunikaty w bloku synchronicznie.|  
+|[Czekaj](#wait)|W przypadku przesłonięcia w klasie pochodnej, czeka na zakończenie wszystkich operacji asynchronicznych.|  
   
 ### <a name="protected-methods"></a>Metody chronione  
   
 |Nazwa|Opis|  
 |----------|-----------------|  
-|[process_incoming_message](#process_incoming_message)|W przypadku przesłonięcia w klasie pochodnej, przetwarza przekazywania wiadomości w bloku. Wywoływana raz za każdym razem zostanie dodany nowy komunikat i można odnaleźć kolejki muszą być puste.|  
+|[process_incoming_message](#process_incoming_message)|W przypadku przesłonięcia w klasie pochodnej, wykonuje przetwarzanie komunikatów w bloku do przodu. Volat pouze jednou za każdym razem, gdy nowy komunikat zostanie dodany i kolejki pozostaje puste.|  
   
 ## <a name="inheritance-hierarchy"></a>Hierarchia dziedziczenia  
  `message_processor`  
@@ -72,48 +72,48 @@ class message_processor;
   
  **Namespace:** współbieżności  
   
-##  <a name="async_send"></a> async_send 
+##  <a name="async_send"></a> async_send — 
 
- W przypadku przesłonięcia w klasie pochodnej, umieszcza wiadomości w bloku asynchronicznie.  
+ W przypadku przesłonięcia w klasie pochodnej, umieszcza komunikaty w bloku asynchronicznie.  
   
 ```
 virtual void async_send(_Inout_opt_ message<T>* _Msg) = 0;
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `_Msg`  
- A `message` obiektu do wysłania asynchronicznie.  
+*_Msg*<br/>
+A `message` obiekt do wysyłania asynchronicznie.  
   
 ### <a name="remarks"></a>Uwagi  
- Procesor implementacje powinny przesłaniać tę metodę.  
+ Implementacji procesora, powinny przesłaniać tę metodę.  
   
-##  <a name="process_incoming_message"></a> process_incoming_message 
+##  <a name="process_incoming_message"></a> process_incoming_message — 
 
- W przypadku przesłonięcia w klasie pochodnej, przetwarza przekazywania wiadomości w bloku. Wywoływana raz za każdym razem zostanie dodany nowy komunikat i można odnaleźć kolejki muszą być puste.  
+ W przypadku przesłonięcia w klasie pochodnej, wykonuje przetwarzanie komunikatów w bloku do przodu. Volat pouze jednou za każdym razem, gdy nowy komunikat zostanie dodany i kolejki pozostaje puste.  
   
 ```
 virtual void process_incoming_message() = 0;
 ```  
   
 ### <a name="remarks"></a>Uwagi  
- Komunikat bloku implementacje powinny przesłaniać tę metodę.  
+ Implementacji bloku komunikatu powinny przesłaniać tę metodę.  
   
-##  <a name="sync_send"></a> sync_send 
+##  <a name="sync_send"></a> sync_send — 
 
- W przypadku przesłonięcia w klasie pochodnej, umieszcza wiadomości w bloku synchronicznie.  
+ W przypadku przesłonięcia w klasie pochodnej, umieszcza komunikaty w bloku synchronicznie.  
   
 ```
 virtual void sync_send(_Inout_opt_ message<T>* _Msg) = 0;
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `_Msg`  
- A `message` obiektu do wysłania synchronicznie.  
+*_Msg*<br/>
+A `message` obiekt do wysyłania synchronicznie.  
   
 ### <a name="remarks"></a>Uwagi  
- Procesor implementacje powinny przesłaniać tę metodę.  
+ Implementacji procesora, powinny przesłaniać tę metodę.  
   
-##  <a name="wait"></a> oczekiwania 
+##  <a name="wait"></a> Czekaj 
 
  W przypadku przesłonięcia w klasie pochodnej, czeka na zakończenie wszystkich operacji asynchronicznych.  
   
@@ -122,7 +122,7 @@ virtual void wait() = 0;
 ```  
   
 ### <a name="remarks"></a>Uwagi  
- Procesor implementacje powinny przesłaniać tę metodę.  
+ Implementacji procesora, powinny przesłaniać tę metodę.  
   
 ## <a name="see-also"></a>Zobacz też  
  [Współbieżność Namespace](concurrency-namespace.md)   

@@ -16,14 +16,15 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 78ff500d050fbb646dd97fc898279712fb750d9e
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 8c18d6f9b502e818992097c3042689cf66457792
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33197614"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46024778"
 ---
 # <a name="fatal-error-c1045"></a>Błąd krytyczny C1045
-ograniczenie kompilatora: powiązanie konsolidacji zagnieżdżono zbyt głęboko  
-  
- Zagnieżdżone externals przekracza limit kompilatora. Zagnieżdżone externals są dozwolone z typem połączenie zewnętrzne, takie jak `extern` "C++". Zmniejsz liczbę zagnieżdżonych externals, aby rozwiązać problem.
+
+ograniczenie kompilatora: powiązanie konsolidacji zagnieżdżono zbyt głęboko
+
+Zagnieżdżone zewnętrzne przekroczyć limitu kompilatora. Zagnieżdżone zewnętrzne są dozwolone w przypadku typu powiązania zewnętrzne, takie jak `extern` "C++". Zmniejsz liczbę zagnieżdżonych zewnętrzne, aby naprawić błąd.

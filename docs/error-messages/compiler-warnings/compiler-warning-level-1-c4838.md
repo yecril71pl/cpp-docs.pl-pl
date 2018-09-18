@@ -1,5 +1,5 @@
 ---
-title: Kompilatora (poziom 1) ostrzeżenie C4838 | Dokumentacja firmy Microsoft
+title: Kompilator ostrzeżenie (poziom 1) C4838 | Dokumentacja firmy Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
 ms.topic: error-reference
@@ -14,38 +14,39 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1327ed8869c17701c6aa0a6ce2e3479b6109b8cd
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 1335d9c36f6764b54689a8334a91f11275ee3265
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33283848"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46025454"
 ---
-# <a name="compiler-warning-level-1-c4838"></a>Kompilator C4838 ostrzegawcze (poziom 1)
-Konwersja z "type_1" na "type_2" wymaga konwersji zawężającej  
-  
- Niejawnej konwersji zawężającej został znaleziony, gdy przy użyciu inicjowania agregacji lub na liście.  
-  
- Niejawnych konwersji zawężającej przydziałów i inicjowania umożliwia języka C i C++ następuje koloru, nawet jeśli nieoczekiwany zawężanie jest przyczyną wiele błędów kodu. Aby wprowadzić kod bezpieczniejsze, C++ standard wymaga komunikatów diagnostycznych podczas konwersji zawężającej występuje na liście inicjowania. W programie Visual C++, Diagnostyka jest [C2397 błąd kompilatora](../../error-messages/compiler-errors-1/compiler-error-c2397.md) Jeśli używana jest składnia jednolite inicjowanie obsługiwane począwszy od programu Visual Studio 2015. Kompilator generuje ostrzeżenie C4838, korzystając z listy lub składnia inicjalizacji agregacji obsługiwane przez Visual Studio 2013.  
-  
- Konwersji zawężającej mogą być poprawny, gdy wiesz, że możliwej wartości przekonwertowane zmieści się w celu. W takim przypadku możesz dowiedzieć się więcej niż kompilatora. Jeśli dokonujesz konwersji zawężającej celowo, wprowadzać zamiaru jawne za pomocą rzutowania statycznego. W przeciwnym razie ten komunikat ostrzegawczy prawie zawsze oznacza, że usterki w kodzie. Można go rozwiązać, upewniając się, że obiekty, które należy zainicjować mają typy, które są wystarczająco duża do obsługi danych wejściowych.  
-  
- Poniższy przykład generuje C4838 i przedstawia sposób rozwiązywanie problemu:  
-  
-```  
-// C4838.cpp -- C++ narrowing conversion diagnostics  
-// Compile by using: cl /EHsc C4838.cpp  
-  
-struct S1 {  
-    int m1;  
-    double m2, m3;  
-};  
-  
-void function_C4838(double d1) {  
-    double ad[] = { 1, d1 }; // OK  
-    int ai[] = { 1, d1 };    // warning C4838  
-    S1 s11 = { 1, 2, d1 };   // OK  
-    S1 s12 { d1, 2, 3 };     // warning C4838  
-    S1 s13 { static_cast<int>(d1), 2, 3 }; // possible fix for C4838  
-}  
+# <a name="compiler-warning-level-1-c4838"></a>Kompilator ostrzeżenie (poziom 1) C4838
+
+Konwersja z 'typ_1' na 'typ_2' wymaga konwersji zawężającej
+
+Niejawna konwersja zawężająca został znaleziony podczas przy użyciu inicjowania agregacji lub listy.
+
+Niejawne konwersje zawężające przypisania i inicjowania zezwala na języka C i C++ następuje koloru, nawet jeśli nieoczekiwane zawężanie jest przyczyna wielu błędów kodu. Aby wprowadzić kod bezpieczniejsze, C++ standard wymaga komunikat diagnostyczny, gdy konwersja zawężająca występuje na liście inicjowania. W programie Visual C++ jest diagnostyczne [błąd kompilatora C2397](../../error-messages/compiler-errors-1/compiler-error-c2397.md) podczas przy użyciu składni jednolite inicjowanie obsługiwane począwszy od programu Visual Studio 2015. Kompilator generuje ostrzeżenie C4838, korzystając z listy lub inicjowania agregacji przypadki składni obsługiwanej przez program Visual Studio 2013.
+
+Konwersja zawężająca może być akceptowalne, gdy wiesz, że zakres możliwych wartości przekonwertowanego mieści się w elemencie docelowym. W takim przypadku możesz dowiedzieć się więcej niż kompilator. Jeśli konwersja zawężająca celowo, tworzyć zamiaru jawne przy użyciu rzutowania statycznego. W przeciwnym razie ten komunikat ostrzegawczy prawie zawsze oznacza, że usterka w kodzie. Możesz ją naprawić, upewniając się, że obiekty, które należy zainicjować mają typy, które są wystarczająco duży, aby obsługiwać dane wejściowe.
+
+Poniższy przykład generuje C4838 i pokazano jeden ze sposobów, aby rozwiązać ten problem:
+
+```
+// C4838.cpp -- C++ narrowing conversion diagnostics
+// Compile by using: cl /EHsc C4838.cpp
+
+struct S1 {
+    int m1;
+    double m2, m3;
+};
+
+void function_C4838(double d1) {
+    double ad[] = { 1, d1 }; // OK
+    int ai[] = { 1, d1 };    // warning C4838
+    S1 s11 = { 1, 2, d1 };   // OK
+    S1 s12 { d1, 2, 3 };     // warning C4838
+    S1 s13 { static_cast<int>(d1), 2, 3 }; // possible fix for C4838
+}
 ```

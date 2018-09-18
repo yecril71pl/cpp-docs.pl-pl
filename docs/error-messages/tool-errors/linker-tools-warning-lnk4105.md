@@ -16,24 +16,25 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0ffdd8953e08f38d36bdfc2e68ad6cb8e06fb85b
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 4411421741cf8bf7c714a6322d58bd177e7e7270
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33304417"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46024986"
 ---
 # <a name="linker-tools-warning-lnk4105"></a>Ostrzeżenie LNK4105 narzędzi konsolidatora
-Brak argumentu określona z opcją "option"; Ignorowanie opcji  
-  
- To ostrzeżenie występuje tylko gdy [/libpath](../../build/reference/libpath-additional-libpath.md) opcja jest ustawiona. Jeśli nie określono katalogu przy użyciu tej opcji, konsolidator ignoruje opcję i generuje ten komunikat ostrzegawczy.  
-  
- Jeśli musisz zastąpić istniejące ustawienia środowiska biblioteki, Usuń opcję/libpath z wiersza polecenia konsolidatora. Jeśli chcesz użyć ścieżki alternatywnej wyszukiwania dla bibliotek, określ ścieżkę alternatywną, zgodnie z opcją/libpath.  
-  
-## <a name="example"></a>Przykład  
-  
-```  
-link /libpath:c:\filepath\lib bar.obj  
-```  
-  
- czy bezpośrednie konsolidator, aby wyszukać wymaganych bibliotek w `c:\filepath\lib` przed wyszukiwaniem w lokalizacji domyślnej.
+
+Brak argumentu określony za pomocą opcji "opcji"; Zignorowano opcję
+
+Ostrzeżenie to pojawia się tylko po [/libpath —](../../build/reference/libpath-additional-libpath.md) ustawiono opcję. Jeśli nie określono katalogu przy użyciu tej opcji, konsolidator ignoruje opcję i generuje ten komunikat ostrzegawczy.
+
+Jeśli jest konieczne zastąpienie istniejących ustawień biblioteki środowiska, należy usunąć/libpath — opcja z wiersza polecenia konsolidatora. Jeśli chcesz użyć ścieżki alternatywnej wyszukiwania dla bibliotek, należy określić ścieżkę alternatywną, zgodnie z opcją/libpath —.
+
+## <a name="example"></a>Przykład
+
+```
+link /libpath:c:\filepath\lib bar.obj
+```
+
+będzie kierować konsolidator, aby wyszukać wymaganych bibliotek w `c:\filepath\lib` przed wyszukiwaniem w lokalizacji domyślnej.

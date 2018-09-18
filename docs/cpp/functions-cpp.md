@@ -18,12 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0894ecf767d24f6e5ec5ea385b5aeca6daae41a8
-ms.sourcegitcommit: f7703076b850c717c33d72fb0755fbb2215c5ddc
+ms.openlocfilehash: aacbb7709daf6952f00276663e20131e967a554d
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/28/2018
-ms.locfileid: "43131756"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46022361"
 ---
 # <a name="functions-c"></a>Funkcje (C++)
 
@@ -135,7 +135,7 @@ Opcjonalnych części deklaracji funkcji są następujące:
 
 Poniższa ilustracja ukazuje części definicji funkcji. Zacieniony obszar stanowi treści funkcji.
 
- ![Części definicji funkcji](../cpp/media/vc38ru1.gif "vc38RU1") części definicji funkcji
+![Części definicji funkcji](../cpp/media/vc38ru1.gif "vc38RU1") części definicji funkcji
 
 ## <a name="function-definitions"></a>Definicje funkcji
 
@@ -205,7 +205,7 @@ Gdy funkcja zmodyfikuje argument, który jest przekazywany przez odwołanie, mod
 void DoSomething(const std::string& input){...}
 ```
 
- **C++ 11:** Aby jawnie obsługiwać argumenty, które są przekazywane przez odwołanie rvalue lub odwołanie lvalue, użyj double-handlowe "i" w parametrze aby wskazać uniwersalny odwołania:
+**C++ 11:** Aby jawnie obsługiwać argumenty, które są przekazywane przez odwołanie rvalue lub odwołanie lvalue, użyj double-handlowe "i" w parametrze aby wskazać uniwersalny odwołania:
 
 ```cpp
 void DoSomething(const std::string&& input){...}
@@ -315,22 +315,22 @@ Istnieją różne sposoby, aby zwrócić więcej niż jedną wartość z funkcji
     ```cpp
     #include <string>
     #include <iostream>
-    
+
     using namespace std;
-    
+
     struct S
     {
         string name;
         int num;
     };
-    
+
     S g()
     {
         string t{ "hello" };
         int u{ 42 };
         return { t, u };
     }
-    
+
     int main()
     {
         S s = g();
@@ -338,16 +338,16 @@ Istnieją różne sposoby, aby zwrócić więcej niż jedną wartość z funkcji
         return 0;
     }
     ```
-    
+
 1. Zwraca obiekt std::tuple lub std::pair:
 
     ```cpp
     #include <tuple>
     #include <string>
     #include <iostream>
-    
+
     using namespace std;
-        
+
     tuple<int, string, double> f()
     {
         int i{ 108 };
@@ -355,20 +355,20 @@ Istnieją różne sposoby, aby zwrócić więcej niż jedną wartość z funkcji
         double d{ .01 };
         return { i,s,d };
     }
-    
+
     int main()
     {
         auto t = f();
         cout << get<0>(t) << " " << get<1>(t) << " " << get<2>(t) << endl;
-     
+
         // --or--
-    
+
         int myval;
         string myname;
         double mydecimal;
         tie(myval, myname, mydecimal) = f();
         cout << myval << " " << myname << " " << mydecimal << endl;
-    
+
         return 0;
     }
     ```
@@ -379,9 +379,9 @@ Istnieją różne sposoby, aby zwrócić więcej niż jedną wartość z funkcji
     #include <tuple>
     #include <string>
     #include <iostream>
-    
+
     using namespace std;
-    
+
     tuple<int, string, double> f()
     {
         int i{ 108 };
@@ -394,25 +394,25 @@ Istnieją różne sposoby, aby zwrócić więcej niż jedną wartość z funkcji
         string name;
         int num;
     };
-    
+
     S g()
     {
         string t{ "hello" };
         int u{ 42 };
         return { t, u };
     }
-    
+
     int main()
     {
         auto[x, y, z] = f(); // init from tuple
         cout << x << " " << y << " " << z << endl;
-    
+
         auto[a, b] = g(); // init from POD struct
         cout << a << " " << b << endl;
         return 0;
     }
     ```
-    
+
 1. Tylko samą wartość zwracana, użytkownik może "return" wartości, definiując dowolna liczba parametrów do użycia przekazywany przez odwołanie, aby zmodyfikować lub zainicjować wartości obiektów, które zapewnia obiekt wywołujący funkcję. Aby uzyskać więcej informacji, zobacz [argumenty funkcji typu odwołania](reference-type-function-arguments.md).
 
 ## <a name="function-pointers"></a>Wskaźniki funkcji
@@ -435,9 +435,10 @@ int (*myFunction(char* s))(int);
 Poprzednia deklaracja jest równoważna z deklaracją przy użyciu elementu typedef powyżej.
 
 ## <a name="see-also"></a>Zobacz także
- [Przeładowywanie funkcji](../cpp/function-overloading.md)  
- [Funkcje ze zmiennymi listami argumentów](../cpp/functions-with-variable-argument-lists-cpp.md)  
- [Jawnie domyślne i usunięte funkcje](../cpp/explicitly-defaulted-and-deleted-functions.md)  
- [Odnośnik do nazwy zależnej od argumentu (Koenig) funkcji](../cpp/argument-dependent-name-koenig-lookup-on-functions.md)  
- [Argumenty domyślne](../cpp/default-arguments.md)  
- [Funkcje śródwierszowe](../cpp/inline-functions-cpp.md)
+
+[Przeładowywanie funkcji](../cpp/function-overloading.md)<br/>
+[Funkcje ze zmiennymi listami argumentów](../cpp/functions-with-variable-argument-lists-cpp.md)<br/>
+[Jawnie domyślne i usunięte funkcje](../cpp/explicitly-defaulted-and-deleted-functions.md)<br/>
+[Odnośnik do nazwy zależnej od argumentu (Koenig) funkcji](../cpp/argument-dependent-name-koenig-lookup-on-functions.md)<br/>
+[Argumenty domyślne](../cpp/default-arguments.md)<br/>
+[Funkcje śródwierszowe](../cpp/inline-functions-cpp.md)

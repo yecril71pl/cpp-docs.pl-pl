@@ -41,14 +41,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 85f08ae7a996a762be915bcce820c33a0a8e549c
-ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
+ms.openlocfilehash: afae1f91907e8fd22640dd87fe607a067900edfa
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "42464942"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46024648"
 ---
 # <a name="caccessorrowset-class"></a>CAccessorRowset — Klasa
+
 Hermetyzuje zestawu wierszy i skojarzone metody dostępu w jednej klasie.  
   
 ## <a name="syntax"></a>Składnia
@@ -60,14 +61,16 @@ class CAccessorRowset : public TAccessor, public TRowset<TAccessor>
 ```  
   
 ### <a name="parameters"></a>Parametry  
- *TAccessor*  
- Klasa metody dostępu.  
+
+*TAccessor*<br/>
+Klasa metody dostępu.  
   
- *TRowset*  
- Klasy zestawów wierszy.  
+*TRowset*<br/>
+Klasy zestawów wierszy.  
 
 ## <a name="requirements"></a>Wymagania  
- **Nagłówek:** atldbcli.h  
+
+**Nagłówek:** atldbcli.h  
   
 ## <a name="members"></a>Elementy członkowskie  
   
@@ -75,16 +78,18 @@ class CAccessorRowset : public TAccessor, public TRowset<TAccessor>
   
 |||  
 |-|-|  
-|[powiązania](#bind)|Tworzy powiązania (używane podczas `bBind` jest określony jako **false** w [CCommand::Open](../../data/oledb/ccommand-open.md)).|  
+|[Bind](#bind)|Tworzy powiązania (używane podczas `bBind` jest określony jako **false** w [CCommand::Open](../../data/oledb/ccommand-open.md)).|  
 |[CAccessorRowset](#caccessorrowset)|Konstruktor.|  
 |[Zamknij](#close)|Zamyka zestawu wierszy i wszelkie metody dostępu.|  
 |[FreeRecordMemory](#freerecordmemory)|Zwalnia wszystkie kolumny w bieżącym rekordzie, które muszą zostać uwolniona.|  
 |[GetColumnInfo](#getcolumninfo)|Implementuje [IColumnsInfo::GetColumnInfo](/previous-versions/windows/desktop/ms722704\(v=vs.85\)).|  
   
 ## <a name="remarks"></a>Uwagi  
- Klasa `TAccessor` zarządza akcesor. Klasa *TRowset* zarządza zestawu wierszy.  
+
+Klasa `TAccessor` zarządza akcesor. Klasa *TRowset* zarządza zestawu wierszy.  
 
 ## <a name="bind"></a> CAccessorRowset::Bind
+
 Tworzy powiązania, jeśli określono `bBind` jako **false** w [CCommand::Open](../../data/oledb/ccommand-open.md).  
   
 ### <a name="syntax"></a>Składnia  
@@ -94,9 +99,11 @@ HRESULT Bind();
 ```  
   
 ### <a name="return-value"></a>Wartość zwracana  
- Standardowa HRESULT.  
+
+Standardowa HRESULT.  
 
 ## <a name="caccessorrowset"></a> CAccessorRowset::CAccessorRowset
+
 Inicjuje `CAccessorRowset` obiektu.  
   
 ### <a name="syntax"></a>Składnia  
@@ -106,6 +113,7 @@ CAccessorRowset();
 ```  
 
 ## <a name="close"></a> CAccessorRowset::Close
+
 Zwalnia wszelkie aktywne metody dostępu i zestawu wierszy.  
   
 ### <a name="syntax"></a>Składnia  
@@ -115,9 +123,11 @@ void Close();
 ```  
   
 ### <a name="remarks"></a>Uwagi  
- Zwalnia wszystkie skojarzone pamięci.  
+
+Zwalnia wszystkie skojarzone pamięci.  
 
 ## <a name="freerecordmemory"></a> CAccessorRowset::FreeRecordMemory
+
 Zwalnia wszystkie kolumny w bieżącym rekordzie, które muszą zostać uwolniona.  
   
 ### <a name="syntax"></a>Składnia  
@@ -127,6 +137,7 @@ void FreeRecordMemory();
 ```  
 
 ## <a name="getcolumninfo"></a> CAccessorRowset::GetColumnInfo
+
 Pobiera informacje o kolumnach z otwartego zestawu wierszy.  
   
 ### <a name="syntax"></a>Składnia  
@@ -141,16 +152,20 @@ HRESULT GetColumnInfo(DBORDINAL* pColumns,
 ```  
   
 #### <a name="parameters"></a>Parametry  
- Zobacz [IColumnsInfo::GetColumnInfo](/previous-versions/windows/desktop/ms722704\(v=vs.85\)) w *OLE DB Podręcznik programisty*.  
+
+Zobacz [IColumnsInfo::GetColumnInfo](/previous-versions/windows/desktop/ms722704\(v=vs.85\)) w *OLE DB Podręcznik programisty*.  
   
 ### <a name="return-value"></a>Wartość zwracana  
- Standardowa HRESULT.  
+
+Standardowa HRESULT.  
   
 ### <a name="remarks"></a>Uwagi  
- Użytkownik należy zwolnić informacji zwróconej kolumny i buforu ciągu. Użyj drugą wersję tej metody, gdy używasz [cdynamicaccessor —](../../data/oledb/cdynamicaccessor-class.md) i trzeba zastąpić powiązania.  
+
+Użytkownik należy zwolnić informacji zwróconej kolumny i buforu ciągu. Użyj drugą wersję tej metody, gdy używasz [cdynamicaccessor —](../../data/oledb/cdynamicaccessor-class.md) i trzeba zastąpić powiązania.  
   
- Aby uzyskać więcej informacji, zobacz [IColumnsInfo::GetColumnInfo](/previous-versions/windows/desktop/ms722704\(v=vs.85\)) w *OLE DB Podręcznik programisty*.  
+Aby uzyskać więcej informacji, zobacz [IColumnsInfo::GetColumnInfo](/previous-versions/windows/desktop/ms722704\(v=vs.85\)) w *OLE DB Podręcznik programisty*.  
   
 ## <a name="see-also"></a>Zobacz też  
- [Szablony konsumentów OLE DB](../../data/oledb/ole-db-consumer-templates-cpp.md)   
- [Szablony konsumentów OLE DB — dokumentacja](../../data/oledb/ole-db-consumer-templates-reference.md)
+
+[Szablony konsumentów OLE DB](../../data/oledb/ole-db-consumer-templates-cpp.md)<br/>
+[Szablony konsumentów OLE DB — dokumentacja](../../data/oledb/ole-db-consumer-templates-reference.md)

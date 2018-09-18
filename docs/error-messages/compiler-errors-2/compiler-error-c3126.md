@@ -1,5 +1,5 @@
 ---
-title: C3126 błąd kompilatora | Dokumentacja firmy Microsoft
+title: Błąd kompilatora C3126 | Dokumentacja firmy Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,29 +16,30 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 811377ef557cb690dcd8f1cf92b983d9bac60675
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: f794565c9d8054d4b66e7817b5d63fb13795ac3e
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33248563"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46021677"
 ---
-# <a name="compiler-error-c3126"></a>C3126 błąd kompilatora
-Nie można zdefiniować związku "union" wewnątrz typu zarządzanego 'type'  
-  
- Nie można zdefiniować związku wewnątrz typu zarządzanego.  
-  
- Poniższy przykład generuje C3126:  
-  
-```  
-// C3126_2.cpp  
-// compile with: /clr /c  
-ref class Test  
-{  
-   union x  
-   {   // C3126  
-      int a;  
-      int b;  
-   };  
-};  
-```  
+# <a name="compiler-error-c3126"></a>Błąd kompilatora C3126
+
+Nie można zdefiniować związku "union" wewnątrz typu zarządzanego "type"
+
+Unia nie może być zdefiniowana wewnątrz typu zarządzanego.
+
+Poniższy przykład spowoduje wygenerowanie C3126:
+
+```
+// C3126_2.cpp
+// compile with: /clr /c
+ref class Test
+{
+   union x
+   {   // C3126
+      int a;
+      int b;
+   };
+};
+```

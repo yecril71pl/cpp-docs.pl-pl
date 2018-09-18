@@ -1,5 +1,5 @@
 ---
-title: Kompilatora (poziom 1) ostrzeżenie C4344 | Dokumentacja firmy Microsoft
+title: Kompilator ostrzeżenie (poziom 1) C4344 | Dokumentacja firmy Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,14 +16,15 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4a203288b5becde41704e0ab59dbb03e2bccef7e
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: f9505f7773a129430e5bdc7122e947c88fa57bb6
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33271373"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46025617"
 ---
-# <a name="compiler-warning-level-1-c4344"></a>Kompilator C4344 ostrzegawcze (poziom 1)
-Zmiana zachowania: użycie wyników argumentów niejawnego szablonu w wywołaniu elementu "function"  
-  
- Wywołanie funkcji za pomocą jawne argumenty szablonu wywołuje funkcję innego niż jawne argumenty jakby nie określono
+# <a name="compiler-warning-level-1-c4344"></a>Kompilator ostrzeżenie (poziom 1) C4344
+
+Zmiana zachowania: użycie wyników argumentów niejawnego szablonu w wywołaniu elementu "function"
+
+Wywołanie funkcji za pomocą jawnych argumentów szablonów wywołuje inną funkcję, niż gdyby jawnych argumentów jakby nie określono

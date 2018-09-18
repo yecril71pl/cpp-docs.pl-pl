@@ -1,5 +1,5 @@
 ---
-title: unorm_4 — klasa | Dokumentacja firmy Microsoft
+title: unorm_4, klasa | Dokumentacja firmy Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -278,15 +278,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e3186200fb01e13fcf3d79d162439a900abf6f4a
-ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
+ms.openlocfilehash: 5c57bbb2e54eb86333ee7e80ad144a486c4c1fba
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33694618"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46027664"
 ---
 # <a name="unorm4-class"></a>unorm_4 — Klasa
-Reprezentuje krótki wektor czterech liczb normalne bez znaku.  
+Reprezentuje krótki wektor czterech liczb normalnych bez znaku.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -296,7 +296,7 @@ class unorm_4;
   
 ## <a name="members"></a>Elementy członkowskie  
   
-### <a name="public-typedefs"></a>Definicje typów publicznych  
+### <a name="public-typedefs"></a>Publiczne definicje typów  
   
 |Nazwa|Opis|  
 |----------|-----------------|  
@@ -306,7 +306,7 @@ class unorm_4;
   
 |Nazwa|Opis|  
 |----------|-----------------|  
-|[unorm_4 — Konstruktor](#ctor)|Przeciążone. Domyślny konstruktor, inicjuje wszystkie elementy z 0.|  
+|[unorm_4 — Konstruktor](#ctor)|Przeciążone. Domyślny konstruktor, inicjuje wszystkie elementy wartością 0.|  
   
 ### <a name="public-methods"></a>Metody publiczne  
   
@@ -462,11 +462,11 @@ class unorm_4;
 |unorm_4::operator=||  
 |unorm_4::operator-=||  
   
-### <a name="public-constants"></a>Publiczny — stałe  
+### <a name="public-constants"></a>Publiczne stałe  
   
 |Nazwa|Opis|  
 |----------|-----------------|  
-|[Size — stała](#unorm_4__size)||  
+|[rozmiar — stała](#unorm_4__size)||  
   
 ### <a name="public-data-members"></a>Publiczne elementy członkowskie danych  
   
@@ -609,9 +609,9 @@ class unorm_4;
   
  **Namespace:** Concurrency::graphics  
   
-##  <a name="ctor"></a> unorm_4 — 
+##  <a name="ctor"></a> unorm_4 
 
- Domyślny konstruktor, inicjuje wszystkie elementy z 0.  
+ Domyślny konstruktor, inicjuje wszystkie elementy wartością 0.  
   
 ```  
 unorm_4() restrict(amp,
@@ -675,23 +675,23 @@ explicit inline unorm_4(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `_V0`  
- Wartość do zainicjowania elementu 0.  
+*_V0*<br/>
+Wartość do zainicjowania elementu 0.  
   
- `_V1`  
- Wartość zainicjować element 1.  
+*_V1*<br/>
+Wartość do zainicjowania elementu 1.  
   
- `_V2`  
- Wartość zainicjować element 2.  
+*_V2*<br/>
+Wartość można zainicjować element 2.  
   
- `_V3`  
- Wartość do zainicjowania elementu 3.  
+*_V3*<br/>
+Wartość do zainicjowania elementu 3.  
   
- `_V`  
- Wartość dla inicjowania.  
+*_V*<br/>
+Wartość inicjalizacji.  
   
- `_Other`  
- Obiekt używany do inicjowania.  
+*_Inne*<br/>
+Obiekt używany do inicjowania.  
   
 ##  <a name="unorm_4__size"></a> Rozmiar 
 

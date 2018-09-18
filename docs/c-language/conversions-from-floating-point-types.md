@@ -15,54 +15,54 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ce86a9ceffaa5d9dacfe56e6b89b677b3abb1517
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: eefbbde88704ffd53f8bcf1445186bb7e6cdd6af
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32392487"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46017641"
 ---
 # <a name="conversions-from-floating-point-types"></a>Konwersje z typów zmiennoprzecinkowych
 
-A **float** konwertowane na wartość **podwójne** lub **podwójnej długości**, lub **podwójne** przekonwertować **liczba typu double**, ulega ma zmiany w wartości. A **podwójne** konwertowane na wartość **float** wartość jest reprezentowany dokładnie, jeśli to możliwe. Dokładność mogą zostać utracone, jeśli wartość nie może być reprezentowany dokładnie. Jeśli wynik jest poza zakresem, zachowanie jest niezdefiniowany. Zobacz [limity dla stałych Floating-Point](../c-language/limits-on-floating-point-constants.md) dla typów zmiennoprzecinkowych.
+A **float** wartość konwertowana na **double** lub **typu long double**, lub **double** przekonwertowane na **double**, ulega nie zmieni się wartość. A **double** wartość konwertowana na **float** wartość jest reprezentowana w dokładnie tak, jeśli jest to możliwe. Precyzja mogą zostać utracone, jeśli wartość nie może być reprezentowany dokładnie. Jeśli wynik jest poza zakresem, zachowanie jest niezdefiniowane. Zobacz [limity dla stałych zmiennopozycyjna](../c-language/limits-on-floating-point-constants.md) zakresu typów zmiennoprzecinkowych.
 
-Wartość zmiennoprzecinkowa jest konwertowana na wartością całkowitą, konwertując pierwszy **długi**, następnie z **długi** wartość określoną wartość całkowitą. Część zmiennej wartości zostaną odrzucone podczas konwersji do **długi**. Jeśli wynik nadal jest zbyt duży, aby zmieścić w **długi**, wynik konwersji jest niezdefiniowany.
+Wartość zmiennoprzecinkową jest konwertowana na wartość całkowitą, konwertując pierwszy **długie**, następnie z **długie** wartość do określonej wartości całkowitej. Część dziesiętną wartość zmiennoprzecinkową zostanie usunięty podczas konwersji do **długie**. Jeśli wynik nadal jest zbyt duży, aby mieściły się w **długie**, wynik konwersji jest niezdefiniowana.
 
 **Microsoft Specific**
 
-Podczas konwertowania **podwójne** lub **podwójnej długości** liczba zmiennoprzecinkowa do mniejsza liczba zmiennoprzecinkowa, wartość zmiennej liczb zmiennoprzecinkowych zostały obcięte kierunku zera po wystąpieniu niedopełnienie. Przepełnienie powoduje błąd w czasie wykonywania. Należy pamiętać, że kompilator Microsoft C mapuje **podwójnej długości** na typ **podwójne**.
+Podczas konwertowania **double** lub **typu long double** liczba zmiennoprzecinkowa na mniejsze liczbę zmiennoprzecinkową, wartość zmiennej zmiennoprzecinkowych został obcięty kierunku zera, gdy występuje niedopełnienie. Przepełnienie powoduje błąd czasu wykonywania. Należy zauważyć, że kompilator Microsoft C: mapuje **typu long double** na typ **double**.
 
-**KOŃCOWY określonych firmy Microsoft**
+**END specyficzny dla Microsoft**
 
-Poniższa tabela zawiera podsumowanie konwersje z typów zmiennoprzecinkowych.
+W poniższej tabeli przedstawiono konwersje z typów zmiennoprzecinkowych.
 
 ## <a name="conversions-from-floating-point-types"></a>Konwersje z typów zmiennoprzecinkowych
 
-|Z|Do|Metoda|
+|Z|Zadanie|Metoda|
 |----------|--------|------------|
-|**float**|**char**|Konwertuj na **długi**; przekonwertować **długi** do **char**|
-|**float**|**short**|Konwertuj na **długi**; przekonwertować **długi** do **krótki**|
-|**float**|**long**|Obciąć po punkcie dziesiętnym. Jeśli wynik jest za duży, może być reprezentowana jako **długi**, wynikiem jest niezdefiniowany.|
-|**float**|**short bez znaku**|Konwertuj na **długi**; przekonwertować **długi** do **krótko bez znaku**|
-|**float**|**unsigned long**|Konwertuj na **długi**; przekonwertować **długi** do **unsigned long**|
-|**float**|**double**|Zmień reprezentacji wewnętrznej|
-|**float**|**Liczba typu double**|Zmień reprezentacji wewnętrznej|
-|**double**|**char**|Konwertuj na **float**; przekonwertować **float** do **char**|
-|**double**|**short**|Konwertuj na **float**; przekonwertować **float** do **krótki**|
-|**double**|**long**|Obciąć po punkcie dziesiętnym. Jeśli wynik jest za duży, może być reprezentowana jako **długi**, wynikiem jest niezdefiniowany.|
-|**double**|**short bez znaku**|Konwertuj na **długi**; przekonwertować **długi** do **krótko bez znaku**|
-|**double**|**unsigned long**|Konwertuj na **długi**; przekonwertować **długi** do **unsigned long**|
-|**double**|**float**|Reprezentuje jako **float**. Jeśli **podwójne** wartość nie może być reprezentowany dokładnie jako **float**, utrata dokładności. Jeśli wartość jest za duży, może być reprezentowana jako **float**, wynikiem jest niezdefiniowany.|
-|**Liczba typu double**|**char**|Konwertuj na **float**; przekonwertować **float** do **char**|
-|**Liczba typu double**|**short**|Konwertuj na **float**; przekonwertować **float** do **krótki**|
-|**Liczba typu double**|**long**|Obciąć po punkcie dziesiętnym. Jeśli wynik jest za duży, może być reprezentowana jako **długi**, wynikiem jest niezdefiniowany.|
-|**Liczba typu double**|**short bez znaku**|Konwertuj na **długi**; przekonwertować **długi** do **krótko bez znaku**|
-|**Liczba typu double**|**unsigned long**|Konwertuj na **długi**; przekonwertować **długi** do **unsigned long**|
-|**Liczba typu double**|**float**|Reprezentuje jako **float**. Jeśli **podwójne** wartość nie może być reprezentowany dokładnie jako **float**, utrata dokładności. Jeśli wartość jest za duży, może być reprezentowana jako **float**, wynikiem jest niezdefiniowany.|
-|**Liczba typu double**|**double**|**Podwójnej długości** wartość jest traktowana jako **podwójne**.|
+|**float**|**char**|Konwertuj na **długie**; Konwertuj **długie** do **char**|
+|**float**|**short**|Konwertuj na **długie**; Konwertuj **długie** do **krótki**|
+|**float**|**long**|Obetnij po punkcie dziesiętnym. Jeśli wynik jest za duży, może być reprezentowana jako **długie**, wynik jest niezdefiniowany.|
+|**float**|**short bez znaku**|Konwertuj na **długie**; Konwertuj **długie** do **typ unsigned short**|
+|**float**|**unsigned long**|Konwertuj na **długie**; Konwertuj **długie** do **unsigned long**|
+|**float**|**double**|Zmień wewnętrznej reprezentacji|
+|**float**|**Liczba typu double**|Zmień wewnętrznej reprezentacji|
+|**double**|**char**|Konwertuj na **float**; Konwertuj **float** do **char**|
+|**double**|**short**|Konwertuj na **float**; Konwertuj **float** do **krótki**|
+|**double**|**long**|Obetnij po punkcie dziesiętnym. Jeśli wynik jest za duży, może być reprezentowana jako **długie**, wynik jest niezdefiniowany.|
+|**double**|**short bez znaku**|Konwertuj na **długie**; Konwertuj **długie** do **typ unsigned short**|
+|**double**|**unsigned long**|Konwertuj na **długie**; Konwertuj **długie** do **unsigned long**|
+|**double**|**float**|Reprezentacja jako **float**. Jeśli **double** wartość nie może być reprezentowany dokładnie jako **float**, dojdzie do utraty precyzji. Jeśli wartość jest zbyt duży, może być reprezentowana jako **float**, wynik jest niezdefiniowany.|
+|**Liczba typu double**|**char**|Konwertuj na **float**; Konwertuj **float** do **char**|
+|**Liczba typu double**|**short**|Konwertuj na **float**; Konwertuj **float** do **krótki**|
+|**Liczba typu double**|**long**|Obetnij po punkcie dziesiętnym. Jeśli wynik jest za duży, może być reprezentowana jako **długie**, wynik jest niezdefiniowany.|
+|**Liczba typu double**|**short bez znaku**|Konwertuj na **długie**; Konwertuj **długie** do **typ unsigned short**|
+|**Liczba typu double**|**unsigned long**|Konwertuj na **długie**; Konwertuj **długie** do **unsigned long**|
+|**Liczba typu double**|**float**|Reprezentacja jako **float**. Jeśli **double** wartość nie może być reprezentowany dokładnie jako **float**, dojdzie do utraty precyzji. Jeśli wartość jest zbyt duży, może być reprezentowana jako **float**, wynik jest niezdefiniowany.|
+|**Liczba typu double**|**double**|**Typu long double** wartość jest traktowana jako **double**.|
 
-Konwersje z **float**, **podwójne**, lub **podwójnej długości** wartości do **unsigned long** nie są dokładne, jeśli wartość konwertowanej jest większa niż maksymalna dodatnich **długi** wartość.
+Konwersje z **float**, **double**, lub **typu long double** wartości **unsigned long** nie są prawidłowe, jeśli jest konwertowana wartość większy niż maksymalny dodatni **długie** wartość.
 
 ## <a name="see-also"></a>Zobacz także
 
-[Konwersje przypisań](../c-language/assignment-conversions.md)  
+[Konwersje przypisań](../c-language/assignment-conversions.md)

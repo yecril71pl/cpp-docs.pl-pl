@@ -1,5 +1,5 @@
 ---
-title: C2231 błąd kompilatora | Dokumentacja firmy Microsoft
+title: Błąd kompilatora C2231 | Dokumentacja firmy Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,30 +16,31 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 775d559c332e37e91be2b89b10e046e0f8c1abd7
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: cd6cd35d20f4ce0377aa5ae5cd66cd8c08004fb8
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33168558"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46021684"
 ---
-# <a name="compiler-error-c2231"></a>C2231 błąd kompilatora
-".": lewy argument operacji wskazuje "klucz klasy", użyj "->"  
-  
- Argument operacji wyboru elementu członkowskiego (.) z lewej strony jest wskaźnik zamiast klasy, struktury lub związku.  
-  
- Poniższy przykład generuje C2231:  
-  
-```  
-// C2231.c  
-struct S {  
-   int member;  
-} s, *ps = &s;  
-int main() {  
-   ps.member = 0;   // C2231  
-  
-   // OK  
-   ps->member = 0;   // crash  
-   s.member = 0;  
-}  
+# <a name="compiler-error-c2231"></a>Błąd kompilatora C2231
+
+".": lewy argument operacji wskazuje "klucz klasy", użyj opcji "->"
+
+Argument operacji po lewej stronie operacji wyboru elementów członkowskich (.) jest wskaźnikiem typu zamiast klasy, struktury lub Unii.
+
+Poniższy przykład spowoduje wygenerowanie C2231:
+
+```
+// C2231.c
+struct S {
+   int member;
+} s, *ps = &s;
+int main() {
+   ps.member = 0;   // C2231
+
+   // OK
+   ps->member = 0;   // crash
+   s.member = 0;
+}
 ```

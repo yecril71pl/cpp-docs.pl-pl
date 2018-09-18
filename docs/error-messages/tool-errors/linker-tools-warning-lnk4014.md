@@ -16,16 +16,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2fb86efbdc70342861a87a233ab687f7564cb48b
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: df0a3b6f30733413a0f27c0b8daa07394bb04b07
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33300062"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46023114"
 ---
 # <a name="linker-tools-warning-lnk4014"></a>Ostrzeżenie LNK4014 narzędzi konsolidatora
-Nie można odnaleźć obiektu elementu członkowskiego "objectname"  
-  
- Nie można odnaleźć LIB `objectname` w bibliotece.  
-  
- **Lub usuwanie** i **/EXTRACT** opcje wymagają Pełna nazwa obiektu elementu członkowskiego, który ma zostać usunięty lub kopiowane do pliku. Imię i nazwisko zawiera ścieżkę oryginalnego pliku obiektu. Aby wyświetlić pełne nazwy wszystkich obiektów w bibliotece, użyj polecenia DUMPBIN [/ARCHIVEMEMBERS](../../build/reference/archivemembers.md) lub LIB [/LIST](../../build/reference/managing-a-library.md).
+
+Nie można znaleźć obiektu składowego "Nazwa obiektu"
+
+Nie można odnaleźć biblioteki `objectname` w bibliotece.
+
+**/Usunąć** i **/EXTRACT** opcje wymagają Pełna nazwa obiektu elementu członkowskiego, który ma zostać usunięty lub kopiowane do pliku. Pełna nazwa zawiera ścieżkę do oryginalnego pliku obiektu. Aby wyświetlić pełne nazwy obiektu elementu członkowskiego w bibliotece, użyj polecenia DUMPBIN [/ARCHIVEMEMBERS](../../build/reference/archivemembers.md) lub LIB [/LIST](../../build/reference/managing-a-library.md).

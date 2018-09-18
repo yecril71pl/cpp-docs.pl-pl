@@ -23,14 +23,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 8b67fc55a8af2bed554254732832cbd6486d2420
-ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
+ms.openlocfilehash: c6d8a07ded3da02c21c4ee8c528474efc6e52b6c
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "42465133"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46021567"
 ---
 # <a name="idbcreatecommandimpl-class"></a>IDBCreateCommandImpl — Klasa
+
 Udostępnia implementację [IDBCreateCommand](/previous-versions/windows/desktop/ms711625\(v=vs.85\)) interfejsu.  
   
 ## <a name="syntax"></a>Składnia
@@ -42,14 +43,16 @@ class ATL_NO_VTABLE IDBCreateCommandImpl
 ```  
   
 ### <a name="parameters"></a>Parametry  
- *T*  
- Obiekt sesji jest pochodną `IDBCreateCommandImpl`.  
+
+*T*<br/>
+Obiekt sesji jest pochodną `IDBCreateCommandImpl`.  
   
- *CommandClass*  
- Klasa polecenia.  
+*CommandClass*<br/>
+Klasa polecenia.  
 
 ## <a name="requirements"></a>Wymagania  
- **Nagłówek:** atldb.h  
+
+**Nagłówek:** atldb.h  
   
 ## <a name="members"></a>Elementy członkowskie  
   
@@ -60,9 +63,11 @@ class ATL_NO_VTABLE IDBCreateCommandImpl
 |[CreateCommand —](#createcommand)|Tworzy nowe polecenie.|  
   
 ## <a name="remarks"></a>Uwagi  
- Opcjonalny interfejs dla obiektu sesji można uzyskać nowe polecenie.  
+
+Opcjonalny interfejs dla obiektu sesji można uzyskać nowe polecenie.  
 
 ## <a name="createcommand"></a> IDBCreateCommandImpl::CreateCommand
+
 Tworzy nowe polecenie i zwraca żądanego interfejsu.  
   
 ### <a name="syntax"></a>Składnia  
@@ -74,14 +79,16 @@ STDMETHOD(CreateCommand)(IUnknown * pUnkOuter,
 ```  
   
 #### <a name="parameters"></a>Parametry  
- Zobacz [IDBCreateCommand::CreateCommand](/previous-versions/windows/desktop/ms709772\(v=vs.85\)) w *OLE DB Podręcznik programisty*.  
+
+Zobacz [IDBCreateCommand::CreateCommand](/previous-versions/windows/desktop/ms709772\(v=vs.85\)) w *OLE DB Podręcznik programisty*.  
   
- Niektóre parametry odpowiadają *OLE DB Podręcznik programisty* parametry różnych nazw, które są opisane w `IDBCreateCommand::CreateCommand`:  
+Niektóre parametry odpowiadają *OLE DB Podręcznik programisty* parametry różnych nazw, które są opisane w `IDBCreateCommand::CreateCommand`:  
   
 |Parametry szablonu OLE DB|*OLE DB Podręcznik programisty* parametrów|  
 |--------------------------------|------------------------------------------------|  
 |*ppvCommand*|*ppCommand*|  
   
 ## <a name="see-also"></a>Zobacz też  
- [Szablony dostawców OLE DB](../../data/oledb/ole-db-provider-templates-cpp.md)   
- [Architektura szablonu dostawcy OLE DB](../../data/oledb/ole-db-provider-template-architecture.md)
+
+[Szablony dostawców OLE DB](../../data/oledb/ole-db-provider-templates-cpp.md)<br/>
+[Architektura szablonu dostawcy OLE DB](../../data/oledb/ole-db-provider-template-architecture.md)

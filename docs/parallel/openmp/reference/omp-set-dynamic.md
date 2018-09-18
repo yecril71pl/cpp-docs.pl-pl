@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 18521113125eb49fa413568b6a62472bb50a7924
-ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
+ms.openlocfilehash: c3e8ac574ce304238affbab41acc415e1d8de697
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33691953"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46026910"
 ---
 # <a name="ompsetdynamic"></a>omp_set_dynamic
 Wskazuje, że liczba wątków, które są dostępne w kolejnych równoległego regionu można dostosować w czasie wykonywania.  
@@ -34,18 +34,17 @@ void omp_set_dynamic(
 );  
 ```  
   
+### <a name="parameters"></a>Parametry
+  
+*Val*<br/>
+Wartość, która wskazuje, jeśli liczba wątków, które są dostępne w kolejnych równoległego regionu można dostosować w czasie wykonywania.  Jeśli wartość jest niezerowa, środowisko uruchomieniowe, które można dostosować liczbę wątków, jeśli zero, środowisko wykonawcze nie dynamicznie dostosowuje liczbę wątków.  
+  
 ## <a name="remarks"></a>Uwagi  
- w przypadku gdy  
+ Liczba wątków nigdy nie przekroczy wartość ustawioną przy użyciu [omp_set_num_threads](../../../parallel/openmp/reference/omp-set-num-threads.md) lub [OMP_NUM_THREADS](../../../parallel/openmp/reference/omp-num-threads.md).  
   
- `val`  
- Wartość, która wskazuje, czy liczba wątków, które są dostępne w kolejnych równoległego regionu można dostosować w czasie wykonywania.  Jeśli jest niezerowa środowiska uruchomieniowego można dostosować liczbę wątków, jeśli zero środowiska uruchomieniowego nie będzie dynamicznie dostosowywane to liczba wątków.  
+ Użyj [omp_get_dynamic](../../../parallel/openmp/reference/omp-get-dynamic.md) do wyświetlenia bieżącego ustawienia `omp_set_dynamic`.  
   
-## <a name="remarks"></a>Uwagi  
- Liczba wątków nigdy nie przekroczy wartość ustawioną przez [omp_set_num_threads](../../../parallel/openmp/reference/omp-set-num-threads.md) lub [OMP_NUM_THREADS](../../../parallel/openmp/reference/omp-num-threads.md).  
-  
- Użyj [omp_get_dynamic](../../../parallel/openmp/reference/omp-get-dynamic.md) Aby wyświetlić bieżące ustawienie `omp_set_dynamic`.  
-  
- Ustawienie `omp_set_dynamic` zastąpią ustawienia [OMP_DYNAMIC](../../../parallel/openmp/reference/omp-dynamic.md) zmiennej środowiskowej.  
+ Ustawienie `omp_set_dynamic` spowoduje przesłonięcie ustawień [OMP_DYNAMIC](../../../parallel/openmp/reference/omp-dynamic.md) zmiennej środowiskowej.  
   
  Aby uzyskać więcej informacji, zobacz [3.1.7 funkcja omp_set_dynamic](../../../parallel/openmp/3-1-7-omp-set-dynamic-function.md).  
   

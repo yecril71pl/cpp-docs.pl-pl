@@ -19,15 +19,16 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: c2e588021b1600b1b3ac6e04f91ab07649755a2e
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 67658f6edadd7723789288ab268b97cecdd611d2
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33096832"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46017358"
 ---
 # <a name="cnomultipleresults-class"></a>CNoMultipleResults — Klasa
-Używane jako argument szablonu (*TMultiple*) do [CCommand](../../data/oledb/ccommand-class.md) do utworzenia zoptymalizowanego polecenie, które obsługuje jeden wynik ustawić.  
+
+Używane jako argument szablonu (*TMultiple*) do [CCommand](../../data/oledb/ccommand-class.md) do utworzenia zoptymalizowanego polecenia, który obsługuje jeden wynik zestawu.  
   
 ## <a name="syntax"></a>Składnia
 
@@ -36,11 +37,14 @@ class CNoMultipleResults
 ```  
   
 ## <a name="remarks"></a>Uwagi  
- Polecenia do obsługi wielu zestawów wyników, należy użyć [cmultipleresults —](../../data/oledb/cmultipleresults-class.md) zamiast tego.  
+
+Jeśli chcesz, aby polecenia do obsługi wielu zestawów wyników, użyj [cmultipleresults —](../../data/oledb/cmultipleresults-class.md) zamiast tego.  
   
 ## <a name="requirements"></a>Wymagania  
- **Nagłówek:** atldbcli.h  
+
+**Nagłówek:** atldbcli.h  
   
 ## <a name="see-also"></a>Zobacz też  
- [Szablony konsumentów OLE DB](../../data/oledb/ole-db-consumer-templates-cpp.md)   
- [Szablony konsumentów OLE DB — dokumentacja](../../data/oledb/ole-db-consumer-templates-reference.md)
+
+[Szablony konsumentów OLE DB](../../data/oledb/ole-db-consumer-templates-cpp.md)<br/>
+[Szablony konsumentów OLE DB — dokumentacja](../../data/oledb/ole-db-consumer-templates-reference.md)

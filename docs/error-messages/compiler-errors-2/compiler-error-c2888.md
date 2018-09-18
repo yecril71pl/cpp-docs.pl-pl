@@ -1,5 +1,5 @@
 ---
-title: C2888 błąd kompilatora | Dokumentacja firmy Microsoft
+title: Błąd kompilatora C2888 | Dokumentacja firmy Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,33 +16,34 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1d083ba049558c08c6070d13d0d7a61ad319add0
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 3a80f99eb4fcf888462d1356d60cb4b22af0d0f8
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33242173"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46023127"
 ---
-# <a name="compiler-error-c2888"></a>C2888 błąd kompilatora
-'Identyfikator': symbol nie może być zdefiniowana w przestrzeni nazw "namespace"  
-  
- Symbol należące do przestrzeni nazw, A musi być zdefiniowany w przestrzeni nazw, która obejmuje A.  
-  
- Poniższy przykład generuje C2888:  
-  
-```  
-// C2888.cpp  
-// compile with: /c  
-namespace M {  
-   namespace N {  
-      void f1();  
-      void f2();  
-   }  
-  
-   void N::f1() {}   // OK: namspace M encloses N  
-}  
-  
-namespace O {  
-   void M::N::f2() {}   // C2888 namespace O does not enclose M  
-}  
+# <a name="compiler-error-c2888"></a>Błąd kompilatora C2888
+
+'Identyfikator': symbol nie może być zdefiniowany w przestrzeni nazw "namespace"
+
+Symbol należące do przestrzeni nazw, A musi być zdefiniowany w przestrzeni nazw, która obejmuje A.
+
+Poniższy przykład spowoduje wygenerowanie C2888:
+
+```
+// C2888.cpp
+// compile with: /c
+namespace M {
+   namespace N {
+      void f1();
+      void f2();
+   }
+
+   void N::f1() {}   // OK: namspace M encloses N
+}
+
+namespace O {
+   void M::N::f2() {}   // C2888 namespace O does not enclose M
+}
 ```

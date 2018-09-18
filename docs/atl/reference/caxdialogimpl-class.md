@@ -27,12 +27,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 965aa7256fadd00d2ef435b6df64467460322991
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: a22b04bd0a362824e20621eaa7f66cafd0e55cf5
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43753061"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46024506"
 ---
 # <a name="caxdialogimpl-class"></a>Klasa CAxDialogImpl
 
@@ -44,16 +44,16 @@ Ta klasa implementuje okno dialogowe (modalnym lub niemodalnym), który obsługu
 ## <a name="syntax"></a>Składnia
 
 ```
-template <class T, class TBase = CWindow>  
+template <class T, class TBase = CWindow>
 class ATL_NO_VTABLE CAxDialogImpl : public CDialogImplBaseT<TBase>
 ```
 
 #### <a name="parameters"></a>Parametry
 
-*T*  
+*T*<br/>
 Z klasą pochodną `CAxDialogImpl`.
 
-*Tpodstawowe*  
+*Tpodstawowe*<br/>
 Klasa podstawowa okna dla `CDialogImplBaseT`.
 
 ## <a name="members"></a>Elementy członkowskie
@@ -121,7 +121,7 @@ HRESULT AdviseSinkMap(bool bAdvise);
 
 ### <a name="parameters"></a>Parametry
 
-*bAdvise*  
+*bAdvise*<br/>
 Ustaw wartość true, jeśli wszystkie wpisy ujścia zaleceniem; obiekt sink wartość false, jeśli wszystkie wpisy są unadvised.
 
 ### <a name="return-value"></a>Wartość zwracana
@@ -139,13 +139,13 @@ HWND Create(HWND hWndParent, RECT&, LPARAM dwInitParam = NULL);
 
 ### <a name="parameters"></a>Parametry
 
-*hWndParent*  
+*hWndParent*<br/>
 [in] Dojście do okna właściciela.
 
-*dwInitParam*  
+*dwInitParam*<br/>
 [in] Określa wartość do przekazania do okna dialogowego w *lParam* parametr / / Złap wiadomości.
 
-*PROSTOKĄT &AMP;*  
+*PROSTOKĄT &AMP;*<br/>
 Ten parametr nie jest używany. Ten parametr jest przekazywany w przez `CComControl`.
 
 ### <a name="return-value"></a>Wartość zwracana
@@ -180,16 +180,16 @@ Wywołaj tę metodę, aby utworzyć modalne okno dialogowe.
 
 ```
 INT_PTR DoModal(
-    HWND hWndParent = ::GetActiveWindow(), 
+    HWND hWndParent = ::GetActiveWindow(),
     LPARAM dwInitParam = NULL);
 ```
 
 ### <a name="parameters"></a>Parametry
 
-*hWndParent*  
+*hWndParent*<br/>
 [in] Dojście do okna właściciela. Wartość domyślna to wartość zwracana przez [GetActiveWindow](https://msdn.microsoft.com/library/windows/desktop/ms646292) funkcję Win32.
 
-*dwInitParam*  
+*dwInitParam*<br/>
 [in] Określa wartość do przekazania do okna dialogowego w *lParam* parametr / / Złap wiadomości.
 
 ### <a name="return-value"></a>Wartość zwracana
@@ -212,7 +212,7 @@ BOOL EndDialog(int nRetCode);
 
 ### <a name="parameters"></a>Parametry
 
-*nRetCode*  
+*nRetCode*<br/>
 [in] Wartość zwracana przez [DoModal](#domodal).
 
 ### <a name="return-value"></a>Wartość zwracana
@@ -264,7 +264,7 @@ BOOL IsDialogMessage(LPMSG pMsg);
 
 ### <a name="parameters"></a>Parametry
 
-*pMsg*  
+*pMsg*<br/>
 Wskaźnik do [MSG](https://msdn.microsoft.com/library/windows/desktop/ms644958) strukturę, która zawiera komunikat, który ma być zaznaczone.
 
 ### <a name="return-value"></a>Wartość zwracana
@@ -285,5 +285,5 @@ bool m_bModal;
 
 ## <a name="see-also"></a>Zobacz też
 
-[Cdialogimpl — klasa](../../atl/reference/cdialogimpl-class.md)   
+[Klasa CDialogImpl](../../atl/reference/cdialogimpl-class.md)<br/>
 [Klasa — Przegląd](../../atl/atl-class-overview.md)

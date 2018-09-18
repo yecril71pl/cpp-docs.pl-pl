@@ -16,22 +16,23 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 81520f8acbfb623f5b732402eacbd2b355481bf4
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 70ae80cc0b7bf1725dc0b91f9d74ecfd87358886
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33299308"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46016874"
 ---
 # <a name="bscmake-error-bk1504"></a>Błąd BSCMAKE BK1504
-Nie można umieścić w pliku "filename" [: Przyczyna]  
-  
- Bscmake — nie można przenieść do lokalizacji w pliku.  
-  
-### <a name="to-fix-by-checking-the-following-possible-causes"></a>Aby rozwiązać problem, sprawdzając następujące możliwe przyczyny  
-  
-1.  Dysk pełny.  
-  
-2.  Błąd sprzętowy.  
-  
-3.  Obcięcie plików z powodu niewystarczającego miejsca na dysku lub przerwania kompilatora podczas tworzenia pliku .sbr.
+
+Nie można określić położenia w pliku 'NazwaPliku' [: przyczyny]
+
+BSCMAKE, nie można przenieść do lokalizacji w pliku.
+
+### <a name="to-fix-by-checking-the-following-possible-causes"></a>Aby rozwiązać problem, sprawdzając następujące możliwe przyczyny
+
+1. Pełne dysku.
+
+1. Błąd sprzętowy.
+
+1. Obcięcie plików z powodu niewystarczającego miejsca na dysku lub przerwania kompilatora podczas tworzenia pliku .sbr.

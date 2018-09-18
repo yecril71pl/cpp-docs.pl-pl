@@ -1,5 +1,5 @@
 ---
-title: C2800 błąd kompilatora | Dokumentacja firmy Microsoft
+title: Błąd kompilatora C2800 | Dokumentacja firmy Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,24 +16,25 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9dd9723513042ae7ef6d63914f5abecd63192e37
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 23441361ea0c8dbc241f5bf655186f0399b6b42f
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33235600"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46016380"
 ---
-# <a name="compiler-error-c2800"></a>C2800 błąd kompilatora
-"operator operator" nie może być przeciążony.  
-  
- Nie może zostać przeciążony następujące operatory: dostęp do elementu członkowskiego klasy (`.`), wskaźnika do elementu członkowskiego (`.*`), zakres rozpoznawania (`::`), wyrażenia warunkowego (`? :`), i `sizeof`.  
-  
- Poniższy przykład generuje C2800:  
-  
-```  
-// C2800.cpp  
-// compile with: /c  
-class C {  
-   operator:: ();   // C2800  
-};  
+# <a name="compiler-error-c2800"></a>Błąd kompilatora C2800
+
+"operator operator" nie mogą być przeciążone.
+
+Następujące operatory nie mogą być przeciążone: dostęp do elementu członkowskiego klasy (`.`), wskaźnik do składowej (`.*`), zakres rozdzielczości (`::`), wyrażenie warunkowe (`? :`), a `sizeof`.
+
+Poniższy przykład spowoduje wygenerowanie od C2800 do:
+
+```
+// C2800.cpp
+// compile with: /c
+class C {
+   operator:: ();   // C2800
+};
 ```

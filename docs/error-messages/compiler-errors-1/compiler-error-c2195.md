@@ -1,5 +1,5 @@
 ---
-title: C2195 błąd kompilatora | Dokumentacja firmy Microsoft
+title: Błąd kompilatora C2195 | Dokumentacja firmy Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,23 +16,24 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 979dcfee8733a7e575170c36e90ec36bbd4ff154
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 2ec81b9c720d1dfc5a629faaa74fb321cdf93b4b
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33170164"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46020607"
 ---
-# <a name="compiler-error-c2195"></a>C2195 błąd kompilatora
-"identyfikator": jest segmentem danych  
-  
- `code_seg` Pragma używa nazwy segmentu używane z `data_seg` pragma.  
-  
- Poniższy przykład generuje C2195:  
-  
-```  
-// C2195.cpp  
-#pragma data_seg("MYDATA")  
-#pragma code_seg("MYDATA")   // C2195  
-#pragma code_seg("MYDATA2")   // OK  
+# <a name="compiler-error-c2195"></a>Błąd kompilatora C2195
+
+'Identyfikator': jest segmentem danych
+
+`code_seg` Pragma korzysta z nazwą segmentu, w ramach `data_seg` pragmy.
+
+Poniższy przykład spowoduje wygenerowanie C2195:
+
+```
+// C2195.cpp
+#pragma data_seg("MYDATA")
+#pragma code_seg("MYDATA")   // C2195
+#pragma code_seg("MYDATA2")   // OK
 ```

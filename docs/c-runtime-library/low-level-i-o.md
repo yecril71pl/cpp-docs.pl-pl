@@ -1,5 +1,5 @@
 ---
-title: We/Wy niskiego poziomu | Dokumenty Microsoft
+title: Niskiego poziomu operacji We/Wy | Dokumentacja firmy Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -20,49 +20,49 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 34ce75fa9670f28079774f4ba564657d0b4614ac
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 9d263d1d61a6dcc6921d6918db2b89386e918551
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32391285"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46018317"
 ---
 # <a name="low-level-io"></a>We/Wy niskiego poziomu
 
-Te funkcje wywoływać bezpośrednio dla operacji niższe niż te dostarczone przez strumień we/wy systemu operacyjnego. Niskiego poziomu dane wejściowe i wyjściowe wywołania czy nie buforu lub format danych.
+Te wywołają procedurę obsługi systemu operacyjnego bezpośrednio do operacji niższe niż te dostarczone przez strumień we/wy. Niskiego poziomu dane wejściowe i wyjściowe wywołania wykonaj nie buforu lub formatu danych.
 
- Procedury niższego poziomu mogą uzyskiwać dostęp do standardowych strumieni otwierane w momencie uruchamiania programu przy użyciu następujących deskryptorów plików wstępnie zdefiniowane.
+Procedur niższego poziomu mogą uzyskiwać dostęp standardowych strumieni otwierane w momencie uruchamiania programu przy użyciu następujących wstępnie zdefiniowanych deskryptory.
 
-|Strumień|Plik deskryptora|
+|Strumień|Deskryptor pliku|
 |------------|---------------------|
 |**stdin**|0|
 |**STDOUT**|1|
-|**stderr**|2|
+|**strumienia wyjściowego stderr**|2|
 
- Niskiego poziomu zestawu procedury we/wy [errno](../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md) — zmienna globalna po wystąpieniu błędu. Stdio — musi zawierać. H podczas korzystania z funkcji niskiego poziomu tylko wtedy, gdy program wymaga stałą, który jest zdefiniowany w stdio —. H, takich jak plik końcowy wskaźnika (**EOF**).
+Zestaw operacji We/Wy niskiego poziomu w procedury [errno](../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md) zmienną globalną, po wystąpieniu błędu. Musi zawierać stdio —. H, gdy używasz funkcji niskiego poziomu, tylko wtedy, gdy program wymaga stałą, która jest zdefiniowana w stdio —. Godz., takie jak wskaźnik końca pliku (**EOF**).
 
-## <a name="low-level-io-functions"></a>Funkcje We/Wy niskiego poziomu
+## <a name="low-level-io-functions"></a>Funkcje niskiego poziomu we/wy
 
 |Funkcja|Zastosowanie|
 |--------------|---------|
 |[_close](../c-runtime-library/reference/close.md)|Zamknij plik|
-|[_commit](../c-runtime-library/reference/commit.md)|Zapisywanie plików do dysku|
+|[_commit](../c-runtime-library/reference/commit.md)|Opróżnij plik na dysku|
 |[_creat, _wcreat](../c-runtime-library/reference/creat-wcreat.md)|Utwórz plik|
-|[_dup](../c-runtime-library/reference/dup-dup2.md)|Zwracany dalej deskryptorów plików dostępnych dla danego pliku|
-|[_dup2](../c-runtime-library/reference/dup-dup2.md)|Utworzyć drugi deskryptora dla danego pliku|
-|[_eof](../c-runtime-library/reference/eof.md)|Test na koniec pliku|
-|[_lseek, _lseeki64](../c-runtime-library/reference/lseek-lseeki64.md)|Zmiana położenia wskaźnika pliku do podanej lokalizacji|
+|[_dup](../c-runtime-library/reference/dup-dup2.md)|Zwracany następny dostępny deskryptor pliku dla danego pliku|
+|[_dup2](../c-runtime-library/reference/dup-dup2.md)|Utwórz deskryptor drugiego dla danego pliku|
+|[_eof](../c-runtime-library/reference/eof.md)|Test końca pliku|
+|[_lseek, _lseeki64](../c-runtime-library/reference/lseek-lseeki64.md)|Zmiana położenia pliku wskaźnik do podanej lokalizacji|
 |[_open, _wopen](../c-runtime-library/reference/open-wopen.md)|Otwórz plik|
 |[_read](../c-runtime-library/reference/read.md)|Odczyt danych z pliku|
-|[_sopen —, _wsopen —](../c-runtime-library/reference/sopen-wsopen.md), [_sopen_s —, _wsopen_s —](../c-runtime-library/reference/sopen-s-wsopen-s.md)|Otwórz plik do udostępniania plików|
+|[_sopen, _wsopen —](../c-runtime-library/reference/sopen-wsopen.md), [_sopen_s —, _wsopen_s —](../c-runtime-library/reference/sopen-s-wsopen-s.md)|Otwórz plik do udostępniania plików|
 |[_tell, _telli64](../c-runtime-library/reference/tell-telli64.md)|Pobierz bieżącą pozycję wskaźnika pliku|
-|[_umask —](../c-runtime-library/reference/umask.md), [_umask_s —](../c-runtime-library/reference/umask-s.md)|Ustaw uprawnienia pliku maska|
-|[_write](../c-runtime-library/reference/write.md)|Wpisywanie danych do pliku|
+|[_umask —](../c-runtime-library/reference/umask.md), [_umask_s —](../c-runtime-library/reference/umask-s.md)|Ustaw uprawnienia pliku maski|
+|[_write](../c-runtime-library/reference/write.md)|Zapisuje dane pliku|
 
- **_dup —** i **_dup2 —** są zwykle używane do skojarzenia z różnych plików deskryptorów plików wstępnie zdefiniowane.
+ **_dup —** i **_dup2 —** są zwykle używane do kojarzenia deskryptorów plików wstępnie zdefiniowane z różnych plików.
 
 ## <a name="see-also"></a>Zobacz też
 
 [Dane wejściowe i wyjściowe](../c-runtime-library/input-and-output.md)<br/>
- [Procedury czasu wykonywania języka Universal C według kategorii](../c-runtime-library/run-time-routines-by-category.md)<br/>
- [Wywołania systemowe](../c-runtime-library/system-calls.md)<br/>
+[Procedury czasu wykonywania języka Universal C według kategorii](../c-runtime-library/run-time-routines-by-category.md)<br/>
+[Wywołania systemowe](../c-runtime-library/system-calls.md)<br/>

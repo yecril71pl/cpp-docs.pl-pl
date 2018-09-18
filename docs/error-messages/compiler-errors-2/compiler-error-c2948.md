@@ -1,5 +1,5 @@
 ---
-title: C2948 błąd kompilatora | Dokumentacja firmy Microsoft
+title: Błąd kompilatora C2948 | Dokumentacja firmy Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,14 +16,15 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e8ee324ebbdbc1d9dc19c6a1323f2f47c370f08b
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 052bfdb49e965b0d42a8af2c7cf2e57ee1af6f6c
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33243528"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46020865"
 ---
-# <a name="compiler-error-c2948"></a>C2948 błąd kompilatora
-jawne utworzenie wystąpienia; Specyfikator klasy magazynu "specyfikatora" nie jest dozwolone dla specjalizacji  
-  
- Nie można użyć specyfikatory klasy magazynowania (takie jak `extern`) w specjalizacji szablonu klasy, która została wcześniej jawnie utworzyć wystąpienia elementu.
+# <a name="compiler-error-c2948"></a>Błąd kompilatora C2948
+
+jawne wystąpienie; Specyfikator klasy magazynu "specyfikatora" nie jest dozwolona dla specjalizacji
+
+Nie można użyć specyfikatory automatycznych klas magazynowania (takich jak `extern`) w specjalizacji szablonu klasy, która wcześniej została jawnie tworzone.

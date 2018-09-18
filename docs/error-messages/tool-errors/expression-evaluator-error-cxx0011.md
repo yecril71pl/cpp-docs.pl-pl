@@ -1,5 +1,5 @@
 ---
-title: Błąd cxx0011 programu Expression Evaluator | Dokumentacja firmy Microsoft
+title: Błąd ewaluatora wyrażeń CXX0011 | Dokumentacja firmy Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,16 +17,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9840b805960f3ebb571dd9cb6a35895364099d3b
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: d6a9409728f5dbcbb003ecb8d2d9e4f98bc57ede
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33294875"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46026845"
 ---
 # <a name="expression-evaluator-error-cxx0011"></a>Błąd CXX0011 programu Expression Evaluator
-Brak prawego nawiasu  
-  
- Wyrażenie zawiera nawiasy kwadratowe równowagi. Wpisz wyrażenie w nawiasy kwadratowe zrównoważone.  
-  
- Ten błąd jest taki sam jak CAN0011.
+
+Brak prawy nawias kwadratowy
+
+Wyrażenie zawiera niezrównoważone nawiasami kwadratowymi. Wpisz ponownie wyrażenia w nawiasy kwadratowe o zrównoważonym obciążeniu.
+
+Ten błąd jest taka sama jak CAN0011.

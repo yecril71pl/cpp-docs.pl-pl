@@ -1,5 +1,5 @@
 ---
-title: C3167 błąd kompilatora | Dokumentacja firmy Microsoft
+title: Błąd kompilatora C3167 | Dokumentacja firmy Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,14 +16,15 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: fc98f3f66041b86dcc93459132e3431e271bde5e
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 3b1b242b0e98e0309e2a98ca2c8e59ecaeff8b7a
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33247980"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46024193"
 ---
-# <a name="compiler-error-c3167"></a>C3167 błąd kompilatora
-Nie można zainicjalizować .NET Framework: Upewnij się, że jest zainstalowany  
-  
- .NET Framework nie jest zainstalowany na tym komputerze. Zainstaluj program .NET Framework.
+# <a name="compiler-error-c3167"></a>Błąd kompilatora C3167
+
+Nie można zainicjalizować .NET Framework: Upewnij się, że jest zainstalowany
+
+.NET Framework nie jest zainstalowany na tym komputerze. Instalowanie programu .NET Framework.

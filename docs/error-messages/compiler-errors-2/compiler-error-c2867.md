@@ -1,5 +1,5 @@
 ---
-title: C2867 błąd kompilatora | Dokumentacja firmy Microsoft
+title: Błąd kompilatora C2867 | Dokumentacja firmy Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,25 +16,26 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 404bc16c77a8d327230744bb4b679e6d13249f7d
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: ba16c619aa55636db7e52c03162446307bd8b62c
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33245146"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46022256"
 ---
-# <a name="compiler-error-c2867"></a>C2867 błąd kompilatora
-'Identyfikator': nie jest przestrzenią nazw  
-  
- A `using` dyrektywa jest stosowana do inną niż przestrzeni nazw.  
-  
- Poniższy przykład generuje C2867:  
-  
-```  
-// C2867.cpp  
-// compile with: /c  
-namespace N {  
-   class X {};  
-}  
-using namespace N::X;   // C2867  
+# <a name="compiler-error-c2867"></a>Błąd kompilatora C2867
+
+'Identyfikator': nie jest przestrzenią nazw
+
+A `using` dyrektywa jest stosowana na coś innego niż przestrzeni nazw.
+
+Poniższy przykład spowoduje wygenerowanie C2867:
+
+```
+// C2867.cpp
+// compile with: /c
+namespace N {
+   class X {};
+}
+using namespace N::X;   // C2867
 ```

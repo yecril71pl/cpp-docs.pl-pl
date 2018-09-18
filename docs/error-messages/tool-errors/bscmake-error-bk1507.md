@@ -16,20 +16,21 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ce8f7b931f81d53dd156f8442994229f20d4bc9d
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 34352b35c1938e2374666a00777d4a125982006f
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33294989"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46024793"
 ---
 # <a name="bscmake-error-bk1507"></a>Błąd BSCMAKE BK1507
-Nie można otworzyć pliku tymczasowego "filename" [: Przyczyna]  
-  
- Bscmake — nie można otworzyć pliku tymczasowego.  
-  
-### <a name="to-fix-by-checking-the-following-possible-causes"></a>Aby rozwiązać problem, sprawdzając następujące możliwe przyczyny  
-  
-1.  **TMP** zmienna środowiskowa nie jest ustawiona na prawidłowy dysk i katalog.  
-  
-2.  Dysk pełny.
+
+Nie można otworzyć pliku tymczasowego "filename" [: przyczyny]
+
+BSCMAKE, nie można otworzyć pliku tymczasowego.
+
+### <a name="to-fix-by-checking-the-following-possible-causes"></a>Aby rozwiązać problem, sprawdzając następujące możliwe przyczyny
+
+1. **TMP** zmienna środowiskowa nie jest równa prawidłowy dysk i katalog.
+
+1. Pełne dysku.

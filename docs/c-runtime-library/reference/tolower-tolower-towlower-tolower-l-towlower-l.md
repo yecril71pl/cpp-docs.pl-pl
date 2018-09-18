@@ -53,14 +53,15 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e399cb38fee83fee23f88732bb2186c4b501c152
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 49b52bd65439165ef8dd83917a0d75926caba518
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32412631"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46023669"
 ---
 # <a name="tolower-tolower-towlower-tolowerl-towlowerl"></a>tolower, _tolower, towlower, _tolower_l, _towlower_l
+
 Konwertuje znak na małe litery.
 
 ## <a name="syntax"></a>Składnia
@@ -88,30 +89,30 @@ int _towlower_l(
 ### <a name="parameters"></a>Parametry
 
 *c*<br/>
-Znak do konwersji.
+Znak do przekształcenia.
 
 *Ustawienia regionalne*<br/>
-Ustawienia regionalne do użycia na potrzeby tłumaczenia specyficzne dla ustawień regionalnych.
+Ustawienia regionalne na potrzeby tłumaczenia specyficzne dla ustawień regionalnych.
 
 ## <a name="return-value"></a>Wartość zwracana
 
-Każdy z tych procedur konwertuje kopię *c* na małe litery, jeśli konwersja jest możliwa i zwraca wynik. Brak wartości zwracanej jest zastrzeżony wystąpił błąd.
+Każda z tych procedur konwertuje kopię *c* na małe litery, jeśli konwersja jest możliwa i zwraca wynik. Nie zwraca wartości jest rezerwowana w celu wskazania błędu.
 
 ## <a name="remarks"></a>Uwagi
 
-Dany wielką literę każdego z tych procedur konwertuje się małą literą, jeśli jest to możliwe i odpowiednie. Wielkość konwersji **towlower —** jest specyficzne dla ustawień regionalnych. Tylko znaki dotyczy bieżące ustawienia regionalne są zmieniane w przypadku. Funkcje bez **_l** aktualnie ustawione używać sufiksu ustawień regionalnych. Wersje tych funkcji, które mają **_l** sufiks zająć ustawień regionalnych jako parametr i używać zamiast aktualnie ustawione ustawień regionalnych. Aby uzyskać więcej informacji, zobacz [ustawień regionalnych](../../c-runtime-library/locale.md).
+Każda z tych procedur konwertuje dany wielką literą małej literze, jeśli jest możliwe odpowiednie. Konwersja przypadków **towlower —** jest specyficzne dla ustawień regionalnych. Tylko znaki, które są istotne dla bieżących ustawień regionalnych zostały zmienione w przypadku. Funkcje bez **_l** sufiksa używa aktualnie ustawione ustawień regionalnych. Wersje tych funkcji, które mają **_l** sufiks zająć ustawień regionalnych jako parametru i używać go zamiast aktualnie ustawione ustawień regionalnych. Aby uzyskać więcej informacji, zobacz [ustawień regionalnych](../../c-runtime-library/locale.md).
 
-Aby **_tolower —** do uzyskania oczekiwanych wyników, [__isascii —](isascii-isascii-iswascii.md) i [isupper —](isupper-isupper-l-iswupper-iswupper-l.md) musi zwrócą różną od zera.
+Aby **_tolower —** do uzyskania oczekiwanych wyników, [__isascii —](isascii-isascii-iswascii.md) i [isupper](isupper-isupper-l-iswupper-iswupper-l.md) musi oba zwracają wartość różną od zera.
 
 ### <a name="generic-text-routine-mappings"></a>Mapowania procedur zwykłego tekstu
 
-|Procedura TCHAR.H|_Unicode — & _MBCS nie zdefiniowany|_MBCS zdefiniowano|_UNICODE zdefiniowano|
+|Procedura TCHAR.H|_UNICODE & _MBCS nie zdefiniowano|_MBCS zdefiniowano|_UNICODE zdefiniowano|
 |---------------------|------------------------------------|--------------------|-----------------------|
 |**_totlower —**|**tolower**|**_mbctolower**|**towlower**|
 |**_totlower_l**|**_tolower_l**|**_mbctolower_l**|**_towlower_l**|
 
 > [!NOTE]
-> **_tolower_l —** i **_towlower_l —** nie zależność od ustawień regionalnych, a nie są przeznaczone do bezpośredniego wywoływania. Są one udostępniane do użytku wewnętrznego przez **_totlower_l**.
+> **_tolower_l —** i **_towlower_l —** ma zależność od nie ustawień regionalnych i nie są przeznaczone do bezpośredniego wywoływania. Są one udostępniane do użytku wewnętrznego przez **_totlower_l**.
 
 ## <a name="requirements"></a>Wymagania
 
@@ -125,7 +126,7 @@ Aby uzyskać dodatkowe informacje o zgodności, zobacz [zgodności](../../c-runt
 
 ## <a name="example"></a>Przykład
 
-Zapoznaj się z przykładem w [do funkcji](../../c-runtime-library/to-functions.md).
+Zobacz przykład w [funkcji](../../c-runtime-library/to-functions.md).
 
 ## <a name="see-also"></a>Zobacz także
 

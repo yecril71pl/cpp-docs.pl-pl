@@ -17,56 +17,58 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: cb6c0470117cde185a9087b3fa11d054df4deae9
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 4dfb5ffe13d8813eff0e3db4978eb1799bee1a85
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32383257"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46020124"
 ---
 # <a name="bitwise-shift-operators"></a>Operatory przesunięcia bitowego
-Operatory przesunięcia przesunięcia w lewo ich pierwszy argument operacji (`<<`) lub w prawo (`>>`) przez liczbę pozycji określa drugi argument operacji.  
-  
-## <a name="syntax"></a>Składnia  
- *wyrażenie SHIFT*:  
- *wyrażenie dodatku*  
-  
- *wyrażenie SHIFT*`<<`*wyrażenie dodatku shift-expression*`>>`*wyrażenie dodatku*   
-  
- Oba argumenty muszą być wartości całkowite. Popularne konwersje arytmetyczne; wykonywania tych operatorów Typ wyniku jest typem lewego operandu po konwersji.  
-  
- Do zmiany leftward vacated odpowiednich bitów są ustawione na 0. Dla zmian rightward vacated bitów po lewej stronie zostaną wypełnione oparte na typ pierwszego argumentu po konwersji. Jeśli typ jest `unsigned`, są ustawione na 0. W przeciwnym razie są wypełnione z kopiami bitu znaku. Dla operatory przesunięcia w lewo bez przepełnienia, instrukcja  
-  
-```  
-expr1 << expr2   
-```  
-  
- jest odpowiednikiem mnożenia przez 2<sup>Wyr2</sup>. Operatory przesunięcia w prawo, aby uzyskać  
-  
-```  
-expr1 >> expr2   
-```  
-  
- jest odpowiednikiem dzielenie przez 2<sup>Wyr2</sup> Jeśli `expr1` jest niepodpisany lub ma wartość nieujemną.  
-  
- Zdefiniowano wynik operacji shift, jeśli drugi operand jest ujemny lub prawy operand jest większa niż lub równa szerokość w bitach awansowana Lewy argument operacji.  
-  
- Ponieważ konwersja przez zmianę operatory nie zapewniają przepełnienia lub niedopełnienie warunków, informacje mogą zostać utracone, jeśli wynik operacji przesunięcia nie może być reprezentowany w typie pierwszy argument operacji po konwersji.  
-  
-```  
-unsigned int x, y, z;  
-  
-x = 0x00AA;  
-y = 0x5500;  
-  
-z = ( x << 8 ) + ( y >> 8 );  
-```  
-  
- W tym przykładzie `x` zostanie przesunięty w ośmiu pozycji w lewo i `y` jest przesuniętych prawo osiem pozycji. Przesuniętych wartości zostaną dodane, dając 0xAA55 i przypisane do `z`.  
-  
- Przesunięcie w prawo wartości ujemnej daje połowa oryginalnej wartości, zaokrąglona w dół. Na przykład -253 (binarne 11111111 00000011) przesunięte daje prawo o jeden bit -127 (binarne 11111111 10000001). Dodatnią 253 zmian prawym przyciskiem myszy, aby wygenerować +126.  
-  
- Przesunięcia w prawo zachować bitu znaku. Kiedy całkowita przewiduje się po prawej, najbardziej znaczącego bitu pozostaje ustawione. Gdy całkowitą bez znaku przewiduje się po prawej, najbardziej znaczącego bitu jest wyczyszczone.  
-  
-## <a name="see-also"></a>Zobacz też  
- [Operatory przesunięcia w lewo i w prawo (>> i <<)](../cpp/left-shift-and-right-shift-operators-input-and-output.md)
+
+Operatory przesunięcia shift ich pierwszego operandu w lewo (`<<`) lub w prawo (`>>`) przez liczbę pozycji określa drugiego operandu.
+
+## <a name="syntax"></a>Składnia
+
+*SHIFT-expression*: *additive-expression*
+
+*SHIFT-expression*`<<`*additive-expression shift-expression*`>>`*additive-expression* 
+
+Oba operandy muszą być wartości całkowitych. Te operatory wykonywać popularne konwersje arytmetyczne; Typ wyniku jest typem lewego operandu po konwersji.
+
+Dla leftward przesunięcia odpowiednich pozycje opuszczonych bitów są ustawione na 0. Dla rightward przesunięcia pozycje opuszczonych bitów po lewej stronie są wypełnione w zależności od typu pierwszego operandu po konwersji. Jeśli typ jest `unsigned`, są one ustawione na 0. W przeciwnym razie są wypełnione przy użyciu kopii bitu znaku. Dla operatorów przesunięcia w lewo bez przepełnienia, instrukcja
+
+```
+expr1 << expr2
+```
+
+jest odpowiednikiem mnożenia przez wartość 2<sup>Wyr2</sup>. Dla operatorów przesunięcia w prawo
+
+```
+expr1 >> expr2
+```
+
+jest odpowiednikiem dzielenie przez 2<sup>Wyr2</sup> Jeśli `expr1` jest podpisany lub ma wartość nieujemną.
+
+Wynik operacji przesunięcia jest niezdefiniowana, jeśli drugi argument jest ujemna, czy prawy operand jest większa lub równa szerokości w bitach promowanego operandu po lewej stronie.
+
+Ponieważ konwersje wykonywane przez shift operatory nie są oferowane dla przepełnienia lub warunków niedomiaru, informacje mogą zostać utracone, jeśli wynik operacji przesunięcia nie może być przedstawiony w typie pierwszego operandu po konwersji.
+
+```
+unsigned int x, y, z;
+
+x = 0x00AA;
+y = 0x5500;
+
+z = ( x << 8 ) + ( y >> 8 );
+```
+
+W tym przykładzie `x` zostanie przesunięty w lewo pozycje osiem i `y` jest przesuniętych bezpośrednio osiem pozycji. Przesuniętych wartości są dodawane, dzięki czemu 0xAA55 i przypisane do `z`.
+
+Przesunięcie wartości ujemnej po prawej stronie daje połowa wartość pierwotną, zaokrąglona w dół. Na przykład -253 (binarne 11111111 00000011) przesunięte tworzy odpowiednie jeden bit -127 (binarne 11111111 10000001). Dodatnią 253 przesunięcia w prawo do produkcji +126.
+
+Przesunięcia w prawo zachować bitu znaku. Liczba całkowita ze znakiem przenosi bezpośrednio, ustaw pozostaje najbardziej znaczący bit. Gdy liczbą całkowitą bez znaku przenosi bezpośrednio, najbardziej znaczący bit jest wyczyszczone.
+
+## <a name="see-also"></a>Zobacz też
+
+[Operatory przesunięcia w lewo i w prawo (>> i <<)](../cpp/left-shift-and-right-shift-operators-input-and-output.md)

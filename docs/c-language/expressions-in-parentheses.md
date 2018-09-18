@@ -17,36 +17,38 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b6c1934cc511073aa38b97228f7ae0f71f06ed31
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 5a052dbc666be05d05753c7408b1d09643f09dc8
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32382978"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46022880"
 ---
 # <a name="expressions-in-parentheses"></a>Wyrażenia w nawiasach
-Wszelkie operand można ująć w nawiasach bez zmiany typu lub wartości wyrażenie w nawiasach. Na przykład w wyrażeniu:  
-  
-```  
-( 10 + 5 ) / 5  
-```  
-  
- nawiasy otaczające `10 + 5` oznaczają, że wartość `10 + 5` jest szacowana jako pierwsza i staje się lewy operand podziału (**/**) operatora. Wynik `( 10 + 5 ) / 5` to 3. Bez nawiasów `10 + 5 / 5` oceni do 11.  
-  
- Mimo że nawiasy wpływa na sposób argumenty operacji są pogrupowane w wyrażeniu, nie mogą gwarantować określonej kolejności szacowania we wszystkich przypadkach. Na przykład nawiasy ani grupowania od lewej do prawej z następującym wyrażeniem gwarantuje, jakie wartości `i` będzie w jednym zakresie:  
-  
-```  
-( i++ +1 ) * ( 2 + i )  
-```  
-  
- Kompilator jest bezpłatna do oceny partnerami mnożenia w dowolnej kolejności. Jeśli wartość początkowa `i` wynosi zero, można obliczyć wyrażenia całego jako tych dwóch instrukcji:  
-  
-```  
-( 0 + 1 + 1 ) * ( 2 + 1 )   
-( 0 + 1 + 1 ) * ( 2 + 0 )  
-```  
-  
- Wyjątki wynikające z efekty uboczne, omówiono w [efekty uboczne](../c-language/side-effects.md).  
-  
-## <a name="see-also"></a>Zobacz też  
- [Wyrażenia podstawowe języka C](../c-language/c-primary-expressions.md)
+
+Wszelkie operand można ująć w nawiasy, bez zmiany typu lub wartości wyrażenie w nawiasach. Na przykład w wyrażeniu:
+
+```
+( 10 + 5 ) / 5
+```
+
+nawiasy wokół `10 + 5` oznaczają, że wartość `10 + 5` jest stosowana jako pierwsza i staje się lewy argument operacji podziału (**/**) — operator. Wynik `( 10 + 5 ) / 5` to 3. Bez nawiasów `10 + 5 / 5` używane do oceny do 11.
+
+Mimo że nawiasy wpływa na sposób operandy są grupowane w wyrażeniu, ich nie gwarantuje określonej kolejności obliczania we wszystkich przypadkach. Na przykład nawiasów ani grupowanie od lewej do prawej następujące wyrażenie nie gwarantuje, jakie wartości `i` będą znajdować się w jednej z podwyrażenia:
+
+```
+( i++ +1 ) * ( 2 + i )
+```
+
+Kompilator jest bezpłatny do oceny partnerami mnożenia w dowolnej kolejności. Jeśli wartość początkową `i` wynosi zero, całe wyrażenie można go obliczyć jako jedną z tych dwóch instrukcji:
+
+```
+( 0 + 1 + 1 ) * ( 2 + 1 )
+( 0 + 1 + 1 ) * ( 2 + 0 )
+```
+
+Wyjątki wynikłe ze efekty uboczne są omówione w [efekty uboczne](../c-language/side-effects.md).
+
+## <a name="see-also"></a>Zobacz też
+
+[Wyrażenia podstawowe języka C](../c-language/c-primary-expressions.md)

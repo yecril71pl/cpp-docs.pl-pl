@@ -17,12 +17,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6dc28d8a0d5dc24d0f0c665e5a17fc38e0c9d08f
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: eabb923b165d407f77554d88d710cd7c67a14240
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43753152"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46022114"
 ---
 # <a name="registry-scripting-examples"></a>Przykłady skryptów rejestru
 
@@ -32,17 +32,17 @@ Przykłady skryptów, w tym temacie pokazują, jak dodać klucz do rejestru syst
 
 W poniższym drzewie analizy przedstawiono prosty skrypt, który dodaje jeden klucz w rejestrze systemu. W szczególności skrypt ten dodaje klucz, `MyVeryOwnKey`, `HKEY_CURRENT_USER`. Przypisuje także domyślną wartość ciągu `HowGoesIt` do nowego klucza:
 
-```  
-HKEY_CURRENT_USER  
+```
+HKEY_CURRENT_USER
 {  
-'MyVeryOwnKey' = s 'HowGoesIt'  
-}  
+    'MyVeryOwnKey' = s 'HowGoesIt'
+}
 ```
 
 Ten skrypt można łatwo rozszerzyć w taki sposób, aby zdefiniować wiele podkluczy w następujący sposób:
 
-```  
-HKCU  
+```
+HKCU
 {  
     'MyVeryOwnKey' = s 'HowGoesIt'  
     {  
@@ -51,8 +51,8 @@ HKCU
             'PrettyCool' = d '55'  
             val 'ANameValue' = s 'WithANamedValue'  
         }  
-    }  
-}  
+    }
+}
 ```
 
 Teraz, skrypt ten dodaje podklucz `HasASubkey`, `MyVeryOwnKey`. Do tego podklucza dodaje ona zarówno `PrettyCool` podklucz (domyślnie `DWORD` wartość 55) i `ANameValue` nazwanej wartości (przy użyciu wartości ciągu `WithANamedValue`).
@@ -61,8 +61,8 @@ Teraz, skrypt ten dodaje podklucz `HasASubkey`, `MyVeryOwnKey`. Do tego podklucz
 
 Poniższy skrypt rejestruje sam serwer COM rejestratora.
 
-```  
-HKCR  
+```
+HKCR
 {  
     ATL.Registrar = s 'ATL Registrar Class'  
     {  
@@ -78,8 +78,8 @@ HKCR
                 val ThreadingModel = s 'Apartment'  
             }  
         }  
-    }  
-}  
+    }
+}
 ```
 
 W czasie wykonywania, dodaje ten drzewo analizy `ATL.Registrar` klucza `HKEY_CLASSES_ROOT`. Do tego nowego klucza następnie it:
@@ -106,15 +106,15 @@ W drzewie analizy dodano dwa nowe podklucze do `{44EC053A-400F-11D0-9DCD-00A0C90
 
 Aby określić więcej niż jeden drzewo analizy w skrypcie, po prostu umieść jednym drzewie pod koniec drugiego. Na przykład, poniższy skrypt dodaje klucz, `MyVeryOwnKey`, aby drzew analizy dla obu `HKEY_CLASSES_ROOT` i `HKEY_CURRENT_USER`:
 
-```  
-HKCR  
+```
+HKCR
 {  
-    'MyVeryOwnKey' = s 'HowGoesIt'  
-}  
-HKEY_CURRENT_USER  
+    'MyVeryOwnKey' = s 'HowGoesIt'
+}
+HKEY_CURRENT_USER
 {  
-    'MyVeryOwnKey' = s 'HowGoesIt'  
-}  
+    'MyVeryOwnKey' = s 'HowGoesIt'
+}
 ```
 
 > [!NOTE]

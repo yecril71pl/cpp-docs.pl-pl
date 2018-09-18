@@ -17,12 +17,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 33b285cb55e04bcae2fd7f65ef5e94686e88e5e6
-ms.sourcegitcommit: 7eadb968405bcb92ffa505e3ad8ac73483e59685
+ms.openlocfilehash: d7ee8fa674174d95c3e538889f6d5538be049b70
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/23/2018
-ms.locfileid: "39208991"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46020723"
 ---
 # <a name="taskgroup-class"></a>task_group — Klasa
 `task_group` Klasa reprezentuje kolekcję równoległą pracę, która może być oczekiwany lub anulowane.  
@@ -127,17 +127,17 @@ void run(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `_Function`  
- Typ obiektu funkcji, która będzie wywoływana w celu wykonania treści obsługi zadań.  
+*_Function*<br/>
+Typ obiektu funkcji, która będzie wywoływana w celu wykonania treści obsługi zadań.  
   
- `_Func`  
- Funkcja, która zostanie wywołana w celu wywołania treści zadania. Może to być wyrażenie lambda lub inny obiekt, który obsługuje wersję operator wywołania funkcji z podpisem `void operator()()`.  
+*_Func*<br/>
+Funkcja, która zostanie wywołana w celu wywołania treści zadania. Może to być wyrażenie lambda lub inny obiekt, który obsługuje wersję operator wywołania funkcji z podpisem `void operator()()`.  
   
- `_Placement`  
- Odwołanie do lokalizacji, w którym zadanie jest reprezentowane przez `_Func` parametr powinien zostać wykonany.  
+*_Umieszczenia.*<br/>
+Odwołanie do lokalizacji, w którym zadanie jest reprezentowane przez `_Func` parametr powinien zostać wykonany.  
   
- `_Task_handle`  
- Dojście do pracy, zaplanowane. Należy pamiętać, że obiekt wywołujący odpowiada za okres istnienia tego obiektu. Środowisko uruchomieniowe będzie w dalszym ciągu będzie się na żywo do momentu `wait` lub `run_and_wait` na ten zostanie wywołana metoda `task_group` obiektu.  
+*_Task_handle*<br/>
+Dojście do pracy, zaplanowane. Należy pamiętać, że obiekt wywołujący odpowiada za okres istnienia tego obiektu. Środowisko uruchomieniowe będzie w dalszym ciągu będzie się na żywo do momentu `wait` lub `run_and_wait` na ten zostanie wywołana metoda `task_group` obiektu.  
   
 ### <a name="remarks"></a>Uwagi  
  Środowisko uruchomieniowe planuje podana funkcja pracy do uruchamiania w późniejszym czasie, który może być po powrocie funkcji wywołującej. Ta metoda używa [task_handle](task-handle-class.md) obiekt, aby przechowywać kopię podana funkcja pracy. W związku z tym wszelkie zmiany stanu, które występują w obiekt funkcji, które przechodzą do tej metody nie pojawi się w kopii tego obiektu funkcji. Ponadto upewnij się, okres istnienia obiektów przekazywane przez wskaźnik lub odwołanie do funkcji pracy pozostają ważne, dopóki ta funkcja pracy zwróci.  
@@ -167,14 +167,14 @@ task_group_status run_and_wait(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `_Function`  
- Typ obiektu funkcji, która będzie wywoływana w celu wykonania treści zadania.  
+*_Function*<br/>
+Typ obiektu funkcji, która będzie wywoływana w celu wykonania treści zadania.  
   
- `_Task_handle`  
- Dojście do zadania, które jest uruchamiane wbudowane Kontekst wywołania. Należy pamiętać, że obiekt wywołujący odpowiada za okres istnienia tego obiektu. Środowisko uruchomieniowe będzie w dalszym ciągu będzie się na żywo do momentu `run_and_wait` metoda kończy działanie.  
+*_Task_handle*<br/>
+Dojście do zadania, które jest uruchamiane wbudowane Kontekst wywołania. Należy pamiętać, że obiekt wywołujący odpowiada za okres istnienia tego obiektu. Środowisko uruchomieniowe będzie w dalszym ciągu będzie się na żywo do momentu `run_and_wait` metoda kończy działanie.  
   
- `_Func`  
- Funkcja, która zostanie wywołana w celu wywołania jednostkę pracy. Może to być wyrażenie lambda lub inny obiekt, który obsługuje wersję operator wywołania funkcji z podpisem `void operator()()`.  
+*_Func*<br/>
+Funkcja, która zostanie wywołana w celu wywołania jednostkę pracy. Może to być wyrażenie lambda lub inny obiekt, który obsługuje wersję operator wywołania funkcji z podpisem `void operator()()`.  
   
 ### <a name="return-value"></a>Wartość zwracana  
  Wskazanie, czy czas oczekiwania był zadawalający lub grupy zadań zostało anulowane z powodu operacji anulowania jawne lub wyjątek z jednego z jego zadań podrzędnych. Aby uzyskać więcej informacji, zobacz [task_group_status —](concurrency-namespace-enums.md#task_group_status).  
@@ -202,8 +202,8 @@ task_group(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `_CancellationToken`  
- Token anulowania do skojarzenia z tą grupą zadań. Grupy zadań zostanie anulowane, gdy token zostanie anulowany.  
+*_CancellationToken*<br/>
+Token anulowania do skojarzenia z tą grupą zadań. Grupy zadań zostanie anulowane, gdy token zostanie anulowany.  
   
 ### <a name="remarks"></a>Uwagi  
  Konstruktor, który pobiera token anulowania, tworzy `task_group` , zostanie anulowane, gdy źródło skojarzone z tokenem zostało anulowane. Również zapewnienie token anulowania jawne izoluje ta grupa zadaniowa z uczestnictwa w anulowanie niejawne z grupy nadrzędnej z inny token lub brak tokenu.  

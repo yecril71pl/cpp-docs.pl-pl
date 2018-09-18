@@ -1,5 +1,5 @@
 ---
-title: C2883 błąd kompilatora | Dokumentacja firmy Microsoft
+title: Błąd kompilatora C2883 | Dokumentacja firmy Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,28 +16,29 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: fc3119db27127521f5078a5753bb82c82da381ed
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 50cc5b2abb34fae21bea78aa146e74b9aa9491c4
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33244950"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46019266"
 ---
-# <a name="compiler-error-c2883"></a>C2883 błąd kompilatora
-"Nazwa": deklaracja funkcji powoduje konflikt z identyfikatorem"" wynikające z deklaracją using  
-  
- Próbowano więcej niż raz zdefiniować funkcję. Pierwsza definicja została wprowadzona w obszarze nazw o `using` deklaracji. Drugi był lokalnej definicji.  
-  
- Poniższy przykład generuje C2883:  
-  
-```  
-// C2883.cpp  
-namespace A {  
-   void z(int);  
-}  
-  
-int main() {  
-   using A::z;  
-   void z(int);   // C2883  z is already defined  
-}  
+# <a name="compiler-error-c2883"></a>Błąd kompilatora C2883
+
+"name": deklaracja funkcji powoduje konflikt z 'Identyfikator' wynikające z deklaracji using
+
+Próbowano zdefiniować funkcję więcej niż jeden raz. Pierwsza definicja została wprowadzona w obszarze nazw o `using` deklaracji. Drugim była lokalnej definicji.
+
+Poniższy przykład spowoduje wygenerowanie C2883:
+
+```
+// C2883.cpp
+namespace A {
+   void z(int);
+}
+
+int main() {
+   using A::z;
+   void z(int);   // C2883  z is already defined
+}
 ```

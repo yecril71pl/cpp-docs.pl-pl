@@ -1,5 +1,5 @@
 ---
-title: Operatory przestrzeń nazw współbieżności (AMP) | Dokumentacja firmy Microsoft
+title: Operatory przestrzeni nazw współbieżności (AMP) | Dokumentacja firmy Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
 ms.topic: reference
@@ -10,14 +10,14 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8d3bb77599fc81fa29f2c8155a6fd491ed2d639c
-ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
+ms.openlocfilehash: d6e8d2a198105e9cd63581dd8ed8445b681da2e0
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33686711"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46026936"
 ---
-# <a name="concurrency-namespace-operators-amp"></a>Operatory przestrzeń nazw współbieżności (AMP)
+# <a name="concurrency-namespace-operators-amp"></a>Operatory przestrzeni nazw współbieżności (AMP)
 ||||  
 |-|-|-|  
 |[operator!=](#operator_neq)|[operator%](#operator_mod)|[operator *](#operator_star)|  
@@ -38,20 +38,20 @@ bool operator== (
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `_Rank`  
- Ranga argumentów spójnej kolekcji.  
+*_Rank*<br/>
+Ranga argumentów krotek.  
   
- `_Lhs`  
- Jeden krotek do porównania.  
+*_Lhs*<br/>
+Jedna z krotek do porównania.  
   
- `_Rhs`  
- Jeden krotek do porównania.  
+*_Rhs*<br/>
+Jedna z krotek do porównania.  
   
 ### <a name="return-value"></a>Wartość zwracana  
- `true` Jeśli krotki są takie same; w przeciwnym razie `false`.  
+ `true` Jeśli kolekcje są równe; w przeciwnym razie `false`.  
   
 ##  <a name="operator_neq"></a>  operator! =   
- Określa, czy określone argumenty nie są takie same.  
+ Określa, czy określone argumenty są równe.  
   
 ```  
 template <
@@ -64,21 +64,21 @@ bool operator!= (
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `_Rank`  
- Ranga argumentów spójnej kolekcji.  
+*_Rank*<br/>
+Ranga argumentów krotek.  
   
- `_Lhs`  
- Jeden krotek do porównania.  
+*_Lhs*<br/>
+Jedna z krotek do porównania.  
   
- `_Rhs`  
- Jeden krotek do porównania.  
+*_Rhs*<br/>
+Jedna z krotek do porównania.  
   
 ### <a name="return-value"></a>Wartość zwracana  
- `true` krotki nie są równe; w przeciwnym razie `false`.  
+ `true` Jeśli kolekcje nie są równe; w przeciwnym razie `false`.  
   
 ##  <a name="operator_add"></a>  operator +   
 
- Oblicza sumę component-wise określonych argumentów.  
+ Oblicza sumę dotyczącą składnika dla określonych argumentów.  
   
 ```  
 template <
@@ -109,21 +109,21 @@ class _Tuple_type> _Tuple_type<_Rank>   operator+(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `_Rank`  
- Ranga argumentów spójnej kolekcji.  
+*_Rank*<br/>
+Ranga argumentów krotek.  
   
- `_Lhs`  
- Jeden z argumentów do dodania.  
+*_Lhs*<br/>
+Jeden z argumentów do dodania.  
   
- `_Rhs`  
- Jeden z argumentów do dodania.  
+*_Rhs*<br/>
+Jeden z argumentów do dodania.  
   
 ### <a name="return-value"></a>Wartość zwracana  
- Suma component-wise określonych argumentów.  
+ Dotycząca składników Suma określonych argumentów.  
   
 ##  <a name="operator-"></a>  operator-   
 
- Oblicza component-wise różnica między określonymi argumentami.  
+ Oblicza różnicę dotyczącą składnika między określonymi argumentami.  
   
 ```  
 template <
@@ -154,21 +154,21 @@ _Tuple_type<_Rank>   operator-(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `_Rank`  
- Ranga argumentów spójnej kolekcji.  
+*_Rank*<br/>
+Ranga argumentów krotek.  
   
- `_Lhs`  
- Argument jest odejmowana od.  
+*_Lhs*<br/>
+Argument do odjęcia od.  
   
- `_Rhs`  
- Argument do odjęcia.  
+*_Rhs*<br/>
+Argument do odjęcia.  
   
 ### <a name="return-value"></a>Wartość zwracana  
- Component-wise różnica między określonymi argumentami.  
+ Różnicę dotyczącą składnika między określonymi argumentami.  
   
 ##  <a name="operator_star"></a>  operator *   
 
- Oblicza iloczyn component-wise określonych argumentów.  
+ Oblicza iloczyn dotyczący składnika dla określonych argumentów.  
   
 ```  
 template <
@@ -190,21 +190,21 @@ _Tuple_type<_Rank>   operator*(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `_Rank`  
- Ranga argumentów spójnej kolekcji.  
+*_Rank*<br/>
+Ranga argumentów krotek.  
   
- `_Lhs`  
- Jeden krotek, aby pomnożyć.  
+*_Lhs*<br/>
+Jedna ze spójnych kolekcji do pomnożenia.  
   
- `_Rhs`  
- Jeden krotek, aby pomnożyć.  
+*_Rhs*<br/>
+Jedna ze spójnych kolekcji do pomnożenia.  
   
 ### <a name="return-value"></a>Wartość zwracana  
- Component-wise produktu określonych argumentów.  
+ Iloczyn dotyczący składnika dla określonych argumentów.  
   
 
 ##  <a name="operator_div"></a>  operator /   
- Oblicza iloraz component-wise określonych argumentów.  
+ Oblicza iloraz dotyczący składnika dla określonych argumentów.  
   
 ```  
 template <
@@ -226,21 +226,21 @@ _Tuple_type<_Rank>   operator/(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `_Rank`  
- Ranga argumentów spójnej kolekcji.  
+*_Rank*<br/>
+Ranga argumentów krotek.  
   
- `_Lhs`  
- Spójna kolekcja podział.  
+*_Lhs*<br/>
+Krotka można podzielić.  
   
- `_Rhs`  
- Spójna kolekcja znajdująca się próba podzielenia przez.  
+*_Rhs*<br/>
+Spójna kolekcja znajdująca się dzielnikiem.  
   
 ### <a name="return-value"></a>Wartość zwracana  
- Iloraz component-wise określonych argumentów.  
+ Oblicza iloraz dotyczący składnika dla określonych argumentów.  
   
-##  <a name="operator_mod"></a>  % — operator   
+##  <a name="operator_mod"></a>  operator %   
 
- Oblicza resztę pierwszy argument określony przez drugi określonego argumentu.  
+ Oblicza moduł pierwszego określonego argumentu przez drugi określony argument.  
   
 ```  
 template <
@@ -262,17 +262,17 @@ _Tuple_type<_Rank>   operator%(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `_Rank`  
- Ranga argumentów spójnej kolekcji.  
+*_Rank*<br/>
+Ranga argumentów krotek.  
   
- `_Lhs`  
- Spójną kolekcję na podstawie której jest obliczany modulo.  
+*_Lhs*<br/>
+Krotka, z której oblicza się modulo.  
   
- `_Rhs`  
- Spójna kolekcja znajdująca się na modulo przez.  
+*_Rhs*<br/>
+Krotka do modulo przez.  
   
 ### <a name="return-value"></a>Wartość zwracana  
- Wynik pierwszy modulo określony argument drugi argument określony.  
+ Wynik pierwszego argumentu określonego moduł drugi określony argument.  
   
 ## <a name="see-also"></a>Zobacz też  
  [Współbieżność Namespace ](concurrency-namespace-cpp-amp.md)

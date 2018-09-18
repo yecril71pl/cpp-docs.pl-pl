@@ -23,12 +23,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ae4aaffc76e12734038b0d325e7b540393c6cc6d
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: e760bab6fb3ad420fc6fe0f5c8a2ea6addc652ac
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43754933"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46019433"
 ---
 # <a name="iobjectsafetyimpl-class"></a>Klasa IObjectSafetyImpl
 
@@ -40,16 +40,16 @@ Ta klasa udostępnia domyślną implementację elementu `IObjectSafety` interfej
 ## <a name="syntax"></a>Składnia
 
 ```
-template <class T,DWORD dwSupportedSafety>  
+template <class T,DWORD dwSupportedSafety>
 class IObjectSafetyImpl
 ```
 
 #### <a name="parameters"></a>Parametry
 
-*T*  
+*T*<br/>
 Z klasą pochodną `IObjectSafetyImpl`.
 
-*dwSupportedSafety*  
+*dwSupportedSafety*<br/>
 Określa opcje bezpieczeństwa obsługiwanych dla formantu. Może być jednym z następujących wartości:
 
 - INTERFACESAFE_FOR_UNTRUSTED_CALLER interfejsie zidentyfikowany przez [SetInterfaceSafetyOptions](#setinterfacesafetyoptions) parametru `riid` powinni należeć do obsługi skryptów.
@@ -139,5 +139,5 @@ Zobacz [IObjectSafety::SetInterfaceSafetyOptions](https://msdn.microsoft.com/lib
 
 ## <a name="see-also"></a>Zobacz też
 
-[Interfejs IObjectSafety](https://msdn.microsoft.com/library/aa768224.aspx)   
+[Interfejs IObjectSafety](https://msdn.microsoft.com/library/aa768224.aspx)<br/>
 [Klasa — Przegląd](../../atl/atl-class-overview.md)

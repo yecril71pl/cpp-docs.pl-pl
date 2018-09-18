@@ -18,12 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e8af4a1b2ee763dfc28288058d27b1b08721fd97
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 3bef300671894e054ddf9b1ca0ab9dcf3b135370
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43756067"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46019425"
 ---
 # <a name="debugging-and-error-reporting-global-functions"></a>Debugowanie i funkcje globalne raportowanie błędów
 
@@ -63,7 +63,7 @@ AtlHresultFromWin32(DWORD error);
 
 ### <a name="parameters"></a>Parametry
 
-*Błąd*  
+*Błąd*<br/>
 Wartość błędu do przekonwertowania.
 
 ### <a name="remarks"></a>Uwagi
@@ -129,28 +129,28 @@ HRESULT WINAPI AtlReportError(
 
 ### <a name="parameters"></a>Parametry
 
-*Identyfikator klasy*  
+*Identyfikator klasy*<br/>
 [in] Identyfikator CLSID obiektu zgłoszenie błędu.
 
-*lpszDesc*  
+*lpszDesc*<br/>
 [in] Ciąg opisujący błąd. Wersje Unicode określić, że *lpszDesc* jest typ LPCOLESTR; wersji ANSI Określa typ LPCSTR.
 
-*IID*  
+*IID*<br/>
 [in] Identyfikator IID interfejsu Definiowanie błąd lub GUID_NULL, jeśli ten błąd jest zdefiniowany przez system operacyjny.
 
-*parametrem typu HRESULT*  
+*parametrem typu HRESULT*<br/>
 [in] Wartość HRESULT, które mają zwracany do obiektu wywołującego.
 
-*nID*  
+*nID*<br/>
 [in] Identyfikator zasobu, gdzie znajduje się ciąg opisu błędu. Ta wartość musi zawierać się między 0x0200 i 0xFFFF, włącznie. W kompilacjach do debugowania **ASERCJA** spowoduje, że jeśli *nID* indeksowania prawidłowy ciąg. W kompilacjach do wydania ciąg opisu błędu zostanie ustawiony na "Nieznany błąd."
 
-*dwHelpID*  
+*dwHelpID*<br/>
 [in] Identyfikator kontekstu pomocy dla błędu.
 
-*lpszHelpFile*  
+*lpszHelpFile*<br/>
 [in] Ścieżka i nazwa pliku pomocy, opisujący błąd.
 
-*hInst*  
+*hInst*<br/>
 [in] Dojście do zasobu. Domyślnie ten parametr jest `__AtlBaseModuleModule::GetResourceInstance`, gdzie `__AtlBaseModuleModule` jest globalne wystąpienie [CAtlBaseModule](../../atl/reference/catlbasemodule-class.md) lub klasa pochodnej od niego.
 
 ### <a name="return-value"></a>Wartość zwracana
@@ -182,7 +182,7 @@ __declspec(noreturn) inline void AtlThrow(HRESULT hr);
 
 ### <a name="parameters"></a>Parametry
 
-*godz.*  
+*godz.*<br/>
 Standardowe wartości HRESULT.
 
 ### <a name="remarks"></a>Uwagi
@@ -233,6 +233,6 @@ Jeśli nie zdefiniowano _ATL_NO_EXCEPTIONS, funkcja powoduje błąd potwierdzeni
 
 ## <a name="see-also"></a>Zobacz też
 
-[Funkcje](../../atl/reference/atl-functions.md)   
+[Funkcje](../../atl/reference/atl-functions.md)<br/>
 [Makra debugowania i raportowania błędów](../../atl/reference/debugging-and-error-reporting-macros.md)
 

@@ -17,62 +17,66 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0b74c08ee2130e9742884eacfa93d6fc55110291
-ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
+ms.openlocfilehash: 89ab41c396f8602d16e2b2d88c3d83aeb7cdf21a
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "42465143"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46018384"
 ---
 # <a name="naked-c"></a>naked (C++)
-**Microsoft Specific**  
-  
- Aby funkcje zadeklarowane za pomocą **"naked"** atrybutu, kompilator generuje kod bez konieczności pisania kodu prologu i epilogu. Ta funkcja służy do pisania własnych sekwencji kodu prologu/epilogu przy użyciu kodu asemblera wbudowanego. Funkcji "naked" są szczególnie przydatne w pisaniu sterowniki urządzeń wirtualnych.  Należy pamiętać, że **"naked"** atrybut jest prawidłowy tylko w x86 i ARM i nie jest dostępny na x64.  
-  
-## <a name="syntax"></a>Składnia  
-  
-```  
-__declspec(naked) declarator  
-```  
-  
-## <a name="remarks"></a>Uwagi  
- Ponieważ **"naked"** atrybutu, dotyczy tylko definicja funkcji i nie jest modyfikatora typu, funkcji "naked" należy użyć składni atrybutów rozszerzonych i [__declspec](../cpp/declspec.md) — słowo kluczowe.  
-  
 
- Kompilator nie może wygenerować wbudowanej funkcji dla funkcji z atrybutem "naked", nawet wtedy, gdy funkcja jest również oznaczona za pomocą [__forceinline](inline-functions-cpp.md) — słowo kluczowe.  
+**Microsoft Specific**
 
- Kompilator generuje błąd, jeśli **"naked"** atrybut jest stosowany do coś innego niż definicji metody nieczłonkowską.  
-  
-## <a name="examples"></a>Przykłady  
- Ten kod definiuje funkcję za pomocą **"naked"** atrybutu:  
-  
-```  
-__declspec( naked ) int func( formal_parameters ) {}  
-```  
-  
- Lub też:  
-  
-```  
-#define Naked __declspec( naked )  
-Naked int func( formal_parameters ) {}  
-```  
-  
- **"Naked"** atrybut ma wpływ jedynie charakter generowania kodu kompilator sekwencji prologu i epilogu funkcji. Nie ma wpływu na kod, który jest generowany w przypadku wywołania tych funkcji. W efekcie **"naked"** atrybut nie jest uważany za część typu funkcji i wskaźników do funkcji nie może mieć **"naked"** atrybutu. Ponadto **"naked"** atrybutu nie można zastosować do definicji danych. Na przykład ten przykładowy kod generuje błąd:  
-  
-```  
-__declspec( naked ) int i;  
-// Error--naked attribute not permitted on data declarations.  
-```  
-  
- **"Naked"** atrybut ma zastosowanie tylko do definicji funkcji i nie można określić w prototypu funkcji. Na przykład tej deklaracji generuje błąd kompilatora:  
-  
-```  
-__declspec( naked ) int func();  // Error--naked attribute not permitted on function declarations  
-```  
-  
- **END specyficzny dla Microsoft**  
-  
-## <a name="see-also"></a>Zobacz także  
- [__declspec](../cpp/declspec.md)   
- [Keywords](../cpp/keywords-cpp.md)   
- [Wywołania funkcji Naked](../cpp/naked-function-calls.md)
+Aby funkcje zadeklarowane za pomocą **"naked"** atrybutu, kompilator generuje kod bez konieczności pisania kodu prologu i epilogu. Ta funkcja służy do pisania własnych sekwencji kodu prologu/epilogu przy użyciu kodu asemblera wbudowanego. Funkcji "naked" są szczególnie przydatne w pisaniu sterowniki urządzeń wirtualnych.  Należy pamiętać, że **"naked"** atrybut jest prawidłowy tylko w x86 i ARM i nie jest dostępny na x64.
+
+## <a name="syntax"></a>Składnia
+
+```
+__declspec(naked) declarator
+```
+
+## <a name="remarks"></a>Uwagi
+
+Ponieważ **"naked"** atrybutu, dotyczy tylko definicja funkcji i nie jest modyfikatora typu, funkcji "naked" należy użyć składni atrybutów rozszerzonych i [__declspec](../cpp/declspec.md) — słowo kluczowe.
+
+
+Kompilator nie może wygenerować wbudowanej funkcji dla funkcji z atrybutem "naked", nawet wtedy, gdy funkcja jest również oznaczona za pomocą [__forceinline](inline-functions-cpp.md) — słowo kluczowe.
+
+Kompilator generuje błąd, jeśli **"naked"** atrybut jest stosowany do coś innego niż definicji metody nieczłonkowską.
+
+## <a name="examples"></a>Przykłady
+
+Ten kod definiuje funkcję za pomocą **"naked"** atrybutu:
+
+```
+__declspec( naked ) int func( formal_parameters ) {}
+```
+
+Lub też:
+
+```
+#define Naked __declspec( naked )
+Naked int func( formal_parameters ) {}
+```
+
+**"Naked"** atrybut ma wpływ jedynie charakter generowania kodu kompilator sekwencji prologu i epilogu funkcji. Nie ma wpływu na kod, który jest generowany w przypadku wywołania tych funkcji. W efekcie **"naked"** atrybut nie jest uważany za część typu funkcji i wskaźników do funkcji nie może mieć **"naked"** atrybutu. Ponadto **"naked"** atrybutu nie można zastosować do definicji danych. Na przykład ten przykładowy kod generuje błąd:
+
+```
+__declspec( naked ) int i;
+// Error--naked attribute not permitted on data declarations.
+```
+
+**"Naked"** atrybut ma zastosowanie tylko do definicji funkcji i nie można określić w prototypu funkcji. Na przykład tej deklaracji generuje błąd kompilatora:
+
+```
+__declspec( naked ) int func();  // Error--naked attribute not permitted on function declarations
+```
+
+**END specyficzny dla Microsoft**
+
+## <a name="see-also"></a>Zobacz także
+
+[__declspec](../cpp/declspec.md)<br/>
+[Słowa kluczowe](../cpp/keywords-cpp.md)<br/>
+[Wywołania funkcji Naked](../cpp/naked-function-calls.md)

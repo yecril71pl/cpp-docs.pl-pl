@@ -16,23 +16,25 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 804039142e63af838ddd7e8a899d616657596f66
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 08b92dcf1e51a58255254f36df5c140ea36343f2
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32383452"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46023374"
 ---
 # <a name="operands-and-expressions"></a>Operandy i wyrażenia
-"Argument" jest jednostką, na którym działa operatora. "Wyrażenie" jest sekwencją operatory i argumenty wykonująca dowolne z następujących działań:  
-  
--   Oblicza wartość  
-  
--   Określa obiekt lub funkcja  
-  
--   Generuje efekty uboczne  
-  
- Argumenty operacji w języku C obejmują stałe, identyfikatory, ciągów, wywołania funkcji, wyrażenia indeksu dolnego, wyrażenia wyboru elementu członkowskiego i złożonych wyrażeń utworzone przez połączenie argumentów operacji przy użyciu operatorów lub umieszczając operandów w nawiasach. Składnia dla tych argumentów operacji znajduje się w [wyrażenia podstawowe](../c-language/c-primary-expressions.md).  
-  
-## <a name="see-also"></a>Zobacz też  
- [Wyrażenia i przydziały](../c-language/expressions-and-assignments.md)
+
+"Argument" jest jednostką, na którym działa operatora. "Wyrażenie" jest sekwencji operatorów i argumentów operacji, który wykonuje dowolną kombinację tych akcji:
+
+- Oblicza wartość
+
+- Określa obiekt lub funkcja
+
+- Generuje efekty uboczne
+
+Argumenty operacji w języku C obejmują stałe, identyfikatory, ciągi, wywołania funkcji, wyrażenia indeksu dolnego, wyrażeń wyboru elementów członkowskich i złożonych wyrażeń sformułowany, łącząc operandy przy użyciu operatorów lub umieszczając operandy w nawiasach. Składnia służąca do tych operandów jest podawany w [wyrażenia podstawowe](../c-language/c-primary-expressions.md).
+
+## <a name="see-also"></a>Zobacz też
+
+[Wyrażenia i przydziały](../c-language/expressions-and-assignments.md)

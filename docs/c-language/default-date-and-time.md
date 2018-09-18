@@ -15,19 +15,19 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8646e612505099476b39109c3ef5f9084f7403ab
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 61f512d82ee33e0b900d61ff4a90c18336f88a16
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43752163"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46020662"
 ---
 # <a name="default-date-and-time"></a>Domyślne data i godzina
 
-**ANSI 3.8.8** definicje `__DATE__` i `__TIME__` when, odpowiednio, datę i godzinę tłumaczenia nie są dostępne  
-  
-Gdy system operacyjny nie poda datę i godzinę tłumaczenia, wartości domyślne `__DATE__` i `__TIME__` są `May 03 1957` i `17:00:00`.  
-  
+**ANSI 3.8.8** definicje `__DATE__` i `__TIME__` when, odpowiednio, datę i godzinę tłumaczenia nie są dostępne
+
+Gdy system operacyjny nie poda datę i godzinę tłumaczenia, wartości domyślne `__DATE__` i `__TIME__` są `May 03 1957` i `17:00:00`.
+
 ## <a name="see-also"></a>Zobacz też
 
 [Dyrektywy przetwarzania wstępnego](../c-language/preprocessing-directives.md)

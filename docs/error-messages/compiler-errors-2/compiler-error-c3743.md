@@ -1,5 +1,5 @@
 ---
-title: C3743 błąd kompilatora | Dokumentacja firmy Microsoft
+title: Błąd kompilatora C3743 | Dokumentacja firmy Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,40 +16,41 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: cc9a0bab67bb4fb15627dde42b1d538a0ecce9d5
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 99988a9a0fb3afb197e081c45f6f5446d55b801c
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33266519"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46019072"
 ---
-# <a name="compiler-error-c3743"></a>C3743 błąd kompilatora
-można tylko zaczepić/odczepić cały interfejs gdy parametr "layout_dependent" od event_receiver ma wartość true  
-  
- [__Unhook](../../cpp/unhook.md) funkcja różni się w liczbie parametrów, które przyjmuje na podstawie wartości przekazanych do `layout_dependent` parametru w [event_receiver](../../windows/event-receiver.md) klasy.  
-  
- Poniższy przykład generuje C3743:  
-  
-```  
-// C3743.cpp  
-#define _ATL_ATTRIBUTES 1  
-#include <atlbase.h>  
-#include <atlcom.h>  
-[module(name="xx")];  
-[object] __interface I { HRESULT f(); };  
-  
-[event_receiver(com, layout_dependent=true), coclass]  
-struct R : I {  
-        HRESULT f() {  
-      return 0;  
-   }  
-        R() {  
-   }  
-  
-   R(I* a) {  
-      __hook(I, a, &R::f);   // C3743  
-      // The following line resolves the error.  
-      // __hook(I, a);  
-   }  
-};  
+# <a name="compiler-error-c3743"></a>Błąd kompilatora C3743
+
+można tylko zaczepić/odczepić cały interfejs podczas parametr "layout_dependent" od event_receiver ma wartość true
+
+[__Unhook](../../cpp/unhook.md) funkcja różni się w liczbie parametrów, które przyjmuje oparte na wartości przekazane do `layout_dependent` parametru w [event_receiver](../../windows/event-receiver.md) klasy.
+
+Poniższy przykład spowoduje wygenerowanie C3743:
+
+```
+// C3743.cpp
+#define _ATL_ATTRIBUTES 1
+#include <atlbase.h>
+#include <atlcom.h>
+[module(name="xx")];
+[object] __interface I { HRESULT f(); };
+
+[event_receiver(com, layout_dependent=true), coclass]
+struct R : I {
+        HRESULT f() {
+      return 0;
+   }
+        R() {
+   }
+
+   R(I* a) {
+      __hook(I, a, &R::f);   // C3743
+      // The following line resolves the error.
+      // __hook(I, a);
+   }
+};
 ```

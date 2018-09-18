@@ -1,5 +1,5 @@
 ---
-title: Kompilatora (poziom 1) ostrzeżenie C4803 | Dokumentacja firmy Microsoft
+title: Kompilator ostrzeżenie (poziom 1) C4803 | Dokumentacja firmy Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,59 +16,61 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c574b51fc13f9224d48495f8b591a56abdc74966
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: b4ea3eba61df387364b5103de19a28d88fe6e52a
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33280832"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46024830"
 ---
-# <a name="compiler-warning-level-1-c4803"></a>Kompilator C4803 ostrzegawcze (poziom 1)
-"metoda": podniesiona metoda ma klasę magazynu inną od zdarzenia, "event"  
-  
-Metody zdarzenia muszą mieć tą samą klasę magazynu jako deklaracji zdarzenia. Kompilator dopasowuje metody zdarzeń, aby klasy magazynu są takie same.  
-  
-To ostrzeżenie może wystąpić, jeśli klasa implementująca zdarzenie z interfejsem. Kompilator nie generuje niejawnie metody wzrostu zdarzenie w interfejsie. Po zaimplementowaniu interfejsu w klasie kompilator niejawnie wygenerować metody wzrostu i metoda ta nie będzie wirtualnego, dlatego to ostrzeżenie. Aby uzyskać więcej informacji dotyczących zdarzeń, zobacz [zdarzeń](../../windows/event-cpp-component-extensions.md).  
-  
-Zobacz [ostrzeżenie](../../preprocessor/warning.md) pragma informacji na temat wyłączyć ostrzeżenia.  
-  
-## <a name="example"></a>Przykład  
- Poniższy przykład generuje C4803.  
-  
-```  
-// C4803.cpp  
-// compile with: /clr /W1  
-using namespace System;  
-  
-public delegate void Del();  
-  
-ref struct E {  
-   Del ^ _pd1;  
-   event Del ^ E1 {  
-      void add (Del ^ pd1) {  
-         _pd1 = dynamic_cast<Del ^>(Delegate::Combine(_pd1, pd1));  
-      }  
-  
-      void remove(Del^ pd1) {  
-         _pd1 = dynamic_cast<Del^> (Delegate::Remove(_pd1, pd1));  
-      }  
-  
-      virtual void raise() {   // C4803 warning (remove virtual)  
-         if (_pd1)  
-            _pd1();  
-      }  
-   }  
-  
-   void func() {  
-      Console::WriteLine("In E::func()");  
-   }  
-};  
-  
-int main() {  
-   E ^ ep = gcnew E;  
-   ep->E1 += gcnew Del(ep, &E::func);  
-   ep->E1();  
-   ep->E1 -= gcnew Del(ep, &E::func);  
-   ep->E1();  
-}  
-```  
+# <a name="compiler-warning-level-1-c4803"></a>Kompilator ostrzeżenie (poziom 1) C4803
+
+"method": podniesiona metoda ma klasę magazynu inną od zdarzenia, "event"
+
+Metody zdarzeń musi mieć tą samą klasę magazynu jako deklaracja zdarzenia. Kompilator dostosowuje metody zdarzeń, tak aby klasy magazynu są takie same.
+
+To ostrzeżenie może wystąpić, jeśli masz klasę, która implementuje zdarzenia z interfejsu. Kompilator nie generuje niejawnie metodę Zgłoś zdarzenie w interfejsie. Podczas implementowania interfejsu w klasie, kompilator niejawnie wygenerować metody wzrostu i tej metody nie będzie wirtualnego, dlatego to ostrzeżenie. Aby uzyskać więcej informacji na temat zdarzeń, zobacz [zdarzeń](../../windows/event-cpp-component-extensions.md).
+
+Zobacz [ostrzeżenie](../../preprocessor/warning.md) pragma informacji na temat wyłączyć ostrzeżenia.
+
+## <a name="example"></a>Przykład
+
+Poniższy przykład spowoduje wygenerowanie C4803.
+
+```
+// C4803.cpp
+// compile with: /clr /W1
+using namespace System;
+
+public delegate void Del();
+
+ref struct E {
+   Del ^ _pd1;
+   event Del ^ E1 {
+      void add (Del ^ pd1) {
+         _pd1 = dynamic_cast<Del ^>(Delegate::Combine(_pd1, pd1));
+      }
+
+      void remove(Del^ pd1) {
+         _pd1 = dynamic_cast<Del^> (Delegate::Remove(_pd1, pd1));
+      }
+
+      virtual void raise() {   // C4803 warning (remove virtual)
+         if (_pd1)
+            _pd1();
+      }
+   }
+
+   void func() {
+      Console::WriteLine("In E::func()");
+   }
+};
+
+int main() {
+   E ^ ep = gcnew E;
+   ep->E1 += gcnew Del(ep, &E::func);
+   ep->E1();
+   ep->E1 -= gcnew Del(ep, &E::func);
+   ep->E1();
+}
+```

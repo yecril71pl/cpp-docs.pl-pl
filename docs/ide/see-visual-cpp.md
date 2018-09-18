@@ -18,15 +18,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a03dd56320b948d47c765f253bf3e6b706ed2b56
-ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
+ms.openlocfilehash: d050625121314526dff687822b97d7b19475a5e8
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "33335507"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46025866"
 ---
 # <a name="ltseegt-visual-c"></a>&lt;zobacz&gt; (Visual C++)
-\<Zobacz > należy określić łącze znajdujących się w tekście. Użyj [ \<seealso >](../ide/seealso-visual-cpp.md) wskazująca tekstu, które mogą zostać wyświetlone w sekcji Zobacz też.  
+\<Zobacz > należy określić łącze między w tekście. Użyj [ \<SeeAlso — >](../ide/seealso-visual-cpp.md) do wskazania tekst, który możesz chcieć pojawiają się w sekcji Zobacz też.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -35,20 +35,20 @@ ms.locfileid: "33335507"
 ```  
   
 #### <a name="parameters"></a>Parametry  
- `member`  
- Odwołanie do elementu członkowskiego lub pola, które jest dostępne do wywoływania z bieżącym środowisku kompilacji.  Nazwę należy ująć w cudzysłów pojedynczym lub podwójnym.  
+*Element członkowski*<br/>
+Odwołanie do elementu członkowskiego lub pola, które są dostępne do wywoływania z bieżącym środowisku kompilacji.  Nazwę należy ująć w pojedyncze lub podwójne znaki cudzysłowu.  
   
- Kompilator sprawdza, czy element podanego kodu istnieje i jest rozpoznawany jako `member` do nazwy elementu w danych wyjściowych XML.  Kompilator generuje ostrzeżenie, jeśli nie znajdzie `member`.  
+ Kompilator sprawdza, czy dany element kodu istnieje i jest rozpoznawana jako `member` do nazwy elementu w danych wyjściowych XML.  Kompilator generuje ostrzeżenie, jeśli nie znajdzie `member`.  
   
 ## <a name="remarks"></a>Uwagi  
- Kompiluj z użyciem [/doc](../build/reference/doc-process-documentation-comments-c-cpp.md) na przetwarzanie komentarzy dokumentacji do pliku.  
+ Kompiluj przy użyciu [/doc](../build/reference/doc-process-documentation-comments-c-cpp.md) do Przetwarzaj komentarze dokumentacji do pliku.  
   
- Zobacz [ \<podsumowania >](../ide/summary-visual-cpp.md) przykład przy użyciu \<zobacz >.  
+ Zobacz [ \<podsumowania >](../ide/summary-visual-cpp.md) na przykład za pomocą \<zobacz >.  
   
- Kompilator Visual C++ podejmie próbę rozpoznawania odwołań cref w jednym przebiegu za pośrednictwem komentarzy do dokumentacji.  W związku z tym jeśli przy użyciu reguł wyszukiwania C++, symbol nie znaleziono przez kompilator, odwołanie zostanie oznaczona jako nierozwiązane. Zobacz [ \<seealso >](../ide/seealso-visual-cpp.md) Aby uzyskać więcej informacji.  
+ Kompilator języka Visual C++ będzie próbował rozpoznać odwołania cref w jednym przebiegu za pomocą komentarzy dokumentacji.  W związku z tym, jeśli przy użyciu reguł wyszukiwania C++, symbolu nie można odnaleźć kompilatora odwołania zostaną oznaczone jako nierozwiązane. Zobacz [ \<SeeAlso — >](../ide/seealso-visual-cpp.md) Aby uzyskać więcej informacji.  
   
 ## <a name="example"></a>Przykład  
- Poniższy przykład pokazuje, jak możesz wprowadzić cref odwołanie do typu ogólnego, taki sposób, że kompilator będzie rozpoznać odwołania.  
+ Poniższy przykład pokazuje, jak wprowadzisz cref odwołanie do typu ogólnego, taki sposób, że kompilator będzie rozpoznać odwołania.  
   
 ```  
 // xml_see_cref_example.cpp  

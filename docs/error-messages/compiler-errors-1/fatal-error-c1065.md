@@ -16,16 +16,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e211af9390f9102fcd7b2514aed900140cd531e6
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 865e353af85b392c1da696166f77a1e28acd8475
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33224278"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46022958"
 ---
 # <a name="fatal-error-c1065"></a>Błąd krytyczny C1065
-ograniczenie kompilatora: Brak tagów  
-  
- Plik źródłowy zawiera więcej niż 65,523 klasy, struktury, złożenia, przestrzeni nazw lub wyliczenia.  
-  
- Podziel go na mniejsze pliki.
+
+ograniczenie kompilatora: Brak tagów
+
+Plik źródłowy zawiera więcej niż 65,523 klasy, struktury, Unii, przestrzenie nazw lub typów wyliczeniowych.
+
+Plik jest podzielony na mniejsze pliki.

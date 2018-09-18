@@ -16,16 +16,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7f99681ff7219c46820da4c909a6f4eddccdabf6
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 50103f7445096e553a510da6272dd4be1886b710
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33320885"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46017940"
 ---
 # <a name="nmake-fatal-error-u1055"></a>Błąd krytyczny NMAKE U1055
-Brak miejsca w środowisku  
-  
- System operacyjny za mało miejsca na zmiennych środowiskowych.  
-  
- Zwiększ ilość miejsca na środowisku albo ustawić mniejszą liczbę zmiennych środowiskowych.
+
+Brak miejsca w środowisku
+
+Za mało miejsca dla zmiennych środowiskowych dla systemu operacyjnego.
+
+Zwiększ miejsca w środowisku lub mniej zmienne środowiskowe.

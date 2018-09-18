@@ -19,12 +19,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: cb54752efb23db7599538e6dc2b71ea3bf5eb3a3
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: cf12d517647e36c8a0d9428b818f3812bfea2e1d
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43197338"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46020619"
 ---
 # <a name="subscript-operator-"></a>Operator indeksu dolnego]
 
@@ -120,6 +120,6 @@ Operator indeksu dolnego jest przemiennego. W związku z tym, wyrażenia *tablic
 
 [Wyrażenia przyrostków](../cpp/postfix-expressions.md)<br/>
 [Wbudowane operatory, pierwszeństwo i kojarzenie języka C++](../cpp/cpp-built-in-operators-precedence-and-associativity.md)<br/>
-[Tablice](../cpp/arrays-cpp.md)
-[tablice jednowymiarowe](../c-language/one-dimensional-arrays.md)<br/>
+[Tablice](../cpp/arrays-cpp.md)<br/>
+[Tablice jednowymiarowe](../c-language/one-dimensional-arrays.md)<br/>
 [Tablice wielowymiarowe](../c-language/multidimensional-arrays-c.md)<br/>

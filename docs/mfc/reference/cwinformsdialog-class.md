@@ -24,12 +24,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 324df7657be7f74cade6fc4b50b98d6790245ab4
-ms.sourcegitcommit: 76fd30ff3e0352e2206460503b61f45897e60e4f
+ms.openlocfilehash: 69882f9b22d11de139951b6196b58729af70a36a
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/13/2018
-ms.locfileid: "39027092"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46018148"
 ---
 # <a name="cwinformsdialog-class"></a>Klasa CWinFormsDialog
 Otoka klasy okna dialogowgo MFC, który obsługuje formant użytkownika interfejsu Windows Forms.  
@@ -43,8 +43,8 @@ class CWinFormsDialog :
 ```  
   
 #### <a name="parameters"></a>Parametry  
- `TManagedControl`  
- Formant użytkownika .NET Framework, która mają być wyświetlane w aplikacji MFC.  
+*TManagedControl*<br/>
+Formant użytkownika .NET Framework, która mają być wyświetlane w aplikacji MFC.  
   
 ## <a name="members"></a>Elementy członkowskie  
   

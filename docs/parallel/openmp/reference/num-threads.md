@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e7dd57950d083c4f89ee2aa5962ad1e07a55a9a8
-ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
+ms.openlocfilehash: d3485d534cf279863b241abcd26195cdde7fea19
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33691889"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46016289"
 ---
 # <a name="numthreads"></a>num_threads
 Ustawia liczbę wątków w zespole wątku.  
@@ -32,16 +32,15 @@ Ustawia liczbę wątków w zespole wątku.
 num_threads(num)  
 ```  
   
+### <a name="parameters"></a>Parametry
+  
+*num*<br/>
+Liczba wątków  
+  
 ## <a name="remarks"></a>Uwagi  
- w przypadku gdy  
+ `num_threads` Klauzuli ma taką samą funkcjonalność jak [omp_set_num_threads](../../../parallel/openmp/reference/omp-set-num-threads.md) funkcji.  
   
- `num`  
- Liczba wątków  
-  
-## <a name="remarks"></a>Uwagi  
- `num_threads` Klauzuli ma te same funkcje co [omp_set_num_threads](../../../parallel/openmp/reference/omp-set-num-threads.md) funkcji.  
-  
- `num_threads` ma zastosowanie do następujących dyrektyw:  
+ `num_threads` mają zastosowanie do następujących dyrektywach:  
   
 -   [parallel](../../../parallel/openmp/reference/parallel.md)  
   
@@ -52,7 +51,7 @@ num_threads(num)
  Aby uzyskać więcej informacji, zobacz [2.3 konstrukcja równoległa](../../../parallel/openmp/2-3-parallel-construct.md).  
   
 ## <a name="example"></a>Przykład  
- Zobacz [równoległych](../../../parallel/openmp/reference/parallel.md) przykład przy użyciu `num_threads` klauzuli.  
+ Zobacz [równoległe](../../../parallel/openmp/reference/parallel.md) na przykład za pomocą `num_threads` klauzuli.  
   
 ## <a name="see-also"></a>Zobacz też  
  [Klauzule](../../../parallel/openmp/reference/openmp-clauses.md)

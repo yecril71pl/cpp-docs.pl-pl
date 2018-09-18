@@ -16,16 +16,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 17ae5ac4abbdabc68813a7f1d8f25cac138961e6
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: ea0aa3daada09f5e1daae7f50caeb214db1aaadd
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33294706"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46020592"
 ---
 # <a name="linker-tools-error-lnk1143"></a>Błąd narzędzi konsolidatora LNK1143
-nieprawidłowy lub uszkodzony plik: Brak symbolu dla sekcji COMDAT numer sekcji  
-  
- Ten błąd może być spowodowany pliku obiektu jest uszkodzony.  
-  
- Skompiluj ponownie plik.
+
+nieprawidłowy lub uszkodzony plik: Brak symbolu dla sekcji COMDAT numer sekcji
+
+Ten błąd może być spowodowany, jeśli plik obiektu jest uszkodzona.
+
+Ponownie skompiluj plik.

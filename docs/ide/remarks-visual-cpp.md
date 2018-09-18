@@ -18,12 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 409f10dffdf6816f3ff0ab4e71060c9bcb6eaf9f
-ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
+ms.openlocfilehash: 5bf60222b276050af5296d678985eda8fd12948b
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43684215"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46027573"
 ---
 # <a name="ltremarksgt-visual-c"></a>&lt;Uwagi&gt; (Visual C++)
 \<Uwagi > tag jest używany do dodawania informacji o typie, informacje uzupełniające określony za pomocą [ \<podsumowania >](../ide/summary-visual-cpp.md). Te informacje są wyświetlane w [przeglądarki obiektów](/visualstudio/ide/viewing-the-structure-of-code) i w raporcie Web komentarzy kodu.  
@@ -35,8 +35,8 @@ ms.locfileid: "43684215"
 ```  
   
 #### <a name="parameters"></a>Parametry  
- `description`  
- Opis elementu członkowskiego.  
+*Opis elementu*<br/>
+Opis elementu członkowskiego.  
   
 ## <a name="remarks"></a>Uwagi  
  Kompiluj przy użyciu [/doc](../build/reference/doc-process-documentation-comments-c-cpp.md) do Przetwarzaj komentarze dokumentacji do pliku.  

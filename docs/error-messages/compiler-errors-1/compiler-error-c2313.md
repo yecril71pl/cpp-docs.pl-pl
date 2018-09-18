@@ -1,5 +1,5 @@
 ---
-title: C2313 błąd kompilatora | Dokumentacja firmy Microsoft
+title: Błąd kompilatora C2313 | Dokumentacja firmy Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,30 +16,31 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 984e9e5e9163137537c9da2cd8c14bd1271ebeb0
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 57e291788f261f0e62bd476b3027dfa809594ce3
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33169975"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46024943"
 ---
-# <a name="compiler-error-c2313"></a>C2313 błąd kompilatora
-"type1": zostanie przechwycony przez odwołanie ("type2") w wierszu o numerze  
-  
- Typ wyjątku ma dwóch metod obsługi. Typ drugiego catch jest odwołanie do typu pierwszego.  
-  
- Poniższy przykład generuje C2313:  
-  
-```  
-// C2313.cpp  
-// compile with: /EHsc  
-#include <eh.h>  
-class C {};  
-int main() {  
-    try {  
-        throw "ooops!";  
-    }  
-    catch( C& ) {}  
-    catch( C ) {}   // C2313  
-}  
+# <a name="compiler-error-c2313"></a>Błąd kompilatora C2313
+
+'Typ1': zostanie przechwycony przez odwołanie ('Typ2') w wierszu o numerze
+
+Typ wyjątku ma dwie procedury obsługi. Typ drugiego catch to odwołanie do typu pierwszego.
+
+Poniższy przykład spowoduje wygenerowanie C2313:
+
+```
+// C2313.cpp
+// compile with: /EHsc
+#include <eh.h>
+class C {};
+int main() {
+    try {
+        throw "ooops!";
+    }
+    catch( C& ) {}
+    catch( C ) {}   // C2313
+}
 ```

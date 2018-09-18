@@ -16,32 +16,36 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 090fd7ed027738ebe7bc9276e3b3f124b9212c4a
-ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
+ms.openlocfilehash: 52ea719a2c9296ca1e64d881ac150994c041e206
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/02/2018
-ms.locfileid: "39463470"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46018733"
 ---
 # <a name="varianttsetstring"></a>_variant_t::SetString
-**Microsoft Specific**  
-  
- Przypisuje ten ciąg `_variant_t` obiektu.  
-  
-## <a name="syntax"></a>Składnia  
-  
-```  
-void SetString(const char* pSrc);  
-```  
-  
-#### <a name="parameters"></a>Parametry  
- *pSrc*  
- Wskaźnik do ciągu znaków.  
-  
-## <a name="remarks"></a>Uwagi  
- Konwertuje ciąg znaków ANSI Unicode `BSTR` ciąg, a następnie przypisuje go do tego `_variant_t` obiektu.  
-  
- **END specyficzny dla Microsoft**  
-  
-## <a name="see-also"></a>Zobacz także  
- [_variant_t, klasa](../cpp/variant-t-class.md)
+
+**Microsoft Specific**
+
+Przypisuje ten ciąg `_variant_t` obiektu.
+
+## <a name="syntax"></a>Składnia
+
+```
+void SetString(const char* pSrc);
+```
+
+#### <a name="parameters"></a>Parametry
+
+*pSrc*<br/>
+Wskaźnik do ciągu znaków.
+
+## <a name="remarks"></a>Uwagi
+
+Konwertuje ciąg znaków ANSI Unicode `BSTR` ciąg, a następnie przypisuje go do tego `_variant_t` obiektu.
+
+**END specyficzny dla Microsoft**
+
+## <a name="see-also"></a>Zobacz także
+
+[_variant_t, klasa](../cpp/variant-t-class.md)

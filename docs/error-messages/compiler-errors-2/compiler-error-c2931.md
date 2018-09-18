@@ -1,5 +1,5 @@
 ---
-title: C2931 błąd kompilatora | Dokumentacja firmy Microsoft
+title: Błąd kompilatora C2931 | Dokumentacja firmy Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,45 +16,46 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7e5dd8db3d39ff8aec2084736483c4d325d81314
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 68c7f3a2525974c1d6c2cc26719e284538cae332
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33246973"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46023556"
 ---
-# <a name="compiler-error-c2931"></a>C2931 błąd kompilatora
-"class": typ klasy identyfikator ponownie zdefiniować jako funkcję elementu członkowskiego 'Identyfikator'  
-  
- Klasy ogólne lub szablonu nie można użyć jako funkcję elementu członkowskiego z innej klasy.  
-  
- Ten błąd może być spowodowany nieprawidłowo są dopasowywane w nawiasach klamrowych.  
-  
- Poniższy przykład generuje C2931:  
-  
-```  
-// C2931.cpp  
-// compile with: /c  
-template<class T>   
-struct TC { };   
-struct MyStruct {  
-   void TC<int>();   // C2931  
-};  
-  
-struct TC2 { };   
-struct MyStruct2 {  
-   void TC2();  
-};  
-```  
-  
- C2931 może również wystąpić, gdy użycie typów ogólnych:  
-  
-```  
-// C2931b.cpp  
-// compile with: /clr /c  
-generic<class T> ref struct GC {};  
-struct MyStruct {  
-   void GC<int>();   // C2931  
-   void GC2();   // OK  
-};  
+# <a name="compiler-error-c2931"></a>Błąd kompilatora C2931
+
+"class": typ klasy identyfikator ponownie definiowana jako funkcji składowej typu 'Identyfikator'
+
+Nie można użyć klasy generyczny lub szablonu jako funkcję członkowską innej klasy.
+
+Ten błąd może być spowodowany nawiasy klamrowe są nieprawidłowo dopasowywane.
+
+Poniższy przykład spowoduje wygenerowanie C2931:
+
+```
+// C2931.cpp
+// compile with: /c
+template<class T>
+struct TC { };
+struct MyStruct {
+   void TC<int>();   // C2931
+};
+
+struct TC2 { };
+struct MyStruct2 {
+   void TC2();
+};
+```
+
+C2931 może również wystąpić, gdy za pomocą typów ogólnych:
+
+```
+// C2931b.cpp
+// compile with: /clr /c
+generic<class T> ref struct GC {};
+struct MyStruct {
+   void GC<int>();   // C2931
+   void GC2();   // OK
+};
 ```

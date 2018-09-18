@@ -1,5 +1,5 @@
 ---
-title: Błąd cxx0032 programu Expression Evaluator | Dokumentacja firmy Microsoft
+title: Błąd ewaluatora wyrażeń CXX0032 | Dokumentacja firmy Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,16 +17,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: bd1df20ab022df9ce1321c2f6de77bf7591fec3d
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: a320fb08eaf19b5ed53000ffecd17d747e7a3000
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33304729"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46019708"
 ---
 # <a name="expression-evaluator-error-cxx0032"></a>Błąd CXX0032 programu Expression Evaluator
-dzielenie przez 0  
-  
- Wyrażenie zawiera dzielnik zero, co jest niedozwolone. To dzielnik może być literał liczby zero lub może być wyrażeniem od zera.  
-  
- Ten błąd jest taki sam jak CAN0032.
+
+dzielenie przez 0
+
+Wyrażenie zawiera dzielnik całkowity równy zero, co jest niedozwolone. Dzielnik. to może być literał liczby zero lub może to być wyrażenie zwracające wartość zero.
+
+Ten błąd jest taka sama jak CAN0032.

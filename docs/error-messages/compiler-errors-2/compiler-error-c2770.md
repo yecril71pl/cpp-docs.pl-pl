@@ -1,5 +1,5 @@
 ---
-title: C2770 błąd kompilatora | Dokumentacja firmy Microsoft
+title: Błąd kompilatora C2770 | Dokumentacja firmy Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,31 +16,32 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0c54ae3c559d0a523bc25831fa71e37531295489
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 8b206f7667855e61bfb3fe5e53cdd82444597162
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33233583"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46027014"
 ---
-# <a name="compiler-error-c2770"></a>C2770 błąd kompilatora
-Nieprawidłowy template_or_generic jawne argumenty dla "template"  
-  
- Funkcja szablonu kandydatów jawnego szablonu lub argumentów ogólnych spowodowała typy certyfikatów niedozwolonych funkcji.  
-  
- Poniższy przykład generuje C2770:  
-  
-```  
-// C2770.cpp  
-#include <stdio.h>  
-template <class T>  
-int f(typename T::B*);   // expects type with member B  
-  
-struct Err {};  
-  
-int main() {  
-   f<int>(0);   // C2770 int has no B  
-   // try the following line instead  
-   f<OK>(0);  
-}  
+# <a name="compiler-error-c2770"></a>Błąd kompilatora C2770
+
+Nieprawidłowe jawne template_or_generic następującej liczby argumentów: "szablon"
+
+W wyniku kandydatów szablonów funkcji za pomocą jawnego szablonu lub argumenty ogólne typy funkcji niedozwolonych.
+
+Poniższy przykład spowoduje wygenerowanie C2770:
+
+```
+// C2770.cpp
+#include <stdio.h>
+template <class T>
+int f(typename T::B*);   // expects type with member B
+
+struct Err {};
+
+int main() {
+   f<int>(0);   // C2770 int has no B
+   // try the following line instead
+   f<OK>(0);
+}
 ```

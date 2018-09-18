@@ -1,5 +1,5 @@
 ---
-title: C2927 błąd kompilatora | Dokumentacja firmy Microsoft
+title: Błąd kompilatora C2927 | Dokumentacja firmy Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,14 +16,15 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ee2d9057019c073035dfc07399e8c56580c8052d
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: c37b45cb86793c3c4ca7066f9d7adc047188f658
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33241726"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46026339"
 ---
-# <a name="compiler-error-c2927"></a>C2927 błąd kompilatora
-"Funkcja": szablon funkcji musi zostać wywołany z co najmniej jeden argument  
-  
- Nie można wywołać bez argumentów funkcji szablonu. Typy argumentów szablonu określa wersję funkcji do generowania.
+# <a name="compiler-error-c2927"></a>Błąd kompilatora C2927
+
+'Funkcja': szablon funkcji musi zostać wywołany z co najmniej jednego argumentu
+
+Nie można wywołać funkcji szablonu, bez argumentów. Typy argumentów szablonu określa, jakie wersje funkcji do generowania.

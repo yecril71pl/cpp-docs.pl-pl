@@ -1,5 +1,5 @@
 ---
-title: _CIatan2 | Dokumentacja firmy Microsoft
+title: _Ciatan2 — | Dokumentacja firmy Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -29,30 +29,33 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 33abe3dd332bdb55decde308d67d0e1af13e13f8
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: dbeca42c9b00558823e36463eab39d5caabec632
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32387148"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46016403"
 ---
 # <a name="ciatan2"></a>_CIatan2
-Oblicza tangens *x* / *y* gdzie *x* i *y* wartości wierzchołku stosu.  
-  
-## <a name="syntax"></a>Składnia  
-  
-```  
-void __cdecl _CIatan2();  
-```  
-  
-## <a name="remarks"></a>Uwagi  
- Ta wersja `atan2` funkcja ma specjalne Konwencja wywoływania obsługującą przez kompilator. Przyspiesza wykonywanie, ponieważ uniemożliwia kopie generowany, a ułatwia alokacja rejestru.  
-  
- Wartość wynikową spoczywa na wierzchu stosu.  
-  
-## <a name="requirements"></a>Wymagania  
- **Platforma:** x86  
-  
-## <a name="see-also"></a>Zobacz też  
- [Alfabetyczne odwołanie funkcji](../c-runtime-library/reference/crt-alphabetical-function-reference.md)   
- [atan, atanf, atanl, atan2, atan2f, atan2l](../c-runtime-library/reference/atan-atanf-atanl-atan2-atan2f-atan2l.md)
+
+Oblicza arcus tangens *x* / *y* gdzie *x* i *y* wartości na górze stosu.
+
+## <a name="syntax"></a>Składnia
+
+```
+void __cdecl _CIatan2();
+```
+
+## <a name="remarks"></a>Uwagi
+
+Ta wersja `atan2` funkcja ma specjalne Konwencja wywoływania obsługującą przez kompilator. Jego przyspiesza wykonywanie, ponieważ uniemożliwia kopie generowany i pomaga w alokacja rejestru.
+
+Wartość wynikowa są wypychane na górze stosu.
+
+## <a name="requirements"></a>Wymagania
+ **Platforma:** x86
+
+## <a name="see-also"></a>Zobacz też
+
+[Alfabetyczne zestawienie funkcji](../c-runtime-library/reference/crt-alphabetical-function-reference.md)<br/>
+[atan, atanf, atanl, atan2, atan2f, atan2l](../c-runtime-library/reference/atan-atanf-atanl-atan2-atan2f-atan2l.md)

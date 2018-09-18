@@ -19,15 +19,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ff10cb3958ffa82e3ef2bb70d8370d1a52c4a929
-ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
+ms.openlocfilehash: 8f0cd5e025e8f8b442c47cb5e115766478ff1d4f
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33695749"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46019909"
 ---
 # <a name="runtimeexception-class"></a>runtime_exception — Klasa
-Typ podstawowy dla wyjątków w bibliotece C++ Accelerated ogromną równoległości (AMP).  
+Typ podstawowy dla wyjątków w bibliotece C++ Accelerated Massive Parallelism (AMP).  
   
 ### <a name="syntax"></a>Składnia  
   
@@ -55,7 +55,7 @@ class runtime_exception : public std::exception;
   
 |Nazwa|Opis|  
 |----------|-----------------|  
-|[operator=](#operator_eq)|Kopiuje zawartość określonego `runtime_exception` obiektu do tego.|  
+|[operator=](#operator_eq)|Kopiuje zawartość określonego `runtime_exception` obiektu do wskazanego.|  
   
 ## <a name="inheritance-hierarchy"></a>Hierarchia dziedziczenia  
  `exception`  
@@ -85,20 +85,20 @@ runtime_exception(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `_Message`  
- Opis błędu, który spowodował wyjątek.  
+*_Message*<br/>
+Opis błędu, który spowodował wyjątek.  
   
- `_Hresult`  
- HRESULT błędu, który spowodował wyjątek.  
+*_Hresult*<br/>
+HRESULT błędu, który spowodował wyjątek.  
   
- `_Other`  
- `runtime_exception` Obiektu do skopiowania.  
+*_Inne*<br/>
+`runtime_exception` Obiektu do skopiowania.  
   
 ### <a name="return-value"></a>Wartość zwracana  
  `runtime_exception` Obiektu.  
 
 ## <a name="dtor"></a>  ~ runtime_exception — destruktor  
-Niszczy obiektu.  
+Niszczy obiekt.  
   
 ### <a name="syntax"></a>Składnia  
   
@@ -106,7 +106,7 @@ Niszczy obiektu.
 virtual ~runtime_exception() throw();  
 ```  
   
-## <a name="runtime_exception__get_error_code"></a>  get_error_code   
+## <a name="runtime_exception__get_error_code"></a>  get_error_code —   
 Zwraca kod błędu, który spowodował wyjątek.  
   
 ### <a name="syntax"></a>Składnia  
@@ -119,7 +119,7 @@ HRESULT get_error_code() const throw();
  HRESULT błędu, który spowodował wyjątek.  
   
 ## <a name="runtime_exception__operator_eq"></a>  operator =   
-  Kopiuje zawartość określonego `runtime_exception` obiektu do tego.  
+  Kopiuje zawartość określonego `runtime_exception` obiektu do wskazanego.  
   
 ### <a name="syntax"></a>Składnia  
   
@@ -128,11 +128,11 @@ runtime_exception & operator= (    const runtime_exception & _Other ) throw();
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `_Other`  
- `runtime_exception` Obiektu do skopiowania.  
+*_Inne*<br/>
+`runtime_exception` Obiektu do skopiowania.  
   
 ### <a name="return-value"></a>Wartość zwracana  
- Odwołanie do tego `runtime_exception` obiektu.  
+ Odwołanie do `runtime_exception` obiektu.  
   
 
   

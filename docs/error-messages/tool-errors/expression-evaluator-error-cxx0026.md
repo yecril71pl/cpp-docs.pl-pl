@@ -1,5 +1,5 @@
 ---
-title: Błąd cxx0026 programu Expression Evaluator | Dokumentacja firmy Microsoft
+title: Błąd ewaluatora wyrażeń CXX0026 | Dokumentacja firmy Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,18 +17,19 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 45f95a69827d3753307e210b348a6f490a756240
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: b90950807cb394412eabcd1af878c63f48e610cd
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33299724"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46017933"
 ---
 # <a name="expression-evaluator-error-cxx0026"></a>Błąd CXX0026 programu Expression Evaluator
-Nieprawidłowy format ciągu  
-  
- Ciąg formatu została określona nieprawidłowo. Sprawdź składnię wyrażenia.  
-  
- Ten błąd jest taki sam jak CAN0026.  
-  
- Aby uzyskać więcej informacji, zobacz [specyfikatory formatu w C++](/visualstudio/debugger/format-specifiers-in-cpp).
+
+Niepoprawny format ciągu
+
+Nieprawidłowo określono ciąg formatu. Sprawdź składnię wyrażenia.
+
+Ten błąd jest taka sama jak CAN0026.
+
+Aby uzyskać więcej informacji, zobacz [specyfikatory formatu w C++](/visualstudio/debugger/format-specifiers-in-cpp).

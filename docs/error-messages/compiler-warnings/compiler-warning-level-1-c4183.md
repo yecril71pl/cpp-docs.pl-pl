@@ -1,5 +1,5 @@
 ---
-title: Kompilatora (poziom 1) ostrzeżenie C4183 | Dokumentacja firmy Microsoft
+title: Kompilator ostrzeżenie (poziom 1) C4183 | Dokumentacja firmy Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,26 +16,27 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2a271c12facaacdd07b4a664396c36c7301ac2f4
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 2753b8fc47de3363c38ed6ee4dedeaf8d085c485
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33277475"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46022439"
 ---
-# <a name="compiler-warning-level-1-c4183"></a>Kompilator C4183 ostrzegawcze (poziom 1)
-'Identyfikator': Brak typu zwracanego; przyjęto, że funkcją członkowską zwracającą "int"  
-  
- Definicji wbudowanej funkcji Członkowskich w klasie lub strukturze nie ma zwracanego typu. Ta funkcja członkowska przyjęto domyślną zwracany typ `int`.  
-  
- Poniższy przykład generuje C4183:  
-  
-```  
-// C4183.cpp  
-// compile with: /W1 /c  
-#pragma warning(disable : 4430)  
-class MyClass1;  
-class MyClass2 {  
-   MyClass1() {};   // C4183  
-};  
+# <a name="compiler-warning-level-1-c4183"></a>Kompilator ostrzeżenie (poziom 1) C4183
+
+'Identyfikator': Brak typu zwracanego; przyjmuje się, że jest funkcją składową zwracającą "int"
+
+Wewnętrznej definicji funkcji składowej klasy lub struktury nie ma typ zwracany. Ta funkcja elementu członkowskiego przyjęto domyślną zwracany typ `int`.
+
+Poniższy przykład spowoduje wygenerowanie C4183:
+
+```
+// C4183.cpp
+// compile with: /W1 /c
+#pragma warning(disable : 4430)
+class MyClass1;
+class MyClass2 {
+   MyClass1() {};   // C4183
+};
 ```

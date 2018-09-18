@@ -1,5 +1,5 @@
 ---
-title: Błąd cxx0029 programu Expression Evaluator | Dokumentacja firmy Microsoft
+title: Błąd ewaluatora wyrażeń CXX0029 | Dokumentacja firmy Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,18 +17,19 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 216474bbb7a67cb3c435770ab418ab4b7f4e5c4f
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 687708db71eedf9b8f62dc88efc1bfe473cde1d4
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33297326"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46017017"
 ---
 # <a name="expression-evaluator-error-cxx0029"></a>Błąd CXX0029 programu Expression Evaluator
-nie wskaźnika — struktura  
-  
- Operatora wyboru elementu członkowskiego (**->**) została zastosowana do wyrażenia, który nie jest wskaźnik do struktury.  
-  
- Sprawdź, czy całe wyrażenie jest prawidłowo ujętego w nawiasy, lub typ rzutowania wyrażenia adres na typ wskaźnika odpowiednie struktury.  
-  
- Ten błąd jest taki sam jak CAN0029.
+
+nie wskaźnik struktury
+
+Operator wyboru składowej (**->**) został zastosowany do wyrażenia, który nie jest wskaźnikiem do struktury.
+
+Sprawdź, czy całe wyrażenie jest poprawnie ujęty w nawiasy, lub typ rzutowania wyrażenia adresu na typ wskaźnika odpowiednią strukturą.
+
+Ten błąd jest taka sama jak CAN0029.

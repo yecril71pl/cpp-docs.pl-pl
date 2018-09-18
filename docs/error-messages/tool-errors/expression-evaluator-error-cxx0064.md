@@ -1,5 +1,5 @@
 ---
-title: Błąd cxx0064 programu Expression Evaluator | Dokumentacja firmy Microsoft
+title: Błąd ewaluatora wyrażeń CXX0064 | Dokumentacja firmy Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,26 +17,27 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7964eac628fa89695d1757cff8b7b329fd7fe713
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: b16133484af5a2225f79c5d293a2c8edd948bdb2
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33302139"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46025896"
 ---
 # <a name="expression-evaluator-error-cxx0064"></a>Błąd CXX0064 programu Expression Evaluator
-Nie można ustawić punktu przerwania na powiązanej wirtualnej funkcji członkowskiej  
-  
- Punkt przerwania został ustawiony wirtualną funkcją członkowską za pomocą wskaźnika do obiektu, takie jak:  
-  
-```  
-pClass->vfunc( int );  
-```  
-  
- Punkt przerwania można ustawić dla wirtualnej funkcji wprowadzając klasy, takich jak:  
-  
-```  
-Class::vfunc( int );  
-```  
-  
- Ten błąd jest taki sam jak CAN0064.
+
+Nie można ustawić punktu przerwania w powiązanej wirtualnej funkcji składowej
+
+Punkt przerwania ustawiono funkcja wirtualna elementu członkowskiego, za pomocą wskaźnika do obiektu, takie jak:
+
+```
+pClass->vfunc( int );
+```
+
+Dla wirtualnej funkcji można ustawić punktu przerwania, wprowadzając klasy, takie jak:
+
+```
+Class::vfunc( int );
+```
+
+Ten błąd jest taka sama jak CAN0064.

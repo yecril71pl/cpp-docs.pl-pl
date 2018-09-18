@@ -1,5 +1,5 @@
 ---
-title: Kompilatora (poziom 1) ostrzeżenie C4342 | Dokumentacja firmy Microsoft
+title: Kompilator ostrzeżenie (poziom 1) C4342 | Dokumentacja firmy Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,47 +16,48 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1df710912338aa540dd2a29f859fc4533445b09b
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 6aeb582ff891cc9d186604af5d2ca2c2844b1cb0
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33281290"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46016263"
 ---
-# <a name="compiler-warning-level-1-c4342"></a>Kompilator C4342 ostrzegawcze (poziom 1)
-Zmiana zachowania: "*funkcja*" o nazwie, ale operator elementu członkowskiego został wywołany w poprzednich wersjach  
-  
- W wersjach programu Visual C++ przed Visual Studio 2002, Wywołano element członkowski, ale to zachowanie została zmieniona i kompilator teraz znajduje najlepsze dopasowanie w zakresie przestrzeni nazw.  
-  
- Jeśli znaleziono operator elementu członkowskiego, kompilator będzie wcześniej nie należy wziąć pod uwagę przestrzeni nazw operatorów zakresu. Jeśli istnieje lepsze dopasowanie w zakresie przestrzeni nazw, bieżącego kompilatora prawidłowo wywołuje, natomiast poprzedniej kompilatory nie uważają, że.  
-  
- Po pomyślnie portu kodu do wersji bieżącej, należy wyłączyć to ostrzeżenie.  Kompilator może dać wyniki fałszywie dodatnie, generowanie tego ostrzeżenia dla kodu w przypadku, gdy nie ma żadnej zmiany zachowania.  
-  
- To ostrzeżenie jest domyślnie wyłączone. Aby uzyskać więcej informacji, zobacz [kompilatora ostrzeżeń czy są wyłączone domyślnie](../../preprocessor/compiler-warnings-that-are-off-by-default.md).  
-  
- Poniższy przykład generuje C4342:  
-  
-```cpp  
-// C4342.cpp  
-// compile with: /EHsc /W1  
-#include <fstream>  
-#pragma warning(default: 4342)  
-using namespace std;  
-struct X : public ofstream {  
-   X();  
-};  
-  
-X::X() {  
-   open( "ofs_bug_ev.txt." );  
-   if ( is_open() ) {  
-      *this << "Text" << "<-should be text" << endl;   // C4342  
-      *this << ' ' << "<-should be space symbol" << endl;   // C4342  
-   }  
-}  
-  
-int main() {  
-   X b;  
-   b << "Text" << "<-should be text" << endl;  
-   b << ' ' << "<-should be space symbol" << endl;  
-}  
+# <a name="compiler-warning-level-1-c4342"></a>Kompilator ostrzeżenie (poziom 1) C4342
+
+Zmiana zachowania: "*funkcja*" o nazwie, ale operator składowej został wywołany w poprzednich wersjach
+
+W wersjach programu Visual C++ przed Visual Studio 2002, element członkowski został wywołany, ale to zachowanie została zmieniona i kompilator znajdzie teraz najlepsze dopasowanie w zakresie przestrzeni nazw.
+
+Jeśli operator składowej został znaleziony, kompilator będzie wcześniej nie należy wziąć pod uwagę dowolnego obszaru nazw operatorów zakresu. W przypadku będący lepszym dopasowaniem w zakresie przestrzeni nazw, bieżącego kompilator poprawnie wywołuje, natomiast poprzedniego kompilatory nie należy wziąć pod uwagę jej.
+
+To ostrzeżenie powinna być wyłączona po przeniesiesz kod do bieżącej wersji.  Kompilator może stanowić fałszywych alarmów, generuje to ostrzeżenie dla kodu w przypadku, gdy nastąpiła żadna zmiana zachowania.
+
+To ostrzeżenie jest domyślnie wyłączona. Aby uzyskać więcej informacji, zobacz [kompilatora ostrzeżenia, są wyłączone domyślnie](../../preprocessor/compiler-warnings-that-are-off-by-default.md).
+
+Poniższy przykład spowoduje wygenerowanie C4342:
+
+```cpp
+// C4342.cpp
+// compile with: /EHsc /W1
+#include <fstream>
+#pragma warning(default: 4342)
+using namespace std;
+struct X : public ofstream {
+   X();
+};
+
+X::X() {
+   open( "ofs_bug_ev.txt." );
+   if ( is_open() ) {
+      *this << "Text" << "<-should be text" << endl;   // C4342
+      *this << ' ' << "<-should be space symbol" << endl;   // C4342
+   }
+}
+
+int main() {
+   X b;
+   b << "Text" << "<-should be text" << endl;
+   b << ' ' << "<-should be space symbol" << endl;
+}
 ```

@@ -1,5 +1,5 @@
 ---
-title: C3459 błąd kompilatora | Dokumentacja firmy Microsoft
+title: Błąd kompilatora C3459 | Dokumentacja firmy Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,48 +16,50 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: eec65ba8acf231a15c6cab15449cc306cdfad4fe
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: abde90828cac4f45685b7a21b50705474aedde72
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33255348"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46026793"
 ---
-# <a name="compiler-error-c3459"></a>C3459 błąd kompilatora
-"attribute": atrybut dozwolone tylko w indeksatorze klasy (Właściwość indeksowana domyślnie)  
-  
-Atrybut, który jest przeznaczony do zastosowania dla właściwości indeksatora klasy zostało niepoprawnie użyte.  
-  
-Aby uzyskać więcej informacji, zobacz [porady: użycie właściwości w języku C + +/ CLI](../../dotnet/how-to-use-properties-in-cpp-cli.md).  
-  
-## <a name="example"></a>Przykład  
-Poniższy przykład generuje C3459.  
-  
-```  
-// C3459.cpp  
-// compile with: /clr /c  
-public ref class MyString {  
-public:  
-   [System::Runtime::CompilerServices::IndexerName("Chars")]   // C3459  
-   property int Prop;  
-};  
-  
-// OK  
-public ref class MyString2 {  
-   array<int>^ MyArr;  
-public:  
-   MyString2() {  
-      MyArr = gcnew array<int>(5);  
-   }  
-  
-   [System::Runtime::CompilerServices::IndexerName("Chars")]   // OK  
-   property int default[int] {  
-      int get(int index) {  
-         return MyArr[index];  
-      }  
-      void set(int index, int value) {  
-         MyArr[index] = value;  
-      }  
-   }  
-};  
+# <a name="compiler-error-c3459"></a>Błąd kompilatora C3459
+
+"attribute": atrybut dozwolone tylko w indeksatorze klasy (Właściwość indeksowana domyślnie)
+
+Atrybut, który jest przeznaczony do można zastosować do właściwości indeksatora klasy zostało niepoprawnie użyte.
+
+Aby uzyskać więcej informacji, zobacz [porady: użycie właściwości w języku C + +/ interfejsu wiersza polecenia](../../dotnet/how-to-use-properties-in-cpp-cli.md).
+
+## <a name="example"></a>Przykład
+
+Poniższy przykład spowoduje wygenerowanie C3459.
+
+```
+// C3459.cpp
+// compile with: /clr /c
+public ref class MyString {
+public:
+   [System::Runtime::CompilerServices::IndexerName("Chars")]   // C3459
+   property int Prop;
+};
+
+// OK
+public ref class MyString2 {
+   array<int>^ MyArr;
+public:
+   MyString2() {
+      MyArr = gcnew array<int>(5);
+   }
+
+   [System::Runtime::CompilerServices::IndexerName("Chars")]   // OK
+   property int default[int] {
+      int get(int index) {
+         return MyArr[index];
+      }
+      void set(int index, int value) {
+         MyArr[index] = value;
+      }
+   }
+};
 ```

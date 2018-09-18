@@ -17,68 +17,69 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 21de116740161a965bd4790eff751d10cf878b79
-ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
+ms.openlocfilehash: 409f896e7b2c345d1558700f86182d06793f543d
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/01/2018
-ms.locfileid: "39408624"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46016432"
 ---
 # <a name="overview-of-member-functions"></a>Przegląd funkcji członkowskich
-Funkcje składowe są statyczne lub niestatyczne. Zachowanie statycznych funkcji Członkowskich różni się od innych funkcji Członkowskich, ponieważ statyczne funkcje Członkowskie nie mają niejawnego **to** argumentu. Niestatyczne funkcje Członkowskie mają **to** wskaźnika. Funkcje członkowskie, zarówno statyczne, jak i niestatyczne, można zdefiniować w obrębie lub poza deklaracją klasy.  
-  
- Jeśli funkcję składową zdefiniowano w obrębie deklaracji klasy, jest ona traktowana jak funkcja śródwierszowa i nie ma potrzeby kwalifikowania nazwy funkcji za pomocą nazwy klasy. Chociaż funkcje zdefiniowane w obrębie deklaracji klasy są już traktowane jak funkcje śródwierszowe, można użyć **wbudowane** — słowo kluczowe, aby udokumentować kod.  
-  
- Przykład deklarowania funkcji w obrębie deklaracji klasy:  
-  
-```cpp 
-// overview_of_member_functions1.cpp  
-class Account  
-{  
-public:  
-    // Declare the member function Deposit within the declaration  
-    //  of class Account.  
-    double Deposit( double HowMuch )  
-    {  
-        balance += HowMuch;  
-        return balance;  
-    }  
-private:  
-    double balance;  
-};  
-  
-int main()  
-{  
-}  
-```  
-  
- Jeśli definicja funkcji składowej jest poza deklaracją klasy, jest ona traktowana jak funkcja śródwierszowa, tylko wtedy, gdy jest jawnie zadeklarowana jako **wbudowane**. Ponadto, nazwa funkcji w definicji musi być kwalifikowana odpowiednią nazwą klasy za pomocą operatora rozpoznawania zakresu (`::`).  
-  
- Poniższy przykład jest identyczny z poprzednią deklaracją klasy `Account`, z wyjątkiem tego, że funkcja `Deposit` jest zdefiniowana poza deklaracją klasy:  
-  
-```cpp 
-// overview_of_member_functions2.cpp  
-class Account  
-{  
-public:  
-    // Declare the member function Deposit but do not define it.  
-    double Deposit( double HowMuch );  
-private:  
-    double balance;  
-};  
-  
-inline double Account::Deposit( double HowMuch )  
-{  
-    balance += HowMuch;  
-    return balance;  
-}  
-  
-int main()  
-{  
-}  
-```  
-  
+
+Funkcje składowe są statyczne lub niestatyczne. Zachowanie statycznych funkcji Członkowskich różni się od innych funkcji Członkowskich, ponieważ statyczne funkcje Członkowskie nie mają niejawnego **to** argumentu. Niestatyczne funkcje Członkowskie mają **to** wskaźnika. Funkcje członkowskie, zarówno statyczne, jak i niestatyczne, można zdefiniować w obrębie lub poza deklaracją klasy.
+
+Jeśli funkcję składową zdefiniowano w obrębie deklaracji klasy, jest ona traktowana jak funkcja śródwierszowa i nie ma potrzeby kwalifikowania nazwy funkcji za pomocą nazwy klasy. Chociaż funkcje zdefiniowane w obrębie deklaracji klasy są już traktowane jak funkcje śródwierszowe, można użyć **wbudowane** — słowo kluczowe, aby udokumentować kod.
+
+Przykład deklarowania funkcji w obrębie deklaracji klasy:
+
+```cpp
+// overview_of_member_functions1.cpp
+class Account
+{
+public:
+    // Declare the member function Deposit within the declaration
+    //  of class Account.
+    double Deposit( double HowMuch )
+    {
+        balance += HowMuch;
+        return balance;
+    }
+private:
+    double balance;
+};
+
+int main()
+{
+}
+```
+
+Jeśli definicja funkcji składowej jest poza deklaracją klasy, jest ona traktowana jak funkcja śródwierszowa, tylko wtedy, gdy jest jawnie zadeklarowana jako **wbudowane**. Ponadto, nazwa funkcji w definicji musi być kwalifikowana odpowiednią nazwą klasy za pomocą operatora rozpoznawania zakresu (`::`).
+
+Poniższy przykład jest identyczny z poprzednią deklaracją klasy `Account`, z wyjątkiem tego, że funkcja `Deposit` jest zdefiniowana poza deklaracją klasy:
+
+```cpp
+// overview_of_member_functions2.cpp
+class Account
+{
+public:
+    // Declare the member function Deposit but do not define it.
+    double Deposit( double HowMuch );
+private:
+    double balance;
+};
+
+inline double Account::Deposit( double HowMuch )
+{
+    balance += HowMuch;
+    return balance;
+}
+
+int main()
+{
+}
+```
+
 > [!NOTE]
->  Funkcje składowe można zdefiniować w obrębie deklaracji klasy lub oddzielnie, funkcji składowych nie można dodać do klasy po jej zdefiniowaniu.  
-  
- Klasy zawierające funkcje składowe mogą mieć wiele deklaracji, ale same funkcje składowe mogą mieć tylko jedną definicję w programie. Wiele definicji powoduje wyświetlenie komunikatu o błędzie w czasie połączenia. Jeśli klasa zawiera definicje funkcji śródwierszowej, definicje funkcji muszą być identyczne, aby przestrzegać zasady „jednej definicji”.  
+>  Funkcje składowe można zdefiniować w obrębie deklaracji klasy lub oddzielnie, funkcji składowych nie można dodać do klasy po jej zdefiniowaniu.
+
+Klasy zawierające funkcje składowe mogą mieć wiele deklaracji, ale same funkcje składowe mogą mieć tylko jedną definicję w programie. Wiele definicji powoduje wyświetlenie komunikatu o błędzie w czasie połączenia. Jeśli klasa zawiera definicje funkcji śródwierszowej, definicje funkcji muszą być identyczne, aby przestrzegać zasady „jednej definicji”.

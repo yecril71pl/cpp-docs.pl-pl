@@ -16,49 +16,50 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d88f76c00c8f5b36acf238f0da88e908eac6dbe8
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: a284de510fde49602a06fb9282c0ddd59eeb0ac1
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33197172"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46020292"
 ---
 # <a name="fatal-error-c1004"></a>Błąd krytyczny C1004
-Nieoczekiwany koniec pliku znaleziono  
-  
- Kompilator osiągnięto koniec pliku źródłowego bez rozwiązywania konstrukcję. Kod może brakować jeden z następujących elementów:  
-  
--   Zamykający nawias klamrowy  
-  
--   Nawias zamykający  
-  
--   Znacznik komentarz dotyczący zamknięcia (* /)  
-  
--   Średnikami  
-  
- Aby rozwiązać ten problem, sprawdź następujące czynności:  
-  
--   Na dysku domyślny jest za mało miejsca na pliki tymczasowe, które wymagają o dwa razy więcej miejsca w pliku źródłowym.  
-  
--   `#if` Dyrektywy, którego wynikiem jest wartość false nie ma zamknięcia `#endif` dyrektywy.  
-  
--   Plik źródłowy nie kończy się znak powrotu karetki i wysuwu wiersza.  
-  
- Poniższy przykład generuje C1004:  
-  
-```  
-// C1004.cpp  
-#if TEST  
-int main() {}  
-// C1004  
-```  
-  
- Możliwe rozwiązanie:  
-  
-```  
-// C1004b.cpp  
-#if TEST  
-#endif  
-  
-int main() {}  
+
+Nieoczekiwany koniec pliku
+
+Kompilator osiągnięto koniec pliku źródłowego bez rozwiązywania konstrukcję. Kod może brakować jedną z następujących elementów:
+
+- Zamykający nawias klamrowy
+
+- Nawias zamykający
+
+- Zamykania komentarza znacznika (* /)
+
+- Średnikami
+
+Aby rozwiązać ten problem, sprawdź, czy następujące czynności:
+
+- Dysk domyślny ma za mało miejsca na pliki tymczasowe, które wymagają o dwa razy więcej miejsca, co plik źródłowy.
+
+- `#if` Dyrektywę, który daje w wyniku wartość false nie ma zamykający `#endif` dyrektywy.
+
+- Plik źródłowy nie może kończyć powrotu karetki i wysuwu wiersza.
+
+Poniższy przykład spowoduje wygenerowanie C1004:
+
+```
+// C1004.cpp
+#if TEST
+int main() {}
+// C1004
+```
+
+Możliwe rozwiązanie:
+
+```
+// C1004b.cpp
+#if TEST
+#endif
+
+int main() {}
 ```

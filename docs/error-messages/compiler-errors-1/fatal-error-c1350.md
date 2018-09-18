@@ -16,16 +16,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: fa392805c85e5158fa90618638d6c9075b4fa91c
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 5e3ae307f316cd3d7a7921c6c6a246a2eae4c83d
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33198446"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46023218"
 ---
 # <a name="fatal-error-c1350"></a>Błąd krytyczny C1350
-Wystąpił błąd podczas ładowania biblioteki dll 'dll': nie można odnaleźć biblioteki dll  
-  
- Nie można odnaleźć biblioteki DLL, która obsługuje próba wykonania operacji.  
-  
- Oznacza to problem z instalacją i biblioteki DLL należy ponownie zainstalować z dysku CD produktu.
+
+Wystąpił błąd podczas ładowania biblioteki dll 'dll': nie można odnaleźć biblioteki dll
+
+Nie można odnaleźć biblioteki DLL, która obsługuje próba wykonania operacji.
+
+Oznacza to problem z instalacją i biblioteki DLL należy ponownie zainstalować z dysku CD produktu.

@@ -1,5 +1,5 @@
 ---
-title: Błąd cxx0056 programu Expression Evaluator | Dokumentacja firmy Microsoft
+title: Błąd ewaluatora wyrażeń CXX0056 | Dokumentacja firmy Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,16 +17,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: da79a78753a9847686eca6952767fdefbe27005a
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 1cd3c2401516ee986d283dab62703c3a0dc8df42
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33298476"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46019853"
 ---
 # <a name="expression-evaluator-error-cxx0056"></a>Błąd CXX0056 programu Expression Evaluator
-Błąd w wierszu o numerze  
-  
- Określono nieprawidłowy numer wiersza.  
-  
- Ten błąd jest taki sam jak CAN0056.
+
+Błąd numeru wiersza
+
+Określono nieprawidłowy numer wiersza.
+
+Ten błąd jest taka sama jak CAN0056.

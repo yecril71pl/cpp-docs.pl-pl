@@ -16,14 +16,15 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c63b354bfbdd3dbdfc7704effcbe6c0495cede27
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 0bec5ed46b054002d1ae95e5e3f0b9b1c8ee4984
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33323290"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46016159"
 ---
 # <a name="nmake-fatal-error-u1071"></a>Błąd krytyczny NMAKE U1071
-cykl w drzewie zależności dla elementu docelowego "targetname"  
-  
- W drzewie zależności dla danego obiektu docelowego istnieje zależność cykliczną. Podany obiekt docelowy jest zależne od jednej z zależności elementu docelowego podanego. Zależności cyklicznych są nieprawidłowe.
+
+cykl w drzewie zależności dla elementu docelowego "targetname"
+
+Istnieje zależność cykliczną w drzewie zależności dla danego obiektu docelowego. Danym obiektem docelowym jest zależna od jednej z zależności z danym obiektem docelowym. Zależności cykliczne są nieprawidłowe.

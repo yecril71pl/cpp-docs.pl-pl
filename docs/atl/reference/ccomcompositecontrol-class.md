@@ -26,12 +26,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8a0622e939d1c0cb93579baeb5fa35e11be516e5
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 5940461a16dcb86fbb062937fe7330c1b6e04f75
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43756577"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46021138"
 ---
 # <a name="ccomcompositecontrol-class"></a>Klasa CComCompositeControl
 
@@ -43,13 +43,13 @@ Ta klasa dostarcza metody, o których trzeba do zaimplementowania kontrolek zło
 ## <a name="syntax"></a>Składnia
 
 ```
-template <class T>  
+template <class T>
 class CComCompositeControl : public CComControl<T,CAxDialogImpl<T>>
 ```
 
 #### <a name="parameters"></a>Parametry
 
-*T*  
+*T*<br/>
 Z klasą pochodną [CComObjectRoot](../../atl/reference/ccomobjectroot-class.md) lub [CComObjectRootEx](../../atl/reference/ccomobjectrootex-class.md), jak również od innych interfejsów, które chcesz obsługiwać złożonej kontrolki.
 
 ## <a name="members"></a>Elementy członkowskie
@@ -122,28 +122,19 @@ HRESULT AdviseSinkMap(bool bAdvise);
 
 ### <a name="parameters"></a>Parametry
 
-*bAdvise*  
+*bAdvise*<br/>
 Wartość true, jeśli wszystkie formanty, które mają zaleceniem; w przeciwnym razie wartość false.
 
 ### <a name="return-value"></a>Wartość zwracana
 
-S_OK  
-Wszystkie kontrolki w przypadku ujścia mapy zostały połączone lub pomyślnie Rozłączono z ich źródła zdarzeń.
-
-E_FAIL  
-Nie wszystkie kontrolki w przypadku ujścia mapy, które mogą zostać połączone lub pomyślnie Rozłączono z ich źródła zdarzeń.
-
-E_POINTER  
-Błąd ten zwykle wskazuje problem z wpisem na mapie obiektu sink zdarzenia formantu lub problem z argumentem szablonu, używanym w `IDispEventImpl` lub `IDispEventSimpleImpl` klasy bazowej.
-
-CONNECT_E_ADVISELIMIT  
-Punkt połączenia jest już osiągnął limit liczby połączeń i nie akceptuje żadnych innych.
-
-CONNECT_E_CANNOTCONNECT  
-Obiekt sink nie obsługuje interfejsu wymaganego przez ten punkt połączenia.
-
-CONNECT_E_NOCONNECTION  
-Wartość pliku cookie nie reprezentują prawidłowego połączenia. Błąd ten zwykle wskazuje problem z wpisem na mapie obiektu sink zdarzenia formantu lub problem z argumentem szablonu, używanym w `IDispEventImpl` lub `IDispEventSimpleImpl` klasy bazowej.
+|||
+|-|-|
+|S_OK  |Wszystkie kontrolki w przypadku ujścia mapy zostały połączone lub pomyślnie Rozłączono z ich źródła zdarzeń.|
+|E_FAIL  |Nie wszystkie kontrolki w przypadku ujścia mapy, które mogą zostać połączone lub pomyślnie Rozłączono z ich źródła zdarzeń.|
+|E_POINTER  |Błąd ten zwykle wskazuje problem z wpisem na mapie obiektu sink zdarzenia formantu lub problem z argumentem szablonu, używanym w `IDispEventImpl` lub `IDispEventSimpleImpl` klasy bazowej.|
+|CONNECT_E_ADVISELIMIT  |Punkt połączenia jest już osiągnął limit liczby połączeń i nie akceptuje żadnych innych.|
+|CONNECT_E_CANNOTCONNECT  |Obiekt sink nie obsługuje interfejsu wymaganego przez ten punkt połączenia.|
+|CONNECT_E_NOCONNECTION  |Wartość pliku cookie nie reprezentują prawidłowego połączenia. Błąd ten zwykle wskazuje problem z wpisem na mapie obiektu sink zdarzenia formantu lub problem z argumentem szablonu, używanym w `IDispEventImpl` lub `IDispEventSimpleImpl` klasy bazowej.|
 
 ### <a name="remarks"></a>Uwagi
 
@@ -159,7 +150,7 @@ BOOL CalcExtent(SIZE& size);
 
 ### <a name="parameters"></a>Parametry
 
-*Rozmiar*  
+*Rozmiar*<br/>
 Odwołanie do `SIZE` struktury do wypełnienia przez tę metodę.
 
 ### <a name="return-value"></a>Wartość zwracana
@@ -183,13 +174,13 @@ HWND Create(
 
 ### <a name="parameters"></a>Parametry
 
-*hWndParent*  
+*hWndParent*<br/>
 Dojście do nadrzędnego okna kontrolki.
 
-*rcPos*  
+*rcPos*<br/>
 Zastrzeżone.
 
-*dwInitParam*  
+*dwInitParam*<br/>
 Dane mają być przekazane do formantu podczas tworzenia kontrolki. Dane przekazywane jako *dwInitParam* będzie wyświetlany jako wartość parametru LPARAM [/ / Złap](/windows/desktop/dlgbox/wm-initdialog) wiadomości, które zostanie wysłane do kontrolek złożonych, gdy powstaje.
 
 ### <a name="return-value"></a>Wartość zwracana
@@ -236,10 +227,10 @@ virtual HWND CreateControlWindow(
 
 ### <a name="parameters"></a>Parametry
 
-*hWndParent*  
+*hWndParent*<br/>
 Dojście do nadrzędnego okna kontrolki.
 
-*rcPos*  
+*rcPos*<br/>
 Pozycja prostokąta złożonego formantu w kliencie koordynuje względem *hWndParent*.
 
 ### <a name="return-value"></a>Wartość zwracana
@@ -280,6 +271,6 @@ Zwraca wartość S_OK w przypadku powodzenia lub błędu HRESULT w przypadku nie
 
 ## <a name="see-also"></a>Zobacz też
 
-[Klasa CComControl](../../atl/reference/ccomcontrol-class.md)   
-[Podstawy złożonych kontrolek](../../atl/atl-composite-control-fundamentals.md)   
+[Klasa CComControl](../../atl/reference/ccomcontrol-class.md)<br/>
+[Podstawy złożonych kontrolek](../../atl/atl-composite-control-fundamentals.md)<br/>
 [Klasa — Przegląd](../../atl/atl-class-overview.md)

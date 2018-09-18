@@ -1,5 +1,5 @@
 ---
-title: Błąd cxx0045 programu Expression Evaluator | Dokumentacja firmy Microsoft
+title: Błąd ewaluatora wyrażeń CXX0045 | Dokumentacja firmy Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,24 +17,25 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2ac52b16c2c8551282b79ef6a7fda40e24acc6bb
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 4d9913bc77dfc3fbc95bd03fd32c954c4d304d27
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33299737"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46023205"
 ---
 # <a name="expression-evaluator-error-cxx0045"></a>Błąd CXX0045 programu Expression Evaluator
-not — funkcja  
-  
- Lista argumentów została dostarczona dla symbolu w programie, który nie jest nazwą funkcji.  
-  
-## <a name="example"></a>Przykład  
-  
-```  
-queue( alpha, beta )  
-```  
-  
- gdy `queue` nie jest funkcją.  
-  
- Ten błąd jest taki sam jak CAN0045.
+
+not — funkcja
+
+Lista argumentów została dostarczona dla symbolu w programie, który nie jest nazwą funkcji.
+
+## <a name="example"></a>Przykład
+
+```
+queue( alpha, beta )
+```
+
+gdy `queue` nie jest funkcją.
+
+Ten błąd jest taka sama jak CAN0045.

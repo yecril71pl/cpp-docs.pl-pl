@@ -16,16 +16,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 949ee09244a106984522fb35dd13c0b3426fc820
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: bc896f08ac161cae4e4fab5e991da810f3faf195
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33199934"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46016640"
 ---
 # <a name="fatal-error-c1107"></a>Błąd krytyczny C1107
-Nie można odnaleźć zestawu 'Plik': Określ ścieżkę wyszukiwania zestawu za pomocą /AI lub przez ustawienie zmiennej środowiskowej LIBPATH  
-  
- Plik metadanych został przekazany do [#using](../../preprocessor/hash-using-directive-cpp.md) dyrektywy, które kompilator nie może zlokalizować.  
-  
- LIBPATH, opisany w temacie, aby `#using`i [/AI](../../build/reference/ai-specify-metadata-directories.md) — opcja kompilatora umożliwiają określenie katalogów, w których kompilator będzie szukać plików metadanych do którego istnieje odwołanie.
+
+Nie można odnaleźć zestawu 'Plik': Określ ścieżkę wyszukiwania zestawu za pomocą /AI lub przez ustawienie zmiennej środowiskowej LIBPATH
+
+Plik metadanych został przekazany do [#using](../../preprocessor/hash-using-directive-cpp.md) dyrektywę, który kompilator nie może zlokalizować.
+
+LIBPATH, który został opisany w temacie `#using`i [/AI](../../build/reference/ai-specify-metadata-directories.md) — opcja kompilatora pozwalają na określenie katalogi, w których kompilator będzie szukać plików metadanych odwołania.

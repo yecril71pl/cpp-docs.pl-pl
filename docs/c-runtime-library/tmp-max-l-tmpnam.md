@@ -1,5 +1,5 @@
 ---
-title: Tmp_max —, l_tmpnam — | Dokumentacja firmy Microsoft
+title: TMP_MAX, L_tmpnam | Dokumentacja firmy Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -19,22 +19,25 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: fef1a50b1446b9bff0eafc982e77a1bd6db568cc
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: cee175eb7f12952dfe7e30ef79842ee03a96fbb1
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32407655"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46019682"
 ---
 # <a name="tmpmax-ltmpnam"></a>TMP_MAX, L_tmpnam
-## <a name="syntax"></a>Składnia  
-  
-```  
-#include <stdio.h>  
-```  
-  
-## <a name="remarks"></a>Uwagi  
- `TMP_MAX` Maksymalna liczba unikatowych nazw plików jest który `tmpnam` funkcja może powodować generowanie. `L_tmpnam` Długość nazwy tymczasowych plików wygenerowanych przez `tmpnam`.  
-  
-## <a name="see-also"></a>Zobacz też  
- [Stałe globalne](../c-runtime-library/global-constants.md)
+
+## <a name="syntax"></a>Składnia
+
+```
+#include <stdio.h>
+```
+
+## <a name="remarks"></a>Uwagi
+
+`TMP_MAX` jest maksymalną liczbę unikatowych nazw plików, `tmpnam` może wygenerować funkcji. `L_tmpnam` to długość nazwy plików tymczasowych, generowane przez `tmpnam`.
+
+## <a name="see-also"></a>Zobacz też
+
+[Stałe globalne](../c-runtime-library/global-constants.md)

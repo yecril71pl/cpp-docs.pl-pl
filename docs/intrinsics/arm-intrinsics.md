@@ -1941,12 +1941,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1a504df1dfb2826b5056b5feb5b13ac3555515ae
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: e0c2138de2becc7afa9d2392c2fa5240b584b6d3
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45712806"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46018252"
 ---
 # <a name="arm-intrinsics"></a>Funkcje wewnętrzne ARM
 Kompilator języka Visual C++ udostępnia następujące funkcje wewnętrzne na architekturze ARM. Aby uzyskać więcej informacji na temat ARM, zobacz [instrukcji obsługi architektury ARM](http://go.microsoft.com/fwlink/p/?LinkId=522049) i [podręcznik narzędzia asemblera ARM](http://go.microsoft.com/fwlink/p/?LinkId=246102) w witrynie Centrum informacyjne ARM.  
@@ -2162,11 +2162,11 @@ void __iso_volatile_store8(volatile __int8 * Location, __int8 Value)
   
  **Parametry**  
   
- `Location`  
- Adres lokalizacji w pamięci do odczytu lub zapisu.  
+*Lokalizacja*<br/>
+Adres lokalizacji w pamięci do odczytu lub zapisu.  
   
- `Value`  
- Wartość do zapisania do określonej lokalizacji pamięci (tylko funkcje wewnętrzne magazynu).  
+*Wartość*<br/>
+Wartość do zapisania do określonej lokalizacji pamięci (tylko funkcje wewnętrzne magazynu).  
   
  **Wartość zwracana (tylko funkcje wewnętrzne obciążenia)**  
   
@@ -2209,20 +2209,20 @@ int _MoveFromCoprocessor2(
   
  **Parametry**  
   
- `coproc`  
- Koprocesor liczbą z zakresu od 0 do 15.  
+*coproc*<br/>
+Koprocesor liczbą z zakresu od 0 do 15.  
   
- `opcode1`  
- Koprocesor specyficzne opcode z zakresu od 0 do 7  
+*opcode1*<br/>
+Koprocesor specyficzne opcode z zakresu od 0 do 7  
   
- `crn`  
- Koprocesor zarejestrować liczba z zakresu od 0 do 15, która określa pierwszego operandu w instrukcji.  
+*crn*<br/>
+Koprocesor zarejestrować liczba z zakresu od 0 do 15, która określa pierwszego operandu w instrukcji.  
   
- `crm`  
- Koprocesor zarejestrować liczba z zakresu od 0 do 15, która określa dodatkowe źródło lub miejsce docelowe operandu.  
+*CRM*<br/>
+Koprocesor zarejestrować liczba z zakresu od 0 do 15, która określa dodatkowe źródło lub miejsce docelowe operandu.  
   
- `opcode2`  
- Opcode specyficzne dla Koprocesor dodatkowe z zakresu od 0 do 7.  
+*opcode2*<br/>
+Opcode specyficzne dla Koprocesor dodatkowe z zakresu od 0 do 7.  
   
  **Wartość zwracana**  
   
@@ -2248,14 +2248,14 @@ unsigned __int64 _MoveFromCoprocessor64(
   
  **Parametry**  
   
- `coproc`  
- Koprocesor liczbą z zakresu od 0 do 15.  
+*coproc*<br/>
+Koprocesor liczbą z zakresu od 0 do 15.  
   
- `opcode1`  
- Koprocesor specyficzne opcode z zakresu od 0 do 15.  
+*opcode1*<br/>
+Koprocesor specyficzne opcode z zakresu od 0 do 15.  
   
- `crm`  
- Koprocesor zarejestrować liczba z zakresu od 0 do 15, która określa dodatkowe źródło lub miejsce docelowe operandu.  
+*CRM*<br/>
+Koprocesor zarejestrować liczba z zakresu od 0 do 15, która określa dodatkowe źródło lub miejsce docelowe operandu.  
   
  **Zwraca wartość**  
   
@@ -2293,23 +2293,23 @@ void _MoveToCoprocessor2(
   
  **Parametry**  
   
- `value`  
- Wartość do zapisania Koprocesor.  
+*value*<br/>
+Wartość do zapisania Koprocesor.  
   
- `coproc`  
- Koprocesor liczbą z zakresu od 0 do 15.  
+*coproc*<br/>
+Koprocesor liczbą z zakresu od 0 do 15.  
   
- `opcode1`  
- Koprocesor specyficzne opcode z zakresu od 0 do 7.  
+*opcode1*<br/>
+Koprocesor specyficzne opcode z zakresu od 0 do 7.  
   
- `crn`  
- Koprocesor zarejestrować liczba z zakresu od 0 do 15, która określa pierwszego operandu w instrukcji.  
+*crn*<br/>
+Koprocesor zarejestrować liczba z zakresu od 0 do 15, która określa pierwszego operandu w instrukcji.  
   
- `crm`  
- Koprocesor zarejestrować liczba z zakresu od 0 do 15, która określa dodatkowe źródło lub miejsce docelowe operandu.  
+*CRM*<br/>
+Koprocesor zarejestrować liczba z zakresu od 0 do 15, która określa dodatkowe źródło lub miejsce docelowe operandu.  
   
- `opcode2`  
- Opcode specyficzne dla Koprocesor dodatkowe z zakresu od 0 do 7.  
+*opcode2*<br/>
+Opcode specyficzne dla Koprocesor dodatkowe z zakresu od 0 do 7.  
   
  **Wartość zwracana**  
   
@@ -2336,14 +2336,14 @@ void _MoveFromCoprocessor64(
   
  **Parametry**  
   
- `coproc`  
- Koprocesor liczbą z zakresu od 0 do 15.  
+*coproc*<br/>
+Koprocesor liczbą z zakresu od 0 do 15.  
   
- `opcode1`  
- Koprocesor specyficzne opcode z zakresu od 0 do 15.  
+*opcode1*<br/>
+Koprocesor specyficzne opcode z zakresu od 0 do 15.  
   
- `crm`  
- Koprocesor zarejestrować liczba z zakresu od 0 do 15, która określa dodatkowe źródło lub miejsce docelowe operandu.  
+*CRM*<br/>
+Koprocesor zarejestrować liczba z zakresu od 0 do 15, która określa dodatkowe źródło lub miejsce docelowe operandu.  
   
  **Wartość zwracana**  
   

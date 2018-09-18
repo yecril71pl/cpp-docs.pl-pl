@@ -1,5 +1,5 @@
 ---
-title: C3715 błąd kompilatora | Dokumentacja firmy Microsoft
+title: Błąd kompilatora C3715 | Dokumentacja firmy Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,14 +16,15 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9412592ac177fb49f065975db469c9f77b98e8c8
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 63ae3486b4db21a3aa241d5ebdbbfa0cdc6806f2
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33265899"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46026559"
 ---
-# <a name="compiler-error-c3715"></a>C3715 błąd kompilatora
-"wskaźnik": musi być wskaźnikiem do "class"  
-  
- Określony wskaźnika w [__hook](../../cpp/hook.md) lub [__unhook](../../cpp/unhook.md) nie wskazywały który prawidłową klasę. Aby naprawić ten błąd, upewnij się, że Twoje `__hook` i `__unhook` wywołania Określ wskaźniki do prawidłowych klas.
+# <a name="compiler-error-c3715"></a>Błąd kompilatora C3715
+
+"wskaźnik": musi być wskaźnikiem do "class"
+
+Określony wskaźnik w [__hook](../../cpp/hook.md) lub [__unhook](../../cpp/unhook.md) nie wskazujące na prawidłową klasę. Aby naprawić ten błąd, upewnij się, że Twoje `__hook` i `__unhook` wywołania określają wskaźniki do prawidłowych klas.
