@@ -1,5 +1,5 @@
 ---
-title: Błąd cxx0048 programu Expression Evaluator | Dokumentacja firmy Microsoft
+title: Błąd ewaluatora wyrażeń CXX0048 | Dokumentacja firmy Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,16 +17,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6dca56b5114e8c0ec98d65e43edaca19a7e23663
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 07877215a2b230a7ef2f75d83b71b7d03e4e7d34
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33295951"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46031860"
 ---
 # <a name="expression-evaluator-error-cxx0048"></a>Błąd CXX0048 programu Expression Evaluator
-Nieobsługiwana sekwencja wywoływania  
-  
- Funkcja w wyrażeniu wykorzystuje sekwencja wywoływania nie są obsługiwane przez C ewaluatora wyrażenia. Nie można wywołać tej funkcji w wyrażeniu okna czujki.  
-  
- Ten błąd jest taki sam jak CAN0048.
+
+sekwencja wywoływania nie jest obsługiwane
+
+Sekwencja wywoływania nie są obsługiwane przez Ewaluator wyrażeń C korzysta z funkcji w wyrażeniu. Nie można wywołać tę funkcję w wyrażenia okna wyrażeń kontrolnych.
+
+Ten błąd jest taka sama jak CAN0048.

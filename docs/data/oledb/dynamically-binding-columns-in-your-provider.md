@@ -17,31 +17,32 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 345bc66200ea4a1d6d4bbb79313157e81b9a2edb
-ms.sourcegitcommit: 889a75be1232817150be1e0e8d4d7f48f5993af2
+ms.openlocfilehash: ed2b8d1d8bc3ac516b3d605f13e02bda37bb0122
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/30/2018
-ms.locfileid: "39336693"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46028548"
 ---
 # <a name="dynamically-binding-columns-in-your-provider"></a>Dynamiczne powiązanie kolumn w dostawcy
+
 Upewnij się, że naprawdę potrzebujesz dynamiczne powiązanie kolumn. Możesz go potrzebować, ponieważ:  
   
--   Kolumny zestawu wierszy nie są zdefiniowane w czasie kompilacji.  
+- Kolumny zestawu wierszy nie są zdefiniowane w czasie kompilacji.  
   
--   Obsługujesz elementu, takiego jak zakładki, który dodaje kolumn.  
+- Obsługujesz elementu, takiego jak zakładki, który dodaje kolumn.  
   
 ### <a name="to-implement-dynamic-column-binding"></a>Aby zaimplementować dynamiczne powiązanie kolumn  
   
-1.  Usuń wszystkie `PROVIDER_COLUMN_MAP`s w kodzie.  
+1. Usuń wszystkie `PROVIDER_COLUMN_MAP`s w kodzie.  
   
-2.  W rekordzie użytkownika (struktura) dodaj następującą deklarację:  
+1. W rekordzie użytkownika (struktura) dodaj następującą deklarację:  
   
     ```cpp  
     static ATLCOLUMNINFO* GetColumnInfo(void* pThis, ULONG* pcCols);  
     ```  
   
-3.  Implementowanie `GetColumnInfo` funkcji. Ta funkcja określa się, jak informacje są przechowywane. Konieczne może być pobieranie właściwości lub inne informacje dla tej funkcji. Możesz chcieć utworzyć makro, podobnie jak [COLUMN_ENTRY](../../data/oledb/column-entry.md) makra, aby dodać własne informacje.  
+1. Implementowanie `GetColumnInfo` funkcji. Ta funkcja określa się, jak informacje są przechowywane. Konieczne może być pobieranie właściwości lub inne informacje dla tej funkcji. Możesz chcieć utworzyć makro, podobnie jak [COLUMN_ENTRY](../../data/oledb/column-entry.md) makra, aby dodać własne informacje.  
   
      W poniższym przykładzie przedstawiono `GetColumnInfo` funkcji.  
   
@@ -97,4 +98,5 @@ Upewnij się, że naprawdę potrzebujesz dynamiczne powiązanie kolumn. Możesz 
     ```  
   
 ## <a name="see-also"></a>Zobacz też  
- [Praca z szablonami dostawców OLE DB](../../data/oledb/working-with-ole-db-provider-templates.md)
+
+[Praca z szablonami dostawców OLE DB](../../data/oledb/working-with-ole-db-provider-templates.md)

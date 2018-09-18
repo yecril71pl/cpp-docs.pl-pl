@@ -16,15 +16,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5aaf80e3061877c42154ab9ee5ccd30f47f17135
-ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
+ms.openlocfilehash: c87dfc47f7f2554e75567a1de4ea9cb2e06eaa00
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33696230"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46028197"
 ---
 # <a name="lastprivate"></a>lastprivate
-Określa, że wersja otaczającym kontekście zmiennej jest taki sam, niezależnie od wątku wykonuje końcowego iteracji (konstrukcji pętli for) lub ostatniej sekcji (#pragma sekcje) wersji prywatnej.  
+Określa, że wersja w otaczającym kontekście zmiennej jest równa wersji prywatnej niezależnie od wątku wykonuje końcowe iteracji (konstrukcji pętli for) lub ostatnia sekcja (#pragma sekcji).  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -32,23 +32,22 @@ Określa, że wersja otaczającym kontekście zmiennej jest taki sam, niezależn
 lastprivate(var)  
 ```  
   
-## <a name="remarks"></a>Uwagi  
- w przypadku gdy  
+### <a name="parameters"></a>Parametry
   
- `var`  
- Zmienna, która jest równe wersji prywatnej niezależnie od wątku wykonuje końcowego iteracji (konstrukcji pętli for) lub ostatniej sekcji (#pragma sekcji).  
+*var*<br/>
+Zmienna, która jest równe prywatnej wersji niezależnie od wątku wykonuje końcowe iteracji (konstrukcji pętli for) lub ostatnia sekcja (#pragma sekcji).  
   
 ## <a name="remarks"></a>Uwagi  
- `lastprivate` ma zastosowanie do następujących dyrektyw:  
+ `lastprivate` mają zastosowanie do następujących dyrektywach:  
   
 -   [for](../../../parallel/openmp/reference/for-openmp.md)  
   
 -   [Sekcje](../../../parallel/openmp/reference/sections-openmp.md)  
   
- Aby uzyskać więcej informacji, zobacz [2.7.2.3 ostatnia prywatna](../../../parallel/openmp/2-7-2-3-lastprivate.md).  
+ Aby uzyskać więcej informacji, zobacz [2.7.2.3 ostatnia lastprivate](../../../parallel/openmp/2-7-2-3-lastprivate.md).  
   
 ## <a name="example"></a>Przykład  
- Zobacz [harmonogram](../../../parallel/openmp/reference/schedule.md) przykład przy użyciu `lastprivate` klauzuli.  
+ Zobacz [harmonogram](../../../parallel/openmp/reference/schedule.md) na przykład za pomocą `lastprivate` klauzuli.  
   
 ## <a name="see-also"></a>Zobacz też  
  [Klauzule](../../../parallel/openmp/reference/openmp-clauses.md)

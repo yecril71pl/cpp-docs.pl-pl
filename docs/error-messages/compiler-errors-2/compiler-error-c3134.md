@@ -1,5 +1,5 @@
 ---
-title: C3134 błąd kompilatora | Dokumentacja firmy Microsoft
+title: Błąd kompilatora C3134 | Dokumentacja firmy Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,17 +16,19 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4aaf9ab8175e56615bf61b1c020e44cf20c10562
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: c8eab51f41997eabf5999a976b178799fa750c4a
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33245676"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46029809"
 ---
-# <a name="compiler-error-c3134"></a>C3134 błąd kompilatora
-"wartość": wartość argumentu atrybutu 'atrybut' nie ma prawidłowego typu "type"  
-  
- Błąd składniowy został wykryty, jeśli wartość została przypisana do atrybutu.  
-  
-## <a name="see-also"></a>Zobacz też  
- [Atrybuty w zależności od zastosowania](../../windows/attributes-by-usage.md)
+# <a name="compiler-error-c3134"></a>Błąd kompilatora C3134
+
+"value": wartość argumentu atrybutu 'atrybut' nie ma prawidłowego typu "type"
+
+Błąd składniowy zostało wykryte, gdy wartość przypisano do atrybutu.
+
+## <a name="see-also"></a>Zobacz też
+
+[Atrybuty w zależności od zastosowania](../../windows/attributes-by-usage.md)

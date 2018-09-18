@@ -1,5 +1,5 @@
 ---
-title: C2909 błąd kompilatora | Dokumentacja firmy Microsoft
+title: Błąd kompilatora C2909 | Dokumentacja firmy Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,24 +16,25 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9bb5252c0122f5610348c5fb154fedd1869d131e
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: f611a026d0a969f49eaf2dcd93ba081bae052d10
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33245445"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46030888"
 ---
-# <a name="compiler-error-c2909"></a>C2909 błąd kompilatora
-"identyfikator": jawne utworzenie wystąpienia szablonu funkcji wymaga typu zwracanego  
-  
- Jawne tworzenie wystąpienia szablonu funkcji wymaga jawnego określenia jej typu zwracanego. Specyfikacja niejawne zwracany typ nie działa.  
-  
- Poniższy przykład generuje C2909:  
-  
-```  
-// C2909.cpp  
-// compile with: /c  
-template<class T> int f(T);  
-template f<int>(int);         // C2909  
-template int f<int>(int);   // OK  
+# <a name="compiler-error-c2909"></a>Błąd kompilatora C2909
+
+'Identyfikator': jawne utworzenie wystąpienia szablonu funkcji wymaga typu zwracanego
+
+Jawne tworzenie wystąpienia szablonu funkcji wymaga jawnej specyfikacji jego typem zwracanym. Specyfikacja niejawne zwracany typ nie działa.
+
+Poniższy przykład spowoduje wygenerowanie C2909:
+
+```
+// C2909.cpp
+// compile with: /c
+template<class T> int f(T);
+template f<int>(int);         // C2909
+template int f<int>(int);   // OK
 ```

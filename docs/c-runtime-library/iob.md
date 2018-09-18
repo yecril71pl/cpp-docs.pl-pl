@@ -23,24 +23,27 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ca49fa1d832149dc6c5c920b067edebd42dadb87
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: dc775363d980486fd32ba38b0e66d3141a5e5cd3
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32387918"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46028990"
 ---
 # <a name="iob"></a>_iob
-Tablica stdio — struktury sterujące.  
-  
-## <a name="syntax"></a>Składnia  
-  
-```  
-FILE _iob[_IOB_ENTRIES];  
-```  
-  
-## <a name="remarks"></a>Uwagi  
- `IOB_ENTRIES` nie zdefiniowano jako 20 w stdio.h.  
-  
-## <a name="see-also"></a>Zobacz też  
- [Zmienne globalne](../c-runtime-library/global-variables.md)
+
+Tablica stdio — struktur sterujących.
+
+## <a name="syntax"></a>Składnia
+
+```
+FILE _iob[_IOB_ENTRIES];
+```
+
+## <a name="remarks"></a>Uwagi
+
+`IOB_ENTRIES` jest zdefiniowany jako 20 w stdio.h.
+
+## <a name="see-also"></a>Zobacz też
+
+[Zmienne globalne](../c-runtime-library/global-variables.md)

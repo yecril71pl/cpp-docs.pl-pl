@@ -38,12 +38,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 920cfbde9229131c5148c359f6a82ce002d7fb3a
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 411b8f58b38d2b35c1353d1ff446407026977d66
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43758521"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46030147"
 ---
 # <a name="ccomsafearray-class"></a>Klasa CComSafeArray
 
@@ -58,7 +58,7 @@ class CComSafeArray
 
 #### <a name="parameters"></a>Parametry
 
-*T*  
+*T*<br/>
 Typ danych, które mają być przechowywane w tablicy.
 
 ## <a name="members"></a>Elementy członkowskie
@@ -158,19 +158,19 @@ HRESULT Add(const T& t, BOOL bCopy = TRUE);
 
 ### <a name="parameters"></a>Parametry
 
-*psaSrc*  
+*psaSrc*<br/>
 Wskaźnik do `SAFEARRAY` obiektu.
 
-*ulCount*  
+*ulCount*<br/>
 Liczba obiektów do dodania do tablicy.
 
-*(CZAS PACYFICZNY)*  
+*(CZAS PACYFICZNY)*<br/>
 Wskaźnik do jednego lub kilku obiektów do dodania do tablicy.
 
-*t*  
+*t*<br/>
 Odwołanie do obiektu, który ma zostać dodany do tablicy.
 
-*bCopy*  
+*bCopy*<br/>
 Wskazuje, czy należy utworzyć kopię danych. Wartość domyślna to TRUE.
 
 ### <a name="return-value"></a>Wartość zwracana
@@ -193,7 +193,7 @@ HRESULT Attach(const SAFEARRAY* psaSrc);
 
 ### <a name="parameters"></a>Parametry
 
-*psaSrc*  
+*psaSrc*<br/>
 Wskaźnik do `SAFEARRAY` struktury.
 
 ### <a name="return-value"></a>Wartość zwracana
@@ -220,25 +220,25 @@ CComSafeArray(const SAFEARRAY* psaSrc);
 
 ### <a name="parameters"></a>Parametry
 
-*powiązane*  
+*powiązane*<br/>
 A `SAFEARRAYBOUND` struktury.
 
-*ulCount*  
+*ulCount*<br/>
 Liczba elementów w tablicy.
 
-*lLBound*  
+*lLBound*<br/>
 Dolna granica wartości. oznacza to, że indeks pierwszego elementu w tablicy.
 
-*pBound*  
+*pBound*<br/>
 Wskaźnik do `SAFEARRAYBOUND` struktury.
 
-*uDims*  
+*uDims*<br/>
 Liczba wymiarów w tablicy.
 
-*saSrc*  
+*saSrc*<br/>
 Odwołanie do `SAFEARRAY` struktury lub `CComSafeArray` obiektu. W obu przypadkach konstruktora używa tego odwołania do skopiowania tablicy, więc tablicy nie jest wywoływany po konstrukcji.
 
-*psaSrc*  
+*psaSrc*<br/>
 Wskaźnik do `SAFEARRAY` struktury. Konstruktor używa tego adresu do skopiowania tablicy, więc tablicy nie jest wywoływany po konstrukcji.
 
 ### <a name="remarks"></a>Uwagi
@@ -267,7 +267,7 @@ HRESULT CopyFrom(LPSAFEARRAY* ppArray);
 
 ### <a name="parameters"></a>Parametry
 
-*ppArray*  
+*ppArray*<br/>
 Wskaźnik do `SAFEARRAY` do skopiowania.
 
 ### <a name="return-value"></a>Wartość zwracana
@@ -288,7 +288,7 @@ HRESULT CopyTo(LPSAFEARRAY* ppArray);
 
 ### <a name="parameters"></a>Parametry
 
-*ppArray*  
+*ppArray*<br/>
 Wskaźnik do lokalizacji, w której chcesz utworzyć nowy `SAFEARRAY`.
 
 ### <a name="return-value"></a>Wartość zwracana
@@ -310,16 +310,16 @@ HRESULT Create(ULONG ulCount = 0, LONG lLBound = 0);
 
 ### <a name="parameters"></a>Parametry
 
-*pBound*  
+*pBound*<br/>
 Wskaźnik do `SAFEARRAYBOUND` obiektu.
 
-*uDims*  
+*uDims*<br/>
 Liczba wymiarów w tablicy.
 
-*ulCount*  
+*ulCount*<br/>
 Liczba elementów w tablicy.
 
-*lLBound*  
+*lLBound*<br/>
 Dolna granica wartości. oznacza to, że indeks pierwszego elementu w tablicy.
 
 ### <a name="return-value"></a>Wartość zwracana
@@ -372,7 +372,7 @@ T& GetAt(LONG lIndex) const;
 
 ### <a name="parameters"></a>Parametry
 
-*wartość lindex.*  
+*wartość lindex.*<br/>
 Numer indeksu wartości w tablicy do zwrócenia.
 
 ### <a name="return-value"></a>Wartość zwracana
@@ -389,7 +389,7 @@ ULONG GetCount(UINT uDim = 0) const;
 
 ### <a name="parameters"></a>Parametry
 
-*uDim*  
+*uDim*<br/>
 Wymiar tablicy.
 
 ### <a name="return-value"></a>Wartość zwracana
@@ -422,7 +422,7 @@ LONG GetLowerBound(UINT uDim = 0) const;
 
 ### <a name="parameters"></a>Parametry
 
-*uDim*  
+*uDim*<br/>
 Wymiar tablicy, dla którego należy pobrać dolną granicę. Jeśli argument jest pominięty, wartość domyślna to 0.
 
 ### <a name="return-value"></a>Wartość zwracana
@@ -485,7 +485,7 @@ LONG GetUpperBound(UINT uDim = 0) const;
 
 ### <a name="parameters"></a>Parametry
 
-*uDim*  
+*uDim*<br/>
 Wymiar tablicy, dla którego należy pobrać górną granicę. Jeśli argument jest pominięty, wartość domyślna to 0.
 
 ### <a name="return-value"></a>Wartość zwracana
@@ -526,10 +526,10 @@ HRESULT MultiDimGetAt(const LONG* alIndex, T& t);
 
 ### <a name="parameters"></a>Parametry
 
-*alIndex*  
+*alIndex*<br/>
 Wskaźnik do wektora indeksów dla każdego wymiaru tablicy. Skrajnie po lewej stronie (najbardziej znaczących) wymiar jest `alIndex[0]`.
 
-*t*  
+*t*<br/>
 Zwracane odwołanie do danych.
 
 ### <a name="return-value"></a>Wartość zwracana
@@ -546,10 +546,10 @@ HRESULT MultiDimSetAt(const LONG* alIndex, const T& t);
 
 ### <a name="parameters"></a>Parametry
 
-*alIndex*  
+*alIndex*<br/>
 Wskaźnik do wektora indeksów dla każdego wymiaru tablicy. Po prawej stronie (najmniej znaczący) wymiar jest `alIndex`[0].
 
-*T*  
+*T*<br/>
 Określa wartość nowego elementu.
 
 ### <a name="return-value"></a>Wartość zwracana
@@ -571,7 +571,7 @@ T& operator[]int nindex) const;
 
 ### <a name="parameters"></a>Parametry
 
-*wartość, nIndex lindex.*  
+*wartość, nIndex lindex.*<br/>
 Numer indeksu wymaganego elementu w tablicy.
 
 ### <a name="return-value"></a>Wartość zwracana
@@ -593,10 +593,10 @@ ATL::CComSafeArray<T>& operator=(const SAFEARRAY* psaSrc);
 
 ### <a name="parameters"></a>Parametry
 
-*saSrc*  
+*saSrc*<br/>
 Odwołanie do `CComSafeArray` obiektu.
 
-*psaSrc*  
+*psaSrc*<br/>
 Wskaźnik do `SAFEARRAY` obiektu.
 
 ### <a name="return-value"></a>Wartość zwracana
@@ -626,13 +626,13 @@ HRESULT Resize(ULONG ulCount, LONG lLBound = 0);
 
 ### <a name="parameters"></a>Parametry
 
-*pBound*  
+*pBound*<br/>
 Wskaźnik do `SAFEARRAYBOUND` strukturę, która zawiera informacje na temat liczby elementów i dolną granicę tablicy.
 
-*ulCount*  
+*ulCount*<br/>
 Żądana liczba obiektów w tablicy o zmienionym rozmiarze.
 
-*lLBound*  
+*lLBound*<br/>
 Dolna granica.
 
 ### <a name="return-value"></a>Wartość zwracana
@@ -653,13 +653,13 @@ HRESULT SetAt(LONG lIndex, const T& t, BOOL bCopy = TRUE);
 
 ### <a name="parameters"></a>Parametry
 
-*wartość lindex.*  
+*wartość lindex.*<br/>
 Numer indeksu elementu tablicy, aby ustawić.
 
-*t*  
+*t*<br/>
 Nowa wartość określonego elementu.
 
-*bCopy*  
+*bCopy*<br/>
 Wskazuje, czy należy utworzyć kopię danych. Wartość domyślna to TRUE.
 
 ### <a name="return-value"></a>Wartość zwracana
@@ -672,7 +672,7 @@ Zwraca wartość S_OK w przypadku powodzenia lub błędu HRESULT w przypadku nie
 
 ## <a name="see-also"></a>Zobacz też
 
-[SAFEARRAY — typ danych](/previous-versions/windows/desktop/api/oaidl/ns-oaidl-tagsafearray)   
-[CComSafeArray::Create](#create)   
-[CComSafeArray::Destroy](#destroy)   
+[SAFEARRAY — typ danych](/previous-versions/windows/desktop/api/oaidl/ns-oaidl-tagsafearray)<br/>
+[CComSafeArray::Create](#create)<br/>
+[CComSafeArray::Destroy](#destroy)<br/>
 [Klasa — Przegląd](../../atl/atl-class-overview.md)

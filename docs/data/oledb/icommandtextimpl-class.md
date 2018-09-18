@@ -33,14 +33,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: e190f81c0097e707830f7ac09c801929ea3e85e9
-ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
+ms.openlocfilehash: 6283f29455cc3d835babdd83414e9dc98127eacd
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "42464562"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46029731"
 ---
 # <a name="icommandtextimpl-class"></a>ICommandTextImpl — Klasa
+
 Udostępnia implementację na potrzeby [ICommandText](/previous-versions/windows/desktop/ms714914\(v=vs.85\)) interfejsu.  
   
 ## <a name="syntax"></a>Składnia
@@ -52,11 +53,13 @@ class ATL_NO_VTABLE ICommandTextImpl
 ```  
   
 ### <a name="parameters"></a>Parametry  
- *T*  
- Klasa polecenia pochodną `ICommandTextImpl`. 
+
+*T*<br/>
+Klasa polecenia pochodną `ICommandTextImpl`. 
 
 ## <a name="requirements"></a>Wymagania  
- **Nagłówek:** altdb.h  
+
+**Nagłówek:** altdb.h  
   
 ## <a name="members"></a>Elementy członkowskie  
   
@@ -74,9 +77,11 @@ class ATL_NO_VTABLE ICommandTextImpl
 |[m_strCommandText](#strcommandtext)|Przechowuje tekst polecenia.|  
   
 ## <a name="remarks"></a>Uwagi  
- Obowiązkowego interfejsu na polecenia.  
+
+Obowiązkowego interfejsu na polecenia.  
  
 ## <a name="getcommandtext"></a> ICommandTextImpl::GetCommandText
+
 Zwraca tekst polecenia ustawione przez ostatnie wywołanie elementu [SetCommandText —](../../data/oledb/icommandtextimpl-setcommandtext.md).  
   
 ### <a name="syntax"></a>Składnia  
@@ -87,9 +92,11 @@ STDMETHOD(GetCommandText)(GUID * pguidDialect,
 ```  
   
 #### <a name="parameters"></a>Parametry  
- Zobacz [ICommandText::GetCommandText](/previous-versions/windows/desktop/ms709825\(v=vs.85\)) w *OLE DB Podręcznik programisty*. *PguidDialect* parametr jest ignorowany, domyślnie.  
+
+Zobacz [ICommandText::GetCommandText](/previous-versions/windows/desktop/ms709825\(v=vs.85\)) w *OLE DB Podręcznik programisty*. *PguidDialect* parametr jest ignorowany, domyślnie.  
 
 ## <a name="setcommandtext"></a> ICommandTextImpl::SetCommandText
+
 Ustawia tekst polecenia, zastępując istniejący tekst polecenia.  
   
 ### <a name="syntax"></a>Składnia  
@@ -100,9 +107,11 @@ STDMETHOD(SetCommandText)(REFGUID rguidDialect,
 ```  
   
 #### <a name="parameters"></a>Parametry  
- Zobacz [ICommandText::SetCommandText](/previous-versions/windows/desktop/ms709757\(v=vs.85\)) w *OLE DB Podręcznik programisty*. 
+
+Zobacz [ICommandText::SetCommandText](/previous-versions/windows/desktop/ms709757\(v=vs.85\)) w *OLE DB Podręcznik programisty*. 
 
 ## <a name="strcommandtext"></a> ICommandTextImpl::m_strCommandText
+
 Zapisuje ciąg tekstu polecenia.  
   
 ### <a name="syntax"></a>Składnia  
@@ -112,5 +121,6 @@ CComBSTR m_strCommandText;
 ```  
   
 ## <a name="see-also"></a>Zobacz też  
- [Szablony dostawców OLE DB](../../data/oledb/ole-db-provider-templates-cpp.md)   
- [Architektura szablonu dostawcy OLE DB](../../data/oledb/ole-db-provider-template-architecture.md)
+
+[Szablony dostawców OLE DB](../../data/oledb/ole-db-provider-templates-cpp.md)<br/>
+[Architektura szablonu dostawcy OLE DB](../../data/oledb/ole-db-provider-template-architecture.md)

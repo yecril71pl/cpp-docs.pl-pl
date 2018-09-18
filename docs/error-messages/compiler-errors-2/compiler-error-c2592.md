@@ -1,5 +1,5 @@
 ---
-title: C2592 błąd kompilatora | Dokumentacja firmy Microsoft
+title: Błąd kompilatora C2592 | Dokumentacja firmy Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,14 +16,15 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5d999056d718d9c7aad93d08a99895caebbef539
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 3f2377f48eb8102771705f2dedc67a7a15f6fa95
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33229816"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46030995"
 ---
-# <a name="compiler-error-c2592"></a>C2592 błąd kompilatora
-"class": "base_class_2" jest odziedziczone "base_class_1" i nie może być ponownie określone  
-  
- Można określić tylko klas podstawowych, które dziedziczą z innych klas podstawowych. W takim przypadku tylko `base_class_1` jest potrzebne w specyfikacji `class` ponieważ `base_class_1` już dziedziczy `base_class_2`.
+# <a name="compiler-error-c2592"></a>Błąd kompilatora C2592
+
+"class": "base_class_2" jest odziedziczone po "base_class_1" i nie może być ponownie określone
+
+Można określić tylko klas bazowych, które nie dziedziczą z innych klas bazowych. W tym przypadku tylko `base_class_1` jest wymagana w specyfikacji `class` ponieważ `base_class_1` już dziedziczy `base_class_2`.

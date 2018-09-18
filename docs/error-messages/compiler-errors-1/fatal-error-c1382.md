@@ -16,16 +16,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 07c6af1209faface96585224cbd08b4e35101478
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 3a5a6ce312c5ef886ef25e8de46e6d3376eded2e
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33229258"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46030659"
 ---
 # <a name="fatal-error-c1382"></a>Błąd krytyczny C1382
-Plik PCH "file" został przebudowany od "obj" został wygenerowany. Przebuduj ten obiekt  
-  
- Korzystając z [opcję/LTCG](../../build/reference/ltcg-link-time-code-generation.md), kompilator wykryto pliku .pch, która jest nowsza niż .obj CIL, wskazujące do niego. Informacje zawarte w pliku obj. CIL jest nieaktualny. Ponownie utworzyć obiekt.  
-  
- C1382 może również wystąpić w przypadku kompilacji z **/Yc**, ale również przekazać wielu plików kodu w kompilatorze.  Aby rozwiązać, nie należy używać **/Yc** podczas przekazywania wielu plików kodu w kompilatorze.  Aby uzyskać więcej informacji, zobacz [/Yc (Utwórz prekompilowany plik nagłówka)](../../build/reference/yc-create-precompiled-header-file.md).
+
+Plik PCH "file" został przebudowany od "obj" został wygenerowany. Przebuduj ten obiekt
+
+Korzystając z [opcję/LTCG](../../build/reference/ltcg-link-time-code-generation.md), kompilator wykrył pliku .pch, która jest nowsza niż .obj CIL, wskazujące na. Informacje zawarte w pliku .obj CIL jest nieaktualna. Ponownie skompiluj obiektu.
+
+C1382 może również wystąpić, jeśli kompilujesz z opcją **/Yc**, ale również przekazać wielu plików kodu w kompilatorze.  Aby rozwiązać problem, nie należy używać **/Yc** podczas przekazywania wielu plików kodu w kompilatorze.  Aby uzyskać więcej informacji, zobacz [/Yc (Utwórz prekompilowany plik nagłówkowy)](../../build/reference/yc-create-precompiled-header-file.md).

@@ -1,5 +1,5 @@
 ---
-title: C2010 błąd kompilatora | Dokumentacja firmy Microsoft
+title: Błąd kompilatora C2010 | Dokumentacja firmy Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,23 +16,24 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0c1f1a042881420c85670020e05ded3684a91268
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 4be71136d02a563d4dde5d720fe5ae51e0c3c5b6
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33163936"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46028972"
 ---
-# <a name="compiler-error-c2010"></a>C2010 błąd kompilatora
-"znak": nieoczekiwany w formalnej liście parametrów makra  
-  
- Znak jest niepoprawnie używany na liście parametrów formalnych definicji makra. Usuń znak Usuń przyczynę błędu.  
-  
- Poniższy przykład generuje C2010:  
-  
-```  
-// C2010.cpp  
-// compile with: /c  
-#define mymacro(a|) (2*a)   // C2010  
-#define mymacro(a) (2*a)   // OK  
+# <a name="compiler-error-c2010"></a>Błąd kompilatora C2010
+
+"character": nieoczekiwany w formalnej liście parametrów makra
+
+Znak jest niepoprawnie używany na liście parametrów formalnych w definicji makra. Usuń znak, aby naprawić błąd.
+
+Poniższy przykład spowoduje wygenerowanie C2010:
+
+```
+// C2010.cpp
+// compile with: /c
+#define mymacro(a|) (2*a)   // C2010
+#define mymacro(a) (2*a)   // OK
 ```

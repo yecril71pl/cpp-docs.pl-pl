@@ -1,5 +1,5 @@
 ---
-title: Kompilatora (poziom 4) ostrzeżenie C4235 | Dokumentacja firmy Microsoft
+title: Kompilator ostrzeżenie (poziom 4) C4235 | Dokumentacja firmy Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,22 +16,23 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: dc63640bc58caefa281b9207b9796ffdf387a7a8
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: c9e709017e51101efe53a8697bb145014f200871
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33292545"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46031824"
 ---
-# <a name="compiler-warning-level-4-c4235"></a>Kompilator C4235 ostrzegawcze (poziom 4)
-użyto niestandardowego rozszerzenia: słowo kluczowe "— słowo kluczowe" nie jest obsługiwane w tej architekturze  
-  
- Kompilator nie obsługuje słowa kluczowego użytym.  
-  
- To ostrzeżenie zostanie automatycznie podwyższony do wystąpił błąd. Jeśli chcesz zmienić to zachowanie, użyj [ostrzeżenie #pragma](../../preprocessor/warning.md). Na przykład aby C4235 do ostrzeżenia poziomu 2, należy użyć następującego kodu  
-  
-```  
-#pragma warning(2:4235)  
-```  
-  
- w pliku kodu źródłowego.
+# <a name="compiler-warning-level-4-c4235"></a>Kompilator ostrzeżenie (poziom 4) C4235
+
+użyto niestandardowego rozszerzenia: słowo kluczowe "— słowo kluczowe" nie jest obsługiwane w tej architekturze
+
+Kompilator nie obsługuje — słowo kluczowe, których użyto.
+
+To ostrzeżenie zostanie automatycznie podwyższony do błędu. Jeśli chcesz zmienić to zachowanie, użyj [ostrzeżenie #pragma](../../preprocessor/warning.md). Na przykład aby C4235 do włączonego ostrzeżenia poziomu 2, należy użyć następującego kodu
+
+```
+#pragma warning(2:4235)
+```
+
+w pliku kodu źródłowego.

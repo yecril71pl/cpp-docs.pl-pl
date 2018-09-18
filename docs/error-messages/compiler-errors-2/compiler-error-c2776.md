@@ -1,5 +1,5 @@
 ---
-title: C2776 błąd kompilatora | Dokumentacja firmy Microsoft
+title: Błąd kompilatora C2776 | Dokumentacja firmy Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,28 +16,29 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: afbf3c48e5445d101408c2539cc077071b639044
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 705f6930b18483c1a449fec4b50163cc658249d7
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33233771"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46029237"
 ---
-# <a name="compiler-error-c2776"></a>C2776 błąd kompilatora
-tylko jedna metoda "get" może być określona dla właściwości  
-  
- Można określić tylko jedno `get` działać w [właściwości](../../cpp/property-cpp.md) rozszerzonych atrybutów. Ten błąd występuje, gdy wiele `get` są określone funkcje.  
-  
- Poniższy przykład generuje C2776:  
-  
-```  
-// C2776.cpp  
-struct A {  
-   __declspec(property(get=GetProp,get=GetPropToo))  
-   // try the following line instead  
-   // __declspec(property(get=GetProp))  
-      int prop;   // C2776  
-   int GetProp(void);  
-   int GetPropToo(void);  
-};  
+# <a name="compiler-error-c2776"></a>Błąd kompilatora C2776
+
+tylko jedna metoda "get" może być określona dla właściwości
+
+Można określić tylko jedną `get` działa w programach [właściwość](../../cpp/property-cpp.md) atrybutów rozszerzonych. Ten błąd występuje, gdy wiele `get` funkcje zostały określone.
+
+Poniższy przykład spowoduje wygenerowanie C2776:
+
+```
+// C2776.cpp
+struct A {
+   __declspec(property(get=GetProp,get=GetPropToo))
+   // try the following line instead
+   // __declspec(property(get=GetProp))
+      int prop;   // C2776
+   int GetProp(void);
+   int GetPropToo(void);
+};
 ```

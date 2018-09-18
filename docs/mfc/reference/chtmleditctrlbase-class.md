@@ -230,12 +230,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d28eaff98d2af12d24fab91797182c99d33d317d
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: e2d2bdddd950197406672c59a6577d33985d3a54
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43207965"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46031512"
 ---
 # <a name="chtmleditctrlbase-class"></a>Klasa CHtmlEditCtrlBase
 Przedstawia składnik edycji HTML.  
@@ -361,8 +361,8 @@ template <class T> class CHtmlEditCtrlBase
 |[CHtmlEditCtrlBase::UnorderList](#unorderlist)|Włącza/wyłącza bieżące zaznaczenie od listy uporządkowanej i Blok normalny formatu.|  
   
 #### <a name="parameters"></a>Parametry  
- `T`  
- Nazwa klasy pochodnej.  
+*T*<br/>
+Nazwa klasy pochodnej.  
   
 ## <a name="remarks"></a>Uwagi  
  `CHtmlEditCtrlBase` dostarcza funkcji elementów członkowskich do edytowania poleceń, takich jak HTML WebBrowser [Bold](#bold). (Ewentualnie możesz wywołać [ExecCommand](#execcommand) można wykonać polecenia IDM_BOLD.)  

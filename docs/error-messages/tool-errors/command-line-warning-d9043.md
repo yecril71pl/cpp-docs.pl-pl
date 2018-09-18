@@ -1,5 +1,5 @@
 ---
-title: D9043 dla wiersza ostrzeżenie polecenia | Dokumentacja firmy Microsoft
+title: Ostrzeżenie wiersza polecenia D9043 | Dokumentacja firmy Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,22 +16,24 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 65bf672418b49dbf6017374ab7cd18caa61d7403
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: d29371e147c693b2aa49f8dcf838841af3c75c8d
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33294752"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46031876"
 ---
 # <a name="command-line-warning-d9043"></a>Ostrzeżenie D9043 dla wiersza polecenia
-Nieprawidłowa wartość 'warning_level' dla 'compiler_option'; przy założeniu '4999'; Ostrzeżenia analizy kodu nie są skojarzone z poziomami ostrzeżeń  
-  
-## <a name="example"></a>Przykład  
- Poniższy przykład generuje C9043.  
-  
-```  
-// D9043.cpp  
-// compile with: /analyze /w16001  
-// D9043 warning expected  
-int main() {}  
+
+Nieprawidłowa wartość "warning_level" do 'compiler_option'; Zakładając, że '4999'; Ostrzeżenia analizy kodu nie są skojarzone z poziomami ostrzeżeń
+
+## <a name="example"></a>Przykład
+
+Poniższy przykład spowoduje wygenerowanie C9043.
+
+```
+// D9043.cpp
+// compile with: /analyze /w16001
+// D9043 warning expected
+int main() {}
 ```

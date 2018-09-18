@@ -74,12 +74,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 609216b38ab67076b454ac5adad3f331b235b580
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: 8de0378e34212649f7e1149bd038587f547e4eb2
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45706033"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46032032"
 ---
 # <a name="cstockpropimpl-class"></a>Klasa CStockPropImpl
 
@@ -95,7 +95,7 @@ template <class T, class InterfaceName,
     const IID* piid = &_ATL_IIDOF(InterfaceName),
     const GUID* plibid = &CComModule::m_libid,
     WORD wMajor = 1,
-    WORD wMinor = 0, class tihclass = CcomTypeInfoHolder>  
+    WORD wMinor = 0, class tihclass = CcomTypeInfoHolder>
 class ATL_NO_VTABLE CStockPropImpl : public IDispatchImpl<InterfaceName, piid,
 plibid,
     wMajor,
@@ -105,25 +105,25 @@ wMinor,
 
 #### <a name="parameters"></a>Parametry
 
-*T*  
+*T*<br/>
 Klasa Implementowanie formantu i wynikające z `CStockPropImpl`.
 
-*InterfaceName*  
+*InterfaceName*<br/>
 Udostępnianie właściwości podstawowe podwójnego interfejsu.
 
-*piid*  
+*piid*<br/>
 Wskaźnik do identyfikatora IID z `InterfaceName`.
 
-*plibid*  
+*plibid*<br/>
 Wskaźnik do identyfikatora LIBID biblioteki typów, zawierający definicję `InterfaceName`.
 
-*wMajor*  
+*wMajor*<br/>
 Wersja główna biblioteki typów. Wartość domyślna to 1.
 
-*wMinor*  
+*wMinor*<br/>
 Wersja pomocnicza biblioteki typów. Wartość domyślna to 0.
 
-*tihclass*  
+*tihclass*<br/>
 Klasa używana do zarządzania informacji o typie *T*. Wartość domyślna to `CComTypeInfoHolder`.
 
 ## <a name="members"></a>Elementy członkowskie
@@ -228,7 +228,7 @@ HRESULT STDMETHODCALLTYPE get_Appearance(SHORT pnAppearance);
 
 ### <a name="parameters"></a>Parametry
 
-*pnAppearance*  
+*pnAppearance*<br/>
 Zmienna, która odbiera stylu malowania.
 
 ### <a name="return-value"></a>Wartość zwracana
@@ -245,7 +245,7 @@ HRESULT STDMETHODCALLTYPE get_Autosize(VARIANT_BOOL* pbAutoSize);
 
 ### <a name="parameters"></a>Parametry
 
-*pbAutoSize*  
+*pbAutoSize*<br/>
 Zmienna, która otrzymuje stan flagi. Wartość TRUE wskazuje, że kontrolka nie może być dowolnym rozmiarze.
 
 ### <a name="return-value"></a>Wartość zwracana
@@ -262,7 +262,7 @@ HRESULT STDMETHODCALLTYPE get_BackColor(OLE_COLOR* pclrBackColor);
 
 ### <a name="parameters"></a>Parametry
 
-*pclrBackColor*  
+*pclrBackColor*<br/>
 Zmienna, która odbiera kolor tła formantu.
 
 ### <a name="return-value"></a>Wartość zwracana
@@ -279,7 +279,7 @@ HRESULT STDMETHODCALLTYPE get_BackStyle(LONG* pnBackStyle);
 
 ### <a name="parameters"></a>Parametry
 
-*pnBackStyle*  
+*pnBackStyle*<br/>
 Zmienna, która odbiera styl tła formantu.
 
 ### <a name="return-value"></a>Wartość zwracana
@@ -296,7 +296,7 @@ HRESULT STDMETHODCALLTYPE get_BorderColor(OLE_COLOR* pclrBorderColor);
 
 ### <a name="parameters"></a>Parametry
 
-*pclrBorderColor*  
+*pclrBorderColor*<br/>
 Zmienna, która odbiera kolor obramowania formantu.
 
 ### <a name="return-value"></a>Wartość zwracana
@@ -313,7 +313,7 @@ HRESULT STDMETHODCALLTYPE get_BorderStyle(LONG* pnBorderStyle);
 
 ### <a name="parameters"></a>Parametry
 
-*pnBorderStyle*  
+*pnBorderStyle*<br/>
 Zmienna, która odbiera styl obramowania formantu.
 
 ### <a name="return-value"></a>Wartość zwracana
@@ -330,7 +330,7 @@ HRESULT STDMETHODCALLTYPE get_BorderVisible(VARIANT_BOOL* pbBorderVisible);
 
 ### <a name="parameters"></a>Parametry
 
-*pbBorderVisible*  
+*pbBorderVisible*<br/>
 Zmienna, która otrzymuje stan flagi. Wartość TRUE wskazuje, że obramowania kontrolki jest widoczna.
 
 ### <a name="return-value"></a>Wartość zwracana
@@ -347,7 +347,7 @@ HRESULT STDMETHODCALLTYPE get_BorderWidth(LONG* pnBorderWidth);
 
 ### <a name="parameters"></a>Parametry
 
-*pnBorderWidth*  
+*pnBorderWidth*<br/>
 Zmienna, która odbiera szerokość obramowania formantu.
 
 ### <a name="return-value"></a>Wartość zwracana
@@ -364,7 +364,7 @@ HRESULT STDMETHODCALLTYPE get_Caption(BSTR* pbstrCaption);
 
 ### <a name="parameters"></a>Parametry
 
-*pbstrCaption*  
+*pbstrCaption*<br/>
 Tekst, który ma być wyświetlany formantu.
 
 ### <a name="return-value"></a>Wartość zwracana
@@ -381,7 +381,7 @@ HRESULT STDMETHODCALLTYPE get_DrawMode(LONG* pnDrawMode);
 
 ### <a name="parameters"></a>Parametry
 
-*pnDrawMode*  
+*pnDrawMode*<br/>
 Zmienna, która odbiera tryb rysowania kontrolki.
 
 ### <a name="return-value"></a>Wartość zwracana
@@ -398,7 +398,7 @@ HRESULT STDMETHODCALLTYPE get_DrawStyle(LONG* pnDrawStyle);
 
 ### <a name="parameters"></a>Parametry
 
-*pnDrawStyle*  
+*pnDrawStyle*<br/>
 Zmienna, która odbiera styl rysowania kontrolki.
 
 ### <a name="return-value"></a>Wartość zwracana
@@ -415,7 +415,7 @@ HRESULT STDMETHODCALLTYPE get_DrawWidth(LONG* pnDrawWidth);
 
 ### <a name="parameters"></a>Parametry
 
-*pnDrawWidth*  
+*pnDrawWidth*<br/>
 Zmienna, która odbiera wartość szerokości kontrolki, w pikselach.
 
 ### <a name="return-value"></a>Wartość zwracana
@@ -432,7 +432,7 @@ HRESULT STDMETHODCALLTYPE get_Enabled(VARIANT_BOOL* pbEnabled);
 
 ### <a name="parameters"></a>Parametry
 
-*pbEnabled*  
+*pbEnabled*<br/>
 Zmienna, która otrzymuje stan flagi. Wartość TRUE wskazuje, czy kontrolka jest włączona.
 
 ### <a name="return-value"></a>Wartość zwracana
@@ -449,7 +449,7 @@ HRESULT STDMETHODCALLTYPE get_FillColor(OLE_COLOR* pclrFillColor);
 
 ### <a name="parameters"></a>Parametry
 
-*pclrFillColor*  
+*pclrFillColor*<br/>
 Zmienna, która odbiera kolor wypełnienia kontrolki.
 
 ### <a name="return-value"></a>Wartość zwracana
@@ -466,7 +466,7 @@ HRESULT STDMETHODCALLTYPE get_FillStyle(LONG* pnFillStyle);
 
 ### <a name="parameters"></a>Parametry
 
-*pnFillStyle*  
+*pnFillStyle*<br/>
 Zmienna, która odbiera styl wypełnienia kontrolki.
 
 ### <a name="return-value"></a>Wartość zwracana
@@ -483,7 +483,7 @@ HRESULT STDMETHODCALLTYPE get_Font(IFontDisp** ppFont);
 
 ### <a name="parameters"></a>Parametry
 
-*ppFont*  
+*ppFont*<br/>
 Zmienna, która otrzymuje wskaźnik do właściwości czcionki formantu.
 
 ### <a name="return-value"></a>Wartość zwracana
@@ -500,7 +500,7 @@ HRESULT STDMETHODCALLTYPE get_ForeColor(OLE_COLOR* pclrForeColor);
 
 ### <a name="parameters"></a>Parametry
 
-*pclrForeColor*  
+*pclrForeColor*<br/>
 Zmienna, która odbiera kontrolek Kolor pierwszego planu.
 
 ### <a name="return-value"></a>Wartość zwracana
@@ -517,7 +517,7 @@ HRESULT STDMETHODCALLTYPE get_HWND(LONG_PTR* phWnd);
 
 ### <a name="parameters"></a>Parametry
 
-*phWnd*  
+*phWnd*<br/>
 Uchwyt okna skojarzonego z kontrolką.
 
 ### <a name="return-value"></a>Wartość zwracana
@@ -534,7 +534,7 @@ HRESULT STDMETHODCALLTYPE get_MouseIcon(IPictureDisp** ppPicture);
 
 ### <a name="parameters"></a>Parametry
 
-*ppPicture*  
+*ppPicture*<br/>
 Zmienna, która otrzymuje wskaźnik do właściwości obrazu grafiki.
 
 ### <a name="return-value"></a>Wartość zwracana
@@ -551,7 +551,7 @@ HRESULT STDMETHODCALLTYPE get_MousePointer(LONG* pnMousePointer);
 
 ### <a name="parameters"></a>Parametry
 
-*pnMousePointer*  
+*pnMousePointer*<br/>
 Zmienna, która otrzymuje typ wskaźnika myszy.
 
 ### <a name="return-value"></a>Wartość zwracana
@@ -568,7 +568,7 @@ HRESULT STDMETHODCALLTYPE get_Picture(IPictureDisp** ppPicture);
 
 ### <a name="parameters"></a>Parametry
 
-*ppPicture*  
+*ppPicture*<br/>
 Zmienna, która otrzymuje wskaźnik do właściwości obrazu. Zobacz [elementu IPictureDisp](https://msdn.microsoft.com/library/windows/desktop/ms680762) Aby uzyskać więcej informacji.
 
 ### <a name="return-value"></a>Wartość zwracana
@@ -585,7 +585,7 @@ HRESULT STDMETHODCALLTYPE get_ReadyState(LONG* pnReadyState);
 
 ### <a name="parameters"></a>Parametry
 
-*pnReadyState*  
+*pnReadyState*<br/>
 Zmienna, która odbiera formantu stanu gotowości.
 
 ### <a name="return-value"></a>Wartość zwracana
@@ -602,7 +602,7 @@ HRESULT STDMETHODCALLTYPE get_TabStop(VARIANT_BOOL* pbTabStop);
 
 ### <a name="parameters"></a>Parametry
 
-*pbTabStop*  
+*pbTabStop*<br/>
 Zmienna, która otrzymuje stan flagi. Wartość TRUE wskazuje, czy kontrolka jest tabulatora.
 
 ### <a name="return-value"></a>Wartość zwracana
@@ -619,7 +619,7 @@ HRESULT STDMETHODCALLTYPE get_Text(BSTR* pbstrText);
 
 ### <a name="parameters"></a>Parametry
 
-*pbstrText*  
+*pbstrText*<br/>
 Tekst, który jest wyświetlany formantu.
 
 ### <a name="return-value"></a>Wartość zwracana
@@ -636,7 +636,7 @@ HRESULT STDMETHODCALLTYPE getvalid(VARIANT_BOOL* pbValid);
 
 ### <a name="parameters"></a>Parametry
 
-*pbValid*  
+*pbValid*<br/>
 Zmienna, która otrzymuje stan flagi. Wartość TRUE wskazuje, czy kontrolka jest nieprawidłowy.
 
 ### <a name="return-value"></a>Wartość zwracana
@@ -653,7 +653,7 @@ HRESULT STDMETHODCALLTYPE get_Window(LONG_PTR* phWnd);
 
 ### <a name="parameters"></a>Parametry
 
-*phWnd*  
+*phWnd*<br/>
 Uchwyt okna skojarzonego z kontrolką.
 
 ### <a name="return-value"></a>Wartość zwracana
@@ -670,7 +670,7 @@ HRESULT STDMETHODCALLTYPE put_Appearance(SHORT nAppearance);
 
 ### <a name="parameters"></a>Parametry
 
-*nAppearance*  
+*nAppearance*<br/>
 Nowy styl paint używanego przez formant.
 
 ### <a name="return-value"></a>Wartość zwracana
@@ -687,7 +687,7 @@ HRESULT STDMETHODCALLTYPE put_AutoSize(VARIANT_BOOL bAutoSize,);
 
 ### <a name="parameters"></a>Parametry
 
-*bAutoSize*  
+*bAutoSize*<br/>
 Wartość TRUE, jeśli formant nie może być dowolnym rozmiarze.
 
 ### <a name="return-value"></a>Wartość zwracana
@@ -704,7 +704,7 @@ HRESULT STDMETHODCALLTYPE put_BackColor(OLE_COLOR clrBackColor);
 
 ### <a name="parameters"></a>Parametry
 
-*clrBackColor*  
+*clrBackColor*<br/>
 Nowy kolor tła kontrolki.
 
 ### <a name="return-value"></a>Wartość zwracana
@@ -721,7 +721,7 @@ HRESULT STDMETHODCALLTYPE put_BackStyle(LONG nBackStyle);
 
 ### <a name="parameters"></a>Parametry
 
-*nBackStyle*  
+*nBackStyle*<br/>
 Nowy styl tła formantu.
 
 ### <a name="return-value"></a>Wartość zwracana
@@ -738,7 +738,7 @@ HRESULT STDMETHODCALLTYPE put_BorderColor(OLE_COLOR clrBorderColor);
 
 ### <a name="parameters"></a>Parametry
 
-*clrBorderColor*  
+*clrBorderColor*<br/>
 Nowy kolor obramowania. Typ danych OLE_COLOR wewnętrznie jest przedstawiana jako 32-bitowa liczba całkowita typu long.
 
 ### <a name="return-value"></a>Wartość zwracana
@@ -755,7 +755,7 @@ HRESULT STDMETHODCALLTYPE put_BorderStyle(LONG nBorderStyle);
 
 ### <a name="parameters"></a>Parametry
 
-*nBorderStyle*  
+*nBorderStyle*<br/>
 Nowy styl obramowania.
 
 ### <a name="return-value"></a>Wartość zwracana
@@ -772,7 +772,7 @@ HRESULT STDMETHODCALLTYPE put_BorderVisible(VARIANT_BOOL bBorderVisible);
 
 ### <a name="parameters"></a>Parametry
 
-*bBorderVisible*  
+*bBorderVisible*<br/>
 Wartość TRUE, jeśli ma być widoczne obramowania.
 
 ### <a name="return-value"></a>Wartość zwracana
@@ -789,7 +789,7 @@ HRESULT STDMETHODCALLTYPE put_BorderWidth(LONG nBorderWidth);
 
 ### <a name="parameters"></a>Parametry
 
-*nBorderWidth*  
+*nBorderWidth*<br/>
 Nową szerokość obramowania formantu.
 
 ### <a name="return-value"></a>Wartość zwracana
@@ -806,7 +806,7 @@ HRESULT STDMETHODCALLTYPE put_Caption(BSTR bstrCaption);
 
 ### <a name="parameters"></a>Parametry
 
-*bstrCaption*  
+*bstrCaption*<br/>
 Tekst, który ma być wyświetlany formantu.
 
 ### <a name="return-value"></a>Wartość zwracana
@@ -823,7 +823,7 @@ HRESULT STDMETHODCALLTYPE put_DrawMode(LONG nDrawMode);
 
 ### <a name="parameters"></a>Parametry
 
-*nDrawMode*  
+*nDrawMode*<br/>
 Tryb rysowania nowego formantu.
 
 ### <a name="return-value"></a>Wartość zwracana
@@ -840,7 +840,7 @@ HRESULT STDMETHODCALLTYPE put_DrawStyle(LONG pnDrawStyle);
 
 ### <a name="parameters"></a>Parametry
 
-*nDrawStyle*  
+*nDrawStyle*<br/>
 Styl rysowania nowego formantu.
 
 ### <a name="return-value"></a>Wartość zwracana
@@ -857,7 +857,7 @@ HRESULT STDMETHODCALLTYPE put_DrawWidth(LONG nDrawWidth);
 
 ### <a name="parameters"></a>Parametry
 
-*nDrawWidth*  
+*nDrawWidth*<br/>
 Nową szerokość ma być używany przez formant rysowania metody.
 
 ### <a name="return-value"></a>Wartość zwracana
@@ -874,7 +874,7 @@ HRESULT STDMETHODCALLTYPE put_Enabled(VARIANT_BOOL bEnabled);
 
 ### <a name="parameters"></a>Parametry
 
-*bWłączony*  
+*bWłączony*<br/>
 Wartość TRUE, jeśli kontrolka jest włączona.
 
 ### <a name="return-value"></a>Wartość zwracana
@@ -891,7 +891,7 @@ HRESULT STDMETHODCALLTYPE put_FillColor(OLE_COLOR clrFillColor);
 
 ### <a name="parameters"></a>Parametry
 
-*clrFillColor*  
+*clrFillColor*<br/>
 Nowy kolor wypełnienia dla formantu.
 
 ### <a name="return-value"></a>Wartość zwracana
@@ -908,7 +908,7 @@ HRESULT STDMETHODCALLTYPE put_FillStyle(LONG nFillStyle);
 
 ### <a name="parameters"></a>Parametry
 
-*nFillStyle*  
+*nFillStyle*<br/>
 Styl wypełnienia nowego formantu.
 
 ### <a name="return-value"></a>Wartość zwracana
@@ -925,7 +925,7 @@ HRESULT STDMETHODCALLTYPE put_Font(IFontDisp* pFont);
 
 ### <a name="parameters"></a>Parametry
 
-*pFont*  
+*pFont*<br/>
 Wskaźnik do właściwości czcionki formantu.
 
 ### <a name="return-value"></a>Wartość zwracana
@@ -942,7 +942,7 @@ HRESULT STDMETHODCALLTYPE put_ForeColor(OLE_COLOR clrForeColor);
 
 ### <a name="parameters"></a>Parametry
 
-*clrForeColor*  
+*clrForeColor*<br/>
 Nowy kolor pierwszego planu formantu.
 
 ### <a name="return-value"></a>Wartość zwracana
@@ -959,7 +959,7 @@ HRESULT STDMETHODCALLTYPE put_HWND(LONG_PTR /* hWnd */);
 
 ### <a name="parameters"></a>Parametry
 
-*/&ast; hWnd &ast;/*  
+*/&ast; hWnd &ast;/*<br/>
 Zastrzeżone.
 
 ### <a name="return-value"></a>Wartość zwracana
@@ -980,7 +980,7 @@ HRESULT STDMETHODCALLTYPE put_MouseIcon(IPictureDisp* pPicture);
 
 ### <a name="parameters"></a>Parametry
 
-*pPicture*  
+*pPicture*<br/>
 Wskaźnik do właściwości obrazu grafiki.
 
 ### <a name="return-value"></a>Wartość zwracana
@@ -997,7 +997,7 @@ HRESULT STDMETHODCALLTYPE put_MousePointer(LONG nMousePointer);
 
 ### <a name="parameters"></a>Parametry
 
-*nMousePointer*  
+*nMousePointer*<br/>
 Typ wskaźnika myszy.
 
 ### <a name="return-value"></a>Wartość zwracana
@@ -1014,7 +1014,7 @@ HRESULT STDMETHODCALLTYPE put_Picture(IPictureDisp* pPicture);
 
 ### <a name="parameters"></a>Parametry
 
-*pPicture*  
+*pPicture*<br/>
 Wskaźnik do właściwości obrazu. Zobacz [elementu IPictureDisp](https://msdn.microsoft.com/library/windows/desktop/ms680762) Aby uzyskać więcej informacji.
 
 ### <a name="return-value"></a>Wartość zwracana
@@ -1031,7 +1031,7 @@ HRESULT STDMETHODCALLTYPE put_ReadyState(LONG nReadyState);
 
 ### <a name="parameters"></a>Parametry
 
-*nReadyState*  
+*nReadyState*<br/>
 Kontrola stanu gotowości.
 
 ### <a name="return-value"></a>Wartość zwracana
@@ -1048,7 +1048,7 @@ HRESULT STDMETHODCALLTYPE put_TabStop(VARIANT_BOOL bTabStop);
 
 ### <a name="parameters"></a>Parametry
 
-*bTabStop*  
+*bTabStop*<br/>
 Wartość TRUE, jeśli kontrolka jest tabulatora.
 
 ### <a name="return-value"></a>Wartość zwracana
@@ -1065,7 +1065,7 @@ HRESULT STDMETHODCALLTYPE put_Text(BSTR bstrText);
 
 ### <a name="parameters"></a>Parametry
 
-*bstrText*  
+*bstrText*<br/>
 Tekst, który jest wyświetlany formantu.
 
 ### <a name="return-value"></a>Wartość zwracana
@@ -1082,7 +1082,7 @@ HRESULT STDMETHODCALLTYPE getvalid(VARIANT_BOOL bValid);
 
 ### <a name="parameters"></a>Parametry
 
-*bValid*  
+*bValid*<br/>
 Wartość TRUE, jeśli kontrolka jest nieprawidłowy.
 
 ### <a name="return-value"></a>Wartość zwracana
@@ -1099,7 +1099,7 @@ HRESULT STDMETHODCALLTYPE put_Window(LONG_PTR hWnd);
 
 ### <a name="parameters"></a>Parametry
 
-*hWnd*  
+*hWnd*<br/>
 Uchwyt okna.
 
 ### <a name="return-value"></a>Wartość zwracana
@@ -1120,7 +1120,7 @@ HRESULT STDMETHODCALLTYPE putref_Font(IFontDisp* pFont);
 
 ### <a name="parameters"></a>Parametry
 
-*pFont*  
+*pFont*<br/>
 Wskaźnik do właściwości czcionki formantu.
 
 ### <a name="return-value"></a>Wartość zwracana
@@ -1141,7 +1141,7 @@ HRESULT STDMETHODCALLTYPE putref_MouseIcon(IPictureDisp* pPicture);
 
 ### <a name="parameters"></a>Parametry
 
-*pPicture*  
+*pPicture*<br/>
 Wskaźnik do właściwości obrazu grafiki.
 
 ### <a name="return-value"></a>Wartość zwracana
@@ -1162,7 +1162,7 @@ HRESULT STDMETHODCALLTYPE putref_Picture(IPictureDisp* pPicture);
 
 ### <a name="parameters"></a>Parametry
 
-*pPicture*  
+*pPicture*<br/>
 Wskaźnik do właściwości obrazu. Zobacz [elementu IPictureDisp](https://msdn.microsoft.com/library/windows/desktop/ms680762) Aby uzyskać więcej informacji.
 
 ### <a name="return-value"></a>Wartość zwracana
@@ -1175,5 +1175,5 @@ Taka sama jak [CStockPropImpl::put_Picture](#put_picture), ale liczby odwołań.
 
 ## <a name="see-also"></a>Zobacz też
 
-[Klasa — Przegląd](../../atl/atl-class-overview.md)   
+[Klasa — Przegląd](../../atl/atl-class-overview.md)<br/>
 [Klasa IDispatchImpl](../../atl/reference/idispatchimpl-class.md)

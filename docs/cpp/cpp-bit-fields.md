@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9bc13eb70dd2efc479cef7185ee0cdfa147ec507
-ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
+ms.openlocfilehash: 69411a727c3f590e9a45a46ecb4ea2eb0eab05c8
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/01/2018
-ms.locfileid: "39408049"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46029471"
 ---
 # <a name="c-bit-fields"></a>Pola bitowe języka C++
 
@@ -38,7 +38,7 @@ Klasy i struktury mogą zawierać elementy członkowskie, które zajmują mniej 
 > [!NOTE]
 > Pole bitowe nienazwane szerokości 0 wymusza wyrównanie następne pole bitowe do następnego **typu** granic, gdzie **typu** jest typ elementu członkowskiego.
 
- Poniższy przykład deklaruje strukturę, która zawiera pola bitowe:
+Poniższy przykład deklaruje strukturę, która zawiera pola bitowe:
 
 ```cpp
 // bit_fields1.cpp
@@ -94,4 +94,5 @@ Poniżej przedstawiono szczegółową listę błędne operacji w polach bitowych
 - Inicjowanie innej niż**const** odwołania z polem bitowym.
 
 ## <a name="see-also"></a>Zobacz także
- [Klasy i struktury](../cpp/classes-and-structs-cpp.md)
+
+[Klasy i struktury](../cpp/classes-and-structs-cpp.md)

@@ -17,47 +17,49 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 217061557acb0c8b311a91651eea2f57a8198872
-ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
+ms.openlocfilehash: 442084881b57d07658a6677d5a6fa3f612336762
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/02/2018
-ms.locfileid: "39467534"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46029692"
 ---
 # <a name="tokens-c"></a>Tokeny (C++)
-Token jest najmniejszy element program w języku C++, która ma znaczenie dla kompilatora. Analizator składni języka C++ rozpoznaje tych rodzajów tokenów: identyfikatory, słowa kluczowe, literały, operatory, przerywniki języka i innych separatorów. Tworzy strumień tokeny te jednostki translacji.  
-  
- Tokeny są zwykle rozdzielone *biały*. Biały znak może być jeden lub więcej:  
-  
--   Puste  
-  
--   Poziomą lub pionową karty  
-  
--   Nowe wiersze  
-  
--   Formfeeds  
-  
--   Komentarze  
-  
- Analizator rozpoznaje słów kluczowych, identyfikatory, literały, operatorów i przerywniki języka. Informacje o określonych typach tokenu, zobacz [słowa kluczowe](../cpp/keywords-cpp.md), [identyfikatory](../cpp/identifiers-cpp.md), [numeryczne, wartości logicznych i literały wskaźnika](../cpp/numeric-boolean-and-pointer-literals-cpp.md), [literały ciągów i znakowe ](../cpp/string-and-character-literals-cpp.md), [Literały definiowane przez użytkownika](../cpp/user-defined-literals-cpp.md), [C++ wbudowane operatory, pierwszeństwo i kojarzenie](../cpp/cpp-built-in-operators-precedence-and-associativity.md), i [przerywniki języka](../cpp/punctuators-cpp.md). Biały znak jest ignorowany, z wyjątkiem zgodnie z potrzebami do oddzielania tokenów.  
-  
- Tokeny wstępnego przetwarzania są używane w fazy przetwarzania wstępnego w celu wygenerowania strumień tokenu przekazywane do kompilator. Przetwarzania wstępnego kategorie tokenu są nazwy nagłówków, identyfikatory, numery przetwarzania wstępnego, literały znakowe, literałów ciągów, operatory przetwarzania wstępnego i przerywniki języka i pojedyncze znaki inne niż odstępu, które nie pasują do jednej z innych kategorii. Literały znakowe i może być literały definiowane przez użytkownika. Przetworzone wstępnie tokeny mogą być oddzielone biały znak lub komentarzy.  
-  
- Analizator oddziela tokenów ze strumienia wejściowego, tworząc najdłużej możliwe tokenu przy użyciu wprowadzonych znaków podczas skanowania od lewej do prawej. Należy wziąć pod uwagę fragmentu kodu:  
-  
-```cpp 
-a = i+++j;  
-```  
-  
- Programisty, który napisał kod było zamierzone jednej z tych dwóch instrukcji:  
-  
-```cpp 
-a = i + (++j)  
-  
-a = (i++) + j  
-```  
-  
- Ponieważ analizator tworzy token najdłuższy możliwe ze strumienia wejściowego, wybiera ona drugi interpretacji, dzięki czemu tokenów `i++`, `+`, i `j`.  
-  
-## <a name="see-also"></a>Zobacz także  
- [Konwencje leksykalne](../cpp/lexical-conventions.md)
+
+Token jest najmniejszy element program w języku C++, która ma znaczenie dla kompilatora. Analizator składni języka C++ rozpoznaje tych rodzajów tokenów: identyfikatory, słowa kluczowe, literały, operatory, przerywniki języka i innych separatorów. Tworzy strumień tokeny te jednostki translacji.
+
+Tokeny są zwykle rozdzielone *biały*. Biały znak może być jeden lub więcej:
+
+- Puste
+
+- Poziomą lub pionową karty
+
+- Nowe wiersze
+
+- Formfeeds
+
+- Komentarze
+
+Analizator rozpoznaje słów kluczowych, identyfikatory, literały, operatorów i przerywniki języka. Informacje o określonych typach tokenu, zobacz [słowa kluczowe](../cpp/keywords-cpp.md), [identyfikatory](../cpp/identifiers-cpp.md), [numeryczne, wartości logicznych i literały wskaźnika](../cpp/numeric-boolean-and-pointer-literals-cpp.md), [literały ciągów i znakowe ](../cpp/string-and-character-literals-cpp.md), [Literały definiowane przez użytkownika](../cpp/user-defined-literals-cpp.md), [C++ wbudowane operatory, pierwszeństwo i kojarzenie](../cpp/cpp-built-in-operators-precedence-and-associativity.md), i [przerywniki języka](../cpp/punctuators-cpp.md). Biały znak jest ignorowany, z wyjątkiem zgodnie z potrzebami do oddzielania tokenów.
+
+Tokeny wstępnego przetwarzania są używane w fazy przetwarzania wstępnego w celu wygenerowania strumień tokenu przekazywane do kompilator. Przetwarzania wstępnego kategorie tokenu są nazwy nagłówków, identyfikatory, numery przetwarzania wstępnego, literały znakowe, literałów ciągów, operatory przetwarzania wstępnego i przerywniki języka i pojedyncze znaki inne niż odstępu, które nie pasują do jednej z innych kategorii. Literały znakowe i może być literały definiowane przez użytkownika. Przetworzone wstępnie tokeny mogą być oddzielone biały znak lub komentarzy.
+
+Analizator oddziela tokenów ze strumienia wejściowego, tworząc najdłużej możliwe tokenu przy użyciu wprowadzonych znaków podczas skanowania od lewej do prawej. Należy wziąć pod uwagę fragmentu kodu:
+
+```cpp
+a = i+++j;
+```
+
+Programisty, który napisał kod było zamierzone jednej z tych dwóch instrukcji:
+
+```cpp
+a = i + (++j)
+
+a = (i++) + j
+```
+
+Ponieważ analizator tworzy token najdłuższy możliwe ze strumienia wejściowego, wybiera ona drugi interpretacji, dzięki czemu tokenów `i++`, `+`, i `j`.
+
+## <a name="see-also"></a>Zobacz także
+
+[Konwencje leksykalne](../cpp/lexical-conventions.md)

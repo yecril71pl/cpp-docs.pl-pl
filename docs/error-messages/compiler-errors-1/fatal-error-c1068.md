@@ -16,14 +16,15 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9fe67aa85acbab4cb175b6062a7a36ea91c7c815
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 783e4fffa73dd22a5f93254a30b57e1788baed47
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33197120"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46031564"
 ---
 # <a name="fatal-error-c1068"></a>Błąd krytyczny C1068
-Nie można otworzyć pliku 'Plik'.  
-  
- Upewnij się, że `file` nie jest używany przez inny program.
+
+Nie można otworzyć pliku 'Plik'
+
+Upewnij się, że `file` nie jest używany przez inny program.

@@ -1,5 +1,5 @@
 ---
-title: C3898 błąd kompilatora | Dokumentacja firmy Microsoft
+title: Błąd kompilatora C3898 | Dokumentacja firmy Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,36 +16,37 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: baeb6e97549bb55212d336e9f832152abaf7db68
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 39fe816c2637df5e5a474718d70b404bbc0c2df6
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33270719"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46030032"
 ---
-# <a name="compiler-error-c3898"></a>C3898 błąd kompilatora
-"var": elementy członkowskie typu danych może być tylko członkami typów zarządzanych  
-  
- [Initonly](../../dotnet/initonly-cpp-cli.md) element członkowski danych został zadeklarowany w klasie macierzystego.  `initonly` Element członkowski danych mogą być deklarowane tylko w klasie CLR.  
-  
- Poniższy przykład generuje C3898:  
-  
-```  
-// C3898.cpp  
-// compile with: /clr  
-struct Y1 {  
-   initonly  
-   static int data_var = 9;   // C3898  
-};  
-```  
-  
- Możliwe rozwiązanie:  
-  
-```  
-// C3898b.cpp  
-// compile with: /clr /c  
-ref struct Y1 {  
-   initonly  
-   static int data_var = 9;  
-};  
+# <a name="compiler-error-c3898"></a>Błąd kompilatora C3898
+
+"var": składowe danych typu mogą być tylko składowymi typów zarządzanych
+
+[Initonly](../../dotnet/initonly-cpp-cli.md) element członkowski danych została zadeklarowana w klasie natywnych.  `initonly` Element członkowski danych mogą być deklarowane tylko w klasie CLR.
+
+Poniższy przykład spowoduje wygenerowanie C3898:
+
+```
+// C3898.cpp
+// compile with: /clr
+struct Y1 {
+   initonly
+   static int data_var = 9;   // C3898
+};
+```
+
+Możliwe rozwiązanie:
+
+```
+// C3898b.cpp
+// compile with: /clr /c
+ref struct Y1 {
+   initonly
+   static int data_var = 9;
+};
 ```

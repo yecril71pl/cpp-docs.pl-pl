@@ -16,21 +16,22 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 06ec8f9aeca3b88b1c14c8dddfc625aae0b185d0
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: fcb464a676b47baa4589c17269819d3a84d058fe
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33198810"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46029915"
 ---
 # <a name="fatal-error-c1021"></a>Błąd krytyczny C1021
-Nieprawidłowe polecenie preprocesora "string"  
-  
- `string` nie jest prawidłową [dyrektywy preprocesora](../../preprocessor/preprocessor-directives.md). Aby rozwiązać problem, należy użyć prawidłową nazwę preprocesora `string`.  
-  
- Poniższy przykład generuje C1021:  
-  
-```  
-// C1021.cpp  
-#BadPreProcName    // C1021 delete line  
+
+Nieprawidłowe polecenie preprocesora "string"
+
+`string` nie jest prawidłowym [dyrektywy preprocesora](../../preprocessor/preprocessor-directives.md). Aby naprawić błąd, należy użyć prawidłową nazwę preprocesora `string`.
+
+Poniższy przykład spowoduje wygenerowanie C1021:
+
+```
+// C1021.cpp
+#BadPreProcName    // C1021 delete line
 ```

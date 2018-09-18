@@ -19,53 +19,55 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2e17540d8d1e45ace69e45c3eac3444f70c6f343
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 15ceaa3e5b50fbc72d14564630399b5e5ba74b49
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32388860"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46030432"
 ---
 # <a name="usual-arithmetic-conversions"></a>Popularne konwersje arytmetyczne
-Większość operatorów C wykonywania konwersji typu można wyświetlić operandy wyrażenia na wspólny typ, albo aby rozszerzyć krótkich wartości rozmiar całkowitą w operacjach maszyny. Konwersje wykonywane przez operatorów C zależy od określonego operatora i typu argumentu lub argumentów operacji. Jednak wielu operatorów wykonywać podobne konwersje typów całkowitych i zmiennoprzecinkowych argumentów operacji. Konwersje te są określane jako "konwersje arytmetyczne." Konwersja wartości operandu na zgodne z typem nie powoduje żadnych zmian, jego wartość.  
-  
- Konwersje arytmetyczne podsumowano poniżej są nazywane "popularne konwersje arytmetyczne." Te kroki są stosowane tylko w przypadku operatorów binarnych, w których jest oczekiwany typ arytmetyczny. Celem jest uzyskanie wspólny typ, który jest również typ wyniku. Aby ustalić, które konwersje rzeczywiście została wykonana, kompilator dotyczy następującego algorytmu operacji binarnych w wyrażeniu. Poniższe kroki nie są kolejność pierwszeństwa.  
-  
-1.  Jeśli którykolwiek argument operacji jest typu `long double`, drugiego operandu jest konwertowana na typ `long double`.  
-  
-2.  Jeśli nie jest spełniony warunek powyżej i albo operand jest typu **podwójne**, drugiego operandu jest konwertowana na typ **podwójne**.  
-  
-3.  Jeśli powyższe dwa warunki nie są spełnione, a albo operand jest typu **float**, drugiego operandu jest konwertowana na typ **float**.  
-  
-4.  Jeśli powyższe trzy warunki nie są spełnione (Brak argumenty operacji są typy zmiennoprzecinkowe), a następnie konwersje wartości całkowitych są wykonywane na operandów w następujący sposób:  
-  
-    -   Jeśli którykolwiek argument operacji jest typu `unsigned long`, drugiego operandu jest konwertowana na typ `unsigned long`.  
-  
-    -   Jeśli nie jest spełniony warunek powyżej i albo operand jest typu **długi** i drugą typu `unsigned int`, obydwa argumenty operacji są konwertowane na typ `unsigned long`.  
-  
-    -   Jeśli nie są spełnione dwa powyższe warunki, a albo operand jest typu **długi**, drugiego operandu jest konwertowana na typ **długi**.  
-  
-    -   Jeśli powyższe trzy warunki nie są spełnione, a albo operand jest typu `unsigned int`, drugiego operandu jest konwertowana na typ `unsigned int`.  
-  
-    -   Jeśli żaden z powyższych warunków nie jest spełniony, obydwa argumenty operacji są konwertowane na typ `int`.  
-  
- Poniższy kod ilustruje te reguły konwersji:  
-  
-```  
-float   fVal;  
-double  dVal;  
-int   iVal;  
-unsigned long ulVal;  
-  
-dVal = iVal * ulVal; /* iVal converted to unsigned long  
-                      * Uses step 4.  
-                      * Result of multiplication converted to double   
-                      */  
-dVal = ulVal + fVal; /* ulVal converted to float  
-                      * Uses step 3.  
-                      * Result of addition converted to double   
-                      */   
-```  
-  
-## <a name="see-also"></a>Zobacz też  
- [Operatory języka C](../c-language/c-operators.md)
+
+Większość operatory języka C wykonywać konwersje typów, aby wyświetlić operandy wyrażenia do typu wspólnego, albo aby rozszerzyć wartości krótka liczba całkowita określająca rozmiar w operacjach maszyny. Konwersje wykonywane przez operatory języka C zależą od tego, konkretny operator i typ operandu lub argumentów operacji. Jednak wielu operatorów wykonywać podobne konwersje operandów typów całkowitych i zmiennoprzecinkowych. Konwersje te są nazywane "konwersje arytmetyczne". Konwersja wartości argumentu operacji na zgodny typ. powoduje, że nie wprowadzono zmian w jej wartość.
+
+Konwersje arytmetyczne podsumowano poniżej są nazywane "typowe konwersje arytmetyczne". Te kroki są stosowane tylko w przypadku operatory binarne, które oczekują typu arytmetycznego. Celem jest uzyskanie wspólnego typu, który jest również typ wyniku. Aby ustalić, jakie konwersje faktycznie mieć miejsce, kompilator dotyczy następującego algorytmu do operacji binarnych w wyrażeniu. Poniższe kroki nie są kolejność pierwszeństwa.
+
+1. Jeśli jeden z operandów jest typu `long double`, to drugi operand jest konwertowany na typ `long double`.
+
+1. Jeśli powyższy warunek nie jest spełniony i jeden z operandów jest typu **double**, to drugi operand jest konwertowany na typ **double**.
+
+1. Jeśli dwa powyższe warunki nie są spełnione i jeden z operandów jest typu **float**, to drugi operand jest konwertowany na typ **float**.
+
+1. Jeśli trzy powyższe warunki nie są spełnione (żaden z operandów jest typu zmiennoprzecinkowego), a następnie konwersje wartości całkowitych są wykonywane na operandach w następujący sposób:
+
+   - Jeśli jeden z operandów jest typu `unsigned long`, to drugi operand jest konwertowany na typ `unsigned long`.
+
+   - Jeśli powyższy warunek nie jest spełniony i jeden z operandów jest typu **długie** i drugą typu `unsigned int`, oba operandy są konwertowane na typ `unsigned long`.
+
+   - Jeśli dwa powyższe warunki nie są spełnione i jeden z operandów jest typu **długie**, to drugi operand jest konwertowany na typ **długie**.
+
+   - Jeśli trzy powyższe warunki nie są spełnione i jeden z operandów jest typu `unsigned int`, to drugi operand jest konwertowany na typ `unsigned int`.
+
+   - Jeśli żaden z powyższych warunków nie jest spełniony, oba operandy są konwertowane na typ `int`.
+
+Poniższy kod ilustruje te reguły konwersji:
+
+```
+float   fVal;
+double  dVal;
+int   iVal;
+unsigned long ulVal;
+
+dVal = iVal * ulVal; /* iVal converted to unsigned long
+                      * Uses step 4.
+                      * Result of multiplication converted to double
+                      */
+dVal = ulVal + fVal; /* ulVal converted to float
+                      * Uses step 3.
+                      * Result of addition converted to double
+                      */
+```
+
+## <a name="see-also"></a>Zobacz też
+
+[Operatory języka C](../c-language/c-operators.md)

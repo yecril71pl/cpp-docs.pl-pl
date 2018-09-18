@@ -1,5 +1,5 @@
 ---
-title: C błąd w czasie wykonywania R6018 | Dokumentacja firmy Microsoft
+title: R6018 błąd środowiska uruchomieniowego języka C | Dokumentacja firmy Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,29 +16,30 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4946e3a8341963ee1a1ca2c3ad65d64cfbad8080
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 9265c54175236d96391c64e343771c896de1c744
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33302831"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46031720"
 ---
-# <a name="c-runtime-error-r6018"></a>C R6018 błąd w czasie wykonywania
-Błąd nieoczekiwany sterty  
-  
+# <a name="c-runtime-error-r6018"></a>R6018 błąd środowiska uruchomieniowego języka C
+
+Błąd nieoczekiwanego sterty
+
 > [!NOTE]
->  Jeśli wystąpią ten komunikat o błędzie podczas uruchamiania aplikacji aplikacji został wyłączony, ponieważ ma ona wystąpił problem wewnętrzny. Istnieje kilka możliwych przyczyn tego błędu, ale często jest to spowodowane usterką w kodzie aplikacji.  
->   
->  Możesz wypróbować następujące kroki, aby naprawić ten błąd:  
->   
->  -   Użyj **aplikacje i funkcje** lub **programy i funkcje** strony **Panelu sterowania** do naprawy lub ponownej instalacji programu.  
-> -   Sprawdź **usługi Windows Update** w **Panelu sterowania** aktualizacji oprogramowania.  
-> -   Sprawdź, czy zaktualizowaną wersję aplikacji. Jeśli problem będzie się powtarzać, skontaktuj się z dostawcą aplikacji.  
-  
- **Informacje dla programistów**  
-  
- Program napotkał nieoczekiwany błąd podczas wykonywania operacji zarządzania pamięcią.  
-  
- Ten błąd zazwyczaj występuje, jeśli program przypadkowo zmienia danych sterty czasu wykonywania. Jednak to może również być spowodowane wewnętrznego błędu środowiska uruchomieniowego lub kod systemu operacyjnego.  
-  
- Aby rozwiązać ten problem, sprawdź usterki uszkodzenie sterty w kodzie. Aby uzyskać dodatkowe informacje i przykłady, zobacz [szczegóły dotyczące sterty debugowania CRT](/visualstudio/debugger/crt-debug-heap-details). Następnie sprawdź, że używasz najnowszej pakietów redystrybucyjnych dla danego wdrożenia aplikacji. Aby uzyskać informacje, zobacz [wdrożenia w programie Visual C++](../../ide/deployment-in-visual-cpp.md).
+>  Jeśli napotkasz ten komunikat o błędzie podczas działania aplikacji, aplikacji został zamknięty, ponieważ ma on wewnętrzny problem. Istnieje kilka możliwych przyczyn tego błędu, ale często jest to spowodowane przez wadę w kodzie aplikacji.
+>
+>  Możesz wypróbować następujące kroki, aby naprawić ten błąd:
+>
+>  -   Użyj **aplikacje i funkcje** lub **programy i funkcje** strony w **Panelu sterowania** naprawić lub zainstalować ponownie program.
+> -   Sprawdź **Windows Update** w **Panelu sterowania** aktualizacji oprogramowania.
+> -   Sprawdź, czy zaktualizowaną wersję aplikacji. Jeśli problem będzie się powtarzać, skontaktuj się z dostawcą aplikacji.
+
+**Informacje dla programistów**
+
+Program napotkał nieoczekiwany błąd podczas wykonywania operacji zarządzania pamięcią.
+
+Ten błąd występuje przeważnie, jeśli program zmienia przypadkowo danych sterty środowiska wykonawczego. Jednak go może również być spowodowany przez błąd wewnętrzny w czasie wykonywania lub kodu systemu operacyjnego.
+
+Aby rozwiązać ten problem, sprawdź, czy błędy uszkodzenia sterty w kodzie. Aby uzyskać więcej informacji i przykładów, zobacz [szczegóły dotyczące sterty debugowania CRT](/visualstudio/debugger/crt-debug-heap-details). Następnie sprawdź, czy są przy użyciu najnowszych pakietów redystrybucyjnych dla danego wdrożenia aplikacji. Aby uzyskać informacje, zobacz [wdrożenia w programie Visual C++](../../ide/deployment-in-visual-cpp.md).

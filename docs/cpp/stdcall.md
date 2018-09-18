@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4a452d563646ac869bc1a3bc832a72a9bd11b694
-ms.sourcegitcommit: d10a2382832373b900b1780e1190ab104175397f
+ms.openlocfilehash: bb65ff85346412587fab96934ca5438bb6a4dfe5
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43894812"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46031382"
 ---
 # <a name="stdcall"></a>__stdcall
 
@@ -54,7 +54,7 @@ Na ARM i x64 procesorów, **__stdcall** jest akceptowane i ignorowane przez komp
 W przypadku funkcji niestatycznych klas, jeśli funkcja jest zdefiniowana poza wierszem, modyfikator konwencji wywoływania nie musi być określony w definicji poza wierszem. Oznacza to, że dla metod niestatycznej składowej klasy przyjmowana jest konwencja wywoływania określona podczas deklaracji w punkcie definicji. Biorąc pod uwagę tę definicję klasy
 
 ```cpp
-struct CMyClass {  
+struct CMyClass {
    void __stdcall mymethod();
 };
 ```
@@ -62,13 +62,13 @@ struct CMyClass {
 this
 
 ```cpp
-void CMyClass::mymethod() { return; }  
+void CMyClass::mymethod() { return; }
 ```
 
 jest to równoważne
 
 ```cpp
-void __stdcall CMyClass::mymethod() { return; }  
+void __stdcall CMyClass::mymethod() { return; }
 ```
 
 ## <a name="example"></a>Przykład
@@ -84,5 +84,5 @@ typedef BOOL (__stdcall *funcname_ptr)(void * arg1, const char * arg2, DWORD fla
 
 ## <a name="see-also"></a>Zobacz także
 
-[Przekazywanie argumentów i konwencje nazewnictwa](../cpp/argument-passing-and-naming-conventions.md)   
+[Przekazywanie argumentów i konwencje nazewnictwa](../cpp/argument-passing-and-naming-conventions.md)<br/>
 [Słowa kluczowe](../cpp/keywords-cpp.md)

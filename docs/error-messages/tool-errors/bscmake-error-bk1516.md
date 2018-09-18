@@ -16,14 +16,15 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 95b76d41719da17e6e69d88d17a45269fff75cac
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: a9be9eeb1043c28806d28cf216bc87931015695d
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33294550"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46030017"
 ---
 # <a name="bscmake-error-bk1516"></a>Błąd BSCMAKE BK1516
-bscfile uszkodzony; Nie można zaktualizować przyrostowo  
-  
- Plik .bsc został uszkodzony, prawdopodobnie z powodu awarii systemu podczas kompilacji. Usuń plik .bsc, skompiluj ponownie wszystkie pliki SBR, a następnie odbudowanie pliku .bsc.
+
+bscfile uszkodzony; Nie można zaktualizować przyrostowo
+
+Pliku .bsc został uszkodzony, prawdopodobnie z powodu błędu systemu podczas kompilacji. Usuń plik .bsc, ponownie skompilować wszystkich plików SBR, a następnie odbudować plik .bsc.

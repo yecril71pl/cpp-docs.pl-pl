@@ -18,15 +18,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: be10e5e4105dd16a68ad2854538d6181e90bfbe9
-ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
+ms.openlocfilehash: 12e035a27693fcad095cd83880aba99c37ba1c1f
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33705344"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46027638"
 ---
 # <a name="badtarget-class"></a>bad_target — Klasa
-Ta klasa opisuje wyjątek wywoływany, gdy blok komunikatów jest wskaźnik do obiektu docelowego, która jest nieprawidłowa dla wykonywanej operacji.  
+Ta klasa opisuje wyjątek generowany, gdy blok obsługi wiadomości podano wskaźnik do obiektu docelowego, która jest nieprawidłowa dla wykonywanej operacji.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -43,7 +43,7 @@ class bad_target : public std::exception;
 |[bad_target](#ctor)|Przeciążone. Konstruuje `bad_target` obiektu.|  
   
 ## <a name="remarks"></a>Uwagi  
- Powodów takich, jak docelowy próby wykorzystania komunikat, który jest zarezerwowana do innej docelowej lub zwalniania zastrzeżenia, który nie ma zwykle zgłoszenia tego wyjątku.  
+ To jest zwykle wyjątek powodów, takich jak docelowy próby używanie komunikat, który jest zarezerwowana w innej docelowej lub zwalnianiu zliczania rezerwacji, który przechowuje.  
   
 ## <a name="inheritance-hierarchy"></a>Hierarchia dziedziczenia  
  `exception`  
@@ -66,8 +66,8 @@ bad_target() throw();
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `_Message`  
- Komunikat opisowy błędu.  
+*_Message*<br/>
+Opisowy komunikat dotyczący błędu.  
   
 ## <a name="see-also"></a>Zobacz też  
  [Współbieżność Namespace](concurrency-namespace.md)   

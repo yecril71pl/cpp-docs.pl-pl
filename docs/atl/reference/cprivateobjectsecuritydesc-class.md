@@ -22,12 +22,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7bb24b1d00c7c70b545213a64e685f238d6b5157
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: f69172986a2f9bd3ca7c0b2373bb815a2f52186b
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43757965"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46029016"
 ---
 # <a name="cprivateobjectsecuritydesc-class"></a>Klasa CPrivateObjectSecurityDesc
 
@@ -93,16 +93,16 @@ bool ConvertToAutoInherit(
 
 ### <a name="parameters"></a>Parametry
 
-*pParent*  
+*pParent*<br/>
 Wskaźnik do [CSecurityDesc](../../atl/reference/csecuritydesc-class.md) odwołuje się do obiektu nadrzędnego kontenera obiektu. W przypadku braku kontenera nadrzędnego, ten parametr ma wartość NULL.
 
-*Typ obiektu*  
+*Typ obiektu*<br/>
 Wskaźnik do `GUID` strukturę, która identyfikuje typ obiekt skojarzony z bieżącym obiektem. Ustaw *ObjectType* na wartość NULL, jeśli obiekt nie jest identyfikatorem GUID.
 
-*bIsDirectoryObject*  
+*bIsDirectoryObject*<br/>
 Określa, czy nowy obiekt mogą zawierać inne obiekty. Wartość true wskazuje, że nowy obiekt jest kontenerem. Wartość false wskazuje, że nowy obiekt nie jest kontenerem.
 
-*GenericMapping*  
+*GenericMapping*<br/>
 Wskaźnik do [GENERIC_MAPPING](/windows/desktop/api/winnt/ns-winnt-_generic_mapping) strukturę, która określa mapowanie z każdego ogólne prawa do określonych praw dla obiektu.
 
 ### <a name="return-value"></a>Wartość zwracana
@@ -161,28 +161,28 @@ bool Create(
 
 ### <a name="parameters"></a>Parametry
 
-*pParent*  
+*pParent*<br/>
 Wskaźnik do [CSecurityDesc](../../atl/reference/csecuritydesc-class.md) obiekt odwołuje się do katalogu nadrzędnego, w którym tworzony jest nowy obiekt. Jeśli katalog nadrzędny nie, należy ustawić na wartość NULL.
 
-*pCreator*  
+*pCreator*<br/>
 Wskaźnik na podany przez twórcę obiekt deskryptora zabezpieczeń. Jeśli twórca obiektu nie jawnie przekazuje informacje o zabezpieczeniach dla nowego obiektu, należy ustawić ten parametr na wartość NULL.
 
-*bIsDirectoryObject*  
+*bIsDirectoryObject*<br/>
 Określa, czy nowy obiekt mogą zawierać inne obiekty. Wartość true wskazuje, że nowy obiekt jest kontenerem. Wartość false wskazuje, że nowy obiekt nie jest kontenerem.
 
-*Token*  
+*Token*<br/>
 Odwołanie do [CAccessToken](../../atl/reference/caccesstoken-class.md) obiekt dla procesu klienta, w którego imieniu obiekt jest tworzony.
 
-*GenericMapping*  
+*GenericMapping*<br/>
 Wskaźnik do [GENERIC_MAPPING](/windows/desktop/api/winnt/ns-winnt-_generic_mapping) strukturę, która określa mapowanie z każdego ogólne prawa do określonych praw dla obiektu.
 
-*Typ obiektu*  
+*Typ obiektu*<br/>
 Wskaźnik do `GUID` strukturę, która identyfikuje typ obiekt skojarzony z bieżącym obiektem. Ustaw *ObjectType* na wartość NULL, jeśli obiekt nie jest identyfikatorem GUID.
 
-*bIsContainerObject*  
+*bIsContainerObject*<br/>
 Określa, czy nowy obiekt mogą zawierać inne obiekty. Wartość true wskazuje, że nowy obiekt jest kontenerem. Wartość false wskazuje, że nowy obiekt nie jest kontenerem.
 
-*AutoInheritFlags*  
+*AutoInheritFlags*<br/>
 Zestaw flag bitowych, które kontrolują, jak wpisy kontroli dostępu (ACE) są dziedziczone z *pParent*. Zobacz [CreatePrivateObjectSecurityEx](https://msdn.microsoft.com/library/windows/desktop/aa446581) Aby uzyskać więcej informacji.
 
 ### <a name="return-value"></a>Wartość zwracana
@@ -210,10 +210,10 @@ bool Get(
 
 ### <a name="parameters"></a>Parametry
 
-*SI*  
+*SI*<br/>
 Zestaw flag bitowych, które wskazują częściami deskryptor zabezpieczeń do pobrania. Ta wartość może być kombinacją [SECURITY_INFORMATION](/windows/desktop/SecAuthZ/security-information) flagi bitowe.
 
-*pResult*  
+*pResult*<br/>
 Wskaźnik do [CSecurityDesc](../../atl/reference/csecuritydesc-class.md) obiekt, który otrzymuje kopię żądanych informacji z Podany deskryptor zabezpieczeń.
 
 ### <a name="return-value"></a>Wartość zwracana
@@ -234,7 +234,7 @@ CPrivateObjectSecurityDesc& operator= (const CPrivateObjectSecurityDesc& rhs) th
 
 ### <a name="parameters"></a>Parametry
 
-*RHS*  
+*RHS*<br/>
 `CPrivateObjectSecurityDesc` Obiekt można przypisać do bieżącego obiektu.
 
 ### <a name="return-value"></a>Wartość zwracana
@@ -262,19 +262,19 @@ bool Set(
 
 ### <a name="parameters"></a>Parametry
 
-*SI*  
+*SI*<br/>
 Zestaw flag bitowych, które wskazują częściami deskryptor zabezpieczeń można ustawić. Ta wartość może być kombinacją [SECURITY_INFORMATION](/windows/desktop/SecAuthZ/security-information) flagi bitowe.
 
-*Modyfikacja*  
+*Modyfikacja*<br/>
 Wskaźnik do [CSecurityDesc](../../atl/reference/csecuritydesc-class.md) obiektu. Częściami deskryptor zabezpieczeń wskazywanym przez *si* parametru są stosowane do deskryptora zabezpieczeń obiektu.
 
-*GenericMapping*  
+*GenericMapping*<br/>
 Wskaźnik do [GENERIC_MAPPING](/windows/desktop/api/winnt/ns-winnt-_generic_mapping) strukturę, która określa mapowanie z każdego ogólne prawa do określonych praw dla obiektu.
 
-*Token*  
+*Token*<br/>
 Odwołanie do [CAccessToken](../../atl/reference/caccesstoken-class.md) obiekt dla procesu klienta, w którego imieniu obiekt jest tworzony.
 
-*AutoInheritFlags*  
+*AutoInheritFlags*<br/>
 Zestaw flag bitowych, które kontrolują, jak wpisy kontroli dostępu (ACE) są dziedziczone z *pParent*. Zobacz [CreatePrivateObjectSecurityEx](https://msdn.microsoft.com/library/windows/desktop/aa446581) Aby uzyskać więcej informacji.
 
 ### <a name="return-value"></a>Wartość zwracana
@@ -287,7 +287,7 @@ Druga metoda zezwala na określanie typu obiektu identyfikator GUID obiektu lub 
 
 ## <a name="see-also"></a>Zobacz też
 
-[SECURITY_DESCRIPTOR](/windows/desktop/api/winnt/ns-winnt-_security_descriptor)   
-[Klasa — Przegląd](../../atl/atl-class-overview.md)   
-[Funkcje globalne zabezpieczeń](../../atl/reference/security-global-functions.md)   
+[SECURITY_DESCRIPTOR](/windows/desktop/api/winnt/ns-winnt-_security_descriptor)<br/>
+[Klasa — Przegląd](../../atl/atl-class-overview.md)<br/>
+[Funkcje globalne zabezpieczeń](../../atl/reference/security-global-functions.md)<br/>
 [Klasa CSecurityDesc](../../atl/reference/csecuritydesc-class.md)
