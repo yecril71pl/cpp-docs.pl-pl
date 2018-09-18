@@ -16,16 +16,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: aad4e504a4a25dd0ed2579ddf8efae4f0f8c624d
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 80d3b41669e7ce2c66055d791039f4f326e040bb
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33295964"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46118612"
 ---
 # <a name="cvtres-fatal-error-cvt1105"></a>Błąd krytyczny CVTRES CVT1105
-Nie można wyszukać w pliku  
-  
- CVTRES nie można przejść do lokalizacji pliku.  
-  
- Przyczyną tego błędu może być uszkodzenie pliku.
+
+Nie można wyszukać w pliku
+
+BŁĄD nie można przejść do lokalizacji w pliku.
+
+Ten błąd może być spowodowany przez uszkodzenie pliku.

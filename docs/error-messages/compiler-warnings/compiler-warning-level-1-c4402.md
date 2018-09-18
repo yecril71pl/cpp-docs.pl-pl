@@ -1,5 +1,5 @@
 ---
-title: Kompilatora (poziom 1) ostrzeżenie C4402 | Dokumentacja firmy Microsoft
+title: Kompilator ostrzeżenie (poziom 1) C4402 | Dokumentacja firmy Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,16 +16,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 019171730d81697676a935bf3745eb29083fe88a
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 395fe8a9621923bbb4e4667921bce2540bfef8b0
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33274336"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46118378"
 ---
-# <a name="compiler-warning-level-1-c4402"></a>Kompilator C4402 ostrzegawcze (poziom 1)
-należy użyć operatora PTR  
-  
- Typ jest używany dla argumentu operacji bez operatora PTR, gdy odwołujących się do lub Rzutowanie na typ w kodu zestawu wbudowanego.  
-  
- Kompilator zakłada PTR operator.
+# <a name="compiler-warning-level-1-c4402"></a>Kompilator ostrzeżenie (poziom 1) C4402
+
+należy użyć operatora PTR
+
+Typ jest używany dla argumentu operacji bez operator PTR, przy odwoływaniu się do lub Rzutowanie na typ w kodu zestawu wbudowanego.
+
+Kompilator zakłada PTR operator.

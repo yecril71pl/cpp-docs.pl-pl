@@ -44,12 +44,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d771b24db830a03101b7a0041b02aeaeaf3b3b3d
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 591465ed9c16485498174a710d2d37ff68425058
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43756080"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46116870"
 ---
 # <a name="csecuritydesc-class"></a>Klasa CSecurityDesc
 
@@ -129,13 +129,13 @@ Konstruktor.
 
 ```
 CSecurityDesc() throw();
-CSecurityDesc(const CSecurityDesc& rhs) throw(... );  
+CSecurityDesc(const CSecurityDesc& rhs) throw(... );
 CSecurityDesc(const SECURITY_DESCRIPTOR& rhs) throw(...);
 ```
 
 ### <a name="parameters"></a>Parametry
 
-*RHS*  
+*RHS*<br/>
 `CSecurityDesc` Obiektu lub `SECURITY_DESCRIPTOR` struktury można przypisać do nowego `CSecurityDesc` obiektu.
 
 ### <a name="remarks"></a>Uwagi
@@ -164,7 +164,7 @@ bool FromString(LPCTSTR pstr) throw(...);
 
 ### <a name="parameters"></a>Parametry
 
-*pstr*  
+*pstr*<br/>
 Wskaźnik na ciąg zakończony znakiem null, który zawiera [format ciągu deskryptora zabezpieczeń](/windows/desktop/SecAuthZ/security-descriptor-string-format) ma zostać przekonwertowany.
 
 ### <a name="return-value"></a>Wartość zwracana
@@ -187,7 +187,7 @@ bool GetControl(SECURITY_DESCRIPTOR_CONTROL* psdc) const throw();
 
 ### <a name="parameters"></a>Parametry
 
-*psdc*  
+*psdc*<br/>
 Wskaźnik do `SECURITY_DESCRIPTOR_CONTROL` strukturę, która otrzymuje informacje kontrolne deskryptora zabezpieczeń.
 
 ### <a name="return-value"></a>Wartość zwracana
@@ -211,13 +211,13 @@ bool GetDacl(
 
 ### <a name="parameters"></a>Parametry
 
-*pDacl*  
+*pDacl*<br/>
 Wskaźnik do `CDacl` struktury, w której chcesz przechowywać kopię listy DACL deskryptora zabezpieczeń. Jeśli istnieje poufnej listy kontroli dostępu, metoda ustawia *pDacl* adres deskryptora zabezpieczeń poufnej listy kontroli dostępu. Jeśli poufnej listy kontroli dostępu nie istnieje, wartość nie jest przechowywany.
 
-*pbPresent*  
+*pbPresent*<br/>
 Wskaźnik na wartość informującą o występowaniu poufnej listy kontroli dostępu w podany deskryptor zabezpieczeń. Jeśli deskryptor zabezpieczeń zawiera poufne listy kontroli dostępu, ten parametr ma wartość true. Jeśli deskryptor zabezpieczeń nie zawiera poufne listy kontroli dostępu, ten parametr ma wartość false.
 
-*pbDefaulted*  
+*pbDefaulted*<br/>
 Wskaźnik flagi ustawioną wartość flagi SE_DACL_DEFAULTED w `SECURITY_DESCRIPTOR_CONTROL` struktury istnienie poufnej listy kontroli dostępu dla deskryptora zabezpieczeń. Jeśli ta flaga ma wartość true, poufnej listy kontroli dostępu została pobrana przez domyślnego mechanizmu; w przypadku wartości FAŁSZ poufnej listy kontroli dostępu została jawnie określona przez użytkownika.
 
 ### <a name="return-value"></a>Wartość zwracana
@@ -236,10 +236,10 @@ bool GetGroup(
 
 ### <a name="parameters"></a>Parametry
 
-*pSid*  
+*pSid*<br/>
 Wskaźnik do [CSid](../../atl/reference/csid-class.md) (identyfikator zabezpieczeń), która otrzymuje kopię grupy przechowywane w CDacl.
 
-*pbDefaulted*  
+*pbDefaulted*<br/>
 Wskaźnik flagi ustawioną wartość flagi SE_GROUP_DEFAULTED w `SECURITY_DESCRIPTOR_CONTROL` struktury w przypadku zwrotu metody.
 
 ### <a name="return-value"></a>Wartość zwracana
@@ -258,10 +258,10 @@ bool GetOwner(
 
 ### <a name="parameters"></a>Parametry
 
-*pSid*  
+*pSid*<br/>
 Wskaźnik do [CSid](../../atl/reference/csid-class.md) (identyfikator zabezpieczeń), która otrzymuje kopię grupy przechowywane w CDacl.
 
-*pbDefaulted*  
+*pbDefaulted*<br/>
 Wskaźnik flagi ustawioną wartość flagi SE_OWNER_DEFAULTED w `SECURITY_DESCRIPTOR_CONTROL` struktury w przypadku zwrotu metody.
 
 ### <a name="return-value"></a>Wartość zwracana
@@ -293,13 +293,13 @@ bool GetSacl(
 
 ### <a name="parameters"></a>Parametry
 
-*pSacl*  
+*pSacl*<br/>
 Wskaźnik do `CSacl` struktury, w której chcesz przechowywać kopię SACL deskryptora zabezpieczeń. Jeśli istnieje system listy kontroli dostępu, metoda ustawia *pSacl* adres deskryptora zabezpieczeń system listy kontroli dostępu. Jeśli system listy kontroli dostępu nie istnieje, wartość nie jest przechowywany.
 
-*pbPresent*  
+*pbPresent*<br/>
 Wskaźnik flagi metody ustawia obecności system listy kontroli dostępu w podany deskryptor zabezpieczeń. Jeśli deskryptor zabezpieczeń zawiera listy ACL systemu, ten parametr ma wartość true. Jeśli deskryptor zabezpieczeń nie zawiera listy ACL systemu, ten parametr ma wartość false.
 
-*pbDefaulted*  
+*pbDefaulted*<br/>
 Wskaźnik flagi ustawioną wartość flagi SE_SACL_DEFAULTED w `SECURITY_DESCRIPTOR_CONTROL` struktury, gdy system listy kontroli dostępu dla deskryptora zabezpieczeń.
 
 ### <a name="return-value"></a>Wartość zwracana
@@ -529,13 +529,13 @@ Deskryptor zabezpieczeń w formacie bezwzględnym podano łącza do informacji z
 Operator przypisania.
 
 ```
-CSecurityDesc& operator= (const SECURITY_DESCRIPTOR& rhs) throw(...);  
+CSecurityDesc& operator= (const SECURITY_DESCRIPTOR& rhs) throw(...);
 CSecurityDesc& operator= (const CSecurityDesc& rhs) throw(...);
 ```
 
 ### <a name="parameters"></a>Parametry
 
-*RHS*  
+*RHS*<br/>
 `SECURITY_DESCRIPTOR` Struktury lub `CSecurityDesc` obiekt można przypisać do `CSecurityDesc` obiektu.
 
 ### <a name="return-value"></a>Wartość zwracana
@@ -546,7 +546,7 @@ Zwraca zaktualizowany `CSecurityDesc` obiektu.
 
 Rzutuje na wskaźnik do wartości `SECURITY_DESCRIPTOR` struktury.
 
-```  
+```
 operator const SECURITY_DESCRIPTOR *() const throw();
 ```
 
@@ -562,10 +562,10 @@ bool SetControl(
 
 ### <a name="parameters"></a>Parametry
 
-*ControlBitsOfInterest*  
+*ControlBitsOfInterest*<br/>
 Maska SECURITY_DESCRIPTOR_CONTROL, która wskazuje bity kontrolne do ustawienia. Aby uzyskać listę flag, które można ustawiać, zobacz [SetSecurityDescriptorControl](https://msdn.microsoft.com/library/windows/desktop/aa379582\(v=vs.85\).aspx).
 
-*ControlBitsToSet*  
+*ControlBitsToSet*<br/>
 Wskazuje nowe wartości dla bitów kontrolnych określonych przez maskę SECURITY_DESCRIPTOR_CONTROL *ControlBitsOfInterest* maski. Ten parametr może być kombinacją flag wymienionych dla *ControlBitsOfInterest* parametru.
 
 ### <a name="return-value"></a>Wartość zwracana
@@ -592,13 +592,13 @@ inline void SetDacl(
 
 ### <a name="parameters"></a>Parametry
 
-*Lista DACL*  
+*Lista DACL*<br/>
 Odwołanie do `CDacl` określenie listy DACL deskryptora zabezpieczeń obiektu. Ten parametr nie może być równa NULL. Aby ustawić PUSTEGO DACL deskryptora zabezpieczeń, pierwszy formularz metody powinien być używany z *bPresent* ustawiony na wartość false.
 
-*bPresent*  
+*bPresent*<br/>
 Określa flagi wskazujące na obecność listy DACL w deskryptora zabezpieczeń. Jeśli ten parametr ma wartość true, metoda ustawia flagę SE_DACL_PRESENT `SECURITY_DESCRIPTOR_CONTROL` struktury i używa wartości w *Dacl* i *bDefaulted* parametrów. Jeśli jest to wartość false, metoda czyści flagę SE_DACL_PRESENT i *bDefaulted* jest ignorowana.
 
-*bDefaulted*  
+*bDefaulted*<br/>
 Określa flagę wskazującą, źródło listy DACL. Jeśli ta flaga ma wartość true, lista DACL ma zostały pobrane przez niektóre domyślnego mechanizmu. W przypadku wartości FAŁSZ listy DACL został jawnie określony przez użytkownika. Metoda przechowuje wartość w Flaga SE_DACL_DEFAULTED `SECURITY_DESCRIPTOR_CONTROL` struktury. Jeśli ten parametr nie jest określony, Flaga SE_DACL_DEFAULTED jest wyczyszczone.
 
 ### <a name="return-value"></a>Wartość zwracana
@@ -619,10 +619,10 @@ bool SetGroup(const CSid& Sid, bool bDefaulted = false) throw(...);
 
 ### <a name="parameters"></a>Parametry
 
-*Identyfikator SID*  
+*Identyfikator SID*<br/>
 Odwołanie do [CSid](../../atl/reference/csid-class.md) obiektu dla nowej grupy podstawowej deskryptora zabezpieczeń. Ten parametr nie może być równa NULL. Deskryptor zabezpieczeń może być oznaczona jako nie posiadają DACL lub SACL, ale musi mieć grupę i właściciela, a nawet te są NULL identyfikatora SID (która jest wbudowana SID o specjalnym znaczeniu).
 
-*bDefaulted*  
+*bDefaulted*<br/>
 Wskazuje, czy informacje o podstawowej grupie został utworzony na podstawie domyślnego mechanizmu. Jeśli ta wartość wynosi true, to domyślne informacje i metody przechowuje tej wartości jako flagi SE_GROUP_DEFAULTED w `SECURITY_DESCRIPTOR_CONTROL` struktury. Jeśli ten parametr wynosi zero, Flaga SE_GROUP_DEFAULTED jest wyczyszczone.
 
 ### <a name="return-value"></a>Wartość zwracana
@@ -639,10 +639,10 @@ bool SetOwner(const CSid& Sid, bool bDefaulted = false) throw(...);
 
 ### <a name="parameters"></a>Parametry
 
-*Identyfikator SID*  
+*Identyfikator SID*<br/>
 [CSid](../../atl/reference/csid-class.md) obiekt podstawowy właściciel nowego deskryptora zabezpieczeń. Ten parametr nie może być równa NULL.
 
-*bDefaulted*  
+*bDefaulted*<br/>
 Wskazuje, czy informacje o właścicielu jest tworzony na podstawie domyślnego mechanizmu. Jeśli ta wartość wynosi true, to domyślne informacje. Metoda przechowuje tej wartości jako flagi SE_OWNER_DEFAULTED w `SECURITY_DESCRIPTOR_CONTROL` struktury. Jeśli ten parametr wynosi zero, Flaga SE_OWNER_DEFAULTED jest wyczyszczone.
 
 ### <a name="return-value"></a>Wartość zwracana
@@ -659,10 +659,10 @@ bool SetSacl(const CSacl& Sacl, bool bDefaulted = false) throw(...);
 
 ### <a name="parameters"></a>Parametry
 
-*SACL*  
+*SACL*<br/>
 Wskaźnik do `CSacl` Określanie SACL deskryptora zabezpieczeń obiektu. Ten parametr nie może być równa NULL i musi być obiektem CSacl. W przeciwieństwie do listy DACL nie ma żadnej różnicy między wartością NULL i pustych SACL, jak obiekty z SACL należy określać prawa dostępu, tylko informacje dotyczące inspekcji.
 
-*bDefaulted*  
+*bDefaulted*<br/>
 Określa flagę wskazującą, źródło SACL. Jeśli ta flaga ma wartość true, Lista SACL ma zostały pobrane przez niektóre domyślnego mechanizmu. W przypadku wartości FAŁSZ SACL został jawnie określony przez użytkownika. Metoda przechowuje wartość w Flaga SE_SACL_DEFAULTED `SECURITY_DESCRIPTOR_CONTROL` struktury. Jeśli ten parametr nie jest określony, Flaga SE_SACL_DEFAULTED jest wyczyszczone.
 
 ### <a name="return-value"></a>Wartość zwracana
@@ -682,10 +682,10 @@ bool ToString(
 
 ### <a name="parameters"></a>Parametry
 
-*pstr*  
+*pstr*<br/>
 Wskaźnik na ciąg zakończony znakiem null, który otrzyma [format ciągu deskryptora zabezpieczeń](/windows/desktop/SecAuthZ/security-descriptor-string-format).
 
-*SI*  
+*SI*<br/>
 Określa kombinacja flag bitowych SECURITY_INFORMATION, aby wskazać składniki deskryptora zabezpieczeń, aby uwzględnić w ciągu wyjściowym.
 
 ### <a name="return-value"></a>Wartość zwracana
@@ -713,7 +713,7 @@ Ta metoda wywołuje [ConvertStringSecurityDescriptorToSecurityDescriptor](/windo
 
 ## <a name="see-also"></a>Zobacz też
 
-[Zabezpieczenia — przykład](../../visual-cpp-samples.md)   
-[SECURITY_DESCRIPTOR](/windows/desktop/api/winnt/ns-winnt-_security_descriptor)   
-[Klasa — Przegląd](../../atl/atl-class-overview.md)   
+[Zabezpieczenia — przykład](../../visual-cpp-samples.md)<br/>
+[SECURITY_DESCRIPTOR](/windows/desktop/api/winnt/ns-winnt-_security_descriptor)<br/>
+[Klasa — Przegląd](../../atl/atl-class-overview.md)<br/>
 [Funkcje globalne zabezpieczeń](../../atl/reference/security-global-functions.md)

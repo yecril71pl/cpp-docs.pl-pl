@@ -18,20 +18,20 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 65278571fabf24011960ad577461347f1dfebf73
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: ddfe6660854ae4cbdba2398aa4102fd612d17ddc
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43200521"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46114582"
 ---
 # <a name="handling-ttnneedtext-notification-for-tool-tips"></a>Obsługa powiadomienia TTN_NEEDTEXT w przypadku etykietek narzędzi
 Jako część [Włączanie etykietek narzędzi](../mfc/enabling-tool-tips.md), które ułatwią obsługę **TTN_NEEDTEXT** wiadomości, dodając następujący wpis do okna właściciela mapy komunikatów:  
   
  [!code-cpp[NVC_MFCControlLadenDialog#40](../mfc/codesnippet/cpp/handling-ttn-needtext-notification-for-tool-tips_1.cpp)]  
   
- `memberFxn`  
- Funkcja elementu członkowskiego, wywoływana, gdy tekst jest wymagany w przypadku tego przycisku.  
+*memberFxn*<br/>
+Funkcja elementu członkowskiego, wywoływana, gdy tekst jest wymagany w przypadku tego przycisku.  
   
  Należy zauważyć, że identyfikator etykietki narzędzia jest zawsze 0.  
   
@@ -41,14 +41,14 @@ Jako część [Włączanie etykietek narzędzi](../mfc/enabling-tool-tips.md), k
   
  gdzie kursywą parametry są następujące:  
   
- `id`  
- Identyfikator formantu wysyłającego powiadomienia. Nie używany. Identyfikator formantu jest pobierana z **NMHDR** struktury.  
+*id*<br/>
+Identyfikator formantu wysyłającego powiadomienia. Nie używany. Identyfikator formantu jest pobierana z **NMHDR** struktury.  
   
- `pNMHDR`  
- Wskaźnik do [NMTTDISPINFO](/windows/desktop/api/commctrl/ns-commctrl-tagnmttdispinfoa) struktury. Ta struktura jest również omówione w dalszych [struktura TOOLTIPTEXT](../mfc/tooltiptext-structure.md).  
+*pNMHDR*<br/>
+Wskaźnik do [NMTTDISPINFO](/windows/desktop/api/commctrl/ns-commctrl-tagnmttdispinfoa) struktury. Ta struktura jest również omówione w dalszych [struktura TOOLTIPTEXT](../mfc/tooltiptext-structure.md).  
   
- `pResult`  
- Wskaźnik do kodu wyniku można ustawić przed zwróceniem. **TTN_NEEDTEXT** obsługi można zignorować *pResult* parametru.  
+*pResult*<br/>
+Wskaźnik do kodu wyniku można ustawić przed zwróceniem. **TTN_NEEDTEXT** obsługi można zignorować *pResult* parametru.  
   
  Na przykład obsługi powiadomień widoku formularza:  
   

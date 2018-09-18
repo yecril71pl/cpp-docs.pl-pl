@@ -17,12 +17,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0cf97db30cae44d02a690782f1246e06d6c2b9a8
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: a326b72ac5594d7ef5f0b9ad26f9bdf4e8472bd4
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43766724"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46112996"
 ---
 # <a name="adding-an-atl-active-server-page-component"></a>Dodawanie składnika strony Active Server ATL
 
@@ -46,10 +46,10 @@ Active Server Pages składniki są częścią architekturę Internet Information
 
 ## <a name="see-also"></a>Zobacz też
 
-[Dodawanie klasy](../../ide/adding-a-class-visual-cpp.md)   
-[Dodawanie nowego interfejsu w projekcie ATL](../../atl/reference/adding-a-new-interface-in-an-atl-project.md)   
-[Dodawanie punktów połączenia do obiektu](../../atl/adding-connection-points-to-an-object.md)   
-[Dodawanie metody](../../ide/adding-a-method-visual-cpp.md)   
-[Klasy MFC](../../mfc/reference/adding-an-mfc-class.md)   
+[Dodawanie klasy](../../ide/adding-a-class-visual-cpp.md)<br/>
+[Dodawanie nowego interfejsu w projekcie ATL](../../atl/reference/adding-a-new-interface-in-an-atl-project.md)<br/>
+[Dodawanie punktów połączenia do obiektu](../../atl/adding-connection-points-to-an-object.md)<br/>
+[Dodawanie metody](../../ide/adding-a-method-visual-cpp.md)<br/>
+[Klasy MFC](../../mfc/reference/adding-an-mfc-class.md)<br/>
 [Dodawanie rodzajowej klasy C++](../../ide/adding-a-generic-cpp-class.md)
 

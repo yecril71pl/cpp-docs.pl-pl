@@ -17,28 +17,31 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1c5da56c3c85c17bcd2cd91f9fa5a5f8399e9528
-ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
+ms.openlocfilehash: 444f56c1a999f09a79d725173c9f0f19399ab363
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/01/2018
-ms.locfileid: "39404278"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46118365"
 ---
 # <a name="comptrtrelease"></a>_com_ptr_t::Release
-**Microsoft Specific**  
-  
- Wywołania **wersji** funkcji składowej typu `IUnknown` interfejsu zhermetyzowanego wskaźnika.  
-  
-## <a name="syntax"></a>Składnia  
-  
-```  
-void Release( );  
-```  
-  
-## <a name="remarks"></a>Uwagi  
- Wywołania `IUnknown::Release` wskaźnika zhermetyzowany interfejs wywoływanie `E_POINTER` błąd, jeśli ten wskaźnik interfejsu ma wartość NULL.  
-  
- **END specyficzny dla Microsoft**  
-  
-## <a name="see-also"></a>Zobacz także  
- [_com_ptr_t, klasa](../cpp/com-ptr-t-class.md)
+
+**Microsoft Specific**
+
+Wywołania **wersji** funkcji składowej typu `IUnknown` interfejsu zhermetyzowanego wskaźnika.
+
+## <a name="syntax"></a>Składnia
+
+```
+void Release( );
+```
+
+## <a name="remarks"></a>Uwagi
+
+Wywołania `IUnknown::Release` wskaźnika zhermetyzowany interfejs wywoływanie `E_POINTER` błąd, jeśli ten wskaźnik interfejsu ma wartość NULL.
+
+**END specyficzny dla Microsoft**
+
+## <a name="see-also"></a>Zobacz także
+
+[_com_ptr_t, klasa](../cpp/com-ptr-t-class.md)

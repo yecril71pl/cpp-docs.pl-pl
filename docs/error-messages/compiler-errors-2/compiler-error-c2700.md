@@ -1,5 +1,5 @@
 ---
-title: C2700 błąd kompilatora | Dokumentacja firmy Microsoft
+title: Błąd kompilatora C2700 | Dokumentacja firmy Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,14 +16,15 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f1dd938756caee0906524cc002fa393ff01fd5fc
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 75b4b52c09467bea6e41be7b9fc016884859bd39
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33235301"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46115778"
 ---
-# <a name="compiler-error-c2700"></a>C2700 błąd kompilatora
-'Identyfikator': nie może zostać rzucony (Użyj/W4 dowiedzieć się więcej)  
-  
- Obiekt nie może zostać zgłoszony. Kompiluj z użyciem [/W4](../../build/reference/compiler-option-warning-level.md) Aby uzyskać więcej informacji diagnostycznych.
+# <a name="compiler-error-c2700"></a>Błąd kompilatora C2700
+
+'Identyfikator': nie może zostać rzucony (Użyj/W4 Aby uzyskać więcej informacji)
+
+Obiekt nie może zostać wygenerowany. Kompiluj przy użyciu [/W4](../../build/reference/compiler-option-warning-level.md) zawiera więcej informacji diagnostycznych.

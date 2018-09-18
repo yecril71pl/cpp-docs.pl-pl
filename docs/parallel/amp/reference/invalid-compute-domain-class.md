@@ -18,15 +18,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 588f12e04f3a2833da6d67c07ab41929d916a4b5
-ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
+ms.openlocfilehash: def102ecb8063f82d90d41b2b678ff22638b1f8b
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33705214"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46116012"
 ---
 # <a name="invalidcomputedomain-class"></a>invalid_compute_domain — Klasa
-Wyjątek zgłaszany, gdy środowisko uruchomieniowe nie może uruchomić jądra przy użyciu określonych w domenie obliczeniowej [parallel_for_each](concurrency-namespace-functions-amp.md#parallel_for_each) wywołania.  
+Wyjątek, który jest zgłaszany, gdy środowisko uruchomieniowe nie może uruchomić jądra używając domeny obliczeniowej określonej w [parallel_for_each](concurrency-namespace-functions-amp.md#parallel_for_each) wywołania.  
 
   
 ## <a name="syntax"></a>Składnia  
@@ -56,7 +56,7 @@ class invalid_compute_domain : public runtime_exception;
   
  **Namespace:** współbieżności  
 
-## <a name="ctor"></a> invalid_compute_domain — 
+## <a name="ctor"></a> invalid_compute_domain 
 
 Inicjuje nowe wystąpienie klasy.  
   
@@ -70,11 +70,11 @@ invalid_compute_domain() throw();
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `_Message`  
- Opis błędu.  
+*_Message*<br/>
+Opis błędu.  
   
 ### <a name="return-value"></a>Wartość zwracana  
- Wystąpienie `invalid_compute_domain` — klasa  
+ Wystąpienie `invalid_compute_domain` klasy  
     
 ## <a name="see-also"></a>Zobacz też  
  [Przestrzeń nazw współbieżności (C++ AMP)](concurrency-namespace-cpp-amp.md)

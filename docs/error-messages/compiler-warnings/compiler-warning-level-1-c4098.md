@@ -1,5 +1,5 @@
 ---
-title: Kompilatora (poziom 1) ostrzeżenie C4098 | Dokumentacja firmy Microsoft
+title: Kompilator ostrzeżenie (poziom 1) C4098 | Dokumentacja firmy Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,14 +16,15 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 889c9aa926a8400d977de00ef5c288316ae84782
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 84b3cdcdbb487774a92361d3a003ba83895d475e
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33276389"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46118313"
 ---
-# <a name="compiler-warning-level-1-c4098"></a>Kompilator C4098 ostrzegawcze (poziom 1)
-"Funkcja": funkcja typu void zwracanie wartości  
-  
- Funkcja zadeklarowana z typem zwracanym [void](../../cpp/void-cpp.md) ma `return` instrukcji, która nie zwraca wartości. Kompilator zakłada, funkcja zwraca wartość typu `int`.
+# <a name="compiler-warning-level-1-c4098"></a>Kompilator ostrzeżenie (poziom 1) C4098
+
+'Funkcja': void funkcja zwraca wartość
+
+Funkcja zadeklarowana z typem zwracanym [void](../../cpp/void-cpp.md) ma `return` instrukcji, która nie zwraca wartości. Kompilator zakłada, funkcja zwraca wartość typu `int`.

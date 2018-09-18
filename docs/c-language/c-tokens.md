@@ -15,34 +15,36 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ff5e7dea444cdfe9e8925aeeb56561d42d8600e2
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: b2a088e089896e76b8195813022ee179b4772533
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32381710"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46118547"
 ---
 # <a name="c-tokens"></a>Tokeny języka C
-W edytorze źródła C podstawowy element rozpoznany przez kompilator jest "token". Token jest tekst program źródłowy kompilator nie podzielić na elementach.  
-  
-## <a name="syntax"></a>Składnia  
- *Token*:  
- *keyword*  
-  
- *Identyfikator*  
-  
- *Stała*  
-  
- *literał ciągu*  
-  
- *operator*  
-  
- *znak interpunkcyjny*  
-  
+
+W programie źródłowym C podstawowy element rozpoznawane przez kompilator jest "token". Token jest tekst program źródłowy, który kompilator nie podzielić na elementy składowe.
+
+## <a name="syntax"></a>Składnia
+
+*Token*: *— słowo kluczowe*
+
+*Identyfikator*
+
+*Stałe*
+
+*literał ciągu*
+
+*operator*
+
+*znak interpunkcyjny*
+
 > [!NOTE]
->  Zobacz introduction to[podsumowanie dotyczące składni języka C](../c-language/c-language-syntax-summary.md) wyjaśnienie konwencje składni ANSI.  
-  
- Słowa kluczowe, identyfikatory, stałe, literałów ciągów i operatory opisane w tej sekcji przedstawiono tokenów. Znaki interpunkcyjne, takie jak nawiasy (**[**), nawiasy klamrowe (**{}**), nawiasów ( **()** ) i przecinkami (**,**) są również tokenów.  
-  
-## <a name="see-also"></a>Zobacz też  
- [Elementy języka C](../c-language/elements-of-c.md)
+>  Zobacz wprowadzenie do[podsumowanie dotyczące składni języka C](../c-language/c-language-syntax-summary.md) objaśnienia dotyczące Konwencji składni ANSI.
+
+Słowa kluczowe, identyfikatory, stałe, literały ciągów i operatorów opisane w tej sekcji przedstawiono tokenów. Znaki interpunkcyjne, takie jak nawiasy kwadratowe (**[**), nawiasy klamrowe (**{}**), nawiasy ( **()** ), kropki i przecinki (**,**) również są tokenami.
+
+## <a name="see-also"></a>Zobacz też
+
+[Elementy języka C](../c-language/elements-of-c.md)

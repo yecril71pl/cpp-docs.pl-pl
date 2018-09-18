@@ -21,15 +21,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: 25b5ec1ab7bb5c429538f312ee3b598d3d1d83ec
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: ce9e13e56728216c4a4b16246d4e99117199878c
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33137513"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46115960"
 ---
 # <a name="locktryacquire"></a>lock::try_acquire
-Uzyskuje blokadę dla obiektu, określoną ilość czasu oczekiwania i zwracanie `bool` umożliwiające komunikowanie powodzenia nabycia zamiast generowania wyjątku.  
+Uzyskaj blokadę na obiekcie oczekiwanie na określoną ilość czasu i zwracanie `bool` do raportują Powodzenie przejęcia, zamiast zgłaszać wyjątek.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -43,17 +43,17 @@ bool try_acquire(
 ```  
   
 #### <a name="parameters"></a>Parametry  
- `_timeout`  
- Wartość limitu czasu (w milisekundach) lub jako <xref:System.TimeSpan>.  
+*_limit czasu*<br/>
+Wartość limitu czasu (w milisekundach) lub jako <xref:System.TimeSpan>.  
   
 ## <a name="return-value"></a>Wartość zwracana  
- `true` Jeśli uzyskano blokady, `false` inaczej.  
+ `true` Jeśli blokada została uzyskana, `false` inaczej.  
   
 ## <a name="remarks"></a>Uwagi  
- Jeśli już uzyskano blokady, ta funkcja nie działa.  
+ Jeśli już pozyskany blokadę, ta funkcja nie działa.  
   
 ## <a name="example"></a>Przykład  
- W tym przykładzie użycie pojedynczego wystąpienia klasy przez wiele wątków.  Klasy używa blokady na samym sobie, aby upewnić się, że dostęp do swoich danych wewnętrznych są spójne dla każdego wątku.  Wątku głównego aplikacji nawiązywał blokady dla tego samego wystąpienia klasy okresowo sprawdzać, czy wszystkie wątki robocze nadal istnieje i czeka, aby wyjść do wszystkich wątków zakończył ich zadań.  
+ W tym przykładzie użycie pojedynczego wystąpienia klasy przez wiele wątków.  Klasa stosowana jest blokada na siebie, aby upewnić się, że dostęp do jego wewnętrznych danych są spójne dla każdego wątku.  Głównego wątku aplikacji stosowana jest blokada na tym samym wystąpieniu klasy mogą okresowo sprawdzać, czy wszystkie wątki robocze nadal istnieje, i czeka, aby zakończyć pracę, dopóki wszystkie wątki robocze zostały wykonane ich zadań.  
   
 ```  
 // msl_lock_try_acquire.cpp  
@@ -142,10 +142,10 @@ All threads completed.
 ```  
   
 ## <a name="requirements"></a>Wymagania  
- **Plik nagłówka** \<msclr\lock.h >  
+ **Plik nagłówkowy** \<msclr\lock.h >  
   
  **Namespace** msclr  
   
 ## <a name="see-also"></a>Zobacz też  
- [elementy członkowskie Lock](../dotnet/lock-members.md)   
+ [Lock, składowe](../dotnet/lock-members.md)   
  [lock::acquire](../dotnet/lock-acquire.md)

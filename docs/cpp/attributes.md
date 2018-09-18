@@ -8,12 +8,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c573f3e170929df1b988bf3e74535dd12b83a2f8
-ms.sourcegitcommit: f7703076b850c717c33d72fb0755fbb2215c5ddc
+ms.openlocfilehash: f2a6ef80edc5f6bbeaf43bbc5851336b67d8cf36
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/28/2018
-ms.locfileid: "43131802"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46118833"
 ---
 # <a name="attributes-in-c"></a>Atrybuty w języku C++
 
@@ -45,7 +45,7 @@ Atrybuty reprezentują standardowych alternatywa specyficzne dla dostawcy rozsze
 
 - `[[carries_dependency]]` Określa, że funkcja propaguje zależności danych kolejność w odniesieniu do synchronizacji wątków. Atrybut można stosować do co najmniej jeden parametr, aby określić, że argument przekazany w niesie ze sobą zależności w treści funkcji. Ten atrybut można zastosować do samej funkcji, aby określić, że wartość zwracana niesie ze sobą zależności z funkcji. Kompilator można użyć tych informacji do generowania kodu bardziej wydajne.
 
-- `[[deprecated]]` **Visual Studio 2015 i nowszych:** Określa, że funkcja nie ma ma być używany i może nie istnieć w przyszłych wersjach interfejsu biblioteki. Kompilator użyć tej funkcji do generowania komunikat informacyjny, gdy kod klienta podejmuje próbę wywołania funkcji. Można zastosować do deklaracji klasy, nazwę typedef, zmienną, element członkowski danych niestatyczna, funkcji, przestrzeni nazw, wyliczenia, moduł wyliczający lub specjalizacji szablonu.  
+- `[[deprecated]]` **Visual Studio 2015 i nowszych:** Określa, że funkcja nie ma ma być używany i może nie istnieć w przyszłych wersjach interfejsu biblioteki. Kompilator użyć tej funkcji do generowania komunikat informacyjny, gdy kod klienta podejmuje próbę wywołania funkcji. Można zastosować do deklaracji klasy, nazwę typedef, zmienną, element członkowski danych niestatyczna, funkcji, przestrzeni nazw, wyliczenia, moduł wyliczający lub specjalizacji szablonu.
 
 - `[[fallthrough]]` **Visual Studio 2017 i nowszym:** (udostępniono [/STD: c ++ 17](../build/reference/std-specify-language-standard-version.md)) `[[fallthrough]]` atrybut może być używany w kontekście [Przełącz](switch-statement-cpp.md) sprawozdań jako wskazówkę kompilator (lub kto czyta Kod:) przeznaczonej zachowanie fallthrough. Kompilator języka Visual C++ obecnie nie ostrzega owanie fallthrough, więc ten atrybut nie ma żadnych zachowanie kompilatora efekt.
 

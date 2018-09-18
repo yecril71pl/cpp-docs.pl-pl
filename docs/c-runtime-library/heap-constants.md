@@ -1,5 +1,5 @@
 ---
-title: Stałe stercie | Dokumentacja firmy Microsoft
+title: Stałe sterty | Dokumentacja firmy Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -33,36 +33,39 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 25118792500d679d243f55e5d87e62a4994eaa0f
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 791509a7c67f5fa47128fda97688c43e592724ed
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32389933"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46115180"
 ---
 # <a name="heap-constants"></a>Heap — Stałe
-## <a name="syntax"></a>Składnia  
-  
-```  
-  
-#include <malloc.h>  
-  
-```  
-  
-## <a name="remarks"></a>Uwagi  
- Te stałe nadaj wartość zwrotną, wskazujący stan sterty.  
-  
-|Stała|Znaczenie|  
-|--------------|-------------|  
-|`_HEAPBADBEGIN`|Informacje o nagłówku początkowy nie został znaleziony lub jest nieprawidłowy.|  
-|`_HEAPBADNODE`|Znaleziono nieprawidłowy węzeł lub sterty jest uszkodzony.|  
-|`_HEAPBADPTR`|**_pentry** pole **_heapinfo —** struktura nie zawiera prawidłowego wskaźnika do stosu (`_heapwalk` procedury tylko).|  
-|`_HEAPEMPTY`|Stos nie został zainicjowany.|  
-|`_HEAPEND`|Osiągnięto koniec stosu pomyślnie (`_heapwalk` procedury tylko).|  
-|`_HEAPOK`|Stos jest spójna (`_heapset` i `_heapchk` procedury tylko). Do tej pory; bez błędów **_Heapinfo —** struktura zawiera informacje o następnej pozycji (`_heapwalk` procedury tylko).|  
-  
-## <a name="see-also"></a>Zobacz też  
- [_heapchk](../c-runtime-library/reference/heapchk.md)   
- [_heapset —](../c-runtime-library/heapset.md)   
- [_heapwalk](../c-runtime-library/reference/heapwalk.md)   
- [Stałe globalne](../c-runtime-library/global-constants.md)
+
+## <a name="syntax"></a>Składnia
+
+```
+
+#include <malloc.h>
+
+```
+
+## <a name="remarks"></a>Uwagi
+
+Te stałe nadać wartość zwracaną, wskazujący stan sterty.
+
+|Stała|Znaczenie|
+|--------------|-------------|
+|`_HEAPBADBEGIN`|Informacje o nagłówku początkowy nie został znaleziony lub jest ono nieprawidłowe.|
+|`_HEAPBADNODE`|Znaleziono nieprawidłowy węzeł lub uszkodzenia sterty.|
+|`_HEAPBADPTR`|**_pentry** pole **_heapinfo —** struktury nie zawiera prawidłowego wskaźnika do sterty (`_heapwalk` procedury tylko).|
+|`_HEAPEMPTY`|Nie zainicjowano stosu.|
+|`_HEAPEND`|Koniec sterty osiągnięty został pomyślnie (`_heapwalk` procedury tylko).|
+|`_HEAPOK`|Sterta to spójne (`_heapset` i `_heapchk` procedury tylko). Brak błędów do tej pory; **_Heapinfo —** struktura zawiera informacje o następnej pozycji (`_heapwalk` procedury tylko).|
+
+## <a name="see-also"></a>Zobacz też
+
+[_heapchk](../c-runtime-library/reference/heapchk.md)<br/>
+[_heapset](../c-runtime-library/heapset.md)<br/>
+[_heapwalk](../c-runtime-library/reference/heapwalk.md)<br/>
+[Stałe globalne](../c-runtime-library/global-constants.md)

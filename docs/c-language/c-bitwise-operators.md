@@ -22,40 +22,34 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9c5c360246282f8b6062d21061856a57bd2c7194
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 26b313aa3e1dec6d401ed27e1a4f8ae0bd870eaa
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32384336"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46118521"
 ---
 # <a name="c-bitwise-operators"></a>Operatory bitowe języka C
 
-Operatory bitowe wykonać bitowo- i (**&**), z bitowego OR wyłączne (**^**) i włącznie Alternatywy (**&#124;**) operacje.
+Operatory bitowe wykonać alternatywy bitowej- i (**&**), bitowe OR wyłączne (**^**), a włącznie — Alternatywy bitowej (**&#124;**) operacje.
 
 ## <a name="syntax"></a>Składnia
 
-*I wyrażenia*:  
-&nbsp;&nbsp;*equality-expression*  
-&nbsp;&nbsp;*Wyrażenia AND* **&** *wyrażenie równości*
+*Wyrażenia i*: &nbsp; &nbsp; *wyrażenie równości* &nbsp; &nbsp; *i wyrażenie* **&** *wyrażenie równości*
 
-*wyrażenie OR-wyłącznie*:  
-&nbsp;&nbsp;*Wyrażenia AND*  
-&nbsp;&nbsp;*wyrażenie OR-wyłącznie* **^** *i wyrażenia*
+*wyłączny OR wyrażenia*: &nbsp; &nbsp; *i wyrażenie* &nbsp; &nbsp; *wyłączny OR wyrażenia* **^** *Wyrażenia AND*
 
-*wraz z wartościami granicznymi wyrażenie OR*:  
-&nbsp;&nbsp;*wyrażenie OR-na wyłączność*  
-&nbsp;&nbsp;*wraz z wartościami granicznymi wyrażenie OR* &#124; *wyłącznie OR-wyrażenie*
+*wyrażenie włączny OR*: &nbsp; &nbsp; *wyłączny OR wyrażenia* &nbsp; &nbsp; *włącznie wyrażenie OR* &#124; *wyłączny OR wyrażenia*
 
-Argumenty operacji operatory bitowe muszą mieć typów całkowitych, ale ich typy mogą być różne. Popularne konwersje arytmetyczne; wykonywania tych operatorów Typ wyniku jest typ operandy po konwersji.
+Operandy operatory bitowe muszą mieć typów całkowitych, ale ich typy mogą być różne. Te operatory wykonywać popularne konwersje arytmetyczne; Typ wyniku jest typem operandu po konwersji.
 
-Operatory bitowe języka C są opisane poniżej:
+Operatory bitowe języka C zostały opisane poniżej:
 
 |Operator|Opis|
 |--------------|-----------------|
-|**&**|Operatory- i operatora porównuje każdy bit jego pierwszego operandu na odpowiadający mu bit jej drugi argument operacji. Jeśli oba bity 1, odpowiadający mu bit wynik jest równa 1. W przeciwnym razie odpowiadający mu bit wynik jest równa 0.|
-|**^**|Operatora bitowego OR wyłączne porównuje każdy bit jego pierwszego operandu na odpowiadający mu bit jej drugi argument operacji. Jeśli jeden bit ma wartość 0, a inne bit ma wartość 1, odpowiadający mu bit wynik jest równa 1. W przeciwnym razie odpowiadający mu bit wynik jest równa 0.|
-|**&#124;**|Operator włącznie Alternatywy porównuje każdy bit jego pierwszego operandu na odpowiadający mu bit jej drugi argument operacji. Jeśli albo bit ma wartość 1, odpowiadający mu bit wynik jest równa 1. W przeciwnym razie odpowiadający mu bit wynik jest równa 0.|
+|**&**|Operatora testu koniunkcji — i operator porównuje każdy bit pierwszy argument operacji na odpowiadający mu bit drugim argumentem. Jeśli oba bity są 1, odpowiadający mu bit wynik jest równa 1. W przeciwnym razie odnośny bit wynik jest równa 0.|
+|**^**|Operator bitowy OR wyłączne porównuje każdy bit pierwszy argument operacji na odpowiadający mu bit drugim argumentem. Jeśli jeden bit ma wartość 0, a inne bit ma wartość 1, odpowiadający mu bit wynik jest równa 1. W przeciwnym razie odnośny bit wynik jest równa 0.|
+|**&#124;**|Operator włącznie — Alternatywy porównuje każdy bit pierwszy argument operacji na odpowiadający mu bit drugim argumentem. Jeśli bit albo ma wartość 1, odpowiadający mu bit wynik jest równa 1. W przeciwnym razie odnośny bit wynik jest równa 0.|
 
 ## <a name="examples"></a>Przykłady
 
@@ -77,11 +71,11 @@ n = i | j;
 n = i ^ j;
 ```
 
-Bitowe włącznie lub w drugim przykładzie powoduje wartość 0xABCD (szesnastkowo), podczas gdy lub operator wyłączny w trzecim przykładzie tworzy 0xCD (szesnastkowo).
+Bitowe alternatywne OR w drugim przykładzie powoduje wartość 0xABCD (szesnastkowo), podczas gdy lub wyłączny sumy bitowej w przykładzie trzeci tworzy wypełniania wartościami 0xCD (szesnastkowo).
 
 **Microsoft Specific**
 
-Wyniki operacji na liczb całkowitych ze znakiem jest zdefiniowane w implementacji zgodnie z ANSI C standard. Kompilator Microsoft C Operacje bitowe na liczb całkowitych ze znakiem praca taka sama jak operacje bitowe na liczb całkowitych bez znaku. Na przykład `-16 & 99` może zostać wyrażona w danych binarnych jako
+Wyniki operacja bitowa na liczby całkowite ze znakiem zależy od implementacji zgodnie ze standardu ANSI C. Kompilator Microsoft C: Operacje bitowe na liczby całkowite ze znakiem praca taka sama jak operacje bitowe na liczb całkowitych bez znaku. Na przykład `-16 & 99` mogą być wyrażone w danych binarnych jako
 
 ```Expression
   11111111 11110000
@@ -90,12 +84,12 @@ Wyniki operacji na liczb całkowitych ze znakiem jest zdefiniowane w implementac
   00000000 01100000
 ```
 
-Wynik iloczynu bitowego AND jest 96 dziesiętną.
+Bitowe AND powstaje 96 dziesiętną.
 
-**KOŃCOWY określonych firmy Microsoft**
+**END specyficzny dla Microsoft**
 
 ## <a name="see-also"></a>Zobacz także
 
-[Bitowy operator AND: &](../cpp/bitwise-and-operator-amp.md)  
-[Operator wyłączny sumy bitowej OR: ^](../cpp/bitwise-exclusive-or-operator-hat.md)  
-[Operator włącznie lub Operator:&#124;](../cpp/bitwise-inclusive-or-operator-pipe.md)  
+[Bitowy operator AND: &](../cpp/bitwise-and-operator-amp.md)<br/>
+[Operator wyłączny sumy bitowej OR: ^](../cpp/bitwise-exclusive-or-operator-hat.md)<br/>
+[Bitowe alternatywne OR — Operator:&#124;](../cpp/bitwise-inclusive-or-operator-pipe.md)

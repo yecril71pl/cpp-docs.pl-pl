@@ -33,14 +33,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 604b28147c6881c7b2d62c388c5402f12bb71c78
-ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
+ms.openlocfilehash: 22f4aee2ac7cbefee19a33d929ec80b319b537d4
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "42464748"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46117481"
 ---
 # <a name="cenumerator-class"></a>Klasa CEnumerator
+
 Używa obiekt modułu wyliczającego OLE DB, który uwidacznia [ISourcesRowset](/previous-versions/windows/desktop/ms715969\(v=vs.85\)) interfejsu, aby zwrócić zestaw wierszy opisujące wszystkich źródeł danych i modułów wyliczających.  
   
 ## <a name="syntax"></a>Składnia
@@ -51,7 +52,8 @@ class CEnumerator :
 ```  
 
 ## <a name="requirements"></a>Wymagania  
- **Nagłówek:** atldbcli.h
+
+**Nagłówek:** atldbcli.h
   
 ## <a name="members"></a>Elementy członkowskie  
   
@@ -64,9 +66,11 @@ class CEnumerator :
 |[Otwórz](#open)|Zostanie otwarty modułu wyliczającego.|  
   
 ## <a name="remarks"></a>Uwagi  
- Możesz pobrać `ISourcesRowset` danych pośrednio od tej klasy.  
+
+Możesz pobrać `ISourcesRowset` danych pośrednio od tej klasy.  
 
 ## <a name="find"></a> CEnumerator::Find
+
 Wyszukuje określoną nazwą wśród dostępnych dostawców.  
   
 ### <a name="syntax"></a>Składnia  
@@ -76,16 +80,20 @@ bool Find(TCHAR* szSearchName) throw();
 ```  
   
 #### <a name="parameters"></a>Parametry  
- *szSearchName*  
- [in] Nazwa do wyszukania.  
+
+*szSearchName*<br/>
+[in] Nazwa do wyszukania.  
   
 ### <a name="return-value"></a>Wartość zwracana  
- **wartość true,** Jeśli nazwa została znaleziona. W przeciwnym razie **false**.  
+
+**wartość true,** Jeśli nazwa została znaleziona. W przeciwnym razie **false**.  
   
 ### <a name="remarks"></a>Uwagi  
- Ta nazwa jest mapowana do `SOURCES_NAME` członkiem [ISourcesRowset](/previous-versions/windows/desktop/ms715969\(v=vs.85\)) interfejsu.  
+
+Ta nazwa jest mapowana do `SOURCES_NAME` członkiem [ISourcesRowset](/previous-versions/windows/desktop/ms715969\(v=vs.85\)) interfejsu.  
   
 ## <a name="getmoniker"></a> CEnumerator::GetMoniker
+
 Analizuje nazwę wyświetlaną, aby wyodrębnić składnika ciąg, który można przekonwertować na krótka.  
   
 ### <a name="syntax"></a>Składnia  
@@ -98,16 +106,19 @@ HRESULT GetMoniker(LPMONIKER* ppMoniker,
 ```  
   
 #### <a name="parameters"></a>Parametry  
- *ppMoniker*  
- [out] Moniker pochodzącą z nazwy wyświetlanej analizy ([CEnumeratorAccessor::m_szParseName](../../data/oledb/cenumeratoraccessor-m-szparsename.md)) bieżącego wiersza.  
+
+*ppMoniker*<br/>
+[out] Moniker pochodzącą z nazwy wyświetlanej analizy ([CEnumeratorAccessor::m_szParseName](../../data/oledb/cenumeratoraccessor-m-szparsename.md)) bieżącego wiersza.  
   
- *lpszDisplayName*  
- [in] Nazwa wyświetlana, można przeanalizować.  
+*lpszDisplayName*<br/>
+[in] Nazwa wyświetlana, można przeanalizować.  
   
 ### <a name="return-value"></a>Wartość zwracana  
- Standardowa HRESULT.  
+
+Standardowa HRESULT.  
 
 ## <a name="open"></a> CEnumerator::Open
+
 Wiąże monikera programu dla typu wyliczeniowego, jeśli jeden jest określony, a następnie pobiera zestaw wierszy dla modułu wyliczającego, wywołując [ISourcesRowset::GetSourcesRowset](/previous-versions/windows/desktop/ms711200\(v=vs.85\)).  
   
 ### <a name="syntax"></a>Składnia  
@@ -121,19 +132,22 @@ HRESULT Open(const CEnumerator& enumerator) throw();
 ```  
   
 #### <a name="parameters"></a>Parametry  
- *pMoniker*  
- [in] Wskaźnik do moniker moduł wyliczający.  
+
+*pMoniker*<br/>
+[in] Wskaźnik do moniker moduł wyliczający.  
   
- *pClsid*  
- [in] Wskaźnik do `CLSID` modułu wyliczającego.  
+*pClsid*<br/>
+[in] Wskaźnik do `CLSID` modułu wyliczającego.  
   
- *enumerator*  
- [in] Odwołanie do modułu wyliczającego.  
+*enumerator*<br/>
+[in] Odwołanie do modułu wyliczającego.  
   
 ### <a name="return-value"></a>Wartość zwracana  
- Standardowa HRESULT.  
+
+Standardowa HRESULT.  
   
 ## <a name="see-also"></a>Zobacz też  
- [DBViewer](../../visual-cpp-samples.md)   
- [Szablony konsumentów OLE DB](../../data/oledb/ole-db-consumer-templates-cpp.md)   
- [Szablony konsumentów OLE DB — dokumentacja](../../data/oledb/ole-db-consumer-templates-reference.md)
+
+[DBViewer](../../visual-cpp-samples.md)<br/>
+[Szablony konsumentów OLE DB](../../data/oledb/ole-db-consumer-templates-cpp.md)<br/>
+[Szablony konsumentów OLE DB — dokumentacja](../../data/oledb/ole-db-consumer-templates-reference.md)

@@ -16,22 +16,23 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 07f0dc0e8dca08e8b0de47b73516d3fdfa21435b
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 6960d8168bd818e4d1baa30e5e54940e6e4dc2e9
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33225345"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46115453"
 ---
 # <a name="fatal-error-c1055"></a>Błąd krytyczny C1055
-ograniczenie kompilatora: Brak kluczy  
-  
- Plik źródłowy zawiera zbyt wiele symboli. Kompilator zabrakło klawisze skrótu do tabeli symboli.  
-  
-### <a name="to-fix-by-using-the-following-possible-solutions"></a>Aby rozwiązać problem przy użyciu następujących możliwych rozwiązań  
-  
-1.  Plik źródłowy podzielić na mniejsze pliki.  
-  
-2.  Usuń pliki nagłówkowe niepotrzebne.  
-  
-3.  Ponowne użycie zmiennych globalnych i tymczasowego zamiast tworzyć nowe.
+
+ograniczenie kompilatora: Brak kluczy
+
+Plik źródłowy zawiera zbyt wiele symboli. Kompilator zabrakło klawisze skrótu do tabeli symboli.
+
+### <a name="to-fix-by-using-the-following-possible-solutions"></a>Aby rozwiązać problem, korzystając z poniższymi możliwymi rozwiązaniami
+
+1. Plik źródłowy można podzielić na mniejsze pliki.
+
+1. Usuń pliki nagłówkowe niepotrzebne.
+
+1. Ponowne użycie zmiennych globalnych i tymczasowe zamiast tworzyć nowe.

@@ -18,20 +18,22 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: abbb20b76f8e24a9b0f20961728dd8e428733654
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: bce3140818b46bd6cbb255794a08e9b0fa92fbd4
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33088470"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46114972"
 ---
 # <a name="odbc-and-the-database-classes"></a>ODBC i klasy baz danych
-Klasy baz danych MFC ODBC Hermetyzowanie wywołania funkcji ODBC API będzie zwykle należy samodzielnie w element członkowski funkcji [cdatabase —](../../mfc/reference/cdatabase-class.md) i [crecordset —](../../mfc/reference/crecordset-class.md) klasy. Na przykład złożonych sekwencji wywołania ODBC, powiązanie zwróconych rekordów do lokalizacji przechowywania, obsługa błędów i inne operacje są zarządzane dla Ciebie przez klasy baz danych. W związku z tym użyj znacznie prostsze interfejsu klasy do modyfikowania rekordów przez obiekt zestawu rekordów.  
+
+Klasy baz danych MFC ODBC hermetyzacji wywołania funkcji interfejsu API ODBC, należy zwykle czyniłyby samodzielnie w elemencie członkowskim funkcji [CDatabase](../../mfc/reference/cdatabase-class.md) i [CRecordset](../../mfc/reference/crecordset-class.md) klasy. Na przykład złożone sekwencje wywołania ODBC, powiązanie zwracane rekordy lokalizacji przechowywania, obsługa błędów i inne operacje są zarządzane automatycznie przez klasy bazy danych. W wyniku do manipulowania rekordów za pośrednictwem obiektu zestawu rekordów z użyciem znacznie prostsze interfejsu klasy.  
   
 > [!NOTE]
->  ODBC — źródła danych są dostępne za pośrednictwem klas MFC ODBC, zgodnie z opisem w tym temacie lub za pośrednictwem klas MFC obiekt DAO (Data Access).  
+>  ODBC — źródła danych są dostępne za pośrednictwem klas MFC ODBC, zgodnie z opisem w tym temacie lub przy użyciu klas MFC obiekt DAO (Data Access).  
   
- Mimo że klas baz danych Hermetyzowanie funkcji ODBC, nie zapewniają mapowanie jeden do jednego funkcji interfejsu API ODBC. Klasy baz danych zapewnia wyższy poziom abstrakcji modelowana po znalezieniu obiektów dostępu do danych programu Microsoft Access i Microsoft Visual Basic. Aby uzyskać więcej informacji, zobacz [ODBC i MFC](../../data/odbc/odbc-and-mfc.md).  
+Mimo że zapewniają funkcjonalność ODBC hermetyzacji klas baz danych, nie udostępniają one mapowanie jeden do jednego funkcji interfejsu API ODBC. Klasy bazy danych zapewnia wyższy poziom abstrakcji, modelowane po dostęp do danych obiektów znalezionych w Microsoft Access i Microsoft Visual Basic. Aby uzyskać więcej informacji, zobacz [ODBC i MFC](../../data/odbc/odbc-and-mfc.md).  
   
 ## <a name="see-also"></a>Zobacz też  
- [Podstawy ODBC](../../data/odbc/odbc-basics.md)
+
+[Podstawy ODBC](../../data/odbc/odbc-basics.md)

@@ -1,5 +1,5 @@
 ---
-title: Kompilatora (poziom 4) ostrzeżenie C4937 | Dokumentacja firmy Microsoft
+title: Kompilator ostrzeżenie (poziom 4) C4937 | Dokumentacja firmy Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,32 +16,33 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6ed7b33889677a304d303873799f36430c38129a
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: e7bc6232458b357f41e859c58d4b6b77f78ef2a7
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33294934"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46118300"
 ---
-# <a name="compiler-warning-level-4-c4937"></a>Kompilator C4937 ostrzegawcze (poziom 4)
-"Tekst1" i "Tekst2" są nierozróżnialne jako argumenty "dyrektywy"  
-  
- Ze względu na sposób kompilator przetwarza argumenty dyrektywy, nazw, które mają znaczenie dla kompilatora, takich jak słowa kluczowe z wielu liczbami w postaci tekstu (podkreślenia jedno- i formularze), nie może być wyodrębnione.  
-  
- Przykładami takich ciągów są __cdecl i \__forceinline.  Uwaga: w obszarze /Za, tylko formularze podwójne podkreślenia są włączone.  
-  
- Poniższy przykład generuje C4937:  
-  
-```  
-// C4937.cpp  
-// compile with: /openmp /W4  
-#include "omp.h"  
-int main() {  
-   #pragma omp critical ( __leave )   // C4937  
-   ;  
-  
-   // OK  
-   #pragma omp critical ( leave )  
-   ;  
-}  
+# <a name="compiler-warning-level-4-c4937"></a>Kompilator ostrzeżenie (poziom 4) C4937
+
+"text1" i "Tekst2" są nierozróżnialne jako argumenty "dyrektywa"
+
+Ze względu na sposób kompilator przetwarza argumenty dyrektywy, nazw, które mają znaczenie dla kompilatora, takich jak słowa kluczowe w wielu liczbami w postaci tekstu (podkreślenia jedno- i formularze), nie może być wyodrębnione.
+
+Przykłady takich ciągów są __cdecl i \__forceinline.  Uwaga: w obszarze/za, są włączone tylko formularze podwójnym podkreśleniem.
+
+Poniższy przykład spowoduje wygenerowanie C4937:
+
+```
+// C4937.cpp
+// compile with: /openmp /W4
+#include "omp.h"
+int main() {
+   #pragma omp critical ( __leave )   // C4937
+   ;
+
+   // OK
+   #pragma omp critical ( leave )
+   ;
+}
 ```

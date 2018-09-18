@@ -113,14 +113,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: e741055950449ea07c719cf6cd4c33a34d6f43b3
-ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
+ms.openlocfilehash: 3406614b99e2057c9469fe69d02a9fcbe4eae23b
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "42466346"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46116766"
 ---
 # <a name="cbulkrowset-class"></a>CBulkRowset — Klasa
+
 Pobiera i obsługuje wiersze, aby pracować nad dane zbiorcze Pobieranie wielu dojść do wierszy za pomocą jednego wywołania.  
   
 ## <a name="syntax"></a>Składnia
@@ -131,11 +132,13 @@ class CBulkRowset : public CRowset<TAccessor>
 ```  
   
 ### <a name="parameters"></a>Parametry  
- *TAccessor*  
- Klasa metody dostępu.  
+
+*TAccessor*<br/>
+Klasa metody dostępu.  
 
 ## <a name="requirements"></a>Wymagania  
- **Nagłówek:** atldbcli.h  
+
+**Nagłówek:** atldbcli.h  
   
 ## <a name="members"></a>Elementy członkowskie  
   
@@ -155,11 +158,13 @@ class CBulkRowset : public CRowset<TAccessor>
 |[Setrows —](#setrows)|Ustawia liczbę dojść do wierszy mają zostać pobrane przez jedno wywołanie.|  
   
 ## <a name="example"></a>Przykład  
- W poniższym przykładzie pokazano użycie `CBulkRowset` klasy.  
+
+W poniższym przykładzie pokazano użycie `CBulkRowset` klasy.  
   
- [!code-cpp[NVC_OLEDB_Consumer#1](../../data/oledb/codesnippet/cpp/cbulkrowset-class_1.cpp)]  
+[!code-cpp[NVC_OLEDB_Consumer#1](../../data/oledb/codesnippet/cpp/cbulkrowset-class_1.cpp)]  
 
 ## <a name="addrefrows"></a> CBulkRowset::AddRefRows
+
 Wywołania [IRowset::AddRefRows](/previous-versions/windows/desktop/ms719619\(v=vs.85\)) Aby zwiększyć licznik odwołań dla wszystkich wierszy, które obecnie są pobierane z zestawu wierszy bulk.  
   
 ### <a name="syntax"></a>Składnia  
@@ -169,9 +174,11 @@ HRESULT AddRefRows() throw();
 ```  
   
 ### <a name="return-value"></a>Wartość zwracana  
- Standardowa HRESULT. 
+
+Standardowa HRESULT. 
   
 ## <a name="cbulkrowset"></a> CBulkRowset::CBulkRowset
+
 Tworzy nową `CBulkRowset` obiektu i ustawia domyślną liczbę wierszy do 10.  
   
 ### <a name="syntax"></a>Składnia  
@@ -181,6 +188,7 @@ CBulkRowset();
 ```  
 
 ## <a name="movefirst"></a> CBulkRowset::MoveFirst
+
 Pobiera pierwszy wiersz danych.  
   
 ### <a name="syntax"></a>Składnia  
@@ -190,9 +198,11 @@ HRESULT MoveFirst() throw();
 ```  
   
 ### <a name="return-value"></a>Wartość zwracana  
- Standardowa HRESULT.
+
+Standardowa HRESULT.
 
 ## <a name="movelast"></a> CBulkRowset::MoveLast
+
 Przenosi do ostatniego wiersza.  
   
 ### <a name="syntax"></a>Składnia  
@@ -202,9 +212,11 @@ HRESULT MoveLast() throw();
 ```  
   
 ### <a name="return-value"></a>Wartość zwracana  
- Standardowa HRESULT.  
+
+Standardowa HRESULT.  
 
 ## <a name="movenext"></a> CBulkRowset::MoveNext
+
 Pobiera następny wiersz danych.  
   
 ### <a name="syntax"></a>Składnia  
@@ -214,9 +226,11 @@ HRESULT MoveNext() throw();
 ```  
   
 ### <a name="return-value"></a>Wartość zwracana  
- Standardowa HRESULT. Zwraca DB_S_ENDOFROWSET, gdy zostanie osiągnięty koniec zestawu wierszy. 
+
+Standardowa HRESULT. Zwraca DB_S_ENDOFROWSET, gdy zostanie osiągnięty koniec zestawu wierszy. 
 
 ## <a name="moveprev"></a> CBulkRowset::MovePrev
+
 Przenosi do poprzedniego wiersza.  
   
 ### <a name="syntax"></a>Składnia  
@@ -226,9 +240,11 @@ HRESULT MovePrev() throw();
 ```  
   
 ### <a name="return-value"></a>Wartość zwracana  
- Standardowa HRESULT.  
+
+Standardowa HRESULT.  
 
 ## <a name="movetobookmark"></a> CBulkRowset::MoveToBookmark
+
 Pobiera wiersz oznaczone przez zakładki lub wiersz w określonym przesunięciu (*lSkip*) z tej zakładki.  
   
 ### <a name="syntax"></a>Składnia  
@@ -239,16 +255,19 @@ HRESULT MoveToBookmark(const CBookmarkBase& bookmark,
 ```  
   
 #### <a name="parameters"></a>Parametry  
- *Zakładka*  
- [in] Zakładka, oznaczanie lokalizacji, z którego chcesz pobrać dane.  
+
+*Zakładka*<br/>
+[in] Zakładka, oznaczanie lokalizacji, z którego chcesz pobrać dane.  
   
- *lSkip*  
- [in] Liczbę wierszy z zakładki, aby wiersz docelowy. Jeśli *lSkip* wynosi zero, pierwszy wiersz pobrania jest zakładką wiersza. Jeśli *lSkip* wynosi 1, pierwszy wiersz pobrania jest wiersz po wierszu zakładką. Jeśli *lSkip* wynosi -1, pierwszy wiersz pobrania jest wierszy przed wierszem zakładką.  
+*lSkip*<br/>
+[in] Liczbę wierszy z zakładki, aby wiersz docelowy. Jeśli *lSkip* wynosi zero, pierwszy wiersz pobrania jest zakładką wiersza. Jeśli *lSkip* wynosi 1, pierwszy wiersz pobrania jest wiersz po wierszu zakładką. Jeśli *lSkip* wynosi -1, pierwszy wiersz pobrania jest wierszy przed wierszem zakładką.  
   
 ### <a name="return-value"></a>Wartość zwracana  
- Zobacz [IRowset::GetData](/previous-versions/windows/desktop/ms716988\(v=vs.85\)) w *OLE DB Podręcznik programisty*. 
+
+Zobacz [IRowset::GetData](/previous-versions/windows/desktop/ms716988\(v=vs.85\)) w *OLE DB Podręcznik programisty*. 
 
 ## <a name="movetoratio"></a> CBulkRowset::MoveToRatio
+
 Pobiera wiersze, rozpoczynając od ułamków pozycji w zestawie wierszy.  
   
 ### <a name="syntax"></a>Składnia  
@@ -259,23 +278,27 @@ HRESULT MoveToRatio(DBCOUNTITEM nNumerator,
 ```  
   
 #### <a name="parameters"></a>Parametry  
- *nNumerator*  
- [in] Licznik używany do określenia pozycji ułamkowych, z którego można pobrać danych.  
+
+*nNumerator*<br/>
+[in] Licznik używany do określenia pozycji ułamkowych, z którego można pobrać danych.  
   
- *nDenominator*  
- [in] Denominator, używany do określenia pozycji ułamkowych, z którego można pobrać danych.  
+*nDenominator*<br/>
+[in] Denominator, używany do określenia pozycji ułamkowych, z którego można pobrać danych.  
   
 ### <a name="return-value"></a>Wartość zwracana  
- Standardowa HRESULT.  
+
+Standardowa HRESULT.  
   
 ### <a name="remarks"></a>Uwagi  
- `MoveToRatio` Pobiera wiersze około zgodnie z następującą formułę:  
+
+`MoveToRatio` Pobiera wiersze około zgodnie z następującą formułę:  
   
- `(nNumerator *  RowsetSize ) / nDenominator`  
+`(nNumerator *  RowsetSize ) / nDenominator`  
   
- Gdzie `RowsetSize` jest rozmiar wierszy, mierzone w wierszach. Dokładność tę formułę, zależy od określonego dostawcy. Aby uzyskać więcej informacji, zobacz [IRowsetScroll::GetRowsAtRatio](/previous-versions/windows/desktop/ms709602\(v=vs.85\)) w *OLE DB Podręcznik programisty*.   
+Gdzie `RowsetSize` jest rozmiar wierszy, mierzone w wierszach. Dokładność tę formułę, zależy od określonego dostawcy. Aby uzyskać więcej informacji, zobacz [IRowsetScroll::GetRowsAtRatio](/previous-versions/windows/desktop/ms709602\(v=vs.85\)) w *OLE DB Podręcznik programisty*.   
 
 ## <a name="releaserows"></a> CBulkRowset::ReleaseRows
+
 Wywołania [IRowset::ReleaseRows](/previous-versions/windows/desktop/ms719771\(v=vs.85\)) na liczbę odwołań we wszystkich wierszach, które obecnie są pobierane z zestawu wierszy bulk.  
   
 ### <a name="syntax"></a>Składnia  
@@ -285,9 +308,11 @@ HRESULT ReleaseRows() throw();
 ```  
   
 ### <a name="return-value"></a>Wartość zwracana  
- Standardowa HRESULT.  
+
+Standardowa HRESULT.  
 
 ## <a name="setrows"></a> CBulkRowset::SetRows
+
 Ustawia liczbę dojść do wierszy pobierane przez każde wywołanie.  
   
 ### <a name="syntax"></a>Składnia  
@@ -297,12 +322,15 @@ void SetRows(DBROWCOUNT nRows) throw();
 ```  
   
 #### <a name="parameters"></a>Parametry  
- *nRows*  
- [in] Nowy rozmiar wierszy (liczba wierszy).  
+
+*nRows*<br/>
+[in] Nowy rozmiar wierszy (liczba wierszy).  
   
 ### <a name="remarks"></a>Uwagi  
- Jeśli chcesz wywołać tę funkcję, należy przed otwarciem zestawu wierszy.
+
+Jeśli chcesz wywołać tę funkcję, należy przed otwarciem zestawu wierszy.
   
 ## <a name="see-also"></a>Zobacz też  
- [Szablony konsumentów OLE DB](../../data/oledb/ole-db-consumer-templates-cpp.md)   
- [Szablony konsumentów OLE DB — dokumentacja](../../data/oledb/ole-db-consumer-templates-reference.md)
+
+[Szablony konsumentów OLE DB](../../data/oledb/ole-db-consumer-templates-cpp.md)<br/>
+[Szablony konsumentów OLE DB — dokumentacja](../../data/oledb/ole-db-consumer-templates-reference.md)

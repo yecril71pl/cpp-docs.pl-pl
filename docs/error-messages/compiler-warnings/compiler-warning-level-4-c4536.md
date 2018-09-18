@@ -1,5 +1,5 @@
 ---
-title: Kompilatora (poziom 4) ostrzeżenie C4536 | Dokumentacja firmy Microsoft
+title: Kompilator ostrzeżenie (poziom 4) C4536 | Dokumentacja firmy Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,16 +16,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ab098c240c75fa7b06c9bce73a64c61c1f46f99a
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: e4f3e5c112d98a3940395599c3084885dfeee149
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33302311"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46117546"
 ---
-# <a name="compiler-warning-level-4-c4536"></a>Kompilator C4536 ostrzegawcze (poziom 4)
-"Nazwa typu": Nazwa typu przekracza limit meta danych znaków "ograniczenia"  
-  
- Jeśli jest typu zarządzanego zostaną obcięte Nazwa typu w metadanych. Zobacz [C3180](../../error-messages/compiler-errors-2/compiler-error-c3180.md) Aby uzyskać więcej informacji.  
-  
- To ostrzeżenie jest domyślnie wyłączone. Zobacz [kompilatora ostrzeżeń czy są wyłączone domyślnie](../../preprocessor/compiler-warnings-that-are-off-by-default.md) Aby uzyskać więcej informacji.
+# <a name="compiler-warning-level-4-c4536"></a>Kompilator ostrzeżenie (poziom 4) C4536
+
+'Nazwa typu': Nazwa typu przekracza limit meta danych znaków 'limit'
+
+Nazwa typu, który zostałyby obcięte w metadanych, jeśli był typ zarządzany. Zobacz [C3180](../../error-messages/compiler-errors-2/compiler-error-c3180.md) Aby uzyskać więcej informacji.
+
+To ostrzeżenie jest domyślnie wyłączona. Zobacz [kompilatora ostrzeżenia, są wyłączone domyślnie](../../preprocessor/compiler-warnings-that-are-off-by-default.md) Aby uzyskać więcej informacji.

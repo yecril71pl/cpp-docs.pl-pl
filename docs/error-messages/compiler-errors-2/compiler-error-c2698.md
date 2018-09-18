@@ -1,5 +1,5 @@
 ---
-title: C2698 błąd kompilatora | Dokumentacja firmy Microsoft
+title: Błąd kompilatora C2698 | Dokumentacja firmy Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,32 +16,33 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7c466e39702f1e408ad96d79c16c4a5953fa373f
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: c7ca3e7568640aabd2b7960d97ea94a11a1d5d59
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33233820"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46118924"
 ---
-# <a name="compiler-error-c2698"></a>C2698 błąd kompilatora
-Deklaracja using dla "deklaracji 1' nie może współistnieć z istniejącą deklaracją using dla" deklaracja 2"  
-  
- Po utworzeniu [za pomocą deklaracji](../../cpp/using-declaration.md) dla elementu członkowskiego danych za pomocą dowolnego deklaracja w tym samym zakresie, który używa tej samej nazwie nie jest dozwolona, ponieważ tylko funkcje mogą być przeciążone.  
-  
- Poniższy przykład generuje C2698:  
-  
-```  
-// C2698.cpp  
-struct A {  
-   int x;  
-};  
-  
-struct B {  
-   int x;  
-};  
-  
-struct C : A, B {  
-   using A::x;  
-   using B::x;   // C2698  
-}  
+# <a name="compiler-error-c2698"></a>Błąd kompilatora C2698
+
+Deklaracja using dla "deklaracji 1' nie może współistnieć z istniejącą deklaracją using dla" deklaracji 2
+
+Po utworzeniu [użycie — deklaracja](../../cpp/using-declaration.md) dla składowej danych, w dowolnym przy użyciu deklaracji w tym samym zakresie, który używa tej samej nazwy nie jest dozwolona, ponieważ tylko funkcje, które mogą być przeciążone.
+
+Poniższy przykład spowoduje wygenerowanie C2698:
+
+```
+// C2698.cpp
+struct A {
+   int x;
+};
+
+struct B {
+   int x;
+};
+
+struct C : A, B {
+   using A::x;
+   using B::x;   // C2698
+}
 ```

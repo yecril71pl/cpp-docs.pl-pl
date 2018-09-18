@@ -16,15 +16,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8434fb3e4cb07b11f2142f78ee4b243e6945dfd9
-ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
+ms.openlocfilehash: ddc3605bfef5c96a8882872aafbe1a15dda3e4cf
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33691667"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46115973"
 ---
 # <a name="ompunsetnestlock"></a>omp_unset_nest_lock
-Zwalnia blokadą.  
+Zwalnia blokadę zagnieżdżalnych.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -34,17 +34,16 @@ void omp_unset_nest_lock(
 );  
 ```  
   
-## <a name="remarks"></a>Uwagi  
- w przypadku gdy  
+### <a name="parameters"></a>Parametry
   
- `lock`  
- Zmienna typu [omp_nest_lock_t](../../../parallel/openmp/reference/omp-nest-lock-t.md) który został zainicjowany z [omp_init_nest_lock](../../../parallel/openmp/reference/omp-init-nest-lock.md), będących własnością przez wątek i wykonywania w funkcji.  
+*lock*<br/>
+Zmienna typu [omp_nest_lock_t](../../../parallel/openmp/reference/omp-nest-lock-t.md) , została zainicjowana przy użyciu [omp_init_nest_lock](../../../parallel/openmp/reference/omp-init-nest-lock.md)własnością wątku i wykonywanie w funkcji.  
   
 ## <a name="remarks"></a>Uwagi  
- Aby uzyskać więcej informacji, zobacz [3.2.4 funkcje omp_unset_lock i omp_unset_nest_lock](../../../parallel/openmp/3-2-4-omp-unset-lock-and-omp-unset-nest-lock-functions.md).  
+ Aby uzyskać więcej informacji, zobacz [3.2.4 funkcje omp_unset_lock i omp_unset_nest_lock funkcji](../../../parallel/openmp/3-2-4-omp-unset-lock-and-omp-unset-nest-lock-functions.md).  
   
 ## <a name="example"></a>Przykład  
- Zobacz [omp_init_nest_lock](../../../parallel/openmp/reference/omp-init-nest-lock.md) przykład przy użyciu `omp_unset_nest_lock`.  
+ Zobacz [omp_init_nest_lock](../../../parallel/openmp/reference/omp-init-nest-lock.md) na przykład za pomocą `omp_unset_nest_lock`.  
   
 ## <a name="see-also"></a>Zobacz też  
  [Funkcje](../../../parallel/openmp/reference/openmp-functions.md)

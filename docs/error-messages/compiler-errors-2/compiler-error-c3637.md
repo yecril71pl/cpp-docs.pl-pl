@@ -1,5 +1,5 @@
 ---
-title: C3637 błąd kompilatora | Dokumentacja firmy Microsoft
+title: Błąd kompilatora C3637 | Dokumentacja firmy Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,66 +16,67 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 29ae2ddb9e55363c54451a0b30199d9ae7503f05
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 958ffc0d3aab641859b13570a94b159de80f2c7d
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33263599"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46117468"
 ---
-# <a name="compiler-error-c3637"></a>C3637 błąd kompilatora
-"Funkcja": definicja funkcji friend nie może być specjalizacja typu funkcji  
-  
- Funkcja zaprzyjaźniona nieprawidłowo zdefiniowany dla szablonu lub rodzajowa.  
-  
- Poniższy przykład generuje C3637:  
-  
-```  
-// C3637.cpp  
-template <class T>  
-void f();  
-  
-struct S {  
-   friend void f<int>() {}   // C3637  
-};  
-```  
-  
- Możliwe rozwiązanie:  
-  
-```  
-// C3637b.cpp  
-// compile with: /c  
-template <class T>  
-void f();  
-  
-struct S {  
-   friend void f() {}  
-};  
-```  
-  
- C3637 może również wystąpić, gdy użycie typów ogólnych:  
-  
-```  
-// C3637c.cpp  
-// compile with: /clr  
-  
-generic <class T>  
-void gf();  
-  
-struct S {  
-   friend void gf<int>() {}   // C3637  
-};  
-```  
-  
- Możliwe rozwiązanie:  
-  
-```  
-// C3637d.cpp  
-// compile with: /clr /c  
-generic <class T>  
-void gf();  
-  
-struct S {  
-   friend void gf() {}  
-};  
+# <a name="compiler-error-c3637"></a>Błąd kompilatora C3637
+
+'Funkcja': definicja funkcji zaprzyjaźnionej nie może być specjalizacją typu funkcji
+
+Funkcja zaprzyjaźniona niepoprawnie zdefiniowany dla szablon lub typ ogólny.
+
+Poniższy przykład spowoduje wygenerowanie C3637:
+
+```
+// C3637.cpp
+template <class T>
+void f();
+
+struct S {
+   friend void f<int>() {}   // C3637
+};
+```
+
+Możliwe rozwiązanie:
+
+```
+// C3637b.cpp
+// compile with: /c
+template <class T>
+void f();
+
+struct S {
+   friend void f() {}
+};
+```
+
+C3637 może również wystąpić, gdy za pomocą typów ogólnych:
+
+```
+// C3637c.cpp
+// compile with: /clr
+
+generic <class T>
+void gf();
+
+struct S {
+   friend void gf<int>() {}   // C3637
+};
+```
+
+Możliwe rozwiązanie:
+
+```
+// C3637d.cpp
+// compile with: /clr /c
+generic <class T>
+void gf();
+
+struct S {
+   friend void gf() {}
+};
 ```

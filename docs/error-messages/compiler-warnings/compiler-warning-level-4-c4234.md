@@ -1,5 +1,5 @@
 ---
-title: Kompilatora (poziom 4) ostrzeżenie C4234 | Dokumentacja firmy Microsoft
+title: Kompilator ostrzeżenie (poziom 4) C4234 | Dokumentacja firmy Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,22 +16,23 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b8d5b7a2999b77c0b34ee925f5dd85a0a27c63f5
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: a6ce6ba622cb480096144706589a01dee7326f38
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33293520"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46118235"
 ---
-# <a name="compiler-warning-level-4-c4234"></a>Kompilator C4234 ostrzegawcze (poziom 4)
-użyto niestandardowego rozszerzenia: słowo kluczowe "— słowo kluczowe" zarezerwowane do użytku w przyszłości  
-  
- Kompilator nie implementuje jeszcze słowo kluczowe, które są używane.  
-  
- To ostrzeżenie zostanie automatycznie podwyższony do wystąpił błąd. Jeśli chcesz zmienić to zachowanie, użyj [ostrzeżenie #pragma](../../preprocessor/warning.md). Na przykład, aby przekształcić C4234 ostrzeżenie poziom 4 problem  
-  
-```  
-#pragma warning(2:4234)  
-```  
-  
- w pliku kodu źródłowego.
+# <a name="compiler-warning-level-4-c4234"></a>Kompilator ostrzeżenie (poziom 4) C4234
+
+użyto niestandardowego rozszerzenia: słowo kluczowe "— słowo kluczowe" zarezerwowane dla przyszłego użytku
+
+Kompilator nie implementuje jeszcze użyte słowo kluczowe.
+
+To ostrzeżenie zostanie automatycznie podwyższony do błędu. Jeśli chcesz zmienić to zachowanie, użyj [ostrzeżenie #pragma](../../preprocessor/warning.md). Na przykład, aby przekształcić C4234 ostrzeżenie poziom 4 problem
+
+```
+#pragma warning(2:4234)
+```
+
+w pliku kodu źródłowego.

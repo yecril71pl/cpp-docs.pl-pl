@@ -1,5 +1,5 @@
 ---
-title: Kompilatora (poziom 4) ostrzeżenie C4681 | Dokumentacja firmy Microsoft
+title: Kompilator ostrzeżenie (poziom 4) C4681 | Dokumentacja firmy Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,43 +16,44 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: fea1628ec77294ff6698e123b2c199cad2a17596
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: c96d019215c1e91707cc73c65a7a40b0ae4b21a5
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33295366"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46114491"
 ---
-# <a name="compiler-warning-level-4-c4681"></a>Kompilator C4681 ostrzegawcze (poziom 4)
-"class": klasa coclass nie określa domyślnego interfejsu, który jest źródłem zdarzenia  
-  
- A [źródła](../../windows/source-cpp.md) interfejs nie został określony dla klasy.  
-  
- Poniższy przykład generuje C4681:  
-  
-```  
-// C4681.cpp  
-// compile with: /W4 /c  
-#define _ATL_ATTRIBUTES 1  
-#include <atlbase.h>  
-#include <atlcom.h>  
-  
-[module(name="test")];  
-  
-[dual, uuid("00000000-0000-0000-0000-000000000000")]  
-__interface IEvent { [id(3)] HRESULT myEvent(); };  
-  
-[object, uuid("00000000-0000-0000-0000-000000000001")]  
-__interface ISource { HRESULT Fire(); };  
-  
-[ coclass,   
-  source(IEvent),   
-  default(ISource),  
-  // Uncomment the following line to resolve.  
-  // default(IEvent),   
-  uuid("00000000-0000-0000-0000-000000000002")   
-]  
-struct CSource : ISource {   // C4681  
-   HRESULT Fire() { return 0; }  
-};  
+# <a name="compiler-warning-level-4-c4681"></a>Kompilator ostrzeżenie (poziom 4) C4681
+
+"class": klasa coclass nie określa domyślnego interfejsu, który jest źródłem zdarzenia
+
+A [źródła](../../windows/source-cpp.md) interfejs nie został określony dla klasy.
+
+Poniższy przykład spowoduje wygenerowanie C4681:
+
+```
+// C4681.cpp
+// compile with: /W4 /c
+#define _ATL_ATTRIBUTES 1
+#include <atlbase.h>
+#include <atlcom.h>
+
+[module(name="test")];
+
+[dual, uuid("00000000-0000-0000-0000-000000000000")]
+__interface IEvent { [id(3)] HRESULT myEvent(); };
+
+[object, uuid("00000000-0000-0000-0000-000000000001")]
+__interface ISource { HRESULT Fire(); };
+
+[ coclass,
+  source(IEvent),
+  default(ISource),
+  // Uncomment the following line to resolve.
+  // default(IEvent),
+  uuid("00000000-0000-0000-0000-000000000002")
+]
+struct CSource : ISource {   // C4681
+   HRESULT Fire() { return 0; }
+};
 ```

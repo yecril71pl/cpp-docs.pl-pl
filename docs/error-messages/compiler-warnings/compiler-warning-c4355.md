@@ -1,5 +1,5 @@
 ---
-title: C4355 ostrzeżenia kompilatora | Dokumentacja firmy Microsoft
+title: Ostrzeżenie kompilatora C4355 | Dokumentacja firmy Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,50 +16,51 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 13f57b8a7c279b820f4f9fc4a68715804a12e625
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 44833c8e640002f2f94d44938641fa3c1fa33db7
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33273809"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46115310"
 ---
-# <a name="compiler-warning-c4355"></a>C4355 ostrzeżenia kompilatora
-'this': używany na liście inicjatora bazowego elementu członkowskiego  
-  
- **To** wskaźnika jest prawidłowy tylko wewnątrz Niestatyczne funkcje Członkowskie. Nie można użyć na liście inicjatora dla klasy podstawowej.  
-  
- Klasa podstawowa konstruktorów i konstruktorów elementu członkowskiego klasy są wywoływane przed **to** konstruktora. W efekcie zrealizowaniu wskaźnik do obiektu unconstructed do innego konstruktora. Jeśli te inne konstruktorów dostęp do wszelkich elementów członkowskich lub wywoływać funkcje Członkowskie na tym, wynik będzie niezdefiniowany. Nie należy używać **to** wskaźnika dopiero po ukończeniu wszystkich konstrukcji.  
-  
- To ostrzeżenie jest domyślnie wyłączone. Zobacz [kompilatora ostrzeżeń czy są wyłączone domyślnie](../../preprocessor/compiler-warnings-that-are-off-by-default.md) Aby uzyskać więcej informacji.  
-  
- Poniższy przykład generuje C4355:  
-  
-```  
-// C4355.cpp  
-// compile with: /w14355 /c  
-#include <tchar.h>  
-  
-class CDerived;  
-class CBase {  
-public:  
-   CBase(CDerived *derived): m_pDerived(derived) {};  
-   ~CBase();  
-   virtual void function() = 0;  
-  
-   CDerived * m_pDerived;  
-};  
-  
-class CDerived : public CBase {  
-public:  
-   CDerived() : CBase(this) {};   // C4355 "this" used in derived c'tor  
-   virtual void function() {};  
-};  
-  
-CBase::~CBase() {  
-   m_pDerived -> function();  
-}  
-  
-int main() {  
-   CDerived myDerived;  
-}  
+# <a name="compiler-warning-c4355"></a>Ostrzeżenie kompilatora C4355
+
+'this': używany na liście inicjatora bazowego elementu członkowskiego
+
+**To** wskaźnik jest prawidłowy tylko w obrębie Niestatyczne funkcje Członkowskie. Nie można użyć na liście inicjatora dla klasy bazowej.
+
+Konstruktory klasy bazowej i konstruktory składowej klasy, które są wywoływane przed **to** konstruktora. W efekcie zrealizowaniu wskaźnik do obiektu unconstructed do innego konstruktora. Jeśli te inne konstruktory dostęp do wszystkich członków lub wywoływać funkcje Członkowskie na tym, wynik jest niezdefiniowana. Nie należy używać **to** wskaźnika przed ukończeniem wszystkich konstrukcji.
+
+To ostrzeżenie jest domyślnie wyłączona. Zobacz [kompilatora ostrzeżenia, są wyłączone domyślnie](../../preprocessor/compiler-warnings-that-are-off-by-default.md) Aby uzyskać więcej informacji.
+
+Poniższy przykład spowoduje wygenerowanie C4355:
+
+```
+// C4355.cpp
+// compile with: /w14355 /c
+#include <tchar.h>
+
+class CDerived;
+class CBase {
+public:
+   CBase(CDerived *derived): m_pDerived(derived) {};
+   ~CBase();
+   virtual void function() = 0;
+
+   CDerived * m_pDerived;
+};
+
+class CDerived : public CBase {
+public:
+   CDerived() : CBase(this) {};   // C4355 "this" used in derived c'tor
+   virtual void function() {};
+};
+
+CBase::~CBase() {
+   m_pDerived -> function();
+}
+
+int main() {
+   CDerived myDerived;
+}
 ```

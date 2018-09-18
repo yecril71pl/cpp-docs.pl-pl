@@ -1,5 +1,5 @@
 ---
-title: Kompilatora (poziom 1) ostrzeżenie C4276 | Dokumentacja firmy Microsoft
+title: Kompilator ostrzeżenie (poziom 1) C4276 | Dokumentacja firmy Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,14 +16,15 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: afedab27c2fb93075aa33053c12ec6973824f144
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 40a6c85b460e9718a8816598afb016e9c7a493b9
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33277309"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46116025"
 ---
-# <a name="compiler-warning-level-1-c4276"></a>Kompilator C4276 ostrzegawcze (poziom 1)
-"Funkcja": prototypem podane; Założono Brak parametrów  
-  
- Gdy przyjąć adresu funkcji z [__stdcall](../../cpp/stdcall.md) konwencji wywoływania, musisz podać prototyp kompilator można utworzyć nazwy ozdobione funkcji. Ponieważ *funkcja* ma prototypem kompilatora, tworząc nazwa, zakłada funkcji nie ma parametrów.
+# <a name="compiler-warning-level-1-c4276"></a>Kompilator ostrzeżenie (poziom 1) C4276
+
+'Funkcja': bez prototypu podane; Założono Brak parametrów
+
+Po wykonaniu adresu funkcji z atrybutem [__stdcall](../../cpp/stdcall.md) konwencji wywoływania, musisz udzielić prototyp dzięki czemu kompilator może tworzyć dekorowane nazwy funkcji. Ponieważ *funkcja* ma bez prototypu kompilatora, tworząc nazwę z atrybutami, zakłada się, funkcja nie ma parametrów.

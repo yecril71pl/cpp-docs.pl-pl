@@ -1,5 +1,5 @@
 ---
-title: Kompilatora (poziom 4) ostrzeżenie C4062 | Dokumentacja firmy Microsoft
+title: Kompilator ostrzeżenie (poziom 4) C4062 | Dokumentacja firmy Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,35 +16,36 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b889fb83fa3ea3de844e4ce8c74f0a7c5d150d54
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: a9632c6b6259d67a8c3ad02f39dc5e61425550e4
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33293601"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46114855"
 ---
-# <a name="compiler-warning-level-4-c4062"></a>Kompilator C4062 ostrzegawcze (poziom 4)
-Moduł wyliczający "identyfikator" przełącznika wyliczenia 'wyliczenia' nie jest obsługiwany.  
-  
- Wyliczenia nie ma żadnych skojarzony program obsługi w `switch` instrukcji i ma nie **domyślne** etykiety.  
-  
- To ostrzeżenie jest domyślnie wyłączone. Zobacz [kompilatora ostrzeżeń czy są wyłączone domyślnie](../../preprocessor/compiler-warnings-that-are-off-by-default.md) Aby uzyskać więcej informacji.  
-  
- Poniższy przykład generuje C4062:  
-  
-```  
-// C4062.cpp  
-// compile with: /W4  
-#pragma warning(default : 4062)  
-enum E { a, b, c };  
-void func ( E e ) {  
-   switch(e) {  
-      case a:  
-      case b:  
-      break;   // no default label  
-   }   // C4062, enumerate 'c' not handled  
-}  
-  
-int main() {  
-}  
+# <a name="compiler-warning-level-4-c4062"></a>Kompilator ostrzeżenie (poziom 4) C4062
+
+Moduł wyliczający 'Identyfikator' w przełączniku enum 'wyliczenie' nie jest obsługiwany.
+
+Wyliczenia nie skojarzony program obsługi ma `switch` instrukcji i ma nie **domyślne** etykiety.
+
+To ostrzeżenie jest domyślnie wyłączona. Zobacz [kompilatora ostrzeżenia, są wyłączone domyślnie](../../preprocessor/compiler-warnings-that-are-off-by-default.md) Aby uzyskać więcej informacji.
+
+Poniższy przykład spowoduje wygenerowanie C4062:
+
+```
+// C4062.cpp
+// compile with: /W4
+#pragma warning(default : 4062)
+enum E { a, b, c };
+void func ( E e ) {
+   switch(e) {
+      case a:
+      case b:
+      break;   // no default label
+   }   // C4062, enumerate 'c' not handled
+}
+
+int main() {
+}
 ```

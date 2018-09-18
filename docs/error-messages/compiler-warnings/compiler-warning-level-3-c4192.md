@@ -1,5 +1,5 @@
 ---
-title: Kompilatora (poziom 3) ostrzeżenie C4192 | Dokumentacja firmy Microsoft
+title: Kompilator ostrzeżenie (poziom 3) C4192 | Dokumentacja firmy Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,16 +16,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3bae9b7af95de94b8f667cb09710af21044f8b80
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 671a8c83dcadcaa89372e53b6c3d677c5810b4a5
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33291417"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46114413"
 ---
-# <a name="compiler-warning-level-3-c4192"></a>Kompilator C4192 ostrzegawcze (poziom 3)
-automatycznie pomija "name" podczas importowania biblioteki typów "library"  
-  
- A `#import` biblioteka zawiera element *nazwa*, która jest także zdefiniowana w nagłówkach systemu Win32. Ze względu na ograniczenia bibliotek typów, takich jak nazwy **IUnknown** lub identyfikator GUID często zdefiniowane w bibliotece typów duplikowania definicji z nagłówków systemu. `#import` wykryje te elementy i odmówić włączenie ich pliki nagłówkowe .tlh — i .tli.  
-  
- Aby zmienić to zachowanie, użyj `#import` atrybuty [no_auto_exclude —](../../preprocessor/no-auto-exclude.md) i [include()](../../preprocessor/include-parens.md).
+# <a name="compiler-warning-level-3-c4192"></a>Kompilator ostrzeżenie (poziom 3) C4192
+
+automatycznie pomija "name" podczas importowania biblioteki typów "library"
+
+A `#import` biblioteka zawiera element, *nazwa*, która jest również zdefiniowane w nagłówkach systemu Win32. Ze względu na ograniczenia bibliotek typów, takich jak nazwy **IUnknown** lub identyfikator GUID często są zdefiniowane w bibliotece typów duplikowania definicji z nagłówków systemu. `#import` wykryje te elementy i odmawiają dołączać je w plikach nagłówkowych .tlh i .tli.
+
+Aby zmienić to zachowanie, użyj `#import` atrybuty [no_auto_exclude —](../../preprocessor/no-auto-exclude.md) i [include()](../../preprocessor/include-parens.md).

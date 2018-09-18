@@ -1,5 +1,5 @@
 ---
-title: completion_future — klasa | Dokumentacja firmy Microsoft
+title: completion_future, klasa | Dokumentacja firmy Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -23,15 +23,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6b6aa7e9c160a7bedc6eed58a63c07ae7bb65913
-ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
+ms.openlocfilehash: 835c3a0473ffc68a2b1e32780fc2eb376f0ceee6
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33689041"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46118148"
 ---
 # <a name="completionfuture-class"></a>completion_future — Klasa
-Reprezentuje przyszłych odpowiadający C++ AMP operację asynchroniczną.  
+Reprezentuje przyszłą operacji asynchronicznych C++ AMP.  
   
 ### <a name="syntax"></a>Składnia  
   
@@ -45,27 +45,27 @@ class completion_future;
   
 |Nazwa|Opis|  
 |----------|-----------------|  
-|[completion_future — Konstruktor](#ctor)|Inicjuje nowe wystąpienie klasy `completion_future` klasy.|  
+|[completion_future konstruktora](#ctor)|Inicjuje nowe wystąpienie klasy `completion_future` klasy.|  
 |[~ completion_future — destruktor](#dtor)|Niszczy `completion_future` obiektu.|  
   
 ### <a name="public-methods"></a>Metody publiczne  
   
 |Nazwa|Opis|  
 |----------|-----------------|  
-|[get](#get)|Czeka, aż do zakończenia skojarzonego operację asynchroniczną.|  
-|[następnie](#then)|Powiązany obiekt funkcja wywołania zwrotnego do `completion_future` obiektu ma być wykonywana w przypadku skojarzone operację asynchroniczną kończy działanie.|  
-|[to_task](#to_task)|Zwraca `task` obiektu odpowiadającego skojarzone operację asynchroniczną.|  
-|[Nieprawidłowa](#valid)|Pobiera wartość logiczną wskazującą, czy obiekt jest skojarzony z operacji asynchronicznej.|  
-|[oczekiwania](#wait)|Bloki przed zakończeniem skojarzone operacji asynchronicznej.|  
-|[wait_for](#wait_for)|Bloki przed zakończeniem operacji asynchronicznych skojarzone lub w czasie określonym przez `_Rel_time` upłynął.|  
-|[wait_until](#wait_until)|Blokuje przed zakończeniem operacji asynchronicznych skojarzone lub dopóki bieżąca godzina przekracza wartość określoną przez `_Abs_time`.|  
+|[get](#get)|Czeka, aż skojarzona operacja asynchroniczna.|  
+|[Następnie](#then)|Tworzy powiązanie obiekt funkcji wywołania zwrotnego `completion_future` obiektu do wykonania, gdy skojarzona operacja asynchroniczna kończy działanie.|  
+|[to_task](#to_task)|Zwraca `task` obiektu odpowiadającego skojarzona operacja asynchroniczna.|  
+|[Nieprawidłowa](#valid)|Pobiera wartość logiczną, wskazującą, czy obiekt jest skojarzony z operacją asynchroniczną.|  
+|[Czekaj](#wait)|Blokuje, dopóki nie zakończy się skojarzona operacja asynchroniczna.|  
+|[wait_for](#wait_for)|Blokuje, dopóki nie zakończy się skojarzona operacja asynchroniczna lub w czasie określonym przez `_Rel_time` upłynął.|  
+|[wait_until](#wait_until)|Blokuje, dopóki skojarzona operacja asynchroniczna lub dopóki bieżący czas przekracza wartość określoną przez `_Abs_time`.|  
   
 ### <a name="public-operators"></a>Operatory publiczne  
   
 |Nazwa|Opis|  
 |----------|-----------------|  
-|[Operator std::shared_future\<void >](#operator_shared_future)|Konwertuje niejawnie `completion_future` do obiektu `std::shared_future` obiektu.|  
-|[operator=](#operator_eq)|Kopiuje zawartość określonego `completion_future` obiektu do tego.|  
+|[Operator std::shared_future\<void >](#operator_shared_future)|Niejawnie konwertuje `completion_future` obiekt `std::shared_future` obiektu.|  
+|[operator=](#operator_eq)|Kopiuje zawartość określonego `completion_future` obiektu do wskazanego.|  
   
 ## <a name="inheritance-hierarchy"></a>Hierarchia dziedziczenia  
  `completion_future`  
@@ -93,20 +93,20 @@ completion_future(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `_Other`  
- `completion_future` Obiekt, aby skopiować lub przenieść.  
+*_Inne*<br/>
+`completion_future` Obiektu, aby skopiować lub przenieść.  
   
 ### <a name="overloads-list"></a>Lista przeciążeń  
   
 |Nazwa|Opis|  
 |----------|-----------------|  
-|`completion_future();`|Inicjuje nowe wystąpienie klasy `completion_future` — klasa|  
-|`completion_future(const completion_future& _Other);`|Inicjuje nowe wystąpienie klasy `completion_future` przez skopiowanie konstruktora.|  
-|`completion_future(completion_future&& _Other);`|Inicjuje nowe wystąpienie klasy `completion_future` klasy przez przenoszenie konstruktora.|  
+|`completion_future();`|Inicjuje nowe wystąpienie klasy `completion_future` klasy|  
+|`completion_future(const completion_future& _Other);`|Inicjuje nowe wystąpienie klasy `completion_future` klasy przez kopiowanie konstruktora.|  
+|`completion_future(completion_future&& _Other);`|Inicjuje nowe wystąpienie klasy `completion_future` klasy, przenosząc konstruktora.|  
   
 ## <a name="get"></a> Pobierz 
 
-Czeka, aż do zakończenia skojarzonego operację asynchroniczną. Zgłasza wyjątek przechowywanych jedną napotkano podczas operacji asynchronicznej.  
+Czeka, aż skojarzona operacja asynchroniczna. Zgłasza wyjątek przechowywane, jeśli jeden napotkano podczas operacji asynchronicznej.  
   
 ### <a name="syntax"></a>Składnia  
   
@@ -116,7 +116,7 @@ void get() const;
   
 ## <a name="operator_shared_future"></a> std::shared_future — operator<void> 
 
-Konwertuje niejawnie `completion_future` do obiektu `std::shared_future` obiektu.  
+Niejawnie konwertuje `completion_future` obiekt `std::shared_future` obiektu.  
   
 ### <a name="syntax"></a>Składnia  
   
@@ -129,7 +129,7 @@ operator std::shared_future<void>() const;
   
 ## <a name="operator_eq"></a> operator = 
 
-Kopiuje zawartość określonego `completion_future` obiektu do tego.  
+Kopiuje zawartość określonego `completion_future` obiektu do wskazanego.  
   
 ### <a name="syntax"></a>Składnia  
   
@@ -139,22 +139,22 @@ completion_future&  operator= (completion_future&& _Other );
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `_Other`  
- Obiekt do skopiowania.  
+*_Inne*<br/>
+Obiekt do skopiowania.  
   
 ### <a name="return-value"></a>Wartość zwracana  
- Odwołanie do tego `completion_future` obiektu.  
+ Odwołanie do `completion_future` obiektu.  
   
 ## <a name="overloads-list"></a>Lista przeciążeń  
   
 |Nazwa|Opis|  
 |----------|-----------------|  
-|`completion_future& operator=(const completion_future& _Other);`|Kopiuje zawartość określonego `completion_future` obiekt ten element, za pomocą bezpośrednich kopii.|  
-|`completion_future& operator=(completion_future&& _Other);`|Kopiuje zawartość określonego `completion_future` obiekt ten element, przy użyciu przypisania przenoszenia.|  
+|`completion_future& operator=(const completion_future& _Other);`|Kopiuje zawartość określonego `completion_future` obiektu do tego, używając głębokiego kopiowania.|  
+|`completion_future& operator=(completion_future&& _Other);`|Kopiuje zawartość określonego `completion_future` obiektu do wskazanego przy użyciu przeniesienia przypisania.|  
   
-## <a name="then"></a> następnie 
+## <a name="then"></a> Następnie 
 
-Powiązany obiekt funkcja wywołania zwrotnego do `completion_future` obiektu ma być wykonywana w przypadku skojarzone operację asynchroniczną kończy działanie.  
+Tworzy powiązanie obiekt funkcji wywołania zwrotnego `completion_future` obiektu do wykonania, gdy skojarzona operacja asynchroniczna kończy działanie.  
   
 ### <a name="syntax"></a>Składnia  
   
@@ -164,15 +164,15 @@ void then(const _Functor & _Func ) const;
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `_Functor`  
- Obiekt wywołania zwrotnego.  
+*_Functor*<br/>
+Funkcję wywołania zwrotnego.  
   
- `_Func`  
- Obiekt funkcji wywołania zwrotnego.  
+*_Func*<br/>
+Obiekt funkcyjny wywołania zwrotnego.  
   
 ## <a name="to_task"></a> to_task 
 
-Zwraca `task` obiektu odpowiadającego skojarzone operację asynchroniczną.  
+Zwraca `task` obiektu odpowiadającego skojarzona operacja asynchroniczna.  
   
 ### <a name="syntax"></a>Składnia  
   
@@ -181,11 +181,11 @@ concurrency::task<void> to_task() const;
 ```  
   
 ### <a name="return-value"></a>Wartość zwracana  
- A `task` obiektu odpowiadającego skojarzone operację asynchroniczną.  
+ Element `task` obiektu odpowiadającego skojarzona operacja asynchroniczna.  
   
 ## <a name="valid"></a> Nieprawidłowa 
 
-Pobiera wartość logiczną wskazującą, czy obiekt jest skojarzony z operacji asynchronicznej.  
+Pobiera wartość logiczną, wskazującą, czy obiekt jest skojarzony z operacją asynchroniczną.  
   
 ### <a name="syntax"></a>Składnia  
   
@@ -194,11 +194,11 @@ bool valid() const;
 ```  
   
 ### <a name="return-value"></a>Wartość zwracana  
- `true` Jeśli obiekt jest skojarzony z operacji asynchronicznej; w przeciwnym razie `false`.  
+ `true` Jeśli obiekt jest skojarzony z operacją asynchroniczną; w przeciwnym razie `false`.  
   
-## <a name="wait"></a> oczekiwania 
+## <a name="wait"></a> Czekaj 
 
-Bloki przed zakończeniem skojarzone operacji asynchronicznej.  
+Blokuje, dopóki nie zakończy się skojarzona operacja asynchroniczna.  
   
 ### <a name="syntax"></a>Składnia  
   
@@ -208,7 +208,7 @@ void wait() const;
   
 ## <a name="wait_for"></a> wait_for 
 
-Bloki przed zakończeniem operacji asynchronicznych skojarzone lub czasu określonym przez `_Rel_time` upłynął.  
+Blokuje, dopóki nie zakończy się skojarzona operacja asynchroniczna lub czas, który jest określony przez `_Rel_time` upłynął.  
   
 ### <a name="syntax"></a>Składnia  
   
@@ -222,14 +222,14 @@ std::future_status::future_status wait_for(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `_Rep`  
- Typ arytmetyczny, który reprezentuje liczbę znaczników.  
+*_Rep*<br/>
+Typ arytmetyczny, który reprezentuje liczbę znaczników.  
   
- `_Period`  
- Std::ratio, reprezentującą liczbę sekund, które upłynąć na osi.  
+*_Period*<br/>
+Std::ratio wskazuje liczbę sekund, które upłynęły na jednostkę skali.  
   
- `_Rel_time`  
- Maksymalna ilość czasu oczekiwania na ukończenie tej operacji.  
+*_Rel_time*<br/>
+Maksymalna ilość czasu oczekiwania na ukończenie tej operacji.  
   
 ### <a name="return-value"></a>Wartość zwracana  
  Zwraca:  
@@ -242,7 +242,7 @@ std::future_status::future_status wait_for(
   
 ## <a name="wait_until"></a> wait_until 
 
-Blokuje przed zakończeniem operacji asynchronicznych skojarzone lub dopóki bieżąca godzina przekracza wartość określoną przez `_Abs_time`.  
+Blokuje, dopóki skojarzona operacja asynchroniczna lub dopóki bieżący czas przekracza wartość określoną przez `_Abs_time`.  
   
 ### <a name="syntax"></a>Składnia  
   
@@ -256,14 +256,14 @@ std::future_status::future_status wait_until(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `_Clock`  
- Zegara, na którym jest mierzony tego punktu w czasie.  
+*_Clock*<br/>
+Zegar, na którym mierzony jest punkt czasu.  
   
- `_Duration`  
- Przedział czasu od chwili uruchomienia `_Clock`firmy epoki, po którym funkcja będzie upłynął limit czasu.  
+*_Duration*<br/>
+Interwał czasu od chwili uruchomienia `_Clock`firmy epoki, po upływie którego funkcja przekroczy limit czasu.  
   
- `_Abs_time`  
- Punkt w czasie, po którym funkcja przekroczy limit czasu.  
+*_Abs_time*<br/>
+Punkt w czasie, po upływie którego funkcja przekroczy limit czasu.  
   
 ### <a name="return-value"></a>Wartość zwracana  
  Zwraca:  
@@ -272,7 +272,7 @@ std::future_status::future_status wait_until(
   
 2.  `std::future_status::ready` Jeśli skojarzona operacja asynchroniczna została zakończona.  
   
-3.  `std::future_status::timeout` Jeśli określony okres czasu upłynął.  
+3.  `std::future_status::timeout` Jeśli określony czas upłynął.  
   
 ## <a name="dtor"></a> ~ completion_future 
 

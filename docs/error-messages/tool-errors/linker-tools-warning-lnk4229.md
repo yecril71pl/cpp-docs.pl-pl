@@ -16,14 +16,15 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3c82599d414ddfcd3bd75097a32d8bfce31752cc
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 0837942c7701f8349983f4651005123b5ba89232
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33302753"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46118885"
 ---
 # <a name="linker-tools-warning-lnk4229"></a>Ostrzeżenie LNK4229 narzędzi konsolidatora
-Nieprawidłowe dyrektywy /directive znaleziono; ignorowane  
-  
- Dyrektywy przekazywane przez [komentarz](../../preprocessor/comment-c-cpp.md) pragma jest nieprawidłowa. Ignoruje konsolidator `/directive`.
+
+Nieprawidłowy /directive dyrektywy odnaleziony; ignorowane
+
+Dyrektywy przekazywane za pośrednictwem [komentarz](../../preprocessor/comment-c-cpp.md) pragma był nieprawidłowy. Ignoruje konsolidator `/directive`.

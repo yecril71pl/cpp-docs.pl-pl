@@ -25,12 +25,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f3c6db8a46e0b0e8d490019b18fc67dc7bf1e226
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: b6eb8c7ed32e780ddaf31dfd6167f59fd55de9da
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43763448"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46116779"
 ---
 # <a name="ccomcurrency-class"></a>Klasa CComCurrency
 
@@ -118,45 +118,45 @@ CComCurrency() throw();
 CComCurrency(const CComCurrency& curSrc) throw();
 CComCurrency(CURRENCY cySrc) throw();
 CComCurrency(DECIMAL dSrc);
-CComCurrency(ULONG ulSrc);  
-CComCurrency(USHORT usSrc);  
-CComCurrency(CHAR cSrc);  
-CComCurrency(DOUBLE dSrc);  
-CComCurrency(FLOAT fSrc);  
-CComCurrency(LONG lSrc);  
-CComCurrency(SHORT sSrc);  
-CComCurrency(BYTE bSrc);  
-CComCurrency(LONGLONG nInteger, SHORT nFraction);  
-explicit CComCurrency(LPDISPATCH pDispSrc);  
-explicit CComCurrency(const VARIANT& varSrc);  
-explicit CComCurrency(LPCWSTR szSrc);  
+CComCurrency(ULONG ulSrc);
+CComCurrency(USHORT usSrc);
+CComCurrency(CHAR cSrc);
+CComCurrency(DOUBLE dSrc);
+CComCurrency(FLOAT fSrc);
+CComCurrency(LONG lSrc);
+CComCurrency(SHORT sSrc);
+CComCurrency(BYTE bSrc);
+CComCurrency(LONGLONG nInteger, SHORT nFraction);
+explicit CComCurrency(LPDISPATCH pDispSrc);
+explicit CComCurrency(const VARIANT& varSrc);
+explicit CComCurrency(LPCWSTR szSrc);
 explicit CComCurrency(LPCSTR szSrc);
 ```
 
 ### <a name="parameters"></a>Parametry
 
-*curSrc*  
+*curSrc*<br/>
 Istniejące `CComCurrency` obiektu.
 
-*cySrc*  
+*cySrc*<br/>
 Zmienna typu waluty.
 
-*bSrc*, *dSrc*, *fSrc*, *lSrc*, *sSrc*, *ulSrc, usSrc*  
+*bSrc*, *dSrc*, *fSrc*, *lSrc*, *sSrc*, *ulSrc, usSrc*<br/>
 Początkowa wartość do zmiennej elementu członkowskiego `m_currency`.
 
-*cSrc*  
+*cSrc*<br/>
 Znak zawierający początkowa wartość do zmiennej elementu członkowskiego `m_currency`.
 
-*nInteger*, *nFraction*  
+*nInteger*, *nFraction*<br/>
 Liczba całkowita i ułamkowych części wartość pieniężną. Zobacz [CComCurrency](../../atl/reference/ccomcurrency-class.md) Przegląd, aby uzyskać więcej informacji.
 
-*pDispSrc*  
+*pDispSrc*<br/>
 `IDispatch` Wskaźnika.
 
-*varSrc*  
+*varSrc*<br/>
 Zmienna typu VARIANT. Ustawienia regionalne bieżącego wątku jest używany do wykonywania konwersji.
 
-*szSrc*  
+*szSrc*<br/>
 Ciąg Unicode lub ANSI, zawierający wartość początkową. Ustawienia regionalne bieżącego wątku jest używany do wykonywania konwersji.
 
 ### <a name="remarks"></a>Uwagi
@@ -238,7 +238,7 @@ CComCurrency operator-(const CComCurrency& cur) const;
 
 ### <a name="parameters"></a>Parametry
 
-*cur*  
+*cur*<br/>
 Element `CComCurrency` obiektu.
 
 ### <a name="return-value"></a>Wartość zwracana
@@ -259,7 +259,7 @@ bool operator!= (const CComCurrency& cur) const;
 
 ### <a name="parameters"></a>Parametry
 
-*cur*  
+*cur*<br/>
 `CComCurrency` Obiekt do porównania.
 
 ### <a name="return-value"></a>Wartość zwracana
@@ -281,10 +281,10 @@ CComCurrency operator*(const CComCurrency& cur) const;
 
 ### <a name="parameters"></a>Parametry
 
-*nOperand*  
+*nOperand*<br/>
 Mnożnik.
 
-*cur*  
+*cur*<br/>
 `CComCurrency` Używana jako mnożnik obiektu.
 
 ### <a name="return-value"></a>Wartość zwracana
@@ -306,10 +306,10 @@ const CComCurrency& operator*= (const CComCurrency& cur);
 
 ### <a name="parameters"></a>Parametry
 
-*nOperand*  
+*nOperand*<br/>
 Mnożnik.
 
-*cur*  
+*cur*<br/>
 `CComCurrency` Używana jako mnożnik obiektu.
 
 ### <a name="return-value"></a>Wartość zwracana
@@ -330,7 +330,7 @@ CComCurrency operator/(long nOperand) const;
 
 ### <a name="parameters"></a>Parametry
 
-*nOperand*  
+*nOperand*<br/>
 Dzielnik.
 
 ### <a name="return-value"></a>Wartość zwracana
@@ -351,7 +351,7 @@ const CComCurrency& operator/= (long nOperand);
 
 ### <a name="parameters"></a>Parametry
 
-*nOperand*  
+*nOperand*<br/>
 Dzielnik.
 
 ### <a name="return-value"></a>Wartość zwracana
@@ -372,7 +372,7 @@ CComCurrency operator+(const CComCurrency& cur) const;
 
 ### <a name="parameters"></a>Parametry
 
-*cur*  
+*cur*<br/>
 `CComCurrency` Obiektów, które mają zostać dodane do oryginalnego obiektu.
 
 ### <a name="return-value"></a>Wartość zwracana
@@ -393,7 +393,7 @@ const CComCurrency& operator+= (const CComCurrency& cur);
 
 ### <a name="parameters"></a>Parametry
 
-*cur*  
+*cur*<br/>
 `CComCurrency` Obiektu.
 
 ### <a name="return-value"></a>Wartość zwracana
@@ -414,7 +414,7 @@ bool operator<(const CComCurrency& cur) const;
 
 ### <a name="parameters"></a>Parametry
 
-*cur*  
+*cur*<br/>
 Element `CComCurrency` obiektu.
 
 ### <a name="return-value"></a>Wartość zwracana
@@ -435,7 +435,7 @@ bool operator<= (const CComCurrency& cur) const;
 
 ### <a name="parameters"></a>Parametry
 
-*cur*  
+*cur*<br/>
 Element `CComCurrency` obiektu.
 
 ### <a name="return-value"></a>Wartość zwracana
@@ -466,13 +466,13 @@ const CComCurrency& operator= (DECIMAL dSrc);
 
 ### <a name="parameters"></a>Parametry
 
-*curSrc*  
+*curSrc*<br/>
 Element `CComCurrency` obiektu.
 
-*cySrc*  
+*cySrc*<br/>
 Zmienna typu waluty.
 
-*sSrc*, *fSrc*, *lSrc*, *bSrc*, *usSrc*, *dSrc*, *cSrc* , *ulSrc*, *dSrc*  
+*sSrc*, *fSrc*, *lSrc*, *bSrc*, *usSrc*, *dSrc*, *cSrc* , *ulSrc*, *dSrc*<br/>
 Wartość liczbowa do przypisania do `CComCurrency` obiektu.
 
 ### <a name="return-value"></a>Wartość zwracana
@@ -493,7 +493,7 @@ const CComCurrency& operator-= (const CComCurrency& cur);
 
 ### <a name="parameters"></a>Parametry
 
-*cur*  
+*cur*<br/>
 Element `CComCurrency` obiektu.
 
 ### <a name="return-value"></a>Wartość zwracana
@@ -514,7 +514,7 @@ bool operator== (const CComCurrency& cur) const;
 
 ### <a name="parameters"></a>Parametry
 
-*cur*  
+*cur*<br/>
 `CComCurrency` Obiekt do porównania.
 
 ### <a name="return-value"></a>Wartość zwracana
@@ -535,7 +535,7 @@ bool operator>(const CComCurrency& cur) const;
 
 ### <a name="parameters"></a>Parametry
 
-*cur*  
+*cur*<br/>
 Element `CComCurrency` obiektu.
 
 ### <a name="return-value"></a>Wartość zwracana
@@ -556,7 +556,7 @@ bool operator>= (const CComCurrency& cur) const;
 
 ### <a name="parameters"></a>Parametry
 
-*cur*  
+*cur*<br/>
 Element `CComCurrency` obiektu.
 
 ### <a name="return-value"></a>Wartość zwracana
@@ -571,7 +571,7 @@ Zwraca wartość TRUE, jeśli pierwszy obiekt jest większy lub równy drugiemu 
 
 Te operatory są używane do rzutowania `CComCurrency` obiektu na typ danych walutowych.
 
-```  
+```
 operator CURRENCY&() throw();
 operator const CURRENCY&() const throw();
 ```
@@ -594,7 +594,7 @@ HRESULT Roundint nDecimals);
 
 ### <a name="parameters"></a>Parametry
 
-*nDecimals*  
+*nDecimals*<br/>
 Liczba cyfr, do którego `m_currency` zostanie zaokrąglony z zakresu od 0 do 4.
 
 ### <a name="return-value"></a>Wartość zwracana
@@ -615,7 +615,7 @@ HRESULT SetFraction(SHORT nFraction);
 
 ### <a name="parameters"></a>Parametry
 
-*nFraction*  
+*nFraction*<br/>
 Wartość do przypisania do składnika ułamkowe `m_currency` element członkowski danych. Znak ułamkowych części musi taka sama jak składnika całkowitego, a wartość musi należeć do zakresu-9999 (CY_MIN_FRACTION) do +9999 (CY_MAX_FRACTION).
 
 ### <a name="return-value"></a>Wartość zwracana
@@ -636,7 +636,7 @@ HRESULT SetInteger(LONGLONG nInteger);
 
 ### <a name="parameters"></a>Parametry
 
-*nInteger*  
+*nInteger*<br/>
 Wartość do przypisania do liczby całkowitej składowej `m_currency` element członkowski danych. Znak składnika całkowitego musi odpowiadać znak istniejący składnik ułamkowe.
 
 *nInteger* musi należeć do zakresu CY_MIN_INTEGER do CY_MAX_INTEGER (włącznie). Te wartości są definiowane w atlcur.h.
@@ -651,6 +651,6 @@ Zwraca wartość S_OK w przypadku powodzenia lub błędu HRESULT w przypadku nie
 
 ## <a name="see-also"></a>Zobacz też
 
-[Klasa COleCurrency](../../mfc/reference/colecurrency-class.md)   
-[WALUTY](/windows/desktop/api/wtypes/ns-wtypes-tagcy)   
+[Klasa COleCurrency](../../mfc/reference/colecurrency-class.md)<br/>
+[WALUTY](/windows/desktop/api/wtypes/ns-wtypes-tagcy)<br/>
 [Klasa — Przegląd](../../atl/atl-class-overview.md)

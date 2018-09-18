@@ -22,12 +22,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 050317be4c5f933ca9e08055a02555f5597c583c
-ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
+ms.openlocfilehash: 573af4088e288403edaa8e5c34fb84817442c8f5
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/01/2018
-ms.locfileid: "39406536"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46115999"
 ---
 # <a name="ptr32-ptr64"></a>__ptr32, __ptr64
 
@@ -42,7 +42,7 @@ int * __ptr32 p32;
 int * __ptr64 p64;
 ```
 
- W systemie 32-bitowe, wskaźnik jest zadeklarowany za pomocą **__ptr64** jest obcinana do wskaźnika 32-bitowego. W systemie 64-bitowy wskaźnik jest zadeklarowany za pomocą **__ptr32** jest traktowany jak wskaźnika 64-bitowego.
+W systemie 32-bitowe, wskaźnik jest zadeklarowany za pomocą **__ptr64** jest obcinana do wskaźnika 32-bitowego. W systemie 64-bitowy wskaźnik jest zadeklarowany za pomocą **__ptr32** jest traktowany jak wskaźnika 64-bitowego.
 
 > [!NOTE]
 > Nie można użyć **__ptr32** lub **__ptr64** podczas kompilowania za pomocą **/CLR: pure**. W przeciwnym razie zostanie wygenerowany błąd kompilatora C2472. **/CLR: pure** i **/CLR: Safe** opcje kompilatora są przestarzałe w programie Visual Studio 2015 i obsługiwane w programie Visual Studio 2017.
@@ -80,4 +80,5 @@ int main()
 **END specyficzny dla Microsoft**
 
 ## <a name="see-also"></a>Zobacz także
- [Typy podstawowe](../cpp/fundamental-types-cpp.md)
+
+[Typy podstawowe](../cpp/fundamental-types-cpp.md)

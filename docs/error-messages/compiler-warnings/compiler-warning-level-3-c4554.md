@@ -1,5 +1,5 @@
 ---
-title: Kompilatora (poziom 3) ostrzeżenie C4554 | Dokumentacja firmy Microsoft
+title: Kompilator ostrzeżenie (poziom 3) C4554 | Dokumentacja firmy Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,25 +16,26 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ad427c9d8a9091a1eea37b10e1e49ed2d8613c18
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: b6349cada597b2089f03169071345a68179b24e3
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33294417"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46114439"
 ---
-# <a name="compiler-warning-level-3-c4554"></a>Kompilator C4554 ostrzegawcze (poziom 3)
-"operator": Sprawdź ustawienie pierwszeństwa operatora w poszukiwaniu możliwych błędów; Użyj nawiasów, aby wyjaśnić ustawienie pierwszeństwa  
-  
- Poniższy przykład generuje C4554:  
-  
-```  
-// C4554.cpp  
-// compile with: /W3 /WX  
-int main() {  
-   int a = 0, b = 0, c = 0;  
-   a = a << b + c;   // C4554  
-   // probably intended (a << b) + c,  
-   // but will get a << (b + c)  
-}  
+# <a name="compiler-warning-level-3-c4554"></a>Kompilator ostrzeżenie (poziom 3) C4554
+
+'operator': Sprawdź pierwszeństwo operatorów w poszukiwaniu możliwego błędu; Użyj nawiasów, aby ujednoznacznić pierwszeństwo
+
+Poniższy przykład spowoduje wygenerowanie C4554:
+
+```
+// C4554.cpp
+// compile with: /W3 /WX
+int main() {
+   int a = 0, b = 0, c = 0;
+   a = a << b + c;   // C4554
+   // probably intended (a << b) + c,
+   // but will get a << (b + c)
+}
 ```

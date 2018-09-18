@@ -15,15 +15,16 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: a5ba289e7e53ba1bcaca550ba84c2d871d215306
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 84ee07f236ac7ec79149b1cb36f358598f9c6c12
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33106989"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46112697"
 ---
 # <a name="storing-strings-in-the-ole-db-provider"></a>Przechowywanie ciągów w dostawcy OLE DB
-W MyProviderRS.h, OLE DB Provider Kreator ATL tworzy domyślny rekord użytkownika o nazwie `CWindowsFile`. Aby obsługiwać dwa ciągi, zmodyfikuj `CWindowsFile` lub Dodaj rekord użytkownika, jak pokazano w poniższym kodzie:  
+
+W MyProviderRS.h, ATL OLE DB Provider Kreator tworzy rekord użytkownika domyślnego o nazwie `CWindowsFile`. Aby obsługiwać dwa ciągi, zmodyfikuj `CWindowsFile` lub dodać rekord użytkownika, jak pokazano w poniższym kodzie:  
   
 ```cpp
 ////////////////////////////////////////////////////////////////////////  
@@ -50,11 +51,12 @@ END_PROVIDER_COLUMN_MAP()
 };  
 ```  
   
- Elementy członkowskie danych `szCommand` i `szText` reprezentują dwa ciągi z `szCommand2` i `szText2` zapewnienie dodatkowych kolumn, w razie potrzeby. Element członkowski danych `dwBookmark` nie jest wymagane dla tego prostego dostawcy tylko do odczytu, ale później służy do dodawania `IRowsetLocate` interfejsu; zobacz [udoskonalanie prostego odczytu tylko dostawcy](../../data/oledb/enhancing-the-simple-read-only-provider.md). `==` Operator porównuje wystąpienia (Implementowanie Ten operator jest opcjonalny).  
+Elementy członkowskie danych `szCommand` i `szText` reprezentują dwa ciągi przy użyciu `szCommand2` i `szText2` zapewnienie dodatkowych kolumn, jeśli to konieczne. Element członkowski danych `dwBookmark` nie jest wymagany dla tego prostego dostawcy tylko do odczytu, ale jest używany później dodać `IRowsetLocate` interfejsu; zobacz [udoskonalanie prostego odczytu tylko dostawcy](../../data/oledb/enhancing-the-simple-read-only-provider.md). `==` Operator porównuje wystąpienia (Implementowanie Ten operator jest opcjonalny).  
   
- Po zakończeniu dostawcy należy skompilować i uruchomić. Aby przetestować dostawcę, należy konsumentów ze zgodnymi funkcji. [Implementowanie prostego konsumenta](../../data/oledb/implementing-a-simple-consumer.md) przedstawiono sposób tworzenia użytkownika testu. Uruchomić klienta testowego z dostawcą. Sprawdź, czy konsumenta test pobiera odpowiednie ciągi od dostawcy, po kliknięciu **Uruchom** przycisk **Test konsumenta** okno dialogowe.  
+Gdy jest to wykonywane, dostawca powinien być gotowe do kompilowania i uruchamiania. Aby przetestować dostawcę, należy odbiorców za pomocą funkcji dopasowywania. [Implementowanie prostego konsumenta](../../data/oledb/implementing-a-simple-consumer.md) pokazuje, jak utworzyć odbiorcę testu. Uruchom klienta testowego z dostawcą. Sprawdź, czy odbiorcy test pobiera odpowiednie ciągi od dostawcy, po kliknięciu **Uruchom** znajdujący się w **Test konsumenta** okno dialogowe.  
   
- Dostawca pomyślnie zostały przetestowane, można zwiększyć jego funkcjonalność implementując dodatkowe interfejsy. Przykład znajduje się w [udoskonalanie prostego dostawcy tylko do odczytu](../../data/oledb/enhancing-the-simple-read-only-provider.md).  
+Twój dostawca zostały pomyślnie przetestowane, można zwiększyć jego działanie, implementując dodatkowe interfejsy. Przykład został przedstawiony na [udoskonalanie prostego dostawcy tylko do odczytu](../../data/oledb/enhancing-the-simple-read-only-provider.md).  
   
 ## <a name="see-also"></a>Zobacz też  
- [Implementowanie prostego dostawcy tylko do odczytu](../../data/oledb/implementing-the-simple-read-only-provider.md)
+
+[Implementowanie prostego dostawcy tylko do odczytu](../../data/oledb/implementing-the-simple-read-only-provider.md)

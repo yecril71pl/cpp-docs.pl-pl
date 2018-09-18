@@ -1,5 +1,5 @@
 ---
-title: C4485 ostrzeżenia kompilatora | Dokumentacja firmy Microsoft
+title: Ostrzeżenie kompilatora C4485 | Dokumentacja firmy Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,43 +16,45 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4b84d2976e31d5cc3a9b6547d0c4b02a61327ce0
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: cb83700bf8ca79960599d85ed3d335f80c9fc7f2
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33270441"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46117754"
 ---
-# <a name="compiler-warning-c4485"></a>C4485 ostrzeżenia kompilatora
-"override_function": pasuje do metody podstawowej klasy referencyjnej "base_class_function", ale nie jest oznaczony jako "new" lub "override"; Założono "new" (i "virtual")  
-  
- Zastępuje metodę dostępu, bez `virtual` — słowo kluczowe — funkcja dostępu klasy podstawowej, ale `override` lub `new` specyfikator nie jest częścią elementu zastępowanie podpisu funkcji. Dodaj `new` lub `override` specyfikator rozwiązywać to ostrzeżenie.  
-  
- Zobacz [zastąpienia](../../windows/override-cpp-component-extensions.md) i [new (nowe gniazdo w vtable)](../../windows/new-new-slot-in-vtable-cpp-component-extensions.md) Aby uzyskać więcej informacji.  
-  
- C4485 jest zawsze wystawione jako błąd. Użyj [ostrzeżenie](../../preprocessor/warning.md) pragma do pomijania C4485.  
-  
-## <a name="example"></a>Przykład  
- Poniższy przykład generuje C4485  
-  
-```  
-// C4485.cpp  
-// compile with: /clr  
-delegate void Del();  
-  
-ref struct A {  
-   virtual event Del ^E;  
-};  
-  
-ref struct B : A {  
-   virtual event Del ^E;   // C4485  
-};  
-  
-ref struct C : B {  
-   virtual event Del ^E {  
-      void raise() override {}  
-      void add(Del ^) override {}  
-      void remove(Del^) override {}  
-   }  
-};  
+# <a name="compiler-warning-c4485"></a>Ostrzeżenie kompilatora C4485
+
+"override_function": odpowiada metodzie bazowej klasy referencyjnej "base_class_function", ale nie jest oznaczona "new" ani "override"; przyjęto "new" (i "virtual")
+
+Zastępuje metodę dostępu, z lub bez `virtual` — słowo kluczowe, funkcja dostępu klasy bazowej, ale `override` lub `new` specyfikator nie jest częścią nadrzędnych sygnatura funkcji. Dodaj `new` lub `override` specyfikator w celu rozwiązania tego ostrzeżenia.
+
+Zobacz [zastąpienia](../../windows/override-cpp-component-extensions.md) i [new (nowe gniazdo w vtable)](../../windows/new-new-slot-in-vtable-cpp-component-extensions.md) Aby uzyskać więcej informacji.
+
+C4485 zawsze jest wystawiany jako błąd. Użyj [ostrzeżenie](../../preprocessor/warning.md) pragma może pominąć C4485.
+
+## <a name="example"></a>Przykład
+
+Poniższy przykład spowoduje wygenerowanie C4485
+
+```
+// C4485.cpp
+// compile with: /clr
+delegate void Del();
+
+ref struct A {
+   virtual event Del ^E;
+};
+
+ref struct B : A {
+   virtual event Del ^E;   // C4485
+};
+
+ref struct C : B {
+   virtual event Del ^E {
+      void raise() override {}
+      void add(Del ^) override {}
+      void remove(Del^) override {}
+   }
+};
 ```

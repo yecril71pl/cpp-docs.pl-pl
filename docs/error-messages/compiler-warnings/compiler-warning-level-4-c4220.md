@@ -1,5 +1,5 @@
 ---
-title: Kompilatora (poziom 4) ostrzeżenie C4220 | Dokumentacja firmy Microsoft
+title: Kompilator ostrzeżenie (poziom 4) C4220 | Dokumentacja firmy Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,31 +16,32 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8f5a48bc836bbead8bc9004f797855fcc4c1baaf
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 70c6b104c924a09570d4bd77191f1df715726370
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33294170"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46118781"
 ---
-# <a name="compiler-warning-level-4-c4220"></a>Kompilator C4220 ostrzegawcze (poziom 4)
-pozostałe parametry dopasowań VarArgs  
-  
- W obszarze rozszerzenia Microsoft domyślne (/Ze) wskaźnika do funkcji jest zgodny wskaźnika do funkcji z argumentami podobne, ale zmiennej.  
-  
-## <a name="example"></a>Przykład  
-  
-```  
-// C4220.c  
-// compile with: /W4  
-  
-int ( *pFunc1) ( int a, ... );  
-int ( *pFunc2) ( int a, int b);  
-  
-int main()  
-{  
-   if ( pFunc1 != pFunc2 ) {};  // C4220  
-}  
-```  
-  
- Takie wskaźniki nie zgadzają się w obszarze Zgodność ANSI ([/Za](../../build/reference/za-ze-disable-language-extensions.md)).
+# <a name="compiler-warning-level-4-c4220"></a>Kompilator ostrzeżenie (poziom 4) C4220
+
+pozostałe parametry dopasowań VarArgs
+
+W obszarze domyślna rozszerzenia Microsoft (/Ze) wskaźnik do funkcji pasuje do wskaźnika do funkcji z podobnym, lecz zmienne, argumenty.
+
+## <a name="example"></a>Przykład
+
+```
+// C4220.c
+// compile with: /W4
+
+int ( *pFunc1) ( int a, ... );
+int ( *pFunc2) ( int a, int b);
+
+int main()
+{
+   if ( pFunc1 != pFunc2 ) {};  // C4220
+}
+```
+
+Takie wskaźniki nie są zgodne w obszarze zgodności ANSI ([/Za](../../build/reference/za-ze-disable-language-extensions.md)).

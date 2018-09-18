@@ -17,137 +17,141 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8a3c3defdfb882db69f7789c97feba11d346e540
-ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
+ms.openlocfilehash: 1e5807b529ca56613cfe0021762a0191e4038df0
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/01/2018
-ms.locfileid: "39405590"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46118742"
 ---
 # <a name="class-c"></a>klasa (C++)
-**Klasy** — słowo kluczowe deklaruje typu klasy lub definiuje obiekt typu klasy.  
-  
-## <a name="syntax"></a>Składnia  
-  
-```  
-[template-spec]  
-class [ms-decl-spec] [tag [: base-list ]]  
-{  
-   member-list  
-} [declarators];  
-[ class ] tag declarators;  
-```  
-  
-#### <a name="parameters"></a>Parametry  
- *specyfikacje szablonu*  
- Opcjonalne specyfikacje szablonu. Aby uzyskać więcej informacji, zobacz [szablony](templates-cpp.md).  
-  
- *class*  
- **Klasy** — słowo kluczowe.  
-  
- *MS-decl-spec*  
- Opcjonalna specyfikacja klasy magazynowania. Aby uzyskać więcej informacji, zobacz [__declspec](../cpp/declspec.md) — słowo kluczowe.  
-  
- *Tag*  
- Nazwa typu nadana tej klasy. Znacznik staje się słowem zastrzeżonym w zakresie klasy. Znacznik jest opcjonalny. W przypadku pominięcia jest zdefiniowana klasa anonimowa. Aby uzyskać więcej informacji, zobacz [anonimowe typy klas](../cpp/anonymous-class-types.md).  
-  
- *Lista podstawowego*  
- Opcjonalna lista klas lub struktur tej klasy, z której pochodzą składowe. Zobacz [klasy podstawowej](../cpp/base-classes.md) Aby uzyskać więcej informacji. Każda podstawowa nazwy klasy lub struktury może być poprzedzona przez specyfikator dostępu ([publicznych](../cpp/public-cpp.md), [prywatnej](../cpp/private-cpp.md), [chronione](../cpp/protected-cpp.md)) i [wirtualnego](../cpp/virtual-cpp.md) słowo kluczowe. Zobacz tabelę dostępu do elementu członkowskiego w [kontrolowanie dostępu do składowych klasy](member-access-control-cpp.md) Aby uzyskać więcej informacji.  
-  
- *Lista elementów członkowskich*  
- Lista składowych klasy. Zapoznaj się [omówienie składowej klasy](../cpp/class-member-overview.md) Aby uzyskać więcej informacji.  
-  
- *deklaratory*  
- Lista deklaratora określająca nazwy co najmniej jedno wystąpienie typu klasy. Deklaratory mogą zawierać listy inicjatorów, jeśli wszystkie składowe danych klasy są **publicznych**. Jest to bardziej powszechne w strukturach, w których elementy członkowskie danych są **publicznych** domyślnie niż w klasach. Zobacz [Przegląd Deklaratorów](../cpp/overview-of-declarators.md) Aby uzyskać więcej informacji.  
-  
-## <a name="remarks"></a>Uwagi  
- Aby uzyskać więcej informacji na temat klas ogólnie rzecz biorąc, można skorzystać z jednego z następujących tematów:  
-  
--   [struct](../cpp/struct-cpp.md)  
-  
--   [Unia](../cpp/unions.md)  
-  
--   [__multiple_inheritance](../cpp/inheritance-keywords.md)  
-  
--   [__single_inheritance](../cpp/inheritance-keywords.md)  
-  
--   [__virtual_inheritance](../cpp/inheritance-keywords.md)  
-  
- Aby uzyskać informacje dotyczące zarządzanych klas i struktur, zobacz [klasy i struktury](../windows/classes-and-structs-cpp-component-extensions.md)  
-  
-## <a name="example"></a>Przykład  
-  
-```cpp 
-// class.cpp  
-// compile with: /EHsc  
-// Example of the class keyword  
-// Exhibits polymorphism/virtual functions.  
-  
-#include <iostream>  
-#include <string>  
-#define TRUE = 1  
-using namespace std;  
-  
-class dog  
-{  
-public:  
-   dog()  
-   {  
-      _legs = 4;  
-      _bark = true;  
-   }  
-  
-   void setDogSize(string dogSize)  
-   {  
-      _dogSize = dogSize;  
-   }  
-   virtual void setEars(string type)      // virtual function  
-   {  
-      _earType = type;  
-   }  
-  
-private:  
-   string _dogSize, _earType;  
-   int _legs;  
-   bool _bark;  
-  
-};  
-  
-class breed : public dog  
-{  
-public:  
-   breed( string color, string size)  
-   {  
-      _color = color;  
-      setDogSize(size);  
-   }  
-  
-   string getColor()  
-   {  
-      return _color;  
-   }  
-  
-   // virtual function redefined  
-   void setEars(string length, string type)  
-   {  
-      _earLength = length;  
-      _earType = type;  
-   }  
-  
-protected:  
-   string _color, _earLength, _earType;  
-};  
-  
-int main()  
-{  
-   dog mongrel;  
-   breed labrador("yellow", "large");  
-   mongrel.setEars("pointy");  
-   labrador.setEars("long", "floppy");  
-   cout << "Cody is a " << labrador.getColor() << " labrador" << endl;  
-}  
-```  
-  
-## <a name="see-also"></a>Zobacz także  
- [Keywords](../cpp/keywords-cpp.md)   
- [Klasy i struktury](../cpp/classes-and-structs-cpp.md)
+
+**Klasy** — słowo kluczowe deklaruje typu klasy lub definiuje obiekt typu klasy.
+
+## <a name="syntax"></a>Składnia
+
+```
+[template-spec]
+class [ms-decl-spec] [tag [: base-list ]]
+{
+   member-list
+} [declarators];
+[ class ] tag declarators;
+```
+
+#### <a name="parameters"></a>Parametry
+
+*specyfikacje szablonu*<br/>
+Opcjonalne specyfikacje szablonu. Aby uzyskać więcej informacji, zobacz [szablony](templates-cpp.md).
+
+*class*<br/>
+**Klasy** — słowo kluczowe.
+
+*MS-decl-spec*<br/>
+Opcjonalna specyfikacja klasy magazynowania. Aby uzyskać więcej informacji, zobacz [__declspec](../cpp/declspec.md) — słowo kluczowe.
+
+*Tag*<br/>
+Nazwa typu nadana tej klasy. Znacznik staje się słowem zastrzeżonym w zakresie klasy. Znacznik jest opcjonalny. W przypadku pominięcia jest zdefiniowana klasa anonimowa. Aby uzyskać więcej informacji, zobacz [anonimowe typy klas](../cpp/anonymous-class-types.md).
+
+*Lista podstawowego*<br/>
+Opcjonalna lista klas lub struktur tej klasy, z której pochodzą składowe. Zobacz [klasy podstawowej](../cpp/base-classes.md) Aby uzyskać więcej informacji. Każda podstawowa nazwy klasy lub struktury może być poprzedzona przez specyfikator dostępu ([publicznych](../cpp/public-cpp.md), [prywatnej](../cpp/private-cpp.md), [chronione](../cpp/protected-cpp.md)) i [wirtualnego](../cpp/virtual-cpp.md) słowo kluczowe. Zobacz tabelę dostępu do elementu członkowskiego w [kontrolowanie dostępu do składowych klasy](member-access-control-cpp.md) Aby uzyskać więcej informacji.
+
+*Lista elementów członkowskich*<br/>
+Lista składowych klasy. Zapoznaj się [omówienie składowej klasy](../cpp/class-member-overview.md) Aby uzyskać więcej informacji.
+
+*deklaratory*<br/>
+Lista deklaratora określająca nazwy co najmniej jedno wystąpienie typu klasy. Deklaratory mogą zawierać listy inicjatorów, jeśli wszystkie składowe danych klasy są **publicznych**. Jest to bardziej powszechne w strukturach, w których elementy członkowskie danych są **publicznych** domyślnie niż w klasach. Zobacz [Przegląd Deklaratorów](../cpp/overview-of-declarators.md) Aby uzyskać więcej informacji.
+
+## <a name="remarks"></a>Uwagi
+
+Aby uzyskać więcej informacji na temat klas ogólnie rzecz biorąc, można skorzystać z jednego z następujących tematów:
+
+- [struct](../cpp/struct-cpp.md)
+
+- [Unia](../cpp/unions.md)
+
+- [__multiple_inheritance](../cpp/inheritance-keywords.md)
+
+- [__single_inheritance](../cpp/inheritance-keywords.md)
+
+- [__virtual_inheritance](../cpp/inheritance-keywords.md)
+
+Aby uzyskać informacje dotyczące zarządzanych klas i struktur, zobacz [klasy i struktury](../windows/classes-and-structs-cpp-component-extensions.md)
+
+## <a name="example"></a>Przykład
+
+```cpp
+// class.cpp
+// compile with: /EHsc
+// Example of the class keyword
+// Exhibits polymorphism/virtual functions.
+
+#include <iostream>
+#include <string>
+#define TRUE = 1
+using namespace std;
+
+class dog
+{
+public:
+   dog()
+   {
+      _legs = 4;
+      _bark = true;
+   }
+
+   void setDogSize(string dogSize)
+   {
+      _dogSize = dogSize;
+   }
+   virtual void setEars(string type)      // virtual function
+   {
+      _earType = type;
+   }
+
+private:
+   string _dogSize, _earType;
+   int _legs;
+   bool _bark;
+
+};
+
+class breed : public dog
+{
+public:
+   breed( string color, string size)
+   {
+      _color = color;
+      setDogSize(size);
+   }
+
+   string getColor()
+   {
+      return _color;
+   }
+
+   // virtual function redefined
+   void setEars(string length, string type)
+   {
+      _earLength = length;
+      _earType = type;
+   }
+
+protected:
+   string _color, _earLength, _earType;
+};
+
+int main()
+{
+   dog mongrel;
+   breed labrador("yellow", "large");
+   mongrel.setEars("pointy");
+   labrador.setEars("long", "floppy");
+   cout << "Cody is a " << labrador.getColor() << " labrador" << endl;
+}
+```
+
+## <a name="see-also"></a>Zobacz także
+
+[Słowa kluczowe](../cpp/keywords-cpp.md)<br/>
+[Klasy i struktury](../cpp/classes-and-structs-cpp.md)

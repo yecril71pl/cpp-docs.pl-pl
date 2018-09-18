@@ -1,5 +1,5 @@
 ---
-title: C3179 błąd kompilatora | Dokumentacja firmy Microsoft
+title: Błąd kompilatora C3179 | Dokumentacja firmy Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,26 +16,27 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b6234eceb35bda37a3616113d3010fe09cb669c8
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: ed09f1557c2a86d144d5ff4ee476bd8c3fa0f650
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33246033"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46116584"
 ---
-# <a name="compiler-error-c3179"></a>C3179 błąd kompilatora
-zarządzane bez nazwy lub typu WinRT nie jest dozwolona.  
-  
-Wszystkie środowiska CLR i WinRT klas i struktur muszą mieć nazwy.  
-  
-Poniższy przykład generuje C3179 i pokazuje, jak rozwiązywanie problemu:  
-  
-```  
-// C3179a.cpp  
-// compile with: /clr /c  
-typedef value struct { // C3179  
-// try the following line instead  
-// typedef value struct MyStruct {  
-   int i;  
-} V;  
-```  
+# <a name="compiler-error-c3179"></a>Błąd kompilatora C3179
+
+zarządzane bez nazwy lub typu WinRT nie jest dozwolony.
+
+Wszystkie środowiska CLR i WinRT klas i struktur, muszą mieć nazwy.
+
+Poniższy przykład generuje C3179 i pokazuje, jak go naprawić:
+
+```
+// C3179a.cpp
+// compile with: /clr /c
+typedef value struct { // C3179
+// try the following line instead
+// typedef value struct MyStruct {
+   int i;
+} V;
+```

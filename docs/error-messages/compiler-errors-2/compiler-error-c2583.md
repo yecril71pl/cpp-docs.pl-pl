@@ -1,5 +1,5 @@
 ---
-title: C2583 błąd kompilatora | Dokumentacja firmy Microsoft
+title: Błąd kompilatora C2583 | Dokumentacja firmy Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,29 +16,30 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ae9ef120d3dba9bc3c337d02aac302fce85f3905
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 3aad4a818d0c8869681f9a2f4c4ace0edb63cd02
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33228317"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46117533"
 ---
-# <a name="compiler-error-c2583"></a>C2583 błąd kompilatora
-"identyfikator": "const/volatile" wskaźnik "this" jest niedozwolony dla konstruktorów/destruktorów  
-  
- Konstruktor ani destruktor jest zadeklarowany jako `const` lub `volatile`. Jest to niedozwolone.  
-  
- Poniższy przykład generuje C2583:  
-  
-```  
-// C2583.cpp  
-// compile with: /c  
-class A {  
-public:  
-   int i;  
-   A() const;   // C2583  
-  
-   // try the following line instead  
-   // A();  
-};  
+# <a name="compiler-error-c2583"></a>Błąd kompilatora C2583
+
+'Identyfikator': "const/volatile" wskaźnik "this" jest niedozwolony dla konstruktorów/destruktorów
+
+Konstruktor lub destruktor jest zadeklarowany jako `const` lub `volatile`. Jest to niedozwolone.
+
+Poniższy przykład spowoduje wygenerowanie C2583:
+
+```
+// C2583.cpp
+// compile with: /c
+class A {
+public:
+   int i;
+   A() const;   // C2583
+
+   // try the following line instead
+   // A();
+};
 ```

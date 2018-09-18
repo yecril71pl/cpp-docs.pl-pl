@@ -1,5 +1,5 @@
 ---
-title: Kompilatora (poziom 4) ostrzeżenie C4670 | Dokumentacja firmy Microsoft
+title: Kompilator ostrzeżenie (poziom 4) C4670 | Dokumentacja firmy Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,39 +16,40 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9bec30fff715984073aa3061979fff11923f0bf8
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 4f1f406442e763175da1bb0220925a1a43d8825d
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33315363"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46118261"
 ---
-# <a name="compiler-warning-level-4-c4670"></a>Kompilator C4670 ostrzegawcze (poziom 4)
-'Identyfikator': Ta klasa podstawowa jest niedostępna  
-  
- Określona klasa podstawowa obiektu zostanie wygenerowany **spróbuj** bloku nie jest dostępny. Nie można utworzyć wystąpienia obiektu, jeśli generowany jest. Sprawdź, czy klasa podstawowa jest dziedziczona ze specyfikatorem dostępu.  
-  
- Poniższy przykład generuje C4670:  
-  
-```  
-// C4670.cpp  
-// compile with: /EHsc /W4  
-class A  
-{  
-};  
-  
-class B : /* public */ A  
-{  
-} b;   // inherits A with private access by default  
-  
-int main()  
-{  
-    try  
-    {  
-       throw b;   // C4670  
-    }  
-    catch( B )  
-    {  
-    }  
-}  
+# <a name="compiler-warning-level-4-c4670"></a>Kompilator ostrzeżenie (poziom 4) C4670
+
+'Identyfikator': Ta klasa bazowa jest niedostępna
+
+Określonej klasy bazowej obiektu, aby były generowane w **spróbuj** blok nie jest dostępny. Nie można utworzyć wystąpienia obiektu, jeśli zostanie on zgłoszony. Sprawdź, czy klasa bazowa jest dziedziczony ze specyfikatorem prawidłowy dostęp.
+
+Poniższy przykład spowoduje wygenerowanie C4670:
+
+```
+// C4670.cpp
+// compile with: /EHsc /W4
+class A
+{
+};
+
+class B : /* public */ A
+{
+} b;   // inherits A with private access by default
+
+int main()
+{
+    try
+    {
+       throw b;   // C4670
+    }
+    catch( B )
+    {
+    }
+}
 ```

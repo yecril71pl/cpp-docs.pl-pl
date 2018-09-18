@@ -14,12 +14,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: fe13dbe61b0a50226f82ae8fb09ab46c922309d1
-ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
+ms.openlocfilehash: 1b9479957fdfb4d6b92ec531941808940765a9e5
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/01/2018
-ms.locfileid: "39406939"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46116727"
 ---
 # <a name="constexpr-c"></a>constexpr (C++)
 
@@ -40,16 +40,16 @@ constexpr ctor (params);
 
 ## <a name="parameters"></a>Parametry
 
- *params*  
+*params*<br/>
 Jeden lub więcej parametrów, które musi być typem literału, a sam musi być wyrażeniem stałym.
 
 ## <a name="return-value"></a>Wartość zwracana
 
- Zmienna constexpr lub funkcja musi zwracać [literalne](trivial-standard-layout-and-pod-types.md#literal_types).
+Zmienna constexpr lub funkcja musi zwracać [literalne](trivial-standard-layout-and-pod-types.md#literal_types).
 
 ## <a name="constexpr-variables"></a>zmienne constexpr
 
- Główną różnicą między const i zmienne constexpr jest, że Inicjalizacja zmiennych const może zostać odroczony do czasu wykonywania, natomiast zmienna constexpr musi zostać zainicjowany w czasie kompilacji.  Wszystkie zmienne wyrażeń constexpr są const.
+Główną różnicą między const i zmienne constexpr jest, że Inicjalizacja zmiennych const może zostać odroczony do czasu wykonywania, natomiast zmienna constexpr musi zostać zainicjowany w czasie kompilacji.  Wszystkie zmienne wyrażeń constexpr są const.
 
 - Zmienna może być zadeklarowany z **constexpr**, jeśli jest typem literału, a został zainicjowany. Jeśli inicjalizacja jest wykonywana przez konstruktora, Konstruktor musi być zadeklarowany jako **constexpr**.
 
@@ -91,7 +91,7 @@ Do funkcji constexpr stosowane następujące reguły:
 Następujące reguły mają zastosowanie do **constexpr** funkcji w programie Visual Studio 2017 i nowszych:
 
 - Może on zawierać **Jeśli** i **Przełącz** instrukcji i wszystkie instrukcje pętli, tym **dla**, na podstawie zakresu, **podczas**i **czy — gdy**.
- 
+
 - Może ona zawierać deklaracje zmiennych lokalnych, ale zmienna musi zostać zainicjowany, musi być typem literału i nie może być statyczne lub lokalnej wątku. Zmienna zadeklarowana lokalnie nie musi być wartością stałą i może mutować.
 
 - Funkcja constexpr niestatycznego elementu członkowskiego nie musi być niejawnie const.
@@ -115,7 +115,7 @@ constexpr float exp(float x, int n)
 
 ## <a name="example"></a>Przykład
 
- W poniższym przykładzie przedstawiono **constexpr** zmienne, funkcje i typ zdefiniowany przez użytkownika. Należy pamiętać, że w ostatnią instrukcją w funkcji main(), **constexpr** funkcja elementu członkowskiego GetValue() to wywołanie czasu wykonywania, ponieważ wartość nie jest wymagana, żeby Cię widziano w czasie kompilacji.
+W poniższym przykładzie przedstawiono **constexpr** zmienne, funkcje i typ zdefiniowany przez użytkownika. Należy pamiętać, że w ostatnią instrukcją w funkcji main(), **constexpr** funkcja elementu członkowskiego GetValue() to wywołanie czasu wykonywania, ponieważ wartość nie jest wymagana, żeby Cię widziano w czasie kompilacji.
 
 ```cpp
 #include <iostream>
@@ -189,5 +189,6 @@ int main()
 Visual Studio 2015
 
 ## <a name="see-also"></a>Zobacz także
- [Deklaracje i definicje](../cpp/declarations-and-definitions-cpp.md)  
- [const](../cpp/const-cpp.md)
+
+[Deklaracje i definicje](../cpp/declarations-and-definitions-cpp.md)<br/>
+[const](../cpp/const-cpp.md)

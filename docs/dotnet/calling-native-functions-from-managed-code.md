@@ -20,12 +20,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: 3ef47e3aeb8cfb18dd1eb6497c593d8cec26081b
-ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
+ms.openlocfilehash: 002093a6a9044c65e5780035ad6c19db35d6b648
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43678453"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46116753"
 ---
 # <a name="calling-native-functions-from-managed-code"></a>Wywoływanie funkcji natywnych z kodu zarządzanego
 Środowisko uruchomieniowe języka wspólnego zapewnia platformę wywołania usług lub jako PInvoke, które umożliwia zarządzanemu kodowi można wywoływać funkcje w stylu języka C z macierzystych bibliotek łączonych dynamicznie (dll). Takie samo szeregowanie danych jest używany jak dla współdziałania COM ze środowiskiem uruchomieniowym i dla "It Just Works", lub mechanizmu IJW.  
@@ -105,7 +105,7 @@ int main() {
   
  W tym przykładzie program Visual C++ współdziała z funkcją MessageBox, która jest częścią interfejsu Win32 API.  
   
-```  
+```cpp  
 // platform_invocation_services_4.cpp  
 // compile with: /clr /c  
 using namespace System;  
@@ -132,16 +132,17 @@ int main() {
   
  Jeśli używamy funkcji PInvoke w aplikacji Visual C++, możemy napisać coś podobnego do następującego:  
   
- `[DllImport("mylib")]`  
-  
- `extern "C" String * MakeSpecial([MarshalAs(UnmanagedType::LPStr)] String ^);`  
+```cpp
+[DllImport("mylib")]
+extern "C" String * MakeSpecial([MarshalAs(UnmanagedType::LPStr)] String ^);
+```
   
  Trudności w tym miejscu jest, że firma Microsoft nie można usunąć pamięci dla niezarządzanego ciągu zwracanego przez MakeSpecial. Inne funkcje wywoływane za pośrednictwem funkcji PInvoke zwracają wskaźnik do wewnętrznego buforu, którego nie będzie musiał zostać cofnięta przez użytkownika. W tym przypadku korzystanie z funkcji IJW jest oczywistym wyborem.  
   
 ## <a name="limitations-of-pinvoke"></a>Ograniczenia funkcji PInvoke  
  Nie można zwrócić dokładnie tego samego wskaźnika z funkcji natywnej, która została przyjęta jako parametr. Jeśli funkcja natywna zwraca wskaźnik, który został przekazany do niego przez PInvoke, może nastąpić uszkodzenie pamięci i wyjątków.  
   
-```  
+```cpp  
 __declspec(dllexport)  
 char* fstringA(char* param) {  
    return param;  

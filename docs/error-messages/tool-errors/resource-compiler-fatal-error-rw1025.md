@@ -16,20 +16,21 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0ba216e63cb0cae92b4541800493a2fb6195553a
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 2bf7bdeed320c004ffb75fa1d25d9b89147b0c13
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33320017"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46117403"
 ---
 # <a name="resource-compiler-fatal-error-rw1025"></a>Błąd krytyczny kompilatora zasobów RW1025
-Za mało pamięci sterty daleko  
-  
- Sprawdź, czy rezydentny oprogramowania, które mogą być zajmują zbyt dużej ilości miejsca. Aby dowiedzieć się, ile pamięci masz, należy użyć programu CHKDSK.  
-  
- W przypadku tworzenia pliku zasobu dużych podzielone dwa pliki skryptów zasobów. Po utworzeniu dwa pliki .res, aby połączyć je za pomocą wiersza polecenia systemu MS-DOS:  
-  
-```  
-copy first.res /b + second.res /b full.res  
+
+Za mało pamięci sterty daleko
+
+Sprawdź, czy oprogramowanie rezydentnego może trwać zbyt dużej ilości miejsca. Aby dowiedzieć się, jak ilość pamięci, masz, należy użyć programu CHKDSK.
+
+Jeśli tworzysz duży plik zasobów, należy podzielić na dwa pliki skryptów zasobów. Po utworzeniu dwa pliki .res, należy użyć wiersza polecenia systemu MS-DOS do dołączenia do nich razem:
+
+```
+copy first.res /b + second.res /b full.res
 ```

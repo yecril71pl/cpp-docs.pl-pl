@@ -1,5 +1,5 @@
 ---
-title: Kompilatora (poziom 2) ostrzeżenie C4356 | Dokumentacja firmy Microsoft
+title: Kompilator ostrzeżenie (poziom 2) C4356 | Dokumentacja firmy Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,51 +16,52 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 154fb1580bef8a28e66f918e9a34aec44718d10d
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 463ecd1bdd41c07baab0cf90c978411e51b4be04
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33291599"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46118729"
 ---
-# <a name="compiler-warning-level-2-c4356"></a>Kompilator C4356 ostrzegawcze (poziom 2)
-"członek": nie można zainicjować statycznego elementu członkowskiego danych za pośrednictwem pochodnej klasy  
-  
- Inicjowanie elementu członkowskiego danych statycznych został niewłaściwie sformatowany. Kompilator akceptowane inicjowania. Aby uniknąć tego ostrzeżenia, należy zainicjować elementu członkowskiego za pomocą klasy podstawowej.  
-  
- Użyj [ostrzeżenie](../../preprocessor/warning.md) pragma, aby pominąć to ostrzeżenie.  
-  
- Poniższy przykład generuje C4356:  
-  
-```  
-// C4356.cpp  
-// compile with: /W2 /EHsc  
-#include <iostream>  
-  
-template <class T>  
-class C {  
-   static int n;  
-};  
-  
-class D : C<int> {};  
-  
-int D::n = 0; // C4356  
-// try the following line instead  
-// int C<int>::n = 0;  
-  
-class A {  
-public:  
-   static int n;  
-};  
-  
-class B : public A {};  
-  
-int B::n = 10;   // C4356  
-// try the following line instead  
-// int A::n = 99;  
-  
-int main() {  
-   using namespace std;  
-   cout << B::n << endl;  
-}  
+# <a name="compiler-warning-level-2-c4356"></a>Kompilator ostrzeżenie (poziom 2) C4356
+
+'składowa': nie można zainicjować statycznej składowej danych za pośrednictwem pochodnej klasy
+
+Inicjowanie statyczna składowa danych został niewłaściwie sformatowany. Kompilator akceptowane inicjowania. Aby uniknąć ostrzeżenia, należy zainicjować elementu członkowskiego za pośrednictwem klasy bazowej.
+
+Użyj [ostrzeżenie](../../preprocessor/warning.md) pragma, aby pominąć to ostrzeżenie.
+
+Poniższy przykład spowoduje wygenerowanie C4356:
+
+```
+// C4356.cpp
+// compile with: /W2 /EHsc
+#include <iostream>
+
+template <class T>
+class C {
+   static int n;
+};
+
+class D : C<int> {};
+
+int D::n = 0; // C4356
+// try the following line instead
+// int C<int>::n = 0;
+
+class A {
+public:
+   static int n;
+};
+
+class B : public A {};
+
+int B::n = 10;   // C4356
+// try the following line instead
+// int A::n = 99;
+
+int main() {
+   using namespace std;
+   cout << B::n << endl;
+}
 ```

@@ -32,12 +32,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: aa212a6a58d1de417035f002b2caf3e206dabf1c
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: b9b19888f6eae3efe7baf4429ec1174432f99a10
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43757588"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46118560"
 ---
 # <a name="catlexemodulet-class"></a>Klasa CAtlExeModuleT
 
@@ -46,13 +46,13 @@ Ta klasa reprezentuje modułu dla aplikacji.
 ## <a name="syntax"></a>Składnia
 
 ```
-template <class T>  
+template <class T>
 class ATL_NO_VTABLE CAtlExeModuleT : public CAtlModuleT<T>
 ```
 
 #### <a name="parameters"></a>Parametry
 
-*T*  
+*T*<br/>
 Klasa jest pochodną `CAtlExeModuleT`.
 
 ## <a name="members"></a>Elementy członkowskie
@@ -100,7 +100,7 @@ Aby uzyskać więcej informacji na temat modułów ATL, zobacz [klasy modułów 
 
 ## <a name="inheritance-hierarchy"></a>Hierarchia dziedziczenia
 
-[_ATL_MODULE](atl-typedefs.md#_atl_module)  
+[_ATL_MODULE](atl-typedefs.md#_atl_module)
 
 [CAtlModule](../../atl/reference/catlmodule-class.md)
 
@@ -200,10 +200,10 @@ bool ParseCommandLine(LPCTSTR lpCmdLine, HRESULT* pnRetCode) throw();
 
 ### <a name="parameters"></a>Parametry
 
-*lpCmdLine*  
+*lpCmdLine*<br/>
 Wiersza polecenia przekazywane do aplikacji.
 
-*pnRetCode*  
+*pnRetCode*<br/>
 Wartość HRESULT odpowiadający rejestracji (jeśli miało to miejsce).
 
 ### <a name="return-value"></a>Wartość zwracana
@@ -240,7 +240,7 @@ HRESULT PreMessageLoop(int nShowCmd) throw();
 
 ### <a name="parameters"></a>Parametry
 
-*nShowCmd*  
+*nShowCmd*<br/>
 Wartość przekazana jako *nShowCmd* parametru w WinMain.
 
 ### <a name="return-value"></a>Wartość zwracana
@@ -261,10 +261,10 @@ HRESULT RegisterClassObjects(DWORD dwClsContext, DWORD dwFlags) throw();
 
 ### <a name="parameters"></a>Parametry
 
-*dwClsContext*  
+*dwClsContext*<br/>
 Określa kontekst, w którym ma być uruchamiane obiektu klasy. Możliwe wartości to CLSCTX_INPROC_SERVER, CLSCTX_INPROC_HANDLER lub CLSCTX_LOCAL_SERVER.
 
-*Flagidw*  
+*Flagidw*<br/>
 Określa typy połączeń do obiektu klasy. Możliwe wartości to REGCLS_SINGLEUSE, REGCLS_MULTIPLEUSE lub REGCLS_MULTI_SEPARATE.
 
 ### <a name="return-value"></a>Wartość zwracana
@@ -293,7 +293,7 @@ HRESULT Run(int nShowCmd = SW_HIDE) throw();
 
 ### <a name="parameters"></a>Parametry
 
-*nShowCmd*  
+*nShowCmd*<br/>
 Określa, jak ma być wyświetlana okna. Ten parametr może być jedną z wartości omówione w [WinMain](https://msdn.microsoft.com/library/windows/desktop/ms633559) sekcji. Wartość domyślna to SW_HIDE.
 
 ### <a name="return-value"></a>Wartość zwracana
@@ -350,7 +350,7 @@ int WinMain(int nShowCmd) throw();
 
 ### <a name="parameters"></a>Parametry
 
-*nShowCmd*  
+*nShowCmd*<br/>
 Określa, jak ma być wyświetlana okna. Ten parametr może być jedną z wartości omówione w [WinMain](https://msdn.microsoft.com/library/windows/desktop/ms633559) sekcji.
 
 ### <a name="return-value"></a>Wartość zwracana
@@ -363,7 +363,7 @@ Ta metoda może zostać zastąpiona. Jeśli zastępują [CAtlExeModuleT::PreMess
 
 ## <a name="see-also"></a>Zobacz też
 
-[Przykładowe ATLDuck](../../visual-cpp-samples.md)   
-[Klasa CAtlModuleT](../../atl/reference/catlmodulet-class.md)   
-[Klasa CAtlDllModuleT](../../atl/reference/catldllmodulet-class.md)   
+[Przykładowe ATLDuck](../../visual-cpp-samples.md)<br/>
+[Klasa CAtlModuleT](../../atl/reference/catlmodulet-class.md)<br/>
+[Klasa CAtlDllModuleT](../../atl/reference/catldllmodulet-class.md)<br/>
 [Klasa — Przegląd](../../atl/atl-class-overview.md)

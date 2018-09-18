@@ -1,5 +1,5 @@
 ---
-title: C2383 błąd kompilatora | Dokumentacja firmy Microsoft
+title: Błąd kompilatora C2383 | Dokumentacja firmy Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,26 +16,28 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 81624ccd7f4857cb2f7d8474d393a9743ab1a2b3
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 9c529c22636f112291fa53b852899cad78dac589
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33196496"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46113230"
 ---
-# <a name="compiler-error-c2383"></a>C2383 błąd kompilatora
-"*symbol*": argumenty domyślne są niedozwolone w tym symbolu  
-  
- Kompilator języka C++ nie zezwala na wskaźniki do funkcji argumenty domyślne.  
-  
- Ten kod został zaakceptowany przez kompilator języka Visual C++ w wersji sprzed programu Visual Studio 2005, ale teraz zwraca błąd. Kod, który działa we wszystkich wersjach programu Visual C++ nie należy przypisywać wartość domyślną do argumentu wskaźnika do funkcji.  
-  
-## <a name="example"></a>Przykład  
- W poniższym przykładzie generuje C2383 i przedstawiono możliwe rozwiązania:  
-  
-```cpp  
-// C2383.cpp  
-// compile with: /c   
-void (*pf)(int = 0);   // C2383  
-void (*pf)(int);   // OK  
+# <a name="compiler-error-c2383"></a>Błąd kompilatora C2383
+
+"*symbol*": argumenty domyślne nie są dozwolone w tym symbolu
+
+Kompilator języka C++ nie zezwala na wskaźniki do funkcji argumenty domyślne.
+
+Ten kod został zaakceptowany przez kompilator języka Visual C++ w wersjach starszych niż program Visual Studio 2005, ale teraz powoduje błąd. Kod, który działa we wszystkich wersjach programu Visual C++ nie należy przypisywać wartość domyślna argumentu wskaźnika do funkcji.
+
+## <a name="example"></a>Przykład
+
+Poniższy przykład generuje C2383 i przedstawiono możliwe rozwiązania:
+
+```cpp
+// C2383.cpp
+// compile with: /c
+void (*pf)(int = 0);   // C2383
+void (*pf)(int);   // OK
 ```

@@ -17,15 +17,17 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: fed38adbad5289e2693c10f2852247d3ec5f3951
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 884b96ac7f7cf35cd4e6bf19c4b1e9424299a87f
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32386855"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46118419"
 ---
 # <a name="storage-of-arrays"></a>Magazynowanie tablic
-Skojarzony z tablicą magazynu jest magazynu wymaganego dla wszystkich swoich elementów. Elementy tablicy są przechowywane w lokalizacji pamięci ciągłej i zwiększa, od pierwszego elementu ostatni.  
-  
-## <a name="see-also"></a>Zobacz też  
- [Deklaracje tablicy](../c-language/array-declarations.md)
+
+Magazyn skojarzony z typem tablicy jest magazynu wymaganego dla wszystkich swoich elementów. Elementy tablicy są przechowywane w lokalizacjach ciągłych i zwiększenie pamięci, od pierwszego elementu ostatni.
+
+## <a name="see-also"></a>Zobacz też
+
+[Deklaracje tablicy](../c-language/array-declarations.md)

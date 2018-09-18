@@ -16,16 +16,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f8c5fda3474e4c1b8bab6dfdfcdcfef6f70f9f33
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 11b747339292616e555f52c2f8c85edeeb622072
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33324730"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46118963"
 ---
 # <a name="nmake-fatal-error-u1023"></a>Błąd krytyczny NMAKE U1023
-Błąd składni w wyrażeniu  
-  
- Wyrażenie jest nieprawidłowe.  
-  
- Sprawdź dozwolonych operatorów i pierwszeństwo operatorów.
+
+Błąd składni w wyrażeniu
+
+Wyrażenie jest nieprawidłowe.
+
+Sprawdź dozwolonych operatorów i pierwszeństwo operatorów.

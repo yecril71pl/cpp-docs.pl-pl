@@ -19,12 +19,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 476edd2a199ca21a9067a72cac82a6ac7b608112
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 269fd977bf57f1b2daff4ec5550b1d2da97b58d6
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43757381"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46114166"
 ---
 # <a name="ccomclassfactoryautothread-class"></a>Klasa CComClassFactoryAutoThread
 
@@ -85,13 +85,13 @@ STDMETHODIMP CreateInstance(
 
 ### <a name="parameters"></a>Parametry
 
-*pUnkOuter*  
+*pUnkOuter*<br/>
 [in] Jeśli obiekt jest tworzony jako część agregacji, następnie *pUnkOuter* musi być zewnętrzny nieznany. W przeciwnym razie *pUnkOuter* musi mieć wartość NULL.
 
-*Parametr riid*  
+*Parametr riid*<br/>
 [in] Identyfikator IID żądanego interfejsu. Jeśli *pUnkOuter* jest różna od NULL, *riid* musi być `IID_IUnknown`.
 
-*ppvObj*  
+*ppvObj*<br/>
 [out] Wskaźnik do wskaźnika interfejsu identyfikowane przez *riid*. Jeśli obiekt nie obsługuje ten interfejs *ppvObj* ma wartość NULL.
 
 ### <a name="return-value"></a>Wartość zwracana
@@ -112,7 +112,7 @@ STDMETHODIMP LockServer(BOOL fLock);
 
 ### <a name="parameters"></a>Parametry
 
-*Stada*  
+*Stada*<br/>
 [in] W przypadku opcji TRUE jest zwiększany liczbę blokad; w przeciwnym razie liczbę blokad zostanie zmniejszona.
 
 ### <a name="return-value"></a>Wartość zwracana
@@ -127,9 +127,9 @@ Wywoływanie `LockServer` umożliwia klientowi do zatrzymania się na fabrykę k
 
 ## <a name="see-also"></a>Zobacz też
 
-[IClassFactory](/windows/desktop/api/unknwnbase/nn-unknwnbase-iclassfactory)   
-[Klasa CComClassFactory2](../../atl/reference/ccomclassfactory2-class.md)   
-[Klasa CComClassFactorySingleton](../../atl/reference/ccomclassfactorysingleton-class.md)   
-[Klasa CComObjectRootEx](../../atl/reference/ccomobjectrootex-class.md)   
-[CComGlobalsThreadModel](atl-typedefs.md#ccomglobalsthreadmodel)   
+[IClassFactory](/windows/desktop/api/unknwnbase/nn-unknwnbase-iclassfactory)<br/>
+[Klasa CComClassFactory2](../../atl/reference/ccomclassfactory2-class.md)<br/>
+[Klasa CComClassFactorySingleton](../../atl/reference/ccomclassfactorysingleton-class.md)<br/>
+[Klasa CComObjectRootEx](../../atl/reference/ccomobjectrootex-class.md)<br/>
+[CComGlobalsThreadModel](atl-typedefs.md#ccomglobalsthreadmodel)<br/>
 [Klasa — Przegląd](../../atl/atl-class-overview.md)

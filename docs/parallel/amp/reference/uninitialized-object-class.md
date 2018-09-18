@@ -18,15 +18,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9b9b10af535b0739d480326d616ee7587318bb5a
-ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
+ms.openlocfilehash: 821f3c25d195a2c92ac04fdf5f9e5a59b493c257
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33696178"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46113841"
 ---
 # <a name="uninitializedobject-class"></a>uninitialized_object — Klasa
-Wyjątek zgłaszany, gdy jest używany niezainicjowanego obiektu.  
+Wyjątek, który jest zgłaszany, gdy używany jest obiekt niezainicjowany.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -54,9 +54,9 @@ class uninitialized_object : public runtime_exception;
  **Nagłówek:** amprt.h  
   
  **Namespace:** współbieżności  
-## <a name="uninitialized_object__ctor"></a> unsupported_feature — 
+## <a name="uninitialized_object__ctor"></a> unsupported_feature 
 
-Tworzy nowe wystąpienie klasy unsupported_feature — wyjątek.  
+Tworzy nowe wystąpienie nieobsługiwanego wyjątku unsupported_feature.  
   
 ### <a name="syntax"></a>Składnia  
   
@@ -68,8 +68,8 @@ unsupported_feature() throw();
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `_Message`  
- Opis błędu.  
+*_Message*<br/>
+Opis błędu.  
   
 ### <a name="return-value"></a>Wartość zwracana  
  `unsupported_feature` Obiektu. 

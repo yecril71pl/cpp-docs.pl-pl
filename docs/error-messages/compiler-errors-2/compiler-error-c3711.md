@@ -1,5 +1,5 @@
 ---
-title: C3711 błąd kompilatora | Dokumentacja firmy Microsoft
+title: Błąd kompilatora C3711 | Dokumentacja firmy Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,49 +16,50 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 682748a9db6ab4c74ed4b71b8548aba54fc1649b
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 95b788e9ecb2aa8bd1bcf5865cf9ded0c925bf49
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33266503"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46116742"
 ---
-# <a name="compiler-error-c3711"></a>C3711 błąd kompilatora
-"metoda": metoda źródła zdarzeń niezarządzanych musi zwracać typ void lub typ całkowity  
-  
- Metody są zdefiniowane w źródle zdarzeń, który nie został zwrócony typ void lub typ całkowity. Aby naprawić ten błąd, należy zdarzeń i program obsługi zdarzeń ma typ zwracany `void` lub typem całkowitym, takich jak `int` lub `long`.  
-  
- Poniższy przykład generuje C3711:  
-  
-```  
-// C3711.cpp  
-#include <atlbase.h>  
-#include <atlcom.h>  
-#include <atlctl.h>  
-  
-[event_source(native)]  
-class CEventSrc {  
-public:  
-   __event float event1();   // C3711  
-   // try the following line instead  
-   // __event int event1();  
-   // also change the handler, below  
-};  
-  
-[event_receiver(native)]  
-class CEventRec {  
-public:  
-   float handler1() {         // change float to int  
-      return 0.0;             // change 0.0 to 0  
-   }  
-   void HookEvents(CEventSrc* pSrc) {  
-      __hook(CEventSrc::event1, pSrc, CEventRec::handler1);  
-   }  
-   void UnhookEvents(CEventSrc* pSrc) {  
-      __unhook(CEventSrc::event1, pSrc, CEventRec::handler1);  
-   }  
-};  
-  
-int main() {  
-}  
+# <a name="compiler-error-c3711"></a>Błąd kompilatora C3711
+
+"method": metoda źródłowej niezarządzanej zdarzeń musi zwrócić void lub typ całkowity
+
+Metoda jest zdefiniowana w źródło zdarzenia, który nie został zwrócony typ void lub typ całkowity. Aby naprawić ten błąd, upewnij się zdarzenia, a program obsługi zdarzeń, które mają zwracany typ `void` lub typem całkowitym, takie jak `int` lub `long`.
+
+Poniższy przykład spowoduje wygenerowanie C3711:
+
+```
+// C3711.cpp
+#include <atlbase.h>
+#include <atlcom.h>
+#include <atlctl.h>
+
+[event_source(native)]
+class CEventSrc {
+public:
+   __event float event1();   // C3711
+   // try the following line instead
+   // __event int event1();
+   // also change the handler, below
+};
+
+[event_receiver(native)]
+class CEventRec {
+public:
+   float handler1() {         // change float to int
+      return 0.0;             // change 0.0 to 0
+   }
+   void HookEvents(CEventSrc* pSrc) {
+      __hook(CEventSrc::event1, pSrc, CEventRec::handler1);
+   }
+   void UnhookEvents(CEventSrc* pSrc) {
+      __unhook(CEventSrc::event1, pSrc, CEventRec::handler1);
+   }
+};
+
+int main() {
+}
 ```

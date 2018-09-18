@@ -1,5 +1,5 @@
 ---
-title: Kompilatora (poziom 4) ostrzeżenie C4232 | Dokumentacja firmy Microsoft
+title: Kompilator ostrzeżenie (poziom 4) C4232 | Dokumentacja firmy Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,23 +16,24 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 093f9eeeb27b402b58f3d53ae34952c34dca3779
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 450c764cfc130acf28e3edfb40fcd17c8ac3b664
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33293831"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46118289"
 ---
-# <a name="compiler-warning-level-4-c4232"></a>Kompilator C4232 ostrzegawcze (poziom 4)
-użyto niestandardowego rozszerzenia: 'Identyfikator': adres dllimport "dllimport" nie jest statyczny, tożsamość nie jest gwarantowana  
-  
- W obszarze rozszerzenia Microsoft (/Ze), można nadać wartość Niestatyczne jako adresu funkcji deklarowane z **dllimport** modyfikator. W obszarze Zgodność ANSI ([/Za](../../build/reference/za-ze-disable-language-extensions.md)), powoduje błąd.  
-  
- Poniższy przykład generuje C4232:  
-  
-```  
-// C4232.c  
-// compile with: /W4 /Ze /c  
-int __declspec(dllimport) f();  
-int (*pfunc)() = &f;   // C4232  
+# <a name="compiler-warning-level-4-c4232"></a>Kompilator ostrzeżenie (poziom 4) C4232
+
+użyto niestandardowego rozszerzenia: 'Identyfikator': adres importu dllimport "dllimport" nie jest statyczny, tożsamość nie jest gwarantowana
+
+W obszarze rozszerzenia Microsoft (/Ze), można nadać wartość Niestatyczne jako adresu funkcji deklarowane z **dllimport** modyfikator. W obszarze zgodności ANSI ([/Za](../../build/reference/za-ze-disable-language-extensions.md)), powoduje to błąd.
+
+Poniższy przykład spowoduje wygenerowanie C4232:
+
+```
+// C4232.c
+// compile with: /W4 /Ze /c
+int __declspec(dllimport) f();
+int (*pfunc)() = &f;   // C4232
 ```

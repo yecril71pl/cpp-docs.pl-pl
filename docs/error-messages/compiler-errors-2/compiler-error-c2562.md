@@ -1,5 +1,5 @@
 ---
-title: C2562 błąd kompilatora | Dokumentacja firmy Microsoft
+title: Błąd kompilatora C2562 | Dokumentacja firmy Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,29 +16,30 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ab3fd1a5eae008785a688bcbade674425fc8b2ef
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 69151b71de84c678c09ecafe099344a08d28a8a8
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33231611"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46114231"
 ---
-# <a name="compiler-error-c2562"></a>C2562 błąd kompilatora
-"identyfikator": "void" funkcji zwracającej wartość  
-  
- Funkcja jest zadeklarowany jako `void` , ale zwraca wartość.  
-  
- Przyczyną tego błędu może być prototypu Niepoprawna funkcja.  
-  
- Ten błąd może można naprawić, jeśli w deklaracji funkcji można określić typ zwracany.  
-  
- Poniższy przykład generuje C2562:  
-  
-```  
-// C2562.cpp  
-// compile with: /c  
-void testfunc() {  
-   int i;  
-   return i;   // C2562 delete the return to resolve  
-}  
+# <a name="compiler-error-c2562"></a>Błąd kompilatora C2562
+
+'Identyfikator': funkcja "void" zwraca wartość
+
+Funkcja jest zadeklarowana jako `void` , ale zwraca wartość.
+
+Ten błąd może być spowodowany przez prototypu Niepoprawna funkcja.
+
+Ten błąd może być ustalony, jeśli określony typ zwracany w deklaracji funkcji.
+
+Poniższy przykład spowoduje wygenerowanie C2562:
+
+```
+// C2562.cpp
+// compile with: /c
+void testfunc() {
+   int i;
+   return i;   // C2562 delete the return to resolve
+}
 ```

@@ -1,5 +1,5 @@
 ---
-title: Błąd cxx0040 programu Expression Evaluator | Dokumentacja firmy Microsoft
+title: Błąd ewaluatora wyrażeń CXX0040 | Dokumentacja firmy Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,16 +17,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: bb71bad9fd6f6e1de1bd10b204e720bfee036abc
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 6ff0f0d446094ad7a0f9a96ed73c2c6c5e5af209
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33295434"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46117559"
 ---
 # <a name="expression-evaluator-error-cxx0040"></a>Błąd CXX0040 programu Expression Evaluator
-funkcja wymaga niejawna konwersja  
-  
- Ewaluator wyrażeń C nie obsługuje niejawne konwersje obejmujące wywołania konstruktora.  
-  
- Ten błąd jest taki sam jak CAN0040.
+
+funkcja wymaga, aby niejawnej konwersji
+
+Ewaluator wyrażeń C nie obsługuje konwersji niejawnych obejmujące Konstruktor wywołuje.
+
+Ten błąd jest taka sama jak CAN0040.

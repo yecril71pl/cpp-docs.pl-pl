@@ -44,12 +44,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d9f9554f0ba8daf5a96f0fa2daa32e0e20469bf7
-ms.sourcegitcommit: 6408139d5f5ff8928f056bde93d20eecb3520361
+ms.openlocfilehash: 7b3487b29122b4a5109a6c0de51cd0e459380aa4
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37335408"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46117377"
 ---
 # <a name="cmapwordtoob-class"></a>Klasa CMapWordToOb
 Obsługuje mapy `CObject` wskaźników opartych na kluczach słów 16-bitowych.  
@@ -63,9 +63,7 @@ class CMapWordToOb : public CObject
 ## <a name="members"></a>Elementy członkowskie  
  Funkcje elementów członkowskich `CMapWordToOb` są podobne do funkcji elementów członkowskich klasy [CMapStringToOb](../../mfc/reference/cmapstringtoob-class.md). Ze względu na to podobieństwa można użyć `CMapStringToOb` dokumentacji kątem specyfiki funkcja elementu członkowskiego. Po wyświetleniu `CString` lub **const** wskaźnik do **char** jako parametr funkcji lub wartości zwracanej, podstaw programu WORD.  
   
- `BOOL CMapStringToOb::Lookup( const char* <key>,`  
-  
- `CObject*& <rValue> ) const;`  
+ `BOOL CMapStringToOb::Lookup( const char* <key>,` CObject* & <rValue> ) const; "  
   
  na przykład przekłada się na  
   

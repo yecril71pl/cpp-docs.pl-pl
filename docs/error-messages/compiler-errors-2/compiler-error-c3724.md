@@ -1,5 +1,5 @@
 ---
-title: C3724 błąd kompilatora | Dokumentacja firmy Microsoft
+title: Błąd kompilatora C3724 | Dokumentacja firmy Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,44 +16,45 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f1715e535eeaed8b486be6052ed079eb4ee4e10c
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: c7e633594b1f5467c3a8a664029691423db5bb63
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33264184"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46115986"
 ---
-# <a name="compiler-error-c3724"></a>C3724 błąd kompilatora
-należy #include \<windows.h > Aby użyć wielowątkowości ze zdarzeniami  
-  
- Wymagany jest plik windows.h, jeśli używasz wielowątkowości ze zdarzeniami. Aby naprawić ten błąd, Dodaj `#include <windows.h>` u góry pliku, w którym źródła zdarzeń i zdarzeń zdefiniowanych odbiorcy.  
-  
-```  
-// C3724.cpp  
-// uncomment the following line to resolve  
-// #include <windows.h>  
-  
-[event_source(native), threading(apartment)]  
-class CEventSrc {  
-public:  
-   __event void event1();   // C3724  
-};  
-  
-[event_receiver(native)]  
-class CEventRec {  
-public:  
-   void handler1() {  
-   }  
-  
-   void HookEvents(CEventSrc* pSrc) {  
-      __hook(CEventSrc::event1, pSrc, CEventRec::handler1);  
-   }  
-  
-   void UnhookEvents(CEventSrc* pSrc) {  
-      __unhook(CEventSrc::event1, pSrc, CEventRec::handler1);  
-   }  
-};  
-  
-int main() {  
-}  
+# <a name="compiler-error-c3724"></a>Błąd kompilatora C3724
+
+należy #include \<windows.h > Aby użyć wielowątkowości ze zdarzeniami
+
+Wymagany jest plik windows.h, jeśli używasz wielowątkowości ze zdarzeniami. Aby naprawić ten błąd, należy dodać `#include <windows.h>` u góry pliku w której źródła zdarzeń i zdarzeń są definiowane odbiorników.
+
+```
+// C3724.cpp
+// uncomment the following line to resolve
+// #include <windows.h>
+
+[event_source(native), threading(apartment)]
+class CEventSrc {
+public:
+   __event void event1();   // C3724
+};
+
+[event_receiver(native)]
+class CEventRec {
+public:
+   void handler1() {
+   }
+
+   void HookEvents(CEventSrc* pSrc) {
+      __hook(CEventSrc::event1, pSrc, CEventRec::handler1);
+   }
+
+   void UnhookEvents(CEventSrc* pSrc) {
+      __unhook(CEventSrc::event1, pSrc, CEventRec::handler1);
+   }
+};
+
+int main() {
+}
 ```

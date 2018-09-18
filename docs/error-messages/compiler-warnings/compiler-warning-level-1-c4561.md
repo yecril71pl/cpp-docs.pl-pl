@@ -1,5 +1,5 @@
 ---
-title: Kompilatora (poziom 1) ostrzeżenie C4561 | Dokumentacja firmy Microsoft
+title: Kompilator ostrzeżenie (poziom 1) C4561 | Dokumentacja firmy Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,23 +16,24 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d4862d7f570faea3e362a505e67bddaf504b32de
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 0ba0770a8b8b42c8174d421f55dd45ff7f335d06
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33280535"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46115791"
 ---
-# <a name="compiler-warning-level-1-c4561"></a>Kompilator C4561 ostrzegawcze (poziom 1)
-Wywołanie "__fastcall" niezgodny z "/ clr" opcja: konwertowanie na "\__stdcall"  
-  
- [__Fastcall](../../cpp/fastcall.md) Konwencja wywoływania funkcji nie można używać z [/CLR](../../build/reference/clr-common-language-runtime-compilation.md) — opcja kompilatora. Kompilator ignoruje wywołań `__fastcall`. Aby usunąć to ostrzeżenie, Usuń wywołania do **__fastcall** lub skompiluj bez **/CLR**.  
-  
- Poniższy przykład generuje C4561:  
-  
-```  
-// C4561.cpp  
-// compile with: /clr /W1 /c  
-// processor: x86  
-void __fastcall Func(void *p);   // C4561, remove __fastcall to resolve  
+# <a name="compiler-warning-level-1-c4561"></a>Kompilator ostrzeżenie (poziom 1) C4561
+
+Wywołanie "__fastcall" niezgodne z "/ clr" opcja: konwertowanie "\__stdcall"
+
+[__Fastcall](../../cpp/fastcall.md) Konwencja wywoływania funkcji nie można używać z [/CLR](../../build/reference/clr-common-language-runtime-compilation.md) — opcja kompilatora. Kompilator ignoruje wywołania `__fastcall`. Aby usunąć to ostrzeżenie, albo Usuń wywołania **__fastcall** lub skompilować bez **/CLR**.
+
+Poniższy przykład spowoduje wygenerowanie C4561:
+
+```
+// C4561.cpp
+// compile with: /clr /W1 /c
+// processor: x86
+void __fastcall Func(void *p);   // C4561, remove __fastcall to resolve
 ```

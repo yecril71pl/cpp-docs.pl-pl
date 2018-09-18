@@ -1,5 +1,5 @@
 ---
-title: C2002 błąd kompilatora | Dokumentacja firmy Microsoft
+title: Błąd kompilatora C2002 | Dokumentacja firmy Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,30 +16,31 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 01124fc839d6e788ff2dccae325f01f7d4337f5d
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: b87a7fe1513c695344676624ae1968060097c885
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33164869"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46116922"
 ---
-# <a name="compiler-error-c2002"></a>C2002 błąd kompilatora
-Nieprawidłowa stała znaków dwubajtowych  
-  
- Stała znaków wielobajtowych jest nieprawidłowa.  
-  
-### <a name="to-fix-by-checking-the-following-possible-causes"></a>Aby rozwiązać problem, sprawdzając następujące możliwe przyczyny  
-  
-1.  Szerokich znaków stała zawiera więcej bajtów niż oczekiwano.  
-  
-2.  Standardowy nagłówek STDDEF.h nie jest włączony.  
-  
-3.  Znaki dwubajtowe nie może zostać połączony z zwykłej literały.  
-  
-4.  Szerokich znaków stała musi być poprzedzona znakiem "L":  
-  
-    ```  
-    L'mbconst'  
-    ```  
-  
-5.  Dla Microsoft C++ argumenty tekst dyrektywy preprocesora muszą być ASCII. Na przykład dyrektywy `#pragma message(L"string")`, jest nieprawidłowy.
+# <a name="compiler-error-c2002"></a>Błąd kompilatora C2002
+
+Nieprawidłowa stała dwubajtowego znaku
+
+Stała znak wielobajtowy jest nieprawidłowa.
+
+### <a name="to-fix-by-checking-the-following-possible-causes"></a>Aby rozwiązać problem, sprawdzając następujące możliwe przyczyny
+
+1. Stała dwubajtowego znaku zawiera większą liczbę bajtów, niż oczekiwano.
+
+1. Standardowy nagłówek STDDEF.h nie jest włączony.
+
+1. Znaki dwubajtowe, nie można połączyć z literały ciągów znaków zwykłych.
+
+1. Stała dwubajtowego znaku musi być poprzedzona znakiem "L":
+
+    ```
+    L'mbconst'
+    ```
+
+1. Dla Microsoft C++ argumenty tekst dyrektywy preprocesora muszą być ASCII. Na przykład, dyrektywa `#pragma message(L"string")`, jest nieprawidłowy.

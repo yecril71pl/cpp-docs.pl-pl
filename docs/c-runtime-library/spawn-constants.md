@@ -30,30 +30,33 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f3a069f9f29f6fd15c3ce21111a37757519af229
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 8daaf38e60ca48b4a34deb2086bbd14eb45651e4
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32408752"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46116935"
 ---
 # <a name="spawn-constants"></a>spawn — Stałe
-## <a name="syntax"></a>Składnia  
-  
-```  
-#include <process.h>  
-```  
-  
-## <a name="remarks"></a>Uwagi  
- `mode` Argument określa akcję wykonywaną przez proces wywoływania przed i wykonywania operacji na duplikowały. Następujące wartości `mode` są możliwe:  
-  
-|Stała|Znaczenie|  
-|--------------|-------------|  
-|`_P_OVERLAY`|Nakładki wywoływania procesu z nowego procesu, niszczenie procesu wywołującego (sam wpływ jako `_exec` wywołania).|  
-|`_P_WAIT`|Wstrzymuje wątek wywołujący przed zakończeniem wykonywania nowego procesu (synchroniczne `_spawn`).|  
-|`_P_NOWAIT`, `_P_NOWAITO`|Kontynuuje wykonywanie procesu wywołującego równocześnie z nowego procesu (asynchroniczne `_spawn`).|  
-|`_P_DETACH`|Kontynuuje wykonywanie procesu wywołującego; nowy proces jest uruchamiane w tle bez dostępu do konsoli i klawiatury. Wywołuje się `_cwait` nowy proces zakończy się niepowodzeniem. To jest asynchroniczne `_spawn`.|  
-  
-## <a name="see-also"></a>Zobacz też  
- [_spawn, _wspawn — funkcje](../c-runtime-library/spawn-wspawn-functions.md)   
- [Stałe globalne](../c-runtime-library/global-constants.md)
+
+## <a name="syntax"></a>Składnia
+
+```
+#include <process.h>
+```
+
+## <a name="remarks"></a>Uwagi
+
+`mode` Argument określa akcję podejmowaną przez proces wywołujący, przed, jak i podczas operacji wielokrotnego. Następujące wartości dla `mode` są możliwe:
+
+|Stała|Znaczenie|
+|--------------|-------------|
+|`_P_OVERLAY`|Nakładki procesu przy użyciu nowego procesu wywołującego, niszczenie procesu wywołującego (efektu przez takie same jak `_exec` wywołania).|
+|`_P_WAIT`|Wstrzymuje działanie wątku wywołującego do momentu wykonania nowego procesu (synchroniczne `_spawn`).|
+|`_P_NOWAIT`, `_P_NOWAITO`|Kontynuuje wykonywanie procesu wywołującego wątkom nowego procesu (asynchroniczne `_spawn`).|
+|`_P_DETACH`|Kontynuuje wykonywanie procesu wywołującego; nowy proces jest uruchamiany w tle bez dostępu do konsoli lub klawiatury. Wywołania `_cwait` względem nowy proces zakończy się niepowodzeniem. Jest to asynchronicznego `_spawn`.|
+
+## <a name="see-also"></a>Zobacz też
+
+[_spawn, _wspawn, funkcje](../c-runtime-library/spawn-wspawn-functions.md)<br/>
+[Stałe globalne](../c-runtime-library/global-constants.md)

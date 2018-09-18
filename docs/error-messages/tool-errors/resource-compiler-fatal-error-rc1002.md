@@ -16,20 +16,21 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 886b44d0a51df10295428daa69c8ea358660fd25
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 8d54f49b7cce988c5902a01142efe061ba03e424
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33321668"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46114530"
 ---
 # <a name="resource-compiler-fatal-error-rc1002"></a>Błąd krytyczny kompilatora zasobów RC1002
-za mało miejsca na stercie  
-  
-### <a name="to-fix-by-using-the-following-possible-solutions"></a>Aby rozwiązać problem przy użyciu następujących możliwych rozwiązań  
-  
-1.  Zwiększ ilość miejsca na plik wymiany systemu Windows. Aby uzyskać więcej informacji o zwiększenie rozmiaru pliku wymiany Zobacz pamięci wirtualnej w Pomocy systemu Windows.  
-  
-2.  Podziel bieżący plik na mniejsze pliki i kompilowania ich osobno.  
-  
-3.  Usuń inne programy lub sterowniki uruchomiona w systemie.
+
+miejsca na stercie
+
+### <a name="to-fix-by-using-the-following-possible-solutions"></a>Aby rozwiązać problem, korzystając z poniższymi możliwymi rozwiązaniami
+
+1. Zwiększ ilość miejsca na plik wymiany dla Windows. Aby uzyskać więcej informacji na temat zwiększeniu ilości miejsca na plik wymiany Zobacz pamięci wirtualnej w Pomocy Windows.
+
+1. Podziel bieżący plik na mniejsze pliki i skompiluj je oddzielnie.
+
+1. Usuń inne programy lub sterowniki uruchomionych w systemie.

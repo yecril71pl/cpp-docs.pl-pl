@@ -16,16 +16,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: fd9d6b2f0a84d43b14b1187fa4ca5698114983e0
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 58a78a735b553a0a607f2b3433598117efac9191
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33198300"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46115245"
 ---
 # <a name="fatal-error-c1023"></a>Błąd krytyczny C1023
-'Plik': nieoczekiwany błąd w pch, spróbuj przebudować pch  
-  
- C1023 może być spowodowana przez jedną z kilku problemów rozwiązania, do którego jest kompilowania prekompilowanego pliku nagłówkowego.  
-  
- Może być spowodowane C1023, jeśli próba użycia prekompilowanego pliku nagłówkowego komputera innego niż ten, na którym został utworzony.
+
+'Plik': nieoczekiwany błąd w pch, spróbuj przebudować pch
+
+C1023 może być spowodowane przez jeden z kilku problemów, rozwiązanie, do którego jest odbudowie prekompilowanego pliku nagłówkowego.
+
+Może być spowodowane C1023, jeśli użytkownik podejmie próbę użycia prekompilowanego pliku nagłówkowego na komputerze innym niż ten, na którym została skompilowana.

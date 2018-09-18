@@ -44,14 +44,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 73be0ee1987aa60d91976c1a4bbb73ebf66e5c1c
-ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
+ms.openlocfilehash: 9619ffdf9fd24bd73548fb3992084eb0a5d437a7
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "42465705"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46114478"
 ---
 # <a name="cdbpropidset-class"></a>CDBPropIDSet — Klasa
+
 Dziedziczy `DBPROPIDSET` struktury i dodaje konstruktora, który inicjuje pola klucza, jak również [addpropertyid —](../../data/oledb/cdbpropidset-addpropertyid.md) dostęp do metody.  
   
 ## <a name="syntax"></a>Składnia
@@ -61,7 +62,8 @@ class CDBPropIDSet : public tagDBPROPIDSET
 ```  
 
 ## <a name="requirements"></a>Wymagania  
- **Nagłówek:** atldbcli.h
+
+**Nagłówek:** atldbcli.h
   
 ## <a name="members"></a>Elementy członkowskie  
   
@@ -80,9 +82,11 @@ class CDBPropIDSet : public tagDBPROPIDSET
 |[operator =](#op_equal)|Przypisuje zawartość jednym Identyfikatorem właściwości zestawu do drugiego.|  
   
 ## <a name="remarks"></a>Uwagi  
- Użyj konsumentów OLE DB `DBPROPIDSET` struktur, aby przekazać tablicę identyfikatorów właściwości, dla których użytkownik chce uzyskać informacje o właściwościach. Właściwości określone w pojedynczej [DBPROPIDSET](/previous-versions/windows/desktop/ms717981\(v=vs.85\)) struktury należą do zestawu jednej właściwości.  
+
+Użyj konsumentów OLE DB `DBPROPIDSET` struktur, aby przekazać tablicę identyfikatorów właściwości, dla których użytkownik chce uzyskać informacje o właściwościach. Właściwości określone w pojedynczej [DBPROPIDSET](/previous-versions/windows/desktop/ms717981\(v=vs.85\)) struktury należą do zestawu jednej właściwości.  
 
 ## <a name="addpropertyid"></a> CDBPropIDSet::AddPropertyID
+
 Dodaje identyfikator właściwości zestawu identyfikator właściwości.  
   
 ### <a name="syntax"></a>Składnia  
@@ -92,10 +96,12 @@ bool AddPropertyID(DBPROPID propid) throw();
 ```  
   
 #### <a name="parameters"></a>Parametry  
- *identyfikatora właściwości*  
- [in] Ustaw identyfikator właściwości, które mają zostać dodane do Identyfikatora właściwości.  
+
+*identyfikatora właściwości*<br/>
+[in] Ustaw identyfikator właściwości, które mają zostać dodane do Identyfikatora właściwości.  
 
 ## <a name="cdbpropidset"></a> CDBPropIDSet::CDBPropIDSet
+
 Konstruktor. Inicjuje `rgProperties`, `cProperties`oraz (opcjonalnie) `guidPropertySet` pola [DBPROPIDSET](/previous-versions/windows/desktop/ms717981\(v=vs.85\)) struktury.  
   
 ### <a name="syntax"></a>Składnia  
@@ -109,13 +115,15 @@ CDBPropIDSet();
 ```  
   
 #### <a name="parameters"></a>Parametry  
- *Identyfikator GUID*  
- [in] Identyfikator GUID służący do zainicjowania `guidPropertySet` pola.  
+
+*Identyfikator GUID*<br/>
+[in] Identyfikator GUID służący do zainicjowania `guidPropertySet` pola.  
   
- *propidset*  
- [in] Inny `CDBPropIDSet` obiekt do tworzenia kopii.  
+*propidset*<br/>
+[in] Inny `CDBPropIDSet` obiekt do tworzenia kopii.  
 
 ## <a name="setguid"></a> CDBPropIDSet::SetGUID
+
 Ustawia pole identyfikatora GUID `DBPROPIDSET` struktury.  
   
 ### <a name="syntax"></a>Składnia  
@@ -125,13 +133,16 @@ void SetGUID(const GUID& guid) throw();
 ```  
   
 #### <a name="parameters"></a>Parametry  
- *Identyfikator GUID*  
- [in] Identyfikator GUID służący do ustawiania `guidPropertySet` pole [DBPROPIDSET](/previous-versions/windows/desktop/ms717981\(v=vs.85\)) struktury.  
+
+*Identyfikator GUID*<br/>
+[in] Identyfikator GUID służący do ustawiania `guidPropertySet` pole [DBPROPIDSET](/previous-versions/windows/desktop/ms717981\(v=vs.85\)) struktury.  
   
 ### <a name="remarks"></a>Uwagi  
- To pole można ustawić za [Konstruktor](../../data/oledb/cdbpropidset-cdbpropidset.md) także. Wywołaj tę funkcję, jeśli używasz domyślnego konstruktora dla tej klasy.  
+
+To pole można ustawić za [Konstruktor](../../data/oledb/cdbpropidset-cdbpropidset.md) także. Wywołaj tę funkcję, jeśli używasz domyślnego konstruktora dla tej klasy.  
 
 ## <a name="op_equal"></a> CDBPropIDSet::operator =
+
 Przypisuje zawartość jednym Identyfikatorem właściwości zestawu do innego zbioru właściwości identyfikator.  
   
 ### <a name="syntax"></a>Składnia  
@@ -141,5 +152,6 @@ CDBPropIDSet& operator =(CDBPropIDSet& propset) throw();
 ```  
   
 ## <a name="see-also"></a>Zobacz też  
- [Szablony konsumentów OLE DB](../../data/oledb/ole-db-consumer-templates-cpp.md)   
- [Szablony konsumentów OLE DB — dokumentacja](../../data/oledb/ole-db-consumer-templates-reference.md)
+
+[Szablony konsumentów OLE DB](../../data/oledb/ole-db-consumer-templates-cpp.md)<br/>
+[Szablony konsumentów OLE DB — dokumentacja](../../data/oledb/ole-db-consumer-templates-reference.md)

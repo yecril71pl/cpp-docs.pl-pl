@@ -16,20 +16,21 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7be09691de4212d07b1452ffe33725a3978fc053
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: f3ef75a1435d8c922087fcdd21d1941961bc82cd
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33322107"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46113386"
 ---
 # <a name="nmake-fatal-error-u1099"></a>Błąd krytyczny NMAKE U1099
-przepełnienie stosu  
-  
- Trwa przetwarzanie pliku reguł programu make było zbyt skomplikowane bieżącej alokacji stosu w NMAKE. NMAKE ma alokacji 0x3000 (12K).  
-  
- Aby zwiększyć liczbę alokacji stosu w NMAKE, uruchom [/stack polecenia editbin](../../build/reference/stack.md) narzędzie z opcją większych stosu:  
-  
- **polecenia editbin /STACK:reserve NMAKE. WYWOŁANIE PLIKU EXE**  
-  
- gdzie *zarezerwować* jest większa niż bieżąca Alokacja stosu w NMAKE liczbą.
+
+przepełnienie stosu
+
+Trwa przetwarzanie pliku reguł programu make jest zbyt złożona, bieżący alokacji stosu w NMAKE. NMAKE ma alokacji 0x3000 (12 KB).
+
+Aby zwiększyć alokacji stosu w NMAKE, uruchom [editbin /stack](../../build/reference/stack.md) narzędzia z opcją większej stosu:
+
+**editbin /STACK:reserve NMAKE. PLIK EXE**
+
+gdzie *zarezerwować* jest większa niż bieżąca Alokacja stosu w NMAKE liczbą.

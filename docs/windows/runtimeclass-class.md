@@ -39,12 +39,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 07cd5fdc2aa47e5e7486f48c0106b7b24ff16d9f
-ms.sourcegitcommit: b4432d30f255f0cb58dce69cbc8cbcb9d44bc68b
+ms.openlocfilehash: 3bc016367495be8cc10c09605e8018811bde5ca9
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/13/2018
-ms.locfileid: "45535046"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46118911"
 ---
 # <a name="runtimeclass-class"></a>RuntimeClass — Klasa
 
@@ -69,7 +69,8 @@ Na liście interfejsów obiekt implementuje poza `IUnknown`, `IInspectable` lub 
 
 ## <a name="members"></a>Elementy członkowskie
 
-`RuntimeClassInitialize` Funkcja, która inicjuje obiekt, jeśli `MakeAndInitialize` funkcji szablonu jest używana do konstruowania obiektu. Zwraca S_OK, jeśli obiekt został pomyślnie zainicjowany lub kod błędu modelu COM, jeśli inicjowanie nie powiodło się. Kod błędu modelu COM są propagowane jako wartość zwracaną `MakeAndInitialize`. Należy pamiętać, że `RuntimeClassInitialize` metoda nie jest wywoływana, jeśli `Make` funkcji szablonu jest używana do konstruowania obiektu.
+`RuntimeClassInitialize`<br/>
+Funkcja, która inicjuje obiekt, jeśli `MakeAndInitialize` funkcji szablonu jest używana do konstruowania obiektu. Zwraca S_OK, jeśli obiekt został pomyślnie zainicjowany lub kod błędu modelu COM, jeśli inicjowanie nie powiodło się. Kod błędu modelu COM są propagowane jako wartość zwracaną `MakeAndInitialize`. Należy pamiętać, że `RuntimeClassInitialize` metoda nie jest wywoływana, jeśli `Make` funkcji szablonu jest używana do konstruowania obiektu.
 
 ### <a name="public-constructors"></a>Konstruktory publiczne
 

@@ -16,15 +16,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b6539167b936efdc4c9f407cd951c9c582b0a138
-ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
+ms.openlocfilehash: fc3506c35dca469febafe21509064abc1726d633
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33692184"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46116902"
 ---
 # <a name="ompsetnested"></a>omp_set_nested
-Umożliwia równoległości zagnieżdżonych.  
+Włącza równoległości zagnieżdżonych.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -34,20 +34,19 @@ void omp_set_nested(
 );  
 ```  
   
+### <a name="parameters"></a>Parametry
+  
+*Val*<br/>
+Jeśli wartość jest niezerowa, umożliwia równoległości zagnieżdżonych. Jeśli zero, wyłącza równoległości zagnieżdżonych.  
+  
 ## <a name="remarks"></a>Uwagi  
- w przypadku gdy  
+ OMP zagnieżdżone równoległość może zostać włączona przy użyciu `omp_set_nested`, lub poprzez skonfigurowanie [OMP_NESTED](../../../parallel/openmp/reference/omp-nested.md) zmiennej środowiskowej.  
   
- `val`  
- W przypadku różną od zera, włącza równoległości zagnieżdżonych. Jeśli zero, wyłącza równoległości zagnieżdżonych.  
+ Ustawienie `omp_set_nested` spowoduje przesłonięcie ustawień `OMP_NESTED` zmiennej środowiskowej.  
   
-## <a name="remarks"></a>Uwagi  
- OMP zagnieżdżone równoległości mogą być włączone z `omp_set_nested`, albo ustawiając [OMP_NESTED](../../../parallel/openmp/reference/omp-nested.md) zmiennej środowiskowej.  
+ Po włączeniu zmiennej środowiskowej może przerwać program w przeciwnym razie operacyjnej, ponieważ wykładniczo zwiększa liczbę wątków podczas zagnieżdżania regionów równoległych.  Na przykład funkcja, że recurses 6 razy o liczbie wątków OMP równa 4 wymaga 4096 (4 do potęgi równej 6) wątki ogólnie rzecz biorąc, spowoduje zmniejszenie wydajności aplikacji, jeśli liczba wątków przekracza liczbę procesorów. Jedynym wyjątkiem jest operacji We/Wy powiązać aplikacji.  
   
- Ustawienie `omp_set_nested` zastąpią ustawienia `OMP_NESTED` zmiennej środowiskowej.  
-  
- Po włączeniu zmiennej środowiskowej mogą być dzielone w przeciwnym razie operacyjnej programu, ponieważ liczba wątków wykładniczo zwiększa podczas zagnieżdżania równoległych regionów.  Na przykład funkcji, że recurses 6 razy o liczbie wątków OMP ustawioną 4 wymaga 4096 (4 do potęgi 6) wątki ogólnie rzecz biorąc, spowoduje zmniejszenie wydajności aplikacji, jeśli liczba wątków przekracza liczbę procesorów. Jedynym wyjątkiem jest we/wy powiązany aplikacji.  
-  
- Użyj [omp_get_nested](../../../parallel/openmp/reference/omp-get-nested.md) Aby wyświetlić bieżące ustawienie `omp_set_nested`.  
+ Użyj [omp_get_nested](../../../parallel/openmp/reference/omp-get-nested.md) do wyświetlenia bieżącego ustawienia `omp_set_nested`.  
   
  Aby uzyskać więcej informacji, zobacz [3.1.9 funkcja omp_set_nested](../../../parallel/openmp/3-1-9-omp-set-nested-function.md).  
   

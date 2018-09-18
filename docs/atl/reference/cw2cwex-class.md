@@ -19,12 +19,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ee4314e4f2d31e499c01049d1fbec579f16c2849
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 3b45945a0f91570d78d8c1e365fd70240c2385b3
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43765372"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46116805"
 ---
 # <a name="cw2cwex-class"></a>Klasa CW2CWEX
 
@@ -36,13 +36,13 @@ Ta klasa jest używana przez makra konwersji ciągów CW2CTEX i CT2CWEX i typede
 ## <a name="syntax"></a>Składnia
 
 ```
-template<int t_nBufferLength = 128>  
+template<int t_nBufferLength = 128>
 class CW2CWEX
 ```
 
 #### <a name="parameters"></a>Parametry
 
-*t_nBufferLength*  
+*t_nBufferLength*<br/>
 Rozmiar buforu używany w procesie tłumaczenia. Domyślna długość to 128 bajtów.
 
 ## <a name="members"></a>Elementy członkowskie
@@ -97,16 +97,16 @@ Zobacz [ATL i makr konwersji ciągu MFC](string-conversion-macros.md) na przykł
 Konstruktor.
 
 ```
-CW2CWEX(LPCWSTR psz, UINT nCodePage) throw(...);  
+CW2CWEX(LPCWSTR psz, UINT nCodePage) throw(...);
 CW2CWEX(LPCWSTR psz) throw(...);
 ```
 
 ### <a name="parameters"></a>Parametry
 
-*psz*  
+*psz*<br/>
 Ciąg tekstowy, który ma zostać przekonwertowany.
 
-*nCodePage*  
+*nCodePage*<br/>
 Strona kodowa. Nie jest używany w tej klasie.
 
 ### <a name="remarks"></a>Uwagi
@@ -137,7 +137,7 @@ LPCWSTR m_psz;
 
 Operator konwersji.
 
-```  
+```
 operator LPCWSTR() const throw();
 ```
 
@@ -147,9 +147,9 @@ Zwraca ciąg tekstowy jako typu LPCWSTR.
 
 ## <a name="see-also"></a>Zobacz też
 
-[Klasa CA2AEX](../../atl/reference/ca2aex-class.md)   
-[Klasa CA2CAEX](../../atl/reference/ca2caex-class.md)   
-[Klasa CA2WEX](../../atl/reference/ca2wex-class.md)   
-[Klasa CW2AEX](../../atl/reference/cw2aex-class.md)   
-[Klasa CW2WEX](../../atl/reference/cw2wex-class.md)   
+[Klasa CA2AEX](../../atl/reference/ca2aex-class.md)<br/>
+[Klasa CA2CAEX](../../atl/reference/ca2caex-class.md)<br/>
+[Klasa CA2WEX](../../atl/reference/ca2wex-class.md)<br/>
+[Klasa CW2AEX](../../atl/reference/cw2aex-class.md)<br/>
+[Klasa CW2WEX](../../atl/reference/cw2wex-class.md)<br/>
 [Klasa — Przegląd](../../atl/atl-class-overview.md)

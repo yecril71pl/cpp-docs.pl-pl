@@ -12,17 +12,19 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f985d206a342611dfccb4f05347b0ecc9e9521b0
-ms.sourcegitcommit: f0c90000125a9497bf61e41624de189a043703c0
+ms.openlocfilehash: 80beb5e840e182396f519b6b827dd8d727252d61
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44314660"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46116246"
 ---
 # <a name="uniform-initialization-and-delegating-constructors"></a>Jednolite inicjowanie i delegowanie konstruktorów
+
 W nowoczesnym C++, można użyć *nawiasów inicjowania* dla dowolnego typu, bez znaku równości. Ponadto możesz użyć konstruktory delegujące można uprościć kod, jeśli masz wiele konstruktorów, które mają podobne działanie.
 
 ## <a name="brace-initialization"></a>Nawiasów klamrowych
+
 Można użyć nawiasów klamrowych dla dowolnej klasy, struktury lub Unii. Jeśli typ ma konstruktora domyślnego, jawnie lub niejawnie zadeklarowany, możesz użyć domyślnego nawiasów klamrowych (za pomocą pustych nawiasów klamrowych). Na przykład następującej klasy może być inicjowane za pomocą domyślnego i innych niż domyślne nawiasów klamrowych:
 
 ```cpp
@@ -99,6 +101,7 @@ return { 4.5 };
 ```
 
 ## <a name="initializerlist-constructors"></a>Lista initializer_list konstruktorów
+
 [Initializer_list, klasa](../standard-library/initializer-list-class.md) reprezentuje listę obiektów określonego typu, który może służyć w konstruktorze, a w innych kontekstach. Można skonstruować initializer_list, za pomocą nawiasów klamrowych:
 
 ```cpp
@@ -127,6 +130,7 @@ regex rgx{'x', 'y', 'z'};
 ```
 
 ## <a name="delegating-constructors"></a>Delegowanie konstruktorów
+
 Wiele klas ma wiele konstruktorów, które wykonują podobne elementy — na przykład sprawdza poprawność parametrów:
 
 ```cpp

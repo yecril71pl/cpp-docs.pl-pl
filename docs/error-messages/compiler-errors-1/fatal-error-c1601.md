@@ -16,14 +16,15 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 07456ebf093f12c7ca418e56f183ceb792460b72
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: f1ca04ec78d5c8baa2b69f3ec0c05fe84b7bc5f5
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33198420"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46115843"
 ---
 # <a name="fatal-error-c1601"></a>Błąd krytyczny C1601
-Nieobsługiwany wbudowany zestaw opcode  
-  
- Ten błąd wskazuje niezgodności w plikach .exe kompilatora, które mogły wystąpić z powodu niekompletną instalację. Na przykład może zainstalowaniu dodatku service pack, ale nie pakiet procesora. Zainstaluj wszystkie wymagane produkty.
+
+Nieobsługiwany wbudowany zestaw opcode
+
+Ten błąd wskazuje niezgodności w plikach .exe kompilatora, które mogły wystąpić z powodu niekompletną instalację. Na przykład może zainstalowano dodatek service pack, ale nie pakiet procesora. Zainstaluj wszystkie wymagane produkty.
