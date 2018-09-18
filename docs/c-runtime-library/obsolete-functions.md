@@ -36,46 +36,48 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7ae341a6e3c997870f81381cbe68f13b2384ee7e
-ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
+ms.openlocfilehash: 259bd5f5fd458d11c104aa3b9c141d049ad3fa96
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43686075"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46016601"
 ---
 # <a name="obsolete-functions"></a>Przestarzałe funkcje
-Niektóre funkcje są przestarzałe i ma nowszą odpowiedniki. Zaleca się zmienić je do zaktualizowanych wersji. Inne przestarzałe funkcje zostały usunięte z CRT. W tym temacie wymieniono funkcje przestarzałe jako przestarzałe, a także funkcje usunięte w określonej wersji programu Visual Studio.  
-  
-## <a name="deprecated-as-obsolete-in-visual-studio-2015"></a>Przestarzałe jako przestarzałe w programie Visual Studio 2015  
-  
-|Przestarzałe — funkcja|Alternatywna|  
-|-----------------------|-----------------|  
-|`is_wctype`|[iswctype](../c-runtime-library/reference/isctype-iswctype-isctype-l-iswctype-l.md)|  
-|`_loaddll`|[LoadLibrary](https://msdn.microsoft.com/library/windows/desktop/ms684175\(v=vs.85\).aspx), [LoadLibraryEx](/windows/desktop/api/libloaderapi/nf-libloaderapi-loadlibraryexa), lub [LoadPackagedLibrary](/windows/desktop/api/winbase/nf-winbase-loadpackagedlibrary)|  
-|`_unloaddll`|[FreeLibrary](https://msdn.microsoft.com/library/windows/desktop/ms683152\(v=vs.85\).aspx)|  
-|`_getdllprocaddr`|[GetProcAddress](../build/getprocaddress.md)|  
-|`_seterrormode`|[SetErrorMode](https://msdn.microsoft.com/en-us/library/windows/desktop/ms680621\(v=vs.85\).aspx)|  
-|`_beep`|[Sygnał dźwiękowy](https://msdn.microsoft.com/library/windows/desktop/ms679277\(v=vs.85\).aspx)|  
-|`_sleep`|[Stan uśpienia](/windows/desktop/api/synchapi/nf-synchapi-sleep)|  
-|`_getsystime`|[GetLocalTime](https://msdn.microsoft.com/library/windows/desktop/ms724338\(v=vs.85\).aspx)|  
-|`_setsystime`|[SetLocalTime](https://msdn.microsoft.com/library/windows/desktop/ms724936\(v=vs.85\).aspx)|  
-  
-## <a name="removed-from-the-crt-in-visual-studio-2015"></a>Usunięte z CRT w programie Visual Studio 2015  
-  
-|Przestarzałe — funkcja|Alternatywna|  
-|-----------------------|-----------------|  
-|[_cgets, _cgetws](../c-runtime-library/cgets-cgetws.md)|[_cgets_s, _cgetws_s](../c-runtime-library/reference/cgets-s-cgetws-s.md)|  
-|[gets, _getws](../c-runtime-library/gets-getws.md)|[gets_s, _getws_s](../c-runtime-library/reference/gets-s-getws-s.md)|  
-|[_get_output_format](../c-runtime-library/get-output-format.md)|Brak|  
-|[_heapadd](../c-runtime-library/heapadd.md)|Brak|  
-|[_heapset](../c-runtime-library/heapset.md)|Brak|  
-|[inp, inpw](../c-runtime-library/inp-inpw.md)|Brak|  
-|[_inp, _inpw, _inpd](../c-runtime-library/inp-inpw-inpd.md)|Brak|  
-|[outp, outpw](../c-runtime-library/outp-outpw.md)|Brak|  
-|[_outp, _outpw, _outpd](../c-runtime-library/outp-outpw-outpd.md)|Brak|  
-|[_set_output_format](../c-runtime-library/set-output-format.md)|Brak|  
-  
-## <a name="removed-from-the-crt-in-earlier-versions-of-visual-studio"></a>Usunięte z CRT we wcześniejszych wersjach programu Visual Studio  
- [_lock](../c-runtime-library/lock.md)  
-  
- [_unlock](../c-runtime-library/unlock.md)
+
+Niektóre funkcje są przestarzałe i ma nowszą odpowiedniki. Zaleca się zmienić je do zaktualizowanych wersji. Inne przestarzałe funkcje zostały usunięte z CRT. W tym temacie wymieniono funkcje przestarzałe jako przestarzałe, a także funkcje usunięte w określonej wersji programu Visual Studio.
+
+## <a name="deprecated-as-obsolete-in-visual-studio-2015"></a>Przestarzałe jako przestarzałe w programie Visual Studio 2015
+
+|Przestarzałe — funkcja|Alternatywna|
+|-----------------------|-----------------|
+|`is_wctype`|[iswctype](../c-runtime-library/reference/isctype-iswctype-isctype-l-iswctype-l.md)|
+|`_loaddll`|[LoadLibrary](https://msdn.microsoft.com/library/windows/desktop/ms684175\(v=vs.85\).aspx), [LoadLibraryEx](/windows/desktop/api/libloaderapi/nf-libloaderapi-loadlibraryexa), lub [LoadPackagedLibrary](/windows/desktop/api/winbase/nf-winbase-loadpackagedlibrary)|
+|`_unloaddll`|[FreeLibrary](https://msdn.microsoft.com/library/windows/desktop/ms683152\(v=vs.85\).aspx)|
+|`_getdllprocaddr`|[GetProcAddress](../build/getprocaddress.md)|
+|`_seterrormode`|[SetErrorMode](https://msdn.microsoft.com/en-us/library/windows/desktop/ms680621\(v=vs.85\).aspx)|
+|`_beep`|[Sygnał dźwiękowy](https://msdn.microsoft.com/library/windows/desktop/ms679277\(v=vs.85\).aspx)|
+|`_sleep`|[Stan uśpienia](/windows/desktop/api/synchapi/nf-synchapi-sleep)|
+|`_getsystime`|[GetLocalTime](https://msdn.microsoft.com/library/windows/desktop/ms724338\(v=vs.85\).aspx)|
+|`_setsystime`|[SetLocalTime](https://msdn.microsoft.com/library/windows/desktop/ms724936\(v=vs.85\).aspx)|
+
+## <a name="removed-from-the-crt-in-visual-studio-2015"></a>Usunięte z CRT w programie Visual Studio 2015
+
+|Przestarzałe — funkcja|Alternatywna|
+|-----------------------|-----------------|
+|[_cgets, _cgetws](../c-runtime-library/cgets-cgetws.md)|[_cgets_s, _cgetws_s](../c-runtime-library/reference/cgets-s-cgetws-s.md)|
+|[gets, _getws](../c-runtime-library/gets-getws.md)|[gets_s, _getws_s](../c-runtime-library/reference/gets-s-getws-s.md)|
+|[_get_output_format](../c-runtime-library/get-output-format.md)|Brak|
+|[_heapadd](../c-runtime-library/heapadd.md)|Brak|
+|[_heapset](../c-runtime-library/heapset.md)|Brak|
+|[inp, inpw](../c-runtime-library/inp-inpw.md)|Brak|
+|[_inp, _inpw, _inpd](../c-runtime-library/inp-inpw-inpd.md)|Brak|
+|[outp, outpw](../c-runtime-library/outp-outpw.md)|Brak|
+|[_outp, _outpw, _outpd](../c-runtime-library/outp-outpw-outpd.md)|Brak|
+|[_set_output_format](../c-runtime-library/set-output-format.md)|Brak|
+
+## <a name="removed-from-the-crt-in-earlier-versions-of-visual-studio"></a>Usunięte z CRT we wcześniejszych wersjach programu Visual Studio
+
+[_lock](../c-runtime-library/lock.md)
+
+[_unlock](../c-runtime-library/unlock.md)

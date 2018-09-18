@@ -17,12 +17,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9bf2ede32583715a19840ce861aa3ed6445fd7cd
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 46a42c92115ee60a0387e58b2acd5ce640e60eae
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43766408"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46015640"
 ---
 # <a name="persistence-classes"></a>Klasy trwałości
 
@@ -40,6 +40,6 @@ Następujące klasy implementuje trwałości obiektu:
 
 ## <a name="see-also"></a>Zobacz też
 
-[Klasa — Przegląd](../atl/atl-class-overview.md)   
+[Klasa — Przegląd](../atl/atl-class-overview.md)<br/>
 [Makra mapy właściwości](../atl/reference/property-map-macros.md)
 

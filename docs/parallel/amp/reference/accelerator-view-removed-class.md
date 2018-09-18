@@ -1,5 +1,5 @@
 ---
-title: accelerator_view_removed — klasa | Dokumentacja firmy Microsoft
+title: accelerator_view_removed, klasa | Dokumentacja firmy Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -19,15 +19,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0426dd44cfcb8f655f3981802dfe23adcd436a0d
-ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
+ms.openlocfilehash: f1c8963fee0fa7718c6ea8fe67904613b2dca8ad
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33688157"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46020262"
 ---
 # <a name="acceleratorviewremoved-class"></a>accelerator_view_removed — klasa
-Wyjątek zgłaszany, gdy podstawowy wywołań programu DirectX zakończy się niepowodzeniem z powodu limitu czasu Windows mechanizm wykrywania i odzyskiwania.  
+Wyjątek, który jest generowany, kiedy wywołanie DirectX nie powiedzie się z powodu przekroczenia limitu czasu Windows mechanizm wykrywania i odzyskiwania.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -47,7 +47,7 @@ class accelerator_view_removed : public runtime_exception;
   
 |Nazwa|Opis|  
 |----------|-----------------|  
-|[get_view_removed_reason](#get_view_removed_reason)|Zwraca kod błędu HRESULT wskazujący przyczynę `accelerator_view` usuwania obiektu.|  
+|[get_view_removed_reason](#get_view_removed_reason)|Zwraca kod błędu HRESULT wskazujący przyczynę `accelerator_view` usunięcie obiektu.|  
   
 ## <a name="inheritance-hierarchy"></a>Hierarchia dziedziczenia  
  `exception`  
@@ -61,9 +61,9 @@ class accelerator_view_removed : public runtime_exception;
   
  **Namespace:** współbieżności  
 
-## <a name="ctor"></a> accelerator_view_removed — 
+## <a name="ctor"></a> accelerator_view_removed 
 
-Inicjuje nowe wystąpienie klasy [accelerator_view_removed —](accelerator-view-removed-class.md) klasy.  
+Inicjuje nowe wystąpienie klasy [accelerator_view_removed](accelerator-view-removed-class.md) klasy.  
   
 ### <a name="syntax"></a>Składnia  
   
@@ -77,18 +77,18 @@ explicit accelerator_view_removed(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `_Message`  
- Opis błędu.  
+*_Message*<br/>
+Opis błędu.  
   
- `_View_removed_reason`  
- Kod błędu HRESULT wskazujący przyczynę usunięcie `accelerator_view` obiektu.  
+*_View_removed_reason*<br/>
+Kod błędu HRESULT wskazujący przyczynę usunięcia `accelerator_view` obiektu.  
   
 ### <a name="return-value"></a>Wartość zwracana  
- Nowe wystąpienie klasy accelerator_view_removed —.  
+ Nowe wystąpienie klasy accelerator_view_removed.  
   
 ## <a name="get_view_removed_reason_method"></a> get_view_removed_reason 
 
-Zwraca kod błędu HRESULT wskazujący przyczynę `accelerator_view` usuwania obiektu.  
+Zwraca kod błędu HRESULT wskazujący przyczynę `accelerator_view` usunięcie obiektu.  
   
 ### <a name="syntax"></a>Składnia  
   

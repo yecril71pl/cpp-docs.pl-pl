@@ -1,5 +1,5 @@
 ---
-title: Kompilatora (poziom 1) ostrzeżenie C4174 | Dokumentacja firmy Microsoft
+title: Kompilator ostrzeżenie (poziom 1) C4174 | Dokumentacja firmy Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,24 +16,25 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 22ca4cfa9efb93d46977597215dceb6dd4c8e503
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 16556d197c39ef0c5a8c974103535a7bc875671a
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33271856"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46034385"
 ---
-# <a name="compiler-warning-level-1-c4174"></a>Kompilator C4174 ostrzegawcze (poziom 1)
-"Nazwa": nie jest dostępny jako składnik #pragma  
-  
-## <a name="example"></a>Przykład  
-  
-```  
-// C4174.cpp  
-// compile with: /W1  
-#pragma component(info)  // C4174; unknown  
-#pragma component(browser, off)  // turn off browse info  
-int main()  
-{  
-}  
+# <a name="compiler-warning-level-1-c4174"></a>Kompilator ostrzeżenie (poziom 1) C4174
+
+"name": niedostępny jako składnik #pragma
+
+## <a name="example"></a>Przykład
+
+```
+// C4174.cpp
+// compile with: /W1
+#pragma component(info)  // C4174; unknown
+#pragma component(browser, off)  // turn off browse info
+int main()
+{
+}
 ```

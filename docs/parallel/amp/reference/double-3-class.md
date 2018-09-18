@@ -1,5 +1,5 @@
 ---
-title: double_3 — klasa | Dokumentacja firmy Microsoft
+title: double_3, klasa | Dokumentacja firmy Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -82,15 +82,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8b1372a273f0296b8dc309068c83ffe2607d038f
-ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
+ms.openlocfilehash: 6ecc1939faab978c84f786d90c8693b036d2e938
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33688677"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46027755"
 ---
 # <a name="double3-class"></a>double_3 — Klasa
-Reprezentuje krótki wektor symulacyjnych trzy.  
+Reprezentuje krótki Wektor trzech liczb typu Double.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -100,7 +100,7 @@ class double_3;
   
 ## <a name="members"></a>Elementy członkowskie  
   
-### <a name="public-typedefs"></a>Definicje typów publicznych  
+### <a name="public-typedefs"></a>Publiczne definicje typów  
   
 |Nazwa|Opis|  
 |----------|-----------------|  
@@ -110,7 +110,7 @@ class double_3;
   
 |Nazwa|Opis|  
 |----------|-----------------|  
-|[double_3 — Konstruktor](#ctor)|Przeciążone. Domyślny konstruktor, inicjuje wszystkie elementy z 0.|  
+|[double_3 — Konstruktor](#ctor)|Przeciążone. Domyślny konstruktor, inicjuje wszystkie elementy wartością 0.|  
   
 ### <a name="public-methods"></a>Metody publiczne  
   
@@ -166,11 +166,11 @@ class double_3;
 |double_3::operator =||  
 |double_3::operator-=||  
   
-### <a name="public-constants"></a>Publiczny — stałe  
+### <a name="public-constants"></a>Publiczne stałe  
   
 |Nazwa|Opis|  
 |----------|-----------------|  
-|[Size — stała](#double_3__size)||  
+|[rozmiar — stała](#double_3__size)||  
   
 ### <a name="public-data-members"></a>Publiczne elementy członkowskie danych  
   
@@ -215,9 +215,9 @@ class double_3;
   
  **Namespace:** Concurrency::graphics  
   
-##  <a name="ctor"></a> double_3 — 
+##  <a name="ctor"></a> double_3 
 
- Domyślny konstruktor, inicjuje wszystkie elementy z 0.  
+ Domyślny konstruktor, inicjuje wszystkie elementy wartością 0.  
   
 ```  
 double_3() restrict(amp,
@@ -267,20 +267,20 @@ explicit inline double_3(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `_V0`  
- Wartość do zainicjowania elementu 0.  
+*_V0*<br/>
+Wartość do zainicjowania elementu 0.  
   
- `_V1`  
- Wartość zainicjować element 1.  
+*_V1*<br/>
+Wartość do zainicjowania elementu 1.  
   
- `_V2`  
- Wartość zainicjować element 2.  
+*_V2*<br/>
+Wartość można zainicjować element 2.  
   
- `_V`  
- Wartość dla inicjowania.  
+*_V*<br/>
+Wartość inicjalizacji.  
   
- `_Other`  
- Obiekt używany do inicjowania.  
+*_Inne*<br/>
+Obiekt używany do inicjowania.  
   
 ##  <a name="double_3__size"></a> Rozmiar 
 

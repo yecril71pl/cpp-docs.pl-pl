@@ -16,15 +16,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ca97885a64df3897bda59dd7f04b2306f31536aa
-ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
+ms.openlocfilehash: 11c3e0fc08f8c2e0f4df9ac20df6260f64618ee3
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33692954"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46029549"
 ---
 # <a name="ompinitnestlock"></a>omp_init_nest_lock
-Inicjuje blokady.  
+Inicjuje blokadę.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -34,16 +34,15 @@ void omp_init_nest_lock(
 );  
 ```  
   
-## <a name="remarks"></a>Uwagi  
- w przypadku gdy  
+### <a name="parameters"></a>Parametry 
   
- `lock`  
- Zmienna typu [omp_nest_lock_t](../../../parallel/openmp/reference/omp-nest-lock-t.md).  
+*lock*<br/>
+Zmienna typu [omp_nest_lock_t](../../../parallel/openmp/reference/omp-nest-lock-t.md).  
   
 ## <a name="remarks"></a>Uwagi  
  Początkowa liczba zagnieżdżenia wynosi zero.  
   
- Aby uzyskać więcej informacji, zobacz [3.2.1 funkcje omp_init_lock i omp_init_nest_lock](../../../parallel/openmp/3-2-1-omp-init-lock-and-omp-init-nest-lock-functions.md).  
+ Aby uzyskać więcej informacji, zobacz [3.2.1 funkcje omp_init_lock i omp_init_nest_lock funkcji](../../../parallel/openmp/3-2-1-omp-init-lock-and-omp-init-nest-lock-functions.md).  
   
 ## <a name="example"></a>Przykład  
   

@@ -1,5 +1,5 @@
 ---
-title: C3015 błąd kompilatora | Dokumentacja firmy Microsoft
+title: Błąd kompilatora C3015 | Dokumentacja firmy Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,34 +16,35 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4c3599cdab1307ccff4677b823b49d94d710adfd
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: fa6b6d102f78de7d834a0c7d9fc16cfb85833fd1
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33241961"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46023973"
 ---
-# <a name="compiler-error-c3015"></a>C3015 błąd kompilatora
-inicjujące instrukcji "for" OpenMP posiada niewłaściwy formularz  
-  
- A `for` pętli w instrukcji OpenMP musi być w pełni i jawnie określona.  
-  
- Poniższy przykład generuje C3015:  
-  
-```  
-// C3015.cpp  
-// compile with: /openmp  
-int main()  
-{  
-   int i = 0, j = 10;  
-  
-   #pragma omp parallel  
-   {  
-      #pragma omp for  
-      for (; i < 0; i += j)   // C3015  
-      // Try the following line instead:  
-      // for (i = 0; i < 0; i++)   
-         --j;  
-   }  
-}  
+# <a name="compiler-error-c3015"></a>Błąd kompilatora C3015
+
+inicjujące instrukcji "for" OpenMP posiada niewłaściwy formularz
+
+A `for` pętli w instrukcji OpenMP musi być w pełni i jawnie określona.
+
+Poniższy przykład spowoduje wygenerowanie C3015:
+
+```
+// C3015.cpp
+// compile with: /openmp
+int main()
+{
+   int i = 0, j = 10;
+
+   #pragma omp parallel
+   {
+      #pragma omp for
+      for (; i < 0; i += j)   // C3015
+      // Try the following line instead:
+      // for (i = 0; i < 0; i++)
+         --j;
+   }
+}
 ```

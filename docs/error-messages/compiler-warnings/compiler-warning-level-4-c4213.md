@@ -1,5 +1,5 @@
 ---
-title: Kompilatora (poziom 4) ostrzeżenie C4213 | Dokumentacja firmy Microsoft
+title: Kompilator ostrzeżenie (poziom 4) C4213 | Dokumentacja firmy Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,34 +16,35 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 407fac636ea33c8cbd31104460442e5ac2aaec65
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 59bb2d8b2c25516558c4810d190f0bec9b98c086
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33302909"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46025622"
 ---
-# <a name="compiler-warning-level-4-c4213"></a>Kompilator C4213 ostrzegawcze (poziom 4)
-użyto niestandardowego rozszerzenia: rzutowanie na l wartość  
-  
- Rozszerzenia Microsoft domyślne (/Ze) można użyć rzutowania po lewej stronie instrukcji przypisania.  
-  
-## <a name="example"></a>Przykład  
-  
-```  
-// C4213.c  
-// compile with: /W4  
-void *a;  
-void f()  
-{  
-   int   i[3];  
-   a = &i;  
-   *(( int * )a )++ = 3;  // C4213  
-}  
-  
-int main()  
-{  
-}  
-```  
-  
- Takie rzutowania są nieprawidłowe w obszarze Zgodność ANSI ([/Za](../../build/reference/za-ze-disable-language-extensions.md)).
+# <a name="compiler-warning-level-4-c4213"></a>Kompilator ostrzeżenie (poziom 4) C4213
+
+użyto niestandardowego rozszerzenia: rzutowanie na wartościowanie lewostronne
+
+Za pomocą domyślnego rozszerzenia Microsoft (/Ze) można użyć rzutowania, po lewej stronie instrukcji przypisania.
+
+## <a name="example"></a>Przykład
+
+```
+// C4213.c
+// compile with: /W4
+void *a;
+void f()
+{
+   int   i[3];
+   a = &i;
+   *(( int * )a )++ = 3;  // C4213
+}
+
+int main()
+{
+}
+```
+
+Takie rzutowania są nieprawidłowe w obszarze zgodności ANSI ([/Za](../../build/reference/za-ze-disable-language-extensions.md)).

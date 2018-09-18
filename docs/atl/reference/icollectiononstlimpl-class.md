@@ -21,12 +21,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6bbfb34d34f6bd920744621042f5f3e09143e896
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: d2b70e7332c5f0a24af80ddb5cfd14a8ecf146de
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43751322"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46025155"
 ---
 # <a name="icollectiononstlimpl-class"></a>Klasa ICollectionOnSTLImpl
 
@@ -35,25 +35,25 @@ Ta klasa udostępnia metody używane przez klasę kolekcji.
 ## <a name="syntax"></a>Składnia
 
 ```
-template <class T, class CollType, class ItemType, class CopyItem, class EnumType>  
+template <class T, class CollType, class ItemType, class CopyItem, class EnumType>
 class ICollectionOnSTLImpl : public T
 ```
 
 #### <a name="parameters"></a>Parametry
 
-*T*  
+*T*<br/>
 Interfejs kolekcji COM.
 
-*CollType*  
+*CollType*<br/>
 Klasa kontenera standardowej biblioteki języka C++.
 
-*ItemType*  
+*ItemType*<br/>
 Typ elementu udostępnianych przez interfejs kontenera.
 
-*CopyItem*  
+*CopyItem*<br/>
 A [kopiowania klasy zasad](../../atl/atl-copy-policy-classes.md).
 
-*EnumType*  
+*EnumType*<br/>
 A [CComEnumOnSTL](../../atl/reference/ccomenumonstl-class.md)— klasa zgodna modułu wyliczającego.
 
 ## <a name="members"></a>Elementy członkowskie
@@ -111,7 +111,7 @@ STDMETHOD(getcount)(long* pcount);
 
 ### <a name="parameters"></a>Parametry
 
-*pcount —*  
+*pcount —*<br/>
 [out] Liczba elementów w kolekcji.
 
 ### <a name="return-value"></a>Wartość zwracana
@@ -128,10 +128,10 @@ STDMETHOD(get_Item)(long Index, ItemType* pvar);
 
 ### <a name="parameters"></a>Parametry
 
-*Index*  
+*Index*<br/>
 [in] Indeks oparty na 1 element w kolekcji.
 
-*pvar*  
+*pvar*<br/>
 [out] Element odpowiadający *indeksu*.
 
 ### <a name="return-value"></a>Wartość zwracana
@@ -152,7 +152,7 @@ STDMETHOD(get__NewEnum)(IUnknown** ppUnk);
 
 ### <a name="parameters"></a>Parametry
 
-*ppUnk*  
+*ppUnk*<br/>
 [out] **IUnknown** wskaźnika obiektu nowo utworzony moduł wyliczający.
 
 ### <a name="return-value"></a>Wartość zwracana
@@ -173,5 +173,5 @@ CollType m_coll;
 
 ## <a name="see-also"></a>Zobacz też
 
-[Przykładowe ATLCollections](../../visual-cpp-samples.md)   
+[Przykładowe ATLCollections](../../visual-cpp-samples.md)<br/>
 [Klasa — Przegląd](../../atl/atl-class-overview.md)

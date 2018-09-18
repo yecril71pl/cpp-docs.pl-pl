@@ -15,12 +15,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9acb054c7d991e2d9e98df3ce9bba8c7093f281a
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: e615068580bcc9078959cc6cdd7831d05b5a4acd
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43761485"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46020878"
 ---
 # <a name="understanding-backus-nauer-form-bnf-syntax"></a>Opis składni formularza (BNF) Backus Nauer
 
@@ -54,56 +54,56 @@ Poniżej przedstawiono kilka przykładów składni, aby pomóc Ci zrozumieć, ja
 
 ### <a name="syntax-example-1"></a>Przykład składni 1
 
-```  
-<registry expression> ::= <Add Key>  
+```
+<registry expression> ::= <Add Key>
 ```
 
 Określa, że `registry expression` jest odpowiednikiem `Add Key`.
 
 ### <a name="syntax-example-2"></a>Przykład składni 2
 
-```  
-<registry expression> ::= <Add Key> | <Delete Key>  
+```
+<registry expression> ::= <Add Key> | <Delete Key>
 ```
 
 Określa, że `registry expression` jest równoważny z typem `Add Key` lub `Delete Key`.
 
 ### <a name="syntax-example-3"></a>Przykład składni 3
 
-```  
-<Key Name> ::= '<AlphaNumeric>+'  
+```
+<Key Name> ::= '<AlphaNumeric>+'
 ```
 
 Określa, że `Key Name` jest odpowiednikiem co najmniej jeden `AlphaNumerics`.
 
 ### <a name="syntax-example-4"></a>Przykład składni 4
 
-```  
-<Add Key> ::= [ForceRemove | NoRemove | val]<Key Name>  
+```
+<Add Key> ::= [ForceRemove | NoRemove | val]<Key Name>
 ```
 
 Określa, że `Add Key` jest odpowiednikiem `Key Name`oraz że literały ciągów `ForceRemove`, `NoRemove`, i `val`, są opcjonalne.
 
 ### <a name="syntax-example-5"></a>Przykład składni 5
 
-```  
-<AlphaNumeric> ::= any character not NULL, that is, ASCII 0  
+```
+<AlphaNumeric> ::= any character not NULL, that is, ASCII 0
 ```
 
 Określa, że `AlphaNumeric` jest równoważna do dowolnego znak NIEPUSTY.
 
 ### <a name="syntax-example-6"></a>Przykład składni 6
 
-```  
-val 'testmulti' = m 'String 1\0String 2\0'  
+```
+val 'testmulti' = m 'String 1\0String 2\0'
 ```
 
 Określa, że nazwa klucza `testmulti` wartości wielociągu składa się z `String 1` i `String 2`.
 
 ### <a name="syntax-example-7"></a>Przykład składni 7
 
-```  
-val 'testhex' = d '&H55'  
+```
+val 'testhex' = d '&H55'
 ```
 
 Określa, że nazwa klucza `testhex` ustawiono wartość DWORD na szesnastkowe 55 (dziesiętna 85). Ten format jest zgodna Uwaga **& H** notacji, jak znaleźć w specyfikacji języka Visual Basic.

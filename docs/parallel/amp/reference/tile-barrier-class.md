@@ -22,15 +22,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 62e81b7cab8d7e8774e6ac50c5de5f256d76b232
-ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
+ms.openlocfilehash: a91cbb816deb18d9c4cf7356faa879c09a9d276c
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33686493"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46025207"
 ---
 # <a name="tilebarrier-class"></a>tile_barrier — Klasa
-Synchronizuje wykonywanie wątków, które są uruchomione w grupie wątku (kafelka) przy użyciu `wait` metody. Tylko środowiska uruchomieniowego można utworzyć wystąpienia tej klasy.  
+Synchronizuje wykonywanie wątków uruchomionych w grupie wątku (fragment) za pomocą `wait` metod. Tylko środowisko uruchomieniowe może utworzyć wystąpienie tej klasy.  
   
 ### <a name="syntax"></a>Składnia 
   
@@ -50,10 +50,10 @@ class tile_barrier;
   
 |Nazwa|Opis|  
 |----------|-----------------|  
-|[oczekiwania](#wait)|Powoduje, że wszystkie wątki w grupie wątku (kafelka) można zatrzymać wykonywania, dopóki wszystkie wątki na kafelku zakończyły oczekiwania.|  
-|[wait_with_all_memory_fence](#wait_with_all_memory_fence)|Wykonanie bloki wszystkie wątki na kafelku ukończenie wszystkich uzyskuje dostęp do pamięci i wszystkie wątki na kafelku osiągnęły tego wywołania.|  
-|[wait_with_global_memory_fence](#wait_with_global_memory_fence)|Wykonanie bloki wszystkie wątki na kafelku, dopóki nie zostały ukończone wszystkie uzyskuje dostęp do pamięci globalnej i wszystkie wątki na kafelku osiągnięto tego wywołania.|  
-|[wait_with_tile_static_memory_fence](#wait_with_tile_static_memory_fence)|Blokuje wykonywanie wszystkie wątki na kafelku, aż wszystkie `tile_static` uzyskuje dostęp do pamięci zostały ukończone i wszystkie wątki na kafelku osiągnięto tego wywołania.|  
+|[Czekaj](#wait)|Powoduje, że wszystkie wątki w grupie wątku (fragment), aby zatrzymać wykonywanie, dopóki wszystkie wątki we fragmencie zakończą oczekiwanie.|  
+|[wait_with_all_memory_fence](#wait_with_all_memory_fence)|Blokuje wykonanie wszystkich wątków we fragmencie do momentu zakończenia wszystkich dostępów do pamięci oraz gdy wszystkie wątki we fragmencie osiągną to wywołanie.|  
+|[wait_with_global_memory_fence](#wait_with_global_memory_fence)|Blokuje wykonanie wszystkich wątków we fragmencie do momentu zakończenia wszystkich dostępów do pamięci globalnej oraz wszystkie wątki we fragmencie osiągną to wywołanie.|  
+|[wait_with_tile_static_memory_fence](#wait_with_tile_static_memory_fence)|Blokuje wykonanie wszystkich wątków we fragmencie, aż wszystkie `tile_static` dostępy do pamięci oraz gdy wszystkie wątki we fragmencie osiągną to wywołanie.|  
   
 ## <a name="inheritance-hierarchy"></a>Hierarchia dziedziczenia  
  `tile_barrier`  
@@ -64,7 +64,7 @@ class tile_barrier;
  **Namespace:** współbieżności  
 
 ## <a name="tile_barrier__ctor"></a>  tile_barrier — Konstruktor  
- Inicjuje nowe wystąpienie klasy przez skopiowanie istniejącej.  
+ Inicjuje nowe wystąpienie klasy przez skopiowanie istniejącego.  
   
 ### <a name="syntax"></a>Składnia 
   
@@ -74,11 +74,11 @@ tile_barrier(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `_Other`  
- `tile_barrier` Obiektu do skopiowania.  
+*_Inne*<br/>
+`tile_barrier` Obiektu do skopiowania.  
 
-## <a name="wait"></a>  oczekiwania 
-Powoduje, że wszystkie wątki w grupie wątku (kafelka), można zatrzymać wykonywania, dopóki wszystkie wątki na kafelku zakończyły oczekiwania.  
+## <a name="wait"></a>  Czekaj 
+Powoduje, że wszystkie wątki w grupie wątku (fragment), aby zatrzymać wykonywanie, dopóki wszystkie wątki we fragmencie zakończą oczekiwanie.  
   
 ### <a name="syntax"></a>Składnia 
   
@@ -87,7 +87,7 @@ void wait() const restrict(amp);
 ```    
 
 ## <a name="wait_with_all_memory_fence"></a>  wait_with_all_memory_fence —   
-Wykonanie bloki wszystkie wątki na kafelku, dopóki wszystkie wątki na kafelku osiągnięto tego wywołania. Dzięki temu wszystkie uzyskuje dostęp do pamięci są widoczne dla innych wątków na kafelku wątku czy zostały wykonane w kolejności program.  
+Blokuje wykonanie wszystkich wątków we fragmencie do momentu wszystkie wątki we fragmencie osiągną to wywołanie. Zapewnia to, że wszystkie dostępy do pamięci są widoczne dla innych wątków w pliku wątku i zostały wykonane w porządku program.  
   
 ### <a name="syntax"></a>Składnia 
   
@@ -97,7 +97,7 @@ void wait_with_all_memory_fence() const restrict(amp);
   
 
 ## <a name="wait_with_global_memory_fence"></a>  wait_with_global_memory_fence —   
-Wykonanie bloki wszystkie wątki na kafelku, dopóki wszystkie wątki na kafelku osiągnięto tego wywołania. Dzięki temu wszystkie uzyskuje dostęp do pamięci globalnej są widoczne dla innych wątków na kafelku wątku czy zostały wykonane w kolejności program.  
+Blokuje wykonanie wszystkich wątków we fragmencie do momentu wszystkie wątki we fragmencie osiągną to wywołanie. Zapewnia to, że wszystkie dostępy do pamięci globalnej są widoczne dla innych wątków w pliku wątku i zostały wykonane w porządku program.  
   
 ### <a name="syntax"></a>Składnia 
   
@@ -106,7 +106,7 @@ void wait_with_global_memory_fence() const  restrict(amp);
 ```
 
 ## <a name="wait_with_tile_static_memory_fence"></a>  wait_with_tile_static_memory_fence —   
-Wykonanie bloki wszystkie wątki na kafelku, dopóki wszystkie wątki na kafelku osiągnięto tego wywołania. Gwarantuje to, że `tile_static` pamięci dostępu są widoczne dla innych wątków na kafelku wątku i zostały wykonane w kolejności program.  
+Blokuje wykonanie wszystkich wątków we fragmencie do momentu wszystkie wątki we fragmencie osiągną to wywołanie. Gwarantuje to, że `tile_static` pamięci uzyskuje dostęp do są widoczne dla innych wątków w pliku wątku i zostały wykonane w porządku program.  
   
 ### <a name="syntax"></a>Składnia 
   

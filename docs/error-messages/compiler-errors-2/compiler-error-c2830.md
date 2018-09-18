@@ -1,5 +1,5 @@
 ---
-title: C2830 błąd kompilatora | Dokumentacja firmy Microsoft
+title: Błąd kompilatora C2830 | Dokumentacja firmy Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,14 +16,15 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 31c5fef787328b4e3d34bb49078fc53354598264
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: d54028b50852fec4d525afa9a79f93edb4ae09ac
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33244100"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46033033"
 ---
-# <a name="compiler-error-c2830"></a>C2830 błąd kompilatora
-tylko umieszczenie parametrów dla "operator new" może mieć wartości domyślnej  
-  
-Standardowa parametrów formalnych [nowy operator](../../standard-library/new-operators.md#op_new) nie może mieć wartości domyślne. Tylko parametry umieszczania zdefiniowanych przez użytkownika można określić wartości domyślnych.
+# <a name="compiler-error-c2830"></a>Błąd kompilatora C2830
+
+tylko umieszczenie parametrów dla "operator new" może mieć wartości domyślne
+
+Standardowe Parametry formalne dla [nowy operator](../../standard-library/new-operators.md#op_new) nie może mieć wartości domyślne. Tylko parametry położenia zdefiniowanych przez użytkownika, można określić wartości domyślnych.

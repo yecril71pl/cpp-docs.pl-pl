@@ -1,5 +1,5 @@
 ---
-title: C3008 błąd kompilatora | Dokumentacja firmy Microsoft
+title: Błąd kompilatora C3008 | Dokumentacja firmy Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,30 +16,31 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3d70f065c8cff6154aa706203210973f67b82a73
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: af4a7c5cf4cf80595be0b21f3313dab1cf20acb2
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33245789"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46027248"
 ---
-# <a name="compiler-error-c3008"></a>C3008 błąd kompilatora
-"argument": argument brakuje zamykającego ")" w dyrektywie OpenMP "dyrektywy"  
-  
- OpenMP — dyrektywa, który przyjmuje argument nie ma nawiasu zamykającego.  
-  
- Poniższy przykład generuje C3008:  
-  
-```  
-// C3008.c  
-// compile with: /openmp  
-int main()  
-{  
-   int x, y, z;  
-   #pragma omp parallel shared(x   // C3008  
-   // Try the following line instead:  
-   #pragma omp parallel shared(x)  
-   {  
-   }  
-}  
+# <a name="compiler-error-c3008"></a>Błąd kompilatora C3008
+
+"argument": argumencie brakuje zamykającego ")" w dyrektywie OpenMP "dyrektywa"
+
+Dyrektywy OpenMP, która przyjmuje argument nie miał nawias zamykający.
+
+Poniższy przykład spowoduje wygenerowanie C3008:
+
+```
+// C3008.c
+// compile with: /openmp
+int main()
+{
+   int x, y, z;
+   #pragma omp parallel shared(x   // C3008
+   // Try the following line instead:
+   #pragma omp parallel shared(x)
+   {
+   }
+}
 ```

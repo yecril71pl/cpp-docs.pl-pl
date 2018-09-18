@@ -1,5 +1,5 @@
 ---
-title: C3198 błąd kompilatora | Dokumentacja firmy Microsoft
+title: Błąd kompilatora C3198 | Dokumentacja firmy Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,22 +16,23 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0516e7cae12e544195d157781e6ed86923470420
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: bbb91d6f7b3ef6b8204a5f8bfb753db98ab6f93d
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33250908"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46023387"
 ---
-# <a name="compiler-error-c3198"></a>C3198 błąd kompilatora
-Nieprawidłowe użycie zmiennoprzecinkowych pragm: fenv_access pragma działa tylko w trybie ścisłym  
-  
- [fenv_access](../../preprocessor/fenv-access.md) pragma została użyta w obszarze [/FP](../../build/reference/fp-specify-floating-point-behavior.md) inne niż ustawienie **/FP: precise**.  
-  
- Poniższy przykład generuje C3198:  
-  
-```  
-// C3198.cpp  
-// compile with: /fp:fast  
-#pragma fenv_access(on)   // C3198  
+# <a name="compiler-error-c3198"></a>Błąd kompilatora C3198
+
+Nieprawidłowe użycie zmiennoprzecinkowych pragm: fenv_access pragma działa tylko w trybie ścisłym
+
+[fenv_access](../../preprocessor/fenv-access.md) pragma została użyta w obszarze [/FP](../../build/reference/fp-specify-floating-point-behavior.md) ustawienie inne niż **/FP: precise**.
+
+Poniższy przykład spowoduje wygenerowanie C3198:
+
+```
+// C3198.cpp
+// compile with: /fp:fast
+#pragma fenv_access(on)   // C3198
 ```

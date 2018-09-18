@@ -12,17 +12,19 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ef20e1649b2592c29482dd0204c1daf6ffcb01d8
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 2700d7ffa59a14e96f175e4e81933924a4bf5912
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32381811"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46034283"
 ---
 # <a name="character-constants-and-conditional-inclusion"></a>Znaki stałej i dołączenie warunkowe
-**ANSI 3.8.1** Określa, czy na wartość stałą znak pojedynczego znaku w wyrażeniu stałym, który określa dołączenie warunkowe jest zgodna z wartością tego samego stała znakowa w zestaw znaków wykonania. Określa, czy stała znakowa może mieć wartości ujemnej  
-  
- Zestaw znaków używany w instrukcjach preprocesora jest taka sama jak zestaw znaków wykonania. Preprocesora rozpoznaje wartości ujemnej znaków.  
-  
-## <a name="see-also"></a>Zobacz też  
- [Dyrektywy przetwarzania wstępnego](../c-language/preprocessing-directives.md)
+
+**ANSI 3.8.1** tego, czy wartość stałej znakowej pojedynczych znaków w wyrażeniu stałym, który kontroluje dołączenie warunkowe pasuje do wartości, z tą samą stałą znaku w zestawie znaków wykonywania. Czy stałej znaku mogą mieć wartości ujemnej
+
+Zestaw znaków używanych w instrukcjach preprocesora jest taki sam jak zestaw znaków wykonania. Preprocesor rozpoznaje ujemne wartości.
+
+## <a name="see-also"></a>Zobacz też
+
+[Dyrektywy przetwarzania wstępnego](../c-language/preprocessing-directives.md)

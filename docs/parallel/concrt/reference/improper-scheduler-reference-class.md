@@ -18,15 +18,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 320e0f4560baa5b07c982ca9af6134cf2bfdc292
-ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
+ms.openlocfilehash: adc6467a66163eeef5916580181005cac1a0a4b6
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33695658"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46016940"
 ---
 # <a name="improperschedulerreference-class"></a>improper_scheduler_reference — Klasa
-Ta klasa opisuje wyjątek wywoływany, gdy `Reference` wywoływana jest metoda `Scheduler` obiekt, który jest zamykany, z kontekstu, która nie wchodzi w skład tego harmonogramu.  
+Ta klasa opisuje wyjątek generowany, gdy `Reference` wywoływana jest metoda `Scheduler` obiekt, który jest zamykana, z kontekstu, który nie jest częścią tego harmonogramu.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -63,8 +63,8 @@ improper_scheduler_reference() throw();
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `_Message`  
- Komunikat opisowy błędu.  
+*_Message*<br/>
+Opisowy komunikat dotyczący błędu.  
   
 ## <a name="see-also"></a>Zobacz też  
  [Współbieżność Namespace](concurrency-namespace.md)   

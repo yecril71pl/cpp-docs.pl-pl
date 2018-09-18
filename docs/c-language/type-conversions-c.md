@@ -18,23 +18,25 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e06da627d18fa643cb64fda870c986264c573641
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 606ff0197f73a697aa3dad3bea779de80b060705
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32387242"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46020839"
 ---
 # <a name="type-conversions-c"></a>Konwersje typu (C)
-Konwersje typów są zależne od określonego operatora i typu argumentu lub operatorów. Konwersje typów są wykonywane w następujących przypadkach:  
-  
--   Wartości typu jeden jest przypisany do zmiennej innego typu lub operator konwertuje typ jej argument operacji lub argumentów operacji przed wykonaniem operacji  
-  
--   Gdy wartość jednego typu jawnie jest rzutowane na inny typ  
-  
--   Jeśli wartość jest przekazywany jako argument do funkcji lub typem zostanie zwrócona przez funkcję  
-  
- Znak, krótki liczbą całkowitą lub pola bitowego całkowitą wszystkie podpisana lub nie, lub obiektu typu wyliczenia, można użyć w wyrażeniu wszędzie tam, gdzie można liczbą całkowitą. Jeśli `int` może reprezentować wartości oryginalny typ, a następnie przekonwertować wartości na `int`; w przeciwnym razie jest konwertowana na `unsigned int`. Ten proces jest nazywany "promocję typu całkowitego." Promocje typów całkowitych zachować wartość. Oznacza to, że wartość po promocji gwarantuje to taka sama, jak przed podwyższeniem. Zobacz [popularne konwersje arytmetyczne](../c-language/usual-arithmetic-conversions.md) Aby uzyskać więcej informacji.  
-  
-## <a name="see-also"></a>Zobacz też  
- [Wyrażenia i przydziały](../c-language/expressions-and-assignments.md)
+
+Konwersje typów są zależne od określonego operatora i typu argumentu lub operatorów. Konwersje są wykonywane w następujących przypadkach:
+
+- Wartości typu jeden jest przypisany do zmiennej innego typu lub operator konwertuje typ jej operand lub operandy przed wykonaniem operacji
+
+- Kiedy wartości z jednego typu jest jawnie rzutowane na inny typ.
+
+- Gdy wartość jest przekazywany jako argument do funkcji lub gdy typem jest zwracany przez funkcję
+
+Znak, krótka liczba całkowita lub pola bitowe liczba całkowita, wszystkie podpisana lub nie, lub obiekt typu wyliczenia, może być używany w wyrażeniu, wszędzie tam, gdzie można użyć liczby całkowitej. Jeśli `int` może reprezentować wszystkie wartości oryginalnego typu, a następnie wartość jest konwertowana na `int`; w przeciwnym razie jest konwertowany na `unsigned int`. Ten proces jest nazywany "promocją typu całkowitego". Promocje typów całkowitych zachować wartość. Oznacza to, że wartość po promocji może być taka sama, jak na samym podwyższeniu. Zobacz [zwykle konwersje arytmetyczne](../c-language/usual-arithmetic-conversions.md) Aby uzyskać więcej informacji.
+
+## <a name="see-also"></a>Zobacz też
+
+[Wyrażenia i przydziały](../c-language/expressions-and-assignments.md)

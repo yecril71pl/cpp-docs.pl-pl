@@ -1,5 +1,5 @@
 ---
-title: Błąd cxx0019 programu Expression Evaluator | Dokumentacja firmy Microsoft
+title: Błąd ewaluatora wyrażeń CXX0019 | Dokumentacja firmy Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,28 +17,29 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 52e1679374e105ab06ce245ba68cfe92706689e1
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 3fba76b75c640917b3b99cd41500d682cb1b32f0
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33302493"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46031811"
 ---
 # <a name="expression-evaluator-error-cxx0019"></a>Błąd CXX0019 programu Expression Evaluator
-Zły typ rzutowania  
-  
- Ewaluator wyrażeń C nie można wykonać typu rzutowania zgodnie z zapisem.  
-  
- Ten błąd jest taki sam jak CAN0019.  
-  
-### <a name="to-fix-by-checking-the-following-possible-causes"></a>Aby rozwiązać problem, sprawdzając następujące możliwe przyczyny  
-  
-1.  Określony typ jest nieznany.  
-  
-2.  Znaleziono zbyt wiele poziomów typów wskaźnika. Na przykład typ rzutowania  
-  
-    ```  
-    (char **)h_message  
-    ```  
-  
+
+Zły typ rzutowania
+
+Ewaluator wyrażeń C nie można wykonać rzutowanie, jak zostały napisane typu.
+
+Ten błąd jest taka sama jak CAN0019.
+
+### <a name="to-fix-by-checking-the-following-possible-causes"></a>Aby rozwiązać problem, sprawdzając następujące możliwe przyczyny
+
+1. Określony typ jest nieznany.
+
+1. Wystąpiło zbyt wiele poziomów typów wskaźnika. Na przykład rzutowanie typu
+
+    ```
+    (char **)h_message
+    ```
+
      Nie można obliczyć przez Ewaluator wyrażeń C.

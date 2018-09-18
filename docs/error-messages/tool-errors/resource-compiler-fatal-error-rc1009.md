@@ -16,14 +16,15 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a2f90b127ccee7579304e3963d4edb6ff56ecd95
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 0ceed87c62863f9a5150feebf90f67118656d858
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33317547"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46034112"
 ---
 # <a name="resource-compiler-fatal-error-rc1009"></a>Błąd krytyczny kompilatora zasobów RC1009
-ograniczenie kompilatora: makra są zagnieżdżone zbyt głęboko "makra"  
-  
- Plik przekracza limit kompilatora zasobów dla makra zagnieżdżenia. Sprawdź, czy określony plik źródłowy do Zmniejsz głębokość zagnieżdżenia jego makra.
+
+ograniczenie kompilatora: makra są zagnieżdżone zbyt głęboko "makro"
+
+Plik przekracza limit kompilator zasobów dla makra zagnieżdżania. Sprawdź, czy określony plik źródłowy do Zmniejsz głębokość zagnieżdżenia jego makr.

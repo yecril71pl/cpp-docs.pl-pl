@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2068f3a735a14662e10f00af3fc5f81efd037592
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 56e93bf1485cefed9a44e0e6260358650ab8b296
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43220764"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46032591"
 ---
 # <a name="bitmap-structure"></a>Struktura BITMAP
 **Mapy BITOWEJ** definiuje strukturę, wysokość, szerokość, format koloru i wartości bitowe logicznej mapy bitowej **.**  
@@ -67,19 +67,15 @@ typedef struct tagBITMAP {  /* bm */
   
  Skanowania są zorganizowane w następujący sposób dla monochromatycznych map bitowych o wysokości *n*:  
   
- `Scan 0`  
-  
- `Scan 1`  
-  
- `.`  
-  
- `.`  
-  
- `.`  
-  
- `Scan n-2`  
-  
- `Scan n-1`  
+```
+Scan 0
+Scan 1
+.
+.
+.
+Scan n-2
+Scan n-1
+```
   
  Piksele na urządzeniu monochromatycznym są czarne lub białe. Jeśli odnośny bit w mapie bitowej ma wartość 1, piksel jest włączony (biały). Gdy odnośny bit w mapie bitowej ma wartość 0, piksel jest wyłączony (czarny).  
   

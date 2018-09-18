@@ -20,12 +20,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: be04510f7967b431b7e7c4a3b11aef6f51afe8d8
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 3f09347fdfaaf20e465e5be05ce446dfec449526
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43763230"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46024401"
 ---
 # <a name="cmessagemap-class"></a>Klasa CMessageMap
 
@@ -80,22 +80,22 @@ virtual BOOL ProcessWindowMessage(
 
 ### <a name="parameters"></a>Parametry
 
-*hWnd*  
+*hWnd*<br/>
 [in] Dojście do okna odbierania komunikatów.
 
-*uMsg*  
+*uMsg*<br/>
 [in] Komunikat wysyłany do okna.
 
-*wParam*  
+*wParam*<br/>
 [in] Dodatkowe informacje specyficzne dla wiadomości.
 
-*lParam*  
+*lParam*<br/>
 [in] Dodatkowe informacje specyficzne dla wiadomości.
 
-*lResult*  
+*lResult*<br/>
 [out] Wynik przetwarzania wiadomości.
 
-*dwMsgMapID*  
+*dwMsgMapID*<br/>
 [in] Identyfikator mapy komunikatów, która będzie przetwarzać komunikat. Mapy wiadomości domyślnej, zadeklarowany za pomocą [BEGIN_MSG_MAP](message-map-macros-atl.md#begin_msg_map), jest identyfikowany przez 0. Mapy wiadomości alternatywny zadeklarowane za pomocą [ALT_MSG_MAP(msgMapID)](message-map-macros-atl.md#alt_msg_map), jest identyfikowany przez `msgMapID`.
 
 ### <a name="return-value"></a>Wartość zwracana
@@ -108,7 +108,7 @@ Wywoływane przez procedurę okna z [CContainedWindow](../../atl/reference/ccont
 
 ## <a name="see-also"></a>Zobacz też
 
-[Klasa CDynamicChain](../../atl/reference/cdynamicchain-class.md)   
-[BEGIN_MSG_MAP](message-map-macros-atl.md#begin_msg_map)   
-[ALT_MSG_MAP(msgMapID)](message-map-macros-atl.md#alt_msg_map)   
+[Klasa CDynamicChain](../../atl/reference/cdynamicchain-class.md)<br/>
+[BEGIN_MSG_MAP](message-map-macros-atl.md#begin_msg_map)<br/>
+[ALT_MSG_MAP(msgMapID)](message-map-macros-atl.md#alt_msg_map)<br/>
 [Klasa — Przegląd](../../atl/atl-class-overview.md)

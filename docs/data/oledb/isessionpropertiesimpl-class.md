@@ -25,14 +25,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: eca3e25e1476023ef4b7192efd2ffbd4170e88ca
-ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
+ms.openlocfilehash: b90d89a5a9541f0c3c68efc8031e6cb1dd87ad84
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "42466239"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46019032"
 ---
 # <a name="isessionpropertiesimpl-class"></a>ISessionPropertiesImpl — Klasa
+
 Udostępnia implementację [ISessionProperties](/previous-versions/windows/desktop/ms713721\(v=vs.85\)) interfejsu.  
   
 ## <a name="syntax"></a>Składnia
@@ -45,14 +46,16 @@ class ATL_NO_VTABLE ISessionPropertiesImpl :
 ```  
   
 ### <a name="parameters"></a>Parametry  
- *T*  
- Z klasą pochodną `ISessionPropertiesImpl`.  
+
+*T*<br/>
+Z klasą pochodną `ISessionPropertiesImpl`.  
   
- *PropClass*  
- Klasa definiowanych przez użytkownika właściwości, która domyślnie *T*.  
+*PropClass*<br/>
+Klasa definiowanych przez użytkownika właściwości, która domyślnie *T*.  
 
 ## <a name="requirements"></a>Wymagania  
- **Nagłówek:** atldb.h  
+
+**Nagłówek:** atldb.h  
   
 ## <a name="members"></a>Elementy członkowskie  
   
@@ -64,9 +67,11 @@ class ATL_NO_VTABLE ISessionPropertiesImpl :
 |[Setproperties —](#setproperties)|Ustawia właściwości w grupie właściwości sesji.|  
   
 ## <a name="remarks"></a>Uwagi  
- Obowiązkowego interfejsu w ramach sesji. Ta klasa implementuje właściwości sesji przez wywołanie statycznego funkcją zdefiniowaną przez [Mapa zestawu właściwości](../../data/oledb/begin-propset-map.md). Mapa zestawu właściwości powinny być określone w swojej klasy sesji.  
+
+Obowiązkowego interfejsu w ramach sesji. Ta klasa implementuje właściwości sesji przez wywołanie statycznego funkcją zdefiniowaną przez [Mapa zestawu właściwości](../../data/oledb/begin-propset-map.md). Mapa zestawu właściwości powinny być określone w swojej klasy sesji.  
   
 ## <a name="getproperties"></a> ISessionPropertiesImpl::GetProperties
+
 Zwraca listę wszystkich właściwości w `DBPROPSET_SESSION` grupy właściwości, które obecnie są ustawiane w sesji.  
   
 ### <a name="syntax"></a>Składnia  
@@ -79,9 +84,11 @@ STDMETHOD(GetProperties)(ULONG cPropertyIDSets,
 ```  
   
 #### <a name="parameters"></a>Parametry  
- Zobacz [ISessionProperties::GetProperties](/previous-versions/windows/desktop/ms723643\(v=vs.85\)) w *OLE DB Podręcznik programisty*. 
+
+Zobacz [ISessionProperties::GetProperties](/previous-versions/windows/desktop/ms723643\(v=vs.85\)) w *OLE DB Podręcznik programisty*. 
 
 ## <a name="setproperties"></a> ISessionPropertiesImpl::SetProperties
+
 Ustawia właściwości w `DBPROPSET_SESSION` grupy właściwości.  
   
 ### <a name="syntax"></a>Składnia  
@@ -92,8 +99,10 @@ STDMETHOD(SetProperties)(ULONG cPropertySets,
 ```  
   
 #### <a name="parameters"></a>Parametry  
- Zobacz [ISessionProperties::SetProperties](/previous-versions/windows/desktop/ms714405\(v=vs.85\)) w *OLE DB Podręcznik programisty*.  
+
+Zobacz [ISessionProperties::SetProperties](/previous-versions/windows/desktop/ms714405\(v=vs.85\)) w *OLE DB Podręcznik programisty*.  
   
 ## <a name="see-also"></a>Zobacz też  
- [Szablony dostawców OLE DB](../../data/oledb/ole-db-provider-templates-cpp.md)   
- [Architektura szablonu dostawcy OLE DB](../../data/oledb/ole-db-provider-template-architecture.md)
+
+[Szablony dostawców OLE DB](../../data/oledb/ole-db-provider-templates-cpp.md)<br/>
+[Architektura szablonu dostawcy OLE DB](../../data/oledb/ole-db-provider-template-architecture.md)

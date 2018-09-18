@@ -16,35 +16,36 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 121ec73658527ff03e3cbc4871db78a5d00b50d1
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 5549cdd40b8287f75f80b0e633ff053a23cdecde
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33226434"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46034450"
 ---
 # <a name="fatal-error-c1018"></a>Błąd krytyczny C1018
-Nieoczekiwany #elif  
-  
- `#elif` Dyrektywy znajduje się poza `#if`, `#ifdef`, lub `#ifndef` utworzenia. Użyj `#elif` tylko w jednej z tych konstrukcji.  
-  
- Poniższy przykład generuje C1018:  
-  
-```  
-// C1018.cpp  
-#elif      // C1018  
-#endif  
-  
-int main() {}  
-```  
-  
- Możliwe rozwiązanie:  
-  
-```  
-// C1018b.cpp  
-#if 1  
-#elif  
-#endif  
-  
-int main() {}  
+
+Nieoczekiwany #elif
+
+`#elif` Poza pojawia się dyrektywa `#if`, `#ifdef`, lub `#ifndef` konstruowania. Użyj `#elif` tylko w jednej z tych konstrukcji.
+
+Poniższy przykład spowoduje wygenerowanie C1018:
+
+```
+// C1018.cpp
+#elif      // C1018
+#endif
+
+int main() {}
+```
+
+Możliwe rozwiązanie:
+
+```
+// C1018b.cpp
+#if 1
+#elif
+#endif
+
+int main() {}
 ```

@@ -18,15 +18,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2e718bd1a15df98487d0e9437c217c1750bfa5f5
-ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
+ms.openlocfilehash: 2120f274dd783da00a43106338476c43cc0a9dad
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33695788"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46021749"
 ---
 # <a name="invalidlinktarget-class"></a>invalid_link_target — Klasa
-Ta klasa opisuje wyjątek wywoływany, gdy `link_target` wywołania metody obsługi komunikatów bloku, blok komunikatów nie może połączyć się z obiektem docelowym. Może to być wynikiem większej niż liczba łącza, które jest dozwolone w bloku komunikatów lub próba połączenia określony element docelowy dwukrotnie do tego samego źródła.  
+Ta klasa opisuje wyjątek generowany, gdy `link_target` zostanie wywołana metoda Blok obsługi wiadomości i bloku obsługi wiadomości nie jest w stanie połączyć się z obiektem docelowym. Może to być wynikiem przekroczenie liczby łącza, blok komunikatów jest dozwolone, czy próba połączyć określony element docelowy dwa razy tego samego źródła.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -63,8 +63,8 @@ invalid_link_target() throw();
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `_Message`  
- Komunikat opisowy błędu.  
+*_Message*<br/>
+Opisowy komunikat dotyczący błędu.  
   
 ## <a name="see-also"></a>Zobacz też  
  [Współbieżność Namespace](concurrency-namespace.md)   

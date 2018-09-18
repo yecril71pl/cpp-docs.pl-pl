@@ -23,12 +23,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a3e0ac7cf3a5448a2963aa92c2e275be796c895d
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: c977ecc1094af37c5e2c2e3ed8f27a6f2bdf1c93
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43758342"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46033878"
 ---
 # <a name="iprovideclassinfo2impl-class"></a>Klasa IProvideClassInfo2Impl
 
@@ -41,28 +41,28 @@ template <const CLSID* pcoclsid,
     const IID* psrcid,
     const GUID* plibid = &CAtlModule::m_libid,
     WORD wMajor = 1,
-    WORD wMinor = 0, class tihclass = CComTypeInfoHolder>  
+    WORD wMinor = 0, class tihclass = CComTypeInfoHolder>
 class ATL_NO_VTABLE IProvideClassInfo2Impl : public IProvideClassInfo2
 ```
 
 #### <a name="parameters"></a>Parametry
 
-*pcoclsid*  
+*pcoclsid*<br/>
 Wskaźnik do klasy coclass identyfikator.
 
-*psrcid*  
+*psrcid*<br/>
 Wskaźnik na identyfikator dla domyślnej klasy coclass wychodzące dispinterface.
 
-*plibid*  
+*plibid*<br/>
 Wskaźnik do identyfikatora LIBID biblioteki typów, który zawiera informacje o interfejsie. Domyślnie jest przekazywany biblioteki typów na poziomie serwera.
 
-*wMajor*  
+*wMajor*<br/>
 Wersja główna biblioteki typów. Wartość domyślna to 1.
 
-*wMinor*  
+*wMinor*<br/>
 Wersja pomocnicza biblioteki typów. Wartość domyślna to 0.
 
-*tihclass*  
+*tihclass*<br/>
 Klasa używana do zarządzania informacjami o typie klasy coclass. Wartość domyślna to `CComTypeInfoHolder`.
 
 ## <a name="members"></a>Elementy członkowskie

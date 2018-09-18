@@ -16,18 +16,19 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4b5c2a03c6e8f0ee018a7e3b3449fc0448d179be
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: ab70449232c7177a555700b96d4965c617692e1a
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33227799"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46023571"
 ---
 # <a name="fatal-error-c1208"></a>Błąd krytyczny C1208
-Przydzielanie klas odwołujących na stosie nie jest obsługiwana przez wersję środowiska uruchomieniowego zainstalowany  
-  
- C1208 występuje, gdy masz kompilatora dla bieżącej wersji, ale środowisko uruchomieniowe języka wspólnego z poprzedniej wersji.  
-  
- Niektóre funkcje kompilator może nie działać w poprzedniej wersji czasu wykonywania.  
-  
- Zainstaluj wspólnej wersja środowiska uruchomieniowego CLR, który jest przeznaczony do użytku z kompilujący.
+
+Przydzielanie klas odwołujących na stosie nie jest obsługiwana przez wersję zainstalowanego środowiska uruchomieniowego
+
+C1208 występuje, gdy masz kompilatora dla bieżącej wersji, ale środowisko uruchomieniowe języka wspólnego z poprzedniej wersji.
+
+Niektóre funkcje kompilatora może nie działać w poprzedniej wersji w czasie wykonywania.
+
+Zainstaluj wspólnej wersję środowiska wykonawczego języka jest przeznaczona do użytku z kompilatora.

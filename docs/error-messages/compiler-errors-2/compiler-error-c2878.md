@@ -1,5 +1,5 @@
 ---
-title: C2878 błąd kompilatora | Dokumentacja firmy Microsoft
+title: Błąd kompilatora C2878 | Dokumentacja firmy Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,24 +16,25 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 67da9f25adfa99cf385eeb7795559102ca56b9d6
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 4715d7eb83ffac3272f6187c6b67bae1af97ba64
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33244875"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46021424"
 ---
-# <a name="compiler-error-c2878"></a>C2878 błąd kompilatora
-"Nazwa": przestrzeń nazw lub klasa o tej nazwie nie istnieje  
-  
- Wprowadzone odwołanie do przestrzeni nazw lub klasy, która nie jest zdefiniowana.  
-  
- Poniższy przykład generuje C2878:  
-  
-```  
-// C2878.cpp  
-// compile with: /c  
-namespace A {}  
-namespace B = C;   // C2878 namespace C doesn't exist  
-namespace B = A;   
+# <a name="compiler-error-c2878"></a>Błąd kompilatora C2878
+
+"name": przestrzeń nazw lub klasa o tej nazwie nie istnieje
+
+Wprowadzone odwołanie do przestrzeni nazw lub klasy, która nie jest zdefiniowana.
+
+Poniższy przykład spowoduje wygenerowanie C2878:
+
+```
+// C2878.cpp
+// compile with: /c
+namespace A {}
+namespace B = C;   // C2878 namespace C doesn't exist
+namespace B = A;
 ```

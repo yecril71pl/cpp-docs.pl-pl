@@ -17,71 +17,76 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ce106727fac6b3b9903a53fae64bee94441aa038
-ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
+ms.openlocfilehash: c6590a2f210156711066fac241170103cc5a8830
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43685079"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46034362"
 ---
 # <a name="safebuffers"></a>safebuffers
-**Microsoft Specific**  
-  
- Informuje kompilator, aby nie wstawiać sprawdzeń zabezpieczeń przepełnienia buforu dla funkcji.  
-  
-## <a name="syntax"></a>Składnia  
-  
-```  
-__declspec( safebuffers )  
-```  
-  
-## <a name="remarks"></a>Uwagi  
- **/GS** — opcja kompilatora powoduje, że kompilator testuje przepełnienia buforu, wstawiając sprawdzenia zabezpieczeń na stosie. Rodzaje struktur danych, które są uprawnione do sprawdzania zabezpieczeń opisano w [/GS (Sprawdzanie zabezpieczeń bufora)](../build/reference/gs-buffer-security-check.md). Aby uzyskać więcej informacji dotyczących wykrywania przepełnienia buforu, zobacz [funkcji zabezpieczeń w MSVC](https://blogs.msdn.microsoft.com/vcblog/2017/06/28/security-features-in-microsoft-visual-c/).  
-  
- Przegląd kodu lub zewnętrzna analiza eksperta może pomóc w ustaleniu, czy funkcja jest zabezpieczona przed przepełnieniem buforu. W takim przypadku można pominąć sprawdzanie zabezpieczeń dla funkcji, stosując **__declspec(safebuffers)** — słowo kluczowe do deklaracji funkcji.  
-  
+
+**Microsoft Specific**
+
+Informuje kompilator, aby nie wstawiać sprawdzeń zabezpieczeń przepełnienia buforu dla funkcji.
+
+## <a name="syntax"></a>Składnia
+
+```
+__declspec( safebuffers )
+```
+
+## <a name="remarks"></a>Uwagi
+
+**/GS** — opcja kompilatora powoduje, że kompilator testuje przepełnienia buforu, wstawiając sprawdzenia zabezpieczeń na stosie. Rodzaje struktur danych, które są uprawnione do sprawdzania zabezpieczeń opisano w [/GS (Sprawdzanie zabezpieczeń bufora)](../build/reference/gs-buffer-security-check.md). Aby uzyskać więcej informacji dotyczących wykrywania przepełnienia buforu, zobacz [funkcji zabezpieczeń w MSVC](https://blogs.msdn.microsoft.com/vcblog/2017/06/28/security-features-in-microsoft-visual-c/).
+
+Przegląd kodu lub zewnętrzna analiza eksperta może pomóc w ustaleniu, czy funkcja jest zabezpieczona przed przepełnieniem buforu. W takim przypadku można pominąć sprawdzanie zabezpieczeń dla funkcji, stosując **__declspec(safebuffers)** — słowo kluczowe do deklaracji funkcji.
+
 > [!CAUTION]
->  Sprawdzenia zabezpieczeń buforu zapewniają istotną ochronę i mają niewielki wpływ na wydajność. Dlatego zaleca się, aby nie pomijać ich poza rzadkimi przypadkami, gdy wydajność funkcji odgrywa krytyczną rolę i wiadomo, że funkcja jest bezpieczna.  
-  
-## <a name="inline-functions"></a>Funkcje śródwierszowe  
- A *podstawowa funkcja* służy [inlining](inline-functions-cpp.md) — słowo kluczowe, aby wstawić kopię *funkcji pomocniczej*. Jeśli **__declspec(safebuffers)** — słowo kluczowe jest stosowany do funkcji, Detekcja przepełnienia buforu jest pomijana dla tej funkcji. Jednakże wbudowanie wpływa na **__declspec(safebuffers)** — słowo kluczowe w następujący sposób.  
-  
- Załóżmy, że **/GS** — opcja kompilatora jest określona dla obu funkcji, ale podstawowa funkcja określa **__declspec(safebuffers)** — słowo kluczowe. Struktury danych w funkcji pomocniczej uprawniają ją do sprawdzania zabezpieczeń i funkcja nie pomija tych sprawdzeń. W takim przypadku:  
-  
--   Określ [__forceinline](inline-functions-cpp.md) — słowo kluczowe dla funkcji pomocniczej w celu wymuszenia aby kompilator wbudował tę funkcję niezależnie od optymalizacji kompilatora.  
-  
--   Ponieważ funkcja pomocnicza jest uprawniona do sprawdzenia zabezpieczeń, kontroli zabezpieczeń są również stosowane do funkcji podstawowej, nawet, jeśli Określa on **__declspec(safebuffers)** — słowo kluczowe.  
-  
-## <a name="example"></a>Przykład  
- Poniższy kod przedstawia sposób użycia **__declspec(safebuffers)** — słowo kluczowe.  
-  
-```cpp 
-// compile with: /c /GS  
-typedef struct {  
-    int x[20];  
-} BUFFER;  
-static int checkBuffers() {  
-    BUFFER cb;  
-    // Use the buffer...  
-    return 0;  
-};  
-static __declspec(safebuffers)   
-    int noCheckBuffers() {  
-    BUFFER ncb;  
-    // Use the buffer...  
-    return 0;  
-}  
-int wmain() {  
-    checkBuffers();  
-    noCheckBuffers();  
-    return 0;  
-}  
-```  
-  
- **END specyficzny dla Microsoft**  
-  
-## <a name="see-also"></a>Zobacz także  
- [__declspec](../cpp/declspec.md)   
- [Keywords](../cpp/keywords-cpp.md)   
- [w tekście, __inline, \__forceinline](inline-functions-cpp.md)   
- [strict_gs_check](../preprocessor/strict-gs-check.md)
+>  Sprawdzenia zabezpieczeń buforu zapewniają istotną ochronę i mają niewielki wpływ na wydajność. Dlatego zaleca się, aby nie pomijać ich poza rzadkimi przypadkami, gdy wydajność funkcji odgrywa krytyczną rolę i wiadomo, że funkcja jest bezpieczna.
+
+## <a name="inline-functions"></a>Funkcje śródwierszowe
+
+A *podstawowa funkcja* służy [inlining](inline-functions-cpp.md) — słowo kluczowe, aby wstawić kopię *funkcji pomocniczej*. Jeśli **__declspec(safebuffers)** — słowo kluczowe jest stosowany do funkcji, Detekcja przepełnienia buforu jest pomijana dla tej funkcji. Jednakże wbudowanie wpływa na **__declspec(safebuffers)** — słowo kluczowe w następujący sposób.
+
+Załóżmy, że **/GS** — opcja kompilatora jest określona dla obu funkcji, ale podstawowa funkcja określa **__declspec(safebuffers)** — słowo kluczowe. Struktury danych w funkcji pomocniczej uprawniają ją do sprawdzania zabezpieczeń i funkcja nie pomija tych sprawdzeń. W takim przypadku:
+
+- Określ [__forceinline](inline-functions-cpp.md) — słowo kluczowe dla funkcji pomocniczej w celu wymuszenia aby kompilator wbudował tę funkcję niezależnie od optymalizacji kompilatora.
+
+- Ponieważ funkcja pomocnicza jest uprawniona do sprawdzenia zabezpieczeń, kontroli zabezpieczeń są również stosowane do funkcji podstawowej, nawet, jeśli Określa on **__declspec(safebuffers)** — słowo kluczowe.
+
+## <a name="example"></a>Przykład
+
+Poniższy kod przedstawia sposób użycia **__declspec(safebuffers)** — słowo kluczowe.
+
+```cpp
+// compile with: /c /GS
+typedef struct {
+    int x[20];
+} BUFFER;
+static int checkBuffers() {
+    BUFFER cb;
+    // Use the buffer...
+    return 0;
+};
+static __declspec(safebuffers)
+    int noCheckBuffers() {
+    BUFFER ncb;
+    // Use the buffer...
+    return 0;
+}
+int wmain() {
+    checkBuffers();
+    noCheckBuffers();
+    return 0;
+}
+```
+
+**END specyficzny dla Microsoft**
+
+## <a name="see-also"></a>Zobacz także
+
+[__declspec](../cpp/declspec.md)<br/>
+[Słowa kluczowe](../cpp/keywords-cpp.md)<br/>
+[w tekście, __inline, \__forceinline](inline-functions-cpp.md)<br/>
+[strict_gs_check](../preprocessor/strict-gs-check.md)

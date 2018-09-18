@@ -16,14 +16,15 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 99d89b217e5cca5abc4a352a05722bd4d0d53a48
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 1fd83298e9a1afcaa318c8bbc333b77f3b2da61c
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33317560"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46019918"
 ---
 # <a name="resource-compiler-fatal-error-rc1121"></a>Błąd krytyczny kompilatora zasobów RC1121
-We/Wy błąd podczas odczytu pliku  
-  
- Kompilator zasobów nie może odczytać pliku. Sprawdź, czy dysk zawierający plik jest dostępny i że plik jest nieprawidłowy.
+
+Operacje We/Wy błąd podczas odczytywania pliku
+
+Kompilator zasobów nie może odczytać pliku. Sprawdź, czy dysk zawierający plik jest dostępny i czy plik jest nieprawidłowy.

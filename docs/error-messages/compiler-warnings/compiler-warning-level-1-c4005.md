@@ -1,5 +1,5 @@
 ---
-title: Kompilatora (poziom 1) ostrzeżenie C4005 | Dokumentacja firmy Microsoft
+title: Kompilator ostrzeżenie (poziom 1) C4005 | Dokumentacja firmy Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,42 +16,43 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3a06ea88dab6ac7e89f7d53351b54593fd7bd232
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 8be172086e316c991f461b3ac42f58739801cfa7
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33275379"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46022971"
 ---
-# <a name="compiler-warning-level-1-c4005"></a>Kompilator C4005 ostrzegawcze (poziom 1)
-"identyfikator": zmiana definicji makra  
-  
- Identyfikator makro została zdefiniowana dwukrotnie. Kompilator używa druga definicja makra.  
-  
-### <a name="to-fix-by-checking-the-following-possible-causes"></a>Aby rozwiązać problem, sprawdzając następujące możliwe przyczyny  
-  
-1.  Definiowanie makr w wierszu polecenia, a w kodzie z `#define` dyrektywy.  
-  
-2.  Makra zaimportowane z plików dołączanych.  
-  
-### <a name="to-fix-by-using-the-following-possible-solutions"></a>Aby rozwiązać problem przy użyciu następujących możliwych rozwiązań  
-  
-1.  Usuń jedną z definicji.  
-  
-2.  Użyj [#undef](../../preprocessor/hash-undef-directive-c-cpp.md) dyrektywy przed druga definicja.  
-  
- Poniższy przykład generuje C4005:  
-  
-```  
-// C4005.cpp  
-// compile with: /W1 /EHsc  
-#include <iostream>  
-using namespace std;  
-  
-#define TEST "test1"  
-#define TEST "test2"   // C4005 delete or rename to resolve the warning  
-  
-int main() {  
-   cout << TEST << endl;  
-}  
+# <a name="compiler-warning-level-1-c4005"></a>Kompilator ostrzeżenie (poziom 1) C4005
+
+'Identyfikator': ponowna definicja makra
+
+Identyfikator — makro jest zdefiniowany jako dwa razy. Kompilator używa drugiego definicji makra.
+
+### <a name="to-fix-by-checking-the-following-possible-causes"></a>Aby rozwiązać problem, sprawdzając następujące możliwe przyczyny
+
+1. Definiowanie makra w wierszu polecenia i w kodzie adresem `#define` dyrektywy.
+
+1. Makra zaimportowane z plików dołączanych.
+
+### <a name="to-fix-by-using-the-following-possible-solutions"></a>Aby rozwiązać problem, korzystając z poniższymi możliwymi rozwiązaniami
+
+1. Usuń jedną z definicji.
+
+1. Użyj [#undef](../../preprocessor/hash-undef-directive-c-cpp.md) dyrektywy przed definicją drugiego.
+
+Poniższy przykład spowoduje wygenerowanie C4005:
+
+```
+// C4005.cpp
+// compile with: /W1 /EHsc
+#include <iostream>
+using namespace std;
+
+#define TEST "test1"
+#define TEST "test2"   // C4005 delete or rename to resolve the warning
+
+int main() {
+   cout << TEST << endl;
+}
 ```

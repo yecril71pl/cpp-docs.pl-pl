@@ -16,15 +16,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c2467c295c4f2724ec6d258e844f2bdaa84cfe29
-ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
+ms.openlocfilehash: 83e1920ab2cb44815e9547e4f7f4a07999c1c588
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33692246"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46020956"
 ---
 # <a name="if-openmp"></a>if (OpenMP)
-Określa, czy pętlę powinny być wykonywane równolegle lub kolei.  
+Określa, czy pętla powinny być wykonywane równolegle lub w seryjny.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -32,14 +32,13 @@ Określa, czy pętlę powinny być wykonywane równolegle lub kolei.
 if(expression)  
 ```  
   
-## <a name="remarks"></a>Uwagi  
- w przypadku gdy  
+### <a name="parameters"></a>Parametry
   
- `expression`  
- Wyrażenie całkowite powodujący, jeśli ją zwraca wartość true (niezerowej), kod w równoległego regionu do wykonywania równoległego. Jeśli wyrażenie ma wartość false (zero), równoległego regionu jest wykonywany w seryjny (przez pojedynczy wątek).  
+*Wyrażenie*<br/>
+Wyrażenie typu całkowitego, jeśli ma wartość true (niezerową) powoduje, że kod w równoległego regionu można wykonać równolegle. Jeśli wyrażenie ma wartość false (zero), równoległego regionu jest wykonywany w seryjny (przez pojedynczy wątek).  
   
 ## <a name="remarks"></a>Uwagi  
- `if` ma zastosowanie do następujących dyrektyw:  
+ `if` mają zastosowanie do następujących dyrektywach:  
   
 -   [parallel](../../../parallel/openmp/reference/parallel.md)  
   

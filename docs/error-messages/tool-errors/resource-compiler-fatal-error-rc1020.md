@@ -16,16 +16,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c90d3a5bb880ad10dcc4fb24d31fdc107f898840
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: fe19b079a0407f07796bd8141db2cbedaf02cbbb
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33320346"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46032968"
 ---
 # <a name="resource-compiler-fatal-error-rc1020"></a>Błąd krytyczny kompilatora zasobów RC1020
-Nieoczekiwany "#endif"  
-  
- `#endif` Dyrektywy pojawił się bez odpowiadającego mu `#if`, **#ifdef**, lub **#ifndef** dyrektywy.  
-  
- Upewnij się, że istnieje pasujący `#endif` dla każdego `#if`, **#ifdef**, i **#ifndef** instrukcji.
+
+Nieoczekiwany #endif
+
+`#endif` Dyrektywy pojawiły się bez odpowiadającego mu `#if`, **#ifdef**, lub **#ifndef** dyrektywy.
+
+Upewnij się, że jest pasujący obiekt typu `#endif` dla każdego `#if`, **#ifdef**, i **#ifndef** instrukcji.

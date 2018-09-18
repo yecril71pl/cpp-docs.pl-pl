@@ -1,5 +1,5 @@
 ---
-title: Kompilatora (poziom 3) ostrzeżenie C4723 | Dokumentacja firmy Microsoft
+title: Kompilator ostrzeżenie (poziom 3) C4723 | Dokumentacja firmy Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,18 +16,19 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0c5f91bbdc60ab1901c4afe4d5bea9f3258692ba
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 9ca6715e26705632dc3187cb6db7deed8636cd82
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33296617"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46033150"
 ---
-# <a name="compiler-warning-level-3-c4723"></a>Kompilator C4723 ostrzegawcze (poziom 3)
-potencjalne dzielenie przez 0  
-  
- Drugi argument operacji w ramach operacji dzielenia obliczone na zero w czasie kompilacji, podając niezdefiniowane wyniki.  
-  
- To ostrzeżenie zostanie wyświetlone tylko w przypadku używania [/Og](../../build/reference/og-global-optimizations.md) lub które sugeruje /Og opcji optymalizacji.  
-  
- Kompilator mogło wygenerowane zerowy argument.
+# <a name="compiler-warning-level-3-c4723"></a>Kompilator ostrzeżenie (poziom 3) C4723
+
+potencjalne dzielenie przez 0
+
+Drugi argument operacji dzielenia oceniane zero w czasie kompilacji, zapewniając niezdefiniowane wyniki.
+
+To ostrzeżenie zostanie wyświetlone tylko wtedy, gdy za pomocą [/Og](../../build/reference/og-global-optimizations.md) lub kojarzący /Og opcji optymalizacji.
+
+Generowane przez kompilator może mieć zero operand.

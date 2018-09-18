@@ -16,28 +16,29 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5d5a4598a83c448a36750dc1aac6b4a22ef3513f
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: 6ac5fb523e1b1340d031cd5256995568b9b9e2a2
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45704356"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46034128"
 ---
 # <a name="switch-statement-c"></a>switch — instrukcja (C)
-`switch` i **przypadek** instrukcji pomocy złożonych warunkowe i rozgałęzień operacje kontroli. `switch` Instrukcji przekazuje sterowanie do instrukcji w swojej treści.  
-  
+
+`switch` i **przypadek** instrukcji pomocy złożonych warunkowe i rozgałęzień operacje kontroli. `switch` Instrukcji przekazuje sterowanie do instrukcji w swojej treści.
+
 ## <a name="syntax"></a>Składnia
 
 *Wybór instrukcji*:<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**Przełącz (** *wyrażenie* **)** *— instrukcja*  
-  
+&nbsp;&nbsp;&nbsp;&nbsp;**Przełącz (** *wyrażenie* **)** *— instrukcja*
+
 *etykietą instrukcji*:<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;**przypadek***wyrażenie_stałe***:***— instrukcja*<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**domyślne:***— instrukcja*  
-  
-Kontrola przechodzi do instrukcji, których **przypadek** *wyrażenie_stałe* odpowiada wartości **przełącznika (** *wyrażenie* **)**. `switch` Instrukcji może zawierać dowolną liczbę **przypadek** wystąpień, ale nie dwie stałe wielkości liter, w tym samym `switch` instrukcja może mieć taką samą wartość. Wykonanie treści instrukcji rozpoczyna się od wybranej instrukcji i jest kontynuowane do czasu zakończenia treści lub do momentu **podziału** instrukcji przenosi sterowanie na zewnątrz treści.  
-  
-Korzystanie z `switch` instrukcji zwykle wygląda następująco:  
+&nbsp;&nbsp;&nbsp;&nbsp;**domyślne:***— instrukcja*
+
+Kontrola przechodzi do instrukcji, których **przypadek** *wyrażenie_stałe* odpowiada wartości **przełącznika (** *wyrażenie* **)**. `switch` Instrukcji może zawierać dowolną liczbę **przypadek** wystąpień, ale nie dwie stałe wielkości liter, w tym samym `switch` instrukcja może mieć taką samą wartość. Wykonanie treści instrukcji rozpoczyna się od wybranej instrukcji i jest kontynuowane do czasu zakończenia treści lub do momentu **podziału** instrukcji przenosi sterowanie na zewnątrz treści.
+
+Korzystanie z `switch` instrukcji zwykle wygląda następująco:
 
 ```C
 switch ( expression )
@@ -96,29 +97,29 @@ switch( i )
 }
 ```
 
-W tym przykładzie **podziału** instrukcji, następuje po każdej instrukcji z `switch` treści. **Podziału** instrukcji wymusza wyjście z treści instrukcji po wykonaniu jednej instrukcji. Jeśli `i` jest równy -1, tylko `n` jest zwiększany. **Podziału** następującej po instrukcji `n++;` powoduje, że kontrola wykonywania do przekazania poza treści instrukcji z pominięciem pozostałe instrukcje. Podobnie jeśli `i` jest równa 0, tylko `z` jest zwiększany; Jeśli `i` jest równa 1, tylko `p` jest zwiększany. Końcowe **podziału** instrukcja nie jest to niezbędne, ponieważ kontrola przechodzi z treści na końcu instrukcji złożonej, ale jest uwzględniony w celu zachowania spójności.  
-  
-Pojedynczej instrukcji może wykonywać wiele **przypadek** etykiet, jak w poniższym przykładzie pokazano:  
-  
+W tym przykładzie **podziału** instrukcji, następuje po każdej instrukcji z `switch` treści. **Podziału** instrukcji wymusza wyjście z treści instrukcji po wykonaniu jednej instrukcji. Jeśli `i` jest równy -1, tylko `n` jest zwiększany. **Podziału** następującej po instrukcji `n++;` powoduje, że kontrola wykonywania do przekazania poza treści instrukcji z pominięciem pozostałe instrukcje. Podobnie jeśli `i` jest równa 0, tylko `z` jest zwiększany; Jeśli `i` jest równa 1, tylko `p` jest zwiększany. Końcowe **podziału** instrukcja nie jest to niezbędne, ponieważ kontrola przechodzi z treści na końcu instrukcji złożonej, ale jest uwzględniony w celu zachowania spójności.
+
+Pojedynczej instrukcji może wykonywać wiele **przypadek** etykiet, jak w poniższym przykładzie pokazano:
+
 ```C
-case 'a' :  
-case 'b' :  
-case 'c' :  
-case 'd' :  
-case 'e' :  
-case 'f' :  hexcvt(c);  
-```  
-  
-W tym przykładzie Jeśli *wyrażenie_stałe* jest równa dowolnej litery między `'a'` i `'f'`, `hexcvt` funkcja jest wywoływana.  
-  
-**Microsoft Specific**  
-  
-Microsoft C nie ogranicza liczby przypadków wartości w `switch` instrukcji. Liczba jest ograniczona jedynie ilością dostępnej pamięci. ANSI C wymaga co najmniej 257 etykiet wielkości liter jest dozwolone w `switch` instrukcji.  
-  
-Wartość domyślna Microsoft C to, że są włączone rozszerzenia Microsoft. Aby wyłączyć te rozszerzenia, należy użyć /Za — opcja kompilatora.  
-  
-**END specyficzny dla Microsoft**  
-  
+case 'a' :
+case 'b' :
+case 'c' :
+case 'd' :
+case 'e' :
+case 'f' :  hexcvt(c);
+```
+
+W tym przykładzie Jeśli *wyrażenie_stałe* jest równa dowolnej litery między `'a'` i `'f'`, `hexcvt` funkcja jest wywoływana.
+
+**Microsoft Specific**
+
+Microsoft C nie ogranicza liczby przypadków wartości w `switch` instrukcji. Liczba jest ograniczona jedynie ilością dostępnej pamięci. ANSI C wymaga co najmniej 257 etykiet wielkości liter jest dozwolone w `switch` instrukcji.
+
+Wartość domyślna Microsoft C to, że są włączone rozszerzenia Microsoft. Aby wyłączyć te rozszerzenia, należy użyć /Za — opcja kompilatora.
+
+**END specyficzny dla Microsoft**
+
 ## <a name="see-also"></a>Zobacz też
 
 [switch, instrukcja (C++)](../cpp/switch-statement-cpp.md)

@@ -23,33 +23,36 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0d4292ae29602b5890a167a3e2c29e460d65373f
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 1a367522c2f22007abcf24cdf74ada467d94b104
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32407967"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46032825"
 ---
 # <a name="setvbuf-constants"></a>setvbuf — Stałe
-## <a name="syntax"></a>Składnia  
-  
-```  
-  
-#include <stdio.h>  
-  
-```  
-  
-## <a name="remarks"></a>Uwagi  
- Te stałe odpowiada typowi buforu dla `setvbuf`.  
-  
- Możliwe wartości są podane w następujących stałych manifestu:  
-  
-|Stała|Znaczenie|  
-|--------------|-------------|  
-|`_IOFBF`|Pełne buforowanie: bufor określony w wywołaniu `setvbuf` jest używany, a jego rozmiar jest jako określone w `setvbuf` wywołania. Jeśli jest wskaźnika buforu **NULL**, automatycznie przydzielonego bufor określony rozmiar jest używany.|  
-|`_IOLBF`|Taki sam jak `_IOFBF`.|  
-|`_IONBF`|Bufor nie jest używane niezależnie od argumentów w wywołaniu `setvbuf`.|  
-  
-## <a name="see-also"></a>Zobacz też  
- [setbuf](../c-runtime-library/reference/setbuf.md)   
- [Stałe globalne](../c-runtime-library/global-constants.md)
+
+## <a name="syntax"></a>Składnia
+
+```
+
+#include <stdio.h>
+
+```
+
+## <a name="remarks"></a>Uwagi
+
+Te stałe reprezentuje typ bufor w poszukiwaniu `setvbuf`.
+
+Możliwe wartości są podane przy użyciu następujących stałych manifestu:
+
+|Stała|Znaczenie|
+|--------------|-------------|
+|`_IOFBF`|Pełne buforowanie: bufor określony w wywołaniu `setvbuf` jest używana, a jego rozmiar jest jako określone w `setvbuf` wywołania. Jeśli wskaźnik buforu jest **NULL**, automatycznie przydzielonego buforu określony rozmiar jest używany.|
+|`_IOLBF`|Taki sam jak `_IOFBF`.|
+|`_IONBF`|Bufor nie jest używany, niezależnie od argumentów w wywołaniu `setvbuf`.|
+
+## <a name="see-also"></a>Zobacz też
+
+[setbuf](../c-runtime-library/reference/setbuf.md)<br/>
+[Stałe globalne](../c-runtime-library/global-constants.md)

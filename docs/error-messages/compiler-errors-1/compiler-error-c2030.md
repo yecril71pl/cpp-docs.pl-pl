@@ -16,16 +16,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ceccc1088e32382167e7e6400360b30de07fde1d
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: b0c5849c372cc4c7ebf27dbe010e65d406ad1ab1
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33167895"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46032905"
 ---
 # <a name="compiler-error-c2030"></a>Błąd kompilatora C2030
-destruktor z ułatwieniami dostępu z "protected private" nie może być elementem członkowskim klasy zadeklarowanej jako "sealed"  
-  
- Klasa środowiska uruchomieniowego systemu Windows jest zadeklarowany jako `sealed` nie może mieć destruktora prywatnej chronionych. Tylko publiczne wirtualnego i prywatnych destruktory-virtual są dozwolone w typach zapieczętowanych. Aby uzyskać więcej informacji, zobacz [Ref klas i struktur](../../cppcx/ref-classes-and-structs-c-cx.md).  
-  
- Aby naprawić ten błąd, zmień dostępność elementu destruktor.
+
+destruktor z dostępnością "protected private" nie może być składową klasy zadeklarowanej jako "sealed"
+
+Klasy Windows Runtime zadeklarowane jako `sealed` nie może mieć chronionego destruktora prywatnych. Publiczny wirtualny i prywatnych — wirtualne destruktory są dozwolone tylko w typach zapieczętowanych. Aby uzyskać więcej informacji, zobacz [klasy i struktury odwołania](../../cppcx/ref-classes-and-structs-c-cx.md).
+
+Aby naprawić ten błąd, zmień dostępność elementu destruktor.

@@ -35,29 +35,22 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c2780697c1a50e15e170f2096a2841e2c50d844a
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: 107b759345e221ad8100f11d97b79c5bd9fd2b65
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45724688"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46031449"
 ---
 # <a name="try-except-statement"></a>try-except — instrukcja
 
 **Microsoft Specific**
 
-**Spróbuj — z wyjątkiem** instrukcja jest rozszerzeniem firmy Microsoft do C i języków C++, które obsługuje obsługę wyjątków strukturalnych.  
+**Spróbuj — z wyjątkiem** instrukcja jest rozszerzeniem firmy Microsoft do C i języków C++, które obsługuje obsługę wyjątków strukturalnych.
 
-## <a name="syntax"></a>Składnia  
-  
-> **__try**   
-> {  
->    Kod chronionych  
-> }  
-> **__except** ( *wyrażenie* )  
-> {  
->    Kod obsługi wyjątków  
-> }  
+## <a name="syntax"></a>Składnia
+
+> **__try** {/ / chronionych kodu} **__except** ( *wyrażenie* ) {/ / kod procedury obsługi wyjątków}
 
 ## <a name="remarks"></a>Uwagi
 
@@ -74,7 +67,7 @@ Instrukcja złożona po **__try** klauzula jest ciałem sekcji chronionej. Instr
 
 1. Sekcja chroniona jest wykonywana.
 
-2. Jeśli nie wystąpi wyjątek podczas wykonywania sekcji chronionej, wykonywanie jest kontynuowane na instrukcji znajdującej się po **__except** klauzuli.  
+2. Jeśli nie wystąpi wyjątek podczas wykonywania sekcji chronionej, wykonywanie jest kontynuowane na instrukcji znajdującej się po **__except** klauzuli.
 
 3. Jeśli wystąpi wyjątek podczas wykonywania sekcji chronionej lub w dowolnej procedurze, wywołuje sekcję chronioną, **__except** *wyrażenie* (o nazwie *filtru* wyrażenia) jest obliczane i wartość określa sposób obsługi wyjątku. Istnieją trzy wartości:
 
@@ -88,10 +81,10 @@ Ponieważ **__except** wyrażenie jest obliczane jak wyrażenie C, zatem zostaje
 
 Każda aplikacja może mieć własną obsługę wyjątków.
 
-Nie jest prawidłową realizowanie **__try** instrukcji, ale dozwolone jest wyjście z niej. Obsługa wyjątków nie jest wywoływana, gdy proces zostanie zakończony w środku wykonywania wyrażenia **spróbuj — z wyjątkiem** instrukcji.  
-  
-Aby uzyskać więcej informacji, zobacz artykuł z bazy wiedzy Q315937: HOW TO: Trap Stack Overflow in a Visual C++ Application.  
-  
+Nie jest prawidłową realizowanie **__try** instrukcji, ale dozwolone jest wyjście z niej. Obsługa wyjątków nie jest wywoływana, gdy proces zostanie zakończony w środku wykonywania wyrażenia **spróbuj — z wyjątkiem** instrukcji.
+
+Aby uzyskać więcej informacji, zobacz artykuł z bazy wiedzy Q315937: HOW TO: Trap Stack Overflow in a Visual C++ Application.
+
 ## <a name="the-leave-keyword"></a>Słowo kluczowe __leave
 
 **__Leave** — słowo kluczowe jest prawidłowy tylko wewnątrz sekcji chronionej **spróbuj — z wyjątkiem** instrukcji, a jego efektem jest przeskoczenie do końca sekcji chronionej. Wykonywanie jest kontynuowane po pierwszej instrukcji następującej po programie obsługi wyjątków.
@@ -106,12 +99,12 @@ Strukturalna obsługa wyjątków zapewnia dwie funkcje wewnętrzne, które są d
 
 Wewnętrzna funkcja `GetExceptionInformation` zwraca wskaźnik do struktury zawierającej dodatkowe informacje o wyjątku. Za pomocą tego wskaźnika można uzyskać dostęp do stanu maszyny w momencie wystąpienia wyjątku sprzętowego. Struktura jest następująca:
 
-```cpp  
+```cpp
 typedef struct _EXCEPTION_POINTERS {
     PEXCEPTION_RECORD ExceptionRecord;
     PCONTEXT ContextRecord;
-} EXCEPTION_POINTERS, *PEXCEPTION_POINTERS; 
-```  
+} EXCEPTION_POINTERS, *PEXCEPTION_POINTERS;
+```
 
 Typy wskaźników `PEXCEPTION_RECORD` i `PCONTEXT` są zdefiniowane w dołączanym pliku \<opis pliku winnt.h >, a `_EXCEPTION_RECORD` i `_CONTEXT` są zdefiniowane w dołączanym pliku \<excpt.h >
 
@@ -123,10 +116,10 @@ excpt.h definiuje kilka nazw alternatywnych dla funkcji wewnętrznych:
 
 `GetExceptionCode` jest odpowiednikiem `_exception_code`
 
- `GetExceptionInformation` jest odpowiednikiem `_exception_info`
+`GetExceptionInformation` jest odpowiednikiem `_exception_info`
 
- `AbnormalTermination` jest odpowiednikiem `_abnormal_termination`
-  
+`AbnormalTermination` jest odpowiednikiem `_abnormal_termination`
+
 ## <a name="example"></a>Przykład
 
 ```cpp
@@ -176,24 +169,25 @@ int main()
     puts("world");
 }
 ```
-  
-## <a name="output"></a>Dane wyjściowe  
-  
-```Output 
-hello  
-in try  
-in try  
-in filter.  
-caught AV as expected.  
-in finally. termination:  
-        abnormal  
-in except  
-world  
-```  
 
-**END specyficzny dla Microsoft**  
+## <a name="output"></a>Dane wyjściowe
+
+```Output
+hello
+in try
+in try
+in filter.
+caught AV as expected.
+in finally. termination:
+        abnormal
+in except
+world
+```
+
+**END specyficzny dla Microsoft**
 
 ## <a name="see-also"></a>Zobacz także
- [Pisanie programu do obsługi wyjątków](../cpp/writing-an-exception-handler.md)   
- [Obsługa wyjątków strukturalnych (C/C++)](../cpp/structured-exception-handling-c-cpp.md)   
- [Słowa kluczowe](../cpp/keywords-cpp.md)
+
+[Pisanie programu do obsługi wyjątku](../cpp/writing-an-exception-handler.md)<br/>
+[Obsługa wyjątków strukturalnych (C/C++)](../cpp/structured-exception-handling-c-cpp.md)<br/>
+[Słowa kluczowe](../cpp/keywords-cpp.md)

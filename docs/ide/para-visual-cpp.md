@@ -18,15 +18,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1ebf50e4672ee2a3398f6c484c42f8e36f231169
-ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
+ms.openlocfilehash: 00110a0e821077231c0f386a0656dc2214b0267d
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "33325120"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46034723"
 ---
 # <a name="ltparagt-visual-c"></a>&lt;para&gt; (Visual C++)
-\<Para > tag jest używany wewnątrz tagu, takich jak [ \<podsumowania >](../ide/summary-visual-cpp.md), [ \<Uwagi >](../ide/remarks-visual-cpp.md), lub [ \<zwraca >](../ide/returns-visual-cpp.md)i umożliwia dodawanie struktury w tekście.  
+\<Para > tag jest przeznaczona do użytku wewnątrz znacznik, taki jak [ \<podsumowania >](../ide/summary-visual-cpp.md), [ \<Uwagi >](../ide/remarks-visual-cpp.md), lub [ \<zwraca >](../ide/returns-visual-cpp.md)i umożliwia dodawanie struktury w tekście.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -35,14 +35,14 @@ ms.locfileid: "33325120"
 ```  
   
 #### <a name="parameters"></a>Parametry  
- `content`  
- Tekst akapitu.  
+*Zawartość*<br/>
+Tekst akapitu.  
   
 ## <a name="remarks"></a>Uwagi  
- Kompiluj z użyciem [/doc](../build/reference/doc-process-documentation-comments-c-cpp.md) na przetwarzanie komentarzy dokumentacji do pliku.  
+ Kompiluj przy użyciu [/doc](../build/reference/doc-process-documentation-comments-c-cpp.md) do Przetwarzaj komentarze dokumentacji do pliku.  
   
 ## <a name="example"></a>Przykład  
- Zobacz [ \<podsumowania >](../ide/summary-visual-cpp.md) przykład przy użyciu \<para >.  
+ Zobacz [ \<podsumowania >](../ide/summary-visual-cpp.md) na przykład za pomocą \<para >.  
   
 ## <a name="see-also"></a>Zobacz też  
  [Dokumentacja XML](../ide/xml-documentation-visual-cpp.md)

@@ -27,12 +27,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0934a3c6690b75ffa2eca18f1fd38662bc2a9fd9
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 9e747386c37e760793ceaa0396f217304cbe621d
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43756993"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46022685"
 ---
 # <a name="ccomautothreadmodule-class"></a>Klasa CComAutoThreadModule
 
@@ -44,13 +44,13 @@ Począwszy od ATL 7.0 `CComAutoThreadModule` jest przestarzała: zobacz [klasy m
 ## <a name="syntax"></a>Składnia
 
 ```
-template <class ThreadAllocator = CComSimpleThreadAllocator>  
+template <class ThreadAllocator = CComSimpleThreadAllocator>
 class CComAutoThreadModule : public CComModule
 ```
 
 #### <a name="parameters"></a>Parametry
 
-`ThreadAllocator`  
+*ThreadAllocator*<br/>
 [in] Klasa zarządzania wybór wątku. Wartość domyślna to [CComSimpleThreadAllocator](../../atl/reference/ccomsimplethreadallocator-class.md).
 
 ## <a name="members"></a>Elementy członkowskie
@@ -122,13 +122,13 @@ HRESULT CreateInstance(
 
 ### <a name="parameters"></a>Parametry
 
-*pfnCreateInstance*  
+*pfnCreateInstance*<br/>
 [in] Wskaźnik do funkcji twórcy.
 
-*Parametr riid*  
+*Parametr riid*<br/>
 [in] Identyfikator IID żądanego interfejsu.
 
-*ppvObj*  
+*ppvObj*<br/>
 [out] Wskaźnik do wskaźnika interfejsu identyfikowane przez *riid*. Jeśli obiekt nie obsługuje ten interfejs *ppvObj* ma wartość NULL.
 
 ### <a name="return-value"></a>Wartość zwracana
@@ -181,16 +181,16 @@ HRESULT Init(
 
 ### <a name="parameters"></a>Parametry
 
-*p*  
+*p*<br/>
 [in] Wskaźnik do tablicy obiektu wpisy mapy.
 
-*h*  
+*h*<br/>
 [in] HINSTANCE przekazany do `DLLMain` lub `WinMain`.
 
-*plibid*  
+*plibid*<br/>
 [in] Wskaźnik do identyfikatora LIBID biblioteki typów, skojarzone z tym projektem.
 
-*nThreads*  
+*nThreads*<br/>
 [in] Liczba wątków, które ma zostać utworzony. Domyślnie *nThreads* jest wartość zwrócona przez obiekt [GetDefaultThreads](#getdefaultthreads).
 
 ### <a name="remarks"></a>Uwagi
@@ -269,5 +269,5 @@ Gdy liczbę blokad modułu osiągnie zero, moduł może być zwolniony.
 
 ## <a name="see-also"></a>Zobacz też
 
-[Klasa — Przegląd](../../atl/atl-class-overview.md)   
+[Klasa — Przegląd](../../atl/atl-class-overview.md)<br/>
 [Klasy modułów](../../atl/atl-module-classes.md)

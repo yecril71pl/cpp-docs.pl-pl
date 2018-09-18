@@ -1,5 +1,5 @@
 ---
-title: C3650 błąd kompilatora | Dokumentacja firmy Microsoft
+title: Błąd kompilatora C3650 | Dokumentacja firmy Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,38 +16,39 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6fcb5b1622523668c4ed7136424ded5e3f900e25
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 0ee7477acc26621a13a1a1d3b4f2d0d0f563c665
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33265122"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46016549"
 ---
-# <a name="compiler-error-c3650"></a>C3650 błąd kompilatora
-"interface_method": nie można użyć jako jawnego przesłaniania, musi być wirtualną funkcją członkowską klasy podstawowej  
-  
- Próbowano wykonać jawne przesłanianie elementu członkowskiego, który nie był wirtualnego.  
-  
- Aby uzyskać więcej informacji, zobacz [jawne zastąpienia](../../windows/explicit-overrides-cpp-component-extensions.md).  
-  
- Poniższy przykład generuje C3650:  
-  
-```  
-// C3650.cpp  
-// compile with: /clr  
-public interface struct I {  
-   void a();  
-};  
-  
-public ref class S {  
-public:  
-   static int f() { return 0; }  
-   static int g() { return 0; }  
-};  
-  
-public ref struct T1 : public S, I {  
-   virtual int f() new sealed = S::f;   // C3650  
-   virtual int g() { return 0; }   // OK does not override S::g  
-   virtual void a() new sealed = I::a {}   // OK  
-};  
+# <a name="compiler-error-c3650"></a>Błąd kompilatora C3650
+
+"interface_method": nie można użyć jako jawnego przesłaniania, musi być wirtualną składową klasy bazowej
+
+Próbowano wykonać jawnego przesłaniania na element członkowski, który nie jest wirtualny.
+
+Aby uzyskać więcej informacji, zobacz [jawne zastępowanie](../../windows/explicit-overrides-cpp-component-extensions.md).
+
+Poniższy przykład spowoduje wygenerowanie C3650:
+
+```
+// C3650.cpp
+// compile with: /clr
+public interface struct I {
+   void a();
+};
+
+public ref class S {
+public:
+   static int f() { return 0; }
+   static int g() { return 0; }
+};
+
+public ref struct T1 : public S, I {
+   virtual int f() new sealed = S::f;   // C3650
+   virtual int g() { return 0; }   // OK does not override S::g
+   virtual void a() new sealed = I::a {}   // OK
+};
 ```

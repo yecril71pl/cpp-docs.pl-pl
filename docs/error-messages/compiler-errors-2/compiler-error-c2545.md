@@ -1,5 +1,5 @@
 ---
-title: C2545 błąd kompilatora | Dokumentacja firmy Microsoft
+title: Błąd kompilatora C2545 | Dokumentacja firmy Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,18 +16,19 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: bd7dfadefc8ec0c9bb7a5fbd516a561833340767
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: a94dd8220922b1db9d4cb361487948cd5e3b4e51
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33235491"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46029042"
 ---
-# <a name="compiler-error-c2545"></a>C2545 błąd kompilatora
-"operator": nie można odnaleźć przeciążonego operatora  
-  
- Nie można używać operatora z dostarczone argumenty operacji. Należy podać Przeciążony operator wymaganych argumentów.  
-  
- Ten błąd może być spowodowany operandy ma nieprawidłowy typ.  
-  
- Ten błąd może być ustalony w przypadku definiowania operatora konwersji lub konstruktora, który przyjmuje jeden parametr.
+# <a name="compiler-error-c2545"></a>Błąd kompilatora C2545
+
+'operator': nie można odnaleźć przeciążonego operatora
+
+Nie można używać operatora z argumentów, pod warunkiem. Należy podać przeciążonego operatora wymaganych argumentów.
+
+Ten błąd może być spowodowany, jeśli niepoprawnego typu argumentów operacji.
+
+Ten błąd może być ustalony, jeśli zdefiniowano operator konwersji lub konstruktora, który przyjmuje jeden parametr.

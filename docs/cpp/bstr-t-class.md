@@ -18,53 +18,56 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 16a43c0f7ca5f54d1c920d488a236012d8b974e3
-ms.sourcegitcommit: b92ca0b74f0b00372709e81333885750ba91f90e
+ms.openlocfilehash: 04244357f7e372856aea28063ab0df9db6431e0a
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/16/2018
-ms.locfileid: "42466076"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46028691"
 ---
 # <a name="bstrt-class"></a>_bstr_t — Klasa
-**Microsoft Specific**  
-  
- A `_bstr_t` hermetyzuje [typ danych](/previous-versions/windows/desktop/automat/bstr). Klasa zarządza alokacją i dezalokacją za pośrednictwem wywołania funkcji zasobów `SysAllocString` i `SysFreeString` i innych `BSTR` interfejsów API, gdy jest to konieczne. **_Bstr_t** klasa używa zliczania odniesień, by uniknąć nadmiernego obciążenia.  
-  
-### <a name="construction"></a>Konstrukcja  
-  
-|||  
-|-|-|  
-|[_bstr_t](../cpp/bstr-t-bstr-t.md)|Konstruuje `_bstr_t` obiektu.|  
-  
-### <a name="operations"></a>Operacje  
-  
-|||  
-|-|-|  
-|[Przypisz](../cpp/bstr-t-assign.md)|Kopiuje `BSTR` do `BSTR` opakowane przez `_bstr_t`.|  
-|[Attach](../cpp/bstr-t-attach.md)|Linki `_bstr_t` opakowanie `BSTR`.|  
-|[Kopiuj](../cpp/bstr-t-copy.md)|Tworzy kopię zhermetyzowanego `BSTR`.|  
-|[Detach](../cpp/bstr-t-detach.md)|Zwraca `BSTR` opakowane przez `_bstr_t` oraz odłącza `BSTR` z `_bstr_t`.|  
-|[Getaddress —](../cpp/bstr-t-getaddress.md)|Wskazuje `BSTR` opakowane przez `_bstr_t`.|  
-|[GetBSTR](../cpp/bstr-t-getbstr.md)|Wskazuje początek `BSTR` opakowane przez `_bstr_t`.|  
-|[Długość](../cpp/bstr-t-length.md)|Zwraca liczbę znaków w `_bstr_t`.|  
-  
-### <a name="operators"></a>Operatory  
-  
-|||  
-|-|-|  
-|[operator =](../cpp/bstr-t-operator-equal.md)|Przypisuje nową wartość do istniejącej `_bstr_t` obiektu.|  
-|[+= — operator](../cpp/bstr-t-operator-add-equal-plus.md)|Dołącza znaki do końca `_bstr_t` obiektu.|  
-|[operator +](../cpp/bstr-t-operator-add-equal-plus.md)|Łączy dwa ciągi.|  
-|[operator !](../cpp/bstr-t-operator-logical-not.md)|Sprawdza, czy zhermetyzowany `BSTR` jest ciągiem o wartości NULL.|  
-|[operator ==,! =, \<, >, \<=, > =](../cpp/bstr-t-relational-operators.md)|Porównuje dwa `_bstr_t` obiektów.|  
-|[Operator wchar_t * &#124; char\*](../cpp/bstr-t-wchar-t-star-bstr-t-char-star.md)|Wyodrębnij wskaźniki do zhermetyzowanego Unicode lub wielobajtowego `BSTR` obiektu.|  
-  
-**END specyficzny dla Microsoft**  
-  
-## <a name="requirements"></a>Wymagania  
- **Nagłówek:** \<comutil.h >  
-  
- **Lib:** comsuppw.lib lub comsuppwd.lib (zobacz [/Zc: wchar_t (wchar_t jest typem natywnym)](../build/reference/zc-wchar-t-wchar-t-is-native-type.md) Aby uzyskać więcej informacji)  
-  
-## <a name="see-also"></a>Zobacz także  
- [Kompilator klas obsługi COM](../cpp/compiler-com-support-classes.md)
+
+**Microsoft Specific**
+
+A `_bstr_t` hermetyzuje [typ danych](/previous-versions/windows/desktop/automat/bstr). Klasa zarządza alokacją i dezalokacją za pośrednictwem wywołania funkcji zasobów `SysAllocString` i `SysFreeString` i innych `BSTR` interfejsów API, gdy jest to konieczne. **_Bstr_t** klasa używa zliczania odniesień, by uniknąć nadmiernego obciążenia.
+
+### <a name="construction"></a>Konstrukcja
+
+|||
+|-|-|
+|[_bstr_t](../cpp/bstr-t-bstr-t.md)|Konstruuje `_bstr_t` obiektu.|
+
+### <a name="operations"></a>Operacje
+
+|||
+|-|-|
+|[Assign](../cpp/bstr-t-assign.md)|Kopiuje `BSTR` do `BSTR` opakowane przez `_bstr_t`.|
+|[Attach](../cpp/bstr-t-attach.md)|Linki `_bstr_t` opakowanie `BSTR`.|
+|[Kopiuj](../cpp/bstr-t-copy.md)|Tworzy kopię zhermetyzowanego `BSTR`.|
+|[Detach](../cpp/bstr-t-detach.md)|Zwraca `BSTR` opakowane przez `_bstr_t` oraz odłącza `BSTR` z `_bstr_t`.|
+|[GetAddress](../cpp/bstr-t-getaddress.md)|Wskazuje `BSTR` opakowane przez `_bstr_t`.|
+|[GetBSTR](../cpp/bstr-t-getbstr.md)|Wskazuje początek `BSTR` opakowane przez `_bstr_t`.|
+|[Długość](../cpp/bstr-t-length.md)|Zwraca liczbę znaków w `_bstr_t`.|
+
+### <a name="operators"></a>Operatory
+
+|||
+|-|-|
+|[operator =](../cpp/bstr-t-operator-equal.md)|Przypisuje nową wartość do istniejącej `_bstr_t` obiektu.|
+|[+= — operator](../cpp/bstr-t-operator-add-equal-plus.md)|Dołącza znaki do końca `_bstr_t` obiektu.|
+|[operator +](../cpp/bstr-t-operator-add-equal-plus.md)|Łączy dwa ciągi.|
+|[operator !](../cpp/bstr-t-operator-logical-not.md)|Sprawdza, czy zhermetyzowany `BSTR` jest ciągiem o wartości NULL.|
+|[operator ==,! =, \<, >, \<=, > =](../cpp/bstr-t-relational-operators.md)|Porównuje dwa `_bstr_t` obiektów.|
+|[Operator wchar_t * &#124; char\*](../cpp/bstr-t-wchar-t-star-bstr-t-char-star.md)|Wyodrębnij wskaźniki do zhermetyzowanego Unicode lub wielobajtowego `BSTR` obiektu.|
+
+**END specyficzny dla Microsoft**
+
+## <a name="requirements"></a>Wymagania
+
+**Nagłówek:** \<comutil.h >
+
+**Lib:** comsuppw.lib lub comsuppwd.lib (zobacz [/Zc: wchar_t (wchar_t jest typem natywnym)](../build/reference/zc-wchar-t-wchar-t-is-native-type.md) Aby uzyskać więcej informacji)
+
+## <a name="see-also"></a>Zobacz także
+
+[Kompilator klas obsługi COM](../cpp/compiler-com-support-classes.md)

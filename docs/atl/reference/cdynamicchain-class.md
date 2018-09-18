@@ -23,12 +23,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6cb05f61d3cd90177fe5e44ce432430ba8f74dd5
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: af215609ac9579a357539a0d2d0a85c78f6dbc13
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43754816"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46017966"
 ---
 # <a name="cdynamicchain-class"></a>Klasa CDynamicChain
 
@@ -104,22 +104,22 @@ BOOL CallChain(
 
 ### <a name="parameters"></a>Parametry
 
-*dwChainID*  
+*dwChainID*<br/>
 [in] Unikatowy identyfikator skojarzony z połączonych obiekt i jego mapy komunikatów.
 
-*hWnd*  
+*hWnd*<br/>
 [in] Dojście do okna odbierania komunikatów.
 
-*uMsg*  
+*uMsg*<br/>
 [in] Komunikat wysyłany do okna.
 
-*wParam*  
+*wParam*<br/>
 [in] Dodatkowe informacje specyficzne dla wiadomości.
 
-*lParam*  
+*lParam*<br/>
 [in] Dodatkowe informacje specyficzne dla wiadomości.
 
-*lResult*  
+*lResult*<br/>
 [out] Wynik przetwarzania wiadomości.
 
 ### <a name="return-value"></a>Wartość zwracana
@@ -162,7 +162,7 @@ BOOL RemoveChainEntry(DWORD dwChainID);
 
 ### <a name="parameters"></a>Parametry
 
-*dwChainID*  
+*dwChainID*<br/>
 [in] Unikatowy identyfikator skojarzony z połączonych obiekt i jego mapy komunikatów. Pierwotnie zdefiniować tę wartość za pomocą wywołania [SetChainEntry](#setchainentry).
 
 ### <a name="return-value"></a>Wartość zwracana
@@ -182,13 +182,13 @@ BOOL SetChainEntry(
 
 ### <a name="parameters"></a>Parametry
 
-*dwChainID*  
+*dwChainID*<br/>
 [in] Unikatowy identyfikator skojarzony z połączonych obiekt i jego mapy komunikatów.
 
-*Obiekt*  
+*Obiekt*<br/>
 [in] Wskaźnik do obiektu łańcuchowych, deklarowanie mapie komunikatów. Ten obiekt musi pochodzić od klasy [CMessageMap](../../atl/reference/cmessagemap-class.md).
 
-*dwMsgMapID*  
+*dwMsgMapID*<br/>
 [in] Identyfikator mapy komunikatów w połączonych obiektów. Wartość domyślna to 0, który identyfikuje mapy komunikatów domyślne, które są zadeklarowane za pomocą [BEGIN_MSG_MAP](message-map-macros-atl.md#begin_msg_map). Aby określić mapy komunikatów alternatywne zadeklarowane za pomocą [ALT_MSG_MAP(msgMapID)](message-map-macros-atl.md#alt_msg_map), przekazać `msgMapID`.
 
 ### <a name="return-value"></a>Wartość zwracana
@@ -201,5 +201,5 @@ Jeśli *dwChainID* wartość już istnieje w kolekcji, jego skojarzonego obiektu
 
 ## <a name="see-also"></a>Zobacz też
 
-[Klasa CWindowImpl](../../atl/reference/cwindowimpl-class.md)   
+[Klasa CWindowImpl](../../atl/reference/cwindowimpl-class.md)<br/>
 [Klasa — Przegląd](../../atl/atl-class-overview.md)

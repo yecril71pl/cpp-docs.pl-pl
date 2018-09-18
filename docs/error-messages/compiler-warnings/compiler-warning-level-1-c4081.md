@@ -1,5 +1,5 @@
 ---
-title: Kompilatora (poziom 1) ostrzeżenie C4081 | Dokumentacja firmy Microsoft
+title: Kompilator ostrzeżenie (poziom 1) C4081 | Dokumentacja firmy Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,22 +16,23 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a55ee972e16655ab93ab463417718eb879ef2477
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 48834d2ba379ae9a5fd3c2d4ba976f29b1a8c717
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33272217"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46034346"
 ---
-# <a name="compiler-warning-level-1-c4081"></a>Kompilator C4081 ostrzegawcze (poziom 1)
-Oczekiwano 'token1'; Znaleziono token2  
-  
- Kompilator w tym kontekście oczekiwano inny token.  
-  
-## <a name="example"></a>Przykład  
-  
-```  
-// C4081.cpp  
-// compile with: /W1 /LD  
-#pragma optimize) "l", on )   // C4081  
+# <a name="compiler-warning-level-1-c4081"></a>Kompilator ostrzeżenie (poziom 1) C4081
+
+Oczekiwano 'token1'; Znaleziono token2
+
+Kompilator oczekiwany inny token, w tym kontekście.
+
+## <a name="example"></a>Przykład
+
+```
+// C4081.cpp
+// compile with: /W1 /LD
+#pragma optimize) "l", on )   // C4081
 ```

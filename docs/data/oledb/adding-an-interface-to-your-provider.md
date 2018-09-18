@@ -15,17 +15,18 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 3d6bc5d1b6c47d2ffa26bffa98d47b930d6ed193
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: f50459550c91f07c12f6f18b3fbbaa5622ab7408
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33093549"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46032396"
 ---
 # <a name="adding-an-interface-to-your-provider"></a>Dodawanie interfejsu do dostawcy
-Określenia, które obiekty chcesz dodać interfejsu (zazwyczaj danych źródła wierszy, polecenie albo sesji obiektów utworzonych przez kreatora dostawcy bazy danych OLE). Istnieje możliwość, że obiekt, należy dodać interfejs do to taki, który dostawca nie obsługuje obecnie. W takim przypadku Kreator ATL OLE DB dostawcy do utworzenia obiektu. Kliknij prawym przyciskiem myszy projekt w widoku klas, kliknij przycisk **Dodaj klasę** z **Dodaj** menu, a następnie kliknij przycisk **ATL dostawcy OLE DB**. Możesz chcieć umieść kod interfejsu w oddzielnym katalogu, a następnie skopiuj pliki do projektu dostawcy.  
+
+Ustal, obiektu, który chcesz dodać interfejs do (zazwyczaj danych źródła, zestawu wierszy, polecenie lub sesji obiekty utworzone przez OLE DB Provider kreatora). Jest możliwe, że obiekt, należy dodać interfejs do jest taki, który nie obsługuje obecnie dostawcy. W takiej sytuacji Uruchom ATL OLE DB Provider kreatora, aby utworzyć obiekt. Kliknij prawym przyciskiem myszy projekt w widoku klas, kliknij przycisk **Dodaj klasę** z **Dodaj** menu, a następnie kliknij przycisk **ATL OLE DB Provider**. Warto umieścić kod interfejsu w oddzielnym katalogu, a następnie skopiuj pliki do projektu dostawcy.  
   
- Jeśli utworzono nową klasę do obsługi interfejsu, powoduje, że obiekt dziedziczyć po tej klasie. Na przykład można dodać klasy **IRowsetIndexImpl** do obiektu zestawu wierszy:  
+Utworzono nową klasę do obsługi interfejsu, aby obiekt dziedziczą z klasy. Na przykład dodać klasę **IRowsetIndexImpl** do obiektu zestawu wierszy:  
   
 ```cpp  
 template <class Creator>  
@@ -34,7 +35,7 @@ class CAgentRowset :
     public IRowsetIndexImpl< ... >   
 ```  
   
- Dodawanie interfejsu do **COM_MAP** w obiekcie użycie makra com_interface_entry —. Jeśli nie ma żadnych mapy, utwórz je. Na przykład:  
+Dodawanie interfejsu do **COM_MAP** w obiekcie, użycie makra com_interface_entry —. Jeśli nie ma żadnych mapy, zrób to. Na przykład:  
   
 ```cpp  
 BEGIN_COM_MAP(CAgentRowset)  
@@ -42,7 +43,7 @@ BEGIN_COM_MAP(CAgentRowset)
 END_COM_MAP()  
 ```  
   
- Dla obiektu zestawu wierszy łańcuch mapy jego elementu nadrzędnego obiektu tak, aby obiekt można delegować do klasy nadrzędnej. W tym przykładzie należy dodać makra COM_INTERFACE_ENTRY_CHAIN do mapy:  
+Dla obiektu zestawu wierszy łańcuch mapy jego elementu nadrzędnego obiektu tak, aby delegować do klasy nadrzędnej obiektu. W tym przykładzie należy dodać makra COM_INTERFACE_ENTRY_CHAIN do mapy:  
   
 ```cpp  
 BEGIN_COM_MAP(CAgentRowset)  
@@ -52,4 +53,5 @@ END_COM_MAP()
 ```  
   
 ## <a name="see-also"></a>Zobacz też  
- [Praca z szablonami dostawców OLE DB](../../data/oledb/working-with-ole-db-provider-templates.md)
+
+[Praca z szablonami dostawców OLE DB](../../data/oledb/working-with-ole-db-provider-templates.md)

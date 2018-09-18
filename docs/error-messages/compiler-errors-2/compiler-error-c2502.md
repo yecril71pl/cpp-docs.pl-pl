@@ -1,5 +1,5 @@
 ---
-title: C2502 błąd kompilatora | Dokumentacja firmy Microsoft
+title: Błąd kompilatora C2502 | Dokumentacja firmy Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,28 +16,29 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 093980d1e604eacde92a8ea7aa029f77f57d48b7
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: f5e3197ca71ff277f2904666261e7d0546a9128f
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33228113"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46032535"
 ---
-# <a name="compiler-error-c2502"></a>C2502 błąd kompilatora
-"identyfikator": zbyt wiele modyfikatorów dostępu dla klasy podstawowej  
-  
- Klasa podstawowa ma więcej niż jeden modyfikator dostępu. Modyfikator dostępu tylko jeden (`public`, `private`, lub `protected`) jest dozwolone.  
-  
- Poniższy przykład generuje C2502:  
-  
-```  
-// C2502.cpp  
-// compile with: /c  
-class A { };  
-class B { };  
-class C : private public A { };   // C2502  
-  
-// OK  
-class D : private A {};  
-class E : public A, private B {};  
+# <a name="compiler-error-c2502"></a>Błąd kompilatora C2502
+
+'Identyfikator': zbyt wiele modyfikatorów dostępu dla klasy bazowej
+
+Klasa bazowa ma więcej niż jeden modyfikator dostępu. Modyfikator dostępu tylko jeden (`public`, `private`, lub `protected`) jest dozwolone.
+
+Poniższy przykład spowoduje wygenerowanie C2502:
+
+```
+// C2502.cpp
+// compile with: /c
+class A { };
+class B { };
+class C : private public A { };   // C2502
+
+// OK
+class D : private A {};
+class E : public A, private B {};
 ```

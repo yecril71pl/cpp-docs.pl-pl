@@ -16,20 +16,21 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 095423b5f2d86cef309ed4316ff72d195b11eb26
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 80af2bb6475fc37b7feba5b29bfe9c1292740286
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33313075"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46022453"
 ---
 # <a name="linker-tools-error-lnk2017"></a>Błąd narzędzi konsolidatora LNK2017
-Przeniesienie "symbol" do "segmentu" Nieprawidłowa bez: no  
-  
- Próbujesz utworzyć 64-bitowy obraz z 32-bitowych adresów. W tym celu należy:  
-  
--   Użyj adresu obciążenia stały.  
-  
--   Ograniczanie obrazu do 3 GB.  
-  
--   Określ [: No](../../build/reference/largeaddressaware-handle-large-addresses.md).
+
+relokacja "symbol" do "segmentu" Nieprawidłowa bez pamięci
+
+Chcesz utworzyć obraz 64-bitowym z 32-bitowymi adresami. Aby to zrobić, musisz mieć:
+
+- Użyj adresu obciążenia stały.
+
+- Obraz należy ograniczyć do 3 GB.
+
+- Określ [pamięci](../../build/reference/largeaddressaware-handle-large-addresses.md).

@@ -14,15 +14,17 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 17b09facc452aa74c0e6030985ba9d9e87bbfab1
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: e57021007c2df52cafd2143605bb81521eba323a
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32385881"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46033891"
 ---
 # <a name="rules-and-limitations-for-using-naked-functions"></a>Reguły i ograniczenia dotyczące używania funkcji Naked
-Informacje dotyczące reguły i ograniczenia dotyczące używania funkcji naked, zobacz odpowiedni temat w dokumentacja języka C++: [reguły i ograniczenia dotyczące używania funkcji Naked](../cpp/rules-and-limitations-for-naked-functions.md).  
-  
-## <a name="see-also"></a>Zobacz też  
- [Funkcje Naked](../c-language/naked-functions.md)
+
+Aby uzyskać informacji na temat reguły i ograniczenia dotyczące używania funkcji naked, zobacz odpowiedni temat w dokumentacji języka C++: [reguły i ograniczenia dotyczące używania funkcji Naked](../cpp/rules-and-limitations-for-naked-functions.md).
+
+## <a name="see-also"></a>Zobacz też
+
+[Funkcje Naked](../c-language/naked-functions.md)

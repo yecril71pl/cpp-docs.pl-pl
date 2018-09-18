@@ -1,5 +1,5 @@
 ---
-title: Zarejestruj Specyfikator klasy składującej | Dokumentacja firmy Microsoft
+title: Zarejestruj Specyfikator klasy magazynowania | Dokumentacja firmy Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -15,19 +15,21 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 211f623923286e598f495920bcbdac3a9321b13a
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: e15b6bd4136e2644dbd040ac509b35af772ae4c3
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32384603"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46028327"
 ---
 # <a name="register-storage-class-specifier"></a>rejestracja specyfikatora klasy magazynowania
-**Microsoft Specific**  
-  
- Kompilator Microsoft C/C++ honoruje żądania użytkowników dla zmiennych rejestru. Jednak w przypadku przenoszenia wszystkich innych semantyki skojarzone z **zarejestrować** — słowo kluczowe są honorowane przez kompilator. Na przykład nie można zastosować Jednoargumentowy operator address-of (**&**) do obiektu rejestru ani może **zarejestrować** w tablicach można używać słowa kluczowego.  
-  
- **KOŃCOWY określonych firmy Microsoft**  
-  
-## <a name="see-also"></a>Zobacz też  
- [Specyfikatory klasy magazynowania dla deklaracji na poziomie wewnętrznym](../c-language/storage-class-specifiers-for-internal-level-declarations.md)
+
+**Microsoft Specific**
+
+Kompilator Microsoft C/C++ nie uznaje żądania użytkownika, register zmiennych. Jednak do celów przenośności innej semantyki skojarzony **zarejestrować** — słowo kluczowe są uznawane przez kompilator. Na przykład nie można zastosować Jednoargumentowy operator address-of (**&**) obiektu rejestru ani może **zarejestrować** można użyć słowa kluczowego na tablicach.
+
+**END specyficzny dla Microsoft**
+
+## <a name="see-also"></a>Zobacz też
+
+[Specyfikatory klasy magazynowania dla deklaracji na poziomie wewnętrznym](../c-language/storage-class-specifiers-for-internal-level-declarations.md)

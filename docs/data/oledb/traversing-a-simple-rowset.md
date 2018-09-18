@@ -19,14 +19,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 6ba5262577fc9176669916a7fc30d299d06770a8
-ms.sourcegitcommit: 889a75be1232817150be1e0e8d4d7f48f5993af2
+ms.openlocfilehash: 9a127b5cd611177c28e6e434b04060edf3bdcb55
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/30/2018
-ms.locfileid: "39336657"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46028639"
 ---
 # <a name="traversing-a-simple-rowset"></a>Przechodzenie przez prosty zestaw wierszy
+
 Poniższy przykład pokazuje dostęp szybkie i łatwe bazy danych, który nie wiąże się z poleceń. Poniższy kod konsumenta w projekcie ATL, pobiera rekordy z tabeli o nazwie *artystów* w programie Microsoft Access bazy danych przy użyciu dostawcy Microsoft OLE DB dla ODBC. Ten kod tworzy [CTable](../../data/oledb/ctable-class.md) obiektu tabeli za pomocą metody dostępu na podstawie użytkownika rekordu klasy `CArtists`. Otwiera połączenie, otwiera sesji na połączenie i otwiera tabelę w sesji.  
   
 ```cpp  
@@ -53,7 +54,7 @@ while (artists.MoveNext() == S_OK)
 }  
 ```  
   
- Rekord użytkownika `CArtists`, wygląda następująco:  
+Rekord użytkownika `CArtists`, wygląda następująco:  
   
 ```cpp  
 class CArtists  
@@ -73,4 +74,5 @@ END_COLUMN_MAP()
 ```  
   
 ## <a name="see-also"></a>Zobacz też  
- [Praca z szablonami konsumentów OLE DB](../../data/oledb/working-with-ole-db-consumer-templates.md)
+
+[Praca z szablonami konsumentów OLE DB](../../data/oledb/working-with-ole-db-consumer-templates.md)

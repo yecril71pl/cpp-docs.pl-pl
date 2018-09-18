@@ -16,20 +16,21 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6943b939fbc7095f8cbdd058ea10a7dc25f84476
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: abbc4e0f0cc74ff704f74bef66a913b37cec5f7b
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33197016"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46024669"
 ---
 # <a name="compiler-error-c2418"></a>Błąd kompilatora C2418
-Nie można usunąć pliku przeglądarki: Nazwa pliku  
-  
- Kompilator nie można usunąć pliku przeglądarki.  
-  
-### <a name="to-fix-by-checking-the-following-possible-causes"></a>Aby rozwiązać problem, sprawdzając następujące możliwe przyczyny  
-  
-1.  Plik jest tylko do odczytu.  
-  
-2.  Plik jest używany przez inny proces.
+
+Nie można usunąć pliku przeglądarki: Nazwa pliku
+
+Kompilator nie można usunąć pliku przeglądarki.
+
+### <a name="to-fix-by-checking-the-following-possible-causes"></a>Aby rozwiązać problem, sprawdzając następujące możliwe przyczyny
+
+1. Plik jest tylko do odczytu.
+
+1. Plik jest używany przez inny proces.

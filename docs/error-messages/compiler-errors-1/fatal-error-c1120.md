@@ -16,14 +16,15 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 292d1b4ea2334e1f052e7334890ceb728390fbc5
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: b68d805ce400e4beb735ddec66006f75cdba23a1
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33197250"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46032942"
 ---
 # <a name="fatal-error-c1120"></a>Błąd krytyczny C1120
-Wywołanie funkcji GetProcAddress nie powiodło się "function"  
-  
- Ten błąd wskazuje, że trzeba ponownie zainstalować Visual C++.
+
+Wywołanie funkcji GetProcAddress nie powiodło się dla "function"
+
+Ten błąd wskazuje, że Visual C++ wymaga ponownej instalacji.

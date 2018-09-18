@@ -16,16 +16,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 532abf2f62616d6e748c9a4e34f5c983f0853276
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 2a89bb8abf212c8a0ffa9fb40fe5d3ea43307a08
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33317183"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46016653"
 ---
 # <a name="nmake-warning-u4004"></a>Ostrzeżenie NMAKE U4004
-za dużo reguł dla docelowej "targetname"  
-  
- Określono więcej niż jeden opis blok dla danego obiektu docelowego przy użyciu pojedynczego dwukropki (**:**) jako separatorów. NMAKE wykonać polecenia w pierwszym bloku opis i ignorowane nowsze bloków.  
-  
- Aby określić tej samej wartości docelowej w wielu zależności, użyj podwójne dwukropki (`::`) jako separator w każdym wierszu zależności.
+
+za dużo reguł dla docelowej "targetname"
+
+Określono więcej niż jednego bloku opis dla danego obiektu docelowego przy użyciu pojedynczego dwukropki (**:**) jako separatora. NMAKE wykonywane polecenia w pierwszym bloku opisu i ignorowane nowsze bloków.
+
+Aby określić ten sam element docelowy w wiele zależności, Użyj średników double (`::`) jako separatora w każdym wierszu zależności.

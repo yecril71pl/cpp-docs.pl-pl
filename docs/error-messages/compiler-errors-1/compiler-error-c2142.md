@@ -1,5 +1,5 @@
 ---
-title: C2142 błąd kompilatora | Dokumentacja firmy Microsoft
+title: Błąd kompilatora C2142 | Dokumentacja firmy Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,24 +16,25 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 11fd3cd62b236daa93424f53a0896888a89fe33d
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 32301087ac1f06f1958ca8de7d2f66645dafb3d2
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33170401"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46032502"
 ---
-# <a name="compiler-error-c2142"></a>C2142 błąd kompilatora
-deklaracje funkcji różnią się, parametry zmiennej określone tylko w jednej z nich  
-  
- Jedna deklaracja funkcji zawiera zmiennej listy parametrów. Nie ma innej deklaracji. ANSI C ([/Za](../../build/reference/za-ze-disable-language-extensions.md)) tylko.  
-  
- Poniższy przykład generuje C2142:  
-  
-```  
-// C2142.c  
-// compile with: /Za /c  
-void func();  
-void func( int, ... );   // C2142  
-void func2( int, ... );   // OK  
+# <a name="compiler-error-c2142"></a>Błąd kompilatora C2142
+
+deklaracje funkcji różnią się, parametry zmiennej określone tylko w jednej z nich
+
+Jedna deklaracja funkcji zawiera zmiennej listy parametrów. Nie ma innej deklaracji. ANSI C ([/Za](../../build/reference/za-ze-disable-language-extensions.md)) tylko.
+
+Poniższy przykład spowoduje wygenerowanie C2142:
+
+```
+// C2142.c
+// compile with: /Za /c
+void func();
+void func( int, ... );   // C2142
+void func2( int, ... );   // OK
 ```

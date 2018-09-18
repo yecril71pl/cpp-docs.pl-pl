@@ -29,42 +29,36 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 588c286cbad5e0097394a38eed34c09fc04af3ea
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: abf776ab72d692be6d573803353f35946df145ec
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32389972"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46031942"
 ---
 # <a name="locking-constants"></a>_locking — Stałe
-## <a name="syntax"></a>Składnia  
-  
-```  
-  
-#include <sys/locking.h>  
-  
-```  
-  
-## <a name="remarks"></a>Uwagi  
- *Tryb* argument w wywołaniu `_locking` funkcja określa blokowania akcji do wykonania.  
-  
- *Tryb* argument musi być jedną z następujących stałych manifestu.  
-  
- `_LK_LOCK`  
- Umożliwia zablokowanie określonych bajtów. Jeśli bajtów nie może być zablokowany, funkcja próbuje ponownie po 1 sekundę. Jeśli po 10 próbach bajtów nie może być zablokowany, funkcja zwraca błąd.  
-  
- `_LK_RLCK`  
- Taki sam jak `_LK_LOCK`.  
-  
- `_LK_NBLCK`  
- Umożliwia zablokowanie określonych bajtów. Jeśli bajtów nie może być zablokowany, funkcja zwraca błąd.  
-  
- `_LK_NBRLCK`  
- Taki sam jak `_LK_NBLCK`.  
-  
- `_LK_UNLCK`  
- Umożliwia odblokowanie określonych bajtów. (Bajty musi mieć wcześniej zablokowane.)  
-  
-## <a name="see-also"></a>Zobacz też  
- [_locking —](../c-runtime-library/reference/locking.md)   
- [Stałe globalne](../c-runtime-library/global-constants.md)
+
+## <a name="syntax"></a>Składnia
+
+```
+#include <sys/locking.h>
+```
+
+## <a name="remarks"></a>Uwagi
+
+*Tryb* argumentu w wywołaniu `_locking` funkcja określa blokowania Akcja do wykonania.
+
+*Tryb* argument musi być jedną z następujących stałych manifestu.
+
+|||
+|-|-|
+| `_LK_LOCK`  | Blokuje określonych bajtów. Jeśli nie można zablokować bajtów, funkcja próbuje ponownie po 1 sekundę. Jeśli po 10 próbach bajtów nie może być zablokowany, funkcja zwraca błąd.  |
+| `_LK_RLCK`  | Taki sam jak `_LK_LOCK`.  |
+|`_LK_NBLCK`  | Blokuje określonych bajtów. Jeśli nie można zablokować bajtów, funkcja zwraca błąd.  |
+| `_LK_NBRLCK`  | Taki sam jak `_LK_NBLCK`.  |
+| `_LK_UNLCK`  | Odblokowuje określonych bajtów. (Bajtów musi mieć wcześniej zablokowane.)  |
+
+## <a name="see-also"></a>Zobacz też
+
+[_locking](../c-runtime-library/reference/locking.md)<br/>
+[Stałe globalne](../c-runtime-library/global-constants.md)

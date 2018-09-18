@@ -16,18 +16,19 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f1a977a2e8f3b9f36832b5f96c6c911966cac7d0
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: b894579c56368e953c1d60aa5d2940d8c9c79f65
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33316650"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46019376"
 ---
 # <a name="nmake-fatal-error-u1078"></a>Błąd krytyczny NMAKE U1078
-przepełnienie stałej w "wyrażenie"  
-  
- Podane wyrażenie zawiera stałą przekracza zakres - 2 147 483 2 147 483 648 do 647. Stała znajdowały się w jednym z następujących sytuacji:  
-  
--   Wyrażenie określone dyrektywy przetwarzania wstępnego  
-  
--   Błąd poziomu określony za pomocą kreska (**-**) modyfikator polecenia
+
+przepełnienie wartości stałej w "expression"
+
+Podane wyrażenie zawiera stałą przekroczenia zakresu - 2 147 483 2 147 483 648 do 647. Stała pojawiły się w jednym z następujących sytuacji:
+
+- Wyrażenie określony za pomocą dyrektywy preprocesora
+
+- Błąd poziomu określony za pomocą myślnik (**-**) modyfikator polecenia

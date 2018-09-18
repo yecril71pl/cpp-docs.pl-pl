@@ -1,5 +1,5 @@
 ---
-title: Kompilatora (poziom 1) ostrzeżenie C4549 | Dokumentacja firmy Microsoft
+title: Kompilator ostrzeżenie (poziom 1) C4549 | Dokumentacja firmy Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,33 +16,34 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a31a2aec4753cf0cd800ca22ea1e997a5929bf3d
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 6b36a7516c244c49e56d7070684f5914407d625c
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33284332"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46027365"
 ---
-# <a name="compiler-warning-level-1-c4549"></a>Kompilator C4549 ostrzegawcze (poziom 1)
-"operator": operator przed przecinkiem nie ma żadnego wpływu; Czy planowane "operator"?  
-  
- Kompilator wykryto wyrażenie źle sformułowane przecinkami.  
-  
- To ostrzeżenie jest domyślnie wyłączone. Aby uzyskać więcej informacji, zobacz [kompilatora ostrzeżeń czy są wyłączone domyślnie](../../preprocessor/compiler-warnings-that-are-off-by-default.md).  
-  
- Poniższy przykład generuje C4549:  
-  
-```  
-// C4549.cpp  
-// compile with: /W1  
-#pragma warning (default : 4549)  
-  
-int main() {  
-   int i = 0, k = 0;  
-  
-   if ( i == 0, k )   // C4549  
-   // try the following line instead  
-   // if ( i == 0 )  
-      i++;  
-}  
+# <a name="compiler-warning-level-1-c4549"></a>Kompilator ostrzeżenie (poziom 1) C4549
+
+'operator': operator przed przecinkiem nie przynosi efektu; Czy chodziło 'operator'?
+
+Kompilator wykrył wyrażenie przecinkowe źle sformułowane.
+
+To ostrzeżenie jest domyślnie wyłączona. Aby uzyskać więcej informacji, zobacz [kompilatora ostrzeżenia, są wyłączone domyślnie](../../preprocessor/compiler-warnings-that-are-off-by-default.md).
+
+Poniższy przykład spowoduje wygenerowanie C4549:
+
+```
+// C4549.cpp
+// compile with: /W1
+#pragma warning (default : 4549)
+
+int main() {
+   int i = 0, k = 0;
+
+   if ( i == 0, k )   // C4549
+   // try the following line instead
+   // if ( i == 0 )
+      i++;
+}
 ```

@@ -19,15 +19,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d5d4dc98c4fb411a4d63fdfad5049cf0df723bec
-ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
+ms.openlocfilehash: 6d4a1b76966216a6dc7b2e7249bddb1ac629376f
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33686568"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46016770"
 ---
 # <a name="progressreporter-class"></a>progress_reporter — Klasa
-Klasa osoby zgłaszającej postępu umożliwia raportowanie postępu powiadomienia określonego typu. Każdy obiekt progress_reporter — jest powiązany z określonej akcji asynchronicznej lub operacji.  
+Klasa reportera postępu pozwala raportowania powiadomienia o postępie określonego typu. Każdy obiekt progress_reporter jest powiązany z określoną akcją lub operacją asynchroniczną.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -37,8 +37,8 @@ class progress_reporter;
 ```  
   
 #### <a name="parameters"></a>Parametry  
- `_ProgressType`  
- Typ ładunku każdego powiadomienie o postępie zgłoszone za pośrednictwem osoby zgłaszającej postępu.  
+*_ProgressType*<br/>
+Typ ładunku każdego powiadomienia o postępie zgłoszonego za pomocą reportera postępu.  
   
 ## <a name="members"></a>Elementy członkowskie  
   
@@ -52,10 +52,10 @@ class progress_reporter;
   
 |Nazwa|Opis|  
 |----------|-----------------|  
-|[Raport](#report)|Wysyła raport postępu akcji asynchronicznej lub powiązane tej osoby zgłaszającej postęp operacji.|  
+|[Raport](#report)|Wysyła raport o postępie do akcji lub operacji asynchronicznej z którym powiązany jest ten program raportujący postęp.|  
   
 ## <a name="remarks"></a>Uwagi  
- Ten typ jest dostępna tylko do aplikacji środowiska wykonawczego systemu Windows.  
+ Ten typ jest dostępny tylko dla aplikacji środowiska wykonawczego Windows.  
   
 ## <a name="inheritance-hierarchy"></a>Hierarchia dziedziczenia  
  `progress_reporter`  
@@ -73,15 +73,15 @@ progress_reporter();
   
 ##  <a name="report"></a> Raport 
 
- Wysyła raport postępu akcji asynchronicznej lub powiązane tej osoby zgłaszającej postęp operacji.  
+ Wysyła raport o postępie do akcji lub operacji asynchronicznej z którym powiązany jest ten program raportujący postęp.  
   
 ```
 void report(const _ProgressType& val) const;
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `val`  
- Ładunek do raportów za pośrednictwem powiadomienie o postępie.  
+*Val*<br/>
+Ładunek do zgłoszenia poprzez powiadomienie o postępie.  
   
 ## <a name="see-also"></a>Zobacz też  
  [Przestrzeń nazw współbieżności](concurrency-namespace.md)

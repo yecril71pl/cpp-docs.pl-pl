@@ -16,17 +16,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e517832720e31bfae88e79ad879f1427b9c25a48
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 83450169ec928bb77e46916619c84b3b9a3443a3
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33230252"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46029393"
 ---
 # <a name="fatal-error-c1854"></a>Błąd krytyczny C1854
-  
-> Nie można zastąpić informacji utworzonej podczas tworzenia prekompilowanego nagłówka w pliku obiektu: "*filename*"  
-  
-Podana [/Yu (Korzystaj Prekompilowanego pliku nagłówka)](../../build/reference/yu-use-precompiled-header-file.md) opcji po określeniu [/Yc (Utwórz prekompilowany plik nagłówka)](../../build/reference/yc-create-precompiled-header-file.md) opcji dla tego samego pliku.  
-  
-Aby rozwiązać ten problem, ogólnie rzecz biorąc, ustaw tylko jeden plik w projekcie ma być kompilowana przy użyciu **/Yc** opcji i ustaw wszystkie pliki skompilować przy użyciu **/Yu** opcji. Aby uzyskać więcej informacji dotyczących korzystania z **/Yc** opcja i ustaw go w środowisku IDE programu Visual Studio, zobacz [/Yc (Utwórz prekompilowany plik nagłówka)](../../build/reference/yc-create-precompiled-header-file.md). Aby uzyskać więcej informacji na temat używania prekompilowanych nagłówków, zobacz [tworzenie prekompilowanych plików nagłówka](../../build/reference/creating-precompiled-header-files.md).  
+
+> Nie można zastąpić informacji utworzonej podczas tworzenia prekompilowanego pliku nagłówkowego w pliku obiektu: "*filename*"
+
+Możesz określić [/Yu (Korzystaj Prekompilowanego pliku nagłówka)](../../build/reference/yu-use-precompiled-header-file.md) opcja po określeniu [/Yc (Utwórz prekompilowany plik nagłówkowy)](../../build/reference/yc-create-precompiled-header-file.md) opcji dla tego samego pliku.
+
+Aby rozwiązać ten problem, ogólnie rzecz biorąc, ustawić tylko jeden plik projektu jest kompilowana za pomocą **/Yc** opcji, a następnie ustaw wszystkie inne pliki można skompilować przy użyciu **/Yu** opcji. Aby uzyskać szczegółowe informacje na temat użytkowania **/Yc** opcja i ustaw go w środowisku IDE programu Visual Studio, zobacz [/Yc (Utwórz prekompilowany plik nagłówkowy)](../../build/reference/yc-create-precompiled-header-file.md). Aby uzyskać więcej informacji na temat korzystania z wstępnie skompilowanych nagłówków, zobacz [tworzenie prekompilowanych plików nagłówka](../../build/reference/creating-precompiled-header-files.md).

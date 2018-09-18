@@ -1,5 +1,5 @@
 ---
-title: C3367 błąd kompilatora | Dokumentacja firmy Microsoft
+title: Błąd kompilatora C3367 | Dokumentacja firmy Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,35 +16,37 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2884e38d1ad1aecef8e7b0723674ebd9849d8f40
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 2e063635e521efe1eabf8f2b50664ef8bf3e85e8
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33257077"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46020235"
 ---
-# <a name="compiler-error-c3367"></a>C3367 błąd kompilatora
-"static_member_function": nie można użyć statycznej funkcji by utworzyć niezwiązanego delegata  
-  
-Podczas wywoływania niezwiązanego delegata musi przejść pomyślnie wystąpienia obiektu. Ponieważ funkcja statyczny element członkowski jest wywoływana za pomocą nazwy klasy, można tylko wystąpienia niezwiązanego delegata z funkcję elementu członkowskiego wystąpienia.  
-  
-Aby uzyskać więcej informacji na temat niezwiązane obiekty delegowane, zobacz [porady: definiowanie i użycie deleguje (C + +/ CLI)](../../dotnet/how-to-define-and-use-delegates-cpp-cli.md).  
-  
-## <a name="example"></a>Przykład  
-Poniższy przykład generuje C3367.  
-  
-```cpp  
-// C3367.cpp  
-// compile with: /clr  
-ref struct R {  
-   void b() {}  
-   static void f() {}  
-};  
-  
-delegate void Del(R^);  
-  
-int main() {  
-   Del ^ a = gcnew Del(&R::b);   // OK  
-   Del ^ b = gcnew Del(&R::f);   // C3367  
-}  
+# <a name="compiler-error-c3367"></a>Błąd kompilatora C3367
+
+"static_member_function": nie można użyć statycznej funkcji by utworzyć niezwiązanego delegata
+
+Jeśli chcesz wywołać niezwiązanego delegata, należy przekazać wystąpienia obiektu. Ponieważ funkcja statycznej składowej jest wywoływana za pośrednictwem nazwy klasy, można tylko utworzyć wystąpienie niezwiązanego delegata z funkcję składową wystąpienia.
+
+Aby uzyskać więcej informacji na temat niezwiązane obiekty delegowane, zobacz [porady: definiowanie i użycie delegatów (C + +/ interfejsu wiersza polecenia)](../../dotnet/how-to-define-and-use-delegates-cpp-cli.md).
+
+## <a name="example"></a>Przykład
+
+Poniższy przykład spowoduje wygenerowanie C3367.
+
+```cpp
+// C3367.cpp
+// compile with: /clr
+ref struct R {
+   void b() {}
+   static void f() {}
+};
+
+delegate void Del(R^);
+
+int main() {
+   Del ^ a = gcnew Del(&R::b);   // OK
+   Del ^ b = gcnew Del(&R::f);   // C3367
+}
 ```

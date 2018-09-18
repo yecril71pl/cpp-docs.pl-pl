@@ -18,12 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d9b0eb225f9da88db356fc4f04d25d2219876604
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 1ac378e0a923e2a906bf99995432bfc87e39b8d5
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43752752"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46032435"
 ---
 # <a name="cinterfacelist-class"></a>Klasa CInterfaceList
 
@@ -32,7 +32,7 @@ Ta klasa dostarcza metody przydatne podczas tworzenia listy wskaźniki interfejs
 ## <a name="syntax"></a>Składnia
 
 ```
-template<class I, const IID* piid =& __uuidof(I)>  
+template<class I, const IID* piid =& __uuidof(I)>
 class CInterfaceList 
    : public CAtlList<ATL::CComQIPtr<I, piid>,
                      CComQIPtrElementTraits<I, piid>>
@@ -40,10 +40,10 @@ class CInterfaceList
 
 #### <a name="parameters"></a>Parametry
 
-*I*  
+*I*<br/>
 Interfejs COM, określając typ wskaźnika, które mają być przechowywane.
 
-*piid*  
+*piid*<br/>
 Wskaźnik do identyfikatora IID z *I*.
 
 ## <a name="members"></a>Elementy członkowskie
@@ -80,7 +80,7 @@ CInterfaceList(UINT nBlockSize = 10) throw();
 
 ### <a name="parameters"></a>Parametry
 
-*nBlockSize*  
+*nBlockSize*<br/>
 Rozmiar bloku z domyślną 10.
 
 ### <a name="remarks"></a>Uwagi
@@ -89,7 +89,7 @@ Rozmiar bloku jest miarą ilość pamięci przydzielonej, gdy nowy element jest 
 
 ## <a name="see-also"></a>Zobacz też
 
-[Klasa CAtlList](../../atl/reference/catllist-class.md)   
-[Klasa CComQIPtr](../../atl/reference/ccomqiptr-class.md)   
-[Klasa CComQIPtrElementTraits](../../atl/reference/ccomqiptrelementtraits-class.md)   
+[Klasa CAtlList](../../atl/reference/catllist-class.md)<br/>
+[Klasa CComQIPtr](../../atl/reference/ccomqiptr-class.md)<br/>
+[Klasa CComQIPtrElementTraits](../../atl/reference/ccomqiptrelementtraits-class.md)<br/>
 [Klasa — Przegląd](../../atl/atl-class-overview.md)

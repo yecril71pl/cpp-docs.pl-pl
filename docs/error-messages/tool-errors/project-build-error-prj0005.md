@@ -16,22 +16,23 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7b02e831c9adc8d7ff7fce759334263f847d24cf
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 1be1ac49d5d6fa3b85b327305bc4919d183b962e
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33327769"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46016517"
 ---
 # <a name="project-build-error-prj0005"></a>Błąd PRJ0005 kompilacji projektu
-Nie można utworzyć pliku tymczasowego w katalogu "directory".  
-  
- Można utworzyć pliku tymczasowego nie powiodło się. Przyczyny niepowodzenia:  
-  
--   Za mało nazwy pliku tymczasowego.  
-  
--   Katalog tymczasowy jest tylko do odczytu.  
-  
--   Nie jest katalog tymczasowy ani TMP zmiennej środowiskowej.  
-  
--   Ten komputer jest poza wolnego miejsca na dysku.
+
+Nie można utworzyć pliku tymczasowego w katalogu 'katalog'.
+
+Nie można wywołać można utworzyć pliku tymczasowego. Przyczyny niepowodzenia:
+
+- Za mało nazwy pliku tymczasowego.
+
+- Katalog tymczasowy jest tylko do odczytu.
+
+- Brak katalogu temp i TMP zmiennej środowiskowej.
+
+- Na komputerze za mało wolnego miejsca na dysku.

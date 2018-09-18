@@ -15,21 +15,23 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 4e68aacb013cb7f91d0225094cfd941eae5e2c30
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: d4ef6d5d54bb3d6ed55ec2837a2300d8a1dcb03e
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33096694"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46034092"
 ---
 # <a name="creating-an-ole-db-consumer"></a>Tworzenie konsumenta OLE DB
-Konsumenta OLE DB szablonów można tworzyć z lub bez OLE DB Kreator konsumenta ATL, chociaż zaleca się za pomocą kreatora. Klient może działać w dowolnej aplikacji, która obsługuje ATL.  
+
+Możesz utworzyć konsumenta OLE DB szablony z lub bez OLE DB Kreator konsumenta ATL, jednak przy użyciu kreatora jest to zalecana metoda. Użytkownik może działać w każdej aplikacji, która obsługuje ATL.  
   
- W tej sekcji omówiono następujące tematy:  
+W tej sekcji omówiono następujące tematy:  
   
--   [Tworzenie konsumenta OLE DB przy użyciu kreatora](../../data/oledb/creating-an-ole-db-consumer-using-a-wizard.md)  
+- [Tworzenie konsumenta OLE DB przy użyciu kreatora](../../data/oledb/creating-an-ole-db-consumer-using-a-wizard.md)  
   
--   [Tworzenie konsumenta OLE DB bez użycia kreatora](../../data/oledb/creating-a-consumer-without-using-a-wizard.md)  
+- [Tworzenie konsumenta OLE DB bez użycia kreatora](../../data/oledb/creating-a-consumer-without-using-a-wizard.md)  
   
 ## <a name="see-also"></a>Zobacz też  
- [Szablony konsumentów OLE DB](../../data/oledb/ole-db-consumer-templates-cpp.md)
+
+[Szablony konsumentów OLE DB](../../data/oledb/ole-db-consumer-templates-cpp.md)

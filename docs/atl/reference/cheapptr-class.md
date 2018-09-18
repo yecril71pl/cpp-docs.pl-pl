@@ -20,12 +20,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 34a6b019c2e3f71b70253ad2c15bc4b2758eeae7
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 8ea4fd429395fc78f36d1f9b3244068c737be49a
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43762083"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46033982"
 ---
 # <a name="cheapptr-class"></a>Klasa CHeapPtr
 
@@ -37,16 +37,16 @@ Klasa inteligentnego wskaźnika do zarządzania wskaźniki stosu.
 ## <a name="syntax"></a>Składnia
 
 ```
-template<typename T, class Allocator=CCRTAllocator>  
+template<typename T, class Allocator=CCRTAllocator>
 class CHeapPtr : public CHeapPtrBase<T, Allocator>
 ```
 
 #### <a name="parameters"></a>Parametry
 
-*T*  
+*T*<br/>
 Typ obiektu, który ma być przechowywany na stosie.
 
-*Allocator*  
+*Allocator*<br/>
 Klasa alokacji pamięci do użycia.
 
 ## <a name="members"></a>Elementy członkowskie
@@ -94,7 +94,7 @@ bool Allocate(size_t nElements = 1) throw();
 
 ### <a name="parameters"></a>Parametry
 
-*nElements*  
+*nElements*<br/>
 Liczba elementów używane do obliczania ilość pamięci do przydzielenia. Wartość domyślna to 1.
 
 ### <a name="return-value"></a>Wartość zwracana
@@ -121,7 +121,7 @@ CHeapPtr(CHeapPtr<T, Allocator>& p) throw();
 
 ### <a name="parameters"></a>Parametry
 
-*p*  
+*p*<br/>
 Istniejącego wskaźnika stosu lub `CHeapPtr`.
 
 ### <a name="remarks"></a>Uwagi
@@ -143,7 +143,7 @@ CHeapPtr<T, Allocator>& operator=(
 
 ### <a name="parameters"></a>Parametry
 
-*p*  
+*p*<br/>
 Istniejące `CHeapPtr` obiektu.
 
 ### <a name="return-value"></a>Wartość zwracana
@@ -164,7 +164,7 @@ bool Reallocate(size_t nElements) throw();
 
 ### <a name="parameters"></a>Parametry
 
-*nElements*  
+*nElements*<br/>
 Nowy numer elementy służące do obliczania ilość pamięci do przydzielenia.
 
 ### <a name="return-value"></a>Wartość zwracana
@@ -177,6 +177,6 @@ Zwraca wartość PRAWDA, jeśli pamięć została pomyślnie przydzielone, warto
 
 ## <a name="see-also"></a>Zobacz też
 
-[Klasa CHeapPtrBase](../../atl/reference/cheapptrbase-class.md)   
-[Klasa CCRTAllocator](../../atl/reference/ccrtallocator-class.md)   
+[Klasa CHeapPtrBase](../../atl/reference/cheapptrbase-class.md)<br/>
+[Klasa CCRTAllocator](../../atl/reference/ccrtallocator-class.md)<br/>
 [Klasa — Przegląd](../../atl/atl-class-overview.md)

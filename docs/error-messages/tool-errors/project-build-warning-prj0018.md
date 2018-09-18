@@ -16,16 +16,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 914f05b6e2bb3dfb8932b306fb7c84b9a31466c7
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 4e232ed90af6002a58356827421b2d49e68ba14a
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33317040"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46033215"
 ---
 # <a name="project-build-warning-prj0018"></a>Ostrzeżenie PRJ0018 dotyczące kompilacji projektu
-Nie znaleziono następujące zmienne środowiskowe:  
-  
- Zmienna środowiskowa nie jest zdefiniowany. Błąd ten wyświetla listę zmiennych środowiskowych, które nie zostały zdefiniowane.  
-  
- Zobacz [makra dla poleceń kompilacji niestandardowej](../../ide/common-macros-for-build-commands-and-properties.md) uzyskać informacji o makra w procesie kompilacji.
+
+Nie znaleziono następujące zmienne środowiskowe:
+
+Nie zdefiniowano zmiennej środowiskowej. Ten błąd zawiera listę zmiennych środowiskowych, które nie zostały zdefiniowane.
+
+Zobacz [makra dla poleceń kompilacji niestandardowe](../../ide/common-macros-for-build-commands-and-properties.md) uzyskać informacji na temat makra w procesie kompilacji.

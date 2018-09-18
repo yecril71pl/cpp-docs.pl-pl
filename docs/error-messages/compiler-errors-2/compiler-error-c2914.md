@@ -1,5 +1,5 @@
 ---
-title: C2914 błąd kompilatora | Dokumentacja firmy Microsoft
+title: Błąd kompilatora C2914 | Dokumentacja firmy Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,43 +16,44 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2eda9718af074379381cca62c481020ddf5ed204
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 7fddc7d479e743162a43a96a80b8d362678bf51f
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33243094"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46027794"
 ---
-# <a name="compiler-error-c2914"></a>C2914 błąd kompilatora
-'Identyfikator': nie można wywnioskować argumentów typu jako argument funkcji jest niejednoznaczny  
-  
- Kompilator nie może określić, które przeciążonej funkcji dla argumentu w postaci zwykłego lub szablonu.  
-  
- Poniższy przykład generuje C2914:  
-  
-```  
-// C2914.cpp  
-// compile with: /c  
-void f(int);  
-void f(double);  
-template<class T> void g(void (*) (T));  
-void h() { g(f); }   // C2914  
-// try the following line instead  
-// void h() { g<int>(f); }  
-```  
-  
- C2914 może również wystąpić, gdy użycie typów ogólnych.  Poniższy przykład generuje C2914:  
-  
-```  
-// C2914b.cpp  
-// compile with: /clr /c  
-void f(int);  
-void f(double);  
-  
-template<class T>   
-void gf(void (*) (T));  
-  
-void h() { gf(f);}   // C2914  
-// try the following line instead  
-void h() { gf<int>(f); }  
+# <a name="compiler-error-c2914"></a>Błąd kompilatora C2914
+
+'Identyfikator': nie można wywnioskować argumentów typu jako argumentu funkcji jest niejednoznaczny
+
+Kompilator nie może określić, które przeciążone funkcje, aby użyć argumentu generyczny lub szablonu.
+
+Poniższy przykład spowoduje wygenerowanie C2914:
+
+```
+// C2914.cpp
+// compile with: /c
+void f(int);
+void f(double);
+template<class T> void g(void (*) (T));
+void h() { g(f); }   // C2914
+// try the following line instead
+// void h() { g<int>(f); }
+```
+
+C2914 może również wystąpić, gdy za pomocą typów ogólnych.  Poniższy przykład spowoduje wygenerowanie C2914:
+
+```
+// C2914b.cpp
+// compile with: /clr /c
+void f(int);
+void f(double);
+
+template<class T>
+void gf(void (*) (T));
+
+void h() { gf(f);}   // C2914
+// try the following line instead
+void h() { gf<int>(f); }
 ```

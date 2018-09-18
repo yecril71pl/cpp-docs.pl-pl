@@ -16,14 +16,15 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 11dbaa335a7354a54deda8db1bb29f2384873a28
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: aeb12cfb83b8fc7e7a0b4b89e325897002d1561c
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33196639"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46029354"
 ---
 # <a name="fatal-error-c1003"></a>Błąd krytyczny C1003
-Liczba błędów przekracza liczbę; zatrzymywanie kompilacji  
-  
- Błędy w programie jest za duża, aby umożliwić odzyskiwanie. Kompilator musi wygasać.
+
+Liczba błędów przekracza liczbę; zatrzymywanie kompilacji
+
+Błędy w programie jest za duża, aby umożliwić odzyskiwanie. Kompilator musi wygasać.

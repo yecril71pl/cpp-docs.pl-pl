@@ -1,5 +1,5 @@
 ---
-title: C2365 błąd kompilatora | Dokumentacja firmy Microsoft
+title: Błąd kompilatora C2365 | Dokumentacja firmy Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,28 +16,29 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 952d1ea71f0388b26d72e3cbdcb10185813242e2
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: b8809c4137cd9b3c1d45960387b8a28bdb007ac8
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33223638"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46029157"
 ---
-# <a name="compiler-error-c2365"></a>C2365 błąd kompilatora
-"element członkowski klasy": zmiana definicji; Definicja Poprzednia była "elementu członkowskiego klasy"  
-  
- Próbowano zmienić definicję elementu członkowskiego klasy.  
-  
- Poniższy przykład generuje C2365.  
-  
-```  
-// C2365.cpp  
-// compile with: /c  
-class C1 {  
-   int CFunc();  
-   char *CFunc;   // C2365, already exists as a member function  
-  
-   int CMem;  
-   char *CMem();   // C2365, already exists as a data member  
-};  
+# <a name="compiler-error-c2365"></a>Błąd kompilatora C2365
+
+"składowej klasy": zmiana definicji; Definicja Poprzednia była "składowej klasy"
+
+Próbowano zmienić definicję składowej klasy.
+
+Poniższy przykład spowoduje wygenerowanie C2365.
+
+```
+// C2365.cpp
+// compile with: /c
+class C1 {
+   int CFunc();
+   char *CFunc;   // C2365, already exists as a member function
+
+   int CMem;
+   char *CMem();   // C2365, already exists as a data member
+};
 ```

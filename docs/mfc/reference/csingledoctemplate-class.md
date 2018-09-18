@@ -16,15 +16,15 @@ helpviewer_keywords:
 ms.assetid: 4f3a8212-81ee-48a0-ad22-e0ed7c36a391
 author: mikeblome
 ms.author: mblome
-ms.openlocfilehash: efdd8f5b806b7e5745aed0091a2638c8592a6ecc
-ms.sourcegitcommit: be0e3457f2884551f18e183ef0ea65c3ded7f689
+ms.openlocfilehash: ea133213b8d1d91a6c0932c7f0b7a94c5d5a368a
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/28/2018
-ms.locfileid: "37079068"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46026768"
 ---
 # <a name="csingledoctemplate-class"></a>Klasa CSingleDocTemplate
-Definiuje szablonu dokumentu, który implementuje interfejs pojedynczego dokumentu (SDI).  
+Określa szablon dokumentu, który implementuje interfejs dokumentu pojedynczego (SDI).  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -41,28 +41,28 @@ class CSingleDocTemplate : public CDocTemplate
 |[CSingleDocTemplate::CSingleDocTemplate](#csingledoctemplate)|Konstruuje `CSingleDocTemplate` obiektu.|  
   
 ## <a name="remarks"></a>Uwagi  
- Aplikacja SDI używa główną ramkę okna do wyświetlenia dokumentu. tylko jeden dokument może być otwarty naraz.  
+ Korzysta z aplikacji interfejsu SDI ramki głównego okna do wyświetlenia dokumentu. tylko jeden dokument może być otwarty naraz.  
   
  Szablon dokumentu definiuje relację między trzy typy klas:  
   
--   Klasy dokumentów, który pochodzi od `CDocument`.  
+-   Klasy dokumentów, które pochodzą z `CDocument`.  
   
--   Klasy widoku, która zawiera dane z klasy dokumentu wymienionych powyżej. Można pochodzi ta klasa z `CView`, `CScrollView`, `CFormView`, lub `CEditView`. (Można również użyć `CEditView` bezpośrednio.)  
+-   Klasy widoku, która wyświetla dane z klasy dokumentu wymienionych powyżej. Utworzeniu klasy pochodnej tej klasy z `CView`, `CScrollView`, `CFormView`, lub `CEditView`. (Możesz również użyć `CEditView` bezpośrednio.)  
   
--   Klasy okna ramki, który zawiera widok. Dla szablonu dokumentów SDI może pochodzi ta klasa z `CFrameWnd`; Jeśli nie musisz dostosować zachowanie głównego ramki okna, możesz użyć `CFrameWnd` bezpośrednio, bez wyprowadzanie własne klasy.  
+-   Klasy okna ramki, który zawiera widok. W przypadku szablonu dokumentu SDI utworzeniu klasy pochodnej tej klasy z `CFrameWnd`; Jeśli nie trzeba dostosować zachowanie głównej ramki okna, możesz użyć `CFrameWnd` bezpośrednio, bez wyprowadzanie własne klasy.  
   
- SDI aplikacji zwykle obsługuje jeden typ pliku, co powoduje tylko jeden `CSingleDocTemplate` obiektu. Tylko jeden dokument może być otwarty naraz.  
+ Aplikacji interfejsu SDI zazwyczaj obsługuje jeden typ dokumentu, dlatego ma tylko jeden `CSingleDocTemplate` obiektu. Tylko jeden dokument może być otwarty naraz.  
   
- Nie trzeba wywołać żadnego członka funkcji `CSingleDocTemplate` z wyjątkiem konstruktora. Uchwyty framework `CSingleDocTemplate` obiekty wewnętrznie.  
+ Nie musisz wywołać dowolny członek funkcji `CSingleDocTemplate` z wyjątkiem konstruktora. Uchwyty framework `CSingleDocTemplate` obiekty wewnętrznie.  
   
- Aby uzyskać więcej informacji na temat używania `CSingleDocTemplate`, zobacz [szablony dokumentów i proces tworzenia dokumentu/widoku](../../mfc/document-templates-and-the-document-view-creation-process.md).  
+ Aby uzyskać więcej informacji na temat korzystania z `CSingleDocTemplate`, zobacz [szablonów dokumentów i proces tworzenia dokumentu/widoku](../../mfc/document-templates-and-the-document-view-creation-process.md).  
   
 ## <a name="inheritance-hierarchy"></a>Hierarchia dziedziczenia  
  [CObject](../../mfc/reference/cobject-class.md)  
   
  [CCmdTarget](../../mfc/reference/ccmdtarget-class.md)  
   
- [Cdoctemplate —](../../mfc/reference/cdoctemplate-class.md)  
+ [CDocTemplate](../../mfc/reference/cdoctemplate-class.md)  
   
  `CSingleDocTemplate`  
   
@@ -82,35 +82,33 @@ CSingleDocTemplate(
   
 ### <a name="parameters"></a>Parametry  
  *nIDResource*  
- Określa identyfikator zasoby używane do typu dokumentu. Może to obejmować menu, ikona tabeli akceleratora i zasoby ciągów.  
+ Określa identyfikator zasoby używane za pomocą typu dokumentu. Może to obejmować menu, ikony, tabeli akceleratora i zasoby w postaci ciągów.  
   
- Zasób ciągu składa się z maksymalnie siedem podciągów oddzielone znakiem "\n" (znak "\n" jest potrzebny jako symbol zastępczy, jeśli nie dołączono podciągu jednak znakami "\n" nie są konieczne); te podciągów opisu typu dokumentu. Aby uzyskać informacje o podciągów, zobacz [CDocTemplate::GetDocString](../../mfc/reference/cdoctemplate-class.md#getdocstring). Ten zasób ciągu znajduje się w pliku zasobów aplikacji. Na przykład:  
+ Zasób ciągu składa się z maksymalnie siedem podciągów oddzielone znakiem "\n" (znak '\n' jest wymagane jako symbol zastępczy, jeśli podciąg nie jest uwzględniony jednak nie są konieczne znaki końcowe '\n'); te podciągów opisują typ dokumentu. Aby uzyskać informacje na temat podciągów, zobacz [CDocTemplate::GetDocString](../../mfc/reference/cdoctemplate-class.md#getdocstring). Ten zasób ciągu znajduje się w pliku zasobów aplikacji. Na przykład:  
   
- `// MYCALC.RC`  
+```RC
+// MYCALC.RC
+STRINGTABLE PRELOAD DISCARDABLE
+BEGIN
+  IDR_MAINFRAME "MyCalc Windows Application\nSheet\nWorksheet\n Worksheets (*.myc)\n.myc\nMyCalcSheet\n MyCalc Worksheet"
+END
+```
   
- `STRINGTABLE PRELOAD DISCARDABLE`  
-  
- `BEGIN`  
-  
- `IDR_MAINFRAME "MyCalc Windows Application\nSheet\nWorksheet\n Worksheets (*.myc)\n.myc\nMyCalcSheet\n MyCalc Worksheet"`  
-  
- `END`  
-  
- Można edytować tego ciągu za pomocą Edytora ciągu; cały ciąg jest wyświetlany jako pojedynczy wpis w edytorze ciągu nie jako siedmiu oddzielne wpisy.  
+ Możesz edytować ten ciąg przy użyciu edytora ciągów; cały ciąg pojawi się jako pojedynczy wpis w edytorze ciągu nie jako siedmiu osobnych wpisów.  
   
  Aby uzyskać więcej informacji na temat tych typów zasobów, zobacz [edytor ciągów](../../windows/string-editor.md).  
   
  *pDocClass*  
- Wskazuje `CRuntimeClass` obiekt klasy dokumentu. Ta klasa jest `CDocument`-klasy definiowane w celu odzwierciedlenia dokumentów.  
+ Wskazuje `CRuntimeClass` obiekt klasy dokumentu. Ta klasa jest `CDocument`— zdefiniuj do reprezentowania dokumentów klasy pochodnej.  
   
  *pFrameClass*  
- Wskazuje `CRuntimeClass` obiekt klasy ramki okna. Ta klasa może być `CFrameWnd`-klasy lub może być `CFrameWnd` sam Jeśli domyślne zachowanie dla użytkownika głównego okna ramowego.  
+ Wskazuje `CRuntimeClass` obiektu klasę okna ramowego. Ta klasa może być `CFrameWnd`-klasy pochodnej lub może być `CFrameWnd` sam chcącym domyślne zachowanie dla okna głównej ramki.  
   
  *pViewClass*  
- Wskazuje `CRuntimeClass` obiekt klasy widoku. Ta klasa jest `CView`-klasy zdefiniuj do wyświetlania dokumentów.  
+ Wskazuje `CRuntimeClass` obiekt klasy widoku. Ta klasa jest `CView`— należy zdefiniować, aby wyświetlić swoje dokumenty klasy pochodnej.  
   
 ### <a name="remarks"></a>Uwagi  
- Dynamiczne przydzielanie `CSingleDocTemplate` obiektu i przekaż go do `CWinApp::AddDocTemplate` z `InitInstance` funkcji członkowskiej klasy aplikacji.  
+ Dynamiczne przydzielanie `CSingleDocTemplate` obiektu i przekazać ją do `CWinApp::AddDocTemplate` z `InitInstance` funkcji składowej klasy aplikacji.  
   
 ### <a name="example"></a>Przykład  
  [!code-cpp[NVC_MFCDocViewSDI#13](../../mfc/codesnippet/cpp/csingledoctemplate-class_1.cpp)]  
@@ -118,12 +116,12 @@ CSingleDocTemplate(
  [!code-cpp[NVC_MFCDocViewSDI#14](../../mfc/codesnippet/cpp/csingledoctemplate-class_2.cpp)]  
   
 ## <a name="see-also"></a>Zobacz też  
- [Przykładowe MFC DOCKTOOL](../../visual-cpp-samples.md)   
+ [Próbki MFC DOCKTOOL](../../visual-cpp-samples.md)   
  [Cdoctemplate — klasa](../../mfc/reference/cdoctemplate-class.md)   
  [Diagram hierarchii](../../mfc/hierarchy-chart.md)   
  [Cdoctemplate — klasa](../../mfc/reference/cdoctemplate-class.md)   
- [Cdocument — klasa](../../mfc/reference/cdocument-class.md)   
- [Cframewnd — klasa](../../mfc/reference/cframewnd-class.md)   
+ [Klasa CDocument](../../mfc/reference/cdocument-class.md)   
+ [Klasa CFrameWnd](../../mfc/reference/cframewnd-class.md)   
  [Klasa CMultiDocTemplate](../../mfc/reference/cmultidoctemplate-class.md)   
  [Cview — klasa](../../mfc/reference/cview-class.md)   
  [Klasa CWinApp](../../mfc/reference/cwinapp-class.md)

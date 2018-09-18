@@ -16,14 +16,15 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 902a3dfac03766e55a94c0ce801cb99ff6223fed
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 4edd0ed57dc8a47069ccf7ecf001f58269de58de
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33298541"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46033273"
 ---
 # <a name="linker-tools-warning-lnk4199"></a>Ostrzeżenie LNK4199 narzędzi konsolidatora
-/DELAYLOAD:DllName ignorowane. znaleziono żadnych importów z dllname  
-  
- Ignoruje konsolidator `dllname` , ponieważ nie wymagają użycia żadnej funkcji który `dllname` eksportuje.
+
+/DELAYLOAD:DllName ignorowane. znaleziono żadnych importów z nazwa_pliku_dll
+
+Ignoruje konsolidator `dllname` , ponieważ nie potrzebuje wszystkich funkcji, `dllname` eksportuje.

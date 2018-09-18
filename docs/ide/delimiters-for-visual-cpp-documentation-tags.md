@@ -14,25 +14,23 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e4d22df877ab757134ee6da86a5ff22ec106f958
-ms.sourcegitcommit: 7eadb968405bcb92ffa505e3ad8ac73483e59685
+ms.openlocfilehash: a2394516773f428ae62fb9e8e39dd78dd790bebd
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/23/2018
-ms.locfileid: "39208578"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46033917"
 ---
 # <a name="delimiters-for-visual-c-documentation-tags"></a>Ograniczniki tagów dokumentacji Visual C++
 Korzystanie z tagów dokumentacji wymaga ograniczników, które wskazują kompilatora, gdzie rozpoczyna się i kończy w komentarzu dokumentacji.  
   
  Za pomocą następujących rodzajów ograniczniki tagów dokumentacji XML:  
+|||
+|-|-|
+|`///`  | Jest to forma, pokazano w przykładach dokumentacji i używane przez Szablony projektów Visual C++.  |
+| `/** */`  | Są to wielowierszowy ograniczników.  |
   
- `///`  
- Jest to forma, pokazano w przykładach dokumentacji i używane przez Szablony projektów Visual C++.  
-  
- `/** */`  
- Są to wielowierszowy ograniczników.  
-  
- Istnieją reguły niektóre formatowania, korzystając z `/** */` ograniczniki:  
+Istnieją reguły niektóre formatowania, korzystając z `/** */` ograniczniki:  
   
 -   Dla wiersza, który zawiera `/**` ogranicznik, jeśli pozostałą część wiersza jest biały znak, wiersz nie został przetworzony komentarzy. Jeśli pierwszy znak odstępu, że biały znak jest ignorowana, a pozostała część wiersza jest przetwarzany. W przeciwnym razie cały tekst wiersza po `/**` ogranicznik jest przetwarzany jako część komentarza.  
   
@@ -40,7 +38,7 @@ Korzystanie z tagów dokumentacji wymaga ograniczników, które wskazują kompil
   
 -   Wiersze po ten, który rozpoczyna się od `/**` ogranicznik, kompilator szuka wspólny wzorzec na początku każdego wiersza, opcjonalny odstęp i znak gwiazdki (`*`), a następnie więcej opcjonalny odstęp. Jeśli kompilator znajdzie ze wspólnego zestawu znaków na początku każdego wiersza, zignoruje ten wzorzec dla wszystkich wierszy po `/**` ogranicznika, prawdopodobnie łącznie wiersza, który zawiera `*/` ogranicznika.  
   
- Kilka przykładów:  
+Kilka przykładów:  
   
 -   To jedyna część Poniższy komentarz, które będą przetwarzane jest wiersz, który rozpoczyna się od `<summary>`. Następujące dwa formaty generuje ten sam komentarzy:  
   

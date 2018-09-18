@@ -1,5 +1,5 @@
 ---
-title: Kompilatora (poziom 4) ostrzeżenie C4255 | Dokumentacja firmy Microsoft
+title: Kompilator ostrzeżenie (poziom 4) C4255 | Dokumentacja firmy Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,33 +16,34 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ff68feb5f926a3c2cf8bbb85acfa18e8e1ecfa29
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 72e07cc1077993e1bb22c5d8af4ce4445d38321b
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33296786"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46032383"
 ---
-# <a name="compiler-warning-level-4-c4255"></a>Kompilator C4255 ostrzegawcze (poziom 4)
-"Funkcja": nie podano prototypu funkcji: konwertowanie "()", "(void)"  
-  
- Kompilator nie znalazła jawna lista argumentów do funkcji. To ostrzeżenie dotyczy tylko za pomocą kompilatora C.  
-  
- To ostrzeżenie jest domyślnie wyłączone. Zobacz [kompilatora ostrzeżeń czy są wyłączone domyślnie](../../preprocessor/compiler-warnings-that-are-off-by-default.md) Aby uzyskać więcej informacji.  
-  
- Poniższy przykład generuje C4255:  
-  
-```  
-// C4255.c  
-// compile with: /W4 /WX  
-#pragma warning (default : 4255)  
-  
-void f()  { // C4255  
-// try the following line instead  
-//void f(void) {  
-}  
-  
-int main(int argc, char *argv[]) {  
-   f();  
-}  
+# <a name="compiler-warning-level-4-c4255"></a>Kompilator ostrzeżenie (poziom 4) C4255
+
+'Funkcja': nie podano prototypu funkcji: konwertowanie '()"na"(void)"
+
+Kompilator nie znalazł jawną listę argumentów funkcji. To ostrzeżenie jest tylko kompilator języka C.
+
+To ostrzeżenie jest domyślnie wyłączona. Zobacz [kompilatora ostrzeżenia, są wyłączone domyślnie](../../preprocessor/compiler-warnings-that-are-off-by-default.md) Aby uzyskać więcej informacji.
+
+Poniższy przykład spowoduje wygenerowanie C4255:
+
+```
+// C4255.c
+// compile with: /W4 /WX
+#pragma warning (default : 4255)
+
+void f()  { // C4255
+// try the following line instead
+//void f(void) {
+}
+
+int main(int argc, char *argv[]) {
+   f();
+}
 ```

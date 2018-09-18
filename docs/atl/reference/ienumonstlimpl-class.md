@@ -25,12 +25,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4f2e448d5fa73c64e9abb66ef70e513bc9fa0728
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 0abc7e3b87ef23e6350b54c3f64b50fbcfdd5b07
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43759249"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46031148"
 ---
 # <a name="ienumonstlimpl-class"></a>Klasa IEnumOnSTLImpl
 
@@ -40,25 +40,25 @@ Ta klasa definiuje interfejs moduł wyliczający na podstawie kolekcji standardo
 
 ```
 template <class Base,
-    const IID* piid, class T, class Copy, class CollType>  
+    const IID* piid, class T, class Copy, class CollType>
 class ATL_NO_VTABLE IEnumOnSTLImpl : public Base
 ```
 
 #### <a name="parameters"></a>Parametry
 
-*podstawowy*  
+*podstawowy*<br/>
 Moduł wyliczający COM. Zobacz [IEnumString](/windows/desktop/api/objidl/nn-objidl-ienumstring) przykład.
 
-*piid*  
+*piid*<br/>
 Wskaźnik do Identyfikatora interfejsu interfejsu modułu wyliczającego.
 
-*T*  
+*T*<br/>
 Typ elementu udostępnianych przez interfejs modułu wyliczającego.
 
-*Kopiuj*  
+*Kopiuj*<br/>
 A [kopiowania klasy zasad](../../atl/atl-copy-policy-classes.md).
 
-*CollType*  
+*CollType*<br/>
 Klasa kontenera standardowej biblioteki języka C++.
 
 ## <a name="members"></a>Elementy członkowskie
@@ -114,10 +114,10 @@ HRESULT Init(
 
 ### <a name="parameters"></a>Parametry
 
-*pUnkForRelease*  
+*pUnkForRelease*<br/>
 [in] `IUnknown` Wskaźnika obiektu, który musi znajdować się aktywne w okresie istnienia modułu wyliczającego. Przekaż wartość NULL, jeśli taki obiekt nie istnieje.
 
-*Kolekcja*  
+*Kolekcja*<br/>
 Odwołanie do kontenera standardowej biblioteki języka C++, który zawiera elementy do wyliczenia.
 
 ### <a name="return-value"></a>Wartość zwracana
@@ -140,7 +140,7 @@ STDMETHOD(Clone)(Base** ppEnum);
 
 ### <a name="parameters"></a>Parametry
 
-*ppEnum*  
+*ppEnum*<br/>
 [out] Sklonowany interfejsu modułu wyliczającego na nowo utworzony obiekt z bieżącego modułu wyliczającego.
 
 ### <a name="return-value"></a>Wartość zwracana
@@ -192,13 +192,13 @@ STDMETHOD(Next)(
 
 ### <a name="parameters"></a>Parametry
 
-*celt*  
+*celt*<br/>
 [in] Liczba elementów żądanie.
 
-*rgelt*  
+*rgelt*<br/>
 [out] Tablica, która ma zostać wypełniony przy użyciu elementów.
 
-*pceltFetched*  
+*pceltFetched*<br/>
 [out] Liczba elementów, które faktycznie są zwracane w *rgelt*. Może to być mniejszy niż *celt* Jeśli mniej niż *celt* elementy pozostają na liście.
 
 ### <a name="return-value"></a>Wartość zwracana
@@ -227,7 +227,7 @@ STDMETHOD(Skip)(ULONG celt);
 
 ### <a name="parameters"></a>Parametry
 
-*celt*  
+*celt*<br/>
 [in] Liczba elementów do pominięcia.
 
 ### <a name="return-value"></a>Wartość zwracana

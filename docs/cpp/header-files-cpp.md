@@ -16,25 +16,25 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: be194095b6461eaedd9e814c6130801b431fef5d
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: 7d1e477b04421f7e8920bba47b2eba4e73df34cb
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42602416"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46028535"
 ---
 # <a name="header-files-c"></a>Pliki nagłówków (C++)
 
-Muszą być zadeklarowane nazwy elementów programu, takie jak zmienne, funkcje, klasy i tak dalej, zanim będzie można ich użyć. Na przykład, po prostu nie można zapisywać `x = 42` bez pierwszy deklarowania "x". 
+Muszą być zadeklarowane nazwy elementów programu, takie jak zmienne, funkcje, klasy i tak dalej, zanim będzie można ich użyć. Na przykład, po prostu nie można zapisywać `x = 42` bez pierwszy deklarowania "x".
 
 ```cpp
 int x; // declaration
 x = 42; // use x
 ```
 
- Deklaracja informuje kompilator, czy jest **int**, **double**, **funkcja**, **klasy** lub coś innego.  Ponadto każda nazwa musi być zadeklarowany (bezpośrednio lub pośrednio) w każdym pliku .cpp, w którym jest używany. Gdy kompilujesz program, każdy plik .cpp jest skompilowany niezależnie do jednostki kompilacji. Kompilator nie ma informacji o jakie nazwy są deklarowane w innych jednostkach kompilacji. Oznacza to, że po zdefiniowaniu klasy lub funkcji lub zmienna globalna, należy podać deklarację to coś w każdym pliku .cpp dodatkowe, które go używa. Każda deklaracja to coś musi być dokładnie takie same we wszystkich plikach. Nieznaczne niespójności spowoduje, że błędy lub niezamierzone zachowanie, gdy próbuje Scal wszystkie jednostki kompilacji w jeden program łączący.
+Deklaracja informuje kompilator, czy jest **int**, **double**, **funkcja**, **klasy** lub coś innego.  Ponadto każda nazwa musi być zadeklarowany (bezpośrednio lub pośrednio) w każdym pliku .cpp, w którym jest używany. Gdy kompilujesz program, każdy plik .cpp jest skompilowany niezależnie do jednostki kompilacji. Kompilator nie ma informacji o jakie nazwy są deklarowane w innych jednostkach kompilacji. Oznacza to, że po zdefiniowaniu klasy lub funkcji lub zmienna globalna, należy podać deklarację to coś w każdym pliku .cpp dodatkowe, które go używa. Każda deklaracja to coś musi być dokładnie takie same we wszystkich plikach. Nieznaczne niespójności spowoduje, że błędy lub niezamierzone zachowanie, gdy próbuje Scal wszystkie jednostki kompilacji w jeden program łączący.
 
-Aby zminimalizować ryzyko błędów, C++ przyjął Konwencji przy użyciu *pliki nagłówkowe* zawierać deklaracje. Możesz wprowadzić deklaracji w pliku nagłówkowym, a następnie użyj # dyrektywy include w każdym pliku .cpp lub inny plik nagłówka wymaga tej deklaracji. #Include dyrektywy kopię pliku nagłówka bezpośrednio do pliku .cpp, przed rozpoczęciem kompilacji. 
+Aby zminimalizować ryzyko błędów, C++ przyjął Konwencji przy użyciu *pliki nagłówkowe* zawierać deklaracje. Możesz wprowadzić deklaracji w pliku nagłówkowym, a następnie użyj # dyrektywy include w każdym pliku .cpp lub inny plik nagłówka wymaga tej deklaracji. #Include dyrektywy kopię pliku nagłówka bezpośrednio do pliku .cpp, przed rozpoczęciem kompilacji.
 
 ## <a name="example"></a>Przykład
 
@@ -91,7 +91,7 @@ Po zakończeniu kompilowania każdy plik .cpp do plików .obj kompilator przekaz
 
 ## <a name="include-guards"></a>Obejmują osłony
 
-Zazwyczaj mają pliki nagłówkowe *obejmują guard* lub `#pragma once` dyrektywy w celu zapewnienia ich do pliku .cpp pojedynczej nie są wstawiane wiele razy. 
+Zazwyczaj mają pliki nagłówkowe *obejmują guard* lub `#pragma once` dyrektywy w celu zapewnienia ich do pliku .cpp pojedynczej nie są wstawiane wiele razy.
 
 ```cpp
 // my_class.h
@@ -115,20 +115,20 @@ namespace N
 Ponieważ plik nagłówkowy potencjalnie mogą zostać dołączone przez wiele plików, nie może zawierać definicje, które może tworzyć wiele definicji o takiej samej nazwie. Poniżej są niedozwolone lub są uważane za bardzo złym zwyczajem:
 
 - Definicje typu wbudowanego w przestrzeni nazw lub zasięgu globalnym
-- definicje funkcji innych niż inline 
+- definicje funkcji innych niż inline
 - definicje zmiennych wartości innej niż stała
 - definicje agregacji
 - nienazwane przestrzenie nazw
 - dyrektywy Using
 
-Korzystanie z **przy użyciu** dyrektywy niekoniecznie nie będzie powodował błąd, ale może potencjalnie spowodować problem, ponieważ zapewnia przestrzeń nazw do zakresu w każdym pliku .cpp, który bezpośrednio lub pośrednio zawiera nagłówka. 
+Korzystanie z **przy użyciu** dyrektywy niekoniecznie nie będzie powodował błąd, ale może potencjalnie spowodować problem, ponieważ zapewnia przestrzeń nazw do zakresu w każdym pliku .cpp, który bezpośrednio lub pośrednio zawiera nagłówka.
 
 ## <a name="sample-header-file"></a>Przykładowy plik nagłówka
 
 Poniższy przykład pokazuje różne rodzaje deklaracje i definicje, które są dozwolone w pliku nagłówka:
 
 ```cpp
-#pragma once 
+#pragma once
 #include <vector> // #include directive
 #include <string>
 
@@ -157,7 +157,7 @@ namespace N  // namespace declaration
     void print_to_log();
 #endif
 
-    class my_class   // regular class definition, 
+    class my_class   // regular class definition,
     {                // but no non-inline function definitions
 
         friend class other_class;

@@ -16,24 +16,25 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 825d1e1e119aa80445c5ae15804bbdde4a3d8bf9
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 091fab63737c7ee1b3b85753a354bb7214cfa411
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33295626"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46025246"
 ---
 # <a name="bscmake-error-bk1509"></a>Błąd BSCMAKE BK1509
-za mało miejsca na stercie  
-  
- Bscmake — za mało pamięci, w tym pamięci wirtualnej.  
-  
-### <a name="to-fix-by-using-the-following-possible-solutions"></a>Aby rozwiązać problem przy użyciu następujących możliwych rozwiązań  
-  
-1.  Zwolnij miejsce na dysku.  
-  
-2.  Zwiększ rozmiar pliku wymiany.  
-  
-3.  Zwiększ rozmiar pliku wymiany systemu Windows.  
-  
-4.  Zmniejsz pamięci, który wymaga BSCMAKE przy użyciu /Ei lub /Es, aby wyeliminować niektórych danych wejściowych plików lub /Em, aby wyeliminować makro treści.
+
+miejsca na stercie
+
+BSCMAKE za mało pamięci, w tym pamięci wirtualnej.
+
+### <a name="to-fix-by-using-the-following-possible-solutions"></a>Aby rozwiązać problem, korzystając z poniższymi możliwymi rozwiązaniami
+
+1. Zwolnij miejsce na dysku.
+
+1. Zwiększ rozmiar pliku wymiany.
+
+1. Zwiększenie rozmiaru pliku wymiany Windows.
+
+1. Zmniejsz pamięci, który wymaga BSCMAKE, za pomocą /Ei lub /Es, aby wyeliminować niektóre dane wejściowe pliki lub /Em, aby wyeliminować ciała makra.

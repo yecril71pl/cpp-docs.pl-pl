@@ -1,5 +1,5 @@
 ---
-title: Kompilatora (poziom 1) ostrzeżenie C4997 | Dokumentacja firmy Microsoft
+title: Kompilator ostrzeżenie (poziom 1) C4997 | Dokumentacja firmy Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,37 +16,38 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b9b0484beafa364406c5f95ca87048edddaba3f1
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: ab199f4dd884c1a2371704a836546bdb43aabed6
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33290765"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46026702"
 ---
-# <a name="compiler-warning-level-1-c4997"></a>Kompilator C4997 ostrzegawcze (poziom 1)
-"class": klasa coclass nie implementuje interfejsu COM lub pseudointerfejsu  
-  
- Klasy oznaczonej [coclass](../../windows/coclass.md) atrybutu nie implementuje interfejsu.  
-  
- Poniższy przykład generuje C4997:  
-  
-```  
-// C4997.cpp  
-// compile with: /WX  
-// to resolve this C4997, uncomment all code  
-#include <objbase.h>  
-  
-[ object ]  
-__interface I {  
-   HRESULT func();  
-};  
-  
-[ coclass ]  
-struct C /*: I*/ {  
-   /*  
-   HRESULT func() {  
-      return S_OK;  
-   }  
-   */  
-};   // C4997  
+# <a name="compiler-warning-level-1-c4997"></a>Kompilator ostrzeżenie (poziom 1) C4997
+
+"class": klasa coclass nie implementuje interfejsu COM lub pseudointerfejsu
+
+Klasa jest oznaczona za pomocą [coclass](../../windows/coclass.md) atrybutu nie implementuje interfejsu.
+
+Poniższy przykład spowoduje wygenerowanie C4997:
+
+```
+// C4997.cpp
+// compile with: /WX
+// to resolve this C4997, uncomment all code
+#include <objbase.h>
+
+[ object ]
+__interface I {
+   HRESULT func();
+};
+
+[ coclass ]
+struct C /*: I*/ {
+   /*
+   HRESULT func() {
+      return S_OK;
+   }
+   */
+};   // C4997
 ```

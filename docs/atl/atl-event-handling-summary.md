@@ -14,12 +14,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3d5a7e97f631bfa3666da00887dce2c8ba865028
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: bf676dfdc197d756a8a8e46b9a68ce4de2136284
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43767301"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46026169"
 ---
 # <a name="atl-event-handling-summary"></a>Podsumowanie obsługi zdarzeń ATL
 
@@ -57,6 +57,6 @@ Istnieją trzy główne sposoby wniosku oraz unadvising źródła zdarzeń za po
 
 ## <a name="see-also"></a>Zobacz też
 
-[Obsługa zdarzeń](../atl/event-handling-and-atl.md)   
+[Obsługa zdarzeń](../atl/event-handling-and-atl.md)<br/>
 [Obsługa interfejsu IDispEventImpl](../atl/supporting-idispeventimpl.md)
 

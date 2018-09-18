@@ -19,12 +19,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 147814856e1e447894fd9826b9620ea8d762d48c
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 4abf96e3850f88b58e138745536ffc40aef11b68
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43764982"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46024544"
 ---
 # <a name="ca2caex-class"></a>Klasa CA2CAEX
 
@@ -36,13 +36,13 @@ Ta klasa jest używana przez makra konwersji ciągów CA2CTEX i CT2CAEX i typede
 ## <a name="syntax"></a>Składnia
 
 ```
-template<int t_nBufferLength = 128>  
+template<int t_nBufferLength = 128>
 class CA2CAEX
 ```
 
 #### <a name="parameters"></a>Parametry
 
-*t_nBufferLength*  
+*t_nBufferLength*<br/>
 Rozmiar buforu używany w procesie tłumaczenia. Domyślna długość to 128 bajtów.
 
 ## <a name="members"></a>Elementy członkowskie
@@ -103,10 +103,10 @@ CA2CAEX(LPCSTR psz) throw(...);
 
 ### <a name="parameters"></a>Parametry
 
-*psz*  
+*psz*<br/>
 Ciąg tekstowy, który ma zostać przekonwertowany.
 
-*nCodePage*  
+*nCodePage*<br/>
 Nieużywane w tej klasie.
 
 ### <a name="remarks"></a>Uwagi
@@ -137,7 +137,7 @@ LPCSTR m_psz;
 
 Operator konwersji.
 
-```  
+```
 operator LPCSTR() const throw();
 ```
 
@@ -147,9 +147,9 @@ Zwraca ciąg tekstowy jako typu LPCSTR.
 
 ## <a name="see-also"></a>Zobacz też
 
-[Klasa CA2AEX](../../atl/reference/ca2aex-class.md)   
-[Klasa CA2WEX](../../atl/reference/ca2wex-class.md)   
-[Klasa CW2AEX](../../atl/reference/cw2aex-class.md)   
-[Klasa CW2CWEX](../../atl/reference/cw2cwex-class.md)   
-[Klasa CW2WEX](../../atl/reference/cw2wex-class.md)   
+[Klasa CA2AEX](../../atl/reference/ca2aex-class.md)<br/>
+[Klasa CA2WEX](../../atl/reference/ca2wex-class.md)<br/>
+[Klasa CW2AEX](../../atl/reference/cw2aex-class.md)<br/>
+[Klasa CW2CWEX](../../atl/reference/cw2cwex-class.md)<br/>
+[Klasa CW2WEX](../../atl/reference/cw2wex-class.md)<br/>
 [Klasa — Przegląd](../../atl/atl-class-overview.md)

@@ -1,5 +1,5 @@
 ---
-title: C2773 błąd kompilatora | Dokumentacja firmy Microsoft
+title: Błąd kompilatora C2773 | Dokumentacja firmy Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,14 +16,15 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: bfad1a4a3b34bd8c4d4ed81c1327073e650f5079
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 861fe9b53352548c919e54c36a603eaeb4d23b39
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33234531"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46023439"
 ---
-# <a name="compiler-error-c2773"></a>C2773 błąd kompilatora
-\#Importowanie i #using dostępne tylko w kompilatorze języka C++  
-  
- Kompilator języka C nie rozpoznaje `#import` dyrektywy preprocesora. Kompiluj źródła jako C++. Użyj [/TP](../../build/reference/tc-tp-tc-tp-specify-source-file-type.md) w razie potrzeby.
+# <a name="compiler-error-c2773"></a>Błąd kompilatora C2773
+
+\#Importowanie i #using dostępnych tylko w kompilatorze języka C++
+
+Kompilator języka C nie rozpoznaje `#import` dyrektywy preprocesora. Kompiluj źródła jako języka C++. Użyj [/TP](../../build/reference/tc-tp-tc-tp-specify-source-file-type.md) w razie potrzeby.

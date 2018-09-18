@@ -19,12 +19,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: cf975b0b434218d1917c2d630582e32cd287e298
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 7cfa52749f6789ef8bfe65f9bdcdf5238923216f
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43755076"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46019385"
 ---
 # <a name="atlcommodule70-structure"></a>Struktura _ATL_COM_MODULE70
 
@@ -44,19 +44,19 @@ struct _ATL_COM_MODULE70 {
 
 ## <a name="members"></a>Elementy członkowskie
 
-`cbSize`  
+`cbSize`<br/>
 Rozmiar struktury, używane do obsługi wersji.
 
-`m_hInstTypeLib`  
+`m_hInstTypeLib`<br/>
 Wystąpienie uchwyt do biblioteki typów dla tego modułu.
 
-`m_ppAutoObjMapFirst`  
+`m_ppAutoObjMapFirst`<br/>
 Adres elementu tablicy, wskazując początku wpisy mapy obiektu dla tego modułu.
 
-`m_ppAutoObjMapLast`  
+`m_ppAutoObjMapLast`<br/>
 Adres elementu tablicy, co oznacza koniec wpisy mapy obiektu dla tego modułu.
 
-`m_csObjMap`  
+`m_csObjMap`<br/>
 Sekcję krytyczną serializować dostęp do wpisy mapy obiektu. Używane wewnętrznie przez ATL.
 
 ## <a name="remarks"></a>Uwagi

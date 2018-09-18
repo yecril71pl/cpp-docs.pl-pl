@@ -20,12 +20,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ed0e105443231853442296748f0e505f3df51b48
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 5a3f912f7ba3a5455f7583ba2a5036548ac65df2
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43753711"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46022178"
 ---
 # <a name="isupporterrorinfoimpl-class"></a>Klasa ISupportErrorInfoImpl
 
@@ -37,14 +37,14 @@ Ta klasa udostępnia domyślną implementację elementu [interfejsu Interfejs IS
 ## <a name="syntax"></a>Składnia
 
 ```
-template<const IID* piid>  
+template<const IID* piid>
 class ATL_NO_VTABLE ISupportErrorInfoImpl 
    : public ISupportErrorInfo
 ```
 
 #### <a name="parameters"></a>Parametry
 
-*piid*  
+*piid*<br/>
 Wskaźnik do identyfikatora IID interfejsu, który obsługuje [IErrorInfo](/previous-versions/windows/desktop/api/oaidl/nn-oaidl-ierrorinfo).
 
 ## <a name="members"></a>Elementy członkowskie
@@ -95,7 +95,7 @@ STDMETHOD(GetSize)(int* pnNumThreads);
 
 ### <a name="parameters"></a>Parametry
 
-*pnNumThreads*  
+*pnNumThreads*<br/>
 [out] Adres zmiennej, która w przypadku powodzenia, otrzyma liczbę wątków w puli.
 
 ### <a name="return-value"></a>Wartość zwracana
@@ -116,7 +116,7 @@ STDMETHOD(GetTimeout)(DWORD* pdwMaxWait);
 
 ### <a name="parameters"></a>Parametry
 
-*pdwMaxWait*  
+*pdwMaxWait*<br/>
 [out] Adres zmiennej, która w przypadku powodzenia odbiera maksymalny czas (w milisekundach) oczekiwania na wątek zamknąć puli wątków.
 
 ### <a name="return-value"></a>Wartość zwracana
@@ -137,7 +137,7 @@ STDMETHOD(SetSize)int nNumThreads);
 
 ### <a name="parameters"></a>Parametry
 
-*nNumThreads*  
+*nNumThreads*<br/>
 Żądana liczba wątków w puli.
 
 Jeśli *nNumThreads* jest ujemna, jego wartość bezwzględna będzie pomnożona przez liczbę procesorów w komputerze, aby uzyskać łączna liczba wątków.
@@ -162,7 +162,7 @@ STDMETHOD(SetTimeout)(DWORD dwMaxWait);
 
 ### <a name="parameters"></a>Parametry
 
-*dwMaxWait*  
+*dwMaxWait*<br/>
 Żądany maksymalny czas (w milisekundach) oczekiwania na wątek zamknąć puli wątków.
 
 ### <a name="return-value"></a>Wartość zwracana

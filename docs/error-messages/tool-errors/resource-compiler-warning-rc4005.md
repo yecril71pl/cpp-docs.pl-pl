@@ -16,18 +16,19 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 724764e443d4ab999c1df1247e9f5572ebdb2078
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 589fd008b3927887a8144b2fc63d2cbbde2af913
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33322487"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46028522"
 ---
 # <a name="resource-compiler-warning-rc4005"></a>Ostrzeżenie RC4005 kompilatora zasobów
-"identyfikator": zmiana definicji makra  
-  
- Identyfikator jest zdefiniowana dwukrotnie. Kompilator używane druga definicja makra.  
-  
- To ostrzeżenie może być spowodowana przez definiowanie makra w wierszu polecenia, a w kodzie z `#define` dyrektywy. On również może być spowodowane makra zaimportowane z plików dołączanych.  
-  
- Aby usunąć to ostrzeżenie, usuń jedną z definicji lub użyj `#undef` dyrektywy przed druga definicja.
+
+'Identyfikator': ponowna definicja makra
+
+Identyfikator zdefiniowano dwa razy. Kompilator używał drugi definicji makra.
+
+To ostrzeżenie może być spowodowany przez zdefiniowanie makra w wierszu polecenia i w kodzie adresem `#define` dyrektywy. On również może być spowodowane makra zaimportowane z plików dołączanych.
+
+Aby usunąć to ostrzeżenie, usuń jedną z definicji lub użyj `#undef` dyrektywy przed definicją drugiego.

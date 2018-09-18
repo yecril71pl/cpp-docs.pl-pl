@@ -24,12 +24,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7bfa501834102e37c14de11ee1af84a21e82c35f
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: 5707a7fd4ab83c8e3de3c4868ad41e3525621b07
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45703849"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46033956"
 ---
 # <a name="ccomgitptr-class"></a>Klasa CComGITPtr
 
@@ -38,13 +38,13 @@ Ta klasa dostarcza metody radzenia sobie z wskaźniki interfejsu i tabeli interf
 ## <a name="syntax"></a>Składnia
 
 ```
-template <class T>  
+template <class T>
 class CComGITPtr
 ```
 
 #### <a name="parameters"></a>Parametry
 
-`T`  
+*T*<br/>
 Typ wskaźnika interfejsu, które mają być przechowywane w usłudze GIT.
 
 ## <a name="members"></a>Elementy członkowskie
@@ -102,10 +102,10 @@ HRESULT Attach(DWORD dwCookie) throw();
 
 ### <a name="parameters"></a>Parametry
 
-*p*  
+*p*<br/>
 Wskaźnik interfejsu, który ma zostać dodany do usługi GIT.
 
-*dwCookie*  
+*dwCookie*<br/>
 Plik cookie używany do identyfikowania wskaźnika interfejsu.
 
 ### <a name="return-value"></a>Wartość zwracana
@@ -170,7 +170,7 @@ HRESULT CopyTo(T** pp) const throw();
 
 ### <a name="parameters"></a>Parametry
 
-*strony*  
+*strony*<br/>
 Wskaźnik, która będzie odbierać interfejsu.
 
 ### <a name="return-value"></a>Wartość zwracana
@@ -262,7 +262,7 @@ Przypisuje nową wartość do `CComGITPtr` obiektu, albo z istniejącego obiektu
 
 Zwraca wartość pliku cookie skojarzona z `CComGITPtr` obiektu.
 
-```  
+```
 operator DWORD() const;
 ```
 
@@ -288,7 +288,7 @@ Usuwa interfejs z narzędzia GIT.
 
 ## <a name="see-also"></a>Zobacz też
 
-[Marshaler trybu](../../atl/atl-and-the-free-threaded-marshaler.md)   
-[Uzyskiwanie dostępu do interfejsów w Apartamentach](/windows/desktop/com/accessing-interfaces-across-apartments)   
-[Kiedy używać tabeli interfejsu globalnego](/windows/desktop/com/when-to-use-the-global-interface-table)   
+[Marshaler trybu](../../atl/atl-and-the-free-threaded-marshaler.md)<br/>
+[Uzyskiwanie dostępu do interfejsów w Apartamentach](/windows/desktop/com/accessing-interfaces-across-apartments)<br/>
+[Kiedy używać tabeli interfejsu globalnego](/windows/desktop/com/when-to-use-the-global-interface-table)<br/>
 [Klasa — Przegląd](../../atl/atl-class-overview.md)

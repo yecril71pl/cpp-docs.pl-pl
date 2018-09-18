@@ -16,36 +16,37 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8aadf25d968d6d457f891cab49a43591455b9d12
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 2068534d51ae1350510a349f875c1977299edb1d
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33301710"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46019158"
 ---
 # <a name="linker-tools-warning-lnk4098"></a>Ostrzeżenie LNK4098 narzędzi konsolidatora
-Użyj "library" defaultlib w konflikcie z innymi bibliotekami; Użyj /NODEFAULTLIB:library  
-  
- Próbujesz się połączyć z bibliotekami niezgodne.  
-  
+
+użycie "library" defaultlib w konflikcie z innymi bibliotekami; Użyj /NODEFAULTLIB:library
+
+Próbujesz połączyć się z bibliotekami niezgodne.
+
 > [!NOTE]
->  Biblioteki wykonawcze zawierają teraz dyrektywy, aby zapobiec mieszaniu różnych typów. W ten sam program otrzymasz to ostrzeżenie, Jeśli spróbujesz użyć różnych typów lub debugowania i bez debugowania wersji biblioteki czasu wykonywania. Na przykład jeśli skompilowany jeden plik do korzystania z jednego rodzaju biblioteki wykonawczej języka innego pliku używać innego typu (na przykład jednowątkowe i wielowątkowe) i próbował łączyć je, otrzymasz to ostrzeżenie. Należy skompilować wszystkie pliki źródłowe do korzystania z tej samej biblioteki czasu wykonywania. Zobacz [biblioteki wykonawczej użyj](../../build/reference/md-mt-ld-use-run-time-library.md) (**/ / MD**, **/MT**, **/LD**) opcje kompilatora, aby uzyskać więcej informacji.  
-  
- Można użyć konsolidatora [: lib](../../build/reference/verbose-print-progress-messages.md) przełącznik, aby określić, które wyszukuje konsolidator biblioteki. Jeśli zostanie wyświetlony LNK4098, aby utworzyć plik wykonywalny, który używa, na przykład jednowątkowe, bez debugowania biblioteki czasu wykonywania, użyj **: lib** opcję, aby dowiedzieć się, które wyszukuje konsolidator biblioteki. Konsolidator wydrukować LIBC.lib i nie LIBCMT.lib MSVCRT.lib, LIBCD.lib, LIBCMTD.lib albo MSVCRTD.lib jako przeszukiwane biblioteki. Można ustalić konsolidator, aby zignorować niepoprawne biblioteki czasu wykonywania przy użyciu [/nodefaultlib](../../build/reference/nodefaultlib-ignore-libraries.md) dla każdej biblioteki, aby zignorować.  
-  
- W poniższej tabeli przedstawiono, które biblioteki należy ją ignorować w zależności od biblioteki wykonawczej, którego chcesz użyć.  
-  
-|Aby użyć tej biblioteki wykonawczej|Ignoruj biblioteki|  
-|-----------------------------------|----------------------------|  
-|Jednowątkowe (libc.lib)|libcmt.lib, msvcrt.lib, libcd.lib, libcmtd.lib, msvcrtd.lib|  
-|Wielowątkowe (libcmt.lib)|libc.lib, msvcrt.lib, libcd.lib, libcmtd.lib, msvcrtd.lib|  
-|Wielowątkowe, za pomocą biblioteki DLL (msvcrt.lib)|libc.lib, libcmt.lib, libcd.lib, libcmtd.lib, msvcrtd.lib|  
-|Jednowątkowe debugowania (libcd.lib)|libc.lib, libcmt.lib, msvcrt.lib, libcmtd.lib, msvcrtd.lib|  
-|Debugowanie wielowątkowe (libcmtd.lib)|libc.lib, libcmt.lib, msvcrt.lib, libcd.lib, msvcrtd.lib|  
-|Debugowanie Multithreaded za pomocą biblioteki DLL (msvcrtd.lib)|libc.lib, libcmt.lib, msvcrt.lib, libcd.lib, libcmtd.lib|  
-  
- Na przykład jeśli chcesz utworzyć plik wykonywalny, który jest używana bez debugowania, jednowątkowych wersja biblioteki wykonawczej Odebrano to ostrzeżenie, można użyć następujących opcji z konsolidator:  
-  
-```  
-/NODEFAULTLIB:libcmt.lib /NODEFAULTLIB:msvcrt.lib /NODEFAULTLIB:libcd.lib /NODEFAULTLIB:libcmtd.lib /NODEFAULTLIB:msvcrtd.lib  
+>  Biblioteki wykonawcze zawierają teraz dyrektywy, aby zapobiec mieszaniu różnych typów. W tym samym programie otrzyma tego ostrzeżenia, Jeśli spróbujesz użyć różnych typów lub debugowania i bez debugowania wersji biblioteki wykonawczej. Na przykład jeśli skompilowano jeden plik do korzystania z jednego rodzaju biblioteki wykonawczej specyficznej innego pliku używać innego typu (na przykład jednowątkowe a wielowątkowe) i próbował łączyć je otrzymasz to ostrzeżenie. Należy skompilować wszystkich plików źródłowych przy użyciu tej samej biblioteki wykonawczej. Zobacz [korzystaj z bibliotek wykonawczych](../../build/reference/md-mt-ld-use-run-time-library.md) (**/MD**, **/MT**, **/LD**) opcje kompilatora, aby uzyskać więcej informacji.
+
+Możesz użyć konsolidatora [opisu](../../build/reference/verbose-print-progress-messages.md) przełącznik, aby określić, które biblioteki, program łączący się wyszukiwanie. Jeśli zostanie wyświetlony LNK4098 i chcesz, aby utworzyć plik wykonywalny, który używa, na przykład jednowątkowe, bez debugowania biblioteki wykonawczej, należy użyć **opisu** opcję, aby dowiedzieć się, które biblioteki, program łączący się wyszukiwanie. Konsolidator powinien drukowanie LIBC.lib i nie LIBCMT.lib, MSVCRT.lib, LIBCD.lib, biblioteki LIBCMTD.lib lub biblioteki MSVCRTD.lib jako przeszukiwane biblioteki. Można stwierdzić, konsolidator, aby Ignoruj nieprawidłowe biblioteki czasu wykonywania przy użyciu [/nodefaultlib](../../build/reference/nodefaultlib-ignore-libraries.md) dla każdej biblioteki, aby zignorować.
+
+W poniższej tabeli przedstawiono, które biblioteki należy zignorować w zależności od tego, które biblioteki czasu wykonywania, do którego chcesz użyć.
+
+|Aby użyć tej biblioteki wykonawczej|Ignoruj te biblioteki|
+|-----------------------------------|----------------------------|
+|Jednowątkowe (libc.lib)|biblioteki libcmt.lib msvcrt.lib, libcd.lib, libcmtd.lib, biblioteki msvcrtd.lib|
+|Wielowątkowe (libcmt.lib)|libc.lib msvcrt.lib, libcd.lib, libcmtd.lib, biblioteki msvcrtd.lib|
+|Wielowątkowe przy użyciu biblioteki DLL (msvcrt.lib)|libc.lib libcmt.lib, libcd.lib, libcmtd.lib, biblioteki msvcrtd.lib|
+|Jednowątkowe debugowania (libcd.lib)|libc.lib libcmt.lib, msvcrt.lib, libcmtd.lib, biblioteki msvcrtd.lib|
+|Debuguj wielowątkowe (libcmtd.lib)|libc.lib libcmt.lib, msvcrt.lib, libcd.lib, biblioteki msvcrtd.lib|
+|Debuguj wielowątkowe przy użyciu biblioteki DLL (msvcrtd.lib)|libc.lib libcmt.lib, msvcrt.lib, libcd.lib, biblioteki libcmtd.lib|
+
+Na przykład jeśli chcesz utworzyć plik wykonywalny, który używa-debug, jednowątkowe wersji biblioteki wykonawczej otrzymany to ostrzeżenie, można użyć następujących opcji za pomocą konsolidatora:
+
+```
+/NODEFAULTLIB:libcmt.lib /NODEFAULTLIB:msvcrt.lib /NODEFAULTLIB:libcd.lib /NODEFAULTLIB:libcmtd.lib /NODEFAULTLIB:msvcrtd.lib
 ```

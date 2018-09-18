@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4799d0b9c36ade8b1e203ca106605db75752b02f
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: f5a4d4c359fb4a90bfd25801f7c73f5bc4d7d501
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43752818"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46019474"
 ---
 # <a name="commandhandler"></a>CommandHandler
 
@@ -29,7 +29,7 @@ ms.locfileid: "43752818"
 
 ## <a name="syntax"></a>Składnia
 
-```  
+```cpp
 LRESULT CommandHandler(
     WORD wNotifyCode,  
     WORD wID,  
@@ -39,16 +39,16 @@ LRESULT CommandHandler(
 
 #### <a name="parameters"></a>Parametry
 
-*wNotifyCode*  
+*wNotifyCode*<br/>
 Kod powiadomienia.
 
-*wID*  
+*wID*<br/>
 Identyfikator elementu menu, formant lub klawiszy skrótów.
 
-*hWndCtl*  
+*hWndCtl*<br/>
 Dojście do kontrolki okna.
 
-*bHandled*  
+*bHandled*<br/>
 Ustawia mapy wiadomości *bHandled* na wartość TRUE, przed `CommandHandler` jest wywoływana. Jeśli `CommandHandler` nie obsługuje w pełni komunikat, należy ją ustawić *bHandled* na wartość FAŁSZ, aby wiadomość wymaga dalszego przetwarzania.
 
 ## <a name="return-value"></a>Wartość zwracana
@@ -61,7 +61,7 @@ Aby uzyskać przykład korzystania z tej obsługi wiadomości w mapie komunikat�
 
 ## <a name="see-also"></a>Zobacz też
 
-[Implementowanie okna](../atl/implementing-a-window.md)   
-[Mapy komunikatów](../atl/message-maps-atl.md)   
+[Implementowanie okna](../atl/implementing-a-window.md)<br/>
+[Mapy komunikatów](../atl/message-maps-atl.md)<br/>
 [WM_NOTIFY](https://msdn.microsoft.com/library/windows/desktop/bb775583)
 

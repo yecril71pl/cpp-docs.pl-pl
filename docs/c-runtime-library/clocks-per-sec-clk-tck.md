@@ -1,5 +1,5 @@
 ---
-title: CLOCKS_PER_SEC, CLK_TCK — | Dokumentacja firmy Microsoft
+title: CLOCKS_PER_SEC, CLK_TCK | Dokumentacja firmy Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,24 +18,27 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: bbcc64419a34ff763f3e116474687fbadf055f42
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: c3c7eac1db91abf7a84e424f7166402f346d3e4e
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32387404"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46033579"
 ---
 # <a name="clockspersec-clktck"></a>CLOCKS_PER_SEC, CLK_TCK
-## <a name="syntax"></a>Składnia  
-  
-```  
-  
-#include <time.h>  
-```  
-  
-## <a name="remarks"></a>Uwagi  
- Czas w sekundach jest wartość zwrócona przez `clock` funkcja rozdzielonych `CLOCKS_PER_SEC`. `CLK_TCK` odpowiada, ale uznany za przestarzały.  
-  
-## <a name="see-also"></a>Zobacz też  
- [Zegara](../c-runtime-library/reference/clock.md)   
- [Stałe globalne](../c-runtime-library/global-constants.md)
+
+## <a name="syntax"></a>Składnia
+
+```
+
+#include <time.h>
+```
+
+## <a name="remarks"></a>Uwagi
+
+Czas w sekundach jest wartość zwrócona przez obiekt `clock` funkcji, podzielona przez `CLOCKS_PER_SEC`. `CLK_TCK` jest równoważny, ale uznany za przestarzały.
+
+## <a name="see-also"></a>Zobacz też
+
+[clock](../c-runtime-library/reference/clock.md)<br/>
+[Stałe globalne](../c-runtime-library/global-constants.md)

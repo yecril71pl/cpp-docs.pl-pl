@@ -1,5 +1,5 @@
 ---
-title: Kompilatora (poziom 3) ostrzeżenie C4622 | Dokumentacja firmy Microsoft
+title: Kompilator ostrzeżenie (poziom 3) C4622 | Dokumentacja firmy Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,16 +16,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0b82e87f37b50b8df727d043889cb35ca02d3f78
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: d91e3c914d6c3feeb9d2326c94efe2bc54ac98f4
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33291544"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46023244"
 ---
-# <a name="compiler-warning-level-3-c4622"></a>Kompilator C4622 ostrzegawcze (poziom 3)
-Zastępowanie informacji o debugowaniu utworzonej podczas tworzenia prekompilowanego nagłówka w pliku obiektu: 'Plik'.  
-  
- Informacje CodeView w określonym pliku zostało utracone, jeśli został skompilowany z [/Yu](../../build/reference/yu-use-precompiled-header-file.md) opcji (Używanie prekompilowanych nagłówków).  
-  
- Zmień nazwę pliku obiektu (za pomocą [/Fo](../../build/reference/fo-object-file-name.md)) podczas tworzenia lub przy użyciu prekompilowanego nagłówka pliku, a następnie połącz przy użyciu nowego pliku obiektu.
+# <a name="compiler-warning-level-3-c4622"></a>Kompilator ostrzeżenie (poziom 3) C4622
+
+zastępowanie informacji o debugowaniu utworzonych podczas tworzenia prekompilowanego pliku nagłówkowego w pliku obiektu: 'Plik'
+
+Informacje CodeView w określonym pliku zostało utracone, jeśli został skompilowany przy użyciu [/Yu](../../build/reference/yu-use-precompiled-header-file.md) opcji (Używanie prekompilowanych nagłówków).
+
+Zmień nazwę pliku obiektu (przy użyciu [/Fo](../../build/reference/fo-object-file-name.md)) podczas tworzenia lub przy użyciu prekompilowanego nagłówka pliku i link, za pomocą nowego pliku obiektu.
