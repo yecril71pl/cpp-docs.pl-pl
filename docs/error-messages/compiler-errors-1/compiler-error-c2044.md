@@ -1,5 +1,5 @@
 ---
-title: C2044 błąd kompilatora | Dokumentacja firmy Microsoft
+title: Błąd kompilatora C2044 | Dokumentacja firmy Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,14 +16,15 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8207f23f53cc10651be549bf30147f1c33cc3db9
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 73444428d015949b4147639b7f6a7c2a27d8160e
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33163175"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46101419"
 ---
-# <a name="compiler-error-c2044"></a>C2044 błąd kompilatora
-nadal jest niedozwolony  
-  
- A [kontynuować](../../cpp/continue-statement-cpp.md) jest dozwolony tylko w obrębie `do`, `for`, lub `while` instrukcji.
+# <a name="compiler-error-c2044"></a>Błąd kompilatora C2044
+
+niedozwolone continue
+
+A [nadal](../../cpp/continue-statement-cpp.md) jest dozwolony tylko w obrębie `do`, `for`, lub `while` instrukcji.

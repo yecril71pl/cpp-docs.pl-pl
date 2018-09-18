@@ -1,5 +1,5 @@
 ---
-title: Call — klasa | Dokumentacja firmy Microsoft
+title: Wywołaj klasę | Dokumentacja firmy Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -23,15 +23,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 47f72948621e9311f05af74f75d80cd35c1deddc
-ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
+ms.openlocfilehash: 585a490ec64152a1268b7707971ea94e69bf9fbf
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33689704"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46109720"
 ---
 # <a name="call-class"></a>Klasa wywołania
-A `call` bloku komunikatów jest źródłem wielu uporządkowane `target_block` który wywołuje funkcję podczas odbierania komunikatu.  
+A `call` blok komunikatów jest wielu źródeł, uporządkowane `target_block` wywołującej określonej funkcji podczas odbierania komunikatu.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -41,11 +41,11 @@ class call : public target_block<multi_link_registry<ISource<T>>>;
 ```  
   
 #### <a name="parameters"></a>Parametry  
- `T`  
- Rodzaj ładunku komunikaty propagowane do tego bloku.  
+*T*<br/>
+Typ ładunku komunikatów propagowane do tego bloku.  
   
- `_FunctorType`  
- Podpis funkcji, które akceptują tego bloku.  
+*_FunctorType*<br/>
+Podpis funkcji, które akceptują tego bloku.  
   
 ## <a name="members"></a>Elementy członkowskie  
   
@@ -53,18 +53,18 @@ class call : public target_block<multi_link_registry<ISource<T>>>;
   
 |Nazwa|Opis|  
 |----------|-----------------|  
-|[Wywołania](#ctor)|Przeciążone. Konstruuje `call` bloku obsługi wiadomości.|  
-|[~ call — destruktor](#dtor)|Niszczy `call` bloku obsługi wiadomości.|  
+|[Wywołania](#ctor)|Przeciążone. Konstruuje `call` Blok obsługi wiadomości.|  
+|[~ call — destruktor](#dtor)|Niszczy `call` Blok obsługi wiadomości.|  
   
 ### <a name="protected-methods"></a>Metody chronione  
   
 |Nazwa|Opis|  
 |----------|-----------------|  
 |[process_input_messages](#process_input_messages)|Wykonuje wywołanie funkcji na komunikaty wejściowe.|  
-|[process_message](#process_message)|Przetwarza komunikat, który został zaakceptowany przez to `call` bloku obsługi wiadomości.|  
-|[propagate_message](#propagate_message)|Asynchronicznie przekazuje komunikat z `ISource` bloku do tego `call` bloku obsługi wiadomości. Jest ono wywoływane przez `propagate` metody wywołanego bloku źródłowego.|  
-|[send_message](#send_message)|Synchronicznie przekazuje komunikat z `ISource` bloku do tego `call` bloku obsługi wiadomości. Jest ono wywoływane przez `send` metody wywołanego bloku źródłowego.|  
-|[supports_anonymous_source](#supports_anonymous_source)|Zastępuje `supports_anonymous_source` metody, aby wskazać, że ten blok może akceptować komunikaty oferowane przez źródło, który nie jest połączony. (Przesłania [ITarget::supports_anonymous_source](itarget-class.md#supports_anonymous_source).)|  
+|[process_message](#process_message)|Przetwarza komunikat, który został zaakceptowany przez to `call` Blok obsługi wiadomości.|  
+|[propagate_message](#propagate_message)|Asynchronicznie przekazuje komunikat z `ISource` bloku, aby to `call` Blok obsługi wiadomości. Zostanie wywołany przez `propagate` metody, gdy zostanie wywołana przez blok źródłowy.|  
+|[send_message](#send_message)|Synchronicznie przekazuje komunikat z `ISource` bloku, aby to `call` Blok obsługi wiadomości. Zostanie wywołany przez `send` metody, gdy zostanie wywołana przez blok źródłowy.|  
+|[supports_anonymous_source](#supports_anonymous_source)|Zastępuje `supports_anonymous_source` metodę w celu wskazania, że ten blok może akceptować komunikaty oferowane przez źródło, który nie jest połączony. (Przesłania [itarget::supports_anonymous_source —](itarget-class.md#supports_anonymous_source).)|  
   
 ## <a name="remarks"></a>Uwagi  
  Aby uzyskać więcej informacji, zobacz [bloki komunikatów asynchronicznych](../../../parallel/concrt/asynchronous-message-blocks.md).  
@@ -83,7 +83,7 @@ class call : public target_block<multi_link_registry<ISource<T>>>;
   
 ##  <a name="ctor"></a> Wywołania 
 
- Konstruuje `call` bloku obsługi wiadomości.  
+ Konstruuje `call` Blok obsługi wiadomości.  
   
 ```
 call(
@@ -113,34 +113,34 @@ call(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `_Func`  
- Funkcja, która zostanie wywołana dla każdego komunikatu zaakceptowane.  
+*_Func*<br/>
+Funkcja, która zostanie wywołana dla każdego komunikatu akceptowane.  
   
- `_Filter`  
- Funkcja filtru, który określa, czy oferowany wiadomości powinna być akceptowana.  
+*_Filtruj*<br/>
+Funkcja filtrowania, określający, czy powinna być akceptowana oferowane wiadomości.  
   
- `_PScheduler`  
- `Scheduler` Obiektu, w którym zadanie propagacji `call` zaplanowano bloku obsługi wiadomości.  
+*_PScheduler*<br/>
+`Scheduler` Obiekt, w którym zadanie propagacji dla `call` zaplanowano Blok obsługi wiadomości.  
   
- `_PScheduleGroup`  
- `ScheduleGroup` Obiektu, w którym zadanie propagacji `call` zaplanowano bloku obsługi wiadomości. `Scheduler` Technicznego obiekt używany przez grupę harmonogramu.  
+*_PScheduleGroup*<br/>
+`ScheduleGroup` Obiekt, w którym zadanie propagacji dla `call` zaplanowano Blok obsługi wiadomości. `Scheduler` Obiekt używany jest implikowany przez grupę harmonogramów.  
   
 ### <a name="remarks"></a>Uwagi  
- Środowisko uruchomieniowe używa domyślnego harmonogramu, jeśli nie określisz `_PScheduler` lub `_PScheduleGroup` parametrów.  
+ Środowisko wykonawcze używa domyślnego harmonogramu, jeśli nie określisz `_PScheduler` lub `_PScheduleGroup` parametrów.  
   
- Typ `_Call_method` jest obiekt podpisem `void (T const &)` który jest wywoływany przez to `call` Blok obsługi komunikatów do przetworzenia komunikatu.  
+ Typ `_Call_method` jest funktor za pomocą podpisu `void (T const &)` który zostanie wywołany przez to `call` Blok obsługi wiadomości, aby przetworzyć komunikatu.  
   
- Typ `filter_method` jest obiekt podpisem `bool (T const &)` który jest wywoływany przez to `call` obsługi komunikatów bloku, aby ustalić, czy powinna obsługiwać komunikatu oferowany.  
+ Typ `filter_method` jest funktor za pomocą podpisu `bool (T const &)` który zostanie wywołany przez to `call` Blok obsługi wiadomości, aby ustalić, czy nie powinien akceptować wiadomości oferowane.  
   
 ##  <a name="dtor"></a> ~ wywołania 
 
- Niszczy `call` bloku obsługi wiadomości.  
+ Niszczy `call` Blok obsługi wiadomości.  
   
 ```
 ~call();
 ```  
   
-##  <a name="process_input_messages"></a> process_input_messages 
+##  <a name="process_input_messages"></a> process_input_messages — 
 
  Wykonuje wywołanie funkcji na komunikaty wejściowe.  
   
@@ -149,23 +149,24 @@ virtual void process_input_messages(_Inout_ message<T>* _PMessage);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `_PMessage`  
+*_PMessage*<br/>
+Wskaźnik do wiadomości, które mają być obsługiwane.  
   
-##  <a name="process_message"></a> process_message 
+##  <a name="process_message"></a> process_message — 
 
- Przetwarza komunikat, który został zaakceptowany przez to `call` bloku obsługi wiadomości.  
+ Przetwarza komunikat, który został zaakceptowany przez to `call` Blok obsługi wiadomości.  
   
 ```
 virtual void process_message(_Inout_ message<T>* _PMessage);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `_PMessage`  
- Wskaźnik do wiadomości, które mają być obsługiwane.  
+*_PMessage*<br/>
+Wskaźnik do wiadomości, które mają być obsługiwane.  
   
 ##  <a name="propagate_message"></a> propagate_message 
 
- Asynchronicznie przekazuje komunikat z `ISource` bloku do tego `call` bloku obsługi wiadomości. Jest ono wywoływane przez `propagate` metody wywołanego bloku źródłowego.  
+ Asynchronicznie przekazuje komunikat z `ISource` bloku, aby to `call` Blok obsługi wiadomości. Zostanie wywołany przez `propagate` metody, gdy zostanie wywołana przez blok źródłowy.  
   
 ```
 virtual message_status propagate_message(
@@ -174,18 +175,18 @@ virtual message_status propagate_message(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `_PMessage`  
- Wskaźnik do `message` obiektu.  
+*_PMessage*<br/>
+Wskaźnik do `message` obiektu.  
   
- `_PSource`  
- Wskaźnik do bloku źródłowego oferty wiadomości.  
+*_PSource*<br/>
+Wskaźnik do blok źródłowy oferty wiadomości.  
   
 ### <a name="return-value"></a>Wartość zwracana  
- A [message_status —](concurrency-namespace-enums.md) wskazanie docelowy korzystam z komunikatu.  
+ A [message_status —](concurrency-namespace-enums.md) sygnał docelowy postanowiła zrobić z komunikatem.  
   
 ##  <a name="send_message"></a> send_message 
 
- Synchronicznie przekazuje komunikat z `ISource` bloku do tego `call` bloku obsługi wiadomości. Jest ono wywoływane przez `send` metody wywołanego bloku źródłowego.  
+ Synchronicznie przekazuje komunikat z `ISource` bloku, aby to `call` Blok obsługi wiadomości. Zostanie wywołany przez `send` metody, gdy zostanie wywołana przez blok źródłowy.  
   
 ```
 virtual message_status send_message(
@@ -194,25 +195,25 @@ virtual message_status send_message(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `_PMessage`  
- Wskaźnik do `message` obiektu.  
+*_PMessage*<br/>
+Wskaźnik do `message` obiektu.  
   
- `_PSource`  
- Wskaźnik do bloku źródłowego oferty wiadomości.  
+*_PSource*<br/>
+Wskaźnik do blok źródłowy oferty wiadomości.  
   
 ### <a name="return-value"></a>Wartość zwracana  
- A [message_status —](concurrency-namespace-enums.md) wskazanie docelowy korzystam z komunikatu.  
+ A [message_status —](concurrency-namespace-enums.md) sygnał docelowy postanowiła zrobić z komunikatem.  
   
-##  <a name="supports_anonymous_source"></a> supports_anonymous_source 
+##  <a name="supports_anonymous_source"></a> supports_anonymous_source — 
 
- Zastępuje `supports_anonymous_source` metody, aby wskazać, że ten blok może akceptować komunikaty oferowane przez źródło, który nie jest połączony.  
+ Zastępuje `supports_anonymous_source` metodę w celu wskazania, że ten blok może akceptować komunikaty oferowane przez źródło, który nie jest połączony.  
   
 ```
 virtual bool supports_anonymous_source();
 ```  
   
 ### <a name="return-value"></a>Wartość zwracana  
- `true` ponieważ bloku nie odłożyć oferowane wiadomości.  
+ `true` ponieważ bloku nie odłożyć dostępne komunikaty.  
   
 ## <a name="see-also"></a>Zobacz też  
  [Współbieżność Namespace](concurrency-namespace.md)   

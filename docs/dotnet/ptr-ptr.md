@@ -20,12 +20,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: 0cd8b4a4a1140a1a34e0148756cdb23b2f8069cc
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 4f4df3e8059a56b137b2a4750177af1269cb6a5c
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33161476"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46107029"
 ---
 # <a name="ptrptr"></a>ptr::ptr
 Konstruuje `com::ptr` opakowywać obiektu COM.  
@@ -40,18 +40,18 @@ ptr(
 ```  
   
 #### <a name="parameters"></a>Parametry  
- `P`  
- Wskaźnika interfejsu COM.  
+*P*<br/>
+Wskaźnik interfejsu COM.  
   
 ## <a name="remarks"></a>Uwagi  
- Przypisuje konstruktora bez argumentów `nullptr` do uchwytu obiektu źródłowego. Kolejne wywołania `com::ptr` będzie zweryfikować wewnętrznego obiektu i dyskretnej niepowodzeniem, dopóki faktycznie utworzony lub dołączyć obiektu.  
+ Przypisuje konstruktora bez argumentów `nullptr` do podstawowego dojścia obiektu. Kolejne wywołania `com::ptr` będzie zweryfikować obiekt wewnętrzny i dyskretnie się niepowodzeniem, dopóki obiekt jest faktycznie utworzone lub dołączone.  
   
- Konstruktor one-argument — dodaje odwołanie do obiektu modelu COM, ale nie zwalnia odwołanie do obiektu wywołującego, dlatego należy wywołać element wywołujący `Release` obiektu modelu COM, aby rzeczywiście formantu. Gdy `com::ptr`na destruktora jest wywoływana automatycznie opublikuje jego odwołania do obiektu COM.  
+ Konstruktor one-argument — dodaje odwołanie do obiektu COM, ale nie spowoduje zwolnienia odwołanie do obiektu wywołującego, dzięki czemu obiekt wywołujący musi wywoływać `Release` obiektu COM naprawdę oddawać kontroli. Gdy `com::ptr`jego destruktor jest wywoływany automatycznie zwolni jego odwołania do obiektu COM.  
   
- Przekazywanie `NULL` do tego konstruktora jest taka sama jak wywołanie wersji bez argumentów.  
+ Przekazywanie `NULL` do tego konstruktora jest taka sama jak wersja bez argumentów podczas wywoływania.  
   
 ## <a name="example"></a>Przykład  
- W tym przykładzie implementuje klasy CLR, która używa `com::ptr` opakowywać jego prywatnego elementu członkowskiego `IXMLDOMDocument` obiektu. Jednak przedstawia użycie obie wersje konstruktora.  
+ W tym przykładzie implementuje klasę CLR, która używa `com::ptr` opakowywać jej prywatnego elementu członkowskiego `IXMLDOMDocument` obiektu. Pokazuje użycie obie wersje konstruktora.  
   
 ```  
 // comptr_ptr.cpp  
@@ -113,7 +113,7 @@ int main() {
 ```  
   
 ## <a name="requirements"></a>Wymagania  
- **Plik nagłówka** \<msclr\com\ptr.h >  
+ **Plik nagłówkowy** \<msclr\com\ptr.h >  
   
  **Namespace** msclr::com  
   

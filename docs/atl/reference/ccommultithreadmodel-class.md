@@ -24,12 +24,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 33eac78dc871dd2a9869452bc829150c3356fd0a
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 6861f19e6b785ac72edec54577b92dea0c307bff
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43754946"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46100607"
 ---
 # <a name="ccommultithreadmodel-class"></a>Klasa CComMultiThreadModel
 
@@ -99,7 +99,7 @@ Oprócz `AutoCriticalSection`, możesz użyć **typedef** nazwa [CriticalSection
 
 Poniższy kod jest modelowane [CComObjectRootEx](ccomobjectrootex-class.md)i pokazuje `AutoCriticalSection` używane w środowisku wątków.
 
-```cpp  
+```cpp
 template<class ThreadModel>
 class CMyAutoCritClass
 {
@@ -175,7 +175,7 @@ static ULONG WINAPI Decrement(LPLONG p) throw ();
 
 ### <a name="parameters"></a>Parametry
 
-*p*  
+*p*<br/>
 [in] Wskaźnik do zmiennej do zmniejszenia.
 
 ### <a name="return-value"></a>Wartość zwracana
@@ -196,7 +196,7 @@ static ULONG WINAPI Increment(LPLONG p) throw ();
 
 ### <a name="parameters"></a>Parametry
 
-*p*  
+*p*<br/>
 [in] Wskaźnik do zmiennej, aby być zwiększony.
 
 ### <a name="return-value"></a>Wartość zwracana
@@ -233,7 +233,7 @@ Zobacz [CComMultiThreadModel::AutoCriticalSection](#autocriticalsection).
 
 ## <a name="see-also"></a>Zobacz też
 
-[Klasa CComSingleThreadModel](ccomsinglethreadmodel-class.md)   
-[Klasa CComAutoCriticalSection](ccomautocriticalsection-class.md)   
-[Klasa CComCriticalSection](ccomcriticalsection-class.md)   
+[Klasa CComSingleThreadModel](ccomsinglethreadmodel-class.md)<br/>
+[Klasa CComAutoCriticalSection](ccomautocriticalsection-class.md)<br/>
+[Klasa CComCriticalSection](ccomcriticalsection-class.md)<br/>
 [Klasa — Przegląd](../atl-class-overview.md)

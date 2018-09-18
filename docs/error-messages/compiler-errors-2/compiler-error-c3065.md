@@ -1,5 +1,5 @@
 ---
-title: C3065 błąd kompilatora | Dokumentacja firmy Microsoft
+title: Błąd kompilatora C3065 | Dokumentacja firmy Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,27 +16,28 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b7a6bb966fd973a9ede675e98761e8649ca20c27
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 35867da62dad9e399e4b4672f84478e4ea9688a5
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33246960"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46104938"
 ---
-# <a name="compiler-error-c3065"></a>C3065 błąd kompilatora
-Deklaracja właściwości w zakresie nieklasowym nie jest dozwolone.  
-  
- [Właściwości](../../cpp/property-cpp.md) __declspec — modyfikator został użyty poza klasą.  Właściwości mogą być deklarowane tylko wewnątrz klasy.  
-  
- Poniższy przykład generuje C3065:  
-  
-```  
-// C3065.cpp  
-// compile with: /c  
-__declspec(property(get=get_i)) int i;   // C3065  
-  
-class x {  
-public:  
-   __declspec(property(get=get_i)) int i;   // OK  
-};  
+# <a name="compiler-error-c3065"></a>Błąd kompilatora C3065
+
+Deklaracja właściwości w zakresie nieklasowym nie jest dozwolone.
+
+[Właściwość](../../cpp/property-cpp.md) __declspec — modyfikator użyto poza klasą.  Właściwości mogą być deklarowane tylko wewnątrz klasy.
+
+Poniższy przykład spowoduje wygenerowanie C3065:
+
+```
+// C3065.cpp
+// compile with: /c
+__declspec(property(get=get_i)) int i;   // C3065
+
+class x {
+public:
+   __declspec(property(get=get_i)) int i;   // OK
+};
 ```

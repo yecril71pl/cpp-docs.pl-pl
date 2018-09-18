@@ -16,14 +16,15 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 86b8442ffcab4a800902a634ddb015c7bcb4b91c
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 1a8f6f64f3f24ebb6294f16c451a1fb6027ec1f4
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33322682"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46105200"
 ---
 # <a name="nmake-fatal-error-u1034"></a>Błąd krytyczny NMAKE U1034
-Błąd składni: brak separatora  
-  
- Dwukropkiem (**:**) oddzielający elementy docelowe, a brakuje zależności.
+
+Błąd składni: brak separatora
+
+Dwukropek (**:**) oddzielający elementów docelowych i brakuje zależności.

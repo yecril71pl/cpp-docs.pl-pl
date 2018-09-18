@@ -16,34 +16,35 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c02cc55280202b9ce576dc1e771b3428837209c8
-ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
+ms.openlocfilehash: 6b7ec56c0e3d9cdbd954e9277a63d45f2ee42435
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "42465986"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46102206"
 ---
 # <a name="fatal-error-c1076"></a>Błąd krytyczny C1076
-limit kompilatora : limit sterty wewnętrznej osiągnięty; użyj /Zm, aby określić wyższy limit  
-  
- Ten błąd może być spowodowany przez zbyt wiele symboli lub zbyt wiele wystąpień szablonu.  
-  
- Aby rozwiązać ten błąd:  
-  
-1.  Użyj [/Zm](../../build/reference/zm-specify-precompiled-header-memory-allocation-limit.md) opcję, aby ustawić limit pamięci kompilatora na wartość określoną w [C3859](../../error-messages/compiler-errors-2/compiler-error-c3859.md) komunikat o błędzie. Aby uzyskać więcej informacji o tym, jak ustawić tę wartość w programie Visual Studio, zobacz sekcję Uwagi w [/Zm (Określ wstępnie skompilowany nagłówek Memory Allocation Limit)](../../build/reference/zm-specify-precompiled-header-memory-allocation-limit.md).  
-  
-2.  Jeśli używasz kompilatorów dla hostów 32-bitowych w 64-bitowym systemie operacyjnym, użyj kompilatorów dla hostów 64-bitowych. Aby uzyskać więcej informacji, zobacz [porady: Włączanie 64-bitowego zestawu narzędzi Visual C++ w wierszu polecenia](../../build/how-to-enable-a-64-bit-visual-cpp-toolset-on-the-command-line.md).  
-  
-3.  Wyeliminuj niepotrzebne pliki dołączane.  
-  
-4.  Wyeliminuj niepotrzebne zmienne globalne — na przykład poprzez przydzielanie pamięci dynamicznie zamiast deklarowania dużej tablicy.  
-  
-5.  Usuń nieużywane deklaracje.  
-  
-6.  Podziel duże funkcje na mniejsze.  
-  
-7.  Podziel duże klasy na mniejsze.  
-  
-8.  Podziel bieżący plik na mniejsze pliki.  
-  
- Jeśli C1076 pojawia się natychmiast po uruchomieniu kompilacji, wartość określona dla **/Zm** prawdopodobnie jest zbyt duża dla Twojego programu. Zmniejsz **/Zm** wartości.
+
+limit kompilatora : limit sterty wewnętrznej osiągnięty; użyj /Zm, aby określić wyższy limit
+
+Ten błąd może być spowodowany przez zbyt wiele symboli lub zbyt wiele wystąpień szablonu.
+
+Aby rozwiązać ten błąd:
+
+1. Użyj [/Zm](../../build/reference/zm-specify-precompiled-header-memory-allocation-limit.md) opcję, aby ustawić limit pamięci kompilatora na wartość określoną w [C3859](../../error-messages/compiler-errors-2/compiler-error-c3859.md) komunikat o błędzie. Aby uzyskać więcej informacji o tym, jak ustawić tę wartość w programie Visual Studio, zobacz sekcję Uwagi w [/Zm (Określ wstępnie skompilowany nagłówek Memory Allocation Limit)](../../build/reference/zm-specify-precompiled-header-memory-allocation-limit.md).
+
+1. Jeśli używasz kompilatorów dla hostów 32-bitowych w 64-bitowym systemie operacyjnym, użyj kompilatorów dla hostów 64-bitowych. Aby uzyskać więcej informacji, zobacz [porady: Włączanie 64-bitowego zestawu narzędzi Visual C++ w wierszu polecenia](../../build/how-to-enable-a-64-bit-visual-cpp-toolset-on-the-command-line.md).
+
+1. Wyeliminuj niepotrzebne pliki dołączane.
+
+1. Wyeliminuj niepotrzebne zmienne globalne — na przykład poprzez przydzielanie pamięci dynamicznie zamiast deklarowania dużej tablicy.
+
+1. Usuń nieużywane deklaracje.
+
+1. Podziel duże funkcje na mniejsze.
+
+1. Podziel duże klasy na mniejsze.
+
+1. Podziel bieżący plik na mniejsze pliki.
+
+Jeśli C1076 pojawia się natychmiast po uruchomieniu kompilacji, wartość określona dla **/Zm** prawdopodobnie jest zbyt duża dla Twojego programu. Zmniejsz **/Zm** wartości.

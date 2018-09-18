@@ -15,17 +15,19 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c363fa74a3fac97399eee72c4b3d396a2f375d06
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: cca68ad9865ab6382114c3ebe64d5921539f7ce0
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32380592"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46106886"
 ---
 # <a name="ansi-conformance"></a>Zgodność ANSI
-Microsoft C odpowiada standard języka C zgodnie z ustaleniami określonymi w wersji 9899:1990 standardu ANSI C.  
-  
- Rozszerzenia Microsoft do ANSI C standard są wymienione wśród tekstu i składni ten podręcznik także jak odwołanie w trybie online. Ponieważ rozszerzenia nie są częścią standardowej ANSI-C, ich wykorzystania mogą ograniczać przenośność programów między systemami. Rozszerzenia Microsoft są domyślnie włączone. Aby wyłączyć rozszerzenia, należy określić /Za — opcja kompilatora. Z /Za całego kodu ANSI nie generuje błędy lub ostrzeżenia.  
-  
-## <a name="see-also"></a>Zobacz też  
- [Organizacja dokumentacji języka C](../c-language/organization-of-the-c-language-reference.md)
+
+Microsoft C jest zgodny ze standardem dla języka C według stawki ustalonej do przodu w wersji 9899:1990 standardu ANSI C.
+
+Rozszerzenia Microsoft do standardu ANSI C są wymienione w tekst i składnia tej książki, a także jak w dokumentacji online. Ponieważ rozszerzenia nie są częścią standardu ANSI C, ich użycie może ograniczyć możliwość przenoszenia programów między systemami. Domyślnie włączone są rozszerzenia Microsoft. Aby wyłączyć rozszerzenia, określ opcję kompilatora/za. Z opcją/za cały kod ze standardem ANSI generuje błędy lub ostrzeżenia.
+
+## <a name="see-also"></a>Zobacz też
+
+[Organizacja dokumentacji języka C](../c-language/organization-of-the-c-language-reference.md)

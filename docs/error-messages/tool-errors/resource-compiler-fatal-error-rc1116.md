@@ -16,14 +16,15 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9494f81c01a0bbad01015ecc7d0c171eedd637e8
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 4aff49918751e94e08cd7d6c229bfa1d27116210
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33316098"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46110591"
 ---
 # <a name="resource-compiler-fatal-error-rc1116"></a>Błąd krytyczny kompilatora zasobów RC1116
-RC przerywanie po wystąpieniu błędów preprocesora  
-  
- Kompilator zasobów zostało zatrzymane z powodu błędów. Usuń inne błędy i ponownie skompilować.
+
+Zakończenie po wystąpieniu błędów preprocesora RC
+
+Kompilator zasobów zostało zatrzymane z powodu błędów. Usuń inne błędy i ponownie skompilować.

@@ -23,12 +23,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8cf8c27d118984422ec3a78f442a3f11f13e1c75
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: bee312cd5e7a88dd0798778d5f8385df265d78a1
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43766035"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46099779"
 ---
 # <a name="iaxwinhostwindow-interface"></a>Interfejs IAxWinHostWindow
 
@@ -79,10 +79,10 @@ STDMETHOD(AttachControl)(IUnknown* pUnkControl, HWND hWnd);
 
 ### <a name="parameters"></a>Parametry
 
-*pUnkControl*  
+*pUnkControl*<br/>
 [in] Wskaźnik do `IUnknown` interfejsu formant mógł być dołączony do obiektu hosta.
 
-*hWnd*  
+*hWnd*<br/>
 [in] Dojście do okna, które ma być używany do hostowania.
 
 ### <a name="return-value"></a>Wartość zwracana
@@ -102,13 +102,13 @@ STDMETHOD(CreateControl)(
 
 ### <a name="parameters"></a>Parametry
 
-*lpTricsData*  
+*lpTricsData*<br/>
 [in] Ciąg identyfikujący formantu do utworzenia. Może być CLSID (musi zawierać nawiasów klamrowych), identyfikator ProgID, adres URL lub kod HTML (poprzedzony **MSHTML:**).
 
-*hWnd*  
+*hWnd*<br/>
 [in] Dojście do okna, które ma być używany do hostowania.
 
-*pStream*  
+*pStream*<br/>
 [in] Wskaźnik interfejsu dla strumienia zawierający dane inicjowania dla formantu. Może mieć wartości NULL.
 
 ### <a name="return-value"></a>Wartość zwracana
@@ -139,22 +139,22 @@ STDMETHOD(CreateControlEx)(
 
 ### <a name="parameters"></a>Parametry
 
-*lpTricsData*  
+*lpTricsData*<br/>
 [in] Ciąg identyfikujący formantu do utworzenia. Może być CLSID (musi zawierać nawiasów klamrowych), identyfikator ProgID, adres URL lub kod HTML (z prefiksem **MSHTML:**).
 
-*hWnd*  
+*hWnd*<br/>
 [in] Dojście do okna, które ma być używany do hostowania.
 
-*pStream*  
+*pStream*<br/>
 [in] Wskaźnik interfejsu dla strumienia zawierający dane inicjowania dla formantu. Może mieć wartości NULL.
 
-*ppUnk*  
+*ppUnk*<br/>
 [out] Adres wskaźnika, który będzie otrzymywał `IUnknown` interfejsu utworzony formant. Może mieć wartości NULL.
 
-*riidAdvise*  
+*riidAdvise*<br/>
 [in] Identyfikator interfejsu interfejsu wychodzącego w zawartego w nim obiektu. Może być wartością IID_NULL.
 
-*punkAdvise*  
+*punkAdvise*<br/>
 [in] Wskaźnik do `IUnknown` interfejs obiektu sink połączenia z punktem połączenia na przechowywany obiekt określony przez `iidSink`.
 
 ### <a name="return-value"></a>Wartość zwracana
@@ -179,10 +179,10 @@ STDMETHOD(QueryControl)(
 
 ### <a name="parameters"></a>Parametry
 
-*Parametr riid*  
+*Parametr riid*<br/>
 [in] Identyfikator kontrolki żądanego interfejsu.
 
-*ppvObject*  
+*ppvObject*<br/>
 [out] Adres wskaźnika, który otrzyma określony interfejs utworzony formant.
 
 ### <a name="return-value"></a>Wartość zwracana
@@ -199,7 +199,7 @@ STDMETHOD(SetExternalDispatch)(IDispatch* pDisp);
 
 ### <a name="parameters"></a>Parametry
 
-*pDisp*  
+*pDisp*<br/>
 [in] Wskaźnik do `IDispatch` interfejsu.
 
 ### <a name="return-value"></a>Wartość zwracana
@@ -216,7 +216,7 @@ STDMETHOD(SetExternalUIHandler)(IDocHostUIHandlerDispatch* pDisp);
 
 ### <a name="parameters"></a>Parametry
 
-*pDisp*  
+*pDisp*<br/>
 [in] Wskaźnik do `IDocHostUIHandlerDispatch` interfejsu.
 
 ### <a name="return-value"></a>Wartość zwracana
@@ -229,7 +229,7 @@ Ta funkcja jest używana przez formanty (na przykład formant przeglądarki siec
 
 ## <a name="see-also"></a>Zobacz też
 
-[Interfejs IAxWinAmbientDispatch](../../atl/reference/iaxwinambientdispatch-interface.md)   
-[CAxWindow::QueryHost](../../atl/reference/caxwindow-class.md#queryhost)   
+[Interfejs IAxWinAmbientDispatch](../../atl/reference/iaxwinambientdispatch-interface.md)<br/>
+[CAxWindow::QueryHost](../../atl/reference/caxwindow-class.md#queryhost)<br/>
 [AtlAxGetHost](composite-control-global-functions.md#atlaxgethost)
 

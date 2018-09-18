@@ -1,5 +1,5 @@
 ---
-title: C2151 błąd kompilatora | Dokumentacja firmy Microsoft
+title: Błąd kompilatora C2151 | Dokumentacja firmy Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,14 +16,15 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: fdfd708c64beffe3be3e7bf127547c904cc39709
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: ae236956d991aae2b62db704acbd4d736cbc56bd
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33166903"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46101556"
 ---
-# <a name="compiler-error-c2151"></a>C2151 błąd kompilatora
-więcej niż jeden atrybut językowy  
-  
- Funkcja zawiera więcej niż jedno słowo kluczowe ( `__cdecl`, `__stdcall`, lub `__fastcall`) określanie konwencji wywoływania.
+# <a name="compiler-error-c2151"></a>Błąd kompilatora C2151
+
+więcej niż jeden atrybut językowy
+
+Funkcja ma więcej niż jedno słowo kluczowe ( `__cdecl`, `__stdcall`, lub `__fastcall`) określanie konwencji wywoływania.

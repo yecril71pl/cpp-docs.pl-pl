@@ -1,5 +1,5 @@
 ---
-title: Kompilatora (poziom 1) ostrzeżenie C4029 | Dokumentacja firmy Microsoft
+title: Kompilator ostrzeżenie (poziom 1) C4029 | Dokumentacja firmy Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,14 +16,15 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: fe03ca53056a48d2c6104d86dd70c8c4ae31a2c6
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 1e14664a40057ff76bf69863f7b0b08bb0e63d5d
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33273195"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46105177"
 ---
-# <a name="compiler-warning-level-1-c4029"></a>Kompilator C4029 ostrzegawcze (poziom 1)
-zadeklarowana formalna lista parametrów inny niż w definicji  
-  
- Typy parametrów formalnych w deklaracji funkcji nie są zgodne z tymi w definicji funkcji. Kompilator używa listy parametrów z definicji.
+# <a name="compiler-warning-level-1-c4029"></a>Kompilator ostrzeżenie (poziom 1) C4029
+
+zadeklarowana formalna lista parametrów różniąca się od definicji
+
+Typy parametrów formalnych w deklaracji funkcji nie są zgodne z tymi w definicji funkcji. Kompilator używa listy parametrów z definicji.

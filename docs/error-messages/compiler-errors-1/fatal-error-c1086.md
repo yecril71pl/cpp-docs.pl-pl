@@ -16,14 +16,15 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 22dcb904da7ab2f3c20948b12181af91cb46a1be
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 170098d146eb4b2c83fedfd4787879b39ede3184
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33225080"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46102635"
 ---
 # <a name="fatal-error-c1086"></a>Błąd krytyczny C1086
-Nie można wyszukać plik filetype: 'Plik': wiadomości  
-  
- Kompilator nie może ukończyć operacji We/Wy.
+
+Nie można wyszukać w pliku typu: 'Plik': komunikat
+
+Kompilator nie może ukończyć operacji We/Wy.

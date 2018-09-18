@@ -1,5 +1,5 @@
 ---
-title: Kompilatora (poziom 1) ostrzeżenie C4817 | Dokumentacja firmy Microsoft
+title: Kompilator ostrzeżenie (poziom 1) C4817 | Dokumentacja firmy Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,28 +16,30 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: fa1dfa3cf0e63e319198cd9394f194864f87eacf
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: e87d602b98fe3f70c29b26c39ebce94026606249
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33286191"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46099567"
 ---
-# <a name="compiler-warning-level-1-c4817"></a>Kompilator C4817 ostrzegawcze (poziom 1)
-"członek": niedozwolone użycie "." można uzyskać dostępu do tego elementu członkowskiego; Kompilator zastąpione "->"  
-  
- Użyto operatora dostępu do niewłaściwego elementu członkowskiego.  
-  
-## <a name="example"></a>Przykład  
- Poniższy przykład generuje C4817.  
-  
-```  
-// C4817.cpp  
-// compile with: /clr /W1  
-using namespace System;  
-int main() {  
-   array<Int32> ^ a = gcnew array<Int32>(100);  
-   Console::WriteLine( a.Length );   // C4817  
-   Console::WriteLine( a->Length );   // OK  
-}  
-```  
+# <a name="compiler-warning-level-1-c4817"></a>Kompilator ostrzeżenie (poziom 1) C4817
+
+"członek": niedozwolone użycie "." na dostęp do tego elementu członkowskiego; zostało zastąpione przez kompilator za pomocą "->"
+
+Operator dostępu do niewłaściwej element członkowski został użyty.
+
+## <a name="example"></a>Przykład
+
+Poniższy przykład spowoduje wygenerowanie C4817.
+
+```
+// C4817.cpp
+// compile with: /clr /W1
+using namespace System;
+int main() {
+   array<Int32> ^ a = gcnew array<Int32>(100);
+   Console::WriteLine( a.Length );   // C4817
+   Console::WriteLine( a->Length );   // OK
+}
+```

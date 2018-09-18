@@ -1,5 +1,5 @@
 ---
-title: Lokalizacja klasy | Dokumentacja firmy Microsoft
+title: Location — klasa | Dokumentacja firmy Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -20,15 +20,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: fdfb555375df4b9f791db25fa2dee47222f79063
-ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
+ms.openlocfilehash: a7d441aff74faede9ecbc41f03fe52cd05528e06
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33688027"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46104767"
 ---
 # <a name="location-class"></a>location — Klasa
-Abstrakcja lokalizację fizyczną na sprzęcie.  
+Abstrakcja fizycznej lokalizacji na sprzęcie.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -49,16 +49,16 @@ class location;
   
 |Nazwa|Opis|  
 |----------|-----------------|  
-|[Bieżący](#current)|Zwraca `location` obiekt reprezentujący specyficzny miejsca wątek wywołujący jest wykonywany.|  
-|[from_numa_node](#from_numa_node)|Zwraca `location` obiekt reprezentujący podany Węzeł NUMA.|  
+|[bieżący](#current)|Zwraca `location` obiekt reprezentujący miejscu bardziej konkretny od pozostałych, wykonywany jest wątek wywołujący.|  
+|[from_numa_node —](#from_numa_node)|Zwraca `location` obiekt, który reprezentuje dany Węzeł NUMA.|  
   
 ### <a name="public-operators"></a>Operatory publiczne  
   
 |Nazwa|Opis|  
 |----------|-----------------|  
-|[operator!=](#operator_neq)|Określa, czy dwa `location` reprezentować innej lokalizacji.|  
-|[operator=](#operator_eq)|Przypisuje zawartość innym `location` obiektu do tego.|  
-|[operator==](#operator_eq_eq)|Określa, czy dwa `location` reprezentować tej samej lokalizacji.|  
+|[operator!=](#operator_neq)|Określa, czy dwa `location` obiekty reprezentują inną lokalizację.|  
+|[operator=](#operator_eq)|Przypisuje zawartość innego `location` obiektu do wskazanego.|  
+|[operator==](#operator_eq_eq)|Określa, czy dwa `location` obiekty reprezentują tej samej lokalizacji.|  
   
 ## <a name="inheritance-hierarchy"></a>Hierarchia dziedziczenia  
  `location`  
@@ -76,31 +76,31 @@ class location;
 ~location();
 ```  
   
-##  <a name="current"></a> Bieżący 
+##  <a name="current"></a> bieżący 
 
- Zwraca `location` obiekt reprezentujący specyficzny miejsca wątek wywołujący jest wykonywany.  
+ Zwraca `location` obiekt reprezentujący miejscu bardziej konkretny od pozostałych, wykonywany jest wątek wywołujący.  
   
 ```
 static location __cdecl current();
 ```  
   
 ### <a name="return-value"></a>Wartość zwracana  
- Lokalizację reprezentujący specyficzny miejscu wątek wywołujący jest wykonywany.  
+ Lokalizację reprezentujący bardziej konkretny od pozostałych miejscu wykonywanie wątku wywołującego.  
   
-##  <a name="from_numa_node"></a> from_numa_node 
+##  <a name="from_numa_node"></a> from_numa_node — 
 
- Zwraca `location` obiekt reprezentujący podany Węzeł NUMA.  
+ Zwraca `location` obiekt, który reprezentuje dany Węzeł NUMA.  
   
 ```
 static location __cdecl from_numa_node(unsigned short _NumaNodeNumber);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `_NumaNodeNumber`  
- Numer węzła NUMA do skonstruowania lokalizację.  
+*_NumaNodeNumber*<br/>
+Numer węzła NUMA do konstruowania lokalizację.  
   
 ### <a name="return-value"></a>Wartość zwracana  
- Lokalizację reprezentujący Węzeł NUMA, określony przez `_NumaNodeNumber` parametru.  
+ Reprezentujący Węzeł NUMA, określone przez lokalizację `_NumaNodeNumber` parametru.  
   
 ##  <a name="ctor"></a> Lokalizacja 
 
@@ -120,53 +120,60 @@ location(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `_Src`  
- `_LocationType`  
- `_Id`  
- `_BindingId`  
- `_PBinding`  
-  
+*_Src*<br/>
+
+*_LocationType*<br/>
+
+*_Identyfikator*<br/>
+
+*_BindingId*<br/>
+
+*_PBinding*<br/>
+(Opcjonalnie) Wskaźnik powiązania.
+
 ### <a name="remarks"></a>Uwagi  
- Lokalizacji domyślnej skonstruowany reprezentuje system jako całość.  
+ Lokalizacja domyślne reprezentuje system jako całość.  
   
 ##  <a name="operator_neq"></a> operator! = 
 
- Określa, czy dwa `location` reprezentować innej lokalizacji.  
+ Określa, czy dwa `location` obiekty reprezentują inną lokalizację.  
   
 ```
 bool operator!= (const location& _Rhs) const;
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `_Rhs`  
+*_Rhs*<br/>
+Operand `location`.
   
 ### <a name="return-value"></a>Wartość zwracana  
  `true` Jeśli dwie lokalizacje są różne, `false` inaczej.  
   
 ##  <a name="operator_eq"></a> operator = 
 
- Przypisuje zawartość innym `location` obiektu do tego.  
+ Przypisuje zawartość innego `location` obiektu do wskazanego.  
   
 ```
 location& operator= (const location& _Rhs);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `_Rhs`  
- Źródło `location` obiektu.  
+*_Rhs*<br/>
+Źródło `location` obiektu.  
   
 ### <a name="return-value"></a>Wartość zwracana  
   
 ##  <a name="operator_eq_eq"></a> operator == 
 
- Określa, czy dwa `location` reprezentować tej samej lokalizacji.  
+ Określa, czy dwa `location` obiekty reprezentują tej samej lokalizacji.  
   
 ```
 bool operator== (const location& _Rhs) const;
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `_Rhs`  
+*_Rhs*<br/>
+Operand `location`.
   
 ### <a name="return-value"></a>Wartość zwracana  
  `true` Jeśli dwie lokalizacje są identyczne, i `false` inaczej.  

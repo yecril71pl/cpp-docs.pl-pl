@@ -1,5 +1,5 @@
 ---
-title: C3631 błąd kompilatora | Dokumentacja firmy Microsoft
+title: Błąd kompilatora C3631 | Dokumentacja firmy Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,16 +16,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: da206faed773c89ec9c3b64f962d8569d1d87bb2
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 146358f9653acd36c855fa74f202e37d0656ad00
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33265974"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46111346"
 ---
-# <a name="compiler-error-c3631"></a>C3631 błąd kompilatora
-"Funkcja": nie można przeciążenia zarządzane lub zdarzenia WinRT  
-  
- A zarządzane lub zdarzeń WinRT nie może być przeciążony.  
-  
- C3631 jest tylko przy użyciu opcji kompilatora przestarzałe **: oldsyntax**.  
+# <a name="compiler-error-c3631"></a>Błąd kompilatora C3631
+
+'Funkcja': nie można przeciążenia zarządzanych lub zdarzeń WinRT
+
+A zarządzany lub zdarzeń WinRT nie może zostać przeciążony.
+
+C3631 jest dostępna, przy użyciu opcji kompilatora przestarzałe **: oldsyntax**.

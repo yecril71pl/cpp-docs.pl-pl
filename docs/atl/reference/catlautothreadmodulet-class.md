@@ -18,12 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ebf3ba07ac5608a47f4e2bbbe853cb37c033e5f7
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 46198390ce25cb655b94c0ca4769321fc3e9362d
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43757618"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46099710"
 ---
 # <a name="catlautothreadmodulet-class"></a>Klasa CAtlAutoThreadModuleT
 
@@ -35,21 +35,21 @@ Ta klasa dostarcza metody do implementowania serwera wątków w puli, model prze
 ## <a name="syntax"></a>Składnia
 
 ```
-template <class T, 
+template <class T,
          class ThreadAllocator = CComSimpleThreadAllocator,
-         DWORD dwWait = INFINITE>  
+         DWORD dwWait = INFINITE>
 class ATL_NO_VTABLE CAtlAutoThreadModuleT : public IAtlAutoThreadModule
 ```
 
 #### <a name="parameters"></a>Parametry
 
-*T*  
+*T*<br/>
 Klasa, który będzie implementowany serwer COM.
 
-*ThreadAllocator*  
+*ThreadAllocator*<br/>
 Klasa zarządzania wybór wątku. Wartość domyślna to [CComSimpleThreadAllocator](../../atl/reference/ccomsimplethreadallocator-class.md).
 
-*dwWait*  
+*dwWait*<br/>
 Określa interwał limitu czasu w milisekundach. Wartość domyślna to NIESKOŃCZONE, co oznacza interwał limitu czasu metody nigdy nie upłynie.
 
 ## <a name="members"></a>Elementy członkowskie
@@ -95,7 +95,7 @@ Należy przesłonić tę metodę, jeśli chcesz użyć innej metody do obliczani
 
 ## <a name="see-also"></a>Zobacz też
 
-[Klasa IAtlAutoThreadModule](../../atl/reference/iatlautothreadmodule-class.md)   
-[Klasa — Przegląd](../../atl/atl-class-overview.md)   
-[Klasa IAtlAutoThreadModule](../../atl/reference/iatlautothreadmodule-class.md)   
+[Klasa IAtlAutoThreadModule](../../atl/reference/iatlautothreadmodule-class.md)<br/>
+[Klasa — Przegląd](../../atl/atl-class-overview.md)<br/>
+[Klasa IAtlAutoThreadModule](../../atl/reference/iatlautothreadmodule-class.md)<br/>
 [Klasy modułów](../../atl/atl-module-classes.md)

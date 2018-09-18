@@ -18,15 +18,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 26027693209bc5b4687686efeae5d190ed374607
-ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
+ms.openlocfilehash: f3887672f9d0934dbcc38d6db549e383f7976b10
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33687364"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46110981"
 ---
 # <a name="nestedschedulermissingdetach-class"></a>nested_scheduler_missing_detach — Klasa
-Ta klasa opisuje wyjątek wykrycie współbieżności środowiska wykonawczego nie zwrócił do wywołania `CurrentScheduler::Detach` metody w kontekście dołączonego do drugiego za pomocą harmonogramu `Attach` metody `Scheduler` obiektu.  
+Ta klasa opisuje wyjątek generowany, gdy w środowisku uruchomieniowym współbieżności: wykrywa, czy możesz zwrócenia przez niego do wywołania `CurrentScheduler::Detach` metody na poziomie kontekstu, który dołączony do drugiego za pomocą harmonogramu `Attach` metody `Scheduler` obiektu.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -43,7 +43,7 @@ class nested_scheduler_missing_detach : public std::exception;
 |[nested_scheduler_missing_detach](#ctor)|Przeciążone. Konstruuje `nested_scheduler_missing_detach` obiektu.|  
   
 ## <a name="remarks"></a>Uwagi  
- Ten wyjątek jest zgłaszany tylko wtedy, gdy zagnieździć jeden harmonogram wewnątrz innego wywołując `Attach` metody `Scheduler` obiektu w kontekście, który jest już własnością lub dołączony do innego harmonogramu. Współbieżności środowiska wykonawczego zgłasza tego wyjątku tylko wtedy, gdy jako pomoc do lokalizowania problem może wykryć scenariusza. Nie wszystkie wystąpienia pominięcia do wywołania `CurrentScheduler::Detach` metody jest gwarantowana ma zostać zgłoszony wyjątek.  
+ Ten wyjątek jest zgłaszany tylko wtedy, gdy zagnieździć jednego harmonogramu wewnątrz innego przez wywołanie metody `Attach` metody `Scheduler` obiektów na poziomie kontekstu, który jest już właścicielem lub dołączone do innej usługi scheduler. Środowisko uruchomieniowe współbieżności zgłosi wyjątek, ten wyjątek tylko wtedy kiedy scenariusz może wykryć jako pomoc do lokalizowania problem. Nie każde wystąpienie pominięcie wywołać `CurrentScheduler::Detach` metody jest gwarantowane, generują ten wyjątek.  
   
 ## <a name="inheritance-hierarchy"></a>Hierarchia dziedziczenia  
  `exception`  
@@ -66,8 +66,8 @@ nested_scheduler_missing_detach() throw();
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `_Message`  
- Komunikat opisowy błędu.  
+*_Message*<br/>
+Opisowy komunikat dotyczący błędu.  
   
 ## <a name="see-also"></a>Zobacz też  
  [Współbieżność Namespace](concurrency-namespace.md)   

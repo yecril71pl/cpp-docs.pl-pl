@@ -1,5 +1,5 @@
 ---
-title: C2619 błąd kompilatora | Dokumentacja firmy Microsoft
+title: Błąd kompilatora C2619 | Dokumentacja firmy Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,24 +16,25 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 05f02026dac06647a8fda1eeb7e67cc3eaa586b0
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 3bbf372e615c727a619d83daa6b673490edc4172
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33231321"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46109161"
 ---
-# <a name="compiler-error-c2619"></a>C2619 błąd kompilatora
-'Identyfikator': statyczny element członkowski danych nie jest dozwolona w anonimowym struktury lub związku  
-  
- Zadeklarowano członkiem anonimowe struktura lub związek `static`.  
-  
- Poniższy przykład generuje C2619 i pokazuje, jak to naprawić przez usunięcie static — słowo kluczowe.  
-  
-```  
-// C2619.cpp  
-int main() {  
-   union { static int j; };  // C2619  
-   union { int j; };  // OK  
-}  
+# <a name="compiler-error-c2619"></a>Błąd kompilatora C2619
+
+'Identyfikator': statyczna składowa danych nie jest dozwolona w anonimowej struktury lub Unii
+
+Zadeklarowano składowej anonimowej struktury lub Unii `static`.
+
+Poniższy przykład generuje C2619 i pokazuje, jak go naprawić przez usunięcie static — słowo kluczowe.
+
+```
+// C2619.cpp
+int main() {
+   union { static int j; };  // C2619
+   union { int j; };  // OK
+}
 ```

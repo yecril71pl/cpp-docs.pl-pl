@@ -1,5 +1,5 @@
 ---
-title: C2073 błąd kompilatora | Dokumentacja firmy Microsoft
+title: Błąd kompilatora C2073 | Dokumentacja firmy Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,36 +16,37 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 27d68b36460eaf291647f097385f2645d4f384ac
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 950ca9551a605da392c1f033cb1784ff43a7fefc
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33168870"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46112372"
 ---
-# <a name="compiler-error-c2073"></a>C2073 błąd kompilatora
-'Identyfikator': elementy częściowo zainicjowanej tablicy muszą mieć domyślnego konstruktora  
-  
- Za mało inicjatory zostały określone dla tablicy typy danych zdefiniowane przez użytkownika lub stałymi. Jeśli nie podano inicjatora jawne i jego odpowiedniego konstruktora dla elementu członkowskiego tablicy, należy podać konstruktora domyślnego.  
-  
- Poniższy przykład generuje C2073:  
-  
-```  
-// C2073.cpp  
-class A {  
-public:  
-   A( int );   // constructor for ints only  
-};  
-A a[3] = { A(1), A(2) };   // C2073, no default constructor  
-```  
-  
-```  
-// C2073b.cpp  
-// compile with: /c  
-class B {  
-public:  
-   B();   // default constructor declared  
-   B( int );  
-};  
-B b[3] = { B(1), B(2) };   // OK  
+# <a name="compiler-error-c2073"></a>Błąd kompilatora C2073
+
+'Identyfikator': elementy częściowo zainicjowanej tablicy muszą mieć domyślnego konstruktora
+
+Zbyt mało inicjatory zostały określone w tablicy, typy zdefiniowane przez użytkownika lub stałych. Jeśli jawna inicjatora i jego odpowiedniego konstruktora, nie są określone dla elementu członkowskiego tablicy, należy podać domyślnego konstruktora.
+
+Poniższy przykład spowoduje wygenerowanie C2073:
+
+```
+// C2073.cpp
+class A {
+public:
+   A( int );   // constructor for ints only
+};
+A a[3] = { A(1), A(2) };   // C2073, no default constructor
+```
+
+```
+// C2073b.cpp
+// compile with: /c
+class B {
+public:
+   B();   // default constructor declared
+   B( int );
+};
+B b[3] = { B(1), B(2) };   // OK
 ```

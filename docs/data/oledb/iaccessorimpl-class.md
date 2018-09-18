@@ -48,14 +48,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 73e0b7646da57af679e7b3cbec3b0bb72d4ea8b8
-ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
+ms.openlocfilehash: 0fd40d4cac87302a6a636693e0da4480720a2cf3
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "42464752"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46098124"
 ---
 # <a name="iaccessorimpl-class"></a>IAccessorImpl — Klasa
+
 Udostępnia implementację [IAccessor](/previous-versions/windows/desktop/ms719672\(v=vs.85\)) interfejsu.  
   
 ## <a name="syntax"></a>Składnia
@@ -68,17 +69,19 @@ class ATL_NO_VTABLE IAccessorImpl : public IAccessorImplBase<BindType>
 ```  
   
 ### <a name="parameters"></a>Parametry  
- *T*  
- Klasy obiektu zestawu wierszy lub polecenie.  
+
+*T*<br/>
+Klasy obiektu zestawu wierszy lub polecenie.  
   
- *BindType*  
- Jednostki magazynu, aby uzyskać informacje o powiązaniu. Wartość domyślna to `ATLBINDINGS` struktury (patrz atldb.h).  
+*BindType*<br/>
+Jednostki magazynu, aby uzyskać informacje o powiązaniu. Wartość domyślna to `ATLBINDINGS` struktury (patrz atldb.h).  
   
- *BindingVector*  
- Jednostki magazynu na potrzeby informacji o kolumnie. Wartość domyślna to [CAtlMap](../../atl/reference/catlmap-class.md) którym kluczowy element jest wartością HACCESSOR i element wartości jest wskaźnikiem do `BindType` struktury.  
+*BindingVector*<br/>
+Jednostki magazynu na potrzeby informacji o kolumnie. Wartość domyślna to [CAtlMap](../../atl/reference/catlmap-class.md) którym kluczowy element jest wartością HACCESSOR i element wartości jest wskaźnikiem do `BindType` struktury.  
   
 ## <a name="requirements"></a>Wymagania  
- **Nagłówek:** atldb.h  
+
+**Nagłówek:** atldb.h  
 
 ## <a name="members"></a>Elementy członkowskie  
   
@@ -98,9 +101,11 @@ class ATL_NO_VTABLE IAccessorImpl : public IAccessorImplBase<BindType>
 |[ReleaseAccessor](#releaseaccessor)|Udostępnia metody dostępu.|  
   
 ## <a name="remarks"></a>Uwagi  
- Jest to parametr obowiązkowy dla polecenia i zestawy wierszy. OLE DB wymaga dostawców w celu zaimplementowania HACCESSOR, czyli tag do tablicy [DBBINDING](/previous-versions/windows/desktop/ms716845\(v=vs.85\)) struktury. Dostarczone przez HACCESSORs `IAccessorImpl` są adresy `BindType` struktury. Domyślnie `BindType` jest zdefiniowany jako `ATLBINDINGS` w `IAccessorImpl`w definicji szablonu. `BindType` udostępnia mechanizm używany przez `IAccessorImpl` śledzić liczbę elementów w jego `DBBINDING` tablicy, a także flagi metody dostępu i liczba odwołań.  
+
+Jest to parametr obowiązkowy dla polecenia i zestawy wierszy. OLE DB wymaga dostawców w celu zaimplementowania HACCESSOR, czyli tag do tablicy [DBBINDING](/previous-versions/windows/desktop/ms716845\(v=vs.85\)) struktury. Dostarczone przez HACCESSORs `IAccessorImpl` są adresy `BindType` struktury. Domyślnie `BindType` jest zdefiniowany jako `ATLBINDINGS` w `IAccessorImpl`w definicji szablonu. `BindType` udostępnia mechanizm używany przez `IAccessorImpl` śledzić liczbę elementów w jego `DBBINDING` tablicy, a także flagi metody dostępu i liczba odwołań.  
 
 ## <a name="iaccessorimpl"></a> IAccessorImpl::IAccessorImpl
+
 Konstruktor.  
   
 ### <a name="syntax"></a>Składnia  
@@ -110,6 +115,7 @@ IAccessorImpl();
 ```  
 
 ## <a name="addrefaccessor"></a> IAccessorImpl::AddRefAccessor
+
 Dodaje licznik odwołań do istniejącej metody dostępu.  
   
 ### <a name="syntax"></a>Składnia  
@@ -120,9 +126,11 @@ STDMETHOD(AddRefAccessor)(HACCESSOR hAccessor,
 ```  
   
 #### <a name="parameters"></a>Parametry  
- Zobacz [IAccessor::AddRefAccessor](/previous-versions/windows/desktop/ms714978\(v=vs.85\)) w *OLE DB Podręcznik programisty*.
+
+Zobacz [IAccessor::AddRefAccessor](/previous-versions/windows/desktop/ms714978\(v=vs.85\)) w *OLE DB Podręcznik programisty*.
 
 ## <a name="createaccessor"></a> IAccessorImpl::CreateAccessor
+
 Tworzy metodę dostępu na podstawie zestawu powiązania.  
   
 ### <a name="syntax"></a>Składnia  
@@ -137,9 +145,11 @@ STDMETHOD(CreateAccessor)(DBACCESSORFLAGS dwAccessorFlags,
 ```  
   
 #### <a name="parameters"></a>Parametry  
- Zobacz [IAccessor::CreateAccessor](/previous-versions/windows/desktop/ms720969\(v=vs.85\)) w *OLE DB Podręcznik programisty*.  
+
+Zobacz [IAccessor::CreateAccessor](/previous-versions/windows/desktop/ms720969\(v=vs.85\)) w *OLE DB Podręcznik programisty*.  
 
 ## <a name="getbindings"></a> IAccessorImpl::GetBindings
+
 Zwraca powiązania kolumny podstawowe od konsumenta w metodzie dostępu.  
   
 ### <a name="syntax"></a>Składnia  
@@ -152,9 +162,11 @@ STDMETHOD(GetBindings)(HACCESSOR hAccessor,
 ```  
   
 #### <a name="parameters"></a>Parametry  
- Zobacz [IAccessor::GetBindings](/previous-versions/windows/desktop/ms721253\(v=vs.85\)) w *OLE DB Podręcznik programisty*. 
+
+Zobacz [IAccessor::GetBindings](/previous-versions/windows/desktop/ms721253\(v=vs.85\)) w *OLE DB Podręcznik programisty*. 
 
 ## <a name="releaseaccessor"></a> IAccessorImpl::ReleaseAccessor
+
 Udostępnia metody dostępu.  
   
 ### <a name="syntax"></a>Składnia  
@@ -165,8 +177,10 @@ STDMETHOD(ReleaseAccessor)(HACCESSOR hAccessor,
 ```  
   
 #### <a name="parameters"></a>Parametry  
- Zobacz [IAccessor::ReleaseAccessor](/previous-versions/windows/desktop/ms719717\(v=vs.85\)) w *OLE DB Podręcznik programisty*.
+
+Zobacz [IAccessor::ReleaseAccessor](/previous-versions/windows/desktop/ms719717\(v=vs.85\)) w *OLE DB Podręcznik programisty*.
   
 ## <a name="see-also"></a>Zobacz też  
- [Szablony dostawców OLE DB](../../data/oledb/ole-db-provider-templates-cpp.md)   
- [Architektura szablonu dostawcy OLE DB](../../data/oledb/ole-db-provider-template-architecture.md)
+
+[Szablony dostawców OLE DB](../../data/oledb/ole-db-provider-templates-cpp.md)<br/>
+[Architektura szablonu dostawcy OLE DB](../../data/oledb/ole-db-provider-template-architecture.md)

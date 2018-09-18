@@ -19,35 +19,37 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f84455dd29023194e64fa4e594419630ef2656e6
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 8816ac8917281ed19dfc1afe9e12d302a3423f74
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32389666"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46111410"
 ---
 # <a name="storage-class-specifiers-with-function-declarations"></a>Specyfikatory klasy magazynowania z deklaracjami funkcji
-Możesz użyć dowolnej **statycznych** lub `extern` Specyfikator klasy magazynu w deklaracji funkcji. Funkcje zawsze mieć globalne okresy istnienia.  
-  
- **Microsoft Specific**  
-  
- Deklaracje funkcji na poziomie wewnętrznym ma takie samo znaczenie jak deklaracje funkcji na poziomie zewnętrznych. Oznacza to, że funkcja jest widoczna w punkcie deklaracji w dalszej części jednostce tłumaczenia, nawet wtedy, gdy jest ona zadeklarowana w zakresie lokalnym.  
-  
- **KOŃCOWY określonych firmy Microsoft**  
-  
- Reguły widoczności dla funkcji się nieco różnić od reguł dla zmiennych w następujący sposób:  
-  
--   Funkcja zadeklarowana jako **statycznych** jest widoczna tylko w obrębie pliku źródłowego, w którym jest zdefiniowany. Można wywołać funkcji w tym samym pliku źródłowego **statycznych** funkcji, ale działa w innych plików źródłowych nie można uzyskać do niego dostęp bezpośrednio przez nazwę. Można zadeklarować innego **statycznych** funkcja o tej samej nazwie w pliku źródłowym różnych bez konfliktu.  
-  
--   Funkcje deklarowane jako `extern` są widoczne w całym wszystkich plików źródłowych w programie (chyba że później ponownie zadeklarować funkcji jako **statycznych**). Dowolną funkcję można wywołać `extern` funkcji.  
-  
--   Deklaracje funkcji, które pominąć specyfikator klasy magazynowania są `extern` domyślnie.  
-  
- **Microsoft Specific**  
-  
- Microsoft umożliwia ponowna definicja `extern` identyfikator **statycznych**.  
-  
- **KOŃCOWY określonych firmy Microsoft**  
-  
-## <a name="see-also"></a>Zobacz też  
- [Klasy magazynu w języku C](../c-language/c-storage-classes.md)
+
+Można użyć dowolnego **statyczne** lub `extern` — Specyfikator klasy magazynowania w deklaracjach funkcji. Funkcje zawsze mają globalne okresy istnienia.
+
+**Microsoft Specific**
+
+Deklaracje funkcji na poziomie wewnętrznym ma takie samo znaczenie jak deklaracje funkcji na poziomie zewnętrznym. Oznacza to, czy funkcja jest widoczna w punkcie deklaracji w pozostałej części jednostki translacji, nawet, jeśli zostanie ona zadeklarowana w zakresie lokalnym.
+
+**END specyficzny dla Microsoft**
+
+Reguły widoczności dla funkcji różnią się nieco od reguły dotyczące zmiennych, w następujący sposób:
+
+- Funkcja zadeklarowana jako **statyczne** jest widoczna tylko w pliku źródłowym, w którym jest zdefiniowany. Można wywołać funkcji w tym samym pliku źródłowym **statyczne** funkcji, ale działa w innych plikach źródłowych nie można uzyskać do niego dostęp bezpośrednio przez nazwę. Można zadeklarować innego **statyczne** funkcji o tej samej nazwie w pliku źródłowym różnych bez powodowania konfliktów.
+
+- Funkcje zadeklarowane jako `extern` są widoczne w całym wszystkich plików źródłowych w programie (o ile później ponownie zadeklarować funkcję jako **statyczne**). Można wywołać żadnej funkcji `extern` funkcji.
+
+- Deklaracje funkcji, które pominąć specyfikator klasy magazynu są `extern` domyślnie.
+
+**Microsoft Specific**
+
+Firma Microsoft zezwala ponowna definicja `extern` identyfikator **statyczne**.
+
+**END specyficzny dla Microsoft**
+
+## <a name="see-also"></a>Zobacz też
+
+[Klasy magazynu w języku C](../c-language/c-storage-classes.md)

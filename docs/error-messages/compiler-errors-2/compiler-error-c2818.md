@@ -1,5 +1,5 @@
 ---
-title: C2818 błąd kompilatora | Dokumentacja firmy Microsoft
+title: Błąd kompilatora C2818 | Dokumentacja firmy Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,14 +16,15 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 10d7f419d528fcd2445b82e29d92442002624909
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: f692f52477c988c277f60a689dac5ce83a90acb2
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33236056"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46112047"
 ---
-# <a name="compiler-error-c2818"></a>C2818 błąd kompilatora
-Aplikacja przeciążonego "operator ->" jest rekursywna za pośrednictwem typu "type"  
-  
- Ponowna definicja operatora dostępu do elementu członkowskiego klasy zawiera cyklicznej `return` instrukcji. Do ponownego zdefiniowania `->` operatora za pomocą rekursji, należy przenieść procedury cykliczne do oddzielnych funkcji o nazwie z operatora przesłonić funkcji.
+# <a name="compiler-error-c2818"></a>Błąd kompilatora C2818
+
+Aplikacja przeciążonego "operator ->" jest rekursywna za pośrednictwem typu "type"
+
+Ponowne zdefiniowanie operatora dostępu do składowej klasy zawiera cykliczne `return` instrukcji. Ponowne zdefiniowanie `->` operator rekursji, należy przenieść procedury cykliczne do oddzielnych funkcję o nazwie od operatora przesłonić funkcji.

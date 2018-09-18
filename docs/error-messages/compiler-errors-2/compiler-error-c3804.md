@@ -1,5 +1,5 @@
 ---
-title: C3804 błąd kompilatora | Dokumentacja firmy Microsoft
+title: Błąd kompilatora C3804 | Dokumentacja firmy Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,42 +16,44 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b0bd4d5921037094b3050e7a3c003b507a9cae4c
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 6ef798ec8697ee9a856162b9aa63ccbf23db15f7
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33267160"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46113204"
 ---
-# <a name="compiler-error-c3804"></a>C3804 błąd kompilatora
-"property_accessor": metod typu accessor dla właściwości muszą albo być wszystkie statyczne albo wszystkie Niestatyczne  
-  
- Określając nieuproszczone właściwości, funkcje dostępu mogą być statycznych lub wystąpienia, ale nie oba.  
-  
- Zobacz [właściwości](../../windows/property-cpp-component-extensions.md) Aby uzyskać więcej informacji.  
-  
-## <a name="example"></a>Przykład  
- Poniższy przykład generuje C3804.  
-  
-```  
-// C3804.cpp  
-// compile with: /c /clr  
-ref struct A {  
-  
-   property int i {  
-      static int get() {}  
-      void set(int i) {}  
-   }   // C3804 error  
-  
-   // OK  
-   property int j {  
-      int get() { return 0; }  
-      void set(int i) {}  
-   }  
-  
-   property int k {  
-      static int get() { return 0; }  
-      static void set(int i) {}  
-   }  
-};  
+# <a name="compiler-error-c3804"></a>Błąd kompilatora C3804
+
+"property_accessor": metody dostępu dla właściwości muszą albo być wszystkie statyczne albo wszystkie Niestatyczne
+
+Podczas definiowania nietrywialnymi właściwości, funkcje metod dostępu może być statycznych lub wystąpienia, ale nie oba.
+
+Zobacz [właściwość](../../windows/property-cpp-component-extensions.md) Aby uzyskać więcej informacji.
+
+## <a name="example"></a>Przykład
+
+Poniższy przykład spowoduje wygenerowanie C3804.
+
+```
+// C3804.cpp
+// compile with: /c /clr
+ref struct A {
+
+   property int i {
+      static int get() {}
+      void set(int i) {}
+   }   // C3804 error
+
+   // OK
+   property int j {
+      int get() { return 0; }
+      void set(int i) {}
+   }
+
+   property int k {
+      static int get() { return 0; }
+      static void set(int i) {}
+   }
+};
 ```

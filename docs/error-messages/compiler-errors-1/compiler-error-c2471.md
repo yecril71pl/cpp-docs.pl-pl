@@ -1,5 +1,5 @@
 ---
-title: C2471 błąd kompilatora | Dokumentacja firmy Microsoft
+title: Błąd kompilatora C2471 | Dokumentacja firmy Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,22 +16,23 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3794a8c91a07283747087d6d2a0471d2342a4b9e
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 08faa4b1d83cd75cfe588e5ecf4dcb2fdb9c4366
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33197549"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46107107"
 ---
-# <a name="compiler-error-c2471"></a>C2471 błąd kompilatora
-Nie można zaktualizować bazy danych programu 'Plik'.  
-  
- Kompilator nie można zapisać w pliku bazy danych.  
-  
-### <a name="to-fix-the-problem"></a>Aby rozwiązać ten problem  
-  
--   Upewnij się, że dysk ma za mało dostępnego miejsca.  
-  
--   Upewnij się, że plik nie jest tylko do odczytu.  
-  
--   Upewnij się, że nie istnieją żadne naruszenia zasad współużytkowania.
+# <a name="compiler-error-c2471"></a>Błąd kompilatora C2471
+
+Nie można zaktualizować bazy danych programu 'Plik'
+
+Kompilator nie może zapisać do pliku bazy danych.
+
+### <a name="to-fix-the-problem"></a>Aby rozwiązać ten problem
+
+- Upewnij się, że na dysku jest wystarczająca ilość wolnego miejsca.
+
+- Upewnij się, że plik nie jest tylko do odczytu.
+
+- Upewnij się, że nie istnieją żadne naruszenia udostępniania.

@@ -1,5 +1,5 @@
 ---
-title: C2208 błąd kompilatora | Dokumentacja firmy Microsoft
+title: Błąd kompilatora C2208 | Dokumentacja firmy Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,24 +16,25 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 24377d17735fc63e9dc0541dfd9fb432eb0e0cda
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 6721166efad2fc214ccf2c2a45ec2342b67c39e4
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33172112"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46101724"
 ---
-# <a name="compiler-error-c2208"></a>C2208 błąd kompilatora
-'type': Brak członków zdefiniowanych przy użyciu tego typu  
-  
- Identyfikator rozpoznawania nazwy typu znajduje się w deklaracji agregacji, ale kompilator nie deklaruje elementu członkowskiego.  
-  
- Poniższy przykład generuje C2208:  
-  
-```  
-// C2208.cpp  
-class C {  
-   C;   // C2208  
-   C(){}   // OK  
-};  
+# <a name="compiler-error-c2208"></a>Błąd kompilatora C2208
+
+"type": Brak składowych zdefiniowanych przy użyciu tego typu
+
+Identyfikator rozpoznawania nazwy typu znajduje się w deklaracji agregacji, ale kompilator nie może zadeklarować członka.
+
+Poniższy przykład spowoduje wygenerowanie C2208:
+
+```
+// C2208.cpp
+class C {
+   C;   // C2208
+   C(){}   // OK
+};
 ```

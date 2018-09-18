@@ -16,16 +16,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 144fa1d85e4dd63fdb9a381fd4285ba905817851
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 31a1164ecd8ce17aec7058525598c68d312f14e0
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33316267"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46113035"
 ---
 # <a name="nmake-fatal-error-u1077"></a>Błąd krytyczny NMAKE U1077
-"program": "wartość" kod powrotu  
-  
- NMAKE nie powiodło się i zwróciło kod zakończenia danego wywołał danego polecenia lub programu.  
-  
- Aby pominąć ten błąd i kontynuować sesję NMAKE, użyj opcji /I **. Ignoruj** dyrektywy dot lub kreska (**-**) modyfikator polecenia. Aby kontynuować sesję NMAKE niepowiązanych części drzewa zależności, użyj opcji/k.
+
+"program": zwrócony kod "value"
+
+Polecenia lub program o nazwie według NMAKE nie powiodło się i zwróciło kod zakończenia danego.
+
+Aby pominąć ten błąd i kontynuować sesję NMAKE, użyj opcji/i **. Ignoruj** dyrektywy kropka lub kreska (**-**) modyfikator polecenia. Aby kontynuować sesję NMAKE niezwiązanych części drzewo zależności, użyj opcji/k.

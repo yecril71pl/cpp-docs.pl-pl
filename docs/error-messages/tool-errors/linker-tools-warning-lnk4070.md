@@ -16,18 +16,19 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9e4599e96552f1b98ef0b1af8d38995ebbe5a83e
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 9cfb4ae1c5440742c491d9615a2b4929a9b04f66
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33302506"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46106963"
 ---
 # <a name="linker-tools-warning-lnk4070"></a>Ostrzeżenie LNK4070 narzędzi konsolidatora
-Dyrektywa /out:filename w. EXP różni się od nazwy pliku wyjściowego "filename"; ignorowanie dyrektywy  
-  
- `filename` Określony w [nazwa](../../build/reference/name-c-cpp.md) lub [biblioteki](../../build/reference/library.md) instrukcji podczas tworzenia pliku .exp różni się od danych wyjściowych `filename` który został domyślnie zakłada, że lub określony za pomocą [/OUT](../../build/reference/out-output-file-name.md) opcji.  
-  
- Zostanie wyświetlone to ostrzeżenie, jeśli zmieniasz nazwę pliku wyjściowego w środowisku programistycznym i gdzie plik .def projektu nie zostało zaktualizowane. Ręcznie zaktualizuj plik .def, aby rozwiązać to ostrzeżenie.  
-  
- Program kliencki, który używa wynikowa Biblioteka DLL mogą wystąpić problemy.
+
+/ Out: nazwa_pliku dyrektywy w. EXP różni się od nazwy pliku wyjściowego 'NazwaPliku'; dyrektywa została zignorowana
+
+`filename` Określonych w [nazwa](../../build/reference/name-c-cpp.md) lub [biblioteki](../../build/reference/library.md) instrukcji podczas tworzenia pliku .exp różni się od danych wyjściowych `filename` , był domyślnie zakłada, że albo określony za pomocą [/OUT](../../build/reference/out-output-file-name.md) opcji.
+
+Jeśli zmienisz nazwę pliku wyjściowego w środowisku deweloperskim i gdzie plik .def projektu nie zostało zaktualizowane, zostanie wyświetlone to ostrzeżenie. Ręcznie zaktualizować plik .def, aby rozwiązać tego ostrzeżenia.
+
+Program kliencki, który używa wynikowej biblioteki DLL mogą wystąpić problemy.

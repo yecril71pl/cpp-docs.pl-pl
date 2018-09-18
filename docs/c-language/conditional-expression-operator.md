@@ -16,41 +16,42 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 94dffb5f52d84027cd59762478bd7d6b5f6738d6
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 2037d64aba025b9acf8279a3da9073611d11ce8e
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43751777"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46107913"
 ---
 # <a name="conditional-expression-operator"></a>Operator wyrażenia warunkowego
+
 C ma jeden operator trójargumentowy: operator wyrażenia warunkowego (**?:**).
 
 ## <a name="syntax"></a>Składnia
 
 *wyrażenia warunkowego*:<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*wyrażenie logiczne OR*<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*wyrażenie logiczne OR***?**   *wyrażenie***:***wyrażenia warunkowego* 
+&nbsp;&nbsp;&nbsp;&nbsp;*wyrażenie logiczne OR***?**  *wyrażenie***:***wyrażenia warunkowego*
 
 *Wyrażenie logiczne OR* musi być typu całkowitego, zmiennoprzecinkowego lub wskaźnika. Jego jest oceniany pod względem jego odpowiednik na 0. Następuje punktu sekwencji *wyrażenie logiczne OR*. Ocena argumenty rozpoczynające się w następujący sposób:
 
--   Jeśli *wyrażenie logiczne OR* nie jest równa 0, *wyrażenie* jest oceniany. Wynikiem obliczenia wyrażenia jest nadawana przez nieterminalnych *wyrażenie*. (Oznacza to, że *wyrażenie* jest oceniane tylko wtedy, gdy *wyrażenie logiczne OR* ma wartość true.)
+- Jeśli *wyrażenie logiczne OR* nie jest równa 0, *wyrażenie* jest oceniany. Wynikiem obliczenia wyrażenia jest nadawana przez nieterminalnych *wyrażenie*. (Oznacza to, że *wyrażenie* jest oceniane tylko wtedy, gdy *wyrażenie logiczne OR* ma wartość true.)
 
--   Jeśli *wyrażenie logiczne OR* jest równa 0, *wyrażenia warunkowego* jest oceniany. Wynikiem wyrażenia jest wartość *wyrażenia warunkowego*. (Oznacza to, że *wyrażenia warunkowego* jest oceniane tylko wtedy, gdy *wyrażenie logiczne OR* ma wartość false.)
+- Jeśli *wyrażenie logiczne OR* jest równa 0, *wyrażenia warunkowego* jest oceniany. Wynikiem wyrażenia jest wartość *wyrażenia warunkowego*. (Oznacza to, że *wyrażenia warunkowego* jest oceniane tylko wtedy, gdy *wyrażenie logiczne OR* ma wartość false.)
 
 Należy pamiętać, że albo *wyrażenie* lub *wyrażenia warunkowego* jest oceniana, ale nie oba.
 
 Typ wyniku operacji warunkowych zależy od rodzaju *wyrażenie* lub *wyrażenia warunkowego* operandu w następujący sposób:
 
--   Jeśli *wyrażenie* lub *wyrażenia warunkowego* ma całkowitego lub zmiennoprzecinkowego typu (ich typów mogą się różnić), operator wykonuje zwykle konwersje arytmetyczne. Typ wyniku jest typem operandu po konwersji.
+- Jeśli *wyrażenie* lub *wyrażenia warunkowego* ma całkowitego lub zmiennoprzecinkowego typu (ich typów mogą się różnić), operator wykonuje zwykle konwersje arytmetyczne. Typ wyniku jest typem operandu po konwersji.
 
--   Jeśli oba *wyrażenie* i *wyrażenia warunkowego* mają tę samą strukturę, Unia lub typ wskaźnika, typ wyniku jest tego samego typu struktury, Unii lub wskaźnika.
+- Jeśli oba *wyrażenie* i *wyrażenia warunkowego* mają tę samą strukturę, Unia lub typ wskaźnika, typ wyniku jest tego samego typu struktury, Unii lub wskaźnika.
 
--   Jeśli oba operandy typu `void`, wynik ma typ `void`.
+- Jeśli oba operandy typu `void`, wynik ma typ `void`.
 
--   Jeśli jeden z operandów jest wskaźnikiem do obiektu dowolnego typu, a drugi operand jest wskaźnikiem do `void`, wskaźnik do obiektu jest konwertowana na wskaźnik do `void` a wynik jest wskaźnikiem do `void`.
+- Jeśli jeden z operandów jest wskaźnikiem do obiektu dowolnego typu, a drugi operand jest wskaźnikiem do `void`, wskaźnik do obiektu jest konwertowana na wskaźnik do `void` a wynik jest wskaźnikiem do `void`.
 
--   Jeśli *wyrażenie* lub *wyrażenia warunkowego* jest wskaźnikiem typu, a drugi operand jest wyrażeniem stałym o wartości 0, typ wyniku jest typem wskaźnika.
+- Jeśli *wyrażenie* lub *wyrażenia warunkowego* jest wskaźnikiem typu, a drugi operand jest wyrażeniem stałym o wartości 0, typ wyniku jest typem wskaźnika.
 
 W porównaniu typów dla wskaźników, dowolny typ Kwalifikatory (**const** lub `volatile`) w typie, do którego punktów wskaźnika są nieistotne, ale typ wyniku dziedziczy kwalifikatory oba składniki warunkowej.
 

@@ -24,25 +24,27 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: bc259a75ab12352a7d0029241496aea22803152a
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 2522761389a7f97acf4157683f8fce19e94429d8
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32384203"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46100534"
 ---
 # <a name="multibyte-and-wide-characters"></a>Znaki wielobajtowe i dwubajtowe
-Znaków wielobajtowych jest składane sekwencji bajtów co najmniej jeden znak. Każdej sekwencji bajtów reprezentuje jeden znak w zestawie znaków rozszerzonych. Znaki wielobajtowe są używane w zestawów znaków, takich jak Kanji.  
-  
- Znaki dwubajtowe są kody znaków wielu języków, które są zawsze szeroki 16 bitów. Typ dla stałe znakowe jest `char`; znaki dwubajtowe, jest typu `wchar_t`. Ponieważ znaki dwubajtowe są zawsze o stałym rozmiarze, przy użyciu znaki dwubajtowe upraszcza programowanie z użyciem zestawu znaków międzynarodowych.  
-  
- Literał całej znaków ciągu `L"hello"` staje się tablicę sześciu liczb całkowitych typu `wchar_t`.  
-  
-```  
-{L'h', L'e', L'l', L'l', L'o', 0}  
-```  
-  
- Specyfikacja Unicode jest ze specyfikacją znaki dwubajtowe. Procedury biblioteki wykonawczej dla tłumaczenie między znaki wielobajtowe i dwubajtowe obejmują `mbstowcs`, `mbtowc`, `wcstombs`, i `wctomb`.  
-  
-## <a name="see-also"></a>Zobacz też  
- [Identyfikatory w języku C](../c-language/c-identifiers.md)
+
+Znak wielobajtowy jest znakiem składa się z sekwencji bajtów jednego lub więcej. Każda sekwencja bajtów reprezentuje pojedynczy znak z zestawu znaków rozszerzonych. Znaki wielobajtowe są używane w zestawach znaków, takich jak Kanji.
+
+Znaki dwubajtowe są kody znaków wielu języków, które są zawsze szerokiego 16 bitów. Typ dla stałych znaków jest `char`; dla znaków dwubajtowych, typ jest `wchar_t`. Znaki dwubajtowe są zawsze o stałym rozmiarze, przy użyciu znaków dwubajtowych upraszcza programowania, korzystając z zestawów znaków międzynarodowych.
+
+Literał ciągów znaków dwubajtowych `L"hello"` staje się tablicy liczb całkowitych sześć typu `wchar_t`.
+
+```
+{L'h', L'e', L'l', L'l', L'o', 0}
+```
+
+Specyfikacja Unicode jest specyfikacja dla znaków dwubajtowych. Procedury biblioteki wykonawczej specyficznej dla tłumaczenie między znaki wielobajtowe i dwubajtowe obejmują `mbstowcs`, `mbtowc`, `wcstombs`, i `wctomb`.
+
+## <a name="see-also"></a>Zobacz też
+
+[Identyfikatory w języku C](../c-language/c-identifiers.md)

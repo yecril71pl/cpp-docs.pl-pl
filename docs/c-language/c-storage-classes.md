@@ -19,12 +19,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: cd6bed6fa3722b320e23f5d6da94673ba928c225
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 3bade146edd1b83f893af72fc4e760a46187679b
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43754985"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46111709"
 ---
 # <a name="c-storage-classes"></a>Klasy magazynu w języku C
 
@@ -60,6 +60,6 @@ Dokładne znaczenie każdy Specyfikator klasy magazynowania zależy od dwa czynn
 
 [Specyfikatory klasy magazynowania dla deklaracji na poziomie zewnętrznym](../c-language/storage-class-specifiers-for-external-level-declarations.md) i [specyfikatory klasy magazynowania dla deklaracji na poziomie wewnętrznym](../c-language/storage-class-specifiers-for-internal-level-declarations.md) opisują *storage-class-specifier* terminali w Każdy rodzaj elementu deklaracji i wyjaśnić zachowanie domyślne podczas *storage-class-specifier* pominięto w zmiennej. [Specyfikatory klasy magazynowania z deklaracjami funkcji](../c-language/storage-class-specifiers-with-function-declarations.md) opisano specyfikatory klasy magazynowania używana z usługą functions.
 
-## <a name="see-also"></a>Zobacz też  
+## <a name="see-also"></a>Zobacz też
 
-[Deklaracje i typy](../c-language/declarations-and-types.md)  
+[Deklaracje i typy](../c-language/declarations-and-types.md)

@@ -1,5 +1,5 @@
 ---
-title: C3140 błąd kompilatora | Dokumentacja firmy Microsoft
+title: Błąd kompilatora C3140 | Dokumentacja firmy Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,24 +16,25 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c2c8c9e47020fe53e87b985b5db6192cd26098fc
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: a40cec364af10f4b61c19b9a28646279a8efca43
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33246907"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46111745"
 ---
-# <a name="compiler-error-c3140"></a>C3140 błąd kompilatora
-nie może mieć wiele atrybutów "module" w tej samej jednostce kompilacyjnej  
-  
- [Modułu](../../windows/module-cpp.md) atrybut może być zdefiniowany tylko raz w projekcie.  
-  
- Poniższy przykład generuje C3140:  
-  
-```  
-// C3140.cpp  
-// compile with: /c  
-[emitidl];  
-[module(name = "MyLibrary")];  
-[module(name = "MyLibrary2")];   // C3140  
+# <a name="compiler-error-c3140"></a>Błąd kompilatora C3140
+
+nie może mieć wiele atrybutów "module" w tej samej jednostce kompilacyjnej
+
+[Modułu](../../windows/module-cpp.md) atrybut może zostać zdefiniowany tylko jeden raz na projekt.
+
+Poniższy przykład spowoduje wygenerowanie C3140:
+
+```
+// C3140.cpp
+// compile with: /c
+[emitidl];
+[module(name = "MyLibrary")];
+[module(name = "MyLibrary2")];   // C3140
 ```

@@ -1,5 +1,5 @@
 ---
-title: C2517 błąd kompilatora | Dokumentacja firmy Microsoft
+title: Błąd kompilatora C2517 | Dokumentacja firmy Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,14 +16,15 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 15ae07d3585b3d2f281e8dd639b8361cea873bfb
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 4209f0ababf6262af3f273b9e76e2bb2dfaa68fb
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33229319"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46110916"
 ---
-# <a name="compiler-error-c2517"></a>C2517 błąd kompilatora
-'Identyfikator': po prawej '::' jest niezdefiniowana  
-  
- Identyfikator po prawej stronie operatora rozpoznawanie zakresów (`::`) musi być zdefiniowany element członkowski klasy, struktury lub Unii po lewej stronie. Jeśli nie klasy, struktury lub związku nosi nazwę, identyfikator po prawej stronie musi być zadeklarowany o zakresie globalnym.
+# <a name="compiler-error-c2517"></a>Błąd kompilatora C2517
+
+'Identyfikator': po prawej stronie "::" jest niezdefiniowana
+
+Identyfikator po prawej stronie operatora rozpoznawania zakresu (`::`) musi należeć do zdefiniowanej klasy, struktury lub Unii po lewej stronie. Jeśli nie klasy, struktury lub Unii nosi nazwę, identyfikator po prawej stronie musi być zadeklarowana w zakresie globalnym.

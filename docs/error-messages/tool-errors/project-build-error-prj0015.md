@@ -16,16 +16,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5c2376ddd22490bf9ce61a8db9b857ce02551b15
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: d70c8b4fe35519479056e25455914ac80fc00cb3
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33316452"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46111618"
 ---
 # <a name="project-build-error-prj0015"></a>Błąd PRJ0015 kompilacji projektu
-Urządzenia NULL nie ma w systemie. Nie możemy do uruchomienia kompilacji.  
-  
- Ten błąd może być spowodowany przez niewystarczające zasoby systemu. Zamknij niektóre aplikacje lub uruchom ponownie.  
-  
- Można także spowodowane, jeśli nie masz wystarczających uprawnień do urządzenia NULL na komputerze.
+
+Urządzenie o wartości NULL nie ma w systemie. Nie możemy do uruchomienia kompilacji.
+
+Ten błąd może być spowodowany przez niewystarczające zasoby systemu. Zamknij niektóre aplikacje lub ponowne uruchomienie.
+
+Mogą także spowodowane, jeśli nie masz wystarczających uprawnień do urządzenia o wartości NULL na komputerze.

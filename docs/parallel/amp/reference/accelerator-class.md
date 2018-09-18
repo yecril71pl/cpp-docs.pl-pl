@@ -50,12 +50,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7bebc10481c446edfa29d09663ac3139ecc5391b
-ms.sourcegitcommit: e9ce38decc9f986edab5543de3464b11ebccb123
+ms.openlocfilehash: dee005091c95bbac5fca64851f631b443bd33cca
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/13/2018
-ms.locfileid: "42464940"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46106775"
 ---
 # <a name="accelerator-class"></a>accelerator — Klasa
 Akcelerator to zdolność sprzętu zoptymalizowana pod kątem przetwarzania równoległego danych. Akcelerator może być urządzeniem podłączonym do magistrali PCIe (na przykład GPU) lub może być rozszerzonym zbiorem głównego CPU instrukcji.  
@@ -164,11 +164,11 @@ accelerator(const accelerator& _Other);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `_Device_path`  
- Ścieżka urządzenia fizycznego.  
+*_Device_path*<br/>
+Ścieżka urządzenia fizycznego.  
   
- `_Other`  
- Akcelerator do skopiowania.  
+*_Inne*<br/>
+Akcelerator do skopiowania.  
   
 ##  <a name="cpu_accelerator"></a> cpu_accelerator — 
 
@@ -187,8 +187,8 @@ accelerator_view create_view(queuing_mode qmode = queuing_mode_automatic);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `qmode`  
- Tryb kolejkowania.  
+*qmode*<br/>
+Tryb kolejkowania.  
   
 ### <a name="return-value"></a>Wartość zwracana  
  Nowy `accelerator_view` obiekt w tym akceleratorze, za pomocą określonego trybu kolejkowania.  
@@ -470,8 +470,8 @@ bool operator!= (const accelerator& _Other) const;
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `_Other`  
- `accelerator` Obiekt do porównania z tym kontem.  
+*_Inne*<br/>
+`accelerator` Obiekt do porównania z tym kontem.  
   
 ### <a name="return-value"></a>Wartość zwracana  
  `false` Jeśli dwa `accelerator` obiekty są takie same; w przeciwnym razie `true`.  
@@ -485,8 +485,8 @@ accelerator& operator= (const accelerator& _Other);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `_Other`  
- `accelerator` Obiektu do skopiowania.  
+*_Inne*<br/>
+`accelerator` Obiektu do skopiowania.  
   
 ### <a name="return-value"></a>Wartość zwracana  
  Odwołanie do `accelerator` obiektu.  
@@ -502,8 +502,8 @@ bool operator== (const accelerator& _Other) const;
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `_Other`  
- `accelerator` Obiekt do porównania z tym kontem.  
+*_Inne*<br/>
+`accelerator` Obiekt do porównania z tym kontem.  
   
 ### <a name="return-value"></a>Wartość zwracana  
  `true` Jeśli drugi `accelerator` obiekt jest taki sam jak ten `accelerator` obiektu; w przeciwnym razie `false`.  
@@ -517,8 +517,8 @@ static inline bool set_default(std::wstring _Path);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `_Path`  
- Ścieżka do akceleratora.  
+*Ścieżka _wywołania*<br/>
+Ścieżka do akceleratora.  
   
 ### <a name="return-value"></a>Wartość zwracana  
  `true` Jeśli wywołanie powiedzie się i wyznaczy akcelerator domyślny. W przeciwnym razie `false`.  
@@ -532,8 +532,8 @@ bool set_default_cpu_access_type(access_type _Default_cpu_access_type);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `_Default_cpu_access_type`  
- Domyślny access_type do procesora ma być używany dla alokacji pamięci tablica/array_view w tym akceleratorze.  
+*_Default_cpu_access_type*<br/>
+Domyślny access_type do procesora ma być używany dla alokacji pamięci tablica/array_view w tym akceleratorze.  
   
 ### <a name="return-value"></a>Wartość zwracana  
  Wartość logiczna wskazująca, jeśli domyślny access_type cpu dla akceleratora została ustawiona pomyślnie.  
@@ -597,8 +597,8 @@ accelerator_view(const accelerator_view& _Other);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `_Other`  
- `accelerator_view` Obiektu do skopiowania.  
+*_Inne*<br/>
+`accelerator_view` Obiektu do skopiowania.  
   
 ##  <a name="create_marker"></a> create_marker 
 
@@ -714,8 +714,8 @@ bool operator!= (const accelerator_view& _Other) const;
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `_Other`  
- `accelerator_view` Obiekt do porównania z tym kontem.  
+*_Inne*<br/>
+`accelerator_view` Obiekt do porównania z tym kontem.  
   
 ### <a name="return-value"></a>Wartość zwracana  
  `false` Jeśli dwa obiekty są takie same; w przeciwnym razie `true`.  
@@ -729,8 +729,8 @@ accelerator_view& operator= (const accelerator_view& _Other);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `_Other`  
- `accelerator_view` Obiektu do skopiowania.  
+*_Inne*<br/>
+`accelerator_view` Obiektu do skopiowania.  
   
 ### <a name="return-value"></a>Wartość zwracana  
  Odwołanie do zmodyfikowanego `accelerator_view` obiektu.  
@@ -746,8 +746,8 @@ bool operator== (const accelerator_view& _Other) const;
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `_Other`  
- `accelerator_view` Obiekt do porównania z tym kontem.  
+*_Inne*<br/>
+`accelerator_view` Obiekt do porównania z tym kontem.  
   
 ### <a name="return-value"></a>Wartość zwracana  
  `true` Jeśli dwa obiekty są takie same; w przeciwnym razie `false`.  

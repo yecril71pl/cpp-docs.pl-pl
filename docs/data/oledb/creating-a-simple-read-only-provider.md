@@ -16,21 +16,23 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 2662a071f443967b921c4a8db27713bc7c3e8bb4
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 9f951fba45b23b7e4dde92fc11f2faabb53bd43d
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33096941"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46101569"
 ---
 # <a name="creating-a-simple-read-only-provider"></a>Tworzenie prostego dostawcy tylko do odczytu
-Po utworzeniu dostawcy OLE DB przy użyciu Kreator projektu ATL i ATL OLE DB Provider kreatora możesz dodać inne funkcje, które mają być obsługiwane. Uruchom projektowania, sprawdzając jakiego rodzaju dane będą wysyłane do użytkownika i pod jakimi warunkami dostawcy. Jest to szczególnie ważne określić, czy wymagana jest obsługa polecenia, transakcje i inne opcjonalne obiekty. Na początku dobry projekt przyspieszy wdrażania i testowania.  
+
+Po utworzeniu dostawcy OLE DB przy użyciu kreator projektów ATL i OLE DB Provider Kreator ATL, możesz dodać inne funkcje, które mają być obsługiwane. Rozpocznij projektowanie dostawcy, sprawdzając rodzaj danych, które będą wysyłane do użytkownika, jak i w jakich okolicznościach. Jest to szczególnie ważne ustalić, czy wymagana jest obsługa polecenia, transakcji i inne opcjonalne obiekty. Na początku dobrego projektowania przyspieszy implementowania i testowania.  
   
- Przykład został przedstawiony w dwóch częściach:  
+Przykład został przedstawiony w dwóch częściach:  
   
--   W pierwszej części pokazano sposób [Tworzenie prostego dostawcy tylko do odczytu](../../data/oledb/implementing-the-simple-read-only-provider.md) które odczytuje pary ciągów.  
+- Pierwszy pokazuje części jak [Tworzenie prostego dostawcy tylko do odczytu](../../data/oledb/implementing-the-simple-read-only-provider.md) który odczytuje pary ciągów.  
   
--   W drugiej części pokazano sposób [ułatwienia prostego dostawcy tylko do odczytu](../../data/oledb/enhancing-the-simple-read-only-provider.md) przez dodanie `IRowsetLocate` interfejsu.  
+- Drugi pokazuje części jak [zwiększenia prostego dostawcy tylko do odczytu](../../data/oledb/enhancing-the-simple-read-only-provider.md) , dodając `IRowsetLocate` interfejsu.  
   
 ## <a name="see-also"></a>Zobacz też  
- [Tworzenie dostawcy OLE DB](../../data/oledb/creating-an-ole-db-provider.md)
+
+[Tworzenie dostawcy OLE DB](../../data/oledb/creating-an-ole-db-provider.md)

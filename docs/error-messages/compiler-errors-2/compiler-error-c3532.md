@@ -1,5 +1,5 @@
 ---
-title: C3532 błąd kompilatora | Dokumentacja firmy Microsoft
+title: Błąd kompilatora C3532 | Dokumentacja firmy Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,50 +16,54 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1efce6659f8d848b47f0c4194b6420177ffad194
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 25562a83845690cf923784ee27e20fd109c1c832
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33254977"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46109642"
 ---
-# <a name="compiler-error-c3532"></a>C3532 błąd kompilatora
-'type': nieprawidłowe użycie słowa kluczowego "Auto"  
-  
- Nie można zadeklarować wskazany typ z `auto` — słowo kluczowe. Na przykład nie można użyć `auto` typ zwracany — słowo kluczowe, aby zadeklarować tablicy lub metody.  
-  
-### <a name="to-correct-this-error"></a>Aby poprawić ten błąd  
-  
-1.  Upewnij się, że wyrażenie inicjujące daje prawidłowego typu.  
-  
-2.  Upewnij się, że użytkownik nie deklaruj tablicy lub typ zwrotny metody.  
-  
-## <a name="example"></a>Przykład  
- Poniższy przykład zwraca C3532, ponieważ `auto` — słowo kluczowe nie mogą deklarować zwracanego typu metody.  
-  
-```  
-// C3532a.cpp  
-// Compile with /Zc:auto  
-auto f(){}   // C3532  
-```  
-  
-## <a name="example"></a>Przykład  
- Poniższy przykład zwraca C3532, ponieważ `auto` — słowo kluczowe nie można zadeklarować tablicy.  
-  
-```  
-// C3532b.cpp  
-// Compile with /Zc:auto  
-int main()  
-{  
-   int x[5];  
-   auto a[5];            // C3532  
-   auto b[1][2];         // C3532  
-   auto y[5] = x;        // C3532  
-   auto z[] = {1, 2, 3}; // C3532  
-   auto w[] = x;         // C3532  
-   return 0;  
-}  
-```  
-  
-## <a name="see-also"></a>Zobacz też  
- [Auto, słowo kluczowe](../../cpp/auto-keyword.md)
+# <a name="compiler-error-c3532"></a>Błąd kompilatora C3532
+
+"type": nieprawidłowe użycie "auto"
+
+Wskazany typ nie może być zadeklarowana z `auto` — słowo kluczowe. Na przykład nie można użyć `auto` — słowo kluczowe do deklarowania tablicą lub metoda typ zwracany.
+
+### <a name="to-correct-this-error"></a>Aby poprawić ten błąd
+
+1. Upewnij się, że wyrażenia inicjowania daje prawidłowego typu.
+
+1. Upewnij się, że nie są deklarowane tablicą lub typem zwracanym metody.
+
+## <a name="example"></a>Przykład
+
+Poniższy przykład daje C3532, ponieważ `auto` — słowo kluczowe nie mogą deklarować zwracanego typu metody.
+
+```
+// C3532a.cpp
+// Compile with /Zc:auto
+auto f(){}   // C3532
+```
+
+## <a name="example"></a>Przykład
+
+Poniższy przykład daje C3532, ponieważ `auto` — słowo kluczowe nie można zadeklarować tablicy.
+
+```
+// C3532b.cpp
+// Compile with /Zc:auto
+int main()
+{
+   int x[5];
+   auto a[5];            // C3532
+   auto b[1][2];         // C3532
+   auto y[5] = x;        // C3532
+   auto z[] = {1, 2, 3}; // C3532
+   auto w[] = x;         // C3532
+   return 0;
+}
+```
+
+## <a name="see-also"></a>Zobacz też
+
+[Auto, słowo kluczowe](../../cpp/auto-keyword.md)

@@ -18,23 +18,24 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: b3d6d41bb705559711187b58243772b668734b16
-ms.sourcegitcommit: 889a75be1232817150be1e0e8d4d7f48f5993af2
+ms.openlocfilehash: 56dd2e864fa7a0e01b618fcc4143bde74b3a46ee
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/30/2018
-ms.locfileid: "39336716"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46110760"
 ---
 # <a name="using-multiple-accessors-on-a-rowset"></a>Używanie wielu metod dostępu w zestawie wierszy
+
 Istnieją trzy podstawowe scenariusze, w których należy użyć wielu metod dostępu:  
   
--   **Wiele odczytu/zapisu zestawów wierszy.** W tym scenariuszu masz tabelę z kluczem podstawowym. Chcesz można było odczytać wszystkie kolumny w wierszu, w tym klucza podstawowego. Należy mieć uprawnienia zapisu danych do wszystkich kolumn z wyjątkiem klucza podstawowego (ponieważ nie można zapisać kolumny klucza podstawowego). W takim przypadku można skonfigurować dwie metody dostępu:  
+- **Wiele odczytu/zapisu zestawów wierszy.** W tym scenariuszu masz tabelę z kluczem podstawowym. Chcesz można było odczytać wszystkie kolumny w wierszu, w tym klucza podstawowego. Należy mieć uprawnienia zapisu danych do wszystkich kolumn z wyjątkiem klucza podstawowego (ponieważ nie można zapisać kolumny klucza podstawowego). W takim przypadku można skonfigurować dwie metody dostępu:  
   
     -   Akcesor 0 zawiera wszystkie kolumny.  
   
     -   Metoda dostępu 1 zawiera wszystkie kolumny z wyjątkiem klucza podstawowego.  
   
--   **Wydajność.** W tym scenariuszu co najmniej jedna kolumna zawiera dużą ilość danych, na przykład grafiki, dźwięku lub wideo pliki. Za każdym razem, gdy przeniesiesz się do wiersza, prawdopodobnie nie chcesz pobrać kolumny z plikiem dużych ilości danych, ponieważ wykonanie tej tak może spowolnić wydajność aplikacji.  
+- **Wydajność.** W tym scenariuszu co najmniej jedna kolumna zawiera dużą ilość danych, na przykład grafiki, dźwięku lub wideo pliki. Za każdym razem, gdy przeniesiesz się do wiersza, prawdopodobnie nie chcesz pobrać kolumny z plikiem dużych ilości danych, ponieważ wykonanie tej tak może spowolnić wydajność aplikacji.  
   
      Możesz skonfigurować oddzielne metod dostępu, w których pierwszą metodę dostępu zawiera wszystkie kolumny z wyjątkiem tego, z dużej ilości danych i pobiera dane z tych kolumn automatycznie; jest to akcesor automatycznie. Druga metoda dostępu pobiera tylko wartości w kolumnie zawierających duże ilości danych, ale go nie pobierania danych z tej kolumny automatycznie. Może mieć inne metody aktualizacji lub pobierania dużych ilości danych na żądanie.  
   
@@ -44,17 +45,17 @@ Istnieją trzy podstawowe scenariusze, w których należy użyć wielu metod dos
   
      Argument automatycznego umożliwia określenie, czy akcesor jest akcesora automatycznie.  
   
--   **Wiele kolumn ISequentialStream.** W tym scenariuszu użytkownik ma więcej niż jeden zawierający kolumny `ISequentialStream` danych. Jednak każdej metody dostępu jest ograniczona do jednego `ISequentialStream` strumienia danych. Aby rozwiązać ten problem, należy skonfigurować kilka metod dostępu, każdy z nich zawierający jedną `ISequentialStream` wskaźnika.  
+- **Wiele kolumn ISequentialStream.** W tym scenariuszu użytkownik ma więcej niż jeden zawierający kolumny `ISequentialStream` danych. Jednak każdej metody dostępu jest ograniczona do jednego `ISequentialStream` strumienia danych. Aby rozwiązać ten problem, należy skonfigurować kilka metod dostępu, każdy z nich zawierający jedną `ISequentialStream` wskaźnika.  
   
- Zwykle tworzy się przy użyciu metod dostępu [BEGIN_ACCESSOR](../../data/oledb/begin-accessor.md) i [END_ACCESSOR](../../data/oledb/end-accessor.md) makra. Można również użyć [db_accessor —](../../windows/db-accessor.md) atrybutu. (Metody dostępu są dokładniejszym opisem zawartym w [rekordów użytkowników](../../data/oledb/user-records.md).) Makra lub atrybutu należy określić, czy metoda dostępu jest automatyczne czy akcesor nie automatyczne:  
+Zwykle tworzy się przy użyciu metod dostępu [BEGIN_ACCESSOR](../../data/oledb/begin-accessor.md) i [END_ACCESSOR](../../data/oledb/end-accessor.md) makra. Można również użyć [db_accessor —](../../windows/db-accessor.md) atrybutu. (Metody dostępu są dokładniejszym opisem zawartym w [rekordów użytkowników](../../data/oledb/user-records.md).) Makra lub atrybutu należy określić, czy metoda dostępu jest automatyczne czy akcesor nie automatyczne:  
   
--   Automatyczne akcesor przesunięcie w metody takie jak `MoveFirst`, `MoveLast`, `MoveNext`, i `MovePrev` pobierania danych dla wszystkich określonych kolumn automatycznie. Akcesor 0 powinny być automatyczne metody dostępu.  
+- Automatyczne akcesor przesunięcie w metody takie jak `MoveFirst`, `MoveLast`, `MoveNext`, i `MovePrev` pobierania danych dla wszystkich określonych kolumn automatycznie. Akcesor 0 powinny być automatyczne metody dostępu.  
   
--   W metodę dostępu nie automatyczne pobieranie przeprowadzona dopiero po użytkownik jawnie wywołać metody takie jak `Update`, `Insert`, `Fetch`, lub `Delete`. W scenariuszach opisanych powyżej nie można pobrać wszystkich kolumn na każdy ruch. Można umieścić co najmniej jedną kolumnę w oddzielnych metody dostępu i upewnij, że akcesor nie automatyczne, jak pokazano poniżej.  
+- W metodę dostępu nie automatyczne pobieranie przeprowadzona dopiero po użytkownik jawnie wywołać metody takie jak `Update`, `Insert`, `Fetch`, lub `Delete`. W scenariuszach opisanych powyżej nie można pobrać wszystkich kolumn na każdy ruch. Można umieścić co najmniej jedną kolumnę w oddzielnych metody dostępu i upewnij, że akcesor nie automatyczne, jak pokazano poniżej.  
   
- W poniższym przykładzie użyto wielu metod dostępu do odczytu i zapisu do tabeli zadań bazy danych programu SQL Server pubs używanie wielu metod dostępu. Jest to najbardziej typowe użycie wielu metod dostępu; Zobacz powyższy scenariusz "wiele zestawów wierszy odczytu/zapisu".  
+W poniższym przykładzie użyto wielu metod dostępu do odczytu i zapisu do tabeli zadań bazy danych programu SQL Server pubs używanie wielu metod dostępu. Jest to najbardziej typowe użycie wielu metod dostępu; Zobacz powyższy scenariusz "wiele zestawów wierszy odczytu/zapisu".  
   
- Klasa rekord użytkownika jest w następujący sposób. Obejmuje to skonfigurowanie dwóch metod dostępu: akcesor 0 zawiera tylko kolumny klucza podstawowego (identyfikator), a metoda dostępu 1 innych kolumn.  
+Klasa rekord użytkownika jest w następujący sposób. Obejmuje to skonfigurowanie dwóch metod dostępu: akcesor 0 zawiera tylko kolumny klucza podstawowego (identyfikator), a metoda dostępu 1 innych kolumn.  
   
 ```cpp  
 class CJobs  
@@ -89,7 +90,7 @@ END_ACCESSOR_MAP()
 };  
 ```  
   
- Głównego kodu wyglądają następująco. Wywoływanie `MoveNext` automatycznie pobiera dane z Identyfikatora kolumny klucza podstawowego, przy użyciu metody dostępu 0. Uwaga jak `Insert` metoda niemal akcesor używa zakończenia 1 w celu uniknięcia zapisywania kolumna klucza podstawowego.  
+Głównego kodu wyglądają następująco. Wywoływanie `MoveNext` automatycznie pobiera dane z Identyfikatora kolumny klucza podstawowego, przy użyciu metody dostępu 0. Uwaga jak `Insert` metoda niemal akcesor używa zakończenia 1 w celu uniknięcia zapisywania kolumna klucza podstawowego.  
   
 ```cpp  
 int main(int argc, char* argv[])  
@@ -167,5 +168,6 @@ int main(int argc, char* argv[])
 ```  
   
 ## <a name="see-also"></a>Zobacz też  
- [Korzystanie z metod dostępu](../../data/oledb/using-accessors.md)   
- [Rekordy użytkowników](../../data/oledb/user-records.md)
+
+[Korzystanie z metod dostępu](../../data/oledb/using-accessors.md)<br/>
+[Rekordy użytkowników](../../data/oledb/user-records.md)

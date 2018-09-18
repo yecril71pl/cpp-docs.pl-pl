@@ -1,5 +1,5 @@
 ---
-title: C2325 błąd kompilatora | Dokumentacja firmy Microsoft
+title: Błąd kompilatora C2325 | Dokumentacja firmy Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,30 +16,31 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 095959dd432de52c2a0d32cbd7198ea434223407
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: ae66d00c6831d102cb3f6fd47d024745480674fc
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33195103"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46107816"
 ---
-# <a name="compiler-error-c2325"></a>C2325 błąd kompilatora
-'type': nieoczekiwany typ po prawej "name"  
-  
- Połączenie jest nawiązywane w przypadku destruktora niepoprawnego typu.  
-  
- Poniższy przykład generuje C2325:  
-  
-```  
-// C2325.cpp  
-// compile with: /c  
-class A {};  
-typedef A* pA_t;  
-void f() {  
-    A** ppa = new A *;  
-    ppa->~A*;   // C2325  
-  
-   pA_t *ppa2 = new pA_t;  
-   ppa2->~pA_t();   // OK  
-}  
+# <a name="compiler-error-c2325"></a>Błąd kompilatora C2325
+
+"type": nieoczekiwany typ po prawej stronie "name"
+
+Wykonano wywołanie dotyczące destruktora niepoprawnego typu.
+
+Poniższy przykład spowoduje wygenerowanie C2325:
+
+```
+// C2325.cpp
+// compile with: /c
+class A {};
+typedef A* pA_t;
+void f() {
+    A** ppa = new A *;
+    ppa->~A*;   // C2325
+
+   pA_t *ppa2 = new pA_t;
+   ppa2->~pA_t();   // OK
+}
 ```

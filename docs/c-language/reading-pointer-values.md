@@ -12,17 +12,19 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0688ed7c670f4601ac25a8878a59bd977b77536f
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 126db1ffe203c050c69b32d74bb295bab143c9ea
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32384168"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46106249"
 ---
 # <a name="reading-pointer-values"></a>Odczytywanie wartości wskaźnika
-**ANSI 4.9.6.2** dane wejściowe dla **%p** konwersji w `fscanf` — funkcja  
-  
- Gdy **%p** format znak jest określony, `fscanf` funkcja konwertuje wskaźniki z wartości szesnastkowe ASCII poprawny adres.  
-  
-## <a name="see-also"></a>Zobacz też  
- [Funkcje bibliotek](../c-language/library-functions.md)
+
+**ANSI 4.9.6.2** dane wejściowe dla **%p** konwersji w `fscanf` — funkcja
+
+Gdy **%p** formatem znaku jest określony, `fscanf` funkcja konwertuje wskaźników z wartości szesnastkowych ASCII na prawidłowy adres.
+
+## <a name="see-also"></a>Zobacz też
+
+[Funkcje bibliotek](../c-language/library-functions.md)

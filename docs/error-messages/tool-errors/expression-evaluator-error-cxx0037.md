@@ -1,5 +1,5 @@
 ---
-title: Błąd cxx0037 programu Expression Evaluator | Dokumentacja firmy Microsoft
+title: Błąd ewaluatora wyrażeń CXX0037 | Dokumentacja firmy Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,16 +17,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 45c64c9542d9ba4814ffbc38d17dbbf87601f4ad
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: a1512e3dc29a0cc65e9eec252ec6d89458d02c07
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33294846"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46107159"
 ---
 # <a name="expression-evaluator-error-cxx0037"></a>Błąd CXX0037 programu Expression Evaluator
-Za mało pamięci  
-  
- Ewaluator wyrażeń C za mało pamięci obliczenie wyrażenia.  
-  
- Ten błąd jest taki sam jak CAN0037.
+
+Za mało pamięci
+
+Ewaluator wyrażeń C za mało pamięci, obliczając wartość wyrażenia.
+
+Ten błąd jest taka sama jak CAN0037.

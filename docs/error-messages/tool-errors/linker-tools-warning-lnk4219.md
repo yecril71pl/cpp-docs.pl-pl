@@ -16,16 +16,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 59cb7376957b7985b7ae2335ea472171d490ff42
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: daf097cd8715a7c523e6e8a2ea46714481ca7d2a
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33301138"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46105215"
 ---
 # <a name="linker-tools-warning-lnk4219"></a>Ostrzeżenie LNK4219 narzędzi konsolidatora
-przepełnienie naprawy nazwa naprawy. Docelowy "Nazwa symbolu docelowego" jest poza zakresem, zostanie wstawiona konwersja bitowa  
-  
- Konsolidator dodaje sekcją thunk w sytuacji, gdy adres lub przesunięcie nie mieści się w danej instrukcji, ponieważ symbolu docelowego jest zbyt daleko od lokalizacji tę instrukcję.  
-  
- Może zajść potrzeba zmiany kolejności obrazu (przy użyciu [/kolejność](../../build/reference/order-put-functions-in-order.md) opcji, na przykład) w celu uniknięcia dodatkowy poziom pośredni.
+
+przepełnienie naprawy nazwa naprawy. Element docelowy "target name symboli" jest poza zakresem, zostanie wstawiona
+
+Konsolidator dodaje sekcją thunk w sytuacji, gdy adres lub offset nie mieści się w danej instrukcji, ponieważ symbol docelowy jest zbyt daleko od lokalizacji instrukcji.
+
+Możesz chcieć zmienić kolejność obrazu (przy użyciu [/ORDER](../../build/reference/order-put-functions-in-order.md) opcji, na przykład) w celu uniknięcia dodatkowy poziom pośredni.

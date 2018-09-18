@@ -1,5 +1,5 @@
 ---
-title: C4961 ostrzeżenia kompilatora | Dokumentacja firmy Microsoft
+title: Ostrzeżenie kompilatora C4961 | Dokumentacja firmy Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,14 +16,15 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 68027aa11bedc6e9ad94fddc71a217a5e91bd2ba
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 397ada023e5640cacd53fe45ffd0d250c5799d84
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33269530"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46105145"
 ---
-# <a name="compiler-warning-c4961"></a>C4961 ostrzeżenia kompilatora
-Żadne dane profilu nie scalono "plik .pgd", profilowana Optymalizacja została wyłączona  
-  
- Niedostępności żadnych danych profilu (pliki .pgc), więc profilowana Optymalizacja nie może mieć miejsce.
+# <a name="compiler-warning-c4961"></a>Ostrzeżenie kompilatora C4961
+
+Dane profilowe nie zostały scalone z "plik .pgd", profilowana Optymalizacja została wyłączona
+
+Brak danych profilowych (pliki .pgc) były dostępne, więc optymalizacje sterowane profilem nie może mieć miejsce.

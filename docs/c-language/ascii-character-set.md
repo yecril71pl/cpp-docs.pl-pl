@@ -12,20 +12,22 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5c1612dc683145a58fba57bc420e5615d3f151f0
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 1df65608e22d5d034a66a9259f237c2300649162
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32381125"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46098476"
 ---
 # <a name="ascii-character-set"></a>Zestaw znaków ASCII
-**ANSI 2.2.1** zestawów znaków członkami źródła i wykonania  
-  
- Zestaw znaków źródła jest zestaw dozwolonych znaków, które mogą być wyświetlane w plikach źródłowych. Dla Microsoft C zestaw znaków źródła to standardowy zestaw znaków ASCII.  
-  
+
+**ANSI 2.2.1** elementy członkowskie źródła i wykonania zestawów znaków
+
+Źródłowy zestaw znaków jest zestaw znaków prawne, które mogą być wyświetlane w plikach źródłowych. Dla Microsoft C: źródłowy zestaw znaków jest standardowy zestaw znaków ASCII.
+
 > [!NOTE]
->  **Ostrzeżenie** sterowniki klawiatury i konsoli można ponownie zamapować zestawu znaków, programy przeznaczone do międzynarodowej dystrybucji należy sprawdzić kod kraju/regionu.  
-  
-## <a name="see-also"></a>Zobacz też  
- [Znaki](../c-language/characters.md)
+>  **Ostrzeżenie** sterowniki klawiatury i konsoli, można ponownie zamapować zestaw znaków, programy przeznaczone do dystrybucji międzynarodowych należy sprawdzić kod kraju/regionu.
+
+## <a name="see-also"></a>Zobacz też
+
+[Znaki](../c-language/characters.md)

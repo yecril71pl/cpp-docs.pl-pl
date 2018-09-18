@@ -1,5 +1,5 @@
 ---
-title: C2557 błąd kompilatora | Dokumentacja firmy Microsoft
+title: Błąd kompilatora C2557 | Dokumentacja firmy Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,14 +16,15 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5402cb98d2cf315861ccb27aad3233b3bd370f8e
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: f975bdacf4db0460f6b12cd4f340c72e50f01a8c
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33227411"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46102609"
 ---
-# <a name="compiler-error-c2557"></a>C2557 błąd kompilatora
-"identyfikator": prywatnych i chronionych elementów członkowskich nie można zainicjować bez konstruktora  
-  
- Tylko elementy członkowskie i znajomych można przypisać wartości do elementu członkowskiego prywatne lub chronione. Członkowie niepubliczni muszą zostać zainicjowane w konstruktorze klasy.
+# <a name="compiler-error-c2557"></a>Błąd kompilatora C2557
+
+'Identyfikator': prywatnych i chronionych składowych nie można zainicjować bez konstruktora
+
+Tylko członkowie i znajomych można przypisać wartość do elementu członkowskiego prywatnych ani chronionych. Niepubliczne elementy Członkowskie powinny być inicjowane w konstruktorze klasy.

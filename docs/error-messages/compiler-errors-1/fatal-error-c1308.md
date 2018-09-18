@@ -16,39 +16,40 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: dca537131f111c02dd642dff869510eca788b9a7
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: dd778e95f3ace413dbeb409da3c4b2493208e8bf
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33226848"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46104189"
 ---
 # <a name="fatal-error-c1308"></a>Błąd krytyczny C1308
-Łączenie zestawów nie jest obsługiwane.  
-  
- Modułu .netmodule jest dozwolona jako dane wejściowe konsolidatora, ale nie jest zestawem. Podczas próby link zestawu skompilowanego z tego błędu mogą być generowane `/clr:safe`.  
-  
- Aby uzyskać więcej informacji, zobacz [modułu .netmodule pliki jako dane wejściowe konsolidatora](../../build/reference/netmodule-files-as-linker-input.md).  
-  
- Poniższy przykład generuje C1308:  
-  
-```  
-// C1308.cpp  
-// compile with: /clr:safe /LD  
-public ref class MyClass {  
-public:  
-   int i;  
-};  
-```  
-  
- a następnie  
-  
-```  
-// C1308b.cpp  
-// compile with: /clr /link C1308b.obj C1308.dll  
-// C1308 expected  
-#using "C1308.dll"  
-int main() {  
-   MyClass ^ my = gcnew MyClass();  
-}  
+
+Łączenie zestawów nie jest obsługiwana.
+
+.Netmodule jest dozwolona jako dane wejściowe do konsolidatora, ale zestaw nie jest. Ten błąd może zostać wygenerowany, gdy podejmowana jest próba połączyć zestawu skompilowanego z `/clr:safe`.
+
+Aby uzyskać więcej informacji, zobacz [pliki .netmodule — wejście konsolidatora](../../build/reference/netmodule-files-as-linker-input.md).
+
+Poniższy przykład spowoduje wygenerowanie C1308:
+
+```
+// C1308.cpp
+// compile with: /clr:safe /LD
+public ref class MyClass {
+public:
+   int i;
+};
+```
+
+Następnie wyszukaj maszynę
+
+```
+// C1308b.cpp
+// compile with: /clr /link C1308b.obj C1308.dll
+// C1308 expected
+#using "C1308.dll"
+int main() {
+   MyClass ^ my = gcnew MyClass();
+}
 ```

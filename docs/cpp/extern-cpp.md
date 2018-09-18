@@ -23,12 +23,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8aaf699f2130c94729b8db9cc21dd17b9699d66c
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: 7b090875b9656fec52e50cb68caf9c2c047d055b
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42606461"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46114257"
 ---
 # <a name="extern-c"></a>extern (C++)
 
@@ -88,9 +88,9 @@ extern constexpr __declspec(selectany) int x = 10;
 
 ## <a name="extern-c-and-extern-c-function-declarations"></a>deklaracje funkcji extern "C" i extern "C++"
 
- W języku C++, gdy jest używana przy użyciu parametrów **extern** Określa, że declarator(s) używane są konwencje powiązania innego języka. Funkcje języka C i dane są dostępne tylko wtedy, gdy wcześniej są deklarowane jako mających powiązanie C. Jednak muszą być zdefiniowane w jednostce translacji oddzielnie skompilowane.
+W języku C++, gdy jest używana przy użyciu parametrów **extern** Określa, że declarator(s) używane są konwencje powiązania innego języka. Funkcje języka C i dane są dostępne tylko wtedy, gdy wcześniej są deklarowane jako mających powiązanie C. Jednak muszą być zdefiniowane w jednostce translacji oddzielnie skompilowane.
 
- Microsoft C++ obsługuje ciągi **"C"** i **"C++"** w *literał ciągu* pola. Standardowa obejmują pliki, używają **extern** składni "C", aby umożliwić funkcji biblioteki wykonawczej, które mają być używane w programach języka C++.
+Microsoft C++ obsługuje ciągi **"C"** i **"C++"** w *literał ciągu* pola. Standardowa obejmują pliki, używają **extern** składni "C", aby umożliwić funkcji biblioteki wykonawczej, które mają być używane w programach języka C++.
 
 ## <a name="example"></a>Przykład
 
@@ -114,7 +114,7 @@ extern "C" {
     char GetChar(void);
 }
 
-//  Define the two functions 
+//  Define the two functions
 //  ShowChar and GetChar with C linkage.
 extern "C" char ShowChar(char ch) {
     putchar(ch);
@@ -131,7 +131,7 @@ extern "C" char GetChar(void) {
 extern "C" int errno;
 ```
 
- Jeśli funkcja ma więcej niż jedną specyfikację powiązania, muszą być zgodne; błędem jest deklaracja funkcji jako posiadających powiązania C i C++. Ponadto, jeśli dwie deklaracje dla funkcji występują w programie — jedna ze specyfikacją powiązania i jedna bez niej — deklaracja ze specyfikacją powiązania musi być pierwsza. Wszystkim nadmiarowym deklaracjom funkcji, które mają już specyfikację, nadawane są specyfikacje powiązania określone w pierwszej deklaracji. Na przykład:
+Jeśli funkcja ma więcej niż jedną specyfikację powiązania, muszą być zgodne; błędem jest deklaracja funkcji jako posiadających powiązania C i C++. Ponadto, jeśli dwie deklaracje dla funkcji występują w programie — jedna ze specyfikacją powiązania i jedna bez niej — deklaracja ze specyfikacją powiązania musi być pierwsza. Wszystkim nadmiarowym deklaracjom funkcji, które mają już specyfikację, nadawane są specyfikacje powiązania określone w pierwszej deklaracji. Na przykład:
 
 ```cpp
 extern "C" int CFunc1();
@@ -147,8 +147,9 @@ extern "C" int CFunc2(); // Error: not the first declaration of
 ```
 
 ## <a name="see-also"></a>Zobacz także
- [Słowa kluczowe](../cpp/keywords-cpp.md)  
- [Program i połączenie](program-and-linkage-cpp.md)  
- [extern — Specyfikator klasy magazynowania w języku C](../c-language/extern-storage-class-specifier.md)  
- [Zachowanie identyfikatory w języku C](../c-language/behavior-of-identifiers.md)  
- [Powiązania w języku C](../c-language/linkage.md)
+
+[Słowa kluczowe](../cpp/keywords-cpp.md)<br/>
+[Program i połączenie](program-and-linkage-cpp.md)<br/>
+[extern — Specyfikator klasy magazynowania w języku C](../c-language/extern-storage-class-specifier.md)<br/>
+[Zachowanie identyfikatory w języku C](../c-language/behavior-of-identifiers.md)<br/>
+[Powiązania w języku C](../c-language/linkage.md)

@@ -15,12 +15,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 086310efe565e060645320db30526b03d57a68af
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: b5ab980813eec09fe0eef35f54280444d8c08b80
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43752413"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46105392"
 ---
 # <a name="pixelhimetric-conversion-global-functions"></a>Funkcje globalne konwersji HIMETRIC/pikseli
 
@@ -46,10 +46,10 @@ extern void AtlHiMetricToPixel(
 
 ### <a name="parameters"></a>Parametry
 
-*lpSizeInHiMetric*  
+*lpSizeInHiMetric*<br/>
 [in] Wskaźnik na rozmiar obiektu w jednostkach HIMETRIC.
 
-*lpSizeInPix*  
+*lpSizeInPix*<br/>
 [out] Wskaźnik do której jest zwracana rozmiar obiektu w pikselach.
 
 ### <a name="example"></a>Przykład
@@ -72,10 +72,10 @@ extern void AtlPixelToHiMetric(
 
 ### <a name="parameters"></a>Parametry
 
-*lpSizeInPix*  
+*lpSizeInPix*<br/>
 [in] Wskaźnik na rozmiar obiektu w pikselach.
 
-*lpSizeInHiMetric*  
+*lpSizeInHiMetric*<br/>
 [out] Wskaźnik do której rozmiar obiektu w jednostkach HIMETRIC ma zostać zwrócone.
 
 ### <a name="example"></a>Przykład

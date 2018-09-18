@@ -18,15 +18,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: cefd38a18447d0e8c9121d61c0ba963e9da39187
-ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
+ms.openlocfilehash: 7c6be247c6c756557e7173c4b295197d9e4267cb
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "33321434"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46110968"
 ---
 # <a name="ltexamplegt-visual-c"></a>&lt;przykład&gt; (Visual C++)
-\<Przykład > należy określić przykładem przedstawiającym sposób użycia metody lub innego członka biblioteki. Zazwyczaj również wymagałoby to użycia [ \<kod >](../ide/code-visual-cpp.md) tagu.  
+\<Przykład > należy określić przykładem przedstawiającym sposób użycia metody lub innego członka biblioteki. Często również wymagałoby to użycia [ \<kodu >](../ide/code-visual-cpp.md) tagu.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -35,11 +35,11 @@ ms.locfileid: "33321434"
 ```  
   
 #### <a name="parameters"></a>Parametry  
- `description`  
- Opis przykładowego kodu.  
+*Opis elementu*<br/>
+Opis przykładowego kodu.  
   
 ## <a name="remarks"></a>Uwagi  
- Kompiluj z użyciem [/doc](../build/reference/doc-process-documentation-comments-c-cpp.md) na przetwarzanie komentarzy dokumentacji do pliku.  
+ Kompiluj przy użyciu [/doc](../build/reference/doc-process-documentation-comments-c-cpp.md) do Przetwarzaj komentarze dokumentacji do pliku.  
   
 ## <a name="example"></a>Przykład  
   

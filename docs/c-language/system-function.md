@@ -14,21 +14,23 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 51c9e9e348f1cd1fbae9612c2d2ad1988af3b009
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: edb78056e5152485677a14a934c5dcbbc464d862
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32386738"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46098436"
 ---
 # <a name="system-function"></a>Funkcja systemowa
-**ANSI 4.10.4.5** zawartości i tryb wykonywania ciągu przez **systemu** — funkcja  
-  
- **Systemu** funkcję wykonuje polecenie wewnętrznego systemu operacyjnego lub. EXE, COM (. CMD w systemie Windows NT) lub. BAT plik z poziomu programu C, a nie z wiersza polecenia.  
-  
- Funkcja system znajdzie interpreter poleceń, który jest zwykle CMD. EXE w systemie operacyjnym Windows NT lub COMMAND.COM w systemie Windows. Funkcja systemowa następnie przekazuje ciąg argumentu interpreter poleceń.  
-  
- Aby uzyskać więcej informacji, zobacz [systemu, _wsystem —](../c-runtime-library/reference/system-wsystem.md).  
-  
-## <a name="see-also"></a>Zobacz też  
- [Funkcje bibliotek](../c-language/library-functions.md)
+
+**ANSI 4.10.4.5** zawartości i tryb wykonywania ciąg przez **systemu** — funkcja
+
+**Systemu** funkcja wykonuje polecenia wewnętrznego systemu operacyjnego lub. PLIK EXE, COM (. CMD na Windows NT) lub. Plik BAT z poziomu używanego programu C, a nie z poziomu wiersza polecenia.
+
+Funkcja systemowa znajdzie interpretera poleceń jest zazwyczaj CMD. EXE w systemie operacyjnym Windows NT lub COMMAND.COM w Windows. Funkcja systemowa następnie przekazuje ciąg argumentu do interpretera poleceń.
+
+Aby uzyskać więcej informacji, zobacz [systemu, _wsystem —](../c-runtime-library/reference/system-wsystem.md).
+
+## <a name="see-also"></a>Zobacz też
+
+[Funkcje bibliotek](../c-language/library-functions.md)

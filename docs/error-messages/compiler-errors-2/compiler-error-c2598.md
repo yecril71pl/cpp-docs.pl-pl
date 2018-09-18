@@ -1,5 +1,5 @@
 ---
-title: C2598 błąd kompilatora | Dokumentacja firmy Microsoft
+title: Błąd kompilatora C2598 | Dokumentacja firmy Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,26 +16,27 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2fb41e0072f319c701f5f0cf13670a5f8f7051a0
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 11747df117ea714ea3c4d7ce41e9229c79becc93
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33199395"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46102700"
 ---
-# <a name="compiler-error-c2598"></a>C2598 błąd kompilatora
-Specyfikacja konsolidacji musi znajdować się w zakresie globalnym  
-  
- Specyfikator połączenie jest zadeklarowana w zakresie lokalnym.  
-  
- Poniższy przykład generuje C2598:  
-  
-```  
-// C2598.cpp  
-// compile with: /c  
-void func() {  
-   extern "C" int func2();   // C2598  
-}  
-  
-extern "C" int func( int i );  
+# <a name="compiler-error-c2598"></a>Błąd kompilatora C2598
+
+Specyfikacja konsolidacji musi znajdować się w zakresie globalnym
+
+Specyfikator powiązania jest zadeklarowana w zakresie lokalnym.
+
+Poniższy przykład spowoduje wygenerowanie C2598:
+
+```
+// C2598.cpp
+// compile with: /c
+void func() {
+   extern "C" int func2();   // C2598
+}
+
+extern "C" int func( int i );
 ```

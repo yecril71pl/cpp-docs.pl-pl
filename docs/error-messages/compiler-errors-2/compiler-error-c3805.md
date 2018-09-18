@@ -1,5 +1,5 @@
 ---
-title: C3805 błąd kompilatora | Dokumentacja firmy Microsoft
+title: Błąd kompilatora C3805 | Dokumentacja firmy Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,14 +16,15 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5aa7a2d388e950b7825c8dba78df565bc4a798a5
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: b83f75cca9b292c454fc40ad5487cf80ee9ceaef
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33265055"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46106340"
 ---
-# <a name="compiler-error-c3805"></a>C3805 błąd kompilatora
-'token': nieoczekiwany token, oczekiwano albo "}" lub identyfikatora  
-  
- Podczas definiowania właściwości, napotkano nieprawidłowy token. Usuń nieprawidłowy token.
+# <a name="compiler-error-c3805"></a>Błąd kompilatora C3805
+
+"token": nieoczekiwany token, oczekiwano albo "}" lub identyfikator
+
+Podczas definiowania właściwości, napotkano nieprawidłowy token. Usuń nieprawidłowy token.

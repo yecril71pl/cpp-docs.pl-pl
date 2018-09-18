@@ -1,5 +1,5 @@
 ---
-title: C2464 błąd kompilatora | Dokumentacja firmy Microsoft
+title: Błąd kompilatora C2464 | Dokumentacja firmy Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,23 +16,24 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 98949ba463f432666753cb39de37bb4bf8f7276f
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: ff74085364d6638772ab2376aace93fea741056b
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33226029"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46103148"
 ---
-# <a name="compiler-error-c2464"></a>C2464 błąd kompilatora
-'Identyfikator': nie można użyć "new", aby przydzielić odwołanie  
-  
- Identyfikator odniesienia przydzielony przy `new` operatora. Odwołania nie są obiekty pamięci, dlatego `new` nie może zwracać wskaźnik do nich. Deklarowanie odwołania, należy użyć składni standardowe deklaracja zmiennej.  
-  
- Poniższy przykład generuje C2464:  
-  
-```  
-// C2464.cpp  
-int main() {  
-   new ( int& ir );   // C2464  
-}  
+# <a name="compiler-error-c2464"></a>Błąd kompilatora C2464
+
+'Identyfikator': nie można użyć "new", aby przydzielić odwołanie
+
+Identyfikator odwołania został przydzielony przy użyciu `new` operatora. Odwołania nie są obiekty w pamięci, dlatego `new` nie może zwracać wskaźnik do nich. Należy użyć składni standardowych deklaracja zmiennej do zadeklarowania odwołania.
+
+Poniższy przykład spowoduje wygenerowanie C2464:
+
+```
+// C2464.cpp
+int main() {
+   new ( int& ir );   // C2464
+}
 ```

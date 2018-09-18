@@ -1,5 +1,5 @@
 ---
-title: C2138 błąd kompilatora | Dokumentacja firmy Microsoft
+title: Błąd kompilatora C2138 | Dokumentacja firmy Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,14 +16,15 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3e066c3de938b85431ea837c91b0ae51ad0cd4e5
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 0ba28cd6d2772a0d7027f591b35c07c42941d440
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33166536"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46107474"
 ---
-# <a name="compiler-error-c2138"></a>C2138 błąd kompilatora
-niedozwolone jest zdefiniowanie wyliczenia bez elementów członkowskich  
-  
- Wyliczenie musi mieć co najmniej jeden element członkowski podczas /Za (Wyłącz rozszerzenia Microsoft) jest zaznaczone.
+# <a name="compiler-error-c2138"></a>Błąd kompilatora C2138
+
+niedozwolone jest zdefiniowanie wyliczenia bez składowych
+
+Wyliczenie musi mieć co najmniej jednego członka podczas /Za (Wyłącz rozszerzenia Microsoft) jest zaznaczona.

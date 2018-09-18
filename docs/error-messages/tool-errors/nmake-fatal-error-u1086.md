@@ -16,20 +16,21 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ac9d314f523706ae6b4a18070f51341eba43984e
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 300dac81a55a07f163f0fe6bb01646403517b554
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33317206"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46107658"
 ---
 # <a name="nmake-fatal-error-u1086"></a>Błąd krytyczny NMAKE U1086
-**Reguła wnioskowania nie może mieć elementów zależnych**  
-  
- Dwukropkiem (**:**) w wnioskowania reguła musi występować jeden z nich:  
-  
--   Znak nowego wiersza  
-  
--   Średnik (**;**), które można wykonać za pomocą polecenia  
-  
--   Znak (**#**), który może następować komentarz
+
+**Reguła wnioskowania nie może mieć elementów zależnych**
+
+Dwukropek (**:**) w wnioskowania reguła musi występować jeden z nich:
+
+- Znak nowego wiersza
+
+- Średnik (**;**), które można wykonać za pomocą polecenia
+
+- Znak (**#**), który może następować komentarz

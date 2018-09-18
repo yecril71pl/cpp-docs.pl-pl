@@ -1,5 +1,5 @@
 ---
-title: Błąd cxx0034 programu Expression Evaluator | Dokumentacja firmy Microsoft
+title: Błąd ewaluatora wyrażeń CXX0034 | Dokumentacja firmy Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,18 +17,19 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 936f63c0015f21b3683333d5153cffa07b2b1677
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 7afc09a3334b284208ec077023427c67757afac3
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33303927"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46113048"
 ---
 # <a name="expression-evaluator-error-cxx0034"></a>Błąd CXX0034 programu Expression Evaluator
-**typy niezgodne z operatorem**  
-  
- Typy argumentów operacji określony jest niedozwolone dla tej operacji.  
-  
- Na przykład wskaźnik nie mnożona przez dowolną wartość.  
-  
- Konieczne może być typu rzutowania operandów w celu typu zgodnego z operatorem.
+
+**typy niezgodne z — operator**
+
+Typy argumentów operacji określony jest niedozwolone dla tej operacji.
+
+Na przykład wskaźnik nie pomnożona przez dowolną wartość.
+
+Konieczne może być typu rzutować argumentów na typ zgodny z operatorem.

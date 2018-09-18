@@ -1,5 +1,5 @@
 ---
-title: C błąd w czasie wykonywania R6008 | Dokumentacja firmy Microsoft
+title: R6008 błąd środowiska uruchomieniowego języka C | Dokumentacja firmy Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,33 +16,34 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2d32734850c58b64694e96c3a27b759131e6c5ff
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 39b06566f84003b08f5fe3869a021c4bf86dcf5f
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33299880"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46105152"
 ---
-# <a name="c-runtime-error-r6008"></a>C R6008 błąd w czasie wykonywania
-Brak wystarczającej ilości miejsca dla argumentów  
-  
+# <a name="c-runtime-error-r6008"></a>R6008 błąd środowiska uruchomieniowego języka C
+
+Brak wystarczającej ilości miejsca dla argumentów
+
 > [!NOTE]
->  Jeśli wystąpią ten komunikat o błędzie podczas uruchamiania aplikacji aplikacji został wyłączony, ponieważ wystąpił problem wewnętrzny pamięci. Istnieje kilka możliwych przyczyn tego błędu, ale często jest to spowodowane warunek bardzo małej ilości pamięci, zbyt dużej ilości pamięci, zmienne środowiskowe lub usterki w programie.  
->   
->  Możesz wypróbować następujące kroki, aby naprawić ten błąd:  
->   
->  -   Zamknij inne uruchomione aplikacje lub uruchom ponownie komputer, aby zwolnić pamięć.  
-> -   Zmniejsz liczbę i rozmiar argumenty wiersza polecenia do aplikacji.  
-> -   Użyj **aplikacje i funkcje** lub **programy i funkcje** strony **Panelu sterowania** do naprawy lub ponownej instalacji programu.  
-> -   Sprawdź **usługi Windows Update** w **Panelu sterowania** aktualizacji oprogramowania.  
-> -   Sprawdź, czy zaktualizowaną wersję aplikacji. Jeśli problem będzie się powtarzać, skontaktuj się z dostawcą aplikacji.  
-  
- **Informacje dla programistów**  
-  
- Znaleziono wystarczającej ilości pamięci, aby załadować program, ale nie ma wystarczającej ilości pamięci do utworzenia **ARGV —** tablicy. Może to być spowodowane przez warunki bardzo małej ilości pamięci lub zbyt duże wiersze polecenia lub użycie zmiennej środowiskowej. Weź pod uwagę jedną z następujących rozwiązań:  
-  
--   Zwiększ ilość pamięci dostępnej dla programu.  
-  
--   Zmniejsz liczbę i rozmiar argumenty wiersza polecenia.  
-  
--   Zmniejsz rozmiar środowiska, usuwając zbędne zmienne.
+>  Jeśli napotkasz ten komunikat o błędzie podczas działania aplikacji, aplikacji został zamknięty, ponieważ ma on wewnętrzny problem z pamięcią. Istnieje kilka możliwych przyczyn tego błędu, ale często jest to spowodowane przez warunek bardzo małej ilości pamięci, zbyt dużej ilości pamięci, przez zmienne środowiskowe lub usterkę w programie.
+>
+>  Możesz wypróbować następujące kroki, aby naprawić ten błąd:
+>
+>  -   Zamknij inne aplikacje uruchomione lub uruchom ponownie komputer, aby zwolnić pamięć.
+> -   Zmniejsz liczbę i rozmiar argumentów wiersza polecenia do aplikacji.
+> -   Użyj **aplikacje i funkcje** lub **programy i funkcje** strony w **Panelu sterowania** naprawić lub zainstalować ponownie program.
+> -   Sprawdź **Windows Update** w **Panelu sterowania** aktualizacji oprogramowania.
+> -   Sprawdź, czy zaktualizowaną wersję aplikacji. Jeśli problem będzie się powtarzać, skontaktuj się z dostawcą aplikacji.
+
+**Informacje dla programistów**
+
+Było wystarczającej ilości pamięci, aby załadować program, ale nie ma wystarczającej ilości pamięci do utworzenia **argv** tablicy. Może to być spowodowane przez warunki bardzo małej ilości pamięci lub przez nietypowo dużej wierszy polecenia lub użycia zmiennych środowiskowych. Należy wziąć pod uwagę jedną z następujących rozwiązań:
+
+- Zwiększ ilość pamięci dostępnej dla programu.
+
+- Zmniejsz liczbę i rozmiar argumentów wiersza polecenia.
+
+- Zmniejsz rozmiar środowiska przez usunięcie niepotrzebnych zmiennych.

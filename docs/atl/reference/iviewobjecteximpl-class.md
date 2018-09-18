@@ -32,12 +32,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5d47c017a178d0a222780532b74db4135447f062
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 8a7364f86ad08f882660f49556853826bb7186f6
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43760451"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46108433"
 ---
 # <a name="iviewobjecteximpl-class"></a>Klasa IViewObjectExImpl
 
@@ -49,14 +49,14 @@ Ta klasa implementuje `IUnknown` i zawiera domyślne implementacje [IViewObject]
 ## <a name="syntax"></a>Składnia
 
 ```
-template<class T>  
+template<class T>
 class ATL_NO_VTABLE IViewObjectExImpl 
    : public IViewObjectEx
 ```
 
 #### <a name="parameters"></a>Parametry
 
-*T*  
+*T*<br/>
 Z klasą pochodną `IViewObjectExImpl`.
 
 ## <a name="members"></a>Elementy członkowskie
@@ -309,7 +309,7 @@ HRESULT CloseHandle(HANDLE hHandle);
 
 ### <a name="parameters"></a>Parametry
 
-*hHandle*  
+*hHandle*<br/>
 Uchwyt zostanie zamknięty.
 
 ### <a name="return-value"></a>Wartość zwracana
@@ -336,10 +336,10 @@ HRESULT Execute(DWORD_PTR dwParam, HANDLE hObject);
 
 ### <a name="parameters"></a>Parametry
 
-*dwParam*  
+*dwParam*<br/>
 Parametr użytkownika.
 
-*hObject*  
+*hObject*<br/>
 Uchwyt, który ma być sygnalizowane.
 
 ### <a name="return-value"></a>Wartość zwracana
@@ -358,8 +358,8 @@ Poniższy kod przedstawia proste wdrażanie `IWorkerThreadClient::Execute`.
 
 ## <a name="see-also"></a>Zobacz też
 
-[Klasa CComControl](../../atl/reference/ccomcontrol-class.md)   
-[Interfejsy kontrolki ActiveX](/windows/desktop/com/activex-controls-interfaces)   
-[Samouczek](../../atl/active-template-library-atl-tutorial.md)   
-[Tworzenie projektu ATL](../../atl/reference/creating-an-atl-project.md)   
+[Klasa CComControl](../../atl/reference/ccomcontrol-class.md)<br/>
+[Interfejsy kontrolki ActiveX](/windows/desktop/com/activex-controls-interfaces)<br/>
+[Samouczek](../../atl/active-template-library-atl-tutorial.md)<br/>
+[Tworzenie projektu ATL](../../atl/reference/creating-an-atl-project.md)<br/>
 [Klasa — Przegląd](../../atl/atl-class-overview.md)

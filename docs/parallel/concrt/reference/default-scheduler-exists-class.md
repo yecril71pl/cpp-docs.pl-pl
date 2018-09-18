@@ -18,15 +18,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 15c18bf2a747cdedda2c9ce2ea6162e5a92e3b36
-ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
+ms.openlocfilehash: 488f1d08c089b159971834729596d74b4e3dab22
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33688963"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46106065"
 ---
 # <a name="defaultschedulerexists-class"></a>default_scheduler_exists — Klasa
-Ta klasa opisuje wyjątek wywoływany, gdy `Scheduler::SetDefaultSchedulerPolicy` metoda jest wywoływana, gdy domyślnego harmonogramu już istnieje w ramach procesu.  
+Ta klasa opisuje wyjątek generowany, gdy `Scheduler::SetDefaultSchedulerPolicy` metoda jest wywoływana, gdy domyślnego harmonogramu już istnieje w ramach procesu.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -63,8 +63,8 @@ default_scheduler_exists() throw();
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `_Message`  
- Komunikat opisowy błędu.  
+*_Message*<br/>
+Opisowy komunikat dotyczący błędu.  
   
 ## <a name="see-also"></a>Zobacz też  
  [Przestrzeń nazw współbieżności](concurrency-namespace.md)

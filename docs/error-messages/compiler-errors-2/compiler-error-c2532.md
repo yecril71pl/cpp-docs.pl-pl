@@ -1,5 +1,5 @@
 ---
-title: C2532 błąd kompilatora | Dokumentacja firmy Microsoft
+title: Błąd kompilatora C2532 | Dokumentacja firmy Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,14 +16,15 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 78138de907b77d0a770cd606d805f60091ce0fc6
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 68a621b093eaf0e706249161dd2b1b4a3fd282be
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33198459"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46107016"
 ---
-# <a name="compiler-error-c2532"></a>C2532 błąd kompilatora
-"identyfikator": niedozwolony modyfikator dla odwołania  
-  
- Odwołanie zostało zmienione. Nie można zmodyfikować odwołania do odwoływania się do innego obiektu. Zamiast tego użyj wskaźnika.
+# <a name="compiler-error-c2532"></a>Błąd kompilatora C2532
+
+'Identyfikator': niedozwolony modyfikator dla odwołania
+
+Odwołanie zostało zmienione. Nie można zmodyfikować odwołania do odwoływania się do innego obiektu. Zamiast tego użyj wskaźnika.

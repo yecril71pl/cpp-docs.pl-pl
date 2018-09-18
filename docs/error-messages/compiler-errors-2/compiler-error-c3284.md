@@ -1,5 +1,5 @@
 ---
-title: C3284 błąd kompilatora | Dokumentacja firmy Microsoft
+title: Błąd kompilatora C3284 | Dokumentacja firmy Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,41 +16,42 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f75cc4e3d6d7eb30f125a016c43b72609d467c57
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 4c6be84043d7c475cbd023d870e524f7bf9e6190
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33252559"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46105222"
 ---
-# <a name="compiler-error-c3284"></a>C3284 błąd kompilatora
-ograniczenia dla parametru ogólnego "parametru" funkcji "function" musi być zgodna ograniczenia dla parametru ogólnego "parametru" funkcji "function"  
-  
- Jako funkcji wirtualnej z taką samą nazwę i zestawu argumentów w klasie podstawowej funkcji wirtualnej ogólnego należy użyć takich samych ograniczeń.  
-  
- Poniższy przykład generuje C3284:  
-  
-```  
-// C3284.cpp  
-// compile with: /clr /c  
-// C3284 expected  
-public interface class IGettable {  
-   int Get();  
-};  
-  
-public interface class B {  
-   generic<typename T>  
-   where T : IGettable  
-   virtual int mf(T t);  
-};  
-  
-public ref class D : public B {  
-public:  
-   generic<typename T>  
-   // Uncomment the following line to resolve.  
-   // where T : IGettable  
-   virtual int mf(T t) {  
-      return 4;  
-   }  
-};  
+# <a name="compiler-error-c3284"></a>Błąd kompilatora C3284
+
+ograniczenia dla parametru ogólnego "parametru" funkcji "function" musi być zgodne z ograniczeniami dla parametru ogólnego "parametru" funkcji "function"
+
+Ogólna funkcja wirtualna musi używać tych samych ograniczeń co funkcja wirtualna o tej samej nazwie i zestawu argumentów w klasie bazowej.
+
+Poniższy przykład spowoduje wygenerowanie C3284:
+
+```
+// C3284.cpp
+// compile with: /clr /c
+// C3284 expected
+public interface class IGettable {
+   int Get();
+};
+
+public interface class B {
+   generic<typename T>
+   where T : IGettable
+   virtual int mf(T t);
+};
+
+public ref class D : public B {
+public:
+   generic<typename T>
+   // Uncomment the following line to resolve.
+   // where T : IGettable
+   virtual int mf(T t) {
+      return 4;
+   }
+};
 ```

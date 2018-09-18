@@ -16,16 +16,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b921f07638751b9e0702517b125b0f9de828f81b
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: f3341c5b883e3476467cf4e214f632f84d805e70
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33299445"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46098904"
 ---
 # <a name="linker-tools-warning-lnk4044"></a>Ostrzeżenie LNK4044 narzędzi konsolidatora
-nierozpoznaną opcję "option"; ignorowane  
-  
- Opcja danego nie jest prawidłową opcją dla tego narzędzia. Narzędzie ignorowane opcji.  
-  
- Aby wyświetlić listę prawidłowych opcji, należy uruchomić narzędzie bez argumentów lub opcji.
+
+Nierozpoznana opcja "opcji"; ignorowane
+
+Danej opcji nie jest prawidłową opcją dla tego narzędzia. Narzędzie ignorowane opcji.
+
+Aby wyświetlić listę prawidłowych opcji, należy uruchomić narzędzie bez argumentów i opcje.

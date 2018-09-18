@@ -1,5 +1,5 @@
 ---
-title: C2012 błąd kompilatora | Dokumentacja firmy Microsoft
+title: Błąd kompilatora C2012 | Dokumentacja firmy Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,29 +16,30 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e52b08d7a7d93682e1750ae545183195fc563734
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 695576afc4daa7bff93d40ff1477dbc1a3b06363
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33164126"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46111696"
 ---
-# <a name="compiler-error-c2012"></a>C2012 błąd kompilatora
-Brak nazwy następujących "<"  
-  
- `#include` Dyrektywy brakuje wymaganego pliku.  
-  
- Poniższy przykład generuje C2012:  
-  
-```  
-// C2012.cpp  
-#include <   // C2012 include the filename to resolve  
-```  
-  
- Możliwe rozwiązanie:  
-  
-```  
-// C2012b.cpp  
-// compile with: /c  
-#include <stdio.h>  
+# <a name="compiler-error-c2012"></a>Błąd kompilatora C2012
+
+Brak następującej nazwy "<"
+
+`#include` Dyrektywy nie posiada wymaganych nazwy pliku.
+
+Poniższy przykład spowoduje wygenerowanie C2012:
+
+```
+// C2012.cpp
+#include <   // C2012 include the filename to resolve
+```
+
+Możliwe rozwiązanie:
+
+```
+// C2012b.cpp
+// compile with: /c
+#include <stdio.h>
 ```

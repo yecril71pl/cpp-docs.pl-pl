@@ -15,12 +15,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 16c204636baf87cd88f80294b1f413cacc9f5ddc
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: c2bf6990180a7fe325b1ee3d4f4e497a433c183e
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43764267"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46103363"
 ---
 # <a name="c-type-specifiers"></a>Specyfikatory typu C
 
@@ -28,19 +28,7 @@ Specyfikatory typów w deklaracjach zdefiniować typu w deklaracji zmiennej lub 
 
 ## <a name="syntax"></a>Składnia
 
-*Specyfikator typu*:  
-&nbsp;&nbsp;&nbsp;&nbsp;**Void**  
-&nbsp;&nbsp;&nbsp;&nbsp;**Char**  
-&nbsp;&nbsp;&nbsp;&nbsp;**Krótka**  
-&nbsp;&nbsp;&nbsp;&nbsp;**Int**  
-&nbsp;&nbsp;&nbsp;&nbsp;**długi**  
-&nbsp;&nbsp;&nbsp;&nbsp;**float**  
-&nbsp;&nbsp;&nbsp;&nbsp;**Podwójne**  
-&nbsp;&nbsp;&nbsp;&nbsp;**Podpisany**  
-&nbsp;&nbsp;&nbsp;&nbsp;**Bez znaku**  
-&nbsp;&nbsp;&nbsp;&nbsp;*Specyfikator struktury lub Unii*  
-&nbsp;&nbsp;&nbsp;&nbsp;*Specyfikator typu wyliczeniowego*  
-&nbsp;&nbsp;&nbsp;&nbsp;*Nazwa TypeDef*  
+*Specyfikator typu*: &nbsp; &nbsp; &nbsp; &nbsp; **void** &nbsp; &nbsp; &nbsp; &nbsp; **char** &nbsp; &nbsp; &nbsp; &nbsp; **krótki** &nbsp; &nbsp; &nbsp; &nbsp; **int** &nbsp; &nbsp; &nbsp; &nbsp; **długie** &nbsp; &nbsp; &nbsp; &nbsp; **float** &nbsp; &nbsp; &nbsp; &nbsp; **double** &nbsp; &nbsp; &nbsp; &nbsp; **podpisany** &nbsp; &nbsp; &nbsp; &nbsp; **niepodpisane** &nbsp; &nbsp; &nbsp; &nbsp; *struktury lub Unii specifier* &nbsp; &nbsp; &nbsp; &nbsp; *Specyfikator typu wyliczeniowego* &nbsp; &nbsp; &nbsp; &nbsp; *nazwa typedef*
 
 **Podpisany char**, **podpisany int**, **podpisany krótka wartość całkowita**, i **podpisany long int** typów, wraz z ich **bez znaku**  odpowiedniki i **wyliczenia**, są nazywane *całkowitego* typów. **Float**, **double**, i **typu long double** specyfikatory typu są określane jako *zmiennoprzecinkowy* lub *zmiennoprzecinkowych* typów. W deklaracji zmiennej lub funkcji, można użyć dowolnego Specyfikator typu całkowitego lub zmiennoprzecinkowego. Jeśli *Specyfikator typu* nie znajduje się w deklaracji, jest traktowana jako **int**.
 
@@ -87,4 +75,4 @@ Można utworzyć dodatkowy typ specyfikatory z **typedef** deklaracji, zgodnie z
 
 ## <a name="see-also"></a>Zobacz także
 
-[Deklaracje i typy](../c-language/declarations-and-types.md)  
+[Deklaracje i typy](../c-language/declarations-and-types.md)

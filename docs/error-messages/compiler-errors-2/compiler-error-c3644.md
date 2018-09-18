@@ -1,5 +1,5 @@
 ---
-title: C3644 błąd kompilatora | Dokumentacja firmy Microsoft
+title: Błąd kompilatora C3644 | Dokumentacja firmy Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,26 +16,27 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a63f191251ecdc53ee082d69b9bbafb9e23b74c8
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 63e48b944bd5b828ece1110240c462584703ba73
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33264947"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46099489"
 ---
-# <a name="compiler-error-c3644"></a>C3644 błąd kompilatora
-"Funkcja": nie można kompilować funkcji do generowania kodu zarządzanego  
-  
- Obecność niektórych słów kluczowych w funkcji spowoduje, że funkcja zestawiane na natywny.  
-  
- Poniższy przykład generuje C3644:  
-  
-```  
-// C3644.cpp  
-// compile with: /clr  
-// processor: x86  
-  
-void __clrcall Func2(int i) {  
-   __asm {}   // C3644  
-}  
+# <a name="compiler-error-c3644"></a>Błąd kompilatora C3644
+
+'Funkcja': nie można skompilować funkcji do generowania kodu zarządzanego
+
+Obecność niektórych słów kluczowych w funkcji spowoduje, że funkcja jest kompilowana do natywnego.
+
+Poniższy przykład spowoduje wygenerowanie C3644:
+
+```
+// C3644.cpp
+// compile with: /clr
+// processor: x86
+
+void __clrcall Func2(int i) {
+   __asm {}   // C3644
+}
 ```

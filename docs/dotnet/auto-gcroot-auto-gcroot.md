@@ -20,12 +20,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: df9650c5a013d6308869de002919c33a08b2ae04
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: bc168596c43c4ea8f26da5157656822b862bdc1e
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33105832"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46100444"
 ---
 # <a name="autogcrootautogcroot"></a>auto_gcroot::auto_gcroot
 `auto_gcroot` Konstruktora.  
@@ -46,14 +46,14 @@ auto_gcroot(
 ```  
   
 #### <a name="parameters"></a>Parametry  
- `_ptr`  
- Obiekt do własnych.  
+*_ptr*<br/>
+Obiekt do własnych.  
   
- `_right`  
- Istniejące `auto_gcroot`.  
+*z _prawej*<br/>
+Istniejące `auto_gcroot`.  
   
 ## <a name="remarks"></a>Uwagi  
- Podczas konstruowania `auto_gcroot` z istniejącego `auto_gcroot`, istniejące `auto_gcroot` zwalnia jego obiekt przed przeniesieniem własności obiektu do nowego `auto_gcroot`.  
+ Podczas tworzenia `auto_gcroot` z istniejącego `auto_gcroot`, istniejące `auto_gcroot` zwalnia jego obiekt przed przeniesieniem własności obiektu do nowego `auto_gcroot`.  
   
 ## <a name="example"></a>Przykład  
   
@@ -143,12 +143,12 @@ done
 ```  
   
 ## <a name="requirements"></a>Wymagania  
- **Plik nagłówka** \<msclr\auto_gcroot.h >  
+ **Plik nagłówkowy** \<msclr\auto_gcroot.h >  
   
  **Namespace** msclr  
   
 ## <a name="see-also"></a>Zobacz też  
- [auto_gcroot — członkowie](../dotnet/auto-gcroot-members.md)   
+ [auto_gcroot, składowe](../dotnet/auto-gcroot-members.md)   
  [auto_gcroot::attach](../dotnet/auto-gcroot-attach.md)   
- [auto_gcroot::operator — wartość =](../dotnet/auto-gcroot-operator-assign.md)   
+ [auto_gcroot::operator, wartość =](../dotnet/auto-gcroot-operator-assign.md)   
  [auto_gcroot::~auto_gcroot](../dotnet/auto-gcroot-tilde-auto-gcroot.md)

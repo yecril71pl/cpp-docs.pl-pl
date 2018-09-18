@@ -16,17 +16,18 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 5e54a44be0ad5b7b07311d102871e584770fc441
-ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
+ms.openlocfilehash: 561617628e79513434d498d4c5e5af8ff2c189be
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "42464561"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46104910"
 ---
 # <a name="overriding-provider-service-defaults"></a>Zastępowanie ustawień domyślnych usługi dostawcy
+
 Wartość rejestru dostawcy dla OLEDB_SERVICES jest zwracana jako wartość domyślna dla [DBPROP_INIT_OLEDBSERVICES](/previous-versions/windows/desktop/ms716898\(v=vs.85\)) inicjowania właściwości obiektu źródła danych.  
   
- Tak długo, jak istnieje wpis rejestru, obiektów dostawcy są agregowane i użytkownik może przesłonić ustawienia usługi włączone przez ustawienie domyślnego dostawcy `DBPROP_INIT_OLEDBSERVICES` właściwości przed zainicjowaniem. Aby włączyć lub wyłączyć określonej usługi, użytkownik jest ogólnie pobiera bieżącą wartość `DBPROP_INIT_OLEDBSERVICES` właściwość, ustawia lub czyści dla danej właściwości, które można włączać lub wyłączać i resetuje właściwości. `DBPROP_INIT_OLEDBSERVICES` można ustawić bezpośrednio w OLE DB lub w parametrach połączenia przekazano do ADO lub `IDataInitialize::GetDatasource`. Odpowiednie wartości, aby włączyć/wyłączyć poszczególne usługi są wymienione w poniższej tabeli.  
+Tak długo, jak istnieje wpis rejestru, obiektów dostawcy są agregowane i użytkownik może przesłonić ustawienia usługi włączone przez ustawienie domyślnego dostawcy `DBPROP_INIT_OLEDBSERVICES` właściwości przed zainicjowaniem. Aby włączyć lub wyłączyć określonej usługi, użytkownik jest ogólnie pobiera bieżącą wartość `DBPROP_INIT_OLEDBSERVICES` właściwość, ustawia lub czyści dla danej właściwości, które można włączać lub wyłączać i resetuje właściwości. `DBPROP_INIT_OLEDBSERVICES` można ustawić bezpośrednio w OLE DB lub w parametrach połączenia przekazano do ADO lub `IDataInitialize::GetDatasource`. Odpowiednie wartości, aby włączyć/wyłączyć poszczególne usługi są wymienione w poniższej tabeli.  
   
 |Włączone usługi domyślne|Wartość właściwości DBPROP_INIT_OLEDBSERVICES|Wartość w parametrach połączenia|  
 |------------------------------|------------------------------------------------|--------------------------------|  
@@ -36,10 +37,11 @@ Wartość rejestru dostawcy dla OLEDB_SERVICES jest zwracana jako wartość domy
 |Wszystkie z wyjątkiem buforowanie AutoEnlistment i kursor kliencki|`DBPROPVAL_OS_ENABLEALL &`<br /><br /> `~DBPROPVAL_OS_TXNENLISTMENT &`<br /><br /> `~DBPROPVAL_OS_CLIENTCURSOR`|"Usług OLE DB = -7;"|  
 |Brak usług|`~DBPROPVAL_OS_ENABLEALL`|"Usług OLE DB = 0;"|  
   
- Jeśli wpis rejestru nie istnieje dla dostawcy, menedżerów składników nie spowoduje zagregowanie obiektów dostawcy i żadnych usług, zostanie wywołany, nawet wtedy, gdy wyraźnie żąda przez użytkownika.  
+Jeśli wpis rejestru nie istnieje dla dostawcy, menedżerów składników nie spowoduje zagregowanie obiektów dostawcy i żadnych usług, zostanie wywołany, nawet wtedy, gdy wyraźnie żąda przez użytkownika.  
   
 ## <a name="see-also"></a>Zobacz też  
- [Korzystanie z puli zasobów](/previous-versions/windows/desktop/ms713655\(v=vs.85\))   
- [Jaki sposób użytkownicy korzystają w puli zasobów](/previous-versions/windows/desktop/ms715907\(v=vs.85\))   
- [Jak dostawców wydajnie pracować z puli zasobów](/previous-versions/windows/desktop/ms714906\(v=vs.85\))   
- [Włączanie i wyłączanie usług OLE DB](../../data/oledb/enabling-and-disabling-ole-db-services.md)
+
+[Korzystanie z puli zasobów](/previous-versions/windows/desktop/ms713655\(v=vs.85\))   
+[Jaki sposób użytkownicy korzystają w puli zasobów](/previous-versions/windows/desktop/ms715907\(v=vs.85\))   
+[Jak dostawców wydajnie pracować z puli zasobów](/previous-versions/windows/desktop/ms714906\(v=vs.85\))   
+[Włączanie i wyłączanie usług OLE DB](../../data/oledb/enabling-and-disabling-ole-db-services.md)

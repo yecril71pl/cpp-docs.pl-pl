@@ -16,14 +16,15 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: eded212dc2a3c397ab0d917e860daf29ce6b9c8a
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 3df9761f999eaf3623811874ec6bee0bfb4f9cae
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33319117"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46112606"
 ---
 # <a name="resource-compiler-fatal-error-rw1030"></a>Błąd krytyczny kompilatora zasobów RW1030
-Błąd wyjścia  
-  
- Ten błąd może być spowodowany przez kompilator zasobów nie może utworzyć pliku docelowego. Upewnij się, że istnieje wystarczająca ilość miejsca na dysku i czy masz uprawnienia do zapisu w woluminie.
+
+Błąd danych wyjściowych
+
+Ten błąd może być spowodowany, jeśli kompilator zasobów nie mógł utworzyć pliku docelowego. Upewnij się, że jest wystarczająca ilość miejsca na dysku i mają uprawnienia do zapisu w woluminie.

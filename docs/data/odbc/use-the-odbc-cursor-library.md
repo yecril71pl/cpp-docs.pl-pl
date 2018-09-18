@@ -16,19 +16,21 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 011f50c3c304436731ee643f85ea5e816eda8282
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: a3d36720012a7a54109c44d6eac41394323bbe0e
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33092887"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46107809"
 ---
 # <a name="use-the-odbc-cursor-library"></a>Korzystanie z biblioteki kursorów ODBC
-ODBC zarządza przewijanie zestawów rekordów za pośrednictwem z biblioteki kursorów. Te tematy wyjaśniają sposób pracy z biblioteki kursorów.  
+
+ODBC zarządza przewijanie zestawów rekordów przy użyciu biblioteki kursorów. Te tematy wyjaśniają, jak pracować z biblioteki kursorów.  
   
 ## <a name="in-this-section"></a>W tej sekcji  
   
--   [Korzystanie z biblioteki kursorów ODBC](../../data/odbc/odbc-the-odbc-cursor-library.md)  
+- [Korzystanie z biblioteki kursorów ODBC](../../data/odbc/odbc-the-odbc-cursor-library.md)  
   
 ## <a name="see-also"></a>Zobacz też  
- [Open Database Connectivity (ODBC)](../../data/odbc/open-database-connectivity-odbc.md)
+
+[Open Database Connectivity (ODBC)](../../data/odbc/open-database-connectivity-odbc.md)

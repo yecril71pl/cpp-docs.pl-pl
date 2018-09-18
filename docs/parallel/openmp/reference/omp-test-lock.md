@@ -1,5 +1,5 @@
 ---
-title: omp_test_lock | Dokumentacja firmy Microsoft
+title: Funkcje omp_test_lock | Dokumentacja firmy Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,15 +16,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a4bb63974f5d1864fe7b1c6359f7e8bda19b90c2
-ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
+ms.openlocfilehash: c34edd258c087f70bc9bb0b732cfd7ca192c791c
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33691940"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46106106"
 ---
 # <a name="omptestlock"></a>omp_test_lock
-Próbuje ustawić blokady, ale nie blokuje wykonywania wątku.  
+Próbuje ustawić blokadę, ale nie blokuje wykonywanie wątków.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -34,14 +34,13 @@ int omp_test_lock(
 );  
 ```  
   
-## <a name="remarks"></a>Uwagi  
- w przypadku gdy  
+### <a name="parameters"></a>Parametry
   
- `lock`  
- Zmienna typu [omp_lock_t](../../../parallel/openmp/reference/omp-lock-t.md) który został zainicjowany z [omp_init_lock](../../../parallel/openmp/reference/omp-init-lock.md).  
+*lock*<br/>
+Zmienna typu [omp_lock_t](../../../parallel/openmp/reference/omp-lock-t.md) , została zainicjowana przy użyciu [funkcje omp_init_lock](../../../parallel/openmp/reference/omp-init-lock.md).  
   
 ## <a name="remarks"></a>Uwagi  
- Aby uzyskać więcej informacji, zobacz [3.2.5 funkcje omp_test_lock i omp_test_nest_lock](../../../parallel/openmp/3-2-5-omp-test-lock-and-omp-test-nest-lock-functions.md).  
+ Aby uzyskać więcej informacji, zobacz [3.2.5 funkcje omp_test_lock i omp_test_nest_lock funkcji](../../../parallel/openmp/3-2-5-omp-test-lock-and-omp-test-nest-lock-functions.md).  
   
 ## <a name="example"></a>Przykład  
   

@@ -12,27 +12,28 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a3dfc57e1d6af11628b37823f2452ee2b65f8a7f
-ms.sourcegitcommit: 7f3df9ff0310a4716b8136ca20deba699ca86c6c
+ms.openlocfilehash: 9a1fc13df342b4282ee63c185205c2f2b12ca003
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/21/2018
-ms.locfileid: "42464792"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46110617"
 ---
 # <a name="microsoft-specific-modifiers"></a>Modyfikatory specyficzne dla firmy Microsoft
-Ten rozdział opisuje specyficzne dla Microsoft rozszerzenia do C++ w następujących obszarach:  
-  
--   [Adresowanie na podstawie](based-addressing.md), praktyka używana wskaźnik jako podstawowy, z którego mogą być rekompensowane inne wskaźniki  
-  
--   [Konwencje wywoływania funkcji](calling-conventions.md)  
-  
--   Rozszerzone atrybuty klasy magazynowania zadeklarowane za pomocą [__declspec](declspec.md) — słowo kluczowe  
-  
--   [__W64](w64.md) — słowo kluczowe  
 
-### <a name="microsoft-specific-keywords"></a>Słowa kluczowe specyficzne dla firmy Microsoft  
+Ten rozdział opisuje specyficzne dla Microsoft rozszerzenia do C++ w następujących obszarach:
 
-Wiele słów kluczowych specyficznych dla firmy Microsoft może służyć do modyfikowania deklaratorów w celu tworzenia typów pochodnych. Aby uzyskać więcej informacji dotyczących deklaratorów, zobacz [deklaratory](overview-of-declarators.md).  
+- [Adresowanie na podstawie](based-addressing.md), praktyka używana wskaźnik jako podstawowy, z którego mogą być rekompensowane inne wskaźniki
+
+- [Konwencje wywoływania funkcji](calling-conventions.md)
+
+- Rozszerzone atrybuty klasy magazynowania zadeklarowane za pomocą [__declspec](declspec.md) — słowo kluczowe
+
+- [__W64](w64.md) — słowo kluczowe
+
+### <a name="microsoft-specific-keywords"></a>Słowa kluczowe specyficzne dla firmy Microsoft
+
+Wiele słów kluczowych specyficznych dla firmy Microsoft może służyć do modyfikowania deklaratorów w celu tworzenia typów pochodnych. Aby uzyskać więcej informacji dotyczących deklaratorów, zobacz [deklaratory](overview-of-declarators.md).
 
 |Słowo kluczowe|Znaczenie|Używany do tworzenia typów pochodnych?|   
 |-------------|-------------|---------------------------------|
@@ -47,4 +48,5 @@ Wiele słów kluczowych specyficznych dla firmy Microsoft może służyć do mod
 |[__vectorcall](vectorcall.md)|Widoczna dalej nazwa deklaruje funkcję, która używa rejestrów, włącznie z rejestrami SSE, jeśli są dostępne, zamiast stosu do przekazywania argumentu.|Tak|      
     
 ## <a name="see-also"></a>Zobacz też     
- [Dokumentacja języka C++](cpp-language-reference.md)
+
+[Dokumentacja języka C++](cpp-language-reference.md)

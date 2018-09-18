@@ -23,12 +23,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 32f71ea2536c4cb9b2c9c42f5625a64c986497bb
-ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
+ms.openlocfilehash: 0cfe0c64a0029282cfe157e525886279d8d60cb9
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43678513"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46101686"
 ---
 # <a name="concurrentunorderedmultiset-class"></a>concurrent_unordered_multiset — Klasa
 `concurrent_unordered_multiset` Klasa jest bezpiecznym pod współbieżności kontenerem, który kontroluje różnej długości sekwencje elementów typu K. Sekwencja jest reprezentowana w sposób umożliwiający bezpieczne pod względem współbieżności dołączyć element dostępu do iteratora i operacji przechodzenia iteratora.  
@@ -51,17 +51,17 @@ template <typename K,
 ```   
   
 #### <a name="parameters"></a>Parametry  
- `K`  
- Typ klucza.  
+*K*<br/>
+Typ klucza.  
   
- `_Hasher`  
- Typ obiektu funkcji mieszania. Ten argument jest opcjonalny, a wartość domyślna to `std::hash<K>`.  
+*_Hasher*<br/>
+Typ obiektu funkcji mieszania. Ten argument jest opcjonalny, a wartość domyślna to `std::hash<K>`.  
   
- `key_equality`  
- Typ obiektu funkcji porównywania równości. Ten argument jest opcjonalny, a wartość domyślna to `std::equal_to<K>`.  
+*key_equality*<br/>
+Typ obiektu funkcji porównywania równości. Ten argument jest opcjonalny, a wartość domyślna to `std::equal_to<K>`.  
   
- `_Allocator_type`  
- Typ reprezentujący przechowywany obiekt alokatora, który hermetyzuje szczegóły dotyczące alokacji i dezalokacji pamięci współbieżnego wektora. Ten argument jest opcjonalny, a wartość domyślna to `std::allocator<K>`.  
+*_Allocator_type*<br/>
+Typ reprezentujący przechowywany obiekt alokatora, który hermetyzuje szczegóły dotyczące alokacji i dezalokacji pamięci współbieżnego wektora. Ten argument jest opcjonalny, a wartość domyślna to `std::allocator<K>`.  
   
 ## <a name="members"></a>Elementy członkowskie  
   
@@ -199,25 +199,25 @@ concurrent_unordered_multiset(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `_Iterator`  
- Typ iteratora wejściowego.  
+*_Iterator*<br/>
+Typ iteratora wejściowego.  
   
- `_Number_of_buckets`  
- Początkowa liczba przedziałów w tym nieuporządkowany multizbiór.  
+*_Number_of_buckets*<br/>
+Początkowa liczba przedziałów w tym nieuporządkowany multizbiór.  
   
- `_Hasher`  
- Funkcja wyznaczania wartości skrótu dla tego nieuporządkowany multizbiór.  
+*_Hasher*<br/>
+Funkcja wyznaczania wartości skrótu dla tego nieuporządkowany multizbiór.  
   
- `key_equality`  
- Funkcja porównywania równości to nieuporządkowany multizbiór.  
+*key_equality*<br/>
+Funkcja porównywania równości to nieuporządkowany multizbiór.  
   
- `_Allocator`  
- Alokator dla tego nieuporządkowany multizbiór.  
+*_Allocator*<br/>
+Alokator dla tego nieuporządkowany multizbiór.  
   
- `first`  
- `last`  
- `_Uset`  
- Źródło `concurrent_unordered_multiset` obiekt, aby przenosić elementy.  
+*pierwszy*<br/>
+*ostatni*<br/>
+*_Uset*<br/>
+Źródło `concurrent_unordered_multiset` obiekt, aby przenosić elementy.  
   
 ### <a name="remarks"></a>Uwagi  
  Wszystkie konstruktory zapisują obiekt programu przydzielania `_Allocator` i zainicjuj nieuporządkowany multizbiór.  
@@ -241,8 +241,8 @@ size_type count(const key_type& KVal) const;
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `KVal`  
- Klucz do wyszukania.  
+*KVal*<br/>
+Klucz do wyszukania.  
   
 ### <a name="return-value"></a>Wartość zwracana  
  Liczba razy liczba przypadków, gdy klucz jest wyświetlany w kontenerze.  
@@ -289,8 +289,8 @@ std::pair<const_iterator,
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `KVal`  
- Wartość klucza do wyszukania.  
+*KVal*<br/>
+Wartość klucza do wyszukania.  
   
 ### <a name="return-value"></a>Wartość zwracana  
  A [pary](../../../standard-library/pair-structure.md) gdzie pierwszy element jest iterację do początku, a drugi element stanowi iterator do końca zakresu.  
@@ -309,8 +309,8 @@ const_iterator find(const key_type& KVal) const;
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `KVal`  
- Wartość klucza do wyszukania.  
+*KVal*<br/>
+Wartość klucza do wyszukania.  
   
 ### <a name="return-value"></a>Wartość zwracana  
  Iterator wskazuje lokalizację pierwszego elementu, który pasuje do klucza dostarczonego lub iteratora `end()` jeśli taki element nie istnieje.  
@@ -366,23 +366,23 @@ typename std::enable_if<!std::is_same<const_iterator,
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `_Iterator`  
- Typ iteratora, używany do wstawienia.  
+*_Iterator*<br/>
+Typ iteratora, używany do wstawienia.  
   
- `V`  
- Typ wartości wstawiony.  
+*V*<br/>
+Typ wartości wstawiony.  
   
- `value`  
- Wartość, która ma zostać wstawiony.  
+*value*<br/>
+Wartość, która ma zostać wstawiony.  
   
- `_Where`  
- Począwszy od lokalizacji do wyszukiwania punkt wstawiania.  
+*_Where*<br/>
+Począwszy od lokalizacji do wyszukiwania punkt wstawiania.  
   
- `first`  
- Początek zakresu do wstawienia.  
+*pierwszy*<br/>
+Początek zakresu do wstawienia.  
   
- `last`  
- Koniec zakresu do wstawienia.  
+*ostatni*<br/>
+Koniec zakresu do wstawienia.  
   
 ### <a name="return-value"></a>Wartość zwracana  
  Iterator wskazuje lokalizację wstawiania.  
@@ -459,8 +459,8 @@ concurrent_unordered_multiset& operator= (concurrent_unordered_multiset&& _Uset)
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `_Uset`  
- Źródło `concurrent_unordered_multiset` obiektu.  
+*_Uset*<br/>
+Źródło `concurrent_unordered_multiset` obiektu.  
   
 ### <a name="return-value"></a>Wartość zwracana  
  Odwołanie do `concurrent_unordered_multiset` obiektu.  
@@ -477,8 +477,8 @@ void rehash(size_type _Buckets);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `_Buckets`  
- Żądaną liczbę przedziałów.  
+*_Buckets*<br/>
+Żądaną liczbę przedziałów.  
   
 ### <a name="remarks"></a>Uwagi  
  Funkcja elementu członkowskiego zmienia liczbę przedziałów, na co najmniej `_Buckets` i odbudowuje tabelę mieszania, stosownie do potrzeb. Liczba przedziałów musi być potęgą liczby 2. Jeśli nie potęgą liczby 2, jego kopia zapasowa zostanie zaokrąglona do następną największą potęgą liczby 2.  
@@ -508,8 +508,8 @@ void swap(concurrent_unordered_multiset& _Uset);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `_Uset`  
- `concurrent_unordered_multiset` Zamień na obiekt.  
+*_Uset*<br/>
+`concurrent_unordered_multiset` Zamień na obiekt.  
   
 ##  <a name="unsafe_begin"></a> unsafe_begin 
 
@@ -522,8 +522,8 @@ const_local_iterator unsafe_begin(size_type _Bucket) const;
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `_Bucket`  
- Indeks przedziału.  
+*_Bucket*<br/>
+Indeks przedziału.  
   
 ### <a name="return-value"></a>Wartość zwracana  
  Iterator wskazuje początek przedziału.  
@@ -537,8 +537,8 @@ size_type unsafe_bucket(const key_type& KVal) const;
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `KVal`  
- Klucz elementu wyszukane.  
+*KVal*<br/>
+Klucz elementu wyszukane.  
   
 ### <a name="return-value"></a>Wartość zwracana  
  Zasobnik indeks klucza, w tym kontenerze.  
@@ -563,8 +563,8 @@ size_type unsafe_bucket_size(size_type _Bucket);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `_Bucket`  
- Zasobnik do wyszukania.  
+*_Bucket*<br/>
+Zasobnik do wyszukania.  
   
 ### <a name="return-value"></a>Wartość zwracana  
  Bieżąca liczba zasobników, w tym kontenerze.  
@@ -578,8 +578,8 @@ const_local_iterator unsafe_cbegin(size_type _Bucket) const;
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `_Bucket`  
- Indeks przedziału.  
+*_Bucket*<br/>
+Indeks przedziału.  
   
 ### <a name="return-value"></a>Wartość zwracana  
  Iterator wskazuje początek przedziału.  
@@ -593,8 +593,8 @@ const_local_iterator unsafe_cend(size_type _Bucket) const;
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `_Bucket`  
- Indeks przedziału.  
+*_Bucket*<br/>
+Indeks przedziału.  
   
 ### <a name="return-value"></a>Wartość zwracana  
  Iterator wskazuje początek przedziału.  
@@ -610,8 +610,8 @@ const_local_iterator unsafe_end(size_type _Bucket) const;
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `_Bucket`  
- Indeks przedziału.  
+*_Bucket*<br/>
+Indeks przedziału.  
   
 ### <a name="return-value"></a>Wartość zwracana  
  Iterator wskazuje koniec przedziału.  
@@ -633,13 +633,13 @@ size_type unsafe_erase(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `_Where`  
- Pozycja sterująca do wymazania z.  
+*_Where*<br/>
+Pozycja sterująca do wymazania z.  
   
- `first`  
- `last`  
- `KVal`  
- Wartość klucza do wymazania.  
+*pierwszy*<br/>
+*ostatni*<br/>
+*KVal*<br/>
+Wartość klucza do wymazania.  
   
 ### <a name="return-value"></a>Wartość zwracana  
  Pierwsze dwie funkcje Członkowskie zwracają iterator opisujący pierwszy element pozostający poza wszelkimi elementami usuniętymi lub [zakończenia](#end)(), jeśli taki element nie istnieje. Trzecia funkcji członkowska zwraca liczbę elementów, które usuwa.  

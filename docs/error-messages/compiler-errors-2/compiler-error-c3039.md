@@ -1,5 +1,5 @@
 ---
-title: C3039 błąd kompilatora | Dokumentacja firmy Microsoft
+title: Błąd kompilatora C3039 | Dokumentacja firmy Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,34 +16,36 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2bdcfa36d270dc842eec0508969c650e7b30bee4
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 1b225103cf45331688a65d4528cadb39e730c75c
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33243727"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46098098"
 ---
-# <a name="compiler-error-c3039"></a>C3039 błąd kompilatora
-"var": zmienna index w OpenMP instrukcji "for" nie może być zmienną redukcyjną  
-  
- Zmienna index jest niejawnie prywatne, więc nie można użyć zmiennej w [redukcji](../../parallel/openmp/reference/reduction.md) w otaczającej klauzuli [równoległych](../../parallel/openmp/reference/parallel.md) dyrektywy.  
-  
-## <a name="example"></a>Przykład  
- Poniższy przykład generuje C3039:  
-  
-```  
-// C3039.cpp  
-// compile with: /openmp /c  
-int g_i;  
-  
-int main() {  
-   int i;  
-  
-   #pragma omp parallel reduction(+: i)  
-   {  
-      #pragma omp for  
-      for (i = 0; i < 10; ++i)   // C3039  
-         g_i += i;  
-   }  
-}  
+# <a name="compiler-error-c3039"></a>Błąd kompilatora C3039
+
+"var": zmienna index w OpenMP instrukcji "for" nie może być zmienną redukcyjną
+
+Zmienna index jest niejawnie prywatne, dlatego nie można użyć zmiennej w [redukcji](../../parallel/openmp/reference/reduction.md) w otaczającej klauzuli [równoległe](../../parallel/openmp/reference/parallel.md) dyrektywy.
+
+## <a name="example"></a>Przykład
+
+Poniższy przykład spowoduje wygenerowanie C3039:
+
+```
+// C3039.cpp
+// compile with: /openmp /c
+int g_i;
+
+int main() {
+   int i;
+
+   #pragma omp parallel reduction(+: i)
+   {
+      #pragma omp for
+      for (i = 0; i < 10; ++i)   // C3039
+         g_i += i;
+   }
+}
 ```

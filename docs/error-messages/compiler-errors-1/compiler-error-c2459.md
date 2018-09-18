@@ -1,5 +1,5 @@
 ---
-title: C2459 błąd kompilatora | Dokumentacja firmy Microsoft
+title: Błąd kompilatora C2459 | Dokumentacja firmy Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,25 +16,26 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6013720b55892ffd34e1faf132a69842e4bceb50
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 0b67c5ba4c714b096da58b1e4d837840dc6b5fd2
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33198511"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46113217"
 ---
-# <a name="compiler-error-c2459"></a>C2459 błąd kompilatora
-"identyfikator": jest definiowany; Nie można dodawać jako anonimowego elementu członkowskiego  
-  
- Klasy, struktury lub związku zostało ponownie zdefiniowane w swoim własnym zakresie za pomocą elementu członkowskiego z anonimowego związku.  
-  
- Poniższy przykład generuje C2459:  
-  
-```  
-// C2459.cpp  
-// compile with: /c  
-class C {  
-   union { int C; };   // C2459  
-   union { int D; };  
-};  
+# <a name="compiler-error-c2459"></a>Błąd kompilatora C2459
+
+'Identyfikator': jest definiowany; Nie można dodawać jako anonimowej składowej
+
+Klasy, struktury lub Unii zostanie ponownie zdefiniowana w zakresie własnej przez członka anonimowej Unii.
+
+Poniższy przykład spowoduje wygenerowanie C2459:
+
+```
+// C2459.cpp
+// compile with: /c
+class C {
+   union { int C; };   // C2459
+   union { int D; };
+};
 ```

@@ -1,5 +1,5 @@
 ---
-title: auto_gcroot::operator — wartość = | Dokumentacja firmy Microsoft
+title: auto_gcroot::operator, wartość = | Dokumentacja firmy Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -20,12 +20,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: b4bc0f671ea0c156b05eabe092bc3cc85b5cd9fe
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 91503568b093dfb7052cd6d6e99fc63f1c780a73
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33111305"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46102746"
 ---
 # <a name="autogcrootoperator"></a>auto_gcroot::operator=
 Operator przypisania.  
@@ -46,15 +46,15 @@ auto_gcroot<_element_type> & operator=(
 ```  
   
 #### <a name="parameters"></a>Parametry  
- `_right`  
- Obiekt lub `auto_gcroot` ma być przypisany do bieżącego `auto_gcroot`.  
+*z _prawej*<br/>
+Obiekt lub `auto_gcroot` ma być przypisane do bieżącego `auto_gcroot`.  
   
 ## <a name="return-value"></a>Wartość zwracana  
- Bieżący `auto_gcroot`, teraz będący właścicielem `_right`.  
+ Bieżący `auto_gcroot`, teraz właścicielem `_right`.  
   
 ## <a name="example"></a>Przykład  
   
-```  
+```cpp  
 // msl_auto_gcroot_operator_equals.cpp  
 // compile with: /clr  
 #include <msclr\auto_gcroot.h>  
@@ -119,10 +119,10 @@ in ClassA destructor: third
 ```  
   
 ## <a name="requirements"></a>Wymagania  
- **Plik nagłówka** \<msclr\auto_gcroot.h >  
+ **Plik nagłówkowy** \<msclr\auto_gcroot.h >  
   
  **Namespace** msclr  
   
 ## <a name="see-also"></a>Zobacz też  
- [auto_gcroot — członkowie](../dotnet/auto-gcroot-members.md)   
+ [auto_gcroot, składowe](../dotnet/auto-gcroot-members.md)   
  [auto_gcroot::attach](../dotnet/auto-gcroot-attach.md)

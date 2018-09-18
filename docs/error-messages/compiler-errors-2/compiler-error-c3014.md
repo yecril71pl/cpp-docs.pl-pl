@@ -1,5 +1,5 @@
 ---
-title: C3014 błąd kompilatora | Dokumentacja firmy Microsoft
+title: Błąd kompilatora C3014 | Dokumentacja firmy Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,70 +16,71 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e5623d64adc3fc5f47e4dd63a82078906a11db1b
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: d5fdfc786b3c54bbe30c723ba97f35d3cea37b2f
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33243150"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46098511"
 ---
-# <a name="compiler-error-c3014"></a>C3014 błąd kompilatora
-Oczekiwano pętli for po dyrektywie OpenMP "w dyrektywie"  
-  
- Występuje błąd dla żadnych innych niż `for` pętli natychmiast wykonać `#pragma omp for` dyrektywy.  
-  
- Poniższy przykład generuje C3014:  
-  
-```  
-// C3014.cpp  
-// compile with: /openmp  
-int main()  
-{  
-   int i = 0;  
-  
-   #pragma omp parallel  
-   {  
-      #pragma omp for  
-      for (i = 0; i < 10; ++i)   // OK  
-      {  
-      }  
-   }  
-  
-   #pragma omp parallel for  
-   for (i = 0; i < 10; ++i)   // OK  
-   {  
-   }  
-  
-   #pragma omp parallel  
-   {  
-      #pragma omp for  
-      {   // C3014  
-         for (i = 0; i < 10; ++i)  
-         {  
-         }  
-      }  
-   }  
-  
-   #pragma omp parallel for  
-   {   // C3014  
-      for (i = 0; i < 10; ++i)  
-      {  
-      }  
-   }  
-  
-   #pragma omp parallel  
-   {  
-      #pragma omp for  
-      i *= 2;   // C3014  
-      for (i = 0; i < 10; ++i)  
-      {  
-      }  
-   }  
-  
-   #pragma omp parallel for  
-   i *= 2;   // C3014  
-   for (i = 0; i < 10; ++i)  
-   {  
-   }  
-}  
+# <a name="compiler-error-c3014"></a>Błąd kompilatora C3014
+
+Oczekiwano pętli po dyrektywie "w dyrektywie" OpenMP
+
+Występuje błąd dla żadnych innych niż `for` pętli, aby natychmiast wykonać `#pragma omp for` dyrektywy.
+
+Poniższy przykład spowoduje wygenerowanie C3014:
+
+```
+// C3014.cpp
+// compile with: /openmp
+int main()
+{
+   int i = 0;
+
+   #pragma omp parallel
+   {
+      #pragma omp for
+      for (i = 0; i < 10; ++i)   // OK
+      {
+      }
+   }
+
+   #pragma omp parallel for
+   for (i = 0; i < 10; ++i)   // OK
+   {
+   }
+
+   #pragma omp parallel
+   {
+      #pragma omp for
+      {   // C3014
+         for (i = 0; i < 10; ++i)
+         {
+         }
+      }
+   }
+
+   #pragma omp parallel for
+   {   // C3014
+      for (i = 0; i < 10; ++i)
+      {
+      }
+   }
+
+   #pragma omp parallel
+   {
+      #pragma omp for
+      i *= 2;   // C3014
+      for (i = 0; i < 10; ++i)
+      {
+      }
+   }
+
+   #pragma omp parallel for
+   i *= 2;   // C3014
+   for (i = 0; i < 10; ++i)
+   {
+   }
+}
 ```

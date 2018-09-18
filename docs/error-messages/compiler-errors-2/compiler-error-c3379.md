@@ -1,5 +1,5 @@
 ---
-title: C3379 błąd kompilatora | Dokumentacja firmy Microsoft
+title: Błąd kompilatora C3379 | Dokumentacja firmy Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,45 +16,46 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1ded7ebfba6ab9f9120ebfa48c1942209a74e704
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: f90a4ccc17e63c21d4b6fb26e607450849f27b48
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33258286"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46109330"
 ---
-# <a name="compiler-error-c3379"></a>C3379 błąd kompilatora
-"class": zagnieżdżona klasa nie może mieć specyfikatora dostępu do zestawu jako części swojej deklaracji  
-  
- Gdy jest stosowany do typu zarządzanego, takich jak klasy lub struktury, [publicznego](../../cpp/public-cpp.md) i [prywatnej](../../cpp/private-cpp.md) słowa kluczowe wskazuje, czy mają być widoczne klasy przy użyciu metadanych zestawu. `public` lub `private` nie można zastosować do zagnieżdżona klasa będzie dziedziczyć dostęp do zestawu klasy otaczającej.  
-  
- W przypadku użycia z [/CLR](../../build/reference/clr-common-language-runtime-compilation.md), `ref` i `value` słowa kluczowe wskazują, że klasa jest zarządzane (zobacz [klas i struktur](../../windows/classes-and-structs-cpp-component-extensions.md)).  
-  
- Poniższy przykład generuje C3379:  
-  
-```  
-// C3379a.cpp  
-// compile with: /clr  
-using namespace System;  
-  
-public ref class A {  
-public:  
-   static int i = 9;  
-  
-   public ref class BA {   // C3379  
-   // try the following line instead  
-   // ref class BA {  
-   public:  
-      static int ii = 8;  
-   };  
-};  
-  
-int main() {  
-  
-   A^ myA = gcnew A;  
-   Console::WriteLine(myA->i);  
-  
-   A::BA^ myBA = gcnew A::BA;  
-   Console::WriteLine(myBA->ii);  
-}  
-```  
+# <a name="compiler-error-c3379"></a>Błąd kompilatora C3379
+
+"class": zagnieżdżona klasa nie może mieć specyfikatora dostępu do zestawu jako części swojej deklaracji
+
+W przypadku zastosowania do typu zarządzanego, takich jak klasy lub struktury, [publicznych](../../cpp/public-cpp.md) i [prywatnej](../../cpp/private-cpp.md) słowa kluczowe wskazuje, czy klasa będzie udostępniana przez metadane zestawu. `public` lub `private` nie można zastosować do klasy zagnieżdżonej, która odziedziczy dostęp do zestawu otaczającej klasy.
+
+Gdy jest używane z [/CLR](../../build/reference/clr-common-language-runtime-compilation.md), `ref` i `value` słowa kluczowe wskazują, że klasa jest zarządzana (zobacz [klas i struktur](../../windows/classes-and-structs-cpp-component-extensions.md)).
+
+Poniższy przykład spowoduje wygenerowanie C3379:
+
+```
+// C3379a.cpp
+// compile with: /clr
+using namespace System;
+
+public ref class A {
+public:
+   static int i = 9;
+
+   public ref class BA {   // C3379
+   // try the following line instead
+   // ref class BA {
+   public:
+      static int ii = 8;
+   };
+};
+
+int main() {
+
+   A^ myA = gcnew A;
+   Console::WriteLine(myA->i);
+
+   A::BA^ myBA = gcnew A::BA;
+   Console::WriteLine(myBA->ii);
+}
+```

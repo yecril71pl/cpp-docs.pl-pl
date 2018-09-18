@@ -1,5 +1,5 @@
 ---
-title: call_in_appdomain — funkcja | Dokumentacja firmy Microsoft
+title: call_in_appdomain, funkcja | Dokumentacja firmy Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: a8689254120416e5b2bf5de617fc3f3ef466abb1
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 707ee9476ce26de9325337f6f2130e41d19faa3a
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33111289"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46105248"
 ---
 # <a name="callinappdomain-function"></a>call_in_appdomain — Funkcja
 Wykonuje funkcję w domenie określonej aplikacji.  
@@ -49,23 +49,23 @@ RetType call_in_appdomain(
 ```  
   
 #### <a name="parameters"></a>Parametry  
- `appdomainId`  
- Elementu appdomain, w którym do wywołania tej funkcji.  
+*appdomainId*<br/>
+Appdomain, w którym w wywołaniu funkcji.  
   
- `voidFunc`  
- Wskaźnik do `void` funkcję, która przyjmuje parametry N (0 < = N < = 15).  
+*voidFunc*<br/>
+Wskaźnik do `void` funkcji, która przyjmuje parametry N (0 < = N < = 15).  
   
- `nonvoidFunc`  
- Wskaźnik do innej`void` funkcję, która przyjmuje parametry N (0 < = N < = 15).  
+*nonvoidFunc*<br/>
+Wskaźnik do non -`void` funkcji, która przyjmuje parametry N (0 < = N < = 15).  
   
- `arg1...argN`  
- Zero do 15 parametry do przekazania do `voidFunc` lub `nonvoidFunc` w innym elemencie appdomain.  
+*arg1... argN*<br/>
+Zero do 15 parametry do przekazania do `voidFunc` lub `nonvoidFunc` w innym elemencie appdomain.  
   
 ## <a name="return-value"></a>Wartość zwracana  
  Wynik wykonania `voidFunc` lub `nonvoidFunc` w domenie określonej aplikacji.  
   
 ## <a name="remarks"></a>Uwagi  
- Argumenty funkcji przekazany do `call_in_appdomain` nie może być typów CLR.  
+ Argumenty funkcji są przekazywane do `call_in_appdomain` nie może być typy CLR.  
   
 ## <a name="example"></a>Przykład  
   
@@ -123,6 +123,6 @@ appDomain1 id = 2
 ```  
   
 ## <a name="requirements"></a>Wymagania  
- **Plik nagłówka** \<msclr\appdomain.h >  
+ **Plik nagłówkowy** \<msclr\appdomain.h >  
   
  **Namespace** msclr

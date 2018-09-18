@@ -1,5 +1,5 @@
 ---
-title: Kompilatora (poziom 1) ostrzeżenie C4530 | Dokumentacja firmy Microsoft
+title: Kompilator ostrzeżenie (poziom 1) C4530 | Dokumentacja firmy Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,28 +16,29 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 74804aa3ea0450c08710a5d0818eae67ce9b556e
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: bbfbc67377dd48eeb692bdd4cac1f113fbdf7f6a
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33283328"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46110461"
 ---
-# <a name="compiler-warning-level-1-c4530"></a>Kompilator C4530 ostrzegawcze (poziom 1)
-Obsługa wyjątków języka C++ używane, ale semantyka rozwinięć nie są włączone. Określ/ehsc  
-  
- Użyto C++, obsługa wyjątków, ale [/ehsc](../../build/reference/eh-exception-handling-model.md) nie zostały wybrane.  
-  
- Nie została włączona opcja/ehsc, obiekt z automatycznego magazynu w ramce między funkcje wykonywania do rzutowania i przechwytywanie do rzutowania nie zostać zniszczone. Jednak utworzyć obiektu magazynu automatyczne w **spróbuj** lub **catch** bloku zostaną zniszczone.  
-  
- Poniższy przykład generuje C4530:  
-  
-```  
-// C4530.cpp  
-// compile with: /W1  
-int main() {  
-   try{} catch(int*) {}   // C4530  
-}  
-```  
-  
- Kompiluj próbki/ehsc, aby rozwiązać ostrzeżenia.
+# <a name="compiler-warning-level-1-c4530"></a>Kompilator ostrzeżenie (poziom 1) C4530
+
+Obsługa wyjątków języka C++, używane, ale semantyka rozwinięć nie są włączone. Określ/ehsc
+
+Została użyta Obsługa wyjątków języka C++, ale [/ehsc](../../build/reference/eh-exception-handling-model.md) nie został wybrany.
+
+Nie włączono opcji/ehsc, obiekt z automatycznego przechowywania w ramce, między funkcje, wykonując throw i przechwytywanie throw, nie zostać zniszczone. Jednak obiekt przy użyciu automatycznego przechowywania utworzony w **spróbuj** lub **catch** bloku zostaną zniszczone.
+
+Poniższy przykład spowoduje wygenerowanie C4530:
+
+```
+// C4530.cpp
+// compile with: /W1
+int main() {
+   try{} catch(int*) {}   // C4530
+}
+```
+
+Skompiluj próbki z/ehsc, aby rozwiązać ostrzeżenia.

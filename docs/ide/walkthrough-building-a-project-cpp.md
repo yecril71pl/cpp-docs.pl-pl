@@ -1,7 +1,7 @@
 ---
 title: 'Wskazówki: Tworzenie projektu (C++) | Dokumentacja firmy Microsoft'
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 09/14/2018
 ms.technology:
 - cpp-ide
 ms.topic: conceptual
@@ -16,54 +16,57 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0c8d04dc3692076b867302af0e793eaac7ed25cb
-ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
+ms.openlocfilehash: 5050ab07f430a545e5d2d0497ae2d17b09acdba3
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "33332458"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46101439"
 ---
 # <a name="walkthrough-building-a-project-c"></a>Wskazówki: tworzenie projektu (C++)
-W tym przewodniku celowo wprowadzać w swój kod, aby dowiedzieć się, jak wygląda błąd kompilacji i napraw błąd składni Visual C++. Podczas kompilowania projektu komunikat o błędzie wskazuje, co to jest problem i którym wystąpił.  
+W tym instruktażu celowo wprowadzono błąd składni języka Visual C++ w kodzie, aby dowiedzieć się, jak wygląda błąd kompilacji i jak go naprawić. Podczas kompilowania projektu, komunikat o błędzie wskazuje, co to jest problem i gdzie się pojawił.  
   
 ## <a name="prerequisites"></a>Wymagania wstępne  
   
--   W tym przewodniku przyjęto założenie, że rozumiesz podstawowe informacje na temat języka C++.  
+- W tym przewodniku przyjęto założenie, że rozumiesz podstawy języka C++.  
   
--   Założono również, że zostały wykonane wcześniej powiązane wskazówki, które są wymienione w [za pomocą środowiska IDE programu Visual Studio dla programowania w języku C++ pulpitu](../ide/using-the-visual-studio-ide-for-cpp-desktop-development.md).  
+- Przyjęto również założenie, że zostały wykonane wcześniej pokrewne instruktaże, które są wymienione w [przy użyciu programu Visual Studio IDE dla programowanie aplikacji klasycznych w języku C++](../ide/using-the-visual-studio-ide-for-cpp-desktop-development.md).  
   
 ### <a name="to-fix-compilation-errors"></a>Aby naprawić błędy kompilacji  
   
-1.  W TestGames.cpp Usuń średnik w ostatnim wierszu, dzięki czemu jest podobny, to:  
+1. W Game.cpp Usuń średnik w ostatnim wierszu, tak, aby go jest podobny do tego:  
   
      `return 0`  
   
-2.  Na pasku menu wybierz **kompilacji**, **Kompiluj rozwiązanie**.  
+1. Na pasku menu wybierz **kompilacji** > **Kompiluj rozwiązanie**.  
   
-3.  Komunikat w **listy błędów** okno oznacza, że wystąpił błąd podczas tworzenia projektu. Opis wygląda następująco:  
+1. Wiadomości w **lista błędów** okno wskazuje, że wystąpił błąd podczas tworzenia projektu. Opis wygląda następująco:  
   
-     `error C2143: syntax error : missing ';' before '}'`  
+     `error C2143: syntax error: missing ';' before '}'`  
   
-     Aby wyświetlić informacje pomocnicze o tym błędzie, zaznacz go w **listy błędów** okna, a następnie wybierz klawisz F1.  
+     Aby wyświetlić Pomoc dotyczącą tego błędu, wyróżnij go w **lista błędów** okna, a następnie wybierz **F1** klucza.  
   
-4.  Dodaj średnik z powrotem do końca wiersza, który zawiera błąd składni:  
+1. Dodać średnik z powrotem do końca wiersza, który zawiera błąd składni:  
   
      `return 0;`  
   
-5.  Na pasku menu wybierz **kompilacji**, **Kompiluj rozwiązanie**.  
+1. Na pasku menu wybierz **kompilacji** > **Kompiluj rozwiązanie**.  
   
-     Komunikat w **dane wyjściowe** okna wskazuje pomyślnie skompilować projekt.  
+     Wiadomości w **dane wyjściowe** okno wskazuje, że projekt został pomyślnie skompilowany.  
   
     ```Output  
     1>------ Build started: Project: Game, Configuration: Debug Win32 ------  
-    1>  TestGames.cpp  
-    1>  Game.vcxproj -> C:\Users\<username>\Documents\Visual Studio <version>\Projects\Game\Debug\Game.exe  
+    1>Game.cpp  
+    1>Game.vcxproj -> C:\Users\<username>\source\repos\Game\Debug\Game.exe  
     ========== Build: 1 succeeded, 0 failed, 0 up-to-date, 0 skipped ==========  
     ```  
   
 ## <a name="next-steps"></a>Następne kroki  
- **Poprzedni:** [wskazówki: Praca z projektami i rozwiązaniami (C++)](../ide/walkthrough-working-with-projects-and-solutions-cpp.md) &#124; **dalej:**[wskazówki: Testowanie projektu (C++)](../ide/walkthrough-testing-a-project-cpp.md)  
+
+**Poprzedni:** [wskazówki: Praca z projektami i rozwiązaniami (C++)](../ide/walkthrough-working-with-projects-and-solutions-cpp.md)<br/>
+**Następnie:** [wskazówki: Testowanie projektu (C++)](../ide/walkthrough-testing-a-project-cpp.md)<br/>
   
-## <a name="see-also"></a>Zobacz też  
- [Dokumentacja języka C++](../cpp/cpp-language-reference.md)   
- [Kompilowanie programów C/C++](../build/building-c-cpp-programs.md)
+## <a name="see-also"></a>Zobacz też
+
+[Dokumentacja języka C++](../cpp/cpp-language-reference.md)<br/>
+[Kompilowanie programów C/C++](../build/building-c-cpp-programs.md)<br/>

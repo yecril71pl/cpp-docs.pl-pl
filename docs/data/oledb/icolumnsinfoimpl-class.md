@@ -38,14 +38,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 2bc335a0c83e57b8abfeb708d9c6acce977010dd
-ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
+ms.openlocfilehash: bde6a3947d7afa836d93387e80c9b7885b1bc15c
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "42465889"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46099411"
 ---
 # <a name="icolumnsinfoimpl-class"></a>IColumnsInfoImpl — Klasa
+
 Udostępnia implementację [IColumnsInfo](/previous-versions/windows/desktop/ms724541\(v=vs.85\)) interfejsu.  
   
 ## <a name="syntax"></a>Składnia
@@ -58,11 +59,13 @@ class ATL_NO_VTABLE IColumnsInfoImpl :
 ```  
   
 ### <a name="parameters"></a>Parametry  
- *T*  
- Z klasą pochodną `IColumnsInfoImpl`.  
+
+*T*<br/>
+Z klasą pochodną `IColumnsInfoImpl`.  
 
 ## <a name="requirements"></a>Wymagania  
- **Nagłówek:** atldb.h  
+
+**Nagłówek:** atldb.h  
   
 ## <a name="members"></a>Elementy członkowskie  
   
@@ -74,9 +77,11 @@ class ATL_NO_VTABLE IColumnsInfoImpl :
 |[MapColumnIDs](#mapcolumnids)|Zwraca tablicę liczb porządkowych kolumn w zestawie wierszy, które są identyfikowane za pomocą określonej kolumny identyfikatorów.|  
   
 ## <a name="remarks"></a>Uwagi  
- Obowiązkowego interfejsu na polecenia i zestawy wierszy. Aby zmodyfikować zachowanie Twój dostawca `IColumnsInfo` wdrożenia, należy zmodyfikować dostawcy mapy kolumny.  
+
+Obowiązkowego interfejsu na polecenia i zestawy wierszy. Aby zmodyfikować zachowanie Twój dostawca `IColumnsInfo` wdrożenia, należy zmodyfikować dostawcy mapy kolumny.  
 
 ## <a name="getcolumninfo"></a> IColumnsInfoImpl::GetColumnInfo
+
 Zwraca metadane kolumny wymagane przez większość klientów.  
   
 ### <a name="syntax"></a>Składnia  
@@ -88,9 +93,11 @@ STDMETHOD (GetColumnInfo)(DBORDINAL* pcColumns,
 ```  
   
 #### <a name="parameters"></a>Parametry  
- Zobacz [IColumnsInfo::GetColumnInfo](/previous-versions/windows/desktop/ms722704\(v=vs.85\)) w *OLE DB Podręcznik programisty*.  
+
+Zobacz [IColumnsInfo::GetColumnInfo](/previous-versions/windows/desktop/ms722704\(v=vs.85\)) w *OLE DB Podręcznik programisty*.  
 
 ## <a name="mapcolumnids"></a> IColumnsInfoImpl::MapColumnIDs
+
 Zwraca tablicę liczb porządkowych kolumn w zestawie wierszy, które są identyfikowane za pomocą określonej kolumny identyfikatorów.  
   
 ### <a name="syntax"></a>Składnia  
@@ -102,8 +109,10 @@ STDMETHOD (MapColumnIDs)(DBORDINAL cColumnIDs,
 ```  
   
 #### <a name="parameters"></a>Parametry  
- Zobacz [IColumnsInfo::MapColumnIDs](/previous-versions/windows/desktop/ms714200\(v=vs.85\)) w *OLE DB Podręcznik programisty*.  
+
+Zobacz [IColumnsInfo::MapColumnIDs](/previous-versions/windows/desktop/ms714200\(v=vs.85\)) w *OLE DB Podręcznik programisty*.  
   
 ## <a name="see-also"></a>Zobacz też  
- [Szablony dostawców OLE DB](../../data/oledb/ole-db-provider-templates-cpp.md)   
- [Architektura szablonu dostawcy OLE DB](../../data/oledb/ole-db-provider-template-architecture.md)
+
+[Szablony dostawców OLE DB](../../data/oledb/ole-db-provider-templates-cpp.md)<br/>
+[Architektura szablonu dostawcy OLE DB](../../data/oledb/ole-db-provider-template-architecture.md)

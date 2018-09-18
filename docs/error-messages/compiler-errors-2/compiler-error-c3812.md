@@ -16,16 +16,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 37747ebb68b5e965c15ef9763731e0b4d56ac57e
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 83de08dfb0ea42e99a7ef7185fb3b8fc492bdec8
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33265827"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46101374"
 ---
 # <a name="compiler-error-c3812"></a>C3812 błąd kompilatora
-"property" musi być pierwszym tokenem w deklaracji właściwości  
-  
- Przy deklarowaniu właściwość `__property` — słowo kluczowe musi być pierwszym tokenem w wierszu.  
-  
- C3812 jest tylko przy użyciu opcji kompilatora przestarzałe **: oldsyntax**.  
+
+"właściwość" musi być pierwszym tokenem w deklaracji właściwości
+
+Podczas deklarowania właściwość `__property` — słowo kluczowe musi być pierwszym tokenem w wierszu.
+
+C3812 jest dostępna, przy użyciu opcji kompilatora przestarzałe **: oldsyntax**.

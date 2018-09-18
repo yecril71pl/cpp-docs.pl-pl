@@ -15,14 +15,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 9fcc5c6aae86aea005aef50f9083aeb718f64b19
-ms.sourcegitcommit: 889a75be1232817150be1e0e8d4d7f48f5993af2
+ms.openlocfilehash: 5d73b7c45223c029451f300e495915eb15b0a956
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/30/2018
-ms.locfileid: "39340270"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46103939"
 ---
 # <a name="transaction-performing-a-transaction-in-a-recordset-odbc"></a>Transakcja: wykonywanie transakcji w zestawie rekordów (ODBC)
+
 W tym temacie opisano sposób wykonania transakcji w zestawie rekordów.  
   
 > [!NOTE]
@@ -30,13 +31,13 @@ W tym temacie opisano sposób wykonania transakcji w zestawie rekordów.
   
 #### <a name="to-perform-a-transaction-in-a-recordset"></a>Do wykonania transakcji w zestawie rekordów  
   
-1.  Wywołaj `CDatabase` obiektu `BeginTrans` funkcja elementu członkowskiego.  
+1. Wywołaj `CDatabase` obiektu `BeginTrans` funkcja elementu członkowskiego.  
   
-2.  Jeśli nie zaimplementowano zbiorcze pobieranie z wiersza, należy wywołać `AddNew/Update`, `Edit/Update`, i `Delete` funkcji elementów członkowskich co najmniej jeden obiektów zestaw rekordów o tej samej bazy danych na dowolną liczbę razy. Aby uzyskać więcej informacji, zobacz [zestaw rekordów: Dodawanie, aktualizowanie i usuwanie rekordów (ODBC)](../../data/odbc/recordset-adding-updating-and-deleting-records-odbc.md). Jeśli zaimplementowano wiersz zbiorcze pobieranie, należy napisać własne funkcje, aby zaktualizować źródło danych.  
+1. Jeśli nie zaimplementowano zbiorcze pobieranie z wiersza, należy wywołać `AddNew/Update`, `Edit/Update`, i `Delete` funkcji elementów członkowskich co najmniej jeden obiektów zestaw rekordów o tej samej bazy danych na dowolną liczbę razy. Aby uzyskać więcej informacji, zobacz [zestaw rekordów: Dodawanie, aktualizowanie i usuwanie rekordów (ODBC)](../../data/odbc/recordset-adding-updating-and-deleting-records-odbc.md). Jeśli zaimplementowano wiersz zbiorcze pobieranie, należy napisać własne funkcje, aby zaktualizować źródło danych.  
   
-3.  Na koniec Wywołaj `CDatabase` obiektu `CommitTrans` funkcja elementu członkowskiego. Jeśli wystąpi błąd w jednej z aktualizacji lub zdecydować anulować zmiany, należy wywołać jej `Rollback` funkcja elementu członkowskiego.  
+1. Na koniec Wywołaj `CDatabase` obiektu `CommitTrans` funkcja elementu członkowskiego. Jeśli wystąpi błąd w jednej z aktualizacji lub zdecydować anulować zmiany, należy wywołać jej `Rollback` funkcja elementu członkowskiego.  
   
- W poniższym przykładzie użyto dwa zestawy rekordów do usunięcia rejestracji studenta z rejestracji bazy danych school, usuwając dla uczniów z wszystkie klasy, w których jest zarejestrowany dla uczniów. Ponieważ `Delete` wywołuje w obu zestawach rekordów musi zakończyć się sukcesem, wymagana jest transakcja. Przykład zakłada się istnienie `m_dbStudentReg`, zmienną składową typu `CDatabase` podłączony do źródła danych i klas zestawu rekordów `CEnrollmentSet` i `CStudentSet`. `strStudentID` Zmienna zawiera wartość uzyskanych od użytkownika.  
+W poniższym przykładzie użyto dwa zestawy rekordów do usunięcia rejestracji studenta z rejestracji bazy danych school, usuwając dla uczniów z wszystkie klasy, w których jest zarejestrowany dla uczniów. Ponieważ `Delete` wywołuje w obu zestawach rekordów musi zakończyć się sukcesem, wymagana jest transakcja. Przykład zakłada się istnienie `m_dbStudentReg`, zmienną składową typu `CDatabase` podłączony do źródła danych i klas zestawu rekordów `CEnrollmentSet` i `CStudentSet`. `strStudentID` Zmienna zawiera wartość uzyskanych od użytkownika.  
   
 ```  
 BOOL CEnrollDoc::RemoveStudent( CString strStudentID )  
@@ -92,7 +93,8 @@ BOOL CEnrollDoc::RemoveStudent( CString strStudentID )
 >  Wywoływanie `BeginTrans` ponownie bez wywoływania `CommitTrans` lub `Rollback` , występuje błąd.  
   
 ## <a name="see-also"></a>Zobacz też  
- [Transakcja (ODBC)](../../data/odbc/transaction-odbc.md)   
- [Transakcja: Jak transakcje wpływają na aktualizacje (ODBC)](../../data/odbc/transaction-how-transactions-affect-updates-odbc.md)   
- [Klasa CDatabase](../../mfc/reference/cdatabase-class.md)   
- [Klasa CRecordset](../../mfc/reference/crecordset-class.md)
+
+[Transakcja (ODBC)](../../data/odbc/transaction-odbc.md)<br/>
+[Transakcja: jak transakcje wpływają na aktualizacje (ODBC)](../../data/odbc/transaction-how-transactions-affect-updates-odbc.md)<br/>
+[Klasa CDatabase](../../mfc/reference/cdatabase-class.md)<br/>
+[Klasa CRecordset](../../mfc/reference/crecordset-class.md)

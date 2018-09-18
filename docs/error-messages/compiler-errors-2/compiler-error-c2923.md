@@ -1,5 +1,5 @@
 ---
-title: C2923 błąd kompilatora | Dokumentacja firmy Microsoft
+title: Błąd kompilatora C2923 | Dokumentacja firmy Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,41 +16,42 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b71470ed288abe0a0868c788917dfcecdeeb914a
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: e8bcf4a16681c725240f052921dfa9efb8dde8ad
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33241503"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46106164"
 ---
-# <a name="compiler-error-c2923"></a>C2923 błąd kompilatora
-'type': 'Identyfikator' nie jest prawidłowy szablon typem argumentu dla parametru "param"  
-  
- Lista argumentów brakuje typu potrzebne do utworzenia wystąpienia szablonu lub rodzajowa. Sprawdź szablon lub deklaracja ogólna.  
-  
- Poniższy przykład generuje C2923:  
-  
-```  
-// C2923.cpp  
-template <class T> struct TC {};  
-int x;  
-int main() {  
-   TC<x>* tc2;   // C2923  
-   TC<int>* tc2;   // OK  
-}  
-```  
-  
- C2923 może również wystąpić, gdy użycie typów ogólnych:  
-  
-```  
-// C2923b.cpp  
-// compile with: /clr /c  
-generic <class T> ref struct GC {};  
-  
-int x;  
-  
-int main() {  
-   GC<x>^ gc2;   // C2923  
-   GC<int>^ gc2;   // OK  
-}  
+# <a name="compiler-error-c2923"></a>Błąd kompilatora C2923
+
+'type': 'Identyfikator' nie jest prawidłowym szablonem typ argumentu dla parametru "param"
+
+Lista argumentów brakuje typu potrzebne do utworzenia wystąpienia szablonu lub typ ogólny. Sprawdź szablon lub deklaracji ogólnej.
+
+Poniższy przykład spowoduje wygenerowanie C2923:
+
+```
+// C2923.cpp
+template <class T> struct TC {};
+int x;
+int main() {
+   TC<x>* tc2;   // C2923
+   TC<int>* tc2;   // OK
+}
+```
+
+C2923 może również wystąpić, gdy za pomocą typów ogólnych:
+
+```
+// C2923b.cpp
+// compile with: /clr /c
+generic <class T> ref struct GC {};
+
+int x;
+
+int main() {
+   GC<x>^ gc2;   // C2923
+   GC<int>^ gc2;   // OK
+}
 ```

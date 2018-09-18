@@ -12,17 +12,19 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b85be35347a9021d2b652b6f8b33d5d313f71771
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: f997e2317306cc897ae13d98c75b45034e47cbca
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32380657"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46109837"
 ---
 # <a name="blank-lines"></a>Puste wiersze
-**ANSI 4.9.2** czy znaki spacji, które są zapisywane do strumienia tekstu bezpośrednio przed znakiem nowego wiersza są wyświetlane podczas odczytu w  
-  
- Spacje są zachowywane.  
-  
-## <a name="see-also"></a>Zobacz też  
- [Funkcje bibliotek](../c-language/library-functions.md)
+
+**ANSI 4.9.2** czy znaków spacji, które są zapisywane do strumienia tekstu, bezpośrednio przed znakiem nowego wiersza są wyświetlane podczas odczytu w
+
+Spacje są zachowywane.
+
+## <a name="see-also"></a>Zobacz też
+
+[Funkcje bibliotek](../c-language/library-functions.md)

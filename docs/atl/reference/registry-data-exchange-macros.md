@@ -21,12 +21,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1864fb953c53cba562856fed24a44b6157a03603
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: a8a4ac19f9ead379b66d93a7be031bb53bc50fe5
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43764218"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46109348"
 ---
 # <a name="registry-data-exchange-macros"></a>Makra wymiany danych rejestru
 
@@ -89,19 +89,19 @@ RDX_BINARY(
 
 ### <a name="parameters"></a>Parametry
 
-*KLUCZ_GŁÓWNY*  
+*KLUCZ_GŁÓWNY*<br/>
 Głównego klucza rejestru.
 
-*podklucza*  
+*podklucza*<br/>
 Podklucz rejestru.
 
-*VALUENAME*  
+*VALUENAME*<br/>
 Klucz rejestru.
 
-*Element członkowski*  
+*Element członkowski*<br/>
 Zmiennej składowej do skojarzenia z określony wpis rejestru.
 
-*member_size*  
+*member_size*<br/>
 Rozmiar w bajtach zmiennej składowej.
 
 ### <a name="remarks"></a>Uwagi
@@ -123,19 +123,19 @@ RDX_CSTRING_TEXT(
 
 ### <a name="parameters"></a>Parametry
 
-*KLUCZ_GŁÓWNY*  
+*KLUCZ_GŁÓWNY*<br/>
 Głównego klucza rejestru.
 
-*podklucza*  
+*podklucza*<br/>
 Podklucz rejestru.
 
-*VALUENAME*  
+*VALUENAME*<br/>
 Klucz rejestru.
 
-*Element członkowski*  
+*Element członkowski*<br/>
 Zmiennej składowej do skojarzenia z określony wpis rejestru.
 
-*member_size*  
+*member_size*<br/>
 Rozmiar w bajtach zmiennej składowej.
 
 ### <a name="remarks"></a>Uwagi
@@ -157,19 +157,19 @@ RDX_DWORD(
 
 ### <a name="parameters"></a>Parametry
 
-*KLUCZ_GŁÓWNY*  
+*KLUCZ_GŁÓWNY*<br/>
 Głównego klucza rejestru.
 
-*podklucza*  
+*podklucza*<br/>
 Podklucz rejestru.
 
-*VALUENAME*  
+*VALUENAME*<br/>
 Klucz rejestru.
 
-*Element członkowski*  
+*Element członkowski*<br/>
 Zmiennej składowej do skojarzenia z określony wpis rejestru.
 
-*member_size*  
+*member_size*<br/>
 Rozmiar w bajtach zmiennej składowej.
 
 ### <a name="remarks"></a>Uwagi
@@ -191,19 +191,19 @@ RDX_TEXT(
 
 ### <a name="parameters"></a>Parametry
 
-*KLUCZ_GŁÓWNY*  
+*KLUCZ_GŁÓWNY*<br/>
 Głównego klucza rejestru.
 
-*podklucza*  
+*podklucza*<br/>
 Podklucz rejestru.
 
-*VALUENAME*  
+*VALUENAME*<br/>
 Klucz rejestru.
 
-*Element członkowski*  
+*Element członkowski*<br/>
 Zmiennej składowej do skojarzenia z określony wpis rejestru.
 
-*member_size*  
+*member_size*<br/>
 Rozmiar w bajtach zmiennej składowej.
 
 ### <a name="remarks"></a>Uwagi
@@ -212,6 +212,6 @@ To makro jest używane w połączeniu z BEGIN_RDX_MAP i END_RDX_MAP makra, aby s
 
 ## <a name="see-also"></a>Zobacz też
 
-[Makra](../../atl/reference/atl-macros.md)   
+[Makra](../../atl/reference/atl-macros.md)<br/>
 [RegistryDataExchange](../../atl/reference/registry-and-typelib-global-functions.md#registrydataexchange)
 

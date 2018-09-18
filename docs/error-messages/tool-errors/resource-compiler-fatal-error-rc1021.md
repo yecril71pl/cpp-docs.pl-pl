@@ -16,16 +16,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 27cc4096f84abc47c53b5c08eeacf5ebc92186da
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: d67b52282483e0767331b198fdf990660c64e85a
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33320160"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46108520"
 ---
 # <a name="resource-compiler-fatal-error-rc1021"></a>Błąd krytyczny kompilatora zasobów RC1021
-Nieprawidłowe polecenie preprocesora "string"  
-  
- Znaki następujące znak liczby (**#**) nie tworzą prawidłowej dyrektywy preprocesora.  
-  
- Znak liczby nie może służyć jako pierwszy znak w identyfikatorze.
+
+Nieprawidłowe polecenie preprocesora "string"
+
+Znaki następujące znak numeru (**#**) nie stanowią prawidłowej dyrektywy preprocesora.
+
+Znak liczby nie może służyć jako pierwszy znak w identyfikatorze.

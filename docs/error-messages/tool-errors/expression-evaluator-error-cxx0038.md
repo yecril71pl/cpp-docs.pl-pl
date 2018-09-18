@@ -1,5 +1,5 @@
 ---
-title: Błąd cxx0038 programu Expression Evaluator | Dokumentacja firmy Microsoft
+title: Błąd ewaluatora wyrażeń CXX0038 | Dokumentacja firmy Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,18 +17,19 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: fa0b47313e367f73b241ae94c5e022b45e57587d
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 5695b00dc52737ab3247d59e363a42aecf001ffa
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33297105"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46098835"
 ---
 # <a name="expression-evaluator-error-cxx0038"></a>Błąd CXX0038 programu Expression Evaluator
-Niezgodność typu i/lub liczby argumentów funkcji  
-  
- Wywołanie funkcji określony jest niezgodna z prototypu funkcji.  
-  
- Wpisz ponownie połączenie z poprawną liczbę argumentów. Typ rzutowania każdy argument, aby dopasować prototyp, w razie potrzeby.  
-  
- Ten błąd jest taki sam jak CAN0038.
+
+Niezgodność liczby i/lub typ argumentu funkcji
+
+Wywołanie funkcji, jak określono niezgodny prototypu funkcji.
+
+Wpisz ponownie połączenie z poprawną liczbę argumentów. Typ rzutowania każdy argument, aby dopasować prototyp, zgodnie z potrzebami.
+
+Ten błąd jest taka sama jak CAN0038.

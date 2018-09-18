@@ -1,5 +1,5 @@
 ---
-title: C2529 błąd kompilatora | Dokumentacja firmy Microsoft
+title: Błąd kompilatora C2529 | Dokumentacja firmy Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,24 +16,25 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: fb2d5de2375a243250b320ac313de4129795eb32
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 9a6919c65dbe900cd4d6d4a60ef5370c6a683523
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33199758"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46104286"
 ---
-# <a name="compiler-error-c2529"></a>C2529 błąd kompilatora
-"Nazwa": odwołanie do odwołania jest niedozwolony  
-  
- Ten błąd może zostać ustalona przy użyciu składni wskaźnika i deklarowanie odwołania do wskaźnika.  
-  
- Poniższy przykład generuje C2529:  
-  
-```  
-// C2529.cpp  
-// compile with: /c  
-int i;  
-int &ri = i;  
-int &(&rri) = ri;   // C2529  
+# <a name="compiler-error-c2529"></a>Błąd kompilatora C2529
+
+"name": odwołanie do odwołania jest niedozwolone
+
+Ten błąd, mogą zostać rozwiązane, używając składni wskaźnika i deklarowanie odwołanie do wskaźnika.
+
+Poniższy przykład spowoduje wygenerowanie C2529:
+
+```
+// C2529.cpp
+// compile with: /c
+int i;
+int &ri = i;
+int &(&rri) = ri;   // C2529
 ```

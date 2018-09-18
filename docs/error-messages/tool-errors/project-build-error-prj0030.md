@@ -16,16 +16,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1bf1c9137f8c4ed0d80955eef38b07ea86204a5c
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 964fedd40f577a8b337c4ad0c20ba80d33ed2a23
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33317661"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46099925"
 ---
 # <a name="project-build-error-prj0030"></a>Błąd PRJ0030 kompilacji projektu
-Błąd rozwinięcie makra. Ocena rekursja przekroczyła 32 poziomy dla $(makro).  
-  
- Ten błąd jest spowodowany przez rekursji w makrach. Na przykład jeśli ustawisz **katalog pośredni** właściwości (zobacz [ogólna strona właściwości (projekt)](../../ide/general-property-page-project.md)) do $(intdir —), konieczne będzie rekursji.  
-  
- Aby rozwiązać ten problem, nie definiują właściwości pod względem makra, które są one używane do definiowania lub makra.
+
+Wystąpił błąd rozszerzania makra. Oceń rekursja przekroczyła 32 poziomy dla $(makro).
+
+Ten błąd jest spowodowany przez rekursji w makrach. Na przykład jeśli ustawisz **katalog pośredni** właściwości (zobacz [strona właściwości ogólnych (projekt)](../../ide/general-property-page-project.md)) $ (IntDir), będziesz mieć rekursji.
+
+Aby rozwiązać ten problem, nie zostanie zdefiniowana, makr lub właściwości w odniesieniu do makra, które służą do definiowania.

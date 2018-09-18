@@ -19,22 +19,22 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e8f7939d42aa246c9b7d5924979357fb6301e726
-ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
+ms.openlocfilehash: 4b57e2c4e6631683afdabec983f155941b8cd2da
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/02/2018
-ms.locfileid: "39466588"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46107473"
 ---
-# <a name="storage-classes-c"></a>Klasy magazynu (C++)  
-  
-A *klasę magazynu* w kontekście C++ deklaracje zmiennych jest specyfikatora typu, które regulują okres istnienia, powiązania i pamięć lokalizację obiektów. Dany obiekt może mieć tylko jedną klasę magazynu. Zmienne zdefiniowane w bloku mają automatycznego przechowywania, chyba że określono inaczej, za pomocą **extern**, **statyczne**, lub `thread_local` specyfikatorów. Obiekty automatyczne i zmienne mają bez połączenia; nie są one widoczne dla kodu poza blokiem.  
-  
-**Uwagi**  
-  
-1.  [Mutable](../cpp/mutable-data-members-cpp.md) — słowo kluczowe może być uznane za Specyfikator klasy magazynowania. Jednak jest ono dostępne tylko na liście składowych definicji klasy.  
-  
-2.  **Visual C++ 2010 i nowszych wersji:** **automatycznie** — słowo kluczowe nie jest już specyfikatora klasy magazynowania C++ i **zarejestrować** — słowo kluczowe jest przestarzały. **Visual Studio 2017 w wersji 15.7 lub nowszej:** (udostępniono [/STD: c ++ 17](../build/reference/std-specify-language-standard-version.md)): **zarejestrować** — słowo kluczowe zostanie usunięty z języka C++.
+# <a name="storage-classes-c"></a>Klasy magazynu (C++)
+
+A *klasę magazynu* w kontekście C++ deklaracje zmiennych jest specyfikatora typu, które regulują okres istnienia, powiązania i pamięć lokalizację obiektów. Dany obiekt może mieć tylko jedną klasę magazynu. Zmienne zdefiniowane w bloku mają automatycznego przechowywania, chyba że określono inaczej, za pomocą **extern**, **statyczne**, lub `thread_local` specyfikatorów. Obiekty automatyczne i zmienne mają bez połączenia; nie są one widoczne dla kodu poza blokiem.
+
+**Uwagi**
+
+1. [Mutable](../cpp/mutable-data-members-cpp.md) — słowo kluczowe może być uznane za Specyfikator klasy magazynowania. Jednak jest ono dostępne tylko na liście składowych definicji klasy.
+
+1. **Visual C++ 2010 i nowszych wersji:** **automatycznie** — słowo kluczowe nie jest już specyfikatora klasy magazynowania C++ i **zarejestrować** — słowo kluczowe jest przestarzały. **Visual Studio 2017 w wersji 15.7 lub nowszej:** (udostępniono [/STD: c ++ 17](../build/reference/std-specify-language-standard-version.md)): **zarejestrować** — słowo kluczowe zostanie usunięty z języka C++.
 
 
 ```cpp
@@ -148,14 +148,14 @@ using namespace std;
 struct C {
    void Test(int value) {
       static int var = 0;
-      if (var == value) 
+      if (var == value)
          cout << "var == value" << endl;
       else
          cout << "var != value" << endl;
 
       var = value;
    }
-}; 
+};
 
 int main() {
    C c1;
@@ -185,9 +185,9 @@ W poniższym kodzie pokazano dwa **extern** deklaracji, `DefinedElsewhere` (któ
 ```cpp
 // external.cpp
 // DefinedElsewhere is defined in another translation unit
-extern int DefinedElsewhere;   
+extern int DefinedElsewhere;
 int main() {
-   int DefinedHere; 
+   int DefinedHere;
    {
       // refers to DefinedHere in the enclosing scope
       extern int DefinedHere;
@@ -205,7 +205,7 @@ thread_local float f = 42.0; // Global namespace. Not implicitly static.
 struct S // cannot be applied to type definition
 {
     thread_local int i; // Illegal. The member must be static.
-    thread_local static char buf[10]; // OK 
+    thread_local static char buf[10]; // OK
 };
 
 void DoSomething()
@@ -224,7 +224,7 @@ Uwagi dotyczące `thread_local` specyfikator:
 
 -  Można zastosować `thread_local` tylko do danych, deklaracje i definicje; `thread_local` nie można używać w deklaracji lub definicji funkcji.
 
--  Można określić `thread_local` tylko dla elementów danych ze statycznym okresem magazynu. Obejmuje to globalnych obiektów danych (zarówno **statyczne** i **extern**), lokalnych obiektów statycznych i statycznych składowych danych klas. Wszelkie zmienna lokalna zadeklarowana `thread_local` jest niejawnie statyczna, jeśli podano inną klasę magazynu; innymi słowy, w zakresie bloku `thread_local` jest odpowiednikiem `thread_local static`. 
+-  Można określić `thread_local` tylko dla elementów danych ze statycznym okresem magazynu. Obejmuje to globalnych obiektów danych (zarówno **statyczne** i **extern**), lokalnych obiektów statycznych i statycznych składowych danych klas. Wszelkie zmienna lokalna zadeklarowana `thread_local` jest niejawnie statyczna, jeśli podano inną klasę magazynu; innymi słowy, w zakresie bloku `thread_local` jest odpowiednikiem `thread_local static`.
 
 -  Należy określić `thread_local` dla deklaracji i definicji lokalnego obiektu wątku, czy deklaracja i definicja występują w tym samym pliku lub osobnych plików.
 
@@ -232,7 +232,7 @@ W Windows `thread_local` jest funkcjonalnym odpowiednikiem [__declspec(thread)](
 
 ##  <a name="register"></a>  Zarejestruj się
 
-**Visual Studio 2017 w wersji 15.3 lub nowszej** (udostępniono [/STD: c ++ 17](../build/reference/std-specify-language-standard-version.md)): **zarejestrować** — słowo kluczowe nie jest już obsługiwaną klasą magazynu. Słowo kluczowe jest nadal zarezerwowane w standardzie do użytku w przyszłości. 
+**Visual Studio 2017 w wersji 15.3 lub nowszej** (udostępniono [/STD: c ++ 17](../build/reference/std-specify-language-standard-version.md)): **zarejestrować** — słowo kluczowe nie jest już obsługiwaną klasą magazynu. Słowo kluczowe jest nadal zarezerwowane w standardzie do użytku w przyszłości.
 
 ```cpp
    register int val; // warning C5033: 'register' is no longer a supported storage class
@@ -322,4 +322,5 @@ Istnieje kilka punktów, które należy zwrócić uwagę na program:
 - Na koniec statyczne zmienne lokalne, takie jak `I3` zachowują swoje wartości czasu trwania programu, ale są niszczone, gdy program zakończy działanie.
 
 ## <a name="see-also"></a>Zobacz także
- [Deklaracje i definicje](../cpp/declarations-and-definitions-cpp.md)
+
+[Deklaracje i definicje](../cpp/declarations-and-definitions-cpp.md)

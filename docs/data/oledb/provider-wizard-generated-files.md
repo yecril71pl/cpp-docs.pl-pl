@@ -15,23 +15,25 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: ac23f06bf1ae697ecd627d493aa5902219488138
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 26e20e0417e2253158930a8d3d055171fe767001
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33106011"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46108407"
 ---
 # <a name="provider-wizard-generated-files"></a>Pliki dostawcy generowane przez kreatora
-OLE DB Provider Kreator ATL generuje następujące pliki. Poniższe tematy używać krótką nazwę "MyProvider", ale nazwy plików są zależne od wybranej podczas tworzenia dostawcy.  
+
+ATL OLE DB Provider kreatora generuje następujące pliki. Poniższe tematy użyć krótkiej nazwy "MyProvider", ale dokładnie zależą od wybranego typu wprowadzone w czasie tworzenia dostawcy usługi.  
   
 |Nazwa pliku|Opis|  
 |---------------|-----------------|  
-|MyProviderRS.cpp|Zawiera polecenia Pomocnika `Execute` — metoda i dostawcy mapowania kolumn.|  
-|MyProviderDS.h|Implementuje obiektu źródła danych. Ten plik nagłówka zawiera mapę właściwości dla właściwości źródła danych.|  
-|MyProviderRS.h|Implementuje obiekt polecenia i zestawu wierszy. Ten plik nagłówka zawiera mapę właściwości dla zestawu wierszy i polecenie Właściwości.|  
-|MyProviderSess.h|Implementuje obiektu session. Ten plik nagłówka zawiera mapę właściwości dla właściwości sesji.|  
-|MyProvider.rgs|Zawiera obiekty zarejestrowanych generowane przez kreatora dostawcy bazy danych OLE.|  
+|MyProviderRS.cpp|Zawiera polecenia Pomocnika `Execute` metody i mapy kolumny dostawcy.|  
+|MyProviderDS.h|Implementuje obiektu źródła danych. Ten plik nagłówka zawiera map właściwości dla właściwości źródła danych.|  
+|MyProviderRS.h|Implementuje obiektów polecenia i zestawu wierszy. Ten plik nagłówka zawiera map właściwości dla zestawu wierszy i polecenie Właściwości.|  
+|MyProviderSess.h|Implementuje obiektu sesji. Ten plik nagłówka zawiera map właściwości dla właściwości sesji.|  
+|MyProvider.rgs|Zawiera zarejestrowane obiekty generowane przez kreatora dostawcy bazy danych OLE.|  
   
 ## <a name="see-also"></a>Zobacz też  
- [Tworzenie dostawcy OLE DB](../../data/oledb/creating-an-ole-db-provider.md)
+
+[Tworzenie dostawcy OLE DB](../../data/oledb/creating-an-ole-db-provider.md)

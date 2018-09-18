@@ -16,46 +16,47 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 359af4c4d3b1079b2d56f108bff0ee1488ea71f9
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: abc4f85fbc361b37d9325f9d395a1c34e1eeed2e
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33302152"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46106940"
 ---
 # <a name="linker-tools-warning-lnk4222"></a>Ostrzeżenie LNK4222 narzędzi konsolidatora
-do wyeksportowanego symbolu "symbol" nie należy przypisywać liczby porządkowej  
-  
- Następujących symboli nie powinien zostać wyeksportowany według liczby porządkowej:  
-  
--   `DllCanUnloadNow`  
-  
--   `DllGetClassObject`  
-  
--   `DllGetClassFactoryFromClassString`  
-  
--   `DllInstall`  
-  
--   `DllRegisterServer`  
-  
--   `DllRegisterServerEx`  
-  
--   `DllUnregisterServer`  
-  
- Te funkcje zawsze znajdują się według nazwy, za pomocą `GetProcAddress`. Konsolidator ostrzega o tym rodzaj eksportu jest ponieważ mogłaby ona spowodować większy obraz. Może się to zdarzyć, jeśli zakres z liczby porządkowej eksportu jest duży z względnie mało eksportu. Na przykład  
-  
-```  
-EXPORTS  
-   DllGetClassObject   @1  
-   MyOtherAPI      @100  
-```  
-  
- wymagają 100 gniazd tabeli eksportu adres 98 ich po prostu wypełniacza (2 – 99). Z drugiej strony  
-  
-```  
-EXPORTS  
-   DllGetClassObject  
-   MyOtherAPI      @100  
-```  
-  
- wymaga dwóch miejsc. (Należy pamiętać, że można również wyeksportować z [/EXPORT](../../build/reference/export-exports-a-function.md) — opcja konsolidatora.)
+
+do wyeksportowanego symbolu "symbol" nie należy przypisywać liczby porządkowej
+
+Według liczby porządkowej, nie powinien można wyeksportować następujących symboli:
+
+- `DllCanUnloadNow`
+
+- `DllGetClassObject`
+
+- `DllGetClassFactoryFromClassString`
+
+- `DllInstall`
+
+- `DllRegisterServer`
+
+- `DllRegisterServerEx`
+
+- `DllUnregisterServer`
+
+Te funkcje zawsze znajdują się przy użyciu nazwy, za pomocą `GetProcAddress`. Konsolidator ostrzega o tym jest rodzaj eksportu, ponieważ może to spowodować większy obraz. Może się to zdarzyć, jeśli zakres Twojej porządkową eksportu jest duży wywozu stosunkowo niewielką liczbą. Na przykład
+
+```
+EXPORTS
+   DllGetClassObject   @1
+   MyOtherAPI      @100
+```
+
+będzie wymagać 100 miejsca w tabeli eksportu adresu z 98 ich po prostu wypełniacza (2-99). Z drugiej strony
+
+```
+EXPORTS
+   DllGetClassObject
+   MyOtherAPI      @100
+```
+
+wymaga dwóch miejsc. (Należy pamiętać, że można również wyeksportować z [/EXPORT](../../build/reference/export-exports-a-function.md) — opcja konsolidatora.)

@@ -1,5 +1,5 @@
 ---
-title: C3470 błąd kompilatora | Dokumentacja firmy Microsoft
+title: Błąd kompilatora C3470 | Dokumentacja firmy Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,39 +16,41 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: fa84934a4f2b072bcc55f325e69549718897aec4
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 0e9d09e421b7a38a99f70f0ee8fa158127787cae
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33258150"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46107549"
 ---
-# <a name="compiler-error-c3470"></a>C3470 błąd kompilatora
-'type': klasa nie może posiadać zarówno indeksatora (Właściwość indeksowana domyślnie) i operatora]  
-  
- Nie można zdefiniować typu, zarówno indeksatora domyślny, jak i operatora [].  
-  
-## <a name="example"></a>Przykład  
- Poniższy przykład generuje C3470  
-  
-```  
-// C3470.cpp  
-// compile with: /clr  
-using namespace System;  
-  
-ref class R {  
-public:  
-   property int default[int] {  
-      int get(int i) {  
-         return i+1;  
-      }  
-   }  
-  
-   int operator[](String^ s) { return Convert::ToInt32(s); }   // C3470  
-};  
-  
-int main() {  
-   R ^ r = gcnew R;  
-   // return r[9] + r["32"] - 42;  
-}  
+# <a name="compiler-error-c3470"></a>Błąd kompilatora C3470
+
+"type": klasa nie może posiadać zarówno indeksatora (właściwość domyślnie indeksowana) i operatora]
+
+Typ nie można zdefiniować zarówno indeksatora domyślny, jak i operatora [].
+
+## <a name="example"></a>Przykład
+
+Poniższy przykład spowoduje wygenerowanie C3470
+
+```
+// C3470.cpp
+// compile with: /clr
+using namespace System;
+
+ref class R {
+public:
+   property int default[int] {
+      int get(int i) {
+         return i+1;
+      }
+   }
+
+   int operator[](String^ s) { return Convert::ToInt32(s); }   // C3470
+};
+
+int main() {
+   R ^ r = gcnew R;
+   // return r[9] + r["32"] - 42;
+}
 ```

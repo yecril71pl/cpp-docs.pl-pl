@@ -16,32 +16,33 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a3dedaa2bd500b11f06f9cfa98802fdd6ca84534
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 719ff1a87f3f1afc19cf38736c0059c46a8a9bdc
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33298094"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46110877"
 ---
 # <a name="linker-tools-error-lnk1106"></a>Błąd narzędzi konsolidatora LNK1106
-Nieprawidłowy plik lub dysk jest pełny: nie można przejść do lokalizacji  
-  
- Narzędzia nie można odczytać lub zapisać `location` w pliku mapowanych na pamięć.  
-  
-### <a name="to-fix-by-checking-the-following-possible-causes"></a>Aby rozwiązać problem, sprawdzając następujące możliwe przyczyny  
-  
-1.  Dysk jest zapełniony.  
-  
-     Zwolnij miejsce, a następnie połącz się ponownie.  
-  
-2.  Podjęto próbę połączenia za pośrednictwem sieci.  
-  
-     Niektóre sieci nie obsługują w pełni plików mapowanych na pamięć używanych przez konsolidator. Spróbuj łączenie na lokalnym dysku twardym.  
-  
-3.  Nieprawidłowy blok na dysku.  
-  
-     Mimo że dysku sprzętu i systemu operacyjnego należy wykryły takiego błędu, możesz uruchomić program sprawdzania dysku.  
-  
-4.  Za mało miejsca na stercie.  
-  
+
+Nieprawidłowy plik lub dysk jest pełny: nie można przejść do lokalizacji
+
+Narzędzie nie można odczytać lub zapisać `location` w pliku mapowanych na pamięć.
+
+### <a name="to-fix-by-checking-the-following-possible-causes"></a>Aby rozwiązać problem, sprawdzając następujące możliwe przyczyny
+
+1. Dysk jest zapełniony.
+
+     Zwolnij trochę miejsca i połącz ponownie.
+
+1. Podjęto próbę połączenia za pośrednictwem sieci.
+
+     Niektóre sieci nie obsługują w pełni pliki mapowane w pamięci używane przez konsolidator. Spróbuj konsolidacji na dysku lokalnym.
+
+1. Nieprawidłowy blok na dysku.
+
+     Mimo że system operacyjny i sprzęt dysku powinien mieć wykryte takiego komunikatu o błędzie, możesz uruchomić program sprawdzania dysku.
+
+1. Brak miejsca na stosie.
+
      Zobacz [C1060](../../error-messages/compiler-errors-1/fatal-error-c1060.md) Aby uzyskać więcej informacji.

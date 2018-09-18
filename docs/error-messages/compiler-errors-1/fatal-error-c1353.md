@@ -16,14 +16,15 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7fb2d51d9b6c228d0f0fe245cd9788a329a6e11c
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: f414e98315a0fc43f3f4d4d21b93c1d0cd714aaf
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33198849"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46108381"
 ---
 # <a name="fatal-error-c1353"></a>Błąd krytyczny C1353
-Operacja metadanych nie powiodła się: nie zainstalowano środowiska uruchomieniowego lub niezgodność wersji  
-  
- Zainstaluj ponownie Twoje CLR lub Visual Studio.
+
+Operacja metadanych nie powiodła się: środowisko uruchomieniowe nie jest zainstalowane lub niezgodność wersji
+
+Zainstaluj ponownie swoje CLR lub Visual Studio.

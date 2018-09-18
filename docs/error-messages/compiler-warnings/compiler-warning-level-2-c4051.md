@@ -1,5 +1,5 @@
 ---
-title: Kompilatora (poziom 2) ostrzeżenie C4051 | Dokumentacja firmy Microsoft
+title: Kompilator ostrzeżenie (poziom 2) C4051 | Dokumentacja firmy Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,16 +16,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 672de8924f7a04d1849ff79349c8334ed123a418
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 5074ca6f048aec06f98b6081d932ee85868cb9d9
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33296664"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46103415"
 ---
-# <a name="compiler-warning-level-2-c4051"></a>Kompilator C4051 ostrzegawcze (poziom 2)
-Konwersja typu; Możliwa utrata danych  
-  
- Wyrażenie zawiera dwa elementy danych z innych typów podstawowych. Konwertowanie typu powoduje, że element danych do skrócenia.  
-  
- To ostrzeżenie można ustalić, czy rzutowania elementy danych do odpowiedniego typu.
+# <a name="compiler-warning-level-2-c4051"></a>Kompilator ostrzeżenie (poziom 2) C4051
+
+Konwersja typu; Możliwa utrata danych
+
+Wyrażenie zawiera dwa elementy danych z innych typów podstawowych. Konwersja jednego typu powoduje, że element danych do skrócenia.
+
+To ostrzeżenie, mogą zostać rozwiązane, jeśli rzutowanie elementów danych do odpowiedniego typu.

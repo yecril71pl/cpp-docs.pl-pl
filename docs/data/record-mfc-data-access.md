@@ -17,15 +17,17 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: b03bfb65bd10787f41d30c63117fec54e8dc30ea
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: fe348043d991aa04652eae02ba0f2efa393bcf5f
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33103453"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46098137"
 ---
 # <a name="record-mfc-data-access"></a>Rekord (dostęp do danych MFC)
-Rekord jest zbierania danych o pojedynczej jednostki, takich jak konta lub klienta, przechowywane w tabeli (wiersz z tabeli). Rekord składa się z grupy kolumn ciągłych (nazywane również pól), zawierających dane różnych typów. Zestaw rekordów wybrane źródła danych — często nazywane zestaw wyników w warunkach bazy danych — jest nazywany zestawu rekordów w MFC. Aby uzyskać więcej informacji, zobacz [zestawu rekordów (ODBC)](../data/odbc/recordset-odbc.md).  
+
+Rekord jest zbiorem danych o pojedynczej jednostki, takie jak konta usługi lub klienta, przechowywane w tabeli (wiersz tabeli). Rekord zawiera grupę sąsiadujących kolumn (nazywane również polami), które zawierają różne typy danych. Zestaw rekordów wybranych ze źródłem danych — często nazywana zestaw wyników w warunkach bazy danych — nosi nazwę zestawu rekordów w MFC. Aby uzyskać więcej informacji, zobacz [zestawu rekordów (ODBC)](../data/odbc/recordset-odbc.md).  
   
 ## <a name="see-also"></a>Zobacz też  
- [Dostęp do danych programowania (MFC/ATL)](../data/data-access-programming-mfc-atl.md)
+
+[Programowanie (MFC/ATL) dostępu do danych](../data/data-access-programming-mfc-atl.md)

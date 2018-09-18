@@ -35,12 +35,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f0eb34b0ce7b087a457b751604ffd86e61085bf5
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: c89f577168593dcb22570af63801fc05654eb4b3
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43753077"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46100700"
 ---
 # <a name="csnapinpropertypageimpl-class"></a>Klasa CSnapInPropertyPageImpl
 
@@ -125,7 +125,7 @@ CSnapInPropertyPageImpl(LPCTSTR lpszTitle = NULL);
 
 ### <a name="parameters"></a>Parametry
 
-*lpszTitle*  
+*lpszTitle*<br/>
 [in] Tytuł strony właściwości.
 
 ### <a name="remarks"></a>Uwagi
@@ -326,10 +326,10 @@ LRESULT QuerySiblings(WPARAM wParam, LPARAM lParam);
 
 ### <a name="parameters"></a>Parametry
 
-*wParam*  
+*wParam*<br/>
 [in] Określa dodatkowe informacje zależne od wiadomości.
 
-*lParam*  
+*lParam*<br/>
 [in] Określa dodatkowe informacje zależne od wiadomości.
 
 ### <a name="return-value"></a>Wartość zwracana
@@ -350,7 +350,7 @@ void SetModified(BOOL bChanged = TRUE);
 
 ### <a name="parameters"></a>Parametry
 
-*bChanged*  
+*bChanged*<br/>
 [in] Wartość TRUE, aby wskazać, że ustawienia strony właściwości zostały zmodyfikowane od czasu ostatniego one zostały zastosowane; FALSE, aby wskazać, że ustawienia strony właściwości zostały zastosowane lub mają być ignorowane.
 
 ### <a name="remarks"></a>Uwagi

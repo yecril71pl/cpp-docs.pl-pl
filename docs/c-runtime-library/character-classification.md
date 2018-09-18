@@ -17,20 +17,20 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 262479a4538843cef2af61be0ec56347c7afc75f
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: f4c194432c3d7442677a78046ac893e5e3e2a7ee
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43222451"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46101348"
 ---
 # <a name="character-classification"></a>Klasyfikacja znaków
 
 Każda z tych procedur testuje określony znak Jednobajtowy, znak dwubajtowy lub znak wielobajtowy dla spełnienia warunku. (Zgodnie z definicją, zestaw znaków ASCII od 0 do 127 jest podzestawem wszystkich zestawów znaków wielobajtowych. Na przykład Japonsko-katakana zawiera znaki ASCII oraz jak znaki spoza ASCII.)
 
- Warunki testowe są zależne od ustawienia **LC_CTYPE** ustawienia kategorii ustawień regionalnych; zobacz [setlocale](../c-runtime-library/reference/setlocale-wsetlocale.md) Aby uzyskać więcej informacji. Wersje tych funkcji, bez **_l** sufiks używają bieżących ustawień regionalnych dla zachowania zależnego od ustawień regionalnych; wersje **_l** sufiksem są identyczne, z tą różnicą, że używają parametru ustawień regionalnych w zamian przekazanych.
+Warunki testowe są zależne od ustawienia **LC_CTYPE** ustawienia kategorii ustawień regionalnych; zobacz [setlocale](../c-runtime-library/reference/setlocale-wsetlocale.md) Aby uzyskać więcej informacji. Wersje tych funkcji, bez **_l** sufiks używają bieżących ustawień regionalnych dla zachowania zależnego od ustawień regionalnych; wersje **_l** sufiksem są identyczne, z tą różnicą, że używają parametru ustawień regionalnych w zamian przekazanych.
 
- Zazwyczaj procedury te działają szybciej niż testy, można napisać i powinny być preferowane. Na przykład, poniższy kod wykonuje wolniej niż wywołanie `isalpha(c)`:
+Zazwyczaj procedury te działają szybciej niż testy, można napisać i powinny być preferowane. Na przykład, poniższy kod wykonuje wolniej niż wywołanie `isalpha(c)`:
 
 ```C
 if ((c >= 'A') && (c <= 'Z')) || ((c >= 'a') && (c <= 'z'))

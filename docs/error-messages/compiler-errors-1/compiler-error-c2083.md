@@ -1,5 +1,5 @@
 ---
-title: C2083 błąd kompilatora | Dokumentacja firmy Microsoft
+title: Błąd kompilatora C2083 | Dokumentacja firmy Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,14 +16,15 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 39bc842e62254db7e524071970cb8f8c65e4a321
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: adf2787f8aea3611abd9eeac054df6bb054d802a
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33166523"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46103285"
 ---
-# <a name="compiler-error-c2083"></a>C2083 błąd kompilatora
-Porównanie struktury/Unii jest niedozwolony  
-  
- Struktura lub związek jest porównywany bezpośrednio z innym typem zdefiniowane przez użytkownika. Nie jest to dozwolone, chyba że został zdefiniowany operator porównania lub konwersji do typu skalarne.
+# <a name="compiler-error-c2083"></a>Błąd kompilatora C2083
+
+niedozwolone porównanie struct/union
+
+Struktury lub Unii jest porównywana bezpośrednio z innego typu zdefiniowanego przez użytkownika. Nie jest to dozwolone, jeśli nie zdefiniowano operator porównania lub istnieje konwersja na typ skalarny.

@@ -19,14 +19,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 1e897f5d0c234141cd0c690de96557e8c81a0d7b
-ms.sourcegitcommit: 889a75be1232817150be1e0e8d4d7f48f5993af2
+ms.openlocfilehash: f48413ced50a2b7f086d67f910a7a8135129a2dd
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/30/2018
-ms.locfileid: "39337764"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46111007"
 ---
 # <a name="data-access-programming-mfcatl"></a>Programowanie (MFC/ATL) dostępu do danych
+
 W ciągu lat Visual C++ udostępnia kilka metod do pracy z bazami danych. W 2011 r. Firma Microsoft ogłosiła, że jest ona wyrównywanie na ODBC jako preferowaną technologię do uzyskiwania dostępu do produktów SQL Server z kodu natywnego. ODBC jest standardem branżowym, a za jej pomocą uzyskasz uzyskania maksymalnej przenośności kodu na wielu platformach i źródeł danych. Większość produktów bazy danych SQL i wielu produktów NoSQL obsługują ODBC. Można użyć ODBC bezpośrednio, wywołując niskiego poziomu interfejsy API ODBC lub można użyć klasy otoki MFC ODBC lub innej biblioteki otoki języka C++. 
 
 OLE DB to interfejs API niskiego poziomu, wysokiej wydajności na podstawie specyfikacji modelu COM i jest obsługiwane tylko dla Windows. Użyj OLE DB, jeśli program uzyskuje dostęp do [serwery połączone](/sql/relational-databases/linked-servers/linked-servers-database-engine). ATL zawiera szablony OLE DB, które ułatwiają tworzenie niestandardowych dostawców OLE DB i konsumentów. Najbardziej aktualną wersję OLE DB dostarczane w macierzystym 11 klienta SQL.  
@@ -37,9 +38,12 @@ Składnik SQL Native Client (SNAC), które pakiety sterowników OLE DB i ODBC w 
 
 Jeśli używasz języka C + +/ CLI, będzie można kontynuować używanie ADO.NET zawsze. Aby uzyskać więcej informacji, zobacz [ADO.NET za pomocą dostępu do danych (C + +/ CLI)](../dotnet/data-access-using-adonet-cpp-cli.md), i [uzyskiwanie dostępu do danych w programie Visual Studio](/visualstudio/data-tools/accessing-data-in-visual-studio).  
   
--   Oprócz klas otoki ODBC MFC udostępnia klasy otoki dostępu obiekty DAO (Data) do łączenia się z baz danych programu Access.  Jednak DAO jest przestarzała. Każdy kod, na podstawie CDaoDatabase lub CDaoRecordset powinny zostać uaktualnione. 
+- Oprócz klas otoki ODBC MFC udostępnia klasy otoki dostępu obiekty DAO (Data) do łączenia się z baz danych programu Access.  Jednak DAO jest przestarzała. Każdy kod, na podstawie CDaoDatabase lub CDaoRecordset powinny zostać uaktualnione. 
 
 Aby uzyskać więcej informacji o historii technologii dostępu do danych w programie Microsoft Windows, zobacz [Microsoft Data Access Components (Wikipedia)](https://en.wikipedia.org/wiki/Microsoft_Data_Access_Components).  
 
 ## <a name="see-also"></a>Zobacz też  
- [Dostęp do danych](data-access-in-cpp.md) [Microsoft Open Database Connectivity (ODBC)](https://docs.microsoft.com/sql/odbc/microsoft-open-database-connectivity-odbc) [mapy drogowej technologii dostępu do danych](https://msdn.microsoft.com/library/ms810810.aspx)
+
+[Dostęp do danych](data-access-in-cpp.md)<br/>
+[Microsoft Open Database Connectivity (ODBC)](https://docs.microsoft.com/sql/odbc/microsoft-open-database-connectivity-odbc)<br/>
+[Mapy drogowej technologii dostępu do danych](https://msdn.microsoft.com/library/ms810810.aspx)

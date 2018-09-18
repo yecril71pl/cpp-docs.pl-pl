@@ -17,12 +17,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 139a20eb3db99ce87b2de51aa1ef7602f7b5a36a
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: d7ac74d1b310f4db7bfc4a558db5b89df5d8df5a
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43758579"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46109850"
 ---
 # <a name="atl-project-wizard"></a>Kreator projektu ATL
 
@@ -58,10 +58,10 @@ Można określić właściwości projektu (na przykład [czy statycznie połącz
 
 ## <a name="see-also"></a>Zobacz też
 
-[Tworzenie i zarządzanie projektami Visual C++](../../ide/creating-and-managing-visual-cpp-projects.md)   
-[Typy projektów Visual C++](../../ide/visual-cpp-project-types.md)   
-[Tworzenie projektów pulpitu za pomocą kreatorów aplikacji](../../ide/creating-desktop-projects-by-using-application-wizards.md)   
-[Podstawowe informacje na temat obiektów COM ATL](../../atl/fundamentals-of-atl-com-objects.md)   
-[Programowanie za pomocą kodu ATL i C Run-Time](../../atl/programming-with-atl-and-c-run-time-code.md)   
+[Tworzenie i zarządzanie projektami Visual C++](../../ide/creating-and-managing-visual-cpp-projects.md)<br/>
+[Typy projektów Visual C++](../../ide/visual-cpp-project-types.md)<br/>
+[Tworzenie projektów wykorzystujących interfejs Pulpitu za pomocą kreatorów aplikacji](../../ide/creating-desktop-projects-by-using-application-wizards.md)<br/>
+[Podstawowe informacje na temat obiektów COM ATL](../../atl/fundamentals-of-atl-com-objects.md)<br/>
+[Programowanie za pomocą kodu ATL i C Run-Time](../../atl/programming-with-atl-and-c-run-time-code.md)<br/>
 [Samouczek](../../atl/active-template-library-atl-tutorial.md)
 

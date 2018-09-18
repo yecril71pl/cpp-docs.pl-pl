@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 985289041f1461ef9486a55fedd9816c1ebb3f35
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 5650707f9c08c144d2f5832744117dfdd06acc08
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43752566"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46106912"
 ---
 # <a name="window-class-macros"></a>Makra klasy okna
 
@@ -29,8 +29,8 @@ Te makra definiują narzędzia klasy okna.
 
 |||
 |-|-|
-|[DECLARE_WND_CLASS](#declare_wnd_class)|Pozwala określić nazwę nowej klasy okna.| 
-|[DECLARE_WND_CLASS2](#declare_wnd_class2)|(Visual Studio 2017) Pozwala określić nazwę nowej klasy okna i otaczającej klasy procedurę okna, którego będzie używać nowej klasy.| 
+|[DECLARE_WND_CLASS](#declare_wnd_class)|Pozwala określić nazwę nowej klasy okna.|
+|[DECLARE_WND_CLASS2](#declare_wnd_class2)|(Visual Studio 2017) Pozwala określić nazwę nowej klasy okna i otaczającej klasy procedurę okna, którego będzie używać nowej klasy.|
 |[DECLARE_WND_SUPERCLASS](#declare_wnd_superclass)|Pozwala określić nazwę istniejącej klasy okna, na którym będzie opierać się nową klasę okna.|
 |[DECLARE_WND_CLASS_EX](#declare_wnd_class_ex)|Umożliwia określanie parametrów klasy.|  
 
@@ -48,7 +48,7 @@ DECLARE_WND_CLASS( WndClassName )
 
 ### <a name="parameters"></a>Parametry
 
-*WndClassName*  
+*WndClassName*<br/>
 [in] Nazwa nowej klasy okna. Jeśli ma wartość NULL, ATL wygeneruje nazwę klasy okna.
 
 ### <a name="remarks"></a>Uwagi
@@ -83,10 +83,10 @@ DECLARE_WND_CLASS2( WndClassName, EnclosingClass )
 
 ### <a name="parameters"></a>Parametry
 
-*WndClassName*  
+*WndClassName*<br/>
 [in] Nazwa nowej klasy okna. Jeśli ma wartość NULL, ATL wygeneruje nazwę klasy okna. 
 
-*EnclosingClass*  
+*EnclosingClass*<br/>
 [in] Nazwa klasy okna, który zawiera nową klasę okna. Nie może mieć wartości NULL.
 
 ### <a name="remarks"></a>Uwagi
@@ -104,10 +104,10 @@ DECLARE_WND_SUPERCLASS( WndClassName, OrigWndClassName )
 
 ### <a name="parameters"></a>Parametry
 
-*WndClassName*  
+*WndClassName*<br/>
 [in] Nazwa okna klasy tego superklasie będzie *OrigWndClassName*. Jeśli ma wartość NULL, ATL wygeneruje nazwę klasy okna.
 
-*OrigWndClassName*  
+*OrigWndClassName*<br/>
 [in] Nazwa istniejącej klasy okna.
 
 ### <a name="remarks"></a>Uwagi
@@ -134,13 +134,13 @@ DECLARE_WND_CLASS_EX( WndClassName, style, bkgnd )
 
 ### <a name="parameters"></a>Parametry
 
-*WndClassName*  
+*WndClassName*<br/>
 [in] Nazwa nowej klasy okna. Jeśli ma wartość NULL, ATL wygeneruje nazwę klasy okna.
 
-*Styl*  
+*Styl*<br/>
 [in] Styl okna.
 
-*tło /*  
+*tło /*<br/>
 [in] Kolor tła okna.
 
 ### <a name="remarks"></a>Uwagi

@@ -17,12 +17,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4a77ed656d39888e85e607ee4fdd96b384d0d250
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: cf2b3d047a6618326e69dcb51f143f77fc10c8a6
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43761459"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46099541"
 ---
 # <a name="making-an-atl-object-noncreatable"></a>Tworzenie noncreatable — obiekt ATL
 
@@ -46,10 +46,10 @@ Atrybuty obiektu COM opartych na ATL można zmienić tak, aby klient nie można 
 
 ## <a name="see-also"></a>Zobacz też
 
-[Kreator projektu ATL](../../atl/reference/atl-project-wizard.md)   
-[Typy projektów Visual C++](../../ide/visual-cpp-project-types.md)   
-[Tworzenie projektów pulpitu za pomocą kreatorów aplikacji](../../ide/creating-desktop-projects-by-using-application-wizards.md)   
-[Programowanie za pomocą kodu ATL i C Run-Time](../../atl/programming-with-atl-and-c-run-time-code.md)   
-[Podstawowe informacje na temat obiektów COM ATL](../../atl/fundamentals-of-atl-com-objects.md)   
+[Kreator projektu ATL](../../atl/reference/atl-project-wizard.md)<br/>
+[Typy projektów Visual C++](../../ide/visual-cpp-project-types.md)<br/>
+[Tworzenie projektów wykorzystujących interfejs Pulpitu za pomocą kreatorów aplikacji](../../ide/creating-desktop-projects-by-using-application-wizards.md)<br/>
+[Programowanie za pomocą kodu ATL i C Run-Time](../../atl/programming-with-atl-and-c-run-time-code.md)<br/>
+[Podstawowe informacje na temat obiektów COM ATL](../../atl/fundamentals-of-atl-com-objects.md)<br/>
 [Domyślne konfiguracje projektu ATL](../../atl/reference/default-atl-project-configurations.md)
 

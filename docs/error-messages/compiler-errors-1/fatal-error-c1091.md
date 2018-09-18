@@ -16,16 +16,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c48c9dca72bddc844e94fb7978cb6414aa8fecf5
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: e93c2e6c26f8704e700465fb706867129847a460
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33226224"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46104256"
 ---
 # <a name="fatal-error-c1091"></a>Błąd krytyczny C1091
-ograniczenie kompilatora: ciąg przekracza "length" bajtów długości  
-  
- Stałą typu string przekracza bieżący limit długości ciągów.  
-  
- Można podzielić ciąg statycznych zmiennych dwie (lub więcej) i używać [strcpy_s —](../../c-runtime-library/reference/strcpy-s-wcscpy-s-mbscpy-s.md) sprzęgać wynik w ramach deklaracji lub w czasie wykonywania.
+
+ograniczenie kompilatora: ciąg przekracza "length" bajtów długości
+
+Stała typu string przekracza bieżący limit długości ciągów.
+
+Warto podzielić ciąg statyczne zmienne (co najmniej dwa) i używać [strcpy_s](../../c-runtime-library/reference/strcpy-s-wcscpy-s-mbscpy-s.md) do dołączenia do wyniku jako część deklaracji lub w czasie wykonywania.

@@ -16,14 +16,15 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e31943ae253a332576fba73102db410b103a0096
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 36b31590d94d809c16ed64d16071db0919f60238
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33302623"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46098943"
 ---
 # <a name="linker-tools-error-lnk1188"></a>Błąd narzędzi konsolidatora LNK1188
-BADFIXUPSECTION:: nieprawidłowy element docelowy naprawy "symbol"; możliwe długość sekcji wynosi zero  
-  
- Podczas łącze VxD element docelowy relokacji nie miał sekcji. Z LINK386 (starsza wersja), rekord grupy OMF (generowane przez dyrektywę grupy MASM) mogą zostać wykorzystane do łączenia długość sekcji wynosi 0 z innej sekcji o niezerowej długości. COFF format nie obsługuje dyrektywy grupy i sekcji o zerowej długości. Ten błąd może wystąpić, gdy łącze powoduje automatyczną konwersję tego typu obiektów OMF do formatu COFF.
+
+BADFIXUPSECTION:: nieprawidłowy element docelowy naprawy "symbol"; możliwa długość sekcji wynosi zero
+
+Podczas łącze VxD celem przeniesienie nie ma sekcji. Za pomocą LINK386 (starsza wersja), rekord grupy OMF (generowany przez dyrektywę grupy MASM) były używane do łączenia długość sekcji wynosi 0 z innej sekcji o niezerowej długości. COFF format nie obsługuje dyrektywy grupy i sekcje o zerowej długości. Ten błąd może wystąpić, gdy łącze automatycznie konwertuje tego typu obiektów OMF do formatu COFF.

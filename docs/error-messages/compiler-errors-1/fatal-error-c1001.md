@@ -16,21 +16,21 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f605dd7e4892c4a8b57e544ed857257be72f020d
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 6363694dbd7f1a7ebfcd58cad030dfecf7f38397
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33199031"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46098202"
 ---
 # <a name="fatal-error-c1001"></a>Błąd krytyczny C1001
 
-> WEWNĘTRZNY ERROR(compiler file *file*, line *number*) KOMPILATORA  
-  
-Kompilator nie może wygenerować prawidłowego kodu dla konstrukcji, często z powodu kombinacji określonego wyrażenia i opcję optymalizacji lub wystąpił problem podczas analizy. Jeśli plik kompilatora wymienione ma czasu utc, czy C2 segment ścieżki, prawdopodobnie jest błędem optymalizacji. Jeśli plik ma cxxfe lub c1xx segment ścieżki lub jest msc1.cpp, prawdopodobnie jest błąd analizatora. Jeśli plik o nazwie cl.exe, nie ma żadnych innych informacji dostępne.  
+> WEWNĘTRZNY ERROR(compiler file *file*, line *number*) KOMPILATORA
 
-Można często rozwiązać problem optymalizacji przez usunięcie jednego lub więcej opcji optymalizacji. Aby ustalić, która opcja jest uszkodzone, Usuń opcji w czasie i skompilować ją ponownie, dopóki komunikat o błędzie zniknie. Dostępne są następujące opcje, które są najczęściej odpowiedzialny [/Og (optymalizacje globalne)](../../build/reference/og-global-optimizations.md) i [/Oi (Generuj funkcje wewnętrzne)](../../build/reference/oi-generate-intrinsic-functions.md). Po określeniu opcji optymalizacji odpowiada, można ją wyłączyć, wokół funkcja, której wystąpił błąd przy użyciu [zoptymalizować](../../preprocessor/optimize.md) pragma i Kontynuuj użyć opcji dla całego modułu. Aby uzyskać więcej informacji na temat opcji optymalizacji, zobacz [najlepsze praktyki optymalizacji](../../build/reference/optimization-best-practices.md).
+Kompilator nie może generować poprawny kod dla konstrukcję często z powodu kombinacji poszczególnych wyrażeń i opcji optymalizacji lub wystąpił problem podczas analizowania. Jeśli plik kompilatora wymienione ma czasu utc, czy C2 segment ścieżki, prawdopodobnie jest błędem optymalizacji. Jeśli plik ma cxxfe lub c1xx segmentu ścieżki lub jest msc1.cpp, to prawdopodobnie Błąd analizatora. Jeśli plik o nazwie jest cl.exe, nie ma żadnych innych informacji dostępna.
 
-Jeśli optymalizacje nie są odpowiedzialne za błąd, spróbuj ponowne zapisywanie wiersza, w którym zgłaszany jest błąd lub kilku wierszy kodu otaczającego tego wiersza. Aby wyświetlić kod sposób kompilator widzi ona po przetwarzania wstępnego, można użyć [/P (Przetwarzaj wstępnie do pliku)](../../build/reference/p-preprocess-to-a-file.md) opcji.
+Można często rozwiązać problem optymalizacji, usuwając jeden lub więcej opcji optymalizacji. Aby określić, która opcja jest na pozycji błędu, Usuń opcji w czasie i skompiluj ponownie, dopóki zniknąć, komunikat o błędzie. Opcje najczęściej odpowiada [/Og (optymalizacje globalne)](../../build/reference/og-global-optimizations.md) i [/Oi (Generuj funkcje wewnętrzne)](../../build/reference/oi-generate-intrinsic-functions.md). Po określeniu opcji optymalizacji odpowiada, możesz go wyłączyć, wokół funkcji, w którym występuje błąd przy użyciu [zoptymalizować](../../preprocessor/optimize.md) pragma i użyj opcji w pozostałej części modułu w dalszym ciągu. Aby uzyskać więcej informacji o opcjach optymalizacji, zobacz [najlepsze rozwiązania dotyczące optymalizacji](../../build/reference/optimization-best-practices.md).
 
-Aby uzyskać więcej informacji na temat izolowania źródła błędu oraz Zgłoś błąd wewnętrzny kompilatora do firmy Microsoft, zobacz [jak zgłosić Problem z zestawu narzędzi programu Visual C++](../../how-to-report-a-problem-with-the-visual-cpp-toolset.md).
+Jeśli optymalizacji nie są odpowiedzialne za błąd, spróbuj ponowne napisanie wiersza, w której zgłaszany jest błąd lub kilka wierszy kodu wokół tego wiersza. Aby wyświetlić kod w sposób kompilator widzi on po przetwarzania wstępnego, można użyć [/P (Przetwarzaj wstępnie do pliku)](../../build/reference/p-preprocess-to-a-file.md) opcji.
+
+Aby uzyskać więcej informacji na temat izolowania źródła błędu oraz zgłosić błąd wewnętrzny kompilatora do firmy Microsoft, zobacz [jak zgłosić Problem za pomocą zestawu narzędzi Visual C++](../../how-to-report-a-problem-with-the-visual-cpp-toolset.md).

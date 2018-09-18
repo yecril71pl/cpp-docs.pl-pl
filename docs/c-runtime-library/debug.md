@@ -18,17 +18,19 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: aa0047193b3c16c93c23bab648735c2cc643bf20
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 50ab066219832258965ec96477a2ef268e127c53
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32387547"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46099656"
 ---
 # <a name="debug"></a>_DEBUG
-Definiuje kompilator `_DEBUG` po określeniu opcji /MTd lub/mdd. Te opcje Określ wersje biblioteki wykonawczej języka C do debugowania.  
-  
- Aby uzyskać więcej informacji, zobacz [techniki testowania CRT](/visualstudio/debugger/crt-debugging-techniques).  
-  
-## <a name="see-also"></a>Zobacz też  
- [Flagi kontrolne](../c-runtime-library/control-flags.md)
+
+Definiuje kompilator `_DEBUG` po określeniu opcji/mtd lub/mdd. Te opcje określają wersje do debugowania biblioteki wykonawczej C.
+
+Aby uzyskać więcej informacji, zobacz [techniki testowania CRT](/visualstudio/debugger/crt-debugging-techniques).
+
+## <a name="see-also"></a>Zobacz też
+
+[Flagi kontrolne](../c-runtime-library/control-flags.md)

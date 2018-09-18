@@ -1,5 +1,5 @@
 ---
-title: C3224 błąd kompilatora | Dokumentacja firmy Microsoft
+title: Błąd kompilatora C3224 | Dokumentacja firmy Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,35 +16,36 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b64ed3eb8c9954a28aba9168d914e1651d95bbda
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 7eb7c5d9bc912eafb2c7772114448a0567d90cad
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33247087"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46105040"
 ---
-# <a name="compiler-error-c3224"></a>C3224 błąd kompilatora
-'type': Brak przeciążonej klasy generycznej nie przyjmuje argumentów typu ogólnego "number"  
-  
- Kompilator nie można odnaleźć odpowiedniego przeciążenia.  
-  
- Poniższy przykład generuje C3224:  
-  
-```  
-// C3224.cs  
-// compile with: /target:library  
-public class C<T> {}  
-public class C<T,U> {}  
-```  
-  
- a następnie  
-  
-```  
-// C3224b.cpp  
-// compile with: /clr  
-#using "C3224.dll"  
-int main() {  
-   C<int,int,int>^ c = gcnew C<int,int,int>();   // C3224  
-   C<int,int>^ c2 = gcnew C<int,int>();   // OK  
-}  
+# <a name="compiler-error-c3224"></a>Błąd kompilatora C3224
+
+"type": Brak przeciążonej klasy generycznej przyjmuje argumenty typu ogólnego "liczba"
+
+Kompilator nie można odnaleźć odpowiedniej przeciążenia.
+
+Poniższy przykład spowoduje wygenerowanie C3224:
+
+```
+// C3224.cs
+// compile with: /target:library
+public class C<T> {}
+public class C<T,U> {}
+```
+
+Następnie wyszukaj maszynę
+
+```
+// C3224b.cpp
+// compile with: /clr
+#using "C3224.dll"
+int main() {
+   C<int,int,int>^ c = gcnew C<int,int,int>();   // C3224
+   C<int,int>^ c2 = gcnew C<int,int>();   // OK
+}
 ```

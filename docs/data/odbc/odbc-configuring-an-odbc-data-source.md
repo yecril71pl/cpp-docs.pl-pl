@@ -17,23 +17,25 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 93b2158005b7cd31fc6a3710812d54a3968ee014
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: db65e27feee5ac8001cb25592e695831c431742b
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33089155"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46104521"
 ---
 # <a name="odbc-configuring-an-odbc-data-source"></a>ODBC: konfigurowanie źródła danych ODBC
-Aby użyć [źródła danych](../../data/odbc/data-source-odbc.md) z aplikacją korzystasz, należy użyć konta administratora ODBC ją skonfigurować. ODBC Administrator przechowuje informacje o dostępnych źródeł danych i parametry połączenia w rejestrze systemu Windows. Administrator ODBC używana do dodawania, modyfikowania i usuwania źródeł danych w **źródeł danych** okno dialogowe i do dodawania i usuwania sterowników ODBC.  
+
+Aby użyć [źródła danych](../../data/odbc/data-source-odbc.md) z aplikacją, zostały opracowane, należy użyć Administratora ODBC do jego konfiguracji. ODBC Administrator śledzi informacje o dostępnych źródeł danych i parametry połączenia w rejestrze systemu Windows. Użyj Administratora ODBC i dodawanie, modyfikowanie i usuwanie źródeł danych w **źródeł danych** okno dialogowe i w celu dodawania i usuwania sterowników ODBC.  
   
 > [!NOTE]
->  Te informacje dotyczą używania klas MFC obiekt DAO (Data Access) dla dostępu ODBC i używania klas MFC ODBC.  
+>  Te informacje dotyczą użycia klas MFC obiekt DAO (Data Access) uzyskać dostęp do ODBC i przy użyciu klas MFC ODBC.  
   
- ODBC Administrator jest automatycznie instalowany z obsługi bazy danych biblioteki Microsoft Foundation Classes (MFC). Aby uzyskać więcej informacji na temat programu ODBC Administrator, zobacz [ODBC Administrator](../../data/odbc/odbc-administrator.md) i system ODBC API Pomoc online.  
+ODBC Administrator jest automatycznie instalowany z obsługi bazy danych biblioteki Microsoft Foundation Classes (MFC). Aby uzyskać więcej informacji na temat programu Administratora ODBC, zobacz [Administratora ODBC](../../data/odbc/odbc-administrator.md) i system ODBC API Pomoc online.  
   
- Aby uzyskać informacje dotyczące pisania aplikacji baz danych MFC ODBC do instalacji i administrowania programy[48 Uwaga techniczna](../../mfc/tn048-writing-odbc-setup-and-administration-programs.md).  
+Aby uzyskać informacje o sposobie pisania programów ODBC do instalacji i administrowania dla aplikacji baz danych MFC[techniczne 48 Uwaga](../../mfc/tn048-writing-odbc-setup-and-administration-programs.md).  
   
 ## <a name="see-also"></a>Zobacz też  
- [Podstawy ODBC](../../data/odbc/odbc-basics.md)   
- [ODBC: bezpośrednie wywoływanie funkcji ODBC API](../../data/odbc/odbc-calling-odbc-api-functions-directly.md)
+
+[Podstawy ODBC](../../data/odbc/odbc-basics.md)<br/>
+[ODBC: bezpośrednie wywoływanie funkcji ODBC API](../../data/odbc/odbc-calling-odbc-api-functions-directly.md)

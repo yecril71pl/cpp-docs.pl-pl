@@ -1,5 +1,5 @@
 ---
-title: 'CONCURRENCY::Graphics:: Direct3D — przestrzeń nazw funkcji | Dokumentacja firmy Microsoft'
+title: 'CONCURRENCY::Graphics:: Direct3D, funkcje przestrzeni nazw | Dokumentacja firmy Microsoft'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.topic: reference
@@ -14,14 +14,14 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2ed95ed8df8a42dc62684c71a3005c2f33fecd18
-ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
+ms.openlocfilehash: 78fbf9c260b1a53bb16628846033ef15ab04684f
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33686337"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46110188"
 ---
-# <a name="concurrencygraphicsdirect3d-namespace-functions"></a>CONCURRENCY::Graphics:: Direct3D — przestrzeń nazw funkcji
+# <a name="concurrencygraphicsdirect3d-namespace-functions"></a>CONCURRENCY::Graphics:: Direct3D, funkcje przestrzeni nazw
 ||||  
 |-|-|-|  
 |[get_sampler](#get_sampler)|[get_texture](#get_texture)|[make_sampler](#make_sampler)|  
@@ -29,7 +29,7 @@ ms.locfileid: "33686337"
 
  
 ##  <a name="get_sampler"></a>  get_sampler —  
- Get interfejsu D3D przykłady stanu na danym akceleratora wyświetlić reprezentująca przykłady określonego obiektu.  
+ Pobierz interfejsu stanu D3D próbnika w akceleratorze danego widoku, który reprezentuje określony obiekt próbnika.  
   
 ```  
 IUnknown* get_sampler(
@@ -38,17 +38,17 @@ IUnknown* get_sampler(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `_Av`  
- Widok akceleratora D3D, na którym ma być tworzony stanu programu D3D przykłady.  
+*_Av*<br/>
+Widok akceleratora D3D, na którym ma zostać utworzony stanowi próbnika D3D.  
   
- `_Sampler`  
- Obiekt przykłady, dla której utworzona jest podstawowy interfejs stanu przykłady D3D.  
+*_Sampler*<br/>
+Obiekt próbnik, dla którego utworzono podstawowy interfejs stanu próbnika D3D.  
   
 ### <a name="return-value"></a>Wartość zwracana  
- Wskaźnik interfejsu IUnknown odpowiadającego stanu programu D3D przykłady, reprezentujący danego przykłady.  
+ Wskaźnik interfejsu IUnknown odpowiadający stanowi próbnika D3D, który reprezentuje dany próbnik.  
   
-##  <a name="get_texture"></a>  get_texture —  
- Pobiera bazowy określony interfejs tekstury Direct3D [tekstury](texture-class.md) obiektu.  
+##  <a name="get_texture"></a>  get_texture  
+ Pobiera interfejs tekstur Direct3D podstaw określonego [tekstury](texture-class.md) obiektu.  
   
 ```  
 template<
@@ -78,33 +78,33 @@ _Ret_ IUnknown *get_texture(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `value_type`  
- Typ elementu tekstury.  
+*value_type*<br/>
+Typ elementu tekstury.  
   
- `_Rank`  
- Pozycja tekstury.  
+*_Rank*<br/>
+Ranga tekstury.  
   
- `_Texture`  
- Tekstury lub widok tekstury powiązany z accelerator_view, dla której jest zwracana powiązanego interfejsu tekstury Direct3D.  
+*_Texture*<br/>
+Tekstury lub widoku tekstury skojarzony z accelerator_view, dla którego zwracany jest interfejs tekstury Direct3D.  
   
 ### <a name="return-value"></a>Wartość zwracana  
- Wskaźnik interfejsu IUnknown odpowiadający tekstury Direct3D bazowy tekstury.  
+ Wskaźnik interfejsu IUnknown odpowiadający teksturze Direct3D podstawowej tekstury.  
   
 ##  <a name="make_sampler"></a>  make_sampler —  
- Utwórz próbnika ze wskaźnikiem D3D przykłady stanu interfejsu.  
+ Utwórz przykład ze wskaźnika interfejsu stanu D3D próbnika.  
   
 ```  
 sampler make_sampler(_In_ IUnknown* _D3D_sampler) restrict(amp);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `_D3D_sampler`  
- Wskaźnik interfejsu IUnknown stanu przykłady D3D na tworzenie, przykładów z.  
+*_D3D_sampler*<br/>
+Nieznany wskaźnik interfejsu przykładu stanu D3D do tworzenia przykładu.  
   
 ### <a name="return-value"></a>Wartość zwracana  
- Przykłady reprezentuje podany stan przykłady D3D.  
+ Próbnik reprezentuje zapewniony stan próbnika D3D.  
   
-##  <a name="make_texture"></a>  make_texture —  
+##  <a name="make_texture"></a>  make_texture  
  Tworzy [tekstury](texture-class.md) obiektu przy użyciu określonych parametrów.  
   
 ```  
@@ -119,26 +119,26 @@ texture<value_type, _Rank> make_texture(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `value_type`  
- Typ elementów w tekstury.  
+*value_type*<br/>
+Typ elementów tekstury.  
   
- `_Rank`  
- Pozycja tekstury.  
+*_Rank*<br/>
+Ranga tekstury.  
   
- `_Av`  
- Widok akceleratora D3D, na którym ma być tworzony tekstury.  
+*_Av*<br/>
+Widok akceleratora D3D, na którym ma zostać utworzony tekstury.  
   
- `_D3D_texture`  
- Wskaźnik interfejsu IUnknown tekstury D3D utworzyć tekstury z.  
+*_D3D_texture*<br/>
+Wskaźnik interfejsu IUnknown tekstury D3D, aby utworzyć tekstury z.  
   
- `_View_format`  
- Format DXGI, który ma być używany dla widoków utworzone na podstawie tego tekstury. Przekaż DXGI_FORMAT_UNKNOWN (ustawienie domyślne) wyprowadzenia format z podstawowym formacie _D3D_texture i value_type tego szablonu. Podany format musi być zgodny z formatem podstawowej _D3D_texture.  
+*_View_format*<br/>
+Format DXGI do wykorzystania przez widoki utworzone z tej tekstury. Przekaż DXGI_FORMAT_UNKNOWN (ustawienie domyślne), aby utworzyć format z formatu podstawowego obiektów _D3D_texture i value_type tego szablonu. Podany format musi być zgodny z podstawowym formatem _D3D_texture.  
   
 ### <a name="return-value"></a>Wartość zwracana  
- Teksturę za pomocą podanego tekstury D3D.  
+ Tekstura używa dostarczonej tekstury D3D.  
   
 ##  <a name="msad4"></a>  msad4 —  
- Porównuje odwołania 4-bajtowych wartości i wartości 8-bajtowych źródłowej i akumuluje wektor 4 sum. Każda suma odpowiada maskowanego sumę bezwzględną różnice z różnych bajtów Wyrównanie wartości odwołania i wartość źródła.  
+ Porównuje 4-bajtową wartość odniesienia i 8-bajtową wartość źródłową i gromadzi wektor 4 sum. Każda suma odpowiada zamaskowanej sumie bezwzględnych różnic różnych dopasowań bajtów między wartością odniesienia i wartością źródłową.  
   
 ```  
 inline uint4 msad4(
@@ -148,22 +148,22 @@ inline uint4 msad4(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `_Reference`  
- Tablica odwołanie 4 bajty w jedną wartość uint  
+*_Referencyjnych*<br/>
+Tablica odwołań o rozmiarze 4 bajtów w jednej wartości uint  
   
- `_Source`  
- Źródłowa tablica 8 bajtów w przypadku wektora z dwóch wartości uint.  
+*_Source*<br/>
+Tablica źródłowa o rozmiarze 8 bajtów w wektorze dwóch wartości uint.  
   
- `_Accum`  
- Wektor 4 wartości, które mają zostać dodane do maskowanego sumę bezwzględną różnice wyrównanie różnych bajtów między wartości odwołania i wartość źródła.  
+*_Accum*<br/>
+Wektor 4 wartości do dodania do zamaskowanej sumy bezwzględnych różnic różnych dopasowań bajtów między wartością odniesienia i wartością źródłową.  
   
 ### <a name="return-value"></a>Wartość zwracana  
- Zwraca wektor 4 sum. Każda suma odpowiada maskowanego sumę bezwzględną różnice z różnych bajtów Wyrównanie wartości odwołania i wartość źródła.  
+ Zwraca wektor 4 sum. Każda suma odpowiada zamaskowanej sumie bezwzględnych różnic różnych dopasowań bajtów między wartością odniesienia i wartością źródłową.  
 
 ## <a name="requirements"></a>Wymagania  
  **Nagłówek:** amp_graphics.h  
   
- **Namespace:** CONCURRENCY::Graphics:: Direct3D — 
+ **Namespace:** CONCURRENCY::Graphics:: Direct3D 
 
 ## <a name="see-also"></a>Zobacz też  
  [Concurrency::graphics::direct3d, przestrzeń nazw](concurrency-graphics-direct3d-namespace.md)

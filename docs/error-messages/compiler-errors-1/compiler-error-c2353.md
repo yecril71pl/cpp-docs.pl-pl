@@ -1,5 +1,5 @@
 ---
-title: C2353 błąd kompilatora | Dokumentacja firmy Microsoft
+title: Błąd kompilatora C2353 | Dokumentacja firmy Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,25 +16,26 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a6d5adf36760252a95502f38d2d7d64f9e090729
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 3685db97a213f6347fccedefdaeebfdeaaffb7bc
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33222205"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46109278"
 ---
-# <a name="compiler-error-c2353"></a>C2353 błąd kompilatora
-Specyfikacja wyjątku nie jest dozwolone.  
-  
- Specyfikacje wyjątków nie są dozwolone w funkcjach Członkowskich klas zarządzanych.  
-  
- Poniższy przykład generuje C2353:  
-  
-```  
-// C2353.cpp  
-// compile with: /clr /c  
-ref class X {  
-   void f() throw(int);   // C2353  
-   void f();   // OK  
-};  
+# <a name="compiler-error-c2353"></a>Błąd kompilatora C2353
+
+Specyfikacja wyjątku nie jest dozwolone.
+
+Specyfikacje wyjątków nie są dozwolone dla funkcji składowych klas zarządzanych.
+
+Poniższy przykład spowoduje wygenerowanie C2353:
+
+```
+// C2353.cpp
+// compile with: /clr /c
+ref class X {
+   void f() throw(int);   // C2353
+   void f();   // OK
+};
 ```

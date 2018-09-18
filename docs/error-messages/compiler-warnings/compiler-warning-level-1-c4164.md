@@ -1,5 +1,5 @@
 ---
-title: Kompilatora (poziom 1) ostrzeżenie C4164 | Dokumentacja firmy Microsoft
+title: Kompilator ostrzeżenie (poziom 1) C4164 | Dokumentacja firmy Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,14 +16,15 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9b5f29a0161f07a204aeffb170cf5d99941ff552
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: ea443f43fc72688dd2eaa2d7c0f79fcd0c490c6f
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33282967"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46115141"
 ---
-# <a name="compiler-warning-level-1-c4164"></a>Kompilator C4164 ostrzegawcze (poziom 1)
-"identyfikator": wewnętrzna funkcja nie jest zadeklarowana  
-  
- Nie zadeklarowano określonej funkcji wewnętrznej; konieczne może być #include plik odpowiedniego nagłówka.
+# <a name="compiler-warning-level-1-c4164"></a>Kompilator ostrzeżenie (poziom 1) C4164
+
+'Identyfikator': wewnętrzna funkcja nie jest zadeklarowana
+
+Określony Wewnętrzna funkcja nie jest zadeklarowana; konieczne może być #include do odpowiedniego pliku nagłówka.

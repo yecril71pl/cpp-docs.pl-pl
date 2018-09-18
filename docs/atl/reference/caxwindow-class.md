@@ -26,12 +26,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0eda5fc385f094bd7a18bff521250453ebb66c84
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 39b376d6e65a5002487cbf51186fdab9ccb3fc46
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43757939"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46110149"
 ---
 # <a name="caxwindow-class"></a>Klasa CAxWindow
 
@@ -94,10 +94,10 @@ HRESULT AttachControl(
 
 ### <a name="parameters"></a>Parametry
 
-*pControl*  
+*pControl*<br/>
 [in] Wskaźnik do `IUnknown` formantu.
 
-*ppUnkContainer*  
+*ppUnkContainer*<br/>
 [out] Wskaźnik do `IUnknown` hosta ( `AxWin` obiektu).
 
 ### <a name="return-value"></a>Wartość zwracana
@@ -118,7 +118,7 @@ CAxWindow(HWND hWnd = NULL);
 
 ### <a name="parameters"></a>Parametry
 
-*hWnd*  
+*hWnd*<br/>
 Dojście do istniejącego obiektu okna.
 
 ##  <a name="createcontrol"></a>  CAxWindow::CreateControl
@@ -139,7 +139,7 @@ HRESULT CreateControl(
 
 ### <a name="parameters"></a>Parametry
 
-*lpszName*  
+*lpszName*<br/>
 Wskaźnik do ciągu, aby utworzyć formant. Musi być sformatowany w jednym z następujących sposobów:
 
 - Identyfikator ProgID takich jak "MSCAL. Calendar.7 "
@@ -155,13 +155,13 @@ Wskaźnik do ciągu, aby utworzyć formant. Musi być sformatowany w jednym z na
    > [!NOTE]
    > "MSHTML:" musi poprzedzać fragment kodu HTML, dzięki czemu jest wyznaczony jako strumień MSHTML. Tylko identyfikator ProgID i CLSID są obsługiwane na platformach Windows Mobile. Windows CE osadzić platformy, innym niż Windows Mobile, z obsługą techniczną CE programu Internet Explorer wszystkie typy w tym ProgID, CLSID, adres URL, odwołanie do aktywnego dokumentu i fragment kodu HTML.
 
-*pStream*  
+*pStream*<br/>
 [in] Wskaźnik do strumienia, który służy do inicjowania właściwości formantu. Może mieć wartości NULL.
 
-*ppUnkContainer*  
+*ppUnkContainer*<br/>
 [out] Adres wskaźnika, który będzie otrzymywał `IUnknown` kontenera. Może mieć wartości NULL.
 
-*dwResID*  
+*dwResID*<br/>
 Identyfikator zasobu zasobu HTML. WebBrowser — formant zostanie utworzona i załadowany przy użyciu określonego zasobu.
 
 ### <a name="return-value"></a>Wartość zwracana
@@ -206,7 +206,7 @@ HRESULT CreateControlEx(
 
 ### <a name="parameters"></a>Parametry
 
-*lpszName*  
+*lpszName*<br/>
 Wskaźnik do ciągu, aby utworzyć formant. Musi być sformatowany w jednym z następujących sposobów:
 
 - Identyfikator ProgID takich jak "MSCAL. Calendar.7 "
@@ -222,22 +222,22 @@ Wskaźnik do ciągu, aby utworzyć formant. Musi być sformatowany w jednym z na
    > [!NOTE]
    > "MSHTML:" musi poprzedzać fragment kodu HTML, dzięki czemu jest wyznaczony jako strumień MSHTML. Tylko identyfikator ProgID i CLSID są obsługiwane na platformach Windows Mobile. Windows CE osadzić platformy, innym niż Windows Mobile, z obsługą techniczną CE programu Internet Explorer wszystkie typy w tym ProgID, CLSID, adres URL, odwołanie do aktywnego dokumentu i fragment kodu HTML.
 
-*pStream*  
+*pStream*<br/>
 [in] Wskaźnik do strumienia, który służy do inicjowania właściwości formantu. Może mieć wartości NULL.
 
-*ppUnkContainer*  
+*ppUnkContainer*<br/>
 [out] Adres wskaźnika, który będzie otrzymywał `IUnknown` kontenera. Może mieć wartości NULL.
 
-*ppUnkControl*  
+*ppUnkControl*<br/>
 [out] Adres wskaźnika, który będzie otrzymywał `IUnknown` formantu. Może mieć wartości NULL.
 
-*iidSink*  
+*iidSink*<br/>
 [in] Identyfikator interfejsu interfejsu wychodzącego w zawartego w nim obiektu. Może być wartością IID_NULL.
 
-*punkSink*  
+*punkSink*<br/>
 [in] Wskaźnik do `IUnknown` interfejs obiektu sink połączenia z punktem połączenia na przechowywany obiekt określony przez *iidSink*.
 
-*dwResID*  
+*dwResID*<br/>
 [in] Identyfikator zasobu zasobu HTML. WebBrowser — formant zostanie utworzona i załadowany przy użyciu określonego zasobu.
 
 ### <a name="return-value"></a>Wartość zwracana
@@ -276,7 +276,7 @@ CAxWindow<TBase>& operator=(HWND hWnd);
 
 ### <a name="parameters"></a>Parametry
 
-*hWnd*  
+*hWnd*<br/>
 Dojście do istniejącego okna.
 
 ### <a name="return-value"></a>Wartość zwracana
@@ -295,13 +295,13 @@ HRESULT QueryControl(Q** ppUnk);
 
 ### <a name="parameters"></a>Parametry
 
-*IID*  
+*IID*<br/>
 [in] Określa identyfikator IID interfejsu formantu.
 
-*ppUnk*  
+*ppUnk*<br/>
 [out] Wskaźnik do interfejsu formantu. W wersji szablonu tej metody nie ma potrzeby dla Identyfikatora odwołania tak długo, jak wpisane interfejsu z skojarzony identyfikator UUID jest przekazywany.
 
-*PYTANIA I ODPOWIEDZI*  
+*PYTANIA I ODPOWIEDZI*<br/>
 [in] Interfejs, którego dotyczy zapytanie dla.
 
 ### <a name="return-value"></a>Wartość zwracana
@@ -320,13 +320,13 @@ HRESULT QueryHost(Q** ppUnk);
 
 ### <a name="parameters"></a>Parametry
 
-*IID*  
+*IID*<br/>
 [in] Określa identyfikator IID interfejsu formantu.
 
-*ppUnk*  
+*ppUnk*<br/>
 [out] Wskaźnik do interfejsu na hoście. W wersji szablonu tej metody nie ma potrzeby dla Identyfikatora odwołania tak długo, jak wpisane interfejsu z skojarzony identyfikator UUID jest przekazywany.
 
-*PYTANIA I ODPOWIEDZI*  
+*PYTANIA I ODPOWIEDZI*<br/>
 [in] Interfejs, którego dotyczy zapytanie dla.
 
 ### <a name="return-value"></a>Wartość zwracana
@@ -347,7 +347,7 @@ HRESULT SetExternalDispatch(IDispatch* pDisp);
 
 ### <a name="parameters"></a>Parametry
 
-*pDisp*  
+*pDisp*<br/>
 [in] Wskaźnik do `IDispatch` interfejsu.
 
 ### <a name="return-value"></a>Wartość zwracana
@@ -364,7 +364,7 @@ HRESULT SetExternalUIHandler(IDocHostUIHandlerDispatch* pUIHandler);
 
 ### <a name="parameters"></a>Parametry
 
-*pUIHandler*  
+*pUIHandler*<br/>
 [in] Wskaźnik do `IDocHostUIHandlerDispatch` interfejsu.
 
 ### <a name="return-value"></a>Wartość zwracana
@@ -377,9 +377,9 @@ Zewnętrzne `IDocHostUIHandlerDispatch` interfejs jest wykorzystywany przez form
 
 ## <a name="see-also"></a>Zobacz też
 
-[Przykładowe ATLCON](../../visual-cpp-samples.md)   
-[Klasa CWindow](../../atl/reference/cwindow-class.md)   
-[Podstawy złożonych kontrolek](../../atl/atl-composite-control-fundamentals.md)   
-[Klasa — Przegląd](../../atl/atl-class-overview.md)   
+[Przykładowe ATLCON](../../visual-cpp-samples.md)<br/>
+[Klasa CWindow](../../atl/reference/cwindow-class.md)<br/>
+[Podstawy złożonych kontrolek](../../atl/atl-composite-control-fundamentals.md)<br/>
+[Klasa — Przegląd](../../atl/atl-class-overview.md)<br/>
 [Zawieranie kontrolek — często zadawane pytania](../../atl/atl-control-containment-faq.md)
 

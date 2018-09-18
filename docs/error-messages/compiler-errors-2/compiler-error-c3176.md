@@ -1,5 +1,5 @@
 ---
-title: C3176 błąd kompilatora | Dokumentacja firmy Microsoft
+title: Błąd kompilatora C3176 | Dokumentacja firmy Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,25 +16,27 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0fedeb9861d725e9c955bb55903b49ef9fefa586
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: aa2ec269061531688620b89279a9670982c72578
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33248472"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46104196"
 ---
-# <a name="compiler-error-c3176"></a>C3176 błąd kompilatora
-'type': nie można zadeklarować lokalnego typu wartościowego  
-  
- Klasy mogą być deklarowane tylko jako typ wartości w zakresie globalnym.  
-  
-## <a name="example"></a>Przykład  
- Poniższy przykład generuje C3176.  
-  
-```  
-// C3176.cpp  
-// compile with: /clr  
-int main () {  
-   enum class C {};   // C3176  
-}  
+# <a name="compiler-error-c3176"></a>Błąd kompilatora C3176
+
+"type": nie można zadeklarować lokalnego typu wartościowego
+
+Klasa może zostać zadeklarowany jako typ wartości w zakresie globalnym.
+
+## <a name="example"></a>Przykład
+
+Poniższy przykład spowoduje wygenerowanie C3176.
+
+```
+// C3176.cpp
+// compile with: /clr
+int main () {
+   enum class C {};   // C3176
+}
 ```

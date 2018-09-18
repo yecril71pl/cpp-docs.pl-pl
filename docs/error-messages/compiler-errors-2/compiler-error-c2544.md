@@ -1,5 +1,5 @@
 ---
-title: C2544 błąd kompilatora | Dokumentacja firmy Microsoft
+title: Błąd kompilatora C2544 | Dokumentacja firmy Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,16 +16,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8ff4922e592ef717c51057cae75453422a5df7df
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: ad66377aef7be43cc929ce4612284356597a4022
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33227179"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46109232"
 ---
-# <a name="compiler-error-c2544"></a>C2544 błąd kompilatora
-Oczekiwano ")" dla operatora "()"  
-  
- Operator wywołania funkcji brak lewego nawiasu.  
-  
- Przyczyną tego błędu może być rozwinięciu makra.
+# <a name="compiler-error-c2544"></a>Błąd kompilatora C2544
+
+Oczekiwano ")" dla operatora "()"
+
+Lewy nawias okrągły Brak operatora wywołania funkcji.
+
+Ten błąd może być spowodowany przez rozwinięciu makra.

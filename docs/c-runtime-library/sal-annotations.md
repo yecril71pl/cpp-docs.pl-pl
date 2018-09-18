@@ -57,17 +57,19 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2eb935285c8c90c238baf59cd11a1232fa33d895
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 363d7ff6de4c808c3c7b8d37a9a9f95bf069723c
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32409387"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46107497"
 ---
 # <a name="sal-annotations"></a>Adnotacje SAL
-Jeśli pliki nagłówków biblioteki należy zbadać, mogą pojawić się niektóre nietypowe adnotacje, na przykład `_In_z` i `_Out_z_cap_(_Size)`. Oto przykłady języka adnotacji kodu źródłowego firmy Microsoft (SAL), która zapewnia zbiór adnotacje do opisywania, jak funkcja wykorzystuje jego parametrów, na przykład założenia, które ułatwia o ich i gwarancji, który pozwala na zakończenie. Plik nagłówka \<sal.h > definiuje adnotacje.  
-  
- Aby uzyskać więcej informacji na temat Korzystanie z adnotacji SAL w programie Visual Studio, zobacz [przy użyciu adnotacji SAL w celu zmniejszenia defektów kodu C/C++](/visualstudio/code-quality/using-sal-annotations-to-reduce-c-cpp-code-defects).  
-  
-## <a name="see-also"></a>Zobacz też  
- [Biblioteka CRT, funkcje](../c-runtime-library/crt-library-features.md)
+
+Jeśli badania pliki nagłówkowe biblioteki mogą pojawić się niektóre nietypowe adnotacji, na przykład `_In_z` i `_Out_z_cap_(_Size)`. Oto przykłady języka adnotacji kod źródłowy firmy Microsoft (SAL), który zawiera zbiór adnotacje do opisywania, jak funkcja używa jego parametrów, na przykład założenia, które ułatwia o nich i gwarancje, które to sprawia, że na zakończenie. Plik nagłówkowy \<sal.h > definiuje adnotacji.
+
+Aby uzyskać więcej informacji na temat Korzystanie z adnotacji SAL w programie Visual Studio, zobacz [przy użyciu adnotacji SAL w celu zmniejszenia defektów kodu C/C++](/visualstudio/code-quality/using-sal-annotations-to-reduce-c-cpp-code-defects).
+
+## <a name="see-also"></a>Zobacz też
+
+[Biblioteka CRT, funkcje](../c-runtime-library/crt-library-features.md)

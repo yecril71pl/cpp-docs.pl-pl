@@ -15,42 +15,44 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1f1ee5fdf3d50f30e02bd48fe3664c10d26a8449
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 00d033c1c4fc8fc3e534c8e4ee0c3d7867b83834
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33297339"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46103176"
 ---
 # <a name="global-constants-in-c"></a>Stałe globalne w C++
-Stałe globalne w C++ mieć statycznego powiązania. Ta lokalizacja jest inna niż C. Jeśli spróbujesz użyć globalnym stałej w języku C++ w wielu plikach błąd nierozwiązane zewnętrznych. Kompilator optymalizuje stałe globalne, brakuje miejsca zarezerwowane dla zmiennej.  
-  
- Jednym ze sposobów rozwiązania tego błędu jest dołączyć const inicjacjach w pliku nagłówka i dołączenie nagłówka w plikach CPP, gdy jest to konieczne, tak jakby był prototypu funkcji. Inną możliwością jest zmienna z systemem innym niż stała i użyj odwołania stałej, oceniając go.  
-  
- Poniższy przykład generuje C2019:  
-  
-```  
-// global_constants.cpp  
-// LNK2019 expected  
-void test(void);  
-const int lnktest1 = 0;  
-  
-int main() {  
-   test();  
-}  
-```  
-  
- a następnie  
-  
-```  
-// global_constants_2.cpp  
-// compile with: global_constants.cpp  
-extern int lnktest1;  
-  
-void test() {  
-  int i = lnktest1;   // LNK2019  
-}  
-```  
-  
-## <a name="see-also"></a>Zobacz też  
- [Błąd narzędzi konsolidatora LNK2019](../../error-messages/tool-errors/linker-tools-error-lnk2019.md)
+
+Stałe globalne w C++ ma połączenie static. Stanowi to odmianę C. Jeśli spróbujesz użyć globalną stałe języka C++ w wielu plikach wystąpi błąd nierozwiązane zewnętrznych. Kompilator optymalizuje stałe globalne, brakuje miejsca zarezerwowane dla zmiennej.
+
+Jest jednym ze sposobów, aby rozwiązać ten problem do uwzględnienia inicjalizacje const w pliku nagłówkowym, a następnie dołączyć ten nagłówek w plikach CPP, gdy jest to konieczne, tak, jakby była prototypu funkcji. Inną możliwością jest ustaw dla zmiennej niestałe i używać stałe odwołanie, oceniając go.
+
+Poniższy przykład spowoduje wygenerowanie C2019:
+
+```
+// global_constants.cpp
+// LNK2019 expected
+void test(void);
+const int lnktest1 = 0;
+
+int main() {
+   test();
+}
+```
+
+Następnie wyszukaj maszynę
+
+```
+// global_constants_2.cpp
+// compile with: global_constants.cpp
+extern int lnktest1;
+
+void test() {
+  int i = lnktest1;   // LNK2019
+}
+```
+
+## <a name="see-also"></a>Zobacz też
+
+[Błąd narzędzi konsolidatora LNK2019](../../error-messages/tool-errors/linker-tools-error-lnk2019.md)

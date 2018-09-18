@@ -16,23 +16,24 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d6a15e841cfc8daf1abdafc9997698807e7356af
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 87d2c09d6448bcf7fb0557fa3a174c60205a34ea
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33332068"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46099398"
 ---
 # <a name="math-error-m6201"></a>Błąd matematyczny M6201
-"Funkcja": _domain — błąd  
-  
- Argument funkcji danego był spoza domeny prawne wartości wejściowe dla tej funkcji.  
-  
-## <a name="example"></a>Przykład  
-  
-```  
-result = sqrt(-1.0)   // C statement  
-result = SQRT(-1.0)   !  FORTRAN statement  
-```  
-  
- Ten błąd wywołania `_matherr` funkcji z nazwą funkcji, argumentów i typ błędu. Można ponownie napisać `_matherr` funkcji, aby dostosować obsługę niektórych błędów czasu wykonywania zmiennoprzecinkowej matematyczny.
+
+'Funkcja': błąd _domeny
+
+Argument do danej funkcji była spoza domeny prawne wartości wejściowe dla tej funkcji.
+
+## <a name="example"></a>Przykład
+
+```
+result = sqrt(-1.0)   // C statement
+result = SQRT(-1.0)   !  FORTRAN statement
+```
+
+Ten błąd wywołania `_matherr` funkcję z nazwy funkcji, argumentów i typ błędu. Można napisać ponownie `_matherr` funkcję, aby dostosować obsługi niektórych błędów zmiennoprzecinkowym zapisu matematycznego w czasie wykonywania.

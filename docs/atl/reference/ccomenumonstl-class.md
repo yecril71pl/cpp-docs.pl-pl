@@ -17,12 +17,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5938785d7d9fdccae73048392b74cc5bb34f6680
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: a4821ba572d2719ebba6c693cc39b96971002512
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43753558"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46106327"
 ---
 # <a name="ccomenumonstl-class"></a>Klasa CComEnumOnSTL
 
@@ -32,7 +32,7 @@ Ta klasa definiuje obiekt modułu wyliczającego COM, na podstawie kolekcji stan
 
 ```
 template <class Base,
-    const IID* piid, class T, class Copy, class CollType, class ThreadModel = CComObjectThreadModel>  
+    const IID* piid, class T, class Copy, class CollType, class ThreadModel = CComObjectThreadModel>
 class ATL_NO_VTABLE CComEnumOnSTL : public IEnumOnSTLImpl<Base, piid,
 T,
     Copy,
@@ -42,19 +42,19 @@ CollType>,
 
 #### <a name="parameters"></a>Parametry
 
-*podstawowy*  
+*podstawowy*<br/>
 Moduł wyliczający COM. Zobacz [IEnumString](/windows/desktop/api/objidl/nn-objidl-ienumstring) przykład.
 
-*piid*  
+*piid*<br/>
 Wskaźnik do Identyfikatora interfejsu interfejsu modułu wyliczającego.
 
-*T*  
+*T*<br/>
 Typ elementu udostępnianych przez interfejs modułu wyliczającego.
 
-*Kopiuj*  
+*Kopiuj*<br/>
 A [Kopiuj zasady](../../atl/atl-copy-policy-classes.md) klasy.
 
-*CollType*  
+*CollType*<br/>
 Klasa kontenera standardowej biblioteki języka C++.
 
 ## <a name="remarks"></a>Uwagi
@@ -111,9 +111,9 @@ Ten kod tworzy **typedef** dla `CComEnumOnSTL` który uwidacznia wektor `CComVar
 
 ## <a name="see-also"></a>Zobacz też
 
-[IEnumOnSTLImpl](../../atl/reference/ienumonstlimpl-class.md)   
-[Przykład ATLCollections: Pokazuje kopii niestandardowych zasad klas, ICollectionOnSTLImpl i CComEnumOnSTL](../../visual-cpp-samples.md)   
-[Klasa — Przegląd](../../atl/atl-class-overview.md)   
-[Klasa CComObjectRootEx](../../atl/reference/ccomobjectrootex-class.md)   
-[CComObjectThreadModel](atl-typedefs.md#ccomobjectthreadmodel)   
+[IEnumOnSTLImpl](../../atl/reference/ienumonstlimpl-class.md)<br/>
+[Przykład ATLCollections: Pokazuje kopii niestandardowych zasad klas, ICollectionOnSTLImpl i CComEnumOnSTL](../../visual-cpp-samples.md)<br/>
+[Klasa — Przegląd](../../atl/atl-class-overview.md)<br/>
+[Klasa CComObjectRootEx](../../atl/reference/ccomobjectrootex-class.md)<br/>
+[CComObjectThreadModel](atl-typedefs.md#ccomobjectthreadmodel)<br/>
 [Klasa IEnumOnSTLImpl](../../atl/reference/ienumonstlimpl-class.md)

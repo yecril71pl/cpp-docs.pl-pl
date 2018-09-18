@@ -1,5 +1,5 @@
 ---
-title: C2673 błąd kompilatora | Dokumentacja firmy Microsoft
+title: Błąd kompilatora C2673 | Dokumentacja firmy Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,23 +16,24 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d5d819a5e0e9cc7fb5acffdd2c476d05ceb23fec
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 942ad581c4b272078eabfe225e7fdab2245d0ad2
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33230594"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46108530"
 ---
-# <a name="compiler-error-c2673"></a>C2673 błąd kompilatora
-"Funkcja": funkcje globalne nie posiadają wskaźników "this"  
-  
- Funkcja globalna próbował uzyskać dostęp do `this`.  
-  
- Poniższy przykład generuje C2673:  
-  
-```  
-// C2673.cpp  
-int main() {  
-   this = 0;   // C2673  
-}  
+# <a name="compiler-error-c2673"></a>Błąd kompilatora C2673
+
+'Funkcja': funkcje globalne nie mają wskaźników "this"
+
+Funkcja globalna próbował uzyskać dostęp do `this`.
+
+Poniższy przykład spowoduje wygenerowanie C2673:
+
+```
+// C2673.cpp
+int main() {
+   this = 0;   // C2673
+}
 ```

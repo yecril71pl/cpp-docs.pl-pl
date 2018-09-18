@@ -138,14 +138,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: c1934c7857e8c7813f653b6f12be0ba523ec63fb
-ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
+ms.openlocfilehash: 8b421bcc84152fede78ca985bbf2896f42a148fe
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "42465051"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46100460"
 ---
 # <a name="cdynamicaccessor-class"></a>CDynamicAccessor — Klasa
+
 Umożliwia dostęp do źródła danych, gdy masz nie znajomości schematu bazy danych (wewnętrzna struktura bazy danych).  
   
 ## <a name="syntax"></a>Składnia
@@ -155,7 +156,8 @@ class CDynamicAccessor : public CAccessorBase
 ```  
 
 ## <a name="requirements"></a>Wymagania  
- **Nagłówek**: atldbcli.h  
+
+**Nagłówek**: atldbcli.h  
   
 ## <a name="members"></a>Elementy członkowskie  
   
@@ -182,16 +184,18 @@ class CDynamicAccessor : public CAccessorBase
 |[SetBlobSizeLimit](#setblobsizelimit)|Ustawia maksymalny rozmiar obiektu BLOB w bajtach.|  
 |[SetLength](#setlength)|Ustawia długość kolumny, w bajtach.|  
 |[SetStatus —](#setstatus)|Ustawia stan określonej kolumny.|  
-|[Funkcja SetValue](#setvalue)|Przechowuje dane w buforze.|  
+|[SetValue](#setvalue)|Przechowuje dane w buforze.|  
   
 ## <a name="remarks"></a>Uwagi  
- Użyj `CDynamicAccessor` metody, aby uzyskać informacje o kolumnach, takich jak nazwy kolumn, liczba kolumn, typ danych i tak dalej. Informacje o kolumnie jest następnie użyć do tworzenia metody dostępu dynamicznie w czasie wykonywania.  
+
+Użyj `CDynamicAccessor` metody, aby uzyskać informacje o kolumnach, takich jak nazwy kolumn, liczba kolumn, typ danych i tak dalej. Informacje o kolumnie jest następnie użyć do tworzenia metody dostępu dynamicznie w czasie wykonywania.  
   
- Informacje o kolumnach są przechowywane w buforu, który jest tworzony i zarządzany przez tę klasę. Uzyskiwanie danych z bufora przy użyciu [GetValue](../../data/oledb/cdynamicaccessor-getvalue.md).  
+Informacje o kolumnach są przechowywane w buforu, który jest tworzony i zarządzany przez tę klasę. Uzyskiwanie danych z bufora przy użyciu [GetValue](../../data/oledb/cdynamicaccessor-getvalue.md).  
   
- Dyskusję na temat i przykłady użycia klas dynamicznej metody dostępu, zobacz [przy użyciu dynamicznych metod dostępu](../../data/oledb/using-dynamic-accessors.md).  
+Dyskusję na temat i przykłady użycia klas dynamicznej metody dostępu, zobacz [przy użyciu dynamicznych metod dostępu](../../data/oledb/using-dynamic-accessors.md).  
 
 ## <a name="addbindentry"></a> CDynamicAccessor::AddBindEntry
+
 Dodaje wpis powiązanie kolumn danych wyjściowych.  
   
 ### <a name="syntax"></a>Składnia  
@@ -201,16 +205,20 @@ HRESULT AddBindEntry(const DBCOLUMNINFO& info) throw();
 ```  
   
 #### <a name="parameters"></a>Parametry  
- *Informacje o*  
- [in] A `DBCOLUMNINFO` struktury zawierającej informacje o kolumnach. Zobacz sekcję "DBCOLUMNINFO struktury" w [IColumnsInfo::GetColumnInfo](/previous-versions/windows/desktop/ms722704\(v=vs.85\)) w *OLE DB Podręcznik programisty*.  
+
+*Informacje o*<br/>
+[in] A `DBCOLUMNINFO` struktury zawierającej informacje o kolumnach. Zobacz sekcję "DBCOLUMNINFO struktury" w [IColumnsInfo::GetColumnInfo](/previous-versions/windows/desktop/ms722704\(v=vs.85\)) w *OLE DB Podręcznik programisty*.  
   
 ### <a name="return-value"></a>Wartość zwracana  
- Jedna z wartości HRESULT standardowych.  
+
+Jedna z wartości HRESULT standardowych.  
   
 ### <a name="remarks"></a>Uwagi  
- Użyj tej metody, podczas zastępowania domyślną metodę dostępu, utworzony za pomocą `CDynamicAccessor` (zobacz [jak mogę pobrać dane?](../../data/oledb/fetching-data.md)). 
+
+Użyj tej metody, podczas zastępowania domyślną metodę dostępu, utworzony za pomocą `CDynamicAccessor` (zobacz [jak mogę pobrać dane?](../../data/oledb/fetching-data.md)). 
   
 ## <a name="cdynamicaccessor"></a> CDynamicAccessor::CDynamicAccessor
+
 Tworzy i inicjuje `CDynamicAccessor` obiektu.  
   
 ### <a name="syntax"></a>Składnia  
@@ -221,18 +229,21 @@ CDynamicAccessor(DBBLOBHANDLINGENUM eBlobHandling = DBBLOBHANDLING_DEFAULT,
 ```  
   
 #### <a name="parameters"></a>Parametry  
- *eBlobHandling*  
- Określa, jak dane dużych obiektów binarnych (BLOB) ma być obsługiwane. Wartość domyślna to DBBLOBHANDLING_DEFAULT. Zobacz [setblobhandling —](../../data/oledb/cdynamicaccessor-setblobhandling.md) opis wartości DBBLOBHANDLINGENUM.  
+
+*eBlobHandling*<br/>
+Określa, jak dane dużych obiektów binarnych (BLOB) ma być obsługiwane. Wartość domyślna to DBBLOBHANDLING_DEFAULT. Zobacz [setblobhandling —](../../data/oledb/cdynamicaccessor-setblobhandling.md) opis wartości DBBLOBHANDLINGENUM.  
   
- *nBlobSize*  
- Maksymalny rozmiar obiektu BLOB w bajtach; kolumny danych za pośrednictwem ta wartość jest traktowana jako obiekt BLOB. Wartość domyślna to 8000. Zobacz [setblobsizelimit —](../../data/oledb/cdynamicaccessor-setblobsizelimit.md) Aby uzyskać szczegółowe informacje.  
+*nBlobSize*<br/>
+Maksymalny rozmiar obiektu BLOB w bajtach; kolumny danych za pośrednictwem ta wartość jest traktowana jako obiekt BLOB. Wartość domyślna to 8000. Zobacz [setblobsizelimit —](../../data/oledb/cdynamicaccessor-setblobsizelimit.md) Aby uzyskać szczegółowe informacje.  
   
 ### <a name="remarks"></a>Uwagi  
- Jeśli używasz konstruktora do zainicjowania `CDynamicAccessor` obiektu, można określić, jak powiązać obiekty BLOB. Obiekty BLOB może zawierać danych binarnych, takich jak grafiki, dźwięku lub skompilowanego kodu. Domyślnym zachowaniem jest traktowanie kolumn ponad 8000 bajtów jako obiekty BLOB, a następnie próbujesz powiązać je z `ISequentialStream` obiektu. Można jednak określić inną wartość na rozmiar obiektu BLOB.  
+
+Jeśli używasz konstruktora do zainicjowania `CDynamicAccessor` obiektu, można określić, jak powiązać obiekty BLOB. Obiekty BLOB może zawierać danych binarnych, takich jak grafiki, dźwięku lub skompilowanego kodu. Domyślnym zachowaniem jest traktowanie kolumn ponad 8000 bajtów jako obiekty BLOB, a następnie próbujesz powiązać je z `ISequentialStream` obiektu. Można jednak określić inną wartość na rozmiar obiektu BLOB.  
   
- Można również określić, jak `CDynamicAccessor` służy do obsługi danych kolumny, która zaliczamy do danych obiektów BLOB: danych obiektów BLOB w sposób domyślne może obsługiwać; można pominąć (nie jest powiązana) danych obiektów BLOB; lub jest on można powiązać danych obiektów BLOB w pamięci przydzielonej przez dostawcę.  
+Można również określić, jak `CDynamicAccessor` służy do obsługi danych kolumny, która zaliczamy do danych obiektów BLOB: danych obiektów BLOB w sposób domyślne może obsługiwać; można pominąć (nie jest powiązana) danych obiektów BLOB; lub jest on można powiązać danych obiektów BLOB w pamięci przydzielonej przez dostawcę.  
 
 ## <a name="close"></a> CDynamicAccessor::Close
+
 Rozpina wszystkie kolumny, zwalnia ilość przydzielonej pamięci i zwalnia [IAccessor](/previous-versions/windows/desktop/ms719672\(v=vs.85\)) wskaźnik interfejsu w klasie.  
   
 ### <a name="syntax"></a>Składnia  
@@ -242,6 +253,7 @@ void Close() throw();
 ```  
 
 ## <a name="getblobhandling"></a> CDynamicAccessor::GetBlobHandling
+
 Pobiera obiekt BLOB, Obsługa wartości bieżącego wiersza.  
   
 ### <a name="syntax"></a>Składnia  
@@ -251,9 +263,11 @@ const DBBLOBHANDLINGENUM GetBlobHandling() const;
 ```  
   
 ### <a name="remarks"></a>Uwagi  
- Zwraca obiekt BLOB, obsługa wartość *eBlobHandling* jako ustawione przez [setblobhandling —](../../data/oledb/cdynamicaccessor-setblobhandling.md). 
+
+Zwraca obiekt BLOB, obsługa wartość *eBlobHandling* jako ustawione przez [setblobhandling —](../../data/oledb/cdynamicaccessor-setblobhandling.md). 
 
 ## <a name="getblobsizelimit"></a> CDynamicAccessor::GetBlobSizeLimit
+
 Pobiera maksymalny rozmiar obiektu BLOB w bajtach.  
   
 ### <a name="syntax"></a>Składnia  
@@ -263,9 +277,11 @@ const DBLENGTH GetBlobSizeLimit() const;
 ```  
   
 ### <a name="remarks"></a>Uwagi  
- Zwraca obiekt BLOB, obsługa wartość *nBlobSize* jako ustawione przez [setblobsizelimit —](../../data/oledb/cdynamicaccessor-setblobsizelimit.md).  
+
+Zwraca obiekt BLOB, obsługa wartość *nBlobSize* jako ustawione przez [setblobsizelimit —](../../data/oledb/cdynamicaccessor-setblobsizelimit.md).  
 
 ## <a name="getbookmark"></a> CDynamicAccessor::GetBookmark
+
 Pobiera zakładki dla bieżącego wiersza.  
   
 ### <a name="syntax"></a>Składnia  
@@ -275,16 +291,20 @@ HRESULT GetBookmark(CBookmark< >* pBookmark) const throw();
 ```  
   
 #### <a name="parameters"></a>Parametry  
- *pBookmark*  
- [out] Wskaźnik do [CBookmark](../../data/oledb/cbookmark-class.md) obiektu.  
+
+*pBookmark*<br/>
+[out] Wskaźnik do [CBookmark](../../data/oledb/cbookmark-class.md) obiektu.  
   
 ### <a name="return-value"></a>Wartość zwracana  
- Jedna z wartości HRESULT standardowych.  
+
+Jedna z wartości HRESULT standardowych.  
   
 ### <a name="remarks"></a>Uwagi  
- Należy ustawić `DBPROP_IRowsetLocate` VARIANT_TRUE można pobrać zakładki. 
+
+Należy ustawić `DBPROP_IRowsetLocate` VARIANT_TRUE można pobrać zakładki. 
 
 ## <a name="getcolumncount"></a> CDynamicAccessor::GetColumnCount
+
 Pobiera liczbę kolumn.  
   
 ### <a name="syntax"></a>Składnia  
@@ -294,9 +314,11 @@ DBORDINAL GetColumnCount() const throw();
 ```  
   
 ### <a name="return-value"></a>Wartość zwracana  
- Pobrać liczbę kolumn.  
+
+Pobrać liczbę kolumn.  
 
 ## <a name="getcolumnflags"></a> CDynamicAccessor::GetColumnFlags
+
 Pobiera właściwości kolumny.  
   
 ### <a name="syntax"></a>Składnia  
@@ -307,19 +329,23 @@ bool GetColumnFlags(DBORDINAL nColumn,
 ```  
   
 #### <a name="parameters"></a>Parametry  
- *nColumn*  
- [in] Numer kolumny. Numery kolumn zaczynać od 1. Wartość 0 odwołuje się do kolumny zakładki, jeśli istnieje.  
+
+*nColumn*<br/>
+[in] Numer kolumny. Numery kolumn zaczynać od 1. Wartość 0 odwołuje się do kolumny zakładki, jeśli istnieje.  
   
- *pFlags*  
- [out] Wskaźnik do maski bitów, który opisuje charakterystykę kolumny. Zobacz sekcję "Typ wyliczany DBCOLUMNFLAGS" w [IColumnsInfo::GetColumnInfo](/previous-versions/windows/desktop/ms722704\(v=vs.85\)) w *OLE DB Podręcznik programisty*.  
+*pFlags*<br/>
+[out] Wskaźnik do maski bitów, który opisuje charakterystykę kolumny. Zobacz sekcję "Typ wyliczany DBCOLUMNFLAGS" w [IColumnsInfo::GetColumnInfo](/previous-versions/windows/desktop/ms722704\(v=vs.85\)) w *OLE DB Podręcznik programisty*.  
   
 ### <a name="return-value"></a>Wartość zwracana  
- Zwraca **true** Jeśli charakterystyki kolumny są pomyślnie pobrane. W przeciwnym razie zwraca **false**.  
+
+Zwraca **true** Jeśli charakterystyki kolumny są pomyślnie pobrane. W przeciwnym razie zwraca **false**.  
   
 ### <a name="remarks"></a>Uwagi  
- Numer kolumny jest przesuwane z jednego. Kolumna zero jest przypadkiem szczególnym; Jeśli jest dostępna, jest zakładki.
+
+Numer kolumny jest przesuwane z jednego. Kolumna zero jest przypadkiem szczególnym; Jeśli jest dostępna, jest zakładki.
 
 ## <a name="getcolumninfo"></a> CDynamicAccessor::GetColumnInfo
+
 Zwraca metadane kolumny wymagane przez większość klientów.  
   
 ### <a name="syntax"></a>Składnia  
@@ -332,25 +358,29 @@ HRESULT GetColumnInfo(IRowset* pRowset,
 ```  
   
 #### <a name="parameters"></a>Parametry  
- *pRowset*  
- [in] Wskaźnik do [IRowset](/previous-versions/windows/desktop/ms720986\(v=vs.85\)) interfejsu.  
+
+*pRowset*<br/>
+[in] Wskaźnik do [IRowset](/previous-versions/windows/desktop/ms720986\(v=vs.85\)) interfejsu.  
   
- *pColumns*  
- [out] Wskaźnik do pamięci, w której ma zostać zwrócone z liczbą kolumn w zestawie wierszy; Liczba ta obejmuje kolumny zakładki, jeśli taka istnieje.  
+*pColumns*<br/>
+[out] Wskaźnik do pamięci, w której ma zostać zwrócone z liczbą kolumn w zestawie wierszy; Liczba ta obejmuje kolumny zakładki, jeśli taka istnieje.  
   
- *ppColumnInfo*  
- [out] Wskaźnik do pamięci, w której ma zostać zwrócone tablicę `DBCOLUMNINFO` struktury. Zobacz sekcję "DBCOLUMNINFO struktury" w [IColumnsInfo::GetColumnInfo](/previous-versions/windows/desktop/ms722704\(v=vs.85\)) w *OLE DB Podręcznik programisty*.  
+*ppColumnInfo*<br/>
+[out] Wskaźnik do pamięci, w której ma zostać zwrócone tablicę `DBCOLUMNINFO` struktury. Zobacz sekcję "DBCOLUMNINFO struktury" w [IColumnsInfo::GetColumnInfo](/previous-versions/windows/desktop/ms722704\(v=vs.85\)) w *OLE DB Podręcznik programisty*.  
   
- *ppStringsBuffer*  
- [out] Wskaźnik do pamięci, w której ma zostać zwracają wskaźnik do magazynu dla wszystkich wartości parametrów (nazwy używane znajdującego się w obrębie *columnid* lub *pwszName*) w ramach bloku pojedynczą alokację.  
+*ppStringsBuffer*<br/>
+[out] Wskaźnik do pamięci, w której ma zostać zwracają wskaźnik do magazynu dla wszystkich wartości parametrów (nazwy używane znajdującego się w obrębie *columnid* lub *pwszName*) w ramach bloku pojedynczą alokację.  
   
 ### <a name="return-value"></a>Wartość zwracana  
- Jedna z wartości HRESULT standardowych.  
+
+Jedna z wartości HRESULT standardowych.  
   
 ### <a name="remarks"></a>Uwagi  
- Zobacz [IColumnsInfo::GetColumnInfo](/previous-versions/windows/desktop/ms722704\(v=vs.85\)) w *OLE DB Podręcznik programisty* informacji na temat typów danych `DBORDINAL`, `DBCOLUMNINFO`, i `OLECHAR`.  
+
+Zobacz [IColumnsInfo::GetColumnInfo](/previous-versions/windows/desktop/ms722704\(v=vs.85\)) w *OLE DB Podręcznik programisty* informacji na temat typów danych `DBORDINAL`, `DBCOLUMNINFO`, i `OLECHAR`.  
 
 ## <a name="getcolumnname"></a> CDynamicAccessor::GetColumnName
+
 Pobiera nazwę określonej kolumny.  
   
 ### <a name="syntax"></a>Składnia  
@@ -360,13 +390,16 @@ LPOLESTR GetColumnName(DBORDINAL nColumn) const throw();
 ```  
   
 #### <a name="parameters"></a>Parametry  
- *nColumn*  
- [in] Numer kolumny. Numery kolumn zaczynać od 1. Wartość 0 odwołuje się do kolumny zakładki, jeśli istnieje.  
+
+*nColumn*<br/>
+[in] Numer kolumny. Numery kolumn zaczynać od 1. Wartość 0 odwołuje się do kolumny zakładki, jeśli istnieje.  
   
 ### <a name="return-value"></a>Wartość zwracana  
- Nazwa określonej kolumny.  
+
+Nazwa określonej kolumny.  
 
 ## <a name="getcolumntype"></a> CDynamicAccessor::GetColumnType
+
 Pobiera typ danych w określonej kolumnie.  
   
 ### <a name="syntax"></a>Składnia  
@@ -377,16 +410,19 @@ bool GetColumnType(DBORDINAL nColumn,
 ```  
   
 #### <a name="parameters"></a>Parametry  
- *nColumn*  
- [in] Numer kolumny. Numery kolumn zaczynać od 1. Wartość 0 odwołuje się do kolumny zakładki, jeśli istnieje.  
+
+*nColumn*<br/>
+[in] Numer kolumny. Numery kolumn zaczynać od 1. Wartość 0 odwołuje się do kolumny zakładki, jeśli istnieje.  
   
- *pType*  
- [out] Wskaźnik do typu danych dla określonej kolumny.  
+*pType*<br/>
+[out] Wskaźnik do typu danych dla określonej kolumny.  
   
 ### <a name="return-value"></a>Wartość zwracana  
- Zwraca **true** w przypadku powodzenia lub **false** w przypadku niepowodzenia.  
+
+Zwraca **true** w przypadku powodzenia lub **false** w przypadku niepowodzenia.  
 
 ## <a name="getlength"></a> CDynamicAccessor::GetLength
+
 Pobiera długość określonej kolumny.  
   
 ### <a name="syntax"></a>Składnia  
@@ -403,22 +439,26 @@ bool GetLength(const WCHAR* pColumnName,
 ```  
   
 #### <a name="parameters"></a>Parametry  
- *nColumn*  
- [in] Numer kolumny. Numery kolumn zaczynać od 1. Wartość 0 odwołuje się do kolumny zakładki, jeśli istnieje.  
+
+*nColumn*<br/>
+[in] Numer kolumny. Numery kolumn zaczynać od 1. Wartość 0 odwołuje się do kolumny zakładki, jeśli istnieje.  
   
- *pColumnName*  
- [in] Wskaźnik na ciąg znaków zawierający nazwę kolumny.  
+*pColumnName*<br/>
+[in] Wskaźnik na ciąg znaków zawierający nazwę kolumny.  
   
- *pLength*  
- [out] Wskaźnik do liczby całkowitej, zawierająca długość kolumny w bajtach.  
+*pLength*<br/>
+[out] Wskaźnik do liczby całkowitej, zawierająca długość kolumny w bajtach.  
   
 ### <a name="return-value"></a>Wartość zwracana  
- Zwraca **true** Jeśli zostanie znaleziony w określonej kolumnie. W przeciwnym razie funkcja zwraca **false**.  
+
+Zwraca **true** Jeśli zostanie znaleziony w określonej kolumnie. W przeciwnym razie funkcja zwraca **false**.  
   
 ### <a name="remarks"></a>Uwagi  
- Pierwszy zastąpienie przyjmuje numer kolumny, natomiast drugi i trzeci zastąpienia nazwa kolumny w formacie ANSI lub Unicode, odpowiednio. 
+
+Pierwszy zastąpienie przyjmuje numer kolumny, natomiast drugi i trzeci zastąpienia nazwa kolumny w formacie ANSI lub Unicode, odpowiednio. 
 
 ## <a name="getordinal"></a> CDynamicAccessor::GetOrdinal
+
 Pobiera numer kolumny, otrzymuje nazwę kolumny.  
   
 ### <a name="syntax"></a>Składnia  
@@ -432,16 +472,19 @@ bool GetOrdinal(const WCHAR* pColumnName,
 ```  
   
 #### <a name="parameters"></a>Parametry  
- *pColumnName*  
- [in] Wskaźnik na ciąg znaków zawierający nazwę kolumny.  
+
+*pColumnName*<br/>
+[in] Wskaźnik na ciąg znaków zawierający nazwę kolumny.  
   
- *pOrdinal*  
- [out] Wskaźnik do liczby kolumn.  
+*pOrdinal*<br/>
+[out] Wskaźnik do liczby kolumn.  
   
 ### <a name="return-value"></a>Wartość zwracana  
- Zwraca **true** jeśli znajduje się kolumna o określonej nazwie. W przeciwnym razie funkcja zwraca **false**.
+
+Zwraca **true** jeśli znajduje się kolumna o określonej nazwie. W przeciwnym razie funkcja zwraca **false**.
 
 ## <a name="getstatus"></a> CDynamicAccessor::GetStatus
+
 Pobiera stan określonej kolumny.  
   
 ### <a name="syntax"></a>Składnia  
@@ -458,19 +501,22 @@ bool GetStatus(const WCHAR* pColumnName,
 ```  
   
 #### <a name="parameters"></a>Parametry  
- *nColumn*  
- [in] Numer kolumny. Numery kolumn zaczynać od 1. Wartość 0 odwołuje się do kolumny zakładki, jeśli istnieje.  
+
+*nColumn*<br/>
+[in] Numer kolumny. Numery kolumn zaczynać od 1. Wartość 0 odwołuje się do kolumny zakładki, jeśli istnieje.  
   
- *pColumnName*  
- [in] Wskaźnik na ciąg znaków zawierający nazwę kolumny.  
+*pColumnName*<br/>
+[in] Wskaźnik na ciąg znaków zawierający nazwę kolumny.  
   
- *pStatus*  
- [out] Wskaźnik do zmiennej, zawierający stan kolumny. Zobacz [DBSTATUS](/previous-versions/windows/desktop/ms722617\(v=vs.85\)) w *OLE DB Podręcznik programisty* Aby uzyskać więcej informacji.  
+*pStatus*<br/>
+[out] Wskaźnik do zmiennej, zawierający stan kolumny. Zobacz [DBSTATUS](/previous-versions/windows/desktop/ms722617\(v=vs.85\)) w *OLE DB Podręcznik programisty* Aby uzyskać więcej informacji.  
   
 ### <a name="return-value"></a>Wartość zwracana  
- Zwraca **true** Jeśli zostanie znaleziony w określonej kolumnie. W przeciwnym razie funkcja zwraca **false**.  
+
+Zwraca **true** Jeśli zostanie znaleziony w określonej kolumnie. W przeciwnym razie funkcja zwraca **false**.  
 
 ## <a name="getvalue"></a> CDynamicAccessor::GetValue
+
 Pobiera dane dla określonej kolumny.  
   
 ### <a name="syntax"></a>Składnia  
@@ -493,29 +539,33 @@ bool GetValue(const WCHAR* pColumnName, ctype* pData) const throw();
 ```  
   
 #### <a name="parameters"></a>Parametry  
- *ctype*  
- [in] Oparte na szablonach parametr, który obsługuje żadnego typu danych, z wyjątkiem typów ciągów (`CHAR*`, `WCHAR*`), które wymagają specjalnej obsługi. `GetValue` używa odpowiedni typ danych oparte na w tym miejscu Określ.  
+
+*ctype*<br/>
+[in] Oparte na szablonach parametr, który obsługuje żadnego typu danych, z wyjątkiem typów ciągów (`CHAR*`, `WCHAR*`), które wymagają specjalnej obsługi. `GetValue` używa odpowiedni typ danych oparte na w tym miejscu Określ.  
   
- *nColumn*  
- [in] Numer kolumny. Numery kolumn zaczynać od 1. Wartość 0 odwołuje się do kolumny zakładki, jeśli istnieje.  
+*nColumn*<br/>
+[in] Numer kolumny. Numery kolumn zaczynać od 1. Wartość 0 odwołuje się do kolumny zakładki, jeśli istnieje.  
   
- *pColumnName*  
- [in] Nazwa kolumny.  
+*pColumnName*<br/>
+[in] Nazwa kolumny.  
   
- *pData*  
- [out] Wskaźnik do zawartości dla określonej kolumny.  
+*pData*<br/>
+[out] Wskaźnik do zawartości dla określonej kolumny.  
   
 ### <a name="return-value"></a>Wartość zwracana  
- Jeśli chcesz przekazać dane ciągu, użyj wersji nieszablonową `GetValue`. Wersje nieszablonową tej metody zwrócić `void*`, który wskazuje na część buforu, który zawiera dane określonej kolumny. Zwraca wartość NULL, jeśli kolumna nie zostanie znaleziony.  
+
+Jeśli chcesz przekazać dane ciągu, użyj wersji nieszablonową `GetValue`. Wersje nieszablonową tej metody zwrócić `void*`, który wskazuje na część buforu, który zawiera dane określonej kolumny. Zwraca wartość NULL, jeśli kolumna nie zostanie znaleziony.  
   
- W przypadku wszystkich innych typów danych jest łatwiejszy w obsłudze oparte na szablonach wersje `GetValue`. Zwróć oparte na szablonach wersje **true** w przypadku powodzenia lub **false** w przypadku niepowodzenia.  
+W przypadku wszystkich innych typów danych jest łatwiejszy w obsłudze oparte na szablonach wersje `GetValue`. Zwróć oparte na szablonach wersje **true** w przypadku powodzenia lub **false** w przypadku niepowodzenia.  
   
 ### <a name="remarks"></a>Uwagi  
- Użyj wersji nieszablonową, aby zwrócić kolumn zawierających ciągi i oparte na szablonach wersje dla kolumny, które zawierają inne typy danych.  
+
+Użyj wersji nieszablonową, aby zwrócić kolumn zawierających ciągi i oparte na szablonach wersje dla kolumny, które zawierają inne typy danych.  
   
- W trybie debugowania, otrzymasz potwierdzenie Jeśli rozmiar *pData* jest nierówne rozmiar kolumny, na którą wskazuje.  
+W trybie debugowania, otrzymasz potwierdzenie Jeśli rozmiar *pData* jest nierówne rozmiar kolumny, na którą wskazuje.  
 
 ## <a name="setblobhandling"></a> CDynamicAccessor::SetBlobHandling
+
 Ustawia obiekt BLOB, Obsługa wartości bieżącego wiersza.  
   
 ### <a name="syntax"></a>Składnia  
@@ -525,21 +575,24 @@ bool SetBlobHandling(DBBLOBHANDLINGENUM eBlobHandling);
 ```  
   
 #### <a name="parameters"></a>Parametry  
- *eBlobHandling*  
- Określa sposób obsługi danych obiektów BLOB. Może upłynąć następujące wartości:  
+
+*eBlobHandling*<br/>
+Określa sposób obsługi danych obiektów BLOB. Może upłynąć następujące wartości:  
   
--   DBBLOBHANDLING_DEFAULT: Obsługi danych kolumny jest większa niż *nBlobSize* (jak ustawić przez `SetBlobSizeLimit`) jako dane obiektu BLOB i pobrać ją przy użyciu `ISequentialStream` lub `IStream` obiektu. Ta opcja spowoduje podjęcie próby powiązać każdy kolumny zawierającej dane, które są większe niż *nBlobSize* lub wymieniony jako DBTYPE_IUNKNOWN jako danych obiektów BLOB.  
+- DBBLOBHANDLING_DEFAULT: Obsługi danych kolumny jest większa niż *nBlobSize* (jak ustawić przez `SetBlobSizeLimit`) jako dane obiektu BLOB i pobrać ją przy użyciu `ISequentialStream` lub `IStream` obiektu. Ta opcja spowoduje podjęcie próby powiązać każdy kolumny zawierającej dane, które są większe niż *nBlobSize* lub wymieniony jako DBTYPE_IUNKNOWN jako danych obiektów BLOB.  
   
--   DBBLOBHANDLING_NOSTREAMS: Obsługi danych kolumny jest większa niż *nBlobSize* (jak ustawić przez `SetBlobSizeLimit`) jako dane obiektu BLOB i pobierania jej poprzez odwołanie do pamięci przydzielonej przez dostawcę, należące do klientów. Ta opcja jest przydatna w przypadku tabel, które mają więcej niż jednej kolumny obiektów BLOB, a dostawca obsługuje tylko jeden `ISequentialStream` obiektem w osobnym metody dostępu.  
+- DBBLOBHANDLING_NOSTREAMS: Obsługi danych kolumny jest większa niż *nBlobSize* (jak ustawić przez `SetBlobSizeLimit`) jako dane obiektu BLOB i pobierania jej poprzez odwołanie do pamięci przydzielonej przez dostawcę, należące do klientów. Ta opcja jest przydatna w przypadku tabel, które mają więcej niż jednej kolumny obiektów BLOB, a dostawca obsługuje tylko jeden `ISequentialStream` obiektem w osobnym metody dostępu.  
   
--   DBBLOBHANDLING_SKIP: Pomiń (nie tworzy wiązania) kolumny kwalifikujących się jako zawierające obiekty BLOB (akcesor powiązania nie lub pobrać wartości kolumny, ale nadal będzie pobierać, stan kolumny i długości).  
+- DBBLOBHANDLING_SKIP: Pomiń (nie tworzy wiązania) kolumny kwalifikujących się jako zawierające obiekty BLOB (akcesor powiązania nie lub pobrać wartości kolumny, ale nadal będzie pobierać, stan kolumny i długości).  
   
 ### <a name="remarks"></a>Uwagi  
- Należy wywołać `SetBlobHandling` przed wywołaniem `Open`.  
+
+Należy wywołać `SetBlobHandling` przed wywołaniem `Open`.  
   
- Metoda konstruktora [cdynamicaccessor —](../../data/oledb/cdynamicaccessor-class.md) ustawia obsługi wartość DBBLOBHANDLING_DEFAULT obiektu BLOB.
+Metoda konstruktora [cdynamicaccessor —](../../data/oledb/cdynamicaccessor-class.md) ustawia obsługi wartość DBBLOBHANDLING_DEFAULT obiektu BLOB.
 
 ## <a name="setblobsizelimit"></a> CDynamicAccessor::SetBlobSizeLimit
+
 Ustawia maksymalny rozmiar obiektu BLOB w bajtach.  
   
 ### <a name="syntax"></a>Składnia  
@@ -549,15 +602,18 @@ void SetBlobSizeLimit(DBLENGTH nBlobSize);
 ```  
   
 #### <a name="parameters"></a>Parametry  
- *nBlobSize*  
- Określa limit rozmiaru obiektów BLOB.  
+
+*nBlobSize*<br/>
+Określa limit rozmiaru obiektów BLOB.  
   
 ### <a name="remarks"></a>Uwagi  
- Ustawia maksymalny rozmiar obiektu BLOB w bajtach; kolumny danych większe niż ta wartość jest traktowana jako obiekt BLOB. Niektórzy dostawcy zapewniają bardzo duże rozmiary kolumn (na przykład 2 GB). Zamiast próbuje przydzielić pamięci dla kolumny ten rozmiar, będzie zazwyczaj spróbuj powiązać te kolumny jako obiekty BLOB. Dzięki temu nie trzeba przydzielić jej całą pamięć, ale nadal można odczytywać wszystkie dane bez obawy obcięcie. Jednakże istnieją przypadki, w których możesz chcieć wymusić `CDynamicAccessor` powiązać duże kolumny w ich typach danych natywnych. Aby to zrobić, należy wywołać `SetBlobSizeLimit` przed wywołaniem `Open`.  
+
+Ustawia maksymalny rozmiar obiektu BLOB w bajtach; kolumny danych większe niż ta wartość jest traktowana jako obiekt BLOB. Niektórzy dostawcy zapewniają bardzo duże rozmiary kolumn (na przykład 2 GB). Zamiast próbuje przydzielić pamięci dla kolumny ten rozmiar, będzie zazwyczaj spróbuj powiązać te kolumny jako obiekty BLOB. Dzięki temu nie trzeba przydzielić jej całą pamięć, ale nadal można odczytywać wszystkie dane bez obawy obcięcie. Jednakże istnieją przypadki, w których możesz chcieć wymusić `CDynamicAccessor` powiązać duże kolumny w ich typach danych natywnych. Aby to zrobić, należy wywołać `SetBlobSizeLimit` przed wywołaniem `Open`.  
   
- Metoda konstruktora [cdynamicaccessor —](../../data/oledb/cdynamicaccessor-class.md) Ustawia maksymalny rozmiar obiektu BLOB na wartość domyślną 8000 bajtów.  
+Metoda konstruktora [cdynamicaccessor —](../../data/oledb/cdynamicaccessor-class.md) Ustawia maksymalny rozmiar obiektu BLOB na wartość domyślną 8000 bajtów.  
 
 ## <a name="setlength"></a> CDynamicAccessor::SetLength
+
 Ustawia długość dla określonej kolumny.  
   
 ### <a name="syntax"></a>Składnia  
@@ -574,19 +630,22 @@ bool SetLength(const WCHAR* pColumnName,
 ```  
   
 #### <a name="parameters"></a>Parametry  
- *nColumn*  
- [in] Numer kolumny. Numery kolumn zaczynać od 1. Wartość 0 odwołuje się do kolumny zakładki, jeśli istnieje.  
+
+*nColumn*<br/>
+[in] Numer kolumny. Numery kolumn zaczynać od 1. Wartość 0 odwołuje się do kolumny zakładki, jeśli istnieje.  
   
- *nLength*  
- [in] Długość kolumny w bajtach.  
+*nLength*<br/>
+[in] Długość kolumny w bajtach.  
   
- *pColumnName*  
- [in] Wskaźnik na ciąg znaków zawierający nazwę kolumny.  
+*pColumnName*<br/>
+[in] Wskaźnik na ciąg znaków zawierający nazwę kolumny.  
   
 ### <a name="return-value"></a>Wartość zwracana  
- Zwraca **true** Jeśli długość określona kolumna jest ustawiona pomyślnie. W przeciwnym razie funkcja zwraca **false**.  
+
+Zwraca **true** Jeśli długość określona kolumna jest ustawiona pomyślnie. W przeciwnym razie funkcja zwraca **false**.  
 
 ## <a name="setstatus"></a> CDynamicAccessor::SetStatus
+
 Ustawia stan określonej kolumny.  
   
 ### <a name="syntax"></a>Składnia  
@@ -603,19 +662,22 @@ bool SetStatus(const WCHAR* pColumnName,
 ```  
   
 #### <a name="parameters"></a>Parametry  
- *nColumn*  
- [in] Numer kolumny. Numery kolumn zaczynać od 1. Wartość 0 odwołuje się do kolumny zakładki, jeśli istnieje.  
+
+*nColumn*<br/>
+[in] Numer kolumny. Numery kolumn zaczynać od 1. Wartość 0 odwołuje się do kolumny zakładki, jeśli istnieje.  
   
- *status*  
- [in] Stan kolumny. Zobacz [DBSTATUS](/previous-versions/windows/desktop/ms722617\(v=vs.85\)) w *OLE DB Podręcznik programisty* Aby uzyskać więcej informacji.  
+*status*<br/>
+[in] Stan kolumny. Zobacz [DBSTATUS](/previous-versions/windows/desktop/ms722617\(v=vs.85\)) w *OLE DB Podręcznik programisty* Aby uzyskać więcej informacji.  
   
- *pColumnName*  
- [in] Wskaźnik na ciąg znaków zawierający nazwę kolumny.  
+*pColumnName*<br/>
+[in] Wskaźnik na ciąg znaków zawierający nazwę kolumny.  
   
 ### <a name="return-value"></a>Wartość zwracana  
- Zwraca **true** Jeśli pomyślnie ustawiono stan określonej kolumny. W przeciwnym razie funkcja zwraca **false**. 
+
+Zwraca **true** Jeśli pomyślnie ustawiono stan określonej kolumny. W przeciwnym razie funkcja zwraca **false**. 
 
 ## <a name="setvalue"></a> CDynamicAccessor::SetValue
+
 Przechowuje dane do określonej kolumny.  
   
 ### <a name="syntax"></a>Składnia  
@@ -638,26 +700,29 @@ bool SetValue(
 ```  
   
 #### <a name="parameters"></a>Parametry  
- *ctype*  
- [in] Oparte na szablonach parametr, który obsługuje żadnego typu danych, z wyjątkiem typów ciągów (`CHAR*`, `WCHAR*`), które wymagają specjalnej obsługi. `GetValue` używa odpowiedni typ danych oparte na w tym miejscu Określ.  
+
+*ctype*<br/>
+[in] Oparte na szablonach parametr, który obsługuje żadnego typu danych, z wyjątkiem typów ciągów (`CHAR*`, `WCHAR*`), które wymagają specjalnej obsługi. `GetValue` używa odpowiedni typ danych oparte na w tym miejscu Określ.  
   
- *pColumnName*  
- [in] Wskaźnik na ciąg znaków zawierający nazwę kolumny.  
+*pColumnName*<br/>
+[in] Wskaźnik na ciąg znaków zawierający nazwę kolumny.  
   
- *Dane*  
- [in] Wskaźnik do pamięci zawierający dane.  
+*Dane*<br/>
+[in] Wskaźnik do pamięci zawierający dane.  
   
- *nColumn*  
- [in] Numer kolumny. Numery kolumn zaczynać od 1. Wartość 0 odwołuje się do kolumny zakładki, jeśli istnieje.  
+*nColumn*<br/>
+[in] Numer kolumny. Numery kolumn zaczynać od 1. Wartość 0 odwołuje się do kolumny zakładki, jeśli istnieje.  
   
 ### <a name="return-value"></a>Wartość zwracana  
- Jeśli chcesz ustawić ciąg danych, użyj wersji nieszablonową `GetValue`. Wersje nieszablonową tej metody zwrócić `void*`, który wskazuje na część buforu, który zawiera dane określonej kolumny. Zwraca wartość NULL, jeśli kolumna nie zostanie znaleziony.  
+
+Jeśli chcesz ustawić ciąg danych, użyj wersji nieszablonową `GetValue`. Wersje nieszablonową tej metody zwrócić `void*`, który wskazuje na część buforu, który zawiera dane określonej kolumny. Zwraca wartość NULL, jeśli kolumna nie zostanie znaleziony.  
   
- W przypadku wszystkich innych typów danych jest łatwiejszy w obsłudze oparte na szablonach wersje `GetValue`. Zwróć oparte na szablonach wersje **true** w przypadku powodzenia lub **false** w przypadku niepowodzenia.  
+W przypadku wszystkich innych typów danych jest łatwiejszy w obsłudze oparte na szablonach wersje `GetValue`. Zwróć oparte na szablonach wersje **true** w przypadku powodzenia lub **false** w przypadku niepowodzenia.  
 
 ## <a name="see-also"></a>Zobacz też  
- [Szablony konsumentów OLE DB](../../data/oledb/ole-db-consumer-templates-cpp.md)   
- [OLE DB — Kompendium szablonów konsumentów](../../data/oledb/ole-db-consumer-templates-reference.md)   
- [Klasa CAccessor](../../data/oledb/caccessor-class.md)   
- [Cdynamicparameteraccessor — klasa](../../data/oledb/cdynamicparameteraccessor-class.md)   
- [CManualAccessor, klasa](../../data/oledb/cmanualaccessor-class.md)
+
+[Szablony konsumentów OLE DB](../../data/oledb/ole-db-consumer-templates-cpp.md)<br/>
+[Szablony konsumentów OLE DB — dokumentacja](../../data/oledb/ole-db-consumer-templates-reference.md)<br/>
+[CAccessor, klasa](../../data/oledb/caccessor-class.md)<br/>
+[CDynamicParameterAccessor, klasa](../../data/oledb/cdynamicparameteraccessor-class.md)<br/>
+[CManualAccessor, klasa](../../data/oledb/cmanualaccessor-class.md)

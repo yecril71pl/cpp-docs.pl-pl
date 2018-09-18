@@ -16,18 +16,19 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0ad17614f693e313190dba9cc767c023981dec34
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: bb3949ea0db2f1667aecf1aeeefd922b192cbf41
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33318516"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46100594"
 ---
 # <a name="project-build-error-prj0050"></a>Błąd PRJ0050 kompilacji projektu
-Nie można zarejestrować dane wyjściowe. Upewnij się, że masz odpowiednie uprawnienia do modyfikacji rejestru.  
-  
- System kompilacji Visual C++ nie mógł zarejestrować dane wyjściowe kompilacji (plik dll lub .exe). Musisz być zalogowany jako administrator do modyfikacji rejestru.  
-  
- Jeśli tworzysz Biblioteka DLL będzie można zarejestrować biblioteki dll, ręcznie przy użyciu regsvr32.exe, to należy wyświetlić informacje dotyczące niepowodzenia kompilacji.  
-  
- Jeśli tworzysz nie Biblioteka DLL, sprawdź w dzienniku kompilacji dla polecenia, który powoduje błąd.
+
+Nie można zarejestrować dane wyjściowe. Upewnij się, że masz odpowiednie uprawnienia do modyfikowania rejestru.
+
+System kompilacji Visual C++ nie mógł zarejestrować dane wyjściowe kompilacji, (biblioteki dll lub .exe). Musisz zalogować się jako administrator, aby zmodyfikować rejestr.
+
+Jeśli tworzysz dll może próbować zarejestrować plik .dll, ręcznie przy użyciu regsvr32.exe, powinno to wyświetlenie informacji na temat przyczyny niepowodzenia kompilacji.
+
+Jeśli nie tworzysz dll, Przyjrzyj się polecenie, które powoduje błąd w dzienniku kompilacji.

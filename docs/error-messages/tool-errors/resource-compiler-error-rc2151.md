@@ -16,16 +16,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8349aa14de6aec96fa1b526cbcffbe79036f804d
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: a15f3f1237df9e4b706a2c2048dddd6d5db395d5
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33323475"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46109785"
 ---
 # <a name="resource-compiler-error-rc2151"></a>Błąd kompilatora zasobów RC2151
-Nie można ponownie użyć stałe typu string  
-  
- Używane są dwa razy w tej samej wartości **STRINGTABLE** instrukcji. Upewnij się, że są nie mieszanie nakładających się wartości dziesiętnej i szesnastkowej.  
-  
- Każdy identyfikator w **STRINGTABLE** muszą być unikatowe. Stałych ciągłe Użyj maksymalnej wydajności rozpoczynających na wielokrotnością 16.
+
+Nie można ponownie używać stałych ciągów
+
+W przypadku korzystania z taką samą wartość, dwa razy w **STRINGTABLE** instrukcji. Upewnij się, że są nie mieszanie nakładających się wartości dziesiętnej i szesnastkowej.
+
+Każdy identyfikator w **STRINGTABLE** muszą być unikatowe. Dla stałych ciągłego użycia maksymalną wydajność, która jest uruchamiana na wielokrotnością liczby 16.

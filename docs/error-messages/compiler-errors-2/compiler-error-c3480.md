@@ -1,5 +1,5 @@
 ---
-title: C3480 błąd kompilatora | Dokumentacja firmy Microsoft
+title: Błąd kompilatora C3480 | Dokumentacja firmy Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,47 +16,51 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 673eff58b09fe1f2bbfe8a7629594399e8ca6b22
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 1fd58a8c38ee6dc5f77ef280ba3b7a546a666cd6
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33259142"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46107867"
 ---
-# <a name="compiler-error-c3480"></a>C3480 błąd kompilatora
-"var": zmienna przechwytująca lambdę musi być z otaczającego zakresu funkcji  
-  
- Zmienna przechwytywania lambda nie pochodzi z otaczającego zakresu funkcji.  
-  
-### <a name="to-correct-this-error"></a>Aby poprawić ten błąd  
-  
--   Usuń zmienną z listy przechwytywania lambda wyrażenia.  
-  
-## <a name="example"></a>Przykład  
- Poniższy przykład generuje C3480, ponieważ zmienna `global` nie pochodzi z otaczającego zakresu funkcji:  
-  
-```  
-// C3480a.cpp  
-  
-int global = 0;  
-int main()  
-{  
-   [&global] { global = 5; }(); // C3480  
-}  
-```  
-  
-## <a name="example"></a>Przykład  
- Poniższy przykład usuwa C3480 przez usunięcie zmiennej `global` na liście przechwytywania wyrażenia lambda:  
-  
-```  
-// C3480b.cpp  
-  
-int global = 0;  
-int main()  
-{  
-   [] { global = 5; }();  
-}  
-```  
-  
-## <a name="see-also"></a>Zobacz też  
- [Wyrażenia lambda](../../cpp/lambda-expressions-in-cpp.md)
+# <a name="compiler-error-c3480"></a>Błąd kompilatora C3480
+
+"var": zmienna przechwytująca lambdę musi być z otaczającego zakresu funkcji
+
+Zmienna przechwytująca lambdę nie pochodzi z otaczającego zakresu funkcji.
+
+### <a name="to-correct-this-error"></a>Aby poprawić ten błąd
+
+- Usuń zmienną z listy przechwytywania wyrażenia lambda.
+
+## <a name="example"></a>Przykład
+
+Poniższy przykład generuje C3480, ponieważ zmienna `global` nie pochodzi z otaczającego zakresu funkcji:
+
+```
+// C3480a.cpp
+
+int global = 0;
+int main()
+{
+   [&global] { global = 5; }(); // C3480
+}
+```
+
+## <a name="example"></a>Przykład
+
+Poniższy przykład usuwa C3480, usuwając zmiennej `global` z listy przechwytywania wyrażenia lambda:
+
+```
+// C3480b.cpp
+
+int global = 0;
+int main()
+{
+   [] { global = 5; }();
+}
+```
+
+## <a name="see-also"></a>Zobacz też
+
+[Wyrażenia lambda](../../cpp/lambda-expressions-in-cpp.md)

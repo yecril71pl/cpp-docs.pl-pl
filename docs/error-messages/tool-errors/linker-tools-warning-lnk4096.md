@@ -16,14 +16,15 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ca6dedf18989341df82cacfde14f358c778d141e
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 264bbff052be7b37af1525392ffe0289fddef6d4
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33300608"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46104092"
 ---
 # <a name="linker-tools-warning-lnk4096"></a>Ostrzeżenie LNK4096 narzędzi konsolidatora
-/ BASE "numer" jest nieprawidłowa dla systemu Windows 95 i Windows 98; Obraz może nie działać.  
-  
- Określony adres podstawowy jest nieprawidłowy. Pliki wykonywalne systemu Windows 95 i Windows 98 musi mieć większe 0x400000 adres podstawowy. Aby uzyskać więcej informacji na adres podstawowy, zobacz [/BASE](../../build/reference/base-base-address.md) — opcja konsolidatora.
+
+/ BASE "number" jest nieprawidłowa dla Windows 95 i Windows 98. Obraz może nie działać.
+
+Adres podstawowy wskazana jest nieprawidłowy. Pliki wykonywalne systemu Windows 95 i Windows 98 musi mieć większą niż 0x400000 adres podstawowy. Aby uzyskać więcej informacji na temat adres podstawowy, zobacz [/BASE](../../build/reference/base-base-address.md) — opcja konsolidatora.

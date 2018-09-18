@@ -59,12 +59,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b82aa22c3cc1c217ba4dfd332c43f6663c94638e
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: fe5f3234738a16b4c072b667982d36032e30f7dd
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43761878"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46107120"
 ---
 # <a name="ioleobjectimpl-class"></a>Klasa IOleObjectImpl
 
@@ -76,13 +76,13 @@ Ta klasa implementuje `IUnknown` i jest główną interfejs, za pomocą którego
 ## <a name="syntax"></a>Składnia
 
 ```
-template<class T>  
+template<class T>
 class ATL_NO_VTABLE IOleObjectImpl : public IOleObject
 ```
 
 #### <a name="parameters"></a>Parametry
 
-*T*  
+*T*<br/>
 Z klasą pochodną `IOleObjectImpl`.
 
 ## <a name="members"></a>Elementy członkowskie
@@ -219,10 +219,10 @@ HRESULT DoVerbDiscardUndo(LPCRECT /* prcPosRect */, HWND /* hwndParent */);
 
 ### <a name="parameters"></a>Parametry
 
-*prcPosRec*  
+*prcPosRec*<br/>
 [in] Wskaźnik do prostokąta kontenera chce, aby formant Aby rysować na.
 
-*hwndParent*  
+*hwndParent*<br/>
 [in] Uchwyt okna zawierającego kontrolkę.
 
 ### <a name="return-value"></a>Wartość zwracana
@@ -239,10 +239,10 @@ HRESULT DoVerbHide(LPCRECT /* prcPosRect */, HWND /* hwndParent */);
 
 ### <a name="parameters"></a>Parametry
 
-*prcPosRec*  
+*prcPosRec*<br/>
 [in] Wskaźnik do prostokąta kontenera chce, aby formant Aby rysować na.
 
-*hwndParent*  
+*hwndParent*<br/>
 [in] Uchwyt okna zawierającego kontrolkę. Nie są używane w celu wykonania ATL.
 
 ### <a name="return-value"></a>Wartość zwracana
@@ -259,10 +259,10 @@ HRESULT DoVerbInPlaceActivate(LPCRECT prcPosRect, HWND /* hwndParent */);
 
 ### <a name="parameters"></a>Parametry
 
-*prcPosRec*  
+*prcPosRec*<br/>
 [in] Wskaźnik do prostokąta kontenera chce, aby formant Aby rysować na.
 
-*hwndParent*  
+*hwndParent*<br/>
 [in] Uchwyt okna zawierającego kontrolkę. Nie są używane w celu wykonania ATL.
 
 ### <a name="return-value"></a>Wartość zwracana
@@ -283,10 +283,10 @@ HRESULT DoVerbOpen(LPCRECT /* prcPosRect */, HWND /* hwndParent */);
 
 ### <a name="parameters"></a>Parametry
 
-*prcPosRec*  
+*prcPosRec*<br/>
 [in] Wskaźnik do prostokąta kontenera chce, aby formant Aby rysować na.
 
-*hwndParent*  
+*hwndParent*<br/>
 [in] Uchwyt okna zawierającego kontrolkę.
 
 ### <a name="return-value"></a>Wartość zwracana
@@ -303,10 +303,10 @@ HRESULT DoVerbPrimary(LPCRECT prcPosRect, HWND hwndParent);
 
 ### <a name="parameters"></a>Parametry
 
-*prcPosRec*  
+*prcPosRec*<br/>
 [in] Wskaźnik do prostokąta kontenera chce, aby formant Aby rysować na.
 
-*hwndParent*  
+*hwndParent*<br/>
 [in] Uchwyt okna zawierającego kontrolkę.
 
 ### <a name="return-value"></a>Wartość zwracana
@@ -327,10 +327,10 @@ HRESULT DoVerbShow(LPCRECT prcPosRect, HWND /* hwndParent */);
 
 ### <a name="parameters"></a>Parametry
 
-*prcPosRec*  
+*prcPosRec*<br/>
 [in] Wskaźnik do prostokąta kontenera chce, aby formant Aby rysować na.
 
-*hwndParent*  
+*hwndParent*<br/>
 [in] Uchwyt okna zawierającego kontrolkę. Nie są używane w celu wykonania ATL.
 
 ### <a name="return-value"></a>Wartość zwracana
@@ -347,10 +347,10 @@ HRESULT DoVerbUIActivate(LPCRECT prcPosRect, HWND /* hwndParent */);
 
 ### <a name="parameters"></a>Parametry
 
-*prcPosRec*  
+*prcPosRec*<br/>
 [in] Wskaźnik do prostokąta kontenera chce, aby formant Aby rysować na.
 
-*hwndParent*  
+*hwndParent*<br/>
 [in] Uchwyt okna zawierającego kontrolkę. Nie są używane w celu wykonania ATL.
 
 ### <a name="return-value"></a>Wartość zwracana
@@ -833,6 +833,6 @@ Zobacz [IOleObject::Update](/windows/desktop/api/oleidl/nf-oleidl-ioleobject-upd
 
 ## <a name="see-also"></a>Zobacz też
 
-[Klasa CComControl](../../atl/reference/ccomcontrol-class.md)   
-[Interfejsy kontrolki ActiveX](/windows/desktop/com/activex-controls-interfaces)   
+[Klasa CComControl](../../atl/reference/ccomcontrol-class.md)<br/>
+[Interfejsy kontrolki ActiveX](/windows/desktop/com/activex-controls-interfaces)<br/>
 [Klasa — Przegląd](../../atl/atl-class-overview.md)

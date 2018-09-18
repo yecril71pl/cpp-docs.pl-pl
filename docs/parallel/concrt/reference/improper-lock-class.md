@@ -18,15 +18,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 903a24a6007eb8693584cfd4eed96bd12ef3cdda
-ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
+ms.openlocfilehash: 19a4a150b2cdf067802a1220a77640f20a1fea51
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33695603"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46106197"
 ---
 # <a name="improperlock-class"></a>improper_lock — Klasa
-Ta klasa opisuje wyjątek, jeśli blokada jest nakładana nieprawidłowo.  
+Ta klasa opisuje wyjątek generowany, gdy jest blokada nieprawidłowo.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -43,7 +43,7 @@ class improper_lock : public std::exception;
 |[improper_lock](#ctor)|Przeciążone. Konstruuje `improper_lock exception`.|  
   
 ## <a name="remarks"></a>Uwagi  
- Podczas próby uzyskania blokady nie obsługującą rekursywnie na tym samym kontekście zazwyczaj zgłoszenia tego wyjątku.  
+ Zazwyczaj ten wyjątek jest zgłaszany, gdy podejmowana jest próba uzyskania rekursywnie blokady nie obsługującą, w tym samym kontekście.  
   
 ## <a name="inheritance-hierarchy"></a>Hierarchia dziedziczenia  
  `exception`  
@@ -66,8 +66,8 @@ improper_lock() throw();
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `_Message`  
- Komunikat opisowy błędu.  
+*_Message*<br/>
+Opisowy komunikat dotyczący błędu.  
   
 ## <a name="see-also"></a>Zobacz też  
  [Współbieżność Namespace](concurrency-namespace.md)   

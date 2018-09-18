@@ -18,29 +18,31 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 5ea8ddc8e683c0e5f0681bdf98cbddca180e4023
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: b4db77aae6050f5612c7da14c061e49db142669e
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33090513"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46106015"
 ---
 # <a name="data-source-programmatically-creating-a-table-in-an-odbc-data-source"></a>Źródło danych: programowe tworzenie tabeli w źródle danych ODBC
-W tym temacie wyjaśniono, jak utworzyć tabelę danych źródle, przy użyciu `ExecuteSQL` funkcji członkowskiej klasy `CDatabase`, przekazywanie funkcji ciąg, który zawiera **CREATE TABLE** instrukcji SQL.  
+
+W tym temacie wyjaśniono, jak utworzyć tabelę danych źródła, za pomocą `ExecuteSQL` funkcji składowej klasy typu `CDatabase`, przekazując ciąg, który zawiera funkcję **CREATE TABLE** instrukcji SQL.  
   
- Aby uzyskać ogólne informacje o w MFC ODBC — źródła danych, zobacz [źródła danych (ODBC)](../../data/odbc/data-source-odbc.md). Temat [źródła danych: programowe Konfigurowanie źródła danych ODBC](../../data/odbc/data-source-programmatically-configuring-an-odbc-data-source.md) opisano tworzenie źródła danych.  
+Aby uzyskać ogólne informacje na temat źródeł danych ODBC w MFC, zobacz [źródła danych (ODBC)](../../data/odbc/data-source-odbc.md). Temat [źródła danych: programowe Konfigurowanie źródła danych ODBC](../../data/odbc/data-source-programmatically-configuring-an-odbc-data-source.md) opisano tworzenie źródła danych.  
   
- Jeśli masz nawiązane źródła danych, można łatwo utworzyć tabele przy użyciu `ExecuteSQL` funkcji członkowskiej i **CREATE TABLE** instrukcji SQL. Na przykład, jeśli masz `CDatabase` obiektu o nazwie `myDB`, można użyć poniższego kodu MFC, aby utworzyć tabelę:  
+W przypadku źródła danych ustanowione możesz łatwo tworzyć tabele za pomocą `ExecuteSQL` funkcja elementu członkowskiego i **CREATE TABLE** instrukcji SQL. Na przykład, jeśli masz `CDatabase` obiektu o nazwie `myDB`, można użyć następujących kodu MFC do tworzenia tabeli:  
   
 ```  
 myDB.ExecuteSQL("CREATE TABLE OFFICES (OfficeID TEXT(4)" ",   
                          OfficeName TEXT(10))");  
 ```  
   
- Ten przykład kodu tworzy tabeli o nazwie "Oddziałów" dla połączenia źródła danych programu Microsoft Access obsługiwanego przez `myDB`; tabela zawiera dwa pola "OfficeID" i "OfficeName."  
+Ten przykład kodu tworzy tabelę o nazwie "Oddziałów" w Microsoft Access połączenia ze źródłem danych obsługiwane przez `myDB`; tabela zawiera dwa pola "OfficeID" i "OfficeName."  
   
 > [!NOTE]
->  Typy pól określone w **CREATE TABLE** instrukcji SQL może być różny w zależności od sterownika ODBC, którego używasz. Program Microsoft Query (rozpowszechnianej za pomocą programu Visual C++ 1.5) jest jednym ze sposobów odnajdywanie, jakie typy pól są dostępne dla źródła danych. W programie Microsoft Query, kliknij przycisk **pliku**, kliknij przycisk **Table_Definition**, wybierz tabelę ze źródła danych i przyjrzyj się typ pokazano **typu** pola kombi. Istnieje również składni SQL do tworzenia indeksów.  
+>  Typy pól określonych w **CREATE TABLE** instrukcji SQL może się różnić w zależności sterownika ODBC, którego używasz. Program Microsoft Query (rozpowszechniać za pomocą programu Visual C++ 1.5) jest jednym ze sposobów, aby dowiedzieć się, jakie typy pól są dostępne dla źródła danych. W programie Microsoft Query, kliknij przycisk **pliku**, kliknij przycisk **Table_Definition**, wybierz tabelę ze źródła danych i spójrz na typ objętego **typu** pola kombi. Aby utworzyć indeksy istnieje również składni języka SQL.  
   
 ## <a name="see-also"></a>Zobacz też  
- [Źródło danych (ODBC)](../../data/odbc/data-source-odbc.md)
+
+[Źródło danych (ODBC)](../../data/odbc/data-source-odbc.md)

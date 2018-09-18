@@ -1,5 +1,5 @@
 ---
-title: Kompilatora (poziom 3) ostrzeżenie C4511 | Dokumentacja firmy Microsoft
+title: Kompilator ostrzeżenie (poziom 3) C4511 | Dokumentacja firmy Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,14 +16,15 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 602b92d52860429a70b2339f35093ab85934fc89
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 8432b4aff0c4ac3526f99ba4faaf669e7c69ee72
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33293861"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46102596"
 ---
-# <a name="compiler-warning-level-3-c4511"></a>Kompilator C4511 ostrzegawcze (poziom 3)
-"class": nie można wygenerować konstruktora kopiującego  
-  
- Kompilator nie może wygenerować domyślny Konstruktor kopiujący dla klasy; klasę podstawową mogą mieć prywatnych Konstruktor kopiujący.
+# <a name="compiler-warning-level-3-c4511"></a>Kompilator ostrzeżenie (poziom 3) C4511
+
+"class": nie można wygenerować konstruktora kopiującego
+
+Kompilator nie może wygenerować domyślny konstruktora kopiującego klasy; Klasa bazowa może mieć prywatnych konstruktora kopiującego.

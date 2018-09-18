@@ -18,15 +18,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7973da83716e4dc99dc98b199421ab9d840a8380
-ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
+ms.openlocfilehash: f28096fccae4f24b236631b3c27178bda7e22771
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33705188"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46103987"
 ---
 # <a name="messagenotfound-class"></a>message_not_found — Klasa
-Ta klasa opisuje wyjątek, gdy nie można odnaleźć żądanej wiadomości jest blokiem obsługi wiadomości.  
+Ta klasa opisuje wyjątek generowany, gdy blok komunikatów jest nie można odnaleźć żądanej wiadomości.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -63,8 +63,8 @@ message_not_found() throw();
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `_Message`  
- Komunikat opisowy błędu.  
+*_Message*<br/>
+Opisowy komunikat dotyczący błędu.  
   
 ## <a name="see-also"></a>Zobacz też  
  [Współbieżność Namespace](concurrency-namespace.md)   

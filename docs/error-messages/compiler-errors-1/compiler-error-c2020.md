@@ -1,5 +1,5 @@
 ---
-title: C2020 błąd kompilatora | Dokumentacja firmy Microsoft
+title: Błąd kompilatora C2020 | Dokumentacja firmy Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,14 +16,15 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 267c71d987587ce1b4308a80f40cdc4fa9ecefc2
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 8b79bc9340e39d5cdc886db4b81d220bbfe88bbd
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33165325"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46099801"
 ---
-# <a name="compiler-error-c2020"></a>C2020 błąd kompilatora
-"członek": zmiana definicji elementu członkowskiego "class"  
-  
- Element członkowski odziedziczona z klasy podstawowej lub struktury, zostało ponownie zdefiniowane. Dziedziczone elementy członkowskie nie można ponownie zdefiniować, o ile nie jest zadeklarowany jako `virtual` w klasie podstawowej.
+# <a name="compiler-error-c2020"></a>Błąd kompilatora C2020
+
+"członek": redefinicja składowej "class"
+
+Składową odziedziczoną z klasy bazowej lub struktury zostało przedefiniowane. Nie można przedefiniować dziedziczone elementy członkowskie, o ile nie jest zadeklarowany jako `virtual` w klasie bazowej.

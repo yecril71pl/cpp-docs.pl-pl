@@ -1,5 +1,5 @@
 ---
-title: uint_4 — klasa | Dokumentacja firmy Microsoft
+title: uint_4, klasa | Dokumentacja firmy Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -278,12 +278,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 490242014a907455a9511cd54f5e46a809318691
-ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
+ms.openlocfilehash: fa93e1b7c406e1799946b56e29b9fa32a39b1996
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33694397"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46106301"
 ---
 # <a name="uint4-class"></a>uint_4 — Klasa
 Reprezentuje krótki wektor czterech liczb całkowitych bez znaku.  
@@ -296,7 +296,7 @@ class uint_4;
   
 ## <a name="members"></a>Elementy członkowskie  
   
-### <a name="public-typedefs"></a>Definicje typów publicznych  
+### <a name="public-typedefs"></a>Publiczne definicje typów  
   
 |Nazwa|Opis|  
 |----------|-----------------|  
@@ -306,7 +306,7 @@ class uint_4;
   
 |Nazwa|Opis|  
 |----------|-----------------|  
-|[uint_4 — Konstruktor](#uint_4__ctor) |Przeciążone. Domyślny konstruktor, inicjuje wszystkie elementy z 0.|  
+|[uint_4 — Konstruktor](#uint_4__ctor) |Przeciążone. Domyślny konstruktor, inicjuje wszystkie elementy wartością 0.|  
 
   
 ### <a name="public-methods"></a>Metody publiczne  
@@ -463,11 +463,11 @@ class uint_4;
 |uint_4::operator=||  
 |uint_4::operator-=||  
   
-### <a name="public-constants"></a>Publiczny — stałe  
+### <a name="public-constants"></a>Publiczne stałe  
   
 |Nazwa|Opis|  
 |----------|-----------------|  
-|[Size — stała](#size)||  
+|[rozmiar — stała](#size)||  
 
   
 ### <a name="public-data-members"></a>Publiczne elementy członkowskie danych  
@@ -611,9 +611,9 @@ class uint_4;
   
  **Namespace:** Concurrency::graphics  
   
-## <a name="uint_4__ctor"></a> uint_4 — 
+## <a name="uint_4__ctor"></a> uint_4 
 
-Domyślny konstruktor, inicjuje wszystkie elementy z 0.
+Domyślny konstruktor, inicjuje wszystkie elementy wartością 0.
   
 ## <a name="syntax"></a>Składnia  
   
@@ -649,23 +649,23 @@ explicit inline uint_4(
 ```  
   
 #### <a name="parameters"></a>Parametry  
- `_V0`  
- Wartość do zainicjowania elementu 0.  
+*_V0*<br/>
+Wartość do zainicjowania elementu 0.  
   
- `_V1`  
- Wartość zainicjować element 1.  
+*_V1*<br/>
+Wartość do zainicjowania elementu 1.  
   
- `_V2`  
- Wartość zainicjować element 2.  
+*_V2*<br/>
+Wartość można zainicjować element 2.  
   
- `_V3`  
- Wartość do zainicjowania elementu 3.  
+*_V3*<br/>
+Wartość do zainicjowania elementu 3.  
   
- `_V`  
- Wartość dla inicjowania.  
+*_V*<br/>
+Wartość inicjalizacji.  
   
- `_Other`  
- Obiekt używany do inicjowania.  
+*_Inne*<br/>
+Obiekt używany do inicjowania.  
   
 ## <a name=""></a> Rozmiar 
 

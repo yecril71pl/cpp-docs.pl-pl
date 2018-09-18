@@ -1,5 +1,5 @@
 ---
-title: Kompilatora (poziom 1) ostrzeżenie C4033 | Dokumentacja firmy Microsoft
+title: Kompilator ostrzeżenie (poziom 1) C4033 | Dokumentacja firmy Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,32 +16,33 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0c5df24b6b86bfc07c36b84cd6094515f9aa31f0
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 35df279ef7611a62ced5cb6291bdf17331850f0c
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33275983"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46102687"
 ---
-# <a name="compiler-warning-level-1-c4033"></a>Kompilator C4033 ostrzegawcze (poziom 1)
-"function" musi zwracać wartość  
-  
- Funkcja nie zwraca wartości. Niezdefiniowana wartość jest zwracana.  
-  
- Funkcje używające `return` bez wartości zwracanej musi być zadeklarowany jako typ `void`.  
-  
- Ten błąd jest dla kodu języka C.  
-  
- Poniższy przykład generuje C4033:  
-  
-```  
-// C4033.c  
-// compile with: /W1 /LD  
-int test_1(int x)   // C4033 expected  
-{  
-   if (x)  
-   {  
-      return;   // C4033  
-   }  
-}  
+# <a name="compiler-warning-level-1-c4033"></a>Kompilator ostrzeżenie (poziom 1) C4033
+
+'Funkcja' musi zwracać wartość
+
+Funkcja nie zwraca wartości. Niezdefiniowaną wartość jest zwracana.
+
+Funkcje, które używają `return` bez zwracana wartość musi być zadeklarowany jako typ `void`.
+
+Ten błąd jest dla kodu języka C.
+
+Poniższy przykład spowoduje wygenerowanie C4033:
+
+```
+// C4033.c
+// compile with: /W1 /LD
+int test_1(int x)   // C4033 expected
+{
+   if (x)
+   {
+      return;   // C4033
+   }
+}
 ```

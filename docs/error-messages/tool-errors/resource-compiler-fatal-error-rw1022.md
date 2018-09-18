@@ -16,24 +16,25 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f57bb435d17cf1d539d558b5dead9c299f83494a
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: caaefc045a31ca64aa9843927d550ef66285cb2e
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33319185"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46099853"
 ---
 # <a name="resource-compiler-fatal-error-rw1022"></a>Błąd krytyczny kompilatora zasobów RW1022
-**We/Wy błąd zapisu pliku**  
-  
- Kompilator zasobów nie można zapisać do pliku.  
-  
-### <a name="to-fix-by-checking-the-following-possible-causes"></a>Aby rozwiązać problem, sprawdzając następujące możliwe przyczyny  
-  
-1.  Za mało miejsca. Ilość wolnego miejsca musi wynosić co najmniej dwa razy rozmiar tworzonego pliku wykonywalnego.  
-  
-2.  Wolumin jest tylko do odczytu.  
-  
-3.  Uszkodzone sektory.  
-  
-4.  Nastąpiło naruszenie zasad współużytkowania.
+
+**Operacje We/Wy wystąpił błąd podczas zapisywania pliku**
+
+Kompilator zasobów nie można zapisać do pliku.
+
+### <a name="to-fix-by-checking-the-following-possible-causes"></a>Aby rozwiązać problem, sprawdzając następujące możliwe przyczyny
+
+1. Brak miejsca na dysku. Ilość wolnego miejsca musi wynosić co najmniej dwa razy rozmiaru pliku wykonywalnego, który tworzysz.
+
+1. Wolumin jest tylko do odczytu.
+
+1. Uszkodzonych sektorów.
+
+1. Naruszenie zasad współużytkowania.

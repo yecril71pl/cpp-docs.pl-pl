@@ -17,73 +17,76 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 9385882ec2cb24aefd1a319615250b5797bc0d1c
-ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
+ms.openlocfilehash: 6e5282d1944ca789e56ac6890c10f41c15ec59e4
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "42464559"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46111280"
 ---
 # <a name="open-database-connectivity-odbc"></a>Open Database Connectivity (ODBC)
+
 Biblioteka Microsoft Foundation Classes (MFC) dostarcza klas do programowania z Open Database Connectivity (ODBC). Począwszy od programu Visual Studio 2015 i ODBC programu SQL Server 2012 jest preferowanym sposobem łączenia ze źródłami danych SQL.
   
- Aby uzyskać więcej informacji o korzystaniu z interfejsu API ODBC bez MFC, zobacz [Open Database Connectivity (ODBC)](/previous-versions/windows/desktop/ms710252\(v=vs.85\)) zestawu SDK w bibliotece MSDN.  
+Aby uzyskać więcej informacji o korzystaniu z interfejsu API ODBC bez MFC, zobacz [Open Database Connectivity (ODBC)](/previous-versions/windows/desktop/ms710252\(v=vs.85\)) zestawu SDK w bibliotece MSDN.  
   
   
 ## <a name="in-this-section"></a>W tej sekcji  
   
--   [ODBC](odbc-basics.md)— standard otwartego łącza baz danych i interfejsu API  
+- [ODBC](odbc-basics.md)— standard otwartego łącza baz danych i interfejsu API  
   
--   [Jakie Obsługa MFC jest zapewniona](odbc-and-mfc.md) dla programowania ODBC  
+- [Jakie Obsługa MFC jest zapewniona](odbc-and-mfc.md) dla programowania ODBC  
   
--   [Jakie sterowniki ODBC są dostępne](odbc-driver-list.md)  
+- [Jakie sterowniki ODBC są dostępne](odbc-driver-list.md)  
   
--   [Łączenie ze źródłami danych ODBC](data-source-managing-connections-odbc.md)  
+- [Łączenie ze źródłami danych ODBC](data-source-managing-connections-odbc.md)  
   
--   [Zarejestruj pola programu Exchange (RFX)](record-field-exchange-rfx.md) między bazą danych a obiektem rekordem  
+- [Zarejestruj pola programu Exchange (RFX)](record-field-exchange-rfx.md) między bazą danych a obiektem rekordem  
   
--   [ODBC — zestawy rekordów](recordset-odbc.md)  
+- [ODBC — zestawy rekordów](recordset-odbc.md)  
   
--   [SQL](sql.md) dla ODBC  
+- [SQL](sql.md) dla ODBC  
   
--   [Transakcje bazy danych](transaction-odbc.md)  
+- [Transakcje bazy danych](transaction-odbc.md)  
   
--   [Określanie schematu źródła danych ODBC](data-source-determining-the-schema-of-the-data-source-odbc.md) w czasie wykonywania  
+- [Określanie schematu źródła danych ODBC](data-source-determining-the-schema-of-the-data-source-odbc.md) w czasie wykonywania  
   
--   [Programowe Konfigurowanie źródła danych ODBC](data-source-programmatically-configuring-an-odbc-data-source.md)  
+- [Programowe Konfigurowanie źródła danych ODBC](data-source-programmatically-configuring-an-odbc-data-source.md)  
   
--   [Programowe tworzenie tabeli w źródle danych ODBC](data-source-programmatically-creating-a-table-in-an-odbc-data-source.md)  
+- [Programowe tworzenie tabeli w źródle danych ODBC](data-source-programmatically-creating-a-table-in-an-odbc-data-source.md)  
   
--   [Zbiorcze pobieranie rekordów](recordset-fetching-records-in-bulk-odbc.md)  
+- [Zbiorcze pobieranie rekordów](recordset-fetching-records-in-bulk-odbc.md)  
   
--   [Dostosowywanie instrukcji SQL zestawu rekordów](sql-customizing-your-recordsets-sql-statement-odbc.md)  
+- [Dostosowywanie instrukcji SQL zestawu rekordów](sql-customizing-your-recordsets-sql-statement-odbc.md)  
   
--   [Wykonanie bezpośrednich wywołań SQL](sql-making-direct-sql-calls-odbc.md)  
+- [Wykonanie bezpośrednich wywołań SQL](sql-making-direct-sql-calls-odbc.md)  
   
--   [Wykonanie bezpośrednich wywołań do interfejsu API ODBC](odbc-calling-odbc-api-functions-directly.md)  
+- [Wykonanie bezpośrednich wywołań do interfejsu API ODBC](odbc-calling-odbc-api-functions-directly.md)  
   
--   [Jak działają klas baz danych przy użyciu architektury dokument/widok MFC?](working-with-documents-and-views.md)  
+- [Jak działają klas baz danych przy użyciu architektury dokument/widok MFC?](working-with-documents-and-views.md)  
   
--   [Lista sterowników ODBC](odbc-driver-list.md)  
+- [Lista sterowników ODBC](odbc-driver-list.md)  
   
 ## <a name="odbc-database-tasks"></a>Zadania bazy danych ODBC  
- Te zadania są oparte na bibliotece MFC [ODBC](odbc-basics.md) klasy. Aby uzyskać więcej informacji o korzystaniu z interfejsu API ODBC bez MFC, zobacz [Open Database Connectivity (ODBC)](/previous-versions/windows/desktop/ms710252\(v=vs.85\)) zestawu SDK.  
+
+Te zadania są oparte na bibliotece MFC [ODBC](odbc-basics.md) klasy. Aby uzyskać więcej informacji o korzystaniu z interfejsu API ODBC bez MFC, zobacz [Open Database Connectivity (ODBC)](/previous-versions/windows/desktop/ms710252\(v=vs.85\)) zestawu SDK.  
   
--   [Zainstaluj i Rozpocznij pracę z ODBC](installing-and-getting-started-with-odbc.md)  
+- [Zainstaluj i Rozpocznij pracę z ODBC](installing-and-getting-started-with-odbc.md)  
   
--   [Projektowanie i tworzenie aplikacji bazy danych ODBC](design-and-create-an-odbc-database-application.md)  
+- [Projektowanie i tworzenie aplikacji bazy danych ODBC](design-and-create-an-odbc-database-application.md)  
   
--   [Używanie formularzy bazy danych (widoków rekordów) z ODBC](use-database-forms-record-views-with-odbc.md)  
+- [Używanie formularzy bazy danych (widoków rekordów) z ODBC](use-database-forms-record-views-with-odbc.md)  
   
--   [Używanie ODBC do pracy z innymi użytkownikami](use-odbc-to-work-with-other-users.md)  
+- [Używanie ODBC do pracy z innymi użytkownikami](use-odbc-to-work-with-other-users.md)  
   
--   [Praca z połączeniami bazy danych ODBC](work-with-odbc-database-connections.md)  
+- [Praca z połączeniami bazy danych ODBC](work-with-odbc-database-connections.md)  
   
--   [Praca z ODBC i sterownikami](work-with-odbc-and-drivers.md)  
+- [Praca z ODBC i sterownikami](work-with-odbc-and-drivers.md)  
   
--   [Korzystanie z biblioteki kursorów ODBC](use-the-odbc-cursor-library.md)  
+- [Korzystanie z biblioteki kursorów ODBC](use-the-odbc-cursor-library.md)  
   
--   [Używanie zestawów rekordów MFC ODBC](use-mfc-odbc-recordsets.md)  
+- [Używanie zestawów rekordów MFC ODBC](use-mfc-odbc-recordsets.md)  
   
 ## <a name="see-also"></a>Zobacz też  
- [Programowanie (MFC/ATL) dostępu do danych](../../data/data-access-programming-mfc-atl.md)
+
+[Programowanie (MFC/ATL) dostępu do danych](../../data/data-access-programming-mfc-atl.md)

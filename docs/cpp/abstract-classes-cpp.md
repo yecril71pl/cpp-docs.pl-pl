@@ -17,12 +17,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 610e98e15e4e7bd20802d39a70354a20076ce1a5
-ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
+ms.openlocfilehash: 91ed7cb82bbf9036a32ee20ecf33a8138086a98c
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/01/2018
-ms.locfileid: "39407910"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46103955"
 ---
 # <a name="abstract-classes-c"></a>Klasy abstrakcyjne (C++)
 
@@ -97,4 +97,5 @@ Gdy obiekt wskazywany przez `pDerived` zostanie usunięty, destruktor klasy `der
 > W powyższym przykładzie czystą funkcję wirtualną `base::~base` jest wywoływana niejawnie z `derived::~derived`. Istnieje również możliwość wywołania czystych funkcji wirtualnych, które jawnie przy użyciu funkcji składowej w pełni kwalifikowanej nazwy.
 
 ## <a name="see-also"></a>Zobacz także
-[Dziedziczenie](../cpp/inheritance-cpp.md)  
+
+[Dziedziczenie](../cpp/inheritance-cpp.md)

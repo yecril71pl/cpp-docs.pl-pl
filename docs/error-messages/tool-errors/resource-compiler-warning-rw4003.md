@@ -16,14 +16,15 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0d584811e056995e19cac0ec68cb58f25ccc921e
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: f800fc37d41102044c0b8b88921d8bad216d5984
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33322003"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46101127"
 ---
 # <a name="resource-compiler-warning-rw4003"></a>Ostrzeżenie RW4003 kompilatora zasobów
-SHIFT lub CTRL bez VIRTKEY  
-  
- W zasób tabeli akceleratora SHIFT lub CTRL wymaga VIRTKEY. Ponieważ SHIFT i sterowania są oznaczone jako flagi bitów skrótów typu VIRTKEY, nie mogą istnieć niezależnie od VIRTKEY.
+
+SHIFT lub CTRL określono VIRTKEY
+
+Zasób tabeli akceleratora SHIFT lub CTRL wymagane są VIRTKEY. Ponieważ SHIFT i KONTROLKI są oznaczone jako flagi bitów w akceleratorze typu VIRTKEY, nie mogą istnieć niezależnie od VIRTKEY.

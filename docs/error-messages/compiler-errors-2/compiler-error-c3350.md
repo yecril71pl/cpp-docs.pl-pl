@@ -1,5 +1,5 @@
 ---
-title: C3350 błąd kompilatora | Dokumentacja firmy Microsoft
+title: Błąd kompilatora C3350 | Dokumentacja firmy Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,35 +16,36 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 89a78e730984ed44be8155dd2167d29ef987f713
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 809145755242146b1d047947df26551d005ea002
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33247569"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46098464"
 ---
-# <a name="compiler-error-c3350"></a>C3350 błąd kompilatora
-"delegowanie": Konstruktor delegata oczekuje liczba argumentów  
-  
- Podczas tworzenia wystąpienia delegata, należy podać dwa argumenty wystąpienia typu zawierającego delegata funkcji i funkcji.  
-  
- Poniższy przykład generuje C3350:  
-  
-```  
-// C3350.cpp  
-// compile with: /clr  
-delegate void SumDelegate();  
-  
-public ref class X {  
-public:  
-   void F() {}  
-   static void F2() {}  
-};  
-  
-int main() {  
-   X ^ MyX = gcnew X();  
-   SumDelegate ^ pSD = gcnew SumDelegate();   // C3350  
-   SumDelegate ^ pSD1 = gcnew SumDelegate(MyX, &X::F);  
-   SumDelegate ^ pSD2 = gcnew SumDelegate(&X::F2);  
-}  
-```  
+# <a name="compiler-error-c3350"></a>Błąd kompilatora C3350
+
+"delegowanie": Konstruktor delegata oczekuje numer następującej liczby argumentów:
+
+Podczas tworzenia wystąpienia obiektu delegowanego musi pomyślnie przejść dwa argumenty, wystąpienie typu zawierającego funkcja delegata i funkcji.
+
+Poniższy przykład spowoduje wygenerowanie C3350:
+
+```
+// C3350.cpp
+// compile with: /clr
+delegate void SumDelegate();
+
+public ref class X {
+public:
+   void F() {}
+   static void F2() {}
+};
+
+int main() {
+   X ^ MyX = gcnew X();
+   SumDelegate ^ pSD = gcnew SumDelegate();   // C3350
+   SumDelegate ^ pSD1 = gcnew SumDelegate(MyX, &X::F);
+   SumDelegate ^ pSD2 = gcnew SumDelegate(&X::F2);
+}
+```

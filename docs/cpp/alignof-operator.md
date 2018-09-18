@@ -22,82 +22,85 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6a7ab2eb5f33db2a62e745756971ee29f84c25c8
-ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
+ms.openlocfilehash: ffea0fdf40f7ef794563849f97b0b68631b9734e
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/01/2018
-ms.locfileid: "39408537"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46099788"
 ---
 # <a name="alignof-operator"></a>Operator __alignof
-C ++ 11 wprowadza **alignof** operator, który zwraca wyrównanie, w bajtach dla określonego typu. Dla uzyskania maksymalnej przenośności należy użyć operatora alignof zamiast operator __alignof specyficzne dla firmy Microsoft.  
-  
- **Microsoft Specific**  
-  
- Zwraca wartość typu `size_t` czyli wymóg wyrównania tego typu.  
-  
-## <a name="syntax"></a>Składnia  
-  
-```cpp  
+
+C ++ 11 wprowadza **alignof** operator, który zwraca wyrównanie, w bajtach dla określonego typu. Dla uzyskania maksymalnej przenośności należy użyć operatora alignof zamiast operator __alignof specyficzne dla firmy Microsoft.
+
+**Microsoft Specific**
+
+Zwraca wartość typu `size_t` czyli wymóg wyrównania tego typu.
+
+## <a name="syntax"></a>Składnia
+
+```cpp
   __alignof( type )
-```  
-  
-## <a name="remarks"></a>Uwagi  
- Na przykład:  
-  
-|Wyrażenie|Wartość|  
-|----------------|-----------|  
-|**__alignof (char)**|1|  
-|**__alignof (krótki)**|2|  
-|**__alignof (int)**|4|  
-|**__alignof ( \__int64)**|8|  
-|**__alignof (zmiennoprzecinkowego)**|4|  
-|**__alignof (podwójny)**|8|  
-|**__alignof (char\* )**|4|  
-  
- **__Alignof** wartość jest taka sama jak wartość `sizeof` dla typów podstawowych. Rozważmy jednak, w tym przykładzie:  
-  
-```cpp 
-typedef struct { int a; double b; } S;  
-// __alignof(S) == 8  
-```  
-  
- W tym przypadku **__alignof** wartość jest wymóg wyrównania największego elementu w strukturze.  
-  
- Podobnie Aby uzyskać  
-  
-```cpp 
-typedef __declspec(align(32)) struct { int a; } S;  
-```  
-  
- `__alignof(S)` jest równa `32`.  
-  
- Jednym z zastosowań **__alignof** byłoby jako parametr do jednego z własnych procedur alokacji pamięci. Na przykład, biorąc pod uwagę następujące zdefiniowana struktura `S`, może wywołać procedurę alokacji pamięci o nazwie `aligned_malloc` można przydzielić pamięci na granicy określonego wyrównania.  
-  
-```cpp 
-typedef __declspec(align(32)) struct { int a; double b; } S;  
-int n = 50; // array size  
-S* p = (S*)aligned_malloc(n * sizeof(S), __alignof(S));  
-```  
-  
- Aby uzyskać więcej informacji na temat modyfikowania wyrównania zobacz:  
-  
--   [pakiet](../preprocessor/pack.md)  
-  
--   [align](../cpp/align-cpp.md)  
-  
--   [__unaligned](../cpp/unaligned.md)  
-  
--   [/Zp (Wyrównanie składowej struktury)](../build/reference/zp-struct-member-alignment.md)  
-  
--   [Przykłady wyrównania struktury](../build/examples-of-structure-alignment.md) — x64 określonych 64  
-  
- Aby uzyskać więcej informacji na temat różnic w wyrównania w kodzie x86 i x64 zobacz:  
-  
--   [Konflikty z kompilatorem x86](../build/conflicts-with-the-x86-compiler.md)  
-  
-**END specyficzny dla Microsoft**  
-  
-## <a name="see-also"></a>Zobacz także  
- [Wyrażenia z operatorami Jednoargumentowymi](../cpp/expressions-with-unary-operators.md)   
- [Słowa kluczowe](../cpp/keywords-cpp.md)
+```
+
+## <a name="remarks"></a>Uwagi
+
+Na przykład:
+
+|Wyrażenie|Wartość|
+|----------------|-----------|
+|**__alignof (char)**|1|
+|**__alignof (krótki)**|2|
+|**__alignof (int)**|4|
+|**__alignof ( \__int64)**|8|
+|**__alignof (zmiennoprzecinkowego)**|4|
+|**__alignof (podwójny)**|8|
+|**__alignof (char\* )**|4|
+
+**__Alignof** wartość jest taka sama jak wartość `sizeof` dla typów podstawowych. Rozważmy jednak, w tym przykładzie:
+
+```cpp
+typedef struct { int a; double b; } S;
+// __alignof(S) == 8
+```
+
+W tym przypadku **__alignof** wartość jest wymóg wyrównania największego elementu w strukturze.
+
+Podobnie Aby uzyskać
+
+```cpp
+typedef __declspec(align(32)) struct { int a; } S;
+```
+
+`__alignof(S)` jest równa `32`.
+
+Jednym z zastosowań **__alignof** byłoby jako parametr do jednego z własnych procedur alokacji pamięci. Na przykład, biorąc pod uwagę następujące zdefiniowana struktura `S`, może wywołać procedurę alokacji pamięci o nazwie `aligned_malloc` można przydzielić pamięci na granicy określonego wyrównania.
+
+```cpp
+typedef __declspec(align(32)) struct { int a; double b; } S;
+int n = 50; // array size
+S* p = (S*)aligned_malloc(n * sizeof(S), __alignof(S));
+```
+
+Aby uzyskać więcej informacji na temat modyfikowania wyrównania zobacz:
+
+- [pakiet](../preprocessor/pack.md)
+
+- [align](../cpp/align-cpp.md)
+
+- [__unaligned](../cpp/unaligned.md)
+
+- [/Zp (Wyrównanie składowej struktury)](../build/reference/zp-struct-member-alignment.md)
+
+- [Przykłady wyrównania struktury](../build/examples-of-structure-alignment.md) — x64 określonych 64
+
+Aby uzyskać więcej informacji na temat różnic w wyrównania w kodzie x86 i x64 zobacz:
+
+- [Konflikty z kompilatorem x86](../build/conflicts-with-the-x86-compiler.md)
+
+**END specyficzny dla Microsoft**
+
+## <a name="see-also"></a>Zobacz także
+
+[Wyrażenia z operatorami jednoargumentowymi](../cpp/expressions-with-unary-operators.md)<br/>
+[Słowa kluczowe](../cpp/keywords-cpp.md)

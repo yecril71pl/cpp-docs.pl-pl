@@ -14,17 +14,19 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f258740c32cf232c93926efb3efa98e2596ff108
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: eafccc1a2dda9143a39516878851f2c3a62a2d32
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32381671"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46103337"
 ---
 # <a name="file-position-in-append-mode"></a>Położenie pliku w trybie append
-**ANSI 4.9.3** Określa, czy wskaźnik położenia pliku strumienia trybu append początkowo znajduje się na początku lub na końcu pliku  
-  
- Gdy plik jest otwarty w trybie append, wskaźnika położenia pliku początkowo punktów na końcu pliku.  
-  
-## <a name="see-also"></a>Zobacz też  
- [Funkcje bibliotek](../c-language/library-functions.md)
+
+**ANSI 4.9.3** tego, czy wskaźnik położenia pliku strumienia w trybie append początkowo jest umieszczony na początku lub na końcu pliku
+
+Gdy plik jest otwarty w trybie append, wskaźnik pozycji pliku jest początkowo wskazuje na końcu pliku.
+
+## <a name="see-also"></a>Zobacz też
+
+[Funkcje bibliotek](../c-language/library-functions.md)

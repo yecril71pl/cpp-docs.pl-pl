@@ -1,5 +1,5 @@
 ---
-title: C2369 błąd kompilatora | Dokumentacja firmy Microsoft
+title: Błąd kompilatora C2369 | Dokumentacja firmy Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,24 +16,25 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b1c97f8451e6807e6b78148a7027c37ccc967bd4
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 4cce5784c0ff56498922d83ff61350a6c992c76c
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33195360"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46098191"
 ---
-# <a name="compiler-error-c2369"></a>C2369 błąd kompilatora
-"array": zmiana definicji; różne indeksy dolne  
-  
- Tablica jest już zadeklarowany z inny indeks dolny.  
-  
- Poniższy przykład generuje C2369:  
-  
-```  
-// C2369.cpp  
-// compile with: /c  
-int a[10];  
-int a[20];   // C2369  
-int b[20];   // OK  
+# <a name="compiler-error-c2369"></a>Błąd kompilatora C2369
+
+"array": zmiana definicji; różne indeksy
+
+Tablica jest już zadeklarowany za pomocą różnych indeks dolny.
+
+Poniższy przykład spowoduje wygenerowanie C2369:
+
+```
+// C2369.cpp
+// compile with: /c
+int a[10];
+int a[20];   // C2369
+int b[20];   // OK
 ```

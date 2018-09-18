@@ -16,23 +16,24 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 72edd9e75dbc781355396e38f767a64c1ded3aa9
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: b9b47b347e11e640425bc7840a0f78a33e9e3b7e
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33302584"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46113425"
 ---
 # <a name="linker-tools-warning-lnk4092"></a>Ostrzeżenie LNK4092 narzędzi konsolidatora
-współużytkowana, zapisywalna sekcja "sekcji" zawiera relokacje; Obraz może nie działać poprawnie  
-  
- Konsolidator emituje to ostrzeżenie, gdy mają współdzielonej sekcji, aby ostrzec o potencjalnie poważny problem.  
-  
- Jednym ze sposobów udostępniania danych między wieloma procesami jest oznaczenie sekcji jako "udostępnione". Jednak oznaczenie sekcji jako udostępniony mogą powodować problemy. Na przykład masz bibliotekę DLL, która zawiera deklaracje podobny do tego w sekcji udostępnionych danych:  
-  
-```  
-int var = 1;  
-int *pvar = &var;  
-```  
-  
- Nie można rozpoznać konsolidator `pvar` , ponieważ jej wartość zależy od tego, gdzie plik DLL, który jest ładowany w pamięci, dlatego umieszcza rekord relokacji w bibliotece DLL. Gdy plik DLL, który jest ładowany do pamięci, adres `var` można rozwiązać ten problem i `pvar` przypisane. Jeśli inny proces ładuje bibliotekę DLL tego samego, ale nie można załadować w taki sam adres, relokacji dla adresu `var` zostaną zaktualizowane dla drugiego proces i przestrzeń adresowa procesu pierwszy wskaże niewłaściwy adres.
+
+współużytkowana, zapisywalna sekcja "section" zawiera relokacje; Obraz może nie działać poprawnie
+
+Konsolidator emituje to ostrzeżenie, zawsze wtedy, gdy masz udostępnionej sekcji, aby ostrzec o potencjalnie poważny problem.
+
+Jednym ze sposobów udostępniania danych między wiele procesów jest do oznaczania sekcji jako "udostępnione". Jednakże oznaczanie sekcji jako udostępniony może powodować problemy. Na przykład masz biblioteki DLL, która zawiera deklaracje następująco w sekcji udostępnionych danych:
+
+```
+int var = 1;
+int *pvar = &var;
+```
+
+Nie można rozpoznać konsolidator `pvar` , ponieważ jej wartość zależy od tego, gdzie biblioteki DLL jest ładowany w pamięci, dlatego umieszcza rekord relokacji w bibliotece DLL. Jeśli biblioteka DLL jest ładowany do pamięci, adres `var` może zostać rozpoznany i `pvar` przypisane. Jeśli inny proces ładuje tej samej bibliotece DLL, ale nie można załadować w taki sam adres, relokacja dla adresu `var` zostaną zaktualizowane do drugiego procesu i przestrzeń adresową pierwszy proces wskaże niewłaściwy adres.

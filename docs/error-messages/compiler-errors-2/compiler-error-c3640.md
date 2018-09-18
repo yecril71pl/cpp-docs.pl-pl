@@ -1,5 +1,5 @@
 ---
-title: C3640 błąd kompilatora | Dokumentacja firmy Microsoft
+title: Błąd kompilatora C3640 | Dokumentacja firmy Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,29 +16,30 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f8ec2e22033ea4cc1b475ab1f838bb77d96916e7
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: f032f96d4e7af48ad98a75f2bf62058121f135d5
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33267189"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46109200"
 ---
-# <a name="compiler-error-c3640"></a>C3640 błąd kompilatora
-"członek": funkcja członkowska odwołanie lub wirtualna lokalnej klasy musi być zdefiniowana  
-  
- Kompilator wymaga niektórych funkcji, które ma zostać zdefiniowana.  
-  
- Poniższy przykład generuje C3640:  
-  
-```  
-// C3640.cpp  
-void f()   
-{  
-   struct S  
-   {  
-      virtual void f1();   // C3640  
-      // Try the following line instead:  
-      // virtual void f1(){}  
-   };  
-}  
+# <a name="compiler-error-c3640"></a>Błąd kompilatora C3640
+
+"członek": odwołanie lub wirtualna składowa lokalnej klasy musi być zdefiniowany.
+
+Kompilator wymaga pewnych funkcji, należy zdefiniować.
+
+Poniższy przykład spowoduje wygenerowanie C3640:
+
+```
+// C3640.cpp
+void f()
+{
+   struct S
+   {
+      virtual void f1();   // C3640
+      // Try the following line instead:
+      // virtual void f1(){}
+   };
+}
 ```

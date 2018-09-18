@@ -1,5 +1,5 @@
 ---
-title: C2919 błąd kompilatora | Dokumentacja firmy Microsoft
+title: Błąd kompilatora C2919 | Dokumentacja firmy Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,16 +16,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c5e2eb2a32f1a906814f5b347ba1ebf13eba71ff
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 5d6ee01e32cd1855855fa6ac071af159be8bac0d
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33245805"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46106834"
 ---
-# <a name="compiler-error-c2919"></a>C2919 błąd kompilatora
-'type': nie można używać operatorów na publikowanej powierzchni typu WinRT  
-  
- System typów środowiska wykonawczego systemu Windows nie obsługuje funkcji Członkowskich operatora w publikowanej powierzchni typu. Jest to, ponieważ nie wszystkie języki, jaką może wykorzystać funkcje Członkowskie operatora. Operator prywatny lub wewnętrzny można utworzyć funkcji elementów członkowskich, które mogą być wywoływane z kodu C++ w tej samej jednostce kompilacji lub klasy.  
-  
- Aby rozwiązać ten problem, Usuń operator funkcji członkowskiej z interfejs publiczny, lub zmień ją na funkcji o nazwie elementu członkowskiego. Na przykład zamiast z `operator==`, nazwy funkcji członkowskiej `Equals`.
+# <a name="compiler-error-c2919"></a>Błąd kompilatora C2919
+
+"type": nie można używać operatorów na publikowanej powierzchni typu WinRT
+
+System typów środowiska wykonawczego Windows nie obsługuje operatora elementów członkowskich w publikowanej powierzchni typu. Jest to, ponieważ nie wszystkie języki mogą wykorzystywać operator elementów członkowskich. Operator prywatny lub wewnętrzny można utworzyć funkcji elementów członkowskich, które mogą być wywoływane z poziomu kodu C++ w tej samej jednostce klasy lub kompilacji.
+
+Aby rozwiązać ten problem, Usuń operatora funkcji składowej z publicznego interfejsu, lub zmień go na funkcję nazwanego elementu członkowskiego. Na przykład, zamiast z `operator==`, nadaj nazwę funkcji składowej `Equals`.

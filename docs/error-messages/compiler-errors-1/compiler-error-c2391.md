@@ -1,5 +1,5 @@
 ---
-title: C2391 błąd kompilatora | Dokumentacja firmy Microsoft
+title: Błąd kompilatora C2391 | Dokumentacja firmy Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,32 +16,33 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a16ed19f5cac9d6c23a3f709e40fc290223e93c7
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 1201651ffc52dae7b8f184895f8005750ee4697e
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33224768"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46102375"
 ---
-# <a name="compiler-error-c2391"></a>C2391 błąd kompilatora
-"identyfikator": "friend" nie może zostać użyty podczas definicji typu  
-  
- `friend` Deklaracja zawiera deklarację pełnej klasy. A `friend` deklaracji można określić funkcji członkowskiej lub specyfikatorze typu złożonego, ale nie deklaracji klasy ukończone.  
-  
- Poniższy przykład generuje C2326:  
-  
-```  
-// C2391.cpp  
-// compile with: /c  
-class D {   
-   void func( int );   
-};  
-  
-class A {  
-   friend class B { int i; };   // C2391  
-  
-   // OK  
-   friend class C;  
-   friend void D::func(int);  
-};  
+# <a name="compiler-error-c2391"></a>Błąd kompilatora C2391
+
+'Identyfikator': "friend" nie może zostać użyty podczas definicji typu
+
+`friend` Deklaracja zawiera deklarację klasy ukończone. A `friend` deklaracji można określić funkcji składowej lub specyfikatorze typu złożonego, ale nie deklaracji klasy ukończone.
+
+Poniższy przykład spowoduje wygenerowanie C2326:
+
+```
+// C2391.cpp
+// compile with: /c
+class D {
+   void func( int );
+};
+
+class A {
+   friend class B { int i; };   // C2391
+
+   // OK
+   friend class C;
+   friend void D::func(int);
+};
 ```

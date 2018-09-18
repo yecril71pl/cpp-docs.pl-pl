@@ -16,14 +16,15 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2f4f89abd2d2a59efa7c028321fd9a6ff82cc206
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 4d9374f5e5c8b65956a7864406c86927b0daf604
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33226150"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46102219"
 ---
 # <a name="fatal-error-c1903"></a>Błąd krytyczny C1903
-Nie można odzyskać od poprzedniego błędu(ów); zatrzymywanie kompilacji  
-  
- Kompilator znaleziono zbyt wiele błędów, aby kontynuować. Usuń błędy i ponownie skompilować.
+
+Nie można odzyskać od poprzedniego błędu(ów); zatrzymywanie kompilacji
+
+Kompilator znaleziono zbyt wiele błędów, aby kontynuować. Napraw błędy i ponownie skompilować.

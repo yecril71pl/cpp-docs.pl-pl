@@ -16,31 +16,33 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: e7a9d3fa7e828467e73c77736fb5643baf19660f
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: f0188f9b7498bc704c43f642fcb7aa1dc72af6a4
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33111097"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46105469"
 ---
 # <a name="your-role-in-working-with-a-record-view--mfc-data-access"></a>Twoja rola w pracy w widokiem rekordu (dostęp do danych MFC)
-W poniższej tabeli przedstawiono co należy zwykle wykonać do pracy w widokiem rekordu i ramach jest dla Ciebie.  
+
+W poniższej tabeli przedstawiono zazwyczaj czynnościom do pracy w widokiem rekordu i struktura jest dla Ciebie.  
   
-### <a name="working-with-a-record-view-you-and-the-framework"></a>Praca z widoku rekordu: użytkownik i struktura  
+### <a name="working-with-a-record-view-you-and-the-framework"></a>Pracy w widokiem rekordu: możesz i struktury  
   
-|Można|Platformę|  
+|Można|Struktura|  
 |---------|-------------------|  
-|Edytor programu Visual C++ okna dialogowego do projektowania formularza.|Tworzy okno dialogowe zasobu szablon z formantami.|  
-|Użyj [Kreator aplikacji MFC](../mfc/reference/database-support-mfc-application-wizard.md) do tworzenia klas pochodnych [CRecordView](../mfc/reference/crecordview-class.md) i [crecordset —](../mfc/reference/crecordset-class.md).|Zapisuje klasy dla Ciebie.|  
-|Formanty widoku rekordu są mapowane na elementy członkowskie danych pola rekordów.|Udostępnia DDX między formantami a pól rekordów.|  
-||Udostępnia domyślne programy obsługi poleceń dla **Przenieś pierwszy**, **Przenieś ostatni**, **Przenieś następny**, i **Przenieś poprzedniej** poleceń z menu lub pasek narzędzi przyciski.|  
+|Edytor Visual C++ okna dialogowego do projektowania formularza.|Umożliwia utworzenie zasobu szablonu okna dialogowego za pomocą kontrolek.|  
+|Użyj [Kreator aplikacji MFC](../mfc/reference/database-support-mfc-application-wizard.md) do tworzenia klas pochodnych [CRecordView](../mfc/reference/crecordview-class.md) i [CRecordset](../mfc/reference/crecordset-class.md).|Zapisuje klasy dla Ciebie.|  
+|Kontrolki widoku rekordów są mapowane na elementy członkowskie danych pola zestawu rekordów.|Udostępnia DDX między kontrolki i pola zestawu rekordów.|  
+||Udostępnia domyślne programy obsługi poleceń do **przenieść pierwszy**, **Przenieś ostatniego**, **Przenieś następny**, i **Przenieś poprzednie** polecenia z menu lub paska narzędzi przyciski.|  
 ||Aktualizacje zmienia się ze źródłem danych.|  
-|[Opcjonalnie] Napisać kod do wypełnienia pola listy, pola kombi lub inne formanty z danymi z drugiego zestawu wierszy.||  
+|[Opcjonalnie] Pisanie kodu w celu wypełnienia pola listy, pola kombi lub inne kontrolki z danymi z drugiego zestawu rekordów.||  
 |[Opcjonalnie] Pisanie kodu dla żadnych specjalnych operacji sprawdzania poprawności.||  
-|[Opcjonalnie] Napisać kod, aby dodawać lub usuwać rekordy.||  
+|[Opcjonalnie] Pisanie kodu w celu dodawania i usuwania rekordów.||  
   
- Programowanie oparte na formularzu jest tylko jeden podejście do pracy z bazą danych. Aby uzyskać informacje o aplikacji przy użyciu innych interfejsu użytkownika lub bez interfejsu użytkownika, zobacz [MFC: przy użyciu klasy baz danych z dokumentami i widokami](../data/mfc-using-database-classes-with-documents-and-views.md) i [MFC: przy użyciu klasy bazy danych bez dokumentów i widoków](../data/mfc-using-database-classes-without-documents-and-views.md). Dla alternatywnych metod do wyświetlania rekordów bazy danych, zobacz klasy [clistview —](../mfc/reference/clistview-class.md) i [CTreeView —](../mfc/reference/ctreeview-class.md).  
+Programowanie oparte na formularzach jest tylko jedno z podejść do pracy z bazą danych. Aby uzyskać informacje o aplikacji przy użyciu innego interfejsu użytkownika lub bez interfejsu użytkownika, zobacz [MFC: Używanie klas bazy danych z dokumentami i widokami](../data/mfc-using-database-classes-with-documents-and-views.md) i [MFC: przy użyciu klasy bazy danych bez dokumentów i widoków](../data/mfc-using-database-classes-without-documents-and-views.md). W przypadku alternatywnych metod wyświetlania rekordów bazy danych, patrz klasy [CListView](../mfc/reference/clistview-class.md) i [CTreeView](../mfc/reference/ctreeview-class.md).  
   
 ## <a name="see-also"></a>Zobacz też  
- [Widoki rekordów (dostęp do danych MFC)](../data/record-views-mfc-data-access.md)   
- [Lista sterowników ODBC](../data/odbc/odbc-driver-list.md)
+
+[Widoki rekordów (dostęp do danych MFC)](../data/record-views-mfc-data-access.md)<br/>
+[Lista sterowników ODBC](../data/odbc/odbc-driver-list.md)

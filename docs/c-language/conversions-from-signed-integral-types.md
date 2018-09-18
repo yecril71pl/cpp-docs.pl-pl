@@ -18,65 +18,66 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8747f6c1bfde3f076101cc9330d73b1c76c1055b
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 3fc38fd8b1ab4bc84898704218b2da5722514cea
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32391629"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46101387"
 ---
 # <a name="conversions-from-signed-integral-types"></a>Konwersje z podpisanych typów całkowitych
-Gdy całkowita jest konwertowany na liczbę całkowitą bez znaku z równym lub większym rozmiarze, a wartość całkowita nie jest ujemna, wartość jest bez zmian. Konwersja zostało utworzone przez znak rozszerzanie liczbę całkowitą ze znakiem. Całkowita jest konwertowana na krótszą całkowita tworzy bardziej znaczących bitów. Wynik jest interpretowana jako wartość bez znaku, jak pokazano w poniższym przykładzie.  
-  
-```  
-int i = -3;  
-unsigned short u;  
-  
-u = i;   
-printf_s( "%hu\n", u );  // Prints 65533  
-  
-```  
-  
- Dane nie zostaną utracone po przekonwertowaniu do wartości zmiennoprzecinkowych, liczbę całkowitą ze znakiem z tą różnicą, że niektóre dokładności mogą zostać utracone po **długi int** lub **unsigned int długi** wartość jest konwertowana na **liczbzmiennoprzecinkowych** wartość.  
-  
- Poniższa tabela zawiera podsumowanie konwersje z podpisanych typów całkowitych. W tej tabeli, przy założeniu, że **char** typ ma znak domyślnie. Jeśli używasz opcji kompilacji, aby zmienić domyślny dla **char** typ bez znaku, konwersje podany w [konwersje z niepodpisanych typów całkowitych](../c-language/conversions-from-unsigned-integral-types.md) tabeli dla **unsigned char**  typu zastosować zamiast konwersje w poniższej tabeli, konwersje z typów całkowitych podpisany.  
-  
-### <a name="conversions-from-signed-integral-types"></a>Konwersje z podpisanych typów całkowitych  
-  
-|Z|Do|Metoda|  
-|----------|--------|------------|  
-|**CHAR**1|**short**|Rozszerzanie logowania|  
-|**char**|**long**|Rozszerzanie logowania|  
-|**char**|**char bez znaku**|Zachowaj wzorzec; bit znaczącymi bitami traci funkcję jako bitem|  
-|**char**|**short bez znaku**|Rozszerz logowania do **krótki**; przekonwertować **krótki** do **krótko bez znaku**|  
-|**char**|**unsigned long**|Rozszerz logowania do **długi**; przekonwertować **długi** do **unsigned long**|  
-|**char**|**float**|Rozszerz logowania do **długi**; przekonwertować **długi** do **float**|  
-|**char**|**double**|Rozszerz logowania do **długi**; przekonwertować **długi** do **podwójne**|  
-|**char**|**Liczba typu double**|Rozszerz logowania do **długi**; przekonwertować **długi** do **podwójne**|  
-|**short**|**char**|Zachowaj mniej znaczącego bajtu|  
-|**short**|**long**|Rozszerzanie logowania|  
-|**short**|**char bez znaku**|Zachowaj mniej znaczącego bajtu|  
-|**short**|**short bez znaku**|Zachowaj wzorca bitowego; bit znaczącymi bitami traci funkcję jako bitem|  
-|**short**|**unsigned long**|Rozszerz logowania do **długi**; przekonwertować **długi** do **unsigned long**|  
-|**short**|**float**|Rozszerz logowania do **długi**; przekonwertować **długi** do **float**|  
-|**short**|**double**|Rozszerz logowania do **długi**; przekonwertować **długi** do **podwójne**|  
-|**short**|**Liczba typu double**|Rozszerz logowania do **długi**; przekonwertować **długi** do **podwójne**|  
-|**long**|**char**|Zachowaj mniej znaczącego bajtu|  
-|**long**|**short**|Zachowaj znaczącymi bitami programu word|  
-|**long**|**char bez znaku**|Zachowaj mniej znaczącego bajtu|  
-|**long**|**short bez znaku**|Zachowaj znaczącymi bitami programu word|  
-|**long**|**unsigned long**|Zachowaj wzorca bitowego; bit znaczącymi bitami traci funkcję jako bitem|  
-|**long**|**float**|Reprezentuje jako **float**. Jeśli **długi** nie może być reprezentowany dokładnie, precyzyjnie zostaną utracone.|  
-|**long**|**double**|Reprezentuje jako **podwójne**. Jeśli **długi** nie może być reprezentowany dokładnie jako **podwójne**, precyzyjnie zostaną utracone.|  
-|**long**|**Liczba typu double**|Reprezentuje jako **podwójne**. Jeśli **długi** nie może być reprezentowany dokładnie jako **podwójne**, precyzyjnie zostaną utracone.|  
-  
- 1. Wszystkie **char** wpisy przyjęto założenie, że **char** typ ma znak domyślnie.  
-  
- **Microsoft Specific**  
-  
- Dla kompilatora C Microsoft 32-bitowa liczba całkowita jest odpowiednikiem **długi**. Konwersja **int** wartość będzie kontynuowana takie same jak w przypadku **długi**.  
-  
- **KOŃCOWY określonych firmy Microsoft**  
-  
-## <a name="see-also"></a>Zobacz też  
- [Konwersje przypisań](../c-language/assignment-conversions.md)
+
+Jeśli wartość liczby całkowitej ze znakiem nie jest ujemna liczba całkowita ze znakiem jest konwertowany na liczbę całkowitą bez znaku z równym lub większym rozmiarze, wartość jest bez zmian. Konwersja dokonuje logowania zwiększanie liczby całkowitej ze znakiem. Liczba całkowita ze znakiem jest konwertowany krótszy liczby całkowitej ze znakiem tworzy bardziej znaczących bitów. Wynik jest interpretowany jako wartość nieoznaczona, jak pokazano w poniższym przykładzie.
+
+```C
+int i = -3;
+unsigned short u;
+
+u = i;
+printf_s( "%hu\n", u );  // Prints 65533
+```
+
+Dane nie zostaną utracone podczas liczba całkowita ze znakiem jest konwertowana na wartość zmiennoprzecinkową, z wyjątkiem tego, aby precyzyjnie mogą zostać utracone podczas **long int** lub **unsigned long int** wartość jest konwertowana na **float** wartość.
+
+W poniższej tabeli przedstawiono konwersje z podpisanych typów całkowitych. Ta tabela zakłada się, że **char** typ ma znak domyślnie. Jeśli używasz opcji kompilacji, aby zmienić domyślną **char** konwersje w typów na typy bez znaku, [konwersje z niepodpisanych typów całkowitych](../c-language/conversions-from-unsigned-integral-types.md) tabeli dla **unsigned char**  typu Zastosuj zamiast konwersje w poniższej tabeli, konwersje z typów całkowitych oznaczonych.
+
+### <a name="conversions-from-signed-integral-types"></a>Konwersje z podpisanych typów całkowitych
+
+|Z|Zadanie|Metoda|
+|----------|--------|------------|
+|**CHAR**1|**short**|Rozszerzanie logowania|
+|**char**|**long**|Rozszerzanie logowania|
+|**char**|**unsigned char**|Zachowaj wzorca; bit wyższego rzędu traci funkcję jako bitu znaku|
+|**char**|**short bez znaku**|Rozszerzenie o znak na **krótki**; Konwertuj **krótki** do **typ unsigned short**|
+|**char**|**unsigned long**|Rozszerzanie logowania na **długie**; Konwertuj **długie** do **unsigned long**|
+|**char**|**float**|Rozszerzanie logowania na **długie**; Konwertuj **długie** do **float**|
+|**char**|**double**|Rozszerzanie logowania na **długie**; Konwertuj **długie** do **double**|
+|**char**|**Liczba typu double**|Rozszerzanie logowania na **długie**; Konwertuj **długie** do **double**|
+|**short**|**char**|Zachowaj mniej znaczący bajt|
+|**short**|**long**|Rozszerzanie logowania|
+|**short**|**unsigned char**|Zachowaj mniej znaczący bajt|
+|**short**|**short bez znaku**|Zachowaj wzorzec bitowy; bit wyższego rzędu traci funkcję jako bitu znaku|
+|**short**|**unsigned long**|Rozszerzanie logowania na **długie**; Konwertuj **długie** do **unsigned long**|
+|**short**|**float**|Rozszerzanie logowania na **długie**; Konwertuj **długie** do **float**|
+|**short**|**double**|Rozszerzanie logowania na **długie**; Konwertuj **długie** do **double**|
+|**short**|**Liczba typu double**|Rozszerzanie logowania na **długie**; Konwertuj **długie** do **double**|
+|**long**|**char**|Zachowaj mniej znaczący bajt|
+|**long**|**short**|Zachowaj niskiego rzędu programu word|
+|**long**|**unsigned char**|Zachowaj mniej znaczący bajt|
+|**long**|**short bez znaku**|Zachowaj niskiego rzędu programu word|
+|**long**|**unsigned long**|Zachowaj wzorzec bitowy; bit wyższego rzędu traci funkcję jako bitu znaku|
+|**long**|**float**|Reprezentacja jako **float**. Jeśli **długie** nie może być reprezentowany dokładnie tak, niektóre dokładności zostaną utracone.|
+|**long**|**double**|Reprezentacja jako **double**. Jeśli **długie** nie może być reprezentowany dokładnie jako **double**, niektóre dokładności zostaną utracone.|
+|**long**|**Liczba typu double**|Reprezentacja jako **double**. Jeśli **długie** nie może być reprezentowany dokładnie jako **double**, niektóre dokładności zostaną utracone.|
+
+1. Wszystkie **char** wpisy przyjęto założenie, że **char** typ ma znak domyślnie.
+
+**Microsoft Specific**
+
+Kompilator Microsoft 32-bitowe języka C, liczba całkowita jest odpowiednikiem **długie**. Konwersja **int** wartość rozpoczynające się takie same jak w przypadku **długie**.
+
+**END specyficzny dla Microsoft**
+
+## <a name="see-also"></a>Zobacz też
+
+[Konwersje przypisań](../c-language/assignment-conversions.md)

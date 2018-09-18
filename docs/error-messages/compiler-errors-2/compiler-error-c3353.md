@@ -1,5 +1,5 @@
 ---
-title: C3353 błąd kompilatora | Dokumentacja firmy Microsoft
+title: Błąd kompilatora C3353 | Dokumentacja firmy Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,22 +16,23 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 47c9d1dd8c21e56613b9da00fc2bf4f7fbeafcca
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 63316a5a74c3981ec0f68d949eba654f8d6bbfef
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33253908"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46110201"
 ---
-# <a name="compiler-error-c3353"></a>C3353 błąd kompilatora
-"delegowanie": delegat można tworzyć tylko z globalnej funkcji lub funkcja członkowska zarządzanego lub typu WinRT  
-  
- Delegatów, zadeklarowana z [delegować](../../windows/delegate-cpp-component-extensions.md) — słowo kluczowe, mogą być deklarowane tylko w zakresie globalnym.  
-  
- Poniższy przykład generuje C3353:  
-  
-```  
-// C3353.cpp  
-// compile with: /clr  
-delegate int f;   // C3353  
+# <a name="compiler-error-c3353"></a>Błąd kompilatora C3353
+
+"delegowanie": delegat można tworzyć tylko z globalnej funkcji lub funkcji składowej typu zarządzanego lub typu WinRT
+
+Delegatów, zadeklarowany za pomocą [delegować](../../windows/delegate-cpp-component-extensions.md) — słowo kluczowe, mogą być deklarowane tylko w zakresie globalnym.
+
+Poniższy przykład spowoduje wygenerowanie C3353:
+
+```
+// C3353.cpp
+// compile with: /clr
+delegate int f;   // C3353
 ```

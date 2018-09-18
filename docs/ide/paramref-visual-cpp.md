@@ -18,15 +18,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: fe6bb2d14b79e8080815967f3a666808f2b6efcc
-ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
+ms.openlocfilehash: a63caea7186114244927b9ede4c63ed97871d6e9
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "33326586"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46111267"
 ---
 # <a name="ltparamrefgt-visual-c"></a>&lt;paramref&gt; (Visual C++)
-\<Paramref > tag udostępnia sposób wskazują, że wyraz jest parametrem. Aby sformatować ten parametr w jakiś sposób różne mogą być przetwarzane pliku XML.  
+\<Paramref > tag zapewnia sposób, aby wskazać, że wyraz jest parametrem. Plik XML mogą być przetwarzane do formatowania tego parametru w jakiś sposób distinct.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -35,11 +35,11 @@ ms.locfileid: "33326586"
 ```  
   
 #### <a name="parameters"></a>Parametry  
- `name`  
- Nazwa parametru do odwoływania się do.  Nazwę należy ująć w cudzysłów pojedynczym lub podwójnym.  Kompilator generuje ostrzeżenie, jeśli nie znajdzie `name`.  
+*Nazwa*<br/>
+Nazwa parametru do odwoływania się do.  Nazwę należy ująć w pojedyncze lub podwójne znaki cudzysłowu.  Kompilator generuje ostrzeżenie, jeśli nie znajdzie `name`.  
   
 ## <a name="remarks"></a>Uwagi  
- Kompiluj z użyciem [/doc](../build/reference/doc-process-documentation-comments-c-cpp.md) na przetwarzanie komentarzy dokumentacji do pliku.  
+ Kompiluj przy użyciu [/doc](../build/reference/doc-process-documentation-comments-c-cpp.md) do Przetwarzaj komentarze dokumentacji do pliku.  
   
 ## <a name="example"></a>Przykład  
   

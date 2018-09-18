@@ -16,24 +16,25 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d7db417edebf0a1fff6ef87bf8ae407889a0e0af
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: fd6f38ff8fbe0c4179addf46a43a35be4237b73e
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33231865"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46100841"
 ---
 # <a name="compiler-error-c2558"></a>C2558 błąd kompilatora
-'identifier' : nie ma dostępnego konstruktora kopiującego lub konstruktor kopiujący jest zadeklarowany jako 'explicit'  
-  
- Konstruktor kopiujący inicjuje obiekt z innego obiektu tego samego typu. (Tworzy kopię obiektu.) Kompilator generuje domyślny konstruktor kopiujący, jeżeli nie zdefiniujesz żadnych konstruktorów.  
-  
-### <a name="to-fix-this-error"></a>Aby naprawić ten błąd  
-  
-1.  Ten problem może wystąpić, gdy podejmowana jest próba, aby skopiować klasy, w których Konstruktor kopiujący jest `private`. W większości przypadków klasy, która ma `private` Konstruktor kopiujący nie powinny być kopiowane. Deklaruje typowe techniki programowania `private` konstruktora kopiującego, aby zapobiec bezpośredniego użycia klasy. Klasa może być bezużyteczna samodzielnie lub wymagać innej klasy, aby działać poprawnie.  
-  
-     Jeśli okaże się, że jest bezpiecznie korzystać klasy, która ma `private` Konstruktor kopiujący, pochodzi z klasy, która ma nową klasę `private` Konstruktor i udostępnić `public` lub `protected` Konstruktor kopiujący jest dostępne w nowej klasy. Użyj klasy pochodnej zamiast oryginalnej.  
-  
-2.  Ten problem może wystąpić, gdy podejmowana jest próba, aby skopiować klasy, w których Konstruktor kopiujący jest jawne. Deklarowanie konstruktora kopiującego jako `explicit` uniemożliwia przekazywanie/zwracanie obiektów klasy do/z funkcji. Aby uzyskać więcej informacji na temat jawnych konstruktorów, zobacz [zdefiniowane przez użytkownika konwersje typów](../../cpp/user-defined-type-conversions-cpp.md).  
-  
-3.  Ten problem może wystąpić, gdy podejmowana jest próba można skopiować do wystąpienia klasy zadeklarowany `const` przy użyciu konstruktora kopiującego, który nie przyjmuje `const` odwołać się do parametru. Deklarowanie użytkownika Konstruktor kopiujący z `const` odniesienie zamiast odwołania typu z systemem innym niż stała typu.
+
+'identifier' : nie ma dostępnego konstruktora kopiującego lub konstruktor kopiujący jest zadeklarowany jako 'explicit'
+
+Konstruktor kopiujący inicjuje obiekt z innego obiektu tego samego typu. (Tworzy kopię obiektu.) Kompilator generuje domyślny konstruktor kopiujący, jeżeli nie zdefiniujesz żadnych konstruktorów.
+
+### <a name="to-fix-this-error"></a>Aby naprawić ten błąd
+
+1. Ten problem może wystąpić, gdy podejmowana jest próba skopiowania klasy, której Konstruktor kopiujący jest `private`. W większości przypadków klasy, która ma `private` konstruktora kopiującego nie powinny zostać skopiowane. Powszechnie stosowana technika programowania deklaruje `private` Konstruktor Kopiuj, aby zapobiegać bezpośredniemu wykorzystaniu klasy. Klasa może być bezużyteczna samodzielnie lub wymagać innej klasy, aby działać poprawnie.
+
+     Jeśli stwierdzisz, że jest bezpieczne użycie klasy, która ma `private` Konstruktor kopiujący, pochodzi z nową klasę z klasy, która ma `private` marki i Konstruktor `public` lub `protected` Konstruktor kopiujący jest dostępna w nowej klasie. Użyj klasy pochodnej zamiast oryginalnej.
+
+1. Ten problem może wystąpić, gdy podejmowana jest próba skopiowania klasy, której Konstruktor kopiujący jest jawny. Zadeklarowanie konstruktora kopiującego jako `explicit` zapobiega przekazywaniu/zwracaniu obiektów klasy do/z funkcji. Aby uzyskać więcej informacji dotyczących jawnych konstruktorów, zobacz [konwersje typów zdefiniowane przez użytkownika](../../cpp/user-defined-type-conversions-cpp.md).
+
+1. Ten problem może wystąpić, gdy podejmowana jest próba skopiowania wystąpienia klasy zadeklarowane `const` za pomocą konstruktora kopiującego, który nie przyjmuje `const` odwołać się do parametru. Zadeklaruj Konstruktor kopiujący z `const` zamiast odwołania typu non-const.

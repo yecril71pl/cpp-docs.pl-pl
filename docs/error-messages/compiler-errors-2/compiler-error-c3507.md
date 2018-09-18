@@ -1,5 +1,5 @@
 ---
-title: C3507 błąd kompilatora | Dokumentacja firmy Microsoft
+title: Błąd kompilatora C3507 | Dokumentacja firmy Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,30 +16,31 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 008267fddbd1d83574081d7b257e6627b32a1f58
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 8375f96c0a35e01a2a93866157c0156cf22a4993
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33252920"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46105168"
 ---
-# <a name="compiler-error-c3507"></a>C3507 błąd kompilatora
-Identyfikator ProgID może zawierać nie więcej niż 39 znaków 'id'; ani zawierać jakichkolwiek znaków interpunkcyjnych z wyjątkiem '.'; ani rozpoczynać się cyfrą  
-  
- [Progid](../../windows/progid.md) atrybut ma ograniczenia na wartości, które może potrwać.  
-  
- Poniższy przykład generuje C3507:  
-  
-```  
-// C3507.cpp  
-[module(name="x")];  
-[  
-coclass,  
-progid("0123456789012345678901234567890123456789"),  
-uuid("00000000-0000-0000-0000-000000000001") // C3507 expected  
-]  
-struct CMyStruct {  
-};  
-int main() {  
-}  
+# <a name="compiler-error-c3507"></a>Błąd kompilatora C3507
+
+Identyfikator ProgID może zawierać nie więcej niż 39 znaków 'id'; nie zawierać żadnych znaków interpunkcyjnych z wyjątkiem '.'; ani rozpoczynających się od cyfry
+
+[Progid](../../windows/progid.md) atrybut ma ograniczenia na podstawie wartości, które można wykonać.
+
+Poniższy przykład spowoduje wygenerowanie C3507:
+
+```
+// C3507.cpp
+[module(name="x")];
+[
+coclass,
+progid("0123456789012345678901234567890123456789"),
+uuid("00000000-0000-0000-0000-000000000001") // C3507 expected
+]
+struct CMyStruct {
+};
+int main() {
+}
 ```

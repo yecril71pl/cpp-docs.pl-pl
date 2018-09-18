@@ -16,16 +16,16 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a700734cc2fb860d9d3ad8143aed817809ab69f2
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 2bd76b164e24834f22cc4654873559e340efcb79
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33198017"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46100466"
 ---
 # <a name="fatal-error-c1351"></a>Błąd krytyczny C1351
 
-> Wystąpił błąd podczas ładowania biblioteki dll "*dll*": niezgodna wersja  
+> Wystąpił błąd podczas ładowania biblioteki dll "*dll*": niezgodność wersji
 
 Znaleziono nieprawidłową wersję biblioteki DLL.
 

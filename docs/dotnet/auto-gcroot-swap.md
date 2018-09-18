@@ -20,12 +20,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: 78ab5f8385f404a6db2c9919c39c17d1442b49a1
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 785480c10aff65d02280a9338e79e76cd430a57b
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33104922"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46098085"
 ---
 # <a name="autogcrootswap"></a>auto_gcroot::swap
 Zamienia obiekty z innym `auto_gcroot`.  
@@ -39,8 +39,8 @@ void swap(
 ```  
   
 #### <a name="parameters"></a>Parametry  
- `_right`  
- `auto_gcroot` Umożliwiające wymiany obiektów.  
+*z _prawej*<br/>
+`auto_gcroot` Za pomocą którego można zamienić obiektów.  
   
 ## <a name="example"></a>Przykład  
   
@@ -70,10 +70,10 @@ s1 = 'string two', s2 = 'string one'
 ```  
   
 ## <a name="requirements"></a>Wymagania  
- **Plik nagłówka** \<msclr\auto_gcroot.h >  
+ **Plik nagłówkowy** \<msclr\auto_gcroot.h >  
   
  **Namespace** msclr  
   
 ## <a name="see-also"></a>Zobacz też  
- [auto_gcroot — członkowie](../dotnet/auto-gcroot-members.md)   
+ [auto_gcroot, składowe](../dotnet/auto-gcroot-members.md)   
  [Funkcja swap (auto_gcroot)](../dotnet/swap-function-auto-gcroot.md)

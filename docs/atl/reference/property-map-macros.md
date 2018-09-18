@@ -21,12 +21,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: bf82c48cb5b1f9bd93a9c30afe8c698699c8199b
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 594b02d777d87decfc218064678dbecdf8ecf0c9
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43758095"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46106354"
 ---
 # <a name="property-map-macros"></a>Makra mapy właściwości
 
@@ -55,7 +55,7 @@ BEGIN_PROP_MAP(theClass)
 
 ### <a name="parameters"></a>Parametry
 
-*theClass*  
+*theClass*<br/>
 [in] Określa klasę zawierającą map właściwości.
 
 ### <a name="remarks"></a>Uwagi
@@ -80,13 +80,13 @@ PROP_DATA_ENTRY( szDesc, member, vt)
 
 ### <a name="parameters"></a>Parametry
 
-*szDesc*  
+*szDesc*<br/>
 [in] Opis właściwości.
 
-*Element członkowski*  
+*Element członkowski*<br/>
 [in] Element członkowski danych zawierająca w zakresie; na przykład `m_sizeExtent`.
 
-*vt*  
+*vt*<br/>
 [in] Określa typ WARIANTU właściwości.
 
 ### <a name="remarks"></a>Uwagi
@@ -113,16 +113,16 @@ PROP_ENTRY_TYPE( szDesc, dispid, clsid, vt)
 
 ### <a name="parameters"></a>Parametry
 
-*szDesc*  
+*szDesc*<br/>
 [in] Opis właściwości.
 
-*identyfikator DISPID*  
+*identyfikator DISPID*<br/>
 [in] Identyfikator DISPID właściwości.
 
-*Identyfikator klasy*  
+*Identyfikator klasy*<br/>
 [in] Identyfikator CLSID strony właściwości skojarzonej. Specjalna wartość CLSID_NULL na użytek właściwość, która nie ma skojarzonej właściwości strony.
 
-*vt*  
+*vt*<br/>
 [in] Typ właściwości.
 
 ### <a name="remarks"></a>Uwagi
@@ -145,19 +145,19 @@ PROP_ENTRY_TYPE_EX( szDesc, dispid, clsid, iidDispatch, vt)
 
 ### <a name="parameters"></a>Parametry
 
-*szDesc*  
+*szDesc*<br/>
 [in] Opis właściwości.
 
-*identyfikator DISPID*  
+*identyfikator DISPID*<br/>
 [in] Identyfikator DISPID właściwości.
 
-*Identyfikator klasy*  
+*Identyfikator klasy*<br/>
 [in] Identyfikator CLSID strony właściwości skojarzonej. Specjalna wartość CLSID_NULL na użytek właściwość, która nie ma skojarzonej właściwości strony.
 
-*iidDispatch*  
+*iidDispatch*<br/>
 [in] Identyfikator IID podwójnego interfejsu Definiowanie właściwości.
 
-*vt*  
+*vt*<br/>
 [in] Typ właściwości.
 
 ### <a name="remarks"></a>Uwagi
@@ -182,7 +182,7 @@ PROP_PAGE(clsid)
 
 ### <a name="parameters"></a>Parametry
 
-*Identyfikator klasy*  
+*Identyfikator klasy*<br/>
 [in] Identyfikator CLSID strony właściwości.
 
 ### <a name="remarks"></a>Uwagi

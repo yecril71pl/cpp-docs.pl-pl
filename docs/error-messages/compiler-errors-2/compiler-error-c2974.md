@@ -1,5 +1,5 @@
 ---
-title: C2974 błąd kompilatora | Dokumentacja firmy Microsoft
+title: Błąd kompilatora C2974 | Dokumentacja firmy Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,59 +16,60 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 12af6bcd61642d8563eb08888229aab6217b6085
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 478639ee1eccf841361e8e7e880ac33669d69e1e
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33242049"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46100489"
 ---
-# <a name="compiler-error-c2974"></a>C2974 błąd kompilatora
-Nieprawidłowy typ argumentu "number", oczekiwano typu  
-  
- Argument rodzajowy lub szablonu nie jest zgodna deklaracja ogólne lub szablonu. Typ powinny być wyświetlane w nawiasach kwadratowych kąta. Sprawdź definicję ogólne lub szablonu, aby znaleźć poprawne typy.  
-  
- Poniższy przykład generuje C2974:  
-  
-```  
-// C2974.cpp  
-// C2974 expected  
-template <class T>  
-struct TC {};  
-  
-template <typename T>  
-void tf(T){}  
-  
-int main() {  
-   // Delete the following 2 lines to resolve  
-   TC<1>* tc;  
-   tf<"abc">("abc");  
-  
-   TC<int>* tc;  
-   tf<const char *>("abc");  
-}  
-```  
-  
- C2974 może również wystąpić, gdy użycie typów ogólnych:  
-  
-```  
-// C2974b.cpp  
-// compile with: /clr  
-// C2974 expected  
-using namespace System;  
-generic <class T>  
-ref struct GCtype {};  
-  
-generic <typename T>  
-void gf(T){}  
-  
-int main() {  
-   // Delete the following 2 lines to resolve  
-   GCtype<"a">^ gc;  
-   gf<"a">("abc");  
-  
-   // OK  
-   GCtype<int>^ gc;  
-   gf<String ^>("abc");  
-}  
+# <a name="compiler-error-c2974"></a>Błąd kompilatora C2974
+
+Nieprawidłowy typ argumentu "number", typ oczekiwany
+
+Argument generyczny lub szablonu jest niezgodna z deklaracją generyczny lub szablonu. Typ powinny być wyświetlane w nawiasach kątowych. Sprawdź definicję generyczny lub szablonu, aby znaleźć poprawne typy.
+
+Poniższy przykład spowoduje wygenerowanie C2974:
+
+```
+// C2974.cpp
+// C2974 expected
+template <class T>
+struct TC {};
+
+template <typename T>
+void tf(T){}
+
+int main() {
+   // Delete the following 2 lines to resolve
+   TC<1>* tc;
+   tf<"abc">("abc");
+
+   TC<int>* tc;
+   tf<const char *>("abc");
+}
+```
+
+C2974 może również wystąpić, gdy za pomocą typów ogólnych:
+
+```
+// C2974b.cpp
+// compile with: /clr
+// C2974 expected
+using namespace System;
+generic <class T>
+ref struct GCtype {};
+
+generic <typename T>
+void gf(T){}
+
+int main() {
+   // Delete the following 2 lines to resolve
+   GCtype<"a">^ gc;
+   gf<"a">("abc");
+
+   // OK
+   GCtype<int>^ gc;
+   gf<String ^>("abc");
+}
 ```

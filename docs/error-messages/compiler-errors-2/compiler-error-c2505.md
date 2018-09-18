@@ -1,5 +1,5 @@
 ---
-title: C2505 błąd kompilatora | Dokumentacja firmy Microsoft
+title: Błąd kompilatora C2505 | Dokumentacja firmy Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,32 +16,33 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: fac405fc13b7696f752ea6455dcbf464318dca56
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: b6bd22d7a25311b14ed599c6693bfa0c7913b304
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33227664"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46109174"
 ---
-# <a name="compiler-error-c2505"></a>C2505 błąd kompilatora
-"symbol": "__declspec(modifer)" można stosować do deklaracji lub definicji obiektów globalnych lub statyczne elementy członkowskie danych  
-  
- A `__declspec` modyfikator, który ma być używane tylko w zakresie globalnym został użyty w funkcji.  
-  
- Aby uzyskać więcej informacji, zobacz [elementu appdomain](../../cpp/appdomain.md) i [procesu](../../cpp/process.md).  
-  
- Poniższy przykład generuje C2505:  
-  
-```  
-// C2505.cpp  
-// compile with: /clr  
-  
-// OK  
-__declspec(process) int ii;  
-__declspec(appdomain) int jj;  
-  
-int main() {  
-   __declspec(process) int i;   // C2505  
-   __declspec(appdomain) int j;   // C2505  
-}  
+# <a name="compiler-error-c2505"></a>Błąd kompilatora C2505
+
+'symbol': "__declspec(modifer)" będzie stosowany tylko do deklaracji lub definicji obiektów globalnych albo statycznych składowych danych
+
+A `__declspec` modyfikatory, które mają być używane tylko w zakresie globalnym był używany w funkcji.
+
+Aby uzyskać więcej informacji, zobacz [appdomain](../../cpp/appdomain.md) i [procesu](../../cpp/process.md).
+
+Poniższy przykład spowoduje wygenerowanie C2505:
+
+```
+// C2505.cpp
+// compile with: /clr
+
+// OK
+__declspec(process) int ii;
+__declspec(appdomain) int jj;
+
+int main() {
+   __declspec(process) int i;   // C2505
+   __declspec(appdomain) int j;   // C2505
+}
 ```

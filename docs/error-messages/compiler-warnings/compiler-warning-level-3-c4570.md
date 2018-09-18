@@ -1,5 +1,5 @@
 ---
-title: Kompilatora (poziom 3) ostrzeżenie C4570 | Dokumentacja firmy Microsoft
+title: Kompilator ostrzeżenie (poziom 3) C4570 | Dokumentacja firmy Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,27 +16,29 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1a79b6afae4bc14e5fcd2dc4979ebd29c60c15b7
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 063c976915e744df8eda3604bdfa121ba21ef36d
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33289844"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46099454"
 ---
-# <a name="compiler-warning-level-3-c4570"></a>Kompilator C4570 ostrzegawcze (poziom 3)
-'type': nie jest jawnie zadeklarowana jako abstrakcyjna, ale ma funkcje abstrakcyjne  
-  
- Typ, który zawiera [abstrakcyjny](../../windows/abstract-cpp-component-extensions.md) funkcje powinien się być oznaczony jako abstrakcyjny.  
-  
-## <a name="example"></a>Przykład  
- Poniższy przykład generuje C4570.  
-  
-```  
-// C4570.cpp  
-// compile with: /clr /W3 /c  
-ref struct X {   // C4570  
-// try the following line instead  
-// ref class X abstract {  
-   virtual void f() abstract;  
-};  
+# <a name="compiler-warning-level-3-c4570"></a>Kompilator ostrzeżenie (poziom 3) C4570
+
+"type": nie jest jawnie zadeklarowana jako abstrakcyjna, ale ma funkcje abstrakcyjne
+
+Typ, który zawiera [abstrakcyjne](../../windows/abstract-cpp-component-extensions.md) funkcje powinien się być oznaczony jako abstrakcyjny.
+
+## <a name="example"></a>Przykład
+
+Poniższy przykład spowoduje wygenerowanie C4570.
+
+```
+// C4570.cpp
+// compile with: /clr /W3 /c
+ref struct X {   // C4570
+// try the following line instead
+// ref class X abstract {
+   virtual void f() abstract;
+};
 ```

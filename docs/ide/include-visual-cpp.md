@@ -18,12 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a3cb07824ad5212f4174a6f19e3efa4549432455
-ms.sourcegitcommit: d10a2382832373b900b1780e1190ab104175397f
+ms.openlocfilehash: cd68e4488857708d119399df8bbc0da467983115
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43894456"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46100754"
 ---
 # <a name="ltincludegt-visual-c"></a>&lt;obejmują&gt; (Visual C++)
 
@@ -37,16 +37,16 @@ ms.locfileid: "43894456"
 
 #### <a name="parameters"></a>Parametry
 
-`filename`  
+*Nazwa pliku*<br/>
 Nazwa pliku zawierającego dokumentację. Nazwa pliku może być kwalifikowana przy użyciu ścieżki.  Nazwę należy ująć w pojedyncze lub podwójne znaki cudzysłowu.  Kompilator generuje ostrzeżenie, jeśli nie znajdzie `filename`.
 
-`tagpath`  
+*tagpath*<br/>
 Prawidłowe wyrażenie XPath wybierające żądany zestaw węzłów znajdujących się w pliku.
 
-`name`  
+*Nazwa*<br/>
 Określenie nazwy w tagu, który poprzedza komentarzy; `name` będzie miał `id`.
 
-`id`  
+*id*<br/>
 Identyfikator tagu, który poprzedza komentarze.  Nazwę należy ująć w pojedyncze lub podwójne znaki cudzysłowu.
 
 ## <a name="remarks"></a>Uwagi

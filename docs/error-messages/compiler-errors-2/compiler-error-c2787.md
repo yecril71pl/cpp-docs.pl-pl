@@ -1,5 +1,5 @@
 ---
-title: C2787 błąd kompilatora | Dokumentacja firmy Microsoft
+title: Błąd kompilatora C2787 | Dokumentacja firmy Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,29 +16,30 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a6b45d27c295b37d859d6451281f52c166dc1691
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: a4096e5dbd5b885afe3dec136a111ec69a10784f
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33234629"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46109135"
 ---
-# <a name="compiler-error-c2787"></a>C2787 błąd kompilatora
-"identyfikator": żaden identyfikator GUID nie został skojarzony z tym obiektem  
-  
- [__Uuidof](../../cpp/uuidof-operator.md) operator przyjmuje typu zdefiniowanego przez użytkownika z identyfikatorem GUID dołączona lub takie zdefiniowane przez użytkownika typu obiektu. Ten błąd występuje, gdy argument jest typ zdefiniowany przez użytkownika z nie identyfikatora GUID.  
-  
- Poniższy przykład generuje C2787:  
-  
-```  
-// C2787.cpp  
-#include <windows.h>  
-struct F {};  
-  
-struct __declspec(uuid("00000000-0000-0000-c000-000000000046")) F2;  
-  
-int main() {  
-   __uuidof(F);   // C2787  
-   __uuidof(F2);   // OK  
-}  
+# <a name="compiler-error-c2787"></a>Błąd kompilatora C2787
+
+'Identyfikator': Brak GUID nie został skojarzony z tym obiektem
+
+[__Uuidof](../../cpp/uuidof-operator.md) operator ma typ zdefiniowany przez użytkownika z identyfikatorem GUID dołączone lub obiektu takiego typu zdefiniowanego przez użytkownika. Ten błąd występuje, gdy argument jest typu zdefiniowanego przez użytkownika, za pomocą żaden identyfikator GUID.
+
+Poniższy przykład spowoduje wygenerowanie C2787:
+
+```
+// C2787.cpp
+#include <windows.h>
+struct F {};
+
+struct __declspec(uuid("00000000-0000-0000-c000-000000000046")) F2;
+
+int main() {
+   __uuidof(F);   // C2787
+   __uuidof(F2);   // OK
+}
 ```

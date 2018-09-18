@@ -16,16 +16,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 988438b952aa1a06be3ec0da1d7337793c704133
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 6a1c74cdfe4113cf1fafd242993df27081eb1d28
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33322383"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46112307"
 ---
 # <a name="nmake-fatal-error-u1007"></a>Błąd krytyczny NMAKE U1007
-podwójny cudzysłów nie jest dozwolona w nazwie  
-  
- Nazwa określonego obiektu docelowego lub nazwa pliku zawiera podwójny cudzysłów (**"**).  
-  
- Podwójny cudzysłów można ująć nazwę pliku, ale nie może być zawarte w nim.
+
+podwójny cudzysłów nie jest dozwolone w nazwie
+
+Nazwę określonego obiektu docelowego lub nazwa pliku zawiera podwójny cudzysłów (**"**).
+
+Podwójny cudzysłów można otoczyć nazwę pliku, ale nie można w nim zawarte.

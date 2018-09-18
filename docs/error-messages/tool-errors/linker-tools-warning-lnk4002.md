@@ -16,14 +16,15 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 78bf20b152f70350b88d7cae5db71ce6df855f5b
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 3774dd53ba9d6dde24909df1ade33bfb7e13b840
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33300075"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46107649"
 ---
 # <a name="linker-tools-warning-lnk4002"></a>Ostrzeżenie LNK4002 narzędzi konsolidatora
-Symbol zdefiniowany w obiekcie  
-  
- Symbol wyświetlany w postaci ozdobione została określona w postaci bez w `object`, ale nie można znaleźć unikatowego dopasowania do ozdobione symbolu. To ostrzeżenie zawsze jest poprzedzony ostrzeżenie [LNK4022](../../error-messages/tool-errors/linker-tools-warning-lnk4022.md) i następuje błąd krytyczny [LNK1152](../../error-messages/tool-errors/linker-tools-error-lnk1152.md).
+
+Symbol zdefiniowany w obiekcie
+
+Symbol, wyświetlane w formie urządzonej, została określona w postaci niedekorowanego w `object`, ale nie można znaleźć unikatowego dopasowania do ozdobione symbolu. To ostrzeżenie jest zawsze poprzedzona przez ostrzeżenie [LNK4022](../../error-messages/tool-errors/linker-tools-warning-lnk4022.md) i następuje błąd krytyczny [LNK1152](../../error-messages/tool-errors/linker-tools-error-lnk1152.md).

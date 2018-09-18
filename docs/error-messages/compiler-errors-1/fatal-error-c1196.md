@@ -16,14 +16,15 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 51316b1e25c13a7e501d1d0f2fbde88f6b2ce613
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 53c10a2b3849bfa45f5111b07c95d7355fcbdbfd
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33199018"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46102531"
 ---
 # <a name="fatal-error-c1196"></a>Błąd krytyczny C1196
-'Identyfikator': identyfikator znaleziony w bibliotece typów "typelib" nie jest prawidłowym identyfikatorem C++  
-  
- Jeden z identyfikatorów w bibliotece typów nie jest prawidłowym identyfikatorem C++. Biblioteka typów nie jest dostępny do użytku z [#import](../../preprocessor/hash-import-directive-cpp.md).
+
+'Identyfikator': identyfikator znaleziony w bibliotece typów 'biblioteki typów' nie jest prawidłowym identyfikatorem języka C++
+
+Jeden z identyfikatorów w bibliotece typów nie jest prawidłowym identyfikatorem języka C++. Biblioteka typów nie jest dostępna do użytku z programem [#import](../../preprocessor/hash-import-directive-cpp.md).

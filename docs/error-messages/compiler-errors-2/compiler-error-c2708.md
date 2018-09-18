@@ -1,5 +1,5 @@
 ---
-title: C2708 błąd kompilatora | Dokumentacja firmy Microsoft
+title: Błąd kompilatora C2708 | Dokumentacja firmy Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,16 +16,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d30b2e5c1856a604ae314316cd71d6acc00a7c74
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: c0accd68881cccad5e34530a6c157a4e8179b283
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33234763"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46111098"
 ---
-# <a name="compiler-error-c2708"></a>C2708 błąd kompilatora
-'Identyfikator': rzeczywiste parametry długości w bajtach różni się od poprzedniego wywołania lub odwołania  
-  
- A [__stdcall](../../cpp/stdcall.md) funkcja musi być poprzedzona prototypu. W przeciwnym razie kompilator interpretuje pierwszym wywołaniu funkcji jako prototyp i ten błąd występuje, gdy kompilator napotka wywołania, który nie jest zgodny.  
-  
- Aby naprawić ten błąd, Dodaj prototyp funkcji.
+# <a name="compiler-error-c2708"></a>Błąd kompilatora C2708
+
+'Identyfikator': rzeczywiste parametry długości w bajtach różni się od poprzedniego wywołania lub odwołania
+
+A [__stdcall](../../cpp/stdcall.md) funkcji muszą być poprzedzone prototypu. W przeciwnym razie kompilator interpretuje pierwsze wywołanie do funkcji jako prototyp i ten błąd występuje, gdy kompilator napotyka wywołanie, który nie jest zgodny.
+
+Aby naprawić ten błąd, Dodaj prototyp funkcji.

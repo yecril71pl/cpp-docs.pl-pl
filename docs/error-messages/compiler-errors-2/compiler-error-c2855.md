@@ -1,5 +1,5 @@
 ---
-title: C2855 błąd kompilatora | Dokumentacja firmy Microsoft
+title: Błąd kompilatora C2855 | Dokumentacja firmy Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,14 +16,15 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 68441fad9f6261e01f91c0557eed583a5331e143
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: dbdbb2b5498f3312dd12b27755405ee77cc3b1e4
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33263543"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46108472"
 ---
-# <a name="compiler-error-c2855"></a>C2855 błąd kompilatora
-Opcja wiersza polecenia "option" niespójna z prekompilowanym nagłówkiem  
-  
- Danej opcji wiersza polecenia różni się od opcji użyty do utworzenia prekompilowanego nagłówka. Ponowne wygenerowanie prekompilowanego nagłówka danej opcji wiersza polecenia.
+# <a name="compiler-error-c2855"></a>Błąd kompilatora C2855
+
+Opcja wiersza polecenia "opcji" niespójna z prekompilowanym nagłówkiem
+
+Danej opcji wiersza polecenia różni się od opcji używany do tworzenia prekompilowanego pliku nagłówkowego. Ponowne generowanie wstępnie skompilowanego nagłówka, z danej opcji wiersza polecenia.

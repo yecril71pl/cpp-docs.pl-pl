@@ -16,44 +16,47 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: adc8f9c456d28089d57bc1f13b61ad8efa10b6b6
-ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
+ms.openlocfilehash: de0a208341e6a687d1319c4d8d60cc8671555dd6
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/01/2018
-ms.locfileid: "39402923"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46107004"
 ---
 # <a name="mutable-data-members-c"></a>Modyfikowalne elementy członkowskie danych (C++)
-This — słowo kluczowe dotyczą wyłącznie elementy członkowskie danych niestatyczna i wartości innej niż stała klasy. Zadeklarowana składowa danych **mutable**, a następnie jest legalne, aby przypisać wartość do tego elementu członkowskiego danych, z **const** funkcja elementu członkowskiego.  
-  
-## <a name="syntax"></a>Składnia  
-  
-```  
-mutable member-variable-declaration;  
-```  
-  
-## <a name="remarks"></a>Uwagi  
- Na przykład, poniższy kod zostanie skompilowana bez błędów, ponieważ `m_accessCount` został zadeklarowany jako **mutable**i może być modyfikowana przez `GetFlag` mimo że `GetFlag` jest funkcją składową const.  
-  
-```cpp 
-// mutable.cpp  
-class X  
-{  
-public:  
-   bool GetFlag() const  
-   {  
-      m_accessCount++;  
-      return m_flag;  
-   }  
-private:  
-   bool m_flag;  
-   mutable int m_accessCount;  
-};  
-  
-int main()  
-{  
-}  
-```  
-  
-## <a name="see-also"></a>Zobacz także  
- [Słowa kluczowe](../cpp/keywords-cpp.md)
+
+This — słowo kluczowe dotyczą wyłącznie elementy członkowskie danych niestatyczna i wartości innej niż stała klasy. Zadeklarowana składowa danych **mutable**, a następnie jest legalne, aby przypisać wartość do tego elementu członkowskiego danych, z **const** funkcja elementu członkowskiego.
+
+## <a name="syntax"></a>Składnia
+
+```
+mutable member-variable-declaration;
+```
+
+## <a name="remarks"></a>Uwagi
+
+Na przykład, poniższy kod zostanie skompilowana bez błędów, ponieważ `m_accessCount` został zadeklarowany jako **mutable**i może być modyfikowana przez `GetFlag` mimo że `GetFlag` jest funkcją składową const.
+
+```cpp
+// mutable.cpp
+class X
+{
+public:
+   bool GetFlag() const
+   {
+      m_accessCount++;
+      return m_flag;
+   }
+private:
+   bool m_flag;
+   mutable int m_accessCount;
+};
+
+int main()
+{
+}
+```
+
+## <a name="see-also"></a>Zobacz także
+
+[Słowa kluczowe](../cpp/keywords-cpp.md)

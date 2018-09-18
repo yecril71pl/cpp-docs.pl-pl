@@ -1,5 +1,5 @@
 ---
-title: C2344 błąd kompilatora | Dokumentacja firmy Microsoft
+title: Błąd kompilatora C2344 | Dokumentacja firmy Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,23 +16,24 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: cdbe2ac9c1533a22e5e77f1d3f2db5c73ef93a3e
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 8c560d1fcd250a83501579ec80768b4ba2de57f0
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33222166"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46110223"
 ---
-# <a name="compiler-error-c2344"></a>C2344 błąd kompilatora
-align(#): wyrównanie musi być potęgą liczby dwa  
-  
- Korzystając z [Dopasuj](../../cpp/align-cpp.md) — słowo kluczowe, należy przekazać wartość musi być potęgą liczby dwa.  
-  
- Na przykład następujący kod generuje C2344, ponieważ 3 nie jest potęgą liczby dwa:  
-  
-```  
-// C2344.cpp  
-// compile with: /c  
-__declspec(align(3)) int a;   // C2344  
-__declspec(align(4)) int b;   // OK  
+# <a name="compiler-error-c2344"></a>Błąd kompilatora C2344
+
+align(#): wyrównanie musi być potęgą liczby dwa
+
+Korzystając z [wyrównać](../../cpp/align-cpp.md) — słowo kluczowe, wartość należy przekazać musi być potęgą liczby dwa.
+
+Na przykład poniższy kod generuje C2344, ponieważ 3 nie jest potęgą liczby dwa:
+
+```
+// C2344.cpp
+// compile with: /c
+__declspec(align(3)) int a;   // C2344
+__declspec(align(4)) int b;   // OK
 ```

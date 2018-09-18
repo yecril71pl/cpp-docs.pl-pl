@@ -24,12 +24,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6ec36cddae835d46c5db6245f85e4294aa52225e
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 170f46424e8eb4db4c38c91f01a89b53d5cbce0a
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43766577"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46107832"
 ---
 # <a name="catldllmodulet-class"></a>Klasa CAtlDllModuleT
 
@@ -38,13 +38,13 @@ Ta klasa reprezentuje modułu dla biblioteki DLL.
 ## <a name="syntax"></a>Składnia
 
 ```
-template <class T>  
+template <class T>
 class ATL_NO_VTABLE CAtlDllModuleT : public CAtlModuleT<T>
 ```
 
 #### <a name="parameters"></a>Parametry
 
-*T*  
+*T*<br/>
 Klasa jest pochodną `CAtlDllModuleT`.
 
 ## <a name="members"></a>Elementy członkowskie
@@ -128,13 +128,13 @@ HRESULT DllGetClassObject(
 
 ### <a name="parameters"></a>Parametry
 
-*rclsid*  
+*rclsid*<br/>
 Identyfikator CLSID obiektu do utworzenia.
 
-*Parametr riid*  
+*Parametr riid*<br/>
 Identyfikator IID żądanego interfejsu.
 
-*ppv*  
+*ppv*<br/>
 Wskaźnik do wskaźnika interfejsu identyfikowane przez *riid*. Jeśli obiekt nie obsługuje ten interfejs *ppv* ma wartość NULL.
 
 ### <a name="return-value"></a>Wartość zwracana
@@ -151,10 +151,10 @@ BOOL WINAPI DllMain(DWORD dwReason, LPVOID /* lpReserved*/) throw();
 
 ### <a name="parameters"></a>Parametry
 
-*dwReason*  
+*dwReason*<br/>
 Jeśli ustawienie DLL_PROCESS_ATTACH DLL_THREAD_ATTACH i DLL_THREAD_DETACH wywołania powiadomienia są wyłączone.
 
-*lpReserved*  
+*lpReserved*<br/>
 Zastrzeżone.
 
 ### <a name="return-value"></a>Wartość zwracana
@@ -175,7 +175,7 @@ HRESULT DllRegisterServer(BOOL bRegTypeLib = TRUE) throw();
 
 ### <a name="parameters"></a>Parametry
 
-*bRegTypeLib*  
+*bRegTypeLib*<br/>
 Wartość TRUE, jeśli biblioteka typów ma zostać zarejestrowany. Wartość domyślna to TRUE.
 
 ### <a name="return-value"></a>Wartość zwracana
@@ -192,7 +192,7 @@ HRESULT DllUnregisterServer(BOOL bUnRegTypeLib = TRUE) throw();
 
 ### <a name="parameters"></a>Parametry
 
-*bUnRegTypeLib*  
+*bUnRegTypeLib*<br/>
 Wartość TRUE, jeśli biblioteka typów zostanie usunięta z rejestru. Wartość domyślna to TRUE.
 
 ### <a name="return-value"></a>Wartość zwracana
@@ -212,13 +212,13 @@ HRESULT GetClassObject(
 
 ### <a name="parameters"></a>Parametry
 
-*rclsid*  
+*rclsid*<br/>
 Identyfikator CLSID obiektu do utworzenia.
 
-*Parametr riid*  
+*Parametr riid*<br/>
 Identyfikator IID żądanego interfejsu.
 
-*ppv*  
+*ppv*<br/>
 Wskaźnik do wskaźnika interfejsu identyfikowane przez *riid*. Jeśli obiekt nie obsługuje ten interfejs *ppv* ma wartość NULL.
 
 ### <a name="return-value"></a>Wartość zwracana
@@ -231,7 +231,7 @@ Ta metoda jest wywoływana [CAtlDllModuleT::DllGetClassObject](#dllgetclassobjec
 
 ## <a name="see-also"></a>Zobacz też
 
-[Klasa CAtlModuleT](../../atl/reference/catlmodulet-class.md)   
-[Klasa CAtlExeModuleT](../../atl/reference/catlexemodulet-class.md)   
-[Klasa — Przegląd](../../atl/atl-class-overview.md)   
+[Klasa CAtlModuleT](../../atl/reference/catlmodulet-class.md)<br/>
+[Klasa CAtlExeModuleT](../../atl/reference/catlexemodulet-class.md)<br/>
+[Klasa — Przegląd](../../atl/atl-class-overview.md)<br/>
 [Klasy modułów](../../atl/atl-module-classes.md)

@@ -16,14 +16,15 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b52f0d998e124412c3cf81de4efa762d1c0c346e
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 7c85cff5895326b9a96e9254cebb27fc267550f4
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33224814"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46103974"
 ---
 # <a name="fatal-error-c1014"></a>Błąd krytyczny C1014
-zbyt wiele plików obejmują: głębokość = poziom  
-  
- Zagnieżdżanie `#include` dyrektywy jest zbyt głęboka. Zagnieżdżone dyrektywy mogą obejmować otwartych plików. Plik źródłowy zawierających dyrektywy liczone jako jeden plik.
+
+zbyt wiele pliki dołączane: głębokość = poziom
+
+Zagnieżdżanie `#include` dyrektyw jest zbyt głęboka. Zagnieżdżonych dyrektyw może zawierać otwartych plików. Plik źródłowy zawierający dyrektywę jest liczona jako jeden plik.

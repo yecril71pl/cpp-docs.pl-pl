@@ -15,19 +15,19 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 78c369665d398d4b326cf8d27ad0944a594fe1a4
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 4ff2612538cd6953672d9f91dcb603b4676be100
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43758940"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46098930"
 ---
 # <a name="default-signals"></a>Sygnały domyślne
 
 **ANSI 4.7.1.1** Jeśli odpowiednik `signal(sig, SIG_DFL)` nie jest wykonywany przed wywołaniem programu obsługi sygnałów, blokuje sygnał, który jest wykonywane
 
-Sygnały są ustawione na ich domyślny stan, kiedy rozpoczyna się program uruchomiony.  
-  
+Sygnały są ustawione na ich domyślny stan, kiedy rozpoczyna się program uruchomiony.
+
 ## <a name="see-also"></a>Zobacz też
 
 [Funkcje bibliotek](../c-language/library-functions.md)

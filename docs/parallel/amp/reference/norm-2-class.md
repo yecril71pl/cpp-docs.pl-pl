@@ -1,5 +1,5 @@
 ---
-title: norm_2 — klasa | Dokumentacja firmy Microsoft
+title: norm_2, klasa | Dokumentacja firmy Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -38,15 +38,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2bcdb86d63af4f920e1df3dffd920195aa7a00d8
-ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
+ms.openlocfilehash: cc1e6d499c5e02c32a7df02c91b012f9440e7cbb
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33686464"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46104455"
 ---
 # <a name="norm2-class"></a>norm_2 — Klasa
-Reprezentuje krótki wektor dwóch liczb normalnego.  
+Reprezentuje krótki wektor dwóch normalnych liczb.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -56,7 +56,7 @@ class norm_2;
   
 ## <a name="members"></a>Elementy członkowskie  
   
-### <a name="public-typedefs"></a>Definicje typów publicznych  
+### <a name="public-typedefs"></a>Publiczne definicje typów  
   
 |Nazwa|Opis|  
 |----------|-----------------|  
@@ -66,7 +66,7 @@ class norm_2;
   
 |Nazwa|Opis|  
 |----------|-----------------|  
-|[norm_2 Constructor](#ctor)|Przeciążone. Domyślny konstruktor, inicjuje wszystkie elementy z 0.|  
+|[norm_2 Constructor](#ctor)|Przeciążone. Domyślny konstruktor, inicjuje wszystkie elementy wartością 0.|  
   
 ### <a name="public-methods"></a>Metody publiczne  
   
@@ -98,11 +98,11 @@ class norm_2;
 |norm_2::operator =||  
 |norm_2::operator-=||  
   
-### <a name="public-constants"></a>Publiczny — stałe  
+### <a name="public-constants"></a>Publiczne stałe  
   
 |Nazwa|Opis|  
 |----------|-----------------|  
-|[Size — stała](#norm_2__size)||  
+|[rozmiar — stała](#norm_2__size)||  
   
 ### <a name="public-data-members"></a>Publiczne elementy członkowskie danych  
   
@@ -125,9 +125,9 @@ class norm_2;
   
  **Namespace:** Concurrency::graphics  
   
-##  <a name="ctor"></a> norm_2 — 
+##  <a name="ctor"></a> norm_2 
 
- Domyślny konstruktor, inicjuje wszystkie elementy z 0.  
+ Domyślny konstruktor, inicjuje wszystkie elementy wartością 0.  
   
 ```  
 norm_2() restrict(amp,
@@ -193,17 +193,17 @@ explicit inline norm_2(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `_V0`  
- Wartość do zainicjowania elementu 0.  
+*_V0*<br/>
+Wartość do zainicjowania elementu 0.  
   
- `_V1`  
- Wartość zainicjować element 1.  
+*_V1*<br/>
+Wartość do zainicjowania elementu 1.  
   
- `_V`  
- Wartość dla inicjowania.  
+*_V*<br/>
+Wartość inicjalizacji.  
   
- `_Other`  
- Obiekt używany do inicjowania.  
+*_Inne*<br/>
+Obiekt używany do inicjowania.  
   
 ##  <a name="norm_2__size"></a> Rozmiar 
 

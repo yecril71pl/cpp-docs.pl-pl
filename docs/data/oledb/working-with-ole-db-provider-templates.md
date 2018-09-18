@@ -18,32 +18,34 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 7996d3d3950882dd31e0eb7f52a94329a8fa45df
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 16f628b5895ca137394186eaa13c6848f2884e50
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33112072"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46107670"
 ---
 # <a name="working-with-ole-db-provider-templates"></a>Praca z szablonami dostawców OLE DB
+
 Aby dowiedzieć się, jak pracować z szablonami dostawców OLE DB, zobacz następujące tematy:  
   
--   [Dodawanie interfejsu do dostawcy](../../data/oledb/adding-an-interface-to-your-provider.md)  
+- [Dodawanie interfejsu do dostawcy](../../data/oledb/adding-an-interface-to-your-provider.md)  
   
--   [Odwoływanie się do właściwości w dostawcy](../../data/oledb/referencing-a-property-in-your-provider.md)  
+- [Odwoływanie się do właściwości w dostawcy](../../data/oledb/referencing-a-property-in-your-provider.md)  
   
--   [Ustawianie właściwości w dostawcy](../../data/oledb/setting-properties-in-your-provider.md)  
+- [Ustawianie właściwości w dostawcy](../../data/oledb/setting-properties-in-your-provider.md)  
   
--   [Dynamiczne powiązanie kolumn w dostawcy](../../data/oledb/dynamically-binding-columns-in-your-provider.md)  
+- [Dynamiczne powiązanie kolumn w dostawcy](../../data/oledb/dynamically-binding-columns-in-your-provider.md)  
   
--   [Obsługa wolnych wątków w dostawcy](../../data/oledb/supporting-free-threading-in-your-provider.md)  
+- [Obsługa wolnych wątków w dostawcy](../../data/oledb/supporting-free-threading-in-your-provider.md)  
   
--   [Testowanie dostawcy](../../data/oledb/testing-your-provider.md)  
+- [Testowanie dostawcy](../../data/oledb/testing-your-provider.md)  
   
--   [Debugowanie dostawcy](../../data/oledb/debugging-your-provider.md)  
+- [Debugowanie dostawcy](../../data/oledb/debugging-your-provider.md)  
   
--   [Konwertowanie danych nieobsługiwanych przez dostawcę](../../data/oledb/converting-data-not-supported-by-the-provider.md)  
+- [Konwertowanie danych nieobsługiwanych przez dostawcę](../../data/oledb/converting-data-not-supported-by-the-provider.md)  
   
 ## <a name="see-also"></a>Zobacz też  
- [Dokumentacja szablonów OLE DB Provider](../../data/oledb/ole-db-provider-templates-reference.md)   
- [Szablony konsumentów OLE DB](../../data/oledb/ole-db-consumer-templates-cpp.md)
+
+[Szablony dostawców OLE DB — dokumentacja](../../data/oledb/ole-db-provider-templates-reference.md)<br/>
+[Szablony konsumentów OLE DB](../../data/oledb/ole-db-consumer-templates-cpp.md)

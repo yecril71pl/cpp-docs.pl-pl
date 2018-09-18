@@ -18,15 +18,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b78bc955b43f3b6650f7a2fe654e5920c9cac971
-ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
+ms.openlocfilehash: 1e7dc90ce1ff04d3d02aed13927f137a2b4f7f75
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33705175"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46113295"
 ---
 # <a name="invalidschedulerpolicykey-class"></a>invalid_scheduler_policy_key — Klasa
-Ta klasa opisuje wyjątek wywoływany, gdy jest nieprawidłowa lub nieznany klucz jest przekazywana do `SchedulerPolicy` konstruktora obiektów lub `SetPolicyValue` metody `SchedulerPolicy` przekazanego obiektu klucz, który musi zostać zmienione za pomocą innych środków, takich jak `SetConcurrencyLimits` metody.  
+Ta klasa opisuje wyjątek generowany, gdy nieprawidłową lub nieznany klucz zostanie przekazany do `SchedulerPolicy` konstruktora obiektu lub `SetPolicyValue` metody `SchedulerPolicy` obiekt jest przekazywany klucza, które należy zmienić przy użyciu innych metod, takich jak `SetConcurrencyLimits` metody.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -52,7 +52,7 @@ class invalid_scheduler_policy_key : public std::exception;
   
  **Namespace:** współbieżności  
   
-##  <a name="ctor"></a> invalid_scheduler_policy_key — 
+##  <a name="ctor"></a> invalid_scheduler_policy_key 
 
  Konstruuje `invalid_scheduler_policy_key` obiektu.  
   
@@ -63,8 +63,8 @@ invalid_scheduler_policy_key() throw();
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `_Message`  
- Komunikat opisowy błędu.  
+*_Message*<br/>
+Opisowy komunikat dotyczący błędu.  
   
 ## <a name="see-also"></a>Zobacz też  
  [Współbieżność Namespace](concurrency-namespace.md)   

@@ -30,12 +30,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5dcaa927bc9fe38ca45cf938a20cf08713ecff1d
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: f24cf6cce5cdf268367f547e8a536dcdae7cc859
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43755519"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46098956"
 ---
 # <a name="ccomobjectrootex-class"></a>Klasa CComObjectRootEx
 
@@ -44,13 +44,13 @@ Ta klasa dostarcza metody do obsługi zarządzania liczba odwołanie do obiektu 
 ## <a name="syntax"></a>Składnia
 
 ```
-template<class ThreadModel>  
+template<class ThreadModel>
 class CComObjectRootEx : public CComObjectRootBase
 ```
 
 #### <a name="parameters"></a>Parametry
 
-*ThreadModel*  
+*ThreadModel*<br/>
 Klasa, której metody wdrożenia żądany model wątku. Można jawnie wybrać modelu wątkowości, ustawiając *ThreadModel* do [CComSingleThreadModel](../../atl/reference/ccomsinglethreadmodel-class.md), [CComMultiThreadModel](../../atl/reference/ccommultithreadmodel-class.md), lub [ CComMultiThreadModelNoCS](../../atl/reference/ccommultithreadmodelnocs-class.md). Możesz zaakceptować serwera domyślnego wątku modelu, ustawiając *ThreadModel* do [CComObjectThreadModel](atl-typedefs.md#ccomobjectthreadmodel) lub [CComGlobalsThreadModel](atl-typedefs.md#ccomglobalsthreadmodel).  
 
 ## <a name="members"></a>Elementy członkowskie
@@ -205,16 +205,16 @@ static HRESULT InternalQueryInterface(
 
 ### <a name="parameters"></a>Parametry
 
-*pThis*  
+*pThis*<br/>
 [in] Wskaźnik do obiektu, która zawiera mapę COM, interfejsów narażonych na `QueryInterface`.
 
-*pEntries*  
+*pEntries*<br/>
 [in] Wskaźnik do `_ATL_INTMAP_ENTRY` strukturę, która uzyskuje dostęp do mapy z dostępnych interfejsów.
 
-*IID*  
+*IID*<br/>
 [in] Identyfikator GUID interfejsu żądanej.
 
-*ppvObject*  
+*ppvObject*<br/>
 [out] Wskaźnik do wskaźnika interfejsu określonego w *iid*, lub wartość NULL, jeśli nie można odnaleźć interfejsu.
 
 ### <a name="return-value"></a>Wartość zwracana
@@ -308,7 +308,7 @@ static void WINAPI ObjectMain(bool bStarting);
 
 ### <a name="parameters"></a>Parametry
 
-*bStarting*  
+*bStarting*<br/>
 [out] Ma wartość TRUE, jeśli klasa jest inicjowany; w przeciwnym razie wartość FALSE.
 
 ### <a name="remarks"></a>Uwagi
@@ -343,10 +343,10 @@ HRESULT OuterQueryInterface(REFIID iid, void** ppvObject);
 
 ### <a name="parameters"></a>Parametry
 
-*IID*  
+*IID*<br/>
 [in] Identyfikator GUID interfejsu żądanej.
 
-*ppvObject*  
+*ppvObject*<br/>
 [out] Wskaźnik do wskaźnika interfejsu określonego w *iid*, lub wartość NULL, jeśli agregacji nie obsługuje interfejsu.
 
 ### <a name="return-value"></a>Wartość zwracana
@@ -381,7 +381,7 @@ W przypadku modelu wątku jednowątkowe, ta metoda nie działa.
 
 ## <a name="see-also"></a>Zobacz też
 
-[Klasa CComAggObject](../../atl/reference/ccomaggobject-class.md)   
-[Klasa CComObject](../../atl/reference/ccomobject-class.md)   
-[Klasa CComPolyObject](../../atl/reference/ccompolyobject-class.md)   
+[Klasa CComAggObject](../../atl/reference/ccomaggobject-class.md)<br/>
+[Klasa CComObject](../../atl/reference/ccomobject-class.md)<br/>
+[Klasa CComPolyObject](../../atl/reference/ccompolyobject-class.md)<br/>
 [Klasa — Przegląd](../../atl/atl-class-overview.md)

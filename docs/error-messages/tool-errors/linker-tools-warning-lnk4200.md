@@ -16,14 +16,15 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 72e0db3352bc124ab586b43fab278baf517b5a04
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 3d23d10440f4eba5082dff41544725fd6b77dbe3
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33298749"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46111761"
 ---
 # <a name="linker-tools-warning-lnk4200"></a>Ostrzeżenie LNK4200 narzędzi konsolidatora
-informacje o numerach wierszy uszkodzony, w pliku obiektu; ignorowane  
-  
- Informacje numer wiersza w pliku obiektu jest uszkodzony. Skompiluj ponownie.
+
+Informacja o numerach wierszy w uszkodzona w pliku obiektu; ignorowane
+
+Informacje o numer wiersza w pliku obiektu jest uszkodzony. Ponowna kompilacja.
