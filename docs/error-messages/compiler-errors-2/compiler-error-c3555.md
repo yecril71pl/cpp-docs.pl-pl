@@ -1,5 +1,5 @@
 ---
-title: C3555 błąd kompilatora | Dokumentacja firmy Microsoft
+title: Błąd kompilatora C3555 | Dokumentacja firmy Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,23 +16,23 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: bd5c40ae2be3473c0a06d12662c811edc93db2c4
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 1db56676ef9d737fab97a5b2826e1b0fe43bc3c6
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33258421"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46069654"
 ---
-# <a name="compiler-error-c3555"></a>C3555 błąd kompilatora
-  
-> Nieprawidłowy argument dla "decltype"  
-  
- Argument `decltype(` *wyrażenie* `)` specyfikatora typu nie jest prawidłowym wyrażeniem.  
-  
+# <a name="compiler-error-c3555"></a>Błąd kompilatora C3555
+
+> Nieprawidłowy argument dla "decltype"
+
+Argument `decltype(` *wyrażenie* `)` Specyfikator typu nie jest prawidłowym wyrażeniem.
+
 > [!NOTE]
->  C3555 nie jest prawdopodobne. Jeśli kompilator emituje C3555, prawdopodobnie wystąpił błąd wewnętrzny kompilatora.  
-  
-## <a name="see-also"></a>Zobacz też  
-  
- [C3556 błąd kompilatora](../../error-messages/compiler-errors-2/compiler-error-c3556.md)   
- [Błąd krytyczny C1001](../../error-messages/compiler-errors-1/fatal-error-c1001.md)
+>  C3555 nie jest prawdopodobne. Jeśli kompilator generuje C3555, prawdopodobnie wystąpił błąd wewnętrzny kompilatora.
+
+## <a name="see-also"></a>Zobacz też
+
+[Błąd kompilatora C3556](../../error-messages/compiler-errors-2/compiler-error-c3556.md)<br/>
+[Błąd krytyczny C1001](../../error-messages/compiler-errors-1/fatal-error-c1001.md)

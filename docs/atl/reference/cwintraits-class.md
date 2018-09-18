@@ -23,12 +23,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 72c5ddc9d49488aa4609249cbbdc7842e188cc34
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: fb6ee8cd591c4a5b5a4a3701c6974849f9e3238f
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43760880"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46069397"
 ---
 # <a name="cwintraits-class"></a>Klasa CWinTraits
 
@@ -45,10 +45,10 @@ template <DWORD t_dwStyle = 0, DWORD t_dwExStyle = 0>  class CWinTraits
 
 #### <a name="parameters"></a>Parametry
 
-*t_dwStyle*  
+*t_dwStyle*<br/>
 Domyślne style standardowego okna.
 
-*t_dwExStyle*  
+*t_dwExStyle*<br/>
 Domyślnie rozszerzone Style okna.
 
 ## <a name="members"></a>Elementy członkowskie
@@ -68,14 +68,17 @@ Użyj tego szablonu, które chcesz udostępnić domyślne style okna, które bę
 
 ATL zawiera trzy wstępnie zdefiniowane specjalizacje szablonu dla często używanych kombinacji Style okna ramowego:
 
-`CControlWinTraits`  
-Zaprojektowana na potrzeby okna formantu standardowego. Używane są następujące standardowe style: WS_CHILD, WS_VISIBLE, WS_CLIPCHILDREN i WS_CLIPSIBLINGS. Nie istnieją żadne rozszerzone style.
+- `CControlWinTraits`  
 
-`CFrameWinTraits`  
-Zaprojektowana na potrzeby standardowych ramki okna. Standardowe style używane obejmują: WS_OVERLAPPEDWINDOW, WS_CLIPCHILDREN i WS_CLIPSIBLINGS. Rozszerzone style używane obejmują: WS_EX_APPWINDOW i WS_EX_WINDOWEDGE.
+   Zaprojektowana na potrzeby okna formantu standardowego. Używane są następujące standardowe style: WS_CHILD, WS_VISIBLE, WS_CLIPCHILDREN i WS_CLIPSIBLINGS. Nie istnieją żadne rozszerzone style.
 
-`CMDIChildWinTraits`  
-Zaprojektowana na potrzeby standardowe okno podrzędne MDI. Standardowe style używane obejmują: WS_OVERLAPPEDWINDOW, WS_CHILD, WS_VISIBLE, WS_CLIPCHILDREN i WS_CLIPSIBLINGS. Rozszerzone style używane obejmują: WS_EX_MDICHILD.
+- `CFrameWinTraits`  
+
+   Zaprojektowana na potrzeby standardowych ramki okna. Standardowe style używane obejmują: WS_OVERLAPPEDWINDOW, WS_CLIPCHILDREN i WS_CLIPSIBLINGS. Rozszerzone style używane obejmują: WS_EX_APPWINDOW i WS_EX_WINDOWEDGE.
+
+- `CMDIChildWinTraits`  
+
+   Zaprojektowana na potrzeby standardowe okno podrzędne MDI. Standardowe style używane obejmują: WS_OVERLAPPEDWINDOW, WS_CHILD, WS_VISIBLE, WS_CLIPCHILDREN i WS_CLIPSIBLINGS. Rozszerzone style używane obejmują: WS_EX_MDICHILD.
 
 Jeśli chcesz upewnić się, że określone style są ustawione dla wszystkich wystąpień klasy okna, umożliwiając innymi stylami należy ustawić na podstawie poszczególnych wystąpień [CWinTraitsOR](../../atl/reference/cwintraitsor-class.md) zamiast tego.
 
@@ -93,7 +96,7 @@ static DWORD GetWndStyle(DWORD dwStyle);
 
 ### <a name="parameters"></a>Parametry
 
-*dwStyle*  
+*dwStyle*<br/>
 Standardowe style służy do tworzenia okna. Jeśli *dwStyle* ma wartość 0, wartości styl szablonu (`t_dwStyle`) są zwracane. Jeśli *dwStyle* jest różna od zera, *dwStyle* jest zwracana.
 
 ### <a name="return-value"></a>Wartość zwracana
@@ -110,7 +113,7 @@ static DWORD GetWndExStyle(DWORD dwExStyle);
 
 ### <a name="parameters"></a>Parametry
 
-*dwExStyle*  
+*dwExStyle*<br/>
 Rozszerzone style służy do tworzenia okna. Jeśli *dwExStyle* ma wartość 0, wartości styl szablonu (`t_dwExStyle`) są zwracane. Jeśli *dwExStyle* jest różna od zera, *dwExStyle* jest zwracana.
 
 ### <a name="return-value"></a>Wartość zwracana
@@ -119,5 +122,5 @@ Rozszerzone Style okna obiektu.
 
 ## <a name="see-also"></a>Zobacz też
 
-[Klasa — Przegląd](../../atl/atl-class-overview.md)   
+[Klasa — Przegląd](../../atl/atl-class-overview.md)<br/>
 [Opis cech okna](../../atl/understanding-window-traits.md)

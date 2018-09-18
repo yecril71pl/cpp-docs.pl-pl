@@ -19,12 +19,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 545f38058871d81196150e127c1814b304b6ab56
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 1c0261964f2e9c33f8a594a83e1b19c1db7be614
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43767858"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46069238"
 ---
 # <a name="iworkerthreadclient-interface"></a>Interfejs IWorkerThreadClient
 
@@ -66,7 +66,7 @@ HRESULT CloseHandle(HANDLE  hHandle);
 
 ### <a name="parameters"></a>Parametry
 
-*hHandle*  
+*hHandle*<br/>
 Uchwyt zostanie zamknięty.
 
 ### <a name="return-value"></a>Wartość zwracana
@@ -93,10 +93,10 @@ HRESULT Execute(DWORD_PTR dwParam, HANDLE hObject);
 
 ### <a name="parameters"></a>Parametry
 
-*dwParam*  
+*dwParam*<br/>
 Parametr użytkownika.
 
-*hObject*  
+*hObject*<br/>
 Uchwyt, który ma być sygnalizowane.
 
 ### <a name="return-value"></a>Wartość zwracana
@@ -115,5 +115,5 @@ Poniższy kod przedstawia proste wdrażanie `IWorkerThreadClient::Execute`.
 
 ## <a name="see-also"></a>Zobacz też
 
-[Klasy](../../atl/reference/atl-classes.md)   
+[Klasy](../../atl/reference/atl-classes.md)<br/>
 [Klasa CWorkerThread](../../atl/reference/cworkerthread-class.md)

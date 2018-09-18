@@ -15,35 +15,37 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e91881f738c1b6411179c4f8e10e30f69e7b8667
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 106e02de80c3132846d7b88161637a37f74a59ee
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32410934"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46068640"
 ---
 # <a name="text-and-binary-streams"></a>Strumienie binarne i tekstowe
-Strumień tekstu składa się z jednego lub więcej wierszy tekstu, które mogą być zapisywane na wyświetlenie tekstowych, dzięki czemu mogą być odczytywane. Podczas odczytywania ze strumienia tekstu, program odczytuje `NL` (nowego wiersza) pod koniec każdego wiersza. Podczas zapisywania do strumienia tekstu, program zapisuje `NL` która sygnalizuje koniec wiersza. Odpowiadające różne konwencje między środowiska docelowego reprezentujący tekstu w plikach funkcji biblioteki można zmienić numer reprezentacje znaków przesyłane między programem a strumienia tekstu.  
-  
- W związku z tym pozycjonowania w strumieniu tekst jest ograniczona. Wskaźnik położenia pliku bieżącego można uzyskać przez wywołanie metody [fgetpos —](../c-runtime-library/reference/fgetpos.md) lub [ftell —](../c-runtime-library/reference/ftell-ftelli64.md). Można umieścić strumienia tekstu na pozycji uzyskane w ten sposób lub początek lub koniec strumienia, wywołując [fsetpos —](../c-runtime-library/reference/fsetpos.md) lub [fseek](../c-runtime-library/reference/fseek-fseeki64.md). Zmiany pozycji może również nie być obsługiwany.  
-  
- Przenośności maksymalna program nie powinien zapisać:  
-  
--   Pustych plików.  
-  
--   Spacje na końcu linii.  
-  
--   Częściowo (, pomijając `NL` na końcu pliku).  
-  
--   znaki inne niż drukowalne znaki NL, i `HT` (tabulator poziomy).  
-  
- Jeśli wykonujesz te reguły sekwencja znaków odczytu ze strumienia tekstu (albo jako bajtów lub znaków wielobajtowych) będzie odpowiadała sekwencja znaków napisanym strumienia tekstu podczas tworzenia pliku. W przeciwnym razie funkcje biblioteki można usunąć pliku, które tworzysz, jeśli plik jest pusty, po jego zamknięciu. Lub mogą zmienić lub usunąć znaki, które można zapisać do pliku.  
-  
- Strumień binarny składa się z jednego lub więcej bajtów dowolnych informacji. Można zapisać wartości przechowywane w dowolnego obiektu do (zorientowane na bajt) strumienia danych binarnych i Przeczytaj dokładnie co to są przechowywane w obiekcie podczas zostało napisane. Funkcje bibliotek nie należy zmieniać przesyłane między programem a binarne strumienia bajtów. Można jednak Dołącz dowolnej liczby bajtów null do pliku, który zapisu za pomocą strumienia binarnego. Program musi uwzględniać następujące dodatkowe bajty zerowe na końcu wszystkie strumienia danych binarnych.  
-  
- W związku z tym pozycjonowania w strumienia binarnego jest dobrze zdefiniowany, z wyjątkiem pozycjonowanie względem koniec strumienia. Można uzyskać i alter wskaźnik położenia pliku bieżącego takie same jak w przypadku strumienia tekstu. Ponadto przesunięcia używane przez [ftell —](../c-runtime-library/reference/ftell-ftelli64.md) i [fseek](../c-runtime-library/reference/fseek-fseeki64.md) liczba bajtów od początku strumienia (czyli bajtów zero), więc całkowitą arytmetycznego na przesunięcia daje przewidywalne wyniki.  
-  
- Strumień bajtów traktuje pliku jako sekwencję bajtów. W programie strumienia wygląda takiej samej kolejności bajtów, z wyjątkiem możliwości zmiany opisane powyżej.  
-  
-## <a name="see-also"></a>Zobacz też  
- [Pliki i strumienie](../c-runtime-library/files-and-streams.md)
+
+Strumienia tekstu składa się z jednego lub więcej wierszy tekstu, które mogą być zapisywane do wyświetlania zorientowane na tekst, tak aby można było je odczytać. Podczas odczytywania ze strumienia tekstu, program odczytuje `NL` (nowy wiersz) na końcu każdego wiersza. Podczas zapisywania do strumienia tekstu, program zapisuje `NL` celu sygnalizowania, że koniec wiersza. W celu dopasowania do różnych Konwencji między środowiskach docelowych do reprezentowania tekstu w plikach, funkcje biblioteki może zmienić numer i reprezentacje znaków przesyłane między programem a strumienia tekstu.
+
+W efekcie pozycjonowania w strumieniu tekstu jest ograniczona. Wskaźnik położenia pliku bieżącego można uzyskać wywołując [fgetpos](../c-runtime-library/reference/fgetpos.md) lub [ftell —](../c-runtime-library/reference/ftell-ftelli64.md). Można umieścić w strumieniu tekstu na pozycji uzyskane w ten sposób lub na początku lub na końcu strumienia, wywołując [fsetpos](../c-runtime-library/reference/fsetpos.md) lub [fseek](../c-runtime-library/reference/fseek-fseeki64.md). Zmiany pozycji również mogą być nie obsługiwane.
+
+Dla uzyskania maksymalnej przenośności program nie powinien zapisać:
+
+- Pustych plików.
+
+- Znaków spacji na końcu wiersza.
+
+- Częściowe wierszy (pomijając `NL` na końcu pliku).
+
+- znaki inne niż drukowalne znaki, NL, i `HT` (tabulator poziomy).
+
+Jeśli należy wykonać następujące czynności, sekwencji znaków, które Odczyt ze strumienia tekstu (albo jako bajtów lub znaków wielobajtowych) będzie zgodny sekwencji znaków, napisanym w strumieniu tekstu, podczas tworzenia pliku. W przeciwnym razie funkcji biblioteki można usunąć plik, który tworzysz, jeśli plik jest pusty, gdy go zamknąć. Lub ich zmienić ani usunąć znaki, które można zapisać do pliku.
+
+Strumień binarny składa się z co najmniej jeden bajtów dowolnych informacji. Można zapisać wartości przechowywane w dowolnego obiektu do strumienia danych binarnych (zorientowane na bajt) i Przeczytaj dokładnie co to są przechowywane w obiekcie podczas jego autorem. Funkcje bibliotek nie należy zmieniać bajtów, jaką przesyłane między programem a strumień binarny. Można jednak dołączyć dowolną liczbę bajty o wartości null do pliku, który piszesz strumień binarny. Program musi obsłużyć te dodatkowe bajty o wartości null na końcu wszelkie strumienia danych binarnych.
+
+W efekcie pozycjonowania w strumień binarny jest dobrze zdefiniowane, z wyjątkiem pozycjonowanie względem koniec strumienia. Można uzyskać, a następnie zmienić bieżący wskaźnik pozycji pliku takie same jak dla strumienia tekstu. Ponadto przesunięcia posługują się [ftell —](../c-runtime-library/reference/ftell-ftelli64.md) i [fseek](../c-runtime-library/reference/fseek-fseeki64.md) liczba bajtów od początku strumienia (czyli zero bajtów), więc całkowitą arytmetyczne na przesunięcia daje przewidywalne wyniki.
+
+Strumień bajtów traktuje plik jako sekwencja bajtów. W ramach programu strumień wyglądają jak ta sama sekwencja bajtów, z wyjątkiem możliwości zmiany opisane powyżej.
+
+## <a name="see-also"></a>Zobacz też
+
+[Pliki i strumienie](../c-runtime-library/files-and-streams.md)

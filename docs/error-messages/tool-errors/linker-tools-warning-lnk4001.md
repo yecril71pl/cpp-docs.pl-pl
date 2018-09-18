@@ -16,16 +16,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: acf65c00c5c039769a05e009dcfe46ea42633ac4
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: f684e85233c4df777a53f03f07936137c425946e
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33300361"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46070422"
 ---
 # <a name="linker-tools-warning-lnk4001"></a>Ostrzeżenie LNK4001 narzędzi konsolidatora
-nie określono; plików obiektów użyto bibliotek  
-  
- Konsolidator przekazano jeden lub więcej plików lib, ale żadne pliki .obj.  
-  
- Ponieważ konsolidator nie będzie mógł uzyskać dostępu do informacji w pliku .lib, który jest w stanie uzyskać dostęp w pliku .obj, to ostrzeżenie oznacza, że zostaną jawnie określone inne opcje konsolidatora. Na przykład może być konieczne określenie [/maszyny](../../build/reference/machine-specify-target-platform.md), [/OUT](../../build/reference/out-output-file-name.md), lub [/Entry](../../build/reference/entry-entry-point-symbol.md) opcje.
+
+nie określono; plików obiektów użyto bibliotek
+
+Konsolidator przekazano co najmniej jeden plik .lib, ale nie pliki .obj.
+
+Ponieważ konsolidator nie jest w stanie uzyskać dostępu do informacji w pliku .lib, który jest w stanie uzyskać dostęp w pliku .obj, to ostrzeżenie wskazuje, że musisz jawnie określić inne opcje konsolidatora. Na przykład może być konieczne określenie [/MACHINE](../../build/reference/machine-specify-target-platform.md), [/OUT](../../build/reference/out-output-file-name.md), lub [/Entry](../../build/reference/entry-entry-point-symbol.md) opcje.

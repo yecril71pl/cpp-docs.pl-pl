@@ -18,15 +18,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 73f693c884542b93431a77e914d210f76721c5a0
-ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
+ms.openlocfilehash: 3cc4e3b2a23dd5c617b70a7a4b992323a0e963f4
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33686165"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46067350"
 ---
 # <a name="invalidmultiplescheduling-class"></a>invalid_multiple_scheduling — Klasa
-Ta klasa opisuje wyjątek wywoływany, gdy `task_handle` obiekt jest zaplanowane wiele razy przy użyciu `run` metody `task_group` lub `structured_task_group` obiektu bez wywołania pośredniczące `wait` lub `run_and_wait` metody.  
+Ta klasa opisuje wyjątek generowany, gdy `task_handle` obiekt jest zaplanowane wiele razy, używając `run` metody `task_group` lub `structured_task_group` obiekt bez interwencyjnego wywołania `wait` lub `run_and_wait` metody.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -63,14 +63,14 @@ invalid_multiple_scheduling() throw();
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `_Message`  
- Komunikat opisowy błędu.  
+*_Message*<br/>
+Opisowy komunikat dotyczący błędu.  
   
 ## <a name="see-also"></a>Zobacz też  
  [Współbieżność Namespace](concurrency-namespace.md)   
  [task_handle — klasa](task-handle-class.md)   
  [task_group — klasa](task-group-class.md)   
  [run](task-group-class.md)   
- [oczekiwania](task-group-class.md)   
+ [Czekaj](task-group-class.md)   
  [run_and_wait](task-group-class.md)   
  [structured_task_group, klasa](structured-task-group-class.md)

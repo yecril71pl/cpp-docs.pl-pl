@@ -22,12 +22,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8399eed2c047c10a0a78b1cd944dba7b2d1da97e
-ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
+ms.openlocfilehash: 59600343a06a2c3c0d4f5b55efadaa09c43452d9
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44102108"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46067704"
 ---
 # <a name="extent-class-c-amp"></a>extent — Klasa (C++ AMP)
 Reprezentuje wektor *N* wartości całkowitych, które określają granice przestrzeni *N*-wymiarowej, która pochodzi od 0. Wartości w wektorze są uporządkowane od najbardziej do najmniej znaczących.
@@ -40,7 +40,7 @@ class extent;
 ```  
 
 ### <a name="parameters"></a>Parametry
-`_Rank`  
+*_Rank*<br/>
 Ranga `extent` obiektu.
 
 ## <a name="requirements"></a>Wymagania
@@ -102,7 +102,7 @@ bool contains(const index<rank>& _Index) const restrict(amp,cpu);
 ```  
 
 ### <a name="parameters"></a>Parametry
-`_Index`  
+*Parametr _Index*<br/>
 `index` Wartość do sprawdzenia.
 
 ### <a name="return-value"></a>Wartość zwracana
@@ -124,22 +124,22 @@ explicit extent(const int _Array[_Rank])restrict(amp,cpu);
 ```  
 
 ### <a name="parameters"></a>Parametry
-`_Array`  
+*_Array*<br/>
 Tablica `_Rank` liczb całkowitych, które służy do tworzenia nowego `extent` obiektu.
 
-`_I`  
+*_I*<br/>
 Długość zakresu.
 
-`_I0`  
+*_I0*<br/>
 Długość najbardziej znaczącego wymiaru.
 
-`_I1`  
+*_I1*<br/>
 Długość następnego do najbardziej znaczący wymiar.
 
-`_I2`  
+*_I2*<br/>
 Długość najmniej znaczącego wymiaru.
 
-`_Other`  
+*_Inne*<br/>
 `extent` Obiektu, na którym nowym `extent` opiera się obiekt.
 
 ## <a name="remarks"></a>Uwagi
@@ -158,7 +158,7 @@ extent<_Rank>& operator%=(int _Rhs) restrict(cpu, direct3d);
 ```  
 
 ### <a name="parameters"></a>Parametry
-`_Rhs`  
+*_Rhs*<br/>
 Numer, aby znaleźć moduł.
 
 ### <a name="return-value"></a>Wartość zwracana
@@ -175,7 +175,7 @@ extent<_Rank>& operator*=(int _Rhs) restrict(amp,cpu);
 ```  
 
 ### <a name="parameters"></a>Parametry
-`_Rhs`  
+*_Rhs*<br/>
 Liczbę Aby pomnożyć.
 
 ### <a name="return-value"></a>Wartość zwracana
@@ -192,7 +192,7 @@ extent<_Rank> operator+(const index<_Rank>& _Rhs) restrict(amp,cpu);
 ```  
 
 ### <a name="parameters"></a>Parametry
-`_Rhs`  
+*_Rhs*<br/>
 `index` Obiekt, który zawiera elementy do dodania.
 
 ### <a name="return-value"></a>Wartość zwracana
@@ -225,7 +225,7 @@ extent<_Rank>& operator+=(int _Rhs) restrict(amp,cpu);
 ```  
 
 ### <a name="parameters"></a>Parametry
-`_Rhs`  
+*_Rhs*<br/>
 Liczba, indeks lub zakres do dodania.
 
 ### <a name="return-value"></a>Wartość zwracana
@@ -242,7 +242,7 @@ extent<_Rank> operator-(const index<_Rank>& _Rhs) restrict(amp,cpu);
 ```  
 
 ### <a name="parameters"></a>Parametry
-`_Rhs`  
+*_Rhs*<br/>
 `index` Obiekt, który zawiera elementy do odjęcia.
 
 ### <a name="return-value"></a>Wartość zwracana
@@ -273,7 +273,7 @@ extent<_Rank>& operator/=(int _Rhs) restrict(amp,cpu);
 ```  
 
 ### <a name="parameters"></a>Parametry
-`_Rhs`  
+*_Rhs*<br/>
 Liczba do podzielenia przez.
 
 ### <a name="return-value"></a>Wartość zwracana
@@ -292,7 +292,7 @@ extent<_Rank>& operator-=(int _Rhs) restrict(amp,cpu);
 ```  
 
 ### <a name="parameters"></a>Parametry
-`_Rhs`  
+*_Rhs*<br/>
 Liczba odejmowana.
 
 ### <a name="return-value"></a>Wartość zwracana
@@ -309,7 +309,7 @@ extent<_Rank>& operator=(const extent<_Rank>& _Other) restrict(amp,cpu);
 ```  
 
 ### <a name="parameters"></a>Parametry
-`_Other`  
+*_Inne*<br/>
 `extent` Obiektu do skopiowania.
 
 ### <a name="return-value"></a>Wartość zwracana
@@ -326,7 +326,7 @@ int& operator[](unsigned int _Index) restrict(amp,cpu);
 ```  
 
 ### <a name="parameters"></a>Parametry
-`_Index`  
+*Parametr _Index*<br/>
 Liczba całkowita z zakresu od 0 do rangi minus 1.
 
 ### <a name="return-value"></a>Wartość zwracana

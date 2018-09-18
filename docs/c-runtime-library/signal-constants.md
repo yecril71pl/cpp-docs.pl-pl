@@ -27,48 +27,38 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 279f4beb3b550f672ac3950c31f3653ca1f00ba2
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: defd5f630f1d3832014e2cc7e9746c0e00e8d816
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32409361"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46070668"
 ---
 # <a name="signal-constants"></a>sygnał — Stałe
-## <a name="syntax"></a>Składnia  
-  
-```  
-#include <signal.h>  
-```  
-  
-## <a name="remarks"></a>Uwagi  
- `sig` Argument musi być jedną z manifestu stałe wymienionych poniżej (zdefiniowanego w sygnału. H).  
-  
- `SIGABRT`  
- Przerwania pracy. Domyślne działanie kończy program wywołujący z kodem zakończenia 3.  
-  
- `SIGABRT_COMPAT`  
- Taka sama jak sigabrt —. Aby zapewnić zgodność z innych platform.  
-  
- `SIGFPE`  
- Błąd liczb zmiennoprzecinkowych, takich jak przepełnienia, dzielenie przez zero lub nieprawidłowa operacja. Domyślne działanie kończy program wywołujący.  
-  
- `SIGILL`  
- Niedozwolona instrukcja. Domyślne działanie kończy program wywołujący.  
-  
- `SIGINT`  
- Przerwanie klawisze CTRL + C. Domyślne działanie kończy program wywołujący z kodem zakończenia 3.  
-  
- `SIGSEGV`  
- Dostępu do magazynu niedozwolone. Domyślne działanie kończy program wywołujący.  
-  
- `SIGTERM`  
- Zakończenie żądania wysyłane do programu. Domyślne działanie kończy program wywołujący z kodem zakończenia 3.  
-  
- `SIG_ERR`  
- Typ zwracany z sygnał wskazujący błąd wystąpił.  
-  
-## <a name="see-also"></a>Zobacz też  
- [Sygnał](../c-runtime-library/reference/signal.md)   
- [Zgłoś](../c-runtime-library/reference/raise.md)   
- [Stałe globalne](../c-runtime-library/global-constants.md)
+
+## <a name="syntax"></a>Składnia
+
+```
+#include <signal.h>
+```
+
+## <a name="remarks"></a>Uwagi
+
+`sig` Argument musi być w jednej ze stałych manifestu, wymienionych poniżej (zdefiniowana na sygnał. GODZ.).
+
+|||
+|-|-|
+|SIGABRT|Nienormalne zakończenie. Domyślna akcja kończy program wywołujący kodem zakończenia 3.  |
+|SIGABRT_COMPAT|Taka sama jak SIGABRT. Zgodność z innymi platformami.  |
+|SIGFPE|Błąd zmiennoprzecinkowy, takich jak przepełnienia, dzielenie przez zero lub nieprawidłowa operacja. Domyślna akcja kończy program wywołujący.  |
+|SIGILL|Niedozwolona instrukcja. Domyślna akcja kończy program wywołujący.  |
+|SIGINT|CTRL + C przerywa. Domyślna akcja kończy program wywołujący kodem zakończenia 3.  |
+|SIGSEGV|Niedozwolony dostęp do magazynu. Domyślna akcja kończy program wywołujący.  |
+|SIGTERM|Zakończenie żądania wysłanego do programu. Domyślna akcja kończy program wywołujący kodem zakończenia 3.  |
+|SIG_ERR|Typem zwracanym od sygnałów, co wskazuje na błąd wystąpił.  |
+
+## <a name="see-also"></a>Zobacz też
+
+[signal](../c-runtime-library/reference/signal.md)<br/>
+[raise](../c-runtime-library/reference/raise.md)<br/>
+[Stałe globalne](../c-runtime-library/global-constants.md)

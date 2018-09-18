@@ -1,5 +1,5 @@
 ---
-title: C2285 błąd kompilatora | Dokumentacja firmy Microsoft
+title: Błąd kompilatora C2285 | Dokumentacja firmy Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,14 +16,15 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b22a0a7b325a6659d683f870bd87e50255e5a186
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: a1987c83e256f1c3bc6fd601be318437a02373fd
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33170441"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46067658"
 ---
-# <a name="compiler-error-c2285"></a>C2285 błąd kompilatora
-wskaźniki do członków reprezentacji zostały już ustalone - pragma ignorowane  
-  
- Istnieją dwa różne reprezentacje dla klasy.
+# <a name="compiler-error-c2285"></a>Błąd kompilatora C2285
+
+wskaźniki do składowych reprezentacji ma zostały już ustalone — pragma ignorowane
+
+Istnieją dwa różne reprezentacje dla klasy.

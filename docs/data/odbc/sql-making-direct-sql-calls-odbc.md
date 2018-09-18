@@ -19,30 +19,34 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 2134fc41b604ffd659f9ee075abc9d462ff4f0db
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: edc43ce4fdbd838630d94f93ec018b246a0d5af4
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33093376"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46068497"
 ---
 # <a name="sql-making-direct-sql-calls-odbc"></a>SQL: wykonywanie bezpośrednich wywołań SQL (ODBC)
+
 W tym temacie opisano:  
   
--   Kiedy należy używać SQL bezpośrednie wywołania.  
+- Kiedy należy używać SQL bezpośrednich wywołań.  
   
--   [Jak należy kierować SQL wywołuje ze źródłem danych](#_core_making_direct_sql_function_calls).  
+- [Jak utworzyć bezpośrednie SQL wywołania do źródła danych](#_core_making_direct_sql_function_calls).  
   
 > [!NOTE]
->  Te informacje dotyczą klasach MFC ODBC. Jeśli pracujesz z klas MFC DAO, zobacz temat "Porównanie z bazy danych aparatu SQL i ANSI SQL programu Microsoft Jet" w pomocy DAO.  
+>  Te informacje dotyczą klas MFC ODBC. Pracy przy użyciu klas MFC DAO, zobacz temat "Porównanie programu Microsoft Jet bazy danych aparatu SQL i ANSI SQL" w Pomocy programu DAO.  
   
-##  <a name="_core_when_to_call_sql_directly"></a> Kiedy bezpośrednio wywołać metodę SQL  
- Aby utworzyć nowe tabele, upuść tabele (Usuń), alter istniejące tabele, Utwórz indeksy i korzystać z innych funkcji SQL, które zmieniają [źródła danych (ODBC)](../../data/odbc/data-source-odbc.md) schemat, należy wygenerować instrukcję SQL bezpośrednio ze źródłem danych przy użyciu bazy danych Język definicji (DDL). Jeśli użyjesz kreatora, aby utworzyć zestaw rekordów dla tabeli (w czasie projektowania), można wybrać które kolumny tabeli do reprezentowania w zestawie rekordów. To nie zezwala na kolumny źródła danych użytkownika później dodać do tabeli program został skompilowany. Klasy baz danych nie obsługują DDL bezpośrednio, ale nadal można napisać kod, aby powiązać nowej kolumny zestawu rekordów dynamicznie w czasie wykonywania. Aby uzyskać informacje dotyczące wykonywania tego powiązania, zobacz [zestaw rekordów: dynamiczne wiązanie danych kolumn (ODBC)](../../data/odbc/recordset-dynamically-binding-data-columns-odbc.md).  
+##  <a name="_core_when_to_call_sql_directly"></a> Kiedy wywołania SQL bezpośrednio  
+
+Aby utworzyć nowe tabele, porzucić tabel (Usuń), zmienić istniejące tabele, tworzenie indeksów i wykonywać inne funkcje programu SQL, które zmieniają [źródła danych (ODBC)](../../data/odbc/data-source-odbc.md) schemat, należy wygenerować instrukcji SQL bezpośrednio do źródła danych przy użyciu bazy danych Język definicji (DDL). Korzystając z kreatora, aby utworzyć zestaw rekordów dla tabeli (w czasie projektowania), można wybrać kolumny tabeli do reprezentowania zestawu rekordów. To nie zezwala na kolumnach Ty lub inny użytkownik źródła danych do tabeli później dodać program został skompilowany. Klasy bazy danych nie obsługują bezpośrednio DDL, ale nadal można napisać kod, aby powiązać nową kolumnę rekordów dynamicznie w czasie wykonywania. Aby uzyskać informacji dotyczących sposobu wykonania tego powiązania, zobacz [zestaw rekordów: dynamiczne powiązanie danych kolumn (ODBC)](../../data/odbc/recordset-dynamically-binding-data-columns-odbc.md).  
   
- System DBMS, sama służy do zmiany schematu lub innego narzędzia umożliwiające wykonywanie funkcji DDL. Wywołania funkcji ODBC służy również do wysyłania instrukcji SQL, taką jak wywołanie wstępnie zdefiniowanego zapytania (procedury składowanej), która nie zwraca rekordów.  
+Można użyć systemu DBMS, sama zmienić schemat lub innego narzędzia, które umożliwia wykonywanie funkcji języka DDL. Umożliwia także wywołania funkcji ODBC wysłać instrukcje SQL, takich jak wywoływanie wstępnie zdefiniowanego zapytania (procedura składowana), która nie zwraca rekordy.  
   
-##  <a name="_core_making_direct_sql_function_calls"></a> Tworzenie bezpośrednie wywołania funkcji SQL  
- Bezpośrednie wykonywanie, wywołania SQL za pomocą [cdatabase — klasa](../../mfc/reference/cdatabase-class.md) obiektu. Konfigurowanie ciągu instrukcji SQL (zazwyczaj w `CString`) i przekaż go do [CDatabase::ExecuteSQL](../../mfc/reference/cdatabase-class.md#executesql) funkcji członkowskiej klasy użytkownika `CDatabase` obiektu. Jeśli używasz wywołania funkcji ODBC do wysyłania instrukcji SQL, która zwykle zwraca rekordy rekordy są ignorowane.  
+##  <a name="_core_making_direct_sql_function_calls"></a> Wykonanie bezpośrednich wywołań funkcji SQL  
+
+Bezpośrednie wykonywanie, wywołania SQL przy użyciu [klasa CDatabase](../../mfc/reference/cdatabase-class.md) obiektu. Konfigurowanie usługi parametry instrukcji SQL (zwykle w `CString`) i przekazać ją do [CDatabase::ExecuteSQL](../../mfc/reference/cdatabase-class.md#executesql) funkcji składowej typu usługi `CDatabase` obiektu. Jeśli używasz wywołania funkcji ODBC do wysyłania instrukcji SQL, które zwykle zwraca rekordy, rekordy zostaną zignorowane.  
   
 ## <a name="see-also"></a>Zobacz też  
- [SQL](../../data/odbc/sql.md)
+
+[SQL](../../data/odbc/sql.md)

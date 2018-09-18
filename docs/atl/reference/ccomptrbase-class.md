@@ -27,12 +27,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1941f08d13fb8aef9b5b281ce4b2bc1c61bf98fe
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 70ba26e5893b21393a3466ae7cf1c6cea43b81ef
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43766590"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46070161"
 ---
 # <a name="ccomptrbase-class"></a>Klasa CComPtrBase
 
@@ -41,13 +41,13 @@ Ta klasa stanowi podstawę dla klas inteligentnego wskaźnika za pomocą procedu
 ## <a name="syntax"></a>Składnia
 
 ```
-template <class T>  
+template <class T>
 class CComPtrBase
 ```
 
 #### <a name="parameters"></a>Parametry
 
-*T*  
+*T*<br/>
 Typ obiektu, być przywoływane przez inteligentny wskaźnik.
 
 ## <a name="members"></a>Elementy członkowskie
@@ -111,13 +111,13 @@ HRESULT Advise(
 
 ### <a name="parameters"></a>Parametry
 
-*pUnk*  
+*pUnk*<br/>
 Wskaźnik do klienta `IUnknown`.
 
-*IID*  
+*IID*<br/>
 Identyfikator GUID punktu połączenia. Zazwyczaj jest taka sama jak interfejsu wychodzącego zarządzane przez punkt połączenia.
 
-*PDW*  
+*PDW*<br/>
 Wskaźnik do pliku cookie, który unikatowo identyfikuje połączenie.
 
 ### <a name="return-value"></a>Wartość zwracana
@@ -138,7 +138,7 @@ void Attach(T* p2) throw();
 
 ### <a name="parameters"></a>Parametry
 
-*P2*  
+*P2*<br/>
 `CComPtrBase` Obiekt będzie przejęcie na własność ten wskaźnik.
 
 ### <a name="remarks"></a>Uwagi
@@ -175,16 +175,16 @@ HRESULT CoCreateInstance(
 
 ### <a name="parameters"></a>Parametry
 
-*szProgID*  
+*szProgID*<br/>
 Wskaźnik do ProgID, używał do odzyskiwania identyfikator CLSID.
 
-*pUnkOuter*  
+*pUnkOuter*<br/>
 Jeśli ma wartość NULL, wskazuje, że obiekt nie został utworzony jako część agregacji. Jeśli innych niż NULL, jest wskaźnikiem do obiektu agregacji `IUnknown` interfejsu (kontrolowanie `IUnknown`).
 
-*dwClsContext*  
+*dwClsContext*<br/>
 Kontekst, w którym będzie uruchamiany kod, który zarządza nowo utworzony obiekt.
 
-*rclsid*  
+*rclsid*<br/>
 Identyfikator CLSID skojarzonego z danymi i kod, który będzie używany do utworzenia obiektu.
 
 ### <a name="return-value"></a>Wartość zwracana
@@ -207,7 +207,7 @@ HRESULT CopyTo(T** ppT) throw();
 
 ### <a name="parameters"></a>Parametry
 
-*ppT*  
+*ppT*<br/>
 Adres zmiennej, która otrzyma `CComPtrBase` wskaźnika.
 
 ### <a name="return-value"></a>Wartość zwracana
@@ -246,7 +246,7 @@ bool IsEqualObject(IUnknown* pOther) throw();
 
 ### <a name="parameters"></a>Parametry
 
-*pOther*  
+*pOther*<br/>
 `IUnknown *` Do porównania.
 
 ### <a name="return-value"></a>Wartość zwracana
@@ -301,7 +301,7 @@ bool operator== (T* pT) const throw();
 
 ### <a name="parameters"></a>Parametry
 
-*(CZAS PACYFICZNY)*  
+*(CZAS PACYFICZNY)*<br/>
 Wskaźnik do obiektu.
 
 ### <a name="return-value"></a>Wartość zwracana
@@ -334,7 +334,7 @@ bool operator<(T* pT) const throw();
 
 ### <a name="parameters"></a>Parametry
 
-*(CZAS PACYFICZNY)*  
+*(CZAS PACYFICZNY)*<br/>
 Wskaźnik do obiektu.
 
 ### <a name="return-value"></a>Wartość zwracana
@@ -345,7 +345,7 @@ Zwraca wartość PRAWDA, jeśli wskaźnik jest zarządzany przez bieżący obiek
 
 Operator rzutowania.
 
-```  
+```
 operator T*() const throw();
 ```
 
@@ -376,10 +376,10 @@ template <class Q> HRESULT QueryInterface(Q
 
 ### <a name="parameters"></a>Parametry
 
-*PYTANIA I ODPOWIEDZI*  
+*PYTANIA I ODPOWIEDZI*<br/>
 Typ obiektu, którego wskaźnika interfejsu jest wymagana.
 
-*strony*  
+*strony*<br/>
 Adres zmiennej dane wyjściowe, która otrzymuje wskaźnik żądanego interfejsu.
 
 ### <a name="return-value"></a>Wartość zwracana
@@ -414,7 +414,7 @@ HRESULT SetSite(IUnknown* punkParent) throw();
 
 ### <a name="parameters"></a>Parametry
 
-*punkParent*  
+*punkParent*<br/>
 Wskaźnik do `IUnknown` interfejsu elementu nadrzędnego.
 
 ### <a name="return-value"></a>Wartość zwracana

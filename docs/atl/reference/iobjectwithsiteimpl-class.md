@@ -21,12 +21,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1684c8fa380a7d17c802ad404c38c59f2257c979
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: eea09c8490bd2b34cc4c5cd99946d0d9dca7a44c
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43752030"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46068217"
 ---
 # <a name="iobjectwithsiteimpl-class"></a>Klasa IObjectWithSiteImpl
 
@@ -42,7 +42,7 @@ template <class T>
 
 #### <a name="parameters"></a>Parametry
 
-*T*  
+*T*<br/>
 Z klasą pochodną `IObjectWithSiteImpl`.
 
 ## <a name="members"></a>Elementy członkowskie
@@ -117,7 +117,7 @@ HRESULT SetChildSite(IUnknown* pUnkSite);
 
 ### <a name="parameters"></a>Parametry
 
-*pUnkSite*  
+*pUnkSite*<br/>
 [in] Wskaźnik do `IUnknown` wskaźnika interfejsu lokacji zarządzania tego obiektu. Jeśli ma wartość NULL, obiekt powinien wywoływać `IUnknown::Release` witrynie istniejący w tym momencie obiektu nie jest już zna do niego lokacji.
 
 ### <a name="return-value"></a>Wartość zwracana

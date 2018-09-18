@@ -1,5 +1,5 @@
 ---
-title: C2561 błąd kompilatora | Dokumentacja firmy Microsoft
+title: Błąd kompilatora C2561 | Dokumentacja firmy Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,40 +16,41 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4f8ece9a3d9347a5179844cbfca3425870c25e2f
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 8611af23ab884a853fc751ae82c636753993495b
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33230907"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46070707"
 ---
-# <a name="compiler-error-c2561"></a>C2561 błąd kompilatora
-"identyfikator": funkcja musi zwracać wartość  
-  
- Funkcja została zadeklarowana jako zwracanie wartości, ale nie zawiera definicji funkcji `return` instrukcji.  
-  
- Przyczyną tego błędu może być prototypu Niepoprawna funkcja:  
-  
-1.  Jeśli funkcja nie zwraca wartości, należy zadeklarować funkcji z typem zwracanym [void](../../cpp/void-cpp.md).  
-  
-2.  Sprawdź, czy wszystkie możliwe gałęzie funkcji zwracać wartość typ zadeklarowany w prototypu.  
-  
-3.  Funkcje języka C++ zawierający wbudowanego zestawu procedury, których są przechowywane wartości zwracanej w `AX` rejestru może być konieczne instrukcji return. Skopiuj wartość `AX` do tymczasowej zmiennej i powrót z funkcji tej zmiennej.  
-  
- Poniższy przykład generuje C2561:  
-  
-```  
-// C2561.cpp  
-int Test(int x) {  
-   if (x) {  
-      return;   // C2561  
-      // try the following line instead  
-      // return 1;  
-   }  
-   return 0;  
-}  
-  
-int main() {  
-   Test(1);  
-}  
+# <a name="compiler-error-c2561"></a>Błąd kompilatora C2561
+
+'Identyfikator': funkcja musi zwracać wartość
+
+Funkcja została zadeklarowana jako zwracanie wartości, ale nie zawiera definicji funkcji `return` instrukcji.
+
+Ten błąd może być spowodowany przez prototypu funkcji niepoprawne:
+
+1. Jeśli funkcja nie zwraca wartości, Zadeklaruj funkcję z typem zwracanym [void](../../cpp/void-cpp.md).
+
+1. Upewnij się, że wszystkie możliwe gałęzie funkcji zwrócić wartość typem zadeklarowanym w prototypie.
+
+1. Funkcje języka C++, zawierające wbudowanego zestawu procedur, które będą przechowywać wartość zwracaną w `AX` rejestru może być konieczne instrukcji return. Skopiuj wartość w `AX` do zmiennej tymczasowej i zwraca tę zmienną z funkcji.
+
+Poniższy przykład spowoduje wygenerowanie C2561:
+
+```
+// C2561.cpp
+int Test(int x) {
+   if (x) {
+      return;   // C2561
+      // try the following line instead
+      // return 1;
+   }
+   return 0;
+}
+
+int main() {
+   Test(1);
+}
 ```

@@ -29,12 +29,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 715fcc37c41251b0a42fd6508f8a358758105a1f
-ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
+ms.openlocfilehash: 47cd4cc765459acc6270c64b6cc37fe328f36757
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43680198"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46069420"
 ---
 # <a name="tiledindex-class"></a>tiled_index — Klasa
 Dostarcza indeks [tiled_extent](tiled-extent-class.md) obiektu. Ta klasa posiada właściwości, aby uzyskać dostęp do elementów względem lokalnego fragmentu i pokrewny ze źródłem globalnego. Aby uzyskać więcej informacji na temat przestrzeni kafli, zobacz [kafelków za pomocą](../../../parallel/amp/using-tiles.md).  
@@ -62,14 +62,14 @@ class tiled_index<_Dim0, 0, 0> : public _Tiled_index_base<1>;
 ```  
   
 #### <a name="parameters"></a>Parametry  
- `_Dim0`  
- Długość najbardziej znaczącego wymiaru.  
+*_Dim0*<br/>
+Długość najbardziej znaczącego wymiaru.  
   
- `_Dim1`  
- Długość następnego najbardziej znaczącego wymiaru.  
+*_Dim1*<br/>
+Długość następnego najbardziej znaczącego wymiaru.  
   
- `_Dim2`  
- Długość najmniej znaczącego wymiaru.  
+*_Dim2*<br/>
+Długość najmniej znaczącego wymiaru.  
   
 ## <a name="members"></a>Elementy członkowskie  
   
@@ -140,23 +140,23 @@ tiled_index(
 ```  
   
 #### <a name="parameters"></a>Parametry  
- `_Global`  
- Globalna [indeksu](index-class.md) stworzonego elementu `tiled_index`.  
+*_Global*<br/>
+Globalna [indeksu](index-class.md) stworzonego elementu `tiled_index`.  
   
- `_Local`  
- Lokalny [indeksu](index-class.md) stworzonego elementu `tiled_index`  
+*_Lokalny*<br/>
+Lokalny [indeksu](index-class.md) stworzonego elementu `tiled_index`  
   
- `_Tile`  
- Kafelek [indeksu](index-class.md) stworzonego elementu `tiled_index`  
+*_Tile*<br/>
+Kafelek [indeksu](index-class.md) stworzonego elementu `tiled_index`  
   
- `_Tile_origin`  
- Pochodzenie kafelka [indeksu](index-class.md) stworzonego elementu `tiled_index`  
+*_Tile_origin*<br/>
+Pochodzenie kafelka [indeksu](index-class.md) stworzonego elementu `tiled_index`  
   
- `_Barrier`  
- [Tile_barrier](tile-barrier-class.md) obiektu stworzonego elementu `tiled_index`.  
+*_Barrier*<br/>
+[Tile_barrier](tile-barrier-class.md) obiektu stworzonego elementu `tiled_index`.  
   
- `_Other`  
- `tile_index` Obiekt ma być skopiowany do stworzonego elementu `tiled_index`.  
+*_Inne*<br/>
+`tile_index` Obiekt ma być skopiowany do stworzonego elementu `tiled_index`.  
   
 ## <a name="overloads"></a>Overloads  
   

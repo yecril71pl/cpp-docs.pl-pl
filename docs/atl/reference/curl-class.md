@@ -45,12 +45,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 02453ae14ab6e8cd4a75a9f2d8725ce69e2b7f02
-ms.sourcegitcommit: d10a2382832373b900b1780e1190ab104175397f
+ms.openlocfilehash: f0ab7906961936239ac564137d0760e6d64de9de
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43895295"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46068224"
 ---
 # <a name="curl-class"></a>Klasa cUrl
 
@@ -154,7 +154,7 @@ inline BOOL Canonicalize(DWORD dwFlags = 0) throw();
 
 ### <a name="parameters"></a>Parametry
 
-*Flagidw*  
+*Flagidw*<br/>
 Flagi sterujące kanoniczną. Jeśli nie określono żadnych flag (*Flagidw* = 0), Metoda ta konwertuje wszystkich niebezpiecznych znaków i sekwencji meta (takie jak \\., \.., i \\...) jako znak ucieczki dla sekwencji. *Flagidw* może być jedną z następujących wartości:
 
 - ATL_URL_BROWSER_MODE: Nie jest w stanie kodowania lub dekodowania znaków po "#" lub "" i nie powoduje usunięcia odstępu po "". Jeśli ta wartość nie jest określona, cały adres URL jest zaszyfrowana i końcowe biały znak zostanie usunięta.
@@ -195,10 +195,10 @@ BOOL CrackUrl(LPCTSTR lpszUrl, DWORD dwFlags = 0) throw();
 
 ### <a name="parameters"></a>Parametry
 
-*lpszUrl*  
+*lpszUrl*<br/>
 Adres URL.
 
-*Flagidw*  
+*Flagidw*<br/>
 Określ ATL_URL_DECODE lub ATL_URL_ESCAPE przekonwertować wszystkie znaki ucieczki w *lpszUrl* rzeczywistych wartości po analizie. (Przed Visual C++ 2005, ATL_URL_DECODE przekonwertować wszystkie znaki ucieczki przed analizą.)
 
 ### <a name="return-value"></a>Wartość zwracana
@@ -218,13 +218,13 @@ inline BOOL CreateUrl(
 
 ### <a name="parameters"></a>Parametry
 
-*lpszUrl*  
+*lpszUrl*<br/>
 Buforu ciągu do przechowywania całego ciągu adresu URL.
 
-*pdwMaxLength*  
+*pdwMaxLength*<br/>
 Maksymalna długość *lpszUrl* buforu ciągu.
 
-*Flagidw*  
+*Flagidw*<br/>
 Określ ATL_URL_ESCAPE do konwersji wszystkich znaków ucieczki w *lpszUrl* rzeczywistych wartości.
 
 ### <a name="return-value"></a>Wartość zwracana
@@ -256,7 +256,7 @@ CUrl(const CUrl& urlThat) throw();
 
 ### <a name="parameters"></a>Parametry
 
-*urlThat*  
+*urlThat*<br/>
 `CUrl` Obiektu do skopiowania do utworzenia adresu URL.
 
 ##  <a name="dtor"></a>  CUrl:: ~ CUrl
@@ -457,7 +457,7 @@ CUrl& operator= (const CUrl& urlThat) throw();
 
 ### <a name="parameters"></a>Parametry
 
-*urlThat*  
+*urlThat*<br/>
 `CUrl` Obiektu do skopiowania do bieżącego obiektu.
 
 ### <a name="return-value"></a>Wartość zwracana
@@ -474,7 +474,7 @@ inline BOOL SetExtraInfo(LPCTSTR lpszInfo) throw();
 
 ### <a name="parameters"></a>Parametry
 
-*lpszInfo*  
+*lpszInfo*<br/>
 Ciąg zawierający dodatkowe informacje, aby uwzględnić w adresie URL.
 
 ### <a name="return-value"></a>Wartość zwracana
@@ -491,7 +491,7 @@ inline BOOL SetHostName(LPCTSTR lpszHost) throw();
 
 ### <a name="parameters"></a>Parametry
 
-*lpszHost*  
+*lpszHost*<br/>
 Nazwa hosta.
 
 ### <a name="return-value"></a>Wartość zwracana
@@ -508,7 +508,7 @@ inline BOOL SetPassword(LPCTSTR lpszPass) throw();
 
 ### <a name="parameters"></a>Parametry
 
-*lpszPass*  
+*lpszPass*<br/>
 Hasło.
 
 ### <a name="return-value"></a>Wartość zwracana
@@ -525,7 +525,7 @@ inline BOOL SetPortNumber(ATL_URL_PORT nPrt) throw();
 
 ### <a name="parameters"></a>Parametry
 
-*nPrt*  
+*nPrt*<br/>
 Numer portu.
 
 ### <a name="return-value"></a>Wartość zwracana
@@ -542,7 +542,7 @@ inline BOOL SetScheme(ATL_URL_SCHEME nScheme) throw();
 
 ### <a name="parameters"></a>Parametry
 
-*nScheme*  
+*nScheme*<br/>
 Jedną z [ATL_URL_SCHEME](atl-url-scheme-enum.md) wartości dla schematu.
 
 ### <a name="return-value"></a>Wartość zwracana
@@ -563,7 +563,7 @@ inline BOOL SetSchemeName(LPCTSTR lpszSchm) throw();
 
 ### <a name="parameters"></a>Parametry
 
-*lpszSchm*  
+*lpszSchm*<br/>
 Nazwa schematu URL.
 
 ### <a name="return-value"></a>Wartość zwracana
@@ -584,7 +584,7 @@ inline BOOL SetUrlPath(LPCTSTR lpszPath) throw();
 
 ### <a name="parameters"></a>Parametry
 
-*lpszPath*  
+*lpszPath*<br/>
 Ścieżka adresu URL.
 
 ### <a name="return-value"></a>Wartość zwracana
@@ -601,7 +601,7 @@ inline BOOL SetUserName(LPCTSTR lpszUser) throw();
 
 ### <a name="parameters"></a>Parametry
 
-*lpszUser*  
+*lpszUser*<br/>
 Nazwa użytkownika.
 
 ### <a name="return-value"></a>Wartość zwracana

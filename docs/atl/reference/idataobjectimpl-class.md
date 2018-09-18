@@ -30,12 +30,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a17b690111edc220f6310963e5f606e2a9c869c9
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 7444cfe152d964318ea9786f4e4f7718e11d71cb
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43756044"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46069810"
 ---
 # <a name="idataobjectimpl-class"></a>Klasa IDataObjectImpl
 
@@ -47,13 +47,13 @@ Ta klasa dostarcza metody do obsługi jednolitego transferu danych i zarządzani
 ## <a name="syntax"></a>Składnia
 
 ```
-template<class T>  
+template<class T>
 class IDataObjectImpl
 ```
 
 #### <a name="parameters"></a>Parametry
 
-*T*  
+*T*<br/>
 Z klasą pochodną `IDataObjectImpl`.
 
 ## <a name="members"></a>Elementy członkowskie

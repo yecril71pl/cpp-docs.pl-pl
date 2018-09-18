@@ -1,5 +1,5 @@
 ---
-title: _CRTDBG_MAP_ALLOC — | Dokumentacja firmy Microsoft
+title: _CRTDBG_MAP_ALLOC | Dokumentacja firmy Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -19,17 +19,19 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 855b057223d7bdd69d7275e8c2acc0dd72bc256c
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 0c48095acceefa4bb4852dab18d35284492e7ba0
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32386482"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46069407"
 ---
 # <a name="crtdbgmapalloc"></a>_CRTDBG_MAP_ALLOC
-Gdy **_crtdbg_map_alloc —** flaga jest zdefiniowany w wersji do debugowania aplikacji, wersja podstawowa funkcji sterty bezpośrednio są mapowane na ich wersje debugowania. Flaga jest wykorzystywana w Crtdbg.h do mapowania. Ta flaga jest dostępna tylko podczas [_DEBUG](../c-runtime-library/debug.md) flagi został zdefiniowany w aplikacji.  
-  
- Aby uzyskać więcej informacji o korzystaniu z wersji do debugowania i wersja podstawowa funkcji sterty, zobacz [za pomocą debugowania wersji i wersja podstawowa](/visualstudio/debugger/debug-versions-of-heap-allocation-functions).  
-  
-## <a name="see-also"></a>Zobacz też  
- [Flagi kontrolne](../c-runtime-library/control-flags.md)
+
+Gdy **_CRTDBG_MAP_ALLOC** flaga jest zdefiniowany w wersji debugowania aplikacji, wersja podstawowa funkcji sterty bezpośrednio są mapowane do ich wersji debugowej. Flaga umożliwia w Crtdbg.h na potrzeby mapowania. Ta flaga jest dostępna tylko podczas [_DEBUG](../c-runtime-library/debug.md) Flaga został zdefiniowany w aplikacji.
+
+Aby uzyskać więcej informacji o korzystaniu z wersji do debugowania w stosunku do podstawowej wersji funkcji sterty, zobacz [przy użyciu debugowania wersji i wersja podstawowa](/visualstudio/debugger/debug-versions-of-heap-allocation-functions).
+
+## <a name="see-also"></a>Zobacz też
+
+[Flagi kontrolne](../c-runtime-library/control-flags.md)

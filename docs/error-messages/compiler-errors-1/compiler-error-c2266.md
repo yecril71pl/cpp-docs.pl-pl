@@ -1,5 +1,5 @@
 ---
-title: C2266 błąd kompilatora | Dokumentacja firmy Microsoft
+title: Błąd kompilatora C2266 | Dokumentacja firmy Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,14 +16,15 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: cada178ed73ff9388b5f86d5d20220b375971e3c
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: c6f28741d5ae090a497ce3ebc3a56f68fc87e1b0
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33168009"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46067368"
 ---
-# <a name="compiler-error-c2266"></a>C2266 błąd kompilatora
-"identyfikator": odwołanie do tablicy o nieustalonym zakresie z systemem innym niż stała jest niedozwolony  
-  
- Odwołanie jest zadeklarowana dla tablicy z nonconstant powiązany. Tablica musi mieć stałą granic.
+# <a name="compiler-error-c2266"></a>Błąd kompilatora C2266
+
+'Identyfikator': odwołanie do tablicy o nieustalonym zakresie innego niż stała jest niedozwolony
+
+Odwołanie jest zadeklarowany w tablicy przy użyciu nonconstant, powiązany. Tablica musi mieć stałą granic.

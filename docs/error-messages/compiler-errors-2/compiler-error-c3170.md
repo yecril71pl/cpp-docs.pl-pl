@@ -1,5 +1,5 @@
 ---
-title: C3170 błąd kompilatora | Dokumentacja firmy Microsoft
+title: Błąd kompilatora C3170 | Dokumentacja firmy Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,35 +16,36 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8bb077bcad95de0be17e630803b5d4ea9825be61
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: e7a193abcd59c3e9454eec1108f1e3bbb66efcc8
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33255916"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46070369"
 ---
-# <a name="compiler-error-c3170"></a>C3170 błąd kompilatora
-Nie można posiadać innych identyfikatorów modułu w projekcie  
-  
- [Moduł](../../windows/module-cpp.md) znaleziono atrybuty o różnych nazwach w dwóch plików w kompilacji. Tylko jeden unikatowy `module` atrybut może być określona dla kompilacji.  
-  
- Identyczne `module` atrybuty można określić więcej niż jednego pliku kodu źródłowego.  
-  
- Na przykład, jeśli znaleziono następujące atrybuty modułów:  
-  
-```  
-// C3170.cpp  
-[ module(name="MyModule", uuid="373a1a4e-469b-11d3-a6b0-00c04f79ae8f") ];  
-int main() {}  
-```  
-  
- a następnie  
-  
-```  
-// C3170b.cpp  
-// compile with: C3170.cpp  
-// C3170 expected  
-[ module(name="MyModule1", uuid="373a1a4e-469b-11d3-a6b0-00c04f79ae8f") ];  
-```  
-  
- Kompilator może wygenerować C3170 (należy pamiętać różnych nazw).
+# <a name="compiler-error-c3170"></a>Błąd kompilatora C3170
+
+nie może posiadać innych identyfikatorów modułu w projekcie
+
+[Moduł](../../windows/module-cpp.md) atrybuty pod różnymi nazwami zostały znalezione w dwóch plików w kompilacji. Tylko jeden unikatowy `module` atrybut może być określona dla kompilacji.
+
+Identyczne `module` atrybuty można określić w więcej niż jeden plik kodu źródłowego.
+
+Na przykład, jeśli znaleziono następujące atrybuty modułu:
+
+```
+// C3170.cpp
+[ module(name="MyModule", uuid="373a1a4e-469b-11d3-a6b0-00c04f79ae8f") ];
+int main() {}
+```
+
+Następnie wyszukaj maszynę
+
+```
+// C3170b.cpp
+// compile with: C3170.cpp
+// C3170 expected
+[ module(name="MyModule1", uuid="373a1a4e-469b-11d3-a6b0-00c04f79ae8f") ];
+```
+
+kompilator wygeneruje C3170 (Uwaga różne nazwy).

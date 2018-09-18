@@ -1,5 +1,5 @@
 ---
-title: C3453 błąd kompilatora | Dokumentacja firmy Microsoft
+title: Błąd kompilatora C3453 | Dokumentacja firmy Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,26 +16,28 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3f21a5833c618c5a5dfcc9ff2b608c5ec15bd1aa
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 7c35c039727cba004db879aea02c086cea4ddcec
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33257038"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46068809"
 ---
-# <a name="compiler-error-c3453"></a>C3453 błąd kompilatora
-"attribute": atrybut nie zastosowany, ponieważ kwalifikator "assembly" nie odpowiada.  
-  
- Zestaw lub atrybuty na poziomie modułu można określić tylko jako autonomiczny instrukcje.  
-  
-## <a name="example"></a>Przykład  
- Poniższy przykład generuje C3453.  
-  
-```  
-// C3453.cpp  
-// compile with: /clr /c  
-[assembly:System::CLSCompliant(true)]   // C3453  
-// try the following line instead  
-// [assembly:System::CLSCompliant(true)];  
-ref class X {};  
+# <a name="compiler-error-c3453"></a>Błąd kompilatora C3453
+
+"attribute": atrybut nie zastosowany, ponieważ kwalifikator "assembly" nie pasują.
+
+Zestaw lub moduł atrybuty na poziomie można określić tylko jako autonomiczny instrukcje.
+
+## <a name="example"></a>Przykład
+
+Poniższy przykład spowoduje wygenerowanie C3453.
+
+```
+// C3453.cpp
+// compile with: /clr /c
+[assembly:System::CLSCompliant(true)]   // C3453
+// try the following line instead
+// [assembly:System::CLSCompliant(true)];
+ref class X {};
 ```

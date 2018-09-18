@@ -24,52 +24,56 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 073e642b99dea4eb6f77fd1e79731713748f1f61
-ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
+ms.openlocfilehash: d1072892c4ad69396c62a728f7e828e9c683d155
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/01/2018
-ms.locfileid: "39403118"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46068484"
 ---
 # <a name="equality-operators--and-"></a>Operatory porównania: == i !=
-## <a name="syntax"></a>Składnia  
-  
-```  
-expression == expression  
-expression != expression  
-```  
-  
-## <a name="remarks"></a>Uwagi  
- Operatory binarne porównania porównać ich operandami dla Ścisła równość i nierówność.  
-  
- Operatory porównania, równa się (`==`) i nie równa się (`!=`), mają niższy priorytet niż operatory relacyjne, ale także działają w podobny sposób. Typ wyniku dla tych operatorów **bool**.  
-  
- Operator równości (`==`) zwraca **true** (1), jeśli oba operandy mają taką samą wartość; w przeciwnym razie zwraca **false** (0). Nie równe — operator (`!=`) zwraca **true** Jeśli operandów nie mają tej samej wartości; w przeciwnym razie zwraca **false**.  
-  
-## <a name="operator-keyword-for-"></a>Słowo kluczowe operator! =  
- `not_eq` Operator jest odpowiednikiem tekstu `!=`. Istnieją dwa sposoby dostępu do `not_eq` operatora w programach: uwzględnić plik nagłówka `iso646.h`, lub kompilowanie z [/Za](../build/reference/za-ze-disable-language-extensions.md) — opcja kompilatora (Wyłącz rozszerzenia językowe).  
-  
-## <a name="example"></a>Przykład  
-  
-```cpp 
-// expre_Equality_Operators.cpp  
-// compile with: /EHsc  
-#include <iostream>  
-  
-using namespace std;  
-  
-int main() {  
-   cout  << boolalpha  
-         << "The true expression 3 != 2 yields: "  
-         << (3 != 2) << endl  
-         << "The false expression 20 == 10 yields: "  
-         << (20 == 10) << endl;  
-}  
-```  
-  
- Operatory porównania porównanie wskaźników do elementów członkowskich tego samego typu. Takie porównania są wykonywane konwersje wskaźników do elementów członkowskich. Wskaźniki do elementów członkowskich można również porównać do stałego wyrażenia, którego wynikiem jest 0.  
-  
-## <a name="see-also"></a>Zobacz także  
- [Wyrażenia z operatorami Dwuargumentowymi](../cpp/expressions-with-binary-operators.md)   
- [C++ wbudowane operatory, pierwszeństwo i kojarzenie](../cpp/cpp-built-in-operators-precedence-and-associativity.md)   
- [Operatory relacyjne i porównania języka C](../c-language/c-relational-and-equality-operators.md)
+
+## <a name="syntax"></a>Składnia
+
+```
+expression == expression
+expression != expression
+```
+
+## <a name="remarks"></a>Uwagi
+
+Operatory binarne porównania porównać ich operandami dla Ścisła równość i nierówność.
+
+Operatory porównania, równa się (`==`) i nie równa się (`!=`), mają niższy priorytet niż operatory relacyjne, ale także działają w podobny sposób. Typ wyniku dla tych operatorów **bool**.
+
+Operator równości (`==`) zwraca **true** (1), jeśli oba operandy mają taką samą wartość; w przeciwnym razie zwraca **false** (0). Nie równe — operator (`!=`) zwraca **true** Jeśli operandów nie mają tej samej wartości; w przeciwnym razie zwraca **false**.
+
+## <a name="operator-keyword-for-"></a>Słowo kluczowe operator! =
+
+`not_eq` Operator jest odpowiednikiem tekstu `!=`. Istnieją dwa sposoby dostępu do `not_eq` operatora w programach: uwzględnić plik nagłówka `iso646.h`, lub kompilowanie z [/Za](../build/reference/za-ze-disable-language-extensions.md) — opcja kompilatora (Wyłącz rozszerzenia językowe).
+
+## <a name="example"></a>Przykład
+
+```cpp
+// expre_Equality_Operators.cpp
+// compile with: /EHsc
+#include <iostream>
+
+using namespace std;
+
+int main() {
+   cout  << boolalpha
+         << "The true expression 3 != 2 yields: "
+         << (3 != 2) << endl
+         << "The false expression 20 == 10 yields: "
+         << (20 == 10) << endl;
+}
+```
+
+Operatory porównania porównanie wskaźników do elementów członkowskich tego samego typu. Takie porównania są wykonywane konwersje wskaźników do elementów członkowskich. Wskaźniki do elementów członkowskich można również porównać do stałego wyrażenia, którego wynikiem jest 0.
+
+## <a name="see-also"></a>Zobacz także
+
+[Wyrażenia z operatorami dwuargumentowymi](../cpp/expressions-with-binary-operators.md)<br/>
+[Wbudowane operatory, pierwszeństwo i kojarzenie języka C++](../cpp/cpp-built-in-operators-precedence-and-associativity.md)<br/>
+[Operatory relacyjne i porównania języka C](../c-language/c-relational-and-equality-operators.md)

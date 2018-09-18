@@ -17,26 +17,29 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: dc853ce15a8c7cfdbe67a3469f33189e89e55c3b
-ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
+ms.openlocfilehash: c38ff10368ff31cfd9da435e117c6619735b6274
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/01/2018
-ms.locfileid: "39403342"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46070499"
 ---
 # <a name="bstrtlength"></a>_bstr_t::length
-**Microsoft Specific**  
-  
- Zwraca liczbę znaków w `_bstr_t`, nie wliczając końcowej wartości null z zhermetyzowany `BSTR`.  
-  
-## <a name="syntax"></a>Składnia  
-  
-```  
-unsigned int length ( ) const throw( );  
-```  
-  
-## <a name="remarks"></a>Uwagi  
- **END specyficzny dla Microsoft**  
-  
-## <a name="see-also"></a>Zobacz także  
- [_bstr_t, klasa](../cpp/bstr-t-class.md)
+
+**Microsoft Specific**
+
+Zwraca liczbę znaków w `_bstr_t`, nie wliczając końcowej wartości null z zhermetyzowany `BSTR`.
+
+## <a name="syntax"></a>Składnia
+
+```
+unsigned int length ( ) const throw( );
+```
+
+## <a name="remarks"></a>Uwagi
+
+**END specyficzny dla Microsoft**
+
+## <a name="see-also"></a>Zobacz także
+
+[_bstr_t, klasa](../cpp/bstr-t-class.md)

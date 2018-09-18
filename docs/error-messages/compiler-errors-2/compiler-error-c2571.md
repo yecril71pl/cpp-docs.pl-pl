@@ -1,5 +1,5 @@
 ---
-title: C2571 błąd kompilatora | Dokumentacja firmy Microsoft
+title: Błąd kompilatora C2571 | Dokumentacja firmy Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,29 +16,30 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 96dea582cf5d1211d57eac94a7f70458a51542ae
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 30cc078251d0511da77e08690db275a788973ffb
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33230777"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46067938"
 ---
-# <a name="compiler-error-c2571"></a>C2571 błąd kompilatora
-"Funkcja": funkcja wirtualna nie może być w Unii 'union'  
-  
- Unii jest zadeklarowana z funkcją wirtualną. Można zadeklarować funkcji wirtualnych tylko w klasie lub strukturze.  Możliwe rozwiązania:  
-  
-1.  Zmień Unii klasy lub struktury.  
-  
-2.  Funkcja należy niewirtualna.  
-  
- Poniższy przykład generuje C2571:  
-  
-```  
-// C2571.cpp  
-// compile with: /c  
-union A {  
-   virtual void func1();   // C2571  
-   void func2();   // OK  
-};  
+# <a name="compiler-error-c2571"></a>Błąd kompilatora C2571
+
+'Funkcja': funkcja wirtualna nie może być w Unii "union"
+
+Unii jest zadeklarowana za pomocą funkcji wirtualnej. Można zadeklarować funkcję wirtualną tylko w klasie lub strukturze.  Możliwe rozwiązania:
+
+1. Zmień Unii klasy lub struktury.
+
+1. Ustaw funkcję niewirtualne.
+
+Poniższy przykład spowoduje wygenerowanie C2571:
+
+```
+// C2571.cpp
+// compile with: /c
+union A {
+   virtual void func1();   // C2571
+   void func2();   // OK
+};
 ```

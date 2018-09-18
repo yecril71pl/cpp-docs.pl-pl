@@ -27,14 +27,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: c2f3f4c32e2e87fdd905949ffd6cebac89a5023a
-ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
+ms.openlocfilehash: b31a023e39241a5393fbb9f36177ca42f88fd57e
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "42466429"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46070902"
 ---
 # <a name="icommandpropertiesimpl-class"></a>ICommandPropertiesImpl — Klasa
+
 Udostępnia implementację [ICommandProperties](/previous-versions/windows/desktop/ms723044\(v=vs.85\)) interfejsu.  
   
 ## <a name="syntax"></a>Składnia
@@ -46,14 +47,16 @@ class ATL_NO_VTABLE ICommandPropertiesImpl
 ```  
   
 ### <a name="parameters"></a>Parametry  
- *T*  
- Klasy pochodzące z  
+
+*T*<br/>
+Klasy pochodzące z  
   
- *PropClass*  
- Właściwości klasy.  
+*PropClass*<br/>
+Właściwości klasy.  
 
 ## <a name="requirements"></a>Wymagania  
- **Nagłówek:** atldb.h  
+
+**Nagłówek:** atldb.h  
   
 ## <a name="members"></a>Elementy członkowskie  
   
@@ -65,9 +68,11 @@ class ATL_NO_VTABLE ICommandPropertiesImpl
 |[Setproperties —](#setproperties)|Ustawia właściwości w grupie właściwość zestawu wierszy.|  
   
 ## <a name="remarks"></a>Uwagi  
- Jest to parametr obowiązkowy dla polecenia. Implementacja jest dostarczany przez funkcję statyczną, zdefiniowane przez [BEGIN_PROPSET_MAP](../../data/oledb/begin-propset-map.md) makra.  
+
+Jest to parametr obowiązkowy dla polecenia. Implementacja jest dostarczany przez funkcję statyczną, zdefiniowane przez [BEGIN_PROPSET_MAP](../../data/oledb/begin-propset-map.md) makra.  
 
 ## <a name="getproperties"></a> ICommandPropertiesImpl::GetProperties
+
 Zwraca wszystkie zestawy żądanej właściwości z użyciem mapowania właściwości polecenia.  
   
 ### <a name="syntax"></a>Składnia  
@@ -80,12 +85,15 @@ STDMETHOD(GetProperties)(const ULONG cPropertyIDSets,
 ```  
   
 #### <a name="parameters"></a>Parametry  
- Zobacz [ICommandProperties::GetProperties](/previous-versions/windows/desktop/ms723119\(v=vs.85\)) w *OLE DB Podręcznik programisty*.  
+
+Zobacz [ICommandProperties::GetProperties](/previous-versions/windows/desktop/ms723119\(v=vs.85\)) w *OLE DB Podręcznik programisty*.  
   
 ### <a name="remarks"></a>Uwagi  
- Zobacz [BEGIN_PROPSET_MAP](../../data/oledb/begin-propset-map.md).  
+
+Zobacz [BEGIN_PROPSET_MAP](../../data/oledb/begin-propset-map.md).  
   
 ## <a name="setproperties"></a> ICommandPropertiesImpl::SetProperties
+
 Ustawia właściwości dla obiektu polecenia.  
   
 ### <a name="syntax"></a>Składnia  
@@ -96,8 +104,10 @@ STDMETHOD(SetProperties)(ULONG cPropertySets,
 ```  
   
 #### <a name="parameters"></a>Parametry  
- Zobacz [ICommandProperties::SetProperties](/previous-versions/windows/desktop/ms711497\(v=vs.85\)) w *OLE DB Podręcznik programisty*.  
+
+Zobacz [ICommandProperties::SetProperties](/previous-versions/windows/desktop/ms711497\(v=vs.85\)) w *OLE DB Podręcznik programisty*.  
   
 ## <a name="see-also"></a>Zobacz też  
- [Szablony dostawców OLE DB](../../data/oledb/ole-db-provider-templates-cpp.md)   
- [Architektura szablonu dostawcy OLE DB](../../data/oledb/ole-db-provider-template-architecture.md)
+
+[Szablony dostawców OLE DB](../../data/oledb/ole-db-provider-templates-cpp.md)<br/>
+[Architektura szablonu dostawcy OLE DB](../../data/oledb/ole-db-provider-template-architecture.md)

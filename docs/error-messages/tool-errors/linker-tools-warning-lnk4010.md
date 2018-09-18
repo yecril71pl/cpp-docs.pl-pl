@@ -16,14 +16,15 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 266e377a917fe3ce9ae7bae228134f49384e15cb
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: e214f603c31c72533d81a140023363880532191c
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33302675"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46068074"
 ---
 # <a name="linker-tools-warning-lnk4010"></a>Ostrzeżenie LNK4010 narzędzi konsolidatora
-Nieprawidłowy numer wersji podsystemu numer; przyjęto domyślną wersję podsystemu  
-  
- Można określić wersji podsystemu obrazu ([/Subsystem](../../build/reference/subsystem-specify-subsystem.md)). Każdego podsystemu ma wymagania dotyczące minimalnej wersji. Jeśli określona wersja jest niższa niż wartość minimalna, nastąpi to ostrzeżenie i konsolidator użyje tylko podsystemu domyślne.
+
+Nieprawidłowy numer wersji podsystemu numer; przyjęto domyślną wersję podsystemu
+
+Możesz określić wersję podsystemu obrazu ([/Subsystem](../../build/reference/subsystem-specify-subsystem.md)). Każdego podsystemu ma wymagania wersji minimalnej. Jeśli określona wersja jest niższa niż wartość minimalna to ostrzeżenie zostanie przeprowadzona i konsolidator wystarczy użyć podsystemu domyślne.

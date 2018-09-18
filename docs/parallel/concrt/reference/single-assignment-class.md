@@ -29,15 +29,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4bacbdaa4af141101863b4d6d81d114d43aced9f
-ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
+ms.openlocfilehash: 795e5b43adfb71a25eafe0f373b14bc77d8bc41a
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33696282"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46069947"
 ---
 # <a name="singleassignment-class"></a>Klasa single_assignment
-A `single_assignment` blok komunikatów jest wiele docelowych, wielu źródłach, uporządkowanych `propagator_block` można przechowywać jeden zapisu — po `message`.  
+A `single_assignment` blok komunikatów jest ona lokalizacją docelową wielu, wielu źródeł, uporządkowanych `propagator_block` można przechowywać jeden zapis — po `message`.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -47,8 +47,8 @@ class single_assignment : public propagator_block<multi_link_registry<ITarget<T>
 ```  
   
 #### <a name="parameters"></a>Parametry  
- `T`  
- Typ ładunku komunikatu przechowywane i propagowane przez bufor.  
+*T*<br/>
+Typ ładunku komunikatu przechowywane i rozprowadzane przez bufor.  
   
 ## <a name="members"></a>Elementy członkowskie  
   
@@ -56,32 +56,32 @@ class single_assignment : public propagator_block<multi_link_registry<ITarget<T>
   
 |Nazwa|Opis|  
 |----------|-----------------|  
-|[single_assignment](#ctor)|Przeciążone. Konstruuje `single_assignment` bloku obsługi wiadomości.|  
-|[~ single_assignment — destruktor](#dtor)|Niszczy `single_assignment` bloku obsługi wiadomości.|  
+|[single_assignment](#ctor)|Przeciążone. Konstruuje `single_assignment` Blok obsługi wiadomości.|  
+|[~ single_assignment — destruktor](#dtor)|Niszczy `single_assignment` Blok obsługi wiadomości.|  
   
 ### <a name="public-methods"></a>Metody publiczne  
   
 |Nazwa|Opis|  
 |----------|-----------------|  
-|[has_value](#has_value)|Sprawdza, czy to `single_assignment` bloku komunikatów został zainicjowany z wartością jeszcze.|  
-|[value](#value)|Pobiera odwołanie do bieżącego ładunku komunikatu są przechowywane w `single_assignment` bloku obsługi wiadomości.|  
+|[has_value](#has_value)|Sprawdza, czy to `single_assignment` Blok obsługi wiadomości został zainicjowany z wartością jeszcze.|  
+|[value](#value)|Pobiera referencję do bieżącego ładunku komunikatów znajdujących się w `single_assignment` Blok obsługi wiadomości.|  
   
 ### <a name="protected-methods"></a>Metody chronione  
   
 |Nazwa|Opis|  
 |----------|-----------------|  
-|[accept_message](#accept_message)|Akceptuje wiadomość została przyjęta przez to `single_assignment` bloku obsługi wiadomości, zwracając kopia wiadomości do obiektu wywołującego.|  
-|[consume_message](#consume_message)|Wykorzystuje komunikat wcześniej oferowane przez `single_assignment` i zastrzeżone przez element docelowy, zwracając kopia wiadomości do obiektu wywołującego.|  
-|[link_target_notification](#link_target_notification)|Wywołanie zwrotne, które informuje, że nowy element docelowy został powiązany to `single_assignment` bloku obsługi wiadomości.|  
-|[propagate_message](#propagate_message)|Asynchronicznie przekazuje komunikat z `ISource` bloku do tego `single_assignment` bloku obsługi wiadomości. Jest ono wywoływane przez `propagate` metody wywołanego bloku źródłowego.|  
-|[propagate_to_any_targets](#propagate_to_any_targets)|Miejsca `message _PMessage` w tym `single_assignment` wiadomości bloku i udostępnia go do wszystkich połączonych elementów docelowych.|  
-|[release_message](#release_message)|Zwalnia Poprzednia rezerwacja wiadomości. (Przesłania [source_block::release_message](source-block-class.md#release_message).)|  
-|[reserve_message](#reserve_message)|Rezerwuje komunikat wcześniej oferowane przez to `single_assignment` bloku obsługi wiadomości. (Przesłania [source_block::reserve_message](source-block-class.md#reserve_message).)|  
-|[resume_propagation](#resume_propagation)|Wznawia propagacji po zastrzeżenie został zwolniony. (Przesłania [source_block::resume_propagation](source-block-class.md#resume_propagation).)|  
-|[send_message](#send_message)|Synchronicznie przekazuje komunikat z `ISource` bloku do tego `single_assignment` bloku obsługi wiadomości. Jest ono wywoływane przez `send` metody wywołanego bloku źródłowego.|  
+|[accept_message](#accept_message)|Akceptuje wiadomości, które było oferowane przez to `single_assignment` Blok obsługi wiadomości, zwracając kopię wiadomości do obiektu wywołującego.|  
+|[consume_message](#consume_message)|Wykorzystuje komunikat, który został poprzednio oferowana przez `single_assignment` i zastrzeżonych przez element docelowy, zwracając kopię wiadomości do obiektu wywołującego.|  
+|[link_target_notification](#link_target_notification)|Wywołanie zwrotne, które informuje, że nowy obiekt docelowy została połączona z tym `single_assignment` Blok obsługi wiadomości.|  
+|[propagate_message](#propagate_message)|Asynchronicznie przekazuje komunikat z `ISource` bloku, aby to `single_assignment` Blok obsługi wiadomości. Zostanie wywołany przez `propagate` metody, gdy zostanie wywołana przez blok źródłowy.|  
+|[propagate_to_any_targets](#propagate_to_any_targets)|Umieszcza `message _PMessage` w tym `single_assignment` bloku komunikatów i oferuje go do wszystkich połączonych elementów docelowych.|  
+|[release_message](#release_message)|Zwalnia poprzedniej wiadomości rezerwacji. (Przesłania [source_block::release_message —](source-block-class.md#release_message).)|  
+|[reserve_message](#reserve_message)|Zarezerwowaniu wiadomości przez oferowane wcześniej to `single_assignment` Blok obsługi wiadomości. (Przesłania [source_block::reserve_message —](source-block-class.md#reserve_message).)|  
+|[resume_propagation](#resume_propagation)|Wznawia działanie propagacji, po udostępnieniu rezerwacji. (Przesłania [source_block::resume_propagation —](source-block-class.md#resume_propagation).)|  
+|[send_message](#send_message)|Synchronicznie przekazuje komunikat z `ISource` bloku, aby to `single_assignment` Blok obsługi wiadomości. Zostanie wywołany przez `send` metody, gdy zostanie wywołana przez blok źródłowy.|  
   
 ## <a name="remarks"></a>Uwagi  
- A `single_assignment` propaguje bloku komunikatów wychodzących kopie komunikatu do każdego obiektu docelowego.  
+ A `single_assignment` Blok obsługi wiadomości propaguje kopie komunikat do każdego obiektu docelowego.  
   
  Aby uzyskać więcej informacji, zobacz [bloki komunikatów asynchronicznych](../../../parallel/concrt/asynchronous-message-blocks.md).  
   
@@ -103,43 +103,43 @@ class single_assignment : public propagator_block<multi_link_registry<ITarget<T>
   
 ##  <a name="accept_message"></a> accept_message 
 
- Akceptuje wiadomość została przyjęta przez to `single_assignment` bloku obsługi wiadomości, zwracając kopia wiadomości do obiektu wywołującego.  
+ Akceptuje wiadomości, które było oferowane przez to `single_assignment` Blok obsługi wiadomości, zwracając kopię wiadomości do obiektu wywołującego.  
   
 ```
 virtual message<T>* accept_message(runtime_object_identity _MsgId);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `_MsgId`  
- `runtime_object_identity` z oferowany `message` obiektu.  
+*_MsgId*<br/>
+`runtime_object_identity` z oferowane `message` obiektu.  
   
 ### <a name="return-value"></a>Wartość zwracana  
- Wskaźnik do `message` obiekt, aby wywołującego ma teraz własności.  
+ Wskaźnik do `message` obiektu, że obiekt wywołujący ma teraz własności.  
   
 ### <a name="remarks"></a>Uwagi  
- `single_assignment` Wiadomości bloku kopie zwraca komunikat do jego elementów docelowych, a nie przeniesieniem własności wiadomości przechowywanych obecnie.  
+ `single_assignment` Komunikatów bloku kopie zwraca komunikat do jego obiekty docelowe, zamiast przenoszenia własności obecnie konsekwencje na gruncie komunikatu.  
   
 ##  <a name="consume_message"></a> consume_message 
 
- Wykorzystuje komunikat wcześniej oferowane przez `single_assignment` i zastrzeżone przez element docelowy, zwracając kopia wiadomości do obiektu wywołującego.  
+ Wykorzystuje komunikat, który został poprzednio oferowana przez `single_assignment` i zastrzeżonych przez element docelowy, zwracając kopię wiadomości do obiektu wywołującego.  
   
 ```
 virtual message<T>* consume_message(runtime_object_identity _MsgId);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `_MsgId`  
- `runtime_object_identity` z `message` obiektu są używane.  
+*_MsgId*<br/>
+`runtime_object_identity` z `message` obiektu są używane.  
   
 ### <a name="return-value"></a>Wartość zwracana  
- Wskaźnik do `message` obiekt, aby wywołującego ma teraz własności.  
+ Wskaźnik do `message` obiektu, że obiekt wywołujący ma teraz własności.  
   
 ### <a name="remarks"></a>Uwagi  
  Podobnie jak `accept`, ale zawsze jest poprzedzony przez wywołanie `reserve`.  
   
-##  <a name="has_value"></a> has_value 
+##  <a name="has_value"></a> has_value — 
 
- Sprawdza, czy to `single_assignment` bloku komunikatów został zainicjowany z wartością jeszcze.  
+ Sprawdza, czy to `single_assignment` Blok obsługi wiadomości został zainicjowany z wartością jeszcze.  
   
 ```
 bool has_value() const;
@@ -148,21 +148,21 @@ bool has_value() const;
 ### <a name="return-value"></a>Wartość zwracana  
  `true` Jeśli blok otrzymał wartość `false` inaczej.  
   
-##  <a name="link_target_notification"></a> link_target_notification 
+##  <a name="link_target_notification"></a> link_target_notification — 
 
- Wywołanie zwrotne, które informuje, że nowy element docelowy został powiązany to `single_assignment` bloku obsługi wiadomości.  
+ Wywołanie zwrotne, które informuje, że nowy obiekt docelowy została połączona z tym `single_assignment` Blok obsługi wiadomości.  
   
 ```
 virtual void link_target_notification(_Inout_ ITarget<T>* _PTarget);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `_PTarget`  
- Wskaźnik do nowo połączonego obiektu docelowego.  
+*_PTarget*<br/>
+Wskaźnik do nowo połączone obiektu docelowego.  
   
 ##  <a name="propagate_message"></a> propagate_message 
 
- Asynchronicznie przekazuje komunikat z `ISource` bloku do tego `single_assignment` bloku obsługi wiadomości. Jest ono wywoływane przez `propagate` metody wywołanego bloku źródłowego.  
+ Asynchronicznie przekazuje komunikat z `ISource` bloku, aby to `single_assignment` Blok obsługi wiadomości. Zostanie wywołany przez `propagate` metody, gdy zostanie wywołana przez blok źródłowy.  
   
 ```
 virtual message_status propagate_message(
@@ -171,60 +171,60 @@ virtual message_status propagate_message(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `_PMessage`  
- Wskaźnik do `message` obiektu.  
+*_PMessage*<br/>
+Wskaźnik do `message` obiektu.  
   
- `_PSource`  
- Wskaźnik do bloku źródłowego oferty wiadomości.  
+*_PSource*<br/>
+Wskaźnik do blok źródłowy oferty wiadomości.  
   
 ### <a name="return-value"></a>Wartość zwracana  
- A [message_status —](concurrency-namespace-enums.md) wskazanie docelowy korzystam z komunikatu.  
+ A [message_status —](concurrency-namespace-enums.md) sygnał docelowy postanowiła zrobić z komunikatem.  
   
 ##  <a name="propagate_to_any_targets"></a> propagate_to_any_targets 
 
- Miejsca `message` `_PMessage` w tym `single_assignment` wiadomości bloku i udostępnia go do wszystkich połączonych elementów docelowych.  
+ Umieszcza `message` `_PMessage` w tym `single_assignment` bloku komunikatów i oferuje go do wszystkich połączonych elementów docelowych.  
   
 ```
 virtual void propagate_to_any_targets(_Inout_opt_ message<T>* _PMessage);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `_PMessage`  
- Wskaźnik do `message` tego `single_assignment` bloku komunikatów trwało własności.  
+*_PMessage*<br/>
+Wskaźnik do `message` że `single_assignment` Blok obsługi wiadomości miało własności.  
   
 ##  <a name="release_message"></a> release_message 
 
- Zwalnia Poprzednia rezerwacja wiadomości.  
+ Zwalnia poprzedniej wiadomości rezerwacji.  
   
 ```
 virtual void release_message(runtime_object_identity _MsgId);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `_MsgId`  
- `runtime_object_identity` z `message` obiekt został wydany.  
+*_MsgId*<br/>
+`runtime_object_identity` z `message` obiektu, zostały udostępnione.  
   
 ##  <a name="reserve_message"></a> reserve_message 
 
- Rezerwuje komunikat wcześniej oferowane przez to `single_assignment` bloku obsługi wiadomości.  
+ Zarezerwowaniu wiadomości przez oferowane wcześniej to `single_assignment` Blok obsługi wiadomości.  
   
 ```
 virtual bool reserve_message(runtime_object_identity _MsgId);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `_MsgId`  
- `runtime_object_identity` z `message` obiektu pozostaje zarezerwowane.  
+*_MsgId*<br/>
+`runtime_object_identity` z `message` obiektu pozostaje zarezerwowane.  
   
 ### <a name="return-value"></a>Wartość zwracana  
  `true` Jeśli komunikat został pomyślnie zarezerwowany, `false` inaczej.  
   
 ### <a name="remarks"></a>Uwagi  
- Po `reserve` jest wywoływana, jeśli zwróci ona `true`, albo `consume` lub `release` musi zostać wywołana albo lub zwolnij własność wiadomości.  
+ Po `reserve` jest wywoływana, jeśli zwróci ona `true`, albo `consume` lub `release` musi zostać wywołana wersji własności wiadomości lub wykonać.  
   
 ##  <a name="resume_propagation"></a> resume_propagation 
 
- Wznawia propagacji po zastrzeżenie został zwolniony.  
+ Wznawia działanie propagacji, po udostępnieniu rezerwacji.  
   
 ```
 virtual void resume_propagation();
@@ -232,7 +232,7 @@ virtual void resume_propagation();
   
 ##  <a name="send_message"></a> send_message 
 
- Synchronicznie przekazuje komunikat z `ISource` bloku do tego `single_assignment` bloku obsługi wiadomości. Jest ono wywoływane przez `send` metody wywołanego bloku źródłowego.  
+ Synchronicznie przekazuje komunikat z `ISource` bloku, aby to `single_assignment` Blok obsługi wiadomości. Zostanie wywołany przez `send` metody, gdy zostanie wywołana przez blok źródłowy.  
   
 ```
 virtual message_status send_message(
@@ -241,18 +241,18 @@ virtual message_status send_message(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `_PMessage`  
- Wskaźnik do `message` obiektu.  
+*_PMessage*<br/>
+Wskaźnik do `message` obiektu.  
   
- `_PSource`  
- Wskaźnik do bloku źródłowego oferty wiadomości.  
+*_PSource*<br/>
+Wskaźnik do blok źródłowy oferty wiadomości.  
   
 ### <a name="return-value"></a>Wartość zwracana  
- A [message_status —](concurrency-namespace-enums.md) wskazanie docelowy korzystam z komunikatu.  
+ A [message_status —](concurrency-namespace-enums.md) sygnał docelowy postanowiła zrobić z komunikatem.  
   
 ##  <a name="ctor"></a> single_assignment 
 
- Konstruuje `single_assignment` bloku obsługi wiadomości.  
+ Konstruuje `single_assignment` Blok obsługi wiadomości.  
   
 ```
 single_assignment();
@@ -276,23 +276,23 @@ single_assignment(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `_Filter`  
- Funkcja filtru, który określa, czy oferowany wiadomości powinna być akceptowana.  
+*_Filtruj*<br/>
+Funkcja filtrowania, określający, czy powinna być akceptowana oferowane wiadomości.  
   
- `_PScheduler`  
- `Scheduler` Obiektu, w którym zadanie propagacji `single_assignment` zaplanowano bloku obsługi wiadomości.  
+*_PScheduler*<br/>
+`Scheduler` Obiekt, w którym zadanie propagacji dla `single_assignment` zaplanowano Blok obsługi wiadomości.  
   
- `_PScheduleGroup`  
- `ScheduleGroup` Obiektu, w którym zadanie propagacji `single_assignment` zaplanowano bloku obsługi wiadomości. `Scheduler` Technicznego obiekt używany przez grupę harmonogramu.  
+*_PScheduleGroup*<br/>
+`ScheduleGroup` Obiekt, w którym zadanie propagacji dla `single_assignment` zaplanowano Blok obsługi wiadomości. `Scheduler` Obiekt używany jest implikowany przez grupę harmonogramów.  
   
 ### <a name="remarks"></a>Uwagi  
- Środowisko uruchomieniowe używa domyślnego harmonogramu, jeśli nie określisz `_PScheduler` lub `_PScheduleGroup` parametrów.  
+ Środowisko wykonawcze używa domyślnego harmonogramu, jeśli nie określisz `_PScheduler` lub `_PScheduleGroup` parametrów.  
   
- Typ `filter_method` jest obiekt podpisem `bool (T const &)` który jest wywoływany przez to `single_assignment` obsługi komunikatów bloku, aby ustalić, czy powinna obsługiwać komunikatu oferowany.  
+ Typ `filter_method` jest funktor za pomocą podpisu `bool (T const &)` który zostanie wywołany przez to `single_assignment` Blok obsługi wiadomości, aby ustalić, czy nie powinien akceptować wiadomości oferowane.  
   
 ##  <a name="dtor"></a> ~ single_assignment 
 
- Niszczy `single_assignment` bloku obsługi wiadomości.  
+ Niszczy `single_assignment` Blok obsługi wiadomości.  
   
 ```
 ~single_assignment();
@@ -300,20 +300,20 @@ single_assignment(
   
 ##  <a name="value"></a> Wartość 
 
- Pobiera odwołanie do bieżącego ładunku komunikatu są przechowywane w `single_assignment` bloku obsługi wiadomości.  
+ Pobiera referencję do bieżącego ładunku komunikatów znajdujących się w `single_assignment` Blok obsługi wiadomości.  
   
 ```
 T const& value();
 ```  
   
 ### <a name="return-value"></a>Wartość zwracana  
- Obciążenie komunikatu przechowywane.  
+ Ładunek przechowywanych wiadomości.  
   
 ### <a name="remarks"></a>Uwagi  
- Ta metoda będzie czekać, aż do nadejścia wiadomości, jeśli komunikat nie są obecnie przechowywane w `single_assignment` bloku obsługi wiadomości.  
+ Ta metoda czeka na zakończenie nadejścia wiadomości, jeśli żaden komunikat nie jest obecnie przechowywanych w `single_assignment` Blok obsługi wiadomości.  
   
 ## <a name="see-also"></a>Zobacz też  
  [Współbieżność Namespace](concurrency-namespace.md)   
- [Klasa overwrite_buffer](overwrite-buffer-class.md)   
+ [overwrite_buffer, klasa](overwrite-buffer-class.md)   
  [Klasa unbounded_buffer](unbounded-buffer-class.md)
 

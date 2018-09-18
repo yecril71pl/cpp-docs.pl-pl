@@ -1,5 +1,5 @@
 ---
-title: Kompilatora (poziom 1) ostrzeżenie C4711 | Dokumentacja firmy Microsoft
+title: Kompilator ostrzeżenie (poziom 1) C4711 | Dokumentacja firmy Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,20 +16,21 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1faa8051ea2d167ae1386ef30ac54166c942aaf2
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: d184d5043dad1138f774ca7288a773bcc38c6d9f
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33279808"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46069952"
 ---
-# <a name="compiler-warning-level-1-c4711"></a>Kompilator C4711 ostrzegawcze (poziom 1)
-Funkcja "function" wybrać rozszerzenie funkcji wbudowanej  
-  
- Kompilator wykonana ze śródwierszowaniem na danej funkcji, mimo że nie został oznaczony do ze śródwierszowaniem.  
-  
- C4711 jest włączone, jeśli [/ob2](../../build/reference/ob-inline-function-expansion.md) jest określona.  
-  
- Ze Śródwierszowaniem jest wykonywane według uznania kompilatora. To ostrzeżenie ma charakter informacyjny.  
-  
- To ostrzeżenie jest domyślnie wyłączone. Aby włączyć ostrzeżenie, użyj [ostrzeżenie #pragma](../../preprocessor/warning.md). Zobacz [kompilatora ostrzeżeń czy są wyłączone domyślnie](../../preprocessor/compiler-warnings-that-are-off-by-default.md) Aby uzyskać więcej informacji.
+# <a name="compiler-warning-level-1-c4711"></a>Kompilator ostrzeżenie (poziom 1) C4711
+
+'Funkcja' wybrać wbudowane rozwijanie — funkcja
+
+Kompilator wykonywane wbudowanie na danej funkcji, mimo że nie został oznaczony do wbudowanie.
+
+C4711 jest włączona, jeśli [/ob2](../../build/reference/ob-inline-function-expansion.md) jest określony.
+
+Wbudowanie odbywa się według uznania kompilatora. To ostrzeżenie ma charakter informacyjny.
+
+To ostrzeżenie jest domyślnie wyłączona. Aby włączyć ostrzeżenie, użyj [ostrzeżenie #pragma](../../preprocessor/warning.md). Zobacz [kompilatora ostrzeżenia, są wyłączone domyślnie](../../preprocessor/compiler-warnings-that-are-off-by-default.md) Aby uzyskać więcej informacji.

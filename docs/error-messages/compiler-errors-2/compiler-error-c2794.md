@@ -1,5 +1,5 @@
 ---
-title: C2794 błąd kompilatora | Dokumentacja firmy Microsoft
+title: Błąd kompilatora C2794 | Dokumentacja firmy Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,29 +16,30 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2cee2ce072f3dfe106434443ba28047cf7b58284
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 4c81e8dcfde2a24c4a827406c3e499c12e891b2f
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33237395"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46068016"
 ---
-# <a name="compiler-error-c2794"></a>C2794 błąd kompilatora
-"Funkcja": nie jest elementem członkowskim żadnych bezpośrednich lub pośrednich klasa podstawowa "class"  
-  
- Próbowano użyć [super](../../cpp/super.md) w wywołaniu funkcji nieistniejącego elementu członkowskiego.  
-  
- Poniższy przykład generuje C2794  
-  
-```  
-// C2794.cpp  
-struct B {  
-   void mf();  
-};  
-  
-struct D : B {  
-   void mf() {  
-      __super::f();  // C2794  
-   }  
-};  
+# <a name="compiler-error-c2794"></a>Błąd kompilatora C2794
+
+'Funkcja': nie jest elementem Członkowskim wszelkie bezpośredniej lub pośredniej klasy bazowej "class"
+
+Próbowano użyć [super](../../cpp/super.md) wywołanie funkcji nieistniejącego elementu członkowskiego.
+
+Poniższy przykład spowoduje wygenerowanie C2794
+
+```
+// C2794.cpp
+struct B {
+   void mf();
+};
+
+struct D : B {
+   void mf() {
+      __super::f();  // C2794
+   }
+};
 ```

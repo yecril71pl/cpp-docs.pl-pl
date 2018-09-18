@@ -1,5 +1,5 @@
 ---
-title: Sekwencje specjalne | Dokumentacja firmy Microsoft
+title: Sekwencje unikowe | Dokumentacja firmy Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -40,53 +40,55 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7cd58f7418e2e6a2ca7592c345c5d71729cf8324
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 58691bbd4a078056599363028433788d529b266e
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32388831"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46068601"
 ---
 # <a name="escape-sequences"></a>Sekwencje unikowe
-Znak kombinacji składające się z od ukośnika odwrotnego (**\\**) następują litery lub przy użyciu kombinacji cyfr są nazywane "sekwencje specjalne". Aby przedstawić znaku nowego wiersza, pojedynczego cudzysłowu lub niektórych innych znaków w stałej znakowej, należy użyć sekwencji unikowych. Sekwencja specjalna jest traktowany jako pojedynczy znak i dlatego jest nieprawidłowe w stałej znakowej.  
-  
- Sekwencje unikowe są zwykle używane do określ akcje, takie jak znaki powrotu karetki i karcie przemieszczania na terminale i drukarek. Są również używane zapewnienie reprezentacje literału i znaki niedrukowalne znaki, które zwykle mają specjalne znaczenie, takich jak podwójny cudzysłów (**"**). W poniższej tabeli wymieniono sekwencji unikowych ANSI i ich znaczenie.  
-  
- Należy pamiętać, że poprzedzone znakiem zapytania ukośnik odwrotny (**\\?**) określa literału znaku zapytania w przypadkach, w którym sekwencja znaków może zostać błędnie zinterpretowane jako — trigram. Zobacz [Trigramów](../c-language/trigraphs.md) Aby uzyskać więcej informacji.  
-  
-### <a name="escape-sequences"></a>Sekwencje unikowe  
-  
-|Sekwencja unikowa|Reprezentuje|  
-|---------------------|----------------|  
-|**\a**|Dzwonka (alert)|  
-|**\b**|Backspace|  
-|**\f**|Wysuw strony|  
-|**\n**|Nowy wiersz|  
-|**\r**|Powrót karetki|  
-|**\t**|Tabulator poziomy|  
-|**\v**|Tabulator pionowy|  
-|**\\'**|Znak pojedynczego cudzysłowu|  
-|**\\"**|Podwójny cudzysłów|  
-|**\\\\**|ukośnik odwrotny|  
-|**\\?**|Literał znaku zapytania|  
-|**\\** *OOO*|Znaków ASCII w notacji ósemkowe|  
-|**\x** *hh*|Znaków ASCII w formacie szesnastkowym|  
-|**\x** *gg*|Znak Unicode w systemie szesnastkowym, jeśli ta sekwencja ucieczki jest używana w szerokich znaków stała ani literał ciągu Unicode.<br /><br /> Na przykład `WCHAR f = L'\x4e00'` lub `WCHAR b[] = L"The Chinese character for one is \x4e00"`.|  
-  
- **Microsoft Specific**  
-  
- Jeśli ukośnik odwrotny poprzedza znak, który nie ma w tabeli, kompilator obsługuje Niezdefiniowany znak jako sam znak. Na przykład `\c` jest traktowany jako `c`.  
-  
- **KOŃCOWY określonych firmy Microsoft**  
-  
- Sekwencje unikowe umożliwiają wysyłanie Niegraficzne znaki kontrolne na urządzeniu. Na przykład znak ESC (**\033**) jest często używany jako pierwszy znak polecenia sterowania do terminal lub drukarki. Niektóre sekwencji unikowych są specyficzne dla urządzenia. Na przykład karta pionowego i wysuwu strony sekwencje specjalne (**\v** i **\f**) nie ma wpływu na dane wyjściowe ekranu, ale wykonują operacje odpowiednich drukarek.  
-  
- Można również użyć kreska ułamkowa odwrócona (**\\**) jako znak kontynuacji. Gdy nowym wierszem znaków (odpowiednik naciśnięcie klawisza RETURN) od razu następuje ukośnik odwrotny, kompilator ignoruje ukośniku odwrotnym i znakiem nowego wiersza i traktuje następnego wiersza w ramach poprzedniego wiersza. Jest to przydatne, przede wszystkim dotyczące definicje preprocesora więcej niż jeden wiersz. Na przykład:  
-  
-```  
-#define assert(exp) \  
-( (exp) ? (void) 0:_assert( #exp, __FILE__, __LINE__ ) )  
-```  
-  
-## <a name="see-also"></a>Zobacz też  
- [Stałe znakowe języka C](../c-language/c-character-constants.md)
+
+Znak kombinacji składających się z ukośnika odwrotnego (**\\**) następują litery lub przy użyciu kombinacji cyfr są nazywane "sekwencje unikowe." Do reprezentowania znaku nowego wiersza, pojedynczy cudzysłów lub niektórych innych znaków w stałej znakowej, należy użyć sekwencji ucieczki. Sekwencja unikowa jest traktowany jako pojedynczy znak i dlatego jest nieprawidłowa w przypadku stałej znakowej.
+
+Sekwencje unikowe są zwykle używane do określ akcje, takie jak znaki powrotu karetki i klawisz tab, przemieszczania na terminale i drukarki. Służą one również zapewnienie literału reprezentacje niedrukowalne znaki i znaki, które zwykle mają specjalne znaczenie, takich jak podwójny cudzysłów (**"**). W poniższej tabeli wymieniono sekwencje wyjścia ANSI i ich znaczenie.
+
+Należy pamiętać, że znak zapytania, poprzedzone znakiem ukośnika odwrotnego (**\\?**) określa literału znaku zapytania w przypadkach, w którym sekwencja znaków może być błędnie zinterpretowana jako trójznaku. Zobacz [Trójznaków](../c-language/trigraphs.md) Aby uzyskać więcej informacji.
+
+### <a name="escape-sequences"></a>Sekwencje unikowe
+
+|Sekwencja unikowa|Reprezentuje|
+|---------------------|----------------|
+|**\a**|Dzwonek (alert)|
+|**\b**|Backspace|
+|**\f**|Wysuw strony|
+|**\n**|Nowy wiersz|
+|**\r**|Powrót karetki|
+|**\t**|tabulator poziomy|
+|**\v**|tabulator pionowy|
+|**\\'**|Znak pojedynczego cudzysłowu|
+|**\\"**|Podwójny cudzysłów|
+|**\\\\**|Ukośnik odwrotny|
+|**\\?**|Literał znaku zapytania|
+|**\\** *OOO*|Znak ASCII w ósemkowy|
+|**\x** *hh*|Znak ASCII w zapisie szesnastkowym|
+|**\x** *hhhh*|Znak Unicode w formacie szesnastkowym, jeśli ta sekwencja ucieczki jest używana w stała dwubajtowego znaku lub literał ciągu znaków Unicode.<br /><br /> Na przykład `WCHAR f = L'\x4e00'` lub `WCHAR b[] = L"The Chinese character for one is \x4e00"`.|
+
+**Microsoft Specific**
+
+Jeśli ukośnik odwrotny poprzedza znak, który nie jest widoczna w tabeli, kompilator obsługuje niezdefiniowane znak jako sam znak. Na przykład `\c` jest traktowany jako `c`.
+
+**END specyficzny dla Microsoft**
+
+Sekwencje unikowe umożliwiają wysyłanie Niegraficzne znaki kontrolne na urządzeniu. Na przykład znak ESC (**\033**) jest często używany jako pierwszy znak polecenia sterowania terminal lub drukarki. Niektóre sekwencje ucieczki są specyficzne dla urządzenia. Na przykład karta w pionie i Wysuw strony sekwencje unikowe (**\v** i **\f**) nie wpływają na ekranie wyników, ale wykonują operacje odpowiednich drukarek.
+
+Możesz również użyć ukośnik odwrotny (**\\**) jako znak kontynuacji. Gdy nowy wiersz znaków (odpowiednik naciskając klawisz ENTER) od razu następuje po odwrotnym ukośniku, kompilator ignoruje ukośnik odwrotny i znak nowego wiersza i traktuje następny wiersz jako część poprzedniego wiersza. Jest to przydatne głównie dla definicje preprocesora więcej niż jeden wiersz. Na przykład:
+
+```
+#define assert(exp) \
+( (exp) ? (void) 0:_assert( #exp, __FILE__, __LINE__ ) )
+```
+
+## <a name="see-also"></a>Zobacz też
+
+[Stałe znakowe języka C](../c-language/c-character-constants.md)

@@ -33,12 +33,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 53a37083335c42d8042167e737b68ccad517fa00
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 0fa2c3b421aa0aa60194f8ed949c023d78b70c2d
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43756353"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46070305"
 ---
 # <a name="csimplemap-class"></a>Klasa CSimpleMap
 
@@ -47,19 +47,19 @@ Ta klasa udostępnia obsługę tablicy mapowania proste.
 ## <a name="syntax"></a>Składnia
 
 ```
-template <class TKey, class TVal, class TEqual = CSimpleMapEqualHelper<TKey, TVal>>  
+template <class TKey, class TVal, class TEqual = CSimpleMapEqualHelper<TKey, TVal>>
 class CSimpleMap
 ```
 
 #### <a name="parameters"></a>Parametry
 
-*TKey*  
+*TKey*<br/>
 Typ klucza elementu.
 
-*TVal*  
+*TVal*<br/>
 Typ elementu wartości.
 
-*TEqual*  
+*TEqual*<br/>
 Obiekt cech, definiujący testu równości dla elementów typu `T`.
 
 ## <a name="members"></a>Elementy członkowskie
@@ -124,10 +124,10 @@ BOOL Add(const TKey& key, const TVal& val);
 
 ### <a name="parameters"></a>Parametry
 
-*Klucz*  
+*Klucz*<br/>
 Klucz.
 
-*Val*  
+*Val*<br/>
 Skojarzona wartość.
 
 ### <a name="return-value"></a>Wartość zwracana
@@ -188,7 +188,7 @@ int FindKey(const TKey& key) const;
 
 ### <a name="parameters"></a>Parametry
 
-*Klucz*  
+*Klucz*<br/>
 Klucz do wyszukania.
 
 ### <a name="return-value"></a>Wartość zwracana
@@ -205,7 +205,7 @@ int FindVal(const TVal& val) const;
 
 ### <a name="parameters"></a>Parametry
 
-*Val*  
+*Val*<br/>
 Wartość do wyszukania.
 
 ### <a name="return-value"></a>Wartość zwracana
@@ -222,7 +222,7 @@ TKey& GetKeyAt(int nIndex) const;
 
 ### <a name="parameters"></a>Parametry
 
-*nIndex*  
+*nIndex*<br/>
 Indeks klucza do zwrócenia.
 
 ### <a name="return-value"></a>Wartość zwracana
@@ -255,7 +255,7 @@ TVal& GetValueAt(int nIndex) const;
 
 ### <a name="parameters"></a>Parametry
 
-*nIndex*  
+*nIndex*<br/>
 Indeks wartości do zwrócenia.
 
 ### <a name="return-value"></a>Wartość zwracana
@@ -276,7 +276,7 @@ TVal Lookup(const TKey& key) const;
 
 ### <a name="parameters"></a>Parametry
 
-*Klucz*  
+*Klucz*<br/>
 Klucz.
 
 ### <a name="return-value"></a>Wartość zwracana
@@ -293,7 +293,7 @@ BOOL Remove(const TKey& key);
 
 ### <a name="parameters"></a>Parametry
 
-*Klucz*  
+*Klucz*<br/>
 Klucz.
 
 ### <a name="return-value"></a>Wartość zwracana
@@ -322,7 +322,7 @@ BOOL RemoveAt(int nIndex);
 
 ### <a name="parameters"></a>Parametry
 
-*nIndex*  
+*nIndex*<br/>
 Indeks klucza i skojarzone wartości do usunięcia.
 
 ### <a name="return-value"></a>Wartość zwracana
@@ -339,7 +339,7 @@ TKey ReverseLookup(const TVal& val) const;
 
 ### <a name="parameters"></a>Parametry
 
-*Val*  
+*Val*<br/>
 Wartość.
 
 ### <a name="return-value"></a>Wartość zwracana
@@ -356,10 +356,10 @@ BOOL SetAt(const TKey& key, const TVal& val);
 
 ### <a name="parameters"></a>Parametry
 
-*Klucz*  
+*Klucz*<br/>
 Klucz.
 
-*Val*  
+*Val*<br/>
 Nowa wartość do przypisania.
 
 ### <a name="return-value"></a>Wartość zwracana
@@ -379,13 +379,13 @@ BOOL SetAtIndex(
 
 ### <a name="parameters"></a>Parametry
 
-*nIndex*  
+*nIndex*<br/>
 Indeks odwołuje się do klucza i wartości parowanie, aby zmienić.
 
-*Klucz*  
+*Klucz*<br/>
 Nowy klucz.
 
-*Val*  
+*Val*<br/>
 Nowa wartość.
 
 ### <a name="return-value"></a>Wartość zwracana

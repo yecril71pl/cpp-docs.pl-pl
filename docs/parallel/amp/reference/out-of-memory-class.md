@@ -18,15 +18,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2ab3285e0b37b8af93803a1a2752e25b6d91ab2f
-ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
+ms.openlocfilehash: b57e27647f61b551f8ea5c2770290e1ae9627014
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33695298"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46070928"
 ---
 # <a name="outofmemory-class"></a>out_of_memory — Klasa
-Wyjątek zgłaszany, gdy metoda kończy się niepowodzeniem z powodu braku pamięci systemu lub urządzenia.  
+Wyjątek, który jest zgłaszany, gdy metoda nie powiedzie się z powodu braku pamięci systemowej lub urządzenia.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -53,7 +53,7 @@ class out_of_memory : public runtime_exception;
  **Nagłówek:** amprt.h  
   
  **Namespace:** współbieżności  
-## <a name="ctor"></a> out_of_memory — 
+## <a name="ctor"></a> out_of_memory 
 
  Inicjuje nowe wystąpienie klasy.  
   
@@ -67,8 +67,8 @@ out_of_memory () throw();
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `_Message`  
- Opis błędu.  
+*_Message*<br/>
+Opis błędu.  
   
 ### <a name="return-value"></a>Wartość zwracana  
  Nowe wystąpienie klasy `out_of_memory` klasy.  

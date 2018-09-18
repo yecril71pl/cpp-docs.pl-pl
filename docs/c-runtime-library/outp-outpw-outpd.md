@@ -43,68 +43,73 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 140b53fd90d393f2629dda6573d994635b96f417
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 604fe4a5fd3daa2cfef7698cd044c7edc56232b2
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32391512"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46069642"
 ---
 # <a name="outp-outpw-outpd"></a>_outp, _outpw, _outpd
-Dane wyjściowe w porcie bajt (`_outp`), wyraz (`_outpw`), lub word o podwójnej precyzji (`_outpd`).  
-  
+
+Dane wyjściowe do portu, bajt (`_outp`), słowo (`_outpw`), lub podwójne słowo (`_outpd`).
+
 > [!IMPORTANT]
->  Te funkcje są przestarzałe. Począwszy od programu Visual Studio 2015, ich nie są dostępne w CRT.  
-  
+>  Te funkcje są przestarzałe. Począwszy od programu Visual Studio 2015, nie są one dostępne w CRT.
+
 > [!IMPORTANT]
->  Nie można używać tego interfejsu API w aplikacjach, które są wykonywane w środowisku wykonawczym systemu Windows. Aby uzyskać więcej informacji, zobacz [funkcje CRT, nie są obsługiwane w aplikacjach platformy uniwersalnej systemu Windows](../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).  
-  
-## <a name="syntax"></a>Składnia  
-  
-```  
-  
-      int _outp(  
-unsigned short port,  
-int databyte   
-);  
-unsigned short _outpw(  
-unsigned short port,  
-unsigned short dataword   
-);  
-unsigned long _outpd(  
-unsigned short port,  
-unsigned long dataword   
-);  
-```  
-  
-#### <a name="parameters"></a>Parametry  
- *Port*  
- Numer portu.  
-  
- *databyte, dataword*  
- Wartości danych wyjściowych.  
-  
-## <a name="return-value"></a>Wartość zwracana  
- Zwracają dane wyjściowe. Nie ma żadnych zwracany błąd.  
-  
-## <a name="remarks"></a>Uwagi  
- `_outp`, `_outpw`, I `_outpd` funkcje zapisu bajt, word i word o podwójnej precyzji, odpowiednio do portu określonym produktem wyjściowym. *Portu* argument może być liczbą całkowitą bez znaku z zakresu 0 – 65 535; *databyte* może być liczbą całkowitą z zakresu 0 – 255; i *dataword* może mieć dowolną wartość z zakresu całkowitą, krótki całkowitą bez znaku i bez znaku długich liczb całkowitych, odpowiednio.  
-  
- Ponieważ te funkcje zapisu bezpośrednio z portem We/Wy, nie można użyć w kodzie użytkownika. Aby uzyskać informacje dotyczące korzystania z portów We/Wy w tych systemach operacyjnych Wyszukaj "Szeregowej komunikacji w Win32" w witrynie MSDN.  
-  
-## <a name="requirements"></a>Wymagania  
-  
-|Procedura|Wymagany nagłówek|  
-|-------------|---------------------|  
-|`_outp`|\<conio.h>|  
-|`_outpw`|\<conio.h>|  
-|`_outpd`|\<conio.h>|  
-  
- Aby uzyskać więcej informacji o zgodności, zobacz [zgodności](../c-runtime-library/compatibility.md).  
-  
-## <a name="libraries"></a>Biblioteki  
- Wszystkie wersje [biblioteki wykonawcze języka C](../c-runtime-library/crt-library-features.md).  
-  
-## <a name="see-also"></a>Zobacz też  
- [We/Wy konsoli i portu](../c-runtime-library/console-and-port-i-o.md)   
- [_inp, _inpw, _inpd](../c-runtime-library/inp-inpw-inpd.md)
+>  Tego API nie można używać w aplikacjach korzystających ze środowiska wykonawczego Windows. Aby uzyskać więcej informacji, zobacz [funkcje CRT nieobsługiwane w aplikacjach platformy uniwersalnej Windows](../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
+
+## <a name="syntax"></a>Składnia
+
+```
+
+      int _outp(
+unsigned short port,
+int databyte
+);
+unsigned short _outpw(
+unsigned short port,
+unsigned short dataword
+);
+unsigned long _outpd(
+unsigned short port,
+unsigned long dataword
+);
+```
+
+#### <a name="parameters"></a>Parametry
+*Port*<br/>
+Numer portu.
+
+*databyte, dataword*<br/>
+Wartości wyjściowe.
+
+## <a name="return-value"></a>Wartość zwracana
+
+Funkcje zwracają dane wyjściowe. Nie będzie zwrotu błędu.
+
+## <a name="remarks"></a>Uwagi
+
+`_outp`, `_outpw`, I `_outpd` funkcje zapisują bajt, wyraz i podwójne słowo, odpowiednio do portu określonym produktem wyjściowym. *Portu* argument może być liczbą całkowitą bez znaku z zakresu 0 - 65 535; *databyte* może być liczbą całkowitą z zakresu 0 - 255; i *dataword* może być dowolną wartość z zakresu, liczba całkowita, niepodpisane krótka liczba całkowita i niepodpisane długa liczba całkowita, odpowiednio.
+
+Ponieważ te funkcje zapisują bezpośrednio do portu We/Wy, nie można użyć w kodzie użytkownika. Aby uzyskać informacje dotyczące korzystania z portów We/Wy w tych systemach operacyjnych wyszukaj ciąg "Komunikacja szeregowa w Win32" w witrynie MSDN.
+
+## <a name="requirements"></a>Wymagania
+
+|Procedura|Wymagany nagłówek|
+|-------------|---------------------|
+|`_outp`|\<conio.h>|
+|`_outpw`|\<conio.h>|
+|`_outpd`|\<conio.h>|
+
+Aby uzyskać więcej informacji na temat zgodności, zobacz [zgodności](../c-runtime-library/compatibility.md).
+
+## <a name="libraries"></a>Biblioteki
+
+Wszystkie wersje [biblioteki wykonawczej C](../c-runtime-library/crt-library-features.md).
+
+## <a name="see-also"></a>Zobacz też
+
+[We/Wy konsoli i portu](../c-runtime-library/console-and-port-i-o.md)<br/>
+[_inp, _inpw, _inpd](../c-runtime-library/inp-inpw-inpd.md)

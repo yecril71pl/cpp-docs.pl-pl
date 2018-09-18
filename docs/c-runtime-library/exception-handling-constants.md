@@ -1,5 +1,5 @@
 ---
-title: Stałe obsługi wyjątków | Dokumentacja firmy Microsoft
+title: Obsługi wyjątków — stałe | Dokumentacja firmy Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -23,15 +23,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 47f23fd421d5108648d88c9eeda83c255f9861dc
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 6cc17e429c0750b9f0cc8d9eb24bc94adf00484e
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32388230"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46070603"
 ---
 # <a name="exception-handling-constants"></a>Instrukcje obsługi wyjątków — Stałe
-Stała `EXCEPTION_CONTINUE_SEARCH`, `EXCEPTION_CONTINUE_EXECUTION`, lub `EXCEPTION_EXECUTE_HANDLER` jest zwracany, gdy wystąpi wyjątek podczas wykonywania sekcji ochroną **spróbuj — z wyjątkiem** instrukcji. Wartość zwracana określa sposób obsługi wyjątków. Aby uzyskać więcej informacji, zobacz [spróbuj-except — instrukcja](../cpp/try-except-statement.md) w *dokumentacja języka C++*.  
-  
-## <a name="see-also"></a>Zobacz też  
- [Stałe globalne](../c-runtime-library/global-constants.md)
+
+Stała `EXCEPTION_CONTINUE_SEARCH`, `EXCEPTION_CONTINUE_EXECUTION`, lub `EXCEPTION_EXECUTE_HANDLER` jest zwracana, gdy wystąpi wyjątek podczas wykonywania sekcji chronionej **spróbuj — z wyjątkiem** instrukcji. Wartość zwracana określa sposób obsługi wyjątku. Aby uzyskać więcej informacji, zobacz [spróbuj-except, instrukcja](../cpp/try-except-statement.md) w *C++ Language Reference*.
+
+## <a name="see-also"></a>Zobacz też
+
+[Stałe globalne](../c-runtime-library/global-constants.md)

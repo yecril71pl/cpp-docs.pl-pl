@@ -1,5 +1,5 @@
 ---
-title: C2254 błąd kompilatora | Dokumentacja firmy Microsoft
+title: Błąd kompilatora C2254 | Dokumentacja firmy Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,30 +16,31 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 773b6d8b8f0dafe560da8549139442efb31ba429
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 6030f85ef1b8742b07f1be92101d740732207fa5
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33170086"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46067093"
 ---
-# <a name="compiler-error-c2254"></a>C2254 błąd kompilatora
-"Funkcja": czysty specyfikator lub abstrakcyjny specyfikator override nie dozwolony dla funkcji zaprzyjaźnionej  
-  
- A `friend` jest określony jako czysty `virtual`.  
-  
- Poniższy przykład generuje C2254:  
-  
-```  
-// C2254.cpp  
-// compile with: /c  
-class A {  
-public:  
-   friend void func1() = 0;   // C2254, func1 is friend  
-   void virtual func2() = 0;   // OK, pure virtual  
-   friend void func3();   // OK, friend not virtual nor pure  
-};  
-  
-void func1() {};  
-void func3() {};  
+# <a name="compiler-error-c2254"></a>Błąd kompilatora C2254
+
+'Funkcja': czysty specyfikator lub abstrakcyjny specyfikator override nie dozwolony dla funkcji zaprzyjaźnionej
+
+A `friend` funkcji jest określony jako czysty `virtual`.
+
+Poniższy przykład spowoduje wygenerowanie C2254:
+
+```
+// C2254.cpp
+// compile with: /c
+class A {
+public:
+   friend void func1() = 0;   // C2254, func1 is friend
+   void virtual func2() = 0;   // OK, pure virtual
+   friend void func3();   // OK, friend not virtual nor pure
+};
+
+void func1() {};
+void func3() {};
 ```

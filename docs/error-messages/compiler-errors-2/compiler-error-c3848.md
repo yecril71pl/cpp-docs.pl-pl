@@ -1,5 +1,5 @@
 ---
-title: C3848 błąd kompilatora | Dokumentacja firmy Microsoft
+title: Błąd kompilatora C3848 | Dokumentacja firmy Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,39 +16,40 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 37354d30ab20820657fc048cac0f87aa1a958dfa
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 81af73813f1f9c6c388ec6946ef9131cad413747
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33267176"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46069589"
 ---
-# <a name="compiler-error-c3848"></a>C3848 błąd kompilatora
-Wyrażenie typu "type" spowoduje utratę niektórych kwalifikatorów const-volatile w celu wywołania "function"  
-  
- Zmienna z określonym typem const-volatile można wywołać tylko członek funkcje zdefiniowane z kwalifikacji const-volatile sam lub większy.  
-  
- Poniższe przykłady Generowanie C3848:  
-  
-```  
-// C3848.cpp  
-void glbFunc1()  
-{  
-}  
-  
-typedef void (* pFunc1)();  
-  
-struct S3  
-{  
-   operator pFunc1() // const  
-   {  
-      return &glbFunc1;  
-   }  
-};  
-  
-int main()  
-{  
-   const S3 s3;  
-   s3();   // C3848, uncomment const qualifier  
-}  
+# <a name="compiler-error-c3848"></a>Błąd kompilatora C3848
+
+Wyrażenie typu "type" spowoduje utratę niektórych kwalifikatorów const-volatile w celu wywołania "function"
+
+Zmienna przy użyciu określonego typu const-volatile może wywołać tylko elementu członkowskiego funkcje zdefiniowane przy użyciu tej samej lub większej kwalifikacji const-volatile.
+
+Poniższe przykłady generują C3848:
+
+```
+// C3848.cpp
+void glbFunc1()
+{
+}
+
+typedef void (* pFunc1)();
+
+struct S3
+{
+   operator pFunc1() // const
+   {
+      return &glbFunc1;
+   }
+};
+
+int main()
+{
+   const S3 s3;
+   s3();   // C3848, uncomment const qualifier
+}
 ```

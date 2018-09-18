@@ -18,15 +18,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 612a5658e0ef678253ec493f23b71cc564288904
-ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
+ms.openlocfilehash: 1b4e1eaf4bfca27ef22af103a5696ca2a34265d6
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33689519"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46069188"
 ---
 # <a name="invalidoversubscribeoperation-class"></a>invalid_oversubscribe_operation — Klasa
-Ta klasa opisuje wyjątek wywoływany, gdy `Context::Oversubscribe` metoda jest wywoływana z `_BeginOversubscription` ustawiona `false` bez uprzedniego wywołania `Context::Oversubscribe` metody z `_BeginOversubscription` ustawiono parametr `true`.  
+Ta klasa opisuje wyjątek generowany, gdy `Context::Oversubscribe` metoda jest wywoływana z `_BeginOversubscription` parametr `false` bez uprzedniego wywołania do `Context::Oversubscribe` metody z `_BeginOversubscription` parametr `true`.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -64,8 +64,8 @@ invalid_oversubscribe_operation() throw();
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `_Message`  
- Komunikat opisowy błędu.  
+*_Message*<br/>
+Opisowy komunikat dotyczący błędu.  
   
 ## <a name="see-also"></a>Zobacz też  
  [Przestrzeń nazw współbieżności](concurrency-namespace.md)

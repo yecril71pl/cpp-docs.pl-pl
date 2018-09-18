@@ -16,14 +16,15 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b68513b497b97c78d31264a565dadc9b1fe95a98
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 6b8e7c80ca3a184135da3784e7744ae1528517a8
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33227877"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46070694"
 ---
 # <a name="fatal-error-c1109"></a>Błąd krytyczny C1109
-Nie można odnaleźć 'punkt wejścia' w bibliotece DLL 'dll'  
-  
- Punkt wejścia w [DLL załadowanych z opóźnieniem](../../build/reference/linker-support-for-delay-loaded-dlls.md) wymaganego przez kompilator nie można odnaleźć.
+
+Nie można odnaleźć 'punkt wejścia' w pliku DLL 'dll'
+
+Punkt wejścia w [bibliotek DLL załadowanych z opóźnieniem](../../build/reference/linker-support-for-delay-loaded-dlls.md) wymaganego przez kompilator nie został odnaleziony.

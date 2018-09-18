@@ -1,5 +1,5 @@
 ---
-title: C3645 błąd kompilatora | Dokumentacja firmy Microsoft
+title: Błąd kompilatora C3645 | Dokumentacja firmy Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,24 +16,26 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a711f37e3ab54de5e3cfad77b82fbd603edfaf6e
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 2d310ab3a9a4bd0b31b9e6295a93a571a54f585b
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33263830"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46068913"
 ---
-# <a name="compiler-error-c3645"></a>C3645 błąd kompilatora
-"Funkcja": __clrcall nie można używać w funkcjach skompilowanych do natywnego kodu  
-  
- Obecność niektórych słów kluczowych w funkcji spowoduje, że funkcja zestawiane na natywny.  
-  
-## <a name="example"></a>Przykład  
- Poniższy przykład generuje C3645.  
-  
-```  
-// C3645.cpp  
-// compile with: /clr /c  
-#pragma unmanaged   
-int __clrcall dog() {}   // C3645  
+# <a name="compiler-error-c3645"></a>Błąd kompilatora C3645
+
+'Funkcja': __clrcall nie można używać w funkcjach skompilowanych do natywnego kodu
+
+Obecność niektórych słów kluczowych w funkcji spowoduje, że funkcja jest kompilowana do natywnego.
+
+## <a name="example"></a>Przykład
+
+Poniższy przykład spowoduje wygenerowanie C3645.
+
+```
+// C3645.cpp
+// compile with: /clr /c
+#pragma unmanaged
+int __clrcall dog() {}   // C3645
 ```

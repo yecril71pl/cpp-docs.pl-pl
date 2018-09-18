@@ -17,31 +17,33 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 310f0c6d3b36f63d4ba9d1f165c808b6d417c321
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 10c5a4fd9b7f15e5f6532bbaf6b5d8af4d3c86ba
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33087796"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46068004"
 ---
 # <a name="odbc-driver-list"></a>Lista sterowników ODBC
-Visual C++ zawiera sterowniki ODBC dla następujących baz danych:  
+
+Visual C++ zapewnia sterowniki ODBC dla następujących baz danych:  
   
--   SQL Server  
+- SQL Server  
   
--   Microsoft Access  
+- Microsoft Access  
   
--   Program Microsoft Excel  
+- Program Microsoft Excel  
   
--   dBASE  
+- dBASE  
   
--   Paradox  
+- Paradox  
   
--   Microsoft Oracle ODBC  
+- Microsoft Oracle ODBC  
   
--   Pliki tekstowe  
+- Pliki tekstowe  
   
- Informacji o sterownikach ODBC firmy Microsoft i innych firm, w tym pakiet sterownika ODBC skontaktuj się z pomocą techniczną firmy Microsoft.  
+Informacji o sterownikach ODBC firmy Microsoft i innych firm, w tym pakiecie sterowników ODBC skontaktuj się z pomocą techniczną firmy Microsoft.  
   
 ## <a name="see-also"></a>Zobacz też  
- [Open Database Connectivity (ODBC)](../../data/odbc/open-database-connectivity-odbc.md)
+
+[Open Database Connectivity (ODBC)](../../data/odbc/open-database-connectivity-odbc.md)

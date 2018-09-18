@@ -16,12 +16,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: dcda07b5d2ab499a769c389538e8f272fd8441a6
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: f860d90905c244327787182c40505207c4745201
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45713171"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46069173"
 ---
 # <a name="ltallocatorsgt"></a>&lt;Buforów&gt;
 
@@ -68,23 +68,22 @@ gdy argument szablonu `Type` jest typu zarządzanego przez to wystąpienie progr
 
 Podczas tworzenia kontenera, na przykład w poniższym przykładzie kodu należy użyć odpowiedniej podczas tworzenia wystąpienia alokatora jako drugi argument typu.
 
-`#include <list>`
-
-`#include <allocators>`
-
-`std::list<int, stdext::allocators::allocator_chunklist<int> > _List0;`
+```cpp
+#include <list>
+#include <allocators>
+std::list<int, stdext::allocators::allocator_chunklist<int> > _List0;
+```
 
 _List0 przydziela węzły z `allocator_chunklist` i domyślny filtr synchronizacji.
 
 Użyj makro [ALLOCATOR_DECL](../standard-library/allocators-functions.md#allocator_decl) do tworzenia szablonów alokatora z filtrami synchronizacji inny niż domyślny:
 
-`#include <list>`
-
-`#include <allocators>`
-
-`ALLOCATOR_DECL(CACHE_CHUNKLIST, stdext::allocators::sync_per_thread, Alloc);`
-
-`std::list<int, alloc<int> > _List1;`
+```cpp
+#include <list>
+#include <allocators>
+ALLOCATOR_DECL(CACHE_CHUNKLIST, stdext::allocators::sync_per_thread, Alloc);
+std::list<int, alloc<int> > _List1;
+```
 
 _Lst1 przydziela węzły z `allocator_chunklist` i [sync_per_thread —](../standard-library/sync-per-thread-class.md) filtr synchronizacji.
 

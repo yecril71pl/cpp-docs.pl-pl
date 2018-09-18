@@ -1,5 +1,5 @@
 ---
-title: Błąd cxx0043 programu Expression Evaluator | Dokumentacja firmy Microsoft
+title: Błąd ewaluatora wyrażeń CXX0043 | Dokumentacja firmy Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,16 +17,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a5b27c1fffca8c21a0fa3e3e79eedae0c17ae580
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 01deb34c2e490eb8a2d6529a426aedca40f98901
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33295395"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46070577"
 ---
 # <a name="expression-evaluator-error-cxx0043"></a>Błąd CXX0043 programu Expression Evaluator
-this, wskaźnik użyty poza funkcją członkowską  
-  
- **To** wskaźnika jest możliwe tylko dla Niestatyczne funkcje Członkowskie.  
-  
- Ten błąd jest taki sam jak CAN0043.
+
+this, wskaźnik używany poza funkcji składowej
+
+**To** wskaźnika można używać tylko dla Niestatyczne funkcje Członkowskie.
+
+Ten błąd jest taka sama jak CAN0043.

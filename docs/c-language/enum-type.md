@@ -12,17 +12,19 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 521143207c9ecc873cfea1f857b6849a787500eb
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: e4e2419ff6b333eabb896ff4c3a059d80d2c2bd6
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32382760"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46069199"
 ---
 # <a name="enum-type"></a>Typ wyliczenia
-**ANSI 3.5.2.2** typu Liczba całkowita wybrany do reprezentowania wartości dla typu wyliczeniowego  
-  
- Zmienna zadeklarowana jako `enum` jest `int`.  
-  
-## <a name="see-also"></a>Zobacz też  
- [Struktury, złożenia, wyliczenia i pola bitowe](../c-language/structures-unions-enumerations-and-bit-fields.md)
+
+**ANSI 3.5.2.2** typ liczby całkowitej, wybrana do reprezentowania wartości typu wyliczeniowego
+
+Zmienna zadeklarowana jako `enum` jest `int`.
+
+## <a name="see-also"></a>Zobacz też
+
+[Struktury, złożenia, wyliczenia i pola bitowe](../c-language/structures-unions-enumerations-and-bit-fields.md)

@@ -16,20 +16,21 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 24c034d45b7f8b222471094f4580902ae1b8dc66
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: db9167383df48dad274ef8941defaa53f51d3bfa
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33198108"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46068991"
 ---
 # <a name="fatal-error-c1026"></a>Błąd krytyczny C1026
-przepełnienie stosu analizatora składni, zbyt złożony program  
-  
- Miejsce wymagane do analizy programu spowodowała przepełnienie stosu kompilatora.  
-  
- Zmniejsz stopień złożoności wyrażeń przez:  
-  
--   Zmniejszenie zagnieżdżenia w `for` i `switch` instrukcje. Umieść głębsze zagnieżdżonych instrukcji w osobnych funkcji.  
-  
--   Podzielenie dużo wyrażeń, które wymagają operatory przecinkami lub wywołania funkcji.
+
+przepełnienie stosu analizatora składni, zbyt złożony program
+
+Miejsca wymaganego do analizowania program spowodowało przepełnienie stosu kompilatora.
+
+Zmniejsz złożoność wyrażenia przez:
+
+- Zmniejszenie zagnieżdżenia w `for` i `switch` instrukcji. Umieść głębiej zagnieżdżonych instrukcji w funkcji.
+
+- Podzielenie długich wyrażeń obejmujących operatory przecinkami lub wywołania funkcji.

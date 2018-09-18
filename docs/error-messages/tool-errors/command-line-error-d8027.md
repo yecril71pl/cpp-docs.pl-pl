@@ -16,28 +16,29 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: dc93edb939001a1e1bed5d3f7a4113e8483e81dd
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 8234835d3bb0545c8a72bf35cfb55b2e18bc7da2
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33296123"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46070382"
 ---
 # <a name="command-line-error-d8027"></a>Błąd D8027 wiersza polecenia
-Nie można wykonać "component"  
-  
- Kompilator nie można uruchomić składnika danej kompilatora lub konsolidatora.  
-  
-### <a name="to-fix-by-checking-the-following-possible-causes"></a>Aby rozwiązać problem, sprawdzając następujące możliwe przyczyny  
-  
-1.  Za mało pamięci, aby załadować składnika. Jeśli NMAKE wywołać kompilatora, uruchom kompilatora poza pliku reguł programu make.  
-  
-2.  W bieżącym systemie operacyjnym nie można uruchomić składnika. Upewnij się, że punkty ścieżki plików wykonywalnych właściwe dla systemu operacyjnego.  
-  
-3.  Składnik był uszkodzony. Ponownie skopiować składnika z dysków dystrybucji przy użyciu Instalatora.  
-  
-4.  Opcja została określona nieprawidłowo. Na przykład:  
-  
-    ```  
-    cl /B1 file1.c  
+
+Nie można wykonać operacji "component"
+
+Kompilator nie można uruchomić składnika danego kompilatora lub konsolidatora.
+
+### <a name="to-fix-by-checking-the-following-possible-causes"></a>Aby rozwiązać problem, sprawdzając następujące możliwe przyczyny
+
+1. Nie ma wystarczającej ilości pamięci, aby załadować składnika. Jeśli NMAKE wywołana kompilator, należy uruchomić kompilatora poza pliku reguł programu make.
+
+1. Bieżący system operacyjny nie można uruchomić składnika. Upewnij się, że punkty ścieżki plików wykonywalnych odpowiednie dla używanego systemu operacyjnego.
+
+1. Składnik jest uszkodzony. Ponownie skopiować składnika z dysków dystrybucyjnych, za pomocą programu INSTALACYJNEGO.
+
+1. Opcja została określona niepoprawnie. Na przykład:
+
+    ```
+    cl /B1 file1.c
     ```

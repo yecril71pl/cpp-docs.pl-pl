@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d90a3f4b2cbacb3071dcd552fd88f6cb11bb5d43
-ms.sourcegitcommit: f7703076b850c717c33d72fb0755fbb2215c5ddc
+ms.openlocfilehash: 08200320e30816ac45e6c91a14dc41508430cfae
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/28/2018
-ms.locfileid: "43131845"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46069121"
 ---
 # <a name="constructors-c"></a>Konstruktory (C++)
 
@@ -88,7 +88,7 @@ Za pomocą listy inicjatora składowej jest preferowana nad przypisywaniem warto
     {}
 ```
 
-Identyfikator musi odwoływać się do elementu członkowskiego klasy; zostanie zainicjowany z wartością argumentu. Argument może być jeden z parametrów konstruktora, wywołanie funkcji lub [std::initializer_list\<T >](../standard-library/initializer-list-class.md). 
+Identyfikator musi odwoływać się do elementu członkowskiego klasy; zostanie zainicjowany z wartością argumentu. Argument może być jeden z parametrów konstruktora, wywołanie funkcji lub [std::initializer_list\<T >](../standard-library/initializer-list-class.md).
 
 **Const** elementy członkowskie i elementy członkowskie typu referencyjnego musi zostać zainicjowany na liście inicjatora składowej.
 
@@ -96,7 +96,7 @@ Wywołania konstruktory sparametryzowane klasy bazowej należy na liście inicja
 
 ## <a name="default_constructors"></a> Konstruktory domyślne
 
- *Domyślne konstruktory* zwykle nie mają parametrów, ale mogą mieć parametrów mających wartości domyślne.
+*Domyślne konstruktory* zwykle nie mają parametrów, ale mogą mieć parametrów mających wartości domyślne.
 
 ```cpp
 class Box {
@@ -216,6 +216,7 @@ Aby zapobiec obiektu kopiowane przez definiowanie konstruktora kopiującego jako
 Próby skopiowania obiektu powoduje błąd *C2280: próba odwania do usuniętej funkcji do*.
 
 ## <a name="move_constructors"></a> Konstruktory przenoszenia
+
 A *Konstruktor przenoszący* jest funkcji specjalnych elementów członkowskich, który przenosi własności istniejący obiekt danych do nowej zmiennej bez kopiowania oryginalnych danych. Trwa odwołanie rvalue za swój pierwszy parametr i żadnych dodatkowych parametrów muszą mieć wartości domyślnej. Konstruktorów przenoszenia może znacznie zwiększyć wydajność swojego programu podczas przekazywania dużych obiektów. Konstruktor przenoszący przyjmuje odwołanie rvalue jako pierwszym parametrem. Inne parametry muszą mieć wartości domyślnej.
 
 ```cpp

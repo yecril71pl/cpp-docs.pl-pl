@@ -27,12 +27,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1780a4f77cce4812ebdb03ebc89936da0dc0d5d0
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: ba47b7f78e372f05a851d2180590bbc68a8c61ca
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43767058"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46068445"
 ---
 # <a name="cdialogimpl-class"></a>Cdialogimpl — klasa
 
@@ -51,10 +51,10 @@ template <class T,
 
 #### <a name="parameters"></a>Parametry
 
-*T*  
+*T*<br/>
 Z klasą pochodną `CDialogImpl`.
 
-*Tpodstawowe*  
+*Tpodstawowe*<br/>
 Klasa bazowa nowej klasie. Domyślna klasa bazowa jest [CWindow](../../atl/reference/cwindow-class.md).
 
 ## <a name="members"></a>Elementy członkowskie
@@ -113,7 +113,7 @@ gdzie `MyDlg` jest **krótką nazwę** wprowadzona w kreatorze **nazwy** strony.
 
 Tworzy niemodalne okno dialogowe.
 
-```  
+```
 HWND Create(
     HWND hWndParent,  
     LPARAM dwInitParam = NULL );  
@@ -121,18 +121,17 @@ HWND Create(
 HWND Create(
     HWND hWndParent,  
     RECT&, 
-    LPARAM dwInitParam = NULL); 
+    LPARAM dwInitParam = NULL);
 ```
 
 ### <a name="parameters"></a>Parametry
 
-*hWndParent*  
+*hWndParent*<br/>
 [in] Dojście do okna właściciela.
 
-**Prostokąt &** *rect*  
-[in] A [Prostokąt](https://msdn.microsoft.com/library/windows/desktop/dd162897) struktury, określając rozmiar i położenie okna dialogowego.
+**Prostokąt &** *prostokąt* [in] A [Prostokąt](https://msdn.microsoft.com/library/windows/desktop/dd162897) struktury, określając rozmiar i położenie okna dialogowego.
 
-*dwInitParam*  
+*dwInitParam*<br/>
 [in] Określa wartość do przekazania do okna dialogowego w *lParam* parametr / / Złap wiadomości.
 
 ### <a name="return-value"></a>Wartość zwracana
@@ -173,16 +172,16 @@ static LRESULT CALLBACK DialogProc(
 
 ### <a name="parameters"></a>Parametry
 
-*hWnd*  
+*hWnd*<br/>
 [in] Dojście do okna dialogowego.
 
-*uMsg*  
+*uMsg*<br/>
 [in] Komunikat wysyłany do okna dialogowego.
 
-*wParam*  
+*wParam*<br/>
 [in] Dodatkowe informacje specyficzne dla wiadomości.
 
-*lParam*  
+*lParam*<br/>
 [in] Dodatkowe informacje specyficzne dla wiadomości.
 
 ### <a name="return-value"></a>Wartość zwracana
@@ -199,18 +198,18 @@ Można zastąpić `DialogProc` inny mechanizm obsługi wiadomości.
 
 Tworzy modalne okno dialogowe.
 
-```   
+```
 INT_PTR DoModal(  
     HWND hWndParent = ::GetActiveWindow(),   
-    LPARAM dwInitParam = NULL); 
+    LPARAM dwInitParam = NULL);
 ```
 
 ### <a name="parameters"></a>Parametry
 
-*hWndParent*  
+*hWndParent*<br/>
 [in] Dojście do okna właściciela. Wartość domyślna to wartość zwracana przez [GetActiveWindow](https://msdn.microsoft.com/library/windows/desktop/ms646292) funkcję Win32.
 
-*dwInitParam*  
+*dwInitParam*<br/>
 [in] Określa wartość do przekazania do okna dialogowego w *lParam* parametr / / Złap wiadomości.
 
 ### <a name="return-value"></a>Wartość zwracana
@@ -227,13 +226,13 @@ Aby utworzyć niemodalnego okna dialogowego, wywołaj [Utwórz](#create).
 
 Niszczy okno modalne okno dialogowe.
 
-```   
-BOOL EndDialog(int nRetCode); 
+```
+BOOL EndDialog(int nRetCode);
 ```
 
 ### <a name="parameters"></a>Parametry
 
-*nRetCode*  
+*nRetCode*<br/>
 [in] Wartość zwracana przez [CDialogImpl::DoModal](#domodal).
 
 ### <a name="return-value"></a>Wartość zwracana
@@ -251,8 +250,8 @@ Wartość TRUE, jeśli jest niszczony, okno dialogowe; w przeciwnym razie warto�
 
 Zwraca `DialogProc`, bieżącą procedurę okna dialogowego pole.
 
-```   
-virtual WNDPROC GetDialogProc(); 
+```
+virtual WNDPROC GetDialogProc();
 ```
 
 ### <a name="return-value"></a>Wartość zwracana
@@ -267,13 +266,13 @@ Zastępuje tę metodę, aby zastąpić procedurę okna dialogowego swoją własn
 
 Konwertuje jednostki (maps) okno dialogowe jednostki określonego prostokąta do ekranu (w pikselach).
 
-```   
-BOOL MapDialogRect(LPRECT lpRect); 
+```
+BOOL MapDialogRect(LPRECT lpRect);
 ```
 
 ### <a name="parameters"></a>Parametry
 
-*lprect —*  
+*lprect —*<br/>
 Wskazuje `CRect` obiektu lub [Prostokąt](../../mfc/reference/rect-structure1.md) strukturę, która będzie odbierać współrzędne klienta aktualizacji, która otacza region aktualizacji.
 
 ### <a name="return-value"></a>Wartość zwracana
@@ -288,13 +287,13 @@ Funkcja zastępuje współrzędnych w określonym `RECT` struktura przekonwertow
 
 Wywołuje się po otrzymaniu ostatniego komunikatu (zazwyczaj `WM_NCDESTROY`).
 
-```   
-virtual void OnFinalMessage(HWND hWnd); 
+```
+virtual void OnFinalMessage(HWND hWnd);
 ```
 
 ### <a name="parameters"></a>Parametry
 
-*hWnd*  
+*hWnd*<br/>
 [in] Dojście do okna niszczone.
 
 ### <a name="remarks"></a>Uwagi
@@ -305,26 +304,26 @@ Należy pamiętać, że jeśli chcesz automatycznie usunąć obiektu na zniszcze
 
 Wywoływana tylko raz, gdy pierwsza wiadomość zostanie odebrana, przetwarzać komunikaty wysyłane do okna dialogowego.
 
-```   
+```
 static LRESULT CALLBACK StartDialogProc(
     HWND hWnd,  
     UINT uMsg,  
     WPARAM wParam,  
-    LPARAM lParam); 
+    LPARAM lParam);
 ```
 
 ### <a name="parameters"></a>Parametry
 
-*hWnd*  
+*hWnd*<br/>
 [in] Dojście do okna dialogowego.
 
-*uMsg*  
+*uMsg*<br/>
 [in] Komunikat wysyłany do okna dialogowego.
 
-*wParam*  
+*wParam*<br/>
 [in] Dodatkowe informacje specyficzne dla wiadomości.
 
-*lParam*  
+*lParam*<br/>
 [in] Dodatkowe informacje specyficzne dla wiadomości.
 
 ### <a name="return-value"></a>Wartość zwracana
@@ -337,5 +336,5 @@ Po wywołaniu początkowej `StartDialogProc`, `DialogProc` jest ustawiona jako p
 
 ## <a name="see-also"></a>Zobacz też
 
-[BEGIN_MSG_MAP](message-map-macros-atl.md#begin_msg_map)   
+[BEGIN_MSG_MAP](message-map-macros-atl.md#begin_msg_map)<br/>
 [Klasa — Przegląd](../../atl/atl-class-overview.md)
