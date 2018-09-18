@@ -12,12 +12,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1d78b37971cda2ca1bcf468a794abf69555efc3e
-ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
+ms.openlocfilehash: eb4af8f218a6040080cdf429b061205269cbc4dc
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/02/2018
-ms.locfileid: "39462254"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45703589"
 ---
 # <a name="smart-pointers-modern-c"></a>Wskaźniki inteligentne (Modern C++)
 W nowoczesnym programowaniu C++, standardowa biblioteka zawiera *inteligentne wskaźniki*, które są używane, aby mieć pewność, że programy są wolne od pamięci i wycieki zasobów są bezpieczne pod względem wyjątków.  
@@ -69,8 +69,9 @@ W nowoczesnym programowaniu C++, standardowa biblioteka zawiera *inteligentne ws
 ## <a name="kinds-of-smart-pointers"></a>Rodzaje inteligentnych wskaźników  
  Poniższa sekcja podsumowuje różne rodzaje inteligentnych wskaźników, które są dostępne w środowisku programowania Windows, i opisuje, kiedy ich używać.  
   
- **C++ Standard Library inteligentnych wskaźników**  
- Używaj tych inteligentnych wskaźników jako pierwszych, w celu hermetyzacji wskaźników jako zwykłych starych obiektów C++ (Plain Old C++ Objects — POCO).  
+### <a name="c-standard-library-smart-pointers"></a>C++ Standard Library inteligentnych wskaźników
+
+Używaj tych inteligentnych wskaźników jako pierwszych, w celu hermetyzacji wskaźników jako zwykłych starych obiektów C++ (Plain Old C++ Objects — POCO).  
   
 -   `unique_ptr`   
      Pozwala na dokładnie jednego właściciela podstawowego wskaźnika. Użyj jako domyślnego wyboru dla POCO, chyba że wiesz, w przypadku niektórych wymaganych `shared_ptr`. Może być przeniesiony do nowego właściciela, ale nie kopiowany lub udostępniony. Zastępuje `auto_ptr`, które jest przestarzałe. Porównaj `boost::scoped_ptr`. `unique_ptr` jest mały i wydajny; rozmiar to jeden wskaźnik i obsługuje odwołania rvalue dla ostatniego wstawienia i wydobycia z kolekcji standardowej biblioteki języka C++. Plik nagłówka: `<memory>`. Aby uzyskać więcej informacji, zobacz [porady: Tworzenie wystąpień unique_ptr i korzystanie](../cpp/how-to-create-and-use-unique-ptr-instances.md) i [unique_ptr — klasa](../standard-library/unique-ptr-class.md).  
@@ -81,8 +82,9 @@ W nowoczesnym programowaniu C++, standardowa biblioteka zawiera *inteligentne ws
 -   `weak_ptr`   
     Szczególny inteligentny wskaźnik używany w połączeniu z `shared_ptr`. A `weak_ptr` zapewnia dostęp do obiektu, który jest własnością jednego lub więcej `shared_ptr` wystąpienia, ale nie uczestniczy w zliczaniu odwołań. Używaj, jeżeli chcesz obserwować obiekt, ale nie wymagasz, aby pozostał aktywny. Wymagane w niektórych przypadkach, aby złamać odwołania cykliczne między `shared_ptr` wystąpień. Plik nagłówka: `<memory>`. Aby uzyskać więcej informacji, zobacz [porady: Tworzenie wystąpień weak_ptr i korzystanie](../cpp/how-to-create-and-use-weak-ptr-instances.md) i [weak_ptr, klasa](../standard-library/weak-ptr-class.md).  
   
- **Inteligentne wskaźniki dla obiektów COM (Windows klasyczne Programowanie)**  
- Kiedy pracujesz z obiektami COM, zawiń wskaźniki interfejsu w odpowiedni typ inteligentnego wskaźnika. Active Template Library (ATL) definiuje kilka inteligentnych wskaźników do różnych celów. Można również użyć `_com_ptr_t` typ inteligentnego wskaźnika, której kompilator używa podczas tworzenia klas otoki z plików .tlb. To najlepszy wybór, jeśli nie chcesz dołączyć plików nagłówkowych ATL.  
+### <a name="smart-pointers-for-com-objects-classic-windows-programming"></a>{1&gt;Inteligentne wskaźniki dla obiektów COM (klasyczne programowanie Windows)&lt;1}
+
+Kiedy pracujesz z obiektami COM, zawiń wskaźniki interfejsu w odpowiedni typ inteligentnego wskaźnika. Active Template Library (ATL) definiuje kilka inteligentnych wskaźników do różnych celów. Można również użyć `_com_ptr_t` typ inteligentnego wskaźnika, której kompilator używa podczas tworzenia klas otoki z plików .tlb. To najlepszy wybór, jeśli nie chcesz dołączyć plików nagłówkowych ATL.  
   
  [Klasa CComPtr](../atl/reference/ccomptr-class.md)  
  Użyj tego, jeżeli nie możesz użyć ATL. Wykonuje liczenia odwołań przy użyciu `AddRef` i `Release` metody. Aby uzyskać więcej informacji, zobacz [porady: tworzenie i wykorzystania wystąpień CComPtr i CComQIPtr](../cpp/how-to-create-and-use-ccomptr-and-ccomqiptr-instances.md).  
@@ -99,8 +101,9 @@ W nowoczesnym programowaniu C++, standardowa biblioteka zawiera *inteligentne ws
  [_com_ptr_t, klasa](../cpp/com-ptr-t-class.md)  
  Przypomina `CComQIPtr` funkcji, ale nie zależy od nagłówków ATL.  
   
- **Inteligentne wskaźniki ATL dla obiektów POCO**  
- Oprócz inteligentnych wskaźników dla obiektów COM, ATL także definiuje inteligentne wskaźniki i kolekcje inteligentnych wskaźników dla zwykłych starych obiektów C++. W klasycznym programowaniu Windows, te typy są użyteczną do kolekcji standardowej biblioteki języka C++, szczególnie w przypadku, gdy przenoszenie kodu nie jest wymagane lub gdy użytkownik nie chce mieszać modeli programowania standardowej biblioteki języka C++ i ATL.  
+### <a name="atl-smart-pointers-for-poco-objects"></a>{1&gt;Inteligentne wskaźniki ATL dla obiektów POCO&lt;1}
+
+Oprócz inteligentnych wskaźników dla obiektów COM, ATL także definiuje inteligentne wskaźniki i kolekcje inteligentnych wskaźników dla zwykłych starych obiektów C++. W klasycznym programowaniu Windows, te typy są użyteczną do kolekcji standardowej biblioteki języka C++, szczególnie w przypadku, gdy przenoszenie kodu nie jest wymagane lub gdy użytkownik nie chce mieszać modeli programowania standardowej biblioteki języka C++ i ATL.  
   
  [Klasa CAutoPtr](../atl/reference/cautoptr-class.md)  
  Inteligentny wskaźnik, który wymusza unikatowe własności poprzez przeniesienie własności na kopię. Porównywalne do zaniechanej `std::auto_ptr` klasy.  

@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 28342c71602409f3d62023e6d7923d49ca63a96f
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 25116b0750016fdbb4ffd792d0b16efb6c6c1793
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43766246"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45711953"
 ---
 # <a name="options-atl-control-wizard"></a>Opcje, Kreator kontrolki ATL
 
@@ -31,10 +31,11 @@ Ta strona kreatora służy do definiowania typu formantu, który tworzysz, i zaw
 
 ## <a name="uielement-list"></a>Lista elementów UI
 
-**Typ formantu**  
+### <a name="control-type"></a>Typ formantu
+
 Rodzaj kontrolki, którą chcesz utworzyć.
 
-- **Kontrolki standardowe: kontrolki ActiveX.**
+- **Formantu standardowego**: kontrolki ActiveX.
 
 - **Kontrolki złożonej**: formant ActiveX, który może zawierać (podobnie do okna dialogowego) innych formantów ActiveX lub formanty Windows. Kontrolki złożonej obejmuje następujące funkcje:
 
@@ -54,10 +55,12 @@ Rodzaj kontrolki, którą chcesz utworzyć.
 
      Aby uzyskać więcej informacji, zobacz [identyfikowanie elementów projektu kontrolki DHTML](../../atl/identifying-the-elements-of-the-dhtml-control-project.md).
 
-**Kontrolka minimalnego**  
+### <a name="minimal-control"></a>Kontrolka minimalnego
+
 Obsługuje tylko interfejsy, które są całkowicie wymagane przez większość kontenerów. Możesz ustawić **kontrolka minimalnego** dla każdego z typów kontroli: można utworzyć kontrolki standardowej minimalny, formantu złożonego minimalnego lub minimalnego kontrolki DHTML.
 
-**Agregacja**  
+### <a name="aggregation"></a>Agregacji
+
 Dodaje obsługę agregacji dla formantu, który tworzysz. Aby uzyskać więcej informacji, zobacz [agregacji](../../atl/aggregation.md).
 
 - **Tak**: Tworzenie formantu, który może być agregowany.
@@ -66,25 +69,28 @@ Dodaje obsługę agregacji dla formantu, który tworzysz. Aby uzyskać więcej i
 
 - **Tylko**: Tworzenie formantu, który może być tylko utworzone za pomocą agregacji.
 
-**Model wątkowości**  
+### <a name="threading-model"></a>Model wątkowości
+
 Określa, że model wątkowości używany przez kontrolkę.
 
 - **Pojedynczy**: formant będzie uruchamiane tylko w podstawowym wątku com.
 
 - **Apartamentu**: kontrolki można utworzyć w dowolnym komórka wątku pojedynczego. Domyślnie.
 
-**Interface**  
+### <a name="interface"></a>Interface
+
 Typ interfejsu, który udostępnia tę kontrolkę, do kontenera.
 
 - **Podwójna**: tworzy interfejs, który udostępnia właściwości i metod za pośrednictwem `IDispatch` oraz bezpośrednio z poziomu VTBL.
 
 - **Niestandardowe**: tworzy interfejs, który udostępnia metody bezpośrednio za pomocą VTBL.
 
-     Jeśli wybierzesz **niestandardowe**, możesz określić, czy kontrolka jest **zgodnego z automatyzacji**. Po wybraniu **zgodnego z automatyzacji**, wówczas Kreator dodaje [oleautomation —](../../windows/oleautomation.md) atrybut interfejsu w pliku IDL, i interfejs mogą być organizowane przez organizatora uniwersalnych w oleaut32.dll. Zobacz [Marshaling szczegóły](/windows/desktop/com/marshaling-details) w zestawie Windows SDK, aby uzyskać więcej informacji.
+   Jeśli wybierzesz **niestandardowe**, możesz określić, czy kontrolka jest **zgodnego z automatyzacji**. Po wybraniu **zgodnego z automatyzacji**, wówczas Kreator dodaje [oleautomation —](../../windows/oleautomation.md) atrybut interfejsu w pliku IDL, i interfejs mogą być organizowane przez organizatora uniwersalnych w oleaut32.dll. Zobacz [Marshaling szczegóły](/windows/desktop/com/marshaling-details) w zestawie Windows SDK, aby uzyskać więcej informacji.
 
-     Ponadto jeśli wybierzesz **zgodnego z automatyzacji**, wszystkie parametry dla wszystkich metod w kontrolce musi być typ VARIANT zgodne.
+   Ponadto jeśli wybierzesz **zgodnego z automatyzacji**, wszystkie parametry dla wszystkich metod w kontrolce musi być typ VARIANT zgodne.
 
-**Obsługa**  
+### <a name="support"></a>Obsługa
+
 Ustawia różne obsługę formantu.
 
 - **Punkty połączenia**: włącza punkty połączenia dla obiektu, wprowadzając nazwę obiektu klasy pochodzi od [IConnectionPointContainerImpl](../../atl/reference/iconnectionpointcontainerimpl-class.md) , dzięki czemu go do udostępnienia interfejs źródłowy.

@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f2198904905c4e130e320d8fe52638850696f127
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 45824065a4ef190f509f003656b9d232ae287ca2
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43762850"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45718032"
 ---
 # <a name="options-atl-active-server-page-component-wizard"></a>Opcje, Kreator składników stron Active Server ATL
 
@@ -29,36 +29,39 @@ Użyj tej strony ATL Active Server strona kreatora składników się projektowan
 
 Aby uzyskać więcej informacji na temat projektów ATL i klasy ATL COM, zobacz [ATL COM pulpitu składniki](../../atl/atl-com-desktop-components.md).
 
-**Model wątkowości**  
-Wskazuje metodę zarządzania wątków. Domyślnie używa projektu **apartamentu** wątków.
+- **Model wątkowości**
 
-Zobacz [określanie modelu wątkowości projektu](../../atl/specifying-the-threading-model-for-a-project-atl.md) Aby uzyskać więcej informacji.
+   Wskazuje metodę zarządzania wątków. Domyślnie używa projektu **apartamentu** wątków.
 
-|Opcja|Opis|
-|------------|-----------------|
-|**Single**|Określa, że obiekt używa pojedynczego modelu wątkowości. W jednym modelu wątkowości obiekt zawsze działa w podstawowym wątku com. Zobacz [Apartamentach Single-Threaded](/windows/desktop/com/single-threaded-apartments) i [InprocServer32](/windows/desktop/com/inprocserver32) Aby uzyskać więcej informacji.|
-|**Apartamentu**|Określa, że obiekt używa wątkowości typu apartment. Komórka równoważne z jednego wątku. Każdy obiekt jako składnik typu apartment przypisano Lokal do wątku, przez cały okres istnienia obiektu. Jednak wiele wątków może służyć do wielu obiektów. Każda komórka jest powiązany z określonym wątku i ma pompy komunikatów Windows (ustawienie domyślne).<br /><br /> Zobacz [Apartamentach Single-Threaded](/windows/desktop/com/single-threaded-apartments) Aby uzyskać więcej informacji.|
-|**Oba**|Określa, czy obiekt może używać apartamentu lub wolnych wątków w zależności od jakich wątek jest tworzony.|
-|**Bezpłatne**|Określa, że obiekt używa wolnych wątków. Wolnych wątków jest równoważna z modelem apartamentu wielowątkowych. Zobacz [wielowątkowy Apartamentach](/windows/desktop/com/multithreaded-apartments) Aby uzyskać więcej informacji.|
-|**Niezależny od**|Określa, że obiekt następujące wytyczne dotyczące wielowątkowy apartamentach, ale można wykonywać na dowolny rodzaj wątku.|
+   Zobacz [określanie modelu wątkowości projektu](../../atl/specifying-the-threading-model-for-a-project-atl.md) Aby uzyskać więcej informacji.
 
-**Agregacja**  
-Wskazuje, czy obiekt używa [agregacji](/windows/desktop/com/aggregation). Wybiera obiektu agregacji, które interfejsy do udostępnienia klientom i interfejsy są dostępne, tak jakby obiekt agregacji, zaimplementować je. Klienci z obiektu agregacji komunikują się tylko za pomocą obiektu agregacji.
+   |Opcja|Opis|
+   |------------|-----------------|
+   |**Single**|Określa, że obiekt używa pojedynczego modelu wątkowości. W jednym modelu wątkowości obiekt zawsze działa w podstawowym wątku com. Zobacz [Apartamentach Single-Threaded](/windows/desktop/com/single-threaded-apartments) i [InprocServer32](/windows/desktop/com/inprocserver32) Aby uzyskać więcej informacji.|
+   |**Apartamentu**|Określa, że obiekt używa wątkowości typu apartment. Komórka równoważne z jednego wątku. Każdy obiekt jako składnik typu apartment przypisano Lokal do wątku, przez cały okres istnienia obiektu. Jednak wiele wątków może służyć do wielu obiektów. Każda komórka jest powiązany z określonym wątku i ma pompy komunikatów Windows (ustawienie domyślne).<br /><br /> Zobacz [Apartamentach Single-Threaded](/windows/desktop/com/single-threaded-apartments) Aby uzyskać więcej informacji.|
+   |**Oba**|Określa, czy obiekt może używać apartamentu lub wolnych wątków w zależności od jakich wątek jest tworzony.|
+   |**Bezpłatne**|Określa, że obiekt używa wolnych wątków. Wolnych wątków jest równoważna z modelem apartamentu wielowątkowych. Zobacz [wielowątkowy Apartamentach](/windows/desktop/com/multithreaded-apartments) Aby uzyskać więcej informacji.|
+   |**Niezależny od**|Określa, że obiekt następujące wytyczne dotyczące wielowątkowy apartamentach, ale można wykonywać na dowolny rodzaj wątku.|
 
-|Opcja|Opis|
-|------------|-----------------|
-|**Tak**|Określa, czy obiekt może być agregowany. Domyślnie.|
-|**Brak**|Określa, że obiekt nie jest agregowany.|
-|**Only**|Określa, czy obiekt musi być agregowana.|
+- **Agregacja**
 
-**Obsługa**  
-(Opis elementu do dodania)
+   Wskazuje, czy obiekt używa [agregacji](/windows/desktop/com/aggregation). Wybiera obiektu agregacji, które interfejsy do udostępnienia klientom i interfejsy są dostępne, tak jakby obiekt agregacji, zaimplementować je. Klienci z obiektu agregacji komunikują się tylko za pomocą obiektu agregacji.
 
-|Opcja|Opis|
-|------------|-----------------|
-|`ISupportErrorInfo`|Tworzy obsługę [Interfejs ISupportErrorInfo](../../atl/reference/isupporterrorinfoimpl-class.md) interfejsu, obiekt może zwrócić informacje o błędzie do klienta.|
-|**Punkty połączenia**|Włącza punkty połączenia dla obiektu, wprowadzając nazwę obiektu klasy pochodzi od [IConnectionPointContainerImpl](../../atl/reference/iconnectionpointcontainerimpl-class.md).|
-|**Bezwątkowego**|Tworzy obiekt bezwątkowego na przeprowadzanie marshalingu wskaźników interfejsu efektywnie między wątkami w tym samym procesie. Dostępne do wybrania obiektu **zarówno** lub **bezpłatna** jako modelu wątkowości.|
+   |Opcja|Opis|
+   |------------|-----------------|
+   |**Tak**|Określa, czy obiekt może być agregowany. Domyślnie.|
+   |**Brak**|Określa, że obiekt nie jest agregowany.|
+   |**Only**|Określa, czy obiekt musi być agregowana.|
+
+- **Obsługa**
+
+   Dodatkowe opcje pomocy technicznej:
+
+   |Opcja|Opis|
+   |------------|-----------------|
+   |**Interfejs ISupportErrorInfo**|Tworzy obsługę [Interfejs ISupportErrorInfo](../../atl/reference/isupporterrorinfoimpl-class.md) interfejsu, obiekt może zwrócić informacje o błędzie do klienta.|
+   |**Punkty połączenia**|Włącza punkty połączenia dla obiektu, wprowadzając nazwę obiektu klasy pochodzi od [IConnectionPointContainerImpl](../../atl/reference/iconnectionpointcontainerimpl-class.md).|
+   |**Bezwątkowego**|Tworzy obiekt bezwątkowego na przeprowadzanie marshalingu wskaźników interfejsu efektywnie między wątkami w tym samym procesie. Dostępne do wybrania obiektu **zarówno** lub **bezpłatna** jako modelu wątkowości.|
 
 ## <a name="see-also"></a>Zobacz też
 

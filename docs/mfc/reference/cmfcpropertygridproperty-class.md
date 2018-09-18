@@ -176,12 +176,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 00d108bab368b7be57d336aae345df1e25723363
-ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
+ms.openlocfilehash: bb60681f47a32e40bff744adaecfedfe4b247c64
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "42464852"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45726248"
 ---
 # <a name="cmfcpropertygridproperty-class"></a>Klasa CMFCPropertyGridProperty
 A `CMFCPropertyGridProperty` obiekt reprezentuje element listy w formancie listy właściwości.  
@@ -326,11 +326,11 @@ BOOL AddOption(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *lpszOption*  
- Element listy (opcja), aby dodać.  
+*lpszOption*<br/>
+[in] Element listy (opcja), aby dodać.  
   
- [in] *bInsertUnique*  
- Wartość TRUE, aby dodać listę elementów tylko wtedy, gdy już nie istnieje; w przeciwnym razie wartość FALSE. Wartość domyślna to TRUE.  
+*bInsertUnique*<br/>
+[in] Wartość TRUE, aby dodać listę elementów tylko wtedy, gdy już nie istnieje; w przeciwnym razie wartość FALSE. Wartość domyślna to TRUE.  
   
 ### <a name="return-value"></a>Wartość zwracana  
  Wartość TRUE, co oznacza, że element listy został dodany. W przeciwnym razie wartość FALSE, co oznacza, że element listy nie jest dodany, ponieważ *bInsertUnique* parametr ma wartość PRAWDA, a listy elementu określonego przez *lpszOption* parametr już istnieje.  
@@ -345,8 +345,8 @@ BOOL AddSubItem(CMFCPropertyGridProperty* pProp);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *pProp*  
- Wskaźnik do właściwości do dodania.  
+*pProp*<br/>
+[in] Wskaźnik do właściwości do dodania.  
   
 ### <a name="return-value"></a>Wartość zwracana  
  Wartość TRUE, jeśli określona właściwość został pomyślnie dodany jako właściwość elementu podrzędnego. Wartość FALSE, jeśli właściwość nie zostanie dodany, ponieważ występuje ona już w właściwość nadrzędna.  
@@ -380,11 +380,11 @@ virtual void AdjustInPlaceEditRect(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [out] *rectEdit*  
- Po powrocie z tej metody prostokąt, który określa granice pole tekstowe dla wartości właściwości.  
+*rectEdit*<br/>
+[out] Po powrocie z tej metody prostokąt, który określa granice pole tekstowe dla wartości właściwości.  
   
- [out] *rectSpin*  
- Po powrocie z tej metody prostokąt, który określa granice formantu przycisku pokrętła dla wartości właściwości. Lub, jeśli właściwość nie obsługuje pokrętła, pusty prostokąt.  
+*rectSpin*<br/>
+[out] Po powrocie z tej metody prostokąt, który określa granice formantu przycisku pokrętła dla wartości właściwości. Lub, jeśli właściwość nie obsługuje pokrętła, pusty prostokąt.  
   
 ### <a name="remarks"></a>Uwagi  
  Obszar wartości właściwości składa się z pola tekstowego i ewentualnie *przycisku opcji*, np. kontrolkę przycisku pokrętła. Ta metoda oblicza wymiary przycisk pola i opcji tekstu, a następnie zwraca te wartości w określonych parametrów.  
@@ -397,8 +397,8 @@ void AllowEdit(BOOL bAllow=TRUE);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *bZezwalaj*  
- Wartość TRUE, aby ustawić właściwość jako można edytować; Wartość FALSE, aby ustawić właściwość jako tylko do odczytu. Wartość domyślna to TRUE.  
+*bZezwalaj*<br/>
+[in] Wartość TRUE, aby ustawić właściwość jako można edytować; Wartość FALSE, aby ustawić właściwość jako tylko do odczytu. Wartość domyślna to TRUE.  
   
 ### <a name="remarks"></a>Uwagi  
   
@@ -423,32 +423,32 @@ CMFCPropertyGridProperty(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *strGroupName*  
- Nazwa grupy. A *grupy* to kolekcja powiązanych właściwości w formancie siatki właściwości. Jeśli kontrolka jest wyświetlany hierarchiczny, *Nazwa grupy* jest wyświetlana jako tytuł w wierszu powyżej grupy kategorii.  
+*strGroupName*<br/>
+[in] Nazwa grupy. A *grupy* to kolekcja powiązanych właściwości w formancie siatki właściwości. Jeśli kontrolka jest wyświetlany hierarchiczny, *Nazwa grupy* jest wyświetlana jako tytuł w wierszu powyżej grupy kategorii.  
   
- [in] *dwData*  
- Dane specyficzne dla aplikacji, takich jak liczby całkowitej lub wskaźnika do innych danych, który jest skojarzony z właściwością. Wartość domyślna to 0.  
+*dwData*<br/>
+[in] Dane specyficzne dla aplikacji, takich jak liczby całkowitej lub wskaźnika do innych danych, który jest skojarzony z właściwością. Wartość domyślna to 0.  
   
- [in] *strName*  
- Nazwa właściwości.  
+*strName*<br/>
+[in] Nazwa właściwości.  
   
- [in] *varValue*  
- Wartość właściwości.  
+*varValue*<br/>
+[in] Wartość właściwości.  
   
- [in] *lpszDescr*  
- Opis właściwości. Wartością domyślną jest NULL.  
+*lpszDescr*<br/>
+[in] Opis właściwości. Wartością domyślną jest NULL.  
   
- [in] *lpszEditMask*  
- Maska edycji, jeśli właściwość jest formant edycji maskowanej. Wartością domyślną jest NULL.  
+*lpszEditMask*<br/>
+[in] Maska edycji, jeśli właściwość jest formant edycji maskowanej. Wartością domyślną jest NULL.  
   
- [in] *lpszEditTemplate*  
- Edytuj szablon, który, jeśli właściwość jest formant edycji maskowanej. Wartością domyślną jest NULL.  
+*lpszEditTemplate*<br/>
+[in] Edytuj szablon, który, jeśli właściwość jest formant edycji maskowanej. Wartością domyślną jest NULL.  
   
- [in] *lpszValidChars*  
- Lista prawidłowych znaków, jeśli właściwość jest formant edycji maskowanej. Wartością domyślną jest NULL.  
+*lpszValidChars*<br/>
+[in] Lista prawidłowych znaków, jeśli właściwość jest formant edycji maskowanej. Wartością domyślną jest NULL.  
   
- [in] *bIsValueList*  
- Wartość TRUE, jeśli właściwość reprezentuje listę wartości. Wartość FALSE, jeśli właściwość reprezentuje pojedynczą wartość. Wartość domyślna to FALSE.  
+*bIsValueList*<br/>
+[in] Wartość TRUE, jeśli właściwość reprezentuje listę wartości. Wartość FALSE, jeśli właściwość reprezentuje pojedynczą wartość. Wartość domyślna to FALSE.  
   
 ### <a name="remarks"></a>Uwagi  
   
@@ -462,11 +462,11 @@ virtual CComboBox* CreateCombo(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *pWndParent*  
- Wskaźnik do okna nadrzędnego pola kombi.  
+*pWndParent*<br/>
+[in] Wskaźnik do okna nadrzędnego pola kombi.  
   
- [in] *rect*  
- Prostokąt otaczający pola kombi.  
+*Rect*<br/>
+[in] Prostokąt otaczający pola kombi.  
   
 ### <a name="return-value"></a>Wartość zwracana  
  Wskaźnik do nowego [CComboBox](../../mfc/reference/ccombobox-class.md) obiektu.  
@@ -483,11 +483,11 @@ virtual CWnd* CreateInPlaceEdit(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *rectEdit*  
- Prostokąt otaczający można edytować formantu.  
+*rectEdit*<br/>
+[in] Prostokąt otaczający można edytować formantu.  
   
- [in] *bDefaultFormat*  
- Wartość TRUE, aby użyć domyślnego formatu właściwość można ustawić tekst edytowalny kontroli. w przeciwnym razie wartość FALSE.  
+*bDefaultFormat*<br/>
+[in] Wartość TRUE, aby użyć domyślnego formatu właściwość można ustawić tekst edytowalny kontroli. w przeciwnym razie wartość FALSE.  
   
 ### <a name="return-value"></a>Wartość zwracana  
  Wskaźnik do kontrolki można edytować, jeśli ta metoda zakończy się pomyślnie; w przeciwnym razie wartość NULL.  
@@ -505,8 +505,8 @@ virtual CSpinButtonCtrl* CreateSpinControl(CRect rectSpin);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *rectSpin*  
- Prostokąt, który definiuje, w której tworzona jest kontrolka przycisku pokrętła można edytować.  
+*rectSpin*<br/>
+[in] Prostokąt, który definiuje, w której tworzona jest kontrolka przycisku pokrętła można edytować.  
   
 ### <a name="return-value"></a>Wartość zwracana  
  Wskaźnik do nowego [CMFCSpinButtonCtrl](../../mfc/reference/cmfcspinbuttonctrl-class.md) obiekt, który jest rzutowany jako wskaźnik do [CSpinButtonCtrl](../../mfc/reference/cspinbuttonctrl-class.md) obiektu.  
@@ -522,8 +522,8 @@ void Enable(BOOL bEnable=TRUE);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *bWłączenie*  
- Wartość TRUE, aby włączyć właściwość; Wartość FALSE, aby wyłączyć właściwość. Wyłączone właściwości nie odpowiadaj na myszy lub klawiatury. Wartość domyślna to TRUE.  
+*bWłączenie*<br/>
+[in] Wartość TRUE, aby włączyć właściwość; Wartość FALSE, aby wyłączyć właściwość. Wyłączone właściwości nie odpowiadaj na myszy lub klawiatury. Wartość domyślna to TRUE.  
   
 ### <a name="remarks"></a>Uwagi  
   
@@ -538,14 +538,14 @@ void EnableSpinControl(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *bWłączenie*  
- Wartość TRUE, aby włączyć kontrolki przycisku pokrętła; Wartość FALSE umożliwia wyłączenie kontrolka przycisku pokrętła. Wartość domyślna to TRUE.  
+*bWłączenie*<br/>
+[in] Wartość TRUE, aby włączyć kontrolki przycisku pokrętła; Wartość FALSE umożliwia wyłączenie kontrolka przycisku pokrętła. Wartość domyślna to TRUE.  
   
- [in] *Nmin.*  
- Minimalna wartość kontrolki przycisku pokrętła. Wartość domyślna to 0.  
+*Nmin.*<br/>
+[in] Minimalna wartość kontrolki przycisku pokrętła. Wartość domyślna to 0.  
   
- [in] *nmaks.*  
- Maksymalna wartość kontrolki przycisku pokrętła. Wartość domyślna to 0.  
+*nmaks.*<br/>
+[in] Maksymalna wartość kontrolki przycisku pokrętła. Wartość domyślna to 0.  
   
 ### <a name="remarks"></a>Uwagi  
  Struktura automatycznie tworzy kontrolkę przycisku pokrętła, gdy właściwość ma być edytowany.  
@@ -560,8 +560,8 @@ void Expand(BOOL bExpand=TRUE);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *bExpand*  
- Wartość TRUE, aby rozwinąć właściwości; Wartość FALSE, aby zwinąć właściwości. Wartość domyślna to TRUE.  
+*bExpand*<br/>
+[in] Wartość TRUE, aby rozwinąć właściwości; Wartość FALSE, aby zwinąć właściwości. Wartość domyślna to TRUE.  
   
 ### <a name="remarks"></a>Uwagi  
   
@@ -615,7 +615,7 @@ int GetExpandedSubItems(BOOL bIncludeHidden=TRUE) const;
   
 |Parametr|Opis|  
 |---------------|-----------------|  
-|[in] *bIncludeHidden*|Wartość TRUE, aby uwzględnić ukryte elementy podrzędne w liczbie; w przeciwnym razie wartość FALSE. Wartość domyślna to TRUE.|  
+|*bIncludeHidden*|[in] Wartość TRUE, aby uwzględnić ukryte elementy podrzędne w liczbie; w przeciwnym razie wartość FALSE. Wartość domyślna to TRUE.|  
   
 ### <a name="return-value"></a>Wartość zwracana  
  Liczba rozwiniętych elementów podrzędnych.  
@@ -734,8 +734,8 @@ CMFCPropertyGridProperty* GetSubItem(int nIndex) const;
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *nIndex*  
- Liczony od zera indeks właściwość służąca do pobierania. Ten parametr jest nieprawidłowy, jeśli go jest mniejsza niż zero lub większa niż lub równa liczbie właściwości podrzędnych.  
+*nIndex*<br/>
+[in] Liczony od zera indeks właściwość służąca do pobierania. Ten parametr jest nieprawidłowy, jeśli go jest mniejsza niż zero lub większa niż lub równa liczbie właściwości podrzędnych.  
   
 ### <a name="return-value"></a>Wartość zwracana  
  Wskaźnik do obiektu właściwość, która jest element podrzędny tej właściwości.  
@@ -810,17 +810,17 @@ CMFCPropertyGridProperty* HitTest(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *punktu*  
- Punkt, aby przetestować we współrzędnych klienta. Ten parametr jest zwykle bieżącej lokalizacji wskaźnika myszy.  
+*Punkt*<br/>
+[in] Punkt, aby przetestować we współrzędnych klienta. Ten parametr jest zwykle bieżącej lokalizacji wskaźnika myszy.  
   
- [in] *(czas pacyficzny)*  
- Punkt, aby przetestować we współrzędnych klienta.  
+*(czas pacyficzny)*<br/>
+[in] Punkt, aby przetestować we współrzędnych klienta.  
   
- [out] *pnArea*  
- Po powrocie z tej metody oznacza obszar, który zawiera określony punkt. Aby uzyskać więcej informacji zobacz uwagi. Wartością domyślną jest NULL.  
+*pnArea*<br/>
+[out] Po powrocie z tej metody oznacza obszar, który zawiera określony punkt. Aby uzyskać więcej informacji zobacz uwagi. Wartością domyślną jest NULL.  
   
- [in] *bPropsOnly*  
- Wartość TRUE, aby przetestować dowolny obszar w właściwości kontrolki; Wartość FALSE, aby przetestować tylko obszar opisu. Wartość domyślna to FALSE.  
+*bPropsOnly*<br/>
+[in] Wartość TRUE, aby przetestować dowolny obszar w właściwości kontrolki; Wartość FALSE, aby przetestować tylko obszar opisu. Wartość domyślna to FALSE.  
   
 ### <a name="return-value"></a>Wartość zwracana  
  Wskaźnik do obiektu właściwości lub wartość NULL.  
@@ -951,8 +951,8 @@ BOOL IsSubItem(CMFCPropertyGridProperty* pProp) const;
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *pProp*  
- Wskaźnik do właściwości.  
+*pProp*<br/>
+[in] Wskaźnik do właściwości.  
   
 ### <a name="return-value"></a>Wartość zwracana  
  Wartość TRUE, jeśli określona właściwość jest podpozycji bieżącej właściwości; w przeciwnym razie wartość FALSE.  
@@ -1025,8 +1025,8 @@ virtual void OnClickButton(CPoint point);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *punktu*  
- Punkt, w układzie współrzędnych klienta.  
+*Punkt*<br/>
+[in] Punkt, w układzie współrzędnych klienta.  
   
 ### <a name="remarks"></a>Uwagi  
  Domyślnie ta metoda nie działa.  
@@ -1042,7 +1042,7 @@ virtual void OnClickName(CPoint C);
   
 |Parametr|Opis|  
 |---------------|-----------------|  
-|[in] *C*|Punkt, w układzie współrzędnych klienta.|  
+|*C*|[in] Punkt, w układzie współrzędnych klienta.|  
   
 ### <a name="remarks"></a>Uwagi  
  Domyślnie ta metoda nie działa.  
@@ -1057,11 +1057,11 @@ virtual BOOL OnClickValue(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *uiMsg*  
- Komunikat myszy.  
+*uiMsg*<br/>
+[in] Komunikat myszy.  
   
- [in] *punktu*  
- Punkt, w układzie współrzędnych klienta.  
+*Punkt*<br/>
+[in] Punkt, w układzie współrzędnych klienta.  
   
 ### <a name="return-value"></a>Wartość zwracana  
  Wartość TRUE, jeśli komunikat określony myszy jest przetwarzany przez tę metodę; w przeciwnym razie wartość FALSE.  
@@ -1088,11 +1088,11 @@ virtual HBRUSH OnCtlColor(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *podstawowego kontrolera domeny*  
- Wskaźnik do kontekstu urządzenia.  
+*podstawowego kontrolera domeny*<br/>
+[in] Wskaźnik do kontekstu urządzenia.  
   
- [in] *nCtlColor*  
- (Ten parametr nie jest używany.)  
+*nCtlColor*<br/>
+[in] (Ten parametr nie jest używany.)  
   
 ### <a name="return-value"></a>Wartość zwracana  
  Dojście do pędzla, jeśli ta metoda się powiedzie; w przeciwnym razie wartość NULL.  
@@ -1107,8 +1107,8 @@ virtual BOOL OnDblClk(CPoint point);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *punktu*  
- Punkt, w układzie współrzędnych klienta.  
+*Punkt*<br/>
+[in] Punkt, w układzie współrzędnych klienta.  
   
 ### <a name="return-value"></a>Wartość zwracana  
  Wartość TRUE, jeśli ta metoda jest kończy się pomyślnie; w przeciwnym razie wartość FALSE.  
@@ -1135,11 +1135,11 @@ virtual void OnDrawButton(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *podstawowego kontrolera domeny*  
- Wskaźnik do kontekstu urządzenia.  
+*podstawowego kontrolera domeny*<br/>
+[in] Wskaźnik do kontekstu urządzenia.  
   
- [in] *rectButton*  
- Prostokąt otaczający, która określa, gdzie można narysować przycisku.  
+*rectButton*<br/>
+[in] Prostokąt otaczający, która określa, gdzie można narysować przycisku.  
   
 ### <a name="remarks"></a>Uwagi  
   
@@ -1153,11 +1153,11 @@ virtual void OnDrawDescription(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *podstawowego kontrolera domeny*  
- Wskaźnik do kontekstu urządzenia.  
+*podstawowego kontrolera domeny*<br/>
+[in] Wskaźnik do kontekstu urządzenia.  
   
- [in] *rect*  
- Prostokąt otaczający, która określa, gdzie można narysować opisu właściwości.  
+*Rect*<br/>
+[in] Prostokąt otaczający, która określa, gdzie można narysować opisu właściwości.  
   
 ### <a name="remarks"></a>Uwagi  
  Domyślnie ta metoda rysuje właściwość nazwę i opis czcionkę używaną przez nadrzędne listy właściwości kontrolki. Opis właściwości jest rysowana w stylu normalnego i nazwa właściwości jest rysowana w styl pogrubiony.  
@@ -1172,11 +1172,11 @@ virtual void OnDrawExpandBox(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *podstawowego kontrolera domeny*  
- Wskaźnik do kontekstu urządzenia.  
+*podstawowego kontrolera domeny*<br/>
+[in] Wskaźnik do kontekstu urządzenia.  
   
- [in] *rectExpand*  
- Prostokąt otaczający, który określa, gdzie narysuj kontrolkę Rozwiń okno.  
+*rectExpand*<br/>
+[in] Prostokąt otaczający, który określa, gdzie narysuj kontrolkę Rozwiń okno.  
   
 ### <a name="remarks"></a>Uwagi  
  Kliknij formant pola Rozwiń, aby rozwinąć lub zwinąć listę właściwości podrzędnych. Kontrolka pola rozwiń została wyznaczona przez kwadratowe, który zawiera znaku plus (+) lub minus (-). Znak plus oznacza, że właściwość można rozszerzyć, aby wyświetlić listę właściwości podrzędnych. Znak minus wskazuje, czy lista może zostać zwinięty aby pokazać tylko do właściwości.  
@@ -1191,11 +1191,11 @@ virtual void OnDrawName(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *podstawowego kontrolera domeny*  
- Wskaźnik do kontekstu urządzenia.  
+*podstawowego kontrolera domeny*<br/>
+[in] Wskaźnik do kontekstu urządzenia.  
   
- [in] *rect*  
- Prostokąt otaczający, która określa, gdzie można narysować nazwę właściwości.  
+*Rect*<br/>
+[in] Prostokąt otaczający, która określa, gdzie można narysować nazwę właściwości.  
   
 ### <a name="remarks"></a>Uwagi  
   
@@ -1209,11 +1209,11 @@ virtual void OnDrawValue(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *podstawowego kontrolera domeny*  
- Wskaźnik do kontekstu urządzenia.  
+*podstawowego kontrolera domeny*<br/>
+[in] Wskaźnik do kontekstu urządzenia.  
   
- [in] *rect*  
- Prostokąt otaczający, która określa, gdzie można narysować wartości właściwości.  
+*Rect*<br/>
+[in] Prostokąt otaczający, która określa, gdzie można narysować wartości właściwości.  
   
 ### <a name="remarks"></a>Uwagi  
   
@@ -1225,8 +1225,8 @@ virtual BOOL OnEdit(LPPOINT lptClick);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *lptClick*  
- (Ten parametr nie jest używany.) Wskaźnik do momentu, w współrzędne klienta.  
+*lptClick*<br/>
+[in] (Ten parametr nie jest używany.) Wskaźnik do momentu, w współrzędne klienta.  
   
 ### <a name="return-value"></a>Wartość zwracana  
  Wartość TRUE, jeśli operacja edytowania uruchamia się pomyślnie; w przeciwnym razie wartość FALSE.  
@@ -1258,7 +1258,7 @@ virtual BOOL OnKillFocus(CWnd*);
   
 |Parametr|Opis|  
 |---------------|-----------------|  
-|[in] *CWnd*|(Nie jest używany.) Wskaźnik do okna.|  
+|*CWnd*|[in] (Nie jest używany.) Wskaźnik do okna.|  
   
 ### <a name="return-value"></a>Wartość zwracana  
  Ta metoda zawsze zwraca wartość TRUE.  
@@ -1303,7 +1303,7 @@ virtual void OnRClickName(CPoint C);
   
 |Parametr|Opis|  
 |---------------|-----------------|  
-|[in] *C*|Punkt, w układzie współrzędnych klienta.|  
+|*C*|[in] Punkt, w układzie współrzędnych klienta.|  
   
 ### <a name="remarks"></a>Uwagi  
  Domyślnie ta metoda nie działa.  
@@ -1321,8 +1321,8 @@ virtual void OnRClickValue(
   
 |Parametr|Opis|  
 |---------------|-----------------|  
-|[in] *C*|Punkt, w układzie współrzędnych klienta.|  
-|[in] *B*|Wartość logiczna.|  
+|*C*|[in] Punkt, w układzie współrzędnych klienta.|  
+|*B*|[in] Wartość logiczna.|  
   
 ### <a name="remarks"></a>Uwagi  
  Domyślnie ta metoda nie działa i *B* parametr nie ma żadnych wstępnie zdefiniowanych celów.  
@@ -1383,8 +1383,8 @@ virtual BOOL PushChar(UINT nChar);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *nChar*  
- Znak.  
+*nChar*<br/>
+[in] Znak.  
   
 ### <a name="return-value"></a>Wartość zwracana  
  Wartość TRUE, jeśli jest kontynuowanie operacji edycji; w przeciwnym razie wartość FALSE.  
@@ -1421,11 +1421,11 @@ BOOL RemoveSubItem(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *pProp*  
- Wskaźnik do elementu podrzędnego właściwości.  
+*pProp*<br/>
+[in] Wskaźnik do elementu podrzędnego właściwości.  
   
- [in] *bUsuń*  
- Wartość true, Usuń właściwości obiektu, który jest określony przez *pProp* parametru; w przeciwnym razie wartość FALSE. Wartość domyślna to TRUE.  
+*bUsuń*<br/>
+[in] Wartość true, Usuń właściwości obiektu, który jest określony przez *pProp* parametru; w przeciwnym razie wartość FALSE. Wartość domyślna to TRUE.  
   
 ### <a name="return-value"></a>Wartość zwracana  
   
@@ -1449,8 +1449,8 @@ void SetData(DWORD_PTR dwData);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *dwData*  
- Specyficzne dla aplikacji 32-bitową wartość, np. liczby całkowitej lub wskaźnika z innymi danymi.  
+*dwData*<br/>
+[in] Specyficzne dla aplikacji 32-bitową wartość, np. liczby całkowitej lub wskaźnika z innymi danymi.  
   
 ### <a name="remarks"></a>Uwagi  
  Użyj [CMFCPropertyGridProperty::GetData](#getdata) metodę, aby pobrać wartość DWORD. Użyj [CMFCPropertyGridCtrl::FindItemByData](../../mfc/reference/cmfcpropertygridctrl-class.md#finditembydata) metodą lokalizowania właściwości elementu listy, który jest skojarzony z określoną wartość DWORD.  
@@ -1463,8 +1463,8 @@ void SetDescription(const CString& strDescr);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *strDescr*  
- Tekst, który opisuje bieżącą właściwością.  
+*strDescr*<br/>
+[in] Tekst, który opisuje bieżącą właściwością.  
   
 ### <a name="remarks"></a>Uwagi  
   
@@ -1478,11 +1478,11 @@ void SetName(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *lpszName*  
- Nazwa właściwości.  
+*lpszName*<br/>
+[in] Nazwa właściwości.  
   
- [in] *bRedraw*  
- Wartość TRUE, by narysować ponownie właściwość natychmiast; w przeciwnym razie wartość FALSE. Wartość domyślna to TRUE.  
+*bRedraw*<br/>
+[in] Wartość TRUE, by narysować ponownie właściwość natychmiast; w przeciwnym razie wartość FALSE. Wartość domyślna to TRUE.  
   
 ### <a name="remarks"></a>Uwagi  
   
@@ -1494,8 +1494,8 @@ virtual void SetOriginalValue(const COleVariant& varValue);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *varValue*  
- Wartość.  
+*varValue*<br/>
+[in] Wartość.  
   
 ### <a name="remarks"></a>Uwagi  
  Użyj [CMFCPropertyGridProperty::ResetOriginalValue](#resetoriginalvalue) metodę, aby zresetować oryginalnej wartości właściwości edytowanego.  
@@ -1508,8 +1508,8 @@ virtual void SetValue(const _variant_t& varValue);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *varValue*  
- Odwołanie do wartości.  
+*varValue*<br/>
+[in] Odwołanie do wartości.  
   
 ### <a name="remarks"></a>Uwagi  
   
@@ -1523,11 +1523,11 @@ void Show(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *bShow*  
- Wartość TRUE, aby wyświetlić bieżącą właściwość typu i jego elementów podrzędnych; Wartości FALSE spowoduje ukrycie bieżącą właściwość typu i jego elementów podrzędnych. Wartość domyślna to TRUE.  
+*bShow*<br/>
+[in] Wartość TRUE, aby wyświetlić bieżącą właściwość typu i jego elementów podrzędnych; Wartości FALSE spowoduje ukrycie bieżącą właściwość typu i jego elementów podrzędnych. Wartość domyślna to TRUE.  
   
- [in] *bAdjustLayout*  
- Wartość TRUE, aby ponownie obliczyć jak narysować etykieta i wartość właściwości, a następnie narysuj właściwości; Wartość FALSE, aby użyć istniejącego obliczeń do rysowania właściwości. Wartość domyślna to TRUE.  
+*bAdjustLayout*<br/>
+[in] Wartość TRUE, aby ponownie obliczyć jak narysować etykieta i wartość właściwości, a następnie narysuj właściwości; Wartość FALSE, aby użyć istniejącego obliczeń do rysowania właściwości. Wartość domyślna to TRUE.  
   
 ## <a name="see-also"></a>Zobacz też  
  [Diagram hierarchii](../../mfc/hierarchy-chart.md)   
