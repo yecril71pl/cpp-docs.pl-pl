@@ -83,12 +83,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 46d96d574fedf9af2fe7eb46c872819cf54a364e
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: c96b5b18530cd9b983e5a4c022883919261cc22c
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43216462"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45701613"
 ---
 # <a name="cmfcribbonedit-class"></a>Klasa CMFCRibbonEdit
 Implementuje formant edycji, który znajduje się na pasku wstążki.  
@@ -181,17 +181,17 @@ CMFCRibbonEdit();
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *nID*  
- Identyfikator dla polecenia `CMFCRibbonEdit` kontroli.  
+*nID*<br/>
+[in] Identyfikator dla polecenia `CMFCRibbonEdit` kontroli.  
   
- [in] *nWidth*  
- Szerokość w pikselach pole tekstowe `CMFCRibbonEdit` kontroli.  
+*nWidth*<br/>
+[in] Szerokość w pikselach pole tekstowe `CMFCRibbonEdit` kontroli.  
   
- [in] *lpszLabel*  
- Etykieta dla `CMFCRibbonEdit` kontroli.  
+*lpszLabel*<br/>
+[in] Etykieta dla `CMFCRibbonEdit` kontroli.  
   
- [in] *Nokreślono*  
- Indeks małych obrazów do użycia dla `CMFCRibbonEdit` kontroli. Kolekcja małe obrazy są obsługiwane przez kategorii nadrzędnej wstążki.  
+*Nokreślono*<br/>
+[in] Indeks małych obrazów do użycia dla `CMFCRibbonEdit` kontroli. Kolekcja małe obrazy są obsługiwane przez kategorii nadrzędnej wstążki.  
   
 ### <a name="remarks"></a>Uwagi  
  `CMFCRibbonEdit` Formantu nie korzysta z dużym obrazem.  
@@ -204,8 +204,8 @@ virtual void CopyFrom(const CMFCRibbonBaseElement& src);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *src*  
- Źródło `CMFCRibbonEdit` obiektu.  
+*src*<br/>
+[in] Źródło `CMFCRibbonEdit` obiektu.  
   
 ### <a name="remarks"></a>Uwagi  
  *Src* parametru musi być typu `CMFCRibbonEdit`.  
@@ -220,11 +220,11 @@ virtual CMFCRibbonRichEditCtrl* CreateEdit(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *pWndParent*  
- Wskaźnik do okna nadrzędnego `CMFCRibbonEdit` obiektu.  
+*pWndParent*<br/>
+[in] Wskaźnik do okna nadrzędnego `CMFCRibbonEdit` obiektu.  
   
- [in] *dwEditStyle*  
- Określa styl pola tekstowego. Można połączyć Style okna wymienionych w sekcji uwag z [style kontrolki edycji](/windows/desktop/Controls/edit-control-styles) opisano w zestawie Windows SDK.  
+*dwEditStyle*<br/>
+[in] Określa styl pola tekstowego. Można połączyć Style okna wymienionych w sekcji uwag z [style kontrolki edycji](/windows/desktop/Controls/edit-control-styles) opisano w zestawie Windows SDK.  
   
 ### <a name="return-value"></a>Wartość zwracana  
  Wskaźnik do nowego pola tekstowego, jeśli metoda zakończyła się pomyślnie; w przeciwnym razie wartość NULL.  
@@ -273,11 +273,11 @@ void EnableSpinButtons(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *Nmin.*  
- Wartość minimalna przycisku pokrętła.  
+*Nmin.*<br/>
+[in] Wartość minimalna przycisku pokrętła.  
   
- [in] *nmaks.*  
- Maksymalna wartość przycisku pokrętła.  
+*nmaks.*<br/>
+[in] Maksymalna wartość przycisku pokrętła.  
   
 ### <a name="remarks"></a>Uwagi  
  Przycisków pokręteł wyświetlania w górę i Strzałka w dół i umożliwić użytkownikom przechodzenie między ustalony zestaw wartości.  
@@ -290,8 +290,8 @@ virtual CSize GetCompactSize(CDC* pDC);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *podstawowego kontrolera domeny*  
- Wskaźnik do kontekstu urządzenia `CMFCRibbonEdit` obiektu.  
+*podstawowego kontrolera domeny*<br/>
+[in] Wskaźnik do kontekstu urządzenia `CMFCRibbonEdit` obiektu.  
   
 ### <a name="return-value"></a>Wartość zwracana  
  Rozmiar compact `CMFCRibbonEdit` obiektu.  
@@ -318,8 +318,8 @@ virtual CSize GetIntermediateSize(CDC* pDC);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *podstawowego kontrolera domeny*  
- Wskaźnik do kontekstu urządzenia `CMFCRibbonEdit` obiektu.  
+*podstawowego kontrolera domeny*<br/>
+[in] Wskaźnik do kontekstu urządzenia `CMFCRibbonEdit` obiektu.  
   
 ### <a name="return-value"></a>Wartość zwracana  
  Pośredni rozmiar `CMFCRibbonEdit` obiektu.  
@@ -355,8 +355,8 @@ int GetWidth(BOOL bInFloatyMode = FALSE) const;
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *bInFloatyMode*  
- Wartość TRUE, jeśli `CMFCRibbonEdit` kontrolka jest w trybie zmiennoprzecinkowych; w przeciwnym razie wartość FALSE.  
+*bInFloatyMode*<br/>
+[in] Wartość TRUE, jeśli `CMFCRibbonEdit` kontrolka jest w trybie zmiennoprzecinkowych; w przeciwnym razie wartość FALSE.  
   
 ### <a name="return-value"></a>Wartość zwracana  
  Szerokość w pikselach, o `CMFCRibbonEdit` kontroli.  
@@ -433,8 +433,8 @@ virtual void OnAfterChangeRect(CDC* pDC);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *podstawowego kontrolera domeny*  
- Wskaźnik do kontekstu urządzenia `CMFCRibbonEdit` kontroli.  
+*podstawowego kontrolera domeny*<br/>
+[in] Wskaźnik do kontekstu urządzenia `CMFCRibbonEdit` kontroli.  
   
 ### <a name="remarks"></a>Uwagi  
   
@@ -446,8 +446,8 @@ virtual void OnDraw(CDC* pDC);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *podstawowego kontrolera domeny*  
- Wskaźnik do kontekstu urządzenia `CMFCRibbonEdit` kontroli.  
+*podstawowego kontrolera domeny*<br/>
+[in] Wskaźnik do kontekstu urządzenia `CMFCRibbonEdit` kontroli.  
   
 ### <a name="remarks"></a>Uwagi  
   
@@ -459,8 +459,8 @@ virtual void OnDrawLabelAndImage(CDC* pDC);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *podstawowego kontrolera domeny*  
- Wskaźnik do kontekstu urządzenia `CMFCRibbonEdit` kontroli.  
+*podstawowego kontrolera domeny*<br/>
+[in] Wskaźnik do kontekstu urządzenia `CMFCRibbonEdit` kontroli.  
   
 ### <a name="remarks"></a>Uwagi  
   
@@ -478,23 +478,23 @@ virtual void OnDrawOnList(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *podstawowego kontrolera domeny*  
- Wskaźnik do kontekstu urządzenia `CMFCRibbonEdit` kontroli.  
+*podstawowego kontrolera domeny*<br/>
+[in] Wskaźnik do kontekstu urządzenia `CMFCRibbonEdit` kontroli.  
   
- [in] *strText*  
- Wyświetlany tekst [cmfcribbonedit klasy](../../mfc/reference/cmfcribbonedit-class.md "").  
+*strText*<br/>
+[in] Tekst wyświetlany [ ] (../../mfc/reference/cmfcribbonedit-class.md "klasa cmfcribbonedit").  
   
- [in] *nTextOffset*  
- Odległość w pikselach, po lewej stronie pola listy do wyświetlania tekstu.  
+*nTextOffset*<br/>
+[in] Odległość w pikselach, po lewej stronie pola listy do wyświetlania tekstu.  
   
- [in] *rect*  
- Prostokąt wyświetlania dla `CMFCRibbonEdit` kontroli.  
+*Rect*<br/>
+[in] Prostokąt wyświetlania dla `CMFCRibbonEdit` kontroli.  
   
- [in] *bIsSelected*  
- Ten parametr nie jest używany.  
+*bIsSelected*<br/>
+[in] Ten parametr nie jest używany.  
   
- [in] *bHighlighted*  
- Ten parametr nie jest używany.  
+*bHighlighted*<br/>
+[in] Ten parametr nie jest używany.  
   
 ### <a name="remarks"></a>Uwagi  
  Pole listy poleceń Wyświetla formanty wstążki, aby umożliwić użytkownikom dostosowywanie paska narzędzi Szybki dostęp.  
@@ -507,8 +507,8 @@ virtual void OnEnable(BOOL bEnable);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *bWłączenie*  
- Wartość TRUE powoduje włączenie kontroli. Wartość FALSE, aby wyłączyć formant.  
+*bWłączenie*<br/>
+[in] Wartość TRUE powoduje włączenie kontroli. Wartość FALSE, aby wyłączyć formant.  
   
 ### <a name="remarks"></a>Uwagi  
   
@@ -520,8 +520,8 @@ virtual void OnHighlight(BOOL bHighlight);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *bHighlight*  
- Wartość TRUE, jeśli kursor znajduje się w granicach `CMFCRibbonEdit` sterowania; w przeciwnym razie wartość FALSE.  
+*bHighlight*<br/>
+[in] Wartość TRUE, jeśli kursor znajduje się w granicach `CMFCRibbonEdit` sterowania; w przeciwnym razie wartość FALSE.  
   
 ### <a name="remarks"></a>Uwagi  
   
@@ -533,8 +533,8 @@ virtual BOOL OnKey(BOOL bIsMenuKey);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *bIsMenuKey*  
- Wartość TRUE, jeśli poradę dotyczącą klawiszy wyświetla wyskakujące menu; w przeciwnym razie wartość FALSE.  
+*bIsMenuKey*<br/>
+[in] Wartość TRUE, jeśli poradę dotyczącą klawiszy wyświetla wyskakujące menu; w przeciwnym razie wartość FALSE.  
   
 ### <a name="return-value"></a>Wartość zwracana  
  Wartość TRUE, jeśli zdarzenie został obsłużony; w przeciwnym razie wartość FALSE.  
@@ -549,8 +549,8 @@ virtual void OnLButtonDown(CPoint point);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *punktu*  
- Ten parametr nie jest używany.  
+*Punkt*<br/>
+[in] Ten parametr nie jest używany.  
   
 ### <a name="remarks"></a>Uwagi  
   
@@ -562,8 +562,8 @@ virtual void OnLButtonUp(CPoint point);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *punktu*  
- Ten parametr nie jest używany.  
+*Punkt*<br/>
+[in] Ten parametr nie jest używany.  
   
 ### <a name="remarks"></a>Uwagi  
   
@@ -575,8 +575,8 @@ virtual void OnRTLChanged(BOOL bIsRTL);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *bIsRTL*  
- Wartość TRUE, jeśli układ od prawej do lewej; Wartość FALSE, jeśli układ od lewej do prawej.  
+*bIsRTL*<br/>
+[in] Wartość TRUE, jeśli układ od prawej do lewej; Wartość FALSE, jeśli układ od lewej do prawej.  
   
 ### <a name="remarks"></a>Uwagi  
   
@@ -588,8 +588,8 @@ virtual void OnShow(BOOL bShow);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *bShow*  
- Wartość TRUE, aby pokazać kontroli. Wartość FALSE, aby ukryć formant.  
+*bShow*<br/>
+[in] Wartość TRUE, aby pokazać kontroli. Wartość FALSE, aby ukryć formant.  
   
 ### <a name="remarks"></a>Uwagi  
   
@@ -632,8 +632,8 @@ void SetEditText(CString strText);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *strText*  
- Tekst dla pola tekstowego.  
+*strText*<br/>
+[in] Tekst dla pola tekstowego.  
   
 ##  <a name="settextalign"></a>  CMFCRibbonEdit::SetTextAlign  
  Określa wyrównanie tekstu w polu tekstowym.  
@@ -643,8 +643,8 @@ void SetTextAlign(int nAlign);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *nAlign*  
- Wyrównanie tekstu wyliczany wartości. Zobacz sekcję Spostrzeżenia, aby możliwe wartości.  
+*nAlign*<br/>
+[in] Wyrównanie tekstu wyliczany wartości. Zobacz sekcję Spostrzeżenia, aby możliwe wartości.  
   
 ### <a name="remarks"></a>Uwagi  
  Parametr *nAlign* jest jednym z następujących Edytuj style kontrolki:  
@@ -667,8 +667,8 @@ void SetWidth(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *nWidth*  
- Szerokość w pikselach, pola tekstowego.  
+*nWidth*<br/>
+[in] Szerokość w pikselach, pola tekstowego.  
   
  *bInFloatyMode*  
  Wartość TRUE, aby ustawić szerokość tryb przestawny Wartość FALSE, aby ustawić szerokość do trybu normalnego.  
