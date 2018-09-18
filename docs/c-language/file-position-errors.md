@@ -14,17 +14,19 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 71c059939891680b638e8644f7902d54452f5332
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 8def11317548bfd6e70badab4563891c1b6f864d
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32383224"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46031924"
 ---
 # <a name="file-position-errors"></a>Błędy pozycji w pliku
-**ANSI 4.9.9.1, 4.9.9.4** wartość, do której makra `errno` jest ustawiana przez `fgetpos` lub `ftell` funkcji w przypadku awarii  
-  
- Gdy `fgetpos` lub `ftell` zakończy się niepowodzeniem, `errno` ma ustawioną wartość stała manifestu `EINVAL` Jeśli pozycja jest nieprawidłowy lub `EBADF` Jeśli liczba plików jest nieprawidłowy. Stałe są definiowane w numer błędu. H.  
-  
-## <a name="see-also"></a>Zobacz też  
- [Funkcje bibliotek](../c-language/library-functions.md)
+
+**ANSI 4.9.9.1, 4.9.9.4** wartości, do którego makro `errno` została ustawiona przez `fgetpos` lub `ftell` funkcji w przypadku niepowodzenia
+
+Gdy `fgetpos` lub `ftell` zakończy się niepowodzeniem, `errno` ustawiono stała manifestu `EINVAL` Jeśli pozycja jest nieprawidłowa lub `EBADF` Jeśli liczba plików jest nieprawidłowy. Stałe są definiowane w numer błędu. H.
+
+## <a name="see-also"></a>Zobacz też
+
+[Funkcje bibliotek](../c-language/library-functions.md)

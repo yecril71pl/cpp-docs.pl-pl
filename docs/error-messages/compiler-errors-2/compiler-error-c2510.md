@@ -1,5 +1,5 @@
 ---
-title: C2510 błąd kompilatora | Dokumentacja firmy Microsoft
+title: Błąd kompilatora C2510 | Dokumentacja firmy Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,14 +16,15 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 555d6d30f78c82e4c37e9fd5a047f62018b3d3d7
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 6f2a672b8329bc3167452ec5e3d1d76f19161bf6
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33226314"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46055965"
 ---
-# <a name="compiler-error-c2510"></a>C2510 błąd kompilatora
-'Identyfikator': po lewej stronie "::" musi być klasy/struktury/Unii  
-  
- Klasy, struktury lub nazwą Unii musi występować po lewej stronie operatora rozpoznawanie zakresów (`::`) operatora.
+# <a name="compiler-error-c2510"></a>Błąd kompilatora C2510
+
+'Identyfikator': po lewej stronie "::" musi być klasy/struct/union
+
+Klasy, struktury lub nazwa związku musi znajdować się po lewej stronie operatora rozpoznawania zakresu (`::`) — operator.

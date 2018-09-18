@@ -1,5 +1,5 @@
 ---
-title: Kompilatora (poziom 3) ostrzeżenie C4995 | Dokumentacja firmy Microsoft
+title: Kompilator ostrzeżenie (poziom 3) C4995 | Dokumentacja firmy Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,36 +16,38 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0c6bf1bbab4ee9a5a08a1376c91c6a7bba160625
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: c5ae389fef72681c6a8b31c9790c6773535f467d
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33291180"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46053482"
 ---
-# <a name="compiler-warning-level-3-c4995"></a>Kompilator C4995 ostrzegawcze (poziom 3)
-"Funkcja": nazwa została oznaczona jako przestarzała #pragma  
-  
- Kompilator napotkano funkcję, która została oznaczona atrybutem pragma [przestarzałe](../../preprocessor/deprecated-c-cpp.md). Przyszła wersja prawdopodobnie nie będzie obsługiwała tej funkcji. Możesz wyłączyć to ostrzeżenie o [ostrzeżenie](../../preprocessor/warning.md) pragma (przykład poniżej).  
-  
-## <a name="example"></a>Przykład  
- Poniższy przykład generuje C4995:  
-  
-```  
-// C4995.cpp  
-// compile with: /W3  
-#include <stdio.h>  
-  
-// #pragma warning(disable : 4995)  
-void func1(void)  
-{  
-    printf("\nIn func1");  
-}  
-  
-int main()   
-{  
-    func1();  
-    #pragma deprecated(func1)  
-    func1();   // C4995  
-}  
+# <a name="compiler-warning-level-3-c4995"></a>Kompilator ostrzeżenie (poziom 3) C4995
+
+'Funkcja': nazwa została oznaczona jako przestarzała #pragma
+
+Kompilator napotkał funkcję oznaczoną jako zaniechana pragma [przestarzałe](../../preprocessor/deprecated-c-cpp.md). Przyszła wersja prawdopodobnie nie będzie obsługiwała tej funkcji. Możesz wyłączyć to ostrzeżenie za pomocą [ostrzeżenie](../../preprocessor/warning.md) pragma (przykład poniżej).
+
+## <a name="example"></a>Przykład
+
+Poniższy przykład spowoduje wygenerowanie C4995:
+
+```
+// C4995.cpp
+// compile with: /W3
+#include <stdio.h>
+
+// #pragma warning(disable : 4995)
+void func1(void)
+{
+    printf("\nIn func1");
+}
+
+int main()
+{
+    func1();
+    #pragma deprecated(func1)
+    func1();   // C4995
+}
 ```

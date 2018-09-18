@@ -22,15 +22,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5c194dc7ecd4af0092dd304b17a8230cda6a8598
-ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
+ms.openlocfilehash: 2b3f33cf98adc011d872a7d71246e6b94afaf4cd
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33692902"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46059787"
 ---
 # <a name="iexecutioncontext-structure"></a>IExecutionContext — Struktura
-Interfejs do kontekstu wykonywania, który można uruchomić na danym procesorów wirtualnych i wspólnie można przełączyć kontekstu.  
+Interfejs do kontekstu wykonywania, który można uruchomić przy użyciu danego procesora wirtualnego i być wspólne przełączania kontekstu.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -44,14 +44,14 @@ struct IExecutionContext;
   
 |Nazwa|Opis|  
 |----------|-----------------|  
-|[IExecutionContext::Dispatch](#dispatch)|Metoda wywoływana, gdy serwer proxy wątku rozpoczyna wykonanie określonego kontekstu wykonywania. Powinno to być procedury głównego procesu roboczego z harmonogramu.|  
-|[IExecutionContext::GetId](#getid)|Zwraca unikatowy identyfikator kontekstu wykonywania.|  
-|[IExecutionContext::GetProxy](#getproxy)|Zwraca interfejs do serwera proxy w wątku, który jest wykonywany w tym kontekście.|  
-|[IExecutionContext::GetScheduler](#getscheduler)|Zwraca interfejs do harmonogramu należy tego kontekstu wykonywania.|  
-|[IExecutionContext::SetProxy](#setproxy)|Kojarzy proxy wątku z tego kontekstu wykonywania. Proxy wątek skojarzony wywołuje prawo to metoda, przed rozpoczęciem wykonywania kontekstu `Dispatch` metody.|  
+|[IExecutionContext::Dispatch](#dispatch)|Metoda, która jest wywoływana, gdy wątek serwera proxy, który rozpoczyna się wykonywanie kontekstu wykonania określonego. Powinna to być procedury głównego procesu roboczego dla harmonogramu.|  
+|[IExecutionContext::GetId](#getid)|Zwraca unikatowy identyfikator dla kontekstu wykonywania.|  
+|[IExecutionContext::GetProxy](#getproxy)|Zwraca interfejs do serwera proxy wątku, który jest wykonywany w tym kontekście.|  
+|[IExecutionContext::GetScheduler](#getscheduler)|Zwraca interfejs umożliwiający do harmonogramu należy tego kontekstu wykonywania.|  
+|[IExecutionContext::SetProxy](#setproxy)|Kojarzy wątek serwera proxy przy użyciu tego kontekstu wykonywania. Serwer proxy wątku skojarzonego wywołuje to prawo metoda przed jej rozpoczęciem, wykonania z kontekstu `Dispatch` metody.|  
   
 ## <a name="remarks"></a>Uwagi  
- W przypadku wdrażania Niestandardowy harmonogram, który interfejsy za pomocą Menedżera zasobów współbieżność środowiska wykonawczego, musisz zaimplementować `IExecutionContext` interfejsu. Utworzone przez Menedżera zasobów wątki wykonywania pracy w imieniu użytkownika harmonogramu, wykonując `IExecutionContext::Dispatch` metody.  
+ Przed zaimplementowaniem Niestandardowy harmonogram, który interfejsy za pomocą Menedżera zasobów Runtime współbieżności, należy zaimplementować `IExecutionContext` interfejsu. Utworzone przez Menedżera zasobów wątki wykonywania pracy imieniu harmonogramu, wykonując `IExecutionContext::Dispatch` metody.  
   
 ## <a name="inheritance-hierarchy"></a>Hierarchia dziedziczenia  
  `IExecutionContext`  
@@ -61,19 +61,19 @@ struct IExecutionContext;
   
  **Namespace:** współbieżności  
   
-##  <a name="dispatch"></a>  IExecutionContext::Dispatch — metoda  
- Metoda wywoływana, gdy serwer proxy wątku rozpoczyna wykonanie określonego kontekstu wykonywania. Powinno to być procedury głównego procesu roboczego z harmonogramu.  
+##  <a name="dispatch"></a>  Iexecutioncontext::Dispatch — metoda  
+ Metoda, która jest wywoływana, gdy wątek serwera proxy, który rozpoczyna się wykonywanie kontekstu wykonania określonego. Powinna to być procedury głównego procesu roboczego dla harmonogramu.  
   
 ```
 virtual void Dispatch(_Inout_ DispatchState* pDispatchState) = 0;
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `pDispatchState`  
- Wskaźnik do stanu, w którym wysyłany jest ten kontekst wykonywania. Aby uzyskać więcej informacji na stan wysyłania, zobacz [dispatchstate —](dispatchstate-structure.md).  
+*pDispatchState*<br/>
+Wskaźnik do stanu, w którym wywoływane jest ten kontekst wykonywania. Aby uzyskać więcej informacji na temat stanu wysyłania, zobacz [dispatchstate —](dispatchstate-structure.md).  
   
-##  <a name="getid"></a>  IExecutionContext::GetId — metoda  
- Zwraca unikatowy identyfikator kontekstu wykonywania.  
+##  <a name="getid"></a>  Iexecutioncontext::getid — metoda  
+ Zwraca unikatowy identyfikator dla kontekstu wykonywania.  
   
 ```
 virtual unsigned int GetId() const = 0;
@@ -83,25 +83,25 @@ virtual unsigned int GetId() const = 0;
  Identyfikator unikatowy liczby całkowitej.  
   
 ### <a name="remarks"></a>Uwagi  
- Należy użyć metody `GetExecutionContextId` uzyskać unikatowy identyfikator dla obiekt, który implementuje `IExecutionContext` interfejsu, przed użyciem interfejsu jako parametr metody dostarczone przez Menedżera zasobów. Powinna zwrócić element tego samego identyfikatora po `GetId` funkcja jest wywoływana.  
+ Należy użyć metody `GetExecutionContextId` uzyskać unikatowy identyfikator obiektu, który implementuje `IExecutionContext` interfejsu, zanim użyjesz interfejsu jako parametr do metody dostarczone przez Menedżera zasobów. Powinna zwrócić element tego samego identyfikatora po `GetId` wywołaniu funkcji.  
   
  Identyfikator pochodzi z innego źródła może spowodować niezdefiniowane zachowanie.  
   
-##  <a name="getproxy"></a>  IExecutionContext::GetProxy — metoda  
- Zwraca interfejs do serwera proxy w wątku, który jest wykonywany w tym kontekście.  
+##  <a name="getproxy"></a>  Iexecutioncontext::getproxy — metoda  
+ Zwraca interfejs do serwera proxy wątku, który jest wykonywany w tym kontekście.  
   
 ```
 virtual IThreadProxy* GetProxy() = 0;
 ```  
   
 ### <a name="return-value"></a>Wartość zwracana  
- `IThreadProxy` Interfejsu. Jeśli nie zainicjowano kontekstu wykonywania wątku proxy wywołaniem `SetProxy`, funkcja musi zwracać `NULL`.  
+ `IThreadProxy` Interfejsu. Jeśli serwer proxy wątku kontekstu wykonania nie została zainicjowana przy użyciu wywołania do `SetProxy`, funkcja musi zwracać `NULL`.  
   
 ### <a name="remarks"></a>Uwagi  
- Wywoła Resource Manager `SetProxy` metody dla kontekstu wykonywania z `IThreadProxy` interfejsu jako parametru, przed wprowadzeniem `Dispatch` metoda w kontekście. Oczekiwano do przechowywania tego argumentu i przywrócić go na wywołania `GetProxy()`.  
+ Wywoła usługi Resource Manager `SetProxy` metodę w kontekście wykonywania za pomocą `IThreadProxy` interfejsu jako parametru, przed rozpoczęciem `Dispatch` metody w kontekście. Mają być przechowywanie tego argumentu i zwrot wywołania `GetProxy()`.  
   
-##  <a name="getscheduler"></a>  IExecutionContext::GetScheduler — metoda  
- Zwraca interfejs do harmonogramu należy tego kontekstu wykonywania.  
+##  <a name="getscheduler"></a>  Iexecutioncontext::getscheduler — metoda  
+ Zwraca interfejs umożliwiający do harmonogramu należy tego kontekstu wykonywania.  
   
 ```
 virtual IScheduler* GetScheduler() = 0;
@@ -111,23 +111,23 @@ virtual IScheduler* GetScheduler() = 0;
  `IScheduler` Interfejsu.  
   
 ### <a name="remarks"></a>Uwagi  
- Należy zainicjować kontekstu wykonywania z prawidłowym `IScheduler` interfejsu przed użyciem go jako parametru do metody dostarczone przez Menedżera zasobów.  
+ Należy zainicjować kontekstu wykonywania przy użyciu prawidłowego `IScheduler` interfejsu, zanim użyjesz go jako parametr do metody dostarczone przez Menedżera zasobów.  
   
-##  <a name="setproxy"></a>  IExecutionContext::SetProxy — metoda  
- Kojarzy proxy wątku z tego kontekstu wykonywania. Proxy wątek skojarzony wywołuje prawo to metoda, przed rozpoczęciem wykonywania kontekstu `Dispatch` metody.  
+##  <a name="setproxy"></a>  Iexecutioncontext::setproxy — metoda  
+ Kojarzy wątek serwera proxy przy użyciu tego kontekstu wykonywania. Serwer proxy wątku skojarzonego wywołuje to prawo metoda przed jej rozpoczęciem, wykonania z kontekstu `Dispatch` metody.  
   
 ```
 virtual void SetProxy(_Inout_ IThreadProxy* pThreadProxy) = 0;
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `pThreadProxy`  
- Interfejs do serwera proxy w wątku, który ma wprowadź `Dispatch` metody dla tego kontekstu wykonywania.  
+*pThreadProxy*<br/>
+Interfejs do serwera proxy wątku, który ma wprowadź `Dispatch` metody w tym kontekście wykonania.  
   
 ### <a name="remarks"></a>Uwagi  
- Oczekiwano można zapisać parametru `pThreadProxy` i przywrócić go na wywołanie `GetProxy` metody. Menedżer zasobów gwarantuje proxy wątek skojarzony z kontekstu wykonywania nie spowoduje zmiany podczas wykonywania jest serwer proxy wątku `Dispatch` metody.  
+ Oczekuje można zapisać parametru `pThreadProxy` i zwrócić go w wywołaniu `GetProxy` metody. Menedżer zasobów gwarantuje proxy wątku skojarzonego z kontekstem wykonywania nie ulegnie zmianie podczas wykonywania proxy wątku `Dispatch` metody.  
   
 ## <a name="see-also"></a>Zobacz też  
  [Współbieżność Namespace](concurrency-namespace.md)   
- [Struktura IScheduler](ischeduler-structure.md)   
+ [IScheduler, struktura](ischeduler-structure.md)   
  [IThreadProxy, struktura](ithreadproxy-structure.md)

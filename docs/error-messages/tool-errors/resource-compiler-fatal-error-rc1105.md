@@ -16,14 +16,15 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 88c31c79f31d5121fea694ab80a13ba522d31c74
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: a8749610c37db1463d1d1d470105eb8d26bb92b5
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33317859"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46031317"
 ---
 # <a name="resource-compiler-fatal-error-rc1105"></a>Błąd krytyczny kompilatora zasobów RC1105
-Nieprawidłowy przełącznik, opcja: zbyt wiele przełączników /d  
-  
- Zbyt wiele symboli zostały zdefiniowane przy użyciu symboli zdefiniuj (/ d) opcja. Zdefiniuj niektóre symbole w źródłowej i skompilować ją ponownie.
+
+Nieprawidłowy przełącznik, opcja: zbyt wiele przełączników /d
+
+Za dużo symboli zostały zdefiniowane przy użyciu symboli zdefiniować (/ d) opcji. Zdefiniuj niektóre symbole w źródła i ponownej kompilacji.

@@ -18,33 +18,35 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f2cb0d049cceba82a7812c3b676c6955c433b439
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 47c3dac2b6e0297594ddf441696a956d98bd82a8
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32388818"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46055471"
 ---
 # <a name="controlling-streams"></a>Sterowanie strumieniami
-[fopen —](../c-runtime-library/reference/fopen-wfopen.md) zwraca adres typu obiektu `FILE`. Możesz użyć tego adresu jako `stream` argument kilka funkcji biblioteki można wykonywać różne operacje, w której plik otwarty. Dla strumienia bajtów wszystkich wejściowych odbywa się tak, jakby każdy znak jest do odczytu przez wywołanie metody [fgetc —](../c-runtime-library/reference/fgetc-fgetwc.md), oraz wszystkie dane wyjściowe odbywa się tak, jakby każdy znak jest zapisywane przez wywołanie metody [fputc —](../c-runtime-library/reference/fputc-fputwc.md). Dla strumienia szerokości, wszystkie wejściowych odbywa się tak, jakby każdy znak jest do odczytu przez wywołanie metody [fgetwc —](../c-runtime-library/reference/fgetc-fgetwc.md), oraz wszystkie dane wyjściowe odbywa się tak, jakby każdy znak jest zapisywane przez wywołanie metody [fputwc —](../c-runtime-library/reference/fputc-fputwc.md).  
-  
- Możesz zamknąć plik wywołując [fclose —](../c-runtime-library/reference/fclose-fcloseall.md), po którym adres `FILE` obiektu jest nieprawidłowy.  
-  
- A `FILE` obiekt przechowuje stan strumienia, w tym:  
-  
--   Wskaźnik błędów ustawienia różną od zera przez funkcję napotka odczytu lub zapisu błędu.  
-  
--   Wartość niezerową przez funkcję napotka koniec pliku podczas odczytywania wskaźnik końca pliku.  
-  
--   Wskaźnik położenia pliku określa następny bajt w strumień do odczytu lub zapisu, jeśli plik może obsługiwać żądań pozycjonowania.  
-  
--   A [strumienia stanu](../c-runtime-library/stream-states.md) Określa, czy strumień będzie akceptować odczyty i/lub zapisy i określa, czy strumień jest niezwiązany, zorientowane na bajt lub całego zorientowane na.  
-  
--   Stan konwersji pamięta, że stan dowolnego częściowo złożony lub wygenerować uogólniony znaków wielobajtowych, a także stan dowolnego shift sekwencji bajtów w pliku).  
-  
--   Bufor plików określa adres i rozmiar tablicy obiektów używanego przez funkcje biblioteki można poprawić wydajność odczytu i zapisu do strumienia.  
-  
- Nie należy zmieniać wartości zapisanej w `FILE` obiektu lub w buforze plików, który określisz do użycia z tym obiektem. Nie można skopiować `FILE` obiekt portably adres i użyj go jako kopii `stream` argument funkcji biblioteki.  
-  
-## <a name="see-also"></a>Zobacz też  
- [Pliki i strumienie](../c-runtime-library/files-and-streams.md)
+
+[fopen —](../c-runtime-library/reference/fopen-wfopen.md) zwraca adres obiektu typu `FILE`. Możesz użyć tego adresu jako `stream` argument kilka funkcji biblioteki do wykonywania różnych operacji na otwartego pliku. Dla strumień bajtów wszystkich danych wejściowych odbywa się tak, jakby każdy znak jest odczytywany przez wywołanie [fgetc —](../c-runtime-library/reference/fgetc-fgetwc.md), a wszystkie dane wyjściowe odbywa się tak, jakby każdy znak jest zapisywany przez wywołanie metody [fputc](../c-runtime-library/reference/fputc-fputwc.md). Dla szerokiego strumienia wszystkich danych wejściowych odbywa się tak, jakby każdy znak jest odczytywany przez wywołanie [fgetwc —](../c-runtime-library/reference/fgetc-fgetwc.md), a wszystkie dane wyjściowe odbywa się tak, jakby każdy znak jest zapisywany przez wywołanie metody [fputwc —](../c-runtime-library/reference/fputc-fputwc.md).
+
+Możesz zamknąć plik, wywołując [fclose —](../c-runtime-library/reference/fclose-fcloseall.md), po którym adres `FILE` obiekt jest nieprawidłowy.
+
+A `FILE` obiekt przechowuje stan strumienia, w tym:
+
+- Wskaźnik błędu ustawić wartość różną od zera, funkcja, która napotyka odczytu lub zapisu błędu.
+
+- Ustaw wartość różną od zera, funkcja, która napotyka koniec pliku podczas odczytywania wskaźnik końca pliku.
+
+- Wskaźnik położenia pliku określa następny bajt w strumień do odczytu lub zapisu, jeśli plik może obsłużyć żądania pozycjonowania.
+
+- A [strumienia stanu](../c-runtime-library/stream-states.md) Określa, czy strumień będzie akceptować operacji odczytu i/lub operacje zapisu i tego, czy strumień jest niezwiązany, bajt zorientowanej na lub całego zorientowanej na.
+
+- Stan konwersji pamięta, że stan dowolnego częściowo Zgromadziliśmy lub generowane uogólniony wielobajtowym, a także stan dowolnego shift sekwencji bajtów w pliku).
+
+- Buforu pliku Określa adres i rozmiar obiektu array, używanego przez funkcje biblioteki zwiększyć wydajność odczytu i zapisu do strumienia.
+
+Nie należy zmieniać wartości zapisanej w `FILE` obiektu lub buforu pliku, który określisz do użycia z tym obiektem. Nie można skopiować `FILE` obiektu i portably Użyj adresu Kopiuj jako `stream` argument do funkcji biblioteki.
+
+## <a name="see-also"></a>Zobacz też
+
+[Pliki i strumienie](../c-runtime-library/files-and-streams.md)

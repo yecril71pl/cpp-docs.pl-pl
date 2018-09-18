@@ -1,5 +1,5 @@
 ---
-title: operator new(CRT) | Dokumentacja firmy Microsoft
+title: nowy operator(CRT) | Dokumentacja firmy Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -25,12 +25,13 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6dd143c97a95ebe5f1e156a469c1536ae762c0c7
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 9ad3531403542ab0b8a553865f2da1d80dd0cd96
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32389874"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46026572"
 ---
-# <a name="operator-newcrt"></a>new(CRT) — operator
-Począwszy od programu Visual Studio 2013, Universal C Runtime (Biblioteka UCRT) nie obsługuje już nowy operator specyficzne dla języka C++ i operatora Usuń funkcje. Teraz są częścią standardowej biblioteki C++. Aby uzyskać więcej informacji, zobacz [nowy i delete — operatory](../cpp/new-and-delete-operators.md) i [operatora new](../cpp/new-operator-cpp.md) w dokumentacja języka C++. 
+# <a name="operator-newcrt"></a>nowy operator(CRT)
+
+Począwszy od programu Visual Studio 2013, uniwersalne środowisko uruchomieniowe języka C (UCRT) nie obsługuje już nowy operator specyficznych dla języka C++ i operatora Usuń funkcje. Teraz są częścią standardowej biblioteki języka C++. Aby uzyskać więcej informacji, zobacz [nowych i delete — operatory](../cpp/new-and-delete-operators.md) i [operatora new](../cpp/new-operator-cpp.md) w dokumentacji języka C++.

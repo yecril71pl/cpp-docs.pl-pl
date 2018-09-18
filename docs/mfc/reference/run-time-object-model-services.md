@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 13e04c7f1ae9873ebf2d044dd8b6d6948e55a120
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 138275468801f3db2f2c64f06e5a505c412723b5
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43197475"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46050960"
 ---
 # <a name="run-time-object-model-services"></a>Usługi modelu obiektów czasu wykonywania
 Klasy [CObject](../../mfc/reference/cobject-class.md) i [CRuntimeClass](../../mfc/reference/cruntimeclass-structure.md) hermetyzacji kilka usług obiekt, w tym dostęp do informacji o klasie czasu wykonywania serializacji i dynamiczne tworzenie obiektów. Wszystkie klasy pochodne `CObject` dziedziczą tę funkcję.  
@@ -260,8 +260,8 @@ IMPLEMENT_DYNAMIC(class_name, base_class_name)
  *class_name*  
  Rzeczywista nazwa klasy.  
   
- `base_class_name`  
- Nazwa klasy bazowej.  
+*base_class_name*<br/>
+Nazwa klasy bazowej.  
   
 ### <a name="remarks"></a>Uwagi  
  Użyj IMPLEMENT_DYNAMIC — makro w .cpp module, a następnie połącz wynikowy kod obiektu tylko raz.  

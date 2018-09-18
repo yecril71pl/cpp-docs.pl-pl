@@ -16,14 +16,15 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d74ff4164d1e0ace3fced51df4f8028b782e62d5
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: b6e430dd0c42ced94fb01c2d29fff0270e090dc6
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33323576"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46040352"
 ---
 # <a name="resource-compiler-warning-rw4001"></a>Ostrzeżenie RW4001 kompilatora zasobów
-. Opcje przetwarzania EXE (/L /M /P /T /K /E /31 lub /30)  
-  
- Określone opcje przetwarzania EXE, ale nie znaleziono żadnych plik wykonywalny w celu przetworzenia. Nie należy używać tych opcji z plikiem .res.
+
+. Opcje przetwarzania EXE (/ l /M /P/t /K /E /31 lub /30)
+
+Określony plik EXE, przetwarzanie opcji, ale nie było żadnych plik wykonywalny do przetworzenia. Nie używaj tych opcji z plik res.

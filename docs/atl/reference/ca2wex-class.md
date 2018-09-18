@@ -20,12 +20,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b9ac0528f383f1d379699c153a87507a1a292e21
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: eff9e2211d0ddf9cf2d9c4bb0c10040ae20a53e6
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43767507"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46020265"
 ---
 # <a name="ca2wex-class"></a>Klasa CA2WEX
 
@@ -43,7 +43,7 @@ class CA2WEX
 
 #### <a name="parameters"></a>Parametry
 
-*t_nBufferLength*  
+*t_nBufferLength*<br/>
 Rozmiar buforu używany w procesie tłumaczenia. Domyślna długość to 128 bajtów.
 
 ## <a name="members"></a>Elementy członkowskie
@@ -113,10 +113,10 @@ CA2WEX(LPCSTR psz) throw(...);
 
 ### <a name="parameters"></a>Parametry
 
-*psz*  
+*psz*<br/>
 Ciąg tekstowy, który ma zostać przekonwertowany.
 
-*nCodePage*  
+*nCodePage*<br/>
 Strona kodowa używany do wykonywania konwersji. Zobacz Omówienie kodu strony parametrów dla funkcji Windows SDK [MultiByteToWideChar](/windows/desktop/api/stringapiset/nf-stringapiset-multibytetowidechar) Aby uzyskać więcej informacji.
 
 ### <a name="remarks"></a>Uwagi
@@ -155,7 +155,7 @@ wchar_t m_szBuffer[t_nBufferLength];
 
 Operator konwersji.
 
-```  
+```
 operator LPWSTR() const throw();
 ```
 
@@ -165,9 +165,9 @@ Zwraca ciąg tekstowy, ponieważ typ LPWSTR.
 
 ## <a name="see-also"></a>Zobacz też
 
-[Klasa CA2AEX](../../atl/reference/ca2aex-class.md)   
-[Klasa CA2CAEX](../../atl/reference/ca2caex-class.md)   
-[Klasa CW2AEX](../../atl/reference/cw2aex-class.md)   
-[Klasa CW2CWEX](../../atl/reference/cw2cwex-class.md)   
-[Klasa CW2WEX](../../atl/reference/cw2wex-class.md)   
+[Klasa CA2AEX](../../atl/reference/ca2aex-class.md)<br/>
+[Klasa CA2CAEX](../../atl/reference/ca2caex-class.md)<br/>
+[Klasa CW2AEX](../../atl/reference/cw2aex-class.md)<br/>
+[Klasa CW2CWEX](../../atl/reference/cw2cwex-class.md)<br/>
+[Klasa CW2WEX](../../atl/reference/cw2wex-class.md)<br/>
 [Klasa — Przegląd](../../atl/atl-class-overview.md)

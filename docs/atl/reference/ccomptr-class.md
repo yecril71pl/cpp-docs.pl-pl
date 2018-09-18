@@ -18,12 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d5614006ed60d088a2749ab13417de23054e64ee
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: bba9e3cce5424fdba86c05c0fd94cb3a0d08a5bb
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43761400"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46030927"
 ---
 # <a name="ccomptr-class"></a>Klasa CComPtr
 
@@ -32,13 +32,13 @@ Klasa inteligentnego wskaźnika do zarządzania wskaźniki interfejsu COM.
 ## <a name="syntax"></a>Składnia
 
 ```
-template<class T>  
+template<class T>
 class CComPtr
 ```
 
 #### <a name="parameters"></a>Parametry
 
-*T*  
+*T*<br/>
 Interfejs COM, określając typ wskaźnika, które mają być przechowywane.
 
 ## <a name="members"></a>Elementy członkowskie
@@ -89,10 +89,10 @@ CComPtr (const CComPtr<T>& lp) throw ();
 
 ### <a name="parameters"></a>Parametry
 
-*LP*  
+*LP*<br/>
 Używane do zainicjowania wskaźnika interfejsu.
 
-*T*  
+*T*<br/>
 Interfejs COM.
 
 ##  <a name="operator_eq"></a>  CComPtr::operator =
@@ -114,6 +114,6 @@ Ta operacja AddRefs nowego obiektu i wersji istniejącego obiektu, jeśli taki i
 
 ## <a name="see-also"></a>Zobacz też
 
-[CComPtr::CComPtr](#ccomptr)   
-[CComQIPtr::CComQIPtr](../../atl/reference/ccomqiptr-class.md#ccomqiptr)   
+[CComPtr::CComPtr](#ccomptr)<br/>
+[CComQIPtr::CComQIPtr](../../atl/reference/ccomqiptr-class.md#ccomqiptr)<br/>
 [Klasa — Przegląd](../../atl/atl-class-overview.md)

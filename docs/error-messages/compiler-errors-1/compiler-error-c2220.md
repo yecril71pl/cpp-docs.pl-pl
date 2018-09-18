@@ -1,5 +1,5 @@
 ---
-title: C2220 błąd kompilatora | Dokumentacja firmy Microsoft
+title: Błąd kompilatora C2220 | Dokumentacja firmy Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,26 +16,27 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d23476de35e0af45b46a775683ba8673b4959346
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 7f4179b396e732ceeea20aeb9428d841a357a6d1
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33171496"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46051324"
 ---
-# <a name="compiler-error-c2220"></a>C2220 błąd kompilatora
-Ostrzeżenie potraktowano jako błąd — nie wygenerowano pliku obiektu  
-  
- [Wx](../../build/reference/compiler-option-warning-level.md) nakazuje kompilatorowi na traktowanie wszystkich ostrzeżeń jako błędy. Wystąpił błąd, nie obiektu lub plik wykonywalny nie wygenerowano.  
-  
- Ten błąd pojawia się tylko w przypadku **wx** flagę i ostrzeżenie występuje podczas kompilacji. Aby naprawić ten błąd, można wyeliminować każdego ostrzeżenia w projekcie.  
-  
-### <a name="to-fix-use-one-of-the-following-techniques"></a>Aby rozwiązać problem, użyj jednej z następujących metod  
-  
--   Rozwiąż problemy, które powodują ostrzeżenia w projekcie.  
-  
--   Kompiluj na niższym poziomie ostrzeżenie — na przykład użyć **/W3** zamiast **/W4**.  
-  
--   Użyj [ostrzeżenie](../../preprocessor/warning.md) pragma pominąć określone ostrzeżenia lub wyłączyć.  
-  
--   Nie używaj **wx** do skompilowania.
+# <a name="compiler-error-c2220"></a>Błąd kompilatora C2220
+
+Ostrzeżenie potraktowano jako błąd - nie plik wygenerowanego obiektu
+
+[/WX](../../build/reference/compiler-option-warning-level.md) nakazuje kompilatorowi na traktowanie wszystkich ostrzeżeń jako błędy. Ponieważ wystąpił błąd, żaden obiekt lub plik wykonywalny został wygenerowany.
+
+Ten błąd pojawia się wtedy kiedy **/WX** jest ustawiona flaga i występuje ostrzeżenie podczas kompilacji. Aby naprawić ten błąd, należy wyeliminować każde ostrzeżenie w projekcie.
+
+### <a name="to-fix-use-one-of-the-following-techniques"></a>Aby rozwiązać problem, użyj jednej z następujących technik
+
+- Naprawianie problemów, które powodują ostrzeżenia w projekcie.
+
+- Skompiluj na niższym poziomie ostrzeżenia — na przykład użyć **/W3** zamiast **/W4**.
+
+- Użyj [ostrzeżenie](../../preprocessor/warning.md) pragma może wyłączyć lub blokować szczególne ostrzeżenie.
+
+- Nie używaj **/WX** do skompilowania.

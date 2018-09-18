@@ -27,34 +27,38 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f70520b60ccfaf1af5b223bcb4ea1a90639aa484
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 7e311c27d61eca82019f8069b0984557af02c74a
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32385556"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46028210"
 ---
 # <a name="abnormaltermination"></a>_abnormal_termination
-Wskazuje, czy `__finally` zablokować z [try-finally — instrukcja](../cpp/try-finally-statement.md) jest wprowadzana, gdy system wykonuje wewnętrzną listę programy obsługi zakończenia.  
-  
-## <a name="syntax"></a>Składnia  
-  
-```cpp  
-int   _abnormal_termination(  
-   );  
-```  
-  
-## <a name="return-value"></a>Wartość zwracana  
- `true` Jeśli system jest *odwijaniem* stosu; w przeciwnym razie `false`.  
-  
-## <a name="remarks"></a>Uwagi  
- Jest używany do zarządzania odwijaniem wyjątków funkcji wewnętrznej i nie jest przeznaczona do wywoływania z kodu użytkownika.  
-  
-## <a name="requirements"></a>Wymagania  
-  
-|Procedura|Wymagany nagłówek|  
-|-------------|---------------------|  
-|_abnormal_termination|excpt.h|  
-  
-## <a name="see-also"></a>Zobacz też  
- [try-finally, instrukcja](../cpp/try-finally-statement.md)
+
+Wskazuje, czy `__finally` bloku [try-finally — instrukcja](../cpp/try-finally-statement.md) zostanie wprowadzona podczas, gdy system wykonuje wewnętrzną listę obsługi zakończenia.
+
+## <a name="syntax"></a>Składnia
+
+```cpp
+int   _abnormal_termination(
+   );
+```
+
+## <a name="return-value"></a>Wartość zwracana
+
+`true` Jeśli system jest *odwijania* stosu; w przeciwnym razie `false`.
+
+## <a name="remarks"></a>Uwagi
+
+Jest używany do zarządzania odwijania wyjątków funkcji wewnętrznej, a nie jest przeznaczona do wywoływania z kodu użytkownika.
+
+## <a name="requirements"></a>Wymagania
+
+|Procedura|Wymagany nagłówek|
+|-------------|---------------------|
+|_abnormal_termination|excpt.h|
+
+## <a name="see-also"></a>Zobacz też
+
+[try-finally, instrukcja](../cpp/try-finally-statement.md)

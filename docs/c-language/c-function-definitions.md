@@ -22,14 +22,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 265dfe599d4c3586b350787baab5977562326991
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: cbfc7e7bd6a3f2ef727a0cc259f222afad0ab555
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43757685"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46055237"
 ---
 # <a name="c-function-definitions"></a>Definicje funkcji języka C
+
 Definicja funkcji Określa nazwę funkcji, typy i liczbę parametrów, które oczekuje, aby otrzymać i jego typem zwracanym. Definicja funkcji obejmuje również treści funkcji za pomocą deklaracji jego zmienne lokalne i instrukcje, które określają, jak działa funkcja.
 
 ## <a name="syntax"></a>Składnia
@@ -73,7 +74,7 @@ Lista parametrów w definicji używa następującej składni:
 
 *Lista parametrów*:<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*Deklaracja parametru*<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*Lista parametrów* **,***deklaracji parametru* 
+&nbsp;&nbsp;&nbsp;&nbsp;*Lista parametrów* **,***deklaracji parametru*
 
 *Deklaracja parametru*:<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*Specyfikatory deklaracji* *deklaratora*<br/>
@@ -83,7 +84,7 @@ Lista parametrów w definicji funkcji w starym stylu używa następującej skła
 
 *Lista identyfikatorów*: /\* używany w funkcji przestarzały styl definicje i deklaracje \*/<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*Identyfikator*<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*Lista identyfikatorów* **,***identyfikator* 
+&nbsp;&nbsp;&nbsp;&nbsp;*Lista identyfikatorów* **,***identyfikator*
 
 Składnia dla treści funkcji jest następująca:
 
@@ -103,4 +104,5 @@ A *deklaracji* w *lista deklaracji* w funkcji nie może zawierać definicje *sto
 Sekcje [atrybuty funkcji](../c-language/function-attributes.md), [klasę magazynu](../c-language/storage-class.md), [typie zwracanym](../c-language/return-type.md), [parametry](../c-language/parameters.md), i [treści funkcji](../c-language/function-body.md) składników definicji funkcji szczegółowo opisano.
 
 ## <a name="see-also"></a>Zobacz też
+
 [Funkcje](../c-language/functions-c.md)

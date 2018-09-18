@@ -1,5 +1,5 @@
 ---
-title: C3391 błąd kompilatora | Dokumentacja firmy Microsoft
+title: Błąd kompilatora C3391 | Dokumentacja firmy Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,41 +16,43 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 28615d85eca534966a4d8b90cef20ea577e0d592
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 0dfe3db16954dff3dc76f707c4a14f5d56d53e18
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33256617"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46056433"
 ---
-# <a name="compiler-error-c3391"></a>C3391 błąd kompilatora
-"type_arg": nieprawidłowy typ argumentu dla parametru ogólnego "param" Ogólne "generic_type" musi być typem wartościowym niebędącym null  
-  
-Niepoprawnie wystąpienia typu ogólnego. Sprawdź definicję typu. Aby uzyskać więcej informacji, zobacz <xref:System.Nullable> i [ogólne](../../windows/generics-cpp-component-extensions.md).  
-  
-## <a name="example"></a>Przykład  
-W poniższym przykładzie użyto C# do tworzenia składnika, który zawiera typu ogólnego, który ma pewne ograniczenia, które nie są obsługiwane podczas tworzenia typów ogólnych w języku C + +/ CLI. Aby uzyskać więcej informacji, zobacz [ograniczenia dotyczące parametrów typu](/dotnet/csharp/programming-guide/generics/constraints-on-type-parameters).  
-  
-```cs  
-// C3391.cs  
-// Compile by using: csc /target:library C3391.cs  
-// a C# program  
-public class GR<N>  
-where N : struct {}  
-```  
-  
-Poniższy przykładowy składnik C3391.dll jest dostępny, generuje C3391.  
-  
-```cpp  
-// C3391_b.cpp  
-// Compile by using: cl /clr C3391_b.cpp  
-#using <C3391.dll>  
-using namespace System;  
-value class VClass {};  
-  
-int main() {  
-   GR< Nullable<VClass> >^ a =   
-      gcnew GR< Nullable<VClass> >();   // C3391 can't be Nullable  
-   GR<VClass>^ aa = gcnew GR<VClass>(); // OK  
-}  
+# <a name="compiler-error-c3391"></a>Błąd kompilatora C3391
+
+"type_arg": nieprawidłowy typ argumentu dla parametru generycznego param, z ogólnego "generic_type" musi być typem wartości niedopuszczającym wartości
+
+Niepoprawnie wystąpienia typu ogólnego. Sprawdź definicję typu. Aby uzyskać więcej informacji, zobacz <xref:System.Nullable> i [ogólne](../../windows/generics-cpp-component-extensions.md).
+
+## <a name="example"></a>Przykład
+
+Poniższy przykład używa języka C# w celu utworzenia składnika, który zawiera typ ogólny, który ma pewne ograniczenia, które nie są obsługiwane w przypadku tworzenia typów ogólnych w języku C + +/ interfejsu wiersza polecenia. Aby uzyskać więcej informacji, zobacz [ograniczenia dotyczące parametrów typu](/dotnet/csharp/programming-guide/generics/constraints-on-type-parameters).
+
+```cs
+// C3391.cs
+// Compile by using: csc /target:library C3391.cs
+// a C# program
+public class GR<N>
+where N : struct {}
+```
+
+Po udostępnieniu składnika C3391.dll poniższy przykład spowoduje wygenerowanie C3391.
+
+```cpp
+// C3391_b.cpp
+// Compile by using: cl /clr C3391_b.cpp
+#using <C3391.dll>
+using namespace System;
+value class VClass {};
+
+int main() {
+   GR< Nullable<VClass> >^ a =
+      gcnew GR< Nullable<VClass> >();   // C3391 can't be Nullable
+   GR<VClass>^ aa = gcnew GR<VClass>(); // OK
+}
 ```

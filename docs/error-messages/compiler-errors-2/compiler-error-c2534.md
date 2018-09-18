@@ -1,5 +1,5 @@
 ---
-title: C2534 błąd kompilatora | Dokumentacja firmy Microsoft
+title: Błąd kompilatora C2534 | Dokumentacja firmy Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,27 +16,28 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: bae52374e09852ffb68c5807353155d9928924eb
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 2febeeeb3b6c0e394070339f2310a22c1326ab5c
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33228249"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46049036"
 ---
-# <a name="compiler-error-c2534"></a>C2534 błąd kompilatora
-"identyfikator": Konstruktor nie może zwracać wartości  
-  
- Konstruktor nie może zwracać wartości ani mieć zwracanego typu (nie nawet `void` zwracany typ).  
-  
- Ten błąd może być ustalony przez usunięcie `return` instrukcji z definicji konstruktora.  
-  
- Poniższy przykład generuje C2534:  
-  
-```  
-// C2534.cpp  
-class A {  
-public:  
-   int i;  
-   A() { return i; }   // C2534  
-};  
+# <a name="compiler-error-c2534"></a>Błąd kompilatora C2534
+
+"identyfikator": Konstruktor nie może zwracać wartości
+
+Konstruktor nie może zwracać wartości lub typem zwracanym (nie jest jeszcze `void` zwracany typ).
+
+Ten błąd może zostać naprawione przez usunięcie `return` instrukcji z definicji konstruktora.
+
+Poniższy przykład spowoduje wygenerowanie C2534:
+
+```
+// C2534.cpp
+class A {
+public:
+   int i;
+   A() { return i; }   // C2534
+};
 ```

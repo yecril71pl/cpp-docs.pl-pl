@@ -1,5 +1,5 @@
 ---
-title: C2767 błąd kompilatora | Dokumentacja firmy Microsoft
+title: Błąd kompilatora C2767 | Dokumentacja firmy Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,25 +16,26 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c5ac628d1e02c53b0ed0872873ef23ef708df982
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: d6301471b4797bf3a1cb6f3936e54ab8bfb536b6
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33234786"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46051896"
 ---
-# <a name="compiler-error-c2767"></a>C2767 błąd kompilatora
-zarządzane lub niezgodność wymiaru WinRTarray: Oczekiwano argumentów w liczbie N - M podane  
-  
- A zarządzane lub deklaracja tablicy WinRT został niewłaściwie sformatowany. Aby uzyskać więcej informacji, zobacz [tablicy](../../windows/arrays-cpp-component-extensions.md).  
-  
- Poniższy przykład generuje C2767 i pokazuje, jak rozwiązywanie problemu:  
-  
-```  
-// C2767.cpp  
-// compile with: /clr  
-int main() {  
-   array<int> ^p1 = new array<int>(2,3); // C2767  
-   array<int> ^p2 = new array<int>(2);   // OK  
-}  
+# <a name="compiler-error-c2767"></a>Błąd kompilatora C2767
+
+zarządzane lub WinRTarray wymiaru niezgodność: Oczekiwano następującej liczby argumentów: N - M podane
+
+A zarządzany lub deklaracja tablicy WinRT został niewłaściwie sformatowany. Aby uzyskać więcej informacji, zobacz [tablicy](../../windows/arrays-cpp-component-extensions.md).
+
+Poniższy przykład generuje C2767 i pokazuje, jak go naprawić:
+
+```
+// C2767.cpp
+// compile with: /clr
+int main() {
+   array<int> ^p1 = new array<int>(2,3); // C2767
+   array<int> ^p2 = new array<int>(2);   // OK
+}
 ```

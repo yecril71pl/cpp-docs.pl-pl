@@ -1,5 +1,5 @@
 ---
-title: _CIpow | Dokumentacja firmy Microsoft
+title: _Cipow — | Dokumentacja firmy Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -29,30 +29,33 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5c3500c0bd17b2638026f45c23b047e2bee411cf
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: c09801841e25b5de2f98e64c01bf48b1eea9992b
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32387001"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46052091"
 ---
 # <a name="cipow"></a>_CIpow
-Oblicza *x* do *y* zasilania na podstawie górnej wartości na stosie.  
-  
-## <a name="syntax"></a>Składnia  
-  
-```  
-void __cdecl _CIpow();  
-```  
-  
-## <a name="remarks"></a>Uwagi  
- Ta wersja `pow` funkcja ma specjalne Konwencja wywoływania obsługującą przez kompilator. Przyspiesza wykonywanie, ponieważ uniemożliwia kopie generowany, a ułatwia alokacja rejestru.  
-  
- Wartość wynikową spoczywa na wierzchu stosu.  
-  
-## <a name="requirements"></a>Wymagania  
- **Platforma:** x86  
-  
-## <a name="see-also"></a>Zobacz też  
- [Alfabetyczne odwołanie funkcji](../c-runtime-library/reference/crt-alphabetical-function-reference.md)   
- [pow, powf, powl](../c-runtime-library/reference/pow-powf-powl.md)
+
+Oblicza *x* podniesioną do *y* zasilania na podstawie górnej wartości w stosie.
+
+## <a name="syntax"></a>Składnia
+
+```
+void __cdecl _CIpow();
+```
+
+## <a name="remarks"></a>Uwagi
+
+Ta wersja `pow` funkcja ma specjalne Konwencja wywoływania obsługującą przez kompilator. Jego przyspiesza wykonywanie, ponieważ uniemożliwia kopie generowany i pomaga w alokacja rejestru.
+
+Wartość wynikowa są wypychane na górze stosu.
+
+## <a name="requirements"></a>Wymagania
+ **Platforma:** x86
+
+## <a name="see-also"></a>Zobacz też
+
+[Alfabetyczne zestawienie funkcji](../c-runtime-library/reference/crt-alphabetical-function-reference.md)<br/>
+[pow, powf, powl](../c-runtime-library/reference/pow-powf-powl.md)

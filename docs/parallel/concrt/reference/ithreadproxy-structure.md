@@ -21,12 +21,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 220a02fca7a8de67d1f35743fa9f56e8499c88e0
-ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
+ms.openlocfilehash: d3be0a32de4e0e5b57471722ffa2cf8fcea5fd6c
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43690049"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46027859"
 ---
 # <a name="ithreadproxy-structure"></a>IThreadProxy — Struktura
 Abstrakcja wątku wykonywania. W zależności od `SchedulerType` klucza zasad harmonogramu tworzenia, Menedżer zasobów spowoduje przyznanie Ci proxy wątku, która jest wspierana przez regularne wątek Win32 lub wątku (UMS) ustalonych w harmonogramie trybu użytkownika. UMS wątki są obsługiwane w systemie 64-bitowych systemach operacyjnych z wersji Windows 7 lub nowszy.  
@@ -77,8 +77,8 @@ virtual void SwitchOut(SwitchingProxyState switchState = Blocking) = 0;
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `switchState`  
- Wskazuje stan wątku proxy, który jest wykonywany przełącznika. Parametr jest typu `SwitchingProxyState`.  
+*switchState*<br/>
+Wskazuje stan wątku proxy, który jest wykonywany przełącznika. Parametr jest typu `SwitchingProxyState`.  
   
 ### <a name="remarks"></a>Uwagi  
  Użyj `SwitchOut` Jeśli musisz usunąć skojarzenie kontekstu z procesora wirtualnego katalogu głównego, wykonuje z jakiegokolwiek powodu. W zależności od wartości przekazanej do parametru `switchState`, i czy wykonywania w głównym procesorze wirtualnym, wywołanie zostanie niezwłocznie zawrócone lub zablokuje proxy wątku skojarzonego z kontekstem. Jest to błąd, aby wywołać `SwitchOut` z parametrem ustawionym `Idle`. Ten sposób spowoduje [invalid_argument](../../../standard-library/invalid-argument-class.md) wyjątku.  
@@ -103,11 +103,11 @@ virtual void SwitchTo(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `pContext`  
- Kontekst wykonywania wspólne powoduje.  
+*pContext*<br/>
+Kontekst wykonywania wspólne powoduje.  
   
- `switchState`  
- Wskazuje stan wątku proxy, który jest wykonywany przełącznika. Parametr jest typu `SwitchingProxyState`.  
+*switchState*<br/>
+Wskazuje stan wątku proxy, który jest wykonywany przełącznika. Parametr jest typu `SwitchingProxyState`.  
   
 ### <a name="remarks"></a>Uwagi  
  Użyj tej metody, aby przełączyć się z kontekstu wykonania jednego do drugiego, z [iexecutioncontext::Dispatch —](iexecutioncontext-structure.md#dispatch) metoda pierwszy kontekstu wykonywania. Metoda kojarzy kontekstu wykonania `pContext` przy użyciu serwera proxy wątku, jeśli nie jest już skojarzony z jednym. Własność bieżący wątek serwera proxy jest określana przez wartość określona dla `switchState` argumentu.  

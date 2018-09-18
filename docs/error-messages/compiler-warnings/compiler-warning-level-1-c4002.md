@@ -1,5 +1,5 @@
 ---
-title: Kompilatora (poziom 1) ostrzeżenie C4002 | Dokumentacja firmy Microsoft
+title: Kompilator ostrzeżenie (poziom 1) C4002 | Dokumentacja firmy Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,48 +16,49 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: fa1943000becde663fbb0da445f861f408f01f9e
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: a3b3d51b4408e79236993d49f7ceba5fc9537b6d
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33272015"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46050141"
 ---
-# <a name="compiler-warning-level-1-c4002"></a>Kompilator C4002 ostrzegawcze (poziom 1)
-zbyt wiele parametrów rzeczywistych dla makra "identyfikatora"  
-  
- Liczba rzeczywistych parametrów w makrze przekracza liczbę parametrów formalnych w definicji makra. Zbiera preprocesora dodatkowe parametry ale ignoruje je w rozwinięciu makra.  
-  
- C4002 mogą wystąpić podczas korzystania z niepoprawnie [makra Wariadyczne](../../preprocessor/variadic-macros.md).  
-  
- Poniższy przykład generuje C4002:  
-  
-```  
-// C4002.cpp  
-// compile with: /W1  
-#define test(a) (a)  
-  
-int main() {  
-   int a = 1;  
-   int b = 2;  
-   a = test(a,b);   // C4002  
-   // try..  
-   a = test(a);  
-}  
-```  
-  
- Ten błąd może być również generowany w wyniku pracy zgodność kompilatora, która została wykonana dla programu Visual Studio .NET 2003: dodatkowe przecinkami w makrze już akceptowane.  
-  
- Kompilator nie będzie akceptował dodatkowe przecinkami w makrze. Kod identyfikator był prawidłowy w Visual Studio .NET 2003 i wersji programu Visual Studio .NET programu Visual C++ Usuń dodatkowe przecinkami.  
-  
-```  
-// C4002b.cpp  
-// compile with: /W1  
-#define F(x,y)  
-int main()  
-{  
-   F(2,,,,,,3,,,,,,)   // C4002  
-   // Try the following line instead:  
-   // F(2,3)  
-}  
+# <a name="compiler-warning-level-1-c4002"></a>Kompilator ostrzeżenie (poziom 1) C4002
+
+zbyt wiele parametrów rzeczywistych dla makra 'Identyfikator'
+
+Liczba rzeczywistych parametrów w makrze przekracza liczbę parametrów formalnych w definicji makra. Preprocesora zbiera dodatkowe parametry ale je ignoruje w rozwinięciu makra.
+
+C4002 może wystąpić, gdy niepoprawnie przy użyciu [makra Wariadyczne](../../preprocessor/variadic-macros.md).
+
+Poniższy przykład spowoduje wygenerowanie C4002:
+
+```
+// C4002.cpp
+// compile with: /W1
+#define test(a) (a)
+
+int main() {
+   int a = 1;
+   int b = 2;
+   a = test(a,b);   // C4002
+   // try..
+   a = test(a);
+}
+```
+
+Ten błąd może być też wygenerowany w wyniku pracy zgodności kompilatora, która została wykonana dla Visual Studio .NET 2003: dodatkowy przecinkami w makrze już akceptowane.
+
+Kompilator nie będzie akceptował dodatkowe przecinkami w makrze. Aby kod był prawidłowy w Visual Studio .NET 2003 i wersji programu Visual Studio .NET, Visual c++ należy usunąć dodatkowe przecinkami.
+
+```
+// C4002b.cpp
+// compile with: /W1
+#define F(x,y)
+int main()
+{
+   F(2,,,,,,3,,,,,,)   // C4002
+   // Try the following line instead:
+   // F(2,3)
+}
 ```

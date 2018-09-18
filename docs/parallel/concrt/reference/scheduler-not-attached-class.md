@@ -18,15 +18,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ea0bf7f9e9467b35391034dafcbd48044b6229d7
-ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
+ms.openlocfilehash: c980115496e70cf0c767ce0592ef5ac9fd1fd239
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33696074"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46027027"
 ---
 # <a name="schedulernotattached-class"></a>scheduler_not_attached — Klasa
-Ta klasa opisuje wyjątek, jeśli operacja została wykonana, co wymaga harmonogramu jest dołączony do bieżącego kontekstu i jedna nie jest.  
+Ta klasa opisuje wyjątek generowany, gdy operacja została wykonana, co wymaga harmonogramu dołączony do bieżącego kontekstu, a nie jest.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -63,8 +63,8 @@ scheduler_not_attached() throw();
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `_Message`  
- Komunikat opisowy błędu.  
+*_Message*<br/>
+Opisowy komunikat dotyczący błędu.  
   
 ## <a name="see-also"></a>Zobacz też  
  [Współbieżność Namespace](concurrency-namespace.md)   

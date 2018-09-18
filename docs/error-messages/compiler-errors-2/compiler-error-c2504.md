@@ -1,5 +1,5 @@
 ---
-title: C2504 błąd kompilatora | Dokumentacja firmy Microsoft
+title: Błąd kompilatora C2504 | Dokumentacja firmy Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,34 +16,35 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: bac0f8f28955af172590535568289182c3489d6d
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 6fb11774f65454799761913babb428dc6a471743
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33229521"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46054132"
 ---
-# <a name="compiler-error-c2504"></a>C2504 błąd kompilatora
-"class": klasa podstawowa niezdefiniowana  
-  
- Klasa podstawowa jest zadeklarowane, ale nigdy nie jest zdefiniowany.  Możliwe przyczyny:  
-  
-1.  Brak pliku dołączenia.  
-  
-2.  Zewnętrzne klasy podstawowej nie jest zadeklarowana z [extern](../../cpp/using-extern-to-specify-linkage.md).  
-  
- Poniższy przykład generuje C2504:  
-  
-```  
-// C2504.cpp  
-// compile with: /c  
-class A;  
-class B : public A {};   // C2504  
-```  
-  
- OK  
-  
-```  
-class C{};  
-class D : public C {};  
+# <a name="compiler-error-c2504"></a>Błąd kompilatora C2504
+
+"class": klasa bazowa niezdefiniowana
+
+Klasa bazowa jest zadeklarowana, ale nigdy nie jest zdefiniowany.  Możliwe przyczyny:
+
+1. Brak pliku dołączenia.
+
+1. Zewnętrzne klasy bazowej nie jest zadeklarowana za pomocą [extern](../../cpp/using-extern-to-specify-linkage.md).
+
+Poniższy przykład spowoduje wygenerowanie C2504:
+
+```
+// C2504.cpp
+// compile with: /c
+class A;
+class B : public A {};   // C2504
+```
+
+OK
+
+```
+class C{};
+class D : public C {};
 ```

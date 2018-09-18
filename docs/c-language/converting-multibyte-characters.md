@@ -14,17 +14,19 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: acfff85313e452a5d96e73fb547c66c6fa196d16
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: b1d91cf62d6d8665e9578984897a6c599c024c6c
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32381788"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46059827"
 ---
 # <a name="converting-multibyte-characters"></a>Konwersja znaków wielobajtowych
-**ANSI 3.1.3.4** bieżące ustawienia regionalne służący do konwertowania znaków wielobajtowych na odpowiednie znaki dwubajtowe (kody) stałej znaków dwubajtowych  
-  
- Bieżące ustawienia regionalne są z ustawieniami regionalnymi "C" domyślnie. Można go zmienić z [#pragma setlocale](../preprocessor/setlocale.md).  
-  
-## <a name="see-also"></a>Zobacz też  
- [Znaki](../c-language/characters.md)
+
+**ANSI 3.1.3.4** bieżących ustawień regionalnych używany do konwersji znaków wielobajtowych do odpowiedniego znaków dwubajtowych (kody) dla znaków dwubajtowych — stała
+
+Bieżące ustawienia regionalne są ustawień regionalnych "C", domyślnie. Mogą być zmieniane z [#pragma setlocale](../preprocessor/setlocale.md).
+
+## <a name="see-also"></a>Zobacz też
+
+[Znaki](../c-language/characters.md)

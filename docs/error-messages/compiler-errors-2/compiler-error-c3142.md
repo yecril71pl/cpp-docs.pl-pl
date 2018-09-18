@@ -1,5 +1,5 @@
 ---
-title: C3142 błąd kompilatora | Dokumentacja firmy Microsoft
+title: Błąd kompilatora C3142 | Dokumentacja firmy Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,32 +16,33 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 86ba6b66e49cb08dff1c3581eb06145148601b88
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: b8a4e049c4e2846a011b60b50159e07982e3b747
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33254527"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46041626"
 ---
-# <a name="compiler-error-c3142"></a>C3142 błąd kompilatora
-"property_name": nie można przyjąć adresu właściwości  
-  
- Adresu właściwości nie jest dostępne przez dewelopera.  
-  
- Poniższy przykład generuje C3142:  
-  
-```  
-// C3142_2.cpp  
-// compile with: /clr  
-using namespace System;  
-ref class CSize {  
-private:  
-   property int Size {  
-      int get();  
-   }  
-};  
-  
-int main() {  
-    &CSize::Size; // C3142  
-}  
-```  
+# <a name="compiler-error-c3142"></a>Błąd kompilatora C3142
+
+"property_name": nie można przyjąć adresu właściwości
+
+Adres właściwość nie jest dostępna dla deweloperów.
+
+Poniższy przykład spowoduje wygenerowanie C3142:
+
+```
+// C3142_2.cpp
+// compile with: /clr
+using namespace System;
+ref class CSize {
+private:
+   property int Size {
+      int get();
+   }
+};
+
+int main() {
+    &CSize::Size; // C3142
+}
+```

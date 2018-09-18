@@ -16,20 +16,21 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c2ae57caba0d6dfda1fa188beee2137a011c1ef3
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: dd27f649563cc750787a4c767a8e359bd7e95b86
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33294378"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46045331"
 ---
 # <a name="bscmake-error-bk1508"></a>Błąd BSCMAKE BK1508
-Nie można usunąć pliku tymczasowego "filename" [: Przyczyna]  
-  
- Bscmake — nie można usunąć jednego z jego plików tymczasowych.  
-  
-### <a name="to-fix-by-checking-the-following-possible-causes"></a>Aby rozwiązać problem, sprawdzając następujące możliwe przyczyny  
-  
-1.  Inny proces nie otworzył pliku.  
-  
-2.  Błąd sprzętowy.
+
+Nie można usunąć pliku tymczasowego "filename" [: przyczyny]
+
+BSCMAKE, nie można usunąć jednego z jego plików tymczasowych.
+
+### <a name="to-fix-by-checking-the-following-possible-causes"></a>Aby rozwiązać problem, sprawdzając następujące możliwe przyczyny
+
+1. Inny proces ma plik jest otwarty.
+
+1. Błąd sprzętowy.

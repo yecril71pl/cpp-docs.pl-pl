@@ -16,28 +16,29 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e5692ec643f5e3fe1adebf68048a6c435ab05d6f
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: efeb110823e801dd86a503a7069c4898f400769e
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33318457"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46057187"
 ---
 # <a name="project-build-error-prj0009"></a>Błąd PRJ0009 kompilacji projektu
-Kompilacji nie można otworzyć dziennika do zapisu.  
-  
- **Upewnij się, że plik nie jest otwarty przez inny proces i nie jest zabezpieczony przed zapisem.**  
-  
- Po ustawieniu **rejestrowanie kompilacji** właściwości **tak** i wykonywanie tworzenie lub odbudowywanie, Visual C++ nie można otworzyć dziennika kompilacji w trybie wyłączności.  
-  
- Sprawdź **rejestrowanie kompilacji** ustawienie otwierając **opcje** okno dialogowe (na **narzędzia** menu, kliknij przycisk **opcje** polecenia), a następnie Wybieranie **kompilacji VC ++** w **projekty** folderu. Pliku kompilacji jest nazywany BuildLog.htm i jest zapisywany w katalogu pośrednim $(intdir —).  
-  
- Możliwe przyczyny tego błędu:  
-  
--   Uruchamiasz dwa procesy Visual C++ i w trakcie kompilacji tej samej konfiguracji tego samego projektu w obu jednocześnie.  
-  
--   Plik dziennika kompilacji jest otwarty w procesie, która blokuje pliku.  
-  
--   Użytkownik nie ma uprawnień do tworzenia pliku.  
-  
--   Bieżący użytkownik nie ma dostępu do zapisu do pliku BuildLog.htm.
+
+Tworzenie dziennika nie może zostać otwarty do zapisu.
+
+**Upewnij się, że plik nie jest otwarty przez inny proces i nie jest zabezpieczony przed zapisem.**
+
+Po ustawieniu **kompilacji rejestrowania** właściwości **tak** i wykonywanie, tworzenie lub odbudowywanie, Visual C++ nie można otworzyć dziennika kompilacji w trybie wyłączności.
+
+Sprawdzanie **kompilacji rejestrowania** ustawienie, otwierając **opcje** okno dialogowe (na **narzędzia** menu, kliknij przycisk **opcje** polecenie) a następnie Wybieranie **kompilacji VC ++** w **projektów** folderu. Plik kompilacji nosi nazwę BuildLog.htm i jest zapisywany w katalogu pośrednim $ (IntDir).
+
+Możliwe przyczyny tego błędu:
+
+- Są uruchomione dwa procesy Visual C++ i chcesz utworzyć taką samą konfigurację tego samego projektu w obu jednocześnie.
+
+- Plik dziennika kompilacji zostanie otwarty w procesie, który blokuje go.
+
+- Użytkownik nie ma uprawnień do utworzenia pliku.
+
+- Bieżący użytkownik ma dostęp do zapisu do pliku nazwę BuildLog.htm.

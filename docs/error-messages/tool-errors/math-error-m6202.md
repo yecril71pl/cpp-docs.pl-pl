@@ -16,16 +16,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4596b9782bc1de0e6ccd52bfcd03965415adb353
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 328336e61c299cf9b9816ddfce7212f1798eae37
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33332055"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46058552"
 ---
 # <a name="math-error-m6202"></a>Błąd matematyczny M6202
-"Funkcja": — błąd  
-  
- Argument funkcji danego była wartością singularity dla tej funkcji. Funkcja nie jest zdefiniowany dla tego argumentu.  
-  
- Ten błąd wywołania `_matherr` funkcji z nazwą funkcji, argumentów i typ błędu. Można ponownie napisać `_matherr` funkcji, aby dostosować obsługę niektórych błędów czasu wykonywania zmiennoprzecinkowej matematyczny.
+
+'Funkcja': błąd
+
+Argument do danej funkcji była wartość singularity dla tej funkcji. Funkcja nie jest zdefiniowany dla tego argumentu.
+
+Ten błąd wywołania `_matherr` funkcję z nazwy funkcji, argumentów i typ błędu. Można napisać ponownie `_matherr` funkcję, aby dostosować obsługi niektórych błędów zmiennoprzecinkowym zapisu matematycznego w czasie wykonywania.

@@ -18,15 +18,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6df1a987c13a5d7f79c527874a7bc1564161b597
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 469352b8c5729a6797912ce768a87c1f4a0eb9d3
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32387612"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46059839"
 ---
 # <a name="null-crt"></a>NULL (CRT)
-**Wartość NULL** jest wartością wskaźnika null używane z wieloma operacji wskaźnika i funkcje. Odpowiada to 0. **Wartość NULL** jest zdefiniowany w następujących plikach nagłówka: CRTDBG. H, USTAWIENIA REGIONALNE. H, STDDEF. H, STDIO —. H, STDLIB. H, CIĄG. H, TCHAR —. H, CZAS. H i WCHAR. H.  
-  
-## <a name="see-also"></a>Zobacz też  
- [Stałe globalne](../c-runtime-library/global-constants.md)
+
+**Wartość NULL** jest wartość wskaźnika o wartości null, używana przy użyciu wielu wskaźnika operacje i funkcje. Odpowiada to 0. **Wartość NULL** jest zdefiniowany w następujących plikach nagłówkowych: CRTDBG. GODZ., USTAWIENIA REGIONALNE. GODZ., STDDEF. GODZ., STDIO —. GODZ., STDLIB. GODZ., CIĄG. GODZ., TCHAR. GODZ., CZAS. H i WCHAR. H.
+
+## <a name="see-also"></a>Zobacz też
+
+[Stałe globalne](../c-runtime-library/global-constants.md)

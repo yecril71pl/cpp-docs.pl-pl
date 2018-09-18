@@ -18,15 +18,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: fe11e2697734d06988f4cbcfce48f38cf02c32b7
-ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
+ms.openlocfilehash: cf803fbd35071a7a7100e3267dcf1bfa8b91e9f7
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33687143"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46059603"
 ---
 # <a name="cancellationtokenregistration-class"></a>cancellation_token_registration — Klasa
-`cancellation_token_registration` Klasa reprezentuje wywołanie zwrotne powiadomienia `cancellation_token`. Gdy `register` metody na `cancellation_token` służy do odbierania powiadomień o po wystąpieniu anulowania `cancellation_token_registration` obiekt jest zwracany jako dojścia do wywołania zwrotnego, aby element wywołujący może zażądać wywołania zwrotnego nie jest już być wprowadzane za pośrednictwem stosowania `deregister` metody.  
+`cancellation_token_registration` Klasa reprezentuje powiadomienie o wywołaniu zwrotnym od `cancellation_token`. Gdy `register` metody `cancellation_token` umożliwia otrzymywanie powiadomień o czasie wystąpienia anulowania `cancellation_token_registration` obiekt jest zwracany jako uchwyt do funkcji zwrotnej tak, aby obiekt wywołujący może żądać konkretne wywołanie zwrotne nie jest już dokonywane przy użyciu `deregister` metody.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -76,8 +76,9 @@ cancellation_token_registration(cancellation_token_registration&& _Src);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `_Src`  
-  
+*_Src*<br/>
+`cancellation_token_registration` Aby skopiować lub przenieść.
+ 
 ##  <a name="operator_neq"></a> operator! = 
 
 ```
@@ -85,8 +86,9 @@ bool operator!= (const cancellation_token_registration& _Rhs) const;
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `_Rhs`  
-  
+*_Rhs*<br/>
+`cancellation_token_registration` Do porównania.
+ 
 ### <a name="return-value"></a>Wartość zwracana  
   
 ##  <a name="operator_eq"></a> operator = 
@@ -98,8 +100,9 @@ cancellation_token_registration& operator= (cancellation_token_registration&& _S
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `_Src`  
-  
+*_Src*<br/>
+`cancellation_token_registration` Do przypisania.
+ 
 ### <a name="return-value"></a>Wartość zwracana  
   
 ##  <a name="operator_eq_eq"></a> operator == 
@@ -109,8 +112,9 @@ bool operator== (const cancellation_token_registration& _Rhs) const;
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `_Rhs`  
-  
+*_Rhs*<br/>
+`cancellation_token_registration` Do porównania.
+ 
 ### <a name="return-value"></a>Wartość zwracana  
   
 ## <a name="see-also"></a>Zobacz też  

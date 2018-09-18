@@ -1,5 +1,5 @@
 ---
-title: Błąd cxx0021 programu Expression Evaluator | Dokumentacja firmy Microsoft
+title: Błąd ewaluatora wyrażeń CXX0021 | Dokumentacja firmy Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,20 +17,21 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 996fc46982d809da5e0b37b83f2940102892167e
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 8ef765286d022b26aeed0ca98c9f43f94f5d17f8
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33299370"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46025779"
 ---
 # <a name="expression-evaluator-error-cxx0021"></a>Błąd CXX0021 programu Expression Evaluator
-Struktura lub Unia użyta jako wartość skalarna  
-  
- Struktura lub związek została użyta w wyrażeniu, ale element nie został określony.  
-  
- Manipulowanie struktury lub Unii zmiennej, nazwa zmiennej może występować samodzielnie, bez kwalifikatora pola. Jeśli struktura lub związek jest używany w wyrażeniu, musi być kwalifikowana za pomocą elementu określone potrzeby.  
-  
- Określ element, którego wartość ma być używany w wyrażeniu.  
-  
- Ten błąd jest taki sam jak CAN0021.
+
+struktury lub Unii, używane jako skalarne
+
+Struktury lub Unii, które zostało użyte w wyrażeniu, ale element nie został określony.
+
+Manipulowanie struktury lub Unii zmiennej, nazwa zmiennej może występować samodzielnie, bez kwalifikatora pola. Jeśli struktury lub Unii jest używany w wyrażeniu, musi być kwalifikowana za pomocą określonego elementu żądanego.
+
+Określ element, którego wartość ma być używany w wyrażeniu.
+
+Ten błąd jest taka sama jak CAN0021.

@@ -1,5 +1,5 @@
 ---
-title: Kompilatora (poziom 1) ostrzeżenie C4020 | Dokumentacja firmy Microsoft
+title: Kompilator ostrzeżenie (poziom 1) C4020 | Dokumentacja firmy Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,36 +16,37 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0bb7926e22802178ff3cbcb710fbc9b74e7138f4
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: ef0303c1a811304cd2edaa8622208dc4bada86ef
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33274570"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46046735"
 ---
-# <a name="compiler-warning-level-1-c4020"></a>Kompilator C4020 ostrzegawcze (poziom 1)
-"Funkcja": zbyt wiele parametrów rzeczywistych  
-  
- Liczba rzeczywistych parametrów w wywołaniu funkcji przekracza liczbę parametrów formalnych w prototypu funkcji lub definicji. Kompilator przekazuje bardzo rzeczywistych parametrów zgodnie z konwencji wywołania funkcji.  
-  
- Poniższy przykład generuje C4020:  
-  
-```  
-// C4020.c  
-// compile with: /W1 /c  
-void f(int);  
-int main() {  
-   f(1,2);   // C4020  
-}  
-```  
-  
- Możliwe rozwiązanie:  
-  
-```  
-// C4020b.c  
-// compile with: /c  
-void f(int);  
-int main() {  
-   f(1);  
-}  
+# <a name="compiler-warning-level-1-c4020"></a>Kompilator ostrzeżenie (poziom 1) C4020
+
+'Funkcja': zbyt wiele parametrów rzeczywistych
+
+Liczba rzeczywistych parametrów w wywołaniu funkcji przekracza liczbę parametrów formalnych w definicji lub prototypu funkcji. Kompilator przekazuje bardzo rzeczywistych parametrów, zgodnie z konwencji wywołania funkcji.
+
+Poniższy przykład spowoduje wygenerowanie C4020:
+
+```
+// C4020.c
+// compile with: /W1 /c
+void f(int);
+int main() {
+   f(1,2);   // C4020
+}
+```
+
+Możliwe rozwiązanie:
+
+```
+// C4020b.c
+// compile with: /c
+void f(int);
+int main() {
+   f(1);
+}
 ```

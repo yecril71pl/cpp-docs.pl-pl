@@ -1,5 +1,5 @@
 ---
-title: C2541 błąd kompilatora | Dokumentacja firmy Microsoft
+title: Błąd kompilatora C2541 | Dokumentacja firmy Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,28 +16,29 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9a44d03ad19746719360f0528dceae8d88be6be8
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 492f6f938af5e09221bff3c1c848c9688b28931d
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33229069"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46049153"
 ---
-# <a name="compiler-error-c2541"></a>C2541 błąd kompilatora
-słowo kluczowe "delete": Usuń: nie można usunąć obiektów, które nie są wskaźnikami  
-  
- [Usunąć](../../cpp/delete-operator-cpp.md) użyto operatora na obiekcie, który nie jest wskaźnikiem.  
-  
- Poniższy przykład generuje C2541:  
-  
-```  
-// C2541.cpp  
-int main() {  
-   int i;  
-   delete i;   // C2541 i not a pointer  
-  
-   // OK  
-   int *ip = new int;  
-   delete ip;  
-}  
+# <a name="compiler-error-c2541"></a>Błąd kompilatora C2541
+
+"delete": Usuń: nie można usunąć obiektów, które nie są wskaźnikami
+
+[Usuń](../../cpp/delete-operator-cpp.md) operator została użyta na obiekt, który nie jest wskaźnikiem.
+
+Poniższy przykład spowoduje wygenerowanie C2541:
+
+```
+// C2541.cpp
+int main() {
+   int i;
+   delete i;   // C2541 i not a pointer
+
+   // OK
+   int *ip = new int;
+   delete ip;
+}
 ```

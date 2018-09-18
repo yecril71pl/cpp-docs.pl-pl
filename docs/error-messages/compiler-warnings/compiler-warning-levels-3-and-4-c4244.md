@@ -1,5 +1,5 @@
 ---
-title: Kompilatora (poziom 3 i 4) ostrzeżenie C4244 | Dokumentacja firmy Microsoft
+title: Kompilator ostrzeżenie (poziomy 3 i 4) C4244 | Dokumentacja firmy Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,63 +16,64 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 36908fa5f46cee0b86941ec630c3716c918e556f
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 55c862ee304c0ad0d95cbde34a5b6bb9b52798d9
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33296900"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46039507"
 ---
-# <a name="compiler-warning-levels-3-and-4-c4244"></a>Kompilator C4244 ostrzegawcze (poziom 3 i 4)
-Konwersja "konwersji" z "type1" na "type2", możliwa utrata danych  
-  
- Integer — typ jest konwertowana na mniejszy typ całkowity. Jeśli to jest ostrzeżenie poziom 4 *type1* jest `int` i *type2* jest mniejszy niż `int`. W przeciwnym razie jest to poziom 3 (przypisane wartości typu [__int64](../../cpp/int8-int16-int32-int64.md) do zmiennej typu `unsigned int`). Może wystąpić możliwa utrata danych.  
-  
- Jeśli otrzymasz C4244, należy albo zmień programu zgodne typy lub Dodaj logikę do kodu, aby upewnić się, możliwe wartości z zakresu zawsze będzie zgodny z typami, które są używane.  
-  
- C4244 można również uruchomić na poziomie 2; zobacz [C4244 ostrzeżenie kompilatora (poziom 2)](../../error-messages/compiler-warnings/compiler-warning-level-2-c4244.md) Aby uzyskać więcej informacji.  
-  
- Konwersja może być problem z powodu niejawną konwersję.  
-  
- Poniższy przykład generuje C4244:  
-  
-```  
-// C4244_level4.cpp  
-// compile with: /W4  
-int aa;  
-unsigned short bb;  
-int main() {  
-   int b = 0, c = 0;  
-   short a = b + c;   // C4244  
-  
-   bb += c;   // C4244  
-   bb = bb + c;   // C4244  
-   bb += (unsigned short)aa;   // C4244  
-   bb = bb + (unsigned short)aa;   // OK  
-}  
-```  
-  
- Aby uzyskać więcej informacji, zobacz [popularne konwersje arytmetyczne](../../c-language/usual-arithmetic-conversions.md).  
-  
-```  
-// C4244_level3.cpp  
-// compile with: /W3  
-int main() {  
-   __int64 i = 8;  
-   unsigned int ii = i;   // C4244  
-}  
-```  
-  
- Ostrzeżenie C4244 może wystąpić, gdy tworzenia kodu dla celów 64-bitowym, który nie generuje ostrzeżenie podczas kompilowania dla celów 32-bitowych. Na przykład różnica wskaźników jest ilość 32-bitowych na platformach 32-bitowych, ale ilość 64-bitowych na platformach 64-bitowych.  
-  
- Poniższy przykład generuje C4244 podczas kompilacji dla celów 64-bitowe:  
-  
-```  
-// C4244_level3_b.cpp  
-// compile with: /W3   
-int main() {  
-   char* p1 = 0;  
-   char* p2 = 0;  
-   int x = p2 - p1;   // C4244  
-}  
+# <a name="compiler-warning-levels-3-and-4-c4244"></a>Kompilator ostrzeżenie (poziomy 3 i 4) C4244
+
+'conversion' konwersja z 'Typ1' na 'Typ2', możliwa utrata danych
+
+Typ liczby całkowitej jest konwertowany na mniejszy typ liczby całkowitej. Jeśli jest to ostrzeżenie poziom 4 *type1* jest `int` i *type2* jest mniejszy niż `int`. W przeciwnym razie jest to poziom 3 (przypisane wartości typu [__int64](../../cpp/int8-int16-int32-int64.md) do zmiennej typu `unsigned int`). Może wystąpić możliwa utrata danych.
+
+Jeśli C4244, powinny albo zmienić program, aby używać zgodnych typów lub dodać logikę do kodu, aby upewnić się, że zakres możliwych wartości zawsze będzie zgodny z typami, którego używasz.
+
+C4244 można również wyzwalać na poziomie 2; zobacz [ostrzeżenie kompilatora (poziom 2) C4244](../../error-messages/compiler-warnings/compiler-warning-level-2-c4244.md) Aby uzyskać więcej informacji.
+
+Konwersja może być problem z powodu konwersji niejawnych.
+
+Poniższy przykład spowoduje wygenerowanie C4244:
+
+```
+// C4244_level4.cpp
+// compile with: /W4
+int aa;
+unsigned short bb;
+int main() {
+   int b = 0, c = 0;
+   short a = b + c;   // C4244
+
+   bb += c;   // C4244
+   bb = bb + c;   // C4244
+   bb += (unsigned short)aa;   // C4244
+   bb = bb + (unsigned short)aa;   // OK
+}
+```
+
+Aby uzyskać więcej informacji, zobacz [zwykle konwersje arytmetyczne](../../c-language/usual-arithmetic-conversions.md).
+
+```
+// C4244_level3.cpp
+// compile with: /W3
+int main() {
+   __int64 i = 8;
+   unsigned int ii = i;   // C4244
+}
+```
+
+Ostrzeżenie C4244 może wystąpić, gdy tworzenie kod dla 64-bitowym, który nie generuje ostrzeżenia podczas kompilowania dla celów 32-bitowych. Na przykład różnica między wskaźników jest ilość 32-bitowego na platformach 32-bitowych, ale ilość 64-bitowego na platformach 64-bitowych.
+
+Poniższy przykład spowoduje wygenerowanie C4244 podczas kompilowania dla celów 64-bitowych:
+
+```
+// C4244_level3_b.cpp
+// compile with: /W3
+int main() {
+   char* p1 = 0;
+   char* p2 = 0;
+   int x = p2 - p1;   // C4244
+}
 ```

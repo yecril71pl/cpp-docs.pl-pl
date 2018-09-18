@@ -23,13 +23,14 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b3b4e95b2b8f0ab2b6542727972751983587c75a
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 8cc1333d7cd79574134cac34fb617227206f01e8
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32388042"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46055341"
 ---
 # <a name="operator-new-crt"></a>nowy operator (CRT)
-Począwszy od programu Visual Studio 2013, Universal C Runtime (Biblioteka UCRT) nie obsługuje już nowy operator specyficzne dla języka C++ i operatora Usuń funkcje. Teraz są częścią standardowej biblioteki C++. Aby uzyskać więcej informacji, zobacz [nowy i delete — operatory](../cpp/new-and-delete-operators.md) i [operatora new](../cpp/new-operator-cpp.md) w dokumentacja języka C++. 
+
+Począwszy od programu Visual Studio 2013, uniwersalne środowisko uruchomieniowe języka C (UCRT) nie obsługuje już nowy operator specyficznych dla języka C++ i operatora Usuń funkcje. Teraz są częścią standardowej biblioteki języka C++. Aby uzyskać więcej informacji, zobacz [nowych i delete — operatory](../cpp/new-and-delete-operators.md) i [operatora new](../cpp/new-operator-cpp.md) w dokumentacji języka C++.
 

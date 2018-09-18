@@ -1,5 +1,5 @@
 ---
-title: Kompilatora (poziom 1) ostrzeżenie C4083 | Dokumentacja firmy Microsoft
+title: Kompilator ostrzeżenie (poziom 1) C4083 | Dokumentacja firmy Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,25 +16,26 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a0d0d7baa0e521484841c638cef4332001a65e78
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 64e81b6a68a9584e4fb30829e15da6472212ce05
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33277683"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46046371"
 ---
-# <a name="compiler-warning-level-1-c4083"></a>Kompilator C4083 ostrzegawcze (poziom 1)
-Oczekiwano 'token'; Znaleziono identyfikator 'Identyfikator'  
-  
- Identyfikator występuje w niewłaściwym miejscu w **#pragma** instrukcji.  
-  
-## <a name="example"></a>Przykład  
-  
-```  
-// C4083.cpp  
-// compile with: /W1 /LD  
-#pragma warning disable:4083    // C4083  
-#pragma warning(disable:4083)   //correct  
-```  
-  
- Sprawdź składnię [#pragma](../../preprocessor/pragma-directives-and-the-pragma-keyword.md) dyrektywy.
+# <a name="compiler-warning-level-1-c4083"></a>Kompilator ostrzeżenie (poziom 1) C4083
+
+Oczekiwano 'token'; Znaleziono identyfikator 'Identyfikator'
+
+Identyfikator odbywa się w niewłaściwym miejscu w **#pragma** instrukcji.
+
+## <a name="example"></a>Przykład
+
+```
+// C4083.cpp
+// compile with: /W1 /LD
+#pragma warning disable:4083    // C4083
+#pragma warning(disable:4083)   //correct
+```
+
+Sprawdź składnię [#pragma](../../preprocessor/pragma-directives-and-the-pragma-keyword.md) dyrektywy.

@@ -27,12 +27,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2893644dc4dbec2d1ebc25be42ba4b30fbd19cb1
-ms.sourcegitcommit: e9ce38decc9f986edab5543de3464b11ebccb123
+ms.openlocfilehash: e96b9d70e48b63eafb8cb3c6f4938f962114fd39
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/13/2018
-ms.locfileid: "42465037"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46059488"
 ---
 # <a name="currentscheduler-class"></a>CurrentScheduler — Klasa
 Reprezentuje klasą abstrakcyjną dla bieżącego harmonogramu skojarzony kontekst wywołania.  
@@ -80,8 +80,8 @@ static void __cdecl Create(const SchedulerPolicy& _Policy);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `_Policy`  
- Zasadę harmonogram, który opisuje zachowanie nowo utworzonego harmonogramu.  
+*Zasady _dziennika*<br/>
+Zasadę harmonogram, który opisuje zachowanie nowo utworzonego harmonogramu.  
   
 ### <a name="remarks"></a>Uwagi  
  Dołączanie usługi scheduler do Kontekst wywołania niejawnie umieszcza licznik odwołań w harmonogramie.  
@@ -103,8 +103,8 @@ static ScheduleGroup* __cdecl CreateScheduleGroup(location& _Placement);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `_Placement`  
- Odwołanie do lokalizacji, w którym zadania należące do grupy harmonogramu będzie można ukierunkowane wykonywanie w.  
+*_Umieszczenia.*<br/>
+Odwołanie do lokalizacji, w którym zadania należące do grupy harmonogramu będzie można ukierunkowane wykonywanie w.  
   
 ### <a name="return-value"></a>Wartość zwracana  
  Wskaźnik do nowo utworzonego harmonogramu grupy. To `ScheduleGroup` obiekt ma liczbą początkowej odwołania dla niej.  
@@ -198,8 +198,8 @@ static bool __cdecl IsAvailableLocation(const location& _Placement);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `_Placement`  
- Odwołanie do lokalizacji, aby zbadać bieżącego harmonogramu o.  
+*_Umieszczenia.*<br/>
+Odwołanie do lokalizacji, aby zbadać bieżącego harmonogramu o.  
   
 ### <a name="return-value"></a>Wartość zwracana  
  Wskazanie, czy lokalizacja jest określona przez `_Placement` argument jest dostępny na bieżącego harmonogramu.  
@@ -218,8 +218,8 @@ static void __cdecl RegisterShutdownEvent(HANDLE _ShutdownEvent);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `_ShutdownEvent`  
- Dojście do obiektu zdarzeń Windows, który zostanie zasygnalizowane przez środowisko uruchomieniowe gdy harmonogram skojarzone z bieżącym kontekstem zamyka i niszczy sam.  
+*_ShutdownEvent*<br/>
+Dojście do obiektu zdarzeń Windows, który zostanie zasygnalizowane przez środowisko uruchomieniowe gdy harmonogram skojarzone z bieżącym kontekstem zamyka i niszczy sam.  
   
 ### <a name="remarks"></a>Uwagi  
  Jeśli nie ma żadnych harmonogramu dołączyć do kontekstu wywołania, wywołanie tej metody spowoduje [scheduler_not_attached —](scheduler-not-attached-class.md) zgłaszanego wyjątku.  
@@ -240,14 +240,14 @@ static void __cdecl ScheduleTask(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `_Proc`  
- Wskaźnik do funkcji wykonać, aby wykonać treści zadania lekki.  
+*_Proc*<br/>
+Wskaźnik do funkcji wykonać, aby wykonać treści zadania lekki.  
   
- `_Data`  
- Pusty wskaźnik do danych, które zostaną przekazane jako parametr do treści zadania.  
+*_Dane*<br/>
+Pusty wskaźnik do danych, które zostaną przekazane jako parametr do treści zadania.  
   
- `_Placement`  
- Odwołanie do lokalizacji, w którym zadanie lekkie będzie można ukierunkowane wykonywanie w.  
+*_Umieszczenia.*<br/>
+Odwołanie do lokalizacji, w którym zadanie lekkie będzie można ukierunkowane wykonywanie w.  
   
 ### <a name="remarks"></a>Uwagi  
  Ta metoda powoduje procesu domyślnego harmonogramu są tworzone i/lub dołączyć do wywoływania kontekstu, jeśli nie harmonogramu obecnie skojarzony kontekst wywołania.  

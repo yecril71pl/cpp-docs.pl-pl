@@ -12,19 +12,21 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 27e92a5caf620bdd0b2f6379021b1fd4d5e0ba07
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 8d76d81687ed143e1e834b706012b68b6f1f52a8
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32387963"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46023452"
 ---
 # <a name="specifying-calling-conventions"></a>Określanie konwencji wywoływania
-**Microsoft Specific**  
-  
- Informacje dotyczące konwencji wywoływania znajdują się w temacie [tematy konwencji wywoływania](../cpp/calling-conventions.md).  
-  
- **KOŃCOWY określonych firmy Microsoft**  
-  
-## <a name="see-also"></a>Zobacz też  
- [Atrybuty funkcji](../c-language/function-attributes.md)
+
+**Microsoft Specific**
+
+Aby uzyskać informacji na temat konwencji wywoływania, zobacz [tematy konwencji wywoływania](../cpp/calling-conventions.md).
+
+**END specyficzny dla Microsoft**
+
+## <a name="see-also"></a>Zobacz też
+
+[Atrybuty funkcji](../c-language/function-attributes.md)

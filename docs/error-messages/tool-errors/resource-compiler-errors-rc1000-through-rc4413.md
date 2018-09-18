@@ -1,5 +1,5 @@
 ---
-title: Od błędy kompilatora zasobów rc1000 do RC4413 | Dokumentacja firmy Microsoft
+title: Zasób kompilatora błędów od RC1000 do rc4413 | Dokumentacja firmy Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -12,12 +12,13 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 31d40925f42f6082439bedadec8416f780e57016
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 14264cfa506595ba8ecde1d5e7747cd43b6e6543
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33339907"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46045422"
 ---
 # <a name="resource-compiler-errors-rc1000-through-rc4413"></a>Błędy kompilatora zasobów od RC1000 do RC4413
-Ta sekcja jest odniesieniem do błędów generowanych przez narzędzia kompilacji. Aby uzyskać pomoc dotyczącą danego komunikatu o błędzie, kliknij przycisk myszy na numer błędu w oknie danych wyjściowych i naciśnij klawisz F1 albo wpisz numer błędu w **Wyszukaj** pola w indeksie.
+
+Ta sekcja jest odniesieniem do błędów generowanych przez narzędzia kompilacji. Aby uzyskać pomoc dotyczącą danego komunikatu o błędzie, kliknij wskaźnik myszy na numer błędu w oknie danych wyjściowych i naciśnij klawisz F1 albo wpisz numer błędu w **poszukaj** pola w indeksie.

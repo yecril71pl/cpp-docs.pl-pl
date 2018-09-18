@@ -1,5 +1,5 @@
 ---
-title: C2602 błąd kompilatora | Dokumentacja firmy Microsoft
+title: Błąd kompilatora C2602 | Dokumentacja firmy Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,31 +16,32 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 07fd581d8d95ae33ba2a38ea45a458f2085e0ef1
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 22c4b2ec765259aa7797b49c003f1b2e2860226f
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33229307"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46049530"
 ---
-# <a name="compiler-error-c2602"></a>C2602 błąd kompilatora
-"class::Identifier" nie jest elementem członkowskim klasy podstawowej "class"  
-  
- `Identifier` nie są dostępne, ponieważ nie jest elementem członkowskim dziedziczone z dowolnej klasy podstawowej.  
-  
- Poniższy przykład generuje C2602:  
-  
-```  
-// C2602.cpp  
-// compile with: /c  
-struct X {  
-   int x;  
-};  
-struct A {  
-   int a;  
-};  
-struct B : public A {  
-   X::x;   // C2602 B is not derived from X  
-   A::a;   // OK  
-};  
+# <a name="compiler-error-c2602"></a>Błąd kompilatora C2602
+
+"class::Identifier" nie jest składową klasy bazowej "class"
+
+`Identifier` nie są dostępne, ponieważ nie jest składową odziedziczoną z dowolnej klasy bazowej.
+
+Poniższy przykład spowoduje wygenerowanie C2602:
+
+```
+// C2602.cpp
+// compile with: /c
+struct X {
+   int x;
+};
+struct A {
+   int a;
+};
+struct B : public A {
+   X::x;   // C2602 B is not derived from X
+   A::a;   // OK
+};
 ```

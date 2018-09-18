@@ -1,5 +1,5 @@
 ---
-title: C3752 błąd kompilatora | Dokumentacja firmy Microsoft
+title: Błąd kompilatora C3752 | Dokumentacja firmy Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,14 +16,15 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6fcc71d7e7418571b606be96e571c2b855f8497f
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: d12ae854e54080fe0b80c3e4ffd2d4b3f514651f
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33265288"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46041731"
 ---
-# <a name="compiler-error-c3752"></a>C3752 błąd kompilatora
-"klasy atrybutu": nie można sklasyfikować atrybutu; "— słowo kluczowe" nie należy używać w tym kontekście  
-  
- Atrybut zdefiniowane przez użytkownika została zastosowana niepoprawnie.
+# <a name="compiler-error-c3752"></a>Błąd kompilatora C3752
+
+"klasy atrybutu": nie można sklasyfikować atrybutu; Nie można używać "— słowo kluczowe" w tym kontekście
+
+Atrybut użytkownika została zastosowana niepoprawnie.

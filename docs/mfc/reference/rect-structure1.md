@@ -1,5 +1,5 @@
 ---
-title: RECT Structure1 | Dokumentacja firmy Microsoft
+title: Struktura1 RECT | Dokumentacja firmy Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,15 +18,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3b61c794b8fa383eeea62459a5a83948ef2efe10
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 2e71459a1c22b9295c5c88ce29da9e494660fa26
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33372596"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46046306"
 ---
-# <a name="rect-structure1"></a>RECT Structure1
-`RECT` Struktury definiuje współrzędne górnego lewego i prawego dolnego rogu prostokąta.  
+# <a name="rect-structure1"></a>Struktura1 RECT
+`RECT` Struktury określa współrzędne lewym i prawym dolnym rogu prostokąta.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -40,17 +40,17 @@ typedef struct tagRECT {
 ```  
   
 ## <a name="members"></a>Elementy członkowskie  
- `left`  
- Określa współrzędną x górnego lewego rogu prostokąta.  
+`left`<br/>
+Określa współrzędną x lewego górnego rogu prostokąta.  
   
- `top`  
- Określa współrzędną y górnego lewego rogu prostokąta.  
+`top`<br/>
+Określa współrzędną y lewego górnego rogu prostokąta.  
   
- `right`  
- Określa współrzędną x prawym dolnym rogu prostokąta.  
+`right`<br/>
+Określa współrzędną x w prawym dolnym rogu prostokąta.  
   
- `bottom`  
- Określa współrzędną y prawego dolnego rogu prostokąta.  
+`bottom`<br/>
+Określa współrzędną y prawego dolnego rogu prostokąta.  
   
 ## <a name="example"></a>Przykład  
  [!code-cpp[NVC_MFC_Utilities#38](../../mfc/codesnippet/cpp/rect-structure1_1.cpp)]  

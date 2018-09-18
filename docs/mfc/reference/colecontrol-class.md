@@ -344,12 +344,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9e9e12409320bd82e25f94c02cba83b946252fff
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: d3c5f68d35c4cf77073de3f8d2e6090f62a6dae2
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43196442"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46050102"
 ---
 # <a name="colecontrol-class"></a>Colecontrol — klasa
 Potężne klasa podstawowa dla rozwoju formantów OLE.
@@ -1692,17 +1692,14 @@ enum ControlFlags {
 
 Domyślnie `GetControlFlags` zwraca `fastBeginPaint | clipPaintDC`.
 
-`fastBeginPaint` Jeśli ustawiona, funkcja używa begin programu paint przeznaczonym dla formantów OLE zamiast [BeginPaint](/windows/desktop/api/winuser/nf-winuser-beginpaint) interfejsu API (ustawienie domyślne).
-
-`clipPaintDC` Jeśli nie zostanie ustawiona, wyłącza wywołanie `IntersectClipRect` przez `COleControl` i uzyskuje korzyści małej szybkości. Jeśli używasz aktywacji niepowiązanej z oknami flaga nie wywiera żadnego wpływu.
-
-`pointerInactive` Jeśli ustawiona, zapewnia interakcji z myszą, mimo że formant jest nieaktywny przez włączenie `COleControl`przez implementację `IPointerInactive` interfejs, który jest domyślnie wyłączona.
-
-`noFlickerActivate` Jeśli ustawiona, eliminuje operacji bardzo rysowania i towarzyszące migotania visual. Opcja używana podczas Twoja kontrolka rysuje samą siebie identycznie w Stanach nieaktywne i aktywne. Jeśli używasz aktywacji niepowiązanej z oknami flaga nie wywiera żadnego wpływu.
-
-`windowlessActivate` Jeśli ustawiona, wskazuje kontroli nad używa aktywacji niepowiązanej z oknami.
-
-`canOptimizeDraw` Jeśli ustawiona, wskazuje, że kontrolka będzie wykonywać zoptymalizowanego rysowania, jeśli kontener obsługuje tę funkcję.
+|||
+|-|-|
+|`fastBeginPaint`|Jeśli ustawiona, funkcja używa begin programu paint przeznaczonym dla formantów OLE zamiast [BeginPaint](/windows/desktop/api/winuser/nf-winuser-beginpaint) interfejsu API (ustawienie domyślne).|
+|`clipPaintDC`|Jeśli nie zostanie ustawiona, wyłącza wywołanie `IntersectClipRect` przez `COleControl` i uzyskuje korzyści małej szybkości. Jeśli używasz aktywacji niepowiązanej z oknami flaga nie wywiera żadnego wpływu.|
+|`pointerInactive`|Jeśli ustawiona, zapewnia interakcji z myszą, mimo że formant jest nieaktywny przez włączenie `COleControl`przez implementację `IPointerInactive` interfejs, który jest domyślnie wyłączona.|
+|`noFlickerActivate`|Jeśli ustawiona, eliminuje operacji bardzo rysowania i towarzyszące migotania visual. Opcja używana podczas Twoja kontrolka rysuje samą siebie identycznie w Stanach nieaktywne i aktywne. Jeśli używasz aktywacji niepowiązanej z oknami flaga nie wywiera żadnego wpływu.|
+|`windowlessActivate`|Jeśli ustawiona, wskazuje kontroli nad używa aktywacji niepowiązanej z oknami.|
+|`canOptimizeDraw`|Jeśli ustawiona, wskazuje, że kontrolka będzie wykonywać zoptymalizowanego rysowania, jeśli kontener obsługuje tę funkcję.|
 
 Aby uzyskać więcej informacji na temat `GetControlFlags` zobaczyć inne optymalizacje formantów OLE [kontrolek ActiveX: Optymalizacja](../../mfc/mfc-activex-controls-optimization.md).
 

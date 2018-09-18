@@ -1,7 +1,7 @@
 ---
 title: Projekty CMake w programie Visual C++ | Dokumentacja firmy Microsoft
 ms.custom: ''
-ms.date: 04/28/2018
+ms.date: 09/17/2018
 ms.reviewer: ''
 ms.suite: ''
 ms.technology:
@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b0e7852ad3fbd88b815aea8266bafc2879494d8a
-ms.sourcegitcommit: f923f667065cd6c4203d10ca9520600ee40e5f84
+ms.openlocfilehash: c107fff98a322664ba38e0b57be59c743b464df8
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/24/2018
-ms.locfileid: "42900670"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46060359"
 ---
 # <a name="cmake-projects-in-visual-c"></a>Projekty CMake w programie Visual C++
 
@@ -64,7 +64,7 @@ Możesz otworzyć foldery zawierające dowolną liczbę projekty narzędzia CMak
 
 ## <a name="import-an-existing-cache"></a>Importowanie istniejąca pamięć podręczna
 
-Podczas importowania istniejącego pliku CMakeCache.txt programu Visual Studio wyodrębnia niestandardowe zmienne i automatycznie tworzy plik CMakeSettings.json wstępnie wypełniona na ich podstawie. Oryginalny pamięci podręcznej nie jest modyfikowany w dowolny sposób i nadal można używać z poziomu wiersza polecenia lub przy użyciu dowolnego narzędzia lub IDE został użyty do jego wygenerowania. Nowy plik CMakeSettings.json znajduje się obok projektu głównego pliku CMakeLists.txt. Program Visual Studio generuje nową pamięć podręczną na podstawie pliku ustawień.  
+Podczas importowania istniejącego pliku CMakeCache.txt programu Visual Studio wyodrębnia niestandardowe zmienne i automatycznie tworzy wstępnie wypełnionych [CMakeSettings.json](#cmake_settings) na ich podstawie plików. Oryginalny pamięci podręcznej nie jest modyfikowany w dowolny sposób i nadal można używać z poziomu wiersza polecenia lub przy użyciu dowolnego narzędzia lub IDE został użyty do jego wygenerowania. Nowy plik CMakeSettings.json znajduje się obok projektu głównego pliku CMakeLists.txt. Program Visual Studio generuje nową pamięć podręczną na podstawie pliku ustawień.  
 
 
 **Visual Studio 2017 w wersji 15.7 lub nowszej**: możesz zastąpić Generowanie automatyczne pamięci podręcznej w **narzędzia | Opcje | Narzędzie CMake | Ogólne** okna dialogowego.
@@ -218,11 +218,27 @@ Ponieważ Ninja jest przeznaczona dla szybkości szybkie kompilacji zamiast elas
 Aby określić generator programu Visual Studio, otwórz pliku CMakeSettings.json z menu głównego, wybierając **CMake | Zmień ustawienia narzędzia CMake**. Usuń "Ninja", a następnie wpisz "V". Aktywuje funkcję IntelliSense, która pozwala na dokonanie wyboru generator, który ma.
 
 1. **wybrany element buildRoot**: mapuje **-DCMAKE_BINARY_DIR** Przełącz i określa, w którym zostanie utworzona pamięci podręcznej narzędzia CMake. Jeśli folder nie istnieje, zostanie utworzony.
-1. **zmienne**: zawiera pary nazwa wartość, zmienne narzędzia CMake, które będą przekazywane jako **-D**_nazwa_**=**_wartość_ do narzędzia CMake. Instrukcje kompilacji projektu narzędzia CMake określić dodanie wszelkie zmienne bezpośrednio do pliku pamięci podręcznej narzędzia CMake, zaleca się dodanie ich w tym miejscu zamiast tego.
+1. **zmienne**: zawiera pary nazwa wartość, zmienne narzędzia CMake, które będą przekazywane jako **-D**_nazwa_**=**_wartość_ do narzędzia CMake. Instrukcje kompilacji projektu narzędzia CMake określić dodanie wszelkie zmienne bezpośrednio do pliku pamięci podręcznej narzędzia CMake, zaleca się dodanie ich w tym miejscu zamiast tego. Poniższy przykład pokazuje, jak określić pary nazwa wartość:
+
+```json
+
+"variables": [
+    {
+      "name": "CMAKE_CXX_COMPILER",
+      "value": "C:/Program Files (x86)/Microsoft Visual Studio/157/Enterprise/VC/Tools/MSVC/14.14.26428/bin/HostX86/x86/cl.exe"
+    },
+    {
+      "name": "CMAKE_C_COMPILER",
+      "value": "C:/Program Files (x86)/Microsoft Visual Studio/157/Enterprise/VC/Tools/MSVC/14.14.26428/bin/HostX86/x86/cl.exe"
+    }
+  ]
+
+```
+
 1. **cmakeCommandArgs**: określa żadnych dodatkowych przełączników, które mają być przekazane do CMake.exe.
-1. **Typ konfiguracji**: Określa typ konfiguracji kompilacji dla wybranego generatora. Obecnie obsługiwane wartości to "Debug", "MinSizeRel", "Wersja" i "RelWithDebInfo".
-1. **ctestCommandArgs**: Określa dodatkowe przełączniki do przekazania do narzędzia CTest podczas uruchamiania testów.
-1. **buildCommandArgs**: Określa dodatkowe przełączniki do przekazania do bazowego systemu kompilacji. Na przykład przekazując - v, gdy przy użyciu generatora Ninja wymusza Ninja w danych wyjściowych wiersze polecenia.
+2. **Typ konfiguracji**: Określa typ konfiguracji kompilacji dla wybranego generatora. Obecnie obsługiwane wartości to "Debug", "MinSizeRel", "Wersja" i "RelWithDebInfo".
+3. **ctestCommandArgs**: Określa dodatkowe przełączniki do przekazania do narzędzia CTest podczas uruchamiania testów.
+4. **buildCommandArgs**: Określa dodatkowe przełączniki do przekazania do bazowego systemu kompilacji. Na przykład przekazując - v, gdy przy użyciu generatora Ninja wymusza Ninja w danych wyjściowych wiersze polecenia.
 
 ### <a name="environment-variables"></a>Zmienne środowiskowe
 

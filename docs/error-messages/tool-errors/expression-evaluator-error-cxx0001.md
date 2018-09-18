@@ -1,5 +1,5 @@
 ---
-title: Błąd cxx0001 programu Expression Evaluator | Dokumentacja firmy Microsoft
+title: Błąd ewaluatora wyrażeń CXX0001 | Dokumentacja firmy Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,14 +17,15 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d6fb4fd777fad0c324e8a2a32722d5908d7c2d84
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: b4ea3475ffce417e7e8647f935fc191dfcf58b73
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33294021"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46057852"
 ---
 # <a name="expression-evaluator-error-cxx0001"></a>Błąd CXX0001 programu Expression Evaluator
-Funkcja użytkownika wykonującego wyjątku  
-  
- Kod wykonywany spowodował ogólny błąd ochrony. Ten błąd jest taki sam jak CAN0001.
+
+wyjątek wykonywanej funkcji użytkownika
+
+Wykonywany kod spowodowało ogólny błąd ochrony. Ten błąd jest taka sama jak CAN0001.

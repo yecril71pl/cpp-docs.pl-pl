@@ -1,5 +1,5 @@
 ---
-title: Błąd cxx0020 programu Expression Evaluator | Dokumentacja firmy Microsoft
+title: Błąd ewaluatora wyrażeń CXX0020 | Dokumentacja firmy Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,18 +17,19 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d00bfda6aa058690aed1441f6eec84fe6552d76c
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: e3846bb5fca3e3590069f6183dabdca7a7ca5453
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33297683"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46032469"
 ---
 # <a name="expression-evaluator-error-cxx0020"></a>Błąd CXX0020 programu Expression Evaluator
-typy argumentów operacji jest nieprawidłowy dla tej operacji  
-  
- Operator został zastosowany do wyrażenia o nieprawidłowym typie dla tego operatora.  
-  
- Na przykład nie jest prawidłową można pobrać adresu rejestru lub indeks dolny tablicy za pomocą wyrażenia zmiennoprzecinkowych.  
-  
- Ten błąd jest taki sam jak CAN0020.
+
+typy argumentów operacji jest nieprawidłowy dla tej operacji
+
+Operator został zastosowany do wyrażenia z nieprawidłowym typem dla tego operatora.
+
+Na przykład nie jest prawidłową przyjąć adresu rejestru lub indeks dolny tablicy o liczbie wyrażenie typu zmiennoprzecinkowego.
+
+Ten błąd jest taka sama jak CAN0020.

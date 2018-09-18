@@ -1,5 +1,5 @@
 ---
-title: C2341 błąd kompilatora | Dokumentacja firmy Microsoft
+title: Błąd kompilatora C2341 | Dokumentacja firmy Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,33 +16,34 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 18cc222129f3f12b5e7b5c6cb66e090907ff42a3
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: adac1e6f6e5f5d58b6091a389537a42f0e496b31
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33197380"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46020202"
 ---
-# <a name="compiler-error-c2341"></a>C2341 błąd kompilatora
-'Nazwa sekcji': segment musi być zdefiniowany przy użyciu #pragma data_seg, code_seg lub wcześniejszej sekcji do użycia  
-  
- [Przydzielić](../../cpp/allocate.md) odwołuje się do segmentu jeszcze nie jest zdefiniowany przez [code_seg](../../preprocessor/code-seg.md), [data_seg](../../preprocessor/data-seg.md), lub [sekcji](../../preprocessor/section.md) pragm.  
-  
- Poniższy przykład generuje C2341:  
-  
-```  
-// C2341.cpp  
-// compile with: /c  
-__declspec(allocate(".test"))   // C2341  
-int j = 1;  
-```  
-  
- Możliwe rozwiązanie:  
-  
-```  
-// C2341b.cpp  
-// compile with: /c  
-#pragma data_seg(".test")  
-__declspec(allocate(".test"))  
-int j = 1;  
+# <a name="compiler-error-c2341"></a>Błąd kompilatora C2341
+
+'Nazwa sekcji': segment musi być zdefiniowany przy użyciu #pragma data_seg, code_seg lub wcześniejszej sekcji, aby użyć
+
+[Przydzielić](../../cpp/allocate.md) odwołuje się do segmentu nie zostały jeszcze zdefiniowane przez [code_seg](../../preprocessor/code-seg.md), [data_seg](../../preprocessor/data-seg.md), lub [sekcji](../../preprocessor/section.md) pragmy.
+
+Poniższy przykład spowoduje wygenerowanie C2341:
+
+```
+// C2341.cpp
+// compile with: /c
+__declspec(allocate(".test"))   // C2341
+int j = 1;
+```
+
+Możliwe rozwiązanie:
+
+```
+// C2341b.cpp
+// compile with: /c
+#pragma data_seg(".test")
+__declspec(allocate(".test"))
+int j = 1;
 ```

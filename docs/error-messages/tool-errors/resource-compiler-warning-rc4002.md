@@ -16,16 +16,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 04c932b5f120f540f34cd0d6bdfef51be99bfbb4
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 400d748f0ce9cafa4d11690f1d6c9fbfa4af90e7
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33322773"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46058994"
 ---
 # <a name="resource-compiler-warning-rc4002"></a>Ostrzeżenie RC4002 kompilatora zasobów
-zbyt wiele parametrów rzeczywistych dla makra "identyfikatora"  
-  
- Liczba rzeczywistych parametrów określonych o podanym identyfikatorze jest większa niż liczba parametrów formalnych podane w definicji makra identyfikatora.  
-  
- Dodatkowe parametry rzeczywiste zostały zebrane, ale ignorowane podczas rozszerzania makra.
+
+zbyt wiele parametrów rzeczywistych dla makra 'Identyfikator'
+
+Liczba rzeczywistych parametrów, które określono o podanym identyfikatorze jest większa niż liczba parametrów formalnych w definicji makra identyfikatora.
+
+Dodatkowe parametry rzeczywiste zostały zebrane, ale ignorowane podczas rozszerzania makra.

@@ -22,15 +22,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 695081e6513965a89222d1108c632e2f22580184
-ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
+ms.openlocfilehash: 5e8864b5c10b87813d89c55de806ceed24998754
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33689207"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46044577"
 ---
 # <a name="combinable-class"></a>combinable — Klasa
-`combinable<T>` Obiektu mają na celu dostarczenie prywatnego wątku kopie danych, aby wykonać obliczenia podrzędnych lokalnej wątku zwolnienia blokady podczas algorytmy równoległe. Na koniec operacji równoległej obliczenia podrzędne prywatnego wątku można następnie scalić w wynik końcowy. Ta klasa można zamiast udostępnionego zmiennej i może spowodować zwiększenie wydajności, jeśli byłoby wiele rywalizacji udostępnionego zmiennej.  
+`combinable<T>` Obiektu mają na celu dostarczenie prywatnego wątku kopie danych w celu wykonywania obliczeń podrzędnych wolne od blokady wątków lokalnych podczas algorytmy równoległe. Na koniec operacji równoległej obliczeń podrzędnych prywatnego wątku może następnie zostać scalony wynik końcowy. Ta klasa można używać zamiast udostępnionej zmiennej i może spowodować zwiększenie wydajności, jeśli w przeciwnym razie będzie wiele rywalizacji o zasoby w tej zmiennej udostępnionych.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -40,8 +40,8 @@ class combinable;
 ```  
   
 #### <a name="parameters"></a>Parametry  
- `T`  
- Typ danych scalonych wynik końcowy. Typ musi mieć konstruktora kopiującego i konstruktora domyślnego.  
+*T*<br/>
+Typ danych scalonych wynik końcowy. Typ musi mieć Konstruktor kopiujący i domyślnego konstruktora.  
   
 ## <a name="members"></a>Elementy członkowskie  
   
@@ -49,17 +49,17 @@ class combinable;
   
 |Nazwa|Opis|  
 |----------|-----------------|  
-|[combinable —](#ctor)|Przeciążone. Tworzy nową `combinable` obiektu.|  
+|[combinable —](#ctor)|Przeciążone. Tworzy nowy `combinable` obiektu.|  
 |[~ combinable — destruktor](#dtor)|Niszczy `combinable` obiektu.|  
   
 ### <a name="public-methods"></a>Metody publiczne  
   
 |Nazwa|Opis|  
 |----------|-----------------|  
-|[Wyczyść](#clear)|Czyści wszystkie pośrednie wyniki obliczeniową z poprzedniego użycia.|  
-|[Łączenie](#combine)|Oblicza wartość końcowego z zestawu obliczenia podrzędnych lokalnej wątku przez wywołanie metody łączenia podany obiekt.|  
-|[combine_each](#combine_each)|Oblicza końcowej z zestawu obliczenia podrzędnych lokalnej wątku przez wywołanie metody obiekt Połącz podany raz na lokalnej wątku podrzędnego obliczeń. Wynik końcowy jest zgromadzonych przez obiekt funkcji.|  
-|[lokalne](#local)|Przeciążone. Zwraca odwołanie do obliczenia podrzędne prywatnego wątku.|  
+|[Usuń zaznaczenie](#clear)|Czyści wszystkie wyniki pośrednie obliczeniową podczas korzystania z poprzedniego.|  
+|[Łączenie](#combine)|Oblicza wartość końcową z zestawu obliczeń podrzędnych lokalnej wątku, wywołując funkcję łączenia podane.|  
+|[combine_each](#combine_each)|Oblicza wartość końcową z zestawu obliczeń podrzędnych lokalnej wątku, wywołując funkcję łączenia podane raz na obliczenie podrzędnych lokalnej wątku. Wynik końcowy są zbierane przez obiekt funkcji.|  
+|[lokalne](#local)|Przeciążone. Zwraca odwołanie do obliczeń podrzędnych prywatnego wątku.|  
   
 ### <a name="public-operators"></a>Operatory publiczne  
   
@@ -78,9 +78,9 @@ class combinable;
   
  **Namespace:** współbieżności  
   
-##  <a name="clear"></a> Wyczyść 
+##  <a name="clear"></a> Usuń zaznaczenie 
 
- Czyści wszystkie pośrednie wyniki obliczeniową z poprzedniego użycia.  
+ Czyści wszystkie wyniki pośrednie obliczeniową podczas korzystania z poprzedniego.  
   
 ```
 void clear();
@@ -88,7 +88,7 @@ void clear();
   
 ##  <a name="ctor"></a> combinable — 
 
- Tworzy nową `combinable` obiektu.  
+ Tworzy nowy `combinable` obiektu.  
   
 ```
 combinable();
@@ -100,21 +100,21 @@ combinable(const combinable& _Copy);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `_Function`  
- Typ obiektu, obiekt inicjowania.  
+*_Function*<br/>
+Typ obiektu funktor inicjowania.  
   
- `_FnInitialize`  
- Funkcja, która będzie wywoływana w celu zainicjowania każdej nowej wartości prywatnego wątku typu `T`. Operator wywołania funkcji z podpisem musi obsługiwać `T ()`.  
+*_FnInitialize*<br/>
+Funkcja, która zostanie wywołana w celu zainicjowania każdej nowej wartości prywatnego wątku typu `T`. Sieć VPN musi obsługiwać operatorem wywołania funkcji z podpisem `T ()`.  
   
- `_Copy`  
- Istniejące `combinable` kopiowanego do tego obiektu.  
+*_Kopiuj*<br/>
+Istniejące `combinable` obiektu do skopiowania do tego.  
   
 ### <a name="remarks"></a>Uwagi  
- Pierwszy Konstruktor inicjuje nowych elementów przy użyciu domyślnego konstruktora dla typu `T`.  
+ Pierwszy Konstruktor inicjuje nowe elementy przy użyciu domyślnego konstruktora dla typu `T`.  
   
- Drugi Konstruktor inicjuje nowe elementy za pomocą obiekt inicjowania podana jako `_FnInitialize` parametru.  
+ Drugi Konstruktor inicjuje nowe elementy przy użyciu funktor inicjowania podana jako `_FnInitialize` parametru.  
   
- Trzeci Konstruktor jest Konstruktor kopiujący.  
+ Trzeci Konstruktor jest konstruktorem kopiowania.  
   
 ##  <a name="dtor"></a> ~ combinable — 
 
@@ -126,7 +126,7 @@ combinable(const combinable& _Copy);
   
 ##  <a name="combine"></a> Łączenie 
 
- Oblicza wartość końcowego z zestawu obliczenia podrzędnych lokalnej wątku przez wywołanie metody łączenia podany obiekt.  
+ Oblicza wartość końcową z zestawu obliczeń podrzędnych lokalnej wątku, wywołując funkcję łączenia podane.  
   
 ```
 template<typename _Function>
@@ -134,18 +134,18 @@ T combine(_Function _FnCombine) const;
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `_Function`  
- Typ obiektu funkcji, który zostanie wywołany, do łączenia dwóch obliczenia podrzędnych lokalnej wątku.  
+*_Function*<br/>
+Typ obiektu funkcji, która zostanie wywołana połączyć dwa obliczeń podrzędnych lokalnej wątku.  
   
- `_FnCombine`  
- Obiekt, który jest używany do łączenia podrzędnego obliczenia. Podpis jest `T (T, T)` lub `T (const T&, const T&)`, i musi być asocjacyjnych i przemienne.  
+*_FnCombine*<br/>
+Funktorem, który jest używany do łączenia podrzędnego obliczeń. Jego podpis jest `T (T, T)` lub `T (const T&, const T&)`, i musi być asocjacyjna i przemiennego.  
   
 ### <a name="return-value"></a>Wartość zwracana  
- Wynik końcowy łączenia wszystkich obliczeń podrzędne prywatnego wątku.  
+ Wynik końcowy łączenia wszystkich obliczeń podrzędnych prywatnego wątku.  
   
-##  <a name="combine_each"></a> combine_each 
+##  <a name="combine_each"></a> combine_each — 
 
- Oblicza końcowej z zestawu obliczenia podrzędnych lokalnej wątku przez wywołanie metody obiekt Połącz podany raz na lokalnej wątku podrzędnego obliczeń. Wynik końcowy jest zgromadzonych przez obiekt funkcji.  
+ Oblicza wartość końcową z zestawu obliczeń podrzędnych lokalnej wątku, wywołując funkcję łączenia podane raz na obliczenie podrzędnych lokalnej wątku. Wynik końcowy są zbierane przez obiekt funkcji.  
   
 ```
 template<typename _Function>
@@ -153,15 +153,15 @@ void combine_each(_Function _FnCombine) const;
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `_Function`  
- Typ obiektu — funkcja, która będzie wywołana połączyć pojedynczy obliczeń podrzędnych lokalnej wątku.  
+*_Function*<br/>
+Typ obiektu funkcji, która będzie wywoływana w celu łączenia jednej obliczeń podrzędnych lokalnej wątku.  
   
- `_FnCombine`  
- Obiekt, który służy do łączenia jednego podrzędnego obliczeń. Podpis jest `void (T)` lub `void (const T&)`, a musi być asocjacyjnych i przemienne.  
+*_FnCombine*<br/>
+Funktorem, który jest używany do łączenia jednej obliczeń podrzędnych. Jego podpis jest `void (T)` lub `void (const T&)`i musi być asocjacyjna i przemiennego.  
   
 ##  <a name="local"></a> lokalne 
 
- Zwraca odwołanie do obliczenia podrzędne prywatnego wątku.  
+ Zwraca odwołanie do obliczeń podrzędnych prywatnego wątku.  
   
 ```
 T& local();
@@ -170,11 +170,11 @@ T& local(bool& _Exists);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `_Exists`  
- Odwołanie do typu boolean. Wartość logiczna odwołuje się ten argument zostanie ustawiona do `true` Jeśli obliczenia podrzędnych już istnieje dla tego wątku i ustaw `false` Jeśli była to pierwszy podrzędny obliczeń dla tego wątku.  
+*_Exists*<br/>
+Odwołanie na wartość logiczną. Wartość logiczna, odwołuje się ten argument jest równa `true` Jeśli obliczenie podrzędne już istnieje w tym wątku i ustaw `false` , jakby to była pierwszym obliczeń podrzędnych w tym wątku.  
   
 ### <a name="return-value"></a>Wartość zwracana  
- Odwołanie do obliczenia podrzędne prywatnego wątku.  
+ Odwołanie do obliczeń podrzędnych prywatnego wątku.  
   
 ##  <a name="operator_eq"></a> operator = 
 
@@ -185,11 +185,11 @@ combinable& operator= (const combinable& _Copy);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `_Copy`  
- Istniejące `combinable` kopiowanego do tego obiektu.  
+*_Kopiuj*<br/>
+Istniejące `combinable` obiektu do skopiowania do tego.  
   
 ### <a name="return-value"></a>Wartość zwracana  
- Odwołanie do tego `combinable` obiektu.  
+ Odwołanie do `combinable` obiektu.  
   
 ## <a name="see-also"></a>Zobacz też  
  [Przestrzeń nazw współbieżności](concurrency-namespace.md)

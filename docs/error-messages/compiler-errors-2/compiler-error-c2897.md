@@ -1,5 +1,5 @@
 ---
-title: C2897 błąd kompilatora | Dokumentacja firmy Microsoft
+title: Błąd kompilatora C2897 | Dokumentacja firmy Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,40 +16,43 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1c3de4c0d3e6a93a783dfb660bc26f07be6fcacf
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 2d05663b913a3e310c091b62a81483f28bbf2c09
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33245887"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46049835"
 ---
-# <a name="compiler-error-c2897"></a>C2897 błąd kompilatora
-destruktor/finalizator nie może być szablonem funkcji  
-  
- Destruktory i finalizatory nie może zostać przeciążony, więc zadeklarowanie destruktora jako szablon (co może zdefiniować zestaw destruktory) nie jest dozwolone.  
-  
- Poniższy przykład generuje C2897:  
-  
-## <a name="example"></a>Przykład  
- Poniższy przykład generuje C2897.  
-  
-```  
-// C2897.cpp  
-// compile with: /c  
-class X {  
-public:  
-   template<typename T> ~X() {}   // C2897  
-};  
-```  
-  
-## <a name="example"></a>Przykład  
- Poniższy przykład generuje C2897.  
-  
-```  
-// C2897_b.cpp  
-// compile with: /c /clr  
-ref struct R2 {  
-protected:  
-   template<typename T> !R2(){}   // C2897 error  
-};  
+# <a name="compiler-error-c2897"></a>Błąd kompilatora C2897
+
+destruktor/finalizator nie może być szablonem funkcji
+
+Destruktory i finalizatory nie mogą być przeciążone, więc zadeklarowanie destruktora jako szablon (który zdefiniuje zbiór destruktory) nie jest dozwolone.
+
+Poniższy przykład spowoduje wygenerowanie C2897:
+
+## <a name="example"></a>Przykład
+
+Poniższy przykład spowoduje wygenerowanie C2897.
+
+```
+// C2897.cpp
+// compile with: /c
+class X {
+public:
+   template<typename T> ~X() {}   // C2897
+};
+```
+
+## <a name="example"></a>Przykład
+
+Poniższy przykład spowoduje wygenerowanie C2897.
+
+```
+// C2897_b.cpp
+// compile with: /c /clr
+ref struct R2 {
+protected:
+   template<typename T> !R2(){}   // C2897 error
+};
 ```

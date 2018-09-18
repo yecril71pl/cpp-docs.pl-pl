@@ -1,5 +1,5 @@
 ---
-title: C2839 błąd kompilatora | Dokumentacja firmy Microsoft
+title: Błąd kompilatora C2839 | Dokumentacja firmy Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,14 +16,15 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8c7d9fed2b36ee395923d0e370fd04b10c4c474d
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: e9ddee01f0f97f6b20519403c6e5c11da1a9b4bd
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33255590"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46050999"
 ---
-# <a name="compiler-error-c2839"></a>C2839 błąd kompilatora
-Nieprawidłowy typ zwracany "type" dla przeciążonego "operator ->"  
-  
- `->` Operator musi zwracać klasy, struktury, lub Unii lub odwołanie do jednej.
+# <a name="compiler-error-c2839"></a>Błąd kompilatora C2839
+
+Nieprawidłowy typ zwracany "type" dla przeciążonego "operator ->"
+
+`->` Operatora musi zwracać klasy, struktury, lub Unii lub odwołanie do jednej.

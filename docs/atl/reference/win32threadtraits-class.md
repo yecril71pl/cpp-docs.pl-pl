@@ -20,12 +20,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7b8b481c917292c672711c308ac39c052ed4ea1d
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: baab04880c19cac1e0c291f2b4d8a274dea1c21b
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43752124"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46044941"
 ---
 # <a name="win32threadtraits-class"></a>Klasa Win32ThreadTraits
 
@@ -80,22 +80,22 @@ static HANDLE CreateThread(
 
 ### <a name="parameters"></a>Parametry
 
-*lpsa*  
+*lpsa*<br/>
 Atrybuty zabezpieczeń dla nowego wątku.
 
-*dwStackSize*  
+*dwStackSize*<br/>
 Rozmiar stosu dla nowego wątku.
 
-*pfnThreadProc*  
+*pfnThreadProc*<br/>
 Procedura wątku nowego wątku.
 
-*pvParam*  
+*pvParam*<br/>
 Parametr, który zostanie przekazany do procedury wątku.
 
-*dwCreationFlags*  
+*dwCreationFlags*<br/>
 Tworzenie flagi (0 lub CREATE_SUSPENDED).
 
-*pdwThreadId*  
+*pdwThreadId*<br/>
 [out] Adres zmiennej typu DWORD, że w przypadku powodzenia odbiera identyfikator wątku dla nowo utworzonego wątku.
 
 ### <a name="return-value"></a>Wartość zwracana

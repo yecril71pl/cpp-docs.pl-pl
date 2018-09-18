@@ -1,5 +1,5 @@
 ---
-title: C2586 błąd kompilatora | Dokumentacja firmy Microsoft
+title: Błąd kompilatora C2586 | Dokumentacja firmy Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,25 +16,26 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3cf21a9379f7b0d07575dae54d9406eb5cf39094
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: a85097f6383ddb788e1278aebf4732591fd38ec2
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33229372"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46060413"
 ---
-# <a name="compiler-error-c2586"></a>C2586 błąd kompilatora
-Składnia niepoprawne konwersji zdefiniowanej przez użytkownika: niedozwolone elementy pośrednie  
-  
- Pośredni operatora konwersji jest niedozwolona.  
-  
- Poniższy przykład generuje C2586:  
-  
-```  
-// c2586.cpp  
-// compile with: /c  
-struct C {  
-   * operator int();   // C2586  
-   operator char();   // OK  
-};  
+# <a name="compiler-error-c2586"></a>Błąd kompilatora C2586
+
+Składnia Nieprawidłowa konwersja zdefiniowana przez użytkownika: niedozwolone elementy pośrednie
+
+Pośredni operatora konwersji nie jest dozwolone.
+
+Poniższy przykład spowoduje wygenerowanie C2586:
+
+```
+// c2586.cpp
+// compile with: /c
+struct C {
+   * operator int();   // C2586
+   operator char();   // OK
+};
 ```

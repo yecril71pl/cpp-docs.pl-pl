@@ -16,16 +16,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 22f59045bfc0e0d7261541005be6c70680c1e906
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: d68eff2e15b4a7b0f8bafa64b4629b953e9430d9
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33302571"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46058851"
 ---
 # <a name="linker-tools-error-lnk1296"></a>Błąd narzędzi konsolidatora LNK1296
-Nie można załadować filename  
-  
- Daną bibliotekę DLL nie jest dostępny.  
-  
- Możliwe lokalizacje biblioteki DLL są bieżącego katalogu, katalogu systemowego katalogu systemu Windows i katalogi określone w zmiennej środowiskowej PATH.
+
+Nie można załadować, nazwa_pliku
+
+Danej biblioteki DLL nie jest dostępny.
+
+Możliwe lokalizacje biblioteki DLL są bieżącego katalogu, katalogu systemowym, katalogu Windows i katalogi określone w zmiennej środowiskowej PATH.

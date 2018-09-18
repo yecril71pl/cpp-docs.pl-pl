@@ -16,14 +16,15 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d0382364c168fa2d9eb10999440ef9f175c60af4
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: b9ac25151c6d6c5d174d2af80f253e23a4b0765a
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33322253"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46037518"
 ---
 # <a name="resource-compiler-error-rc2167"></a>Błąd kompilatora zasobów RC2167
-nierozpoznane pole VERSIONINFO; BEGIN "ani" Oczekiwano przecinka  
-  
- Znaleziono nierozpoznane pola w **stałe** częścią **VERSIONINFO** deklaracji struktury. A **VERSIONINFO** pole musi zawierać dane DWORD rozdzielonych przecinkami.
+
+Nierozpoznane pola VERSIONINFO; BEGIN "ani" Oczekiwano przecinka
+
+Znaleziono nierozpoznane pola w **stałe** wchodzi w skład **VERSIONINFO** deklaracji struktury. A **VERSIONINFO** pole musi zawierać dane DWORD, oddzielając wartości przecinkami.

@@ -16,16 +16,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 00b5dae643ec20e9d7d8a8dcdf41d9debe7e6b7e
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 33c10062cac83984fb1c68835780497b89c4cbc1
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33198641"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46050524"
 ---
 # <a name="fatal-error-c1013"></a>Błąd krytyczny C1013
-ograniczenie kompilatora: zbyt wiele otwartych nawiasów  
-  
- Wyrażenie zawiera zbyt wiele poziomów nawiasów w jedno wyrażenie. Uprość wyrażenie lub podziel go na wiele instrukcji.  
-  
- Przed Visual C++ 6.0 dodatek Service Pack 3 limit zagnieżdżonych nawias w jedno wyrażenie było 59. Obecnie limit zagnieżdżonych nawiasem wynosi 256.
+
+ograniczenie kompilatora: zbyt wiele otwartych nawiasów
+
+Wyrażenie zawiera zbyt wiele poziomów nawiasów w jednym wyrażeniu. Uprość wyrażenie lub podzielenie go na wiele instrukcji.
+
+Przed Visual C++ 6.0 dodatek Service Pack 3 limit zagnieżdżone nawiasy w jednym wyrażeniu był 59. Obecnie limit zagnieżdżone nawiasy to 256.

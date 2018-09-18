@@ -1,5 +1,5 @@
 ---
-title: C3662 błąd kompilatora | Dokumentacja firmy Microsoft
+title: Błąd kompilatora C3662 | Dokumentacja firmy Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,39 +16,41 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4f9e5f9c48b9884939c6236075b3cf2227163ab8
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: d04705d588e22c22e607bc6e1010eeec0d9c3f41
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33265912"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46053469"
 ---
-# <a name="compiler-error-c3662"></a>C3662 błąd kompilatora
-"członek": specyfikator przesłonięcia "specyfikatora" dozwolone tylko dla funkcji Członkowskich zarządzane lub klasach WinRT  
-  
- Specyfikator przesłonięcia została użyta dla elementu członkowskiego typu natywnego, co jest niedozwolone.  
-  
- Aby uzyskać więcej informacji, zobacz [jawne zastąpienia](../../windows/explicit-overrides-cpp-component-extensions.md).  
-  
-## <a name="example"></a>Przykład  
- Poniższy przykład generuje C3662.  
-  
-```  
-// C3662.cpp  
-// compile with: /clr /c  
-struct S {  
-   virtual void f();  
-};  
-  
-struct S1 : S {  
-   virtual void f() new;   // C3662  
-};  
-  
-ref struct T {  
-   virtual void f();  
-};  
-  
-ref struct T1 : T {  
-   virtual void f() new;   // OK  
-};  
+# <a name="compiler-error-c3662"></a>Błąd kompilatora C3662
+
+"członek": specyfikator przesłonięcia "specyfikatora" dozwolone tylko dla funkcji składowych zarządzanych lub klasach WinRT
+
+Specyfikator przesłonięcia została użyta w składowej typu natywnego, co jest niedozwolone.
+
+Aby uzyskać więcej informacji, zobacz [jawne zastępowanie](../../windows/explicit-overrides-cpp-component-extensions.md).
+
+## <a name="example"></a>Przykład
+
+Poniższy przykład spowoduje wygenerowanie C3662.
+
+```
+// C3662.cpp
+// compile with: /clr /c
+struct S {
+   virtual void f();
+};
+
+struct S1 : S {
+   virtual void f() new;   // C3662
+};
+
+ref struct T {
+   virtual void f();
+};
+
+ref struct T1 : T {
+   virtual void f() new;   // OK
+};
 ```

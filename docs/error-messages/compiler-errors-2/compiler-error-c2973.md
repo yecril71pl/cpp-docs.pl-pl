@@ -1,5 +1,5 @@
 ---
-title: C2973 błąd kompilatora | Dokumentacja firmy Microsoft
+title: Błąd kompilatora C2973 | Dokumentacja firmy Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,14 +16,15 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1e377c9692fdbed0e5d7bcae16c5b96473fa6955
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: b179b56edaf6dc661d1c3c9c9a781195a2d37ee6
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33241984"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46043290"
 ---
-# <a name="compiler-error-c2973"></a>C2973 błąd kompilatora
-Nieprawidłowy argument szablonu "number"  
-  
- Sprawdź definicję szablonu, aby znaleźć poprawne typy.
+# <a name="compiler-error-c2973"></a>Błąd kompilatora C2973
+
+Nieprawidłowy argument szablonu "liczba"
+
+Sprawdź definicję szablonu, aby znaleźć poprawne typy.

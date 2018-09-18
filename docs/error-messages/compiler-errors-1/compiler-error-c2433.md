@@ -1,5 +1,5 @@
 ---
-title: C2433 błąd kompilatora | Dokumentacja firmy Microsoft
+title: Błąd kompilatora C2433 | Dokumentacja firmy Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,26 +16,28 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8445e35b929dc3fa2d9d6507f0b6469df26130db
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 081e63c83909319164a2903d8277a0b26a1e6901
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33197848"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46059956"
 ---
-# <a name="compiler-error-c2433"></a>C2433 błąd kompilatora
-'Identyfikator': 'modyfikator"nie jest dozwolone w deklaracjach danych  
-  
- `friend`, `virtual`, I `inline` deklaracjach danych nie można używać modyfikatorów.  
-  
-## <a name="example"></a>Przykład  
- Poniższy przykład generuje C2433.  
-  
-```  
-// C2433.cpp  
-class C{};  
-  
-int main() {  
-   inline C c;   // C2433  
-}  
+# <a name="compiler-error-c2433"></a>Błąd kompilatora C2433
+
+'Identyfikator': 'modyfikator"nie jest dozwolone w deklaracjach danych
+
+`friend`, `virtual`, I `inline` modyfikatorów nie można używać dla deklaracji danych.
+
+## <a name="example"></a>Przykład
+
+Poniższy przykład spowoduje wygenerowanie C2433.
+
+```
+// C2433.cpp
+class C{};
+
+int main() {
+   inline C c;   // C2433
+}
 ```

@@ -1,5 +1,5 @@
 ---
-title: C3160 błąd kompilatora | Dokumentacja firmy Microsoft
+title: Błąd kompilatora C3160 | Dokumentacja firmy Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,31 +16,32 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 670dd386be82b4356262cb59442d36fb1d6f646b
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: bf3ecc18e1afc9b13e47ad8b20bb92f7686d0cfc
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33249245"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46042276"
 ---
-# <a name="compiler-error-c3160"></a>C3160 błąd kompilatora
-"wskaźnik": element członkowski danych zarządzanego lub klasy WinRT nie może mieć tego typu  
-  
- Wskaźniki kolekcji wewnętrznej pamięci może wskazywać wnętrza zarządzanego lub klasy WinRT. Ponieważ wolniej niż obiekt całości wskaźniki i wymagają specjalnej obsługi przez moduł garbage collector, nie można zadeklarować wewnętrznych wskaźników zarządzane jako elementy członkowskie klasy.  
-  
- Poniższy przykład generuje C3160:  
-  
-```  
-// C3160.cpp  
-// compile with: /clr  
-ref struct A {  
-   // cannot create interior pointers inside a class  
-   interior_ptr<int> pg;   // C3160  
-   int g;   // OK  
-   int* pg2;   // OK  
-};  
-  
-int main() {  
-   interior_ptr<int> pg2;   // OK  
-}  
-```  
+# <a name="compiler-error-c3160"></a>Błąd kompilatora C3160
+
+"wskaźnik": element członkowski danych zarządzanej lub klasa WinRT nie może mieć tego typu
+
+Wskaźniki kolekcji wyrzucania elementów wewnętrznych mogą wskazywać na wnętrze zarządzanej lub klasa WinRT. Ponieważ są wolniejsze od wskaźniki całego obiektu i wymagają specjalnej obsługi przez moduł odśmiecania pamięci, nie można zadeklarować wewnętrznymi wskaźnikami zarządzanymi jako elementy członkowskie klasy.
+
+Poniższy przykład spowoduje wygenerowanie C3160:
+
+```
+// C3160.cpp
+// compile with: /clr
+ref struct A {
+   // cannot create interior pointers inside a class
+   interior_ptr<int> pg;   // C3160
+   int g;   // OK
+   int* pg2;   // OK
+};
+
+int main() {
+   interior_ptr<int> pg2;   // OK
+}
+```

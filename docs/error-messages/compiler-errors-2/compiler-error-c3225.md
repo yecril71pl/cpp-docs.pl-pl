@@ -1,5 +1,5 @@
 ---
-title: C3225 błąd kompilatora | Dokumentacja firmy Microsoft
+title: Błąd kompilatora C3225 | Dokumentacja firmy Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,60 +16,64 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8f9f6691ddacf6b3c1347b9fd4cac134433741a6
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: a8d8b1251b9c13a71faf771c85924a75681deab7
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33250582"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46033254"
 ---
-# <a name="compiler-error-c3225"></a>C3225 błąd kompilatora
-argument typu generycznego dla "arg" nie może być "type", musi być typem wartości lub typ dojścia  
-  
- Argument typu generycznego nie ma poprawnego typu.  
-  
- Aby uzyskać więcej informacji, zobacz [ogólne](../../windows/generics-cpp-component-extensions.md).  
-  
-## <a name="example"></a>Przykład  
- Nie można utworzyć wystąpienia typu ogólnego typu macierzystego. Poniższy przykład generuje C3225.  
-  
-```  
-// C3225.cpp  
-// compile with: /clr  
-class A {};  
-  
-ref class B {};  
-  
-generic <class T>  
-ref class C {};  
-  
-int main() {  
-   C<A>^ c = gcnew C<A>;   // C3225  
-   C<B^>^ c2 = gcnew C<B^>;   // OK  
-}  
-```  
-  
-## <a name="example"></a>Przykład  
- W poniższym przykładzie tworzone składnika za pomocą języka C#. Należy zauważyć, że ograniczenie Określa, że typ ogólny można wdrożyć tylko z typem wartości.  
-  
-```  
-// C3225_b.cs  
-// compile with: /target:library  
-// a C# program  
-public class MyList<T> where T: struct {}  
-```  
-  
-## <a name="example"></a>Przykład  
- Ten przykład wykorzystuje C# — utworzone składnika i narusza ograniczenie, które mogą być tylko MyList utworzyć wystąpienia typu wartości innych niż <xref:System.Nullable>. Poniższy przykład generuje C3225.  
-  
-```  
-// C3225_c.cpp  
-// compile with: /clr  
-#using "C3225_b.dll"  
-ref class A {};  
-value class B {};  
-int main() {  
-   MyList<A> x;   // C3225  
-   MyList<B> y;   // OK  
-}  
+# <a name="compiler-error-c3225"></a>Błąd kompilatora C3225
+
+argument Typ generycznego dla "arg" nie może być "type", musi on być typem wartościowym lub typem uchwytu
+
+Argument typu ogólnego nie jest poprawnego typu.
+
+Aby uzyskać więcej informacji, zobacz [ogólne](../../windows/generics-cpp-component-extensions.md).
+
+## <a name="example"></a>Przykład
+
+Nie można utworzyć wystąpienia typu ogólnego z typu natywnego. Poniższy przykład spowoduje wygenerowanie C3225.
+
+```
+// C3225.cpp
+// compile with: /clr
+class A {};
+
+ref class B {};
+
+generic <class T>
+ref class C {};
+
+int main() {
+   C<A>^ c = gcnew C<A>;   // C3225
+   C<B^>^ c2 = gcnew C<B^>;   // OK
+}
+```
+
+## <a name="example"></a>Przykład
+
+Poniższy przykład tworzy składnik przy użyciu języka C#. Należy zauważyć, że ograniczenia Określa typ ogólny tylko mogą być utworzone z typem wartości.
+
+```
+// C3225_b.cs
+// compile with: /target:library
+// a C# program
+public class MyList<T> where T: struct {}
+```
+
+## <a name="example"></a>Przykład
+
+W tym przykładzie używa języka C# — utworzone składnika i narusza ograniczenie, które mogą być tylko MyList utworzone za pomocą typu wartości innych niż <xref:System.Nullable>. Poniższy przykład spowoduje wygenerowanie C3225.
+
+```
+// C3225_c.cpp
+// compile with: /clr
+#using "C3225_b.dll"
+ref class A {};
+value class B {};
+int main() {
+   MyList<A> x;   // C3225
+   MyList<B> y;   // OK
+}
 ```

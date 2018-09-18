@@ -1,5 +1,5 @@
 ---
-title: C2616 błąd kompilatora | Dokumentacja firmy Microsoft
+title: Błąd kompilatora C2616 | Dokumentacja firmy Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,16 +16,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6ad7163522fb1155f540293622689fbc0388733f
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: a983f8cd1083fa05499c334ad776a220441db61a
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33233672"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46047424"
 ---
-# <a name="compiler-error-c2616"></a>C2616 błąd kompilatora
-"konwersji": nie można niejawnie przekonwertować non-lvalue "type1" na "type2" nie jest to stała  
-  
- Nie można zainicjować odwołania z non-lvalue.  
-  
- Jest to błąd w obszarze Zgodność ANSI ([/Za](../../build/reference/za-ze-disable-language-extensions.md)) i ostrzeżenia w obszarze rozszerzenia Microsoft (**/Ze**).
+# <a name="compiler-error-c2616"></a>Błąd kompilatora C2616
+
+'conversion': nie można niejawnie przekonwertować non-lvalue 'Typ1' na 'Typ2' który nie jest stałą
+
+Nie można zainicjować odwołanie z non-lvalue.
+
+Jest to błąd w obszarze zgodności ANSI ([/Za](../../build/reference/za-ze-disable-language-extensions.md)) i ostrzeżenia w ramach rozszerzenia Microsoft (**/Ze**).

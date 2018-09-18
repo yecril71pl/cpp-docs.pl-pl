@@ -14,12 +14,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b58bf010be4b05d8c9f024954b51e8cdb176cd4d
-ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
+ms.openlocfilehash: 89f6ab1bd378309750984a466c30c224bee89ca7
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/01/2018
-ms.locfileid: "39405785"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46060034"
 ---
 # <a name="event-handling-in-native-c"></a>Obsługa zdarzeń w natywnym kodzie C++
 
@@ -27,76 +27,77 @@ W obsłudze zdarzeń natywnego języka C++, można skonfigurować zdarzenia źr�
 
 ## <a name="declaring-events"></a>Deklarowanie zdarzeń
 
-W klasie źródła zdarzeń, użyj [__event](../cpp/event.md) — słowo kluczowe w deklaracji metody, aby zadeklarować metodę jako zdarzenie. Upewnij się zadeklarować metody, ale nie zostanie zdefiniowana. Aby to zrobić wygeneruje błąd kompilatora, ponieważ kompilator określa niejawnie metodę, gdy staje się do zdarzenia. Natywne zdarzenia mogą być metod z zero lub więcej parametrów. Zwracany typ może być typu void lub dowolnego całkowitego.  
-  
+W klasie źródła zdarzeń, użyj [__event](../cpp/event.md) — słowo kluczowe w deklaracji metody, aby zadeklarować metodę jako zdarzenie. Upewnij się zadeklarować metody, ale nie zostanie zdefiniowana. Aby to zrobić wygeneruje błąd kompilatora, ponieważ kompilator określa niejawnie metodę, gdy staje się do zdarzenia. Natywne zdarzenia mogą być metod z zero lub więcej parametrów. Zwracany typ może być typu void lub dowolnego całkowitego.
+
 ## <a name="defining-event-handlers"></a>Definiowanie programów obsługi zdarzeń
 
-W klasie odbiornika zdarzeń należy zdefiniować programy obsługi zdarzeń, które są metodami z podpisami (typy zwracane, konwencje wywoływania i argumenty), które odpowiadają obsługiwanemu zdarzeniu.  
-  
-## <a name="hooking-event-handlers-to-events"></a>Podłączanie programów obsługi zdarzeń do zdarzeń  
+W klasie odbiornika zdarzeń należy zdefiniować programy obsługi zdarzeń, które są metodami z podpisami (typy zwracane, konwencje wywoływania i argumenty), które odpowiadają obsługiwanemu zdarzeniu.
 
-Również w klasie odbiornika zdarzeń, możesz użyć Wewnętrzna funkcja [__hook](../cpp/hook.md) umożliwia kojarzenie zdarzeń z programami obsługi zdarzeń i [__unhook](../cpp/unhook.md) do zdarzenia z programu obsługi zdarzeń. Można podłączyć kilka zdarzeń do programu obsługi zdarzeń lub kilka programów obsługi zdarzeń do zdarzenia.  
-  
-## <a name="firing-events"></a>Wyzwalanie zdarzeń  
+## <a name="hooking-event-handlers-to-events"></a>Podłączanie programów obsługi zdarzeń do zdarzeń
 
-Aby wywołać zdarzenie, po prostu Wywołaj metodę zadeklarowany jako zdarzenie w przypadku klasy źródłowej. Jeśli programy obsługi zostały podłączone do zdarzenia, zostaną wywołane programy obsługi.  
-  
-### <a name="native-c-event-code"></a>Kod natywny zdarzenia języka C++  
+Również w klasie odbiornika zdarzeń, możesz użyć Wewnętrzna funkcja [__hook](../cpp/hook.md) umożliwia kojarzenie zdarzeń z programami obsługi zdarzeń i [__unhook](../cpp/unhook.md) do zdarzenia z programu obsługi zdarzeń. Można podłączyć kilka zdarzeń do programu obsługi zdarzeń lub kilka programów obsługi zdarzeń do zdarzenia.
 
-Poniższy przykład pokazuje, jak wywołać zdarzenie w natywnym kodzie C++. Aby skompilować i uruchomić przykład, zobacz komentarze w kodzie.  
-  
-## <a name="example"></a>Przykład  
-  
-### <a name="code"></a>Kod  
-  
-```cpp  
-// evh_native.cpp  
-#include <stdio.h>  
-  
-[event_source(native)]  
-class CSource {  
-public:  
-   __event void MyEvent(int nValue);  
-};  
-  
-[event_receiver(native)]  
-class CReceiver {  
-public:  
-   void MyHandler1(int nValue) {  
-      printf_s("MyHandler1 was called with value %d.\n", nValue);  
-   }  
-  
-   void MyHandler2(int nValue) {  
-      printf_s("MyHandler2 was called with value %d.\n", nValue);  
-   }  
-  
-   void hookEvent(CSource* pSource) {  
-      __hook(&CSource::MyEvent, pSource, &CReceiver::MyHandler1);  
-      __hook(&CSource::MyEvent, pSource, &CReceiver::MyHandler2);  
-   }  
-  
-   void unhookEvent(CSource* pSource) {  
-      __unhook(&CSource::MyEvent, pSource, &CReceiver::MyHandler1);  
-      __unhook(&CSource::MyEvent, pSource, &CReceiver::MyHandler2);  
-   }  
-};  
-  
-int main() {  
-   CSource source;  
-   CReceiver receiver;  
-  
-   receiver.hookEvent(&source);  
-   __raise source.MyEvent(123);  
-   receiver.unhookEvent(&source);  
-}  
-```  
-  
-### <a name="output"></a>Dane wyjściowe  
-  
+## <a name="firing-events"></a>Wyzwalanie zdarzeń
+
+Aby wywołać zdarzenie, po prostu Wywołaj metodę zadeklarowany jako zdarzenie w przypadku klasy źródłowej. Jeśli programy obsługi zostały podłączone do zdarzenia, zostaną wywołane programy obsługi.
+
+### <a name="native-c-event-code"></a>Kod natywny zdarzenia języka C++
+
+Poniższy przykład pokazuje, jak wywołać zdarzenie w natywnym kodzie C++. Aby skompilować i uruchomić przykład, zobacz komentarze w kodzie.
+
+## <a name="example"></a>Przykład
+
+### <a name="code"></a>Kod
+
+```cpp
+// evh_native.cpp
+#include <stdio.h>
+
+[event_source(native)]
+class CSource {
+public:
+   __event void MyEvent(int nValue);
+};
+
+[event_receiver(native)]
+class CReceiver {
+public:
+   void MyHandler1(int nValue) {
+      printf_s("MyHandler1 was called with value %d.\n", nValue);
+   }
+
+   void MyHandler2(int nValue) {
+      printf_s("MyHandler2 was called with value %d.\n", nValue);
+   }
+
+   void hookEvent(CSource* pSource) {
+      __hook(&CSource::MyEvent, pSource, &CReceiver::MyHandler1);
+      __hook(&CSource::MyEvent, pSource, &CReceiver::MyHandler2);
+   }
+
+   void unhookEvent(CSource* pSource) {
+      __unhook(&CSource::MyEvent, pSource, &CReceiver::MyHandler1);
+      __unhook(&CSource::MyEvent, pSource, &CReceiver::MyHandler2);
+   }
+};
+
+int main() {
+   CSource source;
+   CReceiver receiver;
+
+   receiver.hookEvent(&source);
+   __raise source.MyEvent(123);
+   receiver.unhookEvent(&source);
+}
+```
+
+### <a name="output"></a>Dane wyjściowe
+
 ```Output
-MyHandler2 was called with value 123.  
-MyHandler1 was called with value 123.  
-```  
-  
+MyHandler2 was called with value 123.
+MyHandler1 was called with value 123.
+```
+
 ## <a name="see-also"></a>Zobacz także
- [Obsługa zdarzeń](../cpp/event-handling.md)  
+
+[Obsługa zdarzeń](../cpp/event-handling.md)

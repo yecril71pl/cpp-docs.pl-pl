@@ -1,5 +1,5 @@
 ---
-title: C3298 błąd kompilatora | Dokumentacja firmy Microsoft
+title: Błąd kompilatora C3298 | Dokumentacja firmy Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,28 +16,30 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a67e155fb6cf0eab1ea085839d075d4d835de101
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 06296fed3f33b56cb53cf3bc4531205638f0a204
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33250879"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46053692"
 ---
-# <a name="compiler-error-c3298"></a>C3298 błąd kompilatora
-"constraint_1": nie można użyć "constraint_2" jako ograniczenia ponieważ "constraint_2" ma ograniczenie ref oraz "constraint_1" ma wartość ograniczenia  
-  
- Nie można określić właściwości wykluczają się wzajemnie ograniczenia. Na przykład parametr typu generycznego nie można ograniczyć do typu wartości i typ referencyjny.  
-  
- Aby uzyskać więcej informacji, zobacz [ograniczenia dotyczące parametrów typu ogólnego (C + +/ CLI)](../../windows/constraints-on-generic-type-parameters-cpp-cli.md).  
-  
-## <a name="example"></a>Przykład  
- Poniższy przykład generuje C3298.  
-  
-```  
-// C3298.cpp  
-// compile with: /clr /c   
-generic<class T, class U>  
-where T : ref class  
-where U : T, value class   // C3298  
-public ref struct R {};  
+# <a name="compiler-error-c3298"></a>Błąd kompilatora C3298
+
+"constraint_1": nie można użyć "constraint_2" jako ograniczenie, ponieważ "constraint_2" ma ograniczenie ref oraz 'constraint_1' posiada wartość ograniczenia
+
+Nie można określić wzajemnie wykluczających się właściwości ograniczenia. Na przykład parametru typu generycznego nie może być ograniczony do typu wartości i typ odwołania.
+
+Aby uzyskać więcej informacji, zobacz [ograniczenia dotyczące parametrów typu ogólnego (C + +/ CLI)](../../windows/constraints-on-generic-type-parameters-cpp-cli.md).
+
+## <a name="example"></a>Przykład
+
+Poniższy przykład spowoduje wygenerowanie C3298.
+
+```
+// C3298.cpp
+// compile with: /clr /c
+generic<class T, class U>
+where T : ref class
+where U : T, value class   // C3298
+public ref struct R {};
 ```

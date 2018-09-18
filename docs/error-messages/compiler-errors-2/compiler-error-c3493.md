@@ -1,5 +1,5 @@
 ---
-title: C3493 błąd kompilatora | Dokumentacja firmy Microsoft
+title: Błąd kompilatora C3493 | Dokumentacja firmy Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,49 +16,53 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3aec62bfff59396ec73141746193e4e3f16d84fa
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: ad3c46117e77d432af27321165f1e1ab93d2ef3c
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33257319"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46045110"
 ---
-# <a name="compiler-error-c3493"></a>C3493 błąd kompilatora
-"var" nie może być niejawnie przechwycone, ponieważ nie podano żadnego domyślnego trybu przechwytywania  
-  
- Przechwytywanie wyrażenia lambda pusta, `[]`, określa jawnie nie jest wyrażeniem lambda lub niejawnie przechwytywania żadnych zmiennych.  
-  
-### <a name="to-correct-this-error"></a>Aby poprawić ten błąd  
-  
--   Podaj domyślny tryb przechwytywania, lub  
-  
--   Jawnie przechwycić co najmniej jedną zmienną.  
-  
-## <a name="example"></a>Przykład  
- Poniższy przykład generuje C3493, ponieważ modyfikuje zmienną zewnętrznych, ale określa klauzuli pusty przechwytywania:  
-  
-```  
-// C3493a.cpp  
-  
-int main()  
-{  
-   int m = 55;  
-   [](int n) { m = n; }(99); // C3493  
-}  
-```  
-  
-## <a name="example"></a>Przykład  
- Poniższy przykład rozpoznaje C3493, określając-reference jako domyślny tryb przechwytywania.  
-  
-```  
-// C3493b.cpp  
-  
-int main()  
-{  
-   int m = 55;  
-   [&](int n) { m = n; }(99);  
-}  
-```  
-  
-## <a name="see-also"></a>Zobacz też  
- [Wyrażenia lambda](../../cpp/lambda-expressions-in-cpp.md)
+# <a name="compiler-error-c3493"></a>Błąd kompilatora C3493
+
+"var" nie może być niejawnie przechwycone, ponieważ nie podano żadnego domyślnego trybu przechwytywania
+
+Przechwytywania wyrażenia lambda pusty `[]`, określa, że wyrażenie lambda nie nie zostały jawnie lub niejawnie przechwycić żadnych zmiennych.
+
+### <a name="to-correct-this-error"></a>Aby poprawić ten błąd
+
+- Podaj domyślny tryb przechwytywania, lub
+
+- Jawnie Przechwyć co najmniej jednej zmiennej.
+
+## <a name="example"></a>Przykład
+
+Poniższy przykład generuje C3493, ponieważ modyfikuje zmienną zewnętrznych, ale określa pusta klauzula przechwytywania:
+
+```
+// C3493a.cpp
+
+int main()
+{
+   int m = 55;
+   [](int n) { m = n; }(99); // C3493
+}
+```
+
+## <a name="example"></a>Przykład
+
+Poniższy przykład jest rozpoznawana jako C3493, określając przez odwołanie jako domyślny tryb przechwytywania.
+
+```
+// C3493b.cpp
+
+int main()
+{
+   int m = 55;
+   [&](int n) { m = n; }(99);
+}
+```
+
+## <a name="see-also"></a>Zobacz też
+
+[Wyrażenia lambda](../../cpp/lambda-expressions-in-cpp.md)

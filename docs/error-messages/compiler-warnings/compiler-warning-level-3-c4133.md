@@ -1,5 +1,5 @@
 ---
-title: Kompilatora (poziom 3) ostrzeżenie C4133 | Dokumentacja firmy Microsoft
+title: Kompilator ostrzeżenie (poziom 3) C4133 | Dokumentacja firmy Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,16 +16,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c2f01a3a4b6ccf1750ec3cd0df643c02b7678bac
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 3f22878ebb7caa5549779d4c53b1f6b7068dc480
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33291040"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46056836"
 ---
-# <a name="compiler-warning-level-3-c4133"></a>Kompilator C4133 ostrzegawcze (poziom 3)
-'type': niezgodne typy — od "type1" na "type2"  
-  
- To ostrzeżenie może być spowodowane próby odjąć wskaźniki dwóch różnych typów.  
-  
- Aby uniknąć tego ostrzeżenia, należy podać rzutowanie odpowiedniego typu.
+# <a name="compiler-warning-level-3-c4133"></a>Kompilator ostrzeżenie (poziom 3) C4133
+
+"type": niezgodne typy - z 'Typ1' na 'type2'
+
+To ostrzeżenie może być spowodowany próbą na potrzeby odejmowania dwóch wskaźników różnego typu.
+
+Aby uniknąć tego ostrzeżenia, należy zapewnić odpowiedni typ rzutowania.

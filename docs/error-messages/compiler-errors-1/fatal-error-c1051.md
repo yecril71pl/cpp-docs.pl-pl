@@ -16,14 +16,15 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4d83d399d8ceba495856045f0502cc0f08c21eb7
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 2bbd385d685f671d171ee5aaa967e92acab7fb38
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33198251"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46057941"
 ---
 # <a name="fatal-error-c1051"></a>Błąd krytyczny C1051
-plik bazy danych programu "pdbfile", ma przestarzały format, usuń go i ponownie skompiluj  
-  
- Kompilator nie może zaktualizować pliku bazy danych programu ma numer wersji starszej. Usuń ten plik i ponownie skompilować programu z **/zi** lub **/zi**. Aby uzyskać więcej informacji, zobacz  [ /z7, / zi, /ZI (Format informacji debugowania)](../../build/reference/z7-zi-zi-debug-information-format.md)
+
+plik bazy danych programu "pdbfile", ma przestarzały format, usuń go i ponownie skompilować
+
+Kompilator nie może zaktualizować pliku bazy danych programu, który ma starsze numer wersji. Usuń ten plik i ponownie skompilować program jest połączony z **/zi** lub **/zi**. Aby uzyskać więcej informacji, zobacz  [ /z7, / zi, /ZI (Format informacji debugowania)](../../build/reference/z7-zi-zi-debug-information-format.md)

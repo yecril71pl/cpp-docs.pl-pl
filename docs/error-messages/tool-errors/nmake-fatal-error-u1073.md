@@ -16,22 +16,23 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: dde9ca2f4a15edf6599dcc31b39d9411645f2a6f
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 4c309ed94cd1c984406e0d21f0139e35c6e41d7d
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33316309"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46053946"
 ---
 # <a name="nmake-fatal-error-u1073"></a>Błąd krytyczny NMAKE U1073
-nie wiadomo, jak "targetname"  
-  
- Określony element docelowy nie istnieje, a nie istnieje lub aby zastosować regułę wnioskowania polecenie do wykonania.  
-  
-### <a name="to-fix-by-using-the-following-possible-solutions"></a>Aby rozwiązać problem przy użyciu następujących możliwych rozwiązań  
-  
-1.  Sprawdź pisownię nazwy docelowego.  
-  
-2.  Jeśli *targetname* jest pseudotarget, określ ją jako miejsce docelowe w innym bloku opis.  
-  
-3.  Jeśli *targetname* jest wywołanie makra, pamiętaj, że nie zwiększa się pusty ciąg.
+
+Nie wiem, jak "targetname"
+
+Określony obiekt docelowy nie istnieje i nie ma polecenia do wykonania lub aby zastosować regułę wnioskowania.
+
+### <a name="to-fix-by-using-the-following-possible-solutions"></a>Aby rozwiązać problem, korzystając z poniższymi możliwymi rozwiązaniami
+
+1. Sprawdź pisownię nazwy docelowego.
+
+1. Jeśli *targetname* pseudotarget, jest ono określone jako element docelowy inny opis bloku.
+
+1. Jeśli *targetname* jest wywołanie makra, pamiętaj, że nie jest powiększony na pusty ciąg.

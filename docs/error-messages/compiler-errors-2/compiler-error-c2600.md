@@ -1,5 +1,5 @@
 ---
-title: C2600 błąd kompilatora | Dokumentacja firmy Microsoft
+title: Błąd kompilatora C2600 | Dokumentacja firmy Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,31 +16,32 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 13b4cdf15dca9b3978f8c7855a5f1b07cc86f0b8
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: c1846cefa78c8df13e8ca3c1a7fbc142ba2bf6ad
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33230952"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46022087"
 ---
-# <a name="compiler-error-c2600"></a>C2600 błąd kompilatora
-"Funkcja": nie można zdefiniować generowane przez kompilator specjalnej funkcji członkowskiej (musi być zadeklarowana w klasie najpierw)  
-  
- Przed element członkowski, który funkcji, takich jak konstruktory i destruktory mogą być definiowane dla klasy musi zostać zadeklarowany w klasie. Kompilator może wygenerować domyślnych konstruktorów i destruktorów (nazywane specjalnych funkcji Członkowskich), jeśli nie został zadeklarowany w klasie. Jednak w przypadku definiowania jednej z tych funkcji bez odpowiadającą mu deklaracją klasy kompilator wykryje konflikt.  
-  
- Aby naprawić ten błąd w deklaracji klasy, należy zadeklarować każdej funkcji elementu członkowskiego zdefiniowanego poza deklaracją klasy.  
-  
- Poniższy przykład generuje C2600:  
-  
-```  
-// C2600.cpp  
-// compile with: /c  
-class C {};  
-C::~C() {}   // C2600  
-  
-class D {  
-   D::~D();  
-};  
-  
-D::~D() {}  
+# <a name="compiler-error-c2600"></a>Błąd kompilatora C2600
+
+'Funkcja': nie można zdefiniować generowanych przez kompilator specjalną funkcję członkowską (musi być zadeklarowana w klasie najpierw)
+
+Przed elementu członkowskiego, które funkcje, takie jak konstruktory i destruktory mogą być definiowane dla klasy musi być zadeklarowana w klasie. Jeśli żaden nie został zadeklarowany w klasie, kompilator może wygenerować domyślne konstruktory i destruktory (nazywane funkcji specjalnych elementów członkowskich). Jednak jeśli zdefiniujesz jednej z tych funkcji bez pasującego deklaracji klasy, kompilator wykryje konflikt.
+
+Aby naprawić ten błąd w deklaracji klasy, należy zadeklarować każda funkcja elementu członkowskiego, który definiuje poza deklaracją klasy.
+
+Poniższy przykład spowoduje wygenerowanie od C2600 do:
+
+```
+// C2600.cpp
+// compile with: /c
+class C {};
+C::~C() {}   // C2600
+
+class D {
+   D::~D();
+};
+
+D::~D() {}
 ```

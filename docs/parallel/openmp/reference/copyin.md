@@ -16,15 +16,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 32137534a43eeb0b038eae547f9bc19283412159
-ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
+ms.openlocfilehash: 27afaee16a87ddf428570f7854212eed34634d38
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33688248"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46059332"
 ---
 # <a name="copyin"></a>kopiowanie
-Umożliwia dostęp do wartości wątku głównego wątków do [threadprivate](../../../parallel/openmp/reference/threadprivate.md) zmiennej.  
+Umożliwia wątków, aby uzyskiwać dostęp do wartości głównego wątku dla [threadprivate](../../../parallel/openmp/reference/threadprivate.md) zmiennej.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -32,14 +32,13 @@ Umożliwia dostęp do wartości wątku głównego wątków do [threadprivate](..
 copyin(var)  
 ```  
   
-## <a name="remarks"></a>Uwagi  
- w przypadku gdy  
+## <a name="parameters"></a>Parametry
   
- `var`  
- `threadprivate` Zmiennej, która zostanie zainicjowana wartość zmiennej w głównym wątku, ponieważ istnieje przed równoległych konstrukcji.  
+*var*<br/>
+`threadprivate` Zmiennej, która będzie inicjowana przy użyciu wartości zmiennej w głównym wątku, zgodnie z jego lokalizacją przed konstrukcja równoległa.  
   
 ## <a name="remarks"></a>Uwagi  
- `copyin` ma zastosowanie do następujących dyrektyw:  
+ `copyin` mają zastosowanie do następujących dyrektywach:  
   
 -   [parallel](../../../parallel/openmp/reference/parallel.md)  
   
@@ -50,7 +49,7 @@ copyin(var)
  Aby uzyskać więcej informacji, zobacz [2.7.2.7 copyin](../../../parallel/openmp/2-7-2-7-copyin.md).  
   
 ## <a name="example"></a>Przykład  
- Zobacz [threadprivate](../../../parallel/openmp/reference/threadprivate.md) przykład przy użyciu `copyin`.  
+ Zobacz [threadprivate](../../../parallel/openmp/reference/threadprivate.md) na przykład za pomocą `copyin`.  
   
 ## <a name="see-also"></a>Zobacz też  
  [Klauzule](../../../parallel/openmp/reference/openmp-clauses.md)

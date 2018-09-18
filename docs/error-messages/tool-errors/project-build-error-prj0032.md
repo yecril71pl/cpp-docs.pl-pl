@@ -16,16 +16,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d6be9a343ae9d9ce1e3d862cc0a397f1d61ccdea
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 106b1c3f470bbdb134a5fd53ebaef65a4392fd4b
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33318666"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46053579"
 ---
 # <a name="project-build-error-prj0032"></a>Błąd PRJ0032 kompilacji projektu
-Właściwość 'Wyniki' dla projektów na poziomie niestandardowego kroku kompilacji zawarte makra, który ewaluowane jest jako "macro_expansion".  
-  
- Niestandardowego kroku kompilacji w projekcie mają nieprawidłowe dane wyjściowe prawdopodobnie z powodu problemu ocena makra. Ten błąd może również oznaczać czy ścieżka jest nieprawidłowo sformułowany, zawierające znaki lub kombinacji znaków, które są niedozwolone w ścieżce pliku.  
-  
- Aby rozwiązać ten problem, Usuń makro lub usuń specyfikacji ścieżki. Obliczane ścieżka jest ścieżką bezwzględną od katalogu projektu.
+
+Właściwość 'Wyniki' dla projektów na poziomie niestandardowego kroku kompilacji zawiera makra, które ewaluowane jest jako "macro_expansion".
+
+Niestandardowego kroku kompilacji w projekcie ma nieprawidłowe dane wyjściowe, prawdopodobnie z powodu problemu z oceny makra. Ten błąd może również oznaczać, że ścieżka jest nieprawidłowo sformułowany, zawierające znaki lub kombinacje znaków, które nie są dozwolone w ścieżce pliku.
+
+Aby rozwiązać ten problem, napraw makra, lub usuń specyfikację ścieżki. Oceniono ścieżka jest ścieżką bezwzględną z katalogu projektu.

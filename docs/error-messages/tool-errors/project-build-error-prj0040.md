@@ -16,16 +16,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7b1e3ed5f3bcf736f372227c2c14fcf52dd7cd10
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 8e6aacb4db469f688d07916e1b50a1b8238bf65c
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33326462"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46047138"
 ---
 # <a name="project-build-error-prj0040"></a>Błąd PRJ0040 kompilacji projektu
-Błąd wewnętrzny podczas kompilacji. Nie można kontynuować. Załaduj projekt ponownie i spróbuj ponownie.  
-  
- System projektu nie może przetworzyć projektu.  
-  
- Spróbuj załadować ponownie projekt.
+
+Błąd wewnętrzny podczas kompilacji. Nie można kontynuować. Załaduj projekt ponownie i spróbuj ponownie.
+
+System projektu nie może przetworzyć Twojego projektu.
+
+Spróbuj ponownie załadować projekt.

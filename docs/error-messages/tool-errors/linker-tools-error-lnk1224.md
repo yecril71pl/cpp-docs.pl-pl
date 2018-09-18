@@ -16,14 +16,15 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: cd2be38847d9804279758ce8e224c06d655dc382
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: f7953e2e4df82bf271babaa385eabd93e98ae39e
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33302776"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46022466"
 ---
 # <a name="linker-tools-error-lnk1224"></a>Błąd narzędzi konsolidatora LNK1224
-Nieprawidłowy obraz adres podstawowy  
-  
- Określono nieprawidłowy adres podstawowy obrazu. Adres podstawowy musi być 64KB wyrównane (cztery ostatnie cyfry szesnastkowe może być zerem) i obraz podstawowy musi mieścić się w 32-bitową wartość podpisem lub bez.
+
+Nieprawidłowy obraz adres podstawowy
+
+Określono nieprawidłowy adres podstawowy dla obrazu. Adresy podstawowe muszą być 64KB wyrównane (cztery ostatnie cyfry szesnastkowe musi mieć wartość zero) i obraz podstawowy musi mieścić się w 32-bitową wartość ze znakiem lub bez znaku.

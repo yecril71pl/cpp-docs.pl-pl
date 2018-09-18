@@ -16,14 +16,15 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 10ef1f6881504537169b3d7a9d2270a393edf5c9
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: d14c43d5319fecc4916f2db20f6e9bbed5721e9a
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33318470"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46025506"
 ---
 # <a name="resource-compiler-error-rc2164"></a>Błąd kompilatora zasobów RC2164
-Nieoczekiwana wartość w RCDATA  
-  
- *Danych pierwotnych* wartości w **RCDATA** instrukcji muszą być liczbami całkowitymi lub ciągów, oddzielonych przecinkami. Upewnij się, nie Opuść przecinek ani Opuść znak cudzysłowu wokół ciąg.
+
+Nieoczekiwana wartość w RCDATA
+
+*Danych pierwotnych* wartości w **RCDATA** instrukcji muszą być liczbami całkowitymi lub ciągów, każda jest oddzielona przecinkiem. Upewnij się, nie Opuść przecinek lub nie Opuść cudzysłów wokół ciągu.

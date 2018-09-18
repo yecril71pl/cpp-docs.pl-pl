@@ -1,5 +1,5 @@
 ---
-title: float_3 — klasa | Dokumentacja firmy Microsoft
+title: float_3, klasa | Dokumentacja firmy Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -84,15 +84,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0579a728210dc74db13faaae7ea4c7161ad4142e
-ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
+ms.openlocfilehash: 8fdc665fea4aefe744850a5b2ca2565cb32fae3c
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33688456"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46047567"
 ---
 # <a name="float3-class"></a>float_3 — Klasa
-Reprezentuje krótki Wektor trzech elementów przestawnych.  
+Reprezentuje krótki Wektor trzech wartości zmiennoprzecinkowych.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -102,7 +102,7 @@ class float_3;
   
 ## <a name="members"></a>Elementy członkowskie  
   
-### <a name="public-typedefs"></a>Definicje typów publicznych  
+### <a name="public-typedefs"></a>Publiczne definicje typów  
   
 |Nazwa|Opis|  
 |----------|-----------------|  
@@ -112,7 +112,7 @@ class float_3;
   
 |Nazwa|Opis|  
 |----------|-----------------|  
-|[float_3 — Konstruktor](#ctor)|Przeciążone. Domyślny konstruktor, inicjuje wszystkie elementy z 0.|  
+|[float_3 — Konstruktor](#ctor)|Przeciążone. Domyślny konstruktor, inicjuje wszystkie elementy wartością 0.|  
   
 ### <a name="public-methods"></a>Metody publiczne  
   
@@ -168,11 +168,11 @@ class float_3;
 |float_3::operator =||  
 |float_3::operator-=||  
   
-### <a name="public-constants"></a>Publiczny — stałe  
+### <a name="public-constants"></a>Publiczne stałe  
   
 |Nazwa|Opis|  
 |----------|-----------------|  
-|[Size — stała](#float_3__size)||  
+|[rozmiar — stała](#float_3__size)||  
   
 ### <a name="public-data-members"></a>Publiczne elementy członkowskie danych  
   
@@ -217,9 +217,9 @@ class float_3;
   
  **Namespace:** Concurrency::graphics  
   
-##  <a name="ctor"></a> float_3 — 
+##  <a name="ctor"></a> float_3 
 
- Domyślny konstruktor, inicjuje wszystkie elementy z 0.  
+ Domyślny konstruktor, inicjuje wszystkie elementy wartością 0.  
   
 ```  
 float_3() restrict(amp,
@@ -269,20 +269,20 @@ explicit inline float_3(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `_V0`  
- Wartość do zainicjowania elementu 0.  
+*_V0*<br/>
+Wartość do zainicjowania elementu 0.  
   
- `_V1`  
- Wartość zainicjować element 1.  
+*_V1*<br/>
+Wartość do zainicjowania elementu 1.  
   
- `_V2`  
- Wartość zainicjować element 2.  
+*_V2*<br/>
+Wartość można zainicjować element 2.  
   
- `_V`  
- Wartość dla inicjowania.  
+*_V*<br/>
+Wartość inicjalizacji.  
   
- `_Other`  
- Obiekt używany do inicjowania.  
+*_Inne*<br/>
+Obiekt używany do inicjowania.  
   
 ##  <a name="float_3__size"></a> Rozmiar 
 

@@ -1,5 +1,5 @@
 ---
-title: _WAIT_CHILD —, _WAIT_GRANDCHILD — | Dokumentacja firmy Microsoft
+title: _WAIT_CHILD, _WAIT_GRANDCHILD | Dokumentacja firmy Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -22,30 +22,33 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 84e0f195bebd43ced767f05a7c6073a6d6e9db61
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 7dd7b3fab51c382413c507831572afedd824c3f7
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32408028"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46018343"
 ---
 # <a name="waitchild-waitgrandchild"></a>_WAIT_CHILD, _WAIT_GRANDCHILD
-## <a name="syntax"></a>Składnia  
-  
-```  
-  
-#include <process.h>  
-  
-```  
-  
-## <a name="remarks"></a>Uwagi  
- `_cwait` Funkcja może służyć przez jakikolwiek proces oczekiwania na inny proces (jeśli jest znany identyfikator procesu). Argument akcja może mieć jedną z następujących wartości:  
-  
-|Stała|Znaczenie|  
-|--------------|-------------|  
-|`_WAIT_CHILD`|Proces wywołania oczekuje, aż określony nowy proces zakończy się.|  
-|`_WAIT_GRANDCHILD`|Wywoływanie czeka proces do określonego nowy proces i wszystkie procesy utworzone przez tego nowego procesu, przerwanie.|  
-  
-## <a name="see-also"></a>Zobacz też  
- [_cwait —](../c-runtime-library/reference/cwait.md)   
- [Stałe globalne](../c-runtime-library/global-constants.md)
+
+## <a name="syntax"></a>Składnia
+
+```
+
+#include <process.h>
+
+```
+
+## <a name="remarks"></a>Uwagi
+
+`_cwait` Funkcja może służyć przez żaden proces będzie poczekać jakiś inny proces (jeśli jest znany identyfikator procesu). Argument akcji może być jednym z następujących wartości:
+
+|Stała|Znaczenie|
+|--------------|-------------|
+|`_WAIT_CHILD`|Proces wywoływania czeka, aż kończy się określonym nowego procesu.|
+|`_WAIT_GRANDCHILD`|Wywołanie procesu w tym czasie czeka, aż do określonej nowy proces i wszystkie procesy utworzone przez ten nowy proces, Zakończ.|
+
+## <a name="see-also"></a>Zobacz też
+
+[_cwait](../c-runtime-library/reference/cwait.md)<br/>
+[Stałe globalne](../c-runtime-library/global-constants.md)

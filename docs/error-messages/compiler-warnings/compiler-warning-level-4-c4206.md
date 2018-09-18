@@ -1,5 +1,5 @@
 ---
-title: Kompilatora (poziom 4) ostrzeżenie C4206 | Dokumentacja firmy Microsoft
+title: Kompilator ostrzeżenie (poziom 4) C4206 | Dokumentacja firmy Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,16 +16,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6db7069f9d1ad242f0c79f8c6f490f4632162e6d
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 746fbc4c8752afcd9d02b9985373d669c3aacc5f
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33293897"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46048659"
 ---
-# <a name="compiler-warning-level-4-c4206"></a>Kompilator C4206 ostrzegawcze (poziom 4)
-**użyto niestandardowego rozszerzenia: jednostka tłumaczenia jest pusta**  
-  
- Plik był pusty po przetwarzania wstępnego.  
-  
- To rozszerzenie może uniemożliwić kodu przenośnego na inne kompilatory. Generuje błąd w obszarze Zgodność ANSI ([/Za](../../build/reference/za-ze-disable-language-extensions.md)) i ma zastosowanie tylko do kodu źródłowego C.
+# <a name="compiler-warning-level-4-c4206"></a>Kompilator ostrzeżenie (poziom 4) C4206
+
+**użyto niestandardowego rozszerzenia: jednostka tłumaczeniowa jest pusta**
+
+Plik był pusty po przetwarzania wstępnego.
+
+To rozszerzenie może uniemożliwić kod przenośny innych kompilatorach. Zostanie wygenerowany błąd w obszarze zgodności ANSI ([/Za](../../build/reference/za-ze-disable-language-extensions.md)) i ma zastosowanie tylko do kodu źródłowego C.

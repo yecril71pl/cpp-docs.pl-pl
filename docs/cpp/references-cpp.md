@@ -19,103 +19,105 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 953c03f7c8125713afddd3b3567615be585fc9db
-ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
+ms.openlocfilehash: a9bd01cf5c153fcd31bae1a73fead87fe480cdd2
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/02/2018
-ms.locfileid: "39463151"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46030429"
 ---
 # <a name="references-c"></a>Odwołania (C++)
-Odwołania, jak wskaźnik, przechowuje adres obiektu, który znajduje się w innym miejscu w pamięci. W przeciwieństwie do wskaźnika, odwołania po jego zainicjowaniu nie można wprowadzać odnoszą się do innego obiektu lub ustawiona na wartość null. Istnieją dwa rodzaje odwołań: odwołania lvalue, które odnoszą się do nazwanej odwołania zmiennej i r-wartości, które odnoszą się do [tymczasowy obiekt](../cpp/temporary-objects.md). & — Operator oznacza odwołanie lvalue i & & — operator oznacza odwołanie rvalue lub odwołaniem universal (rvalue lub l-wartości) w zależności od kontekstu.  
-  
- Odwołania może być zadeklarowana przy użyciu następującej składni:  
-  
-```  
-[storage-class-specifiers] [cv-qualifiers] type-specifiers   
-[ms-modifier] declarator [= expression];  
-```  
-  
- Wszystkie prawidłowe deklaratora, określając odwołanie mogą być używane. Chyba, że odwołanie jest odwołanie do typu funkcji lub tablicy, mają zastosowanie następujące uproszczoną składnię:  
-  
-```  
-[storage-class-specifiers] [cv-qualifiers] type-specifiers [& or &&]   
-[cv-qualifiers] identifier [= expression];  
-```  
-  
- Odwołania są zadeklarowane za pomocą następującej sekwencji:  
-  
- 1. Specyfikatory deklaracji:  
-  
--   Specyfikator klasy magazynowania opcjonalne.  
-  
--   Opcjonalnie **const** i/lub **volatile** kwalifikatorów.  
-  
--   Specyfikator typu: Nazwa typu.  
-  
--   2. Specyfikator:  
-  
--   Opcjonalny modyfikator właściwy dla Microsoft. Aby uzyskać więcej informacji, zobacz [Modyfikatory specyficzne dla Microsoft](../cpp/microsoft-specific-modifiers.md).  
-  
--   & — Operator lub & & — operator.  
-  
--   Opcjonalnie **const** i/lub **volatile** qualifers.  
-  
--   Identyfikator.  
-  
- 3. Opcjonalny inicjator.  
-  
- Formularze deklaratorów bardziej złożonych wskaźniki do tablic i funkcji mają zastosowanie również do odwołań do tablic i funkcji, zobacz [wskaźniki](../cpp/pointers-cpp.md).  
-  
- Wiele deklaratorów i inicjatory mogą występować w rozdzielana przecinkami lista specyfikator jednej deklaracji. Na przykład:  
-  
-```cpp 
-int &i;   
-int &i, &j;   
-```  
-  
- Odwołania, wskaźniki i obiekty mogą być zadeklarowane jednocześnie:  
-  
-```cpp 
-int &ref, *ptr, k;   
-```  
-  
- Odwołanie przechowuje adres obiektu, ale składniowo zachowuje się jak obiekt.  
-  
- W następujący program, zwróć uwagę, że nazwa obiektu, `Today`i odwołania do obiektu, `TodayRef`, mogą być używane tak samo w programach:  
-  
-## <a name="example"></a>Przykład  
-  
-```cpp 
-// references.cpp  
-#include <stdio.h>  
-struct S {  
-   short i;  
-};  
-  
-int main() {  
-   S  s;   // Declare the object.  
-   S& SRef = s;   // Declare the reference.  
-   s.i = 3;  
-  
-   printf_s("%d\n", s.i);  
-   printf_s("%d\n", SRef.i);  
-  
-   SRef.i = 4;  
-   printf_s("%d\n", s.i);  
-   printf_s("%d\n", SRef.i);  
-}  
-```  
-  
-```Output  
-3  
-3  
-4  
-4  
-```  
-  
+
+Odwołania, jak wskaźnik, przechowuje adres obiektu, który znajduje się w innym miejscu w pamięci. W przeciwieństwie do wskaźnika, odwołania po jego zainicjowaniu nie można wprowadzać odnoszą się do innego obiektu lub ustawiona na wartość null. Istnieją dwa rodzaje odwołań: odwołania lvalue, które odnoszą się do nazwanej odwołania zmiennej i r-wartości, które odnoszą się do [tymczasowy obiekt](../cpp/temporary-objects.md). & — Operator oznacza odwołanie lvalue i & & — operator oznacza odwołanie rvalue lub odwołaniem universal (rvalue lub l-wartości) w zależności od kontekstu.
+
+Odwołania może być zadeklarowana przy użyciu następującej składni:
+
+```
+[storage-class-specifiers] [cv-qualifiers] type-specifiers 
+[ms-modifier] declarator [= expression];
+```
+
+Wszystkie prawidłowe deklaratora, określając odwołanie mogą być używane. Chyba, że odwołanie jest odwołanie do typu funkcji lub tablicy, mają zastosowanie następujące uproszczoną składnię:
+
+```
+[storage-class-specifiers] [cv-qualifiers] type-specifiers [& or &&] 
+[cv-qualifiers] identifier [= expression];
+```
+
+Odwołania są zadeklarowane za pomocą następującej sekwencji:
+
+1. Specyfikatory deklaracji:
+
+- Specyfikator klasy magazynowania opcjonalne.
+
+- Opcjonalnie **const** i/lub **volatile** kwalifikatorów.
+
+- Specyfikator typu: Nazwa typu.
+
+- 2. Specyfikator:
+
+- Opcjonalny modyfikator właściwy dla Microsoft. Aby uzyskać więcej informacji, zobacz [Modyfikatory specyficzne dla Microsoft](../cpp/microsoft-specific-modifiers.md).
+
+- & — Operator lub & & — operator.
+
+- Opcjonalnie **const** i/lub **volatile** qualifers.
+
+- Identyfikator.
+
+3. Opcjonalny inicjator.
+
+Formularze deklaratorów bardziej złożonych wskaźniki do tablic i funkcji mają zastosowanie również do odwołań do tablic i funkcji, zobacz [wskaźniki](../cpp/pointers-cpp.md).
+
+Wiele deklaratorów i inicjatory mogą występować w rozdzielana przecinkami lista specyfikator jednej deklaracji. Na przykład:
+
+```cpp
+int &i;
+int &i, &j;
+```
+
+Odwołania, wskaźniki i obiekty mogą być zadeklarowane jednocześnie:
+
+```cpp
+int &ref, *ptr, k;
+```
+
+Odwołanie przechowuje adres obiektu, ale składniowo zachowuje się jak obiekt.
+
+W następujący program, zwróć uwagę, że nazwa obiektu, `Today`i odwołania do obiektu, `TodayRef`, mogą być używane tak samo w programach:
+
+## <a name="example"></a>Przykład
+
+```cpp
+// references.cpp
+#include <stdio.h>
+struct S {
+   short i;
+};
+
+int main() {
+   S  s;   // Declare the object.
+   S& SRef = s;   // Declare the reference.
+   s.i = 3;
+
+   printf_s("%d\n", s.i);
+   printf_s("%d\n", SRef.i);
+
+   SRef.i = 4;
+   printf_s("%d\n", s.i);
+   printf_s("%d\n", SRef.i);
+}
+```
+
+```Output
+3
+3
+4
+4
+```
+
 ## <a name="see-also"></a>Zobacz także
- [Argumenty funkcji będące odwołaniami](../cpp/reference-type-function-arguments.md)  
- [Wartości zwracane przez funkcje będące odwołaniami](../cpp/reference-type-function-returns.md)  
- [Odwołania do wskaźników](../cpp/references-to-pointers.md)  
-  
+
+[Argumenty funkcji będące odwołaniami](../cpp/reference-type-function-arguments.md)<br/>
+[Wartości zwracane przez funkcje będące odwołaniami](../cpp/reference-type-function-returns.md)<br/>
+[Odwołania do wskaźników](../cpp/references-to-pointers.md)
+

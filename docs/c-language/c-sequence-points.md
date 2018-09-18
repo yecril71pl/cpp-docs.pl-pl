@@ -14,37 +14,39 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9cf0b72314103587ddf64021db2a265044c469e3
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 13d8bbc422be20a0e377a5705e8ebcf88db079aa
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32384310"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46059813"
 ---
 # <a name="c-sequence-points"></a>Punkty sekwencji języka C
-Między kolejnymi "punkty sekwencji" wartość obiektu można modyfikować tylko raz przez wyrażenie. Język C definiuje następujące punkty sekwencji:  
-  
--   Lewej strony logicznej- i — operator (**&&**). Lewy argument operacji logicznych-operator całkowicie jest obliczane i wszystkie efekty uboczne zakończenie przed kontynuowaniem. Argument operacji nie jest oceniany, jeśli Lewy argument operacji daje w wyniku wartość false (0).  
-  
--   Lewej strony operatora logicznego OR (`||`). Lewy argument operacji operatora logicznego OR całkowicie jest obliczane i wszystkie efekty uboczne zakończenie przed kontynuowaniem. Argument operacji nie jest oceniany, jeśli Lewy argument operacji daje w wyniku wartość true (różną od zera).  
-  
--   Lewy operand operatora przecinka. Lewy argument operacji operatora przecinka całkowicie jest obliczane i wszystkie efekty uboczne zakończenie przed kontynuowaniem. Oba operandy operatora przecinka są obliczane zawsze. Należy pamiętać, że operatora przecinka w wywołaniu funkcji nie gwarantuje kolejność obliczania.  
-  
--   Operator wywołania funkcji. Wszystkie argumenty funkcji są oceniane i wszystkie efekty uboczne ukończyć przed wejściem do funkcji. Nie kolejność obliczania między argumenty został określony.  
-  
--   Pierwszy operand operatora warunkowego. Pierwszy argument operacji operatora warunkowego całkowicie jest obliczane i wszystkie efekty uboczne zakończenie przed kontynuowaniem.  
-  
--   Koniec wyrażenia pełnej inicjalizacji (to znaczy wyrażenie, które nie jest częścią innego wyrażenia, takich jak koniec Inicjalizacja w instrukcji deklaracji).  
-  
--   Wyrażenie w instrukcji wyrażenia. Instrukcje wyrażeń składają się z opcjonalne wyrażenie następuje średnik (**;**). Wyrażenie jest obliczane dla jej efekty uboczne i ma punktu sekwencji po dokonaniu oceny.  
-  
--   Kontrolowanie wyrażenie w wyborze (**Jeśli** lub `switch`) instrukcji. Wyrażenie całkowicie jest obliczane i wszystkie efekty uboczne ukończenie wykonywany jest kod zależna od zaznaczenia.  
-  
--   Kontrolowanie wyrażenie `while` lub **czy** instrukcji. Wyrażenie całkowicie jest obliczane i wszystkie efekty uboczne ukończona przed wszystkimi instrukcjami w następnej iteracji `while` lub **czy** pętli są wykonywane.  
-  
--   Każdy z trzech wyrażeń **dla** instrukcji. Wyrażenia całkowicie są przetwarzane i wszystkie efekty uboczne ukończona przed wszystkimi instrukcjami w następnej iteracji **dla** pętli są wykonywane.  
-  
--   Wyrażenie w `return` instrukcji. Wyrażenie całkowicie jest obliczane i wszystkie efekty uboczne ukończenie kontroli zwraca wywołania funkcji.  
-  
-## <a name="see-also"></a>Zobacz też  
- [Szacowanie wyrażeń](../c-language/expression-evaluation-c.md)
+
+Między kolejnymi "punktami sekwencji" wartość obiektu może być modyfikowane tylko raz przez wyrażenie. Język C definiuje następujących punktów sekwencji:
+
+- Lewy operand logicznego — i operatora (**&&**). Lewy operand logicznego — i operator jest obliczane całkowicie, wraz ze wszystkimi efektami ubocznymi ukończenie przed kontynuowaniem. Jeśli lewy operand ma wartość false (0), to drugi operand nie jest oceniany.
+
+- Lewy operand operatora logicznego OR (`||`). Lewy operand operatora logicznego OR jest obliczany całkowicie, wraz ze wszystkimi efektami ubocznymi ukończenie przed kontynuowaniem. Jeśli lewy operand ma wartość true (niezerową), to drugi operand nie jest oceniany.
+
+- Lewy operand operatora przecinka. Lewy operand operatora "przecinek" jest obliczane całkowicie, wraz ze wszystkimi efektami ubocznymi ukończenie przed kontynuowaniem. Oba operandy operatora przecinka są obliczane zawsze. Należy pamiętać, że operatora przecinka w wywołaniu funkcji nie gwarantuje kolejności oceny.
+
+- Operator wywołania funkcji. Wszystkie argumenty funkcji są oceniane i ze wszystkimi efektami ubocznymi wykonaj przed wejściem do funkcji. Określono nie kolejności obliczania między argumentami.
+
+- Pierwszy operand operatora warunkowego. Pierwszy operand operatora warunkowego jest obliczany całkowicie, a przed kontynuowaniem wykonaj ze wszystkimi efektami ubocznymi.
+
+- Koniec pełnej inicjalizacji wyrażenia (to znaczy, wyrażenie, które nie jest częścią innego wyrażenia, taki jak koniec inicjalizacji w instrukcji deklaracji).
+
+- Wyrażenie w instrukcji wyrażenia. Instrukcje wyrażeń składają się z opcjonalnego wyrażenia następuje średnik (**;**). Wyrażenie jest obliczane efektami ubocznymi i znajduje się punkt sekwencji zgodnie z tego okresu ewaluacji.
+
+- Wyrażenie kontrolujące w wyborze (**Jeśli** lub `switch`) instrukcji. Wyrażenie jest obliczane całkowicie, wraz ze wszystkimi efektami ubocznymi ukończyć przed wykonaniem kodu zależnego od wyboru.
+
+- Wyrażenie kontrolujące `while` lub **czy** instrukcji. Wyrażenie jest obliczane całkowicie, wraz ze wszystkimi efektami ubocznymi ukończyć przed wszystkimi instrukcjami w następnej iteracji `while` lub **czy** pętli są wykonywane.
+
+- Każdy z trzech wyrażeń **dla** instrukcji. Wyrażenie jest obliczane całkowicie, wraz ze wszystkimi efektami ubocznymi ukończyć przed wszystkimi instrukcjami w następnej iteracji **dla** pętli są wykonywane.
+
+- Wyrażenie w `return` instrukcji. Wyrażenie jest obliczane całkowicie, wraz ze wszystkimi efektami ubocznymi ukończenie sterowanie powraca do wywoływania funkcji.
+
+## <a name="see-also"></a>Zobacz też
+
+[Obliczanie wyrażeń](../c-language/expression-evaluation-c.md)

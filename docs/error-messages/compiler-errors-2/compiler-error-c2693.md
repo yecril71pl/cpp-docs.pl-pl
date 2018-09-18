@@ -1,5 +1,5 @@
 ---
-title: C2693 błąd kompilatora | Dokumentacja firmy Microsoft
+title: Błąd kompilatora C2693 | Dokumentacja firmy Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,14 +16,15 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5bed9c0dcad60febf343357ee3e0762ab3d93ef6
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 2ecf51f5fdbe7d1c6b5d5070e048c69bfc840460
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33232777"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46051259"
 ---
-# <a name="compiler-error-c2693"></a>C2693 błąd kompilatora
-"operator": niedozwolone porównanie dla odwołań do zarządzanego lub tablicy WinRT  
-  
- Nie można przetestować zarządzanego lub tablicy WinRT dla dowolnego rodzaju nierówności. Na przykład można przetestować aby zobaczyć, czy zarządzanych tablic są takie same, ale nie można przetestować, czy jedna tablica jest większa lub mniejsza od innej tablicy.  
+# <a name="compiler-error-c2693"></a>Błąd kompilatora C2693
+
+'operator': niedozwolone porównanie dla odwołań do zarządzanej lub tablica WinRT
+
+Nie można przetestować zarządzanej lub tablica WinRT, dla każdego rodzaju nierówności. Na przykład możesz sprawdzić, sprawdzić, czy zarządzane tablice są takie same, ale nie można przetestować, aby sprawdzić, czy jedna tablica jest większa lub mniejsza od innej tablicy.

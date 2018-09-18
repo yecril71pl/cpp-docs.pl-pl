@@ -1,5 +1,5 @@
 ---
-title: C3412 błąd kompilatora | Dokumentacja firmy Microsoft
+title: Błąd kompilatora C3412 | Dokumentacja firmy Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,39 +16,42 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7c5b2c86b91160eb7ae342b39ea6a63ffad364bb
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: f6a04de132c85cb09a960d3a0edfcb3b07127119
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33250646"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46054580"
 ---
-# <a name="compiler-error-c3412"></a>C3412 błąd kompilatora
-"template": nie można specjalizować szablonu w bieżącym zakresie  
-  
- Nie można specjalizować szablonu w zakresie klasy, tylko w globalnej lub zakresie przestrzeni nazw.  
-  
-## <a name="example"></a>Przykład  
- Poniższy przykład generuje C3412.  
-  
-```  
-// C3412.cpp  
-template <class T>  
-struct S {  
-   template <>  
-   struct S<int> {};   // C3412 in a class  
-};  
-```  
-  
-## <a name="example"></a>Przykład  
- Poniższy przykład przedstawia możliwe rozwiązanie.  
-  
-```  
-// C3412b.cpp  
-// compile with: /c  
-template <class T>  
-struct S {};  
-  
-template <>  
-struct S<int> {};  
+# <a name="compiler-error-c3412"></a>Błąd kompilatora C3412
+
+"template": nie można specjalizować szablonu w bieżącym zakresie
+
+Szablon nie może być specjalizowany w zakresie klasy, tylko w globalnej lub zakresie przestrzeni nazw.
+
+## <a name="example"></a>Przykład
+
+Poniższy przykład spowoduje wygenerowanie C3412.
+
+```
+// C3412.cpp
+template <class T>
+struct S {
+   template <>
+   struct S<int> {};   // C3412 in a class
+};
+```
+
+## <a name="example"></a>Przykład
+
+Poniższy przykład pokazuje możliwe rozwiązanie.
+
+```
+// C3412b.cpp
+// compile with: /c
+template <class T>
+struct S {};
+
+template <>
+struct S<int> {};
 ```

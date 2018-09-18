@@ -16,14 +16,15 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 02c609d5f846fa6f339eac98b725919560df068f
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 449b181167ef493c149e9e34cb2f1a681148411d
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33198485"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46035475"
 ---
 # <a name="fatal-error-c1046"></a>Błąd krytyczny C1046
-ograniczenie kompilatora: struktury zagnieżdżone zbyt głęboko  
-  
- Struktura, Unią lub klasy Przekroczono limit zagnieżdżania poziomy 15. Należy zmodyfikować definicję, aby zmniejszyć poziom zagnieżdżenia. Dzielenie struktury, Unią lub klasy do co najmniej dwa elementy przy użyciu `typedef` do zdefiniowania co najmniej jednego struktury zagnieżdżone.
+
+ograniczenie kompilatora: struktury są zagnieżdżone zbyt głęboko
+
+Struktura, Unia lub klasa Przekroczono limit zagnieżdżania poziomy 15. Należy zmodyfikować definicję, aby zmniejszyć poziom zagnieżdżenia. Dzielenie struktura, Unia lub klasa na dwie lub więcej części za pomocą `typedef` do zdefiniowania co najmniej jednym zagnieżdżonych struktur.

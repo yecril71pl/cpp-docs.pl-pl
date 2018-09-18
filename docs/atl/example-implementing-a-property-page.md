@@ -14,12 +14,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9bddb536fe50c9f9f7d1eb76d3dfa90c1c3488b8
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 36d3289767d8c8e2eaa2f25889aaff073cf73fce
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43759333"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46046254"
 ---
 # <a name="example-implementing-a-property-page"></a>Przykład: Implementowanie strony właściwości
 
@@ -153,25 +153,25 @@ Implementuje metody, jak pokazano poniżej:
 Po utworzeniu projektu można sprawdzić na stronie właściwości i obiekt pomocnika za pomocą prostego makro, które można tworzyć i uruchamiać w środowisku programowania Visual Studio. To makro utworzy obiekt pomocnika obiektu, a następnie wywołaj jej `ShowPage` metody przy użyciu identyfikatora ProgID **DocProperties** stronę właściwości i `IUnknown` wskaźnika dokumentu, które są aktualnie aktywne w edytorze programu Visual Studio. Poniżej przedstawiono kod, czego potrzebujesz do tego makra:
 
 ```vb
-Imports EnvDTE  
-Imports System.Diagnostics  
+Imports EnvDTE
+Imports System.Diagnostics
 
-Public Module AtlPages  
+Public Module AtlPages
 
-Public Sub Test()  
-    Dim Helper  
-    Helper = CreateObject("ATLPages7.Helper.1")  
+Public Sub Test()
+    Dim Helper
+    Helper = CreateObject("ATLPages7.Helper.1")
 
-    On Error Resume Next  
-    Helper.ShowPage( ActiveDocument.Name, "ATLPages7Lib.DocumentProperties.1", DTE.ActiveDocument )  
+    On Error Resume Next
+    Helper.ShowPage( ActiveDocument.Name, "ATLPages7Lib.DocumentProperties.1", DTE.ActiveDocument )
 End Sub
 
-End Module  
+End Module
 ```
 
 Po uruchomieniu tego makra, zostanie wyświetlona strona właściwości, przedstawiający nazwę pliku i status tylko do odczytu dokumentu tekstowego aktualnie aktywny. Stanu tylko do odczytu dokumentu przedstawiają tylko możliwość zapisu do dokumentu w środowisku programistycznym; nie wpływa na atrybut tylko do odczytu pliku na dysku.
 
 ## <a name="see-also"></a>Zobacz też
 
-[Strony właściwości](../atl/atl-com-property-pages.md)   
+[Strony właściwości](../atl/atl-com-property-pages.md)<br/>
 [Przykładowe ATLPages](../visual-cpp-samples.md)

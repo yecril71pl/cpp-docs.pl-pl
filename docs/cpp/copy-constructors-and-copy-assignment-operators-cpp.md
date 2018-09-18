@@ -20,12 +20,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d8e00190e7c7b4eacbd8f53b87f2e5ad3efd44d1
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 249182277473eebf5f11d4f6f3de1e8e7d275b61
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43197865"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46032617"
 ---
 # <a name="copy-constructors-and-copy-assignment-operators-c"></a>Konstruktory kopiujące i kopiujące operatory przypisania (C++)
 
@@ -95,4 +95,4 @@ Operatory przypisania generowane przez kompilator, należy wykonać w odniesieni
 
 Implikacje są podobne do występujących dla konstruktora kopiującego. Gdy typ argumentu nie jest **const**, przypisanie z **const** obiektu spowoduje wygenerowanie błędu. Odwrotna sytuacja nie jest spełniony: Jeśli **const** wartość jest przypisywana wartość, która nie jest **const**, przypisanie zakończy się pomyślnie.
 
-Aby uzyskać więcej informacji na temat przypisania przeciążone operatory zobacz [przypisania](../cpp/assignment.md).  
+Aby uzyskać więcej informacji na temat przypisania przeciążone operatory zobacz [przypisania](../cpp/assignment.md).

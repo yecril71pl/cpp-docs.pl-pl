@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: b389e5b137ef3cdb94ffbb1fc381ebe2e5813963
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: 4c7751929a55993876034bb3c1918b82193681fc
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42603973"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46016887"
 ---
 # <a name="asyncstatusinternal-enumeration"></a>AsyncStatusInternal — Wyliczenie
 
@@ -40,19 +40,19 @@ Określa mapowanie między wewnętrznego wyliczenia stanu operacji asynchroniczn
 
 ## <a name="members"></a>Elementy członkowskie
 
-`_Created`  
+`_Created`<br/>
 Wartość równoważna `::Windows::Foundation::AsyncStatus::Created`
 
-`_Started`  
+`_Started`<br/>
 Wartość równoważna `::Windows::Foundation::AsyncStatus::Started`
 
-`_Completed`  
+`_Completed`<br/>
 Wartość równoważna `::Windows::Foundation::AsyncStatus::Completed`
 
-`_Cancelled`  
+`_Cancelled`<br/>
 Wartość równoważna `::Windows::Foundation::AsyncStatus::Cancelled`
 
-`_Error`  
+`_Error`<br/>
 Wartość równoważna `::Windows::Foundation::AsyncStatus::Error`
 
 ## <a name="requirements"></a>Wymagania

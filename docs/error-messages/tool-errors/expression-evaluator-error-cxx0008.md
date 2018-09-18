@@ -1,5 +1,5 @@
 ---
-title: Błąd cxx0008 programu Expression Evaluator | Dokumentacja firmy Microsoft
+title: Błąd ewaluatora wyrażeń CXX0008 | Dokumentacja firmy Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,16 +17,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 17c7136d98d9d0502b2118b8e093b10bd8e82b88
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 7491e6bd60b98fbed82cace18f98e8483a221b14
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33315571"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46050609"
 ---
 # <a name="expression-evaluator-error-cxx0008"></a>Błąd CXX0008 programu Expression Evaluator
-**Brak "na końcu ciągu**  
-  
- Brak podwójnego cudzysłowu Oczekiwano końca ciągu literału. Wpisz wyrażenie otaczającej literał w podwójny cudzysłów.  
-  
- Ten błąd jest taki sam jak CAN0008.
+
+**Brak "na końcu ciągu**
+
+Brakuje podwójnego cudzysłowu, Oczekiwano końca ciągu literału. Ponownie wpisz wyrażenie otaczający ciąg literału w podwójny cudzysłów.
+
+Ten błąd jest taka sama jak CAN0008.

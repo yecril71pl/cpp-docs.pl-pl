@@ -16,14 +16,15 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c8b4a296379ab6e4ac8ad3b70668508303e2779d
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: b76c5533e79c75d06594d42464ca32104eb065ef
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33299581"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46046228"
 ---
 # <a name="linker-tools-error-lnk2026"></a>Błąd narzędzi konsolidatora LNK2026
-Moduł niebezpieczny dla obrazu SAFESEH  
-  
- [/ SAFESEH](../../build/reference/safeseh-image-has-safe-exception-handlers.md) został określony, ale moduł nie jest zgodny z wyjątkiem bezpiecznej obsługi funkcji. Jeśli chcesz użyć tego modułu z **opcja/SAFESEH**, a następnie będzie konieczne ponowne skompilowanie modułu.
+
+Moduł niebezpieczny dla obrazu SAFESEH
+
+[/ SAFESEH](../../build/reference/safeseh-image-has-safe-exception-handlers.md) został określony, ale moduł nie jest zgodny z funkcją obsługi bezpiecznych wyjątków. Jeśli chcesz używać tego modułu przy użyciu **opcja/SAFESEH**, a następnie należy ponownie skompilować modułu.

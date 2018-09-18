@@ -1,5 +1,5 @@
 ---
-title: norm_4 — klasa | Dokumentacja firmy Microsoft
+title: norm_4, klasa | Dokumentacja firmy Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -278,15 +278,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3df6a0cb46985b90b6b8098d7355c33439143949
-ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
+ms.openlocfilehash: 4a2b5c47f6283f4a4b9fefb5683c8e7be0c4bdb3
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33694046"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46058097"
 ---
 # <a name="norm4-class"></a>norm_4 — Klasa
-Reprezentuje krótki wektor czterech liczb normalnego.  
+Reprezentuje krótki wektor czterech liczb normalnych.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -296,7 +296,7 @@ class norm_4;
   
 ## <a name="members"></a>Elementy członkowskie  
   
-### <a name="public-typedefs"></a>Definicje typów publicznych  
+### <a name="public-typedefs"></a>Publiczne definicje typów  
   
 |Nazwa|Opis|  
 |----------|-----------------|  
@@ -306,7 +306,7 @@ class norm_4;
   
 |Nazwa|Opis|  
 |----------|-----------------|  
-|[norm_4 — Konstruktor](#ctor)|Przeciążone. Domyślny konstruktor, inicjuje wszystkie elementy z 0.|  
+|[norm_4 — Konstruktor](#ctor)|Przeciążone. Domyślny konstruktor, inicjuje wszystkie elementy wartością 0.|  
   
 ### <a name="public-methods"></a>Metody publiczne  
   
@@ -462,11 +462,11 @@ class norm_4;
 |norm_4::operator =||  
 |norm_4::operator-=||  
   
-### <a name="public-constants"></a>Publiczny — stałe  
+### <a name="public-constants"></a>Publiczne stałe  
   
 |Nazwa|Opis|  
 |----------|-----------------|  
-|[Size — stała](#norm_4__size)||  
+|[rozmiar — stała](#norm_4__size)||  
   
 ### <a name="public-data-members"></a>Publiczne elementy członkowskie danych  
   
@@ -609,9 +609,9 @@ class norm_4;
   
  **Namespace:** Concurrency::graphics  
   
-##  <a name="ctor"></a> norm_4 — 
+##  <a name="ctor"></a> norm_4 
 
- Domyślny konstruktor, inicjuje wszystkie elementy z 0.  
+ Domyślny konstruktor, inicjuje wszystkie elementy wartością 0.  
   
 ```  
 norm_4() restrict(amp,
@@ -683,23 +683,23 @@ explicit inline norm_4(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `_V0`  
- Wartość do zainicjowania elementu 0.  
+*_V0*<br/>
+Wartość do zainicjowania elementu 0.  
   
- `_V1`  
- Wartość zainicjować element 1.  
+*_V1*<br/>
+Wartość do zainicjowania elementu 1.  
   
- `_V2`  
- Wartość zainicjować element 2.  
+*_V2*<br/>
+Wartość można zainicjować element 2.  
   
- `_V3`  
- Wartość do zainicjowania elementu 3.  
+*_V3*<br/>
+Wartość do zainicjowania elementu 3.  
   
- `_V`  
- Wartość dla inicjowania.  
+*_V*<br/>
+Wartość inicjalizacji.  
   
- `_Other`  
- Obiekt używany do inicjowania.  
+*_Inne*<br/>
+Obiekt używany do inicjowania.  
   
 ##  <a name="norm_4__size"></a> Rozmiar 
 

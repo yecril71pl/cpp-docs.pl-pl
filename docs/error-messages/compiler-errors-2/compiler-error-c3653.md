@@ -1,5 +1,5 @@
 ---
-title: C3653 błąd kompilatora | Dokumentacja firmy Microsoft
+title: Błąd kompilatora C3653 | Dokumentacja firmy Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,30 +16,31 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a78dd5a9c52c9dfc845de43c62ae38180d0d079f
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 8d0409317cb0cdf6a248554cba2e18d7f9d2e0e0
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33266464"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46019006"
 ---
-# <a name="compiler-error-c3653"></a>C3653 błąd kompilatora
-"Funkcja": nie można użyć jako nazwanego przesłaniania: przesłaniana funkcja nie znaleziono; Czy pamiętasz o nazwie funkcji jawnie, przy użyciu:: operator?  
-  
- Jawne przesłanianie określić funkcję, która nie została odnaleziona w dowolnym interfejsu. Aby uzyskać więcej informacji, zobacz [jawne zastąpienia](../../windows/explicit-overrides-cpp-component-extensions.md).  
-  
- Poniższy przykład generuje C3653:  
-  
-```  
-// C3653.cpp  
-// compile with: /clr  
-public interface struct I {  
-   void h();  
-};  
-  
-public ref struct X : public I {  
-   virtual void f() new sealed = J {};   // C3653 no J in scope  
-   virtual void g() {}   // OK  
-   virtual void h() new sealed = I::h {};   // OK  
-};  
+# <a name="compiler-error-c3653"></a>Błąd kompilatora C3653
+
+'Funkcja': nie można użyć jako nazwanego przesłaniania: przesłaniana funkcja nie znaleziono; użytkownik zapomniał nadaj funkcji nazwę jawnie, przy użyciu:: operator?
+
+Jawne przesłanianie określona funkcja, która nie została odnaleziona w dowolnym interfejsie. Aby uzyskać więcej informacji, zobacz [jawne zastępowanie](../../windows/explicit-overrides-cpp-component-extensions.md).
+
+Poniższy przykład spowoduje wygenerowanie C3653:
+
+```
+// C3653.cpp
+// compile with: /clr
+public interface struct I {
+   void h();
+};
+
+public ref struct X : public I {
+   virtual void f() new sealed = J {};   // C3653 no J in scope
+   virtual void g() {}   // OK
+   virtual void h() new sealed = I::h {};   // OK
+};
 ```

@@ -16,14 +16,15 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4ce35d7cdc16d7804cba280315db4d11b436e94d
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: ff7ed883798abe457b1092fd5729c1d75fc6f9ef
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33226116"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46048997"
 ---
 # <a name="fatal-error-c1098"></a>Błąd krytyczny C1098
-Niezgodność wersji z silnikiem Edytuj i Kontynuuj  
-  
- Wersja debugera używanego jest niezgodna z kompilatora użyty do utworzenia pliku wykonywalnego. Ponownej kompilacji nie rozwiąże to problemu, może być konieczne ponowne zainstalowanie programu Visual C++, aby upewnić się, że masz odpowiednie wersje debugera i kompilatora.
+
+Niezgodność wersji z silnikiem Edytuj i Kontynuuj
+
+Wersji debugera, którego używasz jest niezgodna z kompilatora użyty do utworzenia pliku wykonywalnego. Ponownej kompilacji nie rozwiąże problemu, może być konieczne ponowne zainstalowanie upewnij się, że masz właściwe wersji debugera i kompilator Visual C++.

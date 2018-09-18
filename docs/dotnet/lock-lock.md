@@ -20,15 +20,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: df35eed8711e83174316ac9912f7ba535ef9ebf9
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 128a86b59ebf43ab87b0f4f4bcb7e9c684e4ad07
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33135030"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46051828"
 ---
 # <a name="locklock"></a>lock::lock
-Konstruuje `lock` obiektu opcjonalnie oczekiwania na uzyskanie blokady w nieskończoność, na określony czas lub wcale.  
+Konstruuje `lock` obiektu, opcjonalnie oczekiwania na uzyskanie blokady w nieskończoność, przez określony przedział czasu, lub wcale.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -51,26 +51,26 @@ template<class T> lock(
 ```  
   
 #### <a name="parameters"></a>Parametry  
- `_object`  
- Obiekt do zablokowania.  
+*_obiekt*<br/>
+Obiekt do zablokowania.  
   
- `_timeout`  
- Wartość limitu czasu (w milisekundach) lub jako <xref:System.TimeSpan>.  
+*_limit czasu*<br/>
+Wartość limitu czasu (w milisekundach) lub jako <xref:System.TimeSpan>.  
   
 ## <a name="exceptions"></a>Wyjątki  
- Zgłasza wyjątek <xref:System.ApplicationException> Jeśli przejęcie blokady nie występuje przed upływem limitu czasu.  
+ Zgłasza <xref:System.ApplicationException> Jeżeli pozyskiwania blokady nie występuje przed upływem limitu czasu.  
   
 ## <a name="remarks"></a>Uwagi  
- Pierwsze trzy rodzaje konstruktora próby uzyskania blokady na `_object` przed upływem określonego limitu czasu (lub <xref:System.Threading.Timeout.Infinite> Jeśli nie zostanie określona).  
+ Próba uzyskania blokady na pierwsze trzy rodzaje konstruktora `_object` przed upływem limitu czasu określonego (lub <xref:System.Threading.Timeout.Infinite> Jeśli nie określono).  
   
- Czwarty formularza konstruktora nie uzyskania blokady na `_object`. `lock_later` jest elementem członkowskim [wyliczenie lock_when](../dotnet/lock-when-enum.md). Użyj [lock::acquire](../dotnet/lock-acquire.md) lub [lock::try_acquire](../dotnet/lock-try-acquire.md) na przejęcie blokady w takim przypadku.  
+ Czwarty formularza konstruktora nie uzyskać blokadę na `_object`. `lock_later` jest elementem członkowskim [wyliczenie lock_when](../dotnet/lock-when-enum.md). Użyj [lock::acquire](../dotnet/lock-acquire.md) lub [lock::try_acquire](../dotnet/lock-try-acquire.md) można uzyskać blokady w tym przypadku.  
   
- Zablokuj automatycznie zostanie wydana wywołanego destruktor.  
+ Zablokuj automatycznie zostaną wydane po wywołaniu destruktora.  
   
- `_object` nie może być <xref:System.Threading.ReaderWriterLock>.  Jeśli tak jest, wystąpi błąd kompilatora.  
+ `_object` nie może być <xref:System.Threading.ReaderWriterLock>.  Jeśli tak jest, powoduje błąd kompilatora.  
   
 ## <a name="example"></a>Przykład  
- W tym przykładzie użycie pojedynczego wystąpienia klasy przez wiele wątków.  Klasy używa blokady na samym sobie, aby upewnić się, że dostęp do swoich danych wewnętrznych są spójne dla każdego wątku.  Wątku głównego aplikacji nawiązywał blokady dla tego samego wystąpienia klasy okresowo sprawdzać, czy wszystkie wątki robocze nadal istnieje i czeka, aby wyjść do wszystkich wątków zakończył ich zadań.  
+ W tym przykładzie użycie pojedynczego wystąpienia klasy przez wiele wątków.  Klasa stosowana jest blokada na siebie, aby upewnić się, że dostęp do jego wewnętrznych danych są spójne dla każdego wątku.  Głównego wątku aplikacji stosowana jest blokada na tym samym wystąpieniu klasy mogą okresowo sprawdzać, czy wszystkie wątki robocze nadal istnieje, i czeka, aby zakończyć pracę, dopóki wszystkie wątki robocze zostały wykonane ich zadań.  
   
 ```  
 // msl_lock_lock.cpp  
@@ -159,12 +159,12 @@ All threads completed.
 ```  
   
 ## <a name="requirements"></a>Wymagania  
- **Plik nagłówka** \<msclr\lock.h >  
+ **Plik nagłówkowy** \<msclr\lock.h >  
   
  **Namespace** msclr  
   
 ## <a name="see-also"></a>Zobacz też  
- [elementy członkowskie Lock](../dotnet/lock-members.md)   
+ [Lock, składowe](../dotnet/lock-members.md)   
  [Zablokuj:: ~ lock](../dotnet/lock-tilde-lock.md)   
  [Lock::Acquire](../dotnet/lock-acquire.md)   
  [lock::try_acquire](../dotnet/lock-try-acquire.md)

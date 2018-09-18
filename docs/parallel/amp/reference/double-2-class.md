@@ -1,5 +1,5 @@
 ---
-title: double_2 — klasa | Dokumentacja firmy Microsoft
+title: double_2, klasa | Dokumentacja firmy Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -38,12 +38,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d049ef7207871382fa343dd3e2034a7e7abef0ac
-ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
+ms.openlocfilehash: d607fd0d63eb1e4fc968b4f83ce71d19eda4cfd0
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33685648"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46059293"
 ---
 # <a name="double2-class"></a>double_2 — Klasa
 Reprezentuje krótki wektor 2 podwójnej precyzji.  
@@ -56,7 +56,7 @@ class double_2;
   
 ## <a name="members"></a>Elementy członkowskie  
   
-### <a name="public-typedefs"></a>Definicje typów publicznych  
+### <a name="public-typedefs"></a>Publiczne definicje typów  
   
 |Nazwa|Opis|  
 |----------|-----------------|  
@@ -66,7 +66,7 @@ class double_2;
   
 |Nazwa|Opis|  
 |----------|-----------------|  
-|[double_2 — Konstruktor](#ctor)|Przeciążone. Domyślny konstruktor, inicjuje wszystkie elementy z 0.|  
+|[double_2 — Konstruktor](#ctor)|Przeciążone. Domyślny konstruktor, inicjuje wszystkie elementy wartością 0.|  
   
 ### <a name="public-methods"></a>Metody publiczne  
   
@@ -98,7 +98,7 @@ class double_2;
 |double_2::operator =||  
 |double_2::operator-=||  
   
-### <a name="public-constants"></a>Publiczny — stałe  
+### <a name="public-constants"></a>Publiczne stałe  
   
 |Nazwa|Opis|  
 |----------|-----------------|  
@@ -125,9 +125,9 @@ class double_2;
   
  **Namespace:** Concurrency::graphics  
   
-##  <a name="ctor"></a> double_2 — 
+##  <a name="ctor"></a> double_2 
 
- Domyślny konstruktor, inicjuje wszystkie elementy z 0.  
+ Domyślny konstruktor, inicjuje wszystkie elementy wartością 0.  
   
 ```  
 double_2() restrict(amp,
@@ -176,17 +176,17 @@ explicit inline double_2(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `_V0`  
- Wartość do zainicjowania elementu 0.  
+*_V0*<br/>
+Wartość do zainicjowania elementu 0.  
   
- `_V1`  
- Wartość zainicjować element 1.  
+*_V1*<br/>
+Wartość do zainicjowania elementu 1.  
   
- `_V`  
- Wartość dla inicjowania.  
+*_V*<br/>
+Wartość inicjalizacji.  
   
- `_Other`  
- Obiekt używany do inicjowania.  
+*_Inne*<br/>
+Obiekt używany do inicjowania.  
   
 ##  <a name="double_2__size"></a> Rozmiar 
 

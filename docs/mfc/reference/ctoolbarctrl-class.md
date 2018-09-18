@@ -192,12 +192,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1f97559dd962fefbb4e727c0e75d0102898c8f13
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: 93752aa124bc144e42a337f757c9d9cdc9a226ca
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45724077"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46047931"
 ---
 # <a name="ctoolbarctrl-class"></a>Klasa CToolBarCtrl
 Oferuje funkcje formantu typowego paska narzędzi Windows.  
@@ -410,65 +410,66 @@ BOOL AddButtons(
 ### <a name="remarks"></a>Uwagi  
  *LpButtons* wskaźnik wskazuje na tablicę `TBBUTTON` struktury. Każdy `TBBUTTON` struktury kojarzy przycisk dodawany styl przycisku, obrazów i/lub ciąg, Identyfikatorem polecenia, stan i zdefiniowanych przez użytkownika danych:  
   
- `typedef struct _TBBUTTON {`  
-  
- `int iBitmap;// zero-based index of button image`  
-  
- `int idCommand;  // command to be sent when button pressed`  
-  
- `BYTE fsState;   // button state--see below`  
-  
- `BYTE fsStyle;   // button style--see below`  
-  
- `DWORD dwData;   // application-defined value`  
-  
- `int iString;// zero-based index of button label string`  
-  
- `} TBBUTTON;`  
+```cpp
+typedef struct _TBBUTTON {
+    int iBitmap;    // zero-based index of button image
+    int idCommand;  // command to be sent when button pressed
+    BYTE fsState;   // button state--see below
+    BYTE fsStyle;   // button style--see below
+    DWORD dwData;   // application-defined value
+    int iString;    // zero-based index of button label string
+} TBBUTTON;
+```
   
  Elementy członkowskie są następujące:  
   
- `iBitmap`  
- Liczony od zera indeks obrazu przycisku, -1, jeśli brak obrazu dla przycisku.  
+- `iBitmap`  
+
+   Liczony od zera indeks obrazu przycisku, -1, jeśli brak obrazu dla przycisku.  
   
- `idCommand`  
- Identyfikator polecenia skojarzone z nim. Ten identyfikator jest wysyłane w komunikatów WM_COMMAND, po wybraniu przycisku. Jeśli `fsStyle` składowa ma wartość TBSTYLE_SEP, ten element członkowski musi mieć wartość zero.  
+-  `idCommand`  
+
+   Identyfikator polecenia skojarzone z nim. Ten identyfikator jest wysyłane w komunikatów WM_COMMAND, po wybraniu przycisku. Jeśli `fsStyle` składowa ma wartość TBSTYLE_SEP, ten element członkowski musi mieć wartość zero.  
   
- `fsState`  
- Flagi stanu przycisku. Może być kombinacją wartości wymienione poniżej:  
+-  `fsState`  
+
+   Flagi stanu przycisku. Może być kombinacją wartości wymienione poniżej:  
   
-- TBSTATE_CHECKED przycisku styl TBSTYLE_CHECKED i jest naciskana.  
+   - TBSTATE_CHECKED przycisku styl TBSTYLE_CHECKED i jest naciskana.  
   
-- TBSTATE_ENABLED przycisku akceptuje dane wejściowe użytkownika. Przycisk, który nie ma w tym stanie nie akceptuje dane wejściowe użytkownika i jest niedostępna.  
+   - TBSTATE_ENABLED przycisku akceptuje dane wejściowe użytkownika. Przycisk, który nie ma w tym stanie nie akceptuje dane wejściowe użytkownika i jest niedostępna.  
   
-- TBSTATE_HIDDEN przycisk nie jest widoczna i nie może odbierać dane wejściowe użytkownika.  
+   - TBSTATE_HIDDEN przycisk nie jest widoczna i nie może odbierać dane wejściowe użytkownika.  
   
-- TBSTATE_INDETERMINATE przycisk jest niedostępny.  
+   - TBSTATE_INDETERMINATE przycisk jest niedostępny.  
   
-- Jest naciskana TBSTATE_PRESSED przycisku.  
+   - Jest naciskana TBSTATE_PRESSED przycisku.  
   
-- Podział wiersza A TBSTATE_WRAP poniżej przycisku. Przycisk musi mieć stan TBSTATE_ENABLED.  
+   - Podział wiersza A TBSTATE_WRAP poniżej przycisku. Przycisk musi mieć stan TBSTATE_ENABLED.  
   
- `fsStyle`  
- Styl przycisku. Może być kombinacją wartości wymienione poniżej:  
+- `fsStyle`  
+
+   Styl przycisku. Może być kombinacją wartości wymienione poniżej:  
   
-- TBSTYLE_BUTTON tworzy standardowy przycisku polecenia.  
+   - TBSTYLE_BUTTON tworzy standardowy przycisku polecenia.  
   
-- Tworzy TBSTYLE_CHECK przycisk, który jest przełączana między Stanami zostanie wciśnięty lub niekliknięty każdorazowo użytkownik klika go. Ten przycisk ma inny kolor tła, gdy jest ona w stanie po naciśnięciu.  
+   - Tworzy TBSTYLE_CHECK przycisk, który jest przełączana między Stanami zostanie wciśnięty lub niekliknięty każdorazowo użytkownik klika go. Ten przycisk ma inny kolor tła, gdy jest ona w stanie po naciśnięciu.  
   
-- Tworzy TBSTYLE_CHECKGROUP, który naciśnięty przycisk wyboru, która pozostaje, dopóki nie zostanie naciśnięty inny przycisk w grupie.  
+   - Tworzy TBSTYLE_CHECKGROUP, który naciśnięty przycisk wyboru, która pozostaje, dopóki nie zostanie naciśnięty inny przycisk w grupie.  
   
-- Tworzy TBSTYLE_GROUP, który naciśnięty przycisk, który pozostaje, dopóki nie zostanie naciśnięty inny przycisk w grupie.  
+   - Tworzy TBSTYLE_GROUP, który naciśnięty przycisk, który pozostaje, dopóki nie zostanie naciśnięty inny przycisk w grupie.  
   
-- TBSTYLE_SEP tworzy separator, zapewniając mały odstęp między grupami przycisku. Przycisk, który ma ten styl nie odbiera danych wejściowych użytkownika.  
+   - TBSTYLE_SEP tworzy separator, zapewniając mały odstęp między grupami przycisku. Przycisk, który ma ten styl nie odbiera danych wejściowych użytkownika.  
   
- `dwData`  
- Dane zdefiniowane przez użytkownika.  
+- `dwData`  
+
+   Dane zdefiniowane przez użytkownika.  
   
- `iString`  
- Liczony od zera indeks ciąg używany jako przycisk użytkownika etykiety, -1, jeśli ma nie parametrów dla tego przycisku.  
+- `iString`  
+
+   Liczony od zera indeks ciąg używany jako przycisk użytkownika etykiety, -1, jeśli ma nie parametrów dla tego przycisku.  
   
- Obraz i/lub ciąg, którego indeks, należy podać muszą wcześniej zostały dodane do formantu paska narzędzi listy przy użyciu [AddBitmap](#addbitmap), [addstring —](#addstring), i/lub [AddStrings](#addstrings).  
+Obraz i/lub ciąg, którego indeks, należy podać muszą wcześniej zostały dodane do formantu paska narzędzi listy przy użyciu [AddBitmap](#addbitmap), [addstring —](#addstring), i/lub [AddStrings](#addstrings).  
   
 ##  <a name="addstring"></a>  CToolBarCtrl::AddString  
  Dodaje nowy ciąg przekazany jako identyfikator zasobu, na pasku narzędzi wewnętrznych listą ciągów.  

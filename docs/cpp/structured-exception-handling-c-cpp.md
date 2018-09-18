@@ -19,12 +19,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 861cb216dba1e8b3d451d6120dba897e06ba910a
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: 72c82ce5885b8b40613a65bab72958d6ae7c1a2d
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45713196"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46050862"
 ---
 # <a name="structured-exception-handling-cc"></a>Obsługa wyjątków strukturalnych (C/C++)
 
@@ -154,8 +154,8 @@ Aby uzyskać więcej informacji, zobacz [/EH (Model obsługi wyjątku)](../build
 
 ## <a name="see-also"></a>Zobacz także
 
-[Obsługa wyjątków](../cpp/exception-handling-in-visual-cpp.md)  
-[Słowa kluczowe](../cpp/keywords-cpp.md)  
-[\<wyjątku >](../standard-library/exception.md)  
-[Błędy w obsłudze wyjątków](../cpp/errors-and-exception-handling-modern-cpp.md)  
-[(Windows) do obsługi wyjątków strukturalnych](https://msdn.microsoft.com/library/windows/desktop/ms680657.aspx)  
+[Obsługa wyjątków](../cpp/exception-handling-in-visual-cpp.md)<br/>
+[Słowa kluczowe](../cpp/keywords-cpp.md)<br/>
+[\<wyjątku >](../standard-library/exception.md)<br/>
+[Błędy w obsłudze wyjątków](../cpp/errors-and-exception-handling-modern-cpp.md)<br/>
+[(Windows) do obsługi wyjątków strukturalnych](https://msdn.microsoft.com/library/windows/desktop/ms680657.aspx)

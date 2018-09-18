@@ -47,12 +47,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ed6e32ec0e474f901818618af662a91e3e46efed
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 3ce6099b904c088399dcb43635a1b254567e8320
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43763701"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46024920"
 ---
 # <a name="message-map-macros-atl"></a>Makra mapy komunikatów (ATL)
 
@@ -109,7 +109,7 @@ ALT_MSG_MAP(msgMapID)
 
 ### <a name="parameters"></a>Parametry
 
-*msgMapID*  
+*msgMapID*<br/>
 [in] Identyfikator mapy wiadomości.
 
 ### <a name="remarks"></a>Uwagi
@@ -148,7 +148,7 @@ BEGIN_MSG_MAP(theClass)
 
 ### <a name="parameters"></a>Parametry
 
-*theClass*  
+*theClass*<br/>
 [in] Nazwa klasy zawierającej mapie komunikatów.
 
 ### <a name="remarks"></a>Uwagi
@@ -227,10 +227,10 @@ CHAIN_MSG_MAP_ALT(theChainClass, msgMapID)
 
 ### <a name="parameters"></a>Parametry
 
-*theChainClass*  
+*theChainClass*<br/>
 [in] Nazwa klasy bazowej, zawierający mapie komunikatów.
 
-*msgMapID*  
+*msgMapID*<br/>
 [in] Identyfikator mapy wiadomości.
 
 ### <a name="remarks"></a>Uwagi
@@ -256,10 +256,10 @@ CHAIN_MSG_MAP_ALT_MEMBER(theChainMember, msgMapID)
 
 ### <a name="parameters"></a>Parametry
 
-*theChainMember*  
+*theChainMember*<br/>
 [in] Nazwa elementu danych zawierającego mapie komunikatów.
 
-*msgMapID*  
+*msgMapID*<br/>
 [in] Identyfikator mapy wiadomości.
 
 ### <a name="remarks"></a>Uwagi
@@ -285,7 +285,7 @@ CHAIN_MSG_MAP(theChainClass)
 
 ### <a name="parameters"></a>Parametry
 
-*theChainClass*  
+*theChainClass*<br/>
 [in] Nazwa klasy bazowej, zawierający mapie komunikatów.
 
 ### <a name="remarks"></a>Uwagi
@@ -323,7 +323,7 @@ CHAIN_MSG_MAP_DYNAMIC(dynaChainID)
 
 ### <a name="parameters"></a>Parametry
 
-*dynaChainID*  
+*dynaChainID*<br/>
 [in] Unikatowy identyfikator obiektu mapie komunikatów.
 
 ### <a name="remarks"></a>Uwagi
@@ -349,7 +349,7 @@ CHAIN_MSG_MAP_MEMBER(theChainMember)
 
 ### <a name="parameters"></a>Parametry
 
-*theChainMember*  
+*theChainMember*<br/>
 [in] Nazwa elementu danych zawierającego mapie komunikatów.
 
 ### <a name="remarks"></a>Uwagi
@@ -387,10 +387,10 @@ COMMAND_CODE_HANDLER(code, func)
 
 ### <a name="parameters"></a>Parametry
 
-*Kod*  
+*Kod*<br/>
 [in] Kod powiadomienia.
 
-*FUNC*  
+*FUNC*<br/>
 [in] Nazwa funkcji obsługi wiadomości.
 
 ### <a name="requirements"></a>Wymagania
@@ -407,13 +407,13 @@ COMMAND_HANDLER(id, code, func)
 
 ### <a name="parameters"></a>Parametry
 
-*id*  
+*id*<br/>
 [in] Identyfikator elementu menu, formant lub klawiszy skrótów.
 
-*Kod*  
+*Kod*<br/>
 [in] Kod powiadomienia.
 
-*FUNC*  
+*FUNC*<br/>
 [in] Nazwa funkcji obsługi wiadomości.
 
 ### <a name="remarks"></a>Uwagi
@@ -449,10 +449,10 @@ COMMAND_ID_HANDLER(id, func)
 
 ### <a name="parameters"></a>Parametry
 
-*id*  
+*id*<br/>
 [in] Identyfikator elementu menu, formant lub akceleratora wysyłania komunikatu.
 
-*FUNC*  
+*FUNC*<br/>
 [in] Nazwa funkcji obsługi wiadomości.
 
 ### <a name="requirements"></a>Wymagania
@@ -469,16 +469,16 @@ COMMAND_RANGE_CODE_HANDLER(idFirst, idLast, code, func)
 
 ### <a name="parameters"></a>Parametry
 
-*idFirst*  
+*idFirst*<br/>
 [in] Oznacza początek ciągły zakres identyfikatorów kontroli.
 
-*idLast*  
+*idLast*<br/>
 [in] Oznacza koniec ciągły zakres identyfikatorów kontroli.
 
-*Kod*  
+*Kod*<br/>
 [in] Kod powiadomienia.
 
-*FUNC*  
+*FUNC*<br/>
 [in] Nazwa funkcji obsługi wiadomości.
 
 ### <a name="remarks"></a>Uwagi
@@ -499,13 +499,13 @@ COMMAND_RANGE_HANDLER( idFirst, idLast, func)
 
 ### <a name="parameters"></a>Parametry
 
-*idFirst*  
+*idFirst*<br/>
 [in] Oznacza początek ciągły zakres identyfikatorów kontroli.
 
-*idLast*  
+*idLast*<br/>
 [in] Oznacza koniec ciągły zakres identyfikatorów kontroli.
 
-*FUNC*  
+*FUNC*<br/>
 [in] Nazwa funkcji obsługi wiadomości.
 
 ### <a name="remarks"></a>Uwagi
@@ -598,10 +598,10 @@ MESSAGE_HANDLER( msg, func )
 
 ### <a name="parameters"></a>Parametry
 
-*komunikat:*  
+*komunikat:*<br/>
 [in] Komunikat Windows.
 
-*FUNC*  
+*FUNC*<br/>
 [in] Nazwa funkcji obsługi wiadomości.
 
 ### <a name="remarks"></a>Uwagi
@@ -639,13 +639,13 @@ MESSAGE_RANGE_HANDLER( msgFirst, msgLast, func )
 
 ### <a name="parameters"></a>Parametry
 
-*msgFirst*  
+*msgFirst*<br/>
 [in] Oznacza początek ciągły zakres komunikatów.
 
-*msgLast*  
+*msgLast*<br/>
 [in] Oznacza koniec ciągły zakres komunikatów.
 
-*FUNC*  
+*FUNC*<br/>
 [in] Nazwa funkcji obsługi wiadomości.
 
 ### <a name="requirements"></a>Wymagania
@@ -662,10 +662,10 @@ NOTIFY_CODE_HANDLER(cd, func)
 
 ### <a name="parameters"></a>Parametry
 
-*ciągłe dostarczanie*  
+*ciągłe dostarczanie*<br/>
 [in] Kod powiadomienia.
 
-*FUNC*  
+*FUNC*<br/>
 [in] Nazwa funkcji obsługi wiadomości.
 
 ### <a name="requirements"></a>Wymagania
@@ -682,13 +682,13 @@ NOTIFY_HANDLER( id, cd, func )
 
 ### <a name="parameters"></a>Parametry
 
-*id*  
+*id*<br/>
 [in] Identyfikator formantu wysyłania komunikatu.
 
-*ciągłe dostarczanie*  
+*ciągłe dostarczanie*<br/>
 [in] Kod powiadomienia.
 
-*FUNC*  
+*FUNC*<br/>
 [in] Nazwa funkcji obsługi wiadomości.
 
 ### <a name="remarks"></a>Uwagi
@@ -726,10 +726,10 @@ NOTIFY_ID_HANDLER( id, func )
 
 ### <a name="parameters"></a>Parametry
 
-*id*  
+*id*<br/>
 [in] Identyfikator formantu wysyłania komunikatu.
 
-*FUNC*  
+*FUNC*<br/>
 [in] Nazwa funkcji obsługi wiadomości.
 
 ### <a name="requirements"></a>Wymagania
@@ -746,16 +746,16 @@ NOTIFY_RANGE_CODE_HANDLER( idFirst, idLast, cd, func )
 
 ### <a name="parameters"></a>Parametry
 
-*idFirst*  
+*idFirst*<br/>
 [in] Oznacza początek ciągły zakres identyfikatorów kontroli.
 
-*idLast*  
+*idLast*<br/>
 [in] Oznacza koniec ciągły zakres identyfikatorów kontroli.
 
-*ciągłe dostarczanie*  
+*ciągłe dostarczanie*<br/>
 [in] Kod powiadomienia.
 
-*FUNC*  
+*FUNC*<br/>
 [in] Nazwa funkcji obsługi wiadomości.
 
 ### <a name="remarks"></a>Uwagi
@@ -776,13 +776,13 @@ NOTIFY_RANGE_HANDLER( idFirst, idLast, func )
 
 ### <a name="parameters"></a>Parametry
 
-*idFirst*  
+*idFirst*<br/>
 [in] Oznacza początek ciągły zakres identyfikatorów kontroli.
 
-*idLast*  
+*idLast*<br/>
 [in] Oznacza koniec ciągły zakres identyfikatorów kontroli.
 
-*FUNC*  
+*FUNC*<br/>
 [in] Nazwa funkcji obsługi wiadomości.
 
 ### <a name="remarks"></a>Uwagi
@@ -819,10 +819,10 @@ REFLECTED_COMMAND_CODE_HANDLER( code, func )
 
 ### <a name="parameters"></a>Parametry
 
-*Kod*  
+*Kod*<br/>
 [in] Kod powiadomienia.
 
-*FUNC*  
+*FUNC*<br/>
 [in] Nazwa funkcji obsługi wiadomości.  
 
 ### <a name="requirements"></a>Wymagania
@@ -839,13 +839,13 @@ REFLECTED_COMMAND_HANDLER( id, code, func )
 
 ### <a name="parameters"></a>Parametry
 
-*id*  
+*id*<br/>
 [in] Identyfikator elementu menu, formant lub klawiszy skrótów.
 
-*Kod*  
+*Kod*<br/>
 [in] Kod powiadomienia.
 
-*FUNC*  
+*FUNC*<br/>
 [in] Nazwa funkcji obsługi wiadomości.  
 
 ### <a name="requirements"></a>Wymagania
@@ -862,10 +862,10 @@ REFLECTED_COMMAND_ID_HANDLER( id, func )
 
 ### <a name="parameters"></a>Parametry
 
-*id*  
+*id*<br/>
 [in] Identyfikator elementu menu, formant lub klawiszy skrótów.
 
-*FUNC*  
+*FUNC*<br/>
 [in] Nazwa funkcji obsługi wiadomości.  
 
 ### <a name="requirements"></a>Wymagania
@@ -882,16 +882,16 @@ REFLECTED_COMMAND_RANGE_CODE_HANDLER( idFirst, idLast, code, func )
 
 ### <a name="parameters"></a>Parametry
 
-*idFirst*  
+*idFirst*<br/>
 [in] Oznacza początek ciągły zakres identyfikatorów kontroli.
 
-*idLast*  
+*idLast*<br/>
 [in] Oznacza koniec ciągły zakres identyfikatorów kontroli.
 
-*Kod*  
+*Kod*<br/>
 [in] Kod powiadomienia.
 
-*FUNC*  
+*FUNC*<br/>
 [in] Nazwa funkcji obsługi wiadomości.  
 
 ### <a name="requirements"></a>Wymagania
@@ -908,13 +908,13 @@ REFLECTED_COMMAND_RANGE_HANDLER( idFirst, idLast, func )
 
 ### <a name="parameters"></a>Parametry
 
-*idFirst*  
+*idFirst*<br/>
 [in] Oznacza początek ciągły zakres identyfikatorów kontroli.
 
-*idLast*  
+*idLast*<br/>
 [in] Oznacza koniec ciągły zakres identyfikatorów kontroli.
 
-*FUNC*  
+*FUNC*<br/>
 [in] Nazwa funkcji obsługi wiadomości.  
 
 ### <a name="requirements"></a>Wymagania
@@ -931,10 +931,10 @@ REFLECTED_NOTIFY_CODE_HANDLER_EX( cd, func )
 
 ### <a name="parameters"></a>Parametry
 
-*ciągłe dostarczanie*  
+*ciągłe dostarczanie*<br/>
 [in] Kod powiadomienia.
 
-*FUNC*  
+*FUNC*<br/>
 [in] Nazwa funkcji obsługi wiadomości.  
 
 ### <a name="requirements"></a>Wymagania
@@ -951,13 +951,13 @@ REFLECTED_NOTIFY_HANDLER( id, cd, func )
 
 ### <a name="parameters"></a>Parametry
 
-*id*  
+*id*<br/>
 [in] Identyfikator elementu menu, formant lub klawiszy skrótów.
 
-*ciągłe dostarczanie*  
+*ciągłe dostarczanie*<br/>
 [in] Kod powiadomienia.
 
-*FUNC*  
+*FUNC*<br/>
 [in] Nazwa funkcji obsługi wiadomości.  
 
 ### <a name="requirements"></a>Wymagania
@@ -974,10 +974,10 @@ REFLECTED_NOTIFY_ID_HANDLER( id, func )
 
 ### <a name="parameters"></a>Parametry
 
-*id*  
+*id*<br/>
 [in] Identyfikator elementu menu, formant lub klawiszy skrótów.
 
-*FUNC*  
+*FUNC*<br/>
 [in] Nazwa funkcji obsługi wiadomości.  
 
 ### <a name="requirements"></a>Wymagania
@@ -994,16 +994,16 @@ REFLECTED_NOTIFY_RANGE_CODE_HANDLER( idFirst, idLast, cd, func )
 
 ### <a name="parameters"></a>Parametry
 
-*idFirst*  
+*idFirst*<br/>
 [in] Oznacza początek ciągły zakres identyfikatorów kontroli.
 
-*idLast*  
+*idLast*<br/>
 [in] Oznacza koniec ciągły zakres identyfikatorów kontroli.
 
-*ciągłe dostarczanie*  
+*ciągłe dostarczanie*<br/>
 [in] Kod powiadomienia.
 
-*FUNC*  
+*FUNC*<br/>
 [in] Nazwa funkcji obsługi wiadomości.
 
 ### <a name="requirements"></a>Wymagania
@@ -1020,13 +1020,13 @@ REFLECTED_NOTIFY_RANGE_HANDLER( idFirst, idLast, func )
 
 ### <a name="parameters"></a>Parametry
 
-*idFirst*  
+*idFirst*<br/>
 [in] Oznacza początek ciągły zakres identyfikatorów kontroli.
 
-*idLast*  
+*idLast*<br/>
 [in] Oznacza koniec ciągły zakres identyfikatorów kontroli.
 
-*FUNC*  
+*FUNC*<br/>
 [in] Nazwa funkcji obsługi wiadomości.
 
 ## <a name="see-also"></a>Zobacz też

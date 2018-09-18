@@ -15,63 +15,63 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f891388149990864d35c82affd69c5322e1a222c
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 56606eb495337f7462c20d56369e5bcbdb126207
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43755011"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46052743"
 ---
 # <a name="atl-functions"></a>Funkcje ATL
 
 Aby znaleźć funkcję ATL według kategorii, zobacz następujące tematy.
 
-[Funkcje ścieżki ATL](../../atl/reference/com-map-global-functions.md)  
+[Funkcje ścieżki ATL](../../atl/reference/com-map-global-functions.md)<br/>
 Zapewnia obsługę manipulowania ścieżki pliku.
 
-[Funkcje globalne mapy interfejsu COM](../../atl/reference/com-map-global-functions.md)  
+[Funkcje globalne mapy interfejsu COM](../../atl/reference/com-map-global-functions.md)<br/>
 Zapewnia obsługę mapy interfejsu COM `IUnknown` implementacji.
 
-[Funkcje globalne kontrolek złożonych](../../atl/reference/composite-control-global-functions.md)  
+[Funkcje globalne kontrolek złożonych](../../atl/reference/composite-control-global-functions.md)<br/>
 Zapewniają obsługę do utworzenia okien dialogowych i tworzenie, hostowanie i licencjonowanie kontrolek ActiveX.
 
-[Funkcje globalne punktu połączenia](../../atl/reference/connection-point-global-functions.md)  
+[Funkcje globalne punktu połączenia](../../atl/reference/connection-point-global-functions.md)<br/>
 Obsługuje punkty połączenia i mapy wychwytywania.
 
-[Funkcje globalne debugowania i raportowania błędów](../../atl/reference/debugging-and-error-reporting-global-functions.md)  
+[Funkcje globalne debugowania i raportowania błędów](../../atl/reference/debugging-and-error-reporting-global-functions.md)<br/>
 Udostępniać przydatne narzędzia do debugowania i śledzenia.
 
-[Funkcje globalne kontekstu urządzenia](../../atl/reference/device-context-global-functions.md)  
+[Funkcje globalne kontekstu urządzenia](../../atl/reference/device-context-global-functions.md)<br/>
 Tworzy kontekst urządzenia dla danego urządzenia.
 
-[Funkcje globalne obsługi zdarzeń](../../atl/reference/event-handling-global-functions.md)  
+[Funkcje globalne obsługi zdarzeń](../../atl/reference/event-handling-global-functions.md)<br/>
 Udostępnia program obsługi zdarzeń.
 
-[Funkcje globalne kierowania](../../atl/reference/marshaling-global-functions.md)  
+[Funkcje globalne kierowania](../../atl/reference/marshaling-global-functions.md)<br/>
 Zapewnia obsługę organizowania i konwertowania kierowania danych do wskaźniki interfejsu.
 
-[Funkcje globalne konwersji HIMETRIC/pikseli](../../atl/reference/pixel-himetric-conversion-global-functions.md)  
+[Funkcje globalne konwersji HIMETRIC/pikseli](../../atl/reference/pixel-himetric-conversion-global-functions.md)<br/>
 Zapewnia obsługę konwersji do i z pikseli i jednostkach HIMETRIC.
 
-[Funkcje globalne rejestru i elementu TypeLib](../../atl/reference/registry-and-typelib-global-functions.md)  
+[Funkcje globalne rejestru i elementu TypeLib](../../atl/reference/registry-and-typelib-global-functions.md)<br/>
 Zapewnia obsługę ładowania i rejestrowania biblioteki typów.
 
-[Funkcje globalne zabezpieczeń](../../atl/reference/security-global-functions.md)  
+[Funkcje globalne zabezpieczeń](../../atl/reference/security-global-functions.md)<br/>
 Modyfikowanie obiektów SID i listę ACL zapewniają obsługę.
 
-[Funkcje globalne identyfikatora zabezpieczeń](../../atl/reference/security-identifier-global-functions.md)  
+[Funkcje globalne identyfikatora zabezpieczeń](../../atl/reference/security-identifier-global-functions.md)<br/>
 Zwraca typowe znaną wartością identyfikatora SID obiektów.
 
-[Funkcje globalne rejestracji serwera](../../atl/reference/server-registration-global-functions.md)  
+[Funkcje globalne rejestracji serwera](../../atl/reference/server-registration-global-functions.md)<br/>
 Zapewnia obsługę zarejestrować lub wyrejestrować serwer obiektów na mapie obiektu.
 
-[Funkcje globalne elementu WinModule](../../atl/reference/winmodule-global-functions.md)  
+[Funkcje globalne elementu WinModule](../../atl/reference/winmodule-global-functions.md)<br/>
 Zapewnia pomoc techniczną dla `_AtlCreateWndData` struktury operacji.
 
 ## <a name="see-also"></a>Zobacz też
 
-[Składniki ATL COM pulpitu](../../atl/atl-com-desktop-components.md)   
-[Makra](../../atl/reference/atl-macros.md)   
-[Zmienne globalne](../../atl/reference/atl-global-variables.md)   
-[Definicje typów](../../atl/reference/atl-typedefs.md)   
+[Składniki ATL COM pulpitu](../../atl/atl-com-desktop-components.md)<br/>
+[Makra](../../atl/reference/atl-macros.md)<br/>
+[Zmienne globalne](../../atl/reference/atl-global-variables.md)<br/>
+[Definicje typów](../../atl/reference/atl-typedefs.md)<br/>
 [Klasy i struktury](../../atl/reference/atl-classes.md)

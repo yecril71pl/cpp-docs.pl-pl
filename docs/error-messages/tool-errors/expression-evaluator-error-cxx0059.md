@@ -1,5 +1,5 @@
 ---
-title: Błąd cxx0059 programu Expression Evaluator | Dokumentacja firmy Microsoft
+title: Błąd ewaluatora wyrażeń CXX0059 | Dokumentacja firmy Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,16 +17,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8dbd0944eabe57dc3dd1cc224da220ee7f6435c1
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 55fc60014bdc408d581ed8299715aad139ef9862
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33295863"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46050466"
 ---
 # <a name="expression-evaluator-error-cxx0059"></a>Błąd CXX0059 programu Expression Evaluator
-Lewy argument operacji jest klasą nie nazwą funkcji  
-  
- Lewy argument operacji wywołania funkcji nazwy klasy i nie można rozpoznać wywołania funkcji. Ten błąd mógł wystąpić pominięcie nazwy funkcji członkowskiej w wyrażeniu.  
-  
- Ten błąd jest taki sam jak CAN0059.
+
+Lewy operand jest klasa nie nazwy funkcji
+
+Lewy operand wywołanie funkcji było nazwy klasy i nie można rozpoznać wywołania funkcji. Pomijając nazwę funkcji składowej w wyrażeniu może być przyczyną tego błędu.
+
+Ten błąd jest taka sama jak CAN0059.

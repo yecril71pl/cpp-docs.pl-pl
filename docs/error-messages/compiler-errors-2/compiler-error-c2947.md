@@ -1,5 +1,5 @@
 ---
-title: C2947 błąd kompilatora | Dokumentacja firmy Microsoft
+title: Błąd kompilatora C2947 | Dokumentacja firmy Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,27 +16,28 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e1af4e6a5a27c13d69351eaf0cddfafe11ba5f22
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 508c2ae29b0290332cc7c2b49aac0a1ecb10528f
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33243434"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46054522"
 ---
-# <a name="compiler-error-c2947"></a>C2947 błąd kompilatora
-Oczekiwano znaku ' >' zakończenie konstrukcji, znaleziono "składni"  
-  
- Określono opcję ogólne lub szablonu listy argumentów nie ma prawidłowo zakończony.  
-  
- C2947 może być również generowany przez błędy składniowe.  
-  
- Poniższy przykład generuje C2947:  
-  
-```  
-// C2947.cpp  
-// compile with: /c  
-template <typename T>=   // C2947  
-// try the following line instead  
-// template <typename T>  
-struct A {};  
+# <a name="compiler-error-c2947"></a>Błąd kompilatora C2947
+
+Oczekiwano ">" zakończenie konstrukcji, znaleziono "składni"
+
+Generyczny lub szablonu listy argumentów nie zostały prawidłowo zakończony.
+
+C2947 mogą być też generowane przez błędy składniowe.
+
+Poniższy przykład spowoduje wygenerowanie C2947:
+
+```
+// C2947.cpp
+// compile with: /c
+template <typename T>=   // C2947
+// try the following line instead
+// template <typename T>
+struct A {};
 ```

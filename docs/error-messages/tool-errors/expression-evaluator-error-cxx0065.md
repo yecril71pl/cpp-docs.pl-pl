@@ -1,5 +1,5 @@
 ---
-title: Błąd cxx0065 programu Expression Evaluator | Dokumentacja firmy Microsoft
+title: Błąd ewaluatora wyrażeń CXX0065 | Dokumentacja firmy Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,20 +17,21 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 78c25c9c6bde27219f10e4047dc7a6ab416f55d5
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: c100b1edbd36f4384e8deb1abf5b36465e8da479
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33297540"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46024167"
 ---
 # <a name="expression-evaluator-error-cxx0065"></a>Błąd CXX0065 programu Expression Evaluator
-Zmienna wymaga ramki stosu  
-  
- Wyrażenie zawierał zmiennej, która istnieje w bieżącym zakresie, ale nie został jeszcze utworzony.  
-  
- Ten błąd może wystąpić, gdy mają przeprowadził w prologu funkcji, ale nie została jeszcze — Konfiguracja ramki stosu funkcji lub mieć przeprowadził do kodu zakończenia dla funkcji.  
-  
- Kod prologu poszczególnych kroków do momentu ramki stosu nie został skonfigurowany przed obliczenie wyrażenia.  
-  
- Ten błąd jest taki sam jak CAN0065.
+
+Zmienna musi ramki stosu
+
+Wyrażenie zawiera zmienną, która istnieje w bieżącym zakresie, ale nie został jeszcze utworzony.
+
+Ten błąd może wystąpić, kiedy ma zmieniana w prologu funkcji, ale nie została jeszcze Konfigurowanie ramki stosu dla funkcji lub jeśli masz schodkowego kod wyjścia dla funkcji.
+
+Przejść przez kod prologu, dopóki nie skonfigurowano ramki stosu przed obliczając wartość wyrażenia.
+
+Ten błąd jest taka sama jak CAN0065.

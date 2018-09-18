@@ -23,12 +23,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: daa4a34915547b726494ea9f461b7eba24c617dd
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 8d60a7f40fc90d5586d7a8a7d41cab81a4d97c85
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43755726"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46054483"
 ---
 # <a name="cautovectorptr-class"></a>Klasa CAutoVectorPtr
 
@@ -40,13 +40,13 @@ Ta klasa reprezentuje obiekt inteligentny wskaźnik przy użyciu nowych wektoró
 ## <a name="syntax"></a>Składnia
 
 ```
-template<typename T>  
+template<typename T>
 class CAutoVectorPtr
 ```
 
 #### <a name="parameters"></a>Parametry
 
-`T`  
+*T*<br/>
 Typ wskaźnika.
 
 ## <a name="members"></a>Elementy członkowskie
@@ -82,7 +82,7 @@ Typ wskaźnika.
 
 ## <a name="remarks"></a>Uwagi
 
-Ta klasa dostarcza metody do tworzenia i zarządzania inteligentny wskaźnik, co pomoże zapewnić ochronę przed przeciekami pamięci przy zwalnianiu zasobów automatycznie, gdy znajduje się poza zakresem. `CAutoVectorPtr` jest podobny do `CAutoPtr`, jedyną różnicą, że `CAutoVectorPtr` używa [nowy wektor&#91; &#93; ](../../standard-library/new-operators.md#op_new_arr) i [usuwanie wektora&#91; &#93; ](../../standard-library/new-operators.md#op_delete_arr) do przydzielają i zwalniają pamięć zamiast C++ **nowe** i **Usuń** operatorów. Zobacz [CAutoVectorPtrElementTraits](../../atl/reference/cautovectorptrelementtraits-class.md) Jeśli klas kolekcji `CAutoVectorPtr` są wymagane.  
+Ta klasa dostarcza metody do tworzenia i zarządzania inteligentny wskaźnik, co pomoże zapewnić ochronę przed przeciekami pamięci przy zwalnianiu zasobów automatycznie, gdy znajduje się poza zakresem. `CAutoVectorPtr` jest podobny do `CAutoPtr`, jedyną różnicą, że `CAutoVectorPtr` używa [nowy wektor&#91; &#93; ](../../standard-library/new-operators.md#op_new_arr) i [usuwanie wektora&#91; &#93; ](../../standard-library/new-operators.md#op_delete_arr) do przydzielają i zwalniają pamięć zamiast C++ **nowe** i **Usuń** operatorów. Zobacz [CAutoVectorPtrElementTraits](../../atl/reference/cautovectorptrelementtraits-class.md) Jeśli klas kolekcji `CAutoVectorPtr` są wymagane.
 
 Zobacz [CAutoPtr](../../atl/reference/cautoptr-class.md) na przykład za pomocą klasa inteligentnego wskaźnika.
 
@@ -100,7 +100,7 @@ bool Allocate(size_t nElements) throw();
 
 ### <a name="parameters"></a>Parametry
 
-*nElements*  
+*nElements*<br/>
 Liczba elementów w tablicy.
 
 ### <a name="return-value"></a>Wartość zwracana
@@ -121,7 +121,7 @@ void Attach(T* p) throw();
 
 ### <a name="parameters"></a>Parametry
 
-*p*  
+*p*<br/>
 `CAutoVectorPtr` Obiekt będzie przejęcie na własność ten wskaźnik.
 
 ### <a name="remarks"></a>Uwagi
@@ -142,7 +142,7 @@ CAutoVectorPtr(CAutoVectorPtr<T>& p) throw();
 
 ### <a name="parameters"></a>Parametry
 
-*p*  
+*p*<br/>
 Istniejącego wskaźnika.
 
 ### <a name="remarks"></a>Uwagi
@@ -211,7 +211,7 @@ CAutoVectorPtr<T>& operator= (CAutoVectorPtr<T>& p) throw();
 
 ### <a name="parameters"></a>Parametry
 
-*p*  
+*p*<br/>
 Wskaźnik.
 
 ### <a name="return-value"></a>Wartość zwracana
@@ -226,7 +226,7 @@ Operator przypisania odłącza `CAutoVectorPtr` obiekt z dowolny wskaźnik bież
 
 Operator rzutowania.
 
-```  
+```
 operator T*() const throw();
 ```
 
@@ -236,5 +236,5 @@ Zwraca wskaźnik do typu danych obiektu zdefiniowane w szablonie klasy.
 
 ## <a name="see-also"></a>Zobacz też
 
-[Klasa CAutoPtr](../../atl/reference/cautoptr-class.md)   
+[Klasa CAutoPtr](../../atl/reference/cautoptr-class.md)<br/>
 [Klasa — Przegląd](../../atl/atl-class-overview.md)

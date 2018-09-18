@@ -1,5 +1,5 @@
 ---
-title: Kompilatora (poziom 1) ostrzeżenie C4552 | Dokumentacja firmy Microsoft
+title: Kompilator ostrzeżenie (poziom 1) C4552 | Dokumentacja firmy Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,29 +16,30 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a3b58d33286163050db533fed00d27abe8903e9f
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 62c08ea81f5f8794a1dd4ff7d0b5644e9a669e0f
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33281131"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46048074"
 ---
-# <a name="compiler-warning-level-1-c4552"></a>Kompilator C4552 ostrzegawcze (poziom 1)
-"operator": operator nie ma żadnego wpływu; Oczekiwano operatora z efektem ubocznym  
-  
- Jeśli Instrukcja wyrażenia operator o nie działa po stronie jak wartość górnej części wyrażenia, prawdopodobnie jest błąd.  
-  
- Aby pominąć to ostrzeżenie, umieść wyrażenie w nawiasach.  
-  
- Poniższy przykład generuje C4552:  
-  
-```  
-// C4552.cpp  
-// compile with: /W1  
-int main() {  
-   int i, j;  
-   i + j;   // C4552  
-   // try the following line instead  
-   // (i + j);  
-}  
+# <a name="compiler-warning-level-1-c4552"></a>Kompilator ostrzeżenie (poziom 1) C4552
+
+'operator': operator nie przynosi efektu; Oczekiwano operatora z efektem ubocznym
+
+Jeśli Instrukcja wyrażenia operatora z efektem nie jako górnej części wyrażenia, prawdopodobnie jest błąd.
+
+Aby pominąć to ostrzeżenie, umieść wyrażenie w nawiasach.
+
+Poniższy przykład spowoduje wygenerowanie C4552:
+
+```
+// C4552.cpp
+// compile with: /W1
+int main() {
+   int i, j;
+   i + j;   // C4552
+   // try the following line instead
+   // (i + j);
+}
 ```

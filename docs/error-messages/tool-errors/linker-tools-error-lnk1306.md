@@ -16,58 +16,58 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: bb340a4c28f94f18e0c4b65bea8749394e002bd3
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 7cc007a4a594c8593d7820365377f1c811b1e23c
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33300501"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46050570"
 ---
-# <a name="linker-tools-error-lnk1306"></a>Błąd narzędzi konsolidatora LNK1306  
-  
-> Funkcja punktu wejścia biblioteki DLL nie może być zarządzany; Kompiluj macierzysty  
-  
-`DllMain` Nie można skompilować do MSIL; musi być skompilowany do natywnego.  
-  
-Aby rozwiązać ten problem  
-  
--   Skompiluj plik zawierający punkt wejścia bez **/CLR**.  
-  
--   Umieść punkt wejścia w `#pragma unmanaged` sekcji.  
-  
-Aby uzyskać więcej informacji, zobacz:  
-  
--   [/clr (Kompilacja środowiska uruchomieniowego języka wspólnego)](../../build/reference/clr-common-language-runtime-compilation.md)  
-  
--   [zarządzane, niezarządzane](../../preprocessor/managed-unmanaged.md)  
-  
--   [Inicjowanie zestawów mieszanych](../../dotnet/initialization-of-mixed-assemblies.md)  
-  
--   [Zachowanie biblioteki wykonawczej DLL i Visual C++](../../build/run-time-library-behavior.md)  
-  
-## <a name="example"></a>Przykład  
-  
-Poniższy przykład generuje LNK1306.  
-  
-```cpp  
-// LNK1306.cpp  
-// compile with: /clr /link /dll /entry:NewDllMain  
-// LNK1306 error expected  
-#include <windows.h>  
-int __stdcall NewDllMain( HINSTANCE h, ULONG ulReason, PVOID pvReserved ) {  
-   return 1;  
-}  
-```  
-  
-Aby rozwiązać ten problem, nie należy używać opcji/CLR Aby skompilować ten plik, lub użyj `#pragma` dyrektywy, które mają zostać umieszczone w sekcji niezarządzane definicji punktu wejścia, jak pokazano w poniższym przykładzie:  
-  
-```cpp  
-// LNK1306fix.cpp  
-// compile with: /clr /link /dll /entry:NewDllMain  
-#include <windows.h>  
-#pragma managed(push, off)  
-int __stdcall NewDllMain( HINSTANCE h, ULONG ulReason, PVOID pvReserved ) {  
-   return 1;  
-}  
-#pragma managed(pop)  
-```  
+# <a name="linker-tools-error-lnk1306"></a>Błąd narzędzi konsolidatora LNK1306
+
+> Funkcja punktu wejścia biblioteki DLL nie może być zarządzany; skompilować Native
+
+`DllMain` Nie można skompilować do MSIL; muszą być skompilowane na natywny.
+
+Aby rozwiązać ten problem
+
+- Skompiluj plik, który zawiera punkt wejścia bez **/CLR**.
+
+- Umieść punkt wejścia w `#pragma unmanaged` sekcji.
+
+Aby uzyskać więcej informacji, zobacz:
+
+- [/clr (Kompilacja środowiska uruchomieniowego języka wspólnego)](../../build/reference/clr-common-language-runtime-compilation.md)
+
+- [zarządzane, niezarządzane](../../preprocessor/managed-unmanaged.md)
+
+- [Inicjowanie zestawów mieszanych](../../dotnet/initialization-of-mixed-assemblies.md)
+
+- [Zachowanie biblioteki wykonawczej DLL i Visual C++](../../build/run-time-library-behavior.md)
+
+## <a name="example"></a>Przykład
+
+Poniższy przykład spowoduje wygenerowanie LNK1306.
+
+```cpp
+// LNK1306.cpp
+// compile with: /clr /link /dll /entry:NewDllMain
+// LNK1306 error expected
+#include <windows.h>
+int __stdcall NewDllMain( HINSTANCE h, ULONG ulReason, PVOID pvReserved ) {
+   return 1;
+}
+```
+
+Aby rozwiązać ten problem, nie należy używać opcji/CLR Aby skompilować ten plik, lub użyj `#pragma` dyrektywy, należy umieścić w niezarządzanych sekcji definicji punktu wejścia, jak pokazano w poniższym przykładzie:
+
+```cpp
+// LNK1306fix.cpp
+// compile with: /clr /link /dll /entry:NewDllMain
+#include <windows.h>
+#pragma managed(push, off)
+int __stdcall NewDllMain( HINSTANCE h, ULONG ulReason, PVOID pvReserved ) {
+   return 1;
+}
+#pragma managed(pop)
+```

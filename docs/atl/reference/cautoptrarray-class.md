@@ -18,12 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d83f98de4f1d07fbebdd07186729453d2ef1d3b2
-ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
+ms.openlocfilehash: 23cc8e519fc47173efe413cc687ef48c0dc39945
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44108736"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46025168"
 ---
 # <a name="cautoptrarray-class"></a>Klasa CAutoPtrArray
 
@@ -84,7 +84,7 @@ Inicjuje tablicę inteligentnego wskaźnika.
 
 ## <a name="see-also"></a>Zobacz też
 
-[Klasa CAtlArray](../../atl/reference/catlarray-class.md)   
-[Klasa CAutoPtrElementTraits](../../atl/reference/cautoptrelementtraits-class.md)   
-[Klasa CAutoPtrList](../../atl/reference/cautoptrlist-class.md)   
+[Klasa CAtlArray](../../atl/reference/catlarray-class.md)<br/>
+[Klasa CAutoPtrElementTraits](../../atl/reference/cautoptrelementtraits-class.md)<br/>
+[Klasa CAutoPtrList](../../atl/reference/cautoptrlist-class.md)<br/>
 [Klasa — Przegląd](../../atl/atl-class-overview.md)

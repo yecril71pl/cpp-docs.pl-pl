@@ -1,5 +1,5 @@
 ---
-title: C3016 błąd kompilatora | Dokumentacja firmy Microsoft
+title: Błąd kompilatora C3016 | Dokumentacja firmy Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,35 +16,36 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 905cc529029fb8495f85b1ec695c49e4ba3999f1
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: d77686f669dcd767a1d79c0ac60360f1bb2aa81b
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33241820"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46047554"
 ---
-# <a name="compiler-error-c3016"></a>C3016 błąd kompilatora
-"var": zmienna index w OpenMP instrukcji "for" musi posiadać podpisany typ całkowity  
-  
- Zmienna index w OpenMP `for` instrukcja musi być podpisany typ całkowity.  
-  
- Poniższy przykład generuje C3016:  
-  
-```  
-// C3016.cpp  
-// compile with: /openmp  
-int main()  
-{  
-   #pragma omp parallel  
-   {  
-      unsigned int i = 0;  
-      // Try the following line instead:  
-      // int i = 0;  
-  
-      #pragma omp for  
-      for (i = 0; i <= 10; ++i)   // C3016  
-      {  
-      }  
-   }  
-}  
+# <a name="compiler-error-c3016"></a>Błąd kompilatora C3016
+
+"var": zmienna index w OpenMP instrukcji "for" musi mieć typ całkowitoliczbowy ze znakiem
+
+Zmienna index w OpenMP `for` instrukcja musi być typ całkowity ze znakiem.
+
+Poniższy przykład spowoduje wygenerowanie C3016:
+
+```
+// C3016.cpp
+// compile with: /openmp
+int main()
+{
+   #pragma omp parallel
+   {
+      unsigned int i = 0;
+      // Try the following line instead:
+      // int i = 0;
+
+      #pragma omp for
+      for (i = 0; i <= 10; ++i)   // C3016
+      {
+      }
+   }
+}
 ```

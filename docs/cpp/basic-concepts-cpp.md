@@ -14,33 +14,35 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 52e1dcd3ab6697a2d4643389d1a70cda86b04f80
-ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
+ms.openlocfilehash: ac218913864944c4a0d2cbd973a796cf38edc3a7
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/01/2018
-ms.locfileid: "39403579"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46056589"
 ---
 # <a name="basic-concepts--c"></a>Koncepcje podstawowe (C++)
-W tej sekcji opisano pojęcia, które są niezbędne do interpretacji języka C++. Programiści C będzie należy zapoznać się z wielu z tych koncepcji, ale istnieją pewne niewielkie różnice, które może spowodować, że program nieoczekiwane wyniki. Uwzględnione są następujące tematy:  
-  
--   [Deklaracje i definicje](../cpp/declarations-and-definitions-cpp.md)  
-  
--   [Zakres obiektu języka C++ lub funkcji](../cpp/scope-visual-cpp.md)  
-  
--   [Powiązania i definicji reguł programu](../cpp/program-and-linkage-cpp.md)  
-  
--   [Uruchamianie i kończenie działania](../cpp/startup-and-termination-cpp.md)  
-  
--   [Wartości L i r wartości](../cpp/lvalues-and-rvalues-visual-cpp.md)  
-  
--   [Obiekty tymczasowe](../cpp/temporary-objects.md)  
-  
--   [Wyrównanie](../cpp/alignment-cpp-declarations.md)  
-  
--   [alignof i alignas](../cpp/alignof-and-alignas-cpp.md)  
-  
--   [Prosta standardowego układu i typy POD](../cpp/trivial-standard-layout-and-pod-types.md)  
-  
-## <a name="see-also"></a>Zobacz także  
- [Dokumentacja języka C++](../cpp/cpp-language-reference.md)
+
+W tej sekcji opisano pojęcia, które są niezbędne do interpretacji języka C++. Programiści C będzie należy zapoznać się z wielu z tych koncepcji, ale istnieją pewne niewielkie różnice, które może spowodować, że program nieoczekiwane wyniki. Uwzględnione są następujące tematy:
+
+- [Deklaracje i definicje](../cpp/declarations-and-definitions-cpp.md)
+
+- [Zakres obiektu języka C++ lub funkcji](../cpp/scope-visual-cpp.md)
+
+- [Powiązania i definicji reguł programu](../cpp/program-and-linkage-cpp.md)
+
+- [Uruchamianie i kończenie działania](../cpp/startup-and-termination-cpp.md)
+
+- [Wartości L i r wartości](../cpp/lvalues-and-rvalues-visual-cpp.md)
+
+- [Obiekty tymczasowe](../cpp/temporary-objects.md)
+
+- [Wyrównanie](../cpp/alignment-cpp-declarations.md)
+
+- [alignof i alignas](../cpp/alignof-and-alignas-cpp.md)
+
+- [Prosta standardowego układu i typy POD](../cpp/trivial-standard-layout-and-pod-types.md)
+
+## <a name="see-also"></a>Zobacz także
+
+[Dokumentacja języka C++](../cpp/cpp-language-reference.md)

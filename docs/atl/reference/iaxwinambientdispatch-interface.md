@@ -45,12 +45,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f5bb644e43a5dd5085c53d0428f892cccd424fc1
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 2cf8747275325332f6a2d0072e2c0ba2a66ae276
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43766688"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46057616"
 ---
 # <a name="iaxwinambientdispatch-interface"></a>Interfejs IAxWinAmbientDispatch
 
@@ -130,7 +130,7 @@ STDMETHOD(get_AllowContextMenu)(VARIANT_BOOL* pbAllowContextMenu);
 
 ### <a name="parameters"></a>Parametry
 
-*pbAllowContextMenu*  
+*pbAllowContextMenu*<br/>
 [out] Adres zmiennej, aby otrzymać bieżąca wartość tej właściwości.
 
 ### <a name="return-value"></a>Wartość zwracana
@@ -151,7 +151,7 @@ STDMETHOD(get_AllowShowUI)(VARIANT_BOOL* pbAllowShowUI);
 
 ### <a name="parameters"></a>Parametry
 
-*pbAllowShowUI*  
+*pbAllowShowUI*<br/>
 [out] Adres zmiennej, aby otrzymać bieżąca wartość tej właściwości.
 
 ### <a name="return-value"></a>Wartość zwracana
@@ -172,7 +172,7 @@ STDMETHOD(get_AllowWindowlessActivation)(VARIANT_BOOL* pbAllowWindowless);
 
 ### <a name="parameters"></a>Parametry
 
-*pbAllowWindowless*  
+*pbAllowWindowless*<br/>
 [out] Adres zmiennej, aby otrzymać bieżąca wartość tej właściwości.
 
 ### <a name="return-value"></a>Wartość zwracana
@@ -193,7 +193,7 @@ STDMETHOD(get_BackColor)(OLE_COLOR* pclrBackground);
 
 ### <a name="parameters"></a>Parametry
 
-*pclrBackground*  
+*pclrBackground*<br/>
 [out] Adres zmiennej, aby otrzymać bieżąca wartość tej właściwości.
 
 ### <a name="return-value"></a>Wartość zwracana
@@ -214,7 +214,7 @@ STDMETHOD(get_DisplayAsDefault)(VARIANT_BOOL* pbDisplayAsDefault);
 
 ### <a name="parameters"></a>Parametry
 
-*pbDisplayAsDefault*  
+*pbDisplayAsDefault*<br/>
 [out] Adres zmiennej, aby otrzymać bieżąca wartość tej właściwości.
 
 ### <a name="return-value"></a>Wartość zwracana
@@ -235,7 +235,7 @@ STDMETHOD(get_DocHostDoubleClickFlags)(DWORD* pdwDocHostDoubleClickFlags);
 
 ### <a name="parameters"></a>Parametry
 
-*pdwDocHostDoubleClickFlags*  
+*pdwDocHostDoubleClickFlags*<br/>
 [out] Adres zmiennej, aby otrzymać bieżąca wartość tej właściwości.
 
 ### <a name="return-value"></a>Wartość zwracana
@@ -256,7 +256,7 @@ STDMETHOD(get_DocHostFlags)(DWORD* pdwDocHostFlags);
 
 ### <a name="parameters"></a>Parametry
 
-*pdwDocHostFlags*  
+*pdwDocHostFlags*<br/>
 [out] Adres zmiennej, aby otrzymać bieżąca wartość tej właściwości.
 
 ### <a name="return-value"></a>Wartość zwracana
@@ -277,7 +277,7 @@ STDMETHOD(get_Font)(IFontDisp** pFont);
 
 ### <a name="parameters"></a>Parametry
 
-*pFont*  
+*pFont*<br/>
 [out] Adres `IFontDisp` wskaźnik interfejsu, używany do odbierania bieżąca wartość tej właściwości.
 
 ### <a name="return-value"></a>Wartość zwracana
@@ -298,7 +298,7 @@ STDMETHOD(get_ForeColor)(OLE_COLOR* pclrForeground);
 
 ### <a name="parameters"></a>Parametry
 
-*pclrForeground*  
+*pclrForeground*<br/>
 [out] Adres zmiennej, aby otrzymać bieżąca wartość tej właściwości.
 
 ### <a name="return-value"></a>Wartość zwracana
@@ -319,7 +319,7 @@ STDMETHOD(get_LocaleID)(LCID* plcidLocaleID);
 
 ### <a name="parameters"></a>Parametry
 
-*plcidLocaleID*  
+*plcidLocaleID*<br/>
 [out] Adres zmiennej, aby otrzymać bieżąca wartość tej właściwości.
 
 ### <a name="return-value"></a>Wartość zwracana
@@ -342,7 +342,7 @@ STDMETHOD(get_MessageReflect)(VARIANT_BOOL* pbMessageReflect);
 
 ### <a name="parameters"></a>Parametry
 
-*pbMessageReflect*  
+*pbMessageReflect*<br/>
 [out] Adres zmiennej, aby otrzymać bieżąca wartość tej właściwości.
 
 ### <a name="return-value"></a>Wartość zwracana
@@ -363,7 +363,7 @@ STDMETHOD(get_OptionKeyPath)(BSTR* pbstrOptionKeyPath);
 
 ### <a name="parameters"></a>Parametry
 
-*pbstrOptionKeyPath*  
+*pbstrOptionKeyPath*<br/>
 [out] Adres zmiennej, aby otrzymać bieżąca wartość tej właściwości.
 
 ### <a name="return-value"></a>Wartość zwracana
@@ -380,7 +380,7 @@ STDMETHOD(get_ShowGrabHandles)(VARIANT_BOOL* pbShowGrabHandles);
 
 ### <a name="parameters"></a>Parametry
 
-*pbShowGrabHandles*  
+*pbShowGrabHandles*<br/>
 [out] Adres zmiennej, aby otrzymać bieżąca wartość tej właściwości.
 
 ### <a name="return-value"></a>Wartość zwracana
@@ -401,7 +401,7 @@ STDMETHOD(get_ShowHatching)(VARIANT_BOOL* pbShowHatching);
 
 ### <a name="parameters"></a>Parametry
 
-*pbShowHatching*  
+*pbShowHatching*<br/>
 [out] Adres zmiennej, aby otrzymać bieżąca wartość tej właściwości.
 
 ### <a name="return-value"></a>Wartość zwracana
@@ -422,7 +422,7 @@ STDMETHOD(get_UserMode)(VARIANT_BOOL* pbUserMode);
 
 ### <a name="parameters"></a>Parametry
 
-*pbUserMode*  
+*pbUserMode*<br/>
 [out] Adres zmiennej, aby otrzymać bieżąca wartość tej właściwości.
 
 ### <a name="return-value"></a>Wartość zwracana
@@ -443,7 +443,7 @@ STDMETHOD(put_AllowContextMenu)(VARIANT_BOOL bAllowContextMenu);
 
 ### <a name="parameters"></a>Parametry
 
-*bAllowContextMenu*  
+*bAllowContextMenu*<br/>
 [in] Nowa wartość tej właściwości.
 
 ### <a name="return-value"></a>Wartość zwracana
@@ -464,7 +464,7 @@ STDMETHOD(put_AllowShowUI)(VARIANT_BOOL bAllowShowUI);
 
 ### <a name="parameters"></a>Parametry
 
-*bAllowShowUI*  
+*bAllowShowUI*<br/>
 [in] Nowa wartość tej właściwości.
 
 ### <a name="return-value"></a>Wartość zwracana
@@ -485,7 +485,7 @@ STDMETHOD(put_AllowWindowlessActivation)(VARIANT_BOOL bAllowWindowless);
 
 ### <a name="parameters"></a>Parametry
 
-*bAllowWindowless*  
+*bAllowWindowless*<br/>
 [in] Nowa wartość tej właściwości.
 
 ### <a name="return-value"></a>Wartość zwracana
@@ -506,7 +506,7 @@ STDMETHOD(put_BackColor)(OLE_COLOR clrBackground);
 
 ### <a name="parameters"></a>Parametry
 
-*clrBackground*  
+*clrBackground*<br/>
 [in] Nowa wartość tej właściwości.
 
 ### <a name="return-value"></a>Wartość zwracana
@@ -527,7 +527,7 @@ STDMETHOD(put_DisplayAsDefault)(VARIANT_BOOL bDisplayAsDefault);
 
 ### <a name="parameters"></a>Parametry
 
-*bDisplayAsDefault*  
+*bDisplayAsDefault*<br/>
 [in] Nowa wartość tej właściwości.
 
 ### <a name="return-value"></a>Wartość zwracana
@@ -548,7 +548,7 @@ STDMETHOD(put_DocHostDoubleClickFlags)(DWORD dwDocHostDoubleClickFlags);
 
 ### <a name="parameters"></a>Parametry
 
-*dwDocHostDoubleClickFlags*  
+*dwDocHostDoubleClickFlags*<br/>
 [in] Nowa wartość tej właściwości.
 
 ### <a name="return-value"></a>Wartość zwracana
@@ -569,7 +569,7 @@ STDMETHOD(put_DocHostFlags)(DWORD dwDocHostFlags);
 
 ### <a name="parameters"></a>Parametry
 
-*dwDocHostFlags*  
+*dwDocHostFlags*<br/>
 [in] Nowa wartość tej właściwości.
 
 ### <a name="return-value"></a>Wartość zwracana
@@ -590,7 +590,7 @@ STDMETHOD(put_Font)(IFontDisp* pFont);
 
 ### <a name="parameters"></a>Parametry
 
-*pFont*  
+*pFont*<br/>
 [in] Nowa wartość tej właściwości.
 
 ### <a name="return-value"></a>Wartość zwracana
@@ -611,7 +611,7 @@ STDMETHOD(put_ForeColor)(OLE_COLOR clrForeground);
 
 ### <a name="parameters"></a>Parametry
 
-*clrForeground*  
+*clrForeground*<br/>
 [in] Nowa wartość tej właściwości.
 
 ### <a name="return-value"></a>Wartość zwracana
@@ -632,7 +632,7 @@ STDMETHOD(put_LocaleID)(LCID lcidLocaleID);
 
 ### <a name="parameters"></a>Parametry
 
-*lcidLocaleID*  
+*lcidLocaleID*<br/>
 [in] Nowa wartość tej właściwości.
 
 ### <a name="return-value"></a>Wartość zwracana
@@ -653,7 +653,7 @@ STDMETHOD(put_MessageReflect)(VARIANT_BOOL bMessageReflect);
 
 ### <a name="parameters"></a>Parametry
 
-*bMessageReflect*  
+*bMessageReflect*<br/>
 [in] Nowa wartość tej właściwości.
 
 ### <a name="return-value"></a>Wartość zwracana
@@ -674,7 +674,7 @@ STDMETHOD(put_OptionKeyPath)(BSTR bstrOptionKeyPath);
 
 ### <a name="parameters"></a>Parametry
 
-*bstrOptionKeyPath*  
+*bstrOptionKeyPath*<br/>
 [in] Nowa wartość tej właściwości.
 
 ### <a name="return-value"></a>Wartość zwracana
@@ -691,7 +691,7 @@ STDMETHOD(put_UserMode)(VARIANT_BOOL bUserMode);
 
 ### <a name="parameters"></a>Parametry
 
-*bUserMode*  
+*bUserMode*<br/>
 [in] Nowa wartość tej właściwości.
 
 ### <a name="return-value"></a>Wartość zwracana
@@ -704,8 +704,8 @@ Implementacja obiektu hosta ATL używa VARIANT_TRUE jako wartość domyślna tej
 
 ## <a name="see-also"></a>Zobacz też
 
-[Interfejs IAxWinAmbientDispatchEx](../../atl/reference/iaxwinambientdispatchex-interface.md)   
-[Interfejs IAxWinHostWindow](../../atl/reference/iaxwinhostwindow-interface.md)   
-[CAxWindow::QueryHost](../../atl/reference/caxwindow-class.md#queryhost)   
+[Interfejs IAxWinAmbientDispatchEx](../../atl/reference/iaxwinambientdispatchex-interface.md)<br/>
+[Interfejs IAxWinHostWindow](../../atl/reference/iaxwinhostwindow-interface.md)<br/>
+[CAxWindow::QueryHost](../../atl/reference/caxwindow-class.md#queryhost)<br/>
 [AtlAxGetHost](composite-control-global-functions.md#atlaxgethost)
 

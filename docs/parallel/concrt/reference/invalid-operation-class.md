@@ -18,15 +18,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: fa6d1152bb1f9a9c5671d1f7f0cdf0e426c02575
-ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
+ms.openlocfilehash: c189649447b318a651957c82b8cfab8cd11fb60a
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33696100"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46054834"
 ---
 # <a name="invalidoperation-class"></a>invalid_operation — Klasa
-Ta klasa opisuje Wystąpił wyjątek zgłoszony, gdy ta operacja jest wykonywana, których nie opisano dokładniej przez inny typ wyjątków zgłaszanych przez współbieżności środowiska wykonawczego.  
+Ta klasa opisuje wyjątek generowany, gdy jest wykonywana Nieprawidłowa operacja, która jest dokładniej opisana przez inny typ wyjątku generowanego przez środowisko uruchomieniowe współbieżności.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -43,7 +43,7 @@ class invalid_operation : public std::exception;
 |[invalid_operation —](#ctor)|Przeciążone. Konstruuje `invalid_operation` obiektu.|  
   
 ## <a name="remarks"></a>Uwagi  
- Różne metody, które generują ten wyjątek zostanie zazwyczaj dokumentu w jakich okolicznościach one zgłosi go.  
+ Różne metody, które generują ten wyjątek będzie na ogół udokumentowane w jakich okolicznościach go generują.  
   
 ## <a name="inheritance-hierarchy"></a>Hierarchia dziedziczenia  
  `exception`  
@@ -66,8 +66,8 @@ invalid_operation() throw();
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `_Message`  
- Komunikat opisowy błędu.  
+*_Message*<br/>
+Opisowy komunikat dotyczący błędu.  
   
 ## <a name="see-also"></a>Zobacz też  
  [Przestrzeń nazw współbieżności](concurrency-namespace.md)

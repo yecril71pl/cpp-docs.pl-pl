@@ -1,5 +1,5 @@
 ---
-title: D9028 dla wiersza ostrzeżenie polecenia | Dokumentacja firmy Microsoft
+title: Ostrzeżenie wiersza polecenia D9028 | Dokumentacja firmy Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,16 +16,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 244f3c4a5cf5b34e75ad9d94a167648abdba38a7
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: ef739da3bc106a654e11c4a13bae7be59d35fc90
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33301544"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46044135"
 ---
 # <a name="command-line-warning-d9028"></a>Ostrzeżenie D9028 dla wiersza polecenia
-Minimalna ponowna kompilacja awaria, powrót do normalnej kompilacji  
-  
- Plik .idb projektu jest uszkodzony. Usuń plik i skompiluj ponownie.  
-  
- Uzyskać więcej informacji o minimalnym odtwarza i plik .idb, zobacz [/Gm — opcja kompilatora](../../build/reference/gm-enable-minimal-rebuild.md).
+
+Minimalna ponowna kompilacja awaria, powrót do normalnej kompilacji
+
+Plik .idb projektu jest uszkodzony. Usuń ten plik i ponownie skompilować.
+
+Aby uzyskać więcej informacji o minimalnym ponowne kompilowanie i pliku .idb zobacz [/Gm — opcja kompilatora](../../build/reference/gm-enable-minimal-rebuild.md).

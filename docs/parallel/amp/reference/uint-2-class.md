@@ -1,5 +1,5 @@
 ---
-title: uint_2 — klasa | Dokumentacja firmy Microsoft
+title: uint_2, klasa | Dokumentacja firmy Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -38,15 +38,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 03447d24f77b671b0a2cb171e84c266df1908fb3
-ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
+ms.openlocfilehash: 375e9c8ce4c2060e41fbebc51f6512d293a15517
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33686909"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46059306"
 ---
 # <a name="uint2-class"></a>uint_2 — Klasa
-Reprezentuje krótki wektor dwie liczb całkowitych bez znaku.  
+Reprezentuje krótki wektor dwóch liczb całkowitych bez znaku.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -56,7 +56,7 @@ class uint_2;
   
 ## <a name="members"></a>Elementy członkowskie  
   
-### <a name="public-typedefs"></a>Definicje typów publicznych  
+### <a name="public-typedefs"></a>Publiczne definicje typów  
   
 |Nazwa|Opis|  
 |----------|-----------------|  
@@ -66,7 +66,7 @@ class uint_2;
   
 |Nazwa|Opis|  
 |----------|-----------------|  
-|[uint_2 Constructor](#ctor)|Przeciążone. Domyślny konstruktor, inicjuje wszystkie elementy z 0.|  
+|[uint_2 Constructor](#ctor)|Przeciążone. Domyślny konstruktor, inicjuje wszystkie elementy wartością 0.|  
   
 ### <a name="public-methods"></a>Metody publiczne  
   
@@ -104,11 +104,11 @@ class uint_2;
 |uint_2::operator-=||  
 |uint_2::operator >> =||  
   
-### <a name="public-constants"></a>Publiczny — stałe  
+### <a name="public-constants"></a>Publiczne stałe  
   
 |Nazwa|Opis|  
 |----------|-----------------|  
-|[Size — stała](#uint_2__size)||  
+|[rozmiar — stała](#uint_2__size)||  
   
 ### <a name="public-data-members"></a>Publiczne elementy członkowskie danych  
   
@@ -131,9 +131,9 @@ class uint_2;
   
  **Namespace:** Concurrency::graphics  
   
-##  <a name="ctor"></a> uint_2 — 
+##  <a name="ctor"></a> uint_2 
 
- Domyślny konstruktor, inicjuje wszystkie elementy z 0.  
+ Domyślny konstruktor, inicjuje wszystkie elementy wartością 0.  
   
 ```  
 uint_2() restrict(amp,
@@ -182,17 +182,17 @@ explicit inline uint_2(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `_V0`  
- Wartość do zainicjowania elementu 0.  
+*_V0*<br/>
+Wartość do zainicjowania elementu 0.  
   
- `_V1`  
- Wartość zainicjować element 1.  
+*_V1*<br/>
+Wartość do zainicjowania elementu 1.  
   
- `_V`  
- Wartość dla inicjowania.  
+*_V*<br/>
+Wartość inicjalizacji.  
   
- `_Other`  
- Obiekt używany do inicjowania.  
+*_Inne*<br/>
+Obiekt używany do inicjowania.  
   
 ##  <a name="uint_2__size"></a> Rozmiar 
 

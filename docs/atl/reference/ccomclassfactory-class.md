@@ -19,12 +19,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6bf6f830441482e17bd45c331f4281cb49312337
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: ebf8112650cf1908225d0fc2c79d61d26dd606fe
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43765102"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46051012"
 ---
 # <a name="ccomclassfactory-class"></a>Klasa CComClassFactory
 
@@ -79,13 +79,13 @@ STDMETHOD(CreateInstance)(LPUNKNOWN pUnkOuter, REFIID riid, void** ppvObj);
 
 ### <a name="parameters"></a>Parametry
 
-*pUnkOuter*  
+*pUnkOuter*<br/>
 [in] Jeśli obiekt jest tworzony jako część agregacji, następnie *pUnkOuter* musi być zewnętrzny nieznany. W przeciwnym razie *pUnkOuter* musi mieć wartość NULL.
 
-*Parametr riid*  
+*Parametr riid*<br/>
 [in] Identyfikator IID żądanego interfejsu. Jeśli *pUnkOuter* jest różna od NULL, *riid* musi być `IID_IUnknown`.
 
-*ppvObj*  
+*ppvObj*<br/>
 [out] Wskaźnik do wskaźnika interfejsu identyfikowane przez *riid*. Jeśli obiekt nie obsługuje ten interfejs *ppvObj* ma wartość NULL.
 
 ### <a name="return-value"></a>Wartość zwracana
@@ -102,7 +102,7 @@ STDMETHOD(LockServer)(BOOL fLock);
 
 ### <a name="parameters"></a>Parametry
 
-*Stada*  
+*Stada*<br/>
 [in] W przypadku opcji TRUE jest zwiększany liczbę blokad; w przeciwnym razie liczbę blokad zostanie zmniejszona.
 
 ### <a name="return-value"></a>Wartość zwracana
@@ -117,6 +117,6 @@ Wywoływanie `LockServer` umożliwia klientowi, które mają być przechowywane 
 
 ## <a name="see-also"></a>Zobacz też
 
-[Klasa CComObjectRootEx](../../atl/reference/ccomobjectrootex-class.md)   
-[CComGlobalsThreadModel](atl-typedefs.md#ccomglobalsthreadmodel)   
+[Klasa CComObjectRootEx](../../atl/reference/ccomobjectrootex-class.md)<br/>
+[CComGlobalsThreadModel](atl-typedefs.md#ccomglobalsthreadmodel)<br/>
 [Klasa — Przegląd](../../atl/atl-class-overview.md)

@@ -1,5 +1,5 @@
 ---
-title: C2911 błąd kompilatora | Dokumentacja firmy Microsoft
+title: Błąd kompilatora C2911 | Dokumentacja firmy Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,39 +16,40 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 182d9ec130df7c5b8776d4dce0f185cb6b05ed59
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: c242e72ab4f13f56644b9ab73c2a168e0591012d
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33258101"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46041184"
 ---
-# <a name="compiler-error-c2911"></a>C2911 błąd kompilatora
-"członek": nie może być zadeklarowane lub zdefiniowane w bieżącym zakresie  
-  
- W przestrzeni nazw, klasy lub funkcji należy do tego samego obszaru nazw, klasy lub funkcji ani elementu członkowskiego, który jest ujęta w tej samej przestrzeni nazw, klasy lub funkcji można zdefiniować tylko.  
-  
- Poniższy przykład generuje C2911:  
-  
-```  
-// C2911.cpp  
-struct A;  
-  
-namespace M {  
-   struct D;  
-}  
-  
-namespace N {  
-   struct C;  
-  
-   namespace O {  
-      struct B;  
-   }  
-  
-   // in N  
-   struct ::A {};   // C2911  A is member of global NS  
-   struct O::B{};   // OK B is in O, O is inside of N  
-   struct C {};     // OK C is member of N  
-   struct M::D {};  // C2911 D is member of M, M not enclosed by N  
-}  
+# <a name="compiler-error-c2911"></a>Błąd kompilatora C2911
+
+'składowa': nie może być zadeklarowane lub zdefiniowane w bieżącym zakresie
+
+Wewnątrz przestrzeni nazw, klasy lub funkcji można zdefiniować tylko członkiem tej samej przestrzeni nazw, klasy lub funkcji lub elementu członkowskiego, która jest ujęta w tej samej przestrzeni nazw, klasy lub funkcji.
+
+Poniższy przykład spowoduje wygenerowanie C2911:
+
+```
+// C2911.cpp
+struct A;
+
+namespace M {
+   struct D;
+}
+
+namespace N {
+   struct C;
+
+   namespace O {
+      struct B;
+   }
+
+   // in N
+   struct ::A {};   // C2911  A is member of global NS
+   struct O::B{};   // OK B is in O, O is inside of N
+   struct C {};     // OK C is member of N
+   struct M::D {};  // C2911 D is member of M, M not enclosed by N
+}
 ```

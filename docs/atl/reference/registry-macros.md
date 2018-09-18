@@ -22,12 +22,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a0cf941171ef992c677c619a1c6a45ab9868526a
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 17040448771e4ca3c0f999e72a9c08f0e1fa28aa
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43767959"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46058500"
 ---
 # <a name="registry-macros"></a>Makra rejestru
 
@@ -71,7 +71,7 @@ DECLARE_LIBID( libid )
 
 ### <a name="parameters"></a>Parametry
 
-*Identyfikator biblioteki*  
+*Identyfikator biblioteki*<br/>
 Identyfikator GUID biblioteki typów.
 
 ### <a name="remarks"></a>Uwagi
@@ -105,19 +105,19 @@ DECLARE_REGISTRY(
 
 ### <a name="parameters"></a>Parametry
 
-*class*  
+*class*<br/>
 [in] Dostępny dla zgodności z poprzednimi wersjami.
 
-*Identyfikator PID*  
+*Identyfikator PID*<br/>
 [in] LPCTSTR, który jest identyfikatorem specyficzny dla wersji programu.
 
-*vpid*  
+*vpid*<br/>
 [in] LPCTSTR, który jest identyfikatorem niezależny od wersji programu.
 
-*nid*  
+*nid*<br/>
 [in] UINT, indeksem ciągu zasobu w rejestrze, aby użyć jako opis programu.
 
-*flagi*  
+*flagi*<br/>
 [in] DWORD zawierający programu modelu wątkowości w rejestrze. Musi mieć jedną z następujących wartości: THREADFLAGS_APARTMENT, THREADFLAGS_BOTH lub AUTPRXFLAG.
 
 ### <a name="remarks"></a>Uwagi
@@ -138,10 +138,10 @@ DECLARE_REGISTRY_APPID_RESOURCEID(
 
 ### <a name="parameters"></a>Parametry
 
-*Atrybut resid*  
+*Atrybut resid*<br/>
 Identyfikator zasobu w pliku .rgs, który zawiera informacje o *appid*.
 
-*Identyfikator aplikacji*  
+*Identyfikator aplikacji*<br/>
 IDENTYFIKATOR GUID.
 
 ### <a name="remarks"></a>Uwagi
@@ -162,7 +162,7 @@ DECLARE_REGISTRY_RESOURCE( x )
 
 ### <a name="parameters"></a>Parametry
 
-*x*  
+*x*<br/>
 [in] Identyfikator zasobu ciągu.
 
 ### <a name="remarks"></a>Uwagi
@@ -187,7 +187,7 @@ DECLARE_REGISTRY_RESOURCEID( x )
 
 ### <a name="parameters"></a>Parametry
 
-*x*  
+*x*<br/>
 [in] Generowane przez kreatora identyfikator zasobu.
 
 ### <a name="remarks"></a>Uwagi

@@ -1,5 +1,5 @@
 ---
-title: C2682 błąd kompilatora | Dokumentacja firmy Microsoft
+title: Błąd kompilatora C2682 | Dokumentacja firmy Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,49 +16,50 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9422dc079891e6536c825538c99f4179f2c086c1
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 72dc19170729d7203b57e305ef2c8a0d2b2d6de1
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33234084"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46049205"
 ---
-# <a name="compiler-error-c2682"></a>C2682 błąd kompilatora
-Nie można użyć casting_operator przekonwertować z "type1" na "type2".  
-  
- Operator rzutowania próby konwersji między niezgodne typy. Na przykład nie można użyć [dynamic_cast](../../cpp/dynamic-cast-operator.md) operatora, aby przekonwertować wskaźnik do odwołania. `dynamic_cast` Operator nie może służyć do rzutowania z usuwaniem kwalifikatorów. Wszystkie kwalifikatory dla typów muszą być zgodne.  
-  
- Można użyć `const_cast` operatora, aby usunąć atrybuty, takie jak `const`, `volatile`, lub `__unaligned`.  
-  
- Poniższy przykład generuje C2682:  
-  
-```  
-// C2682.cpp  
-class A { virtual void f(); };  
-class B: public A {};  
-  
-void g(A* pa) {  
-    B& rb = dynamic_cast<B&>(pa); // C2682  
-}  
-```  
-  
- Poniższy przykład generuje C2682:  
-  
-```  
-// C2682b.cpp  
-// compile with: /clr  
-ref struct R{};  
-ref struct RR : public R{};  
-ref struct H {  
-   RR^ r ;  
-   short s;  
-   int i;  
-};  
-  
-int main() {  
-   H^ h = gcnew H();    
-   interior_ptr<int>lr = &(h->i);  
-   interior_ptr<short>ssr = safe_cast<interior_ptr<short> >(lr);   // C2682  
-   interior_ptr<short>ssr = reinterpret_cast<interior_ptr<short> >(lr);   // OK  
-}  
+# <a name="compiler-error-c2682"></a>Błąd kompilatora C2682
+
+Nie można użyć casting_operator do konwersji z 'Typ1' na 'type2'
+
+Operator rzutowania nastąpiła próba konwersji między niezgodne typy. Na przykład nie można użyć [dynamic_cast](../../cpp/dynamic-cast-operator.md) operatora, aby przekonwertować wskaźnik do odwołania. `dynamic_cast` Nie można używać operatora w celu rzutowania z kwalifikatorów. Wszystkie kwalifikatory dla typów muszą być zgodne.
+
+Możesz użyć `const_cast` operatora, aby usunąć atrybuty, takie jak `const`, `volatile`, lub `__unaligned`.
+
+Poniższy przykład spowoduje wygenerowanie C2682:
+
+```
+// C2682.cpp
+class A { virtual void f(); };
+class B: public A {};
+
+void g(A* pa) {
+    B& rb = dynamic_cast<B&>(pa); // C2682
+}
+```
+
+Poniższy przykład spowoduje wygenerowanie C2682:
+
+```
+// C2682b.cpp
+// compile with: /clr
+ref struct R{};
+ref struct RR : public R{};
+ref struct H {
+   RR^ r ;
+   short s;
+   int i;
+};
+
+int main() {
+   H^ h = gcnew H();
+   interior_ptr<int>lr = &(h->i);
+   interior_ptr<short>ssr = safe_cast<interior_ptr<short> >(lr);   // C2682
+   interior_ptr<short>ssr = reinterpret_cast<interior_ptr<short> >(lr);   // OK
+}
 ```

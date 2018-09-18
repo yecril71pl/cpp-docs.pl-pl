@@ -1,5 +1,5 @@
 ---
-title: Współbieżność — przestrzeń nazwy operatory | Dokumentacja firmy Microsoft
+title: Operatory przestrzeni nazw współbieżności | Dokumentacja firmy Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
 ms.topic: reference
@@ -13,14 +13,14 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 90c8fbbdd0e5d2baf0ba82998a6951242b73203a
-ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
+ms.openlocfilehash: 13b9288e39e372ecb23299d355abc921353444b7
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33693513"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46059878"
 ---
-# <a name="concurrency-namespace-operators"></a>Współbieżność — przestrzeń nazwy podmiotów
+# <a name="concurrency-namespace-operators"></a>Operatory przestrzeni nazw współbieżności
 ||||  
 |-|-|-|  
 |[operator!=](#operator_neq)|[Operator&amp;&amp;](#operator_amp_amp)|[Operator&gt;](#operator_gt)|  
@@ -28,7 +28,7 @@ ms.locfileid: "33693513"
 |[operator==](#operator_eq_eq)|[— operator||](#operator_lor)|  
   
 ##  <a name="operator_lor"></a>  operator&#124; &#124; — Operator  
- Tworzy zadanie, które zostanie zakończony pomyślnie, jeśli jedno z zadań dostarczony jako argumenty zakończy się pomyślnie.  
+ Tworzy zadanie, które zostanie ukończone pomyślnie, gdy jedno z zadań dostarczone jako argumenty zakończą się pomyślnie.  
   
 ```  
 template<typename ReturnType>  
@@ -55,23 +55,23 @@ inline task<void> operator||(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `ReturnType`  
- Typ zwrócony zadań.  
+*ReturnType*<br/>
+Typ zwracanego zadania.  
   
- `lhs`  
- Pierwszym zadaniem do łączenia w zadaniu wynikowym.  
+*Lewa strona reguły przepisywania*<br/>
+Pierwsze zadanie do połączenia w zadanie wynikowe.  
   
- `rhs`  
- Drugie zadanie do łączenia w zadaniu wynikowym.  
+*RHS*<br/>
+Drugie zadanie połączyć w zadanie wynikowe.  
   
 ### <a name="return-value"></a>Wartość zwracana  
- Zadanie kończące pomyślnie, gdy albo wejściowych zadań została ukończona pomyślnie. W przypadku wprowadzania zadania typu `T`, dane wyjściowe z tej funkcji będą `task<std::vector<T>`. W przypadku wprowadzania zadania typu `void` dane wyjściowe zadania zostanie również `task<void>`.  
+ Zadanie, które zostaje wykonane pomyślnie, gdy jedno z zadań wejściowych została ukończona pomyślnie. Jeśli zadania wejściowe są typu `T`, danymi wyjściowymi tej funkcji będą `task<std::vector<T>`. Jeśli zadania wejściowe są typu `void` zadaniem wyjściowym też będzie `task<void>`.  
   
 ### <a name="remarks"></a>Uwagi  
- Jeśli oba zadania zostały anulowane lub zgłaszają wyjątki zwrócony zadań zakończy się w stanie anulowane i jeden z wyjątków, jeśli żadnego nie zostaną napotkane, będą zgłaszane po wywołaniu `get()` lub `wait()` dla tego zadania.  
+ Jeśli oba zadania zostały anulowane lub generują wyjątki, zwrócone zadanie zostanie ukończone ze stanem anulowane, a jeden z wyjątków, jeśli żadnego nie zostaną napotkane, zostanie zgłoszony podczas wywoływania `get()` lub `wait()` dla tego zadania.  
   
 ##  <a name="operator_amp_amp"></a>  operator&amp; &amp; — Operator  
- Tworzy zadanie, które zostanie zakończony pomyślnie, gdy oba zadania podana jako argumenty pomyślnie ukończona.  
+ Tworzy zadanie, które zostanie ukończone pomyślnie, gdy oba zadania dostarczone jako argumenty zakończą się pomyślnie.  
   
 ```  
 template<typename ReturnType>  
@@ -104,23 +104,23 @@ inline task<void>  operator&&(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `ReturnType`  
- Typ zwrócony zadań.  
+*ReturnType*<br/>
+Typ zwracanego zadania.  
   
- `lhs`  
- Pierwszym zadaniem do łączenia w zadaniu wynikowym.  
+*Lewa strona reguły przepisywania*<br/>
+Pierwsze zadanie do połączenia w zadanie wynikowe.  
   
- `rhs`  
- Drugie zadanie do łączenia w zadaniu wynikowym.  
+*RHS*<br/>
+Drugie zadanie połączyć w zadanie wynikowe.  
   
 ### <a name="return-value"></a>Wartość zwracana  
- Zadanie, które zostanie wykonane pomyślnie, gdy oba wejściowych zadania zostały ukończone pomyślnie. W przypadku wprowadzania zadania typu `T`, dane wyjściowe z tej funkcji będą `task<std::vector<T>>`. W przypadku wprowadzania zadania typu `void` dane wyjściowe zadania zostanie również `task<void>`.  
+ Zadanie, które zostaje wykonane pomyślnie, gdy oba zadania wejściowe zostały ukończone pomyślnie. Jeśli zadania wejściowe są typu `T`, danymi wyjściowymi tej funkcji będą `task<std::vector<T>>`. Jeśli zadania wejściowe są typu `void` zadaniem wyjściowym też będzie `task<void>`.  
   
 ### <a name="remarks"></a>Uwagi  
- Jeśli jedno z zadań została anulowana lub zgłasza wyjątek, zadanie zwrócone ukończy wcześnie w stanie anulowane i, jeśli jest encoutered, zostanie wygenerowany wyjątek, jeśli wywołujesz `get()` lub `wait()` dla tego zadania.  
+ Jeśli jedno z zadań zostanie anulowane lub zgłasza wyjątek, zwrócone zadanie zostanie ukończone przedwcześnie ze stanem anulowane, a wyjątek, jeśli wystąpi, zostanie zgłoszony, jeśli wywołujesz `get()` lub `wait()` dla tego zadania.  
   
 ##  <a name="operator_eq_eq"></a>  operator == — Operator  
- Sprawdza, czy `concurrent_vector` obiektu po lewej stronie operatora jest równa `concurrent_vector` obiektu po prawej stronie.  
+ Sprawdza, czy `concurrent_vector` obiekt po lewej stronie operatora jest równy `concurrent_vector` obiektu po prawej stronie.  
   
 ```  
 template<typename T, class A1, class A2>  
@@ -130,28 +130,28 @@ inline bool operator== (
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `T`  
- Typ danych elementy przechowywane w równoczesnych wektory.  
+*T*<br/>
+Typ danych elementów zapisanych w wektorów współbieżnych.  
   
- `A1`  
- Typ alokatora pierwszego `concurrent_vector` obiektu.  
+*A1*<br/>
+Typ programu przydzielania pierwszego `concurrent_vector` obiektu.  
   
- `A2`  
- Allocator — typ drugiego `concurrent_vector` obiektu.  
+*A2*<br/>
+Typ programu przydzielania drugiego `concurrent_vector` obiektu.  
   
- `_A`  
- Obiekt typu `concurrent_vector`.  
+*_A*<br/>
+Obiekt typu `concurrent_vector`.  
   
- `_B`  
- Obiekt typu `concurrent_vector`.  
+*_B*<br/>
+Obiekt typu `concurrent_vector`.  
   
 ### <a name="return-value"></a>Wartość zwracana  
- `true` Jeśli równoczesnych wektora po lewej stronie operatora jest równa równoczesnych wektora po prawej stronie operatora; w przeciwnym razie `false`.  
+ `true` Jeśli współbieżnego wektora po lewej stronie operatora jest równy współbieżnego wektora po prawej stronie operatora; w przeciwnym razie `false`.  
   
 ### <a name="remarks"></a>Uwagi  
- Dwa wektory równoczesnych są takie same, jeśli mają one taką samą liczbę elementów i ich odpowiednich elementy mają takie same wartości. W przeciwnym razie ich nie są równe.  
+ Dwa wektory współbieżne są takie same, jeśli mają taką samą liczbę elementów i ich odpowiednie elementy mają te same wartości. W przeciwnym razie są nierówne.  
   
- Ta metoda nie jest bezpieczną współbieżność w odniesieniu do innych metod, które można modyfikować albo wektorów równoczesnych `_A` lub `_B`.  
+ Ta metoda nie jest bezpieczna pod kątem współbieżności w odniesieniu do innych metod, które można modyfikować albo wektorów współbieżnych `_A` lub `_B`.  
   
 ##  <a name="operator_neq"></a>  operator! = — Operator  
  Sprawdza, czy `concurrent_vector` obiektu po lewej stronie operatora nie jest równa `concurrent_vector` obiektu po prawej stronie.  
@@ -164,31 +164,31 @@ inline bool operator!= (
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `T`  
- Typ danych elementy przechowywane w równoczesnych wektory.  
+*T*<br/>
+Typ danych elementów zapisanych w wektorów współbieżnych.  
   
- `A1`  
- Typ alokatora pierwszego `concurrent_vector` obiektu.  
+*A1*<br/>
+Typ programu przydzielania pierwszego `concurrent_vector` obiektu.  
   
- `A2`  
- Allocator — typ drugiego `concurrent_vector` obiektu.  
+*A2*<br/>
+Typ programu przydzielania drugiego `concurrent_vector` obiektu.  
   
- `_A`  
- Obiekt typu `concurrent_vector`.  
+*_A*<br/>
+Obiekt typu `concurrent_vector`.  
   
- `_B`  
- Obiekt typu `concurrent_vector`.  
+*_B*<br/>
+Obiekt typu `concurrent_vector`.  
   
 ### <a name="return-value"></a>Wartość zwracana  
- `true` Jeśli wektory współbieżnych nie są równe; `false` równoczesnych wektory są równe.  
+ `true` Współbieżne wektory nie są równe; `false` współbieżnych wektory są równe.  
   
 ### <a name="remarks"></a>Uwagi  
- Dwa wektory równoczesnych są takie same, jeśli mają one taką samą liczbę elementów i ich odpowiednich elementy mają takie same wartości. W przeciwnym razie ich nie są równe.  
+ Dwa wektory współbieżne są takie same, jeśli mają taką samą liczbę elementów i ich odpowiednie elementy mają te same wartości. W przeciwnym razie są nierówne.  
   
- Ta metoda nie jest bezpieczną współbieżność w odniesieniu do innych metod, które można modyfikować albo wektorów równoczesnych `_A` lub `_B`.  
+ Ta metoda nie jest bezpieczna pod kątem współbieżności w odniesieniu do innych metod, które można modyfikować albo wektorów współbieżnych `_A` lub `_B`.  
   
 ##  <a name="operator_lt"></a>  operator&lt; — Operator  
- Sprawdza, czy `concurrent_vector` obiekt po lewej stronie operatora jest mniejsza niż `concurrent_vector` obiektu po prawej stronie.  
+ Sprawdza, czy `concurrent_vector` obiekt po lewej stronie operatora jest mniejszy od `concurrent_vector` obiektu po prawej stronie.  
   
 ```  
 template<typename T, class A1, class A2>  
@@ -198,31 +198,31 @@ inline bool operator<(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `T`  
- Typ danych elementy przechowywane w równoczesnych wektory.  
+*T*<br/>
+Typ danych elementów zapisanych w wektorów współbieżnych.  
   
- `A1`  
- Typ alokatora pierwszego `concurrent_vector` obiektu.  
+*A1*<br/>
+Typ programu przydzielania pierwszego `concurrent_vector` obiektu.  
   
- `A2`  
- Allocator — typ drugiego `concurrent_vector` obiektu.  
+*A2*<br/>
+Typ programu przydzielania drugiego `concurrent_vector` obiektu.  
   
- `_A`  
- Obiekt typu `concurrent_vector`.  
+*_A*<br/>
+Obiekt typu `concurrent_vector`.  
   
- `_B`  
- Obiekt typu `concurrent_vector`.  
+*_B*<br/>
+Obiekt typu `concurrent_vector`.  
   
 ### <a name="return-value"></a>Wartość zwracana  
- `true` Jeśli równoczesnych wektora po lewej stronie operatora jest mniejsza niż równoczesnych wektora po prawej stronie operatora; w przeciwnym razie `false`.  
+ `true` Jeśli współbieżnego wektora po lewej stronie operatora jest mniejszy niż współbieżnego wektora po prawej stronie operatora; w przeciwnym razie `false`.  
   
 ### <a name="remarks"></a>Uwagi  
- Zachowanie tego operatora jest taki sam jak równoważne operator `vector` klasy w `std` przestrzeni nazw.  
+ Zachowanie tego operatora jest taka sama jak równorzędny operator dla `vector` klasy w `std` przestrzeni nazw.  
   
- Ta metoda nie jest bezpieczną współbieżność w odniesieniu do innych metod, które można modyfikować albo wektorów równoczesnych `_A` lub `_B`.  
+ Ta metoda nie jest bezpieczna pod kątem współbieżności w odniesieniu do innych metod, które można modyfikować albo wektorów współbieżnych `_A` lub `_B`.  
   
 ##  <a name="operator_lt_eq"></a>  operator&lt;= — Operator  
- Sprawdza, czy `concurrent_vector` obiekt po lewej stronie operatora jest mniejsze niż lub równe `concurrent_vector` obiektu po prawej stronie.  
+ Sprawdza, czy `concurrent_vector` obiekt po lewej stronie operatora jest mniejszy niż lub równe `concurrent_vector` obiektu po prawej stronie.  
   
 ```  
 template<typename T, class A1, class A2>  
@@ -232,31 +232,31 @@ inline bool operator<= (
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `T`  
- Typ danych elementy przechowywane w równoczesnych wektory.  
+*T*<br/>
+Typ danych elementów zapisanych w wektorów współbieżnych.  
   
- `A1`  
- Typ alokatora pierwszego `concurrent_vector` obiektu.  
+*A1*<br/>
+Typ programu przydzielania pierwszego `concurrent_vector` obiektu.  
   
- `A2`  
- Allocator — typ drugiego `concurrent_vector` obiektu.  
+*A2*<br/>
+Typ programu przydzielania drugiego `concurrent_vector` obiektu.  
   
- `_A`  
- Obiekt typu `concurrent_vector`.  
+*_A*<br/>
+Obiekt typu `concurrent_vector`.  
   
- `_B`  
- Obiekt typu `concurrent_vector`.  
+*_B*<br/>
+Obiekt typu `concurrent_vector`.  
   
 ### <a name="return-value"></a>Wartość zwracana  
- `true` Jeśli równoczesnych wektora po lewej stronie operatora jest mniejsza niż lub równe równoczesnych wektora po prawej stronie operatora; w przeciwnym razie `false`.  
+ `true` Jeśli współbieżnego wektora po lewej stronie operatora jest mniejszy niż lub równe współbieżnego wektora po prawej stronie operatora; w przeciwnym razie `false`.  
   
 ### <a name="remarks"></a>Uwagi  
- Zachowanie tego operatora jest taki sam jak równoważne operator `vector` klasy w `std` przestrzeni nazw.  
+ Zachowanie tego operatora jest taka sama jak równorzędny operator dla `vector` klasy w `std` przestrzeni nazw.  
   
- Ta metoda nie jest bezpieczną współbieżność w odniesieniu do innych metod, które można modyfikować albo wektorów równoczesnych `_A` lub `_B`.  
+ Ta metoda nie jest bezpieczna pod kątem współbieżności w odniesieniu do innych metod, które można modyfikować albo wektorów współbieżnych `_A` lub `_B`.  
   
 ##  <a name="operator_gt"></a>  operator&gt; — Operator  
- Sprawdza, czy `concurrent_vector` obiektu po lewej stronie operatora jest większa niż `concurrent_vector` obiektu po prawej stronie.  
+ Sprawdza, czy `concurrent_vector` obiekt po lewej stronie operatora jest większy niż `concurrent_vector` obiektu po prawej stronie.  
   
 ```  
 template<typename T, class A1, class A2>  
@@ -266,31 +266,31 @@ inline bool operator>(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `T`  
- Typ danych elementy przechowywane w równoczesnych wektory.  
+*T*<br/>
+Typ danych elementów zapisanych w wektorów współbieżnych.  
   
- `A1`  
- Typ alokatora pierwszego `concurrent_vector` obiektu.  
+*A1*<br/>
+Typ programu przydzielania pierwszego `concurrent_vector` obiektu.  
   
- `A2`  
- Allocator — typ drugiego `concurrent_vector` obiektu.  
+*A2*<br/>
+Typ programu przydzielania drugiego `concurrent_vector` obiektu.  
   
- `_A`  
- Obiekt typu `concurrent_vector`.  
+*_A*<br/>
+Obiekt typu `concurrent_vector`.  
   
- `_B`  
- Obiekt typu `concurrent_vector`.  
+*_B*<br/>
+Obiekt typu `concurrent_vector`.  
   
 ### <a name="return-value"></a>Wartość zwracana  
- `true` Jeśli równoczesnych wektora po lewej stronie operatora jest większa niż równoczesnych wektora po prawej stronie operatora; w przeciwnym razie `false`.  
+ `true` Jeśli współbieżnego wektora po lewej stronie operatora jest większy niż współbieżnego wektora po prawej stronie operatora; w przeciwnym razie `false`.  
   
 ### <a name="remarks"></a>Uwagi  
- Zachowanie tego operatora jest taki sam jak równoważne operator `vector` klasy w `std` przestrzeni nazw.  
+ Zachowanie tego operatora jest taka sama jak równorzędny operator dla `vector` klasy w `std` przestrzeni nazw.  
   
- Ta metoda nie jest bezpieczną współbieżność w odniesieniu do innych metod, które można modyfikować albo wektorów równoczesnych `_A` lub `_B`.  
+ Ta metoda nie jest bezpieczna pod kątem współbieżności w odniesieniu do innych metod, które można modyfikować albo wektorów współbieżnych `_A` lub `_B`.  
   
 ##  <a name="operator_gt_eq"></a>  operator&gt;= — Operator  
- Sprawdza, czy `concurrent_vector` obiekt po lewej stronie operatora jest większa niż lub równa `concurrent_vector` obiektu po prawej stronie.  
+ Sprawdza, czy `concurrent_vector` obiektu po lewej stronie operatora jest większy niż lub równa `concurrent_vector` obiektu po prawej stronie.  
   
 ```  
 template<typename T, class A1, class A2>  
@@ -300,28 +300,28 @@ inline bool operator>= (
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `T`  
- Typ danych elementy przechowywane w równoczesnych wektory.  
+*T*<br/>
+Typ danych elementów zapisanych w wektorów współbieżnych.  
   
- `A1`  
- Typ alokatora pierwszego `concurrent_vector` obiektu.  
+*A1*<br/>
+Typ programu przydzielania pierwszego `concurrent_vector` obiektu.  
   
- `A2`  
- Allocator — typ drugiego `concurrent_vector` obiektu.  
+*A2*<br/>
+Typ programu przydzielania drugiego `concurrent_vector` obiektu.  
   
- `_A`  
- Obiekt typu `concurrent_vector`.  
+*_A*<br/>
+Obiekt typu `concurrent_vector`.  
   
- `_B`  
- Obiekt typu `concurrent_vector`.  
+*_B*<br/>
+Obiekt typu `concurrent_vector`.  
   
 ### <a name="return-value"></a>Wartość zwracana  
- `true` Jeśli równoczesnych wektor po lewej stronie operatora jest większa niż lub równa równoczesnych wektora po prawej stronie operatora; w przeciwnym razie `false`.  
+ `true` Jeśli współbieżnego wektora po lewej stronie operatora jest większy niż lub równy współbieżnego wektora po prawej stronie operatora; w przeciwnym razie `false`.  
   
 ### <a name="remarks"></a>Uwagi  
- Zachowanie tego operatora jest taki sam jak równoważne operator `vector` klasy w `std` przestrzeni nazw.  
+ Zachowanie tego operatora jest taka sama jak równorzędny operator dla `vector` klasy w `std` przestrzeni nazw.  
   
- Ta metoda nie jest bezpieczną współbieżność w odniesieniu do innych metod, które można modyfikować albo wektorów równoczesnych `_A` lub `_B`.  
+ Ta metoda nie jest bezpieczna pod kątem współbieżności w odniesieniu do innych metod, które można modyfikować albo wektorów współbieżnych `_A` lub `_B`.  
   
 ## <a name="see-also"></a>Zobacz też  
  [Przestrzeń nazw współbieżności](concurrency-namespace.md)

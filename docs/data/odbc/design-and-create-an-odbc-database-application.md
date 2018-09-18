@@ -15,24 +15,26 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 8d83ba0ea465eb16ab6c32a403afc3b9a8a55950
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: d817778f999df904cda3c67e5024c0f1b758b558
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33088602"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46054496"
 ---
 # <a name="design-and-create-an-odbc-database-application"></a>Projektowanie i tworzenie aplikacji bazy danych ODBC
-Te tematy ułatwić projektowanie i konfigurowanie aplikacji bazy danych ODBC.  
+
+Te tematy pomogą Ci zaprojektować i konfigurowanie aplikacji bazy danych ODBC.  
   
 ## <a name="in-this-section"></a>W tej sekcji  
   
--   [ODBC i MFC](../../data/odbc/odbc-and-mfc.md)  
+- [ODBC i MFC](../../data/odbc/odbc-and-mfc.md)  
   
--   [Używanie zestawów rekordów MFC ODBC](../../data/odbc/use-mfc-odbc-recordsets.md)  
+- [Używanie zestawów rekordów MFC ODBC](../../data/odbc/use-mfc-odbc-recordsets.md)  
   
--   [Podstawy ODBC](../../data/odbc/odbc-basics.md)  
+- [Podstawy ODBC](../../data/odbc/odbc-basics.md)  
   
   
 ## <a name="see-also"></a>Zobacz też  
- [Open Database Connectivity (ODBC)](../../data/odbc/open-database-connectivity-odbc.md)
+
+[Open Database Connectivity (ODBC)](../../data/odbc/open-database-connectivity-odbc.md)

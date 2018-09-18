@@ -21,12 +21,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 99f0615dc37070311428ec12894bcaeea8febe8d
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 45a14f8c742393c60a026f7c58217407715ef282
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43760620"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46052754"
 ---
 # <a name="cautorevertimpersonation-class"></a>Klasa CAutoRevertImpersonation
 
@@ -77,7 +77,7 @@ void Attach(const CAccessToken* pAT) throw();
 
 ### <a name="parameters"></a>Parametry
 
-*osobisty token dostępu*  
+*osobisty token dostępu*<br/>
 Adres [CAccessToken](../../atl/reference/caccesstoken-class.md) obiektu, należy przywrócić automatycznie
 
 ### <a name="remarks"></a>Uwagi
@@ -94,7 +94,7 @@ CAutoRevertImpersonation(const CAccessToken* pAT) throw();
 
 ### <a name="parameters"></a>Parametry
 
-*osobisty token dostępu*  
+*osobisty token dostępu*<br/>
 Adres [CAccessToken](../../atl/reference/caccesstoken-class.md) obiektu, należy przywrócić automatycznie.
 
 ### <a name="remarks"></a>Uwagi
@@ -147,6 +147,6 @@ Jeśli ta metoda jest wywoływana dla celów, które zawierają operacja cofania
 
 ## <a name="see-also"></a>Zobacz też
 
-[Przykładowe ATLSecurity](../../visual-cpp-samples.md)   
-[Tokeny dostępu](/windows/desktop/SecAuthZ/access-tokens)   
+[Przykładowe ATLSecurity](../../visual-cpp-samples.md)<br/>
+[Tokeny dostępu](/windows/desktop/SecAuthZ/access-tokens)<br/>
 [Klasa — Przegląd](../../atl/atl-class-overview.md)

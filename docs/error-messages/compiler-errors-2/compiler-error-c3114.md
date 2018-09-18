@@ -1,5 +1,5 @@
 ---
-title: C3114 błąd kompilatora | Dokumentacja firmy Microsoft
+title: Błąd kompilatora C3114 | Dokumentacja firmy Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,41 +16,43 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 69001d415167f976d0f30c2dd5a0181cc032d0d1
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: c7d0e324c00c4b304deca1d2538913a88690d023
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33246271"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46054613"
 ---
-# <a name="compiler-error-c3114"></a>C3114 błąd kompilatora
-"argument": nie jest prawidłowym argumentem nazwanego atrybutu  
-  
- Aby element członkowski danych klasy atrybutu jest prawidłowym argumentem nazwanego, go nie może być oznaczona `static`, `const`, lub `literal`. Jeśli właściwość Właściwość nie może być `static` i musi mieć get i metod dostępu set.  
-  
- Aby uzyskać więcej informacji, zobacz [właściwości](../../windows/property-cpp-component-extensions.md) i [zdefiniowane przez użytkownika atrybuty](../../windows/user-defined-attributes-cpp-component-extensions.md).  
-  
-## <a name="example"></a>Przykład  
- Poniższy przykład generuje C3114.  
-  
-```  
-// C3114.cpp  
-// compile with: /clr /c  
-public ref class A : System::Attribute {  
-public:  
-   static property int StaticProp {  
-      int get();  
-   }  
-  
-   property int Prop2 {  
-      int get();  
-      void set(int i);  
-   }  
-};  
-  
-[A(StaticProp=123)]   // C3114  
-public ref class R {};  
-  
-[A(Prop2=123)]   // OK  
-public ref class S {};  
+# <a name="compiler-error-c3114"></a>Błąd kompilatora C3114
+
+"argument": nie jest prawidłowym argumentem nazwanego atrybutu
+
+Aby dla atrybutu klasy element członkowski danych był prawidłowy, nazwany argument, go nie może być oznaczona `static`, `const`, lub `literal`. Właściwości, właściwość nie może być `static` i musi mieć get i ustaw metody dostępu.
+
+Aby uzyskać więcej informacji, zobacz [właściwość](../../windows/property-cpp-component-extensions.md) i [atrybuty zdefiniowane przez użytkownika](../../windows/user-defined-attributes-cpp-component-extensions.md).
+
+## <a name="example"></a>Przykład
+
+Poniższy przykład spowoduje wygenerowanie C3114.
+
+```
+// C3114.cpp
+// compile with: /clr /c
+public ref class A : System::Attribute {
+public:
+   static property int StaticProp {
+      int get();
+   }
+
+   property int Prop2 {
+      int get();
+      void set(int i);
+   }
+};
+
+[A(StaticProp=123)]   // C3114
+public ref class R {};
+
+[A(Prop2=123)]   // OK
+public ref class S {};
 ```

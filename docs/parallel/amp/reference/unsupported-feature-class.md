@@ -18,15 +18,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7ccc811e3459fe668b6a8dbd255007cb60bf0cf1
-ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
+ms.openlocfilehash: 7472e8fa8932983569ad9e2a9c1fe6cdfc9318b7
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33696139"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46059686"
 ---
 # <a name="unsupportedfeature-class"></a>unsupported_feature — Klasa
-Wyjątek zgłaszany, gdy jest używany nieobsługiwanej funkcji.  
+Wyjątek, który jest zgłaszany, gdy używana jest nieobsługiwana funkcja.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -50,9 +50,9 @@ class unsupported_feature : public runtime_exception;
   
  `unsupported_feature`  
   
-## <a name="unsupported_feature__ctor"></a> unsupported_feature — 
+## <a name="unsupported_feature__ctor"></a> unsupported_feature 
 
-  Tworzy nowe wystąpienie klasy unsupported_feature — wyjątek.  
+  Tworzy nowe wystąpienie nieobsługiwanego wyjątku unsupported_feature.  
   
 ### <a name="syntax"></a>Składnia  
   
@@ -64,8 +64,8 @@ unsupported_feature() throw();
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `_Message`  
- Opis błędu.  
+*_Message*<br/>
+Opis błędu.  
   
 ### <a name="return-value"></a>Wartość zwracana  
  `unsupported_feature` Obiektu.  

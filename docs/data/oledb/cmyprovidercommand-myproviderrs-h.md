@@ -19,14 +19,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: b437f02a0df4f4ff0e34c44939c2a40f3ccebf74
-ms.sourcegitcommit: 889a75be1232817150be1e0e8d4d7f48f5993af2
+ms.openlocfilehash: 919455c1f0e1bae0491226e2f2d0f53bb35f7ad8
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/30/2018
-ms.locfileid: "39339744"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46046605"
 ---
 # <a name="cmyprovidercommand-myproviderrsh"></a>CMyProviderCommand (MyProviderRS.H)
+
 `CMyProviderCommand` Klasa jest implementacją dla obiektu polecenia dostawcy. Zapewnia to implementacja `IAccessor`, `ICommandText`, i `ICommandProperties` interfejsów. `IAccessor` Interfejs jest taka sama jak w zestawie wierszy. Obiekt polecenia używa metody dostępu w celu określenia powiązania parametrów. Obiektu zestawu wierszy są one używane do określenia powiązania dla kolumny wyjściowe. `ICommandText` Interfejsu jest to wygodny sposób, aby określić polecenie w formie tekstu. W tym przykładzie użyto `ICommandText` interfejs później, gdy dodaje niestandardowy kod; zastępuje ona również `ICommand::Execute` metody. `ICommandProperties` Interfejs obsługuje wszystkie właściwości dla obiektów poleceń i wierszy.  
   
 ```cpp  
@@ -42,11 +43,12 @@ class ATL_NO_VTABLE CMyProviderCommand :
    public IColumnsInfoImpl<CMyProviderCommand>  
 ```  
   
- `IAccessor` Interfejsu zarządza wszystkie powiązania, używany w poleceniach i zestawy wierszy. Wywołania konsumenta `IAccessor::CreateAccessor` z tablicą `DBBINDING` struktury. Każdy `DBBINDING` struktura zawiera informacje dotyczące obsługi powiązania kolumny (takie jak typ i długość). Dostawca otrzymuje struktur i określa, jak należy przenieść dane oraz czy wszystkie konwersje niezbędne. `IAccessor` Interfejs jest używany w obiekcie polecenia do obsługi parametrów w poleceniu.  
+`IAccessor` Interfejsu zarządza wszystkie powiązania, używany w poleceniach i zestawy wierszy. Wywołania konsumenta `IAccessor::CreateAccessor` z tablicą `DBBINDING` struktury. Każdy `DBBINDING` struktura zawiera informacje dotyczące obsługi powiązania kolumny (takie jak typ i długość). Dostawca otrzymuje struktur i określa, jak należy przenieść dane oraz czy wszystkie konwersje niezbędne. `IAccessor` Interfejs jest używany w obiekcie polecenia do obsługi parametrów w poleceniu.  
   
- Obiekt polecenia oferuje również implementację `IColumnsInfo`. OLE DB wymaga `IColumnsInfo` interfejsu. Interfejs umożliwia, aby pobrać informacje o parametrach z polecenia. Używa obiektu zestawu wierszy `IColumnsInfo` interfejsu do zwracania informacji dotyczących kolumn wyjściowych dostawcy.  
+Obiekt polecenia oferuje również implementację `IColumnsInfo`. OLE DB wymaga `IColumnsInfo` interfejsu. Interfejs umożliwia, aby pobrać informacje o parametrach z polecenia. Używa obiektu zestawu wierszy `IColumnsInfo` interfejsu do zwracania informacji dotyczących kolumn wyjściowych dostawcy.  
   
- Dostawca zawiera również interfejs o nazwie `IObjectWithSite`. `IObjectWithSite` Interfejs został wdrożony w wersji 2.0 biblioteki ATL i umożliwia implementujący do przekazywania informacji o sobie samym do jego podrzędny. Obiekt polecenia używa `IObjectWithSite` informacje, aby poinformować dowolne wygenerowane obiekty zestawu wierszy o który je utworzył.  
+Dostawca zawiera również interfejs o nazwie `IObjectWithSite`. `IObjectWithSite` Interfejs został wdrożony w wersji 2.0 biblioteki ATL i umożliwia implementujący do przekazywania informacji o sobie samym do jego podrzędny. Obiekt polecenia używa `IObjectWithSite` informacje, aby poinformować dowolne wygenerowane obiekty zestawu wierszy o który je utworzył.  
   
 ## <a name="see-also"></a>Zobacz też  
- [Pliki dostawcy generowane przez kreatora](../../data/oledb/provider-wizard-generated-files.md)
+
+[Pliki dostawcy generowane przez kreatora](../../data/oledb/provider-wizard-generated-files.md)

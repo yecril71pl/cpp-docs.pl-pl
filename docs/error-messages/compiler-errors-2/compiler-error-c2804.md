@@ -1,5 +1,5 @@
 ---
-title: C2804 błąd kompilatora | Dokumentacja firmy Microsoft
+title: Błąd kompilatora C2804 | Dokumentacja firmy Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,45 +16,48 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 47a0c9a785ae47e6df00b1303553228521d20d00
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 987176753d9c9dcd21ddbe06ef2e5b59c24dd79b
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33236610"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46036946"
 ---
-# <a name="compiler-error-c2804"></a>C2804 błąd kompilatora
-dane binarne "operator operator" ma zbyt wiele parametrów  
-  
- Przeciążony operator binarny funkcja członkowska jest zadeklarowana z więcej niż jeden parametr. Pierwszy parametr argument operacji operatora binarnego funkcji członkowskiej, którego typ jest operatora typ otaczający, technicznego.  
-  
-## <a name="example"></a>Przykład  
- Poniższy przykład generuje C2804 i pokazuje, jak go naprawić.  
-  
-```  
-// C2804.cpp  
-// compile by using: cl /c /W4 C2804.cpp  
-class X {  
-public:  
-   X& operator+= (const X &left, const X &right);   // C2804  
-   X& operator+= (const X &right);   // OK - left operand implicitly *this  
-};  
-  
-int main() {  
-   X x, y;  
-   x += y;   // equivalent to x.operator+=(y)  
-}  
-```  
-  
-## <a name="example"></a>Przykład  
- Poniższy przykład generuje C2804 i pokazuje, jak go naprawić.  
-  
-```  
-// C2804_2.cpp  
-// compile with: /clr /c  
-ref struct Y {  
-   Y^ operator +(Y^ hY, int i);   // C2804  
-   static Y^ operator +(Y^ hY, int i);   // OK  
-   Y^ operator +(int i);   // OK  
-};  
+# <a name="compiler-error-c2804"></a>Błąd kompilatora C2804
+
+plik binarny "operator operator" ma zbyt wiele parametrów
+
+Funkcja elementu członkowskiego Przeciążony operator binarny jest zadeklarowana z więcej niż jeden parametr. Pierwszy parametr operand operatora binarnego funkcji członkowskiej, którego typ jest operatorem typ otaczający, jest domyślna.
+
+## <a name="example"></a>Przykład
+
+Poniższy przykład generuje C2804 i pokazuje, jak go naprawić.
+
+```
+// C2804.cpp
+// compile by using: cl /c /W4 C2804.cpp
+class X {
+public:
+   X& operator+= (const X &left, const X &right);   // C2804
+   X& operator+= (const X &right);   // OK - left operand implicitly *this
+};
+
+int main() {
+   X x, y;
+   x += y;   // equivalent to x.operator+=(y)
+}
+```
+
+## <a name="example"></a>Przykład
+
+Poniższy przykład generuje C2804 i pokazuje, jak go naprawić.
+
+```
+// C2804_2.cpp
+// compile with: /clr /c
+ref struct Y {
+   Y^ operator +(Y^ hY, int i);   // C2804
+   static Y^ operator +(Y^ hY, int i);   // OK
+   Y^ operator +(int i);   // OK
+};
 ```

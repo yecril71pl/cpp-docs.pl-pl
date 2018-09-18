@@ -1,5 +1,5 @@
 ---
-title: C3707 błąd kompilatora | Dokumentacja firmy Microsoft
+title: Błąd kompilatora C3707 | Dokumentacja firmy Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,35 +16,36 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7268f584d9f269b4f2f15b837379ec12ab0185d8
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: d18d4a82d06018cdba6147ba6756b1718648847a
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33273728"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46052789"
 ---
-# <a name="compiler-error-c3707"></a>C3707 błąd kompilatora
-"Funkcja": metoda dispinterface musi posiadać identyfikator dispid  
-  
- Jeśli używasz `dispinterface` metody, należy go przypisać `dispid`. Aby naprawić ten błąd, należy przypisać `dispid` do `dispinterface` metody, na przykład usunięcie komentarza `id` atrybutu w metodzie w poniższym przykładzie. Aby uzyskać więcej informacji, zobacz atrybuty [dispinterface](../../windows/dispinterface.md) i [identyfikator](../../windows/id.md).  
-  
- Poniższy przykład generuje C3707:  
-  
-```  
-// C3707.cpp  
-#include <atlbase.h>  
-#include <atlcom.h>  
-#include <atlctl.h>  
-  
-[module(name="xx")];  
-[dispinterface]  
-__interface IEvents : IDispatch  
-{  
-   HRESULT event1([in] int i);   // C3707  
-   // try the following line instead  
-   // [id(1)] HRESULT event1([in] int i);  
-};  
-  
-int main() {  
-}  
+# <a name="compiler-error-c3707"></a>Błąd kompilatora C3707
+
+'Funkcja': metoda dispinterface musi posiadać identyfikator dispid
+
+Jeśli używasz `dispinterface` metody, należy go przypisać `dispid`. Aby naprawić ten błąd, należy przypisać `dispid` do `dispinterface` metody, na przykład przez Trwa usuwanie komentarza do `id` atrybutu w metodzie w poniższym przykładzie. Aby uzyskać więcej informacji, zobacz atrybuty [dispinterface](../../windows/dispinterface.md) i [identyfikator](../../windows/id.md).
+
+Poniższy przykład spowoduje wygenerowanie C3707:
+
+```
+// C3707.cpp
+#include <atlbase.h>
+#include <atlcom.h>
+#include <atlctl.h>
+
+[module(name="xx")];
+[dispinterface]
+__interface IEvents : IDispatch
+{
+   HRESULT event1([in] int i);   // C3707
+   // try the following line instead
+   // [id(1)] HRESULT event1([in] int i);
+};
+
+int main() {
+}
 ```

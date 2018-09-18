@@ -1,5 +1,5 @@
 ---
-title: C2589 błąd kompilatora | Dokumentacja firmy Microsoft
+title: Błąd kompilatora C2589 | Dokumentacja firmy Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,29 +16,30 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c15589358979f554a9c17114f7d78b05dd83c472
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 2db5dde898a3e5918eed62b2b32231b5d7ed014f
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33230756"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46046059"
 ---
-# <a name="compiler-error-c2589"></a>C2589 błąd kompilatora
-"identyfikator": niedozwolony token po prawej stronie "::"  
-  
- Jeśli klasy, struktury lub Unii nazwa jest wyświetlana z lewej strony operatora rozpoznawanie zakresów (dwa razy dwukropki), token po prawej stronie musi być klasą, strukturą lub elementu członkowskiego typu union. W przeciwnym razie żadnych identyfikator globalny może występować po prawej stronie.  
-  
- Operator rozpoznawania zakresu nie może zostać przeciążony.  
-  
- Poniższy przykład generuje C2589:  
-  
-```  
-// C2589.cpp  
-void Test(){}  
-class A {};  
-void operator :: ();   // C2589  
-  
-int main() {  
-   ::Test();  
-}  
+# <a name="compiler-error-c2589"></a>Błąd kompilatora C2589
+
+"identyfikator': niedozwolony token po prawej stronie":: "
+
+Jeśli klasy, struktury lub Unii nazwa pojawi się po lewej stronie operatora rozpoznawania zakresu (podwójny dwukropek), token po prawej stronie musi być klasy, struktury lub Unii. W przeciwnym razie wszelkie identyfikator globalny może znajdować się po prawej stronie.
+
+Nie można przeciążać operatora rozpoznawania zakresu.
+
+Poniższy przykład spowoduje wygenerowanie C2589:
+
+```
+// C2589.cpp
+void Test(){}
+class A {};
+void operator :: ();   // C2589
+
+int main() {
+   ::Test();
+}
 ```

@@ -25,12 +25,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9b977875655182f1cbc822540cf021635f525f7e
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 7cab0ea4ecf4bfabede365b9e0fbc9d4a02e2515
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43756421"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46057460"
 ---
 # <a name="ccomunkarray-class"></a>Klasa CComUnkArray
 
@@ -45,7 +45,7 @@ class CComUnkArray
 
 #### <a name="parameters"></a>Parametry
 
-*nMaxSize*  
+*nMaxSize*<br/>
 Maksymalna liczba `IUnknown` wskaźników, które mogą być przechowywane w tablicy statycznej.
 
 ## <a name="members"></a>Elementy członkowskie
@@ -92,7 +92,7 @@ DWORD Add(IUnknown* pUnk);
 
 ### <a name="parameters"></a>Parametry
 
-*pUnk*  
+*pUnk*<br/>
 Wywołaj tę metodę, aby dodać `IUnknown` wskaźnika do tablicy.
 
 ### <a name="return-value"></a>Wartość zwracana
@@ -159,7 +159,7 @@ DWORD WINAPI GetCookie(IUnknown** ppFind);
 
 ### <a name="parameters"></a>Parametry
 
-*ppFind*  
+*ppFind*<br/>
 `IUnknown` Wskaźnika, dla których skojarzone pliki cookie jest wymagana.
 
 ### <a name="return-value"></a>Wartość zwracana
@@ -180,7 +180,7 @@ IUnknown* WINAPI GetUnknown(DWORD dwCookie);
 
 ### <a name="parameters"></a>Parametry
 
-*dwCookie*  
+*dwCookie*<br/>
 Plik cookie, dla którego skojarzonego `IUnknown` wskaźnika jest wymagana.
 
 ### <a name="return-value"></a>Wartość zwracana
@@ -197,7 +197,7 @@ BOOL Remove(DWORD dwCookie);
 
 ### <a name="parameters"></a>Parametry
 
-*dwCookie*  
+*dwCookie*<br/>
 Odwołanie do pliku cookie `IUnknown` wskaźnika do usunięcia z tablicy.
 
 ### <a name="return-value"></a>Wartość zwracana
@@ -206,5 +206,5 @@ Zwraca wartość TRUE, jeśli wskaźnik jest usunięte, wartość FALSE w przeci
 
 ## <a name="see-also"></a>Zobacz też
 
-[Klasa CComDynamicUnkArray](../../atl/reference/ccomdynamicunkarray-class.md)   
+[Klasa CComDynamicUnkArray](../../atl/reference/ccomdynamicunkarray-class.md)<br/>
 [Klasa — Przegląd](../../atl/atl-class-overview.md)

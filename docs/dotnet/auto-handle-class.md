@@ -1,5 +1,5 @@
 ---
-title: auto_handle — klasa | Dokumentacja firmy Microsoft
+title: auto_handle, klasa | Dokumentacja firmy Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,15 +18,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: bd6675f725e2a987a85cc73d6eec92f2b496df09
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 0bddacec4e416173fc60ceb1c2c6ee71b3a198e7
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33103281"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46029718"
 ---
 # <a name="autohandle-class"></a>auto_handle — Klasa
-Zarządzanie zasobami automatyczna, która może służyć do osadzenia wirtualnego dojścia do typu zarządzanego.  
+Zarządzanie zasobami automatycznych, który może służyć do osadzania wirtualnego dojścia do typu zarządzanego.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -36,15 +36,15 @@ ref class auto_handle;
 ```  
   
 #### <a name="parameters"></a>Parametry  
- `_element_type`  
- Typ zarządzany do osadzenia.  
+*_element_type*<br/>
+Typ zarządzany, które można osadzać.  
   
 ## <a name="requirements"></a>Wymagania  
- **Plik nagłówka** \<msclr\auto_handle.h >  
+ **Plik nagłówkowy** \<msclr\auto_handle.h >  
   
  **Namespace** msclr  
   
 ## <a name="see-also"></a>Zobacz też  
  [auto_handle —](../dotnet/auto-handle.md)   
- [auto_handle — członkowie](../dotnet/auto-handle-members.md)   
+ [auto_handle, składowe](../dotnet/auto-handle-members.md)   
  [auto_gcroot, klasa](../dotnet/auto-gcroot-class.md)

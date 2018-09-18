@@ -1,5 +1,5 @@
 ---
-title: Kompilatora (poziom 1) ostrzeżenie C4022 | Dokumentacja firmy Microsoft
+title: Kompilator ostrzeżenie (poziom 1) C4022 | Dokumentacja firmy Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,14 +16,15 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8b4c8f4fcac08fa98064f6def6c04feb43b4b581
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 2b8d081106435bba8465da2c99f40d62275f5a9b
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33271748"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46018447"
 ---
-# <a name="compiler-warning-level-1-c4022"></a>Kompilator C4022 ostrzegawcze (poziom 1)
-"Funkcja": niezgodność wskaźnika na rzeczywisty parametr 'Liczba'  
-  
- Typ wskaźnika rzeczywisty parametr różni się od typu wskaźnika posiadanie odpowiadającego mu parametru. Rzeczywisty parametr jest przekazywany bez zmian.
+# <a name="compiler-warning-level-1-c4022"></a>Kompilator ostrzeżenie (poziom 1) C4022
+
+'Funkcja': niezgodność wskaźnika na rzeczywisty parametr "liczba"
+
+Typ wskaźnika rzeczywistego parametru różni się od odpowiedniego parametru formalnego typ wskaźnika. Rzeczywisty parametr jest przekazywany bez zmian.

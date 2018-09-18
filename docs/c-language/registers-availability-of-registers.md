@@ -14,17 +14,19 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e0a63bf8980ea9022a1cd06bc890512db8ba85a5
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: f9c7c09bccda07358384ca6b0be8d3ea824bc99e
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32383946"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46055146"
 ---
 # <a name="registers-availability-of-registers"></a>Rejestry: dostępność rejestrów
-**ANSI 3.5.1** zakresu, do którego obiektów faktycznie można umieścić w rejestrach przez użycie specyfikatora klasy magazynowania rejestru  
-  
- Kompilator nie honoruje żądania użytkowników dla zmiennych rejestru. Zamiast tego powoduje właścicielem wyborów podczas optymalizacji.  
-  
-## <a name="see-also"></a>Zobacz też  
- [Zachowanie zdefiniowane w implementacji](../c-language/implementation-defined-behavior.md)
+
+**ANSI 3.5.1** zakres, do której obiekty faktycznie można umieścić w rejestrach przez użycie specyfikatora klasy magazynowania register
+
+Kompilator nie uznaje żądania użytkownika, register zmiennych. Zamiast tego powoduje właścicielem wyborów podczas optymalizacji.
+
+## <a name="see-also"></a>Zobacz też
+
+[Zachowanie zdefiniowane w implementacji](../c-language/implementation-defined-behavior.md)

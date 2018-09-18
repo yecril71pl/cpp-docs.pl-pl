@@ -18,16 +18,16 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 058979420e5bb1426879522e70ec8b1ac768d9cc
-ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
+ms.openlocfilehash: ce07cfce4b7361486489c2f00c3e4b395c71e200
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/01/2018
-ms.locfileid: "39407406"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46058513"
 ---
 # <a name="bool-c"></a>bool (C++)
 
-To słowo kluczowe jest typu wbudowanego. Zmienna tego typu może mieć wartości [true](../cpp/true-cpp.md) i [false](../cpp/false-cpp.md). Wyrażenia warunkowe mają typ **bool** i dlatego mają wartości typu **bool**. Na przykład `i!=0` ma teraz wartość PRAWDA lub FAŁSZ w zależności od wartości `i`.  
+To słowo kluczowe jest typu wbudowanego. Zmienna tego typu może mieć wartości [true](../cpp/true-cpp.md) i [false](../cpp/false-cpp.md). Wyrażenia warunkowe mają typ **bool** i dlatego mają wartości typu **bool**. Na przykład `i!=0` ma teraz wartość PRAWDA lub FAŁSZ w zależności od wartości `i`.
 
 **Visual Studio 2017 w wersji 15.3 lub nowszej** (udostępniono [/STD: c ++ 17](../build/reference/std-specify-language-standard-version.md)): argument przyrostka lub przedrostka inkrementacji lub dekrementacji operator nie może być typu **bool**. Innymi słowy, biorąc pod uwagę zmienną `b` typu **bool**, te wyrażenia nie są już dozwolone:
 
@@ -37,29 +37,30 @@ To słowo kluczowe jest typu wbudowanego. Zmienna tego typu może mieć wartośc
     b--;
     --b;
 ```
-  
-Wartości TRUE i FALSE mają następującą relację:  
-  
-```cpp  
-!false == true  
-!true == false  
-```  
-  
-W poniższej instrukcji:  
-  
-```cpp  
-if (condexpr1) statement1;   
-```  
-  
-Jeśli `condexpr1` ma wartość PRAWDA, `statement1` jest zawsze wykonywana; Jeśli `condexpr1` ma wartość FAŁSZ, `statement1` nigdy nie jest wykonywana.  
-  
-Gdy przyrostka lub przedrostka **++** operator jest stosowany do zmiennej typu **bool**, zmienna jest ustawiana na wartość TRUE. 
+
+Wartości TRUE i FALSE mają następującą relację:
+
+```cpp
+!false == true
+!true == false
+```
+
+W poniższej instrukcji:
+
+```cpp
+if (condexpr1) statement1;
+```
+
+Jeśli `condexpr1` ma wartość PRAWDA, `statement1` jest zawsze wykonywana; Jeśli `condexpr1` ma wartość FAŁSZ, `statement1` nigdy nie jest wykonywana.
+
+Gdy przyrostka lub przedrostka **++** operator jest stosowany do zmiennej typu **bool**, zmienna jest ustawiana na wartość TRUE.
 **Visual Studio 2017 w wersji 15.3 lub nowszej**: operator ++ dla **bool** został usunięty z języka i nie jest już obsługiwana.
 
-Przyrostka lub przedrostka **--** do zmiennej tego typu nie można zastosować operatora.  
-  
- **Bool** typ uczestniczy w promocjach integralnych. Wartości typu **bool** można przekonwertować wartości typu **int**z FALSE staje się zero i wartość TRUE, staje się jedynką. Jako typ samodzielny **bool** uczestniczy w przeciążeniu rozdzielczości.  
-  
+Przyrostka lub przedrostka **--** do zmiennej tego typu nie można zastosować operatora.
+
+**Bool** typ uczestniczy w promocjach integralnych. Wartości typu **bool** można przekonwertować wartości typu **int**z FALSE staje się zero i wartość TRUE, staje się jedynką. Jako typ samodzielny **bool** uczestniczy w przeciążeniu rozdzielczości.
+
 ## <a name="see-also"></a>Zobacz także
-[Słowa kluczowe](../cpp/keywords-cpp.md)  
-[Typy podstawowe](../cpp/fundamental-types-cpp.md)  
+
+[Słowa kluczowe](../cpp/keywords-cpp.md)<br/>
+[Typy podstawowe](../cpp/fundamental-types-cpp.md)

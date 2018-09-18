@@ -17,12 +17,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 45139b16ebb923acd004d995cd9466ea9e39e163
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 61cbd301d01d62c0d24f232703b53cebf411a082
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43765739"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46021073"
 ---
 # <a name="celementtraits-class"></a>Klasa CElementTraits
 
@@ -31,13 +31,13 @@ Ta klasa jest używana przez klasy kolekcji do zapewnienia metod i funkcji przen
 ## <a name="syntax"></a>Składnia
 
 ```
-template<typename T>  
+template<typename T>
 class CElementTraits : public CDefaultElementTraits<T>
 ```
 
 #### <a name="parameters"></a>Parametry
 
-`T`  
+*T*<br/>
 Typ danych, które mają być przechowywane w kolekcji.
 
 ## <a name="remarks"></a>Uwagi
@@ -54,5 +54,5 @@ Aby uzyskać więcej informacji, zobacz [klasy kolekcji ATL](../../atl/atl-colle
 
 ## <a name="see-also"></a>Zobacz też
 
-[Klasa CDefaultElementTraits](../../atl/reference/cdefaultelementtraits-class.md)   
+[Klasa CDefaultElementTraits](../../atl/reference/cdefaultelementtraits-class.md)<br/>
 [Klasa — Przegląd](../../atl/atl-class-overview.md)

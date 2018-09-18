@@ -1,5 +1,5 @@
 ---
-title: C2979 błąd kompilatora | Dokumentacja firmy Microsoft
+title: Błąd kompilatora C2979 | Dokumentacja firmy Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,27 +16,29 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 07a28faaf7452a96759879b001cb9b078dd86f88
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 66f43af14474c042d7a4a311bbe672394a2f2d1d
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33243189"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46053352"
 ---
-# <a name="compiler-error-c2979"></a>C2979 błąd kompilatora
-jawne specjalizacje nie są obsługiwane w typach ogólnych  
-  
- Nieprawidłowo zadeklarowano klasy ogólnej.  Zobacz [ogólne](../../windows/generics-cpp-component-extensions.md) Aby uzyskać więcej informacji.  
-  
-## <a name="example"></a>Przykład  
- Poniższy przykład generuje C2979.  
-  
-```  
-// C2979.cpp  
-// compile with: /clr /c  
-generic <>   
-ref class Utils {};   // C2979 error  
-  
-generic <class T>  
-ref class Utils2 {};   // OK  
+# <a name="compiler-error-c2979"></a>Błąd kompilatora C2979
+
+jawne specjalizacje nie są obsługiwane w typach ogólnych
+
+Klasa generyczna zadeklarowano niepoprawnie.  Zobacz [ogólne](../../windows/generics-cpp-component-extensions.md) Aby uzyskać więcej informacji.
+
+## <a name="example"></a>Przykład
+
+Poniższy przykład spowoduje wygenerowanie C2979.
+
+```
+// C2979.cpp
+// compile with: /clr /c
+generic <>
+ref class Utils {};   // C2979 error
+
+generic <class T>
+ref class Utils2 {};   // OK
 ```

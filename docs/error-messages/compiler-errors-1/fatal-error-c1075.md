@@ -16,16 +16,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: fa8a9f91050d1f8b7eab871ca81791c05829a077
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 748d6464994ef54cd20784a9004d5320389f0766
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33198771"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46046748"
 ---
 # <a name="fatal-error-c1075"></a>Błąd krytyczny C1075
-po lewej stronie token był niedopasowane na końcu pliku  
-  
- Kompilator oczekiwano pasującego *tokenu* przed osiągnął koniec pliku.  
-  
- Przyczyną tego błędu może być niedopasowane nawias klamrowy, lub inne łączyć znaków.
+
+po lewej stronie token był niedopasowane na końcu pliku
+
+Kompilator oczekuje dopasowania *tokenu* przed osiągnął koniec pliku.
+
+Ten błąd może być spowodowany przez nawias Niedopasowany nawias klamrowy, lub inne sparowane znaków.

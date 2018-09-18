@@ -1,5 +1,5 @@
 ---
-title: _futime —, _futime32 —, _futime64 — | Dokumentacja firmy Microsoft
+title: _futime _futime32, _futime64 | Dokumentacja firmy Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -42,12 +42,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 864bba5b88c7e52b55bd86a61edaaac2d22b0346
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: cdd7b68ac9e3bf55f64b9a68f7b8075eab640faa
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32402312"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46056823"
 ---
 # <a name="futime-futime32-futime64"></a>_futime, _futime32, _futime64
 
@@ -73,20 +73,20 @@ int _futime64(
 ### <a name="parameters"></a>Parametry
 
 *FD*<br/>
-Deskryptorów plików do otwartego pliku.
+Deskryptor pliku do otwartego pliku.
 
 *FileTime*<br/>
-Wskaźnik do struktury, zawierający nowe Data modyfikacji.
+Wskaźnik do struktury, zawierający nową datę modyfikacji.
 
 ## <a name="return-value"></a>Wartość zwracana
 
-Zwraca 0 w przypadku powodzenia. Jeśli wystąpi błąd, program obsługi nieprawidłowych parametrów zostanie wywołany, zgodnie z opisem w [sprawdzanie poprawności parametru](../../c-runtime-library/parameter-validation.md). Jeśli dozwolone jest wykonywanie aby kontynuować, funkcja zwraca wartość -1 i **errno** ma ustawioną wartość **ebadf —**, wskazujący deskryptora nieprawidłowy plik lub **einval —**, wskazujący nieprawidłowy parametr.
+Zwraca 0, jeśli kończy się pomyślnie. Jeśli wystąpi błąd, procedura obsługi nieprawidłowego parametru zostanie wywołana, zgodnie z opisem w [Parameter Validation](../../c-runtime-library/parameter-validation.md). Jeśli wykonanie może być kontynuowane, funkcja zwraca wartość -1 i **errno** jest ustawiona na **EBADF**, wskazujący nieprawidłowego deskryptora pliku, lub **EINVAL**, wskazując nieprawidłowy parametr.
 
 ## <a name="remarks"></a>Uwagi
 
-**_Futime —** procedury ustawia datę modyfikacji i czas dostępu dla otwartego pliku skojarzone z *fd*. **_futime —** jest taka sama jak [_utime —](utime-utime32-utime64-wutime-wutime32-wutime64.md), ale jej argument jest deskryptorów plików otwartego pliku, a nie nazwę pliku lub ścieżkę do pliku. **_Utimbuf —** struktura zawiera pola, Nowa data modyfikacji i czas dostępu. Oba pola musi zawierać prawidłowe wartości. **_utimbuf32** i **_utimbuf64** są takie same jak **_utimbuf —** odpowiednio z wyjątkiem użycie typów czasu 32-bitowe i 64-bitowych. **_futime —** i **_utimbuf —** Użyj typu czasu 64-bitowe i **_futime —** jest identyczna w zachowaniu do **_futime64 —**. Aby wymusić stare zachowanie należy zdefiniować **_USE_32BIT_TIME_T**. Powoduje to wykonanie tej **_futime —** być identyczne w zachowaniu do **_futime32 —** i powoduje, że **_utimbuf —** struktury w celu używania typu czasu 32-bitowy, dzięki czemu odpowiadające **__utimbuf32**.
+**_Futime** procedury ustawia datę modyfikacji i czas dostępu do otwartego pliku, które są skojarzone z *fd*. **_futime** jest taka sama jak [_utime](utime-utime32-utime64-wutime-wutime32-wutime64.md), z tą różnicą, że jej argument ma deskryptor pliku otwartego pliku, a nie nazwę pliku lub ścieżkę do pliku. **_Utimbuf —** struktura zawiera pola nową datę modyfikacji i dostępu do godziny. Oba pola muszą zawierać prawidłowe wartości. **_utimbuf32** i **_utimbuf64** są takie same jak **_utimbuf —** z wyjątkiem używanie typów 32-bitowych i 64-bitowych czasu, odpowiednio. **_futime** i **_utimbuf —** używania typu czasu 64-bitowych i **_futime** jest taka sama w zachowanie **_futime64**. Jeśli potrzebujesz wymusić stare zachowanie, zdefiniuj **_USE_32BIT_TIME_T**. Powoduje to, że takie postępowania **_futime** być identyczne w zachowanie **_futime32** i powoduje, że **_utimbuf —** struktury w celu używania typu czasu 32-bitowych, upodabniając te parametry do **__utimbuf32**.
 
-**_futime64 —**, który korzysta z **__utimbuf64 —** struktury, można odczytywać i modyfikować daty pliku za pośrednictwem 23:59:59 31 grudnia 3000 UTC; podczas gdy wywołanie **_futime32 —** zakończy się niepowodzeniem, jeśli jest data w pliku później niż 23:59:59 18 stycznia 2038 r., UTC. Północy, 1 stycznia 1970 jest dolna granica zakresu dat dla tych funkcji.
+**_futime64**, który używa **__utimbuf64 —** struktury, może odczytywać i modyfikować daty pliku do 23:59:59, 31 grudnia 3000, UTC, natomiast wywołanie **_futime32** zakończy się niepowodzeniem, jeśli data w pliku jest później niż 23:59:59 18 stycznia 2038 r. UTC. Północy 1 stycznia 1970 r., to dolna granica zakresu dat dla tych funkcji.
 
 ## <a name="requirements"></a>Wymagania
 
@@ -96,7 +96,7 @@ Zwraca 0 w przypadku powodzenia. Jeśli wystąpi błąd, program obsługi niepra
 |**_futime32**|\<sys/utime.h>|\<errno.h>|
 |**_futime64**|\<sys/utime.h>|\<errno.h>|
 
-Aby uzyskać więcej informacji o zgodności, zobacz [zgodności](../../c-runtime-library/compatibility.md).
+Aby uzyskać więcej informacji na temat zgodności, zobacz [zgodności](../../c-runtime-library/compatibility.md).
 
 ## <a name="example"></a>Przykład
 
@@ -143,20 +143,20 @@ Arbitrary file contents.
 ### <a name="sample-output"></a>Przykładowe dane wyjściowe
 
 ```Output
- Volume in drive Z has no label.
- Volume Serial Number is 5C68-57C1
+Volume in drive Z has no label.
+Volume Serial Number is 5C68-57C1
 
- Directory of Z:\crt
+Directory of Z:\crt
 
- 03/25/2004  10:40 AM                24 crt_futime.c_input
+03/25/2004  10:40 AM                24 crt_futime.c_input
                1 File(s)             24 bytes
                0 Dir(s)  24,268,476,416 bytes free
- Volume in drive Z has no label.
- Volume Serial Number is 5C68-57C1
+Volume in drive Z has no label.
+Volume Serial Number is 5C68-57C1
 
- Directory of Z:\crt
+Directory of Z:\crt
 
- 03/25/2004  10:41 AM                24 crt_futime.c_input
+03/25/2004  10:41 AM                24 crt_futime.c_input
                1 File(s)             24 bytes
                0 Dir(s)  24,268,476,416 bytes free
 File time modified

@@ -1,5 +1,5 @@
 ---
-title: C2159 błąd kompilatora | Dokumentacja firmy Microsoft
+title: Błąd kompilatora C2159 | Dokumentacja firmy Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,23 +16,24 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 412907d8c2f6c6f14adfb4f0799f3f2715a8381e
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 3c33f8faebbca2999a893ceb1d0650ba89ee74bf
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33167557"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46048490"
 ---
-# <a name="compiler-error-c2159"></a>C2159 błąd kompilatora
-Określono więcej niż jednej klasy magazynu  
-  
- Deklaracja zawiera więcej niż jedną klasę magazynu.  
-  
- Poniższy przykład generuje C2159:  
-  
-```  
-// C2159.cpp  
-// compile with: /c  
-static int i;   // OK  
-extern static int i;   // C2159  
+# <a name="compiler-error-c2159"></a>Błąd kompilatora C2159
+
+więcej niż jedną klasę magazynu określony
+
+Deklaracja zawiera więcej niż jedną klasę magazynu.
+
+Poniższy przykład spowoduje wygenerowanie C2159:
+
+```
+// C2159.cpp
+// compile with: /c
+static int i;   // OK
+extern static int i;   // C2159
 ```

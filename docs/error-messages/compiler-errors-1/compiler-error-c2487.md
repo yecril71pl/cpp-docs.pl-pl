@@ -1,5 +1,5 @@
 ---
-title: C2487 błąd kompilatora | Dokumentacja firmy Microsoft
+title: Błąd kompilatora C2487 | Dokumentacja firmy Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,14 +16,15 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 26d2f74f1d189cf2be71d812dd8da01bb6fe8bdb
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 36b2b0a71ef29edc7bbd7fec7b359c4a5a10df1c
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33225466"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46018916"
 ---
-# <a name="compiler-error-c2487"></a>C2487 błąd kompilatora
-'Identyfikator': nie można zadeklarować elementu członkowskiego interfejsu klasy dll z interfejsem dll  
-  
- Można zadeklarować klasy całego lub określone elementy-DLL interfejsu klasy, z interfejsem DLL. Nie można zadeklarować klasy z interfejsem DLL i następnie deklaruje elementu członkowskiego klasy z interfejsem DLL.
+# <a name="compiler-error-c2487"></a>Błąd kompilatora C2487
+
+'Identyfikator': element członkowski interfejsu klasy dll nie może być zadeklarowana z interfejsem dll
+
+Można zadeklarować całą klasę lub niektórych członków klasy interfejsu-DLL, przy użyciu interfejsu biblioteki DLL. Nie można zadeklarować klasy z interfejsem DLL i następnie deklaruje składowej tej klasy przy użyciu interfejsu biblioteki DLL.

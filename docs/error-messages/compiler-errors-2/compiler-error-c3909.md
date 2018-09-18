@@ -1,5 +1,5 @@
 ---
-title: C3909 błąd kompilatora | Dokumentacja firmy Microsoft
+title: Błąd kompilatora C3909 | Dokumentacja firmy Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,35 +16,36 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 53e89dd422b1289d926ab04a0f17ae4d6185d19d
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 7bb3526f537a2eceb006f6af9e9b0faba44bf9cf
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33270820"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46058708"
 ---
-# <a name="compiler-error-c3909"></a>C3909 błąd kompilatora
-aWinRT lub deklaracja zarządzanego zdarzenia musi przypadać w WinRT lub typu zarządzanego  
-  
- Na zdarzenie środowiska wykonawczego systemu Windows lub zarządzanych została zadeklarowana w typie natywnym. Aby naprawić ten błąd, należy zadeklarować zdarzenia w typów środowiska wykonawczego systemu Windows lub zarządzany.  
-  
- Aby uzyskać więcej informacji, zobacz [zdarzeń](../../windows/event-cpp-component-extensions.md).  
-  
- Poniższy przykład generuje C3909 i pokazuje, jak rozwiązywanie problemu:  
-  
-```  
-// C3909.cpp  
-// compile with: /clr /c  
-delegate void H();  
-class X {  
-   event H^ E;   // C3909 - use ref class X instead  
-};  
-  
-ref class Y {  
-   static event H^ E {  
-      void add(H^) {}  
-      void remove( H^ h ) {}  
-      void raise( ) {}  
-   }  
-};  
+# <a name="compiler-error-c3909"></a>Błąd kompilatora C3909
+
+aWinRT lub deklaracji zdarzenie zarządzane musi przypadać w WinRT lub typu zarządzanego
+
+Zdarzenia środowiska uruchomieniowego Windows lub zarządzanych zdarzeń została zadeklarowana w typie natywnym. Aby naprawić ten błąd, należy zadeklarować zdarzenia w typów środowiska wykonawczego Windows lub typami zarządzanymi.
+
+Aby uzyskać więcej informacji, zobacz [zdarzeń](../../windows/event-cpp-component-extensions.md).
+
+Poniższy przykład generuje C3909 i pokazuje, jak go naprawić:
+
+```
+// C3909.cpp
+// compile with: /clr /c
+delegate void H();
+class X {
+   event H^ E;   // C3909 - use ref class X instead
+};
+
+ref class Y {
+   static event H^ E {
+      void add(H^) {}
+      void remove( H^ h ) {}
+      void raise( ) {}
+   }
+};
 ```

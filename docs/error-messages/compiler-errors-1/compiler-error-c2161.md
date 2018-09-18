@@ -1,5 +1,5 @@
 ---
-title: C2161 błąd kompilatora | Dokumentacja firmy Microsoft
+title: Błąd kompilatora C2161 | Dokumentacja firmy Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,23 +16,24 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 62ea3ec8d0d4ac4cb47f61d23473b1faabc3a894
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: ac32776c954974f0f2f81789c6e78de894786b73
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33168207"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46051827"
 ---
-# <a name="compiler-error-c2161"></a>C2161 błąd kompilatora
-"##" nie może występować na końcu definicji makra  
-  
- Definicji makra zakończone z operator wklejania tokenu (##).  
-  
- Poniższy przykład generuje C2161:  
-  
-```  
-// C2161.cpp  
-// compile with: /c  
-#define mac(a,b) a   // OK  
-#define mac(a,b) a##   // C2161  
+# <a name="compiler-error-c2161"></a>Błąd kompilatora C2161
+
+' ##' nie może wystąpić na końcu definicji makra
+
+Definicja — makro zakończone z operator wklejania tokenu (##).
+
+Poniższy przykład spowoduje wygenerowanie C2161:
+
+```
+// C2161.cpp
+// compile with: /c
+#define mac(a,b) a   // OK
+#define mac(a,b) a##   // C2161
 ```

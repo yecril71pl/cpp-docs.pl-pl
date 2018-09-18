@@ -1,5 +1,5 @@
 ---
-title: C3007 błąd kompilatora | Dokumentacja firmy Microsoft
+title: Błąd kompilatora C3007 | Dokumentacja firmy Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,25 +16,26 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d1424683db17247c6e31d0d26bce31f420353968
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 70e580da61c3314978a071233a576049de2d83b2
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33262393"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46054704"
 ---
-# <a name="compiler-error-c3007"></a>C3007 błąd kompilatora
-"argument": klauzula w dyrektywie OpenMP "dyrektywy" nie przyjmuje argumentu  
-  
- OpenMP — dyrektywa były argumentu, ale dyrektywy nie przyjmuje argumentu.  
-  
- Poniższy przykład generuje C3007:  
-  
-```  
-// C3007.c  
-// compile with: /openmp  
-int main()  
-{  
-   #pragma omp parallel for ordered(2)   // C3007  
-}  
+# <a name="compiler-error-c3007"></a>Błąd kompilatora C3007
+
+"argument": klauzula w dyrektywie OpenMP "dyrektywa" nie przyjmuje argumentu
+
+OpenMP — dyrektywa miał argumentu, ale dyrektywa nie przyjmuje argumentu.
+
+Poniższy przykład spowoduje wygenerowanie C3007:
+
+```
+// C3007.c
+// compile with: /openmp
+int main()
+{
+   #pragma omp parallel for ordered(2)   // C3007
+}
 ```

@@ -18,14 +18,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: e6570e82c7cd50c03530b085ee9497fbc974fd58
-ms.sourcegitcommit: 889a75be1232817150be1e0e8d4d7f48f5993af2
+ms.openlocfilehash: 8643b8150f08191fa041107fa4a88e3cbcf2964a
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/30/2018
-ms.locfileid: "39338745"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46042263"
 ---
 # <a name="using-bookmarks"></a>Korzystanie z zakładek
+
 Zanim utworzysz zestaw wierszy, musisz poinformować dostawcę chcesz używać zakładek. Aby to zrobić, należy ustawić `DBPROP_BOOKMARKS` właściwości **true** we właściwości Twojego zestawu. Dostawca pobiera zakładek jako kolumny wartości zero, więc należy użyć makro specjalne BOOKMARK_ENTRY i `CBookmark` klasy, jeśli używane są statyczne metody dostępu. `CBookmark` jest klasą szablonu, gdy argument jest długość w bajtach buforu zakładki. Długość buforu wymaganych do zakładki, zależy od dostawcy. Jeśli używasz dostawcy ODBC OLE DB, jak pokazano w poniższym przykładzie, rozmiar buforu musi być 4 bajty.  
   
 ```cpp  
@@ -48,7 +49,7 @@ CTable<CAccessor<CProducts>> product;
 product.Open(session, "Products", &propset);  
 ```  
   
- Jeśli używasz `CDynamicAccessor`, rozmiar buforu jest przydzielany dynamicznie w czasie wykonywania. W takim przypadku można użyć wersji specjalistycznej metody `CBookmark` dla której nie zostanie określona długość buforu. Użyj funkcji `GetBookmark` można pobrać z bieżącego rekordu zakładki, jak pokazano w tym przykładowym kodzie:  
+Jeśli używasz `CDynamicAccessor`, rozmiar buforu jest przydzielany dynamicznie w czasie wykonywania. W takim przypadku można użyć wersji specjalistycznej metody `CBookmark` dla której nie zostanie określona długość buforu. Użyj funkcji `GetBookmark` można pobrać z bieżącego rekordu zakładki, jak pokazano w tym przykładowym kodzie:  
   
 ```cpp  
 CTable<CDynamicAccessor> product;  
@@ -65,7 +66,8 @@ product.MoveNext();
 product.GetBookmark(&bookmark);  
 ```  
   
- Aby dowiedzieć się, jak obsługa zakładek w dostawcy, zobacz [Obsługa dostawców dla zakładek](../../data/oledb/provider-support-for-bookmarks.md).  
+Aby dowiedzieć się, jak obsługa zakładek w dostawcy, zobacz [Obsługa dostawców dla zakładek](../../data/oledb/provider-support-for-bookmarks.md).  
   
 ## <a name="see-also"></a>Zobacz też  
- [Korzystanie z metod dostępu](../../data/oledb/using-accessors.md)
+
+[Korzystanie z metod dostępu](../../data/oledb/using-accessors.md)

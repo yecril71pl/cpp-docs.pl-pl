@@ -1,5 +1,5 @@
 ---
-title: C2219 błąd kompilatora | Dokumentacja firmy Microsoft
+title: Błąd kompilatora C2219 | Dokumentacja firmy Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,14 +16,15 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9993cd89501ba6d25786b58edb73161a9151024f
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 0433a9c0fd8cb81dffdf5122ff5c5116d272bc67
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33166276"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46048022"
 ---
-# <a name="compiler-error-c2219"></a>C2219 błąd kompilatora
-Błąd składni: po musi występować kwalifikator typu "*"  
-  
- Kwalifikator typu (`const` lub `volatile`) jest wyświetlany, gdy nie jest dozwolone.
+# <a name="compiler-error-c2219"></a>Błąd kompilatora C2219
+
+Błąd składniowy: po musi występować kwalifikator typu "*"
+
+Kwalifikator typu (`const` lub `volatile`) jest wyświetlana, gdy nie jest dozwolone.

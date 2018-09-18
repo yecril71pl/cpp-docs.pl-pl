@@ -16,14 +16,15 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 97e390fe35acd469cabba254f429a042e8c6feaa
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 0d32dc8cd42d9e038e8cf71bb0a323e2727b2a3c
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33198745"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46048191"
 ---
 # <a name="fatal-error-c1313"></a>Błąd krytyczny C1313
-ograniczenie kompilatora: bloki typu nie mogą być zagnieżdżone głębiej niż liczba poziomów  
-  
- Wyjątek Obsługa (lub obsługa wyjątków strukturalnych) bloki są zagnieżdżone zbyt głęboko.  Uprościć kod.
+
+ograniczenie kompilatora: bloki typu nie mogą być zagnieżdżone głębiej niż liczba poziomów
+
+Wyjątek obsługi (lub obsługa wyjątków strukturalnych) bloki są zagnieżdżone zbyt głęboko.  Uprość kod.

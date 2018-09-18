@@ -23,12 +23,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 96e165fcd4d38c9d263b48ee2c559394770a52a1
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: f65df09ffba45f61b967080e4bfd61ec3d2f912a
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43765723"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46052790"
 ---
 # <a name="iquickactivateimpl-class"></a>Klasa IQuickActivateImpl
 
@@ -40,13 +40,13 @@ Ta klasa łączy inicjowania kontroli kontenery w jednym wywołaniu.
 ## <a name="syntax"></a>Składnia
 
 ```
-template <class T>  
+template <class T>
 class ATL_NO_VTABLE IQuickActivateImpl : public IQuickActivate
 ```
 
 #### <a name="parameters"></a>Parametry
 
-*T*  
+*T*<br/>
 Z klasą pochodną `IQuickActivateImpl`.
 
 ## <a name="members"></a>Elementy członkowskie
@@ -121,5 +121,5 @@ Zobacz [IQuickActivate::SetContentExtent](/windows/desktop/api/ocidl/nf-ocidl-iq
 
 ## <a name="see-also"></a>Zobacz też
 
-[Klasa CComControl](../../atl/reference/ccomcontrol-class.md)   
+[Klasa CComControl](../../atl/reference/ccomcontrol-class.md)<br/>
 [Klasa — Przegląd](../../atl/atl-class-overview.md)

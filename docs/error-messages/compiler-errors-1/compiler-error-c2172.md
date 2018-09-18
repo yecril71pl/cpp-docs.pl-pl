@@ -1,5 +1,5 @@
 ---
-title: C2172 błąd kompilatora | Dokumentacja firmy Microsoft
+title: Błąd kompilatora C2172 | Dokumentacja firmy Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,14 +16,15 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 21dbef0cccd2cbd5221854972ca030e601695e3f
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: d71acb91503900733ea805225670ce9e979e6d84
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33166744"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46060099"
 ---
-# <a name="compiler-error-c2172"></a>C2172 błąd kompilatora
-"Funkcja": rzeczywisty parametr nie jest wskaźnikiem: liczba parametrów  
-  
- Parametr `number` nie jest wskaźnikiem. Funkcja oczekuje wskaźnika.
+# <a name="compiler-error-c2172"></a>Błąd kompilatora C2172
+
+'Funkcja': rzeczywisty parametr nie jest wskaźnikiem: liczba parametrów
+
+Parametr `number` nie jest wskaźnikiem. Funkcja oczekuje wskaźnika.

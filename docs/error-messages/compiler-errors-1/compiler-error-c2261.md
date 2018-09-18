@@ -1,5 +1,5 @@
 ---
-title: Błąd C2261 kompilatora | Dokumentacja firmy Microsoft
+title: Błąd kompilatora C2261 | Dokumentacja firmy Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,30 +16,32 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 45050daf3149cd813fb23b5814be5fe49c375f03
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 2ed43dc43fb6ceaf514a8e7452b06eb7bdaf7362
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33170469"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46051649"
 ---
-# <a name="compiler-error-c2261"></a>Błąd C2261 kompilatora
-"string": odwołanie do zestawu jest nieprawidłowa i nie można go rozpoznać  
-  
- Wartość jest nieprawidłowa.  
-  
- <xref:System.Runtime.CompilerServices.InternalsVisibleToAttribute> Służy do określania przyjaznego zestawu. Na przykład, jeśli a.dll chce określić b.dll jako przyjaznego zestawu, należy określić (w a.dll): InternalsVisibleTo("b"). Środowisko uruchomieniowe umożliwia następnie b.dll na dostęp do wszystkich elementów w a.dll (z wyjątkiem typów prywatnych).  
-  
- Aby uzyskać więcej informacji o poprawnej składni podczas określania przyjazne zestawy zobacz [przyjazne zestawy (C++)](../../dotnet/friend-assemblies-cpp.md).  
-  
-## <a name="example"></a>Przykład  
- Poniższy przykład generuje C2261.  
-  
-```  
-// C2261.cpp  
-// compile with: /clr /c  
-using namespace System::Runtime::CompilerServices;  
-[assembly: InternalsVisibleTo("a,a,a")];   // C2261  
-[assembly: InternalsVisibleTo("a.a")];   // OK  
-[assembly: InternalsVisibleTo("a")];   // OK  
+# <a name="compiler-error-c2261"></a>Błąd kompilatora C2261
+
+"string": odwołanie do zestawu jest nieprawidłowa i nie można go rozpoznać
+
+Wartość jest nieprawidłowa.
+
+<xref:System.Runtime.CompilerServices.InternalsVisibleToAttribute> Służy do określania zestawu przyjaciela. Na przykład, jeśli a.dll chce określić b.dll jako zestaw przyjazny, należy określić (w a.dll): InternalsVisibleTo("b"). Środowisko uruchomieniowe pozwala następnie b.dll dostęp do wszystkiego w a.dll (z wyjątkiem typów prywatnych).
+
+Aby uzyskać więcej informacji o poprawnej składni podczas określania przyjaznych zestawów, zobacz [przyjazne zestawy (C++)](../../dotnet/friend-assemblies-cpp.md).
+
+## <a name="example"></a>Przykład
+
+Poniższy przykład spowoduje wygenerowanie C2261.
+
+```
+// C2261.cpp
+// compile with: /clr /c
+using namespace System::Runtime::CompilerServices;
+[assembly: InternalsVisibleTo("a,a,a")];   // C2261
+[assembly: InternalsVisibleTo("a.a")];   // OK
+[assembly: InternalsVisibleTo("a")];   // OK
 ```

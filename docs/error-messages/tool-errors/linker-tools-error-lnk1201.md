@@ -16,26 +16,27 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5ad83fecfe4df211cb7c5f301626454b5d2c9e47
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 4c133748f95846160e1387e31e023d9ce459b281
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33298772"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46055276"
 ---
 # <a name="linker-tools-error-lnk1201"></a>Błąd narzędzi konsolidatora LNK1201
-Błąd podczas zapisywania do bazy danych programu "filename"; Sprawdź, czy brakuje miejsca na dysku, nieprawidłowa ścieżka lub niewystarczające uprawnienia  
-  
- ŁĄCZE nie można zapisać do bazy danych programu (PDB) dla pliku wyjściowego.  
-  
-### <a name="to-fix-by-checking-the-following-possible-causes"></a>Aby rozwiązać problem, sprawdzając następujące możliwe przyczyny  
-  
-1.  Plik jest uszkodzony. Usuń plik PDB i połącz ponownie.  
-  
-2.  Nie ma wystarczającej ilości miejsca na dysku do zapisania pliku.  
-  
-3.  Dysk nie jest dostępny, prawdopodobnie z powodu problem z siecią.  
-  
-4.  Debuger jest aktywna na program, który próbujesz się połączyć.  
-  
-5.  Za mało miejsca na stercie.  Zobacz [C1060](../../error-messages/compiler-errors-1/fatal-error-c1060.md) Aby uzyskać więcej informacji.
+
+Wystąpił błąd podczas zapisywania do bazy danych programu 'NazwaPliku'; Sprawdź, czy brak miejsca na dysku, nieprawidłowa ścieżka lub niewystarczające uprawnienia
+
+ŁĄCZE nie można zapisać w bazie danych programu (PDB) dla pliku wyjściowego.
+
+### <a name="to-fix-by-checking-the-following-possible-causes"></a>Aby rozwiązać problem, sprawdzając następujące możliwe przyczyny
+
+1. Plik jest uszkodzony. Usuń plik PDB i połącz ponownie.
+
+1. Nie ma wystarczającej ilości miejsca na dysku do zapisania pliku.
+
+1. Dysk nie jest dostępna, prawdopodobnie z powodu problemu sieciowego.
+
+1. Debuger jest aktywny w programie, w którym próbujesz się połączyć.
+
+1. Brak miejsca na stosie.  Zobacz [C1060](../../error-messages/compiler-errors-1/fatal-error-c1060.md) Aby uzyskać więcej informacji.

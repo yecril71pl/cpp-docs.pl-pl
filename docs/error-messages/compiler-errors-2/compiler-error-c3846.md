@@ -1,5 +1,5 @@
 ---
-title: C3846 błąd kompilatora | Dokumentacja firmy Microsoft
+title: Błąd kompilatora C3846 | Dokumentacja firmy Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,38 +16,40 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 97d5650d1743ba379ce065d4051bfed807a1df71
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 7f8b44661534dca1beb39c0407f882d41f1f503c
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33268029"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46055133"
 ---
-# <a name="compiler-error-c3846"></a>C3846 błąd kompilatora
-"symbol": nie można zaimportować symbolu z "assembly2": ponieważ "symbol" został już zaimportowany z innego zestawu "zestaw1"  
-  
- Nie można zaimportować symbolu z przywoływanego zestawu, ponieważ nie zostały wcześniej zaimportowane z przywoływanego zestawu.  
-  
+# <a name="compiler-error-c3846"></a>Błąd kompilatora C3846
+
+'symbol': nie można zaimportować symbolu z "assembly2": ponieważ "symbol" został już zaimportowany z innego zestawu "assembly1"
+
+Nie można zaimportować symbolu z przywoływanego zestawu, ponieważ nie zostały wcześniej zaimportowane z przywoływanego zestawu.
+
 ## <a name="example"></a>Przykład
-Poniższy przykład generuje C3846:  
-  
-```  
-// C3846a.cpp  
-// compile with: /LD /clr  
-public ref struct G  
-{  
-};  
-```  
-  
- A następnie skompilować to:  
-  
-```  
-// C3846b.cpp  
-// compile with: /clr  
-#using "c3846a.dll"  
-#using "c3846a.obj"   // C3846  
-  
-int main()  
-{  
-}  
-```  
+
+Poniższy przykład spowoduje wygenerowanie C3846:
+
+```
+// C3846a.cpp
+// compile with: /LD /clr
+public ref struct G
+{
+};
+```
+
+A następnie skompilować to:
+
+```
+// C3846b.cpp
+// compile with: /clr
+#using "c3846a.dll"
+#using "c3846a.obj"   // C3846
+
+int main()
+{
+}
+```

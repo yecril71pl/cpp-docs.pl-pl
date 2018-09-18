@@ -18,15 +18,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7b9956299370b4a41ce725cf903ff2aefe55bf53
-ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
+ms.openlocfilehash: ed871ee2148b6b731ab9354cd45c2e178b4d85a8
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "33336739"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46056082"
 ---
 # <a name="ltreturnsgt-visual-c"></a>&lt;Zwraca&gt; (Visual C++)
-\<Zwraca > tag powinny być używane w komentarz dla deklaracji metody do opisywania wartości zwracanej.  
+\<Zwraca > używany tag w komentarzu do deklaracji metody do opisywania wartości zwracanej.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -35,11 +35,11 @@ ms.locfileid: "33336739"
 ```  
   
 #### <a name="parameters"></a>Parametry  
- `description`  
- Opis wartości zwracanej.  
+*Opis elementu*<br/>
+Opis wartość zwracaną.  
   
 ## <a name="remarks"></a>Uwagi  
- Kompiluj z użyciem [/doc](../build/reference/doc-process-documentation-comments-c-cpp.md) na przetwarzanie komentarzy dokumentacji do pliku.  
+ Kompiluj przy użyciu [/doc](../build/reference/doc-process-documentation-comments-c-cpp.md) do Przetwarzaj komentarze dokumentacji do pliku.  
   
 ## <a name="example"></a>Przykład  
   

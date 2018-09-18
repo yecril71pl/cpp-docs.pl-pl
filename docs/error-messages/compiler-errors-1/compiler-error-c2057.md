@@ -1,5 +1,5 @@
 ---
-title: C2057 błąd kompilatora | Dokumentacja firmy Microsoft
+title: Błąd kompilatora C2057 | Dokumentacja firmy Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,42 +16,45 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4a48598fba0e27aa875ec5ec2a97aaa4ef9d5326
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: fb9018224d10fa0104ee461e8bbeb659173fc9f0
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33168233"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46051733"
 ---
-# <a name="compiler-error-c2057"></a>C2057 błąd kompilatora
-Oczekiwano wyrażenia stałego  
-  
- Kontekst wymaga wyrażenie stałe wyrażenie, którego wartość jest znany w czasie kompilacji.  
-  
- Kompilator musi znać rozmiar typu w czasie kompilacji, aby przydzielić miejsce dla wystąpienia tego typu.  
-  
-## <a name="example"></a>Przykład  
- Poniższy przykład generuje C2057 i pokazuje, jak rozwiązywanie problemu:  
-  
-```  
-// C2057.cpp  
-int i;  
-int b[i];   // C2057 - value of i is unknown at compile time  
-int main() {  
-   const int i = 8;  
-   int b[i]; // OK - value of i is fixed and known to compiler  
-}  
-```  
-  
-## <a name="example"></a>Przykład  
- C o bardziej restrykcyjne zasady wyrażenia stałe.  Poniższy przykład generuje C2057 i pokazuje, jak rozwiązywanie problemu:  
-  
-```  
-// C2057b.c  
-#define ArraySize1 10  
-int main() {   
-   const int ArraySize2 = 10;   
-   int h[ArraySize2];   // C2057 - C does not allow variables here  
-   int h[ArraySize1];   // OK - uses preprocessor constant  
-}  
+# <a name="compiler-error-c2057"></a>Błąd kompilatora C2057
+
+Oczekiwano stałego wyrażenia
+
+Kontekst wymaga wyrażeniem stałym wyrażeniem, którego wartość jest znany w czasie kompilacji.
+
+Kompilator musi znać rozmiar typu w czasie kompilacji, aby można było przydzielić miejsca w przypadku wystąpienia tego typu.
+
+## <a name="example"></a>Przykład
+
+Poniższy przykład generuje C2057 i pokazuje, jak go naprawić:
+
+```
+// C2057.cpp
+int i;
+int b[i];   // C2057 - value of i is unknown at compile time
+int main() {
+   const int i = 8;
+   int b[i]; // OK - value of i is fixed and known to compiler
+}
+```
+
+## <a name="example"></a>Przykład
+
+C ma bardziej restrykcyjne zasady wyrażeń stałych.  Poniższy przykład generuje C2057 i pokazuje, jak go naprawić:
+
+```
+// C2057b.c
+#define ArraySize1 10
+int main() {
+   const int ArraySize2 = 10;
+   int h[ArraySize2];   // C2057 - C does not allow variables here
+   int h[ArraySize1];   // OK - uses preprocessor constant
+}
 ```

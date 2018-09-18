@@ -16,16 +16,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a73acafab54c5448eaa9fbf0887a9e124311a654
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: e00759ae0d987a04d60fd5f32ca0a7d18f3832c4
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33317014"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46053846"
 ---
 # <a name="resource-compiler-error-rc2017"></a>Błąd kompilatora zasobów RC2017
-Niedozwolony — sekwencja specjalna  
-  
- Sekwencja specjalna pojawił się, gdy nie oczekiwano jednej.  
-  
- Sekwencja specjalna — ukośnik odwrotny ( **\\** ) następują litery lub numer — może występować tylko w znak lub ciąg stałej.
+
+Niedozwolona sekwencja ucieczki
+
+Sekwencja unikowa były wyświetlane, której nie oczekiwano jednej.
+
+Sekwencja unikowa — ukośnik odwrotny ( **\\** ) następuje cyfrę lub literę — może występować tylko w przypadku znak lub ciąg stałej.

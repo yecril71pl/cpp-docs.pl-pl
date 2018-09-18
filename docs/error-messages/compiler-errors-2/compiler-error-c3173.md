@@ -1,5 +1,5 @@
 ---
-title: C3173 błąd kompilatora | Dokumentacja firmy Microsoft
+title: Błąd kompilatora C3173 | Dokumentacja firmy Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,16 +16,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ef35c534ac834779da15fce99e8c82b94bd445e4
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 21a02ae1fcf4aff9636445979a81ef0a02ab5cb1
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33248078"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46053027"
 ---
-# <a name="compiler-error-c3173"></a>C3173 błąd kompilatora
-Niezgodność wersji w scaleniu idl  
-  
- Ten błąd występuje, gdy plik obiektu zawiera osadzonych idl, który został wygenerowany z poprzedniej wersji kompilatora. Kompilator koduje numeru wersji w celu zapewnienia tej samej kompilator służący do generowania zawartości pliku idl jest osadzony w plikach .obj również kompilator tego samego użyta do scalenia osadzonych idl.  
-  
- Zaktualizuj instalację programu Visual C++, aby wszystkie narzędzia są z najnowszej wersji.
+# <a name="compiler-error-c3173"></a>Błąd kompilatora C3173
+
+Niezgodność wersji w scaleniu idl
+
+Ten błąd występuje, gdy plik obiektu zawiera osadzone idl, który został wygenerowany za pomocą poprzedniej wersji kompilatora. Kompilator koduje numeru wersji w celu zapewnienia tego samego kompilatora, które są używane do generowania zawartości pliku idl, osadzonego w pliki .obj również tego samego kompilatora służącą do scalania osadzone idl.
+
+Aktualizacji instalacji Visual C++, tak aby wszystkie narzędzia są z najnowszą wersję oficjalną.

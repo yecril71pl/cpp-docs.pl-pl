@@ -26,12 +26,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: fd3e6809a8204b9a2380e896e4e458512e79fa2b
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 5603327e7bdc32d9b760fc25160543c682e6f4f4
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43766665"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46054509"
 ---
 # <a name="csimplearray-class"></a>Klasa CSimpleArray
 
@@ -40,16 +40,16 @@ Ta klasa dostarcza metody do zarządzania macierzą proste.
 ## <a name="syntax"></a>Składnia
 
 ```
-template <class T, class TEqual = CSimpleArrayEqualHelper<T>>  
+template <class T, class TEqual = CSimpleArrayEqualHelper<T>>
 class CSimpleArray
 ```
 
 #### <a name="parameters"></a>Parametry
 
-*T*  
+*T*<br/>
 Typ danych do przechowywania w tablicy.
 
-*TEqual*  
+*TEqual*<br/>
 Obiekt cech, definiujący testu równości dla elementów typu *T*.
 
 ## <a name="members"></a>Elementy członkowskie
@@ -107,7 +107,7 @@ BOOL Add(const T& t);
 
 ### <a name="parameters"></a>Parametry
 
-*t*  
+*t*<br/>
 Element do dodania do tablicy.
 
 ### <a name="return-value"></a>Wartość zwracana
@@ -123,13 +123,13 @@ Zwraca wartość TRUE, jeśli element został pomyślnie dodany do tablicy, a wa
 Konstruktor obiektu array.
 
 ```
-CSimpleArray(const CSimpleArray<T, TEqual>& src);  
+CSimpleArray(const CSimpleArray<T, TEqual>& src);
 CSimpleArray();
 ```
 
 ### <a name="parameters"></a>Parametry
 
-*src*  
+*src*<br/>
 Istniejące `CSimpleArray` obiektu.
 
 ### <a name="remarks"></a>Uwagi
@@ -158,7 +158,7 @@ int Find(const T& t) const;
 
 ### <a name="parameters"></a>Parametry
 
-*t*  
+*t*<br/>
 Element do wyszukania.
 
 ### <a name="return-value"></a>Wartość zwracana
@@ -203,7 +203,7 @@ T& operator[](int nindex);
 
 ### <a name="parameters"></a>Parametry
 
-*nIndex*  
+*nIndex*<br/>
 Indeks elementu.
 
 ### <a name="return-value"></a>Wartość zwracana
@@ -226,7 +226,7 @@ CSimpleArray<T, TEqual>
 
 ### <a name="parameters"></a>Parametry
 
-*src*  
+*src*<br/>
 Tablica do skopiowania.
 
 ### <a name="return-value"></a>Wartość zwracana
@@ -251,7 +251,7 @@ BOOL Remove(const T& t);
 
 ### <a name="parameters"></a>Parametry
 
-*t*  
+*t*<br/>
 Element do usunięcia z tablicy.
 
 ### <a name="return-value"></a>Wartość zwracana
@@ -284,7 +284,7 @@ BOOL RemoveAtint nIndex);
 
 ### <a name="parameters"></a>Parametry
 
-*nIndex*  
+*nIndex*<br/>
 Indeks wskazujący element do usunięcia.
 
 ### <a name="return-value"></a>Wartość zwracana
@@ -307,10 +307,10 @@ BOOL SetAtIndex(
 
 ### <a name="parameters"></a>Parametry
 
-*nIndex*  
+*nIndex*<br/>
 Indeks elementu do zmiany.
 
-*t*  
+*t*<br/>
 Wartość do przypisania do określonego elementu.
 
 ### <a name="return-value"></a>Wartość zwracana

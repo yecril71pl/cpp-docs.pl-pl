@@ -21,12 +21,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 88c816fecf71b94d25ac676f8169eeb26a2982fc
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: e667f943d2630d78880d49f18015bdac95e571ac
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43760220"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46026520"
 ---
 # <a name="cfirepropnotifyevent-class"></a>Klasa CFirePropNotifyEvent
 
@@ -72,10 +72,10 @@ static HRESULT FireOnChanged(IUnknown* pUnk, DISPID dispID);
 
 ### <a name="parameters"></a>Parametry
 
-*pUnk*  
+*pUnk*<br/>
 [in] Wskaźnik do `IUnknown` obiektu wysyłania powiadomienia.
 
-*dispID*  
+*dispID*<br/>
 [in] Identyfikator właściwości, które uległy zmianie.
 
 ### <a name="return-value"></a>Wartość zwracana
@@ -96,10 +96,10 @@ static HRESULT FireOnRequestEdit(IUnknown* pUnk, DISPID dispID);
 
 ### <a name="parameters"></a>Parametry
 
-*pUnk*  
+*pUnk*<br/>
 [in] Wskaźnik do `IUnknown` obiektu wysyłania powiadomienia.
 
-*dispID*  
+*dispID*<br/>
 [in] Identyfikator właściwości, które chcesz zmienić.
 
 ### <a name="return-value"></a>Wartość zwracana

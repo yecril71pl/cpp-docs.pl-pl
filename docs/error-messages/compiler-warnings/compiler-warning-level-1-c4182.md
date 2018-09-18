@@ -1,5 +1,5 @@
 ---
-title: Kompilatora (poziom 1) ostrzeżenie C4182 | Dokumentacja firmy Microsoft
+title: Kompilator ostrzeżenie (poziom 1) C4182 | Dokumentacja firmy Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,16 +16,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 79e86076a9d8218d08bd7437e2a06878b6ee91ff
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 80c0cdac45238a4734b02d34f4c540c62a2f0c09
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33278184"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46056576"
 ---
-# <a name="compiler-warning-level-1-c4182"></a>Kompilator C4182 ostrzegawcze (poziom 1)
-\#obejmują poziom zagnieżdżenia jest "number" głąb; możliwa nieskończona rekursja  
-  
- Kompilator zabrakło miejsca na stercie ze względu na liczbę zagnieżdżonych pliki dołączane. Dołączanego pliku jest zagnieżdżony, gdy zostało ono dołączone z innego pliku include.  
-  
- Ten komunikat ma charakter informacyjny i poprzedza błąd [C1076](../../error-messages/compiler-errors-1/fatal-error-c1076.md).
+# <a name="compiler-warning-level-1-c4182"></a>Kompilator ostrzeżenie (poziom 1) C4182
+
+\#obejmują poziom zagnieżdżenia to "number" głąb; możliwa nieskończona rekursja
+
+Kompilator zabrakło miejsca na stosie ze względu na liczbę zagnieżdżone pliki dołączane. Pliku dołączanego jest zagnieżdżony, gdy zostało ono dołączone z innego pliku dołączonego.
+
+Ta wiadomość ma charakter informacyjny i poprzedza błąd [C1076](../../error-messages/compiler-errors-1/fatal-error-c1076.md).

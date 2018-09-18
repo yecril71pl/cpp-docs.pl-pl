@@ -1,5 +1,5 @@
 ---
-title: C3196 błąd kompilatora | Dokumentacja firmy Microsoft
+title: Błąd kompilatora C3196 | Dokumentacja firmy Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,23 +16,24 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: fdf2ccd44828993c0241a0b609da55c8eea6ca18
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 256c76bf66906ef43afdc3574b819bd7cf5df1cb
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33246183"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46045913"
 ---
-# <a name="compiler-error-c3196"></a>C3196 błąd kompilatora
-"— słowo kluczowe": użyty więcej niż raz  
-  
- Słowo kluczowe użyto więcej niż raz.  
-  
- Poniższy przykład generuje C3196:  
-  
-```  
-// C3196.cpp  
-// compile with: /clr  
-ref struct R abstract abstract {};   // C3196  
-ref struct S abstract {};   // OK  
+# <a name="compiler-error-c3196"></a>Błąd kompilatora C3196
+
+"— słowo kluczowe": użyto więcej niż raz
+
+Słowo kluczowe użyto więcej niż jeden raz.
+
+Poniższy przykład spowoduje wygenerowanie C3196:
+
+```
+// C3196.cpp
+// compile with: /clr
+ref struct R abstract abstract {};   // C3196
+ref struct S abstract {};   // OK
 ```

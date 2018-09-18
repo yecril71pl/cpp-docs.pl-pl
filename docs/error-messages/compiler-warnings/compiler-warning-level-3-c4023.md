@@ -1,5 +1,5 @@
 ---
-title: Kompilatora (poziom 3) ostrzeżenie C4023 | Dokumentacja firmy Microsoft
+title: Kompilator ostrzeżenie (poziom 3) C4023 | Dokumentacja firmy Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,16 +16,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 213d72e39575b447787c3e0ead7910baedc8e815
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: fe457f9a6181fa11b34dd615ad4d5b9637c8bddc
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33290000"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46045175"
 ---
-# <a name="compiler-warning-level-3-c4023"></a>Kompilator C4023 ostrzegawcze (poziom 3)
-"symbol": wskaźnik bazowy przekazany do funkcji bez prototypu: liczba parametrów  
-  
- Przekazywanie oparte na wskaźnik do funkcji bez prototypu powoduje, że wskaźnik będą normalizowane może mieć nieprzewidywalne skutki.  
-  
- Jeśli używasz prototypu funkcji, które są przekazywane wskaźniki typu based można ustalić to ostrzeżenie.
+# <a name="compiler-warning-level-3-c4023"></a>Kompilator ostrzeżenie (poziom 3) C4023
+
+'symbol': wskaźnik bazowy przekazany do funkcji bez prototypu: liczba parametrów
+
+Przekazywanie oparte wskaźnikiem do funkcji bez prototypu powoduje, że wskaźnik będą normalizowane z nieprzewidywalne rezultaty.
+
+To ostrzeżenie, mogą zostać rozwiązane, jeśli używasz prototypu funkcji, które są przekazywane na podstawie wskaźników.

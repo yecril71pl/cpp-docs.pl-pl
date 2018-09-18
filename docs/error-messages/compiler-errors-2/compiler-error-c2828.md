@@ -1,5 +1,5 @@
 ---
-title: C2828 błąd kompilatora | Dokumentacja firmy Microsoft
+title: Błąd kompilatora C2828 | Dokumentacja firmy Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,20 +16,21 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f4735452f32ee1946119b1b055ed3d9eb08024d0
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 65d9c36946459372924adc23caa5a44c40568f33
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33242630"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46051935"
 ---
-# <a name="compiler-error-c2828"></a>C2828 błąd kompilatora
-"operator operator" nie może być przesłaniany globalnie przez binarny formularz  
-  
- Operator nie może mieć formy binarnej poza obiekt.  
-  
-### <a name="to-fix-by-using-the-following-possible-solutions"></a>Aby rozwiązać problem przy użyciu następujących możliwych rozwiązań  
-  
-1.  Przeciążony operator należy lokalnego do obiektu.  
-  
-2.  Wybierz operator jednoargumentowy odpowiednie do przeciążenia.
+# <a name="compiler-error-c2828"></a>Błąd kompilatora C2828
+
+"operator operator" nie może być przesłaniany globalnie formy binarnej
+
+Operator nie może mieć formy binarnej poza obiekt.
+
+### <a name="to-fix-by-using-the-following-possible-solutions"></a>Aby rozwiązać problem, korzystając z poniższymi możliwymi rozwiązaniami
+
+1. Przeciążony operator należy lokalnego do obiektu.
+
+1. Wybierz operator jednoargumentowy odpowiednie do przeciążenia.

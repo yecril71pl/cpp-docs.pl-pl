@@ -17,17 +17,19 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 309e6c017587a2dd3cdc80cd55ffec82751dedd3
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 9704b499106fc59364f5cc9ae97277939e835a77
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32380943"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46025325"
 ---
 # <a name="blocks"></a>Bloki
-Sekwencja deklaracji, definicje i instrukcje ujętą w nawiasy klamrowe nawiasy klamrowe (**{}**) jest nazywany "block". Istnieją dwa typy bloków w C. "Instrukcja złożona," instrukcję składa się z jednego lub więcej instrukcji (zobacz [złożonej instrukcji](../c-language/compound-statement-c.md)), jest jeden typ bloku. Pozostałych "definicji funkcji", składa się z złożonej instrukcji (treści funkcji) oraz powiązanych funkcji "header" (nazwa funkcji, zwracany typ i parametrów formalnych). Blok w ramach innych bloków jest uznawany za "zagnieżdżony."  
-  
- Należy pamiętać, że podczas wszystkie instrukcje złożone są ujęte w nawiasy klamrowe, nie wszystkie elementy ujętą w nawiasy klamrowe nawiasy klamrowe stanowi złożonej instrukcji. Na przykład specyfikacje elementów tablicy, struktury lub wyliczenia może pojawiać się w obrębie nawiasów klamrowych, nie są one instrukcje złożone.  
-  
-## <a name="see-also"></a>Zobacz też  
- [Pliki źródłowe i programy źródłowe](../c-language/source-files-and-source-programs.md)
+
+Sekwencja deklaracje, definicje i instrukcji ujętych w nawiasy klamrowe (**{}**) nosi nazwę "zablokowanie". Istnieją dwa typy bloków w C. "Instrukcja złożona," oświadczenia składa się z jednego lub więcej instrukcji (zobacz [instrukcji złożonej](../c-language/compound-statement-c.md)), jest jednym z typów bloku. Druga, "Definicja funkcji", składa się z instrukcji złożonej (treści funkcji), a także funkcja skojarzonej "header" (nazwa funkcji, zwracany typ i parametry formalne). Blok, w ramach innych bloków jest nazywany jest "nested."
+
+Należy pamiętać, że gdy wszystkie instrukcje złożone są ujęte w nawiasy klamrowe, nie wszystkie czynności, ujęte w nawiasy klamrowe stanowi instrukcję złożonego. Na przykład specyfikacje elementów tablicy, struktury lub wyliczenie może znajdować się w obrębie nawiasów klamrowych, nie są one instrukcje złożone.
+
+## <a name="see-also"></a>Zobacz też
+
+[Pliki źródłowe i programy źródłowe](../c-language/source-files-and-source-programs.md)

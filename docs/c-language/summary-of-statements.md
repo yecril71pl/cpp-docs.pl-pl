@@ -12,12 +12,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 18fdc129bd2aadd45ebaa13510e6029dba9a07df
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: e83d4db17dd20a46ed2cbdd91598428e14748cf0
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43766860"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46030316"
 ---
 # <a name="summary-of-statements"></a>Podsumowanie dotyczące instrukcji
 
@@ -49,28 +49,29 @@ ms.locfileid: "43766860"
 &nbsp;&nbsp;&nbsp;&nbsp;*Lista instrukcji* *— instrukcja*
 
 *Instrukcja wyrażeń*:<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*wyrażenie*<sub>zoptymalizowany pod kątem</sub> **;**  
-  
+&nbsp;&nbsp;&nbsp;&nbsp;*wyrażenie*<sub>zoptymalizowany pod kątem</sub> **;**
+
 *instrukcji iteracji*:<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**gdy (***wyrażenie***)***— instrukcja* <br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**czy***instrukcji***podczas (***wyrażenie***);** <br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**Aby uzyskać (***wyrażenie*<sub>zoptymalizowany pod kątem</sub> **;** *wyrażenie*<sub>zoptymalizowany pod kątem</sub> **;** *wyrażenie*<sub>zoptymalizowany pod kątem</sub> **)** *— instrukcja* 
+&nbsp;&nbsp;&nbsp;&nbsp;**gdy (***wyrażenie***)***— instrukcja*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**czy***instrukcji***podczas (***wyrażenie***);**<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**Aby uzyskać (***wyrażenie*<sub>zoptymalizowany pod kątem</sub> **;** *wyrażenie*<sub>zoptymalizowany pod kątem</sub> **;** *wyrażenie*<sub>zoptymalizowany pod kątem</sub> **)** *— instrukcja*
 
 *Wybór instrukcji*:<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**Jeśli (***wyrażenie***)***— instrukcja* <br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**Jeśli (***wyrażenie***)***instrukcji***else***— instrukcja* <br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**Przełącz (***wyrażenie***)***— instrukcja* 
+&nbsp;&nbsp;&nbsp;&nbsp;**Jeśli (***wyrażenie***)***— instrukcja*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**Jeśli (***wyrażenie***)***instrukcji***else***— instrukcja*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**Przełącz (***wyrażenie***)***— instrukcja*
 
 *etykietą instrukcji*:<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*Identyfikator***:***— instrukcja*<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**przypadek***wyrażenie_stałe***:***— instrukcja* <br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**domyślne:***— instrukcja* 
+&nbsp;&nbsp;&nbsp;&nbsp;**przypadek***wyrażenie_stałe***:***— instrukcja*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**domyślne:***— instrukcja*
 
 *instrukcji z wyjątkiem try*: /\* Specific firmy Microsoft \*/<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**__try***compound-statement* **__except (***wyrażenie***)***compound-statement*   
-  
+&nbsp;&nbsp;&nbsp;&nbsp;**__try***compound-statement* **__except (***wyrażenie***)***compound-statement* 
+
 *Spróbuj na koniec instrukcji*: /\* Specific firmy Microsoft \*/<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;**__try***compound-statement* **__finally***compound-statement* 
 
-## <a name="see-also"></a>Zobacz też  
+## <a name="see-also"></a>Zobacz też
+
 [Gramatyka struktury fazy](../c-language/phrase-structure-grammar.md)

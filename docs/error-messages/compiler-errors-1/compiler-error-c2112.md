@@ -1,5 +1,5 @@
 ---
-title: C2112 błąd kompilatora | Dokumentacja firmy Microsoft
+title: Błąd kompilatora C2112 | Dokumentacja firmy Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,14 +16,15 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0f050a4b9e8b188c5c44534972e9c94d89020351
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: c9bbb2a2cc65ae5b9216344e5d2e1a6cc3e13b93
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33164648"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46018560"
 ---
-# <a name="compiler-error-c2112"></a>C2112 błąd kompilatora
-"-": wskaźnik odejmowania wymaga wartości całkowitej lub wskaźnika operandu  
-  
- Nastąpiła próba do odjęcia wskaźników, które wskazują różnych typów.
+# <a name="compiler-error-c2112"></a>Błąd kompilatora C2112
+
+"-": wskaźnik odejmowania wymaga wartości całkowitej lub wskaźnika operandu
+
+Nastąpiła próba na potrzeby odejmowania wskaźników, które wskazują na różnych typów.

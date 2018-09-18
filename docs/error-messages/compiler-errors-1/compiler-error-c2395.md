@@ -1,5 +1,5 @@
 ---
-title: C2395 błąd kompilatora | Dokumentacja firmy Microsoft
+title: Błąd kompilatora C2395 | Dokumentacja firmy Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,29 +16,30 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 411a8d62de801591ff6a90a7bf74f3b2cfe67c7a
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 99d9a1be42a36baac2037e4289cb24db2f45b563
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33225433"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46050544"
 ---
-# <a name="compiler-error-c2395"></a>C2395 błąd kompilatora
-"your_type::operator'op": operator CLR lub WinRT nie jest prawidłowy. Co najmniej jeden parametr musi mieć następujące typy: 'T ", 'T %", t & ", t ^", 'T ^ % ", 'T ^ &", gdzie T = "your_type"  
-  
- Operator środowiska wykonawczego systemu Windows lub typ zarządzany nie ma co najmniej jeden parametr, którego typ jest taki sam jak typ zwracanej wartości operatora.  
-  
- Poniższy przykład generuje C2395 i pokazuje, jak rozwiązywanie problemu:  
-  
-```  
-// C2395.cpp  
-// compile with: /clr /c  
-value struct V {  
-   static V operator *(int i, char c);   // C2395  
-  
-   // OK  
-   static V operator *(V v, char c);  
-   // or  
-   static V operator *(int i, V& rv);  
-};  
+# <a name="compiler-error-c2395"></a>Błąd kompilatora C2395
+
+"your_type::operator'op": operator CLR lub WinRT nie jest prawidłowy. Co najmniej jeden parametr musi być następujących typów: t ", t %", t & ", t ^', t ^ %", t ^ & ", gdzie T ="your_type"
+
+Operator w Windows Runtime lub typ zarządzany nie miał co najmniej jeden parametr, którego typ jest taki sam jak typ wartości zwracanej operatora.
+
+Poniższy przykład generuje C2395 i pokazuje, jak go naprawić:
+
+```
+// C2395.cpp
+// compile with: /clr /c
+value struct V {
+   static V operator *(int i, char c);   // C2395
+
+   // OK
+   static V operator *(V v, char c);
+   // or
+   static V operator *(int i, V& rv);
+};
 ```

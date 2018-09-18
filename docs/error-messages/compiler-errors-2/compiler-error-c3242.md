@@ -1,5 +1,5 @@
 ---
-title: C3242 błąd kompilatora | Dokumentacja firmy Microsoft
+title: Błąd kompilatora C3242 | Dokumentacja firmy Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,14 +16,15 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: cb9c30ef9a2662a705b7fa9d3620f1d6d89edea8
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 8a426ffa92337b227a9f79c8d30f2890b639a056
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33247142"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46026429"
 ---
-# <a name="compiler-error-c3242"></a>C3242 błąd kompilatora
-"Funkcja": tylko jawnie można przesłonić funkcje wirtualne  
-  
- Próbowano jawnie Niewirtualna metoda musi zostać zastąpiona.
+# <a name="compiler-error-c3242"></a>Błąd kompilatora C3242
+
+'Funkcja': tylko jawnie można przesłonić funkcje wirtualne
+
+Próbowano jawnie niewirtualne metoda musi zostać zastąpiona.

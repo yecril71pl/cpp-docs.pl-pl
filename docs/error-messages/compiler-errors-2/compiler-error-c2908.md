@@ -1,5 +1,5 @@
 ---
-title: C2908 błąd kompilatora | Dokumentacja firmy Microsoft
+title: Błąd kompilatora C2908 | Dokumentacja firmy Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,29 +16,30 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5d84f7fbda450b0830125a30898480ea94455332
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 913a01a21c75933688c55bbb79c3621124601745
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33241373"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46053118"
 ---
-# <a name="compiler-error-c2908"></a>C2908 błąd kompilatora
-jawna specjalizacja; Utworzono już wystąpienie "template"  
-  
- Specjalizacja szablonu podstawowego występuje przed jawna specjalizacja.  
-  
- Poniższy przykład generuje C2908:  
-  
-```  
-// C2908.cpp  
-// compile with: /c  
-template<class T> class X {};  
-  
-void f() {  
-X<int> x;   //specialization and instantiation  
-            //of X<int>  
-}  
-  
-template<> class X<int> {}  // C2908, explicit specialization  
+# <a name="compiler-error-c2908"></a>Błąd kompilatora C2908
+
+jawna specjalizacja; Utworzono już wystąpienie "template"
+
+Specjalizacja szablonu podstawowego jest wcześniejsza niż jawnej specjalizacji.
+
+Poniższy przykład spowoduje wygenerowanie C2908:
+
+```
+// C2908.cpp
+// compile with: /c
+template<class T> class X {};
+
+void f() {
+X<int> x;   //specialization and instantiation
+            //of X<int>
+}
+
+template<> class X<int> {}  // C2908, explicit specialization
 ```

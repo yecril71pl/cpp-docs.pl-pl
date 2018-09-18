@@ -16,20 +16,21 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4b5ea18ff3f2714d9621d4372cf541be2f9b225a
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: b34f2f19a0bb8770ea9292fef120c415c0fb255a
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33230525"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46060535"
 ---
 # <a name="fatal-error-c1081"></a>Błąd krytyczny C1081
-"symbol": Nazwa pliku jest za długa  
-  
- Długość nazwy ścieżki pliku przekracza `_MAX_PATH` (zdefiniowany przez STDLIB.h jako 260 znaków). Skróć nazwę pliku.  
-  
- CL.exe można wywołać z krótką nazwą pliku, kompilator może być konieczne do wygenerowania pełną nazwę ścieżki. Na przykład `cl -c myfile.cpp` może spowodować kompilatorowi Generowanie:  
-  
-```  
-D:\<very-long-directory-path>\myfile.cpp  
+
+'symbol': Nazwa pliku jest za długa
+
+Długość nazwy ścieżki pliku przekracza `_MAX_PATH` (zdefiniowanej przez STDLIB.h jako 260 znaków). Skróć nazwę pliku.
+
+Wywołanie CL.exe z krótkiej nazwy pliku, kompilator może trzeba będzie wygenerować pełną nazwę ścieżki. Na przykład `cl -c myfile.cpp` może spowodować, że kompilator do wygenerowania:
+
+```
+D:\<very-long-directory-path>\myfile.cpp
 ```

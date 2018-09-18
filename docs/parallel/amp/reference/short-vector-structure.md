@@ -1,5 +1,5 @@
 ---
-title: short_vector — struktura | Dokumentacja firmy Microsoft
+title: short_vector, struktura | Dokumentacja firmy Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,15 +16,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a79280196da13a73f8495ea79e8c9551763262be
-ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
+ms.openlocfilehash: 651a0e17def0a171eb881ec852f56e1d4cbf2c3b
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33705292"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46045370"
 ---
 # <a name="shortvector-structure"></a>short_vector — Struktura
-short_vector — zapewnia metaprogramowania definicje, które są przydatne w przypadku objęty programowania wektory krótki.  
+short_vector — zapewnia metaprogramowanie definicje, które są przydatne w przypadku programowania objęty krótkimi wektorami.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -85,12 +85,14 @@ struct short_vector<double, 4>;
 ```  
   
 #### <a name="parameters"></a>Parametry  
- `_Scalar_type`  
- `_Size`  
+
+*_Scalar_type*<br/>
+
+*_Rozmiar*<br/>
   
 ## <a name="members"></a>Elementy członkowskie  
   
-### <a name="public-typedefs"></a>Definicje typów publicznych  
+### <a name="public-typedefs"></a>Publiczne definicje typów  
   
 |Nazwa|Opis|  
 |----------|-----------------|  

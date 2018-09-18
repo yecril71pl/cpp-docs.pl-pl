@@ -16,19 +16,20 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4dfeca48aa04ebfbc097649e5c25253166c50dad
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: e1624a89b472733b4adb5563c8ba52e0b03dcaa2
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33325854"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46048620"
 ---
 # <a name="math-error-m6108"></a>Błąd matematyczny M6108
-pierwiastek kwadratowy  
-  
- Argument operacji pierwiastek kwadratowy była ujemna.  
-  
- Program kończy się z kodem zakończenia 136.  
-  
+
+Pierwiastek kwadratowy
+
+Argument operacji pierwiastek kwadratowy była ujemna.
+
+Program kończy się z kodem zakończenia 136.
+
 > [!NOTE]
->  `sqrt` Funkcja biblioteki wykonawczej języka C i Wewnętrzna funkcja FORTRAN **SQRT** nie generują ten błąd. C `sqrt` funkcja sprawdza argument przed wykonaniem tej operacji i zwraca wartość błędu, jeśli argument jest ujemna. FORTRAN **SQRT** funkcja generuje błąd domeny [M6201](../../error-messages/tool-errors/math-error-m6201.md) zamiast tego błędu.
+>  `sqrt` Funkcji biblioteki wykonawczej C i Wewnętrzna funkcja FORTRAN **SQRT** nie generują tego błędu. C `sqrt` funkcja sprawdza, czy argument przed wykonaniem tej operacji i zwraca wartość błędu, jeśli argument jest ujemna. FORTRAN **SQRT** funkcja generuje błąd domeny [M6201](../../error-messages/tool-errors/math-error-m6201.md) zamiast tego błędu.

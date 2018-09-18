@@ -1,5 +1,5 @@
 ---
-title: C3040 błąd kompilatora | Dokumentacja firmy Microsoft
+title: Błąd kompilatora C3040 | Dokumentacja firmy Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,31 +16,32 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5f895626ac04afc776c279f5e2bf7a857ffbd432
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 419178a7ff71817c418aa791ae1f6cce116cd986
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33246238"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46057696"
 ---
-# <a name="compiler-error-c3040"></a>C3040 błąd kompilatora
-"var": typ zmiennej w klauzuli "reduction" jest niezgodny z operatorem redukcji "operator"  
-  
- Zmienna w [redukcji](../../parallel/openmp/reference/reduction.md) klauzuli nie można używać z operatorem redukcji.  
-  
- Poniższy przykład generuje C3040:  
-  
-```  
-// C3040.cpp  
-// compile with: /openmp /c  
-#include "omp.h"  
-double d;  
-  
-int main() {  
-   #pragma omp parallel reduction(&:d)   // C3040  
-      ;  
-  
-   #pragma omp parallel reduction(-:d)  // OK  
-      ;  
-}  
+# <a name="compiler-error-c3040"></a>Błąd kompilatora C3040
+
+"var": typ zmiennej w klauzuli "reduction" jest niezgodny z operatorem redukcji "operator"
+
+Zmienna w [redukcji](../../parallel/openmp/reference/reduction.md) nie można używać klauzuli z operatorem redukcji.
+
+Poniższy przykład spowoduje wygenerowanie C3040:
+
+```
+// C3040.cpp
+// compile with: /openmp /c
+#include "omp.h"
+double d;
+
+int main() {
+   #pragma omp parallel reduction(&:d)   // C3040
+      ;
+
+   #pragma omp parallel reduction(-:d)  // OK
+      ;
+}
 ```

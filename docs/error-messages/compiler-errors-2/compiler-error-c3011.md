@@ -1,5 +1,5 @@
 ---
-title: C3011 błąd kompilatora | Dokumentacja firmy Microsoft
+title: Błąd kompilatora C3011 | Dokumentacja firmy Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,30 +16,31 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: bb78e658c0f56798fa0c23201889809d6c68d184
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 3f25e3f9479b2555badbd079c3e2d939e91acbba
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33241915"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46024414"
 ---
-# <a name="compiler-error-c3011"></a>C3011 błąd kompilatora
-wbudowany zestaw nie jest dozwolone bezpośrednio w ramach równoległego regionu  
-  
- `omp` Równoległego regionu nie może zawierać instrukcji zestawu wbudowanego.  
-  
- Poniższy przykład generuje C3011:  
-  
-```  
-// C3011.cpp  
-// compile with: /openmp  
-// processor: /x86  
-int main() {  
-   int   n = 0;  
-  
-   #pragma omp parallel  
-   {  
-      _asm mov eax, n   // Delete this line to resolve this error.  
-   }   // C3011  
-}  
+# <a name="compiler-error-c3011"></a>Błąd kompilatora C3011
+
+wbudowany zestaw nie jest dozwolona bezpośrednio w ramach równoległego regionu
+
+`omp` Równoległego regionu nie może zawierać instrukcje zestawu wbudowanego.
+
+Poniższy przykład spowoduje wygenerowanie C3011:
+
+```
+// C3011.cpp
+// compile with: /openmp
+// processor: /x86
+int main() {
+   int   n = 0;
+
+   #pragma omp parallel
+   {
+      _asm mov eax, n   // Delete this line to resolve this error.
+   }   // C3011
+}
 ```

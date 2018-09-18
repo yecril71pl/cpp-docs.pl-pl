@@ -18,67 +18,70 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: eca85baea71052525d70c90ac521ef5fa95a5118
-ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
+ms.openlocfilehash: a48e731e714f59a249e5fa689e046e94faf360e6
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/01/2018
-ms.locfileid: "39408651"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46040222"
 ---
 # <a name="parsing-c-command-line-arguments"></a>Analizowanie argumentów wiersza polecenia języka C++
-**Microsoft Specific**  
-  
- Kod startowy w Microsoft C/C++ używa następujących reguł interpretując argumenty podane w wierszu polecenia systemu operacyjnego:  
-  
--   Argumenty są rozdzielone biały znak, który jest spacja lub tabulator.  
-  
--   Znak daszka (^) nie została rozpoznana jako znak ucieczki lub ogranicznik. Znak odbywa się całkowicie przez parser wiersza polecenia w systemie operacyjnym przed przesłaniem do `argv` tablicy w programie.  
-  
--   W ciąg ujęty w znaki podwójnego cudzysłowu ("*ciąg*") jest interpretowany jako jeden argument, niezależnie od tego, biały znak zawarty w. Ciąg w cudzysłowach można osadzać w argumencie.  
-  
--   Podwójny cudzysłów poprzedzone znakiem ukośnika odwrotnego (\\") jest interpretowany jako znak literału podwójny cudzysłów (").  
-  
--   Ukośników odwrotnych jest interpretowany dosłownie, chyba że bezpośrednio poprzedzać znak podwójnego cudzysłowu.  
-  
--   Jeśli parzysta liczba ukośników odwrotnych następuje podwójny cudzysłów, jednej kreski ułamkowej odwróconej jest umieszczana w `argv` tablicy dla każdej pary ukośników odwrotnych i podwójnego cudzysłowu jest interpretowany jako ogranicznik ciągu.  
-  
--   Jeśli nieparzysta liczba ukośników odwrotnych następuje podwójny cudzysłów, jednej kreski ułamkowej odwróconej jest umieszczana w `argv` tablicy dla każdej pary ukośników odwrotnych i podwójnego cudzysłowu jest "poprzedzone znakiem zmiany znaczenia" przez pozostałe ukośnik odwrotny powoduje literał podwójny cudzysłów (" ) mają być umieszczone w `argv`.  
-  
-## <a name="example"></a>Przykład  
- Następujący program pokazuje jak wiersza polecenia argumenty są przekazywane:  
-  
-```cpp 
-// command_line_arguments.cpp  
-// compile with: /EHsc  
-#include <iostream>  
-  
-using namespace std;  
-int main( int argc,      // Number of strings in array argv  
-          char *argv[],   // Array of command-line argument strings  
-          char *envp[] )  // Array of environment variable strings  
-{  
-    int count;  
-  
-    // Display each command-line argument.  
-    cout << "\nCommand-line arguments:\n";  
-    for( count = 0; count < argc; count++ )  
-         cout << "  argv[" << count << "]   "  
-                << argv[count] << "\n";  
-}  
-```  
-  
- W poniższej tabeli przedstawiono przykładowe dane wejściowe i oczekiwanych danych wyjściowych, demonstrując reguły na powyższej liście.  
-  
-### <a name="results-of-parsing-command-lines"></a>Wyniki analizy wiersze poleceń  
-  
-|Dane wejściowe wiersza polecenia|ARGV [1]|ARGV [2]|ARGV [3]|  
-|-------------------------|---------------|---------------|---------------|  
-|`"abc" d e`|`abc`|`d`|`e`|  
-|`a\\b d"e f"g h`|`a\\b`|`de fg`|`h`|  
-|`a\\\"b c d`|`a\"b`|`c`|`d`|  
-|`a\\\\"b c" d e`|`a\\b c`|`d`|`e`|  
-  
-**END specyficzny dla Microsoft**  
-  
-## <a name="see-also"></a>Zobacz także  
- [main: uruchamianie programu](../cpp/main-program-startup.md)
+
+**Microsoft Specific**
+
+Kod startowy w Microsoft C/C++ używa następujących reguł interpretując argumenty podane w wierszu polecenia systemu operacyjnego:
+
+- Argumenty są rozdzielone biały znak, który jest spacja lub tabulator.
+
+- Znak daszka (^) nie została rozpoznana jako znak ucieczki lub ogranicznik. Znak odbywa się całkowicie przez parser wiersza polecenia w systemie operacyjnym przed przesłaniem do `argv` tablicy w programie.
+
+- W ciąg ujęty w znaki podwójnego cudzysłowu ("*ciąg*") jest interpretowany jako jeden argument, niezależnie od tego, biały znak zawarty w. Ciąg w cudzysłowach można osadzać w argumencie.
+
+- Podwójny cudzysłów poprzedzone znakiem ukośnika odwrotnego (\\") jest interpretowany jako znak literału podwójny cudzysłów (").
+
+- Ukośników odwrotnych jest interpretowany dosłownie, chyba że bezpośrednio poprzedzać znak podwójnego cudzysłowu.
+
+- Jeśli parzysta liczba ukośników odwrotnych następuje podwójny cudzysłów, jednej kreski ułamkowej odwróconej jest umieszczana w `argv` tablicy dla każdej pary ukośników odwrotnych i podwójnego cudzysłowu jest interpretowany jako ogranicznik ciągu.
+
+- Jeśli nieparzysta liczba ukośników odwrotnych następuje podwójny cudzysłów, jednej kreski ułamkowej odwróconej jest umieszczana w `argv` tablicy dla każdej pary ukośników odwrotnych i podwójnego cudzysłowu jest "poprzedzone znakiem zmiany znaczenia" przez pozostałe ukośnik odwrotny powoduje literał podwójny cudzysłów (" ) mają być umieszczone w `argv`.
+
+## <a name="example"></a>Przykład
+
+Następujący program pokazuje jak wiersza polecenia argumenty są przekazywane:
+
+```cpp
+// command_line_arguments.cpp
+// compile with: /EHsc
+#include <iostream>
+
+using namespace std;
+int main( int argc,      // Number of strings in array argv
+          char *argv[],   // Array of command-line argument strings
+          char *envp[] )  // Array of environment variable strings
+{
+    int count;
+
+    // Display each command-line argument.
+    cout << "\nCommand-line arguments:\n";
+    for( count = 0; count < argc; count++ )
+         cout << "  argv[" << count << "]   "
+                << argv[count] << "\n";
+}
+```
+
+W poniższej tabeli przedstawiono przykładowe dane wejściowe i oczekiwanych danych wyjściowych, demonstrując reguły na powyższej liście.
+
+### <a name="results-of-parsing-command-lines"></a>Wyniki analizy wiersze poleceń
+
+|Dane wejściowe wiersza polecenia|ARGV [1]|ARGV [2]|ARGV [3]|
+|-------------------------|---------------|---------------|---------------|
+|`"abc" d e`|`abc`|`d`|`e`|
+|`a\\b d"e f"g h`|`a\\b`|`de fg`|`h`|
+|`a\\\"b c d`|`a\"b`|`c`|`d`|
+|`a\\\\"b c" d e`|`a\\b c`|`d`|`e`|
+
+**END specyficzny dla Microsoft**
+
+## <a name="see-also"></a>Zobacz także
+
+[main: uruchamianie programu](../cpp/main-program-startup.md)

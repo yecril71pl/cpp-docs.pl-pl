@@ -1,5 +1,5 @@
 ---
-title: C3366 błąd kompilatora | Dokumentacja firmy Microsoft
+title: Błąd kompilatora C3366 | Dokumentacja firmy Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,29 +16,30 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c26bfbb5d66ad22484184bd361f14004ed8aa30c
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: b3638ba2415839c044d9a82d82d0abe8bc2c98e2
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33254277"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46026507"
 ---
-# <a name="compiler-error-c3366"></a>C3366 błąd kompilatora
-"Zmienna": statyczne elementy członkowskie danych zarządzane lub WinRTtypes musi być zdefiniowana w ramach definicji klasy  
-  
- Próbowano odwołać statyczny element członkowski klasy WinRT lub .NET lub interfejs poza definicją klasy lub interfejsu.  
-  
- Kompilator wymaga znajomości pełnej definicji klasy (aby emitować meta dane po jednym przebiegu) oraz statyczne elementy członkowskie danych do zainicjowania należące do klasy.  
-  
- Na przykład poniższy przykład generuje C3366 i pokazuje, jak rozwiązywanie problemu:  
-  
-```  
-// C3366.cpp  
-// compile with: /clr /c  
-ref class X {  
-   public:  
-   static int i;   // initialize i here to avoid C3366  
-};  
-  
-int X::i = 5;      // C3366  
-```  
+# <a name="compiler-error-c3366"></a>Błąd kompilatora C3366
+
+'Zmienna': statyczne składowe danych zarządzane lub WinRTtypes musi być zdefiniowany w ramach definicji klasy
+
+Podjęto próbę odwołania statycznego elementu członkowskiego klasy WinRT lub .NET lub interfejs poza definicją klasy lub interfejsu.
+
+Kompilator musi wiedzieć, pełna definicja klasy (aby emitować metadane — po jednym przebiegu) i wymaga elementów członkowskich danych statycznych do zainicjowania w klasie.
+
+Na przykład poniższy przykład generuje C3366 i pokazuje, jak go naprawić:
+
+```
+// C3366.cpp
+// compile with: /clr /c
+ref class X {
+   public:
+   static int i;   // initialize i here to avoid C3366
+};
+
+int X::i = 5;      // C3366
+```

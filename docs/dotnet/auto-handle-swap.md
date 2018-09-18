@@ -20,12 +20,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: 87a0a59197a7ebe22c5419e992f681787cd3ea7a
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 059f56485dee9668105c7e44fdee6fb910844810
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33103921"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46018031"
 ---
 # <a name="autohandleswap"></a>auto_handle::swap
 Zamienia obiekty z innym `auto_handle`.  
@@ -39,8 +39,8 @@ void swap(
 ```  
   
 #### <a name="parameters"></a>Parametry  
- `_right`  
- `auto_handle` Umożliwiające wymiany obiektów.  
+*z _prawej*<br/>
+`auto_handle` Za pomocą którego można zamienić obiektów.  
   
 ## <a name="example"></a>Przykład  
   
@@ -70,10 +70,10 @@ s1 = 'string two', s2 = 'string one'
 ```  
   
 ## <a name="requirements"></a>Wymagania  
- **Plik nagłówka** \<msclr\auto_handle.h >  
+ **Plik nagłówkowy** \<msclr\auto_handle.h >  
   
  **Namespace** msclr  
   
 ## <a name="see-also"></a>Zobacz też  
- [auto_handle — członkowie](../dotnet/auto-handle-members.md)   
+ [auto_handle, składowe](../dotnet/auto-handle-members.md)   
  [Funkcja swap (auto_handle)](../dotnet/swap-function-auto-handle.md)

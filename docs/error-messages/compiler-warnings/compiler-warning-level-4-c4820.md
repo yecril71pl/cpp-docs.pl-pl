@@ -1,5 +1,5 @@
 ---
-title: Kompilatora (poziom 4) ostrzeżenie C4820 | Dokumentacja firmy Microsoft
+title: Kompilator ostrzeżenie (poziom 4) C4820 | Dokumentacja firmy Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,37 +16,38 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ea99ca177a90281ca02e44265f603045b72845f5
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: c27466912956988a2396b8e3c52fc41ed2caa604
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33294222"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46016342"
 ---
-# <a name="compiler-warning-level-4-c4820"></a>Kompilator C4820 ostrzegawcze (poziom 4)
-'bajty' dopełnienie bajtami dodane po konstrukcji 'member_name'  
-  
- Typ i kolejność elementów spowodował kompilator, aby dodać dopełnienie koniec struktury. Zobacz [Dopasuj](../../cpp/align-cpp.md) uzyskać więcej informacji o dopełnienie struktury.  
-  
- To ostrzeżenie jest domyślnie wyłączone. Zobacz [kompilatora ostrzeżeń czy są wyłączone domyślnie](../../preprocessor/compiler-warnings-that-are-off-by-default.md) Aby uzyskać więcej informacji.  
-  
- Poniższy przykład generuje C4820:  
-  
-```  
-// C4820.cpp  
-// compile with: /W4 /c  
-#pragma warning(default : 4820)   
-  
-// Delete the following 4 lines to resolve.  
-__declspec(align(2)) struct MyStruct {  
-   char a;  
-   int i;   // C4820  
-};  
-  
-// OK  
-#pragma pack(1)  
-__declspec(align(1)) struct MyStruct2 {  
-   char a;  
-   int i;  
-};  
+# <a name="compiler-warning-level-4-c4820"></a>Kompilator ostrzeżenie (poziom 4) C4820
+
+'bajty' dopełnienie bajtami dodane po konstrukcji 'member_name'
+
+Typ i kolejność elementów spowodowane kompilator, aby dodać dopełnienie koniec struktury. Zobacz [wyrównać](../../cpp/align-cpp.md) więcej informacji na temat dopełnienie w strukturze.
+
+To ostrzeżenie jest domyślnie wyłączona. Zobacz [kompilatora ostrzeżenia, są wyłączone domyślnie](../../preprocessor/compiler-warnings-that-are-off-by-default.md) Aby uzyskać więcej informacji.
+
+Poniższy przykład spowoduje wygenerowanie C4820:
+
+```
+// C4820.cpp
+// compile with: /W4 /c
+#pragma warning(default : 4820)
+
+// Delete the following 4 lines to resolve.
+__declspec(align(2)) struct MyStruct {
+   char a;
+   int i;   // C4820
+};
+
+// OK
+#pragma pack(1)
+__declspec(align(1)) struct MyStruct2 {
+   char a;
+   int i;
+};
 ```

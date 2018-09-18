@@ -16,18 +16,20 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: cc360d0bc3c1266dc6de2b8ff2a33e1e60944989
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: b5eae8b471a631ed6191b9d93e72b8e5f5c240e2
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33299929"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46040846"
 ---
 # <a name="command-line-warning-d9040"></a>Ostrzeżenie D9040 dla wiersza polecenia
-Ignorowanie opcji "/ analyze"; Ostrzeżenia analizy kodu nie są dostępne w tej wersji kompilator  
-  
- **/ Analyze** opcji wiersza polecenia nie jest dostępna we wszystkich wersjach programu Visual Studio. Aby rozwiązać to ostrzeżenie, przełącz się do obsługiwanej wersji programu Visual Studio lub Usuń opcję wiersza polecenia.  
-  
-## <a name="see-also"></a>Zobacz też  
- [Błędy wiersza polecenia od D8000 do D9999](../../error-messages/tool-errors/command-line-errors-d8000-through-d9999.md)   
- [Opcje kompilatora](../../build/reference/compiler-options.md)
+
+Ignorowanie opcji "/ analyze"; Ostrzeżenia analizy kodu nie są dostępne w tej wersji kompilatora
+
+**/ Analyze** opcja wiersza polecenia nie jest dostępna we wszystkich wersjach programu Visual Studio. Aby rozwiązać problem to ostrzeżenie, przełącz się do obsługiwanej wersji programu Visual Studio lub Usuń opcję wiersza polecenia.
+
+## <a name="see-also"></a>Zobacz też
+
+[Błędy wiersza polecenia od D8000 do D9999](../../error-messages/tool-errors/command-line-errors-d8000-through-d9999.md)<br/>
+[Opcje kompilatora](../../build/reference/compiler-options.md)

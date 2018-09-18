@@ -1,5 +1,5 @@
 ---
-title: C2174 błąd kompilatora | Dokumentacja firmy Microsoft
+title: Błąd kompilatora C2174 | Dokumentacja firmy Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,14 +16,15 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b4d11c4234bd4e1343198658b1dfcada556b0e1f
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: a8a7dc9cee6bf24f4605455818a32bd757bcd60c
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33171952"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46052377"
 ---
-# <a name="compiler-error-c2174"></a>C2174 błąd kompilatora
-"Funkcja": rzeczywisty parametr jest typu "void": parametr liczba1, liczba2 listy parametrów  
-  
- Parametr `number1` przekazany do listy parametrów `number2` jest `void` parametru. Parametry nie mogą mieć typu `void`. Zamiast nich należy używać słów kluczowych `void*`.
+# <a name="compiler-error-c2174"></a>Błąd kompilatora C2174
+
+'Funkcja': rzeczywisty parametr jest typu "void": parametr liczba1, liczba2 listy parametrów
+
+Parametr `number1` przekazywane do listy parametrów `number2` jest `void` parametru. Parametry nie może mieć typu `void`. Zamiast nich należy używać słów kluczowych `void*`.

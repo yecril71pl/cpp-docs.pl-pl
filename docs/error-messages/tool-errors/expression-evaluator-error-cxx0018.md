@@ -1,5 +1,5 @@
 ---
-title: Błąd cxx0018 programu Expression Evaluator | Dokumentacja firmy Microsoft
+title: Błąd ewaluatora wyrażeń CXX0018 | Dokumentacja firmy Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,34 +17,35 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7fbc4f2a4df7233b13579cb1dd4f9fa9679eb4e6
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 2d5bd4808d1e03252e5b3df4cee2955bb6a456d5
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33298701"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46051103"
 ---
 # <a name="expression-evaluator-error-cxx0018"></a>Błąd CXX0018 programu Expression Evaluator
-Nazwa rejestru zły  
-  
- Określony rejestru nie istnieje lub nie można wyświetlić.  
-  
- Okno czujki można wyświetlać rejestrów następujące:  
-  
- AX SP DS IP  
-  
- BX BP ES FL  
-  
- CX SI SS GS  
-  
- DX PODPISANE CS SS  
-  
- ELEMENT EIP DS ESP EAX  
-  
- ELEMENT EBX EBP ES EFL  
-  
- ECX ESI FS  
-  
- EDX EDI CS  
-  
- Ten błąd jest taki sam jak CAN0018.
+
+Nazwa rejestru niewłaściwe
+
+Do określonego rejestru nie istnieje lub nie można wyświetlić.
+
+W oknie czujki można wyświetlić następujących rejestrów:
+
+AX SP DS IP
+
+BX NAJLEPSZYCH PRAKTYK W ZAKRESIE ES FL
+
+CX SI SS GS
+
+DX DI CS SS
+
+EAX ESP DS EIP
+
+EBX EBP ES EFL
+
+ECX ESI FS
+
+EDX EDI CS
+
+Ten błąd jest taka sama jak CAN0018.

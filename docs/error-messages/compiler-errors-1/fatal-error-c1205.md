@@ -16,16 +16,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: fcb1e32843c7c8c47589d4b75fd2613a1d73f135
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: e70be77c224b8c1c6039a908d38e8e482ab36259
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33230088"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46035568"
 ---
 # <a name="fatal-error-c1205"></a>Błąd krytyczny C1205
-Typy ogólne nie są obsługiwane przez wersję środowiska uruchomieniowego zainstalowany  
-  
- Wersja środowiska CLR używanej przez kompilator nie jest wersją środowiska uruchomieniowego obsługiwane przez bieżący kompilatora.  Na przykład funkcja ogólne wymaga środowiska uruchomieniowego, dopasowany do kompilatora.  
-  
- Twoje specyfikacji ścieżka może być konieczne można modyfikować.
+
+Typy ogólne nie są obsługiwane przez wersję zainstalowanego środowiska uruchomieniowego
+
+Wersja środowiska CLR używanej przez kompilator nie jest wersją obsługiwane przez kompilator bieżącego środowiska uruchomieniowego.  Na przykład funkcji ogólne wymaga środowiska uruchomieniowego, które są dopasowane do kompilatora.
+
+Twoje specyfikacji ścieżki, może być konieczne można modyfikować.

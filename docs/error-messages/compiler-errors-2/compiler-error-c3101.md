@@ -1,5 +1,5 @@
 ---
-title: C3101 błąd kompilatora | Dokumentacja firmy Microsoft
+title: Błąd kompilatora C3101 | Dokumentacja firmy Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,33 +16,35 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d8e10d3b22e7120789b9e1b6bb48fca097fcfddb
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 69f881206528d83dc298fd262dd54c1dd84a7308
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33247459"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46049842"
 ---
-# <a name="compiler-error-c3101"></a>C3101 błąd kompilatora
-Niedozwolone wyrażenie argumentu nazwanego atrybutu "field"  
-  
- Podczas inicjowania nazwany argument atrybutu, wartość musi być stałą czasu kompilacji.  
-  
- Aby uzyskać więcej informacji dotyczących atrybutów, zobacz [zdefiniowane przez użytkownika atrybuty](../../windows/user-defined-attributes-cpp-component-extensions.md).  
-  
-## <a name="example"></a>Przykład  
- Poniższy przykład generuje C3101.  
-  
-```  
-// C3101.cpp  
-// compile with: /clr /c  
-ref class AAttribute : System::Attribute {  
-public:  
-   int Field;  
-};  
-  
-extern int i;  
-  
-[assembly:A(Field = i)];   // C3101  
-[assembly:A(Field = 0)];   // OK  
+# <a name="compiler-error-c3101"></a>Błąd kompilatora C3101
+
+Niedozwolone wyrażenie argumentu atrybutu nazwanego "field"
+
+Podczas inicjowania nazwany argument atrybutu, wartość musi być stałą czasu kompilacji.
+
+Aby uzyskać więcej informacji na temat atrybutów, zobacz [atrybuty zdefiniowane przez użytkownika](../../windows/user-defined-attributes-cpp-component-extensions.md).
+
+## <a name="example"></a>Przykład
+
+Poniższy przykład spowoduje wygenerowanie C3101.
+
+```
+// C3101.cpp
+// compile with: /clr /c
+ref class AAttribute : System::Attribute {
+public:
+   int Field;
+};
+
+extern int i;
+
+[assembly:A(Field = i)];   // C3101
+[assembly:A(Field = 0)];   // OK
 ```

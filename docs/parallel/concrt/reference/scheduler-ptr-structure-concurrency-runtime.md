@@ -18,12 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 99c2ed2f8446b94d606c907f4d030c417e21fc01
-ms.sourcegitcommit: e9ce38decc9f986edab5543de3464b11ebccb123
+ms.openlocfilehash: dd15238408f90f268a5fea96635136077c795779
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/13/2018
-ms.locfileid: "42464832"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46059111"
 ---
 # <a name="schedulerptr-structure"></a>scheduler_ptr, struktura
 Reprezentuje wskaźnik do harmonogramu. Ta klasa istnieje, aby zezwolić na specyfikację wspólnego okresu istnienia przy użyciu wskaźnika shared_ptr lub zwykłe odwołanie za pomocą wskaźnika raw.  
@@ -97,8 +97,11 @@ jawne scheduler_ptr (_In_opt_ pScheduler scheduler_interface *);
 ```  
   
 ### Parameters  
- `scheduler`  
- `pScheduler`  
+*scheduler*<br/>
+The scheduler to convert.
+
+*pScheduler*<br/>
+The scheduler pointer to convert.
   
 ## See Also  
  [concurrency Namespace](concurrency-namespace.md)

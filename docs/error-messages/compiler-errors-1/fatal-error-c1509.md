@@ -16,22 +16,23 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: fec83f6b6138eacc613e560b9da4557079d6677d
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 837ab5b7cf76b724726c6c52fbfe974d4da6ca85
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33198797"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46033137"
 ---
 # <a name="fatal-error-c1509"></a>Błąd krytyczny C1509
-ograniczenie kompilatora: zbyt wiele stanów obsługi wyjątków w funkcji "function". Uprość funkcję  
-  
- Kod przekracza limit wewnętrzny stanów obsługi wyjątków (Zjednoczone 32 768).  
-  
- Najczęstszą przyczyną jest, że funkcja zawiera wyrażenie złożone zmienne klasy użytkownika oraz operatorów arytmetycznych.  
-  
-### <a name="to-fix-by-using-the-following-possible-solutions"></a>Aby rozwiązać problem przy użyciu następujących możliwych rozwiązań  
-  
-1.  Przypisywanie typowych użyto do zmiennych tymczasowych uprościć wyrażenia.  
-  
-2.  Podziel funkcji na mniejsze funkcji.
+
+ograniczenie kompilatora: zbyt wiele stanów obsługi wyjątków w funkcji "function". Uprość funkcję
+
+Kod przekracza limit wewnętrzny stanów obsługi wyjątków (32 768 stany).
+
+Najczęstszą przyczyną jest to, czy funkcja zawiera złożone wyrażenie zmienne klasy zdefiniowane przez użytkownika i operatorów arytmetycznych.
+
+### <a name="to-fix-by-using-the-following-possible-solutions"></a>Aby rozwiązać problem, korzystając z poniższymi możliwymi rozwiązaniami
+
+1. Uprość wyrażenia przez przypisywanie typowych podwyrażenia zmiennych tymczasowych.
+
+1. Funkcja split na mniejsze.

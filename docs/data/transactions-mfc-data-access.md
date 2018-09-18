@@ -17,33 +17,35 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: a9dd531aee6ac8014f2ce47ddee7fc5f82e35a63
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 332568d0a4a275247c95fc6b5ecfbbfcb8712acc
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33107821"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46052215"
 ---
 # <a name="transactions--mfc-data-access"></a>Transakcje (dostęp do danych MFC)
-Pojęcie transakcji został opracowany do obsługi przypadków, w których Wynikowy stan bazy danych zależy od całkowitej Powodzenie czynności. Może to występować ponieważ kolejne czynności może zmodyfikować wyniki poprzednich operacji. W takich przypadkach Jeśli wszystkie jedna operacja nie powiedzie się, Wynikowy stan może być nieokreślony.  
+
+Pojęcie transakcji został opracowany, aby obsługiwać przypadki, w których Wynikowy stan bazy danych zależy od łączna liczba sukcesów szereg operacji. To może pochodzić, ponieważ kolejne czynności można modyfikować wyników poprzedniej operacji. W takich przypadkach Jeśli wszystkie jedna operacja zakończy się niepowodzeniem, Wynikowy stan może być nieokreślone.  
   
- Aby rozwiązać ten problem, transakcje grupy serii operacji w taki sposób, aby integralność wynik końcowy można mieć pewność. Wszystkie operacje musi się powieść, a następnie można zatwierdzić (zapisane w bazie danych) albo cała transakcja nie powiedzie się. Anulowanie transakcji jest nazywany wycofywania. Wycofanie umożliwia odzyskanie zmiany i przywraca bazę danych do stanu pretransaction.  
+Aby rozwiązać ten problem, transakcje grupy serii operacji w taki sposób, który można czuwać integralności wynik końcowy. Wszystkie operacje musi powiedzie się, a następnie można zatwierdzić (zapisane w bazie danych) albo cała transakcja nie powiedzie się. Anulowanie transakcji jest nazywany wycofywania. Wycofywanie umożliwia odzyskanie danych z zmiany i zwraca bazy danych do pretransaction stanu.  
   
- Na przykład w transakcji automatycznych bankowości oszczędność pieniędzy w przypadku transferu z konta, A Konto B, zarówno wycofania z złożenia i b musi się zakończyć powodzeniem poprawnie przetworzyć funduszy lub cała transakcja musi zakończyć się niepowodzeniem.  
+Na przykład w transakcji bankowych automatycznych, jeżeli przeniesiesz pieniądze z konta, A Konto B, zarówno wycofania z depozytu i b musi zakończyć się poprawnie przetworzyć środków lub cała transakcja muszą zakończyć się niepowodzeniem.  
   
- Transakcja musi mieć ACID właściwości, które na następujących czynności:  
+Transakcji musi mieć właściwości ACID, które utrudniają do wykonania poniższych czynności:  
   
--   **Niepodzielność** transakcji jest Atomowej jednostki pracy, a dokładnie raz wykonuje; wszystkie praca jest wykonywana lub żadne z nich.  
+- **Niepodzielność** transakcji jest pojedynczej Atomowej jednostki pracy i jest wykonywana tylko raz; wszystkie prace wykonywane lub żaden z jej.  
   
--   **Spójność** transakcji umożliwia zachowanie spójności danych przekształcania jeden stan spójności danych w inny stan spójności danych. Dane związane z transakcją muszą zostać zachowane semantycznie.  
+- **Spójność** transakcji zachowuje spójności danych, przekształcanie jednego spójnego stanu danych na inny stan spójności danych. Muszą być semantycznie zachowane dane powiązane przez transakcję.  
   
--   **Izolacja** transakcji jest jednostką izolacji i każdego wystąpienia oddzielnie i niezależnie od równoczesnych transakcji. Transakcji nigdy nie powinna być widoczna pośrednich etapach innej transakcji.  
+- **Izolacja** transakcji jest jednostką izolacji i każdego wystąpienia oddzielnie i niezależnie od jednoczesnych transakcji. Transakcji nigdy nie powinna zostać wyświetlona pośrednich etapach inną transakcję.  
   
--   **Trwałość** transakcji jest jednostką odzyskiwania. Jeśli transakcja się powiedzie, jego aktualizacje będą się powtarzać, nawet wtedy, gdy system ulegnie awarii lub zostanie zamknięty. Jeśli transakcja się nie powiedzie, system pozostaje w stanie przed zatwierdzeniem transakcji.  
+- **Trwałość** transakcji jest jednostką odzyskiwania. Jeśli transakcja zakończy się powodzeniem, jego aktualizacje będą się powtarzać, nawet jeśli systemu ulegnie awarii lub zostanie zamknięty. Jeśli transakcja zakończy się niepowodzeniem, system pozostaje w stanie wstecz Zatwierdzanie transakcji.  
   
- Może obsługiwać transakcji w OLE DB (zobacz [Obsługa transakcji w OLE DB](../data/oledb/supporting-transactions-in-ole-db.md)) lub ODBC (zobacz [transakcja (ODBC)](../data/odbc/transaction-odbc.md)).  
+Może obsługiwać transakcji w OLE DB (zobacz [Obsługa transakcji w OLE DB](../data/oledb/supporting-transactions-in-ole-db.md)) lub ODBC (zobacz [transakcja (ODBC)](../data/odbc/transaction-odbc.md)).  
   
- Transakcja rozproszona jest transakcji, która aktualizuje dane rozproszonych, oznacza to, że dane na więcej niż jednego systemu komputera sieciowego. Jeśli chcesz obsługuje transakcje za pośrednictwem Rozproszony system należy używać ADO.NET zamiast Obsługa transakcji w OLE DB.  
+Transakcja rozproszona jest transakcji, która aktualizuje rozproszonej dane, oznacza to, że dane na więcej niż jednym komputerze sieciowym. Jeśli chcesz obsługiwać transakcji za pośrednictwem systemu rozproszonego, należy użyć programu ADO.NET, a nie Obsługa transakcji w OLE DB.  
   
 ## <a name="see-also"></a>Zobacz też  
- [Dostęp do danych programowania (MFC/ATL)](../data/data-access-programming-mfc-atl.md)
+
+[Programowanie (MFC/ATL) dostępu do danych](../data/data-access-programming-mfc-atl.md)

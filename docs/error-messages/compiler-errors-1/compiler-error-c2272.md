@@ -1,5 +1,5 @@
 ---
-title: C2272 błąd kompilatora | Dokumentacja firmy Microsoft
+title: Błąd kompilatora C2272 | Dokumentacja firmy Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,26 +16,27 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e969e7cadadf1102dadfb8089a847046731b568f
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: e17765ee0acbf20d76e631bf7fccfb3413c5dc1d
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33171770"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46040313"
 ---
-# <a name="compiler-error-c2272"></a>C2272 błąd kompilatora
-"Funkcja": Modyfikatory niedozwolone dla statycznych funkcji Członkowskich  
-  
- A `static` funkcja członkowska jest zadeklarowany ze specyfikatorem modelu pamięci, takich jak [const](../../cpp/const-cpp.md) lub [volatile](../../cpp/volatile-cpp.md), oraz takich modyfikatorów nie są dozwolone w `static` funkcji elementów członkowskich.  
-  
- Poniższy przykład generuje C2272:  
-  
-```  
-// C2272.cpp  
-// compile with: /c  
-class CMyClass {  
-public:  
-   static void func1() const volatile;   // C2272  func1 is static  
-   void func2() const volatile;   // OK  
-};  
+# <a name="compiler-error-c2272"></a>Błąd kompilatora C2272
+
+'Funkcja': Modyfikatory niedozwolone dla statycznych funkcji składowych
+
+A `static` składowa jest zadeklarowana za pomocą specyfikatora model pamięci, takich jak [const](../../cpp/const-cpp.md) lub [volatile](../../cpp/volatile-cpp.md), i takie modyfikatorów nie są dozwolone w `static` funkcji elementów członkowskich.
+
+Poniższy przykład spowoduje wygenerowanie C2272:
+
+```
+// C2272.cpp
+// compile with: /c
+class CMyClass {
+public:
+   static void func1() const volatile;   // C2272  func1 is static
+   void func2() const volatile;   // OK
+};
 ```

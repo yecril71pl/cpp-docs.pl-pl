@@ -1,5 +1,5 @@
 ---
-title: C2884 błąd kompilatora | Dokumentacja firmy Microsoft
+title: Błąd kompilatora C2884 | Dokumentacja firmy Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,28 +16,29 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 41bacfc53f8b1f14a9b7409a43db39fd943739e5
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 9d9266162d4608e39982cce1e94751e427bc5e47
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33261471"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46054717"
 ---
-# <a name="compiler-error-c2884"></a>C2884 błąd kompilatora
-"Nazwa": wprowadzone za pomocą deklaracji Using powoduje konflikt z lokalną funkcją "function"  
-  
- Próbowano więcej niż raz zdefiniować funkcję. Pierwsza definicja jest lokalnej definicji. Drugim jest z przestrzeni nazw z `using` deklaracji.  
-  
- Poniższy przykład generuje C2884:  
-  
-```  
-// C2884.cpp  
-namespace A {  
-   void z(int);  
-}  
-  
-void f() {  
-   void z(int);  
-   using A::z;   // C2884 z is already defined  
-}  
+# <a name="compiler-error-c2884"></a>Błąd kompilatora C2884
+
+"name": wprowadzone za pomocą deklaracji koliduje z lokalnej funkcji "function"
+
+Próbowano zdefiniować funkcję więcej niż jeden raz. Pierwsza definicja jest lokalnej definicji. Druga jest z przestrzeni nazw za pomocą `using` deklaracji.
+
+Poniższy przykład spowoduje wygenerowanie C2884:
+
+```
+// C2884.cpp
+namespace A {
+   void z(int);
+}
+
+void f() {
+   void z(int);
+   using A::z;   // C2884 z is already defined
+}
 ```

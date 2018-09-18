@@ -18,12 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8bfd0715acd7eb18c4ccc83d496a1e9a98084fdf
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 8a58338d980db5acd8f41c71e23c37c1700a0761
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43757952"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46055120"
 ---
 # <a name="initializing-aggregate-types"></a>Inicjowanie typów agregacji
 
@@ -32,12 +32,12 @@ ms.locfileid: "43757952"
 ## <a name="syntax"></a>Składnia
 
 *Inicjator*:<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**{***listy inicjatorów***}** / * dla inicjowania agregacji     \*/<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**{***listy inicjatorów***,}** 
+&nbsp;&nbsp;&nbsp;&nbsp;**{***listy inicjatorów***}** / * dla inicjowania agregacji \*/<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**{***listy inicjatorów***,}**
 
 *initializer-list*:<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*Inicjator*<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*listy inicjatorów***,***inicjatora* 
+&nbsp;&nbsp;&nbsp;&nbsp;*listy inicjatorów***,***inicjatora*
 
 *Listy inicjatorów* znajduje się lista inicjatorów rozdzielonych przecinkami. Każdego inicjatora na liście jest wyrażeniem stałym lub listy inicjalizatora. W związku z tym można zagnieżdżać listy inicjatorów. Ten formularz jest przydatne w przypadku inicjowanie agregacji elementów członkowskich typu agregacji, jak pokazano w przykładach w tej sekcji. Jednak jeśli inicjator dla automatycznemu identyfikatorowi jest pojedyncze wyrażenie, go nie musi być wyrażeniem stałym; jedynie musi ona mieć odpowiedni typ w celu przypisania do identyfikatora.
 
@@ -109,13 +109,13 @@ triplet nlist[2][3] =
 
 W tym przykładzie `nlist` jest zadeklarowana jako tablica 2, 3, struktur, każda struktura o trzy elementy członkowskie. Wiersz 1 inicjowania przypisuje wartości do pierwszego wiersza `nlist`, wykonując następujące czynności:
 
-1.  Pierwszy lewy nawias klamrowy w wierszu 1 sygnalizuje kompilator, że inicjowanie pierwszego agregacji elementu członkowskiego `nlist` (czyli `nlist[0]`) to początek.
+1. Pierwszy lewy nawias klamrowy w wierszu 1 sygnalizuje kompilator, że inicjowanie pierwszego agregacji elementu członkowskiego `nlist` (czyli `nlist[0]`) to początek.
 
-2.  Drugi nawias klamrowy otwierający wskazuje, że inicjowanie pierwszego agregacji elementu członkowskiego `nlist[0]` (czyli struktury na `nlist[0][0]`) to początek.
+1. Drugi nawias klamrowy otwierający wskazuje, że inicjowanie pierwszego agregacji elementu członkowskiego `nlist[0]` (czyli struktury na `nlist[0][0]`) to początek.
 
-3.  Pierwszy nawias klamrowy zamykający kończy inicjowania struktury `nlist[0][0]`; dalej nawias klamrowy otwierający rozpoczyna inicjowanie `nlist[0][1]`.
+1. Pierwszy nawias klamrowy zamykający kończy inicjowania struktury `nlist[0][0]`; dalej nawias klamrowy otwierający rozpoczyna inicjowanie `nlist[0][1]`.
 
-4.  Proces jest kontynuowany aż do końca wiersza, w którym zamykający nawias klamrowy zamykający kończy się inicjowanie `nlist[0]`.
+1. Proces jest kontynuowany aż do końca wiersza, w którym zamykający nawias klamrowy zamykający kończy się inicjowanie `nlist[0]`.
 
 Wiersz 2 przypisuje wartości do drugiego wiersza `nlist` w podobny sposób. Należy pamiętać, że zestawy zewnętrzne w nawiasy klamrowe obejmujące inicjatory w wierszach 1 i 2 są wymagane. Następujące konstrukcji, pomija zewnętrzne nawiasów klamrowych, spowodowałoby błąd:
 

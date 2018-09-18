@@ -18,21 +18,23 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 71750507d6b3c6cf14a721971d809347f8adfd3d
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: fdaf290cde69f6d269b4bf055c70171800aa1489
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33092949"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46053976"
 ---
 # <a name="working-with-documents-and-views"></a>Praca z dokumentami i widokami
-Biblioteka Microsoft Foundation Classes (MFC) oparte na architekturze dokument/widok dla wielu funkcji. Zazwyczaj dokumentu przechowuje dane, a widok wyświetla go w obszarze klienta w oknie ramowym i zarządza interakcji z użytkownikiem z danymi. Widok komunikuje się z dokumentu do aktualizacji danych. Klasy baz danych można użyć z architekturą lub bez niego.  
+
+Biblioteka Microsoft Foundation Classes (MFC) opiera się na architektury dokument/widok dla wielu funkcji. Zazwyczaj dokument przechowuje swoje dane, a widokiem wyświetla go w obrębie obszaru klienckiego okna ramki i zarządza nimi interakcji użytkownika z danymi. Widok komunikuje się z dokumentu do aktualizacji danych. Klasy bazy danych można użyć w strukturze lub bez niego.  
   
- Aby uzyskać więcej informacji o korzystaniu z klasami baz danych w ramach, zobacz [MFC: przy użyciu klasy baz danych z dokumentami i widokami](../../data/mfc-using-database-classes-with-documents-and-views.md).  
+Aby uzyskać więcej informacji na temat Używanie klas baz danych w ramach zobacz [MFC: Używanie klas bazy danych z dokumentami i widokami](../../data/mfc-using-database-classes-with-documents-and-views.md).  
   
- Domyślnie Kreator aplikacji MFC tworzy szkielet aplikacji bez obsługi bazy danych. Jednak można wybrać opcje uwzględnić obsługi minimalnego bazy danych lub bardziej szczegółowy obsługi opartej na formularzu. Aby uzyskać więcej informacji o opcjach Kreatora aplikacji, zobacz [obsługi bazy danych, Kreator aplikacji MFC](../../mfc/reference/database-support-mfc-application-wizard.md).  
+Domyślnie Kreator aplikacji MFC tworzy szkielet aplikacji bez użycia obsługi bazy danych. Jednak można wybrać opcje do uwzględnienia obsługi minimalny bazy danych lub bardziej szczegółowy pomocy technicznej, które są oparte na formularzach. Aby uzyskać więcej informacji o opcjach Kreatora aplikacji, zobacz [obsługi bazy danych, Kreator aplikacji MFC](../../mfc/reference/database-support-mfc-application-wizard.md).  
   
- Klasy baz danych umożliwia także bez korzystania z architektury dokument/widok pełna. Aby uzyskać więcej informacji, zobacz [MFC: przy użyciu klasy bazy danych bez dokumentów i widoków](../../data/mfc-using-database-classes-without-documents-and-views.md).  
+Umożliwia także klas baz danych bez korzystania z architektury pełny dokument/widok. Aby uzyskać więcej informacji, zobacz [MFC: przy użyciu klasy bazy danych bez dokumentów i widoków](../../data/mfc-using-database-classes-without-documents-and-views.md).  
   
 ## <a name="see-also"></a>Zobacz też  
- [ODBC i MFC](../../data/odbc/odbc-and-mfc.md)
+
+[ODBC i MFC](../../data/odbc/odbc-and-mfc.md)

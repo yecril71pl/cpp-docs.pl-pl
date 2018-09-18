@@ -1,5 +1,5 @@
 ---
-title: C2936 błąd kompilatora | Dokumentacja firmy Microsoft
+title: Błąd kompilatora C2936 | Dokumentacja firmy Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,43 +16,44 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3d3cfd6e9142e5c10906eaa94d5a1466b0d0bd19
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 839d2f3dd005e4bd8bd697c74e5940a0331c1acc
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33241938"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46054249"
 ---
-# <a name="compiler-error-c2936"></a>C2936 błąd kompilatora
-"class": typ klasy identyfikator ponownie zdefiniować jako globalną zmienną danych  
-  
- Klasy ogólne lub szablonu nie można użyć jako globalną zmienną danych.  
-  
- Ten błąd może być spowodowany nieprawidłowo są dopasowywane w nawiasach klamrowych.  
-  
- Poniższy przykład generuje C2936:  
-  
-```  
-// C2936.cpp  
-// compile with: /c  
-template<class T> struct TC { };   
-int TC<int>;   // C2936  
-  
-// OK  
-struct TC2 { };   
-int TC2;  
-```  
-  
- C2936 może również wystąpić, gdy użycie typów ogólnych:  
-  
-```  
-// C2936b.cpp  
-// compile with: /clr /c  
-generic<class T>  
-ref struct GC {};  
-int GC<int>;   // C2936  
-  
-// OK  
-ref struct GC2 {};  
-int GC2;  
+# <a name="compiler-error-c2936"></a>Błąd kompilatora C2936
+
+"class": typ klasy identyfikator ponownie definiowana jako zmienna danych globalnych
+
+Nie można użyć klasy generyczny lub szablonu jako zmienna danych globalnych.
+
+Ten błąd może być spowodowany nawiasy klamrowe są nieprawidłowo dopasowywane.
+
+Poniższy przykład spowoduje wygenerowanie C2936:
+
+```
+// C2936.cpp
+// compile with: /c
+template<class T> struct TC { };
+int TC<int>;   // C2936
+
+// OK
+struct TC2 { };
+int TC2;
+```
+
+C2936 może również wystąpić, gdy za pomocą typów ogólnych:
+
+```
+// C2936b.cpp
+// compile with: /clr /c
+generic<class T>
+ref struct GC {};
+int GC<int>;   // C2936
+
+// OK
+ref struct GC2 {};
+int GC2;
 ```

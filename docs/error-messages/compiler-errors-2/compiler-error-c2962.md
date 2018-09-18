@@ -1,5 +1,5 @@
 ---
-title: C2962 błąd kompilatora | Dokumentacja firmy Microsoft
+title: Błąd kompilatora C2962 | Dokumentacja firmy Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,16 +16,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4ad776236f950c94a1790cee5834b31fa4039d42
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 68291ba1e3f7226e047af8fb6807ff1aca42d0a7
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33241340"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46049972"
 ---
-# <a name="compiler-error-c2962"></a>C2962 błąd kompilatora
-Błąd składniowy: "token": Oczekiwano definicji funkcji członkowskiej klasy szablonu kończącej się "}"  
-  
- Token spowodował błąd składniowy w deklaracji szablonu.  
-  
- Przyczyną tego błędu może być niezgodne ograniczniki
+# <a name="compiler-error-c2962"></a>Błąd kompilatora C2962
+
+Błąd składniowy: "token": Oczekiwano definicji funkcji składowej klasy szablonu kończącej się znakiem "}"
+
+Token spowodował błąd składni w deklaracji szablonu.
+
+Ten błąd może być spowodowany przez niezgodne ograniczniki

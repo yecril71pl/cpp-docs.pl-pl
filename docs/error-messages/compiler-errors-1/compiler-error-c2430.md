@@ -1,5 +1,5 @@
 ---
-title: C2430 błąd kompilatora | Dokumentacja firmy Microsoft
+title: Błąd kompilatora C2430 | Dokumentacja firmy Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,25 +16,27 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 56e1817cf9c5291114af0d94f92e01071d0f7190
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 102e7082a3fc1cfd96db5c38832e3ebb91ee742c
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33224579"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46054457"
 ---
-# <a name="compiler-error-c2430"></a>C2430 błąd kompilatora
-więcej niż jednego indeksu rejestru w "identyfikator"  
-  
- Więcej niż jeden rejestr skalowania. Kompilator obsługuje skalowana indeksowania, ale można skalować tylko jednego rejestru.  
-  
-## <a name="example"></a>Przykład  
- Poniższy przykład generuje C2430.  
-  
-```  
-// C2430.cpp  
-// processor: x86  
-int main() {  
-   _asm mov eax, [ebx*2+ecx*4] // C2430  
-}  
+# <a name="compiler-error-c2430"></a>Błąd kompilatora C2430
+
+więcej niż jednego indeksu zarejestrować się w 'Identyfikator'
+
+Więcej niż jeden rejestr jest skalowany. Kompilator obsługuje indeksowanie skalowanych, ale można skalować tylko jednego rejestru.
+
+## <a name="example"></a>Przykład
+
+Poniższy przykład spowoduje wygenerowanie C2430.
+
+```
+// C2430.cpp
+// processor: x86
+int main() {
+   _asm mov eax, [ebx*2+ecx*4] // C2430
+}
 ```

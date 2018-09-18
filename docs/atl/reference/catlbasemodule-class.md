@@ -25,12 +25,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 067edba7bc0a8819925af533dd48a34c6f6e4536
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: c4b3c7d53e3500b5dd97fdbd49e4006916cd1a80
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43767754"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46055458"
 ---
 # <a name="catlbasemodule-class"></a>Klasa CAtlBaseModule
 
@@ -93,7 +93,7 @@ bool AddResourceInstance(HINSTANCE hInst) throw();
 
 ### <a name="parameters"></a>Parametry
 
-*hInst*  
+*hInst*<br/>
 Wystąpienie zasobu do dodania.
 
 ### <a name="return-value"></a>Wartość zwracana
@@ -122,7 +122,7 @@ HINSTANCE GetHInstanceAt(int i) throw();
 
 ### <a name="parameters"></a>Parametry
 
-*i*  
+*i*<br/>
 Liczba wystąpień zasobu.
 
 ### <a name="return-value"></a>Wartość zwracana
@@ -175,7 +175,7 @@ bool RemoveResourceInstance(HINSTANCE hInst) throw();
 
 ### <a name="parameters"></a>Parametry
 
-*hInst*  
+*hInst*<br/>
 Wystąpienie zasobu do usunięcia.
 
 ### <a name="return-value"></a>Wartość zwracana
@@ -192,7 +192,7 @@ HINSTANCE SetResourceInstance(HINSTANCE hInst) throw();
 
 ### <a name="parameters"></a>Parametry
 
-*hInst*  
+*hInst*<br/>
 Nowe wystąpienie zasobu.
 
 ### <a name="return-value"></a>Wartość zwracana
@@ -201,5 +201,5 @@ Zwraca wystąpienie zaktualizowanego zasobu.
 
 ## <a name="see-also"></a>Zobacz też
 
-[Klasa — Przegląd](../../atl/atl-class-overview.md)   
+[Klasa — Przegląd](../../atl/atl-class-overview.md)<br/>
 [Klasy modułów](../../atl/atl-module-classes.md)

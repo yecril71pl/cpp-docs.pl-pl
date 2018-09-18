@@ -1,5 +1,5 @@
 ---
-title: Kompilatora (poziom 1) ostrzeżenie C4251 | Dokumentacja firmy Microsoft
+title: Kompilator ostrzeżenie (poziom 1) C4251 | Dokumentacja firmy Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,37 +16,38 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 366d66a38685e75e47d8921f9ebd525b334ced7e
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: ad47d769dbfd09cc741be18598355dc34486bd54
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33282135"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46045695"
 ---
-# <a name="compiler-warning-level-1-c4251"></a>Kompilator C4251 ostrzegawcze (poziom 1)
-"identyfikator": klasa 'type' musi mieć interfejsu biblioteki dll, który ma być używany przez klientów klasy "type2".  
-  
- Aby ograniczyć możliwość uszkodzenie danych podczas eksportowania klasy z [__declspec(dllexport)](../../cpp/dllexport-dllimport.md), upewnij się, że:  
-  
--   Wszystkie dane statyczne jest dostęp za pośrednictwem funkcji, które są eksportowane z biblioteki DLL.  
-  
--   Nie została wbudowana metod klasy można modyfikować danych statycznych.  
-  
--   Nie została wbudowana metod klasy należy użyć funkcji CRT lub innych funkcji biblioteki dane statyczne (zobacz [potencjalne błędy przekazywanie CRT obiektów między granic DLL](../../c-runtime-library/potential-errors-passing-crt-objects-across-dll-boundaries.md) Aby uzyskać więcej informacji).  
-  
--   Nie metody klasy (niezależnie od tego ze śródwierszowaniem) można używać typów, których wystąpienia EXE i DLL różnią się w sposób danych statycznych.  
-  
- Można uniknąć, eksportowanie klas przez definiowanie przez bibliotekę DLL, która definiuje klasę z funkcji wirtualnych i zostanie funkcje można wywołać w celu utworzenia wystąpienia i usuwania obiektów tego typu.  Następnie można po prostu Wywołaj funkcje wirtualne w typie.  
-  
- Aby uzyskać więcej informacji o eksportowaniu szablonów, zobacz [ http://support.microsoft.com/default.aspx?scid=KB; EN-US; 168958](http://support.microsoft.com/default.aspx?scid=KB;EN-US;168958).  
-  
- C4251 można zignorować, jeśli są pochodny typ w standardowa biblioteka C++, kompilowanie zlecenia debug (**/MTd**) i których dotyczy _Container_base komunikat o błędzie kompilatora.  
-  
-```  
-// C4251.cpp  
-// compile with: /EHsc /MTd /W2 /c  
-#include <vector>  
-using namespace std;  
-class Node;  
-class __declspec(dllimport) VecWrapper : vector<Node *> {};   // C4251  
+# <a name="compiler-warning-level-1-c4251"></a>Kompilator ostrzeżenie (poziom 1) C4251
+
+'Identyfikator': klasa "type" musi mieć interfejsu biblioteki dll, który ma być używany przez klientów klasy 'type2'
+
+Aby ograniczyć możliwość uszkodzenia danych, podczas eksportowania do klasy za pomocą [__declspec(dllexport)](../../cpp/dllexport-dllimport.md), upewnij się, że:
+
+- Wszystkie dane statyczne, jest dostęp za pośrednictwem funkcji, które są eksportowane z biblioteki DLL.
+
+- Nie śródwierszowych metody klasy można modyfikować danych statycznych.
+
+- Żadne śródwierszowych metody klasy użyć funkcji CRT lub inne funkcje biblioteki dane statyczne (zobacz [potencjalne błędy przekazywania CRT obiektów w pliku DLL granicach](../../c-runtime-library/potential-errors-passing-crt-objects-across-dll-boundaries.md) Aby uzyskać więcej informacji).
+
+- Nie metody klasy (niezależnie od wartości inlining) można używać typów, których wystąpienia w pliku EXE i DLL mają różnice statyczne dane.
+
+Można uniknąć, eksportowanie klas, definiując, które biblioteki DLL, która definiuje klasę z funkcjami wirtualnymi i funkcji, należy można wywołać w celu utworzenia wystąpienia i usuwania obiektów tego typu.  Następnie możesz po prostu wywołać funkcje wirtualne w typie.
+
+Aby uzyskać więcej informacji na temat eksportowania szablonów, zobacz [ http://support.microsoft.com/default.aspx?scid=KB; EN-US; 168958](http://support.microsoft.com/default.aspx?scid=KB;EN-US;168958).
+
+C4251 można zignorować, jeśli są pochodząca z typu w standardowej bibliotece języka C++, kompilacja wersji debugowania (**/mtd**) i których dotyczy _Container_base komunikat o błędzie kompilatora.
+
+```
+// C4251.cpp
+// compile with: /EHsc /MTd /W2 /c
+#include <vector>
+using namespace std;
+class Node;
+class __declspec(dllimport) VecWrapper : vector<Node *> {};   // C4251
 ```

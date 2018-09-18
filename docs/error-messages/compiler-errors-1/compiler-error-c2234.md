@@ -1,5 +1,5 @@
 ---
-title: C2234 błąd kompilatora | Dokumentacja firmy Microsoft
+title: Błąd kompilatora C2234 | Dokumentacja firmy Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,25 +16,26 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0bba14bd704ba4d068fc5534f78a32f80b42046a
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 294ca98d1f4ce8a86e551ab17269458784992a53
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33169065"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46053105"
 ---
-# <a name="compiler-error-c2234"></a>C2234 błąd kompilatora
-"Nazwa": tablice odwołań są niedozwolone  
-  
- Ponieważ wskaźniki odwołań nie są dozwolone, tablice odwołań nie są możliwe.  
-  
- Poniższy przykład generuje C2234:  
-  
-```  
-// C2234.cpp  
-int main() {  
-   int i = 0, j = 0, k = 0, l = 0;  
-   int &array[4] = {i,j,k,l};   // C2234  
-   int array2[4] = {i,j,k,l};   // OK  
-}  
+# <a name="compiler-error-c2234"></a>Błąd kompilatora C2234
+
+"name": tablice odwołań są niedozwolone
+
+Ponieważ wskaźniki odwołań nie są dozwolone, tablice odwołań nie są możliwe.
+
+Poniższy przykład spowoduje wygenerowanie C2234:
+
+```
+// C2234.cpp
+int main() {
+   int i = 0, j = 0, k = 0, l = 0;
+   int &array[4] = {i,j,k,l};   // C2234
+   int array2[4] = {i,j,k,l};   // OK
+}
 ```

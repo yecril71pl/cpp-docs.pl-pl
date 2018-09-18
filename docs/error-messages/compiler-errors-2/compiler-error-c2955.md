@@ -1,5 +1,5 @@
 ---
-title: C2955 błąd kompilatora | Dokumentacja firmy Microsoft
+title: Błąd kompilatora C2955 | Dokumentacja firmy Microsoft
 ms.custom: ''
 ms.date: 03/28/2017
 ms.technology:
@@ -16,75 +16,77 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 686fb51d1e72f0835a673d00c05ade21a7580515
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 7c9d9817a2b78638868242c5c5642a89fb41d93c
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33245952"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46051948"
 ---
-# <a name="compiler-error-c2955"></a>C2955 błąd kompilatora
-"identyfikator": użycie szablonu klasy lub alias ogólny wymaga szablonu lub listy argumentów ogólnych  
-  
- Szablon klasy lub klas ogólnych nie można użyć jako identyfikatora bez szablonu lub listy argumentów ogólnych.  
-  
- Aby uzyskać więcej informacji, zobacz [szablonów klas](../../cpp/class-templates.md).  
-  
- Poniższy przykład generuje C2955 i pokazuje, jak rozwiązywanie problemu:  
-  
-```  
-// C2955.cpp  
-// compile with: /c  
-template<class T>   
-class X {};  
-  
-X x1;   // C2955  
-X<int> x2;   // OK - this is how to fix it.  
-```  
-  
- C2955 może również wystąpić podczas próby definicji wiersza funkcja zadeklarowana w szablonie klasy:  
-  
-```  
-// C2955_b.cpp  
-// compile with: /c  
-template <class T>  
-class CT {  
-public:  
-   void CTFunc();  
-   void CTFunc2();  
-};  
-  
-void CT::CTFunc() {}   // C2955  
-  
-// OK - this is how to fix it  
-template <class T>  
-void CT<T>::CTFunc2() {}  
-  
-```  
-  
- C2955 może również wystąpić, gdy użycie typów ogólnych:  
-  
-```  
-// C2955_c.cpp  
-// compile with: /clr  
-generic <class T>   
-ref struct GC {   
-   T t;  
-};  
-  
-int main() {  
-   GC^ g;   // C2955  
-   GC <int>^ g;  
-}  
+# <a name="compiler-error-c2955"></a>Błąd kompilatora C2955
+
+'Identyfikator': użycie szablonu klasy lub alias ogólny wymaga szablon lub listy argumentów ogólnych
+
+Nie można użyć szablonu klasy lub klas ogólnych jako identyfikator bez szablon lub listy argumentów ogólnych.
+
+Aby uzyskać więcej informacji, zobacz [szablony klas](../../cpp/class-templates.md).
+
+Poniższy przykład generuje C2955 i pokazuje, jak go naprawić:
+
+```
+// C2955.cpp
+// compile with: /c
+template<class T>
+class X {};
+
+X x1;   // C2955
+X<int> x2;   // OK - this is how to fix it.
+```
+
+C2955 może również wystąpić podczas próby definicji poza wierszem funkcja zadeklarowana w szablonie klasy:
+
+```
+// C2955_b.cpp
+// compile with: /c
+template <class T>
+class CT {
+public:
+   void CTFunc();
+   void CTFunc2();
+};
+
+void CT::CTFunc() {}   // C2955
+
+// OK - this is how to fix it
+template <class T>
+void CT<T>::CTFunc2() {}
+
+```
+
+C2955 może również wystąpić, gdy za pomocą typów ogólnych:
+
+```
+// C2955_c.cpp
+// compile with: /clr
+generic <class T>
+ref struct GC {
+   T t;
+};
+
+int main() {
+   GC^ g;   // C2955
+   GC <int>^ g;
+}
 ```
 
 ## <a name="example"></a>Przykład
-**Visual Studio 2017 lub nowszy:** kompilator prawidłowo diagnozuje brakuje listy argumentów szablonu, gdy szablon zostanie wyświetlony na liście parametrów szablonu (na przykład jako część domyślnego argumentu szablonu lub parametr szablonu bez typu). Poniższy kod kompiluje w programie Visual Studio 2015, ale powoduje błąd w programie Visual Studio 2017 r.
+
+**Visual Studio 2017 i nowszym:** kompilator poprawnie diagnozuje brakuje listy argumentów szablonu, gdy szablon jest wyświetlany na liście parametrów szablonu (na przykład jako część domyślnego argumentu szablonu lub parametru szablonu bez typu). Poniższy kod kompilowany w programie Visual Studio 2015, ale generuje błąd w programie Visual Studio 2017.
 
 ```
 template <class T> class ListNode;
 template <class T> using ListNodeMember = ListNode<T> T::*;
-template <class T, ListNodeMember M> class ListHead; // C2955: 'ListNodeMember': use of alias 
+template <class T, ListNodeMember M> class ListHead; // C2955: 'ListNodeMember': use of alias
                                                      // template requires template argument list
 
 // correct:  template <class T, ListNodeMember<T> M> class ListHead;

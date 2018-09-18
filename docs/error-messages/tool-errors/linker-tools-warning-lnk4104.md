@@ -16,46 +16,47 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d9ea3e074cc0db9591cd0ffe9329ff7f1936563f
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 6304f3ea928c89f4756a4594270ebb7914324f85
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33300956"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46057265"
 ---
 # <a name="linker-tools-warning-lnk4104"></a>Ostrzeżenie LNK4104 narzędzi konsolidatora
-Eksport symbolu "symbol" powinien mieć atrybut PRIVATE  
-  
- `symbol` Może być jedną z następujących czynności:  
-  
--   `DllCanUnloadNow`  
-  
--   `DllGetClassObject`  
-  
--   `DllGetClassFactoryFromClassString`  
-  
--   `DllGetDocumentation`  
-  
--   `DllInitialize`  
-  
--   `DllInstall`  
-  
--   `DllRegisterServer`  
-  
--   `DllRegisterServerEx`  
-  
--   `DllRegisterServerExW`  
-  
--   `DllUnload`  
-  
--   `DllUnregisterServer`  
-  
--   `RasCustomDeleteEntryNotify`  
-  
--   `RasCustomDial`  
-  
--   `RasCustomDialDlg`  
-  
--   `RasCustomEntryDlg`  
-  
- To ostrzeżenie jest emitowany podczas tworzenia biblioteki importowanej dla biblioteki DLL i eksportowanie jednego z powyższych funkcji bez określania go jako prywatny w pliku definicji modułu. Ogólnie rzecz biorąc te funkcje zostaną wyeksportowane do użycia tylko przez OLE. Umieszczenie ich w bibliotece importu może prowadzić do nietypowych zachowań po niepoprawnie połączona z biblioteką programu wywołań do nich. Aby uzyskać więcej informacji na temat PRIVATE — słowo kluczowe, zobacz [EKSPORTÓW](../../build/reference/exports.md).
+
+Eksport symbolu "symbol" powinien mieć atrybut PRIVATE
+
+`symbol` Może być jedną z następujących czynności:
+
+- `DllCanUnloadNow`
+
+- `DllGetClassObject`
+
+- `DllGetClassFactoryFromClassString`
+
+- `DllGetDocumentation`
+
+- `DllInitialize`
+
+- `DllInstall`
+
+- `DllRegisterServer`
+
+- `DllRegisterServerEx`
+
+- `DllRegisterServerExW`
+
+- `DllUnload`
+
+- `DllUnregisterServer`
+
+- `RasCustomDeleteEntryNotify`
+
+- `RasCustomDial`
+
+- `RasCustomDialDlg`
+
+- `RasCustomEntryDlg`
+
+To ostrzeżenie jest emitowane podczas kompilowania biblioteki importowanej dla biblioteki DLL i eksportowanie jednej z powyższych funkcji bez określania jako prywatny, w pliku definicji modułu. Ogólnie rzecz biorąc te funkcje są eksportowane do użytku tylko przez OLE. Umieszczenie ich w bibliotece importu może prowadzić do nietypowych zachowań, po program, nieprawidłowo połączona z biblioteką wywołań do nich. Aby uzyskać więcej informacji na temat PRIVATE — słowo kluczowe, zobacz [EKSPORTY](../../build/reference/exports.md).

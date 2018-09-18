@@ -1,5 +1,5 @@
 ---
-title: Błąd cxx0023 programu Expression Evaluator | Dokumentacja firmy Microsoft
+title: Błąd ewaluatora wyrażeń CXX0023 | Dokumentacja firmy Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,16 +17,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 426e074035d7f336963696e8924dfe641572f858
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 94536a0499b4c226f1343bd27c44cc52bbbf3558
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33297001"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46034606"
 ---
 # <a name="expression-evaluator-error-cxx0023"></a>Błąd CXX0023 programu Expression Evaluator
-Zły podstawa  
-  
- Ewaluator wyrażeń C nie rozpoznaje podstawa określony. Tylko radixes decimal, szesnastkowa i ósemkowe są prawidłowe.  
-  
- Ten błąd jest taki sam jak CAN0023.
+
+Zły podstawy
+
+Ewaluator wyrażeń C nie rozpoznaje podstawy określony. Prawidłowe są tylko radixes dziesiętną, ósemkowa i szesnastkowym.
+
+Ten błąd jest taka sama jak CAN0023.

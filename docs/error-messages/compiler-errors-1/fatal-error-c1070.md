@@ -16,41 +16,42 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 99650b93819c4bc0192d612b0f1344e1b99671d4
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: e7e871b69bb189140a4001d574736a255eefaf61
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33228182"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46055627"
 ---
 # <a name="fatal-error-c1070"></a>Błąd krytyczny C1070
-niezgodne #if / pary #endif w pliku "filename"  
-  
- `#if`, `#ifdef`, Lub `#ifndef` dyrektywy nie ma odpowiedniego `#endif`.  
-  
- Poniższy przykład generuje C1070:  
-  
-```  
-// C1070.cpp  
-#define TEST  
-  
-#ifdef TEST  
-  
-#ifdef TEST  
-#endif  
-// C1070  
-```  
-  
- Możliwe rozwiązanie:  
-  
-```  
-// C1070b.cpp  
-// compile with: /c  
-#define TEST  
-  
-#ifdef TEST  
-#endif  
-  
-#ifdef TEST  
-#endif  
+
+Niezgodność #if / pary #endif w pliku 'NazwaPliku'
+
+`#if`, `#ifdef`, Lub `#ifndef` dyrektywy nie ma odpowiedniego `#endif`.
+
+Poniższy przykład spowoduje wygenerowanie C1070:
+
+```
+// C1070.cpp
+#define TEST
+
+#ifdef TEST
+
+#ifdef TEST
+#endif
+// C1070
+```
+
+Możliwe rozwiązanie:
+
+```
+// C1070b.cpp
+// compile with: /c
+#define TEST
+
+#ifdef TEST
+#endif
+
+#ifdef TEST
+#endif
 ```

@@ -16,14 +16,15 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e766dfe2e4f5825830b7c218e6ea219558c533e3
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 1522587c20b661c1885880b9690f3dee54215f80
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33323150"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46045232"
 ---
 # <a name="profile-guided-optimization-warning-pg1087"></a>Ostrzeżenie PG1087 dotyczące optymalizacji sterowania profilem
-Pliku PGC 'Plik' nie jest prawidłowy.  
-  
- Plik .pgc jest uszkodzony, prawdopodobnie z powodu nieprawidłowego zakończenia sesji profilowania.  Ponownie uruchom scenariusz profilowania i zakończyć normalnie.
+
+Pliku PGC 'Plik' jest nieprawidłowy.
+
+Plik .pgc jest uszkodzony, prawdopodobnie z powodu Nienormalne zakończenie sesji profilowania.  Ponownie uruchom scenariusz profilowania, a następnie Zakończ działanie normalnie.

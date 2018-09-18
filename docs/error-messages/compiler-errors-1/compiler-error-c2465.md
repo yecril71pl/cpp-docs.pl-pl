@@ -1,5 +1,5 @@
 ---
-title: C2465 błąd kompilatora | Dokumentacja firmy Microsoft
+title: Błąd kompilatora C2465 | Dokumentacja firmy Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,14 +16,15 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5318fd04a79de7e49a3218dbbef6100c4fbe3dba
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: f27ea349e4955bc78b2115d3de4622a09290eb22
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33240808"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46060554"
 ---
-# <a name="compiler-error-c2465"></a>C2465 błąd kompilatora
-Nie można zdefiniować typu anonimowego wewnątrz nawiasów  
-  
- Struktury anonimowe, Unią lub typ wyliczeniowy jest zdefiniowana wewnątrz wyrażenia w nawiasach. Jest to nieprawidłowy w języku C++, ponieważ definicja jest bez znaczenia w zakresie funkcji.
+# <a name="compiler-error-c2465"></a>Błąd kompilatora C2465
+
+Nie można zdefiniować typu anonimowego wewnątrz nawiasów
+
+Anonimowa struktura, Unia lub Typ wyliczany zdefiniowano wewnątrz wyrażenia w nawiasach. To ustawienie jest nieprawidłowe w języku C++, ponieważ definicja jest bez znaczenia w zakresie funkcji.

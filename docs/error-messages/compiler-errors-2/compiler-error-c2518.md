@@ -1,5 +1,5 @@
 ---
-title: C2518 błąd kompilatora | Dokumentacja firmy Microsoft
+title: Błąd kompilatora C2518 | Dokumentacja firmy Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,24 +16,25 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e1e44a99ad49945e441e1560f296dc66568ae3f3
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 202d93e4ff466ddb1509c3d30ad3a326c07d0861
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33228076"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46051155"
 ---
-# <a name="compiler-error-c2518"></a>C2518 błąd kompilatora
-słowo kluczowe "— słowo kluczowe" niedozwolony na liście klas podstawowych; ignorowane  
-  
- Słowa kluczowe `class` i `struct` nie powinny być wyświetlane na liście klas podstawowych.  
-  
- Poniższy przykład generuje C2518:  
-  
-```  
-// C2518.cpp  
-// compile with: /c  
-class B {};  
-class C : public class B {};   // C2518  
-class D: public B {};   // OK  
+# <a name="compiler-error-c2518"></a>Błąd kompilatora C2518
+
+słowo kluczowe "— słowo kluczowe" niedozwolony na liście klas bazowych; ignorowane
+
+Słowa kluczowe `class` i `struct` nie powinny być wyświetlane na liście klas bazowych.
+
+Poniższy przykład spowoduje wygenerowanie C2518:
+
+```
+// C2518.cpp
+// compile with: /c
+class B {};
+class C : public class B {};   // C2518
+class D: public B {};   // OK
 ```

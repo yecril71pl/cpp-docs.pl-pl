@@ -16,14 +16,15 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7f0e9a85237a47515925a5867b0f26b7321e778c
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: de96bdbbc9752cd68ca78728395ad4bfdb4b01a9
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33301934"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46018538"
 ---
 # <a name="linker-tools-warning-lnk4076"></a>Ostrzeżenie LNK4076 narzędzi konsolidatora
-Nieprawidłowy plik stanu przyrostowego "filename"; zostanie wykonana Konsolidacja nieprzyrostowa  
-  
- ŁĄCZE nie można zapisać pliku stanu przyrostowego (.ilk). Albo `filename` jest uszkodzony lub nie jest bazy danych przyrostowej połączeń. Usuwanie plików i połącz ponownie.
+
+Nieprawidłowy plik stanu przyrostowego "filename"; zostanie wykonana Konsolidacja nieprzyrostowa
+
+ŁĄCZE nie można zapisać pliku stanu przyrostowego (.ilk). Albo `filename` jest uszkodzony lub nie jest bazą danych przyrostowe łączenia. Usuń plik i połącz ponownie.

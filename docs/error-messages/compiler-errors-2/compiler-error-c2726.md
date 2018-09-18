@@ -1,5 +1,5 @@
 ---
-title: C2726 błąd kompilatora | Dokumentacja firmy Microsoft
+title: Błąd kompilatora C2726 | Dokumentacja firmy Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,33 +16,34 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: aaeab263c2deffe79de98be30808e2dca973ce56
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 0e421839e75bcc570578d7c37eecc8ab076321d7
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33236108"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46051277"
 ---
-# <a name="compiler-error-c2726"></a>C2726 błąd kompilatora
-słowa kluczowego "gcnew" może służyć tylko do utworzenia obiektu z zarządzane lub typu WinRT  
-  
- Nie można utworzyć wystąpienia typu natywnego na stercie zbierane pamięci.  
-  
- Poniższy przykład generuje C2726 i pokazuje, jak rozwiązywanie problemu:  
-  
-```  
-// C2726.cpp  
-// compile with: /clr  
-using namespace System;  
-class U {};  
-ref class V {};  
-value class W {};  
-  
-int main() {  
-   U* pU = gcnew U;    // C2726  
-   U* pU2 = new U;   // OK  
-   V^ p2 = gcnew V;   // OK  
-   W p3;   // OK  
-  
-}  
-```  
+# <a name="compiler-error-c2726"></a>Błąd kompilatora C2726
+
+"gcnew" można używać tylko do utworzenia obiektu z zarządzanego lub typu WinRT
+
+Nie można utworzyć wystąpienia typu natywnego w stosie zebranych elementów bezużytecznych.
+
+Poniższy przykład generuje C2726 i pokazuje, jak go naprawić:
+
+```
+// C2726.cpp
+// compile with: /clr
+using namespace System;
+class U {};
+ref class V {};
+value class W {};
+
+int main() {
+   U* pU = gcnew U;    // C2726
+   U* pU2 = new U;   // OK
+   V^ p2 = gcnew V;   // OK
+   W p3;   // OK
+
+}
+```

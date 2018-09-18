@@ -1,5 +1,5 @@
 ---
-title: Kompilatora (poziom 1) ostrzeżenie C4379 | Dokumentacja firmy Microsoft
+title: Kompilator ostrzeżenie (poziom 1) C4379 | Dokumentacja firmy Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,14 +16,15 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: df04a034d646692fb461a2f8b19455635a922750
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 172f042bd221299e90a2185e3c04fe19560831e5
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33279087"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46042653"
 ---
-# <a name="compiler-warning-level-1-c4379"></a>Kompilator C4379 ostrzegawcze (poziom 1)
-Wersja wersja środowiska CLR nie jest obsługiwana przez ten kompilator. Używanie tej wersji może spowodować nieoczekiwane wyniki.  
-  
- Masz poprzedniej wersji środowiska CLR na komputerze, ale nie bieżącej wersji. Aby rozwiązać C4379, należy zainstalować wersję środowiska CLR, które zostały wydane z kompilujący.
+# <a name="compiler-warning-level-1-c4379"></a>Kompilator ostrzeżenie (poziom 1) C4379
+
+Wersja wersja środowiska uruchomieniowego języka wspólnego nie jest obsługiwana przez ten kompilator. Korzystanie z tej wersji może spowodować nieoczekiwane wyniki.
+
+Masz poprzednią wersję środowiska uruchomieniowego języka wspólnego na komputerze, ale nie bieżącej wersji. Aby rozwiązać C4379, należy zainstalować wersję środowiska uruchomieniowego języka wspólnego dostarczanej z kompilatora.

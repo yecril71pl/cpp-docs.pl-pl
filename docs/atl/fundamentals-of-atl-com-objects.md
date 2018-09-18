@@ -17,12 +17,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7873b7006962449a40a8e67d118b6699ac61f263
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: b90d8901a60b5945b2b29db2c378a0cd29939f63
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43762096"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46059280"
 ---
 # <a name="fundamentals-of-atl-com-objects"></a>Podstawowe informacje na temat obiektów COM ATL
 
@@ -57,30 +57,30 @@ Inne aspekty obiekt ATL COM są obsługiwane przez inne klasy:
 
 ## <a name="in-this-section"></a>W tej sekcji
 
-[Implementowanie klasy CComObjectRootEx](../atl/implementing-ccomobjectrootex.md)  
+[Implementowanie klasy CComObjectRootEx](../atl/implementing-ccomobjectrootex.md)<br/>
 Pokaż przykład wpisy mapy modelu COM do implementowania `CComObjectRootEx`.
 
-[Implementowanie klas CComObject, CComAggObject i CComPolyObject](../atl/implementing-ccomobject-ccomaggobject-and-ccompolyobject.md)  
+[Implementowanie klas CComObject, CComAggObject i CComPolyObject](../atl/implementing-ccomobject-ccomaggobject-and-ccompolyobject.md)<br/>
 W tym artykule omówiono sposób, w jaki **DECLARE_\*_AGGREGATABLE** makra wpływa na użycie `CComObject`, `CComAggObject`, i `CComPolyObject`.
 
-[Obsługa interfejsów IDispatch i IErrorInfo](../atl/supporting-idispatch-and-ierrorinfo.md)  
+[Obsługa interfejsów IDispatch i IErrorInfo](../atl/supporting-idispatch-and-ierrorinfo.md)<br/>
 Wyświetla listę klas ATL wdrażania służące do obsługi `IDispatch` i `IErrorInfo` interfejsów.
 
-[Obsługa interfejsu IDispEventImpl](../atl/supporting-idispeventimpl.md)  
+[Obsługa interfejsu IDispEventImpl](../atl/supporting-idispeventimpl.md)<br/>
 W tym artykule omówiono kroki, aby wdrożyć punkt połączenia dla swojej klasy.
 
-[Zmienianie domyślnej fabryki klas i modelu agregacji](../atl/changing-the-default-class-factory-and-aggregation-model.md)  
+[Zmienianie domyślnej fabryki klas i modelu agregacji](../atl/changing-the-default-class-factory-and-aggregation-model.md)<br/>
 Pokaż makra, jakie można użyć, aby zmienić model fabryki i agregację klasy domyślne.
 
-[Tworzenie obiektu zagregowanego](../atl/creating-an-aggregated-object.md)  
+[Tworzenie obiektu zagregowanego](../atl/creating-an-aggregated-object.md)<br/>
 Lista czynności prowadzących do tworzenie obiektu zagregowanego.
 
 ## <a name="related-sections"></a>Sekcje pokrewne
 
-[Tworzenie projektu ATL](../atl/reference/creating-an-atl-project.md)  
+[Tworzenie projektu ATL](../atl/reference/creating-an-atl-project.md)<br/>
 Zawiera informacje dotyczące tworzenia obiektu ATL COM.
 
-[ATL](../atl/active-template-library-atl-concepts.md)  
+[ATL](../atl/active-template-library-atl-concepts.md)<br/>
 Zawiera łącza do tematów pojęciowych dotyczące programowania przy użyciu biblioteki Active Template Library.
 
 ## <a name="see-also"></a>Zobacz też

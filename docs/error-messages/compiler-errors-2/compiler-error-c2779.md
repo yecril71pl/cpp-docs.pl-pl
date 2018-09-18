@@ -1,5 +1,5 @@
 ---
-title: C2779 błąd kompilatora | Dokumentacja firmy Microsoft
+title: Błąd kompilatora C2779 | Dokumentacja firmy Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,27 +16,28 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ce1f16bd0e756895b0da98fd43d0d6b2fdee6e8f
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 43067c780accfea1d55f9fd9c9dbce69fe41a43a
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33233931"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46046787"
 ---
-# <a name="compiler-error-c2779"></a>C2779 błąd kompilatora
-"deklaracją": właściwość metod może być skojarzony tylko z elementami członkowskimi danych niestatycznych  
-  
- `property` Rozszerzonych atrybutów jest niepoprawnie zastosowano do elementu członkowskiego danych statycznych.  
-  
- Poniższy przykład generuje C2779:  
-  
-```  
-// C2779.cpp  
-struct A {  
-   static __declspec(property(put=PutProp))  
-   // try the following line instead  
-   __declspec(property(put=PutProp))  
-      int prop;   // C2779  
-   int PutProp(void);  
-};  
+# <a name="compiler-error-c2779"></a>Błąd kompilatora C2779
+
+"deklaracją": metody właściwości mogą być skojarzony tylko z danych niestatycznych elementów członkowskich
+
+`property` Atrybutów rozszerzonych niepoprawnie jest stosowany do składowej danych statycznych.
+
+Poniższy przykład spowoduje wygenerowanie C2779:
+
+```
+// C2779.cpp
+struct A {
+   static __declspec(property(put=PutProp))
+   // try the following line instead
+   __declspec(property(put=PutProp))
+      int prop;   // C2779
+   int PutProp(void);
+};
 ```
