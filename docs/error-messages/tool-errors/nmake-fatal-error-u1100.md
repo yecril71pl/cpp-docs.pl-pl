@@ -16,16 +16,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4d4ed57c980813c8539fbffed0e41a35048c0571
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 27ffd33a0a80056ee57f5f088823d7f8f6549c24
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33319621"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46135770"
 ---
 # <a name="nmake-fatal-error-u1100"></a>Błąd krytyczny NMAKE U1100
-Makro "makra" jest niedozwolony w kontekście reguły wsadowej "rule"  
-  
- NMAKE generuje ten błąd, gdy blok poleceń w trybie wsadowym reguły bezpośrednio lub pośrednio odwołuje się do makra specjalny plik, który nie jest $<.  
-  
- $< jest jedyną dozwoloną makra w trybie wsadowym reguł.
+
+Makro "makra" jest niedozwolone w kontekście reguły wsadowej "reguła"
+
+NMAKE generuje ten błąd, gdy blok poleceń reguły trybu wsadowego bezpośrednio lub pośrednio odwołuje się do makra specjalny plik, który nie jest $<.
+
+$< jest jedyną dozwoloną makro dla zasady dotyczące trybu partii.

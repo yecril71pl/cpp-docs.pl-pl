@@ -16,22 +16,23 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: da0db5c678b257e3039644627e958bd67b8e4e0a
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: fe111f84a5ebf056cb0a806e90cb660060bbf3b4
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33226407"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46135922"
 ---
 # <a name="fatal-error-c1053"></a>Błąd krytyczny C1053
-"\<identyfikator >": funkcja zbyt duża  
-  
- Funkcja jest za duży do skompilowania.  
-  
-### <a name="to-fix-by-using-the-following-possible-solutions"></a>Aby rozwiązać problem przy użyciu następujących możliwych rozwiązań  
-  
-1.  Spróbuj kompilowanie bez optymalizacji.  
-  
-2.  Dzielenie funkcji na mniejsze funkcji.  
-  
-3.  Zmniejsz wywołania funkcji śródwierszowych.
+
+"\<identyfikator >": funkcja zbyt duża
+
+Funkcja jest zbyt duży, aby skompilować.
+
+### <a name="to-fix-by-using-the-following-possible-solutions"></a>Aby rozwiązać problem, korzystając z poniższymi możliwymi rozwiązaniami
+
+1. Spróbuj skompilowanie bez optymalizacji.
+
+1. Funkcja należy podzielić na mniejsze.
+
+1. Ogranicz wywołania do funkcji śródwierszowych.

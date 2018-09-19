@@ -21,12 +21,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ef417232d62c664b4943a2198ae351a5c443b089
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 8fc187cea874d16522955dcd46c2ceac34d29098
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43763750"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46136169"
 ---
 # <a name="debugging-and-error-reporting-macros"></a>Makra debugowania i raportowania błędów
 
@@ -97,7 +97,7 @@ ATLASSERT(booleanExpression);
 
 ### <a name="parameters"></a>Parametry
 
-*booleanExpression*  
+*booleanExpression*<br/>
 Wyrażenie (w tym wskaźniki), zwraca wartość różną od zera lub równa 0.
 
 ### <a name="remarks"></a>Uwagi
@@ -119,10 +119,10 @@ ATLENSURE_THROW(booleanExpression, hr);
 
 ### <a name="parameters"></a>Parametry
 
-*booleanExpression*  
+*booleanExpression*<br/>
 Określa wyrażenie logiczne do zbadania.
 
-*godz.*  
+*godz.*<br/>
 Określa kod błędu do zwrócenia.
 
 ### <a name="remarks"></a>Uwagi
@@ -155,7 +155,7 @@ ATLTRACENOTIMPL(funcname);
 
 ### <a name="parameters"></a>Parametry
 
-*funcname*  
+*funcname*<br/>
 [in] Ciąg zawierający nazwę funkcji, która nie jest zaimplementowana.
 
 ### <a name="remarks"></a>Uwagi
@@ -185,16 +185,16 @@ ATLTRACE(
 
 ### <a name="parameters"></a>Parametry
 
-*EXP*  
+*EXP*<br/>
 [in] Parametry i zmienne, aby wysyłać w oknie danych wyjściowych programu Visual C++ lub inna aplikacja te komunikaty pułapek.
 
-*category*  
+*category*<br/>
 [in] Typ zdarzenia lub metody, na którym do raportu. Zobacz uwagi, aby uzyskać listę kategorii.
 
-*poziom*  
+*poziom*<br/>
 [in] Poziom śledzenia do raportu. Zobacz uwagi, aby uzyskać szczegółowe informacje.
 
-*lpszFormat*  
+*lpszFormat*<br/>
 [in] Sformatowany ciąg, aby wysłać do urządzenia zrzutu.
 
 ### <a name="remarks"></a>Uwagi
@@ -216,16 +216,16 @@ ATLTRACE2(
 
 ### <a name="parameters"></a>Parametry
 
-*EXP*  
+*EXP*<br/>
 [in] Ciąg do wysyłania do okna danych wyjściowych Visual C++ lub dowolnej aplikacji, która te komunikaty pułapek.
 
-*category*  
+*category*<br/>
 [in] Typ zdarzenia lub metody, na którym do raportu. Zobacz uwagi, aby uzyskać listę kategorii.
 
-*poziom*  
+*poziom*<br/>
 [in] Poziom śledzenia do raportu. Zobacz uwagi, aby uzyskać szczegółowe informacje.
 
-*lpszFormat*  
+*lpszFormat*<br/>
 [in] `printf`— Styl ciągu formatu służące do tworzenia ciągu, aby wysłać do urządzenia zrzutu.
 
 ### <a name="remarks"></a>Uwagi
@@ -295,5 +295,5 @@ ATLTRACE i ATLTRACE2 mają takie samo zachowanie, ATLTRACE jest włączone dla z
 
 ## <a name="see-also"></a>Zobacz też
 
-[Makra](../../atl/reference/atl-macros.md)   
+[Makra](../../atl/reference/atl-macros.md)<br/>
 [Funkcje globalne debugowania i raportowania błędów](../../atl/reference/debugging-and-error-reporting-global-functions.md)

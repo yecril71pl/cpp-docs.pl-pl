@@ -16,16 +16,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f000fa42357a299c943eda0cd5f8697aee138f4a
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: ee6164f20bbf91a8cb0b88d8a1333107f239d3f2
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33300595"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46136240"
 ---
 # <a name="linker-tools-warning-lnk4204"></a>Ostrzeżenie LNK4204 narzędzi konsolidatora
-"filename" nie ma informacji debugowania dla przywołującego modułu; Łączenie obiekt zostanie skonsolidowany bez informacji debugowania  
-  
- Plik PDB ma błędny podpis. Konsolidator będą w dalszym ciągu połączyć obiekt bez informacji debugowania. Można ponownie skompilować przy użyciu pliku obiektu [/zi](../../build/reference/z7-zi-zi-debug-information-format.md) opcji.  
-  
- LNK4204 może wystąpić, jeśli niektórych obiektów biblioteki odwołują się do pliku, który już nie istnieje. Może się to zdarzyć podczas odbudowywania rozwiązania, na przykład; Plik obiektu może być usunięte i nie odbudować z powodu błędu kompilacji. W takim przypadku albo kompilacji z **/z7**, lub **/Fd**, aby zaktualizować obiektów do odwoływania się do pojedynczego pliku dla biblioteki (który nie jest to domyślna nazwa pliku .pdb).  Aby uzyskać więcej informacji, zobacz [/Fd (nazwa pliku bazy danych programu)](../../build/reference/fd-program-database-file-name.md).  Upewnij się, że .pdb został zapisany z biblioteką za każdym razem, gdy jest aktualizowana w systemie kontroli źródła.
+
+"filename" nie ma informacji debugowania dla przywołującego modułu; skonsolidowany obiektu bez informacji debugowania
+
+Plik .pdb ma podpis błędne. Konsolidator będą w dalszym ciągu łącze obiektu bez informacji o debugowaniu. Chcesz ponownie skompilować przy użyciu pliku obiektu [/zi](../../build/reference/z7-zi-zi-debug-information-format.md) opcji.
+
+LNK4204 może wystąpić, jeśli niektórych obiektów biblioteki odnoszą się do pliku, który już nie istnieje. To może się zdarzyć, gdy ponownie skompilować rozwiązanie, np. Plik obiektu może być usunięty i nie zostanie ponownie skompilowany z powodu błędu kompilacji. W tym przypadku albo kompilacji z **/z7**, lub **/Fd**, aby zaktualizować obiektów do odwoływania się do pojedynczego pliku na biblioteki (który nie jest domyślna nazwa pliku .pdb).  Aby uzyskać więcej informacji, zobacz [/Fd (nazwa pliku bazy danych programu)](../../build/reference/fd-program-database-file-name.md).  Upewnij się, że .pdb zostaje zapisana wraz z biblioteki, za każdym razem, gdy jest on aktualizowany w systemie kontroli źródła.

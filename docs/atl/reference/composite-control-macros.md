@@ -18,12 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 656ede7c36fae4619cd356421a302b142a08ff19
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 352f3e5ebd9606cc355ea9af65739c3e17894298
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43761891"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46136299"
 ---
 # <a name="composite-control-macros"></a>Makra kontrolek złożonych
 
@@ -34,7 +34,7 @@ Te makra definiują mapy wychwytywania zdarzeń i zapisy.
 |[BEGIN_SINK_MAP](#begin_sink_map)|Oznacza początek Mapa ujścia zdarzeń dla kontrolek złożonych.|
 |[END_SINK_MAP](#end_sink_map)|Oznacza koniec Mapa ujścia zdarzeń dla kontrolek złożonych.|
 |[SINK_ENTRY](#sink_entry)|Wpis do mapy obiektu sink zdarzenia.|
-|[SINK_ENTRY_EX](#sink_entry_ex)|Wpis do mapy obiektu sink zdarzenia o dodatkowy parametr.| 
+|[SINK_ENTRY_EX](#sink_entry_ex)|Wpis do mapy obiektu sink zdarzenia o dodatkowy parametr.|
 |[SINK_ENTRY_EX_P](#sink_entry_ex)| (Visual Studio 2017) Podobnie jak SINK_ENTRY_EX z tą różnicą, że wykorzystuje wskaźnik iid.|
 |[SINK_ENTRY_INFO](#sink_entry_info)|Wpis mapy ujścia zdarzeń za pomocą informacji o typie ręcznie dostarczony do użytku z programem [IDispEventSimpleImpl](../../atl/reference/idispeventsimpleimpl-class.md).|
 |[SINK_ENTRY_INFO_P](#sink_entry_info)| (Visual Studio 2017) Podobnie jak SINK_ENTRY_INFO z tą różnicą, że wykorzystuje wskaźnik iid.|
@@ -53,7 +53,7 @@ BEGIN_SINK_MAP(_class)
 
 ### <a name="parameters"></a>Parametry
 
-*_CLASS*  
+*_CLASS*<br/>
 [in] Określa kontrolkę.
 
 ### <a name="example"></a>Przykład
@@ -90,13 +90,13 @@ SINK_ENTRY( id, dispid, fn )
 
 ### <a name="parameters"></a>Parametry
 
-*id*  
+*id*<br/>
 [in] Identyfikuje formant.
 
-*identyfikator DISPID*  
+*identyfikator DISPID*<br/>
 [in] Identyfikuje określone zdarzenie.
 
-*FN*  
+*FN*<br/>
 [in] Nazwa funkcji procedury obsługi zdarzeń. Tę funkcję, należy użyć `_stdcall` konwencji wywoływania i mają podpis odpowiedni styl dispinterface.
 
 ### <a name="example"></a>Przykład
@@ -118,19 +118,19 @@ SINK_ENTRY_EX_P( id, piid, dispid, fn ) // (Visual Studio 2017)
 
 ### <a name="parameters"></a>Parametry
 
-*id*  
+*id*<br/>
 [in] Identyfikuje formant.
 
-*IID*  
+*IID*<br/>
 [in] Identyfikuje interfejs ekspedycji.  
 
-*piid*  
+*piid*<br/>
 [in] Wskaźnik do interfejsu wysyłania.
 
-*identyfikator DISPID*  
+*identyfikator DISPID*<br/>
 [in] Identyfikuje określone zdarzenie.
 
-*FN*  
+*FN*<br/>
 [in] Nazwa funkcji procedury obsługi zdarzeń. Tę funkcję, należy użyć `_stdcall` konwencji wywoływania i mają podpis odpowiedni styl dispinterface.
 
 ### <a name="example"></a>Przykład
@@ -152,22 +152,22 @@ SINK_ENTRY_INFO_P( id, piid, dispid, fn, info ) // (Visual Studio 2017)
 
 ### <a name="parameters"></a>Parametry
 
-*id*  
+*id*<br/>
 [in] Liczba całkowita bez znaku identyfikacji źródła zdarzenia. Ta wartość musi odpowiadać *nID* parametru szablonu używany w pokrewnym [IDispEventSimpleImpl](../../atl/reference/idispeventsimpleimpl-class.md) klasy bazowej.
 
-*IID*  
+*IID*<br/>
 [in] W przypadku identyfikatora IID, który identyfikuje interfejs ekspedycji.  
 
-*piid*  
+*piid*<br/>
 [in] Wskaźnik do identyfikatora IID, który identyfikuje interfejs ekspedycji.
 
-*identyfikator DISPID*  
+*identyfikator DISPID*<br/>
 [in] Identyfikator DISPID identyfikujący określonego zdarzenia.
 
-*FN*  
+*FN*<br/>
 [in] Nazwa funkcji procedury obsługi zdarzeń. Tę funkcję, należy użyć `_stdcall` konwencji wywoływania i mają podpis odpowiedni styl dispinterface.
 
-*Informacje o*  
+*Informacje o*<br/>
 [in] Wpisz informacje o funkcji procedury obsługi zdarzeń. Informacje o tym typie znajduje się w formularzu wskaźnik do `_ATL_FUNC_INFO` struktury. CC_CDECL jest jedyną opcją, które są obsługiwane w Windows CE dla pola Konwencja WYWOŁANIA `_ATL_FUNC_INFO` struktury. Dowolna inna wartość nie jest obsługiwany związku z tym jego zachowanie jest niezdefiniowane.
 
 ### <a name="remarks"></a>Uwagi
@@ -176,5 +176,5 @@ Parametry makr pierwsze cztery są takie same jak w przypadku [SINK_ENTRY_EX](#s
 
 ## <a name="see-also"></a>Zobacz też
 
-[Makra](../../atl/reference/atl-macros.md)   
+[Makra](../../atl/reference/atl-macros.md)<br/>
 [Funkcje globalne kontrolek złożonych](../../atl/reference/composite-control-global-functions.md)

@@ -1,5 +1,5 @@
 ---
-title: C3904 błąd kompilatora | Dokumentacja firmy Microsoft
+title: Błąd kompilatora C3904 | Dokumentacja firmy Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,62 +16,65 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 86a1d0d51f407069cbed2139322ccc92d5cfeeb6
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 4453d39b93000116b3547ff5047e6837c8d34e6a
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33271882"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46135986"
 ---
-# <a name="compiler-error-c3904"></a>C3904 błąd kompilatora
-"property_accessor": należy określić numer parametrów  
-  
- Sprawdź liczbę parametrów w Twojej `get` i `set` metody względem właściwości wymiarów.  
-  
--   Liczba parametrów `get` metody musi być równa liczbie wymiarów właściwości lub dla nieindeksowanych właściwości miały wartość zero.  
-  
--   Liczba parametrów `set` metoda musi być jedną przekracza liczbę wymiarów właściwości.  
-  
- Aby uzyskać więcej informacji, zobacz [właściwości](../../windows/property-cpp-component-extensions.md).  
-  
-## <a name="example"></a>Przykład  
- Poniższy przykład generuje C3904.  
-  
-```  
-// C3904.cpp  
-// compile with: /clr /c  
-ref class X {  
-   property int P {  
-      // set  
-      void set();   // C3904  
-      // try the following line instead  
-      // void set(int);  
-  
-      // get  
-      int get(int, int);   // C3904  
-      // try the following line instead  
-      // int get();  
-   };  
-};  
-```  
-  
-## <a name="example"></a>Przykład  
- Poniższy przykład generuje C3904.  
-  
-```  
-// C3904b.cpp  
-// compile with: /clr /c  
-ref struct X {  
-   property int Q[double, double, float, float, void*, int] {  
-      // set  
-      void set(double, void*);   // C3904  
-      // try the following line instead  
-      // void set(double, double, float, float, void*, int, int);  
-  
-      // get  
-      int get();   // C3904  
-      // try the following line instead  
-      // int get(double, double, float, float, void*, int);  
-   }  
-};  
+# <a name="compiler-error-c3904"></a>Błąd kompilatora C3904
+
+"property_accessor": należy określić numer następującą liczbą parametrów:
+
+Sprawdź liczbę parametrów w swojej `get` i `set` metody względem właściwości wymiarów.
+
+- Liczba parametrów `get` metody musi być równa liczbie wymiarów właściwości lub mieć wartość zero dla właściwości nieindeksowanych.
+
+- Liczba parametrów `set` metody musi być większa niż liczba wymiarów właściwości.
+
+Aby uzyskać więcej informacji, zobacz [właściwość](../../windows/property-cpp-component-extensions.md).
+
+## <a name="example"></a>Przykład
+
+Poniższy przykład spowoduje wygenerowanie C3904.
+
+```
+// C3904.cpp
+// compile with: /clr /c
+ref class X {
+   property int P {
+      // set
+      void set();   // C3904
+      // try the following line instead
+      // void set(int);
+
+      // get
+      int get(int, int);   // C3904
+      // try the following line instead
+      // int get();
+   };
+};
+```
+
+## <a name="example"></a>Przykład
+
+Poniższy przykład spowoduje wygenerowanie C3904.
+
+```
+// C3904b.cpp
+// compile with: /clr /c
+ref struct X {
+   property int Q[double, double, float, float, void*, int] {
+      // set
+      void set(double, void*);   // C3904
+      // try the following line instead
+      // void set(double, double, float, float, void*, int, int);
+
+      // get
+      int get();   // C3904
+      // try the following line instead
+      // int get(double, double, float, float, void*, int);
+   }
+};
 ```

@@ -1,5 +1,5 @@
 ---
-title: C2295 błąd kompilatora | Dokumentacja firmy Microsoft
+title: Błąd kompilatora C2295 | Dokumentacja firmy Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,14 +16,15 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 17c4c112c56257b12ca56dddc63dc61f9c5ee9e6
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 689d5fa4a405503cd21d086e5c23f5d26aa8cdfb
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33168376"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46135892"
 ---
-# <a name="compiler-error-c2295"></a>C2295 błąd kompilatora
-znaki ucieczki "znak": jest niedozwolony w definicji makra  
-  
- Definicji makra nie może zawierać — sekwencja specjalna znakiem.
+# <a name="compiler-error-c2295"></a>Błąd kompilatora C2295
+
+poprzedzone znakiem zmiany znaczenia "character": jest niedozwolony w definicji makra
+
+Definicja makra nie może zawierać sekwencji wyjścia z określonego znaku.

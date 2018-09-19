@@ -1,5 +1,5 @@
 ---
-title: Kompilatora (poziom 4) ostrzeżenie C4714 | Dokumentacja firmy Microsoft
+title: Kompilator ostrzeżenie (poziom 4) C4714 | Dokumentacja firmy Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,55 +16,56 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f0f327e7ffc5d2fe00abe3c0845af10a846243bf
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: ecb9ecb1c73373ae96c92c911988a512e2173cec
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33295421"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46136104"
 ---
-# <a name="compiler-warning-level-4-c4714"></a>Kompilator C4714 ostrzegawcze (poziom 4)
-Funkcja "function" oznaczona jako __forceinline nie została wbudowana  
-  
- Dana funkcja zostały wybrane do rozszerzenie funkcji wbudowanej, ale nie wykonał kompilator ze śródwierszowaniem.  
-  
- Mimo że `__forceinline` silniejszych wskazuje do kompilatora niż `__inline`, ze śródwierszowaniem jest nadal wykonywane według uznania kompilatora, ale heurystyki nie są używane do określania korzyści z ze śródwierszowaniem tej funkcji.  
-  
- W niektórych przypadkach kompilator będzie niewyrównane konkretną funkcję mechaniczne ze względu na. Na przykład kompilator będzie niewyrównane:  
-  
--   Funkcja, jeśli spowodowałoby mieszanie zarówno SEH, jak i C++ EH.  
-  
--   Niektóre funkcje z kopią konstruować obiekty przekazany przez wartość po włączeniu - GX/EHs/EHa.  
-  
--   Funkcje, zwracając obiekt unwindable przez wartość po włączeniu - GX/EHs/EHa.  
-  
--   Funkcji w zestawie wbudowanym w przypadku kompilowania kodu bez - Og/Ox/O1/O2.  
-  
--   Funkcje za pomocą listy zmiennych argumentów.  
-  
--   Funkcja z **spróbuj** — instrukcja (C++, obsługa wyjątków).  
-  
- Poniższy przykład generuje C4714:  
-  
-```  
-// C4714.cpp  
-// compile with: /Ob1 /GX /W4  
-__forceinline void func1()  
-{  
-   try  
-   {  
-   }  
-   catch (...)  
-   {  
-   }  
-}  
-  
-void func2()  
-{  
-   func1();   // C4714  
-}  
-  
-int main()  
-{  
-}  
+# <a name="compiler-warning-level-4-c4714"></a>Kompilator ostrzeżenie (poziom 4) C4714
+
+funkcji "function" oznaczona jako __forceinline nie jest śródwierszowa
+
+Daną funkcję został wybrany dla wbudowane rozwijanie, ale kompilator nie wykonał wbudowanie.
+
+Mimo że `__forceinline` silniejsze wskazuje kompilatora niż `__inline`, wbudowanie jest nadal wykonywane według uznania kompilatora, ale nie Algorytm heurystyczny służą do określania korzyści związane z wbudowanie tej funkcji.
+
+W niektórych przypadkach kompilator będzie niewyrównane określonej funkcji mechanicznych powodów. Na przykład kompilator będzie niewyrównane:
+
+- Funkcja, przypadku mogłyby spowodować mieszanie SEH i EH w języku C++.
+
+- Niektóre funkcje z kopią skonstruowane obiekty przekazywane przez wartość, gdy - GX/EHs/EHa znajduje się na.
+
+- Funkcji zwracających odwracalnych obiektów według wartości, gdy - GX/EHs/EHa znajduje się na.
+
+- Funkcje w zestawie wbudowanym podczas kompilowania kodu bez - Og/Ox/O1/O2.
+
+- Funkcje o zmiennej liczbie argumentów.
+
+- Funkcja z **spróbuj** — instrukcja (C++ obsługę wyjątków).
+
+Poniższy przykład spowoduje wygenerowanie C4714:
+
+```
+// C4714.cpp
+// compile with: /Ob1 /GX /W4
+__forceinline void func1()
+{
+   try
+   {
+   }
+   catch (...)
+   {
+   }
+}
+
+void func2()
+{
+   func1();   // C4714
+}
+
+int main()
+{
+}
 ```

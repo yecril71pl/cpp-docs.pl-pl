@@ -54,12 +54,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c4fad0d6f5823a205490038755f9de4eef10eae8
-ms.sourcegitcommit: 7eadb968405bcb92ffa505e3ad8ac73483e59685
+ms.openlocfilehash: 8327442588a5ae5fa15ba37cc53b4f748fa0837d
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/23/2018
-ms.locfileid: "39208513"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46136312"
 ---
 # <a name="concurrencyfastmath-namespace-functions"></a>CONCURRENCY::fast_math, funkcje przestrzeni nazw
 ||||  
@@ -95,8 +95,8 @@ inline float acos(float _X) restrict(amp);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `_X`  
- Wartość zmiennoprzecinkowa  
+*_X*<br/>
+Wartość zmiennoprzecinkowa  
   
 ### <a name="return-value"></a>Wartość zwracana  
  Zwraca wartość cosinus argumentu  
@@ -109,8 +109,8 @@ inline float acosf(float _X) restrict(amp);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `_X`  
- Wartość zmiennoprzecinkowa  
+*_X*<br/>
+Wartość zmiennoprzecinkowa  
   
 ### <a name="return-value"></a>Wartość zwracana  
  Zwraca wartość cosinus argumentu  
@@ -123,8 +123,8 @@ inline float asin(float _X) restrict(amp);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `_X`  
- Wartość zmiennoprzecinkowa  
+*_X*<br/>
+Wartość zmiennoprzecinkowa  
   
 ### <a name="return-value"></a>Wartość zwracana  
  Zwraca wartość arcus sinus argumentu  
@@ -137,8 +137,8 @@ inline float asinf(float _X) restrict(amp);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `_X`  
- Wartość zmiennoprzecinkowa  
+*_X*<br/>
+Wartość zmiennoprzecinkowa  
   
 ### <a name="return-value"></a>Wartość zwracana  
  Zwraca wartość arcus sinus argumentu  
@@ -151,8 +151,8 @@ inline float atan(float _X) restrict(amp);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `_X`  
- Wartość zmiennoprzecinkowa  
+*_X*<br/>
+Wartość zmiennoprzecinkowa  
   
 ### <a name="return-value"></a>Wartość zwracana  
  Zwraca wartość arcus tangens argumentu  
@@ -167,11 +167,11 @@ inline float atan2(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `_Y`  
- Wartość zmiennoprzecinkowa  
+*_Y*<br/>
+Wartość zmiennoprzecinkowa  
   
- `_X`  
- Wartość zmiennoprzecinkowa  
+*_X*<br/>
+Wartość zmiennoprzecinkowa  
   
 ### <a name="return-value"></a>Wartość zwracana  
  Zwraca wartość arcus tangens dla _Y/_X  
@@ -186,11 +186,11 @@ inline float atan2f(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `_Y`  
- Wartość zmiennoprzecinkowa  
+*_Y*<br/>
+Wartość zmiennoprzecinkowa  
   
- `_X`  
- Wartość zmiennoprzecinkowa  
+*_X*<br/>
+Wartość zmiennoprzecinkowa  
   
 ### <a name="return-value"></a>Wartość zwracana  
  Zwraca wartość arcus tangens dla _Y/_X  
@@ -203,8 +203,8 @@ inline float atanf(float _X) restrict(amp);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `_X`  
- Wartość zmiennoprzecinkowa  
+*_X*<br/>
+Wartość zmiennoprzecinkowa  
   
 ### <a name="return-value"></a>Wartość zwracana  
  Zwraca wartość arcus tangens argumentu  
@@ -217,8 +217,8 @@ inline float ceil(float _X) restrict(amp);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `_X`  
- Wartość zmiennoprzecinkowa  
+*_X*<br/>
+Wartość zmiennoprzecinkowa  
   
 ### <a name="return-value"></a>Wartość zwracana  
  Zwraca limit argumentu  
@@ -231,8 +231,8 @@ inline float ceilf(float _X) restrict(amp);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `_X`  
- Wartość zmiennoprzecinkowa  
+*_X*<br/>
+Wartość zmiennoprzecinkowa  
   
 ### <a name="return-value"></a>Wartość zwracana  
  Zwraca limit argumentu  
@@ -245,8 +245,8 @@ inline float cosf(float _X) restrict(amp);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `_X`  
- Wartość zmiennoprzecinkowa  
+*_X*<br/>
+Wartość zmiennoprzecinkowa  
   
 ### <a name="return-value"></a>Wartość zwracana  
  Zwraca wartość funkcji cosinus argumentu  
@@ -259,8 +259,8 @@ inline float coshf(float _X) restrict(amp);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `_X`  
- Wartość zmiennoprzecinkowa  
+*_X*<br/>
+Wartość zmiennoprzecinkowa  
   
 ### <a name="return-value"></a>Wartość zwracana  
  Zwraca wartość funkcji cosinus hiperboliczny dla argumentu  
@@ -273,8 +273,8 @@ inline float cos(float _X) restrict(amp);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `_X`  
- Wartość zmiennoprzecinkowa  
+*_X*<br/>
+Wartość zmiennoprzecinkowa  
   
 ### <a name="return-value"></a>Wartość zwracana  
  Zwraca wartość funkcji cosinus argumentu  
@@ -287,8 +287,8 @@ inline float cosh(float _X) restrict(amp);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `_X`  
- Wartość zmiennoprzecinkowa  
+*_X*<br/>
+Wartość zmiennoprzecinkowa  
   
 ### <a name="return-value"></a>Wartość zwracana  
  Zwraca wartość funkcji cosinus hiperboliczny dla argumentu  
@@ -301,8 +301,8 @@ inline float exp(float _X) restrict(amp);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `_X`  
- Wartość zmiennoprzecinkowa  
+*_X*<br/>
+Wartość zmiennoprzecinkowa  
   
 ### <a name="return-value"></a>Wartość zwracana  
  Zwraca eksponentę argumentu  
@@ -315,8 +315,8 @@ inline float exp2(float _X) restrict(amp);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `_X`  
- Wartość zmiennoprzecinkowa  
+*_X*<br/>
+Wartość zmiennoprzecinkowa  
   
 ### <a name="return-value"></a>Wartość zwracana  
  Zwraca base 2 wykładniczego argumentu  
@@ -329,8 +329,8 @@ inline float exp2f(float _X) restrict(amp);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `_X`  
- Wartość zmiennoprzecinkowa  
+*_X*<br/>
+Wartość zmiennoprzecinkowa  
   
 ### <a name="return-value"></a>Wartość zwracana  
  Zwraca base 2 wykładniczego argumentu  
@@ -343,8 +343,8 @@ inline float expf(float _X) restrict(amp);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `_X`  
- Wartość zmiennoprzecinkowa  
+*_X*<br/>
+Wartość zmiennoprzecinkowa  
   
 ### <a name="return-value"></a>Wartość zwracana  
  Zwraca eksponentę argumentu  
@@ -357,8 +357,8 @@ inline float fabs(float _X) restrict(amp);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `_X`  
- Wartość całkowita  
+*_X*<br/>
+Wartość całkowita  
   
 ### <a name="return-value"></a>Wartość zwracana  
  Zwraca wartość bezwzględną argumentu  
@@ -371,8 +371,8 @@ inline float fabsf(float _X) restrict(amp);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `_X`  
- Wartość zmiennoprzecinkowa  
+*_X*<br/>
+Wartość zmiennoprzecinkowa  
   
 ### <a name="return-value"></a>Wartość zwracana  
  Zwraca wartość bezwzględną argumentu  
@@ -385,8 +385,8 @@ inline float floor(float _X) restrict(amp);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `_X`  
- Wartość zmiennoprzecinkowa  
+*_X*<br/>
+Wartość zmiennoprzecinkowa  
   
 ### <a name="return-value"></a>Wartość zwracana  
  Zwraca floor argumentu  
@@ -399,8 +399,8 @@ inline float floorf(float _X) restrict(amp);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `_X`  
- Wartość zmiennoprzecinkowa  
+*_X*<br/>
+Wartość zmiennoprzecinkowa  
   
 ### <a name="return-value"></a>Wartość zwracana  
  Zwraca floor argumentu  
@@ -415,11 +415,11 @@ inline float max(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `_X`  
- Wartość całkowita  
+*_X*<br/>
+Wartość całkowita  
   
- `_Y`  
- Wartość całkowita  
+*_Y*<br/>
+Wartość całkowita  
   
 ### <a name="return-value"></a>Wartość zwracana  
  Zwraca największą wartość liczbową z podanych argumentów  
@@ -434,11 +434,11 @@ inline float fmaxf(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `_X`  
- Wartość zmiennoprzecinkowa  
+*_X*<br/>
+Wartość zmiennoprzecinkowa  
   
- `_Y`  
- Wartość zmiennoprzecinkowa  
+*_Y*<br/>
+Wartość zmiennoprzecinkowa  
   
 ### <a name="return-value"></a>Wartość zwracana  
  Zwraca największą wartość liczbową z podanych argumentów  
@@ -453,11 +453,11 @@ inline float min(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `_X`  
- Wartość całkowita  
+*_X*<br/>
+Wartość całkowita  
   
- `_Y`  
- Wartość całkowita  
+*_Y*<br/>
+Wartość całkowita  
   
 ### <a name="return-value"></a>Wartość zwracana  
  Zwraca minimalną wartość liczbową argumentów  
@@ -472,11 +472,11 @@ inline float fminf(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `_X`  
- Wartość zmiennoprzecinkowa  
+*_X*<br/>
+Wartość zmiennoprzecinkowa  
   
- `_Y`  
- Wartość zmiennoprzecinkowa  
+*_Y*<br/>
+Wartość zmiennoprzecinkowa  
   
 ### <a name="return-value"></a>Wartość zwracana  
  Zwraca minimalną wartość liczbową argumentów  
@@ -491,11 +491,11 @@ inline float fmod(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `_X`  
- Wartość zmiennoprzecinkowa  
+*_X*<br/>
+Wartość zmiennoprzecinkowa  
   
- `_Y`  
- Wartość zmiennoprzecinkowa  
+*_Y*<br/>
+Wartość zmiennoprzecinkowa  
   
 ### <a name="return-value"></a>Wartość zwracana  
  Zwraca zmiennoprzecinkową resztę działania _X/_Y  
@@ -510,11 +510,11 @@ inline float fmodf(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `_X`  
- Wartość zmiennoprzecinkowa  
+*_X*<br/>
+Wartość zmiennoprzecinkowa  
   
- `_Y`  
- Wartość zmiennoprzecinkowa  
+*_Y*<br/>
+Wartość zmiennoprzecinkowa  
   
 ### <a name="return-value"></a>Wartość zwracana  
  Zwraca zmiennoprzecinkową resztę działania _X/_Y  
@@ -529,11 +529,11 @@ inline float frexp(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `_X`  
- Wartość zmiennoprzecinkowa  
+*_X*<br/>
+Wartość zmiennoprzecinkowa  
   
- `_Exp`  
- Zwraca wartość zmiennoprzecinkową całkowitą wykładnik _X  
+*_Exp*<br/>
+Zwraca wartość zmiennoprzecinkową całkowitą wykładnik _X  
   
 ### <a name="return-value"></a>Wartość zwracana  
  Zwraca _X mantysy  
@@ -548,11 +548,11 @@ inline float frexpf(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `_X`  
- Wartość zmiennoprzecinkowa  
+*_X*<br/>
+Wartość zmiennoprzecinkowa  
   
- `_Exp`  
- Zwraca wartość zmiennoprzecinkową całkowitą wykładnik _X  
+*_Exp*<br/>
+Zwraca wartość zmiennoprzecinkową całkowitą wykładnik _X  
   
 ### <a name="return-value"></a>Wartość zwracana  
  Zwraca _X mantysy  
@@ -565,8 +565,8 @@ inline int isfinite(float _X) restrict(amp);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `_X`  
- Wartość zmiennoprzecinkowa  
+*_X*<br/>
+Wartość zmiennoprzecinkowa  
   
 ### <a name="return-value"></a>Wartość zwracana  
  Zwraca wartość różną od zera, tylko wtedy, gdy argument ma skończoną wartość  
@@ -579,8 +579,8 @@ inline int isinf(float _X) restrict(amp);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `_X`  
- Wartość zmiennoprzecinkowa  
+*_X*<br/>
+Wartość zmiennoprzecinkowa  
   
 ### <a name="return-value"></a>Wartość zwracana  
  Zwraca wartość różną od zera, tylko wtedy, gdy argument ma wartość nieskończona  
@@ -593,8 +593,8 @@ inline int isnan(float _X) restrict(amp);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `_X`  
- Wartość zmiennoprzecinkowa  
+*_X*<br/>
+Wartość zmiennoprzecinkowa  
   
 ### <a name="return-value"></a>Wartość zwracana  
  Zwraca wartość różną od zera, tylko wtedy, gdy argument ma wartość NaN  
@@ -609,11 +609,11 @@ inline float ldexp(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `_X`  
- Wartość zmiennoprzecinkowa, mentissa  
+*_X*<br/>
+Wartość zmiennoprzecinkowa, mentissa  
   
- `_Exp`  
- Wykładnik potęgi liczby całkowitej  
+*_Exp*<br/>
+Wykładnik potęgi liczby całkowitej  
   
 ### <a name="return-value"></a>Wartość zwracana  
  Zwraca _X \* 2 ^ _Exp  
@@ -628,11 +628,11 @@ inline float ldexpf(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `_X`  
- Wartość zmiennoprzecinkowa, mentissa  
+*_X*<br/>
+Wartość zmiennoprzecinkowa, mentissa  
   
- `_Exp`  
- Wykładnik potęgi liczby całkowitej  
+*_Exp*<br/>
+Wykładnik potęgi liczby całkowitej  
   
 ### <a name="return-value"></a>Wartość zwracana  
  Zwraca _X \* 2 ^ _Exp  
@@ -645,8 +645,8 @@ inline float log(float _X) restrict(amp);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `_X`  
- Wartość zmiennoprzecinkowa  
+*_X*<br/>
+Wartość zmiennoprzecinkowa  
   
 ### <a name="return-value"></a>Wartość zwracana  
  Zwraca logarytm o podstawie base e argumentu  
@@ -659,8 +659,8 @@ inline float log10(float _X) restrict(amp);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `_X`  
- Wartość zmiennoprzecinkowa  
+*_X*<br/>
+Wartość zmiennoprzecinkowa  
   
 ### <a name="return-value"></a>Wartość zwracana  
  Zwraca logarytm o podstawie base 10 argumentu  
@@ -673,8 +673,8 @@ inline float log10f(float _X) restrict(amp);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `_X`  
- Wartość zmiennoprzecinkowa  
+*_X*<br/>
+Wartość zmiennoprzecinkowa  
   
 ### <a name="return-value"></a>Wartość zwracana  
  Zwraca logarytm o podstawie base 10 argumentu  
@@ -687,8 +687,8 @@ inline float log2(float _X) restrict(amp);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `_X`  
- Wartość zmiennoprzecinkowa  
+*_X*<br/>
+Wartość zmiennoprzecinkowa  
   
 ### <a name="return-value"></a>Wartość zwracana  
  Zwraca logarytm o podstawie 2 dla podanego argumentu  
@@ -701,8 +701,8 @@ inline float log2f(float _X) restrict(amp);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `_X`  
- Wartość zmiennoprzecinkowa  
+*_X*<br/>
+Wartość zmiennoprzecinkowa  
   
 ### <a name="return-value"></a>Wartość zwracana  
  Zwraca logarytm o podstawie base 10 argumentu  
@@ -715,8 +715,8 @@ inline float logf(float _X) restrict(amp);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `_X`  
- Wartość zmiennoprzecinkowa  
+*_X*<br/>
+Wartość zmiennoprzecinkowa  
   
 ### <a name="return-value"></a>Wartość zwracana  
  Zwraca logarytm o podstawie base e argumentu  
@@ -731,10 +731,11 @@ inline float modf(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `_X`  
- Wartość zmiennoprzecinkowa  
+*_X*<br/>
+Wartość zmiennoprzecinkowa  
   
- `_Ip`  
+*_Ip*<br/>
+Odbiera część całkowitą wartość  
   
 ### <a name="return-value"></a>Wartość zwracana  
  Zwraca część ułamkową ze znakiem _X  
@@ -749,10 +750,11 @@ inline float modff(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `_X`  
- Wartość zmiennoprzecinkowa  
+*_X*<br/>
+Wartość zmiennoprzecinkowa  
   
- `_Ip`  
+*_Ip*<br/>
+Odbiera część całkowitą wartość  
   
 ### <a name="return-value"></a>Wartość zwracana  
  Zwraca część ułamkową ze znakiem _X  
@@ -767,11 +769,11 @@ inline float pow(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `_X`  
- Wartość zmiennoprzecinkowa, podstawowy  
+*_X*<br/>
+Wartość zmiennoprzecinkowa, podstawowy  
   
- `_Y`  
- Wartość zmiennoprzecinkowa, wykładnika  
+*_Y*<br/>
+Wartość zmiennoprzecinkowa, wykładnika  
   
 ### <a name="return-value"></a>Wartość zwracana  
  Zwraca wartość _X podniesione do potęgi _y  
@@ -786,11 +788,11 @@ inline float powf(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `_X`  
- Wartość zmiennoprzecinkowa, podstawowy  
+*_X*<br/>
+Wartość zmiennoprzecinkowa, podstawowy  
   
- `_Y`  
- Wartość zmiennoprzecinkowa, wykładnika  
+*_Y*<br/>
+Wartość zmiennoprzecinkowa, wykładnika  
   
 ### <a name="return-value"></a>Wartość zwracana  
   
@@ -802,8 +804,8 @@ inline float round(float _X) restrict(amp);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `_X`  
- Wartość zmiennoprzecinkowa  
+*_X*<br/>
+Wartość zmiennoprzecinkowa  
   
 ### <a name="return-value"></a>Wartość zwracana  
  Zwraca liczbę całkowitą najbliższej _x  
@@ -816,8 +818,8 @@ inline float roundf(float _X) restrict(amp);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `_X`  
- Wartość zmiennoprzecinkowa  
+*_X*<br/>
+Wartość zmiennoprzecinkowa  
   
 ### <a name="return-value"></a>Wartość zwracana  
  Zwraca liczbę całkowitą najbliższej _x  
@@ -830,8 +832,8 @@ inline float rsqrt(float _X) restrict(amp);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `_X`  
- Wartość zmiennoprzecinkowa  
+*_X*<br/>
+Wartość zmiennoprzecinkowa  
   
 ### <a name="return-value"></a>Wartość zwracana  
  Zwraca odwrotność pierwiastek kwadratowy argumentu  
@@ -844,8 +846,8 @@ inline float rsqrtf(float _X) restrict(amp);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `_X`  
- Wartość zmiennoprzecinkowa  
+*_X*<br/>
+Wartość zmiennoprzecinkowa  
   
 ### <a name="return-value"></a>Wartość zwracana  
  Zwraca odwrotność pierwiastek kwadratowy argumentu  
@@ -858,8 +860,8 @@ inline int signbit(float _X) restrict(amp);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `_X`  
- Wartość zmiennoprzecinkowa  
+*_X*<br/>
+Wartość zmiennoprzecinkowa  
   
 ### <a name="return-value"></a>Wartość zwracana  
  Zwraca wartość różną od zera, tylko wtedy, gdy znak _X jest ujemna  
@@ -872,8 +874,8 @@ inline int signbitf(float _X) restrict(amp);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `_X`  
- Wartość zmiennoprzecinkowa  
+*_X*<br/>
+Wartość zmiennoprzecinkowa  
   
 ### <a name="return-value"></a>Wartość zwracana  
  Zwraca wartość różną od zera, tylko wtedy, gdy znak _X jest ujemna  
@@ -886,8 +888,8 @@ inline float sin(float _X) restrict(amp);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `_X`  
- Wartość zmiennoprzecinkowa  
+*_X*<br/>
+Wartość zmiennoprzecinkowa  
   
 ### <a name="return-value"></a>Wartość zwracana  
  Zwraca wartość funkcji sinus argumentu  
@@ -900,8 +902,8 @@ inline float sinf(float _X) restrict(amp);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `_X`  
- Wartość zmiennoprzecinkowa  
+*_X*<br/>
+Wartość zmiennoprzecinkowa  
   
 ### <a name="return-value"></a>Wartość zwracana  
  Zwraca wartość funkcji sinus argumentu  
@@ -917,14 +919,14 @@ inline void sincos(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `_X`  
- Wartość zmiennoprzecinkowa  
+*_X*<br/>
+Wartość zmiennoprzecinkowa  
   
- `_S`  
- Zwraca wartość funkcji sinus _X  
+*_S*<br/>
+Zwraca wartość funkcji sinus _X  
   
- `_C`  
- Zwraca wartość funkcji cosinus z _X  
+*_KOŃCE*<br/>
+Zwraca wartość funkcji cosinus z _X  
   
 ##  <a name="sincosf"></a>  sincosf —  
  Oblicza wartość funkcji sinus i cosinus z _X  
@@ -937,14 +939,14 @@ inline void sincosf(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `_X`  
- Wartość zmiennoprzecinkowa  
+*_X*<br/>
+Wartość zmiennoprzecinkowa  
   
- `_S`  
- Zwraca wartość funkcji sinus _X  
+*_S*<br/>
+Zwraca wartość funkcji sinus _X  
   
- `_C`  
- Zwraca wartość funkcji cosinus z _X  
+*_KOŃCE*<br/>
+Zwraca wartość funkcji cosinus z _X  
   
 ##  <a name="sinh"></a>  SINH  
  Oblicza wartość funkcji sinus hiperboliczny dla argumentu  
@@ -954,8 +956,8 @@ inline float sinh(float _X) restrict(amp);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `_X`  
- Wartość zmiennoprzecinkowa  
+*_X*<br/>
+Wartość zmiennoprzecinkowa  
   
 ### <a name="return-value"></a>Wartość zwracana  
  Zwraca sinus hiperboliczny wartość argumentu  
@@ -968,8 +970,8 @@ inline float sinhf(float _X) restrict(amp);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `_X`  
- Wartość zmiennoprzecinkowa  
+*_X*<br/>
+Wartość zmiennoprzecinkowa  
   
 ### <a name="return-value"></a>Wartość zwracana  
  Zwraca sinus hiperboliczny wartość argumentu  
@@ -982,8 +984,8 @@ inline float sqrt(float _X) restrict(amp);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `_X`  
- Wartość zmiennoprzecinkowa  
+*_X*<br/>
+Wartość zmiennoprzecinkowa  
   
 ### <a name="return-value"></a>Wartość zwracana  
  Zwraca katalog główny squre argumentu  
@@ -996,8 +998,8 @@ inline float sqrtf(float _X) restrict(amp);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `_X`  
- Wartość zmiennoprzecinkowa  
+*_X*<br/>
+Wartość zmiennoprzecinkowa  
   
 ### <a name="return-value"></a>Wartość zwracana  
  Zwraca katalog główny squre argumentu  
@@ -1010,8 +1012,8 @@ inline float tan(float _X) restrict(amp);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `_X`  
- Wartość zmiennoprzecinkowa  
+*_X*<br/>
+Wartość zmiennoprzecinkowa  
   
 ### <a name="return-value"></a>Wartość zwracana  
  Zwraca wartość funkcji tangens argumentu  
@@ -1024,8 +1026,8 @@ inline float tanf(float _X) restrict(amp);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `_X`  
- Wartość zmiennoprzecinkowa  
+*_X*<br/>
+Wartość zmiennoprzecinkowa  
   
 ### <a name="return-value"></a>Wartość zwracana  
  Zwraca wartość funkcji tangens argumentu  
@@ -1038,8 +1040,8 @@ inline float tanh(float _X) restrict(amp);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `_X`  
- Wartość zmiennoprzecinkowa  
+*_X*<br/>
+Wartość zmiennoprzecinkowa  
   
 ### <a name="return-value"></a>Wartość zwracana  
  Zwraca wartość funkcji tangens hiperboliczny dla argumentu  
@@ -1052,8 +1054,8 @@ inline float tanhf(float _X) restrict(amp);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `_X`  
- Wartość zmiennoprzecinkowa  
+*_X*<br/>
+Wartość zmiennoprzecinkowa  
   
 ### <a name="return-value"></a>Wartość zwracana  
  Zwraca wartość funkcji tangens hiperboliczny dla argumentu  
@@ -1066,8 +1068,8 @@ inline float trunc(float _X) restrict(amp);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `_X`  
- Wartość zmiennoprzecinkowa  
+*_X*<br/>
+Wartość zmiennoprzecinkowa  
   
 ### <a name="return-value"></a>Wartość zwracana  
  Zwraca liczbę całkowitą argumentu  
@@ -1080,8 +1082,8 @@ inline float truncf(float _X) restrict(amp);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `_X`  
- Wartość zmiennoprzecinkowa  
+*_X*<br/>
+Wartość zmiennoprzecinkowa  
   
 ### <a name="return-value"></a>Wartość zwracana  
  Zwraca liczbę całkowitą argumentu  

@@ -32,30 +32,33 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 141e261af618cc6058a2a731b70e824582be303b
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 3c9dd8af9b55ab022277737f2349b27eb257810f
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32386498"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46135870"
 ---
 # <a name="acmdln-tcmdln-wcmdln"></a>_acmdln, _tcmdln, _wcmdln
-Zmienna wewnętrzna, CRT globalnego. Wiersz polecenia.  
-  
-## <a name="syntax"></a>Składnia  
-  
-```  
-char * _acmdln;  
-wchar_t * _wcmdln;  
-  
-#ifdef WPRFLAG  
-   #define _tcmdln _wcmdln  
-#else  
-   #define _tcmdln _acmdln  
-```  
-  
-## <a name="remarks"></a>Uwagi  
- Te zmienne wewnętrzny CRT przechowywać pełny wiersz polecenia. One są widoczne w wyeksportowanej symbole dla CRT, ale nie są przeznaczone do użycia w kodzie. `_acmdln` przechowuje dane w postaci ciągu znaków. `_wcmdln` przechowuje dane w postaci ciągu znaków dwubajtowych. `_tcmdln` można zdefiniować jako `_acmdln` lub `_wcmdln`w oparciu o który jest odpowiedni.  
-  
-## <a name="see-also"></a>Zobacz też  
- [Zmienne globalne](../c-runtime-library/global-variables.md)
+
+Wewnętrzny CRT zmiennej globalnej. Wiersz polecenia.
+
+## <a name="syntax"></a>Składnia
+
+```
+char * _acmdln;
+wchar_t * _wcmdln;
+
+#ifdef WPRFLAG
+   #define _tcmdln _wcmdln
+#else
+   #define _tcmdln _acmdln
+```
+
+## <a name="remarks"></a>Uwagi
+
+Te zmienne wewnętrznego CRT przechowywać cały wiersz polecenia. One są udostępniane w symbolach wyeksportowany do CRT, ale nie są przeznaczone do użycia w kodzie. `_acmdln` przechowuje dane jako ciąg znaków. `_wcmdln` przechowuje dane jako ciąg znaków dwubajtowych. `_tcmdln` można zdefiniować jako `_acmdln` lub `_wcmdln`, w których jest właściwy zależności.
+
+## <a name="see-also"></a>Zobacz też
+
+[Zmienne globalne](../c-runtime-library/global-variables.md)

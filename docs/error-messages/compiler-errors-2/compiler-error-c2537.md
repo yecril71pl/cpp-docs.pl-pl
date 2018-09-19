@@ -1,5 +1,5 @@
 ---
-title: C2537 błąd kompilatora | Dokumentacja firmy Microsoft
+title: Błąd kompilatora C2537 | Dokumentacja firmy Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,27 +16,28 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6100f77d3a1487bfa1eb12a78ac8187cec43fe64
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 65db4fa66d147cc46c1a6013d07048892dfa0800
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33199960"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46136026"
 ---
-# <a name="compiler-error-c2537"></a>C2537 błąd kompilatora
-"specyfikatora": Niedozwolona specyfikacja powiązania  
-  
- Możliwe przyczyny:  
-  
-1.  Specyfikator połączenie nie jest obsługiwane. Obsługiwane jest tylko specyfikator powiązania "C".  
-  
-2.  Powiązania "C" określono więcej niż jedną funkcję w zestawie przeciążonej funkcji. Jest to niedozwolone.  
-  
- Poniższy przykład generuje C2537:  
-  
-```  
-// C2537.cpp  
-// compile with: /c  
-extern "c" void func();   // C2537  
-extern "C" void func2();   // OK  
+# <a name="compiler-error-c2537"></a>Błąd kompilatora C2537
+
+"specyfikatora": Niedozwolona specyfikacja powiązania
+
+Możliwe przyczyny:
+
+1. Specyfikator powiązania nie jest obsługiwane. Obsługiwane jest tylko specyfikator powiązania "C".
+
+1. Powiązania "C" określono więcej niż jedną funkcję w zestaw przeciążonych funkcji. Jest to niedozwolone.
+
+Poniższy przykład spowoduje wygenerowanie C2537:
+
+```
+// C2537.cpp
+// compile with: /c
+extern "c" void func();   // C2537
+extern "C" void func2();   // OK
 ```

@@ -30,12 +30,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c21ce766ed809a93ccf617ab1f76c438ac5be829
-ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
+ms.openlocfilehash: a4a62f6e569e123b9612e922e2d7c70787371afc
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "42466350"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46136182"
 ---
 # <a name="context-class"></a>Context — Klasa
 Reprezentuje klasą abstrakcyjną dla kontekstu wykonywania.  
@@ -210,8 +210,8 @@ void operator delete(void* _PObject);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `_PObject`  
- Wskaźnik do obiektu, który ma zostać usunięty.  
+*_PObject*<br/>
+Wskaźnik do obiektu, który ma zostać usunięty.  
   
 ##  <a name="oversubscribe"></a> Oversubscribe 
 
@@ -222,8 +222,8 @@ static void __cdecl Oversubscribe(bool _BeginOversubscription);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `_BeginOversubscription`  
- Jeśli `true`, wskazanie, że procesor dodatkowe wirtualne powinny zostać dodane w czasie trwania nadsubskrypcji. Jeśli `false`, wskazanie, że nadsubskrypcja należy zakończyć i uprzednio dodanych procesora wirtualnego, które powinny zostać usunięte.  
+*_BeginOversubscription*<br/>
+Jeśli `true`, wskazanie, że procesor dodatkowe wirtualne powinny zostać dodane w czasie trwania nadsubskrypcji. Jeśli `false`, wskazanie, że nadsubskrypcja należy zakończyć i uprzednio dodanych procesora wirtualnego, które powinny zostać usunięte.  
   
 ##  <a name="schedulegroupid"></a> ScheduleGroupId 
 

@@ -62,12 +62,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1e680bf4c84087db90c794c772f58691a5b2932d
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: c3157db05d183ab9ada2ad53443ca5b20bcfbcba
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43754642"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46136325"
 ---
 # <a name="caccesstoken-class"></a>Klasa CAccessToken
 
@@ -160,7 +160,7 @@ void Attach(HANDLE hToken) throw();
 
 ### <a name="parameters"></a>Parametry
 
-*hToken*  
+*hToken*<br/>
 Dojście do tokena dostępu.
 
 ### <a name="remarks"></a>Uwagi
@@ -191,10 +191,10 @@ bool CheckTokenMembership(
 
 ### <a name="parameters"></a>Parametry
 
-*rSid*  
+*rSid*<br/>
 Odwołanie do [klasa CSid](../../atl/reference/csid-class.md) obiektu.
 
-*pbIsMember*  
+*pbIsMember*<br/>
 Wskaźnik do zmiennej, która otrzymuje wyniki sprawdzania.
 
 ### <a name="return-value"></a>Wartość zwracana
@@ -222,10 +222,10 @@ bool CreateImpersonationToken(
 
 ### <a name="parameters"></a>Parametry
 
-*pImp*  
+*pImp*<br/>
 Wskaźnik do nowego `CAccessToken` obiektu.
 
-*Program Sil*  
+*Program Sil*<br/>
 Określa [SECURITY_IMPERSONATION_LEVEL](/windows/desktop/api/winnt/ne-winnt-_security_impersonation_level) wyliczany typ, który dostarcza poziom personifikacji nowy token.
 
 ### <a name="return-value"></a>Wartość zwracana
@@ -249,13 +249,13 @@ bool CreatePrimaryToken(
 
 ### <a name="parameters"></a>Parametry
 
-*pPri*  
+*pPri*<br/>
 Wskaźnik do nowego `CAccessToken` obiektu.
 
-*dwDesiredAccess*  
+*dwDesiredAccess*<br/>
 Określa prawa dostępu do żądanego dla nowego tokenu. Domyślnie MAXIMUM_ALLOWED, żąda wszystkie prawa dostępu, które są prawidłowe dla obiektu wywołującego. Zobacz [prawa dostępu i maski dostępu](/windows/desktop/SecAuthZ/access-rights-and-access-masks) więcej włączone prawa dostępu.
 
-*pTokenAttributes*  
+*pTokenAttributes*<br/>
 Wskaźnik do [SECURITY_ATTRIBUTES](https://msdn.microsoft.com/library/windows/desktop/aa379560) struktura, która określa deskryptora zabezpieczeń dla nowego tokenu i określa, czy procesy podrzędne mogą dziedziczyć token. Jeśli *pTokenAttributes* ma wartość NULL, token pobiera domyślny deskryptor zabezpieczeń i nie może być dziedziczona uchwytu.
 
 ### <a name="return-value"></a>Wartość zwracana
@@ -286,34 +286,34 @@ bool CreateProcessAsUser(
 
 ### <a name="parameters"></a>Parametry
 
-*pApplicationName*  
+*pApplicationName*<br/>
 Wskaźnik na ciąg zakończony znakiem null Określa moduł do wykonania. Ten parametr nie może być NULL.
 
-*pCommandLine*  
+*pCommandLine*<br/>
 Wskaźnik na ciąg zakończony znakiem null, który określa wiersz poleceń do wykonania.
 
-*pProcessInformation*  
+*pProcessInformation*<br/>
 Wskaźnik do [PROCESS_INFORMATION](/windows/desktop/api/processthreadsapi/ns-processthreadsapi-_process_information) strukturę, która otrzymuje informacje identyfikacyjne dotyczące nowego procesu.
 
-*pStartupInfo*  
+*pStartupInfo*<br/>
 Wskaźnik do [STARTUPINFO](/windows/desktop/api/processthreadsapi/ns-processthreadsapi-_startupinfoa) strukturę, która określa, jak powinno pojawić się główne okno nowy proces.
 
-*dwCreationFlags*  
+*dwCreationFlags*<br/>
 Określa dodatkowe flagi, priorytet i utworzenia procesu. Zobacz opis funkcji Win32 [CreateProcessAsUser](https://msdn.microsoft.com/library/windows/desktop/ms682429) listę flag.
 
-*bLoadProfile*  
+*bLoadProfile*<br/>
 W przypadku opcji TRUE profil użytkownika jest ładowany z [LoadUserProfile](/windows/desktop/api/userenv/nf-userenv-loaduserprofilea).
 
-*pProcessAttributes*  
+*pProcessAttributes*<br/>
 Wskaźnik do [SECURITY_ATTRIBUTES](https://msdn.microsoft.com/library/windows/desktop/aa379560) struktura, która określa deskryptora zabezpieczeń dla nowego procesu i określa, czy procesy podrzędne mogą dziedziczyć zwracany uchwyt. Jeśli *pProcessAttributes* ma wartość NULL, proces pobiera domyślny deskryptor zabezpieczeń i nie może być dziedziczona uchwytu.
 
-*pThreadAttributes*  
+*pThreadAttributes*<br/>
 Wskaźnik do [SECURITY_ATTRIBUTES](https://msdn.microsoft.com/library/windows/desktop/aa379560) struktura, która określa deskryptora zabezpieczeń dla nowego wątku i określa, czy procesy podrzędne mogą dziedziczyć zwracany uchwyt. Jeśli *pThreadAttributes* ma wartość NULL, wątek pobiera domyślny deskryptor zabezpieczeń i nie może być dziedziczona uchwytu.
 
-*bInherit*  
+*bInherit*<br/>
 Wskazuje, czy nowy proces dziedziczy dojść procesu wywołującego. W przypadku opcji TRUE każdy dziedziczne otwarte dojście w proces wywołujący jest dziedziczona przez nowy proces. Uchwyty odziedziczone mają takie same uprawnienia wartość i dostępem jako oryginalnego obsługuje.
 
-*pCurrentDirectory*  
+*pCurrentDirectory*<br/>
 Wskaźnik na ciąg zakończony znakiem null, który określa bieżący dysk i katalog dla nowego procesu. Ciąg musi być pełną ścieżką, która zawiera literę dysku. Jeśli ten parametr ma wartość NULL, nowy proces, będzie miał ten sam bieżącego dysku i katalogu jako procesu wywołującego.
 
 ### <a name="return-value"></a>Wartość zwracana
@@ -340,16 +340,16 @@ bool CreateRestrictedToken(
 
 ### <a name="parameters"></a>Parametry
 
-*pRestrictedToken*  
+*pRestrictedToken*<br/>
 Nowe, ograniczeniami `CAccessToken` obiektu.
 
-*: SidsToDisable*  
+*: SidsToDisable*<br/>
 A `CTokenGroups` obiekt, który określa tylko odmowa identyfikatory SID.
 
-*SidsToRestrict*  
+*SidsToRestrict*<br/>
 A `CTokenGroups` obiekt, który określa ograniczenie identyfikatory SID.
 
-*PrivilegesToDelete*  
+*PrivilegesToDelete*<br/>
 A `CTokenPrivileges` obiekt, który określa uprawnienia do usunięcia w tokenu ograniczone. Domyślnie tworzy pustego obiektu.
 
 ### <a name="return-value"></a>Wartość zwracana
@@ -391,10 +391,10 @@ bool DisablePrivilege(
 
 ### <a name="parameters"></a>Parametry
 
-*pszPrivilege*  
+*pszPrivilege*<br/>
 Wskaźnik do ciągu zawierającego uprawnień, aby wyłączyć w `CAccessToken` obiektu.
 
-*pPreviousState*  
+*pPreviousState*<br/>
 Wskaźnik do `CTokenPrivileges` obiektu, który będzie zawierać poprzedni stan uprawnienia.
 
 ### <a name="return-value"></a>Wartość zwracana
@@ -413,10 +413,10 @@ bool DisablePrivileges(
 
 ### <a name="parameters"></a>Parametry
 
-*rPrivileges*  
+*rPrivileges*<br/>
 Wskaźnik na tablicę ciągów, które zawierają uprawnień, aby wyłączyć w `CAccessToken` obiektu.
 
-*pPreviousState*  
+*pPreviousState*<br/>
 Wskaźnik do `CTokenPrivileges` obiektu, który będzie zawierać poprzedni stan uprawnienia.
 
 ### <a name="return-value"></a>Wartość zwracana
@@ -435,10 +435,10 @@ bool EnablePrivilege(
 
 ### <a name="parameters"></a>Parametry
 
-*pszPrivilege*  
+*pszPrivilege*<br/>
 Wskaźnik do ciągu zawierającego uprawnień do włączenia w `CAccessToken` obiektu.
 
-*pPreviousState*  
+*pPreviousState*<br/>
 Wskaźnik do `CTokenPrivileges` obiektu, który będzie zawierać poprzedni stan uprawnienia.
 
 ### <a name="return-value"></a>Wartość zwracana
@@ -457,10 +457,10 @@ bool EnablePrivileges(
 
 ### <a name="parameters"></a>Parametry
 
-*rPrivileges*  
+*rPrivileges*<br/>
 Wskaźnik na tablicę ciągów, które zawierają uprawnień do włączenia w `CAccessToken` obiektu.
 
-*pPreviousState*  
+*pPreviousState*<br/>
 Wskaźnik do `CTokenPrivileges` obiektu, który będzie zawierać poprzedni stan uprawnienia.
 
 ### <a name="return-value"></a>Wartość zwracana
@@ -477,7 +477,7 @@ bool GetDefaultDacl(CDacl* pDacl) const throw(...);
 
 ### <a name="parameters"></a>Parametry
 
-*pDacl*  
+*pDacl*<br/>
 Wskaźnik do [klasa CDacl](../../atl/reference/cdacl-class.md) obiektu, który otrzyma `CAccessToken` obiektu domyślnej listy DACL.
 
 ### <a name="return-value"></a>Wartość zwracana
@@ -494,7 +494,7 @@ bool GetEffectiveToken(DWORD dwDesiredAccess) throw();
 
 ### <a name="parameters"></a>Parametry
 
-*dwDesiredAccess*  
+*dwDesiredAccess*<br/>
 Określa maskę dostępu określająca żądany typ dostępu do tokena dostępu. Te typy żądanego dostępu są porównywane z listy DACL tokenu, aby określić, których dostępów do udzielono lub odmówiono.
 
 ### <a name="return-value"></a>Wartość zwracana
@@ -511,7 +511,7 @@ bool GetGroups(CTokenGroups* pGroups) const throw(...);
 
 ### <a name="parameters"></a>Parametry
 
-*pGroups*  
+*pGroups*<br/>
 Wskaźnik do [klasa CTokenGroups](../../atl/reference/ctokengroups-class.md) obiektu, który otrzyma informacje o grupie.
 
 ### <a name="return-value"></a>Wartość zwracana
@@ -541,7 +541,7 @@ bool GetImpersonationLevel(
 
 ### <a name="parameters"></a>Parametry
 
-*pImpersonationLevel*  
+*pImpersonationLevel*<br/>
 Wskaźnik do [SECURITY_IMPERSONATION_LEVEL](/windows/desktop/api/winnt/ne-winnt-_security_impersonation_level) typ wyliczeniowy, który otrzyma informacje o poziomie personifikacji.
 
 ### <a name="return-value"></a>Wartość zwracana
@@ -558,7 +558,7 @@ bool GetLogonSessionId(LUID* pluid) const throw(...);
 
 ### <a name="parameters"></a>Parametry
 
-*pluid*  
+*pluid*<br/>
 Wskaźnik do [LUID](/windows/desktop/api/winnt/ns-winnt-_luid) której zostanie wyświetlony identyfikator sesji logowania.
 
 ### <a name="return-value"></a>Wartość zwracana
@@ -579,7 +579,7 @@ bool GetLogonSid(CSid* pSid) const throw(...);
 
 ### <a name="parameters"></a>Parametry
 
-*pSid*  
+*pSid*<br/>
 Wskaźnik do [klasa CSid](../../atl/reference/csid-class.md) obiektu.
 
 ### <a name="return-value"></a>Wartość zwracana
@@ -600,7 +600,7 @@ bool GetOwner(CSid* pSid) const throw(...);
 
 ### <a name="parameters"></a>Parametry
 
-*pSid*  
+*pSid*<br/>
 Wskaźnik do [klasa CSid](../../atl/reference/csid-class.md) obiektu.
 
 ### <a name="return-value"></a>Wartość zwracana
@@ -621,7 +621,7 @@ bool GetPrimaryGroup(CSid* pSid) const throw(...);
 
 ### <a name="parameters"></a>Parametry
 
-*pSid*  
+*pSid*<br/>
 Wskaźnik do [klasa CSid](../../atl/reference/csid-class.md) obiektu.
 
 ### <a name="return-value"></a>Wartość zwracana
@@ -642,7 +642,7 @@ bool GetPrivileges(CTokenPrivileges* pPrivileges) const throw(...);
 
 ### <a name="parameters"></a>Parametry
 
-*pPrivileges*  
+*pPrivileges*<br/>
 Wskaźnik do [klasa CTokenPrivileges](../../atl/reference/ctokenprivileges-class.md) obiektu, który otrzyma uprawnienia.
 
 ### <a name="return-value"></a>Wartość zwracana
@@ -659,10 +659,10 @@ bool GetProcessToken(DWORD dwDesiredAccess, HANDLE hProcess = NULL) throw();
 
 ### <a name="parameters"></a>Parametry
 
-*dwDesiredAccess*  
+*dwDesiredAccess*<br/>
 Określa maskę dostępu określająca żądany typ dostępu do tokena dostępu. Te typy żądanego dostępu są porównywane z listy DACL tokenu, aby określić, których dostępów do udzielono lub odmówiono.
 
-*hProcess*  
+*hProcess*<br/>
 Dojście do procesu, którego token dostępu jest otwarty. Jeśli jest używana domyślna wartość NULL, jest używany bieżący proces.
 
 ### <a name="return-value"></a>Wartość zwracana
@@ -695,7 +695,7 @@ bool GetSource(TOKEN_SOURCE* pSource) const throw(...);
 
 ### <a name="parameters"></a>Parametry
 
-*pSource*  
+*pSource*<br/>
 Wskaźnik do [TOKEN_SOURCE](/windows/desktop/api/winnt/ns-winnt-_token_source) struktury.
 
 ### <a name="return-value"></a>Wartość zwracana
@@ -712,7 +712,7 @@ bool GetStatistics(TOKEN_STATISTICS* pStatistics) const throw(...);
 
 ### <a name="parameters"></a>Parametry
 
-*pStatistics*  
+*pStatistics*<br/>
 Wskaźnik do [TOKEN_STATISTICS](/windows/desktop/api/winnt/ns-winnt-_token_statistics) struktury.
 
 ### <a name="return-value"></a>Wartość zwracana
@@ -729,7 +729,7 @@ bool GetTerminalServicesSessionId(DWORD* pdwSessionId) const throw(...);
 
 ### <a name="parameters"></a>Parametry
 
-*pdwSessionId*  
+*pdwSessionId*<br/>
 Identyfikator sesji usług terminalowych.
 
 ### <a name="return-value"></a>Wartość zwracana
@@ -749,13 +749,13 @@ bool GetThreadToken(
 
 ### <a name="parameters"></a>Parametry
 
-*dwDesiredAccess*  
+*dwDesiredAccess*<br/>
 Określa maskę dostępu określająca żądany typ dostępu do tokena dostępu. Te typy żądanego dostępu są porównywane z listy DACL tokenu, aby określić, których dostępów do udzielono lub odmówiono.
 
-*hThread*  
+*hThread*<br/>
 Uchwyt do wątku, którego token dostępu jest otwarty.
 
-*bOpenAsSelf*  
+*bOpenAsSelf*<br/>
 Wskazuje, czy kontroli dostępu ma zostać wykonane w stosunku do kontekstu zabezpieczeń wywołania wątku `GetThreadToken` metody lub dla kontekstu zabezpieczeń procesu wywołującego wątku.
 
 Jeśli ten parametr ma wartość FALSE, kontrolę dostępu odbywa się za pomocą kontekstu zabezpieczeń dla wątku wywołującego. Jeśli wątek nie personifikuje klienta, ten kontekst zabezpieczeń może być procesu klienta. Jeśli ten parametr ma wartość TRUE, kontroli dostępu jest tworzone za pomocą kontekstu zabezpieczeń procesu wywołującego wątku.
@@ -774,7 +774,7 @@ bool GetTokenId(LUID* pluid) const throw(...);
 
 ### <a name="parameters"></a>Parametry
 
-*pluid*  
+*pluid*<br/>
 Wskaźnik do [LUID](/windows/desktop/api/winnt/ns-winnt-_luid) który otrzyma tokenu identyfikatora.
 
 ### <a name="return-value"></a>Wartość zwracana
@@ -791,7 +791,7 @@ bool GetType(TOKEN_TYPE* pType) const throw(...);
 
 ### <a name="parameters"></a>Parametry
 
-*pType*  
+*pType*<br/>
 Adres [TOKEN_TYPE](/windows/desktop/api/winnt/ne-winnt-_token_type) zmiennej, która w przypadku powodzenia otrzymuje typ tokenu.
 
 ### <a name="return-value"></a>Wartość zwracana
@@ -812,7 +812,7 @@ bool GetUser(CSid* pSid) const throw(...);
 
 ### <a name="parameters"></a>Parametry
 
-*pSid*  
+*pSid*<br/>
 Wskaźnik do [klasa CSid](../../atl/reference/csid-class.md) obiektu.
 
 ### <a name="return-value"></a>Wartość zwracana
@@ -841,7 +841,7 @@ bool Impersonate(HANDLE hThread = NULL) const throw(...);
 
 ### <a name="parameters"></a>Parametry
 
-*hThread*  
+*hThread*<br/>
 Uchwyt do wątku, który można przypisać token personifikacji, aby. Tego dojścia musi otworzyć przy użyciu TOKEN_IMPERSONATE praw dostępu. Jeśli *hThread* ma wartość NULL, metoda powoduje, że wątek przestać korzystać z tokenu personifikacji.
 
 ### <a name="return-value"></a>Wartość zwracana
@@ -914,19 +914,19 @@ bool LogonUser(
 
 ### <a name="parameters"></a>Parametry
 
-*pszUserName*  
+*pszUserName*<br/>
 Wskaźnik na ciąg zakończony znakiem null, który określa nazwę użytkownika. Jest to nazwa konta użytkownika, aby zalogować się do.
 
-*pszDomain*  
+*pszDomain*<br/>
 Wskaźnik na ciąg zakończony znakiem null, który określa nazwę domeny lub serwer, którego konto bazy danych zawiera *pszUserName* konta.
 
-*pszPassword*  
+*pszPassword*<br/>
 Wskaźnik na ciąg zakończony znakiem null, który określa hasło zwykłego tekstu dla konta użytkownika określonego przez *pszUserName*.
 
-*dwLogonType*  
+*dwLogonType*<br/>
 Określa typ operacji logowania do wykonania. Zobacz [funkcji LogonUser](/windows/desktop/api/winbase/nf-winbase-logonusera) Aby uzyskać więcej informacji.
 
-*dwLogonProvider*  
+*dwLogonProvider*<br/>
 Określa dostawcę logowania. Zobacz [funkcji LogonUser](/windows/desktop/api/winbase/nf-winbase-logonusera) Aby uzyskać więcej informacji.
 
 ### <a name="return-value"></a>Wartość zwracana
@@ -950,13 +950,13 @@ bool OpenCOMClientToken(
 
 ### <a name="parameters"></a>Parametry
 
-*dwDesiredAccess*  
+*dwDesiredAccess*<br/>
 Określa maskę dostępu określająca żądany typ dostępu do tokena dostępu. Te typy żądanego dostępu są porównywane z listy DACL tokenu, aby określić, których dostępów do udzielono lub odmówiono.
 
-*bImpersonate*  
+*bImpersonate*<br/>
 W przypadku opcji TRUE bieżącego wątku Personifikuj klienta wywołującego COM, jeśli to wywołanie zakończy się pomyślnie. W przypadku wartości FAŁSZ token dostępu zostanie otwarty, ale wątek nie będzie tokenu personifikacji po zakończeniu tego wywołania.
 
-*bOpenAsSelf*  
+*bOpenAsSelf*<br/>
 Wskazuje, czy kontroli dostępu ma zostać wykonane w stosunku do kontekstu zabezpieczeń wywołania wątku [GetThreadToken](/windows/desktop/api/processthreadsapi/nf-processthreadsapi-getcurrentthread) metody lub dla kontekstu zabezpieczeń procesu wywołującego wątku.
 
 Jeśli ten parametr ma wartość FALSE, kontrolę dostępu odbywa się za pomocą kontekstu zabezpieczeń dla wątku wywołującego. Jeśli wątek nie personifikuje klienta, ten kontekst zabezpieczeń może być procesu klienta. Jeśli ten parametr ma wartość TRUE, kontroli dostępu jest tworzone za pomocą kontekstu zabezpieczeń procesu wywołującego wątku.
@@ -983,16 +983,16 @@ bool OpenNamedPipeClientToken(
 
 ### <a name="parameters"></a>Parametry
 
-*hPipe*  
+*hPipe*<br/>
 Dojście do nazwanego potoku.
 
-*dwDesiredAccess*  
+*dwDesiredAccess*<br/>
 Określa maskę dostępu określająca żądany typ dostępu do tokena dostępu. Te typy żądanego dostępu są porównywane z listy DACL tokenu, aby określić, których dostępów do udzielono lub odmówiono.
 
-*bImpersonate*  
+*bImpersonate*<br/>
 W przypadku opcji TRUE bieżącego wątku Personifikuj klienta wywołującego potoku, jeśli to wywołanie zakończy się pomyślnie. W przypadku wartości FAŁSZ token dostępu zostanie otwarty, ale wątek nie będzie tokenu personifikacji po zakończeniu tego wywołania.
 
-*bOpenAsSelf*  
+*bOpenAsSelf*<br/>
 Wskazuje, czy kontroli dostępu ma zostać wykonane w stosunku do kontekstu zabezpieczeń wywołania wątku [GetThreadToken](/windows/desktop/api/processthreadsapi/nf-processthreadsapi-getcurrentthread) metody lub dla kontekstu zabezpieczeń procesu wywołującego wątku.
 
 Jeśli ten parametr ma wartość FALSE, kontrolę dostępu odbywa się za pomocą kontekstu zabezpieczeń dla wątku wywołującego. Jeśli wątek nie personifikuje klienta, ten kontekst zabezpieczeń może być procesu klienta. Jeśli ten parametr ma wartość TRUE, kontroli dostępu jest tworzone za pomocą kontekstu zabezpieczeń procesu wywołującego wątku.
@@ -1019,16 +1019,16 @@ bool OpenRPCClientToken(
 
 ### <a name="parameters"></a>Parametry
 
-*BindingHandle*  
+*BindingHandle*<br/>
 Dojście powiązania na serwerze, który reprezentuje powiązanie do klienta.
 
-*dwDesiredAccess*  
+*dwDesiredAccess*<br/>
 Określa maskę dostępu określająca żądany typ dostępu do tokena dostępu. Te typy żądanego dostępu są porównywane z listy DACL tokenu, aby określić, których dostępów do udzielono lub odmówiono.
 
-*bImpersonate*  
+*bImpersonate*<br/>
 W przypadku opcji TRUE bieżącego wątku Personifikuj klienta wywołującego RPC, jeśli to wywołanie zakończy się pomyślnie. W przypadku wartości FAŁSZ token dostępu zostanie otwarty, ale wątek nie będzie tokenu personifikacji po zakończeniu tego wywołania.
 
-*bOpenAsSelf*  
+*bOpenAsSelf*<br/>
 Wskazuje, czy kontroli dostępu ma zostać wykonane w stosunku do kontekstu zabezpieczeń wywołania wątku [GetThreadToken](/windows/desktop/api/processthreadsapi/nf-processthreadsapi-getcurrentthread) metody lub dla kontekstu zabezpieczeń procesu wywołującego wątku.
 
 Jeśli ten parametr ma wartość FALSE, kontrolę dostępu odbywa się za pomocą kontekstu zabezpieczeń dla wątku wywołującego. Jeśli wątek nie personifikuje klienta, ten kontekst zabezpieczeń może być procesu klienta. Jeśli ten parametr ma wartość TRUE, kontroli dostępu jest tworzone za pomocą kontekstu zabezpieczeń procesu wywołującego wątku.
@@ -1055,18 +1055,18 @@ bool OpenThreadToken(
 
 ### <a name="parameters"></a>Parametry
 
-*dwDesiredAccess*  
+*dwDesiredAccess*<br/>
 Określa maskę dostępu określająca żądany typ dostępu do tokena dostępu. Te typy żądanego dostępu są porównywane z listy DACL tokenu, aby określić, których dostępów do udzielono lub odmówiono.
 
-*bImpersonate*  
+*bImpersonate*<br/>
 W przypadku opcji TRUE wątku pozostanie na poziomie personifikacji żądanego po ukończeniu tej metody. W przypadku wartości FAŁSZ wątku powróci do jego oryginalnej poziom personifikacji.
 
-*bOpenAsSelf*  
+*bOpenAsSelf*<br/>
 Wskazuje, czy kontroli dostępu ma zostać wykonane w stosunku do kontekstu zabezpieczeń wywołania wątku [GetThreadToken](/windows/desktop/api/processthreadsapi/nf-processthreadsapi-getcurrentthread) metody lub dla kontekstu zabezpieczeń procesu wywołującego wątku.
 
 Jeśli ten parametr ma wartość FALSE, kontrolę dostępu odbywa się za pomocą kontekstu zabezpieczeń dla wątku wywołującego. Jeśli wątek nie personifikuje klienta, ten kontekst zabezpieczeń może być procesu klienta. Jeśli ten parametr ma wartość TRUE, kontroli dostępu jest tworzone za pomocą kontekstu zabezpieczeń procesu wywołującego wątku.
 
-*Program Sil*  
+*Program Sil*<br/>
 Określa [SECURITY_IMPERSONATION_LEVEL](/windows/desktop/api/winnt/ne-winnt-_security_impersonation_level) wyliczany typ, który dostarcza poziom personifikacji tokenów.
 
 ### <a name="return-value"></a>Wartość zwracana
@@ -1091,10 +1091,10 @@ bool PrivilegeCheck(
 
 ### <a name="parameters"></a>Parametry
 
-*RequiredPrivileges*  
+*RequiredPrivileges*<br/>
 Wskaźnik do [PRIVILEGE_SET](/windows/desktop/api/winnt/ns-winnt-_privilege_set) struktury.
 
-*pbResult*  
+*pbResult*<br/>
 Wskaźnik do wartości metody ustawia wskazuje, czy dowolne lub wszystkie określone uprawnienie są włączone w `CAccessToken` obiektu.
 
 ### <a name="return-value"></a>Wartość zwracana
@@ -1115,7 +1115,7 @@ bool Revert(HANDLE hThread = NULL) const throw();
 
 ### <a name="parameters"></a>Parametry
 
-*hThread*  
+*hThread*<br/>
 Uchwyt do wątku, aby przywrócić z personifikacji. Jeśli *hThread* ma wartość NULL, zakłada, że bieżący wątek.
 
 ### <a name="return-value"></a>Wartość zwracana
@@ -1136,7 +1136,7 @@ bool SetDefaultDacl(const CDacl& rDacl) throw(...);
 
 ### <a name="parameters"></a>Parametry
 
-*rDacl*  
+*rDacl*<br/>
 Nowe rozwiązanie domyślne [klasa CDacl](../../atl/reference/cdacl-class.md) informacji.
 
 ### <a name="return-value"></a>Wartość zwracana
@@ -1157,7 +1157,7 @@ bool SetOwner(const CSid& rSid) throw(...);
 
 ### <a name="parameters"></a>Parametry
 
-*rSid*  
+*rSid*<br/>
 [Klasa CSid](../../atl/reference/csid-class.md) obiekt zawierający informacje o właścicielu.
 
 ### <a name="return-value"></a>Wartość zwracana
@@ -1178,7 +1178,7 @@ bool SetPrimaryGroup(const CSid& rSid) throw(...);
 
 ### <a name="parameters"></a>Parametry
 
-*rSid*  
+*rSid*<br/>
 [Klasa CSid](../../atl/reference/csid-class.md) obiekt zawierający podstawowe informacje o grupach.
 
 ### <a name="return-value"></a>Wartość zwracana
@@ -1191,6 +1191,6 @@ Grupa podstawowa jest domyślną grupą nowych obiektów tworzonych ten token do
 
 ## <a name="see-also"></a>Zobacz też
 
-[Przykładowe ATLSecurity](../../visual-cpp-samples.md)   
-[Tokeny dostępu](/windows/desktop/SecAuthZ/access-tokens)   
+[Przykładowe ATLSecurity](../../visual-cpp-samples.md)<br/>
+[Tokeny dostępu](/windows/desktop/SecAuthZ/access-tokens)<br/>
 [Klasa — Przegląd](../../atl/atl-class-overview.md)
