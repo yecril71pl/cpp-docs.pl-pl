@@ -16,30 +16,31 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a44f272569741b1897caed1d1d64832d8b113eae
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 3d1a23b8171c916b05df1d715f803893ab0720e6
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33316439"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46053820"
 ---
-# <a name="project-build-error-prj0003"></a>Błąd PRJ0003 kompilacji projektu  
-  
-> Błąd podczas duplikowania "*wiersza polecenia*".  
-  
-*Wiersza polecenia* polecenia utworzone z danych wejściowych w **strony właściwości** okno dialogowe zwrócił kod błędu, ale nie widać żadnych informacji w **dane wyjściowe** okna.  
+# <a name="project-build-error-prj0003"></a>Błąd PRJ0003 kompilacji projektu
 
-Możliwe przyczyny tego błędu:  
-  
--   Projekt zależy od serwera ATL. Począwszy od programu Visual Studio 2008, serwer ATL nie jest już częścią programu Visual Studio, ale zostało zwolnione jako projektu udostępnionego źródła w witrynie CodePlex. Aby pobrać kodu źródłowego serwera ATL i narzędzi, przejdź do [narzędzia i biblioteki serwera ATL](http://go.microsoft.com/fwlink/p/?linkid=81979).  
-  
--   Niewystarczające zasoby systemu. Zamknij niektóre aplikacje, aby rozwiązać ten problem.  
-  
--   Niewystarczające uprawnienia zabezpieczeń. Sprawdź, czy masz wystarczające uprawnienia zabezpieczeń.  
-  
--   Określone w ścieżki pliku wykonywalnego **katalogi VC ++** nie zawierają ścieżki narzędzia, który próbujesz uruchomić. Aby uzyskać informacje, zobacz [Praca z właściwościami projektu](../../ide/working-with-project-properties.md)  
-  
--   Dla projektów makefile brakuje polecenie do uruchomienia na albo **kompilacji wiersza polecenia** lub **odbudować wiersza polecenia**.  
-  
-## <a name="see-also"></a>Zobacz też  
- [Błędy i ostrzeżenia kompilowania projektu (PRJxxxx)](../../error-messages/tool-errors/project-build-errors-and-warnings-prjxxxx.md)
+> Błąd podczas duplikowania "*wiersza polecenia*".
+
+*Wiersza polecenia* polecenia tworzony na podstawie danych wejściowych w **stron właściwości** okno dialogowe zwrócił kod błędu, ale nie widać żadnych informacji w **dane wyjściowe** okna.
+
+Możliwe przyczyny tego błędu:
+
+- Projekt zależy od aplikacji serwera ATL. Począwszy od programu Visual Studio 2008 aplikacji serwera ATL. nie jest już częścią Visual Studio, ale zostało udostępnione jako projekt źródłowy udostępniony w witrynie CodePlex. Aby pobrać kod źródłowy aplikacji serwera ATL. i narzędzi, przejdź do [narzędzia i biblioteki serwera ATL](http://go.microsoft.com/fwlink/p/?linkid=81979).
+
+- Niewystarczające zasoby systemu. Zamknij niektóre aplikacje, aby rozwiązać ten problem.
+
+- Niewystarczające uprawnienia zabezpieczeń. Sprawdź, czy masz wystarczające uprawnienia zabezpieczeń.
+
+- Ścieżki pliku wykonywalnego, określony w **katalogi VC ++** zawiera ścieżkę do narzędzia które próbujesz uruchomić. Aby uzyskać informacje, zobacz [Praca z właściwościami projektu](../../ide/working-with-project-properties.md)
+
+- W przypadku projektów plików reguł programu make brakuje polecenie do uruchomienia w dowolnym **kompilacji wiersza polecenia** lub **odbudować wiersza polecenia**.
+
+## <a name="see-also"></a>Zobacz też
+
+[Błędy i ostrzeżenia kompilowania projektu (PRJxxxx)](../../error-messages/tool-errors/project-build-errors-and-warnings-prjxxxx.md)

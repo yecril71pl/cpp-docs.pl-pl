@@ -147,12 +147,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0f455ce1f09822d4705a8c700e9dbc93d4a2e79c
-ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
+ms.openlocfilehash: 52073a97e062d4ab96e50fed534edc24add0f8c5
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44104609"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45715601"
 ---
 # <a name="unorderedmultimap-class"></a>unordered_multimap — Klasa
 
@@ -369,7 +369,7 @@ size_type bucket(const Key& keyval) const;
 
 ### <a name="parameters"></a>Parametry
 
-*keyval*  
+*keyval*<br/>
 Wartość klucza do mapowania.
 
 ### <a name="remarks"></a>Uwagi
@@ -514,7 +514,7 @@ size_type bucket_size(size_type nbucket) const;
 
 ### <a name="parameters"></a>Parametry
 
-*nbucket*  
+*nbucket*<br/>
 Numer przedziału.
 
 ### <a name="remarks"></a>Uwagi
@@ -880,7 +880,7 @@ size_type count(const Key& keyval) const;
 
 ### <a name="parameters"></a>Parametry
 
-*keyval*  
+*keyval*<br/>
 Wartość klucza do wyszukania.
 
 ### <a name="remarks"></a>Uwagi
@@ -1201,7 +1201,7 @@ std::pair<const_iterator, const_iterator>
 
 ### <a name="parameters"></a>Parametry
 
-*keyval*  
+*keyval*<br/>
 Wartość klucza do wyszukania.
 
 ### <a name="remarks"></a>Uwagi
@@ -1277,16 +1277,16 @@ size_type erase(
 
 ### <a name="parameters"></a>Parametry
 
-*Where*  
+*Where*<br/>
 Pozycja elementu, który ma zostać usunięty.
 
-*pierwszy*  
+*pierwszy*<br/>
 Pozycja pierwszego elementu do usunięcia.
 
-*ostatni*  
+*ostatni*<br/>
 Pozycja tuż za ostatni element do usunięcia.
 
-*Key*  
+*Key*<br/>
 Wartość klucza elementów do usunięcia.
 
 ### <a name="return-value"></a>Wartość zwracana
@@ -1309,7 +1309,7 @@ const_iterator find(const Key& keyval) const;
 
 ### <a name="parameters"></a>Parametry
 
-*keyval*  
+*keyval*<br/>
 Wartość klucza do wyszukania.
 
 ### <a name="remarks"></a>Uwagi
@@ -2011,7 +2011,7 @@ void max_load_factor(float factor);
 
 ### <a name="parameters"></a>Parametry
 
-*współczynnik*  
+*współczynnik*<br/>
 Nowy współczynnik maksymalnego obciążenia.
 
 ### <a name="remarks"></a>Uwagi
@@ -2291,7 +2291,7 @@ void rehash(size_type nbuckets);
 
 ### <a name="parameters"></a>Parametry
 
-*nbuckets*  
+*nbuckets*<br/>
 Żądaną liczbę przedziałów.
 
 ### <a name="remarks"></a>Uwagi

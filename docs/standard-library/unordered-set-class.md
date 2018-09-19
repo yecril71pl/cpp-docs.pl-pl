@@ -144,12 +144,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: bf2179666943dd5ad26f173368edd809fdf17bcd
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: 2ce2228c5ee81fc6974f2a60ccbdf0a7e4d53901
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38954841"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45726690"
 ---
 # <a name="unorderedset-class"></a>unordered_set — Klasa
 
@@ -373,8 +373,8 @@ size_type bucket(const Key& keyval) const;
 
 ### <a name="parameters"></a>Parametry
 
-*keyval*  
- Wartość klucza do mapowania.
+*keyval*<br/>
+Wartość klucza do mapowania.
 
 ### <a name="remarks"></a>Uwagi
 
@@ -513,8 +513,8 @@ size_type bucket_size(size_type nbucket) const;
 
 ### <a name="parameters"></a>Parametry
 
-*nbucket*  
- Numer przedziału.
+*nbucket*<br/>
+Numer przedziału.
 
 ### <a name="remarks"></a>Uwagi
 
@@ -865,8 +865,8 @@ size_type count(const Key& keyval) const;
 
 ### <a name="parameters"></a>Parametry
 
-*keyval*  
- Wartość klucza do wyszukania.
+*keyval*<br/>
+Wartość klucza do wyszukania.
 
 ### <a name="remarks"></a>Uwagi
 
@@ -1175,8 +1175,8 @@ equal_range(const Key& keyval) const;
 
 ### <a name="parameters"></a>Parametry
 
-*keyval*  
- Wartość klucza do wyszukania.
+*keyval*<br/>
+Wartość klucza do wyszukania.
 
 ### <a name="remarks"></a>Uwagi
 
@@ -1243,17 +1243,17 @@ size_type erase(const key_type& Key);
 
 ### <a name="parameters"></a>Parametry
 
-*Where*  
- Pozycja elementu, który ma zostać usunięty.
+*Where*<br/>
+Pozycja elementu, który ma zostać usunięty.
 
-*pierwszy*  
- Pozycja pierwszego elementu do usunięcia.
+*pierwszy*<br/>
+Pozycja pierwszego elementu do usunięcia.
 
-*ostatni*  
- Pozycja tuż za ostatni element do usunięcia.
+*ostatni*<br/>
+Pozycja tuż za ostatni element do usunięcia.
 
-*Key*  
- Wartość klucza elementów do usunięcia.
+*Key*<br/>
+Wartość klucza elementów do usunięcia.
 
 ### <a name="return-value"></a>Wartość zwracana
 
@@ -1275,8 +1275,8 @@ const_iterator find(const Key& keyval) const;
 
 ### <a name="parameters"></a>Parametry
 
-*keyval*  
- Wartość klucza do wyszukania.
+*keyval*<br/>
+Wartość klucza do wyszukania.
 
 ### <a name="remarks"></a>Uwagi
 
@@ -1874,8 +1874,8 @@ void max_load_factor(float factor);
 
 ### <a name="parameters"></a>Parametry
 
-*współczynnik*  
- Nowy współczynnik maksymalnego obciążenia.
+*współczynnik*<br/>
+Nowy współczynnik maksymalnego obciążenia.
 
 ### <a name="remarks"></a>Uwagi
 
@@ -2148,8 +2148,8 @@ void rehash(size_type nbuckets);
 
 ### <a name="parameters"></a>Parametry
 
-*nbuckets*  
- Żądaną liczbę przedziałów.
+*nbuckets*<br/>
+Żądaną liczbę przedziałów.
 
 ### <a name="remarks"></a>Uwagi
 
@@ -2326,8 +2326,8 @@ void swap(unordered_set& right);
 
 ### <a name="parameters"></a>Parametry
 
-*right*  
- Kontener wymiany.
+*right*<br/>
+Kontener wymiany.
 
 ### <a name="remarks"></a>Uwagi
 
@@ -2441,7 +2441,7 @@ unordered_set(
 |*Comp*|Obiekt funkcji porównywania, który ma być przechowywany.|
 |*Skrót*|Obiekt funkcji mieszania, który ma być przechowywany.|
 |*bucket_count*|Minimalna liczba przedziałów.|
-|*Po prawej stronie*|Kontener, który ma być skopiowany.|
+|*po prawej stronie*|Kontener, który ma być skopiowany.|
 |*IList*|Lista initializer_list zawierająca elementy do skopiowania.|
 
 ### <a name="remarks"></a>Uwagi

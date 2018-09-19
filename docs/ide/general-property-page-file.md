@@ -1,5 +1,5 @@
 ---
-title: Ogólna strona właściwości (plik) | Dokumentacja firmy Microsoft
+title: Strona właściwości ogólnych (plik) | Dokumentacja firmy Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -15,30 +15,32 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 523ac16a647116f4d18da7e516adb4f0e6bb7fc4
-ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
+ms.openlocfilehash: 8ad4689c15e14ba0bbac61c8c3b28148536b9057
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/01/2018
-ms.locfileid: "33324038"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45715471"
 ---
 # <a name="general-property-page-file"></a>Ogólna strona właściwości (plik)
 
-Jeśli zaznaczono plik w **Eksploratora rozwiązań**, **ogólne** strony właściwości w obszarze **właściwości konfiguracji** węzeł zawiera następujące właściwości:
+Po wybraniu pliku w **Eksploratora rozwiązań**, **ogólne** strony właściwości w obszarze **właściwości konfiguracji** węzła zawiera następujące właściwości:
 
-**Wyklucz z kompilacji**  
-Określa, czy ten plik powinien być w kompilacji w bieżącej konfiguracji.
+- **Wyklucz z kompilacji**
 
-Do uzyskania programowego dostępu do tej właściwości, zobacz <xref:Microsoft.VisualStudio.VCProjectEngine.VCFileConfiguration.ExcludedFromBuild%2A>.
+   Określa, czy plik powinien znajdować się w kompilacji w bieżącej konfiguracji.
 
-**Narzędzie**  
-Narzędzie, które będą służyć do tworzenia tego pliku. Zobacz [określenie niestandardowego narzędzia kompilacji](../ide/specifying-custom-build-tools.md) Aby uzyskać więcej informacji.
+   Aby programowo uzyskać dostęp do tej właściwości, zobacz <xref:Microsoft.VisualStudio.VCProjectEngine.VCFileConfiguration.ExcludedFromBuild%2A>.
 
-Do uzyskania programowego dostępu do tej właściwości, zobacz <xref:Microsoft.VisualStudio.VCProjectEngine.VCFileConfiguration.Tool%2A>.
+- **Narzędzie**
 
-Aby uzyskać informacje dotyczące dostępu do **ogólne** strony właściwości w obszarze **właściwości konfiguracji** węzła, zobacz [Praca z właściwościami projektu](../ide/working-with-project-properties.md).
+   Narzędzie, które będą służyć do tworzenia tego pliku. Zobacz [Określanie niestandardowego narzędzia kompilacji](../ide/specifying-custom-build-tools.md) Aby uzyskać więcej informacji.
 
-Dla projektów z systemem innym niż Windows, temacie [odwołania do strony właściwości C++ Linux](../linux/prop-pages-linux.md)<!-- or [C++ Cross Platform Property Page Reference](../linux/prop-pages-linux.md)-->.
+   Aby programowo uzyskać dostęp do tej właściwości, zobacz <xref:Microsoft.VisualStudio.VCProjectEngine.VCFileConfiguration.Tool%2A>.
+
+Aby uzyskać informacje dotyczące uzyskiwania dostępu do **ogólne** strony właściwości w obszarze **właściwości konfiguracji** węzła, zobacz [Praca z właściwościami projektu](../ide/working-with-project-properties.md).
+
+Dla projektów innych niż Windows, zobacz [dokumentacja strony właściwości C++ Linux](../linux/prop-pages-linux.md)<!-- or [C++ Cross Platform Property Page Reference](../linux/prop-pages-linux.md)-->.
 
 ## <a name="see-also"></a>Zobacz także
 
