@@ -28,12 +28,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 914619c2790a904530f6efe2324549402d9b6785
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: fa3f3356cf3fdddeeb4245986549fa1bd2e12ae7
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43758160"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46085228"
 ---
 # <a name="cominterfaceentry-macros"></a>Com_interface_entry — makra  
 
@@ -72,7 +72,8 @@ COM_INTERFACE_ENTRY( x )
 ```
 ### <a name="parameters"></a>Parametry
 
-x [w] Nazwa interfejsu, obiekt klasy pochodzi od klasy bezpośrednio.
+*x*<br/>
+[in] Nazwa interfejsu, obiekt klasy pochodzi od klasy bezpośrednio.
 
 ### <a name="remarks"></a>Uwagi
 
@@ -101,10 +102,10 @@ COM_INTERFACE_ENTRY2(x, x2)
 
 ### <a name="parameters"></a>Parametry
 
-*x*  
+*x*<br/>
 [in] Nazwa interfejsu, który ma zostać uwidoczniona z obiektu.
 
-*x2*  
+*x2*<br/>
 [in] Nazwa gałęzi dziedziczenia, z którego *x* jest widoczna.
 
 ### <a name="remarks"></a>Uwagi
@@ -125,10 +126,10 @@ COM_INTERFACE_ENTRY_IID(iid, x)
 
 ### <a name="parameters"></a>Parametry
 
-*IID*  
+*IID*<br/>
 [in] Identyfikator GUID interfejsu widoczne.
 
-*x*  
+*x*<br/>
 [in] Nazwa klasy, w których vtable zostaną ujawnione jako interfejs identyfikowane przez *iid*.
 
 ### <a name="example"></a>Przykład
@@ -145,13 +146,13 @@ COM_INTERFACE_ENTRY2_IID(iid, x, x2)
 
 ### <a name="parameters"></a>Parametry
 
-*IID*  
+*IID*<br/>
 [in] Identyfikator GUID, którą określasz interfejsu.
 
-*x*  
+*x*<br/>
 [in] Nazwa interfejsu, który pochodzi bezpośrednio z obiektu klasy.
 
-*x2*  
+*x2*<br/>
 [in] Nazwa drugiego interfejsu, który pochodzi bezpośrednio z obiektu klasy.
 
 ##  <a name="com_interface_entry_aggregate"></a>  COM_INTERFACE_ENTRY_AGGREGATE
@@ -164,10 +165,10 @@ COM_INTERFACE_ENTRY_AGGREGATE(iid, punk)
 
 ### <a name="parameters"></a>Parametry
 
-*IID*  
+*IID*<br/>
 [in] Identyfikator GUID interfejsu kwerenda.
 
-*punk*  
+*punk*<br/>
 [in] Nazwa `IUnknown` wskaźnika.
 
 ### <a name="remarks"></a>Uwagi
@@ -188,7 +189,7 @@ COM_INTERFACE_ENTRY_AGGREGATE_BLIND(punk)
 
 ### <a name="parameters"></a>Parametry
 
-*punk*  
+*punk*<br/>
 [in] Nazwa `IUnknown` wskaźnika.
 
 ### <a name="remarks"></a>Uwagi
@@ -209,13 +210,13 @@ COM_INTERFACE_ENTRY_AUTOAGGREGATE(iid, punk, clsid)
 
 ### <a name="parameters"></a>Parametry
 
-*IID*  
+*IID*<br/>
 [in] Identyfikator GUID interfejsu kwerenda.
 
-*punk*  
+*punk*<br/>
 [in] Nazwa `IUnknown` wskaźnika. Musi należeć do klasy zawierającej mapy interfejsu COM.
 
-*Identyfikator klasy*  
+*Identyfikator klasy*<br/>
 [in] Identyfikator agregacji, która zostanie utworzona, jeśli *punk* ma wartość NULL.
 
 ### <a name="remarks"></a>Uwagi
@@ -234,10 +235,10 @@ COM_INTERFACE_ENTRY_AUTOAGGREGATE_BLIND(punk, clsid)
 
 ### <a name="parameters"></a>Parametry
 
-*punk*  
+*punk*<br/>
 [in] Nazwa `IUnknown` wskaźnika. Musi należeć do klasy zawierającej mapy interfejsu COM.
 
-*Identyfikator klasy*  
+*Identyfikator klasy*<br/>
 [in] Identyfikator agregacji, która zostanie utworzona, jeśli *punk* ma wartość NULL.
 
 ### <a name="remarks"></a>Uwagi
@@ -258,7 +259,7 @@ COM_INTERFACE_ENTRY_BREAK(x)
 
 ### <a name="parameters"></a>Parametry
 
-*x*  
+*x*<br/>
 [in] Tekst używany do utworzenia identyfikatora interfejsu.
 
 ### <a name="remarks"></a>Uwagi
@@ -275,13 +276,13 @@ COM_INTERFACE_ENTRY_CACHED_TEAR_OFF(iid, x, punk)
 
 ### <a name="parameters"></a>Parametry
 
-*IID*  
+*IID*<br/>
 [in] Identyfikator GUID interfejs odrywania.
 
-*x*  
+*x*<br/>
 [in] Nazwa klasy implementującej interfejs.
 
-*punk*  
+*punk*<br/>
 [in] Nazwa `IUnknown` wskaźnika. Musi należeć do klasy zawierającej mapy interfejsu COM. Powinna zostać zainicjowana na wartość NULL w Konstruktorze obiektu klasy.
 
 ### <a name="remarks"></a>Uwagi
@@ -302,10 +303,10 @@ COM_INTERFACE_ENTRY_TEAR_OFF(iid, x)
 
 ### <a name="parameters"></a>Parametry
 
-*IID*  
+*IID*<br/>
 [in] Identyfikator GUID interfejs odrywania.
 
-*x*  
+*x*<br/>
 [in] Nazwa klasy implementującej interfejs.
 
 ### <a name="remarks"></a>Uwagi
@@ -326,7 +327,7 @@ COM_INTERFACE_ENTRY_CHAIN(classname)
 
 ### <a name="parameters"></a>Parametry
 
-*ClassName*  
+*ClassName*<br/>
 [in] Klasa bazowa bieżącego obiektu.
 
 ### <a name="remarks"></a>Uwagi
@@ -349,13 +350,13 @@ COM_INTERFACE_ENTRY_FUNC(iid, dw, func)
 
 ### <a name="parameters"></a>Parametry
 
-*IID*  
+*IID*<br/>
 [in] Identyfikator GUID interfejsu widoczne.
 
-*Magazyn danych*  
+*Magazyn danych*<br/>
 [in] Parametr przekazywany za pośrednictwem do *func*.
 
-*FUNC*  
+*FUNC*<br/>
 [in] Wskaźnik funkcji, która zwróci *iid*.
 
 ### <a name="remarks"></a>Uwagi
@@ -376,10 +377,10 @@ COM_INTERFACE_ENTRY_FUNC_BLIND(dw, func)
 
 ### <a name="parameters"></a>Parametry
 
-*Magazyn danych*  
+*Magazyn danych*<br/>
 [in] Parametr przekazywany za pośrednictwem do *func*.
 
-*FUNC*  
+*FUNC*<br/>
 [in] Funkcja, która jest wywoływana podczas przetwarzania tego wpisu w mapie com.
 
 ### <a name="remarks"></a>Uwagi
@@ -396,7 +397,7 @@ COM_INTERFACE_ENTRY_NOINTERFACE(x)
 
 ### <a name="parameters"></a>Parametry
 
-*x*  
+*x*<br/>
 [in] Tekst używany do utworzenia identyfikatora interfejsu.
 
 ### <a name="remarks"></a>Uwagi

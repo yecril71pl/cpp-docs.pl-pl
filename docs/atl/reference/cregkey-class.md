@@ -52,12 +52,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 75caf648b0c62827e9532fa3776def1a4e459a64
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 4a502cbf61f3542c010a89b82131a95f94856cda
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43764013"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46042887"
 ---
 # <a name="cregkey-class"></a>Klasa CRegKey
 
@@ -153,7 +153,7 @@ void Attach(HKEY hKey) throw();
 
 ### <a name="parameters"></a>Parametry
 
-*hKey*  
+*hKey*<br/>
 Uchwyt klucza rejestru.
 
 ### <a name="remarks"></a>Uwagi
@@ -189,25 +189,25 @@ LONG Create(
 
 ### <a name="parameters"></a>Parametry
 
-*hKeyParent*  
+*hKeyParent*<br/>
 Dojście otwartego klucza.
 
-*lpszKeyName*  
+*lpszKeyName*<br/>
 Określa nazwę klucza, który ma zostać utworzony lub otwarty. Ta nazwa musi być podklucz *hKeyParent*.
 
-*lpszClass*  
+*lpszClass*<br/>
 Określa klasę klucza, który ma zostać utworzony lub otwarty. Wartość domyślna to REG_NONE.
 
-*dwOptions*  
+*dwOptions*<br/>
 Opcje dla klucza. Wartość domyślna to REG_OPTION_NON_VOLATILE. Aby uzyskać listę możliwych wartości i opisy, zobacz [RegCreateKeyEx](/windows/desktop/api/winreg/nf-winreg-regcreatekeyexa) w zestawie Windows SDK.
 
-*samDesired*  
+*samDesired*<br/>
 Zabezpieczeń dostępu do klucza. Wartość domyślna to KEY_READ &#124; KEY_WRITE. Aby uzyskać listę możliwych wartości i opisy, zobacz `RegCreateKeyEx`.
 
-*lpSecAttr*  
+*lpSecAttr*<br/>
 Wskaźnik do [SECURITY_ATTRIBUTES](https://msdn.microsoft.com/library/windows/desktop/aa379560) strukturę, która wskazuje, czy uchwyt klucza może być dziedziczona przez proces podrzędny. Domyślnie ten parametr ma wartość NULL (znaczenie, który nie może być dziedziczona uchwyt).
 
-*lpdwDisposition*  
+*lpdwDisposition*<br/>
 [out] Jeśli innych niż NULL, pobiera REG_CREATED_NEW_KEY (Jeśli klucz nie istnieje i został utworzony) lub REG_OPENED_EXISTING_KEY (Jeśli klucz istniał i został otwarty).
 
 ### <a name="return-value"></a>Wartość zwracana
@@ -231,13 +231,13 @@ CRegKey(CAtlTransactionManager* pTM) throw();
 
 ### <a name="parameters"></a>Parametry
 
-*Klucz*  
+*Klucz*<br/>
 Odwołanie do `CRegKey` obiektu.
 
-*hKey*  
+*hKey*<br/>
 Dojście do klucza rejestru.
 
-*pTM*  
+*pTM*<br/>
 Wskaźnik do obiektu CAtlTransactionManager
 
 ### <a name="remarks"></a>Uwagi
@@ -266,7 +266,7 @@ LONG DeleteSubKey(LPCTSTR lpszSubKey) throw();
 
 ### <a name="parameters"></a>Parametry
 
-*lpszSubKey*  
+*lpszSubKey*<br/>
 Określa nazwę klucza do usunięcia. Ta nazwa musi być podklucz [m_hKey](#m_hkey).
 
 ### <a name="return-value"></a>Wartość zwracana
@@ -287,7 +287,7 @@ LONG DeleteValue(LPCTSTR lpszValue) throw();
 
 ### <a name="parameters"></a>Parametry
 
-*lpszValue*  
+*lpszValue*<br/>
 Określa pole wartości do usunięcia.
 
 ### <a name="return-value"></a>Wartość zwracana
@@ -320,16 +320,16 @@ LONG EnumKey(
 
 ### <a name="parameters"></a>Parametry
 
-*iIndex*  
+*iIndex*<br/>
 Indeks podklucza. Ten parametr powinna wynosić zero dla pierwszego wywołania i następnie są zwiększane dla kolejnych wywołań
 
-*pszName*  
+*pszName*<br/>
 Wskaźnik do buforu, który otrzymuje nazwę podklucza, w tym kończącego znaku null. Nazwa podklucza który jest kopiowany do buforu, a nie pełne kluczowej hierarchii.
 
-*pnNameLength*  
+*pnNameLength*<br/>
 Wskaźnik do zmiennej, która określa rozmiar w TCHARs buforu określony przez *pszName* parametru. Ten rozmiar powinien zawierać kończącego znaku null. Gdy metoda zwróci wartość, zmienna wskazywany przez *pnNameLength* zawiera liczbę znaków przechowywanych w buforze. Liczba zwracane nie obejmuje kończącego znaku null.
 
-*pftLastWriteTime*  
+*pftLastWriteTime*<br/>
 Wskaźnik do zmiennej, która odbiera czas ostatniego zapisania podklucz wyliczany do.
 
 ### <a name="return-value"></a>Wartość zwracana
@@ -369,13 +369,13 @@ LONG GetKeySecurity(
 
 ### <a name="parameters"></a>Parametry
 
-*SI*  
+*SI*<br/>
 [SECURITY_INFORMATION](/windows/desktop/SecAuthZ/security-information) wartość, która wskazuje żądane informacje o zabezpieczeniach.
 
-*PSD*  
+*PSD*<br/>
 Wskaźnik do buforu, który otrzymuje kopię deskryptora zabezpieczeń żądanej.
 
-*pnBytes*  
+*pnBytes*<br/>
 Rozmiar w bajtach, bufor wskazywany przez *psd*.
 
 ### <a name="return-value"></a>Wartość zwracana
@@ -418,10 +418,10 @@ LONG NotifyChangeKeyValue(
 
 ### <a name="parameters"></a>Parametry
 
-*bWatchSubtree*  
+*bWatchSubtree*<br/>
 Określa flagi, która wskazuje, czy do zgłaszania zmian w określonym kluczu i wszystkich jego podkluczy lub tylko określonego klucza. Jeśli ten parametr ma wartość TRUE, metoda zgłasza zmian w kluczu i jego podkluczach. Jeśli parametr ma wartość FALSE, metoda zgłasza zmiany tylko w kluczu.
 
-*dwNotifyFilter*  
+*dwNotifyFilter*<br/>
 Określa, że zestaw flag, które kontrolują, które zmiany powinny być raportowane. Ten parametr może być kombinacją następujących wartości:
 
 |Wartość|Znaczenie|
@@ -431,10 +431,10 @@ Określa, że zestaw flag, które kontrolują, które zmiany powinny być raport
 |REG_NOTIFY_CHANGE_LAST_SET|Powiadamia obiekt wywołujący zmiana wartości klucza. Może to obejmować dodawanie lub usuwanie wartości lub zmianę istniejącej wartości.|
 |REG_NOTIFY_CHANGE_SECURITY|Powiadamia obiekt wywołujący zmiany deskryptor zabezpieczeń klucza.|
 
-*hEvent*  
+*hEvent*<br/>
 Obsłuż to zdarzenie. Jeśli *bAsync* parametr ma wartość TRUE, metoda zwraca natychmiast, a zmiany są zgłaszane przez sygnalizowanie tego zdarzenia. Jeśli *bAsync* ma wartość FAŁSZ, *hEvent* jest ignorowana.
 
-*bAsync*  
+*bAsync*<br/>
 Określa flagi, która wskazuje, jak metoda raporty zmiany. Jeśli ten parametr ma wartość TRUE, metoda zwraca niezwłocznie i raporty zmiany przez sygnalizowanie określonego zdarzenia. Jeśli ten parametr ma wartość FALSE, metoda nie zwraca do momentu zostało zmienione. Jeśli *hEvent* nie określa ważnego zdarzenia *bAsync* parametr nie może mieć wartość TRUE.
 
 ### <a name="return-value"></a>Wartość zwracana
@@ -461,13 +461,13 @@ LONG Open(
 
 ### <a name="parameters"></a>Parametry
 
-*hKeyParent*  
+*hKeyParent*<br/>
 Dojście otwartego klucza.
 
-*lpszKeyName*  
+*lpszKeyName*<br/>
 Określa nazwę klucza, który ma zostać utworzony lub otwarty. Ta nazwa musi być podklucz *hKeyParent*.
 
-*samDesired*  
+*samDesired*<br/>
 Zabezpieczeń dostępu do klucza. Wartość domyślna to KEY_ALL_ACCESS. Aby uzyskać listę możliwych wartości i opisy, zobacz [RegCreateKeyEx](/windows/desktop/api/winreg/nf-winreg-regcreatekeyexa) w zestawie Windows SDK.
 
 ### <a name="return-value"></a>Wartość zwracana
@@ -484,7 +484,7 @@ W odróżnieniu od [CRegKey::Create](#create), `Open` nie utworzy określony klu
 
 Konwertuje `CRegKey` obiektu HKEY.
 
-```  
+```
 operator HKEY() const throw();
 ```
 
@@ -498,7 +498,7 @@ CRegKey& operator= (CRegKey& key) throw();
 
 ### <a name="parameters"></a>Parametry
 
-*Klucz*  
+*Klucz*<br/>
 Klucz do skopiowania.
 
 ### <a name="return-value"></a>Wartość zwracana
@@ -522,13 +522,13 @@ LONG QueryBinaryValue(
 
 ### <a name="parameters"></a>Parametry
 
-*pszValueName*  
+*pszValueName*<br/>
 Wskaźnik na ciąg zakończony wartością null zawierający nazwę wartości do zapytania.
 
-*pValue*  
+*pValue*<br/>
 Wskaźnik do buforu, który odbiera dane z tej wartości.
 
-*pnBytes*  
+*pnBytes*<br/>
 Wskaźnik do zmiennej, która określa rozmiar w bajtach, bufor wskazywany przez *pValue* parametru. Gdy metoda zwróci wartość, ta zmienna uwzględnia rozmiar danych skopiowane do buforu.
 
 ### <a name="return-value"></a>Wartość zwracana
@@ -554,10 +554,10 @@ LONG QueryDWORDValue(
 
 ### <a name="parameters"></a>Parametry
 
-*pszValueName*  
+*pszValueName*<br/>
 Wskaźnik na ciąg zakończony wartością null zawierający nazwę wartości do zapytania.
 
-*dwValue*  
+*dwValue*<br/>
 Wskaźnik do buforu, który otrzymuje wartości DWORD.
 
 ### <a name="return-value"></a>Wartość zwracana
@@ -583,10 +583,10 @@ LONG QueryGUIDValue(
 
 ### <a name="parameters"></a>Parametry
 
-*pszValueName*  
+*pszValueName*<br/>
 Wskaźnik na ciąg zakończony wartością null zawierający nazwę wartości do zapytania.
 
-*guidValue*  
+*guidValue*<br/>
 Wskaźnik do zmiennej, która odbiera identyfikator GUID.
 
 ### <a name="return-value"></a>Wartość zwracana
@@ -613,13 +613,13 @@ LONG QueryMultiStringValue(
 
 ### <a name="parameters"></a>Parametry
 
-*pszValueName*  
+*pszValueName*<br/>
 Wskaźnik na ciąg zakończony wartością null zawierający nazwę wartości do zapytania.
 
-*pszValue*  
+*pszValue*<br/>
 Wskaźnik do buforu, który odbiera dane wielociągu. FixedLength jest tablicą ciągów zakończony znakiem null, został przerwany przez dwa znaki o wartości null.
 
-*pnChars*  
+*pnChars*<br/>
 Rozmiar w TCHARs buforu wskazywany przez *pszValue*. Po powrocie z metody *pnChars* zawiera rozmiar w TCHARs z FixedLength pobierane, w tym kończącego znaku null.
 
 ### <a name="return-value"></a>Wartość zwracana
@@ -645,10 +645,10 @@ LONG QueryQWORDValue(
 
 ### <a name="parameters"></a>Parametry
 
-*pszValueName*  
+*pszValueName*<br/>
 Wskaźnik na ciąg zakończony wartością null zawierający nazwę wartości do zapytania.
 
-*qwValue*  
+*qwValue*<br/>
 Wskaźnik do buforu, który otrzymuje QWORD.
 
 ### <a name="return-value"></a>Wartość zwracana
@@ -675,13 +675,13 @@ LONG QueryStringValue(
 
 ### <a name="parameters"></a>Parametry
 
-*pszValueName*  
+*pszValueName*<br/>
 Wskaźnik na ciąg zakończony wartością null zawierający nazwę wartości do zapytania.
 
-*pszValue*  
+*pszValue*<br/>
 Wskaźnik do buforu, który odbiera dane ciągu.
 
-*pnChars*  
+*pnChars*<br/>
 Rozmiar w TCHARs buforu wskazywany przez *pszValue*. Po powrocie z metody *pnChars* zawiera rozmiar w TCHARs ciągu pobierane, w tym kończącego znaku null.
 
 ### <a name="return-value"></a>Wartość zwracana
@@ -718,28 +718,28 @@ ATL_DEPRECATED LONG QueryValue(
 
 ### <a name="parameters"></a>Parametry
 
-*pszValueName*  
+*pszValueName*<br/>
 Wskaźnik na ciąg zakończony wartością null zawierający nazwę wartości do zapytania. Jeśli *pszValueName* ma wartość NULL lub pustym ciągiem, "" metoda pobiera typ i danych dla klucza użytkownika nienazwane lub wartość domyślna, jeśli istnieje.
 
-*pdwType*  
+*pdwType*<br/>
 Wskaźnik do zmiennej, która odbiera kod, wskazujący typ danych przechowywanych na określoną wartość. *PdwType* parametr może mieć wartość NULL, jeśli kod typu nie jest wymagana.
 
-*pData*  
+*pData*<br/>
 Wskaźnik do buforu, który odbiera dane z tej wartości. Ten parametr może być wartością NULL, jeśli dane nie jest wymagana.
 
-*pnBytes*  
+*pnBytes*<br/>
 Wskaźnik do zmiennej, która określa rozmiar w bajtach, bufor wskazywany przez *pData* parametru. Gdy metoda zwróci wartość, ta zmienna uwzględnia rozmiar danych skopiowane do *pData.*
 
-*dwValue*  
+*dwValue*<br/>
 Pole wartości danych liczbowych.
 
-*lpszValueName*  
+*lpszValueName*<br/>
 Określa wartość pola można wykonywać zapytania.
 
-*szValue*  
+*szValue*<br/>
 Dane ciągu w polu wartość.
 
-*pdwCount*  
+*pdwCount*<br/>
 Rozmiar danych ciągu. Jego wartość jest początkowo ustawiona do rozmiaru *szValue* buforu.
 
 ### <a name="return-value"></a>Wartość zwracana
@@ -765,7 +765,7 @@ LONG RecurseDeleteKey(LPCTSTR lpszKey) throw();
 
 ### <a name="parameters"></a>Parametry
 
-*lpszKey*  
+*lpszKey*<br/>
 Określa nazwę klucza do usunięcia. Ta nazwa musi być podklucz [m_hKey](#m_hkey).
 
 ### <a name="return-value"></a>Wartość zwracana
@@ -789,13 +789,13 @@ LONG SetBinaryValue(
 
 ### <a name="parameters"></a>Parametry
 
-*pszValueName*  
+*pszValueName*<br/>
 Wskaźnik do ciągu zawierającego nazwę wartości do ustawienia. Jeśli wartość z tą nazwą nie jest już obecny, metoda dodaje ją do klucza.
 
-*pValue*  
+*pValue*<br/>
 Wskaźnik do buforu, zawierające dane, które mają być przechowywane z wartością o określonej nazwie.
 
-*nBytes*  
+*nBytes*<br/>
 Określa rozmiar w bajtach informacji wskazywany przez *pValue* parametru.
 
 ### <a name="return-value"></a>Wartość zwracana
@@ -816,10 +816,10 @@ LONG SetDWORDValue(LPCTSTR pszValueName, DWORD dwValue) throw();
 
 ### <a name="parameters"></a>Parametry
 
-*pszValueName*  
+*pszValueName*<br/>
 Wskaźnik do ciągu zawierającego nazwę wartości do ustawienia. Jeśli wartość z tą nazwą nie jest już obecny, metoda dodaje ją do klucza.
 
-*dwValue*  
+*dwValue*<br/>
 Dane typu DWORD, które mają być przechowywane z wartością o określonej nazwie.
 
 ### <a name="return-value"></a>Wartość zwracana
@@ -840,10 +840,10 @@ LONG SetGUIDValue(LPCTSTR pszValueName, REFGUID guidValue) throw();
 
 ### <a name="parameters"></a>Parametry
 
-*pszValueName*  
+*pszValueName*<br/>
 Wskaźnik do ciągu zawierającego nazwę wartości do ustawienia. Jeśli wartość z tą nazwą nie jest już obecny, metoda dodaje ją do klucza.
 
-*guidValue*  
+*guidValue*<br/>
 Odwołanie do identyfikatora GUID, które mają być przechowywane z wartością o określonej nazwie.
 
 ### <a name="return-value"></a>Wartość zwracana
@@ -867,13 +867,13 @@ LONG SetKeyValue(
 
 ### <a name="parameters"></a>Parametry
 
-*lpszKeyName*  
+*lpszKeyName*<br/>
 Określa nazwę klucza, który ma zostać utworzony lub otwarty. Ta nazwa musi być podklucz [m_hKey](#m_hkey).
 
-*lpszValue*  
+*lpszValue*<br/>
 Określa dane, które mają być przechowywane. Ten parametr musi być inna niż NULL.
 
-*lpszValueName*  
+*lpszValueName*<br/>
 Określa pole wartości do ustawienia. Jeśli wartość pola o tej nazwie już istnieje w kluczu, zostanie dodany.
 
 ### <a name="return-value"></a>Wartość zwracana
@@ -894,7 +894,7 @@ LONG SetKeySecurity(SECURITY_INFORMATION si, PSECURITY_DESCRIPTOR psd) throw();
 
 ### <a name="parameters"></a>Parametry
 
-*SI*  
+*SI*<br/>
 Określa składniki, które można ustawić deskryptora zabezpieczeń. Wartość może być kombinacją następujących wartości:
 
 |Wartość|Znaczenie|
@@ -904,7 +904,7 @@ Określa składniki, które można ustawić deskryptora zabezpieczeń. Wartość
 |OWNER_SECURITY_INFORMATION|Ustawia identyfikator SID właściciela klucza. Klucz musi mieć dostęp WRITE_OWNER lub proces wywołujący musi być właścicielem obiektu lub mieć włączone uprawnienie SE_TAKE_OWNERSHIP_NAME.|
 |SACL_SECURITY_INFORMATION|Ustawia listy kontroli dostępu systemu klucza (SACL). Klucz musi mieć dostęp ACCESS_SYSTEM_SECURITY. Odpowiednie sposobem uzyskania takiego dostępu jest umożliwienie SE_SECURITY_NAME [uprawnień](https://msdn.microsoft.com/library/windows/desktop/aa379306) w bieżącym tokenu dostępu obiektu wywołującego, otworzyć uchwytu ACCESS_SYSTEM_SECURITY dostępu, a następnie wyłącz uprawnienia.|
 
-*PSD*  
+*PSD*<br/>
 Wskaźnik do [SECURITY_DESCRIPTOR](/windows/desktop/api/winnt/ns-winnt-_security_descriptor) strukturę, która określa atrybuty zabezpieczeń, aby ustawić dla określonego klucza.
 
 ### <a name="return-value"></a>Wartość zwracana
@@ -925,10 +925,10 @@ LONG SetMultiStringValue(LPCTSTR pszValueName, LPCTSTR pszValue) throw();
 
 ### <a name="parameters"></a>Parametry
 
-*pszValueName*  
+*pszValueName*<br/>
 Wskaźnik do ciągu zawierającego nazwę wartości do ustawienia. Jeśli wartość z tą nazwą nie jest już obecny, metoda dodaje ją do klucza.
 
-*pszValue*  
+*pszValue*<br/>
 Wskaźnik do wielociągu dane, które mają być przechowywane z wartością o określonej nazwie. FixedLength jest tablicą ciągów zakończony znakiem null, został przerwany przez dwa znaki o wartości null.
 
 ### <a name="return-value"></a>Wartość zwracana
@@ -949,10 +949,10 @@ LONG SetQWORDValue(LPCTSTR pszValueName, ULONGLONG qwValue) throw();
 
 ### <a name="parameters"></a>Parametry
 
-*pszValueName*  
+*pszValueName*<br/>
 Wskaźnik do ciągu zawierającego nazwę wartości do ustawienia. Jeśli wartość z tą nazwą nie jest już obecny, metoda dodaje ją do klucza.
 
-*qwValue*  
+*qwValue*<br/>
 QWORD dane mają być przechowywane z wartością o określonej nazwie.
 
 ### <a name="return-value"></a>Wartość zwracana
@@ -976,13 +976,13 @@ LONG SetStringValue(
 
 ### <a name="parameters"></a>Parametry
 
-*pszValueName*  
+*pszValueName*<br/>
 Wskaźnik do ciągu zawierającego nazwę wartości do ustawienia. Jeśli wartość z tą nazwą nie jest już obecny, metoda dodaje ją do klucza.
 
-*pszValue*  
+*pszValue*<br/>
 Wskaźnik do danych ciągu, które mają być przechowywane z wartością o określonej nazwie.
 
-*dwType*  
+*dwType*<br/>
 Typ ciągu do zapisu w rejestrze: REG_SZ (ustawienie domyślne) lub REG_EXPAND_SZ (do multistrings).
 
 ### <a name="return-value"></a>Wartość zwracana
@@ -1023,37 +1023,37 @@ ATL_DEPRECATED LONG SetValue(
 
 ### <a name="parameters"></a>Parametry
 
-*pszValueName*  
+*pszValueName*<br/>
 Wskaźnik do ciągu zawierającego nazwę wartości do ustawienia. Jeśli wartość z tą nazwą nie jest już obecne w kluczu, metoda dodaje ją do klucza. Jeśli *pszValueName* ma wartość NULL lub pustym ciągiem, "" metoda ustawia typ i danych dla klucza użytkownika nienazwane lub wartość domyślna.
 
-*dwType*  
+*dwType*<br/>
 Określa kod, wskazujący typ danych, do których prowadzą *pValue* parametru.
 
-*pValue*  
+*pValue*<br/>
 Wskaźnik do buforu, zawierające dane, które mają być przechowywane z wartością o określonej nazwie.
 
-*nBytes*  
+*nBytes*<br/>
 Określa rozmiar w bajtach informacji wskazywany przez *pValue* parametru. Jeśli dane są typu REG_SZ, REG_EXPAND_SZ lub REG_MULTI_SZ, *nBytes* musi zawierają rozmiaru kończącego znaku null.
 
-*hKeyParent*  
+*hKeyParent*<br/>
 Dojście otwartego klucza.
 
-*lpszKeyName*  
+*lpszKeyName*<br/>
 Określa nazwę klucza, który ma zostać utworzony lub otwarty. Ta nazwa musi być podklucz *hKeyParent*.
 
-*lpszValue*  
+*lpszValue*<br/>
 Określa dane, które mają być przechowywane. Ten parametr musi być inna niż NULL.
 
-*lpszValueName*  
+*lpszValueName*<br/>
 Określa pole wartości do ustawienia. Jeśli wartość pola o tej nazwie już istnieje w kluczu, zostanie dodany.
 
-*dwValue*  
+*dwValue*<br/>
 Określa dane, które mają być przechowywane.
 
-*bMulti*  
+*bMulti*<br/>
 W przypadku wartości FAŁSZ oznacza, że ten ciąg jest typu REG_SZ. W przypadku opcji true wskazuje, że ten ciąg jest FixedLength typu REG_MULTI_SZ.
 
-*nValueLen*  
+*nValueLen*<br/>
 Jeśli *bMulti* ma wartość true, *nValueLen* jest długością *lpszValue* ciąg znaków. Jeśli *bMulti* ma wartość false, wartość -1 wskazuje, że metoda oblicza długość automatycznie.
 
 ### <a name="return-value"></a>Wartość zwracana
@@ -1068,5 +1068,5 @@ Trzeci wywołania metody [RegSetValueEx](/windows/desktop/api/winreg/nf-winreg-r
 
 ## <a name="see-also"></a>Zobacz też
 
-[Przykładowy model DCOM](../../visual-cpp-samples.md)   
+[Przykładowy model DCOM](../../visual-cpp-samples.md)<br/>
 [Klasa — Przegląd](../../atl/atl-class-overview.md)

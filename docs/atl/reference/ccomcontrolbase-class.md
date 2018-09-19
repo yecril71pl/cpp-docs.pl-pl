@@ -90,12 +90,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 17661f7497711449397ae2f64c9d6eff52d5f403
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 18666cc619796bc7ee0216eb9cdf020bd8d8a6f7
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43766928"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46035750"
 ---
 # <a name="ccomcontrolbase-class"></a>Klasa CComControlBase
 
@@ -238,7 +238,7 @@ CComControlBase(HWND& h);
 
 ### <a name="parameters"></a>Parametry
 
-*h*  
+*h*<br/>
 Dojście do okna skojarzonego z kontrolką.
 
 ### <a name="remarks"></a>Uwagi
@@ -268,10 +268,10 @@ virtual HRESULT ControlQueryInterface(const IID& iid,
 
 ### <a name="parameters"></a>Parametry
 
-*IID*  
+*IID*<br/>
 Identyfikator GUID interfejsu żądanej.
 
-*ppv*  
+*ppv*<br/>
 Wskaźnik do wskaźnika interfejsu identyfikowane przez *iid*, lub wartość NULL, jeśli nie można odnaleźć interfejsu.
 
 ### <a name="remarks"></a>Uwagi
@@ -292,7 +292,7 @@ BOOL DoesVerbActivate(LONG iVerb);
 
 ### <a name="parameters"></a>Parametry
 
-*iVerb*  
+*iVerb*<br/>
 Wartość wskazująca, Akcja do wykonania przez `DoVerb`.
 
 ### <a name="return-value"></a>Wartość zwracana
@@ -313,7 +313,7 @@ BOOL DoesVerbUIActivate(LONG iVerb);
 
 ### <a name="parameters"></a>Parametry
 
-*iVerb*  
+*iVerb*<br/>
 Wartość wskazująca, Akcja do wykonania przez `DoVerb`.
 
 ### <a name="return-value"></a>Wartość zwracana
@@ -330,10 +330,10 @@ HRESULT DoVerbProperties(LPCRECT /* prcPosRect */, HWND hwndParent);
 
 ### <a name="parameters"></a>Parametry
 
-*prcPosRec*  
+*prcPosRec*<br/>
 Zastrzeżone.
 
-*hwndParent*  
+*hwndParent*<br/>
 Uchwyt okna zawierającego kontrolkę.
 
 ### <a name="return-value"></a>Wartość zwracana
@@ -376,7 +376,7 @@ HRESULT GetAmbientAppearance(short& nAppearance);
 
 ### <a name="parameters"></a>Parametry
 
-*nAppearance*  
+*nAppearance*<br/>
 Właściwość DISPID_AMBIENT_APPEARANCE.
 
 ### <a name="return-value"></a>Wartość zwracana
@@ -397,7 +397,7 @@ HRESULT GetAmbientAutoClip(BOOL& bAutoClip);
 
 ### <a name="parameters"></a>Parametry
 
-*bAutoClip*  
+*bAutoClip*<br/>
 Właściwość DISPID_AMBIENT_AUTOCLIP.
 
 ### <a name="return-value"></a>Wartość zwracana
@@ -414,7 +414,7 @@ HRESULT GetAmbientBackColor(OLE_COLOR& BackColor);
 
 ### <a name="parameters"></a>Parametry
 
-*Kolor tła*  
+*Kolor tła*<br/>
 Właściwość DISPID_AMBIENT_BACKCOLOR.
 
 ### <a name="return-value"></a>Wartość zwracana
@@ -431,7 +431,7 @@ HRESULT GetAmbientCharSet(BSTR& bstrCharSet);
 
 ### <a name="parameters"></a>Parametry
 
-*bstrCharSet*  
+*bstrCharSet*<br/>
 Właściwość DISPID_AMBIENT_CHARSET.
 
 ### <a name="return-value"></a>Wartość zwracana
@@ -448,7 +448,7 @@ HRESULT GetAmbientCodePage(ULONG& ulCodePage);
 
 ### <a name="parameters"></a>Parametry
 
-*ulCodePage*  
+*ulCodePage*<br/>
 Właściwość DISPID_AMBIENT_CODEPAGE.
 
 ### <a name="return-value"></a>Wartość zwracana
@@ -465,7 +465,7 @@ HRESULT GetAmbientDisplayAsDefault(BOOL& bDisplayAsDefault);
 
 ### <a name="parameters"></a>Parametry
 
-*bDisplayAsDefault*  
+*bDisplayAsDefault*<br/>
 Właściwość DISPID_AMBIENT_DISPLAYASDEFAULT.
 
 ### <a name="return-value"></a>Wartość zwracana
@@ -482,7 +482,7 @@ HRESULT GetAmbientDisplayName(BSTR& bstrDisplayName);
 
 ### <a name="parameters"></a>Parametry
 
-*bstrDisplayName*  
+*bstrDisplayName*<br/>
 Właściwość DISPID_AMBIENT_DISPLAYNAME.
 
 ### <a name="return-value"></a>Wartość zwracana
@@ -499,7 +499,7 @@ HRESULT GetAmbientFont(IFont** ppFont);
 
 ### <a name="parameters"></a>Parametry
 
-*ppFont*  
+*ppFont*<br/>
 Wskaźnik do kontenera jego otoczenia [IFont](/windows/desktop/api/ocidl/nn-ocidl-ifont) interfejsu.
 
 ### <a name="return-value"></a>Wartość zwracana
@@ -520,7 +520,7 @@ HRESULT GetAmbientFontDisp(IFontDisp** ppFont);
 
 ### <a name="parameters"></a>Parametry
 
-*ppFont*  
+*ppFont*<br/>
 Wskaźnik do kontenera jego otoczenia [IFontDisp](https://msdn.microsoft.com/library/windows/desktop/ms692695) interfejs ekspedycji.
 
 ### <a name="return-value"></a>Wartość zwracana
@@ -541,7 +541,7 @@ HRESULT GetAmbientForeColor(OLE_COLOR& ForeColor);
 
 ### <a name="parameters"></a>Parametry
 
-*ForeColor*  
+*ForeColor*<br/>
 Właściwość DISPID_AMBIENT_FORECOLOR.
 
 ### <a name="return-value"></a>Wartość zwracana
@@ -558,7 +558,7 @@ HRESULT GetAmbientLocaleID(LCID& lcid);
 
 ### <a name="parameters"></a>Parametry
 
-*lcid*  
+*lcid*<br/>
 Właściwość DISPID_AMBIENT_LOCALEID.
 
 ### <a name="return-value"></a>Wartość zwracana
@@ -579,7 +579,7 @@ HRESULT GetAmbientMessageReflect(BOOL& bMessageReflect);
 
 ### <a name="parameters"></a>Parametry
 
-*bMessageReflect*  
+*bMessageReflect*<br/>
 Właściwość DISPID_AMBIENT_MESSAGEREFLECT.
 
 ### <a name="return-value"></a>Wartość zwracana
@@ -596,7 +596,7 @@ HRESULT GetAmbientPalette(HPALETTE& hPalette);
 
 ### <a name="parameters"></a>Parametry
 
-*hPalette*  
+*hPalette*<br/>
 Właściwość DISPID_AMBIENT_PALETTE.
 
 ### <a name="return-value"></a>Wartość zwracana
@@ -613,10 +613,10 @@ HRESULT GetAmbientProperty(DISPID dispid, VARIANT& var);
 
 ### <a name="parameters"></a>Parametry
 
-*identyfikator DISPID*  
+*identyfikator DISPID*<br/>
 Identyfikator właściwości kontenera, które mają zostać pobrane.
 
-*var*  
+*var*<br/>
 Zmiennej, aby otrzymać właściwości.
 
 ### <a name="return-value"></a>Wartość zwracana
@@ -637,7 +637,7 @@ HRESULT GetAmbientRightToLeft(BOOL& bRightToLeft);
 
 ### <a name="parameters"></a>Parametry
 
-*bRightToLeft*  
+*bRightToLeft*<br/>
 Właściwość DISPID_AMBIENT_RIGHTTOLEFT. Ustaw wartość TRUE, jeśli zawartość jest wyświetlana od prawej do lewej, wartość FALSE, jeśli jest wyświetlany po lewej do prawej.
 
 ### <a name="return-value"></a>Wartość zwracana
@@ -654,7 +654,7 @@ HRESULT GetAmbientScaleUnits(BSTR& bstrScaleUnits);
 
 ### <a name="parameters"></a>Parametry
 
-*bstrScaleUnits*  
+*bstrScaleUnits*<br/>
 Właściwość DISPID_AMBIENT_SCALEUNITS.
 
 ### <a name="return-value"></a>Wartość zwracana
@@ -671,7 +671,7 @@ HRESULT GetAmbientShowGrabHandles(BOOL& bShowGrabHandles);
 
 ### <a name="parameters"></a>Parametry
 
-*bShowGrabHandles*  
+*bShowGrabHandles*<br/>
 Właściwość DISPID_AMBIENT_SHOWGRABHANDLES.
 
 ### <a name="return-value"></a>Wartość zwracana
@@ -688,7 +688,7 @@ HRESULT GetAmbientShowHatching(BOOL& bShowHatching);
 
 ### <a name="parameters"></a>Parametry
 
-*bShowHatching*  
+*bShowHatching*<br/>
 Właściwość DISPID_AMBIENT_SHOWHATCHING.
 
 ### <a name="return-value"></a>Wartość zwracana
@@ -705,7 +705,7 @@ HRESULT GetAmbientSupportsMnemonics(BOOL& bSupportsMnemonics);
 
 ### <a name="parameters"></a>Parametry
 
-*bSupportsMnemonics*  
+*bSupportsMnemonics*<br/>
 Właściwość DISPID_AMBIENT_SUPPORTSMNEMONICS.
 
 ### <a name="return-value"></a>Wartość zwracana
@@ -722,7 +722,7 @@ HRESULT GetAmbientTextAlign(short& nTextAlign);
 
 ### <a name="parameters"></a>Parametry
 
-*nTextAlign*  
+*nTextAlign*<br/>
 Właściwość DISPID_AMBIENT_TEXTALIGN.
 
 ### <a name="return-value"></a>Wartość zwracana
@@ -739,7 +739,7 @@ HRESULT GetAmbientTopToBottom(BOOL& bTopToBottom);
 
 ### <a name="parameters"></a>Parametry
 
-*bTopToBottom*  
+*bTopToBottom*<br/>
 Właściwość DISPID_AMBIENT_TOPTOBOTTOM. Ustaw na wartość TRUE, jeśli tekst jest wyświetlany, od góry do dołu, FALSE, jeśli jest wyświetlana dołu do góry.
 
 ### <a name="return-value"></a>Wartość zwracana
@@ -756,7 +756,7 @@ HRESULT GetAmbientUIDead(BOOL& bUIDead);
 
 ### <a name="parameters"></a>Parametry
 
-*bUIDead*  
+*bUIDead*<br/>
 Właściwość DISPID_AMBIENT_UIDEAD.
 
 ### <a name="return-value"></a>Wartość zwracana
@@ -777,7 +777,7 @@ HRESULT GetAmbientUserMode(BOOL& bUserMode);
 
 ### <a name="parameters"></a>Parametry
 
-*bUserMode*  
+*bUserMode*<br/>
 Właściwość DISPID_AMBIENT_USERMODE.
 
 ### <a name="return-value"></a>Wartość zwracana
@@ -810,7 +810,7 @@ void GetZoomInfo(ATL_DRAWINFO& di);
 
 ### <a name="parameters"></a>Parametry
 
-*di*  
+*di*<br/>
 Struktura, w którym będą przechowywane współczynnika powiększenia licznik i mianownik. Aby uzyskać więcej informacji, zobacz [ATL_DRAWINFO](../../atl/reference/atl-drawinfo-structure.md).
 
 ### <a name="remarks"></a>Uwagi
@@ -827,10 +827,10 @@ HRESULT InPlaceActivate(LONG iVerb, const RECT* prcPosRect = NULL);
 
 ### <a name="parameters"></a>Parametry
 
-*iVerb*  
+*iVerb*<br/>
 Wartość wskazująca, Akcja do wykonania przez [IOleObjectImpl::DoVerb](../../atl/reference/ioleobjectimpl-class.md#doverb).
 
-*prcPosRect*  
+*prcPosRect*<br/>
 Wskaźnik do położenia kontrolki w miejscu.
 
 ### <a name="return-value"></a>Wartość zwracana
@@ -853,10 +853,10 @@ HRESULT InternalGetSite(REFIID riid, void** ppUnkSite);
 
 ### <a name="parameters"></a>Parametry
 
-*Parametr riid*  
+*Parametr riid*<br/>
 IID wskaźnika interfejsu, który ma zostać zwrócony w *ppUnkSite*.
 
-*ppUnkSite*  
+*ppUnkSite*<br/>
 Adres zmiennej wskaźnika, który otrzymuje wskaźnik interfejsu w *riid*.
 
 ### <a name="return-value"></a>Wartość zwracana
@@ -1259,7 +1259,7 @@ virtual HRESULT OnDraw(ATL_DRAWINFO& di);
 
 ### <a name="parameters"></a>Parametry
 
-*di*  
+*di*<br/>
 Odwołanie do [ATL_DRAWINFO](../../atl/reference/atl-drawinfo-structure.md) strukturę, która zawiera rysowania informacje, takie jak aspekt rysowania, granice formantu i czy rysunek jest zoptymalizowany, czy nie.
 
 ### <a name="return-value"></a>Wartość zwracana
@@ -1286,7 +1286,7 @@ virtual HRESULT OnDrawAdvanced(ATL_DRAWINFO& di);
 
 ### <a name="parameters"></a>Parametry
 
-*di*  
+*di*<br/>
 Odwołanie do [ATL_DRAWINFO](../../atl/reference/atl-drawinfo-structure.md) strukturę, która zawiera rysowania informacje, takie jak aspekt rysowania, granice formantu i czy rysunek jest zoptymalizowany, czy nie.
 
 ### <a name="return-value"></a>Wartość zwracana
@@ -1312,16 +1312,16 @@ LRESULT OnKillFocus(UINT /* nMsg */,
 
 ### <a name="parameters"></a>Parametry
 
-*nMsg*  
+*nMsg*<br/>
 Zastrzeżone.
 
-*wParam*  
+*wParam*<br/>
 Zastrzeżone.
 
-*lParam*  
+*lParam*<br/>
 Zastrzeżone.
 
-*bHandled*  
+*bHandled*<br/>
 Flaga wskazująca, czy komunikatów okien został pomyślnie obsłużony. Wartość domyślna to FALSE.
 
 ### <a name="return-value"></a>Wartość zwracana
@@ -1341,16 +1341,16 @@ LRESULT OnMouseActivate(UINT /* nMsg */,
 
 ### <a name="parameters"></a>Parametry
 
-*nMsg*  
+*nMsg*<br/>
 Zastrzeżone.
 
-*wParam*  
+*wParam*<br/>
 Zastrzeżone.
 
-*lParam*  
+*lParam*<br/>
 Zastrzeżone.
 
-*bHandled*  
+*bHandled*<br/>
 Flaga wskazująca, czy komunikatów okien został pomyślnie obsłużony. Wartość domyślna to FALSE.
 
 ### <a name="return-value"></a>Wartość zwracana
@@ -1370,16 +1370,16 @@ LRESULT OnPaint(UINT /* nMsg */,
 
 ### <a name="parameters"></a>Parametry
 
-*nMsg*  
+*nMsg*<br/>
 Zastrzeżone.
 
-*wParam*  
+*wParam*<br/>
 Istniejącego elementu HDC.
 
-*lParam*  
+*lParam*<br/>
 Zastrzeżone.
 
-*lResult*  
+*lResult*<br/>
 Zastrzeżone.
 
 ### <a name="return-value"></a>Wartość zwracana
@@ -1403,16 +1403,16 @@ LRESULT OnSetFocus(UINT /* nMsg */,
 
 ### <a name="parameters"></a>Parametry
 
-*nMsg*  
+*nMsg*<br/>
 Zastrzeżone.
 
-*wParam*  
+*wParam*<br/>
 Zastrzeżone.
 
-*lParam*  
+*lParam*<br/>
 Zastrzeżone.
 
-*bHandled*  
+*bHandled*<br/>
 Flaga wskazująca, czy komunikatów okien został pomyślnie obsłużony. Wartość domyślna to FALSE.
 
 ### <a name="return-value"></a>Wartość zwracana
@@ -1434,10 +1434,10 @@ BOOL PreTranslateAccelerator(LPMSG /* pMsg */,
 
 ### <a name="parameters"></a>Parametry
 
-*pMsg*  
+*pMsg*<br/>
 Zastrzeżone.
 
-*hRet*  
+*hRet*<br/>
 Zastrzeżone.
 
 ### <a name="return-value"></a>Wartość zwracana
@@ -1470,7 +1470,7 @@ HRESULT SendOnDataChange(DWORD advf = 0);
 
 ### <a name="parameters"></a>Parametry
 
-*advf*  
+*advf*<br/>
 Aby flagi określające, jak wywołanie [IAdviseSink::OnDataChange](/windows/desktop/api/objidl/nf-objidl-iadvisesink-ondatachange) wykonano. Wartości pochodzą z [ADVF](/windows/desktop/api/objidl/ne-objidl-tagadvf) wyliczenia.
 
 ### <a name="return-value"></a>Wartość zwracana
@@ -1487,7 +1487,7 @@ HRESULT SendOnRename(IMoniker* pmk);
 
 ### <a name="parameters"></a>Parametry
 
-*kluczy głównych parowania*  
+*kluczy głównych parowania*<br/>
 Wskaźnik do nowego moniker formantu.
 
 ### <a name="return-value"></a>Wartość zwracana
@@ -1524,10 +1524,10 @@ HRESULT SendOnViewChange(DWORD dwAspect, LONG lindex = -1);
 
 ### <a name="parameters"></a>Parametry
 
-*dwAspect*  
+*dwAspect*<br/>
 Aspekt lub w widoku formantu.
 
-*lindex*  
+*lindex*<br/>
 Części widoku, które uległy zmianie. Tylko wartość -1 jest prawidłowy.
 
 ### <a name="return-value"></a>Wartość zwracana
@@ -1548,7 +1548,7 @@ BOOL SetControlFocus(BOOL bGrab);
 
 ### <a name="parameters"></a>Parametry
 
-*bGrab*  
+*bGrab*<br/>
 W przypadku opcji TRUE Ustawia fokus klawiatury do kontrolki wywoływania. W przypadku wartości FAŁSZ spowoduje usunięcie fokus klawiatury z wywołującym kontroli, pod warunkiem ma fokus.
 
 ### <a name="return-value"></a>Wartość zwracana
@@ -1569,7 +1569,7 @@ void SetDirty(BOOL bDirty);
 
 ### <a name="parameters"></a>Parametry
 
-*bDirty*  
+*bDirty*<br/>
 Wartość elementu członkowskiego danych [CComControlBase::m_bRequiresSave](#m_brequiressave).
 
 ### <a name="remarks"></a>Uwagi
@@ -1578,5 +1578,5 @@ Wartość elementu członkowskiego danych [CComControlBase::m_bRequiresSave](#m_
 
 ## <a name="see-also"></a>Zobacz też
 
-[Klasa CComControl](../../atl/reference/ccomcontrol-class.md)   
+[Klasa CComControl](../../atl/reference/ccomcontrol-class.md)<br/>
 [Klasa — Przegląd](../../atl/atl-class-overview.md)

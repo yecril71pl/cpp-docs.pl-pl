@@ -18,16 +18,16 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1dfc9c50503fcd277f34e8f5dfc4a630d888eebf
-ms.sourcegitcommit: f0c90000125a9497bf61e41624de189a043703c0
+ms.openlocfilehash: 4cc44672fe30af8b6521b617228fb70b88e61f83
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44318281"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46040946"
 ---
 # <a name="exception-specifications-throw-noexcept-c"></a>Specyfikacje wyjątków (throw, noexcept) (C++)
 
-Specyfikacje wyjątków są funkcją języka C++, wskazujące intencji programisty dotyczące typów wyjątków, które mogą być przekazywane przez funkcję. Można określić, że funkcja może lub nie może zakończyć przez wyjątek przy użyciu *Specyfikacja wyjątku*. Kompilator może dzięki tym informacjom można zoptymalizować wywołań funkcji, a następnie zakończyć program, jeśli wystąpił nieoczekiwany wyjątek specjalne funkcji. 
+Specyfikacje wyjątków są funkcją języka C++, wskazujące intencji programisty dotyczące typów wyjątków, które mogą być przekazywane przez funkcję. Można określić, że funkcja może lub nie może zakończyć przez wyjątek przy użyciu *Specyfikacja wyjątku*. Kompilator może dzięki tym informacjom można zoptymalizować wywołań funkcji, a następnie zakończyć program, jeśli wystąpił nieoczekiwany wyjątek specjalne funkcji.
 
 Przed C ++ 17 wystąpiły dwa rodzaje Specyfikacja wyjątku. *Specyfikacji noexcept* nowych funkcji w języku C ++ 11. Określa, czy zestaw potencjalne wyjątki, które można udosłownić funkcji jest pusta. *Specyfikacji wyjątków dynamicznych*, lub `throw(optional_type_list)` specyfikacji zostało uznane za przestarzałe w C ++ 11 i usunięte w języku C ++ 17, z wyjątkiem `throw()`, która jest aliasem `noexcept(true)`. Ta specyfikacja wyjątku zaprojektowano tak, aby podawać sumaryczne informacje o tym, jakie wyjątki mogą zostać wygenerowane z funkcji, ale w praktyce okazało się być problematyczne. Jeden specyfikacji wyjątków dynamicznych, która miała być nieco użyteczne został bezwarunkowe `throw()` specyfikacji. Na przykład deklaracji funkcji:
 
@@ -138,5 +138,6 @@ in handler
 ```
 
 ## <a name="see-also"></a>Zobacz także
- [Instrukcje try, throw i catch (C++)](../cpp/try-throw-and-catch-statements-cpp.md)  
- [Obsługa wyjątków języka C++](../cpp/cpp-exception-handling.md)
+
+[Instrukcje try, throw i catch (C++)](../cpp/try-throw-and-catch-statements-cpp.md)<br/>
+[Obsługa wyjątków języka C++](../cpp/cpp-exception-handling.md)

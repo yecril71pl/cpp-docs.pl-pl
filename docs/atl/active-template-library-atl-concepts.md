@@ -14,12 +14,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3bb07807934dcc5c665f0058ef869f62f0b2d3ea
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 554fddbb778a19555fc7342f08eaac2e5642d815
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43755427"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46019448"
 ---
 # <a name="active-template-library-atl-concepts"></a>Pojęcia biblioteki Active Template Library (ALT)
 
@@ -29,86 +29,86 @@ Jeśli to zrobisz, wiele programowania ATL, można dowiedzieć się więcej o at
 
 ## <a name="in-this-section"></a>W tej sekcji
 
-[ALT — samouczek](../atl/active-template-library-atl-tutorial.md)  
+[ALT — samouczek](../atl/active-template-library-atl-tutorial.md)<br/>
 Poprowadzi Cię przez tworzenie formantu i pokazuje podstawowe informacje dotyczące niektórych ATL w procesie.
 
-[Wprowadzenie do modelu COM i ATL](../atl/introduction-to-com-and-atl.md)  
+[Wprowadzenie do modelu COM i ATL](../atl/introduction-to-com-and-atl.md)<br/>
 Wprowadza główne pojęcia za Component Object Model (COM). W tym artykule krótko opisano również ATL jest i kiedy należy go używać.
 
-[Podstawowe informacje na temat obiektów COM ATL](../atl/fundamentals-of-atl-com-objects.md)  
+[Podstawowe informacje na temat obiektów COM ATL](../atl/fundamentals-of-atl-com-objects.md)<br/>
 W tym artykule omówiono relacje między różnymi klasy ATL i implementacji tych klas.
 
-[Podwójne interfejsy i ATL](../atl/dual-interfaces-and-atl.md)  
+[Podwójne interfejsy i ATL](../atl/dual-interfaces-and-atl.md)<br/>
 W tym artykule opisano dwa interfejsy z perspektywy ATL.
 
-[Kolekcje i wyliczenia ATL](../atl/atl-collections-and-enumerators.md)  
+[Kolekcje i wyliczenia ATL](../atl/atl-collections-and-enumerators.md)<br/>
 W tym artykule opisano implementację i tworzenie kolekcje i wyliczenia w ATL.
 
-[Podstawy złożonych kontrolek](../atl/atl-composite-control-fundamentals.md)  
+[Podstawy złożonych kontrolek](../atl/atl-composite-control-fundamentals.md)<br/>
 Instrukcje krok po kroku do tworzenia złożonych kontrolek. Kontrolki złożonej jest typem formantu ActiveX, który może zawierać inne kontrolki ActiveX lub formanty Windows.
 
-[Zawieranie kontrolek ATL — często zadawane pytania](../atl/atl-control-containment-faq.md)  
+[Zawieranie kontrolek ATL — często zadawane pytania](../atl/atl-control-containment-faq.md)<br/>
 Obejmuje podstawowych kwestii związanych z hosting kontrolek za pomocą ATL.
 
-[Strony właściwości ALT COM](../atl/atl-com-property-pages.md)  
+[Strony właściwości ALT COM](../atl/atl-com-property-pages.md)<br/>
 Pokazuje, jak określić i implementowanie strony właściwości COM.
 
-[Obsługa ATL dla kontrolek DHTML](../atl/atl-support-for-dhtml-controls.md)  
+[Obsługa ATL dla kontrolek DHTML](../atl/atl-support-for-dhtml-controls.md)<br/>
 Instrukcje krok po kroku dotyczące tworzenia kontrolki DHTML.
 
-[Punkty połączenia ATL](../atl/atl-connection-points.md)  
+[Punkty połączenia ATL](../atl/atl-connection-points.md)<br/>
 Wyjaśnia, czym są punkty połączenia i ATL Implementowanie je.
 
-[Obsługa zdarzeń i ATL](../atl/event-handling-and-atl.md)  
+[Obsługa zdarzeń i ATL](../atl/event-handling-and-atl.md)<br/>
 W tym artykule opisano kroki, które należy wykonać w celu obsługi zdarzeń COM za pomocą ATL [IDispEventImpl](../atl/reference/idispeventimpl-class.md) i [IDispEventSimpleImpl](../atl/reference/idispeventsimpleimpl-class.md) klasy.
 
-[ATL i organizator trybu wolnych wątków](../atl/atl-and-the-free-threaded-marshaler.md)  
+[ATL i organizator trybu wolnych wątków](../atl/atl-and-the-free-threaded-marshaler.md)<br/>
 Zawiera szczegółowe informacje na temat opcji ATL prostego obiektu kreatora, umożliwiająca klasy agregacji marshaler trybu (programu FTM).
 
-[Określanie modelu wątkowości projektu](../atl/specifying-the-threading-model-for-a-project-atl.md)  
+[Określanie modelu wątkowości projektu](../atl/specifying-the-threading-model-for-a-project-atl.md)<br/>
 W tym artykule opisano makra, które są dostępne do kontrolowania wydajności w czasie wykonywania związanych z wątków w projekcie.
 
-[Klasy modułów ATL](../atl/atl-module-classes.md)  
+[Klasy modułów ATL](../atl/atl-module-classes.md)<br/>
 W tym artykule omówiono nowe klasy modułów ATL 7.0. Klasy modułów implementuje podstawowe funkcje wymagane przez ATL.
 
-[Usługi ATL](../atl/atl-services.md)  
+[Usługi ATL](../atl/atl-services.md)<br/>
 Obejmuje szereg zdarzeń, które występują, gdy usługa jest zaimplementowana. Również opowiada o niektóre pojęcia związane z tworzenia usługi.
 
-[Klasy okien ATL](../atl/atl-window-classes.md)  
+[Klasy okien ATL](../atl/atl-window-classes.md)<br/>
 W tym artykule opisano sposób tworzenia, superklasie i oknach podklasy ATL. Klasy okien ATL nie są klasy COM.
 
-[Kolekcje klas ATL](../atl/atl-collection-classes.md)  
+[Kolekcje klas ATL](../atl/atl-collection-classes.md)<br/>
 Opisuje sposób używania tablic i mapy w ATL.
 
-[Składnik rejestru Alt (Rejestrator)](../atl/atl-registry-component-registrar.md)  
+[Składnik rejestru Alt (Rejestrator)](../atl/atl-registry-component-registrar.md)<br/>
 W tym artykule omówiono ATL skryptów składnię i parametry wymienne. Wyjaśniono także, jak Konfigurowanie statycznego linku do rejestratora.
 
-[Programowanie za pomocą kodu ATL i C Run-Time](../atl/programming-with-atl-and-c-run-time-code.md)  
+[Programowanie za pomocą kodu ATL i C Run-Time](../atl/programming-with-atl-and-c-run-time-code.md)<br/>
 W tym artykule omówiono zalety łączenia statycznie lub dynamicznie do biblioteki wykonawczej C (CRT).
 
-[Programowanie przy użyciu CComBSTR](../atl/programming-with-ccombstr-atl.md)  
+[Programowanie przy użyciu CComBSTR](../atl/programming-with-ccombstr-atl.md)<br/>
 W tym artykule omówiono kilka sytuacji, które wymagają ostrożność podczas programowania przy użyciu `CComBSTR`.
 
-[Odwołanie kodowania](../atl/atl-encoding-reference.md)  
+[Odwołanie kodowania](../atl/atl-encoding-reference.md)<br/>
 Udostępnia funkcje i makra, które obsługuje kodowania w szereg typowych standardy internetowe, takie jak uuencode szesnastkową i UTF8 w atlenc.h.
 
-[Odwołanie do narzędzi](../atl/atl-utilities-reference.md)  
+[Odwołanie do narzędzi](../atl/atl-utilities-reference.md)<br/>
 Zawiera kod do manipulowania ścieżek i adresów URL w postaci [CPathT](../atl/reference/cpatht-class.md) i [CUrl](../atl/reference/curl-class.md). Z puli wątków [CThreadPool](../atl/reference/cthreadpool-class.md), mogą być używane we własnych aplikacjach. Ten kod można znaleźć w atlpath.h i atlutil.h.
 
 ## <a name="related-sections"></a>Sekcje pokrewne
 
-[Przykłady ATL](../visual-cpp-samples.md)  
+[Przykłady ATL](../visual-cpp-samples.md)<br/>
 Zawiera opisy i linki do przykładowych programów ATL.
 
-[Tworzenie projektu ATL](../atl/reference/creating-an-atl-project.md)  
+[Tworzenie projektu ATL](../atl/reference/creating-an-atl-project.md)<br/>
 Zawiera informacje na temat Kreator projektów ATL.
 
-[Kreator kontrolki ATL](../atl/reference/atl-control-wizard.md)  
+[Kreator kontrolki ATL](../atl/reference/atl-control-wizard.md)<br/>
 W tym artykule omówiono sposób dodawania klasy.
 
-[Programowanie oparte na atrybutach](../windows/attributed-programming-concepts.md)  
+[Programowanie oparte na atrybutach](../windows/attributed-programming-concepts.md)<br/>
 Zawiera omówienie na przy użyciu atrybutów, aby uprościć programowanie COM plus listę łącza do bardziej szczegółowych tematów.
 
-[Przegląd klas ATL](../atl/atl-class-overview.md)  
+[Przegląd klas ATL](../atl/atl-class-overview.md)<br/>
 Zawiera informacje i łącza do klas ATL.
 

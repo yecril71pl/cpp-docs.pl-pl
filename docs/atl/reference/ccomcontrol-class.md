@@ -29,12 +29,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5bc4004be27a057c96d9c10e7e7f261d8a5ddebe
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: bb2d345e0bb8be8f5150d48237df9845acf451dd
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43761355"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46036179"
 ---
 # <a name="ccomcontrol-class"></a>Klasa CComControl
 
@@ -46,17 +46,17 @@ Ta klasa dostarcza metody do tworzenia i zarządzania formantami ATL.
 ## <a name="syntax"></a>Składnia
 
 ```
-template <class T, class WinBase = CWindowImpl<T>>  
+template <class T, class WinBase = CWindowImpl<T>>
 class ATL_NO_VTABLE CComControl : public CComControlBase,
     public WinBase;
 ```
 
 #### <a name="parameters"></a>Parametry
 
-*T*  
+*T*<br/>
 Klasa Implementowanie formantu.
 
-*WinBase*  
+*WinBase*<br/>
 Klasa bazowa implementuje funkcji obsługi okien. Wartość domyślna to [CWindowImpl](../../atl/reference/cwindowimpl-class.md).
 
 ## <a name="members"></a>Elementy członkowskie
@@ -119,10 +119,10 @@ virtual HRESULT ControlQueryInterface(const IID& iid, void** ppv);
 
 ### <a name="parameters"></a>Parametry
 
-*IID*  
+*IID*<br/>
 [in] Identyfikator GUID interfejsu żądanej.
 
-*ppv*  
+*ppv*<br/>
 [out] Wskaźnik do wskaźnika interfejsu identyfikowane przez *iid*, lub wartość NULL, jeśli nie można odnaleźć interfejsu.
 
 ### <a name="remarks"></a>Uwagi
@@ -143,10 +143,10 @@ virtual HWND CreateControlWindow(HWND hWndParent, RECT& rcPos);
 
 ### <a name="parameters"></a>Parametry
 
-*hWndParent*  
+*hWndParent*<br/>
 [in] Dojście do okna nadrzędnego lub właściciela. Należy podać prawidłowy uchwyt okna. Okno kontrolki jest ograniczona do obszaru okna nadrzędnego.
 
-*rcPos*  
+*rcPos*<br/>
 [in] Początkowy rozmiar i położenie okna, które ma zostać utworzony.
 
 ### <a name="remarks"></a>Uwagi
@@ -167,7 +167,7 @@ HRESULT FireOnChanged(DISPID dispID);
 
 ### <a name="parameters"></a>Parametry
 
-*dispID*  
+*dispID*<br/>
 [in] Identyfikator właściwości, które uległy zmianie.
 
 ### <a name="return-value"></a>Wartość zwracana
@@ -194,7 +194,7 @@ HRESULT FireOnRequestEdit(DISPID dispID);
 
 ### <a name="parameters"></a>Parametry
 
-*dispID*  
+*dispID*<br/>
 [in] Identyfikator właściwości, które chcesz zmienić.
 
 ### <a name="return-value"></a>Wartość zwracana
@@ -203,7 +203,7 @@ Jedna z wartości HRESULT standardowych.
 
 ### <a name="remarks"></a>Uwagi
 
-Jeśli pochodną klasy kontrolki [ipropertynotifysink —](/windows/desktop/api/ocidl/nn-ocidl-ipropertynotifysink), ta metoda wywołuje [CFirePropNotifyEvent::FireOnRequestEdit](cfirepropnotifyevent-class.md#fireonrequestedit) powiadomić wszystkich połączonych `IPropertyNotifySink` interfejsów określonego właściwości kontrolki zostanie zmienione. Jeśli nie jest pochodną klasy kontrolki `IPropertyNotifySink`, ta metoda zwraca wartość S_OK.  
+Jeśli pochodną klasy kontrolki [ipropertynotifysink —](/windows/desktop/api/ocidl/nn-ocidl-ipropertynotifysink), ta metoda wywołuje [CFirePropNotifyEvent::FireOnRequestEdit](cfirepropnotifyevent-class.md#fireonrequestedit) powiadomić wszystkich połączonych `IPropertyNotifySink` interfejsów określonego właściwości kontrolki zostanie zmienione. Jeśli nie jest pochodną klasy kontrolki `IPropertyNotifySink`, ta metoda zwraca wartość S_OK.
 
 Ta metoda jest bezpieczny do wywołania, nawet jeśli formant nie obsługuje punktów połączenia.
 
@@ -224,13 +224,13 @@ int MessageBox(
 
 ### <a name="parameters"></a>Parametry
 
-*lpszText*  
+*lpszText*<br/>
 Tekst, który ma być wyświetlany w oknie komunikatu.
 
-*lpszCaption*  
+*lpszCaption*<br/>
 Tytuł okna dialogowego. Jeśli wartość NULL (ustawienie domyślne), tytuł "Error" jest używany.
 
-*nNie*  
+*nNie*<br/>
 Określa zawartość i zachowanie okna dialogowego. Zobacz [MessageBox](/windows/desktop/api/winuser/nf-winuser-messagebox) wpisu w dokumentacji zestawu SDK Windows listę dostępnych pól inny komunikat. Wartość domyślna zapewnia prosty **OK** przycisku.
 
 ### <a name="return-value"></a>Wartość zwracana
@@ -243,7 +243,7 @@ Zwraca wartość całkowitą określającą jedną z wartości element menu na l
 
 ## <a name="see-also"></a>Zobacz też
 
-[Klasa CWindowImpl](../../atl/reference/cwindowimpl-class.md)   
-[Klasa — Przegląd](../../atl/atl-class-overview.md)   
-[Klasa CComControlBase](../../atl/reference/ccomcontrolbase-class.md)   
+[Klasa CWindowImpl](../../atl/reference/cwindowimpl-class.md)<br/>
+[Klasa — Przegląd](../../atl/atl-class-overview.md)<br/>
+[Klasa CComControlBase](../../atl/reference/ccomcontrolbase-class.md)<br/>
 [Klasa CComCompositeControl](../../atl/reference/ccomcompositecontrol-class.md)
