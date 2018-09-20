@@ -21,46 +21,48 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 69079e6f74743a82aa9e9b9b1c13703e480c904c
-ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
+ms.openlocfilehash: e63383e372227dc14ce90843b03b6cb0c029b52a
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/26/2018
-ms.locfileid: "36951546"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46383860"
 ---
 # <a name="using-the-mfc-source-files"></a>Korzystanie z plików źródłowych MFC
-Biblioteka Microsoft Foundation Class (MFC) udostępnia pełny kod źródłowy. Pliki nagłówków (.h) znajdują się w katalogu \atlmfc\include; pliki implementacji (.cpp) znajdują się w katalogu \atlmfc\src\mfc.  
-  
- Tej rodziny artykułów opisano konwencje używane przez MFC do komentowania różne części każdej klasy, co oznaczają te komentarze i co należy oczekiwać można znaleźć w każdej sekcji. Kreatorów Visual C++ Użyj konwencji podobne dla klasy, które tworzą automatycznie i będzie prawdopodobnie użyteczna tych konwencji własnego kodu.  
-  
- Można zapoznać się z **publicznego**, **chronione**, i **prywatnej** słowa kluczowe języka C++. Podczas przeglądania plików nagłówek MFC, możesz znaleźć, każda klasa może mieć kilka z nich. Na przykład może być zmiennych publicznych elementów członkowskich i funkcji w więcej niż jeden **publicznego** — słowo kluczowe. Jest to spowodowane MFC oddziela zmiennych Członkowskich i funkcji na podstawie ich użycia, nie według typu dozwolony dostęp do. Używa MFC **prywatnej** oszczędnie; nawet elementy uznawane za szczegóły implementacji są zwykle chronione i często są publiczne. Chociaż dostęp do szczegółów implementacji nie jest zalecane, MFC pozostawia decyzja do Ciebie.  
-  
- W plikach źródłowych MFC i pliki tworzone przez Kreatora aplikacji MFC można znaleźć komentarze, takich jak te w deklaracjach klas (zwykle w podanej kolejności):  
-  
- `// Constructors`  
-  
- `// Attributes`  
-  
- `// Operations`  
-  
- `// Overridables`  
-  
- `// Implementation`  
-  
- Tematy w tej rodzinie artykułów obejmują:  
-  
--   [Przykład komentarzy](../mfc/an-example-of-the-comments.md)  
-  
--   [/ / Comment implementacji](../mfc/decrement-implementation-comment.md)  
-  
--   [/ / Komentarz dotyczący konstruktorów](../mfc/decrement-constructors-comment.md)  
-  
--   [/ / Attributes komentarza](../mfc/decrement-attributes-comment.md)  
-  
--   [/ / Operations comment](../mfc/decrement-operations-comment.md)  
-  
--   [/ / Comment z możliwością zastąpienia](../mfc/decrement-overridables-comment.md)  
-  
-## <a name="see-also"></a>Zobacz też  
- [Tematy ogólne dotyczące MFC](../mfc/general-mfc-topics.md)
+
+Biblioteka Microsoft Foundation Class (MFC) dostarcza pełny kod źródłowy. Pliki nagłówkowe (.h) znajdują się w katalogu \atlmfc\include. pliki implementacji (.cpp) znajdują się w katalogu \atlmfc\src\mfc.
+
+Tej rodziny artykułów opisano konwencje, używane przez MFC do komentarzy z różnymi częściami usługi każdej klasy, co oznaczają te komentarze i czego oczekiwać można znaleźć w każdej sekcji. Kreatorów Visual C++ Użyj podobne konwencje dla klas, które tworzą dla Ciebie, a użytkownik będzie prawdopodobnie przydatne tych konwencji własnego kodu.
+
+Można zapoznać się z **publicznych**, **chronione**, i **prywatnej** słów kluczowych języka C++. Podczas wyszukiwania w plikach nagłówkowych MFC, znajdzie się, że każda klasa może mieć kilka z nich. Na przykład może być publicznego elementu członkowskiego zmiennych i funkcji w obszarze więcej niż jeden **publicznych** — słowo kluczowe. Jest to spowodowane MFC oddziela zmienne Członkowskie i funkcje w zależności od ich użycia, nie przez typ dostępu przyznany. MFC wykorzystuje **prywatnej** oszczędnie; nawet elementy uważane za szczegółów implementacji ogólnie są chronione oraz wiele razy były publiczne. Chociaż dostęp do szczegółów implementacji nie zaleca się, MFC pozostawia decyzji dla Ciebie.
+
+W plikach źródłowych MFC i plików tworzonych przez Kreatora aplikacji MFC można znaleźć komentarze, takie jak te w obrębie deklaracji klasy (zwykle w tej kolejności):
+
+`// Constructors`
+
+`// Attributes`
+
+`// Operations`
+
+`// Overridables`
+
+`// Implementation`
+
+Tematy omówione w tej rodzinie artykuły obejmują:
+
+- [Przykład komentarzy](../mfc/an-example-of-the-comments.md)
+
+- [/ / Komentarz dotyczący implementacji](../mfc/decrement-implementation-comment.md)
+
+- [/ / Komentarz dotyczący konstruktorów](../mfc/decrement-constructors-comment.md)
+
+- [/ / Atrybuty komentarz](../mfc/decrement-attributes-comment.md)
+
+- [/ / Komentarz dotyczący operacji](../mfc/decrement-operations-comment.md)
+
+- [/ / / / Overridables komentarz](../mfc/decrement-overridables-comment.md)
+
+## <a name="see-also"></a>Zobacz też
+
+[Tematy ogólne dotyczące MFC](../mfc/general-mfc-topics.md)
 
