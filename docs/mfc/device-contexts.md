@@ -42,45 +42,48 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: efda2666a1d7cf47a485a9e1ceb53c09f4966989
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 27203b5b93d69c29df29e64f872efb8e5f1828e1
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43203835"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46437649"
 ---
 # <a name="device-contexts"></a>Konteksty urządzenia
-Kontekst urządzenia jest strukturą danych Windows, zawierający informacje o atrybuty rysowania urządzenia, np. wyświetlania lub drukarki. Wszystkie wywołania rysowania są nawiązywane przy użyciu obiektu kontekstu urządzenia, który hermetyzuje interfejsy API Windows rysowania linii, kształty i tekst. Konteksty urządzenia umożliwiają rysowanie niezależne od urządzenia w Windows. Konteksty urządzenia może służyć do rysowania ekranu, drukarki lub metaplik.  
-  
- [CPaintDC](../mfc/reference/cpaintdc-class.md) obiektów hermetyzacji wspólnych idiom systemu Windows, wywołanie `BeginPaint` funkcji rysowania w kontekście urządzenia, a następnie wywoływania `EndPaint` funkcji. `CPaintDC` Konstruktor wywołuje `BeginPaint` dla Ciebie i wywołania destruktora `EndPaint`. Uproszczony proces jest utworzenie [CDC](../mfc/reference/cdc-class.md) obiektu, rysowania, a następnie zniszcz `CDC` obiektu. W ramach większość nawet ten proces jest zautomatyzowany. W szczególności usługi `OnDraw` funkcji jest przekazywany `CPaintDC` już przygotowane (za pośrednictwem `OnPrepareDC`), a po prostu narysuj tę sytuację. Jest niszczony przez platformę i udostępnieniem podstawowy kontekst urządzenia Windows po powrocie z wywołania sieci `OnDraw` funkcji.  
-  
- [Cclientdc —](../mfc/reference/cclientdc-class.md) obiekty hermetyzują pracę z kontekstu urządzenia, który reprezentuje tylko obszaru klienckiego okna. `CClientDC` Konstruktor wywołuje `GetDC` funkcji i wywołania destruktora `ReleaseDC` funkcji. [CWindowDC](../mfc/reference/cwindowdc-class.md) obiekty hermetyzują kontekst urządzenia, który reprezentuje całego okna, w tym jego ramki.  
-  
- [CMetaFileDC](../mfc/reference/cmetafiledc-class.md) obiekty hermetyzują rysowania w metaplik Windows. W przeciwieństwie do `CPaintDC` przekazany do `OnDraw`, w tym przypadku należy wywołać [OnPrepareDC](../mfc/reference/cview-class.md#onpreparedc) samodzielnie.  
-  
-## <a name="mouse-drawing"></a>Rysowanie myszy  
- Większość Rysowanie w ramach programu — i dlatego większość pracy kontekstu urządzenia — odbywa się w widoku `OnDraw` funkcja elementu członkowskiego. Można jednak nadal używać obiektów kontekstu urządzenia do innych celów. Na przykład, aby przekazać opinię śledzenia dla ruchów myszy w widoku, należy narysować bezpośrednio w widoku bez oczekiwania na `OnDraw` do wywołania.  
-  
- W takim przypadku można użyć [cclientdc —](../mfc/reference/cclientdc-class.md) obiekt kontekstu urządzenia, aby narysować bezpośrednio w widoku.  
-  
-### <a name="what-do-you-want-to-know-more-about"></a>Co chcesz dowiedzieć się więcej na temat  
-  
--   [Konteksty urządzenia (definicja)](https://msdn.microsoft.com/library/windows/desktop/dd183553)  
-  
--   [Rysowanie w widoku](../mfc/drawing-in-a-view.md)  
-  
--   [Interpretowanie danych wprowadzonych przez użytkownika za pośrednictwem widoku](../mfc/interpreting-user-input-through-a-view.md)  
-  
--   [Linii i krzywych](https://msdn.microsoft.com/library/windows/desktop/dd145028)  
-  
--   [Wypełnione kształty](https://msdn.microsoft.com/library/windows/desktop/dd162714)  
-  
--   [Czcionki i tekst](/windows/desktop/gdi/fonts-and-text)  
-  
--   [Kolory](https://msdn.microsoft.com/library/windows/desktop/dd183450)  
-  
--   [Współrzędnych miejsca do magazynowania i przekształcenia](https://msdn.microsoft.com/library/windows/desktop/dd183475)  
-  
-## <a name="see-also"></a>Zobacz też  
- [Obiekty okna](../mfc/window-objects.md)
+
+Kontekst urządzenia jest strukturą danych Windows, zawierający informacje o atrybuty rysowania urządzenia, np. wyświetlania lub drukarki. Wszystkie wywołania rysowania są nawiązywane przy użyciu obiektu kontekstu urządzenia, który hermetyzuje interfejsy API Windows rysowania linii, kształty i tekst. Konteksty urządzenia umożliwiają rysowanie niezależne od urządzenia w Windows. Konteksty urządzenia może służyć do rysowania ekranu, drukarki lub metaplik.
+
+[CPaintDC](../mfc/reference/cpaintdc-class.md) obiektów hermetyzacji wspólnych idiom systemu Windows, wywołanie `BeginPaint` funkcji rysowania w kontekście urządzenia, a następnie wywoływania `EndPaint` funkcji. `CPaintDC` Konstruktor wywołuje `BeginPaint` dla Ciebie i wywołania destruktora `EndPaint`. Uproszczony proces jest utworzenie [CDC](../mfc/reference/cdc-class.md) obiektu, rysowania, a następnie zniszcz `CDC` obiektu. W ramach większość nawet ten proces jest zautomatyzowany. W szczególności usługi `OnDraw` funkcji jest przekazywany `CPaintDC` już przygotowane (za pośrednictwem `OnPrepareDC`), a po prostu narysuj tę sytuację. Jest niszczony przez platformę i udostępnieniem podstawowy kontekst urządzenia Windows po powrocie z wywołania sieci `OnDraw` funkcji.
+
+[Cclientdc —](../mfc/reference/cclientdc-class.md) obiekty hermetyzują pracę z kontekstu urządzenia, który reprezentuje tylko obszaru klienckiego okna. `CClientDC` Konstruktor wywołuje `GetDC` funkcji i wywołania destruktora `ReleaseDC` funkcji. [CWindowDC](../mfc/reference/cwindowdc-class.md) obiekty hermetyzują kontekst urządzenia, który reprezentuje całego okna, w tym jego ramki.
+
+[CMetaFileDC](../mfc/reference/cmetafiledc-class.md) obiekty hermetyzują rysowania w metaplik Windows. W przeciwieństwie do `CPaintDC` przekazany do `OnDraw`, w tym przypadku należy wywołać [OnPrepareDC](../mfc/reference/cview-class.md#onpreparedc) samodzielnie.
+
+## <a name="mouse-drawing"></a>Rysowanie myszy
+
+Większość Rysowanie w ramach programu — i dlatego większość pracy kontekstu urządzenia — odbywa się w widoku `OnDraw` funkcja elementu członkowskiego. Można jednak nadal używać obiektów kontekstu urządzenia do innych celów. Na przykład, aby przekazać opinię śledzenia dla ruchów myszy w widoku, należy narysować bezpośrednio w widoku bez oczekiwania na `OnDraw` do wywołania.
+
+W takim przypadku można użyć [cclientdc —](../mfc/reference/cclientdc-class.md) obiekt kontekstu urządzenia, aby narysować bezpośrednio w widoku.
+
+### <a name="what-do-you-want-to-know-more-about"></a>Co chcesz dowiedzieć się więcej na temat
+
+- [Konteksty urządzenia (definicja)](https://msdn.microsoft.com/library/windows/desktop/dd183553)
+
+- [Rysowanie w widoku](../mfc/drawing-in-a-view.md)
+
+- [Interpretowanie danych wprowadzonych przez użytkownika za pośrednictwem widoku](../mfc/interpreting-user-input-through-a-view.md)
+
+- [Linii i krzywych](https://msdn.microsoft.com/library/windows/desktop/dd145028)
+
+- [Wypełnione kształty](https://msdn.microsoft.com/library/windows/desktop/dd162714)
+
+- [Czcionki i tekst](/windows/desktop/gdi/fonts-and-text)
+
+- [Kolory](https://msdn.microsoft.com/library/windows/desktop/dd183450)
+
+- [Współrzędnych miejsca do magazynowania i przekształcenia](https://msdn.microsoft.com/library/windows/desktop/dd183475)
+
+## <a name="see-also"></a>Zobacz też
+
+[Obiekty okna](../mfc/window-objects.md)
 

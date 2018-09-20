@@ -18,40 +18,42 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 184161b22358f77845b5f7c4b6da0bb42f3ea15f
-ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
+ms.openlocfilehash: cd16628c48c30f6f554a842b70c5217753e305f3
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "33324918"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46430309"
 ---
 # <a name="adding-an-event-handler-visual-c"></a>Dodawanie obsługi zdarzeń (Visual C++)
-W edytorze zasobów, można dodać nowy program obsługi zdarzeń, lub edytować istniejące obsługi zdarzeń dotyczące używania kontroli okno dialogowe [Kreator obsługi zdarzeń](../ide/event-handler-wizard.md).  
-  
- Zdarzenia można dodać do klasy wdrożenie przy użyciu — okno dialogowe [okna właściwości](/visualstudio/ide/reference/properties-window). Jeśli chcesz dodać zdarzenie do klasy innej niż klasa okno dialogowe, użyj kreatora program obsługi zdarzeń.  
-  
-### <a name="to-add-an-event-handler-to-a-dialog-box-control"></a>Aby dodać obsługę zdarzeń do formantu — okno dialogowe  
-  
-1.  Kliknij dwukrotnie plik zasobu okno dialogowe w [widok zasobów](../windows/resource-view-window.md) można otworzyć zasobu pole okna dialogowego z formantem w [Edytor okien dialogowych](../windows/dialog-editor.md).  
-  
-2.  Kliknij prawym przyciskiem myszy formant, dla którego chcesz obsługiwać zdarzenia z powiadomieniem.  
-  
-3.  W menu skrótów kliknij **Dodaj program obsługi zdarzeń** do wyświetlenia Kreator obsługi zdarzeń.  
-  
-4.  Wybierz zdarzenie w **typ komunikatu** pole, aby dodać do klasy wybrany w **listy klas** pole.  
-  
-5.  Zaakceptuj nazwę domyślną w **nazwa programu obsługi funkcji** pola lub podaj nazwę dowolnego.  
-  
-6.  Kliknij przycisk **Dodawanie i edytowanie** Dodaj program obsługi zdarzeń do projektu i Otwórz Edytor tekstu w nowej funkcji do Dodaj kod obsługi odpowiednie zdarzenie.  
-  
-     Jeśli program obsługi zdarzeń dla wybranej klasy już typ wybranego komunikatu **Dodawanie i edytowanie** jest niedostępny, i **edycji kodu** jest dostępna. Kliknij przycisk **edycji kodu** aby otworzyć Edytor tekstu w istniejącej funkcji.  
-  
- Alternatywnie można dodać obsługi zdarzeń z [okna właściwości](/visualstudio/ide/reference/properties-window). Zobacz [Dodawanie obsługi zdarzeń dla formantów okna dialogowego](../windows/adding-event-handlers-for-dialog-box-controls.md) Aby uzyskać więcej informacji.  
-  
-## <a name="see-also"></a>Zobacz też  
- [Dodawanie funkcji z kreatorami kodów](../ide/adding-functionality-with-code-wizards-cpp.md)   
- [Dodawanie klasy](../ide/adding-a-class-visual-cpp.md)   
- [Dodawanie zmiennej członkowskiej](../ide/adding-a-member-variable-visual-cpp.md)   
- [Dodawanie funkcji członkowskiej](../ide/adding-a-member-function-visual-cpp.md)   
- [Handler komunikatów MFC](../mfc/reference/adding-an-mfc-message-handler.md)   
- [Nawigacja w strukturze klas](../ide/navigating-the-class-structure-visual-cpp.md)
+
+W edytorze zasobów, możesz dodać nowy program obsługi zdarzeń lub edycji istniejącego programu obsługi zdarzeń, dla okna dialogowego pole kontrolkę za pomocą [Kreator obsługi zdarzeń](../ide/event-handler-wizard.md).
+
+Zdarzenie można dodać do klasy wdrożenie przy użyciu okno dialogowe [okno właściwości](/visualstudio/ide/reference/properties-window). Jeśli chcesz dodać zdarzenie do klasy innej niż klasa okno dialogowe, należy użyć Kreator obsługi zdarzeń.
+
+### <a name="to-add-an-event-handler-to-a-dialog-box-control"></a>Aby dodać program obsługi zdarzeń do kontrolka okna dialogowego
+
+1. Kliknij dwukrotnie zasobu okna dialogowego pole w [widok zasobów](../windows/resource-view-window.md) można otworzyć zasobu okna dialogowego pole, który zawiera formant w [Edytor okien dialogowych](../windows/dialog-editor.md).
+
+1. Kliknij prawym przyciskiem myszy formant, dla którego chcesz obsłużyć zdarzenie powiadomienia.
+
+1. W menu skrótów kliknij **dodać program obsługi zdarzeń** do wyświetlenia Kreator obsługi zdarzeń.
+
+1. Wybierz zdarzenie w **typ komunikatu** pole, aby dodać do klasy wybrane w **listy klas** pole.
+
+1. Zaakceptuj nazwę domyślną w **Nazwa procedury obsługi funkcji** pole lub podaj wybraną nazwę.
+
+1. Kliknij przycisk **dodawania i edytowania** Dodaj program obsługi zdarzeń do projektu i Otwórz Edytor tekstu na nową funkcję, aby Dodaj kod procedury obsługi zdarzeń właściwe.
+
+   Jeśli typ wybranego komunikatu ma już program obsługi zdarzeń dla wybranej klasy **dodawania i edytowania** jest niedostępny, a **edytowania kodu** jest dostępna. Kliknij przycisk **edytowania kodu** można otworzyć edytora tekstu w istniejącej funkcji.
+
+Alternatywnie można dodać procedury obsługi zdarzeń z [okno właściwości](/visualstudio/ide/reference/properties-window). Zobacz [Dodawanie obsługi zdarzeń dla formantów okna dialogowego](../windows/adding-event-handlers-for-dialog-box-controls.md) Aby uzyskać więcej informacji.
+
+## <a name="see-also"></a>Zobacz też
+
+[Dodawanie funkcji za pomocą kreatorów kodu](../ide/adding-functionality-with-code-wizards-cpp.md)<br>
+[Dodawanie klasy](../ide/adding-a-class-visual-cpp.md)<br>
+[Dodawanie zmiennej członkowskiej](../ide/adding-a-member-variable-visual-cpp.md)<br>
+[Dodawanie funkcji członkowskiej](../ide/adding-a-member-function-visual-cpp.md)<br>
+[Handler komunikatów MFC](../mfc/reference/adding-an-mfc-message-handler.md)<br>
+[Nawigacja w strukturze klas](../ide/navigating-the-class-structure-visual-cpp.md)

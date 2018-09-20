@@ -24,25 +24,27 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d3446de072266fdf7661d2e8d8ca0fc968279646
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: aff98636c723de17056f4bef337b46f4a686ddec
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33345055"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46420611"
 ---
 # <a name="frame-window-classes-created-by-the-application-wizard"></a>Klasy okien ramowych tworzone przez kreatora aplikacji
-Jeśli używasz [Kreatora aplikacji](../ide/creating-desktop-projects-by-using-application-wizards.md) utworzyć szkielet aplikacji, oprócz aplikacji, klasy dokumentów i widoków, Kreator aplikacji tworzy klasy pochodnej okno ramowe dla okna w ramce głównej aplikacji. Klasa jest nazywany `CMainFrame` domyślnie i pliki go zawierające są nazywane MAINFRM. H i MAINFRM. CPP.  
-  
- Jeśli aplikacja jest SDI, Twoje `CMainFrame` klasa pochodzi od klasy [cframewnd —](../mfc/reference/cframewnd-class.md).  
-  
- Jeśli aplikacja jest MDI, `CMainFrame` pochodzi od klasy [cmdiframewnd —](../mfc/reference/cmdiframewnd-class.md). W takim przypadku `CMainFrame` implementuje ramce głównej przechowuje paski menu, paska narzędzi i stanu. Kreator aplikacji nie pochodzi nowej klasy okien ramowych dokumentu dla Ciebie. Zamiast tego używa domyślną implementację w [cmdichildwnd — klasa](../mfc/reference/cmdichildwnd-class.md). Struktura MFC tworzy okno podrzędne zawierają każdego widoku (które mogą być typu `CScrollView`, `CEditView`, `CTreeView`, `CListView`i tak dalej) przez aplikację. Jeśli potrzebujesz Dostosowywanie okna ramowe dokumentów, można utworzyć nowej klasy okien ramowych dokumentu (zobacz [Dodawanie klasy](../ide/adding-a-class-visual-cpp.md)).  
-  
- Jeśli wybierzesz do obsługi narzędzi, klasa również ma zmiennych członkowskich typu [ctoolbar —](../mfc/reference/ctoolbar-class.md) i [cstatusbar —](../mfc/reference/cstatusbar-class.md) i `OnCreate` funkcji obsługi wiadomości, aby zainicjować dwa [ paski sterowania](../mfc/control-bars.md).  
-  
- Te klasy okien ramowych działa jako utworzone, ale w celu zwiększenia ich funkcji, należy dodać zmiennych Członkowskich i funkcji elementów członkowskich. Można również mieć klas okna obsługi innych komunikatów systemu Windows. Aby uzyskać więcej informacji, zobacz [Zmienianie stylów okna utworzonego przez MFC](../mfc/changing-the-styles-of-a-window-created-by-mfc.md).  
-  
-## <a name="see-also"></a>Zobacz też  
- [Klasy okien ramowych](../mfc/frame-window-classes.md)   
- [Program MFC lub źródło kontroli i pliki nagłówkowe](../ide/mfc-program-or-control-source-and-header-files.md)
+
+Kiedy używasz [Kreatora aplikacji](../ide/creating-desktop-projects-by-using-application-wizards.md) utworzyć szkielet aplikacji, oprócz aplikacji, dokumentu i Widok klas, Kreator aplikacji tworzy klasy pochodnej okno ramowe aplikacji głównej ramki okna. Nosi nazwę klasy `CMainFrame` domyślnie i pliki go zawierające są nazywane MAINFRM. H i MAINFRM. CPP.
+
+Jeśli aplikacja jest SDI, Twoje `CMainFrame` klasa pochodzi od klasy [CFrameWnd](../mfc/reference/cframewnd-class.md).
+
+Jeśli aplikacja MDI, `CMainFrame` pochodzi od klasy [CMDIFrameWnd](../mfc/reference/cmdiframewnd-class.md). W tym przypadku `CMainFrame` implementuje głównej ramki, który przechowuje paski menu, pasek narzędzi i stanu. Kreator aplikacji nie jest pochodny nowej klasy okien ramowych dokumentu dla Ciebie. Zamiast tego używa implementacji domyślnej w [klasa CMDIChildWnd](../mfc/reference/cmdichildwnd-class.md). Struktura MFC tworzy okno podrzędne zawierają każdego widoku (które mogą być typu `CScrollView`, `CEditView`, `CTreeView`, `CListView`i tak dalej), aplikacja wymaga. Jeśli trzeba dostosować okna ramki dokumentu, można utworzyć nowej klasy okien ramowych dokumentu (zobacz [Dodawanie klasy](../ide/adding-a-class-visual-cpp.md)).
+
+Jeśli zdecydujesz się obsługiwać paska narzędzi, klasa ma również zmiennych składowych typu [CToolBar](../mfc/reference/ctoolbar-class.md) i [CStatusBar](../mfc/reference/cstatusbar-class.md) i `OnCreate` funkcji obsługi wiadomości, aby zainicjować dwa [ paski sterowania](../mfc/control-bars.md).
+
+Te klasy okien ramowych działają podczas tworzenia, ale aby zwiększyć ich funkcji, należy dodać zmienne Członkowskie i funkcje Członkowskie. Można również mieć swojej klasy okna obsługi innych komunikatów Windows. Aby uzyskać więcej informacji, zobacz [Zmienianie stylów okna utworzonego przez MFC](../mfc/changing-the-styles-of-a-window-created-by-mfc.md).
+
+## <a name="see-also"></a>Zobacz też
+
+[Klasy okien ramowych](../mfc/frame-window-classes.md)<br/>
+[Program MFC lub źródło kontroli i pliki nagłówkowe](../ide/mfc-program-or-control-source-and-header-files.md)
 

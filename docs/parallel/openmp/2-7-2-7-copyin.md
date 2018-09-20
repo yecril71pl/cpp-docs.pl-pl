@@ -12,26 +12,27 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7ee711bfb24e7a2a1cbada1a7e01a243e204f4a8
-ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
+ms.openlocfilehash: 94b4c529b7ad6fd717be1e1dee0edd3ff9ac3ff5
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33689379"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46426890"
 ---
 # <a name="2727-copyin"></a>2.7.2.7 kopiowanie
-**Copyin** klauzuli zapewnia mechanizm można przypisać tę samą wartość na **threadprivate** zmienne dla każdego wątku w zespole wykonywania równoległego regionu. Dla każdej zmiennej określonej w **copyin** klauzuli, wartość zmiennej w głównym wątku zespołu jest kopiowany tak, jakby przez przypisanie do kopii prywatnego wątku na początku równoległego regionu. Składnia **copyin** klauzuli wygląda następująco:  
-  
-```  
-  
-copyin(  
-variable-list  
-)  
-  
-```  
-  
- Ograniczenia do **copyin** klauzuli są następujące:  
-  
--   Zmienna, która została określona w **copyin** klauzuli musi mieć operatora przypisania kopii dostępny, jednoznaczne.  
-  
--   Zmienna, która została określona w **copyin** klauzuli musi być **threadprivate** zmiennej.
+
+**Copyin** klauzuli zapewnia mechanizm, aby przypisać tę samą wartość, aby **threadprivate** zmienne dla każdego wątku w zespole wykonywania równoległego regionu. Dla każdej zmiennej, określone w **copyin** klauzuli, wartość zmiennej w głównym wątku zespołu, jest kopiowany, tak, jakby przez przypisanie do kopii prywatnego wątku na początku równoległego regionu. Składnia **copyin** klauzula jest w następujący sposób:
+
+```
+
+copyin(
+variable-list
+)
+
+```
+
+Ograniczenia do **copyin** klauzuli są następujące:
+
+- Zmienna, która została określona w **copyin** klauzula musi mieć operatora przypisania kopiowania dostępny, jednoznaczną.
+
+- Zmienna, która została określona w **copyin** musi mieć klauzulę **threadprivate** zmiennej.

@@ -19,20 +19,22 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ae941e7a59fe673dea6068c6ca6df5feb94db239
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 060bda1de088f3e1e84791601f176097f764c412
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33372933"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46446429"
 ---
 # <a name="generic-control-handler"></a>Ogólny program obsługi sterowania
-Następujący wpis mapy odpowiada prototypu funkcji.  
-  
-|Wpis w mapie|Prototyp funkcji|  
-|---------------|------------------------|  
-|On_control — ( \<wNotifyCode >, \<id >, \<memberFxn >)|afx_msg void memberFxn ();|  
-  
-## <a name="see-also"></a>Zobacz też  
- [Mapy komunikatów](../../mfc/reference/message-maps-mfc.md)
+
+Następujący wpis mapy odnosi się do prototypu funkcji.
+
+|Wpis mapy|Prototyp funkcji|
+|---------------|------------------------|
+|ON_CONTROL ( \<wNotifyCode >, \<id >, \<memberFxn >)|() void memberFxn afx_msg;|
+
+## <a name="see-also"></a>Zobacz też
+
+[Mapy komunikatów](../../mfc/reference/message-maps-mfc.md)
 

@@ -17,44 +17,46 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6731bb6a06f775c06ba16eb4885a3982d934f3cd
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: dbfb0b50e31cc51c7ea860fbd7b78c89a652ac64
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45699874"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46429375"
 ---
 # <a name="sidt"></a>__sidt
-**Microsoft Specific**  
-  
- Przechowuje wartość rejestru Tabela deskryptora przerwania (IDTR) w określonej lokalizacji pamięci.  
-  
-## <a name="syntax"></a>Składnia  
-  
-```  
-void __sidt(  
-     void *Destination);  
-```  
-  
-#### <a name="parameters"></a>Parametry  
-  
-|Parametr|Opis|  
-|---------------|-----------------|  
-|*miejsce docelowe*|[in] Wskaźnik do przechowywania IDTR lokalizacji w pamięci.|  
-  
-## <a name="requirements"></a>Wymagania  
-  
-|Wewnętrzne|Architektura|  
-|---------------|------------------|  
-|`__sidt`|x86, x64|  
-  
- **Plik nagłówkowy** \<intrin.h >  
-  
-## <a name="remarks"></a>Uwagi  
- `__sidt` Funkcji jest odpowiednikiem `SIDT` machine instrukcji. Aby uzyskać więcej informacji, Wyszukaj w dokumencie "ręcznego deweloper oprogramowania architekturze firmy Intel, wolumin 2: odwołania do zestawu instrukcji," w [Intel Corporation](https://software.intel.com/en-us/articles/intel-sdm) lokacji.  
-  
-**END specyficzny dla Microsoft**  
-  
-## <a name="see-also"></a>Zobacz też  
- [Funkcje wewnętrzne kompilatora](../intrinsics/compiler-intrinsics.md)   
- [__lidt](../intrinsics/lidt.md)
+
+**Microsoft Specific**
+
+Przechowuje wartość rejestru Tabela deskryptora przerwania (IDTR) w określonej lokalizacji pamięci.
+
+## <a name="syntax"></a>Składnia
+
+```
+void __sidt(void * Destination);
+```
+
+#### <a name="parameters"></a>Parametry
+
+|Parametr|Opis|
+|---------------|-----------------|
+|*miejsce docelowe*|[in] Wskaźnik do przechowywania IDTR lokalizacji w pamięci.|
+
+## <a name="requirements"></a>Wymagania
+
+|Wewnętrzne|Architektura|
+|---------------|------------------|
+|`__sidt`|x86, x64|
+
+**Plik nagłówkowy** \<intrin.h >
+
+## <a name="remarks"></a>Uwagi
+
+`__sidt` Funkcji jest odpowiednikiem `SIDT` machine instrukcji. Aby uzyskać więcej informacji, Wyszukaj w dokumencie "ręcznego deweloper oprogramowania architekturze firmy Intel, wolumin 2: odwołania do zestawu instrukcji," w [Intel Corporation](https://software.intel.com/en-us/articles/intel-sdm) lokacji.
+
+**END specyficzny dla Microsoft**
+
+## <a name="see-also"></a>Zobacz też
+
+[Funkcje wewnętrzne kompilatora](../intrinsics/compiler-intrinsics.md)<br/>
+[__lidt](../intrinsics/lidt.md)

@@ -21,12 +21,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 8a1a0b16ebee0ebac141d5c1675d7ff7560b374b
-ms.sourcegitcommit: f0c90000125a9497bf61e41624de189a043703c0
+ms.openlocfilehash: c3bbcc774115311cd4ed0f302e4d9812ecfc6505
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44318216"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46422270"
 ---
 # <a name="symbols-resource-identifiers-c"></a>Symbole: Identyfikatory zasobów (C++)
 
@@ -75,6 +75,6 @@ Win32
 
 ## <a name="see-also"></a>Zobacz też
 
-[Instrukcje: wyszukiwanie symboli w zasobach](../windows/how-to-search-for-symbols-in-resources.md)  
-[Edytory zasobów](../windows/resource-editors.md)  
+[Instrukcje: wyszukiwanie symboli w zasobach](../windows/how-to-search-for-symbols-in-resources.md)<br/>
+[Edytory zasobów](../windows/resource-editors.md)<br/>
 [Pliki zasobów](../windows/resource-files-visual-studio.md)

@@ -16,12 +16,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 8a9613dbc28b3e1f263133c15ae88d20294962e9
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: 94b6d94b59e1088501a22f44a219177b926dd02e
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45702536"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46440878"
 ---
 # <a name="generic-delegates-visual-c"></a>Delegaty ogólne (Visual C++)
 
@@ -39,25 +39,25 @@ generic < [class | typename] type-parameter-identifiers>
 
 ### <a name="parameters"></a>Parametry
 
-*Atrybuty*  
+*Atrybuty*<br/>
 (Opcjonalnie) Dodatkowe informacje deklaratywnego. Aby uzyskać więcej informacji o atrybuty i klasy atrybutów Zobacz atrybutów.
 
-*Typ — parametr-identyfikatory*  
+*Typ — parametr-identyfikatory*<br/>
 Rozdzielana przecinkami lista identyfikatorów dla parametrów typu.
 
-*Typ — parametr ograniczenia — klauzule*  
+*Typ — parametr ograniczenia — klauzule*<br/>
 Ma postać określone w [ograniczenia dotyczące parametrów typu ogólnego (C + +/ CLI)](../windows/constraints-on-generic-type-parameters-cpp-cli.md)
 
-*modyfikatory dostępności*  
+*modyfikatory dostępności*<br/>
 (Opcjonalnie) Modyfikatory dostępności (np. **publicznych**, **prywatnej**).
 
-*result-type*  
+*result-type*<br/>
 Zwracany typ delegata.
 
-*Identyfikator*  
+*Identyfikator*<br/>
 Nazwa obiektu delegowanego.
 
-*parametrów formalnych*  
+*parametrów formalnych*<br/>
 (Opcjonalnie) Lista parametrów delegata.
 
 ## <a name="example"></a>Przykład

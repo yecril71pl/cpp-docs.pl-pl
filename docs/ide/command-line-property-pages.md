@@ -16,20 +16,22 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 580c11d19a1d2ea5510390296a80589cce988f12
-ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
+ms.openlocfilehash: 54a9f68c1cd750cd3d0e5c638d1ab101a8588a61
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "33327814"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46416893"
 ---
 # <a name="command-line-property-pages"></a>Strony właściwości wiersza polecenia
-Większość foldery strony właściwości zawierają **wiersza polecenia** strony właściwości. Ten wyświetla stronę właściwości, które są ustawiane w folderze. **Wiersza polecenia** właściwości strona zawiera również **dodatkowe opcje** polu, w którym można określić właściwości, które są prawidłowe dla tego narzędzia, ale dla których nie ma właściwości w folderze.  
-  
- Dowolne polecenie, które należy wprowadzić w polu edycji będą przekazywane do narzędzia do folderu. Nie weryfikacji kontroli będzie odbywać się w danych wejściowych, ani zostaną Sprawdzanie zależności.  
-  
- Aby uzyskać informacje dotyczące dostępu do **wiersza polecenia** strony właściwości, zobacz [Praca z właściwościami projektu](../ide/working-with-project-properties.md).  
-  
-## <a name="see-also"></a>Zobacz też  
- [Strony właściwości](../ide/property-pages-visual-cpp.md)   
- [Pliki .Lib — wejście konsolidatora](../build/reference/dot-lib-files-as-linker-input.md)
+
+Większość właściwości strony zawierają **wiersza polecenia** stronę właściwości. Ten wyświetla strony właściwości, które są ustawione w tym folderze. **Wiersza polecenia** strona właściwości zawiera również **dodatkowe opcje** polu, w którym można określić właściwości, które są prawidłowe dla narzędzia, ale dla których nie ma żadnej właściwości w folderze.
+
+Poleceń, które możesz wprowadzić w polu edycji zostanie przekazane do narzędzia do folderu. Nie weryfikacji lub kontroli będzie odbywać się w danych wejściowych ani nie będą naliczane Sprawdzanie zależności.
+
+Aby uzyskać informacje dotyczące uzyskiwania dostępu do **wiersza polecenia** strony właściwości, zobacz [Praca z właściwościami projektu](../ide/working-with-project-properties.md).
+
+## <a name="see-also"></a>Zobacz też
+
+[Strony właściwości](../ide/property-pages-visual-cpp.md)<br>
+[Pliki .Lib — wejście konsolidatora](../build/reference/dot-lib-files-as-linker-input.md)

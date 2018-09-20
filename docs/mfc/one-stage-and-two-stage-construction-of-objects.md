@@ -17,40 +17,43 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7c53f99932887acad4d2eab5c15ed73b66b359fd
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: a6454e34830591eccb2b696948d02f74ad8cebfd
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33346015"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46426578"
 ---
 # <a name="one-stage-and-two-stage-construction-of-objects"></a>Jedno- i dwuetapowa konstrukcja obiektów
-Masz wybór między dwie metody tworzenia obiektów graficznych, takich jak pióra i pędzle:  
-  
--   *Jednym etapie konstrukcji*: konstrukcja i zainicjować obiektu w ramach jednego etapu, wszystko w konstruktorze.  
-  
--   *Dwuetapowa konstrukcja*: konstrukcja i zainicjować obiektu w dwóch etapach oddzielne. Konstruktor tworzy obiekt i inicjowane błędu funkcji inicjowania.  
-  
- Dwuetapowa konstrukcja jest bezpieczniejsze. W jednym etapie konstrukcji Konstruktor może wywoływać wyjątek, jeśli musisz podać Niepoprawne argumenty lub alokacja pamięci nie powiodło się. Ten problem jest uniknąć przez dwuetapowa konstrukcja, mimo że trzeba sprawdzić awarii. W obu przypadkach zniszczenie obiektu jest ten sam proces.  
-  
+
+Możesz dokonać wyboru między dwie metody tworzenia obiektów graficznych, takich jak pióra i pędzle:
+
+- *Konstrukcja jednego etapu*: konstrukcja i zainicjować obiekt w ramach jednego etapu, za pomocą konstruktora.
+
+- *Dwuetapowa konstrukcja*: konstrukcja i zainicjować obiekt w dwóch etapach oddzielne. Konstruktor tworzy obiekt, a funkcja inicjowania inicjuje ją.
+
+Dwuetapowa konstrukcja jest bezpieczniejsze. W jednym etapie konstrukcji Konstruktor może zgłosić wyjątek, jeśli podasz Niepoprawne argumenty lub alokacja pamięci nie powiedzie się. Ten problem jest unikać wynikające z konstrukcji dwuetapowego, chociaż ma pod kątem błędów. W obu przypadkach zniszczenia obiektu jest tego samego procesu.
+
 > [!NOTE]
->  Te techniki dotyczą tworzenia żadnych obiektów, nie tylko graficzne obiektów.  
-  
-## <a name="example-of-both-construction-techniques"></a>Przykład obie techniki konstrukcji  
- W poniższym przykładzie krótki przedstawiono obie metody konstruowania obiektu pióra:  
-  
- [!code-cpp[NVC_MFCDocViewSDI#6](../mfc/codesnippet/cpp/one-stage-and-two-stage-construction-of-objects_1.cpp)]  
-  
-### <a name="what-do-you-want-to-know-more-about"></a>Co chcesz dowiedzieć się więcej o  
-  
--   [Obiekty graficzne](../mfc/graphic-objects.md)  
-  
--   [Wybieranie obiektu graficznego do kontekstu urządzenia](../mfc/selecting-a-graphic-object-into-a-device-context.md)  
-  
--   [Konteksty urządzenia](../mfc/device-contexts.md)  
-  
--   [Rysowanie w widoku](../mfc/drawing-in-a-view.md)  
-  
-## <a name="see-also"></a>Zobacz też  
- [Obiekty graficzne](../mfc/graphic-objects.md)
+>  Techniki te dotyczą tworzenia wszystkie obiekty, obiekty nie tylko graficzne.
+
+## <a name="example-of-both-construction-techniques"></a>Przykład obu tych technik konstrukcji
+
+BRIEF: poniższy kod przedstawia obie metody tworzenia obiekt pen:
+
+[!code-cpp[NVC_MFCDocViewSDI#6](../mfc/codesnippet/cpp/one-stage-and-two-stage-construction-of-objects_1.cpp)]
+
+### <a name="what-do-you-want-to-know-more-about"></a>Co chcesz dowiedzieć się więcej na temat
+
+- [Obiekty graficzne](../mfc/graphic-objects.md)
+
+- [Wybieranie obiektu graficznego do kontekstu urządzenia](../mfc/selecting-a-graphic-object-into-a-device-context.md)
+
+- [Konteksty urządzenia](../mfc/device-contexts.md)
+
+- [Rysowanie w widoku](../mfc/drawing-in-a-view.md)
+
+## <a name="see-also"></a>Zobacz też
+
+[Obiekty graficzne](../mfc/graphic-objects.md)
 

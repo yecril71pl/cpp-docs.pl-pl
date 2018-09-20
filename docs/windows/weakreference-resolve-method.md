@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 59e748ef68d78f9cb77eb335f5c5cd44e058f0d4
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: 1e0873b366c84e89b23ddbaa6c64f6b484f921e0
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42601159"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46446338"
 ---
 # <a name="weakreferenceresolve-method"></a>WeakReference::Resolve — Metoda
 
@@ -39,10 +39,10 @@ STDMETHOD(Resolve)
 
 ### <a name="parameters"></a>Parametry
 
-*Parametr riid*  
+*Parametr riid*<br/>
 Identyfikator interfejsu.
 
-*ppvObject*  
+*ppvObject*<br/>
 Gdy ta operacja zostanie ukończone, kopię bieżącego silne odwołanie, jeśli liczba silne odwołanie jest różna od zera.
 
 ## <a name="return-value"></a>Wartość zwracana
@@ -65,5 +65,5 @@ Ustawia określony wskaźnik do bieżącej wartości silne odwołanie, jeśli li
 
 ## <a name="see-also"></a>Zobacz też
 
-[WeakReference, klasa1](../windows/weakreference-class1.md)  
+[WeakReference, klasa1](../windows/weakreference-class1.md)<br/>
 [Microsoft::WRL::Details, przestrzeń nazw](../windows/microsoft-wrl-details-namespace.md)

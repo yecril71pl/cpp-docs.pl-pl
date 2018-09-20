@@ -1,5 +1,5 @@
 ---
-title: On_update_command_ui — makro | Dokumentacja firmy Microsoft
+title: ON_UPDATE_COMMAND_UI — makro | Dokumentacja firmy Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -19,22 +19,24 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 43caffe53be180221b4145a03df7cfc41c31828e
-ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
+ms.openlocfilehash: 17111e24a63d527996eadd82c804e5147ad78552
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/25/2018
-ms.locfileid: "36928641"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46433468"
 ---
 # <a name="onupdatecommandui-macro"></a>ON_UPDATE_COMMAND_UI — Makro
-Użyj **właściwości** okno, aby połączyć obiekt interfejsu użytkownika do programu obsługi aktualizacji poleceń w obiekcie docelowym polecenia. Zostanie automatycznie nawiązać identyfikator obiektu interfejsu użytkownika on_update_command_ui — makro i utworzyć program obsługi w obiekcie, który będzie obsługiwał aktualizacji. Zobacz [mapowanie komunikatów do funkcji](../mfc/reference/mapping-messages-to-functions.md) Aby uzyskać więcej informacji.  
-  
- Na przykład, aby zaktualizować wyczyść wszystkie polecenia w menu Edycja programu, należy użyć **właściwości** okno, aby dodać wpis mapy komunikatów w wybranej klasy deklaracji funkcji programu obsługi aktualizacji poleceń o nazwie `OnUpdateEditClearAll` w klasie Deklaracja i szablonu funkcji jest puste w pliku implementacji klasy. Prototyp funkcja wygląda następująco:  
-  
- [!code-cpp[NVC_MFCDocView#2](../mfc/codesnippet/cpp/on-update-command-ui-macro_1.h)]  
-  
- Wszystkie programy obsługi, pokazuje funkcji, takich jak **afx_msg** — słowo kluczowe. Tak jak wszystkie programy obsługi aktualizacji, zajmuje jeden argument, wskaźnik do `CCmdUI` obiektu.  
-  
-## <a name="see-also"></a>Zobacz też  
- [Instrukcje: aktualizowanie obiektów interfejsu użytkownika](../mfc/how-to-update-user-interface-objects.md)
+
+Użyj **właściwości** okna, aby połączyć obiekt interfejsu użytkownika do obsługi aktualizacji poleceń w obiekcie docelowym polecenia. Zostanie automatycznie połączyć Identyfikatora obiektu interfejsu użytkownika do ON_UPDATE_COMMAND_UI — makro i Utwórz procedurę obsługi w obiekcie, który będzie obsługiwać aktualizacji. Zobacz [mapowanie komunikatów do funkcji](../mfc/reference/mapping-messages-to-functions.md) Aby uzyskać więcej informacji.
+
+Na przykład, aby zaktualizować wyczyść wszystkie polecenia w menu Edycja programu, użyj **właściwości** okno, aby dodać wpis mapy komunikatów w wybranej klasy deklarację funkcji obsługi aktualizacji poleceń o nazwie `OnUpdateEditClearAll` w klasie Deklaracja i szablonem funkcji empty w pliku implementacji klasy. Prototyp funkcji wygląda następująco:
+
+[!code-cpp[NVC_MFCDocView#2](../mfc/codesnippet/cpp/on-update-command-ui-macro_1.h)]
+
+Całej obsługi, pokazuje funkcji, takich jak **afx_msg** — słowo kluczowe. Jak zaktualizować wszystkie programy obsługi, zajmuje jeden argument, wskaźnik do `CCmdUI` obiektu.
+
+## <a name="see-also"></a>Zobacz też
+
+[Instrukcje: aktualizowanie obiektów interfejsu użytkownika](../mfc/how-to-update-user-interface-objects.md)
 

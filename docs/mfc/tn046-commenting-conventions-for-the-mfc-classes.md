@@ -16,17 +16,19 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: de24840ed3b6b7b747bb16cf26cbdb5aed29b1eb
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 9984e85bbdd047f7673d683e5c5237d93acb818b
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33380828"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46429607"
 ---
 # <a name="tn046-commenting-conventions-for-the-mfc-classes"></a>TN046: konwencje komentowania dla klas MFC
-Ta uwaga techniczna pierwotnie opisano konwencje używane do komentowania klas MFC. Te informacje są objęte [MFC: Korzystanie z plików źródłowych MFC](../mfc/using-the-mfc-source-files.md).  
-  
-## <a name="see-also"></a>Zobacz też  
- [Uwagi techniczne według numerów](../mfc/technical-notes-by-number.md)   
- [Uwagi techniczne według kategorii](../mfc/technical-notes-by-category.md)
+
+Ta uwaga techniczna pierwotnie opisano konwencje używane, aby dodać komentarz do klas MFC. Informacja ta jest omówiona w [MFC: Korzystanie z plików źródłowych MFC](../mfc/using-the-mfc-source-files.md).
+
+## <a name="see-also"></a>Zobacz też
+
+[Uwagi techniczne według numerów](../mfc/technical-notes-by-number.md)<br/>
+[Uwagi techniczne według kategorii](../mfc/technical-notes-by-category.md)
 

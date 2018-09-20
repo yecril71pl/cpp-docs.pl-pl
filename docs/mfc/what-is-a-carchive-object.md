@@ -20,22 +20,24 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 55b97843a8aeb2599d2bdf34458b362fc5899368
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: fe45b3e5444549001990f62db7028f9de6d49986
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33383837"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46409666"
 ---
 # <a name="what-is-a-carchive-object"></a>Co to jest obiekt CArchive
-A `CArchive` obiektu zapewnia bezpieczny mechanizm buforowania do zapisywania lub odczytywania obiekty możliwe do serializacji do lub z `CFile` obiektu. Zazwyczaj `CFile` obiekt reprezentuje pliku na dysku; jednak również może być pliku pamięci (`CSharedFile` obiektu), być może reprezentujący Schowka.  
-  
- Biorąc pod uwagę `CArchive` obiekt albo magazynów (zapisuje, serializuje) danych lub obciążeń (odczytuje, deserializuje) dane, ale nie oba. Czas życia `CArchive` obiektu jest ograniczony do jednego przekazywania zapisywania obiektów do pliku lub odczytywania obiektów z pliku. W związku z tym dwóch kolejno tworzone `CArchive` obiekty są wymagane do serializowania danych do pliku, a następnie do deserializacji z pliku.  
-  
- Jeśli archiwum przechowuje obiekty do pliku, dołącza archiwum `CRuntimeClass` nazwie do obiektów. Następnie, po innym archiwum ładuje obiekty z pliku do pamięci, `CObject`-obiekty pochodne są dynamicznie odtworzyć na podstawie `CRuntimeClass` obiektów. Podany obiekt można odwoływać się tylko jeden raz podczas zapisywania do pliku przez zapisywanie archiwum. Archiwum ładowania, jednak będą rekonstrukcji obiektu tylko raz. Szczegółowe informacje o sposobie dołącza archiwum `CRuntimeClass` opisano informacje, aby obiekty i niezamrożone, biorąc pod uwagę możliwe wiele odwołań w [techniczne Uwaga 2](../mfc/tn002-persistent-object-data-format.md).  
-  
- Jak dane są serializowane archiwum, archiwum zebrane dane do momentu swojego bufora jest pełny. Następnie archiwum zapisuje buforu do `CFile` obiekt wskazywany przez `CArchive` obiektu. Podobnie jak odczytać danych z archiwum odczytuje dane z pliku do buforu, a następnie z buforu obiektowi zdeserializowany. To buforowanie zmniejsza liczbę razy na dysku twardym jest fizycznie do odczytu, co poprawia wydajność aplikacji.  
-  
-## <a name="see-also"></a>Zobacz też  
- [Serializacja: serializacja obiektu](../mfc/serialization-serializing-an-object.md)
+
+A `CArchive` obiektu udostępnia mechanizm buforowania bezpieczny dla wpisywanie lub odczytywanie obiekty możliwe do serializacji lub wejściowych `CFile` obiektu. Zazwyczaj `CFile` obiekt reprezentuje plik dysku; Jednakże, również może być pliku pamięci (`CSharedFile` obiektu), być może reprezentujący Schowka.
+
+Biorąc pod uwagę `CArchive` obiektu albo magazynów (zapisuje, serializuje) danych lub obciążeń (odczytuje, deserializuje) dane, ale nie oba. Czas życia `CArchive` obiektu jest ograniczona do jednego przekazywania zapisywania obiektów do pliku lub odczytywania obiektów z pliku. W związku z tym, dwa kolejno tworzone `CArchive` obiekty są wymagane do serializowania danych do pliku, a następnie zdeserializuj ją z kopii pliku.
+
+Jeśli archiwum przechowuje obiektów do pliku, archiwum dołącza `CRuntimeClass` nazwy do obiektów. Następnie, po innej archiwum ładuje obiekty z pliku do pamięci, `CObject`— obiekty pochodne są dynamicznie odtworzone, na podstawie `CRuntimeClass` obiektów. Danego obiektu mogą być używane więcej niż jeden raz, ponieważ jest ona zapisywana w pliku przez zapisywanie archiwum. Ładowanie archiwum, jednak będzie odtworzenie obiektu tylko raz. Szczegółowe informacje dotyczące sposobu dołącza archiwum `CRuntimeClass` informacje na temat obiektów i obiekty niezamrożone, biorąc pod uwagę możliwe wiele odwołań są opisane w [Technical Preview 2 Uwaga](../mfc/tn002-persistent-object-data-format.md).
+
+Jak danych jest serializowana do archiwum, archiwum gromadzi dane, do momentu zapełnienia buforu. A następnie archiwum zapisuje jego buforu `CFile` obiekt wskazywany przez `CArchive` obiektu. Podobnie jak można odczytywać dane z archiwum, odczytuje dane z pliku do buforu, a następnie z buforu do obiektu po deserializacji. Tej buforowanie zmniejsza liczbę przypadków, gdy na dysku twardym jest fizycznie do odczytu, co poprawia wydajność aplikacji.
+
+## <a name="see-also"></a>Zobacz też
+
+[Serializacja: serializacja obiektu](../mfc/serialization-serializing-an-object.md)
 

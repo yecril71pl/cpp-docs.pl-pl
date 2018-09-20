@@ -15,12 +15,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 57d1a3adc160323726bcdd31808cf82bc8da2e7f
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: 19bb77128eee9cc8af514e60730c3a39115695cc
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42609257"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46426545"
 ---
 # <a name="callback-function-windows-runtime-c-template-library"></a>Callback — Funkcja (Biblioteka szablonów języka C++ środowiska wykonawczego systemu Windows)
 
@@ -201,49 +201,49 @@ ComPtr<TDelegateInterface> Callback(
 
 ### <a name="parameters"></a>Parametry
 
-*TDelegateInterface*  
+*TDelegateInterface*<br/>
 Parametr szablonu, który określa interfejs pełnomocnika do wywołania po wystąpieniu zdarzenia.
 
-*TCallback*  
+*TCallback*<br/>
 Parametr szablonu, który określa typ obiektu, który reprezentuje obiekt i jego funkcję członkowską wywołania zwrotnego.
 
-*TCallbackObject*  
+*TCallbackObject*<br/>
 Parametr szablonu, który określa obiekt, którego funkcja członkowska jest metodą do wywołania po wystąpieniu zdarzenia.
 
-*TArg1*  
+*TArg1*<br/>
 Parametr szablonu, który określa typ pierwszego argumentu metody wywołania zwrotnego.
 
-*TArg2*  
+*TArg2*<br/>
 Parametr szablonu, który określa typ drugiego argumentu metody wywołania zwrotnego.
 
-*TArg3*  
+*TArg3*<br/>
 Parametr szablonu, który określa typ trzeciego argumentu metody wywołania zwrotnego.
 
-*TArg4*  
+*TArg4*<br/>
 Parametr szablonu, który określa typ czwartego argumentu metody wywołania zwrotnego.
 
-*TArg5*  
+*TArg5*<br/>
 Parametr szablonu, który określa typ piątego argumentu metody wywołania zwrotnego.
 
-*TArg6*  
+*TArg6*<br/>
 Parametr szablonu, który określa typ szóstego argumentu metody wywołania zwrotnego.
 
-*TArg7*  
+*TArg7*<br/>
 Parametr szablonu, który określa typ siódmego argumentu metody wywołania zwrotnego.
 
-*TArg8*  
+*TArg8*<br/>
 Parametr szablonu, który określa typ ósmego argumentu metody wywołania zwrotnego.
 
-*TArg9*  
+*TArg9*<br/>
 Parametr szablonu, który określa typ dziewiątego argumentu metody wywołania zwrotnego.
 
-*Wywołanie zwrotne*  
+*Wywołanie zwrotne*<br/>
 Obiekt, który reprezentuje obiekt wywołania zwrotnego i jej funkcji członkowskiej.
 
-*object*  
+*object*<br/>
 Obiekt, którego funkcja członkowska jest wywoływana, gdy wystąpi zdarzenie.
 
-*— Metoda*  
+*— Metoda*<br/>
 Funkcja elementu członkowskiego do wywołania po wystąpieniu zdarzenia.
 
 ## <a name="return-value"></a>Wartość zwracana

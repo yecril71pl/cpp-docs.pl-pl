@@ -16,40 +16,39 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8c39528bf3b1e6c9235e4b2daabcd8bbddd0d52f
-ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
+ms.openlocfilehash: 3d48ce4d0317ba8d66b609ca89e6cb3b43970e52
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33685895"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46431440"
 ---
 # <a name="reference-c-amp"></a>Odwołanie (C++ AMP)
-Ta sekcja zawiera informacje dotyczące środowiska uruchomieniowego C++ Accelerated Massive Parallelism (C++ AMP).  
-  
+
+Ta sekcja zawiera informacje dotyczące środowiska uruchomieniowego C++ Accelerated Massive Parallelism (C++ AMP).
+
 > [!NOTE]
->  Standard języka C++ rezerwuje Użyj identyfikatorów, które zaczynają się od znaku podkreślenia (`_`) znaków dla wdrożeń, takich jak biblioteki. Nie używaj nazwy rozpoczynające się od znaku podkreślenia w kodzie. Zachowanie kodu elementów, których nazwy wykonaj tę Konwencję nie ma gwarancji i mogą ulec zmianie w przyszłych wersjach. Z tego powodu takie elementy kodu zostały pominięte w niniejszej dokumentacji.  
-  
-## <a name="in-this-section"></a>W tej sekcji  
- [Przestrzeń nazw współbieżności (C++ AMP)](concurrency-namespace-cpp-amp.md)  
- Zawiera klasy i funkcje, które włączyć przyspieszenie kod w języku C++ na sprzęcie równoległych danych.  
-  
- [Concurrency::direct3d, przestrzeń nazw](concurrency-direct3d-namespace.md)  
- Udostępnia funkcje, które obsługują współdziałanie D3D. Umożliwia bezproblemowe na użytek D3D zasobów obliczeniowych w kodzie AMP i korzystania z zasobów utworzone w AMP w kodzie D3D bez tworzenia nadmiarowe kopie pośrednich. C++ AMP umożliwia przyrostowo przyspieszenia sekcje obliczeniowych aplikacji DirectX i na podstawie obliczenia AMP danych za pomocą interfejsu API D3D.  
-  
- [Concurrency::fast_math, przestrzeń nazw](concurrency-fast-math-namespace.md)  
- Funkcje w `fast_math` nie są zgodnych C99 przestrzeni nazw. Podano tylko pojedynczej precyzji wersje każdej funkcji. Funkcje wewnętrzne DirectX, które są szybsze niż w odpowiednie funkcje używać tych funkcji `precise_math` przestrzeni nazw i nie wymagają rozszerzoną obsługę podwójnej precyzji na akceleratora, ale są mniej dokładne. Istnieją dwie wersje każdej funkcji poziomu zgodności z kodem C99; obie wersje przyjmować i zwracać wartości o pojedynczej precyzji.  
-  
- [Concurrency::graphics, przestrzeń nazw](concurrency-graphics-namespace.md)  
- Zawiera typy i funkcje, które są przeznaczone do programowania grafiki.  
-  
- [Concurrency::precise_math, przestrzeń nazw](concurrency-precise-math-namespace.md)  
- Funkcje w `precise_math` zgodnych C99 są przestrzeni nazw. Zarówno pojedynczej precyzji, jak i podwójnej precyzji wersje każdej funkcji są uwzględniane. Te funkcje — dotyczy to również funkcje pojedynczej precyzji — wymagają rozszerzoną obsługę podwójnej precyzji na akceleratora.  
-  
-## <a name="related-sections"></a>Sekcje pokrewne  
- [C++ AMP (C++ Accelerated Massive Parallelism)](../../../parallel/amp/cpp-amp-cpp-accelerated-massive-parallelism.md)  
- C++ AMP przyspiesza wykonywania kodu C++, wykorzystując sprzętu równoległe danych, która najczęściej występuje jako jednostka przetwarzania graficznych (GPU) na karcie odrębne grafika.
+>  Standard języka C++ zastrzega stosowanie identyfikatorów, które zaczynają się od znaku podkreślenia (`_`) znak do implementacji takich jak biblioteki. Nie należy używać nazwy rozpoczynające się od znaku podkreślenia w kodzie. Zachowanie kodu, elementy, które stosują taką konwencję nazw, których nie jest gwarantowane i mogą ulec zmianie w przyszłych wersjach. Z tego względu takie elementy kodu zostały pominięte w tej dokumentacji.
 
+## <a name="in-this-section"></a>W tej sekcji
 
+[Przestrzeń nazw współbieżności (C++ AMP)](concurrency-namespace-cpp-amp.md)<br/>
+Zawiera klasy i funkcje, które umożliwiają przyspieszenie kodu C++ na urządzeniach równoległych danych.
 
+[Concurrency::direct3d, przestrzeń nazw](concurrency-direct3d-namespace.md)<br/>
+Oferuje funkcje, które obsługują współdziałanie D3D. Umożliwia bezproblemowe korzystanie z zasobów D3D dla obliczeń w kodzie AMP i wykorzystanie zasobów utworzonych w AMP, w kodzie D3D, bez tworzenia nadmiarowych kopii pośrednich. Można użyć C++ AMP, aby stopniowo przyspieszyć sekcje intensywnych obliczeń aplikacji DirectX i użyć interfejsu API D3D na danych wyprodukowanych z obliczeń AMP.
 
+[Concurrency::fast_math, przestrzeń nazw](concurrency-fast-math-namespace.md)<br/>
+Funkcje w `fast_math` przestrzeni nazw nie są zgodne z C99. Podano tylko pojedynczej precyzji wersje każdej funkcji. Te funkcje używają wewnętrznych funkcji DirectX, które są szybsze od odpowiednich funkcji w `precise_math` przestrzeni nazw i nie wymagają rozszerzonego wsparcia podwójnej precyzji na akceleratorze, ale są mniej dokładne. Istnieją dwie wersje każdej funkcji dla zgodności poziomu źródła z kodem C99; obie wersje przyjmują i zwracają wartości pojedynczej precyzji.
+
+[Concurrency::graphics, przestrzeń nazw](concurrency-graphics-namespace.md)<br/>
+Zawiera typy i funkcje, które są przeznaczone do programowania grafiki.
+
+[Concurrency::precise_math, przestrzeń nazw](concurrency-precise-math-namespace.md)<br/>
+Funkcje w `precise_math` przestrzeni nazw są zgodne z C99. Uwzględniono pojedynczej precyzji, jak i podwójną precyzją wersje każdej funkcji. Te funkcje — w tym funkcje pojedynczej precyzji — wymagają rozszerzonej obsługi podwójnej precyzji na akceleratorze.
+
+## <a name="related-sections"></a>Sekcje pokrewne
+
+[C++ AMP (C++ Accelerated Massive Parallelism)](../../../parallel/amp/cpp-amp-cpp-accelerated-massive-parallelism.md)<br/>
+C++ AMP przyspiesza wykonywanie kodu C++ wykorzystując sprzęt danych równoległych powszechnie występujący jako jednostka przetwarzania grafiki (GPU) na dyskretną kartę graficzną.
 

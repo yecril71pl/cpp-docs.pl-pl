@@ -21,33 +21,34 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f2d8308e69cf53db4be51f6ce742df41edaa89ea
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 182cf58b3ee712ef0d45719591e967c0b81909bd
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33348094"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46426526"
 ---
 # <a name="document-templates-and-the-documentview-creation-process"></a>Szablony dokumentów i proces tworzenia dokumentu/widoku
-Do zarządzania złożony proces tworzenia dokumentów z ich skojarzonych widoków i okien ramowych, używane są dwie klasy szablonów dokumentów platformę: [CSingleDocTemplate](../mfc/reference/csingledoctemplate-class.md) dla SDI — aplikacje i [CMultiDocTemplate ](../mfc/reference/cmultidoctemplate-class.md) dla aplikacji MDI. A `CSingleDocTemplate` można utworzyć i zapisać jeden dokument jednego typu naraz. A `CMultiDocTemplate` przechowuje listę wiele otwarte dokumenty jednego typu.  
-  
- Niektóre aplikacje obsługują wiele typów dokumentów. Na przykład aplikacja może obsługiwać dokumentów tekstu i grafiki, dokumenty. W aplikacji gdy użytkownik wybierze polecenie Nowy w menu Plik okno dialogowe zawiera listę możliwych nowych typów dokumentu, aby otworzyć. Dla każdego typu obsługiwanych dokumentu aplikacja używa obiektu szablonu dokumentu distinct. Poniższa ilustracja przedstawia konfigurację aplikacji MDI obsługuje dwa typy dokumentu, który zawiera kilka otwarte dokumenty.  
-  
- ![MDI aplikacji, która ma dwa typy dokumentu](../mfc/media/vc387h1.gif "vc387h1")  
-Aplikacja MDI z dwóch typów dokumentów  
-  
- Szablony dokumentów są tworzone i obsługiwane przez obiekt aplikacji. Jednym z kluczowych zadań wykonywanych podczas aplikacji `InitInstance` funkcji jest utworzyć co najmniej jeden szablon dokumentu odpowiedniego typu. Ta funkcja jest opisana w [Tworzenie szablonu dokumentu](../mfc/document-template-creation.md). Obiekt aplikacji przechowuje wskaźnik do każdego szablonu dokumentu w jego Lista szablonów i zawiera interfejs umożliwiający dodanie szablonów dokumentów.  
-  
- Musisz obsługuje dwa lub więcej typów dokumentów, należy dodać dodatkowe wywołanie [AddDocTemplate](../mfc/reference/cwinapp-class.md#adddoctemplate) dla każdego typu dokumentu.  
-  
- Ikona jest zarejestrowany dla każdego szablonu dokumentu, na podstawie jego pozycji na liście aplikacji szablonów dokumentów. Kolejność szablonów dokumentów jest określana przez kolejność są dodawane wywołania `AddDocTemplate`. MFC przyjęto założenie, że ikona aplikacji jest pierwszym zasobu ikony w aplikacji, dalej zasobu ikony jest pierwsza ikona dokumentu i tak dalej.  
-  
- Na przykład szablon dokumentu jest trzeci trzech dla aplikacji. Jeśli w aplikacji w indeksie 3 jest zasobu ikony, tego ikona jest stosowana dla szablonu dokumentów. Jeśli nie, ikony pod indeksem 0 jest używany jako domyślny.  
-  
-## <a name="see-also"></a>Zobacz też  
- [Tematy ogólne dotyczące MFC](../mfc/general-mfc-topics.md)   
- [Tworzenie szablonu dokumentu](../mfc/document-template-creation.md)   
- [Tworzenie dokumentu/widoku](../mfc/document-view-creation.md)   
- [Relacje między obiektami MFC](../mfc/relationships-among-mfc-objects.md)   
- [Tworzenie nowych dokumentów, okien i widoków](../mfc/creating-new-documents-windows-and-views.md)
+
+Aby zarządzać złożony proces tworzenia dokumentów wraz z ich skojarzonych widoków i okien ramowych, środowisko wykorzystuje dwie klasy szablonów dokumentów: [CSingleDocTemplate](../mfc/reference/csingledoctemplate-class.md) dla aplikacji interfejsu SDI i [CMultiDocTemplate ](../mfc/reference/cmultidoctemplate-class.md) dla aplikacji MDI. Element `CSingleDocTemplate` można utworzyć i zapisać jeden dokument jeden typ w danym momencie. A `CMultiDocTemplate` przechowuje listę wiele otwartych dokumentów jednego typu.
+
+Niektóre aplikacje obsługują wiele typów dokumentów. Na przykład aplikacja może obsługiwać dokumenty tekstowe i grafiki dokumentów. W aplikacji gdy użytkownik wybierze polecenie Nowy w menu Plik, okno dialogowe pokazuje listę możliwych typów dokumentu nowy, aby otworzyć. Dla każdego typu obsługiwanego dokumentu aplikacja używa obiektu szablonu dokumentu distinct. Na poniższym rysunku przedstawiono konfigurację aplikacji MDI, która obsługuje dwa typy dokumentów i pokazuje kilka otwartych dokumentów.
+
+![Aplikacja MDI, która ma dwa typy dokumentów](../mfc/media/vc387h1.gif "vc387h1") aplikacji MDI za pomocą dwóch typów dokumentów
+
+Szablony dokumentów są tworzone i konserwowane przez obiekt aplikacji. Jedną z kluczowych zadań wykonywanych podczas aplikacji `InitInstance` funkcja jest do konstruowania co najmniej jeden szablon dokumentu, tego rodzaju odpowiedniej. Ta funkcja jest opisana w [Tworzenie szablonu dokumentu](../mfc/document-template-creation.md). Obiekt aplikacja przechowuje wskaźnik do każdego szablonu dokumentu na liście szablonów i udostępnia interfejs umożliwiający dodanie szablonów dokumentów.
+
+Jeśli potrzebujesz do obsługi co najmniej dwóch typów dokumentów, należy dodać dodatkowy wywołanie [AddDocTemplate](../mfc/reference/cwinapp-class.md#adddoctemplate) dla każdego typu dokumentu.
+
+Ikona jest zarejestrowany dla każdego szablonu dokumentu, na podstawie jego pozycji na liście aplikacji szablonów dokumentów. Kolejność szablonów dokumentów jest określana przez kolejność są dodawane przy użyciu wywołań `AddDocTemplate`. MFC przyjęto założenie, że pierwszy zasobu ikony w aplikacji znajduje się ikona aplikacji, następnym zasobu ikony pierwsza ikona dokumentu i tak dalej.
+
+Na przykład szablon dokumentu jest trzeci trzech dla aplikacji. W przypadku zasobu ikony aplikacji o indeksie 3, ta ikona służy do szablonu dokumentu. W przeciwnym razie ikona pod indeksem 0 jest używany jako domyślny.
+
+## <a name="see-also"></a>Zobacz też
+
+[Tematy ogólne dotyczące MFC](../mfc/general-mfc-topics.md)<br/>
+[Tworzenie szablonu dokumentu](../mfc/document-template-creation.md)<br/>
+[Tworzenie dokumentu/widoku](../mfc/document-view-creation.md)<br/>
+[Relacje między obiektami MFC](../mfc/relationships-among-mfc-objects.md)<br/>
+[Tworzenie nowych dokumentów, okien i widoków](../mfc/creating-new-documents-windows-and-views.md)
 

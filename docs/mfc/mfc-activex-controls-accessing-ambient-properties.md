@@ -1,5 +1,5 @@
 ---
-title: 'Formanty MFC ActiveX: Uzyskiwanie dostępu do właściwości otaczających | Dokumentacja firmy Microsoft'
+title: 'Kontrolki ActiveX MFC: Uzyskiwanie dostępu do właściwości otaczających | Dokumentacja firmy Microsoft'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -15,55 +15,57 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: fd3376e19d7780922102240ae1bfaa1b4eb89b2b
-ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
+ms.openlocfilehash: 8aaa379513695f3cd39589a1009e3a157d957761
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/25/2018
-ms.locfileid: "36931726"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46407914"
 ---
 # <a name="mfc-activex-controls-accessing-ambient-properties"></a>Kontrolki ActiveX MFC: uzyskiwanie dostępu do właściwości otaczających
-W tym artykule opisano, jak kontrolki ActiveX można uzyskać dostępu do właściwości otaczających swojego kontenera formantu.  
-  
- Formant można uzyskać informacji o jego kontenera podczas uzyskiwania dostępu do właściwości otaczających kontenera. Te właściwości ujawnia cechy wizualne, takie jak kolor tła kontenera bieżącej czcionki używany przez kontener i operacyjne właściwości, takie jak czy kontener jest obecnie w trybie użytkownika lub projektanta. Formant można użyć właściwości otaczających dostosować wygląd i zachowanie w określonym kontenerze, w której jest osadzony. Jednak formant powinien nigdy nie założono, że jego kontenera będzie obsługiwać wszystkie określoną właściwość otoczenia. W rzeczywistości niektóre kontenery mogą nie obsługiwać żadnych właściwości otoczenia w ogóle. W przypadku braku właściwością otoczenia formantu powinien założyć wartość domyślną uzasadnione.  
-  
- Aby uzyskać dostęp do właściwości otaczających, wywoływania [COleControl::GetAmbientProperty](../mfc/reference/colecontrol-class.md#getambientproperty). Ta funkcja oczekuje wysłania Identyfikatora dla właściwości otoczenia jako pierwszego parametru (plik OLECTL. H definiuje identyfikatorów wysyłania standardowy zestaw właściwości otaczających).  
-  
- Parametry `GetAmbientProperty` funkcji są Identyfikatora wysyłania variant tag wskazujący typ oczekiwany właściwości i wskaźnik do pamięci których wartość ma zostać zwrócony. Typ danych, do którego odwołuje się ten wskaźnik różni się zależnie od typu variant tagu. Funkcja zwraca **TRUE** przypadku kontener obsługuje właściwość, w przeciwnym razie zwraca **FALSE**.  
-  
- Poniższy przykładowy kod uzyskuje wartość właściwości otoczenia o nazwie "Przekierowanie". Jeśli ta właściwość nie jest obsługiwana przez kontener, wartością domyślną **TRUE** zakłada, że:  
-  
- [!code-cpp[NVC_MFC_AxUI#30](../mfc/codesnippet/cpp/mfc-activex-controls-accessing-ambient-properties_1.cpp)]  
-  
- Dla wygody `COleControl` dostarcza funkcji pomocnika dostęp do wielu typowych właściwości otoczenia i zwracanie odpowiednie wartości domyślnych właściwości nie są dostępne. Te funkcje pomocnicze są następujące:  
-  
--   [COleControl::AmbientBackColor](../mfc/reference/colecontrol-class.md#ambientbackcolor)  
-  
--   [AmbientDisplayName](../mfc/reference/colecontrol-class.md#ambientdisplayname)  
-  
--   [AmbientFont](../mfc/reference/colecontrol-class.md#ambientfont)  
-  
+
+W tym artykule omówiono, jak kontrolki ActiveX mogą dostęp do właściwości otaczających swojego kontenera kontrolki.
+
+Kontrolki można uzyskać informacje o jego kontener, uzyskując dostęp do właściwości otaczających kontenera. Te właściwości uwidocznić visual cechami, takimi jak kolor tła kontenera bieżącej czcionki używany przez kontener i charakterystyk operacyjnych, takich jak tego, czy kontener jest obecnie w trybie użytkownika lub projektanta. Kontrolki można użyć właściwości otoczenia, można dostosować wygląd i zachowanie do określonego kontenera, w której jest osadzony. Jednak kontrolki powinien nigdy nie zakładaj, czy jego kontenera będzie obsługiwać dowolną określoną właściwość otoczenia. W rzeczywistości niektóre kontenery mogą nie obsługiwać dowolne właściwości otoczenia wcale. W przypadku braku zmieniono właściwość kontrolki powinien założyć na rozsądną wartość domyślną.
+
+Aby uzyskać dostęp do właściwości otoczenia, wywoływania [COleControl::GetAmbientProperty](../mfc/reference/colecontrol-class.md#getambientproperty). Ta funkcja oczekuje Identyfikatora wysyłania dla właściwości otoczenia jako pierwszy parametr (plik OLECTL. H definiuje identyfikatorów wysyłania standardowy zestaw właściwości otoczenia).
+
+Parametry `GetAmbientProperty` funkcję są Identyfikatora wysyłania wariantu znacznika wskazujący oczekiwanym typem właściwości i wskaźnik do pamięci, gdzie powinna zostać zwrócona wartość. Typ danych, do którego odwołuje się ten wskaźnik różnią się w zależności od typu variant tagu. Funkcja zwraca **TRUE** Jeśli kontener obsługuje właściwości, w przeciwnym razie zwraca **FALSE**.
+
+Poniższy przykładowy kod uzyskuje wartość właściwości otoczenia, o nazwie "Przekierowywania." Jeśli właściwość nie jest obsługiwana przez kontener wartość domyślną **TRUE** zakłada, że:
+
+[!code-cpp[NVC_MFC_AxUI#30](../mfc/codesnippet/cpp/mfc-activex-controls-accessing-ambient-properties_1.cpp)]
+
+Dla Twojej wygody `COleControl` dostarcza funkcje pomocnicze, dostęp do wielu powszechnie używanych właściwości otoczenia, które zwracają odpowiednie wartości domyślne, jeśli właściwości nie są dostępne. Te funkcje pomocnicze są następujące:
+
+- [COleControl::AmbientBackColor](../mfc/reference/colecontrol-class.md#ambientbackcolor)
+
+- [AmbientDisplayName](../mfc/reference/colecontrol-class.md#ambientdisplayname)
+
+- [AmbientFont](../mfc/reference/colecontrol-class.md#ambientfont)
+
     > [!NOTE]
-    >  Obiekt wywołujący musi wywołać `Release( )` zwrócony czcionki.  
-  
--   [AmbientForeColor](../mfc/reference/colecontrol-class.md#ambientforecolor)  
-  
--   [AmbientLocaleID](../mfc/reference/colecontrol-class.md#ambientlocaleid)  
-  
--   [AmbientScaleUnits](../mfc/reference/colecontrol-class.md#ambientscaleunits)  
-  
--   [AmbientTextAlign](../mfc/reference/colecontrol-class.md#ambienttextalign)  
-  
--   [AmbientUserMode](../mfc/reference/colecontrol-class.md#ambientusermode)  
-  
--   [AmbientUIDead](../mfc/reference/colecontrol-class.md#ambientuidead)  
-  
--   [AmbientShowHatching](../mfc/reference/colecontrol-class.md#ambientshowhatching)  
-  
--   [AmbientShowGrabHandles](../mfc/reference/colecontrol-class.md#ambientshowgrabhandles)  
-  
- W przypadku zmiany wartości właściwości otaczających (za pośrednictwem niektóre akcje kontenera) `OnAmbientPropertyChanged` nosi nazwę funkcji członkowskiej klasy formantu. Przesłonić tę funkcję elementu członkowskiego do obsługi takiego powiadomienia. Parametr `OnAmbientPropertyChanged` jest Identyfikatorem wysyłania odpowiednich właściwości otoczenia. Wartość tego Identyfikatora wysyłania mogą być DISPID_UNKNOWN, co oznacza, że co najmniej jednej właściwości otoczenia został zmieniony, ale informacje o tym, które właściwości zostały zainfekowane jest niedostępny.  
-  
-## <a name="see-also"></a>Zobacz też  
- [Kontrolki ActiveX MFC](../mfc/mfc-activex-controls.md)
+    >  Obiekt wywołujący musi wywołać `Release( )` na zwracany czcionki.
+
+- [AmbientForeColor](../mfc/reference/colecontrol-class.md#ambientforecolor)
+
+- [AmbientLocaleID](../mfc/reference/colecontrol-class.md#ambientlocaleid)
+
+- [AmbientScaleUnits](../mfc/reference/colecontrol-class.md#ambientscaleunits)
+
+- [AmbientTextAlign](../mfc/reference/colecontrol-class.md#ambienttextalign)
+
+- [AmbientUserMode](../mfc/reference/colecontrol-class.md#ambientusermode)
+
+- [AmbientUIDead](../mfc/reference/colecontrol-class.md#ambientuidead)
+
+- [AmbientShowHatching](../mfc/reference/colecontrol-class.md#ambientshowhatching)
+
+- [AmbientShowGrabHandles](../mfc/reference/colecontrol-class.md#ambientshowgrabhandles)
+
+Jeśli wartość właściwości otoczenia zmieni się (za pośrednictwem niektóre działania kontenera) `OnAmbientPropertyChanged` nosi nazwę funkcji składowej typu kontrolki. Zastąpienie tej funkcji elementu członkowskiego, aby obsłużyć takie powiadomienie. Parametr `OnAmbientPropertyChanged` jest Identyfikatorem wysyłania dotyczy właściwości otoczenia. Wartość tego Identyfikatora wysyłania mogą być DISPID_UNKNOWN, co oznacza, że co najmniej jednej właściwości otoczenia został zmieniony, ale informacje na temat tego, jakie właściwości są niedostępne.
+
+## <a name="see-also"></a>Zobacz też
+
+[Kontrolki ActiveX MFC](../mfc/mfc-activex-controls.md)
 

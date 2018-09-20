@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: f0680ac7b926e3956efdadfa9342cfc5cd5f1239
-ms.sourcegitcommit: f0c90000125a9497bf61e41624de189a043703c0
+ms.openlocfilehash: ca5e8cfc2a08b01d7917d540c61e04837169a457
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44314615"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46438603"
 ---
 # <a name="testing-a-dialog-box-c"></a>Testowanie okna dialogowego (C++)
 
@@ -55,6 +55,6 @@ Win32
 
 ## <a name="see-also"></a>Zobacz też
 
-[Kontrolki w oknach dialogowych](../windows/controls-in-dialog-boxes.md)  
-[Edytor okien dialogowych](../windows/dialog-editor.md)  
+[Kontrolki w oknach dialogowych](../windows/controls-in-dialog-boxes.md)<br/>
+[Edytor okien dialogowych](../windows/dialog-editor.md)<br/>
 [Pokazywanie i ukrywanie paska narzędzi Edytora okien dialogowych](../windows/showing-or-hiding-the-dialog-editor-toolbar.md)

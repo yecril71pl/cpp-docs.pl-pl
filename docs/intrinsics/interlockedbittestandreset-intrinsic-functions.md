@@ -28,90 +28,95 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 12935c6a735d72bb1eb25627c78d69f362073a90
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: 6916b746aac8bbd4b1008289ec2eacd3afaa5571
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45724379"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46447657"
 ---
 # <a name="interlockedbittestandreset-intrinsic-functions"></a>funkcje wewnętrzne _interlockedbittestandreset
-**Microsoft Specific**  
-  
- Generuje instrukcję, która ustawia bitu `b` adresu `a` zero i zwraca oryginalną wartość.  
-  
-## <a name="syntax"></a>Składnia  
-  
-```  
-unsigned char _interlockedbittestandreset(  
-   long *a,  
-   long b  
-);  
-unsigned char _interlockedbittestandreset_acq(  
-   long *a,  
-   long b  
-);  
-unsigned char _interlockedbittestandreset_HLEAcquire(  
-   long *a,  
-   long b  
-);  
-unsigned char _interlockedbittestandreset_HLERelease(  
-   long *a,  
-   long b  
-);  
-unsigned char _interlockedbittestandreset_nf(  
-   long *a,  
-   long b  
-);  
-unsigned char _interlockedbittestandreset_rel(  
-   long *a,  
-   long b  
-);   
-unsigned char _interlockedbittestandreset64(  
-   __int64 *a,  
-   __int64 b  
-);   
-unsigned char _interlockedbittestandreset64_HLEAcquire(  
-   __int64 *a,  
-   __int64 b  
-);  
-unsigned char _interlockedbittestandreset64_HLERelease(  
-   __int64 *a,  
-   __int64 b  
-);  
-```  
-  
-#### <a name="parameters"></a>Parametry  
+
+**Microsoft Specific**
+
+Generuje instrukcję, która ustawia bitu `b` adresu `a` zero i zwraca oryginalną wartość.
+
+## <a name="syntax"></a>Składnia
+
+```
+unsigned char _interlockedbittestandreset(
+   long *a,
+   long b
+);
+unsigned char _interlockedbittestandreset_acq(
+   long *a,
+   long b
+);
+unsigned char _interlockedbittestandreset_HLEAcquire(
+   long *a,
+   long b
+);
+unsigned char _interlockedbittestandreset_HLERelease(
+   long *a,
+   long b
+);
+unsigned char _interlockedbittestandreset_nf(
+   long *a,
+   long b
+);
+unsigned char _interlockedbittestandreset_rel(
+   long *a,
+   long b
+);
+unsigned char _interlockedbittestandreset64(
+   __int64 *a,
+   __int64 b
+);
+unsigned char _interlockedbittestandreset64_HLEAcquire(
+   __int64 *a,
+   __int64 b
+);
+unsigned char _interlockedbittestandreset64_HLERelease(
+   __int64 *a,
+   __int64 b
+);
+```
+
+#### <a name="parameters"></a>Parametry
+
 *a*<br/>
-[in] Wskaźnik do pamięci do sprawdzenia.  
-  
+[in] Wskaźnik do pamięci do sprawdzenia.
+
 *b*<br/>
-[in] Pozycja bitu do testowania.  
-  
-## <a name="return-value"></a>Wartość zwracana  
- Oryginalna wartość bitowa pozycji określonej przez `b`.  
-  
-## <a name="requirements"></a>Wymagania  
-  
-|Wewnętrzne|Architektura|nagłówek|  
-|---------------|------------------|------------|  
-|`_interlockedbittestandreset`|x86, ARM, x64|\<intrin.h>|  
-|`_interlockedbittestandreset_acq`, `_interlockedbittestandreset_nf`, `_interlockedbittestandreset_rel`|ARM|\<intrin.h>|  
-|`_interlockedbittestandreset_HLEAcquire`, `_interlockedbittestandreset_HLERelease`|x86, x64|\<immintrin.h>|  
-|`_interlockedbittestandreset64`|X64|\<intrin.h>|  
-|`_interlockedbittestandreset64_HLEAcquire`, `_interlockedbittestandreset64_HLERelease`|X64|\<immintrin.h>|  
-  
-## <a name="remarks"></a>Uwagi  
- Na procesorach x86 i x64, użyj funkcji wewnętrznych `lock btr` instrukcji, która odczytuje i ustawia bitu określonego na zero w operacją niepodzielną.  
-  
- Na procesorach ARM, użyj funkcji wewnętrznych za pomocą `_acq` i `_rel` sufiksy dla semantyki nabywania i wydania, takie jak na początku i na końcu sekcję krytyczną. Funkcje wewnętrzne ARM przy użyciu `_nf` sufiks ("nie ogranicznika") nie działają jako czynnik blokujący pamięci.  
-  
- Na procesorach Intel, obsługujące instrukcje pominięcia blokady sprzętu (HLE), funkcje wewnętrzne z `_HLEAcquire` i `_HLERelease` sufiksy obejmują wskazówkę procesora, który może przyspieszyć wydajność, eliminując krok blokady zapisu w sprzęcie. Jeśli te funkcje wewnętrzne są wywoływane na procesorach, które nie obsługują HLE, wskazówka zostanie zignorowany.  
-  
- Te procedury są dostępne tylko jako funkcje wewnętrzne.  
-  
-**END specyficzny dla Microsoft**  
-  
-## <a name="see-also"></a>Zobacz też  
- [Funkcje wewnętrzne kompilatora](../intrinsics/compiler-intrinsics.md)   
- [Konflikty z kompilatorem x86](../build/conflicts-with-the-x86-compiler.md)
+[in] Pozycja bitu do testowania.
+
+## <a name="return-value"></a>Wartość zwracana
+
+Oryginalna wartość bitowa pozycji określonej przez `b`.
+
+## <a name="requirements"></a>Wymagania
+
+|Wewnętrzne|Architektura|nagłówek|
+|---------------|------------------|------------|
+|`_interlockedbittestandreset`|x86, ARM, x64|\<intrin.h>|
+|`_interlockedbittestandreset_acq`, `_interlockedbittestandreset_nf`, `_interlockedbittestandreset_rel`|ARM|\<intrin.h>|
+|`_interlockedbittestandreset_HLEAcquire`, `_interlockedbittestandreset_HLERelease`|x86, x64|\<immintrin.h>|
+|`_interlockedbittestandreset64`|X64|\<intrin.h>|
+|`_interlockedbittestandreset64_HLEAcquire`, `_interlockedbittestandreset64_HLERelease`|X64|\<immintrin.h>|
+
+## <a name="remarks"></a>Uwagi
+
+Na procesorach x86 i x64, użyj funkcji wewnętrznych `lock btr` instrukcji, która odczytuje i ustawia bitu określonego na zero w operacją niepodzielną.
+
+Na procesorach ARM, użyj funkcji wewnętrznych za pomocą `_acq` i `_rel` sufiksy dla semantyki nabywania i wydania, takie jak na początku i na końcu sekcję krytyczną. Funkcje wewnętrzne ARM przy użyciu `_nf` sufiks ("nie ogranicznika") nie działają jako czynnik blokujący pamięci.
+
+Na procesorach Intel, obsługujące instrukcje pominięcia blokady sprzętu (HLE), funkcje wewnętrzne z `_HLEAcquire` i `_HLERelease` sufiksy obejmują wskazówkę procesora, który może przyspieszyć wydajność, eliminując krok blokady zapisu w sprzęcie. Jeśli te funkcje wewnętrzne są wywoływane na procesorach, które nie obsługują HLE, wskazówka zostanie zignorowany.
+
+Te procedury są dostępne tylko jako funkcje wewnętrzne.
+
+**END specyficzny dla Microsoft**
+
+## <a name="see-also"></a>Zobacz też
+
+[Funkcje wewnętrzne kompilatora](../intrinsics/compiler-intrinsics.md)<br/>
+[Konflikty z kompilatorem x86](../build/conflicts-with-the-x86-compiler.md)

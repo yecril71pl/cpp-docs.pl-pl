@@ -20,12 +20,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3e69a273d523a78adc2b71652e5f13fb9141d3b1
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: bce549cd782c8d79066b16d2e3791ba906e9c4f9
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45699912"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46410538"
 ---
 # <a name="fm-name-mapfile"></a>/Fm (Nazwa Mapfile)
 
@@ -63,7 +63,7 @@ Symbole globalne w pliku mapowania zazwyczaj mają co najmniej jeden wiodące zn
 
 ## <a name="see-also"></a>Zobacz też
 
-[Plik wyjściowy (/ F) opcje](../../build/reference/output-file-f-options.md)
-[opcje kompilatora](../../build/reference/compiler-options.md)<br/>
+[Plik wyjściowy (/F), opcje](../../build/reference/output-file-f-options.md)<br/>
+[Opcje kompilatora](../../build/reference/compiler-options.md)<br/>
 [Ustawianie opcji kompilatora](../../build/reference/setting-compiler-options.md)<br/>
 [Określanie nazwy ścieżki](../../build/reference/specifying-the-pathname.md)

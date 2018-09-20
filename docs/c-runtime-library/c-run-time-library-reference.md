@@ -18,12 +18,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9be5b7665b84a26492d7cfc33141206e380eb020
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 38326a76c884d180e4337626a4efec6d52fa24af
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46064337"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46430491"
 ---
 # <a name="c-run-time-library-reference"></a>Odwołanie do biblioteki C-Run-Time
 
@@ -33,26 +33,37 @@ Przykładowe programy znajdują się w tematach referencyjnych poszczególnych w
 
 ## <a name="in-this-section"></a>W tej sekcji
 
-[C Run-Time Libraries](../c-runtime-library/crt-library-features.md) w tym artykule omówiono pliki .lib, wchodzące w skład biblioteki wykonawczej C.
+[Biblioteki wykonawczej języka C](../c-runtime-library/crt-library-features.md)<br/>
+W tym artykule omówiono pliki .lib, wchodzące w skład biblioteki wykonawczej C.
 
-[Procedury czasu wykonywania języka Universal C według kategorii](../c-runtime-library/run-time-routines-by-category.md) zawiera łącza do biblioteki czasu wykonywania według kategorii.
+[Procedury czasu wykonywania języka Universal C według kategorii](../c-runtime-library/run-time-routines-by-category.md)<br/>
+Zawiera łącza do biblioteki czasu wykonywania według kategorii.
 
-[Globalne zmienne i typy standardowe](../c-runtime-library/global-variables-and-standard-types.md) zawiera łącza do zmiennych globalnych i standardowych typów dostarczonych przez biblioteki wykonawczej.
+[Zmienne globalne i typy standardowe](../c-runtime-library/global-variables-and-standard-types.md)<br/>
+Zawiera łącza do zmiennych globalnych i standardowych typów dostarczonych przez biblioteki wykonawczej.
 
-[Stałe globalne](../c-runtime-library/global-constants.md) zawiera łącza do stałe globalne zdefiniowane przez bibliotekę wykonawczej.
+[Stałe globalne](../c-runtime-library/global-constants.md)<br/>
+Zawiera łącza do stałe globalne zdefiniowane przez bibliotekę wykonawczej.
 
-[Alfabetyczne odwołanie funkcji](../c-runtime-library/reference/crt-alphabetical-function-reference.md) spis treści punkt wejścia do listę alfabetyczną wszystkich funkcji biblioteki wykonawczej C.
+[Alfabetyczne zestawienie funkcji](../c-runtime-library/reference/crt-alphabetical-function-reference.md)<br/>
+Zawiera spis treści punkt wejścia do listę alfabetyczną wszystkich funkcji biblioteki wykonawczej C.
 
-[Mapowania zwykłego tekstu](../c-runtime-library/generic-text-mappings.md) zawiera łącza do mapowania zwykłego tekstu, zdefiniowana w Tchar.h.
+[Mapowania zwykłego tekstu](../c-runtime-library/generic-text-mappings.md)<br/>
+Zawiera łącza do mapowania zwykłego tekstu, zdefiniowana w Tchar.h.
 
-[Język i Kraj/Region Strings](../c-runtime-library/locale-names-languages-and-country-region-strings.md) w tym artykule opisano sposób używania `setlocale` funkcję, aby ustawić język i ciągi Kraj/Region.
+[Język i ciągi Kraj/Region](../c-runtime-library/locale-names-languages-and-country-region-strings.md)<br/>
+Opisuje sposób używania `setlocale` funkcję, aby ustawić język i ciągi Kraj/Region.
 
 ## <a name="related-sections"></a>Sekcje pokrewne
 
-[Procedury debugowania](../c-runtime-library/debug-routines.md) zawiera łącza do debugowania wersji biblioteki wykonawczej procedur.
+[Procedury debugowania](../c-runtime-library/debug-routines.md)<br/>
+Zawiera łącza do debugowania wersji biblioteki wykonawczej procedur.
 
-[Sprawdzanie błędów czasu wykonywania](../c-runtime-library/run-time-error-checking.md) zawiera łącza do funkcji, które obsługują sprawdzanie błędów czasu wykonywania.
+[Sprawdzanie błędów czasu wykonywania](../c-runtime-library/run-time-error-checking.md)<br/>
+Zawiera łącza do funkcji, które obsługują sprawdzanie błędów czasu wykonywania.
 
-[Biblioteki dll i zachowanie biblioteki wykonawczej języka Visual C++](../build/run-time-library-behavior.md) w tym artykule omówiono do wpisu punktu i uruchamiania kodu biblioteki DLL.
+[Zachowanie biblioteki wykonawczej DLL i Visual C++](../build/run-time-library-behavior.md)<br/>
+W tym artykule omówiono do wpisu punktu i uruchamiania kodu biblioteki DLL.
 
-[Debugowanie](/visualstudio/debugger/debugging-in-visual-studio) zawiera łącza do przy użyciu debugera programu Visual Studio, aby poprawić błędy logiczne w aplikacji lub procedur składowanych.
+[Debugowanie](/visualstudio/debugger/debugging-in-visual-studio)<br/>
+Zawiera łącza do przy użyciu debugera programu Visual Studio, aby poprawić błędy logiczne w aplikacji lub procedur składowanych.

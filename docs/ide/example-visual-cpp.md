@@ -18,55 +18,59 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7c6be247c6c756557e7173c4b295197d9e4267cb
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: e596d38b52e36c20c28eaab66e24805696865b17
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46110968"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46421664"
 ---
 # <a name="ltexamplegt-visual-c"></a>&lt;przykład&gt; (Visual C++)
-\<Przykład > należy określić przykładem przedstawiającym sposób użycia metody lub innego członka biblioteki. Często również wymagałoby to użycia [ \<kodu >](../ide/code-visual-cpp.md) tagu.  
-  
-## <a name="syntax"></a>Składnia  
-  
-```  
-<example>description</example>  
-```  
-  
-#### <a name="parameters"></a>Parametry  
+
+\<Przykład > należy określić przykładem przedstawiającym sposób użycia metody lub innego członka biblioteki. Często również wymagałoby to użycia [ \<kodu >](../ide/code-visual-cpp.md) tagu.
+
+## <a name="syntax"></a>Składnia
+
+```
+<example>description</example>
+```
+
+#### <a name="parameters"></a>Parametry
+
 *Opis elementu*<br/>
-Opis przykładowego kodu.  
-  
-## <a name="remarks"></a>Uwagi  
- Kompiluj przy użyciu [/doc](../build/reference/doc-process-documentation-comments-c-cpp.md) do Przetwarzaj komentarze dokumentacji do pliku.  
-  
-## <a name="example"></a>Przykład  
-  
-```  
-// xml_example_tag.cpp  
-// compile with: /clr /doc /LD  
-// post-build command: xdcmake xml_example_tag.dll  
-  
-/// Text for class MyClass.  
-public ref class MyClass {  
-public:  
-   /// <summary>  
-   /// GetZero method  
-   /// </summary>  
-   /// <example> This sample shows how to call the GetZero method.  
-   /// <code>  
-   /// int main()   
-   /// {  
-   ///    return GetZero();  
-   /// }  
-   /// </code>  
-   /// </example>  
-   static int GetZero() {  
-      return 0;  
-   }  
-};  
-```  
-  
-## <a name="see-also"></a>Zobacz też  
- [Dokumentacja XML](../ide/xml-documentation-visual-cpp.md)
+Opis przykładowego kodu.
+
+## <a name="remarks"></a>Uwagi
+
+Kompiluj przy użyciu [/doc](../build/reference/doc-process-documentation-comments-c-cpp.md) do Przetwarzaj komentarze dokumentacji do pliku.
+
+## <a name="example"></a>Przykład
+
+```
+// xml_example_tag.cpp
+// compile with: /clr /doc /LD
+// post-build command: xdcmake xml_example_tag.dll
+
+/// Text for class MyClass.
+public ref class MyClass {
+public:
+   /// <summary>
+   /// GetZero method
+   /// </summary>
+   /// <example> This sample shows how to call the GetZero method.
+   /// <code>
+   /// int main()
+   /// {
+   ///    return GetZero();
+   /// }
+   /// </code>
+   /// </example>
+   static int GetZero() {
+      return 0;
+   }
+};
+```
+
+## <a name="see-also"></a>Zobacz też
+
+[Dokumentacja XML](../ide/xml-documentation-visual-cpp.md)

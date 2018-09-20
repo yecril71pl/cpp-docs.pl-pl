@@ -18,40 +18,42 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ecb836f8fee1efab7f5f925c6ec3ce0f470d666b
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 543b9e34c881285c295fb7ab7ee2107e36c99a9c
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33346285"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46418323"
 ---
 # <a name="command-routing"></a>Routing poleceń
-Twoje odpowiedzialność w pracy z poleceń jest ograniczona do tworzenia mapy komunikatów połączeń między polecenia i ich funkcje programu obsługi, zadań, które okno właściwości. Należy również napisać większości programy obsługi poleceń.  
-  
- Komunikaty systemu Windows są zwykle wysyłane do głównego okna ramowego, ale komunikaty poleceń są następnie kierowane do innych obiektów. Platformę kieruje polecenia przy użyciu standardowych sekwencji obiekty docelowe poleceń, z których jeden powinien mieć obsługi dla polecenia. Każdy obiekt docelowy polecenia sprawdza jego mapy wiadomości, aby zobaczyć, czy może obsłużyć komunikat przychodzący.  
-  
- Różnych klas docelowym polecenia Sprawdź, czy mapy własnych wiadomości w różnym czasie. Zazwyczaj klasa kieruje polecenia do innych obiektów na umożliwieniu im pierwszy w wierszu polecenia. Jeśli żaden z tych obiektów obsługuje polecenie, oryginalnej klasy sprawdza własną mapy komunikatów. Następnie jeśli nie można go przekazać sam program obsługi, go może kierować polecenia do jeszcze więcej obiekty docelowe poleceń. Tabela [trasy standardowego polecenia](#_core_standard_command_route) poniżej pokazano, jak klas struktury tej sekwencji. Ogólne kolejność, w którym element docelowy polecenia kieruje polecenie jest:  
-  
-1.  Do obiektu docelowego polecenia obecnie aktywny.  
-  
-2.  Do samego siebie.  
-  
-3.  Do innych celów polecenia.  
-  
- Jak kosztowne jest ten mechanizm routingu w porównaniu do obsługi sieci jest w odpowiedzi na polecenie, koszt marszruty jest niska. Przy tym pamiętać, że platformę generuje polecenia tylko wtedy, gdy użytkownik użyje obiektu interfejsu użytkownika.  
-  
-### <a name="_core_standard_command_route"></a> Standardowe polecenia trasy  
-  
-|Gdy obiekt tego typu odebrało polecenie. . .|Udostępnia samej i innych obiektów w elemencie docelowym polecenia możliwość obsługi polecenia w podanej kolejności:|  
-|----------------------------------------------------------|-----------------------------------------------------------------------------------------------------|  
-|Okna ramowe MDI (`CMDIFrameWnd`)|1.  Aktywne `CMDIChildWnd`<br />2.  To okno ramowe<br />3.  Aplikacji (`CWinApp` obiektu)|  
-|Okna ramowe dokumentów (`CFrameWnd`, `CMDIChildWnd`)|1.  Aktywny widok<br />2.  To okno ramowe<br />3.  Aplikacji (`CWinApp` obiektu)|  
-|Widok|1.  Ten widok<br />2.  Dokument dołączony do tego widoku|  
-|dokument|1.  Ten dokument<br />2.  Szablon dokumentu dołączony do dokumentu|  
-|Okno dialogowe|1.  To okno dialogowe<br />2.  Okno, który jest właścicielem okno dialogowe<br />3.  Aplikacji (`CWinApp` obiektu)|  
-  
- W przypadku, gdy numerowane wpisów w drugiej kolumnie powyższej tabeli zawierać inne obiekty, takie jak dokument, zobacz odpowiadający mu element w pierwszej kolumnie. Na przykład podczas czytania w drugiej kolumnie czy widok przekazuje polecenia do swoich dokumentów, zobacz wpis "Dokumentu" w pierwszej kolumnie, które należy wykonać dodatkowe routingu.  
-  
-## <a name="see-also"></a>Zobacz też  
- [Jak struktura wywołuje programy obsługi](../mfc/how-the-framework-calls-a-handler.md)
+
+Twoja odpowiedzialność w pracy z poleceniami jest ograniczona do nawiązywania połączeń mapy komunikatów między poleceniami i ich funkcje obsługi zadań, które okno właściwości. Należy również napisać większość programy obsługi poleceń.
+
+Windows są zwykle wysyłane do głównej ramki okna, ale komunikaty polecenia są następnie kierowane do innych obiektów. Struktura kieruje polecenia za pośrednictwem standardowych sekwencji obiekty docelowe poleceń, z których jeden jest powinny mieć obsługi polecenia. Każdy obiekt w elemencie docelowym polecenia sprawdza jego mapy wiadomości, aby zobaczyć, jeśli może obsługiwać komunikatu przychodzącego.
+
+Różnych klas w elemencie docelowym polecenia Sprawdź, czy mapy własnych wiadomości o różnych porach. Zazwyczaj klasa kieruje polecenia do niektórych innych obiektów, aby dać im pierwszej szansy w wierszu polecenia. Jeśli żadna z tych obiektów obsługuje polecenie, oryginalnej klasy sprawdza jego własnej mapy wiadomości. Następnie jeśli go nie może dostarczyć sam program obsługi, jego może kierować polecenia do jeszcze więcej obiekty docelowe poleceń. Tabela [trasy poleceń standardowych](#_core_standard_command_route) poniżej pokazano, jak każdą z klas struktury tej sekwencji. Ogólne kolejność, w której element docelowy polecenia kieruje polecenia to:
+
+1. Do jego podrzędny aktualnie aktywnego obiektu elemencie docelowym polecenia.
+
+1. Do samego siebie.
+
+1. Do innych celów polecenia.
+
+W jaki sposób kosztownych jest ten mechanizm routingu w porównaniu do programu obsługi sposób działania w odpowiedzi na polecenie, koszt marszruty jest niska. Mieć na uwadze, w ramach generuje polecenia, tylko wtedy, gdy użytkownik wchodzi w interakcję z obiektem interfejsu użytkownika.
+
+### <a name="_core_standard_command_route"></a> Standardowe polecenia trasy
+
+|Gdy obiekt tego typu otrzymuje polecenie. . .|Daje ona samej i innych obiektów w elemencie docelowym polecenia możliwość obsługi polecenia w podanej kolejności:|
+|----------------------------------------------------------|-----------------------------------------------------------------------------------------------------|
+|Okno ramki MDI (`CMDIFrameWnd`)|1.  Aktywne `CMDIChildWnd`<br />2.  To okno ramek<br />3.  Aplikacja (`CWinApp` obiektu)|
+|Okna ramki dokumentu (`CFrameWnd`, `CMDIChildWnd`)|1.  Widok aktywny<br />2.  To okno ramek<br />3.  Aplikacja (`CWinApp` obiektu)|
+|Widok|1.  Ten widok<br />2.  Dokument dołączony do tego widoku|
+|dokument|1.  Ten dokument<br />2.  Szablon dokumentu, dołączony do dokumentu|
+|Okno dialogowe|1.  To okno dialogowe<br />2.  Okno, który jest właścicielem okno dialogowe<br />3.  Aplikacja (`CWinApp` obiektu)|
+
+W przypadku, gdy ponumerowanych wpisów w drugiej kolumnie tabeli powyżej wspomnieć o inne obiekty, takie jak dokument, zobacz odpowiadający mu element w pierwszej kolumnie. Na przykład podczas odczytywania w drugiej kolumnie, widok przekazuje polecenia do swoich dokumentów, zobacz wpis "Dokument" w pierwszej kolumnie, aby wykonać dalsze routingu.
+
+## <a name="see-also"></a>Zobacz też
+
+[Jak struktura wywołuje programy obsługi](../mfc/how-the-framework-calls-a-handler.md)
 

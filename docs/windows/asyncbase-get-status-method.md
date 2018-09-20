@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 31b333c14af6d57fb098d6aff0d0938092477de0
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: c1bb13773736104354d6276fef0a731aa72f22d2
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42613127"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46431247"
 ---
 # <a name="asyncbasegetstatus-method"></a>AsyncBase::get_Status — Metoda
 
@@ -38,7 +38,7 @@ STDMETHOD(
 
 ### <a name="parameters"></a>Parametry
 
-*status*  
+*status*<br/>
 Lokalizacja, w których stan ma być przechowywany. Aby uzyskać więcej informacji, zobacz `Windows::Foundation::AsyncStatus` wyliczenia.
 
 ## <a name="return-value"></a>Wartość zwracana

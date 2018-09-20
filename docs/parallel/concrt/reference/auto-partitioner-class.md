@@ -18,54 +18,58 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 05232aa954a9ded7d2ab3a26ae4e1524610c3d04
-ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
+ms.openlocfilehash: a2bb62d76733e77c2528a80dfc4e9ef358878895
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33705448"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46425414"
 ---
 # <a name="autopartitioner-class"></a>auto_partitioner — Klasa
-`auto_partitioner` Klasa reprezentuje domyślną metodą `parallel_for`, `parallel_for_each` i `parallel_transform` służy do zakresu ich wykonuje iterację na partycji. Ta metoda partycjonowania employes kradzież równoważenia obciążenia w zakresie jak również na — iteracyjne anulowania.  
-  
-## <a name="syntax"></a>Składnia  
-  
+
+`auto_partitioner` Klasa reprezentuje domyślną metodę `parallel_for`, `parallel_for_each` i `parallel_transform` służy do partycjonowania zakresu iteruje po nich. Ta metoda partycjonowania employes kradzież do równoważenia obciążenia w zakresie także na iteracji anulowania.
+
+## <a name="syntax"></a>Składnia
+
 ```
 class auto_partitioner;
-```  
-  
-## <a name="members"></a>Elementy członkowskie  
-  
-### <a name="public-constructors"></a>Konstruktory publiczne  
-  
-|Nazwa|Opis|  
-|----------|-----------------|  
-|[auto_partitioner](#ctor)|Konstruuje `auto_partitioner` obiektu.|  
-|[~ auto_partitioner — destruktor](#dtor)|Niszczy `auto_partitioner` obiektu.|  
-  
-## <a name="inheritance-hierarchy"></a>Hierarchia dziedziczenia  
- `auto_partitioner`  
-  
-## <a name="requirements"></a>Wymagania  
- **Nagłówek:** ppl.h  
-  
- **Namespace:** współbieżności  
-  
-##  <a name="dtor"></a> ~ auto_partitioner — 
+```
 
- Niszczy `auto_partitioner` obiektu.  
-  
+## <a name="members"></a>Elementy członkowskie
+
+### <a name="public-constructors"></a>Konstruktory publiczne
+
+|Nazwa|Opis|
+|----------|-----------------|
+|[auto_partitioner](#ctor)|Konstruuje `auto_partitioner` obiektu.|
+|[~ auto_partitioner — destruktor](#dtor)|Niszczy `auto_partitioner` obiektu.|
+
+## <a name="inheritance-hierarchy"></a>Hierarchia dziedziczenia
+
+`auto_partitioner`
+
+## <a name="requirements"></a>Wymagania
+
+**Nagłówek:** ppl.h
+
+**Namespace:** współbieżności
+
+##  <a name="dtor"></a> ~ auto_partitioner
+
+Niszczy `auto_partitioner` obiektu.
+
 ```
 ~auto_partitioner();
-```  
-  
-##  <a name="ctor"></a> auto_partitioner — 
+```
 
- Konstruuje `auto_partitioner` obiektu.  
-  
+##  <a name="ctor"></a> auto_partitioner —
+
+Konstruuje `auto_partitioner` obiektu.
+
 ```
 auto_partitioner();
-```  
-  
-## <a name="see-also"></a>Zobacz też  
- [Przestrzeń nazw współbieżności](concurrency-namespace.md)
+```
+
+## <a name="see-also"></a>Zobacz też
+
+[Przestrzeń nazw współbieżności](concurrency-namespace.md)

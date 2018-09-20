@@ -23,22 +23,24 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f4454eceae2cc5f2e6b46510fe95889c664a568a
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 1f5beba4f9a33a5bd9ee93baae6176d3ea592d2e
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33348854"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46445818"
 ---
 # <a name="internet-security-c"></a>Zabezpieczenia internetowe (C++)
-Kod bezpieczeństwa jest głównych problem dla deweloperów i użytkowników aplikacji internetowych. Istnieje ryzyko: złośliwego kodu, kod, który został zmodyfikowany i kod z nieznanej witryny lub autorów.  
-  
- Istnieją dwa podstawowe podejścia do zabezpieczeń podczas opracowywania obsługę sieci Internet. Pierwszy jest nazywany "sandboxing." W takie podejście aplikacja jest ograniczony do określonego zestawu interfejsów API i wykluczone z tych potencjalnie niebezpiecznych, takich jak plik we/wy, których program może spowodować utratę danych na komputerze użytkownika. Drugim jest implementowane za pomocą podpisów cyfrowych. Ta metoda jest określana jako "shrinkwrap" w Internecie. Kod jest weryfikowany i podpisany przy użyciu technologii klucza publicznego klucza i prywatnej. Przed uruchomieniem kodu sprawdza podpis cyfrowy się upewnij się, że kod jest ze znanego uwierzytelnionego źródła i czy kod nie została zmieniona, ponieważ jest on podpisany.  
-  
- W pierwszym przypadku ufasz, że aplikacja nie ma żadnych problemów i zaufania punkt początkowy aplikacji. W ciągu sekundy podpisy cyfrowe są używane w celu sprawdzenia autentyczności. Cyfrowe podpisywanie jest standardem branżowym, który umożliwia identyfikowanie i zawierają szczegółowe informacje o wydawcy kodu. Jego technologii jest oparta na standardach, w tym RSA i X.509. Przeglądarki zwykle zezwala użytkownikom na wybranie, czy chce pobierać i uruchamiać kodem nieznanego pochodzenia.  
-  
-  
-## <a name="see-also"></a>Zobacz też  
- [Zadania związane z programowaniem Internetu MFC](../mfc/mfc-internet-programming-tasks.md)   
- [MFC — podstawy programowania Internetu](../mfc/mfc-internet-programming-basics.md)
+
+Kod bezpieczeństwa jest poważnym problemem dla programistów i użytkowników aplikacji internetowych. Ryzyko: złośliwego kodu, kod, który został zmodyfikowany i kodu z nieznanego witryn lub autorów.
+
+Istnieją dwa podstawowe podejścia do zabezpieczeń podczas tworzenia dla Internetu. Pierwszy jest nazywany "piaskownicy". W tym podejściu aplikacji jest ograniczony do określonego zestawu interfejsów API i wykluczone z potencjalnie niebezpiecznych usług, na przykład plik we/wy, których program może spowodować utratę danych na komputerze użytkownika. Drugim jest implementowany przy użyciu podpisów cyfrowych. To podejście jest określane jako "shrinkwrap" do korzystania z Internetu. Kod jest weryfikowany i podpisany przy użyciu prywatnego klucza/public kluczowych technologii. Przed uruchomieniem kodu podpis cyfrowy jest weryfikowany aby upewnić się, że kod jest ze znanego źródła uwierzytelnionego i że kod nie została zmieniona, ponieważ jest on podpisany.
+
+W pierwszym przypadku ufasz, że aplikacja nie będzie żadnych szkód i zaufania punkt początkowy aplikacji. W drugim podpisy cyfrowe są używane w celu sprawdzenia autentyczności. Cyfrowe podpisywanie jest standardem branżowym, który umożliwia identyfikowanie i zawierają szczegółowe informacje o wydawcy kodu. Technologie jest oparta na standardach, w tym RSA i X.509. Przeglądarki zwykle zezwala użytkownikom na wybór, czy chce pobierać i uruchamiać kodem nieznanego pochodzenia.
+
+
+## <a name="see-also"></a>Zobacz też
+
+[MFC — zadania związane z programowaniem Internetu](../mfc/mfc-internet-programming-tasks.md)<br/>
+[MFC — podstawy programowania Internetu](../mfc/mfc-internet-programming-basics.md)
 

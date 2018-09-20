@@ -18,18 +18,20 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1c4bc280c57998b23082f11f4ebe42b660177d3c
-ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
+ms.openlocfilehash: 42526eea184cb4f28d5214fe0c56281ac6da9d6c
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/25/2018
-ms.locfileid: "36929624"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46426110"
 ---
 # <a name="initializing-the-dialog-box"></a>Inicjowanie okna dialogowego
-Po okna dialogowego pole i wszystkie jego formantów są tworzone, ale przed okno dialogowe zostanie wyświetlone okno (albo typu) na ekranie obiektu okna dialogowego przez [OnInitDialog](../mfc/reference/cdialog-class.md#oninitdialog) została wywołana funkcja elementu członkowskiego. Modalne okno dialogowe, to wystąpi podczas `DoModal` wywołania. Pola z niemodalnego okna dialogowego `OnInitDialog` jest wywoływane, gdy `Create` jest wywoływana. Zwykle zastąpienie `OnInitDialog` zainicjować formantów okna dialogowego, takie jak ustawianie początkowy tekst pola edycji. Należy wywołać `OnInitDialog` funkcji członkowskiej klasy podstawowej, `CDialog`, z Twojego `OnInitDialog` zastąpienia.  
-  
- Jeśli chcesz ustawić kolor tła okna dialogowego (oraz że wszystkie inne okna dialogowe w aplikacji), zobacz [Ustawianie koloru tła okna dialogowego](../mfc/setting-the-dialog-boxs-background-color.md).  
-  
-## <a name="see-also"></a>Zobacz też  
- [Cykl życiowy okna dialogowego](../mfc/life-cycle-of-a-dialog-box.md)
+
+Po okna dialogowego pole i wszystkich jego formantów są tworzone, ale tuż przed okna dialogowego pole (dowolnego typu) są wyświetlane na ekranie, obiektu okna dialogowego firmy [OnInitDialog](../mfc/reference/cdialog-class.md#oninitdialog) funkcja członkowska jest wywoływana. Dla modalnego okna dialogowego, ten problem wystąpi podczas `DoModal` wywołania. Aby uzyskać niemodalnego okna dialogowego `OnInitDialog` jest wywoływana, gdy `Create` jest wywoływana. Zazwyczaj zastąpienie `OnInitDialog` zainicjować okno dialogowe formanty, takie jak ustawianie początkowy tekst pola edycji. Należy wywołać `OnInitDialog` funkcji składowej klasy bazowej `CDialog`, z Twojej `OnInitDialog` zastąpienia.
+
+Jeśli chcesz ustawić kolor tła okno dialogowe (i w przypadku wszystkich innych oknach dialogowych w aplikacji), zobacz [Ustawianie koloru tła okna dialogowego](../mfc/setting-the-dialog-boxs-background-color.md).
+
+## <a name="see-also"></a>Zobacz też
+
+[Cykl życiowy okna dialogowego](../mfc/life-cycle-of-a-dialog-box.md)
 

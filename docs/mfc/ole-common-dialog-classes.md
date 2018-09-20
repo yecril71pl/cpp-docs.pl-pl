@@ -19,46 +19,48 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2e3cedbe3cd08a425bd2bde2b4a6ca8c5a493c72
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: c6ef5a7aed288331322243d316dde58d9f36cbd9
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33348107"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46430426"
 ---
 # <a name="ole-common-dialog-classes"></a>Klasy wspólnych okien dialogowych OLE
-Te klasy obsługi typowych zadań OLE implementując kilka standardowych oknach dialogowych OLE. Zapewniają także spójny interfejs użytkownika funkcji OLE.  
-  
- [COleDialog](../mfc/reference/coledialog-class.md)  
- Używane przez platformę do przechowywania najczęściej występujące implementacje dla wszystkich okien dialogowych OLE. Wszystkie klasy okien dialogowych w kategorii interfejsu użytkownika są uzyskiwane z tej klasy podstawowej. `COleDialog` Nie można używać bezpośrednio.  
-  
- [COleInsertDialog](../mfc/reference/coleinsertdialog-class.md)  
- Wyświetla okno dialogowe Wstaw obiekt standardowy interfejs użytkownika dla wstawiania nowych OLE połączone lub osadzone elementy.  
-  
- [COlePasteSpecialDialog](../mfc/reference/colepastespecialdialog-class.md)  
- Wyświetla okno dialogowe Wklej specjalne standardowy interfejs użytkownika dla wykonania polecenia Edytuj Wklej specjalne.  
-  
- [COleLinksDialog](../mfc/reference/colelinksdialog-class.md)  
- Wyświetla okno dialogowe Edytuj łącza standardowy interfejs użytkownika do modyfikowania informacji na temat połączone elementy.  
-  
- [COleChangeIconDialog](../mfc/reference/colechangeicondialog-class.md)  
- Wyświetla okno dialogowe Zmienianie ikony, standardowy interfejs użytkownika dla zmiana, którą osadzonych ikon skojarzonych z OLE lub połączony element.  
-  
- [COleConvertDialog](../mfc/reference/coleconvertdialog-class.md)  
- Wyświetla okno dialogowe Konwertowanie standardowy interfejs użytkownika do konwertowania elementy OLE z jednego typu.  
-  
- [COlePropertiesDialog](../mfc/reference/colepropertiesdialog-class.md)  
- Hermetyzuje okno dialogowe właściwości OLE wspólne systemu Windows. Wspólne okna dialogowe OLE właściwości umożliwiają łatwe do wyświetlanie i modyfikowanie właściwości elementu dokumentu OLE w sposób zgodny ze standardami systemu Windows.  
-  
- [COleUpdateDialog](../mfc/reference/coleupdatedialog-class.md)  
- Wyświetla okno dialogowe aktualizacji standardowy interfejs użytkownika aktualizacji wszystkich łączy w dokumencie. Okno dialogowe zawiera wskaźnik postępu, aby wskazać, jak blisko procedura aktualizacji zostanie do zakończenia.  
-  
- [COleChangeSourceDialog](../mfc/reference/colechangesourcedialog-class.md)  
- Wyświetla okno dialogowe Zmienianie źródła standardowy interfejs użytkownika do zmiany docelowy lub źródłowy łącza.  
-  
- [COleBusyDialog](../mfc/reference/colebusydialog-class.md)  
- Wyświetla oknach dialogowych serwer jest zajęty i serwer nie odpowiada, standardowy interfejs użytkownika do obsługi wywołań zajęty aplikacji. Zwykle wyświetlane automatycznie przez `COleMessageFilter` implementacji.  
-  
-## <a name="see-also"></a>Zobacz też  
- [Przegląd klas](../mfc/class-library-overview.md)
+
+W ramach tych zajęć obsłużyć typowe zadania związane z OLE poprzez implementację szereg standardowych okien dialogowych OLE. Zapewniają także spójny interfejs użytkownika dla funkcji OLE.
+
+[COleDialog](../mfc/reference/coledialog-class.md)<br/>
+Używane przez architekturę, aby zawierała najczęściej występujące implementacje dla wszystkich okien dialogowych OLE. Wszystkie klasy okien dialogowych w kategorii interfejsu użytkownika są uzyskiwane z tej klasy bazowej. `COleDialog` Nie można używać bezpośrednio.
+
+[COleInsertDialog](../mfc/reference/coleinsertdialog-class.md)<br/>
+Wyświetla okno dialogowe Wstawianie obiektu standardowy interfejs użytkownika, wstawianie nowych OLE połączone lub osadzone elementy.
+
+[COlePasteSpecialDialog](../mfc/reference/colepastespecialdialog-class.md)<br/>
+Wyświetla okno dialogowe Wklej specjalne standardowy interfejs użytkownika wykonywania polecenia Edytuj Wklej specjalne.
+
+[COleLinksDialog](../mfc/reference/colelinksdialog-class.md)<br/>
+Wyświetla okno dialogowe Edytuj linki standardowy interfejs użytkownika do modyfikowania informacji na temat połączone elementy.
+
+[COleChangeIconDialog](../mfc/reference/colechangeicondialog-class.md)<br/>
+Wyświetla okno dialogowe Zmienianie ikony, standardowy interfejs użytkownika dla zmiany, które osadzone ikon skojarzonych z OLE lub połączony element.
+
+[COleConvertDialog](../mfc/reference/coleconvertdialog-class.md)<br/>
+Wyświetla okno dialogowe Konwertowanie standardowy interfejs użytkownika do konwertowania jeden typ elementów OLE.
+
+[COlePropertiesDialog](../mfc/reference/colepropertiesdialog-class.md)<br/>
+Hermetyzuje wspólne okno dialogowe właściwości OLE Windows. Wspólne okna dialogowe OLE właściwości zapewniają prosty sposób wyświetlania i modyfikacji właściwości elementu dokumentu OLE w sposób zgodny ze standardami Windows.
+
+[COleUpdateDialog](../mfc/reference/coleupdatedialog-class.md)<br/>
+Wyświetla okno dialogowe aktualizacji standardowy interfejs użytkownika aktualizacji wszystkie linki w dokumencie. Okno dialogowe zawiera wskaźnik postępu, aby wskazać, jak blisko procedura aktualizacji zostanie ukończone.
+
+[COleChangeSourceDialog](../mfc/reference/colechangesourcedialog-class.md)<br/>
+Wyświetla okno dialogowe Zmień źródło standardowy interfejs użytkownika do zmiany przeznaczenia lub źródłem linku.
+
+[COleBusyDialog](../mfc/reference/colebusydialog-class.md)<br/>
+Wyświetla oknach dialogowych serwer jest zajęty i serwer nie odpowiada, standardowy interfejs użytkownika do obsługi wywołań zajęty aplikacji. Zwykle jest wyświetlany automatycznie przez `COleMessageFilter` implementacji.
+
+## <a name="see-also"></a>Zobacz też
+
+[Klasa — Przegląd](../mfc/class-library-overview.md)
 

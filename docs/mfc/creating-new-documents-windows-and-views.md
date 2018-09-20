@@ -1,5 +1,5 @@
 ---
-title: Tworzenie nowych dokumentów, okien i widoków | Dokumentacja firmy Microsoft
+title: Tworzenie nowych dokumentów, Windows i widoków | Dokumentacja firmy Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -34,37 +34,37 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3c0abc53e1a24d822605c9e5bfd7ab8276b32f82
-ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
+ms.openlocfilehash: 0b4ccddbed0d347468331218614cad70cfd49a62
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/25/2018
-ms.locfileid: "36931209"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46427241"
 ---
 # <a name="creating-new-documents-windows-and-views"></a>Tworzenie nowych dokumentów, okien i widoków
-Poniższe rysunki nadaj Omówienie procesu tworzenia dokumentów, widoków i okien ramowych. Inne artykuły, które skupić się na obiekty uczestniczących udostępniania dodatkowych szczegółów.  
-  
- Po zakończeniu tego procesu współpracujących obiektów istnieje i Zapisz wskaźniki do siebie. Poniższe rysunki pokazują sekwencji, w których obiekty są tworzone. Możesz wykonać sekwencję rysunek rysunku.  
-  
- ![Sekwencja tworzenia dokumentu](../mfc/media/vc387l1.gif "vc387l1")  
-Sekwencja przy tworzeniu dokumentu  
-  
- ![Sekwencja tworzenia okna ramowe](../mfc/media/vc387l2.png "vc387l2")  
-Sekwencja tworzenia okna ramowe  
-  
- ![Sekwencja tworzenia widoku](../mfc/media/vc387l3.gif "vc387l3")  
-Sekwencja tworzenia widoku  
-  
- Informacje, jak platformę inicjuje nowy dokument, widok i okien ramowych obiektów, zobacz klasy [CDocument](../mfc/reference/cdocument-class.md), [CView](../mfc/reference/cview-class.md), [cframewnd —](../mfc/reference/cframewnd-class.md), [Cmdiframewnd —](../mfc/reference/cmdiframewnd-class.md), i [CMDIChildWnd](../mfc/reference/cmdichildwnd-class.md) w odwołaniu biblioteki MFC. Zobacz też [22 Uwaga techniczna](../mfc/tn022-standard-commands-implementation.md), którym omówiono procesów tworzenia i inicjowania dalsze jego dyskusji w ramach standardowych poleceń dla **nowy** i **Otwórz** elementów na **pliku** menu.  
-  
-##  <a name="_core_initializing_your_own_additions_to_these_classes"></a> Inicjowanie własne dodatki do tych klas  
- Poprzednimi również sugerować punktów, w których można zastąpić funkcji elementów członkowskich do zainicjowania obiekty Twojej aplikacji. Zastępowanie `OnInitialUpdate` w widoku klasy jest najlepszym miejscem, aby zainicjować widoku. `OnInitialUpdate` Wywołania występuje natychmiast po utworzeniu okno ramowe i widok do ramki okna jest dołączony do jego dokumentu. Na przykład, jeśli widok jest widokiem przewijania (pochodną `CScrollView` zamiast `CView`), należy ustawić rozmiar widoku, zależnie od rozmiaru dokumentu w Twojej `OnInitialUpdate` zastąpienia. (Ten proces jest opisany w opisie klasy [CScrollView](../mfc/reference/cscrollview-class.md).) Można zastąpić `CDocument` funkcje Członkowskie `OnNewDocument` i `OnOpenDocument` zapewnienie specyficzne dla aplikacji Inicjowanie dokumentu. Zazwyczaj konieczne jest przesłonięcie zarówno od dokumentu można utworzyć na dwa sposoby.  
-  
- W większości przypadków zastąpienia powinny wywoływać wersja klasy podstawowej. Aby uzyskać więcej informacji, zobacz funkcji o nazwie elementu członkowskiego klasy [CDocument](../mfc/reference/cdocument-class.md), [CView](../mfc/reference/cview-class.md), [cframewnd —](../mfc/reference/cframewnd-class.md), i [CWinApp](../mfc/reference/cwinapp-class.md) w MFC Odwołanie do biblioteki.  
-  
-## <a name="see-also"></a>Zobacz też  
- [Szablony dokumentów i proces tworzenia dokumentu/widoku](../mfc/document-templates-and-the-document-view-creation-process.md)   
- [Tworzenie szablonu dokumentu](../mfc/document-template-creation.md)   
- [Tworzenie dokumentu/widoku](../mfc/document-view-creation.md)   
- [Relacje między obiektami MFC](../mfc/relationships-among-mfc-objects.md)
+
+Następujące dane liczbowe zapewniają Przegląd procesu tworzenia dokumentów, widoków i okien ramowych. Inne artykuły, które koncentrują się na obiektach uczestniczących w programie dostarczyć więcej szczegółów.
+
+Po zakończeniu tego procesu współpracujących obiektów istnieje i Zapisz wskaźniki do siebie nawzajem. Poniższe rysunki pokazują kolejność, w którym tworzony jest obiekt. Rysunek rysunek można wykonać sekwencji.
+
+![Sekwencja tworzenia dokumentu](../mfc/media/vc387l1.gif "vc387l1") sekwencji przy tworzeniu dokumentu
+
+![Sekwencja tworzenia okna ramki](../mfc/media/vc387l2.png "vc387l2") Sekwencja tworzenia okna ramki
+
+![Kolejność potrzeby tworzenia widoku](../mfc/media/vc387l3.gif "vc387l3") sekwencję w tworzeniu widoku
+
+Informacje, jak struktura inicjuje nowy dokument, widok i okien ramowych obiektów, zobacz klasy [CDocument](../mfc/reference/cdocument-class.md), [CView](../mfc/reference/cview-class.md), [CFrameWnd](../mfc/reference/cframewnd-class.md), [CMDIFrameWnd](../mfc/reference/cmdiframewnd-class.md), i [CMDIChildWnd](../mfc/reference/cmdichildwnd-class.md) w odwołanie do biblioteki MFC. Zobacz też [techniczne 22 Uwaga](../mfc/tn022-standard-commands-implementation.md), co wyjaśnia procesów tworzenia i inicjowania bardziej szczegółowo w obszarze dyskusji w ramach standardowych poleceń dla **New** i **Otwórz** elementów na **pliku** menu.
+
+##  <a name="_core_initializing_your_own_additions_to_these_classes"></a> Inicjowanie własne dodatki do tych klas
+
+Poprzednimi również sugerować punkty, w których można zastąpić, funkcje składowe w celu zainicjowania obiektów Twojej aplikacji. Zastępowanie `OnInitialUpdate` w widoku klasy to najlepsze miejsce do zainicjowania tego widoku. `OnInitialUpdate` Wywołanie występuje natychmiast po utworzeniu ramki okna i widok w oknie ramki jest dołączony do swoich dokumentów. Na przykład, jeśli widok jest widokiem przewijania (pochodną `CScrollView` zamiast `CView`), należy ustawić rozmiar widoku, w zależności od rozmiaru dokumentu w swojej `OnInitialUpdate` zastąpienia. (Ten proces jest opisany w opisie klasy [CScrollView](../mfc/reference/cscrollview-class.md).) Można zastąpić `CDocument` elementów członkowskich `OnNewDocument` i `OnOpenDocument` zapewnienie specyficzne dla aplikacji Inicjowanie dokumentu. Zazwyczaj konieczne jest przesłonięcie zarówno od dokumentu, można utworzyć na dwa sposoby.
+
+W większości przypadków przesłonięcia, należy wywołać wersję klasy podstawowej. Aby uzyskać więcej informacji, zapoznaj się z funkcjami nazwanego elementu członkowskiego klasy [CDocument](../mfc/reference/cdocument-class.md), [CView](../mfc/reference/cview-class.md), [CFrameWnd](../mfc/reference/cframewnd-class.md), i [CWinApp](../mfc/reference/cwinapp-class.md) w MFC Odwołanie do biblioteki.
+
+## <a name="see-also"></a>Zobacz też
+
+[Szablony dokumentów i proces tworzenia dokumentu/widoku](../mfc/document-templates-and-the-document-view-creation-process.md)<br/>
+[Tworzenie szablonu dokumentu](../mfc/document-template-creation.md)<br/>
+[Tworzenie dokumentu/widoku](../mfc/document-view-creation.md)<br/>
+[Relacje między obiektami MFC](../mfc/relationships-among-mfc-objects.md)
 

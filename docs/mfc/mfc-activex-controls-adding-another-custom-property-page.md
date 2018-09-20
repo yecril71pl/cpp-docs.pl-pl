@@ -1,5 +1,5 @@
 ---
-title: 'Formanty ActiveX MFC: Dodawanie dodatkowej niestandardowej strony właściwości | Dokumentacja firmy Microsoft'
+title: 'Kontrolki ActiveX MFC: Dodawanie dodatkowej niestandardowej strony właściwości | Dokumentacja firmy Microsoft'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,105 +17,107 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c9c3d9f4744ae01a7e251387bd342b77292d1c0d
-ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
+ms.openlocfilehash: ce81436781a92c8d2c9156e1d1c02513c3816dc4
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/25/2018
-ms.locfileid: "36931612"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46440059"
 ---
 # <a name="mfc-activex-controls-adding-another-custom-property-page"></a>Kontrolki ActiveX MFC: dodawanie dodatkowej niestandardowej strony właściwości
-Czasami formantu ActiveX ma więcej właściwości, niż można przypuszczać zmieścić na jednej stronie właściwości. W takim przypadku można dodać strony właściwości do formantu ActiveX, aby wyświetlić te właściwości.  
-  
- W tym artykule omówiono Dodawanie nowych stron właściwości do formantu ActiveX, który ma już co najmniej jedną stronę właściwości. Aby uzyskać więcej informacji na temat dodawania właściwości standardowych stron (czcionki, obraz lub kolor), zobacz artykuł [kontrolki ActiveX MFC: przy użyciu strony właściwości zasobów](../mfc/mfc-activex-controls-using-stock-property-pages.md).  
-  
- Poniższe procedury użyj przykładowych framework formantu ActiveX utworzone przez kreatora formantu ActiveX. W związku z tym nazwy klas i identyfikatory różnią się w tym przykładzie.  
-  
- Aby uzyskać więcej informacji na używanie stron właściwości formantu ActiveX zobacz następujące artykuły:  
-  
--   [Kontrolki ActiveX MFC: strony właściwości](../mfc/mfc-activex-controls-property-pages.md)  
-  
--   [Kontrolki ActiveX MFC: używanie stron właściwości standardowych](../mfc/mfc-activex-controls-using-stock-property-pages.md)  
-  
+
+Od czasu do czasu formant ActiveX ma więcej właściwości, niż jest mieści się na jednej stronie właściwości. W takim przypadku można dodać strony właściwości do kontrolki ActiveX, aby wyświetlić te właściwości.
+
+W tym artykule omówiono, dodając nowe właściwości do kontrolki ActiveX, który ma już co najmniej jedną stronę właściwości. Aby uzyskać więcej informacji na temat dodawania właściwości podstawowych stron (czcionkę, obrazu lub kolor), zobacz artykuł [kontrolki ActiveX MFC: przy użyciu strony właściwości zasobów](../mfc/mfc-activex-controls-using-stock-property-pages.md).
+
+W poniższych procedurach użyto przykładowej framework formantu ActiveX utworzone przez kreatora kontrolek ActiveX. W związku z tym nazwy klas i identyfikatory są unikatowe dla tego przykładu.
+
+Aby uzyskać więcej informacji na temat używania stron właściwości w kontrolce ActiveX zobacz następujące artykuły:
+
+- [Kontrolki ActiveX MFC: strony właściwości](../mfc/mfc-activex-controls-property-pages.md)
+
+- [Kontrolki ActiveX MFC: używanie stron właściwości standardowych](../mfc/mfc-activex-controls-using-stock-property-pages.md)
+
     > [!NOTE]
-    >  Zalecane jest tej właściwości nowej strony odpowiednia rozmiar standardowego dla strony właściwości formantu ActiveX. Właściwości podstawowych obrazu i kolor strony miary 250 x 62 jednostki okna dialogowego (DLU). Strona właściwości standardowej czcionki jest Dlu 250 x 110. Właściwości domyślnej strony utworzone przez kreatora formantu ActiveX korzysta ze standardu DLU 250 x 62.  
-  
-### <a name="to-insert-a-new-property-page-template-into-your-project"></a>Aby wstawić nowy szablon strony właściwości do projektu  
-  
-1.  Otwarciu projektu kontroli Otwórz widok zasobów w obszarze roboczym projekt.  
-  
-2.  Kliknij prawym przyciskiem myszy w widoku zasobów, aby otworzyć menu skrótów, a następnie kliknij przycisk **dodawania zasobów**.  
-  
-3.  Rozwiń węzeł **okna dialogowego** , a następnie wybierz węzeł **IDD_OLE_PROPPAGE_SMALL**.  
-  
-4.  Kliknij przycisk **nowy** można dodać zasobu do projektu.  
-  
-5.  Wybierz nowy szablon strony właściwości, aby odświeżyć okno właściwości.  
-  
-6.  Wprowadź nową wartość dla **identyfikator** właściwości. W tym przykładzie użyto **IDD_PROPPAGE_NEWPAGE**.  
-  
-7.  Kliknij przycisk **zapisać** na pasku narzędzi.  
-  
-### <a name="to-associate-the-new-template-with-a-class"></a>Aby skojarzyć nowego szablonu z klasy  
-  
-1.  Otwórz widok klas.  
-  
-2.  Kliknij prawym przyciskiem myszy w widoku klas, aby otworzyć menu skrótów.  
-  
-3.  W menu skrótów kliknij **Dodaj** , a następnie kliknij przycisk **Dodaj klasę**.  
-  
-     Spowoduje to otwarcie [Dodaj klasę](../ide/add-class-dialog-box.md) okno dialogowe.  
-  
-4.  Kliknij dwukrotnie **klasy MFC** szablonu.  
-  
-5.  W **Nazwa klasy** polu [Kreator klas MFC](../mfc/reference/mfc-add-class-wizard.md), wpisz nazwę dla nowej klasy okna dialogowego. (W tym przykładzie `CAddtlPropPage`.)  
-  
-6.  Aby zmienić nazwy pliku, kliknij przycisk **zmienić**. Wpisz nazwy plików implementacji i nagłówka, lub zaakceptować domyślne nazwy.  
-  
-7.  W **klasa podstawowa** wybierz opcję `COlePropertyPage`.  
-  
-8.  W **identyfikator okna dialogowego** wybierz opcję **IDD_PROPPAGE_NEWPAGE**.  
-  
-9. Kliknij przycisk **Zakończ** Aby utworzyć klasę.  
-  
- Aby umożliwić użytkownikom kontroli dostępu do tej nowej strony właściwości, należy wprowadzić następujące zmiany do formantu właściwości strony identyfikatorów makro sekcji (znajdujący się w pliku implementacji):  
-  
- [!code-cpp[NVC_MFC_AxUI#32](../mfc/codesnippet/cpp/mfc-activex-controls-adding-another-custom-property-page_1.cpp)]  
-  
- Należy pamiętać, że należy zwiększyć drugi parametr begin_proppageids — makro (liczba stron właściwości) z zakresu od 1 do 2.  
-  
- Musisz także zmodyfikować plik implementacji formantu (. Dołącz nagłówek pliku CPP) (. H) pliku nowej klasy strony właściwości.  
-  
- Następny krok polega na utworzenie dwóch nowych zasobów ciągu, które zapewnią nazwę typu i podpis nowej strony właściwości.  
-  
-#### <a name="to-add-new-string-resources-to-a-property-page"></a>Aby dodać nowe zasoby ciągu do strony właściwości  
-  
-1.  Otwórz projekt kontroli Otwórz widok zasobów.  
-  
-2.  Kliknij dwukrotnie **tabeli ciągów** folder, a następnie dwukrotnie kliknij istniejący ciąg tabeli zasobów, do której chcesz dodać ciąg.  
-  
-     Spowoduje to otwarcie tabeli ciągów w oknie.  
-  
-3.  Wybierz pusty wiersz na końcu tabeli ciągów i wpisz tekst lub podpis ciągu: na przykład "dodatkowe strony właściwości."  
-  
-     Spowoduje to otwarcie **właściwości ciągu** stronie **podpis** i **identyfikator** pola. **Podpis** pole zawiera ciąg został wpisany.  
-  
-4.  W **identyfikator** wybierz lub wpisz identyfikator ciągu. Po zakończeniu naciśnij klawisz Enter.  
-  
-     W tym przykładzie użyto **IDS_SAMPLE_ADDPAGE** dla typu nazwa nowej strony właściwości.  
-  
-5.  Powtórz kroki 3 i 4 przy użyciu **IDS_SAMPLE_ADDPPG_CAPTION** dla Identyfikatora i "Dodatkowe właściwości Page" podpisu.  
-  
-6.  W. Pliku CPP nowej klasy strony właściwości (w tym przykładzie `CAddtlPropPage`) zmodyfikować `CAddtlPropPage::CAddtlPropPageFactory::UpdateRegistry` tak, aby IDS_SAMPLE_ADDPAGE jest przekazywana przez [afxoleregisterpropertypageclass —](../mfc/reference/registering-ole-controls.md#afxoleregisterpropertypageclass), jak w poniższym przykładzie:  
-  
-     [!code-cpp[NVC_MFC_AxUI#33](../mfc/codesnippet/cpp/mfc-activex-controls-adding-another-custom-property-page_2.cpp)]  
-  
-7.  Modyfikowanie konstruktora `CAddtlPropPage` tak, aby IDS_SAMPLE_ADDPPG_CAPTION jest przekazywana do `COlePropertyPage` konstruktora w następujący sposób:  
-  
-     [!code-cpp[NVC_MFC_AxUI#34](../mfc/codesnippet/cpp/mfc-activex-controls-adding-another-custom-property-page_3.cpp)]  
-  
- Po dokonaniu niezbędnych modyfikacji ponownie skompiluj projekt i testować nowe strony właściwości przy użyciu kontenera testu. Zobacz [testowanie właściwości i zdarzeń za pomocą kontenera testu](../mfc/testing-properties-and-events-with-test-container.md) informacji na temat sposobu dostępu kontener testu.  
-  
-## <a name="see-also"></a>Zobacz też  
- [Kontrolki ActiveX MFC](../mfc/mfc-activex-controls.md)
+    >  Zdecydowanie zaleca się tej nowej właściwości, które strony stosować się do rozmiaru standardem dla stron właściwości kontrolki ActiveX. Właściwości podstawowych obrazu i kolor strony miary 250 x 62 jednostki okna dialogowego (DLU). Strona właściwości czcionki standardowej jest Dlu 250 x 110. Strona właściwości domyślne utworzone przez kreatora kontrolek ActiveX używa standardu DLU 250 x 62.
+
+### <a name="to-insert-a-new-property-page-template-into-your-project"></a>Aby wstawić nowy szablon strony właściwości do projektu
+
+1. Za pomocą formantu projektu open Otwórz widok zasobów w obszarze roboczym projektu.
+
+1. Kliknij prawym przyciskiem myszy w widoku zasobu, aby otworzyć menu skrótów, a następnie kliknij przycisk **Dodaj zasób**.
+
+1. Rozwiń **okna dialogowego** , a następnie wybierz węzeł **IDD_OLE_PROPPAGE_SMALL**.
+
+1. Kliknij przycisk **New** można dodać zasobu do projektu.
+
+1. Wybierz nowy szablon strony właściwości, aby odświeżyć okno właściwości.
+
+1. Wprowadź nową wartość dla **identyfikator** właściwości. W tym przykładzie użyto **IDD_PROPPAGE_NEWPAGE**.
+
+1. Kliknij przycisk **Zapisz** na pasku narzędzi.
+
+### <a name="to-associate-the-new-template-with-a-class"></a>Aby skojarzyć nowego szablonu przy użyciu klasy
+
+1. Otwórz widok klas.
+
+1. Kliknij prawym przyciskiem myszy w widoku klas, aby otworzyć menu skrótów.
+
+1. W menu skrótów kliknij **Dodaj** a następnie kliknij przycisk **Dodaj klasę**.
+
+     Spowoduje to otwarcie [Dodaj klasę](../ide/add-class-dialog-box.md) okno dialogowe.
+
+1. Kliknij dwukrotnie **klasy MFC** szablonu.
+
+1. W **Nazwa klasy** pole w [Kreator klas MFC](../mfc/reference/mfc-add-class-wizard.md), wpisz nazwę dla nowej klasy okien dialogowych. (W tym przykładzie `CAddtlPropPage`.)
+
+1. Aby zmienić nazwy pliku, kliknij przycisk **zmienić**. Wpisz nazwy dla Twojego wdrożenia a plikami nagłówka, lub zaakceptować domyślne nazwy.
+
+1. W **klasa bazowa** wybierz opcję `COlePropertyPage`.
+
+1. W **identyfikator okna dialogowego** wybierz opcję **IDD_PROPPAGE_NEWPAGE**.
+
+9. Kliknij przycisk **Zakończ** Aby utworzyć klasę.
+
+Aby umożliwić użytkownikom kontroli dostępu do tej nowej strony właściwości, należy wprowadzić następujące zmiany do formantu właściwości strony identyfikatory — makro sekcji (znajdujący się w pliku implementacji):
+
+[!code-cpp[NVC_MFC_AxUI#32](../mfc/codesnippet/cpp/mfc-activex-controls-adding-another-custom-property-page_1.cpp)]
+
+Należy pamiętać, że należy zwiększyć drugi parametr BEGIN_PROPPAGEIDS — makro (liczba stron właściwości) z zakresu od 1 do 2.
+
+Musisz także zmodyfikować plik implementacji kontroli (. Plik CPP), aby dołączyć nagłówek (. H) plik nowej klasy strony właściwości.
+
+Następny krok polega na utworzenie dwóch nowych zasobów ciągów, które zapewnią nazwę typu i podpis nowe strony właściwości.
+
+#### <a name="to-add-new-string-resources-to-a-property-page"></a>Aby dodać nowe zasoby ciągu do strony właściwości
+
+1. Za pomocą formantu projektu open Otwórz widok zasobów.
+
+1. Kliknij dwukrotnie **tabeli ciągów** folder, a następnie kliknij dwukrotnie istniejących parametrów tabeli zasobów, do której chcesz dodać ciąg.
+
+     Spowoduje to otwarcie tabeli ciągów w oknie.
+
+1. Wybierz pusty wiersz na końcu tabeli ciągów i typu text lub caption ciągu: na przykład "dodatkowe właściwości Page."
+
+     Spowoduje to otwarcie **właściwości ciągu** przedstawiający stronę **podpis** i **identyfikator** pola. **Podpis** pole zawiera ciąg wpisany.
+
+1. W **identyfikator** wybierz lub wpisz identyfikator ciągu. Po zakończeniu naciśnij klawisz Enter.
+
+     W tym przykładzie użyto **IDS_SAMPLE_ADDPAGE** dla nazwy typu nowej strony właściwości.
+
+1. Powtórz kroki 3 i 4 używające funkcji **IDS_SAMPLE_ADDPPG_CAPTION** dla Identyfikatora i "Dodatkowe właściwości Page" podpisu.
+
+1. W. Plik CPP nowej klasy strony właściwości (w tym przykładzie `CAddtlPropPage`) zmodyfikuj `CAddtlPropPage::CAddtlPropPageFactory::UpdateRegistry` tak, aby IDS_SAMPLE_ADDPAGE jest przekazywany przez [afxoleregisterpropertypageclass —](../mfc/reference/registering-ole-controls.md#afxoleregisterpropertypageclass), jak w poniższym przykładzie:
+
+     [!code-cpp[NVC_MFC_AxUI#33](../mfc/codesnippet/cpp/mfc-activex-controls-adding-another-custom-property-page_2.cpp)]
+
+1. Zmodyfikuj konstruktora `CAddtlPropPage` tak, aby IDS_SAMPLE_ADDPPG_CAPTION jest przekazywany do `COlePropertyPage` konstruktora, w następujący sposób:
+
+     [!code-cpp[NVC_MFC_AxUI#34](../mfc/codesnippet/cpp/mfc-activex-controls-adding-another-custom-property-page_3.cpp)]
+
+Po dokonaniu niezbędnych modyfikacji ponownie skompiluj projekt i użyj kontener testu, aby przetestować nową stronę właściwości. Zobacz [testowanie właściwości i zdarzeń za pomocą kontenera testu](../mfc/testing-properties-and-events-with-test-container.md) informacji na temat dostępu do kontenera testu.
+
+## <a name="see-also"></a>Zobacz też
+
+[Kontrolki ActiveX MFC](../mfc/mfc-activex-controls.md)
 

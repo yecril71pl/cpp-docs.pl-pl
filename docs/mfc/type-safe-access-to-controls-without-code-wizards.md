@@ -1,5 +1,5 @@
 ---
-title: Bezpieczny dostęp do formantów bez użycia kreatorów kodu | Dokumentacja firmy Microsoft
+title: Bezpieczny dostęp do kontrolek bez użycia kreatorów kodu | Dokumentacja firmy Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -15,23 +15,25 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: bb861995c16411bb58e3051c5ffc78f75931ae8f
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 2685c946b9ee1c738ee83f9413b7fd955857febb
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33385768"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46438343"
 ---
 # <a name="type-safe-access-to-controls-without-code-wizards"></a>Bezpieczny dostęp do kontrolek bez użycia kreatorów kodu
-Pierwszym sposobem tworzenia bezpieczny dostęp do formantów używa wbudowanej funkcji członkowskich można rzutować typu zwracanego klasy `CWnd`w `GetDlgItem` funkcji członkowskiej do odpowiedniego typu formantu C++, jak w poniższym przykładzie:  
-  
- [!code-cpp[NVC_MFCControlLadenDialog#50](../mfc/codesnippet/cpp/type-safe-access-to-controls-without-code-wizards_1.cpp)]  
-  
- Ta funkcja członkowska można użyć do kontroli dostępu w sposób bezpieczny kod podobny do następującego:  
-  
- [!code-cpp[NVC_MFCControlLadenDialog#51](../mfc/codesnippet/cpp/type-safe-access-to-controls-without-code-wizards_2.cpp)]  
-  
-## <a name="see-also"></a>Zobacz też  
- [Bezpieczny dostęp do formantów w oknie dialogowym](../mfc/type-safe-access-to-controls-in-a-dialog-box.md)   
- [Bezpieczny dostęp do kontrolek z użyciem kreatorów kodu](../mfc/type-safe-access-to-controls-with-code-wizards.md)
+
+Pierwszym sposobem tworzenia bezpieczny dostęp do formantów używa wbudowanej funkcji elementu członkowskiego można rzutować zwracany typ klasy `CWnd`firmy `GetDlgItem` funkcja elementu członkowskiego do odpowiedniego typu formantu języka C++, jak w poniższym przykładzie:
+
+[!code-cpp[NVC_MFCControlLadenDialog#50](../mfc/codesnippet/cpp/type-safe-access-to-controls-without-code-wizards_1.cpp)]
+
+Ta funkcja elementu członkowskiego umożliwia następnie uzyskać dostęp do formantu w sposób bezpieczny kod podobny do następującego:
+
+[!code-cpp[NVC_MFCControlLadenDialog#51](../mfc/codesnippet/cpp/type-safe-access-to-controls-without-code-wizards_2.cpp)]
+
+## <a name="see-also"></a>Zobacz też
+
+[Bezpieczny dostęp do kontrolek w oknie dialogowym](../mfc/type-safe-access-to-controls-in-a-dialog-box.md)<br/>
+[Bezpieczny dostęp do kontrolek z użyciem kreatorów kodu](../mfc/type-safe-access-to-controls-with-code-wizards.md)
 

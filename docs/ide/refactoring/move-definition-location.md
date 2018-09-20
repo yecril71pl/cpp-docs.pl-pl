@@ -1,5 +1,5 @@
 ---
-title: Lokalizacja przenoszenia definicji | Dokumentacja firmy Microsoft
+title: Przenieś lokalizację definicji | Dokumentacja firmy Microsoft
 ms.custom: ''
 ms.date: 11/16/2016
 ms.technology:
@@ -10,32 +10,32 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 44211105429e33c136999a7877ac6ee42af29f17
-ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
+ms.openlocfilehash: 5058e0b3bab1fb5fb5e8d52b55e3fa7c37fd8a4e
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "33327843"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46430064"
 ---
-# <a name="move-definition-location"></a>Lokalizacja przenoszenia definicji
-**Co:** pozwala natychmiast przesunąć definicji funkcji do odpowiedniego pliku nagłówka.
+# <a name="move-definition-location"></a>Przenieś lokalizację definicji
+**Co:** pozwala natychmiast przenoszenie definicji funkcji do odpowiedniego pliku nagłówka.
 
-**Kiedy:** ma funkcję, która ma zostać przeniesiona do pliku nagłówka.  
+**Kiedy:** ma funkcję, która ma zostać przeniesiony do pliku nagłówka.
 
-**Dlaczego:** można ręcznie przenieść funkcji, ale ta funkcja zostanie przesunięty w jego automatycznie, tworzenie pliku nagłówka, jeśli jest to wymagane.
+**Dlaczego:** można ręcznie przenieść tę funkcję, ale ta funkcja przeniesie go automatycznie, tworzenie pliku nagłówka, jeśli jest to wymagane.
 
 **Jak:**
 
-1. Umieść kursor tekstu lub mysz za pośrednictwem funkcji, dla którego ma zostać przeniesiona.
+1. Umieść kursor tekstu lub myszy za pośrednictwem funkcji, dla którego chcesz przenieść.
 
    ![Wyróżniony kod](images/movedefinition_highlight.png)
 
 1. Następnie wykonaj jedną z następujących czynności:
    * **Keyboard**
-     * Naciśnij klawisz **Ctrl +.** Aby wyzwalacz **szybkie akcje i Refaktoryzacje** menu i wybierz **lokalizacja przenoszenia definicji** z menu kontekstowego.
+     * Naciśnij klawisz **Ctrl +.** wyzwalacz **szybkie akcje i Refaktoryzacje** menu, a następnie wybierz **Przenieś lokalizację definicji** z menu kontekstowego.
    * **Myszy**
-     * Kliknij prawym przyciskiem myszy i wybierz **szybkie akcje i Refaktoryzacje** menu i wybierz **lokalizacja przenoszenia definicji** z menu kontekstowego.
+     * Kliknij prawym przyciskiem myszy i wybierz **szybkie akcje i Refaktoryzacje** menu, a następnie wybierz **Przenieś lokalizację definicji** z menu kontekstowego.
 
-1. Funkcja zostaną przeniesione do odpowiedniego pliku nagłówka zostaną wyświetlone w menu podręczne okno podglądu.  Jeśli plik nagłówka nie istnieje, jej zostanie również utworzona i umieszczane w projekcie.
+1. Funkcja zostanie przeniesiony do odpowiedniego pliku nagłówka zostanie wyświetlony w okienku wyskakującym w wersji zapoznawczej.  Jeśli plik nagłówkowy nie istnieje, zostanie również być utworzona i umieszczone w projekcie.
 
-   ![Tworzenia deklaracji / definicji wyniku](images/movedefinition_result.png)
+   ![Utwórz deklarację / definicję wyniku](images/movedefinition_result.png)

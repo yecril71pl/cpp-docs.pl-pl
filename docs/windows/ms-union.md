@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 4251ee7d373e7c2d3e35f65f6b83b3af28d7eecc
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 0b5104d42fd468bcb8d6324aab427d08d894884d
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43209201"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46437726"
 ---
 # <a name="msunion"></a>ms_union
 
@@ -58,7 +58,7 @@ __interface IFireTabCtrl {
       double dMcCovey;
    [default]
       int x;
- };
+};
 
 [public] typedef _WILLIE_UNION_TYPE WILLIE_UNION_TYPE;
 
@@ -80,5 +80,5 @@ Aby uzyskać więcej informacji, zobacz [konteksty atrybutu](../windows/attribut
 
 ## <a name="see-also"></a>Zobacz też
 
-[Atrybuty IDL](../windows/idl-attributes.md)  
+[Atrybuty IDL](../windows/idl-attributes.md)<br/>
 [Atrybuty Typedef, Enum, Union oraz Struct](../windows/typedef-enum-union-and-struct-attributes.md)  
