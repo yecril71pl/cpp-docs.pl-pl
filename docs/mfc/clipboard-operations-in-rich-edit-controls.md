@@ -20,25 +20,27 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: fb207b31da27041ee777277e7e76502789402ab7
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: f978880344113c71f8f22dd3c49e2ec35024a729
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43216233"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46405715"
 ---
 # <a name="clipboard-operations-in-rich-edit-controls"></a>Operacje schowka w formantach edycji wzbogaconej
-Aplikację można wkleić zawartość Schowka do kontrolki edycji wzbogaconej ([CRichEditCtrl](../mfc/reference/cricheditctrl-class.md)) przy użyciu najlepszych dostępnych format Schowka lub w określonym formacie Schowka. Można również określić, czy kontrolki edycji wzbogaconej jest w stanie wklejanie format Schowka.  
-  
- Można skopiować lub wyciąć zawartość bieżącego zaznaczenia przy użyciu [kopiowania](../mfc/reference/cricheditctrl-class.md#copy) lub [Wytnij](../mfc/reference/cricheditctrl-class.md#cut) funkcja elementu członkowskiego. Podobnie, Wklej zawartość Schowka w formantach edycji wzbogaconej przy użyciu [Wklej](../mfc/reference/cricheditctrl-class.md#paste) funkcja elementu członkowskiego. Kontrolka wkleja pierwszy dostępny formacie, który rozpoznaje, który prawdopodobnie jest format najbardziej opisowy.  
-  
- Aby wkleić w określonym formacie Schowka, możesz użyć [PasteSpecial](../mfc/reference/cricheditctrl-class.md#pastespecial) funkcja elementu członkowskiego. Ta funkcja jest przydatne w przypadku aplikacji za pomocą polecenia Wklej specjalne, który umożliwia użytkownikowi wybranie format Schowka. Możesz użyć [CanPaste](../mfc/reference/cricheditctrl-class.md#canpaste) funkcja elementu członkowskiego, aby ustalić, czy dany format jest rozpoznawany przez formant.  
-  
- Można również użyć `CanPaste` do określenia, czy wszystkie dostępne format Schowka jest rozpoznawany przez kontrolki edycji wzbogaconej. Funkcja ta jest przydatna w `OnInitMenuPopup` programu obsługi. Aplikacja może włączyć lub szary polecenia Wklej w zależności od tego, czy kontrolka można wkleić dostępnych formatów.  
-  
- Bogatej edycji kontrolki rejestru dwa formaty Schowka: format tekstu sformatowanego i format nazywany RichEdit tekstu i obiektów. Aplikację można zarejestrować te formaty za pomocą [RegisterClipboardFormat](/windows/desktop/api/winuser/nf-winuser-registerclipboardformata) funkcji, określając **CF_RTF** i **CF_RETEXTOBJ** wartości.  
-  
-## <a name="see-also"></a>Zobacz też  
- [Korzystanie z CRichEditCtrl](../mfc/using-cricheditctrl.md)   
- [Kontrolki](../mfc/controls-mfc.md)
+
+Aplikację można wkleić zawartość Schowka do kontrolki edycji wzbogaconej ([CRichEditCtrl](../mfc/reference/cricheditctrl-class.md)) przy użyciu najlepszych dostępnych format Schowka lub w określonym formacie Schowka. Można również określić, czy kontrolki edycji wzbogaconej jest w stanie wklejanie format Schowka.
+
+Można skopiować lub wyciąć zawartość bieżącego zaznaczenia przy użyciu [kopiowania](../mfc/reference/cricheditctrl-class.md#copy) lub [Wytnij](../mfc/reference/cricheditctrl-class.md#cut) funkcja elementu członkowskiego. Podobnie, Wklej zawartość Schowka w formantach edycji wzbogaconej przy użyciu [Wklej](../mfc/reference/cricheditctrl-class.md#paste) funkcja elementu członkowskiego. Kontrolka wkleja pierwszy dostępny formacie, który rozpoznaje, który prawdopodobnie jest format najbardziej opisowy.
+
+Aby wkleić w określonym formacie Schowka, możesz użyć [PasteSpecial](../mfc/reference/cricheditctrl-class.md#pastespecial) funkcja elementu członkowskiego. Ta funkcja jest przydatne w przypadku aplikacji za pomocą polecenia Wklej specjalne, który umożliwia użytkownikowi wybranie format Schowka. Możesz użyć [CanPaste](../mfc/reference/cricheditctrl-class.md#canpaste) funkcja elementu członkowskiego, aby ustalić, czy dany format jest rozpoznawany przez formant.
+
+Można również użyć `CanPaste` do określenia, czy wszystkie dostępne format Schowka jest rozpoznawany przez kontrolki edycji wzbogaconej. Funkcja ta jest przydatna w `OnInitMenuPopup` programu obsługi. Aplikacja może włączyć lub szary polecenia Wklej w zależności od tego, czy kontrolka można wkleić dostępnych formatów.
+
+Bogatej edycji kontrolki rejestru dwa formaty Schowka: format tekstu sformatowanego i format nazywany RichEdit tekstu i obiektów. Aplikację można zarejestrować te formaty za pomocą [RegisterClipboardFormat](/windows/desktop/api/winuser/nf-winuser-registerclipboardformata) funkcji, określając **CF_RTF** i **CF_RETEXTOBJ** wartości.
+
+## <a name="see-also"></a>Zobacz też
+
+[Korzystanie z CRichEditCtrl](../mfc/using-cricheditctrl.md)<br/>
+[Kontrolki](../mfc/controls-mfc.md)
 

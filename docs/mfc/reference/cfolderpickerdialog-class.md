@@ -18,85 +18,92 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ded586e6d8ad5252d73e0972424915d174b8b1f3
-ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
+ms.openlocfilehash: d80839fca18d62c5fa9a9432296777c546268c5b
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/26/2018
-ms.locfileid: "36956530"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46411434"
 ---
 # <a name="cfolderpickerdialog-class"></a>Klasa CFolderPickerDialog
-Klasa CFolderPickerDialog implementuje CFileDialog w folderze Tryb selektora.  
-  
-## <a name="syntax"></a>Składnia  
-  
-```  
-class CFolderPickerDialog : public CFileDialog;  
-```  
-  
-## <a name="members"></a>Elementy członkowskie  
-  
-### <a name="public-constructors"></a>Konstruktory publiczne  
-  
-|Nazwa|Opis|  
-|----------|-----------------|  
-|[CFolderPickerDialog:: ~ CFolderPickerDialog](#cfolderpickerdialog__~cfolderpickerdialog)|Destruktor.|  
-|[CFolderPickerDialog::CFolderPickerDialog](#cfolderpickerdialog)|Konstruktor.|  
-  
-## <a name="remarks"></a>Uwagi  
-  
-## <a name="inheritance-hierarchy"></a>Hierarchia dziedziczenia  
- [CObject](../../mfc/reference/cobject-class.md)  
-  
- [CCmdTarget](../../mfc/reference/ccmdtarget-class.md)  
-  
- [CWnd](../../mfc/reference/cwnd-class.md)  
-  
- [CDialog](../../mfc/reference/cdialog-class.md)  
-  
- [CCommonDialog](../../mfc/reference/ccommondialog-class.md)  
-  
- [CFileDialog](../../mfc/reference/cfiledialog-class.md)  
-  
- `CFolderPickerDialog`  
-  
-## <a name="requirements"></a>Wymagania  
- **Nagłówek:** afxdlgs.h  
-  
-##  <a name="cfolderpickerdialog"></a>  CFolderPickerDialog::CFolderPickerDialog  
- Konstruktor.  
-  
-```  
+
+Klasa CFolderPickerDialog cfiledialog w folderze trybu selektora.
+
+## <a name="syntax"></a>Składnia
+
+```
+class CFolderPickerDialog : public CFileDialog;
+```
+
+## <a name="members"></a>Elementy członkowskie
+
+### <a name="public-constructors"></a>Konstruktory publiczne
+
+|Nazwa|Opis|
+|----------|-----------------|
+|[CFolderPickerDialog:: ~ CFolderPickerDialog](#cfolderpickerdialog__~cfolderpickerdialog)|Destruktor.|
+|[CFolderPickerDialog::CFolderPickerDialog](#cfolderpickerdialog)|Konstruktor.|
+
+## <a name="remarks"></a>Uwagi
+
+## <a name="inheritance-hierarchy"></a>Hierarchia dziedziczenia
+
+[CObject](../../mfc/reference/cobject-class.md)
+
+[CCmdTarget](../../mfc/reference/ccmdtarget-class.md)
+
+[CWnd](../../mfc/reference/cwnd-class.md)
+
+[CDialog](../../mfc/reference/cdialog-class.md)
+
+[CCommonDialog](../../mfc/reference/ccommondialog-class.md)
+
+[CFileDialog](../../mfc/reference/cfiledialog-class.md)
+
+`CFolderPickerDialog`
+
+## <a name="requirements"></a>Wymagania
+
+**Nagłówek:** afxdlgs.h
+
+##  <a name="cfolderpickerdialog"></a>  CFolderPickerDialog::CFolderPickerDialog
+
+Konstruktor.
+
+```
 explicit CFolderPickerDialog(
-    LPCTSTR lpszFolder = NULL,  
-    DWORD dwFlags = 0,  
-    CWnd* pParentWnd = NULL,  
+    LPCTSTR lpszFolder = NULL,
+    DWORD dwFlags = 0,
+    CWnd* pParentWnd = NULL,
     DWORD dwSize = 0);
-```  
-  
-### <a name="parameters"></a>Parametry  
- *lpszFolder*  
- Folder początkowy.  
-  
- *wartość elementu dwFlags*  
- Połączenie z jedną lub więcej flag, które pozwalają dostosować okna dialogowego.  
-  
- *pParentWnd*  
- Wskaźnik do okna nadrzędnego lub właściciela obiektu okno dialogowe.  
-  
- *dwSize*  
- Rozmiar struktury OPENFILENAME.  
-  
-### <a name="remarks"></a>Uwagi  
-  
-##  <a name="_dtorcfolderpickerdialog"></a>  CFolderPickerDialog:: ~ CFolderPickerDialog  
- Destruktor.  
-  
-```  
+```
+
+### <a name="parameters"></a>Parametry
+
+*lpszFolder*<br/>
+Folder początkowy.
+
+*Flagidw*<br/>
+Połączenie jednego lub więcej flagi, które umożliwiają dostosowanie okno dialogowe.
+
+*pParentWnd*<br/>
+Wskaźnik do okna nadrzędnego lub właściciel obiektu okno dialogowe.
+
+*niezerowego*<br/>
+Rozmiar LPSTRFILE struktury.
+
+### <a name="remarks"></a>Uwagi
+
+##  <a name="_dtorcfolderpickerdialog"></a>  CFolderPickerDialog:: ~ CFolderPickerDialog
+
+Destruktor.
+
+```
 virtual ~CFolderPickerDialog();
-```  
-  
-### <a name="remarks"></a>Uwagi  
-  
-## <a name="see-also"></a>Zobacz też  
- [Klasy](../../mfc/reference/mfc-classes.md)
+```
+
+### <a name="remarks"></a>Uwagi
+
+## <a name="see-also"></a>Zobacz też
+
+[Klasy](../../mfc/reference/mfc-classes.md)

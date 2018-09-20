@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 0e87ea3b0e44732d4271385073c48fd92e1aa114
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: 995594ee48e6ca408e88d9ab14968d88b536d309
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42608930"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46403519"
 ---
 # <a name="modulegetactivationfactory-method"></a>Module::GetActivationFactory — Metoda
 
@@ -40,13 +40,13 @@ WRL_NOTHROW HRESULT GetActivationFactory(
 
 ### <a name="parameters"></a>Parametry
 
-*pActivatibleClassId*  
+*pActivatibleClassId*<br/>
 IID klasy środowiska uruchomieniowego.
 
-*ppIFactory*  
+*ppIFactory*<br/>
 IActivationFactory dla klasy określonego środowiska uruchomieniowego.
 
-*serverName*  
+*serverName*<br/>
 Nazwa podzbiór fabryki klas w bieżącego modułu. Określ nazwę serwera, używane w [ActivatableClassWithFactoryEx](../windows/activatableclass-macros.md) makro, lub określ **nullptr** można pobrać domyślną nazwę serwera.
 
 ## <a name="return-value"></a>Wartość zwracana
@@ -61,5 +61,5 @@ S_OK w przypadku powodzenia; w przeciwnym razie wynik HRESULT zwracane przez get
 
 ## <a name="see-also"></a>Zobacz też
 
-[Klasa modułu](../windows/module-class.md)  
+[Klasa modułu](../windows/module-class.md)<br/>
 [Makra ActivatableClass](../windows/activatableclass-macros.md)

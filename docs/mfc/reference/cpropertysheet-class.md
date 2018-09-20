@@ -62,12 +62,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d2e9e13f7b5838cb13497dd874f7f0cf42f34e98
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 6ec12275291321751c539d095c60fa9dabffa2b7
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43200149"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46445181"
 ---
 # <a name="cpropertysheet-class"></a>Cpropertysheet — klasa
 
@@ -181,7 +181,7 @@ void AddPage(CPropertyPage* pPage);
 
 ### <a name="parameters"></a>Parametry
 
-*Strona_fizyczna*  
+*Strona_fizyczna*<br/>
 Wskazuje stronę, które mają zostać dodane do arkusza właściwości. Nie może mieć wartości NULL.
 
 ### <a name="remarks"></a>Uwagi
@@ -237,25 +237,25 @@ void Construct(
 
 ### <a name="parameters"></a>Parametry
 
-*nIDCaption*  
+*nIDCaption*<br/>
 Identyfikator podpis ma być używany dla arkusza właściwości.
 
-*pParentWnd*  
+*pParentWnd*<br/>
 Wskaźnik do nadrzędnego okna arkusza właściwości. Jeśli ma wartość NULL, okno nadrzędne będzie głównego okna aplikacji.
 
-*iSelectPage*  
+*iSelectPage*<br/>
 Indeks strony, która będzie początkowo u góry. Domyślna to pierwsza strona, które są dodawane do arkusza.
 
-*pszCaption*  
+*pszCaption*<br/>
 Wskaźnik do ciągu zawierającego podpis ma być używany dla arkusza właściwości. Nie może mieć wartości NULL.
 
-*hbmWatermark*  
+*hbmWatermark*<br/>
 Dojście do mapy bitowej znaku wodnego strony właściwości.
 
-*hpalWatermark*  
+*hpalWatermark*<br/>
 Dojście do palety znaku wodnego mapy bitowej i/lub mapy bitowej nagłówka.
 
-*hbmHeader*  
+*hbmHeader*<br/>
 Dojście do mapy bitowej nagłówek strony właściwości.
 
 ### <a name="remarks"></a>Uwagi
@@ -312,25 +312,25 @@ CPropertySheet(
 
 ### <a name="parameters"></a>Parametry
 
-*nIDCaption*  
+*nIDCaption*<br/>
 Identyfikator podpis ma być używany dla arkusza właściwości.
 
-*pParentWnd*  
+*pParentWnd*<br/>
 Wskazuje okno nadrzędne arkusza właściwości. Jeśli ma wartość NULL, okno nadrzędne będzie głównego okna aplikacji.
 
-*iSelectPage*  
+*iSelectPage*<br/>
 Indeks strony, która będzie początkowo u góry. Domyślna to pierwsza strona, które są dodawane do arkusza.
 
-*pszCaption*  
+*pszCaption*<br/>
 Wskazuje ciąg zawierający podpis ma być używany dla arkusza właściwości. Nie może mieć wartości NULL.
 
-*hbmWatermark*  
+*hbmWatermark*<br/>
 Dojście do mapy bitowej tła arkusza właściwości.
 
-*hpalWatermark*  
+*hpalWatermark*<br/>
 Dojście do palety znaku wodnego mapy bitowej i/lub mapy bitowej nagłówka.
 
-*hbmHeader*  
+*hbmHeader*<br/>
 Dojście do mapy bitowej nagłówek strony właściwości.
 
 ### <a name="remarks"></a>Uwagi
@@ -357,13 +357,13 @@ virtual BOOL Create(CWnd* pParentWnd = NULL,
 
 ### <a name="parameters"></a>Parametry
 
-*pParentWnd*  
+*pParentWnd*<br/>
 Wskazuje okna nadrzędnego. Jeśli ma wartość NULL, obiekt nadrzędny jest pulpitu.
 
-*dwStyle*  
+*dwStyle*<br/>
 Style okna ramowego dla arkusza właściwości. Aby uzyskać pełną listę dostępnych stylów, zobacz [Style okna ramowego](../../mfc/reference/styles-used-by-mfc.md#window-styles).
 
-*dwExStyle*  
+*dwExStyle*<br/>
 Rozszerzone Style okna dla arkusza właściwości. Aby uzyskać pełną listę dostępnych stylów, zobacz [rozszerzone Style okna ramowego](../../mfc/reference/styles-used-by-mfc.md#extended-window-styles)
 
 ### <a name="return-value"></a>Wartość zwracana
@@ -445,7 +445,7 @@ void EnableStackedTabs(BOOL bStacked);
 
 ### <a name="parameters"></a>Parametry
 
-*bStacked*  
+*bStacked*<br/>
 Wskazuje, czy włączono skumulowany karty w arkuszu właściwości. Wyłącz skumulowany wierszy tagów, ustawiając *bStacked* na wartość FALSE.
 
 ### <a name="remarks"></a>Uwagi
@@ -468,7 +468,7 @@ void EndDialog(int nEndID);
 
 ### <a name="parameters"></a>Parametry
 
-*nEndID*  
+*nEndID*<br/>
 Identyfikator ma być używany jako wartość zwracaną przez arkusz właściwości.
 
 ### <a name="remarks"></a>Uwagi
@@ -527,7 +527,7 @@ CPropertyPage* GetPage(int nPage) const;
 
 ### <a name="parameters"></a>Parametry
 
-*nPage*  
+*nPage*<br/>
 Indeks żądanej strony, począwszy od 0. Musi należeć do zakresu od 0 i jeden mniejsza niż liczba stron w arkuszu właściwości, włącznie.
 
 ### <a name="return-value"></a>Wartość zwracana
@@ -564,7 +564,7 @@ int GetPageIndex(CPropertyPage* pPage);
 
 ### <a name="parameters"></a>Parametry
 
-*Strona_fizyczna*  
+*Strona_fizyczna*<br/>
 Wskazuje stronę z indeksem, który ma zostać odnaleziona. Nie może mieć wartości NULL.
 
 ### <a name="return-value"></a>Wartość zwracana
@@ -623,7 +623,7 @@ void MapDialogRect(LPRECT lpRect) const;
 
 ### <a name="parameters"></a>Parametry
 
-*lprect —*  
+*lprect —*<br/>
 Wskazuje [Prostokąt](https://msdn.microsoft.com/library/windows/desktop/dd162897) struktury lub [CRect](../../atl-mfc-shared/reference/crect-class.md) obiekt, który zawiera okno dialogowe służy do koordynowania ma zostać przekonwertowany.
 
 ### <a name="remarks"></a>Uwagi
@@ -664,7 +664,7 @@ void PressButton(int nButton);
 
 ### <a name="parameters"></a>Parametry
 
-*Nprzycisk*  
+*Nprzycisk*<br/>
 Nprzycisk: identyfikuje przycisk aby zostać naciśnięte. Ten parametr może być jedną z następujących wartości:
 
 - PSBTN_BACK wybierze przycisk Wstecz.
@@ -702,10 +702,10 @@ void RemovePage(int nPage);
 
 ### <a name="parameters"></a>Parametry
 
-*Strona_fizyczna*  
+*Strona_fizyczna*<br/>
 Wskazuje stronę, która ma zostać usunięty z arkusza właściwości. Nie może mieć wartości NULL.
 
-*nPage*  
+*nPage*<br/>
 Indeks strony do usunięcia. Musi należeć do zakresu od 0 i jeden mniejsza niż liczba stron w arkuszu właściwości, włącznie.
 
 ### <a name="remarks"></a>Uwagi
@@ -723,10 +723,10 @@ BOOL SetActivePage(CPropertyPage* pPage);
 
 ### <a name="parameters"></a>Parametry
 
-*nPage*  
+*nPage*<br/>
 Indeks strony do ustawienia. Musi być między 0 a mniejszy niż liczba stron w arkuszu właściwości, włącznie.
 
-*Strona_fizyczna*  
+*Strona_fizyczna*<br/>
 Wskazuje stronę, aby ustawić w arkuszu właściwości. Nie może być równa NULL.
 
 ### <a name="return-value"></a>Wartość zwracana
@@ -751,7 +751,7 @@ void SetFinishText(LPCTSTR lpszText);
 
 ### <a name="parameters"></a>Parametry
 
-*lpszText*  
+*lpszText*<br/>
 Wskazuje tekst, który ma być wyświetlany na przycisku polecenia Zakończ.
 
 ### <a name="remarks"></a>Uwagi
@@ -774,10 +774,10 @@ void SetTitle(
 
 ### <a name="parameters"></a>Parametry
 
-*nStyle*  
+*nStyle*<br/>
 Określa styl tytuł arkusza właściwości. Styl musi być określona w lokalizacji 0 lub jako PSH_PROPTITLE. Jeśli styl jest ustawiony jako PSH_PROPTITLE, słowo "Właściwości" pojawia się po tekstem określonym jako podpis. Na przykład, wywołanie `SetTitle`("Simple", PSH_PROPTITLE) spowoduje podpis arkusz właściwości "Proste właściwości."
 
-*lpszText*  
+*lpszText*<br/>
 Wskazuje tekst, który ma służyć jako podpis na pasku tytułu w arkuszu właściwości.
 
 ### <a name="remarks"></a>Uwagi
@@ -798,7 +798,7 @@ void SetWizardButtons(DWORD dwFlags);
 
 ### <a name="parameters"></a>Parametry
 
-*Flagidw*  
+*Flagidw*<br/>
 Zestaw flag, umożliwiające dostosowanie funkcji i wygląd przycisków kreatora. Ten parametr może być kombinacją następujących wartości:
 
 - Przycisk Wstecz PSWIZB_BACK
@@ -847,9 +847,9 @@ Wywołaj `SetWizardMode` przed wywołaniem [DoModal](#domodal). Po wywołaniu me
 
 ## <a name="see-also"></a>Zobacz też
 
-[CMNCTRL1 próbki MFC](../../visual-cpp-samples.md)  
-[CMNCTRL2 próbki MFC](../../visual-cpp-samples.md)  
-[Próbki MFC PROPDLG](../../visual-cpp-samples.md)  
-[Próbki MFC SNAPVW](../../visual-cpp-samples.md)  
-[Klasa CWnd](../../mfc/reference/cwnd-class.md)  
-[Wykres hierarchii](../../mfc/hierarchy-chart.md)  
+[CMNCTRL1 próbki MFC](../../visual-cpp-samples.md)<br/>
+[CMNCTRL2 próbki MFC](../../visual-cpp-samples.md)<br/>
+[Próbki MFC PROPDLG](../../visual-cpp-samples.md)<br/>
+[Próbki MFC SNAPVW](../../visual-cpp-samples.md)<br/>
+[Klasa CWnd](../../mfc/reference/cwnd-class.md)<br/>
+[Wykres hierarchii](../../mfc/hierarchy-chart.md)

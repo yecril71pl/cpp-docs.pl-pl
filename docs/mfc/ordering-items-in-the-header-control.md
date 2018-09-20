@@ -22,26 +22,28 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: aac3c9ba284abc634af2fbeb25633b812e07f926
-ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
+ms.openlocfilehash: f446eb557fab4f4ff6396042e832e4584546bd96
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/25/2018
-ms.locfileid: "36928573"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46416828"
 ---
 # <a name="ordering-items-in-the-header-control"></a>Określanie kolejności elementów w formancie nagłówka
-Po wprowadzeniu [dodać elementów do formantu nagłówka](../mfc/adding-items-to-the-header-control.md), można manipulować i uzyskać informacje na temat ich kolejność, z następujących funkcji:  
-  
--   [CHeaderCtrl::GetOrderArray](../mfc/reference/cheaderctrl-class.md#getorderarray) i [CHeaderCtrl::SetOrderArray](../mfc/reference/cheaderctrl-class.md#setorderarray)  
-  
-     Pobiera i ustawia kolejność elementów nagłówka od lewej do prawej.  
-  
--   [CHeaderCtrl::OrderToIndex](../mfc/reference/cheaderctrl-class.md#ordertoindex).  
-  
-     Pobiera wartość indeksu dla elementu określonego nagłówka.  
-  
- Oprócz funkcji Członkowskich poprzednie hds_dragdrop — styl zezwala użytkownikowi na przeciąganie i upuszczanie elementów nagłówka w formancie nagłówka. Aby uzyskać więcej informacji, zobacz [Zapewnianie obsługi przeciągania i upuszczania w przypadku elementów nagłówka](../mfc/providing-drag-and-drop-support-for-header-items.md).  
-  
-## <a name="see-also"></a>Zobacz też  
- [Korzystanie z CHeaderCtrl](../mfc/using-cheaderctrl.md)
+
+Po [dodać elementów do formantu nagłówka](../mfc/adding-items-to-the-header-control.md), można manipulować i uzyskać informacje na temat ich kolejność, za pomocą następujących funkcji:
+
+- [CHeaderCtrl::GetOrderArray](../mfc/reference/cheaderctrl-class.md#getorderarray) i [CHeaderCtrl::SetOrderArray](../mfc/reference/cheaderctrl-class.md#setorderarray)
+
+     Pobiera i ustawia kolejność elementów nagłówka od lewej do prawej.
+
+- [CHeaderCtrl::OrderToIndex](../mfc/reference/cheaderctrl-class.md#ordertoindex).
+
+     Pobiera wartość indeksu dla elementu określonego nagłówka.
+
+Oprócz poprzedniego funkcji elementów członkowskich hds_dragdrop — styl zezwala użytkownikowi na przeciąganie i upuszczanie elementy nagłówka w formancie nagłówka. Aby uzyskać więcej informacji, zobacz [Zapewnianie obsługi przeciągania i upuszczania w przypadku elementów nagłówka](../mfc/providing-drag-and-drop-support-for-header-items.md).
+
+## <a name="see-also"></a>Zobacz też
+
+[Korzystanie z CHeaderCtrl](../mfc/using-cheaderctrl.md)
 

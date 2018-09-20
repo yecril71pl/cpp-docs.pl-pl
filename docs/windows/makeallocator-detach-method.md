@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: d609b685bb5e3d24d561e66050769b6b7728e691
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: 3ef07b3de2125c38064bc2a0f15559e8ef6084d4
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42607165"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46443387"
 ---
 # <a name="makeallocatordetach-method"></a>MakeAllocator::Detach — Metoda
 
@@ -48,5 +48,5 @@ Jeśli wywołasz **Detach()**, jesteś odpowiedzialny za usunięcie pamięci dos
 
 ## <a name="see-also"></a>Zobacz też
 
-[MakeAllocator, klasa](../windows/makeallocator-class.md)  
+[MakeAllocator, klasa](../windows/makeallocator-class.md)<br/>
 [Microsoft::WRL::Details, przestrzeń nazw](../windows/microsoft-wrl-details-namespace.md)

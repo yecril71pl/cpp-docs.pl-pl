@@ -17,12 +17,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e797713c03cb13ff9f1206ec6cb8bc24a3c18589
-ms.sourcegitcommit: 6408139d5f5ff8928f056bde93d20eecb3520361
+ms.openlocfilehash: 2cfeaada169addc01bc09893db0dedba2b7528d0
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37335899"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46403113"
 ---
 # <a name="cdaoindexinfo-structure"></a>CDaoIndexInfo — Struktura
 
@@ -51,16 +51,16 @@ struct CDaoIndexInfo {
 
 ### <a name="parameters"></a>Parametry
 
-*m_strName*  
+*m_strName*<br/>
 Unikatowej nazwy obiektu pola. Aby uzyskać szczegółowe informacje zobacz temat "Nazwa właściwości" w Pomocy programu DAO.
 
-*m_pFieldInfos*  
+*m_pFieldInfos*<br/>
 Wskaźnik do tablicy [cdaoindexfieldinfo —](../../mfc/reference/cdaoindexfieldinfo-structure.md) obiektów wskazujące, które pola tabledef lub zestawu rekordów pola klucza w indeksie. Każdy obiekt identyfikuje jednego pola w indeksie. Indeks domyślnej kolejności jest rosnąca. Każdy indeks obiekt może mieć co najmniej jedno pole reprezentujące kluczy indeksu dla każdego rekordu. Mogą one rosnąco, malejąco, lub połączenie.
 
-*m_nfields —*  
+*m_nfields —*<br/>
 Liczba pól, przechowywane w `m_pFieldInfos`.
 
-*m_bPrimary*  
+*m_bPrimary*<br/>
 Jeśli właściwość podstawowego ma wartość TRUE, obiekt indeksu reprezentuje podstawowy indeks. Podstawowy indeks składa się z co najmniej jednego pola, które jednoznacznie identyfikują wszystkie rekordy w tabeli w preferowanej kolejności. Ponieważ pole indeksu musi być unikatowy, właściwości Unikatowy indeks obiektu jest również ustawiona na wartość TRUE w DAO. Jeśli podstawowy indeks składa się z więcej niż jednym polu, każde pole może zawierać zduplikowanych wartości, ale każda kombinacja wartości z pola indeksowane muszą być unikatowe. Podstawowy indeks składa się z klucza tabeli i zwykle zawiera te same pola jako klucz podstawowy.
 
 Po ustawieniu klucza podstawowego dla tabeli klucza podstawowego jest automatycznie definiowana jako podstawowy indeks dla tabeli. Aby uzyskać więcej informacji zobacz tematy "Podstawowe właściwości" i "unikatowa" w Pomocy programu DAO.
@@ -68,20 +68,20 @@ Po ustawieniu klucza podstawowego dla tabeli klucza podstawowego jest automatycz
 > [!NOTE]
 > Może istnieć, co najwyżej jeden indeks podstawowy w tabeli.
 
-*m_bUnique*  
+*m_bUnique*<br/>
 Wskazuje, czy obiekt indeksów reprezentuje unikatowy indeks dla tabeli. Jeśli ta właściwość ma wartość TRUE, obiekt indeksów reprezentuje indeks, który jest unikatowy. Unikatowy indeks składa się z co najmniej jednego pola, które Uporządkuj logicznie wszystkie rekordy w tabeli w kolejności unikatowy, wstępnie zdefiniowane. Jeśli indeks obejmuje jedno pole, wartości w danym polu musi być unikatowa dla całej tabeli. Jeśli indeks obejmuje więcej niż jednym polu, każde pole może zawierać zduplikowanych wartości, ale każda kombinacja wartości z pola indeksowane muszą być unikatowe.
 
 Jeśli zarówno unikatowe, jak i podstawowe właściwości obiektu indeksu są ustawione na wartość TRUE, indeks jest unikatowy i podstawowego: unikatowo identyfikuje wszystkie rekordy w tabeli w kolejności wstępnie zdefiniowane, logiczne. Jeśli właściwość podstawowego ustawiono na wartość FALSE, indeks jest indeks pomocniczy. Indeksy pomocnicze (kluczy i nonkey) logicznie organizuje rekordy w kolejności wstępnie zdefiniowanej bez służy jako identyfikator rekordy w tabeli.
 
 Aby uzyskać więcej informacji zobacz tematy "Podstawowe właściwości" i "unikatowa" w Pomocy programu DAO.
 
-*m_bClustered*  
+*m_bClustered*<br/>
 Wskazuje, czy obiekt indeksów reprezentuje indeksu klastrowanego dla tabeli. Jeśli ta właściwość ma wartość TRUE, obiekt indeksów reprezentuje indeks klastrowany; w przeciwnym razie nie. Indeks klastrowany, który składa się z jednego lub więcej nonkey pól, razem wzięte Rozmieść wszystkie rekordy w tabeli w preferowanej kolejności. Dane w tabeli z indeksem klastrowanym dosłownie znajduje się w kolejności określonej przez indeks klastrowany. Indeks klastrowany zapewnia wydajny dostęp do rekordów w tabeli. Aby uzyskać więcej informacji zobacz temat "Klastrowane Property" w Pomocy programu DAO.
 
 > [!NOTE]
 > Właściwość Clustered jest ignorowana w przypadku baz danych, które używają aparatu bazy danych Microsoft Jet, ponieważ aparat bazy danych Jet nie obsługuje klastrowanych indeksów.
 
-*m_bIgnoreNulls*  
+*m_bIgnoreNulls*<br/>
 Wskazuje, czy znajdują się wpisy indeksu dla rekordów, które mają wartości Null w ich pola indeksu. Jeśli ta właściwość ma wartość TRUE, pola z wartościami Null nie masz wpisu indeksu. Aby wyszukać rekordy szybciej za pomocą pola, można zdefiniować indeks dla pola. Jeśli Zezwalaj zapisów o wartości Null w zaindeksowanego pola i oczekują wiele wpisów, aby mieć wartości Null, można ustawić właściwości IgnoreNulls dla obiektu indeksu na wartość TRUE, aby zmniejszyć ilość miejsca do magazynowania, który używa indeksu. Ustawienie właściwości IgnoreNulls i ustawienie właściwości wymagane ze sobą określają, czy rekord z wartością Null indeks ma wpis indeksu, jak pokazano w poniższej tabeli.
 
 |IgnoreNulls|Wymagane|Wartość null, w polu indeksu|
@@ -92,16 +92,16 @@ Wskazuje, czy znajdują się wpisy indeksu dla rekordów, które mają wartości
 
 Aby uzyskać więcej informacji zobacz temat "IgnoreNulls Property" w Pomocy programu DAO.
 
-*m_bRequired*  
+*m_bRequired*<br/>
 Wskazuje, czy obiekt DAO indeksu wymaga wartości innej niż Null. Jeśli ta właściwość ma wartość TRUE, obiekt indeks nie zezwala na wartość Null. Aby uzyskać więcej informacji zobacz temat "Wymagana właściwość" w Pomocy programu DAO.
 
 > [!TIP]
 > Po ustawieniu tej właściwości dla obiektu indeksu DAO lub obiekt pola (zawarty w tabledef, rekordów lub obiektu querydef), ustaw ją na obiekt pola. Ważność ustawienie właściwości dla obiektu pola jest sprawdzany wcześniej obiekt indeksu.
 
-*m_bForeign*  
+*m_bForeign*<br/>
 Wskazuje, czy obiekt indeksów reprezentuje klucza obcego w tabeli. Jeśli ta właściwość ma wartość TRUE, indeks reprezentuje klucza obcego w tabeli. Klucz obcy składa się z jednego lub więcej pól w tabeli obcego, które jednoznacznie identyfikują wiersze w tabeli podstawowej. Aparat bazy danych Microsoft Jet tworzy obiekt indeksu dla tabeli obcego i ustawia właściwość obcego, tworząc relację, która wymusza więzy integralności. Aby uzyskać więcej informacji zobacz temat "Obcego Property" w Pomocy programu DAO.
 
-*m_lDistinctCount*  
+*m_lDistinctCount*<br/>
 Określa liczbę unikatowych wartości obiektu indeksu, które są objęte skojarzona tabela. Sprawdź właściwości DistinctCount, aby określić liczbę unikatowych wartości lub kluczy w indeksie. Dowolny klawisz, jest liczony tylko raz, nawet jeśli może istnieć wiele wystąpień tej wartości indeksu pozwala na zduplikowane wartości. Informacje te są przydatne w aplikacjach, które próbują Optymalizowanie dostępu do danych oceny Indeks informacji. Liczba unikatowych wartości jest nazywana Kardynalność indeksu obiektu. Właściwość DistinctCount będzie zawsze odzwierciedla rzeczywistą liczbę kluczy w określonym czasie. Na przykład zmiana spowodowane wycofywania transakcji nie zostaną odzwierciedlone natychmiast we właściwości DistinctCount. Aby uzyskać więcej informacji zobacz temat "DistinctCount Property" w Pomocy programu DAO.
 
 ## <a name="remarks"></a>Uwagi
@@ -120,5 +120,5 @@ Informacje o pobrane przez `GetIndexInfo` funkcja elementu członkowskiego obiek
 
 ## <a name="see-also"></a>Zobacz także
 
-[Struktury, style, wywołania zwrotne i mapy komunikatów](../../mfc/reference/structures-styles-callbacks-and-message-maps.md)  
-[CDaoTableDef::GetIndexInfo](../../mfc/reference/cdaotabledef-class.md#getindexinfo)  
+[Struktury, style, wywołania zwrotne i mapy komunikatów](../../mfc/reference/structures-styles-callbacks-and-message-maps.md)<br/>
+[CDaoTableDef::GetIndexInfo](../../mfc/reference/cdaotabledef-class.md#getindexinfo)

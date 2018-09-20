@@ -1,5 +1,5 @@
 ---
-title: Obsługa aplikacji i wątków klas | Dokumentacja firmy Microsoft
+title: Aplikacji i wątków obsługuje klas | Dokumentacja firmy Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -21,62 +21,67 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f9f3877cf85e369756b15d565af1481fd6d258df
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: ce9c799c8dbc2a98c7d45dfa9a2e444024c9a7a2
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33341313"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46412325"
 ---
 # <a name="application-and-thread-support-classes"></a>Klasy obsługi aplikacji i wątków
-Każda aplikacja ma jeden i tylko jeden obiekt aplikacji; Ten obiekt koordynuje innych obiektów w programie uruchomiony program i pochodzi z `CWinApp`.  
-  
- Biblioteka Microsoft Foundation Class (MFC) obsługuje wiele wątków wykonywania w aplikacji. Wszystkie aplikacje muszą mieć co najmniej jeden wątek; Wątek używany przez Twoje `CWinApp` obiekt jest to podstawowy wątku.  
-  
- `CWinThread` hermetyzuje część możliwości wątków systemu operacyjnego. Aby używanie wielu wątków łatwiejsze, MFC także synchronizacji klas obiektów interfejs C++ do obiektów synchronizacji Win32.  
-  
-## <a name="application-and-thread-classes"></a>Klasy aplikacji i wątków  
- [CWinApp](../mfc/reference/cwinapp-class.md)  
- Hermetyzuje kod, aby zainicjować, uruchamiania i zakończyć działanie aplikacji. Obiekt aplikacji będzie dziedziczyć po tej klasie.  
-  
- [CWinThread](../mfc/reference/cwinthread-class.md)  
- Klasa podstawowa dla wszystkich wątków. Użyj bezpośrednio lub klasa wyprowadzona z `CWinThread` Jeśli Twoje wątku wykonuje funkcje interfejsu użytkownika. `CWinApp` jest pochodną `CWinThread`.  
-  
-## <a name="synchronization-object-classes"></a>Klasy obiektu synchronizacji  
- [CSyncObject](../mfc/reference/csyncobject-class.md)  
- Klasa podstawowa klasy obiektu synchronizacji.  
-  
- [CCriticalSection](../mfc/reference/ccriticalsection-class.md)  
- Klasy synchronizacji, która umożliwia tylko jeden wątek w ramach jednego procesu w celu dostępu do obiektu.  
-  
- [CSemaphore](../mfc/reference/csemaphore-class.md)  
- Klasy synchronizacji, która umożliwia od jednej do określoną maksymalną liczbę równoczesnych dostępów do obiektu.  
-  
- [CMutex](../mfc/reference/cmutex-class.md)  
- Klasy synchronizacji, która umożliwia tylko jeden wątek w dowolnej liczby procesów dostępu do obiektu.  
-  
- [CEvent](../mfc/reference/cevent-class.md)  
- Klasy synchronizacji powiadamiająca aplikacji po wystąpieniu zdarzenia.  
-  
- [CSingleLock](../mfc/reference/csinglelock-class.md)  
- Używane w funkcjach Członkowskich klas wątkowo do blokowania na jeden obiekt synchronizacji.  
-  
- [CMultiLock](../mfc/reference/cmultilock-class.md)  
- Używane w funkcjach Członkowskich klas wątkowo do blokowania na co najmniej jeden obiekt synchronizacji z tablicę obiektów synchronizacji.  
-  
-## <a name="related-classes"></a>Klasy pokrewne  
- [CCommandLineInfo](../mfc/reference/ccommandlineinfo-class.md)  
- Analizuje wiersza polecenia, z którym program został uruchomiony.  
-  
- [CWaitCursor](../mfc/reference/cwaitcursor-class.md)  
- Umieszcza kursor oczekiwania na ekranie. Używany podczas operacji długie.  
-  
- [CDockState](../mfc/reference/cdockstate-class.md)  
- Obsługuje trwałego magazynu o dokowania pasków sterowania dane o stanie.  
-  
- [CRecentFileList](../mfc/reference/crecentfilelist-class.md)  
- Przechowuje listy ostatnio używanych (MRU) pliku.  
-  
-## <a name="see-also"></a>Zobacz też  
- [Przegląd klas](../mfc/class-library-overview.md)
+
+Każda aplikacja ma jeden i tylko jeden obiekt aplikacji; Ten obiekt służy do koordynowania innych obiektów w uruchomionego programu i jest tworzony na podstawie `CWinApp`.
+
+Biblioteka Microsoft Foundation Class (MFC) obsługuje wielu wątków wykonania wewnątrz aplikacji. Wszystkie aplikacje muszą mieć co najmniej jeden wątek; Wątek używany przez usługi `CWinApp` obiekt jest główny wątek.
+
+`CWinThread` hermetyzuje część możliwości wątku systemu operacyjnego. Aby upewnić się, przy użyciu wielu wątków jest łatwiejsze, MFC również zapewnia synchronizację klas obiektów, aby udostępnić interfejs C++ Win32 obiektów synchronizacji.
+
+## <a name="application-and-thread-classes"></a>Klasy aplikacji i wątków
+
+[Klasa CWinApp](../mfc/reference/cwinapp-class.md)<br/>
+Hermetyzuje kod, aby zainicjować, uruchamiania i zakończyć działanie aplikacji. Obiekt aplikacji będą pochodzić z tej klasy.
+
+[CWinThread](../mfc/reference/cwinthread-class.md)<br/>
+Klasa bazowa dla wszystkich wątków. Użyj bezpośrednio lub wyprowadzić klasę z `CWinThread` Jeśli wątek wykonuje funkcje interfejsu użytkownika. `CWinApp` jest tworzony na podstawie `CWinThread`.
+
+## <a name="synchronization-object-classes"></a>Klasy obiektu synchronizacji
+
+[CSyncObject](../mfc/reference/csyncobject-class.md)<br/>
+Klasa bazowa, klasy obiektu synchronizacji.
+
+[CCriticalSection](../mfc/reference/ccriticalsection-class.md)<br/>
+Klasa synchronizacji, która zezwala na tylko jeden wątek w ramach jednego procesu w celu dostępu do obiektu.
+
+[CSemaphore](../mfc/reference/csemaphore-class.md)<br/>
+Klasa synchronizacji, która umożliwia od jednej do określoną maksymalną liczbę równoczesnych dostępy do do obiektu.
+
+[CMutex](../mfc/reference/cmutex-class.md)<br/>
+Klasa synchronizacji, która zezwala na tylko jeden wątek w ramach dowolnej liczby procesów dostępu do obiektu.
+
+[CEvent](../mfc/reference/cevent-class.md)<br/>
+Klasa synchronizacji, która powiadamia aplikacji po wystąpieniu zdarzenia.
+
+[CSingleLock](../mfc/reference/csinglelock-class.md)<br/>
+Używane w funkcje Członkowskie klas metodą o bezpiecznych wątkach, można zablokować na jeden obiekt synchronizacji.
+
+[CMultiLock](../mfc/reference/cmultilock-class.md)<br/>
+Używane w funkcji składowych klas metodą o bezpiecznych wątkach, można zablokować na co najmniej jeden obiekt synchronizacji z tablicy obiektów synchronizacji.
+
+## <a name="related-classes"></a>Klasy pokrewne
+
+[CCommandLineInfo](../mfc/reference/ccommandlineinfo-class.md)<br/>
+Analizuje wiersza polecenia, z którym program został uruchomiony.
+
+[CWaitCursor](../mfc/reference/cwaitcursor-class.md)<br/>
+Umieszcza kursor oczekiwania na ekranie. Używany podczas długotrwałej operacji.
+
+[CDockState](../mfc/reference/cdockstate-class.md)<br/>
+Obsługuje trwałego magazynowania dokowania pasków sterowania dane o stanie.
+
+[CRecentFileList](../mfc/reference/crecentfilelist-class.md)<br/>
+Obsługuje listy ostatnio używanych (MRU) pliku.
+
+## <a name="see-also"></a>Zobacz też
+
+[Klasa — Przegląd](../mfc/class-library-overview.md)
 

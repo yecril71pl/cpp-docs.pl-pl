@@ -22,89 +22,100 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f83775e04c7b5c4c104f9790870ea067392b0bce
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: e984bb3d616596d0e6c9439fa3096ba23059caae
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43209217"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46428138"
 ---
 # <a name="cinstantaneoustransition-class"></a>Klasa CInstantaneousTransition
-Hermetyzuje natychmiastowe przejście.  
-  
-## <a name="syntax"></a>Składnia  
-  
-```  
-class CInstantaneousTransition : public CBaseTransition;  
-```  
-  
-## <a name="members"></a>Elementy członkowskie  
-  
-### <a name="public-constructors"></a>Konstruktory publiczne  
-  
-|Nazwa|Opis|  
-|----------|-----------------|  
-|[CInstantaneousTransition::CInstantaneousTransition](#cinstantaneoustransition)|Tworzy obiekt przejścia i inicjuje jego wartość końcową.|  
-  
-### <a name="public-methods"></a>Metody publiczne  
-  
-|Nazwa|Opis|  
-|----------|-----------------|  
-|[CInstantaneousTransition::Create](#create)|Wywołania biblioteki przejścia do utworzenia obiektu zhermetyzowany przejścia COM. (Przesłania [CBaseTransition::Create](../../mfc/reference/cbasetransition-class.md#create).)|  
-  
-### <a name="public-data-members"></a>Publiczne elementy członkowskie danych  
-  
-|Nazwa|Opis|  
-|----------|-----------------|  
-|[CInstantaneousTransition::m_dblFinalValue](#m_dblfinalvalue)|Wartość zmiennej animacji z końcem przejścia.|  
-  
-## <a name="remarks"></a>Uwagi  
- Podczas natychmiastowe przejście wartość zmiennej animacji zmienia się natychmiast z jego bieżąca wartość określonej wartości końcowej. Czas trwania tego przejścia zawsze wynosi zero. Ponieważ wszystkie przejścia są automatycznie czyszczone, zaleca się ich przydzielone za pomocą nowego operatora. Zhermetyzowanego obiektu IUIAnimationTransition COM przy utworzono CAnimationController::AnimateGroup, aż do, a następnie ma wartość NULL. Zmienianie zmiennych składowych, po tworzenie ten obiekt COM nie ma wpływu.  
-  
-## <a name="inheritance-hierarchy"></a>Hierarchia dziedziczenia  
- [CObject](../../mfc/reference/cobject-class.md)  
-  
- [CBaseTransition](../../mfc/reference/cbasetransition-class.md)  
-  
- [CInstantaneousTransition](../../mfc/reference/cinstantaneoustransition-class.md)  
-  
-## <a name="requirements"></a>Wymagania  
- **Nagłówek:** afxanimationcontroller.h  
-  
-##  <a name="cinstantaneoustransition"></a>  CInstantaneousTransition::CInstantaneousTransition  
- Tworzy obiekt przejścia i inicjuje jego wartość końcową.  
-  
-```  
-CInstantaneousTransition(DOUBLE dblFinalValue);
-```  
-  
-### <a name="parameters"></a>Parametry  
- *dblFinalValue*  
- Wartość zmiennej animacji z końcem przejścia.  
-  
-##  <a name="create"></a>  CInstantaneousTransition::Create  
- Wywołania biblioteki przejścia do utworzenia obiektu zhermetyzowany przejścia COM.  
-  
-```  
-virtual BOOL Create(
-    IUIAnimationTransitionLibrary* pLibrary,  
-    IUIAnimationTransitionFactory* \*not used*\);
-```  
-  
-### <a name="parameters"></a>Parametry  
-*pLibrary*  
- Wskaźnik do [interfejsu IUIAnimationTransitionLibrary](/windows/desktop/api/uianimation/nn-uianimation-iuianimationtransitionlibrary), który definiuje bibliotekę przejścia standardowe.  
 
-  
-### <a name="return-value"></a>Wartość zwracana  
- Wartość TRUE, jeśli przejście został utworzony pomyślnie; w przeciwnym razie wartość FALSE.  
-  
-##  <a name="m_dblfinalvalue"></a>  CInstantaneousTransition::m_dblFinalValue  
- Wartość zmiennej animacji z końcem przejścia.  
-  
-```  
-DOUBLE m_dblFinalValue;  
-```  
-  
-## <a name="see-also"></a>Zobacz też  
- [Klasy](../../mfc/reference/mfc-classes.md)
+Hermetyzuje natychmiastowe przejście.
+
+## <a name="syntax"></a>Składnia
+
+```
+class CInstantaneousTransition : public CBaseTransition;
+```
+
+## <a name="members"></a>Elementy członkowskie
+
+### <a name="public-constructors"></a>Konstruktory publiczne
+
+|Nazwa|Opis|
+|----------|-----------------|
+|[CInstantaneousTransition::CInstantaneousTransition](#cinstantaneoustransition)|Tworzy obiekt przejścia i inicjuje jego wartość końcową.|
+
+### <a name="public-methods"></a>Metody publiczne
+
+|Nazwa|Opis|
+|----------|-----------------|
+|[CInstantaneousTransition::Create](#create)|Wywołania biblioteki przejścia do utworzenia obiektu zhermetyzowany przejścia COM. (Przesłania [CBaseTransition::Create](../../mfc/reference/cbasetransition-class.md#create).)|
+
+### <a name="public-data-members"></a>Publiczne elementy członkowskie danych
+
+|Nazwa|Opis|
+|----------|-----------------|
+|[CInstantaneousTransition::m_dblFinalValue](#m_dblfinalvalue)|Wartość zmiennej animacji z końcem przejścia.|
+
+## <a name="remarks"></a>Uwagi
+
+Podczas natychmiastowe przejście wartość zmiennej animacji zmienia się natychmiast z jego bieżąca wartość określonej wartości końcowej. Czas trwania tego przejścia zawsze wynosi zero. Ponieważ wszystkie przejścia są automatycznie czyszczone, zaleca się ich przydzielone za pomocą nowego operatora. Zhermetyzowanego obiektu IUIAnimationTransition COM przy utworzono CAnimationController::AnimateGroup, aż do, a następnie ma wartość NULL. Zmienianie zmiennych składowych, po tworzenie ten obiekt COM nie ma wpływu.
+
+## <a name="inheritance-hierarchy"></a>Hierarchia dziedziczenia
+
+[CObject](../../mfc/reference/cobject-class.md)
+
+[CBaseTransition](../../mfc/reference/cbasetransition-class.md)
+
+[CInstantaneousTransition](../../mfc/reference/cinstantaneoustransition-class.md)
+
+## <a name="requirements"></a>Wymagania
+
+**Nagłówek:** afxanimationcontroller.h
+
+##  <a name="cinstantaneoustransition"></a>  CInstantaneousTransition::CInstantaneousTransition
+
+Tworzy obiekt przejścia i inicjuje jego wartość końcową.
+
+```
+CInstantaneousTransition(DOUBLE dblFinalValue);
+```
+
+### <a name="parameters"></a>Parametry
+
+*dblFinalValue*<br/>
+Wartość zmiennej animacji z końcem przejścia.
+
+##  <a name="create"></a>  CInstantaneousTransition::Create
+
+Wywołania biblioteki przejścia do utworzenia obiektu zhermetyzowany przejścia COM.
+
+```
+virtual BOOL Create(
+    IUIAnimationTransitionLibrary* pLibrary,
+    IUIAnimationTransitionFactory* \*not used*\);
+```
+
+### <a name="parameters"></a>Parametry
+
+*pLibrary*<br/>
+Wskaźnik do [interfejsu IUIAnimationTransitionLibrary](/windows/desktop/api/uianimation/nn-uianimation-iuianimationtransitionlibrary), który definiuje bibliotekę przejścia standardowe.
+
+
+### <a name="return-value"></a>Wartość zwracana
+
+Wartość TRUE, jeśli przejście został utworzony pomyślnie; w przeciwnym razie wartość FALSE.
+
+##  <a name="m_dblfinalvalue"></a>  CInstantaneousTransition::m_dblFinalValue
+
+Wartość zmiennej animacji z końcem przejścia.
+
+```
+DOUBLE m_dblFinalValue;
+```
+
+## <a name="see-also"></a>Zobacz też
+
+[Klasy](../../mfc/reference/mfc-classes.md)

@@ -16,12 +16,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 5e37a3a934fbc66af62a30fd2fc2c23e1c659ef2
-ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
+ms.openlocfilehash: 2d6b6ce066c84056997ec9b54c9d74e782064df4
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43692101"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46408404"
 ---
 # <a name="string--c-component-extensions"></a>Ciąg (C++ Component Extensions)
 
@@ -277,6 +277,6 @@ System.String
 
 ## <a name="see-also"></a>Zobacz też
 
-[Component Extensions dla platform środowiska uruchomieniowego](../windows/component-extensions-for-runtime-platforms.md)  
-[Literały ciągów i znakowe](../cpp/string-and-character-literals-cpp.md)  
+[Component Extensions dla platform środowiska uruchomieniowego](../windows/component-extensions-for-runtime-platforms.md)<br/>
+[Literały ciągów i znakowe](../cpp/string-and-character-literals-cpp.md)<br/>
 [/clr (Kompilacja środowiska uruchomieniowego języka wspólnego)](../build/reference/clr-common-language-runtime-compilation.md)

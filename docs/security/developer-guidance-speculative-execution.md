@@ -18,12 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0800812e39d4d5240b87b24961585610814cd367
-ms.sourcegitcommit: 27b5712badd09a09c499d887e2e4cf2208a28603
+ms.openlocfilehash: 28d1df72efcc1fa7408922876ad91bafcd2b005a
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/11/2018
-ms.locfileid: "44384959"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46422671"
 ---
 # <a name="c-developer-guidance-for-speculative-execution-side-channels"></a>Wskazówki dla deweloperów C++ spekulacyjnego kanałów po stronie wykonywania
 
@@ -31,7 +31,7 @@ Ten artykuł zawiera wskazówki dla deweloperów, która pomaga w identyfikacji 
 
 Ze wskazówkami zawartymi w tym artykule dotyczy klasy reprezentowane przez luki w zabezpieczeniach:
 
-1. CVE-2017-5753, znany także jako luki Spectre w wariancie 1. Ta klasa luk w zabezpieczeniach sprzętu jest powiązana z kanałów po stronie, które mogą wystąpić z powodu wykonywaniem spekulatywnym, który występuje w wyniku misprediction gałąź warunkowa. Kompilator języka Visual C++ w programie Visual Studio 2017 (począwszy od wersji 15.5.5) obejmuje obsługę `/Qspectre` przełącznika, który umożliwia ograniczenie kompilacji, dla ograniczonego zestawu schematów kodowania potencjalnie zagrożone związane z CVE-2017-5753. `/Qspectre` Przełącznik jest również dostępna w programie Visual Studio 2015 Update 3 za pomocą [KB 4338871](https://support.microsoft.com/help/4338871). W dokumentacji dotyczącej [/qspectre](https://docs.microsoft.com/cpp/build/reference/qspectre) flagi zawiera więcej informacji na jego skutków i użycia. 
+1. CVE-2017-5753, znany także jako luki Spectre w wariancie 1. Ta klasa luk w zabezpieczeniach sprzętu jest powiązana z kanałów po stronie, które mogą wystąpić z powodu wykonywaniem spekulatywnym, który występuje w wyniku misprediction gałąź warunkowa. Kompilator języka Visual C++ w programie Visual Studio 2017 (począwszy od wersji 15.5.5) obejmuje obsługę `/Qspectre` przełącznika, który umożliwia ograniczenie kompilacji, dla ograniczonego zestawu schematów kodowania potencjalnie zagrożone związane z CVE-2017-5753. `/Qspectre` Przełącznik jest również dostępna w programie Visual Studio 2015 Update 3 za pomocą [KB 4338871](https://support.microsoft.com/help/4338871). W dokumentacji dotyczącej [/qspectre](https://docs.microsoft.com/cpp/build/reference/qspectre) flagi zawiera więcej informacji na jego skutków i użycia.
 
 2. CVE-2018-3639, nazywana również [spekulacyjnego obejścia Store (SSB)](https://aka.ms/sescsrdssb). Ta klasa luk w zabezpieczeniach sprzętu jest powiązana z kanałów po stronie, które mogą wystąpić z powodu związanego z wykonywaniem spekulatywnym obciążenia wcześniej zależne magazynu wyniku misprediction dostępu do pamięci.
 
@@ -55,9 +55,9 @@ unsigned char ReadByte(unsigned char *buffer, unsigned int buffer_size, unsigned
 }
 ```
 
-W tym przykładzie `ReadByte` jest dostarczony bufor, rozmiar buforu i indeksu do tego buforu. Jako określony przez parametr indeksu `untrusted_index`, jest dostarczana przez mniej uprzywilejowanego kontekstu, takich jak proces innych niż administracyjne. Jeśli `untrusted_index` jest mniejsza niż `buffer_size`, a następnie znak na pozycji indeksu są odczytywane z `buffer` i używany do indeksu w udostępnionym region pamięci określonych przez `shared_buffer`. 
+W tym przykładzie `ReadByte` jest dostarczony bufor, rozmiar buforu i indeksu do tego buforu. Jako określony przez parametr indeksu `untrusted_index`, jest dostarczana przez mniej uprzywilejowanego kontekstu, takich jak proces innych niż administracyjne. Jeśli `untrusted_index` jest mniejsza niż `buffer_size`, a następnie znak na pozycji indeksu są odczytywane z `buffer` i używany do indeksu w udostępnionym region pamięci określonych przez `shared_buffer`.
 
-Z punktu widzenia architektury, ta sekwencja kodu jest idealnie bezpieczne, ponieważ ma żadnej gwarancji, że `untrusted_index` zawsze będzie mniejsza niż `buffer_size`. Jednak obecności związanego z wykonywaniem spekulatywnym, jest możliwe, że Procesor będzie złych przewidywań gałąź warunkowa i wykonania treści, jeśli instrukcja nawet wtedy, gdy `untrusted_index` jest większa niż lub równa `buffer_size`. W wyniku tego Procesora może speculatively Odczytaj bajt from beyond granice `buffer` (może być wpisu tajnego), a następnie użyj tej wartości bajtów do obliczania adresu kolejnych obciążenia za pomocą `shared_buffer`. 
+Z punktu widzenia architektury, ta sekwencja kodu jest idealnie bezpieczne, ponieważ ma żadnej gwarancji, że `untrusted_index` zawsze będzie mniejsza niż `buffer_size`. Jednak obecności związanego z wykonywaniem spekulatywnym, jest możliwe, że Procesor będzie złych przewidywań gałąź warunkowa i wykonania treści, jeśli instrukcja nawet wtedy, gdy `untrusted_index` jest większa niż lub równa `buffer_size`. W wyniku tego Procesora może speculatively Odczytaj bajt from beyond granice `buffer` (może być wpisu tajnego), a następnie użyj tej wartości bajtów do obliczania adresu kolejnych obciążenia za pomocą `shared_buffer`.
 
 Gdy Procesora po pewnym czasie wykryje to misprediction, pozostałe efekty uboczne może pozostać w pamięci podręcznej Procesora, które ujawniają informacje o wartości bajtów odczytanych poza zakresem od `buffer`. Efekty uboczne, te mogą być wykryte przez mniej uprzywilejowanego kontekstu uruchomionych w systemie, jak szybko sondowanie linię każda usługa pamięć podręczna `shared_buffer` jest dostępny. Dostępne są następujące kroki, które mogą być wykonywane w tym celu:
 
@@ -73,14 +73,14 @@ Powyższe kroki zawierają z przykładem użycia techniką OPRÓŻNIANIA + Zała
 
 ## <a name="what-software-scenarios-can-be-impacted"></a>Może to mieć wpływ jaki scenariusz oprogramowania?
 
-Tworzenie bezpiecznego oprogramowania za pomocą procesu, takich jak [cyklu projektowania zabezpieczeń](https://www.microsoft.com/en-us/sdl/) (SDL) zwykle wymaga deweloperom identyfikowanie granic zaufania, które istnieją w aplikacjach. Istnieje granicy zaufania w miejscach, w których aplikacja może współpracować z danych pochodzących z kontekstu niższym poziomie zaufania, takich jak innego procesu w systemie lub proces trybu użytkownika niebędącego administratorem w przypadku sterownik urządzenia trybu jądra. Nowa klasa luk w zabezpieczeniach dotyczące kanałów po stronie wykonywania spekulacyjnego ma zastosowanie do wielu granic zaufania w istniejących modeli zabezpieczeń oprogramowania, które izolowania kodu i danych na urządzeniu. 
+Tworzenie bezpiecznego oprogramowania za pomocą procesu, takich jak [cyklu projektowania zabezpieczeń](https://www.microsoft.com/en-us/sdl/) (SDL) zwykle wymaga deweloperom identyfikowanie granic zaufania, które istnieją w aplikacjach. Istnieje granicy zaufania w miejscach, w których aplikacja może współpracować z danych pochodzących z kontekstu niższym poziomie zaufania, takich jak innego procesu w systemie lub proces trybu użytkownika niebędącego administratorem w przypadku sterownik urządzenia trybu jądra. Nowa klasa luk w zabezpieczeniach dotyczące kanałów po stronie wykonywania spekulacyjnego ma zastosowanie do wielu granic zaufania w istniejących modeli zabezpieczeń oprogramowania, które izolowania kodu i danych na urządzeniu.
 
 Poniższa tabela zawiera podsumowanie modele zabezpieczeń oprogramowania, których deweloperzy może być konieczne zwracać uwagę na te luki w zabezpieczeniach, występuje:
 
 |Granica zaufania|Opis|
 |----------------|----------------|
-|Granica maszyny wirtualnej|Aplikacje, które izolowania obciążeń w osobne maszyny wirtualne, które odbierają niezaufanych danych z innej maszyny wirtualnej mogą być narażone na ryzyko.| 
-|Granica jądra|Sterownik urządzenia trybu jądra, który odbiera od proces trybu użytkownika niebędącego administratorem niezaufane dane mogą być narażone na ryzyko.| 
+|Granica maszyny wirtualnej|Aplikacje, które izolowania obciążeń w osobne maszyny wirtualne, które odbierają niezaufanych danych z innej maszyny wirtualnej mogą być narażone na ryzyko.|
+|Granica jądra|Sterownik urządzenia trybu jądra, który odbiera od proces trybu użytkownika niebędącego administratorem niezaufane dane mogą być narażone na ryzyko.|
 |Granica procesu|Aplikacja, która odbiera niezaufane dane z innego procesu, uruchomiony w systemie lokalnym za pośrednictwem zdalnego wywoływania (procedur RPC), pamięci współużytkowanej lub innych komunikacji między procesu (IPC) mechanizmów mogą być narażone na ryzyko.|
 |Granica enklawy|Aplikacja, która jest wykonywana w ramach enklawy bezpieczne (na przykład Intel SGX) odbierająca niezaufanych danych poza enklawy mogą być narażone na ryzyko.|
 |Język granic|Aplikacja, który interpretuje lub just in Time (JIT) kompiluje i wykonuje z niezaufanego kodu napisanego w języku wyższego poziomu mogą być narażone na ryzyko.|
@@ -133,7 +133,7 @@ unsigned char ReadBytes(unsigned char *buffer, unsigned int buffer_size) {
 
 ### <a name="array-out-of-bounds-load-feeding-an-indirect-branch"></a>Tablica liczbach obciążenia, wprowadzając pośrednich gałęzi
 
-Ten wzorzec pisania kodu obejmuje przypadek, w którym misprediction gałąź warunkowa może prowadzić do liczbach dostęp do tablicy wskaźników funkcji, które następnie prowadzi do pośredniego gałęzi do obiektu docelowego adresów, które zostały odczytane liczbach. Poniższy fragment kodu stanowi przykład demonstrujący ten. 
+Ten wzorzec pisania kodu obejmuje przypadek, w którym misprediction gałąź warunkowa może prowadzić do liczbach dostęp do tablicy wskaźników funkcji, które następnie prowadzi do pośredniego gałęzi do obiektu docelowego adresów, które zostały odczytane liczbach. Poniższy fragment kodu stanowi przykład demonstrujący ten.
 
 W tym przykładzie został podany identyfikator niezaufanych wiadomości do DispatchMessage za pośrednictwem `untrusted_message_id` parametru. Jeśli `untrusted_message_id` jest mniejsza niż `MAX_MESSAGE_ID`, zostanie użyty do indeksowania do tablicy wskaźników funkcji i gałęzi do odpowiedniego cel rozgałęzienia. Ten kod jest bezpiecznym pod względem architektury, ale jeśli Procesora źle przewidzianych gałęzi warunkowej, może to spowodować `DispatchTable` indeksowane przez `untrusted_message_id` , gdy jej wartość jest większa niż lub równa `MAX_MESSAGE_ID`, dlatego prowadzących do liczbach dostępu. Może to spowodować związanego z wykonywaniem spekulatywnym z adresu docelowego gałęzi, który jest tworzony poza granice tablicy, która może prowadzić do ujawnienia informacji w zależności od kodu, który jest wykonywany speculatively.
 
@@ -188,7 +188,7 @@ Należy zauważyć, że obu tych przykładach obejmują spekulacyjnego modyfikac
 
 ## <a name="speculative-type-confusion"></a>Błąd typu spekulacyjne
 
-Ta kategoria zajmuje się wzorców, które powodują powstanie pomyłek spekulacyjnego typu kodowania. Dzieje się tak, jeśli pamięć uzyskuje się dostęp przy użyciu nieprawidłowy typ w ścieżce architektury podczas wykonywania spekulacyjnego. Gałąź warunkowa misprediction i obejścia spekulacyjnego magazynu potencjalnie może prowadzić do pomyłek spekulacyjnego typu. 
+Ta kategoria zajmuje się wzorców, które powodują powstanie pomyłek spekulacyjnego typu kodowania. Dzieje się tak, jeśli pamięć uzyskuje się dostęp przy użyciu nieprawidłowy typ w ścieżce architektury podczas wykonywania spekulacyjnego. Gałąź warunkowa misprediction i obejścia spekulacyjnego magazynu potencjalnie może prowadzić do pomyłek spekulacyjnego typu.
 
 Dla magazynu spekulacyjnego jednokrotnego obejścia to może wystąpić w scenariuszach, gdzie kompilator używa lokalizacji stosu dla zmiennych wielu typów. Jest to spowodowane architektury magazynu zmienną typu `A` mogą ominąć, dzięki czemu obciążenia typu `A` speculatively wykonać przed przypisaniem zmiennej. Jeśli poprzednio zapisanego zmienna jest innego typu, to można utworzyć warunków pomyłek spekulacyjnego typu.
 
@@ -368,6 +368,5 @@ Inna technika, który może służyć do złagodzenia związanego z wykonywaniem
 
 ## <a name="see-also"></a>Zobacz też
 
-[Wskazówki, aby uniknąć kanału po stronie wykonywania spekulacyjnego luk w zabezpieczeniach](https://portal.msrc.microsoft.com/security-guidance/advisory/ADV180002)
-
+[Wskazówki, aby uniknąć kanału po stronie wykonywania spekulacyjnego luk w zabezpieczeniach](https://portal.msrc.microsoft.com/security-guidance/advisory/ADV180002)<br/>
 [Ograniczanie ryzyka związanego z wykonywaniem spekulatywnym po stronie kanału sprzętowych luk w zabezpieczeniach](https://blogs.technet.microsoft.com/srd/2018/03/15/mitigating-speculative-execution-side-channel-hardware-vulnerabilities/)

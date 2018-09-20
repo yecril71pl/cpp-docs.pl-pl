@@ -18,22 +18,25 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e9eab52d09e9910cb4cce92d487c26fdb90d5647
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 6f9169f0548bb58ffa063f3b3e947f16e877758e
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33380581"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46439994"
 ---
 # <a name="tool-tips"></a>Etykietki narzędzi
-Procedury są unikatowe dla Dodawanie etykietek narzędzi do formanty zawarte w systemie windows pochodzi od klasy MFC [cframewnd —](../mfc/reference/cframewnd-class.md) i systemu windows nie pochodzi od `CFrameWnd`.  
-  
-## <a name="what-do-you-want-to-know-more-about"></a>Co chcesz dowiedzieć się więcej o  
- Etykietki narzędzi dla formantów w oknie, który jest:  
-  
--   [Etykietki narzędzi paska narzędzi (pochodzi od obiektu CFrameWnd)](../mfc/toolbar-tool-tips.md)  
-  
--   [Etykietki narzędzi w systemie Windows niepochodzące od obiektu CFrameWnd](../mfc/tool-tips-in-windows-not-derived-from-cframewnd.md)  
-  
-## <a name="see-also"></a>Zobacz też  
- [Elementy interfejsu użytkownika](../mfc/user-interface-elements-mfc.md)
+
+Procedury różnią się dla Dodawanie etykietek narzędzi do kontrolek znajdujących się w systemie windows pochodzi od klasy MFC [CFrameWnd](../mfc/reference/cframewnd-class.md) i systemu windows nie pochodzi od `CFrameWnd`.
+
+## <a name="what-do-you-want-to-know-more-about"></a>Co chcesz dowiedzieć się więcej na temat
+
+Etykietki narzędzi dla formantów w oknie, który jest:
+
+- [Etykietki narzędzi paska narzędzi (uzyskanych od obiektu CFrameWnd)](../mfc/toolbar-tool-tips.md)
+
+- [Etykietki narzędzi w Windows niepochodzące od obiektu CFrameWnd](../mfc/tool-tips-in-windows-not-derived-from-cframewnd.md)
+
+## <a name="see-also"></a>Zobacz też
+
+[Elementy interfejsu użytkownika](../mfc/user-interface-elements-mfc.md)

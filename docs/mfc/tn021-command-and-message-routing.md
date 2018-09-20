@@ -1,5 +1,5 @@
 ---
-title: 'Routing TN021: Poleceń i komunikatów | Dokumentacja firmy Microsoft'
+title: 'Polecenie TN021: Routing i komunikatów | Dokumentacja firmy Microsoft'
 ms.custom: ''
 ms.date: 06/28/2018
 ms.technology:
@@ -18,91 +18,91 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e31a35878564fc09fa6c045566811a3ff9e4b0ef
-ms.sourcegitcommit: 208d445fd7ea202de1d372d3f468e784e77bd666
+ms.openlocfilehash: 4d10fc56363a9ef460e0aaafadf300a2f649d5b2
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/29/2018
-ms.locfileid: "37122020"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46412343"
 ---
 # <a name="tn021-command-and-message-routing"></a>TN021: routing poleceń i komunikatów
 
 > [!NOTE]
->  Poniższe uwagi techniczne nie został zaktualizowany, ponieważ została ona uwzględniona w dokumentacji online. W związku z tym niektóre procedury i tematy mogą być nieaktualne lub niepoprawne. Najnowsze informacje zalecane jest, możesz wyszukać temat odsetek w indeksie dokumentacji online.
+>  Następująca uwaga techniczna nie został zaktualizowany od pierwszego uwzględnienia jej w dokumentacji online. W rezultacie niektóre procedury i tematy może być nieaktualne lub niepoprawne. Najnowsze informacje zaleca się wyszukać temat w indeksie dokumentacji online.
 
-Ta uwaga opisano architekturę routingu i wysyłania polecenia, a także Tematy zaawansowane w oknie ogólnych komunikatów routingu.
+Ta uwaga opisuje architekturę routingu i wysyłania poleceń, a także zaawansowanie zagadnienia dotyczące routingu komunikatów Ogólne okna.
 
-Zapoznaj się Visual C++ szczegółowe ogólne informacje dotyczące architektury opisanych tutaj, szczególnie różnicy między Windows komunikaty powiadomień dotyczących formantu karty i poleceń. Ta uwaga zakłada znajomości problemy opisane w dokumentacji drukowanej i dotyczy tylko tematy bardzo zaawansowane.
+Zapoznaj się Visual C++ dla ogólnych informacji na temat architektury widocznym tu opisem, szczególnie rozróżnienie między Windows komunikaty powiadomień dotyczących formantu karty i poleceń. Ta uwaga przyjęto założenie, są bardzo podobnie do funkcji z problemami z opisem zamieszczonym w dokumentacji drukowane i powodowało jedynie bardzo zaawansowanych tematów.
 
-## <a name="command-routing-and-dispatch-mfc-10-functionality-evolves-to-mfc-20-architecture"></a>Routing poleceń i wysyłania MFC 1.0 z MFC 2.0 rozwoju środowisko funkcji architektury
+## <a name="command-routing-and-dispatch-mfc-10-functionality-evolves-to-mfc-20-architecture"></a>Routing poleceń i wysyłaj MFC 1.0 funkcji ewoluuje do MFC w wersji 2.0 architektury
 
-System Windows ma komunikat WM_COMMAND, który jest przeciążone w celu zapewnienia powiadomienia polecenia menu, klawisze skrótów i powiadomień dotyczących formantów okna dialogowego.
+Windows ma komunikatów WM_COMMAND, która jest przeciążona, aby zapewnić powiadomień polecenia menu, klawisze skrótów i powiadomień dotyczących formantów okna dialogowego.
 
-MFC 1.0 oparty na który nieco zezwalając programem obsługi (na przykład "OnFileNew") `CWnd` klasy do jest wywoływana w odpowiedzi na określone WM_COMMAND. Jest zmiana koloru wraz ze strukturą danych o nazwie mapy komunikatów i powoduje mechanizm bardzo miejsca sprawności polecenia.
+1.0 z MFC oparta na tym nieco, umożliwiając procedurę obsługi poleceń (na przykład "OnFileNew") `CWnd` pochodne klasy, aby zostać wywołana w odpowiedzi na określone WM_COMMAND. To jest przyklejone wraz z strukturę danych o nazwie mapy komunikatów i powoduje mechanizm bardzo kompaktowa polecenia.
 
-MFC 1.0 w nim również podane dodatkowe funkcje do oddzielania powiadomień dotyczących formantów z komunikaty poleceń. Polecenia są reprezentowane przez identyfikator 16-bitowych, czasami znana jako identyfikatora polecenia. Poleceń zazwyczaj rozpoczyna się od `CFrameWnd` (to znaczy menu wybierz opcję lub przetłumaczonego akceleratora) i pobrać kierowane do różnych innych okien.
+1.0 z MFC udostępniane są również dodatkowe funkcje do oddzielania powiadomień dotyczących formantu karty z komunikaty poleceń. Polecenia są reprezentowane przez identyfikator 16-bitowych, czasami znana jako identyfikatora polecenia. Poleceń rozpoczyna się zwykle z `CFrameWnd` (oznacza to, wybierz menu lub przetłumaczone akceleratora) i Pobierz kierowane do różnych innych oknach.
 
-MFC 1.0 używany routing poleceń w ograniczonym znaczeniu dla implementacji interfejsu dokumentu wielu (MDI). (Ramki okna MDI delegować poleceń, aby jego aktywne okno potomne MDI).
+1.0 z MFC używany routing poleceń w sensie ograniczone dla implementacji interfejsu dokumencie wielu (MDI). (Okna ramki MDI delegować polecenia, aby jego aktywnego okna elementu podrzędnego MDI).
 
-Ta funkcja została uogólnione i rozszerzony w MFC 2.0, aby zezwalać na polecenia, które mają być obsługiwane przez większej liczby obiektów (nie tylko obiektów okien). Zapewnia jeden formalny i rozszerzalnej architektury dla routingu wiadomości i ponownie używa polecenia docelowy routingu, nie tylko obsługi poleceń, ale też aktualizowanie obiektów interfejsu użytkownika (takich jak elementy menu i przycisków paska narzędzi) w celu uwzględnienia bieżącej dostępności polecenia .
+Ta funkcja została uogólniona i rozszerzony w MFC 2.0 w celu zezwalania na polecenia, które mają być obsługiwane przez szerszego zakresu obiektów (nie tylko obiektów okien). Zapewnia więcej formalnych i rozszerzalnej architektury dla routingu wiadomości, a także ponownie używa routingu docelowym poleceń nie tylko obsługi poleceń, ale także do aktualizowanie obiektów interfejsu użytkownika (np. elementy menu i przycisków paska narzędzi) w celu odzwierciedlenia bieżącej dostępności polecenia .
 
 ## <a name="command-ids"></a>Identyfikatory poleceń
 
-Aby uzyskać informacje o poleceniu routingu i proces wiązania, zobacz Visual C++. [20 Uwaga techniczna](../mfc/tn020-id-naming-and-numbering-conventions.md) zawiera informacje na temat nazewnictwa identyfikator.
+Wyjaśnienie polecenia routingu i powiązanie procesu na ten temat można znaleźć w Visual C++. [Uwagi techniczne 20](../mfc/tn020-id-naming-and-numbering-conventions.md) zawiera informacje na temat nazewnictwa identyfikator.
 
-Używamy ogólnego prefiksu "ID_" dla identyfikatorów poleceń. Identyfikatory poleceń są > = 0x8000. Pasek komunikatów wiersza lub stan wyświetli ciąg opisu polecenia, jeśli istnieje zasób STRINGTABLE o takich samych identyfikatorów, jako identyfikator polecenia.
+Używamy ogólnego prefiksu "ID_" dla identyfikatorów poleceń. Identyfikatory poleceń jest > = 0x8000. Wiadomości wiersza lub paska stanu wyświetli ciąg opisu polecenia, jeśli istnieje zasób STRINGTABLE o takich samych identyfikatorów jako identyfikator polecenia.
 
-Polecenie, które można identyfikator zasobów aplikacji pojawia się w kilku miejscach:
+Zasoby aplikacji polecenia, który można identyfikator pojawia się w kilku miejscach:
 
--   W jednym STRINGTABLE zasób, który ma ten sam identyfikator jak monit wiersz wiadomości.
+- W jednej STRINGTABLE zasób, który ma ten sam identyfikator jako wiersz wiadomości.
 
--   W prawdopodobnie wielu MENU zasobów, które są dołączone do elementów menu, które wywołują tego samego polecenia.
+- W prawdopodobnie wielu MENU zasobów, które są dołączone do elementów menu, które wywołują to samo polecenie.
 
--   (Zaawansowane) w oknie dialogowym przycisk polecenia GOSUB.
+- (Zaawansowane) w oknie dialogowym przycisk polecenia GOSUB.
 
-W kodzie źródłowym aplikacji polecenie, które można identyfikator pojawia się w kilku miejscach:
+W kodzie źródłowym aplikacji polecenia, który można identyfikator pojawia się w kilku miejscach:
 
--   W ZASOBIE. H (lub inne plik nagłówka symbolu głównego) do definiowania identyfikatory poleceń specyficzne dla aplikacji.
+- W swoim ZASOBIE. H (lub innego pliku nagłówkowym symboli głównego) do zdefiniowania identyfikatorów poleceń specyficznych dla aplikacji.
 
--   Być może w tablicy identyfikator używany do tworzenia paska narzędzi.
+- Być może w tablicy Identyfikatora, używany do tworzenia paska narzędzi.
 
--   On_command — makro.
+- W ON_COMMAND — makro.
 
--   Być może w on_update_command_ui — makro.
+- Być może w ON_UPDATE_COMMAND_UI — makro.
 
-Obecnie można tylko implementacja MFC, która wymaga identyfikatory poleceń > = 0x8000 jest implementacją GOSUB okien dialogowych/poleceń.
+Obecnie można tylko wdrożenia w MFC, który wymaga identyfikatory poleceń > = 0x8000 jest implementacją GOSUB okien dialogowych/poleceń.
 
 ## <a name="gosub-commands-using-command-architecture-in-dialogs"></a>Polecenia GOSUB, przy użyciu polecenia architektury w oknach dialogowych
 
-Architektura polecenia routingu i włączenia polecenia dobrze działa z okien ramowych, elementów menu, przycisków paska narzędzi, przycisków paska dialogowego, inne paski sterowania i inne elementy interfejsu użytkownika przeznaczony do aktualizacji na żądanie i tras polecenia lub kontrolować identyfikatorów dla metody main obiekt docelowy polecenia (zazwyczaj głównego okna ramowego). Polecenie głównego obiektu docelowego może kierować powiadomienia polecenie lub formant do innych obiektów docelowych polecenia zależnie od potrzeb.
+Architektura polecenia routing poleceń i dobrze działa z okien ramowych, elementy menu, przyciski paska narzędzi, przycisków paska dialogowego innych pasków sterowania i inne elementy interfejsu użytkownika, przeznaczony do aktualizacji na żądanie, jak i trasy poleceń lub kontroli identyfikatory dla metody main element docelowy polecenia (zwykle w oknie głównym ramki). Polecenie głównego obiektu docelowego może kierować powiadomienia polecenia lub formantu do innych obiektów docelowych polecenia zgodnie z potrzebami.
 
-Okno dialogowe (modalne i niemodalne) mogą korzystać z niektórych funkcji architektura polecenia po przypisaniu identyfikator formantu okna dialogowego formantu do identyfikator odpowiedniego polecenia. Obsługa w oknach dialogowych nie jest automatyczne, więc należy napisać dodatkowy kod.
+Okno dialogowe (modalnym lub niemodalnym) mogą korzystać z niektórych funkcji architektury polecenia, jeśli przypiszesz kontroli identyfikator formantu okna dialogowego do odpowiednich komendy Obsługa w oknach dialogowych jest automatyczne, więc trzeba napisać dodatkowy kod.
 
-Należy pamiętać, że wszystkie te funkcje działają prawidłowo, Twoje identyfikatory poleceń powinny być > = 0x8000. Ponieważ wiele okien dialogowych można pobrać kierowane do tego samego ramki, udostępnionych poleceń powinna być > = 0x8000, udostępniana IDCs w określonym oknie dialogowym powinny być < = 0x7FFF.
+Należy pamiętać, że wszystkie te funkcje działają prawidłowo, swoim identyfikatorem polecenia powinien być > = 0x8000. Ponieważ wiele okien dialogowych można uzyskać kierowane do tego samego ramki, udostępnionych poleceń powinny być > = 0x8000, podczas gdy nieudostępnionych IDCs w określonym oknie dialogowym powinny być < = 0x7FFF.
 
-Normalny przycisk można umieścić w normalnych modalnego okna dialogowego z IDC przycisku ustawiony identyfikator odpowiednie polecenie. Po wybraniu przycisku właściciela okna dialogowego (zazwyczaj głównego okna ramowego) pobiera polecenia, podobnie jak inne polecenia. Jest to polecenie GOSUB, ponieważ zwykle jest używany do innego okna dialogowego (GOSUB pierwszego okna dialogowego)
+Normalny przycisk można umieścić w normalnym modalne okno dialogowe z firmy IDC przycisku, ustaw odpowiedni komendy Gdy użytkownik wybierze przycisk, właściciela okna dialogowego (zwykle w oknie głównym ramki) pobiera polecenia, podobnie jak inne polecenia. Jest to nazywane polecenia GOSUB, ponieważ zwykle jest używany do innego okna dialogowego (GOSUB pierwsze okno dialogowe).
 
-Możesz także wywołać funkcję `CWnd::UpdateDialogControls` na Twoje okno dialogowe i przekaż go adres główną ramkę okna. Ta funkcja będzie włączać lub wyłączać formantów okna dialogowego na podstawie tego, czy mają one programy obsługi poleceń w ramce. Ta funkcja jest wywoływana automatycznie dla Ciebie pasków sterowania w pętli bezczynności aplikacji, ale należy wywołać go bezpośrednio do normalnego okna dialogowe, które chcesz użyć tej funkcji.
+Można również wywołać funkcję `CWnd::UpdateDialogControls` na okna dialogowego i przekaż go na adres Twojej głównej ramki okna. Ta funkcja będzie włączać lub wyłączać formantów okna dialogowego na podstawie tego, czy mają one programy obsługi poleceń w ramce. Ta funkcja jest wywoływana automatycznie dla Ciebie pasków sterowania w pętli bezczynności aplikacji, ale należy wywołać go bezpośrednio do normalnego okien dialogowych, które chcesz użyć tej funkcji.
 
-## <a name="when-onupdatecommandui-is-called"></a>Gdy jest wywoływana on_update_command_ui —
+## <a name="when-onupdatecommandui-is-called"></a>Gdy jest wywoływana ON_UPDATE_COMMAND_UI
 
-Zachowanie stanu włączone zaznaczone, program wszystkich elementów menu cały czas może być kosztowne w praktyce problem. Typowe techniki jest enable/wyboru elementów menu tylko wtedy, gdy użytkownik wybierze opcję menu PODRĘCZNEGO. Implementacja MFC 2.0 `CFrameWnd` obsługuje komunikat WM_INITMENUPOPUP i korzysta z architektury routingu poleceń w celu ustalenia stanów menu za pomocą programów obsługi on_update_command_ui —.
+Obsługa przez cały czas stan włączony zaznaczone program wszystkie elementy menu może to stanowić problem dużego nakładu mocy obliczeniowych. Typową techniką jest/kontrola włączenia elementów menu tylko wtedy, gdy użytkownik wybierze opcję menu PODRĘCZNEGO. Implementacja MFC w wersji 2.0 `CFrameWnd` obsługuje wiadomości WM_INITMENUPOPUP i używa architektury routingu poleceń do określenia stany menu za pomocą ON_UPDATE_COMMAND_UI obsługi.
 
-`CFrameWnd` obsługuje także komunikatów WM_ENTERIDLE do opisywania bieżącego menu wybranego elementu w pasku (znanej także jako wiersz wiadomości) stanu.
+`CFrameWnd` obsługuje także komunikatów wm_enteridle, gdy do opisania bieżącego menu wybrany element na pasku (znany także jako wiersz wiadomości) stanu.
 
-Struktura menu aplikacji, edytowany przez Visual C++, jest używana do reprezentowania polecenia potencjalnych dostępne w czasie WM_INITMENUPOPUP. Obsługi on_update_command_ui — można zmodyfikować stanu lub tekst menu, lub do celów Zaawansowane (na przykład listy ostatnio używanych plików lub menu podręcznego zleceń OLE), faktycznie zmodyfikować struktury menu przed narysowaniem menu.
+Struktura menu aplikacja, edytowane przez Visual C++, jest używana do reprezentowania potencjalnych poleceń dostępnych w czasie WM_INITMENUPOPUP. ON_UPDATE_COMMAND_UI obsługi można zmodyfikować stanu lub tekst menu, lub na potrzeby zaawansowanego (na przykład listy ostatnio używanych plików lub menu podręcznego czasowniki OLE), faktycznie modyfikować strukturę menu przed narysowaniem menu.
 
-Paski narzędzi (i innych paski sterowania) odbywa się tego samego sortowania przetwarzania on_update_command_ui — po przejściu jego pętli bezczynności aplikacji. Zobacz *informacje dotyczące biblioteki klas* i [31 Uwaga techniczna](../mfc/tn031-control-bars.md) uzyskać więcej informacji na temat paski sterowania.
+Jest taka sama ON_UPDATE_COMMAND_UI przetwarzanie odbywa się paski narzędzi (i inne paski sterowania) po przejściu jego wykonywania pętli bezczynności w aplikacji. Zobacz *odwołanie do biblioteki klas* i [techniczne 31 Uwaga](../mfc/tn031-control-bars.md) więcej informacji na temat pasków sterowania.
 
-## <a name="nested-pop-up-menus"></a>Zagnieżdżone menu wyskakujące
+## <a name="nested-pop-up-menus"></a>Zagnieżdżone wyskakujących menu
 
-Jeśli używasz struktury zagnieżdżone menu, można zauważyć, że obsługa on_update_command_ui — pierwszy element menu w menu podręcznym jest wywoływana w dwóch różnych przypadkach.
+Jeśli używasz struktury zagnieżdżonej menu, można zauważyć, że obsługa ON_UPDATE_COMMAND_UI pierwszy element menu w menu podręcznym jest wywoływana w dwóch różnych przypadkach.
 
-Najpierw jest wywoływana dla samego menu podręcznym. Jest to konieczne, ponieważ menu wyskakujące nie mają identyfikatorów i używamy identyfikator pierwszego elementu menu wyskakującego menu do odwoływania się do całego menu podręczne. W takim przypadku *m_pSubMenu* zmiennej członkowskiej z `CCmdUI` obiekt będzie mieć wartości NULL i wskaż menu podręczne.
+Po pierwsze jest ona wywoływana dla samo menu podręcznego. Jest to konieczne, ponieważ wyskakujących menu nie ma identyfikatorów i używamy identyfikator pierwszego elementu menu podręcznym menu do odwoływania się do całego menu podręcznego. W tym przypadku *m_pSubMenu* zmienną elementu członkowskiego `CCmdUI` obiekt będzie mieć wartości NULL i wskaż menu podręcznego.
 
-Po drugie jest ona wywoływana tuż przed elementów menu w menu podręcznym mają być tworzone. W takim przypadku Identyfikatora dotyczy tylko pierwszego elementu menu i *m_pSubMenu* zmiennej członkowskiej z `CCmdUI` obiektu będzie mieć wartości NULL.
+Po drugie jest wywoływana przed elementów menu w menu podręcznym mają być tworzone. W tym przypadku identyfikator dotyczy tylko pierwszego elementu menu i *m_pSubMenu* zmienną elementu członkowskiego `CCmdUI` obiektu będzie mieć wartości NULL.
 
-Umożliwia włączenie menu podręczne różne od jego elementy menu, ale wymaga napisanie kodu pamiętać menu. Na przykład w zagnieżdżonych menu o następującej strukturze:
+Umożliwia włączenie menu podręcznego różne od jego elementy menu, ale wymaga pisania kodu z rozpoznawaniem niektóre menu. Na przykład w zagnieżdżonych menu o następującej strukturze:
 
 ```Output
 File>
@@ -111,9 +111,9 @@ File>
     Chart (ID_NEW_CHART)
 ```
 
-Polecenia ID_NEW_SHEET i ID_NEW_CHART można niezależnie włączone lub wyłączone. **Nowy** menu podręczne powinno być włączone, jeśli jeden z dwóch jest włączona.
+Polecenia ID_NEW_SHEET i ID_NEW_CHART można niezależnie włączać lub wyłączać. **New** menu podręcznego powinno być włączone, jeśli jeden z dwóch jest włączona.
 
-Program obsługi poleceń dla ID_NEW_SHEET (pierwsze polecenie w oknie podręcznym) będzie wyglądać mniej więcej tak:
+Procedury obsługi poleceń dla ID_NEW_SHEET (pierwsze polecenie w oknie podręcznym) będą wyglądać mniej więcej tak:
 
 ```cpp
 void CMyApp::OnUpdateNewSheet(CCmdUI* pCmdUI)
@@ -125,7 +125,7 @@ void CMyApp::OnUpdateNewSheet(CCmdUI* pCmdUI)
         // CCmdUI::Enable is a no-op for this case, so we
         // must do what it would have done.
         pCmdUI->m_pMenu->EnableMenuItem(pCmdUI->m_nIndex,
-            MF_BYPOSITION | 
+            MF_BYPOSITION |
             (bEnable  MF_ENABLED : (MF_DISABLED | MF_GRAYED)));
 
         return;
@@ -135,7 +135,7 @@ void CMyApp::OnUpdateNewSheet(CCmdUI* pCmdUI)
 }
 ```
 
-Program obsługi poleceń dla ID_NEW_CHART będzie, program obsługi aktualizacji poleceń i wyglądu coś, takich jak:
+Procedury obsługi poleceń dla ID_NEW_CHART będzie, program obsługi poleceń normalnej aktualizacji i wygląd coś w rodzaju:
 
 ```cpp
 void CMyApp::OnUpdateNewChart(CCmdUI* pCmdUI)
@@ -144,28 +144,28 @@ void CMyApp::OnUpdateNewChart(CCmdUI* pCmdUI)
 }
 ```
 
-## <a name="oncommand-and-onbnclicked"></a>On_command — i ON_BN_CLICKED
+## <a name="oncommand-and-onbnclicked"></a>ON_COMMAND i ON_BN_CLICKED
 
-Makra mapy komunikatów dla **on_command —** i **ON_BN_CLICKED** są takie same. MFC polecenia i kontroli mechanizm routingu powiadomień używa tylko identyfikator polecenia do zdecyduj, gdzie należy kierować do. Kontrolowanie powiadomienia z kontroli kodu powiadomienia o wartości zero (**BN_CLICKED**) są interpretowane jako polecenia.
+Makra mapy komunikatów dla **ON_COMMAND** i **ON_BN_CLICKED** są takie same. MFC poleceń i kontroli mechanizm routingu powiadomień używa tylko identyfikator polecenia zdecydować, gdzie można kierować do. Kontrolowania powiadomień z kontroli kodu powiadomienia o wartości zero (**BN_CLICKED**) są interpretowane jako polecenia.
 
 > [!NOTE]
-> W rzeczywistości wszystkie komunikaty powiadomień dotyczących formantu przejść przez łańcuch programu obsługi poleceń. Na przykład jest technicznie możliwe do pisania obsługi powiadomień sterowania **EN_CHANGE** w klasie dokumentu. Nie jest to zwykle zalecane, ponieważ praktyczne zastosowania tej funkcji są kilka, funkcja ta nie jest obsługiwana przez ClassWizard i korzystanie z funkcji może spowodować wrażliwych kodu.
+> W rzeczywistości wszystkie komunikaty powiadomień dotyczących kontrolki przechodzą przez łańcuch program obsługi poleceń. Na przykład jest technicznie możliwe, pisanie obsługi powiadamiania kontrolki **EN_CHANGE** w swojej klasie dokumentów. To nie jest na ogół ponieważ praktyczne zastosowania tej funkcji są kilka, funkcja ta nie jest obsługiwana przez ClassWizard i korzystanie z funkcji może spowodować delikatna kodu.
 
-## <a name="disabling-the-automatic-disabling-of-button-controls"></a>Wyłączanie automatyczne wyłączenie przycisku formantów
+## <a name="disabling-the-automatic-disabling-of-button-controls"></a>Wyłączanie automatycznego wyłączania formanty przycisków
 
-Jeśli formant przycisk paska dialogowego lub w oknie dialogowym przy użyciu where wywoływania **CWnd::UpdateDialogControls** samodzielnie, zauważysz, że przycisków, które nie mają **on_command —** lub **On_update_command_ui —** obsługi zostanie automatycznie wyłączone dla Ciebie przez platformę. W niektórych przypadkach należy nie ma obsługi, ale można przycisk, aby pozostać włączone. Najprostszym sposobem, aby to osiągnąć jest Dodaj program obsługi poleceń zastępczego (łatwy sposób korzystania z ClassWizard) i nic nie rób w nim.
+Jeśli formant przycisku na pasku okna dialogowego lub w oknie dialogowym przy użyciu gdzie wywołujesz **CWnd::UpdateDialogControls** na własną rękę, zauważysz, że przyciski, które nie mają **ON_COMMAND** lub **ON_UPDATE_COMMAND_UI** obsługi zostanie automatycznie wyłączone dla Ciebie przez platformę. W niektórych przypadkach nie musisz mieć program obsługi, ale można przycisk aby pozostać włączone. Najprostszym sposobem osiągnięcia tego jest można dodać procedury obsługi polecenia fikcyjnego (łatwy sposób korzystania z ClassWizard) i nic nie rób w nim.
 
 ## <a name="window-message-routing"></a>Routing komunikatów okien
 
-Poniżej opisano niektórych bardziej zaawansowanych tematów dotyczących klas MFC i routing komunikatów systemu Windows i innych tematach wpływ je. Tutaj informacje tylko opisano krótko. Zapoznaj się *informacje dotyczące biblioteki klas* szczegółowe informacje dotyczące publicznych interfejsach API. Można znaleźć więcej informacji na temat szczegóły implementacji w kodzie źródłowym biblioteki MFC.
+Poniżej przedstawiono niektóre bardziej zaawansowane tematy dotyczące klas MFC i routing komunikatów Windows i innych tematów wpływie na ich. W tym miejscu informacje tylko opisano skrótowo. Zapoznaj się *odwołanie do biblioteki klas* szczegółowe informacje na temat publicznych interfejsów API. Zapoznaj się kod źródłowy biblioteki MFC, aby uzyskać więcej informacji na temat szczegółów implementacji.
 
-Zapoznaj się z [17 Uwaga techniczna](../mfc/tn017-destroying-window-objects.md) szczegółowe informacje o oknie oczyszczania, bardzo ważne tematu dla wszystkich **CWnd**-klas pochodnych.
+Zapoznaj się [techniczne 17 Uwaga](../mfc/tn017-destroying-window-objects.md) szczegółowe informacje na temat czyszczenia okna, bardzo ważne tematu dla wszystkich **CWnd**-klas pochodnych.
 
 ## <a name="cwnd-issues"></a>Problemy z CWnd
 
-Funkcja członkowska implementacji **CWnd::OnChildNotify** zapewnia zaawansowany i rozszerzalny architekturę podrzędnych do systemu Windows (znanej także jako formanty) utworzenie punktu zaczepienia lub w przeciwnym razie informowany o wiadomości, poleceń i sterowania powiadomienia wysyłane do ich nadrzędnej (lub "właściciela"). Jeśli okna podrzędnego (/ sterowania) jest C++ **CWnd** obiektu, funkcji wirtualnej **OnChildNotify** jest wywoływana najpierw z parametrami z oryginalnej wiadomości (oznacza to, **MSG**struktury). Okno podrzędne można pozostawić komunikat samodzielnie, jeść go lub modyfikowania komunikat nadrzędnego (rzadki przypadek).
+Funkcja elementu członkowskiego implementacji **CWnd::OnChildNotify** zapewnia wydajna i Rozszerzalna architektura podrzędnych do systemu Windows (znany także jako formanty) utworzenie punktu zaczepienia lub w przeciwnym razie informowany o wiadomości, poleceń i kontroli powiadomienia, które przejść do ich nadrzędnej (lub "właściciel"). Jeśli okna podrzędnego (/ kontrolować) jest C++ **CWnd** obiektu, funkcja wirtualna **OnChildNotify** jest wywoływana najpierw z parametrami z oryginalnego komunikatu (oznacza to, **MSG**struktury). Okno podrzędne można samodzielnie Pozostaw wiadomość, jeść go lub zmodyfikuj wiadomość nadrzędnego (rzadkiego).
 
-Wartość domyślna **CWnd** implementacja obsługuje następujące komunikaty i używa **OnChildNotify** haku umożliwia podrzędne systemu windows (formanty) do pierwszego dostępu w komunikacie:
+Wartość domyślna **CWnd** implementacja obsługuje następujące komunikaty i używa **OnChildNotify** punktu zaczepienia umożliwiające podrzędne systemu windows (formanty) do pierwszego dostępu wglądu do wiadomości:
 
 - **WM_MEASUREITEM** i **WM_DRAWITEM** (własnym narysuj)
 
@@ -177,43 +177,43 @@ Wartość domyślna **CWnd** implementacja obsługuje następujące komunikaty i
 
 - **WM_PARENTNOTIFY**
 
-Można zauważyć **OnChildNotify** haku służy do Zmienianie wiadomości rysowania przez właściciela na własnym rysowania wiadomości.
+Można zauważyć **OnChildNotify** punktów zaczepienia jest używana do Zmienianie rysowania przez właściciela, wiadomości na własnym narysuj wiadomości.
 
-Oprócz **OnChildNotify** haku przewijania wiadomości ma dalszych routingu zachowanie. Poniżej więcej informacji znajdziesz na paski przewijania i źródła **WM_HSCROLL** i **WM_VSCROLL** wiadomości.
+Oprócz **OnChildNotify** hook wiadomości przewijania mają dalsze routingu zachowanie. Poniżej podano szczegółowe informacje na temat pasków przewijania i źródeł **WM_HSCROLL** i **WM_VSCROLL** wiadomości.
 
-## <a name="cframewnd-issues"></a>Cframewnd — problemy
+## <a name="cframewnd-issues"></a>Problemy z obiektu CFrameWnd
 
-**Cframewnd —** klasy zawiera większość routing poleceń i interfejs użytkownika aktualizacji wdrożenia. Służy to głównie dla głównego okna ramowego aplikacji (**CWinApp::m_pMainWnd**), ale ma zastosowanie do wszystkich okien ramowych.
+**CFrameWnd** klasy zawiera większość routing poleceń i interfejs użytkownika aktualizacji wdrożenia. Służy on głównie do ramką głównego okna aplikacji (**CWinApp::m_pMainWnd**), ale ma zastosowanie do wszystkich okien ramowych.
 
-Główną ramkę okna jest okna z paska menu i element nadrzędny paska stanu lub komunikatu wiersza. Można znaleźć w powyższym dyskusji routing poleceń i **WM_INITMENUPOPUP.**
+Ramką głównego okna okna przy użyciu paska menu i jest elementem nadrzędnym na pasku stanu lub komunikatu wiersza. Można znaleźć w dyskusji powyżej routing poleceń i **WM_INITMENUPOPUP.**
 
-**Cframewnd —** klasy zapewnia możliwość zarządzania aktywnego widoku. Następujące komunikaty są wysyłane za pośrednictwem widoku aktywnego:
+**CFrameWnd** klasy umożliwia zarządzanie bieżącym widokiem. Następujące komunikaty są przesyłane za pośrednictwem widoku aktywnego:
 
-- Wszystkie komunikaty poleceń (aktywny widok pobiera pierwszy dostępu do nich).
+- Wszystkie komunikaty poleceń (widok aktywny pobiera pierwszego uzyskiwania do nich dostępu).
 
-- **WM_HSCROLL** i **WM_VSCROLL** wiadomości z tego samego poziomu przewiń paski (patrz poniżej).
+- **WM_HSCROLL** i **WM_VSCROLL** komunikaty z tego samego poziomu przewiń paski (patrz poniżej).
 
 - **WM_ACTIVATE** (i **WM_MDIACTIVATE** dla MDI) Pobierz zamieniło wywołania funkcji wirtualnej **CView::OnActivateView**.
 
-## <a name="cmdiframewndcmdichildwnd-issues"></a>Cmdiframewnd — / CMDIChildWnd problemów
+## <a name="cmdiframewndcmdichildwnd-issues"></a>Problemy z CMDIFrameWnd/CMDIChildWnd
 
-Klasy okien ramowych zarówno MDI pochodzi od **cframewnd —** i w związku z tym są obie włączone dla tego samego rodzaju routing poleceń i aktualizowanie interfejsu użytkownika dostępnych w **cframewnd —**. W typowej aplikacji MDI główną ramkę okna (to znaczy **cmdiframewnd —** obiektu) zawiera paska menu i paska stanu i dlatego jest główne źródło routingu wykonania polecenia.
+Zarówno klasy okna ramki MDI pochodzić od **CFrameWnd** i dlatego są włączone dla tego samego rodzaju routing poleceń i aktualizowanie interfejsu użytkownika podane w **CFrameWnd**. W Typowa aplikacja MDI ramki głównego okna (czyli **CMDIFrameWnd** obiektu) zawiera pasek menu i paska stanu i dlatego jest głównym źródłem implementacja routingu poleceń.
 
-Ogólne system routingu jest, że aktywnego okna podrzędnego MDI pobiera pierwszy dostępu do poleceń. Wartość domyślna **PreTranslateMessage** funkcje obsługi tabel akceleratora dla obu okien podrzędnych MDI (najpierw) i ramki MDI (drugi) oraz standardowe akceleratorów polecenia systemu MDI zazwyczaj obsługiwane przez  **TranslateMDISysAccel** (ostatniego).
+Ogólne schemat routingu jest, że okno podrzędne MDI active pobiera pierwszą dostęp do poleceń. Wartość domyślna **pretranslatemessage —** funkcje obsługi tabel akceleratora dla obu oknami podrzędnymi MDI (na początku) i ramki MDI (sekundy), a także standardowych akceleratorów poleceń systemowych MDI, zazwyczaj obsługiwane przez  **TranslateMDISysAccel** (ostatniego).
 
 ## <a name="scroll-bar-issues"></a>Problemy z paska przewijania
 
-Podczas obsługi wiadomości przewijania (**WM_HSCROLL**/**OnHScroll** i/lub **WM_VSCROLL**/**OnVScroll**), należy napisać kod obsługi, więc nie bazuje na skąd pochodzą komunikatów paska przewijania. To nie jest tylko ogólne Windows problemem, ponieważ komunikaty przewijania mogą pochodzić z true przewijania paska formantów lub z **ws_hscroll —**/**ws_vscroll —** przewiń paski, które nie są formanty paska przewijania.
+Podczas obsługi komunikatu przewijania (**WM_HSCROLL**/**OnHScroll** i/lub **WM_VSCROLL**/**OnVScroll**), należy starać się pisania kodu programu obsługi, więc nie zależy pochodzenia wiadomości paska przewijania. To nie tylko ogólne Windows problemem, ponieważ komunikaty przewijania mogą pochodzić z true przewijania paska kontrolki lub z **WS_HSCROLL**/**WS_VSCROLL** paski, które nie są formanty paska przewijania przewijania.
 
-Rozszerza MFC, że w celu umożliwienia formanty paska przewijania podrzędnych lub elementów równorzędnych okna jest przewijane (w rzeczywistości relacji nadrzędny/podrzędny między pasek przewijania i okno jest przewijane może być wszystko). Jest to szczególnie ważne dla pasków przewijania udostępnionych z okna podziału. Zapoznaj się z [29 Uwaga techniczna](../mfc/tn029-splitter-windows.md) szczegółowe informacje na temat stosowania **CSplitterWnd** tym więcej informacji na udostępnionych problemów paska przewijania.
+MFC rozszerza, aby umożliwić formanty paska przewijania podrzędne lub elementów równorzędnych okna jest przewijane (w rzeczywistości relacji nadrzędny/podrzędny między paska przewijania i jest przewijane okno może być cokolwiek). Jest to szczególnie ważne w przypadku pasków przewijania udostępnione za pomocą okna podziału. Zapoznaj się [techniczne 29 Uwaga](../mfc/tn029-splitter-windows.md) szczegółowe informacje na temat implementacji **CSplitterWnd** łącznie więcej informacji na udostępniony problemów paska przewijania.
 
-Na Notatka boczna występują dwa **CWnd** klas pochodnych, gdzie czas utworzenia Style paska przewijania, które są określone w są kolor i nie są przekazywane do systemu Windows. Przekazany do procedury tworzenia **ws_hscroll —** i **ws_vscroll —** można niezależnie ustawić, ale po tworzenia nie można zmienić. Oczywiście należy bezpośrednio testów lub ustaw WS_SCROLL bitów stylów okna utworzonego.
+Na marginesie, istnieją dwa **CWnd** klasy pochodne, gdy czas utworzenia Style paska przewijania, które są określone na są zablokował i nie zostaną przekazane do Windows. Przekazany do procedury tworzenia **WS_HSCROLL** i **WS_VSCROLL** można niezależnie ustawić, ale po utworzeniu nie można jej zmienić. Oczywiście należy bezpośrednio testów lub ustawić bity WS_SCROLL stylu okna, które zostały utworzone.
 
-Aby uzyskać **cmdiframewnd —** Style paska przewijania przekazywane w celu **Utwórz** lub **LoadFrame** są używane do tworzenia MDICLIENT. Jeśli chcesz mieć przewijany obszar MDICLIENT (takie jak Windows Menedżera programów) należy ustawić zarówno paska przewijania style (**ws_hscroll —** &#124; **ws_vscroll —**) używany do tworzenia stylu**Cmdiframewnd —**.
+Dla **CMDIFrameWnd** Style paska przewijania przekazanej do **Utwórz** lub **loadframe —** są używane do tworzenia MDICLIENT. Jeśli chcesz mieć przewijanym obszarze MDICLIENT (np. Windows Menedżera programów) należy ustawić zarówno paska przewijania style (**WS_HSCROLL** &#124; **WS_VSCROLL**) dla stylu użyty do utworzenia **CMDIFrameWnd**.
 
-Aby uzyskać **CSplitterWnd** Style paska przewijania dotyczą pasków przewijania udostępnionego specjalne dla regionów podziału. Dla statyczne okna podziału zwykle nie ustawisz albo style paska przewijania. Dla dynamiczne okna podziału, zazwyczaj należy pasek zestaw stylów dla kierunku będzie podziału, czyli przewijania **ws_hscroll —** czy jest możliwe podzielenie wierszy, **ws_vscroll —** czy jest możliwe podzielenie kolumn.
+Aby uzyskać **CSplitterWnd** Style paska przewijania dotyczą pasków specjalne przewijania udostępnionego dla regionów rozdzielacza. W przypadku systemu windows statyczny rozdzielacz ustawi zwykle nie albo styl paska przewijania. Dynamiczne okna podziału, zazwyczaj należy przypadku pasek zestaw stylów dla kierunku podzielisz, czyli przewijania **WS_HSCROLL** czy jest możliwe podzielenie wierszy, **WS_VSCROLL** czy jest możliwe podzielenie kolumn.
 
 ## <a name="see-also"></a>Zobacz też
 
-[Uwagi techniczne według numerów](../mfc/technical-notes-by-number.md)  
-[Uwagi techniczne według kategorii](../mfc/technical-notes-by-category.md)  
+[Uwagi techniczne według numerów](../mfc/technical-notes-by-number.md)<br/>
+[Uwagi techniczne według kategorii](../mfc/technical-notes-by-category.md)

@@ -1,5 +1,5 @@
 ---
-title: Klasy-O plików | Dokumentacja firmy Microsoft
+title: Klasy We / Wy plików | Dokumentacja firmy Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -25,52 +25,55 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b11996aadd58b456aa919d4ff888c783b4ba486e
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: fad854b054ca32819597126c5a4c0b9652df9210
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33356189"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46442139"
 ---
 # <a name="file-io-classes"></a>Klasy we/wy plików
-Te klasy zapewnia interfejs do plików dysku tradycyjnych, pliki w pamięci Active strumieni i Windows sockets. Wszystkie klasy pochodne `CFile` mogą być używane z `CArchive` obiektu w celu wykonania serializacji.  
-  
- Użyj następujących klas, szczególnie `CArchive` i `CFile`, jeśli piszesz przetwarzania wejścia/wyjścia. Zwykle nie trzeba pochodzić z tych klas. Jeśli używasz struktury aplikacji, domyślne implementacje **Otwórz** i **zapisać** polecenia w **pliku** menu będzie obsługiwać We/Wy plików (za pomocą klasy `CArchive`), tak długo, jak zastąpić dokumentu `Serialize` funkcji, aby podać szczegółowe informacje o jak dokument serializuje jego zawartość. Aby uzyskać więcej informacji na temat klasy plików i serializacji, zobacz artykuł [pliki w MFC](../mfc/files-in-mfc.md) i artykułu [szeregowanie](../mfc/serialization-in-mfc.md).  
-  
- [Cfile —](../mfc/reference/cfile-class.md)  
- Udostępnia interfejs pliku do plików binarnych dysku.  
-  
- [CStdioFile](../mfc/reference/cstdiofile-class.md)  
- Udostępnia `CFile` interfejs do plików dysku buforowanego strumienia, zazwyczaj w trybie tekstowym.  
-  
- [CMemFile](../mfc/reference/cmemfile-class.md)  
- Udostępnia `CFile` interfejs do plików w pamięci.  
-  
- [CSharedFile](../mfc/reference/csharedfile-class.md)  
- Udostępnia `CFile` interfejs do udostępnionych plików w pamięci.  
-  
- [COleStreamFile](../mfc/reference/colestreamfile-class.md)  
- Używa modelu COM `IStream` interfejsu w celu zapewnienia `CFile` dostępu do plików złożonych.  
-  
- [CSocketFile](../mfc/reference/csocketfile-class.md)  
- Udostępnia `CFile` interfejs do gniazda systemu Windows.  
-  
-## <a name="related-classes"></a>Klasy pokrewne  
- [CArchive](../mfc/reference/carchive-class.md)  
- Współpracuje z `CFile` obiektu do zaimplementowania magazynu trwałego dla obiektów za pomocą serializacji (zobacz [CObject::Serialize](../mfc/reference/cobject-class.md#serialize)).  
-  
- [CArchiveException](../mfc/reference/carchiveexception-class.md)  
- Wystąpił wyjątek archiwum.  
-  
- [CFileException](../mfc/reference/cfileexception-class.md)  
- Wyjątek zorientowane na plik.  
-  
- [CFileDialog](../mfc/reference/cfiledialog-class.md)  
- Zawiera standardowe okno dialogowe Otwieranie lub zapisywanie pliku.  
-  
- [CRecentFileList](../mfc/reference/crecentfilelist-class.md)  
- Przechowuje listy ostatnio używanych (MRU) pliku.  
-  
-## <a name="see-also"></a>Zobacz też  
- [Przegląd klas](../mfc/class-library-overview.md)
+
+Te klasy oferują interfejs do plików na tradycyjnych dysku, plików w pamięci, aktywne strumienie i Windows sockets. Wszystkie klasy pochodne `CFile` mogą być używane z `CArchive` obiektu w celu wykonania serializacji.
+
+Użyj następujących klas, zwłaszcza `CArchive` i `CFile`, jeśli piszesz przetwarzanie wejścia/wyjścia. Zwykle nie muszą pochodzić z tych klas. Jeśli używasz struktury aplikacji, domyślna implementacja metody **Otwórz** i **Zapisz** polecenia na **pliku** menu będzie obsługiwać we/wy (za pomocą klasy `CArchive`), tak długo, jak zastąpić dokumentu `Serialize` funkcję, aby podać szczegółowe informacje dotyczące sposobu dokumentu serializuje jego zawartość. Aby uzyskać więcej informacji na temat klasy plików i serializacji, zobacz artykuł [pliki w MFC](../mfc/files-in-mfc.md) oraz artykuł [serializacji](../mfc/serialization-in-mfc.md).
+
+[CFile](../mfc/reference/cfile-class.md)<br/>
+Udostępnia interfejs pliku do plików binarnych dysku.
+
+[CStdioFile](../mfc/reference/cstdiofile-class.md)<br/>
+Udostępnia `CFile` interfejsu do buforowanego strumienia plików dysku, zazwyczaj w trybie tekstowym.
+
+[CMemFile](../mfc/reference/cmemfile-class.md)<br/>
+Udostępnia `CFile` interfejsu do plików w pamięci.
+
+[CSharedFile](../mfc/reference/csharedfile-class.md)<br/>
+Udostępnia `CFile` interfejsu do udostępnionych plików w pamięci.
+
+[COleStreamFile](../mfc/reference/colestreamfile-class.md)<br/>
+COM używa `IStream` interfejsu, aby zapewnić `CFile` dostęp do plików złożona (c).
+
+[CSocketFile](../mfc/reference/csocketfile-class.md)<br/>
+Udostępnia `CFile` interfejs do gniazda Windows.
+
+## <a name="related-classes"></a>Klasy pokrewne
+
+[CArchive](../mfc/reference/carchive-class.md)<br/>
+Współpracuje z `CFile` obiektu do zaimplementowania trwałego magazynu obiektów za pomocą serializacji (zobacz [CObject::Serialize](../mfc/reference/cobject-class.md#serialize)).
+
+[CArchiveException](../mfc/reference/carchiveexception-class.md)<br/>
+Wyjątek archiwum.
+
+[CFileException](../mfc/reference/cfileexception-class.md)<br/>
+Wyjątek zorientowane na plik.
+
+[CFileDialog](../mfc/reference/cfiledialog-class.md)<br/>
+Zawiera standardowe okno dialogowe Otwieranie lub zapisywanie pliku.
+
+[CRecentFileList](../mfc/reference/crecentfilelist-class.md)<br/>
+Obsługuje listy ostatnio używanych (MRU) pliku.
+
+## <a name="see-also"></a>Zobacz też
+
+[Klasa — Przegląd](../mfc/class-library-overview.md)
 
