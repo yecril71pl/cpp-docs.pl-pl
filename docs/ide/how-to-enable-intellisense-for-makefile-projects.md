@@ -1,5 +1,5 @@
 ---
-title: 'Porady: włączenie funkcji IntelliSense dla projektów Makefile | Dokumentacja firmy Microsoft'
+title: 'Porady: Włączanie funkcji IntelliSense dla projektów plików reguł programu make | Dokumentacja firmy Microsoft'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,45 +17,47 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4b9b11f04f1fe8d201d6d07ca5ed83f9ca7d991b
-ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
+ms.openlocfilehash: 1dda7b485c5aef7b6277da3141f293e16ac7523b
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34705465"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46433728"
 ---
 # <a name="how-to-enable-intellisense-for-makefile-projects"></a>Porady: włączenie funkcji IntelliSense dla projektów plików reguł programu make
-IntelliSense nie działają w IDE dla projektów Visual C++ makefile, gdy projekt niektórych ustawień lub opcji kompilatora jest nieprawidłowo skonfigurowana. Ta procedura umożliwia konfigurowanie projektów makefile Visual C++, dzięki czemu IntelliSense działa, gdy projekty pliku reguł programu make są otwarte w środowisku projektowym Visual Studio.  
-  
-### <a name="to-enable-intellisense-for-makefile-projects-in-the-ide"></a>Aby włączyć IntelliSense dla projektów makefile w środowisku IDE  
-  
-1.  Otwórz **strony właściwości** okno dialogowe. Aby uzyskać więcej informacji, zobacz [Praca z właściwościami projektu](../ide/working-with-project-properties.md).  
-  
-2.  Rozwiń węzeł **właściwości konfiguracji** węzła.  
-  
-3.  Wybierz **NMake** właściwości strony, a następnie zmodyfikuj właściwości pod **IntelliSense** odpowiednio.  
-  
-    -   Ustaw **definicje preprocesora** właściwości, aby zdefiniować żadnych symboli preprocesora projektu pliku reguł programu make. Zobacz [/D (definicje preprocesora)](../build/reference/d-preprocessor-definitions.md), aby uzyskać więcej informacji.  
-  
-    -   Ustaw **obejmują ścieżki wyszukiwania** właściwości w celu określenia listy katalogów, które kompilator będzie wyszukiwać można rozpoznać odwołania do pliku, które są przekazywane do dyrektywy preprocesora projektu pliku reguł programu make. Zobacz [/I (dodatkowe katalogi dołączenia)](../build/reference/i-additional-include-directories.md), aby uzyskać więcej informacji.  
-  
-         Dla projektów, które są tworzone przy użyciu CL. Ustaw EXE z okna polecenia **INCLUDE** zmiennej środowiskowej, aby określić katalogi, które kompilator będzie wyszukiwać można rozpoznać odwołania do pliku, które są przekazywane do dyrektywy preprocesora projektu pliku reguł programu make.  
-  
-    -   Ustaw **wymuszone obejmuje** właściwości w celu określenia, które nagłówki plików do procesu, podczas kompilowania projektu pliku reguł programu make. Zobacz [/FI (nazwij wymuszone obejmują plik)](../build/reference/fi-name-forced-include-file.md), aby uzyskać więcej informacji.  
-  
-    -   Ustaw **ścieżkę wyszukiwania zestawu** właściwości w celu określenia listy katalogów, które kompilator będzie wyszukiwać można rozpoznać odwołania do zestawów platformy .NET w projekcie. Zobacz [/AI (Określ katalogi metadanych)](../build/reference/ai-specify-metadata-directories.md), aby uzyskać więcej informacji.  
-  
-    -   Ustaw **wymuszone za pomocą zestawów** właściwości w celu określenia, które zestawów platformy .NET do przetworzenia podczas kompilowania projektu pliku reguł programu make. Zobacz [/FU (nazwij wymuszone #using)](../build/reference/fu-name-forced-hash-using-file.md), aby uzyskać więcej informacji.  
-  
-    -   Ustaw **dodatkowe opcje** właściwość, aby określić dodatkowe przełączniki kompilatora używane przez funkcję IntelliSense, podczas analizowania plików C++.  
-  
-4.  Kliknij przycisk **OK** zamknąć strony właściwości.  
-  
-5.  Użyj **Zapisz wszystko** polecenie, aby zapisać ustawienia modyfikacji projektu.  
-  
- Przy następnym otwarciu projektu pliku reguł programu make w środowisku projektowym Visual Studio, uruchom **czystą rozwiązania** polecenia, a następnie **Kompiluj rozwiązanie** na projektu pliku reguł programu make. IntelliSense powinny działać poprawnie w środowisku IDE.  
-  
-## <a name="see-also"></a>Zobacz też  
- [Korzystanie z IntelliSense](/visualstudio/ide/using-intellisense)   
- [Odwołanie NMAKE](../build/nmake-reference.md)   
- [Instrukcje: tworzenie projektu C++ z istniejącego kodu](../ide/how-to-create-a-cpp-project-from-existing-code.md)
+
+IntelliSense nie może działać w środowisku IDE dla projektów plików reguł programu make Visual C++, gdy projekt pewnych ustawień lub opcje kompilatora są nieprawidłowo skonfigurowana. Ta procedura umożliwia konfigurowanie projektów plików reguł programu make Visual C++, tak aby technologia IntelliSense działa w przypadku projektów plików reguł programu make otwarte w środowisku programowania Visual Studio.
+
+### <a name="to-enable-intellisense-for-makefile-projects-in-the-ide"></a>Aby włączyć technologię IntelliSense dla projektów plików reguł programu make w środowisku IDE
+
+1. Otwórz **stron właściwości** okno dialogowe. Aby uzyskać więcej informacji, zobacz [Praca z właściwościami projektu](../ide/working-with-project-properties.md).
+
+1. Rozwiń **właściwości konfiguracji** węzła.
+
+1. Wybierz **NMake** właściwości strony, a następnie zmodyfikuj właściwości w obszarze **IntelliSense** odpowiednio.
+
+   - Ustaw **definicje preprocesora** właściwości, aby zdefiniować wszystkie symbole, preprocesor w projekt pliku reguł programu make. Zobacz [/D (definicje preprocesora)](../build/reference/d-preprocessor-definitions.md), aby uzyskać więcej informacji.
+
+   - Ustaw **obejmują ścieżkę wyszukiwania** właściwości w celu określenia listy katalogów, które kompilator będzie przeszukiwał, aby rozwiązać odwołania do plików, które są przekazywane do dyrektywy preprocesora do projektu pliku reguł programu make. Zobacz [/I (dodatkowe katalogi dołączenia)](../build/reference/i-additional-include-directories.md), aby uzyskać więcej informacji.
+
+         For projects that are built using CL.EXE from a Command Window, set the **INCLUDE** environment variable to specify directories that the compiler will search to resolve file references that are passed to preprocessor directives in your makefile project.
+
+   - Ustaw **wymuszone obejmuje** właściwości w celu określenia, który nagłówek plików do przetworzenia podczas kompilowania projektu pliku reguł programu make. Zobacz [/FI (nazwij wymuszone obejmują plik)](../build/reference/fi-name-forced-include-file.md), aby uzyskać więcej informacji.
+
+   - Ustaw **ścieżkę wyszukiwania zestawu** właściwości w celu określenia listy katalogów, które kompilator będzie przeszukiwał, aby rozwiązać odwołania do zestawów .NET w projekcie. Zobacz [/AI (Określ katalogi metadanych)](../build/reference/ai-specify-metadata-directories.md), aby uzyskać więcej informacji.
+
+   - Ustaw **wymuszone za pomocą zestawów** właściwości w celu określenia, które zestawy .NET do przetworzenia podczas kompilowania projektu pliku reguł programu make. Zobacz [/FU (nazwij wymuszone #using)](../build/reference/fu-name-forced-hash-using-file.md), aby uzyskać więcej informacji.
+
+   - Ustaw **dodatkowe opcje** właściwość, aby określić dodatkowe przełączniki kompilatora ma być używany przez funkcję IntelliSense, podczas analizowania plików C++.
+
+1. Kliknij przycisk **OK** zamknąć na stronach właściwości.
+
+1. Użyj **Zapisz wszystko** polecenie, aby zapisać ustawienia modyfikacji projektu.
+
+Przy następnym otwarciu projektu pliku reguł programu make w środowisku programowania Visual Studio Uruchom **czyste rozwiązanie** polecenia i następnie **Kompiluj rozwiązanie** polecenia projektu pliku reguł programu make. Funkcja IntelliSense powinny działać poprawnie w środowisku IDE.
+
+## <a name="see-also"></a>Zobacz też
+
+[Korzystanie z funkcji IntelliSense](/visualstudio/ide/using-intellisense)<br>
+[NMAKE — dokumentacja](../build/nmake-reference.md)<br>
+[Instrukcje: tworzenie projektu C++ z istniejącego kodu](../ide/how-to-create-a-cpp-project-from-existing-code.md)

@@ -21,18 +21,20 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f521145599a3d734a22dd3b2707ad4dd16df8e80
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 7324da5eaff15d240cabbaede2c2982021361257
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33345989"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46410984"
 ---
 # <a name="mapping-messages"></a>Mapowanie komunikatów
-Każda klasa framework, który może odbierać wiadomości lub poleceń ma własną "komunikat mapy." Platformę używa mapy komunikatów do nawiązywania ich funkcje obsługi wiadomości i poleceń. Każda klasa pochodzi od klasy `CCmdTarget` może mieć mapy komunikatów. Inne artykuły mapy komunikatów szczegółowo opisano i sposobu ich używania.  
-  
- Mimo nazwy "mapę komunikatów," wiadomość mapy obsługiwać oba komunikaty i polecenia — wszystkie trzy kategorie wiadomości na liście [kategorie komunikatów](../mfc/message-categories.md).  
-  
-## <a name="see-also"></a>Zobacz też  
- [Komunikaty i polecenia w strukturze](../mfc/messages-and-commands-in-the-framework.md)
+
+Każda klasa framework, która może odbierać komunikaty lub poleceń ma swój własny "mapie komunikatów." Środowisko wykorzystuje mapy komunikatów, aby nawiązać ich funkcje obsługi wiadomości i poleceń. Dowolnej klasy pochodnej z klasy `CCmdTarget` może mieć mapy komunikatów. Inne artykuły dotyczące wyjaśnić mapy komunikatów szczegółowo oraz opisano, jak z nich korzystać.
+
+Pomimo nazwy "mapie komunikatów," komunikat obsługiwać oba modele, mapy komunikaty i polecenia — wszystkie trzy kategorie wiadomości na liście [kategorie komunikatów](../mfc/message-categories.md).
+
+## <a name="see-also"></a>Zobacz też
+
+[Komunikaty i polecenia w strukturze](../mfc/messages-and-commands-in-the-framework.md)
 

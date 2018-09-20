@@ -38,241 +38,272 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: facfa4d9f98100666f267920cbd18c24ae516e72
-ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
+ms.openlocfilehash: a699744955088ad49c0e701166cf368695354fac
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/26/2018
-ms.locfileid: "36951614"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46402203"
 ---
 # <a name="cd2dtextlayout-class"></a>Klasa CD2DTextLayout
-Otoka dla IDWriteTextLayout.  
-  
-## <a name="syntax"></a>Składnia  
-  
-```  
-class CD2DTextLayout : public CD2DResource;  
-```  
-  
-## <a name="members"></a>Elementy członkowskie  
-  
-### <a name="public-constructors"></a>Konstruktory publiczne  
-  
-|Nazwa|Opis|  
-|----------|-----------------|  
-|[CD2DTextLayout::CD2DTextLayout](#cd2dtextlayout)|Tworzy obiekt CD2DTextLayout.|  
-|[CD2DTextLayout:: ~ CD2DTextLayout](#cd2dtextlayout__~cd2dtextlayout)|Destruktor. Wywoływane, gdy trwa niszczenie obiektu D2D układu tekstu.|  
-  
-### <a name="public-methods"></a>Metody publiczne  
-  
-|Nazwa|Opis|  
-|----------|-----------------|  
-|[CD2DTextLayout::Create](#create)|Tworzy CD2DTextLayout. (Przesłania [CD2DResource::Create](../../mfc/reference/cd2dresource-class.md#create).)|  
-|[CD2DTextLayout::Destroy](#destroy)|Niszczy obiektu CD2DTextLayout. (Przesłania [CD2DResource::Destroy](../../mfc/reference/cd2dresource-class.md#destroy).)|  
-|[CD2DTextLayout::Get](#get)|Zwraca interfejs IDWriteTextLayout|  
-|[CD2DTextLayout::GetFontFamilyName](#getfontfamilyname)|Kopiuje nazwę rodziny czcionek tekstu w określonej pozycji.|  
-|[CD2DTextLayout::GetLocaleName](#getlocalename)|Pobiera nazwę ustawień regionalnych tekstu w określonej pozycji.|  
-|[CD2DTextLayout::IsValid](#isvalid)|Sprawdza poprawność zasobów (zastępuje [CD2DResource::IsValid](../../mfc/reference/cd2dresource-class.md#isvalid).)|  
-|[CD2DTextLayout::ReCreate](#recreate)|Ponownie tworzy CD2DTextLayout. (Przesłania [CD2DResource::ReCreate](../../mfc/reference/cd2dresource-class.md#recreate).)|  
-|[CD2DTextLayout::SetFontFamilyName](#setfontfamilyname)|Nazwy rodziny czcionek zerem zestawów dla tekstu w zakresie określony tekst.|  
-|[CD2DTextLayout::SetLocaleName](#setlocalename)|Ustawia nazwę ustawień regionalnych dla tekstu w zakresie określony tekst.|  
-  
-### <a name="public-operators"></a>Operatory publiczne  
-  
-|Nazwa|Opis|  
-|----------|-----------------|  
-|[CD2DTextLayout::operator IDWriteTextLayout *](#operator_idwritetextlayout_star)|Zwraca interfejs IDWriteTextLayout|  
-  
-### <a name="protected-data-members"></a>Dane chronione elementy członkowskie  
-  
-|Nazwa|Opis|  
-|----------|-----------------|  
-|[CD2DTextLayout::m_pTextLayout](#m_ptextlayout)|Wskaźnik do IDWriteTextLayout.|  
-  
-## <a name="inheritance-hierarchy"></a>Hierarchia dziedziczenia  
- [CObject](../../mfc/reference/cobject-class.md)  
-  
- [CD2DResource](../../mfc/reference/cd2dresource-class.md)  
-  
- [CD2DTextLayout](../../mfc/reference/cd2dtextlayout-class.md)  
-  
-## <a name="requirements"></a>Wymagania  
- **Nagłówek:** afxrendertarget.h  
-  
-##  <a name="_dtorcd2dtextlayout"></a>  CD2DTextLayout:: ~ CD2DTextLayout  
- Destruktor. Wywoływane, gdy trwa niszczenie obiektu D2D układu tekstu.  
-  
-```  
+
+Otoka IDWriteTextLayout.
+
+## <a name="syntax"></a>Składnia
+
+```
+class CD2DTextLayout : public CD2DResource;
+```
+
+## <a name="members"></a>Elementy członkowskie
+
+### <a name="public-constructors"></a>Konstruktory publiczne
+
+|Nazwa|Opis|
+|----------|-----------------|
+|[CD2DTextLayout::CD2DTextLayout](#cd2dtextlayout)|Tworzy obiekt CD2DTextLayout.|
+|[CD2DTextLayout:: ~ CD2DTextLayout](#cd2dtextlayout__~cd2dtextlayout)|Destruktor. Wywołuje się, kiedy niszczony jest obiekt układu tekstu D2D.|
+
+### <a name="public-methods"></a>Metody publiczne
+
+|Nazwa|Opis|
+|----------|-----------------|
+|[CD2DTextLayout::Create](#create)|Tworzy CD2DTextLayout. (Przesłania [CD2DResource::Create](../../mfc/reference/cd2dresource-class.md#create).)|
+|[CD2DTextLayout::Destroy](#destroy)|Niszczy obiekt CD2DTextLayout. (Przesłania [CD2DResource::Destroy](../../mfc/reference/cd2dresource-class.md#destroy).)|
+|[CD2DTextLayout::Get](#get)|Zwraca IDWriteTextLayout interfejsu|
+|[CD2DTextLayout::GetFontFamilyName](#getfontfamilyname)|Kopiuje nazwy rodziny czcionek tekstu w określonej pozycji.|
+|[CD2DTextLayout::GetLocaleName](#getlocalename)|Pobiera nazwę ustawień regionalnych tekstu w określonej pozycji.|
+|[CD2DTextLayout::IsValid](#isvalid)|Sprawdza poprawność zasobów (zastępuje [CD2DResource::IsValid](../../mfc/reference/cd2dresource-class.md#isvalid).)|
+|[CD2DTextLayout::ReCreate](#recreate)|Ponownie tworzy CD2DTextLayout. (Przesłania [CD2DResource::ReCreate](../../mfc/reference/cd2dresource-class.md#recreate).)|
+|[CD2DTextLayout::SetFontFamilyName](#setfontfamilyname)|Nazwa rodziny czcionek zakończony znakiem null zestawów, dla tekstu w zakresie określony tekst|
+|[CD2DTextLayout::SetLocaleName](#setlocalename)|Ustawia nazwę ustawień regionalnych dla tekstu w zakresie określony tekst|
+
+### <a name="public-operators"></a>Operatory publiczne
+
+|Nazwa|Opis|
+|----------|-----------------|
+|[CD2DTextLayout::operator IDWriteTextLayout *](#operator_idwritetextlayout_star)|Zwraca IDWriteTextLayout interfejsu|
+
+### <a name="protected-data-members"></a>Chronione elementy członkowskie danych
+
+|Nazwa|Opis|
+|----------|-----------------|
+|[CD2DTextLayout::m_pTextLayout](#m_ptextlayout)|Wskaźnik do IDWriteTextLayout.|
+
+## <a name="inheritance-hierarchy"></a>Hierarchia dziedziczenia
+
+[CObject](../../mfc/reference/cobject-class.md)
+
+[CD2DResource](../../mfc/reference/cd2dresource-class.md)
+
+[CD2DTextLayout](../../mfc/reference/cd2dtextlayout-class.md)
+
+## <a name="requirements"></a>Wymagania
+
+**Nagłówek:** afxrendertarget.h
+
+##  <a name="_dtorcd2dtextlayout"></a>  CD2DTextLayout:: ~ CD2DTextLayout
+
+Destruktor. Wywołuje się, kiedy niszczony jest obiekt układu tekstu D2D.
+
+```
 virtual ~CD2DTextLayout();
-```  
-  
-##  <a name="cd2dtextlayout"></a>  CD2DTextLayout::CD2DTextLayout  
- Tworzy obiekt CD2DTextLayout.  
-  
-```  
+```
+
+##  <a name="cd2dtextlayout"></a>  CD2DTextLayout::CD2DTextLayout
+
+Tworzy obiekt CD2DTextLayout.
+
+```
 CD2DTextLayout(
-    CRenderTarget* pParentTarget,  
-    const CString& strText,  
-    CD2DTextFormat& textFormat,  
-    const CD2DSizeF& sizeMax,  
+    CRenderTarget* pParentTarget,
+    const CString& strText,
+    CD2DTextFormat& textFormat,
+    const CD2DSizeF& sizeMax,
     BOOL bAutoDestroy = TRUE);
-```  
-  
-### <a name="parameters"></a>Parametry  
- *pParentTarget*  
- Wskaźnik do obiektu docelowego renderowania.  
-  
- *strText*  
- Cstring — obiekt, który zawiera ciąg do utworzenia nowego obiektu CD2DTextLayout z.  
-  
- *textFormat*  
- Cstring — obiekt, który zawiera format do zastosowania do ciągu.  
-  
- *sizeMax*  
- Rozmiar pola układu.  
-  
- *bAutoDestroy*  
- Wskazuje, że obiekt zostanie zniszczony przez właściciela (pParentTarget).  
-  
-##  <a name="create"></a>  CD2DTextLayout::Create  
- Tworzy CD2DTextLayout.  
-  
-```  
+```
+
+### <a name="parameters"></a>Parametry
+
+*pParentTarget*<br/>
+Wskaźnik do elementu docelowego renderowania.
+
+*strText*<br/>
+Obiekt CString, który zawiera ciąg, aby utworzyć nowy obiekt CD2DTextLayout.
+
+*textFormat*<br/>
+Obiekt CString, który zawiera formatu do zastosowania do ciągu.
+
+*sizeMax*<br/>
+Rozmiar pola układu.
+
+*bAutoDestroy*<br/>
+Wskazuje, że obiekt jest niszczony przez właściciela (pParentTarget).
+
+##  <a name="create"></a>  CD2DTextLayout::Create
+
+Tworzy CD2DTextLayout.
+
+```
 virtual HRESULT Create(CRenderTarget* */);
-```  
-  
-### <a name="return-value"></a>Wartość zwracana  
- Jeśli metoda zakończy się powodzeniem, zwraca wartość S_OK. W przeciwnym wypadku zwraca kod błędu HRESULT.  
-  
-##  <a name="destroy"></a>  CD2DTextLayout::Destroy  
- Niszczy obiektu CD2DTextLayout.  
-  
-```  
+```
+
+### <a name="return-value"></a>Wartość zwracana
+
+Jeśli metoda się powiedzie, zwraca wartość S_OK. W przeciwnym razie zwraca kod błędu HRESULT.
+
+##  <a name="destroy"></a>  CD2DTextLayout::Destroy
+
+Niszczy obiekt CD2DTextLayout.
+
+```
 virtual void Destroy();
-```  
-  
-##  <a name="get"></a>  CD2DTextLayout::Get  
- Zwraca interfejs IDWriteTextLayout  
-  
-```  
+```
+
+##  <a name="get"></a>  CD2DTextLayout::Get
+
+Zwraca IDWriteTextLayout interfejsu
+
+```
 IDWriteTextLayout* Get();
-```  
-  
-### <a name="return-value"></a>Wartość zwracana  
- Wskaźnik do interfejsu IDWriteTextLayout lub wartość NULL, jeśli obiekt nie został jeszcze zainicjowany.  
-  
-##  <a name="getfontfamilyname"></a>  CD2DTextLayout::GetFontFamilyName  
- Kopiuje nazwę rodziny czcionek tekstu w określonej pozycji.  
-  
-```  
+```
+
+### <a name="return-value"></a>Wartość zwracana
+
+Wskaźnik do interfejsu IDWriteTextLayout lub wartość NULL, jeśli obiekt nie został jeszcze zainicjowany.
+
+##  <a name="getfontfamilyname"></a>  CD2DTextLayout::GetFontFamilyName
+
+Kopiuje nazwy rodziny czcionek tekstu w określonej pozycji.
+
+```
 CString GetFontFamilyName(
-    UINT32 currentPosition,  
-    DWRITE_TEXT_RANGE* textRange = NULL) const;  
-```  
-  
-### <a name="parameters"></a>Parametry  
- *currentPosition*  
- Pozycja tekstu do sprawdzenia.  
-  
- *textRange*  
- Zakres tekstu, który ma taką samą formatowanie jako tekst w określonym przez currentPosition pozycji. Oznacza to, że ma dokładne formatowanie jako pozycja określona, w tym między innymi nazwę rodziny czcionek.  
-  
-### <a name="return-value"></a>Wartość zwracana  
- Cstring — obiekt, który zawiera nazwę bieżącego rodziny czcionek.  
-  
-##  <a name="getlocalename"></a>  CD2DTextLayout::GetLocaleName  
- Pobiera nazwę ustawień regionalnych tekstu w określonej pozycji.  
-  
-```  
+    UINT32 currentPosition,
+    DWRITE_TEXT_RANGE* textRange = NULL) const;
+```
+
+### <a name="parameters"></a>Parametry
+
+*currentPosition*<br/>
+Położenie tekstu do sprawdzenia.
+
+*TextRange*<br/>
+Zakres tekstu, który ma taką samą formatowania jako tekst w miejscu określonym przez currentPosition. Oznacza to, że działanie jest dokładne formatowanie jako pozycja określony, w tym między innymi nazwę rodziny czcionek.
+
+### <a name="return-value"></a>Wartość zwracana
+
+Obiekt CString, który zawiera nazwę bieżącej rodziny czcionek.
+
+##  <a name="getlocalename"></a>  CD2DTextLayout::GetLocaleName
+
+Pobiera nazwę ustawień regionalnych tekstu w określonej pozycji.
+
+```
 CString GetLocaleName(
-    UINT32 currentPosition,  
-    DWRITE_TEXT_RANGE* textRange = NULL) const;  
-```  
-  
-### <a name="parameters"></a>Parametry  
- *currentPosition*  
- Pozycja tekstu do sprawdzenia.  
-  
- *textRange*  
- Zakres tekstu, który ma taką samą formatowanie jako tekst w określonym przez currentPosition pozycji. Oznacza to, że ma dokładne formatowanie jako pozycja określona, w tym między innymi Nazwa ustawień regionalnych.  
-  
-### <a name="return-value"></a>Wartość zwracana  
- Cstring — obiekt, który zawiera bieżąca nazwa ustawień regionalnych.  
-  
-##  <a name="isvalid"></a>  CD2DTextLayout::IsValid  
- Sprawdzanie poprawności zasobów  
-  
-```  
-virtual BOOL IsValid() const;  
-```  
-  
-### <a name="return-value"></a>Wartość zwracana  
- Wartość TRUE, jeśli zasób jest nieprawidłowy; w przeciwnym razie wartość FALSE.  
-  
-##  <a name="m_ptextlayout"></a>  CD2DTextLayout::m_pTextLayout  
- Wskaźnik do IDWriteTextLayout.  
-  
-```  
-IDWriteTextLayout* m_pTextLayout;  
-```  
-  
-##  <a name="operator_idwritetextlayout_star"></a>  CD2DTextLayout::operator IDWriteTextLayout *  
- Zwraca interfejs IDWriteTextLayout  
-  
-```  
+    UINT32 currentPosition,
+    DWRITE_TEXT_RANGE* textRange = NULL) const;
+```
+
+### <a name="parameters"></a>Parametry
+
+*currentPosition*<br/>
+Położenie tekstu do wglądu.
+
+*TextRange*<br/>
+Zakres tekstu, który ma taką samą formatowania jako tekst w miejscu określonym przez currentPosition. Oznacza to, że działanie jest dokładne formatowanie jako pozycja określony, w tym między innymi do nazwy ustawień regionalnych.
+
+### <a name="return-value"></a>Wartość zwracana
+
+Obiekt CString, który zawiera bieżącą nazwę ustawień regionalnych.
+
+##  <a name="isvalid"></a>  CD2DTextLayout::IsValid
+
+Sprawdzanie zasobów ważności
+
+```
+virtual BOOL IsValid() const;
+```
+
+### <a name="return-value"></a>Wartość zwracana
+
+Wartość TRUE, jeśli zasób jest ważny; w przeciwnym razie wartość FALSE.
+
+##  <a name="m_ptextlayout"></a>  CD2DTextLayout::m_pTextLayout
+
+Wskaźnik do IDWriteTextLayout.
+
+```
+IDWriteTextLayout* m_pTextLayout;
+```
+
+##  <a name="operator_idwritetextlayout_star"></a>  CD2DTextLayout::operator IDWriteTextLayout *
+
+Zwraca IDWriteTextLayout interfejsu
+
+```
 operator IDWriteTextLayout*();
-```   
-  
-### <a name="return-value"></a>Wartość zwracana  
- Wskaźnik do interfejsu IDWriteTextLayout lub wartość NULL, jeśli obiekt nie został jeszcze zainicjowany.  
-  
-##  <a name="recreate"></a>  CD2DTextLayout::ReCreate  
- Ponownie tworzy CD2DTextLayout.  
-  
-```  
+```
+
+### <a name="return-value"></a>Wartość zwracana
+
+Wskaźnik do interfejsu IDWriteTextLayout lub wartość NULL, jeśli obiekt nie został jeszcze zainicjowany.
+
+##  <a name="recreate"></a>  CD2DTextLayout::ReCreate
+
+Ponownie tworzy CD2DTextLayout.
+
+```
 virtual HRESULT ReCreate(CRenderTarget* */);
-```  
-  
-### <a name="return-value"></a>Wartość zwracana  
- Jeśli metoda zakończy się powodzeniem, zwraca wartość S_OK. W przeciwnym wypadku zwraca kod błędu HRESULT.  
-  
-##  <a name="setfontfamilyname"></a>  CD2DTextLayout::SetFontFamilyName  
- Nazwy rodziny czcionek zerem zestawów dla tekstu w zakresie określony tekst.  
-  
-```  
+```
+
+### <a name="return-value"></a>Wartość zwracana
+
+Jeśli metoda się powiedzie, zwraca wartość S_OK. W przeciwnym razie zwraca kod błędu HRESULT.
+
+##  <a name="setfontfamilyname"></a>  CD2DTextLayout::SetFontFamilyName
+
+Nazwa rodziny czcionek zakończony znakiem null zestawów, dla tekstu w zakresie określony tekst
+
+```
 BOOL SetFontFamilyName(
-    LPCWSTR pwzFontFamilyName,  
+    LPCWSTR pwzFontFamilyName,
     DWRITE_TEXT_RANGE textRange);
-```  
-  
-### <a name="parameters"></a>Parametry  
- *pwzFontFamilyName*  
- Nazwę rodziny czcionek, która ma zastosowanie do ciągu cały tekst w zakresie określonym przez textRange  
-  
- *textRange*  
- Zakres tekstu, którego dotyczy ta zmiana  
-  
-### <a name="return-value"></a>Wartość zwracana  
- Jeśli metoda zakończy się powodzeniem, zwraca wartość PRAWDA. W przeciwnym razie zwraca wartość FALSE  
-  
-##  <a name="setlocalename"></a>  CD2DTextLayout::SetLocaleName  
- Ustawia nazwę ustawień regionalnych dla tekstu w zakresie określony tekst.  
-  
-```  
+```
+
+### <a name="parameters"></a>Parametry
+
+*pwzFontFamilyName*<br/>
+Nazwa rodziny czcionek, która ma zastosowanie do cały ciąg tekstowy w zakresie określonym przez textRange
+
+*TextRange*<br/>
+Zakres tekstu, którego dotyczy ta zmiana
+
+### <a name="return-value"></a>Wartość zwracana
+
+Jeśli metoda się powiedzie, zwraca wartość PRAWDA. W przeciwnym razie zwraca wartość FALSE
+
+##  <a name="setlocalename"></a>  CD2DTextLayout::SetLocaleName
+
+Ustawia nazwę ustawień regionalnych dla tekstu w zakresie określony tekst
+
+```
 BOOL SetLocaleName(
-    LPCWSTR pwzLocaleName,  
+    LPCWSTR pwzLocaleName,
     DWRITE_TEXT_RANGE textRange);
-```  
-  
-### <a name="parameters"></a>Parametry  
- *pwzLocaleName*  
- Ciąg nazwy zerem ustawień regionalnych  
-  
- *textRange*  
- Zakres tekstu, którego dotyczy ta zmiana  
-  
-### <a name="return-value"></a>Wartość zwracana  
- Jeśli metoda zakończy się powodzeniem, zwraca wartość PRAWDA. W przeciwnym razie zwraca wartość FALSE  
-  
-## <a name="see-also"></a>Zobacz też  
- [Klasy](../../mfc/reference/mfc-classes.md)
+```
+
+### <a name="parameters"></a>Parametry
+
+*pwzLocaleName*<br/>
+Ciąg zakończony znakiem null ustawienia regionalne nazwy
+
+*TextRange*<br/>
+Zakres tekstu, którego dotyczy ta zmiana
+
+### <a name="return-value"></a>Wartość zwracana
+
+Jeśli metoda się powiedzie, zwraca wartość PRAWDA. W przeciwnym razie zwraca wartość FALSE
+
+## <a name="see-also"></a>Zobacz też
+
+[Klasy](../../mfc/reference/mfc-classes.md)

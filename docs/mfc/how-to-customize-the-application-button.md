@@ -14,54 +14,57 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 828886e6a5c4891e1fd7e1d820ee00542e052cc2
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: ef82904a5c84847f3f0064cba6dee171c960f135
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33351367"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46401475"
 ---
 # <a name="how-to-customize-the-application-button"></a>Porady: dostosowywanie przycisku Aplikacja
-Po kliknięciu przycisku aplikacji, menu poleceń jest wyświetlany. Zazwyczaj menu zawiera polecenia związane z plików, takie jak **Otwórz**, **zapisać**, **drukowania**, i **zakończenia**.  
-  
- ![Przycisk aplikacji wstążki MFC](../mfc/media/application_button.png "application_button")  
-  
- Aby dostosować przycisku aplikacji, otwórz go w **właściwości** , zmodyfikuj jego właściwości, a następnie podglądu formantu wstążki.  
-  
-### <a name="to-open-the-application-button-in-the-properties-window"></a>Aby otworzyć okno Właściwości przycisku aplikacji  
-  
-1.  W programie Visual Studio na **widoku** menu, kliknij przycisk **widok zasobów**.  
-  
-2.  W **widok zasobów**, kliknij dwukrotnie plik zasobu wstążki, aby go wyświetlić na powierzchni projektu.  
-  
-3.  Na powierzchni projektu, kliknij prawym przyciskiem myszy przycisk menu aplikacja, a następnie kliknij przycisk **właściwości**.  
-  
-## <a name="application-button-properties"></a>Właściwości przycisku aplikacji  
- W poniższej tabeli opisano właściwości przycisku aplikacji.  
-  
-|Właściwość|Definicja|  
-|--------------|----------------|  
-|**Przyciski**|Zawiera kolekcję maksymalnie trzy przyciski, które znajdują się w prawym dolnym rogu menu aplikacji.|  
-|**Podpis**|Określa tekst formantu. W przeciwieństwie do innych elementów wstążki przycisku aplikacji nie jest wyświetlany tekst podpisu. Zamiast tego tekst jest używany dla ułatwień dostępu.|  
-|**Obraz HDPI**|Określa identyfikator wysokie dpi ikona przycisk aplikacji (HDPI). Po uruchomieniu aplikacji na monitorze wysokiej rozdzielczości DPI **obraz HDPI** jest używany zamiast **obrazu**.|  
-|**Duże obrazy HDPI**|Określa identyfikator wysokiej rozdzielczości DPI dużych obrazów. Po uruchomieniu aplikacji na monitorze wysokiej rozdzielczości DPI **duże obrazy HDPI** jest używany zamiast **duże obrazy**.|  
-|**Małe obrazy HDPI**|Określa identyfikator wysokiej małe obrazy DPI. Po uruchomieniu aplikacji na monitorze wysokiej rozdzielczości DPI **małe obrazy HDPI** jest używany zamiast **małe obrazy**.|  
-|**ID**|Określa identyfikator kontrolki.|  
-|**Obraz**|Określa identyfikator przycisku ikonę aplikacji. Ikona jest mapą bitową 26 x 26 32-bitowy, zawierający alfa przezroczystości. Przezroczyste obiekty ikony są wyróżnione po kliknięciu przycisku aplikacji lub aktywowany przez.|  
-|**Klucze**|Określa ciąg, który jest wyświetlany po klucz Porada nawigacji jest włączona. Porada klucza nawigacji jest włączona po naciśnięciu klawisza ALT.|  
-|**Duże obrazy**|Określa identyfikator obrazu, który zawiera szereg ikony 32 x 32. Ikony są używane przez przyciski w kolekcji elementów Main.|  
-|**Elementy główne**|Zawiera kolekcję elementów menu, które są wyświetlane w menu aplikacji.|  
-|**Podpis MRU**|Określa tekst wyświetlany w panelu ostatnie listy.|  
-|**Małe obrazy**|Określa identyfikator obrazu, który zawiera szereg ikony 16 x 16. Ikony są używane przez przycisków w kolekcji przycisków.|  
-|**Użyj**|Włącza lub wyłącza panelu ostatnie listy. Panel ostatnie listy pojawia się w menu aplikacji.|  
-|**Szerokość**|Określa szerokość w pikselach panelu ostatnie listy.|  
-  
- W menu aplikacji nie jest wyświetlana na powierzchni projektu. Aby go wyświetlić, możesz wyświetlić podgląd Wstążki lub uruchomić aplikację.  
-  
-#### <a name="to-preview-the-ribbon-control"></a>Aby wyświetlić podgląd formantu wstążki  
-  
--   Na **paska narzędzi edytora wstążki**, kliknij przycisk **wstążki testu**.  
-  
-## <a name="see-also"></a>Zobacz też  
- [Projektant wstążki (MFC)](../mfc/ribbon-designer-mfc.md)
+
+Po kliknięciu przycisku aplikacja, jest wyświetlany menu poleceń. Zazwyczaj menu zawiera polecenia związane z plików takich jak **Otwórz**, **Zapisz**, **drukowania**, i **zakończenia**.
+
+![Przycisk aplikacji wstążki MFC](../mfc/media/application_button.png "application_button")
+
+Dostosowywanie przycisku aplikacja, otwórz go w **właściwości** , zmodyfikuj jego właściwości, a następnie Wyświetl podgląd formantu wstążki.
+
+### <a name="to-open-the-application-button-in-the-properties-window"></a>Aby otworzyć przycisku aplikacji w oknie dialogowym właściwości
+
+1. W programie Visual Studio na **widoku** menu, kliknij przycisk **widok zasobów**.
+
+1. W **widok zasobów**, kliknij dwukrotnie zasób wstążki, aby wyświetlić je na powierzchni projektowej.
+
+1. Na powierzchni projektowej kliknij prawym przyciskiem myszy menu przycisku aplikacji, a następnie kliknij przycisk **właściwości**.
+
+## <a name="application-button-properties"></a>Właściwości przycisku w aplikacji
+
+W poniższej tabeli opisano właściwości przycisku aplikacji.
+
+|Właściwość|Definicja|
+|--------------|----------------|
+|**Przyciski**|Zawiera kolekcję maksymalnie trzy przyciski, które pojawiają się w prawym dolnym rogu menu aplikacji.|
+|**Podpis**|Określa tekst kontrolki. W przeciwieństwie do innych elementów wstążki przycisku aplikacji nie jest wyświetlany tekst podpisu. Zamiast tego tekst jest używany w ułatwienia dostępu.|
+|**Obraz HDPI**|Określa identyfikator wysokie dpi ikona przycisku (HDPI) aplikacji. Gdy aplikacja zostanie uruchomiona na monitorze wysokiej rozdzielczości DPI **obraz HDPI** jest używana zamiast **obraz**.|
+|**Duże obrazy HDPI**|Określa identyfikator o wysokiej rozdzielczości DPI dużych obrazów. Gdy aplikacja zostanie uruchomiona na monitorze wysokiej rozdzielczości DPI **duże obrazy HDPI** jest używana zamiast **duże obrazy**.|
+|**Małe obrazy HDPI**|Określa identyfikator o wysokiej rozdzielczości DPI małe obrazy. Gdy aplikacja zostanie uruchomiona na monitorze wysokiej rozdzielczości DPI **małe obrazy HDPI** jest używana zamiast **małe obrazy**.|
+|**ID**|Określa identyfikator kontrolki.|
+|**Obraz**|Określa identyfikator ikony przycisku aplikacji. Ikona jest mapą bitową 26 x 26 32-bitowych, zawierającej alfa przezroczystości. Po kliknięciu przycisku aplikacji lub najechania kursorem, zostały wyróżnione przezroczyste obiekty ikony.|
+|**klucze**|Określa ciąg, który jest wyświetlany, gdy porada klucz Nawigacja jest włączona. Porada klucz nawigacji jest włączona po naciśnięciu klawisza ALT.|
+|**Duże obrazy**|Określa identyfikator obrazu, który zawiera szereg ikony 32 x 32. Ikony są używane przez przycisków w kolekcji elementów Main.|
+|**Elementy główne**|Zawiera kolekcję elementów menu, które są wyświetlane w menu aplikacji.|
+|**Podpis MRU**|Określa tekst wyświetlany na panelu listy ostatnio używanych.|
+|**Małe obrazy**|Określa identyfikator obrazu, który zawiera szereg ikony 16 x 16. Ikony są używane przez przycisków w kolekcji przycisków.|
+|**Użyj**|Włącza lub wyłącza panel listy ostatnio używanych. W menu aplikacji zostanie wyświetlony panel listy ostatnio używanych.|
+|**Szerokość**|Określa szerokość w pikselach na panelu listy ostatnio używanych.|
+
+W menu aplikacji nie jest wyświetlana na powierzchni projektowej. Aby ją wyświetlić, możesz przeglądanie Wstążki lub uruchomić aplikację.
+
+#### <a name="to-preview-the-ribbon-control"></a>Aby wyświetlić podgląd formantu wstążki
+
+- Na **pasek narzędzi edytora wstążki**, kliknij przycisk **Testuj Wstążkę**.
+
+## <a name="see-also"></a>Zobacz też
+
+[Projektant wstążki (MFC)](../mfc/ribbon-designer-mfc.md)
 

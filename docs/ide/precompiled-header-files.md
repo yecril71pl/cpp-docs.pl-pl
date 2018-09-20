@@ -20,23 +20,25 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4595ea9ce27c40fb798ac050ce456c4d43b2cacb
-ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
+ms.openlocfilehash: 8d2e2bab9da3d19347577f0b1d1e8ab2ed6bb0dc
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "33328090"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46404023"
 ---
 # <a name="precompiled-header-files"></a>Prekompilowane pliki nagłówka
-Te pliki są używane do tworzenia prekompilowanego pliku nagłówkowego *nazwa_projektu.nazwa_modułu.nazwa_procedury*.pch i wstępnie skompilowane typy plików Stdafx.obj.  
-  
- Te pliki znajdują się w *nazwa_projektu.nazwa_modułu.nazwa_procedury* katalogu. W Eksploratorze rozwiązań Stdafx.h znajduje się w folderze pliki nagłówkowe, a Stdafx.cpp znajduje się w folderze plików źródłowych.  
-  
-|Nazwa pliku|Opis|  
-|---------------|-----------------|  
-|Stdafx.h|Dołączanego pliku dla standardowych systemowych plików dołączanych i pliki nagłówkowe specyficznego dla projektu, które są często używane, ale są rzadko zmieniane.<br /><br /> Nie należy zdefiniować lub usuń wszelkie makra _AFX_NO_XXX w pliku stdafx.h; zobacz artykuł bazy wiedzy Knowledge Base "PRB: powodować problemy podczas definiowania _AFX_NO_XXX". Artykuły bazy wiedzy można znaleźć w bibliotece MSDN lub na [http:// support.microsoft.com/](http://%20support.microsoft.com/).|  
-|Stdafx.cpp|Zawiera dyrektywy preprocesora `#include "stdafx.h"` i dodaje Dołącz pliki dla wstępnie skompilowane typy. Wstępnie skompilowanych plików dowolnego typu, w tym pliki nagłówkowe obsługuje szybsze kompilacji, ograniczając kompilacji tylko do tych plików, które tego wymagają. Po utworzeniu projektu po raz pierwszy zauważyć znacznie szybsze tworzenie razy w kolejnych kompilacjach z powodu obecności pliki prekompilowanego nagłówka.|  
-  
-## <a name="see-also"></a>Zobacz też  
- [Typy plików utworzonych dla projektów Visual C++](../ide/file-types-created-for-visual-cpp-projects.md)   
- [Praca z właściwościami projektu](../ide/working-with-project-properties.md)
+
+Te pliki są używane do tworzenia prekompilowanego pliku nagłówkowego *Projname*.pch i wstępnie skompilowane typy plików Stdafx.obj.
+
+Te pliki znajdują się w *Projname* katalogu. W oknie Eksploratora rozwiązań Stdafx.h znajduje się w folderze plików nagłówkowych i Stdafx.cpp znajduje się w folderze plików źródłowych.
+
+|Nazwa pliku|Opis|
+|---------------|-----------------|
+|stdafx.h|Plik dołączania dla standardowych systemowych plików dołączanych i pliki nagłówkowe specyficzne dla projektu, które są często używane, ale są rzadko zmieniane.<br /><br /> Nie należy zdefiniować lub Usuń definicje, żadnego z makr _AFX_NO_XXX w pliku stdafx.h; zobacz artykuł bazy wiedzy Knowledge Base "PRB: wystąpić problemy podczas definiowania _AFX_NO_XXX". Można znaleźć artykuły bazy wiedzy w bibliotece MSDN lub na [http:// support.microsoft.com/](http://%20support.microsoft.com/).|
+|stdafx.cpp|Zawiera dyrektywy preprocesora `#include "stdafx.h"` i dodaje uwzględnianie plików na potrzeby wstępnie skompilowane typy. Prekompilowane pliki dowolnego typu, w tym pliki nagłówków obsługuje szybsze czasy kompilacji przez ograniczenie możliwości wykonywania kompilacji tylko do tych plików, które tego wymagają. Po skompilowaniu projektu po raz pierwszy można zauważyć, znacznie szybciej tworzyć razy w kolejnych kompilacjach z powodu obecności plików wstępnie skompilowanego nagłówka.|
+
+## <a name="see-also"></a>Zobacz też
+
+[Typy plików utworzonych dla projektów Visual C++](../ide/file-types-created-for-visual-cpp-projects.md)<br>
+[Praca z właściwościami projektu](../ide/working-with-project-properties.md)

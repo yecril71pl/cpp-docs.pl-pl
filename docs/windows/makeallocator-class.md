@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: e27be8eaddfc22474f15d7f9358050273252bf8a
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: 460e2cdef4d0ba4252ceb8a4b7fe6defc25c183a
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42610327"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46375376"
 ---
 # <a name="makeallocator-class"></a>MakeAllocator — Klasa
 
@@ -35,7 +35,7 @@ template<
    typename T,
    bool hasWeakReferenceSupport =
          !__is_base_of(RuntimeClassFlags<InhibitWeakReference>, T)>
- class MakeAllocator;
+class MakeAllocator;
 
 template<typename T>
 class MakeAllocator<T, false>;
@@ -46,10 +46,10 @@ class MakeAllocator<T, true>;
 
 ### <a name="parameters"></a>Parametry
 
-*T*  
+*T*<br/>
 Nazwa typu.
 
-*hasWeakReferenceSupport*  
+*hasWeakReferenceSupport*<br/>
 **wartość true,** można przydzielić pamięci dla obiektu, który obsługuje słabe odwołania; **false** można przydzielić pamięci dla obiektu, który nie obsługuje słabe odwołania.
 
 ## <a name="remarks"></a>Uwagi

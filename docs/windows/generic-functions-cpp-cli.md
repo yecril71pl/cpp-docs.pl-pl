@@ -19,12 +19,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: bc930fdc142dc7b044b4dbd60cfd459b7ce52aea
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: b8c51b3468a636335a74b8a4206a6b533d3a200b
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45709153"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46398862"
 ---
 # <a name="generic-functions-ccli"></a>Funkcje ogólne (C++/CLI)
 
@@ -63,28 +63,28 @@ return-type identifier<type-parameter identifier(s)>
 
 ### <a name="parameters"></a>Parametry
 
-*Atrybuty*  
+*Atrybuty*<br/>
 (Opcjonalnie) Dodatkowe informacje deklaratywnego. Aby uzyskać więcej informacji o atrybuty i klasy atrybutów Zobacz atrybutów.
 
-*Modyfikatory*  
+*Modyfikatory*<br/>
 (Opcjonalnie) Modyfikator właściwy dla funkcji, takich jak statyczny.  **wirtualne** jest niedozwolona, ponieważ metody wirtualne nie może być ogólny.
 
-*zwracany typ*  
+*zwracany typ*<br/>
 Typ zwracany przez metodę. Jeśli typ zwracany void, nie zwraca wartości jest wymagana.
 
-*Identyfikator*  
+*Identyfikator*<br/>
 Nazwa funkcji.
 
-*identyfikatory parametr typu*  
+*identyfikatory parametr typu*<br/>
 Lista identyfikatorów rozdzielonych przecinkami.
 
-*parametrów formalnych*  
+*parametrów formalnych*<br/>
 (Opcjonalnie) Lista parametrów.
 
-*Typ — parametr ograniczenia — klauzule*  
+*Typ — parametr ograniczenia — klauzule*<br/>
 To określa ograniczenia typów, które mogą być używane jako argumenty typu i ma postać określone w [ograniczenia dotyczące parametrów typu ogólnego (C + +/ CLI)](../windows/constraints-on-generic-type-parameters-cpp-cli.md).
 
-*treść funkcji*  
+*treść funkcji*<br/>
 Treść metody, która może odwoływać się do identyfikatorów parametru typu.
 
 ### <a name="remarks"></a>Uwagi
@@ -193,5 +193,5 @@ My function returned a string: Hello generic functions!
 
 ## <a name="see-also"></a>Zobacz też
 
-[Component Extensions dla platform środowiska uruchomieniowego](../windows/component-extensions-for-runtime-platforms.md)  
+[Component Extensions dla platform środowiska uruchomieniowego](../windows/component-extensions-for-runtime-platforms.md)<br/>
 [Typy ogólne](../windows/generics-cpp-component-extensions.md)

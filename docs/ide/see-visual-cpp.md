@@ -18,62 +18,67 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d050625121314526dff687822b97d7b19475a5e8
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 909177f7b3b475bd049ca311fc3c12c840422cde
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46025866"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46401202"
 ---
 # <a name="ltseegt-visual-c"></a>&lt;zobacz&gt; (Visual C++)
-\<Zobacz > należy określić łącze między w tekście. Użyj [ \<SeeAlso — >](../ide/seealso-visual-cpp.md) do wskazania tekst, który możesz chcieć pojawiają się w sekcji Zobacz też.  
-  
-## <a name="syntax"></a>Składnia  
-  
-```  
-<see cref="member"/>  
-```  
-  
-#### <a name="parameters"></a>Parametry  
+
+\<Zobacz > należy określić łącze między w tekście. Użyj [ \<SeeAlso — >](../ide/seealso-visual-cpp.md) do wskazania tekst, który możesz chcieć pojawiają się w sekcji Zobacz też.
+
+## <a name="syntax"></a>Składnia
+
+```
+<see cref="member"/>
+```
+
+#### <a name="parameters"></a>Parametry
+
 *Element członkowski*<br/>
-Odwołanie do elementu członkowskiego lub pola, które są dostępne do wywoływania z bieżącym środowisku kompilacji.  Nazwę należy ująć w pojedyncze lub podwójne znaki cudzysłowu.  
-  
- Kompilator sprawdza, czy dany element kodu istnieje i jest rozpoznawana jako `member` do nazwy elementu w danych wyjściowych XML.  Kompilator generuje ostrzeżenie, jeśli nie znajdzie `member`.  
-  
-## <a name="remarks"></a>Uwagi  
- Kompiluj przy użyciu [/doc](../build/reference/doc-process-documentation-comments-c-cpp.md) do Przetwarzaj komentarze dokumentacji do pliku.  
-  
- Zobacz [ \<podsumowania >](../ide/summary-visual-cpp.md) na przykład za pomocą \<zobacz >.  
-  
- Kompilator języka Visual C++ będzie próbował rozpoznać odwołania cref w jednym przebiegu za pomocą komentarzy dokumentacji.  W związku z tym, jeśli przy użyciu reguł wyszukiwania C++, symbolu nie można odnaleźć kompilatora odwołania zostaną oznaczone jako nierozwiązane. Zobacz [ \<SeeAlso — >](../ide/seealso-visual-cpp.md) Aby uzyskać więcej informacji.  
-  
-## <a name="example"></a>Przykład  
- Poniższy przykład pokazuje, jak wprowadzisz cref odwołanie do typu ogólnego, taki sposób, że kompilator będzie rozpoznać odwołania.  
-  
-```  
-// xml_see_cref_example.cpp  
-// compile with: /LD /clr /doc  
-// the following cref shows how to specify the reference, such that,  
-// the compiler will resolve the reference  
-/// <see cref="C{T}">  
-/// </see>  
-ref class A {};  
-  
-// the following cref shows another way to specify the reference,   
-// such that, the compiler will resolve the reference  
-/// <see cref="C < T >"/>  
-  
-// the following cref shows how to hard-code the reference  
-/// <see cref="T:C`1">  
-/// </see>  
-ref class B {};  
-  
-/// <see cref="A">  
-/// </see>  
-/// <typeparam name="T"></typeparam>  
-generic<class T>  
-ref class C {};  
-```  
-  
-## <a name="see-also"></a>Zobacz też  
- [Dokumentacja XML](../ide/xml-documentation-visual-cpp.md)
+Odwołanie do elementu członkowskiego lub pola, które są dostępne do wywoływania z bieżącym środowisku kompilacji.  Nazwę należy ująć w pojedyncze lub podwójne znaki cudzysłowu.
+
+Kompilator sprawdza, czy dany element kodu istnieje i jest rozpoznawana jako `member` do nazwy elementu w danych wyjściowych XML.  Kompilator generuje ostrzeżenie, jeśli nie znajdzie `member`.
+
+## <a name="remarks"></a>Uwagi
+
+Kompiluj przy użyciu [/doc](../build/reference/doc-process-documentation-comments-c-cpp.md) do Przetwarzaj komentarze dokumentacji do pliku.
+
+Zobacz [ \<podsumowania >](../ide/summary-visual-cpp.md) na przykład za pomocą \<zobacz >.
+
+Kompilator języka Visual C++ będzie próbował rozpoznać odwołania cref w jednym przebiegu za pomocą komentarzy dokumentacji.  W związku z tym, jeśli przy użyciu reguł wyszukiwania C++, symbolu nie można odnaleźć kompilatora odwołania zostaną oznaczone jako nierozwiązane. Zobacz [ \<SeeAlso — >](../ide/seealso-visual-cpp.md) Aby uzyskać więcej informacji.
+
+## <a name="example"></a>Przykład
+
+Poniższy przykład pokazuje, jak wprowadzisz cref odwołanie do typu ogólnego, taki sposób, że kompilator będzie rozpoznać odwołania.
+
+```
+// xml_see_cref_example.cpp
+// compile with: /LD /clr /doc
+// the following cref shows how to specify the reference, such that,
+// the compiler will resolve the reference
+/// <see cref="C{T}">
+/// </see>
+ref class A {};
+
+// the following cref shows another way to specify the reference,
+// such that, the compiler will resolve the reference
+/// <see cref="C < T >"/>
+
+// the following cref shows how to hard-code the reference
+/// <see cref="T:C`1">
+/// </see>
+ref class B {};
+
+/// <see cref="A">
+/// </see>
+/// <typeparam name="T"></typeparam>
+generic<class T>
+ref class C {};
+```
+
+## <a name="see-also"></a>Zobacz też
+
+[Dokumentacja XML](../ide/xml-documentation-visual-cpp.md)

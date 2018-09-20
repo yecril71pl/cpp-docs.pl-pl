@@ -1,5 +1,5 @@
 ---
-title: 'Formanty MFC ActiveX: Właściwości | Dokumentacja firmy Microsoft'
+title: 'Kontrolki ActiveX MFC: Właściwości | Dokumentacja firmy Microsoft'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,34 +16,36 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ac9d9e4f5e7d777bd147ce36e970e7a30fd875b2
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 27cdbd548366bcf02e2d6282b309402cf25af2d1
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33347110"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46401618"
 ---
 # <a name="mfc-activex-controls-properties"></a>Kontrolki ActiveX MFC: właściwości
-Kontrolki ActiveX generowane zdarzeń do komunikowania się z jego formantu kontenera. Kontener, w zamian używa metody i właściwości do komunikowania się z formantem. Metody i właściwości są podobne w użycie i cel, odpowiednio do funkcji Członkowskich i zmiennych Członkowskich klasy C++. Właściwości są członkami danych formantu ActiveX, które są widoczne dla żadnych kontenera. Właściwości zapewniają interfejs do aplikacji, które zawierają kontrolki ActiveX, takich jak klienci automatyzacji i kontenery formantów ActiveX.  
-  
- Właściwości są również nazywane atrybutów.  
-  
- Aby uzyskać więcej informacji na temat metod formantu ActiveX, zobacz artykuł [kontrolki ActiveX MFC: metody](../mfc/mfc-activex-controls-methods.md).  
-  
- Formanty ActiveX można zaimplementować giełdowych i niestandardowych metod i właściwości. Klasa `COleControl` udostępnia implementację dla właściwości standardowych. (Aby uzyskać pełną listę właściwości podstawowych, zobacz artykuł [kontrolki ActiveX MFC: Dodawanie właściwości zasobu](../mfc/mfc-activex-controls-adding-stock-properties.md).) Właściwości niestandardowe zdefiniowane przez dewelopera, Dodaj specjalnych funkcji do formantu ActiveX. Aby uzyskać więcej informacji, zobacz [kontrolki ActiveX MFC: Dodawanie właściwości niestandardowych](../mfc/mfc-activex-controls-adding-custom-properties.md).  
-  
- Właściwości standardowych i niestandardowych, takich jak metod, są obsługiwane przez mechanizm, który składa się z mapy wysyłania obsługująca właściwości i metod i istniejące funkcje Członkowskie `COleControl` klasy. Ponadto te właściwości mogą mieć parametry używane przez projektanta do przekazania dodatkowych informacji do formantu.  
-  
- Właściwości formantu ActiveX bardziej szczegółowo omówiono w nim następujące artykuły:  
-  
--   [Kontrolki ActiveX MFC: dodawanie właściwości standardowych](../mfc/mfc-activex-controls-adding-stock-properties.md)  
-  
--   [Kontrolki ActiveX MFC: dodawanie właściwości niestandardowych](../mfc/mfc-activex-controls-adding-custom-properties.md)  
-  
--   [Kontrolki ActiveX MFC: implementacja właściwości zaawansowanych](../mfc/mfc-activex-controls-advanced-property-implementation.md)  
-  
--   [Kontrolki ActiveX MFC: uzyskiwanie dostępu do właściwości otaczających](../mfc/mfc-activex-controls-accessing-ambient-properties.md)  
-  
-## <a name="see-also"></a>Zobacz też  
- [Kontrolki ActiveX MFC](../mfc/mfc-activex-controls.md)
+
+Kontrolki ActiveX uruchamia zdarzeń do komunikowania się z jego kontenerem kontroli. Kontener, w zamian używa metody i właściwości do komunikowania się za pomocą kontrolki. Metody i właściwości są podobne w użycie i przeznaczenie, odpowiednio do elementów członkowskich i zmienne składowe klasy języka C++. Właściwości są elementy członkowskie danych formantu ActiveX, które są widoczne dla żadnych kontenerów. Właściwości zapewniają interfejs do aplikacji, które zawierają formanty ActiveX, takich jak klienci automatyzacji i kontenery kontrolek ActiveX.
+
+Właściwości są również nazywane atrybutów.
+
+Aby uzyskać więcej informacji na temat metod formantu ActiveX, zobacz artykuł [kontrolki ActiveX MFC: metody](../mfc/mfc-activex-controls-methods.md).
+
+Kontrolki ActiveX można zaimplementować zapasów i niestandardowych metod i właściwości. Klasa `COleControl` dostarcza implementację dla właściwości podstawowe. (Aby uzyskać pełną listę właściwości podstawowe, zobacz artykuł [kontrolki ActiveX MFC: Dodawanie właściwości podstawowe](../mfc/mfc-activex-controls-adding-stock-properties.md).) Właściwości niestandardowe zdefiniowane przez dewelopera, Dodaj wyspecjalizowane funkcje do kontrolki ActiveX. Aby uzyskać więcej informacji, zobacz [kontrolki ActiveX MFC: Dodawanie właściwości niestandardowych](../mfc/mfc-activex-controls-adding-custom-properties.md).
+
+Standardowych i niestandardowych właściwości, takie jak metody, są obsługiwane przez mechanizm, który składa się z Mapa wysyłania, który obsługuje właściwości i metod oraz istniejące funkcje elementów członkowskich `COleControl` klasy. Ponadto te właściwości mogą mieć parametrów używanych przez dewelopera do przekazania dodatkowych informacji do kontrolki.
+
+W następujących artykułach omówiono właściwości formantu ActiveX bardziej szczegółowo:
+
+- [Kontrolki ActiveX MFC: dodawanie właściwości standardowych](../mfc/mfc-activex-controls-adding-stock-properties.md)
+
+- [Kontrolki ActiveX MFC: dodawanie właściwości niestandardowych](../mfc/mfc-activex-controls-adding-custom-properties.md)
+
+- [Kontrolki ActiveX MFC: implementacja właściwości zaawansowanych](../mfc/mfc-activex-controls-advanced-property-implementation.md)
+
+- [Kontrolki ActiveX MFC: uzyskiwanie dostępu do właściwości otaczających](../mfc/mfc-activex-controls-accessing-ambient-properties.md)
+
+## <a name="see-also"></a>Zobacz też
+
+[Kontrolki ActiveX MFC](../mfc/mfc-activex-controls.md)
 

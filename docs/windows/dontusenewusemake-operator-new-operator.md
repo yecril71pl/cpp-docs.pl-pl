@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 6c2de62df47e46183c1169956a18ddc10822b22a
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: 99e82de06f64816521c47c78648108a9ae815279
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42611924"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46443231"
 ---
 # <a name="dontusenewusemakeoperator-new-operator"></a>DontUseNewUseMake::operator nowy operator
 
@@ -39,10 +39,10 @@ void* operator new(
 
 ### <a name="parameters"></a>Parametry
 
-*__unnamed0*  
+*__unnamed0*<br/>
 Nienazwany parametr, który określa liczbę bajtów pamięci do przydzielenia.
 
-*placement*  
+*placement*<br/>
 Typ do przydzielenia.
 
 ## <a name="return-value"></a>Wartość zwracana
@@ -61,5 +61,5 @@ Przeciążenia operatora **nowe** i zapobiega używana w `RuntimeClass`.
 
 ## <a name="see-also"></a>Zobacz też
 
-[DontUseNewUseMake, klasa](../windows/dontusenewusemake-class.md)  
+[DontUseNewUseMake, klasa](../windows/dontusenewusemake-class.md)<br/>
 [Microsoft::WRL::Details, przestrzeń nazw](../windows/microsoft-wrl-details-namespace.md)

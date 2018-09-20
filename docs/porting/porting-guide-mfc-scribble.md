@@ -12,14 +12,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a73a822e3cf6daa9d9d7c3ebdabbcd4671fc5c7e
-ms.sourcegitcommit: b92ca0b74f0b00372709e81333885750ba91f90e
+ms.openlocfilehash: a8230cf66fd3cc8cdce017c07f05f58b381ebd14
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/16/2018
-ms.locfileid: "42466152"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46400916"
 ---
 # <a name="porting-guide-mfc-scribble"></a>Przewodnik przenoszenia: Aplikacja Scribble MFC
+
 W tym temacie jest to pierwszy kilku tematów, które służą jako wprowadzenie do procedury uaktualniania dla projektów Visual C++, które zostały utworzone w starszych wersjach programu Visual Studio do programu Visual Studio 2017. Tych tematach przedstawiono proces uaktualniania według przykładu, rozpoczynając od bardzo prosty projekt i przejście do bardziej złożonych z nich. W tym temacie będziemy działać przeprowadzenie procesu aktualizacji dla określonego projektu, klasa Scribble MFC. Jest on odpowiedni jako wstęp do procesu uaktualniania dla projektów C++.  
   
 Każda wersja programu Visual Studio wprowadza potencjalne niezgodności, które mogą skomplikować przenoszenie kodu ze starszej wersji programu Visual Studio do nowszej. Czasami wymagane zmiany są w kodzie, więc należy ponownie skompilować i zaktualizować swój kod, a czasami są wymagane zmiany w plikach projektu. Po otwarciu projektu, który został utworzony w poprzedniej wersji programu Visual Studio, Visual Studio automatycznie pyta, czy zaktualizować projekt lub rozwiązanie do najnowszej wersji. Te narzędzia zazwyczaj uaktualnić tylko te pliki projektu; nie należy modyfikować kodu źródłowego.  
@@ -37,6 +38,7 @@ Na koniec potrzebowaliśmy do podejmowania decyzji o określonej metody uaktualn
 Należy pamiętać, że można również uruchomić devenv, w wierszu polecenia przy użyciu `/Upgrade` opcji, a nie za pomocą kreatora, aby uaktualnić swoje projekty. Zobacz [/Upgrade (devenv.exe)](/visualstudio/ide/reference/upgrade-devenv-exe). Który może być przydatne w przypadku automatyzacji procesu uaktualniania dużej liczby projektów.  
   
 ### <a name="step-1-converting-the-project-file"></a>Krok 1. Konwertowanie pliku projektu  
+
 Po otwarciu stary plik projektu w programie Visual Studio 2017, Visual Studio oferuje przekonwertować plik projektu do najnowszej wersji, firma Microsoft zaakceptowane. Pojawiły się następujące okno dialogowe:  
   
 ![Przegląd zmian projektu i rozwiązania](../porting/media/scribbleprojectupgrade.PNG "ScribbleProjectUpgrade")  
@@ -56,6 +58,7 @@ Program Visual Studio wyświetlony raport migracji w przypadku wszystkich proble
 W tym przypadku problemy zostały wszystkie ostrzeżenia, a program Visual Studio wprowadził odpowiednie zmiany w pliku projektu. Istotną różnicą chodzi projektu jest to, że narzędzia do kompilowania zmieniła się z program vcbuild do programu msbuild. Ta zmiana została wprowadzona w programie Visual Studio 2010. Inne zmiany obejmują niektóre zmiany w przepisach sekwencję elementów w samym pliku projektu. Brak problemów wymagane dalsze uwagi dla tego prostego projektu.  
   
 ### <a name="step-2-getting-it-to-build"></a>Krok 2. Wprowadzenie do kompilacji  
+
 Przed kompilacją, możemy sprawdzić zestaw narzędzi platformy, aby było wiadomo, jakiej wersji kompilatora system projektu używa. W oknie dialogowym właściwości projektu w obszarze **właściwości konfiguracji**w **ogólne** kategorii przyjrzeć **zestawu narzędzi platformy** właściwości. Zawiera wersję programu Visual Studio i numeru wersji narzędzi platformy, która w tym przypadku jest w wersji 141 dla Visual Studio 2017 wersja narzędzi. Podczas konwersji projektu, który pierwotnie został skompilowany przy użyciu programu Visual C++ 2010, 2012, 2013 lub 2015 r. zestaw narzędzi nie jest automatycznie aktualizowany na zestaw narzędzi Visual Studio 2017.   
   
 Aby wprowadzić przełącznika Unicode, otwórz właściwości projektu w obszarze **właściwości konfiguracji**, wybierz **ogólne** sekcji, a następnie zlokalizuj **zestaw znaków** właściwości. Zmień ten program z **zestaw znaków wielobajtowych** do **Użyj kodowania Unicode**. Ta zmiana powoduje to teraz _UNICODE UNICODE makra są zdefiniowane i _MBCS nie jest dostępna, którą można sprawdzić w oknie dialogowym właściwości, w obszarze **C/C++** kategorii przy **wiersza polecenia** właściwości.  
@@ -72,18 +75,20 @@ Teraz można tworzyć rozwiązania. W oknie danych wyjściowych kompilatora info
 _WIN32_WINNT not defined. Defaulting to _WIN32_WINNT_MAXVER (see WinSDKVer.h)  
 ```  
   
- Jest to ostrzeżenie nie jest błąd i często zdarza się po uaktualnieniu projektu Visual C++. To makro, które określa jakie najniższy wersję Windows działającego na naszej aplikacji. Jeśli firma Microsoft zignorować to ostrzeżenie, firma Microsoft zaakceptuj wartość domyślną, _WIN32_WINNT_MAXVER, co oznacza bieżącą wersję systemu Windows. Dla tabeli możliwych wartości, zobacz [przy użyciu nagłówków Windows](/windows/desktop/WinProg/using-the-windows-headers). Na przykład możemy ustawić jego uruchomienie w dowolnej wersji systemu Vista i nowszych wersjach.  
+Jest to ostrzeżenie nie jest błąd i często zdarza się po uaktualnieniu projektu Visual C++. To makro, które określa jakie najniższy wersję Windows działającego na naszej aplikacji. Jeśli firma Microsoft zignorować to ostrzeżenie, firma Microsoft zaakceptuj wartość domyślną, _WIN32_WINNT_MAXVER, co oznacza bieżącą wersję systemu Windows. Dla tabeli możliwych wartości, zobacz [przy użyciu nagłówków Windows](/windows/desktop/WinProg/using-the-windows-headers). Na przykład możemy ustawić jego uruchomienie w dowolnej wersji systemu Vista i nowszych wersjach.  
   
-```  
+```cpp
 #define _WIN32_WINNT _WIN32_WINNT_VISTA  
 ```  
   
 Jeśli kod używa części interfejsu Windows API, które nie są dostępne w wersji systemu Windows, określ za pomocą makra, powinien zostać wyświetlony, jako błąd kompilatora. W przypadku kodu Bazgroły nie ma błędów.  
   
 ### <a name="step-3-testing-and-debugging"></a>Krok 3. Testowanie i debugowanie  
+
 Ma nie testów, tak właśnie zaczynaliśmy aplikacji, przetestowane jego funkcje ręcznie za pomocą interfejsu użytkownika. Nie zaobserwowano żadnych problemów.  
   
 ### <a name="step-4-improve-the-code"></a>Krok 4. Do poprawienia kodu  
+
 Teraz, gdy zostały poddane migracji do programu Visual Studio 2017, można wprowadzić pewne zmiany, aby móc korzystać z nowych funkcji języka C++. Bieżącej wersji kompilatora języka C++ jest znacznie większą zgodność C++ wersji standardowa, a następnie poprzedniej, więc w przypadku Pamiętaj się jakiś kod zmienia się na sprawić, że kod bardziej bezpiecznej i bardziej przenośny innych kompilatorach i systemów operacyjnych, należy rozważyć niektóre ulepszenia.  
   
 ## <a name="next-steps"></a>Następne kroki  
@@ -92,5 +97,5 @@ Bazgrołów został aplikacji pulpitu Windows małe i proste, a nie był trudny 
   
 ## <a name="see-also"></a>Zobacz też  
  
-[Przenoszenie i uaktualnianie: przykłady i analizy przypadków](../porting/porting-and-upgrading-examples-and-case-studies.md)   
+[Przenoszenie i uaktualnianie: Przykłady i analizy przypadków](../porting/porting-and-upgrading-examples-and-case-studies.md)<br/>
 [Następnym przykładzie: Narzędzie Spy modelu COM](../porting/porting-guide-com-spy.md)

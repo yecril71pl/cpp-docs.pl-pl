@@ -12,18 +12,19 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: fc062a1902e8e3c8f64a98af84fed54c272dc727
-ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
+ms.openlocfilehash: 1be82b922d673d173daabf9185b6936111abc3b8
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33685596"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46444622"
 ---
 # <a name="15-normative-references"></a>1.5 Odwołania normatywne
--   ISO/IEC 9899:1999, *informacji o technologii - języki programowania - C*. To specyfikacja interfejsu API OpenMP odnosi się do obrazu ISO/IEC 9899:1999 jako C99.  
-  
--   ISO/IEC 9899:1990, *informacji o technologii - języki programowania - C*. To specyfikacja interfejsu API OpenMP odnosi się do obrazu ISO/IEC 9899:1990 jako C90.  
-  
--   ISO/IEC 14882:1998, *C++ technologii - języki programowania — informacje o*. To specyfikacja interfejsu API OpenMP odnosi się do obrazu ISO/IEC 14882:1998 jako C++.  
-  
- W przypadku, gdy to specyfikacja interfejsu API OpenMP odwołuje się do C, odniesienia do języka podstawowego obsługiwana przez implementację.
+
+- 9899:1999 ISO/IEC *informacji o technologii — języki programowania - C*. Tej specyfikacji OpenMP API odwołuje się do 9899:1999 ISO/IEC jako C99.
+
+- 9899:1990 ISO/IEC *informacji o technologii — języki programowania - C*. Tej specyfikacji OpenMP API odwołuje się do 9899:1990 ISO/IEC jako C90.
+
+- 14882:1998 ISO/IEC *informacji o technologii — języki programowania - C++*. Tej specyfikacji OpenMP API odwołuje się do 14882:1998 ISO/IEC co kod C++.
+
+W przypadku, gdy tej specyfikacji OpenMP API odwołuje się do języka C, odniesienia do języka podstawowego, jest obsługiwana przez implementację.

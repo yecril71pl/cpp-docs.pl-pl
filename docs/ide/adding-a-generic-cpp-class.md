@@ -1,5 +1,5 @@
 ---
-title: Dodawanie klasy ogólnej C++ | Dokumentacja firmy Microsoft
+title: Dodawanie rodzajowej klasy C++ | Dokumentacja firmy Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,27 +18,29 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2773c38561a36ab72dfe33dccc5d98ea9d09ebce
-ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
+ms.openlocfilehash: c870768ff438e556f11cc0f6e101710c658010f5
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "33326475"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46405908"
 ---
 # <a name="adding-a-generic-c-class"></a>Dodawanie klasy ogólnej C++
-Można dodać klasy ogólnej C++ za pomocą **widoku klasy**. Klasy ogólnej C++ jest klasa, która należy zdefiniować lub która pochodzi z klasy, którą należy zdefiniować.  
-  
-### <a name="to-add-a-generic-c-class-to-a-project"></a>Aby dodać do projektu klasy ogólnej C++  
-  
-1.  W **widoku klasy**, kliknij prawym przyciskiem myszy projekt, do którego chcesz dodać nową klasę, kliknij polecenie **Dodaj**, a następnie kliknij przycisk **klasy**.  
-  
-2.  W [Dodaj klasę](../ide/add-class-dialog-box.md) kliknij okno dialogowe, w okienku szablonów **klasy C++**. Kliknij przycisk **Dodaj** do wyświetlenia [ogólnego Kreator klas C++](../ide/generic-cpp-class-wizard.md).  
-  
-3.  W kreatorze podaj nazwę klasy, a następnie określić ustawienia lub zaakceptuj ustawienia domyślne.  
-  
-4.  Kliknij, aby zamknąć kreatora i wyświetlić nowe klasy generycznej C++ w projekcie **Zakończ**.  
-  
-## <a name="see-also"></a>Zobacz też  
- [Dodawanie klasy](../ide/adding-a-class-visual-cpp.md)   
- [Klasy MFC](../mfc/reference/adding-an-mfc-class.md)   
- [Prosty obiekt ATL](../atl/reference/adding-an-atl-simple-object.md)
+
+Można dodać rodzajowej klasy C++ za pomocą **Widok klas**. Rodzajowej klasy C++ jest klasą, który zdefiniujesz lub która pochodzi od klasy, który zdefiniujesz.
+
+### <a name="to-add-a-generic-c-class-to-a-project"></a>Dodawanie rodzajowej klasy C++ do projektu
+
+1. W **Widok klas**, kliknij prawym przyciskiem myszy projekt, do którego chcesz dodać nową klasę, kliknij przycisk **Dodaj**, a następnie kliknij przycisk **klasy**.
+
+1. W [Dodaj klasę](../ide/add-class-dialog-box.md) kliknij w okienku szablonów, w oknie dialogowym **klasy języka C++**. Kliknij przycisk **Dodaj** do wyświetlenia [Kreatorze klasy generycznej C++](../ide/generic-cpp-class-wizard.md).
+
+1. W kreatorze podaj nazwę klasy, a następnie zdefiniuj ustawienia lub zaakceptuj wartości domyślne.
+
+1. Kliknij, aby zamknąć kreatora i Wyświetl nowe rodzajowej klasy C++ w projekcie **Zakończ**.
+
+## <a name="see-also"></a>Zobacz też
+
+[Dodawanie klasy](../ide/adding-a-class-visual-cpp.md)<br>
+[Klasy MFC](../mfc/reference/adding-an-mfc-class.md)<br>
+[Prosty obiekt ATL](../atl/reference/adding-an-atl-simple-object.md)

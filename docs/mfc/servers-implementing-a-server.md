@@ -15,43 +15,45 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0ea51d6cd811572d73b0de64072f3d335e2682fd
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: d024c9468b06291ba93c4e404674925202fabcad
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33381696"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46406798"
 ---
 # <a name="servers-implementing-a-server"></a>Serwery: implementowanie serwera
-W tym artykule opisano kod, który tworzy Kreator aplikacji MFC visual edytowania aplikacji serwera. Jeśli nie używasz Kreatora aplikacji, w tym artykule wymieniono obszarów, gdzie należy napisać kod do implementacji aplikacji serwera.  
-  
- Jeśli używasz Kreatora aplikacji do tworzenia nowej aplikacji serwera, zapewnia znaczną ilość kodu specyficzne dla serwera dla Ciebie. Jeśli dodajesz visual edycji funkcje serwera do istniejącej aplikacji, należy skopiować kod Kreatora aplikacji czy zostały podane przed dodaniem reszty kod serwera niezbędne.  
-  
- Kod serwera, który udostępnia Kreatora aplikacji znajduje się na kilka kategorii:  
-  
--   Definiowanie zasobów serwera:  
-  
-    -   Używany, gdy serwer edytuje element osadzony w osobnym oknie zasobu menu.  
-  
-    -   Menu i paska narzędzi zasoby używane, gdy serwer jest aktywny w miejscu.  
-  
-     Aby uzyskać więcej informacji o tych zasobów, zobacz [menu i zasoby: dodatki do serwera](../mfc/menus-and-resources-server-additions.md).  
-  
--   Definiowanie klasy element pochodny `COleServerItem`. Aby uzyskać więcej szczegółowych informacji o serwerze elementów, zobacz [serwery: elementy serwera](../mfc/servers-server-items.md).  
-  
--   Zmiana klasy podstawowej klasy dokumentu, aby `COleServerDoc`. Aby uzyskać szczegółowe informacje, zobacz [serwery: Implementowanie dokumentów serwera](../mfc/servers-implementing-server-documents.md).  
-  
--   Definiowanie klasy okien ramowych pochodną `COleIPFrameWnd`. Aby uzyskać szczegółowe informacje, zobacz [serwery: Implementowanie okien ramowych w miejscu](../mfc/servers-implementing-in-place-frame-windows.md).  
-  
--   Tworzenie wpis dla aplikacji serwera w bazie danych rejestracji systemu Windows i rejestrowanie nowego wystąpienia serwera w systemie OLE. Aby uzyskać informacje na ten temat, zobacz [rejestracji](../mfc/registration.md).  
-  
--   Inicjowanie i uruchamianie aplikacji serwera. Aby uzyskać informacje na ten temat, zobacz [rejestracji](../mfc/registration.md).  
-  
- Aby uzyskać więcej informacji, zobacz [COleServerItem](../mfc/reference/coleserveritem-class.md), [COleServerDoc](../mfc/reference/coleserverdoc-class.md), i [COleIPFrameWnd](../mfc/reference/coleipframewnd-class.md) w *informacje dotyczące biblioteki klas*.  
-  
-## <a name="see-also"></a>Zobacz też  
- [Serwery](../mfc/servers.md)   
- [Kontenery](../mfc/containers.md)   
- [Menu i zasoby (OLE)](../mfc/menus-and-resources-ole.md)   
- [Rejestracja](../mfc/registration.md)
+
+W tym artykule opisano kod, który tworzy Kreator aplikacji MFC, visual edycji aplikacji serwera. Jeśli nie używasz Kreatora aplikacji, w tym artykule wymieniono obszary, gdzie należy wpisać kod implementujący aplikację serwera.
+
+Korzystając z Kreatora konfiguracji aplikacji do tworzenia nowych aplikacji serwera, zapewnia znaczną ilość kodu specyficznego dla serwera dla Ciebie. W przypadku dodawania visual funkcje edytowania serwer do istniejącej aplikacji musi zduplikowany kod, który Kreator aplikacji czy zostały podane przed dodaniem pozostałej części kodu serwera niezbędne.
+
+Kod serwera, który zawiera Kreatora aplikacji znajduje się na kilka kategorii:
+
+- Definiowanie zasobów serwera:
+
+   - Zasób menu używany, gdy serwer edytuje element osadzony w osobnym oknie.
+
+   - Menu i paski narzędzi zasobów używana, gdy serwer jest aktywny w miejscu.
+
+     Aby uzyskać więcej informacji na temat tych zasobów, zobacz [menu i zasoby: dodatki do serwera](../mfc/menus-and-resources-server-additions.md).
+
+- Definiowanie klasy elementu pochodną `COleServerItem`. Aby uzyskać więcej szczegółowych informacji dotyczących elementów serwera, zobacz [serwery: elementy serwera](../mfc/servers-server-items.md).
+
+- Zmiana klasę bazową klasy dokumentu w celu `COleServerDoc`. Aby uzyskać więcej informacji, zobacz [serwery: Implementowanie dokumentów serwera](../mfc/servers-implementing-server-documents.md).
+
+- Definiowanie klasy okien ramowych pochodną `COleIPFrameWnd`. Aby uzyskać więcej informacji, zobacz [serwery: Implementowanie Windows ramki w miejscu](../mfc/servers-implementing-in-place-frame-windows.md).
+
+- Tworzenie wpisu dla aplikacji serwera w bazie danych rejestracji Windows i rejestrowanie nowego wystąpienia serwera z systemem OLE. Aby uzyskać informacje na ten temat, zobacz [rejestracji](../mfc/registration.md).
+
+- Inicjowanie i uruchamianie aplikacji serwera. Aby uzyskać informacje na ten temat, zobacz [rejestracji](../mfc/registration.md).
+
+Aby uzyskać więcej informacji, zobacz [COleServerItem](../mfc/reference/coleserveritem-class.md), [COleServerDoc](../mfc/reference/coleserverdoc-class.md), i [COleIPFrameWnd](../mfc/reference/coleipframewnd-class.md) w *odwołanie do biblioteki klas*.
+
+## <a name="see-also"></a>Zobacz też
+
+[Serwery](../mfc/servers.md)<br/>
+[Kontenery](../mfc/containers.md)<br/>
+[Menu i zasoby (OLE)](../mfc/menus-and-resources-ole.md)<br/>
+[Rejestracja](../mfc/registration.md)
 

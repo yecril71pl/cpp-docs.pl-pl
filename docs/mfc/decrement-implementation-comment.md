@@ -1,5 +1,5 @@
 ---
-title: — Implementacja komentarz | Dokumentacja firmy Microsoft
+title: — Komentarz dotyczący implementacji | Dokumentacja firmy Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,28 +17,30 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 89f87c33abfec7b9d055b589726639fcd741e59d
-ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
+ms.openlocfilehash: 874c7eb29f1908e6098ee4a9095f17a4dae00006
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/25/2018
-ms.locfileid: "36930277"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46402125"
 ---
 # <a name="-implementation-comment"></a>Komentarz // Implementation
-`// Implementation` Sekcji jest najbardziej istotną częścią żadnych deklaracji klasy MFC.  
-  
- W tej sekcji przechowuje wszystkie szczegóły implementacji. Zarówno zmiennych Członkowskich i funkcji elementów członkowskich może występować w tej sekcji. Wszystko poniżej tego wiersza, można zmienić w przyszłej wersji biblioteki MFC. O ile nie można go uniknąć, nie należy polegać na szczegóły poniżej `// Implementation` wiersza. Ponadto elementów członkowskich zadeklarowanych poniżej wiersza implementacji nie opisano, mimo że niektóre implementacja została szczegółowo opisana w Uwagi techniczne. Zastępowanie funkcji wirtualnych w klasie podstawowej znajdują się w tej sekcji, niezależnie od tego, która sekcja funkcji klasy podstawowej jest zdefiniowana, ponieważ przyjęto, że fakt, że funkcja zastępuje implementację klasy podstawowej szczegóły implementacji. Zazwyczaj te elementy członkowskie są chronione, ale nie zawsze.  
-  
- Zwróć uwagę, z `CStdioFile` wyświetlania w obszarze [przykład komentarzy](../mfc/an-example-of-the-comments.md) że członkowie zadeklarowanym poniżej `// Implementation` komentarz może być zadeklarowana jako **publicznego**, **chronione**, lub **prywatnej**. Tych elementów członkowskich należy używać ostrożnie, tylko, ponieważ mogą one ulec zmianie w przyszłości. Deklarowanie grupy elementów członkowskich jako **publicznego** mogą być niezbędne do implementacji klasy biblioteki działał prawidłowo. Jednak nie oznacza to bezpiecznie może używać elementów członkowskich, więc zadeklarowanych.  
-  
+
+`// Implementation` Sekcji jest najbardziej ważną częścią dowolnego deklaracji klasy MFC.
+
+Ta sekcja zawiera wszystkie wszystkich szczegółów implementacji. Zmienne Członkowskie i funkcje składowe mogą być wyświetlane w tej sekcji. Wszystko, czego poniżej tego wiersza można zmienić w przyszłych wydaniach MFC. Chyba, że nie można uniknąć, nie należy polegać na poniższe szczegóły `// Implementation` wiersza. Ponadto elementów członkowskich zadeklarowanych pod linią implementacją nie zostały zamieszczone, mimo że niektóre implementacja została omówiona w Uwagi techniczne. Zastąpienia funkcji wirtualnych w klasie bazowej znajdują się w tej sekcji, niezależnie od tego, która sekcja funkcji klasy bazowej jest zdefiniowana, ponieważ przyjęto, że fakt, że funkcja zastępuje implementacji klasy podstawowej szczegółowo opisuje implementacja. Zazwyczaj te elementy członkowskie są chronione, ale nie zawsze.
+
+Zwróć uwagę, z `CStdioFile` listę w obszarze [przykład komentarzy](../mfc/an-example-of-the-comments.md) , elementy członkowskie zadeklarowany poniżej `// Implementation` komentarz może być zadeklarowana jako **publicznych**, **chronione**, lub **prywatnej**. Te elementy członkowskie należy używać ostrożnie, tylko, ponieważ mogą one ulec zmianie w przyszłości. Deklarowanie grupy elementów członkowskich jako **publicznych** może być konieczne w celu wykonania biblioteki klasy do prawidłowego działania. Oznacza to jednak nie może być bezpiecznie używać elementów członkowskich zadeklarowanych tak.
+
 > [!NOTE]
->  Może się okazać komentarze pozostałych typów powyżej lub poniżej `// Implementation` komentarza. W obu przypadkach opisują rodzaje elementów członkowskich zadeklarowanych znajdującą się pod nimi. Jeśli występują poniżej `// Implementation` komentarz, powinien założyć, że elementy Członkowskie mogą ulec zmianie w przyszłych wersji biblioteki MFC.  
-  
-## <a name="see-also"></a>Zobacz też  
- [Korzystanie z plików źródłowych MFC](../mfc/using-the-mfc-source-files.md)   
- [Przykład komentarzy](../mfc/an-example-of-the-comments.md)   
- [Komentarz / / constructors](../mfc/decrement-constructors-comment.md)   
- [Komentarz / / Attributes](../mfc/decrement-attributes-comment.md)   
- [Komentarz / / Operations](../mfc/decrement-operations-comment.md)   
- [Komentarz / / Overridables](../mfc/decrement-overridables-comment.md)
+>  Może się okazać komentarze pozostałe typy powyżej lub poniżej `// Implementation` komentarz. W obu przypadkach opisano rodzaje elementów członkowskich zadeklarowanych pod nimi. Jeśli występują one poniżej `// Implementation` komentarz, należy przyjąć, że członkowie mogą ulec zmianie w przyszłych wersji MFC.
+
+## <a name="see-also"></a>Zobacz też
+
+[Korzystanie z plików źródłowych MFC](../mfc/using-the-mfc-source-files.md)<br/>
+[Przykład komentarzy](../mfc/an-example-of-the-comments.md)<br/>
+[Komentarz / / constructors](../mfc/decrement-constructors-comment.md)<br/>
+[Komentarz / / Attributes](../mfc/decrement-attributes-comment.md)<br/>
+[Komentarz / / Operations](../mfc/decrement-operations-comment.md)<br/>
+[Komentarz / / Overridables](../mfc/decrement-overridables-comment.md)
 

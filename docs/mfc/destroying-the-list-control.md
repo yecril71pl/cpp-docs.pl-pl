@@ -15,21 +15,23 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 01cdbc0f404c34a8c5ebc3ae09adf30e0cea0851
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 25642357e3dd9117ae2817307ed5fa3c4a0921d0
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43215045"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46424545"
 ---
 # <a name="destroying-the-list-control"></a>Likwidowanie kontrolki listy
-W przypadku osadzenia swoje [CListCtrl](../mfc/reference/clistctrl-class.md) obiektu jako element członkowski danych widoku lub w oknie dialogowym klasy jest niszczony, kiedy niszczony jest jego właścicielem. Jeśli używasz [CListView](../mfc/reference/clistview-class.md), struktura niszczy kontrolki, gdy niszczone widoku.  
-  
- Można zorganizować dla niektórych danych listy mają być przechowywane w aplikacji, a nie kontrolki listy należy zorganizować jego dezalokacji. Aby uzyskać więcej informacji, zobacz [elementy wywołania zwrotnego i maska wywołania zwrotnego](/windows/desktop/Controls/using-list-view-controls) w zestawie Windows SDK.  
-  
- Ponadto użytkownik jest odpowiedzialny dealokowanie żadnych list obrazów, utworzona i skojarzona z obiekt formantu listy.  
-  
-## <a name="see-also"></a>Zobacz też  
- [Korzystanie z CListCtrl](../mfc/using-clistctrl.md)   
- [Kontrolki](../mfc/controls-mfc.md)
+
+W przypadku osadzenia swoje [CListCtrl](../mfc/reference/clistctrl-class.md) obiektu jako element członkowski danych widoku lub w oknie dialogowym klasy jest niszczony, kiedy niszczony jest jego właścicielem. Jeśli używasz [CListView](../mfc/reference/clistview-class.md), struktura niszczy kontrolki, gdy niszczone widoku.
+
+Można zorganizować dla niektórych danych listy mają być przechowywane w aplikacji, a nie kontrolki listy należy zorganizować jego dezalokacji. Aby uzyskać więcej informacji, zobacz [elementy wywołania zwrotnego i maska wywołania zwrotnego](/windows/desktop/Controls/using-list-view-controls) w zestawie Windows SDK.
+
+Ponadto użytkownik jest odpowiedzialny dealokowanie żadnych list obrazów, utworzona i skojarzona z obiekt formantu listy.
+
+## <a name="see-also"></a>Zobacz też
+
+[Korzystanie z CListCtrl](../mfc/using-clistctrl.md)<br/>
+[Kontrolki](../mfc/controls-mfc.md)
 

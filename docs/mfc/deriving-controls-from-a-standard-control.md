@@ -19,39 +19,41 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d4ae7fb09e1f453b6d7bc82a7fb038567809f872
-ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
+ms.openlocfilehash: bc1b0b047bc8d594a34177cabf1081c0a1c67970
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/25/2018
-ms.locfileid: "36932250"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46399772"
 ---
 # <a name="deriving-controls-from-a-standard-control"></a>Wyprowadzanie formantów z formantu standardowego
-Jako ze wszystkimi [CWnd](../mfc/reference/cwnd-class.md)-klasy, można zmodyfikować zachowanie formantu wyprowadzanie nowe klasy z istniejącej klasy formantu.  
-  
-### <a name="to-create-a-derived-control-class"></a>Można utworzyć klasy pochodnej formantu  
-  
-1.  Pochodzi z klasy z istniejącej klasy formantu i opcjonalnie Przesłoń `Create` funkcji członkowskiej, dzięki czemu zapewnia argumenty niezbędne do klasy podstawowej `Create` funkcji.  
-  
-2.  Podaj funkcji Członkowskich obsługi wiadomości i wpisy mapy wiadomości, aby zmodyfikować zachowanie formantu w odpowiedzi na określone komunikaty systemu Windows. Zobacz [mapowanie komunikatów na funkcje](../mfc/reference/mapping-messages-to-functions.md).  
-  
-3.  Podaj nowe funkcje Członkowskie mogą rozszerzyć funkcjonalność formantu (opcjonalnie).  
-  
- Używanie pochodnej formantu w oknie dialogowym wymaga dodatkowej pracy. Typy i położenia kontrolki w oknie dialogowym zwykle są określone w zasobie szablonu okna dialogowego. W przypadku tworzenia klasy pochodnej formantu nie można określić go w szablonu okna dialogowego, ponieważ kompilator zasobów nie otrzymuje informacji o klasie pochodnej.  
-  
-#### <a name="to-place-your-derived-control-in-a-dialog-box"></a>Aby umieścić pochodnej formantu w oknie dialogowym  
-  
-1.  Osadź obiekt klasy pochodnej kontroli w deklaracji klasy pochodnej okien dialogowych.  
-  
-2.  Zastąpienie `OnInitDialog` funkcji członkowskiej WE klasy okien dialogowych do wywołania `SubclassDlgItem` funkcja członkowska, pochodnych formantu.  
-  
- `SubclassDlgItem` "dynamicznie podklasy" formantu utworzone na podstawie szablonu okna dialogowego. W wypadku dynamicznie podklasy formantu zostanie przyłączanie się do systemu Windows, przetwarzania niektórych komunikatów w ramach własnej aplikacji, a następnie przekazuje pozostałych komunikatów systemu Windows. Aby uzyskać więcej informacji, zobacz [SubclassDlgItem](../mfc/reference/cwnd-class.md#subclassdlgitem) funkcji członkowskiej klasy `CWnd` w *odwołania MFC*. W poniższym przykładzie pokazano, jak mogą pisać zastępująca `OnInitDialog` do wywołania `SubclassDlgItem`:  
-  
- [!code-cpp[NVC_MFCControlLadenDialog#3](../mfc/codesnippet/cpp/deriving-controls-from-a-standard-control_1.cpp)]  
-  
- Ponieważ pochodne formantu jest osadzony w klasy okien dialogowych, będzie wykonywane, gdy okno dialogowe jest tworzony i zostaną usunięte, gdy okno dialogowe zostanie zniszczony. Porównaj ten kod do przykładu w [dodawanie formantów strony By](../mfc/adding-controls-by-hand.md).  
-  
-## <a name="see-also"></a>Zobacz też  
- [Tworzenie i używanie formantów](../mfc/making-and-using-controls.md)   
- [Kontrolki](../mfc/controls-mfc.md)
+
+Podobnie jak w przypadku dowolnego [CWnd](../mfc/reference/cwnd-class.md)-klasy, można zmodyfikować zachowanie kontrolki wyprowadzanie nowe klasy z istniejącej klasy kontrolki.
+
+### <a name="to-create-a-derived-control-class"></a>Aby utworzyć klasy pochodnej kontroli
+
+1. Klasa dziedziczyć po istniejącej klasy formantu i opcjonalnie zastąpić `Create` funkcję członkowską, dzięki czemu zapewnia wymagane argumenty do klasy bazowej `Create` funkcji.
+
+1. Zapewnia funkcje Członkowskie obsługi wiadomości i wpisy mapy komunikatów, aby zmodyfikować zachowanie kontrolki w odpowiedzi na określone komunikaty Windows. Zobacz [mapowanie komunikatów do funkcji](../mfc/reference/mapping-messages-to-functions.md).
+
+1. Podaj nowe funkcje Członkowskie, aby rozszerzyć funkcjonalność formantu (opcjonalnie).
+
+Używanie pochodnej formantu w oknie dialogowym wymaga dodatkowej pracy. Typy i położenie formantów w oknie dialogowym zazwyczaj są określane w zasobach szablonu okna dialogowego. Po utworzeniu klasy pochodnej kontroli, nie można określić je w szablonu okna dialogowego, ponieważ kompilator zasobów nie zna o swojej klasy pochodnej.
+
+#### <a name="to-place-your-derived-control-in-a-dialog-box"></a>Aby umieścić pochodnej formantu w oknie dialogowym
+
+1. Osadzić obiekt klasy pochodnej kontrolki w deklaracji klasy pochodnej okien dialogowych.
+
+1. Zastąp `OnInitDialog` funkcji składowej WE klasy okien dialogowych do wywołania `SubclassDlgItem` składowa pochodnej kontrolki.
+
+`SubclassDlgItem` "dynamicznie podklasy" kontrolki utworzone na podstawie szablonu okna dialogowego. W wypadku dynamicznie podklasy kontrolki można dołączyć do Windows, przetwarzać komunikaty z żądaniem w swojej aplikacji, a następnie przekazuje komunikaty pozostałe Windows. Aby uzyskać więcej informacji, zobacz [SubclassDlgItem](../mfc/reference/cwnd-class.md#subclassdlgitem) funkcji składowej klasy typu `CWnd` w *odwołanie MFC*. W poniższym przykładzie pokazano, jak można napisać nadpisanie `OnInitDialog` do wywołania `SubclassDlgItem`:
+
+[!code-cpp[NVC_MFCControlLadenDialog#3](../mfc/codesnippet/cpp/deriving-controls-from-a-standard-control_1.cpp)]
+
+Ponieważ osadzone kontroli pochodne klasy okien dialogowych zostanie wykonane, okno dialogowe jest tworzony, gdy zostaną zniszczone, kiedy niszczony jest okno dialogowe. Porównaj ten kod do przykładu w [dodawania formantów By ręcznie](../mfc/adding-controls-by-hand.md).
+
+## <a name="see-also"></a>Zobacz też
+
+[Tworzenie i używanie kontrolek](../mfc/making-and-using-controls.md)<br/>
+[Kontrolki](../mfc/controls-mfc.md)
 

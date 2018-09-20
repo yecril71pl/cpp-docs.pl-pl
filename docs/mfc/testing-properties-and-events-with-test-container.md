@@ -20,50 +20,52 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: fbf2b7c26b7fc44a526381f4fb3e4dee5c94ba8d
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: e06f10114b896e2728e5a017281e54f75ce534e5
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33381039"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46404634"
 ---
 # <a name="testing-properties-and-events-with-test-container"></a>Testowanie właściwości i zdarzeń za pomocą kontenera testu
-Kontener testu aplikacji, w programie Visual C++, jest kontenera formantu ActiveX, testowanie i debugowanie kontrolki ActiveX. Kontener testu umożliwia deweloperowi kontroli przetestować funkcje formantu przez zmianę jego właściwości, wywoływanie metod i wyzwalania jego zdarzenia. Kontener testu można wyświetlać dzienniki powiadomień wiązania z danymi i udostępnia również urządzenia do testowania funkcji trwałości formantu ActiveX: można zapisać właściwości do strumienia lub substorage, Załaduj ponownie je i sprawdzić dane przechowywane strumienia. Tej sekcji opisano sposób użycia podstawowych funkcji kontener testu. Aby uzyskać dodatkowe informacje, wybierz **pomocy** menu podczas wykonywania kontener testu.  
-  
-### <a name="to-access-the-activex-control-test-container"></a>Aby uzyskać dostęp kontener testu formantu ActiveX  
-  
-1.  Tworzenie [TSTCON próbki: Kontener testu formantu ActiveX](../visual-cpp-samples.md).  
-  
-### <a name="to-test-your-activex-control"></a>Aby przetestować formantu ActiveX  
-  
-1.  Na **Edytuj** kliknij menu Kontener testu **Wstaw nowy formant**.  
-  
-2.  W **Wstawianie formantu** polu Wybierz żądany sterowania i kliknij **OK**. Formant pojawi się w kontenerze formantu.  
-  
+
+Aplikacja kontenera testu, w programie Visual C++, jest kontener formantu ActiveX, testowanie i debugowanie kontrolki ActiveX. Kontener testu umożliwia deweloperowi kontroli w celu przetestowania funkcjonalności formantu przez zmianę jej właściwości, wywoływania jego metody i wyzwalanie jego zdarzeń. Kontener testu można wyświetlać dzienniki powiadomień powiązanie danych, a także udostępnia funkcje służące do testowania funkcji trwałości formantu ActiveX: Zapisz właściwości do strumienia lub substorage, ich ładować ponownie i sprawdzanie danych przechowywanych w usłudze stream. W tej sekcji opisano sposób korzystania z podstawowych funkcji kontener testu. Aby uzyskać dodatkowe informacje, wybierz **pomocy** menu podczas uruchamiania kontenera testowego.
+
+### <a name="to-access-the-activex-control-test-container"></a>Aby uzyskać dostęp kontener testu kontrolki ActiveX
+
+1. Tworzenie [TSTCON próbki: Kontener testu kontrolki ActiveX](../visual-cpp-samples.md).
+
+### <a name="to-test-your-activex-control"></a>Aby przetestować formant ActiveX
+
+1. Na **Edytuj** kliknij menu Kontener testu **Wstaw nową kontrolkę**.
+
+1. W **Wstawianie formantu** polu, wybierz odpowiednią kontrolkę i kliknij przycisk **OK**. Formant, pojawi się w kontenerze kontrolek.
+
     > [!NOTE]
-    >  Jeśli formant nie ma na liście **Wstawianie formantu** okna dialogowego upewnij się, został zarejestrowany za pomocą **Zarejestruj formanty** polecenie **pliku** menu Test Kontener.  
-  
- W tym momencie można przetestować, właściwości lub zdarzeń formantu.  
-  
-#### <a name="to-test-properties"></a>Aby przetestować właściwości  
-  
-1.  Na **kontroli** menu, kliknij przycisk **wywołania metody**.  
-  
-2.  W **nazwę metody** listy rozwijanej wybierz metodę PropPut dla właściwości mają zostać przetestowane.  
-  
-3.  Modyfikowanie **wartość parametru** lub **typ parametru** i wybierz polecenie **ustaw wartość** przycisku.  
-  
-4.  Kliknij przycisk **Invoke** można zastosować nową wartość do obiektu.  
-  
-     Ta właściwość zawiera teraz nową wartość.  
-  
-#### <a name="to-test-events-and-specify-the-destination-of-event-information"></a>Aby przetestować zdarzeń i określ miejsce docelowe zdarzeń informacji.  
-  
-1.  Na **opcje** menu, kliknij przycisk **rejestrowanie**.  
-  
-2.  Określ miejsce docelowe informacji o zdarzeniu.  
-  
-## <a name="see-also"></a>Zobacz też  
- [Kontrolki ActiveX MFC](../mfc/mfc-activex-controls.md)   
- [Porady: debugowanie formantu ActiveX](/visualstudio/debugger/how-to-debug-an-activex-control)
+    >  Jeśli formant nie znajduje się w **Wstawianie formantu** okna dialogowego pole, upewnij się, zarejestrowano je przy użyciu **Zarejestruj formanty** polecenia **pliku** menu Test Kontener.
+
+W tym momencie można przetestować kontroli nad właściwości lub zdarzenia.
+
+#### <a name="to-test-properties"></a>Aby przetestować właściwości
+
+1. Na **kontroli** menu, kliknij przycisk **wywołania metody**.
+
+1. W **nazwę metody** listy rozwijanej wybierz metodę PropPut właściwość, którą chcesz przetestować.
+
+1. Modyfikowanie **wartość parametru** lub **typ parametru** i kliknij pozycję **ustaw wartość** przycisku.
+
+1. Kliknij przycisk **Invoke** zastosować nową wartość do obiektu.
+
+     Ta właściwość zawiera teraz nowe wartości.
+
+#### <a name="to-test-events-and-specify-the-destination-of-event-information"></a>Aby przetestować zdarzenia i określ miejsce docelowe informacji o zdarzeniach.
+
+1. Na **opcje** menu, kliknij przycisk **rejestrowania**.
+
+1. Określ miejsce docelowe informacji o zdarzeniach.
+
+## <a name="see-also"></a>Zobacz też
+
+[Kontrolki ActiveX MFC](../mfc/mfc-activex-controls.md)<br/>
+[Instrukcje: debugowanie kontrolki ActiveX](/visualstudio/debugger/how-to-debug-an-activex-control)
 

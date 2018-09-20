@@ -1,5 +1,5 @@
 ---
-title: Dodawanie klienta MFC ODBC | Dokumentacja firmy Microsoft
+title: Dodawanie użytkownika MFC ODBC | Dokumentacja firmy Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -14,28 +14,30 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0ce5adc8cb9afc63aa1b2d1c7366ceba081ef1a7
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 02323f1af8ee36d53cdd29d48989a96e61f72c60
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33346861"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46406805"
 ---
 # <a name="adding-an-mfc-odbc-consumer"></a>Dodawanie klienta MFC ODBC
-Konsumenta MFC ODBC składa się z ODBC rekordów klasy danych powiązania i trzeba uzyskiwać dostęp do źródła danych.  
-  
-### <a name="to-add-an-mfc-odbc-consumer"></a>Aby dodać konsumenta MFC ODBC  
-  
-1.  W widoku klas kliknij prawym przyciskiem myszy projekt. W menu skrótów kliknij **Dodaj** , a następnie kliknij przycisk **Dodaj klasę**.  
-  
-2.  W folderze Visual C++, kliknij dwukrotnie **MFC ODBC konsumenta** ikony lub zaznacz go i kliknij **Otwórz**.  
-  
-     Zostanie otwarty Kreator konsumenta MFC ODBC.  
-  
-3.  Zdefiniuj ustawienia, zgodnie z opisem w [Kreator konsumenta MFC ODBC](../../mfc/reference/mfc-odbc-consumer-wizard.md).  
-  
-4.  Kliknij przycisk **Zakończ** aby zamknąć kreatora, w którym zostanie wstawiona nowo utworzony kod użytkownika ODBC w projekcie.  
-  
-## <a name="see-also"></a>Zobacz też  
- [Dodawanie funkcji z kreatorami kodów](../../ide/adding-functionality-with-code-wizards-cpp.md)
+
+Odbiorca MFC ODBC składa się z ODBC rekordów klasy i powiązania danych konieczne dostępu do źródła danych.
+
+### <a name="to-add-an-mfc-odbc-consumer"></a>Aby dodać użytkownika MFC ODBC
+
+1. W widoku klas kliknij prawym przyciskiem myszy projekt. W menu skrótów kliknij **Dodaj** a następnie kliknij przycisk **Dodaj klasę**.
+
+1. W folderze Visual C++, kliknij dwukrotnie **konsumenta interfejsu ODBC MFC** ikonę lub wybierz ją i kliknij **Otwórz**.
+
+     Zostanie otwarty Kreator użytkownika interfejsu ODBC MFC.
+
+1. Zdefiniuj ustawienia, zgodnie z opisem w [Kreator użytkownika interfejsu ODBC MFC](../../mfc/reference/mfc-odbc-consumer-wizard.md).
+
+1. Kliknij przycisk **Zakończ** aby zamknąć kreatora, który powoduje wstawienie nowo utworzony kod konsumenta ODBC w projekcie.
+
+## <a name="see-also"></a>Zobacz też
+
+[Dodawanie funkcji za pomocą kreatorów kodu](../../ide/adding-functionality-with-code-wizards-cpp.md)
 

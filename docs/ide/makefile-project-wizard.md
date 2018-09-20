@@ -17,23 +17,26 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b4ea6619804c4215ecb53fa0e92a2b12bbdc5e31
-ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
+ms.openlocfilehash: 9dfadd39281143baa35d8a4e30fcef345335cacc
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "33334402"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46401928"
 ---
 # <a name="makefile-project-wizard"></a>Kreator projektu pliku reguł dla programu make
-Ten kreator umożliwia tworzenie wiersz polecenia dla aparatu kompilacji do wykonania. Po utworzeniu projektu można wyświetlić i edytować właściwości projektu do projektu [strony właściwości](../ide/working-with-project-properties.md).  
-  
-## <a name="overview"></a>Omówienie  
- Ta strona kreatora opisano bieżące ustawienia projektu dla tworzonego projektu. Domyślnie skonfigurowano projekt do tworzenia obu debugowania i wydania konfiguracje *nazwa_projektu.nazwa_modułu.nazwa_procedury*.exe.  
-  
- Aby zmienić te ustawienia domyślne, kliknij przycisk [ustawienia aplikacji](../ide/application-settings-makefile-project-wizard.md) w kolumnie po lewej stronie kreatora i wprowadź żądane zmiany.  
-  
-## <a name="see-also"></a>Zobacz też  
- [Tworzenie projektu pliku reguł programu make](../ide/creating-a-makefile-project.md)   
- [Odwołanie NMAKE](../build/nmake-reference.md)   
- [Znaki specjalne w pliku reguł programu make](../build/special-characters-in-a-makefile.md)   
- [Zawartość pliku reguł programu Make](../build/contents-of-a-makefile.md)
+
+Ten kreator umożliwia utworzenie wiersza polecenia dla aparatu kompilacji do wykonania. Po utworzeniu projektu, można wyświetlać i edytować właściwości projektu w projekcie [strona właściwości](../ide/working-with-project-properties.md).
+
+## <a name="overview"></a>Omówienie
+
+Ta strona kreatora opisuje bieżące ustawienia projektu dla projektu, który tworzysz. Domyślnie skonfigurowano projekt do tworzenia obu debugowania i zwalniania konfiguracji z *ProjName*.exe.
+
+Aby zmienić te ustawienia domyślne, kliknij przycisk [ustawienia aplikacji](../ide/application-settings-makefile-project-wizard.md) karty w lewej kolumnie kreatora i wprowadź żądane zmiany.
+
+## <a name="see-also"></a>Zobacz też
+
+[Tworzenie projektu pliku reguł programu make](../ide/creating-a-makefile-project.md)<br>
+[NMAKE — dokumentacja](../build/nmake-reference.md)<br>
+[Znaki specjalne w pliku reguł programu Make](../build/special-characters-in-a-makefile.md)<br>
+[Zawartość pliku reguł programu Make](../build/contents-of-a-makefile.md)

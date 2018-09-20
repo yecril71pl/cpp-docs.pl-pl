@@ -19,12 +19,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 09390e25ffe06ce6702aef68d73c352e063a48ef
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: 3dbf6d861dd446745ba0cc3581c7e3e5511c01d3
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45716784"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46409366"
 ---
 # <a name="generic-classes-ccli"></a>Klasy ogólne [C++/CLI]
 
@@ -47,38 +47,38 @@ class-body
 
 W powyższej składni używane są następujące warunki:
 
-*Atrybuty*  
+*Atrybuty*<br/>
 (Opcjonalnie) Dodatkowe informacje deklaratywnego. Aby uzyskać więcej informacji o atrybuty i klasy atrybutów Zobacz atrybutów.
 
-*klucz klasy*  
+*klucz klasy*<br/>
 Albo **klasy** lub **typename**
 
 *Typ — parametr-identyfikatory*, rozdzielana przecinkami lista identyfikatorów określających nazwy parametrów typu.
 
-*ograniczenie — klauzule*  
+*ograniczenie — klauzule*<br/>
 Listy (nie rozdzielanych przecinkami) **gdzie** klauzul określania ograniczenia dla parametrów typu. Ma postać:
 
 > **gdzie** *typu parametru identyfikatorów* **:** *lista ograniczeń***...** 
 
-*Lista ograniczeń*  
+*Lista ograniczeń*<br/>
 *Klasa lub interfejs*[`,` *...* ]
 
-*modyfikatory dostępności*  
+*modyfikatory dostępności*<br/>
 Modyfikatory dostępności dla klasy ogólnej. Dla środowiska wykonawczego Windows, jest dozwolony tylko modyfikator **prywatnej**. Środowisko uruchomieniowe języka wspólnego, są dozwolone Modyfikatory **prywatnej** i **publicznych**.
 
-*Identyfikator*  
+*Identyfikator*<br/>
 Nazwa klasy ogólnej dowolnego prawidłowego identyfikatora C++.
 
-*Modyfikatory*  
+*Modyfikatory*<br/>
 (Opcjonalnie) Może zawierać Modyfikatory **zapieczętowanego** i **abstrakcyjne**.
 
-*Lista podstawowego*  
+*Lista podstawowego*<br/>
 Lista, która zawiera jedną klasę bazową i wszystkie zaimplementowane interfejsy, wszystkie rozdzielonych przecinkami.
 
-*treści klasy*  
+*treści klasy*<br/>
 Treść tej klasy, zawierający pola, funkcje składowe itp.
 
-*deklaratory*  
+*deklaratory*<br/>
 Deklaracje żadnych zmiennych tego typu. Na przykład: `^` *identyfikator*[`,` ...]
 
 Można zadeklarować klasy ogólne takich (należy pamiętać, że słowa kluczowego **klasy** mogą być używane zamiast **typename**). W tym przykładzie `ItemType`, `KeyType` i `ValueType` są nieznane typy, które są określone w punkcie, w którym typu. `HashTable<int, int>` jest zbudowany typ ogólny typ `HashTable<KeyType, ValueType>`. Liczba różne typy utworzone można skonstruować z jednego ogólnego typu. Typy utworzone skonstruowany na podstawie klasy ogólne są traktowane jak dowolny inny typ klasy ref.

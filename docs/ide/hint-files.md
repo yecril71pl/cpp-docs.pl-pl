@@ -21,12 +21,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: dca97238310c42b9a537baa4056563b25c20c617
-ms.sourcegitcommit: d10a2382832373b900b1780e1190ab104175397f
+ms.openlocfilehash: 98734522410b867d735d0af25f440d5b45874563
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43895230"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46393285"
 ---
 # <a name="hint-files"></a>Pliki wskazówki
 
@@ -52,9 +52,9 @@ Następujące definicje makr znajdują się w pliku nagłówka oddzielne.
 
 ```cpp
 // Header file.
-#define STDMETHOD(method) HRESULT (STDMETHODCALLTYPE * method)  
+#define STDMETHOD(method) HRESULT (STDMETHODCALLTYPE * method)
 #define STDMETHODCALLTYPE __stdcall
-#define HRESULT void*  
+#define HRESULT void*
 ```
 
 Podczas analizowania systemu nie można zinterpretować kodu źródłowego, ponieważ funkcja o nazwie `STDMETHOD` wydaje się być zadeklarowany, i deklaracja jest nieprawidłowy, ponieważ zawiera ona dwie listy parametrów. Podczas analizowania system nie otworzyć pliku nagłówka, aby odkryć definicje `STDMETHOD`, `STDMETHODCALLTYPE`, i `HRESULT` makra. Ponieważ nie można zinterpretować systemu podczas analizowania `STDMETHOD` makra ignoruje całą instrukcję, a następnie kontynuuje analizowanie.
@@ -127,21 +127,21 @@ Niektóre makra systemu podczas analizowania do błędnie interpretuje kodu źr�
 
 W poniższym kodzie źródłowym, wpisz parametr `FormatWindowClassName()` funkcja `PXSTR`, a nazwa parametru jest `szBuffer`. Jednak podczas analizowania błędów systemowych `_Pre_notnull_` i `_Post_z_` adnotacji SAL typ parametru lub nazwę parametru.
 
-**Kod źródłowy:**  
+**Kod źródłowy:**
 
-```  
-static void FormatWindowClassName(_Pre_notnull__Post_z_ PXSTR szBuffer)  
-```  
+```cpp
+static void FormatWindowClassName(_Pre_notnull__Post_z_ PXSTR szBuffer)
+```
 
 **Strategia:** Null definicji
 
-Strategia w tej sytuacji jest przetwarzanie adnotacji SAL tak, jakby nie istniał. Aby to zrobić, należy określić wskazówki, w której ciąg zastępujący ma wartość null. W związku z tym, podczas analizowania system ignoruje adnotacje i **Widok klas** przeglądarki te nie są wyświetlane. (Visual C++ w tym pliku podpowiedzi wbudowanych, która ukrywa adnotacji SAL.)  
+Strategia w tej sytuacji jest przetwarzanie adnotacji SAL tak, jakby nie istniał. Aby to zrobić, należy określić wskazówki, w której ciąg zastępujący ma wartość null. W związku z tym, podczas analizowania system ignoruje adnotacje i **Widok klas** przeglądarki te nie są wyświetlane. (Visual C++ w tym pliku podpowiedzi wbudowanych, która ukrywa adnotacji SAL.)
 
-**Plik wskazówki:**  
+**Plik wskazówki:**
 
-```  
+```cpp.hint
 #define _Pre_notnull_
-```  
+```
 
 ### <a name="concealed-cc-language-elements"></a>Elementy języka C/C++ ukryte
 
@@ -149,11 +149,11 @@ Typową przyczyną, że systemu podczas analizowania misinterprets kod źródło
 
 W poniższym kodzie źródłowym `START_NAMESPACE` — makro ukrywa niesparowane nawias klamrowy otwierający (`{`).
 
-**Kod źródłowy:**  
+**Kod źródłowy:**
 
-```  
+```cpp
 #define START_NAMESPACE namespace MyProject {
-```  
+```
 
 **Strategia:** bezpośrednie kopiowania
 
@@ -161,11 +161,11 @@ Jeżeli semantyka makra są krytyczne dla działania przeglądarki, należy utwo
 
 Należy pamiętać o tym, jeśli makro w pliku źródłowym zawiera innych makr, te makra interpretację tylko wtedy, gdy są one już zestaw skuteczne wskazówek dotyczących serwerów.
 
-**Plik wskazówki:**  
+**Plik wskazówki:**
 
-```  
+```cpp.hint
 #define START_NAMESPACE namespace MyProject {
-```  
+```
 
 ### <a name="maps"></a>Mapy
 
@@ -173,9 +173,9 @@ Mapa zawiera makra, które wyznaczają element początkowy, końcowy element i z
 
 Poniższy kod źródłowy definiuje `BEGIN_CATEGORY_MAP`, `IMPLEMENTED_CATEGORY`, i `END_CATEGORY_MAP` makra.
 
-**Kod źródłowy:**  
+**Kod źródłowy:**
 
-```  
+```cpp
 #define BEGIN_CATEGORY_MAP(x)\
 static const struct ATL::_ATL_CATMAP_ENTRY* GetCategoryMap() throw() {\
 static const struct ATL::_ATL_CATMAP_ENTRY pMap[] = {
@@ -183,15 +183,15 @@ static const struct ATL::_ATL_CATMAP_ENTRY pMap[] = {
 #define END_CATEGORY_MAP()\
    { _ATL_CATMAP_ENTRY_END, NULL } };\
    return( pMap ); }
-```  
+```
 
 **Strategia:** identyfikowanie elementów mapy
 
 Określanie wskazówki dotyczące rozpoczęcia, drugie (jeśli istnieje) i zakończenia elementy mapy. Użyć ciągów zastępczych specjalne mapy, `@<`, `@=`, i `@>`. Aby uzyskać więcej informacji, zobacz `Syntax` w tym temacie.
 
-**Plik wskazówki:**  
+**Plik wskazówki:**
 
-```  
+```cpp.hint
 // Start of the map.
 #define BEGIN_CATEGORY_MAP(x) @<
 // Intermediate map element.
@@ -200,7 +200,7 @@ Określanie wskazówki dotyczące rozpoczęcia, drugie (jeśli istnieje) i zako�
 #define REQUIRED_CATEGORY( catid ) @=
 // End of the map.
 #define END_CATEGORY_MAP() @>
-```  
+```
 
 ### <a name="composite-macros"></a>Złożone makra
 
@@ -208,11 +208,11 @@ Makra złożonego zawierać jeden lub więcej typów makra, które należy myli�
 
 Poniższy kod źródłowy zawiera `START_NAMESPACE` makra, która określa początek zakresu przestrzeni nazw, a `BEGIN_CATEGORY_MAP` makra, która określa początek mapy.
 
-**Kod źródłowy:**  
+**Kod źródłowy:**
 
-```  
+```cpp
 #define NSandMAP START_NAMESPACE BEGIN_CATEGORY_MAP
-```  
+```
 
 **Strategia:** bezpośrednie kopiowania
 
@@ -220,31 +220,31 @@ Wskazówki dotyczące tworzenia `START_NAMESPACE` i `BEGIN_CATEGORY_MAP` makra, 
 
 W tym przykładzie przyjęto założenie, `START_NAMESPACE` już wskazówkę, zgodnie z opisem w tym temacie w `Concealed C/C++ Language Elements` podtytułu. I bierze na siebie `BEGIN_CATEGORY_MAP` ma wskazówkę, jak opisano wcześniej w `Maps`.
 
-**Plik wskazówki:**  
+**Plik wskazówki:**
 
-```  
+```cpp.hint
 #define NSandMAP START_NAMESPACE BEGIN_CATEGORY_MAP
-```  
+```
 
 ### <a name="inconvenient-macros"></a>Nie można użyć makra
 
 Niektóre makra mogą być interpretowane przez system analizy, ale kod źródłowy jest trudne do odczytania, ponieważ makra jest długie lub zbyt złożone. Dla czytelności może podać wskazówkę, upraszczającego wyświetlanie makra.
 
-**Kod źródłowy:**  
+**Kod źródłowy:**
 
-```  
-#define STDMETHOD(methodName) HRESULT (STDMETHODCALLTYPE * methodName)  
-```  
+```cpp
+#define STDMETHOD(methodName) HRESULT (STDMETHODCALLTYPE * methodName)
+```
 
 **Strategia:** uproszczenia
 
 Utworzyć wskazówkę wyświetlającą prostsze definicji makra.
 
-**Plik wskazówki:**  
+**Plik wskazówki:**
 
-```  
+```cpp.hint
 #define STDMETHOD(methodName) void* methodName
-```  
+```
 
 ## <a name="example"></a>Przykład
 
@@ -254,7 +254,7 @@ Poniższa ilustracja przedstawia niektóre katalogi fizyczne w projekcie Visual 
 
 ### <a name="hint-file-directories"></a>Wskazówka katalogi plików
 
-![Typowe i projekt&#45;wskazówki określone katalogi plików. ](../ide/media/hintfile.png "HintFile")  
+![Typowe i projekt&#45;wskazówki określone katalogi plików. ](../ide/media/hintfile.png "HintFile")
 
 ### <a name="directories-and-hint-file-contents"></a>Katalogi i zawartość pliku wskazówka
 
@@ -262,41 +262,41 @@ Na poniższej liście przedstawiono katalogi, w tym projekcie, zawierających pl
 
 - vcpackages
 
-    ```  
-    // vcpackages (partial list)  
+    ```cpp.hint
+    // vcpackages (partial list)
     #define _In_
     #define _In_opt_
     #define _In_z_
     #define _In_opt_z_
-    #define _In_count_(size)  
-    ```  
+    #define _In_count_(size)
+    ```
 
 - Debugowanie
 
-    ```  
+    ```cpp.hint
     // Debug
     #undef _In_
     #define OBRACE {
     #define CBRACE }
-    #define RAISE_EXCEPTION(x) throw (x)  
+    #define RAISE_EXCEPTION(x) throw (x)
     #define START_NAMESPACE namespace MyProject {
     #define END_NAMESPACE }
-    ```  
+    ```
 
 - A1
 
-    ```  
+    ```cpp.hint
     // A1
     #define START_NAMESPACE namespace A1Namespace {
-    ```  
+    ```
 
 - A2
 
-    ```  
+    ```cpp.hint
     // A2
     #undef OBRACE
     #undef CBRACE
-    ```  
+    ```
 
 ### <a name="effective-hints"></a>Skuteczne wskazówki
 
@@ -306,19 +306,19 @@ W poniższej tabeli wymieniono skuteczne wskazówek dotyczących plików źród�
 
 - Skuteczne wskazówek:
 
-    ```  
-    // vcpackages (partial list)  
+    ```cpp.hint
+    // vcpackages (partial list)
     #define _In_opt_
     #define _In_z_
     #define _In_opt_z_
-    #define _In_count_(size)  
+    #define _In_count_(size)
     // Debug...
-    #define RAISE_EXCEPTION(x) throw (x)  
+    #define RAISE_EXCEPTION(x) throw (x)
     // A1
     #define START_NAMESPACE namespace A1Namespace {
     // ...Debug
     #define END_NAMESPACE }
-    ```  
+    ```
 
 Poniższe uwagi dotyczą powyższej liście.
 
@@ -332,10 +332,10 @@ Poniższe uwagi dotyczą powyższej liście.
 
 ## <a name="see-also"></a>Zobacz też
 
-[Typy plików utworzonych dla projektów Visual C++](../ide/file-types-created-for-visual-cpp-projects.md)    
-[#define — dyrektywa (C/C++)](../preprocessor/hash-define-directive-c-cpp.md)   
-[#undef — dyrektywa (C/C++)](../preprocessor/hash-undef-directive-c-cpp.md)   
-[Adnotacje SAL](../c-runtime-library/sal-annotations.md)   
-[Mapy komunikatów](../mfc/reference/message-maps-mfc.md)   
-[Makra mapy komunikatów](../atl/reference/message-map-macros-atl.md)   
+[Typy plików utworzonych dla projektów Visual C++](../ide/file-types-created-for-visual-cpp-projects.md)<br>
+[#define, dyrektywa (C/C++)](../preprocessor/hash-define-directive-c-cpp.md)<br>
+[#undef, dyrektywa (C/C++)](../preprocessor/hash-undef-directive-c-cpp.md)<br>
+[Adnotacje SAL](../c-runtime-library/sal-annotations.md)<br>
+[Mapy komunikatów](../mfc/reference/message-maps-mfc.md)<br>
+[Makra mapy komunikatów](../atl/reference/message-map-macros-atl.md)<br>
 [Makra mapy obiektów](../atl/reference/object-map-macros.md)

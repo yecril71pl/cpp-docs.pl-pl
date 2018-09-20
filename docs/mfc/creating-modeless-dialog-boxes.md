@@ -16,16 +16,18 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2055312c7418b14c9b274649db8faa297554257e
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 77b80f66f2956e71b90e4d939a0fb74aef28edb1
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33340996"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46407039"
 ---
 # <a name="creating-modeless-dialog-boxes"></a>Tworzenie niemodalnych okien dialogowych
-Pola z niemodalnego okna dialogowego należy podać własne Konstruktor publiczny w klasy okien dialogowych. Aby utworzyć niemodalne okno dialogowe, wywołaj z publicznego konstruktora, a następnie wywołać obiektu okna dialogowego [Utwórz](../mfc/reference/cdialog-class.md#create) funkcji członkowskiej można załadować zasobu okna dialogowego. Możesz wywołać **Utwórz** podczas lub po wywołaniu konstruktora. Jeśli właściwość ma zasobu okna dialogowego **ws_visible —**, natychmiast pojawi się okno dialogowe. Jeśli nie, należy wywołać jej [ShowWindow](../mfc/reference/cwnd-class.md#showwindow) funkcję elementu członkowskiego.  
-  
-## <a name="see-also"></a>Zobacz też  
- [Cykl życiowy okna dialogowego](../mfc/life-cycle-of-a-dialog-box.md)
+
+Niemodalne okno dialogowe trzeba podać publicznego konstruktora w klasy okien dialogowych. Aby utworzyć niemodalne okno dialogowe, wywołania konstruktora publicznego, a następnie wywołać obiektu okna dialogowego [Utwórz](../mfc/reference/cdialog-class.md#create) funkcja elementu członkowskiego, które można załadować zasobu okna dialogowego. Możesz wywołać **Utwórz** podczas lub po wywołaniu konstruktora. Jeśli zasobu okna dialogowego właściwości **WS_VISIBLE**, natychmiast pojawi się okno dialogowe. Jeśli nie, należy wywołać jej [ShowWindow](../mfc/reference/cwnd-class.md#showwindow) funkcja elementu członkowskiego.
+
+## <a name="see-also"></a>Zobacz też
+
+[Cykl życiowy okna dialogowego](../mfc/life-cycle-of-a-dialog-box.md)
 

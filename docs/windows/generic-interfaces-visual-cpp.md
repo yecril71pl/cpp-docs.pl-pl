@@ -16,12 +16,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: abad906c7fcc5c86a6901757ddfbb5dfeff2ec29
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: 2065b96875f2c441b24eb69f8ca51b06fe5717f0
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45704903"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46444496"
 ---
 # <a name="generic-interfaces-visual-c"></a>Interfejsy ogólne (Visual C++)
 
@@ -42,31 +42,31 @@ Aby uzyskać więcej informacji na temat interfejsów, zobacz [interfejsu klasy]
 
 ## <a name="remarks"></a>Uwagi
 
-*Atrybuty*  
+*Atrybuty*<br/>
 (Opcjonalnie) Dodatkowe informacje deklaratywnego. Aby uzyskać więcej informacji na temat atrybuty i klasy atrybutów, zobacz **atrybuty**.
 
-*klucz klasy*  
+*klucz klasy*<br/>
 **Klasa** lub **typename**
 
-*Typ — parametr-identyfikatory*  
+*Typ — parametr-identyfikatory*<br/>
 Lista identyfikatorów rozdzielonych przecinkami.
 
-*Typ — parametr ograniczenia — klauzule*  
+*Typ — parametr ograniczenia — klauzule*<br/>
 Ma postać określone w [ograniczenia dotyczące parametrów typu ogólnego (C + +/ CLI)](../windows/constraints-on-generic-type-parameters-cpp-cli.md)
 
-*modyfikatory dostępności*  
+*modyfikatory dostępności*<br/>
 (Opcjonalnie) Modyfikatory dostępności (np. **publiczne, prywatne**).
 
-*Identyfikator*  
+*Identyfikator*<br/>
 Nazwa interfejsu.
 
-*Lista podstawowego*  
+*Lista podstawowego*<br/>
 (Opcjonalnie) Lista, która zawiera co najmniej jeden jawne interfejsy podstawowe rozdzielonych przecinkami.
 
-*treść_interfejsu*  
+*treść_interfejsu*<br/>
 Deklaracje członków interfejsu.
 
-*deklaratory*  
+*deklaratory*<br/>
 (Opcjonalnie) Deklaracje zmiennych na podstawie tego typu.
 
 ## <a name="example"></a>Przykład

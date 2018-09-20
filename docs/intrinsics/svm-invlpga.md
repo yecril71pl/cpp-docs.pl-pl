@@ -17,45 +17,46 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c2f962ec4a348cca7ffdf43852cb01d673f3fb18
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: 3fa5655911366b0adf21618ec7be7eeccdca9c5a
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45706605"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46401917"
 ---
 # <a name="svminvlpga"></a>__svm_invlpga
-**Microsoft Specific**  
-  
- Unieważnienie wpisu mapowania adresu w buforze aside wygląd tłumaczenia tego komputera. Parametry określają wirtualny adres i adresu miejsca identyfikator strony do unieważnienia.  
-  
-## <a name="syntax"></a>Składnia  
-  
-```  
-void __svm_invlpga(  
-     void *Va,  
-     int ASID);  
-```  
-  
-#### <a name="parameters"></a>Parametry  
-  
-|Parametr|Opis|  
-|---------------|-----------------|  
-|*oceny luk w zabezpieczeniach*|[in] Wirtualny adres strony do unieważnienia.|  
-|*ASID*|[in] Adres miejsca identyfikator (ASID) strony do unieważnienia.|  
-  
-## <a name="remarks"></a>Uwagi  
- `__svm_invlpga` Funkcji jest odpowiednikiem `INVLPGA` machine instrukcji. Ta funkcja obsługuje interakcji monitor maszyny wirtualnej hosta z gościa operacyjnego i jego aplikacji. Aby uzyskać więcej informacji, wyszukaj dokumentu, "AMD64 architektury programisty ręczne woluminie 2: programowania systemu" numer 24593, wersji 3.11, dokumentu w [AMD corporation](https://developer.amd.com/resources/developer-guides-manuals/) lokacji.  
-  
-## <a name="requirements"></a>Wymagania  
-  
-|Wewnętrzne|Architektura|  
-|---------------|------------------|  
-|`__svm_invlpga`|x86, x64|  
-  
- **Plik nagłówkowy** \<intrin.h >  
-  
-**END specyficzny dla Microsoft**  
-  
-## <a name="see-also"></a>Zobacz też  
- [Funkcje wewnętrzne kompilatora](../intrinsics/compiler-intrinsics.md)
+
+**Microsoft Specific**
+
+Unieważnienie wpisu mapowania adresu w buforze aside wygląd tłumaczenia tego komputera. Parametry określają wirtualny adres i adresu miejsca identyfikator strony do unieważnienia.
+
+## <a name="syntax"></a>Składnia
+
+```
+void __svm_invlpga(void *Va, int ASID);
+```
+
+#### <a name="parameters"></a>Parametry
+
+|Parametr|Opis|
+|---------------|-----------------|
+|*oceny luk w zabezpieczeniach*|[in] Wirtualny adres strony do unieważnienia.|
+|*ASID*|[in] Adres miejsca identyfikator (ASID) strony do unieważnienia.|
+
+## <a name="remarks"></a>Uwagi
+
+`__svm_invlpga` Funkcji jest odpowiednikiem `INVLPGA` machine instrukcji. Ta funkcja obsługuje interakcji monitor maszyny wirtualnej hosta z gościa operacyjnego i jego aplikacji. Aby uzyskać więcej informacji, wyszukaj dokumentu, "AMD64 architektury programisty ręczne woluminie 2: programowania systemu" numer 24593, wersji 3.11, dokumentu w [AMD corporation](https://developer.amd.com/resources/developer-guides-manuals/) lokacji.
+
+## <a name="requirements"></a>Wymagania
+
+|Wewnętrzne|Architektura|
+|---------------|------------------|
+|`__svm_invlpga`|x86, x64|
+
+**Plik nagłówkowy** \<intrin.h >
+
+**END specyficzny dla Microsoft**
+
+## <a name="see-also"></a>Zobacz też
+
+[Funkcje wewnętrzne kompilatora](../intrinsics/compiler-intrinsics.md)

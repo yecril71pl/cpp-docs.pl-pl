@@ -1,5 +1,5 @@
 ---
-title: Typy wyliczeniowe przestrzeń nazw współbieżności (AMP) | Dokumentacja firmy Microsoft
+title: Wyliczenia przestrzeni nazw współbieżności (AMP) | Dokumentacja firmy Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
 ms.topic: reference
@@ -13,47 +13,50 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a67b5e77b8ab8c52e55dea96e64a3f16a4d70e39
-ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
+ms.openlocfilehash: d4f842b799a81179fa1a612e652aae391ca3375d
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33695671"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46435665"
 ---
-# <a name="concurrency-namespace-enums-amp"></a>Typy wyliczeniowe przestrzeń nazw współbieżności (AMP)
-|||  
-|-|-|  
-|[access_type — wyliczenie](#access_type)|[queuing_mode — wyliczenie](#queuing_mode)|  
-  
-##  <a name="access_type"></a>  access_type — wyliczenie  
- Typ wyliczeniowy używany do określenia różnych typów dostępu do danych.  
-  
-```  
-enum access_type;  
-```  
-### <a name="values"></a>Wartości  
-  
-|Nazwa|Opis|  
-|----------|-----------------|  
-|`access_type_auto`|Automatycznie Wybierz najlepsze `access_type` dla akceleratora.|  
-|`access_type_none`|W wersji dedykowanej. Alokacja jest dostępny tylko na akceleratora, a nie na Procesor.|  
-|`access_type_read`|Udostępnione. Alokacja jest dostępny z akceleratora i jest możliwy do odczytu na Procesor.|  
-|`access_type_read_write`|Udostępnione. Alokacja jest dostępny z akceleratora i jest dostępny do zapisu na Procesorze.|  
-|`access_type_write`|Udostępnione. Alokacja jest dostępny z akceleratora i elementy readable i writable procesora.|  
+# <a name="concurrency-namespace-enums-amp"></a>Wyliczenia przestrzeni nazw współbieżności (AMP)
 
-  
-##  <a name="queuing_mode"></a>  queuing_mode — wyliczenie  
- Określa kolejkowania tryby, które są obsługiwane na akceleratora.  
-  
-```  
-enum queuing_mode;  
-``` 
-### <a name="values"></a>Wartości  
-  
-|Nazwa|Opis|  
-|----------|-----------------|  
-|`queuing_mode_immediate`|Kolejkowanie tryb, który określa, że jakaś polecenia, na przykład [parallel_for_each — funkcja (C++ AMP)](concurrency-namespace-functions-amp.md#parallel_for_each), są wysyłane do odpowiedniego urządzenia akceleratora, jak tylko zostaną zwrócone do obiektu wywołującego.|  
-|`queuing_mode_automatic`|Kolejkowanie tryb, który określa, czy polecenia być umieszczone w kolejce w kolejce polecenia, który odpowiada [accelerator_view](accelerator-view-class.md) obiektu. Polecenia są wysyłane do urządzenia podczas [accelerator_view::flush](accelerator-view-class.md#flush) jest wywoływana.|   
-  
-## <a name="see-also"></a>Zobacz też  
- [Przestrzeń nazw współbieżności (C++ AMP)](concurrency-namespace-cpp-amp.md)
+|||
+|-|-|
+|[access_type — wyliczenie](#access_type)|[queuing_mode — wyliczenie](#queuing_mode)|
+
+##  <a name="access_type"></a>  access_type — wyliczenie
+
+Typ wyliczeniowy używany do oznaczania różnych typów dostępu do danych.
+
+```
+enum access_type;
+```
+### <a name="values"></a>Wartości
+
+|Nazwa|Opis|
+|----------|-----------------|
+|`access_type_auto`|Automatycznie wybiera najlepsze `access_type` dla akceleratora.|
+|`access_type_none`|W wersji dedykowanej. Przydział jest dostępny tylko na akceleratorze, nie na CPU.|
+|`access_type_read`|Udostępnione. Przydział jest dostępny na akceleratorze i czytelny na CPU.|
+|`access_type_read_write`|Udostępnione. Przydział jest dostępny na akceleratorze i zapisywalny na CPU.|
+|`access_type_write`|Udostępnione. Przydział jest dostępny na akceleratorze i czytelny i zapisywalny na CPU.|
+
+##  <a name="queuing_mode"></a>  queuing_mode — wyliczenie
+
+Określa tryby kolejkowania, które są obsługiwane w akceleratorze.
+
+```
+enum queuing_mode;
+```
+### <a name="values"></a>Wartości
+
+|Nazwa|Opis|
+|----------|-----------------|
+|`queuing_mode_immediate`|Tryb kolejkowania, który określa, że wszelkie polecenia, na przykład [parallel_for_each — funkcja (C++ AMP)](concurrency-namespace-functions-amp.md#parallel_for_each), są wysyłane do odpowiadającego urządzenia akceleratora, jak tylko powrócą do wywołującego.|
+|`queuing_mode_automatic`|Tryb kolejkowania, który określa, że polecenia są kolejkowane w kolejce poleceń, który odpowiada [accelerator_view](accelerator-view-class.md) obiektu. Polecenia są wysyłane do urządzenia po [accelerator_view::flush](accelerator-view-class.md#flush) jest wywoływana.|
+
+## <a name="see-also"></a>Zobacz też
+
+[Przestrzeń nazw współbieżności (C++ AMP)](concurrency-namespace-cpp-amp.md)

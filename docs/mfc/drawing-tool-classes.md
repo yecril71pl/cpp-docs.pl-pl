@@ -18,37 +18,39 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 45f1898addfff37744301c0d3cdac71b9909ec02
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: a9d81f3051450f060a82bbd3a192ad387332922a
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33349216"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46408885"
 ---
 # <a name="drawing-tool-classes"></a>Klasy narzędzi do rysowania
-Te klasy hermetyzować narzędzi do rysowania, które są używane do rysowania w kontekście urządzenia.  
-  
- [CGdiObject](../mfc/reference/cgdiobject-class.md)  
- Klasa podstawowa dla interfejsu GDI narzędzi do rysowania.  
-  
- [CBrush](../mfc/reference/cbrush-class.md)  
- Hermetyzuje pędzel GDI wybranego jako pędzla bieżącego kontekstu urządzenia. Pędzle są używane do wypełniania wnętrza obiektów rysowania.  
-  
- [CPen](../mfc/reference/cpen-class.md)  
- Hermetyzuje pióro GDI, które można wybrać jako bieżącego pióra kontekstu urządzenia. Pióra są używane do rysowania linii obramowania obiektów.  
-  
- [CFont](../mfc/reference/cfont-class.md)  
- Hermetyzuje czcionek GDI, wybranego jako bieżącą czcionkę w kontekście urządzenia.  
-  
- [CBitmap](../mfc/reference/cbitmap-class.md)  
- Hermetyzuje GDI mapy bitowej, zapewniając interfejs do manipulowania map bitowych.  
-  
- [CPalette](../mfc/reference/cpalette-class.md)  
- Hermetyzuje paletę kolorów GDI do użycia jako interfejs pomiędzy aplikacją i urządzenia wyjściowego kolorów, takich jak ekranu.  
-  
- [Crecttracker —](../mfc/reference/crecttracker-class.md)  
- Wyświetla i obsługuje interfejs użytkownika do zmiany rozmiaru i przenoszenia prostokątne obiekty.  
-  
-## <a name="see-also"></a>Zobacz też  
- [Przegląd klas](../mfc/class-library-overview.md)
+
+W ramach tych zajęć hermetyzować narzędzi do rysowania, które są używane do rysowania w kontekście urządzenia.
+
+[CGdiObject](../mfc/reference/cgdiobject-class.md)<br/>
+Klasa bazowa GDI narzędzia do rysowania.
+
+[CBrush](../mfc/reference/cbrush-class.md)<br/>
+Hermetyzuje pędzel interfejsu GDI, może być wybrana jako aktualny pędzel w kontekście urządzenia. Pędzle są używane do wypełniania wnętrza obiektów rysowania.
+
+[CPen](../mfc/reference/cpen-class.md)<br/>
+Hermetyzuje pióro interfejsu GDI, które można wybrać jako bieżącego pióra w kontekście urządzenia. Rysowanie linii obramowania obiektów są używane pióra.
+
+[CFont](../mfc/reference/cfont-class.md)<br/>
+Hermetyzuje czcionkę z użyciem interfejsu GDI jako bieżącą czcionkę w kontekście urządzenia można wybrać.
+
+[CBitmap](../mfc/reference/cbitmap-class.md)<br/>
+Hermetyzuje mapę bitową interfejsu GDI, zapewniając interfejs do manipulowania mapy bitowej.
+
+[CPalette](../mfc/reference/cpalette-class.md)<br/>
+Hermetyzuje palety kolorów GDI do użycia jako interfejs między aplikacją i urządzenie wyjściowe kolor, np. wyświetlania.
+
+[CRectTracker](../mfc/reference/crecttracker-class.md)<br/>
+Wyświetla i obsługuje interfejs użytkownika, zmienianie rozmiaru i przenoszenie obiektów prostokątny.
+
+## <a name="see-also"></a>Zobacz też
+
+[Klasa — Przegląd](../mfc/class-library-overview.md)
 

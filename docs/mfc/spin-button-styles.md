@@ -17,34 +17,36 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 223b7e0875a5382edf5f4d350c9343d117768c41
-ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
+ms.openlocfilehash: 71da44858ea018d0393af6267e4bb522a2c57391
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/26/2018
-ms.locfileid: "36953781"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46393597"
 ---
 # <a name="spin-button-styles"></a>Style przycisku pokrętła
-Wiele ustawień pokrętła ([CSpinButtonCtrl](../mfc/reference/cspinbuttonctrl-class.md)) są kontrolowane przez style. Można ustawić następujące style przy użyciu **właściwości** okna edytora okien dialogowych.  
-  
--   **Orientacja** pionowych lub poziomych. Określa orientację przycisk strzałki. Skojarzone z styl UDS_HORZ.  
-  
--   **Wyrównanie** odłączyć, lewej lub prawej. Określa położenie przycisku pokrętła. Lewy i prawy pozycji przycisku pokrętła obok okna zaprzyjaźnionego. Szerokość okna zaprzyjaźnionego jest obniżane, aby pomieścić przycisk pokrętła. Skojarzone z UDS_ALIGNLEFT i UDS_ALIGNRIGHT style.  
-  
--   **Automatyczne Zaprzyjaźnianie** automatycznie wybiera poprzedniego okna w porządku osi Z jako zaprzyjaźnione okno do przycisku pokrętła. W szablonie okna dialogowego to poprzedzającego przycisk pokrętła kolejności tabulacji dla formantu. Skojarzone z styl UDS_AUTOBUDDY.  
-  
--   **Ustaw Buddy Integer** powoduje, że pokrętła zwiększyć i zmniejszyć podpis okna buddy jako bieżące zmiany pozycji. Skojarzone z styl UDS_SETBUDDYINT.  
-  
--   **Bez tysięcy** nie wstawia tysięcy separatora wartości w podpisie okna zaprzyjaźnionego. Skojarzone z styl UDS_NOTHOUSANDS.  
-  
+
+Wiele ustawień dla przycisku pokrętła ([CSpinButtonCtrl](../mfc/reference/cspinbuttonctrl-class.md)) są kontrolowane przez style. Można ustawić następujące style, przy użyciu **właściwości** okna w edytorze okien dialogowych.
+
+- **Orientacja** pionowych lub poziomych. Określa orientację przycisków strzałek. Skojarzone ze stylem UDS_HORZ.
+
+- **Wyrównanie** niedołączone, po lewej lub prawej. Określa położenie przycisku pokrętła. Lewy i prawy pozycji przycisku pokrętła obok okno cyklu. Szerokość okna zaprzyjaźnionego jest obniżona do uwzględnienia przycisku pokrętła. Skojarzone z UDS_ALIGNLEFT i UDS_ALIGNRIGHT style.
+
+- **Auto Buddy** automatycznie wybiera poprzedniego okna w porządku osi Z jako okno buddy do przycisku pokrętła. W szablonu okna dialogowego to jest formant, który poprzedza przycisku pokrętła w kolejności tabulacji. Skojarzone ze stylem UDS_AUTOBUDDY.
+
+- **Ustaw Buddy Integer** powoduje, że kontrolka pokrętła zwiększyć i zmniejszyć podpis okna zaprzyjaźnionego jako bieżące zmiany pozycji. Skojarzone ze stylem UDS_SETBUDDYINT.
+
+- **Bez tysięcy** nie wstawia tysięcy separatorów w wartości w podpisie okno cyklu. Skojarzone ze stylem UDS_NOTHOUSANDS.
+
     > [!NOTE]
-    >  Ustawienie tego stylu, jeśli chcesz użyć wymiana danych okna dialogowego (DDX), aby uzyskać wartość całkowita z formantu partnera. `DDX_Text` nie akceptuje osadzonych separatory tysięcy.  
-  
--   **Zawijaj** sprawia, że położenie "wrap", ponieważ wartość nie jest zwiększone lub zmniejszone poza zakresem formantu. Skojarzone z styl UDS_WRAP.  
-  
--   **Klawisze strzałek** powoduje, że przycisk pokrętła, aby zwiększyć lub zmniejszyć pozycja po naciśnięciu klawisza Strzałka w górę i Strzałka w dół. Skojarzone z styl UDS_ARROWKEYS.  
-  
-## <a name="see-also"></a>Zobacz też  
- [Korzystanie z CSpinButtonCtrl](../mfc/using-cspinbuttonctrl.md)   
- [Kontrolki](../mfc/controls-mfc.md)
+    >  Ustaw ten styl, jeśli chcesz użyć wymiana danych okna dialogowego (DDX), aby uzyskać wartość całkowitą z formantu partnera. `DDX_Text` nie akceptuje osadzone separatory tysięcy.
+
+- **OPAKOWYWANIE** sprawia, że położenie "wrap", wartość jest zwiększone lub zmniejszone poza zakresem formantu. Skojarzone ze stylem UDS_WRAP.
+
+- **Klawisze strzałek** powoduje, że przycisk pokrętła, aby zwiększyć lub zmniejszyć pozycji po naciśnięciu klawisza Strzałka w górę i Strzałka w dół. Skojarzone ze stylem UDS_ARROWKEYS.
+
+## <a name="see-also"></a>Zobacz też
+
+[Korzystanie ze CSpinButtonCtrl](../mfc/using-cspinbuttonctrl.md)<br/>
+[Kontrolki](../mfc/controls-mfc.md)
 

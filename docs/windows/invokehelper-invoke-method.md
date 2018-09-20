@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: a9d59ca1d404e56e7d85a8f0edfe653dc5692558
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: 7d1addd96456a33b30259182e4490df70335d0d3
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42584324"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46408365"
 ---
 # <a name="invokehelperinvoke-method"></a>InvokeHelper::Invoke — Metoda
 
@@ -65,31 +65,31 @@ STDMETHOD(
 
 ### <a name="parameters"></a>Parametry
 
-*arg1*  
+*arg1*<br/>
 Argument 1.
 
-*argument2*  
+*argument2*<br/>
 Argument 2.
 
-*arg3*  
+*arg3*<br/>
 Argument 3.
 
-*Arg4*  
+*Arg4*<br/>
 Argument 4.
 
-*arg5*  
+*arg5*<br/>
 Argument 5.
 
-*arg6*  
+*arg6*<br/>
 Argument 6.
 
-*arg7*  
+*arg7*<br/>
 Argument 7.
 
-*arg8*  
+*arg8*<br/>
 Argument 8.
 
-*arg9*  
+*arg9*<br/>
 Argument 9.
 
 ## <a name="return-value"></a>Wartość zwracana
@@ -108,5 +108,5 @@ Wywołuje program obsługi zdarzeń, którego podpis zawiera określoną liczbę
 
 ## <a name="see-also"></a>Zobacz też
 
-[InvokeHelper, struktura](../windows/invokehelper-structure.md)  
+[InvokeHelper, struktura](../windows/invokehelper-structure.md)<br/>
 [Microsoft::WRL::Details, przestrzeń nazw](../windows/microsoft-wrl-details-namespace.md)

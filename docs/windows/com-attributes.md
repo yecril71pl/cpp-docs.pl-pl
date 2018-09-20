@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 8e18f64d48b357ed691f42fc900f68c8e8054776
-ms.sourcegitcommit: f0c90000125a9497bf61e41624de189a043703c0
+ms.openlocfilehash: 71ff4e3fdb80b48e306e543bdb683c3dd2b26ec3
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44317254"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46443335"
 ---
 # <a name="com-attributes"></a>Atrybuty COM
 Atrybuty COM wstrzyknąć kod obsługujący wiele obszarów projektowania modelu COM i .NET Framework — programowanie środowiska uruchomieniowego języka wspólnego. Te obszary w zakresie od implementacji niestandardowego interfejsu i obsługa istniejące interfejsy do obsługi podstawowe właściwości, metody i zdarzenia. Ponadto pomocy technicznej można znaleźć złożone i implementacją kontrolki ActiveX.
@@ -44,4 +44,5 @@ Atrybuty COM wstrzyknąć kod obsługujący wiele obszarów projektowania modelu
 |[vi_progid](../windows/vi-progid.md)|Określa identyfikator ProgID niezależny od wersji dla formantu.|
   
 ## <a name="see-also"></a>Zobacz też
- [Atrybuty według grup](../windows/attributes-by-group.md)
+
+[Atrybuty według grup](../windows/attributes-by-group.md)

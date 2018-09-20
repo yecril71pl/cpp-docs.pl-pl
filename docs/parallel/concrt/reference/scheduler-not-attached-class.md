@@ -18,54 +18,59 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c980115496e70cf0c767ce0592ef5ac9fd1fd239
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 410cb7f1af100a2740309c919989896fb7964b19
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46027027"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46401722"
 ---
 # <a name="schedulernotattached-class"></a>scheduler_not_attached — Klasa
-Ta klasa opisuje wyjątek generowany, gdy operacja została wykonana, co wymaga harmonogramu dołączony do bieżącego kontekstu, a nie jest.  
-  
-## <a name="syntax"></a>Składnia  
-  
+
+Ta klasa opisuje wyjątek generowany, gdy operacja została wykonana, co wymaga harmonogramu dołączony do bieżącego kontekstu, a nie jest.
+
+## <a name="syntax"></a>Składnia
+
 ```
 class scheduler_not_attached : public std::exception;
-```  
-  
-## <a name="members"></a>Elementy członkowskie  
-  
-### <a name="public-constructors"></a>Konstruktory publiczne  
-  
-|Nazwa|Opis|  
-|----------|-----------------|  
-|[scheduler_not_attached](#ctor)|Przeciążone. Konstruuje `scheduler_not_attached` obiektu.|  
-  
-## <a name="inheritance-hierarchy"></a>Hierarchia dziedziczenia  
- `exception`  
-  
- `scheduler_not_attached`  
-  
-## <a name="requirements"></a>Wymagania  
- **Nagłówek:** concrt.h  
-  
- **Namespace:** współbieżności  
-  
-##  <a name="ctor"></a> scheduler_not_attached 
+```
 
- Konstruuje `scheduler_not_attached` obiektu.  
-  
+## <a name="members"></a>Elementy członkowskie
+
+### <a name="public-constructors"></a>Konstruktory publiczne
+
+|Nazwa|Opis|
+|----------|-----------------|
+|[scheduler_not_attached](#ctor)|Przeciążone. Konstruuje `scheduler_not_attached` obiektu.|
+
+## <a name="inheritance-hierarchy"></a>Hierarchia dziedziczenia
+
+`exception`
+
+`scheduler_not_attached`
+
+## <a name="requirements"></a>Wymagania
+
+**Nagłówek:** concrt.h
+
+**Namespace:** współbieżności
+
+##  <a name="ctor"></a> scheduler_not_attached
+
+Konstruuje `scheduler_not_attached` obiektu.
+
 ```
 explicit _CRTIMP scheduler_not_attached(_In_z_ const char* _Message) throw();
 
 scheduler_not_attached() throw();
-```  
-  
-### <a name="parameters"></a>Parametry  
+```
+
+### <a name="parameters"></a>Parametry
+
 *_Message*<br/>
-Opisowy komunikat dotyczący błędu.  
-  
-## <a name="see-also"></a>Zobacz też  
- [Współbieżność Namespace](concurrency-namespace.md)   
- [Scheduler, klasa](scheduler-class.md)
+Opisowy komunikat dotyczący błędu.
+
+## <a name="see-also"></a>Zobacz też
+
+[Przestrzeń nazw współbieżności](concurrency-namespace.md)<br/>
+[Scheduler, klasa](scheduler-class.md)

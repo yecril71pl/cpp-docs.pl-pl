@@ -12,34 +12,35 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 68df92207feb45a77055098cdb1227a68b04bcab
-ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
+ms.openlocfilehash: 8654534143e6feed06e93406c8fe03983ee9c2fc
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33689795"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46429152"
 ---
 # <a name="263-barrier-directive"></a>2.6.3 Dyrektywa określająca bariery
-**Bariery** dyrektywy synchronizuje wszystkie wątki w zespole. W przypadku każdego wątku w zespole oczekuje, aż wszystkie pozostałe on osiągnąć tego punktu. Składnia **bariery** dyrektywy wygląda następująco:  
-  
-```  
-#pragma omp barrier new-line  
-```  
-  
- Po wszystkie wątki w zespole wystąpił bariery, rozpoczyna się każdy wątek w zespole, wykonywania instrukcji po dyrektywie bariery równolegle. Należy pamiętać, że ponieważ **bariery** dyrektywy nie ma instrukcji języka C w ramach jego składni, istnieją pewne ograniczenia na jej położenie w programie. Zobacz [dodatku C](../../parallel/openmp/c-openmp-c-and-cpp-grammar.md) dla formalnego gramatyki. W poniższym przykładzie przedstawiono te ograniczenia.  
-  
-```  
-/* ERROR - The barrier directive cannot be the immediate  
-*          substatement of an if statement  
-*/  
-if (x!=0)  
-   #pragma omp barrier  
-...  
-  
-/* OK - The barrier directive is enclosed in a  
-*      compound statement.  
-*/  
-if (x!=0) {  
-   #pragma omp barrier  
-}  
+
+**Barierę** dyrektywy synchronizuje wszystkie wątki w zespole. W przypadku każdego wątku w zespole czeka, aż wszystkie pozostałe on osiągnąć tego punktu. Składnia **barierę** dyrektywy jest następująca:
+
+```
+#pragma omp barrier new-line
+```
+
+Po wszystkie wątki w zespole wystąpił barierę, rozpoczyna się każdy wątek w zespole, wykonywania instrukcji po dyrektywie barierę równolegle. Należy pamiętać, że ponieważ **barierę** dyrektywy, nie ma instrukcji języka C w ramach jego składni, istnieją pewne ograniczenia dotyczące jego położenie w obrębie programu. Zobacz [dodatku C](../../parallel/openmp/c-openmp-c-and-cpp-grammar.md) dla formalnych gramatyki. W poniższym przykładzie przedstawiono te ograniczenia.
+
+```
+/* ERROR - The barrier directive cannot be the immediate
+*          substatement of an if statement
+*/
+if (x!=0)
+   #pragma omp barrier
+...
+
+/* OK - The barrier directive is enclosed in a
+*      compound statement.
+*/
+if (x!=0) {
+   #pragma omp barrier
+}
 ```

@@ -21,12 +21,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 2fa16a2cf15d5004ff80dda3188d79ffcba72ec1
-ms.sourcegitcommit: f0c90000125a9497bf61e41624de189a043703c0
+ms.openlocfilehash: 4b6e05e654b66c2178b7dc6e772c95df89512d1d
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44316214"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46399850"
 ---
 # <a name="dialog-editor-tab-toolbox-c"></a>Karta Edytor okien dialogowych, przybornik (C++)
 
@@ -100,10 +100,10 @@ Win32
 
 ## <a name="see-also"></a>Zobacz też
 
-[Kontrolki](../mfc/controls-mfc.md)  
-[Klasy kontrolek](../mfc/control-classes.md)  
-[Klasy okien dialogowych](../mfc/dialog-box-classes.md)  
-[Style paska przewijania](../mfc/reference/styles-used-by-mfc.md#scroll-bar-styles)  
-[Przykłady kontrolek edycji wzbogaconej](../mfc/rich-edit-control-examples.md)  
-[Dodawanie obsługi zdarzeń dla kontrolek okna dialogowego](../windows/adding-event-handlers-for-dialog-box-controls.md)  
+[Kontrolki](../mfc/controls-mfc.md)<br/>
+[Klasy kontrolek](../mfc/control-classes.md)<br/>
+[Klasy okien dialogowych](../mfc/dialog-box-classes.md)<br/>
+[Style paska przewijania](../mfc/reference/styles-used-by-mfc.md#scroll-bar-styles)<br/>
+[Przykłady kontrolek edycji wzbogaconej](../mfc/rich-edit-control-examples.md)<br/>
+[Dodawanie obsługi zdarzeń dla kontrolek okna dialogowego](../windows/adding-event-handlers-for-dialog-box-controls.md)<br/>
 [Kontrolki okna dialogowego i typy zmiennych](../ide/dialog-box-controls-and-variable-types.md)

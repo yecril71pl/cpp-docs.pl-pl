@@ -1,5 +1,5 @@
 ---
-title: Określanie kompilacja warunkowa A.2 | Dokumentacja firmy Microsoft
+title: A.2 Określanie kompilacji warunkowej | Dokumentacja firmy Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -12,26 +12,27 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d54245a2df2f38bed2674a3bb3923f8212d35459
-ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
+ms.openlocfilehash: 2d8b0f3df67313dbf03d40077a551fe64930199d
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33690598"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46393701"
 ---
 # <a name="a2---specifying-conditional-compilation"></a>A.2   Określanie kompilacji warunkowej
-Poniższe przykłady przedstawiają użycie kompilacja warunkowa użycie makra OpenMP `_OPENMP` ([2.2 sekcji](../../parallel/openmp/2-2-conditional-compilation.md) na stronie 8). Z kompilacji OpenMP `_OPENMP` makro staje się zdefiniowane.  
-  
-```  
-# ifdef _OPENMP   
-    printf_s("Compiled by an OpenMP-compliant implementation.\n");  
-# endif  
-```  
-  
- Zdefiniowany operator preprocesora umożliwia więcej niż jeden makra w jednej dyrektywy.  
-  
-```  
-# if defined(_OPENMP) && defined(VERBOSE)  
-    printf_s("Compiled by an OpenMP-compliant implementation.\n");  
-# endif  
+
+Poniższe przykłady pokazują korzystanie z kompilacji warunkowej, użycie makra OpenMP `_OPENMP` ([sekcji 2.2](../../parallel/openmp/2-2-conditional-compilation.md) na stronie 8). Za pomocą kompilacji OpenMP `_OPENMP` makro staje się zdefiniowane.
+
+```
+# ifdef _OPENMP
+    printf_s("Compiled by an OpenMP-compliant implementation.\n");
+# endif
+```
+
+Zdefiniowane — operator preprocesora umożliwia więcej niż jednego makro testować w pojedynczej dyrektywy.
+
+```
+# if defined(_OPENMP) && defined(VERBOSE)
+    printf_s("Compiled by an OpenMP-compliant implementation.\n");
+# endif
 ```

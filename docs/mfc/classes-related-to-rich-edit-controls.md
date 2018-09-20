@@ -22,17 +22,19 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f428242ac84adaf36ea0263f8e193dfeca7d0609
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 9ee7b6400dcd5c91d054b31153c21008d5302bd0
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33341401"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46401267"
 ---
 # <a name="classes-related-to-rich-edit-controls"></a>Klasy związane z formantami edycji wzbogaconej
-[Cricheditview —](../mfc/reference/cricheditview-class.md), [cricheditdoc —](../mfc/reference/cricheditdoc-class.md), i [CRichEditCntrItem](../mfc/reference/cricheditcntritem-class.md) klasy udostępniania funkcji elementu kontrolki zaawansowanej edycji ([CRichEditCtrl](../mfc/reference/cricheditctrl-class.md)) w ramach architektury dokument/widok MFC. `CRichEditView` przechowuje tekst i właściwości formatowania tekstu. `CRichEditDoc` przechowuje listę elementów klienta OLE, które znajdują się w widoku. `CRichEditCntrItem` udostępnia kontener po stronie klienta elementu OLE. Aby zmodyfikować zawartość `CRichEditView`, użyj [CRichEditView::GetRichEditCtrl](../mfc/reference/cricheditview-class.md#getricheditctrl) do dostępu do podstawowych kontrolka zaawansowanej edycji.  
-  
-## <a name="see-also"></a>Zobacz też  
- [Korzystanie z CRichEditCtrl](../mfc/using-cricheditctrl.md)   
- [Kontrolki](../mfc/controls-mfc.md)
+
+[CRichEditView](../mfc/reference/cricheditview-class.md), [CRichEditDoc](../mfc/reference/cricheditdoc-class.md), i [CRichEditCntrItem](../mfc/reference/cricheditcntritem-class.md) klasy zapewniają funkcje formantu bogatej edycji ([CRichEditCtrl](../mfc/reference/cricheditctrl-class.md)) w kontekście architektury dokumentu/widoku MFC. `CRichEditView` przechowuje tekst i właściwości formatowania tekstu. `CRichEditDoc` przechowuje listę elementów klienta OLE, które znajdują się w widoku. `CRichEditCntrItem` udostępnia siebie kontener elementu klienta OLE. Aby zmodyfikować zawartość `CRichEditView`, użyj [CRichEditView::GetRichEditCtrl](../mfc/reference/cricheditview-class.md#getricheditctrl) dostępu do podstawowych kontrolki edycji wzbogaconej.
+
+## <a name="see-also"></a>Zobacz też
+
+[Korzystanie z CRichEditCtrl](../mfc/using-cricheditctrl.md)<br/>
+[Kontrolki](../mfc/controls-mfc.md)
 

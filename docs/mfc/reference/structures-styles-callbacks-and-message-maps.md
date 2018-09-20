@@ -19,35 +19,38 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d0b4a296ddad00b284dc9de5be7f4027adfd3406
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: a8499fd02e9338d518eae9c3f7ea4d4cb077fedb
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33371103"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46403608"
 ---
 # <a name="structures-styles-callbacks-and-message-maps"></a>Struktury, style, wywołania zwrotne i mapy komunikatów
-W tej sekcji omówiono struktury, style i funkcje wywołania zwrotnego używane przez Microsoft Foundation Class Library i mapy komunikatów MFC.  
-  
-## <a name="in-this-section"></a>W tej sekcji  
- [Struktury używane przez MFC](../../mfc/reference/structures-used-by-mfc.md)  
- Zawiera łącza do struktury wywoływane z różnych funkcji Członkowskich.  
-  
- [Style używane przez MFC](../../mfc/reference/styles-used-by-mfc.md)  
- Zawiera łącza do stylów używany podczas tworzenia obiektów MFC.  
-  
- [Funkcje wywołania zwrotnego używane przez MFC](../../mfc/reference/callback-functions-used-by-mfc.md)  
- Zawiera łącza do funkcji wywołania zwrotnego znajdujących się w bibliotece MFC.  
-  
- [Mapy komunikatów](../../mfc/reference/message-maps-mfc.md)  
- W tym artykule opisano makra mapowania wiadomości i `CWnd` wpisy mapy wiadomości.  
-  
-## <a name="related-sections"></a>Sekcje pokrewne  
- [Omówienie biblioteki klas](../../mfc/class-library-overview.md)  
- Zawiera klasy biblioteki MFC według kategorii.  
-  
- [MFC — przykłady](../../visual-cpp-samples.md)  
- Zawiera łącza do przykłady ilustrujące za pomocą biblioteki MFC.
+
+W tej sekcji omówiono struktury, style i funkcjach wywołania zwrotnego używane przez bibliotekę Microsoft Foundation Class i mapy wiadomości MFC.
+
+## <a name="in-this-section"></a>W tej sekcji
+
+[Struktury używane przez MFC](../../mfc/reference/structures-used-by-mfc.md)<br/>
+Zawiera łącza do struktur wywoływane z różnych funkcji składowych.
+
+[Style używane przez MFC](../../mfc/reference/styles-used-by-mfc.md)<br/>
+Zawiera łącza do stylów używanych podczas tworzenia obiektów MFC.
+
+[Funkcje wywołania zwrotnego używane przez MFC](../../mfc/reference/callback-functions-used-by-mfc.md)<br/>
+Zawiera łącza do funkcji wywołania zwrotnego, które pojawiają się w bibliotece MFC.
+
+[Mapy komunikatów](../../mfc/reference/message-maps-mfc.md)<br/>
+W tym artykule opisano makra mapowania wiadomości i `CWnd` wpisy mapy komunikatów.
+
+## <a name="related-sections"></a>Sekcje pokrewne
+
+[Omówienie biblioteki klas](../../mfc/class-library-overview.md)<br/>
+Wyświetla listę klas w bibliotece MFC według kategorii.
+
+[Przykłady MFC](../../visual-cpp-samples.md)<br/>
+Zawiera łącza do przykładów, które przedstawiają korzystanie z biblioteki MFC.
 
 
 

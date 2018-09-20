@@ -16,31 +16,33 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9aeb6c02041a4ba90f9721f23a1397e17a4cdf81
-ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
+ms.openlocfilehash: a8dcfe39a3054d998cf5116ef125a3791d8c4a47
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/26/2018
-ms.locfileid: "36955761"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46405050"
 ---
 # <a name="using-custom-format-strings-in-a-date-and-time-picker-control"></a>Używanie niestandardowych ciągów formatu w formancie selektora dat i godzin
-Domyślnie formant selektora daty i godziny dostarcza trzy formacie typy (format każdego odpowiadającego stylu unikatowy) do wyświetlania bieżącej daty lub godziny:  
-  
--   **DTS_LONGDATEFORMAT** Wyświetla datę w formacie długim generuje danych wyjściowych, takich jak "Środa, 3 stycznia 2000".  
-  
--   **DTS_SHORTDATEFORMAT** Wyświetla datę w formacie krótkiej, generuje danych wyjściowych, takich jak "00-1-3".  
-  
--   **DTS_TIMEFORMAT** Wyświetla czas w formacie długim generuje danych wyjściowych, takich jak "5:31:42 PM".  
-  
- Jednak można dostosować wygląd daty lub godziny przy użyciu ciągu formatu niestandardowego. Ten niestandardowy ciąg składa się z istniejącego formatowania znaków, znaków nonformat lub obu. Po utworzeniu niestandardowy ciąg wywoływania [CDateTimeCtrl::SetFormat](../mfc/reference/cdatetimectrl-class.md#setformat) przekazując tekst niestandardowy. Formant selektora daty i godziny będzie wyświetlana wartość bieżącego przy użyciu ciągu formatu niestandardowego.  
-  
- Poniższy przykład kodu (gdzie *m_dtPicker* jest `CDateTimeCtrl` obiektu) przedstawiono możliwe rozwiązanie:  
-  
- [!code-cpp[NVC_MFCControlLadenDialog#7](../mfc/codesnippet/cpp/using-custom-format-strings-in-a-date-and-time-picker-control_1.cpp)]  
-  
- Oprócz ciągi formatu niestandardowego selektora daty i godziny określa również obsługa [pola wywołania zwrotnego](../mfc/using-callback-fields-in-a-date-and-time-picker-control.md).  
-  
-## <a name="see-also"></a>Zobacz też  
- [Korzystanie z CDateTimeCtrl](../mfc/using-cdatetimectrl.md)   
- [Kontrolki](../mfc/controls-mfc.md)
+
+Domyślnie formant selektora daty i godziny udostępniają trzy formatowania typy (każdego odpowiadającego stylu unikatowy format) do wyświetlania bieżącej daty lub godziny:
+
+- **DTS_LONGDATEFORMAT** Wyświetla datę w formacie długim, generuje danych wyjściowych, takich jak "Środa, 3 styczeń 2000".
+
+- **DTS_SHORTDATEFORMAT** Wyświetla datę w formacie krótkiej, generuje danych wyjściowych, takich jak "00-1-3".
+
+- **DTS_TIMEFORMAT** Wyświetla godzinę w formacie długim, generuje danych wyjściowych, takich jak "17:31:42: 00".
+
+Można jednak dostosować wygląd daty lub godziny, przy użyciu ciągu formatu niestandardowego. Ten ciąg niestandardowego składa się z istniejących formatów znaków, znaków nonformat lub jako kombinację obu tych. Po skompilowaniu niestandardowy ciąg wywołania [CDateTimeCtrl::SetFormat](../mfc/reference/cdatetimectrl-class.md#setformat) przekazując tekst niestandardowy. Kontrolka selektora daty i godziny będzie wyświetlana bieżąca wartość przy użyciu ciągu formatu niestandardowego.
+
+Poniższy przykład kodu (gdzie *m_dtPicker* jest `CDateTimeCtrl` obiektu) przedstawia jedno z możliwych rozwiązań:
+
+[!code-cpp[NVC_MFCControlLadenDialog#7](../mfc/codesnippet/cpp/using-custom-format-strings-in-a-date-and-time-picker-control_1.cpp)]
+
+Oprócz ciągów formatów niestandardowych, selektor daty i godziny kontroluje również obsługę [pól wywołania zwrotnego](../mfc/using-callback-fields-in-a-date-and-time-picker-control.md).
+
+## <a name="see-also"></a>Zobacz też
+
+[Korzystanie z CDateTimeCtrl](../mfc/using-cdatetimectrl.md)<br/>
+[Kontrolki](../mfc/controls-mfc.md)
 

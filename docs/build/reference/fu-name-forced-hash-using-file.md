@@ -20,12 +20,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 73edbed02a665d7e66478052c0fee13a227658aa
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: 0e804aa48752d1f100e4c843fae9c0d5c70ae8b6
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45720541"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46423171"
 ---
 # <a name="fu-name-forced-using-file"></a>/FU (Nazwij wymuszone pliki dyrektywy #using)
 
@@ -62,6 +62,6 @@ Aby uzyskać informacje o tym, jak utworzyć zestaw lub moduł, aby uzyskać śr
 
 ## <a name="see-also"></a>Zobacz też
 
-[Plik wyjściowy (/ F) opcje](../../build/reference/output-file-f-options.md)
-[opcje kompilatora](../../build/reference/compiler-options.md)<br/>
+[Plik wyjściowy (/F), opcje](../../build/reference/output-file-f-options.md)<br/>
+[Opcje kompilatora](../../build/reference/compiler-options.md)<br/>
 [Ustawianie opcji kompilatora](../../build/reference/setting-compiler-options.md)

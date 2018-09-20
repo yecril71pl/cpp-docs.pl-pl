@@ -17,12 +17,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: dcf760219f06ab71684d9d67240712fa501b3c00
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: 0c38485e84f0b06e79e02ba780926b6e08378220
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45722608"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46392921"
 ---
 # <a name="c-standard-library-reference"></a>Odwołanie do standardowej biblioteki C++
 
@@ -32,10 +32,13 @@ Aby uzyskać więcej informacji na temat biblioteki wykonawczej języka Visual C
 
 ## <a name="in-this-section"></a>W tej sekcji
 
-[Przegląd biblioteki Standard C++](../standard-library/cpp-standard-library-overview.md) zawiera omówienie wdrożenia przez Microsoft standardowej biblioteki języka C++.
+[Standardowa biblioteka C++ — przegląd](../standard-library/cpp-standard-library-overview.md)<br/>
+Zawiera omówienie wdrożenia przez Microsoft standardowej biblioteki języka C++.
 
-[iostream Programming](../standard-library/iostream-programming.md) zawiera omówienie iostream — programowanie.
+[iostream, programowanie](../standard-library/iostream-programming.md)<br/>
+Zawiera omówienie iostream — programowanie.
 
-[Odwołanie do plików nagłówkowych](../standard-library/cpp-standard-library-header-files.md) zawiera łącza do tematów odwołania, omawiając pliki nagłówkowe standardowej biblioteki języka C++ z przykładami kodu.
+[Odwołanie do plików nagłówkowych](../standard-library/cpp-standard-library-header-files.md)<br/>
+Zawiera łącza do tematów odwołania, omawiając pliki nagłówkowe standardowej biblioteki języka C++ z przykładami kodu.
 
 

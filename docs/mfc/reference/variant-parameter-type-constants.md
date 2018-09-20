@@ -45,53 +45,56 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d61930bda4560baaf628ce018cc0161527d9d07e
-ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
+ms.openlocfilehash: 64b68fb930c6de732e009a251c5e8363bace80ec
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/06/2018
-ms.locfileid: "37885952"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46374740"
 ---
 # <a name="variant-parameter-type-constants"></a>Stałe typów parametru Variant
-W tym temacie opisano nowe stałe, które wskazują typów parametru variant przeznaczony do użytku z klasy formantów OLE z biblioteki klas Microsoft Foundation.  
-  
- Poniżej przedstawiono listę stałych, klas:  
-  
-##  <a name="_mfc_variant_data_constants"></a> Variant — stałe danych  
-  
--   VTS_COLOR 32-bitowa liczba całkowita, używany do reprezentowania wartości kolorów RGB.  
-  
--   Wskaźnik A VTS_FONT `IFontDisp` interfejs obiektu czcionki.  
-  
--   Wartość dojścia VTS_HANDLE Windows.  
-  
--   Wskaźnik A VTS_PICTURE `IPictureDisp` interfejs obiektu obrazu.  
-  
--   VTS_OPTEXCLUSIVE 16-bitową wartość dla formantu, który jest przeznaczony do użycia w grupie formanty, takie jak przyciski radiowe. Ten typ informuje kontener, jeśli jeden formant w grupie ma wartość TRUE, wszystkie inne musi być równa FALSE.  
-  
--   VTS_TRISTATE 16-bitowa liczba całkowita używane dla właściwości, które mogą mieć jeden z trzech wartości (wybrane, wyczyszczone, niedostępny), na przykład pole wyboru.  
-  
--   VTS_XPOS_HIMETRIC 32-bitowa liczba całkowita bez znaku używany do reprezentowania pozycja wzdłuż osi x w jednostkach HIMETRIC.  
-  
--   VTS_YPOS_HIMETRIC 32-bitowa liczba całkowita bez znaku używany do reprezentowania pozycja wzdłuż osi y w jednostkach HIMETRIC.  
-  
--   VTS_XPOS_PIXELS 32-bitowa liczba całkowita bez znaku używany do reprezentowania pozycja wzdłuż osi x w pikselach.  
-  
--   VTS_YPOS_PIXELS 32-bitowa liczba całkowita bez znaku używany do reprezentowania pozycja wzdłuż osi y w pikselach.  
-  
--   VTS_XSIZE_PIXELS 32-bitowa liczba całkowita bez znaku używany do reprezentowania szerokość ekranu obiektu w pikselach.  
-  
--   VTS_YSIZE_PIXELS 32-bitowa liczba całkowita bez znaku używany do reprezentowania wysokość obiekt ekranu w pikselach.  
-  
--   VTS_XSIZE_HIMETRIC 32-bitowa liczba całkowita bez znaku używany do reprezentowania szerokość ekranu obiektu w jednostkach HIMETRIC.  
-  
--   VTS_YSIZE_HIMETRIC 32-bitowa liczba całkowita bez znaku używany do reprezentowania wysokość obiekt ekranu w jednostkach HIMETRIC.  
-  
+
+W tym temacie opisano nowe stałe, które wskazują typów parametru variant przeznaczony do użytku z klasy formantów OLE z biblioteki klas Microsoft Foundation.
+
+Poniżej przedstawiono listę stałych, klas:
+
+##  <a name="_mfc_variant_data_constants"></a> Variant — stałe danych
+
+- VTS_COLOR 32-bitowa liczba całkowita, używany do reprezentowania wartości kolorów RGB.
+
+- Wskaźnik A VTS_FONT `IFontDisp` interfejs obiektu czcionki.
+
+- Wartość dojścia VTS_HANDLE Windows.
+
+- Wskaźnik A VTS_PICTURE `IPictureDisp` interfejs obiektu obrazu.
+
+- VTS_OPTEXCLUSIVE 16-bitową wartość dla formantu, który jest przeznaczony do użycia w grupie formanty, takie jak przyciski radiowe. Ten typ informuje kontener, jeśli jeden formant w grupie ma wartość TRUE, wszystkie inne musi być równa FALSE.
+
+- VTS_TRISTATE 16-bitowa liczba całkowita używane dla właściwości, które mogą mieć jeden z trzech wartości (wybrane, wyczyszczone, niedostępny), na przykład pole wyboru.
+
+- VTS_XPOS_HIMETRIC 32-bitowa liczba całkowita bez znaku używany do reprezentowania pozycja wzdłuż osi x w jednostkach HIMETRIC.
+
+- VTS_YPOS_HIMETRIC 32-bitowa liczba całkowita bez znaku używany do reprezentowania pozycja wzdłuż osi y w jednostkach HIMETRIC.
+
+- VTS_XPOS_PIXELS 32-bitowa liczba całkowita bez znaku używany do reprezentowania pozycja wzdłuż osi x w pikselach.
+
+- VTS_YPOS_PIXELS 32-bitowa liczba całkowita bez znaku używany do reprezentowania pozycja wzdłuż osi y w pikselach.
+
+- VTS_XSIZE_PIXELS 32-bitowa liczba całkowita bez znaku używany do reprezentowania szerokość ekranu obiektu w pikselach.
+
+- VTS_YSIZE_PIXELS 32-bitowa liczba całkowita bez znaku używany do reprezentowania wysokość obiekt ekranu w pikselach.
+
+- VTS_XSIZE_HIMETRIC 32-bitowa liczba całkowita bez znaku używany do reprezentowania szerokość ekranu obiektu w jednostkach HIMETRIC.
+
+- VTS_YSIZE_HIMETRIC 32-bitowa liczba całkowita bez znaku używany do reprezentowania wysokość obiekt ekranu w jednostkach HIMETRIC.
+
     > [!NOTE]
-    >  Dodatkowe variant — stałe zostały zdefiniowane dla wszystkich wariantów typów, z wyjątkiem VTS_FONT i VTS_PICTURE, stanowiące wskaźnik ze stałą danych variant. Te stałe są nazywane przy użyciu VTS_P`constantname` Konwencji. Na przykład VTS_PCOLOR jest wskaźnikiem do VTS_COLOR — stała.  
-  
-## <a name="requirements"></a>Wymagania  
- **Nagłówek:** afxdisp.h  
-  
-## <a name="see-also"></a>Zobacz też  
- [Makra i funkcje globalne](../../mfc/reference/mfc-macros-and-globals.md)
+    >  Dodatkowe variant — stałe zostały zdefiniowane dla wszystkich wariantów typów, z wyjątkiem VTS_FONT i VTS_PICTURE, stanowiące wskaźnik ze stałą danych variant. Te stałe są nazywane przy użyciu VTS_P`constantname` Konwencji. Na przykład VTS_PCOLOR jest wskaźnikiem do VTS_COLOR — stała.
+
+## <a name="requirements"></a>Wymagania
+
+**Nagłówek:** afxdisp.h
+
+## <a name="see-also"></a>Zobacz też
+
+[Makra i funkcje globalne](../../mfc/reference/mfc-macros-and-globals.md)

@@ -20,20 +20,22 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0657b05619a966ed171630d00adcd9303af7e18b
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 6691e4935d46b32bc8f433823888bb7f53a36890
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33347032"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46398836"
 ---
 # <a name="oncmdmsg-handler"></a>Program obsługi OnCmdMsg
-Aby osiągnąć routingu poleceń, wywołuje każdym obiekcie docelowym polecenia `OnCmdMsg` funkcji członkowskiej dalej docelowego polecenia w sekwencji. Polecenie celem użycia `OnCmdMsg` ustalenie, czy ich obsługi polecenia i przekazać go do innej docelowej polecenia, jeśli go nie obsługują.  
-  
- Każdej klasy docelowej polecenia może zastąpić `OnCmdMsg` funkcję elementu członkowskiego. Zastąpienia umożliwiają każdej klasy poleceń trasy do określonego celu dalej. Okno ramowe na przykład zawsze kieruje poleceń do jego bieżące okno podrzędne lub widok, jak pokazano w tabeli [trasy standardowego polecenia](../mfc/command-routing.md).  
-  
- Wartość domyślna `CCmdTarget` implementacja `OnCmdMsg` używa mapę komunikatów w wybranej klasy docelowej polecenia do wyszukiwania dla funkcji programu obsługi dla każdego komunikatu polecenia odbierze — w taki sam sposób, że są przeszukiwane standardowych komunikatów. Jeśli znajdzie dopasowanie wywołuje program obsługi. Mapy wiadomości wyszukiwanie zostało wyjaśnione w dokumencie [jak Framework wyszukuje mapy komunikatów](../mfc/how-the-framework-searches-message-maps.md).  
-  
-## <a name="see-also"></a>Zobacz też  
- [Jak struktura wywołuje programy obsługi](../mfc/how-the-framework-calls-a-handler.md)
+
+Aby umożliwić routing poleceń, wywołuje każdym obiekcie docelowym polecenia `OnCmdMsg` funkcji składowej typu dalej elemencie docelowym polecenia w sekwencji. Polecenie jest przeznaczony dla użycia `OnCmdMsg` do określenia, czy ich obsługi polecenia i przekazać go do innego elemencie docelowym polecenia, jeśli nie można go obsłużyć.
+
+Każda klasa w elemencie docelowym polecenia mogą zastępować `OnCmdMsg` funkcja elementu członkowskiego. Zastąpienia umożliwiają każdego polecenia trasy klasy do określonego celu dalej. Okno ramowe na przykład zawsze kieruje polecenia do jego bieżące okno podrzędne lub widok, jak pokazano w tabeli [trasy poleceń standardowych](../mfc/command-routing.md).
+
+Wartość domyślna `CCmdTarget` implementacji `OnCmdMsg` używa mapę komunikatów w elemencie docelowym polecenia klasy do wyszukiwania dla funkcji programu obsługi dla każdego komunikatu polecenia odbierze — w taki sam sposób, że standardowe komunikaty są przeszukiwane. Jeśli znajdzie dopasowanie, wywołuje metodę programu obsługi. Wyszukiwanie w mapie komunikatów zostało wyjaśnione w [jak Framework wyszukuje mapy komunikatów](../mfc/how-the-framework-searches-message-maps.md).
+
+## <a name="see-also"></a>Zobacz też
+
+[Jak struktura wywołuje programy obsługi](../mfc/how-the-framework-calls-a-handler.md)
 

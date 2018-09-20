@@ -18,50 +18,54 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 54a816bd4df165b3df9de723560192ac9072b29c
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: 7ef1bb6e4804fc71531f694a3dac4c5504941bf0
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45718838"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46393766"
 ---
 # <a name="outbytestring"></a>__outbytestring
-**Microsoft Specific**  
-  
- Generuje `rep outsb` instrukcji, która wysyła pierwszy `Count` bajtów danych wskazywanego przez `Buffer` port określony przez `Port`.  
-  
-## <a name="syntax"></a>Składnia  
-  
-```  
-void __outbytestring(   
-   unsigned short Port,   
-   unsigned char* Buffer,   
-   unsigned long Count   
-);  
-```  
-  
-#### <a name="parameters"></a>Parametry  
+
+**Microsoft Specific**
+
+Generuje `rep outsb` instrukcji, która wysyła pierwszy `Count` bajtów danych wskazywanego przez `Buffer` port określony przez `Port`.
+
+## <a name="syntax"></a>Składnia
+
+```
+void __outbytestring( 
+   unsigned short Port, 
+   unsigned char* Buffer, 
+   unsigned long Count 
+);
+```
+
+#### <a name="parameters"></a>Parametry
+
 *Port*<br/>
-[in] Port do wysyłania danych do.  
-  
+[in] Port do wysyłania danych do.
+
 *Bufor*<br/>
-[in] Dane, które zostaną wysłane do określonego portu.  
-  
+[in] Dane, które zostaną wysłane do określonego portu.
+
 *Liczba*<br/>
-[in] Liczba bajtów danych do wysłania.  
-  
-## <a name="requirements"></a>Wymagania  
-  
-|Wewnętrzne|Architektura|  
-|---------------|------------------|  
-|`__outbytestring`|x86, x64|  
-  
- **Plik nagłówkowy** \<intrin.h >  
-  
-## <a name="remarks"></a>Uwagi  
- Ta procedura jest dostępna wyłącznie jako wewnętrzna.  
-  
-**END specyficzny dla Microsoft**  
-  
-## <a name="see-also"></a>Zobacz też  
- [Funkcje wewnętrzne kompilatora](../intrinsics/compiler-intrinsics.md)
+[in] Liczba bajtów danych do wysłania.
+
+## <a name="requirements"></a>Wymagania
+
+|Wewnętrzne|Architektura|
+|---------------|------------------|
+|`__outbytestring`|x86, x64|
+
+**Plik nagłówkowy** \<intrin.h >
+
+## <a name="remarks"></a>Uwagi
+
+Ta procedura jest dostępna wyłącznie jako wewnętrzna.
+
+**END specyficzny dla Microsoft**
+
+## <a name="see-also"></a>Zobacz też
+
+[Funkcje wewnętrzne kompilatora](../intrinsics/compiler-intrinsics.md)

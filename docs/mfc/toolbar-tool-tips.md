@@ -23,59 +23,63 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 90f325df3825b3546616ce145d4477322a1b4eed
-ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
+ms.openlocfilehash: 23ab29a219899f2c40e1b5c4a458d35f97cf49a7
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/26/2018
-ms.locfileid: "36956297"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46434417"
 ---
 # <a name="toolbar-tool-tips"></a>Etykietki narzędzi paska narzędzi
-Etykietki narzędzi są okna podręczne niewielki rozmiar, udostępniające krótkie opisy celu przycisku paska narzędzi, gdy umieszczenie wskaźnika myszy nad przyciskiem w danym okresie czasu. Po utworzeniu aplikacji przy użyciu Kreatora aplikacji, który ma paska narzędzi Narzędzia Porada jest obsługiwane dla Ciebie. W tym artykule opisano zarówno narzędzia Porada obsługi utworzone przez Kreatora aplikacji oraz sposób dodawania obsługi Porada narzędzia do aplikacji.  
-  
- W tym artykule omówiono:  
-  
--   [Aktywowanie etykietki narzędzi](#_core_activating_tool_tips)  
-  
--   [Aktualizacje paska stanu flyby —](#_core_fly_by_status_bar_updates)  
-  
-##  <a name="_core_activating_tool_tips"></a> Aktywowanie etykietki narzędzi  
- Aby aktywować etykietki narzędzi w aplikacji, należy wykonać dwie czynności:  
-  
--   Dodać cbrs_tooltips — do innych stylów (takie jak ws_child — ws_visible — i innych **CBRS_** style) przekazany jako *dwStyle* parametr [CToolBar::Create](../mfc/reference/ctoolbar-class.md#create) Funkcja lub [SetBarStyle](../mfc/reference/ccontrolbar-class.md#setbarstyle).  
-  
--   Zgodnie z opisem w poniższej procedurze, Dołącz tekst porady narzędzi, oddzielone znakiem nowego wiersza ("\n"), do zasobu ciągu zawierającego wiersza polecenia wiersza polecenia narzędzi. Zasób ciągu udostępnia identyfikator przycisku paska narzędzi.  
-  
-#### <a name="to-add-the-tool-tip-text"></a>Aby dodać tekst wskazówki  
-  
-1.  Podczas edytowania paska narzędzi w edytorze paska narzędzi, otwórz **właściwości przycisku paska narzędzi** okna dla danego przycisku.  
-  
-2.  W **monitu** Określ tekst, który ma być wyświetlany w etykietce narzędzia dla przycisku.  
-  
+
+Etykietki narzędzi są niewielki rozmiar okna podręcznego systemu windows, są one krótkie opisy przeznaczenia przycisku paska narzędzi, gdy umieszczenie wskaźnika myszy nad przyciskiem w okresie czasu. Podczas tworzenia aplikacji za pomocą Kreatora aplikacji, które ma pasek narzędzi, wsparcie Porada jest dostarczany. W tym artykule opisano zarówno narzędzia Porada pomocy technicznej utworzonych przez Kreatora aplikacji oraz jak dodać obsługę Porada narzędzie do aplikacji.
+
+W tym artykule omówiono:
+
+- [Aktywowanie etykietek narzędzi](#_core_activating_tool_tips)
+
+- [Aktualizacje paska stanu flyby —](#_core_fly_by_status_bar_updates)
+
+##  <a name="_core_activating_tool_tips"></a> Aktywowanie etykietek narzędzi
+
+Aby aktywować etykietki narzędzia w aplikacji, należy wykonać dwie czynności:
+
+- Dodaj CBRS_TOOLTIPS style do innych stylów (takich jak WS_CHILD, WS_VISIBLE i inne **CBRS_** style) przekazany jako *dwStyle* parametr [CToolBar::Create](../mfc/reference/ctoolbar-class.md#create) Funkcja lub [SetBarStyle](../mfc/reference/ccontrolbar-class.md#setbarstyle).
+
+- Zgodnie z opisem w poniższej procedurze, należy dołączyć tekst porady narzędzi, oddzielone znakiem nowego wiersza ('\n'), do zasobu ciągu zawierającego wiersz polecenia dla polecenia narzędzi. Zasób ciągu udziałów identyfikator przycisku paska narzędzi.
+
+#### <a name="to-add-the-tool-tip-text"></a>Aby dodać tekst wskazówki
+
+1. Gdy edytujesz narzędzi w edytorze paska narzędzi, otwórz **właściwości przycisku paska narzędzi** okna dla danego przycisku.
+
+1. W **monitu** Określ tekst, który ma być wyświetlany w etykietce narzędzia dla tego przycisku.
+
 > [!NOTE]
->  Ustawienie tekstu zgodnie z właściwością przycisku w edytorze paska narzędzi zastępuje wcześniejsze procedury, w którym można było otworzyć i edytować zasobu ciągu.  
-  
- Jeśli pasek sterowania z podpowiedzi włączone ma dla niej formantów podrzędnych, pasek sterowania do wyświetlenia etykietki narzędzia dla każdego formantu podrzędnego na pasek sterowania pod warunkiem, że spełnia on następujące kryteria:  
-  
--   Identyfikator formantu jest nie - 1.  
-  
--   Wpis tabeli ciągów o tym samym identyfikatorze jako formantu podrzędnego w pliku zasobów ma ciągu etykietki narzędzia.  
-  
-##  <a name="_core_fly_by_status_bar_updates"></a> Pasek stanu flyby — aktualizacje  
- Funkcja związane z etykietki narzędzi jest pasek aktualizowania stanu "flyby —". Domyślnie komunikat na pasku stanu opisuje tylko przycisku paska narzędzi w szczególności, gdy przycisk jest aktywny. Umieszczając cbrs_flyby — na liście style przekazany do `CToolBar::Create`, może mieć te komunikaty aktualizowane, gdy wskaźnik myszy przesuwa się nad narzędzi bez uaktywniania faktycznie przycisku.  
-  
-### <a name="what-do-you-want-to-know-more-about"></a>Co chcesz dowiedzieć się więcej o  
-  
--   [MFC — implementacja paska narzędzi (omówienie na paskach narzędzi)](../mfc/mfc-toolbar-implementation.md)  
-  
--   [Zadokowane i przestawne paski narzędzi](../mfc/docking-and-floating-toolbars.md)  
-  
--   [Ctoolbar —](../mfc/reference/ctoolbar-class.md) i [CToolBarCtrl](../mfc/reference/ctoolbarctrl-class.md) klas  
-  
--   [Praca z formantem paska narzędzi](../mfc/working-with-the-toolbar-control.md)  
-  
--   [Używanie swoich starych pasków narzędzi](../mfc/using-your-old-toolbars.md)  
-  
-## <a name="see-also"></a>Zobacz też  
- [MFC, implementacja paska narzędzi](../mfc/mfc-toolbar-implementation.md)
+>  Ustawienie tekstu jako właściwości przycisku paska narzędzi edytora zastępuje wcześniejsze procedury, w którym trzeba było otworzyć i edytować zasobu ciągu.
+
+Jeśli pasek sterowania z etykietek narzędzi włączone zawiera formanty podrzędne dla niej, pasek sterowania zostanie wyświetlona etykietka narzędzia dla każdego formantu podrzędnego, na pasku sterowania, tak długo, jak spełnia następujące kryteria:
+
+- Identyfikator formantu jest - 1.
+
+- Zapis tabeli ciągów mających taki sam identyfikator jak kontrolki podrzędnej w pliku zasobów ma ciągu etykietki narzędzia.
+
+##  <a name="_core_fly_by_status_bar_updates"></a> Pasek stanu flyby — aktualizacje
+
+"Flyby —" stanu paska aktualizacji jest wyświetlana funkcji związanych z etykietek narzędzi. Domyślnie komunikat na pasku stanu w tym artykule opisano tylko przycisku paska narzędzi w szczególności gdy przycisk jest aktywny. Umieszczając CBRS_FLYBY na liście style przekazany do `CToolBar::Create`, mogą mieć tych komunikatów aktualizowane, gdy kursor myszy przesuwa się nad pasek narzędzi bez faktycznego aktywowania przycisku.
+
+### <a name="what-do-you-want-to-know-more-about"></a>Co chcesz dowiedzieć się więcej na temat
+
+- [MFC — implementacja paska narzędzi (informacje ogólne na paskach narzędzi)](../mfc/mfc-toolbar-implementation.md)
+
+- [Zadokowane i przestawne paski narzędzi](../mfc/docking-and-floating-toolbars.md)
+
+- [CToolBar](../mfc/reference/ctoolbar-class.md) i [CToolBarCtrl](../mfc/reference/ctoolbarctrl-class.md) klas
+
+- [Praca z formantem paska narzędzi](../mfc/working-with-the-toolbar-control.md)
+
+- [Używanie swoich starych pasków narzędzi](../mfc/using-your-old-toolbars.md)
+
+## <a name="see-also"></a>Zobacz też
+
+[MFC, implementacja paska narzędzi](../mfc/mfc-toolbar-implementation.md)
 

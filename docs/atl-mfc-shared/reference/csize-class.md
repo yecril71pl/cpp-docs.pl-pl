@@ -21,12 +21,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 71a96e54c3182db3fa57798f962ae5565aeca812
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: fa840b2fd6e143715c924d0f7ac67e78eb8306a4
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43752268"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46417549"
 ---
 # <a name="csize-class"></a>CSize, klasa
 
@@ -222,8 +222,8 @@ Czwarty operatora jednoargumentowego znaku minusa, zmienia znak `CSize` wartoś�
 
 ## <a name="see-also"></a>Zobacz też
 
-[Próbki MFC MDI](../../visual-cpp-samples.md)   
-[Diagram hierarchii](../../mfc/hierarchy-chart.md)   
-[CRect, klasa](../../atl-mfc-shared/reference/crect-class.md)   
+[Próbki MFC MDI](../../visual-cpp-samples.md)<br/>
+[Wykres hierarchii](../../mfc/hierarchy-chart.md)<br/>
+[CRect, klasa](../../atl-mfc-shared/reference/crect-class.md)<br/>
 [CPoint, klasa](../../atl-mfc-shared/reference/cpoint-class.md)
 

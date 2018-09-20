@@ -17,33 +17,35 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c383458905d16dda935254e56a5aa9f56a153e83
-ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
+ms.openlocfilehash: 775ca98ff19266343631ff54bac16bebfff9e264
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/26/2018
-ms.locfileid: "36956164"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46399538"
 ---
 # <a name="slider-notification-messages"></a>Komunikaty powiadomień suwaka
-Formantu suwaka powiadamia jej okna nadrzędnego akcje użytkownika, wysyłając nadrzędnego WM_HSCROLL lub WM_VSCROLL komunikaty, w zależności od Orientacja formantu suwaka. Aby obsługiwać te komunikaty, Dodaj programy obsługi komunikatów WM_HSCROLL i WM_VSCROLL do okna nadrzędnego. [OnHScroll](../mfc/reference/cwnd-class.md#onhscroll) i [OnVScroll](../mfc/reference/cwnd-class.md#onvscroll) funkcje Członkowskie zostanie przekazany kod powiadomienia, położenie suwaka i wskaźnika do [CSliderCtrl](../mfc/reference/csliderctrl-class.md) obiektu. Należy pamiętać, że wskaźnik jest typu `CScrollBar *` mimo że wskazuje `CSliderCtrl` obiektu. Konieczne może być rzutowanie typu ten wskaźnik, jeśli potrzebujesz do manipulowania suwaka.  
-  
- Zamiast przy użyciu paska powiadomień kody przewijania, suwaków wysłać inny zestaw kodów powiadomień. Formant suwaka wysyła kody powiadamiania TB_BOTTOM, TB_LINEDOWN TB_LINEUP i TB_TOP tylko wtedy, gdy użytkownik wchodzi w interakcję z formantu suwaka za pomocą klawiatury. Komunikaty powiadomień TB_THUMBPOSITION i TB_THUMBTRACK są wysyłane tylko w przypadku, gdy użytkownik korzysta z myszą. Kody TB_ENDTRACK, TB_PAGEDOWN i TB_PAGEUP powiadomienia są wysyłane w obu przypadkach.  
-  
- W poniższej tabeli wymieniono komunikaty powiadomień dotyczących formantu suwaka i zdarzenia (wirtualny kody lub zdarzenia myszy), które powodują powiadomień do wysłania. (Listę standardowych wirtualnego kodów klucza, zobacz Winuser.h).  
-  
-|Komunikat z powiadomieniem|Zdarzenia będącego przyczyną powiadomień do wysłania|  
-|--------------------------|-------------------------------------------|  
-|TB_BOTTOM|VK_END|  
-|TB_ENDTRACK|WM_KEYUP (użytkownik wydane klucz, który wysłał odpowiedni kod klucza wirtualnego)|  
-|TB_LINEDOWN|VK_RIGHT lub VK_DOWN|  
-|TB_LINEUP|VK_LEFT lub VK_UP|  
-|TB_PAGEDOWN|VK_NEXT (użytkownik kliknął kanału poniżej lub po prawej stronie suwaka)|  
-|TB_PAGEUP|VK_PRIOR (użytkownik kliknął kanału powyżej lub po lewej stronie suwaka)|  
-|TB_THUMBPOSITION|WM_LBUTTONUP następującego komunikatu powiadomienia TB_THUMBTRACK|  
-|TB_THUMBTRACK|Przenoszenie suwaka (użytkownik przeciągnąć suwak)|  
-|TB_TOP|VK_HOME|  
-  
-## <a name="see-also"></a>Zobacz też  
- [Korzystanie z CSliderCtrl](../mfc/using-csliderctrl.md)   
- [Kontrolki](../mfc/controls-mfc.md)
+
+Kontrolki suwaka powiadamia okna nadrzędnego akcji użytkownika, wysyłając nadrzędnego WM_HSCROLL lub WM_VSCROLL wiadomości, w zależności od orientację przestrzenną kontrolki slider. Aby obsługiwać te komunikaty, należy dodać programy obsługi komunikatów WM_HSCROLL i WM_VSCROLL do okna nadrzędnego. [OnHScroll](../mfc/reference/cwnd-class.md#onhscroll) i [OnVScroll](../mfc/reference/cwnd-class.md#onvscroll) elementów członkowskich zostanie przekazany kod powiadomienia, położenie suwaka i wskaźnik [z CSliderCtrl](../mfc/reference/csliderctrl-class.md) obiektu. Należy zauważyć, że wskaźnik jest typu `CScrollBar *` mimo że wskazuje on `CSliderCtrl` obiektu. Może być konieczne rzutowanie typu ten wskaźnik, jeśli zachodzi potrzeba manipulowania kontrolki suwaka.
+
+Zamiast używania przewijania powiadomień kody kreskowe, kontrolki suwaka Wyślij inny zestaw kodów powiadomień. Kontrolki suwaka wysyła kody powiadamiania TB_BOTTOM, TB_LINEDOWN, TB_LINEUP i TB_TOP tylko wtedy, gdy użytkownik wchodzi w interakcję z kontrolką suwaka za pomocą klawiatury. Komunikaty powiadomień TB_THUMBPOSITION i TB_THUMBTRACK są wysyłane tylko w sytuacji, gdy użytkownik korzysta z myszy. Kody powiadamiania TB_ENDTRACK TB_PAGEDOWN i TB_PAGEUP są wysyłane w obu przypadkach.
+
+W poniższej tabeli wymieniono komunikaty powiadomień dotyczących kontrolki suwaka i zdarzenia (wirtualny kody klawiszy lub zdarzenia myszy), które powodują powiadomienia do wysłania. (Aby uzyskać listę standardowa wirtualnej kody klawiszy, zobacz Winuser.h).
+
+|Komunikat z powiadomieniem|Zdarzenia będącego przyczyną powiadomień do wysłania|
+|--------------------------|-------------------------------------------|
+|TB_BOTTOM|VK_END|
+|TB_ENDTRACK|WM_KEYUP (klucz, który jest wysyłany odpowiedni kod klawisza wirtualnego wydane użytkownika)|
+|TB_LINEDOWN|VK_RIGHT lub VK_DOWN|
+|TB_LINEUP|VK_LEFT lub VK_UP|
+|TB_PAGEDOWN|VK_NEXT (użytkownik kliknął element kanału poniżej lub po prawej stronie suwaka)|
+|TB_PAGEUP|VK_PRIOR (użytkownik kliknął element kanału powyżej lub po lewej stronie suwaka)|
+|TB_THUMBPOSITION|WM_LBUTTONUP następującego komunikatu powiadomienia TB_THUMBTRACK|
+|TB_THUMBTRACK|Przenoszenie suwaka (użytkownik przeciągnięciu suwaka)|
+|TB_TOP|VK_HOME|
+
+## <a name="see-also"></a>Zobacz też
+
+[Korzystanie z CSliderCtrl](../mfc/using-csliderctrl.md)<br/>
+[Kontrolki](../mfc/controls-mfc.md)
 

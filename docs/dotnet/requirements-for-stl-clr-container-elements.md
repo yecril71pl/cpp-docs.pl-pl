@@ -18,25 +18,27 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: 523b3e8d3f9c04a933f37032fcea670d75dafccf
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: fcba36fdf280cef31efb9a84288475fcbb82b291
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33162439"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46400430"
 ---
 # <a name="requirements-for-stlclr-container-elements"></a>Wymagania dotyczące elementów kontenera STL/CLR
-Wszystkie typy odwołań, które są wstawiane do kontenery STL/CLR musi mieć co najmniej następujące elementy:  
-  
--   Konstruktor kopiujący publicznego.  
-  
--   Operator przypisania publicznego.  
-  
--   Destruktorem publicznym.  
-  
- Ponadto asocjacyjnej kontenerów, takich jak [ustawić](../dotnet/set-stl-clr.md) i [mapy](../dotnet/map-stl-clr.md) musi mieć operator porównania publiczne zdefiniowane, czyli `operator<` domyślnie. Niektóre operacje kontenerów może wymagać publicznego konstruktora domyślnego i operator publiczny równoważność ma zostać zdefiniowana.  
-  
- Jak typów referencyjnych, typy wartości i uchwytów odwoływać się do typów, które mają zostać wstawione do kontenera asocjacyjnej musi mieć operator porównania takich jak `operator<` zdefiniowane. Wymagania dotyczące konstruktora kopiującego publiczne, operator przypisania publicznego i destruktorem publicznym nie istnieją dla typów wartości lub uchwytów typy referencyjne.  
-  
-## <a name="see-also"></a>Zobacz też  
- [Dokumentacja standardowej biblioteki C++](../standard-library/cpp-standard-library-reference.md)
+
+Wszystkie typy odwołań, które są wstawiane do kontenerów STL/CLR musi mieć co najmniej następujące elementy:
+
+- Konstruktor kopiujący publicznych.
+
+- Operator przypisania publicznego.
+
+- Destruktorem publicznym.
+
+Ponadto kontenery asocjacyjne, takie jak [ustaw](../dotnet/set-stl-clr.md) i [mapy](../dotnet/map-stl-clr.md) musi mieć zdefiniowany publiczny operator porównania, która jest `operator<` domyślnie. Niektóre operacje na kontenerach również mogą wymagać publicznego konstruktora domyślnego i publicznego operatora równoważności należy zdefiniować.
+
+Podobnie jak typy odwołań typów wartości i uchwytów, aby odwołać się do typów, które mają zostać wstawione w pojemniku asocjacyjnych musi mieć operator porównania takich jak `operator<` zdefiniowane. Wymagania dotyczące konstruktora kopiującego publicznych, operator przypisania publicznego i publicznego destruktora nie istnieją dla typów wartości lub obsługuje typy odwołań.
+
+## <a name="see-also"></a>Zobacz też
+
+[Dokumentacja standardowej biblioteki C++](../standard-library/cpp-standard-library-reference.md)

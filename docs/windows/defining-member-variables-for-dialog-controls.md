@@ -18,12 +18,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: e6734391e56f076f247bd8887a7fdb61142b3669
-ms.sourcegitcommit: f0c90000125a9497bf61e41624de189a043703c0
+ms.openlocfilehash: fa4d894fb3fc436abab84bfee11199f59bd66f78
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44317865"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46402398"
 ---
 # <a name="defining-member-variables-for-dialog-controls-c"></a>Definiowanie zmiennych Członkowskich dla formantów okna dialogowego (C++)
 
@@ -55,11 +55,11 @@ MFC
 
 ## <a name="see-also"></a>Zobacz też
 
-[Mapowanie komunikatów do funkcji](../mfc/reference/mapping-messages-to-functions.md)  
-[Dodawanie funkcji za pomocą kreatorów kodu](../ide/adding-functionality-with-code-wizards-cpp.md)  
-[Kreator klas MFC](../mfc/reference/mfc-class-wizard.md)  
-[Dodawanie klasy](../ide/adding-a-class-visual-cpp.md)  
-[Dodawanie funkcji członkowskiej](../ide/adding-a-member-function-visual-cpp.md)  
-[Dodawanie zmiennej członkowskiej](../ide/adding-a-member-variable-visual-cpp.md)  
-[Zastępowanie funkcji wirtualnych](../ide/overriding-a-virtual-function-visual-cpp.md)  
+[Mapowanie komunikatów do funkcji](../mfc/reference/mapping-messages-to-functions.md)<br/>
+[Dodawanie funkcji za pomocą kreatorów kodu](../ide/adding-functionality-with-code-wizards-cpp.md)<br/>
+[Kreator klas MFC](../mfc/reference/mfc-class-wizard.md)<br/>
+[Dodawanie klasy](../ide/adding-a-class-visual-cpp.md)<br/>
+[Dodawanie funkcji członkowskiej](../ide/adding-a-member-function-visual-cpp.md)<br/>
+[Dodawanie zmiennej członkowskiej](../ide/adding-a-member-variable-visual-cpp.md)<br/>
+[Zastępowanie funkcji wirtualnych](../ide/overriding-a-virtual-function-visual-cpp.md)<br/>
 [Handler komunikatów MFC](../mfc/reference/adding-an-mfc-message-handler.md)

@@ -16,37 +16,41 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2c539feaac9cac5bca3a41868cc03379a63bf6bb
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 1d40cd86cff4c3e58e88f9d17a551dc789bd1db4
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43204362"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46398218"
 ---
 # <a name="rgndata-structure"></a>Struktura RGNDATA
-`RGNDATA` Struktura zawiera nagłówek i tablicę prostokąty wchodzących w skład region. Tych prostokątów posortowane od góry do dołu od lewej do prawej, nie pokrywają się.  
-  
-## <a name="syntax"></a>Składnia  
-  
-```  
-typedef struct _RGNDATA { /* rgnd */  
-    RGNDATAHEADER rdh;  
-    char Buffer[1];  
-} RGNDATA;  
-```  
-  
-#### <a name="parameters"></a>Parametry  
- *rdh*  
- Określa [RGNDATAHEADER](/windows/desktop/api/wingdi/ns-wingdi-_rgndataheader) struktury. (Aby uzyskać więcej informacji na temat tej struktury, zobacz zestaw Windows SDK). Członkowie tej struktury Określ typ regionu (czy jest prostokątne lub trapezoidal), liczba prostokątami, które tworzą regionu, rozmiaru buforu, który zawiera struktury prostokąt, i tak dalej.  
-  
- *Bufor*  
- Określa dowolnego rozmiaru buforu, który zawiera [Prostokąt](../../mfc/reference/rect-structure1.md) struktur, które składają się na region.  
-  
-## <a name="requirements"></a>Wymagania  
- **Nagłówek:** wingdi.h  
-  
-## <a name="see-also"></a>Zobacz też  
- [Struktury, style, wywołania zwrotne i mapy komunikatów](../../mfc/reference/structures-styles-callbacks-and-message-maps.md)   
- [CRgn::CreateFromData](../../mfc/reference/crgn-class.md#createfromdata)   
- [CRgn::GetRegionData](../../mfc/reference/crgn-class.md#getregiondata)
+
+`RGNDATA` Struktura zawiera nagłówek i tablicę prostokąty wchodzących w skład region. Tych prostokątów posortowane od góry do dołu od lewej do prawej, nie pokrywają się.
+
+## <a name="syntax"></a>Składnia
+
+```
+typedef struct _RGNDATA { /* rgnd */
+    RGNDATAHEADER rdh;
+    char Buffer[1];
+} RGNDATA;
+```
+
+#### <a name="parameters"></a>Parametry
+
+*rdh*<br/>
+Określa [RGNDATAHEADER](/windows/desktop/api/wingdi/ns-wingdi-_rgndataheader) struktury. (Aby uzyskać więcej informacji na temat tej struktury, zobacz zestaw Windows SDK). Członkowie tej struktury Określ typ regionu (czy jest prostokątne lub trapezoidal), liczba prostokątami, które tworzą regionu, rozmiaru buforu, który zawiera struktury prostokąt, i tak dalej.
+
+*Bufor*<br/>
+Określa dowolnego rozmiaru buforu, który zawiera [Prostokąt](../../mfc/reference/rect-structure1.md) struktur, które składają się na region.
+
+## <a name="requirements"></a>Wymagania
+
+**Nagłówek:** wingdi.h
+
+## <a name="see-also"></a>Zobacz też
+
+[Struktury, style, wywołania zwrotne i mapy komunikatów](../../mfc/reference/structures-styles-callbacks-and-message-maps.md)<br/>
+[CRgn::CreateFromData](../../mfc/reference/crgn-class.md#createfromdata)<br/>
+[CRgn::GetRegionData](../../mfc/reference/crgn-class.md#getregiondata)
 

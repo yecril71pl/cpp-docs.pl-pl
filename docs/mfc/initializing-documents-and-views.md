@@ -18,18 +18,20 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 43610a08d5a3713cc40de0a2279286735a27d1da
-ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
+ms.openlocfilehash: d6a6f989b8c6b19c78cf9ad508d18e9592bb9305
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/25/2018
-ms.locfileid: "36928185"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46417400"
 ---
 # <a name="initializing-documents-and-views"></a>Inicjowanie dokumentów i widoków
-Dokumenty są tworzone na dwa różne sposoby, więc klasy dokumentu musi obsługiwać obu kierunkach. Po pierwsze użytkownik może utworzyć nowy, pusty dokument przy użyciu polecenia nowy plik. W takim przypadku Inicjowanie dokumentu w zastąpienia z [OnNewDocument](../mfc/reference/cdocument-class.md#onnewdocument) funkcji członkowskiej klasy [CDocument](../mfc/reference/cdocument-class.md). Po drugie użytkownik służy polecenie Otwórz w menu Plik można utworzyć nowego dokumentu, których zawartość są odczytywane z pliku. W takim przypadku Inicjowanie dokumentu w zastąpienia z [OnOpenDocument](../mfc/reference/cdocument-class.md#onopendocument) funkcji członkowskiej klasy `CDocument`. Zarówno inicjalizacji są takie same, należy wywołać typowych funkcji członkowskiej z obu zastąpienia lub `OnOpenDocument` można wywołać `OnNewDocument` do zainicjowania czystą dokumentu, a następnie Zakończ operacja otwierania.  
-  
- Widoki są tworzone po utworzeniu swoje dokumenty. Najlepszy moment na inicjowanie widoku jest po zakończeniu platformę tworzenie dokumentów, okien ramowych i widoku. Widok można zainicjować przez zastąpienie [OnInitialUpdate](../mfc/reference/cview-class.md#oninitialupdate) funkcji członkowskiej klasy [CView](../mfc/reference/cview-class.md). Jeśli musisz ponownie zainicjować lub Dostosuj niczego każdej zmianie dokumentu, można zastąpić [OnUpdate](../mfc/reference/cview-class.md#onupdate).  
-  
-## <a name="see-also"></a>Zobacz też  
- [Inicjowanie i oczyszczanie dokumentów i widoków](../mfc/initializing-and-cleaning-up-documents-and-views.md)
+
+Dokumenty są tworzone na dwa różne sposoby, więc klasy dokumentu musi obsługiwać w obu kierunkach. Po pierwsze użytkownik może utworzyć nowy pusty dokument za pomocą polecenia nowy plik. W takim przypadku Inicjowanie dokumentu w zastąpienie metody [OnNewDocument](../mfc/reference/cdocument-class.md#onnewdocument) funkcji składowej klasy typu [CDocument](../mfc/reference/cdocument-class.md). Po drugie użytkownik służy polecenie Otwórz menu Plik można utworzyć nowego dokumentu, w których zawartość są odczytywane z pliku. W takim przypadku Inicjowanie dokumentu w zastąpienie metody [OnOpenDocument](../mfc/reference/cdocument-class.md#onopendocument) funkcji składowej klasy typu `CDocument`. Jeśli oba inicjalizacje są takie same, można wywołać typowych funkcji składowej z obu zastąpienia lub `OnOpenDocument` może wywołać `OnNewDocument` na inicjowanie dokumentu czyste, a następnie Zakończ operacja otwierania.
+
+Widoki są tworzone po utworzeniu swoich dokumentów. Najlepszy moment na inicjowanie widok jest po zakończeniu przez platformę, tworzenie dokumentów, ramki okna i widoku. Widok można zainicjować przez zastąpienie [OnInitialUpdate](../mfc/reference/cview-class.md#oninitialupdate) funkcji składowej typu [CView](../mfc/reference/cview-class.md). Jeśli musisz ponownie zainicjować lub nic dopasować każdym zmiany w dokumencie, można zastąpić [OnUpdate](../mfc/reference/cview-class.md#onupdate).
+
+## <a name="see-also"></a>Zobacz też
+
+[Inicjowanie i oczyszczanie dokumentów i widoków](../mfc/initializing-and-cleaning-up-documents-and-views.md)
 

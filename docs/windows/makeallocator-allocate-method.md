@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 4422dea0b0bfb07904d0c4defad8f33281a51bec
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: c4dd68a3c678b7877db63167fd2c0d48a1daa7ad
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42609865"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46411836"
 ---
 # <a name="makeallocatorallocate-method"></a>MakeAllocator::Allocate — Metoda
 
@@ -54,5 +54,5 @@ Deweloper musi zastąpić tylko **Allocate()** metodę, aby wdrożyć model przy
 
 ## <a name="see-also"></a>Zobacz też
 
-[MakeAllocator, klasa](../windows/makeallocator-class.md)  
+[MakeAllocator, klasa](../windows/makeallocator-class.md)<br/>
 [Microsoft::WRL::Details, przestrzeń nazw](../windows/microsoft-wrl-details-namespace.md)

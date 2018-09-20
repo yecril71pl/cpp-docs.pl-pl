@@ -26,59 +26,61 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b6c16c3658ee5d27def4892997c50115dc0b8831
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: e374305586db3c69a19194e866d5a03d3de91f4e
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33354040"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46402658"
 ---
 # <a name="prerequisites-for-internet-client-classes"></a>Wymagania wstępne dotyczące klas klientów internetowych
-Niektóre akcje podejmowane przez klienta internetowego (odczytywania pliku, na przykład) mają akcje wymagań wstępnych (w tym przypadku ustanawiania połączenia z Internetem). W poniższej tabeli wymieniono wymagania wstępne dotyczące niektóre akcje klienta.  
-  
-### <a name="general-internet-url-ftp-gopher-or-http"></a>Ogólne internetowy adres URL (FTP, Gopher lub HTTP)  
-  
-|Akcja|Wymaganie wstępne|  
-|------------|------------------|  
-|Nawiąż połączenie.|Utwórz [CInternetSession](../mfc/reference/cinternetsession-class.md) ustanowienie podstawę klienckich aplikacji internetowych.|  
-|Otwórz adres URL.|Nawiąż połączenie. Wywołanie [CInternetSession::OpenURL](../mfc/reference/cinternetsession-class.md#openurl). `OpenURL` Funkcja zwraca obiekt zasobów tylko do odczytu.|  
-|Adres URL odczytu danych.|Otwórz adres URL. Wywołanie [CInternetFile::Read](../mfc/reference/cinternetfile-class.md#read).|  
-|Ustaw opcję Internet.|Nawiąż połączenie. Wywołanie [CInternetSession::SetOption](../mfc/reference/cinternetsession-class.md#setoption).|  
-|Ustaw funkcję, która ma zostać wywołany z informacji o stanie.|Nawiąż połączenie. Wywołanie [CInternetSession::EnableStatusCallback](../mfc/reference/cinternetsession-class.md#enablestatuscallback). Zastąpienie [CInternetSession::OnStatusCallback](../mfc/reference/cinternetsession-class.md#onstatuscallback) do obsługi połączeń.|  
-  
-### <a name="ftp"></a>FTP  
-  
-|Akcja|Wymaganie wstępne|  
-|------------|------------------|  
-|Nawiąż połączenie FTP.|Utwórz [CInternetSession](../mfc/reference/cinternetsession-class.md) jako podstawy tej klienckich aplikacji internetowych. Wywołanie [CInternetSession::GetFtpConnection](../mfc/reference/cinternetsession-class.md#getftpconnection) utworzyć [CFtpConnection](../mfc/reference/cftpconnection-class.md) obiektu.|  
-|Znajdź pierwszy zasób.|Nawiąż połączenie FTP. Utwórz [CFtpFileFind](../mfc/reference/cftpfilefind-class.md) obiektu. Wywołanie [CFtpFileFind::FindFile](../mfc/reference/cftpfilefind-class.md#findfile).|  
-|Wyliczenie wszystkich dostępnych zasobów.|Znajdź pierwszy plik. Wywołanie [CFtpFileFind::FindNextFile](../mfc/reference/cftpfilefind-class.md#findnextfile) dopóki zwraca wartość FALSE.|  
-|Otwórz plik FTP.|Nawiąż połączenie FTP. Wywołanie [CFtpConnection::OpenFile](../mfc/reference/cftpconnection-class.md#openfile) do tworzenia i otwierania [CInternetFile](../mfc/reference/cinternetfile-class.md) obiektu.|  
-|Przeczytaj plik FTP.|Otwórz plik FTP z dostępem do odczytu. Wywołanie [CInternetFile::Read](../mfc/reference/cinternetfile-class.md#read).|  
-|Zapis plików FTP.|Otwórz plik FTP z prawem do zapisu. Wywołanie [CInternetFile::Write](../mfc/reference/cinternetfile-class.md#write).|  
-|Zmień katalog klienta na serwerze.|Nawiąż połączenie FTP. Wywołanie [CFtpConnection::SetCurrentDirectory](../mfc/reference/cftpconnection-class.md#setcurrentdirectory).|  
-|Pobieranie bieżącego katalogu klienta na serwerze.|Nawiąż połączenie FTP. Wywołanie [CFtpConnection::GetCurrentDirectory](../mfc/reference/cftpconnection-class.md#getcurrentdirectory).|  
-  
-### <a name="http"></a>HTTP  
-  
-|Akcja|Wymaganie wstępne|  
-|------------|------------------|  
-|Nawiąż połączenie HTTP.|Utwórz [CInternetSession](../mfc/reference/cinternetsession-class.md) jako podstawy tej klienckich aplikacji internetowych. Wywołanie [CInternetSession::GetHttpConnection](../mfc/reference/cinternetsession-class.md#gethttpconnection) utworzyć [CHttpConnection](../mfc/reference/chttpconnection-class.md) obiektu.|  
-|Otwórz plik HTTP.|Nawiąż połączenie HTTP. Wywołanie [CHttpConnection::OpenRequest](../mfc/reference/chttpconnection-class.md#openrequest) utworzyć [CHttpFile](../mfc/reference/chttpfile-class.md) obiektu. Wywołanie [CHttpFile::AddRequestHeaders](../mfc/reference/chttpfile-class.md#addrequestheaders). Wywołanie [CHttpFile::SendRequest](../mfc/reference/chttpfile-class.md#sendrequest).|  
-|Przeczytaj plik HTTP.|Otwórz plik HTTP. Wywołanie [CInternetFile::Read](../mfc/reference/cinternetfile-class.md#read).|  
-|Pobiera informacje o żądaniu HTTP.|Nawiąż połączenie HTTP. Wywołanie [CHttpConnection::OpenRequest](../mfc/reference/chttpconnection-class.md#openrequest) utworzyć [CHttpFile](../mfc/reference/chttpfile-class.md) obiektu. Wywołanie [CHttpFile::QueryInfo](../mfc/reference/chttpfile-class.md#queryinfo).|  
-  
-### <a name="gopher"></a>Gopher  
-  
-|Akcja|Wymaganie wstępne|  
-|------------|------------------|  
-|Nawiąż połączenie gopher.|Utwórz [CInternetSession](../mfc/reference/cinternetsession-class.md) jako podstawy tej klienckich aplikacji internetowych. Wywołanie [CInternetSession::GetGopherConnection](../mfc/reference/cinternetsession-class.md#getgopherconnection) utworzyć [CGopherConnection](../mfc/reference/cgopherconnection-class.md).|  
-|Znajdź pierwszy plik w bieżącym katalogu.|Nawiąż połączenie gopher. Utwórz [CGopherFileFind](../mfc/reference/cgopherfilefind-class.md) obiektu. Wywołanie [CGopherConnection::CreateLocator](../mfc/reference/cgopherconnection-class.md#createlocator) utworzyć [CGopherLocator](../mfc/reference/cgopherlocator-class.md) obiektu. Przekaż lokalizatora do [CGopherFileFind::FindFile](../mfc/reference/cgopherfilefind-class.md#findfile). Wywołanie [CGopherFileFind::GetLocator](../mfc/reference/cgopherfilefind-class.md#getlocator) można pobrać lokalizacji pliku, jeśli będzie potrzebny później.|  
-|Wyświetla wszystkie dostępne pliki.|Znajdź pierwszy plik. Wywołanie [CGopherFileFind::FindNextFile](../mfc/reference/cgopherfilefind-class.md#findnextfile) dopóki zwraca wartość FALSE.|  
-|Otwórz plik gopher.|Nawiąż połączenie gopher. Utwórz Lokalizator gopher z [CGopherConnection::CreateLocator](../mfc/reference/cgopherconnection-class.md#createlocator) lub znaleźć lokalizatora z [CGopherFileFind::GetLocator](../mfc/reference/cgopherfilefind-class.md#getlocator). Wywołanie [CGopherConnection::OpenFile](../mfc/reference/cgopherconnection-class.md#openfile).|  
-|Odczytaj plik gopher.|Otwórz plik gopher. Użyj [cgopherfile —](../mfc/reference/cgopherfile-class.md).|  
-  
-## <a name="see-also"></a>Zobacz też  
- [Rozszerzenia internetowe Win32 (WinInet)](../mfc/win32-internet-extensions-wininet.md)   
- [Klasy MFC do tworzenia klienckich aplikacji internetowych](../mfc/mfc-classes-for-creating-internet-client-applications.md)   
- [Pisanie klienckich aplikacji internetowych przy użyciu klas MFC WinInet](../mfc/writing-an-internet-client-application-using-mfc-wininet-classes.md)
+
+Niektóre akcje podjęte przez klienta internetowego (na przykład podczas odczytywania pliku) dostępne akcje wymagań wstępnych (w tym przypadku nawiązywania połączenia z Internetem). W poniższej tabeli wymieniono wymagania wstępne w przypadku niektórych działań klienta.
+
+### <a name="general-internet-url-ftp-gopher-or-http"></a>Ogólne internetowych adresów URL (FTP, Gopher lub HTTP)
+
+|Akcja|Wymaganie wstępne|
+|------------|------------------|
+|Nawiąż połączenie.|Tworzenie [CInternetSession](../mfc/reference/cinternetsession-class.md) nawiązać podstawę klienckich aplikacji internetowych.|
+|Otwórz adres URL.|Nawiąż połączenie. Wywołaj [CInternetSession::OpenURL](../mfc/reference/cinternetsession-class.md#openurl). `OpenURL` Funkcja zwraca obiekt zasobów tylko do odczytu.|
+|Dane odczytu adresu URL.|Otwórz adres URL. Wywołaj [CInternetFile::Read](../mfc/reference/cinternetfile-class.md#read).|
+|Ustaw opcję Internet.|Nawiąż połączenie. Wywołaj [CInternetSession::SetOption](../mfc/reference/cinternetsession-class.md#setoption).|
+|Ustaw funkcję, która ma zostać wywołany z informacji o stanie.|Nawiąż połączenie. Wywołaj [CInternetSession::EnableStatusCallback](../mfc/reference/cinternetsession-class.md#enablestatuscallback). Zastąp [CInternetSession::OnStatusCallback](../mfc/reference/cinternetsession-class.md#onstatuscallback) do obsługi połączeń.|
+
+### <a name="ftp"></a>FTP
+
+|Akcja|Wymaganie wstępne|
+|------------|------------------|
+|Ustanawianie połączenia FTP.|Tworzenie [CInternetSession](../mfc/reference/cinternetsession-class.md) jako podstawy tej klienckich aplikacji internetowych. Wywołaj [CInternetSession::GetFtpConnection](../mfc/reference/cinternetsession-class.md#getftpconnection) utworzyć [CFtpConnection](../mfc/reference/cftpconnection-class.md) obiektu.|
+|Znajdź pierwszy zasób.|Ustanawianie połączenia FTP. Tworzenie [CFtpFileFind](../mfc/reference/cftpfilefind-class.md) obiektu. Wywołaj [CFtpFileFind::FindFile](../mfc/reference/cftpfilefind-class.md#findfile).|
+|Wylicza wszystkie dostępne zasoby.|Znajdź pierwszy plik. Wywołaj [CFtpFileFind::FindNextFile](../mfc/reference/cftpfilefind-class.md#findnextfile) dopóki zwróci wartość FALSE.|
+|Otwórz plik FTP.|Ustanawianie połączenia FTP. Wywołaj [CFtpConnection::OpenFile](../mfc/reference/cftpconnection-class.md#openfile) do tworzenia i otwierania [CInternetFile](../mfc/reference/cinternetfile-class.md) obiektu.|
+|Odczytywanie pliku FTP.|Otwórz plik FTP z dostępem do odczytu. Wywołaj [CInternetFile::Read](../mfc/reference/cinternetfile-class.md#read).|
+|Zapis plików FTP.|Otwórz plik FTP z dostępem do zapisu. Wywołaj [CInternetFile::Write](../mfc/reference/cinternetfile-class.md#write).|
+|Zmień katalog klienta na serwerze.|Ustanawianie połączenia FTP. Wywołaj [CFtpConnection::SetCurrentDirectory](../mfc/reference/cftpconnection-class.md#setcurrentdirectory).|
+|Pobierz klienta bieżącego katalogu na serwerze.|Ustanawianie połączenia FTP. Wywołaj [CFtpConnection::GetCurrentDirectory](../mfc/reference/cftpconnection-class.md#getcurrentdirectory).|
+
+### <a name="http"></a>HTTP
+
+|Akcja|Wymaganie wstępne|
+|------------|------------------|
+|Nawiązać połączenie HTTP.|Tworzenie [CInternetSession](../mfc/reference/cinternetsession-class.md) jako podstawy tej klienckich aplikacji internetowych. Wywołaj [CInternetSession::GetHttpConnection](../mfc/reference/cinternetsession-class.md#gethttpconnection) utworzyć [CHttpConnection](../mfc/reference/chttpconnection-class.md) obiektu.|
+|Otwórz plik HTTP.|Nawiązać połączenie HTTP. Wywołaj [CHttpConnection::OpenRequest](../mfc/reference/chttpconnection-class.md#openrequest) utworzyć [CHttpFile](../mfc/reference/chttpfile-class.md) obiektu. Wywołaj [CHttpFile::AddRequestHeaders](../mfc/reference/chttpfile-class.md#addrequestheaders). Wywołaj [CHttpFile::SendRequest](../mfc/reference/chttpfile-class.md#sendrequest).|
+|Odczytywanie pliku HTTP.|Otwórz plik HTTP. Wywołaj [CInternetFile::Read](../mfc/reference/cinternetfile-class.md#read).|
+|Uzyskaj informacje o żądaniu HTTP.|Nawiązać połączenie HTTP. Wywołaj [CHttpConnection::OpenRequest](../mfc/reference/chttpconnection-class.md#openrequest) utworzyć [CHttpFile](../mfc/reference/chttpfile-class.md) obiektu. Wywołaj [CHttpFile::QueryInfo](../mfc/reference/chttpfile-class.md#queryinfo).|
+
+### <a name="gopher"></a>Gopher
+
+|Akcja|Wymaganie wstępne|
+|------------|------------------|
+|Nawiąż połączenie gopher.|Tworzenie [CInternetSession](../mfc/reference/cinternetsession-class.md) jako podstawy tej klienckich aplikacji internetowych. Wywołaj [CInternetSession::GetGopherConnection](../mfc/reference/cinternetsession-class.md#getgopherconnection) utworzyć [CGopherConnection](../mfc/reference/cgopherconnection-class.md).|
+|Znajdź pierwszy plik w bieżącym katalogu.|Nawiąż połączenie gopher. Tworzenie [CGopherFileFind](../mfc/reference/cgopherfilefind-class.md) obiektu. Wywołaj [CGopherConnection::CreateLocator](../mfc/reference/cgopherconnection-class.md#createlocator) utworzyć [CGopherLocator](../mfc/reference/cgopherlocator-class.md) obiektu. Lokalizator, aby przekazać [CGopherFileFind::FindFile](../mfc/reference/cgopherfilefind-class.md#findfile). Wywołaj [CGopherFileFind::GetLocator](../mfc/reference/cgopherfilefind-class.md#getlocator) można pobrać Lokalizator pliku, jeśli będą potrzebne później.|
+|Wyliczanie wszystkich dostępnych plików.|Znajdź pierwszy plik. Wywołaj [CGopherFileFind::FindNextFile](../mfc/reference/cgopherfilefind-class.md#findnextfile) dopóki zwróci wartość FALSE.|
+|Otwórz plik gopher.|Nawiąż połączenie gopher. Tworzenie lokalizatora gopher z [CGopherConnection::CreateLocator](../mfc/reference/cgopherconnection-class.md#createlocator) lub znaleźć lokalizatora z [CGopherFileFind::GetLocator](../mfc/reference/cgopherfilefind-class.md#getlocator). Wywołaj [CGopherConnection::OpenFile](../mfc/reference/cgopherconnection-class.md#openfile).|
+|Odczytywanie pliku gopher.|Otwórz plik gopher. Użyj [CGopherFile](../mfc/reference/cgopherfile-class.md).|
+
+## <a name="see-also"></a>Zobacz też
+
+[Rozszerzenia internetowe Win32 (WinInet)](../mfc/win32-internet-extensions-wininet.md)<br/>
+[Klasy MFC do tworzenia klienckich aplikacji internetowych](../mfc/mfc-classes-for-creating-internet-client-applications.md)<br/>
+[Pisanie klienckich aplikacji internetowych przy użyciu klas MFC WinInet](../mfc/writing-an-internet-client-application-using-mfc-wininet-classes.md)

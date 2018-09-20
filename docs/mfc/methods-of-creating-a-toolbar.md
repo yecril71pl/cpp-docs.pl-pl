@@ -19,27 +19,29 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 052f1578386746f9a4d9892576f09b3b61547289
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: fb7e73df0944a7a6c0c7b28c04e43008fcd70b39
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33348638"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46401072"
 ---
 # <a name="methods-of-creating-a-toolbar"></a>Metody tworzenia paska narzędzi
-MFC oferuje dwie klasy, aby utworzyć paski narzędzi: [ctoolbar —](../mfc/reference/ctoolbar-class.md) i [CToolBarCtrl](../mfc/reference/ctoolbarctrl-class.md) (który opakowuje interfejs API sterowania wspólne systemu Windows). `CToolBar` zawiera wszystkie funkcje formantu wspólnego narzędzi i obsługuje wiele wymagane typowe ustawienia kontroli i struktur dla Ciebie; jednak wynikowego pliku wykonywalnego zazwyczaj będzie większy niż utworzony przy użyciu `CToolBarCtrl`.  
-  
- `CToolBarCtrl` zazwyczaj powoduje mniejsze pliku wykonywalnego, a może chcieć użyć `CToolBarCtrl` Jeśli nie zamierzasz integrowanie narzędzi architekturę MFC. Jeśli planujesz używać `CToolBarCtrl` i integrowanie narzędzi architekturę MFC, należy zwrócić uwagę dodatkowe do komunikowania się manipulacji formantu paska narzędzi MFC. Ta komunikacja nie jest trudne; jest jednak dodatkowej pracy, który jest niepotrzebne, korzystając z `CToolBar`.  
-  
- Visual C++ udostępnia dwa sposoby, aby móc korzystać z formantu wspólnego narzędzi.  
-  
--   Tworzenie przy użyciu narzędzi `CToolBar`, a następnie wywołać [CToolBar::GetToolBarCtrl](../mfc/reference/ctoolbar-class.md#gettoolbarctrl) uzyskać dostęp do `CToolBarCtrl` funkcji elementów członkowskich.  
-  
--   Tworzenie przy użyciu narzędzi [CToolBarCtrl](../mfc/reference/ctoolbarctrl-class.md)tego konstruktora.  
-  
- Każda z tych metod zapewni Ci dostęp do funkcji Członkowskich formantu toolbar. Podczas wywoływania `CToolBar::GetToolBarCtrl`, zwraca odwołanie do `CToolBarCtrl` obiektów, dzięki czemu można użyć albo zestaw funkcji elementów członkowskich. Zobacz [ctoolbar —](../mfc/reference/ctoolbar-class.md) informacji na temat tworzenia i utworzenie przy użyciu narzędzi `CToolBar`.  
-  
-## <a name="see-also"></a>Zobacz też  
- [Korzystanie z CToolBarCtrl](../mfc/using-ctoolbarctrl.md)   
- [Kontrolki](../mfc/controls-mfc.md)
+
+Biblioteka MFC zawiera dwie klasy do utworzenia pasków narzędzi: [CToolBar](../mfc/reference/ctoolbar-class.md) i [CToolBarCtrl](../mfc/reference/ctoolbarctrl-class.md) (która opakowuje interfejs API sterowania wspólnej Windows). `CToolBar` zapewnia wszystkie funkcje formantu typowego paska narzędzi i obsługuje wiele wymagane typowe ustawienia kontroli i struktury dla Ciebie; Jednak wynikowy plik wykonywalny zazwyczaj będzie większy niż utworzony za pomocą `CToolBarCtrl`.
+
+`CToolBarCtrl` zwykle powoduje mniejsze pliku wykonywalnego, a może chcieć użyć `CToolBarCtrl` Jeśli nie zamierzasz integrowanie narzędzi architektury MFC. Jeśli planujesz używać `CToolBarCtrl` i integrowanie narzędzi architektury MFC, należy zwrócić uwagę dodatkowe do komunikowania się manipulacje formantu paska narzędzi z MFC. Ta informacja nie jest trudne; jest jednak dodatkowej pracy, który jest zbędny w przypadku używania `CToolBar`.
+
+Visual C++ zapewnia dwa sposoby, aby móc korzystać z formantu typowego paska narzędzi.
+
+- Utworzyć przy użyciu narzędzi `CToolBar`, a następnie wywołaj [CToolBar::GetToolBarCtrl](../mfc/reference/ctoolbar-class.md#gettoolbarctrl) uzyskać dostęp do `CToolBarCtrl` funkcji elementów członkowskich.
+
+- Tworzenie za pomocą narzędzi [CToolBarCtrl](../mfc/reference/ctoolbarctrl-class.md)przez Konstruktor.
+
+Każda z tych metod zapewni Ci dostęp do funkcji Członkowskich z formantem paska narzędzi. Gdy wywołujesz `CToolBar::GetToolBarCtrl`, zwraca odwołanie do `CToolBarCtrl` obiektu, aby można było używać któryś zbiór elementów członkowskich. Zobacz [CToolBar](../mfc/reference/ctoolbar-class.md) informacji na temat tworzenia i utworzenie przy użyciu narzędzi `CToolBar`.
+
+## <a name="see-also"></a>Zobacz też
+
+[Korzystanie z CToolBarCtrl](../mfc/using-ctoolbarctrl.md)<br/>
+[Kontrolki](../mfc/controls-mfc.md)
 

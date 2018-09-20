@@ -17,35 +17,37 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 945e07d2ca8b390a8fa38743919ea501a3cba9c7
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: d8127b6df9ab8ebb8d99007eb3273badad2c871b
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33342202"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46398166"
 ---
 # <a name="creating-a-dialog-class-with-code-wizards"></a>Tworzenie klasy okien dialogowych za pomocą kreatorów kodu
-W poniższej tabeli wymieniono zadania związane z okna dialogowego, które pomagają kreatorów kodu, którymi zarządzasz.  
-  
-### <a name="dialog-related-tasks"></a>Zadania związane z okna dialogowego  
-  
-|Zadanie|Dotyczą. . .|  
-|----------|--------------------|  
-|[Tworzenie nowej klasy pochodnej cdialog —](../mfc/creating-your-dialog-class.md) do zarządzania z okna dialogowego.|Każdy okno dialogowe.|  
-|[Mapowanie komunikatów systemu Windows](../mfc/handling-windows-messages-in-your-dialog-box.md) do klasy okien dialogowych.|Każdy komunikat, który ma być obsługiwany.|  
-|Deklaruje element członkowski klasy reprezentujące kontrolki w oknie dialogowym Zmienne.|Każdego formantu, który daje w wyniku wartości tekstowe lub liczbowe, którego chcesz uzyskać dostęp z programu.|  
-|Określ [jak danych ma być wymieniane](../mfc/dialog-data-exchange-and-validation.md) między formantami a zmiennych Członkowskich.|Każdego formantu, który chcesz uzyskać dostęp z programu.|  
-|Określ [reguł sprawdzania poprawności](../mfc/dialog-data-exchange-and-validation.md) zmiennych Członkowskich.|Każdy formant, który daje tekst lub wartość liczbowa w razie potrzeby.|  
-  
-## <a name="what-do-you-want-to-know-more-about"></a>Co chcesz dowiedzieć się więcej o  
-  
--   [Tworzenie klasy okien dialogowych](../mfc/creating-your-dialog-class.md)  
-  
--   [Obsługa komunikatów systemu Windows w oknie dialogowym](../mfc/handling-windows-messages-in-your-dialog-box.md)  
-  
--   [Wymiana danych okna dialogowego i sprawdzania poprawności](../mfc/dialog-data-exchange-and-validation.md)  
-  
-## <a name="see-also"></a>Zobacz też  
- [Okna dialogowe](../mfc/dialog-boxes.md)   
- [Cykl życiowy okna dialogowego](../mfc/life-cycle-of-a-dialog-box.md)
+
+W poniższej tabeli wymieniono zadania związane z okna dialogowego, które pomagają kreatorów kodu, którymi zarządzasz.
+
+### <a name="dialog-related-tasks"></a>Zadania związane z okna dialogowego
+
+|Zadanie|Dotyczy. . .|
+|----------|--------------------|
+|[Tworzenie nowej klasy pochodnej CDialog](../mfc/creating-your-dialog-class.md) Zarządzanie Twoje okno dialogowe.|Każdy okno dialogowe.|
+|[Mapowanie komunikatów Windows](../mfc/handling-windows-messages-in-your-dialog-box.md) do klasy okien dialogowych.|Każdy komunikat, który ma być obsługiwany.|
+|Zadeklaruj składowej klasy reprezentujące kontrolki w oknie dialogowym Zmienne.|Każdy formant, który daje wartość tekstowa lub liczbowa chcesz uzyskać dostęp z Twojego programu.|
+|Określ [jak dane są wymieniane](../mfc/dialog-data-exchange-and-validation.md) między formantami a zmienne Członkowskie.|Każdy formant, który chcesz uzyskać dostęp do programu.|
+|Określ [reguł sprawdzania poprawności](../mfc/dialog-data-exchange-and-validation.md) zmiennych Członkowskich.|Każdy formant, który daje tekst lub wartość liczbowa, w razie potrzeby.|
+
+## <a name="what-do-you-want-to-know-more-about"></a>Co chcesz dowiedzieć się więcej na temat
+
+- [Tworzenie klasy okien dialogowych](../mfc/creating-your-dialog-class.md)
+
+- [Obsługa komunikatów Windows w oknie dialogowym](../mfc/handling-windows-messages-in-your-dialog-box.md)
+
+- [Wymiana danych okna dialogowego i sprawdzanie poprawności](../mfc/dialog-data-exchange-and-validation.md)
+
+## <a name="see-also"></a>Zobacz też
+
+[Okna dialogowe](../mfc/dialog-boxes.md)<br/>
+[Cykl życiowy okna dialogowego](../mfc/life-cycle-of-a-dialog-box.md)
 
