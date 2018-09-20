@@ -1,5 +1,5 @@
 ---
-title: Okno klas pochodnych | Dokumentacja firmy Microsoft
+title: Pochodne klasy okien | Dokumentacja firmy Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -19,54 +19,60 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: eddc6c59190856d09eae75c6f4314c902740092f
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 2840a78844f42481389ba868b6ab1bc5713a2c0b
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33351498"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46448016"
 ---
 # <a name="derived-window-classes"></a>Pochodne klasy okien
-Można utworzyć systemu windows bezpośrednio z [CWnd](../mfc/reference/cwnd-class.md), lub wyprowadzać nowe klasy okna z `CWnd`. Jest to, jak zwykle tworzenie własnych niestandardowych systemu windows. Jednak większość systemu windows używane w ramach programu zamiast tego są tworzone na podstawie jednej z `CWnd`-pochodnej klasy okien ramowych dostarczonych przez MFC.  
-  
-## <a name="frame-window-classes"></a>Klasy okien ramowych  
- [Cframewnd —](../mfc/reference/cframewnd-class.md)  
- Używany do SDI ramki okna, które ramki pojedynczego dokumentu i jego widoku. Okno ramowe jest główną ramkę okna aplikacji i okno ramowe w bieżącym dokumencie.  
-  
- [Cmdiframewnd —](../mfc/reference/cmdiframewnd-class.md)  
- Używane jako głównego okna ramowego dla aplikacji MDI. Główną ramkę okna jest kontenerem dla wszystkich okien dokumentu MDI i udostępnia je paska menu. Okna ramowe MDI jest najwyższego poziomu okno wyskakujące okienko wyświetlane na pulpicie.  
-  
- [CMDIChildWnd](../mfc/reference/cmdichildwnd-class.md)  
- Używany dla pojedynczych dokumentów utworzonych w ramce głównej okna MDI. Każdy dokument i jego widoku w ramce są przez ramki okna podrzędnego MDI zawarty w główną ramkę okna MDI. Okna podrzędnego MDI okno ramowe typowe wygląda podobnie, ale znajduje się wewnątrz ramki okna MDI zamiast oczekuje na pulpicie. Jednak okna podrzędnego MDI nie ma własnego paska menu i muszą współdzielić na pasku menu MDI ramkę okna zawierającego go.  
-  
- Aby uzyskać więcej informacji, zobacz [okien ramowych](../mfc/frame-windows.md).  
-  
-## <a name="other-window-classes-derived-from-cwnd"></a>Klasy okien, innych pochodnych CWnd  
- Oprócz okien ramowych kilka innych główne kategorie systemu windows są uzyskiwane z `CWnd`:  
-  
- *Widoki*  
- Widoki są tworzone przy użyciu `CWnd`-klasy [CView](../mfc/reference/cview-class.md) (lub jeden z jej klas pochodnych). Widok jest podłączony do dokumentu i działa jako pośrednik między dokumentu i użytkownika. Widok jest okna podrzędnego (nie podrzędnych MDI) zwykle wypełnia obszaru klienckiego SDI ramkę okna lub ramki okna podrzędnego MDI (lub część obszaru klienta nie pasuje do żadnego paska narzędzi lub paska stanu).  
-  
- *Okna dialogowe*  
- Okna dialogowe są tworzone przy użyciu `CWnd`-klasy [cdialog —](../mfc/reference/cdialog-class.md).  
-  
- *Formularze*  
- Widoki formularzy na podstawie szablonu okna dialogowego zasobów, takich jak okna dialogowe, są tworzone przy użyciu klasy [CFormView](../mfc/reference/cformview-class.md), [CRecordView](../mfc/reference/crecordview-class.md), lub [CDaoRecordView](../mfc/reference/cdaorecordview-class.md).  
-  
- *Kontrolki*  
- Formanty, takie jak przycisków i pola listy, pola kombi są tworzone przy użyciu innych klas pochodnych `CWnd`. Zobacz [kontrolować tematy](../mfc/controls-mfc.md).  
-  
- *Paski sterowania*  
- Okno podrzędne, zawierające formanty. Przykładami paski narzędzi i paski stanu. Zobacz [paski sterowania](../mfc/control-bars.md).  
-  
-## <a name="window-class-hierarchy"></a>Hierarchia klasy okna  
- Zapoznaj się [diagram hierarchii MFC](../mfc/hierarchy-chart.md) w *odwołania MFC*. Widoki opisano szczegółowo w [architektury dokument/widok](../mfc/document-view-architecture.md). Okna dialogowe opisano szczegółowo w [okien dialogowych](../mfc/dialog-boxes.md).  
-  
-## <a name="creating-your-own-special-purpose-window-classes"></a>Tworzenie własnych klas specjalnych okna  
- Oprócz klasy okien pochodzącymi z biblioteki klas może być konieczne okno podrzędne specjalnych. Aby utworzyć okno programu, Utwórz swój własny [CWnd](../mfc/reference/cwnd-class.md)-klasy i stał się okna podrzędnego ramki lub widoku. Przy tym pamiętać, że platformę zarządza zakres obszar kliencki okno ramowe dokumentu. Większość obszaru klienckiego jest zarządzana przez widok, ale inne systemu windows, takich jak kontrola paski lub własne niestandardowe systemu windows może udostępniać przestrzeni widoku. Konieczne może wchodzić w interakcje z mechanizmów w klasach [CView](../mfc/reference/cview-class.md) i [ccontrolbar —](../mfc/reference/ccontrolbar-class.md) dla pozycjonowanie okien podrzędnych w oknie ramowym obszaru klienckiego.  
-  
- [Tworzenie okien](../mfc/creating-windows.md) omówiono tworzenie obiektów okien i systemu windows, którymi zarządzają.  
-  
-## <a name="see-also"></a>Zobacz też  
- [Obiekty okna](../mfc/window-objects.md)
+
+Można również tworzyć okna bezpośrednio z [CWnd](../mfc/reference/cwnd-class.md), lub wyprowadzać nowe klasy okna z `CWnd`. Jest to sposób zwykle tworzysz własne niestandardowe okna. Jednak większość okien używanych w ramach programu jest tworzonych w zamian z jednego z `CWnd`-pochodne klasy okien ramowych dostarczonych przez MFC.
+
+## <a name="frame-window-classes"></a>Klasy okien ramowych
+
+[CFrameWnd](../mfc/reference/cframewnd-class.md)<br/>
+Używane dla SDI ramki okna tworzy jednolity dokumentu i jej widok. W oknie ramki jest zarówno ramką głównego okna aplikacji, jak i oknem ramki dla bieżącego dokumentu.
+
+[CMDIFrameWnd](../mfc/reference/cmdiframewnd-class.md)<br/>
+Używane jako głównej ramki okna dla aplikacji MDI. Okno głównych ramek jest kontenerem dla wszystkich okien dokumentu MDI i udostępnia im swój pasek menu. Okno ramki MDI jest oknem najwyższego poziomu, który pojawia się na pulpicie.
+
+[CMDIChildWnd](../mfc/reference/cmdichildwnd-class.md)<br/>
+Używane dla poszczególnych dokumentów utworzonych w oknie głównym ramki MDI. Każdy dokument i jego widok jest otoczony oknem ramki podrzędnego MDI zawartych w ramce głównej okna MDI. Okno podrzędne MDI wygląda tak, jak okno typowej ramki, ale znajduje się wewnątrz okna ramki MDI zamiast "siedzieć" na pulpicie. Jednak okno podrzędne MDI nie posiada własnego paska menu i musi dzielić pasek menu z oknem ramki aplikacji MDI zawierający go.
+
+Aby uzyskać więcej informacji, zobacz [Windows ramki](../mfc/frame-windows.md).
+
+## <a name="other-window-classes-derived-from-cwnd"></a>Inne klasy okna pochodzące od CWnd
+
+Oprócz ramki okien, kilka innych kategorii głównych systemu windows są uzyskiwane z `CWnd`:
+
+*Widoki*<br/>
+Widoki są tworzone przy użyciu `CWnd`-klasy pochodnej [CView](../mfc/reference/cview-class.md) (lub jeden z jej klas pochodnych). Widok jest dołączony do dokumentu i działa jako pośrednik między dokumentem i użytkownikiem. Widok jest oknem podrzędnym (nie podrzędnym MDI), które zwykle wypełnia obszar kliencki ramki okna SDI lub ramki okna podrzędnego MDI (lub część obszaru klienckiego nie pasuje do żadnego paska narzędzi lub paska stanu).
+
+*Okna dialogowe*<br/>
+Okna dialogowe są tworzone przy użyciu `CWnd`-klasy pochodnej [CDialog](../mfc/reference/cdialog-class.md).
+
+*Formularze*<br/>
+Widoki formularzy oparte na zasobach szablonów dialogowych, takich jak okna dialogowe są tworzone przy użyciu klas [CFormView](../mfc/reference/cformview-class.md), [CRecordView](../mfc/reference/crecordview-class.md), lub [CDaoRecordView](../mfc/reference/cdaorecordview-class.md).
+
+*Kontrolki*<br/>
+Formanty, takie jak przyciski, pola listy i pola kombi są tworzone przy użyciu innych klas pochodzących z `CWnd`. Zobacz [kontrolować tematy](../mfc/controls-mfc.md).
+
+*Paski sterowania*<br/>
+Okna podrzędne, które zawierają formanty. Przykłady obejmują paski narzędzi i stanu. Zobacz [paski sterowania](../mfc/control-bars.md).
+
+## <a name="window-class-hierarchy"></a>Hierarchia klas okna
+
+Zapoznaj się [MFC wykresu hierarchii](../mfc/hierarchy-chart.md) w *odwołanie MFC*. Widoki są wyjaśnione w [architektury dokument/widok](../mfc/document-view-architecture.md). Okna dialogowe są wyjaśnione w [okna dialogowe](../mfc/dialog-boxes.md).
+
+## <a name="creating-your-own-special-purpose-window-classes"></a>Tworzenie własnych klas okien specjalnego przeznaczenia
+
+Oprócz klas okien dostarczonych przez bibliotekę klas możesz potrzebować okien specjalnego przeznaczenia podrzędnych. Aby utworzyć takie okno, Utwórz swoje własne [CWnd](../mfc/reference/cwnd-class.md)-klasy pochodnej, co okno podrzędne ono ramki lub widoku. Mieć na uwadze, że szablon zarządza zakresem obszaru klienckiego okna ramki dokumentu. Większość obszaru klienta jest zarządzana przez widok, ale inne okna, takie jak kontrola pasków lub własne niestandardowe okna mogą dzielić przestrzeń z widoku. Może być konieczne do interakcji z mechanizmami w klasach [CView](../mfc/reference/cview-class.md) i [CControlBar](../mfc/reference/ccontrolbar-class.md) do pozycjonowania okien podrzędnych w obszarze klienta ramki okna.
+
+[Tworzenie Windows](../mfc/creating-windows.md) omawia Tworzenie obiektów okien oraz okien, którymi zarządzają.
+
+## <a name="see-also"></a>Zobacz też
+
+[Obiekty okna](../mfc/window-objects.md)
 

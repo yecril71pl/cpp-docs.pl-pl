@@ -15,40 +15,42 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 689dacb98bc9f8053686a02414151b4982edca67
-ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
+ms.openlocfilehash: 69f48ed099fe033ba1847a3414ed8e5c5ce88f71
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33695775"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46433676"
 ---
 # <a name="how-to-use-combinable-to-combine-sets"></a>Porady: korzystanie z wyników połączonych w celu łączenia zestawów
-W tym temacie przedstawiono sposób użycia [concurrency::combinable](../../parallel/concrt/reference/combinable-class.md) klasy do obliczenia zbiór liczb pierwszych.  
-  
-## <a name="example"></a>Przykład  
- Poniższy przykład oblicza zbiór liczb pierwszych dwa razy. Każdy obliczeń przechowuje wyniki w [std::bitset](../../standard-library/bitset-class.md) obiektu. Przykład najpierw oblicza zestaw pojedynczo, a następnie oblicza zestaw równolegle. Przykład drukuje do konsoli również czasu wymaganego do wykonania obu obliczenia.  
-  
- W tym przykładzie użyto [concurrency::parallel_for](reference/concurrency-namespace-functions.md#parallel_for) algorytmu i `combinable` obiektu można wygenerować zestawów lokalnej wątku. Następnie używa [concurrency::combinable::combine_each](reference/combinable-class.md#combine_each) metoda łączenia lokalnej wątku zestawów do ostatecznego zestawu.  
 
-  
- [!code-cpp[concrt-parallel-combine-primes#1](../../parallel/concrt/codesnippet/cpp/how-to-use-combinable-to-combine-sets_1.cpp)]  
-  
- Następujące przykładowe dane wyjściowe jest dla komputera, który ma cztery procesory.  
-  
-```Output  
-serial time: 312 ms  
- 
-parallel time: 78 ms  
-```  
-  
-## <a name="compiling-the-code"></a>Kompilowanie kodu  
- Skopiuj przykładowy kod i wklej go w projekcie programu Visual Studio lub wklej go w pliku o nazwie `parallel-combine-primes.cpp` , a następnie uruchom następujące polecenie w oknie Wiersz polecenia programu Visual Studio.  
-  
- **Cl.exe/ehsc równoległe — łączenie primes.cpp**  
-  
-## <a name="see-also"></a>Zobacz też  
- [Równoległe kontenery i obiekty](../../parallel/concrt/parallel-containers-and-objects.md)   
- [combinable — klasa](../../parallel/concrt/reference/combinable-class.md)   
- [combinable::combine_each — metoda](reference/combinable-class.md#combine_each)
+W tym temacie pokazano, jak używać [concurrency::combinable](../../parallel/concrt/reference/combinable-class.md) klasy w celu obliczenia zbiór liczb pierwszych.
 
+## <a name="example"></a>Przykład
+
+Poniższy przykład oblicza zestaw liczby pierwsze dwa razy. Każdy obliczeń zapisuje wynik w [std::bitset](../../standard-library/bitset-class.md) obiektu. Przykład najpierw szeregowo oblicza zestaw, a następnie oblicza zestawu równoległego. Przykład drukuje do konsoli również czas, który jest wymagany do wykonania obu obliczeń.
+
+W tym przykładzie użyto [concurrency::parallel_for](reference/concurrency-namespace-functions.md#parallel_for) algorytmu i `combinable` obiektu umożliwiającą wygenerowanie wątków lokalnych zestawów. Następnie używa [concurrency::combinable::combine_each](reference/combinable-class.md#combine_each) metodę, aby połączyć zestawy wątków lokalnych w końcowym zestawie.
+
+[!code-cpp[concrt-parallel-combine-primes#1](../../parallel/concrt/codesnippet/cpp/how-to-use-combinable-to-combine-sets_1.cpp)]
+
+Następujące przykładowe dane wyjściowe to dla komputera, który ma cztery procesory.
+
+```Output
+serial time: 312 ms
+
+parallel time: 78 ms
+```
+
+## <a name="compiling-the-code"></a>Kompilowanie kodu
+
+Kopiuj przykładowy kod i wklej go w projekcie programu Visual Studio lub wklej go w pliku o nazwie `parallel-combine-primes.cpp` , a następnie uruchom następujące polecenie w oknie wiersza polecenia programu Visual Studio.
+
+**Cl.exe/ehsc równoległych — łączenie primes.cpp**
+
+## <a name="see-also"></a>Zobacz też
+
+[Równoległe kontenery oraz obiekty](../../parallel/concrt/parallel-containers-and-objects.md)<br/>
+[combinable, klasa](../../parallel/concrt/reference/combinable-class.md)<br/>
+[combinable::combine_each — metoda](reference/combinable-class.md#combine_each)
 

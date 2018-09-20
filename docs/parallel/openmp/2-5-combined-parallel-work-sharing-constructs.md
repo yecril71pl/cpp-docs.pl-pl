@@ -12,18 +12,19 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7aea758cbf43cd49affc01afda0e9f34c24b3331
-ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
+ms.openlocfilehash: 3c456eceb39d969e6841e3d3bf9028fae4bf5000
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33689301"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46404764"
 ---
 # <a name="25-combined-parallel-work-sharing-constructs"></a>2.5 Połączone równoległe konstrukcje podziału pracy
-Połączone równoległe konstrukcje podziału pracy są skróty do określenia równoległego regionu, który zawiera tylko jeden konstrukcji podziału pracy. Semantyka dyrektywy te są identyczne z jawne określenie **równoległych** dyrektywy następuje pojedynczego konstrukcji podziału pracy.  
-  
- W poniższych sekcjach opisano połączone równoległe konstrukcje podziału pracy:  
-  
--   **równoległe w** dyrektywy.  
-  
--   **sekcji równoległych** dyrektywy.
+
+Połączone równoległe konstrukcje podziału pracy to skróty do określania równoległego regionu, który zawiera tylko jeden konstrukcji podziału pracy. Semantyka te dyrektywy są takie same jak w przypadku jawne określenie **równoległe** dyrektywy następuje pojedynczy konstrukcji podziału pracy.
+
+W poniższych sekcjach opisano połączone równoległe konstrukcje podziału pracy:
+
+- **równoległe w** dyrektywy.
+
+- **sekcji równoległych** dyrektywy.

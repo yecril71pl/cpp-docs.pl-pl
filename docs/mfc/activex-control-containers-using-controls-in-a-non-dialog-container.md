@@ -18,58 +18,60 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e190eb76702b1c6d246ac2aee9c22021955af7f8
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: a20d069024fd424beeec41d3483f8e2c28432e00
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46028106"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46410731"
 ---
 # <a name="activex-control-containers-using-controls-in-a-non-dialog-container"></a>Kontenery kontrolek ActiveX: używanie kontrolek w kontenerze innym niż okno dialogowe
-W niektórych aplikacji, takich jak SDI lub MDI aplikacji należy osadzić formantu w oknie aplikacji. **Utwórz** funkcji składowej klasy otoki wstawione przez Visual C++, można utworzyć wystąpienie kontrolki dynamicznie, bez konieczności dla okna dialogowego.  
-  
- **Utwórz** funkcja elementu członkowskiego ma następujące parametry:  
-  
+
+W niektórych aplikacji, takich jak SDI lub MDI aplikacji należy osadzić formantu w oknie aplikacji. **Utwórz** funkcji składowej klasy otoki wstawione przez Visual C++, można utworzyć wystąpienie kontrolki dynamicznie, bez konieczności dla okna dialogowego.
+
+**Utwórz** funkcja elementu członkowskiego ma następujące parametry:
+
 *lpszWindowName*<br/>
-Wskaźnik na tekst do wyświetlenia we właściwości Text lub Caption kontrolki (jeśli istnieje).  
-  
+Wskaźnik na tekst do wyświetlenia we właściwości Text lub Caption kontrolki (jeśli istnieje).
+
 *dwStyle*<br/>
-Style Windows. Aby uzyskać pełną listę, zobacz [CWnd::CreateControl](../mfc/reference/cwnd-class.md#createcontrol).  
-  
+Style Windows. Aby uzyskać pełną listę, zobacz [CWnd::CreateControl](../mfc/reference/cwnd-class.md#createcontrol).
+
 *Rect*<br/>
-Określa rozmiar i położenie formantu.  
-  
+Określa rozmiar i położenie formantu.
+
 *pParentWnd*<br/>
-Określa okno nadrzędne kontrolki, zwykle `CDialog`. Nie może być **NULL**.  
-  
+Określa okno nadrzędne kontrolki, zwykle `CDialog`. Nie może być **NULL**.
+
 *nID*<br/>
-Określa identyfikator kontrolki i może służyć przez kontener do odwoływania się do kontrolki.  
-  
- Przykładem korzystania z tej funkcji umożliwia dynamiczne tworzenie formantu ActiveX byłoby w widoku formularza aplikacji interfejsu SDI. Następnie można utworzyć wystąpienia kontrolki `WM_CREATE` obsługi aplikacji.  
-  
- W tym przykładzie `CMyView` jest klasą Widok główny `CCirc` to klasa otoki i okólnik H jest nagłówkiem, którego (. H) plik klasy otoki.  
-  
- Implementacja tej funkcji jest procesem, krok 4.  
-  
-### <a name="to-dynamically-create-an-activex-control-in-a-non-dialog-window"></a>Umożliwia dynamiczne tworzenie kontrolki ActiveX w oknie innym niż okno dialogowe  
-  
-1.  Wstaw okólnik H w CMYVIEW. Godz., tuż przed `CMyView` definicję klasy:  
-  
-     [!code-cpp[NVC_MFC_AxCont#12](../mfc/codesnippet/cpp/activex-control-containers-using-controls-in-a-non-dialog-container_1.h)]  
-  
-2.  Dodawanie zmiennej członkowskiej (typu `CCirc`) do sekcji chronionych `CMyView` na terenie CMYVIEW definicji klasy. GODZ.:  
-  
-     [!code-cpp[NVC_MFC_AxCont#13](../mfc/codesnippet/cpp/activex-control-containers-using-controls-in-a-non-dialog-container_2.h)]  
-    [!code-cpp[NVC_MFC_AxCont#14](../mfc/codesnippet/cpp/activex-control-containers-using-controls-in-a-non-dialog-container_3.h)]  
-  
-3.  Dodaj `WM_CREATE` obsługi wiadomości do klasy `CMyView`.  
-  
-4.  W funkcji obsługi `CMyView::OnCreate`, wywołanie formantu `Create` funkcję za pomocą **to** wskaźnik jako okno nadrzędne:  
-  
-     [!code-cpp[NVC_MFC_AxCont#15](../mfc/codesnippet/cpp/activex-control-containers-using-controls-in-a-non-dialog-container_4.cpp)]  
-  
-5.  Skompiluj ponownie projekt. Kontrolka OK zostanie utworzony dynamicznie po każdym utworzeniu widoku aplikacji.  
-  
-## <a name="see-also"></a>Zobacz też  
- [Kontenery kontrolek ActiveX](../mfc/activex-control-containers.md)
+Określa identyfikator kontrolki i może służyć przez kontener do odwoływania się do kontrolki.
+
+Przykładem korzystania z tej funkcji umożliwia dynamiczne tworzenie formantu ActiveX byłoby w widoku formularza aplikacji interfejsu SDI. Następnie można utworzyć wystąpienia kontrolki `WM_CREATE` obsługi aplikacji.
+
+W tym przykładzie `CMyView` jest klasą Widok główny `CCirc` to klasa otoki i okólnik H jest nagłówkiem, którego (. H) plik klasy otoki.
+
+Implementacja tej funkcji jest procesem, krok 4.
+
+### <a name="to-dynamically-create-an-activex-control-in-a-non-dialog-window"></a>Umożliwia dynamiczne tworzenie kontrolki ActiveX w oknie innym niż okno dialogowe
+
+1. Wstaw okólnik H w CMYVIEW. Godz., tuż przed `CMyView` definicję klasy:
+
+     [!code-cpp[NVC_MFC_AxCont#12](../mfc/codesnippet/cpp/activex-control-containers-using-controls-in-a-non-dialog-container_1.h)]
+
+1. Dodawanie zmiennej członkowskiej (typu `CCirc`) do sekcji chronionych `CMyView` na terenie CMYVIEW definicji klasy. GODZ.:
+
+     [!code-cpp[NVC_MFC_AxCont#13](../mfc/codesnippet/cpp/activex-control-containers-using-controls-in-a-non-dialog-container_2.h)]
+    [!code-cpp[NVC_MFC_AxCont#14](../mfc/codesnippet/cpp/activex-control-containers-using-controls-in-a-non-dialog-container_3.h)]
+
+1. Dodaj `WM_CREATE` obsługi wiadomości do klasy `CMyView`.
+
+1. W funkcji obsługi `CMyView::OnCreate`, wywołanie formantu `Create` funkcję za pomocą **to** wskaźnik jako okno nadrzędne:
+
+     [!code-cpp[NVC_MFC_AxCont#15](../mfc/codesnippet/cpp/activex-control-containers-using-controls-in-a-non-dialog-container_4.cpp)]
+
+1. Skompiluj ponownie projekt. Kontrolka OK zostanie utworzony dynamicznie po każdym utworzeniu widoku aplikacji.
+
+## <a name="see-also"></a>Zobacz też
+
+[Kontenery kontrolek ActiveX](../mfc/activex-control-containers.md)
 

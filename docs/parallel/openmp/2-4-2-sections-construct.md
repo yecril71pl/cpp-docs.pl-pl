@@ -1,5 +1,5 @@
 ---
-title: 2.4.2 — konstrukcja sekcji | Dokumentacja firmy Microsoft
+title: 2.4.2 konstrukcja sections | Dokumentacja firmy Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -12,46 +12,47 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 20b24c5b7d2458294da6280acb2ba7e8be5961fb
-ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
+ms.openlocfilehash: 35ae940e37b40cbb9c883c4d7d6bca7b0fa65520
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33688287"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46410551"
 ---
 # <a name="242-sections-construct"></a>2.4.2 — konstrukcja sekcji
-**Sekcje** dyrektywy identyfikuje noniterative konstrukcji podziału pracy, który określa zbiór konstrukcje, które mają być podzielony między wątków w zespole. Każda sekcja jest wykonywana raz przez wątek w zespole. Składnia **sekcje** dyrektywy wygląda następująco:  
-  
-```  
-#pragma omp sections [clause[[,] clause] ...] new-line  
-   {  
-   [#pragma omp section new-line]  
-      structured-block  
-   [#pragma omp section new-linestructured-block ]  
-...  
-}  
-```  
-  
- Klauzuli jest jednym z następujących czynności:  
-  
- **prywatne (** *zmiennej listy* **)**  
-  
- **firstprivate (** *zmiennej listy* **)**  
-  
- **lastprivate (** *zmiennej listy* **)**  
-  
- **redukcja (** *operator* **:***zmiennej listy* **)**  
-  
- **nowait**  
-  
- Każda sekcja jest poprzedzony **sekcji** dyrektywy, mimo że **sekcji** dyrektywa jest opcjonalne w pierwszej sekcji. **Sekcji** dyrektywy musi występować w ramach zakresu leksykalne **sekcje** dyrektywy. Na koniec istnieje niejawna bariery **sekcje** skonstruować, chyba że **nowait** jest określona.  
-  
- Ograniczenia **sekcje** dyrektywy są następujące:  
-  
--   A **sekcji** dyrektywa nie musi występować poza zakres leksykalne **sekcje** dyrektywy.  
-  
--   Tylko jeden **nowait** klauzula może występować w **sekcje** dyrektywy.  
-  
-## <a name="cross-references"></a>Odsyłacze:  
-  
--   **prywatne**, **firstprivate**, **lastprivate**, i **redukcji** klauzule, zobacz [sekcji 2.7.2](../../parallel/openmp/2-7-2-data-sharing-attribute-clauses.md) na stronie 25.
+
+**Sekcje** dyrektywy identyfikuje noniterative konstrukcji podziału pracy, który określa zestaw konstrukcji, które są podzielone między wątkami w zespole. Każda sekcja jest wykonywane raz przez wątek w zespole. Składnia **sekcje** dyrektywy jest następująca:
+
+```
+#pragma omp sections [clause[[,] clause] ...] new-line
+   {
+   [#pragma omp section new-line]
+      structured-block
+   [#pragma omp section new-linestructured-block ]
+...
+}
+```
+
+Klauzula jest jedną z następujących czynności:
+
+**prywatne (** *liście zmiennych* **)**
+
+**firstprivate (** *liście zmiennych* **)**
+
+**lastprivate (** *liście zmiennych* **)**
+
+**redukcja (** *operator* **:***liście zmiennych* **)** 
+
+**nowait**
+
+Każda sekcja jest poprzedzony **sekcji** dyrektywy, mimo że **sekcji** dyrektywa jest opcjonalna w pierwszej sekcji. **Sekcji** dyrektywy musi znajdować się w obrębie zakresu leksykalne **sekcje** dyrektywy. Na końcu ma niejawne barierę **sekcje** konstruowania, chyba że **nowait** jest określony.
+
+Ograniczenia **sekcje** dyrektywy jest następująca:
+
+- A **sekcji** dyrektywy nie musi znajdować się poza zakres leksykalne **sekcje** dyrektywy.
+
+- Tylko jeden **nowait** klauzula może występować na **sekcje** dyrektywy.
+
+## <a name="cross-references"></a>Odsyłacze:
+
+- **prywatne**, **firstprivate**, **lastprivate**, i **redukcji** zdań, zobacz [sekcji 2.7.2](../../parallel/openmp/2-7-2-data-sharing-attribute-clauses.md) na stronie 25.

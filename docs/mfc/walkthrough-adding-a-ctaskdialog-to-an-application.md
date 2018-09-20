@@ -15,23 +15,23 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4a0a3d93815a740be59960e6d3e0f9e9ed690923
-ms.sourcegitcommit: 208d445fd7ea202de1d372d3f468e784e77bd666
+ms.openlocfilehash: 0f803af896c1bb2a0e5f58e45f4ef9f588f4e66d
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/29/2018
-ms.locfileid: "37122957"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46420487"
 ---
 # <a name="walkthrough-adding-a-ctaskdialog-to-an-application"></a>Wskazówki: dodawanie obiektu CTaskDialog do aplikacji
 
-W tym przewodniku przedstawiono [klasy obiektu CTaskDialog](../mfc/reference/ctaskdialog-class.md) i pokazuje, jak i dodaj je do aplikacji.
+Ten przewodnik stanowi wprowadzenie [klasa CTaskDialog](../mfc/reference/ctaskdialog-class.md) i dowiesz się, jak je dodać do swojej aplikacji.
 
-`CTaskDialog` Okno dialogowe zadania zastępujący pole komunikatów systemu Windows w systemie Windows Vista lub nowszym. `CTaskDialog` Zwiększa oryginalnego pola wiadomości i dodaje funkcjonalność. W oknie komunikatu systemu Windows nadal jest obsługiwany w programie Visual Studio.
+`CTaskDialog` To okno dialogowe zadań, która zastępuje okno komunikatu Windows w systemie Windows Vista lub nowszym. `CTaskDialog` Zwiększa oryginalnego okno komunikatu i dodaje funkcjonalność. Okno komunikatu Windows nadal jest obsługiwany w programie Visual Studio.
 
 > [!NOTE]
-> Wersje systemu Windows starszych niż Windows Vista nie obsługują `CTaskDialog`. Jeśli chcesz wyświetlić komunikat do użytkownika, który uruchamia aplikację we wcześniejszej wersji systemu Windows należy zaprogramować opcji w oknie dialogowym alternatywnych. Można użyć metody statycznej [CTaskDialog::IsSupported](../mfc/reference/ctaskdialog-class.md#issupported) do określenia w czasie wykonywania, czy komputer użytkownika można wyświetlić `CTaskDialog`. Ponadto `CTaskDialog` jest dostępna tylko po utworzeniu aplikacji z biblioteką Unicode.
+> Wersje Windows wcześniejsze niż Windows Vista nie obsługują `CTaskDialog`. Należy programu opcji w oknie dialogowym alternatywnego, jeśli chcesz wyświetlić komunikat dla użytkownika, który uruchomił aplikację w starszej wersji programu Windows. Można użyć statycznej metody [CTaskDialog::IsSupported](../mfc/reference/ctaskdialog-class.md#issupported) do określenia w czasie wykonywania, czy na komputerze użytkownika może wyświetlać `CTaskDialog`. Ponadto `CTaskDialog` jest dostępna tylko podczas kompilacji aplikacji za pomocą biblioteki Unicode.
 
-`CTaskDialog` Obsługuje kilka opcjonalne elementy do zbierania i wyświetlania informacji. Na przykład `CTaskDialog` można wyświetlać polecenia łącza, dostosowane przycisków ikon niestandardowych i stopki. `CTaskDialog` Ma również kilka metod, które pozwalają zbadać stanu zadania okno dialogowe, aby ustalić, jakie elementy opcjonalne wybrany przez użytkownika.
+`CTaskDialog` Obsługuje kilka opcjonalnych elementów do gromadzenia i wyświetlania informacji. Na przykład `CTaskDialog` może wyświetlać polecenia łącza, przyciski niestandardowe, dostosowane ikon i stopki. `CTaskDialog` Ma również kilka metod, które umożliwiają Wyślij zapytanie o stan okno dialogowe zadania, aby określić elementy opcjonalne wybranego użytkownika.
 
 ## <a name="prerequisites"></a>Wymagania wstępne
 
@@ -41,19 +41,19 @@ Następujące składniki są wymagane do przeprowadzenia tego instruktażu:
 
 - Windows Vista lub nowszy
 
-## <a name="replacing-a-windows-message-box-with-a-ctaskdialog"></a>Zastąpienie obiektu CTaskDialog okno komunikatu systemu Windows
+## <a name="replacing-a-windows-message-box-with-a-ctaskdialog"></a>Zastępowanie okno komunikatu Windows za pomocą obiektu CTaskDialog
 
-W poniższej procedurze przedstawiono użycie najprostsze `CTaskDialog`, który ma zastąpić pole komunikatów systemu Windows. W tym przykładzie zmienia także ikon skojarzonych z zadań — okno dialogowe. Zmiana ikony sprawia, że `CTaskDialog` są wyświetlane takie same jak pole komunikatów systemu Windows.
+W poniższej procedurze przedstawiono najbardziej podstawowe zastosowanie `CTaskDialog`, który ma zastąpić Windows okno komunikatu. W tym przykładzie zmienia się również ikon skojarzonych z okno dialogowe zadania. Zmiana ikony sprawia, że `CTaskDialog` pojawiają się taka sama jak okno komunikatu Windows.
 
-### <a name="to-replace-a-windows-message-box-with-a-ctaskdialog"></a>Aby zastąpić obiektu CTaskDialog okno komunikatu systemu Windows
+### <a name="to-replace-a-windows-message-box-with-a-ctaskdialog"></a>Aby zastąpić okno komunikatu Windows obiektu CTaskDialog
 
-1. Utwórz nowy projekt aplikacji MFC z ustawieniami domyślnymi. Wywołać ją *MyProject*.
+1. Utwórz nowy projekt aplikacji MFC, przy użyciu ustawień domyślnych. Wywołaj go *MyProject*.
 
 2. Użyj **Eksploratora rozwiązań** można otworzyć pliku MyProject.cpp.
 
 3. Dodaj `#include "afxtaskdialog.h"` po zawiera listę.
 
-4. Find — metoda `CMyProjectApp::InitInstance`. Wstaw następujące wiersze kodu przed `return TRUE;` instrukcji. Ten kod tworzy ciągów, których używamy w obu pola wiadomości Windows lub w `CTaskDialog`.  
+4. Znajdź metodę `CMyProjectApp::InitInstance`. Wstaw następujące wiersze kodu przed `return TRUE;` instrukcji. Ten kod tworzy ciągów, których używa w dowolnym oknie komunikatu Windows lub w `CTaskDialog`.
 
     ```cpp
     CString message("My message to the user");
@@ -61,7 +61,7 @@ W poniższej procedurze przedstawiono użycie najprostsze `CTaskDialog`, który 
     CString emptyString;
     ```
 
-5. Dodaj następujący kod po kodzie z kroku 4. Ten kod gwarantuje, że na komputerze użytkownika obsługuje `CTaskDialog`. Okno dialogowe nie jest obsługiwana, aplikacja wyświetla komunikat Windows zamiast tego.
+5. Dodaj następujący kod po kodzie z kroku 4. Ten kod gwarantuje, że na komputerze użytkownika obsługuje `CTaskDialog`. Okno dialogowe nie jest obsługiwana, aplikacja wyświetla okno komunikatu, Windows zamiast tego.
 
     ```cpp
     if (CTaskDialog::IsSupported())
@@ -74,7 +74,7 @@ W poniższej procedurze przedstawiono użycie najprostsze `CTaskDialog`, który 
     }
     ```
 
-6. Wstaw następujący kod w nawiasie po `if` instrukcji z kroku 5. Ten kod tworzy `CTaskDialog`.
+6. Wstaw następujący kod w nawiasach kwadratowych po `if` instrukcji z kroku 5. Ten kod tworzy `CTaskDialog`.
 
     ```cpp
     CTaskDialog taskDialog(message, emptyString, dialogTitle, TDCBF_OK_BUTTON);
@@ -92,23 +92,23 @@ W poniższej procedurze przedstawiono użycie najprostsze `CTaskDialog`, który 
     taskDialog.DoModal();
     ```
 
-Krok 7 można pominąć, jeśli nie chcesz `CTaskDialog` do tego samego ikona jest wyświetlana jako pole komunikatów systemu Windows. W przypadku pominięcia tego kroku `CTaskDialog` ma bez ikony, gdy aplikacja wyświetla go.
+Krok 7 można pominąć, jeśli nie chcesz `CTaskDialog` do tego samego ikona jest wyświetlana jako okno komunikatu Windows. Jeśli pominiesz ten krok `CTaskDialog` ma żadnej ikony, gdy aplikacja wyświetla je.
 
-Kompilowanie i uruchamianie aplikacji. Aplikacja wyświetla okno dialogowe zadania po jego uruchomieniu.
+Skompilować i uruchomić aplikację. Aplikacja wyświetla okno dialogowe zadania po jego uruchomieniu.
 
 ## <a name="adding-functionality-to-the-ctaskdialog"></a>Dodawanie funkcji do obiektu CTaskDialog
 
-Poniższa procedura przedstawia sposób dodawania funkcji do `CTaskDialog` utworzoną w poprzedniej procedurze. Przykładowy kod przedstawia sposób wykonywania szczegółowe instrukcje na podstawie wybranych przez użytkownika.
+Poniższa procedura pokazuje sposób dodawania funkcjonalności do `CTaskDialog` utworzoną w poprzedniej procedurze. Przykładowy kod przedstawia sposób wykonywania szczegółowych instrukcji, w zależności od wyborów użytkownika.
 
-### <a name="to-add-functionality-to-the-ctaskdialog"></a>Dodawanie funkcji do obiektu CTaskDialog
+### <a name="to-add-functionality-to-the-ctaskdialog"></a>Aby dodać funkcje do obiektu CTaskDialog
 
-1. Przejdź do **widok zasobów**. Jeśli nie widzisz **widok zasobów**, możesz otworzyć go z **widoku** menu.
+1. Przejdź do **widok zasobów**. Jeśli nie widzisz **widok zasobów**, możesz go otworzyć **widoku** menu.
 
-2. Rozwiń węzeł **widok zasobów** do czasu możesz wybrać **tabeli ciągów** folderu. Rozwiń ją, a następnie kliknij dwukrotnie ikonę **tabeli ciągów** wpisu.
+2. Rozwiń **widok zasobów** do momentu wybrania **tabeli ciągów** folderu. Rozwiń ją, a następnie kliknij dwukrotnie **tabeli ciągów** wpisu.
 
-3. Przewiń w dół tabeli ciągów i Dodaj nowy wpis. Zmień identyfikator do `TEMP_LINE1`. Ustaw podpis **1 wiersz polecenia**.
+3. Przewiń w dół tabeli ciągów i Dodaj nowy wpis. Zmień identyfikator, który ma `TEMP_LINE1`. Ustaw podpis **1 wiersz polecenia**.
 
-4. Dodaj nowy wpis innego. Zmień identyfikator do `TEMP_LINE2`. Ustaw podpis **2 wiersza polecenia**.
+4. Dodaj inny nowy wpis. Zmień identyfikator, który ma `TEMP_LINE2`. Ustaw podpis **2 wiersza polecenia**.
 
 5. Przejdź z powrotem do MyProject.cpp.
 
@@ -120,7 +120,7 @@ Poniższa procedura przedstawia sposób dodawania funkcji do `CTaskDialog` utwor
     CString expansionInfo("This is the additional information to the user,\nextended over two lines.");
     ```
 
-7. Znajdź `taskDialog.DoModal()` instrukcji i Zastąp następujący kod tej instrukcji. Ten kod aktualizuje okno dialogowe zadania i dodaje nowe kontrolki:
+7. Znajdź `taskDialog.DoModal()` instrukcji i Zastąp następujący kod w tej instrukcji. Ten kod aktualizuje okno dialogowe zadania i dodaje nowe kontrolki:
 
     ```cpp
     taskDialog.SetMainInstruction(L"Warning");
@@ -133,13 +133,13 @@ Poniższa procedura przedstawia sposób dodawania funkcji do `CTaskDialog` utwor
     taskDialog.SetVerificationCheckboxText(L"Remember your selection");
     ```
 
-8. Dodaj następujący wiersz kodu, który wyświetla użytkownikowi okno dialogowe zadania i pobiera określonego przez użytkownika:
+8. Dodaj następujący wiersz kodu, który wyświetla okno dialogowe zadania użytkownika oraz pobiera wybranych przez użytkownika:
 
     ```cpp
     INT_PTR result = taskDialog.DoModal();
     ```
 
-9. Wstaw następujący kod po wywołaniu `taskDialog.DoModal()`. Ta sekcja kod przetwarza dane wejściowe użytkownika:
+9. Wstaw następujący kod po wywołaniu `taskDialog.DoModal()`. Ta sekcja kodu przetwarza dane wejściowe użytkownika:
 
     ```cpp
     if (taskDialog.GetVerificationCheckboxState())
@@ -171,21 +171,21 @@ Poniższa procedura przedstawia sposób dodawania funkcji do `CTaskDialog` utwor
     }
     ```
 
-W kodzie w kroku 9 Zastąp komentarze zaczynające się z procesu, jeśli kod, który będzie wykonywany w określonych warunkach.
+W kodzie w kroku 9 Zastąp komentarzy rozpoczynających się Jeśli proces z kodem, który ma zostać wykonany w określonych warunkach.
 
-Kompilowanie i uruchamianie aplikacji. Aplikacja wyświetla okno dialogowe zadania, które są używane nowe formanty i dodatkowe informacje.
+Skompilować i uruchomić aplikację. Aplikacja wyświetla okno dialogowe zadania, który korzysta z nowych kontrolek i dodatkowe informacje.
 
-## <a name="displaying-a-ctaskdialog-without-creating-a-ctaskdialog-object"></a>Wyświetlanie obiektu CTaskDialog bez tworzenia obiektu obiektu CTaskDialog
+## <a name="displaying-a-ctaskdialog-without-creating-a-ctaskdialog-object"></a>Wyświetlanie obiektu CTaskDialog bez tworzenia obiektu CTaskDialog
 
-Poniższa procedura przedstawia sposób wyświetlania `CTaskDialog` bez tworzenia `CTaskDialog` obiektu. W tym przykładzie nadal poprzedniej procedury.
+Poniższa procedura pokazuje sposób wyświetlania `CTaskDialog` bez tworzenia `CTaskDialog` obiektu. Ten przykład jest kontynuacją poprzednich procedur.
 
-### <a name="to-display-a-ctaskdialog-without-creating-a-ctaskdialog-object"></a>Aby wyświetlić obiektu CTaskDialog bez tworzenia obiektu obiektu CTaskDialog
+### <a name="to-display-a-ctaskdialog-without-creating-a-ctaskdialog-object"></a>Aby wyświetlić obiektu CTaskDialog bez tworzenia obiektu CTaskDialog
 
-1. Otwórz plik MyProject.cpp, jeśli nie jest jeszcze otwarta.
+1. Otwórz plik MyProject.cpp, jeśli nie jest już otwarty.
 
 2. Przejdź do nawiasu zamykającego dla `if (CTaskDialog::IsSupported())` instrukcji.
 
-3. Wstaw następujący kod bezpośrednio przed zamykającym nawiasem `if` instrukcji (przed `else` blok):
+3. Wstaw następujący kod bezpośrednio przed zamykającym nawiasem `if` — instrukcja (przed `else` bloku):
 
     ```cpp
     HRESULT result2 = CTaskDialog::ShowDialog(L"My error message",
@@ -195,12 +195,12 @@ Poniższa procedura przedstawia sposób wyświetlania `CTaskDialog` bez tworzeni
         TEMP_LINE2);
     ```
 
-Kompilowanie i uruchamianie aplikacji. Aplikacja wyświetla okno dialogowe dwa zadania. Pierwszym oknie dialogowym jest od do dodawania funkcji do procedury obiektu CTaskDialog; drugie okno dialogowe pochodzi z poprzedniej procedurze.
+Skompilować i uruchomić aplikację. Aplikacja wyświetla dwa zadania, okno dialogowe. Pierwsze okno dialogowe obejmuje adresy od z do dodawania funkcji do procedury CTaskDialog; drugie okno dialogowe pochodzi z poprzedniej procedurze.
 
-W tych przykładach pokazano nie wszystkie opcje dostępne dla `CTaskDialog`, ale powinien ułatwiające rozpoczęcie pracy. Zobacz [klasy obiektu CTaskDialog](../mfc/reference/ctaskdialog-class.md) pełen opis klasy.
+Przykłady te pokazują nie wszystkie dostępne opcje `CTaskDialog`, ale powinny pomóc Ci rozpocząć pracę. Zobacz [klasa CTaskDialog](../mfc/reference/ctaskdialog-class.md) pełny opis klasy.
 
 ## <a name="see-also"></a>Zobacz także
 
-[Okna dialogowe](../mfc/dialog-boxes.md)  
-[Klasa CTaskDialog](../mfc/reference/ctaskdialog-class.md)  
-[CTaskDialog::CTaskDialog](../mfc/reference/ctaskdialog-class.md#ctaskdialog)  
+[Okna dialogowe](../mfc/dialog-boxes.md)<br/>
+[Klasa CTaskDialog](../mfc/reference/ctaskdialog-class.md)<br/>
+[CTaskDialog::CTaskDialog](../mfc/reference/ctaskdialog-class.md#ctaskdialog)

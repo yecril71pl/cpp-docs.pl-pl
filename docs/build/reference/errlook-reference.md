@@ -15,12 +15,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e8646ad544b6c481ea394add9e6e8faa82919e15
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: 09db7dbb2af9294e215ab60c716f73eee821b29a
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45725039"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46438577"
 ---
 # <a name="errlook-reference"></a>Odwołanie ERRLOOK
 
@@ -30,14 +30,19 @@ Akcelerator kluczy dla kopiowania (CTRL + C), wycinania (CTRL + X) i wklej (CTRL
 
 ## <a name="in-this-section"></a>W tej sekcji
 
-[Wartość Edytuj kontrolkę](../../build/reference/value-edit-control.md) opisuje edytować wartość kontrolki w aplikacji ERRLOOK.
+[Kontrolka edycji wartości](../../build/reference/value-edit-control.md)<br/>
+W tym artykule opisano edytować wartość kontrolki w aplikacji ERRLOOK.
 
-[Edytuj kontrolkę komunikat o błędzie](../../build/reference/error-message-edit-control.md) opisuje błąd komunikat Edytuj kontrolkę w aplikacji ERRLOOK.
+[Kontrolka edycji komunikatu o błędzie](../../build/reference/error-message-edit-control.md)<br/>
+W tym artykule opisano Edytuj komunikat o błędzie formantu w aplikacji ERRLOOK.
 
-[Przycisk modułów](../../build/reference/modules-button.md) opisuje przycisk modułów w aplikacji ERRLOOK.
+[Przycisk modułów](../../build/reference/modules-button.md)<br/>
+W tym artykule opisano przycisk modułów w aplikacji ERRLOOK.
 
-[Szukaj przycisk](../../build/reference/look-up-button.md) opisuje przycisk przeglądania w aplikacji ERRLOOK.
+[Przycisk wyszukiwania](../../build/reference/look-up-button.md)<br/>
+W tym artykule opisano przycisk przeglądania w aplikacji ERRLOOK.
 
 ## <a name="related-sections"></a>Sekcje pokrewne
 
-[Narzędzia kompilacji C/C++](../../build/reference/c-cpp-build-tools.md) udostępnia łącza do tematów omawiających C/C++ kompilacji narzędzi dostępnych w programie Visual C++.
+[Narzędzia kompilacji C/C++](../../build/reference/c-cpp-build-tools.md)<br/>
+Zawiera łącza do tematów omawiających C/C++ kompilacji narzędzi dostępnych w programie Visual C++.

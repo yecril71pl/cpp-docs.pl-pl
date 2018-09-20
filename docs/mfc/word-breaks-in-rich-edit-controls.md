@@ -1,5 +1,5 @@
 ---
-title: Dzielenie wyrazów w formantach edycji wzbogaconej | Dokumentacja firmy Microsoft
+title: Podziały wyrazów w formantach edycji wzbogaconej | Dokumentacja firmy Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,17 +17,19 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 373a30ed4a327cff99cb3cfce873707314608b57
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: f012897d968d108cb366126fc38992ff1dd11d0a
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33382963"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46424615"
 ---
 # <a name="word-breaks-in-rich-edit-controls"></a>Podziały wyrazów w formantach edycji wzbogaconej
-Kontrolki edycji wzbogaconej ([CRichEditCtrl](../mfc/reference/cricheditctrl-class.md)) wywołuje funkcję o nazwie "word podziału procedury" Aby znaleźć przerw między wyrazami i określić, gdzie może spowodować nieprawidłowe wierszy. Formant używa tych informacji podczas wykonywania operacji zawijania słów oraz podczas przetwarzania kombinacji klawiszy CTRL + Strzałka w lewo i CTRL + Strzałka w prawo. Aplikacja może wysyłać wiadomości do kontrolki edycji wzbogaconej zastąpić procedury dzielenia wyrazów domyślne, można pobrać informacji o dzielenie wyrazów i określić, co wiersz danego znaku znajduje się.  
-  
-## <a name="see-also"></a>Zobacz też  
- [Korzystanie z CRichEditCtrl](../mfc/using-cricheditctrl.md)   
- [Kontrolki](../mfc/controls-mfc.md)
+
+Kontrolki edycji wzbogaconej ([CRichEditCtrl](../mfc/reference/cricheditctrl-class.md)) wywołuje funkcję o nazwie "word podziału procedury" Aby znaleźć przerwy między wyrazami i określić, gdzie może przerwać wierszy. Kontrolka używa tych informacji podczas wykonywania operacji zawijanie wyrazów i podczas przetwarzania kombinacji klawiszy CTRL + Strzałka w lewo i CTRL + Strzałka w prawo. Aplikacja może wysyłać komunikaty do kontrolki edycji wzbogaconej, aby zastąpić procedurę dzielenia wyrazów domyślne, można pobrać informacji o dzielenia wyrazów i określić, jakie wiersz dany znak, który znajduje się.
+
+## <a name="see-also"></a>Zobacz też
+
+[Korzystanie z CRichEditCtrl](../mfc/using-cricheditctrl.md)<br/>
+[Kontrolki](../mfc/controls-mfc.md)
 

@@ -19,22 +19,24 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: be4ccf9ec33e5ddf497193c1942e9f300f8cae57
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 22dde243bb6d8e8a283e670804d4b8b6cad9082c
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33347633"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46406753"
 ---
 # <a name="message-handlers"></a>Programy obsługi komunikatów
-W MFC dedykowana *obsługi* funkcja przetwarza każdy komunikat osobne. Funkcje elementów członkowskich klasy są funkcje obsługi wiadomości. Ta dokumentacja używa warunki *funkcji członkowskiej obsługi wiadomości*, *funkcji obsługi wiadomości*, *obsługi wiadomości*, i *obsługi*zamiennie. Niektóre rodzaje programów obsługi wiadomości są również nazywane "programy obsługi poleceń."  
-  
- Zapisywanie konta programy obsługi komunikatów dla znaczną część pracy w pisanie aplikacji framework. Rodzina tego artykułu opisano, jak działa mechanizm przetwarzania komunikatów.  
-  
- Działania programu obsługi wiadomości to robić jest dowolne w odpowiedzi na tę wiadomość. Można utworzyć obsługi przy użyciu okna właściwości klasy, a następnie wypełnij programu obsługi kodu za pomocą edytora kodu źródłowego.  
-  
- Możliwość używania wszystkich obiektów programu Microsoft Visual C++ i MFC do zapisania programu obsługi. Aby uzyskać listę wszystkich klas, zobacz [Przegląd biblioteki klas](../mfc/class-library-overview.md) w *odwołania MFC*.  
-  
-## <a name="see-also"></a>Zobacz też  
- [Komunikaty i polecenia w strukturze](../mfc/messages-and-commands-in-the-framework.md)
+
+W MFC, dedykowany *obsługi* funkcja przetwarza każdy komunikat oddzielne. Funkcje obsługi komunikatów są funkcji składowych klasy. Ta dokumentacja używa warunki *funkcja elementu członkowskiego program obsługi komunikatów*, *funkcji obsługi wiadomości*, *obsługi wiadomości*, i *obsługi*zamiennie. Niektóre rodzaje obsługi komunikatów są również nazywane "programy obsługi poleceń."
+
+Zapisywanie konta programy obsługi komunikatów dla znaczną część pracy w pisaniu aplikacji framework. Tej rodziny artykule opisano, jak działa mechanizm przetwarzania komunikatów.
+
+Działanie procedury obsługi wiadomości zrobił jest dowolne gotowe w odpowiedzi na tę wiadomość. Można utworzyć procedury obsługi za pomocą okna właściwości klasy, a następnie wypełnij kodu programu obsługi, za pomocą edytora kodu źródłowego.
+
+Można użyć wszystkich funkcji programu Microsoft Visual C++ i MFC, można zapisać inne programy obsługi. Aby uzyskać listę wszystkich klas, zobacz [Przegląd biblioteki klas](../mfc/class-library-overview.md) w *odwołanie MFC*.
+
+## <a name="see-also"></a>Zobacz też
+
+[Komunikaty i polecenia w strukturze](../mfc/messages-and-commands-in-the-framework.md)
 

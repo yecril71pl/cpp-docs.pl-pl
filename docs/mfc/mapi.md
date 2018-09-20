@@ -20,27 +20,30 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1df0d00aa6356fa1741e7f4fc34d8063782da859
-ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
+ms.openlocfilehash: b2ca182da3a0300604415b790c0aba138c8fd7a2
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/25/2018
-ms.locfileid: "36930677"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46439110"
 ---
 # <a name="mapi"></a>MAPI
-W tym artykule opisano Microsoft MAPI Messaging Application Programming Interface () dla deweloperów aplikacji klienta komunikatu. Obsługa podzbiór MAPI w klasie dostarcza MFC `CDocument` , ale nie Hermetyzowanie całego interfejsu API. Aby uzyskać więcej informacji, zobacz [Obsługa MAPI w MFC](../mfc/mapi-support-in-mfc.md).  
-  
- MAPI to zestaw funkcji, które aplikacje obsługujące pocztę i poczty używać do tworzenia, modyfikowania, transfer i przechowywania wiadomości e-mail. Programiści aplikacji narzędzia, aby zdefiniować cel i zawartość wiadomości e-mail, a daje im elastyczność zarządzania nimi, przechowywane wiadomości. MAPI także wspólny interfejs, który deweloperzy aplikacji można użyć do utworzenia z włączoną obsługą poczty oraz aplikacje z obsługą poczty niezależne od podstawowej system obsługi wiadomości.  
-  
- Klienci obsługi wiadomości udostępniają interfejsu do interakcji z Microsoft Windows do obsługi komunikatów systemu (WMS). Zazwyczaj współpraca obejmuje usługi żądań od dostawców zgodnych z interfejsem MAPI, takich jak magazyny wiadomości i książki adresowe.  
-  
- Aby uzyskać więcej informacji na temat MAPI zobacz artykuły w przewodniku w Win32 MAPI (Messaging) zestawu Windows SDK.  
-  
-## <a name="in-this-section"></a>W tej sekcji  
- [Obsługa MAPI w MFC](../mfc/mapi-support-in-mfc.md)  
-  
-## <a name="see-also"></a>Zobacz też  
- [CDocument::OnFileSendMail](../mfc/reference/cdocument-class.md#onfilesendmail)   
- [CDocument::OnUpdateFileSendMail](../mfc/reference/cdocument-class.md#onupdatefilesendmail)   
- [COleDocument::OnFileSendMail](../mfc/reference/coledocument-class.md#onfilesendmail)
+
+W tym artykule opisano Microsoft Application Programming Interface MAPI (Messaging) dla deweloperów aplikacji wiadomość klienta. MFC dostarcza obsługę podzbiór MAPI w klasie `CDocument` , ale nie hermetyzuje całego interfejsu API. Aby uzyskać więcej informacji, zobacz [Obsługa MAPI w MFC](../mfc/mapi-support-in-mfc.md).
+
+MAPI to zestaw funkcji, których aplikacje obsługujące pocztę i obsługujących wiadomości e-mail do tworzenia, modyfikowania, transfer i przechowywać wiadomości pocztowe. On daje deweloperom aplikacji narzędzia, aby zdefiniować cel i zawartość wiadomości e-mail i umożliwia im elastyczność zarządzania nimi, wiadomości e-mail przechowywanych. MAPI udostępnia wspólny interfejs, który deweloperzy aplikacji można użyć do utworzenia z włączoną obsługą poczty i aplikacje z obsługą wiadomości e-mail niezależnie od zasadniczego systemu obsługi komunikatów.
+
+Klienci obsługi wiadomości zapewnić ludzi interfejs do interakcji z Microsoft Windows Messaging System (WMS). Ta interakcja obejmują zazwyczaj żądania usług z CLS MAPI dostawców, takich jak magazyny wiadomości i książek adresowych.
+
+Aby uzyskać więcej informacji na temat interfejsu MAPI zobacz artykuły w przewodniku w Win32 MAPI (Messaging) zestawu Windows SDK.
+
+## <a name="in-this-section"></a>W tej sekcji
+
+[Obsługa MAPI w MFC](../mfc/mapi-support-in-mfc.md)
+
+## <a name="see-also"></a>Zobacz też
+
+[CDocument::OnFileSendMail](../mfc/reference/cdocument-class.md#onfilesendmail)<br/>
+[CDocument::OnUpdateFileSendMail](../mfc/reference/cdocument-class.md#onupdatefilesendmail)<br/>
+[COleDocument::OnFileSendMail](../mfc/reference/coledocument-class.md#onfilesendmail)
 

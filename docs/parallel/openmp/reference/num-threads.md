@@ -16,42 +16,46 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d3485d534cf279863b241abcd26195cdde7fea19
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 27e39d7db36c121add3598387de52ecb878059b5
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46016289"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46405271"
 ---
 # <a name="numthreads"></a>num_threads
-Ustawia liczbę wątków w zespole wątku.  
-  
-## <a name="syntax"></a>Składnia  
-  
-```  
-num_threads(num)  
-```  
-  
+
+Ustawia liczbę wątków w zespole wątku.
+
+## <a name="syntax"></a>Składnia
+
+```
+num_threads(num)
+```
+
 ### <a name="parameters"></a>Parametry
-  
+
 *num*<br/>
-Liczba wątków  
-  
-## <a name="remarks"></a>Uwagi  
- `num_threads` Klauzuli ma taką samą funkcjonalność jak [omp_set_num_threads](../../../parallel/openmp/reference/omp-set-num-threads.md) funkcji.  
-  
- `num_threads` mają zastosowanie do następujących dyrektywach:  
-  
--   [parallel](../../../parallel/openmp/reference/parallel.md)  
-  
--   [for](../../../parallel/openmp/reference/for-openmp.md)  
-  
--   [Sekcje](../../../parallel/openmp/reference/sections-openmp.md)  
-  
- Aby uzyskać więcej informacji, zobacz [2.3 konstrukcja równoległa](../../../parallel/openmp/2-3-parallel-construct.md).  
-  
-## <a name="example"></a>Przykład  
- Zobacz [równoległe](../../../parallel/openmp/reference/parallel.md) na przykład za pomocą `num_threads` klauzuli.  
-  
-## <a name="see-also"></a>Zobacz też  
- [Klauzule](../../../parallel/openmp/reference/openmp-clauses.md)
+Liczba wątków
+
+## <a name="remarks"></a>Uwagi
+
+`num_threads` Klauzuli ma taką samą funkcjonalność jak [omp_set_num_threads](../../../parallel/openmp/reference/omp-set-num-threads.md) funkcji.
+
+`num_threads` mają zastosowanie do następujących dyrektywach:
+
+- [parallel](../../../parallel/openmp/reference/parallel.md)
+
+- [for](../../../parallel/openmp/reference/for-openmp.md)
+
+- [Sekcje](../../../parallel/openmp/reference/sections-openmp.md)
+
+Aby uzyskać więcej informacji, zobacz [2.3 konstrukcja równoległa](../../../parallel/openmp/2-3-parallel-construct.md).
+
+## <a name="example"></a>Przykład
+
+Zobacz [równoległe](../../../parallel/openmp/reference/parallel.md) na przykład za pomocą `num_threads` klauzuli.
+
+## <a name="see-also"></a>Zobacz też
+
+[Klauzule](../../../parallel/openmp/reference/openmp-clauses.md)

@@ -16,17 +16,19 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: df1be2fa68f0a7a9ea9e54d500240cc6b5f06048
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 0a07c034a15cd0b575dab4cb3b647e64e6ad16c7
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33341251"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46428571"
 ---
 # <a name="commonly-added-member-functions"></a>Powszechnie dodawane funkcje członkowskie
-Jeśli Twoje okno dialogowe zawiera przyciski niż OK lub przycisk Anuluj, należy napisać funkcji Członkowskich obsługi wiadomości w odpowiada na komunikaty powiadomień dotyczących formantu, które generują klasy okien dialogowych. Na przykład zobacz [Bazgroły](../visual-cpp-samples.md) przykładowy program. Można również obsługiwać komunikaty powiadomień dotyczących formantu z innych formantów w oknie dialogowym.  
-  
-## <a name="see-also"></a>Zobacz też  
- [Okna dialogowe](../mfc/dialog-boxes.md)   
- [Cykl życiowy okna dialogowego](../mfc/life-cycle-of-a-dialog-box.md)   
- [Powszechnie zastępowane funkcje składowe](../mfc/commonly-overridden-member-functions.md)
+
+Jeśli Twoje okno dialogowe zawiera przyciski innym niż OK lub przycisk Anuluj, należy napisać program obsługi komunikatów funkcje Członkowskie w swojej klasy okien dialogowych, aby odpowiadać na komunikaty powiadamianie kontrolki, które generują. Aby uzyskać przykład, zobacz [Bazgroły](../visual-cpp-samples.md) przykładowy program. Może również obsługiwać formant powiadomienia z innych formantów w oknie dialogowym.
+
+## <a name="see-also"></a>Zobacz też
+
+[Okna dialogowe](../mfc/dialog-boxes.md)<br/>
+[Cykl życiowy okna dialogowego](../mfc/life-cycle-of-a-dialog-box.md)<br/>
+[Powszechnie zastępowane funkcje składowe](../mfc/commonly-overridden-member-functions.md)

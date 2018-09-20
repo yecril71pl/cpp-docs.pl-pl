@@ -463,14 +463,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d06bac8aef674472b817817fde4191f1d655365e
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: 575f21e03659f973a25b1ad2e7aae211f9dae187
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45723232"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46412109"
 ---
 # <a name="reference-concurrency-runtime"></a>Odwołanie (Współbieżność środowiska wykonawczego)
+
 Ta sekcja zawiera informacje dotyczące środowiska uruchomieniowego współbieżności.
 
 > [!Note]
@@ -478,7 +479,8 @@ Ta sekcja zawiera informacje dotyczące środowiska uruchomieniowego współbie�
 
 ## <a name="in-this-section"></a>W tej sekcji
 
-[Współbieżność Namespace](concurrency-namespace.md) współbieżności przestrzeń nazw zawiera klasy i funkcje, które zapewniają dostęp do środowiska wykonawczego Concurrency, platformy programowania współbieżnego dla C++. Aby uzyskać więcej informacji, zobacz [współbieżność środowiska wykonawczego](../concurrency-runtime.md).
+[Przestrzeń nazw współbieżności](concurrency-namespace.md)<br/>
+Przestrzeń nazwy współbieżności zawiera klasy i funkcje, które zapewniają dostęp do środowiska wykonawczego Concurrency, platformy programowania współbieżnego dla C++. Aby uzyskać więcej informacji, zobacz [współbieżność środowiska wykonawczego](../concurrency-runtime.md).
 
 [obszar nazw STD](std-namespace.md)
 

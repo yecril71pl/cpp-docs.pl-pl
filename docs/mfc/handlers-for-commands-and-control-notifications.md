@@ -20,29 +20,31 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 60c66beb3c0c8874bd3d678bfc4331dc766c443a
-ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
+ms.openlocfilehash: bda42393cd55b60ab787665b51957bb2f94c5df3
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/25/2018
-ms.locfileid: "36929134"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46430085"
 ---
 # <a name="handlers-for-commands-and-control-notifications"></a>Programy obsługi dla poleceń i powiadomień dotyczących formantów
-Nie ma żadnych domyślne programy obsługi poleceń lub komunikaty powiadomień dotyczących formantu. W związku z tym są powiązane tylko przez Konwencję w nazewnictwa programu obsługi dla tych kategorii wiadomości. Podczas mapowania powiadomień polecenie lub formant do programu obsługi, okna właściwości zaproponuje nazwę na podstawie kodu polecenia Identyfikatora lub powiadomień dotyczących formantu. Można zaakceptować proponowana nazwa, zmień go lub go zastąpić.  
-  
- Konwencja sugeruje nazw programy obsługi zdarzeń w obu kategorii dla obiekt interfejsu użytkownika, które reprezentują. W związku z tym program obsługi poleceń Wytnij menu Edycja może mieć nazwę.  
-  
- [!code-cpp[NVC_MFCMessageHandling#4](../mfc/codesnippet/cpp/handlers-for-commands-and-control-notifications_1.h)]  
-  
- Ponieważ polecenia Wytnij tak często jest zaimplementowana w aplikacjach, platformę powoduje wstępne definiowanie identyfikator polecenia dla polecenia Wytnij jako **id_edit_cut —**. Aby uzyskać listę wszystkich poleceń wstępnie zdefiniowane identyfikatory Zobacz plik AFXRES. H. Aby uzyskać więcej informacji, zobacz [standardowych poleceń](../mfc/standard-commands.md).  
-  
- Ponadto Konwencji sugeruje obsługi dla **BN_CLICKED** komunikatu powiadomienia z przycisku "Moje Button" może mieć nazwę.  
-  
- [!code-cpp[NVC_MFCMessageHandling#5](../mfc/codesnippet/cpp/handlers-for-commands-and-control-notifications_2.h)]  
-  
- To polecenie może przypisywać identyfikator **IDC_MY_BUTTON** , ponieważ jest to równoważne obiektu interfejsu użytkownika specyficzne dla aplikacji.  
-  
- Obu rodzajów wiadomości nie przyjmują argumentów i zwraca żadnej wartości.  
-  
-## <a name="see-also"></a>Zobacz też  
- [Deklarowanie funkcji obsługi komunikatów](../mfc/declaring-message-handler-functions.md)
+
+Nie ma żadnych domyślne programy obsługi poleceń i komunikatów powiadamianie kontrolki. W związku z tym są powiązane tylko przez Konwencję nazewnictwa inne programy obsługi dla tych kategorii wiadomości. Kiedy mapujesz powiadomień polecenia lub formantu do obsługi systemu windows właściwości proponuje nazwę na podstawie kodu Identyfikatora lub kontroli powiadomień polecenia. Można zaakceptować proponowana nazwa, zmienić lub zamień go.
+
+Konwencja sugeruje nazwę procedury obsługi w obu kategoriach obiektu interfejsu użytkownika, które reprezentują. Dlatego program obsługi poleceń Wytnij menu Edycja może mieć nazwę.
+
+[!code-cpp[NVC_MFCMessageHandling#4](../mfc/codesnippet/cpp/handlers-for-commands-and-control-notifications_1.h)]
+
+Ponieważ polecenie Cut tak często jest zaimplementowana w aplikacji, platformę powoduje wstępne definiowanie identyfikator polecenia dla polecenia Wytnij jako **id_edit_cut —**. Aby uzyskać listę wszystkich poleceń wstępnie zdefiniowane identyfikatory Zobacz plik AFXRES. H. Aby uzyskać więcej informacji, zobacz [standardowych poleceń](../mfc/standard-commands.md).
+
+Ponadto Konwencji sugeruje funkcję obsługi **BN_CLICKED** komunikatu powiadomienia przy użyciu przycisku z etykietą "Moja-Button" może mieć nazwę.
+
+[!code-cpp[NVC_MFCMessageHandling#5](../mfc/codesnippet/cpp/handlers-for-commands-and-control-notifications_2.h)]
+
+To polecenie może przypisywać identyfikator **IDC_MY_BUTTON** , ponieważ jest to równoważne do obiektu interfejsu użytkownika specyficznych dla aplikacji.
+
+Obie kategorie komunikatów nie przyjmują argumentów i zwraca żadnej wartości.
+
+## <a name="see-also"></a>Zobacz też
+
+[Deklarowanie funkcji obsługi komunikatów](../mfc/declaring-message-handler-functions.md)

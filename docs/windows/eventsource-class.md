@@ -33,12 +33,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 08347b4ccfa44d8645acc2bd5e96775bab4e7740
-ms.sourcegitcommit: 87d317ac62620c606464d860aaa9e375a91f4c99
+ms.openlocfilehash: cd9ab28ccce14c5ac0975b7050588ee6524cfcc9
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/14/2018
-ms.locfileid: "45601499"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46408352"
 ---
 # <a name="eventsource-class"></a>EventSource — Klasa
 
@@ -53,7 +53,7 @@ class EventSource;
 
 ### <a name="parameters"></a>Parametry
 
-*TDelegateInterface*  
+*TDelegateInterface*<br/>
 Interfejs do delegata, który reprezentuje program obsługi zdarzeń.
 
 ## <a name="members"></a>Elementy członkowskie
@@ -104,10 +104,10 @@ HRESULT Add(
 
 ### <a name="parameters"></a>Parametry
 
-*delegateInterface*  
+*delegateInterface*<br/>
 Interfejs do obiektu delegowanego, który reprezentuje program obsługi zdarzeń.
 
-*Token*  
+*Token*<br/>
 Po zakończeniu tej operacji, uchwyt, który reprezentuje zdarzenie. Używanie tego tokenu jako parametr do [Remove()](#remove) metodę, aby odrzucić programu obsługi zdarzeń.
 
 ### <a name="return-value"></a>Wartość zwracana
@@ -302,64 +302,64 @@ void InvokeAll(
 
 ### <a name="parameters"></a>Parametry
 
-*T0*  
+*T0*<br/>
 Typ argumentu procedury obsługi zdarzeń zerowego.
 
-*T1*  
+*T1*<br/>
 Typ pierwszego argumentu procedury obsługi zdarzeń.
 
-*T2*  
+*T2*<br/>
 Typ drugiego argumentu procedury obsługi zdarzeń.
 
-*T3*  
+*T3*<br/>
 Typ trzeciego argumentu procedury obsługi zdarzeń.
 
-*T4*  
+*T4*<br/>
 Typ czwartego argumentu procedury obsługi zdarzeń.
 
-*T5*  
+*T5*<br/>
 Typ piątego argumentu procedury obsługi zdarzeń.
 
-*T6*  
+*T6*<br/>
 Typ szóstego argumentu procedury obsługi zdarzeń.
 
-*T7*  
+*T7*<br/>
 Typ siódmego argumentu procedury obsługi zdarzeń.
 
-*T8*  
+*T8*<br/>
 Typ ósmego argumentu procedury obsługi zdarzeń.
 
-*T9*  
+*T9*<br/>
 Typ dziewiątego argumentu procedury obsługi zdarzeń.
 
-*arg0*  
+*arg0*<br/>
 Argument procedury obsługi zdarzeń zerowego.
 
-*arg1*  
+*arg1*<br/>
 Pierwszy argument procedury obsługi zdarzeń.
 
-*argument2*  
+*argument2*<br/>
 Drugi argument procedury obsługi zdarzeń.
 
-*arg3*  
+*arg3*<br/>
 Trzeci argument procedury obsługi zdarzeń.
 
-*Arg4*  
+*Arg4*<br/>
 Czwarty argument procedury obsługi zdarzeń.
 
-*arg5*  
+*arg5*<br/>
 Piąty argument procedury obsługi zdarzeń.
 
-*arg6*  
+*arg6*<br/>
 Szósty argument procedury obsługi zdarzeń.
 
-*arg7*  
+*arg7*<br/>
 Siódmego argumentu procedury obsługi zdarzeń.
 
-*arg8*  
+*arg8*<br/>
 Identyfikator ósmego argumentu procedury obsługi zdarzenia.
 
-*arg9*  
+*arg9*<br/>
 Dziewiątego argumentu procedury obsługi zdarzeń.
 
 ## <a name="remove"></a>EventSource::Remove
@@ -374,7 +374,7 @@ HRESULT Remove(
 
 ### <a name="parameters"></a>Parametry
 
-*Token*  
+*Token*<br/>
 Uchwyt, który reprezentuje program obsługi zdarzeń. Token ten został zwrócony podczas obsługi zdarzeń było zarejestrowane przez [Add()](#add) metody.
 
 ### <a name="return-value"></a>Wartość zwracana

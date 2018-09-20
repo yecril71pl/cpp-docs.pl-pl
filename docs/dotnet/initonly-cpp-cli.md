@@ -18,33 +18,35 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: 49c52c4c17c3e54bfba0ac7188b3300b132213cc
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 1c98c2ab1391f65d31e64a60bf0bd86485776ad6
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33130558"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46429964"
 ---
 # <a name="initonly-ccli"></a>initonly (C++/CLI)
-**InitOnly** jest kontekstowa — słowo kluczowe, która wskazuje, że przypisanie zmiennej może wystąpić tylko w ramach deklaracji lub w konstruktorze statycznym w tej samej klasy.  
-  
- Poniższy przykład przedstawia użycie `initionly`:  
-  
-```  
-// mcpp_initonly.cpp  
-// compile with: /clr /c  
-ref struct Y1 {  
-   initonly  
-   static int staticConst1;  
-  
-   initonly  
-   static int staticConst2 = 0;  
-  
-   static Y1() {  
-      staticConst1 = 0;  
-   }  
-};  
-```  
-  
-## <a name="see-also"></a>Zobacz też  
- [Klasy i struktury](../windows/classes-and-structs-cpp-component-extensions.md)
+
+**InitOnly** jest kontekstowe słowo kluczowe, która wskazuje, że przypisanie zmiennej jest możliwe tylko w ramach deklaracji lub w konstruktorze statycznym w tej samej klasie.
+
+Poniższy przykład pokazuje, jak używać `initionly`:
+
+```
+// mcpp_initonly.cpp
+// compile with: /clr /c
+ref struct Y1 {
+   initonly
+   static int staticConst1;
+
+   initonly
+   static int staticConst2 = 0;
+
+   static Y1() {
+      staticConst1 = 0;
+   }
+};
+```
+
+## <a name="see-also"></a>Zobacz też
+
+[Klasy i struktury](../windows/classes-and-structs-cpp-component-extensions.md)

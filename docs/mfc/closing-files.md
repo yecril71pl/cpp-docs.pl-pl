@@ -15,22 +15,24 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 97bd910ae4cb514cda07dd319f37a05a32712909
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 9c392ef728e1d796a02cfa32edc2c3e8c74d083b
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33341029"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46426240"
 ---
 # <a name="closing-files"></a>Zamykanie plików
-Normalnie w operacji We/Wy, po zakończeniu pracy z pliku, należy go zamknąć.  
-  
-#### <a name="to-close-a-file"></a>Aby zamknąć plik  
-  
-1.  Użyj **Zamknij** funkcję elementu członkowskiego. Ta funkcja powoduje zamknięcie pliku system plików i opróżnienia buforów, jeśli to konieczne.  
-  
- Jeśli została przydzielona [cfile —](../mfc/reference/cfile-class.md) obiektu w ramce (tak jak pokazano w przykładzie [otwieranie plików](../mfc/opening-files.md)), obiekt zostanie automatycznie zamknięte, a następnie niszczony, kiedy przechodzi ona poza zakresem. Należy pamiętać, że usunięcie `CFile` obiektu nie powoduje usunięcia pliku fizycznego w systemie plików.  
-  
-## <a name="see-also"></a>Zobacz też  
- [Pliki](../mfc/files-in-mfc.md)
+
+Zwykły w operacjach we/wy, po zakończeniu z plikiem, należy go zamknąć.
+
+#### <a name="to-close-a-file"></a>Aby zamknąć plik
+
+1. Użyj **Zamknij** funkcja elementu członkowskiego. Ta funkcja zamyka plik systemu plików i opróżnia buforów, jeśli to konieczne.
+
+Jeśli została przydzielona [CFile](../mfc/reference/cfile-class.md) obiekt w ramce (tak jak w przykładzie przedstawionym w [otwieranie plików](../mfc/opening-files.md)), obiekt zostanie automatycznie zamknięcia, a następnie niszczone, gdy jej wykracza poza zakres. Należy pamiętać, że usunięcie `CFile` obiektu nie powoduje usunięcia pliku fizycznego w systemie plików.
+
+## <a name="see-also"></a>Zobacz też
+
+[Pliki](../mfc/files-in-mfc.md)
 

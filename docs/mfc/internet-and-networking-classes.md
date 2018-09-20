@@ -17,22 +17,24 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4c890803573f1acb45f511676cccdcc027c43223
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: dcce5cc8265140c8f939c17389aef1ffc82404ac
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33345094"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46445571"
 ---
 # <a name="internet-and-networking-classes"></a>Klasy internetowe i sieciowe
-Te klasy umożliwiają wymiany informacji z innego komputera przy użyciu gniazda systemu Windows lub internetowe Win32 (WinInet). Istnieją także zestaw klas do manipulowania Windows Sockets.  
-  
- Następujące kategorie klasy obsługi połączeń.  
-  
--   [Klasy gniazd systemu Windows](../mfc/windows-sockets-classes.md)  
-  
--   [Klasy internetowe Win32](../mfc/win32-internet-classes.md)  
-  
-## <a name="see-also"></a>Zobacz też  
- [Przegląd klas](../mfc/class-library-overview.md)
+
+Klasy te umożliwiają wymiany informacji z innego komputera przy użyciu Windows gniazda lub internetowe Win32 (WinInet). Istnieją również zestaw klas do manipulowania w systemie Windows Sockets.
+
+Następujące kategorie klasy obsługi połączeń.
+
+- [Klasy gniazd systemu Windows](../mfc/windows-sockets-classes.md)
+
+- [Klasy internetowe Win32](../mfc/win32-internet-classes.md)
+
+## <a name="see-also"></a>Zobacz też
+
+[Klasa — Przegląd](../mfc/class-library-overview.md)
 

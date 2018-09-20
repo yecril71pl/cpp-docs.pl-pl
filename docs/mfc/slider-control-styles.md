@@ -17,27 +17,29 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f76fbe9f85d978a5c2865b48720588b620508a07
-ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
+ms.openlocfilehash: 8ddc96133f07011969e3d2afc4b1707e9f395e6b
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/26/2018
-ms.locfileid: "36951055"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46424121"
 ---
 # <a name="slider-control-styles"></a>Style formantu suwaka
-Formanty suwaka ([CSliderCtrl](../mfc/reference/csliderctrl-class.md)) może mieć orientacji pionowej lub poziomej. Mogą oni mieć znaczniki osi po obu stronach obu stronach lub nie. One mogą służyć do określania zakresu kolejnych wartości. Te właściwości są określane za pomocą style formantu suwaka, które można określić podczas tworzenia suwaka.  
-  
- Style TBS_HORZ i TBS_VERT określają Orientacja formantu suwaka. Jeśli nie określisz orientacji, suwak jest ustawiony w poziomie.  
-  
- Styl TBS_AUTOTICKS tworzy formantu suwaka, który ma znacznik osi dla każdego kolejnego przyrostu wartości w swoim zakresie wartości. Te znaczniki są dodawane automatycznie podczas wywoływania [SetRange](../mfc/reference/csliderctrl-class.md#setrange) funkcję elementu członkowskiego. Jeśli nie określisz TBS_AUTOTICKS, możesz użyć funkcji elementu członkowskiego, takich jak [SetTic](../mfc/reference/csliderctrl-class.md#settic) i [SetTicFreq](../mfc/reference/csliderctrl-class.md#setticfreq), aby określić położenia znaczników. Aby utworzyć suwaka, które nie są wyświetlane znaczniki, można użyć stylu TBS_NOTICKS.  
-  
- Znaczników można wyświetlać na jedną lub obie te strony suwaka. Dla kontrolki suwaka Poziomy można określić styl TBS_BOTTOM lub TBS_TOP. Dla formantów pionowej kontrolce slider można określić styl TBS_RIGHT lub TBS_LEFT. (TBS_BOTTOM i TBS_RIGHT są ustawienia domyślne). Znaczniki osi po obu stronach suwaka w dowolnym orientacji Określ styl TBS_BOTH.  
-  
- Formant suwaka można wyświetlić wybranego zakresu, tylko wtedy, gdy Określ styl TBS_ENABLESELRANGE podczas jego tworzenia. Kontrolki suwaka po ten styl znaczników w pozycji datę początkową i końcową wybranego zakresu są wyświetlane jako trójkąty (zamiast kreski pionowej) i zostanie wyróżniona wybranego zakresu. Na przykład zaznaczanie zakresów mogą być przydatne w prostej aplikacji planowania. Użytkownik może wybrać zakres znaczników odpowiadający godzin w ciągu dnia, aby określić czas zaplanowanego spotkania.  
-  
- Domyślnie długość suwaka formantu suwaka zmienia się jako zmiany zakresu zaznaczenia. Jeśli suwaka styl TBS_FIXEDLENGTH, długość suwak jest taka sama, nawet jeśli zmieni się wybranego zakresu. Suwaka, którego styl TBS_NOTHUMB nie obejmuje suwaka.  
-  
-## <a name="see-also"></a>Zobacz też  
- [Korzystanie z CSliderCtrl](../mfc/using-csliderctrl.md)   
- [Kontrolki](../mfc/controls-mfc.md)
+
+Formanty suwaka ([z CSliderCtrl](../mfc/reference/csliderctrl-class.md)) może mieć orientacji pionowej lub poziomej. Mogą mieć znaczniki osi po obu stronach obu stronach lub żadnego z tych celów. One można również określić zakres kolejnych wartości. Te właściwości są kontrolowane za pomocą style formantu suwaka, które określają, kiedy utworzyć formant suwaka.
+
+Style TBS_HORZ i TBS_VERT określają orientację przestrzenną kontrolki slider. Jeśli nie określisz orientację, suwak jest ustawiony w poziomie.
+
+Styl TBS_AUTOTICKS tworzy formant suwaka, który zawiera znacznik osi dla każdego przyrostu w swoim zakresie wartości. Te znaczniki są dodawane automatycznie, gdy wywołujesz [SetRange](../mfc/reference/csliderctrl-class.md#setrange) funkcja elementu członkowskiego. Jeśli nie określisz TBS_AUTOTICKS, funkcje składowe można użyć takich jak [SetTic](../mfc/reference/csliderctrl-class.md#settic) i [SetTicFreq](../mfc/reference/csliderctrl-class.md#setticfreq), aby określić położenie znaczników. Aby utworzyć formant suwaka, które nie są wyświetlane znaczniki, można użyć stylu TBS_NOTICKS.
+
+Znaczniki można wyświetlić z jednego lub obu tych stron kontrolki suwaka. Dla kontrolki suwaka poziomej można określić TBS_BOTTOM lub TBS_TOP stylu. Dla formantów w pionowej kontrolce slider można określić TBS_RIGHT lub TBS_LEFT stylu. (TBS_BOTTOM i TBS_RIGHT są ustawienia domyślne). Znaczniki osi po obu stronach kontrolki suwaka w dowolnym orientacji można określić w stylu TBS_BOTH.
+
+Kontrolki suwaka można wyświetlić wybranego zakresu, tylko wtedy, gdy styl TBS_ENABLESELRANGE należy określić podczas jego tworzenia. Gdy ten styl znajdują się w kontrolce suwaka, znaczniki w pozycjach datę początkową i końcową wybranego zakresu są wyświetlane jako trójkąty (zamiast kreski pionowej) i jest wyróżniona wybranego zakresu. Na przykład może być przydatne w prostej aplikacji planowania zaznaczenie zakresów. Użytkownik może wybrać zakres znaczniki odpowiadający godzin w ciągu dnia, aby zidentyfikować czas zaplanowanego spotkania.
+
+Domyślnie długość suwaka kontrolki suwaka zmienia się zgodnie ze zmianami zakres wyboru. Jeśli kontrolka suwaka ma styl TBS_FIXEDLENGTH, długość suwak pozostaje taki sam, nawet w przypadku zmiany wybranego zakresu. Kontrolki suwaka, którego styl TBS_NOTHUMB nie obejmuje suwaka.
+
+## <a name="see-also"></a>Zobacz też
+
+[Korzystanie z CSliderCtrl](../mfc/using-csliderctrl.md)<br/>
+[Kontrolki](../mfc/controls-mfc.md)
 

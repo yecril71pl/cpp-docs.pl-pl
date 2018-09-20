@@ -15,12 +15,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: abaf92080710d4b69fc85684d523d2478bcd60d4
-ms.sourcegitcommit: f0c90000125a9497bf61e41624de189a043703c0
+ms.openlocfilehash: 464b86ba90d4c53adfcf5016cad38d0fbc9034f5
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44317137"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46413357"
 ---
 # <a name="adding-multiple-controls"></a>Dodawanie wielu formantów
 
@@ -40,6 +40,6 @@ Win32
 
 ## <a name="see-also"></a>Zobacz też
 
-[Kontrolki w oknach dialogowych](../windows/controls-in-dialog-boxes.md)  
-[Dodawanie obsługi zdarzeń dla kontrolek okna dialogowego](../windows/adding-event-handlers-for-dialog-box-controls.md)  
+[Kontrolki w oknach dialogowych](../windows/controls-in-dialog-boxes.md)<br/>
+[Dodawanie obsługi zdarzeń dla kontrolek okna dialogowego](../windows/adding-event-handlers-for-dialog-box-controls.md)<br/>
 [Kontrolki okna dialogowego i typy zmiennych](../ide/dialog-box-controls-and-variable-types.md)

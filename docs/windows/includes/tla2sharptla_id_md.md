@@ -1,1 +1,1 @@
- Identyfikator 
+Identyfikator 

@@ -1,5 +1,5 @@
 ---
-title: .NET programowania w języku C + +/ CLI (Visual C++) | Dokumentacja firmy Microsoft
+title: Programowanie .NET w języku C + +/ interfejsu wiersza polecenia (Visual C++) | Dokumentacja firmy Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,56 +18,59 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: 2a7e555fa5fb0348d1cd6ca589744148f2e04963
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 105b1d709ca2d9bb68741050489ffa1ee75c8067
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33110249"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46410575"
 ---
-# <a name="net-programming-with-ccli-visual-c"></a>.NET programowania w języku C + +/ CLI (Visual C++)
-W poniższych tematach opisano, jak Visual C++ może współpracować z platformą .NET.  
-  
- Domyślnie projekty CLR utworzone za pomocą programu Visual Studio 2015 docelowa platformy .NET Framework 4.5.2. Do docelowej platformy .NET Framework 4.6 podczas tworzenia nowego projektu w **nowy projekt** okna dialogowego i zmień platformę docelową, na liście rozwijanej w górnej połowie okna dialogowego. Aby zmienić platformę docelową dla istniejącego projektu, zamknij projekt, Edytuj plik projektu (.vcxproj) i zmienić wartość docelową wersję platformy 4.6. Następnym otwarciu projektu, ustawienia zaczynają obowiązywać.  
-  
-## <a name="in-this-section"></a>W tej sekcji  
- [Zadania C++/CLI](../dotnet/cpp-cli-tasks.md)  
-  
- [Współdziałanie natywne i .NET](../dotnet/native-and-dotnet-interoperability.md)  
-  
- [Podręcznik migracji C++/CLI](../dotnet/cpp-cli-migration-primer.md)  
-  
- [Kod czysty i weryfikowalny (C++/CLI)](../dotnet/pure-and-verifiable-code-cpp-cli.md)  
-  
- [Wyrażenia regularne (C++/CLI)](../dotnet/regular-expressions-cpp-cli.md)  
-  
- [Obsługa plików i we/wy (C + +/ CLI)](../dotnet/file-handling-and-i-o-cpp-cli.md)  
-  
- [Operacje graficzne (C++/CLI)](../dotnet/graphics-operations-cpp-cli.md)  
-  
- [Operacje związane z systemem Windows (C++/CLI)](../dotnet/windows-operations-cpp-cli.md)  
-  
- [Dostęp do danych za pomocą ADO.NET (C++/CLI)](../dotnet/data-access-using-adonet-cpp-cli.md)  
-  
- [Współdziałanie z innymi językami .NET (C++/CLI)](../dotnet/interoperability-with-other-dotnet-languages-cpp-cli.md)  
-  
- [Serializacja (C++/CLI)](../dotnet/serialization-cpp-cli.md)  
-  
- [Typy zarządzane (C++/CLI)](../dotnet/managed-types-cpp-cli.md)  
-  
- [Odbicie (C++/CLI)](../dotnet/reflection-cpp-cli.md)  
-  
- [Zestawy o silnych nazwach (podpisywanie zestawów) (C++/CLI)](../dotnet/strong-name-assemblies-assembly-signing-cpp-cli.md)  
-  
- [Klasa Debug (C++/CLI)](../dotnet/debug-class-cpp-cli.md)  
-  
- [Dokumentacja biblioteki STL/CLR](../dotnet/stl-clr-library-reference.md)  
-  
- [Biblioteka obsługi języka C++](../dotnet/cpp-support-library.md)  
-  
- [Wyjątki w języku C++/CLI](../dotnet/exceptions-in-cpp-cli.md)  
-  
- [Konwersja boxing (C++/CLI)](../dotnet/boxing-cpp-cli.md)  
-  
-## <a name="see-also"></a>Zobacz też  
- [Współdziałanie natywne i .NET](../dotnet/native-and-dotnet-interoperability.md)
+# <a name="net-programming-with-ccli-visual-c"></a>Programowanie .NET w języku C + +/ interfejsu wiersza polecenia (Visual C++)
+
+W poniższych tematach opisano, jak Visual C++ można kierować platformy .NET.
+
+Domyślnie projekty CLR utworzonych za pomocą programu Visual Studio 2015 ukierunkowane na .NET Framework 4.5.2. Do obiektu docelowego .NET Framework 4.6 podczas tworzenia nowego projektu w **nowy projekt** okno dialogowe, zmienić platformę docelową z listy rozwijanej w górnej środkowej części okna dialogowego. Aby zmienić platformę docelową dla istniejącego projektu, zamknij projekt, Edytuj plik projektu (.vcxproj) i zmienić wartość docelową wersję platformy 4.6. Gdy następnym razem otworzysz projekt, ustawienia zaczęły obowiązywać.
+
+## <a name="in-this-section"></a>W tej sekcji
+
+[Zadania C++/CLI](../dotnet/cpp-cli-tasks.md)
+
+[Współdziałanie natywne i .NET](../dotnet/native-and-dotnet-interoperability.md)
+
+[Podręcznik migracji C++/CLI](../dotnet/cpp-cli-migration-primer.md)
+
+[Kod czysty i weryfikowalny (C++/CLI)](../dotnet/pure-and-verifiable-code-cpp-cli.md)
+
+[Wyrażenia regularne (C++/CLI)](../dotnet/regular-expressions-cpp-cli.md)
+
+[Obsługa plików i we/wy (C + +/ CLI)](../dotnet/file-handling-and-i-o-cpp-cli.md)
+
+[Operacje graficzne (C++/CLI)](../dotnet/graphics-operations-cpp-cli.md)
+
+[Operacje związane z systemem Windows (C++/CLI)](../dotnet/windows-operations-cpp-cli.md)
+
+[Dostęp do danych za pomocą ADO.NET (C++/CLI)](../dotnet/data-access-using-adonet-cpp-cli.md)
+
+[Współdziałanie z innymi językami .NET (C++/CLI)](../dotnet/interoperability-with-other-dotnet-languages-cpp-cli.md)
+
+[Serializacja (C++/CLI)](../dotnet/serialization-cpp-cli.md)
+
+[Typy zarządzane (C++/CLI)](../dotnet/managed-types-cpp-cli.md)
+
+[Odbicie (C++/CLI)](../dotnet/reflection-cpp-cli.md)
+
+[Zestawy o silnych nazwach (podpisywanie zestawów) (C++/CLI)](../dotnet/strong-name-assemblies-assembly-signing-cpp-cli.md)
+
+[Klasa Debug (C++/CLI)](../dotnet/debug-class-cpp-cli.md)
+
+[Dokumentacja biblioteki STL/CLR](../dotnet/stl-clr-library-reference.md)
+
+[Biblioteka obsługi języka C++](../dotnet/cpp-support-library.md)
+
+[Wyjątki w języku C++/CLI](../dotnet/exceptions-in-cpp-cli.md)
+
+[Konwersja boxing (C++/CLI)](../dotnet/boxing-cpp-cli.md)
+
+## <a name="see-also"></a>Zobacz też
+
+[Współdziałanie natywne i .NET](../dotnet/native-and-dotnet-interoperability.md)

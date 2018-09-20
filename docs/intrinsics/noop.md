@@ -17,39 +17,42 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 14d7ab3f1a61dc0644bf5683376ac676fbfcd6b9
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 97820367f0960925dfcac1db339260cd3f52b8bc
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33322617"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46430218"
 ---
 # <a name="noop"></a>__noop
-**Microsoft Specific**  
-  
- `__noop` Określa wewnętrzna funkcja należy ją ignorować i przeanalizowania listy argumentów, ale żaden kod można wygenerować dla argumentów. Jest on przeznaczone do użytku w funkcje globalne debugowania, w których zmienną liczbę argumentów.  
-  
- Konwertuje kompilator `__noop` wewnętrznej na 0 w czasie kompilacji.  
-  
-## <a name="example"></a>Przykład  
- Poniższy kod przedstawia sposób użycia `__noop`.  
-  
-```  
-// compiler_intrinsics__noop.cpp  
-// compile with or without /DDEBUG  
-#include <stdio.h>  
-  
-#if DEBUG  
-   #define PRINT   printf_s  
-#else  
-   #define PRINT   __noop  
-#endif  
-  
-int main() {  
-   PRINT("\nhello\n");  
-}  
-```  
-  
-## <a name="see-also"></a>Zobacz też  
- [Funkcje wewnętrzne kompilatora](../intrinsics/compiler-intrinsics.md)   
- [Słowa kluczowe](../cpp/keywords-cpp.md)
+
+**Microsoft Specific**
+
+`__noop` Wewnętrzne określa, że funkcja mają być ignorowane i przeanalizowania listy argumentów, ale nie można wygenerować kodu dla argumentów. Jest ona przeznaczona do użytku w funkcje globalne debugowania, które przyjmują zmienną liczbę argumentów.
+
+Kompilator konwertuje `__noop` wewnętrzne na 0 w czasie kompilacji.
+
+## <a name="example"></a>Przykład
+
+Poniższy kod przedstawia sposób użycia `__noop`.
+
+```
+// compiler_intrinsics__noop.cpp
+// compile with or without /DDEBUG
+#include <stdio.h>
+
+#if DEBUG
+   #define PRINT   printf_s
+#else
+   #define PRINT   __noop
+#endif
+
+int main() {
+   PRINT("\nhello\n");
+}
+```
+
+## <a name="see-also"></a>Zobacz też
+
+[Funkcje wewnętrzne kompilatora](../intrinsics/compiler-intrinsics.md)<br/>
+[Słowa kluczowe](../cpp/keywords-cpp.md)

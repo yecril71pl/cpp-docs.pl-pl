@@ -17,58 +17,61 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f43595ca5f688372a70999231ceebec5282cd3b6
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: c5af80f7a264a15f24ced0be37102802771dc6f2
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33348929"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46416685"
 ---
 # <a name="dao-classes"></a>Klasy DAO
-Te klasy współpracować z innych aplikacji framework klas aby zapewnić łatwy dostęp do baz danych obiektu DAO (Data Access), korzystających z tego samego aparatu bazy danych programu Microsoft Visual Basic i programu Microsoft Access. Klasy DAO można także uzyskać dostęp do różnych baz danych, dla których dostępne są sterowniki otwarte połączenie bazy danych (ODBC).  
-  
- Programy, które używają bazy danych DAO będzie miał co najmniej `CDaoDatabase` obiektu i `CDaoRecordset` obiektu.  
-  
+
+Te klasy działają z innych aplikacji framework klas w celu zapewnienia łatwego dostępu do baz danych Access obiekt DAO (Data), korzystających z tego samego aparatu bazy danych programu Microsoft Visual Basic oraz Microsoft Access. Klasy DAO mogą też uzyskiwać dostęp szerokiej gamy baz danych, dla których dostępne są sterowników Open Database Connectivity (ODBC).
+
+Programy, które korzystają z baz danych DAO będzie mieć co najmniej jeden `CDaoDatabase` obiektu i `CDaoRecordset` obiektu.
+
 > [!NOTE]
->  Środowiska Visual C++ i kreatorów już obsługiwać DAO (mimo że uwzględniono klasy DAO i nadal można ich używać). Firma Microsoft zaleca używanie ODBC dla nowych projektów MFC. Obiekty DAO należy używać tylko w zachowaniu istniejących aplikacji.  
-  
- [CDaoWorkspace](../mfc/reference/cdaoworkspace-class.md)  
- Zarządza sesji bazy danych o nazwie, chroniony hasłem z logowania do wylogowania. Większość programów używa domyślny obszar roboczy.  
-  
- [CDaoDatabase](../mfc/reference/cdaodatabase-class.md)  
- Połączenie z bazą danych za pomocą których może wykonywać operacje na danych.  
-  
- [Cdaorecordset —](../mfc/reference/cdaorecordset-class.md)  
- Reprezentuje zestaw rekordów wybrane źródła danych.  
-  
- [CDaoRecordView](../mfc/reference/cdaorecordview-class.md)  
- Widok, który wyświetla rekordów bazy danych w kontrolkach.  
-  
- [CDaoQueryDef](../mfc/reference/cdaoquerydef-class.md)  
- Reprezentuje definicji zapytania, zazwyczaj jest to jeden zapisane w bazie danych.  
-  
- [CDaoTableDef](../mfc/reference/cdaotabledef-class.md)  
- Reprezentuje przechowywanych definicji tabeli podstawowej lub dołączonej tabeli.  
-  
- [CDaoException](../mfc/reference/cdaoexception-class.md)  
- Reprezentuje warunku wyjątku wynikających z klasy DAO.  
-  
- [CDaoFieldExchange](../mfc/reference/cdaofieldexchange-class.md)  
- Obsługuje procedury programu exchange (DFX) pól rekordów DAO używane przez klas baz danych DAO. Zwykle nie użyje bezpośrednio do tej klasy.  
-  
-## <a name="related-classes"></a>Klasy pokrewne  
- [Clongbinary —](../mfc/reference/clongbinary-class.md)  
- Hermetyzuje dojścia do magazynu dla dużego obiektu binarnego (BLOB), takich jak mapy bitowej. `CLongBinary` obiekty służą do zarządzania obiektami dużej ilości danych przechowywanych w tabelach bazy danych.  
-  
- [COleCurrency](../mfc/reference/colecurrency-class.md)  
- Otoki dla typu automatyzacji OLE **waluty**, stałoprzecinkowe typ arytmetyczny, 4 cyfry po i przed separatorem dziesiętnym do 15 cyfr.  
-  
- [COleDateTime](../atl-mfc-shared/reference/coledatetime-class.md)  
- Otoki dla typu automatyzacji OLE **data**. Reprezentuje wartości daty i godziny.  
-  
- [COleVariant](../mfc/reference/colevariant-class.md)  
- Otoki dla typu automatyzacji OLE **VARIANT**. Dane w **VARIANT**s mogą być przechowywane w wielu formatach.  
-  
-## <a name="see-also"></a>Zobacz też  
- [Przegląd klas](../mfc/class-library-overview.md)
+>  Środowiska Visual C++ i kreatory nie obsługują już DAO (mimo że uwzględniono klas DAO i nadal można użyć). Firma Microsoft zaleca używanie ODBC dla nowych projektów MFC. DAO należy używać tylko w zachowaniu istniejących aplikacji.
+
+[CDaoWorkspace](../mfc/reference/cdaoworkspace-class.md)<br/>
+Zarządza sesję o nazwie bazy danych chronionej hasłem z logowania do wylogowania. Większość programów używa domyślnego obszaru roboczego.
+
+[CDaoDatabase](../mfc/reference/cdaodatabase-class.md)<br/>
+Połączenie z bazą danych, dzięki któremu można działać na danych.
+
+[CDaoRecordset](../mfc/reference/cdaorecordset-class.md)<br/>
+Reprezentuje zestaw rekordów wybranych ze źródła danych.
+
+[CDaoRecordView](../mfc/reference/cdaorecordview-class.md)<br/>
+Widok wyświetlający rekordy bazy danych w kontrolkach.
+
+[CDaoQueryDef](../mfc/reference/cdaoquerydef-class.md)<br/>
+Reprezentuje definicję kwerendy, zazwyczaj jedna zapisana w bazie danych.
+
+[CDaoTableDef](../mfc/reference/cdaotabledef-class.md)<br/>
+Przedstawia przechowywaną definicję tabeli bazowej lub dołączonej tabeli.
+
+[CDaoException](../mfc/reference/cdaoexception-class.md)<br/>
+Przedstawia warunek wyjątku wynikający z klas DAO.
+
+[CDaoFieldExchange](../mfc/reference/cdaofieldexchange-class.md)<br/>
+Obsługuje procedury wymiany (DXF) pola rekordów DAO używanych przez klasy bazy danych DAO. Zwykle nie użyje bezpośrednio do tej klasy.
+
+## <a name="related-classes"></a>Klasy pokrewne
+
+[CLongBinary](../mfc/reference/clongbinary-class.md)<br/>
+Hermetyzuje dojścia do magazynu w celu duży obiekt binarny (BLOB), takie jak mapy bitowej. `CLongBinary` obiekty są używane do zarządzania obiektami dużych ilości danych przechowywanych w tabelach bazy danych.
+
+[COleCurrency](../mfc/reference/colecurrency-class.md)<br/>
+Otoka dla typu automatyzacji OLE **waluty**, stałoprzecinkowa typ arytmetyczny, z 15 cyfr przed przecinkiem dziesiętnym i 4 cyfr po.
+
+[COleDateTime](../atl-mfc-shared/reference/coledatetime-class.md)<br/>
+Otoka dla typu automatyzacji OLE **data**. Reprezentuje wartości daty i godziny.
+
+[COleVariant](../mfc/reference/colevariant-class.md)<br/>
+Otoka dla typu automatyzacji OLE **VARIANT**. Dane w **VARIANT**s mogą być przechowywane w wielu formatach.
+
+## <a name="see-also"></a>Zobacz też
+
+[Klasa — Przegląd](../mfc/class-library-overview.md)
 

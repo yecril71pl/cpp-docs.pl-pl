@@ -20,103 +20,107 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 252619872fc53e06629a4cbded7e3640131dc94a
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 2f4e76902335477ba507e6f3e7a66c5f862b8543
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33351969"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46418674"
 ---
 # <a name="menus-and-resources-menu-merging"></a>Menu i zasoby: scalanie menu
-W tym artykule szczegółowo kroki niezbędne do dokumenty i aplikacje OLE do obsługi edycji i aktywacja w miejscu poprawnie. Aktywacja w miejscu stanowi wyzwanie dla kontenera i serwera aplikacji (składnik). Użytkownik pozostaje w tym samym oknie ramki (w kontekście kontenerem), ale jest uruchomiona inna aplikacja (serwer). Wymaga to koordynację między zasobami kontenera i serwera aplikacji.  
-  
- Omówione w tym artykule tematy obejmują:  
-  
-- [Układów menu](#_core_menu_layouts)  
-  
-- [Paski narzędzi i paski stanu](#_core_toolbars_and_status_bars)  
-  
-##  <a name="_core_menu_layouts"></a> Układów menu  
- Pierwszym krokiem jest koordynowanie układów menu. Aby uzyskać więcej informacji, zobacz **tworzenie Menu** sekcji [zagadnienia dotyczące Menu programowania](https://msdn.microsoft.com/library/ms647557.aspx) w zestawie Windows SDK.  
-  
- Aplikacje kontenera należy utworzyć nowe menu do użycia tylko wtedy, gdy elementy osadzone zostaną aktywowane w miejscu. Co najmniej to menu powinien składać się z następujących czynności w podanej kolejności:  
-  
-1.  Taki sam jak użyte podczas pliki są otwarte menu Plik. (Zazwyczaj inne elementy menu są umieszczane przed następny element.)  
-  
-2.  Dwa kolejne separatorów.  
-  
-3.  Taki sam jak użyte podczas pliki są otwarte menu okna (tylko w przypadku aplikacji kontenera w aplikacji MDI). Niektóre aplikacje mogą mieć inne menu, takich jak menu opcji należących do tej grupy, które pozostanie w menu, gdy element osadzony jest aktywny w miejscu.  
-  
+
+Ten artykuł szczegółowo opisuje kroki niezbędne do dokumenty i aplikacje OLE do obsługi edycja wizualna i aktywacja w miejscu prawidłowo. Aktywacja w miejscu stanowi wyzwanie dla kontenera i serwera aplikacji (składnik). Użytkownik pozostaje w tym samym oknie ramki (w kontekście dokumentu kontenera), ale jest faktycznie uruchomiona inna aplikacja (serwer). Wymaga to koordynacji między zasobami kontenera i serwera aplikacji.
+
+Tematy omówione w tym artykule obejmują:
+
+- [Układów menu](#_core_menu_layouts)
+
+- [Paski narzędzi i stanu](#_core_toolbars_and_status_bars)
+
+##  <a name="_core_menu_layouts"></a> Układów menu
+
+Pierwszym krokiem jest koordynowanie układów menu. Aby uzyskać więcej informacji, zobacz **tworzenie Menu** sekcji [zagadnienia programowania Menu](https://msdn.microsoft.com/library/ms647557.aspx) w zestawie Windows SDK.
+
+Aplikacje kontenera należy utworzyć nowe menu ma być używany tylko wtedy, gdy elementy osadzone są aktywowane w miejscu. Jako minimum to menu powinna składać się z następujących czynności w podanej kolejności:
+
+1. Menu Plik jest taka sama jak używana, gdy pliki są otwarte. (Zazwyczaj inne elementy menu są umieszczane przed następną.)
+
+1. Dwóch następujących po sobie separatory.
+
+1. Menu okna jest taka sama jak używana, gdy pliki są otwarte (tylko wtedy, gdy aplikacji kontenera w aplikacji MDI). Niektóre aplikacje mogą mieć inne menu, takich jak menu opcji należących do tej grupy, które pozostanie w menu, gdy element osadzony jest aktywowany w miejscu.
+
     > [!NOTE]
-    >  Mogą istnieć inne menu, które mają wpływ na widoku dokumentu kontenera, takich jak powiększenia. Te menu kontenera są wyświetlane między dwa separatory w tego zasobu menu.  
-  
- Aplikacje serwera (składnik) również należy utworzyć nowe menu specjalnie z myślą o aktywacji w miejscu. Należy go, podobnie jak menu używany, gdy pliki są otwarte, ale bez elementów menu, takich jak plik i okna, które przekształcać dokument serwera, a nie dane. Zwykle w tym menu składa się z następujących czynności:  
-  
-1.  Taki sam jak użyte podczas pliki są otwarte menu Edycja.  
-  
-2.  Separator.  
-  
-3.  Edycja menu, takich jak menu Pióro w przykładowej aplikacji bazgrołów obiektu.  
-  
-4.  Separator.  
-  
-5.  Menu Pomoc.  
-  
- Na przykład przyjrzeć się układ niektóre przykładowe menu w miejscu dla kontenera i serwera. Aby jaśniejszy przykłady zostały usunięte szczegóły każdego elementu menu. Menu w miejscu kontenera zawiera następujące wpisy:  
-  
-```  
-IDR_CONTAINERTYPE_CNTR_IP MENU PRELOAD DISCARDABLE   
-BEGIN  
-    POPUP "&File C1"  
-    MENUITEM SEPARATOR  
-    POPUP "&Zoom C2"  
-    MENUITEM SEPARATOR  
-    POPUP "&Options C3"  
-    POPUP "&Window C3"  
-END  
-```  
-  
- Kolejne separatorów wskazuje, gdzie pierwsza część menu serwera. Teraz przyjrzeć się menu w miejscu serwera:  
-  
-```  
-IDR_SERVERTYPE_SRVR_IP MENU PRELOAD DISCARDABLE   
-BEGIN  
-    POPUP "&Edit S1"  
-    MENUITEM SEPARATOR  
-    POPUP "&Format S2"  
-    MENUITEM SEPARATOR  
-    POPUP "&Help S3"  
-END  
-```  
-  
- W tym miejscu separatorów wskazują, gdzie drugiej grupy elementów menu kontenera. Wynikowa struktura menu podczas aktywacji w miejscu wewnątrz tego kontenera obiektu z tego serwera wygląda następująco:  
-  
-```  
-BEGIN  
-    POPUP "&File C1"  
-    POPUP "&Edit S1"  
-    POPUP "&Zoom C2"  
-    POPUP "&Format S2"  
-    POPUP "&Options C3  
-    POPUP "&Window C3"  
-    POPUP "&Help S3"  
-END  
-```  
-  
- Jak widać, separatory zostały zamienione na różne grupy menu każdej aplikacji.  
-  
- Tabele akceleratora skojarzone z menu w miejscu należy dostarczyć także przez aplikację serwera. Kontener będzie włączyć je do tabel akceleratora.  
-  
- Po aktywowaniu element osadzony w miejscu platformę ładuje menu w miejscu. Następnie prosi aplikacji serwera w menu o aktywacji w miejscu i wstawia go skutkującej separatorów. Jest to, jak łączyć menu. Możesz uzyskać menu z kontenera na umieszczanie plików i okno i możesz uzyskać menu z serwera działających w elemencie.  
-  
-##  <a name="_core_toolbars_and_status_bars"></a> Paski narzędzi i paski stanu  
- Aplikacje serwera należy utworzyć nowy pasek narzędzi i zapisać jego mapy bitowej w osobnym pliku. Aplikacje generowane przez Kreatora aplikacji tej mapy bitowej są przechowywane w pliku o nazwie ITOOLBAR. BMP. Nowy pasek narzędzi zastępuje narzędzi aplikacji kontenera po elementu z serwera w miejscu i powinien zawierać te same elementy jako normalne paska narzędzi, jednak usunąć ikony reprezentujący elementy w menu Plik i okna.  
-  
- Ten pasek narzędzi jest ładowany w Twojej `COleIPFrameWnd`-klasy tworzone przez Kreatora aplikacji. Na pasku stanu jest obsługiwany przez kontener aplikacji. Aby uzyskać więcej informacji o implementacji okna ramowe w miejscu, zobacz [serwery: Implementowanie serwera](../mfc/servers-implementing-a-server.md).  
-  
-## <a name="see-also"></a>Zobacz też  
- [Menu i zasoby (OLE)](../mfc/menus-and-resources-ole.md)   
- [aktywacji](../mfc/activation-cpp.md)   
- [Serwery](../mfc/servers.md)   
- [Kontenery](../mfc/containers.md)
+    >  Mogą istnieć inne menu, które wpływają na widok dokumentu kontenera, takich jak powiększenia. Menu tych kontenerów są wyświetlane między dwoma separatorów w tym zasobie menu.
+
+Aplikacje serwera (składnik) również należy utworzyć nowe menu specjalnie dla aktywacji w miejscu. Należy go, podobnie jak menu jest używany, gdy pliki są otwarte, ale bez elementów menu, takich jak plik i okna, w którym manipulowania dokument serwera, a nie dane. Zwykle to menu składa się z następujących czynności:
+
+1. Edytuj menu identyczne z używaną, gdy pliki są otwarte.
+
+1. Separator.
+
+1. Edycja menu, takich jak menu Pióro w przykładowej aplikacji bazgrołów obiektu.
+
+1. Separator.
+
+1. Menu Pomoc.
+
+Na przykład Przyjrzyj się układ niektóre menu w miejscu próbki dla kontenera i serwera. Na przykład bardziej zrozumiały zostały usunięte szczegóły każdego elementu menu. Menu w miejscu kontenera zawiera następujące wpisy:
+
+```
+IDR_CONTAINERTYPE_CNTR_IP MENU PRELOAD DISCARDABLE
+BEGIN
+    POPUP "&File C1"
+    MENUITEM SEPARATOR
+    POPUP "&Zoom C2"
+    MENUITEM SEPARATOR
+    POPUP "&Options C3"
+    POPUP "&Window C3"
+END
+```
+
+Następujące po sobie separatory wskazują, gdzie pierwszej części menu serwera. Teraz sprawdźmy menu w miejscu serwera:
+
+```
+IDR_SERVERTYPE_SRVR_IP MENU PRELOAD DISCARDABLE
+BEGIN
+    POPUP "&Edit S1"
+    MENUITEM SEPARATOR
+    POPUP "&Format S2"
+    MENUITEM SEPARATOR
+    POPUP "&Help S3"
+END
+```
+
+Separatory, w tym miejscu wskazują, gdzie drugiej grupy elementów menu kontenera. Wynikowy struktura menu przy aktywacji obiektu z tego serwera w miejscu, w tym kontenerze wygląda następująco:
+
+```
+BEGIN
+    POPUP "&File C1"
+    POPUP "&Edit S1"
+    POPUP "&Zoom C2"
+    POPUP "&Format S2"
+    POPUP "&Options C3
+    POPUP "&Window C3"
+    POPUP "&Help S3"
+END
+```
+
+Jak widać, separatory zostały zastąpione przy użyciu różnych grup menu każdej aplikacji.
+
+Tabele akceleratora skojarzone z menu w miejscu również powinien być dostarczony przez aplikację serwera. Kontener będzie dołączać je do jego własnej tabel akceleratora.
+
+Po aktywowaniu osadzonego elementu w miejscu ramach ładuje menu w miejscu. Następnie prosi aplikacji serwera w celu jego menu o aktywacji w miejscu i wstawia go których separatorów. Jest to, jak połączyć menu. Możesz uzyskać menu z kontenera, wykonywanie operacji na rozmieszczenie plików i okna, a otrzymasz menu z serwera przez wykonywanie operacji na elemencie.
+
+##  <a name="_core_toolbars_and_status_bars"></a> Paski narzędzi i stanu
+
+Aplikacje serwera należy utworzyć nowy pasek narzędzi i zapisać jego mapy bitowej w oddzielnym pliku. Aplikacje generowane przez Kreatora aplikacji zapisanie tej mapy bitowej w pliku o nazwie ITOOLBAR. BMP. Nowy pasek narzędzi zastępuje paska narzędzi aplikacji kontenera, gdy elementu danych na serwerze jest aktywowany w miejscu, powinny zawierać te same elementy, jak normalne paska narzędzi, ale usunięcie ikon reprezentujących elementy w menu Plik i okna.
+
+Ten pasek narzędzi jest ładowany w swojej `COleIPFrameWnd`-klasy, tworzone przez Kreatora aplikacji. Na pasku stanu jest obsługiwane przez aplikację kontenera. Aby uzyskać więcej informacji na temat implementacji okien ramowych w miejscu, zobacz [serwery: Implementowanie serwera](../mfc/servers-implementing-a-server.md).
+
+## <a name="see-also"></a>Zobacz też
+
+[Menu i zasoby (OLE)](../mfc/menus-and-resources-ole.md)<br/>
+[Aktywacja](../mfc/activation-cpp.md)<br/>
+[Serwery](../mfc/servers.md)<br/>
+[Kontenery](../mfc/containers.md)
 

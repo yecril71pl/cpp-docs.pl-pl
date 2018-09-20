@@ -17,56 +17,58 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: cc3f72080c08807026c6458979ac0ba561e298df
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: c51853274b061ba290ff90993f45ccdf3375349b
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33164999"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46431297"
 ---
 # <a name="static-const-int-linkage-is-no-longer-literal"></a>Połączenie static const int nie jest już literałem
-Deklaracja stałej elementu członkowskiego klasy zmienił się z rozszerzeń zarządzanych dla języka C++ dla Visual C++.  
-  
- Mimo że `static const` integralną elementy członkowskie są nadal obsługiwane, ich atrybut powiązania został zmieniony. Atrybut ich wcześniejsze połączenie odbywa się teraz w elemencie członkowskim integralną literału. Na przykład wziąć pod uwagę następujące klasy rozszerzeń zarządzanych:  
-  
-```  
-public __gc class Constants {  
-public:  
-   static const int LOG_DEBUG = 4;  
-};  
-```  
-  
- Powoduje to następujące atrybuty CIL podstawowej dla pola (Uwaga atrybutu literałowego):  
-  
-```  
-.field public static literal int32   
-modopt([Microsoft.VisualC]Microsoft.VisualC.IsConstModifier) STANDARD_CLIENT_PRX = int32(0x00000004)  
-```  
-  
- Gdy to nadal kompiluje w nowej składni:  
-  
-```  
-public ref class Constants {  
-public:  
-   static const int LOG_DEBUG = 4;  
-};  
-```  
-  
- już nie emituje atrybut literałowy, a w związku z tym nie wyświetlania jako stała przez środowisko uruchomieniowe CLR:  
-  
-```  
-.field public static int32 modopt([Microsoft.VisualC]Microsoft.VisualC.IsConstModifier) STANDARD_CLIENT_PRX = int32(0x00000004)  
-```  
-  
- Aby przypisać tego samego atrybutu literałowego między języka, można zmienić deklaracji do nowo obsługiwanych `literal` element członkowski danych w następujący sposób,  
-  
-```  
-public ref class Constants {  
-public:  
-   literal int LOG_DEBUG = 4;  
-};  
-```  
-  
-## <a name="see-also"></a>Zobacz też  
- [Deklaracje członków w obrębie klasy lub interfejsu (C + +/ CLI)](../dotnet/member-declarations-within-a-class-or-interface-cpp-cli.md)   
- [Literału](../windows/literal-cpp-component-extensions.md)
+
+Deklaracja stałej składowej klasy zmienił się z zarządzanych rozszerzeń języka C++ do Visual C++.
+
+Mimo że `static const` całkowitego elementy członkowskie są nadal obsługiwane, zmieniono jego atrybut powiązania. Atrybut ich wcześniejsze połączenia odbywa się teraz w literału składowej typu całkowitego. Na przykład rozważmy następujące klasy zarządzanych rozszerzeń:
+
+```
+public __gc class Constants {
+public:
+   static const int LOG_DEBUG = 4;
+};
+```
+
+Spowoduje to wygenerowanie następujących podstawowych atrybutów CIL pola (Uwaga: atrybut literałowy):
+
+```
+.field public static literal int32
+modopt([Microsoft.VisualC]Microsoft.VisualC.IsConstModifier) STANDARD_CLIENT_PRX = int32(0x00000004)
+```
+
+Gdy to nadal będzie się kompilować w ramach nowej składni:
+
+```
+public ref class Constants {
+public:
+   static const int LOG_DEBUG = 4;
+};
+```
+
+nie jest już emituje atrybut literałowy, a w związku z tym jest nie wyświetlane jako stała przez środowisko uruchomieniowe CLR:
+
+```
+.field public static int32 modopt([Microsoft.VisualC]Microsoft.VisualC.IsConstModifier) STANDARD_CLIENT_PRX = int32(0x00000004)
+```
+
+Aby mogła mieć tego samego atrybutu literałowego między języka, deklaracja powinna zostać zmieniona na nowo obsługiwanych `literal` elementu członkowskiego danych, w następujący sposób,
+
+```
+public ref class Constants {
+public:
+   literal int LOG_DEBUG = 4;
+};
+```
+
+## <a name="see-also"></a>Zobacz też
+
+[Deklaracje składowych w obrębie klasy lub interfejsu (C++/CLI)](../dotnet/member-declarations-within-a-class-or-interface-cpp-cli.md)<br/>
+[literał](../windows/literal-cpp-component-extensions.md)

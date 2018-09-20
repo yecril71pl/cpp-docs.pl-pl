@@ -16,72 +16,74 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9a7f8344b23a37148fb89cb74e88928e4b16b432
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: e59ef2b9a7224fafa5ee7a49077429f53448e37a
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45709452"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46426994"
 ---
 # <a name="advanced-features-mfc-application-wizard"></a>Funkcje zaawansowane, kreator aplikacji MFC
-Ten temat zawiera listę opcji dodatkowych funkcji aplikacji, takich jak pomoc, obsługa drukowania i tak dalej. W każdej sekcji określ dodatkową pomoc techniczną dla tych zaawansowanych funkcji.  
-  
+
+Ten temat zawiera listę opcji dodatkowych funkcji aplikacji, takich jak pomoc, obsługa drukowania i tak dalej. W każdej sekcji określ dodatkową pomoc techniczną dla tych zaawansowanych funkcji.
+
 - **Pomoc kontekstowa (HTML)**
 
-   Generuje zestaw plików pomocy dla pomocy kontekstowej, dostępnej za pomocą menu Pomoc i F1 lub klikając **pomocy** przycisku w oknie dialogowym. Obsługa pomocy wymaga kompilatora plików pomocy. Jeśli nie masz kompilatora plików pomocy, o zainstaluj go, uruchamiając ponownie Instalatora.  
-  
-   Zobacz [HTML Help: Context-Sensitive Help for Your Programs](../../mfc/html-help-context-sensitive-help-for-your-programs.md) i [pliki pomocy (Pomoc HTML)](../../ide/help-files-html-help.md) Aby uzyskać więcej informacji.  
-  
+   Generuje zestaw plików pomocy dla pomocy kontekstowej, dostępnej za pomocą menu Pomoc i F1 lub klikając **pomocy** przycisku w oknie dialogowym. Obsługa pomocy wymaga kompilatora plików pomocy. Jeśli nie masz kompilatora plików pomocy, o zainstaluj go, uruchamiając ponownie Instalatora.
+
+   Zobacz [HTML Help: Context-Sensitive Help for Your Programs](../../mfc/html-help-context-sensitive-help-for-your-programs.md) i [pliki pomocy (Pomoc HTML)](../../ide/help-files-html-help.md) Aby uzyskać więcej informacji.
+
 - **Drukowanie i Podgląd wydruku**
 
-   Generuje kod w celu obsługi drukowania, konfiguracji drukowania i podglądu wydruku poleceń przez wywołanie funkcji składowych [CView Class](../../mfc/reference/cview-class.md) z biblioteki MFC. Kreator dodaje także polecenia dla tych funkcji do menu aplikacji. Obsługa drukowania jest dostępna tylko w przypadku aplikacji, które określają **Obsługa architektury dokument/widok** w [typ aplikacji, Kreator aplikacji MFC](../../mfc/reference/application-type-mfc-application-wizard.md) strony kreatora. Domyślnie aplikacje dokumentu/widoku mają obsługę drukowania.  
-  
+   Generuje kod w celu obsługi drukowania, konfiguracji drukowania i podglądu wydruku poleceń przez wywołanie funkcji składowych [CView Class](../../mfc/reference/cview-class.md) z biblioteki MFC. Kreator dodaje także polecenia dla tych funkcji do menu aplikacji. Obsługa drukowania jest dostępna tylko w przypadku aplikacji, które określają **Obsługa architektury dokument/widok** w [typ aplikacji, Kreator aplikacji MFC](../../mfc/reference/application-type-mfc-application-wizard.md) strony kreatora. Domyślnie aplikacje dokumentu/widoku mają obsługę drukowania.
+
 - **Automatyzacja**
 
-   Określa, że aplikacja może obsłużyć obiekty, które są implementowane w innej aplikacji, lub udostępnia aplikację klientom automatyzacji.  
-  
+   Określa, że aplikacja może obsłużyć obiekty, które są implementowane w innej aplikacji, lub udostępnia aplikację klientom automatyzacji.
+
 - **Kontrolki ActiveX**
 
-   Obsługuje formanty ActiveX (ustawienie domyślne). Jeśli nie wybierz tę opcję, a później chcesz wstawić formanty ActiveX do projektu, należy dodać wywołanie [afxenablecontrolcontainer —](ole-initialization.md#afxenablecontrolcontainer) w Twojej aplikacji [CWinApp::InitInstance](../../mfc/reference/cwinapp-class.md#initinstance) elementu członkowskiego Funkcja.  
-  
+   Obsługuje formanty ActiveX (ustawienie domyślne). Jeśli nie wybierz tę opcję, a później chcesz wstawić formanty ActiveX do projektu, należy dodać wywołanie [afxenablecontrolcontainer —](ole-initialization.md#afxenablecontrolcontainer) w Twojej aplikacji [CWinApp::InitInstance](../../mfc/reference/cwinapp-class.md#initinstance) elementu członkowskiego Funkcja.
+
 - **MAPI (Messaging API)**
 
-   Określa, że aplikacja może tworzyć, przesyłać i przechowywać wiadomości pocztowe oraz nimi manipulować.  
-  
+   Określa, że aplikacja może tworzyć, przesyłać i przechowywać wiadomości pocztowe oraz nimi manipulować.
+
 - **Windows sockets**
 
-   Obsługuje usługi Windows sockets, które można wykorzystać do pisania aplikacji komunikujących się za pośrednictwem sieci TCP/IP.  
-  
+   Obsługuje usługi Windows sockets, które można wykorzystać do pisania aplikacji komunikujących się za pośrednictwem sieci TCP/IP.
+
 - **Active Accessibility**
 
-   Dodaje obsługę [IAccessible](/windows/desktop/api/oleacc/nn-oleacc-iaccessible) do [CWnd](../../mfc/reference/cwnd-class.md)-pochodne klasy, które umożliwia dostosowywanie interfejsu użytkownika w celu lepszej interakcji z klientami ułatwień dostępu.  
-  
+   Dodaje obsługę [IAccessible](/windows/desktop/api/oleacc/nn-oleacc-iaccessible) do [CWnd](../../mfc/reference/cwnd-class.md)-pochodne klasy, które umożliwia dostosowywanie interfejsu użytkownika w celu lepszej interakcji z klientami ułatwień dostępu.
+
 - **Typowe formant manifestu**
 
-   Domyślnie włączony. Generuje manifest aplikacji, aby włączyć bibliotekę DLL wspólnych formantów, która jest dołączona do systemu Microsoft Windows XP i nowszych systemów operacyjnych.  
-  
-   Biblioteka DLL wspólnych formantów w wersji 6 nie uaktualnia automatycznie wcześniejszej wersji wspólnych formantów, z których korzystają istniejące aplikacje. Aby używać wersji 6 biblioteki DLL wspólnych formantów, należy utworzyć manifest aplikacji, instruujący aplikację, aby załadowała bibliotekę DLL. Ta biblioteka DLL wspólnych formantów obsługuje również kompozycje systemu Windows XP.  
-  
-   Manifest aplikacji może również określić inne biblioteki DLL i wersje, których wymaga aplikacja. Aby uzyskać więcej informacji na temat manifestów aplikacji, zobacz [izolowanymi oraz aplikacjami wykonywanymi Side-by-Side](/windows/desktop/SbsCs/isolated-applications-and-side-by-side-assemblies-portal) w zestawie Windows SDK.  
-  
+   Domyślnie włączony. Generuje manifest aplikacji, aby włączyć bibliotekę DLL wspólnych formantów, która jest dołączona do systemu Microsoft Windows XP i nowszych systemów operacyjnych.
+
+   Biblioteka DLL wspólnych formantów w wersji 6 nie uaktualnia automatycznie wcześniejszej wersji wspólnych formantów, z których korzystają istniejące aplikacje. Aby używać wersji 6 biblioteki DLL wspólnych formantów, należy utworzyć manifest aplikacji, instruujący aplikację, aby załadowała bibliotekę DLL. Ta biblioteka DLL wspólnych formantów obsługuje również kompozycje systemu Windows XP.
+
+   Manifest aplikacji może również określić inne biblioteki DLL i wersje, których wymaga aplikacja. Aby uzyskać więcej informacji na temat manifestów aplikacji, zobacz [izolowanymi oraz aplikacjami wykonywanymi Side-by-Side](/windows/desktop/SbsCs/isolated-applications-and-side-by-side-assemblies-portal) w zestawie Windows SDK.
+
 - **Obsługa Menedżera ponownego uruchamiania**
 
-   Dodaje obsługę [Menedżera ponownego uruchamiania Windows](/windows/desktop/RstMgr/using-restart-manager). Ten film pokazuje, jak używać Menedżera ponownego uruchamiania MFC: [jak używać nowego Menedżera ponownego uruchamiania](https://msdn.microsoft.com/vstudio/ee886407).  
-  
+   Dodaje obsługę [Menedżera ponownego uruchamiania Windows](/windows/desktop/RstMgr/using-restart-manager). Ten film pokazuje, jak używać Menedżera ponownego uruchamiania MFC: [jak używać nowego Menedżera ponownego uruchamiania](https://msdn.microsoft.com/vstudio/ee886407).
+
 - **Zaawansowane okienka ramki**
 
-   |Opcja|Opis|  
-   |------------|-----------------|  
-   |**Okienko dokowania Eksploratora**|Tworzy okienko dokowania, podobne programu Visual Studio **Eksploratora rozwiązań** z lewej strony ramki głównego okna.|  
-   |**Ramka dokowania danych wyjściowych**|Tworzy okienko dokowania, podobne programu Visual Studio **dane wyjściowe** okienko, w którym znajduje się w oknie głównym ramki.|  
-   |**Okienko dokowania właściwości**|Tworzy okienko dokowania, podobne programu Visual Studio **właściwości** w okienku z prawej strony ramki głównego okna.|  
-   |**Okienko nawigacji**|Tworzy okienko dokowania, podobne do paska nawigacji programu Outlook, z lewej strony ramki głównego okna.|  
-   |**Pasek podpisu**|Tworzy pasek tytułu w stylu Office nad ramką głównego okna.|  
-  
+   |Opcja|Opis|
+   |------------|-----------------|
+   |**Okienko dokowania Eksploratora**|Tworzy okienko dokowania, podobne programu Visual Studio **Eksploratora rozwiązań** z lewej strony ramki głównego okna.|
+   |**Ramka dokowania danych wyjściowych**|Tworzy okienko dokowania, podobne programu Visual Studio **dane wyjściowe** okienko, w którym znajduje się w oknie głównym ramki.|
+   |**Okienko dokowania właściwości**|Tworzy okienko dokowania, podobne programu Visual Studio **właściwości** w okienku z prawej strony ramki głównego okna.|
+   |**Okienko nawigacji**|Tworzy okienko dokowania, podobne do paska nawigacji programu Outlook, z lewej strony ramki głównego okna.|
+   |**Pasek podpisu**|Tworzy pasek tytułu w stylu Office nad ramką głównego okna.|
+
 - **Liczba plików na liście niedawno używanych plików**
 
-   Określa liczbę plików wymienionych na liście niedawno używanych. Liczbą domyślną jest 4.  
-  
-## <a name="see-also"></a>Zobacz też  
- [Kreator aplikacji MFC](../../mfc/reference/mfc-application-wizard.md)
+   Określa liczbę plików wymienionych na liście niedawno używanych. Liczbą domyślną jest 4.
+
+## <a name="see-also"></a>Zobacz też
+
+[Kreator aplikacji MFC](../../mfc/reference/mfc-application-wizard.md)
 

@@ -20,12 +20,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 6074519f472fff82af60695f37d0f96d9557f193
-ms.sourcegitcommit: f0c90000125a9497bf61e41624de189a043703c0
+ms.openlocfilehash: 2213266d281933c6a6a59775584532acaeb39d6e
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44313653"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46412331"
 ---
 # <a name="exception-handling--c-component-extensions"></a>Obsługa wyjątków (C++ Component Extensions)
 
@@ -33,27 +33,27 @@ Aplikacje skompilowane z `/ZW` — opcja kompilatora lub `/clr` kompilator korzy
 
 ## <a name="in-this-section"></a>W tej sekcji
 
-[Podstawowe pojęcia związane z używaniem wyjątków zarządzanych](../dotnet/basic-concepts-in-using-managed-exceptions.md)  
+[Podstawowe pojęcia związane z używaniem wyjątków zarządzanych](../dotnet/basic-concepts-in-using-managed-exceptions.md)<br/>
 W tym artykule opisano zgłaszanie wyjątków i przy użyciu **spróbuj**/**catch** bloków.
 
-[Różnice w zachowaniu obsługi wyjątków w/CLR](../dotnet/differences-in-exception-handling-behavior-under-clr.md)  
+[Różnice w zachowaniu obsługi wyjątków w/CLR](../dotnet/differences-in-exception-handling-behavior-under-clr.md)<br/>
 W tym artykule omówiono różnice względem standardowe zachowanie programu obsługi wyjątków C++.
 
-[finally](../dotnet/finally.md)  
+[finally](../dotnet/finally.md)<br/>
 W tym artykule omówiono sposób używania finally — słowo kluczowe.
 
-[Instrukcje: definiowanie i instalowanie globalnego programu obsługi wyjątków](../dotnet/how-to-define-and-install-a-global-exception-handler.md)  
+[Instrukcje: definiowanie i instalowanie globalnego programu obsługi wyjątków](../dotnet/how-to-define-and-install-a-global-exception-handler.md)<br/>
 Pokazuje, jak nieobsłużone wyjątki mogą być przechwytywane.
 
-[Instrukcje: przechwytywanie wyjątków w kodzie natywnym wygenerowanym w języku MSIL](../dotnet/how-to-catch-exceptions-in-native-code-thrown-from-msil.md)  
+[Instrukcje: przechwytywanie wyjątków w kodzie natywnym wygenerowanym w języku MSIL](../dotnet/how-to-catch-exceptions-in-native-code-thrown-from-msil.md)<br/>
 Omawia, jak przechwytywać wyjątki środowiska CLR i C++ w kodzie natywnym.
 
-[Instrukcje: definiowanie i instalowanie globalnego programu obsługi wyjątków](../dotnet/how-to-define-and-install-a-global-exception-handler.md)  
+[Instrukcje: definiowanie i instalowanie globalnego programu obsługi wyjątków](../dotnet/how-to-define-and-install-a-global-exception-handler.md)<br/>
 Pokazuje, jak przechwytywać wszystkie nieobsłużone wyjątki.
 
 ## <a name="related-sections"></a>Sekcje pokrewne
 
-[Obsługa wyjątków](../cpp/exception-handling-in-visual-cpp.md)  
+[Obsługa wyjątków](../cpp/exception-handling-in-visual-cpp.md)<br/>
 W tym artykule opisano obsługę wyjątków w języku C++.
 
 ## <a name="see-also"></a>Zobacz też

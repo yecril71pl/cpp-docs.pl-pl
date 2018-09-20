@@ -1,5 +1,5 @@
 ---
-title: OLE przeciągania i upuszczania oraz transferów danych klasy | Dokumentacja firmy Microsoft
+title: OLE przeciągania i upuszczania oraz transferów danych klas | Dokumentacja firmy Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -20,28 +20,30 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d55d6d171f490631afe17a605f50607fb55f070b
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: a4b5d694d0081fbe2d852884c4a379e962c22f2a
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33347045"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46444141"
 ---
 # <a name="ole-drag-and-drop-and-data-transfer-classes"></a>Klasy przeciągania i upuszczania oraz transferów danych OLE
-Te klasy są używane w transferów danych OLE. Umożliwiają one danych transferowanych między aplikacjami za pomocą Schowka lub przeciągania i upuszczania.  
-  
- [COleDropSource](../mfc/reference/coledropsource-class.md)  
- Określa operację przeciągania i upuszczania od początku do końca. Ta klasa określa po uruchomieniu operacji przeciągania i po jej zakończeniu. Wyświetla również opinii kursora podczas operacji przeciągania i upuszczania.  
-  
- [COleDataSource](../mfc/reference/coledatasource-class.md)  
- Używany, gdy aplikacja udostępnia dane do transferu danych. `COleDataSource` można wyświetlać jako obiekt Schowka zorientowane obiektowo.  
-  
- [COleDropTarget](../mfc/reference/coledroptarget-class.md)  
- Reprezentuje element docelowy operacji przeciągania i upuszczania. A `COleDropTarget` obiekt odpowiada okna na ekranie. Określa czy akceptować wszystkie dane na jej i implementuje operacji usuwania rzeczywistych.  
-  
- [COleDataObject](../mfc/reference/coledataobject-class.md)  
- Używane jako stronie odbiorcy do `COleDataSource`. `COleDataObject` obiekty zapewniają dostęp do danych przechowywanych przez `COleDataSource` obiektu.  
-  
-## <a name="see-also"></a>Zobacz też  
- [Przegląd klas](../mfc/class-library-overview.md)
+
+Te klasy są używane w transferów danych OLE. Umożliwiają one danych transferowanych między aplikacjami przy użyciu Schowka lub za pomocą przeciągania i upuszczania.
+
+[COleDropSource](../mfc/reference/coledropsource-class.md)<br/>
+Określa operację przeciągania i upuszczania, od początku do końca. Ta klasa określa po rozpoczęciu operacji przeciągania, a kiedy kończy się. Wyświetla również opinii kursora podczas operacji przeciągania i upuszczania.
+
+[COleDataSource](../mfc/reference/coledatasource-class.md)<br/>
+Używane, gdy aplikacja udostępnia dane do transferu danych. `COleDataSource` może być wyświetlane jako obiekt Schowka zorientowane obiektowo.
+
+[COleDropTarget](../mfc/reference/coledroptarget-class.md)<br/>
+Reprezentuje obiekt docelowy operacji przeciągania i upuszczania. Element `COleDropTarget` obiektu odnosi się do okna na ekranie. Ustala, czy należy zaakceptować wszystkie dane na jego i implementuje operację rzeczywiste listy.
+
+[COleDataObject](../mfc/reference/coledataobject-class.md)<br/>
+Używane jako stronie odbiorcy, aby `COleDataSource`. `COleDataObject` obiekty zapewniają dostęp do danych przechowywanych przez `COleDataSource` obiektu.
+
+## <a name="see-also"></a>Zobacz też
+
+[Klasa — Przegląd](../mfc/class-library-overview.md)
 

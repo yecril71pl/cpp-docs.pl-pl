@@ -1,5 +1,5 @@
 ---
-title: Unikanie wyjątków zgłaszanych przez obiektów COM skompilowanych z - clr | Dokumentacja firmy Microsoft
+title: Unikanie wyjątków zgłaszanych przez obiektów COM skompilowanych z / clr | Dokumentacja firmy Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -20,17 +20,19 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: 0efd2af7eb4bf8a70bff983d627f802f1976c6ba
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 687585d0b25c64f5575646de3cd4823e0a89988e
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33103515"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46408988"
 ---
 # <a name="avoiding-exceptions-on-clr-shutdown-when-consuming-com-objects-built-with-clr"></a>Unikanie wyjątków przy zamykaniu środowiska CLR w przypadku konsumowania obiektów COM skompilowanych przy użyciu opcji /clr
-Gdy środowisko uruchomieniowe języka wspólnego (CLR) wprowadza Tryb zamykania, funkcje natywne mają ograniczony dostęp do usług CLR. Podczas próby wywołać wersji dla obiekt COM skompilowane z **/CLR**, CLR przejścia do kodu natywnego, a następnie przejść z powrotem do kodu zarządzanego do obsługi wywołania IUnknown::Release (który jest zdefiniowany w zarządzanym kodzie). Środowisko CLR zapobiega wywołania do kodu zarządzanego, ponieważ jest w trybie zamykania.  
-  
- Aby rozwiązać ten problem, upewnij się, że wywoływana z metod wersji destruktorów zawierać tylko kodu natywnego.  
-  
-## <a name="see-also"></a>Zobacz też  
- [Zestawy mieszane (natywne i zarządzane)](../dotnet/mixed-native-and-managed-assemblies.md)
+
+Gdy środowisko uruchomieniowe języka wspólnego (CLR) wprowadza Tryb zamykania, funkcje natywne mają ograniczony dostęp do usług CLR. Podczas próby wywołania wersji na obiekt COM skompilowany przy użyciu **/CLR**, CLR przechodzi do kodu natywnego, a następnie przejść z powrotem do kodu zarządzanego do obsługi rozmów IUnknown::Release, (która jest zdefiniowana w kodzie zarządzanym). Środowisko CLR uniemożliwia wywołanie do kodu zarządzanego, ponieważ jest w trybie zamykania.
+
+Aby rozwiązać ten problem, upewnij się, że destruktory wywoływana z metody wydania będzie zawierać tylko kodu natywnego.
+
+## <a name="see-also"></a>Zobacz też
+
+[Zestawy mieszane (natywne i zarządzane)](../dotnet/mixed-native-and-managed-assemblies.md)

@@ -1,5 +1,5 @@
 ---
-title: Tworzenie formantu listy | Dokumentacja firmy Microsoft
+title: Tworzenie kontrolki listy | Dokumentacja firmy Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -15,33 +15,35 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 42457e223bb7e12da64be54d757e05d0bac3a028
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: c0586b28d2a772456d7efc8068b171bf37c9ba41
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33342049"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46420780"
 ---
 # <a name="creating-the-list-control"></a>Tworzenie kontrolki listy
-Metody kontrolowania listy ([CListCtrl](../mfc/reference/clistctrl-class.md)) jest tworzony zależy od tego, czy jest bezpośrednio za pomocą formantu lub za pomocą klasy [clistview —](../mfc/reference/clistview-class.md) zamiast tego. Jeśli używasz `CListView`, platformę tworzy widok jako część jej Sekwencja tworzenia dokumentu/widoku. Tworzenie widoku listy tworzy kontrolki listy również (są to samo). Formant nie zostanie utworzony w widoku [OnCreate](../mfc/reference/cwnd-class.md#oncreate) funkcji obsługi. W takim przypadku formant jest gotowy do dodawania elementów za pomocą wywołania [GetListCtrl](../mfc/reference/clistview-class.md#getlistctrl).  
-  
-### <a name="to-use-clistctrl-directly-in-a-dialog-box"></a>Do użycia bezpośrednio w oknie dialogowym CListCtrl  
-  
-1.  W edytorze okien dialogowych Dodaj formant listy zasobu szablonu okna dialogowego. Określ jego identyfikator formantu.  
-  
-2.  Użyj [Kreator dodawania zmiennej elementu członkowskiego](../ide/adding-a-member-variable-visual-cpp.md) można dodać zmiennej członka typu `CListCtrl` razem z właściwością formantu. Ten element członkowski można użyć do wywołania `CListCtrl` funkcji elementów członkowskich.  
-  
-3.  Użyj okna właściwości do mapowania funkcje programu obsługi w klasy okien dialogowych dla wszystkich powiadomień formantu listy wiadomości musi obsłużyć (zobacz [mapowanie komunikatów do funkcji](../mfc/reference/mapping-messages-to-functions.md)).  
-  
-4.  W [OnInitDialog](../mfc/reference/cdialog-class.md#oninitdialog), ustawianie stylów dla `CListCtrl`. Zobacz [Zmienianie stylów formantu listy](../mfc/changing-list-control-styles.md). Określa rodzaj "Widok" pobieranie w formancie, mimo że można później zmienić widok.  
-  
-### <a name="to-use-clistctrl-in-a-nondialog-window"></a>Do użycia w oknie nondialog CListCtrl  
-  
-1.  Zdefiniuj formantu w klasie widoku lub okna.  
-  
-2.  Wywołanie formantu [Utwórz](../mfc/reference/clistctrl-class.md#create) prawdopodobnie w funkcji członkowskiej [OnInitialUpdate](../mfc/reference/cview-class.md#oninitialupdate), prawdopodobnie możliwie wczesne jako okno nadrzędne [OnCreate](../mfc/reference/cwnd-class.md#oncreate) funkcji obsługi (w przypadku Tworzenie podklasy formantu). Ustawianie stylów formantu.  
-  
-## <a name="see-also"></a>Zobacz też  
- [Korzystanie z CListCtrl](../mfc/using-clistctrl.md)   
- [Kontrolki](../mfc/controls-mfc.md)
+
+Jak kontrolować listy ([CListCtrl](../mfc/reference/clistctrl-class.md)) jest tworzony jest zależna od tego, czy jesteś bezpośrednio za pomocą formantu lub przy użyciu klasy [CListView](../mfc/reference/clistview-class.md) zamiast tego. Jeśli używasz `CListView`, struktura tworzy widok jako część jej Sekwencja tworzenia dokumentu/widoku. Utworzenie widoku listy powoduje utworzenie kontrolki listy również (dwa są tak samo). Formant zostanie utworzony w widoku [OnCreate](../mfc/reference/cwnd-class.md#oncreate) funkcji obsługi. W takim przypadku kontrolka jest gotowy do dodawania elementów poprzez wywołanie [GetListCtrl](../mfc/reference/clistview-class.md#getlistctrl).
+
+### <a name="to-use-clistctrl-directly-in-a-dialog-box"></a>Aby użyć CListCtrl bezpośrednio w oknie dialogowym
+
+1. W edytorze okien dialogowych należy dodać kontrolkę listy do zasobu szablonu okna dialogowego. Określ identyfikator kontrolki.
+
+1. Użyj [Kreator dodawania zmiennej składowej](../ide/adding-a-member-variable-visual-cpp.md) można dodać zmiennej składowej typu `CListCtrl` z właściwością kontrolki. Można użyć tego elementu członkowskiego do wywołania `CListCtrl` funkcji elementów członkowskich.
+
+1. Użyj okna właściwości do mapowania funkcji obsługi w klasy okien dialogowych dla wszystkich powiadomień formantu listy wiadomości musi obsłużyć (zobacz [mapowanie komunikatów do funkcji](../mfc/reference/mapping-messages-to-functions.md)).
+
+1. W [OnInitDialog](../mfc/reference/cdialog-class.md#oninitdialog), ustawianie stylów dla `CListCtrl`. Zobacz [Zmienianie stylów kontrolki listy](../mfc/changing-list-control-styles.md). Określa rodzaj "view" Pobierz w kontrolce, mimo że można później zmienić widok.
+
+### <a name="to-use-clistctrl-in-a-nondialog-window"></a>Aby użyć CListCtrl w oknie nondialog
+
+1. Zdefiniuj kontrolki w klasie widoku lub w oknie.
+
+1. Wywoływanie kontrolki [Utwórz](../mfc/reference/clistctrl-class.md#create) funkcję członkowską, prawdopodobnie w [OnInitialUpdate](../mfc/reference/cview-class.md#oninitialupdate), prawdopodobnie jako wczesne jako okno nadrzędne [OnCreate](../mfc/reference/cwnd-class.md#oncreate) funkcji obsługi (w przypadku Tworzenie podklasy kontrolki). Ustawianie stylów dla formantu.
+
+## <a name="see-also"></a>Zobacz też
+
+[Korzystanie z CListCtrl](../mfc/using-clistctrl.md)<br/>
+[Kontrolki](../mfc/controls-mfc.md)
 

@@ -15,36 +15,38 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e4c00649c51e34bbbac7adbf7aa5f3c7d04790ad
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 55f3eae10954ee2da1386907f88ae8b594dc8e53
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33383370"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46413636"
 ---
 # <a name="working-with-window-objects"></a>Praca z obiektami okien
-Praca z systemu windows wymaga dwa rodzaje działań:  
-  
--   Obsługa komunikatów systemu Windows  
-  
--   Rysowanie w oknie  
-  
- Do obsługi komunikatów systemu Windows w dowolnym oknie, w tym własne podrzędne systemu windows, temacie [mapowanie komunikatów do funkcji](../mfc/reference/mapping-messages-to-functions.md) do mapy wiadomości do klasy okna języka C++. Następnie wpisz obsługi wiadomości funkcji Członkowskich w klasie.  
-  
- Większość rysowania w ramach aplikacji występuje w widoku, którego [OnDraw](../mfc/reference/cview-class.md#ondraw) funkcja członkowska jest wywoływana, gdy musi zostać narysowany zawartość okna. Jeśli okno jest elementem podrzędnym widoku, może przekazywać niektóre rysunku widoku do okna podrzędnego dzięki użyciu `OnDraw` wywoływanie jednego funkcji Członkowskich z okna.  
-  
- W każdym przypadku należy kontekst urządzenia do rysowania. Można użyć zapasów pióra, pędzla i innych obiektów graficznych zawarte w kontekście urządzenia skojarzone z okna. Lub zmodyfikować te obiekty rysowania efekty, które należy uzyskać. Z kontekstu urządzenia Konfigurowanie Ci się podoba, wywołać elementu członkowskiego funkcje klasy [CDC](../mfc/reference/cdc-class.md) (kontekst urządzenia klasa) do rysowania linii, kształty i tekst; Użyj kolorów; oraz pracy z układ współrzędnych.  
-  
-## <a name="what-do-you-want-to-know-more-about"></a>Co chcesz dowiedzieć się więcej o  
-  
--   [Obsługa i mapowanie komunikatów](../mfc/message-handling-and-mapping.md)  
-  
--   [Rysowanie w widoku](../mfc/drawing-in-a-view.md)  
-  
--   [Konteksty urządzenia](../mfc/device-contexts.md)  
-  
--   [Obiekty graficzne](../mfc/graphic-objects.md)  
-  
-## <a name="see-also"></a>Zobacz też  
- [Obiekty okna](../mfc/window-objects.md)
+
+Praca z wywołaniami systemu windows na dwa rodzaje działań:
+
+- Obsługa komunikatów Windows
+
+- Rysowanie w oknie
+
+Do obsługi komunikatów Windows w dowolnym oknie, w tym własne okna podrzędnego zobaczyć [mapowanie komunikatów do funkcji](../mfc/reference/mapping-messages-to-functions.md) do mapy wiadomości do klasy okna języka C++. Następnie napisać program obsługi komunikatów funkcji składowych w klasie.
+
+Większość rysowania w aplikacji framework odbywa się w widoku, którego [OnDraw](../mfc/reference/cview-class.md#ondraw) funkcja członkowska jest wywoływana zawsze wtedy, gdy musi zostać narysowany zawartość okna. Jeśli okno jest elementem podrzędnym tego widoku, może przekazywać niektóre Rysowanie w widoku do okna podrzędne dzięki `OnDraw` wywołać jedną z funkcji elementów członkowskich z oknem.
+
+W każdym przypadku konieczne będzie kontekst urządzenia do rysowania. Można użyć standardowych pióra, pędzla i innymi obiektami zawarte w kontekście urządzenia skojarzony z oknem. Lub możesz zmodyfikować te obiekty, aby uzyskać efekty rysowania, czego potrzebujesz. Przy użyciu kontekstu urządzenia, jak chcesz skonfigurować, wywołaj element członkowski funkcji klasy [CDC](../mfc/reference/cdc-class.md) (kontekst urządzenia klasy) do rysowania linii, kształty i tekst; Użyj kolorów; oraz pracy z układ współrzędnych.
+
+## <a name="what-do-you-want-to-know-more-about"></a>Co chcesz dowiedzieć się więcej na temat
+
+- [Obsługa i mapowanie komunikatów](../mfc/message-handling-and-mapping.md)
+
+- [Rysowanie w widoku](../mfc/drawing-in-a-view.md)
+
+- [Konteksty urządzenia](../mfc/device-contexts.md)
+
+- [Obiekty graficzne](../mfc/graphic-objects.md)
+
+## <a name="see-also"></a>Zobacz też
+
+[Obiekty okna](../mfc/window-objects.md)
 

@@ -18,37 +18,39 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e52cdb6e72825bbb2d4824123837ce9630bcb1b3
-ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
+ms.openlocfilehash: 5fe4a72a4237360f674fabdf0ac992d7fcbd1c68
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/25/2018
-ms.locfileid: "36931713"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46438668"
 ---
 # <a name="ready-to-use-map-classes"></a>Gotowe do użycia klasy map
-Następujące klasy są gotowe do użycia klasy map.  
-  
- [CMapPtrToPtr](../mfc/reference/cmapptrtoptr-class.md)  
- Używa **void** wskaźniki jako klucze do znajdowania innych **void** wskaźników.  
-  
- [CMapPtrToWord](../mfc/reference/cmapptrtoword-class.md)  
- Używa **void** wskaźniki jako klucze do znajdowania danych typu **WORD**.  
-  
- [CMapStringToOb](../mfc/reference/cmapstringtoob-class.md)  
- Używa `CString` obiektów jako klucze do wyszukiwania `CObject` wskaźników.  
-  
- [CMapStringToPtr](../mfc/reference/cmapstringtoptr-class.md)  
- Używa `CString` obiektów jako klucze do wyszukiwania **void** wskaźników.  
-  
- [CMapStringToString](../mfc/reference/cmapstringtostring-class.md)  
- Używa `CString` obiektów jako klucze do znajdowania innych `CString` obiektów.  
-  
- [CMapWordToOb](../mfc/reference/cmapwordtoob-class.md)  
- Zawiera dane typu **WORD** można znaleźć `CObject` wskaźników.  
-  
- [CMapWordToPtr](../mfc/reference/cmapwordtoptr-class.md)  
- Zawiera dane typu **WORD** można znaleźć **void** wskaźników.  
-  
-## <a name="see-also"></a>Zobacz też  
- [Przegląd klas](../mfc/class-library-overview.md)
+
+Następujące klasy są gotowe do użycia klasy map.
+
+[CMapPtrToPtr](../mfc/reference/cmapptrtoptr-class.md)<br/>
+Używa **void** wskaźników jako klucze do znajdowania innych **void** wskaźników.
+
+[CMapPtrToWord](../mfc/reference/cmapptrtoword-class.md)<br/>
+Używa **void** wskaźników jako klucze do znajdowania danych typu **WORD**.
+
+[CMapStringToOb](../mfc/reference/cmapstringtoob-class.md)<br/>
+Używa `CString` obiektów jako klucze do wyszukiwania `CObject` wskaźników.
+
+[CMapStringToPtr](../mfc/reference/cmapstringtoptr-class.md)<br/>
+Używa `CString` obiektów jako klucze do wyszukiwania **void** wskaźników.
+
+[CMapStringToString](../mfc/reference/cmapstringtostring-class.md)<br/>
+Używa `CString` obiektów jako klucze do znajdowania innych `CString` obiektów.
+
+[CMapWordToOb](../mfc/reference/cmapwordtoob-class.md)<br/>
+Korzysta z danych typu **WORD** można znaleźć `CObject` wskaźników.
+
+[CMapWordToPtr](../mfc/reference/cmapwordtoptr-class.md)<br/>
+Korzysta z danych typu **WORD** można znaleźć **void** wskaźników.
+
+## <a name="see-also"></a>Zobacz też
+
+[Klasa — Przegląd](../mfc/class-library-overview.md)
 

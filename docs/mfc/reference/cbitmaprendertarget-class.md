@@ -28,129 +28,146 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a0eece5c7ba74f523836ab5916b8817671dac287
-ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
+ms.openlocfilehash: ee70825711efd82ce451a0433a63d98d93850552
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/26/2018
-ms.locfileid: "36956755"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46417062"
 ---
 # <a name="cbitmaprendertarget-class"></a>Klasa CBitmapRenderTarget
-Otoka dla ID2D1BitmapRenderTarget.  
-  
-## <a name="syntax"></a>Składnia  
-  
-```  
-class CBitmapRenderTarget : public CRenderTarget;  
-```  
-  
-## <a name="members"></a>Elementy członkowskie  
-  
-### <a name="public-constructors"></a>Konstruktory publiczne  
-  
-|Nazwa|Opis|  
-|----------|-----------------|  
-|[CBitmapRenderTarget::CBitmapRenderTarget](#cbitmaprendertarget)|Tworzy obiekt CBitmapRenderTarget.|  
-  
-### <a name="public-methods"></a>Metody publiczne  
-  
-|Nazwa|Opis|  
-|----------|-----------------|  
-|[CBitmapRenderTarget::Attach](#attach)|Dołącza istniejących renderowania interfejsu docelowych do obiektu|  
-|[CBitmapRenderTarget::Detach](#detach)|Odłącza interfejs docelowy renderowania z obiektu|  
-|[CBitmapRenderTarget::GetBitmap](#getbitmap)|Pobiera mapy bitowej dla tego obiektu docelowego renderowania. Zwrócony mapy bitowej może służyć do operacje rysowania.|  
-|[CBitmapRenderTarget::GetBitmapRenderTarget](#getbitmaprendertarget)|Zwraca interfejs ID2D1BitmapRenderTarget|  
-  
-### <a name="public-operators"></a>Operatory publiczne  
-  
-|Nazwa|Opis|  
-|----------|-----------------|  
-|[CBitmapRenderTarget::operator ID2D1BitmapRenderTarget *](#operator_id2d1bitmaprendertarget_star)|Zwraca interfejs ID2D1BitmapRenderTarget|  
-  
-### <a name="protected-data-members"></a>Dane chronione elementy członkowskie  
-  
-|Nazwa|Opis|  
-|----------|-----------------|  
-|[CBitmapRenderTarget::m_pBitmapRenderTarget](#m_pbitmaprendertarget)|Wskaźnik do obiektu ID2D1BitmapRenderTarget.|  
-  
-## <a name="inheritance-hierarchy"></a>Hierarchia dziedziczenia  
- [CObject](../../mfc/reference/cobject-class.md)  
-  
- [CRenderTarget](../../mfc/reference/crendertarget-class.md)  
-  
- `CBitmapRenderTarget` 
-  
-## <a name="requirements"></a>Wymagania  
- **Nagłówek:** afxrendertarget.h  
-  
-##  <a name="attach"></a>  CBitmapRenderTarget::Attach  
- Dołącza istniejących renderowania interfejsu docelowych do obiektu  
-  
-```  
+
+Otoka ID2D1BitmapRenderTarget.
+
+## <a name="syntax"></a>Składnia
+
+```
+class CBitmapRenderTarget : public CRenderTarget;
+```
+
+## <a name="members"></a>Elementy członkowskie
+
+### <a name="public-constructors"></a>Konstruktory publiczne
+
+|Nazwa|Opis|
+|----------|-----------------|
+|[CBitmapRenderTarget::CBitmapRenderTarget](#cbitmaprendertarget)|Tworzy obiekt CBitmapRenderTarget.|
+
+### <a name="public-methods"></a>Metody publiczne
+
+|Nazwa|Opis|
+|----------|-----------------|
+|[CBitmapRenderTarget::Attach](#attach)|Dołącza istniejące renderowania interfejsu docelowego do obiektu|
+|[CBitmapRenderTarget::Detach](#detach)|Odłącza interfejs docelowy renderowania z obiektu|
+|[CBitmapRenderTarget::GetBitmap](#getbitmap)|Pobiera mapy bitowej dla tego obiektu docelowego renderowania. Zwrócone mapy bitowej może służyć do rysowania operacji.|
+|[CBitmapRenderTarget::GetBitmapRenderTarget](#getbitmaprendertarget)|Zwraca ID2D1BitmapRenderTarget interfejsu|
+
+### <a name="public-operators"></a>Operatory publiczne
+
+|Nazwa|Opis|
+|----------|-----------------|
+|[CBitmapRenderTarget::operator ID2D1BitmapRenderTarget *](#operator_id2d1bitmaprendertarget_star)|Zwraca ID2D1BitmapRenderTarget interfejsu|
+
+### <a name="protected-data-members"></a>Chronione elementy członkowskie danych
+
+|Nazwa|Opis|
+|----------|-----------------|
+|[CBitmapRenderTarget::m_pBitmapRenderTarget](#m_pbitmaprendertarget)|Wskaźnik do obiektu ID2D1BitmapRenderTarget.|
+
+## <a name="inheritance-hierarchy"></a>Hierarchia dziedziczenia
+
+[CObject](../../mfc/reference/cobject-class.md)
+
+[CRenderTarget](../../mfc/reference/crendertarget-class.md)
+
+`CBitmapRenderTarget`
+
+## <a name="requirements"></a>Wymagania
+
+**Nagłówek:** afxrendertarget.h
+
+##  <a name="attach"></a>  CBitmapRenderTarget::Attach
+
+Dołącza istniejące renderowania interfejsu docelowego do obiektu
+
+```
 void Attach(ID2D1BitmapRenderTarget* pTarget);
-```  
-  
-### <a name="parameters"></a>Parametry  
- *pTarget*  
- Istniejący interfejs docelowego renderowania. Nie może mieć wartości NULL  
-  
-##  <a name="cbitmaprendertarget"></a>  CBitmapRenderTarget::CBitmapRenderTarget  
- Tworzy obiekt CBitmapRenderTarget.  
-  
-```  
+```
+
+### <a name="parameters"></a>Parametry
+
+*pTarget*<br/>
+Istniejący interfejs docelowego renderowania. Nie może mieć wartości NULL
+
+##  <a name="cbitmaprendertarget"></a>  CBitmapRenderTarget::CBitmapRenderTarget
+
+Tworzy obiekt CBitmapRenderTarget.
+
+```
 CBitmapRenderTarget();
-```  
-  
-##  <a name="detach"></a>  CBitmapRenderTarget::Detach  
- Odłącza interfejs docelowy renderowania z obiektu  
-  
-```  
+```
+
+##  <a name="detach"></a>  CBitmapRenderTarget::Detach
+
+Odłącza interfejs docelowy renderowania z obiektu
+
+```
 ID2D1BitmapRenderTarget* Detach();
-```  
-  
-### <a name="return-value"></a>Wartość zwracana  
- Wskaźnik do odłączonego renderowania interfejs docelowy.  
-  
-##  <a name="getbitmap"></a>  CBitmapRenderTarget::GetBitmap  
- Pobiera mapy bitowej dla tego obiektu docelowego renderowania. Zwrócony mapy bitowej może służyć do operacje rysowania.  
-  
-```  
+```
+
+### <a name="return-value"></a>Wartość zwracana
+
+Wskaźnik do odłączonego renderowania interfejs docelowy.
+
+##  <a name="getbitmap"></a>  CBitmapRenderTarget::GetBitmap
+
+Pobiera mapy bitowej dla tego obiektu docelowego renderowania. Zwrócone mapy bitowej może służyć do rysowania operacji.
+
+```
 BOOL GetBitmap(CD2DBitmap& bitmap);
-```  
-  
-### <a name="parameters"></a>Parametry  
- *Mapy bitowej*  
- Gdy metoda zwróci wartość, zawiera nieprawidłowy mapy bitowej dla tego obiektu docelowego renderowania. Ta mapa bitowa może służyć do operacje rysowania.  
-  
-### <a name="return-value"></a>Wartość zwracana  
- Jeśli metoda zakończy się powodzeniem, zwraca wartość PRAWDA. W przeciwnym razie zwraca wartość FALSE.  
-  
-##  <a name="getbitmaprendertarget"></a>  CBitmapRenderTarget::GetBitmapRenderTarget  
- Zwraca interfejs ID2D1BitmapRenderTarget  
-  
-```  
+```
+
+### <a name="parameters"></a>Parametry
+
+*Mapy bitowej*<br/>
+Po powrocie z tej metody zawiera Nieprawidłowa mapa bitowa dla tego obiektu docelowego renderowania. Ta mapa bitowa może służyć do rysowania operacji.
+
+### <a name="return-value"></a>Wartość zwracana
+
+Jeśli metoda się powiedzie, zwraca wartość PRAWDA. W przeciwnym razie zwraca wartość FALSE.
+
+##  <a name="getbitmaprendertarget"></a>  CBitmapRenderTarget::GetBitmapRenderTarget
+
+Zwraca ID2D1BitmapRenderTarget interfejsu
+
+```
 ID2D1BitmapRenderTarget* GetBitmapRenderTarget();
-```  
-  
-### <a name="return-value"></a>Wartość zwracana  
- Wskaźnik do interfejsu ID2D1BitmapRenderTarget lub wartość NULL, jeśli obiekt nie został jeszcze zainicjowany.  
-  
-##  <a name="m_pbitmaprendertarget"></a>  CBitmapRenderTarget::m_pBitmapRenderTarget  
- Wskaźnik do obiektu ID2D1BitmapRenderTarget.  
-  
-```  
-ID2D1BitmapRenderTarget* m_pBitmapRenderTarget;  
-```  
-  
-##  <a name="operator_id2d1bitmaprendertarget_star"></a>  CBitmapRenderTarget::operator ID2D1BitmapRenderTarget *  
- Zwraca interfejs ID2D1BitmapRenderTarget  
-  
-```  
+```
+
+### <a name="return-value"></a>Wartość zwracana
+
+Wskaźnik do interfejsu ID2D1BitmapRenderTarget lub wartość NULL, jeśli obiekt nie został jeszcze zainicjowany.
+
+##  <a name="m_pbitmaprendertarget"></a>  CBitmapRenderTarget::m_pBitmapRenderTarget
+
+Wskaźnik do obiektu ID2D1BitmapRenderTarget.
+
+```
+ID2D1BitmapRenderTarget* m_pBitmapRenderTarget;
+```
+
+##  <a name="operator_id2d1bitmaprendertarget_star"></a>  CBitmapRenderTarget::operator ID2D1BitmapRenderTarget *
+
+Zwraca ID2D1BitmapRenderTarget interfejsu
+
+```
 operator ID2D1BitmapRenderTarget*();
-```   
-  
-### <a name="return-value"></a>Wartość zwracana  
- Wskaźnik do interfejsu ID2D1BitmapRenderTarget lub wartość NULL, jeśli obiekt nie został jeszcze zainicjowany.  
-  
-## <a name="see-also"></a>Zobacz też  
- [Klasy](../../mfc/reference/mfc-classes.md)
+```
+
+### <a name="return-value"></a>Wartość zwracana
+
+Wskaźnik do interfejsu ID2D1BitmapRenderTarget lub wartość NULL, jeśli obiekt nie został jeszcze zainicjowany.
+
+## <a name="see-also"></a>Zobacz też
+
+[Klasy](../../mfc/reference/mfc-classes.md)

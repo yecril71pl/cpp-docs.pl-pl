@@ -16,65 +16,67 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: d12f922e6f20499aa5a231be244e62a826cb6aaf
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 1952f48f9866f3ddefa203a2f5495d93e68ee577
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33128696"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46420377"
 ---
 # <a name="how-to-wrap-native-class-for-use-by-c"></a>Porady: opakowywanie klasy natywnej do użycia w języku C#
-Ten przykład przedstawia sposób zawijania klasę natywnych języka C++, więc może być zużyte przez kod w języku C# lub innego języka .NET.  
-  
-## <a name="example"></a>Przykład  
-  
-```  
-// wrap_native_class_for_mgd_consumption.cpp  
-// compile with: /clr /LD  
-#include <windows.h>  
-#include <vcclr.h>  
-#using <System.dll>  
-  
-using namespace System;  
-  
-class UnmanagedClass {  
-public:  
-   LPCWSTR GetPropertyA() { return 0; }  
-   void MethodB( LPCWSTR ) {}  
-};  
-  
-public ref class ManagedClass {  
-public:  
-   // Allocate the native object on the C++ Heap via a constructor  
-   ManagedClass() : m_Impl( new UnmanagedClass ) {}  
-  
-   // Deallocate the native object on a destructor  
-   ~ManagedClass() {  
-      delete m_Impl;  
-   }  
-  
-protected:  
-   // Deallocate the native object on the finalizer just in case no destructor is called  
-   !ManagedClass() {  
-      delete m_Impl;  
-   }  
-  
-public:  
-   property String ^  get_PropertyA {  
-      String ^ get() {  
-         return gcnew String( m_Impl->GetPropertyA());  
-      }  
-   }  
-  
-   void MethodB( String ^ theString ) {  
-      pin_ptr<const WCHAR> str = PtrToStringChars(theString);  
-      m_Impl->MethodB(str);  
-   }  
-  
-private:  
-   UnmanagedClass * m_Impl;  
-};  
-```  
-  
-## <a name="see-also"></a>Zobacz też  
- [Korzystanie z międzyoperacyjności języka C++ (niejawna funkcja PInvoke)](../dotnet/using-cpp-interop-implicit-pinvoke.md)
+
+Niniejszy przykład pokazuje, jak opakowywać natywnych klasy języka C++, dzięki czemu mogą być używane przez kod w języku C# lub innym języku .NET.
+
+## <a name="example"></a>Przykład
+
+```
+// wrap_native_class_for_mgd_consumption.cpp
+// compile with: /clr /LD
+#include <windows.h>
+#include <vcclr.h>
+#using <System.dll>
+
+using namespace System;
+
+class UnmanagedClass {
+public:
+   LPCWSTR GetPropertyA() { return 0; }
+   void MethodB( LPCWSTR ) {}
+};
+
+public ref class ManagedClass {
+public:
+   // Allocate the native object on the C++ Heap via a constructor
+   ManagedClass() : m_Impl( new UnmanagedClass ) {}
+
+   // Deallocate the native object on a destructor
+   ~ManagedClass() {
+      delete m_Impl;
+   }
+
+protected:
+   // Deallocate the native object on the finalizer just in case no destructor is called
+   !ManagedClass() {
+      delete m_Impl;
+   }
+
+public:
+   property String ^  get_PropertyA {
+      String ^ get() {
+         return gcnew String( m_Impl->GetPropertyA());
+      }
+   }
+
+   void MethodB( String ^ theString ) {
+      pin_ptr<const WCHAR> str = PtrToStringChars(theString);
+      m_Impl->MethodB(str);
+   }
+
+private:
+   UnmanagedClass * m_Impl;
+};
+```
+
+## <a name="see-also"></a>Zobacz też
+
+[Korzystanie z międzyoperacyjności języka C++ (niejawna funkcja PInvoke)](../dotnet/using-cpp-interop-implicit-pinvoke.md)

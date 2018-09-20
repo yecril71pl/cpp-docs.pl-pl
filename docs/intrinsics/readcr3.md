@@ -16,39 +16,43 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 486a21506ea4b8c388dcf495f348987c3464ddc6
-ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
+ms.openlocfilehash: aa5e068d7e99e4d0dda1d68d9bfa68890379c728
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "42465257"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46448184"
 ---
 # <a name="readcr3"></a>__readcr3
-**Microsoft Specific**  
-  
- Odczytuje rejestru przedsiębiorstw CR3 i zwraca jego wartość.  
-  
-## <a name="syntax"></a>Składnia  
-  
-```  
-unsigned __int64 __readcr3(void);  
-```  
-  
-## <a name="return-value"></a>Wartość zwracana  
- Wartość rejestru przedsiębiorstw CR3.  
-  
-## <a name="requirements"></a>Wymagania  
-  
-|Wewnętrzne|Architektura|  
-|---------------|------------------|  
-|`__readcr3`|x86, x64|  
-  
- **Plik nagłówkowy** \<intrin.h >  
-  
-## <a name="remarks"></a>Uwagi  
- Tym wewnętrzna jest dostępna tylko w trybie jądra, a procedura jest dostępna jako funkcja wewnętrzna tylko.  
-  
-**END specyficzny dla Microsoft**  
-  
-## <a name="see-also"></a>Zobacz też  
- [Funkcje wewnętrzne kompilatora](../intrinsics/compiler-intrinsics.md)
+
+**Microsoft Specific**
+
+Odczytuje rejestru przedsiębiorstw CR3 i zwraca jego wartość.
+
+## <a name="syntax"></a>Składnia
+
+```
+unsigned __int64 __readcr3(void);
+```
+
+## <a name="return-value"></a>Wartość zwracana
+
+Wartość rejestru przedsiębiorstw CR3.
+
+## <a name="requirements"></a>Wymagania
+
+|Wewnętrzne|Architektura|
+|---------------|------------------|
+|`__readcr3`|x86, x64|
+
+**Plik nagłówkowy** \<intrin.h >
+
+## <a name="remarks"></a>Uwagi
+
+Tym wewnętrzna jest dostępna tylko w trybie jądra, a procedura jest dostępna jako funkcja wewnętrzna tylko.
+
+**END specyficzny dla Microsoft**
+
+## <a name="see-also"></a>Zobacz też
+
+[Funkcje wewnętrzne kompilatora](../intrinsics/compiler-intrinsics.md)

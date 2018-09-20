@@ -20,34 +20,36 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ed090057394c385dd12825864c5de9ff7d079e29
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: aabc88db4fcb2a484ca44feea8fcdf7727e23a16
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33345839"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46431414"
 ---
 # <a name="commonly-overridden-member-functions"></a>Powszechnie zastępowane funkcje członkowskie
-W poniższej tabeli wymieniono najbardziej prawdopodobne funkcje Członkowskie do przesłonięcia w Twojej `CDialog`-klasy.  
-  
-### <a name="commonly-overridden-member-functions-of-class-cdialog"></a>Powszechnie zastępowane funkcje Członkowskie cdialog — klasa  
-  
-|Funkcja członkowska|Komunikat, który odpowiada|Celem zastąpienia|  
-|---------------------|----------------------------|-----------------------------|  
-|`OnInitDialog`|**WM_INITDIALOG**|Zainicjuj formanty okna dialogowego.|  
-|`OnOK`|**BN_CLICKED** dla przycisku **IDOK**|Odpowiedz, gdy użytkownik kliknie przycisk OK.|  
-|`OnCancel`|**BN_CLICKED** dla przycisku **IDCANCEL**|Odpowiedz, gdy użytkownik kliknie przycisk Anuluj.|  
-  
- `OnInitDialog`, `OnOK`, i `OnCancel` są funkcje wirtualne. Aby je zastąpić, zastępowanie funkcja zadeklarować w klasie pochodnej okna dialogowego za pomocą [okna właściwości](/visualstudio/ide/reference/properties-window).  
-  
- `OnInitDialog` jest wywoływana tuż przed wyświetleniem okna dialogowego. Należy wywołać domyślnie `OnInitDialog` programu obsługi z zastąpienia — zwykle jako pierwszą akcją w obsłudze. Domyślnie `OnInitDialog` zwraca **TRUE** aby wskazać, że należy ustawić fokus do pierwszego formantu w oknie dialogowym.  
-  
- `OnOK` Zazwyczaj jest wyłączona dla niemodalne, ale nie modalnych okien dialogowych. Razie przesłonięcia tej obsługi dla modalne okno dialogowe, wywołaj wersja klasy podstawowej z zastąpienia — do zapewnienia, że `EndDialog` jest nazywany — lub zadzwoń `EndDialog` samodzielnie.  
-  
- `OnCancel` Zazwyczaj jest wyłączona dla Niemodalne okna dialogowe.  
-  
- Aby uzyskać więcej informacji o tych funkcjach Członkowskich zawiera klasa [cdialog —](../mfc/reference/cdialog-class.md) w *odwołania MFC* i dyskusji na [cykl życiowy okna dialogowego](../mfc/life-cycle-of-a-dialog-box.md).  
-  
-## <a name="see-also"></a>Zobacz też  
- [Okna dialogowe](../mfc/dialog-boxes.md)   
- [Powszechnie dodawane funkcje składowe](../mfc/commonly-added-member-functions.md)
+
+W poniższej tabeli wymieniono najbardziej prawdopodobne funkcje składowe do zastąpienia w swojej `CDialog`-klasy pochodnej.
+
+### <a name="commonly-overridden-member-functions-of-class-cdialog"></a>Powszechnie zastępowane funkcje Członkowskie klasy CDialog
+
+|Funkcja elementu członkowskiego|Komunikat, który odpowiada|Celem zastępowania|
+|---------------------|----------------------------|-----------------------------|
+|`OnInitDialog`|**/ / ZŁAP**|Zainicjuj formantów okna dialogowego.|
+|`OnOK`|**BN_CLICKED** dla przycisku **IDOK**|Należy odpowiedzieć, gdy użytkownik kliknie przycisk OK.|
+|`OnCancel`|**BN_CLICKED** dla przycisku **IDCANCEL**|Należy odpowiedzieć, gdy użytkownik kliknie przycisk Anuluj.|
+
+`OnInitDialog`, `OnOK`, i `OnCancel` funkcji wirtualnych. Można je przesłonić, deklarowanie funkcji przez nadrzędne w klasie pochodnej okna dialogowego za pomocą [okno właściwości](/visualstudio/ide/reference/properties-window).
+
+`OnInitDialog` jest wywoływana tuż przed, zostanie wyświetlone okno dialogowe. Wartość domyślna, należy wywołać `OnInitDialog` programu obsługi z przesłonięcia — zwykle jako pierwszą akcją w obsłudze. Domyślnie `OnInitDialog` zwraca **TRUE** do wskazania, że fokus powinna być równa pierwszą kontrolkę w oknie dialogowym.
+
+`OnOK` Zazwyczaj jest wyłączona dla niemodalne, ale nie modalne okna dialogowe. Jeśli ten program obsługi dla modalne okno dialogowe, należy wywołać wersję klasy podstawowej z przesłonięcia — do zapewnienia, że `EndDialog` nosi nazwę — lub zadzwoń `EndDialog` samodzielnie.
+
+`OnCancel` Zazwyczaj jest wyłączona dla Niemodalne okna dialogowe.
+
+Aby uzyskać więcej informacji o tych funkcjach Członkowskich, zobacz klasę [CDialog](../mfc/reference/cdialog-class.md) w *odwołanie MFC* i dyskusji na temat [cykl życiowy okna dialogowego](../mfc/life-cycle-of-a-dialog-box.md).
+
+## <a name="see-also"></a>Zobacz też
+
+[Okna dialogowe](../mfc/dialog-boxes.md)<br/>
+[Powszechnie dodawane funkcje składowe](../mfc/commonly-added-member-functions.md)

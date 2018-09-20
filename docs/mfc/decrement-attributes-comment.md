@@ -1,5 +1,5 @@
 ---
-title: --Atrybutów komentarz | Dokumentacja firmy Microsoft
+title: — Komentarz atrybuty | Dokumentacja firmy Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,26 +17,28 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 44b34c2e2d22d0a0a2feb15f6bf2793b68dc7042
-ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
+ms.openlocfilehash: 04288cb4482ad477d0ddf69f621afc0b12b3bf93
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/25/2018
-ms.locfileid: "36929572"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46414852"
 ---
 # <a name="-attributes-comment"></a>Komentarz // Attributes
-`// Attributes` Sekcja deklaracji klasy MFC zawiera publiczne atrybuty lub właściwości obiektu. Zazwyczaj są to zmiennych Członkowskich lub funkcje Get i Set. Funkcji "Get" i "Set" może lub nie mogą być wirtualne. Funkcji "Get" są zwykle **const**, ponieważ w większości przypadków ma efekty uboczne. Elementy te są zwykle publiczne; atrybuty chronionego i prywatnych zwykle znajdują się w sekcji implementacji.  
-  
- W przykładzie z klasy `CStdioFile`w obszarze [przykład komentarzy](../mfc/an-example-of-the-comments.md), lista zawiera jeden zmiennej członkowskiej, *m_pStream*. Klasa `CDC` Wyświetla listę członków prawie 20 w ramach tego komentarza.  
-  
+
+`// Attributes` Część deklaracji klasy MFC zawiera publiczny atrybutów (lub właściwości) obiektu. Zazwyczaj są to zmiennych składowych lub funkcje Get/Set. Funkcji "Get" i "Set" mogą być lub może nie być wirtualne. Funkcje "Get" są zwykle **const**, ponieważ w większości przypadków nie mają skutki uboczne. Te elementy członkowskie są zwykle publiczne; atrybuty chronionego i prywatnych, zwykle znajdują się w sekcji implementacji.
+
+W przykładzie z klasy `CStdioFile`w obszarze [przykład komentarzy](../mfc/an-example-of-the-comments.md), lista zawiera jedną zmienną elementu członkowskiego, *m_pStream*. Klasa `CDC` Wyświetla niemal 20 członków w ramach tego komentarza.
+
 > [!NOTE]
->  Duży klas, takich jak `CDC` i `CWnd`, może mieć wiele elementów członkowskich, które, po prostu lista wszystkie atrybuty w jednej grupie nie może dodać wiele przejrzystości. W takich przypadkach biblioteki klas używa innych uwag nagłówkami do dalszego odróżniać elementów członkowskich. Na przykład `CDC` używa `// Device-Context Functions`, `// Drawing Tool Functions`, `// Drawing Attribute Functions`itd. Grupy, które reprezentują atrybuty zastosują się zwykle składnia opisane powyżej. Wiele klas OLE ma sekcji implementacja `// Interface Maps`.  
-  
-## <a name="see-also"></a>Zobacz też  
- [Korzystanie z plików źródłowych MFC](../mfc/using-the-mfc-source-files.md)   
- [Przykład komentarzy](../mfc/an-example-of-the-comments.md)   
- [Implementacja — komentarz](../mfc/decrement-implementation-comment.md)   
- [Komentarz / / constructors](../mfc/decrement-constructors-comment.md)   
- [Komentarz / / Operations](../mfc/decrement-operations-comment.md)   
- [Komentarz / / Overridables](../mfc/decrement-overridables-comment.md)
+>  Duże klasy takie jak `CDC` i `CWnd`, może mieć wiele elementów członkowskich, które po prostu wyświetlanie listy wszystkich atrybutów w jednej grupie nie wprowadziłaby dodatkowej zbyt wiele, by przejrzystości. W takich przypadkach biblioteki klas używa innych komentarzy jako nagłówki do dalszego odróżnić elementów członkowskich. Na przykład `CDC` używa `// Device-Context Functions`, `// Drawing Tool Functions`, `// Drawing Attribute Functions`i nie tylko. Grupy, które reprezentują atrybuty są zgodne z typowej składni opisane powyżej. Wiele klas OLE ma sekcji wdrożenia o nazwie `// Interface Maps`.
+
+## <a name="see-also"></a>Zobacz też
+
+[Korzystanie z plików źródłowych MFC](../mfc/using-the-mfc-source-files.md)<br/>
+[Przykład komentarzy](../mfc/an-example-of-the-comments.md)<br/>
+[Komentarz / / Implementation](../mfc/decrement-implementation-comment.md)<br/>
+[Komentarz / / constructors](../mfc/decrement-constructors-comment.md)<br/>
+[Komentarz / / Operations](../mfc/decrement-operations-comment.md)<br/>
+[Komentarz / / Overridables](../mfc/decrement-overridables-comment.md)
 

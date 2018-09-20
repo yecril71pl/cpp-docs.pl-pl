@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 73047962daf32eae6c01bb0ea6f6688a83e19402
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: 0539275a09a64e31a9ecad17cab899368701e353
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45715536"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46412219"
 ---
 # <a name="idlmodule"></a>idl_module
 
@@ -46,31 +46,31 @@ function declaration
 
 ### <a name="parameters"></a>Parametry
 
-*Nazwa*  
+*Nazwa*<br/>
 Zdefiniowana przez użytkownika nazwa dla bloku kodu, który będzie wyświetlany w pliku .idl.
 
-*Parametr DllName*  
+*Parametr DllName*<br/>
 (Opcjonalnie) Plik .dll, który zawiera eksportu.
 
-*uuid*  
+*uuid*<br/>
 (Opcjonalnie) Unikatowy identyfikator.
 
-*helpstring*  
+*helpstring*<br/>
 (Opcjonalnie) Ciąg znaków używany do opisania biblioteki typów.
 
-*helpstringcontext*  
+*helpstringcontext*<br/>
 (Opcjonalnie) Identyfikator tematu pomocy w pliku hlp lub chm.
 
-*helpcontext*  
+*helpcontext*<br/>
 (Opcjonalnie) Identyfikator pomocy dla tego typu biblioteki.
 
-*hidden*  
+*hidden*<br/>
 (Opcjonalnie) Parametr, który zapobiega wyświetlaniu w bibliotece. Zobacz [ukryte](/windows/desktop/Midl/hidden) atrybutu MIDL, aby uzyskać więcej informacji.
 
-*restricted*  
+*restricted*<br/>
 (Opcjonalnie) Elementy członkowskie biblioteki nie można wywołać arbitralnie. Zobacz [ograniczeniami](/windows/desktop/Midl/restricted) atrybutu MIDL, aby uzyskać więcej informacji.
 
-*Deklaracja funkcji*  
+*Deklaracja funkcji*<br/>
 Funkcja, która będą definiować.
 
 ## <a name="remarks"></a>Uwagi
@@ -111,6 +111,6 @@ Aby uzyskać więcej informacji, zobacz [konteksty atrybutu](../windows/attribut
 
 ## <a name="see-also"></a>Zobacz też
 
-[Atrybuty IDL](../windows/idl-attributes.md)  
-[Oddzielne atrybuty](../windows/stand-alone-attributes.md)  
+[Atrybuty IDL](../windows/idl-attributes.md)<br/>
+[Oddzielne atrybuty](../windows/stand-alone-attributes.md)<br/>
 [entry](../windows/entry.md)  

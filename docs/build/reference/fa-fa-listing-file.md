@@ -26,12 +26,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 03b2f4e746632cc91b652ca76587ddad18afd165
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: c9f1d205eff155b628081c5bc615570c44a88f08
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45717967"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46412811"
 ---
 # <a name="fa-fa-listing-file"></a>/FA, /Fa (Umieszczanie pliku na liście)
 
@@ -107,7 +107,7 @@ CL /FAcs HELLO.CPP
 
 ## <a name="see-also"></a>Zobacz też
 
-[Plik wyjściowy (/ F) opcje](../../build/reference/output-file-f-options.md)
-[opcje kompilatora](../../build/reference/compiler-options.md)<br/>
+[Plik wyjściowy (/F), opcje](../../build/reference/output-file-f-options.md)<br/>
+[Opcje kompilatora](../../build/reference/compiler-options.md)<br/>
 [Ustawianie opcji kompilatora](../../build/reference/setting-compiler-options.md)<br/>
 [Określanie nazwy ścieżki](../../build/reference/specifying-the-pathname.md)

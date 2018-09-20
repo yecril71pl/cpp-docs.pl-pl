@@ -22,28 +22,31 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 59600343a06a2c3c0d4f5b55efadaa09c43452d9
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 71a02b89e7b2098f8a125d1477cff2a0d1cda30a
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46067704"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46429971"
 ---
 # <a name="extent-class-c-amp"></a>extent — Klasa (C++ AMP)
+
 Reprezentuje wektor *N* wartości całkowitych, które określają granice przestrzeni *N*-wymiarowej, która pochodzi od 0. Wartości w wektorze są uporządkowane od najbardziej do najmniej znaczących.
 
 ### <a name="syntax"></a>Składnia
 
-```  
+```
 template <int _Rank>
 class extent;
-```  
+```
 
 ### <a name="parameters"></a>Parametry
+
 *_Rank*<br/>
 Ranga `extent` obiektu.
 
 ## <a name="requirements"></a>Wymagania
+
 **Nagłówek:** amp.h
 
 **Namespace:** współbieżności
@@ -80,7 +83,6 @@ Ranga `extent` obiektu.
 |[operator=](#operator_eq)|Kopiuje zawartość innego `extent` obiektu do wskazanego.|
 |[operator-=](#operator_min_eq)|Odejmuje określoną liczbę od każdego elementu obiektu `extent` obiektu.|
 
-
 ### <a name="public-constants"></a>Publiczne stałe
 
 |Nazwa|Opis|
@@ -88,8 +90,8 @@ Ranga `extent` obiektu.
 |[Rank — stała](#rank)|Zwraca rangę obiektu `extent` obiektu.|
 
 ## <a name="inheritance-hierarchy"></a>Hierarchia dziedziczenia
-`extent`  
 
+`extent`
 
 ## <a name="contains"></a> zawiera
 
@@ -97,15 +99,17 @@ Wskazuje, czy określony [indeksu](index-class.md) wartość znajduje się w obi
 
 ### <a name="syntax"></a>Składnia
 
-```  
+```
 bool contains(const index<rank>& _Index) const restrict(amp,cpu);
-```  
+```
 
 ### <a name="parameters"></a>Parametry
+
 *Parametr _Index*<br/>
 `index` Wartość do sprawdzenia.
 
 ### <a name="return-value"></a>Wartość zwracana
+
 `true` Jeśli określony `index` wartość jest zawarta w `extent` obiektu; w przeciwnym razie `false`.
 
 ##  <a name="ctor"></a> zakres
@@ -114,16 +118,17 @@ Inicjuje nowe wystąpienie klasy "zakresu".
 
 ### <a name="syntax"></a>Składnia
 
-```  
+```
 extent() restrict(amp,cpu);
 extent(const extent<_Rank>& _Other) restrict(amp,cpu);
 explicit extent(int _I) restrict(amp,cpu);
 extent(int _I0,  int _I1) restrict(amp,cpu);
 extent(int _I0,  int _I1, int _I2) restrict(amp,cpu);
 explicit extent(const int _Array[_Rank])restrict(amp,cpu);
-```  
+```
 
 ### <a name="parameters"></a>Parametry
+
 *_Array*<br/>
 Tablica `_Rank` liczb całkowitych, które służy do tworzenia nowego `extent` obiektu.
 
@@ -143,6 +148,7 @@ Długość najmniej znaczącego wymiaru.
 `extent` Obiektu, na którym nowym `extent` opiera się obiekt.
 
 ## <a name="remarks"></a>Uwagi
+
 Konstruktor bezparametrowy inicjuje `extent` obiekt, który ma trójwymiarowy.
 
 Jeśli tablica jest używana do konstruowania `extent` obiektu, długość tablicy musi odpowiadać randze obiektu `extent` obiektu.
@@ -153,15 +159,17 @@ Oblicza moduł (resztę) każdego elementu w zakresie, gdy ten element jest dzie
 
 ### <a name="syntax"></a>Składnia
 
-```  
+```
 extent<_Rank>& operator%=(int _Rhs) restrict(cpu, direct3d);
-```  
+```
 
 ### <a name="parameters"></a>Parametry
+
 *_Rhs*<br/>
 Numer, aby znaleźć moduł.
 
 ### <a name="return-value"></a>Wartość zwracana
+
 `extent` Obiektu.
 
 ##  <a name="operator_star_eq"></a> operator * =
@@ -170,15 +178,17 @@ Mnoży każdy element w obiekcie "zakres" przez określoną liczbę.
 
 ### <a name="syntax"></a>Składnia
 
-```  
+```
 extent<_Rank>& operator*=(int _Rhs) restrict(amp,cpu);
-```  
+```
 
 ### <a name="parameters"></a>Parametry
+
 *_Rhs*<br/>
 Liczbę Aby pomnożyć.
 
 ### <a name="return-value"></a>Wartość zwracana
+
 `extent` Obiektu.
 
 ## <a name="operator_add"></a> operator +
@@ -187,15 +197,17 @@ Zwraca nowy `extent` obiekt utworzony przez dodanie odpowiadających im `index` 
 
 ### <a name="syntax"></a>Składnia
 
-```  
+```
 extent<_Rank> operator+(const index<_Rank>& _Rhs) restrict(amp,cpu);
-```  
+```
 
 ### <a name="parameters"></a>Parametry
+
 *_Rhs*<br/>
 `index` Obiekt, który zawiera elementy do dodania.
 
 ### <a name="return-value"></a>Wartość zwracana
+
 Nowy `extent` obiektu.
 
 ##  <a name="operator_add_add"></a> operator ++
@@ -204,12 +216,13 @@ Zwiększa każdy element obiektu "zakres".
 
 ### <a name="syntax"></a>Składnia
 
-```  
+```
 extent<_Rank>& operator++() restrict(amp,cpu);
 extent<_Rank> operator++(int)restrict(amp,cpu);
-```  
+```
 
 ### <a name="return-value"></a>Wartość zwracana
+
 Dla operatora prefiksowego `extent` obiektu (`*this`). Dla operatora sufiksowego nowy `extent` obiektu.
 
 ##  <a name="operator_add_eq"></a> += — operator
@@ -218,17 +231,19 @@ Dodaje określoną liczbę do każdego elementu obiektu "zakres".
 
 ### <a name="syntax"></a>Składnia
 
-```  
+```
 extent<_Rank>& operator+=(const extent<_Rank>& _Rhs) restrict(amp,cpu);
 extent<_Rank>& operator+=(const index<_Rank>& _Rhs) restrict(amp,cpu);
 extent<_Rank>& operator+=(int _Rhs) restrict(amp,cpu);
-```  
+```
 
 ### <a name="parameters"></a>Parametry
+
 *_Rhs*<br/>
 Liczba, indeks lub zakres do dodania.
 
 ### <a name="return-value"></a>Wartość zwracana
+
 Wartość wynikowa `extent` obiektu.
 
 ##  <a name="operator_min"></a> operator-
@@ -237,15 +252,17 @@ Tworzy nową `extent` obiektu przez odjęcie każdego elementu w określonym `in
 
 ### <a name="syntax"></a>Składnia
 
-```  
+```
 extent<_Rank> operator-(const index<_Rank>& _Rhs) restrict(amp,cpu);
-```  
+```
 
 ### <a name="parameters"></a>Parametry
+
 *_Rhs*<br/>
 `index` Obiekt, który zawiera elementy do odjęcia.
 
 ### <a name="return-value"></a>Wartość zwracana
+
 Nowy `extent` obiektu.
 
 ##  <a name="operator_min_min"></a> operator--
@@ -254,12 +271,13 @@ Zmniejsza o jeden każdy element w obiekcie "zakresu".
 
 ### <a name="syntax"></a>Składnia
 
-```  
+```
 extent<_Rank>& operator--() restrict(amp,cpu);
 extent<_Rank> operator--(int)restrict(amp,cpu);
-```  
+```
 
 ### <a name="return-value"></a>Wartość zwracana
+
 Dla operatora prefiksowego `extent` obiektu (`*this`). Dla operatora sufiksowego nowy `extent` obiektu.
 
 ##  <a name="operator_div_eq"></a> operator / =
@@ -268,15 +286,17 @@ Dzieli każdy element w obiekcie "zakres" przez określoną liczbę.
 
 ### <a name="syntax"></a>Składnia
 
-```  
+```
 extent<_Rank>& operator/=(int _Rhs) restrict(amp,cpu);
-```  
+```
 
 ### <a name="parameters"></a>Parametry
+
 *_Rhs*<br/>
 Liczba do podzielenia przez.
 
 ### <a name="return-value"></a>Wartość zwracana
+
 `extent` Obiektu.
 
 ##  <a name="operator_min_eq"></a> operator-=
@@ -285,17 +305,19 @@ Odejmuje określoną liczbę od każdego elementu obiektu "zakres".
 
 ### <a name="syntax"></a>Składnia
 
-```  
+```
 extent<_Rank>& operator-=(const extent<_Rank>& _Rhs) restrict(amp,cpu);
 extent<_Rank>& operator-=(const index<_Rank>& _Rhs) restrict(amp,cpu);
 extent<_Rank>& operator-=(int _Rhs) restrict(amp,cpu);
-```  
+```
 
 ### <a name="parameters"></a>Parametry
+
 *_Rhs*<br/>
 Liczba odejmowana.
 
 ### <a name="return-value"></a>Wartość zwracana
+
 Wartość wynikowa `extent` obiektu.
 
 ##  <a name="operator_eq"></a> operator =
@@ -304,32 +326,37 @@ Kopiuje zawartość innego obiektu "zakres" do tego.
 
 ### <a name="syntax"></a>Składnia
 
-```  
+```
 extent<_Rank>& operator=(const extent<_Rank>& _Other) restrict(amp,cpu);
-```  
+```
 
 ### <a name="parameters"></a>Parametry
+
 *_Inne*<br/>
 `extent` Obiektu do skopiowania.
 
 ### <a name="return-value"></a>Wartość zwracana
+
 Odwołanie do `extent` obiektu.
 
 ##  <a name="operator_at"></a> Extent::operator \[\]
+
 Zwraca element, który jest umieszczony pod określonym indeksem.
 
 ### <a name="syntax"></a>Składnia
 
-```  
+```
 int operator[](unsigned int _Index) const restrict(amp,cpu);
 int& operator[](unsigned int _Index) restrict(amp,cpu);
-```  
+```
 
 ### <a name="parameters"></a>Parametry
+
 *Parametr _Index*<br/>
 Liczba całkowita z zakresu od 0 do rangi minus 1.
 
 ### <a name="return-value"></a>Wartość zwracana
+
 Element, który jest umieszczony pod określonym indeksem.
 
 ##  <a name="rank_constant"></a> Ranga
@@ -338,9 +365,9 @@ Przechowuje rangę obiektu "zakres".
 
 ### <a name="syntax"></a>Składnia
 
-```  
+```
 static const int rank = _Rank;
-```  
+```
 
 ##  <a name="size"></a> Rozmiar
 
@@ -348,9 +375,9 @@ Zwraca całkowity rozmiar liniowy `extent` obiektu (w jednostkach elementów).
 
 ### <a name="syntax"></a>Składnia
 
-```  
+```
 unsigned int size() const restrict(amp,cpu);
-```  
+```
 
 ## <a name="tile"></a> Kafelek
 
@@ -365,8 +392,9 @@ tiled_extent<_Dim0, _Dim1> tile() const ;
 
 template <int _Dim0, int _Dim1, int _Dim2>
 tiled_extent<_Dim0, _Dim1, _Dim2> tile() const ;
-```  
+```
 ### <a name="parameters"></a>Parametry
+
 *_Dim0*<br/>
 Najbardziej znaczący składnik w zakresie poddanym fragmentacji.
 *_Dim1*<br/>

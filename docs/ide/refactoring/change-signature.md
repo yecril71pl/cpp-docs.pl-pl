@@ -1,5 +1,5 @@
 ---
-title: Zmienianie podpisu | Dokumentacja firmy Microsoft
+title: Zmień sygnaturę | Dokumentacja firmy Microsoft
 ms.custom: ''
 ms.date: 11/16/2016
 ms.technology:
@@ -10,70 +10,70 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4f913f0b3065b136f626ef15cc2a77dce8d0254f
-ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
+ms.openlocfilehash: 0007cf50eafa7b61e48b550172eb2d316270c61f
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "33335094"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46448336"
 ---
-# <a name="change-signature"></a>Zmiana podpisu
+# <a name="change-signature"></a>Zmień podpis
 **Co:** umożliwia modyfikowanie parametrów funkcji.
 
-**Kiedy:** chcesz zmienić kolejność, dodać, usunąć ani zmodyfikować parametrów funkcji, które jest obecnie używana w różnych lokalizacjach.  
+**Kiedy:** chcesz zmienić kolejność, dodać, usunąć lub zmodyfikować parametrów funkcji, które jest obecnie używana w różnych lokalizacjach.
 
-**Dlaczego:** można ręcznie samodzielnie, zmienić te parametry i następnie odnaleźć wszystkie wywołania tej funkcji i zmień je jeden po drugim, ale który może prowadzić do błędów.  To narzędzie refaktoryzacji będzie automatycznie wykonywać zadania.
+**Dlaczego:** można ręcznie samodzielnie, zmienić te parametry i następnie Znajdź wszystkie wywołania tej funkcji i zmień je pojedynczo, ale która może prowadzić do błędów.  To narzędzie refaktoryzacji będzie automatycznie wykonywać zadania.
 
 **Jak:**
 
-1. Umieść kursor tekst lub myszy wewnątrz nazwę metody, aby zmodyfikować lub jednego z jego użycia:
+1. Umieść kursor tekstu lub myszy w nazwie metody, aby zmodyfikować lub jednego z jego użycia:
 
    ![Wyróżniony kod](images/changesignature_highlight.png)
 
 1. Następnie wykonaj jedną z następujących czynności:
    * **Keyboard**
-     * Naciśnij klawisz **Ctrl + R**, następnie **Ctrl + O**.  (Należy pamiętać, że skrót klawiaturowy mogą być różne oparte na profil, który wybrano).
-     * Naciśnij klawisz **Ctrl +.** Aby wyzwalacz **szybkie akcje i Refaktoryzacje** menu i wybierz **zmiany sygnatury** z menu kontekstowego.
+     * Naciśnij klawisz **Ctrl + R**, następnie **klawisze Ctrl + O**.  (Należy pamiętać, że skrót klawiaturowy może różnić się w oparciu o profilu, który wybrano.)
+     * Naciśnij klawisz **Ctrl +.** wyzwalacz **szybkie akcje i Refaktoryzacje** menu, a następnie wybierz **Zmień podpis** z menu kontekstowego.
    * **Myszy**
-     * Wybierz **Edytuj > Refaktoryzuj > zmiany kolejności parametrów**.
-     * Kliknij prawym przyciskiem myszy kod, wybierz **szybkie akcje i Refaktoryzacje** menu i wybierz **zmiany sygnatury** z menu kontekstowego.
+     * Wybierz **Edytuj > Refaktoryzuj > Zmień kolejność parametrów**.
+     * Kliknij prawym przyciskiem myszy ten kod, wybierz **szybkie akcje i Refaktoryzacje** menu, a następnie wybierz **Zmień podpis** z menu kontekstowego.
 
-1. W **Zmienianie podpisu** okna dialogowego, które pojawia się, umożliwia przycisków po prawej stronie Zmień podpis metody:
+1. W **Zmień podpis** okna dialogowego, które się pojawi, umożliwia przyciski po prawej stronie Zmień sygnaturę metody:
 
-   ![Zmiana podpisu w oknie dialogowym](images/changesignature_dialog.png)
+   ![Zmień podpis w oknie dialogowym](images/changesignature_dialog.png)
 
    | Przycisk | Opis
    | ------ | ---
-   | **Góra/dół**    | Przenieś zaznaczony parametr w górę i w dół listy
-   | **Dodaj**        | Dodaj nowy parametr do listy
-   | **Usuń**     | Usuń zaznaczony parametr z listy
-   | **Modyfikowanie**     | Zmodyfikuj wybrany parametr, zmieniając jej typ, nazwa i czy jest opcjonalny, a wartością wprowadzony, co będzie
+   | **Góra/dół**    | Przenieś wybrany parametr w górę i w dół listy
+   | **Add**        | Dodaj nowy parametr do listy
+   | **Usuń**     | Usuń wybrany parametr z listy
+   | **Modyfikowanie**     | Zmodyfikuj wybrany parametr, zmieniając jej typ nazwy i czy jest to opcjonalne, a wartością wprowadzonego kodu, co będzie
    | **Przywróć**     | Przywrócić oryginalny stan wybrany parametr
    | **Przywróć wszystkie** | Przywróć wszystkie parametry do pierwotnego stanu
 
    > [!TIP]
-   > Użyj **Pomiń podgląd zmian odwołań przypadku potwierdzenia wszystkich odwołań** pole wyboru, aby zmiany natychmiast bez wyświetlanie pierwszego okna podglądu.
+   > Użyj **odwołania (wersja zapoznawcza) Pomiń zmieni się, gdy przypadku potwierdzenia wszystkich odwołań** pole wyboru, aby zmiany od razu bez wyświetlanie pierwsze okno podglądu.
 
    Podczas dodawania lub modyfikowania parametru, zostanie wyświetlony **Dodaj parametr** lub **Edytuj parametr** okna.
 
    ![Dodawanie/Modyfikowanie parametrów](images/changesignature_addmodify.png)
 
-   W tym miejscu można wykonywać następujące czynności:
+   W tym miejscu możesz wykonać następujące czynności:
 
    | Wpis | Opis
    | ----- | ---
-   | **Typ**               | Typ parametru (int, kliknij dwukrotnie, float, itp.)
+   | **Typ**               | Typ parametru (int, dwukrotnie, float, itp.)
    | **Nazwa**               | Nazwa parametru
-   | **Opcjonalny parametr** | Sprawia, że parametr opcjonalnie określić
-   | **Wprowadzony wartość**     | Wartość wstawiana do żadnych wywołań funkcji, której nie określono parametru (dotyczy tylko **Dodaj**)
-   | **Wartość domyślna**      | Wartość używana przez funkcję, jeśli element wywołujący nie określił (dotyczy tylko **następujące parametry opcjonalne**)
+   | **Parametr opcjonalny** | Sprawia, że parametr opcjonalnie określić
+   | **Wartość wprowadzonego kodu**     | Wartość wstawiony wszelkie wywołania funkcji, gdy parametr nie jest określony (prawidłowe tylko dla **Dodaj**)
+   | **Wartość domyślna**      | Wartość używana przez funkcję, jeśli nie określono elementu wywołującego (prawidłowe tylko dla **następujące parametry opcjonalne**)
 
-1. Użyj **zakres wyszukiwania** listy rozwijanej, aby wybrać, jeśli zmiany zostaną zastosowane do projektu lub całego rozwiązania.
+1. Użyj **zakres wyszukiwania** listy rozwijanej wybierz, jeśli zmiany zostaną zastosowane do projektu lub całe rozwiązanie.
 
-1. Po zakończeniu naciśnij klawisz **OK** przycisk, aby wprowadzić zmiany.  Upewnij się, że żądanej zmian odpowiednio.  Użyj pól wyboru w górnej połowie okna, aby włączyć lub wyłączyć, zmiana nazwy każdego elementu.
+1. Gdy skończysz, naciśnij klawisz **OK** , aby wprowadzić zmiany.  Upewnij się, że żądana jest zmieniana odpowiednio.  Użyj pól wyboru w górnej połowie okna, aby włączyć lub wyłączyć, zmiana nazwy dowolnego elementu.
 
-   ![Zmiana podpisu w wersji zapoznawczej](images/changesignature_preview.png)
+   ![Zmienianie podpisu (wersja zapoznawcza)](images/changesignature_preview.png)
 
-1. Jeśli wszystko wygląda dobrze, kliknij przycisk **Zastosuj** przycisku oraz funkcji zostanie zmieniony w kodzie źródłowym.
+1. Gdy wszystko będzie wyglądać dobrze, kliknij przycisk **Zastosuj** przycisk, a funkcja zostanie zmieniona w kodzie źródłowym.
 
-   ![Zmiana wyniku podpisu](images/changesignature_result.png)
+   ![Zmień podpis wynik](images/changesignature_result.png)

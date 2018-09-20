@@ -12,22 +12,23 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 02492b228b4bb47a800955f078a59ce680312a87
-ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
+ms.openlocfilehash: dc5b702b17e01bb8d4625a837abdb71086113e68
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33689457"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46415905"
 ---
 # <a name="28-directive-binding"></a>2.8 Powiązania dyrektywy
-Wiązania dynamicznego dyrektyw muszą być zgodne z następującymi zasadami:  
-  
--   **Dla**, **sekcje**, **pojedynczego**, **wzorca**, i **bariery** dyrektywy powiązać dynamicznie otaczającej **równoległych**, jeśli istnieje, niezależnie od wartości dowolnego **Jeśli** klauzuli, która może znajdować się na tej dyrektywy. Jeśli nie równoległego regionu nie jest aktualnie wykonywane, dyrektywy są wykonywane przez zespół składa się z głównego wątku.  
-  
--   **Uporządkowane** dyrektywy wiąże dynamicznie otaczającego **dla**.  
-  
--   **Atomic** dyrektywy wymusza wyłącznego dostępu w odniesieniu do **atomic** dyrektywy w wszystkie wątki, nie tylko zespołu.  
-  
--   **Krytyczne** dyrektywy wymusza wyłącznego dostępu w odniesieniu do **krytyczne** dyrektywy w wszystkie wątki, nie tylko zespołu.  
-  
--   Dyrektywy może nigdy nie mają powiązań jakiejkolwiek dyrektywy poza najbardziej dynamicznie otaczającej **równoległych**.
+
+Dynamiczne powiązanie dyrektyw określających muszą być zgodne z następującymi zasadami:
+
+- **Dla**, **sekcje**, **pojedynczego**, **wzorca**, i **barierę** dyrektywy powiązać dynamicznie otaczający **równoległe**, jeśli taki istnieje, niezależnie od wartości dowolnych **Jeśli** klauzula, która może znajdować się w tej dyrektywy. Jeśli obecnie jest wykonywana nie równoległego regionu, dyrektywy są wykonywane przez zespół składa się z głównego wątku.
+
+- **Uporządkowane** dyrektywy wiąże dynamicznie otaczający **dla**.
+
+- **Atomic** dyrektywy wymusza wyłącznego dostępu w odniesieniu do **atomic** dyrektywy w wszystkie wątki, nie tylko zespół.
+
+- **Krytyczne** dyrektywy wymusza wyłącznego dostępu w odniesieniu do **krytyczne** dyrektywy w wszystkie wątki, nie tylko zespół.
+
+- Dyrektywy może nigdy nie mają powiązań każdej dyrektywy poza najbardziej dynamicznie otaczający **równoległe**.

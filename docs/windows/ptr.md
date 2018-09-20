@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 99d3938e2baa3beb7edc1147716b5feeaa319117
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 1a8cede5295ee6da15d2a53218b4b5b3272020b2
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43219831"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46406766"
 ---
 # <a name="ptr"></a>ptr
 
@@ -57,7 +57,7 @@ Aby uzyskać więcej informacji na temat konteksty atrybutu zobacz [konteksty at
 
 ## <a name="see-also"></a>Zobacz też
 
-[Atrybuty IDL](../windows/idl-attributes.md)  
-[Atrybuty interfejsu](../windows/interface-attributes.md)  
-[Atrybuty metody](../windows/method-attributes.md)  
+[Atrybuty IDL](../windows/idl-attributes.md)<br/>
+[Atrybuty interfejsu](../windows/interface-attributes.md)<br/>
+[Atrybuty metody](../windows/method-attributes.md)<br/>
 [Atrybuty Typedef, Enum, Union oraz Struct](../windows/typedef-enum-union-and-struct-attributes.md)  

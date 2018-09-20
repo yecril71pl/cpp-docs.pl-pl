@@ -1,5 +1,5 @@
 ---
-title: D. Zgodnie z harmonogramem klauzuli | Dokumentacja firmy Microsoft
+title: D. Użycie klauzuli harmonogramu | Dokumentacja firmy Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -12,80 +12,81 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8987c4505adfde8534d57346cd6725231efa022f
-ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
+ms.openlocfilehash: d40b22a5e724f8d8b587e2928d3d1305a7fa807a
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33694943"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46446147"
 ---
-# <a name="d-using-the-schedule-clause"></a>D. Zgodnie z harmonogramem — klauzula
-Równoległego regionu ma co najmniej jeden bariery na jej końcu i mogą mieć dodatkowe bariery w niej. W każdej bariery ostatni wątek odebranie należy poczekać innych członków zespołu. Aby zminimalizować czas oczekiwania, pracy udostępniony powinien zostać przekazany tak, aby wszystkie wątki przyjeździe zapory w o tym samym czasie. Jeśli niektóre z udostępnionego pracy jest zawarta w **dla** konstrukcje, `schedule` klauzuli może służyć do tego celu.  
-  
- W przypadku wielokrotnego odwołania do tego samego obiektów, wybór harmonogram **dla** konstrukcji mogą być określone głównie przez właściwości układu pamięci, takich jak obecność i rozmiar pamięci podręcznej oraz określa, czy dostęp do pamięci czas jest wyrównana lub niejednorodnej. Takie zagadnienia może być najlepszym podejściem każdy wątek spójnie odwoływać się do tego samego zestawu elementów tablicy w szeregu pętle, nawet jeśli niektóre wątki są przypisane stosunkowo mniej pracy w niektórych pętli. Można to zrobić za pomocą **statycznych** harmonogramu o tym samym zakresem dla wszystkich pętle. W poniższym przykładzie, należy pamiętać, że zero jest używany jako dolnej granicy w drugiej pętli, nawet jeśli **k** będzie bardziej naturalne harmonogramu nie są istotne.  
-  
-```  
-#pragma omp parallel  
-{  
-#pragma omp for schedule(static)  
-  for(i=0; i<n; i++)  
-    a[i] = work1(i);  
-#pragma omp for schedule(static)  
-  for(i=0; i<n; i++)  
-    if(i>=k) a[i] += work2(i);  
-}  
-```  
-  
- W pozostałych przykładach, zakłada się, że pamięć dostępu nie jest dominującą brany pod uwagę i, chyba że określono inaczej, że wszystkie wątki będą otrzymywać można porównywać pod względem zasobów obliczeniowych. W takich przypadkach wybór harmonogram **dla** konstrukcja zależy od wszystkich udostępnionych pracy, którą ma zostać wykonane między najbliższy poprzedzający bariery i bariery domniemanych zamknięcia lub najbliższej kolejnych bariery, jeśli istnieje `nowait` klauzuli. Dla każdego rodzaju harmonogram krótkich przykładzie pokazano, jak mogą być najlepszym rozwiązaniem jest tego typu harmonogramu. Krótkie omówienie następuje każdy przykład.  
-  
- **Statycznych** harmonogramu jest również w przypadku najprostszym równoległego regionu zawierający pojedynczy **dla** utworzenia, a każda iteracja wymaga takiego poziomu w pracy.  
-  
-```  
-#pragma omp parallel for schedule(static)  
-for(i=0; i<n; i++) {  
-  invariant_amount_of_work(i);  
-}  
-```  
-  
- **Statycznych** harmonogram charakteryzuje się właściwości którym każdy wątek pobiera mniej więcej taką samą liczbę iteracji jako innego wątku, przy czym każdy wątek można niezależnie iteracji przypisane do niej. W związku z tym synchronizacja nie jest wymagana do dystrybucji pracy i przy założeniu, że każda iteracja wymaga tego samego ilość pracy wszystkie wątki powinno zostać zakończone na o tym samym czasie.  
-  
- Dla zespołu `p` let wątków, *ceiling(n/p)* być liczbą całkowitą *q*, który spełnia *n = p\*q - r* z *0 < = r < p* . Jedna implementacja **statycznych** planowanie dla tego przykładu przypisywanej *q* iteracji, aby pierwszy *p-1* wątków, i *q-r* iteracji, aby ostatni wątek.  Przypisać inną implementację dopuszczalne *q* iteracji, aby pierwszy *p-r* wątków, i *q-1* iteracji, aby pozostały *r*wątków. Przedstawiono to, dlaczego programu nie należy polegać na szczegóły konkretnej implementacji.  
-  
- **Dynamiczne** harmonogramu jest odpowiednia w przypadku **dla** skonstruować z iteracji wymagają różnych lub nawet nieprzewidywalne ilości pracy.  
-  
-```  
-#pragma omp parallel for schedule(dynamic)  
-  for(i=0; i<n; i++) {  
-    unpredictable_amount_of_work(i);  
-}  
-```  
-  
- **Dynamiczne** harmonogramu jest określony przez właściwość żadnego wątku czeka na bariera dla trwa dłużej niż inny wątek można wykonać jego iterację końcowego. Wymaga to, czy iteracji można przypisać pojedynczo wątków staną się one dostępne z synchronizacji dla każdego przydziału. Można zmniejszyć koszty synchronizacji przez określenie rozmiaru fragmentu minimalne *k* większa niż 1, dzięki czemu wątki są przypisane *k* aż mniej niż *k* pozostają. Gwarantuje to, że wątek nie oczekuje na dłużej niż Trwa inny wątek (maksymalnie) wykonać jego końcowego fragmentu bariery *k* iteracji.  
-  
- **Dynamiczne** harmonogram może być przydatne, jeśli wątki odbierać zróżnicowanymi zasoby obliczeniowe, który ma wiele ten sam efekt co zmiennych ilości pracy dla każdej iteracji. Podobnie, dynamiczne harmonogram również może być przydatna, jeśli przyjeździe wątki **dla** skonstruować w różnym czasie, chociaż w niektórych przypadkach **z przewodnikiem** harmonogram może być wskazane.  
-  
- **z przewodnikiem** harmonogram jest odpowiednie do sytuacji, w którym wątki może pojawić się w różnych okresach czasu w **dla** skonstruować przy każdej iteracji wymagające o tej samej ilość pracy. Może się to zdarzyć, jeśli na przykład **dla** konstrukcja jest poprzedzony co najmniej jednej sekcji lub **dla** tworzy z `nowait` klauzul.  
-  
-```  
-#pragma omp parallel  
-{  
-  #pragma omp sections nowait  
-  {  
-    // ...  
-  }  
-  #pragma omp for schedule(guided)  
-  for(i=0; i<n; i++) {  
-    invariant_amount_of_work(i);  
-  }  
-}  
-```  
-  
- Podobnie jak **dynamiczne**, **z przewodnikiem** zaplanować gwarancji, które nie wątek oczekuje na bariery dłużej niż Trwa inny wątek można wykonać jego iterację końcowego lub końcowego *k* Liczba iteracji, jeśli rozmiar fragmentu *k* jest określona. Wśród takie harmonogramy **z przewodnikiem** harmonogramu jest określony przez właściwość wymaga najmniejszej synchronizacji. Rozmiar fragmentu *k*, przypisze Typowa implementacja *q = ceiling(n/p)* iteracji, aby pierwszy dostępny wątku, ustaw *n* do większy z *n-q* i *p\*k*i powtórz przypisano wszystkich iteracji.  
-  
- Gdy wybór optymalnego harmonogramu nie jest jako zwykły, podobnie jak w przypadku tych przykładach **środowiska uruchomieniowego** harmonogramu jest wygodną metodą eksperymentowanie z różne harmonogramy i rozmiarach, bez konieczności modyfikowania i skompiluj ponownie ten program. Można również go przydatne podczas optymalnego harmonogram zależy (w jakiś sposób wartości prognozowanych) danych wejściowych, do którego zastosowano program.  
-  
- Aby zapoznać się z przykładem kompromis między różne harmonogramy, należy wziąć pod uwagę udostępnianie 1000 iteracji między 8 wątków. Załóżmy, że istnieje niezmiennej ilość pracy w każdej iteracji i używać go jako jednostka czasu.  
-  
- Jeśli w tym samym czasie, można uruchomić wszystkie wątki **statycznych** harmonogramu spowoduje, że konstrukcja do wykonania w jednostkach 125, nie synchronizacji. Ale Załóżmy, że jeden wątek wynosi 100 jednostek w przychodzących. Pozostałe wątki siedmiu poczekaj 100 jednostek w bariery, a czas wykonania dla całego konstrukcji zwiększa 225.  
-  
- Ponieważ zarówno **dynamiczne** i **z przewodnikiem** harmonogramy zapewnienia, że wątek nie oczekuje na więcej niż jednej jednostki w bariera czas wykonywania dla konstrukcji zwiększyć tylko do 138 powoduje opóźnione wątku jednostki zwiększonej opóźnieniami z synchronizacji. Opóźnienia nie są bez znaczenia, staje się ważne, czy liczba synchronizacje jest 1000 **dynamiczne** , ale tylko 41 dla **z przewodnikiem**, przy założeniu domyślny rozmiar fragmentu jednego. Z rozmiaru fragmentu wynoszącego 25 **dynamiczne** i **z przewodnikiem** oba zakończenia w 150 jednostki, a także wszelkich opóźnień z wymagane synchronizacje numer teraz tylko 40 i 20, odpowiednio.
+# <a name="d-using-the-schedule-clause"></a>D. Użycie klauzuli harmonogramu
+
+Równoległego regionu ma co najmniej jeden barierę na jej końcu i mogą mieć dodatkowe barier w nim. Przy każdej barierze członkowie zespołu musi czekać na ostatni wątek dostarczenie. Aby zminimalizować czas oczekiwania, należy rozdzielić udostępnionego pracy tak, aby wszystkie wątki docierają do zapory, w tym samym czasie. Jeśli niektóre z udostępnionego pracy jest zawarta w **dla** konstrukcji, `schedule` klauzuli może służyć do tego celu.
+
+W przypadku wielokrotnego odwołań do obiektów tego samego, wybór harmonogram **dla** konstrukcji można ustalić przede wszystkim przez właściwości układu pamięci, takie jak obecności i rozmiar pamięci podręcznej oraz czy dostęp do pamięci czasy są jednolite lub niejednorodnej. Względy takie mogą wprowadzać preferowane każdy wątek spójnie odnoszą się do tego samego zestawu elementów tablicy w serii pętli, nawet jeśli niektóre wątki są przypisywane stosunkowo mniej pracy, w niektórych pętli. Można to zrobić za pomocą **statyczne** harmonogramu o tej samej granice dla wszystkich pętli. W poniższym przykładzie należy zauważyć, że zero jest używany jako dolną granicę w drugim pętli, nawet jeśli **k** będzie stosować bardziej naturalne, jeśli harmonogram nie są istotne.
+
+```
+#pragma omp parallel
+{
+#pragma omp for schedule(static)
+  for(i=0; i<n; i++)
+    a[i] = work1(i);
+#pragma omp for schedule(static)
+  for(i=0; i<n; i++)
+    if(i>=k) a[i] += work2(i);
+}
+```
+
+Pozostałe przykłady zakłada się, że pamięć nie ma dostępu do dominującą kwestią i, chyba że określono inaczej, że wszystkie wątki będą otrzymywać porównywalne zasoby obliczeniowe. W takich przypadkach wybór harmonogram **dla** konstrukcja jest zależna od całą pracę udostępnionego, który ma być przeprowadzane od najbliższej poprzedzającej barierę i barierę dorozumianych zamknięcia lub najbliższej kolejnych barierze, jeśli istnieje `nowait` klauzuli. Dla każdego rodzaju harmonogram krótki przykład pokazuje, jak może być najlepszym wyborem jest tego typu harmonogramu. Krótkie omówienie następuje po każdym przykładzie.
+
+**Statyczne** harmonogramu jest również odpowiednie dla najprostszym przypadku równoległego regionu zawierający pojedynczy **dla** konstruowania każda iteracja wymaga tej samej ilości pracy.
+
+```
+#pragma omp parallel for schedule(static)
+for(i=0; i<n; i++) {
+  invariant_amount_of_work(i);
+}
+```
+
+**Statyczne** harmonogram charakteryzuje się właściwości pobierające każdy wątek w mniej więcej taką samą liczbę iteracji jak dowolnego innego wątku, a każdy wątek można niezależnie określić iteracje przypisane do niego. Dlatego synchronizacja nie jest wymagane do dystrybucji utworu i przy założeniu, że każda iteracja wymaga tej samej ilości pracy wszystkie wątki powinno zostać zakończone w tym samym czasie.
+
+Dla zespołu `p` wątków, umożliwiają *ceiling(n/p)* być liczba całkowita *pytania*, który spełnia *n = p\*q - r* za pomocą *0 < = r < p* . Jedna implementacja **statyczne** zaplanować dla tego przykładu przypisywanej *q* iteracji do pierwszego *p-1* wątków, i *q-r* iteracje do ostatniego wątku.  Inną implementację dopuszczalne przypisywanej *q* iteracji do pierwszego *p-r* wątków, i *q-1* iteracji do pozostałych *r*wątków. Obrazuje to, dlaczego program nie należy polegać na szczegółów konkretnej implementacji.
+
+**Dynamiczne** harmonogramu jest odpowiednia w przypadku **dla** skonstruować przy użyciu iteracji, wymagające różnych lub nawet nieprzewidywalne ilości pracy.
+
+```
+#pragma omp parallel for schedule(dynamic)
+  for(i=0; i<n; i++) {
+    unpredictable_amount_of_work(i);
+}
+```
+
+**Dynamiczne** harmonogramu jest określony przez właściwość, która żaden wątek nie oczekuje na barierę dłużej niż Trwa inny wątek, aby wykonać jego iterację końcowej. Wymaga to, że iteracji można przypisać pojedynczo do wątków po ich udostępnieniu, za pomocą synchronizacji dla każdego przypisania. Można zmniejszyć obciążenie synchronizacji, określając rozmiaru fragmentu minimalne *k* większy niż 1, tak aby wątki są przypisane *k* aż mniej niż *k* pozostają. Gwarantuje to, że żaden wątek nie oczekuje na dłużej niż Trwa inny wątek (maksymalnie) wykonaj jego ostatni fragment o barierę *k* iteracji.
+
+**Dynamiczne** harmonogram może być przydatne, jeśli wątki zmieniającego się zasoby obliczeniowe, który ma znacznie taki sam skutek jak różnej ilości pracy dla każdej iteracji. Podobnie, dynamiczne harmonogram również może być przydatne w przypadku wątków przyjeździe do biura **dla** konstruowania w różnym czasie, chociaż w niektórych przypadkach **z przewodnikiem** harmonogram może być korzystniejsze.
+
+**z przewodnikiem** harmonogram jest odpowiednie w przypadku, w którym wątków może pojawić się w różnych okresach czasu w **dla** skonstruować przy użyciu każda iteracja wymaga o tej samej ilości pracy. Może się to zdarzyć, jeśli, na przykład **dla** konstrukcja jest poprzedzony jedną lub więcej sekcji lub **dla** tworzy się za pomocą `nowait` klauzul.
+
+```
+#pragma omp parallel
+{
+  #pragma omp sections nowait
+  {
+    // ...
+  }
+  #pragma omp for schedule(guided)
+  for(i=0; i<n; i++) {
+    invariant_amount_of_work(i);
+  }
+}
+```
+
+Podobnie jak **dynamiczne**, **z przewodnikiem** zaplanować gwarantuje, że żaden wątek nie czeka na barierę dłużej niż Trwa inny wątek, aby wykonać jego iterację końcowego lub końcowego *k* Liczba iteracji, jeśli rozmiaru fragmentu wynoszącego *k* jest określony. Wśród takie harmonogramy **z przewodnikiem** harmonogramu jest określony przez właściwość wymaga najmniejszą liczbą synchronizacji. Dla rozmiaru fragmentu *k*, przypisze Typowa implementacja *q = ceiling(n/p)* iteracji, aby pierwszy dostępny wątek, ustaw *n* dla większej z *n-q* i *p\*k*i powtórz aż przypisany do wszystkich iteracji.
+
+Gdy wybór optymalnego harmonogramu nie jest jako zwykły, podobnie jak w przypadku tych przykładach **środowiska uruchomieniowego** harmonogramu jest wygodne do eksperymentowania z różne harmonogramy i rozmiarach, bez konieczności modyfikowania i ponownie skompilować program. Go może również być przydatne podczas optymalne harmonogram zależy od (w jakiś sposób przewidywalny) danych wejściowych, do którego zastosowano program.
+
+Aby zobaczyć przykład kompromis między różne harmonogramy, należy wziąć pod uwagę udostępnianie 1000 iteracji między 8 wątków. Załóżmy, że istnieje niezmiennej ilość pracy w każdej iteracji i używać go jako jednostka czasu.
+
+Jeśli wszystkie wątki uruchamia się w tym samym czasie **statyczne** harmonogramu spowoduje, że konstrukcji, które można wykonać w jednostkach 125, nie synchronizacji. Jednak Załóżmy, że jeden wątek wynosi 100 jednostek w przychodzących. Następnie poczekaj pozostałych wątków siedem dla 100 jednostek w barierę i czas wykonywania dla całego konstrukcji wzrasta do 225.
+
+Ponieważ zarówno **dynamiczne** i **z przewodnikiem** harmonogramy zapewnienia, że żaden wątek nie czeka na więcej niż jednej jednostki w barierę opóźnione wątku powoduje, że ich czasy wykonania dla konstrukcji zwiększyć tylko do 138 jednostki zwiększonej opóźnieniami z synchronizacji. Jeśli takie opóźnienia jest nieistotny, staje się ważne, czy liczba synchronizacji to 1000 **dynamiczne** , ale tylko 41 dla **z przewodnikiem**, zakładając, że domyślny rozmiar fragmentu w jednej. Przy użyciu rozmiaru fragmentu wynoszącego 25 **dynamiczne** i **z przewodnikiem** zarówno w Zakończ 150 jednostki, a także wszelkich opóźnień z wymaganych synchronizacje, który numer teraz tylko 40 i 20, odpowiednio.

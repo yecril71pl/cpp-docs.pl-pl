@@ -16,29 +16,33 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 91cdc9b51eb548d6b918bd2b48f9de0795dcc0bd
-ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
+ms.openlocfilehash: be8987cd889537eaa12ea3f548c4cc8cc9e589c8
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33691654"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46419454"
 ---
 # <a name="ordered-openmp-clauses"></a>uporządkowany (klauzule OpenMP)
-Wymagane na równoległego [dla](../../../parallel/openmp/reference/for-openmp.md) instrukcji Jeśli [uporządkowane](../../../parallel/openmp/reference/ordered-openmp-directives.md) dyrektywy ma być używana w pętli.  
-  
-## <a name="syntax"></a>Składnia  
-  
-```  
-ordered  
-```  
-  
-## <a name="remarks"></a>Uwagi  
- `ordered` dotyczy [dla](../../../parallel/openmp/reference/for-openmp.md) dyrektywy.  
-  
- Aby uzyskać więcej informacji, zobacz [2.4.1 — dla konstrukcji](../../../parallel/openmp/2-4-1-for-construct.md).  
-  
-## <a name="example"></a>Przykład  
- Zobacz [uporządkowane](../../../parallel/openmp/reference/ordered-openmp-directives.md) przykład przy użyciu `ordered` klauzuli.  
-  
-## <a name="see-also"></a>Zobacz też  
- [Klauzule](../../../parallel/openmp/reference/openmp-clauses.md)
+
+Wymagane na równoległego [dla](../../../parallel/openmp/reference/for-openmp.md) instrukcji Jeśli [uporządkowane](../../../parallel/openmp/reference/ordered-openmp-directives.md) dyrektywy ma być używana w pętli.
+
+## <a name="syntax"></a>Składnia
+
+```
+ordered
+```
+
+## <a name="remarks"></a>Uwagi
+
+`ordered` dotyczy [dla](../../../parallel/openmp/reference/for-openmp.md) dyrektywy.
+
+Aby uzyskać więcej informacji, zobacz [2.4.1 konstrukcji](../../../parallel/openmp/2-4-1-for-construct.md).
+
+## <a name="example"></a>Przykład
+
+Zobacz [uporządkowane](../../../parallel/openmp/reference/ordered-openmp-directives.md) na przykład za pomocą `ordered` klauzuli.
+
+## <a name="see-also"></a>Zobacz też
+
+[Klauzule](../../../parallel/openmp/reference/openmp-clauses.md)

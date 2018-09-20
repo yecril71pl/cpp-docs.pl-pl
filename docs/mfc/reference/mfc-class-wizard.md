@@ -17,101 +17,103 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b06353f7e0756cadb6ad05e1e5b35b3cd36b526c
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: 31e8b6064b9e81edac1c7f4c8aac8e20f1f72296
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45725156"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46438460"
 ---
 # <a name="mfc-class-wizard"></a>Kreator klas MFC
-Umożliwia dodanie komunikaty i procedury obsługi komunikatów do klas w projekcie. Można również uruchamiania kreatorów innych lub dodać klasę do projektu.  
-  
- Aby otworzyć **Kreator klas MFC**na **projektu** menu, kliknij przycisk **Kreator klas**. Aby otworzyć kreatora, za pomocą skrótu klawiaturowego, należy wpisać CTRL + SHIFT + X.  
-  
+
+Umożliwia dodanie komunikaty i procedury obsługi komunikatów do klas w projekcie. Można również uruchamiania kreatorów innych lub dodać klasę do projektu.
+
+Aby otworzyć **Kreator klas MFC**na **projektu** menu, kliknij przycisk **Kreator klas**. Aby otworzyć kreatora, za pomocą skrótu klawiaturowego, należy wpisać CTRL + SHIFT + X.
+
 ## <a name="uielement-list"></a>Lista elementów UI
 
 - **Project**
 
-   Nazwa projektu w rozwiązaniu.  
-  
-   Możesz wybrać inne projekty w rozwiązaniu w polu listy rozwijanej.  
-  
+   Nazwa projektu w rozwiązaniu.
+
+   Możesz wybrać inne projekty w rozwiązaniu w polu listy rozwijanej.
+
 - **Nazwa klasy**
 
-   Nazwa klasy w projekcie.  
-  
-   Po wybraniu klasy w **Nazwa klasy** listy wypełnienie danych z klasy kontrolek w **Kreator klas MFC**. Po zmianie wartości formantu w wybranej klasy to miało wpływu na dane.  
-  
+   Nazwa klasy w projekcie.
+
+   Po wybraniu klasy w **Nazwa klasy** listy wypełnienie danych z klasy kontrolek w **Kreator klas MFC**. Po zmianie wartości formantu w wybranej klasy to miało wpływu na dane.
+
 - **Dodaj klasę**
 
-   Umożliwia dodawanie klasy z jednego z wielu źródeł.  
-  
-   W zależności od wybranej opcji **Kreator dodawania klasy w MFC**, **klasy z Typelib Kreatora dodawania**, **dodawania klasy z Kreatora kontrolek ActiveX**, lub **MFC ODBC Kreator konsumenta** została uruchomiona.  
-  
+   Umożliwia dodawanie klasy z jednego z wielu źródeł.
+
+   W zależności od wybranej opcji **Kreator dodawania klasy w MFC**, **klasy z Typelib Kreatora dodawania**, **dodawania klasy z Kreatora kontrolek ActiveX**, lub **MFC ODBC Kreator konsumenta** została uruchomiona.
+
 - **Klasa bazowa**
 
-   Klasa bazowa klasa, która jest wyświetlana w **Nazwa klasy**.  
-  
+   Klasa bazowa klasa, która jest wyświetlana w **Nazwa klasy**.
+
 - **Deklaracja klasy**
 
-   Klasy, w której **Nazwa klasy** zadeklarowano klasę.  
-  
-   **Deklarację klasy** pojawia się tylko wtedy, gdy nazwa w niej różni się od nazwy **Implementacja klasy**.  
-  
+   Klasy, w której **Nazwa klasy** zadeklarowano klasę.
+
+   **Deklarację klasy** pojawia się tylko wtedy, gdy nazwa w niej różni się od nazwy **Implementacja klasy**.
+
 - **Zasób**
 
-   Identyfikator zasobu w **Nazwa klasy**, jeśli są dostępne. W przeciwnym razie **zasobów** pole jest puste.  
-  
+   Identyfikator zasobu w **Nazwa klasy**, jeśli są dostępne. W przeciwnym razie **zasobów** pole jest puste.
+
 - **Implementacja klasy**
 
-   Nazwa pliku, który zawiera implementację klasy w **Nazwa klasy**.  
-  
-   Plik inną implementację można wybrać, klikając strzałkę. Poniższa tabela zawiera listę dostępnych opcji.  
-  
-   |Opcja|Opis|  
-   |------------|-----------------|  
-   |**Otwórz plik**|Zamyka Kreator klas i otwiera bieżącego pliku implementacji klasy.|  
-   |**Otwórz Folder zawierający**|Zostanie otwarty folder, który zawiera bieżącego pliku implementacji klasy.|  
-   |**Kopiuj pełną ścieżkę do Schowka**|Ścieżka bieżącego pliku implementacji kopiuje do Schowka.|  
-  
+   Nazwa pliku, który zawiera implementację klasy w **Nazwa klasy**.
+
+   Plik inną implementację można wybrać, klikając strzałkę. Poniższa tabela zawiera listę dostępnych opcji.
+
+   |Opcja|Opis|
+   |------------|-----------------|
+   |**Otwórz plik**|Zamyka Kreator klas i otwiera bieżącego pliku implementacji klasy.|
+   |**Otwórz Folder zawierający**|Zostanie otwarty folder, który zawiera bieżącego pliku implementacji klasy.|
+   |**Kopiuj pełną ścieżkę do Schowka**|Ścieżka bieżącego pliku implementacji kopiuje do Schowka.|
+
 - **Polecenia**
 
-   Pozwala dodać, usunąć, edytować lub Wyszukaj polecenie i jego obsługi wiadomości.  
-  
-   Aby dodać program obsługi, kliknij **Dodaj obsługę**, lub kliknij dwukrotnie element **identyfikatory obiektów** listy lub **wiadomości** listy. Wynikowa nazwa funkcji, identyfikator i wiadomości są wyświetlane w **elementów członkowskich** listy.  
-  
-   Aby usunąć program obsługi, wybierz element w **elementów członkowskich** listy, a następnie kliknij przycisk **usuwania programu obsługi**.  
-  
-   Aby zmodyfikować program obsługi, kliknij dwukrotnie odpowiedni element na **elementów członkowskich** listy. Lub, zaznacz element w polu listy, a następnie kliknij przycisk **Edytuj kod**.  
-  
+   Pozwala dodać, usunąć, edytować lub Wyszukaj polecenie i jego obsługi wiadomości.
+
+   Aby dodać program obsługi, kliknij **Dodaj obsługę**, lub kliknij dwukrotnie element **identyfikatory obiektów** listy lub **wiadomości** listy. Wynikowa nazwa funkcji, identyfikator i wiadomości są wyświetlane w **elementów członkowskich** listy.
+
+   Aby usunąć program obsługi, wybierz element w **elementów członkowskich** listy, a następnie kliknij przycisk **usuwania programu obsługi**.
+
+   Aby zmodyfikować program obsługi, kliknij dwukrotnie odpowiedni element na **elementów członkowskich** listy. Lub, zaznacz element w polu listy, a następnie kliknij przycisk **Edytuj kod**.
+
 - **Komunikaty**
 
-   Pozwala dodać, usunąć, edytować lub Wyszukaj komunikat i jego obsługi wiadomości.  
-  
-   Aby dodać program obsługi, kliknij **Dodaj obsługę**, lub kliknij dwukrotnie element **wiadomości** listy.  
-  
-   Aby dodać niestandardowy komunikat, kliknij **dodać niestandardowy komunikat** lub naciśnij klawisz Enter, a następnie określ wartości w **dodać niestandardowy komunikat** okno dialogowe. W tym oknie dialogowym możesz również wybrać **zarejestrowany komunikat** do obsługi komunikatów okien, która może być unikatowe w obrębie całej systemu operacyjnego.  
-  
+   Pozwala dodać, usunąć, edytować lub Wyszukaj komunikat i jego obsługi wiadomości.
+
+   Aby dodać program obsługi, kliknij **Dodaj obsługę**, lub kliknij dwukrotnie element **wiadomości** listy.
+
+   Aby dodać niestandardowy komunikat, kliknij **dodać niestandardowy komunikat** lub naciśnij klawisz Enter, a następnie określ wartości w **dodać niestandardowy komunikat** okno dialogowe. W tym oknie dialogowym możesz również wybrać **zarejestrowany komunikat** do obsługi komunikatów okien, która może być unikatowe w obrębie całej systemu operacyjnego.
+
 - **Funkcje wirtualne**
 
-   Umożliwia dodawanie, usuwanie, edytować lub wyszukiwanie funkcję wirtualną lub zastąpiona funkcja wirtualna.  
-  
+   Umożliwia dodawanie, usuwanie, edytować lub wyszukiwanie funkcję wirtualną lub zastąpiona funkcja wirtualna.
+
 - **Zmienne Członkowskie**
 
-   Umożliwia dodawanie, usuwanie, edytować lub Wyszukaj zmienną składową.  
-  
+   Umożliwia dodawanie, usuwanie, edytować lub Wyszukaj zmienną składową.
+
 - **Metody**
 
-   Pozwala dodać, usunąć, lub Wyszukaj metody, a także przejść do definicji lub deklaracji metody.  
-  
-   Aby dodać metodę, kliknij przycisk **Dodaj metodę**, a następnie określ wartości w **Dodaj metodę** okno dialogowe.  
-  
-   Aby usunąć metodę, wybierz element w **metody** listy, a następnie kliknij przycisk **Usuń metodę**.  
-  
-   Aby wyświetlić deklarację, zaznacz element w **metody** listy, a następnie kliknij przycisk **przejdź do deklaracji.**  
-  
-   Aby wyświetlić definicji, kliknij dwukrotnie element **metody** listy. Lub wybierz element w **metody** listy, a następnie kliknij przycisk **przejdź do definicji** przycisku.  
-  
-## <a name="see-also"></a>Zobacz też  
- [Dodawanie klasy](../../ide/adding-a-class-visual-cpp.md)
+   Pozwala dodać, usunąć, lub Wyszukaj metody, a także przejść do definicji lub deklaracji metody.
+
+   Aby dodać metodę, kliknij przycisk **Dodaj metodę**, a następnie określ wartości w **Dodaj metodę** okno dialogowe.
+
+   Aby usunąć metodę, wybierz element w **metody** listy, a następnie kliknij przycisk **Usuń metodę**.
+
+   Aby wyświetlić deklarację, zaznacz element w **metody** listy, a następnie kliknij przycisk **przejdź do deklaracji.**
+
+   Aby wyświetlić definicji, kliknij dwukrotnie element **metody** listy. Lub wybierz element w **metody** listy, a następnie kliknij przycisk **przejdź do definicji** przycisku.
+
+## <a name="see-also"></a>Zobacz też
+
+[Dodawanie klasy](../../ide/adding-a-class-visual-cpp.md)

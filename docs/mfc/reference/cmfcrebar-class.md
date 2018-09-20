@@ -38,252 +38,270 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0336cb9bd2f0e12c834615647cb4a442ab261316
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: db431b80a569436aab477b89be447ee6df1932b2
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45721516"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46424004"
 ---
 # <a name="cmfcrebar-class"></a>Klasa CMFCReBar
-A `CMFCReBar` obiekt jest pasek sterowania, który zawiera układ, trwałość i informacje o stanie dla formantów rebar.  
-   Aby uzyskać więcej informacji, zobacz kod źródłowy znajdujący się w **VC\\atlmfc\\src\\mfc** folder instalacji programu Visual Studio.  
-## <a name="syntax"></a>Składnia  
-  
-```  
-class CMFCReBar : public CPane  
-```  
-  
-## <a name="members"></a>Elementy członkowskie  
-  
-### <a name="public-methods"></a>Metody publiczne  
-  
-|Nazwa|Opis|  
-|----------|-----------------|  
-|[CMFCReBar::AddBar](#addbar)|Dodaje obiekt band do paska pomocniczego.|  
-|[CMFCReBar::CalcFixedLayout](#calcfixedlayout)|(Przesłania [CBasePane::CalcFixedLayout](../../mfc/reference/cbasepane-class.md#calcfixedlayout).)|  
-|[CMFCReBar::CanFloat](#canfloat)|(Przesłania [CBasePane::CanFloat](../../mfc/reference/cbasepane-class.md#canfloat).)|  
-|[CMFCReBar::Create](#create)|Tworzy kontrolkę paska pomocniczego i dołącza je do `CMFCReBar` obiektu.|  
-|[CMFCReBar::EnableDocking](#enabledocking)|(Przesłania [CBasePane::EnableDocking](../../mfc/reference/cbasepane-class.md#enabledocking).)|  
-|[CMFCReBar::GetReBarBandInfoSize](#getrebarbandinfosize)||  
-|[CMFCReBar::GetReBarCtrl](#getrebarctrl)|Zapewnia bezpośredni dostęp do podstawowych [z CReBarCtrl](../../mfc/reference/crebarctrl-class.md) wspólnej kontroli.|  
-|[CMFCReBar::OnShowControlBarMenu](#onshowcontrolbarmenu)|(Przesłania [CPane::OnShowControlBarMenu](../../mfc/reference/cpane-class.md#onshowcontrolbarmenu).)|  
-|[CMFCReBar::OnToolHitTest](#ontoolhittest)|(Przesłania [CWnd::OnToolHitTest](../../mfc/reference/cwnd-class.md#ontoolhittest).)|  
-|[CMFCReBar::OnUpdateCmdUI](#onupdatecmdui)|(Przesłania [CBasePane::OnUpdateCmdUI](cbasepane-class.md).)|  
-|[CMFCReBar::SetPaneAlignment](#setpanealignment)|(Przesłania [CBasePane::SetPaneAlignment](../../mfc/reference/cbasepane-class.md#setpanealignment).)|  
-  
-## <a name="remarks"></a>Uwagi  
- Element `CMFCReBar` obiektu może zawierać wiele okien podrzędnych. W tym pola tekstowe, paski narzędzi i pól listy. Można zmienić rozmiar paska pomocniczego programowo lub użytkownik może ręcznie zmienić rozmiar paska pomocniczego przeciągając pasek uchwytu. Tło obiektu paska pomocniczego można również ustawić do mapy bitowej wybranych przez użytkownika.  
-  
- Obiekt paska pomocniczego działa podobnie jak obiekt paska narzędzi. Kontrolki paska pomocniczego może zawierać jeden lub więcej grup i każdej grupy mogą zawierać pasek uchwytu, mapy bitowej, etykietę tekstową i okna podrzędnego.  
-  
-## <a name="example"></a>Przykład  
- Poniższy przykład pokazuje, jak korzystać z różnych metod w `CMFCReBar` klasy. W przykładzie pokazano, jak utworzyć kontrolkę paska pomocniczego i dodawanie grupy do niej. Funkcje pasek narzędzi wewnętrznych. Ten fragment kodu jest częścią [paska pomocniczego próbkę](../../visual-cpp-samples.md).  
-  
- [!code-cpp[NVC_MFC_RebarTest#1](../../mfc/reference/codesnippet/cpp/cmfcrebar-class_1.h)]  
-[!code-cpp[NVC_MFC_RebarTest#2](../../mfc/reference/codesnippet/cpp/cmfcrebar-class_2.cpp)]  
-  
-## <a name="inheritance-hierarchy"></a>Hierarchia dziedziczenia  
- [CObject](../../mfc/reference/cobject-class.md) [CCmdTarget](../../mfc/reference/ccmdtarget-class.md) [CWnd](../../mfc/reference/cwnd-class.md)  
-  
- [CBasePane](../../mfc/reference/cbasepane-class.md) [CPane](../../mfc/reference/cpane-class.md) [CMFCReBar](../../mfc/reference/cmfcrebar-class.md)  
-  
-## <a name="requirements"></a>Wymagania  
- **Nagłówek:** afxRebar.h  
-  
-##  <a name="addbar"></a>  CMFCReBar::AddBar  
- Dodaje obiekt band do paska pomocniczego.  
-  
-```  
+
+A `CMFCReBar` obiekt jest pasek sterowania, który zawiera układ, trwałość i informacje o stanie dla formantów rebar.
+Aby uzyskać więcej informacji, zobacz kod źródłowy znajdujący się w **VC\\atlmfc\\src\\mfc** folder instalacji programu Visual Studio.
+## <a name="syntax"></a>Składnia
+
+```
+class CMFCReBar : public CPane
+```
+
+## <a name="members"></a>Elementy członkowskie
+
+### <a name="public-methods"></a>Metody publiczne
+
+|Nazwa|Opis|
+|----------|-----------------|
+|[CMFCReBar::AddBar](#addbar)|Dodaje obiekt band do paska pomocniczego.|
+|[CMFCReBar::CalcFixedLayout](#calcfixedlayout)|(Przesłania [CBasePane::CalcFixedLayout](../../mfc/reference/cbasepane-class.md#calcfixedlayout).)|
+|[CMFCReBar::CanFloat](#canfloat)|(Przesłania [CBasePane::CanFloat](../../mfc/reference/cbasepane-class.md#canfloat).)|
+|[CMFCReBar::Create](#create)|Tworzy kontrolkę paska pomocniczego i dołącza je do `CMFCReBar` obiektu.|
+|[CMFCReBar::EnableDocking](#enabledocking)|(Przesłania [CBasePane::EnableDocking](../../mfc/reference/cbasepane-class.md#enabledocking).)|
+|[CMFCReBar::GetReBarBandInfoSize](#getrebarbandinfosize)||
+|[CMFCReBar::GetReBarCtrl](#getrebarctrl)|Zapewnia bezpośredni dostęp do podstawowych [z CReBarCtrl](../../mfc/reference/crebarctrl-class.md) wspólnej kontroli.|
+|[CMFCReBar::OnShowControlBarMenu](#onshowcontrolbarmenu)|(Przesłania [CPane::OnShowControlBarMenu](../../mfc/reference/cpane-class.md#onshowcontrolbarmenu).)|
+|[CMFCReBar::OnToolHitTest](#ontoolhittest)|(Przesłania [CWnd::OnToolHitTest](../../mfc/reference/cwnd-class.md#ontoolhittest).)|
+|[CMFCReBar::OnUpdateCmdUI](#onupdatecmdui)|(Przesłania [CBasePane::OnUpdateCmdUI](cbasepane-class.md).)|
+|[CMFCReBar::SetPaneAlignment](#setpanealignment)|(Przesłania [CBasePane::SetPaneAlignment](../../mfc/reference/cbasepane-class.md#setpanealignment).)|
+
+## <a name="remarks"></a>Uwagi
+
+Element `CMFCReBar` obiektu może zawierać wiele okien podrzędnych. W tym pola tekstowe, paski narzędzi i pól listy. Można zmienić rozmiar paska pomocniczego programowo lub użytkownik może ręcznie zmienić rozmiar paska pomocniczego przeciągając pasek uchwytu. Tło obiektu paska pomocniczego można również ustawić do mapy bitowej wybranych przez użytkownika.
+
+Obiekt paska pomocniczego działa podobnie jak obiekt paska narzędzi. Kontrolki paska pomocniczego może zawierać jeden lub więcej grup i każdej grupy mogą zawierać pasek uchwytu, mapy bitowej, etykietę tekstową i okna podrzędnego.
+
+## <a name="example"></a>Przykład
+
+Poniższy przykład pokazuje, jak korzystać z różnych metod w `CMFCReBar` klasy. W przykładzie pokazano, jak utworzyć kontrolkę paska pomocniczego i dodawanie grupy do niej. Funkcje pasek narzędzi wewnętrznych. Ten fragment kodu jest częścią [paska pomocniczego próbkę](../../visual-cpp-samples.md).
+
+[!code-cpp[NVC_MFC_RebarTest#1](../../mfc/reference/codesnippet/cpp/cmfcrebar-class_1.h)]
+[!code-cpp[NVC_MFC_RebarTest#2](../../mfc/reference/codesnippet/cpp/cmfcrebar-class_2.cpp)]
+
+## <a name="inheritance-hierarchy"></a>Hierarchia dziedziczenia
+
+[CObject](../../mfc/reference/cobject-class.md) [CCmdTarget](../../mfc/reference/ccmdtarget-class.md) [CWnd](../../mfc/reference/cwnd-class.md)
+
+[CBasePane](../../mfc/reference/cbasepane-class.md) [CPane](../../mfc/reference/cpane-class.md) [CMFCReBar](../../mfc/reference/cmfcrebar-class.md)
+
+## <a name="requirements"></a>Wymagania
+
+**Nagłówek:** afxRebar.h
+
+##  <a name="addbar"></a>  CMFCReBar::AddBar
+
+Dodaje obiekt band do paska pomocniczego.
+
+```
 BOOL AddBar(
-    CWnd* pBar,  
-    LPCTSTR pszText = NULL,  
-    CBitmap* pbmp = NULL,  
+    CWnd* pBar,
+    LPCTSTR pszText = NULL,
+    CBitmap* pbmp = NULL,
     DWORD dwStyle = RBBS_GRIPPERALWAYS | RBBS_FIXEDBMP);
 
 BOOL AddBar(
-    CWnd* pBar,  
-    COLORREF clrFore,  
-    COLORREF clrBack,  
-    LPCTSTR pszText = NULL,  
+    CWnd* pBar,
+    COLORREF clrFore,
+    COLORREF clrBack,
+    LPCTSTR pszText = NULL,
     DWORD dwStyle = RBBS_GRIPPERALWAYS);
-```  
-  
-### <a name="parameters"></a>Parametry  
- [in] [out] *pBar*  
- Wskaźnik do okna podrzędnego, który ma zostać wstawiony do paska pomocniczego. Przywoływany obiekt musi mieć **WS_CHILD** styl okna.  
-  
+```
+
+### <a name="parameters"></a>Parametry
+
+[in] [out] *pBar* wskaźnik do okna podrzędnego, który ma zostać wstawiony do paska pomocniczego. Przywoływany obiekt musi mieć **WS_CHILD** styl okna.
+
 *pszText*<br/>
-[in] Określa tekst do wyświetlenia na paska pomocniczego. Tekst nie jest częścią okna podrzędnego. Przeciwnie jest wyświetlany na paska pomocniczego, sam.  
-  
- [in] [out] *pbmp*  
- Określa mapy bitowej, który będzie wyświetlany w tle paska pomocniczego.  
-  
+[in] Określa tekst do wyświetlenia na paska pomocniczego. Tekst nie jest częścią okna podrzędnego. Przeciwnie jest wyświetlany na paska pomocniczego, sam.
+
+[in] [out] *pbmp* określa mapy bitowej, który będzie wyświetlany w tle paska pomocniczego.
+
 *dwStyle*<br/>
-[in] Zawiera style, które można zastosować do grupy. Aby uzyskać pełną listę style poza pasmem, zobacz opis `fStyle` w [REBARBANDINFO](/windows/desktop/api/commctrl/ns-commctrl-tagrebarbandinfoa) struktury w dokumentacji zestawu Windows SDK.  
-  
+[in] Zawiera style, które można zastosować do grupy. Aby uzyskać pełną listę style poza pasmem, zobacz opis `fStyle` w [REBARBANDINFO](/windows/desktop/api/commctrl/ns-commctrl-tagrebarbandinfoa) struktury w dokumentacji zestawu Windows SDK.
+
 *clrFore*<br/>
-[in] Reprezentuje kolor pierwszego planu paska pomocniczego.  
-  
+[in] Reprezentuje kolor pierwszego planu paska pomocniczego.
+
 *clrBack*<br/>
-[in] Reprezentuje kolor tła paska pomocniczego.  
-  
-### <a name="return-value"></a>Wartość zwracana  
- Wartość TRUE, jeśli pasmo zostało pomyślnie dodane do paska pomocniczego; w przeciwnym razie wartość FALSE.  
-  
-##  <a name="create"></a>  CMFCReBar::Create  
- Tworzy kontrolkę paska pomocniczego i dołącza je do [CMFCReBar](../../mfc/reference/cmfcrebar-class.md) obiektu.  
-  
-```  
+[in] Reprezentuje kolor tła paska pomocniczego.
+
+### <a name="return-value"></a>Wartość zwracana
+
+Wartość TRUE, jeśli pasmo zostało pomyślnie dodane do paska pomocniczego; w przeciwnym razie wartość FALSE.
+
+##  <a name="create"></a>  CMFCReBar::Create
+
+Tworzy kontrolkę paska pomocniczego i dołącza je do [CMFCReBar](../../mfc/reference/cmfcrebar-class.md) obiektu.
+
+```
 BOOL Create(
-    CWnd* pParentWnd,  
-    DWORD dwCtrlStyle = RBS_BANDBORDERS,  
-    DWORD dwStyle = WS_CHILD | WS_VISIBLE | WS_CLIPSIBLINGS | WS_CLIPCHILDREN | CBRS_TOP,  
+    CWnd* pParentWnd,
+    DWORD dwCtrlStyle = RBS_BANDBORDERS,
+    DWORD dwStyle = WS_CHILD | WS_VISIBLE | WS_CLIPSIBLINGS | WS_CLIPCHILDREN | CBRS_TOP,
     UINT nID = AFX_IDW_REBAR);
-```  
-  
-### <a name="parameters"></a>Parametry  
- [in] [out] *pParentWnd*  
- Wskaźnik do nadrzędnego okna tej kontrolki paska pomocniczego.  
-  
+```
+
+### <a name="parameters"></a>Parametry
+
+[in] [out] *pParentWnd* wskaźnik do okna nadrzędnego tego formantu paska pomocniczego.
+
 *dwCtrlStyle*<br/>
-[in] Określa styl kontrolki paska pomocniczego. Domyślna wartość stylu jest **RBS_BANDBORDERS**, który wyświetla zawęzić zakres wierszy w celu rozdzielenia sąsiadujących paskami w formancie paska pomocniczego. Aby uzyskać listę prawidłowe style, zobacz [style kontrolki paska pomocniczego](/windows/desktop/Controls/rebar-control-styles) w dokumentacji zestawu Windows SDK.  
-  
+[in] Określa styl kontrolki paska pomocniczego. Domyślna wartość stylu jest **RBS_BANDBORDERS**, który wyświetla zawęzić zakres wierszy w celu rozdzielenia sąsiadujących paskami w formancie paska pomocniczego. Aby uzyskać listę prawidłowe style, zobacz [style kontrolki paska pomocniczego](/windows/desktop/Controls/rebar-control-styles) w dokumentacji zestawu Windows SDK.
+
 *dwStyle*<br/>
-[in] Styl okna formantu paska pomocniczego. Aby uzyskać listę prawidłowe style, zobacz [Style okna ramowego](../../mfc/reference/styles-used-by-mfc.md#window-styles).  
-  
+[in] Styl okna formantu paska pomocniczego. Aby uzyskać listę prawidłowe style, zobacz [Style okna ramowego](../../mfc/reference/styles-used-by-mfc.md#window-styles).
+
 *nID*<br/>
-[in] Identyfikator okna podrzędnego paska pomocniczego  
-  
-### <a name="return-value"></a>Wartość zwracana  
- Wartość TRUE, jeśli pomyślnie; utworzono paska pomocniczego w przeciwnym razie wartość FALSE.  
-  
-### <a name="remarks"></a>Uwagi  
-  
-##  <a name="getrebarctrl"></a>  CMFCReBar::GetReBarCtrl  
- Zapewnia bezpośredni dostęp do `CReBarCtrl` bazowego formantu typowego dla `CMFCReBar` obiektów.  
-  
-```  
-CReBarCtrl& GetReBarCtrl() const;  
-```  
-  
-### <a name="return-value"></a>Wartość zwracana  
- Odwołanie do bazowej `CReBarCtrl` obiektu.  
-  
-### <a name="remarks"></a>Uwagi  
- Wywołaj tę metodę, aby móc korzystać z funkcji Windows paska pomocniczego wspólnej kontroli, dostosowując swoje paska pomocniczego.  
-  
-##  <a name="calcfixedlayout"></a>  CMFCReBar::CalcFixedLayout  
+[in] Identyfikator okna podrzędnego paska pomocniczego
 
-  
-```  
+### <a name="return-value"></a>Wartość zwracana
+
+Wartość TRUE, jeśli pomyślnie; utworzono paska pomocniczego w przeciwnym razie wartość FALSE.
+
+### <a name="remarks"></a>Uwagi
+
+##  <a name="getrebarctrl"></a>  CMFCReBar::GetReBarCtrl
+
+Zapewnia bezpośredni dostęp do `CReBarCtrl` bazowego formantu typowego dla `CMFCReBar` obiektów.
+
+```
+CReBarCtrl& GetReBarCtrl() const;
+```
+
+### <a name="return-value"></a>Wartość zwracana
+
+Odwołanie do bazowej `CReBarCtrl` obiektu.
+
+### <a name="remarks"></a>Uwagi
+
+Wywołaj tę metodę, aby móc korzystać z funkcji Windows paska pomocniczego wspólnej kontroli, dostosowując swoje paska pomocniczego.
+
+##  <a name="calcfixedlayout"></a>  CMFCReBar::CalcFixedLayout
+
+
+```
 virtual CSize CalcFixedLayout(
-    BOOL bStretch,  
+    BOOL bStretch,
     BOOL bHorz);
-```  
-  
-### <a name="parameters"></a>Parametry  
+```
+
+### <a name="parameters"></a>Parametry
+
 *bStretch*<br/>
-[in] [in] *bHorz*  
-  
-### <a name="return-value"></a>Wartość zwracana  
-  
-### <a name="remarks"></a>Uwagi  
-  
-##  <a name="canfloat"></a>  CMFCReBar::CanFloat  
+[in] [in] *bHorz*
 
-  
-```  
-virtual BOOL CanFloat() const;  
-```  
-  
-### <a name="return-value"></a>Wartość zwracana  
-  
-### <a name="remarks"></a>Uwagi  
-  
-##  <a name="enabledocking"></a>  CMFCReBar::EnableDocking  
+### <a name="return-value"></a>Wartość zwracana
 
-  
-```  
+### <a name="remarks"></a>Uwagi
+
+##  <a name="canfloat"></a>  CMFCReBar::CanFloat
+
+
+```
+virtual BOOL CanFloat() const;
+```
+
+### <a name="return-value"></a>Wartość zwracana
+
+### <a name="remarks"></a>Uwagi
+
+##  <a name="enabledocking"></a>  CMFCReBar::EnableDocking
+
+
+```
 void EnableDocking(DWORD dwDockStyle);
-```  
-  
-### <a name="parameters"></a>Parametry  
- [in] *dwDockStyle*  
-  
-### <a name="remarks"></a>Uwagi  
-  
-##  <a name="getrebarbandinfosize"></a>  CMFCReBar::GetReBarBandInfoSize  
+```
 
-  
-```  
-UINT GetReBarBandInfoSize() const;  
-```  
-  
-### <a name="return-value"></a>Wartość zwracana  
-  
-### <a name="remarks"></a>Uwagi  
-  
-##  <a name="onshowcontrolbarmenu"></a>  CMFCReBar::OnShowControlBarMenu  
+### <a name="parameters"></a>Parametry
 
-  
-```  
+[in] *dwDockStyle*
+
+### <a name="remarks"></a>Uwagi
+
+##  <a name="getrebarbandinfosize"></a>  CMFCReBar::GetReBarBandInfoSize
+
+
+```
+UINT GetReBarBandInfoSize() const;
+```
+
+### <a name="return-value"></a>Wartość zwracana
+
+### <a name="remarks"></a>Uwagi
+
+##  <a name="onshowcontrolbarmenu"></a>  CMFCReBar::OnShowControlBarMenu
+
+
+```
 virtual BOOL OnShowControlBarMenu(CPoint);
-```  
-  
-### <a name="parameters"></a>Parametry  
- [in] *CPoint*  
-  
-### <a name="return-value"></a>Wartość zwracana  
-  
-### <a name="remarks"></a>Uwagi  
-  
-##  <a name="ontoolhittest"></a>  CMFCReBar::OnToolHitTest  
+```
 
-  
-```  
+### <a name="parameters"></a>Parametry
+
+[in] *CPoint*
+
+### <a name="return-value"></a>Wartość zwracana
+
+### <a name="remarks"></a>Uwagi
+
+##  <a name="ontoolhittest"></a>  CMFCReBar::OnToolHitTest
+
+
+```
 virtual INT_PTR OnToolHitTest(
-    CPoint point,  
-    TOOLINFO* pTI) const;  
-```  
-  
-### <a name="parameters"></a>Parametry  
+    CPoint point,
+    TOOLINFO* pTI) const;
+```
+
+### <a name="parameters"></a>Parametry
+
 *Punkt*<br/>
-[in] [in] *pTI*  
-  
-### <a name="return-value"></a>Wartość zwracana  
-  
-### <a name="remarks"></a>Uwagi  
-  
-##  <a name="onupdatecmdui"></a>  CMFCReBar::OnUpdateCmdUI  
+[in] [in] *pTI*
 
-  
-```  
+### <a name="return-value"></a>Wartość zwracana
+
+### <a name="remarks"></a>Uwagi
+
+##  <a name="onupdatecmdui"></a>  CMFCReBar::OnUpdateCmdUI
+
+
+```
 virtual void OnUpdateCmdUI(
-    CFrameWnd* pTarget,  
+    CFrameWnd* pTarget,
     BOOL bDisableIfNoHndler);
-```  
-  
-### <a name="parameters"></a>Parametry  
-*pTarget*<br/>
-[in] [in] *bDisableIfNoHndler*  
-  
-### <a name="remarks"></a>Uwagi  
-  
-##  <a name="setpanealignment"></a>  CMFCReBar::SetPaneAlignment  
+```
 
-  
-```  
+### <a name="parameters"></a>Parametry
+
+*pTarget*<br/>
+[in] [in] *bDisableIfNoHndler*
+
+### <a name="remarks"></a>Uwagi
+
+##  <a name="setpanealignment"></a>  CMFCReBar::SetPaneAlignment
+
+
+```
 virtual void SetPaneAlignment(DWORD dwAlignment);
-```  
-  
-### <a name="parameters"></a>Parametry  
- [in] *dwAlignment*  
-  
-### <a name="remarks"></a>Uwagi  
-  
-## <a name="see-also"></a>Zobacz też  
- [Diagram hierarchii](../../mfc/hierarchy-chart.md)   
- [Klasy](../../mfc/reference/mfc-classes.md)   
- [Klasa CReBarCtrl](../../mfc/reference/crebarctrl-class.md)   
- [Klasa CPane](../../mfc/reference/cpane-class.md)
+```
+
+### <a name="parameters"></a>Parametry
+
+[in] *dwAlignment*
+
+### <a name="remarks"></a>Uwagi
+
+## <a name="see-also"></a>Zobacz też
+
+[Wykres hierarchii](../../mfc/hierarchy-chart.md)<br/>
+[Klasy](../../mfc/reference/mfc-classes.md)<br/>
+[Klasa CReBarCtrl](../../mfc/reference/crebarctrl-class.md)<br/>
+[Klasa CPane](../../mfc/reference/cpane-class.md)

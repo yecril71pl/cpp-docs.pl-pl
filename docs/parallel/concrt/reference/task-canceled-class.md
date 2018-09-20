@@ -18,53 +18,58 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1e3351700d9e7e7ea466b667e47b105a7229f3d8
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: da18db2f2dde145c565b6309d9b27cdbcc0744cf
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46083005"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46437667"
 ---
 # <a name="taskcanceled-class"></a>task_canceled — Klasa
-Ta klasa opisuje wyjątek generowany przez warstwę zadań PPL, aby wymusić anulowanie bieżącego zadania. Jest to również generowane przez `get()` metody [zadań](/visualstudio/extensibility/debugger/task-class-internal-members), dla anulowanych zadań.  
-  
-## <a name="syntax"></a>Składnia  
-  
+
+Ta klasa opisuje wyjątek generowany przez warstwę zadań PPL, aby wymusić anulowanie bieżącego zadania. Jest to również generowane przez `get()` metody [zadań](/visualstudio/extensibility/debugger/task-class-internal-members), dla anulowanych zadań.
+
+## <a name="syntax"></a>Składnia
+
 ```
 class task_canceled : public std::exception;
-```  
-  
-## <a name="members"></a>Elementy członkowskie  
-  
-### <a name="public-constructors"></a>Konstruktory publiczne  
-  
-|Nazwa|Opis|  
-|----------|-----------------|  
-|[task_canceled](#ctor)|Przeciążone. Konstruuje `task_canceled` obiektu.|  
-  
-## <a name="inheritance-hierarchy"></a>Hierarchia dziedziczenia  
- `exception`  
-  
- `task_canceled`  
-  
-## <a name="requirements"></a>Wymagania  
- **Nagłówek:** concrt.h  
-  
- **Namespace:** współbieżności  
-  
-##  <a name="ctor"></a> task_canceled — 
+```
 
- Konstruuje `task_canceled` obiektu.  
-  
+## <a name="members"></a>Elementy członkowskie
+
+### <a name="public-constructors"></a>Konstruktory publiczne
+
+|Nazwa|Opis|
+|----------|-----------------|
+|[task_canceled](#ctor)|Przeciążone. Konstruuje `task_canceled` obiektu.|
+
+## <a name="inheritance-hierarchy"></a>Hierarchia dziedziczenia
+
+`exception`
+
+`task_canceled`
+
+## <a name="requirements"></a>Wymagania
+
+**Nagłówek:** concrt.h
+
+**Namespace:** współbieżności
+
+##  <a name="ctor"></a> task_canceled —
+
+Konstruuje `task_canceled` obiektu.
+
 ```
 explicit _CRTIMP task_canceled(_In_z_ const char* _Message) throw();
 
 task_canceled() throw();
-```  
-  
-### <a name="parameters"></a>Parametry  
+```
+
+### <a name="parameters"></a>Parametry
+
 *_Message*<br/>
-Opisowy komunikat dotyczący błędu.  
-  
-## <a name="see-also"></a>Zobacz też  
- [Przestrzeń nazw współbieżności](concurrency-namespace.md)
+Opisowy komunikat dotyczący błędu.
+
+## <a name="see-also"></a>Zobacz też
+
+[Przestrzeń nazw współbieżności](concurrency-namespace.md)

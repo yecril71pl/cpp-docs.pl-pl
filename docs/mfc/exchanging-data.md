@@ -16,24 +16,26 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e503bd9268423fbe63ec76de4bcb5443a7d52696
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 504d2ff9f011770f75db73a63fa77b821281269b
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33345823"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46435561"
 ---
 # <a name="exchanging-data"></a>Wymiana danych
-Podobnie jak w przypadku większości okien dialogowych wymiany danych między arkusz właściwości i aplikacji jest jednym z najważniejszych funkcji arkusza właściwości. W tym artykule opisano sposób wykonania tego zadania.  
-  
- Wymiana danych z arkusza właściwości jest rzeczywiście wymiana danych z na stronach właściwości indywidualnych arkusza właściwości. Procedury wymiany danych za pomocą strony właściwości są takie same jak wymiana danych okna dialogowego, ponieważ [cpropertypage —](../mfc/reference/cpropertypage-class.md) obiekt jest tylko specjalne [cdialog —](../mfc/reference/cdialog-class.md) obiektu. Procedura wykorzystuje framework okna dialogowego danych programu exchange (DDX) urządzenia, które wymianie danych między formantami w zmiennych okna dialogowego pole i element członkowski obiektu okno dialogowe.  
-  
- Istotną różnicą między wymiana danych z arkusza właściwości i okno dialogowe normalne jest arkusz właściwości wiele stron, konieczna jest wymiana danych ze wszystkich stron w arkuszu właściwości. Aby uzyskać więcej informacji o DDX, zobacz [wymiana danych okna dialogowego i weryfikacja](../mfc/dialog-data-exchange-and-validation.md).  
-  
- Poniższy przykład przedstawia wymianie danych między widokiem i dwie strony arkusz właściwości:  
-  
- [!code-cpp[NVC_MFCDocView#4](../mfc/codesnippet/cpp/exchanging-data_1.cpp)]  
-  
-## <a name="see-also"></a>Zobacz też  
- [Arkusze właściwości](../mfc/property-sheets-mfc.md)
+
+Podobnie jak w przypadku większości okien dialogowych, wymianę danych między arkusza właściwości, a aplikacja jest jedną z najważniejszych funkcji arkusza właściwości. W tym artykule opisano sposób wykonania tego zadania.
+
+Wymiana danych z arkusza właściwości jest faktycznie kwestią wymiana danych z na stronach właściwości indywidualnych arkusza właściwości. Procedury wymiany danych za pomocą strony właściwości jest taka sama, jak w przypadku wymiany danych okna dialogowego, ponieważ [CPropertyPage](../mfc/reference/cpropertypage-class.md) obiekt jest szczególnymi rodzajami [CDialog](../mfc/reference/cdialog-class.md) obiektu. Procedura wykorzystuje instrumentu struktury okna dialogowego dane programu exchange (DDX), który wymienia dane między kontrolkami w zmiennych okna dialogowego pole i elementów członkowskich obiektu okno dialogowe.
+
+Istotną różnicą między wymiana danych z arkusza właściwości i okno dialogowe normalnego to, że arkusz właściwości zawiera wiele stron, dlatego konieczna jest wymiana danych ze wszystkich stron w arkuszu właściwości. Aby uzyskać więcej informacji na temat DDX, zobacz [wymiana danych okna dialogowego i sprawdzanie poprawności](../mfc/dialog-data-exchange-and-validation.md).
+
+Poniższy przykład ilustruje wymianie danych między widokiem i dwie strony arkusza właściwości:
+
+[!code-cpp[NVC_MFCDocView#4](../mfc/codesnippet/cpp/exchanging-data_1.cpp)]
+
+## <a name="see-also"></a>Zobacz też
+
+[Arkusze właściwości](../mfc/property-sheets-mfc.md)
 

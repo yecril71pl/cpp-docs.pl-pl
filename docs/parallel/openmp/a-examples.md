@@ -12,12 +12,13 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c67c29bbded76f4ef44337e557b58b6bad828947
-ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
+ms.openlocfilehash: 3747b8a73c372ae3226b1f0c4f762da34dc40eab
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33695421"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46446247"
 ---
 # <a name="a-examples"></a>A. Przykłady
-Poniżej przedstawiono przykłady konstrukcje zdefiniowane w tym dokumencie. Zauważ, że instrukcja następujące dyrektywy jest złożony tylko wtedy, gdy jest to konieczne, i instrukcji złożonej z systemem innym niż tworzone jest wcięcie względem dyrektywy przed nim.
+
+Poniżej przedstawiono przykłady konstrukcje zdefiniowane w tym dokumencie. Pamiętaj, że instrukcja następujące dyrektywy jest złożone, tylko wtedy, gdy jest to niezbędne instrukcję inne niż złożone tworzone jest wcięcie względem dyrektywą przed nim.

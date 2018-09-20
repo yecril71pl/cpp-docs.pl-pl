@@ -1,5 +1,5 @@
 ---
-title: 2.6.2 konstrukcja krytyczna | Dokumentacja firmy Microsoft
+title: 2.6.2, konstrukcja critical | Dokumentacja firmy Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -12,20 +12,21 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ae7070fcc590307e71b0c34259bcbe1c12200550
-ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
+ms.openlocfilehash: e51bd425999081c7a06a7d5692dbea16c887fa0b
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33689600"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46417855"
 ---
 # <a name="262-critical-construct"></a>2.6.2 — konstrukcja krytyczna
-**Krytyczne** dyrektywy identyfikuje konstrukcję ogranicza wykonywania skojarzony strukturalnego bloku do pojedynczego wątku w czasie. Składnia **krytyczne** dyrektywy wygląda następująco:  
-  
-```  
-#pragma omp critical [(name)]  new-linestructured-block  
-```  
-  
- Opcjonalny *nazwa* może służyć do identyfikowania krytyczne regionu. Identyfikatory używane do identyfikowania krytyczne region mają połączenie zewnętrzne i w obszarze nazw, niezależnie od przestrzenie nazw używanych przez etykiety, tagi, członków i zwykłej identyfikatorów.  
-  
- Wątek oczekuje na początku obszaru krytycznych, aż żadnego innego wątku jest wykonywany krytyczne region (w dowolnym miejscu program) o takiej samej nazwie. Wszystkie nienazwane **krytyczne** dyrektywy mapy do tej samej nazwie nieokreślony.
+
+**Krytyczne** dyrektywy identyfikuje konstrukcja, która ogranicza wykonywania skojarzone ze strukturalnego bloku do pojedynczego wątku w danym momencie. Składnia **krytyczne** dyrektywy jest następująca:
+
+```
+#pragma omp critical [(name)]  new-linestructured-block
+```
+
+Opcjonalny *nazwa* może służyć do identyfikowania krytyczne regionu. Identyfikatory używane do identyfikowania krytyczne region mają powiązania zewnętrzne i znajdują się w przestrzeni nazw, która różni się od przestrzeni nazw używanych przez etykiety, tagi, członków i zwykłymi identyfikatorami.
+
+Wątek oczekuje się na początku krytyczne region, aż żadnego innymi wątku jest wykonywany krytyczne region (w dowolnym miejscu program) o takiej samej nazwie. Wszystkie nienazwane **krytyczne** dyrektywy mapowania tej samej nazwie nieokreślony.

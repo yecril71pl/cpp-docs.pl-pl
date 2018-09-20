@@ -17,16 +17,18 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 10364cffa393c8f0968a4d7dffe40224b76ecf3b
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 649f3aecc79a0b05355b67b1d42cfd3cc2726f18
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33381241"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46430842"
 ---
 # <a name="using-a-dialog-template-in-memory"></a>Używanie szablonu okna dialogowego w pamięci
-Zamiast metody podane w [okno dialogowe Tworzenie tabeli](../mfc/creating-a-dialog-class-with-code-wizards.md), można utworzyć dowolnego typu, w oknie dialogowym pośrednio z szablonu okna dialogowego w pamięci. Aby uzyskać więcej informacji, zobacz klasy [cdialog —](../mfc/reference/cdialog-class.md) w *odwołania MFC*.  
-  
-## <a name="see-also"></a>Zobacz też  
- [Cykl życiowy okna dialogowego](../mfc/life-cycle-of-a-dialog-box.md)
+
+Zamiast korzystać z metody podanej [tabeli Tworzenie okna dialogowego](../mfc/creating-a-dialog-class-with-code-wizards.md), można utworzyć dowolny rodzaj okno dialogowe pośrednio z szablonu okna dialogowego w pamięci. Aby uzyskać więcej informacji, zobacz klasy [CDialog](../mfc/reference/cdialog-class.md) w *odwołanie MFC*.
+
+## <a name="see-also"></a>Zobacz też
+
+[Cykl życiowy okna dialogowego](../mfc/life-cycle-of-a-dialog-box.md)
 

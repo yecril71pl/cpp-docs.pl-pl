@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 876f2bde68c53a27c1c40e9206b6285b8562bd91
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: d570eaf3872f5d281d769e77298f9186d35e5a26
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42591142"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46410432"
 ---
 # <a name="implementshelperfillarraywithiid-method"></a>ImplementsHelper::FillArrayWithIid — Metoda
 
@@ -38,10 +38,10 @@ void FillArrayWithIid(
 
 ### <a name="parameters"></a>Parametry
 
-*index*  
+*index*<br/>
 Liczony od zera indeks, który wskazuje element początkowy tablicy do wykonania tej operacji. Po zakończeniu tej operacji, *indeksu* jest zwiększana o 1.
 
-*IID*  
+*IID*<br/>
 Tablica typu IID.
 
 ## <a name="remarks"></a>Uwagi
@@ -56,5 +56,5 @@ Wstawia identyfikator interfejsu określonego przez bieżący parametr szablonu 
 
 ## <a name="see-also"></a>Zobacz też
 
-[ImplementsHelper, struktura](../windows/implementshelper-structure.md)  
+[ImplementsHelper, struktura](../windows/implementshelper-structure.md)<br/>
 [Microsoft::WRL::Details, przestrzeń nazw](../windows/microsoft-wrl-details-namespace.md)

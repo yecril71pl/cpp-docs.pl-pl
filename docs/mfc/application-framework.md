@@ -18,17 +18,19 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c91706f5d222753a355897de943f78faf6104cb3
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: d04e8cef4500e738fb0948574786012b8a141daf
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33341674"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46425941"
 ---
 # <a name="application-framework"></a>Struktura aplikacji
-Podstawowe biblioteki Microsoft Foundation Class (MFC) jest hermetyzacji duża część interfejsu API systemu Windows w postaci C++. Biblioteka klas reprezentują systemu windows, okna dialogowe, konteksty urządzenia wspólnego interfejsu GDI obiekty, takie jak pędzle i pióra, formanty i inne elementy standardowe systemu Windows. Zapewnić wygodny sposób tych klas C++ element członkowski funkcji interfejsu do struktur w systemie Windows, który one Hermetyzowanie. Aby uzyskać więcej informacji o korzystaniu z tych klas, zobacz [tematy obiektu okna](../mfc/window-objects.md).  
-  
- Ale biblioteki MFC dostarcza również warstwy funkcji dodatkowych aplikacji oparte na hermetyzacji C++ interfejsu API systemu Windows. Ta warstwa jest pracy struktury aplikacji dla systemu Windows, która zawiera większość wspólnego interfejsu użytkownika oczekiwano programów dla systemu Windows, w tym paski narzędzi, paski stanu drukowanie, podglądu wydruku, bazy danych pomocy i obsługi ActiveX. [Używanie klas do zapisu aplikacje dla systemu Windows](../mfc/using-the-classes-to-write-applications-for-windows.md) framework szczegółowo opisano.  
-  
-## <a name="see-also"></a>Zobacz też  
- [Ogólne zasady projektowania klas](../mfc/general-class-design-philosophy.md)
+
+Podstawowe biblioteki Microsoft Foundation Class (MFC) jest hermetyzacja dużą część interfejsu API Windows w postaci C++. Biblioteka klas reprezentują systemu windows, okna dialogowe i konteksty urządzenia GDI typowe obiekty, takie jak pędzle i pióra, formantów i innych standardowych elementów Windows. Te klasy oferują wygodny sposób interfejsu funkcji elementu członkowskiego C++ struktury w Windows, które one hermetyzacji. Aby uzyskać więcej informacji o korzystaniu z tych klas, zobacz [tematy obiekt okna](../mfc/window-objects.md).
+
+Ale warstwy funkcji dodatkowych aplikacji oparte na hermetyzacji C++ interfejsu Windows API dostarcza również biblioteki MFC. Ta warstwa jest struktura aplikacji pracy Windows, który zawiera większość wspólnego interfejsu użytkownika oczekiwana programów dla Windows, łącznie z pasków narzędzi, paski stanu drukowanie, podglądu wydruku bazy danych obsługę i ActiveX. [Używanie klas do pisania aplikacji dla Windows](../mfc/using-the-classes-to-write-applications-for-windows.md) framework szczegółowo opisano.
+
+## <a name="see-also"></a>Zobacz też
+
+[Ogólne zasady projektowania klas](../mfc/general-class-design-philosophy.md)

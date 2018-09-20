@@ -15,19 +15,22 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 89a6b3392491ad36a0b0c9d542ffac4738b7c0f6
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: eb3f501a2653c4d25adb195e9de9abf082179f3a
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42605362"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46421911"
 ---
 # <a name="id-property"></a>Właściwość ID
+
 Właściwość Identyfikatora odwołuje się do każdego wpisu tabeli akceleratora w kodzie programu. Jest to wartość polecenia, który program otrzyma po naciśnięciu klawisza skrótu lub kombinację klawiszy. Aby akceleratora taki sam jak element menu, należy ich identyfikatorów takie same (tak długo, jak identyfikator tabeli klawiszy skrótu jest taki sam jak identyfikator zasobu menu).
   
 ## <a name="requirements"></a>Wymagania
- Win32
+
+Win32
   
 ## <a name="see-also"></a>Zobacz też
- [Ustawianie właściwości klawiszy skrótów](../windows/setting-accelerator-properties.md)  
- [Edytor klawiszy skrótów](../windows/accelerator-editor.md)
+
+[Ustawianie właściwości klawiszy skrótów](../windows/setting-accelerator-properties.md)<br/>
+[Edytor klawiszy skrótów](../windows/accelerator-editor.md)

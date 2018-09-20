@@ -19,31 +19,34 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: fc605be317d51c985e32fbad038d846b056e5fe6
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 406c4e7cd87b350f9317022dcf1821fa92ddf4af
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33379687"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46427670"
 ---
 # <a name="selecting-a-graphic-object-into-a-device-context"></a>Wybieranie obiektu graficznego do kontekstu urządzenia
-Ten temat dotyczy przy użyciu obiektów graficznych kontekstu urządzenia okna. Po [utworzyć rysowania obiektu](../mfc/one-stage-and-two-stage-construction-of-objects.md), zaznacz go do kontekstu urządzenia zamiast domyślnego obiektu przechowywane:  
-  
- [!code-cpp[NVC_MFCDocViewSDI#7](../mfc/codesnippet/cpp/selecting-a-graphic-object-into-a-device-context_1.cpp)]  
-  
-## <a name="lifetime-of-graphic-objects"></a>Okres istnienia obiektów graficznych  
- Zwrócona przez obiekt graficzny [SelectObject](../mfc/reference/cdc-class.md#selectobject) to "tymczasowe". Oznacza to, że zostanie ona usunięta przez [OnIdle](../mfc/reference/cwinapp-class.md#onidle) funkcji członkowskiej klasy `CWinApp` czasu przy następnym program pobiera bezczynności. Tak długo, jak używać obiektu zwróconego przez `SelectObject` w jednej funkcji bez zwracanie formantu do pętli komunikatów głównym, będą miały żadnych problemów.  
-  
-### <a name="what-do-you-want-to-know-more-about"></a>Co chcesz dowiedzieć się więcej o  
-  
--   [Obiekty graficzne](../mfc/graphic-objects.md)  
-  
--   [Jedno- i dwuetapowa konstrukcja obiektów graficznych](../mfc/one-stage-and-two-stage-construction-of-objects.md)  
-  
--   [Konteksty urządzenia](../mfc/device-contexts.md)  
-  
--   [Rysowanie w widoku](../mfc/drawing-in-a-view.md)  
-  
-## <a name="see-also"></a>Zobacz też  
- [Obiekty graficzne](../mfc/graphic-objects.md)
+
+Ten temat dotyczy przy użyciu obiektów graficznych w kontekście urządzenia okna. Po zakończeniu [utworzyć obiekt rysowania](../mfc/one-stage-and-two-stage-construction-of-objects.md), musisz wybrać go do kontekstu urządzenia zamiast domyślnego obiektu tam przechowywane:
+
+[!code-cpp[NVC_MFCDocViewSDI#7](../mfc/codesnippet/cpp/selecting-a-graphic-object-into-a-device-context_1.cpp)]
+
+## <a name="lifetime-of-graphic-objects"></a>Okres istnienia obiektów graficznych
+
+Zwrócona przez obiekt graficzny [SelectObject](../mfc/reference/cdc-class.md#selectobject) jest "tymczasowe". Oznacza to, zostanie on usunięty przez [OnIdle](../mfc/reference/cwinapp-class.md#onidle) funkcji składowej klasy typu `CWinApp` czasu przy następnym program pobiera bezczynności. Tak długo, jak używać obiektu zwróconego przez `SelectObject` w jednej funkcji bez zwracanie formantu do główna pętla wiadomości, będziesz mieć żaden problem.
+
+### <a name="what-do-you-want-to-know-more-about"></a>Co chcesz dowiedzieć się więcej na temat
+
+- [Obiekty graficzne](../mfc/graphic-objects.md)
+
+- [Jedno- i dwuetapowa konstrukcja obiektów graficznych](../mfc/one-stage-and-two-stage-construction-of-objects.md)
+
+- [Konteksty urządzenia](../mfc/device-contexts.md)
+
+- [Rysowanie w widoku](../mfc/drawing-in-a-view.md)
+
+## <a name="see-also"></a>Zobacz też
+
+[Obiekty graficzne](../mfc/graphic-objects.md)
 

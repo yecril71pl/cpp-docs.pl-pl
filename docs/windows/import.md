@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 78bfc20bd88aa9691c80483c8c315cd5305d7b96
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: a9e2ee577c3285a7e4c3db2fb19d934417bbe26d
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43216594"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46411563"
 ---
 # <a name="import"></a>import
 
@@ -38,7 +38,7 @@ Określa innego pliku .idl, .odl — lub nagłówek zawierający definicje, któ
 
 ### <a name="parameters"></a>Parametry
 
-*idl_file*  
+*idl_file*<br/>
 Nazwa pliku .idl, który ma zostać zaimportowany do biblioteki typów w bieżącym projekcie.
 
 ## <a name="remarks"></a>Uwagi
@@ -86,9 +86,9 @@ Aby uzyskać więcej informacji, zobacz [konteksty atrybutu](../windows/attribut
 
 ## <a name="see-also"></a>Zobacz też
 
-[Atrybuty IDL](../windows/idl-attributes.md)  
-[Oddzielne atrybuty](../windows/stand-alone-attributes.md)  
-[importidl](../windows/importidl.md)  
-[importlib](../windows/importlib.md)  
-[include](../windows/include-cpp.md)  
+[Atrybuty IDL](../windows/idl-attributes.md)<br/>
+[Oddzielne atrybuty](../windows/stand-alone-attributes.md)<br/>
+[importidl](../windows/importidl.md)<br/>
+[importlib](../windows/importlib.md)<br/>
+[include](../windows/include-cpp.md)<br/>
 [includelib —](../windows/includelib-cpp.md)  

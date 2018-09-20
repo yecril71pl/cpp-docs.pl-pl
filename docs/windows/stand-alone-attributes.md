@@ -16,12 +16,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 5d395053231f54570e1bf86ba79f6237b89681fc
-ms.sourcegitcommit: f0c90000125a9497bf61e41624de189a043703c0
+ms.openlocfilehash: 1c44223dad2ac4d6306bf3896cd8ec7be84a5a2b
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44315551"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46407767"
 ---
 # <a name="stand-alone-attributes"></a>Oddzielne atrybuty
 Autonomicznego atrybutu nie będzie działać na słowo kluczowe języka C++, ale jest kilka dodatkowych wiersza kodu. Instrukcje autonomicznego atrybutu wymagają średnik na końcu wiersza.
@@ -45,4 +45,5 @@ Autonomicznego atrybutu nie będzie działać na słowo kluczowe języka C++, al
 |[pragma](../windows/pragma.md)|Generuje określony ciąg bez znaków cudzysłowu do pliku .idl wygenerowany.|
   
 ## <a name="see-also"></a>Zobacz też
- [Atrybuty w zależności od zastosowania](../windows/attributes-by-usage.md)
+
+[Atrybuty w zależności od zastosowania](../windows/attributes-by-usage.md)

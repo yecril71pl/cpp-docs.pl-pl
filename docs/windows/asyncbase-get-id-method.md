@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 32d2d3cd633204b44e266bddea5d16361b5e9d19
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: ee4e15293d3f1f7b5b364ea22eeea2385cc9e855
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42604453"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46403880"
 ---
 # <a name="asyncbasegetid-method"></a>AsyncBase::get_Id — Metoda
 
@@ -38,7 +38,7 @@ STDMETHOD(
 
 ### <a name="parameters"></a>Parametry
 
-*id*  
+*id*<br/>
 Lokalizacja, gdzie ma być przechowywany uchwytu.
 
 ## <a name="return-value"></a>Wartość zwracana

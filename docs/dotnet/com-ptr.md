@@ -1,5 +1,5 @@
 ---
-title: COM::PTR — | Dokumentacja firmy Microsoft
+title: COM::PTR | Dokumentacja firmy Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,24 +17,27 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: f3c4e3bb91e161f9176bcf6964fc843d4e4bd707
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: f5e6a3f7936e21d22282fe37a29b5d91f2e50caa
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33104532"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46434495"
 ---
 # <a name="comptr"></a>com::ptr
-Otoka dla obiekt COM, który może być używany jako element członkowski klasy CLR. Otoka automatyzuje również zarządzanie okresem istnienia obiektu modelu COM, zwalniania należących do odwołania do obiektu, gdy jego destruktora jest wywoływana. Odpowiednikiem [CComPtr klasy](../atl/reference/ccomptr-class.md).  
-  
-## <a name="syntax"></a>Składnia  
-  
-```  
-#include <msclr\com\ptr.h>  
-```  
-  
-## <a name="remarks"></a>Uwagi  
- [COM::PTR — klasa](../dotnet/com-ptr-class.md) jest zdefiniowany w \<msclr\com\ptr.h > pliku.  
-  
-## <a name="see-also"></a>Zobacz też  
- [Biblioteka obsługi języka C++](../dotnet/cpp-support-library.md)
+
+Otoka dla obiektu COM, który może służyć jako członek klasy CLR. Otoka także automatyzuje zarządzanie okresem istnienia obiektu COM, zwalniając należących do odwołania do obiektu, gdy jego destruktor jest wywoływany. Odpowiednikiem [klasa CComPtr](../atl/reference/ccomptr-class.md).
+
+## <a name="syntax"></a>Składnia
+
+```
+#include <msclr\com\ptr.h>
+```
+
+## <a name="remarks"></a>Uwagi
+
+[COM::PTR, klasa](../dotnet/com-ptr-class.md) jest zdefiniowany w \<msclr\com\ptr.h > pliku.
+
+## <a name="see-also"></a>Zobacz też
+
+[Biblioteka obsługi języka C++](../dotnet/cpp-support-library.md)

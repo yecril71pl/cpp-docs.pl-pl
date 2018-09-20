@@ -1,5 +1,5 @@
 ---
-title: Zagadnienia dotyczące wydajności dla międzyoperacyjności z modelem (C++) | Dokumentacja firmy Microsoft
+title: Zagadnienia dotyczące współdziałania (C++) | Dokumentacja firmy Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -19,47 +19,51 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: 9223c52e4ef831a9a1ff657db1a0d7859dd6ce6c
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: ce27ac6e5194842ab0b9cf2237fbde1a1b636fba
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33164053"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46415996"
 ---
 # <a name="performance-considerations-for-interop-c"></a>Zagadnienia dotyczące wydajności związane z międzyoperacyjnością (C++)
-Ten temat zawiera wskazówki dotyczące zmniejszenia wpływu zarządzanych/niezarządzanych międzyoperacyjnego przejścia na wydajności w czasie wykonywania.  
-  
- Visual C++ obsługuje te same mechanizmy współdziałanie jako innych języków .NET, takie jak Visual Basic i C# (P/Invoke), ale także międzyoperacyjnego pomocy technicznej, które są specyficzne dla języka Visual C++ (międzyoperacyjności języka C++). Wydajność kluczowych aplikacji koniecznie zrozumienie wpływu na wydajność każdego techniki międzyoperacyjnego.  
-  
- Niezależnie od międzyoperacyjnego zastosowanych sekwencje specjalne przejścia, o nazwie osadzeń, wymagane są zawsze funkcją zarządzaną wywołuje niezarządzanych funkcji i na odwrót. Te sekcje Thunk są automatycznie wstawione przez kompilator języka Visual C++, ale należy pamiętać, że zbiorczo, te przejścia może być kosztowne pod względem wydajności.  
-  
-## <a name="reducing-transitions"></a>Zmniejszenie przejścia  
- Sposobem uniknięcia lub zmniejszyć koszt osadzeń międzyoperacyjny jest Refaktoryzuj interfejsy zaangażowane w celu zminimalizowania przejścia zarządzanych/niezarządzanych. Znacznej poprawy wydajności będzie możliwe, wybierając chatty interfejsów, które są związane z częste wywołania granicy zarządzanych/niezarządzanych. Na przykład zarządzanych funkcję, która wywołuje funkcji niezarządzanej w pętli ścisłej jest odpowiednimi kandydatami do refaktoryzacji. Jeśli sam pętli jest przenoszony do niezarządzanego po stronie lub jeśli zarządzanych alternatywą dla niezarządzanego wywołanie jest tworzony (prawdopodobnie kolejkowania dane po stronie zarządzanych i organizowanie go do niezarządzanego API jednocześnie po pętli), liczba przejścia może być obniżona logowania ificantly.  
-  
-## <a name="pinvoke-vs-c-interop"></a>Vs P/Invoke. międzyoperacyjność C++  
- Dla języków .NET, takie jak Visual Basic i C# metoda wyznaczonych do współpracy z natywnego składników jest P/Invoke. Ponieważ P/Invoke jest obsługiwana przez program .NET Framework, obsługuje on również Visual C++, ale Visual C++ obsługuje również własną współdziałanie, które są określone jako międzyoperacyjności języka C++. Międzyoperacyjność C++ jest preferowana przez P/Invoke, ponieważ P/Invoke nie jest bezpieczne. W związku z tym głównie zostały zgłoszone błędy w czasie wykonywania, ale międzyoperacyjności języka C++ ma także wydajności zalet w porównaniu z P/Invoke.  
-  
- Obie techniki wymagają kilka kwestii, które się zdarzyć, gdy funkcja zarządzanych wywołania funkcji niezarządzanej:  
-  
--   Argumenty wywołania funkcji są przekazywane z CLR dla natywnych typów.  
-  
--   Konwersja bitowa niezarządzany zarządzany jest wykonywany.  
-  
--   Wywołania funkcji niezarządzane (przy użyciu macierzyste wersje argumenty).  
-  
--   Thunk niezarządzany zarządzany jest wykonywany.  
-  
--   Zwracany typ i "out" lub "w, zewnętrzne" argumenty są przekazywane z kodu natywnego do typów CLR.  
-  
- Sekcje Thunk zarządzanych/niezarządzanych są niezbędne dla międzyoperacyjności z modelem do pracy w ogóle, ale przekazywanie danych, która jest wymagana zależy od typy danych, sygnatura funkcji i użycia danych.  
-  
- Przekazywanie danych z zastosowaniem międzyoperacyjności języka C++ jest to najprostsza forma możliwe: parametry są po prostu kopiowane granicy zarządzanych/niezarządzanych w sposób bitowe; Przekształcenie nie jest wykonywane w ogóle. Dla P/Invoke, to jest tylko wartość true, jeśli wszystkie parametry są proste typy danych kopiowalnych. W przeciwnym razie P/Invoke wykonuje stopniu niezawodną czynności w celu konwersji każdego parametru zarządzanego na odpowiedni typ macierzysty i odwrotnie, jeśli argumenty są oznaczone jako "out" lub "w, out".  
-  
- Innymi słowy międzyoperacyjności języka C++ używa najszybszy sposób możliwe przekazywanie danych, podczas gdy najbardziej niezawodna metoda korzysta z P/Invoke. Oznacza to, że międzyoperacyjności języka C++ (w sposób typowe dla języka C++) zapewnia optymalną wydajność domyślnie, a programistę jest odpowiedzialny za adresowania czasami to zachowanie nie jest bezpieczne lub odpowiednie.  
-  
- Międzyoperacyjności języka C++ w związku z tym wymaga, aby przekazywanie danych należy podać jawnie, ale zaletą jest to, że programistę będzie mógł zdecydować, co jest odpowiednia, biorąc pod uwagę rodzaj danych i jak ma być używany. Ponadto mimo że można modyfikować zachowanie przekazywanie danych P/Invoke w dostosowane w stopniu, międzyoperacyjności języka C++ umożliwia przekazywanie do dostosowania na podstawie wywołanie przez wywołanie danych. Nie jest to możliwe z P/Invoke.  
-  
- Aby uzyskać więcej informacji na temat międzyoperacyjności języka C++, zobacz [za pomocą międzyoperacyjności języka C++ (niejawna funkcja PInvoke)](../dotnet/using-cpp-interop-implicit-pinvoke.md).  
-  
-## <a name="see-also"></a>Zobacz też  
- [Zestawy mieszane (natywne i zarządzane)](../dotnet/mixed-native-and-managed-assemblies.md)
+
+Ten temat zawiera wskazówki w celi zmniejszenia wpływu zarządzanych/niezarządzanych międzyoperacyjny przejścia na wydajności w czasie wykonywania.
+
+Visual C++ obsługuje te same mechanizmy współdziałanie jako innych językach .NET, takich jak Visual Basic i C# (P/Invoke), ale udostępnia również międzyoperacyjny pomocy technicznej, które są specyficzne dla języka Visual C++ (międzyoperacyjności języka C++). Wydajność krytycznych aplikacji ważne jest zrozumienie wpływu na wydajność każdej techniki międzyoperacyjnego.
+
+Niezależnie od tego, międzyoperacyjny techniki używane sekwencje specjalne przejścia, o nazwie sekcje Thunk, wymagane jest każdej funkcji zarządzanej wywołuje niezarządzanych funkcji i odwrotnie. Te sekcje Thunk są wprowadzane automatycznie przez kompilator Visual C++, ale należy pamiętać, że łącznie, te przejścia może być kosztowna pod względem wydajności.
+
+## <a name="reducing-transitions"></a>Zmniejszenie przejścia
+
+Jednym ze sposobów uniknięcia lub zmniejszyć koszt międzyoperacyjny sekcje Thunk jest Refaktoryzacja zaangażowane w celu zminimalizowania przejścia zarządzanych/niezarządzanych interfejsów. Znacznej poprawy wydajności jest możliwe dzięki systemowi chatty — interfejsy, które zaangażowany częste wywołania przez granicę zarządzanych/niezarządzanych. Funkcji zarządzanej, która wywołuje niezarządzanej funkcji w pętli, na przykład, jest dobrym kandydatem do refaktoryzacji. Jeśli pętla, sama jest przenoszony do niezarządzanym lub jeśli alternatywnego kodu zarządzanego do niezarządzanego wywołanie zostanie utworzony (prawdopodobnie kolejkowania dane po stronie zarządzanej i zorganizowanie ich do niezarządzanego interfejsu API wszystkie na raz po pętli), liczba przejścia może być obniżona logowania ificantly.
+
+## <a name="pinvoke-vs-c-interop"></a>Vs P/Invoke. międzyoperacyjność C++
+
+W językach .NET, takich jak Visual Basic i C# dla określonej metody współdziałanie ze składnikami macierzystymi jest P/Invoke. P/Invoke jest obsługiwany przez program .NET Framework, Visual C++ obsługuje ona również, ale Visual C++ obsługuje również swój własny współdziałanie, który jest określany jako międzyoperacyjności języka C++. Międzyoperacyjności języka C++ jest preferowana za pośrednictwem metody P/Invoke, ponieważ metody P/Invoke nie jest bezpieczny. W wyniku błędy przede wszystkim są zgłaszane w czasie wykonywania, ale międzyoperacyjności języka C++ jest również korzyści związanych z wydajnością za pośrednictwem metody P/Invoke.
+
+Obu tych technik wymagają kilka rzeczy, które ma być wykonywana po każdym zarządzanym funkcja wywołuje niezarządzanej funkcji:
+
+- Argumenty wywołania funkcji są przekazywane z CLR w natywnych typów.
+
+- Sekcją thunk zarządzane do niezarządzanego jest wykonywany.
+
+- Wywołania funkcji niezarządzanych (przy użyciu natywnych wersje argumenty).
+
+- Thunk niezarządzane do zarządzanego jest wykonywany.
+
+- Zwracany typ i dowolne "out" lub "w, out" argumenty są przekazywane z natywnego na typy CLR.
+
+Sekcje Thunk zarządzanych/niezarządzanych są niezbędne dla współdziałania pracę na wszystkich, ale przekazywania danych, która jest wymagana zależy od typów danych związane, sygnatury funkcji i użycia danych.
+
+Marshaling danych wykonywane przez międzyoperacyjności języka C++ jest to najprostsza forma możliwe: parametry są po prostu kopiowane przez granicę zarządzanych/niezarządzanych w sposób bitowe; Przekształcenie nie odbywa się w ogóle. Dla metody P/Invoke tylko jest to wartość true, jeśli wszystkie parametry są proste, typy danych kopiowalnych. W przeciwnym razie P/Invoke wykonuje stopniu niezawodną kroki, aby przekonwertować każdy parametr zarządzalny odpowiedni typ macierzysty i na odwrót, jeśli argumenty są oznaczone jako "out" lub "w, out".
+
+Innymi słowy międzyoperacyjności języka C++ używa możliwe najszybszy sposób przekazywania danych, natomiast najbardziej niezawodna metoda korzysta z metody P/Invoke. Oznacza to, że domyślnie międzyoperacyjności języka C++ (w sposób typowe dla języka C++) zapewnia optymalną wydajność i potwierdzeniu programisty jest odpowiedzialny za adresowanie czasami to zachowanie nie jest bezpieczne lub nieodpowiednie.
+
+Międzyoperacyjności języka C++ w związku z tym wymaga, że organizowanie danych musi być podana jawnie, ale zaletą jest to, że programisty jest bezpłatna dla zdecyduj, co jest potrzebne, biorąc pod uwagę rodzaj danych, jak ma być używany. Ponadto chociaż zachowanie marshalingu danych P/Invoke można modyfikować w dostosowane do pewnego stopnia, międzyoperacyjności języka C++ umożliwia danych skierowanie do można dostosować na podstawie wywołania przez wywołanie. Nie jest to możliwe przy użyciu metody P/Invoke.
+
+Aby uzyskać więcej informacji na temat międzyoperacyjności języka C++, zobacz [za pomocą międzyoperacyjności języka C++ (niejawna funkcja PInvoke)](../dotnet/using-cpp-interop-implicit-pinvoke.md).
+
+## <a name="see-also"></a>Zobacz też
+
+[Zestawy mieszane (natywne i zarządzane)](../dotnet/mixed-native-and-managed-assemblies.md)

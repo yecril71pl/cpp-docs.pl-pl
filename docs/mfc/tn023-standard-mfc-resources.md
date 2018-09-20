@@ -18,95 +18,99 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 967485f358d6659d759f2651c80c9390bff0b912
-ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
+ms.openlocfilehash: 8a104ce9edd7064dfeda03a77ac8322d99b374b7
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/26/2018
-ms.locfileid: "36952040"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46421807"
 ---
 # <a name="tn023-standard-mfc-resources"></a>TN023: standardowe zasoby MFC
-Ta uwaga opisuje standardowe zasoby podłączone do, a wymagane przez biblioteki MFC.  
-  
-## <a name="standard-resources"></a>Standardowe zasoby  
- MFC oferuje dwie kategorie wstępnie zdefiniowanych zasobów, których można użyć w aplikacji: zasobów pozyskiwać i standardowe zasoby.  
-  
- Zasoby pozyskiwać są dodatkowe zasoby, które platformę nie zależy, ale które warto dodać do interfejsu użytkownika. W następujących zasobach pozyskiwać znajdują się w próbce ogólne MFC [CLIPART](../visual-cpp-samples.md):  
-  
--   Common.RC: Jeden plik zasobów:  
-  
-    -   Kolekcja duże ikony, które reprezentują wiele firm i zadań przetwarzania danych.  
-  
-    -   Kilka typowe kursory (patrz także Afxres.rc).  
-  
-    -   Mapy bitowej do paska narzędzi, który zawiera kilka przycisków paska narzędzi.  
-  
-    -   Zasoby ikona i mapy bitowej, które są używane przez Commdlg.dll.  
-  
--   Indicate.RC: Zawiera zasoby ciągów dla wskaźników klucza stanu paska stanu, takie jak "CAP" dla włączony klawisz Caps Lock.  
-  
--   Prompts.RC: Id_file_new — zawiera zasoby ciągów menu wiersz dla każdego wstępnie zdefiniowanego polecenia, takie jak "Utwórz nowy dokument".  
-  
--   COMMDLG.RC: Visual C++ .rc zgodny plik zawierający standardowe szablony okna dialogowego pliku COMMDLG.  
-  
- Standardowe zasoby są zasoby z identyfikatory zdefiniowane AFX ramach zależy od implementacji wewnętrznego. Rzadko należy zmieniać te zasoby zdefiniowane AFX. Jeśli to zrobisz, należy wykonać procedury opisane w dalszej części tego tematu.  
-  
- Następujące zasoby struktury są zawarte w katalogu MFC\INCLUDE:  
-  
--   Afxres.RC: Wspólnych zasobów używanych przez platformę.  
-  
--   Afxprint.RC: Zasoby specyficzne dla drukowania.  
-  
--   Afxolecl.RC: Zasoby specyficzne dla aplikacji klienckich OLE.  
-  
--   Afxolev.RC: Zasoby specyficzne dla pełnej aplikacje serwera OLE.  
-  
-## <a name="using-clip-art-resources"></a>Korzystanie z zasobów pozyskiwać  
-  
-#### <a name="to-use-a-clip-art-binary-resource"></a>Aby użyć pozyskiwać zasobu binarnego  
-  
-1.  Otwórz plik zasobów aplikacji w programie Visual C++.  
-  
-2.  Otwórz Common.rc. Ten plik zawiera wszystkie zasoby pozyskiwać binarnego. Może to potrwać pewien czas, ponieważ plik Common.rc został skompilowany.  
-  
-3.  Przytrzymaj klawisz CTRL podczas przeciągania zasoby, które ma być używany z Common.rc do pliku zasobów aplikacji.  
-  
- Aby korzystać z innych zasobów pozyskiwać, wykonaj te same czynności. Jedyna różnica polega na tym, czy plik .rc odpowiednie zamiast Common.rc zostanie otwarty.  
-  
+
+Ta uwaga opisuje standardowe zasoby dostarczany z usługą i wymagane przez bibliotekę MFC.
+
+## <a name="standard-resources"></a>Standardowe zasoby
+
+MFC udostępnia dwie kategorie wstępnie zdefiniowanych zasobów, które można użyć w aplikacji: zasoby pozyskiwać i standardowych zasobów RAM.
+
+Obiekty clipart zasoby są dodatkowe zasoby, w ramach nie zależy od, ale które możesz zechcieć dodać do interfejsu użytkownika aplikacji. W następujących zasobach pozyskiwać są zawarte w próbki MFC-ogólne [CLIPART](../visual-cpp-samples.md):
+
+- Common.RC: Pojedynczego pliku zasobów zawierającego:
+
+   - Duża kolekcja ikon reprezentujących różne zadania przetwarzania danych i biznesowych.
+
+   - Kilka typowych kursorów (Zobacz również plik Afxres.rc).
+
+   - Mapę bitową do paska narzędzi, który zawiera kilka przycisków paska narzędzi.
+
+   - Zasoby bitmap i ikon, które są używane przez Commdlg.dll.
+
+- Indicate.RC: Zawiera zasoby ciągów dla wskaźników klucz stanu paska stanu, takie jak "Limit", aby uzyskać włączony klawisz Caps Lock.
+
+- Prompts.RC: Zawiera zasoby w postaci ciągów menu wiersza dla każdego polecenia wstępnie zdefiniowanych, takie jak "Utwórz nowy dokument" id_file_new —.
+
+- COMMDLG.RC: Visual C++ .rc zgodny plik, który zawiera standardowych szablonów pliku COMMDLG w oknie dialogowym.
+
+Standardowych zasobów RAM są zasobami za pomocą identyfikatorów zdefiniowanych AFX ramach zależy od wewnętrznej implementacji. Rzadko należy zmieniać te zasoby zdefiniowane AFX. Jeśli to zrobisz, należy wykonać procedury opisane w dalszej części tego tematu.
+
+Następujące zasoby struktury są zawarte w katalogu MFC\INCLUDE:
+
+- Pliki Afxres.RC: Typowe zasoby używane przez platformę.
+
+- Afxprint.RC: Zasoby specyficzne dla drukowania.
+
+- Afxolecl.RC: Zasoby specyficzne dla aplikacji klienckich OLE.
+
+- Afxolev.RC: Zasoby specyficzne dla pełnego aplikacje serwera OLE.
+
+## <a name="using-clip-art-resources"></a>Korzystanie z zasobów obiekty clipart
+
+#### <a name="to-use-a-clip-art-binary-resource"></a>Aby użyć zasób binarny obiekty clipart
+
+1. Otwórz plik zasobów aplikacji w języku Visual C++.
+
+1. Otwórz Common.rc. Ten plik zawiera wszystkie zasoby binarne clipart. To może potrwać pewien czas, ponieważ plik Common.rc został skompilowany.
+
+1. Przytrzymaj klawisz CTRL podczas przeciągania zasoby, które mają używać ze Common.rc do pliku zasobów aplikacji.
+
+Aby korzystać z innych zasobów pozyskiwać, wykonaj te same czynności. Jedyna różnica polega na tym, czy zostanie otwarty plik .rc odpowiednie zamiast Common.rc.
+
 > [!NOTE]
->  Nie można więc przypadkowo trwale przenoszenia zasobów poza Common.rc. Przytrzymując klawisz CTRL podczas przeciągania zasobów, spowoduje utworzenie kopii. Jeśli użytkownik nie przytrzymaj klawisz CTRL podczas przeciągania, zasoby będą przeniesione. Jeśli dane mogą przypadkowo wprowadzone zmiany w pliku Common.rc, kliknij przycisk "Nie", po wyświetleniu pytania, czy zapisać zmiany w Common.rc.  
-  
+>  Uważaj, aby nie przypadkowo trwałe przeniesienie zasobów poza Common.rc. Przytrzymując klawisz CTRL podczas przeciągania zasobów, spowoduje utworzenie kopii. Jeśli możesz nie przytrzymaj klawisz CTRL podczas przeciągania, zasoby zostaną przeniesione. Jeśli dane, może przypadkowo wprowadzone zmiany do pliku Common.rc, kliknij przycisk "No", gdy zostanie wyświetlony monit, czy chcesz zapisać zmiany dotyczące operacji Common.rc.
+
 > [!NOTE]
->  .RC — pliki zasobów ma specjalne zasobu TEXTINCLUDE w nich, które uniemożliwiają przypadkowo zapisywania na standardowe .RC — pliki.  
-  
-### <a name="customizing-standard-framework-resources"></a>Dostosowywanie standardowe zasoby  
- Standardowe zasoby zwykle znajdują się w aplikacji przy użyciu # polecenie include w pliku zasobów aplikacji. Kreatorami AppWizard wygeneruje plik zasobów. Ten plik zawiera zasoby odpowiednie struktury standardowe, w zależności od tego, jakie opcje kreatorami AppWizard wybierz. Można przejrzeć, dodać lub usunąć zasobów, do których mają zostać uwzględnione zmiana dyrektywy kompilacji. Aby to zrobić, otwórz **zasobów** menu i wybierz **ustawić obejmuje**. Spójrz na edytowanie elementu "Dyrektywy kompilacji". Na przykład:  
-  
-```  
-#include "afxres.rc"  
-#include "afxprint.rc"  
-```  
-  
- Najbardziej typowych przypadkach dostosowywania standardowe zasoby jest dodanie lub usunięcie dodatkowych obejmuje do drukowania, klient OLE i obsługi serwera OLE.  
-  
- W rzadkich przypadkach warto dostosować zawartość zasoby struktury standardowego dla określonej aplikacji nie tylko dodawać i usuwać całego pliku. Kroki po pokazują, jak można ograniczyć zasoby, które znajdują się:  
-  
-##### <a name="to-customize-the-contents-of-a-standard-resource-file"></a>Aby dostosować zawartość pliku zasobu standardowe  
-  
-1.  Otwórz plik zasobów w programie Visual C++.  
-  
-2.  Przy użyciu polecenia zasobów ustawić obejmuje usunięcie `#include` pliku .rc standardowe, który chcesz dostosować. Na przykład, aby dostosować paska narzędzi podglądu wydruku, Usuń `#include "afxprint.rc"` wiersza.  
-  
-3.  Otwieranie plików odpowiednie standardowe zasoby w MFC\INCLUDE. Następujący przykład we wcześniejszej części tego tematu odpowiedni plik jest MFC\Include\Aafxprint.rc  
-  
-4.  Skopiuj wszystkie zasoby z plik .rc standardowa do Twojego pliku zasobu aplikacji.  
-  
-5.  Zmodyfikuj kopię standardowe zasoby programu w pliku zasobów aplikacji.  
-  
+>  Pliki zasobów .rc mają specjalne zasób TEXTINCLUDE w nich, które uniemożliwiają przypadkowo zapisywania na podstawie plików standard .rc.
+
+### <a name="customizing-standard-framework-resources"></a>Dostosowywanie standardowych zasobów RAM
+
+Standardowych zasobów RAM zwykle znajdują się w aplikacji przy użyciu #include polecenia Plik zasobów aplikacji. Kreator AppWizard wygeneruje plik zasobów. Ten plik zawiera odpowiednie standardowych zasobów RAM, zależności od tego, jakie opcje przez kreatora AppWizard wybierz. Można przejrzeć, Dodaj lub Usuń, które zasoby znajdują się przez zmianę w dyrektywach czasu kompilacji. Aby to zrobić, otwórz **zasobów** menu, a następnie wybierz **zestaw zawiera**. Spójrz na edytowanie elementu "Dyrektywy czasu kompilacji". Na przykład:
+
+```
+#include "afxres.rc"
+#include "afxprint.rc"
+```
+
+Najbardziej typowe w przypadku dostosowywanie standardowych zasobów RAM jest dodawanie lub usuwanie dodatkowych obejmuje związane z drukowaniem, klienta OLE i pomoc techniczna dotycząca serwera OLE.
+
+W rzadkich przypadkach możesz chcieć dostosować zawartość standardowych zasobów ram dla określonej aplikacji nie tylko dodawać i usuwać całego pliku. Kroki w następujących tematach przedstawiają sposób ograniczenia zasobów, które są dołączone:
+
+##### <a name="to-customize-the-contents-of-a-standard-resource-file"></a>Aby dostosować zawartość pliku standardowych zasobów
+
+1. Otwórz plik zasobów w programie Visual C++.
+
+1. Za pomocą polecenia zestaw zasobów zawiera Usuń `#include` dla pliku .rc standardowa, który chcesz dostosować. Na przykład Dostosowywanie paska narzędzi podglądu wydruku, usunąć `#include "afxprint.rc"` wiersza.
+
+1. Otwórz pliki odpowiednie standardowe zasoby w MFC\INCLUDE. Następujący przykład we wcześniejszej części tego tematu odpowiedniego pliku jest MFC\Include\Aafxprint.rc
+
+1. Skopiuj wszystkie zasoby z pliku .rc standardowy do Twojego pliku zasobu aplikacji.
+
+1. Zmodyfikuj kopię standardowe zasoby w pliku zasobów aplikacji.
+
 > [!NOTE]
->  Nie należy modyfikować zasobów bezpośrednio w standardowe .RC — pliki. W ten sposób spowoduje jej modyfikacji zasoby dostępne w każdej aplikacji, a nie tylko z tego, który pracuje obecnie.  
-  
-## <a name="see-also"></a>Zobacz też  
- [Uwagi techniczne według numerów](../mfc/technical-notes-by-number.md)   
- [Uwagi techniczne według kategorii](../mfc/technical-notes-by-category.md)
+>  Nie należy modyfikować zasobów bezpośrednio w plikach .rc standardowych. Ten sposób zmodyfikuje zasoby dostępne w każdej aplikacji, a nie tylko w jeden, w którym aktualnie pracuje.
+
+## <a name="see-also"></a>Zobacz też
+
+[Uwagi techniczne według numerów](../mfc/technical-notes-by-number.md)<br/>
+[Uwagi techniczne według kategorii](../mfc/technical-notes-by-category.md)
 

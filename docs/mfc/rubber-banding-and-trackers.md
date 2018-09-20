@@ -18,26 +18,28 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a4f36a634e4e5e6d4ee6c2618d0d43313c7c8094
-ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
+ms.openlocfilehash: ed6e649309acf86e24c52bf8b50a859d0ac066ad
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/25/2018
-ms.locfileid: "36931739"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46428203"
 ---
 # <a name="rubber-banding-and-trackers"></a>Gumka i trackery
-Inna funkcja dostarczony wraz z trackerów jest wybór "gumki", który umożliwia użytkownikowi wybranie wielu elementów OLE przez przeciągnięcie prostokąta zmiany rozmiaru wokół elementów, które można wybrać. Gdy użytkownik zwalnia lewego przycisku myszy, elementy w obrębie regionu wybrane przez użytkownika są zaznaczone i może manipulować przez użytkownika. Użytkownik może na przykład, przeciągnij zaznaczenie do innej aplikacji kontenera.  
-  
- Implementowanie ta funkcja wymaga dodatkowy kod w funkcji obsługi WM_LBUTTONDOWN aplikacji.  
-  
- Poniższy przykładowy kod implementuje gumki — wybór i dodatkowe funkcje.  
-  
- [!code-cpp[NVC_MFCOClient#6](../mfc/codesnippet/cpp/rubber-banding-and-trackers_1.cpp)]  
-  
- Jeśli chcesz zezwolić odwracalnego orientację śledzący podczas Gumka, należy wywołać [CRectTracker::TrackRubberBand](../mfc/reference/crecttracker-class.md#trackrubberband) z trzeci parametr ustawioną **TRUE**. Należy pamiętać, że stosowanie odwracalnego orientacji czasami spowoduje [CRectTracker::m_rect](../mfc/reference/crecttracker-class.md#m_rect) aby stać się odwrócony. Ten problem można rozwiązać przez wywołanie do [CRect::NormalizeRect](../atl-mfc-shared/reference/crect-class.md#normalizerect).  
-  
- Aby uzyskać więcej informacji, zobacz [elementy klienckie kontenerów](../mfc/containers-client-items.md) i [Dostosowywanie przeciąganie i upuszczanie](../mfc/drag-and-drop-customizing.md).  
-  
-## <a name="see-also"></a>Zobacz też  
- [Trackery: Implementowanie Trackerów w aplikacji OLE](../mfc/trackers-implementing-trackers-in-your-ole-application.md)   
- [Klasa CRectTracker](../mfc/reference/crecttracker-class.md)
+
+Kolejną funkcją dostarczony wraz z trackery jest wybór "gumki", który umożliwia użytkownikowi wybranie wielu elementów OLE, przeciągając prostokąt zmiany rozmiaru wokół elementów do wybrania. Gdy użytkownik zwolni przycisk myszy po lewej stronie, elementów w obrębie regionu wybrane przez użytkownika są zaznaczone i mogą być zmieniane przez użytkownika. Użytkownik może na przykład przeciągnij je do innej aplikacji kontenera.
+
+Implementowanie ta funkcja wymaga dodatkowy kod w funkcji obsługi WM_LBUTTONDOWN Twojej aplikacji.
+
+Poniższy przykładowy kod implementuje gumki — wybór i dodatkowe funkcje.
+
+[!code-cpp[NVC_MFCOClient#6](../mfc/codesnippet/cpp/rubber-banding-and-trackers_1.cpp)]
+
+Jeśli chcesz zezwolić odwracalnego orientację śledzący podczas Gumka, należy wywołać [CRectTracker::TrackRubberBand](../mfc/reference/crecttracker-class.md#trackrubberband) z trzecim określonym parametrem równa **TRUE**. Należy pamiętać, umożliwiając odwracalnego orientacji czasami spowoduje [CRectTracker::m_rect](../mfc/reference/crecttracker-class.md#m_rect) aby stać się odwrócona. Ten problem można rozwiązać przez wywołanie [CRect::NormalizeRect](../atl-mfc-shared/reference/crect-class.md#normalizerect).
+
+Aby uzyskać więcej informacji, zobacz [elementy klienckie kontenerów](../mfc/containers-client-items.md) i [Dostosowywanie przeciągania i upuszczania](../mfc/drag-and-drop-customizing.md).
+
+## <a name="see-also"></a>Zobacz też
+
+[Trackery: implementowanie trackerów w aplikacji OLE](../mfc/trackers-implementing-trackers-in-your-ole-application.md)<br/>
+[Klasa CRectTracker](../mfc/reference/crecttracker-class.md)

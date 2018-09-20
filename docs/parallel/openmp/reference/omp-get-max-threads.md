@@ -16,62 +16,65 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 303e037d3fbeaf1958918c2ac78346bdcf01cf2a
-ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
+ms.openlocfilehash: b5c677b56d27038405237deb8c9bda2aeee87e7c
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33695840"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46446689"
 ---
 # <a name="ompgetmaxthreads"></a>omp_get_max_threads
-Zwraca liczbę całkowitą, która jest równa lub większa niż liczba wątków, które są dostępne w przypadku równoległego regionu bez [num_threads](../../../parallel/openmp/reference/num-threads.md) zostały zdefiniowane w tym momencie w kodzie.  
-  
-## <a name="syntax"></a>Składnia  
-  
-```  
-int omp_get_max_threads( )  
-```  
-  
-## <a name="remarks"></a>Uwagi  
- Aby uzyskać więcej informacji, zobacz [3.1.3 funkcja omp_get_max_threads](../../../parallel/openmp/3-1-3-omp-get-max-threads-function.md).  
-  
-## <a name="example"></a>Przykład  
-  
-```  
-// omp_get_max_threads.cpp  
-// compile with: /openmp  
-#include <stdio.h>  
-#include <omp.h>  
-  
-int main( )   
-{  
-    omp_set_num_threads(8);  
-    printf_s("%d\n", omp_get_max_threads( ));  
-    #pragma omp parallel  
-        #pragma omp master  
-        {  
-            printf_s("%d\n", omp_get_max_threads( ));  
-        }  
-  
-    printf_s("%d\n", omp_get_max_threads( ));  
-  
-    #pragma omp parallel num_threads(3)  
-        #pragma omp master  
-        {  
-            printf_s("%d\n", omp_get_max_threads( ));  
-        }  
-  
-    printf_s("%d\n", omp_get_max_threads( ));  
-}  
-```  
-  
-```Output  
-8  
-8  
-8  
-8  
-8  
-```  
-  
-## <a name="see-also"></a>Zobacz też  
- [Funkcje](../../../parallel/openmp/reference/openmp-functions.md)
+
+Zwraca liczbę całkowitą, która jest równa lub większa niż liczba wątków, które będą dostępne w przypadku równoległego regionu bez [num_threads](../../../parallel/openmp/reference/num-threads.md) zostały zdefiniowane w tym momencie w kodzie.
+
+## <a name="syntax"></a>Składnia
+
+```
+int omp_get_max_threads( )
+```
+
+## <a name="remarks"></a>Uwagi
+
+Aby uzyskać więcej informacji, zobacz [3.1.3 funkcja omp_get_max_threads](../../../parallel/openmp/3-1-3-omp-get-max-threads-function.md).
+
+## <a name="example"></a>Przykład
+
+```
+// omp_get_max_threads.cpp
+// compile with: /openmp
+#include <stdio.h>
+#include <omp.h>
+
+int main( )
+{
+    omp_set_num_threads(8);
+    printf_s("%d\n", omp_get_max_threads( ));
+    #pragma omp parallel
+        #pragma omp master
+        {
+            printf_s("%d\n", omp_get_max_threads( ));
+        }
+
+    printf_s("%d\n", omp_get_max_threads( ));
+
+    #pragma omp parallel num_threads(3)
+        #pragma omp master
+        {
+            printf_s("%d\n", omp_get_max_threads( ));
+        }
+
+    printf_s("%d\n", omp_get_max_threads( ));
+}
+```
+
+```Output
+8
+8
+8
+8
+8
+```
+
+## <a name="see-also"></a>Zobacz też
+
+[Funkcje](../../../parallel/openmp/reference/openmp-functions.md)

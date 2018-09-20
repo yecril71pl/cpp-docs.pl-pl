@@ -1,5 +1,5 @@
 ---
-title: Zadania harmonogramu (współbieżność środowiska wykonawczego) | Dokumentacja firmy Microsoft
+title: Zadanie usługi Scheduler (współbieżność środowiska wykonawczego) | Dokumentacja firmy Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -26,44 +26,45 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b76aaa0310e9f481ea65a0ab0600a0e3ae6aed7c
-ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
+ms.openlocfilehash: 56f7f35169b349abb5f7db14b3f3a749ab7dd673
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33689324"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46419746"
 ---
 # <a name="task-scheduler-concurrency-runtime"></a>Harmonogram zadań (współbieżność środowiska wykonawczego)
-W tematach w tej części dokumentacji opisano ważne funkcje harmonogram zadań współbieżności środowiska wykonawczego. Harmonogram zadań jest przydatne, gdy chcesz dostrojenie wydajności istniejący kod, który korzysta ze współbieżności środowiska wykonawczego.  
-  
+
+W tematach w tej części dokumentacji opisano ważne funkcje harmonogram zadań środowiska uruchomieniowego współbieżności. Harmonogram zadań jest przydatne, gdy chcesz dostrojenie wydajności usługi istniejący kod, który używa środowiska uruchomieniowego współbieżności.
+
 > [!IMPORTANT]
->  Harmonogram zadań nie jest dostępny z poziomu aplikacji systemu Windows platformy Uniwersalnej. Aby uzyskać więcej informacji, zobacz [tworzenie operacji asynchronicznych w języku C++ dla aplikacji platformy UWP](../../parallel/concrt/creating-asynchronous-operations-in-cpp-for-windows-store-apps.md).  
->   
->  W programie Visual Studio 2015 lub nowszego oraz [concurrency::task](../../parallel/concrt/reference/task-class.md) klasy i powiązanych typów z ppltasks.h Użyj puli wątków systemu Windows jako ich harmonogramu. W tym temacie nie ma już zastosowania do typów, które są zdefiniowane w ppltasks.h. Algorytmy równoległe, takich jak parallel_for w dalszym ciągu korzystać ze współbieżności środowiska wykonawczego jako domyślnego harmonogramu.  
-  
+>  Harmonogram zadań nie jest dostępna z aplikacji platformy uniwersalnej Windows (UWP). Aby uzyskać więcej informacji, zobacz [tworzenie operacji asynchronicznych w języku C++ dla aplikacji platformy UWP](../../parallel/concrt/creating-asynchronous-operations-in-cpp-for-windows-store-apps.md).
+>
+>  W programie Visual Studio 2015 i nowszych [concurrency::task](../../parallel/concrt/reference/task-class.md) klas i typów powiązanych w ppltasks.h użyć puli wątków Windows jako ich harmonogram. Ten temat dotyczy nie jest już na typy, które są zdefiniowane w ppltasks.h. Algorytmy równoległe, takie jak parallel_for w dalszym ciągu używać środowiska uruchomieniowego współbieżności jako domyślnego harmonogramu.
+
 > [!TIP]
->  Współbieżność środowiska wykonawczego zapewnia harmonogram domyślny, i dlatego nie trzeba utworzyć w aplikacji. Harmonogram zadań ułatwia dostrojenie wydajności aplikacji, dlatego zaleca się uruchamiania z [równoległych biblioteki wzorców (PLL)](../../parallel/concrt/parallel-patterns-library-ppl.md) lub [biblioteki agentów asynchronicznych](../../parallel/concrt/asynchronous-agents-library.md) w przypadku jesteś nowym użytkownikiem współbieżności środowiska wykonawczego.  
-  
- Harmonogram zadań harmonogramy i koordynuje zadań w czasie wykonywania. A *zadań* jest jednostka pracy, który wykonuje określone zadanie. Zadania można są zazwyczaj uruchamiane równolegle z innymi zadaniami. Pracy, które jest wykonywane przez elementy grupy zadań, algorytmy równoległe i agentów asynchronicznych należą do nich zadań.  
-  
- Harmonogram zadań zarządza szczegółowe informacje, które są powiązane z efektywne planowanie zadań na komputerach, które mają wiele zasobów obliczeniowych. Harmonogram zadań używa także najnowsze funkcje systemu operacyjnego. W związku z tym aplikacje korzystające ze współbieżności środowiska wykonawczego automatycznie skalować i poprawić na sprzęcie, który daje szereg nowych możliwości.  
-  
- [Porównywanie z modelami współbieżności inne](../../parallel/concrt/comparing-the-concurrency-runtime-to-other-concurrency-models.md) opisano różnice między mechanizmy planowania cenią sobie wcześniejsze i współpracy. Harmonogram zadań używa współpracy planowania i algorytmu kradzież pracy oraz cenią sobie wcześniejsze Harmonogram systemu operacyjnego do osiągnięcia maksymalnego użycia przetwarzania zasobów.  
-  
- Współbieżność środowiska wykonawczego zawiera harmonogram domyślny, dzięki czemu nie trzeba zarządzać szczegóły infrastruktury. W związku z tym należy zwykle nie należy używać harmonogram zadań bezpośrednio. Jednak aby spełnić wymagania jakości aplikacji, można użyć harmonogramu zadań, aby podać własne planowania planiści zasad lub kojarzenie z określonych zadań. Na przykład załóżmy, że masz równoległego sortowanie procedury, która nie obsługuje więcej niż cztery procesory. Można użyć *zasad harmonogramu* można utworzyć harmonogramu, która generuje nie więcej niż cztery równoczesnych zadań. Uruchamianie procedury sortowania na ten harmonogram umożliwia inne aktywne planiści wszelkie pozostałe zasoby przetwarzania.  
-  
-## <a name="related-topics"></a>Tematy pokrewne  
-  
-|Tytuł|Opis|  
-|-----------|-----------------|  
-|[Wystąpienia harmonogramu](../../parallel/concrt/scheduler-instances.md)|W tym artykule opisano wystąpienia harmonogramu i sposobu użycia `concurrency::Scheduler` i `concurrency::CurrentScheduler` klasy do zarządzania nimi. Wystąpienia harmonogramu należy użyć, jeśli chcesz skojarzyć z określonych rodzajów obciążeń jawne zasadami planowania.|  
-|[Zasady harmonogramu](../../parallel/concrt/scheduler-policies.md)|Zawiera opis roli zasad harmonogramu. Jeśli chcesz kontrolować strategii, używany w harmonogramie podczas zarządzania zadania przy użyciu zasad harmonogramu.|  
-|[Grupy harmonogramu](../../parallel/concrt/schedule-groups.md)|Zawiera opis roli grup harmonogramu. Grupy harmonogramu Użyj, jeśli wymagane jest wysoki stopień miejscowości spośród zadań, na przykład, gdy grupa powiązanych zadań korzystać z wykonania na tym samym węźle procesora.|  
-|[Zadania lekkie](../../parallel/concrt/lightweight-tasks.md)|Zawiera opis roli lekkie zadań. Zadania lekkie jest przydatna w przypadku dostosowania istniejącego kodu do korzystania z funkcji planowania programu współbieżności środowiska wykonawczego.|  
-|[Konteksty](../../parallel/concrt/contexts.md)|Zawiera opis roli kontekstów, `concurrency::wait` funkcji i `concurrency::Context` klasy. Tej funkcji należy używać wtedy, gdy będziesz potrzebować kontrolę nad po kontekstów zablokować odblokować i uzyskanie lub jeśli chcesz włączyć nadsubskrypcji w aplikacji.|  
-|[Funkcje zarządzania pamięcią](../../parallel/concrt/memory-management-functions.md)|W tym artykule opisano `concurrency::Alloc` i `concurrency::Free` funkcji. Te funkcje umożliwiają poprawę wydajności pamięci przydzielając i zwolnić pamięć, w sposób współbieżnych.|  
-|[Porównywanie z innymi modelami współbieżności](../../parallel/concrt/comparing-the-concurrency-runtime-to-other-concurrency-models.md)|W tym artykule opisano różnice między mechanizmy planowania cenią sobie wcześniejsze i współpracy.|  
-|[Biblioteka równoległych wzorców (PPL)](../../parallel/concrt/parallel-patterns-library-ppl.md)|Informacje dotyczące używania różnych równoległych wzorców, na przykład algorytmy równoległe w aplikacji.|  
-|[Biblioteki agentów asynchronicznych](../../parallel/concrt/asynchronous-agents-library.md)|Opisuje sposób korzystania z agentów asynchronicznych w aplikacjach użytkownika.|  
-|[Środowisko uruchomieniowe współbieżności](../../parallel/concrt/concurrency-runtime.md)|W tym artykule opisano współbieżność środowiska wykonawczego, co upraszcza Programowanie równoległe i zawiera linki do powiązanych tematów.|
+>  Środowisko uruchomieniowe współbieżności zawiera domyślnego harmonogramu, a w związku z tym nie należy utworzyć w aplikacji. Ponieważ Harmonogram zadań ułatwia dostrajania wydajności aplikacji, zalecamy rozpoczęcie od [biblioteki wzorców równoległych (PPL)](../../parallel/concrt/parallel-patterns-library-ppl.md) lub [bibliotekę asynchronicznych agentów](../../parallel/concrt/asynchronous-agents-library.md) przypadku jesteś nowym użytkownikiem w czasie wykonywania współbieżności.
+
+Harmonogram zadań planuje i koordynuje zadania w czasie wykonywania. A *zadań* jest jednostką pracy, który wykonuje określone zadanie. Zadania zazwyczaj można uruchomić równolegle z innymi zadaniami. Pracę wykonywaną przez elementy grupy zadań, algorytmy równoległe i agentów asynchronicznych należą do nich zadania.
+
+Harmonogram zadań zarządza szczegółowe informacje, które są powiązane z efektywne planowanie zadań na komputerach, które mają wiele zasobów obliczeniowych. Harmonogram zadań również korzysta z najnowszych funkcji systemu operacyjnego. W związku z tym aplikacje, które używają środowiska uruchomieniowego współbieżności automatycznie skalować i poprawić na sprzęcie, który wzrosły możliwości.
+
+[Porównanie z modelami współbieżności inne](../../parallel/concrt/comparing-the-concurrency-runtime-to-other-concurrency-models.md) opisano różnice między mechanizmy planowania preemptive i współpracy. Harmonogram zadań używa planowania współpracy i algorytmu kradzież pracy wraz z preemptive Harmonogram systemu operacyjnego do osiągnięcia maksymalnego użycia przetwarzania zasobów.
+
+Środowisko uruchomieniowe współbieżności zawiera domyślnego harmonogramu, tak, aby nie trzeba zarządzać szczegóły infrastruktury. Dlatego należy zwykle nie należy używać harmonogramu zadań bezpośrednio. Jednak aby zaspokoić potrzeby jakości aplikacji, można użyć harmonogramu zadań, podać własne planowania zasad lub skojarz transfery danych z określonych zadań. Na przykład załóżmy, że masz równoległego sortowanie procedury, która nie skalować poza cztery procesory. Możesz użyć *zasad harmonogramu* utworzyć harmonogram, który generuje nie więcej niż cztery współbieżnych zadań. Uruchamianie procedury sortowania na ten harmonogram umożliwia innych aktywnych harmonogramów wszelkie pozostałe zasoby przetwarzania.
+
+## <a name="related-topics"></a>Tematy pokrewne
+
+|Tytuł|Opis|
+|-----------|-----------------|
+|[Wystąpienia harmonogramu](../../parallel/concrt/scheduler-instances.md)|W tym artykule opisano wystąpienia harmonogramu i sposobu używania `concurrency::Scheduler` i `concurrency::CurrentScheduler` klasy, aby zarządzać nimi. Wystąpienia harmonogramu należy użyć skojarzyć zasady planowania jawne za pomocą określonych rodzajów obciążeń.|
+|[Zasady harmonogramu](../../parallel/concrt/scheduler-policies.md)|W tym artykule opisano rolę zasad harmonogramu. Gdy użytkownik chce kontrolować strategii, używany w harmonogramie podczas zarządzania zadaniami za pomocą zasad harmonogramu.|
+|[Grupy harmonogramu](../../parallel/concrt/schedule-groups.md)|W tym artykule opisano rolę harmonogramu grupy. Użyj grupy harmonogramu, gdy na przykład wymagają wysokiego stopnia miejscowość spośród zadań, gdy grupa powiązanych zadań korzystają z wykonywane w tym samym węźle procesora.|
+|[Zadania lekkie](../../parallel/concrt/lightweight-tasks.md)|W tym artykule opisano rolę lekkie zadanie. Zadania lekkie są przydatne, gdy dostosowanie istniejącego kodu do planowania funkcji środowiska uruchomieniowego współbieżności.|
+|[Konteksty](../../parallel/concrt/contexts.md)|Zawiera opis roli kontekstach `concurrency::wait` funkcji i `concurrency::Context` klasy. W przypadku konieczności sprawowania kontroli nad po kontekstów block odblokowania i uzyskanie lub jeśli chcesz włączyć nadsubskrypcję w aplikacji, należy użyć tej funkcji.|
+|[Funkcje zarządzania pamięcią](../../parallel/concrt/memory-management-functions.md)|W tym artykule opisano `concurrency::Alloc` i `concurrency::Free` funkcji. Te funkcje można zwiększyć wydajność pamięci, przez przydzielanie i zwalnianie pamięci w sposób współbieżnych.|
+|[Porównywanie z innymi modelami współbieżności](../../parallel/concrt/comparing-the-concurrency-runtime-to-other-concurrency-models.md)|W tym artykule opisano różnice między mechanizmy planowania preemptive i współpracy.|
+|[Biblioteka równoległych wzorców (PPL)](../../parallel/concrt/parallel-patterns-library-ppl.md)|Opisuje sposób używania różnych równoległych wzorców, na przykład algorytmów równoległych w aplikacjach.|
+|[Biblioteki agentów asynchronicznych](../../parallel/concrt/asynchronous-agents-library.md)|W tym artykule opisano, jak używać agentów asynchronicznych w aplikacjach.|
+|[Środowisko uruchomieniowe współbieżności](../../parallel/concrt/concurrency-runtime.md)|W tym artykule opisano środowisko uruchomieniowe współbieżności, upraszczający Programowanie równoległe i zawiera linki do powiązanych tematów.|
 

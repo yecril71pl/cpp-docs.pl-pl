@@ -1,5 +1,5 @@
 ---
-title: Podstawowe informacje na temat narzędzi | Dokumentacja firmy Microsoft
+title: Podstawowe informacje dotyczące narzędzi | Dokumentacja firmy Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -30,83 +30,89 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5240cf50b35b2e1a300071ccb6cc15a065ac364e
-ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
+ms.openlocfilehash: f52c5af48631a1441b160a9b59a987f697fdedc6
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/26/2018
-ms.locfileid: "36951640"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46438148"
 ---
 # <a name="toolbar-fundamentals"></a>Paski narzędzi — podstawowe założenia
-W tym artykule opisano podstawowe implementacji MFC, które umożliwia dodanie narzędzi domyślne do aplikacji przez wybranie opcji w Kreatorze aplikacji. Tematy obejmują:  
-  
--   [Opcja narzędzi Kreatora aplikacji](#_core_the_appwizard_toolbar_option)  
-  
--   [Pasek narzędzi w kodzie](#_core_the_toolbar_in_code)  
-  
--   [Edytowanie zasobu paska narzędzi](#_core_editing_the_toolbar_resource)  
-  
--   [Wiele pasków narzędzi](#_core_multiple_toolbars)  
-  
-##  <a name="_core_the_appwizard_toolbar_option"></a> Opcja narzędzi Kreatora aplikacji  
- Uzyskanie pojedynczego paska narzędzi z domyślnych przycisków opcję standardowe Dokowanie paska narzędzi na stronie funkcje interfejsu użytkownika z etykietą. To dodaje do aplikacji kod, który:  
-  
--   Tworzy obiekt paska narzędzi.  
-  
--   Zarządza narzędzi, łącznie z jej możliwości dokowania lub float.  
-  
-##  <a name="_core_the_toolbar_in_code"></a> Pasek narzędzi w kodzie  
- Pasek narzędzi jest [ctoolbar —](../mfc/reference/ctoolbar-class.md) obiektu zadeklarowany jako element członkowski danych klasy aplikacji `CMainFrame` klasy. Innymi słowy obiekt narzędzi jest osadzony w obiekcie okna w ramce głównej. Oznacza to, że MFC tworzy pasek narzędzi tworzy ramkę okna i niszczy paska narzędzi po jego niszczy okno ramowe. W następującej deklaracji klasy częściowej, wiele aplikacji interfejsu (MDI) dokumentu zawiera elementy członkowskie danych osadzonych narzędzi i paska stanu osadzonych. Przedstawiono również zastąpienia z `OnCreate` funkcję elementu członkowskiego.  
-  
- [!code-cpp[NVC_MFCListView#6](../atl/reference/codesnippet/cpp/toolbar-fundamentals_1.h)]  
-  
- Tworzenie narzędzi występuje w `CMainFrame::OnCreate`. Wywołania MFC [OnCreate](../mfc/reference/cwnd-class.md#oncreate) po utworzeniu okna ramki, ale przed staje się widoczna. Wartość domyślna `OnCreate` że Kreator aplikacja generuje wykonuje następujące zadania narzędzi:  
-  
-1.  Wywołania `CToolBar` obiektu [Utwórz](../mfc/reference/ctoolbar-class.md#create) funkcji członkowskiej, aby utworzyć podstawową [CToolBarCtrl](../mfc/reference/ctoolbarctrl-class.md) obiektu.  
-  
-2.  Wywołania [LoadToolBar](../mfc/reference/ctoolbar-class.md#loadtoolbar) można załadować informacji o zasobie paska narzędzi.  
-  
-3.  Wywołania funkcji, aby umożliwić dokowania, zmiennoprzecinkowych i etykietki narzędzi. Aby uzyskać więcej informacji o tych wywołań, zobacz artykuł [dokowanie i przestawne paski narzędzi](../mfc/docking-and-floating-toolbars.md).  
-  
+
+W tym artykule opisano podstawowe implementacja MFC, które umożliwia dodanie narzędzi domyślne do aplikacji, zaznaczając odpowiednią opcję w Kreatorze aplikacji. Omawiane tematy to m.in.:
+
+- [Opcja narzędzi Kreatora aplikacji](#_core_the_appwizard_toolbar_option)
+
+- [Pasek narzędzi w kodzie](#_core_the_toolbar_in_code)
+
+- [Edytowanie zasób paska narzędzi](#_core_editing_the_toolbar_resource)
+
+- [Wiele pasków narzędzi](#_core_multiple_toolbars)
+
+##  <a name="_core_the_appwizard_toolbar_option"></a> Opcja narzędzi Kreatora aplikacji
+
+Aby uzyskać jednym pasku narzędzi, za pomocą przycisków domyślne, wybierz standardowego dokowania paska narzędzi na stronie opcji etykietą funkcje interfejsu użytkownika. Spowoduje to dodanie kodu do aplikacji który:
+
+- Tworzy obiekt paska narzędzi.
+
+- Zarządza narzędzi, łącznie z jego możliwości, aby zadokować lub liczb zmiennoprzecinkowych.
+
+##  <a name="_core_the_toolbar_in_code"></a> Pasek narzędzi w kodzie
+
+Pasek narzędzi jest [CToolBar](../mfc/reference/ctoolbar-class.md) obiekt zadeklarowany jako element członkowski danych Twojej aplikacji `CMainFrame` klasy. Innymi słowy obiekt paska narzędzi jest osadzony w obiekcie ramką głównego okna. Oznacza to, MFC utworzoną za pomocą paska narzędzi tworzy okno ramowe i niszczy pasek narzędzi, gdy jej niszczy okno ramowe. W następującej deklaracji klasy częściowej, wielu dokumentów (MDI) aplikację z interfejsem, zawiera elementy członkowskie danych osadzonym pasku narzędzi i pasek stanu osadzonych. Zawiera również zastępowania metody `OnCreate` funkcja elementu członkowskiego.
+
+[!code-cpp[NVC_MFCListView#6](../atl/reference/codesnippet/cpp/toolbar-fundamentals_1.h)]
+
+Tworzenie narzędzi występuje w `CMainFrame::OnCreate`. Wywołania MFC [OnCreate](../mfc/reference/cwnd-class.md#oncreate) po utworzeniu okna ramki, ale przed staje się widoczny. Wartość domyślna `OnCreate` , Kreator aplikacji generuje wykonuje następujące zadania narzędzi:
+
+1. Wywołania `CToolBar` obiektu [Utwórz](../mfc/reference/ctoolbar-class.md#create) funkcja elementu członkowskiego, aby utworzyć podstawową [CToolBarCtrl](../mfc/reference/ctoolbarctrl-class.md) obiektu.
+
+1. Wywołania [LoadToolBar](../mfc/reference/ctoolbar-class.md#loadtoolbar) można załadować informacji o zasobie paska narzędzi.
+
+1. Wywołuje funkcje umożliwiające dokowania, zmiennoprzecinkowe i etykietek narzędzi. Aby uzyskać szczegółowe informacje o tych wywołań, zobacz artykuł [dokowanie i przestawne paski narzędzi](../mfc/docking-and-floating-toolbars.md).
+
 > [!NOTE]
->  Ogólne MFC próbki [DOCKTOOL](../visual-cpp-samples.md) zawiera ilustracje starych i nowych pasków narzędzi MFC. Paski narzędzi, które używają `COldToolbar` wymagają wywołań w kroku 2, aby `LoadBitmap` (zamiast `LoadToolBar`) i `SetButtons`. Nowych pasków narzędzi wymagają wywołań `LoadToolBar`.  
-  
- Dokowanie, zmiennoprzecinkowych i wywołania etykietki narzędzia są opcjonalne. Możesz usunąć te wiersze z `OnCreate` Jeśli wolisz. Wynik jest narzędzi, które pozostają stałe, nie można float lub redock i nie można wyświetlić etykietek narzędzi.  
-  
-##  <a name="_core_editing_the_toolbar_resource"></a> Edytowanie zasobu paska narzędzi  
- Narzędzi domyślne, możesz uzyskać przy użyciu Kreatora aplikacji jest oparta na **rt_toolbar —** zasobów niestandardowych, wprowadzone w MFC w wersji 4.0. Można edytować tego zasobu z [paska narzędzi edytora](../windows/toolbar-editor.md). Edytor umożliwia łatwe dodawanie, usuwanie i rozmieszczanie przycisków. Zawiera ona edytora graficznego w przypadku przycisków, który jest bardzo podobny do edytor grafiki w programie Visual C++. W przypadku edytowania paski narzędzi w poprzednich wersjach programu Visual C++, można znaleźć zadania znacznie łatwiejsze teraz.  
-  
- Aby połączyć przycisku paska narzędzi do polecenia, przekażesz przycisku identyfikator polecenia, takich jak `ID_MYCOMMAND`. Określ identyfikator polecenia na stronie właściwości przycisku w edytorze paska narzędzi. Następnie Utwórz funkcję obsługi polecenia (zobacz [mapowanie komunikatów do funkcji](../mfc/reference/mapping-messages-to-functions.md) Aby uzyskać więcej informacji).  
-  
- Nowy [ctoolbar —](../mfc/reference/ctoolbar-class.md) funkcje Członkowskie pracować z **rt_toolbar —** zasobów. [LoadToolBar](../mfc/reference/ctoolbar-class.md#loadtoolbar) teraz ma miejsce z [LoadBitmap](../mfc/reference/ctoolbar-class.md#loadbitmap) załadować mapy bitowej obrazy dla przycisków paska narzędzi, a [SetButtons](../mfc/reference/ctoolbar-class.md#setbuttons) stylów przycisków i przyciski Uzyskuj dostęp do map bitowych.  
-  
- Aby uzyskać szczegółowe informacje dotyczące korzystania z narzędzi edytora, zobacz [paska narzędzi edytora](../windows/toolbar-editor.md).  
-  
-##  <a name="_core_multiple_toolbars"></a> Wiele pasków narzędzi  
- Kreator aplikacji zapewnia jeden domyślny paska narzędzi. Jeśli potrzebujesz więcej niż jednego paska narzędzi w aplikacji można modelu kodu dla dodatkowych pasków narzędzi na podstawie kodu generowane przez kreatora domyślne paska narzędzi.  
-  
- Jeśli chcesz wyświetlić paska narzędzi w wyniku polecenia, musisz:  
-  
--   Utwórz nowy zasób paska narzędzi z paska narzędzi edytora i załaduj go w `OnCreate` z [LoadToolbar](../mfc/reference/ctoolbar-class.md#loadtoolbar) funkcję elementu członkowskiego.  
-  
--   Osadzić nowy [ctoolbar —](../mfc/reference/ctoolbar-class.md) obiektu w ramce głównej klasy okna.  
-  
--   Sprawdź odpowiednią funkcję wywołuje w `OnCreate` dock lub float pasku narzędzi, ustaw jej style i tak dalej.  
-  
-### <a name="what-do-you-want-to-know-more-about"></a>Co chcesz dowiedzieć się więcej o  
-  
--   [MFC — implementacja paska narzędzi (omówienie na paskach narzędzi)](../mfc/mfc-toolbar-implementation.md)  
-  
--   [Zadokowane i przestawne paski narzędzi](../mfc/docking-and-floating-toolbars.md)  
-  
--   [Etykietki narzędzi paska narzędzi](../mfc/toolbar-tool-tips.md)  
-  
--   [Ctoolbar —](../mfc/reference/ctoolbar-class.md) i [CToolBarCtrl](../mfc/reference/ctoolbarctrl-class.md) klas  
-  
--   [Praca z formantem paska narzędzi](../mfc/working-with-the-toolbar-control.md)  
-  
--   [Używanie swoich starych pasków narzędzi](../mfc/using-your-old-toolbars.md)  
-  
-## <a name="see-also"></a>Zobacz też  
- [MFC, implementacja paska narzędzi](../mfc/mfc-toolbar-implementation.md)
+>  Próbki MFC-ogólne [DOCKTOOL](../visual-cpp-samples.md) obejmuje ilustracje starych i nowych pasków narzędzi MFC. Paski narzędzi, które używają `COldToolbar` wymagają wywołań w kroku 2, aby `LoadBitmap` (zamiast `LoadToolBar`) i `SetButtons`. Nowych pasków narzędzi wymagają wywołań `LoadToolBar`.
+
+Dokowanie, liczb zmiennoprzecinkowych i narzędzie porady wywołania są opcjonalne. Możesz usunąć te wiersze z `OnCreate` Jeśli użytkownik sobie tego życzy. Wynik jest pasek narzędzi, który pozostaje stały, mógł zmiennoprzecinkowego lub redock i nie można wyświetlić etykietek narzędzi.
+
+##  <a name="_core_editing_the_toolbar_resource"></a> Edytowanie zasób paska narzędzi
+
+Domyślne paska narzędzi, możesz uzyskać za pomocą Kreatora aplikacji opiera się na **rt_toolbar —** zasobów niestandardowych, wprowadzona w MFC w wersji 4.0. Możesz edytować ten zasób z [Edytor paska narzędzi](../windows/toolbar-editor.md). Edytor pozwala łatwo dodawać, usuwać i rozmieszczanie przycisków. Zawiera ona edytor graficzny dla przycisków, który jest bardzo podobny do edytora grafiki w programie Visual C++. Jeśli edytowano paski narzędzi w poprzednich wersjach programu Visual C++, można znaleźć zadania znacznie łatwiejsze teraz.
+
+Aby połączyć przycisku paska narzędzi z poleceniem, nadasz przycisku identyfikator polecenia, takie jak `ID_MYCOMMAND`. Określ identyfikator polecenia na stronie właściwości przycisku paska narzędzi edytora. Następnie Utwórz funkcję obsługi polecenia (zobacz [mapowanie komunikatów do funkcji](../mfc/reference/mapping-messages-to-functions.md) Aby uzyskać więcej informacji).
+
+Nowe [CToolBar](../mfc/reference/ctoolbar-class.md) elementów członkowskich pracować **rt_toolbar —** zasobów. [LoadToolBar](../mfc/reference/ctoolbar-class.md#loadtoolbar) teraz zajmuje miejsce [loadbitmap —](../mfc/reference/ctoolbar-class.md#loadbitmap) można załadować mapy bitowej przycisku paska narzędzi obrazów, i [setbuttons —](../mfc/reference/ctoolbar-class.md#setbuttons) stylów przycisków i skupionej przyciski obrazy mapy bitowej.
+
+Aby uzyskać szczegółowe informacje dotyczące korzystania z narzędzi edytora, zobacz [Edytor paska narzędzi](../windows/toolbar-editor.md).
+
+##  <a name="_core_multiple_toolbars"></a> Wiele pasków narzędzi
+
+Kreator aplikacji zapewnia jeden domyślny narzędzi. Jeśli potrzebujesz więcej niż jednego paska narzędzi w aplikacji można modelować swój kod pod kątem dodatkowe paski narzędzi, na podstawie kodu generowane przez kreatora dla paska narzędzi domyślne.
+
+Jeśli chcesz wyświetlić pasek narzędzi w wyniku polecenia, musisz:
+
+- Utwórz nowy zasób paska narzędzi z paska narzędzi edytora i załaduj go w `OnCreate` z [LoadToolbar](../mfc/reference/ctoolbar-class.md#loadtoolbar) funkcja elementu członkowskiego.
+
+- Osadzanie nowej [CToolBar](../mfc/reference/ctoolbar-class.md) obiektów w klasie ramką głównego okna.
+
+- Marka, wywołuje odpowiednią funkcję `OnCreate` zadokować lub float pasek narzędzi, ustawianie jego stylów i tak dalej.
+
+### <a name="what-do-you-want-to-know-more-about"></a>Co chcesz dowiedzieć się więcej na temat
+
+- [MFC — implementacja paska narzędzi (informacje ogólne na paskach narzędzi)](../mfc/mfc-toolbar-implementation.md)
+
+- [Zadokowane i przestawne paski narzędzi](../mfc/docking-and-floating-toolbars.md)
+
+- [Etykietki narzędzi paska narzędzi](../mfc/toolbar-tool-tips.md)
+
+- [CToolBar](../mfc/reference/ctoolbar-class.md) i [CToolBarCtrl](../mfc/reference/ctoolbarctrl-class.md) klas
+
+- [Praca z formantem paska narzędzi](../mfc/working-with-the-toolbar-control.md)
+
+- [Używanie swoich starych pasków narzędzi](../mfc/using-your-old-toolbars.md)
+
+## <a name="see-also"></a>Zobacz też
+
+[MFC, implementacja paska narzędzi](../mfc/mfc-toolbar-implementation.md)
 

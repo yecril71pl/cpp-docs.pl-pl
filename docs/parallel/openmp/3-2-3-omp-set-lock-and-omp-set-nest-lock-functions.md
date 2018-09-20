@@ -1,5 +1,5 @@
 ---
-title: 3.2.3 funkcje omp_set_lock i omp_set_nest_lock funkcje | Dokumentacja firmy Microsoft
+title: 3.2.3 omp_set_lock i omp_set_nest_lock funkcje | Dokumentacja firmy Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -12,22 +12,23 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ba24e923051eb887db2a81c1d9765d31a4ef7b24
-ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
+ms.openlocfilehash: 792b95baef2821bb693d9a90fc228d2b0c508e1f
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33689717"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46420364"
 ---
 # <a name="323-ompsetlock-and-ompsetnestlock-functions"></a>3.2.3 Funkcje omp_set_lock i omp_set_nest_lock
-Każda z tych funkcji blokuje wątku wykonywania funkcji, dopóki określona blokada jest dostępne, a następnie ustawia blokady. Proste blokady jest dostępna, gdy jest odblokowana. Blokadą jest dostępna, jeśli odblokować lub jeśli już jest własnością wątku wykonywania funkcji. Format jest następujący:  
-  
-```  
-#include <omp.h>  
-void omp_set_lock(omp_lock_t *lock);  
-void omp_set_nest_lock(omp_nest_lock_t *lock);  
-```  
-  
- Proste blokady, argument `omp_set_lock` funkcja musi wskazywać zmiennej zainicjowane blokady. Własność blokady uzyskuje do wykonywania funkcji wątku.  
-  
- Dla blokadą argument `omp_set_nest_lock` funkcja musi wskazywać zmiennej zainicjowane blokady. Zagnieżdżenia licznik jest zwiększany, a wątku otrzymuje lub zachowuje własność blokady.
+
+Każda z tych funkcji blokuje wątek wykonywania funkcji, dopóki określona blokada jest dostępny, a następnie ustawia blokady. Prostą blokadą jest dostępna, jeśli jest odblokowane. Zagnieżdżalnych blokady jest dostępna, jeśli odblokować lub jest on już własnością wątek wykonywania funkcji. Format jest następujący:
+
+```
+#include <omp.h>
+void omp_set_lock(omp_lock_t *lock);
+void omp_set_nest_lock(omp_nest_lock_t *lock);
+```
+
+Dla prostą blokadą argument `omp_set_lock` funkcja musi się odnosić do zmiennej zainicjowane blokady. Własność blokadę zostanie ustanowione wątek wykonywania funkcji.
+
+Dla blokadą argument `omp_set_nest_lock` funkcja musi się odnosić do zmiennej zainicjowane blokady. Zagnieżdżanie licznik jest zwiększany i wątku otrzymuje lub zachowuje własność blokadę.

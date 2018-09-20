@@ -12,38 +12,39 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: cd788b0ef1c72b1f38a44ee608ce0c7760e24adc
-ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
+ms.openlocfilehash: 97f125129d4b35586111f3d4092d457560aaebec
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33696256"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46412278"
 ---
 # <a name="32-lock-functions"></a>3.2 Funkcje blokady
-Funkcje opisane w tej sekcji manipulować blokad używane do synchronizacji.  
-  
- Dla następujących funkcji zmiennej blokady musi mieć typ **omp_lock_t**. Ta zmienna musi uzyskać tylko za pośrednictwem tych funkcji. Wszystkie funkcje blokady wymagają argument, który zawiera wskaźnik do **omp_lock_t** typu.  
-  
--   `omp_init_lock` Funkcja inicjuje proste blokady.  
-  
--   `omp_destroy_lock` Funkcja Usuwa blokadę proste.  
-  
--   `omp_set_lock` Funkcja oczekuje na prosty blokady jest dostępna.  
-  
--   `omp_unset_lock` Funkcja zwalnia blokadę proste.  
-  
--   `omp_test_lock` Funkcja testów proste blokady.  
-  
- Dla następujących funkcji zmiennej blokady musi mieć typ **omp_nest_lock_t**.  Ta zmienna musi uzyskać tylko za pośrednictwem tych funkcji. Wszystkie funkcje blokadą wymagają argument, który zawiera wskaźnik do **omp_nest_lock_t** typu.  
-  
--   `omp_init_nest_lock` Funkcja inicjuje blokadą.  
-  
--   `omp_destroy_nest_lock` Funkcja usuwa blokadą.  
-  
--   `omp_set_nest_lock` Funkcja oczekiwania do czasu udostępnienia blokadą.  
-  
--   `omp_unset_nest_lock` Funkcja zwalnia blokadą.  
-  
--   `omp_test_nest_lock` Funkcja testów blokadą.  
-  
- OpenMP — funkcje Zablokuj dostęp do zmiennej blokady w taki sposób, że zawsze odczytać i zaktualizować aktualna wartość zmiennej blokady. W związku z tym nie jest konieczne dla programu OpenMP uwzględnić jawne **opróżnić** dyrektywy w celu zapewnienia spójności między inne wątki wartość zmiennej blokady. (Może to być potrzebne **opróżnić** dyrektywy aby wartości innych zmiennych spójne.)
+
+Funkcje opisane w tej sekcji manipulować blokad używane na potrzeby synchronizacji.
+
+Dla następujących funkcji, zmienna blokady musi mieć typ **omp_lock_t**. Ta zmienna musi zostać oceniony jedynie za pomocą tych funkcji. Wszystkie funkcje blokady wymaga argumentu, który zawiera wskaźnik do **omp_lock_t** typu.
+
+- `omp_init_lock` Funkcja inicjuje prostą blokadą.
+
+- `omp_destroy_lock` Funkcja usuwa prostą blokadą.
+
+- `omp_set_lock` Funkcja oczekuje na prostą blokadą dostępne.
+
+- `omp_unset_lock` Funkcja zwolni prostą blokadą.
+
+- `omp_test_lock` Funkcja sprawdza prostą blokadą.
+
+Dla następujących funkcji, zmienna blokady musi mieć typ **omp_nest_lock_t**.  Ta zmienna musi zostać oceniony jedynie za pomocą tych funkcji. Wszystkie funkcje blokadą wymagają argument, który zawiera wskaźnik do **omp_nest_lock_t** typu.
+
+- `omp_init_nest_lock` Funkcja inicjuje blokadą.
+
+- `omp_destroy_nest_lock` Funkcja usuwa blokadą.
+
+- `omp_set_nest_lock` Funkcja oczekuje na blokadę zagnieżdżalnych dostępne.
+
+- `omp_unset_nest_lock` Funkcja zwalnia blokadę zagnieżdżalnych.
+
+- `omp_test_nest_lock` Funkcja sprawdza blokadą.
+
+OpenMP — funkcje Zablokuj dostęp do zmiennej blokady w taki sposób, że mogą zawsze odczytywać i aktualizować aktualna wartość zmiennej blokady. W związku z tym, nie jest konieczne dla programu OpenMP uwzględnić jawne **opróżniania** dyrektywy, aby upewnić się, że wartość zmiennej blokady jest spójna wśród różnych wątkach. (Może to być potrzebne **opróżniania** dyrektywy, aby wartości innych zmiennych były spójne.)

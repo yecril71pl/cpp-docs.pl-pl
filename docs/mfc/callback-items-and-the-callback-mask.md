@@ -15,35 +15,37 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4f3608fbc0c7e34de4ae67ae60a12af23e9ac885
-ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
+ms.openlocfilehash: 0711fccb142d9774c37f2cb2d8f576bf7fddd128
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/25/2018
-ms.locfileid: "36931691"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46422847"
 ---
 # <a name="callback-items-and-the-callback-mask"></a>Elementy wywołania zwrotnego i maska wywołania zwrotnego
-Dla każdego z jego elementów formantu widoku listy zwykle przechowuje tekst etykiety, indeks obrazu listy ikon elementu i zestaw bit flagi stanu elementu. Poszczególne elementy można zdefiniować jako elementy wywołania zwrotnego, które są przydatne, jeśli aplikacja już przechowuje niektóre informacje dla elementu.  
-  
- Zdefiniuj element jako element wywołania zwrotnego, określając odpowiednie wartości dla `pszText` i `iImage` członkami **LV_ITEM** struktury (zobacz [CListCtrl::GetItem](../mfc/reference/clistctrl-class.md#getitem)). Jeśli aplikacja przechowuje tekst elementu lub jego podelementu, określ **LPSTR_TEXTCALLBACK** wartość `pszText` elementu członkowskiego. Jeśli aplikacja przechowuje informacje o ikony dla elementu, określ **I_IMAGECALLBACK** wartość `iImage` elementu członkowskiego.  
-  
- Oprócz definiujący elementy wywołania zwrotnego, można również zmodyfikować maska wywołania zwrotnego formantu. Ta maska ustawiono flagi bitów, które określają stanów elementu, dla których aplikacji, a nie formantu, zapisuje bieżące dane. Maska wywołania zwrotnego ma zastosowanie do wszystkich elementów formantu, w odróżnieniu od oznaczenie elementu wywołania zwrotnego, która ma zastosowanie do określonego elementu. Maska wywołania zwrotnego wynosi zero domyślnie, co oznacza, że kontrolka śledzi wszystkie stany elementu. Aby zmienić to zachowanie domyślne, należy zainicjować masce dowolną kombinację następujących wartości:  
-  
--   **LVIS_CUT** element jest oznaczony do operacji kopiowania i wklejania.  
-  
--   **LVIS_DROPHILITED** element zostanie wyróżniona jako element docelowy przeciągania i upuszczania.  
-  
--   **LVIS_FOCUSED** element ma fokus.  
-  
--   **LVIS_SELECTED** element jest zaznaczony.  
-  
--   **LVIS_OVERLAYMASK** aplikacja przechowuje indeksu listy obrazów bieżącego obrazu nakładki dla każdego elementu.  
-  
--   **LVIS_STATEIMAGEMASK** aplikacja przechowuje indeksu listy obrazów bieżącego obrazu stanu dla każdego elementu.  
-  
- Aby uzyskać więcej informacji dotyczących pobierania i ustawiania ta maska, zobacz [CListCtrl::GetCallbackMask](../mfc/reference/clistctrl-class.md#getcallbackmask) i [CListCtrl::SetCallbackMask](../mfc/reference/clistctrl-class.md#setcallbackmask).  
-  
-## <a name="see-also"></a>Zobacz też  
- [Korzystanie z CListCtrl](../mfc/using-clistctrl.md)   
- [Kontrolki](../mfc/controls-mfc.md)
+
+Dla każdego z jego elementów kontrolka widoku listy zazwyczaj przechowuje tekst etykiety, indeks listy obrazu ikony elementu i zestaw bit flagi stanu elementu. Poszczególne elementy można zdefiniować jako elementy wywołania zwrotnego, które są przydatne, jeśli aplikacja już zapisuje niektóre informacje dla elementu.
+
+Zdefiniuj element jako element wywołania zwrotnego, określając odpowiednie wartości dla `pszText` i `iImage` członkowie **LV_ITEM** struktury (zobacz [CListCtrl::GetItem](../mfc/reference/clistctrl-class.md#getitem)). Jeśli aplikacja przechowuje tekst elementu lub podelementu firmy, należy określić **LPSTR_TEXTCALLBACK** wartość `pszText` elementu członkowskiego. Jeśli aplikacja przechowuje informacje o ikonę elementu, należy określić **I_IMAGECALLBACK** wartość `iImage` elementu członkowskiego.
+
+Oprócz definiowania elementy wywołania zwrotnego, można również zmodyfikować formantu maska wywołania zwrotnego. Tę maskę ustawiono flagi bitowe, które określają stany elementów, dla których aplikacji, a nie dla kontrolki, zapisuje bieżące dane. Maska wywołania zwrotnego ma zastosowanie do wszystkich elementów formantu, w przeciwieństwie do oznaczenia element wywołania zwrotnego, która odnosi się do określonego elementu. Maska wywołania zwrotnego wynosi zero, domyślnie, co oznacza, że kontrolka śledzi wszystkie stany elementów. Aby zmienić to zachowanie domyślne, należy zainicjować maski do dowolnej kombinacji następujących wartości:
+
+- **LVIS_CUT** element jest oznaczony dla operacji kopiowania i wklejania.
+
+- **LVIS_DROPHILITED** element zostanie wyróżniony jako element docelowy przeciągania i upuszczania.
+
+- **LVIS_FOCUSED** element ma fokus.
+
+- **LVIS_SELECTED** element jest zaznaczony.
+
+- **LVIS_OVERLAYMASK** aplikacja przechowuje indeks listy obrazu bieżącego obrazu nakładki dla każdego elementu.
+
+- **LVIS_STATEIMAGEMASK** aplikacja przechowuje indeks listy obrazu bieżącego obrazu stanu dla każdego elementu.
+
+Aby uzyskać więcej informacji na temat pobierania i ustawiania tę maskę zobacz [CListCtrl::GetCallbackMask](../mfc/reference/clistctrl-class.md#getcallbackmask) i [CListCtrl::SetCallbackMask](../mfc/reference/clistctrl-class.md#setcallbackmask).
+
+## <a name="see-also"></a>Zobacz też
+
+[Korzystanie z CListCtrl](../mfc/using-clistctrl.md)<br/>
+[Kontrolki](../mfc/controls-mfc.md)
 

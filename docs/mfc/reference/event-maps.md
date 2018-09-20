@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 21b9efe8fc1ce5cb7ab90edd30b38253d44dabc0
-ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
+ms.openlocfilehash: 2f937c2cdaa4bb7f31b39b8a28c657274830fc36
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44106811"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46446611"
 ---
 # <a name="event-maps"></a>Mapy zdarzeń
 
@@ -89,10 +89,10 @@ BEGIN_EVENT_MAP(theClass,  baseClass)
 
 ### <a name="parameters"></a>Parametry
 
-*theClass*  
+*theClass*<br/>
 Określa, że nazwa klasy kontrolki, którego zdarzenie Mapuj.
 
-*baseClass*  
+*baseClass*<br/>
 Określa nazwę klasy bazowej *theClass*.
 
 ### <a name="remarks"></a>Uwagi
@@ -127,13 +127,13 @@ EVENT_CUSTOM(pszName, pfnFire,  vtsParams)
 
 ### <a name="parameters"></a>Parametry
 
-*pszName*  
+*pszName*<br/>
 Nazwa zdarzenia.
 
-*pfnFire*  
+*pfnFire*<br/>
 Nazwa zdarzenia wyzwalanie funkcji.
 
-*vtsParams*  
+*vtsParams*<br/>
 Rozdzielonej spacjami listy co najmniej jedną stałą, określając listę parametrów funkcji.
 
 ### <a name="remarks"></a>Uwagi
@@ -197,16 +197,16 @@ EVENT_CUSTOM_ID(
 
 ### <a name="parameters"></a>Parametry
 
-*pszName*  
+*pszName*<br/>
 Nazwa zdarzenia.
 
-*identyfikator DISPID*  
+*identyfikator DISPID*<br/>
 Identyfikator wysyłania używany przez kontrolkę, gdy wyzwoleniem zdarzenia.
 
-*pfnFire*  
+*pfnFire*<br/>
 Nazwa zdarzenia wyzwalanie funkcji.
 
-*vtsParams*  
+*vtsParams*<br/>
 Zmiennej listy parametrów jest przekazywane do kontenera kontrolki, gdy zdarzenie jest uruchamiane.
 
 ### <a name="remarks"></a>Uwagi
@@ -268,10 +268,10 @@ ON_STDOLEVERB(iVerb, memberFxn)
 
 ### <a name="parameters"></a>Parametry
 
-*iVerb*  
+*iVerb*<br/>
 Indeks standardowy czasownika zlecenie zastępowaniu.
 
-*memberFxn*  
+*memberFxn*<br/>
 Funkcja wywoływane przez platformę, gdy jest wywoływany zlecenie.
 
 ### <a name="remarks"></a>Uwagi

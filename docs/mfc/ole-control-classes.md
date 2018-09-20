@@ -22,57 +22,59 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5dcbda85c33bab37babe5da861067d25cf31e32c
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: ad9ab489506964266b28a38563c366db2b0d54fa
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33355362"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46439084"
 ---
 # <a name="ole-control-classes"></a>Klasy formantów OLE
-Są to klasy podstawowej, używanego podczas pisania formantów OLE. `COleControlModule` Przypomina klasy w module formantu OLE [CWinApp](../mfc/reference/cwinapp-class.md) klasy w aplikacji. Każdy moduł implementuje jeden lub kilka formantów OLE; Formanty te są reprezentowane przez `COleControl` obiektów. Formanty komunikować się z ich kontenerów przy użyciu `CConnectionPoint` obiektów.  
-  
- `CPictureHolder` i `CFontHolder` klasy Hermetyzuj interfejsów COM dla obrazów i czcionek, gdy `COlePropertyPage` i `CPropExchange` klas ułatwiająca implementację strony właściwości i trwałości właściwości dla formantu.  
-  
- [COleControlModule](../mfc/reference/colecontrolmodule-class.md)  
- Zastępuje `CWinApp` klasy dla modułu formantu OLE. Pochodzić od `COleControlModule` klasy umożliwiające tworzenie obiektu modułu formantu. Zapewnia funkcje Członkowskie podczas inicjowania modułu formantu OLE.  
-  
- [Colecontrol —](../mfc/reference/colecontrol-class.md)  
- Pochodzić od `COleControl` klasy do opracowywania kontrolkę OLE. Pochodną `CWnd`, ta klasa dziedziczy wszystkie funkcje obiektu okna systemu Windows oraz dodatkowe funkcje specyficzne dla OLE, takich jak inicjowanie zdarzeń i możliwość obsługi metody i właściwości.  
-  
- [CConnectionPoint](../mfc/reference/cconnectionpoint-class.md)  
- `CConnectionPoint` Klasa definiuje specjalny typ interfejs używany do komunikowania się z innymi obiektami OLE, nazywany też punktem połączenia. Punkt połączenia implementuje interfejs wychodzących, który jest w stanie inicjowania działania na inne obiekty, takie jak wyzwalania zdarzeń i powiadomień o zmianie.  
-  
- [CPictureHolder](../mfc/reference/cpictureholder-class.md)  
- Hermetyzuje funkcjonalność obiektu obrazu systemu Windows i `IPicture` COM interfejsu; używane do implementowania niestandardowych właściwości obrazu formantu OLE.  
-  
- [CFontHolder](../mfc/reference/cfontholder-class.md)  
- Hermetyzuje funkcjonalność obiektu czcionki systemu Windows i `IFont` COM interfejsu; używaną do zaimplementowania standardowych właściwość czcionki formantu OLE.  
-  
- [COlePropertyPage](../mfc/reference/colepropertypage-class.md)  
- Wyświetla właściwości OLE control interfejsu graficznego, podobnie do okna dialogowego.  
-  
- [CPropExchange](../mfc/reference/cpropexchange-class.md)  
- Obsługuje implementacji trwałości właściwość dla formantów OLE. Odpowiednikiem [cdataexchange —](../mfc/reference/cdataexchange-class.md) dla okien dialogowych.  
-  
- [CMonikerFile](../mfc/reference/cmonikerfile-class.md)  
- Pobiera moniker lub reprezentacji w postaci ciągu go do krótkiej nazwy i wiąże go synchronicznie strumienia, dla której krótka nazwa jest nazwą.  
-  
- [CAsyncMonikerFile](../mfc/reference/casyncmonikerfile-class.md)  
- Działa podobnie do `CMonikerFile`, ale jest on powiązany moniker asynchronicznie w strumieniu, dla której krótka nazwa jest nazwą.  
-  
- [CDataPathProperty](../mfc/reference/cdatapathproperty-class.md)  
- Implementuje OLE kontrolować właściwości, które mogą być uruchamiane asynchronicznie.  
-  
- [CCachedDataPathProperty](../mfc/reference/ccacheddatapathproperty-class.md)  
- Implementuje OLE kontrolować właściwości przesyłane asynchronicznie, a w pliku pamięci podręcznej.  
-  
- [COleCmdUI](../mfc/reference/colecmdui-class.md)  
- Umożliwia aktywnego dokumentu do odbierania poleceń, które pochodzą z jego kontenera interfejsu użytkownika (na przykład nowy plik, Otwórz, drukowania i tak dalej) i pozwala kontener służący do odbierania poleceń, które pochodzą z interfejsu użytkownika w aktywnym dokumencie.  
-  
- [COleSafeArray](../mfc/reference/colesafearray-class.md)  
- Współpracuje z tablicami dowolnego typu i wymiarów.  
-  
-## <a name="see-also"></a>Zobacz też  
- [Przegląd klas](../mfc/class-library-overview.md)
+
+Są to klasy podstawowej, używane podczas zapisywania formantów OLE. `COleControlModule` Przypomina klasy modułu sterowania OLE [CWinApp](../mfc/reference/cwinapp-class.md) klasy w aplikacji. Każdy moduł stanowi wdrożenie co najmniej jedną kontrolkę OLE; Te kontrolki są reprezentowane przez `COleControl` obiektów. Te kontrolki komunikować się z ich kontenerów za pomocą `CConnectionPoint` obiektów.
+
+`CPictureHolder` i `CFontHolder` klasy hermetyzacji interfejsów COM, obrazów i czcionek, podczas gdy `COlePropertyPage` i `CPropExchange` klasy pomóc w zaimplementowaniu trwałości właściwości kontrolki i strony właściwości.
+
+[COleControlModule](../mfc/reference/colecontrolmodule-class.md)<br/>
+Zastępuje `CWinApp` klasy dla modułu sterowania OLE. Pochodzi od `COleControlModule` klasa do tworzenia obiekt modułu sterowania OLE. Dostarcza funkcji elementów członkowskich dla inicjowania modułu kontrolki OLE.
+
+[COleControl](../mfc/reference/colecontrol-class.md)<br/>
+Pochodzi od `COleControl` klasa do tworzenia kontrolkę OLE. Pochodną `CWnd`, ta klasa dziedziczy wszystkie funkcje programu Windows obiekt window, a także dodatkowe funkcje specyficzne dla OLE, takich jak inicjowanie zdarzeń i możliwość obsługi metod i właściwości.
+
+[CConnectionPoint](../mfc/reference/cconnectionpoint-class.md)<br/>
+`CConnectionPoint` Klasa definiuje specjalny rodzaj interfejsu używanego do komunikacji z innymi obiektami OLE, o nazwie punktu połączenia. Punkt połączenia implementuje interfejsu wychodzącego, która jest w stanie inicjowania działania na inne obiekty, takie jak wyzwalanie zdarzeń i powiadomień o zmianie.
+
+[CPictureHolder](../mfc/reference/cpictureholder-class.md)<br/>
+Hermetyzuje funkcjonalność obiektu obrazu Windows i `IPicture` COM interfejsu; używany do implementowania właściwości obrazów niestandardowych formantów OLE.
+
+[CFontHolder](../mfc/reference/cfontholder-class.md)<br/>
+Hermetyzuje funkcjonalność obiektu czcionki Windows i `IFont` COM interfejsu; używany do implementowania właściwości czcionki zasobów kontrolkę OLE.
+
+[COlePropertyPage](../mfc/reference/colepropertypage-class.md)<br/>
+Wyświetla właściwości OLE control w interfejsie graficznym, zbliżonym do okna dialogowego.
+
+[CPropExchange](../mfc/reference/cpropexchange-class.md)<br/>
+Obsługuje właściwość trwałość wdrożenia formantów OLE. Odpowiednikiem [CDataExchange](../mfc/reference/cdataexchange-class.md) dla okien dialogowych.
+
+[CMonikerFile](../mfc/reference/cmonikerfile-class.md)<br/>
+Krótka nazwa lub reprezentację ciągu znaków, który może zgłaszać do krótka i wiąże go synchronicznie strumień, dla którego przydomek jest nazwą.
+
+[CAsyncMonikerFile](../mfc/reference/casyncmonikerfile-class.md)<br/>
+Działa podobnie jak `CMonikerFile`; jednak powiąże moniker asynchronicznie strumień, dla którego przydomek jest nazwą.
+
+[CDataPathProperty](../mfc/reference/cdatapathproperty-class.md)<br/>
+Implementuje OLE kontrolować właściwość, która może być ładowana asynchronicznie.
+
+[CCachedDataPathProperty](../mfc/reference/ccacheddatapathproperty-class.md)<br/>
+Implementuje OLE konntrolki przeniesionej asynchronicznie i buforowanej w pliku pamięci.
+
+[COleCmdUI](../mfc/reference/colecmdui-class.md)<br/>
+Zezwala na aktywnego dokumentu w celu odbierania poleceń, które pochodzą z jego kontenerem interfejsu użytkownika (na przykład nowy plik, Otwórz, drukowania i tak dalej) i umożliwia kontenera w celu odbierania poleceń, które pochodzą z interfejsu użytkownika w aktywnym dokumencie.
+
+[COleSafeArray](../mfc/reference/colesafearray-class.md)<br/>
+Sprawdza w przypadku tablic dowolnego typu i wymiar.
+
+## <a name="see-also"></a>Zobacz też
+
+[Klasa — Przegląd](../mfc/class-library-overview.md)
 

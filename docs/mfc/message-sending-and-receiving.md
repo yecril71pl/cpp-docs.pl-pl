@@ -19,28 +19,30 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 55f450085c446503ebf86960dbee1b0d930691c2
-ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
+ms.openlocfilehash: e28f35fc87b78ac4e04df0f8147d76571c51320e
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/25/2018
-ms.locfileid: "36932007"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46438824"
 ---
 # <a name="message-sending-and-receiving"></a>Wysyłanie i odbieranie komunikatów
-Należy wziąć pod uwagę wysyłania część procesu i sposób odpowiadania przez platformę.  
-  
- Większość komunikaty w wyniku interakcji z programem. Polecenia są generowane przez kliknięcie myszą w elementach menu lub przycisków paska narzędzi lub naciśnięcia klawiszy skrótów. Użytkownik generuje również komunikaty systemu Windows, na przykład przeniesienie lub zmiana rozmiaru okna. Inne komunikaty systemu Windows są wysyłane w przypadku wystąpienia zdarzenia, takie jak uruchamianie programu lub zakończenie, jak windows Pobierz lub utratę fokus i tak dalej. Komunikaty powiadomień dotyczących formantu są generowane przez kliknięcie myszą lub innych interakcji użytkowników z formantem, takich jak formantu przycisku lub pola listy w oknie dialogowym.  
-  
- `Run` Funkcji członkowskiej klasy `CWinApp` pobiera wiadomości i wysyła je do odpowiednich okna. Większość komunikaty poleceń są wysyłane do okna ramki głównej aplikacji. `WindowProc` Wstępnie zdefiniowane przez pobiera biblioteki klasy wiadomości i kieruje je w różny sposób, w zależności od kategorii odebranego komunikatu.  
-  
- Teraz Rozważmy odbierania część procesu.  
-  
- Początkowa odbiorcy wiadomości musi być obiektem okna. Komunikaty systemu Windows są zazwyczaj obsługiwane bezpośrednio przez ten obiekt okna. Komunikaty poleceń, zwykle pochodzących z aplikacji główne okno ramowe, Pobierz kierowane do opisanego w łańcuchu docelowym polecenia [Routing poleceń](../mfc/command-routing.md).  
-  
- Każdy obiekt odbiór wiadomości lub poleceń ma własną wiadomości mapowania tej pary wiadomości lub polecenia o nazwie jego obsługi.  
-  
- Gdy obiekt docelowy polecenia odbiera wiadomości lub polecenia, wyszukuje jego mapy komunikatów pod kątem dopasowania. W przypadku odnalezienia obsługi wiadomości, wywołuje program obsługi. Aby uzyskać więcej informacji o sposobie są przeszukiwane mapy komunikatów, zobacz [jak Framework wyszukiwania mapy wiadomości](../mfc/how-the-framework-searches-message-maps.md). Odwołuje się ponownie na figurę [polecenia w strukturze](../mfc/user-interface-objects-and-command-ids.md).  
-  
-## <a name="see-also"></a>Zobacz też  
- [Jak struktura wywołuje programy obsługi](../mfc/how-the-framework-calls-a-handler.md)
+
+Należy wziąć pod uwagę wysyłanie części procesu i sposób reagowania platformę.
+
+Większość wiadomości w wyniku interakcji z użytkownikiem w programie. Polecenia są generowane przez kliknięć myszą w menu i przycisków paska narzędzi lub naciśnięcia klawiszy skrótów. Użytkownik generuje również wiadomości Windows, na przykład przeniesienie lub zmiana rozmiaru okna. Inne komunikaty Windows są wysyłane po wystąpieniu zdarzenia, takie jak uruchamianie programu lub rozwiązanie, ponieważ windows Pobierz lub utraty fokus i tak dalej. Powiadamianie kontrolki komunikaty są generowane przez kliknięć myszą lub inne interakcje użytkownika za pomocą kontrolki, takie jak formant przycisku lub pola listy, w oknie dialogowym.
+
+`Run` Funkcji składowej klasy typu `CWinApp` odczytuje komunikaty, a następnie wysyła je do odpowiedniego okna. Większość poleceń są wysyłane do ramki głównego okna aplikacji. `WindowProc` Wstępnie zdefiniowane przez pobiera biblioteki klas wiadomości i kieruje je w różny sposób, w zależności od kategorii odebranego komunikatu.
+
+Teraz należy wziąć pod uwagę odbieranie część procesu.
+
+Początkowa odbiorcy wiadomości musi być obiektem okna. Komunikaty Windows zwykle są obsługiwane bezpośrednio przez obiekt tego okna. Komunikaty poleceń, zwykle pochodzących z aplikacji głównej ramki okna Pobierz kierowane do łańcucha elemencie docelowym polecenia opisanego w [Routing poleceń](../mfc/command-routing.md).
+
+Każdy obiekt, które są zdolne do otrzymywania wiadomości lub poleceń ma własną wiadomość mapowania tej pary wiadomości lub polecenie o nazwie jego obsługi.
+
+Gdy obiekt docelowy polecenia odbiera wiadomości lub polecenia, wyszukuje jego mapy wiadomości pod kątem dopasowania. W przypadku odnalezienia programu obsługi wiadomości, wywołuje program obsługi. Aby uzyskać więcej informacji na temat sposobu mapy komunikatów są przeszukiwane zobacz [jak Framework wyszukiwania mapy wiadomości](../mfc/how-the-framework-searches-message-maps.md). Można ponownie znaleźć rysunku [polecenia w strukturze](../mfc/user-interface-objects-and-command-ids.md).
+
+## <a name="see-also"></a>Zobacz też
+
+[Jak struktura wywołuje programy obsługi](../mfc/how-the-framework-calls-a-handler.md)
 

@@ -18,12 +18,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: bc5360a90690b27f1c52f97cd8b3746ddee5d60a
-ms.sourcegitcommit: f0c90000125a9497bf61e41624de189a043703c0
+ms.openlocfilehash: 1eccaaff3f89b6353bd38e316ad515edc59eb9ae
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44318385"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46427410"
 ---
 # <a name="viewing-and-adding-activex-controls-to-a-dialog-box-c"></a>Wyświetlanie i dodawanie kontrolek ActiveX do okna dialogowego (C++)
 
@@ -61,6 +61,6 @@ Win32
 
 ## <a name="see-also"></a>Zobacz też
 
-[Kontrolki w oknach dialogowych](../windows/controls-in-dialog-boxes.md)  
-[Kontrolki ActiveX MFC](../mfc/mfc-activex-controls.md)  
+[Kontrolki w oknach dialogowych](../windows/controls-in-dialog-boxes.md)<br/>
+[Kontrolki ActiveX MFC](../mfc/mfc-activex-controls.md)<br/>
 [Kontenery kontrolek ActiveX](../mfc/activex-control-containers.md)

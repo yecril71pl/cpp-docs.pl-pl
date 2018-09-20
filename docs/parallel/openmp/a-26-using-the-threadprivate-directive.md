@@ -1,5 +1,5 @@
 ---
-title: Przy użyciu threadprivate dyrektywy A.26 | Dokumentacja firmy Microsoft
+title: A.26 użycie dyrektywy threadprivate | Dokumentacja firmy Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -12,37 +12,38 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7b74325ec96702838aaaf9be62d398178c8c2902
-ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
+ms.openlocfilehash: 93a596a4015f92e2a4d42151560171157232047b
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33690533"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46447654"
 ---
 # <a name="a26---using-the-threadprivate-directive"></a>A.26   Użycie dyrektywy prywatnego wątku
-W poniższych przykładach pokazano, jak używać `threadprivate` — dyrektywa ([sekcji 2.7.1](../../parallel/openmp/2-7-1-threadprivate-directive.md) na stronie 23) umożliwiają każdy wątek oddzielne licznika.  
-  
- **Przykład 1:**  
-  
-```  
-int counter = 0;  
-#pragma omp threadprivate(counter)  
-  
-int sub()  
-{  
-    counter++;  
-    return(counter);  
-}  
-```  
-  
- **Przykład 2:**  
-  
-```  
-int sub()  
-{  
-    static int counter = 0;  
-    #pragma omp threadprivate(counter)  
-    counter++;  
-    return(counter);  
-}  
+
+W poniższych przykładach pokazano sposób użycia `threadprivate` — dyrektywa ([sekcji 2.7.1](../../parallel/openmp/2-7-1-threadprivate-directive.md) na stronie 23) pozwala każdy wątek oddzielne licznika.
+
+**Przykład 1:**
+
+```
+int counter = 0;
+#pragma omp threadprivate(counter)
+
+int sub()
+{
+    counter++;
+    return(counter);
+}
+```
+
+**Przykład 2:**
+
+```
+int sub()
+{
+    static int counter = 0;
+    #pragma omp threadprivate(counter)
+    counter++;
+    return(counter);
+}
 ```

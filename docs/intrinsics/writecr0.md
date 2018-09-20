@@ -16,42 +16,46 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7340d91d9d91171c073b5acebb282fbd1cff3bf1
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: 5542dc1c4aeff873f14d8ab9498025c8852dfbd9
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45702846"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46409314"
 ---
 # <a name="writecr0"></a>__writecr0
-**Microsoft Specific**  
-  
- Zapisuje wartość `Data` do rejestru CR0.  
-  
-## <a name="syntax"></a>Składnia  
-  
-```  
-void writecr0(   
-   unsigned __int64 Data   
-);  
-```  
-  
-#### <a name="parameters"></a>Parametry  
+
+**Microsoft Specific**
+
+Zapisuje wartość `Data` do rejestru CR0.
+
+## <a name="syntax"></a>Składnia
+
+```
+void writecr0( 
+   unsigned __int64 Data 
+);
+```
+
+#### <a name="parameters"></a>Parametry
+
 *Dane*<br/>
-[in] Wartość do zapisu do rejestru CR0.  
-  
-## <a name="requirements"></a>Wymagania  
-  
-|Wewnętrzne|Architektura|  
-|---------------|------------------|  
-|`__writecr0`|x86, x64|  
-  
- **Plik nagłówkowy** \<intrin.h >  
-  
-## <a name="remarks"></a>Uwagi  
- Tym wewnętrzna jest dostępna tylko w trybie jądra, a procedura jest dostępna jako funkcja wewnętrzna tylko.  
-  
-**END specyficzny dla Microsoft**  
-  
-## <a name="see-also"></a>Zobacz też  
- [Funkcje wewnętrzne kompilatora](../intrinsics/compiler-intrinsics.md)
+[in] Wartość do zapisu do rejestru CR0.
+
+## <a name="requirements"></a>Wymagania
+
+|Wewnętrzne|Architektura|
+|---------------|------------------|
+|`__writecr0`|x86, x64|
+
+**Plik nagłówkowy** \<intrin.h >
+
+## <a name="remarks"></a>Uwagi
+
+Tym wewnętrzna jest dostępna tylko w trybie jądra, a procedura jest dostępna jako funkcja wewnętrzna tylko.
+
+**END specyficzny dla Microsoft**
+
+## <a name="see-also"></a>Zobacz też
+
+[Funkcje wewnętrzne kompilatora](../intrinsics/compiler-intrinsics.md)

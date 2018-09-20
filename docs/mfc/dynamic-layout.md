@@ -12,12 +12,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a6976669127dca79be59b85efbd15273b0f580a1
-ms.sourcegitcommit: f7703076b850c717c33d72fb0755fbb2215c5ddc
+ms.openlocfilehash: 08fc6f6a5b93851468d412e34b3ee0a85ab534e5
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/28/2018
-ms.locfileid: "43132065"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46413253"
 ---
 # <a name="dynamic-layout"></a>Układ dynamiczny
 
@@ -153,8 +153,8 @@ Powyższej procedury przydaje się do określania właściwości układ dynamicz
 
 ## <a name="see-also"></a>Zobacz także
 
-[Klasa CMFCDynamicLayout](../mfc/reference/cmfcdynamiclayout-class.md)  
-[Klasy kontrolek](../mfc/control-classes.md)  
-[Klasy okien dialogowych](../mfc/dialog-box-classes.md)  
-[Edytor okien dialogowych](../windows/dialog-editor.md)  
+[Klasa CMFCDynamicLayout](../mfc/reference/cmfcdynamiclayout-class.md)<br/>
+[Klasy kontrolek](../mfc/control-classes.md)<br/>
+[Klasy okien dialogowych](../mfc/dialog-box-classes.md)<br/>
+[Edytor okien dialogowych](../windows/dialog-editor.md)<br/>
 [Układ dynamiczny okna dialogowego MFC w programie Visual C++ 2015](https://mariusbancila.ro/blog/2015/07/27/dynamic-dialog-layout-for-mfc-in-visual-c-2015/)

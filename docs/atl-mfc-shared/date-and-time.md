@@ -17,12 +17,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9753578de006ed46719d94d5861035ab77dbca6c
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 90317405f09695c57c907e94306623d5b3e2386d
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43752255"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46419968"
 ---
 # <a name="date-and-time"></a>Data i godzina
 
@@ -44,6 +44,6 @@ Biblioteka MFC obsługuje kilka różnych sposobów pracy z datami i godzinami. 
 
 ## <a name="see-also"></a>Zobacz też
 
-[Pojęcia](../mfc/mfc-concepts.md)   
+[Pojęcia](../mfc/mfc-concepts.md)<br/>
 [Tematy ogólne dotyczące MFC](../mfc/general-mfc-topics.md)
 

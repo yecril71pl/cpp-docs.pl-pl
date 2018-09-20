@@ -17,21 +17,23 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6bf21021e204a6caf298453bab42db2aedff409c
-ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
+ms.openlocfilehash: b2eaa5040d34a442868a8fa6cb9f2aae08b0a6f3
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/25/2018
-ms.locfileid: "36928423"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46407702"
 ---
 # <a name="providing-drag-and-drop-support-for-header-items"></a>Zapewnianie obsługi przeciągania i upuszczania w przypadku elementów nagłówka
-Aby zapewnić obsługę przeciągania i upuszczania w przypadku elementów nagłówka, określ hds_dragdrop — styl. Obsługi przeciągania i upuszczania w przypadku elementów nagłówka umożliwia użytkownika można zmienić kolejność elementów nagłówka formantu nagłówka. Domyślne zachowanie zawiera obraz półprzezroczystych przeciągania przeciąganie elementu nagłówka i wizualnej nowego położenia po przerwaniu elementu nagłówka.  
-  
- Jako z typowych funkcji przeciągania i upuszczania, można rozszerzyć domyślne zachowanie przeciągania i upuszczania dzięki obsłudze HDN_BEGINDRAG i HDN_ENDDRAG powiadomienia. Można również dostosować wygląd obrazu, przeciągnij przez zastąpienie [CHeaderCtrl::CreateDragImage](../mfc/reference/cheaderctrl-class.md#createdragimage) funkcję elementu członkowskiego.  
-  
+
+Aby zapewnić obsługi przeciągania i upuszczania w przypadku elementów nagłówka, należy określić hds_dragdrop — styl. Obsługa przeciągania i upuszczania w przypadku elementów nagłówka zapewnia możliwości, aby zmienić kolejność elementów nagłówka kontrolki nagłówka. Domyślne zachowanie zawiera obraz półprzezroczystych przeciągania elementu nagłówka przeciąganie i wizualny wskaźnik informujący o nowe miejsce po przerwaniu elementu nagłówka.
+
+Mającego typową funkcjonalność przeciągania i upuszczania, mogą rozszerzać domyślne zachowanie przeciągnij i upuść dzięki obsłudze HDN_BEGINDRAG i HDN_ENDDRAG powiadomienia. Można również dostosować wygląd obrazu przeciągania przez zastąpienie [CHeaderCtrl::CreateDragImage](../mfc/reference/cheaderctrl-class.md#createdragimage) funkcja elementu członkowskiego.
+
 > [!NOTE]
->  Jeśli są Zapewnianie obsługi przeciągania i upuszczania formantu osadzonego nagłówka w formancie listy, zobacz sekcję rozszerzone Style w [Zmienianie stylów formantu listy](../mfc/changing-list-control-styles.md) tematu.  
-  
-## <a name="see-also"></a>Zobacz też  
- [Korzystanie z CHeaderCtrl](../mfc/using-cheaderctrl.md)
+>  Jeśli są Zapewnianie obsługi przeciągania i upuszczania, dla formantu osadzonego nagłówka w formancie listy, zobacz sekcję rozszerzone Style w [Zmienianie stylów kontrolki listy](../mfc/changing-list-control-styles.md) tematu.
+
+## <a name="see-also"></a>Zobacz też
+
+[Korzystanie z CHeaderCtrl](../mfc/using-cheaderctrl.md)
 

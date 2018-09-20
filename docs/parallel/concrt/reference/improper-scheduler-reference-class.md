@@ -18,54 +18,59 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: adc6467a66163eeef5916580181005cac1a0a4b6
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: c5a061ca3c7bb39d90608685e04b62da9b2e83fb
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46016940"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46410419"
 ---
 # <a name="improperschedulerreference-class"></a>improper_scheduler_reference — Klasa
-Ta klasa opisuje wyjątek generowany, gdy `Reference` wywoływana jest metoda `Scheduler` obiekt, który jest zamykana, z kontekstu, który nie jest częścią tego harmonogramu.  
-  
-## <a name="syntax"></a>Składnia  
-  
+
+Ta klasa opisuje wyjątek generowany, gdy `Reference` wywoływana jest metoda `Scheduler` obiekt, który jest zamykana, z kontekstu, który nie jest częścią tego harmonogramu.
+
+## <a name="syntax"></a>Składnia
+
 ```
 class improper_scheduler_reference : public std::exception;
-```  
-  
-## <a name="members"></a>Elementy członkowskie  
-  
-### <a name="public-constructors"></a>Konstruktory publiczne  
-  
-|Nazwa|Opis|  
-|----------|-----------------|  
-|[improper_scheduler_reference](#ctor)|Przeciążone. Konstruuje `improper_scheduler_reference` obiektu.|  
-  
-## <a name="inheritance-hierarchy"></a>Hierarchia dziedziczenia  
- `exception`  
-  
- `improper_scheduler_reference`  
-  
-## <a name="requirements"></a>Wymagania  
- **Nagłówek:** concrt.h  
-  
- **Namespace:** współbieżności  
-  
-##  <a name="ctor"></a> improper_scheduler_reference — 
+```
 
- Konstruuje `improper_scheduler_reference` obiektu.  
-  
+## <a name="members"></a>Elementy członkowskie
+
+### <a name="public-constructors"></a>Konstruktory publiczne
+
+|Nazwa|Opis|
+|----------|-----------------|
+|[improper_scheduler_reference](#ctor)|Przeciążone. Konstruuje `improper_scheduler_reference` obiektu.|
+
+## <a name="inheritance-hierarchy"></a>Hierarchia dziedziczenia
+
+`exception`
+
+`improper_scheduler_reference`
+
+## <a name="requirements"></a>Wymagania
+
+**Nagłówek:** concrt.h
+
+**Namespace:** współbieżności
+
+##  <a name="ctor"></a> improper_scheduler_reference —
+
+Konstruuje `improper_scheduler_reference` obiektu.
+
 ```
 explicit _CRTIMP improper_scheduler_reference(_In_z_ const char* _Message) throw();
 
 improper_scheduler_reference() throw();
-```  
-  
-### <a name="parameters"></a>Parametry  
+```
+
+### <a name="parameters"></a>Parametry
+
 *_Message*<br/>
-Opisowy komunikat dotyczący błędu.  
-  
-## <a name="see-also"></a>Zobacz też  
- [Współbieżność Namespace](concurrency-namespace.md)   
- [Scheduler, klasa](scheduler-class.md)
+Opisowy komunikat dotyczący błędu.
+
+## <a name="see-also"></a>Zobacz też
+
+[Przestrzeń nazw współbieżności](concurrency-namespace.md)<br/>
+[Scheduler, klasa](scheduler-class.md)

@@ -22,12 +22,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: dbfcedd2bc17e21b94de46c63edd95bf58f576a7
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: 836017dcec969db85a0725a49193d7b8e8a88875
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45714457"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46402853"
 ---
 # <a name="arrays-c-component-extensions"></a>Tablice (C++ Component Extensions)
 
@@ -65,16 +65,16 @@ W pierwszym przykładzie składni użyto **ref nowe** agregacji — słowo klucz
 *Kwalifikatory*<br/>
 (Opcjonalnie) Co najmniej jeden z tych specyfikatory klasy magazynowania: [mutable](../cpp/mutable-data-members-cpp.md), [volatile](../cpp/volatile-cpp.md), [const](../cpp/const-cpp.md), [extern](../cpp/using-extern-to-specify-linkage.md), [statyczne](../cpp/static-members-cpp.md).
 
-*Typ tablicy*  
+*Typ tablicy*<br/>
 Typ zmiennej tablicowej. Prawidłowe typy to klasy środowiska wykonawczego Windows i typów podstawowych, klasy ref i struktury, klasy wartości i struktury i natywnymi wskaźnikami (`type*`).
 
 *Ranga*<br/>
 (Opcjonalnie) Liczba wymiarów tablicy. Musi mieć wartość 1.
 
-*Identyfikator*  
+*Identyfikator*<br/>
 Nazwa zmiennej tablicy.
 
-*typ inicjalizacji*  
+*typ inicjalizacji*<br/>
 Typ wartości, które inicjalizacji tablicy. Zazwyczaj *typ tablicy* i *typ inicjalizacji* tego samego typu. Jednak może być inny, jeśli istnieje konwersja z typów *typ inicjalizacji* do *typ tablicy*— na przykład, jeśli *typ inicjalizacji* jest tworzony na podstawie *typ tablicy*.
 
 *listy inicjowania*<br/>
@@ -121,19 +121,19 @@ W pierwszym przykładzie składni użyto **gcnew** — słowo kluczowe do przydz
 *Kwalifikatory*<br/>
 (Opcjonalnie) Co najmniej jeden z tych specyfikatory klasy magazynowania: [mutable](../cpp/mutable-data-members-cpp.md), [volatile](../cpp/volatile-cpp.md), [const](../cpp/const-cpp.md), [extern](../cpp/using-extern-to-specify-linkage.md), [statyczne](../cpp/static-members-cpp.md).
 
-*Typ tablicy*  
+*Typ tablicy*<br/>
 Typ zmiennej tablicowej. Prawidłowe typy to klasy środowiska wykonawczego Windows i typów podstawowych, klasy i struktury, klasy wartości i struktury odwołania, natywnymi wskaźnikami (`type*`) i natywnych typów POD (zwykłe stare dane).
 
 *Ranga*<br/>
 (Opcjonalnie) Liczba wymiarów tablicy. Wartość domyślna to 1; wartość maksymalna to 32. Każdy wymiar tablicy jest tablicą.
 
-*Identyfikator*  
+*Identyfikator*<br/>
 Nazwa zmiennej tablicy.
 
-*typ inicjalizacji*  
+*typ inicjalizacji*<br/>
 Typ wartości, które inicjalizacji tablicy. Zazwyczaj *typ tablicy* i *typ inicjalizacji* tego samego typu. Jednak może być inny, jeśli istnieje konwersja z typów *typ inicjalizacji* do *typ tablicy*— na przykład, jeśli *typ inicjalizacji* jest tworzony na podstawie *typ tablicy*.
 
-*Ranga rozmiar listy*  
+*Ranga rozmiar listy*<br/>
 Rozdzielana przecinkami lista rozmiar każdego wymiaru tablicy. Alternatywnie Jeśli *listy inicjowania* parametr jest określony, kompilator może wywnioskować rozmiaru każdego wymiaru i *ranga rozmiar listy* można pominąć.
 
 *listy inicjowania*<br/>

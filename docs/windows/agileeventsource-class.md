@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 8efebf67d87decef1fb6e53f2efa42acc9ac487c
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 4f8ef724c78bdc61ef470199fbb5e956e374493f
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46068523"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46405258"
 ---
 # <a name="agileeventsource-class"></a>AgileEventSource, klasa
 
@@ -83,10 +83,10 @@ HRESULT Add(
 
 ### <a name="parameters"></a>Parametry
 
-*delegateInterface*  
+*delegateInterface*<br/>
 Interfejs do obiektu delegowanego, który reprezentuje program obsługi zdarzeń.
 
-*Token*  
+*Token*<br/>
 Po zakończeniu tej operacji, uchwyt, który reprezentuje zdarzenie. Używanie tego tokenu jako parametr do `Remove()` metodę, aby odrzucić programu obsługi zdarzeń.
 
 ### <a name="return-value"></a>Wartość zwracana

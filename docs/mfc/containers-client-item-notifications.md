@@ -16,47 +16,49 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d76717e68e37769cf55dceb4492ed78031c49e10
-ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
+ms.openlocfilehash: 5db5170b6c946e4bfeda99a3275f045a07fc9beb
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/25/2018
-ms.locfileid: "36928227"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46435223"
 ---
 # <a name="containers-client-item-notifications"></a>Kontenery: powiadomienia dotyczące elementów klienckich
-W tym artykule omówiono funkcje możliwym do zastąpienia, które programu MFC framework wymaga aplikacji serwerowych modyfikowania elementów w dokumencie aplikacji klienta.  
-  
- [COleClientItem](../mfc/reference/coleclientitem-class.md) definiuje kilka funkcji możliwym do zastąpienia, które są wywoływane w odpowiedzi na żądania z zastosowania składnika, który jest również nazywany aplikacji serwera. Te z możliwością zastąpienia zazwyczaj działają jako powiadomienia. Informują aplikacji kontenera różnych zdarzeń, takich jak aktywacja przewijania, lub zmień położenie i zmiany, które użytkownik wprowadza podczas edytowania lub innego manipulowania elementu.  
-  
- Platformę powiadamia zmian za pomocą wywołania do aplikacji kontenera `COleClientItem::OnChange`, funkcja możliwym do zastąpienia, którego implementacja jest wymagana. Ta funkcja chronionych otrzymuje dwa argumenty. Pierwszy określa przyczynę serwera zmienione elementu:  
-  
-|Powiadomienia|Znaczenie|  
-|------------------|-------------|  
-|**OLE_CHANGED**|Wygląd elementu OLE została zmieniona.|  
-|**OLE_SAVED**|Element OLE został zapisany.|  
-|**OLE_CLOSED**|Element OLE został zamknięty.|  
-|**OLE_RENAMED**|Zmieniono nazwę dokumentu zawierającego element OLE na serwerze.|  
-|**OLE_CHANGED_STATE**|Element OLE zmienił się z jednego stanu do innego.|  
-|**OLE_CHANGED_ASPECT**|Aspekt rysowania elementu OLE został zmieniony przez platformę.|  
-  
- Te wartości są z **OLE_NOTIFICATION** wyliczenia, która jest zdefiniowana w AFXOLE. H.  
-  
- Drugi argument do funkcji określa, jak element został zmieniony lub co stanie się, że ma pojawił się:  
-  
-|Gdy jest pierwszym argumentem|Drugi argument|  
-|----------------------------|---------------------|  
-|**OLE_SAVED** lub **OLE_CLOSED**|Nie jest używany.|  
-|**OLE_CHANGED**|Określa aspekt elementu OLE, który został zmieniony.|  
-|**OLE_CHANGED_STATE**|Opis stanu wprowadzane (*emptyState*, *loadedState*, *openState*, *activeState*, lub  *activeUIState*).|  
-  
- Aby uzyskać więcej informacji na temat stanów elementu klienta można założyć, zobacz [kontenery: stany elementu klienckiego](../mfc/containers-client-item-states.md).  
-  
- Wywołania framework `COleClientItem::OnGetItemPosition` gdy element jest aktywowany do edycji w miejscu. Implementacja jest wymagany dla aplikacji, które obsługują edycji w miejscu. Kreator aplikacji MFC udostępnia podstawową implementację, który przypisuje do elementu współrzędnych w celu `CRect` obiekt, który jest przekazywany jako argument `OnGetItemPosition`.  
-  
- Zmiana położenia lub rozmiar elementu OLE podczas edycji w miejscu, muszą zostać zaktualizowane kontenera informacji na temat pozycji i prostokąty wycinka elementu, a serwer musi odebrać informacje o zmianach. Wywołania framework `COleClientItem::OnChangeItemPosition` w tym celu. Kreator aplikacji MFC zawiera zastąpienia, która wywołuje funkcję klasy podstawowej. Należy edytować funkcji, która zapisuje Kreatora aplikacji dla programu `COleClientItem`-pochodnej klasy tak, aby funkcja aktualizuje wszystkie informacje przechowywane przez obiekt elementu klienta.  
-  
-## <a name="see-also"></a>Zobacz też  
- [Kontenery](../mfc/containers.md)   
- [Kontenery: Stany elementu klienckiego](../mfc/containers-client-item-states.md)   
- [COleClientItem::OnChangeItemPosition](../mfc/reference/coleclientitem-class.md#onchangeitemposition)
+
+W tym artykule omówiono funkcje możliwym do zastąpienia, które wywołuje struktura MFC, gdy aplikacje serwera modyfikować elementów w dokumencie aplikację kliencką.
+
+[COleClientItem](../mfc/reference/coleclientitem-class.md) definiuje kilka funkcji możliwym do zastąpienia, które są wywoływane w odpowiedzi na żądania z aplikacji składnika, który jest również nazywany aplikacji serwera. Te / / overridables zazwyczaj działa jako powiadomienia. Poinformuj ich aplikacji kontenera różnych zdarzeniami, na przykład przewijania, aktywacji lub zmiana położenia i zmiany, które użytkownik wprowadza podczas edytowania lub innego manipulowania elementu.
+
+Struktura powiadamia aplikację kontenera zmian za pomocą wywołania `COleClientItem::OnChange`, funkcję możliwym do zastąpienia, którego implementacja jest wymagana. Ta funkcja chronionych otrzymuje dwa argumenty. Pierwszy określa przyczynę, że serwer zmieniony element:
+
+|Powiadomienia|Znaczenie|
+|------------------|-------------|
+|**OLE_CHANGED**|Wygląd elementu OLE został zmieniony.|
+|**OLE_SAVED**|Zapisano element OLE.|
+|**OLE_CLOSED**|Element OLE został zamknięty.|
+|**OLE_RENAMED**|Zmieniono nazwę dokumentu zawierającego element OLE na serwerze.|
+|**OLE_CHANGED_STATE**|Element OLE zmienił się z jednego stanu do drugiego.|
+|**OLE_CHANGED_ASPECT**|Aspekt rysowania elementu OLE został zmieniony przez platformę.|
+
+Te wartości pochodzą z **OLE_NOTIFICATION** wyliczenia, która jest zdefiniowana w AFXOLE. H.
+
+Drugi argument do tej funkcji określa, jak element został zmieniony lub co się stanie, że został wprowadzony:
+
+|Jeśli pierwszy argument jest|Drugi argument funkcji|
+|----------------------------|---------------------|
+|**OLE_SAVED** lub **OLE_CLOSED**|Nie jest używana.|
+|**OLE_CHANGED**|Określa aspekt elementu OLE, które uległy zmianie.|
+|**OLE_CHANGED_STATE**|Opisuje stan wprowadzanych (*emptyState*, *loadedState*, *openState*, *activeState*, lub  *activeUIState*).|
+
+Aby uzyskać więcej informacji na temat stanów elementu klienta, można założyć, zobacz [kontenery: stany elementu klienckiego](../mfc/containers-client-item-states.md).
+
+Struktura wywołuje `COleClientItem::OnGetItemPosition` gdy element jest aktywowany do edycji w miejscu. Implementacja jest wymagana dla aplikacji, które obsługują edycję w miejscu. Kreator aplikacji MFC dostarcza podstawową implementację, który przypisuje współrzędne elementu do `CRect` obiektu, który jest przekazywany jako argument do `OnGetItemPosition`.
+
+Jeśli położenie i rozmiar elementu OLE zmienia się podczas edycji w miejscu, muszą zostać zaktualizowane kontenera informacji na temat elementu położenie i prostokąty przycinania, a serwer musi odebrać informacje o zmianach. Struktura wywołuje `COleClientItem::OnChangeItemPosition` do tego celu. Kreator aplikacji MFC zawiera przesłonięcie, który wywołuje funkcję klasy bazowej. Należy edytować funkcji, która zapisuje Kreatora aplikacji, dla Twojego `COleClientItem`-klasy pochodnej, tak aby funkcja aktualizuje wszystkie informacje przechowywane przez obiekt elementu klienta.
+
+## <a name="see-also"></a>Zobacz też
+
+[Kontenery](../mfc/containers.md)<br/>
+[Kontenery: stany elementu klienckiego](../mfc/containers-client-item-states.md)<br/>
+[COleClientItem::OnChangeItemPosition](../mfc/reference/coleclientitem-class.md#onchangeitemposition)
 

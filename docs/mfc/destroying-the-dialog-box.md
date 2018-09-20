@@ -20,18 +20,20 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 66a3ef9a72107ffb36a75834a6e197aba394c420
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 863b70f3bf4e9828d69024b838dce43abbba26be
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33343931"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46425915"
 ---
 # <a name="destroying-the-dialog-box"></a>Niszczenie okna dialogowego
-Modalne okna dialogowe są zwykle tworzone w ramce stosu i zniszczone podczas kończenia funkcja, której zostały utworzone. Destruktor obiektu okna dialogowego jest wywoływane, gdy obiekt wykracza poza zakres.  
-  
- Niemodalne okna dialogowe są zwykle tworzone i należących do widoku lub ramki okna nadrzędnego — aplikacji główną ramkę okna lub ramki okna dokumentu. Wartość domyślna [OnClose](../mfc/reference/cwnd-class.md#onclose) wywołań obsługi [DestroyWindow](../mfc/reference/cwnd-class.md#destroywindow), który niszczy okna dialogowego. Jeśli okno dialogowe funkcjonował samodzielnie, nie wskaźniki do jego lub inne semantyki specjalne prawa własności, należy zastąpić [PostNcDestroy](../mfc/reference/cwnd-class.md#postncdestroy) zniszczenie obiektu okna dialogowego C++. Należy również zastąpić [OnCancel](../mfc/reference/cdialog-class.md#oncancel) i Wywołaj `DestroyWindow` z wewnątrz. W przeciwnym razie właściciela okna dialogowego należy zniszczyć obiektu języka C++, gdy nie jest już konieczne.  
-  
-## <a name="see-also"></a>Zobacz też  
- [Cykl życiowy okna dialogowego](../mfc/life-cycle-of-a-dialog-box.md)
+
+Modalne okna dialogowe są zwykle tworzone na ramce stosu i niszczony, kiedy kończy się funkcji, który je utworzył. Obiektu okna dialogowego destruktor jest wywoływany, gdy obiekt wykracza poza zakres.
+
+Niemodalne okna dialogowe są zwykle tworzone i należące do okna nadrzędnego widoku lub ramki — aplikacji głównej ramki okna i okna ramki dokumentu. Wartość domyślna [OnClose](../mfc/reference/cwnd-class.md#onclose) obsługi zdarzeń wywołuje [destroywindow —](../mfc/reference/cwnd-class.md#destroywindow), co niszczy okno dialogowe. Jeśli okno dialogowe to samodzielnie, przy użyciu żadnych wskaźników albo innej semantyki specjalne prawa własności, należy zastąpić [postncdestroy —](../mfc/reference/cwnd-class.md#postncdestroy) do zniszczenia obiektu języka C++ w oknie dialogowym. Należy również zastąpić [OnCancel](../mfc/reference/cdialog-class.md#oncancel) i wywołać `DestroyWindow` z znajdujący się w nim. W przeciwnym razie właściciela okna dialogowego należy zniszczyć obiektu języka C++, gdy nie jest już konieczne.
+
+## <a name="see-also"></a>Zobacz też
+
+[Cykl życiowy okna dialogowego](../mfc/life-cycle-of-a-dialog-box.md)
 

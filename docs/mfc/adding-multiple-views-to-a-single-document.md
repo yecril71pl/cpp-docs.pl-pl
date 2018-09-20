@@ -17,90 +17,97 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c48f4525c01149840ca74eee249263eac27c24cf
-ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
+ms.openlocfilehash: cd2869bfe1f3feb17eeb8917ec5ba643ac7961a5
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/25/2018
-ms.locfileid: "36928705"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46411967"
 ---
 # <a name="adding-multiple-views-to-a-single-document"></a>Dodawanie wielu widoków do pojedynczego dokumentu
-W aplikacji interfejsu pojedynczego dokumentu (SDI) utworzone za pomocą biblioteki Microsoft Foundation Class (MFC) każdego typu dokumentu jest skojarzona z typem jednego widoku. W niektórych przypadkach jest pożądane, aby mieć możliwość zmiany w bieżącym widoku dokumentu nowy widok.  
-  
+
+W aplikacji interfejsu pojedynczego dokumentu (SDI) utworzone za pomocą biblioteki Microsoft Foundation Class (MFC) każdego typu dokumentu jest skojarzony z typem jednego widoku. W niektórych przypadkach jest pożądane, aby mieć możliwość przełączania bieżący widok dokumentu za pomocą nowego widoku.
+
 > [!TIP]
->  Dodatkowe procedury dotyczące implementacji wielu widoków do pojedynczego dokumentu, zobacz [CDocument::AddView](../mfc/reference/cdocument-class.md#addview) i [ZBIERANIE](../visual-cpp-samples.md) próbki MFC.  
-  
- Można zaimplementować tę funkcję, dodając nową `CView`-pochodzi z klasy i dodatkowego kodu do przełączania widoków dynamicznie do istniejącej aplikacji MFC.  
-  
- Dostępne są następujące kroki:  
-  
--   [Modyfikowanie istniejącej klasy aplikacji](#vcconmodifyexistingapplicationa1)  
-  
--   [Tworzenie i modyfikowanie nowej klasy widoku](#vcconnewviewclassa2)  
-  
--   [Utwórz i Dołącz nowy widok](#vcconattachnewviewa3)  
-  
--   [Implementowanie funkcji przełączania](#vcconswitchingfunctiona4)  
-  
--   [Dodawanie obsługi do przełączania widoku](#vcconswitchingtheviewa5)  
-  
- W pozostałej części tego tematu założono następujące czynności:  
-  
--   Nazwa `CWinApp`-obiekt pochodnej jest `CMyWinApp`, i `CMyWinApp` został zadeklarowany i zdefiniowanych w *MYWINAPP. H* i *MYWINAPP. CPP*.  
-  
--   `CNewView` to nazwa nowej `CView`-pochodnych obiektu, i `CNewView` został zadeklarowany i zdefiniowanych w *nowy widok. H* i *NEWVIEW. CPP*.  
-  
-##  <a name="vcconmodifyexistingapplicationa1"></a> Modyfikowanie istniejącej klasy aplikacji  
- Dla aplikacji w celu przełączania się między widokami należy zmodyfikować klasy aplikacji przez dodanie zmienne Członkowskie do przechowywania widoków i metody, aby przełączyć je.  
-  
- Dodaj następujący kod do deklaracji `CMyWinApp` w *MYWINAPP. H*:  
-  
- [!code-cpp[NVC_MFCDocViewSDI#1](../mfc/codesnippet/cpp/adding-multiple-views-to-a-single-document_1.h)]  
-  
- Nowe zmienne Członkowskie `m_pOldView` i `m_pNewView`, wskaż bieżącego widoku i nowo utworzony jeden. Metoda new (`SwitchView`) przełącza widoki zleconą przez użytkownika. Treść metody została szczegółowo opisana w dalszej części tego tematu w [wdrożenie funkcją przełączania](#vcconswitchingfunctiona4).  
-  
- Ostatniej modyfikacji klasy aplikacji wymaga w tym nowy plik nagłówka, który definiuje komunikatów systemu Windows (**WM_INITIALUPDATE**) używany w funkcji przełączania.  
-  
- Wstaw następujący wiersz w sekcji Dołącz *MYWINAPP. CPP*:  
-  
- [!code-cpp[NVC_MFCDocViewSDI#2](../mfc/codesnippet/cpp/adding-multiple-views-to-a-single-document_2.cpp)]  
-  
- Zapisz zmiany i przejdź do następnego kroku.  
-  
-##  <a name="vcconnewviewclassa2"></a> Tworzenie i modyfikowanie nowej klasy widoku  
- Tworzenie nowej klasy widok łatwej przy użyciu **nowa klasa** polecenia dostępne w widoku klasy. Jedynym wymaganiem dla tej klasy jest pochodzi od `CView`. Ta nowa klasa należy dodać do aplikacji. Aby uzyskać szczegółowe informacje na temat dodawania nowych klas do projektu, zobacz [Dodawanie klasy](../ide/adding-a-class-visual-cpp.md).  
-  
- Po dodaniu klasy do projektu, trzeba będzie zmienić dostępność niektóre elementy członkowskie klasy widoku.  
-  
- Modyfikowanie *nowy widok. H* zmieniając specyfikator dostępu z **chronione** do **publicznego** Konstruktor i destruktor. Dzięki temu klasy tworzone i niszczone dynamicznie, a następnie zmodyfikować wygląd widoku przed udostępnieniem go.  
-  
- Zapisz zmiany i przejdź do następnego kroku.  
-  
-##  <a name="vcconattachnewviewa3"></a> Utwórz i Dołącz nowy widok  
- Aby utworzyć i dołączyć nowy widok, należy zmodyfikować `InitInstance` funkcji klasy aplikacji. Modyfikacja dodaje nowy kod, który tworzy nowy obiekt widoku, a następnie inicjuje zarówno `m_pOldView` i `m_pNewView` z tymi dwoma obiektami istniejącego widoku.  
-  
- Ponieważ nowy widok jest tworzony w `InitInstance` funkcji nowych i istniejących widoków utrwalić przez czas ich istnienia aplikacji. Jednak aplikacja może równie łatwo utworzyć nowy widok dynamicznie.  
-  
- Wstaw ten kod po wywołaniu `ProcessShellCommand`:  
-  
- [!code-cpp[NVC_MFCDocViewSDI#3](../mfc/codesnippet/cpp/adding-multiple-views-to-a-single-document_3.cpp)]  
-  
- Zapisz zmiany i przejdź do następnego kroku.  
-  
-##  <a name="vcconswitchingfunctiona4"></a> Implementowanie funkcji przełączania  
- W poprzednim kroku po dodaniu kod, który utworzone i zainicjowane nowy obiekt widoku. Ostatni element głównych jest implementacja metody przełączania `SwitchView`.  
-  
- Na końcu pliku implementacji dla klasy aplikacji (*MYWINAPP. CPP*), dodaj następującą definicję metody:  
-  
- [!code-cpp[NVC_MFCDocViewSDI#4](../mfc/codesnippet/cpp/adding-multiple-views-to-a-single-document_4.cpp)]  
-  
- Zapisz zmiany i przejdź do następnego kroku.  
-  
-##  <a name="vcconswitchingtheviewa5"></a> Dodawanie obsługi do przełączania widoku  
- Ostatni krok polega na dodaniu kod, który wywołuje `SwitchView` metody, gdy aplikacja ma przełączać się między widokami. Można to zrobić na kilka sposobów: przez dodawanie nowego elementu menu dla użytkownika wybrać lub wewnętrznie przełączania widoków, gdy są spełnione następujące warunki.  
-  
- Aby uzyskać więcej informacji dotyczących dodawania nowych elementów menu i funkcje programu obsługi poleceń, zobacz [programy obsługi dla poleceń i powiadomień dotyczących formantu karty](../mfc/handlers-for-commands-and-control-notifications.md).  
-  
-## <a name="see-also"></a>Zobacz też  
- [Architektura dokument/widok](../mfc/document-view-architecture.md)
+>  Dodatkowe procedury dotyczące implementowania wielu widoków do pojedynczego dokumentu, zobacz [CDocument::AddView](../mfc/reference/cdocument-class.md#addview) i [ZBIERANIE](../visual-cpp-samples.md) próbki MFC.
+
+Możesz zaimplementować tę funkcję, dodając nowe `CView`-pochodne klasy i dodatkowy kod do przełączania widoków dynamicznie do istniejącej aplikacji MFC.
+
+Dostępne są następujące czynności:
+
+- [Modyfikowanie istniejącej klasy aplikacji](#vcconmodifyexistingapplicationa1)
+
+- [Tworzenie i modyfikowanie nowa klasa widoku](#vcconnewviewclassa2)
+
+- [Tworzenie i dołączanie nowego widoku](#vcconattachnewviewa3)
+
+- [Implementowanie przełączania — funkcja](#vcconswitchingfunctiona4)
+
+- [Dodawanie obsługi służącej do przełączania widoku](#vcconswitchingtheviewa5)
+
+W pozostałej części tego tematu założono następujące czynności:
+
+- Nazwa `CWinApp`— obiekt pochodnej jest `CMyWinApp`, i `CMyWinApp` jest deklarowane i definiowane w *MYWINAPP. H* i *MYWINAPP. CPP*.
+
+- `CNewView` jest nazwą nowego `CView`-pochodnych obiektu i `CNewView` jest deklarowane i definiowane w *NEWVIEW. H* i *NEWVIEW. CPP*.
+
+##  <a name="vcconmodifyexistingapplicationa1"></a> Modyfikowanie istniejącej klasy aplikacji
+
+Dla aplikacji przełączać się między widokami musisz zmodyfikować klasy aplikacji przez dodanie elementu członkowskiego zmiennych do przechowywania widoków i metodę, aby przełączać je.
+
+Dodaj następujący kod do deklaracji `CMyWinApp` w *MYWINAPP. H*:
+
+[!code-cpp[NVC_MFCDocViewSDI#1](../mfc/codesnippet/cpp/adding-multiple-views-to-a-single-document_1.h)]
+
+Nowe zmienne Członkowskie `m_pOldView` i `m_pNewView`, wskaż bieżący widok i nowo utworzony jeden. Metoda new (`SwitchView`) przełącza widoki zleconą przez użytkownika. Treść metody została omówiona w dalszej części tego tematu w [zaimplementowania funkcji przełączania](#vcconswitchingfunctiona4).
+
+Ostatniej modyfikacji klasy aplikacji wymaga tym nowy plik nagłówkowy, który definiuje komunikat Windows (**WM_INITIALUPDATE**) używany w funkcji przełączania.
+
+Wstaw następujący wiersz do sekcji Dołącz *MYWINAPP. CPP*:
+
+[!code-cpp[NVC_MFCDocViewSDI#2](../mfc/codesnippet/cpp/adding-multiple-views-to-a-single-document_2.cpp)]
+
+Zapisz zmiany i przejdź do następnego kroku.
+
+##  <a name="vcconnewviewclassa2"></a> Tworzenie i modyfikowanie nowa klasa widoku
+
+Tworzenie nowej klasy widoku umożliwiają łatwe za pomocą **nową klasę** polecenia dostępne w widoku klas. Jedynym wymaganiem dla tej klasy jest, że pochodzi od `CView`. Ta nowa klasa należy dodać do aplikacji. Aby uzyskać szczegółowe informacje na temat dodawania nowych klas do projektu, zobacz [Dodawanie klasy](../ide/adding-a-class-visual-cpp.md).
+
+Po dodaniu klasy do projektu, musisz zmienić dostępność niektórych członków klasy widoku.
+
+Modyfikowanie *NEWVIEW. H* , zmieniając specyfikator dostępu z **chronione** do **publicznych** Konstruktor i destruktor. Dzięki temu klasy może zostać utworzona i zniszczona dynamicznie, a następnie zmodyfikować wygląd widoku przed udostępnieniem.
+
+Zapisz zmiany i przejdź do następnego kroku.
+
+##  <a name="vcconattachnewviewa3"></a> Tworzenie i dołączanie nowego widoku
+
+Aby utworzyć i dołączyć nowy widok, należy zmodyfikować `InitInstance` funkcji klasy aplikacji. Modyfikacja dodaje nowy kod, który tworzy nowy obiekt widoku, a następnie inicjuje zarówno `m_pOldView` i `m_pNewView` za pomocą dwóch istniejących obiektów widoku.
+
+Ponieważ nowy widok jest tworzony w ramach `InitInstance` funkcji, nowych i istniejących widoków utrzymują się okres istnienia aplikacji. Jednak aplikacja może równie łatwo można utworzyć nowy widok dynamicznie.
+
+Wstaw ten kod po wywołaniu `ProcessShellCommand`:
+
+[!code-cpp[NVC_MFCDocViewSDI#3](../mfc/codesnippet/cpp/adding-multiple-views-to-a-single-document_3.cpp)]
+
+Zapisz zmiany i przejdź do następnego kroku.
+
+##  <a name="vcconswitchingfunctiona4"></a> Implementowanie przełączania — funkcja
+
+W poprzednim kroku dodano kod, który utworzone i zainicjowane nowy obiekt widoku. Ostatni element główne to aby wdrożyć metodę przełączania `SwitchView`.
+
+Na końcu pliku implementacji dla swojej klasy aplikacji (*MYWINAPP. CPP*), dodaj następującą definicję metody:
+
+[!code-cpp[NVC_MFCDocViewSDI#4](../mfc/codesnippet/cpp/adding-multiple-views-to-a-single-document_4.cpp)]
+
+Zapisz zmiany i przejdź do następnego kroku.
+
+##  <a name="vcconswitchingtheviewa5"></a> Dodawanie obsługi służącej do przełączania widoku
+
+Ostatni krok polega na dodawaniu kodu, który wywołuje `SwitchView` metody, gdy aplikację Aby przełączać się między widokami. Można to zrobić na kilka sposobów: przez dodanie nowego elementu menu dla użytkownika o wybranie lub przełączanie widoków wewnętrznie, gdy są spełnione określone warunki.
+
+Aby uzyskać więcej informacji na temat dodawania nowych elementów menu oraz funkcje programu obsługi poleceń, zobacz [programy obsługi dla poleceń i powiadomień dotyczących formantu karty](../mfc/handlers-for-commands-and-control-notifications.md).
+
+## <a name="see-also"></a>Zobacz też
+
+[Architektura dokument/widok](../mfc/document-view-architecture.md)
 

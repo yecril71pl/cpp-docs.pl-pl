@@ -18,12 +18,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 8ecc04f0e8bda3045dcad141fa3fe467039c3f23
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: 8bd2a81c10855dfe1d409b34612956616018dab7
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42605563"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46413461"
 ---
 # <a name="setting-the-size-of-the-combo-box-and-its-drop-down-list"></a>Ustawianie rozmiaru pola kombi i jego listy rozwijanej
 
@@ -61,6 +61,6 @@ Win32
 
 ## <a name="see-also"></a>Zobacz też
 
-[Dodawanie wartości do kontrolki pola kombi](../windows/adding-values-to-a-combo-box-control.md)  
-[Kontrolki w oknach dialogowych](../windows/controls-in-dialog-boxes.md)  
+[Dodawanie wartości do kontrolki pola kombi](../windows/adding-values-to-a-combo-box-control.md)<br/>
+[Kontrolki w oknach dialogowych](../windows/controls-in-dialog-boxes.md)<br/>
 [Kontrolki](../mfc/controls-mfc.md)

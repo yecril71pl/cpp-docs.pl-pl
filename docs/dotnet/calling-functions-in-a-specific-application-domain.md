@@ -16,18 +16,21 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: fc6765e7a96b2d2775d1dd729a43e89cec876e19
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 269225967ff63e98c1efe8a4ff38cd980d3485f7
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33104909"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46409769"
 ---
 # <a name="calling-functions-in-a-specific-application-domain"></a>Wywoływanie funkcji w określonej domenie aplikacji
-Obsługuje wywoływanie funkcji w określonej domenie aplikacji.  
-  
-## <a name="in-this-section"></a>W tej sekcji  
- [call_in_appdomain, funkcja](../dotnet/call-in-appdomain-function.md)  
-  
-## <a name="see-also"></a>Zobacz też  
- [Biblioteka obsługi języka C++](../dotnet/cpp-support-library.md)
+
+Obsługuje wywołania funkcji w określonej domenie aplikacji.
+
+## <a name="in-this-section"></a>W tej sekcji
+
+[call_in_appdomain, funkcja](../dotnet/call-in-appdomain-function.md)
+
+## <a name="see-also"></a>Zobacz też
+
+[Biblioteka obsługi języka C++](../dotnet/cpp-support-library.md)

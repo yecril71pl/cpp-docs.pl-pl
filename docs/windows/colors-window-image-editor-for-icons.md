@@ -21,12 +21,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: b7e4976065d32a2f88550e5f89fc464da2dbc00e
-ms.sourcegitcommit: f0c90000125a9497bf61e41624de189a043703c0
+ms.openlocfilehash: ae58ae7cf09257b399fd21d7c34890b829394b98
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44316708"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46430595"
 ---
 # <a name="colors-window-image-editor-for-icons"></a>Okno Kolory (Edytor obrazów dla ikon)
 
@@ -50,8 +50,8 @@ Brak
 
 ## <a name="see-also"></a>Zobacz też
 
-[Wyświetlanie i ukrywanie okna kolory](../windows/displaying-or-hiding-the-colors-window-image-editor-for-icons.md)  
-[Tworzenie obszarów przezroczystych lub odwróconych w obrazach urządzeń](../windows/creating-transparent-or-inverse-regions-in-device-images.md)  
-[Klawisze skrótów](../windows/accelerator-keys-image-editor-for-icons.md)  
-[Okno dialogowe wybierania niestandardowego koloru](../windows/custom-color-selector-dialog-box-image-editor-for-icons.md)  
+[Wyświetlanie i ukrywanie okna kolory](../windows/displaying-or-hiding-the-colors-window-image-editor-for-icons.md)<br/>
+[Tworzenie obszarów przezroczystych lub odwróconych w obrazach urządzeń](../windows/creating-transparent-or-inverse-regions-in-device-images.md)<br/>
+[Klawisze skrótów](../windows/accelerator-keys-image-editor-for-icons.md)<br/>
+[Okno dialogowe wybierania niestandardowego koloru](../windows/custom-color-selector-dialog-box-image-editor-for-icons.md)<br/>
 [Edytor obrazów dla ikon](../windows/image-editor-for-icons.md)

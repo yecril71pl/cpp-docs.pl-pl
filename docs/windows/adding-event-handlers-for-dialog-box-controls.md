@@ -18,12 +18,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 5caec6d9d77d743fa1a8455819b813364bde27d0
-ms.sourcegitcommit: f0c90000125a9497bf61e41624de189a043703c0
+ms.openlocfilehash: 156908a1611f8a1c8b22df61e6b789468753d25d
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44317059"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46443088"
 ---
 # <a name="adding-event-handlers-for-dialog-box-controls-c"></a>Dodawanie obsługi zdarzeń dla formantów okna dialogowego (C++)
 
@@ -76,11 +76,11 @@ Win32
 
 ## <a name="see-also"></a>Zobacz też
 
-[Domyślne zdarzenia kontroli](../windows/default-control-events.md)  
-[Definiowanie zmiennych składowych dla kontrolek okna dialogowego](../windows/defining-member-variables-for-dialog-controls.md)  
-[Kontrolki okna dialogowego i typy zmiennych](../ide/dialog-box-controls-and-variable-types.md)  
-[Dodawanie klasy](../ide/adding-a-class-visual-cpp.md)  
-[Dodawanie funkcji członkowskiej](../ide/adding-a-member-function-visual-cpp.md)  
-[Dodawanie zmiennej członkowskiej](../ide/adding-a-member-variable-visual-cpp.md)  
-[Zastępowanie funkcji wirtualnych](../ide/overriding-a-virtual-function-visual-cpp.md)  
+[Domyślne zdarzenia kontroli](../windows/default-control-events.md)<br/>
+[Definiowanie zmiennych składowych dla kontrolek okna dialogowego](../windows/defining-member-variables-for-dialog-controls.md)<br/>
+[Kontrolki okna dialogowego i typy zmiennych](../ide/dialog-box-controls-and-variable-types.md)<br/>
+[Dodawanie klasy](../ide/adding-a-class-visual-cpp.md)<br/>
+[Dodawanie funkcji członkowskiej](../ide/adding-a-member-function-visual-cpp.md)<br/>
+[Dodawanie zmiennej członkowskiej](../ide/adding-a-member-variable-visual-cpp.md)<br/>
+[Zastępowanie funkcji wirtualnych](../ide/overriding-a-virtual-function-visual-cpp.md)<br/>
 [Handler komunikatów MFC](../mfc/reference/adding-an-mfc-message-handler.md)  

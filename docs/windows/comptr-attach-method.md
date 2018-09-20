@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: f02d8585778dcb10013a5673c7443b0355535555
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: 0fcccf1c7816892a336839170a7a279f325b3f8b
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42600199"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46408274"
 ---
 # <a name="comptrattach-method"></a>ComPtr::Attach — Metoda
 
@@ -38,7 +38,7 @@ void Attach(
 
 ### <a name="parameters"></a>Parametry
 
-*other*  
+*other*<br/>
 Typ interfejsu.
 
 ## <a name="requirements"></a>Wymagania

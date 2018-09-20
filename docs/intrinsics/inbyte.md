@@ -18,45 +18,50 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7a503cb71ee1a7121a4770d5a401e33fe14fc649
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: 7e9b4950c16cdab8dd282f772e84f7f222246328
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45716542"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46414462"
 ---
 # <a name="inbyte"></a>__inbyte
-**Microsoft Specific**  
-  
- Generuje `in` instrukcji, zwracając jednobajtowego odczytywać port określony przez `Port`.  
-  
-## <a name="syntax"></a>Składnia  
-  
-```  
-unsigned char __inbyte(  
-   unsigned short Port  
-);  
-```  
-  
-#### <a name="parameters"></a>Parametry  
+
+**Microsoft Specific**
+
+Generuje `in` instrukcji, zwracając jednobajtowego odczytywać port określony przez `Port`.
+
+## <a name="syntax"></a>Składnia
+
+```
+unsigned char __inbyte(
+   unsigned short Port
+);
+```
+
+#### <a name="parameters"></a>Parametry
+
 *Port*<br/>
-[in] Port do odczytu.  
-  
-## <a name="return-value"></a>Wartość zwracana  
- Bajtów odczytanych z określonego portu.  
-  
-## <a name="requirements"></a>Wymagania  
-  
-|Wewnętrzne|Architektura|  
-|---------------|------------------|  
-|`__inbyte`|x86, x64|  
-  
- **Plik nagłówkowy** \<intrin.h >  
-  
-**END specyficzny dla Microsoft**  
-  
-## <a name="remarks"></a>Uwagi  
- Ta procedura jest dostępna wyłącznie jako wewnętrzna.  
-  
-## <a name="see-also"></a>Zobacz też  
- [Funkcje wewnętrzne kompilatora](../intrinsics/compiler-intrinsics.md)
+[in] Port do odczytu.
+
+## <a name="return-value"></a>Wartość zwracana
+
+Bajtów odczytanych z określonego portu.
+
+## <a name="requirements"></a>Wymagania
+
+|Wewnętrzne|Architektura|
+|---------------|------------------|
+|`__inbyte`|x86, x64|
+
+**Plik nagłówkowy** \<intrin.h >
+
+**END specyficzny dla Microsoft**
+
+## <a name="remarks"></a>Uwagi
+
+Ta procedura jest dostępna wyłącznie jako wewnętrzna.
+
+## <a name="see-also"></a>Zobacz też
+
+[Funkcje wewnętrzne kompilatora](../intrinsics/compiler-intrinsics.md)

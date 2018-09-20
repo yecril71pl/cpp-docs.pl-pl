@@ -17,86 +17,91 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: fddf192b21b878c82ca663da657c55e32fd9173d
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: eecda10f2fd88b902a54fe9f4dc4de8edc4bc1b0
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33106209"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46413565"
 ---
 # <a name="debug-class-ccli"></a>Klasa Debug (C++/CLI)
-Korzystając z <xref:System.Diagnostics.Debug> w aplikacji Visual C++, zachowanie nie zmienia się między debugowania i kompilacji wydania.  
-  
-## <a name="remarks"></a>Uwagi  
- Zachowanie <xref:System.Diagnostics.Trace> jest taka sama jak zachowanie dla klasy debugowania, ale jest zależna od symbolu definiowanego śledzenia. Oznacza to, że należy `#ifdef` żadnego kodu dotyczące śledzenia, aby zapobiec debugowania w kompilacji wydania.  
-  
-## <a name="example"></a>Przykład  
-  
-### <a name="description"></a>Opis  
- Poniższy przykład zawsze wykonuje instrukcje danych wyjściowych, niezależnie od tego, czy kompilacji z **/DDEBUG** lub **/DTRACE**.  
-  
-### <a name="code"></a>Kod  
-  
-```  
-// mcpp_debug_class.cpp  
-// compile with: /clr  
-#using <system.dll>  
-using namespace System::Diagnostics;  
-using namespace System;  
-  
-int main() {  
-   Trace::Listeners->Add( gcnew TextWriterTraceListener( Console::Out ) );  
-   Trace::AutoFlush = true;  
-   Trace::Indent();  
-   Trace::WriteLine( "Entering Main" );  
-   Console::WriteLine( "Hello World." );  
-   Trace::WriteLine( "Exiting Main" );  
-   Trace::Unindent();  
-  
-   Debug::WriteLine("test");  
-}  
-```  
-  
-### <a name="output"></a>Dane wyjściowe  
-  
-```  
-    Entering Main  
-Hello World.  
-    Exiting Main  
-test  
-```  
-  
-## <a name="example"></a>Przykład  
-  
-### <a name="description"></a>Opis  
- Aby uzyskać oczekiwane zachowanie (oznacza to, że żadne dane wyjściowe "test" drukowane dla kompilacji wydania), należy użyć `#ifdef` i `#endif` dyrektywy. W poprzednim przykładzie kodu zmienia się poniżej, aby zademonstrować tej poprawki:  
-  
-### <a name="code"></a>Kod  
-  
-```  
-// mcpp_debug_class2.cpp  
-// compile with: /clr  
-#using <system.dll>  
-using namespace System::Diagnostics;  
-using namespace System;  
-  
-int main() {  
-   Trace::Listeners->Add( gcnew TextWriterTraceListener( Console::Out ) );  
-   Trace::AutoFlush = true;  
-   Trace::Indent();  
-  
-#ifdef TRACE   // checks for a debug build  
-   Trace::WriteLine( "Entering Main" );  
-   Console::WriteLine( "Hello World." );  
-   Trace::WriteLine( "Exiting Main" );  
-#endif  
-   Trace::Unindent();  
-  
-#ifdef DEBUG   // checks for a debug build  
-   Debug::WriteLine("test");  
-#endif   //ends the conditional block  
-}  
-```  
-  
-## <a name="see-also"></a>Zobacz też  
- [Programowanie .NET w języku C++/interfejsie wiersza polecenia (Visual C++)](../dotnet/dotnet-programming-with-cpp-cli-visual-cpp.md)
+
+Korzystając z <xref:System.Diagnostics.Debug> w aplikacji Visual C++, zachowanie nie zmienił się od debugowania, jak i kompilację wydania.
+
+## <a name="remarks"></a>Uwagi
+
+Zachowanie <xref:System.Diagnostics.Trace> jest taka sama jak zachowanie dla klasy debugowania, ale jest zależny od symbolu śledzenia, które zostały zdefiniowane. Oznacza to, że musisz `#ifdef` żadnego kodu dotyczące śledzenia, aby zapobiec debugowanie kompilacji wydania.
+
+## <a name="example"></a>Przykład
+
+### <a name="description"></a>Opis
+
+Poniższy przykład wykonuje zawsze oświadczeń danych wyjściowych, niezależnie od tego, czy kompilujesz z **/DDEBUG** lub **/DTRACE**.
+
+### <a name="code"></a>Kod
+
+```cpp
+// mcpp_debug_class.cpp
+// compile with: /clr
+#using <system.dll>
+using namespace System::Diagnostics;
+using namespace System;
+
+int main() {
+   Trace::Listeners->Add( gcnew TextWriterTraceListener( Console::Out ) );
+   Trace::AutoFlush = true;
+   Trace::Indent();
+   Trace::WriteLine( "Entering Main" );
+   Console::WriteLine( "Hello World." );
+   Trace::WriteLine( "Exiting Main" );
+   Trace::Unindent();
+
+   Debug::WriteLine("test");
+}
+```
+
+### <a name="output"></a>Dane wyjściowe
+
+```Output
+    Entering Main
+Hello World.
+    Exiting Main
+test
+```
+
+## <a name="example"></a>Przykład
+
+### <a name="description"></a>Opis
+
+Aby uzyskać oczekiwane zachowanie (oznacza to, że żadne dane wyjściowe "test" druk dla wersji kompilacji), należy użyć `#ifdef` i `#endif` dyrektywy. W poprzednim przykładzie kodu zmienia się poniżej, aby zademonstrować tę poprawkę:
+
+### <a name="code"></a>Kod
+
+```cpp
+// mcpp_debug_class2.cpp
+// compile with: /clr
+#using <system.dll>
+using namespace System::Diagnostics;
+using namespace System;
+
+int main() {
+   Trace::Listeners->Add( gcnew TextWriterTraceListener( Console::Out ) );
+   Trace::AutoFlush = true;
+   Trace::Indent();
+
+#ifdef TRACE   // checks for a debug build
+   Trace::WriteLine( "Entering Main" );
+   Console::WriteLine( "Hello World." );
+   Trace::WriteLine( "Exiting Main" );
+#endif
+   Trace::Unindent();
+
+#ifdef DEBUG   // checks for a debug build
+   Debug::WriteLine("test");
+#endif   //ends the conditional block
+}
+```
+
+## <a name="see-also"></a>Zobacz też
+
+[Programowanie .NET w języku C++/interfejsie wiersza polecenia (Visual C++)](../dotnet/dotnet-programming-with-cpp-cli-visual-cpp.md)

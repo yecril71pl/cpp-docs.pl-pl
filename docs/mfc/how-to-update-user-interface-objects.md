@@ -23,30 +23,32 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 422be3d80614c526c7e634d22a0930458e4b4e26
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 8afe8f6f7594c2dff75125aa56a210505bf5301d
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33346210"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46410590"
 ---
 # <a name="how-to-update-user-interface-objects"></a>Porady: aktualizowanie obiektów interfejsu użytkownika
-Zazwyczaj elementy menu i przycisków paska narzędzi mają więcej niż jednego stanu. Na przykład element menu jest niedostępne (wygaszone), jeśli jest niedostępna w kontekście obecny. Elementy menu można także zaznaczać lub usuwać zaznaczenia. Również zostaną wyłączone przycisku paska narzędzi, jeśli jest niedostępny lub może być sprawdzone.  
-  
- Kto aktualizuje stan tych elementów, jak program zmiany warunków logicznie, jeśli element menu generuje polecenia, który jest obsługiwany przez, powiedz, dokument, warto dokumentu aktualizacji elementu menu. Prawdopodobnie dokument zawiera informacje, na której oparto aktualizacji.  
-  
- Jeśli polecenie ma wiele obiektów interfejsu użytkownika (możliwe, że element menu i przycisku paska narzędzi), zarówno są kierowane do tej samej funkcji obsługi. To jest hermetyzowany kod aktualizacji interfejsu użytkownika dla wszystkich obiektów równoważnych interfejsu użytkownika w jednym miejscu.  
-  
- Platformę udostępnia wygodny interfejs na potrzeby automatyczne aktualizowanie obiektów interfejsu użytkownika. Można wykonać aktualizacji w inny sposób, ale jest interfejs dostarczony wydajne i łatwe w użyciu.  
-  
- W poniższych tematach opisano użycie programy obsługi aktualizacji:  
-  
--   [Kiedy są wywoływane programy obsługi aktualizacji](../mfc/when-update-handlers-are-called.md)  
-  
--   [On_update_command_ui — makro](../mfc/on-update-command-ui-macro.md)  
-  
--   [Ccmdui — klasa](../mfc/the-ccmdui-class.md)  
-  
-## <a name="see-also"></a>Zobacz też  
- [Menu](../mfc/menus-mfc.md)
+
+Zazwyczaj elementy menu i przycisków paska narzędzi mają więcej niż jednego stanu. Na przykład element menu jest niedostępna (wygaszone), jeśli jest niedostępna w kontekście obecne. Elementy menu mogą być także zaznaczony lub niezaznaczony. Przycisk paska narzędzi można również zostaną wyłączone, jeśli jest niedostępny lub może zostać sprawdzone.
+
+Kto aktualizuje stan tych elementów, ponieważ program zmiana warunków logicznie, jeśli element menu generuje polecenia, który jest obsługiwany przez, np. dokument, dobrym pomysłem dokumentu aktualizacji elementu menu. Dokument jest prawdopodobnie zawiera informacje, na którym bazuje aktualizacji.
+
+Jeśli polecenie ma wiele obiektów interfejsu użytkownika (być może element menu i przycisku paska narzędzi), oba są kierowane do tej samej funkcji programu obsługi. To jest hermetyzowany kod aktualizacji interfejsu użytkownika dla wszystkich obiektów równoważnych interfejsu użytkownika w jednym miejscu.
+
+Struktura udostępnia wygodne interfejs umożliwiający automatyczne aktualizowanie obiektów interfejsu użytkownika. Można wybrać w celu aktualizowania w inny sposób, ale interfejs dostarczony jest wydajne i łatwy w użyciu.
+
+W poniższych tematach opisano użycie programy obsługi aktualizacji:
+
+- [Kiedy są wywoływane programy obsługi aktualizacji](../mfc/when-update-handlers-are-called.md)
+
+- [ON_UPDATE_COMMAND_UI — makro](../mfc/on-update-command-ui-macro.md)
+
+- [Klasa CCmdUI](../mfc/the-ccmdui-class.md)
+
+## <a name="see-also"></a>Zobacz też
+
+[Menu](../mfc/menus-mfc.md)
 

@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: b2336562abb82ae89bd2f6864d0678023a3ccf69
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: 87516cf45a39602bea462b8e94f17d3ef64ad0eb
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42600531"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46431622"
 ---
 # <a name="interfacelisthelper-structure"></a>InterfaceListHelper — Struktura
 
@@ -53,34 +53,34 @@ struct InterfaceListHelper<T0, Nil, Nil, Nil, Nil, Nil, Nil, Nil, Nil>;
 
 ### <a name="parameters"></a>Parametry
 
-*T0*  
+*T0*<br/>
 Parametr szablonu, 0, który jest wymagany.
 
-*T1*  
+*T1*<br/>
 Parametr szablonu, 1, która domyślnie jest nieokreślona.
 
-*T2*  
+*T2*<br/>
 Parametr szablonu, 2, która domyślnie jest nieokreślona. Trzeci parametr szablonu.
 
-*T3*  
+*T3*<br/>
 Parametr szablonu, 3, która domyślnie jest nieokreślona.
 
-*T4*  
+*T4*<br/>
 Parametr szablonu, 4, która domyślnie jest nieokreślona.
 
-*T5*  
+*T5*<br/>
 Parametr szablonu, 5, która domyślnie jest nieokreślona.
 
-*T6*  
+*T6*<br/>
 Parametr szablonu, 6, która domyślnie jest nieokreślona.
 
-*T7*  
+*T7*<br/>
 Parametr szablonu, 7, która domyślnie jest nieokreślona.
 
-*T8*  
+*T8*<br/>
 Parametr szablonu, 8, która domyślnie jest nieokreślona.
 
-*T9*  
+*T9*<br/>
 Parametr szablonu, 9, która domyślnie jest nieokreślona.
 
 ## <a name="remarks"></a>Uwagi

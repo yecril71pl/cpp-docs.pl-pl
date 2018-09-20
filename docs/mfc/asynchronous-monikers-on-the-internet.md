@@ -20,56 +20,61 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: fb9828734985c25996e7e2d1a6f390a0b629d998
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: bdb310891cd98e6bf3a8afa0b92cce01e5f5c6ba
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33343366"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46409907"
 ---
 # <a name="asynchronous-monikers-on-the-internet"></a>Minikery asynchroniczne w Internecie
-Internet wymaga nowe podejście do projektowania aplikacji ze względu na dostęp do niej wolną sieć. Aplikacje powinny działać dostępu do sieci asynchronicznie, aby uniknąć Gaśnięcie silnika interfejsu użytkownika. Klasy MFC [CAsyncMonikerFile](../mfc/reference/casyncmonikerfile-class.md) zapewnia obsługę asynchronicznego pobierania plików.  
-  
- Monikery asynchroniczne mogą rozszerzanie aplikacji modelu COM pobieranie asynchroniczne w Internecie oraz zapewnienie progresywnego renderowania duże obiekty, takie jak mapy bitowe i VRML obiektów. Monikery asynchroniczne Włącz właściwość formantu ActiveX lub pliku w Internecie, aby pobrać bez blokowania odpowiedzi interfejsu użytkownika.  
-  
-## <a name="advantages-of-asynchronous-monikers"></a>Zalety monikery asynchroniczne  
- Możesz użyć monikery asynchroniczne do:  
-  
--   Pobierz kod i pliki bez blokowania.  
-  
--   Pobierz właściwości w formantach ActiveX bez blokowania.  
-  
--   Otrzymuj powiadomienia postępu pobierania.  
-  
--   Śledź postęp i informacje o stanie gotowe.  
-  
--   Podaj informacje o stanie użytkownika dotyczące postępu.  
-  
--   Zezwalaj użytkownikowi na pobieranie w dowolnym momencie anulować.  
-  
-## <a name="mfc-classes-for-asynchronous-monikers"></a>Klasy MFC do monikery asynchroniczne  
- [CAsyncMonikerFile](../mfc/reference/casyncmonikerfile-class.md) jest pochodną [CMonikerFile](../mfc/reference/cmonikerfile-class.md), który z kolei jest określana na podstawie [COleStreamFile](../mfc/reference/colestreamfile-class.md). A `COleStreamFile` reprezentuje obiekt, a strumień danych; `CMonikerFile` obiekt używa `IMoniker` do uzyskiwania danych, a `CAsyncMonikerFile` obiektu wykonuje asynchronicznie.  
-  
- Monikery asynchroniczne są używane głównie w przypadku aplikacji korzystających z Internetu i formantów ActiveX do udostępniają interfejs użytkownika odpowiadać podczas transferu plików. Podstawowym przykładem jest użycie [CDataPathProperty](../mfc/reference/cdatapathproperty-class.md) zapewnienie właściwości asynchronicznego dla formantów ActiveX.  
-  
-## <a name="mfc-classes-for-data-paths-in-activex-controls"></a>Klasy MFC do ścieżek danych w kontrolkach ActiveX  
- Klasy MFC `CDataPathProperty` i [CCachedDataPathProperty](../mfc/reference/ccacheddatapathproperty-class.md) implementuje właściwości formantu ActiveX, które mogą być ładowane asynchronicznie. Załadowano asynchroniczne właściwości po rozpoczęciu synchronicznego. Asynchroniczne formantów ActiveX wielokrotnie wywoływać wskazująca dostępności nowych danych podczas procesu wymiany właściwości długie wywołania zwrotnego.  
-  
- `CDataPathProperty` jest pochodną `CAsyncMonikerFile`. `CCachedDataPathProperty` jest pochodną `CDataPathProperty`. Aby zaimplementować właściwości asynchronicznego w formantów ActiveX, klasa wyprowadzona z `CDataPathProperty` lub `CCachedDataPathProperty`i Zastąp [OnDataAvailable](../mfc/reference/casyncmonikerfile-class.md#ondataavailable) i inne powiadomienia chcesz otrzymywać.  
-  
-#### <a name="to-download-a-file-using-asynchronous-monikers"></a>Aby pobrać plik za pomocą monikery asynchroniczne  
-  
-1.  Deklarowanie klasy pochodzącej od [CAsyncMonikerFile](../mfc/reference/casyncmonikerfile-class.md).  
-  
-2.  Zastąpienie [OnDataAvailable](../mfc/reference/casyncmonikerfile-class.md#ondataavailable) do wyświetlania danych.  
-  
-3.  Zastąpienie innych funkcji elementów członkowskich, w tym [OnProgress](../mfc/reference/casyncmonikerfile-class.md#onprogress), [OnStartBinding](../mfc/reference/casyncmonikerfile-class.md#onstartbinding), i [OnStopBinding](../mfc/reference/casyncmonikerfile-class.md#onstopbinding).  
-  
-4.  Zadeklaruj wystąpienie tej klasy i używać go na otwieranie adresów URL.  
-  
- Aby dowiedzieć się, jak asynchronicznie pobieranie formantu ActiveX, zobacz [formantów ActiveX w Internecie](../mfc/activex-controls-on-the-internet.md).  
-  
-## <a name="see-also"></a>Zobacz też  
- [Zadania związane z programowaniem Internetu MFC](../mfc/mfc-internet-programming-tasks.md)   
- [MFC — podstawy programowania Internetu](../mfc/mfc-internet-programming-basics.md)
+
+Internet wymaga nowego podejścia do projektowania aplikacji ze względu na jego dostęp wolną sieć. Aplikacje, należy wykonać dostępu do sieci asynchronicznie, aby uniknąć wstrzymujących działanie interfejsu użytkownika. Klasy MFC [CAsyncMonikerFile](../mfc/reference/casyncmonikerfile-class.md) zapewnia obsługę asynchroniczną pobierania plików.
+
+Z monikerów asynchronicznych można rozszerzyć aplikacji modelu COM do pobrania asynchroniczne w Internecie i zapewnienie progresywnego renderowania duże obiekty, takie jak mapy bitowe i VRML obiektów. Monikery asynchroniczne włączyć właściwość formantu ActiveX lub pliku w Internecie, które mają być pobrane bez blokowania odpowiedzi interfejsu użytkownika.
+
+## <a name="advantages-of-asynchronous-monikers"></a>Korzyści wynikające z monikerów asynchronicznych
+
+Możesz użyć monikerów asynchronicznych do:
+
+- Pobierz kod i pliki bez blokowania.
+
+- Pobierz właściwości w kontrolkach ActiveX bez blokowania.
+
+- Odbieranie powiadomień, pobierania postępu.
+
+- Śledzenie postępu i stanu gotowości informacji.
+
+- Podaj informacje o stanie użytkownika dotyczące postępu.
+
+- Zezwalaj użytkownikowi na pobieranie w dowolnym momencie anulować.
+
+## <a name="mfc-classes-for-asynchronous-monikers"></a>Klasy MFC do monikerów asynchronicznych
+
+[CAsyncMonikerFile](../mfc/reference/casyncmonikerfile-class.md) jest tworzony na podstawie [CMonikerFile](../mfc/reference/cmonikerfile-class.md), który z kolei pochodzi od [COleStreamFile](../mfc/reference/colestreamfile-class.md). A `COleStreamFile` reprezentuje obiekt, a strumień danych; `CMonikerFile` obiektu używa `IMoniker` do uzyskania danych i `CAsyncMonikerFile` obiektu robi to tak asynchronicznie.
+
+Monikery asynchroniczne są używane głównie w aplikacje internetowe i formantów ActiveX zapewnia interfejs użytkownika odpowiada podczas transferu plików. Głównym przykładem polega na użyciu [CDataPathProperty](../mfc/reference/cdatapathproperty-class.md) zapewnienie asynchronicznej właściwości formantów ActiveX.
+
+## <a name="mfc-classes-for-data-paths-in-activex-controls"></a>Klasy MFC do ścieżki danych w kontrolkach ActiveX
+
+Klasy MFC `CDataPathProperty` i [CCachedDataPathProperty](../mfc/reference/ccacheddatapathproperty-class.md) implementuje właściwości formantu ActiveX, które może być ładowana asynchronicznie. Właściwości asynchronicznego są ładowane po rozpoczęciu synchroniczne. Formanty ActiveX asynchroniczne wielokrotnie wykona wywołanie zwrotne do wskazania dostępności nowych danych podczas procesu wymiany długich właściwości.
+
+`CDataPathProperty` jest tworzony na podstawie `CAsyncMonikerFile`. `CCachedDataPathProperty` jest tworzony na podstawie `CDataPathProperty`. Aby zaimplementować właściwości asynchronicznego w Twoich kontrolek ActiveX, należy wyprowadzić klasę z `CDataPathProperty` lub `CCachedDataPathProperty`i zastępowania [OnDataAvailable](../mfc/reference/casyncmonikerfile-class.md#ondataavailable) i inne powiadomienia chcesz otrzymywać.
+
+#### <a name="to-download-a-file-using-asynchronous-monikers"></a>Aby pobrać plik przy użyciu monikerów asynchronicznych
+
+1. Deklarowanie klasy pochodzącej od [CAsyncMonikerFile](../mfc/reference/casyncmonikerfile-class.md).
+
+1. Zastąp [OnDataAvailable](../mfc/reference/casyncmonikerfile-class.md#ondataavailable) do wyświetlania danych.
+
+1. Zastąpienie innych funkcji Członkowskich, w tym [OnProgress](../mfc/reference/casyncmonikerfile-class.md#onprogress), [OnStartBinding](../mfc/reference/casyncmonikerfile-class.md#onstartbinding), i [OnStopBinding](../mfc/reference/casyncmonikerfile-class.md#onstopbinding).
+
+1. Zadeklaruj wystąpienie tej klasy i używać go na otwieranie adresów URL.
+
+Aby dowiedzieć się, jak pobieranie asynchronicznie w kontrolce ActiveX, zobacz [kontrolki ActiveX w Internecie](../mfc/activex-controls-on-the-internet.md).
+
+## <a name="see-also"></a>Zobacz też
+
+[MFC — zadania związane z programowaniem Internetu](../mfc/mfc-internet-programming-tasks.md)<br/>
+[MFC — podstawy programowania Internetu](../mfc/mfc-internet-programming-basics.md)
 

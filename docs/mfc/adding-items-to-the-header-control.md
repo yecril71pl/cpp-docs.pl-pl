@@ -16,27 +16,29 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a6450d99b8df436c64337e52fc14244ecbb0edfc
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 0eb06a15cac87b063ada1cbe8f130b3464be0b0a
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43206150"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46447183"
 ---
 # <a name="adding-items-to-the-header-control"></a>Dodawanie elementów do formantu nagłówka
-Po utworzeniu kontrolki nagłówka ([CHeaderCtrl](../mfc/reference/cheaderctrl-class.md)) w okna nadrzędnego, Dodaj tyle nagłówek "items" według potrzeb: zazwyczaj jedna według kolumny.  
-  
-### <a name="to-add-a-header-item"></a>Aby dodać element nagłówka  
-  
-1.  Przygotowanie [HD_ITEM](/windows/desktop/api/commctrl/ns-commctrl-_hd_itema) struktury.  
-  
-2.  Wywołaj [CHeaderCtrl::InsertItem](../mfc/reference/cheaderctrl-class.md#insertitem), przekazywanie struktury.  
-  
-3.  Powtórz kroki 1 i 2 dla dodatkowych elementów.  
-  
- Aby uzyskać więcej informacji, zobacz [dodanie elementu do kontrolki nagłówka o](/windows/desktop/Controls/header-controls) w zestawie Windows SDK.  
-  
-## <a name="see-also"></a>Zobacz też  
- [Korzystanie z CHeaderCtrl](../mfc/using-cheaderctrl.md)   
- [Kontrolki](../mfc/controls-mfc.md)
+
+Po utworzeniu kontrolki nagłówka ([CHeaderCtrl](../mfc/reference/cheaderctrl-class.md)) w okna nadrzędnego, Dodaj tyle nagłówek "items" według potrzeb: zazwyczaj jedna według kolumny.
+
+### <a name="to-add-a-header-item"></a>Aby dodać element nagłówka
+
+1. Przygotowanie [HD_ITEM](/windows/desktop/api/commctrl/ns-commctrl-_hd_itema) struktury.
+
+1. Wywołaj [CHeaderCtrl::InsertItem](../mfc/reference/cheaderctrl-class.md#insertitem), przekazywanie struktury.
+
+1. Powtórz kroki 1 i 2 dla dodatkowych elementów.
+
+Aby uzyskać więcej informacji, zobacz [dodanie elementu do kontrolki nagłówka o](/windows/desktop/Controls/header-controls) w zestawie Windows SDK.
+
+## <a name="see-also"></a>Zobacz też
+
+[Korzystanie z CHeaderCtrl](../mfc/using-cheaderctrl.md)<br/>
+[Kontrolki](../mfc/controls-mfc.md)
 

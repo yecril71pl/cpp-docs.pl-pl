@@ -15,35 +15,35 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: c2c98ac16e9e5cb554d72a8880c5d4c45ff610d2
-ms.sourcegitcommit: f0c90000125a9497bf61e41624de189a043703c0
+ms.openlocfilehash: 2343a6eedc46d0b87419bae3ebbb93c5b153cfb2
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44315707"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46446659"
 ---
 # <a name="c-attributes-reference"></a>Atrybuty (C++)
 
 Firma Microsoft definiuje zestaw atrybutów, które upraszczają programowanie COM i .NET Framework — programowanie środowiska uruchomieniowego języka wspólnego. Gdy atrybuty zostaną umieszczone w plikach źródłowych, kompilator będzie współpracuje z dostawcą biblioteki dll, Wstaw kod lub zmodyfikować kod w plikach obiektowych wygenerowany.
 
 > [!NOTE] 
- > Jeśli szukasz atrybuty standard C++, zobacz [atrybuty](../cpp/attributes.md).
+> Jeśli szukasz atrybuty standard C++, zobacz [atrybuty](../cpp/attributes.md).
 
 ## <a name="in-this-section"></a>W tej sekcji
 
-[Pojęcia](../windows/attributed-programming-concepts.md)  
+[Pojęcia](../windows/attributed-programming-concepts.md)<br/>
 W tym artykule opisano różne pojęcia, które są powiązane z atrybutami.
 
-[Atrybuty według grup](../windows/attributes-by-group.md)  
+[Atrybuty według grup](../windows/attributes-by-group.md)<br/>
 Zawiera łącza do atrybutu tematy referencyjne, pogrupowane według funkcji.
 
-[Atrybuty w zależności od zastosowania](../windows/attributes-by-usage.md)  
+[Atrybuty w zależności od zastosowania](../windows/attributes-by-usage.md)<br/>
 Zawiera łącza do tematów odwołania, pogrupowane według użycia atrybutu.
 
-[Alfabetyczny spis atrybutów](../windows/attributes-alphabetical-reference.md)  
+[Alfabetyczny spis atrybutów](../windows/attributes-alphabetical-reference.md)<br/>
 Zawiera łącza do wszystkich tematów odwołanie do atrybutu.
 
 ## <a name="related-sections"></a>Sekcje pokrewne
 
-[Programowanie oparte na atrybutach](../windows/attributed-programming-concepts.md)  
+[Programowanie oparte na atrybutach](../windows/attributed-programming-concepts.md)<br/>
 Omówienie koncepcyjne atrybutów.

@@ -18,57 +18,62 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 54911e3e9c696cd2a390dc2f5b42e3917b08014f
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 8cd35b53db37d51a9feec567fe66c53b1381b4d9
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46037479"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46431336"
 ---
 # <a name="contextunblockunbalanced-class"></a>context_unblock_unbalanced — Klasa
-Ta klasa opisuje wyjątek generowany, gdy wywołuje w celu `Block` i `Unblock` metody `Context` obiektu nie są prawidłowo skojarzone.  
-  
-## <a name="syntax"></a>Składnia  
-  
-```  
-class context_unblock_unbalanced : public std::exception;  
-```  
-  
-## <a name="members"></a>Elementy członkowskie  
-  
-### <a name="public-constructors"></a>Konstruktory publiczne  
-  
-|Nazwa|Opis|  
-|----------|-----------------|  
-|[context_unblock_unbalanced](#ctor)|Przeciążone. Konstruuje `context_unblock_unbalanced` obiektu.|  
-  
-## <a name="remarks"></a>Uwagi  
- Wywołania `Block` i `Unblock` metody `Context` obiektu muszą zawsze być prawidłowo skojarzone. Współbieżność środowiska umożliwia wykonywanie operacji do wykonania w obu kolejności. Na przykład, wywołanie `Block` może następować po wywołaniu `Unblock`, lub na odwrót. Ten wyjątek będzie zgłaszany, jeśli na przykład dwa wywołania `Unblock` metody zostały wprowadzone w wierszu, a na `Context` obiektu, który nie został zablokowany.  
-  
-## <a name="inheritance-hierarchy"></a>Hierarchia dziedziczenia  
- `exception`  
-  
- `context_unblock_unbalanced`  
-  
-## <a name="requirements"></a>Wymagania  
- **Nagłówek:** concrt.h  
-  
- **Namespace:** współbieżności  
-  
-##  <a name="ctor"></a> context_unblock_unbalanced — 
 
- Konstruuje `context_unblock_unbalanced` obiektu.  
-  
-```  
+Ta klasa opisuje wyjątek generowany, gdy wywołuje w celu `Block` i `Unblock` metody `Context` obiektu nie są prawidłowo skojarzone.
+
+## <a name="syntax"></a>Składnia
+
+```
+class context_unblock_unbalanced : public std::exception;
+```
+
+## <a name="members"></a>Elementy członkowskie
+
+### <a name="public-constructors"></a>Konstruktory publiczne
+
+|Nazwa|Opis|
+|----------|-----------------|
+|[context_unblock_unbalanced](#ctor)|Przeciążone. Konstruuje `context_unblock_unbalanced` obiektu.|
+
+## <a name="remarks"></a>Uwagi
+
+Wywołania `Block` i `Unblock` metody `Context` obiektu muszą zawsze być prawidłowo skojarzone. Współbieżność środowiska umożliwia wykonywanie operacji do wykonania w obu kolejności. Na przykład, wywołanie `Block` może następować po wywołaniu `Unblock`, lub na odwrót. Ten wyjątek będzie zgłaszany, jeśli na przykład dwa wywołania `Unblock` metody zostały wprowadzone w wierszu, a na `Context` obiektu, który nie został zablokowany.
+
+## <a name="inheritance-hierarchy"></a>Hierarchia dziedziczenia
+
+`exception`
+
+`context_unblock_unbalanced`
+
+## <a name="requirements"></a>Wymagania
+
+**Nagłówek:** concrt.h
+
+**Namespace:** współbieżności
+
+##  <a name="ctor"></a> context_unblock_unbalanced —
+
+Konstruuje `context_unblock_unbalanced` obiektu.
+
+```
 explicit _CRTIMP context_unblock_unbalanced(_In_z_ const char* _Message) throw();
 
- 
 context_unblock_unbalanced() throw();
-```  
-  
-### <a name="parameters"></a>Parametry  
+```
+
+### <a name="parameters"></a>Parametry
+
 *_Message*<br/>
-Opisowy komunikat dotyczący błędu.  
-  
-## <a name="see-also"></a>Zobacz też  
- [Przestrzeń nazw współbieżności](concurrency-namespace.md)
+Opisowy komunikat dotyczący błędu.
+
+## <a name="see-also"></a>Zobacz też
+
+[Przestrzeń nazw współbieżności](concurrency-namespace.md)

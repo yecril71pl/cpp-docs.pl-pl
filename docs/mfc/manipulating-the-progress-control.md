@@ -18,45 +18,47 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 415061306c5e743b9ed95ee5c7105133d2e4d340
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 9fe784dfd63ec5c27a3695df3e6bc42ae0de2f7f
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33347406"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46416776"
 ---
 # <a name="manipulating-the-progress-control"></a>Operowanie formantem postępu
-Istnieją trzy sposoby zmiany bieżącej pozycji formantu postępu ([CProgressCtrl](../mfc/reference/cprogressctrl-class.md)).  
-  
--   Pozycja można zmieniać za ilość predefiniowany przyrostu.  
-  
--   Pozycja może zostać zmienione przez dowolnej ilości.  
-  
--   Pozycja można zmienić na określoną wartość.  
-  
-### <a name="to-change-the-position-by-a-preset-amount"></a>Aby zmienić pozycję przez ilość predefiniowany  
-  
-1.  Użyj [SetStep](../mfc/reference/cprogressctrl-class.md#setstep) funkcji członkowskiej, aby ustawić wartość przyrostu. Domyślnie ta wartość wynosi 10. Ta wartość jest zwykle ustawiana wśród początkowego ustawienia dla formantu. Wartość kroku może być ujemna.  
-  
-2.  Użyj [StepIt](../mfc/reference/cprogressctrl-class.md#stepit) funkcji członkowskiej, aby zwiększyć położenie. To powoduje, że formant do narysowania.  
-  
+
+Istnieją trzy sposoby, aby zmienić bieżącą pozycję formantu postępu ([z CProgressCtrl](../mfc/reference/cprogressctrl-class.md)).
+
+- Pozycja można zmienić wielkość przyrostu wstępnie zdefiniowane.
+
+- Pozycja może zostać zmienione przez dowolnej ilości.
+
+- Można zmienić położenie na określoną wartość.
+
+### <a name="to-change-the-position-by-a-preset-amount"></a>Aby zmienić położenie według ilości wstępnie zdefiniowane
+
+1. Użyj [SetStep](../mfc/reference/cprogressctrl-class.md#setstep) funkcja elementu członkowskiego, aby ustawić wartość przyrostu. Domyślnie ta wartość wynosi 10. Ta wartość jest zazwyczaj ustawiana jako jedno z ustawień początkowych dla formantu. Wartość kroku może być ujemna.
+
+1. Użyj [StepIt](../mfc/reference/cprogressctrl-class.md#stepit) funkcja elementu członkowskiego, aby zwiększyć pozycji. To powoduje, że formant do narysowania.
+
     > [!NOTE]
-    >  `StepIt` spowoduje, że położenie jest zawijane. Na przykład, dla danego zakresu 1 -100, krok 20 i pozycji 90, `StepIt` ustawi pozycji 10.  
-  
-### <a name="to-change-the-position-by-an-arbitrary-amount"></a>Aby zmienić pozycję przez dowolną kwotę  
-  
-1.  Użyj [OffsetPos](../mfc/reference/cprogressctrl-class.md#offsetpos) funkcji członkowskiej, aby zmienić pozycję. `OffsetPos` akceptuje wartości ujemnych.  
-  
+    >  `StepIt` spowoduje, że położenie jest zawijane. Na przykład, biorąc pod uwagę zakresu 1 -100, krok 20 i położenie 90, `StepIt` ustawi pozycji do 10.
+
+### <a name="to-change-the-position-by-an-arbitrary-amount"></a>Aby zmienić położenie według dowolnej ilości
+
+1. Użyj [OffsetPos](../mfc/reference/cprogressctrl-class.md#offsetpos) funkcja elementu członkowskiego, aby zmienić położenie. `OffsetPos` będzie akceptować wartości ujemnych.
+
     > [!NOTE]
-    >  `OffsetPos`, w odróżnieniu od `StepIt`, nie będzie zawijany położenie. Nowa pozycja jest dostosowywana do pozostają w zakresie.  
-  
-### <a name="to-change-the-position-to-a-specific-value"></a>Aby zmienić pozycję na określoną wartość  
-  
-1.  Użyj [SetPos](../mfc/reference/cprogressctrl-class.md#setpos) funkcji członkowskiej, aby umieścić na określoną wartość. Jeśli to konieczne, Nowa pozycja dostosowuje się w zakresie.  
-  
- Zazwyczaj formantu postępu jest używany wyłącznie dla danych wyjściowych. Aby uzyskać bieżącą pozycję bez określenia nowej wartości, należy użyć [GetPos](../mfc/reference/cprogressctrl-class.md#getpos).  
-  
-## <a name="see-also"></a>Zobacz też  
- [Korzystanie z CProgressCtrl](../mfc/using-cprogressctrl.md)   
- [Kontrolki](../mfc/controls-mfc.md)
+    >  `OffsetPos`, w odróżnieniu od `StepIt`, nie będzie zawijany w pozycji. Nowa pozycja jest dostosowywany pozostaje w zakresie.
+
+### <a name="to-change-the-position-to-a-specific-value"></a>Aby zmienić położenie na określoną wartość
+
+1. Użyj [SetPos](../mfc/reference/cprogressctrl-class.md#setpos) funkcję elementu członkowskiego, aby ustawić położenie na określoną wartość. Jeśli to konieczne, nowe miejsce zostanie dopasowana do należeć do zakresu.
+
+Zazwyczaj kontrolki postępu służy wyłącznie do danych wyjściowych. Aby uzyskać bieżącą pozycję bez określenia nowej wartości, użyj [GetPos](../mfc/reference/cprogressctrl-class.md#getpos).
+
+## <a name="see-also"></a>Zobacz też
+
+[Korzystanie z CProgressCtrl](../mfc/using-cprogressctrl.md)<br/>
+[Kontrolki](../mfc/controls-mfc.md)
 

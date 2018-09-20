@@ -17,12 +17,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f3838fc2888567fa700eebd127bc7990175bdbc8
-ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
+ms.openlocfilehash: bacba9ea15598e4c722682a081b64b80db34e00b
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43693591"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46430569"
 ---
 # <a name="tn014-custom-controls"></a>TN014: formanty niestandardowe
 
@@ -144,5 +144,5 @@ Zobacz [CTRLTEST](../visual-cpp-samples.md) przykład kilka przykładów zastoso
 
 ## <a name="see-also"></a>Zobacz też
 
-[Uwagi techniczne według numerów](../mfc/technical-notes-by-number.md)  
-[Uwagi techniczne według kategorii](../mfc/technical-notes-by-category.md)  
+[Uwagi techniczne według numerów](../mfc/technical-notes-by-number.md)<br/>
+[Uwagi techniczne według kategorii](../mfc/technical-notes-by-category.md)

@@ -19,22 +19,24 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 229b4a5ffb32f4a167dcc8393a269bbb2e35b500
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 83c1208d3001739ca78186972c629ea8a094c8d8
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33344883"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46430894"
 ---
 # <a name="dialog-data-validation"></a>Walidacja danych okna dialogowego
-Można określić weryfikacji oprócz wymiany danych przez wywołanie funkcji DDV, jak pokazano w przykładzie w [wymiana danych okna dialogowego](../mfc/dialog-data-exchange.md). `DDV_MaxChars` Wywołania w tym przykładzie weryfikuje ciąg wprowadzony w formancie pole tekstowe nie jest dłuższa niż 20 znaków. Funkcja DDV zwykle alerty użytkownikowi okno komunikatu, jeśli sprawdzanie poprawności nie powiedzie się i umieszcza fokus na ataku kontroli, użytkownik może ponownie wprowadzić dane. Funkcja DDV określonej kontrolki musi zostać wywołany natychmiast po funkcji DDX dla tej samej kontrolki.  
-  
- Można również definiować własne, niestandardowe procedury DDX i DDV. Aby uzyskać więcej informacji na ten temat oraz innych aspektów DDX i DDV, zobacz [MFC techniczne Uwaga 26](../mfc/tn026-ddx-and-ddv-routines.md).  
-  
- [Dodaj kreatora zmiennej elementu członkowskiego](../ide/add-member-variable-wizard.md) spowoduje zapisanie wszystkich DDX i DDV odwołuje się mapowanie danych dla Ciebie.  
-  
-## <a name="see-also"></a>Zobacz też  
- [Dane okna dialogowego wymiana i Walidacja](../mfc/dialog-data-exchange-and-validation.md)   
- [Cykl życiowy okna dialogowego](../mfc/life-cycle-of-a-dialog-box.md)   
- [Wymiana danych w oknie dialogowym](../mfc/dialog-data-exchange.md)
+
+Możesz określić sprawdzania poprawności, oprócz wymiany danych przez wywołanie funkcji DDV, jak pokazano w przykładzie w [wymiana danych okna dialogowego](../mfc/dialog-data-exchange.md). `DDV_MaxChars` Wywołania w przykładzie weryfikuje, że wprowadzony w formancie pola tekstowego ciąg nie jest dłuższa niż 20 znaków. Funkcja DDV zazwyczaj alertów użytkownikowi okno komunikatu, gdy sprawdzanie poprawności nie powiedzie się i umieszcza fokus sterowanie powodujący problemy, dzięki czemu użytkownik może ponownie dane. Funkcja DDV określonej kontrolki należy wywołać natychmiast po funkcji DDX dla tej samej kontrolki.
+
+Można również definiować własne niestandardowe procedury DDX i DDV. Aby uzyskać więcej informacji na ten temat i inne aspekty DDX i DDV, zobacz [MFC techniczne Uwaga 26](../mfc/tn026-ddx-and-ddv-routines.md).
+
+[Dodaj kreatora zmiennej elementu członkowskiego](../ide/add-member-variable-wizard.md) będzie zapisywać wszystkie DDX i DDV wywołań na mapie danych dla Ciebie.
+
+## <a name="see-also"></a>Zobacz też
+
+[Wymiana i walidacja danych w oknie dialogowym](../mfc/dialog-data-exchange-and-validation.md)<br/>
+[Cykl życiowy okna dialogowego](../mfc/life-cycle-of-a-dialog-box.md)<br/>
+[Wymiana danych w oknie dialogowym](../mfc/dialog-data-exchange.md)
 

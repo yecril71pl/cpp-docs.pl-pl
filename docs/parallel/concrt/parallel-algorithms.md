@@ -14,342 +14,343 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 365acd15c61b52631fc75018ab4c3a017d3eed8f
-ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
+ms.openlocfilehash: 23a4efb1412260ad71a610f53a7d1745157b3c53
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33694888"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46435002"
 ---
 # <a name="parallel-algorithms"></a>Algorytmy równoległe
-Biblioteka równoległych wzorców (PLL) zapewnia algorytmów jednocześnie wykonywania pracy na kolekcji danych. Algorytmy te przypominają te udostępniane przez standardowa biblioteka C++.  
-  
 
- Algorytmy równoległe składają się z istniejące funkcje współbieżność środowiska wykonawczego. Na przykład [concurrency::parallel_for](reference/concurrency-namespace-functions.md#parallel_for) algorytm używa [concurrency::structured_task_group](../../parallel/concrt/reference/structured-task-group-class.md) obiektu w celu wykonania iteracji pętli równoległej. `parallel_for` Partycje algorytm pracy w optymalny sposób podana liczba dostępnych zasobów obliczeniowych.  
+Biblioteka równoległych wzorców (PPL) zawiera algorytmy, które jednocześnie wykonują prace na zbiory danych. Te algorytmy przypominają te oferowane przez standardowej biblioteki języka C++.
 
-  
-##  <a name="top"></a> Sekcje  
-  
-- [Parallel_for algorytmu](#parallel_for)  
-  
-- [Parallel_for_each — algorytm](#parallel_for_each)  
-  
-- [Parallel_invoke — algorytm](#parallel_invoke)  
-  
-- [Parallel_transform — i parallel_reduce — algorytmów](#parallel_transform_reduce)  
-  
-    - [Parallel_transform — algorytm](#parallel_transform)  
-  
-    - [Parallel_reduce — algorytm](#parallel_reduce)  
-  
-    - [Przykład: Wykonywanie mapowania i zmniejszyć równolegle](#map_reduce_example)  
-  
-- [Podziału pracy](#partitions)  
-  
-- [Sortowania równoległego](#parallel_sorting)  
-  
-    - [Wybieranie algorytmu sortowania](#choose_sort)  
-  
-##  <a name="parallel_for"></a> Parallel_for algorytmu  
+Algorytmy równoległe składają się z istniejącą funkcje we współbieżnym środowisku wykonawczym. Na przykład [concurrency::parallel_for](reference/concurrency-namespace-functions.md#parallel_for) algorytm używa [concurrency::structured_task_group](../../parallel/concrt/reference/structured-task-group-class.md) obiektu w celu wykonania iteracji pętli równoległej. `parallel_for` Partycje algorytm pracować w optymalny sposób podana liczba dostępnych zasobów obliczeniowych.
 
- [Concurrency::parallel_for](reference/concurrency-namespace-functions.md#parallel_for) algorytm wielokrotnie wykonuje to samo zadanie równocześnie. Każdy z tych zadań jest sparametryzowanych przez wartość iteracji. Ten algorytm jest przydatne w przypadku treści pętli, która nie współużytkowanie zasobów między iteracji pętli tego.  
-  
- `parallel_for` Algorytmu partycje zadania w sposób optymalny do wykonywania równoległego. Używa algorytmu kradzież pracy się i zakres kradzież w celu zrównoważenia tych partycji w przypadku obciążeń równowagi. Po jednym iteracji pętli blokuje wspólnie, środowisko uruchomieniowe ponownie dystrybuuje zakres iteracji, który jest przypisany do bieżącego wątku do innych wątków lub procesorów. Podobnie po ukończeniu zakres iteracji wątku środowiska uruchomieniowego ponownie dystrybuuje pracy z innych wątków tego wątku. `parallel_for` Obsługuje również algorytmu *zagnieżdżone równoległości*. Gdy równoległej pętli zawiera inny równoległej pętli, środowisko uruchomieniowe koordynuje przetwarzania zasobów między treści pętli w wydajny sposób do wykonywania równoległego.  
-  
- `parallel_for` Algorytm ma kilka wersji przeciążona. Pierwszą wersję przyjmuje wartość początkową, wartość końcowa i funkcję pracy (wyrażenia lambda, funkcja obiekt lub wskaźnik funkcji). Druga wersja przyjmuje wartość początkową, wartość końcowa wartość za pomocą którego kroku, a funkcja pracy. Pierwszą wersję tej funkcji używa 1 jako wartość kroku. Pozostałych wersji zająć partycjonera obiektów, które można określić sposób `parallel_for` powinien partycji zakresów między wątkami. Partycjonery omówiono bardziej szczegółowo w sekcji [pracy partycjonowania](#partitions) w tym dokumencie.  
-  
- Można przekonwertować wiele `for` pętli do użycia `parallel_for`. Jednak `parallel_for` algorytm różni się od `for` instrukcji w następujący sposób:  
-  
--   `parallel_for` Algorytm `parallel_for` nie wykonuj zadania w ustalonej kolejności.  
-  
--   `parallel_for` Algorytm nie obsługuje warunków zakończenia dowolnego. `parallel_for` Zatrzymuje algorytmu, gdy bieżąca wartość zmiennej iteracyjnej jest jeden mniej niż `last`.  
-  
--   `_Index_type` Parametr typu musi być typem całkowitym. Ten typ całkowity może podpisane lub bez znaku.  
-  
--   Iteracji pętli musi być do przodu. `parallel_for` Algorytm zgłasza wyjątek typu [std::invalid_argument](../../standard-library/invalid-argument-class.md) Jeśli `_Step` parametru jest mniejszy niż 1.  
-  
--   Mechanizm obsługi wyjątków `parallel_for` algorytm różni się od `for` pętli. Jeśli wiele wyjątków jednocześnie występować w treści pętli równoległej, środowisko uruchomieniowe propaguje tylko jeden z wyjątków wątku, który wywołuje `parallel_for`. Ponadto po jednym iteracji pętli zgłasza wyjątek, środowisko uruchomieniowe nie natychmiast zatrzymać ogólną pętli. Zamiast tego pętli znajduje się w stanie anulowania i środowiska uruchomieniowego odrzuca wszystkie zadania, które nie zostały jeszcze uruchomione. Aby uzyskać więcej informacji na temat algorytmy Obsługa wyjątków i równoległych zobacz [obsługi wyjątków](../../parallel/concrt/exception-handling-in-the-concurrency-runtime.md).  
-  
- Mimo że `parallel_for` algorytm nie obsługuje warunków zakończenia dowolnego, użyj anulowania, aby zatrzymać wszystkie zadania. Aby uzyskać więcej informacji na temat anulowania, zobacz [anulowanie w PPL](cancellation-in-the-ppl.md).  
-  
+##  <a name="top"></a> Sekcje
+
+- [Funkcja parallel_for Algorithm](#parallel_for)
+
+- [Funkcja parallel_for_each Algorithm](#parallel_for_each)
+
+- [Funkcja parallel_invoke Algorithm](#parallel_invoke)
+
+- [Funkcja parallel_transform and parallel_reduce Algorithms](#parallel_transform_reduce)
+
+    - [Funkcja parallel_transform Algorithm](#parallel_transform)
+
+    - [Funkcja parallel_reduce Algorithm](#parallel_reduce)
+
+    - [Przykład: Wykonywanie mapowania i zmniejszenie równoległości](#map_reduce_example)
+
+- [Partycjonowanie pracy](#partitions)
+
+- [Sortowanie równoległe](#parallel_sorting)
+
+    - [Wybieranie algorytmu sortowania](#choose_sort)
+
+##  <a name="parallel_for"></a> Funkcja parallel_for Algorithm
+
+[Concurrency::parallel_for](reference/concurrency-namespace-functions.md#parallel_for) algorytm wielokrotnie wykonuje to samo zadanie równocześnie. Każda z tych zadań jest sparametryzowane przez wartość iteracji. Ten algorytm jest przydatne, gdy ciało pętli, która nie współużytkowanie zasobów między iteracjami pętli tego.
+
+`parallel_for` Algorytm partycje zadania w sposób optymalny dla przetwarzania równoległego. Używa algorytmu kradzież pracy się i kradzież równoważyć partycje, w przypadku obciążeń niezrównoważone zakresu. Gdy jednej iteracji pętli blokuje wspólne, środowisko uruchomieniowe dystrybuuje zakres iteracji, który jest przypisany do bieżącego wątku do innych wątków lub procesorów. Podobnie gdy wątek ukończy szeregu iteracji, środowisko uruchomieniowe dystrybuuje pracy z innych wątków do tego wątku. `parallel_for` Obsługuje również algorytm *zagnieżdżone równoległości*. Po jednej pętli równoległej zawiera innej pętli równoległej, środowisko uruchomieniowe koordynuje przetwarzania zasobów między jednostkami pętli w sposób efektywny dla przetwarzania równoległego.
+
+`parallel_for` Algorytm ma kilka przeciążone wersje. Pierwsza wersja przyjmuje wartość początkową, wartość końcową i funkcji pracy (wyrażenia lambda, obiektów funkcyjnych lub wskaźnik funkcji). Druga wersja przyjmuje wartość początkową, wartość końcową, wartości za pomocą którego kroku, a funkcja pracy. Pierwsza wersja tej funkcji używa 1 jako wartość kroku. Pozostałe wersje zająć partycjonera obiektów, które umożliwiają określenie sposobu `parallel_for` powinien partycji zakresów między wątkami. Partycjonery omówiona bardziej szczegółowo w sekcji [partycjonowanie pracy](#partitions) w tym dokumencie.
+
+Można przekonwertować wiele `for` pętli, aby użyć `parallel_for`. Jednak `parallel_for` algorytmu, który różni się od `for` instrukcji w następujący sposób:
+
+- `parallel_for` Algorytm `parallel_for` nie wykonuje zadania w ustalonej kolejności.
+
+- `parallel_for` Algorytm nie obsługuje warunków dowolnego rozwiązania. `parallel_for` Algorytm zatrzymuje, gdy bieżąca wartość zmiennej iteracji jest jeden mniejsza niż `last`.
+
+- `_Index_type` Parametr typu musi być typu całkowitego. Ten typ całkowity może podpisane lub niepodpisane.
+
+- Iteracji pętli musi być do przodu. `parallel_for` Algorytm zgłasza wyjątek typu [std::invalid_argument](../../standard-library/invalid-argument-class.md) Jeśli `_Step` parametru jest mniejszy niż 1.
+
+- Mechanizm obsługi wyjątków `parallel_for` algorytmu, który różni się od `for` pętli. Jeśli wiele wyjątków jednocześnie występować w treści pętli równoległej, środowisko uruchomieniowe propaguje tylko jeden z wyjątków do wątku, który wywołał `parallel_for`. Ponadto po jednej iteracji pętli zgłasza wyjątek, środowisko wykonawcze nie natychmiast zatrzymuje ogólną pętli. Zamiast tego należy pętli znajduje się w stanie anulowania i środowisko uruchomieniowe odrzuca wszelkie zadania, które nie zostały rozpoczęte. Aby uzyskać więcej informacji na temat obsługi wyjątków i równoległych algorytmów, zobacz [wyjątków](../../parallel/concrt/exception-handling-in-the-concurrency-runtime.md).
+
+Mimo że `parallel_for` algorytm nie obsługuje warunków dowolnego rozwiązania, możesz użyć anulowania, aby zatrzymać wszystkie zadania. Aby uzyskać więcej informacji dotyczących anulowania, zobacz [anulowanie w PPL](cancellation-in-the-ppl.md).
+
 > [!NOTE]
->  Koszt planowania, że wyniki z równoważenia obciążenia i obsługę funkcji, takich jak anulowania nie może rozwiązać zalet wykonywania pętli równolegle, szczególnie gdy pętli jest stosunkowo mały. Ten narzut można zminimalizować przy użyciu partycjonera w Twojej równoległej pętli. Aby uzyskać więcej informacji, zobacz [pracy partycjonowania](#partitions) dalszej części tego dokumentu.  
-  
-### <a name="example"></a>Przykład  
- W poniższym przykładzie przedstawiono podstawowej struktury `parallel_for` algorytmu. W tym przykładzie drukowane konsoli każdej wartości z zakresu [1, 5] równolegle.  
-  
- [!code-cpp[concrt-parallel-for-structure#1](../../parallel/concrt/codesnippet/cpp/parallel-algorithms_1.cpp)]  
-  
- W tym przykładzie tworzy następujące przykładowe dane wyjściowe:  
-  
-```Output  
-1 2 4 3 5  
-```  
-  
- Ponieważ `parallel_for` algorytm działania w przypadku każdego elementu równolegle, różnią się w kolejności, w której wartości są podane w konsoli.  
-  
- Pełny przykład, który używa `parallel_for` algorytmu, zobacz [porady: pisanie pętli parallel_for](../../parallel/concrt/how-to-write-a-parallel-for-loop.md).  
-  
- [[Górnej](#top)]  
-  
-##  <a name="parallel_for_each"></a> Parallel_for_each — algorytm  
+>  Planowanie kosztów, czy wyniki z równoważenia obciążenia i pomoc techniczna dla funkcji, takich jak anulowanie nie może być przezwyciężyć zalety wykonywanie równoległe pętli, szczególnie gdy ciało pętli jest stosunkowo mały. Za pomocą partycjonera w swojej pętli równoległej, można zminimalizować to obciążenie. Aby uzyskać więcej informacji, zobacz [partycjonowanie pracy](#partitions) w dalszej części tego dokumentu.
 
- [Concurrency::parallel_for_each](reference/concurrency-namespace-functions.md#parallel_for_each) algorytm wykonuje zadania w kontenerze iteracyjną, np. udostępnianych przez bibliotekę Standard C++ równolegle. Używa tej samej logiki partycjonowania który `parallel_for` algorytm.  
-  
- `parallel_for_each` Algorytm podobny standardowa biblioteka C++ [std::for_each](../../standard-library/algorithm-functions.md#for_each) algorytmu, z wyjątkiem `parallel_for_each` algorytm wykonuje zadań jednocześnie. Inne algorytmy równoległe, takich jak `parallel_for_each` nie wykonuj zadania w określonej kolejności.  
-  
- Mimo że `parallel_for_each` algorytm działa zarówno do przodu Iteratory i dostępie swobodnym Iteratory, lepiej wykonuje się o dostępie swobodnym Iteratory.  
-  
-### <a name="example"></a>Przykład  
- W poniższym przykładzie przedstawiono podstawowej struktury `parallel_for_each` algorytmu. W tym przykładzie drukowane konsoli każdej wartości w [std::array](../../standard-library/array-class-stl.md) obiektu równolegle.  
-  
- [!code-cpp[concrt-parallel-for-each-structure#1](../../parallel/concrt/codesnippet/cpp/parallel-algorithms_2.cpp)]  
-  
- W tym przykładzie tworzy następujące przykładowe dane wyjściowe:  
-  
-```Output  
-4 5 1 2 3  
-```  
-  
- Ponieważ `parallel_for_each` algorytm działania w przypadku każdego elementu równolegle, różnią się w kolejności, w której wartości są podane w konsoli.  
-  
- Pełny przykład, który używa `parallel_for_each` algorytmu, zobacz [porady: pisanie pętli parallel_for_each](../../parallel/concrt/how-to-write-a-parallel-for-each-loop.md).  
-  
- [[Górnej](#top)]  
-  
-##  <a name="parallel_invoke"></a> Parallel_invoke — algorytm  
+### <a name="example"></a>Przykład
 
- [Concurrency::parallel_invoke](reference/concurrency-namespace-functions.md#parallel_invoke) algorytm wykonuje zestaw zadań równolegle. Zwraca przed zakończeniem każdego zadania. Ten algorytm jest przydatne w przypadku kilku niezależnych zadania, które ma być wykonane w tym samym czasie.  
-  
- `parallel_invoke` Algorytmu przyjmuje jako parametry szereg funkcji pracy (funkcje lambda, obiektów funkcji lub wskaźników funkcji). `parallel_invoke` Algorytm jest przeciążony podjęcie między dwoma i dziesięć parametrami. Każda funkcja, który jest przekazywany do `parallel_invoke` musi mieć parametrów.  
-  
- Inne algorytmy równoległe, takich jak `parallel_invoke` nie wykonuj zadania w określonej kolejności. Temat [równoległość zadań](../../parallel/concrt/task-parallelism-concurrency-runtime.md) wyjaśniono sposób `parallel_invoke` algorytm odnosi się do zadań i grupy zadań.  
-  
-### <a name="example"></a>Przykład  
- W poniższym przykładzie przedstawiono podstawowej struktury `parallel_invoke` algorytmu. W tym przykładzie jednocześnie wywołuje `twice` funkcja na trzech zmiennych lokalnych i wynik do konsoli.  
-  
- [!code-cpp[concrt-parallel-invoke-structure#1](../../parallel/concrt/codesnippet/cpp/parallel-algorithms_3.cpp)]  
-  
- Ten przykład generuje następujące wyniki:  
-  
-```Output  
-108 11.2 HelloHello  
-```  
-  
- Pełne przykłady, które używają `parallel_invoke` algorytmu, zobacz [porady: używanie parallel_invoke do napisania procedury sortowania równoległego](../../parallel/concrt/how-to-use-parallel-invoke-to-write-a-parallel-sort-routine.md) i [porady: Korzystanie z parallel_invoke do przeprowadzania operacji równoległych](../../parallel/concrt/how-to-use-parallel-invoke-to-execute-parallel-operations.md).  
-  
- [[Górnej](#top)]  
-  
-##  <a name="parallel_transform_reduce"></a> Parallel_transform — i parallel_reduce — algorytmów  
+Poniższy kod przedstawia podstawowe struktury `parallel_for` algorytmu. W tym przykładzie drukuje do konsoli każdej wartości z zakresu [1, 5] równolegle.
 
- [Concurrency::parallel_transform](reference/concurrency-namespace-functions.md#parallel_transform) i [concurrency::parallel_reduce](reference/concurrency-namespace-functions.md#parallel_reduce) algorytmy są wersje równoległych algorytmów standardowa biblioteka C++ [std::transform](../../standard-library/algorithm-functions.md#transform)i [std::accumulate](../../standard-library/numeric-functions.md#accumulate)odpowiednio. Współbieżność środowiska wykonawczego wersji przypominają wersji standardowa biblioteka C++ z tą różnicą, że kolejność operacji nie jest określona, ponieważ są one wykonywane równolegle. Użyj tych algorytmów podczas pracy z zestawem jest wystarczająco duży, aby uzyskać korzyści w zakresie wydajności i skalowalności z przetwarzane równolegle.  
-  
+[!code-cpp[concrt-parallel-for-structure#1](../../parallel/concrt/codesnippet/cpp/parallel-algorithms_1.cpp)]
+
+Ten przykład generuje następujące przykładowe dane wyjściowe:
+
+```Output
+1 2 4 3 5
+```
+
+Ponieważ `parallel_for` algorytm działa dla każdego elementu w sposób równoległy, różnią się w kolejności, w których wartości są drukowane do konsoli.
+
+Aby uzyskać kompletny przykład, który używa `parallel_for` algorytmu, zobacz [instrukcje: pisanie pętli parallel_for](../../parallel/concrt/how-to-write-a-parallel-for-loop.md).
+
+[[Górnej](#top)]
+
+##  <a name="parallel_for_each"></a> Funkcja parallel_for_each Algorithm
+
+[Concurrency::parallel_for_each](reference/concurrency-namespace-functions.md#parallel_for_each) algorytm wykonuje zadania w pojemniku iteracyjne, takich jak te oferowane przez standardowej biblioteki C++, równolegle. Używa ona tę samą logikę partycjonowania, `parallel_for` używa algorytmu.
+
+`parallel_for_each` Algorytm przypomina standardowej biblioteki C++ [std::for_each](../../standard-library/algorithm-functions.md#for_each) algorytmu, chyba że `parallel_for_each` algorytm wykonuje zadania jednocześnie. Inne algorytmy równoległe, takie jak `parallel_for_each` nie wykonuje zadania w określonej kolejności.
+
+Mimo że `parallel_for_each` algorytm działa zarówno na tworzyć Iteratory do przodu i iteratorami dostępu swobodnego, działa lepiej z iteratorami dostępu swobodnego.
+
+### <a name="example"></a>Przykład
+
+Poniższy kod przedstawia podstawowe struktury `parallel_for_each` algorytmu. W tym przykładzie drukuje do konsoli każdej wartości w [std::array](../../standard-library/array-class-stl.md) obiektu równolegle.
+
+[!code-cpp[concrt-parallel-for-each-structure#1](../../parallel/concrt/codesnippet/cpp/parallel-algorithms_2.cpp)]
+
+Ten przykład generuje następujące przykładowe dane wyjściowe:
+
+```Output
+4 5 1 2 3
+```
+
+Ponieważ `parallel_for_each` algorytm działa dla każdego elementu w sposób równoległy, różnią się w kolejności, w których wartości są drukowane do konsoli.
+
+Aby uzyskać kompletny przykład, który używa `parallel_for_each` algorytmu, zobacz [instrukcje: pisanie pętli parallel_for_each](../../parallel/concrt/how-to-write-a-parallel-for-each-loop.md).
+
+[[Górnej](#top)]
+
+##  <a name="parallel_invoke"></a> Funkcja parallel_invoke Algorithm
+
+[Concurrency::parallel_invoke](reference/concurrency-namespace-functions.md#parallel_invoke) algorytm zestaw zadań jest wykonywana równolegle. Nie zwraca zakończenie każdego zadania. Ten algorytm jest przydatne, gdy masz kilka niezależnych zadań, które mają zostać zrealizowane w tym samym czasie.
+
+`parallel_invoke` Algorytm przyjmuje jako parametry szereg funkcji pracy (funkcji lambda, obiektów funkcyjnych lub wskaźniki funkcji). `parallel_invoke` Algorytm jest przeciążona, aby zająć od 2 do 10 parametrów. Każdej funkcji, który jest przekazywany do `parallel_invoke` musi podjąć parametrów.
+
+Inne algorytmy równoległe, takie jak `parallel_invoke` nie wykonuje zadania w określonej kolejności. Temat [równoległość zadań](../../parallel/concrt/task-parallelism-concurrency-runtime.md) wyjaśnia sposób, w jaki `parallel_invoke` algorytmu, który odnosi się do grupy zadań i zadania.
+
+### <a name="example"></a>Przykład
+
+Poniższy kod przedstawia podstawowe struktury `parallel_invoke` algorytmu. W tym przykładzie jednocześnie wywołuje `twice` funkcji w trzech zmiennych lokalnych i drukuje wynik do konsoli.
+
+[!code-cpp[concrt-parallel-invoke-structure#1](../../parallel/concrt/codesnippet/cpp/parallel-algorithms_3.cpp)]
+
+Ten przykład generuje następujące wyniki:
+
+```Output
+108 11.2 HelloHello
+```
+
+Kompletne przykłady, które używają `parallel_invoke` algorytmu, zobacz [porady: używanie parallel_invoke do napisania procedury sortowania równoległego](../../parallel/concrt/how-to-use-parallel-invoke-to-write-a-parallel-sort-routine.md) i [porady: używanie parallel_invoke do operacji równoległych](../../parallel/concrt/how-to-use-parallel-invoke-to-execute-parallel-operations.md).
+
+[[Górnej](#top)]
+
+##  <a name="parallel_transform_reduce"></a> Funkcja parallel_transform and parallel_reduce Algorithms
+
+[Concurrency::parallel_transform](reference/concurrency-namespace-functions.md#parallel_transform) i [concurrency::parallel_reduce](reference/concurrency-namespace-functions.md#parallel_reduce) algorytmy są wersje równoległych algorytmów standardowej biblioteki języka C++ [std::transform](../../standard-library/algorithm-functions.md#transform)i [std::accumulate](../../standard-library/numeric-functions.md#accumulate), odpowiednio. Wersje środowiska uruchomieniowego współbieżności zachowują się jak w wersjach standardowej biblioteki języka C++, z tą różnicą, że kolejność operacji nie jest określona, ponieważ są wykonywane równolegle. Podczas pracy z zestawem, która jest wystarczająco duża, aby uzyskać korzyści wynikające z wydajności i skalowalności być przetwarzana równolegle, należy użyć tych algorytmów.
+
 > [!IMPORTANT]
->  `parallel_transform` i `parallel_reduce` algorytmów obsługuje tylko dostęp losowy dwukierunkowe i do przodu Iteratory, ponieważ te Iteratory tworzy adresów pamięci stabilna. Ponadto te Iteratory musi mieć inną niż`const` l wartości.  
-  
-###  <a name="parallel_transform"></a> Parallel_transform — algorytm  
- Można użyć `parallel transform` algorytmu w celu wykonania wielu operacji paralelizacja danych. Możesz na przykład:  
-  
--   Dopasuj jasność obrazu i wykonywać innych operacji przetwarzania obrazów.  
-  
--   Suma lub podjąć skalarnego między dwoma wektorami oraz wykonywać inne obliczenia liczbowych na wektory.  
-  
--   Wykonywanie śledzenia 3-ray, gdzie każdej iteracji odnosi się do jednego pikseli, który musi być renderowany.  
-  
- W poniższym przykładzie przedstawiono podstawową strukturę, które są używane do wywoływania `parallel_transform` algorytmu. W tym przykładzie Negacja każdy element std::[wektor](../../standard-library/vector-class.md) obiektu na dwa sposoby. W pierwszym sposobie używana wyrażenia lambda. W drugim sposobie używana [std::negate](../../standard-library/negate-struct.md), która jest pochodną [std::unary_function](../../standard-library/unary-function-struct.md).  
-  
- [!code-cpp[concrt-basic-parallel-transform#1](../../parallel/concrt/codesnippet/cpp/parallel-algorithms_4.cpp)]  
-  
+>  `parallel_transform` i `parallel_reduce` algorytmów obsługuje tylko dostępu swobodnego dwukierunkowej i do przodu Iteratory, ponieważ te Iteratory wygenerować adresy stabilnej pamięci. Ponadto te Iteratory muszą przedstawić non -`const` l wartościami.
+
+###  <a name="parallel_transform"></a> Funkcja parallel_transform Algorithm
+
+Możesz użyć `parallel transform` algorytmu, aby wykonać wiele operacji przetwarzania równoległego danych. Możesz na przykład:
+
+- Dopasuj jasność obrazu i wykonywać inne operacje przetwarzania obrazów.
+
+- Suma lub ulokowania produktu kropka między dwoma wektorami i wykonywanie innych obliczeń numerycznych na wektorów.
+
+- Wykonaj śledzenie 3-ray, gdzie każda iteracja odnosi się do jednego piksela, który musi być renderowany.
+
+Poniższy kod przedstawia podstawowe strukturę, która jest używana do wywołania `parallel_transform` algorytmu. W tym przykładzie neguje każdy element std::[wektor](../../standard-library/vector-class.md) obiektu na dwa sposoby. Pierwszy sposób używa wyrażenia lambda. W drugim sposobie używana [std::negate](../../standard-library/negate-struct.md), która jest pochodną [std::unary_function](../../standard-library/unary-function-struct.md).
+
+[!code-cpp[concrt-basic-parallel-transform#1](../../parallel/concrt/codesnippet/cpp/parallel-algorithms_4.cpp)]
+
 > [!WARNING]
->  W tym przykładzie przedstawiono podstawowe wykorzystanie `parallel_transform`. Ponieważ funkcja pracy wykonuje znaczną część pracy, znaczny wzrost wydajności nie jest oczekiwany w tym przykładzie.  
-  
- `parallel_transform` Algorytm ma dwa przeciążenia. Pierwszy przeciążenia przyjmuje jeden zakres wejściowy i funkcja jednoargumentowy. Funkcja jednoargumentowy może być wyrażenie lambda, który pobiera jeden argument, obiekt funkcji lub typu pochodzącego od `unary_function`. Drugi przeciążenia przyjmuje dwa zakresy wejściowy i funkcja binarnej. Funkcja binarny może być wyrażenie lambda, która przyjmuje dwa argumenty, obiekt funkcji lub typu pochodzącego od [std::binary_function](../../standard-library/binary-function-struct.md). Poniższy przykład przedstawia tych różnic.  
-  
- [!code-cpp[concrt-parallel-transform-vectors#2](../../parallel/concrt/codesnippet/cpp/parallel-algorithms_5.cpp)]  
-  
+>  W tym przykładzie pokazano podstawowe zastosowanie `parallel_transform`. Ponieważ ta funkcja pracy wykonuje znaczną ilość pracy, w tym przykładzie nie przewiduje się znaczne zwiększenie wydajności.
+
+`parallel_transform` Algorytm ma dwa przeciążenia. Pierwsze przeciążenie przyjmuje jeden zakres danych wejściowych i funkcję jednoargumentową. Funkcję jednoargumentową może być wyrażenie lambda, która przyjmuje jeden argument, obiekt funkcji lub typ pochodzący z `unary_function`. Drugie przeciążenie przyjmuje dwa zakresy danych wejściowych i funkcja binarnego. Binarny funkcja może być wyrażenie lambda, która przyjmuje dwa argumenty, obiekt funkcji lub typ pochodzący z [std::binary_function](../../standard-library/binary-function-struct.md). Poniższy przykład ilustruje te różnice.
+
+[!code-cpp[concrt-parallel-transform-vectors#2](../../parallel/concrt/codesnippet/cpp/parallel-algorithms_5.cpp)]
+
 > [!IMPORTANT]
->  Iterator, wprowadzona w danych wyjściowych `parallel_transform` należy całkowicie nakładają się iteratora wejściowy lub nie nakładają się na wszystkich. Zachowanie tego algorytmu jest nieokreślony, jeżeli Iteratory wejściowymi i wyjściowymi częściowo pokrywają się.  
-  
-###  <a name="parallel_reduce"></a> Parallel_reduce — algorytm  
- `parallel_reduce` Algorytm jest przydatne w przypadku sekwencję operacji, które spełniają asocjacyjnej właściwości. (Ten algorytm nie wymagają przemienne właściwości). Poniżej podano niektóre czynności, które można wykonywać za pomocą `parallel_reduce`:  
-  
--   Należy pomnożyć sekwencji macierzy w celu utworzenia macierzy.  
-  
--   Należy pomnożyć wektora przez sekwencję macierzy do utworzenia wektora.  
-  
--   Oblicza długość sekwencję ciągów.  
-  
--   Łączenie listę elementów, takich jak ciągi, w jeden element.  
-  
- Podstawowe poniższy przykład przedstawia użycie `parallel_reduce` algorytm połączyć sekwencji ciągi w jeden ciąg. Jak wraz z przykładami dla `parallel_transform`, w tym przykładzie podstawowe nie powinny wzrost wydajności.  
-  
- [!code-cpp[concrt-basic-parallel-reduce#1](../../parallel/concrt/codesnippet/cpp/parallel-algorithms_6.cpp)]  
-  
- W wielu przypadkach można traktować `parallel_reduce` jako skrót do użytku `parallel_for_each` algorytm razem z [concurrency::combinable](../../parallel/concrt/reference/combinable-class.md) klasy.  
-  
-###  <a name="map_reduce_example"></a> Przykład: Wykonywanie mapowania i zmniejszyć równolegle  
+>  Iterator, który należy podać dane wyjściowe `parallel_transform` należy całkowicie nakładają się iterator danych wejściowych lub nie nakładają się na wszystkich. Zachowanie ten algorytm jest nieokreślony, jeśli częściowo zachodzą na Iteratory wejściowych i wyjściowych.
 
- A *mapy* operacja dotyczy funkcji każdej wartości w sekwencji. A *zmniejszyć* operacji łączy elementy sekwencji w jedną wartość. Standardowa biblioteka C++ można użyć [std::transform](../../standard-library/algorithm-functions.md#transform) i [std::accumulate](../../standard-library/numeric-functions.md#accumulate) funkcji wykonywanie mapowania i zmniejszanie operacji. Jednak wiele problemów, można użyć `parallel_transform` algorytmu do wykonania tej operacji mapy równolegle i `parallel_reduce` algorytm operacji Zmniejsz równolegle.  
+###  <a name="parallel_reduce"></a> Funkcja parallel_reduce Algorithm
 
-  
- Poniższy przykład porównuje czas potrzebny do obliczenia sumę liczb pierwszych szeregowe i równolegle. Faza mapy przekształca wartości prime z systemem innym niż 0 i sumy fazy Zmniejsz wartości.  
-  
- [!code-cpp[concrt-parallel-map-reduce-sum-of-primes#1](../../parallel/concrt/codesnippet/cpp/parallel-algorithms_7.cpp)]  
-  
- Na przykład innego wykonuje mapy i zmniejszyć operacji równolegle, zobacz [porady: wykonaj mapy i zmniejszyć operacji wykonywane równolegle](../../parallel/concrt/how-to-perform-map-and-reduce-operations-in-parallel.md).  
-  
- [[Górnej](#top)]  
-  
-##  <a name="partitions"></a> Podziału pracy  
- Aby parallelize operacji na źródle danych, jest kluczowy etap *partycji* źródła do sekcje, które mogą być jednocześnie udostępniane przez wiele wątków. Partycjonera Określa, jak algorytm równoległych powinien partycji zakresów między wątkami. Jak opisano wcześniej w tym dokumencie, PPL korzysta z domyślnego mechanizmu, który tworzy początkowej obciążeń i następnie używa algorytmu i zakres kradzież do równoważenie tych partycji, podczas obciążenia są niezrównoważone kradzież pracy partycjonowania. Na przykład po ukończeniu zakres iteracji jednego iteracji pętli środowiska uruchomieniowego ponownie dystrybuuje pracy z innych wątków tego wątku. Jednak w przypadku niektórych scenariuszy możesz określić inny mechanizm partycjonowania, który lepiej nadaje się do problemu.  
-  
- `parallel_for`, `parallel_for_each`, I `parallel_transform` algorytmy zawiera przeciążone wersji, które przyjmują dodatkowy parametr `_Partitioner`. Ten parametr określa typ partycjonera dzielącą pracy. Oto rodzaje partycjonery definiujących PPL:  
-  
- [CONCURRENCY::affinity_partitioner](../../parallel/concrt/reference/affinity-partitioner-class.md)  
- Dzieli działają w stałej liczby zakresów (zazwyczaj liczbę wątków roboczych, które są dostępne do pracy w pętli). Ten typ partycjonera podobny `static_partitioner`, ale zwiększa koligacji pamięci podręcznej w sposób mapowania zakresów wątków roboczych. Ten typ partycjonera może poprawić wydajność pętli jest wykonywane przez ten sam zestaw danych wielokrotnie (np. Pętla w pętli) i danych mieści się w pamięci podręcznej. Ten moduł partycjonowania nie pełni uczestniczy w anulowania. On również nie korzysta z semantyki blokowania współpracy i w związku z tym nie można używać z pętle równoległe mających zależności do przodu.  
-  
- [CONCURRENCY::auto_partitioner](../../parallel/concrt/reference/auto-partitioner-class.md)  
- Dzieli działają w początkowa liczba zakresów (zazwyczaj liczbę wątków roboczych, które są dostępne do pracy w pętli). Środowisko uruchomieniowe używa tego typu domyślnie podczas Nie wywołuj algorytm równoległych przeciążone przyjmuje `_Partitioner` parametru. Każdego zakresu można podzielić na zakresy podrzędne, a tym samym umożliwia równoważenie obciążenia występuje. Po ukończeniu zakresu pracy środowiska uruchomieniowego ponownie dystrybuuje zakresy podrzędne pracy z innych wątków do tego wątku. Ten moduł partycjonowania należy używać, jeśli obciążenie nie spełnia jednego z innych kategorii lub wymagają Pełna obsługa anulowania lub blokuje współpracy.  
-  
- [CONCURRENCY::simple_partitioner](../../parallel/concrt/reference/simple-partitioner-class.md)  
- Bez reszty pracy do zakresów w taki sposób, że każdy zakres ma co najmniej liczba iteracji, które są określone przez rozmiar fragmentu danego. Ten typ partycjonera uczestniczy w programie Równoważenie obciążenia; Jednak środowiska uruchomieniowego nie podział zakresy zakresy podrzędne. Dla każdego pracownika środowiska uruchomieniowego sprawdza anulowania i przeprowadza równoważenia obciążenia po `_Chunk_size` ukończenia iteracji.  
-  
- [CONCURRENCY::static_partitioner](../../parallel/concrt/reference/static-partitioner-class.md)  
- Dzieli działają w stałej liczby zakresów (zazwyczaj liczbę wątków roboczych, które są dostępne do pracy w pętli). Ten typ partycjonera może zwiększyć wydajność, ponieważ nie używa kradzież pracy i w związku z tym mają mniejszy narzut. Po każdej iteracji pętli równoległej wykonuje stałych i uniform ilość pracy i nie wymagają obsługi anulowania lub przekazywania blokuje współpracy, należy użyć tego typu partycjonera.  
-  
+`parallel_reduce` Algorytm jest przydatne w przypadku, gdy sekwencji operacji, które spełniają asocjacyjnych właściwości. (Ten algorytm nie wymagają przemiennego właściwości). Poniżej przedstawiono niektóre operacje, które można wykonywać za pomocą `parallel_reduce`:
+
+- Pomnóż sekwencje macierzy w celu utworzenia macierzy.
+
+- Za pomocą sekwencji macierzy w celu utworzenia wektora, należy pomnożyć wektora.
+
+- Obliczenia długości sekwencji ciągów.
+
+- Lista elementów, takich jak ciągi, należy połączyć w jeden element.
+
+Poniższy przykład podstawowy pokazuje, jak używać `parallel_reduce` algorytm połączyć sekwencją ciągów w jeden ciąg. Podobnie jak w przypadku przykładów dla `parallel_transform`, wzrost wydajności nie oczekuje się w tym podstawowym przykładzie.
+
+[!code-cpp[concrt-basic-parallel-reduce#1](../../parallel/concrt/codesnippet/cpp/parallel-algorithms_6.cpp)]
+
+W wielu przypadkach można traktować `parallel_reduce` jako skrót do użytku z `parallel_for_each` algorytm wraz z [concurrency::combinable](../../parallel/concrt/reference/combinable-class.md) klasy.
+
+###  <a name="map_reduce_example"></a> Przykład: Wykonywanie mapowania i zmniejszenie równoległości
+
+A *mapy* operacja dotyczy funkcji każdej wartości w sekwencji. A *zmniejszyć* operacji łączy elementy sekwencji w jedną wartość. Możesz użyć standardowej biblioteki C++ [std::transform](../../standard-library/algorithm-functions.md#transform) i [std::accumulate](../../standard-library/numeric-functions.md#accumulate) funkcji wykonywanie mapowania i zmniejszanie operacji. Jednak wiele problemów, można użyć `parallel_transform` algorytmu do wykonania tej operacji mapy równolegle i `parallel_reduce` algorytmu do operacji Zmniejsz równolegle.
+
+W poniższym przykładzie porównano czasu potrzebnego do obliczania sumy liczby pierwsze szeregowo i równolegle. Faza mapy przekształca niż iloczyn wartości 0 i Zmniejsz fazy sumy wartości.
+
+[!code-cpp[concrt-parallel-map-reduce-sum-of-primes#1](../../parallel/concrt/codesnippet/cpp/parallel-algorithms_7.cpp)]
+
+Inny przykład, która wykonuje mapy i zmniejszyć liczbę operacji równoległych, zobacz [jak: wykonywać mapy i zmniejszyć operacji wykonywane równolegle](../../parallel/concrt/how-to-perform-map-and-reduce-operations-in-parallel.md).
+
+[[Górnej](#top)]
+
+##  <a name="partitions"></a> Partycjonowanie pracy
+
+Równoległe przetwarzanie operacji na źródle danych, jest bardzo ważnym etapem *partycji* źródło w wiele sekcji, które mogą być udostępniane jednocześnie z wielu wątków. Partycjonera Określa, jak algorytmu równoległego powinien partycji zakresów między wątkami. Jak wyjaśniono wcześniej w tym dokumencie, PPL korzysta z domyślnego partycjonowanie mechanizm, który tworzy początkową obciążenia, a następnie używa algorytmu kradzież pracy się i zakres kradzież równoważyć partycje, w przypadku obciążeń niezrównoważone. Na przykład po jednej iteracji pętli zakończeniu szeregu iteracji, środowisko uruchomieniowe dystrybuuje pracy z innych wątków wątek. Jednak w niektórych scenariuszach możesz chcieć określić inny mechanizm partycjonowania, który działa lepiej dostosowane do danego problemu.
+
+`parallel_for`, `parallel_for_each`, I `parallel_transform` algorytmy podać przeciążone wersje, które przyjmują dodatkowy parametr, `_Partitioner`. Ten parametr określa typ partycjonera, który dzieli pracy. Poniżej przedstawiono rodzaje partycjonery definiujących PPL:
+
+[CONCURRENCY::affinity_partitioner](../../parallel/concrt/reference/affinity-partitioner-class.md)<br/>
+Dzieli działają na stałą liczbę zakresów (zwykle liczba wątków roboczych, które są dostępne do pracy w pętli). Ten typ partycjonera przypomina `static_partitioner`, ale zwiększa koligacji pamięci podręcznej, sposób mapowania zakresów wątków roboczych. Ten typ partycjonera może poprawić wydajność, jeśli pętla jest wykonywana za pośrednictwem tego samego zestawu danych, wiele razy (na przykład pętli w pętli) i danych mieści się w pamięci podręcznej. Ta partycjonera nie pełni uczestniczy w anulowania. On również nie używa semantyki blokowanie współpracy i dlatego nie można używać z pętli równoległych, które mają zależności do przodu.
+
+[CONCURRENCY::auto_partitioner](../../parallel/concrt/reference/auto-partitioner-class.md)<br/>
+Dzieli działają na początkową liczbę zakresów (zwykle liczba wątków roboczych, które są dostępne do pracy w pętli). Środowisko wykonawcze używa tego typu domyślnie podczas nie należy wywoływać metody przeciążone algorytmu równoległego, która przyjmuje `_Partitioner` parametru. Każdy z zakresów, mogą zostać podzielone na zakresy podrzędne, a tym samym umożliwia równoważenie obciążenia nastąpi. Po zakończeniu zakresu pracy, środowisko uruchomieniowe dystrybuuje zakresy podrzędne pracy od innych wątków do tego wątku. Użyj tego partycjonera, jeśli obciążenie nie znajduje się w jednej z innych kategorii, lub wymagasz pełnej obsługi anulowania lub blokowanie współpracy.
+
+[CONCURRENCY::simple_partitioner](../../parallel/concrt/reference/simple-partitioner-class.md)<br/>
+Dzieli działać do zakresów w taki sposób, że każdy z zakresów, ma co najmniej liczba iteracji, które są określone przez rozmiar danego fragmentu. Ten typ partycjonera uczestniczy w równoważeniu obciążenia; Jednakże środowisko wykonawcze nie podzielić zakresów zakresy podrzędne. Dla każdego pracownika, środowisko uruchomieniowe sprawdza, czy anulowania i przeprowadza równoważenia obciążenia po `_Chunk_size` ukończenia iteracji.
+
+[CONCURRENCY::static_partitioner](../../parallel/concrt/reference/static-partitioner-class.md)<br/>
+Dzieli działają na stałą liczbę zakresów (zwykle liczba wątków roboczych, które są dostępne do pracy w pętli). Ten typ partycjonera może poprawić wydajność, ponieważ nie korzysta z kradzież pracy i dlatego ma mniejszy narzut. Użyj tego typu partycjonera każdej iteracji pętli równoległej wykonuje stałych i jednolitego ilość pracy, i nie wymaga obsługi anulowania lub przekazywać blokowanie współpracy.
+
 > [!WARNING]
->  `parallel_for_each` i `parallel_transform` algorytmy obsługuje tylko kontenery używających Iteratory dostępie swobodnym (takich jak std::[wektor](../../standard-library/vector-class.md)) dla partycjonery statyczną, prosty i koligacji. Używanie kontenerów używające dwukierunkowy i do przodu Iteratory generuje błąd kompilacji. Partycjoner domyślne `auto_partitioner`, obsługuje wszystkie trzy typy iteratora.  
-  
- Te partycjonery są zazwyczaj używane w taki sam sposób, z wyjątkiem `affinity_partitioner`. Większość typów partycjonera nie obsługują stanu i nie są modyfikowane w czasie wykonywania. W związku z tym można utworzyć te obiekty partycjonera w miejsce wywołania, jak pokazano w poniższym przykładzie.  
-  
- [!code-cpp[concrt-static-partitioner#1](../../parallel/concrt/codesnippet/cpp/parallel-algorithms_8.cpp)]  
-  
- Jednak należy przekazać `affinity_partitioner` obiektu jako niż`const`, l wartość odwołania, tak aby algorytm może przechowywać stanu dla przyszłych pętli do ponownego użycia. W poniższym przykładzie przedstawiono podstawowe aplikacji, która wykonuje tę samą operację na zestaw danych równolegle wiele razy. Użycie `affinity_partitioner` może poprawić wydajność, ponieważ tablica jest prawdopodobne zmieścić ją w pamięci podręcznej.  
-  
- [!code-cpp[concrt-affinity-partitioner#1](../../parallel/concrt/codesnippet/cpp/parallel-algorithms_9.cpp)]  
-  
+>  `parallel_for_each` i `parallel_transform` algorytmy obsługi kontenerów, korzystających z iteratorami dostępu swobodnego (takich jak standardowe::[wektor](../../standard-library/vector-class.md)) dla partycjonery statyczne, prosty i koligacji. Korzystanie z kontenerów, które można dwukierunkową i tworzyć Iteratory do przodu generuje błąd w czasie kompilacji. Partycjonera domyślne, `auto_partitioner`, obsługuje wszystkie trzy typy iteratora.
+
+Partycjonery te są zazwyczaj używane w taki sam sposób, z wyjątkiem `affinity_partitioner`. Większość typów partycjonera nie zarządzania stanem i nie są modyfikowane w czasie wykonywania. W związku z tym można utworzyć te obiekty partycjonera w witrynie wywołania, jak pokazano w poniższym przykładzie.
+
+[!code-cpp[concrt-static-partitioner#1](../../parallel/concrt/codesnippet/cpp/parallel-algorithms_8.cpp)]
+
+Jednakże, należy przekazać `affinity_partitioner` obiektu jako innej niż`const`, l wartości odwołują się tak, że algorytm może przechowywać stan dla przyszłych pętli, aby ponownie użyć. Poniższy przykład pokazuje Podstawowa aplikacja, która wykonuje tę samą operację na zestawie danych równolegle wiele razy. Korzystanie z `affinity_partitioner` może poprawić wydajność, ponieważ tablica jest prawdopodobne zmieścić ją w pamięci podręcznej.
+
+[!code-cpp[concrt-affinity-partitioner#1](../../parallel/concrt/codesnippet/cpp/parallel-algorithms_9.cpp)]
+
 > [!CAUTION]
->  Należy zachować ostrożność podczas modyfikowania istniejącego kodu, który polega na współpracy semantyki blokowania do użycia `static_partitioner` lub `affinity_partitioner`. Te typy partycjonera nie używaj równoważenia obciążenia lub kradzież zakresu, a w związku z tym można zmienić zachowania aplikacji.  
-  
- Najlepszy sposób, aby określić, czy ma być używany z partycjonerem w dowolnym danego scenariusza jest eksperymentu i mierzyć czas potrzebny na zakończenie reprezentatywny obciążeń i konfiguracji komputerów operacji. Na przykład partycjonowania statycznego może zawierać znaczące przyspieszenie komputera wielordzeniowych, który ma tylko kilka rdzeni, ale może to spowodować spowolnienie na komputerach, które mają względnie wiele rdzeni.  
-  
- [[Górnej](#top)]  
-  
-##  <a name="parallel_sorting"></a> Sortowania równoległego  
+>  Należy zachować ostrożność podczas modyfikowania istniejącego kodu, która zależy od współpracy blokowania semantyki do użycia `static_partitioner` lub `affinity_partitioner`. Te typy partycjonera nie używaj równoważenia obciążenia lub kradzież zakresu, a w związku z tym można zmieniać działanie aplikacji.
 
- PPL udostępnia trzy algorytmów sortowania: [concurrency::parallel_sort](reference/concurrency-namespace-functions.md#parallel_sort), [concurrency::parallel_buffered_sort](reference/concurrency-namespace-functions.md#parallel_buffered_sort), i [concurrency::parallel_radixsort](reference/concurrency-namespace-functions.md#parallel_radixsort). Sortowanie algorytmy są przydatne w przypadku zestaw danych, które mogą korzystać z sortowane równolegle. W szczególności sortowanie równolegle jest przydatna, jeśli masz dużego zestawu danych lub gdy sortowanie danych za pomocą operacji porównywania w praktyce kosztowne. Każdy z tych algorytmów sortuje elementów w miejscu.  
+Najlepszym sposobem ustalenia, czy należy użyć partycjonera w dowolnym danym scenariuszu jest eksperymentowanie i zmierzyć czas potrzebny na zakończenie reprezentatywny obciążeń i konfiguracji komputerów operacji. Na przykład partycjonowania statycznego może zapewnić znaczne przyspieszenie na komputerze z wieloma procesorami ma tylko kilka rdzeni, ale może spowodować spowolnienie na komputerach, które mają względnie wiele rdzeni.
 
-  
- `parallel_sort` i `parallel_buffered_sort` algorytmy są oba algorytmy na podstawie porównania. Oznacza to, że ich porównanie elementów według wartości. `parallel_sort` Algorytmu nie ma więcej pamięci wymagań i nadaje się do ogólnego przeznaczenia sortowania. `parallel_buffered_sort` Algorytm można wykonywać lepszym rozwiązaniem niż `parallel_sort`, ale wymaga to O(N) miejsca.  
-  
- `parallel_radixsort` Jest algorytm wyznaczania wartości skrótu na podstawie. Oznacza to używa kluczy liczba całkowita, aby posortować elementy. Przy użyciu kluczy, ten algorytm można obliczyć bezpośrednio docelowego elementu zamiast porównania. Podobnie jak `parallel_buffered_sort`, miejsca O(N) wymaga tego algorytmu.  
-  
- W poniższej tabeli przedstawiono ważne właściwości trzy algorytmy równoległe sortowania.  
-  
-|Algorytm|Opis|Mechanizm sortowania|Stabilność sortowania|Wymagania dotyczące pamięci|Złożoność czasu|Dostęp do iteratora|  
-|---------------|-----------------|-----------------------|--------------------|-------------------------|---------------------|---------------------|  
-|`parallel_sort`|Ogólnego przeznaczenia sortowania na podstawie porównania.|Na podstawie porównania (rosnąco)|Niestabilny|Brak|O((N/P)log(N/P) + 2N((P-1)/P))|Losowe|  
-|`parallel_buffered_sort`|Szybsze ogólnego przeznaczenia na podstawie porównania sortowania, które wymaga O(N) miejsca na dysku.|Na podstawie porównania (rosnąco)|Niestabilny|Wymaga dodatkowego miejsca O(N)|O((N/P)log(N))|Losowe|  
-|`parallel_radixsort`|Liczba całkowita opartego na kluczach sortowania, które wymaga O(N) miejsca na dysku.|Na podstawie wyznaczania wartości skrótu|Stały|Wymaga dodatkowego miejsca O(N)|O(N/P)|Losowe|  
-  
- Na poniższej ilustracji przedstawiono bardziej graficznie ważne właściwości trzy algorytmy równoległe sortowania.  
-  
- ![Porównanie sortowania algorytmów](../../parallel/concrt/media/concrt_parallel_sorting.png "concrt_parallel_sorting")  
-  
- Te równoległe sortowanie algorytmów zgodne z regułami anulowania i obsługa wyjątków. Aby uzyskać więcej informacji na temat anulowania i obsługa wyjątków w współbieżności środowiska wykonawczego, zobacz [anulowanie algorytmów równoległych](../../parallel/concrt/cancellation-in-the-ppl.md#algorithms) i [obsługi wyjątków](../../parallel/concrt/exception-handling-in-the-concurrency-runtime.md).  
-  
+[[Górnej](#top)]
+
+##  <a name="parallel_sorting"></a> Sortowanie równoległe
+
+PPL zawiera trzy algorytmów sortowania: [concurrency::parallel_sort](reference/concurrency-namespace-functions.md#parallel_sort), [concurrency::parallel_buffered_sort](reference/concurrency-namespace-functions.md#parallel_buffered_sort), i [concurrency::parallel_radixsort](reference/concurrency-namespace-functions.md#parallel_radixsort). Algorytmy sortujące są przydatne w przypadku zestawu danych, który może być korzystne posortowana równolegle. W szczególności sortowanie równolegle jest przydatna, jeśli masz duży zestaw danych lub podczas używania operacji porównywania obliczeniowo kosztowne do sortowania danych. Każda z tych algorytmów sortowania elementów w miejscu.
+
+`parallel_sort` i `parallel_buffered_sort` algorytmy są oba algorytmy na podstawie porównania. To znaczy służą do porównywania elementów przez wartość. `parallel_sort` Algorytmu nie ma dodatkowej pamięci wymagań i nadaje się do ogólnego przeznaczenia sortowania. `parallel_buffered_sort` Algorytm można wykonywać lepsze niż `parallel_sort`, ale wymaga O(N) miejsca.
+
+`parallel_radixsort` Algorytm jest bazujących na skrótach. Oznacza to używa kluczy liczby całkowitej, aby posortować elementy. Przy użyciu kluczy, ten algorytm można bezpośrednio obliczeń docelowego elementu zamiast porównania. Podobnie jak `parallel_buffered_sort`, ten algorytm wymaga O(N) miejsca.
+
+W poniższej tabeli podsumowano ważne właściwości trzy równoległych algorytmów sortowania.
+
+|Algorytm|Opis|Mechanizm sortowania|Sortuj stabilności|Wymagania dotyczące pamięci|Złożoność czasu|Iterator dostępu|
+|---------------|-----------------|-----------------------|--------------------|-------------------------|---------------------|---------------------|
+|`parallel_sort`|Ogólnego przeznaczenia sortowania na podstawie porównania.|Na podstawie porównania (rosnąco)|Niestabilne|Brak|O((N/P)log(N/P) + 2N((P-1)/P))|losowe|
+|`parallel_buffered_sort`|Szybsze ogólnego przeznaczenia na podstawie porównania sortowania, które wymaga O(N) miejsca.|Na podstawie porównania (rosnąco)|Niestabilne|Wymaga dodatkowego miejsca O(N)|O((N/P)log(N))|losowe|
+|`parallel_radixsort`|Liczba całkowita opartego na kluczach sortowania, które wymaga O(N) miejsca.|Bazujących na skrótach|Wersja stabilna|Wymaga dodatkowego miejsca O(N)|O(N/P)|losowe|
+
+Poniżej przedstawiono ważne właściwości trzy równoległych algorytmów sortowania bardziej graficznie.
+
+![Porównanie algorytmów sortowania](../../parallel/concrt/media/concrt_parallel_sorting.png "concrt_parallel_sorting")
+
+Te algorytmy sortujące równoległe zgodne z regułami anulowania i obsługi wyjątków. Aby uzyskać więcej informacji na temat anulowania i obsługi wyjątków w środowisku uruchomieniowym współbieżności: zobacz [anulowanie algorytmów równoległych](../../parallel/concrt/cancellation-in-the-ppl.md#algorithms) i [wyjątków](../../parallel/concrt/exception-handling-in-the-concurrency-runtime.md).
+
 > [!TIP]
->  Obsługują one równoległe sortowanie algorytmów przenoszenia semantyki. Można zdefiniować operator przypisania przenoszenia w celu umożliwienia operacji wymiany wydajniej występuje. Aby uzyskać więcej informacji dotyczących przenoszenia semantykę i operator przypisania przenoszenia, zobacz [deklarator odwołania do r-wartości: & &](../../cpp/rvalue-reference-declarator-amp-amp.md), i [konstruktory przenoszenia i operatory przypisania przenoszenia (C++)](../../cpp/move-constructors-and-move-assignment-operators-cpp.md). Jeśli operator przypisania przenoszenia lub swap — funkcja nie zostanie określona, sortowania algorytmów Użyj konstruktora kopiowania.  
-  
- Podstawowe poniższy przykład przedstawia użycie `parallel_sort` sortowania `vector` z `int` wartości. Domyślnie `parallel_sort` używa [std::less](../../standard-library/less-struct.md) porównuje wartości.  
-  
- [!code-cpp[concrt-basic-parallel-sort#1](../../parallel/concrt/codesnippet/cpp/parallel-algorithms_10.cpp)]  
-  
- Ten przykład przedstawia, jak zapewnić Funkcja porównywania niestandardowych. Używa [std::complex::real](../../standard-library/complex-class.md#real) metody, aby posortować [std::complex\<podwójne >](../../standard-library/complex-double.md) wartości w kolejności rosnącej.  
-  
- [!code-cpp[concrt-basic-parallel-sort#2](../../parallel/concrt/codesnippet/cpp/parallel-algorithms_11.cpp)]  
-  
- W tym przykładzie pokazano, jak zapewnić funkcji skrótu do `parallel_radixsort` algorytmu. W tym przykładzie sortuje 3-punktów. Punkty są sortowane według ich odległość od punktu odniesienia.  
-  
- [!code-cpp[concrt-parallel-sort-points#1](../../parallel/concrt/codesnippet/cpp/parallel-algorithms_12.cpp)]  
-  
- Na ilustracji w tym przykładzie użyto stosunkowo mały zestaw danych. Można zwiększyć rozmiar początkowy wektora eksperymentować ulepszenia wydajności za pośrednictwem większych zestawów danych.  
-  
- W tym przykładzie korzysta z wyrażenia lambda jako funkcji wyznaczania wartości skrótu. Można także użyć jednego z wbudowanych implementacje std::[hash — klasa](../../standard-library/hash-class.md) lub definiować własne specjalizacji. Można także użyć obiektu funkcji skrótu niestandardowych, jak pokazano w poniższym przykładzie:  
-  
- [!code-cpp[concrt-parallel-sort-points#2](../../parallel/concrt/codesnippet/cpp/parallel-algorithms_13.cpp)]  
-  
- [!code-cpp[concrt-parallel-sort-points#3](../../parallel/concrt/codesnippet/cpp/parallel-algorithms_14.cpp)]  
-  
- Funkcja wyznaczania wartości skrótu musi zwracać typ całkowity ([std::is_integral::value](../../standard-library/is-integral-class.md) musi być `true`). Ten typ całkowity musi być do przekonwertowania na typ `size_t`.  
-  
-###  <a name="choose_sort"></a> Wybieranie algorytmu sortowania  
- W wielu przypadkach `parallel_sort` zapewnia równowagę pamięci i szybkości. Jednak jako możesz zwiększyć rozmiar zestawu danych, liczba dostępnych procesorów lub złożoność funkcji porównania, `parallel_buffered_sort` lub `parallel_radixsort` mogą działać lepiej. Najlepszy sposób, aby ustalić, który algorytm sortowania do użycia w dowolnym danego scenariusza jest eksperymentu i miary, jak długo trwa sortowanie typowych danych w ramach konfiguracji reprezentatywny komputerów. W przypadku strategii dotyczącej sortowania, należy pamiętać o następujących wytycznych.  
-  
--   Rozmiar zestawu danych. W tym dokumencie *małych* zestaw danych zawiera mniej niż 1000 elementów *średni* zestaw danych zawiera między elementami 10 000 do 100 000, a *dużych* zestaw danych zawiera więcej niż 100 000 elementów.  
-  
--   Ilość pracy wykonuje z Funkcja porównywania lub funkcji skrótu.  
-  
--   Wielkość dostępnych zasobów obliczeniowych.  
-  
--   Właściwości zestawu danych. Na przykład jeden algorytm może wykonywać również dane, które jest już prawie sortowane, ale nie również dane, które są całkowicie nieposortowana.  
-  
--   Rozmiar fragmentu. Opcjonalny `_Chunk_size` argument określa, kiedy algorytm zmienia się z równoległe implementacji serial sortowania zgodnie z jego dzieli ogólną sortowania na mniejsze jednostki pracy. Na przykład jeśli podasz 512 algorytm przełącza się na implementacji serial gdy jednostka pracy zawiera 512 lub mniej elementów. Implementacja serial może zwiększyć ogólną wydajność, ponieważ eliminuje obciążenie, który jest wymagany do przetwarzania danych równolegle.  
-  
- Nie może być wyodrębnienie sortowania w małym zestawie danych równolegle, nawet jeśli masz dużą liczbę dostępnych zasobów obliczeniowych lub z funkcji Porównaj lub funkcji skrótu wykonuje stosunkowo dużą ilość pracy. Można użyć [std::sort](../../standard-library/algorithm-functions.md#sort) funkcji, aby posortować małych zestawów danych. (`parallel_sort` i `parallel_buffered_sort` wywołać `sort` podczas określania rozmiaru fragmentu, który jest większy niż zestaw danych; jednak `parallel_buffered_sort` musi przydzielić miejsca O(N), co może zająć więcej czasu z powodu przydziału pamięci lub rywalizacji blokad.)  
-  
- Jeśli musisz zachowywania pamięci lub Twoje alokatora podlega rywalizacji blokad, użyj `parallel_sort` do sortowania zestawu danych średniej wielkości. `parallel_sort` wymaga nie dodatkowe miejsce; inne algorytmy wymagają O(N) miejsca.  
-  
- Użyj `parallel_buffered_sort` sortowania średnich zestawów danych i gdy aplikacja spełnia dodatkowe wymagania dotyczące wolnego miejsca O(N). `parallel_buffered_sort` może być szczególnie przydatne, jeśli masz dużą liczbę zasobów obliczeniowych lub funkcja porównywania kosztowna lub funkcji skrótu.  
-  
- Użyj `parallel_radixsort` sortowania dużych zestawów danych, a także jeśli aplikacja spełnia dodatkowe wymagania dotyczące wolnego miejsca O(N). `parallel_radixsort` może być przydatny podczas operacji porównywania równoważne jest droższe lub gdy obie operacje jest dość kosztowna.  
-  
+>  Te algorytmy sortujące równoległe obsługują semantyki przenoszenia. Można zdefiniować operator przypisania przenoszenia, aby włączyć wymiany operacji wydajniej. Aby uzyskać więcej informacji dotyczących semantyki przenoszenia i operator przypisania przenoszenia, zobacz [Rvalue Reference Declarator: & &](../../cpp/rvalue-reference-declarator-amp-amp.md), i [konstruktory przenoszenia i operatory przenoszenia przypisania (C++)](../../cpp/move-constructors-and-move-assignment-operators-cpp.md). Jeśli nie podasz, operator przypisania przenoszenia lub funkcja zamiany, algorytmów sortowania użyć konstruktora kopiującego.
+
+Poniższy przykład podstawowy pokazuje, jak używać `parallel_sort` sortowania `vector` z `int` wartości. Domyślnie `parallel_sort` używa [std::less](../../standard-library/less-struct.md) do porównywania wartości.
+
+[!code-cpp[concrt-basic-parallel-sort#1](../../parallel/concrt/codesnippet/cpp/parallel-algorithms_10.cpp)]
+
+Ten przykład przedstawia sposób udostępniania funkcji niestandardowych porównania. Używa ona [std::complex::real](../../standard-library/complex-class.md#real) metodę, aby posortować [wartość std::complex\<double >](../../standard-library/complex-double.md) wartości w kolejności rosnącej.
+
+[!code-cpp[concrt-basic-parallel-sort#2](../../parallel/concrt/codesnippet/cpp/parallel-algorithms_11.cpp)]
+
+W tym przykładzie pokazano, jak zapewnić funkcji skrótu do `parallel_radixsort` algorytmu. W tym przykładzie sortuje 3-w punktach. Punkty są sortowane w oparciu o ich odległości od punktu odniesienia.
+
+[!code-cpp[concrt-parallel-sort-points#1](../../parallel/concrt/codesnippet/cpp/parallel-algorithms_12.cpp)]
+
+Do celów informacyjnych w tym przykładzie użyto stosunkowo małego zestawu danych. Możesz zwiększyć rozmiar początkowy wektora eksperymentować ulepszenia wydajności za pośrednictwem większych zestawów danych.
+
+W tym przykładzie używa wyrażenia lambda jako funkcji wyznaczania wartości skrótu. Można także użyć jednego z wbudowanych implementacji std::[hash, klasa](../../standard-library/hash-class.md) lub definiować własne specjalizacji. Umożliwia także niestandardowy obiekt funkcji mieszania, jak pokazano w poniższym przykładzie:
+
+[!code-cpp[concrt-parallel-sort-points#2](../../parallel/concrt/codesnippet/cpp/parallel-algorithms_13.cpp)]
+
+[!code-cpp[concrt-parallel-sort-points#3](../../parallel/concrt/codesnippet/cpp/parallel-algorithms_14.cpp)]
+
+Funkcja wyznaczania wartości skrótu musi zwracać typ całkowity ([std::is_integral::value](../../standard-library/is-integral-class.md) musi być `true`). Ten typ całkowity musi być konwertowany na typ `size_t`.
+
+###  <a name="choose_sort"></a> Wybieranie algorytmu sortowania
+
+W wielu przypadkach `parallel_sort` zapewnia najlepszą równowagę pamięci i szybkości. Jednak, jak zwiększyć rozmiaru zestawu danych, liczba dostępnych procesorów lub złożoność funkcji porównywania, `parallel_buffered_sort` lub `parallel_radixsort` może działać lepiej. Najlepszym sposobem ustalenia, który algorytm sortowania do użycia w dowolnym danym scenariuszu jest eksperymentowanie i zmierzyć, jak długo trwa sortowanie typowych danych w ramach konfiguracji reprezentatywny komputerów. W przypadku wybrania strategii sortowania, należy pamiętać o następujących wytycznych.
+
+- Rozmiar zestawu danych. W tym dokumencie *małych* zestaw danych zawiera mniej niż 1000 elementów *średni* zestaw danych zawiera 10 000 do 100 000 elementów, a *dużych* zestaw danych zawiera ponad 100 000 elementów.
+
+- Ilość pracy, która wykonuje swoje porównania funkcji lub funkcji skrótu.
+
+- Ilość dostępnych zasobów obliczeniowych.
+
+- Właściwości zestawu danych. Na przykład jeden algorytm może działać dobrze w przypadku danych, które jest już prawie sortowana, ale także nie dla danych, które są całkowicie nieposortowana.
+
+- Rozmiar fragmentu. Opcjonalny `_Chunk_size` argument określa, kiedy algorytm zmienia się z równoległego do implementacji serial sortowania zgodnie z jego dzieli ogólną sortowania na mniejsze jednostki pracy. Na przykład jeśli podasz 512, algorytm przełącza się na implementacji serial gdy jednostka pracy zawiera 512 lub mniejszej liczby elementów. Implementacja serial może zwiększyć ogólną wydajność, ponieważ eliminuje narzut, który jest wymagany do przetwarzania danych w sposób równoległy.
+
+Może nie być zwiększonej sortowania małego zestawu danych w sposób równoległy, nawet wtedy, gdy masz dużą liczbę dostępnych zasobach komputerowych lub z porównania funkcji lub funkcji skrótu wykonuje stosunkowo dużej ilości pracy. Możesz użyć [std::sort](../../standard-library/algorithm-functions.md#sort) funkcję, aby posortować małych zestawów danych. (`parallel_sort` i `parallel_buffered_sort` wywołania `sort` podczas określania rozmiaru fragmentu, który jest większy od zestawu danych; jednak `parallel_buffered_sort` musiałaby przydzielanie O(N) miejsca, co może zająć więcej czasu z powodu blokady alokacji pamięci lub rywalizacji o zasoby.)
+
+Jeśli musisz zachowywania pamięci lub usługi alokatora pamięci podlega Rywalizacja o blokady, użyj `parallel_sort` sortowanie zestawu danych średniej wielkości. `parallel_sort` wymaga nie dodatkowego miejsca; inne algorytmy wymagają O(N) miejsca.
+
+Użyj `parallel_buffered_sort` sortowania średnie zestawów danych, a kiedy Twoja aplikacja spełnia dodatkowych wymagań dotyczących miejsca O(N). `parallel_buffered_sort` może być szczególnie przydatne, jeśli masz dużą liczbę zasobów obliczeniowych lub funkcja porównania kosztowne lub funkcji skrótu.
+
+Użyj `parallel_radixsort` sortowania dużych zestawów danych, a kiedy Twoja aplikacja spełnia dodatkowych wymagań dotyczących miejsca O(N). `parallel_radixsort` może być szczególnie przydatne podczas operacji porównywania równoważne jest droższe, lub gdy obie operacje są kosztowne.
+
 > [!CAUTION]
->  Implementowanie funkcji skrótu dobrej wymaga znasz zakres zestawu danych i jak każdy element w zestawie danych jest przekształcana do odpowiedniej wartości bez znaku. Ponieważ operacja wyznaczania wartości skrótu działa na wartości bez znaku, należy rozważyć innych strategii sortowania, jeśli nie można przedstawić wartości skrótu bez znaku.  
-  
- Poniższy przykład porównuje wydajność `sort`, `parallel_sort`, `parallel_buffered_sort`, i `parallel_radixsort` przed ten sam zestaw dużych losowe dane.  
-  
- [!code-cpp[concrt-choosing-parallel-sort#1](../../parallel/concrt/codesnippet/cpp/parallel-algorithms_15.cpp)]  
-  
- W tym przykładzie przyjęto założenie, że jest dopuszczalne do przydzielenia miejsca O(N) podczas sortowania, `parallel_radixsort` działa najlepiej na ten zestaw danych w tej konfiguracji komputera.  
-  
- [[Górnej](#top)]  
-  
-## <a name="related-topics"></a>Tematy pokrewne  
-  
-|Tytuł|Opis|  
-|-----------|-----------------|  
-|[Instrukcje: pisanie pętli parallel_for](../../parallel/concrt/how-to-write-a-parallel-for-loop.md)|Przedstawia sposób użycia `parallel_for` algorytm mnożenie macierzy.|  
-|[Instrukcje: pisanie pętli parallel_for_each](../../parallel/concrt/how-to-write-a-parallel-for-each-loop.md)|Przedstawia sposób użycia `parallel_for_each` algorytm obliczania liczby liczb pierwszych w [std::array](../../standard-library/array-class-stl.md) obiektu równolegle.|  
-|[Instrukcje: używanie parallel_invoke do napisania procedury sortowania równoległego](../../parallel/concrt/how-to-use-parallel-invoke-to-write-a-parallel-sort-routine.md)|Przedstawia sposób użycia `parallel_invoke` algorytmu, aby poprawić wydajność bitonic algorytm sortowania.|  
-|[Instrukcje: korzystanie z parallel_invoke podczas przeprowadzania operacji równoległych](../../parallel/concrt/how-to-use-parallel-invoke-to-execute-parallel-operations.md)|Przedstawia sposób użycia `parallel_invoke` algorytmu, aby poprawić wydajność program, który wykonuje wiele operacji na udostępnione źródło danych.|  
-|[Instrukcje: równoległe wykonywanie operacji mapowania i zmniejszania](../../parallel/concrt/how-to-perform-map-and-reduce-operations-in-parallel.md)|Przedstawia sposób użycia `parallel_transform` i `parallel_reduce` algorytmy do wykonywanie mapowania i zmniejszanie operacji liczby wystąpień słowa w plikach.|  
-|[Biblioteka równoległych wzorców (PPL)](../../parallel/concrt/parallel-patterns-library-ppl.md)|W tym artykule opisano PPL, oferujący imperatywnych model programowania wspiera skalowalność i łatwość użycia dla tworzenie współbieżnych aplikacji.|  
-|[Anulowanie w PPL](cancellation-in-the-ppl.md)|Opisano rolę anulowanie w PPL, jak anulować równoległych pracy i sposób określania, kiedy grupy zadań została anulowana.|  
-|[Obsługa wyjątków](../../parallel/concrt/exception-handling-in-the-concurrency-runtime.md)|Opisano rolę obsługi wyjątków w współbieżności środowiska wykonawczego.|  
-  
-## <a name="reference"></a>Tematy pomocy  
+>  Implementacja funkcji skrótu dobrej wymaga, że znasz zakres zestawu danych i jak każdy element w zestawie danych jest przekształcana w odpowiedniej wartości bez znaku. Ponieważ operacja wyznaczania wartości skrótu działa z wartościami typu unsigned, należy wziąć pod uwagę innych strategii sortowania wartości bez znaku skrótu nie może zostać utworzony.
 
- [parallel_for — funkcja](reference/concurrency-namespace-functions.md#parallel_for)
-  
- [parallel_for_each — funkcja](reference/concurrency-namespace-functions.md#parallel_for_each)  
-  
- [parallel_invoke — funkcja](reference/concurrency-namespace-functions.md#parallel_invoke)  
+W poniższym przykładzie porównano wydajność `sort`, `parallel_sort`, `parallel_buffered_sort`, i `parallel_radixsort` względem tego samego zestawu dużych z losowymi danymi.
 
-  
- [affinity_partitioner, klasa](../../parallel/concrt/reference/affinity-partitioner-class.md)  
-  
- [auto_partitioner, klasa](../../parallel/concrt/reference/auto-partitioner-class.md)  
-  
- [simple_partitioner, klasa](../../parallel/concrt/reference/simple-partitioner-class.md)  
-  
- [static_partitioner, klasa](../../parallel/concrt/reference/static-partitioner-class.md)  
-  
+[!code-cpp[concrt-choosing-parallel-sort#1](../../parallel/concrt/codesnippet/cpp/parallel-algorithms_15.cpp)]
 
- [parallel_sort — funkcja](reference/concurrency-namespace-functions.md#parallel_sort)  
-  
- [parallel_buffered_sort — funkcja](reference/concurrency-namespace-functions.md#parallel_buffered_sort)  
-  
- [parallel_radixsort Function](reference/concurrency-namespace-functions.md#parallel_radixsort)
+W tym przykładzie przyjęto założenie, że jest dopuszczalne przydzielanie O(N) miejsca podczas sortowania, `parallel_radixsort` działa najlepiej na ten zestaw danych w tej konfiguracji komputera.
 
+[[Górnej](#top)]
+
+## <a name="related-topics"></a>Tematy pokrewne
+
+|Tytuł|Opis|
+|-----------|-----------------|
+|[Instrukcje: pisanie pętli parallel_for](../../parallel/concrt/how-to-write-a-parallel-for-loop.md)|Ilustruje sposób używania `parallel_for` algorytm mnożenie macierzy.|
+|[Instrukcje: pisanie pętli parallel_for_each](../../parallel/concrt/how-to-write-a-parallel-for-each-loop.md)|Ilustruje sposób używania `parallel_for_each` algorytm obliczania liczby liczb pierwszych w [std::array](../../standard-library/array-class-stl.md) obiektu równolegle.|
+|[Instrukcje: używanie parallel_invoke do napisania procedury sortowania równoległego](../../parallel/concrt/how-to-use-parallel-invoke-to-write-a-parallel-sort-routine.md)|Ilustruje sposób używania `parallel_invoke` algorytmu, aby zwiększyć wydajność algorytmu sortowania bitonicznego.|
+|[Instrukcje: korzystanie z parallel_invoke podczas przeprowadzania operacji równoległych](../../parallel/concrt/how-to-use-parallel-invoke-to-execute-parallel-operations.md)|Ilustruje sposób używania `parallel_invoke` algorytmu, aby zwiększyć wydajność programu, który wykonuje wiele operacji na udostępnione źródło danych.|
+|[Instrukcje: równoległe wykonywanie operacji mapowania i zmniejszania](../../parallel/concrt/how-to-perform-map-and-reduce-operations-in-parallel.md)|Ilustruje sposób używania `parallel_transform` i `parallel_reduce` algorytmy umożliwiające wykonywanie mapowania i zmniejszanie operacji, który zlicza wystąpienia słów w plikach.|
+|[Biblioteka równoległych wzorców (PPL)](../../parallel/concrt/parallel-patterns-library-ppl.md)|W tym artykule opisano PPL, która zapewnia model programowania na najwyższym skalowalność i łatwość użytkowania umożliwiający projektowanie aplikacji współbieżnych.|
+|[Anulowanie w PPL](cancellation-in-the-ppl.md)|W tym artykule wyjaśniono roli anulowanie w PPL, jak anulować czynność równoległą i jak określić, kiedy grupy zadań zostanie anulowane.|
+|[Obsługa wyjątków](../../parallel/concrt/exception-handling-in-the-concurrency-runtime.md)|W tym artykule wyjaśniono roli Obsługa wyjątków w środowisku uruchomieniowym współbieżności.|
+
+## <a name="reference"></a>Tematy pomocy
+
+[parallel_for — funkcja](reference/concurrency-namespace-functions.md#parallel_for)
+
+[parallel_for_each — funkcja](reference/concurrency-namespace-functions.md#parallel_for_each)
+
+[parallel_invoke — funkcja](reference/concurrency-namespace-functions.md#parallel_invoke)
+
+[affinity_partitioner, klasa](../../parallel/concrt/reference/affinity-partitioner-class.md)
+
+[auto_partitioner, klasa](../../parallel/concrt/reference/auto-partitioner-class.md)
+
+[simple_partitioner, klasa](../../parallel/concrt/reference/simple-partitioner-class.md)
+
+[static_partitioner, klasa](../../parallel/concrt/reference/static-partitioner-class.md)
+
+[parallel_sort — funkcja](reference/concurrency-namespace-functions.md#parallel_sort)
+
+[parallel_buffered_sort — funkcja](reference/concurrency-namespace-functions.md#parallel_buffered_sort)
+
+[parallel_radixsort Function](reference/concurrency-namespace-functions.md#parallel_radixsort)
 

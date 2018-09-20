@@ -15,53 +15,55 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3b75bf145da401ad9889353a1e65448831c602c9
-ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
+ms.openlocfilehash: 9bba7fdfd44b0a0a97a6d110d2a44b492e1ca449
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "33328350"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46429334"
 ---
 # <a name="implementing-a-connection-point-visual-c"></a>Implementacja punktu połączenia (Visual C++)
-Do zaimplementowania punktu połączenia za pomocą Kreatora punktu połączenia wdrożenia, musi mieć projekt został utworzony jako aplikacji ATL COM lub aplikacji MFC, która zawiera obsługę ATL. Można użyć [Kreator projektu ATL](../atl/reference/atl-project-wizard.md) Aby utworzyć aplikację ATL lub [Dodaj obiekt ATL do aplikacji MFC](../mfc/reference/adding-atl-support-to-your-mfc-project.md) ATL Obsługa aplikacji MFC.  
-  
+
+Aby zaimplementować za pomocą Kreatora punktu połączenia implementacji punktu połączenia, musi utworzono projekt jako aplikacji ATL COM lub aplikacji MFC, który zawiera obsługę ATL. Możesz użyć [Kreator projektów ATL](../atl/reference/atl-project-wizard.md) do tworzenia aplikacji biblioteki ATL, lub [Dodaj obiekt ATL do Twojej aplikacji MFC](../mfc/reference/adding-atl-support-to-your-mfc-project.md) do zaimplementowania Obsługa ALT dla aplikacji MFC.
+
 > [!NOTE]
->  Aby dowiedzieć się, jak implementacja punktów połączeń dla projektu MFC, zobacz [punkty połączenia](../mfc/connection-points.md).  
-  
- Po utworzeniu projektu, do zaimplementowania punktu połączenia, najpierw należy dodać obiekt ATL. Zobacz [Dodawanie obiektów i kontroli w celu Projekt ATL](../atl/reference/adding-objects-and-controls-to-an-atl-project.md) listę kreatorów, które dodać obiekty do projektu ATL.  
-  
+>  Aby uzyskać informacji dotyczących implementowania punkty połączenia do projektu MFC, zobacz [punkty połączenia](../mfc/connection-points.md).
+
+Po utworzeniu projektu, aby zaimplementować punkt połączenia należy najpierw dodać obiektu ATL. Zobacz [Dodawanie obiektów i kontrolek do projektu ATL](../atl/reference/adding-objects-and-controls-to-an-atl-project.md) listę kreatorzy dodawania obiektów do projektu ATL.
+
 > [!NOTE]
->  Kreator nie obsługuje okien dialogowych ATL, utworzone za pomocą serwera ATL obiekty wydajności i liczniki wydajności usługi XML sieci Web.  
-  
- Obiekt składnika (źródło) mogą uwidaczniać punktu połączenia dla każdego z jego interfejsy wychodzących. Każdy interfejs wychodzącej może być zaimplementowany przez klienta do obiektu (zbiornika). Aby uzyskać więcej informacji, zobacz [punkty połączenia ATL](../atl/atl-connection-points.md).  
-  
-### <a name="to-implement-a-connection-point"></a>Do zaimplementowania punktu połączenia  
-  
-1.  W widoku klas kliknij prawym przyciskiem myszy nazwę klasy dla obiekt ATL.  
-  
-2.  Kliknij przycisk **Dodaj** z menu skrótów, a następnie kliknij przycisk **Dodaj punkt połączenia** do wyświetlenia [Kreator implementacji punktu połączenia](../ide/implement-connection-point-wizard.md).  
-  
-3.  Wybierz interfejsy punktu połączenia, aby zaimplementować z bibliotek odpowiedniego typu, a następnie kliknij przycisk **Zakończ**.  
-  
-4.  W widoku klas Sprawdź klasy serwera proxy, tworzone dla każdego punktu połączenia. Klasy są wyświetlane jako CProxy*InterfaceName*\<T > i pochodne [IConnectionPointImpl](../atl/reference/iconnectionpointimpl-class.md).  
-  
-5.  Kliknij dwukrotnie klasy punktu połączenia do wyświetlania definicji klasy punktu połączenia.  
-  
-    -   W przypadku zastosowania punktu połączenia dla interfejsu własny projekt, pojawi się następujący definicji  
-  
-        ```  
-        template< class T >  
-        class CProxyInterfaceName :  
-           public IConnectionPointImpl< T, &IID_InterfaceName >  
-        {  
-        public:  
-        };  
-        ```  
-  
-         Jeśli można zaimplementować interfejsu lokalnego, metody i właściwości są wyświetlane w treści klasy.  
-  
-    -   Jeśli implementacji punktu połączenia dla interfejsu innego definicja zawiera metody interfejsu, każdy poprzedzony `Fire_`.  
-  
-## <a name="see-also"></a>Zobacz też  
- [Dodawanie funkcji z kreatorami kodów](../ide/adding-functionality-with-code-wizards-cpp.md)   
- [Dodawanie punktów połączenia do obiektu](../atl/adding-connection-points-to-an-object.md)
+>  Kreator nie obsługuje okna dialogowe ATL, usług sieci Web XML utworzone za pomocą aplikacji serwera ATL. obiekty wydajności i liczników wydajności.
+
+Obiekt łączności (źródła) mogą uwidocznić punkt połączenia dla każdego z jego interfejsów wychodzących. Każdego interfejsu wychodzącego może być implementowana przez klienta do obiektu (ujścia). Aby uzyskać więcej informacji, zobacz [punkty połączenia ATL](../atl/atl-connection-points.md).
+
+### <a name="to-implement-a-connection-point"></a>Aby zaimplementować punktu połączenia
+
+1. W widoku klas kliknij prawym przyciskiem myszy nazwę klasy dla obiektu ATL.
+
+1. Kliknij przycisk **Dodaj** z menu skrótów, a następnie kliknij przycisk **Dodawanie punktów połączenia** do wyświetlenia [Kreator implementacji punktu połączenia](../ide/implement-connection-point-wizard.md).
+
+1. Wybierz interfejsy punktu połączenia, aby zaimplementować z bibliotek odpowiedniego typu, a następnie kliknij przycisk **Zakończ**.
+
+1. W widoku klas należy zbadać klasy serwera proxy, utworzone dla każdego punktu połączenia. Klasy są traktowane jako CProxy*InterfaceName*\<T > i są uzyskiwane z [IConnectionPointImpl](../atl/reference/iconnectionpointimpl-class.md).
+
+1. Kliknij dwukrotnie klasy punktów połączenia do wyświetlenia definicję klasy punktu połączenia.
+
+   - W przypadku zaimplementowania punktu połączenia dla interfejsu własny projekt, zostanie wyświetlona następująca definicja
+
+        ```
+        template< class T >
+        class CProxyInterfaceName :
+           public IConnectionPointImpl< T, &IID_InterfaceName >
+        {
+        public:
+        };
+        ```
+
+         If you implement a local interface, methods and properties appear in the class body.
+
+   - W przypadku zaimplementowania punktu połączenia dla innego interfejsu definicja zawiera metod tego interfejsu, każdy poprzedzone `Fire_`.
+
+## <a name="see-also"></a>Zobacz też
+
+[Dodawanie funkcji za pomocą kreatorów kodu](../ide/adding-functionality-with-code-wizards-cpp.md)<br>
+[Dodawanie punktów połączenia do obiektu](../atl/adding-connection-points-to-an-object.md)

@@ -12,12 +12,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ac142c628f3c2bef0bc29a2ffd50df8a9efda400
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: cb9a554d9141223be7a5f6bc741c86b8f03511e2
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43216540"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46428550"
 ---
 # <a name="241-for-construct"></a>2.4.1 — dla konstrukcji
 
@@ -115,28 +115,28 @@ Na końcu ma niejawne barierę **dla** konstruowania, chyba że **nowait** jest 
 
 Ograniczenia **dla** dyrektywy jest następująca:
 
--   **Dla** pętli musi być strukturalnego bloku, a ponadto, jego wykonanie nie musi się kończyć znakiem **podziału** instrukcji.
+- **Dla** pętli musi być strukturalnego bloku, a ponadto, jego wykonanie nie musi się kończyć znakiem **podziału** instrukcji.
 
--   Wartości pętli kontrolować wyrażeń **dla** pętli skojarzone z **dla** dyrektywa musi być taka sama dla wszystkich wątków w zespole.
+- Wartości pętli kontrolować wyrażeń **dla** pętli skojarzone z **dla** dyrektywa musi być taka sama dla wszystkich wątków w zespole.
 
--   **Dla** Zmienna iteracji pętli musi mieć typ liczby całkowitej ze znakiem.
+- **Dla** Zmienna iteracji pętli musi mieć typ liczby całkowitej ze znakiem.
 
--   Tylko jeden **harmonogram** klauzula może występować na **dla** dyrektywy.
+- Tylko jeden **harmonogram** klauzula może występować na **dla** dyrektywy.
 
--   Tylko jeden **uporządkowane** klauzula może występować na **dla** dyrektywy.
+- Tylko jeden **uporządkowane** klauzula może występować na **dla** dyrektywy.
 
--   Tylko jeden **nowait** klauzula może występować na **dla** dyrektywy.
+- Tylko jeden **nowait** klauzula może występować na **dla** dyrektywy.
 
--   Jest nieokreślony, jeśli lub jak często wpływ dowolnej stronie w obrębie *chunk_size*, *lb*, *b*, lub *incr* wyrażenia wystąpić.
+- Jest nieokreślony, jeśli lub jak często wpływ dowolnej stronie w obrębie *chunk_size*, *lb*, *b*, lub *incr* wyrażenia wystąpić.
 
--   Wartość *chunk_size* wyrażenie musi być taka sama dla wszystkich wątków w zespole.
+- Wartość *chunk_size* wyrażenie musi być taka sama dla wszystkich wątków w zespole.
 
 ## <a name="cross-references"></a>Odsyłacze:
 
--   **prywatne**, **firstprivate**, **lastprivate**, i **redukcji** zdań, zobacz [sekcji 2.7.2](../../parallel/openmp/2-7-2-data-sharing-attribute-clauses.md) na stronie 25.
+- **prywatne**, **firstprivate**, **lastprivate**, i **redukcji** zdań, zobacz [sekcji 2.7.2](../../parallel/openmp/2-7-2-data-sharing-attribute-clauses.md) na stronie 25.
 
--   **OMP_SCHEDULE** środowiska zmiennych, zobacz [sekcji 4.1](../../parallel/openmp/4-1-omp-schedule.md) na stronie 48.
+- **OMP_SCHEDULE** środowiska zmiennych, zobacz [sekcji 4.1](../../parallel/openmp/4-1-omp-schedule.md) na stronie 48.
 
--   **uporządkowane** konstruowania, zobacz [sekcji 2.6.6](../../parallel/openmp/2-6-6-ordered-construct.md) na stronie 22.
+- **uporządkowane** konstruowania, zobacz [sekcji 2.6.6](../../parallel/openmp/2-6-6-ordered-construct.md) na stronie 22.
 
--   [Załącznik D](../../parallel/openmp/d-using-the-schedule-clause.md), stronie 93, zawiera więcej informacji na temat użycie klauzuli harmonogramu.
+- [Załącznik D](../../parallel/openmp/d-using-the-schedule-clause.md), stronie 93, zawiera więcej informacji na temat użycie klauzuli harmonogramu.

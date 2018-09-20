@@ -20,22 +20,24 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a876be701b680de0559f123aaaaa68d4c006e41a
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 3ed8a374c34eacc48e1d877e704fdc60a20f33d9
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33381374"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46422717"
 ---
 # <a name="type-safe-access-to-controls-in-a-dialog-box"></a>Bezpieczny dostęp do formantów w oknie dialogowym
-Kontrolki w oknie dialogowym można użyć interfejsów klasy formantów MFC takich jak `CListBox` i `CEdit`. Użytkownik może sam utworzyć obiekt formantu i dołączyć go do formantu w oknie dialogowym. Tak powstały formant będzie dostępny za pośrednictwem jego interfejsu klasy. W interfejsie można wywoływać funkcje składowe w celu wykonania różnych operacji na formancie. Opisane tutaj metody umożliwiają bezpieczny dostęp do formantu. Jest to szczególnie użyteczne w przypadku formantów takich jak pola listy i pola edycji.  
-  
- Istnieją dwa podejścia do nawiązywania połączenia między formantu w oknie dialogowym i zmiennej członkowskiej C++ kontroli w `CDialog`-klasy:  
-  
--   [Bez użycia kreatorów kodu](../mfc/type-safe-access-to-controls-without-code-wizards.md)  
-  
--   [Z użyciem kreatorów kodu](../mfc/type-safe-access-to-controls-with-code-wizards.md)  
-  
-## <a name="see-also"></a>Zobacz też  
- [Okna dialogowe](../mfc/dialog-boxes.md)
+
+Kontrolki w oknie dialogowym mogą używać interfejsów klas formantów biblioteki MFC w takich jak `CListBox` i `CEdit`. Użytkownik może sam utworzyć obiekt formantu i dołączyć go do formantu w oknie dialogowym. Tak powstały formant będzie dostępny za pośrednictwem jego interfejsu klasy. W interfejsie można wywoływać funkcje składowe w celu wykonania różnych operacji na formancie. Opisane tutaj metody umożliwiają bezpieczny dostęp do formantu. Jest to szczególnie użyteczne w przypadku formantów takich jak pola listy i pola edycji.
+
+Istnieją dwa sposoby nawiązywania połączenia między formantu w oknie dialogowym a zmienną składową formantu języka C++, w `CDialog`-klasy pochodnej:
+
+- [Bez użycia kreatorów kodu](../mfc/type-safe-access-to-controls-without-code-wizards.md)
+
+- [Za pomocą kreatorów kodu](../mfc/type-safe-access-to-controls-with-code-wizards.md)
+
+## <a name="see-also"></a>Zobacz też
+
+[Okna dialogowe](../mfc/dialog-boxes.md)
 

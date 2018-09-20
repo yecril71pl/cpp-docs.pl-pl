@@ -17,51 +17,53 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3ed941816824c77f14a3364b06af0b3da171ee8f
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 26345a95559000815ed7d2e2cc336892d619969b
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33373172"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46413747"
 ---
 # <a name="defining-a-message-handler-for-a-reflected-message"></a>Definiowanie obsługi komunikatów dla komunikatów odbitych
-Po utworzeniu nowej klasie formantów MFC można zdefiniować dla niego obsługi komunikatów. Programy obsługi komunikatów odbitych Zezwalaj Twojej klasy kontrolki do obsługi własnych wiadomości, zanim komunikat jest odbierany przez element nadrzędny. Można używać MFC [CWnd::SendMessage](../../mfc/reference/cwnd-class.md#sendmessage) funkcja do wysyłania wiadomości z formantu do okna nadrzędnego.  
-  
- Dzięki tej funkcji, które użytkownik może na przykład utworzyć pole listy, które spowoduje automatyczne odświeżenie zamiast polegania na okno nadrzędne, należy tak (rysowane przez właściciela). Aby uzyskać więcej informacji na komunikaty odbite, zobacz [obsługi wiadomości odzwierciedlone](../../mfc/handling-reflected-messages.md).  
-  
- Aby utworzyć [formantu ActiveX](../../mfc/activex-controls-on-the-internet.md) z tą samą funkcjonalnością, należy utworzyć projekt dla formantu ActiveX.  
-  
+
+Po utworzeniu nowej klasie formantów MFC można zdefiniować programy obsługi komunikatów dla niego. Programy obsługi komunikatów odbitych umożliwiają klasy kontrolki do obsługi własnej komunikaty zanim komunikat jest odbierany przez nadrzędne. Można używać MFC [CWnd::SendMessage](../../mfc/reference/cwnd-class.md#sendmessage) funkcja do wysyłania komunikatów z formantu do okna nadrzędnego.
+
+Dzięki tej funkcji, które można wykonać następujące akcje, na przykład utworzyć pole listy, które spowoduje automatyczne odświeżenie, zamiast polegać na okno nadrzędne zrobić tak (rysowane właściciela). Aby uzyskać więcej informacji na temat komunikaty odbite, zobacz [obsługi wiadomości zostaną uwzględnione](../../mfc/handling-reflected-messages.md).
+
+Aby utworzyć [formantu ActiveX](../../mfc/activex-controls-on-the-internet.md) z taką samą funkcjonalność, należy utworzyć projekt dla formantu ActiveX.
+
 > [!NOTE]
->  Nie można dodać komunikatów odbitych (ocm_ —*komunikat*) w przypadku ActiveX kontroli w oknie właściwości, zgodnie z poniższym opisem. Należy ręcznie dodać tych wiadomości.  
-  
-### <a name="to-define-a-message-handler-for-a-reflected-message-from-the-properties-window"></a>Aby zdefiniować program obsługi komunikatów dla komunikatów odbitych w oknie właściwości  
-  
-1.  Dodawanie formantu, takie jak listy, formantu paska pomocniczego, paska narzędzi lub formantem drzewa do projektu MFC.  
-  
-2.  W widoku klas kliknij nazwę klasy formantu.  
-  
-3.  W [okna właściwości](/visualstudio/ide/reference/properties-window), nazwą klasy formantu zostanie wyświetlony w **Nazwa klasy** listy.  
-  
-4.  Kliknij przycisk **wiadomości** przycisk, aby wyświetlić komunikaty systemu Windows, które można dodać do formantu.  
-  
-5.  Przewiń w dół listę komunikatów w oknie właściwości do momentu wyświetlenia pozycji **Reflected**. Możesz także kliknąć przycisk **kategorii** przycisk i zwijać widok, aby wyświetlić **Reflected** nagłówka.  
-  
-6.  Wybierz komunikatów odbitych, dla którego chcesz zdefiniować program obsługi. Komunikaty odbite są oznaczone znakiem równości (=).  
-  
-7.  Kliknij komórkę w prawej kolumnie w oknie właściwości, aby wyświetlić sugerowane nazwę programu obsługi jako \<Dodaj >*HandlerName*. (Na przykład **= wm_ctlcolor —** sugeruje obsługi wiadomości \<Dodaj >**CtlColor**).  
-  
-8.  Kliknij, aby zaakceptować. Program obsługi zostanie dodany do projektu.  
-  
-     W prawej kolumnie okna komunikaty odbite są wyświetlane nazwy obsługi komunikatów, które zostały dodane.  
-  
-9. Aby edytować lub usunąć program obsługi komunikatów, powtórz kroki od 4 do 7. Kliknij komórkę zawierającą nazwę programu obsługi, aby edytować lub usunąć i kliknij odpowiednie zadanie.  
-  
-## <a name="see-also"></a>Zobacz też  
- [Mapowanie komunikatów na funkcje](../../mfc/reference/mapping-messages-to-functions.md)   
- [Dodawanie funkcji z kreatorami kodów](../../ide/adding-functionality-with-code-wizards-cpp.md)   
- [Dodawanie klasy](../../ide/adding-a-class-visual-cpp.md)   
- [Dodawanie funkcji członkowskiej](../../ide/adding-a-member-function-visual-cpp.md)   
- [Dodawanie zmiennej członkowskiej](../../ide/adding-a-member-variable-visual-cpp.md)   
- [Zastępowanie funkcji wirtualnych](../../ide/overriding-a-virtual-function-visual-cpp.md)   
- [Handler komunikatów MFC](../../mfc/reference/adding-an-mfc-message-handler.md)   
- [Nawigacja w strukturze klas](../../ide/navigating-the-class-structure-visual-cpp.md)
+>  Nie można dodać komunikatów odbitych (ocm_ —*komunikat*) w przypadku ActiveX kontroli w oknie właściwości, zgodnie z poniższym opisem. Można ręcznie dodać te komunikaty.
+
+### <a name="to-define-a-message-handler-for-a-reflected-message-from-the-properties-window"></a>Aby zdefiniować program obsługi komunikatów dla komunikatów odbitych z okna właściwości
+
+1. Dodawanie kontrolki, takie jak listy, formantu paska pomocniczego, paska narzędzi lub formantem drzewa do projektu MFC.
+
+1. W widoku klas kliknij nazwę klasy kontrolki.
+
+1. W [okno właściwości](/visualstudio/ide/reference/properties-window), nazwa klasy kontrolki pojawia się w **Nazwa klasy** listy.
+
+1. Kliknij przycisk **wiadomości** przycisk, aby wyświetlić komunikaty Windows dostępnych do dodania do formantu.
+
+1. Przewiń w dół listę komunikatów w oknie dialogowym właściwości, aż zobaczysz nagłówek **Reflected**. Alternatywnie kliknij **kategorie** przycisk i zwijać widok, aby zobaczyć **Reflected** nagłówka.
+
+1. Wybierz komunikatów odbitych, dla którego chcesz zdefiniować program obsługi. Komunikaty odbite są oznaczone znakiem równości (=).
+
+1. Kliknij komórkę w prawej kolumnie w oknie dialogowym właściwości, aby wyświetlić sugerowane nazwę procedury obsługi jako \<Dodaj >*HandlerName*. (Na przykład **= wm_ctlcolor —** sugeruje obsługi wiadomości \<Dodaj >**CtlColor**).
+
+1. Kliknij przycisk sugerowanej nazwy, aby zaakceptować. Program obsługi jest dodawany do projektu.
+
+     W prawej kolumnie w oknie komunikaty odbite są wyświetlane nazwy programów obsługi komunikatów, które zostały dodane.
+
+9. Aby edytować lub usunąć program obsługi komunikatów, powtórz kroki od 4 do 7. Kliknij komórkę zawierającą nazwę programu obsługi w taki sposób, aby edytować lub usunąć i kliknij odpowiednie zadanie.
+
+## <a name="see-also"></a>Zobacz też
+
+[Mapowanie komunikatów do funkcji](../../mfc/reference/mapping-messages-to-functions.md)<br/>
+[Dodawanie funkcji za pomocą kreatorów kodu](../../ide/adding-functionality-with-code-wizards-cpp.md)<br/>
+[Dodawanie klasy](../../ide/adding-a-class-visual-cpp.md)<br/>
+[Dodawanie funkcji członkowskiej](../../ide/adding-a-member-function-visual-cpp.md)<br/>
+[Dodawanie zmiennej członkowskiej](../../ide/adding-a-member-variable-visual-cpp.md)<br/>
+[Zastępowanie funkcji wirtualnych](../../ide/overriding-a-virtual-function-visual-cpp.md)<br/>
+[Handler komunikatów MFC](../../mfc/reference/adding-an-mfc-message-handler.md)<br/>
+[Nawigacja w strukturze klas](../../ide/navigating-the-class-structure-visual-cpp.md)
