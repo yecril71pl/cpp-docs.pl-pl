@@ -1,5 +1,5 @@
 ---
-title: 'Formanty MFC ActiveX: Tworzenie serwera automatyzacji | Dokumentacja firmy Microsoft'
+title: 'Kontrolki ActiveX MFC: Tworzenie serwera automatyzacji | Dokumentacja firmy Microsoft'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,46 +16,48 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 617d84b8603467da74b21be8c2bfb2e6cb418f7b
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 5fa8370bb02e71c457f7967d5cb6b508e743333e
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33346766"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46373938"
 ---
 # <a name="mfc-activex-controls-creating-an-automation-server"></a>Kontrolki ActiveX MFC: tworzenie serwera automatyzacji
-Kontrolki MFC ActiveX można tworzyć jako serwer automatyzacji na potrzeby programowo osadzanie tego formantu w innej aplikacji i z aplikacji podczas wywoływania metody w formancie. Takie formantu pozostaje dostępny ma być obsługiwana w kontenerze formantów ActiveX.  
-  
-### <a name="to-create-a-control-as-an-automation-server"></a>Aby utworzyć formant jako serwer automatyzacji  
-  
-1.  [Utwórz](../mfc/reference/mfc-activex-control-wizard.md) formantu.  
-  
-2.  [Dodaj metody](../mfc/mfc-activex-controls-methods.md).  
-  
-3.  Zastąpienie [IsInvokeAllowed](../mfc/reference/colecontrol-class.md#isinvokeallowed). Aby uzyskać więcej informacji zobacz artykuł bazy wiedzy Knowledge Base Q146120.  
-  
-4.  Tworzenie formantu.  
-  
-### <a name="to-programmatically-access-the-methods-in-an-automation-server"></a>Do uzyskania programowego dostępu do metody w serwera automatyzacji  
-  
-1.  Tworzenie aplikacji, na przykład, [MFC exe](../mfc/reference/mfc-application-wizard.md).  
-  
-2.  Na początku `InitInstance` działać, Dodaj następujący wiersz:  
-  
-     [!code-cpp[NVC_MFC_AxCont#17](../mfc/codesnippet/cpp/mfc-activex-controls-creating-an-automation-server_1.cpp)]  
-  
-3.  W widoku klas, kliknij prawym przyciskiem myszy węzeł projektu i wybierz **dodawania klasy z typelib** do zaimportowania do biblioteki typów.  
-  
-     Spowoduje to dodanie pliki .h rozszerzenia nazwy pliku i .cpp do projektu.  
-  
-4.  W pliku nagłówka klasy, których wywoła co najmniej jednej metody w formancie ActiveX, Dodaj następujący wiersz: `#include filename.h`, gdzie nazwa pliku jest nazwą pliku nagłówka, który został utworzony podczas importowania biblioteki typów.  
-  
-5.  W funkcji, których nastąpi wywołanie do metody w formancie ActiveX Dodaj kod, który tworzy obiekt klasy otoki formantu i Utwórz obiekt ActiveX. Na przykład następujący kod MFC tworzy `CCirc` formant, który pobiera właściwości podpisu i wyświetla wynik po kliknięciu przycisku OK w oknie dialogowym:  
-  
-     [!code-cpp[NVC_MFC_AxCont#18](../mfc/codesnippet/cpp/mfc-activex-controls-creating-an-automation-server_2.cpp)]  
-  
- Jeśli dodasz metod do formantu ActiveX, po użyciu w aplikacji, możesz rozpocząć przy użyciu najnowszej wersji formantu w aplikacji, usuwając pliki, które zostały utworzone podczas importowania biblioteki typów. Następnie zaimportuj ponownie biblioteki typów.  
-  
-## <a name="see-also"></a>Zobacz też  
- [Kontrolki ActiveX MFC](../mfc/mfc-activex-controls.md)
+
+Kontrolki MFC ActiveX można tworzyć jako serwer automatyzacji na potrzeby programowo osadzania tę kontrolkę w innej aplikacji, a w przypadku wywoływania metod kontroli aplikacji. Kontrolka nadal będą dostępne hostowane w kontenerze kontrolek ActiveX.
+
+### <a name="to-create-a-control-as-an-automation-server"></a>Aby utworzyć kontrolkę jako serwer automatyzacji
+
+1. [Utwórz](../mfc/reference/mfc-activex-control-wizard.md) formantu.
+
+1. [Dodaj metody](../mfc/mfc-activex-controls-methods.md).
+
+1. Zastąp [IsInvokeAllowed](../mfc/reference/colecontrol-class.md#isinvokeallowed). Aby uzyskać więcej informacji zobacz artykuł bazy wiedzy Q146120.
+
+1. Kompiluj wersję.
+
+### <a name="to-programmatically-access-the-methods-in-an-automation-server"></a>Aby uzyskać programowy dostęp do metod w serwera automatyzacji
+
+1. Utwórz aplikację, na przykład, [MFC exe](../mfc/reference/mfc-application-wizard.md).
+
+1. Na początku `InitInstance` funkcji, Dodaj następujący wiersz:
+
+     [!code-cpp[NVC_MFC_AxCont#17](../mfc/codesnippet/cpp/mfc-activex-controls-creating-an-automation-server_1.cpp)]
+
+1. W widoku klas kliknij prawym przyciskiem myszy węzeł projektu, a następnie wybierz **dodawania klasy z typelib** do importowania biblioteki typów.
+
+     Spowoduje to dodanie plików .cpp i .h rozszerzenia nazwy pliku do projektu.
+
+1. W pliku nagłówkowym klasy, gdzie będzie wywoływać co najmniej jednej metody w formancie ActiveX, Dodaj następujący wiersz: `#include filename.h`, gdzie nazwa pliku to nazwa pliku nagłówkowego, który został utworzony podczas importowania biblioteki typów.
+
+1. W funkcji, w którym nastąpi wywołanie do metody w formancie ActiveX Dodaj kod, który tworzy obiekt klasy otoki kontrolki i Utwórz obiekt ActiveX. Na przykład, poniższy kod MFC tworzy `CCirc` formant, który pobiera właściwości podpisu i wyświetla wynik, po kliknięciu przycisku OK w oknie dialogowym:
+
+     [!code-cpp[NVC_MFC_AxCont#18](../mfc/codesnippet/cpp/mfc-activex-controls-creating-an-automation-server_2.cpp)]
+
+Jeśli dodasz metody do formantu ActiveX, zostanie użyta w aplikacji, możesz rozpocząć korzystanie z najnowszej wersji kontroli w aplikacji, usuwając pliki, które zostały utworzone podczas importowania biblioteki typów. Następnie ponownie zaimportuj bibliotekę typów.
+
+## <a name="see-also"></a>Zobacz też
+
+[Kontrolki ActiveX MFC](../mfc/mfc-activex-controls.md)
 

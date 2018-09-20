@@ -19,22 +19,24 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2398f1e775dfa8b9331a4abc0137207c85531aff
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 0804397888d64ac5b6cab9a60f9912b27358bc43
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33385073"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46373324"
 ---
 # <a name="root-class-cobject"></a>Klasa główna: CObject
-Większość klas w bibliotece Microsoft Foundation Class (MFC) są uzyskiwane z jednej klasy podstawowej w katalogu głównym hierarchii klas. `CObject` udostępnia szereg możliwości przydatne do wszystkich klas pochodnych, z bardzo niskie obciążenie. Aby uzyskać więcej informacji na temat `CObject` i jego możliwości, zobacz [CObject za pomocą](../mfc/using-cobject.md).  
-  
- [CObject](../mfc/reference/cobject-class.md)  
- Klasa podstawowa ultimate większość klas MFC. Obsługuje serializację danych i środowiska wykonawczego informacji o klasie.  
-  
- [CRuntimeClass](../mfc/reference/cruntimeclass-structure.md)  
- Struktura umożliwia określenie dokładnej klasy obiektu w czasie wykonywania.  
-  
-## <a name="see-also"></a>Zobacz też  
- [Przegląd klas](../mfc/class-library-overview.md)
+
+Większość klas w bibliotece Microsoft Foundation Class (MFC) są uzyskiwane z jednej klasy bazowej, w katalogu głównym hierarchii klas. `CObject` udostępnia wiele możliwości przydatne wszystkie klasy pochodne od niego, z bardzo niskie obciążenie. Aby uzyskać więcej informacji na temat `CObject` i jego możliwości, zobacz [CObject za pomocą](../mfc/using-cobject.md).
+
+[CObject](../mfc/reference/cobject-class.md)<br/>
+Klasa bazowa ultimate większości klas MFC. Obsługa serializacji danych i uzyskiwania środowiska wykonawczego informacji na temat klasy.
+
+[CRuntimeClass](../mfc/reference/cruntimeclass-structure.md)<br/>
+Struktura używana do określenia dokładnego klasę obiektu w czasie wykonywania.
+
+## <a name="see-also"></a>Zobacz też
+
+[Klasa — Przegląd](../mfc/class-library-overview.md)
 

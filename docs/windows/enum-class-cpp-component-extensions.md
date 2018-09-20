@@ -13,12 +13,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 72c312bdec9248cdc38150163d914b2ac7036ab8
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: 993f0e190d87b140fba0008872d57f2a34b6a5cb
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45711090"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46377269"
 ---
 # <a name="enum-class--c-component-extensions"></a>enum class (C++ Component Extensions)
 
@@ -44,23 +44,23 @@ accessenum structenumeration-identifier[:underlying-type] { enumerator-list } [v
 
 ### <a name="parameters"></a>Parametry
 
-*Dostęp do*  
+*Dostęp do*<br/>
 Dostępność wyliczenia, które mogą być **publicznych** lub **prywatnej**.
 
-*Identyfikator wyliczenia*  
+*Identyfikator wyliczenia*<br/>
 Nazwa wyliczenia.
 
-*Typ podstawowy*  
+*Typ podstawowy*<br/>
 (Opcjonalnie) Podstawowy typ wyliczenia.
 
 (Opcjonalnie. Tylko Windows Runtime) podstawowym typem wyliczenia, które mogą być **bool**, **char**, `char16`, `int16`, `uint16`, **int**, `uint32`, `int64`, lub `uint64`.
 
-*Moduł wyliczający listę*  
+*Moduł wyliczający listę*<br/>
 Rozdzielana przecinkami lista nazw wyliczania.
 
 Wartość każdy moduł wyliczający jest wyrażeniem stałym, zdefiniowanego albo niejawnie przez kompilator, lub jawnie przez notacji, *modułu wyliczającego*`=`*wyrażenie_stałe*. Domyślnie wartość modułu wyliczającego pierwszego wynosi zero, jeśli jest niejawnie definiowany. Wartość każdej kolejnej modułu wyliczającego niejawnie definiowany jest wartość poprzedniego enumeratora + 1.
 
-*var*  
+*var*<br/>
 (Opcjonalnie) Nazwa zmiennej typu wyliczenia.
 
 ### <a name="remarks"></a>Uwagi
@@ -92,19 +92,19 @@ accessenum structname [:type] { enumerator-list } var;
 
 ### <a name="parameters"></a>Parametry
 
-*Dostęp do*  
+*Dostęp do*<br/>
 Dostępność wyliczenia. Może być **publicznych** lub **prywatnej**.
 
-*Moduł wyliczający listę*  
+*Moduł wyliczający listę*<br/>
 Rozdzielana przecinkami lista identyfikatorów (moduły wyliczające), która znajduje się w wyliczeniu.
 
-*Nazwa*  
+*Nazwa*<br/>
 Nazwa wyliczenia. Anonimowe wyliczenia zarządzane nie są dozwolone.
 
-*Typ*  
+*Typ*<br/>
 (Opcjonalnie) Typ podstawowy elementu *identyfikatory*. Może to być dowolny typ skalarne, takie jak podpisane lub niepodpisane wersje **int**, **krótki**, lub **długie**.  **wartość logiczna** lub **char** jest również dozwolony.
 
-*var*  
+*var*<br/>
 (Opcjonalnie) Nazwa zmiennej typu wyliczenia.
 
 ### <a name="remarks"></a>Uwagi

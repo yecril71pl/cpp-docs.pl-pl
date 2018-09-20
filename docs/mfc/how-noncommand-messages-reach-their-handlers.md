@@ -17,18 +17,20 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3999c74bf7a612acb998e7a044c12948d7679d9b
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: b5c38a1d4294993170cfeff64be6a83700fa7497
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33343885"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46373441"
 ---
 # <a name="how-noncommand-messages-reach-their-handlers"></a>Jak komunikaty niebędące poleceniami docierają do swoich programów obsługi
-W odróżnieniu od polecenia standardowe komunikaty systemu Windows nie pobrać kierowane do celów podporządkowania, ale są zazwyczaj obsługiwane przez okno, do której system Windows wysyła wiadomość. Okno może być główne okno ramowe, podrzędnego okna MDI, formantu standardowego, okno dialogowe, widoku lub innego rodzaju okna podrzędnego.  
-  
- W czasie wykonywania, każde okno systemu Windows jest dołączony do obiektu okna (pochodzi bezpośrednio lub pośrednio od `CWnd`) mający własną skojarzone mapy i obsługi funkcji obsługi wiadomości. Platforma korzysta z mapy komunikatów — podobnie jak w przypadku polecenia — do mapowania obsługi wiadomości przychodzących.  
-  
-## <a name="see-also"></a>Zobacz też  
- [Jak struktura wywołuje programy obsługi](../mfc/how-the-framework-calls-a-handler.md)
+
+W przeciwieństwie do poleceń standardowe komunikaty Windows nie uzyskać kierowane za pośrednictwem cele podporządkowania, ale są zazwyczaj obsługiwane przez okno, do którego Windows wysyła wiadomość. Okno może być ramką głównego okna, okno podrzędne MDI, kontrolki standardowej, okno dialogowe, widoku lub innego rodzaju okna podrzędnego.
+
+W czasie wykonywania, każde okno Windows jest dołączony do obiektu okna (pochodzi bezpośrednio lub pośrednio z `CWnd`) ma własne skojarzone mapy oraz obsługi funkcji obsługi wiadomości. Środowisko wykorzystuje mapy komunikatów — jak w przypadku polecenia — do mapowania obsługi wiadomości przychodzących.
+
+## <a name="see-also"></a>Zobacz też
+
+[Jak struktura wywołuje programy obsługi](../mfc/how-the-framework-calls-a-handler.md)
 

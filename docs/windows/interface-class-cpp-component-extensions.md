@@ -18,12 +18,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 775fbe39edc9478b1fce3afb39ee2bf1f6d5ed36
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: 0c7ebdf83730b661cbd855ba730da1abeee936c5
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45714314"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46377074"
 ---
 # <a name="interface-class--c-component-extensions"></a>interface class (C++ Component Extensions)
 
@@ -36,21 +36,21 @@ Deklaruje interfejsu.  Informacje na temat interfejsy macierzyste można zobaczy
 ```cpp
 interface_access
 interface class
- name :  inherit_accessbase_interface{};interface_accessinterface structname :  inherit_accessbase_interface{};
+name :  inherit_accessbase_interface{};interface_accessinterface structname :  inherit_accessbase_interface{};
 ```
 
 ### <a name="parameters"></a>Parametry
 
-*interface_access*  
+*interface_access*<br/>
 Dostępność interfejs spoza zestawu.  Możliwe wartości to **publicznych** i **prywatnej**.  **prywatne** jest ustawieniem domyślnym. Zagnieżdżone interfejsy nie mogą mieć *interface_access* specyfikator.
 
-*Nazwa*  
+*Nazwa*<br/>
 Nazwa interfejsu.
 
-*inherit_access*  
+*inherit_access*<br/>
 Dostępność *base_interface*.  Jedyna dozwolona w ułatwienia dostępu przypadku interfejs podstawowy **publicznych** (ustawienie domyślne).
 
-*base_interface*  
+*base_interface*<br/>
 (Opcjonalnie) Podstawowy interfejs dla interfejsu *nazwa*.
 
 ### <a name="remarks"></a>Uwagi

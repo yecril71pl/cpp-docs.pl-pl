@@ -12,38 +12,39 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8e48f299e66ed1b4c075757a9cd143d0afe897db
-ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
+ms.openlocfilehash: d15cbbf60609208a200bd73536d0ebdc8a714f7e
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33693146"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46373506"
 ---
 # <a name="f-new-features-and-clarifications-in-version-20"></a>F. Nowe funkcje i wyjaśnienia w wersji 2.0
-Ten dodatek zawiera podsumowanie klucza zmiany wprowadzone w specyfikacji OpenMP C/C++ podczas przenoszenia z wersji 1.0 w wersji 2.0. Nowe funkcje dodane w specyfikacji są następujące elementy:  
-  
--   Przecinki są dozwolone w OpenMP — dyrektywy ([2.1 sekcji](../../parallel/openmp/2-1-directive-format.md) na stronie 7).  
-  
--   Dodanie `num_threads` klauzuli. Klauzulę pozwala użytkownikowi na żądanie określoną liczbę wątków dla konstrukcji równoległe ([2.3 sekcji](../../parallel/openmp/2-3-parallel-construct.md) na stronie 8).  
-  
--   `threadprivate` Dyrektywy wzbogacono zmienne statyczne zakresem bloku ([sekcji 2.7.1](../../parallel/openmp/2-7-1-threadprivate-directive.md) na stronie 23).  
-  
--   C99 zmiennej długości tablic są kompletne typy i w związku z tym można określić dowolne miejsce pełną są dozwolone typy, na przykład w wykazie `private`, `firstprivate`, i `lastprivate` klauzule ([sekcji 2.7.2](../../parallel/openmp/2-7-2-data-sharing-attribute-clauses.md) na stronie 25).  
-  
--   Zmiennej prywatnej w równoległego regionu można oznaczyć jako prywatny ponownie w zagnieżdżonych dyrektywy ([sekcji 2.7.2.1](../../parallel/openmp/2-7-2-1-private.md) na stronie 25).  
-  
--   `copyprivate` Klauzuli został dodany. Zapewnia mechanizm na potrzeby zmiennej prywatnej emisji wartość z jednego członka do zespołu do innych elementów członkowskich. Jest to alternatywa dla użycia udostępniona zmienna wartości, gdy dostarczanie udostępniona zmienna jest trudna (na przykład w rekursją wymagające innej zmiennej na każdym poziomie). `copyprivate` Klauzula może występować tylko w **pojedynczego** — dyrektywa ([sekcji 2.7.2.8](../../parallel/openmp/2-7-2-8-copyprivate.md) na stronie 32).  
-  
--   Dodanie procedury chronometrażu `omp_get_wtick` i `omp_get_wtime` podobne do procedury MPI. Funkcje te są niezbędne do wykonywania wall zegara chronometrażu ([sekcji 3.3.1](../../parallel/openmp/3-3-1-omp-get-wtime-function.md) na stronie 44 i [sekcji 3.3.2](../../parallel/openmp/3-3-2-omp-get-wtick-function.md) na stronie 45).  
-  
--   Dodatek z listy zdefiniowane w implementacji zachowania w OpenMP C/C++ został dodany. Implementacja jest wymagana do definiowania i jego zachowanie w tych przypadkach dokumentu ([E dodatku](../../parallel/openmp/e-implementation-defined-behaviors-in-openmp-c-cpp.md) na stronie 97).  
-  
--   Następujące zmiany służą do wyjaśnienia lub Popraw funkcje w poprzedniej specyfikacji interfejsu API OpenMP dla C/C++:  
-  
-    -   Wyjaśniono, że zachowanie `omp_set_nested` i `omp_set_dynamic` podczas `omp_in_parallel` zdefiniowano zwraca różną od zera ([sekcji 3.1.7](../../parallel/openmp/3-1-7-omp-set-dynamic-function.md) na stronie 39 i [sekcji 3.1.9](../../parallel/openmp/3-1-9-omp-set-nested-function.md) na stronie 40).  
-  
-    -   Wyjaśniono zagnieżdżanie dyrektywy stosowania zagnieżdżonych równoległe ([2.9 sekcji](../../parallel/openmp/2-9-directive-nesting.md) na stronie 33).  
-  
-    -   Funkcje zniszczenie blokady i inicjowania blokady może zostać wywołany w równoległego regionu ([sekcji 3.2.1](../../parallel/openmp/3-2-1-omp-init-lock-and-omp-init-nest-lock-functions.md) na stronie 42 i [sekcji 3.2.2](../../parallel/openmp/3-2-2-omp-destroy-lock-and-omp-destroy-nest-lock-functions.md) na stronie 42).  
-  
-    -   Dodano nowe przykłady ([dodatek a.](../../parallel/openmp/a-examples.md) na stronie 51).
+
+Ten dodatek zawiera podsumowanie kluczowych zmiany wprowadzone do specyfikacji OpenMP C/C++ podczas przenoszenia w wersji 1.0 do wersji 2.0. Nowe funkcje dodane do specyfikacji są następujące elementy:
+
+- Przecinki są dozwolone w OpenMP — dyrektywy ([sekcji 2.1](../../parallel/openmp/2-1-directive-format.md) na stronie 7).
+
+- Dodanie `num_threads` klauzuli. Ta klauzula pozwala użytkownikowi na żądanie po upływie określonej liczby wątków równoległych konstrukcji ([2.3 sekcji](../../parallel/openmp/2-3-parallel-construct.md) na stronie 8).
+
+- `threadprivate` Dyrektywa został rozszerzony o zaakceptowanie zmiennych statycznych zasięgiem bloku ([sekcji 2.7.1](../../parallel/openmp/2-7-1-threadprivate-directive.md) na stronie 23).
+
+- C99 zmiennej długości tablice są typami pełnymi i ten sposób można określić dowolnym typami pełnymi są dozwolone, na przykład na liście `private`, `firstprivate`, i `lastprivate` klauzule ([sekcji 2.7.2](../../parallel/openmp/2-7-2-data-sharing-attribute-clauses.md) na stronie 25).
+
+- Prywatna zmienna w regionie równoległe mogą zostać oznaczone jako prywatne ponownie w ramach zagnieżdżonych — dyrektywa ([sekcji 2.7.2.1](../../parallel/openmp/2-7-2-1-private.md) na stronie 25).
+
+- `copyprivate` Klauzuli został dodany. Zapewnia mechanizm na potrzeby emisji wartości z jednego członka zespołu do innych członków zmienną prywatną. Jest to alternatywa dla użycia w udostępnionej zmiennej wartości, gdy dostarczanie w udostępnionej zmiennej może sprawiać trudności (na przykład w rekursji, wymagających inną zmienną na każdym poziomie). `copyprivate` Klauzuli może się pojawić tylko **pojedynczego** — dyrektywa ([sekcji 2.7.2.8](../../parallel/openmp/2-7-2-8-copyprivate.md) na stronie 32).
+
+- Dodawanie procedury chronometrażu `omp_get_wtick` i `omp_get_wtime` podobna do procedury MPI. Te funkcje są niezbędne do wykonywania chronometrażu zegara tablicy ([sekcji 3.3.1](../../parallel/openmp/3-3-1-omp-get-wtime-function.md) na stronie 44 i [sekcji 3.3.2](../../parallel/openmp/3-3-2-omp-get-wtick-function.md) na stronie 45 dni).
+
+- Dodano załącznik z listą zachowania zdefiniowane w implementacji programie OpenMP C/C++. Implementacja jest wymagana do definiowania i zarządzania dokumentami jego zachowanie w takich przypadkach ([dodatku E](../../parallel/openmp/e-implementation-defined-behaviors-in-openmp-c-cpp.md) na stronie 97).
+
+- Następujące zmiany służą do wyjaśnienia lub Popraw funkcji w poprzednim specyfikacji OpenMP API dla języka C/C++:
+
+   - Wyjaśniono, że zachowanie `omp_set_nested` i `omp_set_dynamic` podczas `omp_in_parallel` zwraca wartość różną od zera jest niezdefiniowana ([sekcji 3.1.7](../../parallel/openmp/3-1-7-omp-set-dynamic-function.md) na stronie 39 i [sekcji 3.1.9](../../parallel/openmp/3-1-9-omp-set-nested-function.md) na stronie 40).
+
+   - Wyjaśniono zagnieżdżanie dyrektywy stosowania zagnieżdżonych równoległego ([2.9 sekcji](../../parallel/openmp/2-9-directive-nesting.md) na stronie 33).
+
+   - Funkcje zniszczenie inicjowania i blokadę przy użyciu blokady może zostać wywołany w równoległego regionu ([sekcji 3.2.1](../../parallel/openmp/3-2-1-omp-init-lock-and-omp-init-nest-lock-functions.md) na stronie 42 i [sekcji 3.2.2](../../parallel/openmp/3-2-2-omp-destroy-lock-and-omp-destroy-nest-lock-functions.md) na stronie 42).
+
+   - Dodano nowe przykłady ([dodatek a.](../../parallel/openmp/a-examples.md) na stronie 51).

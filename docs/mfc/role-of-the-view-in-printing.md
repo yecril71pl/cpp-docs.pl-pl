@@ -19,24 +19,26 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5735a718e353764ad8578548c965ae8a4dcd1843
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 4c78756ea84df66b77f71d8f8ad8d0b9dfa1a6c9
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33379258"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46377529"
 ---
 # <a name="role-of-the-view-in-printing"></a>Rola widoku w drukowaniu
-Widok pełni również dwie role ważne w drukowaniu jego skojarzonego dokumentu.  
-  
- Widok:  
-  
--   Taki sam używa [OnDraw](../mfc/reference/cview-class.md#ondraw) kod, aby narysować na drukarce, aby zwrócić na ekranie.  
-  
--   Zarządza podziału dokumentu do strony do drukowania.  
-  
- Aby uzyskać więcej informacji na temat drukowania oraz rola widoku w drukowaniu, zobacz [drukowania i podglądu wydruku](../mfc/printing-and-print-preview.md).  
-  
-## <a name="see-also"></a>Zobacz też  
- [Używanie widoków](../mfc/using-views.md)
+
+Widok również odgrywa dwie ważne role w drukowaniu jego skojarzonego dokumentu.
+
+Widok:
+
+- Używa tych samych [OnDraw](../mfc/reference/cview-class.md#ondraw) kod, aby rysować na drukarce, aby rysować na ekranie.
+
+- Zarządza podziału dokumentu do strony do drukowania.
+
+Aby uzyskać więcej informacji na temat drukowania oraz rola widoku w drukowaniu, zobacz [drukowania i podglądu wydruku](../mfc/printing-and-print-preview.md).
+
+## <a name="see-also"></a>Zobacz też
+
+[Używanie widoków](../mfc/using-views.md)
 

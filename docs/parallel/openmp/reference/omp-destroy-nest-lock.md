@@ -16,34 +16,38 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 37ac75158705a26b10b077652f51396dcd591740
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 1d5cb4e985c82bec859959f374ffe35f33548228
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46104052"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46377256"
 ---
 # <a name="ompdestroynestlock"></a>omp_destroy_nest_lock
-Deinicjuje blokadą.  
-  
-## <a name="syntax"></a>Składnia  
-  
-```  
-void omp_destroy_nest_lock(  
-   omp_nest_lock_t *lock  
-);  
-```  
-  
+
+Deinicjuje blokadą.
+
+## <a name="syntax"></a>Składnia
+
+```
+void omp_destroy_nest_lock(
+   omp_nest_lock_t *lock
+);
+```
+
 ### <a name="parameters"></a>Parametry
-  
+
 *lock*<br/>
-Zmienna typu [omp_nest_lock_t](../../../parallel/openmp/reference/omp-nest-lock-t.md) , została zainicjowana przy użyciu [omp_init_nest_lock](../../../parallel/openmp/reference/omp-init-nest-lock.md).  
-  
-## <a name="remarks"></a>Uwagi  
- Aby uzyskać więcej informacji, zobacz [3.2.2 funkcje omp_destroy_lock i omp_destroy_nest_lock funkcji](../../../parallel/openmp/3-2-2-omp-destroy-lock-and-omp-destroy-nest-lock-functions.md).  
-  
-## <a name="example"></a>Przykład  
- Zobacz [omp_init_nest_lock](../../../parallel/openmp/reference/omp-init-nest-lock.md) na przykład za pomocą `omp_destroy_nest_lock`.  
-  
-## <a name="see-also"></a>Zobacz też  
- [Funkcje](../../../parallel/openmp/reference/openmp-functions.md)
+Zmienna typu [omp_nest_lock_t](../../../parallel/openmp/reference/omp-nest-lock-t.md) , została zainicjowana przy użyciu [omp_init_nest_lock](../../../parallel/openmp/reference/omp-init-nest-lock.md).
+
+## <a name="remarks"></a>Uwagi
+
+Aby uzyskać więcej informacji, zobacz [3.2.2 funkcje omp_destroy_lock i omp_destroy_nest_lock funkcji](../../../parallel/openmp/3-2-2-omp-destroy-lock-and-omp-destroy-nest-lock-functions.md).
+
+## <a name="example"></a>Przykład
+
+Zobacz [omp_init_nest_lock](../../../parallel/openmp/reference/omp-init-nest-lock.md) na przykład za pomocą `omp_destroy_nest_lock`.
+
+## <a name="see-also"></a>Zobacz też
+
+[Funkcje](../../../parallel/openmp/reference/openmp-functions.md)

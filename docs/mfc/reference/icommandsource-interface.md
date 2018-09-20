@@ -27,50 +27,54 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 375d4135e4042abbd6aee6fc547640d78a33ce0d
-ms.sourcegitcommit: 6408139d5f5ff8928f056bde93d20eecb3520361
+ms.openlocfilehash: 5071f2c6f00b3cc4aaf09974a01c4601d0078e42
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37335776"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46377966"
 ---
 # <a name="icommandsource-interface"></a>Klasa Icommandsource
-Zarządza polecenia wysyłane z obiektu źródła polecenia do kontrolki użytkownika.  
-  
-## <a name="syntax"></a>Składnia  
-  
-```  
-interface class ICommandSource  
-```  
-  
-## <a name="members"></a>Elementy członkowskie  
-  
-### <a name="public-methods"></a>Metody publiczne  
-  
-|Nazwa|Opis|  
-|----------|-----------------|  
-|[ICommandSource::AddCommandHandler](#addcommandhandler)|Dodaje procedurę obsługi poleceń do obiektu źródła polecenia.|  
-|[ICommandSource::AddCommandRangeHandler](#addcommandrangehandler)|Dodaje grupę programy obsługi poleceń do obiektu źródła polecenia.|  
-|[ICommandSource::AddCommandRangeUIHandler](#addcommandrangeuihandler)|Dodaje grupę obsługi komunikatów poleceń interfejsu użytkownika do obiektu źródła polecenia.|  
-|[ICommandSource::AddCommandUIHandler](#addcommandrangeuihandler)|Dodaje program obsługi komunikatów poleceń interfejsu użytkownika do obiektu źródła polecenia.|  
-|[ICommandSource::PostCommand](#postcommand)|Publikuje komunikat bez oczekiwania na przetworzenie.|  
-|[ICommandSource::RemoveCommandHandler](#removecommandhandler)|Usuwa procedurę obsługi poleceń z obiektu źródła polecenia.|  
-|[ICommandSource::RemoveCommandRangeHandler](#removecommandrangehandler)|Usuwa grupę programy obsługi poleceń z obiektu źródła polecenia.|  
-|[ICommandSource::RemoveCommandRangeUIHandler](#removecommandrangeuihandler)|Usuwa grupę obsługi komunikatów poleceń interfejsu użytkownika z obiektu źródła polecenia.|  
-|[ICommandSource::RemoveCommandUIHandler](#removecommandrangeuihandler)|Usuwa obsługi komunikatów poleceń interfejsu użytkownika z obiektu źródła polecenia.|  
-|[ICommandSource::SendCommand](#sendcommand)|Wysyła komunikat i czeka na jego przetworzenie przed zwróceniem.|  
-  
-### <a name="remarks"></a>Uwagi  
- Hostowanie kontrolki użytkownika w widoku MFC [klasa CWinFormsView](../../mfc/reference/cwinformsview-class.md) polecenia tras i aktualizacja poleceń interfejsu użytkownika wiadomości do formantu użytkownika, aby zezwalała na obsługę jego poleceń MFC (na przykład ramek elementów menu i przycisków paska narzędzi). Implementując [klasa Icommandtarget](../../mfc/reference/icommandtarget-interface.md), podać odwołanie do formantu użytkownika `ICommandSource` obiektu.  
-  
- Zobacz [porady: Dodawanie routingu poleceń do formantu programu Windows Forms](../../dotnet/how-to-add-command-routing-to-the-windows-forms-control.md) przykład sposobu użycia `ICommandTarget`.  
-  
- Aby uzyskać więcej informacji na temat korzystania z Windows Forms, zobacz [za pomocą kontrolki użytkownika formularza Windows w MFC](../../dotnet/using-a-windows-form-user-control-in-mfc.md).  
-  
-### <a name="requirements"></a>Wymagania  
- **Nagłówek:** afxwinforms.h (zdefiniowany w zestawie atlmfc\lib\mfcmifc80.dll)  
-  
+
+Zarządza polecenia wysyłane z obiektu źródła polecenia do kontrolki użytkownika.
+
+## <a name="syntax"></a>Składnia
+
+```
+interface class ICommandSource
+```
+
+## <a name="members"></a>Elementy członkowskie
+
+### <a name="public-methods"></a>Metody publiczne
+
+|Nazwa|Opis|
+|----------|-----------------|
+|[ICommandSource::AddCommandHandler](#addcommandhandler)|Dodaje procedurę obsługi poleceń do obiektu źródła polecenia.|
+|[ICommandSource::AddCommandRangeHandler](#addcommandrangehandler)|Dodaje grupę programy obsługi poleceń do obiektu źródła polecenia.|
+|[ICommandSource::AddCommandRangeUIHandler](#addcommandrangeuihandler)|Dodaje grupę obsługi komunikatów poleceń interfejsu użytkownika do obiektu źródła polecenia.|
+|[ICommandSource::AddCommandUIHandler](#addcommandrangeuihandler)|Dodaje program obsługi komunikatów poleceń interfejsu użytkownika do obiektu źródła polecenia.|
+|[ICommandSource::PostCommand](#postcommand)|Publikuje komunikat bez oczekiwania na przetworzenie.|
+|[ICommandSource::RemoveCommandHandler](#removecommandhandler)|Usuwa procedurę obsługi poleceń z obiektu źródła polecenia.|
+|[ICommandSource::RemoveCommandRangeHandler](#removecommandrangehandler)|Usuwa grupę programy obsługi poleceń z obiektu źródła polecenia.|
+|[ICommandSource::RemoveCommandRangeUIHandler](#removecommandrangeuihandler)|Usuwa grupę obsługi komunikatów poleceń interfejsu użytkownika z obiektu źródła polecenia.|
+|[ICommandSource::RemoveCommandUIHandler](#removecommandrangeuihandler)|Usuwa obsługi komunikatów poleceń interfejsu użytkownika z obiektu źródła polecenia.|
+|[ICommandSource::SendCommand](#sendcommand)|Wysyła komunikat i czeka na jego przetworzenie przed zwróceniem.|
+
+### <a name="remarks"></a>Uwagi
+
+Hostowanie kontrolki użytkownika w widoku MFC [klasa CWinFormsView](../../mfc/reference/cwinformsview-class.md) polecenia tras i aktualizacja poleceń interfejsu użytkownika wiadomości do formantu użytkownika, aby zezwalała na obsługę jego poleceń MFC (na przykład ramek elementów menu i przycisków paska narzędzi). Implementując [klasa Icommandtarget](../../mfc/reference/icommandtarget-interface.md), podać odwołanie do formantu użytkownika `ICommandSource` obiektu.
+
+Zobacz [porady: Dodawanie routingu poleceń do formantu programu Windows Forms](../../dotnet/how-to-add-command-routing-to-the-windows-forms-control.md) przykład sposobu użycia `ICommandTarget`.
+
+Aby uzyskać więcej informacji na temat korzystania z Windows Forms, zobacz [za pomocą kontrolki użytkownika formularza Windows w MFC](../../dotnet/using-a-windows-form-user-control-in-mfc.md).
+
+### <a name="requirements"></a>Wymagania
+
+**Nagłówek:** afxwinforms.h (zdefiniowany w zestawie atlmfc\lib\mfcmifc80.dll)
+
 ## <a name="addcommandhandler"></a>  ICommandSource::AddCommandHandler
+
 Dodaje procedurę obsługi poleceń do obiektu źródła polecenia.
 ```
 void AddCommandHandler(
@@ -78,13 +82,15 @@ void AddCommandHandler(
     CommandHandler^ cmdHandler);
 ```
 
-### <a name="parameters"></a>Parametry  
-*cmdID*  
-Identyfikator polecenia.  
-*cmdHandler*  
+### <a name="parameters"></a>Parametry
+
+*cmdID*<br/>
+Identyfikator polecenia.
+*cmdHandler*<br/>
 Dojście do metody obsługi polecenia.
 
 ### <a name="remarks"></a>Uwagi
+
 Ta metoda dodaje cmdHandler obsługi polecenia do obiektu źródła polecenia i mapuje cmdID program obsługi.
 Zobacz [porady: Dodawanie routingu poleceń do formantu programu Windows Forms](../../dotnet/how-to-add-command-routing-to-the-windows-forms-control.md) przykład sposobu użycia AddCommandHandler.
 
@@ -97,76 +103,91 @@ void AddCommandRangeHandler(
     unsigned int cmdIDMax,
     CommandHandler^ cmdHandler);
 ```
-### <a name="parameters"></a>Parametry  
-*cmdIDMin*  
+### <a name="parameters"></a>Parametry
+
+*cmdIDMin*<br/>
 Indeks początkowy zakresu Identyfikatora polecenia.
-*cmdIDMax*  
+*cmdIDMax*<br/>
 Końcowy indeks zakres Identyfikatora polecenia.
-*cmdHandler*  
+*cmdHandler*<br/>
 Dojście do metody obsługi wiadomości, do której polecenia są zamapowane.
 ### <a name="remarks"></a>Uwagi
+
 Ta metoda mapuje ciągły zakres identyfikatorów poleceń do obsługi komunikatów w jednym i dodaje go do obiektu źródła polecenia. Służy to do obsługi grupy przycisków powiązane z jedną z metod.
 
 ## <a name="addcommandrangeuihandler"></a> ICommandSource::AddCommandRangeUIHandler
+
 Dodaje grupę obsługi komunikatów poleceń interfejsu użytkownika do obiektu źródła polecenia.
 ```
 void AddCommandRangeUIHandler(
-    unsigned int cmdIDMin, 
-    unsigned int cmdIDMax, 
-    CommandUIHandler^ cmdUIHandler);
-```
-### <a name="parameters"></a>Parametry  
-*cmdIDMin*  
-Indeks początkowy zakresu Identyfikatora polecenia.
-*cmdIDMax*  
-Końcowy indeks zakres Identyfikatora polecenia.
-*cmdHandler*  
-Dojście do metody obsługi wiadomości, do której polecenia są zamapowane.
-
-### <a name="remarks"></a>Uwagi
-Ta metoda mapuje ciągły zakres identyfikatorów poleceń do obsługi komunikatów poleceń interfejsu pojedynczego użytkownika i dodaje go do obiektu źródła polecenia. Służy to do obsługi grupy przycisków powiązane z jedną z metod.
-
-## <a name="addcommanduihandler"></a> ICommandSource::AddCommandUIHandler
-Dodaje program obsługi komunikatów poleceń interfejsu użytkownika do obiektu źródła polecenia.
-```
-void AddCommandUIHandler(
-    unsigned int cmdID, 
+    unsigned int cmdIDMin,
+    unsigned int cmdIDMax,
     CommandUIHandler^ cmdUIHandler);
 ```
 ### <a name="parameters"></a>Parametry
-*cmdID*  
-Identyfikator polecenia.  
-*cmdUIHandler*  
+
+*cmdIDMin*<br/>
+Indeks początkowy zakresu Identyfikatora polecenia.
+*cmdIDMax*<br/>
+Końcowy indeks zakres Identyfikatora polecenia.
+*cmdHandler*<br/>
+Dojście do metody obsługi wiadomości, do której polecenia są zamapowane.
+
+### <a name="remarks"></a>Uwagi
+
+Ta metoda mapuje ciągły zakres identyfikatorów poleceń do obsługi komunikatów poleceń interfejsu pojedynczego użytkownika i dodaje go do obiektu źródła polecenia. Służy to do obsługi grupy przycisków powiązane z jedną z metod.
+
+## <a name="addcommanduihandler"></a> ICommandSource::AddCommandUIHandler
+
+Dodaje program obsługi komunikatów poleceń interfejsu użytkownika do obiektu źródła polecenia.
+```
+void AddCommandUIHandler(
+    unsigned int cmdID,
+    CommandUIHandler^ cmdUIHandler);
+```
+### <a name="parameters"></a>Parametry
+
+*cmdID*<br/>
+Identyfikator polecenia.
+*cmdUIHandler*<br/>
 Dojście do metody obsługi wiadomości polecenia interfejsu użytkownika.
 
 ### <a name="remarks"></a>Uwagi
+
 Ta metoda dodaje użytkownika interfejsu polecenia komunikatu obsługi cmdHandler do obiektu źródła polecenia i mapuje cmdID program obsługi.
 
 ## <a name="postcommand"></a> ICommandSource::PostCommand
+
 Publikuje komunikat bez oczekiwania na przetworzenie.
 ```
 void PostCommand(unsigned int command);
 ```
 ### <a name="parameters"></a>Parametry
-*Polecenie*  
+
+*Polecenie*<br/>
 Identyfikator polecenia wiadomość do opublikowania.
 ### <a name="remarks"></a>Uwagi
+
 Ta metoda asynchronicznie publikuje komunikat zamapowane na identyfikator określony przez polecenie. Jego wywołuje CWnd::PostMessage można umieścić komunikatu w kolejce komunikatów okna i zwraca bez oczekiwania na odpowiednie okno przetworzyć komunikatu.
 
 
 ## <a name="removecommandhandler"></a> ICommandSource::RemoveCommandHandler
+
 Usuwa procedurę obsługi poleceń z obiektu źródła polecenia.
 ```
 void RemoveCommandHandler(unsigned int cmdID);
 ```
 ### <a name="parameters"></a>Parametry
-*cmdID*  
+
+*cmdID*<br/>
 Identyfikator polecenia.
 ### <a name="remarks"></a>Uwagi
+
 Ta metoda usuwa mapowane na cmdID z obiektu źródła polecenia program obsługi poleceń.
 
 
-## <a name="removecommandrangecommandhandler"></a> ICommandSource::RemoveCommandRangeHandler 
+## <a name="removecommandrangecommandhandler"></a> ICommandSource::RemoveCommandRangeHandler
+
 Usuwa grupę programy obsługi poleceń z obiektu źródła polecenia.
 ```
 void RemoveCommandRangeUIHandler(
@@ -174,14 +195,17 @@ void RemoveCommandRangeUIHandler(
     unsigned int cmdIDMax);
 ```
 ### <a name="parameters"></a>Parametry
-*cmdIDMin*  
+
+*cmdIDMin*<br/>
 Indeks początkowy zakresu Identyfikatora polecenia.
-*cmdIDMax*  
+*cmdIDMax*<br/>
 Końcowy indeks zakres Identyfikatora polecenia.
 ### <a name="remarks"></a>Uwagi
+
 Ta metoda usuwa grupę programy obsługi komunikatów, mapowane do określonych identyfikatorów poleceń cmdIDMin i cmdIDMax, z obiektu źródła polecenia.
 
-## <a name="removecommandrangeuihandler"></a> ICommandSource::RemoveCommandRangeUIHandler 
+## <a name="removecommandrangeuihandler"></a> ICommandSource::RemoveCommandRangeUIHandler
+
 Usuwa grupę obsługi komunikatów poleceń interfejsu użytkownika z obiektu źródła polecenia.
 ```
 void RemoveCommandRangeUIHandler(
@@ -189,34 +213,43 @@ void RemoveCommandRangeUIHandler(
     unsigned int cmdIDMax);
 ```
 ### <a name="parameters"></a>Parametry
-*cmdIDMin*  
+
+*cmdIDMin*<br/>
 Indeks początkowy zakresu Identyfikatora polecenia.
-*cmdIDMax*  
+*cmdIDMax*<br/>
 Końcowy indeks zakres Identyfikatora polecenia.
 ### <a name="remarks"></a>Uwagi
+
 Ta metoda usuwa grupę użytkownika interfejsu polecenia programy obsługi komunikatów, mapowane do określonych identyfikatorów poleceń cmdIDMin i cmdIDMax, z obiektu źródła polecenia.
 
-## <a name="removecommanduihandler"></a> ICommandSource::RemoveCommandUIHandler 
+## <a name="removecommanduihandler"></a> ICommandSource::RemoveCommandUIHandler
+
 Usuwa obsługi komunikatów poleceń interfejsu użytkownika z obiektu źródła polecenia.
 ```
 void RemoveCommandUIHandler(unsigned int cmdID);
 ```
 ### <a name="parameters"></a>Parametry
-*cmdID*  
+
+*cmdID*<br/>
 Identyfikator polecenia.
 ### <a name="remarks"></a>Uwagi
+
 Ta metoda usuwa obsługi komunikatów poleceń interfejsu użytkownika mapowane na cmdID z obiektu źródła polecenia.
 
-## <a name="sendcommand"></a> ICommandSource::SendCommand 
+## <a name="sendcommand"></a> ICommandSource::SendCommand
+
 Wysyła komunikat i czeka na jego przetworzenie przed zwróceniem.
 ```
 void SendCommand(unsigned int command);
 ```
 ### <a name="parameters"></a>Parametry
-*Polecenie*  
+
+*Polecenie*<br/>
 Identyfikator polecenia komunikatu do wysłania.
 ### <a name="remarks"></a>Uwagi
+
 Ta metoda synchronicznie wysyła komunikat zamapowane na identyfikator określony przez polecenie. On wywołuje CWnd::SendMessage można umieścić komunikatu w kolejce komunikatów okna i czeka, aż tej procedury okna przetworzeniu komunikatu przed zwróceniem.
-## <a name="see-also"></a>Zobacz też  
- [Porady: Dodawanie polecenia routingu do Windows formantu formularzy](../../dotnet/how-to-add-command-routing-to-the-windows-forms-control.md)   
- [Klasa ICommandTarget](../../mfc/reference/icommandtarget-interface.md)
+## <a name="see-also"></a>Zobacz też
+
+[Instrukcje: dodawanie routingu poleceń do formantu interfejsu Windows Forms](../../dotnet/how-to-add-command-routing-to-the-windows-forms-control.md)<br/>
+[Klasa ICommandTarget](../../mfc/reference/icommandtarget-interface.md)

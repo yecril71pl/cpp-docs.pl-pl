@@ -22,12 +22,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 224f52ed9141f302568fe007e7cde4ef609d00ed
-ms.sourcegitcommit: f0c90000125a9497bf61e41624de189a043703c0
+ms.openlocfilehash: 0812c05844bbff9d6a341ea5b5812c5e328c2d5b
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44317974"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46373376"
 ---
 # <a name="adding-values-to-a-combo-box-control"></a>Dodawanie wartości do kontrolki pola kombi
 
@@ -73,5 +73,5 @@ Win32
 
 ## <a name="see-also"></a>Zobacz też
 
-[Kontrolki w oknach dialogowych](../windows/controls-in-dialog-boxes.md)  
+[Kontrolki w oknach dialogowych](../windows/controls-in-dialog-boxes.md)<br/>
 [Kontrolki](../mfc/controls-mfc.md)

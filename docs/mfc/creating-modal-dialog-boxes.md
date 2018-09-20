@@ -16,16 +16,18 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2a8bc947dbaf9cecc680f3cdbd8e6b429d2bcd5f
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 3fcc449a376091c07a7fb26b81fe19752bc3bcd6
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33342432"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46376647"
 ---
 # <a name="creating-modal-dialog-boxes"></a>Tworzenie modalnych okien dialogowych
-Aby utworzyć modalne okno dialogowe, wywołaj jednej z dwóch konstruktorów publicznych zadeklarowany w [cdialog —](../mfc/reference/cdialog-class.md). Następnie wywołaj obiektu okna dialogowego [DoModal](../mfc/reference/cdialog-class.md#domodal) funkcji członkowskiej, aby wyświetlić okno dialogowe i zarządzanie interakcji z nim, dopóki użytkownik wybierze OK lub przycisk Anuluj. To zarządzanie przez `DoModal` jest, co sprawia, że okno dialogowe modalne. Modalne okna dialogowe, aby uzyskać `DoModal` ładuje zasobu okna dialogowego.  
-  
-## <a name="see-also"></a>Zobacz też  
- [Cykl życiowy okna dialogowego](../mfc/life-cycle-of-a-dialog-box.md)
+
+Aby utworzyć modalne okno dialogowe, wywołania jednej z dwóch konstruktorów publicznych zadeklarowanych w [CDialog](../mfc/reference/cdialog-class.md). Następnie wywołaj obiektu okna dialogowego [DoModal](../mfc/reference/cdialog-class.md#domodal) funkcja elementu członkowskiego, aby wyświetlić okno dialogowe i zarządzać interakcji z nią, dopóki użytkownik zdecyduje się na OK lub przycisk Anuluj. Zarządzania przez `DoModal` to, co sprawia, że okno dialogowe modalnych. Modalne okno dialogowe pól `DoModal` ładuje zasobu okna dialogowego.
+
+## <a name="see-also"></a>Zobacz też
+
+[Cykl życiowy okna dialogowego](../mfc/life-cycle-of-a-dialog-box.md)
 

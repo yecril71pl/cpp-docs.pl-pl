@@ -16,57 +16,60 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c848cfa74363d871720f9ca269b114687aad9ecf
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: b8d3db1d8c19b68adb8cec53984e0dfe5a189651
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33382694"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46389872"
 ---
 # <a name="using-common-controls-in-a-dialog-box"></a>Używanie formantów wspólnych w oknie dialogowym
-Formanty standardowe systemu Windows mogą być używane w [okien dialogowych](../mfc/dialog-boxes.md), tworzyć widoki, widoki rekordów i inne okna na podstawie szablonu okna dialogowego. Poniższa procedura z drobnymi zmianami będzie działać również formularzy.  
-  
-## <a name="procedures"></a>Procedury  
-  
-#### <a name="to-use-a-common-control-in-a-dialog-box"></a>Aby użyć formantu wspólnego w oknie dialogowym  
-  
-1.  Formant na szablon okna dialogowego [za pomocą edytora okien dialogowych](../mfc/using-the-dialog-editor-to-add-controls.md).  
-  
-2.  Dodaj do klasy okien dialogowych zmiennej członkowskiej, która reprezentuje kontrolkę. W **Dodawanie zmiennej członkowskiej** okno dialogowe wyboru **zmienna sterująca** i upewnij się, że **kontroli** został wybrany do **kategorii**.  
-  
-3.  Jeśli ten formant wspólnej dostarcza dane wejściowe, aby program, należy zadeklarować dodatkowy element członkowski variable(s) klasy okna dialogowego do obsługi tych wartości wejściowe.  
-  
+
+Formanty standardowe Windows mogą być używane w [okna dialogowe](../mfc/dialog-boxes.md), tworzą, widoki, widoki rekordów i inne okno na podstawie szablonu okna dialogowego. Wykonanie poniższej procedury z drobnymi zmianami będzie działać w przypadku form, jak również.
+
+## <a name="procedures"></a>Procedury
+
+#### <a name="to-use-a-common-control-in-a-dialog-box"></a>Aby użyć wspólne kontrolki w oknie dialogowym
+
+1. Umieść formant na szablonu okna dialogowego [przy użyciu edytora okien dialogowych](../mfc/using-the-dialog-editor-to-add-controls.md).
+
+1. Dodaj do klasy okien dialogowych zmiennej członkowskiej, która reprezentuje kontrolkę. W **Dodawanie zmiennej członkowskiej** okno dialogowe wyboru **zmienna sterująca** i upewnij się, że **kontroli** wybrano **kategorii**.
+
+1. Jeśli tego formantu typowego jest podanie danych wejściowych do programu, należy zadeklarować członka dodatkowe variable(s) w klasy okien dialogowych, aby obsłużyć te wartości wejściowe.
+
     > [!NOTE]
-    >  Można dodać te zmienne Członkowskie przy użyciu menu kontekstowego w widoku klas (zobacz [Dodawanie zmiennej elementu członkowskiego](../ide/adding-a-member-variable-visual-cpp.md)).  
-  
-4.  W [OnInitDialog](../mfc/reference/cdialog-class.md#oninitdialog) dla klasy okien dialogowych, ustaw początkowy warunki formant. Za pomocą zmiennej członkowskiej utworzony w poprzednim kroku, należy użyć funkcji członkowskich można ustawić wartości początkowej oraz inne ustawienia. Zobacz poniższe opisy kontrolek, aby uzyskać więcej informacji na temat ustawień.  
-  
-     Można również użyć [wymiana danych okna dialogowego](../mfc/dialog-data-exchange-and-validation.md) (DDX), aby zainicjować kontrolki w oknie dialogowym.  
-  
-5.  W programy obsługi formantów w oknie dialogowym należy użyć zmiennej członka do manipulowania formantu. Opisy następujących formantów, aby uzyskać szczegółowe informacje o metodach.  
-  
+    >  Możesz dodać te zmienne Członkowskie przy użyciu menu kontekstowego w widoku klas (zobacz [dodawania zmiennej składowej](../ide/adding-a-member-variable-visual-cpp.md)).
+
+1. W [OnInitDialog](../mfc/reference/cdialog-class.md#oninitdialog) dla klasy okien dialogowych, ustawić warunków początkowych wspólnej kontroli. Używanie zmiennej składowej, utworzony w poprzednim kroku, należy użyć funkcji elementów członkowskich można ustawić wartość początkową i inne ustawienia. Zobacz poniższe opisy kontrolek, aby uzyskać szczegółowe informacje na temat ustawień.
+
+     Można również użyć [wymiana danych okna dialogowego](../mfc/dialog-data-exchange-and-validation.md) (DDX), aby zainicjować kontrolki w oknie dialogowym.
+
+1. W procedurach obsługi dla formantów w oknie dialogowym należy użyć zmiennej składowej do manipulowania formantu. Zobacz poniższe opisy kontrolek, aby uzyskać szczegółowe informacje na temat metod.
+
     > [!NOTE]
-    >  Zmiennej członkowskiej będą istnieć tylko tak długo, jak istnieje okno dialogowe samej siebie. Nie można zbadać kontroli dla wartości wejściowych po zamknięciu okna dialogowego. Aby pracować z wartości wejściowych z formantu wspólnego, Zastąp `OnOK` w klasy okien dialogowych. W przypadku zastąpienia zapytania kontroli dla wartości wejściowych i przechowywania tych wartości w zmiennych Członkowskich klasy okna dialogowego.  
-  
+    >  Zmiennej składowej będzie istnieć tylko tak długo, jak okno dialogowe, sam istnieje. Nie można zbadać formantu dla wartości wejściowych, po zamknięciu okna dialogowego. Aby pracować z wartości wejściowe z formantu wspólnego, należy zastąpić `OnOK` w klasy okien dialogowych. W przesłonięcia zapytanie formantu dla wartości wejściowych i przechowywania tych wartości w zmiennych elementu członkowskiego klasy okna dialogowego.
+
     > [!NOTE]
-    >  Wymiana danych okna dialogowego umożliwia również ustawić lub pobrać wartości z formantów w oknie dialogowym.  
-  
-## <a name="remarks"></a>Uwagi  
- Dodanie niektórych typowych formantów do okna dialogowego spowoduje, że okno dialogowe przestanie działać. Zapoznaj się [dodawanie formantów do okna dialogowego spowoduje, że okno dialogowe funkcja już](../windows/adding-controls-to-a-dialog-causes-the-dialog-to-no-longer-function.md) Aby uzyskać więcej informacji na temat obsługi tej sytuacji.  
-  
-## <a name="what-do-you-want-to-do"></a>Co chcesz zrobić  
-  
--   [Dodawanie formantów do okna dialogowego ręcznie zamiast z edytora okien dialogowych](../mfc/adding-controls-by-hand.md)  
-  
--   [Pochodzić z jednego z standardowe formanty standardowe systemu Windows formantu](../mfc/deriving-controls-from-a-standard-control.md)  
-  
--   [Użyj formantu wspólnego jako okna podrzędnego](../mfc/using-a-common-control-as-a-child-window.md)  
-  
--   [Komunikaty powiadomień za pomocą formantu](../mfc/receiving-notification-from-common-controls.md)  
-  
--   [Użyj wymiana danych okna dialogowego (DDX)](../mfc/dialog-data-exchange-and-validation.md)  
-  
-## <a name="see-also"></a>Zobacz też  
- [Tworzenie i używanie formantów](../mfc/making-and-using-controls.md)   
- [Kontrolki](../mfc/controls-mfc.md)
+    >  Wymiana danych okna dialogowego umożliwia również ustawić lub pobrać wartości z kontrolek w oknie dialogowym.
+
+## <a name="remarks"></a>Uwagi
+
+Dodanie niektórych wspólnych formantów do okna dialogowego spowoduje, że okno dialogowe przestanie działać. Zapoznaj się [dodawanie formantów do okna dialogowego powoduje, że okno dialogowe funkcji niebędących](../windows/adding-controls-to-a-dialog-causes-the-dialog-to-no-longer-function.md) więcej informacji na temat obsługi tej sytuacji.
+
+## <a name="what-do-you-want-to-do"></a>Co chcesz zrobić
+
+- [Dodawanie formantów do okna dialogowego ręcznie zamiast przy użyciu edytora okien dialogowych](../mfc/adding-controls-by-hand.md)
+
+- [Klasy pochodnej mój formant z jednego standardowego wspólnych formantów Windows](../mfc/deriving-controls-from-a-standard-control.md)
+
+- [Używanie formantu wspólnego jako okna podrzędnego](../mfc/using-a-common-control-as-a-child-window.md)
+
+- [Odbieranie komunikatów powiadomień w kontrolce](../mfc/receiving-notification-from-common-controls.md)
+
+- [Użyj wymiana danych okna dialogowego (DDX)](../mfc/dialog-data-exchange-and-validation.md)
+
+## <a name="see-also"></a>Zobacz też
+
+[Tworzenie i używanie kontrolek](../mfc/making-and-using-controls.md)<br/>
+[Kontrolki](../mfc/controls-mfc.md)
 

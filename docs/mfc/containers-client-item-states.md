@@ -17,39 +17,41 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c02fb9e695fe206912f360dd1ad9907c6714cf1b
-ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
+ms.openlocfilehash: e482123207c287c33a36406ba961747545af7c73
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/25/2018
-ms.locfileid: "36929721"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46378064"
 ---
 # <a name="containers-client-item-states"></a>Kontenery: stany elementu klienckiego
-W tym artykule opisano różne stany, które element Klient przechodzi w okresie użytkowania.  
-  
- Element kliencki przechodzi przez kilka stanów jako go jest tworzony, aktywowany, modyfikować i zapisywany. Po każdej aktualizacji zmian stanu elementu, wywołania framework [COleClientItem::OnChange](../mfc/reference/coleclientitem-class.md#onchange) z **OLE_CHANGED_STATE** powiadomień. Drugi parametr jest wartością z przedziału od `COleClientItem::ItemState` wyliczenia. Może być jedną z następujących czynności:  
-  
--   *COleClientItem::emptyState*  
-  
--   *COleClientItem::loadedState*  
-  
--   *COleClientItem::openState*  
-  
--   *COleClientItem::activeState*  
-  
--   *COleClientItem::activeUIState*  
-  
- W stanu pustego elementu klienta nie jest jeszcze całkowicie elementu. Pamięć została przydzielona dla niego, ale go nie została jeszcze zainicjowana z danymi elementu OLE. Jest to stan elementu klienta jest w został on utworzony za pośrednictwem wywołania **nowe** , ale nie zostało jeszcze poddane drugi etap tworzenia typowych dwuetapową.  
-  
- W drugim kroku realizuje wywołanie `COleClientItem::CreateFromFile` lub innym `CreateFrom` *xxxx* funkcji, całkowicie tworzenia elementu. Skojarzono danych OLE (z pliku lub z innego źródła, na przykład zawartość Schowka) `COleClientItem`-pochodzi z obiektu. Teraz elementu jest w stanie załadowany.  
-  
- Gdy element ma został otwarty w oknie serwera zamiast otwarty w miejsce w dokumencie kontenera, jest w stanie open (lub całkowicie otwarte). W tym stanie kreskowania jest zwykle rysowane przez reprezentacja elementu w oknie kontenera, aby wskazać, czy element jest aktywny w innym miejscu.  
-  
- Po aktywowaniu elementu w miejscu przekazaniem, zwykle tylko krótko mówiąc, do stanu aktywnego. Następnie wchodzi aktywny stan interfejsu użytkownika, w którym serwer został scalony jego menu, paski narzędzi i inne składniki interfejsu użytkownika z tymi kontenera. Obecność te składniki interfejsu użytkownika odróżnia aktywny stan interfejsu użytkownika w stanie aktywnym. W przeciwnym razie aktywny jest podobny do stanu aktywnego interfejsu użytkownika. Jeśli serwer obsługuje cofania, serwer jest wymagana do przechowywania informacji poprzedni stan elementu OLE, dopóki nie osiągnie stan załadowany lub otwarte.  
-  
-## <a name="see-also"></a>Zobacz też  
- [Kontenery](../mfc/containers.md)   
- [Aktywacji](../mfc/activation-cpp.md)   
- [Kontenery: Powiadomienia elementów klienckich](../mfc/containers-client-item-notifications.md)   
- [Trackery](../mfc/trackers.md)   
- [Klasa CRectTracker](../mfc/reference/crecttracker-class.md)
+
+W tym artykule opisano różne stany, którego element Klient przechodzi w okresie swojego istnienia.
+
+Element kliencki przechodzi przez kilka stanów, ponieważ jest tworzona, aktywowana, zmodyfikować i zapisać. Zawsze zmiany stanu elementu, struktura wywołuje [COleClientItem::OnChange](../mfc/reference/coleclientitem-class.md#onchange) z **OLE_CHANGED_STATE** powiadomień. Drugi parametr ma wartość z zakresu od `COleClientItem::ItemState` wyliczenia. Może to być jedna z następujących czynności:
+
+- *COleClientItem::emptyState*
+
+- *COleClientItem::loadedState*
+
+- *COleClientItem::openState*
+
+- *COleClientItem::activeState*
+
+- *COleClientItem::activeUIState*
+
+W stanu pustego elementu klienta nie jest jeszcze całkowicie elementu. Pamięć została przydzielona dla niego, ale go nie została jeszcze zainicjowana przy użyciu danych elementu OLE. Jest to stan elementu klienta jest w, gdy został on utworzony za pomocą wywołania **nowe** , ale nie zostało jeszcze poddane drugi etap tworzenia typowych dwuetapowej.
+
+W drugim kroku, wykonywane za pomocą wywołania `COleClientItem::CreateFromFile` lub inne `CreateFrom` *xxxx* , element zostanie całkowicie utworzona funkcja. Skojarzonych danych OLE (z pliku lub innego źródła, na przykład zawartość Schowka) `COleClientItem`-pochodnych obiektu. Teraz element jest w stanie załadować.
+
+Jeśli element ma został otwarty w oknie serwera zamiast otwierane bezpośrednio w kontenerze dokumentów, jest w stanie open (lub w pełni otwarty). W tym stanie kreskowania jest zazwyczaj rysowany ciągu reprezentujący element w oknie kontenera, aby wskazać, czy element jest aktywny gdzie indziej.
+
+Gdy element został aktywowany w miejscu, przekazuje on, zwykle tylko krótko mówiąc, za pośrednictwem stanie aktywnym. Następnie wprowadza ona stan aktywny interfejsu użytkownika, w którym serwer został scalony jego menu, paski narzędzi i innych składników interfejsu użytkownika z tymi kontenera. Obecność tych składników interfejsu użytkownika odróżnia stan aktywny UI w stanie aktywnym. W przeciwnym razie w stanie aktywnym przypomina stan aktywny UI. Jeśli serwer obsługuje cofania, serwer jest wymagany do przechowania informacji poprzedni stan elementu OLE, dopóki nie osiągnie stan załadowany lub Otwórz.
+
+## <a name="see-also"></a>Zobacz też
+
+[Kontenery](../mfc/containers.md)<br/>
+[Aktywacja](../mfc/activation-cpp.md)<br/>
+[Kontenery: powiadomienia dotyczące elementów klienckich](../mfc/containers-client-item-notifications.md)<br/>
+[Trackery](../mfc/trackers.md)<br/>
+[Klasa CRectTracker](../mfc/reference/crecttracker-class.md)
