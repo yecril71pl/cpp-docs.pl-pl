@@ -35,12 +35,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6be3ef7609819c34209a9b8959bfd883a836db04
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: 4d68cf6be3a512d478f4d7808ce321f18c0efd84
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45716359"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46422269"
 ---
 # <a name="general-property-page-project"></a>Ogólna strona właściwości (projekt)
 
@@ -127,7 +127,7 @@ Właściwości w sekcji Projekt domyślny reprezentują domyślne właściwości
       Wyświetla zestaw narzędzi konsolidatora (kompilator C/C++, MIDL, kompilator zasobów, konsolidator, BSCMake, Generator serwera Proxy usługi sieci Web XML, niestandardowej kompilacji, wydarzenia przedkompilacyjne, wydarzenie i postkompilacyjne).
 
    - **Biblioteka dynamiczna (dll)**
-   
+
       Wyświetla zestaw narzędzi konsolidatora, określa opcję konsolidatora/dll i dodaje _windll, aby zdefiniować CL.
 
    - **Plik reguł programu make**
@@ -139,7 +139,7 @@ Właściwości w sekcji Projekt domyślny reprezentują domyślne właściwości
       Wyświetla zestaw narzędzi bibliotekarza (taki sam, jak zestaw narzędzi konsolidatora, z wyjątkiem podstawenia bibliotekarza na konsolidatora i pominięcia generatora serwera Proxy usługi sieci Web XML).
 
    - **Narzędzie**
-   
+
       Wyświetla zestaw narzędzi (MIDL, niestandardowej kompilacji, wydarzenia przedkompilacyjne i postkompilacyjne).
 
    Aby programowo uzyskać dostęp do tej właściwości, zobacz <xref:Microsoft.VisualStudio.VCProjectEngine.VCConfiguration.ConfigurationType%2A>.
@@ -182,4 +182,4 @@ Właściwości w sekcji Projekt domyślny reprezentują domyślne właściwości
 
 ## <a name="see-also"></a>Zobacz także
 
-[Strony właściwości](../ide/property-pages-visual-cpp.md)  
+[Strony właściwości](../ide/property-pages-visual-cpp.md)

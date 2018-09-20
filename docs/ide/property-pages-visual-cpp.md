@@ -24,72 +24,72 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c1dc831dff6d1e3dbef4fc762712e8125a5b20e1
-ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
+ms.openlocfilehash: c24ed9328f77d26a8ad11a6ff6bdbf47bad9fbe3
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/01/2018
-ms.locfileid: "33339712"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46381416"
 ---
 # <a name="property-pages-visual-c"></a>Strony właściwości (Visual C++)
 
-Za pomocą stron właściwości, można określić ustawienia dla projektów programu Visual Studio. Aby otworzyć **strony właściwości** okno dialogowe dla programu Visual Studio projektu na **projektu** menu, wybierz **właściwości**.
+Za pomocą stron właściwości, można określić ustawienia dla projektów programu Visual Studio. Aby otworzyć **stron właściwości** okno dialogowe dla programu Visual Studio projektu na **projektu** menu, wybierz **właściwości**.
 
-Można określić ustawienia projektu, dzięki czemu mają one zastosowanie wszystkie konfiguracje kompilacji lub możesz określić inny projekt właściwości dla każdej konfiguracji kompilacji. Na przykład można określić niektórych ustawień do konfiguracji wydania i inne ustawienia konfiguracji debugowania.
+Możesz określić ustawienia projektu tak, aby dotyczyły one wszystkie konfiguracje kompilacji lub można określić właściwości inny projekt, dla każdej konfiguracji kompilacji. Na przykład można określić pewne ustawienia konfiguracji wydania i inne ustawienia konfiguracji debugowania.
 
-Nie wszystkie dostępne strony zawsze są wyświetlane w **strony właściwości** okno dialogowe. Stron, które są wyświetlane, zależy od typów plików w projekcie.
+Nie wszystkie dostępne strony są zawsze wyświetlane w **stron właściwości** okno dialogowe. Które strony są wyświetlane, zależy od typów plików w projekcie.
 
 Aby uzyskać więcej informacji, zobacz [Praca z właściwościami projektu](../ide/working-with-project-properties.md).
 
-Dla projektów z systemem innym niż Windows, temacie [odwołania do strony właściwości C++ Linux](../linux/prop-pages-linux.md)<!-- or [C++ Cross Platform Property Page Reference](../linux/prop-pages-linux.md)-->.
+Dla projektów innych niż Windows, zobacz [dokumentacja strony właściwości C++ Linux](../linux/prop-pages-linux.md)<!-- or [C++ Cross Platform Property Page Reference](../linux/prop-pages-linux.md)-->.
 
-## <a name="default-properties-vs-modified-properties"></a>Domyślne właściwości vs. Zmodyfikowane właściwości
+## <a name="default-properties-vs-modified-properties"></a>Domyślne właściwości programu vs. Zmodyfikowane właściwości
 
-Jeśli używasz **nowy projekt** okno dialogowe, aby utworzyć projekt Visual Studio używa szablonu określonego projektu można zainicjować właściwości projektu. W związku z tym wartości właściwości w szablonie można traktować jako wartości domyślne dla tego typu projektu. W innych typów projektów właściwości mogą mieć różne domyślne wartości.
+Kiedy używasz **nowy projekt** okno dialogowe, aby utworzyć projekt, Visual Studio używa tego szablonu określonego projektu, można zainicjować właściwości projektu. W związku z tym wartości właściwości w szablonie można traktować jako wartości domyślne dla tego typu projektu. W innych typów projektów właściwości mogą mieć różne domyślne wartości.
 
-Wartość właściwości projektu zostanie wyświetlone czcionką pogrubioną, czy jego modyfikacji. Można zmodyfikować właściwości projektu z następujących powodów:
+Wartość właściwości projektu pojawia się pogrubioną czcionką, gdy zostanie zmodyfikowany. Można zmodyfikować właściwości projektu z następujących powodów:
 
-- Kreator aplikacji zmienia właściwość, ponieważ wymaga ona wartość właściwości innego niż ten, który określono w szablonie projektu.
+- Kreator aplikacji zmienia właściwość, ponieważ wymaga ona wartością innej właściwości niż ten, który jest określony w szablonie projektu.
 
 - Określ wartość inną właściwość w **nowy projekt** okno dialogowe.
 
-- Określ inną właściwość na stronie właściwości projektu.
+- Na stronie właściwości projektu można określić wartość inną właściwość.
 
 > [!TIP]
-> Aby zapoznać się ostateczny zestaw wartości właściwości, które używa MSBuild, aby skompilować projekt, sprawdź plik dane wyjściowe preprocesora, który można utworzyć przy użyciu tego wiersza polecenia: **MSBuild / przetwarzanie wstępne:** *preprocessor_output_ Nazwa pliku*<sub>opt</sub> *project_filename*<sub>opcjonalnych</sub>
+> Aby wyświetlić ostateczny zestaw wartości właściwości, które korzysta z programu MSBuild do kompilowania projektu, należy sprawdzić plik dane wyjściowe preprocesora, który można tworzyć przy użyciu tego wiersza polecenia: **MSBuild / przetwarzanie wstępne:** *preprocessor_output_ Nazwa pliku*<sub>zoptymalizowany pod kątem</sub> *project_filename*<sub>zoptymalizowany pod kątem</sub>
 
 ## <a name="resetting-properties"></a>Resetowanie właściwości
 
-Po wyświetleniu **strony właściwości** okno dialogowe projektu i węzła projektu wybrano w **Eksploratora rozwiązań**, wiele właściwości, można wybrać **dziedziczyć nadrzędnym lub projektu ustawienia domyślne** lub zmodyfikuj wartość w inny sposób.
+Po wyświetleniu **stron właściwości** wybrano okno dialogowe projektu i węzeł projektu w **Eksploratora rozwiązań**, wiele właściwości, można wybrać **Dziedzicz z nadrzędnych bądź projektowych ustawienia domyślne** lub zmodyfikowaniu wartości w inny sposób.
 
-Po wyświetleniu **strony właściwości** okno dialogowe projektu i pliku wybrano w **Eksploratora rozwiązań**, wiele właściwości, można wybrać **dziedziczyć nadrzędnym lub domyślnych wartościach projektu** lub zmodyfikuj wartość w inny sposób. Jednak jeśli projekt zawiera wiele plików, które mają wartości właściwości, które różnią się od wartości domyślne projektu, projekt będzie trwać dłużej.
+Po wyświetleniu **stron właściwości** okno dialogowe projektu i pliku wybrano w **Eksploratora rozwiązań**, wiele właściwości, można wybrać **Dziedzicz z nadrzędnych bądź projektowych wartości domyślnych** lub zmodyfikowaniu wartości w inny sposób. Jednakże jeśli projekt zawiera wiele plików, które mają wartości właściwości, które różnią się od wartości domyślne projektu, projekt będzie trwać dłużej kompilacji.
 
 > [!TIP]
-> Aby odświeżyć **strony właściwości** okno dialogowe, aby wyświetla najnowsze ustawienia, wybierz **Zastosuj**.
+> Aby odświeżyć **stron właściwości** okno dialogowe tak, aby wyświetlał najnowsze ustawienia, wybierz **Zastosuj**.
 
-Większość domyślne projektu to domyślnych ustawień systemowych (platform). Wartości domyślne niektórych projektu pochodzi z arkuszy stylów, które są stosowane po zaktualizowaniu właściwości w **wartości domyślne projektu** sekcji **ogólne** stronę właściwości konfiguracji dla projektu. Aby uzyskać więcej informacji, zobacz [ogólna strona właściwości (projekt)](../ide/general-property-page-project.md).
+Większość ustawień domyślnych projektu są domyślnych ustawień systemowych (platformy). Niektóre wartości domyślne projektu pochodzi od arkuszy stylów, które są stosowane podczas aktualizowania właściwości **wartości domyślne projektu** części **ogólne** strona właściwości konfiguracji projektu. Aby uzyskać więcej informacji, zobacz [strona właściwości ogólnych (projekt)](../ide/general-property-page-project.md).
 
-## <a name="specifying-user-defined-values"></a>Określanie wartości zdefiniowanej przez użytkownika
+## <a name="specifying-user-defined-values"></a>Określanie wartości zdefiniowane przez użytkownika
 
-Należy określić wartość dla niektórych właściwości. Wartości zdefiniowane przez użytkownika może zawierać znaki alfanumeryczne lub nazwy makro pliku projektu. Niektóre z tych właściwości może trwać tylko jedna wartość zdefiniowana przez użytkownika, ale inne wykorzystują Rozdzielana średnikami lista wielu wartości.
+Należy zdefiniować wartości dla niektórych właściwości. Wartości zdefiniowane przez użytkownika może zawierać znaki alfanumeryczne lub nazw makr w pliku projektu. Niektóre z tych właściwości można wykonać tylko jedna wartość zdefiniowana przez użytkownika, ale inne mogą przejąć rozdzielaną średnikami listę wielu wartości.
 
-Określenie wartości zdefiniowanej przez użytkownika dla właściwości lub listy, jeśli właściwość może zająć wiele wartości zdefiniowanej przez użytkownika, w kolumnie z prawej strony nazwy właściwości, wykonaj jedną z następujących czynności:
+Aby określić zdefiniowanych przez użytkownika wartości właściwości lub listy, jeśli właściwość może zająć wiele wartości zdefiniowanej przez użytkownika, w kolumnie z prawej strony nazwy właściwości, wykonaj jedną z następujących czynności:
 
 - Wpisz wartość lub listę wartości.
 
-- Wybierz strzałkę listy rozwijanej. Jeśli **Edytuj** jest dostępna, wybierz go, a następnie w polu tekstowym wpisz wartość lub listę wartości. Innym sposobem określania listy polega na wpisaniu każdej wartości w osobnym wierszu w polu tekstowym. Na stronie właściwości wartości będą wyświetlane jako listę rozdzielaną średnikami.
+- Wybierz strzałkę listy rozwijanej. Jeśli **Edytuj** jest dostępna, wybierz go, a następnie w polu tekstowym wpisz wartość lub listę wartości. Alternatywny sposób w celu określenia listy jest typu każdej wartości w oddzielnym wierszu w polu tekstowym. Na stronie właściwości wartości będą wyświetlane jako listę rozdzielaną średnikami.
 
-   Aby wstawić makro pliku projektu jako wartość, wybierz **makra** , a następnie kliknij dwukrotnie nazwę makra.
+   Aby wstawić makro pliku projektu jako wartości, wybierz opcję **makra** a następnie kliknij dwukrotnie nazwę makra.
 
 - Wybierz strzałkę listy rozwijanej. Jeśli **Przeglądaj** jest dostępna, wybierz go, a następnie wybierz co najmniej jedną wartość.
 
-Dla właściwości wielowartościowe **dziedziczyć nadrzędnym lub domyślnych wartościach projektu** opcja jest dostępna, wybierz strzałkę listy rozwijanej w kolumnie z prawej strony nazwy właściwości, a następnie wybierz polecenie **Edytuj**. Domyślnie opcja jest zaznaczona.
+Dla właściwości wielowartościowe **Dziedzicz z nadrzędnych bądź projektowych wartości domyślnych** opcja jest dostępna, wybierz strzałkę listy rozwijanej w kolumnie z prawej strony nazwy właściwości, a następnie wybierz polecenie **Edytuj**. Domyślnie opcja jest zaznaczona.
 
-Zwróć uwagę, że strona właściwości są wyświetlane tylko ustawienia na bieżącym poziomie wielowartościowe właściwość, która dziedziczy z poziomu innego. Na przykład, jeśli wybrano plik **Eksploratora rozwiązań** i wybierz C/C++ **definicje preprocesora** właściwości, definicje poziomu plików są wyświetlane, ale dziedziczone definicje na poziomie projektu nie są wyświetlane. Umożliwia wyświetlenie zarówno bieżącym poziomie i dziedziczonej wartości, wybierz strzałkę listy rozwijanej w kolumnie z prawej strony nazwy właściwości, a następnie wybierz pozycję **Edytuj**. Jeśli używasz [modelu projektu Visual C++](https://docs.microsoft.com/dotnet/api/microsoft.visualstudio.vcprojectengine), to zachowanie jest również w efekcie dla obiektów w projektach i plików. Oznacza to, że określona w zapytaniu dla wartości dla właściwości na poziomie plików nie otrzymasz wartości tej samej właściwości na poziomie projektu. Należy jawnie pobrać wartości właściwości na poziomie projektu. Ponadto niektóre dziedziczonej wartości właściwości mogą pochodzić z arkusza stylów, który nie jest dostępny programowo.
+Należy zauważyć, że strona właściwości są wyświetlane tylko ustawienia na bieżącym poziomie dla wielokrotnych wartościach właściwości, która dziedziczy z poziomu innej. Na przykład, jeśli wybrano plik **Eksploratora rozwiązań** i wybraniu języka C/C++ **definicje preprocesora** właściwości definicji na poziomie plików są wyświetlane, ale dziedziczone definicje na poziomie projektu nie są wyświetlane. Aby wyświetlić bieżący poziom i dziedziczonej wartości, wybierz strzałkę listy rozwijanej w kolumnie z prawej strony nazwy właściwości, a następnie wybierz **Edytuj**. Jeśli używasz [model projektów Visual C++](https://docs.microsoft.com/dotnet/api/microsoft.visualstudio.vcprojectengine), to zachowanie jest również wpływu dla obiektów na plikach i projektach. Oznacza to kiedy wykonujesz zapytanie o wartości we właściwości na poziomie plików, nie otrzymasz wartości tej samej właściwości na poziomie projektu. Należy jawnie uzyskać wartości właściwości na poziomie projektu. Ponadto niektóre dziedziczone wartości właściwości mogą pochodzić z arkusza stylów, który nie jest dostępny programowo.
 
 ## <a name="in-this-section"></a>W tej sekcji
 
-[Zaawansowane narzędzia manifestu właściwości konfiguracji \<Projectname > stron właściwości — okno dialogowe](../ide/advanced-manifest-tool.md)
+[Zaawansowane, narzędzie manifestu, właściwości konfiguracji \<nazwa_projektu > okno dialogowe strony właściwości](../ide/advanced-manifest-tool.md)
 
 [Strony właściwości wiersza polecenia](../ide/command-line-property-pages.md)
 
@@ -101,7 +101,7 @@ Zwróć uwagę, że strona właściwości są wyświetlane tylko ustawienia na b
 
 [Strona właściwości ogólnych (projekt)](../ide/general-property-page-project.md)
 
-[Narzędzie ogólne, manifestu właściwości konfiguracji \<Projectname > stron właściwości — okno dialogowe](../ide/general-manifest-tool-configuration-properties.md)
+[Ogólne, narzędzie manifestu, właściwości konfiguracji \<nazwa_projektu > okno dialogowe strony właściwości](../ide/general-manifest-tool-configuration-properties.md)
 
 [Strony właściwości HLSL](../ide/hlsl-property-pages.md)
 
@@ -111,9 +111,9 @@ Zwróć uwagę, że strona właściwości są wyświetlane tylko ustawienia na b
 
 [Strony właściwości HLSL: pliki wyjściowe](../ide/hlsl-property-pages-output-files.md)
 
-[Dane wejściowe i wyjściowe narzędzie, właściwości konfiguracji manifestu \<Projectname > stron właściwości — okno dialogowe](../ide/input-and-output-manifest-tool.md)
+[Wejście i wyjście, narzędzie manifestu, właściwości konfiguracji \<nazwa_projektu > okno dialogowe strony właściwości](../ide/input-and-output-manifest-tool.md)
 
-[Izolowane, narzędzia manifestu, właściwości, \<Projectname > stron właściwości — okno dialogowe](../ide/isolated-com-manifest-tool.md)
+[COM izolowany, narzędzie manifestu, właściwości konfiguracji, \<nazwa_projektu > okno dialogowe strony właściwości](../ide/isolated-com-manifest-tool.md)
 
 [Strony właściwości konsolidatora](../ide/linker-property-pages.md)
 
@@ -143,5 +143,5 @@ Zwróć uwagę, że strona właściwości są wyświetlane tylko ustawienia na b
 
 ## <a name="see-also"></a>Zobacz także
 
-[Instrukcje: Tworzenie i usuwanie zależności projektu](/visualstudio/ide/how-to-create-and-remove-project-dependencies)  
-[Instrukcje: Tworzenie i edytowanie konfiguracji](/visualstudio/ide/how-to-create-and-edit-configurations)  
+[Instrukcje: Tworzenie i usuwanie zależności projektu](/visualstudio/ide/how-to-create-and-remove-project-dependencies)<br>
+[Instrukcje: Tworzenie i edytowanie konfiguracji](/visualstudio/ide/how-to-create-and-edit-configurations)
