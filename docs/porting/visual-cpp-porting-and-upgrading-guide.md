@@ -1,7 +1,7 @@
 ---
 title: Visual C++, przenoszenie i uaktualnianie przewodnik | Dokumentacja firmy Microsoft
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 09/18/2018
 ms.technology:
 - cpp-language
 ms.topic: conceptual
@@ -12,12 +12,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a0be5d4cc09dbb5753bd8889ad880364ebd228bf
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 1b573a22b9502548cc84f2bd459cda72d071cf68
+ms.sourcegitcommit: 338e1ddc2f3869d92ba4b73599d35374cf1d5b69
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46433663"
+ms.lasthandoff: 09/20/2018
+ms.locfileid: "46494403"
 ---
 # <a name="visual-c-porting-and-upgrading-guide"></a>Visual C++, przenoszenie i uaktualnianie przewodnik
 
@@ -93,7 +93,6 @@ Alternatywnie być może masz teraz nowe wymagania lub przewidujesz potrzebę pr
 |[Przenoszenie na platformę Windows Universal](porting-to-the-universal-windows-platform-cpp.md)|Zawiera informacje dotyczące przenoszenia kodu do systemu Windows 10|  
 |[Wprowadzenie do programu Visual C++ dla użytkowników systemu UNIX](introduction-to-visual-cpp-for-unix-users.md)|Zawiera informacje dla użytkowników systemu UNIX, którzy jesteś nowym użytkownikiem Visual C++ i chcesz stać się za pomocą go.|  
 |[Eksportowanie z systemu UNIX do Win32](porting-from-unix-to-win32.md)|W tym artykule omówiono opcje do migrowania aplikacji systemu UNIX do Windows.|  
-|[Podręcznik migracji C++/CLI](../dotnet/cpp-cli-migration-primer.md)|Przedstawiono szczegółowo uaktualnić swoje zarządzanych rozszerzeń dla składni języka C++ do użycia nowej składni. Aby uzyskać więcej informacji, zobacz [Component Extensions dla platform środowiska uruchomieniowego](../windows/component-extensions-for-runtime-platforms.md).|  
   
 ## <a name="see-also"></a>Zobacz też  
 

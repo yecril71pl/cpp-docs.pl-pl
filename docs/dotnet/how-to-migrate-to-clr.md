@@ -1,7 +1,7 @@
 ---
 title: 'Porady: Migracja do / clr | Dokumentacja firmy Microsoft'
 ms.custom: get-started-article
-ms.date: 11/04/2016
+ms.date: 09/18/2018
 ms.technology:
 - cpp-cli
 ms.topic: conceptual
@@ -20,16 +20,16 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: 818b6e102d9da759aa8889779515917b96e22c89
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: cf55b6f5dc422bb01babe0bdf8d8c27ce50371da
+ms.sourcegitcommit: 338e1ddc2f3869d92ba4b73599d35374cf1d5b69
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46412967"
+ms.lasthandoff: 09/20/2018
+ms.locfileid: "46494468"
 ---
 # <a name="how-to-migrate-to-clr"></a>Porady: migracja do /clr
 
-W tym temacie omówiono problemy, które powstają, gdy kompilacja kodu natywnego za pomocą **/CLR** (zobacz [/CLR (kompilacja języka wspólnego środowiska uruchomieniowego)](../build/reference/clr-common-language-runtime-compilation.md) Aby uzyskać więcej informacji). **/ CLR** umożliwia modułów języka Visual C++ do wywołania i można wywołać z zestawów platformy .NET, przy zachowaniu zgodności z modułami niezarządzanych. Zobacz [zestawy mieszane (natywne i zarządzane)](../dotnet/mixed-native-and-managed-assemblies.md) i [natywne i .NET współdziałanie](../dotnet/native-and-dotnet-interoperability.md) Aby uzyskać więcej informacji na temat korzyści wynikające z kompilowania za pomocą **/CLR**.
+W tym temacie omówiono problemy, które powstają, gdy kompilacja kodu natywnego za pomocą **/CLR** (zobacz [/CLR (kompilacja języka wspólnego środowiska uruchomieniowego)](../build/reference/clr-common-language-runtime-compilation.md) Aby uzyskać więcej informacji). **/ CLR** umożliwia macierzystego kodu C++ do wywołania i można wywołać z zestawów platformy .NET, oprócz innych macierzystego kodu C++. Zobacz [zestawy mieszane (natywne i zarządzane)](../dotnet/mixed-native-and-managed-assemblies.md) i [natywne i .NET współdziałanie](../dotnet/native-and-dotnet-interoperability.md) Aby uzyskać więcej informacji na temat korzyści wynikające z kompilowania za pomocą **/CLR**.
 
 ## <a name="known-issues-compiling-library-projects-with-clr"></a>Znane problemy dotyczące kompilowania projektów bibliotek z/CLR
 
@@ -132,7 +132,7 @@ Wersje różnych typów danych może spowodować konsolidator, aby zakończyć s
 
 ### <a name="loader-lock-deadlock"></a>Zakleszczenie blokady modułu ładującego
 
-W programie Visual Studio 2010 i nowszych "zakleszczenia blokady modułu ładującego" nadal mogą wystąpić we wcześniejszych wersjach, ale jest deterministyczna, i jest wykrywanych i zgłaszanych w czasie wykonywania. Zobacz [inicjowanie zestawów mieszanych](../dotnet/initialization-of-mixed-assemblies.md) szczegółowe tła, wskazówki i rozwiązań.
+"Zakleszczenia blokady modułu ładującego" może wystąpić, ale jest deterministyczna i jest wykrywanych i zgłaszanych w czasie wykonywania. Zobacz [inicjowanie zestawów mieszanych](../dotnet/initialization-of-mixed-assemblies.md) szczegółowe tła, wskazówki i rozwiązań.
 
 ### <a name="data-exports"></a>Eksportowanie danych
 

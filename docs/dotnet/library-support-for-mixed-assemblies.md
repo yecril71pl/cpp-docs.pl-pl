@@ -1,7 +1,7 @@
 ---
 title: Obsługa bibliotek dla zestawów mieszanych | Dokumentacja firmy Microsoft
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 09/18/2018
 ms.technology:
 - cpp-cli
 ms.topic: conceptual
@@ -18,41 +18,40 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: d4b584e0bacb1cb93cad33efdff807bb5fa9c8e2
-ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
+ms.openlocfilehash: 868cae6701e17c79c9856b3a16c63c1e25b67bda
+ms.sourcegitcommit: 338e1ddc2f3869d92ba4b73599d35374cf1d5b69
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34704114"
+ms.lasthandoff: 09/20/2018
+ms.locfileid: "46494520"
 ---
 # <a name="library-support-for-mixed-assemblies"></a>Obsługa bibliotek dla zestawów mieszanych
 
-Visual C++ obsługuje korzystanie z biblioteki Standard C++, biblioteki C runtime (CRT) ATL i MFC dla aplikacji skompilowanych z [/CLR (kompilacja języka wspólnego środowiska uruchomieniowego)](../build/reference/clr-common-language-runtime-compilation.md). Dzięki temu istniejące aplikacje używające tych bibliotek do użycia jak również funkcje środowiska .NET Framework.
+Visual C++ obsługuje używanie standardowej biblioteki C++, biblioteki środowiska uruchomieniowego języka C (CRT), ATL i MFC dla aplikacje skompilowane przy użyciu [/CLR (kompilacja języka wspólnego środowiska uruchomieniowego)](../build/reference/clr-common-language-runtime-compilation.md). Dzięki temu istniejące aplikacje korzystające z tych bibliotek do użycia jak również funkcje środowiska .NET Framework.
 
 > [!IMPORTANT]
-> **/CLR: pure** i **/CLR: Safe** — opcje kompilatora są używane w programie Visual Studio 2015 i nieobsługiwane w programie Visual Studio 2017 r.
+> **/CLR: pure** i **/CLR: Safe** opcje kompilatora są przestarzałe w programie Visual Studio 2015 i obsługiwane w programie Visual Studio 2017.
 
-Ta obsługa obejmuje następujące biblioteki DLL, a następnie zaimportuj:
+Ta obsługa obejmuje następujące biblioteki DLL i importowania:
 
-- .Lib Msvcmrt [d] Jeśli kompilacji z **/CLR**. Zestawy mieszane łącze do tej biblioteki importu.
+- .Lib Msvcmrt [d] Jeśli kompilujesz z opcją **/CLR**. Zestawy mieszane link do tej biblioteki importu.
 
-Ta obsługa zapewnia kilka korzyści związanych z nimi:
+Ta funkcja zapewnia kilka korzyści związanych z nimi:
 
-- CRT i standardowa biblioteka C++ są dostępne dla kod mieszany. Nie są możliwe do zweryfikowania; CRT i podać standardowa biblioteka C++ ostatecznie wywołania nadal są kierowane do tego samego CRT i standardowa biblioteka C++, jak w przypadku korzystania z kodu macierzystego.
+- CRT i standardowej biblioteki języka C++ są dostępne dla kodu mieszanego. CRT i standardowej biblioteki języka C++, pod warunkiem nie są możliwe do zweryfikowania; ostatecznie wywołania nadal są kierowane do tego samego CRT i standardowej biblioteki języka C++, w przypadku korzystania z kodu natywnego.
 
-- Popraw ujednoliconą wyjątków w mieszanych obrazów.
+- Poprawne ujednoliconej obsługi wyjątków w mieszanych obrazów.
 
-- Inicjowanie statyczne zmiennych C++ w obrazach mieszanych.
+- Statyczne inicjowanie zmienne języka C++ w obrazach mieszane.
 
-- Obsługa zmiennych per-AppDomain i każdego procesu w kodzie zarządzanym.
+- Obsługa zmiennych per-AppDomain i na proces w kodzie zarządzanym.
 
-- Rozwiązuje problemy blokady modułu ładującego, które dotyczą mieszanych bibliotek DLL skompilowany w Visual Studio 2003 i wcześniejszych wersjach.
+- Rozwiązanie problemów blokady modułu ładującego, które dotyczą mieszanych bibliotek DLL, skompilowany w Visual Studio 2003 i wcześniejszych wersjach.
 
-Ponadto ta obsługa przedstawia następujące ograniczenia:
+Ponadto ta funkcja prezentuje następujące ograniczenia:
 
-- Model CRT DLL jest obsługiwane w przypadku kodu skompilowanego z **/CLR**. Brak statycznych bibliotek CRT, które obsługują **/CLR** kompilacji.
+- Tylko model CRT DLL jest obsługiwana dla kodu skompilowanego z **/CLR**. Brak statycznego bibliotek CRT, które obsługują **/CLR** kompilacji.
 
-Należy zaktualizować Twoje środowisko uruchomieniowe języka wspólnego (CLR) do wersji bieżącej, nie jest gwarantowana do pracy z wcześniejszymi wersjami. Kod skompilowanej za pomocą tych zmian nie będzie działać na wersji środowiska CLR 1.x.
 
 ## <a name="see-also"></a>Zobacz także
 

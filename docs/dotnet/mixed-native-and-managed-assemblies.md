@@ -1,7 +1,7 @@
 ---
 title: Zestawy mieszane (natywne i zarządzane) | Dokumentacja firmy Microsoft
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 09/18/2018
 ms.technology:
 - cpp-cli
 ms.topic: conceptual
@@ -23,18 +23,18 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: 2a48f34edec8a9f24f22d35be482d3b297215dbe
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 4ee94905bc4c40f6d080e34098e24bd71d495141
+ms.sourcegitcommit: 338e1ddc2f3869d92ba4b73599d35374cf1d5b69
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43210628"
+ms.lasthandoff: 09/20/2018
+ms.locfileid: "46494494"
 ---
 # <a name="mixed-native-and-managed-assemblies"></a>Zestawy mieszane (natywne i zarządzane)
 
-Zestawy mieszane mogą zawierać zarówno niezarządzane instrukcje maszynowe, jak i instrukcje MSIL. Pozwala im to na wywołanie i bycie wywoływanym przez składniki .NET, przy zachowaniu zgodność ze składnikami, które są całkowicie niezarządzane. Używając zestawów mieszanych, deweloperzy mogą tworzyć aplikacje przy użyciu mieszanki funkcjonalności zarządzanej i niezarządzanej. Dzięki temu, zestawy mieszane są idealne do migrowania istniejących aplikacji Visual C++ do platformy .NET.
+Zestawy mieszane mogą zawierać zarówno niezarządzane instrukcje maszynowe, jak i instrukcje MSIL. Umożliwi to wywołanie i bycie wywoływanym przez składniki .NET, przy zachowaniu zgodności z natywnych bibliotek C++. Używając zestawów mieszanych, deweloperzy mogą tworzyć aplikacje przy użyciu kombinacji kodu .NET i natywnego języka C++.
 
-Na przykład istniejąca aplikacja składająca się wyłącznie z funkcjami niezarządzanymi może być przeniesiona do platformy .NET przez ponowną kompilację tylko jednego modułu z **/CLR** przełącznika kompilatora. Moduł ten będzie potem w stanie korzystać z funkcji .NET, ale pozostaje zgodny z pozostałą częścią aplikacji. W ten sposób można stopniowo konwertować aplikacje do platformy .NET, kawałek po kawałku. Istnieje nawet możliwość decydowania między kompilacją zarządzaną a niezarządzaną na podstawie funkcji przez funkcję w obrębie tego samego pliku (zobacz [zarządzane, niezarządzane](../preprocessor/managed-unmanaged.md)).
+Na przykład istniejącej biblioteki składające się wyłącznie z macierzystego kodu C++ może być przeniesiona do platformy .NET przez ponowną kompilację tylko jednego modułu z **/CLR** przełącznika kompilatora. Moduł ten będzie potem w stanie korzystać z funkcji .NET, ale pozostaje zgodny z pozostałą częścią aplikacji. Istnieje nawet możliwość decydowania między zarządzanego i natywnego kompilacji na podstawie funkcji przez funkcję w obrębie tego samego pliku (zobacz [zarządzane, niezarządzane](../preprocessor/managed-unmanaged.md)).
 
 Visual C++ obsługuje tylko generowanie zestawów mieszanych zarządzanych przy użyciu **/CLR** — opcja kompilatora. **/CLR: pure** i **/CLR: Safe** opcje kompilatora są przestarzałe w programie Visual Studio 2015 i obsługiwane w programie Visual Studio 2017. Jeśli wymagana jest czysty i weryfikowalny zestawów zarządzanych, zalecamy tworzenie przy użyciu języka C#.
 

@@ -1,7 +1,7 @@
 ---
 title: Odwołanie do biblioteki STL/CLR | Dokumentacja firmy Microsoft
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 09/18/2018"
 ms.technology:
 - cpp-cli
 ms.topic: reference
@@ -17,16 +17,16 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: 78dc5c57ca000dfa03dba640c46cec16aaca133f
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 14217396801731505753be121e98f0aebf5b5f22
+ms.sourcegitcommit: 338e1ddc2f3869d92ba4b73599d35374cf1d5b69
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46429478"
+ms.lasthandoff: 09/20/2018
+ms.locfileid: "46494392"
 ---
 # <a name="stlclr-library-reference"></a>Odwołanie do biblioteki STL/CLR
 
-Biblioteka STL/CLR to opakowanie podzbiór standardowej biblioteki C++ do użytku z C++ i .NET Framework środowisko uruchomieniowe języka wspólnego (CLR). Z STL/CLR można użyć wszystkich kontenerów, iteratorów i algorytmów standardowej biblioteki w środowisku zarządzanym.
+Biblioteki STL/CLR udostępnia interfejs, podobnie jak kontenery standardowej biblioteki języka C++ do użytku z C++ i .NET Framework środowisko uruchomieniowe języka wspólnego (CLR). STL/CLR jest całkowicie niezależna od wdrożenia przez Microsoft biblioteki standardowego języka C++. STL/CLR jest zachowywana na potrzeby obsługi starszej wersji, ale nie był cały czas aktualny ze standardem C++. Zdecydowanie zalecamy używanie natywnych [standardowej biblioteki języka C++](../standard-library/cpp-standard-library-reference.md) kontenery zamiast STL/CLR, jeśli to możliwe.
 
 Aby użyć STL/CLR:
 
@@ -34,7 +34,7 @@ Aby użyć STL/CLR:
 
 - Kwalifikacja nazw biblioteki z `cliext::` zamiast `std::`.
 
-STL/CLR ujawnia typy ogólne i interfejsy, których używa w scenariuszach między zestawami w zestawie .NET **Microsoft.VisualC.STLCLR.dll**. DLL jest zawarty w .NET Framework 3.5. Jeśli ponownie dystrybuujesz aplikacji korzystającej z STL/CLR należy uwzględnić programu .NET Framework 3.5, jak również innych bibliotek Visual C++, które używa projekt w sekcji zależności projektu Instalatora.
+Biblioteki STL/CLR interfejs STL podobne do użytku z C++ i .NET Framework środowisko uruchomieniowe języka wspólnego (CLR). Ta biblioteka jest zachowywana na potrzeby obsługi starszej wersji, ale nie był cały czas aktualny ze standardem C++. Zdecydowanie zalecamy używanie natywnych [standardowej biblioteki języka C++](../standard-library/cpp-standard-library-reference.md) kontenery zamiast STL/CLR.
 
 ## <a name="in-this-section"></a>W tej sekcji
 

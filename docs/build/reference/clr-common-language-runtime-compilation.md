@@ -1,7 +1,7 @@
 ---
 title: / clr (kompilacja języka wspólnego środowiska uruchomieniowego) | Dokumentacja firmy Microsoft
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 09/18/2018
 ms.technology:
 - cpp-tools
 ms.topic: reference
@@ -23,12 +23,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b46f61ef727c1b283137bb3d537d2dbad416c1d8
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: dcd5739f2fb0663609ce7bcabc920cc3aa20d8e1
+ms.sourcegitcommit: 338e1ddc2f3869d92ba4b73599d35374cf1d5b69
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45703823"
+ms.lasthandoff: 09/20/2018
+ms.locfileid: "46494416"
 ---
 # <a name="clr-common-language-runtime-compilation"></a>/clr (Kompilacja środowiska uruchomieniowego języka wspólnego)
 
@@ -45,15 +45,15 @@ Co najmniej jeden z następujących przełączników rozdzielaną przecinkami.
 
 - brak
 
-   Bez żadnych opcji **/CLR** tworzy metadane dla aplikacji. Metadane mogą być używane przez inne aplikacje CLR i pozwala aplikacji używać typów i danych w metadanych innych składników CLR. Aby uzyskać więcej informacji, zobacz [zestawy mieszane (natywne i zarządzane)](../../dotnet/mixed-native-and-managed-assemblies.md) i [porady: Migracja do/CLR](../../dotnet/how-to-migrate-to-clr.md).
+   Bez żadnych opcji **/CLR** tworzy metadane dla aplikacji. Metadane mogą być używane przez inne aplikacje CLR i pozwala aplikacji używać typów i danych w metadanych innych składników CLR. Aby uzyskać więcej informacji, zobacz [zestawy mieszane (natywne i zarządzane)](../../dotnet/mixed-native-and-managed-assemblies.md).
 
 - **czyste**
 
-   **/ CLR: pure jest przestarzała**. Przyszłych wersji kompilatora mogą nie obsługiwać tę opcję. Zaleca się, że przeniesiesz kod, który musi być czysty MSIL dla języka C#.
+   **/ CLR: pure jest przestarzała**. Opcja zostanie usunięta w programie Visual Studio 2017. Zaleca się, że przeniesiesz kod, który musi być czysty MSIL dla języka C#.
 
 - **Bezpieczne**
 
-   **/ CLR: Safe jest przestarzała**. Przyszłych wersji kompilatora mogą nie obsługiwać tę opcję. Zaleca się, że przeniesiesz kod, który musi być bezpieczne MSIL dla języka C#.
+   **/ CLR: Safe jest przestarzała**. Opcja zostanie usunięta w programie Visual Studio 2017. Zaleca się, że przeniesiesz kod, który musi być bezpieczne MSIL dla języka C#.
 
 - **noAssembly**
 
@@ -112,31 +112,6 @@ class {} x;
 ```
 
 Ildasm.exe umożliwia wyświetlanie metadanych.
-
-## <a name="managed-extensions-for-c"></a>rozszerzenia zarządzane dla C++
-
-Visual C++ nie obsługuje już **: oldsyntax** opcji. Ta opcja została zakończona w programie Visual Studio 2005. Obsługiwana składnia pisaniu kodu zarządzanego w języku C++ jest C + +/ interfejsu wiersza polecenia. Aby uzyskać więcej informacji, zobacz [Component Extensions dla platform środowiska uruchomieniowego](../../windows/component-extensions-for-runtime-platforms.md).
-
-Jeśli masz kod, który używa zarządzanych rozszerzeń języka C++, firma Microsoft zaleca portu do użycia C + +/ CLI składni. Aby uzyskać informacje na temat sposobu przyłącz kod, zobacz [C + +/ CLI Podręcznik migracji](../../dotnet/cpp-cli-migration-primer.md).
-
-#### <a name="to-set-this-compiler-option-in-visual-studio"></a>Aby ustawić tę opcję kompilatora w programie Visual Studio
-
-1. W **Eksploratora rozwiązań**, kliknij prawym przyciskiem myszy nazwę projektu, a następnie kliknij przycisk **właściwości** otworzyć projektu **stron właściwości** okno dialogowe.
-
-1. Wybierz **właściwości konfiguracji** > **ogólne** stronę właściwości.
-
-1. Modyfikowanie **Obsługa środowiska uruchomieniowego języka wspólnego** właściwości.
-
-   > [!NOTE]
-   > Gdy **/CLR** jest włączone w **strony właściwości** okno dialogowe, właściwości opcji kompilatora, które nie są zgodne z **/CLR** również zostaną dopasowane, stosownie do potrzeb. Na przykład jeśli **usunęliśmy** ustawiono i następnie **/CLR** jest włączona, **usunęliśmy** zostaną wyłączone.
-   >
-   >  Ponadto podczas debugowania **/CLR** aplikacji, ustawić **typ debugera** właściwości **mieszany** lub **zarządzanych tylko**. Aby uzyskać więcej informacji, zobacz [ustawienia projektu dla konfiguracji debugowania języka C++](/visualstudio/debugger/project-settings-for-a-cpp-debug-configuration).
-
-   Aby uzyskać informacje na temat tworzenia modułu, zobacz [/noassembly (Utwórz moduł MSIL)](../../build/reference/noassembly-create-a-msil-module.md).
-
-#### <a name="to-set-this-compiler-option-programmatically"></a>Aby programowo ustawić tę opcję kompilatora
-
-- Zobacz <xref:Microsoft.VisualStudio.VCProjectEngine.VCCLCompilerTool.CompileAsManaged%2A>.
 
 ## <a name="see-also"></a>Zobacz też
 

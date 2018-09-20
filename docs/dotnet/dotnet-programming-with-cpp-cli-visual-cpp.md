@@ -1,7 +1,7 @@
 ---
 title: Programowanie .NET w języku C + +/ interfejsu wiersza polecenia (Visual C++) | Dokumentacja firmy Microsoft
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 09/18/2018
 ms.technology:
 - cpp-cli
 ms.topic: conceptual
@@ -18,18 +18,18 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: 105b1d709ca2d9bb68741050489ffa1ee75c8067
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 338404abe7499b6d9ff7679420f069a2857ce1e0
+ms.sourcegitcommit: 338e1ddc2f3869d92ba4b73599d35374cf1d5b69
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46410575"
+ms.lasthandoff: 09/20/2018
+ms.locfileid: "46494442"
 ---
 # <a name="net-programming-with-ccli-visual-c"></a>Programowanie .NET w języku C + +/ interfejsu wiersza polecenia (Visual C++)
 
-W poniższych tematach opisano, jak Visual C++ można kierować platformy .NET.
+**Program Visual Studio 2015**: domyślnie projekty CLR utworzonych za pomocą programu Visual Studio 2015 ukierunkowane na .NET Framework 4.5.2. Do obiektu docelowego .NET Framework 4.6 podczas tworzenia nowego projektu w **nowy projekt** okno dialogowe, zmienić platformę docelową z listy rozwijanej w górnej środkowej części okna dialogowego. Aby zmienić platformę docelową dla istniejącego projektu, zamknij projekt, Edytuj plik projektu (.vcxproj) i zmienić wartość docelową wersję platformy 4.6. Gdy następnym razem otworzysz projekt, ustawienia zaczęły obowiązywać. 
 
-Domyślnie projekty CLR utworzonych za pomocą programu Visual Studio 2015 ukierunkowane na .NET Framework 4.5.2. Do obiektu docelowego .NET Framework 4.6 podczas tworzenia nowego projektu w **nowy projekt** okno dialogowe, zmienić platformę docelową z listy rozwijanej w górnej środkowej części okna dialogowego. Aby zmienić platformę docelową dla istniejącego projektu, zamknij projekt, Edytuj plik projektu (.vcxproj) i zmienić wartość docelową wersję platformy 4.6. Gdy następnym razem otworzysz projekt, ustawienia zaczęły obowiązywać.
+**Program Visual Studio 2017**: W programie Visual Studio 2017 jest domyślna struktura 4.6.1 i selektor wersji Framework znajduje się w dolnej części **okna dialogowego Nowy projekt**. C + +/ CLI, sama nie jest instalowany domyślnie. Zainstaluj składnik, otwórz Instalator programu Visual Studio, a następnie wybierz C + +/ interfejsu wiersza polecenia składnika w obszarze Visual C++. 
 
 ## <a name="in-this-section"></a>W tej sekcji
 
