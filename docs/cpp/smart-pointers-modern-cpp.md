@@ -12,12 +12,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2710609cbf20861c77dae1cb0aea327983efef6e
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 9142ba85a78259c0a6e5ae06f3745d414e62e908
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46098176"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46425631"
 ---
 # <a name="smart-pointers-modern-c"></a>Wskaźniki inteligentne (Modern C++)
 
@@ -86,29 +86,39 @@ Używaj tych inteligentnych wskaźników jako pierwszych, w celu hermetyzacji ws
 
 Kiedy pracujesz z obiektami COM, zawiń wskaźniki interfejsu w odpowiedni typ inteligentnego wskaźnika. Active Template Library (ATL) definiuje kilka inteligentnych wskaźników do różnych celów. Można również użyć `_com_ptr_t` typ inteligentnego wskaźnika, której kompilator używa podczas tworzenia klas otoki z plików .tlb. To najlepszy wybór, jeśli nie chcesz dołączyć plików nagłówkowych ATL.
 
-[Klasa CComPtr](../atl/reference/ccomptr-class.md) użyjemy, chyba że nie możesz użyć ATL. Wykonuje liczenia odwołań przy użyciu `AddRef` i `Release` metody. Aby uzyskać więcej informacji, zobacz [porady: tworzenie i wykorzystania wystąpień CComPtr i CComQIPtr](../cpp/how-to-create-and-use-ccomptr-and-ccomqiptr-instances.md).
+[Klasa CComPtr](../atl/reference/ccomptr-class.md)<br/>
+Użyj tego, jeżeli nie możesz użyć ATL. Wykonuje liczenia odwołań przy użyciu `AddRef` i `Release` metody. Aby uzyskać więcej informacji, zobacz [porady: tworzenie i wykorzystania wystąpień CComPtr i CComQIPtr](../cpp/how-to-create-and-use-ccomptr-and-ccomqiptr-instances.md).
 
-[Klasa CComQIPtr](../atl/reference/ccomqiptr-class.md) Resembles `CComPtr` , ale także zapewnia uproszczoną składnię do wywoływania `QueryInterface` obiektów COM. Aby uzyskać więcej informacji, zobacz [porady: tworzenie i wykorzystania wystąpień CComPtr i CComQIPtr](../cpp/how-to-create-and-use-ccomptr-and-ccomqiptr-instances.md).
+[Klasa CComQIPtr](../atl/reference/ccomqiptr-class.md)<br/>
+Przypomina `CComPtr` , ale także zapewnia uproszczoną składnię do wywoływania `QueryInterface` obiektów COM. Aby uzyskać więcej informacji, zobacz [porady: tworzenie i wykorzystania wystąpień CComPtr i CComQIPtr](../cpp/how-to-create-and-use-ccomptr-and-ccomqiptr-instances.md).
 
-[Klasa CComHeapPtr](../atl/reference/ccomheapptr-class.md) sprytny wskaźnik do obiektów, które używają `CoTaskMemFree` aby zwolnić pamięć.
+[Klasa CComHeapPtr](../atl/reference/ccomheapptr-class.md)<br/>
+Inteligentny wskaźnik do obiektów, które używają `CoTaskMemFree` aby zwolnić pamięć.
 
-[Klasa CComGITPtr](../atl/reference/ccomgitptr-class.md) inteligentny wskaźnik dla interfejsów, które są uzyskiwane z tabeli interfejsu globalnego (GIT).
+[Klasa CComGITPtr](../atl/reference/ccomgitptr-class.md)<br/>
+Inteligentny wskaźnik dla interfejsów, które są uzyskiwane z tabeli interfejsu globalnego (GIT).
 
-[_com_ptr_t — klasa](../cpp/com-ptr-t-class.md) Resembles `CComQIPtr` funkcji, ale nie zależy od nagłówków ATL.
+[_com_ptr_t, klasa](../cpp/com-ptr-t-class.md)<br/>
+Przypomina `CComQIPtr` funkcji, ale nie zależy od nagłówków ATL.
 
 ### <a name="atl-smart-pointers-for-poco-objects"></a>{1&gt;Inteligentne wskaźniki ATL dla obiektów POCO&lt;1}
 
 Oprócz inteligentnych wskaźników dla obiektów COM, ATL także definiuje inteligentne wskaźniki i kolekcje inteligentnych wskaźników dla zwykłych starych obiektów C++. W klasycznym programowaniu Windows, te typy są użyteczną do kolekcji standardowej biblioteki języka C++, szczególnie w przypadku, gdy przenoszenie kodu nie jest wymagane lub gdy użytkownik nie chce mieszać modeli programowania standardowej biblioteki języka C++ i ATL.
 
-[Klasa CAutoPtr](../atl/reference/cautoptr-class.md) inteligentny wskaźnik, który wymusza unikatowe własności poprzez przeniesienie własności na kopię. Porównywalne do zaniechanej `std::auto_ptr` klasy.
+[Klasa CAutoPtr](../atl/reference/cautoptr-class.md)<br/>
+Inteligentny wskaźnik, który wymusza unikatowe własności poprzez przeniesienie własności na kopię. Porównywalne do zaniechanej `std::auto_ptr` klasy.
 
-[Klasa CHeapPtr](../atl/reference/cheapptr-class.md) inteligentny wskaźnik dla obiektów, które są przydzielane przy użyciu języka C [— funkcja malloc](../c-runtime-library/reference/malloc.md) funkcji.
+[Klasa CHeapPtr](../atl/reference/cheapptr-class.md)<br/>
+Inteligentny wskaźnik dla obiektów, które są przydzielane przy użyciu języka C [— funkcja malloc](../c-runtime-library/reference/malloc.md) funkcji.
 
-[Klasa CAutoVectorPtr](../atl/reference/cautovectorptr-class.md) inteligentny wskaźnik dla tablic, które są przydzielane przy użyciu `new[]`.
+[Klasa CAutoVectorPtr](../atl/reference/cautovectorptr-class.md)<br/>
+Inteligentny wskaźnik dla tablic, które są przydzielane przy użyciu `new[]`.
 
-[Klasa CAutoPtrArray](../atl/reference/cautoptrarray-class.md) klasa, która hermetyzuje tablicę `CAutoPtr` elementów.
+[Klasa CAutoPtrArray](../atl/reference/cautoptrarray-class.md)<br/>
+Klasa, która hermetyzuje tablicę `CAutoPtr` elementów.
 
-[Klasa CAutoPtrList](../atl/reference/cautoptrlist-class.md) klasy, która hermetyzuje metody do manipulowania listą `CAutoPtr` węzłów.
+[Klasa CAutoPtrList](../atl/reference/cautoptrlist-class.md)<br/>
+Klasa, która hermetyzuje metody do manipulowania listą `CAutoPtr` węzłów.
 
 ## <a name="see-also"></a>Zobacz także
 

@@ -22,12 +22,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 30c1cd29a48b5a47f64e5a5148a157d5120d45e3
-ms.sourcegitcommit: d4c803bd3a684d7951bf88dcecf1f14af43ae411
+ms.openlocfilehash: 5bb62a61762c2c4e042777376f4d2b9f3ffc747e
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/10/2018
-ms.locfileid: "42466224"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46429750"
 ---
 # <a name="import-directive-c"></a>#import — dyrektywa (C++)
 **Określonego język C++**  
@@ -203,5 +203,5 @@ Aby uzyskać więcej informacji, zobacz [#import atrybutów](../preprocessor/has
   
 ## <a name="see-also"></a>Zobacz też  
 
-[Dyrektywy preprocesora](../preprocessor/preprocessor-directives.md)   
+[Dyrektywy preprocesora](../preprocessor/preprocessor-directives.md)<br/>
 [Obsługa kompilatora COM](../cpp/compiler-com-support.md)

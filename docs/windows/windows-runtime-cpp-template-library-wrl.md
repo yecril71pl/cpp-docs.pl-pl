@@ -13,12 +13,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 3c758226935151bd11faec12aed459aeb2606ca9
-ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
+ms.openlocfilehash: 8b220ecd69ce539c03339ac73048efb2750d2e32
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43684827"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46401806"
 ---
 # <a name="windows-runtime-c-template-library-wrl"></a>Biblioteka szablonów języka C++ środowiska wykonawczego systemu Windows (WRL)
 
@@ -50,43 +50,43 @@ Biblioteka szablonów C++ środowiska wykonawczego Windows i C + +/ CX oferują 
 
 Poniżej przedstawiono niektóre zasoby, które mogą pomóc Ci rozpocząć pracę z Biblioteka szablonów C++ środowiska wykonawczego Windows, następnie od razu.
 
-[Biblioteka środowiska uruchomieniowego Windows (WRL)](http://channel9.msdn.com/Events/Windows-Camp/Developing-Windows-8-Metro-style-apps-in-Cpp/The-Windows-Runtime-Library-WRL-)  
+[Biblioteka środowiska uruchomieniowego Windows (WRL)](http://channel9.msdn.com/Events/Windows-Camp/Developing-Windows-8-Metro-style-apps-in-Cpp/The-Windows-Runtime-Library-WRL-)<br/>
 W tym filmie wideo Channel 9 Dowiedz się więcej o jak Biblioteka szablonów C++ środowiska wykonawczego Windows ułatwia pisanie aplikacji uniwersalnych platformy Windows (UWP) i jak tworzyć i wykorzystywać składniki środowiska uruchomieniowego Windows.
 
-[Porady: uaktywnianie składnika środowiska wykonawczego Windows i korzystanie](../windows/how-to-activate-and-use-a-windows-runtime-component-using-wrl.md)  
+[Porady: uaktywnianie składnika środowiska wykonawczego Windows i korzystanie](../windows/how-to-activate-and-use-a-windows-runtime-component-using-wrl.md)<br/>
 Pokazuje, jak używać Biblioteka szablonów C++ środowiska wykonawczego Windows można zainicjować aparatu plików wykonywalnych Windows oraz uaktywnienia i używania składnika wykonawczego Windows.
 
-[Porady: wykonywanie operacji asynchronicznych](../windows/how-to-complete-asynchronous-operations-using-wrl.md)  
+[Porady: wykonywanie operacji asynchronicznych](../windows/how-to-complete-asynchronous-operations-using-wrl.md)<br/>
 Pokazuje, jak używać Biblioteka szablonów C++ środowiska wykonawczego Windows do uruchamiania operacji asynchronicznych i wykonywania pracy po ukończeniu operacji.
 
-[Porady: Obsługa zdarzeń](../windows/how-to-handle-events-using-wrl.md)  
+[Porady: Obsługa zdarzeń](../windows/how-to-handle-events-using-wrl.md)<br/>
 Pokazuje, jak używać Biblioteka szablonów C++ środowiska wykonawczego Windows subskrybować, i obsługiwać zdarzenia obiektu Windows Runtime.
 
-[Przewodnik: tworzenie aplikacji platformy uniwersalnej systemu Windows z użyciem biblioteki WRL i platformy Media Foundation](../windows/walkthrough-creating-a-windows-store-app-using-wrl-and-media-foundation.md)  
+[Przewodnik: tworzenie aplikacji platformy uniwersalnej systemu Windows z użyciem biblioteki WRL i platformy Media Foundation](../windows/walkthrough-creating-a-windows-store-app-using-wrl-and-media-foundation.md)<br/>
 Dowiedz się, jak utworzyć aplikację platformy uniwersalnej systemu Windows, która używa [Microsoft Media Foundation](/windows/desktop/medfound/microsoft-media-foundation-sdk).
 
-[Porady: tworzenie klasycznego składnika COM](../windows/how-to-create-a-classic-com-component-using-wrl.md)  
+[Porady: tworzenie klasycznego składnika COM](../windows/how-to-create-a-classic-com-component-using-wrl.md)<br/>
 Pokazuje, jak używać Biblioteka szablonów C++ środowiska wykonawczego Windows do tworzenia podstawowego składnika modelu COM i podstawowy sposób zarejestrowania i używania składnika COM z aplikacji klasycznej.
 
-[Instrukcje: bezpośrednie tworzenie wystąpień składników biblioteki WRL](../windows/how-to-instantiate-wrl-components-directly.md)  
+[Instrukcje: bezpośrednie tworzenie wystąpień składników biblioteki WRL](../windows/how-to-instantiate-wrl-components-directly.md)<br/>
 Dowiedz się, jak używać [Microsoft::wrl:: Make](../windows/make-function.md) i [Microsoft::WRL::Details::MakeAndInitialize](../windows/makeandinitialize-function.md) celu utworzenia instancji składnika z modułu, który go definiuje.
 
-[Instrukcje: Użyj winmdidl.exe i midlrt.exe, aby utworzyć pliki .h z metadanych systemu Windows](../windows/use-winmdidl-and-midlrt-to-create-h-files-from-windows-metadata.md)  
+[Instrukcje: Użyj winmdidl.exe i midlrt.exe, aby utworzyć pliki .h z metadanych systemu Windows](../windows/use-winmdidl-and-midlrt-to-create-h-files-from-windows-metadata.md)<br/>
 Pokazuje sposób wykorzystywania niestandardowych składników Windows Runtime z WRL przez utworzenie pliku IDL z metadanych .winmd.
 
-[Przewodnik: łączenie za pomocą zadań i żądań XML HTTP](../parallel/concrt/walkthrough-connecting-using-tasks-and-xml-http-requests.md)  
+[Przewodnik: łączenie za pomocą zadań i żądań XML HTTP](../parallel/concrt/walkthrough-connecting-using-tasks-and-xml-http-requests.md)<br/>
 Ilustruje sposób używania [IXMLHTTPRequest2](/previous-versions/windows/desktop/api/msxml6/nn-msxml6-ixmlhttprequest2) i [IXMLHTTPRequest2Callback](/previous-versions/windows/desktop/api/msxml6/nn-msxml6-ixmlhttprequest2callback) interfejsów oraz zadań wysyłać żądania HTTP GET i POST do usługi sieci web w aplikacji platformy uniwersalnej systemu Windows.
 
-[Przykład optymalizatora podróży w mapach Bing](http://code.msdn.microsoft.com/Bing-Maps-trip-optimizer-c4e037f7)  
+[Przykład optymalizatora podróży w mapach Bing](http://code.msdn.microsoft.com/Bing-Maps-trip-optimizer-c4e037f7)<br/>
 Używa `HttpRequest` klasy, która jest zdefiniowana w [wskazówki: łączenie za pomocą zadań i żądań XML HTTP](../parallel/concrt/walkthrough-connecting-using-tasks-and-xml-http-requests.md) w kontekście pełnej aplikacji platformy uniwersalnej systemu Windows.
 
-[Tworzenie składnika biblioteki DLL środowiska uruchomieniowego Windows przy użyciu przykładu w języku C++](http://code.msdn.microsoft.com/windowsapps/Creating-a-Windows-Runtime-6c399797)  
+[Tworzenie składnika biblioteki DLL środowiska uruchomieniowego Windows przy użyciu przykładu w języku C++](http://code.msdn.microsoft.com/windowsapps/Creating-a-Windows-Runtime-6c399797)<br/>
 Pokazuje, jak Biblioteka szablonów C++ środowiska wykonawczego Windows umożliwiają tworzenie składnika biblioteki DLL w procesie i używanie go z C + +/ CX, JavaScript i C#.
 
-[Przykładowa gra programu DirectX marmurowy Labirynt](http://code.msdn.microsoft.com/windowsapps/DirectX-Marble-Maze-Game-e4806345)  
+[Przykładowa gra programu DirectX marmurowy Labirynt](http://code.msdn.microsoft.com/windowsapps/DirectX-Marble-Maze-Game-e4806345)<br/>
 Pokazuje, jak na potrzeby zarządzania okresem istnienia składników COM, takich jak DirectX i platformy Media Foundation w kontekście Zakończenie gry 3-w. Biblioteka szablonów C++ środowiska wykonawczego Windows.
 
-[Wysyłania powiadomień toast z przykładowej aplikacji klasycznych](http://code.msdn.microsoft.com/windowsdesktop/Sending-toast-notifications-71e230a2)  
+[Wysyłania powiadomień toast z przykładowej aplikacji klasycznych](http://code.msdn.microsoft.com/windowsdesktop/Sending-toast-notifications-71e230a2)<br/>
 Pokazuje, jak używać Biblioteka szablonów C++ środowiska wykonawczego Windows do pracy z powiadomieniami toast z aplikacji klasycznej.
 
 ## <a name="windows-runtime-c-template-library-compared-to-atl"></a>Biblioteka szablonów języka C++ środowiska wykonawczego Windows w porównaniu z ATL

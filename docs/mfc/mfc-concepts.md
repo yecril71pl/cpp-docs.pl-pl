@@ -13,68 +13,68 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d0e7d0208e901e453a0ee7566d998a4cb4461980
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: da0fde988b2fa4bbe079c4d392edc45329627ad3
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33351995"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46379999"
 ---
 # <a name="mfc-concepts"></a>Pojęcia związane z MFC
 
-Ta sekcja zawiera tematy dotyczące pojęć i oparty na zadaniach ułatwiające program za pomocą biblioteki Microsoft Foundation Class (MFC).
+Ta sekcja zawiera tematy dotyczące pojęć i opartego na zadaniach ułatwiające program za pomocą biblioteki Microsoft Foundation Class (MFC).
 
 ## <a name="in-this-section"></a>W tej sekcji
 
-[Tematy ogólne dotyczące MFC](../mfc/general-mfc-topics.md)  
+[Tematy ogólne dotyczące MFC](../mfc/general-mfc-topics.md)<br/>
 W tym artykule omówiono szczegóły techniczne dotyczące biblioteki MFC.
 
-[Używanie obiektu CObject](../mfc/using-cobject.md)  
-Zawiera łącza do przy użyciu `CObject`, klasę podstawową dla większości klas MFC.
+[Używanie obiektu CObject](../mfc/using-cobject.md)<br/>
+Zawiera łącza do korzystania z `CObject`, klasa bazowa dla większości klas w MFC.
 
-[Kolekcje](../mfc/collections.md)  
-W tym artykule omówiono klasy kolekcji utworzone na podstawie i nie są tworzone za pomocą szablonów języka C++.
+[Kolekcje](../mfc/collections.md)<br/>
+W tym artykule omówiono klasy kolekcji utworzone na podstawie i nie utworzone na podstawie szablonów języka C++.
 
-[Data i godzina](../atl-mfc-shared/date-and-time.md)  
-Zawiera łącza do tematów dyskutować pomocą MFC daty i godziny.
+[Data i godzina](../atl-mfc-shared/date-and-time.md)<br/>
+Zawiera łącza do tematów omawiających używanie daty i godziny z MFC.
 
-[Pliki](../mfc/files-in-mfc.md)  
+[Pliki](../mfc/files-in-mfc.md)<br/>
 W tym artykule omówiono `CFile` i sposób obsługi plików w MFC.
 
-[Zarządzanie pamięcią (MFC)](../mfc/memory-management.md)  
-Opisuje sposób korzystać z usług ogólnego przeznaczenia, związane z zarządzaniem pamięci.
+[Zarządzanie pamięcią (MFC)](../mfc/memory-management.md)<br/>
+W tym artykule opisano, jak korzystać z usług ogólnego przeznaczenia, związane z zarządzaniem pamięcią.
 
-[Obsługa i mapowanie komunikatów](../mfc/message-handling-and-mapping.md)  
-Opisano, jak komunikaty i polecenia są przetwarzane przez MFC framework i podłącz je do ich funkcje programu obsługi.
+[Obsługa i mapowanie komunikatów](../mfc/message-handling-and-mapping.md)<br/>
+W tym artykule opisano, jak komunikaty i polecenia są przetwarzane przez platformę, MFC i jak podłączyć je do ich funkcje obsługi.
 
-[Serializacja](../mfc/serialization-in-mfc.md)  
-Wyjaśniono mechanizmu serializacji umożliwia obiektów utrwalić między uruchamia programu.
+[Serializacja](../mfc/serialization-in-mfc.md)<br/>
+Omawia mechanizm serializacji umożliwiający zachowanie obiektów pomiędzy uruchomieniami programu.
 
 ## <a name="related-sections"></a>Sekcje pokrewne
 
-[Wyjątek obsługi (MFC)](../mfc/exception-handling-in-mfc.md)  
-Opisano dostępne w MFC mechanizmy obsługi wyjątków.
+[Obsługa wyjątków (MFC)](../mfc/exception-handling-in-mfc.md)<br/>
+W tym artykule wyjaśniono mechanizmy obsługi wyjątków dostępne w MFC.
 
-[MFC — podstawy programowania Internetu](../mfc/mfc-internet-programming-basics.md)  
-W tym artykule omówiono klas MFC, które obsługują programowania Internetu.
+[MFC — podstawy programowania Internetu](../mfc/mfc-internet-programming-basics.md)<br/>
+W tym artykule omówiono klasy MFC, które obsługują Programowanie w Internecie.
 
-[MFC — zadania związane z programowaniem Internetu](../mfc/mfc-internet-programming-tasks.md)  
-W tym artykule omówiono, jak dodać obsługę Internetu dla poszczególnych aplikacji.
+[MFC — zadania związane z programowaniem Internetu](../mfc/mfc-internet-programming-tasks.md)<br/>
+W tym artykule omówiono sposób dodania obsługi Internetu do aplikacji.
 
-[Obsługa Unicode i Multibyte Character Set (MBCS)](../atl-mfc-shared/unicode-and-multibyte-character-set-mbcs-support.md)  
-Wyjaśniono, jak używać MFC i ATL obsługę standardu Unicode i zestawów znaków wielobajtowych.
+[Obsługa Unicode i Multibyte Character Set (MBCS)](../atl-mfc-shared/unicode-and-multibyte-character-set-mbcs-support.md)<br/>
+Wyjaśnia, jak używać MFC i ATL obsługę standardu Unicode i zestawach znaków wielobajtowych.
 
-[MFC COM](../mfc/mfc-com.md)  
-W tym artykule omówiono podzbiór MFC, przeznaczoną do obsługi modelu COM, podczas gdy większość Active biblioteki szablonu (ATL) jest przeznaczony dla modelu COM programowania.
+[MFC COM](../mfc/mfc-com.md)<br/>
+W tym artykule omówiono podzbiór MFC, który został zaprojektowany do obsługi COM, podczas gdy większość z Active Template Library (ATL) jest przeznaczona do programowania COM.
 
-[Wielowątkowość z C++ i MFC](../parallel/multithreading-with-cpp-and-mfc.md)  
-W tym artykule opisano, jakie są procesów i wątków oraz omówiono podejście MFC dla wielowątkowości.
+[Wielowątkowość z C++ i MFC](../parallel/multithreading-with-cpp-and-mfc.md)<br/>
+W tym artykule opisano, co to są procesy i wątki i podejściu MFC do wielowątkowości.
 
-[Gniazda systemu Windows w MFC](../mfc/windows-sockets.md)  
-Obejmuje implementacja MFC Windows Sockets.
+[Gniazda systemu Windows w MFC](../mfc/windows-sockets.md)<br/>
+Obejmuje MFC wdrożenie usługi Windows Sockets.
 
-[Odwołanie do biblioteki MFC](../mfc/mfc-desktop-applications.md)  
-Zawiera materiały odwołanie do biblioteki MFC, zestaw klas, które stanowią struktury aplikacji, który jest strukturą aplikacji napisanych dla interfejsu API systemu Windows.
+[Odwołanie MFC](../mfc/mfc-desktop-applications.md)<br/>
+Oferuje materiały źródłowe dotyczące biblioteki MFC, zestaw klas, które stanowią strukturę aplikacji, która jest strukturą aplikacji napisaną dla interfejsu API Windows.
 
-[MFC — przykłady](../visual-cpp-samples.md)  
-Zawiera łącza do przykłady, które przedstawiają sposób Użyj MFC w aplikacji klasycznych, biblioteki dll, aplikacje baz danych, kontrolek, aplikacji sieci Web i inne.
+[Przykłady MFC](../visual-cpp-samples.md)<br/>
+Zawiera łącza do przykładów ukazujących sposoby użycia klas MFC w aplikacje pulpitu, bibliotek DLL, aplikacji baz danych, formantów, aplikacji sieci Web i innych.

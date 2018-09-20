@@ -28,12 +28,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: df624c04b1fd5a80b6e54928adb8f3ca7424920a
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: c6bf8f299ef46166c5b09a716e5bed21fd3b9b01
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43215179"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46387110"
 ---
 # <a name="tn038-mfcole-iunknown-implementation"></a>TN038: implementacja interfejsu MFC/OLE IUnknown
 
@@ -414,7 +414,7 @@ CAggrExample::CAggrExample()
 }
 
 BOOL CAggrExample::OnCreateAggregates()
-{ 
+{
     // wire up aggregate with correct controlling unknown
     m_lpAggrInner = CoCreateInstance(CLSID_Example,
         GetControllingUnknown(), CLSCTX_INPROC_SERVER,
@@ -471,10 +471,10 @@ DWORD ExternalQueryInterface(
 
 #### <a name="parameters"></a>Parametry
 
-*lpIID*  
+*lpIID*<br/>
 Daleki wskaźnik IID (pierwszy argument funkcji QueryInterface)
 
-*ppvObj*  
+*ppvObj*<br/>
 Wskaźnik IUnknown * (drugi argument funkcji QueryInterface)
 
 #### <a name="remarks"></a>Uwagi
@@ -520,10 +520,10 @@ END_INTERFACE_PART(localClass)
 
 #### <a name="parameters"></a>Parametry
 
-*localClass*  
+*localClass*<br/>
 Nazwa klasy, która implementuje interfejs
 
-*iface*  
+*iface*<br/>
 Nazwa interfejsu, który implementuje ta klasa
 
 #### <a name="remarks"></a>Uwagi
@@ -560,10 +560,10 @@ END_INTERFACE_MAP
 
 #### <a name="parameters"></a>Parametry
 
-*theClass*  
+*theClass*<br/>
 Klasy, w którym ma zostać określona mapy interfejsu
 
-*baseClass*  
+*baseClass*<br/>
 Klasa, z której *theClass* pochodzi od klasy.
 
 #### <a name="remarks"></a>Uwagi
@@ -578,13 +578,13 @@ INTERFACE_PART(theClass, iid, localClass)
 
 #### <a name="parameters"></a>Parametry
 
-*theClass*  
+*theClass*<br/>
 Nazwa klasy, która zawiera mapę interfejsu.
 
-*IID*  
+*IID*<br/>
 `IID` Który ma być mapowane na klasie osadzonej.
 
-*localClass*  
+*localClass*<br/>
 Nazwa klasy lokalnej (mniej "X").
 
 #### <a name="remarks"></a>Uwagi
@@ -626,10 +626,10 @@ INTERFACE_AGGREGATE(theClass, theAggr)
 
 #### <a name="parameters"></a>Parametry
 
-*theClass*  
+*theClass*<br/>
 Nazwa klasy, która zawiera mapę interfejsu
 
-*theAggr*  
+*theAggr*<br/>
 Nazwa zmiennej członkowskiej, która ma zostać zagregowana.
 
 #### <a name="remarks"></a>Uwagi
@@ -638,5 +638,5 @@ To makro jest używane, aby poinformować szablon, że klasa korzysta z obiektu 
 
 ## <a name="see-also"></a>Zobacz także
 
-[Uwagi techniczne według numerów](../mfc/technical-notes-by-number.md)  
-[Uwagi techniczne według kategorii](../mfc/technical-notes-by-category.md)  
+[Uwagi techniczne według numerów](../mfc/technical-notes-by-number.md)<br/>
+[Uwagi techniczne według kategorii](../mfc/technical-notes-by-category.md)
