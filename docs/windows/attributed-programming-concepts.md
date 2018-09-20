@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 9f91474ec4c435b6fb2a005b47c67210a54d0804
-ms.sourcegitcommit: f0c90000125a9497bf61e41624de189a043703c0
+ms.openlocfilehash: abe76a4153ecfb0e4db4ce9e92eb63f5b00067ff
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44317267"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46394650"
 ---
 # <a name="attributed-programming-concepts"></a>Pojęcia związane z programowaniem opartym na atrybutach
 
@@ -32,27 +32,27 @@ Gdy atrybuty wyeliminować niektóre szczegółowe kodowanie, wymagane do zapisy
 
 ## <a name="in-this-section"></a>W tej sekcji
 
-[Cel atrybutów](../windows/purpose-of-attributes.md)  
+[Cel atrybutów](../windows/purpose-of-attributes.md)<br/>
 Zawiera omówienie programowania opartego na atrybutach.
 
-[Podstawowa mechanika atrybutów](../windows/basic-mechanics-of-attributes.md)  
+[Podstawowa mechanika atrybutów](../windows/basic-mechanics-of-attributes.md)<br/>
 W tym artykule opisano, jak atrybuty działają w twoim projekcie.
 
-[Kompilowanie programu opartego na atrybutach](../windows/building-an-attributed-program.md)  
+[Kompilowanie programu opartego na atrybutach](../windows/building-an-attributed-program.md)<br/>
 Zawiera informacje o używaniu opcji kompilatora języka C++ w projekcie.
 
-[Kategorie atrybutów](../windows/attribute-categories.md)  
+[Kategorie atrybutów](../windows/attribute-categories.md)<br/>
 Zawiera łącza do kategorii atrybuty używane w programie Visual C++.
 
-[Atrybut Programmming — często zadawane pytania](../windows/attribute-programming-faq.md)  
+[Atrybut Programmming — często zadawane pytania](../windows/attribute-programming-faq.md)<br/>
 Odpowiedzi na często zadawane pytania dotyczące programowania opartego na atrybutach.
 
 ## <a name="related-sections"></a>Sekcje pokrewne
 
-[Dokumentacja atrybutów](../windows/cpp-attributes-reference.md)  
+[Dokumentacja atrybutów](../windows/cpp-attributes-reference.md)<br/>
 Zawiera łącza do temat referencyjny opisujący poszczególne atrybuty i ich użycia.
 
-[Debugowanie wprowadzonego kodu](/visualstudio/debugger/how-to-debug-injected-code)  
+[Debugowanie wprowadzonego kodu](/visualstudio/debugger/how-to-debug-injected-code)<br/>
 W tym artykule opisano, debugowanie programów opartego na atrybutach.
 
 [__super](../cpp/super.md)i [__interface](../cpp/interface.md)  

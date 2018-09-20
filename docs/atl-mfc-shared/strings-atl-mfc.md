@@ -31,12 +31,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a918866710575ecc091fcce4564a7617d28a102d
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: f0751b218fe540a49c2cf0efde1dcf8976f2ebf6
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43752778"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46387318"
 ---
 # <a name="strings-atlmfc"></a>Ciągi (ATL/MFC)
 
@@ -44,18 +44,18 @@ Niemal we wszystkich programach pracować z danymi ciągu. Visual C++ zapewnia k
 
 ## <a name="in-this-section"></a>W tej sekcji
 
-[Użycie CStringT](../atl-mfc-shared/using-cstringt.md)  
+[Użycie CStringT](../atl-mfc-shared/using-cstringt.md)<br/>
 W tym artykule opisano Programowanie przy użyciu CStringT klasy szablonu.
 
-[Użycie CString](../atl-mfc-shared/using-cstring.md)  
+[Użycie CString](../atl-mfc-shared/using-cstring.md)<br/>
 Zawiera opis programowania w języku CString, domyślna implementacja CStringT.
 
 ## <a name="related-sections"></a>Sekcje pokrewne
 
-[Omówienie CStringT](../atl-mfc-shared/reference/cstringt-class.md)  
+[Omówienie CStringT](../atl-mfc-shared/reference/cstringt-class.md)<br/>
 Oferuje informacje odwołań dotyczące wspólnie `CStringT` klasy.
 
-[Pojęcia związane z MFC](../mfc/mfc-concepts.md)  
+[Pojęcia związane z MFC](../mfc/mfc-concepts.md)<br/>
 Zawiera tematy dotyczące pojęć i opartego na zadaniach ułatwiające programowania przy użyciu biblioteki MFC.
 
 ## <a name="see-also"></a>Zobacz też

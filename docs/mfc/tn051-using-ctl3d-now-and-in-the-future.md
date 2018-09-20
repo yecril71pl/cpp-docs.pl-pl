@@ -18,17 +18,19 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a19077bcba252d252418b6c3554c6172ed1aaa2c
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: dfffe63e80160cab1c85ef19de321b361e1c26cb
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33382275"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46388645"
 ---
 # <a name="tn051-using-ctl3d-now-and-in-the-future"></a>TN051: używanie CTL3D obecnie i w przyszłości
-Uwaga techniczna, który już wcześniej CTL3D i MFC, jest już nieaktualny. Efekt 3W formantów jest automatycznie implementowana przez MFC.  
-  
-## <a name="see-also"></a>Zobacz też  
- [Uwagi techniczne według numerów](../mfc/technical-notes-by-number.md)   
- [Uwagi techniczne według kategorii](../mfc/technical-notes-by-category.md)
+
+Ta uwaga techniczna, co poprzednio omówione CTL3D i MFC, jest teraz przestarzały. Efekt 3W dla formantów jest automatycznie implementowana przez MFC.
+
+## <a name="see-also"></a>Zobacz też
+
+[Uwagi techniczne według numerów](../mfc/technical-notes-by-number.md)<br/>
+[Uwagi techniczne według kategorii](../mfc/technical-notes-by-category.md)
 

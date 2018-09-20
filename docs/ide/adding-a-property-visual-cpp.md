@@ -15,39 +15,41 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e121cf9738910b105f5bb1933592e67d334f8937
-ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
+ms.openlocfilehash: bca3d282318217ad9d19c0576b933b45fcbc0b41
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43685329"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46393961"
 ---
 # <a name="adding-a-property-visual-c"></a>Dodawanie właściwości (Visual C++)
-Możesz użyć [Kreator dodawania właściwości](../ide/names-add-property-wizard.md) Aby dodać metodę do interfejsu w projekcie.  
-  
-### <a name="to-add-a-property-to-your-object"></a>Aby dodać właściwość do obiektu  
-  
-1.  W [Widok klas](/visualstudio/ide/viewing-the-structure-of-code), kliknij prawym przyciskiem myszy nazwę interfejsu, do którego chcesz dodać właściwość.  
-  
-    > [!NOTE]
-    >  Można również dodać właściwości do dispinterfaces, który, chyba że projekt jest przypisane, są zagnieżdżone w obrębie węzła biblioteki.  
-  
-2.  W menu skrótów kliknij **Dodaj**, a następnie kliknij przycisk **Dodaj właściwość**.  
-  
-3.  W [Kreator dodawania właściwości](../ide/names-add-property-wizard.md), podaj informacje, aby utworzyć właściwość.  
-  
-4.  Określ jakiekolwiek ustawienia interfejsu definicja języka (IDL) dla właściwości w [atrybuty IDL](../ide/idl-attributes-add-property-wizard.md) strony kreatora.  
-  
-5.  Kliknij przycisk **Zakończ** można dodać właściwości.  
-  
- **Uzyskać** i `Put` metody, właściwości są wyświetlane jako dwie ikony w widoku klas w obszarze interfejs, w którym jest zdefiniowana. Możesz kliknąć dwukrotnie albo ikonę, aby wyświetlić deklaracja właściwości w pliku .idl.  
-  
--   Interfejsy ATL **uzyskać** i **umieścić** funkcje są dodawane do pliku .cpp i odwołania do tych funkcji są dodawane do pliku .h.  
-  
--   Dla dispinterfaces MFC, jeśli zostanie wybrana **zmiennej składowej** jako typ implementacji metody i zmienna są dodawane do klasy, która implementuje go. Jeśli wybierzesz **metod Get/Set** jako typ implementacji dwie metody są dodawane do klasy, która implementuje go.  
-  
-## <a name="see-also"></a>Zobacz też  
- [Tworzenie interfejsu COM](../ide/creating-a-com-interface-visual-cpp.md)   
- [Edytowanie interfejsu COM](../ide/editing-a-com-interface.md)   
- [Model Component Object Model](/windows/desktop/com/the-component-object-model)   
- [Wskaźniki interfejsu i interfejsy](/windows/desktop/com/interface-pointers-and-interfaces)
+
+Możesz użyć [Kreator dodawania właściwości](../ide/names-add-property-wizard.md) Aby dodać metodę do interfejsu w projekcie.
+
+### <a name="to-add-a-property-to-your-object"></a>Aby dodać właściwość do obiektu
+
+1. W [Widok klas](/visualstudio/ide/viewing-the-structure-of-code), kliknij prawym przyciskiem myszy nazwę interfejsu, do którego chcesz dodać właściwość.
+
+   > [!NOTE]
+   > Można również dodać właściwości do dispinterfaces, który, chyba że projekt jest przypisane, są zagnieżdżone w obrębie węzła biblioteki.
+
+1. W menu skrótów kliknij **Dodaj**, a następnie kliknij przycisk **Dodaj właściwość**.
+
+1. W [Kreator dodawania właściwości](../ide/names-add-property-wizard.md), podaj informacje, aby utworzyć właściwość.
+
+1. Określ jakiekolwiek ustawienia interfejsu definicja języka (IDL) dla właściwości w [atrybuty IDL](../ide/idl-attributes-add-property-wizard.md) strony kreatora.
+
+1. Kliknij przycisk **Zakończ** można dodać właściwości.
+
+**Uzyskać** i `Put` metody, właściwości są wyświetlane jako dwie ikony w widoku klas w obszarze interfejs, w którym jest zdefiniowana. Możesz kliknąć dwukrotnie albo ikonę, aby wyświetlić deklaracja właściwości w pliku .idl.
+
+- Interfejsy ATL **uzyskać** i **umieścić** funkcje są dodawane do pliku .cpp i odwołania do tych funkcji są dodawane do pliku .h.
+
+- Dla dispinterfaces MFC, jeśli zostanie wybrana **zmiennej składowej** jako typ implementacji metody i zmienna są dodawane do klasy, która implementuje go. Jeśli wybierzesz **metod Get/Set** jako typ implementacji dwie metody są dodawane do klasy, która implementuje go.
+
+## <a name="see-also"></a>Zobacz też
+
+[Tworzenie interfejsu COM](../ide/creating-a-com-interface-visual-cpp.md)<br>
+[Edytowanie interfejsu COM](../ide/editing-a-com-interface.md)<br>
+[Model Component Object Model](/windows/desktop/com/the-component-object-model)<br>
+[Wskaźniki interfejsu i interfejsy](/windows/desktop/com/interface-pointers-and-interfaces)

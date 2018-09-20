@@ -21,67 +21,69 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ec085bcd519aa1694cb889a06ce9b1881e065514
-ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
+ms.openlocfilehash: 8aa04fdee2b63f9d91d2bdd7dfd62100b3e32a2c
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/26/2018
-ms.locfileid: "36951489"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46393324"
 ---
 # <a name="updating-the-text-of-a-status-bar-pane"></a>Aktualizowanie tekstu w okienku paska stanu
-W tym artykule wyjaśniono, jak zmienić tekst wyświetlany w okienku paska stanu MFC. Pasek stanu — obiekt window klasy [cstatusbar —](../mfc/reference/cstatusbar-class.md) — zawiera kilka "okienka." Każdy okienko jest prostokątny obszar paska stanu, który służy do wyświetlania informacji. Na przykład wiele aplikacji wyświetlany stan włączony klawisz CAPS LOCK, NUM LOCK i innych kluczy w okienku po prawej stronie. Aplikacje również często jest wyświetlany tekst informacyjny w okienku po lewej stronie (okienko 0), nazywane czasem "okienko komunikat". Na przykład domyślny pasek stanu MFC używa okienku komunikat do wyświetlenia ciąg wyjaśniający menu obecnie wybranego elementu lub przycisku paska narzędzi. Wartość w [pasków stanu](../mfc/status-bar-implementation-in-mfc.md) Wyświetla pasek stanu z aplikacji utworzone przez Kreatora aplikacji MFC.  
-  
- Domyślnie nie są włączone MFC `CStatusBar` okienko podczas tworzenia okienka. Aby aktywować okienko, należy użyć on_update_command_ui — makro dla każdego okienka na pasku stanu i zaktualizować okienka. Ponieważ okienka nie wysyłają komunikatów WM_COMMAND (nie są takie jak przyciski paska narzędzi), należy wpisać kod ręcznie.  
-  
- Na przykład, załóżmy, że ma jedno okienko `ID_INDICATOR_PAGE` jako identyfikatora polecenia i zawiera numer bieżącej strony w dokumencie. Poniższa procedura opisuje sposób tworzenia nowego okienka na pasku stanu.  
-  
-### <a name="to-make-a-new-pane"></a>Aby utworzyć nowe okienko  
-  
-1.  Zdefiniuj identyfikator okienku polecenia.  
-  
-     Na **widoku** menu, kliknij przycisk **widok zasobów**. Kliknij prawym przyciskiem myszy zasób projektu, a następnie kliknij przycisk **symbole zasobu**. W oknie dialogowym symbole zasobów, kliknij przycisk `New`. Wpisz nazwę Identyfikatora polecenia: na przykład `ID_INDICATOR_PAGE`. Określ wartość dla Identyfikatora, lub zaakceptuj wartość zasugerowany przez okno dialogowe symboli zasobów. Na przykład w przypadku `ID_INDICATOR_PAGE`, zaakceptuj wartość domyślną. Zamknij okno dialogowe symboli zasobów.  
-  
-2.  Zdefiniuj domyślny ciąg do wyświetlania w okienku.  
-  
-     Otwórz widok zasobów, kliknij dwukrotnie **tabeli ciągów** w oknie, który wyświetla listę typów zasobów dla aplikacji. Z **tabeli ciągów** edytor jest otwarty, wybierz **nowe parametry** z **Wstaw** menu. W oknie właściwości ciągu wybierz identyfikator polecenia tego okienka (na przykład `ID_INDICATOR_PAGE`) i wpisać domyślne wartości ciągu, takich jak "Page". Zamknij edytor ciągów. (Należy domyślny ciąg, aby uniknąć błędów kompilatora).  
-  
-3.  Okienko, aby dodać *wskaźniki* tablicy.  
-  
-     W pliku MAINFRM. CPP, zlokalizuj *wskaźniki* tablicy. Ta tablica zawiera identyfikatory poleceń dla wszystkich wskaźników na pasku stanu, w kolejności od lewej do prawej. We właściwym momencie w tablicy, wprowadź identyfikator polecenia dla tego okienka, jak pokazano poniżej, aby uzyskać `ID_INDICATOR_PAGE`:  
-  
-     [!code-cpp[NVC_MFCDocView#10](../mfc/codesnippet/cpp/updating-the-text-of-a-status-bar-pane_1.cpp)]  
-  
- Jest to zalecany sposób wyświetlania tekstu w okienku do wywołania `SetText` funkcji członkowskiej klasy `CCmdUI` w funkcji obsługi aktualizacji dla tego okienka. Na przykład można skonfigurować zmienna całkowitoliczbowa *m_nPage* zawierający numer bieżącej strony i użyj `SetText` można ustawić okienko tekstu do tego numeru wersji ciągu.  
-  
+
+W tym artykule wyjaśniono, jak zmienić tekst, który jest wyświetlany w okienku paska stanu w MFC. Pasek stanu — obiekt window klasy [CStatusBar](../mfc/reference/cstatusbar-class.md) — zawiera kilka "okienka." Każde okienko jest prostokątny obszar na pasku stanu, który służy do wyświetlania informacji. Na przykład wiele aplikacji wyświetlić stan włączony klawisz CAPS LOCK i NUM LOCK, innych kluczy, w okienku po prawej stronie. Aplikacje często wyświetlić tekst informacyjny w skrajnej lewej okienku (0), czasami nazywane "okienko komunikat". Na przykład pasek stanu MFC domyślny używa okienka komunikat do wyświetlenia ciągu wyjaśniające, menu aktualnie wybranego elementu lub przycisk paska narzędzi. Wartość w [paski stanu](../mfc/status-bar-implementation-in-mfc.md) wyświetlany pasek stanu, z aplikacji utworzonej przez Kreatora aplikacji MFC.
+
+Domyślnie nie zostanie włączony MFC `CStatusBar` okienko podczas tworzenia okienka. Aby aktywować okienko, należy użyć ON_UPDATE_COMMAND_UI — makro dla każdego okienka na pasku stanu i aktualizacji okienka. Ponieważ okienka nie wysyłają komunikatów WM_COMMAND (nie są takie jak przyciski paska narzędzi), należy wpisywać kod ręcznie.
+
+Załóżmy, że ma jedno okienko `ID_INDICATOR_PAGE` jako jego identyfikator polecenia i zawiera numer bieżącej strony w dokumencie. Poniższa procedura opisuje sposób tworzenia nowego okienka paska stanu.
+
+### <a name="to-make-a-new-pane"></a>Aby utworzyć nowe okienko
+
+1. Zdefiniuj identyfikator okienka polecenia.
+
+     Na **widoku** menu, kliknij przycisk **widok zasobów**. Kliknij prawym przyciskiem myszy zasób projektu, a następnie kliknij przycisk **symboli zasobów**. W oknie dialogowym symboli zasobów kliknij pozycję `New`. Wpisz nazwę Identyfikatora polecenia: na przykład `ID_INDICATOR_PAGE`. Określ wartość dla Identyfikatora, lub zaakceptuj wartość zaproponowana przez okno dialogowe symboli zasobów. Na przykład w przypadku `ID_INDICATOR_PAGE`, zaakceptuj wartość domyślną. Zamknij okno dialogowe symboli zasobów.
+
+1. Zdefiniuj domyślny ciąg do wyświetlenia w okienku.
+
+     Otwórz widok zasobów, kliknij dwukrotnie **tabeli ciągów** w oknie, które wyświetla listę typów zasobów dla aplikacji. Za pomocą **tabeli ciągów** edytor jest otwarty, wybierz **nowy ciąg** z **Wstaw** menu. W oknie dialogowym właściwości ciągu wybierz identyfikator polecenia tego okienka (na przykład `ID_INDICATOR_PAGE`) i wpisz wartość domyślną ciągu, takich jak "Page". Zamknij edytor ciągów. (Należy domyślny ciąg, aby uniknąć błąd kompilatora).
+
+1. Okienko Aby dodać *wskaźniki* tablicy.
+
+     W pliku MAINFRM. CPP, zlokalizuj *wskaźniki* tablicy. Ta tablica zawiera listę identyfikatorów poleceń dla wszystkich wskaźników pasek stanu, w kolejności od lewej do prawej. We właściwym punkcie w tablicy, wprowadź identyfikator polecenia dla tego okienka, jak pokazano poniżej, aby uzyskać `ID_INDICATOR_PAGE`:
+
+     [!code-cpp[NVC_MFCDocView#10](../mfc/codesnippet/cpp/updating-the-text-of-a-status-bar-pane_1.cpp)]
+
+Zalecanym sposobem wyświetlania tekstu w okienku jest wywołanie `SetText` funkcji składowej klasy typu `CCmdUI` w funkcji procedury obsługi aktualizacji dla tego okienka. Na przykład możesz chcieć skonfigurować zmienną całkowitoliczbową *m_nPage* zawiera numer bieżącej strony i użyj `SetText` ustawić tekst z okienka parametry wersją tej liczby.
+
 > [!NOTE]
->  `SetText` Podejście jest zalecane. Istnieje możliwość wykonania tego zadania w nieco niższy poziom wywołując `CStatusBar` funkcji członkowskiej `SetPaneText`. Mimo tego nadal potrzebujesz programu obsługi aktualizacji. Bez takiej obsługi dla tego okienka MFC automatycznie wyłącza okienku wymazywania jej zawartości.  
-  
- Poniższa procedura przedstawia sposób użycia funkcji obsługi aktualizacji do wyświetlania tekstu w okienku.  
-  
-#### <a name="to-make-a-pane-display-text"></a>Aby okienko wyświetlania tekstu  
-  
-1.  Dodaj program obsługi aktualizacji poleceń dla polecenia.  
-  
-     Ręcznie Dodaj prototyp obsługi, jak pokazano poniżej, aby uzyskać `ID_INDICATOR_PAGE` (w MAINFRM. H):  
-  
-     [!code-cpp[NVC_MFCDocView#11](../mfc/codesnippet/cpp/updating-the-text-of-a-status-bar-pane_2.h)]  
-  
-2.  W odpowiednich. CPP plików, Dodaj program obsługi definicji, jak pokazano poniżej, aby uzyskać `ID_INDICATOR_PAGE` (w MAINFRM. CPP):  
-  
-     [!code-cpp[NVC_MFCDocView#12](../mfc/codesnippet/cpp/updating-the-text-of-a-status-bar-pane_3.cpp)]  
-  
-     Trzy ostatnie wiersze tego programu obsługi są kod, który wyświetla tekst.  
-  
-3.  W planie odpowiedni komunikat dodać on_update_command_ui — makro, jak pokazano poniżej, aby uzyskać `ID_INDICATOR_PAGE` (w MAINFRM. CPP):  
-  
-     [!code-cpp[NVC_MFCDocView#13](../mfc/codesnippet/cpp/updating-the-text-of-a-status-bar-pane_4.cpp)]  
-  
- Po zdefiniowaniu wartość *m_nPage* zmiennej członkowskiej (klasy `CMainFrame`), ta metoda powoduje, że numer strony, aby są wyświetlane w okienku podczas przetwarzania bezczynności w taki sam sposób, że aplikacja aktualizuje innych wskaźników. Jeśli *m_nPage* zmian, zmiany wyświetlania podczas następnego pętli bezczynności.  
-  
-### <a name="what-do-you-want-to-know-more-about"></a>Co chcesz dowiedzieć się więcej o  
-  
--   [Aktualizowanie obiektów interfejsu użytkownika (jak zaktualizować przycisków paska narzędzi i elementów menu jako program warunków zmian)](../mfc/how-to-update-user-interface-objects.md)  
-  
-## <a name="see-also"></a>Zobacz też  
- [Implementacja paska stanu w MFC](../mfc/status-bar-implementation-in-mfc.md)   
- [Klasa CStatusBar](../mfc/reference/cstatusbar-class.md)
+>  `SetText` Podejście jest zalecane. Można to zrobić na nieco niższy poziom, wywołując `CStatusBar` funkcja elementu członkowskiego `SetPaneText`. Nawet w takim przypadku należy do obsługi aktualizacji. Bez tych program obsługi dla tego okienka MFC wyłączy okienku wymazywania jej zawartości.
+
+Poniższa procedura pokazuje, jak używać funkcji obsługi aktualizacji do wyświetlania tekstu w okienku.
+
+#### <a name="to-make-a-pane-display-text"></a>Aby w okienku wyświetlania tekstu
+
+1. Dodaj program obsługi aktualizacji poleceń dla polecenia.
+
+     Ręcznie Dodaj prototyp obsługi, jak pokazano poniżej, aby uzyskać `ID_INDICATOR_PAGE` (w MAINFRM. GODZ.):
+
+     [!code-cpp[NVC_MFCDocView#11](../mfc/codesnippet/cpp/updating-the-text-of-a-status-bar-pane_2.h)]
+
+1. W odpowiedniej. CPP Dodaj program obsługi definicji, jak pokazano poniżej, aby uzyskać `ID_INDICATOR_PAGE` (w MAINFRM. CPP):
+
+     [!code-cpp[NVC_MFCDocView#12](../mfc/codesnippet/cpp/updating-the-text-of-a-status-bar-pane_3.cpp)]
+
+     Trzy ostatnie wiersze tej procedury obsługi są kod, który wyświetla tekst.
+
+1. Na mapie odpowiedni komunikat i Dodaj ON_UPDATE_COMMAND_UI — makro, jak pokazano poniżej, aby uzyskać `ID_INDICATOR_PAGE` (w MAINFRM. CPP):
+
+     [!code-cpp[NVC_MFCDocView#13](../mfc/codesnippet/cpp/updating-the-text-of-a-status-bar-pane_4.cpp)]
+
+Po zdefiniowaniu wartość *m_nPage* zmienną członkowską (klasy `CMainFrame`), ta metoda powoduje, że numer strony, aby w okienku są wyświetlane podczas przetwarzania bezczynności w taki sam sposób, że aplikacja aktualizuje inne wskaźniki. Jeśli *m_nPage* zmian, zmiany wyświetlania podczas następnego wykonywania pętli bezczynności.
+
+### <a name="what-do-you-want-to-know-more-about"></a>Co chcesz dowiedzieć się więcej na temat
+
+- [Aktualizowanie obiektów interfejsu użytkownika (jak zaktualizować elementy menu i przycisków na pasku narzędzi, zmianami warunków program)](../mfc/how-to-update-user-interface-objects.md)
+
+## <a name="see-also"></a>Zobacz też
+
+[Implementacja paska stanu w MFC](../mfc/status-bar-implementation-in-mfc.md)<br/>
+[Klasa CStatusBar](../mfc/reference/cstatusbar-class.md)

@@ -16,21 +16,23 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 580969195de9241d935e1c27e1659f6e0c4c40ab
-ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
+ms.openlocfilehash: 3bea24d487170ea4cac470f2244340f6b570d1ec
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/26/2018
-ms.locfileid: "36953213"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46390477"
 ---
 # <a name="types-of-image-lists"></a>Typy list obrazów
-Istnieją dwa typy list obrazów ([CImageList](../mfc/reference/cimagelist-class.md)): nonmasked i maskowanego. "Listy obrazów nonmasked" składa się z mapy bitowej kolor, który zawiera jeden lub więcej obrazów. "Listy obrazów maskowanego" składa się z dwóch map bitowych taki sam rozmiar. Pierwsza to kolorów mapy bitowej, zawierający obrazy, a drugą jest monochromatyczny mapy bitowej, który zawiera szereg maski — po jednej dla każdego obrazu w pierwszym mapy bitowej.  
-  
- Jeden z przeciążeń `Create` funkcji członkowskiej pobiera flagę wskazującą, czy listy obrazów są wyświetlane jako znaki. (Inne przeciążenia tworzenie list obrazów maskowanego).  
-  
- Podczas rysowania obrazu nonmasked po prostu jest kopiowany do kontekstu urządzenia docelowego; oznacza to, że jest rysowane przez istniejący kolor tła kontekst urządzenia. Podczas rysowania obrazu maskowanego bitów obrazu są łączone z bity maski, zazwyczaj tworzenie obszarów przezroczystych w mapie bitowej którym wyświetlana kolor tła kontekstu urządzenia docelowego za pośrednictwem. Można określić kilka Style rysowania podczas rysowania obrazu maskowanego. Na przykład można określić, czy obraz ma być symulowane wskazująca wybranego obiektu.  
-  
-## <a name="see-also"></a>Zobacz też  
- [Korzystanie z CImageList](../mfc/using-cimagelist.md)   
- [Kontrolki](../mfc/controls-mfc.md)
+
+Istnieją dwa typy list obrazów ([CImageList](../mfc/reference/cimagelist-class.md)): nonmasked i maskowanego. "Lista nonmasked obrazu" składa się z mapy bitowej kolor, który zawiera jeden lub więcej obrazów. "Lista maskowanego obrazu" składa się z dwóch map bitowych w taki sam rozmiar. Pierwsza to kolorów mapy bitowej, który zawiera obrazy, a drugą jest wartość monochromatyczną mapę bitową, która zawiera szereg maski — jeden dla każdego obrazu w pierwszym mapy bitowej.
+
+Jednego z przeciążeń `Create` funkcja elementu członkowskiego pobiera flagę wskazującą, czy lista obrazów są wyświetlane jako znaki. (Inne przeciążenia tworzenie list obrazów maskowanego).
+
+Podczas rysowania obrazu nonmasked po prostu jest kopiowana do kontekstu urządzenia docelowego; oznacza to, że jej rysowania za pośrednictwem istniejących kolor tła kontekstu urządzenia. Podczas rysowania obrazu maskowanego bitów obrazu, są połączone z bity maski zazwyczaj tworzenie obszarów przezroczystych w mapie bitowej gdzie zawiera kolor tła kontekstu urządzenia docelowego za pomocą. Można określić kilka stylów rysunku, podczas rysowania obrazu maskowanego. Na przykład można określić, czy obraz być symulowane w celu wskazania wybranego obiektu.
+
+## <a name="see-also"></a>Zobacz też
+
+[Korzystanie z CImageList](../mfc/using-cimagelist.md)<br/>
+[Kontrolki](../mfc/controls-mfc.md)
 

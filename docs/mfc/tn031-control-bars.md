@@ -24,212 +24,217 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6744b4c5ea2da1f572ad721f980f719bb9b25af8
-ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
+ms.openlocfilehash: 412dd9e0a4e81ee6152197634205401cbe71df2e
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/26/2018
-ms.locfileid: "36953005"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46390620"
 ---
 # <a name="tn031-control-bars"></a>TN031: paski sterowania
+
 > [!NOTE]
->  Poniższe uwagi techniczne nie został zaktualizowany, ponieważ została ona uwzględniona w dokumentacji online. W związku z tym niektóre procedury i tematy mogą być nieaktualne lub niepoprawne. Najnowsze informacje zalecane jest, możesz wyszukać temat odsetek w indeksie dokumentacji online.  
-  
- Klasy pasków sterowania w MFC opisuje ta Uwaga: Ogólne [ccontrolbar —](#_mfcnotes_ccontrolbar), [cstatusbar —](#_mfcnotes_cstatusbar), [ctoolbar —](#_mfcnotes_ctoolbar), [cdialogbar —](#_mfcnotes_cdialogbar)i `CDockBar`.  
-  
-## <a name="_mfcnotes_ccontrolbar"></a> Ccontrolbar — 
-  
- A `ControlBar` jest `CWnd`-pochodnej klasy, które:  
-  
--   Jest wyrównany do góry lub u dołu okna ramki.  
-  
--   Może zawierać elementy podrzędne, które są albo formantów na podstawie HWND (na przykład `CDialogBar`) lub z systemem innym niż-`HWND` na podstawie elementów (na przykład `CToolBar`, `CStatusBar`).  
-  
- Paski sterowania obsługuje dodatkowe style:  
-  
-- Kod pin CBRS_TOP (ustawienie domyślne) pasek sterowania do góry.  
-  
-- Kod Pin CBRS_BOTTOM pasek sterowania na dole.  
-  
-- Nie CBRS_NOALIGN czy zmienić położenie pasek sterowania, gdy zmienia rozmiar obiektu nadrzędnego.  
-  
- Klasy wyprowadzone z `CControlBar` zapewniają bardziej interesującego implementacji:  
-  
-- `CStatusBar` Pasek stanu elementy są zawierającej tekst okienka paska stanu.  
-  
-- `CToolBar` Pasek narzędzi elementy są wyrównane w wierszu przycisków mapy bitowej.  
-  
-- `CDialogBar` Ramka pasek narzędzi zawierające standardowego systemu windows formantów (utworzone na podstawie zasobu szablonu okna dialogowego).  
-  
-- `CDockBar` Uogólniony miejsce dokowania dla innych `CControlBar` pochodnych obiektów. Określonego elementu członkowskiego, funkcje i zmienne, dostępne w tej klasie mogą ulec zmianie w przyszłych wersjach.  
-  
- Wszystkie kontrolki paska obiektów/system windows będzie okien podrzędnych okien ramka nadrzędny. Są one zazwyczaj dodane jako element równorzędny do obszaru klienckiego ramki (na przykład klienta MDI lub Widok). Ważne jest identyfikator okna podrzędnego pasek sterowania. Domyślny układ pasek sterowania działa tylko dla paski sterowania z identyfikatorami w zakresie AFX_IDW_CONTROLBAR_FIRST do AFX_IDW_CONTROLBAR_LAST. Należy pamiętać, że nawet jeśli istnieje szereg kontroli 256 paska identyfikatory, pierwszy 32 te pasek sterowania identyfikatory są specjalne ponieważ są bezpośrednio obsługiwane przez architektura podglądu wydruku.  
-  
- `CControlBar` Klasy daje standardowej implementacji dla:  
-  
--   Wyrównywanie pasek sterowania u góry, dołu lub obu stronach ramki.  
-  
--   Przydzielanie kontroli tablice elementów.  
-  
--   Obsługa implementacja klas pochodnych.  
-  
- Obiekty pasków sterowania C++ zazwyczaj zostanie osadzony jako elementy członkowskie `CFrameWnd` klasy i zostaną wyczyszczone kiedy nadrzędnego `HWND` i obiektu zostaną zniszczone. Można przydzielić obiektu pasek sterowania na stercie należy po prostu można ustawić *m_bAutoDestruct* członka **TRUE** aby pasek sterowania "**usunąć ten**" podczas `HWND` zostanie zniszczony.  
-  
+>  Następująca uwaga techniczna nie został zaktualizowany od pierwszego uwzględnienia jej w dokumentacji online. W rezultacie niektóre procedury i tematy może być nieaktualne lub niepoprawne. Najnowsze informacje zaleca się wyszukać temat w indeksie dokumentacji online.
+
+Ta uwaga opisuje klasy pasków sterowania w MFC: Ogólne [CControlBar](#_mfcnotes_ccontrolbar), [CStatusBar](#_mfcnotes_cstatusbar), [CToolBar](#_mfcnotes_ctoolbar), [CDialogBar](#_mfcnotes_cdialogbar)i `CDockBar`.
+
+## <a name="_mfcnotes_ccontrolbar"></a> CControlBar
+
+A `ControlBar` jest `CWnd`-pochodne klasy, które:
+
+- Jest wyrównany do góry lub u dołu okna ramki.
+
+- Może zawierać elementy podrzędne, które są albo kontrolę opartą na HWND (na przykład `CDialogBar`) lub innych niż-`HWND` na podstawie elementów (na przykład `CToolBar`, `CStatusBar`).
+
+Paski sterowania obsługują dodatkowe style:
+
+- Kod pin CBRS_TOP (ustawienie domyślne) pasek sterowania do góry.
+
+- Kod Pin CBRS_BOTTOM pasek sterowania do dołu.
+
+- Nie należy CBRS_NOALIGN zmienić położenie paska sterowania, gdy zmienia rozmiar obiektu nadrzędnego.
+
+Klasy pochodne `CControlBar` dostarczać implementacje bardziej interesująca:
+
+- `CStatusBar` Pasek stanu, są elementy zawierające tekst okienka paska stanu.
+
+- `CToolBar` Pasek narzędzi, elementy są wyrównane w wierszu przyciski z mapami.
+
+- `CDialogBar` Ramka pasek narzędzi, zawierającą standardowy system windows formantów (utworzone na podstawie zasobu szablonu okna dialogowego).
+
+- `CDockBar` Uogólniony obszar dokowania dla innych `CControlBar` obiektami wywodzącymi. Określonych funkcji elementów członkowskich i zmienne dostępne w tej klasie mogą ulec zmianie w przyszłych wersjach.
+
+Wszystkie kontrolki paska obiektów/system windows będzie okienka podrzędne dla niektórych nadrzędnej ramki okna. Są one zwykle dodawane jako element równorzędny do obszaru klienta ramki (na przykład klienta MDI lub widoku). Ważne jest identyfikator okna elementu podrzędnego paska sterowania. Domyślny układ paska sterowania działa tylko w przypadku paski sterowania z identyfikatorami w zakresie AFX_IDW_CONTROLBAR_FIRST do AFX_IDW_CONTROLBAR_LAST. Należy pamiętać, że nawet jeśli istnieje szereg kontroli 256 paska identyfikatorów, pierwsze 32 te pasek sterowania identyfikatory są specjalne, ponieważ są bezpośrednio obsługiwane przez architektura podglądu wydruku.
+
+`CControlBar` Klasy zapewnia standardową implementację dla:
+
+- Wyrównywanie pasek sterowania do górnej, dolnej lub po obu stronach ramki.
+
+- Przydzielanie kontroli elementów tablic.
+
+- Obsługa wdrażania w klasach pochodnych.
+
+Obiekty pasek sterowania C++ zazwyczaj zostanie osadzony jako elementy członkowskie `CFrameWnd` klasę pochodną i zostaną wyczyszczone po nadrzędnej `HWND` i obiektu są niszczone. Jeśli musisz przydzielić obiektu pasek sterowania, na stosie, można po prostu ustawić *m_bAutoDestruct* członka do **TRUE** aby pasek sterowania "**usunąć ten**" podczas `HWND` zostanie zniszczony.
+
 > [!NOTE]
->  W przypadku utworzenia własnych `CControlBar`-pochodnej klasy, a nie przy użyciu jednej z jego MFC klasy pochodne —, takich jak `CStatusBar`, `CToolBar`, lub `CDialogBar`, musisz ustawić *m_dwStyle* element członkowski danych. Można to zrobić w zastąpieniu z `Create`:  
-  
-```  
-// CMyControlBar is derived from CControlBar  
+>  Jeśli tworzysz własny `CControlBar`-pochodne klasy, a nie przy użyciu jednej z biblioteki MFC pochodne klasy, takie jak `CStatusBar`, `CToolBar`, lub `CDialogBar`, musisz ustawić *m_dwStyle* element członkowski danych. Można to zrobić w zastępowania metody `Create`:
+
+```
+// CMyControlBar is derived from CControlBar
 BOOL CMyControlBar::Create(CWnd* pParentWnd,
     DWORD dwStyle,
-    UINT nID)  
-{  
-    m_dwStyle = dwStyle;  
- 
- .  
- .  
- .  
-}  
-```  
-  
- **Algorytm układu pasek sterowania**  
-  
- Algorytm układu pasek sterowania jest bardzo prosty. Okno ramowe wysyła komunikat WM_SIZEPARENT do wszystkich obiektów podrzędnych w zakresie pasek sterowania. Wraz z tego komunikatu jest przekazywany wskaźnik do elementu nadrzędnego klienta prostokąta. Ten komunikat jest wysyłane do elementów podrzędnych w porządku osi Z. Te informacje służą podrzędnych pasków sterowania, aby pozycjonują się i zmniejszyć rozmiar obszaru klienckiego elementu nadrzędnego. Prostokąt końcowego pozostało dla obszaru klienckiego normalne (mniej paski sterowania) służy do położenie okna głównego klienta (zazwyczaj klienta, widoku lub podziału okna MDI).  
-  
- Zobacz `CWnd::RepositionBars` i `CFrameWnd::RecalcLayout` więcej szczegółów.  
-  
- MFC prywatnej komunikatów systemu Windows, w tym WM_SIZEPARENT, są udokumentowane w artykule [24 Uwaga techniczna](../mfc/tn024-mfc-defined-messages-and-resources.md).  
-  
-## <a name="_mfcnotes_cstatusbar"></a>  Cstatusbar —  
-  
- Pasek stanu jest pasek sterowania, który zawiera wiersz okienek tekstu wyjściowego. Istnieją dwa podstawowe sposoby użycia okienek tekstu wyjściowego:  
-  
--   Jako wiersz wiadomości  
-  
-     (na przykład standardowe menu Pomoc wiersza komunikatu). Te zwykle są używane przez 0 systemem indeksowane  
-  
--   Jako wskaźniki stanu  
-  
-     (na przykład centralnych zasad dostępu, NUM SCRL wskaźniki i). Te zwykle są używane przez identyfikator ciągu/polecenia.  
-  
- Czcionka na pasku stanu jest punkt 10 MS Sans Serif (ustawieniem Podręcznik projektowania aplikacji interfejsu systemu Windows lub czcionki mapowań najlepsze dopasowanie 10 punktów Szwajcarii czcionki proporcjonalne). W niektórych wersjach systemu Windows, takich jak wersja japońska czcionki wybrane są różne.  
-  
- Kolory używane w pasku stanu również są spójne z zaleceniem Podręcznik projektowania aplikacji interfejsu systemu Windows. Kolory twarde nie są zakodowane i są zmieniane dynamicznie w odpowiedzi na dostosowaniem wprowadzanym przez użytkowników w Panelu sterowania.  
-  
-|Element|Wartości kolorów systemu Windows|Domyślne RGB|  
-|----------|-------------------------|-----------------|  
-|Tło paska stanu|COLOR_BTNFACE|RGB (192, 192, 192)|  
-|Tekst paska stanu|COLOR_BTNTEXT|RGB (000 000, 000)|  
-|Krawędziach górnego/lewego — pasek stanu|COLOR_BTNHIGHLIGHT|RGB (255 255, 255)|  
-|Stan paska bot/prawej krawędzi.|COLOR_BTNSHADOW|RGB (128, 128, 128)|  
-  
- **Cstatusbar — ccmdui — Obsługa**  
-  
- Jest sposób wskaźniki zwykle są aktualizowane za pośrednictwem mechanizmu on_update_command_ui —. Na czas bezczynności na pasku stanu wywoła on_update_command_ui — program obsługi o identyfikatorze ciąg w okienku wskaźnika.  
-  
- On_update_command_ui — program obsługi może wywołać:  
-  
-- `Enable`: Aby włączyć lub wyłączyć okienka. Okienko wyłączone wygląda tak samo jak okienko włączone, ale tekst jest niewidoczne (to znaczy wyłącza wskaźnik).  
-  
-- `SetText`: Do zmiany tekstu. Należy zachować ostrożność, jeśli używasz to ponieważ okienku nie automatycznego zmieniania rozmiaru.  
-  
- Odwołuje się do klasy [cstatusbar —](../mfc/reference/cstatusbar-class.md) w *informacje dotyczące biblioteki klas* szczegółowe informacje o `CStatusBar` tworzenia i dostosowywania interfejsów API. Większość Dostosowywanie pasków stanu należy zrobić przed na pasku stanu jest początkowo stają się widoczne.  
-  
- Pasek stanu obsługuje tylko jedno okienko stretchy zwykle pierwszego okienka. Rozmiar okienka naprawdę jest minimalny rozmiar. Jeśli na pasku stanu jest większy niż minimalny rozmiar wszystkich okienek, wszelkie dodatkowe szerokość otrzyma stretchy okienka. Domyślną aplikację z paskiem stanu ma wyrównany wskaźniki centralnych zasad dostępu, NUM i SCRL, ponieważ pierwszy okienko jest stretchy.  
-  
-## <a name="_mfcnotes_ctoolbar"></a>  Ctoolbar —  
-  
- Pasek narzędzi jest pasek sterowania z rzędu przycisków mapy bitowej, które mogą zawierać separatorów. Obsługiwane są dwa style przyciski: przyciski pole wyboru i przycisków. Funkcje grupy opcji mogą być tworzone z przycisków pole wyboru i on_update_command_ui —.  
-  
- Wszystkie przyciski mapy bitowej na pasku narzędzi są pobierane z jednego mapy bitowej. Ta mapa bitowa musi zawierać jeden obraz lub symbolu dla każdego przycisku. Kolejność obrazów/symboli w pliku mapy bitowej jest zwykle takiej samej kolejności, który będzie rysowany na ekranie. (Można to zmienić za pomocą dostosowania interfejsów API.)  
-  
- Każdy przycisk musi być taki sam rozmiar. Wartość domyślna to standardowa 24 x 22 piksele. Każdy obraz/symbolu musi mieć taki sam rozmiar, a musi być side-by-side w pliku mapy bitowej. Domyślny rozmiar obrazu/symbolu jest 16 x 15 pikseli. Na pasku narzędzi z przyciskami 10 (przy użyciu standardowych rozmiarów), należy więc mapę bitową 160 pikseli szerokości i wysokości 15 pikseli.  
-  
- Każdy przycisk ma jeden i tylko jeden obraz/symbolu. Przycisk różne stany i style (na przykład naciśnięty, up, wyłączona w dół, wyłączona w dół i w nieokreślonej) algorithmically zostaną wygenerowane na podstawie jednego obrazu/symbolu. Teoretycznie można kolorów mapy bitowej ani DIB. Algorytm generowania inny przycisk stany działa najlepiej, jeśli oryginalnego obrazu jest odcieni szarości. Przyjrzyj się przycisków standardowym pasku narzędzi i clipart przycisku paska narzędzi w przykładowej ogólne MFC [CLIPART](../visual-cpp-samples.md) przykłady.  
-  
- Kolory używane w pasku narzędzi są również zgodnie z zaleceniem Podręcznik projektowania aplikacji interfejsu systemu Windows. Kolory twarde nie są zakodowane i są zmieniane dynamicznie w odpowiedzi na dostosowaniem wprowadzanym przez użytkowników w Panelu sterowania.  
-  
-|Element|Wartości kolorów systemu Windows|Domyślne RGB|  
-|----------|-------------------------|-----------------|  
-|Tła paska narzędzi|COLOR_BTNFACE|RGB(192,192,192)|  
-|Przyciski paska narzędzi góry/do lewej krawędzi.|COLOR_BTNHIGHLIGHT|RGB(255,255,255)|  
-|Przyciski paska narzędzi bot/prawej krawędzi.|COLOR_BTNSHADOW|RGB(128,128,128)|  
-  
- Ponadto przycisków paska mapy bitowej są ponownie pokolorowane tak, jakby były standardowych kontrolek przycisku systemu Windows. Ponowne kolorowanie ten występuje, gdy mapy bitowej jest ładowany z zasobów, a w odpowiedzi na zmianę w kolorów systemu w odpowiedzi na dostosowaniem wprowadzanym przez użytkowników w Panelu sterowania. Następujące kolorów mapy bitowej narzędzi będzie automatycznie klipu, powinny być używane z rozwagą. Jeśli nie chcesz, aby części z mapy bitowej ponownie pokolorowane, użyj kolor, który zbliżonego jedna z wartości RGB mapowane. Mapowanie odbywa się na podstawie wartości RGB dokładne.  
-  
-|Wartości RGB|Mapowanego dynamicznie wartość KOLORU|  
-|---------------|------------------------------------|  
-|RGB (000 000, 000)|COLOR_BTNTEXT|  
-|RGB (128, 128, 128)|COLOR_BTNSHADOW|  
-|RGB (192, 192, 192)|COLOR_BTNFACE|  
-|RGB (255 255, 255)|COLOR_BTNHIGHLIGHT|  
-  
- Odwołuje się do klasy [ctoolbar —](../mfc/reference/ctoolbar-class.md) *informacje dotyczące biblioteki klas* szczegółowe informacje o `CToolBar` tworzenia i dostosowywania interfejsów API. Większość Dostosowywanie pasków narzędzi należy zrobić przed narzędzi początkowo stają się widoczne.  
-  
- Dostosowywanie interfejsów API może służyć do przycisku identyfikatory, style, Dostosuj szerokość rozdzielacza i obrazu/symbolu, który jest używany do działania przycisku. Domyślnie nie należy używać tych interfejsów API.  
-  
-## <a name="ccmdui-support-for-ctoolbar"></a>Ctoolbar — ccmdui — Obsługa  
- Przyciski paska narzędzi zawsze są aktualizowane w sposób jest za pośrednictwem mechanizmu on_update_command_ui —. Na czas bezczynności pasek narzędzi wywoła obsługi on_update_command_ui — z poleceniem o identyfikatorze przycisku. On_update_command_ui — nie jest wywoływany dla separatorów, ale jest ona wywoływana dla przycisków i pola wyboru przycisków.  
-  
- On_update_command_ui — program obsługi może wywołać:  
-  
-- `Enable`: Aby włączyć lub wyłączyć przycisku. To działanie jest równie przycisków i pola wyboru przycisków.  
-  
-- `SetCheck`: Można ustawić stanu wyboru przycisku. To wywołanie dla przycisku paska narzędzi spowoduje wyłączenie w przycisk pola wyboru. `SetCheck` przyjmuje parametr, który może być 0 (nie jest zaznaczone), 1 (zaznaczone) lub 2 (nieokreślony)  
-  
-- `SetRadio`: Skrócona dla `SetCheck`.  
-  
- Pole wyboru przyciski to przyciski pole wyboru "AUTOMATYCZNIE"; oznacza to gdy użytkownik naciśnie ich one natychmiast zmieni stan. Sprawdzane jest w stanie wyłączenia lub wciśnięte. Nie istnieje sposób interfejsu użytkownika wbudowanych zmienić przycisku do stanu "nieokreślony"; które muszą być wykonywane przez kod.  
-  
- Dostosowywanie interfejsów API pozwoli zmienić stan przycisku paska narzędzi danego, najlepiej należy zmieniać te stany w obsłudze on_update_command_ui — dla polecenia, który reprezentuje przycisk paska narzędzi. Należy pamiętać, że przetwarzanie w stanie bezczynności spowoduje zmianę stanu przycisków paska narzędzi z obsługą on_update_command_ui —, dlatego wszelkie zmiany tych stanów wprowadzane za pośrednictwem SetButtonStyle może zostać utracone po następnej bezczynności.  
-  
- Przyciski paska narzędzi będzie wysyłać komunikatów WM_COMMAND, takich jak normalne przycisków lub elementów menu i są zazwyczaj obsługiwane przez program obsługi on_command — w tej samej klasy, która zapewnia obsługi on_update_command_ui —.  
-  
- Istnieją cztery narzędzi style przycisku (wartości TBBS_) używany do wyświetlania stany:  
-  
--   TBBS_CHECKED: pole wyboru zostało zaznaczone obecnie (wyłączone).  
-  
--   TBBS_INDETERMINATE: pole wyboru jest obecnie nieokreślony.  
-  
--   TBBS_DISABLED: Przycisk jest obecnie wyłączona.  
-  
--   TBBS_PRESSED: Obecnie naciśnięciu przycisku.  
-  
- Sześć oficjalnego style przycisku Podręcznik projektowania aplikacji interfejsu systemu Windows są reprezentowane przez następujące wartości TBBS:  
-  
--   Maksymalnie = 0  
-  
--   Wskaźnik myszy w dół = TBBS_PRESSED (&#124; inny styl)  
-  
--   Wyłączone = TBBS_DISABLED  
-  
--   W dół = TBBS_CHECKED  
-  
--   Dół wyłączone = TBBS_CHECKED &#124; TBBS_DISABLED  
-  
--   Nieokreślony = TBBS_INDETERMINATE  
-  
-##  <a name="_mfcnotes_cdialogbar"></a> Cdialogbar —  
- Paska dialogowego jest pasek sterowania, który zawiera formanty standardowe systemu Windows. Go działa jak okna dialogowego, ponieważ zawiera formanty i obsługuje przełączania między nimi. On również działa jak okno dialogowe, gdyż używa do reprezentowania pasku szablonu okna dialogowego.  
-  
- A `CDialogBar` służy do narzędzi podglądu wydruku, który zawiera standardowe formanty łącznik.  
-  
- Przy użyciu `CDialogBar` podobnie jak przy użyciu `CFormView`. Należy zdefiniować szablonu okna dialogowego dla paska dialogowego i usunąć wszystkie style, z wyjątkiem ws_child —. Należy pamiętać, że okno dialogowe nie musi być widoczny.  
-  
- Powiadomień dotyczących formantów dla `CDialogBar` zostaną wysłane do nadrzędnego pasek sterowania (podobnie jak przyciski paska narzędzi).  
-  
-## <a name="ccmdui-support-for-cdialogbar"></a>Cdialogbar — ccmdui — Obsługa  
- Przyciski paska dialogowego powinien zostać zaktualizowany za pośrednictwem mechanizmu obsługi on_update_command_ui —. W czasie bezczynności paska dialogowego wywoła obsługi on_update_command_ui — z poleceniem o identyfikatorze przycisków o identyfikatorze > = 0x8000 (to znaczy w zakresie identyfikatory poleceń).  
-  
- On_update_command_ui — program obsługi może wywołać:  
-  
--   Włącz: aby Włącz lub Wyłącz przycisk.  
-  
--   SetText: Aby zmienić tekst przycisku.  
-  
- Dostosowywanie może odbywać się za pośrednictwem Menedżera okien standardowych interfejsów API.  
-  
-## <a name="see-also"></a>Zobacz też  
- [Uwagi techniczne według numerów](../mfc/technical-notes-by-number.md)   
- [Uwagi techniczne według kategorii](../mfc/technical-notes-by-category.md)
+    UINT nID)
+{
+    m_dwStyle = dwStyle;
+
+.
+.
+.
+}
+```
+
+**Algorytm Układ paska sterowania**
+
+Algorytm Układ paska sterowania jest bardzo proste. Okno ramowe wysyła komunikat WM_SIZEPARENT do wszystkich elementów podrzędnych w zakresie paska sterowania. Wraz z ten komunikat jest przekazywany wskaźnik do elementu nadrzędnego jego klienta. Ta wiadomość jest wysyłana do elementów podrzędnych w porządku osi Z. Elementy podrzędne pasek sterowania dzięki tym informacjom pozycjonują się i Zmniejsz rozmiar obszaru klienckiego elementu nadrzędnego. Końcowe prostokąt, który pozostanie do obszaru klienckiego normalny (mniej pasków sterowania) jest używany do położenie okna głównego klienta (zazwyczaj klienta, widoku lub rozdzielacz okna MDI).
+
+Zobacz `CWnd::RepositionBars` i `CFrameWnd::RecalcLayout` Aby uzyskać więcej informacji.
+
+MFC prywatnej Windows komunikaty, w tym WM_SIZEPARENT, są udokumentowane w artykule [techniczne 24 Uwaga](../mfc/tn024-mfc-defined-messages-and-resources.md).
+
+## <a name="_mfcnotes_cstatusbar"></a>  CStatusBar
+
+Pasek stanu jest pasek sterowania, który zawiera wiersz tekstu wyjściowego okienka. Istnieją dwie typowe sposoby korzystania z okienka danych wyjściowych tekst:
+
+- Jako wiersz wiadomości
+
+     (na przykład standardowe menu Pomoc wiersz wiadomości). Te są zwykle dostępne przez 0 na podstawie indeksowane
+
+- Jako wskaźniki stanu
+
+     (na przykład limit, liczba i SCRL wskaźniki). Te są zwykle dostępne za pomocą polecenia/ciągu identyfikatora.
+
+Czcionka na pasek stanu jest 10-punktowy MS Sans Serif (podyktowanej Podręcznik projektowania aplikacji interfejsu Windows lub czcionki liczby maperów najlepsze dopasowanie 10-punktowy szwajcarski czcionek proporcjonalnych). W niektórych wersjach systemu Windows, takie jak wersja japońska czcionek zaznaczonych różnią się.
+
+Kolory używane w pasku stanu są również zgodne z zaleceniem przewodnik projektowania aplikacji interfejsu programu Windows. Te kolory nie są kodowane trudne, a zostaną zmienione dynamicznie w odpowiedzi na dostosowywanie użytkownika w Panelu sterowania.
+
+|Element|Wartość KOLORU Windows|Domyślne RGB|
+|----------|-------------------------|-----------------|
+|Tło paska stanu|COLOR_BTNFACE|RGB (192 192, 192)|
+|Tekst paska stanu|COLOR_BTNTEXT|RGB (000 000, 000)|
+|Góra/lewo krawędziach — pasek stanu|COLOR_BTNHIGHLIGHT|RGB (255, 255, 255)|
+|Bot/prawej krawędzi — pasek stanu|COLOR_BTNSHADOW|RGB (128, 128, 128)|
+
+**CCmdUI obsługę CStatusBar**
+
+Sposób, w jaki wskaźniki są zazwyczaj aktualizowane jest mechanizm ON_UPDATE_COMMAND_UI. Na czas bezczynności na pasku stanu będzie wywoływać procedury obsługi ON_UPDATE_COMMAND_UI o identyfikatorze ciąg w okienku wskaźnika.
+
+Można wywołać procedury obsługi ON_UPDATE_COMMAND_UI:
+
+- `Enable`: Aby włączyć lub wyłączyć okienka. Okienko wyłączone wygląda tak samo jak okienko włączone, ale tekst jest niewidoczne (czyli wyłącza wskaźnik).
+
+- `SetText`: Aby zmienić tekst. Należy zachować ostrożność, korzystając z tego, ponieważ nie będzie automatycznie rozmiar okienka.
+
+Można znaleźć klasy [CStatusBar](../mfc/reference/cstatusbar-class.md) w *odwołanie do biblioteki klas* szczegółowe informacje na temat `CStatusBar` tworzenia i dostosowywania interfejsów API. Większość dostosowywania pasków stanu należy przeprowadzić przed wykonaniem na pasku stanu jest początkowo widoczne.
+
+Na pasku stanu obsługuje tylko jedno okienko stretchy zazwyczaj pierwszą okienko. Rozmiar okienka naprawdę jest minimalny rozmiar. Jeśli na pasku stanu jest większy niż minimalny rozmiar wszystkich okienek, wszelkie dodatkową szerokość zostanie przydzielony do okienka stretchy. Domyślną aplikację przy użyciu paska stanu ma wyrównany do prawej wskaźniki limit, liczba i SCRL, ponieważ pierwszy okienko jest stretchy.
+
+## <a name="_mfcnotes_ctoolbar"></a>  CToolBar
+
+Pasek narzędzi jest pasek sterowania z wiersz przycisków mapy bitowej, które mogą zawierać separatorów. Obsługiwane są dwa style przyciski: przyciski pole wyboru i przyciski. Mogą być wbudowane funkcje grupy radio z przyciskami pola wyboru i ON_UPDATE_COMMAND_UI.
+
+Wszystkie przyciski mapy bitowej na pasku narzędzi są pobierane z jednego mapy bitowej. Ta mapa bitowa musi zawierać jeden obraz lub symbol dla każdego przycisku. Zazwyczaj kolejność obrazów/symbole w mapie bitowej jest tej samej kolejności, w których będą rysowane na ekranie. (Można to zmienić przy użyciu dostosowanych interfejsów API.)
+
+Każdy przycisk musi być taki sam rozmiar. Wartość domyślna to standardowa 24 x 22 piksele. Każdy obraz/glifu musi być taki sam rozmiar i musi być side-by-side w mapie bitowej. Domyślny rozmiar obrazu/glifu to 16 x 15 pikseli. W związku z tym pasek narzędzi za pomocą przycisków 10 (przy użyciu standardowych rozmiarów maszyn wirtualnych), należy mapy bitowej, który jest 160 pikseli szerokości i wysokości 15 pikseli.
+
+Każdy przycisk ma jeden i tylko jeden obraz/glifu. Inny przycisk stanów i style (na przykład naciśnięty w górę, w dół, wyłączona, wyłączona w dół i w nieokreślonej) algorithmically są generowane na podstawie jednego obrazu/glifu. Teoretycznie można kolorów mapy bitowej ani DIB. Algorytm generowania inny przycisk stanów działa najlepiej przypadku oryginalny obraz na odcienie szarości. Przyjrzyj się przycisków na pasku narzędzi Standardowy i clipart przycisku paska narzędzi, podano w przykładzie ogólne MFC [CLIPART](../visual-cpp-samples.md) przykłady.
+
+Kolorów używanych na pasku narzędzi są również zgodne z zaleceniem Podręcznik projektowania aplikacji interfejsu Windows. Te kolory nie są kodowane trudne, a zostaną zmienione dynamicznie w odpowiedzi na dostosowywanie użytkownika w Panelu sterowania.
+
+|Element|Wartość KOLORU Windows|Domyślne RGB|
+|----------|-------------------------|-----------------|
+|Tła paska narzędzi|COLOR_BTNFACE|RGB(192,192,192)|
+|Góra/lewo krawędzie przyciski paska narzędzi|COLOR_BTNHIGHLIGHT|RGB(255,255,255)|
+|Przyciski paska narzędzi bot/prawej krawędzi|COLOR_BTNSHADOW|RGB(128,128,128)|
+
+Ponadto przyciski z mapami narzędzi są ponownie pokolorowane tak, jakby były standardowych kontrolek przycisku Windows. Ponowne kolorowanie ten występuje, gdy mapy bitowej jest ładowany z zasobu, a w odpowiedzi na zmianę w kolory systemowe w odpowiedzi na dostosowywanie użytkownika w Panelu sterowania. Następujących kolorów mapy bitowej narzędzi będzie klipu automatycznie, więc należy jej używać ostrożnie. Jeśli użytkownik nie chce mieć części Twojej mapy bitowej ponownie pokolorowane, użyj kolor, który zbliżony jeden mapowane wartości RGB. Mapowanie jest wykonywane na podstawie dokładne wartości RGB.
+
+|Wartość RGB|Dynamicznie mapowaną wartość KOLORU|
+|---------------|------------------------------------|
+|RGB (000 000, 000)|COLOR_BTNTEXT|
+|RGB (128, 128, 128)|COLOR_BTNSHADOW|
+|RGB (192 192, 192)|COLOR_BTNFACE|
+|RGB (255, 255, 255)|COLOR_BTNHIGHLIGHT|
+
+Można znaleźć klasy [CToolBar](../mfc/reference/ctoolbar-class.md) *odwołanie do biblioteki klas* szczegółowe informacje na temat `CToolBar` tworzenia i dostosowywania interfejsów API. Powinna być podejmowana większość dostosowywania pasków narzędzi, przed wykonaniem pasek narzędzi jest początkowo widoczne.
+
+Dostosowywanie interfejsów API można dostosować przycisk identyfikatorów, style, szerokość rozdzielacza i które obrazu/glifu służy do działania przycisku. Domyślnie jest konieczne korzystanie z tych interfejsów API.
+
+## <a name="ccmdui-support-for-ctoolbar"></a>CCmdUI obsługę CToolBar
+
+Sposób, w jaki przycisków na pasku narzędzi są aktualizowane zawsze jest za pośrednictwem mechanizmu ON_UPDATE_COMMAND_UI. Na czas bezczynności pasek narzędzi będzie wywoływać procedury obsługi ON_UPDATE_COMMAND_UI, identyfikatorem polecenia tego przycisku. ON_UPDATE_COMMAND_UI nie jest wywoływana dla separatory, ale jest ona wywoływana dla przycisków pole wyboru i przyciski.
+
+Można wywołać procedury obsługi ON_UPDATE_COMMAND_UI:
+
+- `Enable`: Aby włączyć lub wyłączyć przycisk. Ta funkcja działa równie przycisków pole wyboru i przyciski.
+
+- `SetCheck`: Można ustawić stanu kontroli przycisku. To wywołanie dla przycisku kontrolki toolbar spowoduje wyłączenie w przycisk pola wyboru. `SetCheck` przyjmuje parametr, który może być 0 (niezaznaczone), 1 (zaznaczony) lub 2 (nieokreślone)
+
+- `SetRadio`: Skrót dla `SetCheck`.
+
+Pole wyboru przyciski są przyciski pole wyboru "AUTOMATYCZNIE"; oznacza to gdy użytkownik naciśnie im one natychmiast zmianą stanu. Sprawdzane jest wyłączony lub z włączonym stanem. Nie istnieje sposób interfejsu użytkownika wbudowanych można zmienić przycisku do stanu "nieokreślone"; który musi odbywać się za pomocą kodu.
+
+Dostosowywanie interfejsów API pozwoli zmienić stan przycisku paska narzędzi danego, najlepiej należy zmienić tych stanów w obsłudze ON_UPDATE_COMMAND_UI dla polecenia, które reprezentuje przycisk na pasku narzędzi. Należy pamiętać, że przetwarzanie w stanie bezczynności spowoduje zmiany stanu przycisków paska narzędzi z programem obsługi ON_UPDATE_COMMAND_UI, dzięki czemu zmiany wprowadzone w tych stanów za pośrednictwem SetButtonStyle może zostać utracone po następnym bezczynności.
+
+Wm_command — komunikaty, takie jak normalne przycisków lub elementy menu i zwykle są obsługiwane przez program obsługi ON_COMMAND w tej samej klasy, który zawiera program obsługi ON_UPDATE_COMMAND_UI, będzie wysyłać przycisków paska narzędzi.
+
+Istnieją cztery narzędzi style przycisku (TBBS_ wartości) używane do stanów wyświetlania:
+
+- TBBS_CHECKED: pole wyboru jest aktualnie zaznaczone (w dół).
+
+- TBBS_INDETERMINATE: pole wyboru jest obecnie nieokreślony.
+
+- TBBS_DISABLED: Przycisk jest obecnie wyłączona.
+
+- TBBS_PRESSED: Obecnie naciśnięciu przycisku.
+
+Sześć style przycisku oficjalny przewodnik projektowania aplikacji interfejsu Windows są reprezentowane przez następujące wartości TBBS:
+
+- Nawet = 0
+
+- Myszy w dół = TBBS_PRESSED (&#124; innych stylu)
+
+- Wyłączone = TBBS_DISABLED
+
+- W dół = TBBS_CHECKED
+
+- Dół wyłączone = TBBS_CHECKED &#124; TBBS_DISABLED
+
+- Nieokreślony = TBBS_INDETERMINATE
+
+##  <a name="_mfcnotes_cdialogbar"></a> CDialogBar
+
+Pasek dialogowy jest pasek sterowania, który zawiera standardowe formanty Windows. Jego działa jak okna dialogowego, ponieważ zawiera formanty i obsługuje przełączania między nimi. Również działa podobnie jak okna dialogowego, gdyż używa szablonu okna dialogowego do reprezentowania na pasku.
+
+A `CDialogBar` służy do narzędzi podglądu wydruku, który zawiera standardowe mapami kontrolki.
+
+Za pomocą `CDialogBar` podobnie jak przy użyciu `CFormView`. Należy zdefiniować szablonu okna dialogowego na Pasek dialogowy i Usuń wszystkie style, z wyjątkiem WS_CHILD. Należy pamiętać, że okno dialogowe nie mogą być widoczne.
+
+Powiadomień dotyczących formantu karty dla `CDialogBar` będą wysyłane do nadrzędnego pasek sterowania (podobnie jak przyciski paska narzędzi).
+
+## <a name="ccmdui-support-for-cdialogbar"></a>CCmdUI obsługę CDialogBar
+
+Przyciski paska dialogowego powinny być aktualizowane za pośrednictwem mechanizmu obsługi ON_UPDATE_COMMAND_UI. W czasie bezczynności, Pasek dialogowy wywoła procedurę obsługi ON_UPDATE_COMMAND_UI, identyfikatorem polecenia przycisków, które mają identyfikator > = 0x8000 (czyli w zakresie identyfikatory poleceń).
+
+Można wywołać procedury obsługi ON_UPDATE_COMMAND_UI:
+
+- Włącz: Aby włączyć lub wyłączyć przycisk.
+
+- SetText —: Aby zmienić tekst przycisku.
+
+Dostosowywanie może odbywać się za pośrednictwem Menedżera okien standardowych interfejsów API.
+
+## <a name="see-also"></a>Zobacz też
+
+[Uwagi techniczne według numerów](../mfc/technical-notes-by-number.md)<br/>
+[Uwagi techniczne według kategorii](../mfc/technical-notes-by-category.md)
 

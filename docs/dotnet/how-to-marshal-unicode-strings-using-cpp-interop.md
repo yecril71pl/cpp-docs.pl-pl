@@ -1,5 +1,5 @@
 ---
-title: 'Porady: kierowanie ciągów Unicode za pomocą międzyoperacyjności języka C++ | Dokumentacja firmy Microsoft'
+title: 'Porady: przeprowadzanie Marshalingu ciągów Unicode za pomocą międzyoperacyjności języka C++ | Dokumentacja firmy Microsoft'
 ms.custom: get-started-article
 ms.date: 11/04/2016
 ms.technology:
@@ -19,88 +19,92 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: e5290958a55c61dd55adac0f182af7163896d694
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 42aba2595792cca6ced3febea9890dabfb87aa14
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33130467"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46382248"
 ---
 # <a name="how-to-marshal-unicode-strings-using-c-interop"></a>Porady: przeprowadzanie marshalingu ciągów Unicode za pomocą międzyoperacyjności języka C++
-W tym temacie przedstawiono jeden aspekt współdziałania Visual C++. Aby uzyskać więcej informacji, zobacz [za pomocą międzyoperacyjności języka C++ (niejawna funkcja PInvoke)](../dotnet/using-cpp-interop-implicit-pinvoke.md).  
-  
- Poniższy kod przykłady użycia [zarządzane, niezarządzane](../preprocessor/managed-unmanaged.md) dyrektywy #pragma do zaimplementowania zarządzanych i niezarządzanych funkcji w tym samym pliku, ale te funkcje współdziałanie w taki sam sposób, jeśli zdefiniowane w oddzielnych plików. Nie trzeba być kompilowana przy użyciu plików zawierających tylko funkcje niezarządzane [/CLR (kompilacja języka wspólnego środowiska uruchomieniowego)](../build/reference/clr-common-language-runtime-compilation.md).  
-  
- W tym temacie przedstawiono, jak można ciągów Unicode przekazany z zarządzanego do funkcji niezarządzanej i na odwrót. Do współpracy z innych typów parametrów, zobacz następujące tematy:  
-  
--   [Instrukcje: przeprowadzanie marshalingu ciągów ANSI za pomocą międzyoperacyjności języka C++](../dotnet/how-to-marshal-ansi-strings-using-cpp-interop.md)  
-  
--   [Instrukcje: przeprowadzanie marshalingu ciągów COM za pomocą międzyoperacyjności języka C++](../dotnet/how-to-marshal-com-strings-using-cpp-interop.md)  
-  
-## <a name="example"></a>Przykład  
- Aby przekazać do funkcji niezarządzanej ciągu Unicode z zarządzanego, funkcja PtrToStringChars (deklaracja w Vcclr.h) może służyć do dostępu w pamięci przechowywania zarządzanych ciągu. Ponieważ ten adres zostanie przekazany do funkcji macierzystej, jest ważne, przypięty pamięć z [pin_ptr (C + +/ CLI)](../windows/pin-ptr-cpp-cli.md) aby zapobiec przeniesieniu danych string, należy cykl zbierania odzyskiwanie została wykonana podczas wykonuje funkcji niezarządzanej.  
-  
-```  
-// MarshalUnicode1.cpp  
-// compile with: /clr  
-#include <iostream>  
-#include <stdio.h>  
-#include <vcclr.h>  
-  
-using namespace std;  
-  
-using namespace System;  
-using namespace System::Runtime::InteropServices;  
-  
-#pragma unmanaged  
-  
-void NativeTakesAString(const wchar_t* p) {  
-   printf_s("(native) received '%S'\n", p);  
-}  
-  
-#pragma managed  
-  
-int main() {  
-   String^ s = gcnew String("test string");  
-   pin_ptr<const wchar_t> str = PtrToStringChars(s);  
-  
-   Console::WriteLine("(managed) passing string to native func...");  
-   NativeTakesAString( str );  
-}  
-```  
-  
-## <a name="example"></a>Przykład  
- W poniższym przykładzie pokazano, przekazywanie danych wymagane do uzyskania dostępu ciąg Unicode w funkcji zarządzanych wywoływane przez funkcji niezarządzanej. Funkcja zarządzanych, po otrzymaniu natywnego ciągu Unicode, konwertuje ją na ciąg zarządzanych za pomocą <xref:System.Runtime.InteropServices.Marshal.PtrToStringUni%2A> metody.  
-  
-```  
-// MarshalUnicode2.cpp  
-// compile with: /clr  
-#include <iostream>  
-  
-using namespace std;  
-using namespace System;  
-using namespace System::Runtime::InteropServices;  
-  
-#pragma managed  
-  
-void ManagedStringFunc(wchar_t* s) {  
-   String^ ms = Marshal::PtrToStringUni((IntPtr)s);  
-   Console::WriteLine("(managed) received '{0}'", ms);  
-}  
-  
-#pragma unmanaged  
-  
-void NativeProvidesAString() {  
-   cout << "(unmanaged) calling managed func...\n";  
-   ManagedStringFunc(L"test string");  
-}  
-  
-#pragma managed  
-  
-int main() {  
-   NativeProvidesAString();  
-}  
-```  
-  
-## <a name="see-also"></a>Zobacz też  
- [Korzystanie z międzyoperacyjności języka C++ (niejawna funkcja PInvoke)](../dotnet/using-cpp-interop-implicit-pinvoke.md)
+
+W tym temacie przedstawiono jeden zestaw reguł współdziałania Visual C++. Aby uzyskać więcej informacji, zobacz [za pomocą międzyoperacyjności języka C++ (niejawna funkcja PInvoke)](../dotnet/using-cpp-interop-implicit-pinvoke.md).
+
+Poniższy kod przykłady użycia [zarządzane, niezarządzane](../preprocessor/managed-unmanaged.md) #pragma — dyrektywy do zaimplementowania zarządzanych i niezarządzanych funkcji w tym samym pliku, ale te funkcje współpracować w taki sam sposób, jeśli zdefiniowany w oddzielnych plikach. Pliki zawierające tylko funkcji niezarządzanych nie muszą być skompilowana przy użyciu [/CLR (kompilacja języka wspólnego środowiska uruchomieniowego)](../build/reference/clr-common-language-runtime-compilation.md).
+
+W tym temacie pokazano, jak ciągi Unicode mogą być przekazywane z zarządzanej do niezarządzanej funkcji i na odwrót. Do współpracy z innymi typami parametrów, zobacz następujące tematy:
+
+- [Instrukcje: przeprowadzanie marshalingu ciągów ANSI za pomocą międzyoperacyjności języka C++](../dotnet/how-to-marshal-ansi-strings-using-cpp-interop.md)
+
+- [Instrukcje: przeprowadzanie marshalingu ciągów COM za pomocą międzyoperacyjności języka C++](../dotnet/how-to-marshal-com-strings-using-cpp-interop.md)
+
+## <a name="example"></a>Przykład
+
+Aby przekazać ciąg Unicode z zarządzanej do niezarządzanej funkcji, ptrtostringchars — funkcja (deklaracja w Vcclr.h) może służyć do dostępu w pamięci, gdzie zarządzanych ciąg jest przechowywany. Ponieważ ten adres zostanie przekazany do funkcji natywnej, jest ważne, przypinać pamięci za pomocą [pin_ptr (C + +/ CLI)](../windows/pin-ptr-cpp-cli.md) aby zapobiec przeniesieniu danych ciągu, cykl zbierania śmieci odbędą się podczas wykonuje niezarządzanej funkcji.
+
+```
+// MarshalUnicode1.cpp
+// compile with: /clr
+#include <iostream>
+#include <stdio.h>
+#include <vcclr.h>
+
+using namespace std;
+
+using namespace System;
+using namespace System::Runtime::InteropServices;
+
+#pragma unmanaged
+
+void NativeTakesAString(const wchar_t* p) {
+   printf_s("(native) received '%S'\n", p);
+}
+
+#pragma managed
+
+int main() {
+   String^ s = gcnew String("test string");
+   pin_ptr<const wchar_t> str = PtrToStringChars(s);
+
+   Console::WriteLine("(managed) passing string to native func...");
+   NativeTakesAString( str );
+}
+```
+
+## <a name="example"></a>Przykład
+
+W poniższym przykładzie pokazano, organizowanie danych wymagane do uzyskania dostępu ciąg Unicode w funkcji zarządzanej wywoływane przez niezarządzanej funkcji. Funkcji zarządzanej, po odebraniu natywnych ciąg Unicode konwertuje ją na ciąg zarządzanych za pomocą <xref:System.Runtime.InteropServices.Marshal.PtrToStringUni%2A> metody.
+
+```
+// MarshalUnicode2.cpp
+// compile with: /clr
+#include <iostream>
+
+using namespace std;
+using namespace System;
+using namespace System::Runtime::InteropServices;
+
+#pragma managed
+
+void ManagedStringFunc(wchar_t* s) {
+   String^ ms = Marshal::PtrToStringUni((IntPtr)s);
+   Console::WriteLine("(managed) received '{0}'", ms);
+}
+
+#pragma unmanaged
+
+void NativeProvidesAString() {
+   cout << "(unmanaged) calling managed func...\n";
+   ManagedStringFunc(L"test string");
+}
+
+#pragma managed
+
+int main() {
+   NativeProvidesAString();
+}
+```
+
+## <a name="see-also"></a>Zobacz też
+
+[Korzystanie z międzyoperacyjności języka C++ (niejawna funkcja PInvoke)](../dotnet/using-cpp-interop-implicit-pinvoke.md)

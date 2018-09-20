@@ -16,23 +16,25 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f4b32aaa7626bcb5cfabc59e0d3b9554d73379e5
-ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
+ms.openlocfilehash: 1151f342c62dd0d657fecc82f4bff75164718a6e
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "33328077"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46378941"
 ---
 # <a name="midl-property-pages"></a>Strony właściwości MIDL
-**MIDL** węzła zawiera wiele stron właściwości. Dostęp do nich. Kliknij prawym przyciskiem myszy w pliku .idl w **Eksploratora rozwiązań**.  
-  
--   [Strony właściwości MIDL: ogólne](../ide/midl-property-pages-general.md)  
-  
--   [Strony właściwości MIDL: wyjściowe](../ide/midl-property-pages-output.md)  
-  
--   [Strony właściwości MIDL: zaawansowane](../ide/midl-property-pages-advanced.md)  
-  
- Aby uzyskać informacje dotyczące sposobu uzyskania programowego dostępu do MIDL opcje dla projektów C++ zobacz <xref:Microsoft.VisualStudio.VCProjectEngine.VCMidlTool>  
-  
-## <a name="see-also"></a>Zobacz też  
- [Strony właściwości](../ide/property-pages-visual-cpp.md)
+
+**MIDL** węzeł zawiera kilka stron właściwości. Aby uzyskać do nich dostęp. Kliknij prawym przyciskiem myszy w pliku .idl w **Eksploratora rozwiązań**.
+
+- [Strony właściwości MIDL: ogólne](../ide/midl-property-pages-general.md)
+
+- [Strony właściwości MIDL: wyjściowe](../ide/midl-property-pages-output.md)
+
+- [Strony właściwości MIDL: zaawansowane](../ide/midl-property-pages-advanced.md)
+
+Aby uzyskać informacje o tym, jak programowo uzyskać dostęp do MIDL opcji dla projektów języka C++ zobacz <xref:Microsoft.VisualStudio.VCProjectEngine.VCMidlTool>
+
+## <a name="see-also"></a>Zobacz też
+
+[Strony właściwości](../ide/property-pages-visual-cpp.md)

@@ -29,12 +29,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6faa29858e94c7d80d6039e35278b6a7ae263a85
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 69aecab15ffb1914dbc8a6a6ae15fca307bc77ef
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43213980"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46386255"
 ---
 # <a name="tn006-message-maps"></a>TN006: mapy komunikatów
 
@@ -87,7 +87,7 @@ Podpis funkcji standardowej został zdefiniowany dla rozpakowywania parametrów 
 > [!NOTE]
 > ClassWizard wymaga użycia **afx_msg** — słowo kluczowe w swojej deklaracji obsługi mapy wiadomości.
 
- Te sygnatur funkcji uzyskano przy użyciu prostego Konwencji. Nazwa funkcji zawsze zaczyna się od `"On`". To następuje nazwa komunikatu Windows za pomocą "WM_" usunięte i pierwszą literę każdego wyrazu wielką literą. Kolejność parametrów jest *wParam* następuje `LOWORD`(*lParam*) następnie `HIWORD`(*lParam*). Nieużywane parametry nie są przekazywane. Wszystkie dojścia, które zostaną opakowane przy klas MFC są konwertowane do wskaźników do odpowiednich obiektów MFC. Poniższy przykład pokazuje, jak obsłużyć komunikat WM_PAINT i spowodować, że `CMyWnd::OnPaint` funkcja do wywołania:
+Te sygnatur funkcji uzyskano przy użyciu prostego Konwencji. Nazwa funkcji zawsze zaczyna się od `"On`". To następuje nazwa komunikatu Windows za pomocą "WM_" usunięte i pierwszą literę każdego wyrazu wielką literą. Kolejność parametrów jest *wParam* następuje `LOWORD`(*lParam*) następnie `HIWORD`(*lParam*). Nieużywane parametry nie są przekazywane. Wszystkie dojścia, które zostaną opakowane przy klas MFC są konwertowane do wskaźników do odpowiednich obiektów MFC. Poniższy przykład pokazuje, jak obsłużyć komunikat WM_PAINT i spowodować, że `CMyWnd::OnPaint` funkcja do wywołania:
 
 ```cpp
 BEGIN_MESSAGE_MAP(CMyWnd, CMyParentWndClass)
@@ -97,7 +97,7 @@ BEGIN_MESSAGE_MAP(CMyWnd, CMyParentWndClass)
 END_MESSAGE_MAP()
 ```
 
- Tabela mapy wiadomości muszą być zdefiniowane poza zakresem dowolna definicja funkcji lub klasy. Nie należy go umieścić w bloku extern "C".
+Tabela mapy wiadomości muszą być zdefiniowane poza zakresem dowolna definicja funkcji lub klasy. Nie należy go umieścić w bloku extern "C".
 
 > [!NOTE]
 > ClassWizard modyfikuje wpisy mapy komunikatów, które mają miejsce między / / {{i / /}} komentarz w nawiasie kwadratowym.
@@ -223,7 +223,7 @@ Przykłady z poniższych metod:
     }
     ```
 
- Zaawansowani użytkownicy mogą obsługiwać szeroką gamę poleceń za pomocą jednego polecenia program obsługi: [ON_COMMAND_RANGE](reference/message-map-macros-mfc.md#on_command_range) lub ON_COMMAND_RANGE_EX. Zobacz dokumentację produktu, aby uzyskać więcej informacji na temat tych makr.
+Zaawansowani użytkownicy mogą obsługiwać szeroką gamę poleceń za pomocą jednego polecenia program obsługi: [ON_COMMAND_RANGE](reference/message-map-macros-mfc.md#on_command_range) lub ON_COMMAND_RANGE_EX. Zobacz dokumentację produktu, aby uzyskać więcej informacji na temat tych makr.
 
 > [!NOTE]
 > ClassWizard obsługuje tworzenie obsługi ON_COMMAND i ON_UPDATE_COMMAND_UI, ale nie obsługuje tworzenia ON_COMMAND_EX lub ON_COMMAND_RANGE programów obsługi. Jednak Kreator klas przeanalizować i pozwalają na przeglądanie wszystkich wariantów obsługi cztery polecenia.
@@ -251,5 +251,5 @@ Wspólnych formantów Windows użyj bardziej wydajne [WM_NOTIFY](https://msdn.mi
 
 ## <a name="see-also"></a>Zobacz także
 
-[Uwagi techniczne według numerów](../mfc/technical-notes-by-number.md)  
-[Uwagi techniczne według kategorii](../mfc/technical-notes-by-category.md)  
+[Uwagi techniczne według numerów](../mfc/technical-notes-by-number.md)<br/>
+[Uwagi techniczne według kategorii](../mfc/technical-notes-by-category.md)

@@ -1,5 +1,5 @@
 ---
-title: Wyjątki w języku C + +/ CLI | Dokumentacja firmy Microsoft
+title: Wyjątki w języku C + +/ interfejsu wiersza polecenia | Dokumentacja firmy Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -13,23 +13,24 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: c51e5b85c4e9e30655704e2941a99a90e9888941
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 7853be282e3ba7ad05aaf16e53a443a77e8b5e33
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33113190"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46387045"
 ---
 # <a name="exceptions-in-ccli"></a>Wyjątki w języku C++/CLI
-Artykuły w tej sekcji dokumentacji opisano obsługi wyjątków w języku C + +/ CLI i jak różni się od standardowego wyjątków.  
-  
-## <a name="related-articles"></a>Powiązane artykuły  
-  
-|Tytuł|Opis|  
-|-----------|-----------------|  
-|[Podstawowe pojęcia związane z używaniem wyjątków zarządzanych](../dotnet/basic-concepts-in-using-managed-exceptions.md)|W tym artykule omówiono obsługi wyjątków w zarządzanych aplikacji.|  
-|[Różnice w zachowaniu obsługi wyjątków w/CLR](../dotnet/differences-in-exception-handling-behavior-under-clr.md)|W tym artykule omówiono różnice między standardowe wyjątków i wyjątków w języku C + +/ CLI.|  
-|[finally](../dotnet/finally.md)|W tym artykule opisano `finally` bloku, który służy do wyczyścić zasoby, które są pozostawione po wystąpieniu wyjątku.|  
-|[Instrukcje: przechwytywanie wyjątków w kodzie natywnym wygenerowanym w języku MSIL](../dotnet/how-to-catch-exceptions-in-native-code-thrown-from-msil.md)|Pokazuje, jak używać `__try` i `__except` przechwytują wyjątki w kodzie natywnym, które są generowane w języku MSIL.|  
-|[Instrukcje: definiowanie i instalowanie globalnego programu obsługi wyjątków](../dotnet/how-to-define-and-install-a-global-exception-handler.md)|Pokazuje, jak przechwytywania nieobsłużonych wyjątków.|  
-|[Programowanie .NET w języku C++/interfejsie wiersza polecenia (Visual C++)](../dotnet/dotnet-programming-with-cpp-cli-visual-cpp.md)|Artykuł najwyższego poziomu programowania .NET w dokumentacji Visual C++.|
+
+Artykuły w tej sekcji dokumentacji wyjaśniają obsługi wyjątków w języku C + +/ CLI i czym różni się ona od standardowych wyjątków.
+
+## <a name="related-articles"></a>Powiązane artykuły
+
+|Tytuł|Opis|
+|-----------|-----------------|
+|[Podstawowe pojęcia związane z używaniem wyjątków zarządzanych](../dotnet/basic-concepts-in-using-managed-exceptions.md)|W tym artykule omówiono obsługę wyjątków w aplikacjach zarządzanych.|
+|[Różnice w zachowaniu obsługi wyjątków w/CLR](../dotnet/differences-in-exception-handling-behavior-under-clr.md)|W tym artykule omówiono różnice między standardowych wyjątków i wyjątków w języku C + +/ interfejsu wiersza polecenia.|
+|[finally](../dotnet/finally.md)|W tym artykule opisano `finally` blok, który jest używany, aby wyczyścić zasoby, które są pozostawione po wystąpieniu wyjątku.|
+|[Instrukcje: przechwytywanie wyjątków w kodzie natywnym wygenerowanym w języku MSIL](../dotnet/how-to-catch-exceptions-in-native-code-thrown-from-msil.md)|Pokazuje sposób użycia `__try` i `__except` przechwytywania wyjątków w kodzie natywnym, które są generowane przez MSIL.|
+|[Instrukcje: definiowanie i instalowanie globalnego programu obsługi wyjątków](../dotnet/how-to-define-and-install-a-global-exception-handler.md)|Pokazuje, jak w przypadku przechwytywania nieobsługiwanych wyjątków.|
+|[Programowanie .NET w języku C++/interfejsie wiersza polecenia (Visual C++)](../dotnet/dotnet-programming-with-cpp-cli-visual-cpp.md)|Artykuł najwyższego poziomu dla programowania .NET w dokumentacji języka Visual C++.|

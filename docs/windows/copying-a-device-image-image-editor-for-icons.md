@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: f1d68b3f35f20d74de95e559a21e7ccca3dc0919
-ms.sourcegitcommit: f0c90000125a9497bf61e41624de189a043703c0
+ms.openlocfilehash: 84e4a552f235b6ee4af8eed64017ecbb7462f032
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44313887"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46376905"
 ---
 # <a name="copying-a-device-image-image-editor-for-icons"></a>Kopiowanie obrazu urządzenia (Edytor obrazów dla ikon)
 
@@ -44,5 +44,5 @@ Brak
 
 ## <a name="see-also"></a>Zobacz też
 
-[Ikony i kursory: zasoby obrazów do wyświetlania na urządzeniach](../windows/icons-and-cursors-image-resources-for-display-devices-image-editor-for-icons.md)  
+[Ikony i kursory: zasoby obrazów do wyświetlania na urządzeniach](../windows/icons-and-cursors-image-resources-for-display-devices-image-editor-for-icons.md)<br/>
 [Klawisze skrótów](../windows/accelerator-keys-image-editor-for-icons.md)

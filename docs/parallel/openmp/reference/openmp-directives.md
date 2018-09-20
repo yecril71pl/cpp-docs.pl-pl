@@ -1,5 +1,5 @@
 ---
-title: Dyrektywy OpenMP | Dokumentacja firmy Microsoft
+title: OpenMP, dyrektywy | Dokumentacja firmy Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -12,32 +12,34 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d7421f397b39c6d26c2e60042b25f37277afa5fd
-ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
+ms.openlocfilehash: 983a71920e9e7ce390ab8c64e81886db0d459450
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33692197"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46389451"
 ---
 # <a name="openmp-directives"></a>OpenMP — Dyrektywy
-Zawiera łącza do dyrektywy używany w interfejsie API OpenMP.  
-  
- Visual C++ obsługuje następujące dyrektywy OpenMP:  
-  
-|Dyrektywy|Opis|  
-|---------------|-----------------|  
-|[atomic](../../../parallel/openmp/reference/atomic.md)|Określa, że lokalizacji pamięci, która zostanie automatycznie zaktualizowany.|  
-|[barrier](../../../parallel/openmp/reference/barrier.md)|Synchronizuje wszystkie wątki w zespole; wszystkie wątki wstrzymane w bariery, dopóki wszystkie wątki wykonania bariera.|  
-|[critical](../../../parallel/openmp/reference/critical.md)|Określa, że wykonywany jest kod tylko w jednym wątku w czasie.|  
-|[flush](../../../parallel/openmp/reference/flush-openmp.md)|Określa, że wszystkie wątki tego samego widoku pamięci dla wszystkich obiektów udostępnionych.|  
-|[for](../../../parallel/openmp/reference/for-openmp.md)|Powoduje, że pracy wykonanej dla pętli równoległego regionu do podzielony wątków.|  
-|[master](../../../parallel/openmp/reference/master.md)|Określa, że tylko wzorca threadshould wykonywane części programu.|  
-|[uporządkowane](../../../parallel/openmp/reference/ordered-openmp-directives.md)|Określa ten kod w obszarze zrównoleglone pętli powinna zostać wykonana w takich jak loop sekwencyjnych.|  
-|[parallel](../../../parallel/openmp/reference/parallel.md)|Definiuje równoległego regionu jest kod, który zostanie wykonane przez wiele wątków jednocześnie.|  
-|[Sekcje](../../../parallel/openmp/reference/sections-openmp.md)|Identyfikuje sekcji kodu do podzielony wszystkie wątki.|  
-|[single](../../../parallel/openmp/reference/single.md)|Umożliwia określenie, czy mają zostać wykonane sekcji kodu w jednym wątku, niekoniecznie głównego wątku.|  
-|[threadprivate](../../../parallel/openmp/reference/threadprivate.md)|Określa, czy zmienna jest prywatny do wątku.|  
-  
-## <a name="see-also"></a>Zobacz też  
- [OpenMP](../../../parallel/openmp/openmp-in-visual-cpp.md)   
- [Klauzule](../../../parallel/openmp/reference/openmp-clauses.md)
+
+Zawiera łącza do informacji o dyrektywach używany w interfejsie API OpenMP.
+
+Visual C++ obsługuje następujące dyrektywy OpenMP:
+
+|— Dyrektywa|Opis|
+|---------------|-----------------|
+|[atomic](../../../parallel/openmp/reference/atomic.md)|Określa, że lokalizacji w pamięci, który będzie aktualizowany niepodzielne.|
+|[barrier](../../../parallel/openmp/reference/barrier.md)|Synchronizuje wszystkie wątki w zespole; wszystkie wątki wstrzymać na barierze, dopóki wszystkie wątki wykonania barierę.|
+|[critical](../../../parallel/openmp/reference/critical.md)|Określa, czy kod jest wykonywane tylko w jednym wątku w danym momencie.|
+|[flush](../../../parallel/openmp/reference/flush-openmp.md)|Określa, że wszystkie wątki mają tego samego widoku pamięci dla wszystkich obiektów udostępnionych.|
+|[for](../../../parallel/openmp/reference/for-openmp.md)|Powoduje, że prace wykonane w pętli wewnątrz równoległego regionu podzielony między wątkami.|
+|[master](../../../parallel/openmp/reference/master.md)|Określa, że tylko główny threadshould wykonywane części programu.|
+|[Uporządkowane](../../../parallel/openmp/reference/ordered-openmp-directives.md)|Określa kod w ramach równoległego pętli ma być wykonany, takich jak pętla Sekwencyjna.|
+|[parallel](../../../parallel/openmp/reference/parallel.md)|Definiuje równoległego regionu, czyli kodu wykonywanego przez wiele wątków jednocześnie.|
+|[Sekcje](../../../parallel/openmp/reference/sections-openmp.md)|Identyfikuje sekcje kodu w celu podzielone między wszystkie wątki.|
+|[single](../../../parallel/openmp/reference/single.md)|Pozwala określić, że sekcji kodu powinna zostać wykonana w jednym wątku, niekoniecznie głównego wątku.|
+|[threadprivate](../../../parallel/openmp/reference/threadprivate.md)|Określa, czy zmienna jest prywatnego wątku.|
+
+## <a name="see-also"></a>Zobacz też
+
+[OpenMP](../../../parallel/openmp/openmp-in-visual-cpp.md)<br/>
+[Klauzule](../../../parallel/openmp/reference/openmp-clauses.md)

@@ -29,12 +29,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 6f9b121b75e31fdd79313e36b9e1e19c1cf3200e
-ms.sourcegitcommit: fb9448eb96c6351a77df04af16ec5c0fb9457d9e
+ms.openlocfilehash: 12fd66c7ff5a6f6fee7588aa7bd51ae2053ba7e8
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/12/2018
-ms.locfileid: "44691539"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46386980"
 ---
 # <a name="weakref-class"></a>WeakRef — Klasa
 
@@ -141,10 +141,10 @@ HRESULT As(
 
 ### <a name="parameters"></a>Parametry
 
-*U*  
+*U*<br/>
 Identyfikator interfejsu.
 
-*ptr*  
+*ptr*<br/>
 Po zakończeniu tej operacji, obiekt, który reprezentuje parametr *U*.
 
 ### <a name="return-value"></a>Wartość zwracana
@@ -176,10 +176,10 @@ HRESULT AsIID(
 
 ### <a name="parameters"></a>Parametry
 
-*Parametr riid*  
+*Parametr riid*<br/>
 Identyfikator interfejsu.
 
-*ptr*  
+*ptr*<br/>
 Po zakończeniu tej operacji, obiekt, który reprezentuje parametr *riid*.
 
 ### <a name="return-value"></a>Wartość zwracana
@@ -220,13 +220,13 @@ HRESULT CopyTo(
 
 ### <a name="parameters"></a>Parametry
 
-*U*  
+*U*<br/>
 Wskaźnik `IInspectable` interfejsu. Błąd jest emitowane, jeśli *U* nie pochodzi od `IInspectable`.
 
-*Parametr riid*  
+*Parametr riid*<br/>
 Identyfikator interfejsu. Błąd jest emitowane, jeśli *riid* nie pochodzi od `IWeakReference`.
 
-*ptr*  
+*ptr*<br/>
 Podwójnie pośredniego wskaźnika do `IInspectable` lub `IWeakReference`.
 
 ### <a name="return-value"></a>Wartość zwracana
@@ -284,7 +284,7 @@ WeakRef(
 
 ### <a name="parameters"></a>Parametry
 
-*ptr*  
+*ptr*<br/>
 Wskaźnik, odwołanie lub odwołanie rvalue do istniejącego obiektu, który inicjuje bieżące `WeakRef` obiektu.
 
 ### <a name="remarks"></a>Uwagi

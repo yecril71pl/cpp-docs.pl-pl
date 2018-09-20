@@ -15,58 +15,62 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 243389caf874557fd6dfcda74f63e6c1447a28f2
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: a800afa7496fb3fcea9e163fbd7d7c5cec7e95ce
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33367467"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46381806"
 ---
 # <a name="cmfcprintpreviewtoolbar-class"></a>Klasa CMFCPrintPreviewToolBar
-Na pasku narzędzi u podglądu wydruku.  
-  
-## <a name="syntax"></a>Składnia  
-  
-```  
-class CMFCPrintPreviewToolBar : public CMFCToolBar  
-```  
-  
-## <a name="members"></a>Elementy członkowskie  
-  
-### <a name="public-constructors"></a>Konstruktory publiczne  
-  
-|||  
-|-|-|  
-|Nazwa|Opis|  
-|`CMFCPrintPreviewToolBar::~CMFCPrintPreviewToolBar`|Destruktor.|  
-  
-### <a name="public-methods"></a>Metody publiczne  
-  
-|||  
-|-|-|  
-|Nazwa|Opis|  
-|`CMFCPrintPreviewToolBar::GetThisClass`|Używany przez platformę do uzyskania wskaźnik do [CRuntimeClass](../../mfc/reference/cruntimeclass-structure.md) obiekt, który jest skojarzony z tym typem klasy.|  
-  
-## <a name="inheritance-hierarchy"></a>Hierarchia dziedziczenia  
- [CObject](../../mfc/reference/cobject-class.md)  
-  
- [CCmdTarget](../../mfc/reference/ccmdtarget-class.md)  
-  
- [CWnd](../../mfc/reference/cwnd-class.md)  
-  
- [CBasePane](../../mfc/reference/cbasepane-class.md)  
-  
- [CPane](../../mfc/reference/cpane-class.md)  
-  
- [CMFCBaseToolBar](../../mfc/reference/cmfcbasetoolbar-class.md)  
-  
- [CMFCToolBar](../../mfc/reference/cmfctoolbar-class.md)  
-  
- [CMFCPrintPreviewToolBar](../../mfc/reference/cmfcprintpreviewtoolbar-class.md)  
-  
-## <a name="requirements"></a>Wymagania  
- **Nagłówek:** afxpreviewviewex.h  
-  
-## <a name="see-also"></a>Zobacz też  
- [Diagram hierarchii](../../mfc/hierarchy-chart.md)   
- [Klasy](../../mfc/reference/mfc-classes.md)
+
+Pasek narzędzi w podglądzie wydruku.
+
+## <a name="syntax"></a>Składnia
+
+```
+class CMFCPrintPreviewToolBar : public CMFCToolBar
+```
+
+## <a name="members"></a>Elementy członkowskie
+
+### <a name="public-constructors"></a>Konstruktory publiczne
+
+|||
+|-|-|
+|Nazwa|Opis|
+|`CMFCPrintPreviewToolBar::~CMFCPrintPreviewToolBar`|Destruktor.|
+
+### <a name="public-methods"></a>Metody publiczne
+
+|||
+|-|-|
+|Nazwa|Opis|
+|`CMFCPrintPreviewToolBar::GetThisClass`|Używane przez architekturę, aby uzyskać wskaźnik do [CRuntimeClass](../../mfc/reference/cruntimeclass-structure.md) obiektu, który jest skojarzony z tym typem klasy.|
+
+## <a name="inheritance-hierarchy"></a>Hierarchia dziedziczenia
+
+[CObject](../../mfc/reference/cobject-class.md)
+
+[CCmdTarget](../../mfc/reference/ccmdtarget-class.md)
+
+[CWnd](../../mfc/reference/cwnd-class.md)
+
+[CBasePane](../../mfc/reference/cbasepane-class.md)
+
+[CPane](../../mfc/reference/cpane-class.md)
+
+[CMFCBaseToolBar](../../mfc/reference/cmfcbasetoolbar-class.md)
+
+[CMFCToolBar](../../mfc/reference/cmfctoolbar-class.md)
+
+[CMFCPrintPreviewToolBar](../../mfc/reference/cmfcprintpreviewtoolbar-class.md)
+
+## <a name="requirements"></a>Wymagania
+
+**Nagłówek:** afxpreviewviewex.h
+
+## <a name="see-also"></a>Zobacz też
+
+[Wykres hierarchii](../../mfc/hierarchy-chart.md)<br/>
+[Klasy](../../mfc/reference/mfc-classes.md)

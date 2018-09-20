@@ -1,5 +1,5 @@
 ---
-title: Przy użyciu Nieobcinanego kontekstu urządzenia | Dokumentacja firmy Microsoft
+title: Za pomocą Nieobcinanego kontekstu urządzenia | Dokumentacja firmy Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -14,24 +14,26 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6d4fcfbe8e8e7eb174f85ced03bec822b4968bde
-ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
+ms.openlocfilehash: 479009865fe9fd226466059382456f403e90c18a
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/26/2018
-ms.locfileid: "36954338"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46389593"
 ---
 # <a name="using-an-unclipped-device-context"></a>Używanie nieobcinanego kontekstu urządzenia
-Jeśli masz pewność, że formantu nie można malować poza obszarem prostokąta jego klienta, można zrealizować korzyści szybkości mały, ale wykrywalny przez wyłączenie wywołanie `IntersectClipRect` który dokonuje `COleControl`. Aby to zrobić, należy usunąć *clipPaintDC* flagi z zestawu flagi zwrócony przez [COleControl::GetControlFlags](../mfc/reference/colecontrol-class.md#getcontrolflags). Na przykład:  
-  
- [!code-cpp[NVC_MFC_AxOpt#5](../mfc/codesnippet/cpp/using-an-unclipped-device-context_1.cpp)]  
-[!code-cpp[NVC_MFC_AxOpt#14](../mfc/codesnippet/cpp/using-an-unclipped-device-context_2.cpp)]  
-[!code-cpp[NVC_MFC_AxOpt#7](../mfc/codesnippet/cpp/using-an-unclipped-device-context_3.cpp)]  
-  
- Kod, aby usunąć ta flaga jest automatycznie generowany w przypadku wybrania **Nieobcinanego kontekstu urządzenia** opcja [ustawienia kontroli](../mfc/reference/control-settings-mfc-activex-control-wizard.md) strony, podczas tworzenia formantu przy użyciu Kreator formantów MFC ActiveX.  
-  
- Jeśli korzystasz z aktywacji niepowiązanej z oknami, optymalizacja nie ma znaczenia.  
-  
-## <a name="see-also"></a>Zobacz też  
- [Kontrolki ActiveX MFC: optymalizacja](../mfc/mfc-activex-controls-optimization.md)
+
+Jeśli masz pewność, że kontroli nad nie można malować poza obszarem prostokąta jego klienta, można korzystać z zalet Uzyskaj prędkość małą ale wykrywalny, wyłączając wywołanie `IntersectClipRect` wykonanym przez `COleControl`. Aby to zrobić, należy usunąć *clipPaintDC* flagi z zestawu flag zwrócony przez [COleControl::GetControlFlags](../mfc/reference/colecontrol-class.md#getcontrolflags). Na przykład:
+
+[!code-cpp[NVC_MFC_AxOpt#5](../mfc/codesnippet/cpp/using-an-unclipped-device-context_1.cpp)]
+[!code-cpp[NVC_MFC_AxOpt#14](../mfc/codesnippet/cpp/using-an-unclipped-device-context_2.cpp)]
+[!code-cpp[NVC_MFC_AxOpt#7](../mfc/codesnippet/cpp/using-an-unclipped-device-context_3.cpp)]
+
+Kod, aby usunąć ta flaga jest generowany automatycznie po wybraniu **Nieobcinanego kontekstu urządzenia** opcja [ustawienia kontroli](../mfc/reference/control-settings-mfc-activex-control-wizard.md) stronie podczas tworzenia kontrolki przy użyciu Kreatora kontrolek ActiveX MFC.
+
+Jeśli używasz aktywacji niepowiązanej z oknami, tego rodzaju optymalizacji nie ma znaczenia.
+
+## <a name="see-also"></a>Zobacz też
+
+[Kontrolki ActiveX MFC: optymalizacja](../mfc/mfc-activex-controls-optimization.md)
 

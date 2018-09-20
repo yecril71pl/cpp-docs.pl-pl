@@ -17,17 +17,19 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 954d2248061ec571d9d2ba8804c1f7c97275cbfc
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: da411fbecdea0a1e7b8976ca119057204693a9bd
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33343502"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46387864"
 ---
 # <a name="exitinstance-member-function"></a>ExitInstance — Funkcja członkowska
-[ExitInstance](../mfc/reference/cwinapp-class.md#exitinstance) funkcji członkowskiej klasy [CWinApp](../mfc/reference/cwinapp-class.md) jest wywoływana za każdym razem kopii aplikacji kończy zazwyczaj w wyniku użytkownika Kończenie działania aplikacji.  
-  
- Zastąpienie `ExitInstance` konieczne będzie przetwarzania oczyszczania specjalnych, takich jak zwolnić grafiki urządzenia (GDI) interfejsu zasobów lub cofanie przydziału pamięci używane podczas wykonywania programu. Oczyszczanie standardowych elementów, takich jak dokumenty i widoki, jednak są udostępniane przez platformy, z innymi funkcjami możliwym do zastąpienia dla podczas oczyszczania specjalne specyficzne dla tych obiektów.  
-  
-## <a name="see-also"></a>Zobacz też  
- [CWinApp: klasa aplikacji](../mfc/cwinapp-the-application-class.md)
+
+[ExitInstance](../mfc/reference/cwinapp-class.md#exitinstance) funkcji składowej klasy typu [CWinApp](../mfc/reference/cwinapp-class.md) jest wywoływana za każdym razem kopii aplikacji, kończy działanie, zwykle po wysłaniu przez użytkownika, zamykanie aplikacji.
+
+Zastąp `ExitInstance` Jeżeli potrzebujesz specjalnej operacji czyszczenia przetwarzania, takich jak zwalnianie zasobów interface (GDI) urządzenia grafiki lub cofnięcie przydziału pamięci używanej podczas wykonywania programu. Wyczyść elementy standardowe, takich jak dokumenty i widoki, jednak znajduje się przez platformę, z innymi funkcjami możliwym do zastąpienia do wykonywania specjalnej operacji czyszczenia specyficzne dla tych obiektów.
+
+## <a name="see-also"></a>Zobacz też
+
+[CWinApp: klasa aplikacji](../mfc/cwinapp-the-application-class.md)

@@ -20,94 +20,105 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 17efa63488a736089c988e6cfbb7bd97330816aa
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: 7b82e0da2ac080ea65807b92f7eab549fe3301bf
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45701392"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46393805"
 ---
 # <a name="cmfcribbonapplicationbutton-class"></a>Klasa CMFCRibbonApplicationButton
-Implementacja specjalny przycisk znajdujący się w lewym górnym rogu okna aplikacji. Po kliknięciu przycisku powoduje otwarcie menu, które zwykle zawiera wspólne **pliku** poleceń, takich jak **Otwórz**, **Zapisz**, i **zakończenia**.  
-  
-## <a name="syntax"></a>Składnia  
-  
-```  
-class CMFCRibbonApplicationButton : public CMFCRibbonButton  
-```  
-  
-## <a name="members"></a>Elementy członkowskie  
-  
-### <a name="public-constructors"></a>Konstruktory publiczne  
-  
-|Nazwa|Opis|  
-|----------|-----------------|  
-|[CMFCRibbonApplicationButton::CMFCRibbonApplicationButton](#cmfcribbonapplicationbutton)|Tworzy i inicjuje `CMFCRibbonApplicationButton` obiektu.|  
-  
-### <a name="public-methods"></a>Metody publiczne  
-  
-|Nazwa|Opis|  
-|----------|-----------------|  
-|`CMFCRibbonApplicationButton::CreateObject`|Używane przez platformę do tworzenia dynamicznych wystąpienia tego typu klasy.|  
-|`CMFCRibbonApplicationButton::GetThisClass`|Używane przez architekturę, aby uzyskać wskaźnik do [CRuntimeClass](../../mfc/reference/cruntimeclass-structure.md) obiektu, który jest skojarzony z tym typem klasy.|  
-|[CMFCRibbonApplicationButton::SetImage](#setimage)|Przypisuje obrazu przycisk wstążki w aplikacji.|  
-  
-## <a name="example"></a>Przykład  
- Poniższy przykład pokazuje, jak korzystać z różnych metod w `CMFCRibbonApplicationButton` klasy. W przykładzie pokazano, jak przypisać obrazu do przycisku aplikacja i jak ustawić jej etykietki narzędzia. Ten fragment kodu jest częścią [Rysowanie Client sample](../../visual-cpp-samples.md).  
-  
- [!code-cpp[NVC_MFC_DrawClient#4](../../mfc/reference/codesnippet/cpp/cmfcribbonapplicationbutton-class_1.h)]  
-[!code-cpp[NVC_MFC_DrawClient#5](../../mfc/reference/codesnippet/cpp/cmfcribbonapplicationbutton-class_2.cpp)]  
-  
-## <a name="inheritance-hierarchy"></a>Hierarchia dziedziczenia  
- [CObject](../../mfc/reference/cobject-class.md)  
-  
- [CMFCRibbonBaseElement](../../mfc/reference/cmfcribbonbaseelement-class.md)  
-  
- [CMFCRibbonButton](../../mfc/reference/cmfcribbonbutton-class.md)  
-  
- [CMFCRibbonApplicationButton](../../mfc/reference/cmfcribbonapplicationbutton-class.md)  
-  
-## <a name="requirements"></a>Wymagania  
- **Nagłówek:** afxRibbonBar.h  
-  
-##  <a name="cmfcribbonapplicationbutton"></a>  CMFCRibbonApplicationButton::CMFCRibbonApplicationButton  
- Tworzy i inicjuje [CMFCRibbonApplicationButton](../../mfc/reference/cmfcribbonapplicationbutton-class.md) obiektu.  
-  
-```  
-CMFCRibbonApplicationButton();  
-CMFCRibbonApplicationButton(UINT uiBmpResID);  
+
+Implementacja specjalny przycisk znajdujący się w lewym górnym rogu okna aplikacji. Po kliknięciu przycisku powoduje otwarcie menu, które zwykle zawiera wspólne **pliku** poleceń, takich jak **Otwórz**, **Zapisz**, i **zakończenia**.
+
+## <a name="syntax"></a>Składnia
+
+```
+class CMFCRibbonApplicationButton : public CMFCRibbonButton
+```
+
+## <a name="members"></a>Elementy członkowskie
+
+### <a name="public-constructors"></a>Konstruktory publiczne
+
+|Nazwa|Opis|
+|----------|-----------------|
+|[CMFCRibbonApplicationButton::CMFCRibbonApplicationButton](#cmfcribbonapplicationbutton)|Tworzy i inicjuje `CMFCRibbonApplicationButton` obiektu.|
+
+### <a name="public-methods"></a>Metody publiczne
+
+|Nazwa|Opis|
+|----------|-----------------|
+|`CMFCRibbonApplicationButton::CreateObject`|Używane przez platformę do tworzenia dynamicznych wystąpienia tego typu klasy.|
+|`CMFCRibbonApplicationButton::GetThisClass`|Używane przez architekturę, aby uzyskać wskaźnik do [CRuntimeClass](../../mfc/reference/cruntimeclass-structure.md) obiektu, który jest skojarzony z tym typem klasy.|
+|[CMFCRibbonApplicationButton::SetImage](#setimage)|Przypisuje obrazu przycisk wstążki w aplikacji.|
+
+## <a name="example"></a>Przykład
+
+Poniższy przykład pokazuje, jak korzystać z różnych metod w `CMFCRibbonApplicationButton` klasy. W przykładzie pokazano, jak przypisać obrazu do przycisku aplikacja i jak ustawić jej etykietki narzędzia. Ten fragment kodu jest częścią [Rysowanie Client sample](../../visual-cpp-samples.md).
+
+[!code-cpp[NVC_MFC_DrawClient#4](../../mfc/reference/codesnippet/cpp/cmfcribbonapplicationbutton-class_1.h)]
+[!code-cpp[NVC_MFC_DrawClient#5](../../mfc/reference/codesnippet/cpp/cmfcribbonapplicationbutton-class_2.cpp)]
+
+## <a name="inheritance-hierarchy"></a>Hierarchia dziedziczenia
+
+[CObject](../../mfc/reference/cobject-class.md)
+
+[CMFCRibbonBaseElement](../../mfc/reference/cmfcribbonbaseelement-class.md)
+
+[CMFCRibbonButton](../../mfc/reference/cmfcribbonbutton-class.md)
+
+[CMFCRibbonApplicationButton](../../mfc/reference/cmfcribbonapplicationbutton-class.md)
+
+## <a name="requirements"></a>Wymagania
+
+**Nagłówek:** afxRibbonBar.h
+
+##  <a name="cmfcribbonapplicationbutton"></a>  CMFCRibbonApplicationButton::CMFCRibbonApplicationButton
+
+Tworzy i inicjuje [CMFCRibbonApplicationButton](../../mfc/reference/cmfcribbonapplicationbutton-class.md) obiektu.
+
+```
+CMFCRibbonApplicationButton();
+CMFCRibbonApplicationButton(UINT uiBmpResID);
   CMFCRibbonApplicationButton(HBITMAP hBmp);
-```  
-  
-### <a name="parameters"></a>Parametry  
- *uiBmpResID*  
- Identyfikator zasobu obrazu do wyświetlania na przycisku aplikacji.  
-  
- *hBmp*  
- Dojście do mapy bitowej do wyświetlenia na przycisku aplikacji.  
-  
-### <a name="remarks"></a>Uwagi  
- Przycisk aplikacji wstążki jest specjalny przycisk znajdujący się w lewym górnym rogu okna aplikacji. Gdy użytkownik kliknie ten przycisk, aplikacja zostanie otwarte menu, które zwykle zawiera wspólne **pliku** polecenia, takie jak **Otwórz**, **Zapisz**, i **zakończenia**.  
-  
-##  <a name="setimage"></a>  CMFCRibbonApplicationButton::SetImage  
- Przypisuje obrazu przycisku aplikacji.  
-  
-```  
-void SetImage(UINT uiBmpResID);  
-void SetImage(HBITMAP hBmp);
-```  
-  
-### <a name="parameters"></a>Parametry  
+```
+
+### <a name="parameters"></a>Parametry
+
 *uiBmpResID*<br/>
-[in] Identyfikator zasobu obrazu do wyświetlania na przycisku aplikacji.  
-  
+Identyfikator zasobu obrazu do wyświetlania na przycisku aplikacji.
+
 *hBmp*<br/>
-[in] Dojście do mapy bitowej do wyświetlenia na przycisku aplikacji.  
-  
-### <a name="remarks"></a>Uwagi  
- Ta metoda umożliwia przypisywanie nowego obrazu do przycisk wstążki w aplikacji, po utworzeniu przycisku. Przycisk aplikacji znajduje się w lewym górnym rogu okna aplikacji.  
-  
-## <a name="see-also"></a>Zobacz też  
- [Diagram hierarchii](../../mfc/hierarchy-chart.md)   
- [Klasy](../../mfc/reference/mfc-classes.md)   
- [Klasa CMFCRibbonButton](../../mfc/reference/cmfcribbonbutton-class.md)
+Dojście do mapy bitowej do wyświetlenia na przycisku aplikacji.
+
+### <a name="remarks"></a>Uwagi
+
+Przycisk aplikacji wstążki jest specjalny przycisk znajdujący się w lewym górnym rogu okna aplikacji. Gdy użytkownik kliknie ten przycisk, aplikacja zostanie otwarte menu, które zwykle zawiera wspólne **pliku** polecenia, takie jak **Otwórz**, **Zapisz**, i **zakończenia**.
+
+##  <a name="setimage"></a>  CMFCRibbonApplicationButton::SetImage
+
+Przypisuje obrazu przycisku aplikacji.
+
+```
+void SetImage(UINT uiBmpResID);
+void SetImage(HBITMAP hBmp);
+```
+
+### <a name="parameters"></a>Parametry
+
+*uiBmpResID*<br/>
+[in] Identyfikator zasobu obrazu do wyświetlania na przycisku aplikacji.
+
+*hBmp*<br/>
+[in] Dojście do mapy bitowej do wyświetlenia na przycisku aplikacji.
+
+### <a name="remarks"></a>Uwagi
+
+Ta metoda umożliwia przypisywanie nowego obrazu do przycisk wstążki w aplikacji, po utworzeniu przycisku. Przycisk aplikacji znajduje się w lewym górnym rogu okna aplikacji.
+
+## <a name="see-also"></a>Zobacz też
+
+[Wykres hierarchii](../../mfc/hierarchy-chart.md)<br/>
+[Klasy](../../mfc/reference/mfc-classes.md)<br/>
+[Klasa CMFCRibbonButton](../../mfc/reference/cmfcribbonbutton-class.md)

@@ -12,12 +12,13 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 48d14ec722299a9ff72ad5bab0a68cde5e00d6ad
-ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
+ms.openlocfilehash: 81babf799860030f6d398f64b55ed65039de8649
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33686805"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46393535"
 ---
 # <a name="11-scope"></a>1.1 Zakres
-Określenie tej wartości obejmuje tylko przekierowywany użytkownik paralelizacja, w którym użytkownik jawnie określa akcje podejmowane przez kompilator i środowiska wykonawczego systemu w celu wykonania programu równolegle. Implementacje Openmpc i C++ nie są wymagane do sprawdzenia zależności konflikty, zakleszczenie, wyścigu lub innych problemów, które powoduje wykonanie programu niepoprawne. Użytkownik jest odpowiedzialny za egzekwowanie poprawnie wykonuje aplikacji przy użyciu konstrukcji Openmpc i C++ interfejsu API. W tym dokumencie nie są objęte generowane przez kompilator automatyczna paralelizacja i dyrektywy kompilatora ułatwiających takich paralelizacja.
+
+Ta specyfikacja obejmuje równoległe skierowana tylko do użytkowników, którym użytkownik jawnie określa akcje, które mają zostać podjęte przez kompilatora i środowiska wykonawczego systemu w celu wykonania programu, w sposób równoległy. Implementacje OpenMP C i C++ nie są wymagane do sprawdzenia zależności, konfliktów, zakleszczenia, wyścigu lub innych problemów, które powoduje wykonanie programu niepoprawne. Użytkownik jest odpowiedzialny za zapewnienie poprawnie wykonuje aplikacji przy użyciu konstrukcje OpenMP C i C++ interfejsu API. W tym dokumencie nie są objęte generowanych przez kompilator automatyczne przetwarzanie równoległe i dyrektywy kompilatora ułatwiają takie przetwarzania równoległego.

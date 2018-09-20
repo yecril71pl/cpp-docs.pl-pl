@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: a79f731ef0080e38e2c1b60d8e4924a5bf75089e
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: fdea60808118ecd7caa04fab3421c481d908e833
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42600298"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46391816"
 ---
 # <a name="idlquote"></a>idl_quote
 
@@ -38,7 +38,7 @@ Umożliwia użycie konstrukcji języka IDL, które nie są obsługiwane w bież�
 
 ### <a name="parameters"></a>Parametry
 
-*Tekst*  
+*Tekst*<br/>
 Nazwa atrybutu, który ma kompilator języka Visual C++ do przejścia do pliku .idl wygenerowany bez zwracania błędów kompilatora.
 
 ## <a name="remarks"></a>Uwagi
@@ -99,5 +99,5 @@ Aby uzyskać więcej informacji, zobacz [konteksty atrybutu](../windows/attribut
 
 ## <a name="see-also"></a>Zobacz też
 
-[Atrybuty IDL](../windows/idl-attributes.md)  
+[Atrybuty IDL](../windows/idl-attributes.md)<br/>
 [Oddzielne atrybuty](../windows/stand-alone-attributes.md)  

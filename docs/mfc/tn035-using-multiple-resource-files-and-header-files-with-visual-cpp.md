@@ -17,377 +17,380 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7c23e0a978ab8cb3c63566bd8d5ce64ecb2a80d4
-ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
+ms.openlocfilehash: 670e5edb9609eabf5185d1265bf873f04fb0793c
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/26/2018
-ms.locfileid: "36952417"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46381559"
 ---
 # <a name="tn035-using-multiple-resource-files-and-header-files-with-visual-c"></a>TN035: używanie wielu plików zasobów i plików nagłówków z programem Visual C++
+
 > [!NOTE]
->  Poniższe uwagi techniczne nie został zaktualizowany, ponieważ została ona uwzględniona w dokumentacji online. W związku z tym niektóre procedury i tematy mogą być nieaktualne lub niepoprawne. Najnowsze informacje zalecane jest, możesz wyszukać temat odsetek w indeksie dokumentacji online.  
-  
- Ta uwaga opisano, jak edytora zasobów języka Visual C++ obsługuje wielu plików zasobów i pliki nagłówkowe udostępnionych w jednej projektu lub współużytkowane przez wiele projektów i jak można korzystać z tej pomocy technicznej. Ta uwaga odpowiedzi na te pytania:  
-  
--   Gdy może chcesz podzielić projektu do wielu plików zasobów i/lub pliki nagłówka i jak to zrobić  
-  
--   Jak udostępnić wspólnej nagłówka. H pliku między dwiema. RC — pliki  
-  
--   Jak można podzielić zasoby projektu na wielu. RC — pliki  
-  
--   Jak można (oraz narzędzia) zarządzać kompilacji zależności między. RC. CPP, i. Pliki H  
-  
- Należy pamiętać, że po dodaniu pliku dodatkowych zasobów do projektu ClassWizard nie rozpoznaje zasobów w dodany plik.  
-  
- Ta uwaga mają strukturę odpowiedzi na te pytania w następujący sposób:  
-  
-- **Omówienie sposobu Visual C++ zarządza plików zasobów i pliki nagłówkowe** zawiera omówienie sposobu zasób ustawić zawiera polecenie w programie Visual C++ pozwala używać wielu plików zasobów i pliki nagłówkowe, w tym samym projekcie.  
-  
-- **Analiza utworzone z kreatorami AppWizard. RC i. Pliki H** analizuje wielu plików zasobów i nagłówek, które są używane przez aplikacje utworzone z kreatorami AppWizard. Te pliki służą jako dobry model dodatkowe pliki zasobów i pliki nagłówkowe, które można dodać do projektu.  
-  
-- **Dodatkowe pliki nagłówka w tym** opisano, gdzie mogą zostać uwzględnione pliki nagłówka i zawiera szczegółowe informacje, jak to zrobić.  
-  
-- **Udostępnianie pliku nagłówka między dwiema. Pliki RC** pokazuje, jak można współużytkować jeden plik nagłówka między wieloma. RC — pliki w różnych projektów lub w tym samym projekcie.  
-  
-- **Korzystanie z wielu plików zasobów, w tym samym projekcie** w tym artykule opisano, gdzie można podzielić projektu do wielu. RC pliki i zawiera szczegółowe informacje, jak to zrobić.  
-  
-- **Wymuszanie nieedytowalne pliki Visual C++** w tym artykule opisano, jak można upewnić się, Visual C++ nie Edytuj i przypadkowo ponownie sformatować zasobów niestandardowych.  
-  
-- **Zarządzanie symbole współużytkowane przez wiele Visual C++, edytować. Pliki RC** zawiera opis sposobu udostępniania tego samego symbole w kilku. RC — pliki i jak należy unikać przypisywania zduplikowane identyfikatory numeryczne.  
-  
-- **Zarządzanie zależności między. RC. CPP, i. Pliki H** w tym artykule opisano, jak Visual C++ pozwala uniknąć niepotrzebnego ponownej kompilacji. CPP pliki, które są zależne od zasobów plików symboli.  
-  
-- **Jak Visual C++ służy do zarządzania obejmuje informacji o zbiorze** szczegółowe informacje techniczne na temat sposobu Visual C++ przechowuje informacje o wielu (zagnieżdżona). RC — pliki i wiele plików nagłówka #include'd przez. Plik RC.  
-  
- **Omówienie sposobu Visual c++ zarządza plików zasobów i pliki nagłówkowe**  
-  
- Visual C++ zarządza jeden. Plik zasobów RC i odpowiadające mu. Plik nagłówka H jako silnie sprzężonego parę plików. Gdy Edytuj i zapisuj zasobów w. RC plik należy pośrednio Edytuj i zapisuj symboli w odpowiednich. Plik godz. Mimo że można otwierać i edytować wielu. RC — pliki w czasie (przy użyciu interfejsu użytkownika programu Visual C++ MDI) dla żadnej podanej. Plik RC pośrednio Edytuj dokładnie jeden plik nagłówka.  
-  
- **Plik nagłówka symbolu**  
-  
- Domyślnie program Visual C++ zawsze nazwy odpowiedni plik nagłówka ZASOBU. H, niezależnie od tego, nazwa pliku zasobu (np. MOJA_APLIKACJA. RC). Przy użyciu **zasobów zawiera** polecenie **widoku** menu w programie Visual C++, można zmienić nazwę tego pliku nagłówka, aktualizując plik nagłówka symbolu w **ustawić obejmuje**okno dialogowe.  
-  
- **Dyrektywy symboli tylko do odczytu**  
-  
- Mimo że Visual C++ edytuje tylko jeden plik nagłówka dla żadnej podanej. Plik RC, Visual C++ obsługuje odwołań do symboli zdefiniowanych w plikach dodatkowe nagłówka tylko do odczytu. Przy użyciu **zasobów zawiera** polecenie **widoku** menu w programie Visual C++, można określić dowolną liczbę dodatkowych nagłówka tylko do odczytu plików jako tylko do odczytu dyrektywy symboli. Ograniczenie "tylko do odczytu" oznacza, że podczas dodawania nowego zasobu w. RC plik, można użyć symbol zdefiniowany w pliku nagłówka tylko do odczytu. Jednak jeśli usuniesz zasób symbol nadal zdefiniowanych w pliku tylko do odczytu nagłówka. Nie można zmienić wartość liczbową przypisane do symbolu tylko do odczytu.  
-  
- **Dyrektywy kompilacji**  
-  
- Visual C++ obsługuje również zagnieżdżenia pliki zasobów, gdy jedna. RC plik jest #include'd w innym. Podczas edytowania danego. RC plik przy użyciu programu Visual C++, wszystkie zasoby w #include'd pliki nie są widoczne. Jednak podczas kompilacji. RC plik #include'd plików są również skompilowana. Przy użyciu **zasobów zawiera** polecenie **widoku** menu w programie Visual C++, można określić dowolną liczbę #include'd. RC — pliki jako dyrektywy kompilacji.  
-  
- Należy pamiętać, co się stanie, jeśli odczytu w programie Visual C++. Plik RC #include innego obiektu. RC plik, który jest *nie* określony jako dyrektywy kompilacji. Tej sytuacji mogą wystąpić po przywróceniu języka Visual c++. RC plik, który można było zostały wcześniej utrzymania ręcznie za pomocą edytora tekstu. Gdy odczytuje Visual C++ #include'd. RC plik scala #include'd zasobów do obiektu nadrzędnego. Plik RC. Po zapisaniu obiektu nadrzędnego. RC plik #include instrukcji, w efekcie, zostaną zastąpione #include'd zasobów. Jeśli nie chcesz, aby scalania to mieć miejsce, należy usunąć #include instrukcji z obiektu nadrzędnego. Plik RC *wcześniejsze* do czytania go do języka Visual C++; przy użyciu programu Visual C++, dodać z powrotem takie same # instrukcji jako kompilacji dyrektywy include.  
-  
- Zapisuje Visual C++. Trzy rodzaje powyżej plików RC ustawić zawiera informacje (plik nagłówka symbolu, dyrektywy symboli tylko do odczytu i dyrektywy kompilacji) w # dyrektywy include *i* TEXTINCLUDE zasobów. Zasoby TEXTINCLUDE, szczegółów implementacji, które zwykle zbędna, nie można rozwiązać, opisano szczegółowo w [jak Visual C++ zarządza ustawić zawiera informacje o](#_mfcnotes_tn035_set_includes).  
-  
- **Analiza utworzone z kreatorami AppWizard. RC i. Pliki H**  
-  
- Badanie kodu aplikacji utworzonej przez kreatorami AppWizard zapewnia wgląd w zarządzaniu Visual C++ na wielu plików zasobów i plików nagłówków. Fragmenty kodu zbadane poniżej są z aplikacji MOJA_APLIKACJA utworzonego przez kreatorami AppWizard przy użyciu opcji domyślnych.  
-  
- Aplikacja utworzone z kreatorami AppWizard używa wielu plików zasobów i wiele plików nagłówka, zgodnie z opisem na poniższym diagramie:  
-  
-```  
-RESOURCE.H     AFXRES.H      
- \       /                
- \     /  
-    MYAPP.RC 
- |  
- |                
-    RES\MYAPP.RC2 
-    AFXRES.RC 
-    AFXPRINT.RC 
-```  
-  
- Można je wyświetlić, wielu plików za pomocą polecenia programu Visual C++ pliku/zestaw zawiera.  
-  
- MYAPP.RC  
- Plik zasobów aplikacji można edytować przy użyciu programu Visual C++.  
-  
- ZASÓB. H jest plik nagłówka specyficzne dla aplikacji. Jest zawsze o nazwie zasobów. H przez kreatorami AppWizard zgodne z domyślnego języka Visual C++ nazewnictwa pliku nagłówka. #Include dla tego pliku nagłówka jest pierwszą instrukcją w pliku zasobów (MOJA_APLIKACJA. RC):  
-  
-```  
-//Microsoft Visual C++ generated resource script  
-//  
-#include "resource.h"  
-```  
-  
- RES\MYAPP.RC2  
- Zawiera zasoby, które nie będą edytowane przez Visual C++, ale zostaną uwzględnione w ostatecznym skompilowany. Plik EXE. Kreatorami AppWizard tworzy żadnych takich zasobów domyślnie, ponieważ Visual C++ można edytować wszystkie standardowe zasoby, w tym wersja zasobów (Nowa funkcja w tej wersji). Pusty plik jest generowany przez kreatorami AppWizard w przypadku, gdy chcesz dodać własne niestandardowe zasoby sformatowany do tego pliku.  
-  
- Jeśli używasz niestandardowych zasobów sformatowane, można dodać je do RES\MYAPP. RC2 i edytować za pomocą edytora tekstu Visual C++.  
-  
- AFXRES. RC i AFXPRINT. RC zawiera standardowe zasoby wymagane przez niektóre funkcje platformy. Podobnie jak RES\MYAPP. Są następujące dwa pliki zasobów udostępnionych przez firmę framework RC2, #include'd na końcu MOJA_APLIKACJA. RC i są określone w dyrektywy kompilacji okno dialogowe Ustawianie obejmuje. W związku z tym nie bezpośrednio wyświetlić ani edytować te zasoby, podczas edytowania MOJA_APLIKACJA. RC w programie Visual C++, ale są one kompilowane do pliku binarnego aplikacji. Plików RES i final. Plik EXE. Aby uzyskać więcej informacji na standardowych ramy zasoby, w tym procedur modyfikowania ich, zobacz [23 Uwaga techniczna](../mfc/tn023-standard-mfc-resources.md).  
-  
- AFXRES. H definiuje symbole standardowe, takie jak `ID_FILE_NEW`, używane przez platformę i używane wyłącznie w AFXRES. RC. AFXRES. H również #include w WINRES. H, zawierającą podzbiór systemu WINDOWS. H, które są wymagane przez wygenerowany Visual C++. RC — pliki, jak również AFXRES. RC. Symbole zdefiniowane w AFXRES. H są dostępne podczas edytowania pliku zasobu aplikacji (MOJA_APLIKACJA. RC). Na przykład `ID_FILE_NEW` jest używany nowy plik elementu menu w MOJA_APLIKACJA. RC dla zasobów menu. Nie można zmienić ani usunąć te symbole zdefiniowane w ramach.  
-  
-## <a name="_mfcnotes_tn035_including"></a> W tym pliki nagłówkowe dodatkowe  
-  
- Aplikacja utworzone z kreatorami AppWizard zawiera tylko dwa pliki nagłówkowe: zasobów. H i AFXRES. H. Tylko zasób. H jest specyficzne dla aplikacji. Konieczne może zawierać pliki dodatkowych nagłówków tylko do odczytu w następujących przypadkach:  
-  
- Plik nagłówka pochodzi od źródła zewnętrznego lub chcesz udostępnić plik nagłówka wśród wielu projektów lub wielu części tego samego projektu.  
-  
- Plik nagłówka ma formatowanie i komentarze, że nie ma Visual C++, aby zmienić lub odfiltrować podczas zapisywania pliku. Na przykład może być chcesz zachować #define firmy używające symboliczne arytmetyczne takich jak:  
-  
-```  
-#define RED 0  
-#define BLUE 1  
-#define GREEN 2  
-#define ID_COLOR_BUTTON 1001  
-#define ID_RED_BUTTON (ID_COLOR_BUTTON + RED)  
-#define ID_BLUE_BUTTON (ID_COLOR_BUTTON + BLUE)  
-#define ID_GREEN_BUTTON (ID_COLOR_BUTTON + GREEN)  
-```  
-  
- Można podać dodatkowy nagłówek tylko do odczytu plików za pomocą **zasobów zawiera** polecenie, aby określić #include instrukcji jako drugi dyrektywy symboli tylko do odczytu jako:  
-  
-```  
-#include "afxres.h"  
-#include "second.h"  
-```  
-  
- Plik diagramu relacji teraz wygląda następująco:  
-  
-```  
-    AFXRES.H 
-RESOURCE.H     SECOND.H      
- \       /                
- \     /  
-    MYAPP.RC 
- |  
- |                
-    RES\MYAPP.RC2 
-    AFXRES.RC 
-    AFXPRINT.RC 
-```  
-  
- **Udostępnianie pliku nagłówka między dwiema. RC — pliki**  
-  
- Warto udostępnić plik nagłówka między dwiema. RC — pliki znajdujących się w różnych projektów lub tego samego projektu. Aby to zrobić, wystarczy zastosować opisano powyżej, aby obie techniki dyrektywy tylko do odczytu. RC — pliki. W przypadku, gdy dwa. RC — pliki są dla różnych aplikacji (różnych projektów), wynik przedstawiono na poniższym diagramie:  
-  
-```  
-    RESOURCE.H AFXRES.H   RESOURCE.H    
- (for MYAPP1) SECOND.H   (for MYAPP2)               
- \       /     \       /             
- \     /       \     /               
-    MYAPP1.RC MYAPP2.RC */    \        /     \ */      \      /       \              
-RES\MYAPP1.RC2  AFXRES.RC     RES\MYAPP2.RC2                
-    AFXPRINT.RC 
-```  
-  
- Sytuacja, w którym drugi plik nagłówka jest udostępniony przez dwa. RC — pliki w tej samej aplikacji (projekt) została szczegółowo opisana poniżej.  
-  
- **Korzystanie z wielu plików zasobów, w tym samym projekcie**  
-  
- Visual C++ i kompilator zasobów obsługi wielu. RC — pliki w tym samym projekcie za pośrednictwem #include w jeden. RC plik w innym. Dozwolone jest wiele zagnieżdżenia. Istnieją różne przyczyny podziału zasoby projektu do wielu. RC — pliki:  
-  
--   To ułatwia zarządzanie dużą liczbę zasobów w wielu członków zespołu projektu, jeśli można podzielić na wiele zasobów. RC — pliki. Jeśli używasz pakietu zarządzania kontroli źródła dla wyewidencjonowanie plików i ewidencjonowanie zmiany, dzielenie zasobów na wielu. RC — pliki zapewniają bardziej precyzyjną kontrolę nad Zarządzanie zmianami do zasobów.  
-  
--   Jeśli chcesz użyć dyrektywy preprocesora, takich jak #ifdef, #endif, a #define, dla części zasobów, muszą izolowaniu ich w trybie tylko do odczytu zasobów, które będą zbierane przez kompilator zasobów.  
-  
--   Składnik. RC — pliki będą obciążenia i Zapisz szybciej w programie Visual C++, niż jeden złożone. Plik RC.  
-  
--   Jeśli chcesz zachować zasobu za pomocą edytora tekstu w postaci zrozumiałą dla użytkownika, należy go przechowywać. Umożliwia edycję plików RC niezależnie od jednego języka Visual C++.  
-  
--   Jeśli trzeba utrzymywać zasób zdefiniowane przez użytkownika w postaci pliku binarnego lub tekst jest interpretable przez inny Edytor danych specjalne, następnie należy go przechowywać w oddzielnej. Plik RC, Visual C++ nie zmienia format danych szesnastkową. . Zasoby plików WAV (dźwięk) w próbce pojęcia zaawansowane MFC [SPEAKN](../visual-cpp-samples.md) są dobrym przykładem.  
-  
- Możesz #include sekundy. RC w dyrektywach kompilacji w oknie dialogowym Ustaw obejmuje:  
-  
-```  
-#include "res\myapp.rc2"  // non-Visual C++ edited resources  
-#include "second.rc"  // THE SECOND .RC FILE  
-  
-#include "afxres.rc"  // Standard components  
-#include "afxprint.rc"  // printing/print preview resources  
-```  
-  
- Na poniższym diagramie przedstawiono wyniki:  
-  
-```  
-RESOURCE.H     AFXRES.H      
- \       /                
- \     /  
-    MYAPP.RC 
- |  
- |                
-    RES\MYAPP.RC2 
-    SECOND.RC 
-    AFXRES.RC 
-    AFXPRINT.RC 
-```  
-  
- Przy użyciu dyrektyw kompilacji, możesz organizować zasobami Visual C++ edycji i nie można edytować w wielu. RC — pliki, których MYAPP "master". Nie robi nic, RC, ale #include inne. RC — pliki. Jeśli używasz projektu Visual C++. Plik klucza MAK, a następnie użytkownik powinien zawierać "master". RC plik w projekcie tak że wszystkie #include'd zasoby są kompilowane przy użyciu aplikacji.  
-  
- **Wymuszanie plików edytowana Visual C++**  
-  
- Utworzony z kreatorami AppWizard RES\MYAPP. Plik RC2 jest przykładowy plik zawierający zasoby, które można wykonać *nie* przypadkowo odczytu w programie Visual C++, a następnie zapisz je Wycofaj z utratę formatowania informacji. Aby zabezpieczyć się przed tym, należy umieścić następujące wiersze na początku RES\MYAPP. Plik RC2:  
-  
-```  
-#ifdef APSTUDIO_INVOKED  
- #error this file is not editable by Visual C++  
-#endif //APSTUDIO_INVOKED  
-```  
-  
- Gdy kompiluje Visual C++. Definiuje RC plik `APSTUDIO_INVOKED` oraz `RC_INVOKED`. Visual C++ odczytuje wiersz #error powyżej struktury plików utworzony z kreatorami AppWizard jest uszkodzony, zgłasza błąd krytyczny i Przerwij Odczyt. Plik RC.  
-  
- **Zarządzanie symbole współużytkowane przez wiele Visual C++, edytować. RC — pliki**  
-  
- Problemy z dwóch wystąpić, gdy podzielić zasoby do wielu. RC — pliki, które chcesz edytować oddzielnie w programie Visual C++:  
-  
--   Warto udostępnić tym samym symbole w wielu. RC — pliki.  
-  
--   Należy zapewnić Visual C++, należy unikać przypisywania tej samej wartości liczbowych identyfikator do różnych zasobów (symboli).  
-  
- Na poniższym diagramie przedstawiono organizacji. RC i. H pliki, których dotyczy problem pierwszy:  
-  
-```  
-    MYAPP.RC */         \ */           \  
-MYSTRS.H   / MYSHARED.H  \  MYMENUS.H  
- \    /    /      \   \    \  
- \  /    /        \   \    \  
-    MYSTRS.RC MYMENUS.RC  
-```  
-  
- W tym przykładzie zasobów ciągu jest przechowywana w pliku jeden zasób, MYSTRS. RC i menu są przechowywane w innym MYMENUS. RC. Niektóre symbole, takie jak polecenia, trzeba być udostępniane między dwoma plikami. Na przykład ID_TOOLS_SPELL może być identyfikator polecenia menu dla elementu pisowni w menu Narzędzia. i może to być również identyfikator ciągu wiersza polecenia, wyświetlane przez platformę, na pasku stanu głównego okna aplikacji.  
-  
- ID_TOOLS_SPELL symbol jest przechowywana w pliku nagłówka udostępnionego, MYSHARED. H. Ręcznie Obsługa tego pliku nagłówka udostępnionych za pomocą edytora tekstu; Visual C++ nie bezpośrednio edytować go. W zasobie dwa pliki MYSTRS. RC i MYMENUS. Określ RC, #include MYSHARED. H w dyrektywach tylko do odczytu dla MOJA_APLIKACJA. RC, za pomocą **zasobów zawiera** poleceń, zgodnie z wcześniejszym opisem.  
-  
- Dogodnym przewidywania symbol udostępni przed próbą użycia go do identyfikacji dowolnego zasobu. Dodać symbol do pliku nagłówka udostępnionego i, jeśli jeszcze tego nie zrobiono #include'd plik nagłówka udostępnionych w dyrektywy tylko do odczytu. RC plik, należy go przy użyciu symbolu. Jeśli nie jest przewidywane udostępnianie symbol w ten sposób, a następnie trzeba będzie ręcznie (przy użyciu edytora tekstów) Przenieś #define instrukcji dla symbolu z MYMENUS powiedzieć. H do MYSHARED. H przed jego użyciem w MYSTRS. RC.  
-  
- Jeśli zarządzasz symbole w wielu. RC — pliki, można również musi pomóc Visual C++, należy unikać przypisywania tej samej wartości liczbowych identyfikator do różnych zasobów (symboli). Dla żadnego danych. Plik RC, Visual C++ przyrostowo przypisuje identyfikatory w każdej z czterech domenach identyfikator. Między sesjach edycji, Visual C++ przechowuje informacje o identyfikator ostatniego ona zarejestrowana w każdej domenie w plik nagłówka symbolu. Plik RC. Oto, co wartości APS_NEXT jest pusta (nowy). Plik RC:  
-  
-```  
-#define _APS_NEXT_RESOURCE_VALUE  101  
-#define _APS_NEXT_COMMAND_VALUE   40001  
-#define _APS_NEXT_CONTROL_VALUE   1000  
-#define _APS_NEXT_SYMED_VALUE     101  
-```  
-  
- `_APS_NEXT_RESOURCE_VALUE` jest następnej wartości symbol, który będzie służyć do zasobu okna dialogowego, zasobów menu i tak dalej. Prawidłowy zakres dla wartości symbol zasobu jest 0x6FFF do 1.  
-  
- `_APS_NEXT_COMMAND_VALUE` to wartość następnego symbol, który będzie używany do identyfikacji polecenia. Prawidłowy zakres dla wartości symbolu polecenia jest 0x8000 do 0xDFFF.  
-  
- `_APS_NEXT_CONTROL_VALUE` to wartość następnego symbol, który będzie używany dla formantu okna dialogowego. Prawidłowy zakres dla wartości symbolu formantu okna dialogowego jest 8 do 0xDFFF.  
-  
- `_APS_NEXT_SYMED_VALUE` Wartość symbolu następnego podczas ręcznie przypisać wartość symbolu jest użycie nowego polecenia, w przeglądarce symbolu.  
-  
- Visual C++ rozpoczyna się od znaku nieco większe wartości prawna najniższą wartość, przy tworzeniu nowego. Plik RC. Kreatorami AppWizard zainicjuje także te wartości na bardziej odpowiednią dla aplikacji MFC. Aby uzyskać więcej informacji o zakresach wartość Identyfikatora, wyświetlić [20 Uwaga techniczna](../mfc/tn020-id-naming-and-numbering-conventions.md).  
-  
- Po każdym utworzeniu nowego pliku zasobu, nawet w tym samym projekcie Visual C++ definiuje takie same `_APS_NEXT_` wartości. Oznacza to, że jeśli dodasz, powiedzieć wielu okien dialogowych programu w dwóch różnych. RC — pliki, istnieje duże prawdopodobieństwo który takie same #define będzie można przypisać wartości do różnych okien dialogowych. Na przykład IDD_MY_DLG1 w pierwszym. Plik RC mogą przypisano tę samą liczbę, 101, jako IDD_MY_DLG2 na sekundę. Plik RC.  
-  
- Aby tego uniknąć, należy zarezerwować oddzielne zakresu numerycznego dla każdego z czterech domenach identyfikatorów we właściwej. RC — pliki. W tym celu ręczne aktualizowanie `_APS_NEXT` wartości w każdym. RC — pliki **przed** dodawania zasobów. Na przykład jeśli pierwszy. RC plik używa domyślnej `_APS_NEXT` wartości, a następnie można przypisać następujące `_APS_NEXT` wartości przez drugą. Plik RC:  
-  
-```  
-#define _APS_NEXT_RESOURCE_VALUE  2000  
-#define _APS_NEXT_COMMAND_VALUE   42000  
-#define _APS_NEXT_CONTROL_VALUE   2000  
-#define _APS_NEXT_SYMED_VALUE     2000  
-```  
-  
- Oczywiście jest nadal możliwe, że Visual C++ przypisze tak wiele identyfikatorów w pierwszym. RC plik rozpoczęcia dla drugiego nakładania się wartości liczbowych. Plik RC. Wystarczająco duże zakresy należy zarezerwować tak, aby tak nie jest.  
-  
- **Zarządzanie zależności między. RC. CPP, i. Pliki H**  
-  
- Gdy zapisuje Visual C++. RC plik również zapisuje zmiany symbol do odpowiednich zasobów. Plik godz. Jedną z sieci. CPP pliki, które odwołują się do zasobów. Plik RC może # include. Plik H, zazwyczaj z poziomu projektu głównego nagłówka pliku. Prowadzi to do niepożądanych efekt uboczny z powodu Zarządzanie projektami wewnętrzny środowiska programowania, które skanuje pliki źródłowe dla nagłówka zależności. Za każdym razem Dodaj nowy symbol w programie Visual C++, wszystkie. Pliku CPP #include. H musi być ponownie kompilowane.  
-  
- Visual C++ prowadzenia zależność od ZASOBU. H, umieszczając w niej Poniższy komentarz w pierwszym wierszu zasobu. Plik H:  
-  
-```  
-//{{NO_DEPENDENCIES}}  
-```  
-  
- Środowisko projektowe interpretuje ten komentarz, ignorując zmiany do ZASOBU. H tak zależne. Plikach CPP nie trzeba ponownie skompilowana.  
-  
- Visual C++ zawsze dodaje //{{NO_DEPENDENCIES}} komentarz wiersz. Plik RC podczas zapisywania pliku. W niektórych przypadkach obejścia zależności kompilacji dla ZASOBU. H może prowadzić do błędów czasu wykonywania wykryte w czasie łącza. Na przykład, jeśli używasz przeglądarki Symbol Aby zmienić wartość liczbową przypisane do symbolu dla zasobu, zasób zostanie nie poprawnie znaleziono i załadowany Jeśli czasu wykonywania aplikacji. Pliku CPP odwołujących się do zasobu nie jest ponownie kompilowana. W takich przypadkach należy jawnie skompiluj żadnego. Dotyczy plików CPP, które znasz zmiany symbol w ZASOBIE. H lub wybierz **rekompilacji wszystkiego**. Jeśli trzeba często Zmienianie symbolu wartości dla grupy zasobów, prawdopodobnie znajduje się on bardziej wygodne i bezpieczniejsze rozbicie tych symboli w pliku oddzielny nagłówek tylko do odczytu, zgodnie z opisem w powyższej sekcji [włącznie Pliki nagłówkowe dodatkowe](#_mfcnotes_tn035_including).  
-  
-## <a name="_mfcnotes_tn035_set_includes"></a> W jaki sposób zarządza Visual C++ zestaw zawiera informacje o **  
-  
- Jak wspomniano powyżej, ustaw zawiera polecenia menu Plik pozwala określić trzy rodzaje informacji:  
-  
--   Plik nagłówka symbolu  
-  
--   Dyrektywy symboli tylko do odczytu  
-  
--   Dyrektywy kompilacji  
-  
- Poniżej opisano zachowywanie tych informacji w programie Visual C++. Plik RC. Nie trzeba te informacje do używania języka Visual C++, ale może pomóc lepiej zrozumieć, aby bardziej bezpieczne można ustawić obejmuje funkcję.  
-  
- Każdego z trzech powyższych typów ustawić zawiera informacje są przechowywane w. Plik RC w dwóch formach: (1) jako #include lub dyrektyw interpretable przez kompilator zasobów i (2) jako interpretable specjalne zasoby TEXTINCLUDE tylko przez Visual C++.  
-  
- Zasobu TEXTINCLUDE ma na celu bezpiecznie przechowywać informacji ustawić obejmują w formularz, który jest łatwo presentable w programie Visual C++ **ustawić obejmuje** okno dialogowe. Jest TEXTINCLUDE *typu zasobu* zdefiniowane przez Visual C++. Visual C++ rozpoznaje trzy określonych zasobów TEXTINCLUDE, które mają zasobów numery identyfikacyjne 1, 2 i 3:  
-  
-|Identyfikator zasobu TEXTINCLUDE|Typ ustawiony obejmuje informacji|  
-|-----------------------------|--------------------------------------|  
-|1|Plik nagłówka symbolu|  
-|2|Dyrektywy symboli tylko do odczytu|  
-|3|Dyrektywy kompilacji|  
-  
- Domyślnie MOJA_APLIKACJA przedstawiono każdego z trzech typów ustawić zawiera informacje. RC i zasobów. H tworzonych przez kreatorami AppWizard, zgodnie z poniższym opisem. Dodatkowe \0 i "" tokeny od rozpoczęcia i zakończenia bloki są wymagane przez RC składni odpowiednio określić zero ciągi zakończone i znaku podwójnego cudzysłowu.  
-  
-## <a name="symbol-header-file"></a>Plik nagłówka symbolu  
- Formularz informacji plik nagłówka symbolu interpretowane przez kompilator zasobów jest po prostu #include instrukcji:  
-  
-```  
-#include "resource.h"  
-```  
-  
- Odpowiadający jej zasób TEXTINCLUDE jest:  
-  
-```  
-1 TEXTINCLUDE DISCARDABLE  
-BEGIN  
- "resource.h\0"  
-END  
-```  
-  
-## <a name="read-only-symbol-directives"></a>Dyrektywy symboli tylko do odczytu  
- Dyrektywy symboli tylko do odczytu są uwzględniane w górnej części MOJA_APLIKACJA. RC w następującej postaci interpretable przez kompilator zasobów:  
-  
-```  
-#include "afxres.h"  
-```  
-  
- Odpowiadający jej zasób TEXTINCLUDE jest:  
-  
-```  
-2 TEXTINCLUDE DISCARDABLE  
-BEGIN  
-   "#include ""afxres.h""\r\n"  
-   "\0"  
-END  
-```  
-  
-## <a name="compile-time-directives"></a>Dyrektywy kompilacji  
- Dyrektywy kompilacji znajdują się na końcu MOJA_APLIKACJA. RC w następującej postaci interpretable przez kompilator zasobów:  
-  
-```  
-#ifndef APSTUDIO_INVOKED  
-///////////////////////  
-//  
-// From TEXTINCLUDE 3  
-//  
-#include "res\myapp.rc2"  // non-Visual C++ edited resources  
-  
-#include "afxres.rc"  // Standard components  
-#include "afxprint.rc"  // printing/print preview resources  
-#endif  // not APSTUDIO_INVOKED  
-```  
-  
- Dyrektywa #ifndef APSTUDIO_INVOKED nakazuje Visual C++, aby pominąć dyrektywy kompilacji.  
-  
- Odpowiadający jej zasób TEXTINCLUDE jest:  
-  
-```  
-3 TEXTINCLUDE DISCARDABLE  
-BEGIN  
-"#include ""res\myapp.rc2""  // non-Visual C++ edited resources\r\n"  
-"\r\n"  
-"#include ""afxres.rc""  // Standard components\r\n"  
-"#include ""afxprint.rc""  // printing/print preview resources\r\n"  
-"\0"  
-END  
-```  
-  
-## <a name="see-also"></a>Zobacz też  
- [Uwagi techniczne według numerów](../mfc/technical-notes-by-number.md)   
- [Uwagi techniczne według kategorii](../mfc/technical-notes-by-category.md)
+>  Następująca uwaga techniczna nie został zaktualizowany od pierwszego uwzględnienia jej w dokumentacji online. W rezultacie niektóre procedury i tematy może być nieaktualne lub niepoprawne. Najnowsze informacje zaleca się wyszukać temat w indeksie dokumentacji online.
+
+Ta uwaga opisuje, jak edytor zasobów Visual C++ obsługuje wiele plików zasobów i plików nagłówkowych współdzielonych w jednym projekcie lub współdzielonych przez wiele projektów, a także jak można korzystać z zalet tej pomocy technicznej. Ta uwaga odpowiada na te pytania:
+
+- Kiedy może chcesz podzielić projekt na wiele plików zasobów i/lub plików nagłówkowych i jak to zrobić
+
+- Jak udostępnić typowego nagłówka. Plik H między dwoma. RC — pliki
+
+- Jak podzielić zasoby projektu na wiele. RC — pliki
+
+- Jak Ty (i narzędzi) zarządzać zależnościami kompilacji między. WERSJI RC. CPP, i. Pliki H
+
+Należy pamiętać, że po dodaniu dodatkowego pliku zasobów do swojego projektu, ClassWizard nie rozpozna zasobów w dodanym pliku.
+
+Ta uwaga są skonstruowane do na powyższe pytania w następujący sposób:
+
+- **Omówienie sposobu Visual C++ zarządza plików zasobów i plików nagłówkowych** zawiera omówienie sposobu zestaw zasobów zawiera polecenie w programie Visual C++ umożliwia korzystanie z wielu plików zasobów i plików nagłówkowych w tym samym projekcie.
+
+- **Analiza utworzona przez AppWizard. RC i. Pliki H** patrzy na wiele plików zasobów i nagłówkowych, które są używane przez aplikacje utworzone przez kreatora AppWizard. Te pliki stanowią dobry model dla dodatkowych plików zasobów i plików nagłówkowych, które możesz zechcieć dodać do projektu.
+
+- **W tym dodatkowych plików nagłówkowych** opisano, gdzie możesz chcieć dołączyć wiele plików nagłówkowych i zawiera szczegółowe informacje, jak to zrobić.
+
+- **Udostępnianie pliku nagłówkowego przez dwa. Pliki RC** pokazuje, jak można współdzielić jeden plik nagłówkowy między wieloma. RC — pliki w różnych projektach lub w tym samym projekcie.
+
+- **Korzystanie z wielu plików zasobów, w tym samym projekcie** opisuje, w których warto rozważyć rozdzielenie projektu na wiele. RC pliki i zawiera szczegółowe informacje, jak to zrobić.
+
+- **Wymuszanie nieedytowalne pliki Visual C++** w tym artykule opisano, jak można upewnić się, Visual C++ nie edytuje i przypadkowo formatowania niestandardowych zasobów.
+
+- **Zarządzanie symbolami Współdzielonymi przez wiele Visual C++, edytować. Pliki RC** zawiera opis sposobu udostępniania tych samych symboli przez wiele. RC — pliki i jak należy unikać przypisywania zduplikowanych wartości liczbowych Identyfikatora.
+
+- **Zarządzanie zależnościami między. WERSJI RC. CPP, i. Pliki H** w tym artykule opisano, jak Visual C++ pozwala uniknąć niepotrzebnego ponownego kompilowania. Pliki CPP, które są zależne od plików symboli zasobów.
+
+- **Jak Visual C++ zarządza obejmuje informacji o zestawie** zawiera szczegółowe informacje techniczne dotyczące sposobu Visual C++ przechowuje informacje o wiele (zagnieżdżonych). RC — pliki i wiele plików nagłówkowych, które są # #include przez. Plik RC.
+
+**Omówienie, jak Visual c++ zarządza plikami zasobów i plików nagłówkowych**
+
+Visual C++ zarządza pojedynczym. Plik RC zasobów i odpowiadający mu. Plik nagłówkowy H jako parą ściśle powiązanych plików. Kiedy edytujesz i zapisujesz zasoby w. Plik RC, pośrednio edytujesz i zapisujesz symbole w odpowiadającym mu. Plik H. Mimo że można otwierać i edytować wiele. RC — pliki naraz (za pomocą interfejsu użytkownika interfejsu MDI programu Visual C++) dla każdego podane. Plik RC można pośrednio edytować dokładnie jeden odpowiedni plik nagłówkowy.
+
+**Plik nagłówkowy symboli**
+
+Domyślnie program Visual C++ zawsze nazywa odpowiedni plik nagłówkowy zasobów. Godz., niezależnie od nazwy pliku zasobów (np. MYAPP. RC). Za pomocą **zasób zawiera** polecenia **widoku** menu w Visual C++, można zmienić nazwę tego pliku nagłówkowego, aktualizując plik nagłówkowy symboli w **zestaw zawiera**okno dialogowe.
+
+**Dyrektywy symboli tylko do odczytu**
+
+Mimo że Visual C++ edytuje tylko jeden plik nagłówkowy dla każdego podane. Plik RC, Visual C++ obsługuje odwołania do symboli zdefiniowanych w dodatkowych plików nagłówkowych tylko do odczytu. Za pomocą **zasób zawiera** polecenia **widoku** menu w programie Visual C++ można określić dowolną liczbę dodatkowych plików nagłówkowych tylko do odczytu jako dyrektywy symboli tylko do odczytu. Ograniczenie "tylko do odczytu" oznacza, że podczas dodawania nowego zasobu w. Plik RC, można użyć symbolu zdefiniowanego w pliku nagłówkowym tylko do odczytu. ale jeśli usuniesz zasób, symbol nadal pozostaje zdefiniowany w pliku nagłówkowym tylko do odczytu. Nie można zmienić wartości numerycznej przypisanej do symbolu tylko do odczytu.
+
+**Dyrektywy czasu kompilacji**
+
+Visual C++ obsługuje również zagnieżdżanie plików zasobów, gdy jedna. Plik RC jest # dyrektywy #include w innym. Podczas edytowania danego. Plik RC przy użyciu języka Visual C++, wszystkie zasoby w # dyrektywy #include pliki nie są widoczne. Jednak podczas kompilacji. Plik RC # dyrektywy #include również są kompilowane pliki. Za pomocą **zasób zawiera** polecenia **widoku** menu w Visual C++, można określić dowolną liczbę # dyrektywy #include. RC — pliki jako dyrektywy czasu kompilacji.
+
+Należy pamiętać, co się stanie, jeśli wczytasz do Visual C++. Plik RC #include inny. Plik RC, który jest *nie* określony jako dyrektywa czasu kompilacji. Ta sytuacja może powstać po przywróceniu do programu Visual C++. Plik RC, który użytkownik wcześniej utrzymywał ręcznie za pomocą edytora tekstów. Kiedy Visual C++ odczytuje # dyrektywy #include. Plik RC scala # wszytkie zasoby do obiektu nadrzędnego. Plik RC. Podczas zapisywania obiektu nadrzędnego. Plik RC # Instrukcja include w efekt, zostanie zastąpiony # wszytkie zasoby. Jeśli nie chcesz takiego połączenia, należy usunąć # instrukcję include z obiektu nadrzędnego. Plik RC *wcześniejsze* wczytaniem go do Visual C++; następnie przy użyciu języka Visual C++, dodać z powrotem takie same # instrukcję include jako dyrektywa czasu kompilacji.
+
+Visual C++ zapisuje w. RC plik trzy rodzaje powyższych informacji zestaw zawiera (plik nagłówkowy symboli, dyrektywy symboli tylko do odczytu i dyrektywy czasu kompilacji) w # dyrektywy include *i* w zasobach TEXTINCLUDE. Zasoby TEXTINCLUDE, szczegóły implementacji, że nie trzeba zwykle do czynienia, są wyjaśnione w [jak Visual C++ zarządza zestawu zawiera informacje o](#_mfcnotes_tn035_set_includes).
+
+**Analiza utworzona przez AppWizard. RC i. Pliki H**
+
+Badanie kodu aplikacji, tworzonego przez AppWizard zapewnia wgląd w sposób Visual C++ zarządza wielu plików zasobów i plików nagłówkowych. Fragmenty kodu zbadane poniżej pochodzą z aplikacji MYAPP, stworzonej przez AppWizard przy użyciu opcji domyślnych.
+
+Aplikacja utworzona przez AppWizard używa wielu plików zasobów i wielu plików nagłówkowych, zgodnie z opisem na poniższym diagramie:
+
+```
+RESOURCE.H     AFXRES.H
+\       /
+\     /
+    MYAPP.RC
+|
+|
+    RES\MYAPP.RC2
+    AFXRES.RC
+    AFXPRINT.RC
+```
+
+Można przeglądać takie relacje plików za pomocą polecenia Plik Visual C++ +/ zestaw zawiera.
+
+MYAPP. Plik zasobów aplikacji, który edytujesz za pomocą języka Visual C++ w wersji RC.
+
+ZASÓB. Godz. jest to plik nagłówkowy charakterystyczny dla aplikacji. Zawsze nadaje mu nazwę ZASOBU. H przez AppWizard, zgodnie z domyślną Visual C++ nazwy pliku nagłówkowego. #Include dla tego pliku nagłówkowego to pierwsza instrukcja w pliku zasobów (MYAPP. RC):
+
+```
+//Microsoft Visual C++ generated resource script
+//
+#include "resource.h"
+```
+
+RES\MYAPP. RC2 zawiera zasoby, które nie będą edytowane przez Visual C++, ale zostaną uwzględnione w ostatecznym skompilowany. Plik EXE. Kreator AppWizard żadnych takich zasobów jest domyślnie tworzony przez, ponieważ Visual C++ może edytować wszystkie standardowe zasoby, łącznie z zasobami wersji (Nowa funkcja w tej wersji). Pusty plik jest generowana przez kreatora AppWizard w przypadku, gdy chcesz dodać swoje własne niestandardowo sformatowane zasoby do tego pliku.
+
+Jeśli używasz niestandardowo sformatowane zasoby, możesz je dodać do RES\MYAPP. RC2 i edytować za pomocą edytora tekstu Visual C++.
+
+AFXRES. RC i AFXPRINT. RC zawierają standardowe zasoby wymagane przez niektóre funkcje programu framework. Podobnie jak RES\MYAPP. Czy te dwa pliki zasobów dostarczone do framework RC2, # dołączony dyrektywą #include na końcu MYAPP. RC, dlatego są określone w dyrektywach czasu kompilacji w oknie dialogowym Zestaw zawiera. W związku z tym podczas bezpośrednio przeglądania lub edytowania tych zasobów platformy podczas edycji MYAPP. RC w programie Visual C++, ale są one kompilowane do pliku binarnego aplikacji. Plik RES i zakończenie. Plik EXE. Aby uzyskać więcej informacji na temat standardowych zasobów RAM, w tym procedur ich modyfikowania, zobacz [Uwaga techniczna 23](../mfc/tn023-standard-mfc-resources.md).
+
+AFXRES. H definiuje standardowe symbole, takie jak `ID_FILE_NEW`, używane przez architekturę i używane konkretnie w AFXRES. RC. AFXRES. H również #include przez WINRES. Godz., który zawiera podzbiór systemu WINDOWS. H, które są wymagane przez wygenerowany Visual C++. RC — pliki, jak również AFXRES. RC. Symbole zdefiniowane w AFXRES. H są dostępne podczas edycji pliku zasobu aplikacji (MYAPP. RC). Na przykład `ID_FILE_NEW` jest używany dla elementu menu Plik nowy w MYAPP. RC w menu zasobów. Nie można zmienić ani usunąć tych symboli zdefiniowanych w platformie.
+
+## <a name="_mfcnotes_tn035_including"></a> Włączanie dodatkowych plików nagłówkowych
+
+Aplikacja utworzona przez AppWizard zawiera tylko dwa pliki nagłówkowe: zasobów. H i AFXRES. H. Tylko zasoby. H jest specyficzna dla aplikacji. Może być konieczne uwzględnienie dodatkowych plików nagłówkowych tylko do odczytu w następujących przypadkach:
+
+Plik nagłówkowy jest dostarczany z zewnętrznego źródła lub chcesz współdzielić plik nagłówkowy między wieloma projektami lub wieloma częściami tego samego projektu.
+
+Plik nagłówkowy ma formatowanie i komentarze, które chcesz Visual C++ zmienił lub odfiltrował podczas zapisywania pliku. Na przykład, być może chcesz zachować #define używające arytmetyki symbolicznej takich jak:
+
+```
+#define RED 0
+#define BLUE 1
+#define GREEN 2
+#define ID_COLOR_BUTTON 1001
+#define ID_RED_BUTTON (ID_COLOR_BUTTON + RED)
+#define ID_BLUE_BUTTON (ID_COLOR_BUTTON + BLUE)
+#define ID_GREEN_BUTTON (ID_COLOR_BUTTON + GREEN)
+```
+
+Można uwzględnić dodatkowych plików nagłówkowych tylko do odczytu za pomocą **zasób zawiera** polecenie, aby określić # instrukcję include jako drugą dyrektywę symboli tylko do odczytu, jak w programie:
+
+```
+#include "afxres.h"
+#include "second.h"
+```
+
+Nowy diagram relacji pliku wygląda teraz następująco:
+
+```
+    AFXRES.H
+RESOURCE.H     SECOND.H
+\       /
+\     /
+    MYAPP.RC
+|
+|
+    RES\MYAPP.RC2
+    AFXRES.RC
+    AFXPRINT.RC
+```
+
+**Udostępnianie pliku nagłówkowego przez dwa. RC — pliki**
+
+Możesz chcieć współdzielić plik nagłówkowy między dwoma. RC — pliki znajdujące się w różnych projektach, lub ewentualnie tego samego projektu. Aby to zrobić, wystarczy zastosować technikę dyrektyw tylko opisane powyżej do obu. RC — pliki. W przypadku, gdy dwa. RC — pliki są do różnych aplikacji (różnych projektów), wynik jest zilustrowany na poniższym diagramie:
+
+```
+    RESOURCE.H AFXRES.H   RESOURCE.H
+(for MYAPP1) SECOND.H   (for MYAPP2)
+\       /     \       /
+\     /       \     /
+    MYAPP1.RC MYAPP2.RC */    \        /     \ */      \      /       \
+RES\MYAPP1.RC2  AFXRES.RC     RES\MYAPP2.RC2
+    AFXPRINT.RC
+```
+
+Sytuacja, w którym drugi plik nagłówkowy jest współdzielony przez dwa. RC — pliki w tej samej aplikacji (projekt), omówiono poniżej.
+
+**Korzystanie z wielu plików zasobów, w tym samym projekcie**
+
+Visual C++ i kompilator zasobów obsługują wiele. RC — pliki w tym samym projekcie za pośrednictwem #include przez jednego. Plik RC w innym. Wielokrotne zagnieżdżanie jest dozwolone. Istnieją różne powody, aby podzielić zasoby projektu na wiele. RC — pliki:
+
+- Łatwiej zarządzać dużą liczbą zasobów między wieloma członkami zespołu projektu, jeśli podzieli się zasoby na wiele. RC — pliki. Jeśli używasz pakietu zarządzania kontrolą źródła do wyewidencjonowywania plików i ewidencjonowania zmian, dzielenie zasobów na wielu. RC — pliki zapewniają bardziej precyzyjną kontrolę nad zarządzaniem zmianami w zasobach.
+
+- Jeśli chcesz użyć dyrektyw preprocesora, takich jak #ifdef, #endif i #define, dla części zasobów, musisz odizolować je w zasobach tylko do odczytu, które zostaną skompilowane przez kompilator zasobów.
+
+- Składnik. RC — pliki będzie załadować i zapisywane szybciej w programie Visual C++ niż jeden złożony. Plik RC.
+
+- Jeśli chcesz obsługiwać zasób za pomocą edytora tekstów w czytelnej formie, powinieneś go utrzymywać. Plik RC oddzielnie od jednego edycje Visual C++.
+
+- Jeśli trzeba utrzymywać zasób zdefiniowany przez użytkownika w postaci binarnej lub tekstowej, interpretowanej przez inny wyspecjalizowany Edytor danych, następnie należy go przechowywać w osobnym. Plik RC, Visual C++ nie zmienił jego formatu na dane szesnastkowe. . Zasoby plików WAV (dźwięk) w próbce zaawansowanych koncepcji MFC [SPEAKN](../visual-cpp-samples.md) są dobrym przykładem.
+
+Możesz #include sekundy. RC w dyrektywach czasu kompilacji w oknie dialogowym Zestaw zawiera:
+
+```
+#include "res\myapp.rc2"  // non-Visual C++ edited resources
+#include "second.rc"  // THE SECOND .RC FILE
+
+#include "afxres.rc"  // Standard components
+#include "afxprint.rc"  // printing/print preview resources
+```
+
+Wynik jest zilustrowany na poniższym diagramie:
+
+```
+RESOURCE.H     AFXRES.H
+\       /
+\     /
+    MYAPP.RC
+|
+|
+    RES\MYAPP.RC2
+    SECOND.RC
+    AFXRES.RC
+    AFXPRINT.RC
+```
+
+Za pomocą dyrektywy czasu kompilacji, możesz organizować zasoby Visual C++ edytowalne i nieedytowalne w wielu. RC — pliki, których MYAPP "główną". RC nic nie robi, ale #include inne. RC — pliki. Jeśli używasz projektu Visual C++. Plik klucza MAK, a następnie użytkownik powinien zawierać gałęzią "główną". RC plik w projekcie tak że wszystkie # wszytkie zasoby są kompilowane z aplikacją.
+
+**Wymuszanie nieedytowalnych plików Visual C++**
+
+Utworzona przez AppWizard RES\MYAPP. Plik RC2 to przykład pliku, który zawiera zasoby, które można wykonać *nie* chcesz wczytać przypadkowo do Visual C++, a następnie zapisać go z powrotem, tracąc informacje o formatowaniu. Aby zabezpieczyć się przed tym, umieść następujące wiersze na początku RES\MYAPP. Plik RC2:
+
+```
+#ifdef APSTUDIO_INVOKED
+#error this file is not editable by Visual C++
+#endif //APSTUDIO_INVOKED
+```
+
+Kiedy Visual C++ kompiluje. Plik RC definiuje `APSTUDIO_INVOKED` także `RC_INVOKED`. Jeśli struktura pliku utworzona przez AppWizard jest uszkodzona i Visual C++ odczytuje wiersz #error znajdujący się wyżej, zgłasza błąd krytyczny i przerywa czytanie. Plik RC.
+
+**Zarządzanie symbolami Współdzielonymi przez wiele Visual C++, edytować. RC — pliki**
+
+Kiedy podzielisz swoje zasoby na wiele, wystąpią dwa problemy. RC — pliki, które chcesz edytować oddzielnie w programie Visual C++:
+
+- Można udostępniać te same symbole w wielu. RC — pliki.
+
+- Musisz pomóc Visual C++ unikać przypisywania tych samych wartości numerycznych ID różnych zasobom (symbolom).
+
+Poniższy diagram ilustruje organizację. RC i. H pliki, które zajmuje za pierwszą kwestię:
+
+```
+    MYAPP.RC */         \ */           \
+MYSTRS.H   / MYSHARED.H  \  MYMENUS.H
+\    /    /      \   \    \
+\  /    /        \   \    \
+    MYSTRS.RC MYMENUS.RC
+```
+
+W tym przykładzie zasoby ciągów są przechowywane w jednym pliku zasobów, MYSTRS. RC i menu są przechowywane w innym, MYMENUS. RC. Niektóre symbole, takie jak w przypadku poleceń, trzeba być współużytkowane przez dwa pliki. Na przykład ID_TOOLS_SPELL może być Identyfikatorem polecenia menu dla elementu sprawdzanie pisowni w menu Narzędzia. a może to być również identyfikator ciągu wiersza poleceń wyświetlany przez platformę, na pasku stanu głównego okna aplikacji.
+
+ID_TOOLS_SPELL symbol jest przechowywany w pliku nagłówkowym udostępnionego, MYSHARED. H. To Ty masz ten współdzielony plik nagłówkowy ręcznie za pomocą edytora tekstów; Visual C++ nie edytuje go bezpośrednio. W zasobie dwa pliki MYSTRS. RC i MYMENUS. Określ RC, #include MYSHARED. H w dyrektywach tylko do odczytu dla MYAPP. RC, za pomocą **zasób zawiera** polecenia zgodnie z wcześniejszym opisem.
+
+Najwygodniej przewidzieć symbol, będziesz udostępniać przed próbą użycia jej do identyfikacji jakiegoś zasobu. Dodaj symbol do udostępnionego pliku nagłówka i, jeśli jeszcze tego nie zrobiono # dyrektywy #include z udostępnionym plikiem nagłówkowym w dyrektywach tylko do odczytu dla. RC plików, Uczyń to przed używaniem symbolu. Jeśli nie przewidujesz współdzielenia symbolu w ten sposób, a następnie trzeba będzie ręcznie (przy użyciu edytora tekstów) przenieść #define instrukcji dla symbolu z np MYMENUS. H-MYSHARED. Godz. przed użyciem go w MYSTRS. RC.
+
+Kiedy zarządzasz symbolami w wielu. RC — pliki, musisz również pomóc Visual C++ unikać przypisywania tych samych wartości numerycznych ID różnych zasobom (symbolom). Dla każdego, biorąc pod uwagę. Plik RC, Visual C++ przyrostowo przypisuje identyfikatory w każdej z czterech domen identyfikatorów. Między edycji sesje, Visual C++ przechowuje informacje o ostatni identyfikator, który przypisał w każdej domeny w pliku nagłówkowym symboli dla. Plik RC. Oto, co to są wartości APS_NEXT dla pustego (nowego). Plik RC:
+
+```
+#define _APS_NEXT_RESOURCE_VALUE  101
+#define _APS_NEXT_COMMAND_VALUE   40001
+#define _APS_NEXT_CONTROL_VALUE   1000
+#define _APS_NEXT_SYMED_VALUE     101
+```
+
+`_APS_NEXT_RESOURCE_VALUE` jest następną wartością symboliczną, która będzie służyć do zasobu okna dialogowego, zasobu menu i tak dalej. Prawidłowy zakres dla wartości symboli zasobu to 1 do 0x6FFF.
+
+`_APS_NEXT_COMMAND_VALUE` jest następną wartością symboliczną, która będzie służyć do identyfikacji polecenia. Prawidłowy zakres dla wartości symboli polecenia to 0x8000 do 0xDFFF.
+
+`_APS_NEXT_CONTROL_VALUE` jest następną wartością symboliczną, która będzie służyć do sterowania oknem dialogowym. Prawidłowy zakres dla wartości symboli formantu dialogu to 8 do 0xDFFF.
+
+`_APS_NEXT_SYMED_VALUE` jest następną wartością symboliczną, która zostanie wydana po ręcznym przypisaniu wartości symboliczną za pomocą nowego polecenia w przeglądarce symboli.
+
+Visual C++ rozpoczyna z nieco wyższymi wartościami niż najniższa dopuszczalna wartość podczas tworzenia nowego. Plik RC. Kreator AppWizard również zainicjuje te wartości na coś bardziej odpowiedniego dla aplikacji MFC. Aby uzyskać więcej informacji dotyczących zakresów wartości Identyfikatora, zobacz [Uwagi techniczne 20](../mfc/tn020-id-naming-and-numbering-conventions.md).
+
+Po każdorazowym utworzeniu nowego pliku zasobu, nawet w tym samym projekcie Visual C++ definiuje takie same `_APS_NEXT_` wartości. Oznacza to, że jeśli dodasz, powiedz, wiele okien dialogowych na w dwóch różnych. RC — pliki, istnieje duże prawdopodobieństwo, że takie same #define do różnych okien dialogowych zostanie przypisana wartość. Na przykład, IDD_MY_DLG1 w pierwszym. Plik RC mogą mieć przypisany taki sam numer, 101, jak IDD_MY_DLG2 w ciągu sekundy. Plik RC.
+
+Aby tego uniknąć, należy zarezerwować oddzielny zakres numeryczny dla każdej z czterech domen identyfikatorów we właściwej. RC — pliki. W tym celu ręczne aktualizowanie `_APS_NEXT` wartości we wszystkich. RC — pliki **przed** rozpoczniesz Dodawanie zasobów. Na przykład jeśli pierwszy. Plik RC używa domyślnego `_APS_NEXT` wartości, a następnie można przypisać następujące `_APS_NEXT` wartości do drugiego. Plik RC:
+
+```
+#define _APS_NEXT_RESOURCE_VALUE  2000
+#define _APS_NEXT_COMMAND_VALUE   42000
+#define _APS_NEXT_CONTROL_VALUE   2000
+#define _APS_NEXT_SYMED_VALUE     2000
+```
+
+Oczywiście jest nadal możliwe, że Visual C++ przypisze tak wiele identyfikatorów w pierwszym. Plik RC wartości numeryczne zaczną się pokrywać dla drugiego. Plik RC. Należy zarezerwować dostatecznie duże zakresy, dzięki czemu nie jest to realizowane.
+
+**Zarządzanie zależnościami między. WERSJI RC. CPP, i. Pliki H**
+
+Kiedy Visual C++ zapisuje. Plik RC zapisuje również zmiany symboli do odpowiednich zasobów. Plik H. Jedną z sieci. Plikach CPP, które odwołują się do zasobów. Plik RC musi # include. Plik H, zazwyczaj z poziomu projektu głównego pliku nagłówkowego. Prowadzi to do niepożądanych skutków ubocznych ze względu na zarządzanie projektami wewnętrznego środowisko programistyczne, które skanuje pliki źródłowe dla nagłówka zależności. Za każdym razem, gdy dodasz nowy symbol w programie Visual C++, wszystkie. Plik CPP #include. H musi być ponownie kompilowane.
+
+Visual C++ obchodzi zależność od ZASOBU. H przez dołączenie poniższego komentarza jako pierwszy wiersz ZASOBU. Plik H:
+
+```
+//{{NO_DEPENDENCIES}}
+```
+
+Środowisko programistyczne interpretuje ten komentarz, ignorując zmiany w ZASOBIE. Godz. Dlatego zależne. Plikach CPP nie trzeba ponownie skompilowana.
+
+Visual C++ zawsze dodaje //{{NO_DEPENDENCIES}} komentarz wiersz. Plik RC podczas zapisywania pliku. W niektórych przypadkach obejście zależności kompilacji dla ZASOBU. H może prowadzić do błędów czasu wykonywania niewykrytych w czasie. Na przykład, jeśli używasz przeglądarki symboli można zmienić wartości numerycznej przypisanej do symbolu dla zasobu, zasób będzie nie być poprawnie znaleziono i ładowany w przypadku czasu wykonywania aplikacji. Plik CPP odwołujące się do zasobu nie jest ponownie kompilowana. W takich przypadkach należy jawnie zrekompilować żadnego. Plikach CPP, które mają wpływ zmiany symboli w ZASOBACH. H lub wybierz **Kompiluj wszystko ponownie**. Jeśli potrzebujesz często zmieniać wartości symboli dla określonej grupy zasobów, prawdopodobnie znajdziesz go bardziej wygodne i bezpieczniejsze umożliwiające rozbicie tych symboli w pliku oddzielne nagłówkowych tylko do odczytu, zgodnie z opisem w powyższej sekcji [łącznie Dodatkowych plików nagłówkowych](#_mfcnotes_tn035_including).
+
+## <a name="_mfcnotes_tn035_set_includes"></a> Jak Visual C++ zarządza zestaw zawiera informacje o **
+
+Jak wspomniano powyżej, polecenie zestaw zawiera menu Plik pozwala określić trzy typy informacji:
+
+- Plik nagłówkowy symboli
+
+- Dyrektywy symboli tylko do odczytu
+
+- Dyrektywy czasu kompilacji
+
+Poniżej opisano, jak Visual C++ przechowuje te informacje w. Plik RC. Nie potrzebujesz tych informacji, aby używać Visual C++, ale może pomóc lepiej zrozumieć, więc, że aby bardziej optymalnie korzystać z funkcji zestaw zawiera.
+
+Każdy z trzech powyższych rodzajów informacji zestaw zawiera są przechowywane w. Plik RC w dwóch formach: (1) jako #include lub inne dyrektywy interpretowane przez kompilator zasobów i (2) jako specjalne zasoby TEXTINCLUDE interpretowane interpretowanej tylko przez Visual C++.
+
+Zasób TEXTINCLUDE ma na celu bezpiecznego przechowywania informacji o w formularzu, który jest łatwo zawartości w programie Visual C++ **zestaw zawiera** okno dialogowe. TEXTINCLUDE to *typ zasobu* zdefiniowany przez Visual C++. Visual C++ rozpoznaje trzy określone zasoby TEXTINCLUDE, które mają numery identyfikacyjne 1, 2 i 3 zasobu:
+
+|Identyfikator zasobu TEXTINCLUDE|Rodzaj informacji zestaw zawiera|
+|-----------------------------|--------------------------------------|
+|1|Plik nagłówkowy symboli|
+|2|Dyrektywy symboli tylko do odczytu|
+|3|Dyrektywy czasu kompilacji|
+
+Każdy z trzech rodzajów informacji zestaw zawiera jest zilustrowany przez domyślne MYAPP. RC i zasobów. Pliki H utworzone przez AppWizard, zgodnie z poniższym opisem. Dodatkowe \0 i "" tokenów pomiędzy blokami BEGIN i END są wymagane przez składnię RC do określania ciągów zakończonych wartością zerową i znaku podwójnego cudzysłowu, odpowiednio.
+
+## <a name="symbol-header-file"></a>Plik nagłówkowy symboli
+
+Formularz informacji pliku nagłówkowym symboli interpretowana przez kompilator zasobów jest po prostu # instrukcję include:
+
+```
+#include "resource.h"
+```
+
+Odpowiedni zasób TEXTINCLUDE to:
+
+```
+1 TEXTINCLUDE DISCARDABLE
+BEGIN
+"resource.h\0"
+END
+```
+
+## <a name="read-only-symbol-directives"></a>Dyrektywy symboli tylko do odczytu
+
+Dyrektywy symboli tylko do odczytu są uwzględniane w górnej części MYAPP. RC w następującej formie interpretowanej przez kompilator zasobów:
+
+```
+#include "afxres.h"
+```
+
+Odpowiedni zasób TEXTINCLUDE to:
+
+```
+2 TEXTINCLUDE DISCARDABLE
+BEGIN
+   "#include ""afxres.h""\r\n"
+   "\0"
+END
+```
+
+## <a name="compile-time-directives"></a>Dyrektywy czasu kompilacji
+
+Dyrektywy czasu kompilacji są umieszczane na końcu MYAPP. RC w następującej formie interpretowanej przez kompilator zasobów:
+
+```
+#ifndef APSTUDIO_INVOKED
+///////////////////////
+//
+// From TEXTINCLUDE 3
+//
+#include "res\myapp.rc2"  // non-Visual C++ edited resources
+
+#include "afxres.rc"  // Standard components
+#include "afxprint.rc"  // printing/print preview resources
+#endif  // not APSTUDIO_INVOKED
+```
+
+Dyrektywa #ifndef APSTUDIO_INVOKED nakazuje językowi Visual C++ pominąć dyrektywy czasu kompilacji.
+
+Odpowiedni zasób TEXTINCLUDE to:
+
+```
+3 TEXTINCLUDE DISCARDABLE
+BEGIN
+"#include ""res\myapp.rc2""  // non-Visual C++ edited resources\r\n"
+"\r\n"
+"#include ""afxres.rc""  // Standard components\r\n"
+"#include ""afxprint.rc""  // printing/print preview resources\r\n"
+"\0"
+END
+```
+
+## <a name="see-also"></a>Zobacz też
+
+[Uwagi techniczne według numerów](../mfc/technical-notes-by-number.md)<br/>
+[Uwagi techniczne według kategorii](../mfc/technical-notes-by-category.md)
 

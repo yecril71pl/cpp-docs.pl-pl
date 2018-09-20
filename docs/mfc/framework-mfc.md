@@ -22,39 +22,43 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: dd75d29ce907b089d698c066e5a6cb41fcae3281
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 87db7b28ec340a76c074a7b32c0e182030042eeb
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33344399"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46381962"
 ---
 # <a name="framework-mfc"></a>Struktura (MFC)
-Swoją pracę dzięki framework biblioteki Microsoft Foundation Class (MFC) jest przede wszystkim na podstawie kilku główne kategorie i kilka narzędzi Visual C++. Niektóre klasy hermetyzować duża część interfejsu programowania aplikacji (API) Win32. Inne klasy hermetyzować pojęcia dotyczące aplikacji, takich jak dokumenty, widoki i aplikacji. Nadal innym hermetyzować OLE funkcje i możliwości dostępu do danych ODBC i DAO.  
-  
- Na przykład koncepcji Win32 dla okna jest hermetyzowany przez klasę MFC `CWnd`. Oznacza to, o nazwie klasy C++ `CWnd` hermetyzuje lub "opakowuje" `HWND` uchwytu, który reprezentuje okna systemu Windows. Podobnie, klasa `CDialog` hermetyzuje Win32 okien dialogowych.  
-  
- Hermetyzacja oznacza, że klasa C++ `CWnd`, na przykład zawiera zmienną członkowską typu `HWND`, i funkcje elementów członkowskich klasy Hermetyzowanie wywołania funkcji Win32, które przyjmują `HWND` jako parametr. Funkcje Członkowskie klasy zwykle mają taką samą nazwę jak funkcja Win32, które hermetyzują one.  
-  
-## <a name="in-this-section"></a>W tej sekcji  
- [SDI i MDI](../mfc/sdi-and-mdi.md)  
-  
- [Dokumenty, widoki i struktura](../mfc/documents-views-and-the-framework.md)  
-  
- [Kreatorzy i edytory zasobów](../mfc/wizards-and-the-resource-editors.md)  
-  
-## <a name="in-related-sections"></a>W sekcje pokrewne  
- [Opieranie się na strukturze](../mfc/building-on-the-framework.md)  
-  
- [Jak struktura wywołuje kod](../mfc/how-the-framework-calls-your-code.md)  
-  
- [CWinApp: klasa aplikacji](../mfc/cwinapp-the-application-class.md)  
-  
- [Szablony dokumentów i proces tworzenia dokumentu/widoku](../mfc/document-templates-and-the-document-view-creation-process.md)  
-  
- [Obsługa i mapowanie komunikatów](../mfc/message-handling-and-mapping.md)  
-  
- [Obiekty okna](../mfc/window-objects.md)  
-  
-## <a name="see-also"></a>Zobacz też  
- [Używanie klas do pisania aplikacji dla systemu Windows](../mfc/using-the-classes-to-write-applications-for-windows.md)
+
+Swoją pracę za pomocą framework biblioteki Microsoft Foundation Class (MFC) zależy głównie kilka głównych klas i kilka narzędzi Visual C++. Niektóre klasy hermetyzować dużą część interfejsu programowania aplikacji (API) systemu Win32. Inne klasy hermetyzować aplikacji pojęć, takich jak dokumenty, widoki i samej aplikacji. Nadal hermetyzować inne funkcje OLE i ODBC i DAO możliwości dostępu do danych.
+
+Na przykład w Win32 koncepcji okna jest hermetyzowany przez klasę MFC `CWnd`. Oznacza to, o nazwie klasy języka C++ `CWnd` hermetyzuje lub "opakowuje" `HWND` uchwyt, który reprezentuje okno programu Windows. Podobnie, klasy `CDialog` hermetyzuje Win32, okno dialogowe.
+
+Hermetyzacja oznacza, że klasy C++ `CWnd`, na przykład zawiera zmienną składową typu `HWND`, i funkcje składowych klasy hermetyzacji wywołania funkcji Win32, które przyjmują `HWND` jako parametr. Funkcje składowych klasy mają zwykle taką samą nazwę jak funkcję Win32, które one hermetyzacji.
+
+## <a name="in-this-section"></a>W tej sekcji
+
+[SDI i MDI](../mfc/sdi-and-mdi.md)
+
+[Dokumenty, widoki i struktura](../mfc/documents-views-and-the-framework.md)
+
+[Kreatorzy i edytory zasobów](../mfc/wizards-and-the-resource-editors.md)
+
+## <a name="in-related-sections"></a>W sekcje pokrewne
+
+[Opieranie się na strukturze](../mfc/building-on-the-framework.md)
+
+[Jak struktura wywołuje kod](../mfc/how-the-framework-calls-your-code.md)
+
+[CWinApp: klasa aplikacji](../mfc/cwinapp-the-application-class.md)
+
+[Szablony dokumentów i proces tworzenia dokumentu/widoku](../mfc/document-templates-and-the-document-view-creation-process.md)
+
+[Obsługa i mapowanie komunikatów](../mfc/message-handling-and-mapping.md)
+
+[Obiekty okna](../mfc/window-objects.md)
+
+## <a name="see-also"></a>Zobacz też
+
+[Używanie klas do pisania aplikacji dla systemu Windows](../mfc/using-the-classes-to-write-applications-for-windows.md)

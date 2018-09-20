@@ -16,25 +16,27 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0805e77e674a68d5fd81c8628407bcd77e164e07
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 0cd4cce7f2e31e084224848f348dd4e5f408de67
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33325919"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46385368"
 ---
 # <a name="active-document-classes"></a>Klasy dokumentów aktywnych
-Dokumenty aktywne mogą być wyświetlane w oknie przeglądarki sieci Web, takich jak program Internet Explorer 5.5 całego klienta lub w kontenerze aktywnego, takich jak Microsoft Office Binder, która obsługuje dokumenty aktywne.  
-  
- [CDocObjectServer](../mfc/reference/cdocobjectserver-class.md)  
- Mapuje interfejsy aktywnego dokumentu i inicjuje i aktywuje obiektu aktywnego dokumentu.  
-  
- [CDocObjectServerItem](../mfc/reference/cdocobjectserveritem-class.md)  
- Implementuje zlecenia serwera OLE specjalnie z myślą o serwery dokumentów aktywnych.  
-  
- [COleDocObjectItem](../mfc/reference/coledocobjectitem-class.md)  
- Zawieranie dokumentów aktywnych implements.  
-  
-## <a name="see-also"></a>Zobacz też  
- [Przegląd klas](../mfc/class-library-overview.md)
+
+Dokumenty aktywne mogą być wyświetlane w oknie całego klienta w przeglądarce sieci Web, takich jak program Internet Explorer 5.5 lub w pojemniku aktywnego, takich jak Microsoft Office Binder, która obsługuje dokumenty aktywne.
+
+[CDocObjectServer](../mfc/reference/cdocobjectserver-class.md)<br/>
+Mapuje interfejsy aktywnego dokumentu i inicjuje i aktywuje obiekt aktywny dokument.
+
+[CDocObjectServerItem](../mfc/reference/cdocobjectserveritem-class.md)<br/>
+Implementuje zlecenia serwera OLE specjalnie dla serwerów w aktywnym dokumencie.
+
+[COleDocObjectItem](../mfc/reference/coledocobjectitem-class.md)<br/>
+Zawieranie dokumentów aktywnych implementuje.
+
+## <a name="see-also"></a>Zobacz też
+
+[Klasa — Przegląd](../mfc/class-library-overview.md)
 

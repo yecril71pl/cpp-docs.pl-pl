@@ -12,16 +12,17 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d1b0f253ce14ffc5d3740e582a9a51feea56ad32
-ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
+ms.openlocfilehash: 17c60c621defa15c034f57d0af8f14637db54f03
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33690068"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46378140"
 ---
 # <a name="27-data-environment"></a>2.7 Środowisko danych
-W tej sekcji przedstawiono dyrektywy i kilka klauzul kontroli środowiska danych podczas wykonywania równoległego regionów, w następujący sposób:  
-  
--   A **threadprivate** — dyrektywa (zobacz sekcję poniżej) jest dostępne, aby zakres pliku, zakresie przestrzeni nazw lub zakresem statycznych bloku zmiennych lokalnych do wątku.  
-  
--   Klauzule określonych na dyrektywy do kontroli udostępniania atrybutów zmienne w czasie trwania konstrukcji równoległe lub podziału pracy zostały opisane w [sekcji 2.7.2](../../parallel/openmp/2-7-2-data-sharing-attribute-clauses.md) na stronie 25.
+
+W tej sekcji przedstawiono dyrektywy i kilka klauzul do kontrolowania środowiska danych podczas wykonywania równoległego regionów, w następujący sposób:
+
+- A **threadprivate** — dyrektywa (zobacz w poniższej sekcji) znajduje się zakres pliku, zakresie przestrzeni nazw lub zakresie bloku statyczne zmienne lokalne do wątku.
+
+- Klauzule, które mogą być określone dla dyrektywy do kontrolowania udostępniania atrybutów zmienne w czasie trwania konstrukcje równoległego lub podziału pracy zostały opisane w [sekcji 2.7.2](../../parallel/openmp/2-7-2-data-sharing-attribute-clauses.md) na stronie 25.

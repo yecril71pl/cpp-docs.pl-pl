@@ -17,36 +17,40 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a29b11028df84a7e5e67adb7588386f77adcff06
-ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
+ms.openlocfilehash: cca4818d0ace6270b986ddb9b99068ca9532f1b2
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/25/2018
-ms.locfileid: "36929042"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46395519"
 ---
 # <a name="automation-clients"></a>Klienci automatyzacji
-Automatyzacja umożliwia aplikacji do modyfikowania obiektów w innej aplikacji lub na uwidocznienie obiektów, więc można manipulować. Klient automatyzacji to aplikacja, który będzie obsługiwał widocznych obiektów należących do innej aplikacji. Aplikacja, która udostępnia obiekty nosi nazwę serwera automatyzacji. Klienta manipuluje obiektów aplikacji serwera, uzyskując dostęp do właściwości tych obiektów i funkcji.  
-  
-### <a name="types-of-automation-clients"></a>Typy klientów automatyzacji  
- Istnieją dwa typy klientów automatyzacji:  
-  
--   Klienci, którzy dynamicznie (w czasie wykonywania) uzyskania informacji na temat właściwości i operacji serwera.  
-  
--   Klienci, którzy posiadają statyczne (udostępniane w czasie kompilacji) informacja, czy właściwości i operacji serwera.  
-  
- Klienci pierwszego rodzaju uzyskania informacji na temat metody i właściwości serwera badając systemu OLE `IDispatch` mechanizmu. Chociaż jest odpowiednie do użycia na potrzeby klientów dynamicznych `IDispatch` jest trudny do wykorzystania dla klientów statycznych, gdzie obiekty prowadzone musi być znane na czas kompilacji. Dla static powiązany klientów, podaj Microsoft Foundation classes [COleDispatchDriver](../mfc/reference/coledispatchdriver-class.md) klasy.  
-  
- Statycznych powiązanych klientów za pomocą klasy serwera proxy, statycznie połączonej aplikacji klienckiej. Ta klasa udostępnia hermetyzacji C++ bezpieczny, właściwości i operacji aplikacji serwera.  
-  
- Klasa `COleDispatchDriver` zawiera główną obsługę po stronie klienta automatyzacji. Przy użyciu **Dodaj nowy element** okno dialogowe, Utwórz klasę pochodzącą od `COleDispatchDriver`.  
-  
- Następnie możesz określić plik biblioteki typów opisujące właściwości i funkcje obiektu aplikacji serwera. Okno dialogowe Dodawanie elementu odczytuje ten plik i tworzy `COleDispatchDriver`-klasy z funkcji elementów członkowskich, które aplikacji można wywołać w celu dostępu do obiektów aplikacji serwera w języku C++ w bezpieczny sposób. Dodatkowe funkcje odziedziczone `COleDispatchDriver` upraszcza proces wywoływania właściwego serwera automatyzacji.  
-  
-### <a name="handling-events-in-automation-clients"></a>Obsługa zdarzeń w klientach automatyzacji  
- Do obsługi zdarzeń na kliencie automatyzacji, należy dodać interfejs ujścia. MFC zapewnia obsługę kreatora Dodawanie zbiornika interfejsów dla formantów ActiveX, ale nie jest obsługiwana dla innych serwerów COM. Aby uzyskać informacje na temat dodawania interfejsu zbiornika w kliencie MFC dla interfejsów źródła opisanego przez serwery COM, zobacz porady: Tworzenie interfejsu zbiornika w MFC-Based klient modelu COM (KB 181845) na [ http://support.microsoft.com/default.aspxscid=kb; en-nam; 181845](http://support.microsoft.com/default.aspxscid=kb;en-us;181845).  
-  
-## <a name="see-also"></a>Zobacz też  
- [Klienci automatyzacji: Korzystanie z bibliotek typów](../mfc/automation-clients-using-type-libraries.md)   
- [Automatyzacja](../mfc/automation.md)   
- [Kreator aplikacji MFC](../mfc/reference/mfc-application-wizard.md)
+
+Automatyzacja sprawiają, że aplikacja do manipulowania obiektami implementowane w innej aplikacji lub do udostępnienia obiektów, dzięki czemu można manipulować. Klienta automatyzacji to aplikacja, który będzie obsługiwał widocznych obiektów należących do innej aplikacji. Aplikacja, która udostępnia obiekty nosi nazwę serwera automatyzacji. Klient obsługuje obiekty aplikacji serwera, uzyskując dostęp do właściwości te obiekty i funkcje.
+
+### <a name="types-of-automation-clients"></a>Typy klientów automatyzacji
+
+Istnieją dwa typy klientów automatyzacji:
+
+- Klienci, którzy dynamicznie (w czasie wykonywania) uzyskiwanie informacji na temat właściwości i operacji serwera.
+
+- Klienci, którzy posiadają dostarczonymi informacjami statycznymi (w czasie kompilacji) określający, właściwości i operacji serwera.
+
+Klienci pierwszy rodzaj uzyskania informacji na temat metod i właściwości serwera, badając OLE system `IDispatch` mechanizm. Mimo że jest odpowiedni do użycia dla klientów dynamicznych `IDispatch` jest trudny do użycia na potrzeby klientów statycznych, których obiekty są oparte na musi być znane, na czas kompilacji. Statyczna powiązana klientów, Microsoft Foundation classes zapewnianych [COleDispatchDriver](../mfc/reference/coledispatchdriver-class.md) klasy.
+
+Statyczne powiązanej klienci używają klasy serwera proxy, statycznie połączoną z aplikacją klienta. Ta klasa udostępnia bezpieczny hermetyzacji C++, właściwości i operacji aplikacji serwera.
+
+Klasa `COleDispatchDriver` zapewnia obsługę jednostki po stronie klienta automatyzacji. Za pomocą **Dodaj nowy element** okno dialogowe, należy utworzyć klasę pochodną `COleDispatchDriver`.
+
+Następnie możesz określić plik biblioteki typów, opisujący właściwości i funkcje obiektu aplikacji serwera. Okno dialogowe Dodaj element odczytuje ten plik i tworzy `COleDispatchDriver`-klasy za pomocą funkcji Członkowskich, które aplikacja może wywołać dostępu do aplikacji serwera obiektów w języku C++ w sposób bezpieczny. Dodatkowe funkcje odziedziczone `COleDispatchDriver` upraszcza proces wywoływania właściwego serwera automatyzacji.
+
+### <a name="handling-events-in-automation-clients"></a>Obsługa zdarzeń w klientach automatyzacji
+
+Do obsługi zdarzeń w kliencie usługi automation, musisz dodać interfejs ujścia. MFC obsługuje kreatora Dodaj interfejsy ujścia dla kontrolek ActiveX, ale nie dla innych serwerów COM. Instrukcje dotyczące sposobu dodawania interfejs obiektu sink w kliencie interfejsy źródła opisanego przez serwery COM MFC, zobacz porady: Utwórz interfejs obiektu Sink w kliencie COM MFC-Based (KB 181845) na [ http://support.microsoft.com/default.aspxscid=kb; en-us; 181845](http://support.microsoft.com/default.aspxscid=kb;en-us;181845).
+
+## <a name="see-also"></a>Zobacz też
+
+[Klienci automatyzacji: korzystanie z bibliotek typów](../mfc/automation-clients-using-type-libraries.md)<br/>
+[Automatyzacja](../mfc/automation.md)<br/>
+[Kreator aplikacji MFC](../mfc/reference/mfc-application-wizard.md)
 

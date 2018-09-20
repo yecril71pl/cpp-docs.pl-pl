@@ -29,84 +29,86 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 21efd095a1d8e89c140ef39072a753c300a3043b
-ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
+ms.openlocfilehash: 46e41ffab3f3f22bca1a9a721b4f2cdb03129d03
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/25/2018
-ms.locfileid: "36929310"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46391699"
 ---
 # <a name="memory-management-examples"></a>Zarządzanie pamięcią: przykłady
-W tym artykule opisano, jak MFC wykonuje ramkę alokacji i Alokacje sterty dla każdego z trzech typów typowych alokacji pamięci:  
-  
--   [Tablica bajtów](#_core_allocation_of_an_array_of_bytes)  
-  
--   [Struktury danych](#_core_allocation_of_a_data_structure)  
-  
--   [Obiekt](#_core_allocation_of_an_object)  
-  
-##  <a name="_core_allocation_of_an_array_of_bytes"></a> Alokacja tablicy bajtów  
-  
-#### <a name="to-allocate-an-array-of-bytes-on-the-frame"></a>Aby przydzielić tablicy bajtów w ramce  
-  
-1.  Zdefiniuj tablicy, jak pokazano w następującym kodem. Tablica jest automatycznie usuwana i jego pamięci odzyskana, gdy zmienna tablicy jest kończona jej zakres.  
-  
-     [!code-cpp[NVC_MFC_Utilities#1](../mfc/codesnippet/cpp/memory-management-examples_1.cpp)]  
-  
-#### <a name="to-allocate-an-array-of-bytes-or-any-primitive-data-type-on-the-heap"></a>Aby przydzielić tablicy bajtów (lub dowolny typ danych pierwotnych) na stercie  
-  
-1.  Użyj **nowe** operator przy użyciu składni tablicy w poniższym przykładzie:  
-  
-     [!code-cpp[NVC_MFC_Utilities#2](../mfc/codesnippet/cpp/memory-management-examples_2.cpp)]  
-  
-#### <a name="to-deallocate-the-arrays-from-the-heap"></a>Aby zwolnić tablice sterty  
-  
-1.  Użyj **usunąć** operatora w następujący sposób:  
-  
-     [!code-cpp[NVC_MFC_Utilities#3](../mfc/codesnippet/cpp/memory-management-examples_3.cpp)]  
-  
-##  <a name="_core_allocation_of_a_data_structure"></a> Alokacja struktury danych  
-  
-#### <a name="to-allocate-a-data-structure-on-the-frame"></a>Aby przydzielić strukturą danych w ramce  
-  
-1.  Zdefiniuj zmienną struktury w następujący sposób:  
-  
-     [!code-cpp[NVC_MFC_Utilities#4](../mfc/codesnippet/cpp/memory-management-examples_4.cpp)]  
-  
-     Pamięć zajmowane przez strukturę jest odzyskana po wydaniu jej zakres.  
-  
-#### <a name="to-allocate-data-structures-on-the-heap"></a>Aby przydzielić struktur danych na stercie  
-  
-1.  Użyj **nowe** przydzielić struktur danych na stosie i **usunąć** można cofnąć alokacji, jak pokazano w poniższych przykładach:  
-  
-     [!code-cpp[NVC_MFC_Utilities#5](../mfc/codesnippet/cpp/memory-management-examples_5.cpp)]  
-  
-##  <a name="_core_allocation_of_an_object"></a> Alokacja obiektów  
-  
-#### <a name="to-allocate-an-object-on-the-frame"></a>Aby przydzielić obiektu w ramce  
-  
-1.  Deklarowanie obiektu w następujący sposób:  
-  
-     [!code-cpp[NVC_MFC_Utilities#6](../mfc/codesnippet/cpp/memory-management-examples_6.cpp)]  
-  
-     Destruktor dla obiekt jest wywoływana automatycznie, gdy obiekt opuszcza jej zakres.  
-  
-#### <a name="to-allocate-an-object-on-the-heap"></a>Aby przydzielić obiektu na stercie  
-  
-1.  Użyj **nowe** operatora, który zwraca wskaźnik do obiektu, aby przydzielić obiektów na stercie. Użyj **usunąć** operatora, aby je usunąć.  
-  
-     W poniższych przykładach sterty i ramki przyjęto założenie, że `CPerson` Konstruktor nie przyjmuje żadnych argumentów.  
-  
-     [!code-cpp[NVC_MFC_Utilities#7](../mfc/codesnippet/cpp/memory-management-examples_7.cpp)]  
-  
-     Jeśli argument `CPerson` Konstruktor jest wskaźnik do **char**, instrukcja dla Alokacja ramek jest:  
-  
-     [!code-cpp[NVC_MFC_Utilities#8](../mfc/codesnippet/cpp/memory-management-examples_8.cpp)]  
-  
-     Instrukcja alokacji sterty jest:  
-  
-     [!code-cpp[NVC_MFC_Utilities#9](../mfc/codesnippet/cpp/memory-management-examples_9.cpp)]  
-  
-## <a name="see-also"></a>Zobacz też  
- [Zarządzanie pamięcią: alokacja sterty](../mfc/memory-management-heap-allocation.md)
+
+W tym artykule opisano, jak MFC wykonuje ramkę alokacji i Alokacje sterty dla każdego z trzech typowe rodzaje alokacji pamięci:
+
+- [Tablica bajtów](#_core_allocation_of_an_array_of_bytes)
+
+- [Struktura danych](#_core_allocation_of_a_data_structure)
+
+- [Obiekt](#_core_allocation_of_an_object)
+
+##  <a name="_core_allocation_of_an_array_of_bytes"></a> Alokacja tablicę bajtów
+
+#### <a name="to-allocate-an-array-of-bytes-on-the-frame"></a>Do przydzielania tablicy bajtów na ramce
+
+1. Należy zdefiniować tablicę, jak pokazano w następującym kodem. Tablica jest automatycznie usuwana, a swojej pamięci odzyskana, gdy zmienną tablicy kończy działanie w swoim zakresie.
+
+     [!code-cpp[NVC_MFC_Utilities#1](../mfc/codesnippet/cpp/memory-management-examples_1.cpp)]
+
+#### <a name="to-allocate-an-array-of-bytes-or-any-primitive-data-type-on-the-heap"></a>Aby przydzielić tablicy bajtów (lub dowolnego typu danych pierwotnych) na stosie
+
+1. Użyj **nowe** operator za pomocą składni tablicy w poniższym przykładzie:
+
+     [!code-cpp[NVC_MFC_Utilities#2](../mfc/codesnippet/cpp/memory-management-examples_2.cpp)]
+
+#### <a name="to-deallocate-the-arrays-from-the-heap"></a>Można cofnąć alokacji tablic ze sterty
+
+1. Użyj **Usuń** operatora w następujący sposób:
+
+     [!code-cpp[NVC_MFC_Utilities#3](../mfc/codesnippet/cpp/memory-management-examples_3.cpp)]
+
+##  <a name="_core_allocation_of_a_data_structure"></a> Alokacja struktury danych
+
+#### <a name="to-allocate-a-data-structure-on-the-frame"></a>Aby przydzielić to struktura danych na ramce
+
+1. Zdefiniuj zmiennej struktury w następujący sposób:
+
+     [!code-cpp[NVC_MFC_Utilities#4](../mfc/codesnippet/cpp/memory-management-examples_4.cpp)]
+
+     Pamięć zajęta przez strukturę jest odzyskana, gdy jej zakres kończy działanie.
+
+#### <a name="to-allocate-data-structures-on-the-heap"></a>Aby przydzielić struktur danych na stosie
+
+1. Użyj **nowe** przydzielić struktur danych na stosie i **Usuń** można cofnąć alokacji, jak pokazano w poniższych przykładach:
+
+     [!code-cpp[NVC_MFC_Utilities#5](../mfc/codesnippet/cpp/memory-management-examples_5.cpp)]
+
+##  <a name="_core_allocation_of_an_object"></a> Alokacja obiektu
+
+#### <a name="to-allocate-an-object-on-the-frame"></a>Aby przydzielić obiektu w ramce
+
+1. Zadeklaruj obiektu w następujący sposób:
+
+     [!code-cpp[NVC_MFC_Utilities#6](../mfc/codesnippet/cpp/memory-management-examples_6.cpp)]
+
+     Destruktor obiektu automatycznie jest wywoływane, gdy obiekt kończy działanie w swoim zakresie.
+
+#### <a name="to-allocate-an-object-on-the-heap"></a>Można przydzielić obiektu na stercie
+
+1. Użyj **nowe** operatora, który zwraca wskaźnik do obiektu, do alokowania obiektów na stosie. Użyj **Usuń** operatora, aby je usunąć.
+
+     W poniższych przykładach sterty i ramki przyjęto założenie, że `CPerson` Konstruktor nie przyjmuje żadnych argumentów.
+
+     [!code-cpp[NVC_MFC_Utilities#7](../mfc/codesnippet/cpp/memory-management-examples_7.cpp)]
+
+     Jeśli argument `CPerson` Konstruktor jest wskaźnikiem do **char**, zestawienie za Alokacja ramek:
+
+     [!code-cpp[NVC_MFC_Utilities#8](../mfc/codesnippet/cpp/memory-management-examples_8.cpp)]
+
+     Instrukcja dla alokacji sterty jest:
+
+     [!code-cpp[NVC_MFC_Utilities#9](../mfc/codesnippet/cpp/memory-management-examples_9.cpp)]
+
+## <a name="see-also"></a>Zobacz też
+
+[Zarządzanie pamięcią: alokacja sterty](../mfc/memory-management-heap-allocation.md)
 

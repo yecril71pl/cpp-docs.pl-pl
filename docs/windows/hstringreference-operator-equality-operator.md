@@ -15,12 +15,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: b07df3dc50704a87883e1a387fe9c842c1732b54
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: e369aa819c7bff372113b2e422fef2441485a85a
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42610536"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46381378"
 ---
 # <a name="hstringreferenceoperator-operator"></a>HStringReference::Operator== Operator
 
@@ -44,10 +44,10 @@ inline bool operator==(
 
 ### <a name="parameters"></a>Parametry
 
-*Lewa strona reguły przepisywania*  
+*Lewa strona reguły przepisywania*<br/>
 Pierwszy parametr do porównania. *Lewa strona reguły przepisywania* może być **HStringReference** obiektu lub dojścia HSTRING.
 
-*RHS*  
+*RHS*<br/>
 Drugi parametr do porównania.  *RHS* może być **HStringReference** obiektu lub dojścia HSTRING.
 
 ## <a name="return-value"></a>Wartość zwracana

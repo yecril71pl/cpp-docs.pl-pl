@@ -13,22 +13,23 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: 3b9898b4a640d2f3aa4e38ceb621521ffb301fed
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 4c513b0148e2553440e02f9b0d255a0d5750e2d1
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33105894"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46372515"
 ---
 # <a name="boxing-ccli"></a>Konwersja boxing (C++/CLI)
-Opakowanie jest proces konwersji typu wartości na typ `object` lub do dowolnego typu interfejsu, który jest implementowany przez typ wartości. Jeśli środowisko uruchomieniowe języka wspólnego (CLR) pola typu wartości, jest zawijany wartość w `System.Object` i zapisuje go na stercie zarządzanej. Rozpakowywanie wyodrębnia typ wartości z obiektu. Opakowanie jest niejawne; Rozpakowywanie jest jawne.  
-  
-## <a name="related-articles"></a>Powiązane artykuły  
-  
-|Tytuł|Opis|  
-|-----------|-----------------|  
-|[Instrukcje: jawne żądanie konwersji boxing](../dotnet/how-to-explicitly-request-boxing.md)|Opisuje sposób jawne żądanie konwersji boxing w zmiennej.|  
-|[Instrukcje: używanie funkcji gcnew do tworzenia typów wartości i korzystanie z niejawnej konwersji boxing](../dotnet/how-to-use-gcnew-to-create-value-types-and-use-implicit-boxing.md)|Przedstawia sposób użycia `gcnew` do utworzenia typu wartości spakowanej, który można umieścić na stercie zarządzanej, zbierane w pamięci.|  
-|[Instrukcje: rozpakowywanie](../dotnet/how-to-unbox.md)|Przedstawia sposób unbox — i zmodyfikuj wartość.|  
-|[Konwersje standardowe i niejawne konwersje boxing](../dotnet/standard-conversions-and-implicit-boxing.md)|Pokazuje, czy konwersja standardowa jest wybierany przez kompilator za pośrednictwem konwersji, która wymaga opakowania.|  
-|[Programowanie .NET w języku C++/interfejsie wiersza polecenia (Visual C++)](../dotnet/dotnet-programming-with-cpp-cli-visual-cpp.md)|Artykuł najwyższego poziomu programowania .NET w dokumentacji Visual C++.|
+
+OPAKOWYWANIE to proces konwersji typu wartości do typu `object` lub dowolny typ interfejsu, który jest implementowany przez typ wartości. Środowisko uruchomieniowe języka wspólnego (CLR) pola typu wartości, otacza wartość `System.Object` i zapisuje go w zarządzanym stosie. Rozpakowywanie wyodrębnia typ wartości z obiektu. OPAKOWYWANIE jest niejawne; Rozpakowywanie jest jawne.
+
+## <a name="related-articles"></a>Powiązane artykuły
+
+|Tytuł|Opis|
+|-----------|-----------------|
+|[Instrukcje: jawne żądanie konwersji boxing](../dotnet/how-to-explicitly-request-boxing.md)|Opisuje sposób jawne żądanie konwersji boxing na zmiennej.|
+|[Instrukcje: używanie funkcji gcnew do tworzenia typów wartości i korzystanie z niejawnej konwersji boxing](../dotnet/how-to-use-gcnew-to-create-value-types-and-use-implicit-boxing.md)|Ilustruje sposób używania `gcnew` w celu utworzenia typu wartości spakowanej, który można umieścić na stosie zarządzanym, zebranych elementów bezużytecznych.|
+|[Instrukcje: rozpakowywanie](../dotnet/how-to-unbox.md)|Pokazuje, jak rozpakowania i zmodyfikuj wartości.|
+|[Konwersje standardowe i niejawne konwersje boxing](../dotnet/standard-conversions-and-implicit-boxing.md)|Pokazuje, że konwersja standardowa jest wybierany przez kompilator za pośrednictwem konwersji, która wymaga opakowania.|
+|[Programowanie .NET w języku C++/interfejsie wiersza polecenia (Visual C++)](../dotnet/dotnet-programming-with-cpp-cli-visual-cpp.md)|Artykuł najwyższego poziomu dla programowania .NET w dokumentacji języka Visual C++.|

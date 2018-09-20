@@ -15,47 +15,52 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d4f3121130cd4b2871e3e3df73dd4117f946caca
-ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
+ms.openlocfilehash: 0cd9f10f473ae72c32b11fe648abe693568b34a6
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33689821"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46395458"
 ---
 # <a name="how-to-write-a-parallelfor-loop"></a>Porady: pisanie pętli parallel_for
-W tym przykładzie przedstawiono sposób użycia [concurrency::parallel_for](reference/concurrency-namespace-functions.md#parallel_for) do obliczenia produktu macierzy dwa.  
-  
-## <a name="example"></a>Przykład  
- W poniższym przykładzie przedstawiono `matrix_multiply` funkcji, która oblicza iloczyn dwóch macierzy kwadratowych.  
-  
- [!code-cpp[concrt-parallel-matrix-multiply#1](../../parallel/concrt/codesnippet/cpp/how-to-write-a-parallel-for-loop_1.cpp)]  
-  
-## <a name="example"></a>Przykład  
- W poniższym przykładzie przedstawiono `parallel_matrix_multiply` funkcji, która używa `parallel_for` algorytm zewnętrzne pętli równolegle.  
-  
- [!code-cpp[concrt-parallel-matrix-multiply#2](../../parallel/concrt/codesnippet/cpp/how-to-write-a-parallel-for-loop_2.cpp)]  
-  
- W tym przykładzie parallelizes zewnętrzne pętli, tylko ponieważ wykonuje wystarczająco dużo pracy do korzystania z obciążenie przetwarzania równoległego. Jeśli parallelize wewnętrzny pętli, nie otrzymasz przyrost wydajności ponieważ mała ilość pracy, który wykonuje pętli wewnętrznej nie rozwiązać obciążenie przetwarzania równoległego. W związku z tym parallelizing zewnętrzne pętli jest tylko najlepszy sposób, aby zmaksymalizować korzyści współbieżności na większości systemów.  
-  
-## <a name="example"></a>Przykład  
- Następujące bardziej szczegółowy przykład porównuje wydajność `matrix_multiply` funkcji w porównaniu z `parallel_matrix_multiply` funkcji.  
-  
- [!code-cpp[concrt-parallel-matrix-multiply#3](../../parallel/concrt/codesnippet/cpp/how-to-write-a-parallel-for-loop_3.cpp)]  
-  
- Następujące przykładowe dane wyjściowe jest dla komputera, który ma cztery procesory.  
-  
-```Output  
-serial: 3853  
-parallel: 1311  
-```  
-  
-## <a name="compiling-the-code"></a>Kompilowanie kodu  
- Aby skompilować kod, skopiuj go i następnie wklej go w projekcie programu Visual Studio lub wklej go w pliku o nazwie `parallel-matrix-multiply.cpp` , a następnie uruchom następujące polecenie w oknie Wiersz polecenia programu Visual Studio.  
-  
- **Cl.exe/ehsc równoległe macierzy multiply.cpp**  
-  
-## <a name="see-also"></a>Zobacz też  
- [Algorytmy równoległe](../../parallel/concrt/parallel-algorithms.md)   
- [parallel_for — funkcja](reference/concurrency-namespace-functions.md#parallel_for)
 
+W tym przykładzie przedstawiono sposób użycia [concurrency::parallel_for](reference/concurrency-namespace-functions.md#parallel_for) do Oblicz iloczyn dwóch macierzy.
+
+## <a name="example"></a>Przykład
+
+W poniższym przykładzie przedstawiono `matrix_multiply` funkcji, która oblicza iloczyn dwóch macierzy kwadratowych.
+
+[!code-cpp[concrt-parallel-matrix-multiply#1](../../parallel/concrt/codesnippet/cpp/how-to-write-a-parallel-for-loop_1.cpp)]
+
+## <a name="example"></a>Przykład
+
+W poniższym przykładzie przedstawiono `parallel_matrix_multiply` funkcji, która używa `parallel_for` algorytm zewnętrzna pętla równolegle.
+
+[!code-cpp[concrt-parallel-matrix-multiply#2](../../parallel/concrt/codesnippet/cpp/how-to-write-a-parallel-for-loop_2.cpp)]
+
+W tym przykładzie parallelizes zewnętrzna pętla tylko w przypadku, ponieważ wykonuje wystarczająco dużo pracy, aby korzystać z obciążenie do przetwarzania równoległego. Jeśli można zrównoleglić wewnętrzną pętlę, nie otrzymasz przyrost wydajności ponieważ niewielką ilość pracy, który wykonuje wewnętrzną pętlę nie przezwyciężyć obciążenie do przetwarzania równoległego. W związku z tym przekształcają zewnętrzna pętla tylko jest najlepszy sposób, aby zmaksymalizować korzyści współbieżności w większości systemów.
+
+## <a name="example"></a>Przykład
+
+Następujące bardziej rozbudowany przykład porównuje wydajność `matrix_multiply` funkcji w porównaniu z `parallel_matrix_multiply` funkcji.
+
+[!code-cpp[concrt-parallel-matrix-multiply#3](../../parallel/concrt/codesnippet/cpp/how-to-write-a-parallel-for-loop_3.cpp)]
+
+Następujące przykładowe dane wyjściowe to dla komputera, który ma cztery procesory.
+
+```Output
+serial: 3853
+parallel: 1311
+```
+
+## <a name="compiling-the-code"></a>Kompilowanie kodu
+
+Aby skompilować ten kod, skopiuj go a następnie wklej go w projekcie programu Visual Studio lub wklej go w pliku o nazwie `parallel-matrix-multiply.cpp` , a następnie uruchom następujące polecenie w oknie wiersza polecenia programu Visual Studio.
+
+**Cl.exe/ehsc równoległych — macierz multiply.cpp**
+
+## <a name="see-also"></a>Zobacz też
+
+[Algorytmy równoległe](../../parallel/concrt/parallel-algorithms.md)<br/>
+[parallel_for — funkcja](reference/concurrency-namespace-functions.md#parallel_for)
 

@@ -17,30 +17,32 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c79f6eaebae0065a631b8ac31a7254cdc96080e9
-ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
+ms.openlocfilehash: 41212e61144477eb05405e6df69b314f0f2cb37a
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "33324190"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46389411"
 ---
 # <a name="adding-a-member-function-visual-c"></a>Dodawanie funkcji członkowskiej (Visual C++)
-W **widoku klasy**, można dodać funkcji członkowskiej dla każdej klasy. Po wykonaniu tej deklaracji jest dodawana do pliku nagłówka i treści funkcji członkowskiej klasy zastępczej zostanie dodany do pliku implementacji klasy, który można następnie zmodyfikować.  
-  
-### <a name="to-add-a-member-function-to-a-class"></a>Aby dodać funkcją członkowską do klasy  
-  
-1.  W **widoku klasy**, rozwiń węzeł projektu, aby wyświetlić klasy w projekcie. (Aby otworzyć **widoku klasy**, na pasku menu wybierz **widoku**, **widoku klasy**.)  
-  
-2.  Otwórz menu skrótów dla tej klasy, które chcesz dodać do funkcji członkowskiej, a następnie wybierz **Dodaj**, **dodawania funkcji**.  
-  
-3.  Podaj odpowiednie informacje o funkcji elementu członkowskiego. Aby uzyskać więcej informacji, zobacz [Kreatora dodawania funkcji Członkowskich](../ide/add-member-function-wizard.md).  
-  
-4.  Wybierz **Zakończ** przycisk, aby wygenerować kod funkcja elementu członkowskiego.  
-  
-## <a name="see-also"></a>Zobacz też  
- [Dodawanie funkcji z kreatorami kodów](../ide/adding-functionality-with-code-wizards-cpp.md)   
- [Dodawanie klasy](../ide/adding-a-class-visual-cpp.md)   
- [Dodawanie zmiennej członkowskiej](../ide/adding-a-member-variable-visual-cpp.md)   
- [Zastępowanie funkcji wirtualnych](../ide/overriding-a-virtual-function-visual-cpp.md)   
- [Handler komunikatów MFC](../mfc/reference/adding-an-mfc-message-handler.md)   
- [Nawigacja w strukturze klas](../ide/navigating-the-class-structure-visual-cpp.md)
+
+W **Widok klas**, można dodać funkcję członkowską do każdej klasy. Po wykonaniu tej deklaracji jest dodawana do pliku nagłówka i treści funkcji składowej klasy zastępczej jest dodawany do pliku implementacji klasy, którą można modyfikować.
+
+### <a name="to-add-a-member-function-to-a-class"></a>Aby dodać funkcję członkowską do klasy
+
+1. W **Widok klas**, rozwiń węzeł projektu, aby wyświetlić klasy w projekcie. (Aby otworzyć **Widok klas**, na pasku menu wybierz **widoku**, **Widok klas**.)
+
+1. Otwórz menu skrótów dla tej klasy, które chcesz dodać do funkcji składowej, a następnie wybierz **Dodaj**, **dodawania funkcji**.
+
+1. Podaj odpowiednie szczegóły na temat funkcji elementu członkowskiego. Aby uzyskać więcej informacji, zobacz [Kreatora dodawania funkcji elementu członkowskiego](../ide/add-member-function-wizard.md).
+
+1. Wybierz **Zakończ** przycisk, aby wygenerować kod funkcji elementu członkowskiego.
+
+## <a name="see-also"></a>Zobacz też
+
+[Dodawanie funkcji za pomocą kreatorów kodu](../ide/adding-functionality-with-code-wizards-cpp.md)<br>
+[Dodawanie klasy](../ide/adding-a-class-visual-cpp.md)<br>
+[Dodawanie zmiennej członkowskiej](../ide/adding-a-member-variable-visual-cpp.md)<br>
+[Zastępowanie funkcji wirtualnych](../ide/overriding-a-virtual-function-visual-cpp.md)<br>
+[Handler komunikatów MFC](../mfc/reference/adding-an-mfc-message-handler.md)<br>
+[Nawigacja w strukturze klas](../ide/navigating-the-class-structure-visual-cpp.md)

@@ -18,29 +18,31 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7f2e3661f2c0fee43a8e8b25b9cf90b105e84308
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 50ad8fe96a1c18f45dbc118e29c73453f806f110
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33345166"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46376553"
 ---
 # <a name="hierarchy-chart"></a>Diagram hierarchii
-Poniższe ilustracje przedstawiają pochodzi od klasy MFC `CObject`:  
-  
- ![Klasy wyprowadzone z obiektu CObject](../mfc/media/mfc_heirarchy_chart1of3.png "mfc_heirarchy_chart1of3")  
-  
- Poniższe ilustracje przedstawiają pochodzi od klasy MFC `CWnd` i `CCmdTarget`:  
-  
- ![Klasy pochodne klasy CCmdTarget lub CWnd](../mfc/media/mfc_heirarchy_chart2of3.png "mfc_heirarchy_chart2of3")  
-  
- Poniższe ilustracje przedstawiają nie pochodzi od klasy MFC `CObject`:  
-  
- ![Klas nie pochodzi z obiektu CObject](../mfc/media/mfc_heirarchy_chart3of3.png "mfc_heirarchy_chart3of3")  
-  
- Zakończenie wykresu można pobrać z następującej lokalizacji: [MFC hierarchii wykresy Pobierz](https://aka.ms/hxgg8e).  
-  
-## <a name="see-also"></a>Zobacz też  
- [Kategorie diagramów hierarchii](../mfc/hierarchy-chart-categories.md)   
- [Przegląd klas](../mfc/class-library-overview.md)
+
+Następująca ilustracja przedstawia klasy MFC wyprowadzone z `CObject`:
+
+![Klasy pochodzące z obiektu CObject](../mfc/media/mfc_heirarchy_chart1of3.png "mfc_heirarchy_chart1of3")
+
+Następująca ilustracja przedstawia klasy MFC wyprowadzone z `CWnd` i `CCmdTarget`:
+
+![Klasy pochodne klasy CCmdTarget lub CWnd](../mfc/media/mfc_heirarchy_chart2of3.png "mfc_heirarchy_chart2of3")
+
+Poniższa ilustracja przedstawia klasy MFC niewyprowadzone z `CObject`:
+
+![Klasy nie pochodzi z obiektu CObject](../mfc/media/mfc_heirarchy_chart3of3.png "mfc_heirarchy_chart3of3")
+
+Możesz pobrać kompletny wykres z następującej lokalizacji: [MFC hierarchii wykresy Pobierz](https://aka.ms/hxgg8e).
+
+## <a name="see-also"></a>Zobacz też
+
+[Kategorie wykresów hierarchii](../mfc/hierarchy-chart-categories.md)<br/>
+[Klasa — Przegląd](../mfc/class-library-overview.md)
 

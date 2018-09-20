@@ -12,20 +12,21 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8f14e182e6c981cd5de7a4cf92d8c285a4b49c66
-ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
+ms.openlocfilehash: 4303eb3ccfcb1c449022a4be32f94b9f91e6e80c
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33695801"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46387006"
 ---
 # <a name="321-ompinitlock-and-ompinitnestlock-functions"></a>3.2.1 Funkcje omp_init_lock i omp_init_nest_lock
-Funkcje te zapewniają jedynym sposobem inicjowania blokady. Każda funkcja inicjuje blokady skojarzonych z parametrem *blokady* do użycia w kolejnych wywołaniach. Format jest następujący:  
-  
-```  
-#include <omp.h>  
-void omp_init_lock(omp_lock_t *lock);  
-void omp_init_nest_lock(omp_nest_lock_t *lock);  
-```  
-  
- Stan początkowy jest odblokowany (oznacza to, że wątek nie jest właścicielem blokady). Dla blokadą liczba początkowa zagnieżdżenia wynosi zero. Jest to niezgodne do wywołań dowolnej z tych procedur ze zmienną blokady, który został już zainicjowany.
+
+Te funkcje zapewniają jedynym sposobem inicjowanie blokadę. Każda funkcja inicjuje blokady skojarzonych z parametrem *blokady* do użycia w kolejnych wywołaniach. Format jest następujący:
+
+```
+#include <omp.h>
+void omp_init_lock(omp_lock_t *lock);
+void omp_init_nest_lock(omp_nest_lock_t *lock);
+```
+
+Początkowy stan jest odblokowana (oznacza to, że żaden wątek nie jest właścicielem blokady). Na blokadę zagnieżdżalnych początkowa liczba zagnieżdżenia wynosi zero. Jest niezgodna, aby wywołać jedną z tych procedur ze zmienną blokady, który został już zainicjowany.

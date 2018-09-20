@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: fd153ae184eb2bdc9891099a8454ff353ebaa0bf
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 952392e2f12baffdcf4890e29367588d2b243a01
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43197218"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46390178"
 ---
 # <a name="displaybind"></a>displaybind
 
@@ -57,9 +57,9 @@ Aby uzyskać więcej informacji, zobacz [konteksty atrybutu](../windows/attribut
 
 ## <a name="see-also"></a>Zobacz też
 
-[Atrybuty IDL](../windows/idl-attributes.md)  
-[Atrybuty metody](../windows/method-attributes.md)  
-[Atrybuty składowych danych](../windows/data-member-attributes.md)  
-[defaultbind](../windows/defaultbind.md)  
-[immediatebind](../windows/immediatebind.md)  
+[Atrybuty IDL](../windows/idl-attributes.md)<br/>
+[Atrybuty metody](../windows/method-attributes.md)<br/>
+[Atrybuty składowych danych](../windows/data-member-attributes.md)<br/>
+[defaultbind](../windows/defaultbind.md)<br/>
+[immediatebind](../windows/immediatebind.md)<br/>
 [requestedit](../windows/requestedit.md)  

@@ -16,27 +16,29 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 53566752a662db27e0da5cec3ce2316e26c8366b
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: a9980a367c0272fe35e2135c1fb5a7df1c19a314
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33353731"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46377308"
 ---
 # <a name="adding-an-mfc-message-handler"></a>Dodawanie handlera komunikatów MFC
-Możesz [okno właściwości i Dodaj program obsługi komunikatów](../../mfc/reference/mapping-messages-to-functions.md) (funkcję elementu członkowskiego, która obsługuje komunikatów systemu Windows) do klasy i mapowanie komunikatów systemu Windows do obsługi wiadomości. Można również dodać [program obsługi zdarzeń dla każdego formantu — okno dialogowe](../../windows/adding-event-handlers-for-dialog-box-controls.md).  
-  
- Przy użyciu okna właściwości do definiowania funkcji obsługi wiadomości i zdarzeń, można automatycznie aktualizować tabeli wysyłania komunikatu (lub mapy komunikatów) i pliku nagłówka klasy.  
-  
+
+Możesz [okno właściwości, aby dodać program obsługi komunikatów](../../mfc/reference/mapping-messages-to-functions.md) (funkcja członkowska, która obsługuje komunikaty Windows) do klasy i mapy komunikatów Windows do obsługi wiadomości. Można również dodać [program obsługi zdarzeń dla dowolnego formantu pola dialogowe](../../windows/adding-event-handlers-for-dialog-box-controls.md).
+
+Za pomocą okna właściwości do definiowania funkcji obsługi wiadomości i zdarzenia, można automatycznie zaktualizować tabeli wysyłania komunikatu (lub mapy wiadomości) i plik nagłówkowy klasy.
+
 > [!NOTE]
->  Można dodać obsługi wiadomości do klasy ATL przy użyciu okna właściwości; Jednak niektóre wyniki mogą być różne. Aby uzyskać więcej informacji, zobacz temat ATL [Dodawanie obsługi ATL komunikat](../../atl/adding-an-atl-message-handler.md).  
-  
-## <a name="see-also"></a>Zobacz też  
- [Dodawanie funkcji z kreatorami kodów](../../ide/adding-functionality-with-code-wizards-cpp.md)   
- [Dodawanie klasy](../../ide/adding-a-class-visual-cpp.md)   
- [Dodawanie funkcji członkowskiej](../../ide/adding-a-member-function-visual-cpp.md)   
- [Dodawanie zmiennej członkowskiej](../../ide/adding-a-member-variable-visual-cpp.md)   
- [Zastępowanie funkcji wirtualnych](../../ide/overriding-a-virtual-function-visual-cpp.md)   
- [Nawigacja w strukturze klas](../../ide/navigating-the-class-structure-visual-cpp.md)   
- [Edytor okien dialogowych](../../windows/dialog-editor.md)
+>  Można dodać program obsługi komunikatów do klasy ATL za pomocą okna właściwości; Jednak niektóre wyniki mogą się różnić. Aby uzyskać więcej informacji, zobacz temat ATL [Dodawanie programu obsługi komunikatów ATL](../../atl/adding-an-atl-message-handler.md).
+
+## <a name="see-also"></a>Zobacz też
+
+[Dodawanie funkcji za pomocą kreatorów kodu](../../ide/adding-functionality-with-code-wizards-cpp.md)<br/>
+[Dodawanie klasy](../../ide/adding-a-class-visual-cpp.md)<br/>
+[Dodawanie funkcji członkowskiej](../../ide/adding-a-member-function-visual-cpp.md)<br/>
+[Dodawanie zmiennej członkowskiej](../../ide/adding-a-member-variable-visual-cpp.md)<br/>
+[Zastępowanie funkcji wirtualnych](../../ide/overriding-a-virtual-function-visual-cpp.md)<br/>
+[Nawigacja w strukturze klas](../../ide/navigating-the-class-structure-visual-cpp.md)<br/>
+[Edytor okien dialogowych](../../windows/dialog-editor.md)
 

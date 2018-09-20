@@ -18,58 +18,60 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8817133ba1004e746f568ad3e039de5130693174
-ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
+ms.openlocfilehash: 4f01b15a226887216b45ba232437d9d20c4691b6
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/25/2018
-ms.locfileid: "36929448"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46388341"
 ---
 # <a name="creating-an-active-document-container-application"></a>Tworzenie aplikacji kontenera dokumentów aktywnych
-Najprostszym i zalecany sposób tworzenia aplikacji kontenera dokumentów aktywnych jest tworzenie aplikacji kontenera MFC EXE za pomocą Kreatora aplikacji MFC, a następnie zmodyfikować aplikację do obsługi zawieranie dokumentów aktywnych.  
-  
-#### <a name="to-create-an-active-document-container-application"></a>Do tworzenia aplikacji kontenera dokumentów aktywnych  
-  
-1.  Z **pliku** menu, kliknij przycisk **projektu**z **nowy** podmenu.  
-  
-2.  W okienku po lewej stronie kliknij **Visual C++** typu projektu.  
-  
-3.  Wybierz **aplikacji MFC** w okienku po prawej stronie.  
-  
-4.  Nazwij projekt *MyProj*, kliknij przycisk **OK**.  
-  
-5.  Wybierz **Obsługa dokumentów złożonych** strony.  
-  
-6.  Wybierz **kontenera** lub **kontenera/pełny serwer** opcji.  
-  
-7.  Wybierz **kontenera dokumentów aktywnych** pole wyboru.  
-  
-8.  Kliknij przycisk **Zakończ**.  
-  
-9. Po zakończeniu pracy Kreatora aplikacji MFC generowania aplikacji, należy otworzyć następujące pliki za pomocą Eksploratora rozwiązań:  
-  
-    -   *MyProjview.cpp*  
-  
-10. W *MyProjview.cpp*, wprowadź następujące zmiany:  
-  
-    -   W `CMyProjView::OnPreparePrinting`, Zastąp zawartość funkcja następującym kodem:  
-  
-         [!code-cpp[NVC_MFCDocView#56](../mfc/codesnippet/cpp/creating-an-active-document-container-application_1.cpp)]  
-  
-     `OnPreparePrinting` zapewnia obsługę drukowania. Ten kod zastępuje `DoPreparePrinting`, który jest przygotowanie wydruku domyślne.  
-  
-     Zawieranie dokumentów aktywnych zapewnia udoskonalony schemat drukowania:  
-  
-    -   Należy najpierw wywołać aktywnego dokumentu za pomocą jego `IPrint` interfejsu i poinformuj go do samej siebie drukowania. To różni się od poprzedniej zawierania OLE, w kontenerze było renderować obraz zamkniętego elementu do drukarki `CDC` obiektu.  
-  
-    -   W przypadku niepowodzenia Poinformuj zawartych w niej element, aby wydrukować się za pośrednictwem jego `IOleCommandTarget` — interfejs  
-  
-    -   W przypadku niepowodzenia należy własne renderowania elementu.  
-  
-     Statyczne funkcje Członkowskie `COleDocObjectItem::OnPrint` i `COleDocObjectItem::OnPreparePrinting`, zgodnie z implementacją w poprzednim kodzie obsługi tego udoskonalony schemat drukowania.  
-  
-11. Dodaj implementacji własny i kompilowania aplikacji.  
-  
-## <a name="see-also"></a>Zobacz też  
- [Zawieranie dokumentów aktywnych](../mfc/active-document-containment.md)
+
+Najprostszy i najbardziej zalecany sposób tworzenia aplikacji kontenera dokumentów aktywnych jest, aby utworzyć aplikację kontenera MFC EXE za pomocą Kreatora aplikacji MFC, a następnie zmodyfikuj aplikację do obsługi zawieranie dokumentów aktywnych.
+
+#### <a name="to-create-an-active-document-container-application"></a>Do tworzenia aplikacji kontenera dokumentów aktywnych
+
+1. Z **pliku** menu, kliknij przycisk **projektu**z **New** podmenu.
+
+1. W okienku po lewej stronie kliknij **Visual C++** typ projektu.
+
+1. Wybierz **aplikacji MFC** w okienku po prawej stronie.
+
+1. Nadaj projektowi nazwę *MyProj*, kliknij przycisk **OK**.
+
+1. Wybierz **Obsługa dokumentów złożonych** strony.
+
+1. Wybierz **kontenera** lub **kontener/pełny serwer** opcji.
+
+1. Wybierz **kontener dokumentów aktywnych** pole wyboru.
+
+1. Kliknij przycisk **Zakończ**.
+
+9. Po zakończeniu pracy Kreatora aplikacji MFC, generowania aplikacji, należy otworzyć następujące pliki za pomocą Eksploratora rozwiązań:
+
+   - *MyProjview.cpp*
+
+10. W *MyProjview.cpp*, wprowadź następujące zmiany:
+
+   - W `CMyProjView::OnPreparePrinting`, Zastąp zawartość funkcji następującym kodem:
+
+         [!code-cpp[NVC_MFCDocView#56](../mfc/codesnippet/cpp/creating-an-active-document-container-application_1.cpp)]
+
+     `OnPreparePrinting` zapewnia obsługę drukowania. Ten kod zastępuje `DoPreparePrinting`, który jest domyślne przygotowanie drukowania.
+
+     Zawieranie dokumentów aktywnych zapewnia udoskonalony schemat drukowania:
+
+   - Można wywołać aktywnego dokumentu za pośrednictwem jego `IPrint` interfejs i poinformuj go, aby wydrukował sam siebie. To różni się od poprzedniej zawierania OLE, kontener było renderować obraz zamkniętego elementu do drukarki `CDC` obiektu.
+
+   - W przypadku niepowodzenia Przekaż zawartej element, aby wydrukował sam siebie za pośrednictwem jego `IOleCommandTarget` interfejsu
+
+   - W przypadku niepowodzenia należy własne renderowania elementu.
+
+     Statyczne funkcje Członkowskie `COleDocObjectItem::OnPrint` i `COleDocObjectItem::OnPreparePrinting`, zaimplementowanego w poprzednim kodzie obsługi tego udoskonalony schemat drukowania.
+
+11. Dodaj własny implementacji i skompilować aplikację.
+
+## <a name="see-also"></a>Zobacz też
+
+[Zawieranie dokumentów aktywnych](../mfc/active-document-containment.md)
 

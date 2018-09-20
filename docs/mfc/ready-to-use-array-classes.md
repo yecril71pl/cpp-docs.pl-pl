@@ -18,37 +18,39 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 397b45d6304d80c90a05daf48067ca7fff03194a
-ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
+ms.openlocfilehash: ccf2238855309d080a137795630b5442f0080b76
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/25/2018
-ms.locfileid: "36932048"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46395625"
 ---
 # <a name="ready-to-use-array-classes"></a>Gotowe do użycia klasy tablic
-Następujące klasy są gotowe do użycia klasy tablic.  
-  
- [CByteArray](../mfc/reference/cbytearray-class.md)  
- Przechowuje elementy typu **BAJTÓW** w tablicy.  
-  
- [CDWordArray](../mfc/reference/cdwordarray-class.md)  
- Przechowuje elementy typu **DWORD** w tablicy.  
-  
- [CObArray](../mfc/reference/cobarray-class.md)  
- Wskaźniki do obiektów klasy przechowuje `CObject` lub obiekty klas pochodnych `CObject` w tablicy.  
-  
- [CPtrArray](../mfc/reference/cptrarray-class.md)  
- Wskaźniki do przechowuje **void** (wskaźniki ogólnego) w tablicy.  
-  
- [CUIntArray](../mfc/reference/cuintarray-class.md)  
- Przechowuje elementy typu **UINT** w tablicy.  
-  
- [CWordArray](../mfc/reference/cwordarray-class.md)  
- Przechowuje elementy typu **WORD** w tablicy.  
-  
- [CStringArray](../mfc/reference/cstringarray-class.md)  
- Magazyny `CString` obiektów w tablicy.  
-  
-## <a name="see-also"></a>Zobacz też  
- [Przegląd klas](../mfc/class-library-overview.md)
+
+Następujące klasy są gotowe do użycia klasy tablic.
+
+[CByteArray](../mfc/reference/cbytearray-class.md)<br/>
+Przechowuje elementy typu **BAJTÓW** w tablicy.
+
+[CDWordArray](../mfc/reference/cdwordarray-class.md)<br/>
+Przechowuje elementy typu **DWORD** w tablicy.
+
+[CObArray](../mfc/reference/cobarray-class.md)<br/>
+Przechowuje wskaźniki do obiektów klasy `CObject` lub do obiektów klasy pochodne `CObject` w tablicy.
+
+[CPtrArray](../mfc/reference/cptrarray-class.md)<br/>
+Przechowuje wskaźniki do **void** (ogólnych wskaźników) w tablicy.
+
+[CUIntArray](../mfc/reference/cuintarray-class.md)<br/>
+Przechowuje elementy typu **UINT** w tablicy.
+
+[CWordArray](../mfc/reference/cwordarray-class.md)<br/>
+Przechowuje elementy typu **WORD** w tablicy.
+
+[CStringArray](../mfc/reference/cstringarray-class.md)<br/>
+Magazyny `CString` obiektów w tablicy.
+
+## <a name="see-also"></a>Zobacz też
+
+[Klasa — Przegląd](../mfc/class-library-overview.md)
 

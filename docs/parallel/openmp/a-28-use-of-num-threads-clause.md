@@ -1,5 +1,5 @@
 ---
-title: Użycie klauzuli num_threads A.28 | Dokumentacja firmy Microsoft
+title: A.28 użycie klauzuli num_threads | Dokumentacja firmy Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -12,25 +12,26 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 12289192d056acac684f28712ccf2aa1423b6c3e
-ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
+ms.openlocfilehash: 0fb0111645e1dba42fdd3fa28a885d1ce179ef6f
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33689119"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46387922"
 ---
 # <a name="a28---use-of-numthreads-clause"></a>A.28   Użycie klauzuli num_threads
-W poniższym przykładzie pokazano `num_threads` klauzuli ([2.3 sekcji](../../parallel/openmp/2-3-parallel-construct.md) na stronie 8). Równoległego regionu została wykonana z maksymalnie 10 wątków.  
-  
-```  
-#include <omp.h>  
-main()  
-{  
-    omp_set_dynamic(1);  
-    ...  
-    #pragma omp parallel num_threads(10)  
-    {  
-        ... parallel region ...  
-    }  
-}  
+
+W poniższym przykładzie pokazano `num_threads` — klauzula ([2.3 sekcji](../../parallel/openmp/2-3-parallel-construct.md) na stronie 8). Równoległego regionu jest wykonywane przy użyciu maksymalnie 10 wątków.
+
+```
+#include <omp.h>
+main()
+{
+    omp_set_dynamic(1);
+    ...
+    #pragma omp parallel num_threads(10)
+    {
+        ... parallel region ...
+    }
+}
 ```

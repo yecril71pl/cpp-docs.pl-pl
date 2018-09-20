@@ -25,44 +25,46 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 943d1bf01890696466638eca3c73839297807fd2
-ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
+ms.openlocfilehash: bd26246299f174281ba664875ec0c7d3a2de149d
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/26/2018
-ms.locfileid: "36953125"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46389879"
 ---
 # <a name="standard-commands"></a>Polecenia standardowe
-Platformę definiuje wiele poleceń standardowych komunikatów. Identyfikatory dla tych poleceń zwykle mieć postać:  
-  
- **ID_** *źródła*_*elementu*  
-  
- gdzie *źródła* jest zwykle nazwy menu i *elementu* elementu menu. Na przykład identyfikator polecenia dla nowego polecenia menu Plik jest id_file_new —. Identyfikatory poleceń standardowych są wyświetlone czcionką pogrubioną w dokumentacji. Identyfikatory zdefiniowane przez programistę zostały pokazane czcionki, która różni się od otaczającego tekstu.  
-  
- Oto niektóre z najważniejszych poleceń obsługiwane listę:  
-  
- *Polecenia Menu Plik*  
- Nowe otwarte, Zamknij, Zapisz, Zapisz jako, ustawienia strony Ustawienia wydruku, drukowania, Podgląd wydruku, wyjścia i ostatnio używanych plików.  
-  
- *Polecenia Menu Edycja*  
- Usuń zaznaczenie, usuń zaznaczenie wszystkich, kopiowanie, wycinanie, znajdowanie, Wklej, powtórz, Zamień, wybierz wszystkie cofania i ponawiania.  
-  
- *Widok poleceń Menu*  
- Pasek narzędzi i paska stanu.  
-  
- *Polecenia Menu okna*  
- Nowe, rozmieszczanie, Kaskadowo sąsiadująco w poziomie, sąsiadująco w pionie i podziału.  
-  
- *Polecenia Menu Pomoc*  
- Indeks, korzystanie z pomocy i o.  
-  
- *Polecenia OLE (Menu Edycja)*  
- Wstaw nowy obiekt, Edytuj łącza, Wklej łącze, Wklej specjalne i *typename* obiektu (zlecenie polecenia).  
-  
- Framework zapewnia różne poziomy wsparcia dla tych poleceń. Niektóre polecenia są obsługiwane tylko jako identyfikatory poleceń zdefiniowanych, inne są obsługiwane z implementacjami dokładnego. Na przykład platformę implementuje polecenia Otwórz menu Plik przez utworzenie nowego obiektu dokumentu, wyświetlanie otwarte okno dialogowe Otwieranie i odczytywania pliku. Z kolei musisz zaimplementować poleceń menu Edycja samodzielnie, ponieważ poleceń, takich jak id_edit_copy — są zależne od rodzaju dane są kopiowane.  
-  
- Więcej informacji na temat polecenia obsługiwane i poziomu implementacji, pod warunkiem, zobacz [22 Uwaga techniczna](../mfc/tn022-standard-commands-implementation.md). Polecenia standardowe są zdefiniowane w pliku AFXRES. H.  
-  
-## <a name="see-also"></a>Zobacz też  
- [Obiekty interfejsu użytkownika i identyfikatory poleceń](../mfc/user-interface-objects-and-command-ids.md)
+
+Struktura definiuje wiele poleceń standardowych komunikatów. Identyfikatory poleceń zazwyczaj formę:
+
+**ID_** *źródła*_*elementu*
+
+gdzie *źródła* jest zazwyczaj nazwy menu i *elementu* element menu. Na przykład identyfikator polecenia dla polecenia Nowy w menu Plik jest id_file_new —. Identyfikatory poleceń standardowych są wyświetlane pogrubioną czcionką w dokumentacji. Identyfikatory zdefiniowane przez programistę są wyświetlane w czcionkę, która różni się od otaczającego tekstu.
+
+Oto niektóre z najważniejszych polecenia obsługiwane listę:
+
+*Polecenia Menu Plik*<br/>
+Nowe otwarte, zamknij Zapisz Zapisz jako, ustawienia strony, ustawienia wydruku, drukowania, Podgląd wydruku, zakończenia i ostatnio używanych plików.
+
+*Polecenia Menu Edycja*<br/>
+Wyczyść, usuń zaznaczenie wszystkich, kopiowanie, wycinanie, wyszukiwanie, wklejania, powtórz, Zastąp, zaznacz wszystko Cofnij i wykonaj ponownie.
+
+*Polecenia menu widoku*<br/>
+Pasek narzędzi i pasek stanu.
+
+*Polecenia menu okna*<br/>
+Nowe, rozmieszczanie, zastosować kaskadowo, sąsiadująco w poziomie, sąsiadująco w pionie i dzielenie.
+
+*Polecenia menu pomocy*<br/>
+Indeks, korzystanie z pomocy i o.
+
+*Polecenia OLE (w Menu Edycja)*<br/>
+Wstaw nowy obiekt, Edytuj łącza, Wklej łącze, Wklej specjalne i *typename* obiektu (zlecenie polecenia).
+
+Struktura zapewnia różne poziomy wsparcia dla tych poleceń. Niektóre polecenia są obsługiwane tylko jako identyfikatory poleceń zdefiniowane, podczas gdy inne są obsługiwane w przypadku implementacji dokładnego. Na przykład platformę implementuje polecenia Otwórz menu Plik, tworząc nowy obiekt dokumentu, wyświetlanie otwarte okno dialogowe i otwierania i odczytywania pliku. Z kolei należy zaimplementować poleceń menu Edycja samodzielnie, ponieważ zależą od charakteru danych poleceń, takich jak id_edit_copy — kopiowanie.
+
+Aby dowiedzieć się więcej o polecenia obsługiwane i stopień wdrożenia, pod warunkiem, zobacz [techniczne 22 Uwaga](../mfc/tn022-standard-commands-implementation.md). Polecenia standardowe są zdefiniowane w pliku AFXRES. H.
+
+## <a name="see-also"></a>Zobacz też
+
+[Obiekty interfejsu użytkownika i identyfikatory poleceń](../mfc/user-interface-objects-and-command-ids.md)
 

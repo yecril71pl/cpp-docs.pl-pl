@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: e8589c43d49709842a745464d2727860ccd2c1e2
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: d557b7ee6e6a0ae627ec7cc9a6b40b5b9dbb872c
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42609680"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46379570"
 ---
 # <a name="synclockt-class"></a>SyncLockT — Klasa
 
@@ -39,7 +39,7 @@ class SyncLockT;
 
 ### <a name="parameters"></a>Parametry
 
-*SyncTraits*  
+*SyncTraits*<br/>
 Typ, który można przejmować na własność zasobu.
 
 ## <a name="remarks"></a>Uwagi
@@ -88,5 +88,5 @@ Reprezentuje typ, który może zająć wyłączne lub współużytkować własno
 
 ## <a name="see-also"></a>Zobacz też
 
-[Microsoft::WRL::Wrappers::Details, przestrzeń nazw](../windows/microsoft-wrl-wrappers-details-namespace.md)  
+[Microsoft::WRL::Wrappers::Details, przestrzeń nazw](../windows/microsoft-wrl-wrappers-details-namespace.md)<br/>
 [SRWLock, klasa](../windows/srwlock-class.md)

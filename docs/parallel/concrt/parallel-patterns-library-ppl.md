@@ -1,5 +1,5 @@
 ---
-title: Równoległe Biblioteka wzorców (PLL) | Dokumentacja firmy Microsoft
+title: Równoległe Biblioteka wzorców (PPL) | Dokumentacja firmy Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -14,56 +14,58 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7263d764014fa3532c3234bd4c7a0d4f1ff8d3c3
-ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
+ms.openlocfilehash: 2bbed984f20c01544a972317f787a00abf6c7b94
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33691544"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46382534"
 ---
 # <a name="parallel-patterns-library-ppl"></a>Biblioteka równoległych wzorców (PLL)
-Biblioteka równoległych wzorców (PLL) zapewnia imperatywnych model programowania wspiera skalowalność i łatwość użycia dla tworzenie współbieżnych aplikacji. PPL opiera się na planowanie i składniki zarządzania współbieżności środowiska wykonawczego. Uruchamia poziom abstrakcji między kod aplikacji i wątków podstawowy mechanizm przez podanie ogólnych, bezpieczne algorytmy i kontenerów, które działają na danych równolegle. PPL umożliwia również tworzenie aplikacji, które zapewniając alternatyw do stanu udostępnionego.  
-  
- PPL zapewnia następujące funkcje:  
-  
-- *Równoległość zadań*: mechanizm, który działa na górze pozostawiło systemu Windows można wykonać kilka elementów roboczych (zadania) równolegle  
-  
-- *Algorytmy równoległe*: Ogólne algorytmów działa na górze współbieżność środowiska wykonawczego do działania w zbiorach danych równolegle  
-  
-- *Równoległe kontenery i obiekty*: typy ogólne kontenera, które udostępniają bezpieczne równoczesny dostęp do swoich elementów  
-  
-## <a name="example"></a>Przykład  
- PPL zapewnia model programowania podobny standardowa biblioteka C++. W poniższym przykładzie pokazano wiele funkcji PPL. Oblicza kilka numerów Fibonacci szeregowe i równolegle. Zarówno obliczenia działają na [std::array](../../standard-library/array-class-stl.md) obiektu. Przykład drukuje do konsoli również czasu wymaganego do wykonania obu obliczenia.  
-  
- Serial wersji jest używana standardowa biblioteka C++ [std::for_each](../../standard-library/algorithm-functions.md#for_each) algorytm przechodzenia tablicy i przechowuje wyniki w [std::vector](../../standard-library/vector-class.md) obiektu. Wersja równoległa wykonuje to samo zadanie, ale używa PPL [concurrency::parallel_for_each](reference/concurrency-namespace-functions.md#parallel_for_each) algorytmu i przechowuje wyniki w [concurrency::concurrent_vector](../../parallel/concrt/reference/concurrent-vector-class.md) obiektu. `concurrent_vector` Klasa umożliwia każdej iteracji pętli jednocześnie dodać elementy, bez konieczności synchronizacji dostęp do zapisu do kontenera.  
-  
- Ponieważ `parallel_for_each` czynności jednocześnie, wersja równoległa w tym przykładzie należy sortować `concurrent_vector` obiektu działają tak samo jak wersja serial.  
-  
- Należy pamiętać, że w przykładzie użyto metody prostego do obliczenia liczb Fibonacci; Jednak ta metoda przedstawiono, jak współbieżności środowiska wykonawczego może poprawić wydajność obliczenia długo.  
-  
- [!code-cpp[concrt-parallel-fibonacci#1](../../parallel/concrt/codesnippet/cpp/parallel-patterns-library-ppl_1.cpp)]  
-  
- Następujące przykładowe dane wyjściowe jest dla komputera, który ma cztery procesory.  
-  
-```Output  
-serial time: 9250 ms  
-parallel time: 5726 ms  
- 
-fib(24): 46368  
-fib(26): 121393  
-fib(41): 165580141  
-fib(42): 267914296  
-```  
-  
- Każdej iteracji pętli wymaga innej ilość czasu, aby zakończyć. Wydajność `parallel_for_each` jest ograniczone przez zakończeniu ostatniej operacji. W związku z tym nie należy oczekiwać ulepszenia wydajności liniowej między wersjami szeregowe i równoległe, w tym przykładzie.  
-  
-## <a name="related-topics"></a>Tematy pokrewne  
-  
-|Tytuł|Opis|  
-|-----------|-----------------|  
-|[Równoległość zadania](../../parallel/concrt/task-parallelism-concurrency-runtime.md)|Zawiera opis roli zadań i grupy zadań w PPL.|  
-|[Algorytmy równoległe](../../parallel/concrt/parallel-algorithms.md)|Informacje dotyczące używania algorytmy równoległe, takich jak `parallel_for` i `parallel_for_each`.|  
-|[Równoległe kontenery oraz obiekty](../../parallel/concrt/parallel-containers-and-objects.md)|Zawiera opis różnych równoległe kontenery oraz obiekty, które są udostępniane przez PPL.|  
-|[Anulowanie w PPL](cancellation-in-the-ppl.md)|Wyjaśniono, jak można anulować pracy, która jest wykonywana przez algorytm równoległych.|  
-|[Środowisko uruchomieniowe współbieżności](../../parallel/concrt/concurrency-runtime.md)|W tym artykule opisano współbieżność środowiska wykonawczego, co upraszcza Programowanie równoległe i zawiera linki do powiązanych tematów.|
+
+Biblioteka równoległych wzorców (PPL) zapewnia model programowania na najwyższym skalowalność i łatwość użytkowania umożliwiający projektowanie aplikacji współbieżnych. PPL opiera się na planowanie i składniki zarządzania w czasie wykonywania współbieżności. Uruchamia poziom abstrakcji między kodu aplikacji i podstawowego mechanizmu wątkowości, zapewniając algorytmy rodzajowe, bezpieczny i kontenerów, które działają w przypadku danych w sposób równoległy. PPL pozwala również tworzyć aplikacje, które można skalować, zapewniając alternatywy dla udostępnionego stanu.
+
+PPL oferuje następujące funkcje:
+
+- *Równoległość zadań*: mechanizm, który działa na podstawie puli wątków Windows do równolegle uruchomić kilka elementów roboczych (zadania)
+
+- *Algorytmy równoległe*: algorytmy rodzajowe, które działa na szczycie ze współbieżności środowiska wykonawczego, która będzie działać na zbiory danych w sposób równoległy
+
+- *Równoległe kontenery oraz obiekty*: typy ogólnego kontenera, które zapewniają bezpieczne równoczesny dostęp do swoich elementów
+
+## <a name="example"></a>Przykład
+
+PPL zapewnia model programowania podobny standardowej biblioteki języka C++. W poniższym przykładzie pokazano wiele funkcji PPL. Oblicza kilka liczb Fibonacci szeregowo i równolegle. Zarówno obliczeń zajmującym się [std::array](../../standard-library/array-class-stl.md) obiektu. Przykład drukuje do konsoli również czas, który jest wymagany do wykonania obu obliczeń.
+
+Wersja serial używa standardowej biblioteki C++ [std::for_each](../../standard-library/algorithm-functions.md#for_each) algorytmem przechodzenia tablicy i zapisuje wyniki w [std::vector](../../standard-library/vector-class.md) obiektu. Wersja równoległa wykonuje to samo zadanie, ale używa PPL [concurrency::parallel_for_each](reference/concurrency-namespace-functions.md#parallel_for_each) algorytmu i zapisuje wyniki w parametrze [concurrency::concurrent_vector](../../parallel/concrt/reference/concurrent-vector-class.md) obiektu. `concurrent_vector` Klasa umożliwia każdej iteracji pętli jednocześnie dodać elementy nie wymaga, aby zsynchronizować dostęp do zapisu do kontenera.
+
+Ponieważ `parallel_for_each` działa jednocześnie, równoległe wersja tego przykładu należy sortować `concurrent_vector` działają tak samo jak serial wersja obiektu.
+
+Należy pamiętać, że w przykładzie użyto metody naiwni do obliczenia liczby Fibonacci; Jednak ta metoda ilustruje, jak poprawić wydajność długich obliczeń w czasie wykonywania współbieżności.
+
+[!code-cpp[concrt-parallel-fibonacci#1](../../parallel/concrt/codesnippet/cpp/parallel-patterns-library-ppl_1.cpp)]
+
+Następujące przykładowe dane wyjściowe to dla komputera, który ma cztery procesory.
+
+```Output
+serial time: 9250 ms
+parallel time: 5726 ms
+
+fib(24): 46368
+fib(26): 121393
+fib(41): 165580141
+fib(42): 267914296
+```
+
+Każdej iteracji pętli wymaga inną ilość czasu, aby zakończyć. Wydajność `parallel_for_each` jest ograniczone przez operację, która zakończy się ostatnio. W związku z tym nie powinno ulepszenia wydajności liniowy między wersjami szeregowe i równolegle w tym przykładzie.
+
+## <a name="related-topics"></a>Tematy pokrewne
+
+|Tytuł|Opis|
+|-----------|-----------------|
+|[Równoległość zadania](../../parallel/concrt/task-parallelism-concurrency-runtime.md)|W tym artykule opisano rolę grupy zadań i zadania w PPL.|
+|[Algorytmy równoległe](../../parallel/concrt/parallel-algorithms.md)|Opisuje sposób używania algorytmy równoległe, takie jak `parallel_for` i `parallel_for_each`.|
+|[Równoległe kontenery oraz obiekty](../../parallel/concrt/parallel-containers-and-objects.md)|W tym artykule opisano różne równoległe kontenery oraz obiekty, które są dostarczane przez PPL.|
+|[Anulowanie w PPL](cancellation-in-the-ppl.md)|Wyjaśnia, jak można anulować pracy, która jest wykonywana przez algorytm równoległy.|
+|[Środowisko uruchomieniowe współbieżności](../../parallel/concrt/concurrency-runtime.md)|W tym artykule opisano środowisko uruchomieniowe współbieżności, upraszczający Programowanie równoległe i zawiera linki do powiązanych tematów.|
 

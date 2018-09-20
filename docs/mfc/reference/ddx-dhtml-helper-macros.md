@@ -1,5 +1,5 @@
 ---
-title: Makra pomocnika DDX_DHtml | Dokumentacja firmy Microsoft
+title: Makra pomocnika Ddx_dhtml | Dokumentacja firmy Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -27,229 +27,256 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6de53324eac663df7c12ee0cb2c0f4f02558157d
-ms.sourcegitcommit: 208d445fd7ea202de1d372d3f468e784e77bd666
+ms.openlocfilehash: 7a4dbf1b085ca5ffddd87396fc367bf19f2ad02e
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/29/2018
-ms.locfileid: "37121705"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46383064"
 ---
-# <a name="ddxdhtml-helper-macros"></a>Makra pomocnika DDX_DHtml
-Zezwalaj na makra pomocnika DDX_DHtml łatwy dostęp do często używanych właściwości formantów na stronie HTML.  
-  
-### <a name="data-exchange-macros"></a>Makra wymiany danych  
-  
-|||  
-|-|-|  
-|[DDX_DHtml_ElementValue](#ddx_dhtml_elementvalue)|Ustawia lub pobiera wartość właściwości z wybranego formantu.|  
-|[DDX_DHtml_ElementInnerText](#ddx_dhtml_elementinnertext)|Ustawia lub pobiera tekst między tagiem początkowym i końcowym bieżącego elementu.|  
-|[DDX_DHtml_ElementInnerHtml](#ddx_dhtml_elementinnerhtml)|Ustawia lub pobiera kod HTML między tagiem początkowym i końcowym bieżącego elementu.|  
-|[DDX_DHtml_Anchor_Href](#ddx_dhtml_anchor_href)|Ustawia lub pobiera docelowy adres URL i punktu kontrolnego.|  
-|[DDX_DHtml_Anchor_Target](#ddx_dhtml_anchor_target)|Ustawia lub pobiera docelowego okna lub ramki.|  
-|[DDX_DHtml_Img_Src](#ddx_dhtml_img_src)|Ustawia lub pobiera nazwę obrazu lub klipu wideo w dokumencie.|  
-|[DDX_DHtml_Frame_Src](#ddx_dhtml_frame_src)|Ustawia lub pobiera adres URL skojarzone ramki.|  
-|[DDX_DHtml_IFrame_Src](#ddx_dhtml_iframe_src)|Ustawia lub pobiera adres URL skojarzone ramki.|  
-  
-## <a name="requirements"></a>Wymagania  
- **Nagłówek:** afxdhtml.h  
+# <a name="ddxdhtml-helper-macros"></a>Makra pomocnika Ddx_dhtml
+
+Makra pomocnika ddx_dhtml umożliwia łatwy dostęp do często używanych właściwości formantów na stronie HTML.
+
+### <a name="data-exchange-macros"></a>Makra wymiany danych
+
+|||
+|-|-|
+|[DDX_DHtml_ElementValue](#ddx_dhtml_elementvalue)|Ustawia lub pobiera wartość właściwości z wybranej kontrolki.|
+|[DDX_DHtml_ElementInnerText](#ddx_dhtml_elementinnertext)|Ustawia lub pobiera tekstu między tagiem początkowym i końcowym bieżącego elementu.|
+|[DDX_DHtml_ElementInnerHtml](#ddx_dhtml_elementinnerhtml)|Ustawia lub pobiera kodu HTML między tagiem początkowym i końcowym bieżącego elementu.|
+|[DDX_DHtml_Anchor_Href](#ddx_dhtml_anchor_href)|Ustawia lub pobiera docelowy adres URL i punktu kontrolnego.|
+|[DDX_DHtml_Anchor_Target](#ddx_dhtml_anchor_target)|Ustawia lub pobiera docelowego okna lub ramki.|
+|[DDX_DHtml_Img_Src](#ddx_dhtml_img_src)|Ustawia lub pobiera nazwę obrazu lub klip wideo w dokumencie.|
+|[DDX_DHtml_Frame_Src](#ddx_dhtml_frame_src)|Ustawia lub pobiera adres URL skojarzony ramki.|
+|[DDX_DHtml_IFrame_Src](#ddx_dhtml_iframe_src)|Ustawia lub pobiera adres URL skojarzony ramki.|
+
+## <a name="requirements"></a>Wymagania
+
+**Nagłówek:** afxdhtml.h
 
 ## <a name="ddx_dhtml_anchor_href"></a> DDX_DHtml_Anchor_Href
-Ustawia lub pobiera docelowy adres URL i punktu kontrolnego.  
-  
-  
-  
-```  
+
+Ustawia lub pobiera docelowy adres URL i punktu kontrolnego.
+
+
+
+```
 DDX_DHtml_Anchor_Href(
-    CDataExchange* dx,  
-    LPCTSTR name,  
-    CString& var)  
-```  
-  
-#### <a name="parameters"></a>Parametry  
- *DX*  
- Wskaźnik do [cdataexchange —](../../mfc/reference/cdataexchange-class.md) obiektu.  
-  
- *Nazwa*  
- Wartość określona dla parametru Identyfikatora kontrolka HTML.  
-  
- *var*  
- Wartość wymianie.  
-  
-## <a name="remarks"></a>Uwagi  
- Wymaga to makro [CDHtmlDialog::DDX_DHtml_ElementText](../../mfc/reference/cdhtmldialog-class.md#ddx_dhtml_elementtext) przy użyciu DISPID_IHTMLANCHORELEMENT_HREF funkcję wysyłania identyfikatora.
+    CDataExchange* dx,
+    LPCTSTR name,
+    CString& var)
+```
+
+#### <a name="parameters"></a>Parametry
+
+*DX*<br/>
+Wskaźnik do [CDataExchange](../../mfc/reference/cdataexchange-class.md) obiektu.
+
+*Nazwa*<br/>
+Wartość określona dla parametru Identyfikatora kontrolki HTML.
+
+*var*<br/>
+Wartość wymianie.
+
+## <a name="remarks"></a>Uwagi
+
+Wywołuje to makro [CDHtmlDialog::DDX_DHtml_ElementText](../../mfc/reference/cdhtmldialog-class.md#ddx_dhtml_elementtext) funkcji przy użyciu DISPID_IHTMLANCHORELEMENT_HREF wysyłania identyfikatora.
 
 ## <a name="ddx_dhtml_anchor_target"></a>  DDX_DHtml_Anchor_Target
- Ustawia lub pobiera docelowego okna lub ramki.  
-    
-```  
+
+Ustawia lub pobiera docelowego okna lub ramki.
+
+```
 DDX_DHtml_Anchor_Target(
-    CDataExchange* dx,  
-    LPCTSTR name,  
-    CString& var)  
-```  
-  
-#### <a name="parameters"></a>Parametry  
- *DX*  
- Wskaźnik do [cdataexchange —](../../mfc/reference/cdataexchange-class.md) obiektu.  
-  
- *Nazwa*  
- Wartość określona dla parametru Identyfikatora kontrolka HTML.  
-  
- *var*  
- Wartość wymianie.  
-  
-## <a name="remarks"></a>Uwagi  
- Wymaga to makro [CDHtmlDialog::DDX_DHtml_ElementText](../../mfc/reference/cdhtmldialog-class.md#ddx_dhtml_elementtext) przy użyciu DISPID_IHTMLANCHORELEMENT_TARGET funkcję wysyłania identyfikatora.  
+    CDataExchange* dx,
+    LPCTSTR name,
+    CString& var)
+```
+
+#### <a name="parameters"></a>Parametry
+
+*DX*<br/>
+Wskaźnik do [CDataExchange](../../mfc/reference/cdataexchange-class.md) obiektu.
+
+*Nazwa*<br/>
+Wartość określona dla parametru Identyfikatora kontrolki HTML.
+
+*var*<br/>
+Wartość wymianie.
+
+## <a name="remarks"></a>Uwagi
+
+Wywołuje to makro [CDHtmlDialog::DDX_DHtml_ElementText](../../mfc/reference/cdhtmldialog-class.md#ddx_dhtml_elementtext) funkcji przy użyciu DISPID_IHTMLANCHORELEMENT_TARGET wysyłania identyfikatora.
 
 ## <a name="ddx_dhtml_elementinnerhtml"></a>  DDX_DHtml_ElementInnerHtml
- Ustawia lub pobiera kod HTML między tagiem początkowym i końcowym bieżącego elementu.  
-  
-  
-  
-```  
+
+Ustawia lub pobiera kodu HTML między tagiem początkowym i końcowym bieżącego elementu.
+
+
+
+```
 DDX_DHtml_ElementInnerHtml(
-    CDataExchange* dx,  
-    LPCTSTR name,  
-    CString& var)  
-```  
-  
-#### <a name="parameters"></a>Parametry  
- *DX*  
- Wskaźnik do [cdataexchange —](../../mfc/reference/cdataexchange-class.md) obiektu.  
-  
- *Nazwa*  
- Wartość określona dla parametru Identyfikatora kontrolka HTML.  
-  
- *var*  
- Wartość wymianie.  
-  
-## <a name="remarks"></a>Uwagi  
- Wymaga to makro [CDHtmlDialog::DDX_DHtml_ElementText](../../mfc/reference/cdhtmldialog-class.md#ddx_dhtml_elementtext) przy użyciu DISPID_IHTMLELEMENT_INNERHTML funkcję wysyłania identyfikatora.  
-  
+    CDataExchange* dx,
+    LPCTSTR name,
+    CString& var)
+```
+
+#### <a name="parameters"></a>Parametry
+
+*DX*<br/>
+Wskaźnik do [CDataExchange](../../mfc/reference/cdataexchange-class.md) obiektu.
+
+*Nazwa*<br/>
+Wartość określona dla parametru Identyfikatora kontrolki HTML.
+
+*var*<br/>
+Wartość wymianie.
+
+## <a name="remarks"></a>Uwagi
+
+Wywołuje to makro [CDHtmlDialog::DDX_DHtml_ElementText](../../mfc/reference/cdhtmldialog-class.md#ddx_dhtml_elementtext) funkcji przy użyciu DISPID_IHTMLELEMENT_INNERHTML wysyłania identyfikatora.
+
 
 ## <a name="ddx_dhtml_elementinnertext"></a>  DDX_DHtml_ElementInnerText
-Ustawia lub pobiera tekst między tagiem początkowym i końcowym bieżącego elementu.  
-  
-  
-  
-```  
-DDX_DHtml_ElementInnerText(
-    CDataExchange* dx,  
-    LPCTSTR name,  
-    CString& var)  
-```  
-  
-#### <a name="parameters"></a>Parametry  
- *DX*  
- Wskaźnik do [cdataexchange —](../../mfc/reference/cdataexchange-class.md) obiektu.  
-  
- *Nazwa*  
- Wartość określona dla parametru Identyfikatora kontrolka HTML.  
-  
- *var*  
- Wartość wymianie.  
-  
-## <a name="remarks"></a>Uwagi  
- Wymaga to makro [CDHtmlDialog::DDX_DHtml_ElementText](../../mfc/reference/cdhtmldialog-class.md#ddx_dhtml_elementtext) przy użyciu DISPID_IHTMLELEMENT_INNERTEXT funkcję wysyłania identyfikatora. 
 
-## <a name="ddx_dhtml_elementvalue"></a> DDX_DHtml_ElementValue  
-Ustawia lub pobiera wartość właściwości z wybranego formantu.  
- 
-```  
-DDX_DHtml_ElementValue(
-    CDataExchange* dx,  
+Ustawia lub pobiera tekstu między tagiem początkowym i końcowym bieżącego elementu.
+
+
+
+```
+DDX_DHtml_ElementInnerText(
+    CDataExchange* dx,
     LPCTSTR name,
-    var)  
-```  
-  
-#### <a name="parameters"></a>Parametry  
- *DX*  
- Wskaźnik do [cdataexchange —](../../mfc/reference/cdataexchange-class.md) obiektu.  
-  
- *Nazwa*  
- Wartość określona dla parametru Identyfikatora kontrolka HTML.  
-  
- *var*  
- Wartość wymianie. Zobacz *wartość* w [CDHtmlDialog::DDX_DHtml_ElementText](../../mfc/reference/cdhtmldialog-class.md#ddx_dhtml_elementtext).  
-  
-## <a name="remarks"></a>Uwagi  
- To makro powiedzie się tylko podczas uruchamiania w formantach, które ma wartość właściwości. Formanty, które ma wartość właściwości obejmują pola edycji i pola listy, pola kombi.  
-  
- Wymaga to makro [CDHtmlDialog::DDX_DHtml_ElementText](../../mfc/reference/cdhtmldialog-class.md#ddx_dhtml_elementtext) przy użyciu DISPID_A_VALUE funkcję wysyłania identyfikatora.  
+    CString& var)
+```
+
+#### <a name="parameters"></a>Parametry
+
+*DX*<br/>
+Wskaźnik do [CDataExchange](../../mfc/reference/cdataexchange-class.md) obiektu.
+
+*Nazwa*<br/>
+Wartość określona dla parametru Identyfikatora kontrolki HTML.
+
+*var*<br/>
+Wartość wymianie.
+
+## <a name="remarks"></a>Uwagi
+
+Wywołuje to makro [CDHtmlDialog::DDX_DHtml_ElementText](../../mfc/reference/cdhtmldialog-class.md#ddx_dhtml_elementtext) funkcji przy użyciu DISPID_IHTMLELEMENT_INNERTEXT wysyłania identyfikatora.
+
+## <a name="ddx_dhtml_elementvalue"></a> DDX_DHtml_ElementValue
+
+Ustawia lub pobiera wartość właściwości z wybranej kontrolki.
+
+```
+DDX_DHtml_ElementValue(
+    CDataExchange* dx,
+    LPCTSTR name,
+    var)
+```
+
+#### <a name="parameters"></a>Parametry
+
+*DX*<br/>
+Wskaźnik do [CDataExchange](../../mfc/reference/cdataexchange-class.md) obiektu.
+
+*Nazwa*<br/>
+Wartość określona dla parametru Identyfikatora kontrolki HTML.
+
+*var*<br/>
+Wartość wymianie. Zobacz *wartość* w [CDHtmlDialog::DDX_DHtml_ElementText](../../mfc/reference/cdhtmldialog-class.md#ddx_dhtml_elementtext).
+
+## <a name="remarks"></a>Uwagi
+
+To makro powiedzie się tylko po uruchomieniu na formantów, które mają właściwości Value. Formanty, które mają właściwość Value zawierają pola tekstowe, pola listy i pola kombi.
+
+Wywołuje to makro [CDHtmlDialog::DDX_DHtml_ElementText](../../mfc/reference/cdhtmldialog-class.md#ddx_dhtml_elementtext) funkcji przy użyciu DISPID_A_VALUE wysyłania identyfikatora.
 
 ## <a name="ddx_dhtml_frame_src"></a> DDX_DHtml_Frame_Src
-Ustawia lub pobiera adres URL skojarzone ramki.  
-  
-```  
+
+Ustawia lub pobiera adres URL skojarzony ramki.
+
+```
 DDX_DHtml_Frame_Src(
-    CDataExchange* dx,  
-    LPCTSTR name,  
-    CString& var)  
-```  
-  
-#### <a name="parameters"></a>Parametry  
- *DX*  
- Wskaźnik do [cdataexchange —](../../mfc/reference/cdataexchange-class.md) obiektu.  
-  
- *Nazwa*  
- Wartość określona dla parametru Identyfikatora kontrolka HTML.  
-  
- *var*  
- Wartość wymianie.  
-  
-## <a name="remarks"></a>Uwagi  
- Wymaga to makro [CDHtmlDialog::DDX_DHtml_ElementText](../../mfc/reference/cdhtmldialog-class.md#ddx_dhtml_elementtext) przy użyciu DISPID_IHTMLFRAMEBASE_SRC funkcję wysyłania identyfikatora.  
+    CDataExchange* dx,
+    LPCTSTR name,
+    CString& var)
+```
+
+#### <a name="parameters"></a>Parametry
+
+*DX*<br/>
+Wskaźnik do [CDataExchange](../../mfc/reference/cdataexchange-class.md) obiektu.
+
+*Nazwa*<br/>
+Wartość określona dla parametru Identyfikatora kontrolki HTML.
+
+*var*<br/>
+Wartość wymianie.
+
+## <a name="remarks"></a>Uwagi
+
+Wywołuje to makro [CDHtmlDialog::DDX_DHtml_ElementText](../../mfc/reference/cdhtmldialog-class.md#ddx_dhtml_elementtext) funkcji przy użyciu DISPID_IHTMLFRAMEBASE_SRC wysyłania identyfikatora.
 
 ## <a name="ddx_dhtml_iframe_src"></a> DDX_DHtml_IFrame_Src
-Ustawia lub pobiera adres URL skojarzone ramki.  
-  
-  
-  
-```  
+
+Ustawia lub pobiera adres URL skojarzony ramki.
+
+
+
+```
 DDX_DHtml_IFrame_Src(
-    CDataExchange* dx,  
-    LPCTSTR name,  
-    CString& var)  
-```  
-  
-#### <a name="parameters"></a>Parametry  
- *DX*  
- Wskaźnik do [cdataexchange —](../../mfc/reference/cdataexchange-class.md) obiektu.  
-  
- *Nazwa*  
- Wartość określona dla parametru Identyfikatora kontrolka HTML.  
-  
- *var*  
- Wartość wymianie.  
-  
-## <a name="remarks"></a>Uwagi  
- Wymaga to makro [CDHtmlDialog::DDX_DHtml_ElementText](../../mfc/reference/cdhtmldialog-class.md#ddx_dhtml_elementtext) przy użyciu DISPID_IHTMLFRAMEBASE_SRC funkcję wysyłania identyfikatora. 
+    CDataExchange* dx,
+    LPCTSTR name,
+    CString& var)
+```
+
+#### <a name="parameters"></a>Parametry
+
+*DX*<br/>
+Wskaźnik do [CDataExchange](../../mfc/reference/cdataexchange-class.md) obiektu.
+
+*Nazwa*<br/>
+Wartość określona dla parametru Identyfikatora kontrolki HTML.
+
+*var*<br/>
+Wartość wymianie.
+
+## <a name="remarks"></a>Uwagi
+
+Wywołuje to makro [CDHtmlDialog::DDX_DHtml_ElementText](../../mfc/reference/cdhtmldialog-class.md#ddx_dhtml_elementtext) funkcji przy użyciu DISPID_IHTMLFRAMEBASE_SRC wysyłania identyfikatora.
 
 ## <a name="ddx_dhtml_img_src"></a>DDX_DHtml_Img_Src
-Pobiera lub pobiera nazwę obrazu lub klipu wideo w dokumencie.  
-  
-```  
-DDX_DHtml_Img_Src(
-    CDataExchange* dx,  
-    LPCTSTR name,  
-    CString& var)  
-```  
-  
-#### <a name="parameters"></a>Parametry  
- *DX*  
- Wskaźnik do [cdataexchange —](../../mfc/reference/cdataexchange-class.md) obiektu.  
-  
- *Nazwa*  
- Wartość określona dla parametru Identyfikatora kontrolka HTML.  
-  
- *var*  
- Wartość wymianie.  
-  
-## <a name="remarks"></a>Uwagi  
- Korzystając z makra DDX_DHtml_Img_Src można pobrać właściwości src elementu obrazu, obiektu obrazu programu Internet Explorer będzie zwracać pełni zmienionym adres URL źródła obrazu. Na przykład użycie makra DDX_DHtml_Img_Src można ustawić właściwości src elementu obrazu do ciągu "niektóre ciekawe obrazów", gdy pobrać tej właściwości, Internet Explorer zwróci ciąg "res://d:\myapplication\myapp.exe/some% 20interesting % 20picture."  
-  
- Wymaga to makro [CDHtmlDialog::DDX_DHtml_ElementText](../../mfc/reference/cdhtmldialog-class.md#ddx_dhtml_elementtext) przy użyciu DISPID_IHTMLIMGELEMENT_SRC funkcję wysyłania identyfikatora.  
 
-  
-## <a name="see-also"></a>Zobacz też  
- [Klasa CDHtmlDialog](../../mfc/reference/cdhtmldialog-class.md)
+Pobiera lub pobiera nazwę obrazu lub klip wideo w dokumencie.
+
+```
+DDX_DHtml_Img_Src(
+    CDataExchange* dx,
+    LPCTSTR name,
+    CString& var)
+```
+
+#### <a name="parameters"></a>Parametry
+
+*DX*<br/>
+Wskaźnik do [CDataExchange](../../mfc/reference/cdataexchange-class.md) obiektu.
+
+*Nazwa*<br/>
+Wartość określona dla parametru Identyfikatora kontrolki HTML.
+
+*var*<br/>
+Wartość wymianie.
+
+## <a name="remarks"></a>Uwagi
+
+Pobrać właściwości src elementu obrazu za pomocą makra DDX_DHtml_Img_Src, obiekt obrazu programu Internet Explorer będzie zwracać pełni o zmienionym znaczeniu adres URL źródła obrazu. Na przykład jeśli makro DDX_DHtml_Img_Src jest używany do ustawiania właściwości src elementu obrazu do ciągu "niektóre ciekawe obraz", podczas pobierania tej właściwości program Internet Explorer zwróci ciąg "res://d:\myapplication\myapp.exe/some% 20interesting % 20picture."
+
+Wywołuje to makro [CDHtmlDialog::DDX_DHtml_ElementText](../../mfc/reference/cdhtmldialog-class.md#ddx_dhtml_elementtext) funkcji przy użyciu DISPID_IHTMLIMGELEMENT_SRC wysyłania identyfikatora.
+
+
+## <a name="see-also"></a>Zobacz też
+
+[Klasa CDHtmlDialog](../../mfc/reference/cdhtmldialog-class.md)

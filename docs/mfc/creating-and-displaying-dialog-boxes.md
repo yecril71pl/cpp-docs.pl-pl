@@ -18,25 +18,27 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f464efcc76d688ec753395876ebc0841ec4b2cfa
-ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
+ms.openlocfilehash: 437fb934e95ce527a77038d643e9cee86b6f1f2c
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/25/2018
-ms.locfileid: "36931076"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46387747"
 ---
 # <a name="creating-and-displaying-dialog-boxes"></a>Tworzenie i wyświetlanie okien dialogowych
-Tworzenie obiektu okna dialogowego jest fazach. Po pierwsze konstruowania obiektu okna dialogowego, a następnie utworzyć okno dialogowe. Modalne i Niemodalne okna dialogowe różni się nieco w procesie używany do tworzenia i wyświetlania ich. W poniższej tabeli przedstawiono sposób modalne i niemodalne okno dialogowe pola są zazwyczaj zbudowane i wyświetlane.  
-  
-### <a name="dialog-creation"></a>Tworzenie okna dialogowego  
-  
-|Typ okna dialogowego|Jak utworzyć go|  
-|-----------------|----------------------|  
-|[Niemodalny](../mfc/creating-modeless-dialog-boxes.md)|Utworzyć `CDialog`, następnie wywołaj `Create` funkcję elementu członkowskiego.|  
-|[Modalne](../mfc/creating-modal-dialog-boxes.md)|Utworzyć `CDialog`, następnie wywołaj `DoModal` funkcję elementu członkowskiego.|  
-  
- Można należy utworzyć użytkownika — okno dialogowe z [szablonu okna dialogowego w pamięci](../mfc/using-a-dialog-template-in-memory.md) że zostały wykonane, a nie z zasobów szablonu okna dialogowego. Jednak to zaawansowane tematu.  
-  
-## <a name="see-also"></a>Zobacz też  
- [Cykl życiowy okna dialogowego](../mfc/life-cycle-of-a-dialog-box.md)
+
+Tworzenie obiektu okna dialogowego jest fazach. Najpierw należy utworzyć obiektu okna dialogowego, a następnie utwórz okna dialogowego. Modalne i Niemodalne okna dialogowe różnią się nieco w procesie, używany do tworzenia i wyświetlania ich. W poniższej tabeli przedstawiono sposób modalne i Niemodalne okna dialogowego pola zwykle są zbudowane i wyświetlane.
+
+### <a name="dialog-creation"></a>Tworzenie okna dialogowego
+
+|Typ okna dialogowego|Jak utworzyć go|
+|-----------------|----------------------|
+|[Niemodalne](../mfc/creating-modeless-dialog-boxes.md)|Konstruowania `CDialog`, następnie wywołać `Create` funkcja elementu członkowskiego.|
+|[Modalne](../mfc/creating-modal-dialog-boxes.md)|Konstruowania `CDialog`, następnie wywołać `DoModal` funkcja elementu członkowskiego.|
+
+Jeśli chcesz, tworzenia dialogowym z [szablonu okna dialogowego w pamięci](../mfc/using-a-dialog-template-in-memory.md) , zostały wykonane, a nie z zasobu szablonu okna dialogowego. Jednak to zaawansowane tematu.
+
+## <a name="see-also"></a>Zobacz też
+
+[Cykl życiowy okna dialogowego](../mfc/life-cycle-of-a-dialog-box.md)
 

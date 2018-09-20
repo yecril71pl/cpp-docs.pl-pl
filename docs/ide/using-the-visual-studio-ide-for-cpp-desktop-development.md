@@ -14,12 +14,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a0678afc9d79499e4581feeca03b1a5bf9b7b963
-ms.sourcegitcommit: f7703076b850c717c33d72fb0755fbb2215c5ddc
+ms.openlocfilehash: 4aa276c0e9d97cd5b723499a21432290772a49a7
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/28/2018
-ms.locfileid: "43131309"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46390308"
 ---
 # <a name="using-the-visual-studio-ide-for-c-desktop-development"></a>Projektowania aplikacji w języku C++ w środowisku Visual Studio IDE
 
@@ -31,7 +31,7 @@ Jeśli jeszcze nie zainstalowano programu Visual Studio, nadszedł czas. Łącza
 
 Te przewodniki założono zainstalowanego programu Visual Studio i języka Visual C++ i składniki wymagane do tworzenia aplikacji pulpitu Windows. Przyjęto również założenie, że rozumiesz podstawy języka C++. Jeśli potrzebujesz dowiedzieć się, C++, Brak dostępnych wiele książek i zasobów sieci web. Jeden dobrym miejscem do rozpoczęcia jest [wprowadzenie](https://isocpp.org/get-started) strony witryny sieci Web, Standard C++ Foundation.
 
-Jeśli jeszcze nie zainstalowano programu Visual Studio, nadszedł czas. 
+Jeśli jeszcze nie zainstalowano programu Visual Studio, nadszedł czas.
 
 **Instalacja programu Visual Studio 2017**
 
@@ -39,9 +39,9 @@ Aby uzyskać program Visual Studio 2017, możesz ją pobrać z [pobieranie Visua
 
 **Instalacja programu Visual Studio 2015**
 
- Aby zainstalować program Visual Studio 2015, przejdź do [pobieranie starszych wersji programu Visual Studio](https://www.visualstudio.com/vs/older-downloads/). Uruchom program instalacyjny, a następnie wybierz **Instalacja niestandardowa** , a następnie wybierz składnik C++. 
+Aby zainstalować program Visual Studio 2015, przejdź do [pobieranie starszych wersji programu Visual Studio](https://www.visualstudio.com/vs/older-downloads/). Uruchom program instalacyjny, a następnie wybierz **Instalacja niestandardowa** , a następnie wybierz składnik C++.
 
- Ogólnie rzecz biorąc zdecydowanie zaleca się użycie programu Visual Studio 2017, nawet wtedy, gdy należy przeprowadzić kompilowanie kodu przy użyciu kompilatora Visual Studio 2015. Aby uzyskać więcej informacji, zobacz [Użyj natywnej wielowersyjności kodu w programie Visual Studio do kompilacji starych projektów](../porting/use-native-multi-targeting.md).
+Ogólnie rzecz biorąc zdecydowanie zaleca się użycie programu Visual Studio 2017, nawet wtedy, gdy należy przeprowadzić kompilowanie kodu przy użyciu kompilatora Visual Studio 2015. Aby uzyskać więcej informacji, zobacz [Użyj natywnej wielowersyjności kodu w programie Visual Studio do kompilacji starych projektów](../porting/use-native-multi-targeting.md).
 
 Po zakończeniu instalacji programu Visual Studio, jesteś gotowy kontynuować.
 

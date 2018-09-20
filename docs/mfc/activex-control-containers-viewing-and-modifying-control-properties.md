@@ -1,5 +1,5 @@
 ---
-title: 'Kontenery formantów ActiveX: Wyświetlanie i modyfikowanie właściwości kontrolki | Dokumentacja firmy Microsoft'
+title: 'Kontenery kontrolek ActiveX: Wyświetlanie i modyfikowanie właściwości kontrolki | Dokumentacja firmy Microsoft'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,36 +18,38 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ef443442cb19b9aaca82b74a0a5d8c72098d5cc2
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 9614ecfcd23418f8b0abc08622e8c272bb5548a7
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33340297"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46388826"
 ---
 # <a name="activex-control-containers-viewing-and-modifying-control-properties"></a>Kontenery kontrolek ActiveX: wyświetlanie i modyfikowanie właściwości kontrolki
-Po wstawieniu formantu ActiveX w projekcie jest przydatne do wyświetlania i zmieniania właściwości jest obsługiwana przez kontrolkę ActiveX. W tym artykule omówiono sposób to zrobić za pomocą edytora zasobów języka Visual C++.  
-  
- Jeśli aplikacja kontenera formantu ActiveX używa osadzonych formantów, można wyświetlać i modyfikować właściwości formantu w edytorze zasobów. Edytor zasobów służy także do ustawiania wartości właściwości w czasie projektowania. Edytor zasobów następnie automatycznie zapisuje te wartości w pliku zasobów projektu. Wszystkie wystąpienia kontrolki będzie miał zainicjowany do wartości tych właściwości.  
-  
- W tej procedurze założono, że włożono formantu do projektu. Aby uzyskać informacje, zobacz [kontenery formantów ActiveX: Wstawianie formantu do aplikacji kontenera formantów](../mfc/inserting-a-control-into-a-control-container-application.md).  
-  
- Pierwszym krokiem podczas przeglądania właściwości formantu jest można dodać wystąpienia formantu do projektu szablonu okna dialogowego.  
-  
-### <a name="to-view-the-properties-of-a-control"></a>Aby wyświetlić właściwości formantu  
-  
-1.  W widokach, otwórz **okna dialogowego** folderu.  
-  
-2.  Otwórz szablon okno główne okno dialogowe.  
-  
-3.  Wstaw formant ActiveX przy użyciu **Wstawianie formantu ActiveX** okno dialogowe. Aby uzyskać więcej informacji, zobacz [wyświetlanie i dodawanie formantów ActiveX do okna dialogowego](../windows/viewing-and-adding-activex-controls-to-a-dialog-box.md).  
-  
-4.  W oknie dialogowym Wybierz formantu ActiveX.  
-  
-5.  W oknie właściwości, kliknij przycisk **właściwości** przycisku.  
-  
- Użyj **właściwości** okno dialogowe do modyfikowania i testowania nowych właściwości natychmiast.  
-  
-## <a name="see-also"></a>Zobacz też  
- [Kontenery kontrolek ActiveX](../mfc/activex-control-containers.md)
+
+Po wstawieniu kontrolki ActiveX do projektu jest przydatny do wyświetlania i zmieniania właściwości jest obsługiwana przez kontrolkę ActiveX. W tym artykule omówiono sposób używania edytora zasobów Visual C++, aby to zrobić.
+
+Jeśli Twojej aplikacji kontenera kontrolek ActiveX używa formantów osadzone, należy można wyświetlać i modyfikować właściwości formantu znajduje się w edytorze zasobów. Edytor zasobów umożliwia również do ustawiania wartości właściwości w czasie projektowania. Edytor zasobów następnie automatycznie zapisuje te wartości w pliku zasobów projektu. Dowolne wystąpienie kontrolki będzie miał jego właściwości inicjowana na te wartości.
+
+W tej procedurze założono, że wstawiono formant do projektu. Aby uzyskać informacje, zobacz [kontenery kontrolek ActiveX: wstawianie kontrolki do aplikacji kontenera kontrolek](../mfc/inserting-a-control-into-a-control-container-application.md).
+
+Pierwszym krokiem podczas przeglądania właściwości formantu jest dodaje wystąpienie formantu do projektu szablonu okna dialogowego.
+
+### <a name="to-view-the-properties-of-a-control"></a>Aby wyświetlić właściwości formantu
+
+1. Otwórz w widoku zasobu **okna dialogowego** folderu.
+
+1. Otwórz szablon okno główne okno dialogowe.
+
+1. Wstaw kontrolkę ActiveX za pomocą **Wstawianie formantu ActiveX** okno dialogowe. Aby uzyskać więcej informacji, zobacz [wyświetlanie i dodawanie kontrolek ActiveX do okna dialogowego](../windows/viewing-and-adding-activex-controls-to-a-dialog-box.md).
+
+1. Zaznacz formant ActiveX w oknie dialogowym.
+
+1. W oknie dialogowym właściwości kliknij **właściwości** przycisku.
+
+Użyj **właściwości** okno dialogowe, aby zmodyfikować i jego natychmiastowe testowanie nowych właściwości.
+
+## <a name="see-also"></a>Zobacz też
+
+[Kontenery kontrolek ActiveX](../mfc/activex-control-containers.md)
 

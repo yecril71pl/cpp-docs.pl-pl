@@ -16,39 +16,43 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8da8ca089a34f6e763ab6dfdb9bea8467d6316f1
-ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
+ms.openlocfilehash: 0509f7e344e29397aa1dac592d1a898c9d9cdf60
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "42465185"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46395502"
 ---
 # <a name="readcr8"></a>__readcr8
-**Microsoft Specific**  
-  
- Odczytuje rejestru CR8 i zwraca jego wartość.  
-  
-## <a name="syntax"></a>Składnia  
-  
-```  
-unsigned __int64 __readcr8(void);  
-```  
-  
-## <a name="return-value"></a>Wartość zwracana  
- Wartość rejestru CR8.  
-  
-## <a name="requirements"></a>Wymagania  
-  
-|Wewnętrzne|Architektura|  
-|---------------|------------------|  
-|`__readcr8`|X64|  
-  
- **Plik nagłówkowy** \<intrin.h >  
-  
-## <a name="remarks"></a>Uwagi  
- Tym wewnętrzna jest dostępna tylko w trybie jądra, a procedura jest dostępna jako funkcja wewnętrzna tylko.  
-  
-**END specyficzny dla Microsoft**  
-  
-## <a name="see-also"></a>Zobacz też  
- [Funkcje wewnętrzne kompilatora](../intrinsics/compiler-intrinsics.md)
+
+**Microsoft Specific**
+
+Odczytuje rejestru CR8 i zwraca jego wartość.
+
+## <a name="syntax"></a>Składnia
+
+```
+unsigned __int64 __readcr8(void);
+```
+
+## <a name="return-value"></a>Wartość zwracana
+
+Wartość rejestru CR8.
+
+## <a name="requirements"></a>Wymagania
+
+|Wewnętrzne|Architektura|
+|---------------|------------------|
+|`__readcr8`|X64|
+
+**Plik nagłówkowy** \<intrin.h >
+
+## <a name="remarks"></a>Uwagi
+
+Tym wewnętrzna jest dostępna tylko w trybie jądra, a procedura jest dostępna jako funkcja wewnętrzna tylko.
+
+**END specyficzny dla Microsoft**
+
+## <a name="see-also"></a>Zobacz też
+
+[Funkcje wewnętrzne kompilatora](../intrinsics/compiler-intrinsics.md)

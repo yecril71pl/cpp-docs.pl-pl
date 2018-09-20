@@ -126,12 +126,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 51970f99a05b587bcdbccc5d24ad21b036d87f74
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: 856b704b25bed6d350d4e42cd08a138ad8fd8f8f
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45710817"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46384575"
 ---
 # <a name="ctaskdialog-class"></a>Klasa CTaskDialog
 
@@ -377,7 +377,7 @@ CTaskDialog(
     int nTaskDialogOptions = TDF_ENABLE_HYPERLINKS | TDF_USE_COMMAND_LINKS,
     const CString& strFooter = _T(""));
 
- 
+
 CTaskDialog(
     const CString& strContent,
     const CString& strMainInstruction,
@@ -1630,7 +1630,7 @@ Wartości *wParam* i *lParam* są zależne od szczegółowy komunikat o błędzi
 
 ## <a name="see-also"></a>Zobacz też
 
-[Klasy](../../mfc/reference/mfc-classes.md)  
-[Klasa CObject](../../mfc/reference/cobject-class.md)  
-[Wykres hierarchii](../../mfc/hierarchy-chart.md)  
-[Przewodnik: dodawanie obiektu CTaskDialog do aplikacji](../../mfc/walkthrough-adding-a-ctaskdialog-to-an-application.md)  
+[Klasy](../../mfc/reference/mfc-classes.md)<br/>
+[Klasa CObject](../../mfc/reference/cobject-class.md)<br/>
+[Wykres hierarchii](../../mfc/hierarchy-chart.md)<br/>
+[Przewodnik: dodawanie obiektu CTaskDialog do aplikacji](../../mfc/walkthrough-adding-a-ctaskdialog-to-an-application.md)

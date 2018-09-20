@@ -20,118 +20,120 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: 69e0ffcb9b9c48de152a383b4b9a3f6edbe99f42
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 26b67cdce8d52cba7d02f182f0582e20d0303c33
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33108334"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46373311"
 ---
 # <a name="delegates-and-events"></a>Delegaci i zdarzenia
-Sposób, aby zadeklarować delegaci i zdarzenia został zmieniony z rozszerzeń zarządzanych dla języka C++ dla Visual C++.  
-  
- Podwójne podkreślenie nie jest już potrzebne, jak pokazano w poniższym przykładzie. Przykładowy kod w zarządzanych rozszerzeń tutaj:  
-  
-```  
-__delegate void ClickEventHandler(int, double);  
-__delegate void DblClickEventHandler(String*);  
-  
-__gc class EventSource {  
-   __event ClickEventHandler* OnClick;    
-   __event DblClickEventHandler* OnDblClick;    
-};  
-```  
-  
- Ten sam kod w nowej składni wygląda następująco:  
-  
-```  
-delegate void ClickEventHandler( int, double );  
-delegate void DblClickEventHandler( String^ );  
-  
-ref class EventSource {  
-   event ClickEventHandler^ OnClick;   
-   event DblClickEventHandler^ OnDblClick;   
-};  
-```  
-  
- Zdarzenia (i delegatów) są typów referencyjnych, czyli w nowej składni z powodu użycia hat (`^`).  Zdarzenia obsługują składni jawnej deklaracji i mają trivial postać pokazaną w powyższym kodzie. W formularzu jawne użytkownik określi `add`, `raise`, i `remove` metody skojarzone ze zdarzeniem. (Tylko `add` i `remove` metody są wymagane; `raise` jest opcjonalne.)  
-  
- W obszarze rozszerzeń zarządzanych, jeśli podasz tych metod, nie zostaną również deklaracji zdarzenia jawne, ale musi określić nazwę zdarzenia, które nie jest obecny. Każda metoda jest określone w formie `add_EventName`, `raise_EventName`, i `remove_EventName`, jak w poniższym przykładzie pobierana z specyfikacji rozszerzeń zarządzanych:  
-  
-```  
-// explicit implementations of add, remove, raise  
-public __delegate void f(int);  
-public __gc struct E {  
-   f* _E;  
-public:  
-   E() { _E = 0; }  
-  
-   __event void add_E1(f* d) { _E += d; }  
-  
-   static void Go() {  
-      E* pE = new E;  
-      pE->E1 += new f(pE, &E::handler);  
-      pE->E1(17);   
-      pE->E1 -= new f(pE, &E::handler);  
-      pE->E1(17);   
-   }  
-  
-private:  
-   __event void raise_E1(int i) {  
-      if (_E)  
-         _E(i);  
-   }  
-  
-protected:  
-   __event void remove_E1(f* d) {  
-      _E -= d;  
-   }  
-};  
-```  
-  
- Nowej składni upraszcza deklaracji, jak przedstawiono następujące tłumaczenia. Zdarzenie określa dwa lub trzy metody ujęta w parze nawiasy i umieścić bezpośrednio po deklaracji zdarzenia i jego typ delegowany skojarzony, jak pokazano poniżej:  
-  
-```  
-public delegate void f( int );  
-public ref struct E {  
-private:  
-   f^ _E; // delegates are also reference types  
-  
-public:  
-   E() {  // note the replacement of 0 with nullptr!  
-      _E = nullptr;   
-   }  
-  
-   // the new aggregate syntax of an explicit event declaration  
-   event f^ E1 {  
-   public:  
-      void add( f^ d ) {  
-         _E += d;  
-      }  
-  
-   protected:  
-      void remove( f^ d ) {  
-         _E -= d;  
-      }  
-  
-   private:  
-      void raise( int i ) {  
-         if ( _E )  
-            _E( i );  
-      }  
-   }  
-  
-   static void Go() {  
-      E^ pE = gcnew E;  
-      pE->E1 += gcnew f( pE, &E::handler );  
-      pE->E1( 17 );   
-      pE->E1 -= gcnew f( pE, &E::handler );  
-      pE->E1( 17 );   
-   }  
-};  
-```  
-  
-## <a name="see-also"></a>Zobacz też  
- [Deklaracje członków w obrębie klasy lub interfejsu (C + +/ CLI)](../dotnet/member-declarations-within-a-class-or-interface-cpp-cli.md)   
- [Delegat (C++ Component Extensions)](../windows/delegate-cpp-component-extensions.md)   
- [event](../windows/event-cpp-component-extensions.md)
+
+Sposób, aby zadeklarować delegaci i zdarzenia zmienił się z zarządzanych rozszerzeń dla C++ do Visual C++.
+
+Podwójnego podkreślenia nie jest potrzebna, jak pokazano w następującym przykładzie. Oto przykładowy kod w zarządzanych rozszerzeń:
+
+```
+__delegate void ClickEventHandler(int, double);
+__delegate void DblClickEventHandler(String*);
+
+__gc class EventSource {
+   __event ClickEventHandler* OnClick;
+   __event DblClickEventHandler* OnDblClick;
+};
+```
+
+Ten sam kod w nowej składni wygląda następująco:
+
+```
+delegate void ClickEventHandler( int, double );
+delegate void DblClickEventHandler( String^ );
+
+ref class EventSource {
+   event ClickEventHandler^ OnClick;
+   event DblClickEventHandler^ OnDblClick;
+};
+```
+
+Zdarzenia (i delegaci) są typami odwołań, który jest otwartym w nowej składni z powodu użycia hat (`^`).  Zdarzenia obsługują składni jawnej deklaracji i prosta formularza, jak pokazano w poprzednim kodzie. W formularzu jawne użytkownik Określa `add`, `raise`, i `remove` metody skojarzone ze zdarzeniem. (Tylko `add` i `remove` metody są wymagane; `raise` jest opcjonalne.)
+
+Jeśli podasz te metody, w ramach zarządzanych rozszerzeń nie udostępniają deklaracji jawne zdarzenia, ale musi określić nazwę zdarzenia, który nie jest obecny. Każda metoda jest określony w formie `add_EventName`, `raise_EventName`, i `remove_EventName`, jak w poniższym przykładzie pobierana z specyfikacji zarządzanych rozszerzeń:
+
+```
+// explicit implementations of add, remove, raise
+public __delegate void f(int);
+public __gc struct E {
+   f* _E;
+public:
+   E() { _E = 0; }
+
+   __event void add_E1(f* d) { _E += d; }
+
+   static void Go() {
+      E* pE = new E;
+      pE->E1 += new f(pE, &E::handler);
+      pE->E1(17);
+      pE->E1 -= new f(pE, &E::handler);
+      pE->E1(17);
+   }
+
+private:
+   __event void raise_E1(int i) {
+      if (_E)
+         _E(i);
+   }
+
+protected:
+   __event void remove_E1(f* d) {
+      _E -= d;
+   }
+};
+```
+
+Nowa składnia upraszcza deklaracji, tak jak pokazano w poniższej tłumaczenia. Określa zdarzenie, dwa lub trzy metody ujęte w parę nawiasów klamrowych i umieszczane bezpośrednio po deklaracji zdarzenia i jego typ delegata skojarzonego, jak pokazano poniżej:
+
+```
+public delegate void f( int );
+public ref struct E {
+private:
+   f^ _E; // delegates are also reference types
+
+public:
+   E() {  // note the replacement of 0 with nullptr!
+      _E = nullptr;
+   }
+
+   // the new aggregate syntax of an explicit event declaration
+   event f^ E1 {
+   public:
+      void add( f^ d ) {
+         _E += d;
+      }
+
+   protected:
+      void remove( f^ d ) {
+         _E -= d;
+      }
+
+   private:
+      void raise( int i ) {
+         if ( _E )
+            _E( i );
+      }
+   }
+
+   static void Go() {
+      E^ pE = gcnew E;
+      pE->E1 += gcnew f( pE, &E::handler );
+      pE->E1( 17 );
+      pE->E1 -= gcnew f( pE, &E::handler );
+      pE->E1( 17 );
+   }
+};
+```
+
+## <a name="see-also"></a>Zobacz też
+
+[Deklaracje składowych w obrębie klasy lub interfejsu (C++/CLI)](../dotnet/member-declarations-within-a-class-or-interface-cpp-cli.md)<br/>
+[delegate (C++ Component Extensions)](../windows/delegate-cpp-component-extensions.md)<br/>
+[event](../windows/event-cpp-component-extensions.md)

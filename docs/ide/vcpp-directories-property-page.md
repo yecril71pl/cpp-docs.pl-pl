@@ -23,91 +23,91 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3acaccff2e2764f4fd7f6f4815f5721f0ba845a3
-ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
+ms.openlocfilehash: 238f26e8955d4be676c3bf37f7cc8b2d842b3de9
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "33336085"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46394455"
 ---
-# <a name="vc-directories-property-page-windows"></a>VC ++ strona właściwości katalogów (system Windows)
+# <a name="vc-directories-property-page-windows"></a>VC ++ Directories Property Page (Windows)
 
-Użyj tej strony właściwości stwierdzić, które katalogi do użycia podczas tworzenia aktualnie wybrany projekt programu Visual Studio. Aby ustawić katalogów dla wielu projektów w rozwiązaniu, użyj arkusza właściwości niestandardowej, zgodnie z opisem w [tworzenia konfiguracji wielokrotnego użytku właściwości](working-with-project-properties.md#bkmkPropertySheets).
+Użyj tej strony właściwości stwierdzić programu Visual Studio, które katalogi do użycia podczas tworzenia projektu aktualnie wybrany. Aby ustawić katalogi dla wielu projektów w rozwiązaniu, użyj arkusza właściwości niestandardowej, zgodnie z opisem w [tworzenia konfiguracji właściwości wielokrotnego użytku](working-with-project-properties.md#bkmkPropertySheets).
 
-Dla wersji systemu Linux na tej stronie, zobacz [katalogi VC ++ (Linux C++)](../linux/prop-pages/directories-linux.md).   
+Wersja systemu Linux na tej stronie, zobacz [katalogi VC ++ (Linux C++)](../linux/prop-pages/directories-linux.md).
 
-Aby uzyskać dostęp do **katalogi VC ++** strony właściwości:
+Aby uzyskać dostęp do **katalogi VC ++** strona właściwości:
 
-1. Jeśli **Eksploratora rozwiązań** okna nie jest widoczne, następnie w menu głównym wybierz **widoku** > **Eksploratora rozwiązań**.
+1. Jeśli **Eksploratora rozwiązań** okno nie jest widoczne, następnie w menu głównym wybierz **widoku** > **Eksploratora rozwiązań**.
 1. Kliknij prawym przyciskiem myszy węzeł projektu (nie rozwiązanie najwyższego poziomu) i wybierz polecenie **właściwości**.
-1. W lewym okienku **strony właściwości** okno dialogowe, wybierz opcję **właściwości konfiguracji** > **katalogi VC ++**.  
+1. W okienku po lewej stronie **stron właściwości** okno dialogowe, wybierz opcję **właściwości konfiguracji** > **katalogi VC ++**.
 
-Katalogi VC ++ właściwości stosowane do projektu, nie węzła rozwiązania najwyższego poziomu. Jeśli nie widzisz **katalogi VC ++** w obszarze **właściwości konfiguracji**, wybierz węzeł projektu C++ w **Eksploratora rozwiązań** okno: 
+Katalogi VC ++ właściwości mają zastosowanie do projektu, nie węzła najwyższego poziomu rozwiązania. Jeśli nie widzisz **katalogi VC ++** w obszarze **właściwości konfiguracji**, wybierz węzeł projektu C++ w **Eksploratora rozwiązań** okna:
 
 ![Wybierz węzeł projektu](media/vcppdir.png "wybierz węzeł projektu, aby wyświetlić właściwości katalogów VC ++")
 
-Należy pamiętać, że **katalogi VC ++** strony właściwości dla projektów i platform wygląda inaczej. Aby uzyskać informacje specyficzne dla projektów Linux C++, zobacz [katalogi VC ++ (Linux C++)](../linux/prop-pages/directories-linux.md). 
- 
-Jeśli nie masz doświadczenia z *właściwości projektu* w programie Visual Studio, może być przydatne do odczytu pierwszego [Praca z właściwościami projektu](working-with-project-properties.md). 
- 
-Domyślne ustawienia **katalogi VC ++** właściwości są zależne od typu projektu. Dla projektów pulpitu obejmują one lokalizacje narzędzi C++ dla określonego zestawu narzędzi platformy i lokalizacji zestawu Windows SDK. Możesz zmienić **zestaw narzędzi platformy** i **wersji zestawu Windows SDK** na **właściwości konfiguracji** > **ogólne** Strona. 
+Należy pamiętać, że **katalogi VC ++** strony właściwości dla projektów dla wielu platform wygląda inaczej. Aby uzyskać informacje specyficzne dla projektów języka Linux C++, zobacz [katalogi VC ++ (Linux C++)](../linux/prop-pages/directories-linux.md).
+
+Jeśli nie jesteś zaznajomiony z *właściwości projektu* w programie Visual Studio, może okazać się przydatne do odczytu pierwszy [Praca z właściwościami projektu](working-with-project-properties.md).
+
+Domyślne ustawienia dla **katalogi VC ++** właściwości zależą od typu projektu. Projekty pulpitu zawierają lokalizacje narzędzi języka C++ dla określonego zestawu narzędzi platformy i lokalizacji zestawu Windows SDK. Możesz zmienić **zestawu narzędzi platformy** i **wersja zestawu Windows SDK** na **właściwości konfiguracji** > **ogólne** Strona.
 
 Aby wyświetlić wartości na żadnym z katalogów:
 
 1. Wybierz jedną z właściwości w **katalogi VC ++** strony. Na przykład wybrać **katalogi bibliotek**.
 1. Wybierz przycisk strzałki w dół na końcu pola wartości właściwości.
-1. Z menu rozwijanego wybierz **Edytuj**.
+1. W menu rozwijanym wybierz **Edytuj**.
 
-![Edytuj katalogi bibliotek](media/vcppdir_libdir_edit.png "okna dialogowego, aby edytować ścieżki biblioteki")
+![Edytuj katalogi bibliotek](media/vcppdir_libdir_edit.png "okno dialogowe Edytowanie ścieżki biblioteki")
 
-Pojawi się okno dialogowe następująco: 
+Teraz pojawi się okno dialogowe następująco:
 
-![Pokaż katalogi bibliotek](media/vcppdir_libdir.png "okna dialogowego, aby dodać lub usunąć ścieżki biblioteki")
+![Pokaż katalogi bibliotek](media/vcppdir_libdir.png "okno dialogowe Dodawanie lub usuwanie ścieżki biblioteki")
 
-To okno dialogowe służy do wyświetlenia bieżącego katalogów. Jednak jeśli chcesz zmienić lub dodać katalog jest lepiej jest użyć **Menedżer właściwości** Aby utworzyć arkusz właściwości lub zmodyfikować domyślny arkusz właściwości użytkownika. Aby uzyskać więcej informacji, zobacz [tworzenia konfiguracji wielokrotnego użytku właściwości](working-with-project-properties.md#bkmkPropertySheets).
+Użyj tego okna dialogowego, aby wyświetlić bieżący katalog. Jednakże, jeśli chcesz zmienić lub dodać katalog go lepiej jest używać **Menedżer właściwości** utworzyć arkusz właściwości lub zmodyfikować domyślny arkusz właściwości użytkownika. Aby uzyskać więcej informacji, zobacz [tworzenia konfiguracji właściwości wielokrotnego użytku](working-with-project-properties.md#bkmkPropertySheets).
 
-Jak pokazano powyżej, podano wiele ścieżek dziedziczone jako makr.  Aby sprawdzić bieżącą wartość makra, wybierz **makra** przycisk w prawym dolnym rogu okna dialogowego. Należy pamiętać, że wiele makra są zależne od typu konfiguracji. Makra kompilacji debugowania może zwrócić z inną ścieżką niż sam makra w kompilacji wydania. 
+Jak wspomniano powyżej, jest wiele ścieżek dziedziczone wyrażonych za pomocą makra.  Aby zbadać bieżącą wartość makra, wybierz opcję **makra** przycisk w prawym dolnym rogu okna dialogowego. Należy pamiętać, że wiele makra są zależne od typu konfiguracji. Makra w kompilacji debugowania może zwrócić z inną ścieżką niż sam makra w kompilacji wydania.
 
-Można wyszukiwać dopasowania częściowej lub pełnej w polu edycji. Na poniższej ilustracji przedstawiono wszystkie makra zawierające ciąg "WindowsSDK", a także pokazanie bieżącej ścieżki, która daje w wyniku makra:
+Możesz wyszukać częściowe lub całkowite dopasowań w polu edycji. Na poniższej ilustracji przedstawiono wszystkie makra, które zawierają ciąg "WindowsSDK" i zawiera również bieżącą ścieżkę, która daje w wyniku makra:
 
-![Zobacz wartości makra](media/vcppdir_libdir_macros.png "okna dialogowego, aby edytować makra")
+![Zobacz makra wartości](media/vcppdir_libdir_macros.png "okno dialogowe, aby edytować makra")
 
-Uwaga: Lista jest wypełniana podczas pisania. Nie naciśnij **Enter**.
+Uwaga: Lista jest wypełniana podczas wpisywania. Nie naciśnij **Enter**.
 
-Aby uzyskać więcej informacji na temat makr i dlaczego należy ich używać zamiast ustalony ścieżek, jeśli to możliwe, zobacz [Praca z właściwościami projektu](../ide/working-with-project-properties.md#bkmkPropertiesVersusMacros). 
+Aby uzyskać więcej informacji na temat makr i dlaczego należy ich używać zamiast zakodowanych ścieżek, jeśli to możliwe, zobacz [Praca z właściwościami projektu](../ide/working-with-project-properties.md#bkmkPropertiesVersusMacros).
 
-Lista często używane makra, zobacz [wspólnej makra dla poleceń kompilacji oraz właściwości](https://docs.microsoft.com/en-us/cpp/ide/common-macros-for-build-commands-and-properties).
+Aby uzyskać listę często używanych makr, zobacz [typowe makra dla poleceń i właściwości kompilacji](https://docs.microsoft.com/en-us/cpp/ide/common-macros-for-build-commands-and-properties).
 
-Można zdefiniować własny makra na dwa sposoby:
--   Ustaw zmienne środowiskowe w wierszu polecenia dewelopera. Wszystkie zmienne środowiskowe są traktowane jako MSBuild właściwości/makra.
--   Definiowanie makr użytkownika w pliku .props. Aby uzyskać więcej informacji, zobacz [makra strony właściwości](working-with-project-properties.md#bkmkPropertiesVersusMacros). 
+Można zdefiniować własne makra na dwa sposoby:
+-   Ustawianie zmiennych środowiskowych w wierszu polecenia dla deweloperów. Wszystkie zmienne środowiskowe są traktowane jako makra i właściwości programu MSBuild.
+-   Definiowanie makr użytkownika w pliku .props. Aby uzyskać więcej informacji, zobacz [makra strony właściwości](working-with-project-properties.md#bkmkPropertiesVersusMacros).
 
-Aby uzyskać więcej informacji, zobacz wpisy na blogu: [katalogi VC ++](http://blogs.msdn.com/b/vsproject/archive/2009/07/07/vc-directories.aspx), [właściwości dziedziczone i arkusze właściwości](http://blogs.msdn.com/b/vsproject/archive/2009/06/23/inherited-properties-and-property-sheets.aspx), i [programu Visual Studio 2010 C++ projektu przewodnik uaktualniania](http://blogs.msdn.com/b/vcblog/archive/2010/03/02/visual-studio-2010-c-project-upgrade-guide.aspx).  
-  
+Aby uzyskać więcej informacji, zobacz te Posty na blogu: [katalogi VC ++](http://blogs.msdn.com/b/vsproject/archive/2009/07/07/vc-directories.aspx), [właściwości dziedziczone i arkusze właściwości](http://blogs.msdn.com/b/vsproject/archive/2009/06/23/inherited-properties-and-property-sheets.aspx), i [Visual Studio 2010 C++ przewodnik aktualizacji projektu](http://blogs.msdn.com/b/vcblog/archive/2010/03/02/visual-studio-2010-c-project-upgrade-guide.aspx).
+
 ## <a name="directory-types"></a>Typy katalogów
 
-Można również określić inne katalogi, jak poniżej.  
-  
+Można również określić inne katalogi, jak poniżej.
+
 **Katalogi plików wykonywalnych**<br/>
-Katalogi, w których należy szukać plików wykonywalnych. Odpowiada **ścieżki** zmiennej środowiskowej.
+Katalogi, w których należy szukać plików wykonywalnych. Odnosi się do **ścieżki** zmiennej środowiskowej.
 
-**Dołącz katalogi**<br/>
-Katalogi, w których należy szukać dołączanych plików, do których istnieją odwołania w kodzie źródłowym. Odpowiada **INCLUDE** zmiennej środowiskowej.
+**Katalogi plików nagłówkowych**<br/>
+Katalogi, w których należy szukać dołączanych plików, do których istnieją odwołania w kodzie źródłowym. Odnosi się do **INCLUDE** zmiennej środowiskowej.
 
-**Odwołanie do katalogów**<br/>
- Katalogi wyszukiwania zestawów i modułów (metadanymi) pliki, których istnieją odwołania w kodzie źródłowym przez [#using](../preprocessor/hash-using-directive-cpp.md) dyrektywy. Odpowiada **LIBPATH** zmiennej środowiskowej.
+**Katalogi odwołań**<br/>
+Katalogi, w których należy szukać zestawów i pliki modułów (metadane), które są określone w kodzie źródłowym, [#using](../preprocessor/hash-using-directive-cpp.md) dyrektywy. Odnosi się do **LIBPATH** zmiennej środowiskowej.
 
 **Katalogi bibliotek**<br/>
-Katalogi, w których należy szukać plików biblioteki (.lib); obejmują biblioteki wykonywalne. Odpowiada **LIB** zmiennej środowiskowej. To ustawienie nie ma zastosowania do plików .obj; Aby utworzyć łącze do pliku .obj na **właściwości konfiguracji** > **konsolidatora** > **ogólne** strony właściwości, wybierz  **Dodatkowe zależności biblioteki** , a następnie określ ścieżkę względną pliku. Aby uzyskać więcej informacji, zobacz [strony właściwości konsolidatora](../ide/linker-property-pages.md).
+Katalogi, w których należy szukać plików biblioteki (.lib); obejmują biblioteki wykonywalne. Odnosi się do **LIB** zmiennej środowiskowej. To ustawienie nie ma zastosowania do plików .obj; Aby utworzyć łącze do pliku .obj, na **właściwości konfiguracji** > **konsolidatora** > **ogólne** strony właściwości, wybierz opcję  **Dodatkowe zależności biblioteki** , a następnie określ względną ścieżkę pliku. Aby uzyskać więcej informacji, zobacz [strony właściwości konsolidatora](../ide/linker-property-pages.md).
 
-**Katalogi bibliotek WinRT**<br/>
-Katalogi wyszukiwania plików bibliotek WinRT do użycia w aplikacjach systemu Windows platformy Uniwersalnej. 
+**Katalogi WinRT biblioteki**<br/>
+Katalogi do wyszukiwania plików bibliotek WinRT do wykorzystania w aplikacjach platformy uniwersalnej Windows (UWP).
 
 **Katalogi źródłowe**<br/>
 Katalogi, w których należy szukać plików źródłowych dla technologii IntelliSense.
 
 **Wyklucz katalogi**<br/>
-Przed każdym kompilacji programu Visual Studio wysyła zapytanie do sygnatury czasowej we wszystkich plikach w celu ustalenia, czy dowolne został zmodyfikowany od czasu poprzedniej kompilacji. Jeśli projekt ma duże bibliotek stabilna, możesz potencjalnie przyspieszyć czasy kompilacji wyłączając te katalogi z wyboru sygnatury czasowej.
+Przed każdym kompilacji programu Visual Studio wysyła zapytanie do sygnatury czasowej na wszystkie pliki w celu określenia, czy dowolne zostały zmienione od poprzedniej kompilacji. Jeżeli projekt zawiera duże biblioteki stabilny, możesz potencjalnie przyspieszyć czasy kompilacji poprzez wykluczenie tych katalogów z wyboru sygnatury czasowej.
 
 ## <a name="sharing-the-settings"></a>Współdzielenie ustawień
 

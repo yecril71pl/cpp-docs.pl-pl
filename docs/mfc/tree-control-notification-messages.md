@@ -1,5 +1,5 @@
 ---
-title: Komunikaty powiadomień dotyczących formantu drzewa | Dokumentacja firmy Microsoft
+title: Komunikaty powiadomień dotyczących kontrolki drzewa | Dokumentacja firmy Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,32 +18,34 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 92035d3f1a20a0fd9cc0c7b95d7238ef014033da
-ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
+ms.openlocfilehash: 07911dec25bf9d6b80f025e2f3738e3d98ffd2cb
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/26/2018
-ms.locfileid: "36950970"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46390750"
 ---
 # <a name="tree-control-notification-messages"></a>Komunikaty powiadomień dotyczących kontrolki drzewa
-Formant drzewa ([CTreeCtrl](../mfc/reference/ctreectrl-class.md)) wysyła następujące komunikaty powiadomień w postaci wiadomości WM_NOTIFY:  
-  
-|Komunikat z powiadomieniem|Opis|  
-|--------------------------|-----------------|  
-|TVN_BEGINDRAG|Sygnalizuje uruchomienia operacji przeciągania i upuszczania|  
-|TVN_BEGINLABELEDIT|Sygnalizuje początek Edytowanie etykiet w miejscu|  
-|TVN_BEGINRDRAG|Sygnalizuje uruchomienia operacji przeciągania i upuszczania, za pomocą prawego przycisku myszy|  
-|TVN_DELETEITEM|Sygnały usunięcia określonego elementu|  
-|TVN_ENDLABELEDIT|Sygnalizuje koniec Edytowanie etykiet|  
-|TVN_GETDISPINFO|Żąda informacji, że drzewie wymaga, aby wyświetlić elementy|  
-|TVN_ITEMEXPANDED|Sygnały, że listy elementów podrzędnych elementu nadrzędnego został rozwinięte lub zwinięte|  
-|TVN_ITEMEXPANDING|Sygnalizuje, że można rozwinięte lub zwinięte listy elementów podrzędnych elementu nadrzędnego|  
-|TVN_KEYDOWN|Sygnały zdarzenia klawiatury|  
-|TVN_SELCHANGED|Sygnalizuje, że zaznaczenie zostało zmienione z jednego elementu na inny|  
-|TVN_SELCHANGING|Sygnalizuje, że zaznaczenie zostanie zmieniony z jednego elementu na inny|  
-|TVN_SETDISPINFO|Powiadomienie, aby zaktualizować informacje dla elementu|  
-  
-## <a name="see-also"></a>Zobacz też  
- [Korzystanie z CTreeCtrl](../mfc/using-ctreectrl.md)   
- [Kontrolki](../mfc/controls-mfc.md)
+
+Kontrolka drzewa ([CTreeCtrl](../mfc/reference/ctreectrl-class.md)) wysyła następujące komunikaty powiadomień w postaci wiadomości WM_NOTIFY:
+
+|Komunikat z powiadomieniem|Opis|
+|--------------------------|-----------------|
+|TVN_BEGINDRAG|Sygnalizuje rozpoczęcia operacji przeciągania i upuszczania|
+|TVN_BEGINLABELEDIT|Sygnalizuje początek Edytowanie etykiet w miejscu|
+|TVN_BEGINRDRAG|Sygnalizuje rozpoczęcia operacji przeciągania i upuszczania, za pomocą prawego przycisku myszy|
+|TVN_DELETEITEM|Sygnalizuje usunięcie określonego elementu|
+|TVN_ENDLABELEDIT|Sygnalizuje koniec Edytowanie etykiet|
+|TVN_GETDISPINFO|Żąda informacji, że kontrolka drzewa wymaga, aby wyświetlić element|
+|TVN_ITEMEXPANDED|Sygnały, że listy elementów podrzędnych elementu nadrzędnego została rozwinięta czy zwinięta|
+|TVN_ITEMEXPANDING|Sygnalizuje, że chcesz być rozwijane czy zwijane listy elementów podrzędnych elementu nadrzędnego|
+|TVN_KEYDOWN|Sygnalizuje zdarzenie|
+|TVN_SELCHANGED|Sygnalizuje, że zaznaczenie zostało zmienione z jednego elementu do innego|
+|TVN_SELCHANGING|Sygnalizuje, że zaznaczenie zostanie zmieniony z jednego elementu do innego|
+|TVN_SETDISPINFO|Powiadomienie, aby zaktualizować informacje dla elementu|
+
+## <a name="see-also"></a>Zobacz też
+
+[Korzystanie z CTreeCtrl](../mfc/using-ctreectrl.md)<br/>
+[Kontrolki](../mfc/controls-mfc.md)
 

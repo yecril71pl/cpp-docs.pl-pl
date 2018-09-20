@@ -18,38 +18,40 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 991848e9b5b78ad960fb8ed0bdf09dd56db47e2c
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 6013caa79e21a305ba5ff8ad6266e960bb21504a
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33345544"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46395248"
 ---
 # <a name="exceptions-ole-exceptions"></a>Wyjątki: wyjątki OLE
-Techniki i urządzenia do obsługi wyjątków w OLE są takie same jak do obsługi innych wyjątków. Aby uzyskać więcej informacji na temat obsługi wyjątków, zobacz artykuł [Obsługa wyjątków języka C++](../cpp/cpp-exception-handling.md).  
-  
- Wszystkie obiekty wyjątków są uzyskiwane z abstrakcyjna klasa podstawowa `CException`. Obsługa wyjątków OLE MFC zawiera dwie klasy:  
-  
--   [COleException](../mfc/reference/coleexception-class.md) obsługi ogólne wyjątki OLE.  
-  
--   [COleDispatchException](../mfc/reference/coledispatchexception-class.md) do generowania i obsługa OLE wysyłania wyjątków (automatyzacji).  
-  
- Różnica między te dwie klasy jest ilość informacji stanowią i gdzie są używane. `COleException` ma element członkowski danych publicznych, który zawiera kod stanu OLE dla wyjątku. `COleDispatchException` dostarcza więcej informacji, takie jak następujące:  
-  
--   Kod błędu specyficzne dla aplikacji  
-  
--   Opis błędu, takie jak "Zapełniony dysk"  
-  
--   Kontekst pomocy używaną przez aplikację do znajdują się dodatkowe informacje dla użytkownika  
-  
--   Nazwa pliku pomocy aplikacji  
-  
--   Nazwa aplikacji, która wygenerowała wyjątek  
-  
- `COleDispatchException` zawiera więcej informacji, dzięki czemu można z produktami, takich jak Microsoft Visual Basic. Opis błędu ustne mogą być używane w oknie komunikatu lub innych powiadomień; informacje pomocy można pomóc użytkownikowi w odpowiedzi na warunki, które spowodowało wyjątek.  
-  
- Dwie funkcje globalne odpowiadają dwie klasy wyjątków OLE: [afxthrowoleexception —](../mfc/reference/exception-processing.md#afxthrowoleexception) i [afxthrowoledispatchexception —](../mfc/reference/exception-processing.md#afxthrowoledispatchexception). Służą one do throw ogólne wyjątki OLE i wyjątki wysyłania OLE, odpowiednio.  
-  
-## <a name="see-also"></a>Zobacz też  
- [Obsługa wyjątków](../mfc/exception-handling-in-mfc.md)
+
+Techniki i funkcje służące do obsługi wyjątków w OLE są takie same jak w przypadku obsługi innych wyjątków. Aby uzyskać więcej informacji na temat obsługi wyjątków, zobacz artykuł [Obsługa wyjątków języka C++](../cpp/cpp-exception-handling.md).
+
+Wszystkie obiekty wyjątków są uzyskiwane z abstrakcyjna klasa bazowa `CException`. Biblioteka MFC zawiera dwie klasy do obsługi wyjątki OLE:
+
+- [COleException](../mfc/reference/coleexception-class.md) obsługę ogólne wyjątki OLE.
+
+- [COleDispatchException](../mfc/reference/coledispatchexception-class.md) dla generowania i obsługa OLE wysyłania wyjątków (automation).
+
+Różnica między tymi dwoma klasami jest ilość informacji zapewniają one oraz gdzie są używane. `COleException` ma składową danych publicznego, który zawiera kod stanu OLE, dla wyjątku. `COleDispatchException` dostarcza więcej informacji, w tym następujące:
+
+- Kod błędu specyficzne dla aplikacji
+
+- Opis błędu, takie jak "Dysk zapełniony:"
+
+- Kontekst pomocy, który aplikacja może używać dostarczenie dodatkowych informacji dla użytkownika
+
+- Nazwa pliku Pomocy usługi aplikacji
+
+- Nazwa aplikacji, który wygenerował wyjątek
+
+`COleDispatchException` zawiera więcej informacji, dzięki czemu może służyć za pomocą produktów takich jak Microsoft Visual Basic. Opis błędu ustnej mogą być używane w oknie komunikatu lub inne powiadomienia; informacje pomocy można pomóc użytkownikowi odpowiadanie na warunki, które powoduje wyjątek.
+
+Dwie funkcje globalne odpowiadają dwie klasy wyjątku OLE: [afxthrowoleexception —](../mfc/reference/exception-processing.md#afxthrowoleexception) i [afxthrowoledispatchexception —](../mfc/reference/exception-processing.md#afxthrowoledispatchexception). Pozwala to zgłosić ogólne wyjątki OLE i wyjątki wysyłania OLE, odpowiednio.
+
+## <a name="see-also"></a>Zobacz też
+
+[Obsługa wyjątków](../mfc/exception-handling-in-mfc.md)
 

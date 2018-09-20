@@ -18,39 +18,41 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f2ad21bcbff31335f6ec79a4527ef7d99e07e547
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 48315b3608a5e66c2f94e1b06a038772dbb25bb4
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33341107"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46380493"
 ---
 # <a name="clipboard"></a>Schowek
-Tej rodziny artykuły omówiono implementuje obsługę Schowka systemu Windows w aplikacjach MFC. Schowka systemu Windows jest używany na dwa sposoby:  
-  
--   Implementowanie standardowych poleceń menu Edycja, takich jak wycinania, kopiowania i wklejania.  
-  
--   Implementacja uniform danych transfer z przeciąganie i upuszczanie (OLE).  
-  
- Schowek jest standard Windows metody transferu danych między źródłem a miejscem docelowym. Może być również przydatne w przypadku operacji OLE. Pojawienie OLE istnieją dwa mechanizmy Schowka systemu Windows. Standardowy interfejs API schowka systemu Windows jest nadal dostępne, ale ma zostały uzupełnione z mechanizmem OLE transferu danych. Transfer danych uniform OLE (UDT) obsługuje wycinania, kopiowania i wklejania ze Schowka i przeciągnij i upuść.  
-  
- Schowek jest usługa systemowa współużytkowane przez całej sesji systemu Windows, więc nie ma uchwytu lub jego własnej klasy. Zarządzanie Schowka za pomocą funkcji elementów członkowskich klasy [CWnd](../mfc/reference/cwnd-class.md).  
-  
-## <a name="what-do-you-want-to-know-more-about"></a>Co chcesz dowiedzieć się więcej o  
-  
--   [Kiedy korzystać z mechanizmu Schowka](../mfc/clipboard-when-to-use-each-clipboard-mechanism.md)  
-  
--   [Przy użyciu tradycyjnych interfejs API schowka systemu Windows](../mfc/clipboard-using-the-windows-clipboard.md)  
-  
--   [Korzystanie z mechanizmu Schowka OLE](../mfc/clipboard-using-the-ole-clipboard-mechanism.md)  
-  
--   [Kopiowanie i wklejanie danych](../mfc/clipboard-copying-and-pasting-data.md)  
-  
--   [Dodawanie innych formatów](../mfc/clipboard-adding-other-formats.md)  
-  
--   [Schowka systemu Windows](https://msdn.microsoft.com/library/ms648709)  
-  
--   [Implementowanie przeciąganie i upuszczanie (OLE)](../mfc/drag-and-drop-ole.md)  
-  
-## <a name="see-also"></a>Zobacz też  
- [Elementy interfejsu użytkownika](../mfc/user-interface-elements-mfc.md)
+
+Tej rodziny artykuły wyjaśnia, jak zaimplementować obsługę Windows Schowka w aplikacjach MFC. Schowek Windows jest używany na dwa sposoby:
+
+- Implementowanie standardowych poleceń menu edycji, takich jak wycinanie, kopiowanie i wklejanie.
+
+- Implementowanie jednolitego dane transferu za pomocą przeciągania i upuszczanie (OLE).
+
+Schowek jest standardowa metoda Windows przesyłania danych między źródłem i miejscem docelowym. Również może być bardzo przydatne w przypadku operacji OLE. Pojawienie OLE istnieją dwa mechanizmy Schowka w Windows. Standardowy interfejs API Schowka Windows jest nadal dostępna, ale ma został uzupełniony z mechanizmem OLE transferu danych. Transfer danych jednolitego OLE (UDT) obsługuje wycinanie, kopiowanie i wklejanie ze Schowka i przeciągnij i upuść.
+
+Schowek jest współużytkowane przez całą sesję Windows, więc nie ma uchwytu lub jego własnej klasy usługi systemowej. Zarządzanie Schowka za pomocą funkcji elementów członkowskich klasy [CWnd](../mfc/reference/cwnd-class.md).
+
+## <a name="what-do-you-want-to-know-more-about"></a>Co chcesz dowiedzieć się więcej na temat
+
+- [Kiedy należy korzystać z mechanizmu Schowka](../mfc/clipboard-when-to-use-each-clipboard-mechanism.md)
+
+- [Przy użyciu tradycyjnych API Schowka Windows](../mfc/clipboard-using-the-windows-clipboard.md)
+
+- [Korzystanie z mechanizmu Schowka OLE](../mfc/clipboard-using-the-ole-clipboard-mechanism.md)
+
+- [Kopiowanie i wklejanie danych](../mfc/clipboard-copying-and-pasting-data.md)
+
+- [Dodawanie innych formatów](../mfc/clipboard-adding-other-formats.md)
+
+- [Schowek Windows](https://msdn.microsoft.com/library/ms648709)
+
+- [Implementowanie przeciąganie i upuszczanie (OLE)](../mfc/drag-and-drop-ole.md)
+
+## <a name="see-also"></a>Zobacz też
+
+[Elementy interfejsu użytkownika](../mfc/user-interface-elements-mfc.md)

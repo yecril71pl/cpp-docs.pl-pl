@@ -1,5 +1,5 @@
 ---
-title: Bezpieczny dostęp do formantów z użyciem kreatorów kodu | Dokumentacja firmy Microsoft
+title: Bezpieczny dostęp do kontrolek z użyciem kreatorów kodu | Dokumentacja firmy Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,33 +17,35 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 88f86a8f22bae990261be5150755a26d50d4bef8
-ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
+ms.openlocfilehash: e96f7b3ab0875c233241ee0f6dacfcf51ab79564
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/26/2018
-ms.locfileid: "36950464"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46377542"
 ---
 # <a name="type-safe-access-to-controls-with-code-wizards"></a>Bezpieczny dostęp do kontrolek z użyciem kreatorów kodu
-Jeśli znasz funkcje DDX, można użyć właściwości formantu w [Dodaj kreatora zmiennej elementu członkowskiego](../ide/add-member-variable-wizard.md) utworzyć bezpieczny dostęp. Ta metoda jest łatwiejsze niż Tworzenie formantów bez użycia kreatorów kodu.  
-  
- Jeśli po prostu chcesz uzyskać dostęp do wartości formantu, DDX przekazuje go. Jeśli chcesz przekraczać dostępu wartość formantu umożliwia dodawanie zmiennej członkowskiej klasy odpowiednie do klasy okien dialogowych Kreator dodawania zmiennej elementu członkowskiego. Ta zmienna elementu członkowskiego dołączyć do właściwości formantu.  
-  
- Zmienne Członkowskie może mieć właściwości formantu zamiast właściwości Value. Właściwość wartość odwołuje się do typu danych zwróconych z formantu, takie jak `CString` lub **int**. Właściwość formantu umożliwia bezpośredni dostęp do sterowania do elementu członkowskiego danych, którego typ jest jednym z klasy formantów w MFC, takich jak `CButton` lub `CEdit`.  
-  
+
+Jeśli znasz funkcje DDX, można użyć właściwości formantu w [Dodaj kreatora zmiennej elementu członkowskiego](../ide/add-member-variable-wizard.md) Aby utworzyć bezpieczny dostęp. To podejście jest prostsze niż tworzenie kontrolek bez użycia kreatorów kodu.
+
+Jeśli po prostu chcesz mieć dostęp do wartości kontrolki, DDX dostarcza mu. Jeśli chcesz więcej niż dostęp do wartości kontrolki, należy użyć Kreator dodawania zmiennej składowej do dodawania zmiennej członkowskiej odpowiedniej klasy do klasy okien dialogowych. Ta zmienna członka należy dołączyć do właściwości kontrolki.
+
+Zmienne Członkowskie może mieć właściwości kontrolki, a nie właściwości Value. Wartość właściwości odwołuje się do typu danych zwracanych z kontrolki, takie jak `CString` lub **int**. Właściwości kontrolki umożliwia bezpośredni dostęp do formantu za pomocą element członkowski danych, którego typ jest jednym z klasy kontrolek w MFC, takich jak `CButton` lub `CEdit`.
+
 > [!NOTE]
->  W przypadku danego formantu Jeśli chcesz, program może wiele zmiennych Członkowskich z właściwości Value i co najwyżej zmiennej członkowskiej jedną z właściwości formantu. Może mieć tylko jeden obiekt MFC mapowane na formanty, ponieważ wiele obiektów dołączonych do formantu lub dowolnego innego okna może doprowadzić do niejednoznaczności w mapie komunikatów.  
-  
- Ten obiekt służy do wywołania funkcji dowolnego elementu członkowskiego dla obiekt formantu. Takie połączenia wpływa na formancie w oknie dialogowym. Na przykład pole wyboru reprezentowane przez zmienną *m_Checkbox*, typu `CButton`, można wywołać:  
-  
- [!code-cpp[NVC_MFCControlLadenDialog#52](../mfc/codesnippet/cpp/type-safe-access-to-controls-with-code-wizards_1.cpp)]  
-  
- Tutaj zmiennej członkowskiej *m_Checkbox* pełni tę samą funkcję, jako funkcję elementu członkowskiego `GetMyCheckbox` pokazano [bezpieczny dostęp do formantów bez kreatorów kodu](../mfc/type-safe-access-to-controls-without-code-wizards.md). Jeśli pole wyboru nie jest pole wyboru automatycznie, będzie nadal potrzebny obsługi w klasy okien dialogowych dla komunikatów powiadomień dotyczących formantu BN_CLICKED po kliknięciu przycisku.  
-  
- Aby uzyskać więcej informacji na temat formantów, zobacz [formanty](../mfc/controls-mfc.md).  
-  
-## <a name="see-also"></a>Zobacz też  
- [Bezpieczny dostęp do formantów w oknie dialogowym](../mfc/type-safe-access-to-controls-in-a-dialog-box.md)   
- [Cykl życiowy okna dialogowego](../mfc/life-cycle-of-a-dialog-box.md)   
- [Bezpieczny dostęp do kontrolek bez użycia kreatorów kodu](../mfc/type-safe-access-to-controls-without-code-wizards.md)
+>  Dla danej kontrolki Jeśli chcesz, masz wiele zmiennych Członkowskich z tych właściwości Value i co najwyżej jeden element członkowski zmiennej z właściwością kontrolki. Może mieć tylko jeden obiekt MFC zamapowane na kontrolkę, ponieważ wiele obiektów dołączonych do kontrolkę lub inne okno, co może spowodować niejednoznaczność w mapie wiadomości.
+
+Ten obiekt jest używany do wywołania dowolnego elementu członkowskiego funkcji dla obiektu formantu. Takie połączenia wpływa na kontrolki w oknie dialogowym. Na przykład pole wyboru, formantu reprezentowane za pomocą zmiennej *m_Checkbox*, typu `CButton`, można wywołać:
+
+[!code-cpp[NVC_MFCControlLadenDialog#52](../mfc/codesnippet/cpp/type-safe-access-to-controls-with-code-wizards_1.cpp)]
+
+Tutaj zmiennej składowej *m_Checkbox* pełni tę samą funkcję, jako funkcję składową `GetMyCheckbox` objętego [bezpieczny dostęp do kontrolek bez kreatorów kodu](../mfc/type-safe-access-to-controls-without-code-wizards.md). Jeśli pole wyboru nie jest pole wyboru automatycznie, będzie nadal konieczne program obsługi w klasy okien dialogowych dla komunikatu powiadamianie kontrolki BN_CLICKED po kliknięciu przycisku.
+
+Aby uzyskać więcej informacji na temat formantów, zobacz [formantów](../mfc/controls-mfc.md).
+
+## <a name="see-also"></a>Zobacz też
+
+[Bezpieczny dostęp do kontrolek w oknie dialogowym](../mfc/type-safe-access-to-controls-in-a-dialog-box.md)<br/>
+[Cykl życiowy okna dialogowego](../mfc/life-cycle-of-a-dialog-box.md)<br/>
+[Bezpieczny dostęp do kontrolek bez użycia kreatorów kodu](../mfc/type-safe-access-to-controls-without-code-wizards.md)
 

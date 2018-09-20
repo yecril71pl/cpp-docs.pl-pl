@@ -17,28 +17,30 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7c10b9d0903901cfe564b161a250d58078d5a08c
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 4ca0ebd9bf03df8725c14df8d2aca1f7858b7b65
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33341557"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46396184"
 ---
 # <a name="building-on-the-framework"></a>Opieranie się na strukturze
-Twoja rola w Konfigurowanie aplikacji przy użyciu programu MFC framework jest podanie kodu źródłowego aplikacji, a także łączenie składników przez określenie, jakie komunikaty i polecenia, do których one odpowiadać. Umożliwia języka C++ i standardowej technik C++ pochodzić od tych dostarczonych przez biblioteki klas własnych klas specyficzne dla aplikacji i zastępowania i rozszerzyć zachowanie klasy podstawowej.  
-  
- W tematach pokrewnych w poniższych tabelach opisano ogólna sekwencja operacji, które będą zwykle wykonać i Twoje obowiązki i obowiązki platformy:  
-  
--   [Sekwencja do tworzenia aplikacji z architekturą](../mfc/sequence-of-operations-for-building-mfc-applications.md)  
-  
--   [Sekwencja operacji przy tworzeniu aplikacji OLE](../mfc/sequence-of-operations-for-creating-ole-applications.md)  
-  
--   [Sekwencja operacji przy tworzeniu kontrolek ActiveX](../mfc/sequence-of-operations-for-creating-activex-controls.md)  
-  
--   [Sekwencja operacji przy tworzeniu aplikacji bazy danych](../mfc/sequence-of-operations-for-creating-database-applications.md)  
-  
- W większości przypadków możesz wykonać te tabele sekwencję kroków dotyczących tworzenia aplikacji MFC, mimo że niektóre kroki są opcje alternatywne. Na przykład większość aplikacji używać jednego typu klasy widoku z kilku dostępnych typów.  
-  
-## <a name="see-also"></a>Zobacz też  
- [Tematy ogólne dotyczące MFC](../mfc/general-mfc-topics.md)
+
+Twoja rola w Konfigurowanie aplikacji za pomocą programu MFC framework jest podać kod źródłowy specyficzne dla aplikacji i łączenia składników przez określenie, jakie komunikaty i polecenia, do których ta osoba odpowie. Używasz języka C++ i standardowych technik C++ dziedziczyć dostarczane przez bibliotekę klas własnych klas specyficznych dla aplikacji, a także Przesłoń i rozszerzyć zachowanie klasy bazowej.
+
+W tematach pokrewnych w poniższych tabelach opisano ogólną sekwencją operacje, które zwykle wykonują i Twoich obowiązkach i obowiązki w ramach:
+
+- [Tworzenie aplikacji z architekturą sekwencji](../mfc/sequence-of-operations-for-building-mfc-applications.md)
+
+- [Sekwencja operacji przy tworzeniu aplikacji OLE](../mfc/sequence-of-operations-for-creating-ole-applications.md)
+
+- [Sekwencja operacji przy tworzeniu kontrolek ActiveX](../mfc/sequence-of-operations-for-creating-activex-controls.md)
+
+- [Sekwencja operacji przy tworzeniu aplikacji bazy danych](../mfc/sequence-of-operations-for-creating-database-applications.md)
+
+W większości przypadków możesz wykonać te tabele jako sekwencja procedury służące do tworzenia aplikacji MFC, mimo że niektóre kroki są alternatywne rozwiązania. Na przykład większość aplikacji używa jeden typ widoku klasy z kilku dostępnych typów.
+
+## <a name="see-also"></a>Zobacz też
+
+[Tematy ogólne dotyczące MFC](../mfc/general-mfc-topics.md)
 

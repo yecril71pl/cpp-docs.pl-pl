@@ -16,35 +16,37 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 845ad544b83f3f73c31eebd00218945c6028a622
-ms.sourcegitcommit: b4432d30f255f0cb58dce69cbc8cbcb9d44bc68b
+ms.openlocfilehash: 010e5f58f1d72a33cbab44438f085b52e8fe4be8
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/13/2018
-ms.locfileid: "45534979"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46387773"
 ---
 # <a name="activex-control-containers-manually-enabling-activex-control-containment"></a>Kontenery kontrolek ActiveX: ręczne włączanie zawierania kontrolek ActiveX
+
 Jeśli nie została włączona obsługa formantu ActiveX, gdy Kreator aplikacji MFC jest używane do generowania aplikacji, należy ręcznie dodać tę obsługę. W tym artykule opisano proces ręcznego dodawania zawierania kontrolek ActiveX do istniejącej aplikacji kontenera OLE. Jeśli wcześniej wiadomo ma obsługi formantów ActiveX w kontenerze OLE, zobacz artykuł [Tworzenie kontenera kontrolek ActiveX MFC](../mfc/reference/creating-an-mfc-activex-control-container.md).
 
 >[!IMPORTANT]
-> ActiveX jest technologią starszą, która nie powinny być używane w przypadku nowych wdrożeń. Aby uzyskać więcej informacji na temat nowych technologii, które wypierają ActiveX zobacz [formantów ActiveX](activex-controls.md).  
-  
+> ActiveX jest technologią starszą, która nie powinny być używane w przypadku nowych wdrożeń. Aby uzyskać więcej informacji na temat nowych technologii, które wypierają ActiveX zobacz [formantów ActiveX](activex-controls.md).
+
 > [!NOTE]
->  W tym artykule używany jest oparta na oknach dialogowych ActiveX kontroli kontenera projektu o nazwie kontener i osadzonego formantu o nazwie OK przykładowe w procedurach i kodu.  
-  
- Aby zapewnić obsługę formantów ActiveX, należy dodać jeden wiersz kodu do dwóch plików projektu.  
-  
--   Modyfikowanie w głównym oknie dialogowym `InitInstance` — funkcja (znajduje się w KONTENERZE. CPP) przez Kreatora aplikacji MFC, wywołuje element [afxenablecontrolcontainer —](reference/ole-initialization.md#afxenablecontrolcontainer), jak w poniższym przykładzie:  
-  
-     [!code-cpp[NVC_MFCOleContainer#34](../mfc/codesnippet/cpp/activex-control-containers-manually-enabling-activex-control-containment_1.cpp)]  
-    [!code-cpp[NVC_MFCOleContainer#35](../mfc/codesnippet/cpp/activex-control-containers-manually-enabling-activex-control-containment_2.cpp)]  
-  
--   Dodaj następujący kod do STDAFX projektu. Plik nagłówka H:  
-  
-     [!code-cpp[NVC_MFCOleContainer#36](../mfc/codesnippet/cpp/activex-control-containers-manually-enabling-activex-control-containment_3.h)]  
-  
- Po wykonaniu tych czynności ponownie skompiluj projekt, klikając **kompilacji** na **kompilacji** menu.  
-  
-## <a name="see-also"></a>Zobacz też  
- [Kontenery kontrolek ActiveX](../mfc/activex-control-containers.md)
+>  W tym artykule używany jest oparta na oknach dialogowych ActiveX kontroli kontenera projektu o nazwie kontener i osadzonego formantu o nazwie OK przykładowe w procedurach i kodu.
+
+Aby zapewnić obsługę formantów ActiveX, należy dodać jeden wiersz kodu do dwóch plików projektu.
+
+- Modyfikowanie w głównym oknie dialogowym `InitInstance` — funkcja (znajduje się w KONTENERZE. CPP) przez Kreatora aplikacji MFC, wywołuje element [afxenablecontrolcontainer —](reference/ole-initialization.md#afxenablecontrolcontainer), jak w poniższym przykładzie:
+
+     [!code-cpp[NVC_MFCOleContainer#34](../mfc/codesnippet/cpp/activex-control-containers-manually-enabling-activex-control-containment_1.cpp)]
+    [!code-cpp[NVC_MFCOleContainer#35](../mfc/codesnippet/cpp/activex-control-containers-manually-enabling-activex-control-containment_2.cpp)]
+
+- Dodaj następujący kod do STDAFX projektu. Plik nagłówka H:
+
+     [!code-cpp[NVC_MFCOleContainer#36](../mfc/codesnippet/cpp/activex-control-containers-manually-enabling-activex-control-containment_3.h)]
+
+Po wykonaniu tych czynności ponownie skompiluj projekt, klikając **kompilacji** na **kompilacji** menu.
+
+## <a name="see-also"></a>Zobacz też
+
+[Kontenery kontrolek ActiveX](../mfc/activex-control-containers.md)
 

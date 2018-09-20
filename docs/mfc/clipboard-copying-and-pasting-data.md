@@ -15,66 +15,69 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4756da7459f3e584dd02b882f5c790412c095561
-ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
+ms.openlocfilehash: 15a03708f96f881206aa683b31c26c3c5192f8cb
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/25/2018
-ms.locfileid: "36929471"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46389062"
 ---
 # <a name="clipboard-copying-and-pasting-data"></a>Schowek: kopiowanie i wklejanie danych
-W tym temacie opisano minimalną pracy, należy wykonać, kopiowanie i wklejanie ze Schowka w aplikacji OLE. Zaleca się przeczytanie [obiekty danych i źródła danych (OLE)](../mfc/data-objects-and-data-sources-ole.md) tematy przed kontynuowaniem.  
-  
- Przed zaimplementowaniem albo kopiowanie i wklejanie, musisz podać funkcje do obsługi opcji kopiowanie, wycinanie i wklejanie w menu Edycja.  
-  
-##  <a name="_core_copying_or_cutting_data"></a> Kopiowanie lub wycinanie danych  
-  
-#### <a name="to-copy-data-to-the-clipboard"></a>Aby skopiować dane do Schowka  
-  
-1.  Sprawdzenia, czy dane do skopiowania danych natywnych jest element osadzony lub połączony.  
-  
-    -   Jeśli dane jest osadzony czy połączony, uzyskać wskaźnik do `COleClientItem` obiekt, który został wybrany.  
-  
-    -   Jeśli dane są natywnych aplikacji jest serwerem, należy utworzyć nowy obiekt pochodną `COleServerItem` zawierający wybranych danych. W przeciwnym razie utwórz `COleDataSource` obiektu danych.  
-  
-2.  Wywołania wybranego elementu `CopyToClipboard` funkcję elementu członkowskiego.  
-  
-3.  Jeśli użytkownik wybrał operacji wycinania, zamiast operacji kopiowania, Usuń wybranych danych z aplikacji.  
-  
- Aby zapoznać się z przykładem tej sekwencji, zobacz `OnEditCut` i `OnEditCopy` funkcje w OLE MFC przykładowe programy [OCLIENT](../visual-cpp-samples.md) i [HIERSVR](../visual-cpp-samples.md). Należy pamiętać, że te przykłady Obsługa wskaźnik do aktualnie wybrane dane, tak kroku 1 jest już zakończone.  
-  
-##  <a name="_core_pasting_data"></a> Wklejanie danych  
- Wklejanie danych jest bardziej skomplikowane niż go kopiować, ponieważ trzeba wybrać format używany w wkleić danych do aplikacji.  
-  
-#### <a name="to-paste-data-from-the-clipboard"></a>Można wkleić danych ze Schowka  
-  
-1.  W klasie widoku zaimplementować `OnEditPaste` do obsługi użytkowników, wybierając opcję Wklej z menu Edycja.  
-  
-2.  W `OnEditPaste` funkcji, należy utworzyć `COleDataObject` obiekt i wywołanie jego `AttachClipboard` funkcji członkowskiej, aby połączyć tego obiektu z danych w Schowku.  
-  
-3.  Wywołanie `COleDataObject::IsDataAvailable` do sprawdzenia, czy określony format jest dostępna.  
-  
-     Alternatywnie można użyć `COleDataObject::BeginEnumFormats` do wyszukania w innych formatach do momentu znalezienia najbardziej nadaje się do aplikacji.  
-  
-4.  Wykonaj Wklej formatu.  
-  
- Na przykład to działanie, zobacz wykonania `OnEditPaste` funkcje Członkowskie w widoku klas zdefiniowanych w programach MFC OLE próbki [OCLIENT](../visual-cpp-samples.md) i [HIERSVR](../visual-cpp-samples.md).  
-  
+
+W tym temacie opisano minimalną pracy, należy wykonać, kopiowanie i wklejanie ze Schowka w aplikacji OLE. Zalecane jest przeczytanie [obiekty danych i źródeł danych (OLE)](../mfc/data-objects-and-data-sources-ole.md) tematy przed kontynuowaniem.
+
+Aby można było zaimplementować kopiowanie lub wklejanie, najpierw należy podać funkcje do obsługi opcji kopiowanie, wycinanie i wklejanie w menu Edycja.
+
+##  <a name="_core_copying_or_cutting_data"></a> Kopiowanie lub Cuttinga danych
+
+#### <a name="to-copy-data-to-the-clipboard"></a>Aby skopiować dane do Schowka
+
+1. Określ dane do skopiowania danych natywnych czy jest to element osadzony lub połączony.
+
+   - Jeśli danych jest osadzony lub połączony, uzyskiwanie wskaźnika do `COleClientItem` obiektu, który został wybrany.
+
+   - Jeśli dane znajdują się w natywnej aplikacji jest serwerem, utworzyć nowy obiekt pochodną `COleServerItem` zawierającą wybrane dane. W przeciwnym razie utwórz `COleDataSource` obiektu danych.
+
+1. Wywołanie wybranego elementu `CopyToClipboard` funkcja elementu członkowskiego.
+
+1. Jeśli użytkownik wybrał operacji wycinania, zamiast operacji kopiowania, usuwania wybranych danych z aplikacji.
+
+Aby zapoznać się z przykładem tej sekwencji, zobacz `OnEditCut` i `OnEditCopy` funkcji OLE MFC przykładowe programy [OCLIENT](../visual-cpp-samples.md) i [HIERSVR](../visual-cpp-samples.md). Należy pamiętać, że te przykłady konserwacji wskaźnik do danych aktualnie zaznaczonego, aby kroku 1 jest już ukończone.
+
+##  <a name="_core_pasting_data"></a> Wklejanie danych
+
+Wklejanie danych jest bardziej skomplikowane niż kopiowania go, ponieważ musisz wybrać format używany w wklejania danych w aplikacji.
+
+#### <a name="to-paste-data-from-the-clipboard"></a>Wklejanie danych ze Schowka
+
+1. W klasie widoku, należy zaimplementować `OnEditPaste` do obsługi użytkowników, wybierając opcję Wklej z menu Edycja.
+
+1. W `OnEditPaste` funkcji, Utwórz `COleDataObject` obiektu, a następnie wywołać jej `AttachClipboard` funkcja elementu członkowskiego, aby połączyć ten obiekt danych do Schowka.
+
+1. Wywołaj `COleDataObject::IsDataAvailable` do sprawdzenia, czy w określonym formacie jest dostępna.
+
+     Alternatywnie możesz użyć `COleDataObject::BeginEnumFormats` do wyszukania w innych formatach, aż znajdziesz najbardziej odpowiednie dla aplikacji.
+
+1. Wkleić formatu.
+
+Aby uzyskać przykład sposobu działania, zobacz wykonania `OnEditPaste` funkcje Członkowskie w klas widoków zdefiniowanych w MFC OLE przykładowych programów [OCLIENT](../visual-cpp-samples.md) i [HIERSVR](../visual-cpp-samples.md).
+
 > [!TIP]
->  Największą zaletą oddzielanie operacji wklejania do odrębnej funkcji jest, że ten sam kod Wklej mogą być używane po upuszczeniu danych w aplikacji podczas operacji przeciągania i upuszczania. Jak OCLIENT i HIERSVR Twoje `OnDrop` także wywołać funkcję `DoPasteItem`, ponowne użycie kodu napisanego w celu wykonania operacji wklejania.  
-  
- Aby obsłużyć Wklej specjalne opcji menu Edycja, zobacz temat [okna dialogowe w OLE](../mfc/dialog-boxes-in-ole.md).  
-  
-### <a name="what-do-you-want-to-know-more-about"></a>Co chcesz dowiedzieć się więcej o  
-  
--   [Dodawanie innych formatów](../mfc/clipboard-adding-other-formats.md)  
-  
--   [Źródła danych OLE obiekty i dane oraz uniform transferów danych](../mfc/data-objects-and-data-sources-ole.md)  
-  
--   [Przeciąganie i upuszczanie OLE](../mfc/drag-and-drop-ole.md)  
-  
--   [OLE](../mfc/ole-background.md)  
-  
-## <a name="see-also"></a>Zobacz też  
- [Schowek: korzystanie z mechanizmu schowka OLE](../mfc/clipboard-using-the-ole-clipboard-mechanism.md)
+>  Główną zaletą oddzielenie operacji wklejania do jego własnej funkcji jest, że ten sam kod Wklej mogą być używane po upuszczeniu danych w aplikacji podczas operacji przeciągania i upuszczania. Jak OCLIENT i HIERSVR Twoje `OnDrop` funkcji można również wywołać `DoPasteItem`, ponowne użycie kodu zapisywane do implementowania operacji wklejania.
+
+Aby obsłużyć Wklej specjalne opcji menu Edycja, zobacz temat [okna dialogowe w OLE](../mfc/dialog-boxes-in-ole.md).
+
+### <a name="what-do-you-want-to-know-more-about"></a>Co chcesz dowiedzieć się więcej na temat
+
+- [Dodawanie innych formatów](../mfc/clipboard-adding-other-formats.md)
+
+- [Źródła danych OLE obiekty i dane oraz jednolitego transferów danych](../mfc/data-objects-and-data-sources-ole.md)
+
+- [Przeciąganie i upuszczanie OLE](../mfc/drag-and-drop-ole.md)
+
+- [OLE](../mfc/ole-background.md)
+
+## <a name="see-also"></a>Zobacz też
+
+[Schowek: korzystanie z mechanizmu schowka OLE](../mfc/clipboard-using-the-ole-clipboard-mechanism.md)
 

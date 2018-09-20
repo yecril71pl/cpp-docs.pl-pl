@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 092cb7c33aab2805ca40410cac404d43ba5c9274
-ms.sourcegitcommit: f0c90000125a9497bf61e41624de189a043703c0
+ms.openlocfilehash: 32258a05cade33f20546acfc02b98370ada2b073
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44313250"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46387136"
 ---
 # <a name="how-to-create-a-resource-script-file-c"></a>Porady: Tworzenie pliku skryptu zasobów (C++)
 
@@ -55,5 +55,5 @@ Win32
 
 ## <a name="see-also"></a>Zobacz też
 
-[Pliki zasobów](../windows/resource-files-visual-studio.md)  
+[Pliki zasobów](../windows/resource-files-visual-studio.md)<br/>
 [Edytory zasobów](../windows/resource-editors.md)

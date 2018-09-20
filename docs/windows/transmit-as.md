@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 0082626926e711d5c8f122b10552328fac52a069
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 24b46a2872d0a4f235d06e3f34f7640995be300d
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43222956"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46375323"
 ---
 # <a name="transmitas"></a>transmit_as
 
@@ -38,7 +38,7 @@ Instruuje kompilator, aby skojarzyć prezentowane typ, który manipulowania apli
 
 ### <a name="parameters"></a>Parametry
 
-*Typ*  
+*Typ*<br/>
 Określa typ danych, które są przesyłane między klientem i serwerem.
 
 ## <a name="remarks"></a>Uwagi
@@ -92,6 +92,6 @@ Aby uzyskać więcej informacji na temat konteksty atrybutu zobacz [konteksty at
 
 ## <a name="see-also"></a>Zobacz też
 
-[Atrybuty IDL](../windows/idl-attributes.md)  
-[Atrybuty Typedef, Enum, Union oraz Struct](../windows/typedef-enum-union-and-struct-attributes.md)  
+[Atrybuty IDL](../windows/idl-attributes.md)<br/>
+[Atrybuty Typedef, Enum, Union oraz Struct](../windows/typedef-enum-union-and-struct-attributes.md)<br/>
 [export](../windows/export.md)  

@@ -17,32 +17,34 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: 0ae9f772a68735555748e6edbeb6196f1a73d2c9
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 4433061fceef455685b6588c81c8c2e434253433
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33164521"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46374682"
 ---
 # <a name="typeof-goes-to-ttypeid"></a>Operator typeof został zastąpiony operatorem T::typeid
-`typeof` Operator używany w rozszerzeń zarządzanych dla języka C++ ma zostać supplanted przez `typeid` — słowo kluczowe w programie Visual C++.  
-  
- W zarządzanych rozszerzeń `__typeof()` operator zwraca skojarzonego `Type*` obiektu po upływie nazwę typu zarządzanego. Na przykład:  
-  
-```  
-// Creates and initializes a new Array instance.  
-Array* myIntArray =   
-   Array::CreateInstance( __typeof(Int32), 5 );  
-```  
-  
- W nowej składni `__typeof` został zastąpiony w innej formie `typeid` zwracającą `Type^` gdy został określony parametr typu zarządzanego.  
-  
-```  
-// Creates and initializes a new Array instance.  
-Array^ myIntArray =   
-   Array::CreateInstance( Int32::typeid, 5 );  
-```  
-  
-## <a name="see-also"></a>Zobacz też  
- [Ogólne zmiany w języku (C + +/ CLI)](../dotnet/general-language-changes-cpp-cli.md)   
- [TypeID](../windows/typeid-cpp-component-extensions.md)
+
+`typeof` Operator używany w zarządzanych rozszerzeń dla C++ ma zostać supplanted przez `typeid` — słowo kluczowe w języku Visual C++.
+
+W zarządzanych rozszerzeń `__typeof()` operator zwraca skojarzonego `Type*` obiektu, kiedy jest przekazywana nazwa typu zarządzanego. Na przykład:
+
+```
+// Creates and initializes a new Array instance.
+Array* myIntArray =
+   Array::CreateInstance( __typeof(Int32), 5 );
+```
+
+W nowej składni `__typeof` został zastąpiony w innej formie `typeid` zwracającego `Type^` gdy określono typu zarządzanego.
+
+```
+// Creates and initializes a new Array instance.
+Array^ myIntArray =
+   Array::CreateInstance( Int32::typeid, 5 );
+```
+
+## <a name="see-also"></a>Zobacz też
+
+[Ogólne zmiany w języku (C++/CLI)](../dotnet/general-language-changes-cpp-cli.md)<br/>
+[TypeID](../windows/typeid-cpp-component-extensions.md)

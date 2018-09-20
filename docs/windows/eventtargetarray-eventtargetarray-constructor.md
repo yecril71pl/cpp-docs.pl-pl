@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 2bbf6cb67973d7538aa7aea0d846cbadf030d585
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: dc59b9c93cebb622f40881d961709079abcd9166
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42590655"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46388633"
 ---
 # <a name="eventtargetarrayeventtargetarray-constructor"></a>EventTargetArray::EventTargetArray — Konstruktor
 
@@ -39,7 +39,7 @@ EventTargetArray(
 
 ### <a name="parameters"></a>Parametry
 
-*godz.*  
+*godz.*<br/>
 Po tej operacji konstruktora parametru *hr* wskazuje, czy przydział tablicy zakończonych powodzeniem lub niepowodzeniem. Poniższa tabela zawiera listę możliwych wartości dla *hr*.
 
 S_OK operacja zakończyła się pomyślnie.
@@ -48,7 +48,7 @@ Nie można przydzielić pamięci E_OUTOFMEMORY tablicy.
 
 Parametr S_FALSE *elementów* jest mniejsza niż zero.
 
-*Elementy*  
+*Elementy*<br/>
 Liczba elementów tablicy można przydzielić.
 
 ## <a name="remarks"></a>Uwagi
@@ -65,5 +65,5 @@ Inicjuje nowe wystąpienie klasy **EventTargetArray** klasy.
 
 ## <a name="see-also"></a>Zobacz też
 
-[EventTargetArray, klasa](../windows/eventtargetarray-class.md)  
+[EventTargetArray, klasa](../windows/eventtargetarray-class.md)<br/>
 [Microsoft::WRL::Details, przestrzeń nazw](../windows/microsoft-wrl-details-namespace.md)

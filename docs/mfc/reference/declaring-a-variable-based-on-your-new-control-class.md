@@ -1,5 +1,5 @@
 ---
-title: Deklarowanie zmiennej oparte na nowej klasie formantów | Dokumentacja firmy Microsoft
+title: Deklarowanie zmiennej opartej na nowej klasie kontrolki | Dokumentacja firmy Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,46 +18,48 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 677006d441c940f478b3d23744d1057667307e1a
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: e3cdf60f614b95c22b4b3c40b5528a7daf885bed
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33370617"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46388750"
 ---
 # <a name="declaring-a-variable-based-on-your-new-control-class"></a>Deklarowanie zmiennej opartej na nowej klasie formantów
-Po utworzeniu klasę formantu MFC można zadeklarować zmiennej na ich podstawie. Zapewnienie kontekst nową zmienną, musi otworzyć edytora okien dialogowych i edytować okno dialogowe, w której chcesz użyć do ponownego użycia formantu. Ponadto okno dialogowe musi mieć już skojarzone z nią klasy. Aby uzyskać informacje na temat używania edytora okien dialogowych, zobacz [Edytor okien dialogowych](../../windows/dialog-editor.md).  
-  
-### <a name="to-declare-a-variable-based-on-your-reusable-class"></a>Deklarowanie zmiennej opartej na klasie wielokrotnego użytku  
-  
-1.  Podczas edycji okno dialogowe, przeciągnij formant tego samego typu jako klasa podstawowa nowego formantu z pasek narzędzi kontrolek na oknie dialogowym.  
-  
-2.  Umieść wskaźnik myszy nad formantem porzucone.  
-  
-3.  Naciskaj klawisz CTRL, kliknij dwukrotnie formant.  
-  
-     [Dodać zmiennej członka](../../ide/add-member-variable-wizard.md) zostanie wyświetlone okno dialogowe.  
-  
-4.  W **dostępu** wybierz prawidłowy dostęp dla formantu.  
-  
-5.  Kliknij przycisk **zmienna sterująca** pole wyboru.  
-  
-6.  W **nazwa zmiennej** wpisz nazwę.  
-  
-7.  W obszarze **kategorii**, kliknij przycisk **kontroli**.  
-  
-8.  W **Identyfikatora formantu** listy, wybierz formant, który został dodany. **Typ zmiennej** listy powinien być wyświetlany poprawnego typu zmienną i **kontroli typem** pole powinien być wyświetlany typu poprawne formantu.  
-  
-9. W **komentarz** Dodaj wszelkie komentarz ma być wyświetlana w kodzie.  
-  
-10. Kliknij przycisk **OK**.  
-  
-## <a name="see-also"></a>Zobacz też  
- [Mapowanie komunikatów na funkcje](../../mfc/reference/mapping-messages-to-functions.md)   
- [Dodawanie funkcji z kreatorami kodów](../../ide/adding-functionality-with-code-wizards-cpp.md)   
- [Dodawanie klasy](../../ide/adding-a-class-visual-cpp.md)   
- [Dodawanie funkcji członkowskiej](../../ide/adding-a-member-function-visual-cpp.md)   
- [Dodawanie zmiennej członkowskiej](../../ide/adding-a-member-variable-visual-cpp.md)   
- [Zastępowanie funkcji wirtualnych](../../ide/overriding-a-virtual-function-visual-cpp.md)   
- [Handler komunikatów MFC](../../mfc/reference/adding-an-mfc-message-handler.md)   
- [Nawigacja w strukturze klas](../../ide/navigating-the-class-structure-visual-cpp.md)
+
+Po utworzeniu klasy formantu MFC można zadeklarować zmienną na jego podstawie. Aby zapewnić kontekst nowej zmiennej, należy otworzyć Edytor okien dialogowych i Edytuj okno dialogowe, w której chcesz użyć kontroli nad wielokrotnego użytku. Ponadto okno dialogowe musi już mieć skojarzone z nią klasy. Aby uzyskać informacje na temat używania edytora okien dialogowych, zobacz [Edytor okien dialogowych](../../windows/dialog-editor.md).
+
+### <a name="to-declare-a-variable-based-on-your-reusable-class"></a>Aby zadeklarować zmienną, w oparciu o klasy wielokrotnego użytku
+
+1. Podczas edycji okno dialogowe, przeciągnij formant tego samego typu jako klasa bazowa nowej kontrolki na pasku narzędzi kontrolek na oknie dialogowym.
+
+1. Umieść wskaźnik myszy nad kontrolką porzucone.
+
+1. Naciskaj klawisz CTRL, kliknij dwukrotnie formant.
+
+     [Dodaj zmienną elementu członkowskiego](../../ide/add-member-variable-wizard.md) pojawi się okno dialogowe.
+
+1. W **dostępu** wybierz prawidłowy dostęp dla kontrolki.
+
+1. Kliknij przycisk **zmienna sterująca** pole wyboru.
+
+1. W **nazwa zmiennej** wpisz nazwę.
+
+1. W obszarze **kategorii**, kliknij przycisk **kontroli**.
+
+1. W **identyfikator formantu** listy, wybierz formant, który został dodany. **Typ zmiennej** listy powinien być wyświetlany poprawny typ zmiennej i **kontrolowanie typu** pole powinien być wyświetlany poprawny kontrolek typu.
+
+9. W **komentarz** Dodaj dodatkowe uwagi, które mają być wyświetlane w kodzie.
+
+10. Kliknij przycisk **OK**.
+
+## <a name="see-also"></a>Zobacz też
+
+[Mapowanie komunikatów do funkcji](../../mfc/reference/mapping-messages-to-functions.md)<br/>
+[Dodawanie funkcji za pomocą kreatorów kodu](../../ide/adding-functionality-with-code-wizards-cpp.md)<br/>
+[Dodawanie klasy](../../ide/adding-a-class-visual-cpp.md)<br/>
+[Dodawanie funkcji członkowskiej](../../ide/adding-a-member-function-visual-cpp.md)<br/>
+[Dodawanie zmiennej członkowskiej](../../ide/adding-a-member-variable-visual-cpp.md)<br/>
+[Zastępowanie funkcji wirtualnych](../../ide/overriding-a-virtual-function-visual-cpp.md)<br/>
+[Handler komunikatów MFC](../../mfc/reference/adding-an-mfc-message-handler.md)<br/>
+[Nawigacja w strukturze klas](../../ide/navigating-the-class-structure-visual-cpp.md)

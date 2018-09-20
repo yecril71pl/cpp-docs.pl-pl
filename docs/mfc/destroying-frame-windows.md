@@ -1,5 +1,5 @@
 ---
-title: Niszczenie okien ramowych | Dokumentacja firmy Microsoft
+title: Niszczenie Windows ramki | Dokumentacja firmy Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -25,24 +25,26 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 81182c0e5633e19126d3036b5793de7658ad3d2a
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 742ea2fedff2e4f044e46242a4152c12855ab15e
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33343479"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46396158"
 ---
 # <a name="destroying-frame-windows"></a>Niszczenie okien ramowych
-Struktura MFC zarządza zniszczenie okna, a także tworzenie tych Windows skojarzone z framework dokumentów i widoków. Jeśli utworzysz dodatkowe okna jest odpowiedzialny za zniszczenia.  
-  
- W ramach, gdy użytkownik zamyka okno ramowe domyślne okna [OnClose](../mfc/reference/cwnd-class.md#onclose) wywołań obsługi [DestroyWindow](../mfc/reference/cwnd-class.md#destroywindow). Jest ostatnim funkcji członkowskiej wywoływane, gdy okno systemu Windows zostanie zniszczony [OnNcDestroy](../mfc/reference/cwnd-class.md#onncdestroy), która działa niektórych oczyszczania wywołuje [domyślne](../mfc/reference/cwnd-class.md#default) elementu członkowskiego funkcja do wykonania oczyszczania systemu Windows, a na koniec wywołuje wirtualnej funkcji członkowskiej [PostNcDestroy](../mfc/reference/cwnd-class.md#postncdestroy). [Cframewnd —](../mfc/reference/cframewnd-class.md) implementacja `PostNcDestroy` usuwa obiekt window C++. Nigdy nie należy używać języka C++ **usunąć** operatora w oknie ramowym. Zamiast nich należy używać słów kluczowych `DestroyWindow`.  
-  
- Po zamknięciu okna głównego, zamyka aplikację. Jeśli zostaną zmodyfikowane niezapisane dokumenty, ramach wyświetla komunikat do żądania, jeśli ma zostać zapisany dokumentów i zapewnia, że odpowiednie dokumenty są zapisywane w razie potrzeby.  
-  
-## <a name="what-do-you-want-to-know-more-about"></a>Co chcesz dowiedzieć się więcej o  
-  
--   [Tworzenie okien ramowych dokumentu](../mfc/creating-document-frame-windows.md)  
-  
-## <a name="see-also"></a>Zobacz też  
- [Używanie okien ramowych](../mfc/using-frame-windows.md)
+
+Struktura MFC zarządza zniszczenie okna, a także tworzenie tych oknach skojarzone z framework dokumentów i widoków. Jeśli tworzysz dodatkowe okna, ponosisz odpowiedzialność za zniszczenie ich.
+
+W ramach, gdy użytkownik zamknie okno ramowe domyślny okna [OnClose](../mfc/reference/cwnd-class.md#onclose) obsługi zdarzeń wywołuje [destroywindow —](../mfc/reference/cwnd-class.md#destroywindow). Jest ostatni funkcja elementu członkowskiego, wywoływana, gdy okno Windows zostanie zniszczony [onncdestroy —](../mfc/reference/cwnd-class.md#onncdestroy), który wykonuje niektóre oczyszczania wywołuje [domyślne](../mfc/reference/cwnd-class.md#default) element członkowski funkcji do wykonywania oczyszczania Windows i na koniec wywołania Funkcja wirtualna elementu członkowskiego [postncdestroy —](../mfc/reference/cwnd-class.md#postncdestroy). [CFrameWnd](../mfc/reference/cframewnd-class.md) implementacji `PostNcDestroy` usuwa obiekt okna języka C++. Nigdy nie należy używać języka C++ **Usuń** operatora w oknie ramek. Zamiast nich należy używać słów kluczowych `DestroyWindow`.
+
+Po zamknięciu okna głównego, zamyka aplikację. Jeśli są modyfikowane niezapisane dokumenty, struktura Wyświetla okno komunikatu, aby zadać, czy można zapisywać dokumenty i gwarantuje, że odpowiednie dokumenty są zapisywane w razie potrzeby.
+
+## <a name="what-do-you-want-to-know-more-about"></a>Co chcesz dowiedzieć się więcej na temat
+
+- [Tworzenie okien ramowych dokumentu](../mfc/creating-document-frame-windows.md)
+
+## <a name="see-also"></a>Zobacz też
+
+[Używanie okien ramowych](../mfc/using-frame-windows.md)
 

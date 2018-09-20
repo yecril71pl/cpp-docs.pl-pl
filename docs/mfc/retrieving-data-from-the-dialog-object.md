@@ -1,5 +1,5 @@
 ---
-title: Pobieranie danych z obiektu okna dialogowego | Dokumentacja firmy Microsoft
+title: Trwa pobieranie danych z obiektu okna dialogowego | Dokumentacja firmy Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -31,24 +31,26 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8b221bd97d9ee943e19b043bcc9be6aba0fa1672
-ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
+ms.openlocfilehash: 3055468c04bba7c9cb999d0a642c0819524ff7e7
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/25/2018
-ms.locfileid: "36929598"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46391413"
 ---
 # <a name="retrieving-data-from-the-dialog-object"></a>Pobieranie danych z obiektu okna dialogowego
-Platformę zapewnia prosty sposób zainicjować wartości formantów w oknie dialogowym oraz do pobierania wartości z kontroli. Więcej pracochłonne ręczne podejściem jest wywołaniem funkcji, takich jak `SetDlgItemText` i `GetDlgItemText` funkcji elementów członkowskich klasy `CWnd`, które mają zastosowanie do sterowania systemu windows. Z tych funkcji, należy każdy kontrola dostępu indywidualnie do ustawić lub pobrać jej wartość wywoływanie funkcji, takich jak `SetWindowText` i `GetWindowText`. Podejście framework automatyzuje zarówno inicjowania i pobierania.  
-  
- Wymiana danych okna dialogowego (DDX) umożliwia łatwiejsze wymiany danych między formantów w oknie dialogowym pole i element członkowski zmiennych w obiektu okna dialogowego. To z programem exchange działa w obu kierunkach. Zainicjować formantów w oknie dialogowym można ustawić wartości elementów członkowskich danych w obiekcie okna dialogowego i ramach zostaną przeniesione wartości do kontrolki, zanim zostanie wyświetlone okno dialogowe. Następnie możesz w dowolnym momencie zaktualizować elementy członkowskie danych okna dialogowego z danych wprowadzonych przez użytkownika. W tym momencie można użyć danych, odwołując się do zmiennych Członkowskich danych.  
-  
- Można także porządkować dla wartości formantów okna dialogowego zostanie automatycznie wykonana Walidacja z Walidacja danych okna dialogowego (DDV).  
-  
- DDX i DDV omówiono bardziej szczegółowo w [wymiana danych okna dialogowego i weryfikacja](../mfc/dialog-data-exchange-and-validation.md).  
-  
- Dla modalne okno dialogowe, można pobrać żadnych danych, które użytkownik wprowadził, kiedy `DoModal` zwraca IDOK, ale przed okna dialogowego obiekt zostanie zniszczony. Pola z niemodalnego okna dialogowego można pobrać dane z obiektu okna dialogowego w dowolnym momencie przez wywołanie metody `UpdateData` z argumentem **TRUE** , a następnie uzyskiwanie dostępu do zmiennych Członkowskich klasy okna dialogowego. Ten temat jest omówiona bardziej szczegółowo w [wymiana danych okna dialogowego i weryfikacja](../mfc/dialog-data-exchange-and-validation.md).  
-  
-## <a name="see-also"></a>Zobacz też  
- [Cykl życiowy okna dialogowego](../mfc/life-cycle-of-a-dialog-box.md)
+
+Struktura zapewnia łatwy sposób można zainicjować wartości formantów w oknie dialogowym i pobierać wartości z kontrolek. Więcej pracochłonne ręczne podejście jest wywołaniem funkcji, takich jak `SetDlgItemText` i `GetDlgItemText` funkcji elementów członkowskich klasy `CWnd`, które mają zastosowanie do sterowania systemu windows. Za pomocą tych funkcji można kontrola dostępu do każdego pojedynczo, aby ustawić lub pobrać jej wartość wywołaniem funkcji, takich jak `SetWindowText` i `GetWindowText`. Podejście struktury automatyzuje proces inicjowania i pobierania.
+
+Wymiana danych okna dialogowego (DDX) pozwala łatwiej wymianę danych między formantów okna dialogowego pole i elementów członkowskich zmiennych w obiektu okna dialogowego. Ten program exchange działa w obu kierunkach. Aby zainicjować kontrolki w oknie dialogowym, można ustawić wartości elementów członkowskich danych w obiekcie okna dialogowego, a struktura będzie przesyłać wartości do formantów, zanim zostanie wyświetlone okno dialogowe. Następnie możesz w dowolnym momencie zaktualizować elementy członkowskie danych okna dialogowego przy użyciu danych wprowadzonych przez użytkownika. W tym momencie można użyć danych, odwołując się do zmiennych element członkowski danych.
+
+Można także porządkować dla wartości formantów okna dialogowego, aby zostać uwierzytelnionym automatycznie za pomocą Walidacja danych okna dialogowego (DDV).
+
+DDX i DDV omówiona bardziej szczegółowo w [wymiana danych okna dialogowego i sprawdzanie poprawności](../mfc/dialog-data-exchange-and-validation.md).
+
+Dla modalnego okna dialogowego, można pobrać żadnych danych, które użytkownik wprowadził, kiedy `DoModal` zwraca IDOK, ale przed okna dialogowego niszczony jest obiekt. Dla niemodalnego okna dialogowego, można pobrać dane z obiektu okna dialogowego w dowolnym momencie przez wywołanie metody `UpdateData` z argumentem **TRUE** ich i uzyskującym zmienne składowe klasy okna dialogowego. Ten temat jest omówiona bardziej szczegółowo w [wymiana danych okna dialogowego i sprawdzanie poprawności](../mfc/dialog-data-exchange-and-validation.md).
+
+## <a name="see-also"></a>Zobacz też
+
+[Cykl życiowy okna dialogowego](../mfc/life-cycle-of-a-dialog-box.md)
 

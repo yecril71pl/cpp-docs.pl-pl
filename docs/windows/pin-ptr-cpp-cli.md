@@ -20,12 +20,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: af0cfe6f3a94aa1bc2afc4e4857864f81099567e
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: de7f4c94ec0d9cb5a9a57315ebda015b7737132c
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42591734"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46392765"
 ---
 # <a name="pinptr-ccli"></a>pin_ptr (C++/CLI)
 
@@ -51,16 +51,16 @@ A *przypiętego wskaźnika* jest posługiwanie się nimi wskaźnik, który uniem
 
 ### <a name="parameters"></a>Parametry
 
-*cv_qualifier*  
+*cv_qualifier*<br/>
 **Const** lub **volatile** kwalifikatorów. Domyślnie jest przypięty wskaźnik **volatile**. Jest nadmiarowy, ale nie jest błąd, aby zadeklarować wskaźnik przypinania **volatile**.
 
-*Typ*  
+*Typ*<br/>
 Typ *inicjatora*.
 
-*var*  
+*var*<br/>
 Nazwa **pin_ptr** zmiennej.
 
-*initializer*  
+*initializer*<br/>
 Element członkowski typu odwołania, element tablicy zarządzanej lub inny obiekt, który można przypisać na wskaźnik natywny.
 
 ### <a name="remarks"></a>Uwagi

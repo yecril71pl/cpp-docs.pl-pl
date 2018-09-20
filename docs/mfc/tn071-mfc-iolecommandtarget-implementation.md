@@ -17,12 +17,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1d8e029b1ffc4e17e55f2cb69405bb272b92e94e
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 6d8d4b0f740e69b57944cb35f2213ae0fd54b511
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43221397"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46386291"
 ---
 # <a name="tn071-mfc-iolecommandtarget-implementation"></a>TN071: implementacja interfejsu MFC IOleCommandTarget
 
@@ -59,11 +59,11 @@ To makro jest przesyłany w deklaracji klasy (zwykle znajduje się w pliku nagł
 BEGIN_OLECMD_MAP(theClass, baseClass)
 ```
 
-*theClass*  
- Nazwa klasy, która zawiera mapę polecenia.
+*theClass*<br/>
+Nazwa klasy, która zawiera mapę polecenia.
 
-*baseClass*  
- Nazwa klasy podstawowej klasy, która zawiera mapę polecenia.
+*baseClass*<br/>
+Nazwa klasy podstawowej klasy, która zawiera mapę polecenia.
 
 To makro oznacza początek mapy polecenia. Użyj tego makra w pliku implementacji dla klasy, która zawiera mapę polecenia.
 
@@ -77,14 +77,14 @@ To makro oznacza koniec mapy polecenia. Użyj tego makra w pliku implementacji d
 ON_OLECMD(pguid, olecmdid, id)
 ```
 
-*pguid*  
- Wskaźnik na identyfikator GUID grupy poleceń polecenia OLE. Ten parametr jest **NULL** grupy standardowe polecenia OLE.
+*pguid*<br/>
+Wskaźnik na identyfikator GUID grupy poleceń polecenia OLE. Ten parametr jest **NULL** grupy standardowe polecenia OLE.
 
-*olecmdid*  
- Identyfikator polecenia OLE polecenie do wywołania.
+*olecmdid*<br/>
+Identyfikator polecenia OLE polecenie do wywołania.
 
-*id*  
- Identyfikator komunikatu WM_COMMAND do wysłania do aplikacji zawierającej mapy polecenia podczas wywoływania tego polecenia OLE.
+*id*<br/>
+Identyfikator komunikatu WM_COMMAND do wysłania do aplikacji zawierającej mapy polecenia podczas wywoływania tego polecenia OLE.
 
 Użyj ON_OLECMD — makro w mapie polecenie, aby dodać wpisy dla polecenia OLE, którą chcesz obsługiwać. Po odebraniu polecenia OLE, będzie można przekonwertować na określony komunikat WM_COMMAND i przesyłane za pośrednictwem aplikacji mapy komunikatów przy użyciu architektury standardowego routingu poleceń MFC.
 
@@ -158,5 +158,5 @@ void CContainerCntrItem::DoOleCmd()
 
 ## <a name="see-also"></a>Zobacz także
 
-[Uwagi techniczne według numerów](../mfc/technical-notes-by-number.md)  
-[Uwagi techniczne według kategorii](../mfc/technical-notes-by-category.md)  
+[Uwagi techniczne według numerów](../mfc/technical-notes-by-number.md)<br/>
+[Uwagi techniczne według kategorii](../mfc/technical-notes-by-category.md)

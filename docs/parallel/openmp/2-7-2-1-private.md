@@ -12,30 +12,31 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 25ada9c89243ccc23201eb1939337068e77263c7
-ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
+ms.openlocfilehash: d06650a784b5b59405f446f4701918393b21fa3b
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33687468"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46387240"
 ---
 # <a name="2721-private"></a>2.7.2.1 — prywatny
-`private` Klauzuli deklaruje zmienne na liście zmiennych ma charakter prywatny, aby każdy wątek w zespole. Składnia `private` klauzuli wygląda następująco:  
-  
-```  
-private(variable-list)  
-```  
-  
- Zachowanie określonego w zmiennej `private` klauzuli ma następującą składnię. Nowy obiekt z automatycznym okresem magazynu jest przydzielany dla konstrukcji. Rozmiar i wyrównanie nowego obiektu zależą od typu zmiennej. Ten przydział występuje raz dla każdego wątku w zespole, a domyślny konstruktor jest wywoływany dla obiekt klasy, jeśli jest to konieczne. w przeciwnym razie wartość początkowa jest nieokreślony.  Oryginalny obiekt odwołuje się zmienna ma nieokreśloną wartość po wejściu do konstrukcja, nie muszą zostać zmodyfikowane w ramach zakresu dynamicznego konstrukcji i ma nieokreśloną wartość momencie opuszczenia konstrukcja.  
-  
- W zakresie leksykalne dyrektywa konstrukcji zmienna odwołuje się do nowego obiektu prywatnej przydzielonej przez wątek.  
-  
- Ograniczenia do `private` klauzuli są następujące:  
-  
--   Zmienna typu klasy określonej w `private` klauzuli musi mieć konstruktora domyślnego dostępny, jednoznaczne.  
-  
--   Określona w zmiennej `private` nie może mieć klauzuli **const**-kwalifikowanego typu, chyba że jego typ klasy `mutable` elementu członkowskiego.  
-  
--   Określona w zmiennej `private` niekompletnego typu lub typ referencyjny nie może mieć klauzuli.  
-  
--   Zmienne, które są widoczne w `reduction` klauzuli **równoległych** dyrektywy nie można określić w `private` klauzuli w dyrektywie podziału pracy, która jest powiązana z konstrukcji równoległych.
+
+`private` Klauzuli deklarujemy zmienne na liście zmiennych można używać prywatnego każdy wątek w zespole. Składnia `private` klauzula jest w następujący sposób:
+
+```
+private(variable-list)
+```
+
+Zachowanie określone w zmiennej `private` klauzula jest w następujący sposób. Nowy obiekt z automatycznym okresem magazynu jest przydzielany dla konstrukcji. Rozmiar i wyrównanie nowego obiektu są określane przez typ zmiennej. Ten przydział wykonywana jeden raz dla każdego wątku w zespole, a domyślny konstruktor jest wywoływana dla obiektu klasy, w razie potrzeby; w przeciwnym razie wartość początkowa jest nieokreślony.  Oryginalny obiekt odwołuje się zmienna ma nieokreśloną wartość po wejściu do konstrukcja nie mogą zostać zmodyfikowane w ramach zakresu dynamiczna konstrukcja i ma nieokreśloną wartość przy zamykaniu z konstrukcja.
+
+W zakresie leksykalnym dyrektywy konstrukcji zmienna odwołuje się do nowego obiektu prywatnej przydzielonej przez wątek.
+
+Ograniczenia do `private` klauzuli są następujące:
+
+- Zmiennej z typu klasy, która została określona w `private` klauzuli musi mieć dostęp, jednoznaczną domyślnego konstruktora.
+
+- Określone w zmiennej `private` nie mogą zawierać klauzuli **const**-wykwalifikowany typ, chyba że jego klasa to typ `mutable` elementu członkowskiego.
+
+- Określone w zmiennej `private` klauzuli nie może mieć typu niekompletnego lub typu odwołania.
+
+- Zmienne, które pojawiają się w `reduction` klauzuli **równoległe** dyrektywy nie można określić w `private` klauzuli w dyrektywie podziału pracy, która jest powiązywana z konstrukcja równoległa.

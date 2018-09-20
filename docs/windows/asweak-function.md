@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: dea10165e920c6b0bbd3856fc04e9ec9661e60c4
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: dfd626a3e0ca1866f6db046554220c6e631c18b4
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42571337"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46394312"
 ---
 # <a name="asweak-function"></a>AsWeak — Funkcja
 
@@ -40,13 +40,13 @@ HRESULT AsWeak(
 
 ### <a name="parameters"></a>Parametry
 
-*T*  
+*T*<br/>
 Wskaźnik do typu parametru *p*.
 
-*p*  
+*p*<br/>
 Wystąpienie typu.
 
-*pWeak*  
+*pWeak*<br/>
 Po zakończeniu tej operacji, wskaźnik do słabe odwołanie do parametru *p*.
 
 ## <a name="return-value"></a>Wartość zwracana

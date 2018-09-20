@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: b50466fc2c357c1d57fca272ff343cd56f3689c5
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: 7092153e49fdb40fc32fb1cbee5bc2376080ff4e
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42604269"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46391881"
 ---
 # <a name="runtimeclassbasetasiid-method"></a>RuntimeClassBaseT::AsIID — Metoda
 
@@ -41,16 +41,16 @@ __forceinline static HRESULT AsIID(
 
 ### <a name="parameters"></a>Parametry
 
-*T*  
+*T*<br/>
 Typ, który implementuje Identyfikatorem określony przez parametr *riid*.
 
-*Implementuje*  
+*Implementuje*<br/>
 Zmiennej o typie określonym przez parametr szablonu *T*.
 
-*Parametr riid*  
+*Parametr riid*<br/>
 Identyfikator interfejsu do pobrania.
 
-*ppvObject*  
+*ppvObject*<br/>
 Jeśli operacja się powiedzie, wskaźnik do a wskaźnik do interfejsu określony przez parametr *riid*.
 
 ## <a name="return-value"></a>Wartość zwracana
@@ -69,5 +69,5 @@ Pobiera wskaźnik do określonego interfejsu.
 
 ## <a name="see-also"></a>Zobacz też
 
-[RuntimeClassBaseT, struktura](../windows/runtimeclassbaset-structure.md)  
+[RuntimeClassBaseT, struktura](../windows/runtimeclassbaset-structure.md)<br/>
 [Microsoft::WRL::Details, przestrzeń nazw](../windows/microsoft-wrl-details-namespace.md)

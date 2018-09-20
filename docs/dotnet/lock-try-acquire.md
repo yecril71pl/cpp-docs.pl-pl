@@ -21,131 +21,138 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: ce9e13e56728216c4a4b16246d4e99117199878c
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 7782f59ae63c185995fe52f19bca739bc12fcaa1
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46115960"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46375854"
 ---
 # <a name="locktryacquire"></a>lock::try_acquire
-Uzyskaj blokadę na obiekcie oczekiwanie na określoną ilość czasu i zwracanie `bool` do raportują Powodzenie przejęcia, zamiast zgłaszać wyjątek.  
-  
-## <a name="syntax"></a>Składnia  
-  
-```  
-bool try_acquire(  
-   int _timeout_ms  
-);  
-bool try_acquire(  
-   System::TimeSpan _timeout  
-);  
-```  
-  
-#### <a name="parameters"></a>Parametry  
+
+Uzyskaj blokadę na obiekcie oczekiwanie na określoną ilość czasu i zwracanie `bool` do raportują Powodzenie przejęcia, zamiast zgłaszać wyjątek.
+
+## <a name="syntax"></a>Składnia
+
+```
+bool try_acquire(
+   int _timeout_ms
+);
+bool try_acquire(
+   System::TimeSpan _timeout
+);
+```
+
+#### <a name="parameters"></a>Parametry
+
 *_limit czasu*<br/>
-Wartość limitu czasu (w milisekundach) lub jako <xref:System.TimeSpan>.  
-  
-## <a name="return-value"></a>Wartość zwracana  
- `true` Jeśli blokada została uzyskana, `false` inaczej.  
-  
-## <a name="remarks"></a>Uwagi  
- Jeśli już pozyskany blokadę, ta funkcja nie działa.  
-  
-## <a name="example"></a>Przykład  
- W tym przykładzie użycie pojedynczego wystąpienia klasy przez wiele wątków.  Klasa stosowana jest blokada na siebie, aby upewnić się, że dostęp do jego wewnętrznych danych są spójne dla każdego wątku.  Głównego wątku aplikacji stosowana jest blokada na tym samym wystąpieniu klasy mogą okresowo sprawdzać, czy wszystkie wątki robocze nadal istnieje, i czeka, aby zakończyć pracę, dopóki wszystkie wątki robocze zostały wykonane ich zadań.  
-  
-```  
-// msl_lock_try_acquire.cpp  
-// compile with: /clr  
-#include <msclr/lock.h>  
-  
-using namespace System;  
-using namespace System::Threading;  
-using namespace msclr;  
-  
-ref class CounterClass {  
-private:  
-   int Counter;     
-  
-public:  
-   property int ThreadCount;  
-  
-   // function called by multiple threads, use lock to keep Counter consistent  
-   // for each thread  
-   void UseCounter() {  
-      try {  
-         lock l(this); // wait infinitely  
-  
-         Console::WriteLine("In thread {0}, Counter = {1}", Thread::CurrentThread->ManagedThreadId,   
-            Counter);  
-  
-         for (int i = 0; i < 10; i++) {  
-            Counter++;  
-            Thread::Sleep(10);  
-         }  
-  
-         Console::WriteLine("In thread {0}, Counter = {1}", Thread::CurrentThread->ManagedThreadId,   
-            Counter);  
-  
-         Counter = 0;  
-         // lock is automatically released when it goes out of scope and its destructor is called  
-      }  
-      catch (...) {  
-         Console::WriteLine("Couldn't acquire lock!");  
-      }  
-  
-      ThreadCount--;  
-   }  
-};  
-  
-int main() {  
-   // create a few threads to contend for access to the shared data  
-   CounterClass^ cc = gcnew CounterClass;  
-   array<Thread^>^ tarr = gcnew array<Thread^>(5);  
-   ThreadStart^ startDelegate = gcnew ThreadStart(cc, &CounterClass::UseCounter);  
-   for (int i = 0; i < tarr->Length; i++) {  
-      tarr[i] = gcnew Thread(startDelegate);  
-      cc->ThreadCount++;  
-      tarr[i]->Start();  
-   }  
-  
-   // keep our main thread alive until all worker threads have completed  
-   lock l(cc, lock_later); // don't lock now, just create the object  
-   while (true) {  
-      if (l.try_acquire(50)) { // try to acquire lock, don't throw an exception if can't  
-         if (0 == cc->ThreadCount) {  
-            Console::WriteLine("All threads completed.");  
-            break; // all threads are gone, exit while  
-         }  
-         else {  
-            Console::WriteLine("{0} threads exist, continue waiting...", cc->ThreadCount);  
-            l.release(); // some threads exist, let them do their work  
-         }  
-      }  
-   }  
-}  
-```  
-  
-```Output  
-In thread 3, Counter = 0  
-In thread 3, Counter = 10  
-In thread 5, Counter = 0  
-In thread 5, Counter = 10  
-In thread 7, Counter = 0  
-In thread 7, Counter = 10  
-In thread 4, Counter = 0  
-In thread 4, Counter = 10  
-In thread 6, Counter = 0  
-In thread 6, Counter = 10  
-All threads completed.  
-```  
-  
-## <a name="requirements"></a>Wymagania  
- **Plik nagłówkowy** \<msclr\lock.h >  
-  
- **Namespace** msclr  
-  
-## <a name="see-also"></a>Zobacz też  
- [Lock, składowe](../dotnet/lock-members.md)   
- [lock::acquire](../dotnet/lock-acquire.md)
+Wartość limitu czasu (w milisekundach) lub jako <xref:System.TimeSpan>.
+
+## <a name="return-value"></a>Wartość zwracana
+
+`true` Jeśli blokada została uzyskana, `false` inaczej.
+
+## <a name="remarks"></a>Uwagi
+
+Jeśli już pozyskany blokadę, ta funkcja nie działa.
+
+## <a name="example"></a>Przykład
+
+W tym przykładzie użycie pojedynczego wystąpienia klasy przez wiele wątków.  Klasa stosowana jest blokada na siebie, aby upewnić się, że dostęp do jego wewnętrznych danych są spójne dla każdego wątku.  Głównego wątku aplikacji stosowana jest blokada na tym samym wystąpieniu klasy mogą okresowo sprawdzać, czy wszystkie wątki robocze nadal istnieje, i czeka, aby zakończyć pracę, dopóki wszystkie wątki robocze zostały wykonane ich zadań.
+
+```
+// msl_lock_try_acquire.cpp
+// compile with: /clr
+#include <msclr/lock.h>
+
+using namespace System;
+using namespace System::Threading;
+using namespace msclr;
+
+ref class CounterClass {
+private:
+   int Counter;
+
+public:
+   property int ThreadCount;
+
+   // function called by multiple threads, use lock to keep Counter consistent
+   // for each thread
+   void UseCounter() {
+      try {
+         lock l(this); // wait infinitely
+
+         Console::WriteLine("In thread {0}, Counter = {1}", Thread::CurrentThread->ManagedThreadId,
+            Counter);
+
+         for (int i = 0; i < 10; i++) {
+            Counter++;
+            Thread::Sleep(10);
+         }
+
+         Console::WriteLine("In thread {0}, Counter = {1}", Thread::CurrentThread->ManagedThreadId,
+            Counter);
+
+         Counter = 0;
+         // lock is automatically released when it goes out of scope and its destructor is called
+      }
+      catch (...) {
+         Console::WriteLine("Couldn't acquire lock!");
+      }
+
+      ThreadCount--;
+   }
+};
+
+int main() {
+   // create a few threads to contend for access to the shared data
+   CounterClass^ cc = gcnew CounterClass;
+   array<Thread^>^ tarr = gcnew array<Thread^>(5);
+   ThreadStart^ startDelegate = gcnew ThreadStart(cc, &CounterClass::UseCounter);
+   for (int i = 0; i < tarr->Length; i++) {
+      tarr[i] = gcnew Thread(startDelegate);
+      cc->ThreadCount++;
+      tarr[i]->Start();
+   }
+
+   // keep our main thread alive until all worker threads have completed
+   lock l(cc, lock_later); // don't lock now, just create the object
+   while (true) {
+      if (l.try_acquire(50)) { // try to acquire lock, don't throw an exception if can't
+         if (0 == cc->ThreadCount) {
+            Console::WriteLine("All threads completed.");
+            break; // all threads are gone, exit while
+         }
+         else {
+            Console::WriteLine("{0} threads exist, continue waiting...", cc->ThreadCount);
+            l.release(); // some threads exist, let them do their work
+         }
+      }
+   }
+}
+```
+
+```Output
+In thread 3, Counter = 0
+In thread 3, Counter = 10
+In thread 5, Counter = 0
+In thread 5, Counter = 10
+In thread 7, Counter = 0
+In thread 7, Counter = 10
+In thread 4, Counter = 0
+In thread 4, Counter = 10
+In thread 6, Counter = 0
+In thread 6, Counter = 10
+All threads completed.
+```
+
+## <a name="requirements"></a>Wymagania
+
+**Plik nagłówkowy** \<msclr\lock.h >
+
+**Namespace** msclr
+
+## <a name="see-also"></a>Zobacz też
+
+[lock, składowe](../dotnet/lock-members.md)<br/>
+[lock::acquire](../dotnet/lock-acquire.md)

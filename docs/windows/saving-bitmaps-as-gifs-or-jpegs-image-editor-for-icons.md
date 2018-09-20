@@ -26,12 +26,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: ab9f8e6056c0f97d36d0c0eb4853fbb7eed80dc0
-ms.sourcegitcommit: f0c90000125a9497bf61e41624de189a043703c0
+ms.openlocfilehash: 11eea641132a608bf780f9adcc7cfeafad0950d5
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44313042"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46383141"
 ---
 # <a name="saving-bitmaps-as-gifs-or-jpegs-image-editor-for-icons"></a>Zapisywanie map bitowych jako plików GIF lub JPEG (Edytor obrazów dla ikon)
 
@@ -63,5 +63,5 @@ Aby uzyskać informacje na temat dodawania zasobów do projektów zarządzanych,
 
 ## <a name="see-also"></a>Zobacz też
 
-[Edytowanie zasobów graficznych](../windows/editing-graphical-resources-image-editor-for-icons.md)  
+[Edytowanie zasobów graficznych](../windows/editing-graphical-resources-image-editor-for-icons.md)<br/>
 [Edytor obrazów dla ikon](../windows/image-editor-for-icons.md)

@@ -20,92 +20,98 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a7d441aff74faede9ecbc41f03fe52cd05528e06
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 7e4e2b7af8e99059151963398215a18411797101
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46104767"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46380155"
 ---
 # <a name="location-class"></a>location — Klasa
-Abstrakcja fizycznej lokalizacji na sprzęcie.  
-  
-## <a name="syntax"></a>Składnia  
-  
+
+Abstrakcja fizycznej lokalizacji na sprzęcie.
+
+## <a name="syntax"></a>Składnia
+
 ```
 class location;
-```  
-  
-## <a name="members"></a>Elementy członkowskie  
-  
-### <a name="public-constructors"></a>Konstruktory publiczne  
-  
-|Nazwa|Opis|  
-|----------|-----------------|  
-|[Lokalizacja](#ctor)|Przeciążone. Konstruuje `location` obiektu.|  
-|[~ location — destruktor](#dtor)|Niszczy `location` obiektu.|  
-  
-### <a name="public-methods"></a>Metody publiczne  
-  
-|Nazwa|Opis|  
-|----------|-----------------|  
-|[bieżący](#current)|Zwraca `location` obiekt reprezentujący miejscu bardziej konkretny od pozostałych, wykonywany jest wątek wywołujący.|  
-|[from_numa_node —](#from_numa_node)|Zwraca `location` obiekt, który reprezentuje dany Węzeł NUMA.|  
-  
-### <a name="public-operators"></a>Operatory publiczne  
-  
-|Nazwa|Opis|  
-|----------|-----------------|  
-|[operator!=](#operator_neq)|Określa, czy dwa `location` obiekty reprezentują inną lokalizację.|  
-|[operator=](#operator_eq)|Przypisuje zawartość innego `location` obiektu do wskazanego.|  
-|[operator==](#operator_eq_eq)|Określa, czy dwa `location` obiekty reprezentują tej samej lokalizacji.|  
-  
-## <a name="inheritance-hierarchy"></a>Hierarchia dziedziczenia  
- `location`  
-  
-## <a name="requirements"></a>Wymagania  
- **Nagłówek:** concrt.h  
-  
- **Namespace:** współbieżności  
-  
-##  <a name="dtor"></a> ~ lokalizacji 
+```
 
- Niszczy `location` obiektu.  
-  
+## <a name="members"></a>Elementy członkowskie
+
+### <a name="public-constructors"></a>Konstruktory publiczne
+
+|Nazwa|Opis|
+|----------|-----------------|
+|[Lokalizacja](#ctor)|Przeciążone. Konstruuje `location` obiektu.|
+|[~ location — destruktor](#dtor)|Niszczy `location` obiektu.|
+
+### <a name="public-methods"></a>Metody publiczne
+
+|Nazwa|Opis|
+|----------|-----------------|
+|[bieżący](#current)|Zwraca `location` obiekt reprezentujący miejscu bardziej konkretny od pozostałych, wykonywany jest wątek wywołujący.|
+|[from_numa_node —](#from_numa_node)|Zwraca `location` obiekt, który reprezentuje dany Węzeł NUMA.|
+
+### <a name="public-operators"></a>Operatory publiczne
+
+|Nazwa|Opis|
+|----------|-----------------|
+|[operator!=](#operator_neq)|Określa, czy dwa `location` obiekty reprezentują inną lokalizację.|
+|[operator=](#operator_eq)|Przypisuje zawartość innego `location` obiektu do wskazanego.|
+|[operator==](#operator_eq_eq)|Określa, czy dwa `location` obiekty reprezentują tej samej lokalizacji.|
+
+## <a name="inheritance-hierarchy"></a>Hierarchia dziedziczenia
+
+`location`
+
+## <a name="requirements"></a>Wymagania
+
+**Nagłówek:** concrt.h
+
+**Namespace:** współbieżności
+
+##  <a name="dtor"></a> ~ lokalizacji
+
+Niszczy `location` obiektu.
+
 ```
 ~location();
-```  
-  
-##  <a name="current"></a> bieżący 
+```
 
- Zwraca `location` obiekt reprezentujący miejscu bardziej konkretny od pozostałych, wykonywany jest wątek wywołujący.  
-  
+##  <a name="current"></a> bieżący
+
+Zwraca `location` obiekt reprezentujący miejscu bardziej konkretny od pozostałych, wykonywany jest wątek wywołujący.
+
 ```
 static location __cdecl current();
-```  
-  
-### <a name="return-value"></a>Wartość zwracana  
- Lokalizację reprezentujący bardziej konkretny od pozostałych miejscu wykonywanie wątku wywołującego.  
-  
-##  <a name="from_numa_node"></a> from_numa_node — 
+```
 
- Zwraca `location` obiekt, który reprezentuje dany Węzeł NUMA.  
-  
+### <a name="return-value"></a>Wartość zwracana
+
+Lokalizację reprezentujący bardziej konkretny od pozostałych miejscu wykonywanie wątku wywołującego.
+
+##  <a name="from_numa_node"></a> from_numa_node —
+
+Zwraca `location` obiekt, który reprezentuje dany Węzeł NUMA.
+
 ```
 static location __cdecl from_numa_node(unsigned short _NumaNodeNumber);
-```  
-  
-### <a name="parameters"></a>Parametry  
-*_NumaNodeNumber*<br/>
-Numer węzła NUMA do konstruowania lokalizację.  
-  
-### <a name="return-value"></a>Wartość zwracana  
- Reprezentujący Węzeł NUMA, określone przez lokalizację `_NumaNodeNumber` parametru.  
-  
-##  <a name="ctor"></a> Lokalizacja 
+```
 
- Konstruuje `location` obiektu.  
-  
+### <a name="parameters"></a>Parametry
+
+*_NumaNodeNumber*<br/>
+Numer węzła NUMA do konstruowania lokalizację.
+
+### <a name="return-value"></a>Wartość zwracana
+
+Reprezentujący Węzeł NUMA, określone przez lokalizację `_NumaNodeNumber` parametru.
+
+##  <a name="ctor"></a> Lokalizacja
+
+Konstruuje `location` obiektu.
+
 ```
 location();
 
@@ -117,9 +123,10 @@ location(
     unsigned int _Id,
     unsigned int _BindingId = 0,
     _Inout_opt_ void* _PBinding = NULL);
-```  
-  
-### <a name="parameters"></a>Parametry  
+```
+
+### <a name="parameters"></a>Parametry
+
 *_Src*<br/>
 
 *_LocationType*<br/>
@@ -131,52 +138,59 @@ location(
 *_PBinding*<br/>
 (Opcjonalnie) Wskaźnik powiązania.
 
-### <a name="remarks"></a>Uwagi  
- Lokalizacja domyślne reprezentuje system jako całość.  
-  
-##  <a name="operator_neq"></a> operator! = 
+### <a name="remarks"></a>Uwagi
 
- Określa, czy dwa `location` obiekty reprezentują inną lokalizację.  
-  
+Lokalizacja domyślne reprezentuje system jako całość.
+
+##  <a name="operator_neq"></a> operator! =
+
+Określa, czy dwa `location` obiekty reprezentują inną lokalizację.
+
 ```
 bool operator!= (const location& _Rhs) const;
-```  
-  
-### <a name="parameters"></a>Parametry  
+```
+
+### <a name="parameters"></a>Parametry
+
 *_Rhs*<br/>
 Operand `location`.
-  
-### <a name="return-value"></a>Wartość zwracana  
- `true` Jeśli dwie lokalizacje są różne, `false` inaczej.  
-  
-##  <a name="operator_eq"></a> operator = 
 
- Przypisuje zawartość innego `location` obiektu do wskazanego.  
-  
+### <a name="return-value"></a>Wartość zwracana
+
+`true` Jeśli dwie lokalizacje są różne, `false` inaczej.
+
+##  <a name="operator_eq"></a> operator =
+
+Przypisuje zawartość innego `location` obiektu do wskazanego.
+
 ```
 location& operator= (const location& _Rhs);
-```  
-  
-### <a name="parameters"></a>Parametry  
-*_Rhs*<br/>
-Źródło `location` obiektu.  
-  
-### <a name="return-value"></a>Wartość zwracana  
-  
-##  <a name="operator_eq_eq"></a> operator == 
+```
 
- Określa, czy dwa `location` obiekty reprezentują tej samej lokalizacji.  
-  
+### <a name="parameters"></a>Parametry
+
+*_Rhs*<br/>
+Źródło `location` obiektu.
+
+### <a name="return-value"></a>Wartość zwracana
+
+##  <a name="operator_eq_eq"></a> operator ==
+
+Określa, czy dwa `location` obiekty reprezentują tej samej lokalizacji.
+
 ```
 bool operator== (const location& _Rhs) const;
-```  
-  
-### <a name="parameters"></a>Parametry  
+```
+
+### <a name="parameters"></a>Parametry
+
 *_Rhs*<br/>
 Operand `location`.
-  
-### <a name="return-value"></a>Wartość zwracana  
- `true` Jeśli dwie lokalizacje są identyczne, i `false` inaczej.  
-  
-## <a name="see-also"></a>Zobacz też  
- [Przestrzeń nazw współbieżności](concurrency-namespace.md)
+
+### <a name="return-value"></a>Wartość zwracana
+
+`true` Jeśli dwie lokalizacje są identyczne, i `false` inaczej.
+
+## <a name="see-also"></a>Zobacz też
+
+[Przestrzeń nazw współbieżności](concurrency-namespace.md)

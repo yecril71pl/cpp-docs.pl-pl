@@ -18,29 +18,31 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 59ec5a5a493106750fa7bb8c7ec31b8dbb011070
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 7dd7e88d6843ec3d95538e482c6c05a3d853f4d1
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33344246"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46390772"
 ---
 # <a name="drag-and-drop-customizing"></a>Przeciąganie i upuszczanie: dostosowywanie
-Domyślna implementacja funkcji przeciągania i upuszczania jest odpowiednia dla większości aplikacji. Jednak niektóre aplikacje mogą wymagać, że można zmienić to zachowanie standardowego. W tym artykule opisano kroki niezbędne zmienić te ustawienia domyślne. Ponadto można użyć tej metody ustanowienie aplikacje, które nie obsługują dokumenty złożone jako źródła listy.  
-  
- Jeśli dostosowywania standardowe zachowanie przeciąganie i upuszczanie OLE lub aplikacji innych niż OLE, należy utworzyć `COleDataSource` obiekt zawierający dane. Gdy użytkownik uruchomi operacji przeciągania i upuszczania, kod powinien wywoływać `DoDragDrop` funkcji z tego obiektu, a nie z innych klas, które obsługują operacje przeciągania i upuszczania.  
-  
- Opcjonalnie możesz utworzyć `COleDropSource` obiekt, aby kontrolować usuwania i zastępowania niektórych jej funkcji, w zależności od typu zachowania, które chcesz zmienić. Ten obiekt źródło porzucenia są następnie przekazywane do `COleDataSource::DoDragDrop` Aby zmienić domyślne zachowanie tych funkcji. Opcji Zezwalaj na dużą elastyczność w sposób obsługi operacji przeciągania i upuszczania w aplikacji. Aby uzyskać więcej informacji na temat źródeł danych, zobacz artykuł [obiekty danych i źródła danych (OLE)](../mfc/data-objects-and-data-sources-ole.md).  
-  
- Można zastąpić następujące funkcje, aby dostosować operacji przeciągania i upuszczania:  
-  
-|Zastąpienie|Aby dostosować|  
-|--------------|------------------|  
-|`OnBeginDrag`|Jak przeciąganie jest inicjowana po wywołaniu metody `DoDragDrop`.|  
-|`GiveFeedback`|Wizualne, takie jak wyglądem kursora dla różnych listy wyników.|  
-|`QueryContinueDrag`|Zakończenie operacji przeciągania i upuszczania. Ta funkcja umożliwia sprawdzenie modyfikator stanów klucza podczas operacji przeciągania.|  
-  
-## <a name="see-also"></a>Zobacz też  
- [Przeciąganie i upuszczanie (OLE)](../mfc/drag-and-drop-ole.md)   
- [Klasa COleDropSource](../mfc/reference/coledropsource-class.md)   
- [Klasa COleDataSource](../mfc/reference/coledatasource-class.md)
+
+Domyślna implementacja funkcji przeciągania i upuszczania jest wystarczające dla większości aplikacji. Jednak niektóre aplikacje mogą wymagać, że to standardowy zachowanie można zmienić. W tym artykule opisano kroki niezbędne do zmienić te ustawienia domyślne. Ponadto można użyć tej techniki można ustanowić aplikacje, które nie obsługują dokumenty złożone jako źródła listy.
+
+Jeśli dostosowujesz standardowe zachowanie przeciąganie i upuszczanie OLE lub aplikacji innych niż OLE, należy utworzyć `COleDataSource` będzie zawierał dane. Gdy użytkownik uruchamia operację przeciągania i upuszczania, kod powinien wywoływać `DoDragDrop` funkcji z tego obiektu, a nie z innych klas, które obsługują operacje przeciągania i upuszczania.
+
+Opcjonalnie możesz utworzyć `COleDropSource` obiekt, aby kontrolować listy i zastąpić niektóre swoje funkcje, w zależności od typu zachowanie, które chcesz zmienić. Ten obiekt miejsca źródłowego jest następnie przekazywany do `COleDataSource::DoDragDrop` można zmienić domyślne zachowanie tych funkcji. Te różne opcje umożliwiają dużą elastyczność w sposób obsługi operacji przeciągania i upuszczania w aplikacji. Aby uzyskać więcej informacji na temat źródeł danych, zobacz artykuł [obiekty danych i źródeł danych (OLE)](../mfc/data-objects-and-data-sources-ole.md).
+
+Można zastąpić następujące funkcje, aby dostosować operacji przeciągania i upuszczania:
+
+|Zastąpienie|Aby dostosować|
+|--------------|------------------|
+|`OnBeginDrag`|Jak przeciągnięcie jest inicjowane po wywołaniu metody `DoDragDrop`.|
+|`GiveFeedback`|Wizualne, takie jak wyglądem kursora w innej listy wyników.|
+|`QueryContinueDrag`|Zakończenie operacji przeciągania i upuszczania. Ta funkcja umożliwia sprawdzenie modyfikator stany klucza podczas operacji przeciągania.|
+
+## <a name="see-also"></a>Zobacz też
+
+[Przeciąganie i upuszczanie (OLE)](../mfc/drag-and-drop-ole.md)<br/>
+[Klasa COleDropSource](../mfc/reference/coledropsource-class.md)<br/>
+[Klasa COleDataSource](../mfc/reference/coledatasource-class.md)

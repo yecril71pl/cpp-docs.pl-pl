@@ -1,5 +1,5 @@
 ---
-title: Konwertuj na nieprzetworzony literał ciągu | Dokumentacja firmy Microsoft
+title: Konwertuj na literał nieprzetworzonego ciągu | Dokumentacja firmy Microsoft
 ms.custom: ''
 ms.date: 11/16/2016
 ms.technology:
@@ -10,33 +10,33 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b98825719e7b3c0d8eb760a2ec50644b5eddd54e
-ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
+ms.openlocfilehash: 75037ea542a5bd2160d9a89138b12f82867002a5
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "33328412"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46388449"
 ---
-# <a name="convert-to-raw-string-literal"></a>Konwertuj na nieprzetworzony literał ciągu
-**Co:** pozwala włączyć do nieprzetworzony ciąg C++ dowolny ciąg literału.
+# <a name="convert-to-raw-string-literal"></a>Konwertuj na literał nieprzetworzonego ciągu
+**Co:** pozwala włączyć dowolny ciąg w języku C++ nieprzetworzonego ciągu literału.
 
-**Kiedy:** być ciągiem o zmienionym znaczeniu znaki, których nie można przetwarzać jako zmienionym znaków.
+**Kiedy:** ma ciągu znakami o zmienionym znaczeniu, które nie powinny być przetwarzane jako znaki ucieczki.
 
-**Dlaczego:** można znaków podwójnego anulowania, ale często prowadzi do ciągów trudne i nie można go odczytać.  Za pomocą nieprzetworzonego ciągu literałów sprawia, że ciągi znacznie łatwiejsze do odczytu.
+**Dlaczego:** możesz znaki ucieczki double poza tym często prowadzi do ciągów mylące i nie można go odczytać.  Za pomocą surowe Literały ciągu sprawia, że ciągi znacznie łatwiejsze do odczytania.
 
 **Jak:**
 
-1. Umieść kursor tekstu lub mysz nad zmienionym ciąg do przekonwertowania.
+1. Ustaw kursor tekstu lub myszy nad o zmienionym znaczeniu ciąg do przekonwertowania.
 
    ![Wyróżniony kod](images/stringliteral_highlight.png)
 
 1. Następnie wykonaj jedną z następujących czynności:
    * **Keyboard**
-     * Naciśnij klawisz **Ctrl +.** Aby wyzwalacz **szybkie akcje i Refaktoryzacje** menu i wybierz **przekonwertować surowego literału ciągu** z menu kontekstowego.
+     * Naciśnij klawisz **Ctrl +.** wyzwalacz **szybkie akcje i Refaktoryzacje** menu, a następnie wybierz **Konwertuj na nieprzetworzony literał ciągu** z menu kontekstowego.
    * **Myszy**
-     * Kliknij prawym przyciskiem myszy kod, wybierz **szybkie akcje i Refaktoryzacje** menu i wybierz **przekonwertować surowego literału ciągu** z menu kontekstowego.
-     * Kliknij przycisk ![żarówka](images/bulb.png) ikonę, która pojawia się w lewym marginesie i wybierz **przekonwertować surowego literału ciągu** z menu kontekstowego.
+     * Kliknij prawym przyciskiem myszy ten kod, wybierz **szybkie akcje i Refaktoryzacje** menu, a następnie wybierz **Konwertuj na nieprzetworzony literał ciągu** z menu kontekstowego.
+     * Kliknij przycisk ![żarówki](images/bulb.png) ikonę, która pojawia się na lewym marginesie, a następnie wybierz pozycję **Konwertuj na nieprzetworzony literał ciągu** z menu kontekstowego.
 
-1. Ten ciąg zostanie natychmiast skonwertowana na nieprzetworzonego literału ciągu.  
+1. Ten ciąg zostanie natychmiast przekonwertowany na nieprzetworzony literał ciągu.
 
-   ![Surowego literału ciągu wyników](images/stringliteral_result.png)
+   ![Wynik literał ciągu surowego](images/stringliteral_result.png)

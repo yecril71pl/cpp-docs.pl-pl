@@ -12,38 +12,39 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: db3f9ca834fb3f35c95732698fd02e16f31b4225
-ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
+ms.openlocfilehash: 81abf5324c215b9011ecbd774626a213c2eda653
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33690585"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46376503"
 ---
 # <a name="243-single-construct"></a>2.4.3 Pojedyncza konstrukcja
-**Pojedynczego** dyrektywy identyfikuje konstrukcję, która określa, że skojarzona strukturalnego bloku jest wykonywana tylko jednego wątku w zespole (niekoniecznie wątku głównego). Składnia **pojedynczego** dyrektywy wygląda następująco:  
-  
-```  
-#pragma omp single [clause[[,] clause] ...] new-linestructured-block  
-```  
-  
- Klauzuli jest jednym z następujących czynności:  
-  
- **prywatne (** *zmiennej listy* **)**  
-  
- **firstprivate (** *zmiennej listy* **)**  
-  
- **copyprivate (** *zmiennej listy* **)**  
-  
- **nowait**  
-  
- Brak niejawnego bariery po **pojedynczego** skonstruować, chyba że **nowait** jest określona klauzula.  
-  
- Ograniczenia **pojedynczego** dyrektywy są następujące:  
-  
--   Tylko jeden **nowait** klauzula może występować w **pojedynczego** dyrektywy.  
-  
--   **Copyprivate** nie można użyć klauzuli z **nowait** klauzuli.  
-  
-## <a name="cross-references"></a>Odsyłacze:  
-  
--   **prywatne**, **firstprivate**, i **copyprivate** klauzule, zobacz [sekcji 2.7.2](../../parallel/openmp/2-7-2-data-sharing-attribute-clauses.md) na stronie 25.
+
+**Pojedynczego** dyrektywy identyfikuje konstrukcja, która określa, czy skojarzony ze strukturalnego bloku jest wykonywana przez tylko jeden wątek w zespole (niekoniecznie głównego wątku). Składnia **pojedynczego** dyrektywy jest następująca:
+
+```
+#pragma omp single [clause[[,] clause] ...] new-linestructured-block
+```
+
+Klauzula jest jedną z następujących czynności:
+
+**prywatne (** *liście zmiennych* **)**
+
+**firstprivate (** *liście zmiennych* **)**
+
+**copyprivate (** *liście zmiennych* **)**
+
+**nowait**
+
+Niejawne problemu po **pojedynczego** konstruowania, chyba że **nowait** jest określona klauzula.
+
+Ograniczenia **pojedynczego** dyrektywy jest następująca:
+
+- Tylko jeden **nowait** klauzula może występować na **pojedynczego** dyrektywy.
+
+- **Copyprivate** nie można używać klauzuli z **nowait** klauzuli.
+
+## <a name="cross-references"></a>Odsyłacze:
+
+- **prywatne**, **firstprivate**, i **copyprivate** zdań, zobacz [sekcji 2.7.2](../../parallel/openmp/2-7-2-data-sharing-attribute-clauses.md) na stronie 25.

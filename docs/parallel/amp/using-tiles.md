@@ -12,34 +12,34 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3c02b5d558ccf2c1353e96dd1990b6d4178457aa
-ms.sourcegitcommit: 208d445fd7ea202de1d372d3f468e784e77bd666
+ms.openlocfilehash: df2f449cce01dc2d0903ff802ffb94914b68bceb
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/29/2018
-ms.locfileid: "37121952"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46386271"
 ---
 # <a name="using-tiles"></a>Użycie fragmentów
 
-Aby zmaksymalizować przyspieszenie aplikacji, można użyć kafelków. Kafelków dzieli wątków równy podzestawy prostokątne lub *Kafelki*. Użycie kafelka odpowiedni rozmiar i algorytm sąsiadującym przyspieszenie jeszcze więcej można uzyskać w kodzie C++ AMP. Podstawowe składniki kafelków są:
+Można użyć fragmentacji, aby zmaksymalizować przyspieszenie aplikacji. Fragmentacja dzieli wątki na równe podzestawy prostokątne lub *Kafelki*. Jeśli używasz odpowiedniego rozmiaru fragmentu oraz algorytmu fragmentacji możesz uzyskać jeszcze większe od kodu C++ AMP. Podstawowe składniki fragmentacji to:
 
-- `tile_static` zmienne. Główną zaletą kafelków jest bardziej wydajne z `tile_static` dostępu. Dostęp do danych w `tile_static` pamięci może być znacznie szybsze niż dostęp do danych w przestrzeni globalnej (`array` lub `array_view` obiektów). Wystąpienie `tile_static` zmiennej jest tworzony dla każdego kafelka, a wszystkie wątki na kafelku mają dostęp do zmiennej. W typowych algorytmu sąsiadującym, dane są kopiowane do `tile_static` raz z pamięci globalnej pamięci i uzyskać dostęp wiele razy z `tile_static` pamięci.
+- `tile_static` zmienne. Podstawową zaletą fragmentacji jest przyrost wydajności z `tile_static` dostępu. Dostęp do danych w `tile_static` pamięci może być znacznie szybszy niż dostęp do danych w przestrzeni globalnej (`array` lub `array_view` obiektów). Wystąpienie `tile_static` zmiennej jest tworzone dla każdego fragmentu i wszystkie wątki we fragmencie mają dostęp do zmiennej. W typowym algorytmie fragmentacji, dane są kopiowane do `tile_static` pamięci z globalnej pamięci i uzyskiwać dostęp wiele razy z `tile_static` pamięci.
 
-- [tile_barrier::wait — metoda](reference/tile-barrier-class.md#wait). Wywołanie `tile_barrier::wait` wstrzymuje wykonywanie bieżącego wątku, aż zostanie wszystkie wątki na kafelku tego samego wywołanie `tile_barrier::wait`. Nie gwarantuje kolejność wątki będą uruchamiane w, tylko wykonujące nie wątków na kafelku poza wywołanie `tile_barrier::wait` dopóki wszystkie wątki osiągnięto wywołania. Oznacza to, że za pomocą `tile_barrier::wait` metody, można wykonać zadania na podstawie kafelka przez Kafelek, a nie na poziomie wątku przez wątek. Algorytm kafelków typowe ma kod do zainicjowania `tile_static` pamięci dla całego kafelka następuje wywołanie `tile_barrer::wait`. Kod, który następuje `tile_barrier::wait` zawiera obliczenia, które wymagają dostępu do wszystkich `tile_static` wartości.
+- [tile_barrier::wait — metoda](reference/tile-barrier-class.md#wait). Wywołanie `tile_barrier::wait` zawiesza wykonywanie bieżącego wątku, dopóki wszystkie wątki w tym samym fragmencie nie osiągną wywołania `tile_barrier::wait`. Nie można zagwarantować kolejność, w jakim wątki będą uruchamiane, tylko że żadne wątki we fragmencie nie zostaną wykonane po wywołaniu `tile_barrier::wait` dopóki wszystkie wątki nie osiągną wywołania. Oznacza to, że za pomocą `tile_barrier::wait` metody, można wykonać zadania na zasadzie kafelka, Kafelek, a nie na poziomie wątek po wątku. Typowy algorytm fragmentacji posiada kod do inicjowania `tile_static` pamięci dla całego fragmentu, poprzedzony wywołaniem do `tile_barrer::wait`. Kod, który następuje po `tile_barrier::wait` zawiera obliczenia, które wymagają dostępu do wszystkich `tile_static` wartości.
 
-- Lokalne i globalne indeksowania. Masz dostęp do indeksu wątku względem całą `array_view` lub `array` obiektu i pod indeksem względem kafelka. Przy użyciu lokalnego indeksu może ułatwić kodu do odczytu i debugowania. Należy zwykle użyć lokalnego indeksowania dostępu `tile_static` zmiennych i indeksowania globalnego dostępu `array` i `array_view` zmiennych.
+- Lokalne i globalne indeksowanie. Masz dostęp do indeksu wątku dla całego `array_view` lub `array` obiektu i indeksu dla fragmentu. Używanie lokalnego indeksu może ułatwić kodu do odczytywania i debugowania. Zazwyczaj używane jest indeksowanie lokalne dostęp do `tile_static` zmiennych oraz indeksowanie globalne, aby uzyskać dostęp do `array` i `array_view` zmiennych.
 
-- [tiled_extent — klasa](../../parallel/amp/reference/tiled-extent-class.md) i [tiled_index — klasa](../../parallel/amp/reference/tiled-index-class.md). Możesz użyć `tiled_extent` obiekt zamiast `extent` obiektu w `parallel_for_each` wywołania. Możesz użyć `tiled_index` obiekt zamiast `index` obiektu w `parallel_for_each` wywołania.
+- [tiled_extent, klasa](../../parallel/amp/reference/tiled-extent-class.md) i [tiled_index, klasa](../../parallel/amp/reference/tiled-index-class.md). Możesz użyć `tiled_extent` zamiast obiektu `extent` obiektu `parallel_for_each` wywołania. Możesz użyć `tiled_index` zamiast obiektu `index` obiektu `parallel_for_each` wywołania.
 
-Aby skorzystać z kafelków, z algorytmu musi partycji domeny obliczeń na kafelkach a następnie skopiuj danych kafelków w `tile_static` zmienne szybszy dostęp.
+Aby skorzystać z fragmentacji, algorytm musi podzielić domenę obliczeniową na fragmenty i następnie skopiuj dane kafelka do `tile_static` zmienne szybszy dostęp.
 
-## <a name="example-of-global-tile-and-local-indices"></a>Przykład globalnych kafelka, a lokalny indeksów
+## <a name="example-of-global-tile-and-local-indices"></a>Przykładem globalnego, Kafelek fragmentarycznego oraz lokalnego
 
-Poniższy diagram przedstawia macierz 8 x 9 danych, które są rozmieszczone na kafelkach 2 x 3.
+Poniższy diagram przedstawia macierz 8 x 9, danych, które są ułożone WE fragmenty 2 x 3.
 
-![8&#45;przez&#45;9 macierzy podzielone na 2&#45;przez&#45;3 Kafelki](../../parallel/amp/media/usingtilesmatrix.png "usingtilesmatrix")
+![8&#45;przez&#45;9 tabela jest podzielona na 2&#45;przez&#45;3 Kafelki](../../parallel/amp/media/usingtilesmatrix.png "usingtilesmatrix")
 
-W poniższym przykładzie przedstawiono globalnych kafelka i lokalnego indeksy tego rozmieszczany macierzy. `array_view` Obiekt jest tworzony przy użyciu elementów typu `Description`. `Description` Zawiera globalny, Kafelek i lokalne Indeksy elementu w macierzy. Kod w wywołaniu `parallel_for_each` ustawia wartości globalnej, Kafelek i lokalne indeksów każdego elementu. Dane wyjściowe są wyświetlane wartości w `Description` struktury.
+Poniższy przykład wyświetla globalne, a lokalnych wskaźników to sąsiadująco w macierzy. `array_view` Obiekt jest tworzony przy użyciu elementów typu `Description`. `Description` Przechowuje globalną, Kafelek, fragmentaryczne oraz lokalne elementów macierzy. Kod w wywołaniu `parallel_for_each` ustawia wartości globalnych, Kafelek fragmentarycznych oraz lokalnych każdego elementu. Dane wyjściowe wyświetlają wartości w `Description` struktury.
 
 ```cpp
 #include <iostream>
@@ -73,11 +73,11 @@ void SetConsoleColor(int color) {
 // A helper function for formatting the output.
 void SetConsoleSize(int height, int width) {
     COORD coord;
-    
+
     coord.X = width;
     coord.Y = height;
     SetConsoleScreenBufferSize(GetStdHandle(STD_OUTPUT_HANDLE), coord);
-    
+
     SMALL_RECT* rect = new SMALL_RECT();
     rect->Left = 0;
     rect->Top = 0;
@@ -151,35 +151,35 @@ void main() {
 }
 ```
 
-Główne pracy przykładu znajduje się w definicji `array_view` obiektu i wywołania w celu `parallel_for_each`.
+Główna Praca przykładu jest wykonywana w definicji elementu `array_view` obiektu i wywołanie `parallel_for_each`.
 
-1. Wektor `Description` struktury jest kopiowana do 8 x 9 `array_view` obiektu.
+1. Wektor `Description` struktury są kopiowane do 8 x 9 `array_view` obiektu.
 
-2. `parallel_for_each` Metoda jest wywoływana z `tiled_extent` obiektu jako domenie obliczeniowej. `tiled_extent` Obiekt jest tworzony przez wywołanie metody `extent::tile()` metody `descriptions` zmiennej. Parametrów typu w wywołaniu `extent::tile()`, `<2,3>`, określić, że są tworzone Kafelki 2 x 3. W związku z tym macierzy 8 x 9 wypełniania do 12 Kafelki, cztery wiersze i trzy kolumny.
+2. `parallel_for_each` Metoda jest wywoływana z `tiled_extent` obiektu jako domena obliczająca. `tiled_extent` Obiekt jest tworzony przez wywołanie `extent::tile()` metody `descriptions` zmiennej. Parametry typu wywołania metody `extent::tile()`, `<2,3>`, określ, czy 2 x 3 Kafelki są tworzone. W efekcie macierz 8 x 9 jest rozmieszczany na 12 fragmentów, cztery wiersze i trzy kolumny.
 
-3. `parallel_for_each` Metoda jest wywoływana przy użyciu `tiled_index<2,3>` obiektu (`t_idx`) jako indeks. Parametry typu indeksu (`t_idx`) musi być zgodna z parametrów typu w domenie obliczeniowej (`descriptions.extent.tile< 2, 3>()`).
+3. `parallel_for_each` Metoda jest wywoływana przy użyciu `tiled_index<2,3>` obiektu (`t_idx`) jako indeks. Parametry typu indeksu (`t_idx`) muszą odpowiadać parametrom typu domeny obliczającej (`descriptions.extent.tile< 2, 3>()`).
 
-4. Po wykonaniu każdego wątku indeksu `t_idx` zwraca informacje o którym kafelka wątek znajduje się w (`tiled_index::tile` właściwości) oraz lokalizację wątku w kafelku (`tiled_index::local` właściwości).
+4. Po wykonaniu każdego wątku, indeks `t_idx` zwraca informacje o który Kafelek wątek znajduje się w (`tiled_index::tile` właściwości) i lokalizację wątku we fragmencie (`tiled_index::local` właściwości).
 
-## <a name="tile-synchronizationtilestatic-and-tilebarrierwait"></a>Kafelek synchronizacji — tile_static i tile_barrier::wait
+## <a name="tile-synchronizationtilestatic-and-tilebarrierwait"></a>Synchronizacja — tile_static i tile_barrier::wait
 
-Poprzedni przykład ilustruje układu kafelków i indeksów, ale nie jest bardzo przydatny.  Kafelków staje się przydatne, gdy są integralną częścią algorytmu i wykorzystać Kafelki `tile_static` zmiennych. Ponieważ wszystkie wątki na kafelku dostęp do `tile_static` zmiennych, wywołania `tile_barrier::wait` są używane do dostępu do synchronizowania `tile_static` zmiennych. Chociaż wszystkie wątki na kafelku mają dostęp do `tile_static` zmiennych, brak nie gwarantuje kolejności wykonywania wątków na kafelku. Poniższy przykład przedstawia użycie `tile_static` zmienne i `tile_barrier::wait` metodę obliczania średniej wartości każdego kafelka. Poniżej przedstawiono klucze do zrozumienia w przykładzie:
+Poprzedni przykład ilustruje układ fragmentów i wskaźniki, ale nie jest bardzo przydatne.  Fragmentacja jest użyteczna gdy fragmenty są integralną częścią algorytmów i wykorzystują `tile_static` zmiennych. Ponieważ wszystkie wątki we fragmencie mają dostęp do `tile_static` zmiennych, wywołania `tile_barrier::wait` są używane do synchronizowania dostępu do `tile_static` zmiennych. Mimo że wszystkie wątki we fragmencie mają dostęp do `tile_static` zmiennych, nie jest zagwarantowana kolejność wykonywania wątków we fragmencie. Poniższy przykład pokazuje, jak używać `tile_static` zmienne i `tile_barrier::wait` metodę obliczania średniej wartości każdego fragmentu. W tym miejscu są kluczem do zrozumienia przykładu:
 
-1. RawData jest przechowywany w macierzy 8 x 8.
+1. Obiekt rawData jest przechowywany w macierzy 8 x 8.
 
-2. Rozmiar kafelka jest 2 x 2. Spowoduje to utworzenie Siatka 4 x 4 kafelków i średnie mogą być przechowywane w macierzy 4 x 4 przy użyciu `array` obiektu. Istnieje ograniczona liczba typów, które można przechwytywać przez odwołanie w funkcji ograniczonej przez AMP. `array` Klasy jest jednym z nich.
+2. Rozmiar fragmentu to 2 x 2. Spowoduje to utworzenie siatkę 4 x 4 fragmentów, a średnie mogą być przechowywane w macierzy 4 x 4 za pomocą `array` obiektu. Istnieje ograniczona liczba typów, które można przechwycić poprzez odwołanie w funkcji ograniczonej przez AMP. `array` Klasy jest jednym z nich.
 
-3. Rozmiar macierzy i rozmiar próbki są definiowane za pomocą `#define` instrukcji, ponieważ parametry typu `array`, `array_view`, `extent`, i `tiled_index` musi być wartości stałych. Można również użyć `const int static` deklaracji. Dodatkowa korzyść jest prosta, aby zmienić rozmiar próbki do obliczenia średniej Kafelki ponad 4 x 4.
+3. Rozmiar macierzy i rozmiar próbki są definiowane za pomocą `#define` instrukcji, ponieważ parametry typu `array`, `array_view`, `extent`, i `tiled_index` muszą być wartościami stałymi. Można również użyć `const int static` deklaracji. Jako dodatkowa korzyść jest prosta, aby zmienić rozmiar próbki do obliczania średniej ponad 4 x 4 fragmentów.
 
-4. A `tile_static` 2 x 2 tablicy wartości zmiennoprzecinkowych jest zadeklarowany dla każdego kafelka. Mimo że deklaracji w ścieżce kodu dla każdego wątku, tylko jedna tablica jest tworzony dla każdego kafelka w macierzy.
+4. A `tile_static` zadeklarowano tablicę 2 x 2 wartości zmiennoprzecinkowych dla każdego kafelka. Mimo że deklaracja znajduje się w ścieżce kodu dla każdego wątku, tylko jedna tablica jest tworzona dla każdego fragmentu w macierzy.
 
-5. Brak wiersza kodu, aby skopiować wartości w każdym Kafelek, aby `tile_static` tablicy. Dla każdego wątku po skopiowaniu wartość do tablicy, w wątku zatrzyma wykonywanie z powodu wywołania `tile_barrier::wait`.
+5. Istnieje linia kodu pozwalająca kopiować wartości każdego fragmentu do `tile_static` tablicy. Dla każdego wątku, po skopiowaniu wartości do tablicy, wykonanie wątku zatrzymuje ze względu na wywołanie `tile_barrier::wait`.
 
-6. Gdy wszystkie wątki na kafelku osiągnęły bariery, może zostać obliczona średnia. Kod wykonywany dla każdego wątku, nie istnieje `if` oświadczenie tylko obliczania średniej w jednym wątku. Średnia jest przechowywana w zmiennej średnie. Bariera jest zasadniczo konstrukcja kontrolujące obliczenia przez Kafelek, tak jak można użyć `for` pętli.
+6. Gdy wszystkie wątki we fragmencie osiągnęły barierę, może zostać obliczona średnia. Ponieważ kod jest wykonywany dla każdego wątku, występuje `if` instrukcję w celu obliczenia średniej w jednym wątku. Średnia jest przechowywana w zmiennej averages. Bariera to zasadniczo konstrukcja obliczeń przez kafelka, ile może używać `for` pętli.
 
-7. Dane w `averages` zmiennej, ponieważ jest on `array` obiektów, należy skopiować do hosta. W tym przykładzie używane operatora konwersji wektora.
+7. Dane w `averages` zmiennej, ponieważ jest on `array` obiektów, muszą zostać skopiowane z powrotem do hosta. W tym przykładzie użyto operator konwersji wektorowej.
 
-8. W pełny przykład można zmienić SAMPLESIZE 4 i kod wykonywany poprawnie bez żadnych innych zmian.
+8. W kompletnym przykładzie można zmienić SAMPLESIZE na 4 i kod zostanie wykonywany prawidłowo bez żadnych innych zmian.
 
 ```cpp
 #include <iostream>
@@ -262,7 +262,7 @@ int main() {
 
 ## <a name="race-conditions"></a>Warunki wyścigu
 
-Może być kuszące utworzyć `tile_static` zmiennej o nazwie `total` i zwiększyć wartości zmiennej dla każdego wątku, w następujący sposób:
+Może być kuszące utworzenie `tile_static` zmiennej o nazwie `total` i zwiększanie wartość zmiennej dla każdego wątku w następujący sposób:
 
 ```cpp
 // Do not do this.
@@ -273,7 +273,7 @@ t_idx.barrier.wait();
 averages(t_idx.tile[0],t_idx.tile[1]) /= (float) (SAMPLESIZE* SAMPLESIZE);
 ```
 
-Pierwszy tego podejścia przy rozwiązywaniu problemu jest to, że `tile_static` zmienne nie mogą mieć inicjatory. Drugi problemu jest brak wyścigu na przypisanie do `total`, ponieważ wszystkie wątki na kafelku mają dostęp do zmiennej w losowej kolejności. Można programu algorytmu, aby zezwolić tylko jeden wątek razem w każdej bariery dostępu do, jak pokazano w następnym. To rozwiązanie nie jest jednak rozszerzonego.
+Pierwszym problemem w tym podejściu jest to, że `tile_static` zmiennych nie mogą mieć inicjatorów. Drugi problem to sytuacja wyścigu przy przypisaniu do `total`, ponieważ wszystkie wątki we fragmencie mają dostęp do zmiennej w losowej kolejności. Można programować algorytm zezwalający tylko jednemu wątkowi na dostęp do zmiennej total przy każdej barierze, jak pokazano dalej. To rozwiązanie nie jest jednak rozszerzalne.
 
 ```cpp
 // Do not do this.
@@ -291,27 +291,27 @@ t_idx.barrier.wait();
 // etc.
 ```
 
-## <a name="memory-fences"></a>Ogrodzenia pamięci
+## <a name="memory-fences"></a>Horyzonty pamięci
 
-Istnieją dwa rodzaje uzyskuje dostęp do pamięci, które należy zsynchronizować — dostęp do pamięci globalnej i `tile_static` dostęp do pamięci. A `concurrency::array` obiektu przydziela tylko pamięci globalnej. A `concurrency::array_view` może odwoływać się pamięci globalnej `tile_static` pamięci i/lub, w zależności od tego, jak został skonstruowany.  Istnieją dwa rodzaje pamięci, która musi być synchronizowany:
+Istnieją dwa rodzaje dostępów do pamięci, które muszą być synchronizowane — dostęp do pamięci globalnej oraz `tile_static` dostęp do pamięci. A `concurrency::array` obiekt przydziela tylko pamięć globalną. A `concurrency::array_view` może odwoływać się do globalnej pamięci, `tile_static` pamięci i / lub, w zależności od tego, jak został zbudowany.  Istnieją dwa rodzaje pamięci, które muszą być synchronizowane:
 
 - pamięć globalna
 
 - `tile_static`
 
-A *ogranicznika pamięci* zapewnia pamięci, są dostępne dla innych wątków na kafelku wątku i pamięci, uzyskuje dostęp do są wykonywane zgodnie z kolejnością program. Aby to zapewnić, kompilatory i procesorów nie zmieniać kolejność odczyty i zapisy między ogrodzenia. W C++ AMP ogranicznika pamięci jest tworzony przez wywołanie do jednej z następujących metod:
+A *horyzont pamięci* gwarantuje, że dostęp do pamięci jest dostępny dla innych wątków we fragmencie wątków i uzyskuje dostęp do są wykonywane w założonej kolejności pamięci. Aby to zapewnić kompilatory oraz procesory nie zmieniają kolejności odczytów i zapisów ramach horyzontu. W bibliotece C++ AMP horyzont pamięci jest tworzony przez wywołanie jednej z następujących metod:
 
-- [tile_barrier::wait — metoda](reference/tile-barrier-class.md#wait): tworzy ogranicznika wokół zarówno globalnych i `tile_static` pamięci.
+- [tile_barrier::wait — metoda](reference/tile-barrier-class.md#wait): tworzy horyzont wokół zarówno globalnych i `tile_static` pamięci.
 
-- [tile_barrier::wait_with_all_memory_fence — metoda](reference/tile-barrier-class.md#wait_with_all_memory_fence): tworzy ogranicznika wokół zarówno globalnych i `tile_static` pamięci.
+- [tile_barrier::wait_with_all_memory_fence — metoda](reference/tile-barrier-class.md#wait_with_all_memory_fence): tworzy horyzont wokół zarówno globalnych i `tile_static` pamięci.
 
-- [tile_barrier::wait_with_global_memory_fence — metoda](reference/tile-barrier-class.md#wait_with_global_memory_fence): tworzy ogranicznika wokół tylko pamięci globalnej.
+- [tile_barrier::wait_with_global_memory_fence — metoda](reference/tile-barrier-class.md#wait_with_global_memory_fence): tworzy horyzont tylko wokół pamięci globalnej.
 
-- [tile_barrier::wait_with_tile_static_memory_fence — metoda](reference/tile-barrier-class.md#wait_with_tile_static_memory_fence): tworzy ogranicznika wokół tylko `tile_static` pamięci.
+- [tile_barrier::wait_with_tile_static_memory_fence — metoda](reference/tile-barrier-class.md#wait_with_tile_static_memory_fence): tworzy horyzont tylko wokół `tile_static` pamięci.
 
-Wywoływanie określonego ogranicznika, wymagany może poprawić wydajność aplikacji. Typ bariery ma wpływ na sposób kompilator i sprzętem zmienić kolejność instrukcje. Na przykład, jeśli używasz ogranicznika pamięci globalnej, ma to zastosowanie tylko do globalnej pamięci uzyskuje dostęp do i z tego powodu, kompilatora i sprzętu może zmienić kolejność odczytuje i zapisuje `tile_static` zmienne na dwóch stronach ogrodzenia.
+Podczas wywoływania określonych wymaganego horyzontu może zwiększyć wydajność aplikacji. Typ bariery wpływa na tym, jak kompilator i sprzęt zmiana kolejności instrukcji. Na przykład, jeśli używasz horyzontu pamięci globalnej, dotyczy tylko dostępu do pamięci globalnej i dlatego kompilator i sprzęt mogą zmieniać kolejność odczytuje i zapisuje `tile_static` zmiennych po obu stronach horyzontu.
 
-W następnym przykładzie bariera synchronizuje zapisywania `tileValues`, `tile_static` zmiennej. W tym przykładzie `tile_barrier::wait_with_tile_static_memory_fence` jest wywoływana zamiast `tile_barrier::wait`.
+W następnym przykładzie bariera synchronizuje zapisy do `tileValues`, `tile_static` zmiennej. W tym przykładzie `tile_barrier::wait_with_tile_static_memory_fence` nosi nazwę zamiast `tile_barrier::wait`.
 
 ```cpp
 // Using a tile_static memory fence.
@@ -341,5 +341,5 @@ parallel_for_each(matrix.extent.tile<SAMPLESIZE, SAMPLESIZE>(),
 
 ## <a name="see-also"></a>Zobacz także
 
-[C++ AMP (C++ Accelerated Massive Parallelism)](../../parallel/amp/cpp-amp-cpp-accelerated-massive-parallelism.md)  
-[tile_static, słowo kluczowe](../../cpp/tile-static-keyword.md)  
+[C++ AMP (C++ Accelerated Massive Parallelism)](../../parallel/amp/cpp-amp-cpp-accelerated-massive-parallelism.md)<br/>
+[tile_static, słowo kluczowe](../../cpp/tile-static-keyword.md)

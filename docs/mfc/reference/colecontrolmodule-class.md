@@ -19,44 +19,49 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 597639145385f4aabcba0e83fef855f7a0779f9b
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 8139f9d2249e2ed4293c5aad7c87f4f59142b393
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33369742"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46388999"
 ---
 # <a name="colecontrolmodule-class"></a>Klasa COleControlModule
-Klasa podstawowa, z którego pochodzi obiektu modułu formantu.  
-  
-## <a name="syntax"></a>Składnia  
-  
-```  
-class COleControlModule : public CWinApp  
-```  
-  
-## <a name="remarks"></a>Uwagi  
- Ta klasa udostępnia funkcje Członkowskie inicjowania modułu formantu. Każdego modułu OLE używa Microsoft Foundation classes może zawierać tylko jeden obiekt pochodzący od `COleControlModule`. Ten obiekt jest tworzony w przypadku innych obiektów globalnych C++ są wykonane. Zadeklarować Twojej pochodnej `COleControlModule` obiektów na poziomie globalnym.  
-  
- Aby uzyskać więcej informacji na temat używania `COleControlModule` , zobacz [CWinApp](../../mfc/reference/cwinapp-class.md) klasy i artykułu [formantów ActiveX](../../mfc/mfc-activex-controls.md).  
-  
-## <a name="inheritance-hierarchy"></a>Hierarchia dziedziczenia  
- [CObject](../../mfc/reference/cobject-class.md)  
-  
- [CCmdTarget](../../mfc/reference/ccmdtarget-class.md)  
-  
- [CWinThread](../../mfc/reference/cwinthread-class.md)  
-  
- [CWinApp](../../mfc/reference/cwinapp-class.md)  
-  
- `COleControlModule`  
-  
-## <a name="requirements"></a>Wymagania  
- **Nagłówek:** afxctl.h  
-  
-## <a name="see-also"></a>Zobacz też  
- [Przykładowe MFC TESTHELP](../../visual-cpp-samples.md)   
- [Wykres hierarchii](../../mfc/hierarchy-chart.md)
+
+Klasa bazowa, z której pochodzi obiekt modułu sterowania OLE.
+
+## <a name="syntax"></a>Składnia
+
+```
+class COleControlModule : public CWinApp
+```
+
+## <a name="remarks"></a>Uwagi
+
+Ta klasa dostarcza funkcji elementów członkowskich do inicjowania modułu sterowania. Każdy moduł sterowania OLE, który korzysta z klas Microsoft Foundation może zawierać tylko jeden obiekt pochodzący od `COleControlModule`. Ten obiekt jest tworzony, gdy inne obiekty globalne w C++ są konstruowane. Zadeklaruj swoje pochodnej `COleControlModule` obiektów na poziomie globalnym.
+
+Aby uzyskać więcej informacji na temat korzystania z `COleControlModule` klasy, zobacz [CWinApp](../../mfc/reference/cwinapp-class.md) klasy i artykuł [formantów ActiveX](../../mfc/mfc-activex-controls.md).
+
+## <a name="inheritance-hierarchy"></a>Hierarchia dziedziczenia
+
+[CObject](../../mfc/reference/cobject-class.md)
+
+[CCmdTarget](../../mfc/reference/ccmdtarget-class.md)
+
+[CWinThread](../../mfc/reference/cwinthread-class.md)
+
+[Klasa CWinApp](../../mfc/reference/cwinapp-class.md)
+
+`COleControlModule`
+
+## <a name="requirements"></a>Wymagania
+
+**Nagłówek:** afxctl.h
+
+## <a name="see-also"></a>Zobacz też
+
+[Próbki MFC TESTHELP](../../visual-cpp-samples.md)<br/>
+[Wykres hierarchii](../../mfc/hierarchy-chart.md)
 
 
 

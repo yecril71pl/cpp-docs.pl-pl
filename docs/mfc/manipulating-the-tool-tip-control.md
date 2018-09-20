@@ -15,35 +15,37 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 91e2e247acb85188c1280713e9e5ad8ef8f19448
-ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
+ms.openlocfilehash: 336ba8466e1d1eefbd07d35c4856b273faea7537
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/25/2018
-ms.locfileid: "36929831"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46377373"
 ---
 # <a name="manipulating-the-tool-tip-control"></a>Operowanie formantem etykietki narzędzia
-Klasa `CToolTipCtrl` udostępnia funkcje kontrolować różne atrybuty elementu członkowskiego grupy `CToolTipCtrl` obiekt i Porada okna narzędzia.  
-  
- Początkowy, w oknie podręcznym i reshow czasu trwania dla narzędzia windows Porada można ustawić i pobierane z wywołaniami [GetDelayTime](../mfc/reference/ctooltipctrl-class.md#getdelaytime) i [SetDelayTime](../mfc/reference/ctooltipctrl-class.md#setdelaytime).  
-  
- Zmienianie wyglądu narzędzia windows tip z następujących funkcji:  
-  
--   [GetMargin](../mfc/reference/ctooltipctrl-class.md#getmargin) i [SetMargin](../mfc/reference/ctooltipctrl-class.md#setmargin) pobiera i ustawia odstęp między obramowania Porada narzędzia i narzędzie Tekst porady.  
-  
--   [GetMaxTipWidth](../mfc/reference/ctooltipctrl-class.md#getmaxtipwidth) i [SetMaxTipWidth](../mfc/reference/ctooltipctrl-class.md#setmaxtipwidth) pobiera i ustawia maksymalną szerokość narzędzia Porada okna.  
-  
--   [GetTipBkColor](../mfc/reference/ctooltipctrl-class.md#gettipbkcolor) i [SetTipBkColor](../mfc/reference/ctooltipctrl-class.md#settipbkcolor) pobiera i ustawia kolor tła narzędzia Porada okna.  
-  
--   [GetTipTextColor](../mfc/reference/ctooltipctrl-class.md#gettiptextcolor) i [SetTipTextColor](../mfc/reference/ctooltipctrl-class.md#settiptextcolor) pobiera i ustawia kolor tekstu narzędzia Porada okna.  
-  
- Aby formantem etykietki narzędzia ma być powiadamiany o ważne komunikaty, takie jak wiadomości WM_LBUTTONXXX musi przekazywania wiadomości z formantem etykietki narzędzia. Jest najlepszą metodę dla tego przekazywania do wywoływania [CToolTipCtrl::RelayEvent](../mfc/reference/ctooltipctrl-class.md#relayevent)w `PreTranslateMessage` funkcja okno właściciela. Poniższy przykład przedstawia jedną z możliwych metod (przy założeniu formantem etykietki narzędzia jest nazywany `m_ToolTip`):  
-  
- [!code-cpp[NVC_MFCControlLadenDialog#41](../mfc/codesnippet/cpp/manipulating-the-tool-tip-control_1.cpp)]  
-  
- Aby natychmiast usunąć okna Porada narzędzia, należy wywołać [Pop](../mfc/reference/ctooltipctrl-class.md#pop) funkcję elementu członkowskiego.  
-  
-## <a name="see-also"></a>Zobacz też  
- [Korzystanie z CToolTipCtrl](../mfc/using-ctooltipctrl.md)   
- [Kontrolki](../mfc/controls-mfc.md)
+
+Klasa `CToolTipCtrl` udostępnia funkcje, które kontrolują różne atrybuty elementu członkowskiego grupy `CToolTipCtrl` obiektu i okno porad narzędzia.
+
+Początkowy, w oknie podręcznym, a reshow czasów trwania dla narzędzia windows Porada można ustawić i pobierany za pomocą wywołania [GetDelayTime](../mfc/reference/ctooltipctrl-class.md#getdelaytime) i [SetDelayTime](../mfc/reference/ctooltipctrl-class.md#setdelaytime).
+
+Zmień wygląd okna narzędzi tip z następujących funkcji:
+
+- [GetMargin](../mfc/reference/ctooltipctrl-class.md#getmargin) i [SetMargin](../mfc/reference/ctooltipctrl-class.md#setmargin) pobiera i ustawia odstęp między obramowanie Porada narzędzia i narzędzia Tekst porady.
+
+- [GetMaxTipWidth](../mfc/reference/ctooltipctrl-class.md#getmaxtipwidth) i [SetMaxTipWidth](../mfc/reference/ctooltipctrl-class.md#setmaxtipwidth) pobiera i ustawia maksymalną szerokość narzędzie okno porad do.
+
+- [GetTipBkColor](../mfc/reference/ctooltipctrl-class.md#gettipbkcolor) i [SetTipBkColor](../mfc/reference/ctooltipctrl-class.md#settipbkcolor) pobiera i ustawia kolor tła narzędzia okno porad do.
+
+- [GetTipTextColor](../mfc/reference/ctooltipctrl-class.md#gettiptextcolor) i [SetTipTextColor](../mfc/reference/ctooltipctrl-class.md#settiptextcolor) pobiera i ustawia kolor tekstu w narzędziu okno porad do.
+
+Aby formantem etykietki narzędzia otrzymywać powiadomienia o ważnych wiadomości, takie jak komunikaty WM_LBUTTONXXX musi przekazywać komunikaty do Twojego firmant narzędzia wskazówki. Najlepszą metodę dla tej usługi relay jest zapewnienie wywołanie [CToolTipCtrl::RelayEvent](../mfc/reference/ctooltipctrl-class.md#relayevent)w `PreTranslateMessage` funkcja okno właściciela. Poniższy przykład przedstawia jedną z możliwych metod (zakładając, że formantem etykietki narzędzia jest nazywany `m_ToolTip`):
+
+[!code-cpp[NVC_MFCControlLadenDialog#41](../mfc/codesnippet/cpp/manipulating-the-tool-tip-control_1.cpp)]
+
+Aby natychmiast usunąć okno porad narzędzie, należy wywołać [Pop](../mfc/reference/ctooltipctrl-class.md#pop) funkcja elementu członkowskiego.
+
+## <a name="see-also"></a>Zobacz też
+
+[Korzystanie z CToolTipCtrl](../mfc/using-ctooltipctrl.md)<br/>
+[Kontrolki](../mfc/controls-mfc.md)
 

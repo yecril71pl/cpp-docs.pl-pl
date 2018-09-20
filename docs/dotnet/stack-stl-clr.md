@@ -69,1458 +69,1521 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: 09368f3a43a5ba7a5a1c4247fdbbccdf345b0b21
-ms.sourcegitcommit: bad2441d1930275ff506d44759d283d94cccd1c0
+ms.openlocfilehash: 9e1138ff947599b3ece75224ae2120c6f4775bab
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/31/2018
-ms.locfileid: "39376212"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46376879"
 ---
 # <a name="stack-stlclr"></a>stack (STL/CLR)
-Klasa szablonu opisuje obiekt, który kontroluje różnej długości sekwencje elementów mającego dostęp ostatni na wejściu. Użyj karty kontenera `stack` do zarządzania kontenerem podstawowej jako wypychania w dół stosu.  
-  
- W poniższym opisie `GValue` jest taka sama jak *wartość* o ile nie jest typem odwołania, w którym to przypadku jest `Value^`. Podobnie `GContainer` jest taka sama jak *kontenera* o ile nie jest typem odwołania, w którym to przypadku jest `Container^`.  
-  
-## <a name="syntax"></a>Składnia  
-  
-```cpp  
-template<typename Value,  
-    typename Container>  
-    ref class stack  
-        :   public  
-        System::ICloneable,  
-        Microsoft::VisualC::StlClr::IStack<GValue, GContainer>  
-    { ..... };  
-```  
-  
-### <a name="parameters"></a>Parametry  
- *Wartość*  
- Typ elementu w kontrolowanej sekwencji.  
-  
- *Kontener*  
- Typ podstawowy kontener.  
 
-## <a name="requirements"></a>Wymagania  
- **Nagłówek:** \<cliext — / stack >  
-  
- **Namespace:** cliext —  
-  
-## <a name="declarations"></a>Deklaracje  
-  
-|Definicja typu|Opis|  
-|---------------------|-----------------|  
-|[stack::const_reference (STL/CLR)](#const_reference)|Typ stałego odwołania do elementu.|  
-|[stack::container_type (STL/CLR)](#container_type)|Typ podstawowy kontener.|  
-|[stack::difference_type (STL/CLR)](#difference_type)|Typ odległości ze znakiem między dwoma elementami.|  
-|[stack::generic_container (STL/CLR)](#generic_container)|Typ ogólny interfejs dla karty kontenera.|  
-|[stack::generic_value (STL/CLR)](#generic_value)|Typ elementu dla ogólnego interfejsu dla karty kontenera.|  
-|[stack::reference (STL/CLR)](#reference)|Typ odwołania do elementu.|  
-|[stack::size_type (STL/CLR)](#size_type)|Typ odległości ze znakiem między dwoma elementami.|  
-|[stack::value_type (STL/CLR)](#value_type)|Typ elementu.|  
-  
-|Funkcja elementów członkowskich|Opis|  
-|---------------------|-----------------|  
-|[stack::assign (STL/CLR)](#assign)|Zamienia wszystkie elementy.|  
-|[stack::empty (STL/CLR)](#empty)|Sprawdza, czy nie ma żadnych elementów.|  
-|[stack::get_container (STL/CLR)](#get_container)|Uzyskuje dostęp do podstawowych kontenera.|  
-|[stack::pop (STL/CLR)](#pop)|Usuwa ostatni element.|  
-|[stack::push (STL/CLR)](#push)|Dodaje nowy element ostatni.|  
-|[stack::size (STL/CLR)](#size)|Liczy liczbę elementów.|  
-|[stack::stack (STL/CLR)](#stack)|Konstruuje obiekt kontenera.|  
-|[stack::top (STL/CLR)](#top)|Uzyskuje dostęp do ostatniego elementu.|  
-|[stack::to_array (STL/CLR)](#to_array)|Kopiuje kontrolowanej sekwencji do nowej tablicy.|  
-  
-|Właściwość|Opis|  
-|--------------|-----------------|  
-|[stack::top_item (STL/CLR)](#top_item)|Uzyskuje dostęp do ostatniego elementu.|  
-  
-|Operator|Opis|  
-|--------------|-----------------|  
-|[stack::operator= (STL/CLR)](#op_as)|Zastępuje kontrolowanej sekwencji.|  
-|[operator!= (stack) (STL/CLR)](#op_neq)|Określa, czy `stack` obiekt nie jest równy innemu `stack` obiektu.|  
-|[operator< (stack) (STL/CLR)](#op_lt)|Określa, czy `stack` obiekt jest mniejszy niż inny `stack` obiektu.|  
-|[operator<= (stack) (STL/CLR)](#op_lteq)|Określa, czy `stack` obiekt jest mniejszy niż lub równy innemu `stack` obiektu.|  
-|[operator== (stack) (STL/CLR)](#op_eq)|Określa, czy `stack` obiekt jest równy innemu `stack` obiektu.|  
-|[operator> (stack) (STL/CLR)](#op_gt)|Określa, czy `stack` obiekt jest większy niż inny `stack` obiektu.|  
-|[operator>= (stack) (STL/CLR)](#op_gteq)|Określa, czy `stack` obiekt jest większy niż lub równy innemu `stack` obiektu.|  
-  
-## <a name="interfaces"></a>Interfejsy  
-  
-|Interface|Opis|  
-|---------------|-----------------|  
-|<xref:System.ICloneable>|Duplikowanie obiektów.|  
-|IStack\<wartość, kontener >|Obsługa karty Ogólne kontenera.|  
-  
-## <a name="remarks"></a>Uwagi  
- Obiekt przydziela i zwalnia pamięć dla sekwencji za pośrednictwem podstawowych kontenera, typu *kontenera*, który przechowuje *wartość* elementy i rośnie na żądanie. Obiekt ogranicza dostęp do wypychanie i usuwanie tylko ostatni element, implementowanie kolejki ostatni na wejściu (znany także jako kolejki LIFO lub stosu).  
- 
+Klasa szablonu opisuje obiekt, który kontroluje różnej długości sekwencje elementów mającego dostęp ostatni na wejściu. Użyj karty kontenera `stack` do zarządzania kontenerem podstawowej jako wypychania w dół stosu.
+
+W poniższym opisie `GValue` jest taka sama jak *wartość* o ile nie jest typem odwołania, w którym to przypadku jest `Value^`. Podobnie `GContainer` jest taka sama jak *kontenera* o ile nie jest typem odwołania, w którym to przypadku jest `Container^`.
+
+## <a name="syntax"></a>Składnia
+
+```cpp
+template<typename Value,
+    typename Container>
+    ref class stack
+        :   public
+        System::ICloneable,
+        Microsoft::VisualC::StlClr::IStack<GValue, GContainer>
+    { ..... };
+```
+
+### <a name="parameters"></a>Parametry
+
+*Wartość*<br/>
+Typ elementu w kontrolowanej sekwencji.
+
+*Kontener*<br/>
+Typ podstawowy kontener.
+
+## <a name="requirements"></a>Wymagania
+
+**Nagłówek:** \<cliext — / stack >
+
+**Namespace:** cliext —
+
+## <a name="declarations"></a>Deklaracje
+
+|Definicja typu|Opis|
+|---------------------|-----------------|
+|[stack::const_reference (STL/CLR)](#const_reference)|Typ stałego odwołania do elementu.|
+|[stack::container_type (STL/CLR)](#container_type)|Typ podstawowy kontener.|
+|[stack::difference_type (STL/CLR)](#difference_type)|Typ odległości ze znakiem między dwoma elementami.|
+|[stack::generic_container (STL/CLR)](#generic_container)|Typ ogólny interfejs dla karty kontenera.|
+|[stack::generic_value (STL/CLR)](#generic_value)|Typ elementu dla ogólnego interfejsu dla karty kontenera.|
+|[stack::reference (STL/CLR)](#reference)|Typ odwołania do elementu.|
+|[stack::size_type (STL/CLR)](#size_type)|Typ odległości ze znakiem między dwoma elementami.|
+|[stack::value_type (STL/CLR)](#value_type)|Typ elementu.|
+
+|Funkcja elementów członkowskich|Opis|
+|---------------------|-----------------|
+|[stack::assign (STL/CLR)](#assign)|Zamienia wszystkie elementy.|
+|[stack::empty (STL/CLR)](#empty)|Sprawdza, czy nie ma żadnych elementów.|
+|[stack::get_container (STL/CLR)](#get_container)|Uzyskuje dostęp do podstawowych kontenera.|
+|[stack::pop (STL/CLR)](#pop)|Usuwa ostatni element.|
+|[stack::push (STL/CLR)](#push)|Dodaje nowy element ostatni.|
+|[stack::size (STL/CLR)](#size)|Liczy liczbę elementów.|
+|[stack::stack (STL/CLR)](#stack)|Konstruuje obiekt kontenera.|
+|[stack::top (STL/CLR)](#top)|Uzyskuje dostęp do ostatniego elementu.|
+|[stack::to_array (STL/CLR)](#to_array)|Kopiuje kontrolowanej sekwencji do nowej tablicy.|
+
+|Właściwość|Opis|
+|--------------|-----------------|
+|[stack::top_item (STL/CLR)](#top_item)|Uzyskuje dostęp do ostatniego elementu.|
+
+|Operator|Opis|
+|--------------|-----------------|
+|[stack::operator= (STL/CLR)](#op_as)|Zastępuje kontrolowanej sekwencji.|
+|[operator!= (stack) (STL/CLR)](#op_neq)|Określa, czy `stack` obiekt nie jest równy innemu `stack` obiektu.|
+|[operator< (stack) (STL/CLR)](#op_lt)|Określa, czy `stack` obiekt jest mniejszy niż inny `stack` obiektu.|
+|[operator<= (stack) (STL/CLR)](#op_lteq)|Określa, czy `stack` obiekt jest mniejszy niż lub równy innemu `stack` obiektu.|
+|[operator== (stack) (STL/CLR)](#op_eq)|Określa, czy `stack` obiekt jest równy innemu `stack` obiektu.|
+|[operator> (stack) (STL/CLR)](#op_gt)|Określa, czy `stack` obiekt jest większy niż inny `stack` obiektu.|
+|[operator>= (stack) (STL/CLR)](#op_gteq)|Określa, czy `stack` obiekt jest większy niż lub równy innemu `stack` obiektu.|
+
+## <a name="interfaces"></a>Interfejsy
+
+|Interface|Opis|
+|---------------|-----------------|
+|<xref:System.ICloneable>|Duplikowanie obiektów.|
+|IStack\<wartość, kontener >|Obsługa karty Ogólne kontenera.|
+
+## <a name="remarks"></a>Uwagi
+
+Obiekt przydziela i zwalnia pamięć dla sekwencji za pośrednictwem podstawowych kontenera, typu *kontenera*, który przechowuje *wartość* elementy i rośnie na żądanie. Obiekt ogranicza dostęp do wypychanie i usuwanie tylko ostatni element, implementowanie kolejki ostatni na wejściu (znany także jako kolejki LIFO lub stosu).
+
 ## <a name="members"></a>Elementy członkowskie
 
 ## <a name="assign"></a> Stack::ASSIGN (STL/CLR)
-Zamienia wszystkie elementy.  
-  
-### <a name="syntax"></a>Składnia  
-  
-```cpp  
-void assign(stack<Value, Container>% right);  
-```  
-  
-#### <a name="parameters"></a>Parametry  
- *right*  
- Adapter kontenera do wstawienia.  
-  
-### <a name="remarks"></a>Uwagi  
- Funkcja elementu członkowskiego przypisuje `right.get_container()` do bazowego kontenera. Możesz użyć do zmiany zawartości całego stosu.  
-  
-### <a name="example"></a>Przykład  
-  
-```cpp  
-// cliext_stack_assign.cpp   
-// compile with: /clr   
-#include <cliext/stack>   
-  
-typedef cliext::stack<wchar_t> Mystack;   
-int main()   
-    {   
-    Mystack c1;   
-    c1.push(L'a');   
-    c1.push(L'b');   
-    c1.push(L'c');   
-  
-// display initial contents " a b c"   
-    for each (wchar_t elem in c1.get_container())   
-        System::Console::Write(" {0}", elem);   
-    System::Console::WriteLine();   
-  
-// assign a repetition of values   
-    Mystack c2;   
-    c2.assign(c1);   
-    for each (wchar_t elem in c2.get_container())   
-        System::Console::Write(" {0}", elem);   
-    System::Console::WriteLine();   
-    return (0);   
-    }  
-```  
-  
-```Output  
-a b c  
-a b c  
-```  
+
+Zamienia wszystkie elementy.
+
+### <a name="syntax"></a>Składnia
+
+```cpp
+void assign(stack<Value, Container>% right);
+```
+
+#### <a name="parameters"></a>Parametry
+
+*right*<br/>
+Adapter kontenera do wstawienia.
+
+### <a name="remarks"></a>Uwagi
+
+Funkcja elementu członkowskiego przypisuje `right.get_container()` do bazowego kontenera. Możesz użyć do zmiany zawartości całego stosu.
+
+### <a name="example"></a>Przykład
+
+```cpp
+// cliext_stack_assign.cpp
+// compile with: /clr
+#include <cliext/stack>
+
+typedef cliext::stack<wchar_t> Mystack;
+int main()
+    {
+    Mystack c1;
+    c1.push(L'a');
+    c1.push(L'b');
+    c1.push(L'c');
+
+// display initial contents " a b c"
+    for each (wchar_t elem in c1.get_container())
+        System::Console::Write("{0} ", elem);
+    System::Console::WriteLine();
+
+// assign a repetition of values
+    Mystack c2;
+    c2.assign(c1);
+    for each (wchar_t elem in c2.get_container())
+        System::Console::Write("{0} ", elem);
+    System::Console::WriteLine();
+    return (0);
+    }
+```
+
+```Output
+a b c
+a b c
+```
 
 ## <a name="const_reference"></a> Stack::const_reference (STL/CLR)
-Typ stałego odwołania do elementu.  
-  
-### <a name="syntax"></a>Składnia  
-  
-```cpp  
-typedef value_type% const_reference;  
-```  
-  
-### <a name="remarks"></a>Uwagi  
- Typ opisuje stałe odwołanie do elementu.  
-  
-### <a name="example"></a>Przykład  
-  
-```cpp  
-// cliext_stack_const_reference.cpp   
-// compile with: /clr   
-#include <cliext/stack>   
-  
-typedef cliext::stack<wchar_t> Mystack;   
-int main()   
-    {   
-    Mystack c1;   
-    c1.push(L'a');   
-    c1.push(L'b');   
-    c1.push(L'c');   
-  
-// display reversed contents " c b a"   
-    for (; !c1.empty(); c1.pop())   
-        {   // get a const reference to an element   
-        Mystack::const_reference cref = c1.top();   
-        System::Console::Write(" {0}", cref);   
-        }   
-    System::Console::WriteLine();   
-    return (0);   
-    }  
-```  
-  
-```Output  
-c b a  
-```  
+
+Typ stałego odwołania do elementu.
+
+### <a name="syntax"></a>Składnia
+
+```cpp
+typedef value_type% const_reference;
+```
+
+### <a name="remarks"></a>Uwagi
+
+Typ opisuje stałe odwołanie do elementu.
+
+### <a name="example"></a>Przykład
+
+```cpp
+// cliext_stack_const_reference.cpp
+// compile with: /clr
+#include <cliext/stack>
+
+typedef cliext::stack<wchar_t> Mystack;
+int main()
+    {
+    Mystack c1;
+    c1.push(L'a');
+    c1.push(L'b');
+    c1.push(L'c');
+
+// display reversed contents " c b a"
+    for (; !c1.empty(); c1.pop())
+        {   // get a const reference to an element
+        Mystack::const_reference cref = c1.top();
+        System::Console::Write("{0} ", cref);
+        }
+    System::Console::WriteLine();
+    return (0);
+    }
+```
+
+```Output
+c b a
+```
 
 ## <a name="container_type"></a> Stack::container_type (STL/CLR)
-Typ podstawowy kontener.  
-  
-### <a name="syntax"></a>Składnia  
-  
-```cpp  
-typedef Container value_type;  
-```  
-  
-### <a name="remarks"></a>Uwagi  
- Typ jest synonimem dla parametru szablonu *kontenera*.  
-  
-### <a name="example"></a>Przykład  
-  
-```cpp  
-// cliext_stack_container_type.cpp   
-// compile with: /clr   
-#include <cliext/stack>   
-  
-typedef cliext::stack<wchar_t> Mystack;   
-int main()   
-    {   
-    Mystack c1;   
-    c1.push(L'a');   
-    c1.push(L'b');   
-    c1.push(L'c');   
-  
-// display contents " a b c" using container_type   
-    Mystack::container_type wc1 = c1.get_container();   
-    for each (wchar_t elem in wc1)   
-        System::Console::Write(" {0}", elem);   
-    System::Console::WriteLine();   
-    return (0);   
-    }   
-```  
-  
-```Output  
-a b c  
-```  
+
+Typ podstawowy kontener.
+
+### <a name="syntax"></a>Składnia
+
+```cpp
+typedef Container value_type;
+```
+
+### <a name="remarks"></a>Uwagi
+
+Typ jest synonimem dla parametru szablonu *kontenera*.
+
+### <a name="example"></a>Przykład
+
+```cpp
+// cliext_stack_container_type.cpp
+// compile with: /clr
+#include <cliext/stack>
+
+typedef cliext::stack<wchar_t> Mystack;
+int main()
+    {
+    Mystack c1;
+    c1.push(L'a');
+    c1.push(L'b');
+    c1.push(L'c');
+
+// display contents " a b c" using container_type
+    Mystack::container_type wc1 = c1.get_container();
+    for each (wchar_t elem in wc1)
+        System::Console::Write("{0} ", elem);
+    System::Console::WriteLine();
+    return (0);
+    }
+```
+
+```Output
+a b c
+```
 
 ## <a name="difference_type"></a> Stack::difference_type (STL/CLR)
-Typy odległości ze znakiem między dwoma elementami.  
-  
-### <a name="syntax"></a>Składnia  
-  
-```cpp  
-typedef int difference_type;  
-```  
-  
-### <a name="remarks"></a>Uwagi  
- Typ opisuje liczba element prawdopodobnie ujemna.  
-  
-### <a name="example"></a>Przykład  
-  
-```cpp  
-// cliext_stack_difference_type.cpp   
-// compile with: /clr   
-#include <cliext/stack>   
-  
-typedef cliext::stack<wchar_t> Mystack;   
-int main()   
-    {   
-    Mystack c1;   
-    c1.push(L'a');   
-    c1.push(L'b');   
-    c1.push(L'c');   
-  
-// display initial contents " a b c"   
-    for each (wchar_t elem in c1.get_container())   
-        System::Console::Write(" {0}", elem);   
-    System::Console::WriteLine();   
-  
-// compute negative difference   
-    Mystack::difference_type diff = c1.size();   
-    c1.push(L'd');   
-    c1.push(L'e');   
-    diff -= c1.size();   
-    System::Console::WriteLine("pushing 2 = {0}", diff);   
-  
-// compute positive difference   
-    diff = c1.size();   
-    c1.pop();   
-    c1.pop();   
-    c1.pop();   
-    diff -= c1.size();   
-    System::Console::WriteLine("popping 3 = {0}", diff);   
-    return (0);   
-    }  
-```  
-  
-```Output  
- a b c  
-pushing 2 = -2  
-popping 3 = 3  
-```  
+
+Typy odległości ze znakiem między dwoma elementami.
+
+### <a name="syntax"></a>Składnia
+
+```cpp
+typedef int difference_type;
+```
+
+### <a name="remarks"></a>Uwagi
+
+Typ opisuje liczba element prawdopodobnie ujemna.
+
+### <a name="example"></a>Przykład
+
+```cpp
+// cliext_stack_difference_type.cpp
+// compile with: /clr
+#include <cliext/stack>
+
+typedef cliext::stack<wchar_t> Mystack;
+int main()
+    {
+    Mystack c1;
+    c1.push(L'a');
+    c1.push(L'b');
+    c1.push(L'c');
+
+// display initial contents " a b c"
+    for each (wchar_t elem in c1.get_container())
+        System::Console::Write("{0} ", elem);
+    System::Console::WriteLine();
+
+// compute negative difference
+    Mystack::difference_type diff = c1.size();
+    c1.push(L'd');
+    c1.push(L'e');
+    diff -= c1.size();
+    System::Console::WriteLine("pushing 2 = {0}", diff);
+
+// compute positive difference
+    diff = c1.size();
+    c1.pop();
+    c1.pop();
+    c1.pop();
+    diff -= c1.size();
+    System::Console::WriteLine("popping 3 = {0}", diff);
+    return (0);
+    }
+```
+
+```Output
+a b c
+pushing 2 = -2
+popping 3 = 3
+```
 
 ## <a name="empty"></a> Stack::EMPTY (STL/CLR)
-Sprawdza, czy nie ma żadnych elementów.  
-  
-### <a name="syntax"></a>Składnia  
-  
-```cpp  
-bool empty();  
-```  
-  
-### <a name="remarks"></a>Uwagi  
- Funkcja elementu członkowskiego zwraca wartość true dla pustą kontrolowaną sekwencję. Jest to równoważne [stack::size (STL/CLR)](../dotnet/stack-size-stl-clr.md)`() == 0`. Możesz użyć do sprawdzenia, czy stos jest pusty.  
-  
-### <a name="example"></a>Przykład  
-  
-```cpp  
-// cliext_stack_empty.cpp   
-// compile with: /clr   
-#include <cliext/stack>   
-  
-typedef cliext::stack<wchar_t> Mystack;   
-int main()   
-    {   
-    Mystack c1;   
-    c1.push(L'a');   
-    c1.push(L'b');   
-    c1.push(L'c');   
-  
-// display initial contents " a b c"   
-    for each (wchar_t elem in c1.get_container())   
-        System::Console::Write(" {0}", elem);   
-    System::Console::WriteLine();   
-    System::Console::WriteLine("size() = {0}", c1.size());   
-    System::Console::WriteLine("empty() = {0}", c1.empty());   
-  
-// clear the container and reinspect   
-    c1.pop();   
-    c1.pop();   
-    c1.pop();   
-    System::Console::WriteLine("size() = {0}", c1.size());   
-    System::Console::WriteLine("empty() = {0}", c1.empty());   
-    return (0);   
-    }  
-```  
-  
-```Output  
- a b c  
-size() = 3  
-empty() = False  
-size() = 0  
-empty() = True  
-```  
-  
+
+Sprawdza, czy nie ma żadnych elementów.
+
+### <a name="syntax"></a>Składnia
+
+```cpp
+bool empty();
+```
+
+### <a name="remarks"></a>Uwagi
+
+Funkcja elementu członkowskiego zwraca wartość true dla pustą kontrolowaną sekwencję. Jest to równoważne [stack::size (STL/CLR)](../dotnet/stack-size-stl-clr.md)`() == 0`. Możesz użyć do sprawdzenia, czy stos jest pusty.
+
+### <a name="example"></a>Przykład
+
+```cpp
+// cliext_stack_empty.cpp
+// compile with: /clr
+#include <cliext/stack>
+
+typedef cliext::stack<wchar_t> Mystack;
+int main()
+    {
+    Mystack c1;
+    c1.push(L'a');
+    c1.push(L'b');
+    c1.push(L'c');
+
+// display initial contents " a b c"
+    for each (wchar_t elem in c1.get_container())
+        System::Console::Write("{0} ", elem);
+    System::Console::WriteLine();
+    System::Console::WriteLine("size() = {0}", c1.size());
+    System::Console::WriteLine("empty() = {0}", c1.empty());
+
+// clear the container and reinspect
+    c1.pop();
+    c1.pop();
+    c1.pop();
+    System::Console::WriteLine("size() = {0}", c1.size());
+    System::Console::WriteLine("empty() = {0}", c1.empty());
+    return (0);
+    }
+```
+
+```Output
+a b c
+size() = 3
+empty() = False
+size() = 0
+empty() = True
+```
+
 ## <a name="generic_container"></a> Stack::generic_container (STL/CLR)
-Typ ogólny interfejs dla karty kontenera.  
-  
-### <a name="syntax"></a>Składnia  
-  
-```cpp  
-typedef Microsoft::VisualC::StlClr::IStack<Value>  
-    generic_container;  
-```  
-  
-### <a name="remarks"></a>Uwagi  
- Typ opisuje ogólny interfejs dla tej klasy szablonu kontenera karty.  
-  
-### <a name="example"></a>Przykład  
-  
-```cpp  
-// cliext_stack_generic_container.cpp   
-// compile with: /clr   
-#include <cliext/stack>   
-  
-typedef cliext::stack<wchar_t> Mystack;   
-int main()   
-    {   
-    Mystack c1;   
-    c1.push(L'a');   
-    c1.push(L'b');   
-    c1.push(L'c');   
-  
-// display contents " a b c"   
-    for each (wchar_t elem in c1.get_container())   
-        System::Console::Write(" {0}", elem);   
-    System::Console::WriteLine();   
-  
-// get interface to container   
-    Mystack::generic_container^ gc1 = %c1;   
-    for each (wchar_t elem in gc1->get_container())   
-        System::Console::Write(" {0}", elem);   
-    System::Console::WriteLine();   
-  
-// modify generic and display original   
-    gc1->push(L'd');   
-    for each (wchar_t elem in c1.get_container())   
-        System::Console::Write(" {0}", elem);   
-    System::Console::WriteLine();   
-  
-// modify original and display generic   
-    c1.push(L'e');   
-    for each (wchar_t elem in gc1->get_container())   
-        System::Console::Write(" {0}", elem);   
-    System::Console::WriteLine();   
-    return (0);   
-    }  
-```  
-  
-```Output  
-a b c  
-a b c  
-a b c d  
-a b c d e  
-```  
-  
+
+Typ ogólny interfejs dla karty kontenera.
+
+### <a name="syntax"></a>Składnia
+
+```cpp
+typedef Microsoft::VisualC::StlClr::IStack<Value>
+    generic_container;
+```
+
+### <a name="remarks"></a>Uwagi
+
+Typ opisuje ogólny interfejs dla tej klasy szablonu kontenera karty.
+
+### <a name="example"></a>Przykład
+
+```cpp
+// cliext_stack_generic_container.cpp
+// compile with: /clr
+#include <cliext/stack>
+
+typedef cliext::stack<wchar_t> Mystack;
+int main()
+    {
+    Mystack c1;
+    c1.push(L'a');
+    c1.push(L'b');
+    c1.push(L'c');
+
+// display contents " a b c"
+    for each (wchar_t elem in c1.get_container())
+        System::Console::Write("{0} ", elem);
+    System::Console::WriteLine();
+
+// get interface to container
+    Mystack::generic_container^ gc1 = %c1;
+    for each (wchar_t elem in gc1->get_container())
+        System::Console::Write("{0} ", elem);
+    System::Console::WriteLine();
+
+// modify generic and display original
+    gc1->push(L'd');
+    for each (wchar_t elem in c1.get_container())
+        System::Console::Write("{0} ", elem);
+    System::Console::WriteLine();
+
+// modify original and display generic
+    c1.push(L'e');
+    for each (wchar_t elem in gc1->get_container())
+        System::Console::Write("{0} ", elem);
+    System::Console::WriteLine();
+    return (0);
+    }
+```
+
+```Output
+a b c
+a b c
+a b c d
+a b c d e
+```
+
 ## <a name="generic_value"></a> Stack::generic_value (STL/CLR)
-Typ elementu do użycia przy użyciu interfejsu ogólnego dla kontenera.  
-  
-### <a name="syntax"></a>Składnia  
-  
-```cpp  
-typedef GValue generic_value;  
-```  
-  
-### <a name="remarks"></a>Uwagi  
- Typ opisuje obiekt typu `GValue` wartość elementu przechowywane do użytku z ogólny interfejs dla tej klasy kontenera szablonu, który opisuje. (`GValue` jest `value_type` lub `value_type^` Jeśli `value_type` jest typem odwołania.)  
-  
-### <a name="example"></a>Przykład  
-  
-```cpp  
-// cliext_stack_generic_value.cpp   
-// compile with: /clr   
-#include <cliext/stack>   
-  
-typedef cliext::stack<wchar_t> Mystack;   
-int main()   
-    {   
-    Mystack c1;   
-    c1.push(L'a');   
-    c1.push(L'b');   
-    c1.push(L'c');   
-  
-// display contents " a b c"   
-    for each (wchar_t elem in c1.get_container())   
-        System::Console::Write(" {0}", elem);   
-    System::Console::WriteLine();   
-  
-// get interface to container   
-    Mystack::generic_container^ gc1 = %c1;   
-    for each (wchar_t elem in gc1->get_container())   
-        System::Console::Write(" {0}", elem);   
-    System::Console::WriteLine();   
-  
-// display in reverse using generic_value   
-    for (; !gc1->empty(); gc1->pop())   
-        {   
-        Mystack::generic_value elem = gc1->top();   
-  
-        System::Console::Write(" {0}", elem);   
-        }   
-    System::Console::WriteLine();   
-    return (0);   
-    }  
-```  
-  
-```Output  
-a b c  
-a b c  
-c b a  
-```  
-  
+
+Typ elementu do użycia przy użyciu interfejsu ogólnego dla kontenera.
+
+### <a name="syntax"></a>Składnia
+
+```cpp
+typedef GValue generic_value;
+```
+
+### <a name="remarks"></a>Uwagi
+
+Typ opisuje obiekt typu `GValue` wartość elementu przechowywane do użytku z ogólny interfejs dla tej klasy kontenera szablonu, który opisuje. (`GValue` jest `value_type` lub `value_type^` Jeśli `value_type` jest typem odwołania.)
+
+### <a name="example"></a>Przykład
+
+```cpp
+// cliext_stack_generic_value.cpp
+// compile with: /clr
+#include <cliext/stack>
+
+typedef cliext::stack<wchar_t> Mystack;
+int main()
+    {
+    Mystack c1;
+    c1.push(L'a');
+    c1.push(L'b');
+    c1.push(L'c');
+
+// display contents " a b c"
+    for each (wchar_t elem in c1.get_container())
+        System::Console::Write("{0} ", elem);
+    System::Console::WriteLine();
+
+// get interface to container
+    Mystack::generic_container^ gc1 = %c1;
+    for each (wchar_t elem in gc1->get_container())
+        System::Console::Write("{0} ", elem);
+    System::Console::WriteLine();
+
+// display in reverse using generic_value
+    for (; !gc1->empty(); gc1->pop())
+        {
+        Mystack::generic_value elem = gc1->top();
+
+        System::Console::Write("{0} ", elem);
+        }
+    System::Console::WriteLine();
+    return (0);
+    }
+```
+
+```Output
+a b c
+a b c
+c b a
+```
+
 ## <a name="get_container"></a> Stack::get_container (STL/CLR)
-Uzyskuje dostęp do podstawowych kontenera.  
-  
-### <a name="syntax"></a>Składnia  
-  
-```cpp  
-container_type^ get_container();  
-```  
-  
-### <a name="remarks"></a>Uwagi  
- Element członkowski funkcji zwraca uchwyt bazowego kontenera. Umożliwia ona obejścia ograniczeń nałożonych przez otokę kontenera.  
-  
-### <a name="example"></a>Przykład  
-  
-```cpp  
-// cliext_stack_get_container.cpp   
-// compile with: /clr   
-#include <cliext/stack>   
-  
-typedef cliext::stack<wchar_t> Mystack;   
-int main()   
-    {   
-    Mystack c1;   
-    c1.push(L'a');   
-    c1.push(L'b');   
-    c1.push(L'c');   
-  
-// display contents " a b c" using container_type   
-    Mystack::container_type wc1 = c1.get_container();   
-    for each (wchar_t elem in wc1)   
-        System::Console::Write(" {0}", elem);   
-    System::Console::WriteLine();   
-    return (0);   
-    }  
-```  
-  
-```Output  
-a b c  
-```  
+
+Uzyskuje dostęp do podstawowych kontenera.
+
+### <a name="syntax"></a>Składnia
+
+```cpp
+container_type^ get_container();
+```
+
+### <a name="remarks"></a>Uwagi
+
+Element członkowski funkcji zwraca uchwyt bazowego kontenera. Umożliwia ona obejścia ograniczeń nałożonych przez otokę kontenera.
+
+### <a name="example"></a>Przykład
+
+```cpp
+// cliext_stack_get_container.cpp
+// compile with: /clr
+#include <cliext/stack>
+
+typedef cliext::stack<wchar_t> Mystack;
+int main()
+    {
+    Mystack c1;
+    c1.push(L'a');
+    c1.push(L'b');
+    c1.push(L'c');
+
+// display contents " a b c" using container_type
+    Mystack::container_type wc1 = c1.get_container();
+    for each (wchar_t elem in wc1)
+        System::Console::Write("{0} ", elem);
+    System::Console::WriteLine();
+    return (0);
+    }
+```
+
+```Output
+a b c
+```
 
 ## <a name="op_as"></a> Stack::operator = (STL/CLR)
-Zastępuje kontrolowanej sekwencji.  
-  
-### <a name="syntax"></a>Składnia  
-  
-```cpp  
-stack <Value, Container>% operator=(stack <Value, Container>% right);  
-```  
-  
-#### <a name="parameters"></a>Parametry  
- *right*  
- Adapter kontenera do skopiowania.  
-  
-### <a name="remarks"></a>Uwagi  
- Kopiuje operator składowej *prawo* do obiektu, następnie zwraca `*this`. Umożliwia ona Zastąp kopię kontrolowanej sekwencji w kontrolowanej sekwencji *prawo*.  
-  
-### <a name="example"></a>Przykład  
-  
-```cpp  
-// cliext_stack_operator_as.cpp   
-// compile with: /clr   
-#include <cliext/stack>   
-  
-typedef cliext::stack<wchar_t> Mystack;   
-int main()   
-    {   
-    Mystack c1;   
-    c1.push(L'a');   
-    c1.push(L'b');   
-    c1.push(L'c');   
-  
-// display contents " a b c"   
-    for each (wchar_t elem in c1.get_container())   
-        System::Console::Write(" {0}", elem);   
-    System::Console::WriteLine();   
-  
-// assign to a new container   
-    Mystack c2;   
-    c2 = c1;   
-    for each (wchar_t elem in c2.get_container())   
-        System::Console::Write(" {0}", elem);   
-    System::Console::WriteLine();   
-    return (0);   
-    }   
-```  
-  
-```Output  
-a b c  
-a b c  
-```  
+
+Zastępuje kontrolowanej sekwencji.
+
+### <a name="syntax"></a>Składnia
+
+```cpp
+stack <Value, Container>% operator=(stack <Value, Container>% right);
+```
+
+#### <a name="parameters"></a>Parametry
+
+*right*<br/>
+Adapter kontenera do skopiowania.
+
+### <a name="remarks"></a>Uwagi
+
+Kopiuje operator składowej *prawo* do obiektu, następnie zwraca `*this`. Umożliwia ona Zastąp kopię kontrolowanej sekwencji w kontrolowanej sekwencji *prawo*.
+
+### <a name="example"></a>Przykład
+
+```cpp
+// cliext_stack_operator_as.cpp
+// compile with: /clr
+#include <cliext/stack>
+
+typedef cliext::stack<wchar_t> Mystack;
+int main()
+    {
+    Mystack c1;
+    c1.push(L'a');
+    c1.push(L'b');
+    c1.push(L'c');
+
+// display contents " a b c"
+    for each (wchar_t elem in c1.get_container())
+        System::Console::Write("{0} ", elem);
+    System::Console::WriteLine();
+
+// assign to a new container
+    Mystack c2;
+    c2 = c1;
+    for each (wchar_t elem in c2.get_container())
+        System::Console::Write("{0} ", elem);
+    System::Console::WriteLine();
+    return (0);
+    }
+```
+
+```Output
+a b c
+a b c
+```
 
 ## <a name="pop"></a> Stack::POP (STL/CLR)
-Usuwa ostatni element.  
-  
-### <a name="syntax"></a>Składnia  
-  
-```cpp  
-void pop();  
-```  
-  
-### <a name="remarks"></a>Uwagi  
- Funkcja członkowska usuwa ostatniego elementu w kontrolowanej sekwencji, która musi być niepusta. Umożliwia ona skrócić czas na stosie przez jeden element w tle.  
-  
-### <a name="example"></a>Przykład  
-  
-```cpp  
-// cliext_stack_pop.cpp   
-// compile with: /clr   
-#include <cliext/stack>   
-  
-typedef cliext::stack<wchar_t> Mystack;   
-int main()   
-    {   
-    Mystack c1;   
-    c1.push(L'a');   
-    c1.push(L'b');   
-    c1.push(L'c');   
-  
-// display contents " a b c"   
-    for each (wchar_t elem in c1.get_container())   
-        System::Console::Write(" {0}", elem);   
-    System::Console::WriteLine();   
-  
-// pop an element and redisplay   
-    c1.pop();   
-    for each (wchar_t elem in c1.get_container())   
-        System::Console::Write(" {0}", elem);   
-    System::Console::WriteLine();   
-    return (0);   
-    }  
-```  
-  
-```Output  
-a b c  
-a b  
-```  
+
+Usuwa ostatni element.
+
+### <a name="syntax"></a>Składnia
+
+```cpp
+void pop();
+```
+
+### <a name="remarks"></a>Uwagi
+
+Funkcja członkowska usuwa ostatniego elementu w kontrolowanej sekwencji, która musi być niepusta. Umożliwia ona skrócić czas na stosie przez jeden element w tle.
+
+### <a name="example"></a>Przykład
+
+```cpp
+// cliext_stack_pop.cpp
+// compile with: /clr
+#include <cliext/stack>
+
+typedef cliext::stack<wchar_t> Mystack;
+int main()
+    {
+    Mystack c1;
+    c1.push(L'a');
+    c1.push(L'b');
+    c1.push(L'c');
+
+// display contents " a b c"
+    for each (wchar_t elem in c1.get_container())
+        System::Console::Write("{0} ", elem);
+    System::Console::WriteLine();
+
+// pop an element and redisplay
+    c1.pop();
+    for each (wchar_t elem in c1.get_container())
+        System::Console::Write("{0} ", elem);
+    System::Console::WriteLine();
+    return (0);
+    }
+```
+
+```Output
+a b c
+a b
+```
 
 ## <a name="push"></a> Stack::push (STL/CLR)
-Dodaje nowy element ostatni.  
-  
-### <a name="syntax"></a>Składnia  
-  
-```cpp  
-void push(value_type val);  
-```  
-  
-### <a name="remarks"></a>Uwagi  
- Funkcja elementu członkowskiego wstawia element z wartością `val` na koniec kontrolowanej sekwencji. Możesz użyć do dołączania innego elementu stosu.  
-  
-### <a name="example"></a>Przykład  
-  
-```cpp  
-// cliext_stack_push.cpp   
-// compile with: /clr   
-#include <cliext/stack>   
-  
-typedef cliext::stack<wchar_t> Mystack;   
-int main()   
-    {   
-    Mystack c1;   
-    c1.push(L'a');   
-    c1.push(L'b');   
-    c1.push(L'c');   
-  
-// display contents " a b c"   
-    for each (wchar_t elem in c1.get_container())   
-        System::Console::Write(" {0}", elem);   
-    System::Console::WriteLine();   
-    return (0);   
-    }  
-```  
-  
-```Output  
-a b c  
-```  
+
+Dodaje nowy element ostatni.
+
+### <a name="syntax"></a>Składnia
+
+```cpp
+void push(value_type val);
+```
+
+### <a name="remarks"></a>Uwagi
+
+Funkcja elementu członkowskiego wstawia element z wartością `val` na koniec kontrolowanej sekwencji. Możesz użyć do dołączania innego elementu stosu.
+
+### <a name="example"></a>Przykład
+
+```cpp
+// cliext_stack_push.cpp
+// compile with: /clr
+#include <cliext/stack>
+
+typedef cliext::stack<wchar_t> Mystack;
+int main()
+    {
+    Mystack c1;
+    c1.push(L'a');
+    c1.push(L'b');
+    c1.push(L'c');
+
+// display contents " a b c"
+    for each (wchar_t elem in c1.get_container())
+        System::Console::Write("{0} ", elem);
+    System::Console::WriteLine();
+    return (0);
+    }
+```
+
+```Output
+a b c
+```
 
 ## <a name="reference"></a> Stack::Reference (STL/CLR)
-Typ odwołania do elementu.  
-  
-### <a name="syntax"></a>Składnia  
-  
-```cpp  
-typedef value_type% reference;  
-```  
-  
-### <a name="remarks"></a>Uwagi  
- Typ opisuje odwołanie do elementu.  
-  
-### <a name="example"></a>Przykład  
-  
-```cpp  
-// cliext_stack_reference.cpp   
-// compile with: /clr   
-#include <cliext/stack>   
-  
-typedef cliext::stack<wchar_t> Mystack;   
-int main()   
-    {   
-    Mystack c1;   
-    c1.push(L'a');   
-    c1.push(L'b');   
-    c1.push(L'c');   
-  
-// display initial contents " a b c"   
-    for each (wchar_t elem in c1.get_container())   
-        System::Console::Write(" {0}", elem);   
-    System::Console::WriteLine();   
-  
-// modify top of stack and redisplay   
-    Mystack::reference ref = c1.top();   
-    ref = L'x';   
-    for each (wchar_t elem in c1.get_container())   
-        System::Console::Write(" {0}", elem);   
-    System::Console::WriteLine();   
-    return (0);   
-    }  
-```  
-  
-```Output  
-a b c  
-a b x  
-```  
-  
+
+Typ odwołania do elementu.
+
+### <a name="syntax"></a>Składnia
+
+```cpp
+typedef value_type% reference;
+```
+
+### <a name="remarks"></a>Uwagi
+
+Typ opisuje odwołanie do elementu.
+
+### <a name="example"></a>Przykład
+
+```cpp
+// cliext_stack_reference.cpp
+// compile with: /clr
+#include <cliext/stack>
+
+typedef cliext::stack<wchar_t> Mystack;
+int main()
+    {
+    Mystack c1;
+    c1.push(L'a');
+    c1.push(L'b');
+    c1.push(L'c');
+
+// display initial contents " a b c"
+    for each (wchar_t elem in c1.get_container())
+        System::Console::Write("{0} ", elem);
+    System::Console::WriteLine();
+
+// modify top of stack and redisplay
+    Mystack::reference ref = c1.top();
+    ref = L'x';
+    for each (wchar_t elem in c1.get_container())
+        System::Console::Write("{0} ", elem);
+    System::Console::WriteLine();
+    return (0);
+    }
+```
+
+```Output
+a b c
+a b x
+```
+
 ## <a name="size"></a> Stack::size (STL/CLR)
-Liczy liczbę elementów.  
-  
-### <a name="syntax"></a>Składnia  
-  
-```cpp  
-size_type size();  
-```  
-  
-### <a name="remarks"></a>Uwagi  
- Funkcja elementu członkowskiego zwraca długość kontrolowanej sekwencji. Umożliwia ona określenie liczby elementów aktualnie w kontrolowanej sekwencji. Jeśli jest wszystkich interesujących Cię, czy sekwencja ma wartość różną od zera rozmiaru, zobacz [stack::empty (STL/CLR)](../dotnet/stack-empty-stl-clr.md)`()`.  
-  
-### <a name="example"></a>Przykład  
-  
-```cpp  
-// cliext_stack_size.cpp   
-// compile with: /clr   
-#include <cliext/stack>   
-  
-typedef cliext::stack<wchar_t> Mystack;   
-int main()   
-    {   
-    Mystack c1;   
-    c1.push(L'a');   
-    c1.push(L'b');   
-    c1.push(L'c');   
-  
-// display initial contents " a b c"   
-    for each (wchar_t elem in c1.get_container())   
-        System::Console::Write(" {0}", elem);   
-    System::Console::WriteLine();   
-    System::Console::WriteLine("size() = {0} starting with 3", c1.size());   
-  
-// pop an item and reinspect   
-    c1.pop();   
-    System::Console::WriteLine("size() = {0} after popping", c1.size());   
-  
-// add two elements and reinspect   
-    c1.push(L'a');   
-    c1.push(L'b');   
-    System::Console::WriteLine("size() = {0} after adding 2", c1.size());   
-    return (0);   
-    }  
-```  
-  
-```Output  
- a b c  
-size() = 3 starting with 3  
-size() = 2 after popping  
-size() = 4 after adding 2  
-```  
+
+Liczy liczbę elementów.
+
+### <a name="syntax"></a>Składnia
+
+```cpp
+size_type size();
+```
+
+### <a name="remarks"></a>Uwagi
+
+Funkcja elementu członkowskiego zwraca długość kontrolowanej sekwencji. Umożliwia ona określenie liczby elementów aktualnie w kontrolowanej sekwencji. Jeśli jest wszystkich interesujących Cię, czy sekwencja ma wartość różną od zera rozmiaru, zobacz [stack::empty (STL/CLR)](../dotnet/stack-empty-stl-clr.md)`()`.
+
+### <a name="example"></a>Przykład
+
+```cpp
+// cliext_stack_size.cpp
+// compile with: /clr
+#include <cliext/stack>
+
+typedef cliext::stack<wchar_t> Mystack;
+int main()
+    {
+    Mystack c1;
+    c1.push(L'a');
+    c1.push(L'b');
+    c1.push(L'c');
+
+// display initial contents " a b c"
+    for each (wchar_t elem in c1.get_container())
+        System::Console::Write("{0} ", elem);
+    System::Console::WriteLine();
+    System::Console::WriteLine("size() = {0} starting with 3", c1.size());
+
+// pop an item and reinspect
+    c1.pop();
+    System::Console::WriteLine("size() = {0} after popping", c1.size());
+
+// add two elements and reinspect
+    c1.push(L'a');
+    c1.push(L'b');
+    System::Console::WriteLine("size() = {0} after adding 2", c1.size());
+    return (0);
+    }
+```
+
+```Output
+a b c
+size() = 3 starting with 3
+size() = 2 after popping
+size() = 4 after adding 2
+```
 
 ## <a name="size_type"></a> Stack::size_type (STL/CLR)
-Typ odległości ze znakiem między dwoma elementu.  
-  
-### <a name="syntax"></a>Składnia  
-  
-```cpp  
-typedef int size_type;  
-```  
-  
-### <a name="remarks"></a>Uwagi  
- Typ opisuje liczby nieujemnej wartości elementu.  
-  
-### <a name="example"></a>Przykład  
-  
-```cpp  
-// cliext_stack_size_type.cpp   
-// compile with: /clr   
-#include <cliext/stack>   
-  
-typedef cliext::stack<wchar_t> Mystack;   
-int main()   
-    {   
-    Mystack c1;   
-    c1.push(L'a');   
-    c1.push(L'b');   
-    c1.push(L'c');   
-  
-// display initial contents " a b c"   
-    for each (wchar_t elem in c1.get_container())   
-        System::Console::Write(" {0}", elem);   
-    System::Console::WriteLine();   
-  
-// compute positive difference   
-    Mystack::size_type diff = c1.size();   
-    c1.pop();   
-    c1.pop();   
-    diff -= c1.size();   
-    System::Console::WriteLine("size difference = {0}", diff);   
-    return (0);   
-    }  
-```  
-  
-```Output  
- a b c  
-size difference = 2  
-```  
-  
+
+Typ odległości ze znakiem między dwoma elementu.
+
+### <a name="syntax"></a>Składnia
+
+```cpp
+typedef int size_type;
+```
+
+### <a name="remarks"></a>Uwagi
+
+Typ opisuje liczby nieujemnej wartości elementu.
+
+### <a name="example"></a>Przykład
+
+```cpp
+// cliext_stack_size_type.cpp
+// compile with: /clr
+#include <cliext/stack>
+
+typedef cliext::stack<wchar_t> Mystack;
+int main()
+    {
+    Mystack c1;
+    c1.push(L'a');
+    c1.push(L'b');
+    c1.push(L'c');
+
+// display initial contents " a b c"
+    for each (wchar_t elem in c1.get_container())
+        System::Console::Write("{0} ", elem);
+    System::Console::WriteLine();
+
+// compute positive difference
+    Mystack::size_type diff = c1.size();
+    c1.pop();
+    c1.pop();
+    diff -= c1.size();
+    System::Console::WriteLine("size difference = {0}", diff);
+    return (0);
+    }
+```
+
+```Output
+a b c
+size difference = 2
+```
+
 ## <a name="stack"></a> Stack::Stack (STL/CLR)
-Konstruuje obiekt kontenera karty.  
-  
-### <a name="syntax"></a>Składnia  
-  
-```cpp  
-stack();  
-stack(stack<Value, Container>% right);  
-stack(stack<Value, Container>^ right);  
-explicit stack(container_type% wrapped);  
-```  
-  
-#### <a name="parameters"></a>Parametry  
- *right*  
- Obiekt do skopiowania.  
-  
- *opakowana*  
- Opakowana kontener do użycia.  
-  
-### <a name="remarks"></a>Uwagi  
- Konstruktor:  
-  
- `stack();`  
-  
- tworzy pusty kontener opakowana. Umożliwia ona określenie pustą kontrolowaną sekwencję początkowej.  
-  
- Konstruktor:  
-  
- `stack(stack<Value, Container>% right);`  
-  
- Tworzy opakowana kontener, który jest kopią `right.get_container()`. Umożliwia ona określenie początkowej kontrolowanej sekwencji, który jest kopią na sekwencję kontrolowaną przez obiekt stack *prawo*.  
-  
- Konstruktor:  
-  
- `stack(stack<Value, Container>^ right);`  
-  
- Tworzy opakowana kontener, który jest kopią `right->get_container()`. Umożliwia ona określenie początkowej kontrolowanej sekwencji, który jest kopią na sekwencję kontrolowaną przez obiekt stack `*right`.  
-  
- Konstruktor:  
-  
- `explicit stack(container_type% wrapped);`  
-  
- wykorzystuje istniejący kontener *opakowane* jako kontener opakowana. Możesz użyć do konstruowania stosu z istniejącego kontenera.  
-  
-### <a name="example"></a>Przykład  
-  
-```cpp  
-// cliext_stack_construct.cpp   
-// compile with: /clr   
-#include <cliext/stack>   
-#include <cliext/vector>   
-  
-typedef cliext::stack<wchar_t> Mystack;   
-typedef cliext::vector<wchar_t> Myvector;   
-typedef cliext::stack<wchar_t, Myvector> Mystack_vec;   
-int main()   
-    {   
-// construct an empty container   
-    Mystack c1;   
-    System::Console::WriteLine("size() = {0}", c1.size());   
-  
-// construct from an underlying container   
-    Myvector v2(5, L'x');   
-    Mystack_vec c2(v2);       
-    for each (wchar_t elem in c2.get_container())   
-        System::Console::Write(" {0}", elem);   
-    System::Console::WriteLine();   
-  
-// construct by copying another container   
-    Mystack_vec c3(c2);   
-    for each (wchar_t elem in c3.get_container())   
-        System::Console::Write(" {0}", elem);   
-    System::Console::WriteLine();   
-  
-// construct by copying another container through handle   
-    Mystack_vec c4(%c2);   
-    for each (wchar_t elem in c4.get_container())   
-        System::Console::Write(" {0}", elem);   
-    System::Console::WriteLine();   
-    return (0);   
-    }   
-```  
-  
-```Output  
-size() = 0  
- x x x x x  
- x x x x x  
- x x x x x  
-```  
+
+Konstruuje obiekt kontenera karty.
+
+### <a name="syntax"></a>Składnia
+
+```cpp
+stack();
+stack(stack<Value, Container>% right);
+stack(stack<Value, Container>^ right);
+explicit stack(container_type% wrapped);
+```
+
+#### <a name="parameters"></a>Parametry
+
+*right*<br/>
+Obiekt do skopiowania.
+
+*opakowana*<br/>
+Opakowana kontener do użycia.
+
+### <a name="remarks"></a>Uwagi
+
+Konstruktor:
+
+`stack();`
+
+tworzy pusty kontener opakowana. Umożliwia ona określenie pustą kontrolowaną sekwencję początkowej.
+
+Konstruktor:
+
+`stack(stack<Value, Container>% right);`
+
+Tworzy opakowana kontener, który jest kopią `right.get_container()`. Umożliwia ona określenie początkowej kontrolowanej sekwencji, który jest kopią na sekwencję kontrolowaną przez obiekt stack *prawo*.
+
+Konstruktor:
+
+`stack(stack<Value, Container>^ right);`
+
+Tworzy opakowana kontener, który jest kopią `right->get_container()`. Umożliwia ona określenie początkowej kontrolowanej sekwencji, który jest kopią na sekwencję kontrolowaną przez obiekt stack `*right`.
+
+Konstruktor:
+
+`explicit stack(container_type% wrapped);`
+
+wykorzystuje istniejący kontener *opakowane* jako kontener opakowana. Możesz użyć do konstruowania stosu z istniejącego kontenera.
+
+### <a name="example"></a>Przykład
+
+```cpp
+// cliext_stack_construct.cpp
+// compile with: /clr
+#include <cliext/stack>
+#include <cliext/vector>
+
+typedef cliext::stack<wchar_t> Mystack;
+typedef cliext::vector<wchar_t> Myvector;
+typedef cliext::stack<wchar_t, Myvector> Mystack_vec;
+int main()
+    {
+// construct an empty container
+    Mystack c1;
+    System::Console::WriteLine("size() = {0}", c1.size());
+
+// construct from an underlying container
+    Myvector v2(5, L'x');
+    Mystack_vec c2(v2);
+    for each (wchar_t elem in c2.get_container())
+        System::Console::Write("{0} ", elem);
+    System::Console::WriteLine();
+
+// construct by copying another container
+    Mystack_vec c3(c2);
+    for each (wchar_t elem in c3.get_container())
+        System::Console::Write("{0} ", elem);
+    System::Console::WriteLine();
+
+// construct by copying another container through handle
+    Mystack_vec c4(%c2);
+    for each (wchar_t elem in c4.get_container())
+        System::Console::Write("{0} ", elem);
+    System::Console::WriteLine();
+    return (0);
+    }
+```
+
+```Output
+size() = 0
+x x x x x
+x x x x x
+x x x x x
+```
 
 ## <a name="to_array"></a> Stack::to_array (STL/CLR)
-Kopiuje kontrolowanej sekwencji do nowej tablicy.  
-  
-### <a name="syntax"></a>Składnia  
-  
-```cpp  
-cli::array<Value>^ to_array();  
-```  
-  
-### <a name="remarks"></a>Uwagi  
- Funkcja elementu członkowskiego zwraca tablicę zawierającą kontrolowanej sekwencji. Umożliwia ona otrzymać kopię kontrolowanej sekwencji w postaci tablicy.  
-  
-### <a name="example"></a>Przykład  
-  
-```cpp  
-// cliext_stack_to_array.cpp   
-// compile with: /clr   
-#include <cliext/stack>   
-  
-typedef cliext::stack<wchar_t> Mystack;   
-int main()   
-    {   
-    Mystack c1;   
-    c1.push(L'a');   
-    c1.push(L'b');   
-    c1.push(L'c');   
-  
-// copy the container and modify it   
-    cli::array<wchar_t>^ a1 = c1.to_array();   
-  
-    c1.push(L'd');   
-    for each (wchar_t elem in c1.get_container())   
-        System::Console::Write(" {0}", elem);   
-    System::Console::WriteLine();   
-  
-// display the earlier array copy   
-    for each (wchar_t elem in a1)   
-        System::Console::Write(" {0}", elem);   
-    System::Console::WriteLine();   
-    return (0);   
-    }  
-```  
-  
-```Output  
-a b c d  
-a b c  
-```  
+
+Kopiuje kontrolowanej sekwencji do nowej tablicy.
+
+### <a name="syntax"></a>Składnia
+
+```cpp
+cli::array<Value>^ to_array();
+```
+
+### <a name="remarks"></a>Uwagi
+
+Funkcja elementu członkowskiego zwraca tablicę zawierającą kontrolowanej sekwencji. Umożliwia ona otrzymać kopię kontrolowanej sekwencji w postaci tablicy.
+
+### <a name="example"></a>Przykład
+
+```cpp
+// cliext_stack_to_array.cpp
+// compile with: /clr
+#include <cliext/stack>
+
+typedef cliext::stack<wchar_t> Mystack;
+int main()
+    {
+    Mystack c1;
+    c1.push(L'a');
+    c1.push(L'b');
+    c1.push(L'c');
+
+// copy the container and modify it
+    cli::array<wchar_t>^ a1 = c1.to_array();
+
+    c1.push(L'd');
+    for each (wchar_t elem in c1.get_container())
+        System::Console::Write("{0} ", elem);
+    System::Console::WriteLine();
+
+// display the earlier array copy
+    for each (wchar_t elem in a1)
+        System::Console::Write("{0} ", elem);
+    System::Console::WriteLine();
+    return (0);
+    }
+```
+
+```Output
+a b c d
+a b c
+```
 
 ## <a name="top"></a> Stack::Top (STL/CLR)
-Uzyskuje dostęp do ostatniego elementu.  
-  
-### <a name="syntax"></a>Składnia  
-  
-```cpp  
-reference top();  
-```  
-  
-### <a name="remarks"></a>Uwagi  
- Funkcja elementu członkowskiego zwraca odwołanie do ostatniego elementu w kontrolowanej sekwencji, która musi być niepusta. Umożliwia ona dostęp do ostatniego elementu, gdy wiadomo, że istnieje.  
-  
-### <a name="example"></a>Przykład  
-  
-```cpp  
-// cliext_stack_top.cpp   
-// compile with: /clr   
-#include <cliext/stack>   
-  
-typedef cliext::stack<wchar_t> Mystack;   
-int main()   
-    {   
-    Mystack c1;   
-    c1.push(L'a');   
-    c1.push(L'b');   
-    c1.push(L'c');   
-  
-// display initial contents " a b c"   
-    for each (wchar_t elem in c1.get_container())   
-        System::Console::Write(" {0}", elem);   
-    System::Console::WriteLine();   
-  
-// inspect last item   
-    System::Console::WriteLine("top() = {0}", c1.top());   
-  
-// alter last item and reinspect   
-    c1.top() = L'x';   
-    for each (wchar_t elem in c1.get_container())   
-        System::Console::Write(" {0}", elem);   
-    System::Console::WriteLine();   
-    return (0);   
-    }  
-```  
-  
-```Output  
- a b c  
-top() = c  
- a b x  
-```  
+
+Uzyskuje dostęp do ostatniego elementu.
+
+### <a name="syntax"></a>Składnia
+
+```cpp
+reference top();
+```
+
+### <a name="remarks"></a>Uwagi
+
+Funkcja elementu członkowskiego zwraca odwołanie do ostatniego elementu w kontrolowanej sekwencji, która musi być niepusta. Umożliwia ona dostęp do ostatniego elementu, gdy wiadomo, że istnieje.
+
+### <a name="example"></a>Przykład
+
+```cpp
+// cliext_stack_top.cpp
+// compile with: /clr
+#include <cliext/stack>
+
+typedef cliext::stack<wchar_t> Mystack;
+int main()
+    {
+    Mystack c1;
+    c1.push(L'a');
+    c1.push(L'b');
+    c1.push(L'c');
+
+// display initial contents " a b c"
+    for each (wchar_t elem in c1.get_container())
+        System::Console::Write("{0} ", elem);
+    System::Console::WriteLine();
+
+// inspect last item
+    System::Console::WriteLine("top() = {0}", c1.top());
+
+// alter last item and reinspect
+    c1.top() = L'x';
+    for each (wchar_t elem in c1.get_container())
+        System::Console::Write("{0} ", elem);
+    System::Console::WriteLine();
+    return (0);
+    }
+```
+
+```Output
+a b c
+top() = c
+a b x
+```
 
 ## <a name="top_item"></a> Stack::top_item (STL/CLR)
-Uzyskuje dostęp do ostatniego elementu.  
-  
-### <a name="syntax"></a>Składnia  
-  
-```cpp  
-property value_type top_item;  
-```  
-  
-### <a name="remarks"></a>Uwagi  
- Właściwość uzyskuje dostęp do ostatniego elementu w kontrolowanej sekwencji, która musi być niepusta. Możesz użyć do odczytu lub zapisu ostatniego elementu, gdy wiadomo, że istnieje.  
-  
-### <a name="example"></a>Przykład  
-  
-```cpp  
-// cliext_stack_top_item.cpp   
-// compile with: /clr   
-#include <cliext/stack>   
-  
-typedef cliext::stack<wchar_t> Mystack;   
-int main()   
-    {   
-    Mystack c1;   
-    c1.push(L'a');   
-    c1.push(L'b');   
-    c1.push(L'c');   
-  
-// display initial contents " a b c"   
-    for each (wchar_t elem in c1.get_container())   
-        System::Console::Write(" {0}", elem);   
-    System::Console::WriteLine();   
-  
-// inspect last item   
-    System::Console::WriteLine("top_item = {0}", c1.top_item);   
-  
-// alter last item and reinspect   
-    c1.top_item = L'x';   
-    for each (wchar_t elem in c1.get_container())   
-        System::Console::Write(" {0}", elem);   
-    System::Console::WriteLine();   
-    return (0);   
-    }  
-```  
-  
-```Output  
- a b c  
-top_item = c  
- a b x  
-```  
+
+Uzyskuje dostęp do ostatniego elementu.
+
+### <a name="syntax"></a>Składnia
+
+```cpp
+property value_type top_item;
+```
+
+### <a name="remarks"></a>Uwagi
+
+Właściwość uzyskuje dostęp do ostatniego elementu w kontrolowanej sekwencji, która musi być niepusta. Możesz użyć do odczytu lub zapisu ostatniego elementu, gdy wiadomo, że istnieje.
+
+### <a name="example"></a>Przykład
+
+```cpp
+// cliext_stack_top_item.cpp
+// compile with: /clr
+#include <cliext/stack>
+
+typedef cliext::stack<wchar_t> Mystack;
+int main()
+    {
+    Mystack c1;
+    c1.push(L'a');
+    c1.push(L'b');
+    c1.push(L'c');
+
+// display initial contents " a b c"
+    for each (wchar_t elem in c1.get_container())
+        System::Console::Write("{0} ", elem);
+    System::Console::WriteLine();
+
+// inspect last item
+    System::Console::WriteLine("top_item = {0}", c1.top_item);
+
+// alter last item and reinspect
+    c1.top_item = L'x';
+    for each (wchar_t elem in c1.get_container())
+        System::Console::Write("{0} ", elem);
+    System::Console::WriteLine();
+    return (0);
+    }
+```
+
+```Output
+a b c
+top_item = c
+a b x
+```
 
 ## <a name="value_type"></a> Stack::value_type (STL/CLR)
-Typ elementu.  
-  
-### <a name="syntax"></a>Składnia  
-  
-```cpp  
-typedef Value value_type;  
-```  
-  
-### <a name="remarks"></a>Uwagi  
- Typ jest synonimem dla parametru szablonu *wartość*.  
-  
-### <a name="example"></a>Przykład  
-  
-```cpp  
-// cliext_stack_value_type.cpp   
-// compile with: /clr   
-#include <cliext/stack>   
-  
-typedef cliext::stack<wchar_t> Mystack;   
-int main()   
-    {   
-    Mystack c1;   
-    c1.push(L'a');   
-    c1.push(L'b');   
-    c1.push(L'c');   
-  
-// display reversed contents " a b c" using value_type   
-    for (; !c1.empty(); c1.pop())   
-        {   // store element in value_type object   
-        Mystack::value_type val = c1.top();   
-  
-        System::Console::Write(" {0}", val);   
-        }   
-    System::Console::WriteLine();   
-    return (0);   
-    }   
-```  
-  
-```Output  
-c b a  
-```  
+
+Typ elementu.
+
+### <a name="syntax"></a>Składnia
+
+```cpp
+typedef Value value_type;
+```
+
+### <a name="remarks"></a>Uwagi
+
+Typ jest synonimem dla parametru szablonu *wartość*.
+
+### <a name="example"></a>Przykład
+
+```cpp
+// cliext_stack_value_type.cpp
+// compile with: /clr
+#include <cliext/stack>
+
+typedef cliext::stack<wchar_t> Mystack;
+int main()
+    {
+    Mystack c1;
+    c1.push(L'a');
+    c1.push(L'b');
+    c1.push(L'c');
+
+// display reversed contents " a b c" using value_type
+    for (; !c1.empty(); c1.pop())
+        {   // store element in value_type object
+        Mystack::value_type val = c1.top();
+
+        System::Console::Write("{0} ", val);
+        }
+    System::Console::WriteLine();
+    return (0);
+    }
+```
+
+```Output
+c b a
+```
 
 ## <a name="op_neq"></a> Operator! = (stosu) (STL/CLR)
-Stos nie jest równe porównania.  
-  
-### <a name="syntax"></a>Składnia  
-  
-```cpp  
-template<typename Value,  
-    typename Container>  
-    bool operator!=(stack<Value, Container>% left,  
-        stack<Value, Container>% right);  
-```  
-  
-#### <a name="parameters"></a>Parametry  
- *left*  
- Po lewej stronie kontenera do porównania.  
-  
- *right*  
- Kontener prawo do porównania.  
-  
-### <a name="remarks"></a>Uwagi  
- Funkcja operator zwraca `!(left == right)`. Można go używać do testowania czy *po lewej stronie* nie jest taka sama jak określona *prawo* po dwóch stosów są w porównaniu element po elemencie.  
-  
-### <a name="example"></a>Przykład  
-  
-```cpp  
-// cliext_stack_operator_ne.cpp   
-// compile with: /clr   
-#include <cliext/stack>   
-  
-typedef cliext::stack<wchar_t> Mystack;   
-int main()   
-    {   
-    Mystack c1;   
-    c1.push(L'a');   
-    c1.push(L'b');   
-    c1.push(L'c');   
-  
-// display contents " a b c"   
-    for each (wchar_t elem in c1.get_container())   
-        System::Console::Write(" {0}", elem);   
-    System::Console::WriteLine();   
-  
-// assign to a new container   
-    Mystack c2;   
-    c2.push(L'a');   
-    c2.push(L'b');   
-    c2.push(L'd');   
-  
-// display contents " a b d"   
-    for each (wchar_t elem in c2.get_container())   
-        System::Console::Write(" {0}", elem);   
-    System::Console::WriteLine();   
-  
-    System::Console::WriteLine("[a b c] != [a b c] is {0}",   
-        c1 != c1);   
-    System::Console::WriteLine("[a b c] != [a b d] is {0}",   
-        c1 != c2);   
-    return (0);   
-    }   
-```  
-  
-```Output  
- a b c  
- a b d  
-[a b c] != [a b c] is False  
-[a b c] != [a b d] is True  
-```  
+
+Stos nie jest równe porównania.
+
+### <a name="syntax"></a>Składnia
+
+```cpp
+template<typename Value,
+    typename Container>
+    bool operator!=(stack<Value, Container>% left,
+        stack<Value, Container>% right);
+```
+
+#### <a name="parameters"></a>Parametry
+
+*left*<br/>
+Po lewej stronie kontenera do porównania.
+
+*right*<br/>
+Kontener prawo do porównania.
+
+### <a name="remarks"></a>Uwagi
+
+Funkcja operator zwraca `!(left == right)`. Można go używać do testowania czy *po lewej stronie* nie jest taka sama jak określona *prawo* po dwóch stosów są w porównaniu element po elemencie.
+
+### <a name="example"></a>Przykład
+
+```cpp
+// cliext_stack_operator_ne.cpp
+// compile with: /clr
+#include <cliext/stack>
+
+typedef cliext::stack<wchar_t> Mystack;
+int main()
+    {
+    Mystack c1;
+    c1.push(L'a');
+    c1.push(L'b');
+    c1.push(L'c');
+
+// display contents " a b c"
+    for each (wchar_t elem in c1.get_container())
+        System::Console::Write("{0} ", elem);
+    System::Console::WriteLine();
+
+// assign to a new container
+    Mystack c2;
+    c2.push(L'a');
+    c2.push(L'b');
+    c2.push(L'd');
+
+// display contents " a b d"
+    for each (wchar_t elem in c2.get_container())
+        System::Console::Write("{0} ", elem);
+    System::Console::WriteLine();
+
+    System::Console::WriteLine("[a b c] != [a b c] is {0}",
+        c1 != c1);
+    System::Console::WriteLine("[a b c] != [a b d] is {0}",
+        c1 != c2);
+    return (0);
+    }
+```
+
+```Output
+a b c
+a b d
+[a b c] != [a b c] is False
+[a b c] != [a b d] is True
+```
 
 ## <a name="op_lt"></a> operator&lt; (stosu) (STL/CLR)
-Stos mniejsza niż porównania.  
-  
-### <a name="syntax"></a>Składnia  
-  
-```cpp  
-template<typename Value,  
-    typename Container>  
-    bool operator<(stack<Value, Container>% left,  
-        stack<Value, Container>% right);  
-```  
-  
-#### <a name="parameters"></a>Parametry  
- *left*  
- Po lewej stronie kontenera do porównania.  
-  
- *right*  
- Kontener prawo do porównania.  
-  
-### <a name="remarks"></a>Uwagi  
- Operator funkcja zwraca wartość true, jeśli, na najniższą pozycję `i` dla którego `!(right[i] < left[i])` jest również wartość true, który `left[i] < right[i]`. W przeciwnym razie zwraca `left->` [stack::size (STL/CLR)](../dotnet/stack-size-stl-clr.md) `() <` `right->size()` używanej do testowania czy *po lewej stronie* był zamówiony przed *prawo* po dwóch stosów są w porównaniu element po elemencie.  
-  
-### <a name="example"></a>Przykład  
-  
-```cpp  
-// cliext_stack_operator_lt.cpp   
-// compile with: /clr   
-#include <cliext/stack>   
-  
-typedef cliext::stack<wchar_t> Mystack;   
-int main()   
-    {   
-    Mystack c1;   
-    c1.push(L'a');   
-    c1.push(L'b');   
-    c1.push(L'c');   
-  
-// display contents " a b c"   
-    for each (wchar_t elem in c1.get_container())   
-        System::Console::Write(" {0}", elem);   
-    System::Console::WriteLine();   
-  
-// assign to a new container   
-    Mystack c2;   
-    c2.push(L'a');   
-    c2.push(L'b');   
-    c2.push(L'd');   
-  
-// display contents " a b d"   
-    for each (wchar_t elem in c2.get_container())   
-        System::Console::Write(" {0}", elem);   
-    System::Console::WriteLine();   
-  
-    System::Console::WriteLine("[a b c] < [a b c] is {0}",   
-        c1 < c1);   
-    System::Console::WriteLine("[a b c] < [a b d] is {0}",   
-        c1 < c2);   
-    return (0);   
-    }   
-```  
-  
-```Output  
- a b c  
- a b d  
-[a b c] < [a b c] is False  
-[a b c] < [a b d] is True  
-```  
+
+Stos mniejsza niż porównania.
+
+### <a name="syntax"></a>Składnia
+
+```cpp
+template<typename Value,
+    typename Container>
+    bool operator<(stack<Value, Container>% left,
+        stack<Value, Container>% right);
+```
+
+#### <a name="parameters"></a>Parametry
+
+*left*<br/>
+Po lewej stronie kontenera do porównania.
+
+*right*<br/>
+Kontener prawo do porównania.
+
+### <a name="remarks"></a>Uwagi
+
+Operator funkcja zwraca wartość true, jeśli, na najniższą pozycję `i` dla którego `!(right[i] < left[i])` jest również wartość true, który `left[i] < right[i]`. W przeciwnym razie zwraca `left->` [stack::size (STL/CLR)](../dotnet/stack-size-stl-clr.md) `() <` `right->size()` używanej do testowania czy *po lewej stronie* był zamówiony przed *prawo* po dwóch stosów są w porównaniu element po elemencie.
+
+### <a name="example"></a>Przykład
+
+```cpp
+// cliext_stack_operator_lt.cpp
+// compile with: /clr
+#include <cliext/stack>
+
+typedef cliext::stack<wchar_t> Mystack;
+int main()
+    {
+    Mystack c1;
+    c1.push(L'a');
+    c1.push(L'b');
+    c1.push(L'c');
+
+// display contents " a b c"
+    for each (wchar_t elem in c1.get_container())
+        System::Console::Write("{0} ", elem);
+    System::Console::WriteLine();
+
+// assign to a new container
+    Mystack c2;
+    c2.push(L'a');
+    c2.push(L'b');
+    c2.push(L'd');
+
+// display contents " a b d"
+    for each (wchar_t elem in c2.get_container())
+        System::Console::Write("{0} ", elem);
+    System::Console::WriteLine();
+
+    System::Console::WriteLine("[a b c] < [a b c] is {0}",
+        c1 < c1);
+    System::Console::WriteLine("[a b c] < [a b d] is {0}",
+        c1 < c2);
+    return (0);
+    }
+```
+
+```Output
+a b c
+a b d
+[a b c] < [a b c] is False
+[a b c] < [a b d] is True
+```
 
 ## <a name="op_lteq"></a> operator&lt;= (stosu) (STL/CLR)
-Mniejsze niż lub równe stosu porównania.  
-  
-### <a name="syntax"></a>Składnia  
-  
-```cpp  
-template<typename Value,  
-    typename Container>  
-    bool operator<=(stack<Value, Container>% left,  
-        stack<Value, Container>% right);  
-```  
-  
-#### <a name="parameters"></a>Parametry  
- *left*  
- Po lewej stronie kontenera do porównania.  
-  
- *right*  
- Kontener prawo do porównania.  
-  
-### <a name="remarks"></a>Uwagi  
- Funkcja operator zwraca `!(right < left)`. Można go używać do testowania czy *po lewej stronie* nie są porządkowane po *prawo* po dwóch stosów są w porównaniu element po elemencie.  
-  
-### <a name="example"></a>Przykład  
-  
-```cpp  
-// cliext_stack_operator_le.cpp   
-// compile with: /clr   
-#include <cliext/stack>   
-  
-typedef cliext::stack<wchar_t> Mystack;   
-int main()   
-    {   
-    Mystack c1;   
-    c1.push(L'a');   
-    c1.push(L'b');   
-    c1.push(L'c');   
-  
-// display contents " a b c"   
-    for each (wchar_t elem in c1.get_container())   
-        System::Console::Write(" {0}", elem);   
-    System::Console::WriteLine();   
-  
-// assign to a new container   
-    Mystack c2;   
-    c2.push(L'a');   
-    c2.push(L'b');   
-    c2.push(L'd');   
-  
-// display contents " a b d"   
-    for each (wchar_t elem in c2.get_container())   
-        System::Console::Write(" {0}", elem);   
-    System::Console::WriteLine();   
-  
-    System::Console::WriteLine("[a b c] <= [a b c] is {0}",   
-        c1 <= c1);   
-    System::Console::WriteLine("[a b d] <= [a b c] is {0}",   
-        c2 <= c1);   
-    return (0);   
-    }   
-```  
-  
-```Output  
- a b c  
- a b d  
-[a b c] <= [a b c] is True  
-[a b d] <= [a b c] is False  
-```  
+
+Mniejsze niż lub równe stosu porównania.
+
+### <a name="syntax"></a>Składnia
+
+```cpp
+template<typename Value,
+    typename Container>
+    bool operator<=(stack<Value, Container>% left,
+        stack<Value, Container>% right);
+```
+
+#### <a name="parameters"></a>Parametry
+
+*left*<br/>
+Po lewej stronie kontenera do porównania.
+
+*right*<br/>
+Kontener prawo do porównania.
+
+### <a name="remarks"></a>Uwagi
+
+Funkcja operator zwraca `!(right < left)`. Można go używać do testowania czy *po lewej stronie* nie są porządkowane po *prawo* po dwóch stosów są w porównaniu element po elemencie.
+
+### <a name="example"></a>Przykład
+
+```cpp
+// cliext_stack_operator_le.cpp
+// compile with: /clr
+#include <cliext/stack>
+
+typedef cliext::stack<wchar_t> Mystack;
+int main()
+    {
+    Mystack c1;
+    c1.push(L'a');
+    c1.push(L'b');
+    c1.push(L'c');
+
+// display contents " a b c"
+    for each (wchar_t elem in c1.get_container())
+        System::Console::Write("{0} ", elem);
+    System::Console::WriteLine();
+
+// assign to a new container
+    Mystack c2;
+    c2.push(L'a');
+    c2.push(L'b');
+    c2.push(L'd');
+
+// display contents " a b d"
+    for each (wchar_t elem in c2.get_container())
+        System::Console::Write("{0} ", elem);
+    System::Console::WriteLine();
+
+    System::Console::WriteLine("[a b c] <= [a b c] is {0}",
+        c1 <= c1);
+    System::Console::WriteLine("[a b d] <= [a b c] is {0}",
+        c2 <= c1);
+    return (0);
+    }
+```
+
+```Output
+a b c
+a b d
+[a b c] <= [a b c] is True
+[a b d] <= [a b c] is False
+```
 
 ## <a name="op_eq"></a> Operator == (stosu) (STL/CLR)
-Porównanie równego stosu.  
-  
-### <a name="syntax"></a>Składnia  
-  
-```cpp  
-template<typename Value,  
-    typename Container>  
-    bool operator==(stack<Value, Container>% left,  
-        stack<Value, Container>% right);  
-```  
-  
-#### <a name="parameters"></a>Parametry  
- *left*  
- Po lewej stronie kontenera do porównania.  
-  
- *right*  
- Kontener prawo do porównania.  
-  
-### <a name="remarks"></a>Uwagi  
- Funkcja operator zwraca wartość true, tylko wtedy, gdy sekwencje kontrolowane przez *po lewej stronie* i *prawo* tę samą długość, a dla każdej pozycji `i`, `left[i] ==` `right[i]`. Można go używać do testowania czy *po lewej stronie* jest taka sama jak określona *prawo* po dwóch stosów są w porównaniu element po elemencie.  
-  
-### <a name="example"></a>Przykład  
-  
-```cpp  
-// cliext_stack_operator_eq.cpp   
-// compile with: /clr   
-#include <cliext/stack>   
-  
-typedef cliext::stack<wchar_t> Mystack;   
-int main()   
-    {   
-    Mystack c1;   
-    c1.push(L'a');   
-    c1.push(L'b');   
-    c1.push(L'c');   
-  
-// display contents " a b c"   
-    for each (wchar_t elem in c1.get_container())   
-        System::Console::Write(" {0}", elem);   
-    System::Console::WriteLine();   
-  
-// assign to a new container   
-    Mystack c2;   
-    c2.push(L'a');   
-    c2.push(L'b');   
-    c2.push(L'd');   
-  
-// display contents " a b d"   
-    for each (wchar_t elem in c2.get_container())   
-        System::Console::Write(" {0}", elem);   
-    System::Console::WriteLine();   
-  
-    System::Console::WriteLine("[a b c] == [a b c] is {0}",   
-        c1 == c1);   
-    System::Console::WriteLine("[a b c] == [a b d] is {0}",   
-        c1 == c2);   
-    return (0);   
-    }   
-```  
-  
-```Output  
- a b c  
- a b d  
-[a b c] == [a b c] is True  
-[a b c] == [a b d] is False  
-```  
-  
+
+Porównanie równego stosu.
+
+### <a name="syntax"></a>Składnia
+
+```cpp
+template<typename Value,
+    typename Container>
+    bool operator==(stack<Value, Container>% left,
+        stack<Value, Container>% right);
+```
+
+#### <a name="parameters"></a>Parametry
+
+*left*<br/>
+Po lewej stronie kontenera do porównania.
+
+*right*<br/>
+Kontener prawo do porównania.
+
+### <a name="remarks"></a>Uwagi
+
+Funkcja operator zwraca wartość true, tylko wtedy, gdy sekwencje kontrolowane przez *po lewej stronie* i *prawo* tę samą długość, a dla każdej pozycji `i`, `left[i] ==` `right[i]`. Można go używać do testowania czy *po lewej stronie* jest taka sama jak określona *prawo* po dwóch stosów są w porównaniu element po elemencie.
+
+### <a name="example"></a>Przykład
+
+```cpp
+// cliext_stack_operator_eq.cpp
+// compile with: /clr
+#include <cliext/stack>
+
+typedef cliext::stack<wchar_t> Mystack;
+int main()
+    {
+    Mystack c1;
+    c1.push(L'a');
+    c1.push(L'b');
+    c1.push(L'c');
+
+// display contents " a b c"
+    for each (wchar_t elem in c1.get_container())
+        System::Console::Write("{0} ", elem);
+    System::Console::WriteLine();
+
+// assign to a new container
+    Mystack c2;
+    c2.push(L'a');
+    c2.push(L'b');
+    c2.push(L'd');
+
+// display contents " a b d"
+    for each (wchar_t elem in c2.get_container())
+        System::Console::Write("{0} ", elem);
+    System::Console::WriteLine();
+
+    System::Console::WriteLine("[a b c] == [a b c] is {0}",
+        c1 == c1);
+    System::Console::WriteLine("[a b c] == [a b d] is {0}",
+        c1 == c2);
+    return (0);
+    }
+```
+
+```Output
+a b c
+a b d
+[a b c] == [a b c] is True
+[a b c] == [a b d] is False
+```
+
 ## <a name="op_gt"></a> operator&gt; (stosu) (STL/CLR)
-Stos jest większa niż porównania.  
-  
-### <a name="syntax"></a>Składnia  
-  
-```cpp  
-template<typename Value,  
-    typename Container>  
-    bool operator>(stack<Value, Container>% left,  
-        stack<Value, Container>% right);  
-```  
-  
-#### <a name="parameters"></a>Parametry  
- *left*  
- Po lewej stronie kontenera do porównania.  
-  
- *right*  
- Kontener prawo do porównania.  
-  
-### <a name="remarks"></a>Uwagi  
- Funkcja operator zwraca `right` `<` `left`. Można go używać do testowania czy *po lewej stronie* są porządkowane po *prawo* po dwóch stosów są w porównaniu element po elemencie.  
-  
-### <a name="example"></a>Przykład  
-  
-```cpp  
-// cliext_stack_operator_gt.cpp   
-// compile with: /clr   
-#include <cliext/stack>   
-  
-typedef cliext::stack<wchar_t> Mystack;   
-int main()   
-    {   
-    Mystack c1;   
-    c1.push(L'a');   
-    c1.push(L'b');   
-    c1.push(L'c');   
-  
-// display contents " a b c"   
-    for each (wchar_t elem in c1.get_container())   
-        System::Console::Write(" {0}", elem);   
-    System::Console::WriteLine();   
-  
-// assign to a new container   
-    Mystack c2;   
-    c2.push(L'a');   
-    c2.push(L'b');   
-    c2.push(L'd');   
-  
-// display contents " a b d"   
-    for each (wchar_t elem in c2.get_container())   
-        System::Console::Write(" {0}", elem);   
-    System::Console::WriteLine();   
-  
-    System::Console::WriteLine("[a b c] > [a b c] is {0}",   
-        c1 > c1);   
-    System::Console::WriteLine("[a b d] > [a b c] is {0}",   
-        c2 > c1);   
-    return (0);   
-    }   
-```  
-  
-```Output  
- a b c  
- a b d  
-[a b c] > [a b c] is False  
-[a b d] > [a b c] is True  
-```  
-  
+
+Stos jest większa niż porównania.
+
+### <a name="syntax"></a>Składnia
+
+```cpp
+template<typename Value,
+    typename Container>
+    bool operator>(stack<Value, Container>% left,
+        stack<Value, Container>% right);
+```
+
+#### <a name="parameters"></a>Parametry
+
+*left*<br/>
+Po lewej stronie kontenera do porównania.
+
+*right*<br/>
+Kontener prawo do porównania.
+
+### <a name="remarks"></a>Uwagi
+
+Funkcja operator zwraca `right` `<` `left`. Można go używać do testowania czy *po lewej stronie* są porządkowane po *prawo* po dwóch stosów są w porównaniu element po elemencie.
+
+### <a name="example"></a>Przykład
+
+```cpp
+// cliext_stack_operator_gt.cpp
+// compile with: /clr
+#include <cliext/stack>
+
+typedef cliext::stack<wchar_t> Mystack;
+int main()
+    {
+    Mystack c1;
+    c1.push(L'a');
+    c1.push(L'b');
+    c1.push(L'c');
+
+// display contents " a b c"
+    for each (wchar_t elem in c1.get_container())
+        System::Console::Write("{0} ", elem);
+    System::Console::WriteLine();
+
+// assign to a new container
+    Mystack c2;
+    c2.push(L'a');
+    c2.push(L'b');
+    c2.push(L'd');
+
+// display contents " a b d"
+    for each (wchar_t elem in c2.get_container())
+        System::Console::Write("{0} ", elem);
+    System::Console::WriteLine();
+
+    System::Console::WriteLine("[a b c] > [a b c] is {0}",
+        c1 > c1);
+    System::Console::WriteLine("[a b d] > [a b c] is {0}",
+        c2 > c1);
+    return (0);
+    }
+```
+
+```Output
+a b c
+a b d
+[a b c] > [a b c] is False
+[a b d] > [a b c] is True
+```
+
 ## <a name="op_gteq"></a> operator&gt;= (stosu) (STL/CLR)
-Stos jest większa niż lub równe porównania.  
-  
-### <a name="syntax"></a>Składnia  
-  
-```cpp  
-template<typename Value,  
-    typename Container>  
-    bool operator>=(stack<Value, Container>% left,  
-        stack<Value, Container>% right);  
-```  
-  
-#### <a name="parameters"></a>Parametry  
- *left*  
- Po lewej stronie kontenera do porównania.  
-  
- *right*  
- Kontener prawo do porównania.  
-  
-### <a name="remarks"></a>Uwagi  
- Funkcja operator zwraca `!(left < right)`. Można go używać do testowania czy *po lewej stronie* nie był zamówiony przed *prawo* po dwóch stosów są w porównaniu element po elemencie.  
-  
-### <a name="example"></a>Przykład  
-  
-```cpp  
-// cliext_stack_operator_ge.cpp   
-// compile with: /clr   
-#include <cliext/stack>   
-  
-typedef cliext::stack<wchar_t> Mystack;   
-int main()   
-    {   
-    Mystack c1;   
-    c1.push(L'a');   
-    c1.push(L'b');   
-    c1.push(L'c');   
-  
-// display contents " a b c"   
-    for each (wchar_t elem in c1.get_container())   
-        System::Console::Write(" {0}", elem);   
-    System::Console::WriteLine();   
-  
-// assign to a new container   
-    Mystack c2;   
-    c2.push(L'a');   
-    c2.push(L'b');   
-    c2.push(L'd');   
-  
-// display contents " a b d"   
-    for each (wchar_t elem in c2.get_container())   
-        System::Console::Write(" {0}", elem);   
-    System::Console::WriteLine();   
-  
-    System::Console::WriteLine("[a b c] >= [a b c] is {0}",   
-        c1 >= c1);   
-    System::Console::WriteLine("[a b c] >= [a b d] is {0}",   
-        c1 >= c2);   
-    return (0);   
-    }  
-```  
-  
-```Output  
- a b c  
- a b d  
-[a b c] >= [a b c] is True  
-[a b c] >= [a b d] is False  
-``` 
+
+Stos jest większa niż lub równe porównania.
+
+### <a name="syntax"></a>Składnia
+
+```cpp
+template<typename Value,
+    typename Container>
+    bool operator>=(stack<Value, Container>% left,
+        stack<Value, Container>% right);
+```
+
+#### <a name="parameters"></a>Parametry
+
+*left*<br/>
+Po lewej stronie kontenera do porównania.
+
+*right*<br/>
+Kontener prawo do porównania.
+
+### <a name="remarks"></a>Uwagi
+
+Funkcja operator zwraca `!(left < right)`. Można go używać do testowania czy *po lewej stronie* nie był zamówiony przed *prawo* po dwóch stosów są w porównaniu element po elemencie.
+
+### <a name="example"></a>Przykład
+
+```cpp
+// cliext_stack_operator_ge.cpp
+// compile with: /clr
+#include <cliext/stack>
+
+typedef cliext::stack<wchar_t> Mystack;
+int main()
+    {
+    Mystack c1;
+    c1.push(L'a');
+    c1.push(L'b');
+    c1.push(L'c');
+
+// display contents " a b c"
+    for each (wchar_t elem in c1.get_container())
+        System::Console::Write("{0} ", elem);
+    System::Console::WriteLine();
+
+// assign to a new container
+    Mystack c2;
+    c2.push(L'a');
+    c2.push(L'b');
+    c2.push(L'd');
+
+// display contents " a b d"
+    for each (wchar_t elem in c2.get_container())
+        System::Console::Write("{0} ", elem);
+    System::Console::WriteLine();
+
+    System::Console::WriteLine("[a b c] >= [a b c] is {0}",
+        c1 >= c1);
+    System::Console::WriteLine("[a b c] >= [a b d] is {0}",
+        c1 >= c2);
+    return (0);
+    }
+```
+
+```Output
+a b c
+a b d
+[a b c] >= [a b c] is True
+[a b c] >= [a b d] is False
+```

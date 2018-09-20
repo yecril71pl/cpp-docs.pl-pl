@@ -16,23 +16,25 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 096c61a62ea382639356eca81483c9aacfe04b2d
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: fc03427847a64330d1ff2814d268997f63fac6bd
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33385875"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46382547"
 ---
 # <a name="tab-controls-and-property-sheets"></a>Formanty karty i arkusze właściwości
-Arkusze właściwości są wielu stron okien dialogowych lub "karta oknach dialogowych", aby wyświetlać maksymalnie 24 zasoby szablonu okna dialogowego do użytkownika. Przykłady arkuszy właściwości można znaleźć w oknie dialogowym właściwości wyświetlania systemu Windows lub poniższej przykładowej aplikacji MFC:  
-  
- [CMNCTRL1: Klasy formantów wspólnych, część 1 przedstawiono](../visual-cpp-samples.md)  
-  
- [CMNCTRL2: Przedstawiono typowe klasy formantów, część 2](../visual-cpp-samples.md)  
-  
- Arkusze właściwości można łatwo zaimplementować, za pomocą klasy MFC [cpropertysheet —](../mfc/reference/cpropertysheet-class.md).  
-  
-## <a name="see-also"></a>Zobacz też  
- [Korzystanie z CTabCtrl](../mfc/using-ctabctrl.md)   
- [Kontrolki](../mfc/controls-mfc.md)
+
+Arkusze właściwości są okien dialogowych wielu stron lub "kartę wyświetlanymi w oknach dialogowych", które mogą wyświetlać maksymalnie 24 zasobów szablonu okna dialogowego do użytkownika. Aby zapoznać się z przykładami arkuszy właściwości Zobacz okno dialogowe właściwości wyświetlania Windows lub następującej aplikacji MFC w przykładowej:
+
+[CMNCTRL1: Przedstawia typowe klasy kontrolek, część 1](../visual-cpp-samples.md)
+
+[CMNCTRL2: Przedstawia typowe klasy kontrolek, część 2](../visual-cpp-samples.md)
+
+Arkusze właściwości można łatwo wdrożyć przy użyciu klas MFC [CPropertySheet](../mfc/reference/cpropertysheet-class.md).
+
+## <a name="see-also"></a>Zobacz też
+
+[Korzystanie z CTabCtrl](../mfc/using-ctabctrl.md)<br/>
+[Kontrolki](../mfc/controls-mfc.md)
 

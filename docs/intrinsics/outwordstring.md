@@ -18,50 +18,54 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3c49f76175ced83fb9a9b7e72e1c1fc7dbb68e20
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: d148f6b2b6078693e5e05c02310c3e52e710b3e7
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45720671"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46392700"
 ---
 # <a name="outwordstring"></a>__outwordstring
-**Microsoft Specific**  
-  
- Generuje `rep outsw` instrukcji, która wysyła `Count` słów, zaczynając od `Buffer` z portu We/Wy, określony przez `Port`.  
-  
-## <a name="syntax"></a>Składnia  
-  
-```  
-void __outwordstring(   
-   unsigned short Port,   
-   unsigned short* Buffer,   
-   unsigned long Count   
-);  
-```  
-  
-#### <a name="parameters"></a>Parametry  
+
+**Microsoft Specific**
+
+Generuje `rep outsw` instrukcji, która wysyła `Count` słów, zaczynając od `Buffer` z portu We/Wy, określony przez `Port`.
+
+## <a name="syntax"></a>Składnia
+
+```
+void __outwordstring( 
+   unsigned short Port, 
+   unsigned short* Buffer, 
+   unsigned long Count 
+);
+```
+
+#### <a name="parameters"></a>Parametry
+
 *Port*<br/>
-[in] Port do wysyłania danych do.  
-  
+[in] Port do wysyłania danych do.
+
 *Bufor*<br/>
-[in] Wskaźnik do danych, które zostaną wysłane do określonego portu.  
-  
+[in] Wskaźnik do danych, które zostaną wysłane do określonego portu.
+
 *Liczba*<br/>
-[in] Liczbę wyrazów do wysłania.  
-  
-## <a name="requirements"></a>Wymagania  
-  
-|Wewnętrzne|Architektura|  
-|---------------|------------------|  
-|`__outwordstring`|x86, x64|  
-  
- **Plik nagłówkowy** \<intrin.h >  
-  
-## <a name="remarks"></a>Uwagi  
- Ta procedura jest dostępna wyłącznie jako wewnętrzna.  
-  
-**END specyficzny dla Microsoft**  
-  
-## <a name="see-also"></a>Zobacz też  
- [Funkcje wewnętrzne kompilatora](../intrinsics/compiler-intrinsics.md)
+[in] Liczbę wyrazów do wysłania.
+
+## <a name="requirements"></a>Wymagania
+
+|Wewnętrzne|Architektura|
+|---------------|------------------|
+|`__outwordstring`|x86, x64|
+
+**Plik nagłówkowy** \<intrin.h >
+
+## <a name="remarks"></a>Uwagi
+
+Ta procedura jest dostępna wyłącznie jako wewnętrzna.
+
+**END specyficzny dla Microsoft**
+
+## <a name="see-also"></a>Zobacz też
+
+[Funkcje wewnętrzne kompilatora](../intrinsics/compiler-intrinsics.md)

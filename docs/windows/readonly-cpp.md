@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 93a7adbca8c659a757e0e8fbb05b8fb926b237d2
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: ba2edf438e305be772894cdf3a03116f7218848c
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43210313"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46394689"
 ---
 # <a name="readonly-c"></a>readonly (C++)
 
@@ -73,5 +73,5 @@ Aby uzyskać więcej informacji na temat konteksty atrybutu zobacz [konteksty at
 
 ## <a name="see-also"></a>Zobacz też
 
-[Atrybuty IDL](../windows/idl-attributes.md)  
+[Atrybuty IDL](../windows/idl-attributes.md)<br/>
 [Atrybuty składowych danych](../windows/data-member-attributes.md)  

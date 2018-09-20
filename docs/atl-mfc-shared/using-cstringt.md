@@ -14,12 +14,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ca78687f79cdbf1d8bdb60c1a877c489498624ee
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 5f11590a78cb691f4812e7b503350fb72a4bdc95
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43766194"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46390737"
 ---
 # <a name="using-cstringt"></a>Użycie CStringT
 
@@ -27,10 +27,10 @@ W tematach w tej sekcji opisano Programowanie przy użyciu klasy szablonu [CStri
 
 ## <a name="in-this-section"></a>W tej sekcji
 
-[Zarządzanie pamięcią za pomocą CStringT](../atl-mfc-shared/memory-management-with-cstringt.md)  
+[Zarządzanie pamięcią za pomocą CStringT](../atl-mfc-shared/memory-management-with-cstringt.md)<br/>
 W tym artykule omówiono zarządzanie pamięcią za pomocą `CStringT`, klasą szablonu, używane do manipulowania ciągami znaków o zmiennej długości.
 
-[Eksportowanie klas ciągów przy użyciu CStringT](../atl-mfc-shared/exporting-string-classes-using-cstringt.md)  
+[Eksportowanie klas ciągów przy użyciu CStringT](../atl-mfc-shared/exporting-string-classes-using-cstringt.md)<br/>
 Wyjaśnia, jak można wyeksportować klasy ciągu z biblioteki DLL za pomocą CStringT <> szablonu klasy.
 
 ## <a name="reference"></a>Tematy pomocy

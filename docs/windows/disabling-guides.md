@@ -18,12 +18,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 1e3ae2e982ce04743644f9c94d9c163478c0b67e
-ms.sourcegitcommit: f0c90000125a9497bf61e41624de189a043703c0
+ms.openlocfilehash: 35c552a6bb384f87c358ba25a945a7f02cc30114
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44313120"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46380805"
 ---
 # <a name="disabling-guides"></a>Wyłączanie prowadnic
 
@@ -58,5 +58,5 @@ Win32
 
 ## <a name="see-also"></a>Zobacz też
 
-[Stany dla Edytora okien dialogowych (prowadnice i siatki)](../windows/dialog-editor-states-guides-and-grids.md)  
+[Stany dla Edytora okien dialogowych (prowadnice i siatki)](../windows/dialog-editor-states-guides-and-grids.md)<br/>
 [Kontrolki w oknach dialogowych](../windows/controls-in-dialog-boxes.md)

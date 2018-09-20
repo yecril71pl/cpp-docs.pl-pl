@@ -15,12 +15,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: bb9d7b950e4c38ea53db6e459edfa1a179eb971d
-ms.sourcegitcommit: e9ce38decc9f986edab5543de3464b11ebccb123
+ms.openlocfilehash: 62404de4012bcd49888da527ae93ed1b2137a48a
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/13/2018
-ms.locfileid: "42465039"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46374148"
 ---
 # <a name="use-native-multi-targeting-in-visual-studio-to-build-old-projects"></a>Użyj natywnej wielowersyjności kodu w programie Visual Studio do kompilacji starych projektów
 
@@ -70,19 +70,11 @@ Po tej zmianie kompilator programu Visual Studio 2008 i biblioteki są używane 
 
 Może być starego projektu Visual C++, który nie może lub nie chcesz uaktualnić, ale nie wersję zestawu narzędzi platformy zgodną z projektu. W takim przypadku można pobrać zestawu narzędzi, można zainstalować bezpłatnego programu Visual Studio Community i Express edition w wersji, których potrzebujesz. Każda wersja programu Visual Studio z programu Visual Studio 2008 na można zainstalować kompilator, narzędzia i biblioteki należy pod kątem tej wersji z bieżącego programu Visual Studio. Wyszukaj Microsoft Download Center, aby znaleźć i pobrać określonej wersji programu Visual Studio. Upewnij się, że wybrane opcje instalacji C++ podczas instalacji. Po zakończeniu instalacji uruchom tej wersji programu Visual Studio i zainstaluj wszystkie aktualizacje. Sprawdź także wszelkie zmiany w aktualizacji Windows, które mogą być wymagane. Ten proces sprawdzania aktualizacji może być konieczne powtórzenie więcej niż jeden raz do każdej zaktualizowania.
 
-Oto niektóre pliki do pobrania programu Visual Studio, który może być konieczne:
-
-  - [Microsoft Visual Studio Community 2015](https://www.microsoft.com/download/details.aspx?id=48146)  
-  - [Microsoft Visual Studio Express 2013 for Windows Desktop z aktualizacją Update 5](https://www.microsoft.com/download/details.aspx?id=48131)  
-  - [Microsoft Visual Studio Express 2012 for Windows Desktop](https://www.microsoft.com/download/details.aspx?id=34673)  
-  - [Visual Studio 2012 Update 5](https://www.microsoft.com/download/details.aspx?id=34673)  
-  - [Microsoft Visual C++ 2010 Express (Instalator internetowy)](https://download.microsoft.com/download/1/D/9/1D9A6C0E-FC89-43EE-9658-B9F0E3A76983/vc_web.exe)  
-  - [Dodatek Service Pack 1 dla programu Microsoft Visual Studio 2010](https://www.microsoft.com/download/details.aspx?id=23691)  
-  - [Microsoft Visual C++ 2008 Express z dodatkiem SP1 (Instalator sieci Web)](https://go.microsoft.com/?linkid=7729279)  
+Aby uzyskać aktualnie dostępne pliki do pobrania, zobacz [starsze oprogramowania Visual Studio można pobrać](https://visualstudio.microsoft.com/vs/older-downloads/).
 
 Po zainstalowaniu tych produktów **zestawu narzędzi platformy** właściwości listy rozwijanej w **stron właściwości** okno dialogowe jest automatycznie aktualizowana, aby wyświetlić dostępne zestawy narzędzi. Najnowszą wersję programu Visual Studio umożliwia teraz tworzenie projektów w przypadku starszych wersji zestawu narzędzi bez konieczności konwertowania lub jej uaktualnienie.
 
 ## <a name="see-also"></a>Zobacz też
 
-[Uaktualnianie projektów ze starszych wersji programu Visual C++](upgrading-projects-from-earlier-versions-of-visual-cpp.md)  
+[Uaktualnianie projektów ze starszych wersji programu Visual C++](upgrading-projects-from-earlier-versions-of-visual-cpp.md)<br/>
 [Ulepszenia zgodności języka C++ w programie Visual Studio 2017](../cpp-conformance-improvements-2017.md)  

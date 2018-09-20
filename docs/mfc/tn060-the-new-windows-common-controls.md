@@ -1,5 +1,5 @@
 ---
-title: 'TN060: Nowe formanty standardowe systemu Windows | Dokumentacja firmy Microsoft'
+title: 'TN060: Nowe Windows wspólne kontrolki | Dokumentacja firmy Microsoft'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,17 +16,19 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6626f9be05c9c6bd3cb583a27eefcb29eede6871
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 0028d7b2f2121f9463dcb45b13bf34305c39f3d4
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33381481"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46388984"
 ---
 # <a name="tn060-the-new-windows-common-controls"></a>TN060: nowe formanty wspólne systemu Windows
-Techniczne 60 Uwaga, zawierająca opis korzystania z nich oraz nowe formanty wspólne systemu Windows została włączona [formanty](../mfc/controls-mfc.md).  
-  
-## <a name="see-also"></a>Zobacz też  
- [Uwagi techniczne według numerów](../mfc/technical-notes-by-number.md)   
- [Uwagi techniczne według kategorii](../mfc/technical-notes-by-category.md)
+
+Techniczne 60 Uwaga, zawierająca opis ich używać oraz nowe formanty wspólne Windows została włączona [formantów](../mfc/controls-mfc.md).
+
+## <a name="see-also"></a>Zobacz też
+
+[Uwagi techniczne według numerów](../mfc/technical-notes-by-number.md)<br/>
+[Uwagi techniczne według kategorii](../mfc/technical-notes-by-category.md)
 

@@ -16,12 +16,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: bf8cec4505c7b981920ed8af946e668d3d0f16ca
-ms.sourcegitcommit: f0c90000125a9497bf61e41624de189a043703c0
+ms.openlocfilehash: bace548d72829229d40a9b890d686efb132e0e87
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44315720"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46388472"
 ---
 # <a name="moving-a-toolbar-button"></a>Przenoszenie przycisku paska narzędzi
 
@@ -37,5 +37,5 @@ ATL i MFC
 
 ## <a name="see-also"></a>Zobacz też
 
-[Tworzenie, przenoszenie i edytowanie przycisków paska narzędzi](../windows/creating-moving-and-editing-toolbar-buttons.md)  
+[Tworzenie, przenoszenie i edytowanie przycisków paska narzędzi](../windows/creating-moving-and-editing-toolbar-buttons.md)<br/>
 [Edytor paska narzędzi](../windows/toolbar-editor.md)

@@ -1,5 +1,5 @@
 ---
-title: Mapowanie komunikatów systemu Windows na klasę | Dokumentacja firmy Microsoft
+title: Mapowanie komunikatów Windows na klasę | Dokumentacja firmy Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -20,27 +20,29 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 398888a858165197c6e35be791169a9311f3014b
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 3e5c51cfccfa360b7f677ca3a30b7a05e0d4a799
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33346272"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46374467"
 ---
 # <a name="mapping-windows-messages-to-your-class"></a>Mapowanie komunikatów systemu Windows na klasę
-Twoje okno dialogowe do obsługi komunikatów systemu Windows, należy zastąpić funkcje obsługi odpowiednie. Aby to zrobić, użyj okna właściwości do [mapy komunikatów](../mfc/reference/mapping-messages-to-functions.md) do klasy okien dialogowych. Zapisuje wpisu mapy komunikatów dla każdego komunikatu i dodaje funkcje Członkowskie obsługi wiadomości do klasy. Edytor kodu źródłowego języka Visual C++ umożliwia pisanie kodu w programy obsługi wiadomości.  
-  
- Możesz też przesłonić funkcji Członkowskich [cdialog —](../mfc/reference/cdialog-class.md) i jej klas podstawowych, szczególnie [CWnd](../mfc/reference/cwnd-class.md).  
-  
-## <a name="what-do-you-want-to-know-more-about"></a>Co chcesz dowiedzieć się więcej o  
-  
--   [Obsługa i mapowanie komunikatów](../mfc/message-handling-and-mapping.md)  
-  
--   [Powszechnie zastępowane funkcje Członkowskie](../mfc/commonly-overridden-member-functions.md)  
-  
--   [Powszechnie dodawane funkcje Członkowskie](../mfc/commonly-added-member-functions.md)  
-  
-## <a name="see-also"></a>Zobacz też  
- [Okna dialogowe](../mfc/dialog-boxes.md)   
- [Cykl życiowy okna dialogowego](../mfc/life-cycle-of-a-dialog-box.md)
+
+Jeśli potrzebujesz dialogowym może obsługiwać komunikaty Windows, musi zostać zastąpiona funkcje odpowiedni program obsługi. Aby to zrobić, użyj okna właściwości [mapy wiadomości](../mfc/reference/mapping-messages-to-functions.md) do klasy okien dialogowych. Zapisuje wpis mapy komunikatów dla każdego komunikatu i dodaje funkcje Członkowskie obsługi wiadomości do klasy. Edytor kodu źródłowego języka Visual C++ umożliwia pisanie kodu w obsługi komunikatów.
+
+Możesz też przesłonić funkcje elementów członkowskich [CDialog](../mfc/reference/cdialog-class.md) i jej klasy bazowe, szczególnie [CWnd](../mfc/reference/cwnd-class.md).
+
+## <a name="what-do-you-want-to-know-more-about"></a>Co chcesz dowiedzieć się więcej na temat
+
+- [Obsługa i mapowanie komunikatów](../mfc/message-handling-and-mapping.md)
+
+- [Powszechnie zastępowane funkcje Członkowskie](../mfc/commonly-overridden-member-functions.md)
+
+- [Powszechnie dodawane funkcje Członkowskie](../mfc/commonly-added-member-functions.md)
+
+## <a name="see-also"></a>Zobacz też
+
+[Okna dialogowe](../mfc/dialog-boxes.md)<br/>
+[Cykl życiowy okna dialogowego](../mfc/life-cycle-of-a-dialog-box.md)
 

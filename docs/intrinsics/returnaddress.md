@@ -17,60 +17,64 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0431302ae745a1e4a03da4b3fd660fda7d2cfa72
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 5c739590e5e208d9f83fa059f191ae80612a0dbd
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33333173"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46380878"
 ---
 # <a name="returnaddress"></a>_ReturnAddress
-## <a name="microsoft-specific"></a>Specyficzne dla firmy Microsoft  
- `_ReturnAddress` Wewnętrzne dostarcza adres instrukcji w wywołania funkcji, która zostanie wykonana po powrocie sterowania do obiektu wywołującego.  
-  
- Kompilacja następujących programów i wykonywania krokowego w debugerze. Podczas wykonywania kroków przez program, należy pamiętać, adres, który jest zwracany z `_ReturnAddress`. Następnie natychmiast, po powrocie z funkcji gdzie `_ReturnAddress` został użyty, otwórz [porady: Korzystanie z okna dezasemblacji](/visualstudio/debugger/how-to-use-the-disassembly-window) i należy pamiętać, że adres następną instrukcję do wykonania odpowiada adresowi zwrócony z `_ReturnAddress`.  
-  
- Optymalizacje, takich jak ze śródwierszowaniem może mieć wpływ na adres zwrotny. Na przykład poniższy przykładowy program jest skompilowana przy użyciu [/Ob1](../build/reference/ob-inline-function-expansion.md), `inline_func` będzie wbudowana w funkcji wywołującej `main`. W związku z tym wywołań `_ReturnAddress` z `inline_func` i `main` każdego utworzy tę samą wartość.  
-  
- Podczas `_ReturnAddress` jest używany w programie skompilowane z [/CLR](../build/reference/clr-common-language-runtime-compilation.md), zawierający funkcja `_ReturnAddress` wywołanie zostanie skompilowany, ponieważ funkcja macierzystego. Gdy funkcja skompilowana jako zarządzane wywołuje zawierający funkcja `_ReturnAddress`, `_ReturnAddress` może nie działać zgodnie z oczekiwaniami.  
-  
-## <a name="requirements"></a>Wymagania  
- **Plik nagłówka** \<intrin.h >  
-  
-## <a name="example"></a>Przykład  
-  
-```  
-// compiler_intrinsics__ReturnAddress.cpp  
-#include <stdio.h>  
-#include <intrin.h>  
-  
-#pragma intrinsic(_ReturnAddress)  
-  
-__declspec(noinline)  
-void noinline_func(void)  
-{  
-   printf("Return address from %s: %p\n", __FUNCTION__, _ReturnAddress());  
-}  
-  
-__forceinline  
-void inline_func(void)  
-{  
-   printf("Return address from %s: %p\n", __FUNCTION__, _ReturnAddress());  
-}  
-  
-int main(void)  
-{  
-   noinline_func();   
-   inline_func();  
-   printf("Return address from %s: %p\n", __FUNCTION__, _ReturnAddress());  
-  
-   return 0;  
-}  
-```  
-  
-**KOŃCOWY określonych firmy Microsoft**  
-  
-## <a name="see-also"></a>Zobacz też  
- [_AddressOfReturnAddress](../intrinsics/addressofreturnaddress.md)   
- [Funkcje wewnętrzne kompilatora](../intrinsics/compiler-intrinsics.md)   
- [Słowa kluczowe](../cpp/keywords-cpp.md)
+
+## <a name="microsoft-specific"></a>Specyficzne dla firmy Microsoft
+
+`_ReturnAddress` Wewnętrzne udostępnia adres instrukcji w funkcji wywołującej, która zostanie wykonana po sterowanie powraca do obiektu wywołującego.
+
+Twórz następujący program i wykonywania krokowego w debugerze. Podczas wykonywania kroków za pośrednictwem programu, należy pamiętać, adres, który jest zwracany z `_ReturnAddress`. Następnie natychmiast po powrocie z tej funkcji gdzie `_ReturnAddress` była używana, otwórz [porady: Korzystanie z okna dezasemblacji](/visualstudio/debugger/how-to-use-the-disassembly-window) i zwróć uwagę, że adres następnej instrukcji do wykonania odpowiada adres, który został zwrócony z `_ReturnAddress`.
+
+Optymalizacje, takie jak wbudowanie może mieć wpływ na adres zwrotny. Na przykład, jeśli poniższy przykładowy program został skompilowany z [/Ob1](../build/reference/ob-inline-function-expansion.md), `inline_func` jest wbudowana w funkcji wywołującej `main`. W związku z tym, wywołania `_ReturnAddress` z `inline_func` i `main` będzie każde produkuje taką samą wartość.
+
+Gdy `_ReturnAddress` jest używany w programie skompilowany przy użyciu [/CLR](../build/reference/clr-common-language-runtime-compilation.md), zawierający funkcję `_ReturnAddress` wywołanie zostanie skompilowany w macierzystym funkcji. Gdy funkcja skompilowana jako zarządzana wywołania do funkcji zawierający `_ReturnAddress`, `_ReturnAddress` może nie działać zgodnie z oczekiwaniami.
+
+## <a name="requirements"></a>Wymagania
+
+**Plik nagłówkowy** \<intrin.h >
+
+## <a name="example"></a>Przykład
+
+```
+// compiler_intrinsics__ReturnAddress.cpp
+#include <stdio.h>
+#include <intrin.h>
+
+#pragma intrinsic(_ReturnAddress)
+
+__declspec(noinline)
+void noinline_func(void)
+{
+   printf("Return address from %s: %p\n", __FUNCTION__, _ReturnAddress());
+}
+
+__forceinline
+void inline_func(void)
+{
+   printf("Return address from %s: %p\n", __FUNCTION__, _ReturnAddress());
+}
+
+int main(void)
+{
+   noinline_func();
+   inline_func();
+   printf("Return address from %s: %p\n", __FUNCTION__, _ReturnAddress());
+
+   return 0;
+}
+```
+
+**END specyficzny dla Microsoft**
+
+## <a name="see-also"></a>Zobacz też
+
+[_AddressOfReturnAddress](../intrinsics/addressofreturnaddress.md)<br/>
+[Funkcje wewnętrzne kompilatora](../intrinsics/compiler-intrinsics.md)<br/>
+[Słowa kluczowe](../cpp/keywords-cpp.md)

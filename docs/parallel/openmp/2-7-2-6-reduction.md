@@ -12,70 +12,69 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 759a2ee50f047fbd5777481d009332be998ad359
-ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
+ms.openlocfilehash: 05ed97968921692f69f2ff0040ae14dc41ef52b5
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33688807"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46375605"
 ---
 # <a name="2726-reduction"></a>2.7.2.6 — redukcja
 
-Klauzulę wykonuje zmniejszenie na zmienne skalarne, które są widoczne w *zmiennej listy*, z operatorem *op*. Składnia `reduction` klauzuli wygląda następująco:
+Ta klauzula wykonuje zmniejszenie na zmienne skalarne, które pojawiają się w *liście zmiennych*, za pomocą operatora *op*. Składnia `reduction` klauzula jest w następujący sposób:
 
-> redukcja (*op*: *zmiennej listy*)
+> redukcja (*op*: *liście zmiennych*)
 
-Zmniejszenie jest zazwyczaj określana dla instrukcji z jednym z następujących formatów:
+Ograniczenie jest zazwyczaj określana dla instrukcji przy użyciu jednego z następujących form:
 
-> *x* = *x* *op* *wyrażenie*  
-> *x* *binop* = *wyrażenie*  
-> *x* = *wyrażenie* *op* *x* (z wyjątkiem odejmowania)  
-> *x*++  
-> ++*x*  
-> *x*--  
-> --*x*  
+> *x* = *x* *op* *expr*
+> *x* *binop* = *expr*
+> *x* = *expr* *op* *x* (z wyjątkiem odejmowanie) *x*++
+> ++*x*
+> *x*--
+> --*x*
 
 gdzie:
 
-*x*  
-Jeden z zmienne redukcji określone w `list`.
+*x*<br/>
+Jedna ze zmiennych redukcji określone w `list`.
 
-*variable-list*  
-Rozdzielana przecinkami lista zmienne redukcji skalarne.
+*variable-list*<br/>
+Rozdzielana przecinkami lista zmiennych redukcja skalaru.
 
-*expr*  
-Wyrażenie typu skalarne nie odwołuje się *x*.
+*expr*<br/>
+Wyrażenie typowi skalarnemu, który nie odwołuje się *x*.
 
-*OP*  
-Przeciążony operator NOT oprócz jednego +, &#42;, -, &amp;, ^, &#124;, &amp; &amp;, lub &#124; &#124;.
+*OP*<br/>
+Nie przeciążonego operatora, ale jeden z +, &#42;, -, &amp;, ^, &#124;, &amp; &amp;, lub &#124; &#124;.
 
-*binop*  
-Przeciążony operator NOT oprócz jednego +, &#42;, -, &amp;, ^, lub &#124;.
+*binop*<br/>
+Nie przeciążonego operatora, ale jeden z +, &#42;, -, &amp;, ^, lub &#124;.
 
-Poniżej przedstawiono przykład `reduction` klauzuli:  
-  
-```cpp  
-#pragma omp parallel for reduction(+: a, y) reduction(||: am)  
-for (i=0; i<n; i++) {  
-   a += b[i];  
-   y = sum(y, c[i]);  
-   am = am || b[i] == c[i];  
-}  
-```  
-  
-Jak pokazano w przykładzie, operator może być ukryty wewnątrz wywołania funkcji. Użytkownik należy zachować ostrożność, że operator określona w `reduction` klauzuli pasuje operacji zmniejszenia.
+Oto przykład `reduction` klauzuli:
 
-Mimo że prawy argument operacji &#124; &#124; operator nie ma żadnych efektów ubocznych w tym przykładzie, są dozwolone, ale należy z rozwagą. W tym kontekście efektu ubocznego, który nie może wystąpić w trakcie wykonywania sekwencyjnego pętli mogą wystąpić podczas przetwarzania równoległego. Ta różnica może wystąpić, ponieważ kolejność wykonywania iteracji jest nieokreślony.
+```cpp
+#pragma omp parallel for reduction(+: a, y) reduction(||: am)
+for (i=0; i<n; i++) {
+   a += b[i];
+   y = sum(y, c[i]);
+   am = am || b[i] == c[i];
+}
+```
 
-Operator służy do określenia początkowej wartości zmiennych prywatnych używany przez kompilator do zmniejszenia oraz ustalenie operator finalizacji. Jawne określenie operator umożliwia instrukcji redukcji przekraczających zakres leksykalne konstrukcji. Dowolną liczbę `reduction` klauzule można określić w dyrektywie, ale zmienna może występować w co najmniej jeden `reduction` klauzula dla tej dyrektywy.
+Jak pokazano w przykładzie, operator może być ukryta wewnątrz wywołania funkcji. Użytkownik należy zachować ostrożność, że operator określona w `reduction` klauzuli odpowiada operację redukcji.
 
-Prywatnej kopii każdej zmiennej w *zmiennej listy* jest tworzony, po jednej dla każdego wątku tak, jakby `private` klauzuli została użyta. Zainicjowano prywatnej kopii zgodnie z operatora (patrz poniższa tabela).
+Mimo że prawy operand &#124; &#124; operator ma żadnych efektów ubocznych, w tym przykładzie, są dozwolone, ale powinna być stosowana z rozwagą. W tym kontekście efekt uboczny, która może nie wystąpić podczas wykonywania sekwencyjnego pętli mogą wystąpić podczas wykonywania równoległego. Różnica ta może być fakt, że kolejność wykonywania iteracji jest nieokreślony.
 
-Na koniec regionu, dla którego `reduction` określono klauzulę, oryginalny obiekt jest aktualizowany w celu odzwierciedlenia wynikiem połączenia oryginalnej wartości z końcowej każdej kopii prywatnej przy użyciu operatora określony. Operatory redukcji są wszystkie asocjacyjne (z wyjątkiem odejmowania), a kompilator za darmo ponownie skojarzyć obliczenia wartości końcowej. (Wyniki częściowe zmniejszenie odejmowania są dodawane do formularza końcowej).
+Operator jest używany do określenia początkowej wartości żadnych zmiennych prywatnego używany przez kompilator do zmniejszenia oraz określeniem operator finalizacji jest zakończona. Jawne określenie operator umożliwia instrukcji redukcji przekraczających zakres leksykalne konstrukcja. Dowolną liczbę `reduction` klauzule mogą być określone dla dyrektywy, ale zmiennej może występować w co najwyżej jeden `reduction` klauzula dla tej dyrektywy.
 
-Wartość obiektu oryginalnego stają się nieokreślony po pierwszym wątkiem osiągnie klauzuli zawierającego i pozostaje, aż do zakończenia obliczenia zmniejszenie.  Zwykle obliczenia zostanie wykonana na końcu konstrukcji; Jednak jeśli `reduction` na konstrukcję, do której jest używana klauzula `nowait` jest również stosowane wartość obiektu oryginalnego pozostaje nieokreślony dopóki nie przeprowadzono synchronizacji bariery, aby upewnić się, że wszystkie wątki zostały ukończone `reduction`klauzuli.
+Prywatną kopię każdej zmiennej w *liście zmiennych* zostanie utworzony, jeden dla każdego wątku, tak jakby `private` została użyta klauzula. Zainicjowano prywatnej kopii zgodnie z operatora (patrz poniższa tabela).
 
-W poniższej tabeli wymieniono operatory, które są prawidłowe i ich wartości inicjowania kanoniczny. Wartość rzeczywistego inicjowania będzie zgodny z typem danych zmiennej redukcji.
+Na koniec region, dla którego `reduction` określono klauzulę, oryginalny obiekt jest aktualizowany w celu odzwierciedlenia wynikiem połączenia oryginalnej wartości z końcowa wartość każdego prywatne kopie za pomocą operatora określono. Operatory redukcji są wszystkie asocjacyjnych (z wyjątkiem odejmowania), a kompilator swobodnie ponownie skojarzyć obliczenie wartości końcowej. (Wyniki częściowe redukcji odejmowania są dodawane do utworzenia końcowej).
+
+Wartość obiektu oryginalnego staje się nieokreślony, gdy pierwszy wątek osiągnie zawierających klauzulę i pozostaje, więc przed zakończeniem obliczania redukcji.  Zwykle obliczeń zostanie wykonana na końcu konstrukcji; Jednak jeśli `reduction` na konstrukcję, do której jest używana klauzula `nowait` jest również stosowane wartości oryginalnego obiektu pozostanie nieokreślone do czasu, aby upewnić się, że wszystkie wątki zostały ukończone zostaławykonanasynchronizacjabarierę`reduction`klauzuli.
+
+W poniższej tabeli wymieniono operatory, które są prawidłowe i ich wartości canonical inicjowania. Wartość rzeczywista inicjalizacji będzie zgodny z typem danych zmiennej redukcji.
 
 |Operator|Inicjalizacja|
 |--------------|--------------------|
@@ -90,11 +89,11 @@ W poniższej tabeli wymieniono operatory, które są prawidłowe i ich wartości
 
 Ograniczenia do `reduction` klauzuli są następujące:
 
-- Typ zmiennych w `reduction` klauzuli musi być prawidłowy dla operatorem redukcji z tą różnicą, że typy wskaźników i typy referencyjne nigdy nie są dozwolone.
+- Typ zmiennych w `reduction` klauzula musi mieć prawidłowy dla operatorem redukcji, z tą różnicą, że nigdy nie są dozwolone typy wskaźników i odwołań.
 
 - Zmienna, która została określona w `reduction` klauzuli nie może być **const**-kwalifikowaną.
 
-- Zmienne, które są prywatne w ramach równoległego regionu lub które są widoczne w `reduction` klauzuli **równoległych** dyrektywy nie można określić w `reduction` klauzuli w dyrektywie podziału pracy, która jest powiązana z konstrukcji równoległych.
+- Zmienne, które są prywatne w ramach równoległego regionu lub które są widoczne w `reduction` klauzuli **równoległe** dyrektywy nie można określić w `reduction` klauzuli w dyrektywie podziału pracy, która jest powiązywana z konstrukcja równoległa.
 
    ```cpp
    #pragma omp parallel private(y)
@@ -104,7 +103,7 @@ Ograniczenia do `reduction` klauzuli są następujące:
       for (i=0; i<n; i++)
          y += b[i];
    }
-   
+
    /* ERROR - variable x cannot be specified in both
               a shared and a reduction clause */
    #pragma omp parallel for shared(x) reduction(+: x)

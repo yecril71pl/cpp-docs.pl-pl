@@ -15,12 +15,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: a377967ff2fe469f73f993d779b48037d462e6d7
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: 8bd9f02935d0d88976fd3b62c7276f106519fa74
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42575888"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46381013"
 ---
 # <a name="eventevent-constructor-windows-runtime-c-template-library"></a>Event::Event Constructor (Biblioteka szablonów języka C++ środowiska wykonawczego systemu Windows)
 
@@ -39,7 +39,7 @@ WRL_NOTHROW Event(
 
 ### <a name="parameters"></a>Parametry
 
-*h*  
+*h*<br/>
 Obsłuż to zdarzenie. Domyślnie *h* jest inicjowany do **nullptr**.
 
 ## <a name="requirements"></a>Wymagania

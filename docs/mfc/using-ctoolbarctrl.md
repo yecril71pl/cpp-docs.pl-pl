@@ -17,30 +17,32 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 54031677ae33675ca0fa295c24c78e5390f5dd49
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 22f6613d9d852d24b20e44e798eaaf7af1136fde
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33385914"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46394441"
 ---
 # <a name="using-ctoolbarctrl"></a>Korzystanie z CToolBarCtrl
-Można użyć formantu toolbar ([CToolBarCtrl](../mfc/reference/ctoolbarctrl-class.md)) można utworzyć okna formantu zawierającego przycisków i opcjonalne spacje. Każdy przycisk w oknie Kontrola narzędzi wysyła komunikat polecenia do okna nadrzędnego jako użytkownik zdecyduje się on. Zazwyczaj przycisków na pasku narzędzi odpowiadają elementy w menu aplikacji, zapewniając dodatkowe i bardziej bezpośrednie sposób użytkownikowi dostęp do poleceń aplikacji.  
-  
-## <a name="what-do-you-want-to-know-more-about"></a>Co chcesz dowiedzieć się więcej o  
-  
--   [Metody tworzenia paska narzędzi](../mfc/methods-of-creating-a-toolbar.md)  
-  
--   [Ustawienia kontrolki paska narzędzi](../mfc/settings-for-the-toolbar-control.md)  
-  
--   [Tworzenie obiektu CToolBarCtrl](../mfc/creating-a-ctoolbarctrl-object.md)  
-  
--   [Używanie list obrazów w kontrolce paska narzędzi](../mfc/using-image-lists-in-a-toolbar-control.md)  
-  
--   [Używanie przycisków listy rozwijanej w kontrolce paska narzędzi](../mfc/using-drop-down-buttons-in-a-toolbar-control.md)  
-  
--   [Dostosowywanie wyglądu kontrolki paska narzędzi](../mfc/customizing-the-appearance-of-a-toolbar-control.md)  
-  
-## <a name="see-also"></a>Zobacz też  
- [Kontrolki](../mfc/controls-mfc.md)
+
+Można użyć formantu paska narzędzi ([CToolBarCtrl](../mfc/reference/ctoolbarctrl-class.md)) można utworzyć okna kontrolki zawierające przyciski i opcjonalne spacje. Każdy przycisk w oknie Kontrola narzędzi wysyła komunikat polecenia do nadrzędnego okna, jako użytkownik zdecyduje się je. Zazwyczaj przycisków na pasku narzędzi odnoszą się do elementów w menu aplikacji, zapewniając dodatkowe i bardziej bezpośredni sposób dla użytkownika uzyskać dostęp do poleceń aplikacji.
+
+## <a name="what-do-you-want-to-know-more-about"></a>Co chcesz dowiedzieć się więcej na temat
+
+- [Metody tworzenia paska narzędzi](../mfc/methods-of-creating-a-toolbar.md)
+
+- [Ustawienia kontrolki paska narzędzi](../mfc/settings-for-the-toolbar-control.md)
+
+- [Tworzenie obiektu CToolBarCtrl](../mfc/creating-a-ctoolbarctrl-object.md)
+
+- [Używanie list obrazów w kontrolce paska narzędzi](../mfc/using-image-lists-in-a-toolbar-control.md)
+
+- [Używanie przycisków listy rozwijanej w kontrolce paska narzędzi](../mfc/using-drop-down-buttons-in-a-toolbar-control.md)
+
+- [Dostosowywanie wyglądu kontrolki paska narzędzi](../mfc/customizing-the-appearance-of-a-toolbar-control.md)
+
+## <a name="see-also"></a>Zobacz też
+
+[Kontrolki](../mfc/controls-mfc.md)
 

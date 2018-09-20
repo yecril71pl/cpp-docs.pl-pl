@@ -15,12 +15,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 4874121f22daa8e4a13bf7a1d332c9b8e3db60ba
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: ce6e3357582abe94fdc538932e49e773c37f116b
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42578110"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46384700"
 ---
 # <a name="comptroperator-operator"></a>ComPtr::operator!= Operator
 
@@ -47,10 +47,10 @@ bool operator!=(
 
 ### <a name="parameters"></a>Parametry
 
-*a*  
+*a*<br/>
 Odwołanie do **ComPtr** obiektu.
 
-*b*  
+*b*<br/>
 Odwołanie do innego **ComPtr** obiektu.
 
 ## <a name="return-value"></a>Wartość zwracana
@@ -67,5 +67,5 @@ Operatory drugi i trzeci uzyskanie **true** Jeśli obiekt *a* nie jest równa **
 
 ## <a name="see-also"></a>Zobacz też
 
-[Microsoft::WRL, przestrzeń nazw](../windows/microsoft-wrl-namespace.md)  
+[Microsoft::WRL, przestrzeń nazw](../windows/microsoft-wrl-namespace.md)<br/>
 [ComPtr, klasa](../windows/comptr-class.md)

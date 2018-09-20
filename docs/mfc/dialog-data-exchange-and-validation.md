@@ -25,23 +25,25 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0cc12a76f73e2d84a4cb5df66a6dd3d01249265a
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 8a1006300a0d0a1bc0587e7866e97260ae293516
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33343778"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46379843"
 ---
 # <a name="dialog-data-exchange-and-validation"></a>Wymiana i walidacja danych w oknie dialogowym
-Wymiana danych okna dialogowego (DDX) jest to prosty sposób, aby zainicjować kontrolki w oknie dialogowym i zbieranie danych wejściowych przez użytkownika. Walidacja danych okna dialogowego (DDV) to prosty sposób można sprawdzić poprawności wprowadzania danych w oknie dialogowym. Aby skorzystać z DDX i DDV w polach okna dialogowego, należy użyć [Dodaj kreatora zmiennej elementu członkowskiego](../ide/add-member-variable-wizard.md) do tworzenia elementów członkowskich danych i ustawić ich typy danych i określić reguły sprawdzania poprawności.  
-  
-## <a name="what-do-you-want-to-know-more-about"></a>Co chcesz dowiedzieć się więcej o  
-  
--   [Wymiana danych okna dialogowego](../mfc/dialog-data-exchange.md)  
-  
--   [Walidacja danych okna dialogowego](../mfc/dialog-data-validation.md)  
-  
-## <a name="see-also"></a>Zobacz też  
- [Okna dialogowe](../mfc/dialog-boxes.md)   
- [Cykl życiowy okna dialogowego](../mfc/life-cycle-of-a-dialog-box.md)
+
+Wymiana danych okna dialogowego (DDX) to prosty sposób zainicjować formantów w oknie dialogowym i zbierania danych wejściowych przez użytkownika. Walidacja danych okna dialogowego (DDV) to prosty sposób na sprawdzanie poprawności wprowadzania danych w oknie dialogowym. Aby skorzystać z DDX i DDV znajdują się w polach okna dialogowego, należy użyć [Dodaj kreatora zmiennej elementu członkowskiego](../ide/add-member-variable-wizard.md) do tworzenia elementów członkowskich danych i ustaw ich typów danych i określić reguły sprawdzania poprawności.
+
+## <a name="what-do-you-want-to-know-more-about"></a>Co chcesz dowiedzieć się więcej na temat
+
+- [Wymiana danych okna dialogowego](../mfc/dialog-data-exchange.md)
+
+- [Walidacja danych okna dialogowego](../mfc/dialog-data-validation.md)
+
+## <a name="see-also"></a>Zobacz też
+
+[Okna dialogowe](../mfc/dialog-boxes.md)<br/>
+[Cykl życiowy okna dialogowego](../mfc/life-cycle-of-a-dialog-box.md)
 

@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 3cecffa8505aaead738007e2a0872c3f1bc5a6d6
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: c1d7c3741af7f5a0ea3a66d491f4aecc2afc8cb9
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42593651"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46392193"
 ---
 # <a name="createclassfactory-function"></a>CreateClassFactory — Funkcja
 
@@ -42,16 +42,16 @@ inline HRESULT STDMETHODCALLTYPE CreateClassFactory(
 
 ### <a name="parameters"></a>Parametry
 
-*flagi*  
+*flagi*<br/>
 Kombinacji jednego lub więcej [RuntimeClassType](../windows/runtimeclasstype-enumeration.md) wartości wyliczenia.
 
-*entry*  
+*entry*<br/>
 Wskaźnik do [creatormap —](../windows/creatormap-structure.md) zawierający informacje o parametrze inicjowania i rejestracji *riid*.
 
-*Parametr riid*  
+*Parametr riid*<br/>
 Odwołanie do identyfikatora interfejsu.
 
-*ppFactory*  
+*ppFactory*<br/>
 Jeśli operacja zakończy się pomyślnie, wskaźnik do fabryki klas.
 
 ## <a name="return-value"></a>Wartość zwracana

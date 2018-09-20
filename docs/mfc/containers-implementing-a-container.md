@@ -15,63 +15,65 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 066c032a18b2fedc88884b7e6eee55f07fcf43ad
-ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
+ms.openlocfilehash: 46fa8b115dd01a9ee11442a0701cd719cc6d389e
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/25/2018
-ms.locfileid: "36930078"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46394364"
 ---
 # <a name="containers-implementing-a-container"></a>Kontenery: implementowanie kontenera
-W tym artykule przedstawiono sposób stosowania kontener i wskazaniu inne artykuły, które zapewniają bardziej szczegółowych wyjaśnień dotyczących implementowania kontenerów. Wyświetla również niektórych funkcji opcjonalnych OLE, który chcesz wdrożyć, a artykuł opisujący te funkcje.  
-  
-#### <a name="to-prepare-your-cwinapp-derived-class"></a>Aby przygotować klasy pochodnej CWinApp  
-  
-1.  Inicjowanie bibliotek OLE przez wywołanie metody `AfxOleInit` w `InitInstance` funkcję elementu członkowskiego.  
-  
-2.  Wywołanie `CDocTemplate::SetContainerInfo` w `InitInstance` można przypisać do menu skrótów zasoby używane w przypadku element osadzony aktywacji w miejscu. Aby uzyskać więcej informacji na ten temat, zobacz [aktywacji](../mfc/activation-cpp.md).  
-  
- Te funkcje są dostępne dla zostanie automatycznie podczas tworzenia aplikacji kontenera za pomocą Kreatora aplikacji MFC. Zobacz [tworzenia Program MFC EXE](../mfc/reference/mfc-application-wizard.md).  
-  
-#### <a name="to-prepare-your-view-class"></a>Aby przygotować klasy widoku  
-  
-1.  Śledzić różne elementy wybrane dzięki utrzymywaniu wskaźnik lub listy wskaźników, jeśli obsługuje wyboru wielokrotnego, do wybranych elementów. Twoje `OnDraw` funkcja należy narysować wszystkie elementy OLE.  
-  
-2.  Zastąpienie `IsSelected` do sprawdzenia, czy element przekazany do niego jest aktualnie zaznaczone.  
-  
-3.  Implementowanie `OnInsertObject` obsługi wiadomości, aby wyświetlić **Wstaw obiekt** okno dialogowe.  
-  
-4.  Implementowanie `OnSetFocus` komunikat obsługi na przesyłanie fokus z widoku do aktywnego OLE w miejscu osadzonego elementu.  
-  
-5.  Implementowanie `OnSize` obsługi wiadomości, aby informować OLE osadzonych elementów należy zmienić jego prostokąta, aby odzwierciedlić zmianę rozmiaru jego zawierający widok.  
-  
- Ponieważ stosowania tych funkcji znacznie różni się w jednej aplikacji do następnego, Kreator aplikacji udostępnia podstawową implementację. Prawdopodobnie należy dostosować te funkcje można pobrać aplikację do poprawnego działania. Aby na przykład, zobacz [kontenera](../visual-cpp-samples.md) próbki.  
-  
-#### <a name="to-handle-embedded-and-linked-items"></a>Do obsługi elementy osadzone i połączone  
-  
-1.  Klasa wyprowadzona z [COleClientItem](../mfc/reference/coleclientitem-class.md). Obiekty ta klasa reprezentuje elementy, które zostały osadzone w lub połączony z dokumentu OLE.  
-  
-2.  Zastąpienie `OnChange`, `OnChangeItemPosition`, i `OnGetItemPosition`. Te funkcje uchwyt zmiany rozmiaru, pozycjonowanie i modyfikowanie elementy osadzone i połączone.  
-  
- Kreator aplikacji będą pochodzić klasy dla Ciebie, ale prawdopodobnie będzie konieczne zastąpienie `OnChange` i inne funkcje wymienione z nim w kroku 2 w poprzedniej procedurze. Szkielet implementacji konieczne można dostosować w przypadku większości aplikacji, ponieważ te funkcje są implementowane inaczej z jednej aplikacji do następnego. Przykłady tego, zobacz przykłady MFC [DRAWCLI](../visual-cpp-samples.md) i [kontenera](../visual-cpp-samples.md).  
-  
- Liczba elementów należy dodać do aplikacji kontenera struktury menu do obsługi OLE. Aby uzyskać więcej informacji o tych zobacz [menu i zasoby: dodatki do kontenera](../mfc/menus-and-resources-container-additions.md).  
-  
- Można również obsługuje niektóre z następujących funkcji w aplikacji kontenera:  
-  
--   Aktywacja w miejscu podczas edytowania element osadzony.  
-  
-     Aby uzyskać więcej informacji, zobacz [aktywacji](../mfc/activation-cpp.md).  
-  
--   Tworzenie OLE elementów przez przeciąganie i upuszczanie zaznaczenia z aplikacji serwera.  
-  
-     Aby uzyskać więcej informacji, zobacz [przeciąganie i upuszczanie (OLE)](../mfc/drag-and-drop-ole.md).  
-  
--   Łącza do osadzonych obiektów lub kombinacja aplikacje kontenera/serwera.  
-  
-     Aby uzyskać więcej informacji, zobacz [kontenery: funkcje zaawansowane](../mfc/containers-advanced-features.md).  
-  
-## <a name="see-also"></a>Zobacz też  
- [Kontenery](../mfc/containers.md)   
- [Kontenery: elementy klienckie](../mfc/containers-client-items.md)
+
+Ten artykuł zawiera podsumowanie sposób stosowania kontenera i punktów do innych artykułów, które zawierają bardziej szczegółowe objaśnienia dotyczące wdrożenia kontenerów. Zawiera również listę niektórych funkcji opcjonalnych OLE, który chcesz wdrożyć i artykuły opisujące te funkcje.
+
+#### <a name="to-prepare-your-cwinapp-derived-class"></a>Aby przygotować klasy pochodnej CWinApp
+
+1. Zainicjuj biblioteki OLE, wywołując `AfxOleInit` w `InitInstance` funkcja elementu członkowskiego.
+
+1. Wywołaj `CDocTemplate::SetContainerInfo` w `InitInstance` można przypisać w menu i akcelerator zasoby używane podczas osadzonego elementu jest aktywowany w miejscu. Aby uzyskać więcej informacji na ten temat, zobacz [aktywacji](../mfc/activation-cpp.md).
+
+Te funkcje są dostarczane dla Ciebie automatycznie podczas tworzenia aplikacji kontenera za pomocą Kreatora aplikacji MFC. Zobacz [tworzenie programu MFC EXE](../mfc/reference/mfc-application-wizard.md).
+
+#### <a name="to-prepare-your-view-class"></a>Aby przygotować klasy widoku
+
+1. Zachowaj śledzić wybranych elementów poprzez utrzymywanie wskaźnik lub listy wskaźników, jeżeli obsługuje wiele zaznaczeń do wybranych elementów. Twoje `OnDraw` funkcja musi narysuj wszystkie elementy OLE.
+
+1. Zastąp `IsSelected` do sprawdzenia, czy element przekazany do niego jest aktualnie wybrany.
+
+1. Implementowanie `OnInsertObject` obsługi wiadomości, aby wyświetlić **Wstawianie obiektu** okno dialogowe.
+
+1. Implementowanie `OnSetFocus` wiadomości program obsługi, aby przenieść fokus z widoku active OLE w miejscu osadzonego elementu.
+
+1. Implementowanie `OnSize` obsługi wiadomości, aby informować OLE osadzonych elementów należy zmienić jego prostokąt, aby odzwierciedlić zmiany rozmiaru jej widok zawierający.
+
+Ponieważ implementacji tych funkcji różni się znacznie z jednej aplikacji do następnego Kreatora aplikacji dostarcza podstawową implementację. Prawdopodobnie trzeba będzie dostosować te funkcje można pobrać aplikację, aby działać prawidłowo. Aby na przykład, zobacz [kontenera](../visual-cpp-samples.md) próbki.
+
+#### <a name="to-handle-embedded-and-linked-items"></a>Aby obsłużyć elementy osadzone i połączone
+
+1. Wyprowadzić klasę z [COleClientItem](../mfc/reference/coleclientitem-class.md). Obiekty tej klasy reprezentują elementy, które zostały osadzone w lub połączone z dokumentu OLE.
+
+1. Zastąp `OnChange`, `OnChangeItemPosition`, i `OnGetItemPosition`. Te funkcje uchwyt zmiany rozmiaru, pozycjonowanie i modyfikowania elementy osadzone i połączone.
+
+Kreator aplikacji, z której pochodzą klasę dla Ciebie, ale prawdopodobnie trzeba będzie zastąpić `OnChange` i inne funkcje wyświetlane z nim w kroku 2 w poprzedniej procedurze. Implementacje szkielet muszą zostać dostosowane dla większości aplikacji, ponieważ te funkcje są implementowane w inny sposób z jednej aplikacji do następnego. Przykłady tego, zobacz przykłady MFC [DRAWCLI](../visual-cpp-samples.md) i [kontenera](../visual-cpp-samples.md).
+
+Liczba elementów należy dodać do aplikacji kontenera menu struktury do obsługi OLE. Aby uzyskać więcej informacji na ten temat, zobacz [menu i zasoby: dodatki do kontenera](../mfc/menus-and-resources-container-additions.md).
+
+Można również obsługuje niektóre z następujących funkcji w aplikacji kontenera:
+
+- Aktywacja w miejscu podczas edytowania osadzonego elementu.
+
+     Aby uzyskać więcej informacji, zobacz [aktywacji](../mfc/activation-cpp.md).
+
+- Tworzenie elementu OLE elementów, przeciągając i upuszczając zaznaczenia z aplikacji serwera.
+
+     Aby uzyskać więcej informacji, zobacz [przeciąganie i upuszczanie (OLE)](../mfc/drag-and-drop-ole.md).
+
+- Zawiera łącza do osadzonych obiektów lub kombinacji aplikacje kontenera/serwera.
+
+     Aby uzyskać więcej informacji, zobacz [kontenery: funkcje zaawansowane](../mfc/containers-advanced-features.md).
+
+## <a name="see-also"></a>Zobacz też
+
+[Kontenery](../mfc/containers.md)<br/>
+[Kontenery: elementy klienckie](../mfc/containers-client-items.md)
 

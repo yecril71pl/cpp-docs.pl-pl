@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 6da9451d6f009bad6163efec23bb6f920a56df49
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: 6622e92112d9f73e673e2fb44598a393843bf0fa
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42590533"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46396342"
 ---
 # <a name="handlet-class"></a>HandleT — Klasa
 
@@ -39,7 +39,7 @@ class HandleT;
 
 ### <a name="parameters"></a>Parametry
 
-*Handletraits —*  
+*Handletraits —*<br/>
 Wystąpienie [handletraits —](../windows/handletraits-structure.md) stucture, który definiuje typowe cechy dojście.
 
 ## <a name="members"></a>Elementy członkowskie

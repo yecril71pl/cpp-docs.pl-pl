@@ -15,12 +15,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: fca1c097a01f34fb2cc708489338391dfced982f
-ms.sourcegitcommit: d4c803bd3a684d7951bf88dcecf1f14af43ae411
+ms.openlocfilehash: b80c9c8ef371808fc98d0475afc00223b13194ea
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/10/2018
-ms.locfileid: "42464930"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46384042"
 ---
 # <a name="preprocessor-operators"></a>Operatory preprocesora
 Cztery operatory specyficzne dla preprocesora są używane w kontekście `#define` — dyrektywa (zobacz poniżej, aby uzyskać podsumowanie). W trzech kolejnych sekcjach omówiono operatory tworzenia ciągu, charizing i wklejania tokenu. Instrukcje dotyczące `defined` operatora, zobacz [#if, #elif #else i #endif, dyrektywy](../preprocessor/hash-if-hash-elif-hash-else-and-hash-endif-directives-c-cpp.md).  
@@ -34,6 +34,6 @@ Cztery operatory specyficzne dla preprocesora są używane w kontekście `#defin
   
 ## <a name="see-also"></a>Zobacz też  
  
-[Dyrektywy preprocesora](../preprocessor/preprocessor-directives.md)   
-[Wstępnie zdefiniowane makra](../preprocessor/predefined-macros.md)   
+[Dyrektywy preprocesora](../preprocessor/preprocessor-directives.md)<br/>
+[Wstępnie zdefiniowane makra](../preprocessor/predefined-macros.md)<br/>
 [Dokumentacja preprocesora języka C/C++](../preprocessor/c-cpp-preprocessor-reference.md)

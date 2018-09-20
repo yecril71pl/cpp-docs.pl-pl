@@ -15,28 +15,30 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2a7b498ed1ddc3a3d040abde6ebcb7e27615b801
-ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
+ms.openlocfilehash: ae9a37aaeb9df3241cf48d3fc62db046682a7a1b
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/25/2018
-ms.locfileid: "36929346"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46387071"
 ---
 # <a name="containers-client-items"></a>Kontenery: elementy klienckie
-W tym artykule opisano, co to są elementy klienckie i z klasy co aplikacji powinien pochodzić jego elementy klienckie.  
-  
- Elementy klienckie są elementy danych należących do innej aplikacji, które są zawarte w lub odwołuje się dokument aplikacji kontenera OLE. Elementy klienckie, których danych znajdujących się w dokumencie są osadzone; te, których dane są przechowywane w innej lokalizacji odwołuje się dokument kontenera są połączone.  
-  
- Klasa dokumentu w aplikacji OLE pochodzi z klasy [COleDocument](../mfc/reference/coledocument-class.md) , a nie z `CDocument`. `COleDocument` Klasa dziedziczy `CDocument` wszystkie funkcje niezbędne do przy użyciu architektury dokument/widok, w którym MFC aplikacje są oparte. `COleDocument` definiuje również interfejs, który traktuje dokumentu jako kolekcja `CDocItem` obiektów. Kilka `COleDocument` funkcji elementów członkowskich są udostępniane dla Dodawanie, pobieranie i usuwanie elementów tej kolekcji.  
-  
- Każda aplikacja kontenera powinien pochodzić z co najmniej jedną klasę z `COleClientItem`. Obiekty ta klasa reprezentuje elementy, osadzony czy połączony w dokumencie OLE. Te obiekty istnieje przez cały okres istnienia dokumentu zawierającego je, chyba że zostaną one usunięte z dokumentu.  
-  
- `CDocItem` jest klasą bazową dla `COleClientItem` i `COleServerItem`. Obiektów klasy pochodzące z tych dwóch odpowiednio działać jako pośredników od elementu OLE i aplikacjom klienta i serwera. Każdym dodaniu nowego elementu OLE w dokumencie programu MFC framework dodaje nowy obiekt aplikacja kliencka `COleClientItem`-pochodnej klasy dokumentu kolekcji `CDocItem` obiektów.  
-  
-## <a name="see-also"></a>Zobacz też  
- [Kontenery](../mfc/containers.md)   
- [Kontenery: Pliki złożone](../mfc/containers-compound-files.md)   
- [Kontenery: Problemy z interfejsem użytkownika](../mfc/containers-user-interface-issues.md)   
- [Kontenery: Funkcje zaawansowane](../mfc/containers-advanced-features.md)   
- [Klasa COleClientItem](../mfc/reference/coleclientitem-class.md)   
- [Klasa COleServerItem](../mfc/reference/coleserveritem-class.md)
+
+W tym artykule opisano, co to są elementy klienckie i z klasy aplikacji powinien pochodzić elementy klienta.
+
+Elementy klienckie są elementami danych należących do innej aplikacji, która są zawarte w albo odwołuje się dokument aplikacji kontenera OLE. Elementy klienckie, których dane są zawarte w dokumencie są osadzone; te, których dane są przechowywane w innej lokalizacji przywoływanej przez dokument kontenera są połączone.
+
+Klasa dokumentu w aplikacji OLE pochodzi od klasy [COleDocument](../mfc/reference/coledocument-class.md) , a nie z `CDocument`. `COleDocument` Klasa dziedziczy `CDocument` wszystkie funkcje niezbędne do przy użyciu architektury dokument/widok na MFC, które aplikacje są oparte. `COleDocument` definiuje również interfejs, który traktuje dokumentu jako zbiór `CDocItem` obiektów. Kilka `COleDocument` funkcji elementów członkowskich są dostarczane na dodawanie, pobieranie i usuwanie elementów tej kolekcji.
+
+Każda aplikacja kontenera powinien pochodzić z co najmniej jedną klasę z `COleClientItem`. Obiekty tej klasy reprezentują elementy, osadzony lub połączony w dokumencie OLE. Dla cyklu życia dokumentu zawierającego je, istnieją tych obiektów, chyba że zostaną one usunięte z dokumentu.
+
+`CDocItem` jest klasą bazową dla `COleClientItem` i `COleServerItem`. Obiekty klasy pochodzące z tych dwóch pełnią rolę pośredników pomiędzy elementu OLE i aplikacje klienckie i serwerowe, odpowiednio. Każdym dodaniu nowego elementu OLE w dokumencie programu MFC framework dodaje nowy obiekt aplikację kliencką `COleClientItem`-klasy pochodnej do kolekcji dokument `CDocItem` obiektów.
+
+## <a name="see-also"></a>Zobacz też
+
+[Kontenery](../mfc/containers.md)<br/>
+[Kontenery: pliki złożone](../mfc/containers-compound-files.md)<br/>
+[Kontenery: kwestie dotyczące interfejsu użytkownika](../mfc/containers-user-interface-issues.md)<br/>
+[Kontenery: funkcje zaawansowane](../mfc/containers-advanced-features.md)<br/>
+[Klasa COleClientItem](../mfc/reference/coleclientitem-class.md)<br/>
+[Klasa COleServerItem](../mfc/reference/coleserveritem-class.md)

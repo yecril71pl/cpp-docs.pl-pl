@@ -18,60 +18,64 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 12e035a27693fcad095cd83880aba99c37ba1c1f
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: b13aecabbf7f9935671b6bd44b654e78c5cd58dd
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46027638"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46395079"
 ---
 # <a name="badtarget-class"></a>bad_target — Klasa
-Ta klasa opisuje wyjątek generowany, gdy blok obsługi wiadomości podano wskaźnik do obiektu docelowego, która jest nieprawidłowa dla wykonywanej operacji.  
-  
-## <a name="syntax"></a>Składnia  
-  
+
+Ta klasa opisuje wyjątek generowany, gdy blok obsługi wiadomości podano wskaźnik do obiektu docelowego, która jest nieprawidłowa dla wykonywanej operacji.
+
+## <a name="syntax"></a>Składnia
+
 ```
 class bad_target : public std::exception;
-```  
-  
-## <a name="members"></a>Elementy członkowskie  
-  
-### <a name="public-constructors"></a>Konstruktory publiczne  
-  
-|Nazwa|Opis|  
-|----------|-----------------|  
-|[bad_target](#ctor)|Przeciążone. Konstruuje `bad_target` obiektu.|  
-  
-## <a name="remarks"></a>Uwagi  
- To jest zwykle wyjątek powodów, takich jak docelowy próby używanie komunikat, który jest zarezerwowana w innej docelowej lub zwalnianiu zliczania rezerwacji, który przechowuje.  
-  
-## <a name="inheritance-hierarchy"></a>Hierarchia dziedziczenia  
- `exception`  
-  
- `bad_target`  
-  
-## <a name="requirements"></a>Wymagania  
- **Nagłówek:** concrt.h  
-  
- **Namespace:** współbieżności  
-  
-##  <a name="ctor"></a> bad_target — 
+```
 
- Konstruuje `bad_target` obiektu.  
-  
+## <a name="members"></a>Elementy członkowskie
+
+### <a name="public-constructors"></a>Konstruktory publiczne
+
+|Nazwa|Opis|
+|----------|-----------------|
+|[bad_target](#ctor)|Przeciążone. Konstruuje `bad_target` obiektu.|
+
+## <a name="remarks"></a>Uwagi
+
+To jest zwykle wyjątek powodów, takich jak docelowy próby używanie komunikat, który jest zarezerwowana w innej docelowej lub zwalnianiu zliczania rezerwacji, który przechowuje.
+
+## <a name="inheritance-hierarchy"></a>Hierarchia dziedziczenia
+
+`exception`
+
+`bad_target`
+
+## <a name="requirements"></a>Wymagania
+
+**Nagłówek:** concrt.h
+
+**Namespace:** współbieżności
+
+##  <a name="ctor"></a> bad_target —
+
+Konstruuje `bad_target` obiektu.
+
 ```
 explicit _CRTIMP bad_target(_In_z_ const char* _Message) throw();
 
 bad_target() throw();
-```  
-  
-### <a name="parameters"></a>Parametry  
+```
+
+### <a name="parameters"></a>Parametry
+
 *_Message*<br/>
-Opisowy komunikat dotyczący błędu.  
-  
-## <a name="see-also"></a>Zobacz też  
- [Współbieżność Namespace](concurrency-namespace.md)   
- [Bloki komunikatów asynchronicznych](../../../parallel/concrt/asynchronous-message-blocks.md)
+Opisowy komunikat dotyczący błędu.
 
+## <a name="see-also"></a>Zobacz też
 
+[Przestrzeń nazw współbieżności](concurrency-namespace.md)<br/>
+[Bloki komunikatów asynchronicznych](../../../parallel/concrt/asynchronous-message-blocks.md)
 

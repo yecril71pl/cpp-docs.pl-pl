@@ -23,12 +23,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5d2f1259227fa8d27778dbf0e40b13f5460b7041
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 2395cb7b1f3d719fd64494ee9b9c7c64ba222bac
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43218788"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46381832"
 ---
 # <a name="tn061-onnotify-and-wmnotify-messages"></a>TN061: komunikaty ON_NOTIFY i WM_NOTIFY
 
@@ -104,14 +104,14 @@ ON_NOTIFY(wNotifyCode, id, memberFxn)
 
 gdzie parametrami są:
 
-*wNotifyCode*  
- Kod komunikatu powiadomienia mają być obsługiwane, takich jak LVN_KEYDOWN.
+*wNotifyCode*<br/>
+Kod komunikatu powiadomienia mają być obsługiwane, takich jak LVN_KEYDOWN.
 
-*id*  
- Identyfikator podrzędnego kontrolki wysyłania powiadomień.
+*id*<br/>
+Identyfikator podrzędnego kontrolki wysyłania powiadomień.
 
-*memberFxn*  
- Funkcja elementu członkowskiego, wywoływana, gdy to powiadomienie jest wysyłane.
+*memberFxn*<br/>
+Funkcja elementu członkowskiego, wywoływana, gdy to powiadomienie jest wysyłane.
 
 Funkcja elementu członkowskiego musi być zadeklarowany z poniższy prototyp:
 
@@ -121,11 +121,11 @@ afx_msg void memberFxn(NMHDR* pNotifyStruct, LRESULT* result);
 
 gdzie parametrami są:
 
-*pNotifyStruct*  
- Wskaźnik do struktury powiadomień, zgodnie z opisem w poprzedniej sekcji.
+*pNotifyStruct*<br/>
+Wskaźnik do struktury powiadomień, zgodnie z opisem w poprzedniej sekcji.
 
-*wynik*  
- Wskaźnik do kodu wyniku zostanie ustawiona przed zwróceniem.
+*wynik*<br/>
+Wskaźnik do kodu wyniku zostanie ustawiona przed zwróceniem.
 
 ## <a name="example"></a>Przykład
 
@@ -141,7 +141,7 @@ W powyższym przykładzie funkcja dostarczone przez ClassWizard jest następują
 void CMessageReflectionDlg::OnKeydownList1(NMHDR* pNMHDR, LRESULT* pResult)
 {
     LV_KEYDOWN* pLVKeyDow = (LV_KEYDOWN*)pNMHDR;
-    
+
     // TODO: Add your control notification handler
     //       code here
 
@@ -167,17 +167,17 @@ ON_NOTIFY_RANGE(wNotifyCode, id, idLast, memberFxn)
 
 gdzie parametrami są:
 
-*wNotifyCode*  
- Kod komunikatu powiadomienia mają być obsługiwane, takich jak LVN_KEYDOWN.
+*wNotifyCode*<br/>
+Kod komunikatu powiadomienia mają być obsługiwane, takich jak LVN_KEYDOWN.
 
-*id*  
- Pierwszy identyfikator ciągły zakres identyfikatorów.
+*id*<br/>
+Pierwszy identyfikator ciągły zakres identyfikatorów.
 
-*idLast*  
- Ostatni identyfikator w ciągły zakres identyfikatorów.
+*idLast*<br/>
+Ostatni identyfikator w ciągły zakres identyfikatorów.
 
-*memberFxn*  
- Funkcja elementu członkowskiego, wywoływana, gdy to powiadomienie jest wysyłane.
+*memberFxn*<br/>
+Funkcja elementu członkowskiego, wywoływana, gdy to powiadomienie jest wysyłane.
 
 Funkcja elementu członkowskiego musi być zadeklarowany z poniższy prototyp:
 
@@ -187,14 +187,14 @@ afx_msg void memberFxn(UINT id, NMHDR* pNotifyStruct, LRESULT* result);
 
 gdzie parametrami są:
 
-*id*  
- Identyfikator podrzędny formantu wysyłającego powiadomienia.
+*id*<br/>
+Identyfikator podrzędny formantu wysyłającego powiadomienia.
 
-*pNotifyStruct*  
- Wskaźnik do struktury powiadomień, zgodnie z powyższym opisem.
+*pNotifyStruct*<br/>
+Wskaźnik do struktury powiadomień, zgodnie z powyższym opisem.
 
-*wynik*  
- Wskaźnik do kodu wyniku zostanie ustawiona przed zwróceniem.
+*wynik*<br/>
+Wskaźnik do kodu wyniku zostanie ustawiona przed zwróceniem.
 
 ##  <a name="_mfcnotes_tn061_on_notify_ex.2c_.on_notify_ex_range"></a> ON_NOTIFY_EX —, ON_NOTIFY_EX_RANGE —
 
@@ -221,5 +221,5 @@ Funkcja musi zwracać **TRUE** Jeśli komunikatu powiadomienia całkowicie obsł
 
 ## <a name="see-also"></a>Zobacz także
 
-[Uwagi techniczne według numerów](../mfc/technical-notes-by-number.md)  
-[Uwagi techniczne według kategorii](../mfc/technical-notes-by-category.md)  
+[Uwagi techniczne według numerów](../mfc/technical-notes-by-number.md)<br/>
+[Uwagi techniczne według kategorii](../mfc/technical-notes-by-category.md)

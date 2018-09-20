@@ -14,23 +14,25 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 364eeeedd6f4ef84b7ca64960998462258c9f6b9
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 71b2994a0e8f2a90c5968e30a2fb2480d10befa5
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33352008"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46382341"
 ---
 # <a name="internet-information-by-topic"></a>Informacje internetowe według tematów
-Aby uzyskać informacji na temat programowania przy użyciu określonych technologii internetowej zobacz:  
-  
-### <a name="wininet"></a>WinInet  
-  
-|||  
-|-|-|  
-|Omówienia|[WinInet (HTTP, FTP, Gopher)](../mfc/win32-internet-extensions-wininet.md)<br /><br /> [Podstawy WinInet](../mfc/wininet-basics.md)<br /><br /> [Rozszerzenia internetowe Win32 (WinInet)](../mfc/win32-internet-extensions-wininet.md)<br /><br /> [Jak WinInet ułatwia tworzenie klienckich aplikacji internetowych](../mfc/how-wininet-makes-it-easier-to-create-internet-client-applications.md)<br /><br /> [Jak MFC ułatwia tworzenie klienckich aplikacji internetowych](../mfc/how-mfc-makes-it-easier-to-create-internet-client-applications.md)|  
-|Kroki tworzenia aplikacji WinInet|[Wymagania wstępne dotyczące klas klientów internetowych](../mfc/prerequisites-for-internet-client-classes.md)<br /><br /> [Pisanie klienckich aplikacji internetowych przy użyciu klas MFC WinInet](../mfc/writing-an-internet-client-application-using-mfc-wininet-classes.md)<br /><br /> [Kroki wykonywane w typowej klienckiej aplikacji internetowej](../mfc/steps-in-a-typical-internet-client-application.md)<br /><br /> [Kroki wykonywane w typowej aplikacji klienckiej FTP](../mfc/steps-in-a-typical-ftp-client-application.md)<br /><br /> [Kroki wykonywane w typowej aplikacji klienckiej HTTP](../mfc/steps-in-a-typical-http-client-application.md)<br /><br /> [Kroki wykonywane w typowej aplikacji klienckiej Gopher](../mfc/steps-in-a-typical-gopher-client-application.md)<br /><br /> [Kroki wykonywane w typowej aplikacji klienckiej HTTP](../mfc/steps-in-a-typical-http-client-application.md)|  
-  
-## <a name="see-also"></a>Zobacz też  
- [MFC — podstawy programowania Internetu](../mfc/mfc-internet-programming-basics.md)
+
+Aby uzyskać informacji na temat programowania przy użyciu określonych technologii internetowych zobacz:
+
+### <a name="wininet"></a>WinInet
+
+|||
+|-|-|
+|Omówienia|[WinInet (HTTP, FTP, Gopher)](../mfc/win32-internet-extensions-wininet.md)<br /><br /> [Podstawy WinInet](../mfc/wininet-basics.md)<br /><br /> [Rozszerzenia internetowe Win32 (WinInet)](../mfc/win32-internet-extensions-wininet.md)<br /><br /> [Jak WinInet ułatwia tworzenie klienckich aplikacji internetowych](../mfc/how-wininet-makes-it-easier-to-create-internet-client-applications.md)<br /><br /> [Jak MFC ułatwia tworzenie klienckich aplikacji internetowych](../mfc/how-mfc-makes-it-easier-to-create-internet-client-applications.md)|
+|Kroki opisane w tworzeniu aplikacji WinInet|[Wymagania wstępne dotyczące klas klientów internetowych](../mfc/prerequisites-for-internet-client-classes.md)<br /><br /> [Pisanie klienckich aplikacji internetowych przy użyciu klas MFC WinInet](../mfc/writing-an-internet-client-application-using-mfc-wininet-classes.md)<br /><br /> [Kroki wykonywane w typowej klienckiej aplikacji internetowej](../mfc/steps-in-a-typical-internet-client-application.md)<br /><br /> [Kroki wykonywane w typowej aplikacji klienckiej FTP](../mfc/steps-in-a-typical-ftp-client-application.md)<br /><br /> [Kroki wykonywane w typowej aplikacji klienckiej HTTP](../mfc/steps-in-a-typical-http-client-application.md)<br /><br /> [Kroki wykonywane w typowej aplikacji klienckiej Gopher](../mfc/steps-in-a-typical-gopher-client-application.md)<br /><br /> [Kroki wykonywane w typowej aplikacji klienckiej HTTP](../mfc/steps-in-a-typical-http-client-application.md)|
+
+## <a name="see-also"></a>Zobacz też
+
+[MFC — podstawy programowania Internetu](../mfc/mfc-internet-programming-basics.md)
 

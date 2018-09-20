@@ -24,15 +24,17 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: 0ff10b12d9c77c1e17e278276d0ab7f334f2f9ce
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 8177029bb114dfa0a2dc826d45ec948599902f55
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33132911"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46390828"
 ---
 # <a name="msclr-namespace"></a>Przestrzeń nazw msclr
-`msclr` Przestrzeń nazw zawiera klasy Biblioteka obsługi języka C++. Aby uzyskać więcej informacji na temat tych klas, zobacz [Biblioteka obsługi języka C++](../dotnet/cpp-support-library.md).  
-  
-## <a name="see-also"></a>Zobacz też  
- [Biblioteka obsługi języka C++](../dotnet/cpp-support-library.md)
+
+`msclr` Przestrzeń nazw zawiera klasy C++ Support Library. Aby uzyskać więcej informacji na temat tych klas, zobacz [C++ Support Library](../dotnet/cpp-support-library.md).
+
+## <a name="see-also"></a>Zobacz też
+
+[Biblioteka obsługi języka C++](../dotnet/cpp-support-library.md)

@@ -1,5 +1,5 @@
 ---
-title: 'TN036: Używanie obiektu CFormView z kreatorami AppWizard i ClassWizard | Dokumentacja firmy Microsoft'
+title: 'TN036: Używanie obiektu CFormView z AppWizard i ClassWizard | Dokumentacja firmy Microsoft'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,17 +16,19 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1ae6939a480b58744d949b136c8fc244def90e32
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 162b9f3f16c496a7ab027499d7b0d58123fd48fc
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33379878"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46383782"
 ---
 # <a name="tn036-using-cformview-with-appwizard-and-classwizard"></a>TN036: używanie obiektu CFormView z kreatorami AppWizard i ClassWizard
-Ta uwaga techniczna opisano sposób modyfikowania aplikacji kreatorami AppWizard generowane, aby używać `CFormView` zamiast domyślnej `CView` jako swojej klasy głównym widoku. Jest to obsługiwane bezpośrednio z tą wersją programu Visual C++.  
-  
-## <a name="see-also"></a>Zobacz też  
- [Uwagi techniczne według numerów](../mfc/technical-notes-by-number.md)   
- [Uwagi techniczne według kategorii](../mfc/technical-notes-by-category.md)
+
+Ta uwaga techniczna opisano sposób modyfikowania aplikacji wygenerowane przez kreatora AppWizard tak, aby go użyć `CFormView` zamiast domyślnego `CView` jak jej klasa widoku głównego. Jest to obsługiwane bezpośrednio z tą wersją programu Visual C++.
+
+## <a name="see-also"></a>Zobacz też
+
+[Uwagi techniczne według numerów](../mfc/technical-notes-by-number.md)<br/>
+[Uwagi techniczne według kategorii](../mfc/technical-notes-by-category.md)
 

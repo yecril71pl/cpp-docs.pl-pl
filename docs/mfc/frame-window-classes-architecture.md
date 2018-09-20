@@ -16,32 +16,34 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b7de72b77be9be90ca876cfef943500a0312d183
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 117554b2c34853aa166c12d80b4821d3721e5992
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33344181"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46394130"
 ---
 # <a name="frame-window-classes-architecture"></a>Klasy okien ramowych (architektura)
-Architektura dokument/Widok okien ramowych są systemu windows, które zawierają okno widoku. One również obsługiwać konieczności kontrolowania paski dołączyć do nich.  
-  
- W wielu aplikacjach interfejsu (MDI) dokumentu głównego okna jest pochodną `CMDIFrameWnd`. Zawiera on pośrednio ramki dokumentów, które są `CMDIChildWnd` obiektów. `CMDIChildWnd` Obiektów, z kolei zawierają widoki tych dokumentów.  
-  
- W aplikacjach pojedynczego dokumentu (SDI) interfejsu okno główne pochodną `CFrameWnd`, zawiera widok bieżącego dokumentu.  
-  
- [Cframewnd —](../mfc/reference/cframewnd-class.md)  
- Klasa podstawowa aplikacja SDI głównego okna ramowego. Również klasę podstawową dla wszystkich innych klasy okien ramowych.  
-  
- [Cmdiframewnd —](../mfc/reference/cmdiframewnd-class.md)  
- Klasa podstawowa dla aplikacji MDI głównego okna ramowego.  
-  
- [CMDIChildWnd](../mfc/reference/cmdichildwnd-class.md)  
- Klasa podstawowa dla okien ramowych dokumentu aplikacji MDI.  
-  
- [COleIPFrameWnd](../mfc/reference/coleipframewnd-class.md)  
- Udostępnia ramkę okna w widoku, gdy dokument serwera jest edytowany w miejscu.  
-  
-## <a name="see-also"></a>Zobacz też  
- [Przegląd klas](../mfc/class-library-overview.md)
+
+W ramach architektury dokument/widok okna ramowe są systemu windows, które zawierają okno Widok. Obsługują one również posiadanie kontrolować paski dołączonych do nich.
+
+W wielu aplikacjach interfejsu (MDI) dokumentu, okno główne jest tworzony na podstawie `CMDIFrameWnd`. Zawiera pośrednio ramki dokumentów, które są `CMDIChildWnd` obiektów. `CMDIChildWnd` Obiektów, z kolei zawierają widoki dokumenty.
+
+W aplikacjach interfejsu (SDI) pojedynczego dokumentu głównego okna pochodzące z `CFrameWnd`, zawiera widok bieżącego dokumentu.
+
+[CFrameWnd](../mfc/reference/cframewnd-class.md)<br/>
+Klasa bazowa dla aplikacji interfejsu SDI ramki głównego okna. Również klasę bazową dla wszystkich innych klas okna ramki.
+
+[CMDIFrameWnd](../mfc/reference/cmdiframewnd-class.md)<br/>
+Klasa bazowa dla okna głównej ramki aplikacji MDI.
+
+[CMDIChildWnd](../mfc/reference/cmdichildwnd-class.md)<br/>
+Klasa bazowa dla okien ramowych dokumentu w aplikacji MDI.
+
+[COleIPFrameWnd](../mfc/reference/coleipframewnd-class.md)<br/>
+Udostępnia okno ramowe w celu wyświetlenia, gdy dokument serwera jest edytowany w miejscu.
+
+## <a name="see-also"></a>Zobacz też
+
+[Klasa — Przegląd](../mfc/class-library-overview.md)
 

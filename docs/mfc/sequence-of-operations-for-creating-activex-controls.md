@@ -1,5 +1,5 @@
 ---
-title: Sekwencja operacji przy tworzeniu formantów ActiveX | Dokumentacja firmy Microsoft
+title: Sekwencja operacji przy tworzeniu kontrolek ActiveX | Dokumentacja firmy Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,29 +18,31 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: caf4c74f2263505ad5d7112021003f92c85a4b84
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 2d794b8bf762503900dad18c7457c31101ea6d62
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33380373"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46377724"
 ---
 # <a name="sequence-of-operations-for-creating-activex-controls"></a>Sekwencja operacji przy tworzeniu kontrolek ActiveX
-W poniższej tabeli przedstawiono roli i roli w ramach tworzenia formantów ActiveX (wcześniej znane jako formantów OLE).  
-  
-### <a name="creating-activex-controls"></a>Tworzenie formantów ActiveX  
-  
-|Zadanie|Jak|Jest w ramach|  
-|----------|------------|------------------------|  
-|Utwórz framework formantu ActiveX.|Uruchom Kreator kontrolek ActiveX MFC do tworzenia formantu. Określ opcje, które mają na stronach opcje. Opcje obejmują typ i nazwa formantu w projekcie, licencjonowanie, podklasy oraz metody pól informacji.|Kreator formantów MFC ActiveX tworzy pliki dla formantu ActiveX z podstawowymi funkcjami, w tym pliki źródłowe dla aplikacji, kontrolowania i strony właściwości lub stron. Plik zasobów; plik projektu; i innych osób, wszystkie dostosowane do specyfikacji.|  
-|Zobacz formantu i Kreator kontrolek ActiveX oferują bez dodawania wiersz z własnego kodu.|Tworzenie formantu ActiveX i przetestować go w programie Internet Explorer lub [próbki TSTCON](../visual-cpp-samples.md).|Uruchomione formant ma możliwość zmiany rozmiaru i przenieść. Obejmuje ona również **pól informacji** — metoda (Jeśli wybrano), która może zostać wywołana.|  
-|Implementuje metody i właściwości formantu.|Implementowanie właściwości i metod specyficznych dla formantu, dodając funkcje Członkowskie narażonych interfejs do danych formantu. Dodaj zmienne Członkowskie, aby pomieścić struktur danych i wyzwalać zdarzeń po określeniu przy użyciu programów obsługi zdarzeń.|Platformę został już zdefiniowany mapy w celu obsługi zdarzeń, właściwości i metod, pozostawiając pozwala skupić się na implementowania właściwości i metod formantu. Domyślna strona właściwości jest widoczny i podano domyślną metodą pól informacji.|  
-|Konstruować strony lub strona właściwości formantu.|Edytory zasobów programu Visual C++ służy do wizualnego edytowania interfejs strony właściwości formantu:<br /><br /> -Utwórz dodatkowe strony właściwości.<br />-Tworzyć i edytować mapy bitowe, ikony i kursory.<br /><br /> Strony właściwości można również sprawdzić w edytorze okien dialogowych.|Domyślny plik zasobów tworzone przez Kreatora aplikacji MFC udostępnia wiele zasobów, które są potrzebne. Visual C++ umożliwia edytowanie istniejących zasobów i dodawanie nowych zasobów łatwo i wizualne.|  
-|Przetestuj zdarzeń, metod i właściwości formantu.|Odbuduj formantu i użyć kontenera testu do testowania poprawnie pracować z programów obsługi.|Można wywołać metody kontroli i modyfikowania jej właściwości, za pośrednictwem interfejsu strony właściwości lub kontener testu. Ponadto umożliwia kontener testu Śledź zdarzenia wywoływane z formantu i powiadomienia odbierane przez formantu kontenera.|  
-  
-## <a name="see-also"></a>Zobacz też  
- [Opieranie się na strukturze](../mfc/building-on-the-framework.md)   
- [Sekwencja operacji przy tworzeniu aplikacji MFC](../mfc/sequence-of-operations-for-building-mfc-applications.md)   
- [Sekwencja operacji przy tworzeniu aplikacji OLE](../mfc/sequence-of-operations-for-creating-ole-applications.md)   
- [Sekwencja operacji przy tworzeniu aplikacji bazy danych](../mfc/sequence-of-operations-for-creating-database-applications.md)
+
+W poniższej tabeli przedstawiono usługi roli i roli struktury w tworzeniu kontrolek ActiveX (dawniej formantów OLE).
+
+### <a name="creating-activex-controls"></a>Tworzenie kontrolki ActiveX
+
+|Zadanie|Możesz zrobić|Struktura jest|
+|----------|------------|------------------------|
+|Utwórz platforma kontrolki ActiveX.|Uruchom Kreator kontrolek ActiveX MFC do tworzenia kontrolki. Określ żądane opcje na stronach opcji. Opcje obejmują typ i nazwę formantu w projekcie, licencjonowanie, podklasy oraz metodę o polu.|Kreator kontrolek ActiveX MFC tworzy pliki kontrolki ActiveX z podstawowymi funkcjami, w tym pliki źródłowe dla aplikacji, kontrolki i stronę właściwości lub stron. Plik zasobów; plik projektu; i inne, wszystkie dostosowane do specyfikacji.|
+|Zobacz, Kreator kontrolek ActiveX i kontrolki oferują bez dodawania linię własnym kodem.|Tworzenie formantu ActiveX i przetestować go za pomocą programu Internet Explorer lub [przykładowe TSTCON](../visual-cpp-samples.md).|Uruchamianie kontroli ma możliwość można zmienić rozmiar i przenieść. Ma on także **o polu** metody (Jeśli wybrano), który może być wywoływany.|
+|Implementuje metody i właściwości formantu.|Implementuje właściwości i metody specyficzne dla formantu, dodając funkcje Członkowskie udostępnia interfejs narażonych na danych formantu. Dodaj zmienne Członkowskie do przechowywania struktur danych i umożliwia wyzwolenie zdarzenia po określeniu procedury obsługi zdarzeń.|Struktura został już zdefiniowany mapy w celu obsługi zdarzeń, właściwości i metod, pozostawiając pozwala skupić się na implementacji właściwości i metod formantu. Domyślna strona właściwości jest widoczny, a podano domyślną metodę o polu.|
+|Konstruowania strony właściwości lub strony formantu.|Edytory zasobów Visual C++ umożliwiają wizualne edytowanie interfejs strony właściwości formantu:<br /><br /> — Tworzenie strony właściwości dodatkowych.<br />-Tworzenie i edytowanie map bitowych, ikon i kursorów.<br /><br /> Możesz także testować stron właściwości w edytorze okien dialogowych.|Domyślny plik zasobów tworzone przez Kreatora aplikacji MFC udostępnia wiele zasobów, których potrzebujesz. Visual C++ pozwala edytować istniejące zasoby i dodać nowe zasoby, łatwe i wizualnie.|
+|Przetestuj zdarzenia, metod i właściwości formantu.|Ponownie skompiluj kontrolkę i użyć kontenera testu do testowania, czy inne programy obsługi działają poprawnie.|Można wywołać metody kontroli i modyfikowania jego właściwości, za pośrednictwem interfejsu strony właściwości lub kontener testu. Ponadto należy użyć kontenera testu do śledzenia zdarzeń wyzwalanych z formantu i powiadomienia odbierane przez kontener formantu.|
+
+## <a name="see-also"></a>Zobacz też
+
+[Opieranie się na strukturze](../mfc/building-on-the-framework.md)<br/>
+[Sekwencja operacji przy tworzeniu aplikacji MFC](../mfc/sequence-of-operations-for-building-mfc-applications.md)<br/>
+[Sekwencja operacji przy tworzeniu aplikacji OLE](../mfc/sequence-of-operations-for-creating-ole-applications.md)<br/>
+[Sekwencja operacji przy tworzeniu aplikacji bazy danych](../mfc/sequence-of-operations-for-creating-database-applications.md)
 

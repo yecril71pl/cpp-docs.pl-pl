@@ -17,47 +17,49 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8825f4cb82d734cee8da410a318a46d57ca61b4b
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 0f7c25b77b3154b70ce5f6291d85c96283064aa0
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33382453"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46385396"
 ---
 # <a name="using-cheaderctrl"></a>Korzystanie z CHeaderCtrl
-Użyj formantu nagłówka reprezentowany przez klasę [CHeaderCtrl](../mfc/reference/cheaderctrl-class.md), aby wyświetlić nagłówki kolumn do listy kolumnowym. Na przykład formantu nagłówka będą przydatne podczas implementowania kontroli kolumny w arkuszu kalkulacyjnym.  
-  
- Formant nagłówka zwykle jest podzielona na części o nazwie "nagłówka elementy", mając tytuł kolumny skojarzone tekst lub liczby. W zależności od style, które można ustawić musisz podać kilka różnych sposobów bezpośrednie dla użytkowników do modyfikowania elementów nagłówka.  
-  
+
+Używanie formantu nagłówka, reprezentowane przez klasę [CHeaderCtrl](../mfc/reference/cheaderctrl-class.md), aby wyświetlić nagłówków kolumn dla listy kolumnowych. Na przykład kontrolki nagłówka o będzie przydatne w przypadku implementowania kontroli kolumny w arkuszu kalkulacyjnym.
+
+Kontrolki nagłówka zwykle jest podzielony na części o nazwie "nagłówka" items, mając tytuł skojarzonej kolumny tekstu lub liczb. W zależności od style, które można ustawić możesz podać liczbę metod bezpośrednich dla użytkowników do manipulowania elementy nagłówka.
+
 > [!NOTE]
->  [Clistctrl —](../mfc/reference/clistctrl-class.md) zapewnia kontrolę osadzonych nagłówka i [clistview —](../mfc/reference/clistview-class.md) hermetyzuje `CListCtrl` klasy MFC. Ogólnie rzecz biorąc, należy traktować przy użyciu `CHeaderCtrl` do listy etykiety, które mają do siebie rysowania.  
-  
-## <a name="what-do-you-want-to-know-more-about"></a>Co chcesz dowiedzieć się więcej o  
-  
--   [Kontrolka nagłówka i kontrolka listy](../mfc/header-control-and-list-control.md)  
-  
--   [Przykłady kontrolek nagłówka](../mfc/header-control-examples.md)  
-  
--   [Elementy nagłówka w kontrolce nagłówka](../mfc/header-items-in-a-header-control.md)  
-  
--   [Dostosowywanie wyglądu elementu nagłówka](../mfc/customizing-the-header-item-s-appearance.md)  
-  
--   [Zapewnianie obsługi przeciągania i upuszczania w przypadku elementów nagłówka](../mfc/providing-drag-and-drop-support-for-header-items.md)  
-  
--   [Używanie list obrazów z kontrolkami nagłówka](../mfc/using-image-lists-with-header-controls.md)  
-  
--   [Tworzenie kontrolek nagłówka rysowanych przez właściciela](../mfc/making-owner-drawn-header-controls.md)  
-  
--   [Praca z kontrolką nagłówka](../mfc/working-with-a-header-control.md)  
-  
--   [Tworzenie kontrolki nagłówka](../mfc/creating-the-header-control.md)  
-  
--   [Dodawanie elementów do kontrolki nagłówka](../mfc/adding-items-to-the-header-control.md)  
-  
--   [Określanie kolejności elementów w kontrolce nagłówka](../mfc/ordering-items-in-the-header-control.md)  
-  
--   [Przetwarzanie powiadomień dotyczących kontrolki karty](../mfc/processing-header-control-notifications.md)  
-  
-## <a name="see-also"></a>Zobacz też  
- [Kontrolki](../mfc/controls-mfc.md)
+>  [CListCtrl](../mfc/reference/clistctrl-class.md) udostępnia kontrolkę nagłówka osadzone i [CListView](../mfc/reference/clistview-class.md) hermetyzuje `CListCtrl` klasy MFC. Ogólnie rzecz biorąc, pomyśl o przy użyciu `CHeaderCtrl` do listy etykiety, które zamierzasz Rysowanie samodzielnie.
+
+## <a name="what-do-you-want-to-know-more-about"></a>Co chcesz dowiedzieć się więcej na temat
+
+- [Kontrolka nagłówka i kontrolka listy](../mfc/header-control-and-list-control.md)
+
+- [Przykłady kontrolek nagłówka](../mfc/header-control-examples.md)
+
+- [Elementy nagłówka w kontrolce nagłówka](../mfc/header-items-in-a-header-control.md)
+
+- [Dostosowywanie wyglądu elementu nagłówka](../mfc/customizing-the-header-item-s-appearance.md)
+
+- [Zapewnianie obsługi przeciągania i upuszczania w przypadku elementów nagłówka](../mfc/providing-drag-and-drop-support-for-header-items.md)
+
+- [Używanie list obrazów z kontrolkami nagłówka](../mfc/using-image-lists-with-header-controls.md)
+
+- [Tworzenie kontrolek nagłówka rysowanych przez właściciela](../mfc/making-owner-drawn-header-controls.md)
+
+- [Praca z kontrolką nagłówka](../mfc/working-with-a-header-control.md)
+
+- [Tworzenie kontrolki nagłówka](../mfc/creating-the-header-control.md)
+
+- [Dodawanie elementów do kontrolki nagłówka](../mfc/adding-items-to-the-header-control.md)
+
+- [Określanie kolejności elementów w kontrolce nagłówka](../mfc/ordering-items-in-the-header-control.md)
+
+- [Przetwarzanie powiadomień dotyczących kontrolki karty](../mfc/processing-header-control-notifications.md)
+
+## <a name="see-also"></a>Zobacz też
+
+[Kontrolki](../mfc/controls-mfc.md)
 

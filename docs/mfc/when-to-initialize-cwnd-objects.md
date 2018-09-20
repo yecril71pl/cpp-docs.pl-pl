@@ -19,22 +19,24 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ee10a4632809a224028bfa482f80ed9e8a9334a5
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 6445190ab3da6ed84dbdd83cd0acab0ba98691f3
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33382876"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46388436"
 ---
 # <a name="when-to-initialize-cwnd-objects"></a>Kiedy inicjować obiekty CWnd
-Nie można utworzyć własne podrzędne systemu windows lub wywołaniem dowolnej funkcji interfejsu API systemu Windows w Konstruktorze `CWnd`-pochodzi z obiektu. Jest to spowodowane `HWND` dla `CWnd` obiektu nie został jeszcze utworzony. Inicjowanie najbardziej właściwe dla systemu Windows, takie jak dodanie okno podrzędne, musi zostać wykonane w [OnCreate](../mfc/reference/cwnd-class.md#oncreate) obsługi wiadomości.  
-  
-## <a name="what-do-you-want-to-know-more-about"></a>Co chcesz dowiedzieć się więcej o  
-  
--   [Tworzenie okien ramowych dokumentu](../mfc/creating-document-frame-windows.md)  
-  
--   [Tworzenie dokumentu/widoku](../mfc/document-view-creation.md)  
-  
-## <a name="see-also"></a>Zobacz też  
- [Używanie okien ramowych](../mfc/using-frame-windows.md)
+
+Nie można utworzyć własne podrzędne systemu windows lub wywołaniem dowolnej funkcji interfejsu Windows API w Konstruktorze typu `CWnd`-pochodnych obiektu. Jest to spowodowane `HWND` dla `CWnd` obiekt nie został jeszcze utworzony. Inicjowanie najbardziej specyficzne dla Windows, takie jak dodanie okien podrzędnych, należy wykonać w [OnCreate](../mfc/reference/cwnd-class.md#oncreate) obsługi wiadomości.
+
+## <a name="what-do-you-want-to-know-more-about"></a>Co chcesz dowiedzieć się więcej na temat
+
+- [Tworzenie okien ramowych dokumentu](../mfc/creating-document-frame-windows.md)
+
+- [Tworzenie dokumentu/widoku](../mfc/document-view-creation.md)
+
+## <a name="see-also"></a>Zobacz też
+
+[Używanie okien ramowych](../mfc/using-frame-windows.md)
 

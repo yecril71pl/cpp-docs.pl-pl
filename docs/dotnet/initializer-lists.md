@@ -15,18 +15,21 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: 6634b749480e5108548de0c8b53f8b09cc5a42c2
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 981f2737d370dc25ca4e7dc6c20947b3867a0c65
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33127955"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46394611"
 ---
 # <a name="initializer-lists"></a>Listy inicjatorów
-Listy inicjatorów w konstruktorach są teraz nazywane przed konstruktora klasy podstawowej.  
-  
-## <a name="remarks"></a>Uwagi  
- Przed Visual C++ 2005 została wywołana przed na liście inicjatora konstruktora klasy podstawowej, podczas kompilowania przy użyciu rozszerzeń zarządzanych dla języka C++. Teraz podczas kompilowania za pomocą **/CLR**, na liście inicjatora nazywa się najpierw.  
-  
-## <a name="see-also"></a>Zobacz też  
- [Ogólne zmiany w języku (C++/CLI)](../dotnet/general-language-changes-cpp-cli.md)
+
+Listy inicjatorów w konstruktorach są teraz nazywane przed konstruktorem klasy bazowej.
+
+## <a name="remarks"></a>Uwagi
+
+Przed Visual C++ 2005 zostało wywołane przed na liście inicjatora konstruktora klasy bazowej, podczas kompilowania z zarządzanych rozszerzeń języka C++. Teraz podczas kompilowania za pomocą **/CLR**, lista inicjatora nazywa się najpierw.
+
+## <a name="see-also"></a>Zobacz też
+
+[Ogólne zmiany w języku (C++/CLI)](../dotnet/general-language-changes-cpp-cli.md)

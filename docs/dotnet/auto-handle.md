@@ -17,28 +17,31 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: 54fb9535e68fd3773bb5cd0558c90763b2c17ad6
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: b609645c9a65429cdf67bb001e1c4a81b12c4f10
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33102800"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46382326"
 ---
 # <a name="autohandle"></a>auto_handle
-Definiuje `auto_handle` klasy i `swap` funkcji.  
-  
-## <a name="syntax"></a>Składnia  
-  
-```  
-#include <msclr\auto_handle.h>  
-```  
-  
-## <a name="remarks"></a>Uwagi  
- W tym pliku nagłówka:  
-  
- [auto_handle, klasa](../dotnet/auto-handle-class.md)  
-  
- [Funkcja swap (auto_handle)](../dotnet/swap-function-auto-handle.md)  
-  
-## <a name="see-also"></a>Zobacz też  
- [Biblioteka obsługi języka C++](../dotnet/cpp-support-library.md)
+
+Definiuje `auto_handle` klasy i `swap` funkcji.
+
+## <a name="syntax"></a>Składnia
+
+```
+#include <msclr\auto_handle.h>
+```
+
+## <a name="remarks"></a>Uwagi
+
+W tym pliku nagłówkowym:
+
+[auto_handle, klasa](../dotnet/auto-handle-class.md)
+
+[Funkcja swap (auto_handle)](../dotnet/swap-function-auto-handle.md)
+
+## <a name="see-also"></a>Zobacz też
+
+[Biblioteka obsługi języka C++](../dotnet/cpp-support-library.md)

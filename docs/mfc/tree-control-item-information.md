@@ -1,5 +1,5 @@
 ---
-title: Informacje o elementach formantu drzewa | Dokumentacja firmy Microsoft
+title: Informacje o elementach kontrolki drzewa | Dokumentacja firmy Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -15,23 +15,25 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 724e9d7c4e0ee7db80f024c30e363612cb40fed1
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: a61d6dbf2084288d6015e8fc2c08bfc2283d4ba4
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33385368"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46391023"
 ---
 # <a name="tree-control-item-information"></a>Informacje o elementach kontrolki drzewa
-Kontrolki drzewa ([CTreeCtrl](../mfc/reference/ctreectrl-class.md)) oferują szereg funkcji elementów członkowskich, które pobrać informacji na temat elementów w formancie. [GetItem](../mfc/reference/ctreectrl-class.md#getitem) funkcji członkowskiej pobiera niektóre lub wszystkie dane skojarzone z elementem. Dane te mogą obejmować tekstu elementu, stan, obrazów, liczbę elementów podrzędnych i wartość zdefiniowane przez aplikację 32-bitowych danych. Istnieje również [SetItem](../mfc/reference/ctreectrl-class.md#setitem) funkcji, które mogą zostać umieszczone niektóre lub wszystkie dane skojarzone z elementem.  
-  
- [GetItemState](../mfc/reference/ctreectrl-class.md#getitemstate), [GetItemText](../mfc/reference/ctreectrl-class.md#getitemtext), [GetItemData](../mfc/reference/ctreectrl-class.md#getitemdata), i [GetItemImage](../mfc/reference/ctreectrl-class.md#getitemimage) funkcje Członkowskie pobrania pojedynczych atrybutów element. Każda z tych funkcji ma odpowiednie zestaw funkcji do ustawiania atrybutów elementu.  
-  
- [GetNextItem](../mfc/reference/ctreectrl-class.md#getnextitem) funkcji członkowskiej pobiera elementu formantu drzewa, który posiada określonej relacji do bieżącego elementu. Tej funkcji można pobrać elementu nadrzędnego, poprzedniego lub następnego elementu widoczne, pierwszy element podrzędny i tak dalej. Dostępne są także funkcje Członkowskie przechodzenia drzewa: [GetRootItem](../mfc/reference/ctreectrl-class.md#getrootitem), [GetFirstVisibleItem](../mfc/reference/ctreectrl-class.md#getfirstvisibleitem), [GetNextVisibleItem](../mfc/reference/ctreectrl-class.md#getnextvisibleitem), [GetPrevVisibleItem](../mfc/reference/ctreectrl-class.md#getprevvisibleitem), [GetChildItem](../mfc/reference/ctreectrl-class.md#getchilditem), [GetNextSiblingItem](../mfc/reference/ctreectrl-class.md#getnextsiblingitem), [GetPrevSiblingItem](../mfc/reference/ctreectrl-class.md#getprevsiblingitem), [GetParentItem](../mfc/reference/ctreectrl-class.md#getparentitem), [GetSelectedItem](../mfc/reference/ctreectrl-class.md#getselecteditem), i [GetDropHilightItem](../mfc/reference/ctreectrl-class.md#getdrophilightitem).  
-  
- [GetItemRect](../mfc/reference/ctreectrl-class.md#getitemrect) funkcji członkowskiej pobiera prostokąt ograniczający dla elementu formantu drzewa. [GetCount](../mfc/reference/ctreectrl-class.md#getcount) i [GetVisibleCount](../mfc/reference/ctreectrl-class.md#getvisiblecount) funkcje Członkowskie pobrać liczbę elementów w formancie drzewa oraz liczbę elementów, które są widoczne w oknie kontrolki drzewa, odpowiednio. Można upewnij się, że danego elementu jest widoczny, wywołując [EnsureVisible](../mfc/reference/ctreectrl-class.md#ensurevisible) funkcję elementu członkowskiego.  
-  
-## <a name="see-also"></a>Zobacz też  
- [Korzystanie z CTreeCtrl](../mfc/using-ctreectrl.md)   
- [Kontrolki](../mfc/controls-mfc.md)
+
+Kontrolki drzewa ([CTreeCtrl](../mfc/reference/ctreectrl-class.md)) oferują szereg funkcji elementów członkowskich, które pobierają informacje na temat elementów w formancie. [GetItem](../mfc/reference/ctreectrl-class.md#getitem) funkcja elementu członkowskiego pobiera niektóre lub wszystkie dane skojarzone z elementem. Te dane mogą obejmować tekstu elementu, stan, obrazy, liczba elementów podrzędnych i wartością danych zdefiniowanych przez aplikację 32-bitowych. Istnieje również [SetItem](../mfc/reference/ctreectrl-class.md#setitem) funkcji, które można ustawić niektóre lub wszystkie dane skojarzone z elementem.
+
+[GetItemState](../mfc/reference/ctreectrl-class.md#getitemstate), [getitemtext —](../mfc/reference/ctreectrl-class.md#getitemtext), [getitemdata —](../mfc/reference/ctreectrl-class.md#getitemdata), i [GetItemImage](../mfc/reference/ctreectrl-class.md#getitemimage) funkcji składowych pobierać poszczególne atrybuty element. Każda z tych funkcji ma funkcję odpowiedni zestaw do ustawiania atrybutów elementu.
+
+[GetNextItem](../mfc/reference/ctreectrl-class.md#getnextitem) funkcję członkowską pobiera element formantu drzewa, który ma określoną relację do bieżącego elementu. Ta funkcja może pobrać elementu nadrzędnego, poprzedniego lub następnego elementu widoczne, pierwszego elementu podrzędnego i tak dalej. Dostępne są także przechodzenia drzewa elementów członkowskich: [GetRootItem](../mfc/reference/ctreectrl-class.md#getrootitem), [GetFirstVisibleItem](../mfc/reference/ctreectrl-class.md#getfirstvisibleitem), [GetNextVisibleItem](../mfc/reference/ctreectrl-class.md#getnextvisibleitem), [GetPrevVisibleItem](../mfc/reference/ctreectrl-class.md#getprevvisibleitem), [GetChildItem](../mfc/reference/ctreectrl-class.md#getchilditem), [GetNextSiblingItem](../mfc/reference/ctreectrl-class.md#getnextsiblingitem), [GetPrevSiblingItem](../mfc/reference/ctreectrl-class.md#getprevsiblingitem), [GetParentItem](../mfc/reference/ctreectrl-class.md#getparentitem), [GetSelectedItem](../mfc/reference/ctreectrl-class.md#getselecteditem), i [GetDropHilightItem](../mfc/reference/ctreectrl-class.md#getdrophilightitem).
+
+[GetItemRect](../mfc/reference/ctreectrl-class.md#getitemrect) funkcja elementu członkowskiego pobiera prostokąt otaczający dla elementu kontrolki drzewa. [GetCount](../mfc/reference/ctreectrl-class.md#getcount) i [GetVisibleCount](../mfc/reference/ctreectrl-class.md#getvisiblecount) funkcji składowych pobierać liczbę elementów kontrolki drzewa i liczbę elementów, które są obecnie widoczne w oknie Kontrola drzewa, odpowiednio. Upewnij się że określonego elementu jest widoczna, wywołując [EnsureVisible](../mfc/reference/ctreectrl-class.md#ensurevisible) funkcja elementu członkowskiego.
+
+## <a name="see-also"></a>Zobacz też
+
+[Korzystanie z CTreeCtrl](../mfc/using-ctreectrl.md)<br/>
+[Kontrolki](../mfc/controls-mfc.md)
 

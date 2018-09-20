@@ -17,24 +17,26 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f3e05046ac6754dd585bb1fbf51420ef862af7be
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 4b467a85aca4bb1d0405f9bbddee5cb5e4f5b790
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33341965"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46391551"
 ---
 # <a name="command-routing-classes"></a>Klasy routingu poleceń
-Jako użytkownik wchodzi w interakcję z aplikacją, wybierając z menu lub przycisków pasek sterowania myszą, aplikacja wysyła komunikaty z obiektu dotyczy interfejsu użytkownika do odpowiedniego obiektu docelowym polecenia. Pochodne klasy docelowej polecenia `CCmdTarget` obejmują [CWinApp](../mfc/reference/cwinapp-class.md), [CWnd](../mfc/reference/cwnd-class.md), [cdoctemplate —](../mfc/reference/cdoctemplate-class.md), [CDocument](../mfc/reference/cdocument-class.md), [CView](../mfc/reference/cview-class.md), i pochodne klasy. Platforma obsługuje polecenie automatycznego routingu, aby polecenia mogą być obsługiwane przez obiekt najbardziej odpowiednia aktualnie aktywne w aplikacji.  
-  
- Obiekt klasy `CCmdUI` są przekazywane do polecenia update celów polecenia interfejsu użytkownika ([on_update_command_ui —](reference/message-map-macros-mfc.md#on_update_command_ui)) programów obsługi, aby aktualizować stan interfejsu użytkownika dla określonego polecenia (na przykład w celu wyboru lub usuń wyboru z elementów menu). Wywołania funkcji Członkowskich `CCmdUI` obiekt, aby zaktualizować stan obiektu interfejsu użytkownika. Ten proces jest taki sam, czy obiekt interfejsu użytkownika, skojarzony z konkretnego polecenia jest element menu lub przycisku lub oba.  
-  
- [CCmdTarget](../mfc/reference/ccmdtarget-class.md)  
- Służy jako klasa podstawowa dla wszystkich klas obiektów, które mogą być odbierane i odpowiadać na komunikaty.  
-  
- [Ccmdui —](../mfc/reference/ccmdui-class.md)  
- Udostępnia interfejs programistyczny dla aktualizowanie obiektów interfejsu użytkownika, takich jak elementy menu lub przycisków pasek sterowania. Obiekt docelowy polecenia włącza, wyłącza, sprawdza lub usuwa obiekt interfejsu użytkownika z tym obiektem.  
-  
-## <a name="see-also"></a>Zobacz też  
- [Przegląd klas](../mfc/class-library-overview.md)
+
+Jako użytkownik wchodzi w interakcję z aplikacją, wybierając menu i przycisków paska sterowania myszą, aplikacja wysyła komunikaty z obiektu dotyczy interfejsu użytkownika do odpowiedniego obiektu elemencie docelowym polecenia. Elemencie docelowym polecenia klasy pochodne `CCmdTarget` obejmują [CWinApp](../mfc/reference/cwinapp-class.md), [CWnd](../mfc/reference/cwnd-class.md), [CDocTemplate](../mfc/reference/cdoctemplate-class.md), [CDocument](../mfc/reference/cdocument-class.md), [CView](../mfc/reference/cview-class.md), i klas pochodnych je. Platforma obsługuje polecenie automatycznego routingu, aby polecenia mogą być obsługiwane przez najbardziej odpowiedni obiekt aktualnie aktywne w aplikacji.
+
+Obiekt klasy `CCmdUI` jest przekazywany do polecenia update swoje cele poleceń interfejsu użytkownika ([ON_UPDATE_COMMAND_UI](reference/message-map-macros-mfc.md#on_update_command_ui)) programów obsługi, aby możliwe było zaktualizować stan interfejsu użytkownika dla określonego polecenia (na przykład w celu wyboru lub usuń Sprawdzanie z elementów menu). Wywołanie funkcji elementu członkowskiego `CCmdUI` obiekt, aby zaktualizować stan obiektów interfejsu użytkownika. Ten proces jest taki sam, czy obiekt interfejsu użytkownika skojarzony z określonym poleceniem jest element menu lub przycisku lub obu.
+
+[CCmdTarget](../mfc/reference/ccmdtarget-class.md)<br/>
+Służy jako klasa bazowa dla wszystkich klas obiektów, które może odbierać i odpowiadać na komunikaty.
+
+[CCmdUI](../mfc/reference/ccmdui-class.md)<br/>
+Udostępnia interfejs programistyczny dla aktualizowanie obiektów interfejsu użytkownika, np. w menu i przycisków paska sterowania. Obiekt docelowy polecenia umożliwia, wyłączenie, sprawdza i/lub czyści obiekt interfejsu użytkownika z tym obiektem.
+
+## <a name="see-also"></a>Zobacz też
+
+[Klasa — Przegląd](../mfc/class-library-overview.md)
 

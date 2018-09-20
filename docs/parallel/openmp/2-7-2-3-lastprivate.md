@@ -12,26 +12,27 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 08f331862d6e48b1c0882382285ddffa9699e79c
-ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
+ms.openlocfilehash: 25edca8391eb094691ef4fea3c360d351f979b43
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33687345"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46385966"
 ---
 # <a name="2723-lastprivate"></a>2.7.2.3 ostatnia prywatna
-`lastprivate` Klauzuli stanowi nadzbiór funkcje udostępniane przez `private` klauzuli. Składnia `lastprivate` klauzuli wygląda następująco:  
-  
-```  
-lastprivate(variable-list)  
-```  
-  
- Zmienne określone w *zmiennej listy* ma `private` klauzuli semantyki. Gdy `lastprivate` klauzuli pojawia się w dyrektywie, który identyfikuje konstrukcji podziału pracy, wartość każdego `lastprivate` zmiennej sekwencyjnie ostatnich iteracji pętli skojarzone lub lexically ostatniego dyrektywą sekcji, jest przypisany do oryginalny obiekt w zmiennej. Zmienne, które nie są przypisane wartości przez ostatnich iteracji **dla** lub **równoległe w**, lub lexically ostatniej sekcji **sekcje** lub  **sekcji równoległych** dyrektywy mają wartości nieokreślony po konstrukcji. Nieprzypisane podobiektów również ma nieokreśloną wartość po konstrukcji.  
-  
- Ograniczenia do `lastprivate` klauzuli są następujące:  
-  
--   Wszystkie ograniczenia dla `private` zastosowania.  
-  
--   Zmienna typu klasy jest określony jako `lastprivate` musi być dostępny, jednoznaczne kopia operatora przypisania.  
-  
--   Zmienne, które są prywatne w ramach równoległego regionu lub które są widoczne w `reduction` klauzuli **równoległych** dyrektywy nie można określić w `lastprivate` klauzuli w dyrektywie podziału pracy, która jest powiązana z konstrukcji równoległych.
+
+`lastprivate` Klauzuli stanowi nadzbiór funkcje udostępniane przez `private` klauzuli. Składnia `lastprivate` klauzula jest w następujący sposób:
+
+```
+lastprivate(variable-list)
+```
+
+Zmienne określone w *liście zmiennych* mają `private` semantyki klauzuli. Gdy `lastprivate` klauzuli pojawia się na dyrektywę, który identyfikuje konstrukcji podziału pracy, wartość każdego `lastprivate` zmiennej z sekwencyjnie ostatniej iteracji pętli skojarzone lub leksykalnie ostatnią dyrektywą sekcji, jest przypisany do oryginalny obiekt w zmiennej. Zmienne, które nie są przypisane wartości w ostatniej iteracji **dla** lub **równoległe w**, lub przez leksykalnie ostatnią sekcję **sekcje** lub  **sekcji równoległych** dyrektywy, mają wartości nieokreślone po konstrukcji. Nieprzypisane podobiektów również mieć nieokreślona wartość po konstrukcji.
+
+Ograniczenia do `lastprivate` klauzuli są następujące:
+
+- Wszystkie ograniczenia dla `private` zastosowania.
+
+- Zmiennej z typu klasy, która jest określona jako `lastprivate` musi być dostępny, jednoznaczną kopia operatora przypisania.
+
+- Zmienne, które są prywatne w ramach równoległego regionu lub które są widoczne w `reduction` klauzuli **równoległe** dyrektywy nie można określić w `lastprivate` klauzuli w dyrektywie podziału pracy, która jest powiązywana z konstrukcja równoległa.

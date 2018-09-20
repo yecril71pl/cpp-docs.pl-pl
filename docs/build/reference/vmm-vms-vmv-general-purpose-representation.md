@@ -29,12 +29,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d4e790281cd23ba43987ec6ab003787c115150be
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: 9cd0fb1eae8638f91ad97aec2ef24e0a578e7d7a
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45701305"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46385550"
 ---
 # <a name="vmm-vms-vmv-general-purpose-representation"></a>/vmm, /vms, /vmv (Ogólna reprezentacja celu)
 
@@ -76,6 +76,6 @@ Po określeniu jednej z tych opcji modelu dziedziczenia tego modelu jest używan
 
 ## <a name="see-also"></a>Zobacz też
 
-[/ vmb, / vmg (metoda reprezentacji)](../../build/reference/vmb-vmg-representation-method.md)
-[opcje kompilatora](../../build/reference/compiler-options.md)<br/>
+[/vmb, /vmg (Metoda reprezentacji)](../../build/reference/vmb-vmg-representation-method.md)<br/>
+[Opcje kompilatora](../../build/reference/compiler-options.md)<br/>
 [Ustawianie opcji kompilatora](../../build/reference/setting-compiler-options.md)

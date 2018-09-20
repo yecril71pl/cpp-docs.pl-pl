@@ -15,12 +15,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 037200c509574199dbecf56c950590e00e7aa71f
-ms.sourcegitcommit: f0c90000125a9497bf61e41624de189a043703c0
+ms.openlocfilehash: 875bc3163bc579c7d6da8055a0a24275e8be92a1
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44313614"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46393857"
 ---
 # <a name="attributes-by-usage"></a>Atrybuty w zależności od zastosowania
 
@@ -43,7 +43,7 @@ Jeśli atrybut poprzedza element języka Visual C++, który nie znajduje się w 
 
 ## <a name="see-also"></a>Zobacz też
 
-[Dokumentacja atrybutów (C++)](../windows/cpp-attributes-reference.md)  
-[Pojęcia](../windows/attributed-programming-concepts.md)  
-[Atrybuty według grup](../windows/attributes-by-group.md)  
+[Dokumentacja atrybutów (C++)](../windows/cpp-attributes-reference.md)<br/>
+[Pojęcia](../windows/attributed-programming-concepts.md)<br/>
+[Atrybuty według grup](../windows/attributes-by-group.md)<br/>
 [Alfabetyczny spis atrybutów](../windows/attributes-alphabetical-reference.md)

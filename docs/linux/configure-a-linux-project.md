@@ -1,7 +1,7 @@
 ---
 title: Konfigurowanie projektu systemu Linux w języku C++ w programie Visual Studio | Dokumentacja firmy Microsoft
 ms.custom: ''
-ms.date: 09/05/2018
+ms.date: 09/18/2018
 ms.reviewer: ''
 ms.suite: ''
 ms.technology:
@@ -14,12 +14,12 @@ ms.author: corob
 ms.workload:
 - cplusplus
 - linux
-ms.openlocfilehash: a66e2f6b6506d995859c89d9588b59056047220e
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: 17597ae7497288312b8ddcfcf53a77130fbbf2d8
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45713586"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46383249"
 ---
 # <a name="configure-a-linux-project"></a>Konfigurowanie projektu systemu Linux
 
@@ -33,9 +33,11 @@ Dla projektu systemu Linux przy użyciu programu Visual Studio można skonfiguro
 
 Domyślnie plik wykonywalny (.out) została stworzona za pomocą narzędzia.  Do tworzenia biblioteki statycznej lub dynamicznej lub użyć istniejącego pliku reguł programu make, użyj **typu konfiguracji** zaznaczenia.
 
+Aby uzyskać więcej informacji na temat opcji dostępnych na stronach właściwości, zobacz [dokumentacja strony właściwości projektu systemu Linux](prop-pages-linux.md).
+
 ## <a name="remote-settings"></a>Ustawienia zdalnego
 
-Aby zmienić ustawienia odnoszących się do komputera zdalnego systemu Linux, należy skonfigurować opcje zdalnego, które pojawiają się w **ogólne** ustawienia:
+Aby zmienić ustawienia odnoszących się do komputera zdalnego systemu Linux, należy skonfigurować opcje zdalnego, które pojawiają się w [ogólne](prop-pages/general-linux.md) ustawienia:
 
 - Aby zmienić komputer docelowy z systemem Linux, użyj **maszyny zdalnej kompilacji** wpisu.  Pozwoli to wybranie jednego z utworzonych wcześniej połączeń.  Aby utworzyć nowy wpis, zobacz [nawiązywanie połączeń z Twojej zdalny komputer z systemem Linux](connect-to-your-remote-linux-computer.md) sekcji.
 
@@ -44,7 +46,7 @@ Aby zmienić ustawienia odnoszących się do komputera zdalnego systemu Linux, n
 - **Zdalny katalog projektu kompilacji** jest, gdzie tego określonego projektu zostanie utworzona na zdalnym komputerze z systemem Linux.  To domyślnie zostanie **$(RemoteRootDir)/$(ProjectName)**, które rozszerzy się do katalogu o nazwie po bieżącym projekcie, w katalogu głównym powyżej.
 
 > [!NOTE]
-> Aby zmienić domyślne C i Kompilatory języka C++ lub konsolidatora i programu archiwizującego, używany do tworzenia projektu, należy użyć odpowiednie wpisy w **C/C++ > Ogólne** sekcji i **Konsolidator > Ogólne** sekcji.  Te opcje można można ustawić, aby użyć określonej wersji kompilatora GCC lub nawet kompilatora Clang, na przykład.
+> Aby zmienić domyślne C i Kompilatory języka C++ lub konsolidatora i programu archiwizującego, używany do tworzenia projektu, należy użyć odpowiednie wpisy w **C/C++ > Ogólne** sekcji i **Konsolidator > Ogólne** sekcji.  Te opcje można można ustawić, aby użyć określonej wersji kompilatora GCC lub nawet kompilatora Clang, na przykład. Aby uzyskać więcej informacji, zobacz [właściwości języka C/C++ (Linux C++)](prop-pages/c-cpp-linux.md) i [właściwości konsolidatora (Linux C++)](prop-pages/linker-linux.md).
 
 ## <a name="include-directories-and-intellisense-support"></a>Katalogi i obsługę funkcji IntelliSense
 
@@ -99,8 +101,8 @@ Do zarządzania pamięcią podręczną usługi nagłówka, przejdź do **Narzęd
 
 ## <a name="see-also"></a>Zobacz też
 
-[Praca z właściwościami projektu](../ide/working-with-project-properties.md)  
-[Właściwości ogólne C++ (Linux C++)](../linux/prop-pages/general-linux.md)  
-[Katalogi VC ++ (Linux C++)](../linux/prop-pages/directories-linux.md)  
-[Kopiuj źródła właściwości projektu (Linux C++)](../linux/prop-pages/copy-sources-project.md)  
+[Praca z właściwościami projektu](../ide/working-with-project-properties.md)<br/>
+[Właściwości ogólne C++ (Linux C++)](../linux/prop-pages/general-linux.md)<br/>
+[Katalogi VC ++ (Linux C++)](../linux/prop-pages/directories-linux.md)<br/>
+[Kopiuj źródła właściwości projektu (Linux C++)](../linux/prop-pages/copy-sources-project.md)<br/>
 [Tworzenie właściwości zdarzenia (Linux C++)](../linux/prop-pages/build-events-linux.md)

@@ -19,24 +19,26 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: bd1b1d65148a951ba78e0408ab590a2c979648f7
-ms.sourcegitcommit: 6408139d5f5ff8928f056bde93d20eecb3520361
+ms.openlocfilehash: 76aa828727ccfcf93c7b9b0242e60b747c1873f8
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37339582"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46390854"
 ---
 # <a name="classes-and-functions-generated-by-the-mfc-dll-wizard"></a>Klasy i funkcje generowane przez kreatora biblioteki MFC DLL
-Kod, który generuje kreatora MFC DLL zależy od rodzaju DLL, które tworzysz i opcji, wybrana przez Ciebie. Kreatora MFC DLL generuje ten sam kod dla obu rodzajów zwykłych bibliotekach MFC DLL.  
-  
-|Rodzaju DLL|Opcja|Klasy|Funkcje|  
-|-----------------|------------|-------------|---------------|  
-|[Rozszerzenie](../../build/extension-dlls-overview.md)|Brak|Brak|`DllMain`|  
-|[Regularne](../../build/regular-dlls-dynamically-linked-to-mfc.md)|Brak|Pochodne klasy aplikacji `CWinApp`|Brak|  
-|[Regularne](../../build/regular-dlls-dynamically-linked-to-mfc.md)|Automatyzacja|Pochodne klasy aplikacji `CWinApp`|`DllGetClassObjectDllCanUnloadNowDllRegisterServer`|  
-|[Rozszerzenie](../../build/extension-dlls-overview.md)|Gniazda okna|Brak|`DllMain`|  
-|[Regularne](../../build/regular-dlls-dynamically-linked-to-mfc.md)|Gniazda okna|Pochodne klasy aplikacji `CWinApp`|`InitInstance` zawiera wywołanie `AfxSocketInit`|  
-  
-## <a name="see-also"></a>Zobacz też  
- [Kreator biblioteki MFC DLL](../../mfc/reference/mfc-dll-wizard.md)
+
+Kod, który generuje kreatora MFC DLL zależy od rodzaju DLL, które tworzysz i opcji, wybrana przez Ciebie. Kreatora MFC DLL generuje ten sam kod dla obu rodzajów zwykłych bibliotekach MFC DLL.
+
+|Rodzaju DLL|Opcja|Klasy|Funkcje|
+|-----------------|------------|-------------|---------------|
+|[Rozszerzenie](../../build/extension-dlls-overview.md)|Brak|Brak|`DllMain`|
+|[Regularne](../../build/regular-dlls-dynamically-linked-to-mfc.md)|Brak|Pochodne klasy aplikacji `CWinApp`|Brak|
+|[Regularne](../../build/regular-dlls-dynamically-linked-to-mfc.md)|Automatyzacja|Pochodne klasy aplikacji `CWinApp`|`DllGetClassObjectDllCanUnloadNowDllRegisterServer`|
+|[Rozszerzenie](../../build/extension-dlls-overview.md)|Gniazda okna|Brak|`DllMain`|
+|[Regularne](../../build/regular-dlls-dynamically-linked-to-mfc.md)|Gniazda okna|Pochodne klasy aplikacji `CWinApp`|`InitInstance` zawiera wywołanie `AfxSocketInit`|
+
+## <a name="see-also"></a>Zobacz też
+
+[Kreator biblioteki MFC DLL](../../mfc/reference/mfc-dll-wizard.md)
 
