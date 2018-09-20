@@ -20,36 +20,38 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9fe7f9b4b97fd17e73c3dd9f113a87d8f087b93c
-ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
+ms.openlocfilehash: eaa361a75843fb9f99e3378763a62cfaeeeb07c2
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/25/2018
-ms.locfileid: "36929666"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46383626"
 ---
 # <a name="dialog-boxes-in-ole"></a>Okna dialogowe w OLE
-Gdy użytkownik uruchomi aplikację z obsługą OLE, istnieją razy, gdy aplikacja potrzebuje informacje od użytkownika w celu przeprowadzenia operacji. Klasy MFC OLE zapewniają wiele okien dialogowych w celu zebrania wymaganych informacji. W tym temacie wymieniono zadania obsługiwane przez okien dialogowych OLE i klasy niezbędne do wyświetlania tych okien dialogowych. Szczegółowe informacje o okien dialogowych OLE i struktury używane w celu dostosowania ich zachowania, zobacz [odwołania MFC](../mfc/mfc-desktop-applications.md).  
-  
- *INSERT — obiekt*  
- To okno dialogowe umożliwia użytkownikowi wstawiania nowych lub istniejących obiektów do dokumentu złożonego. Również umożliwia użytkownikowi wybrać wyświetlanie elementu jako ikonę i umożliwia przycisku polecenia Zmień ikonę. Wyświetl to okno dialogowe, gdy użytkownik wybierze Wstaw obiekt z menu Edycja. Użyj [COleInsertDialog](../mfc/reference/coleinsertdialog-class.md) klasy do wyświetlenia tego okna dialogowego. Należy pamiętać, że nie można wstawić aplikacji MDI do siebie samego. Nie można wstawić aplikacji kontenera/serwera do tego samego, chyba że jest to aplikacja SDI.  
-  
- *Wklej specjalne*  
- To okno dialogowe umożliwia użytkownikowi na kontrolowanie format używany podczas wklejania danych do złożonego dokumentu. Użytkownik może wybrać format danych, czy osadzić lub połączyć dane i czy chcesz wyświetlić w postaci ikony. Wyświetl to okno dialogowe, gdy użytkownik wybierze Wklej specjalne w menu Edycja. Użyj [COlePasteSpecialDialog](../mfc/reference/colepastespecialdialog-class.md) klasy do wyświetlenia tego okna dialogowego.  
-  
- *Zmienianie ikony*  
- To okno dialogowe umożliwia użytkownikowi wybranie ikony, która jest wyświetlana do reprezentowania elementu połączonego lub osadzonego. Wyświetl to okno dialogowe, gdy użytkownik wybierze ikonę zmiany z menu Edycja lub wybierze przycisk Zmień ikonę Wklej specjalne lub przekonwertować okien dialogowych. Również go wyświetlić, gdy użytkownik otwiera okno dialogowe Wstaw obiekt i wybiera pozycję Wyświetl jako ikonę. Użyj [COleChangeIconDialog](../mfc/reference/colechangeicondialog-class.md) klasy do wyświetlenia tego okna dialogowego.  
-  
- *Konwertuj*  
- To okno dialogowe umożliwia użytkownikowi zmianę typu osadzonego lub połączonego elementu. Na przykład osadzania metaplik wewnątrz złożonego dokumentu, a później chcesz użyć innej aplikacji do zmodyfikowania osadzonych metaplik, można użyć okna dialogowego Convert. To okno dialogowe jest zwykle wyświetlany, klikając *typ elementu* obiekt menu Edycja, a następnie w menu kaskadowych, klikając polecenie Konwertuj. Użyj [COleConvertDialog](../mfc/reference/coleconvertdialog-class.md) klasy do wyświetlenia tego okna dialogowego. Na przykład uruchomić przykładowy MFC OLE [OCLIENT](../visual-cpp-samples.md).  
-  
- *Linków edycji lub aktualizacji*  
- Okno dialogowe Edytuj łącza umożliwia użytkownikom na zmianę informacji o źródle połączonego obiektu. Okno dialogowe łącza aktualizacji sprawdza źródeł połączone elementy w bieżącym oknie dialogowym i wyświetla okno dialogowe Edytuj łącza, jeśli to konieczne. Wyświetl okno dialogowe Edytuj łącza, gdy użytkownik wybierze łącza z menu Edycja. Zazwyczaj zostanie wyświetlone okno dialogowe Aktualizuj łącza, po pierwszym otwarciu złożonego dokumentu. Użyj jednej [COleLinksDialog](../mfc/reference/colelinksdialog-class.md) lub [COleUpdateDialog](../mfc/reference/coleupdatedialog-class.md) klasy, w zależności od okno dialogowe, które mają być wyświetlane.  
-  
- *Serwer jest zajęty lub serwer nie odpowiada*  
- Serwer jest zajęty okno dialogowe jest wyświetlane, gdy użytkownik próbuje aktywować elementu i serwer nie może obecnie obsłużyć żądania, zwykle, ponieważ serwer jest używany przez innego użytkownika lub zadanie. Zostanie wyświetlone okno dialogowe serwer nie odpowiada, jeśli serwer nie odpowiada na żądanie aktywacji w ogóle. Okna te są wyświetlane za pośrednictwem `COleMessageFilter`, oparte na implementację interfejsu OLE `IMessageFilter`, i użytkownik może zdecydować, czy próby żądania aktywacji. Użyj [COleBusyDialog](../mfc/reference/colebusydialog-class.md) klasy do wyświetlenia tego okna dialogowego.  
-  
-## <a name="see-also"></a>Zobacz też  
- [Okna dialogowe](../mfc/dialog-boxes.md)   
- [Cykl życiowy okna dialogowego](../mfc/life-cycle-of-a-dialog-box.md)   
- [OLE](../mfc/ole-in-mfc.md)
+
+Gdy użytkownik uruchamia aplikację z obsługą OLE, istnieją razy, gdy aplikacja potrzebuje informacji od użytkownika w celu wykonania operacji. Klasy MFC OLE zapewniają szereg okna dialogowe w celu zebrania wymaganych informacji. Ten temat zawiera listę zadań, obsługiwane przez okna dialogowe OLE i klasy niezbędne do wyświetlania tych okien dialogowych. Szczegółowe informacje na temat okien dialogowych OLE i struktur, używany w celu dostosowania ich zachowania, [odwołanie MFC](../mfc/mfc-desktop-applications.md).
+
+*INSERT — obiekt*<br/>
+To okno dialogowe umożliwia użytkownikowi Wstawianie nowo utworzone lub istniejących obiektów w dokumencie złożonym. Ponadto pozwala użytkownikowi wybrać wyświetlanie elementu jako ikony i umożliwia zmienianie ikony przycisku polecenia. Wyświetl to okno dialogowe, gdy użytkownik wybierze Wstawianie obiektu z menu Edycja. Użyj [COleInsertDialog](../mfc/reference/coleinsertdialog-class.md) klasy, aby wyświetlić to okno dialogowe. Należy pamiętać, że aplikacja MDI nie można wstawić do niej samej. Aplikacja kontenera/serwera nie można wstawić do niej samej, chyba że jest aplikacją SDI.
+
+*Wklej specjalne*<br/>
+To okno dialogowe pozwala użytkownikowi na kontrolowanie format używany podczas wklejania danych w dokumencie złożonym. Użytkownik może wybrać format danych, czy chcesz osadzić lub łączenia danych i czy ma być wyświetlana jako ikona. Wyświetl to okno dialogowe, gdy użytkownik wybierze Wklej specjalne z menu Edycja. Użyj [COlePasteSpecialDialog](../mfc/reference/colepastespecialdialog-class.md) klasy, aby wyświetlić to okno dialogowe.
+
+*Zmień ikonę*<br/>
+To okno dialogowe umożliwia użytkownikowi wybranie ikony, która jest wyświetlana reprezentujący element osadzony lub połączony. Wyświetl to okno dialogowe, gdy użytkownik wybierze ikonę zmiany z menu Edycja lub wybierze przycisk Zmień ikonę Wklej specjalne lub konwertowanie, okno dialogowe. Również wyświetlać go po użytkownik otwiera okno dialogowe Wstawianie obiektu, a wyświetlana jako ikona. Użyj [COleChangeIconDialog](../mfc/reference/colechangeicondialog-class.md) klasy, aby wyświetlić to okno dialogowe.
+
+*Konwertuj*<br/>
+To okno dialogowe umożliwia użytkownikowi zmianę typu elementu osadzony lub połączony. Na przykład jeśli zostały osadzone metaplik w dokumencie złożonym, a później chcesz Użyj innej aplikacji, aby zmodyfikować metaplik osadzone, można użyć okno dialogowe Konwertowanie. To okno dialogowe jest zwykle wyświetlany przez kliknięcie przycisku *typ elementu* obiekt menu Edycja, a następnie w menu kaskadowych, klikając konwersji. Użyj [COleConvertDialog](../mfc/reference/coleconvertdialog-class.md) klasy, aby wyświetlić to okno dialogowe. Aby uzyskać przykład, uruchom aplikację przykładową MFC OLE [OCLIENT](../visual-cpp-samples.md).
+
+*Edytuj linki lub linki aktualizacji*<br/>
+Okno dialogowe Edytuj linki umożliwia użytkownikowi zmianę informacji o źródle połączonego obiektu. Okno dialogowe aktualizacji łącza sprawdza źródeł połączone elementy w bieżącym oknie dialogowym i wyświetla okno dialogowe Edytuj linki, jeśli to konieczne. Wyświetl okno dialogowe Edytuj linki, gdy użytkownik wybierze łącza z menu Edycja. Przy pierwszym otwarciu dokumencie złożonym, zwykle wyświetlane jest okno dialogowe aktualizacji linków. Użyj jednej [COleLinksDialog](../mfc/reference/colelinksdialog-class.md) lub [COleUpdateDialog](../mfc/reference/coleupdatedialog-class.md) klasy, w zależności od tego, okno dialogowe, które mają być wyświetlane.
+
+*Serwer jest zajęty lub serwer nie odpowiada*<br/>
+Serwer jest zajęty okno dialogowe jest wyświetlany, gdy użytkownik próbuje uaktywnić element i serwer nie może obecnie obsłużyć żądania, zazwyczaj, ponieważ serwer jest używany przez innego użytkownika lub zadanie. Jeśli serwer nie odpowiada na żądania uaktywnienia na wszystkich, zostanie wyświetlone okno dialogowe serwer nie odpowiada. Okna te są wyświetlane przy użyciu `COleMessageFilter`zgodnie z implementacją interfejsu OLE `IMessageFilter`, i użytkownik może podjąć decyzję o próbę żądania aktywacji. Użyj [COleBusyDialog](../mfc/reference/colebusydialog-class.md) klasy, aby wyświetlić to okno dialogowe.
+
+## <a name="see-also"></a>Zobacz też
+
+[Okna dialogowe](../mfc/dialog-boxes.md)<br/>
+[Cykl życiowy okna dialogowego](../mfc/life-cycle-of-a-dialog-box.md)<br/>
+[OLE](../mfc/ole-in-mfc.md)
 

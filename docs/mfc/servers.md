@@ -20,53 +20,55 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7d153d73889520deaff12b64da36567a8b9a4087
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: dee0fd14e2e2d87155bfafefca6fa17e1d77135f
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33381783"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46375388"
 ---
 # <a name="servers"></a>Serwery
-Aplikacja serwera (lub składników aplikacji) tworzy elementy OLE (lub składników) do użycia przez aplikacje kontenera. Visual edytowania aplikacji serwera obsługuje również edycja wizualna lub Aktywacja w miejscu. Formularz innego serwera OLE [serwer automatyzacji](../mfc/automation-servers.md). Niektóre aplikacje serwera obsługuje tylko tworzenie elementy osadzone; obsługuje inne tworzenia elementów zarówno osadzone i połączone. Niektóre obsługiwana jest konsolidacja tylko, ale jest to rzadko. Wszystkie aplikacje serwera musi obsługiwać aktywacji przez kontener aplikacji, gdy użytkownik chce edytować element. Aplikacja może być zarówno kontener, jak i serwera. Innymi słowy go można jednocześnie dołączyć dane do swoich dokumentów i tworzyć dane, które można włączyć jako elementy w dokumentach inne aplikacje.  
-  
- Miniserver jest specjalnym rodzajem aplikacji serwera, która może zostać uruchomiona tylko przez kontener. Microsoft Draw i Microsoft Graph przedstawiono miniservers. Miniserver nie przechowuje dokumenty jako pliki na dysku. Zamiast tego swoje dokumenty z odczytuje i zapisuje je w elementy w dokumentach należących do kontenerów. W związku z tym miniserver obsługuje tylko osadzanie w nie łączenie.  
-  
- Pełny serwer można uruchamiać w aplikacji autonomicznej lub uruchomić aplikacji kontenera. Pełny serwer może przechowywać dokumenty jako pliki na dysku. Może obsługiwać tylko osadzanie zarówno osadzanie i łączenie lub łączenie tylko. Użytkownik aplikacji kontenera można utworzyć element osadzony, wybierając polecenia Wytnij lub Kopiuj serwera i polecenia Wklej w kontenerze. Połączony element jest tworzony przez wybranie polecenia kopiowania na serwerze i Wklej łącze w kontenerze. Możesz też użytkownik może utworzyć elementu osadzonych lub połączonych w oknie dialogowym Wstaw obiekt.  
-  
- Poniższa tabela zawiera podsumowanie właściwości różnych typów serwerów:  
-  
-### <a name="server-characteristics"></a>Właściwości serwera  
-  
-|Typ serwera|Obsługuje wiele wystąpień|Elementy w dokumencie|Dokumenty dla każdego wystąpienia|  
-|--------------------|---------------------------------|------------------------|----------------------------|  
-|Miniserver|Tak|1|1|  
-|SDI pełny serwer|Tak|1 (Jeśli połączenie jest obsługiwany, 1 lub więcej)|1|  
-|Pełny serwer MDI|Brak (nie wymagane)|1 (Jeśli połączenie jest obsługiwany, 1 lub więcej)|0 lub więcej|  
-  
- Aplikację serwer powinien obsługiwać wiele kontenerów jednocześnie, w przypadku, gdy będzie można użyć więcej niż jednego kontenera Aby edytować element osadzony lub połączony. Jeśli serwer znajduje się aplikacja SDI (lub miniserver z interfejsem — okno dialogowe), musi być można uruchamiać jednocześnie wiele wystąpień serwera. Dzięki temu oddzielnego wystąpienia aplikacji do obsługi każdego żądania kontenera.  
-  
- Serwer w przypadku aplikacji MDI, go utworzyć nowe podrzędne okno MDI zawsze należy edytować element kontenera. W ten sposób pojedyncze wystąpienie aplikacji może obsługiwać wiele kontenerów.  
-  
- Aplikacja serwera należy wskazać OLE systemowej biblioteki DLL co zrobić, jeśli jedno wystąpienie serwera jest już uruchomiona w chwili innego kontenera żądań swoich usług: Określa, czy należy uruchomić nowe wystąpienie serwera lub kontenery wszystkie żądania kierowane do jednego wystąpienia serwer.  
-  
- Aby uzyskać więcej informacji na serwerach zobacz:  
-  
--   [Serwery: implementowanie serwera](../mfc/servers-implementing-a-server.md)  
-  
--   [Serwery: implementowanie dokumentów serwera](../mfc/servers-implementing-server-documents.md)  
-  
--   [Serwery: implementowanie okien ramowych w miejscu](../mfc/servers-implementing-in-place-frame-windows.md)  
-  
--   [Serwery: elementy serwera](../mfc/servers-server-items.md)  
-  
--   [Serwery: kwestie dotyczące interfejsu użytkownika](../mfc/servers-user-interface-issues.md)  
-  
-## <a name="see-also"></a>Zobacz też  
- [OLE](../mfc/ole-in-mfc.md)   
- [Kontenery](../mfc/containers.md)   
- [Kontenery: Funkcje zaawansowane](../mfc/containers-advanced-features.md)   
- [Menu i zasoby (OLE)](../mfc/menus-and-resources-ole.md)   
- [Rejestracji](../mfc/registration.md)   
- [Serwery automatyzacji](../mfc/automation-servers.md)
+
+Aplikacja serwera (lub składnik aplikacji) tworzy elementy OLE (lub składniki) do użycia przez aplikacje kontenera. Wizualne edycji aplikacji serwera obsługuje również edycja wizualna lub aktywacji w miejscu. Jest inna forma serwera OLE [serwer automatyzacji](../mfc/automation-servers.md). Niektóre aplikacje serwera obsługuje tylko tworzenie elementów osadzonych; inne osoby obsługuje tworzenie elementy osadzone i połączone. Niektóre z nich obsługują łączenie tylko, mimo że jest to rzadkie. Wszystkie aplikacje serwera musi obsługiwać aktywacji przez aplikacje kontenera, gdy użytkownik chce, aby edytować element. Aplikacja może być zarówno kontenera, jak i serwera. Innymi słowy jego można zarówno dołączyć danych do swoich dokumentów i tworzyć dane, które można zintegrować jako elementy dokumenty w innych aplikacjach.
+
+Miniserver jest specjalnym typem aplikacji serwera, które mogą być uruchamiane tylko przez kontener. Microsoft Draw i Microsoft Graph są przykładami miniservers. Miniserver nie przechowuje dokumenty jako pliki na dysku. Zamiast tego jego dokumentów z odczytuje i zapisuje je do elementów w dokumentach należących do kontenerów. W rezultacie miniserver obsługuje tylko osadzania w nie łączenie.
+
+Pełny serwer można uruchamiać w aplikacji autonomicznej lub uruchomiona przez aplikację kontenera. Pełny serwer można przechowywać dokumenty, jako pliki na dysku. Może obsługiwać tylko osadzania, zarówno osadzania i łączenie lub tylko połączenie. Użytkownik aplikacji kontenera można utworzyć element osadzony, wybierając polecenia Wytnij lub Kopiuj w i na serwerze polecenie Paste w kontenerze. Połączony element jest tworzony przez wybranie polecenia kopiowania na serwerze i Wklej łącze w kontenerze. Alternatywnie użytkownik może utworzyć element osadzony lub połączony za pomocą okna dialogowego Wstawianie obiektu.
+
+W poniższej tabeli przedstawiono charakterystykę różnego rodzaju serwerów:
+
+### <a name="server-characteristics"></a>Właściwości serwera
+
+|Typ serwera|Obsługuje wiele wystąpień|Liczba elementów na dokumentu|Dokumenty, dla każdego wystąpienia|
+|--------------------|---------------------------------|------------------------|----------------------------|
+|Miniserver|Tak|1|1|
+|SDI pełny serwer|Tak|1 (Jeśli połączenie jest obsługiwany, co najmniej 1)|1|
+|Pełny serwer MDI|Brak (nie jest wymagane)|1 (Jeśli połączenie jest obsługiwany, co najmniej 1)|0 lub więcej|
+
+Aplikacja serwera powinien obsługiwać jednocześnie wiele kontenerów, aby w przypadku, gdy więcej niż jednego kontenera będzie służyć do edytować element osadzony lub połączony. Jeśli serwer jest aplikacją SDI (lub miniserver z interfejsem okno dialogowe), wielu wystąpień serwera musi mieć możliwość jednoczesnego uruchamiania. Dzięki temu osobne wystąpienie aplikacji do obsługi danego żądania kontenera.
+
+Jeśli serwer znajduje się aplikacja MDI, może utworzyć nowe podrzędne okno MDI każdorazowo kontenera musi edytowanie elementu. Dzięki temu jedno wystąpienie aplikacji może obsługiwać wiele kontenerów.
+
+Aplikacja serwera musisz poinformować OLE systemowych bibliotek DLL co należy zrobić, jeśli jedno wystąpienie serwera jest już uruchomiony podczas innego kontenera żądań swoich usług: czy należy uruchomić nowe wystąpienie serwera lub wszystkie kontenery żądania kierowane do jednego wystąpienia serwer.
+
+Aby uzyskać więcej informacji na serwerach zobacz:
+
+- [Serwery: implementowanie serwera](../mfc/servers-implementing-a-server.md)
+
+- [Serwery: implementowanie dokumentów serwera](../mfc/servers-implementing-server-documents.md)
+
+- [Serwery: implementowanie okien ramowych w miejscu](../mfc/servers-implementing-in-place-frame-windows.md)
+
+- [Serwery: elementy serwera](../mfc/servers-server-items.md)
+
+- [Serwery: kwestie dotyczące interfejsu użytkownika](../mfc/servers-user-interface-issues.md)
+
+## <a name="see-also"></a>Zobacz też
+
+[OLE](../mfc/ole-in-mfc.md)<br/>
+[Kontenery](../mfc/containers.md)<br/>
+[Kontenery: funkcje zaawansowane](../mfc/containers-advanced-features.md)<br/>
+[Menu i zasoby (OLE)](../mfc/menus-and-resources-ole.md)<br/>
+[Rejestracja](../mfc/registration.md)<br/>
+[Serwery automatyzacji](../mfc/automation-servers.md)
 

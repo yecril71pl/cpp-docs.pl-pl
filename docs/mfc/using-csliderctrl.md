@@ -17,30 +17,32 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3df9233a8b638dbf22d778d9a14fe513232ecdcf
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 8dec5e0500d7857c8b6781cfd0f78fb18cf93349
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33385820"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46380331"
 ---
 # <a name="using-csliderctrl"></a>Korzystanie z CSliderCtrl
-[CSliderCtrl](../mfc/reference/csliderctrl-class.md) klasa reprezentuje suwaka, nazywane również trackbar. "Suwaka" jest typu window, który zawiera suwaka i opcjonalnie znaczników znaków. Gdy użytkownik przesuwa suwak, za pomocą myszy lub klawiszy strzałek, suwak wysyła komunikaty powiadomień, aby wskazać zmianę.  
-  
- Formanty suwaka są przydatne, gdy użytkownik ma zaznacz wartość discrete lub zestaw kolejnych wartości w zakresie. Na przykład można użyć formantu suwaka umożliwia użytkownikom ustawić częstotliwość powtarzania klawiatury za pomocą suwaka do danego znacznika.  
-  
- Zostanie przesunięty suwak w kontrolce slider w przyrostach określające podczas jego tworzenia. Na przykład, jeśli określono, że kontrolka suwaka powinny mieć zakresu pięć, suwak można tylko zajmują sześciu położenia: pozycji suwaka i jedną pozycję dla każdego kolejnego przyrostu wartości z zakresu po lewej stronie. Zazwyczaj każdego z tych pozycji jest identyfikowany przez znacznika.  
-  
-## <a name="what-do-you-want-to-know-more-about"></a>Co chcesz dowiedzieć się więcej o  
-  
--   [Używanie kontrolek suwaka](../mfc/using-slider-controls.md)  
-  
--   [Style kontrolek suwaka](../mfc/slider-control-styles.md)  
-  
--   [Funkcje składowe kontrolki suwaka](../mfc/slider-control-member-functions.md)  
-  
--   [Komunikaty powiadomień suwaka](../mfc/slider-notification-messages.md)  
-  
-## <a name="see-also"></a>Zobacz też  
- [Kontrolki](../mfc/controls-mfc.md)
+
+[Z CSliderCtrl](../mfc/reference/csliderctrl-class.md) klasa reprezentuje kontrolkę suwaka, która jest również nazywany trackbar. "Kontrolki suwaka" jest oknem które zawiera suwaka i opcjonalnie znaczników znaków. Gdy użytkownik przesuwa suwaka, za pomocą myszy lub klawiszy strzałek, formant suwaka wysyła komunikaty powiadomień, aby wskazać zmianę.
+
+Formanty suwaka są przydatne, gdy użytkownik, który ma zaznacz wartość discrete lub zestaw kolejnych wartości w zakresie. Może na przykład użyć kontrolki suwaka, aby umożliwić użytkownikowi na ustawianie częstotliwości powtarzania klawiatury przez przesunięcie suwaka danego znacznika.
+
+Przenosi suwaka w kontrolce suwaka w przyrostach, które można określić podczas jego tworzenia. Na przykład, jeśli określisz, że kontrolki suwaka powinny mieć zakres pięć, suwak mogą tylko zajmować sześć stanowiska: pozycji z lewej strony kontrolki suwaka i jedną pozycję dla każdego przyrostu w zakresie. Zwykle każda z tych pozycji jest identyfikowany przez znacznika.
+
+## <a name="what-do-you-want-to-know-more-about"></a>Co chcesz dowiedzieć się więcej na temat
+
+- [Używanie kontrolek suwaka](../mfc/using-slider-controls.md)
+
+- [Style kontrolek suwaka](../mfc/slider-control-styles.md)
+
+- [Funkcje składowe kontrolki suwaka](../mfc/slider-control-member-functions.md)
+
+- [Komunikaty powiadomień suwaka](../mfc/slider-notification-messages.md)
+
+## <a name="see-also"></a>Zobacz też
+
+[Kontrolki](../mfc/controls-mfc.md)
 

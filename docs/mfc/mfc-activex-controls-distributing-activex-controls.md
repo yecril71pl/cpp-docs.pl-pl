@@ -35,57 +35,62 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d400bf09d2fd3484b573112d87735ce0a74d944e
-ms.sourcegitcommit: b4432d30f255f0cb58dce69cbc8cbcb9d44bc68b
+ms.openlocfilehash: 4f067b1835c9ff70c7a7c91d401a83e7fa3e1cce
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/13/2018
-ms.locfileid: "45534901"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46382300"
 ---
 # <a name="mfc-activex-controls-distributing-activex-controls"></a>Kontrolki ActiveX MFC: dystrybucja kontrolek ActiveX
-W tym artykule omówiono kilka problemów związanych z redystrybuowanie kontrolek ActiveX:  
-  
--   [ANSI lub Unicode kontroli wersji](#_core_ansi_or_unicode_control_versions)  
-  
--   [Instalowanie kontrolek ActiveX i redystrybucyjnych bibliotek DLL](#_core_installing_activex_controls_and_redistributable_dlls)  
-  
--   [Rejestrowanie formantów](#_core_registering_controls)  
+
+W tym artykule omówiono kilka problemów związanych z redystrybuowanie kontrolek ActiveX:
+
+- [ANSI lub Unicode kontroli wersji](#_core_ansi_or_unicode_control_versions)
+
+- [Instalowanie kontrolek ActiveX i redystrybucyjnych bibliotek DLL](#_core_installing_activex_controls_and_redistributable_dlls)
+
+- [Rejestrowanie formantów](#_core_registering_controls)
 
 
 >[!IMPORTANT]
 > ActiveX jest technologią starszą, która nie powinny być używane w przypadku nowych wdrożeń. Aby uzyskać więcej informacji na temat nowych technologii, które wypierają ActiveX zobacz [formantów ActiveX](activex-controls.md).
-  
-##  <a name="_core_ansi_or_unicode_control_versions"></a> ANSI lub Unicode kontroli wersji  
- Należy określić, czy do wysłania ANSI lub Unicode wersja kontrolki i / lub. Ta decyzja opiera się na przenośność czynniki związane z zestawów znaków ANSI i Unicode.  
-  
- Formanty ANSI, które działają we wszystkich systemach operacyjnych Win32, umożliwiają uzyskania maksymalnej przenośności między różnymi systemami operacyjnymi Win32. Formanty Unicode działa na tylko Windows NT (w wersji 3.51 lub nowszej), ale nie na Windows 95 lub Windows 98. Jeśli przenoszenia jest podstawową kwestią, dostarczaj ANSI kontrolki. Jeżeli kontrolkom będzie uruchamiany tylko na Windows NT, mogą być formanty Unicode. Można również wysłać zarówno i utworzyć swoją aplikację, zainstaluj wersję najbardziej odpowiedni dla systemu operacyjnego użytkownika.  
-  
-##  <a name="_core_installing_activex_controls_and_redistributable_dlls"></a> Instalowanie kontrolek ActiveX i redystrybucyjnych bibliotek DLL  
- Program instalacyjny, podane z formantów ActiveX należy utworzyć specjalne podkatalogiem katalogu Windows i zainstalować kontrolek. OCX w nim plików.  
-  
+
+##  <a name="_core_ansi_or_unicode_control_versions"></a> ANSI lub Unicode kontroli wersji
+
+Należy określić, czy do wysłania ANSI lub Unicode wersja kontrolki i / lub. Ta decyzja opiera się na przenośność czynniki związane z zestawów znaków ANSI i Unicode.
+
+Formanty ANSI, które działają we wszystkich systemach operacyjnych Win32, umożliwiają uzyskania maksymalnej przenośności między różnymi systemami operacyjnymi Win32. Formanty Unicode działa na tylko Windows NT (w wersji 3.51 lub nowszej), ale nie na Windows 95 lub Windows 98. Jeśli przenoszenia jest podstawową kwestią, dostarczaj ANSI kontrolki. Jeżeli kontrolkom będzie uruchamiany tylko na Windows NT, mogą być formanty Unicode. Można również wysłać zarówno i utworzyć swoją aplikację, zainstaluj wersję najbardziej odpowiedni dla systemu operacyjnego użytkownika.
+
+##  <a name="_core_installing_activex_controls_and_redistributable_dlls"></a> Instalowanie kontrolek ActiveX i redystrybucyjnych bibliotek DLL
+
+Program instalacyjny, podane z formantów ActiveX należy utworzyć specjalne podkatalogiem katalogu Windows i zainstalować kontrolek. OCX w nim plików.
+
 > [!NOTE]
->  Użyj Windows `GetWindowsDirectory` interfejsu API w programie Instalatora, aby uzyskać nazwę katalogu Windows. Można uzyskać nazwy podkatalogu na podstawie nazwy firmy lub produktu.  
-  
- Program instalacyjny, należy zainstalować wymagane pliki redystrybucyjne biblioteki DLL w katalogu systemu Windows. Jeśli dowolny z biblioteki DLL jest już obecny na komputerze użytkownika, program instalacyjny należy porównać ich wersje z wersjami, którą instalujesz. Tylko wtedy, gdy jego numer wersji jest wyższy niż plik, który został już zainstalowany, zainstaluj ponownie plik.  
-  
- Ponieważ formantów ActiveX może być używana tylko w aplikacje kontenera OLE, nie ma potrzeby dystrybucję pełny zestaw bibliotek DLL OLE przy użyciu kontrolki. Można założyć, że zawierającego aplikację (lub sam system operacyjny) ma standardowy OLE biblioteki DLL zainstalowane.  
-  
-##  <a name="_core_registering_controls"></a> Rejestrowanie formantów  
- Przed użyciem formantu odpowiednie wpisy należy utworzyć dla niego w bazie danych rejestracji Windows. Niektóre kontenery kontrolek ActiveX, podaj element menu dla użytkowników zarejestrować nowe kontrolki, ale ta funkcja nie może być dostępny w wszystkich kontenerów. W związku z tym można program instalacyjny, aby Zarejestruj kontrolki, gdy są one zainstalowane.  
-  
- Jeśli wolisz, możesz napisać program instalacyjny, aby zarejestrować formantu bezpośrednio zamiast tego.  
-  
- Użyj `LoadLibrary` interfejsu API Windows, aby załadować formantu biblioteki DLL. Następnie użyj `GetProcAddress` można uzyskać adresu funkcji "DllRegisterServer". Na koniec Wywołaj `DllRegisterServer` funkcji. W poniższym przykładzie kodu pokazano jedną metodę możliwe, gdzie `hLib` przechowuje dojście Biblioteka kontrolek i `lpDllEntryPoint` przechowuje adresu funkcji "DllRegisterServer".  
-  
- [!code-cpp[NVC_MFC_AxCont#16](../mfc/codesnippet/cpp/mfc-activex-controls-distributing-activex-controls_1.cpp)]  
-  
- Zaletą bezpośrednio rejestrowanie kontrolki jest konieczne do wywołania i ładowania oddzielny proces (to znaczy, REGSVR32), skracając czas instalacji. Ponadto ponieważ wewnętrzny proces rejestracji, program instalacyjny może obsługiwać błędy i nieprzewidziane sytuacjach lepsze niż proces zewnętrzny można.  
-  
+>  Użyj Windows `GetWindowsDirectory` interfejsu API w programie Instalatora, aby uzyskać nazwę katalogu Windows. Można uzyskać nazwy podkatalogu na podstawie nazwy firmy lub produktu.
+
+Program instalacyjny, należy zainstalować wymagane pliki redystrybucyjne biblioteki DLL w katalogu systemu Windows. Jeśli dowolny z biblioteki DLL jest już obecny na komputerze użytkownika, program instalacyjny należy porównać ich wersje z wersjami, którą instalujesz. Tylko wtedy, gdy jego numer wersji jest wyższy niż plik, który został już zainstalowany, zainstaluj ponownie plik.
+
+Ponieważ formantów ActiveX może być używana tylko w aplikacje kontenera OLE, nie ma potrzeby dystrybucję pełny zestaw bibliotek DLL OLE przy użyciu kontrolki. Można założyć, że zawierającego aplikację (lub sam system operacyjny) ma standardowy OLE biblioteki DLL zainstalowane.
+
+##  <a name="_core_registering_controls"></a> Rejestrowanie formantów
+
+Przed użyciem formantu odpowiednie wpisy należy utworzyć dla niego w bazie danych rejestracji Windows. Niektóre kontenery kontrolek ActiveX, podaj element menu dla użytkowników zarejestrować nowe kontrolki, ale ta funkcja nie może być dostępny w wszystkich kontenerów. W związku z tym można program instalacyjny, aby Zarejestruj kontrolki, gdy są one zainstalowane.
+
+Jeśli wolisz, możesz napisać program instalacyjny, aby zarejestrować formantu bezpośrednio zamiast tego.
+
+Użyj `LoadLibrary` interfejsu API Windows, aby załadować formantu biblioteki DLL. Następnie użyj `GetProcAddress` można uzyskać adresu funkcji "DllRegisterServer". Na koniec Wywołaj `DllRegisterServer` funkcji. W poniższym przykładzie kodu pokazano jedną metodę możliwe, gdzie `hLib` przechowuje dojście Biblioteka kontrolek i `lpDllEntryPoint` przechowuje adresu funkcji "DllRegisterServer".
+
+[!code-cpp[NVC_MFC_AxCont#16](../mfc/codesnippet/cpp/mfc-activex-controls-distributing-activex-controls_1.cpp)]
+
+Zaletą bezpośrednio rejestrowanie kontrolki jest konieczne do wywołania i ładowania oddzielny proces (to znaczy, REGSVR32), skracając czas instalacji. Ponadto ponieważ wewnętrzny proces rejestracji, program instalacyjny może obsługiwać błędy i nieprzewidziane sytuacjach lepsze niż proces zewnętrzny można.
+
 > [!NOTE]
->  Zanim program instalacyjny instaluje formantu ActiveX, powinny wywoływać `OleInitialize`. Po zakończeniu działania programu instalacyjnego wywołania `OleUnitialize`. Zapewnia to, że OLE systemowych bibliotek DLL są w stanie odpowiednie do rejestrowania formantu ActiveX.  
-  
- Należy zarejestrować MFCx0.DLL.  
-  
-## <a name="see-also"></a>Zobacz też  
- [Kontrolki ActiveX MFC](../mfc/mfc-activex-controls.md)
+>  Zanim program instalacyjny instaluje formantu ActiveX, powinny wywoływać `OleInitialize`. Po zakończeniu działania programu instalacyjnego wywołania `OleUnitialize`. Zapewnia to, że OLE systemowych bibliotek DLL są w stanie odpowiednie do rejestrowania formantu ActiveX.
+
+Należy zarejestrować MFCx0.DLL.
+
+## <a name="see-also"></a>Zobacz też
+
+[Kontrolki ActiveX MFC](../mfc/mfc-activex-controls.md)
 

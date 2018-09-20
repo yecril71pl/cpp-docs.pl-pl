@@ -20,12 +20,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 54699888fc2988dd9b4ccec2a57b6d9df0d4e79e
-ms.sourcegitcommit: f0c90000125a9497bf61e41624de189a043703c0
+ms.openlocfilehash: 335b22b015bf244e39d67781eae21b3c43328256
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44314776"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46379791"
 ---
 # <a name="attribute"></a>— atrybut
 
@@ -43,13 +43,13 @@ Umożliwia tworzenie atrybutów niestandardowych.
 
 ### <a name="parameters"></a>Parametry
 
-*AllowOn*  
+*AllowOn*<br/>
 Określa elementy języka, do których można zastosować atrybutu niestandardowego. Wartość domyślna to `System::AttributeTargets::All` (zobacz [System::AttributeTargets](https://msdn.microsoft.com/library/system.attributetargets.aspx)).
 
-*AllowMultiple*  
+*AllowMultiple*<br/>
 Określa, czy atrybut niestandardowy mogą dotyczyć wielokrotnie konstrukcję. Domyślną jest FALSE.
 
-*Dziedziczone*  
+*Dziedziczone*<br/>
 Wskazuje, czy ten atrybut ma być dziedziczona przez podklasy. Kompilator nie obsługuje specjalne tej funkcjonalności. to zadanie konsumentów atrybutu (`Reflection`, na przykład) do przestrzegania tych informacji. Jeśli *dziedziczone* ma wartość PRAWDA, ten atrybut jest dziedziczona. Jeśli *AllowMultiple* ma wartość TRUE, atrybut będą gromadzone w pochodnej składowej; Jeśli *AllowMultiple* ma wartość FALSE, atrybut spowoduje zastąpienie (lub Zastąp) w dziedziczeniu. Jeśli *dziedziczone* ma wartość FAŁSZ, ten atrybut nie będą dziedziczone. Domyślna wartość to TRUE.
 
 ## <a name="remarks"></a>Uwagi

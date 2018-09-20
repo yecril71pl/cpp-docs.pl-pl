@@ -20,12 +20,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: aebe1a48e037d2780f9b0c6443cbcba3e158677f
-ms.sourcegitcommit: f0c90000125a9497bf61e41624de189a043703c0
+ms.openlocfilehash: 07b129e2810b7b1310eb8988ca60fbd6e5dcad5a
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44318021"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46391933"
 ---
 # <a name="ole-db-consumer-attributes"></a>Atrybuty konsumentów OLE DB
 Atrybuty konsumentów OLE DB wstrzyknięcie kodu, w oparciu o [szablony OLE DB konsumenta](../data/oledb/ole-db-consumer-templates-reference.md), aby utworzyć pracy OLE DB użytkownikowi, który wykonuje zadania, takie jak otwieranie tabel, wykonując polecenia i uzyskiwanie dostępu do danych.
@@ -40,4 +40,5 @@ Atrybuty konsumentów OLE DB wstrzyknięcie kodu, w oparciu o [szablony OLE DB k
 |[db_table](../windows/db-table.md)|Zostanie otwarty tabeli OLE DB.|
   
 ## <a name="see-also"></a>Zobacz też
- [Atrybuty według grup](../windows/attributes-by-group.md)
+
+[Atrybuty według grup](../windows/attributes-by-group.md)

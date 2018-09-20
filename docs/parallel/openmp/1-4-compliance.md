@@ -12,18 +12,19 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7c1bde41491f456ff99b0cd0d1ccc8ab98508412
-ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
+ms.openlocfilehash: 1a332d8fb5de172c363c6f9c1bebba65d6fa0ff8
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33687234"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46381819"
 ---
 # <a name="14-compliance"></a>1.4 Zgodność
-Implementacja interfejsu API C/C++ OpenMP jest *OpenMP zgodne* Jeśli go rozpoznaje i zachowuje semantykę wszystkie elementy tej specyfikacji, tak jak w rozdziałach 1, 2, 3, 4, i dotyczą dodatek C. dodatki A, B, D, E i F informacje o tylko celów i nie są częścią specyfikacji. Implementacje, które obejmują tylko podzestaw interfejsu API nie są zgodne z OpenMP.  
-  
- Openmpc i C++ interfejsu API jest rozszerzeniem języka podstawowego, która jest obsługiwana przez implementację. Jeśli podstawowy język nie obsługuje konstrukcji języka lub rozszerzenia, które pojawia się w tym dokumencie, implementacja OpenMP nie jest wymagane do jego obsługi.  
-  
- Wszystkie funkcje biblioteki standardowe C i C++ i funkcji wbudowanych (to znaczy funkcji których kompilator ma określonych informacji na temat) musi być wątkowo. Niezsynchronizowane użycie funkcji obsługującej wielowątkowość przez inne wątki w ramach równoległego regionu dać niezdefiniowane zachowanie. Jednak to zachowanie nie może być taki sam jak region szeregowego. (Przykładem jest funkcja generowania liczb losowych.)  
-  
- Interfejs API C/C++ OpenMP — Określa, że określone zachowanie *zdefiniowane w implementacji.* Zgodnych implementacja OpenMP jest wymagany do definiowania i jego zachowanie w tych przypadkach dokumentu. Zobacz [E dodatku](../../parallel/openmp/e-implementation-defined-behaviors-in-openmp-c-cpp.md), strony 97, aby uzyskać listę zachowania zdefiniowane w implementacji.
+
+Implementacja OpenMP API języka C/C++ jest *CLS OpenMP* jeśli ją rozpoznaje i zachowuje semantykę wszystkie elementy tej specyfikacji, tak jak w rozdziałach 1, 2, 3, 4, i związanych z dodatek C. dodatki A, B, D, E i f. informacje o wyłącznie do celów i nie są częścią specyfikacji. Implementacji, które zawierają tylko podzestaw interfejsu API nie są zgodne z OpenMP.
+
+OpenMP C i C++ interfejsu API jest rozszerzeniem języka podstawowego, która jest obsługiwana przez implementację. Jeśli język podstawowy nie obsługuje konstrukcją języka pierwszej klasy lub rozszerzenie, które pojawia się w tym dokumencie, implementacja OpenMP nie jest wymagane do jego obsługi.
+
+Wszystkie standardowe funkcje biblioteki C i C++ i funkcji wbudowanych (oznacza to, że funkcje których kompilator zna określonych) musi być metodą o bezpiecznych wątkach. Niezsynchronizowane korzystania z funkcji metodą o bezpiecznych wątkach, przez inne wątki w ramach równoległego regionu nie generuje niezdefiniowane zachowanie. Jednak to zachowanie nie może być taki sam jak region szeregowe. (Funkcja generowania liczb losowych jest przykładem).
+
+OpenMP C/C++ API Określa, że określone zachowanie jest *zdefiniowanych w implementacji.* Odpowiadające implementacja OpenMP jest wymagany do definiowania i zarządzania dokumentami jego zachowanie w takich przypadkach. Zobacz [dodatku E](../../parallel/openmp/e-implementation-defined-behaviors-in-openmp-c-cpp.md), stronie 97, aby uzyskać listę zachowania zdefiniowane w implementacji.

@@ -39,12 +39,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 3bc016367495be8cc10c09605e8018811bde5ca9
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 5dfe6622edcd8446b844b5d3d7c03d1fd5d0197c
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46118911"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46379414"
 ---
 # <a name="runtimeclass-class"></a>RuntimeClass — Klasa
 
@@ -61,10 +61,10 @@ template <unsigned int classFlags, typename ...TInterfaces> class RuntimeClass;
 
 ### <a name="parameters"></a>Parametry
 
-*classFlags*  
+*classFlags*<br/>
 Opcjonalny parametr. Kombinacji jednego lub więcej [RuntimeClassType](../windows/runtimeclasstype-enumeration.md) wartości wyliczenia. `__WRL_CONFIGURATION_LEGACY__` Makr można zdefiniować, aby zmienić domyślną wartość classFlags dla wszystkich klas środowiska uruchomieniowego w projekcie. Jeśli zdefiniowane, RuntimeClass wystąpienia są inne niż agile domyślnie. Jeśli nie zostanie zdefiniowana, RuntimeClass wystąpienia są elastyczne domyślnie. Aby uniknąć niejednoznaczności należy zawsze określić `Microsoft::WRL::FtmBase` w `TInterfaces` lub `RuntimeClassType::InhibitFtmBase`. Uwaga: Jeżeli InhibitFtmBase i FtmBase jest używany zarówno obiekt będzie agile.
 
-*TInterfaces*  
+*TInterfaces*<br/>
 Na liście interfejsów obiekt implementuje poza `IUnknown`, `IInspectable` lub innych interfejsów w wartości clientauthtrustmode [RuntimeClassType](../windows/runtimeclasstype-enumeration.md). Również może go wyświetlać innych klas pochodzących z, szczególnie `Microsoft::WRL::FtmBase` na obiekt agile i spowodować, tak aby implementował `IMarshal`.
 
 ## <a name="members"></a>Elementy członkowskie
@@ -152,10 +152,10 @@ STDMETHOD(
 
 ### <a name="parameters"></a>Parametry
 
-*iidCount*  
+*iidCount*<br/>
 Po zakończeniu tej operacji, całkowita liczba elementów w tablicy *IID*.
 
-*IID*  
+*IID*<br/>
 Gdy ta operacja zostanie ukończone, wskaźnik do tablicy identyfikatorów interfejsu.
 
 ### <a name="return-value"></a>Wartość zwracana
@@ -174,7 +174,7 @@ STDMETHOD( GetRuntimeClassName )(
 
 ### <a name="parameters"></a>Parametry
 
-*runtimeName*  
+*runtimeName*<br/>
 Po zakończeniu tej operacji, nazwa klasy środowiska uruchomieniowego.
 
 ### <a name="return-value"></a>Wartość zwracana
@@ -197,7 +197,7 @@ STDMETHOD(GetTrustLevel)(
 
 ### <a name="parameters"></a>Parametry
 
-*trustLvl*  
+*trustLvl*<br/>
 Po zakończeniu tej operacji, bieżący poziom zaufania `RuntimeClass` obiektu.
 
 ### <a name="return-value"></a>Wartość zwracana
@@ -220,7 +220,7 @@ STDMETHOD(
 
 ### <a name="parameters"></a>Parametry
 
-*weakReference*  
+*weakReference*<br/>
 Gdy ta operacja zostanie ukończone, wskaźnik do obiektu słabe odwołanie.
 
 ### <a name="return-value"></a>Wartość zwracana
@@ -253,10 +253,10 @@ STDMETHOD(
 
 ### <a name="parameters"></a>Parametry
 
-*Parametr riid*  
+*Parametr riid*<br/>
 Identyfikator interfejsu.
 
-*ppvObject*  
+*ppvObject*<br/>
 Po zakończeniu tego opereation, wskaźnik do interfejsu, określonego przez *riid* parametru.
 
 ### <a name="return-value"></a>Wartość zwracana

@@ -15,19 +15,21 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 03ff905b76ba4a215f6993c1bb0002dd1f87e06b
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 81631ba25f898e3740b82c0fab9d5af5da930117
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33379710"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46373362"
 ---
 # <a name="settings-for-the-toolbar-control"></a>Ustawienia formantu paska narzędzi
-Przyciski paska narzędzi można wyświetlić mapę bitową i/lub ciąg. Rozmiar obrazu jest domyślnie wymiary 16 przez 15 pikseli. Wszystkie przyciski są tej samej szerokości, domyślny 24 na 22 pikseli. Wysokość paska narzędzi jest określany przez wysokość przycisków i szerokość paska narzędzi jest taka sama jak szerokość obszaru klienckiego okna nadrzędnego, również domyślnie.  
-  
- Pasek narzędzi może zawierać dostosowania wbudowane funkcje, w tym okno dialogowe dostosowanie zdefiniowane przez system, które umożliwiają użytkownikom wstawianie, usuwanie lub rozmieszczanie przycisków paska narzędzi. Aplikacja określa, czy funkcje dostosowywania są dostępne dla użytkownika i określa zakres, do którego użytkownik może dostosować na pasku narzędzi. Aby uzyskać więcej informacji na temat dostosowywania paska narzędzi, zobacz klasy [CToolBarCtrl](../mfc/reference/ctoolbarctrl-class.md) w *odwołania MFC*.  
-  
-## <a name="see-also"></a>Zobacz też  
- [Korzystanie z CToolBarCtrl](../mfc/using-ctoolbarctrl.md)   
- [Kontrolki](../mfc/controls-mfc.md)
+
+Przyciski paska narzędzi można wyświetlać mapę bitową i/lub ciąg. Domyślnie rozmiar obrazu jest równa wymiary 16 x 15 pikseli. Wszystkie przyciski są taką samą szerokość na domyślny 24 przez 22 pikseli. Wysokość paska narzędzi jest określana przez wysokość przycisków i szerokości paska narzędzi jest taka sama jak szerokość obszar klienta okna nadrzędnego, również domyślnie.
+
+Pasek narzędzi może mieć Dostosowywanie wbudowane funkcje, w tym okno dialogowe dostosowanie zdefiniowane przez system, które umożliwia użytkownikowi Wstawianie, usuwanie lub ponowne rozmieszczanie przycisków paska narzędzi. Aplikacja określa, czy funkcje dostosowywania są dostępne dla użytkownika i określa zakres, do którego użytkownik może dostosować na pasku narzędzi. Aby uzyskać więcej informacji na temat dostosowywania na pasku narzędzi, zobacz klasę [CToolBarCtrl](../mfc/reference/ctoolbarctrl-class.md) w *odwołanie MFC*.
+
+## <a name="see-also"></a>Zobacz też
+
+[Korzystanie z CToolBarCtrl](../mfc/using-ctoolbarctrl.md)<br/>
+[Kontrolki](../mfc/controls-mfc.md)
 

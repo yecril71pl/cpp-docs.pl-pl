@@ -18,54 +18,58 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a15310be9a879a2dbcb117a987e56571e953f825
-ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
+ms.openlocfilehash: de1b63cf24fbc84130302fcbae2cb965e8d00597
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33686025"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46376023"
 ---
 # <a name="staticpartitioner-class"></a>static_partitioner — Klasa
-`static_partitioner` Klasa reprezentuje partycjonowania statycznego zakresu iterowane przez `parallel_for`. Obiekt partitioner dzieli zakres na tyle fragmenty są dostępne dla harmonogramu underyling pracowników.  
-  
-## <a name="syntax"></a>Składnia  
-  
+
+`static_partitioner` Klasa reprezentuje partycjonowania statycznego zakresu postanowiliśmy za pośrednictwem przez `parallel_for`. Partycjonera dzieli zakres na dowolną liczbę fragmentów są dostępne do harmonogramu underyling procesów roboczych.
+
+## <a name="syntax"></a>Składnia
+
 ```
 class static_partitioner;
-```  
-  
-## <a name="members"></a>Elementy członkowskie  
-  
-### <a name="public-constructors"></a>Konstruktory publiczne  
-  
-|Nazwa|Opis|  
-|----------|-----------------|  
-|[static_partitioner](#ctor)|Konstruuje `static_partitioner` obiektu.|  
-|[~ static_partitioner — destruktor](#dtor)|Niszczy `static_partitioner` obiektu.|  
-  
-## <a name="inheritance-hierarchy"></a>Hierarchia dziedziczenia  
- `static_partitioner`  
-  
-## <a name="requirements"></a>Wymagania  
- **Nagłówek:** ppl.h  
-  
- **Namespace:** współbieżności  
-  
-##  <a name="dtor"></a> ~ static_partitioner — 
+```
 
- Niszczy `static_partitioner` obiektu.  
-  
+## <a name="members"></a>Elementy członkowskie
+
+### <a name="public-constructors"></a>Konstruktory publiczne
+
+|Nazwa|Opis|
+|----------|-----------------|
+|[static_partitioner](#ctor)|Konstruuje `static_partitioner` obiektu.|
+|[~ static_partitioner — destruktor](#dtor)|Niszczy `static_partitioner` obiektu.|
+
+## <a name="inheritance-hierarchy"></a>Hierarchia dziedziczenia
+
+`static_partitioner`
+
+## <a name="requirements"></a>Wymagania
+
+**Nagłówek:** ppl.h
+
+**Namespace:** współbieżności
+
+##  <a name="dtor"></a> ~ static_partitioner
+
+Niszczy `static_partitioner` obiektu.
+
 ```
 ~static_partitioner();
-```  
-  
-##  <a name="ctor"></a> static_partitioner — 
+```
 
- Konstruuje `static_partitioner` obiektu.  
-  
+##  <a name="ctor"></a> static_partitioner —
+
+Konstruuje `static_partitioner` obiektu.
+
 ```
 static_partitioner();
-```  
-  
-## <a name="see-also"></a>Zobacz też  
- [Przestrzeń nazw współbieżności](concurrency-namespace.md)
+```
+
+## <a name="see-also"></a>Zobacz też
+
+[Przestrzeń nazw współbieżności](concurrency-namespace.md)

@@ -16,52 +16,56 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: dddf9c117f2366496609f8bdf4ffc2f069f66ace
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 531dbc3c0e9b609aeaf5d9179491aa0fb3990363
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43199576"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46382924"
 ---
 # <a name="paintstruct-structure"></a>Struktura PAINTSTRUCT
-`PAINTSTRUCT` Struktura zawiera informacje, który może służyć do malowania obszaru klienckiego okna.  
-  
-## <a name="syntax"></a>Składnia  
-  
-```  
-typedef struct tagPAINTSTRUCT {  
-    HDC hdc;  
-    BOOL fErase;  
-    RECT rcPaint;  
-    BOOL fRestore;  
-    BOOL fIncUpdate;  
-    BYTE rgbReserved[16];  
-} PAINTSTRUCT;  
-```  
-  
-#### <a name="parameters"></a>Parametry  
- *elementu hdc*  
- Identyfikuje kontekst wyświetlania ma być używany do malowania.  
-  
- *fErase*  
- Określa, czy tło powinien być narysowany ponownie. Nie jest równa 0, jeśli aplikacja ponownie narysować tła. Aplikacja jest odpowiedzialna za rysowania tła, jeśli klasę okna Windows została utworzona bez pędzel tła (zobacz opis `hbrBackground` członkiem [WNDCLASS](https://msdn.microsoft.com/library/windows/desktop/ms633576) struktury w zestawie Windows SDK).  
-  
- *rcPaint*  
- Określa lewym górnym i dolnym prawym rogu prostokąta, w której zażądano malowania.  
-  
- *fRestore*  
- Zastrzeżoną składową. Jest ono używane wewnętrznie przez Windows.  
-  
- *fIncUpdate*  
- Zastrzeżoną składową. Jest ono używane wewnętrznie przez Windows.  
-  
- *rgbReserved [16]*  
- Zastrzeżoną składową. Zastrzeżone blok pamięć używana wewnętrznie przez Windows.  
-  
-## <a name="requirements"></a>Wymagania  
- **Nagłówek:** winuser.h  
-  
-## <a name="see-also"></a>Zobacz też  
- [Struktury, style, wywołania zwrotne i mapy komunikatów](../../mfc/reference/structures-styles-callbacks-and-message-maps.md)   
- [CPaintDC::m_ps](../../mfc/reference/cpaintdc-class.md#m_ps)
+
+`PAINTSTRUCT` Struktura zawiera informacje, który może służyć do malowania obszaru klienckiego okna.
+
+## <a name="syntax"></a>Składnia
+
+```
+typedef struct tagPAINTSTRUCT {
+    HDC hdc;
+    BOOL fErase;
+    RECT rcPaint;
+    BOOL fRestore;
+    BOOL fIncUpdate;
+    BYTE rgbReserved[16];
+} PAINTSTRUCT;
+```
+
+#### <a name="parameters"></a>Parametry
+
+*elementu hdc*<br/>
+Identyfikuje kontekst wyświetlania ma być używany do malowania.
+
+*fErase*<br/>
+Określa, czy tło powinien być narysowany ponownie. Nie jest równa 0, jeśli aplikacja ponownie narysować tła. Aplikacja jest odpowiedzialna za rysowania tła, jeśli klasę okna Windows została utworzona bez pędzel tła (zobacz opis `hbrBackground` członkiem [WNDCLASS](https://msdn.microsoft.com/library/windows/desktop/ms633576) struktury w zestawie Windows SDK).
+
+*rcPaint*<br/>
+Określa lewym górnym i dolnym prawym rogu prostokąta, w której zażądano malowania.
+
+*fRestore*<br/>
+Zastrzeżoną składową. Jest ono używane wewnętrznie przez Windows.
+
+*fIncUpdate*<br/>
+Zastrzeżoną składową. Jest ono używane wewnętrznie przez Windows.
+
+*rgbReserved [16]*<br/>
+Zastrzeżoną składową. Zastrzeżone blok pamięć używana wewnętrznie przez Windows.
+
+## <a name="requirements"></a>Wymagania
+
+**Nagłówek:** winuser.h
+
+## <a name="see-also"></a>Zobacz też
+
+[Struktury, style, wywołania zwrotne i mapy komunikatów](../../mfc/reference/structures-styles-callbacks-and-message-maps.md)<br/>
+[CPaintDC::m_ps](../../mfc/reference/cpaintdc-class.md#m_ps)
 

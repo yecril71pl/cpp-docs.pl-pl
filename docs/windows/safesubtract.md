@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: ac6968a688c50ad665e8b28a883eaf62255aaf28
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: 264a5ccbda8100e7e7fb951a2a8d30e983105efa
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45700113"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46375336"
 ---
 # <a name="safesubtract"></a>SafeSubtract
 
@@ -71,7 +71,7 @@ Aby uzyskać więcej informacji na temat typów szablonu `T` i `U`, zobacz [safe
 
 ## <a name="see-also"></a>Zobacz też
 
-[SafeInt, funkcje](../windows/safeint-functions.md)  
-[Biblioteka SafeInt](../windows/safeint-library.md)  
-[SafeInt, klasa](../windows/safeint-class.md)  
+[SafeInt, funkcje](../windows/safeint-functions.md)<br/>
+[Biblioteka SafeInt](../windows/safeint-library.md)<br/>
+[SafeInt, klasa](../windows/safeint-class.md)<br/>
 [SafeAdd](../windows/safeadd.md)

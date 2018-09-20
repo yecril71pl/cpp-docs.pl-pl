@@ -15,35 +15,37 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1deb33adc104775cf9b76daf75d4ee08b6475f0a
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: ea9ab73bf054b07b24beee8a222cc0a138b9513d
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33342310"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46395261"
 ---
 # <a name="creating-a-rebar-control"></a>Tworzenie formantu paska pomocniczego
-[Crebarctrl —](../mfc/reference/crebarctrl-class.md) obiektów należy utworzyć przed obiektem nadrzędnym jest widoczny. Pozwala to zmniejszyć możliwości malowania problemów.  
-  
- Na przykład formanty paska pomocniczego (używane w obiektach okno ramowe) są często używane jako nadrzędny systemu windows dla formanty paska narzędzi. W związku z tym nadrzędnego formantu paska pomocniczego jest obiektem ramki okna. Ponieważ obiekt window ramki jest elementem nadrzędnym `OnCreate` umieścić Tworzenie formantu paska pomocniczego jest funkcja członkowska (nadrzędnego).  
-  
- Aby użyć `CReBarCtrl` obiektu, zazwyczaj będzie wykonaj następujące kroki:  
-  
-### <a name="to-use-a-crebarctrl-object"></a>Aby użyć obiektu crebarctrl —  
-  
-1.  Utworzyć [crebarctrl —](../mfc/reference/crebarctrl-class.md) obiektu.  
-  
-2.  Wywołanie [Utwórz](../mfc/reference/crebarctrl-class.md#create) utworzyć typowe kontrolki paska pomocniczego systemu Windows i dołączenie go do `CReBarCtrl` obiektu, określając wszelkie potrzebne style.  
-  
-3.  Załadować mapy bitowej, w wyniku wywołania [CBitmap::LoadBitmap](../mfc/reference/cbitmap-class.md#loadbitmap), ma być używany jako tło obiekt formantu paska pomocniczego.  
-  
-4.  Utwórz i zainicjuj wszystkie okna obiektów podrzędnych (paski narzędzi, formantów okna dialogowego itd.) znajdujące przez obiekt formantu paska pomocniczego.  
-  
-5.  Inicjowanie **REBARBANDINFO** struktury niezbędne informacje dla grupy o do wstawienia.  
-  
-6.  Wywołanie [InsertBand](../mfc/reference/crebarctrl-class.md#insertband) do wstawienia istniejących okien podrzędnych (takich jak `m_wndReToolBar`) do nowego formantu paska pomocniczego. Aby uzyskać więcej informacji na wstawianie pasm do istniejącego formantu paska pomocniczego, zobacz [formanty paska pomocniczego i paski](../mfc/rebar-controls-and-bands.md).  
-  
-## <a name="see-also"></a>Zobacz też  
- [Korzystanie z CReBarCtrl](../mfc/using-crebarctrl.md)   
- [Kontrolki](../mfc/controls-mfc.md)
+
+[Z CReBarCtrl](../mfc/reference/crebarctrl-class.md) obiektów należy utworzyć przed obiektem nadrzędnym jest widoczna. W ten sposób możliwości problemów malowania.
+
+Na przykład formanty paska pomocniczego (używane w obiektach okna ramki) są powszechnie używane jako nadrzędny systemu windows dla formantów paska narzędzi. Dlatego nadrzędnego formantu paska pomocniczego jest obiekt okna w ramce. Ponieważ obiekt okna ramki jest elementem nadrzędnym `OnCreate` funkcji elementu członkowskiego (nadrzędnego) to doskonałe miejsce, aby utworzyć formant paska pomocniczego.
+
+Aby użyć `CReBarCtrl` obiektu będzie najczęściej wykonaj następujące kroki:
+
+### <a name="to-use-a-crebarctrl-object"></a>Aby użyć obiektu z CReBarCtrl
+
+1. Konstruowania [z CReBarCtrl](../mfc/reference/crebarctrl-class.md) obiektu.
+
+1. Wywołaj [Utwórz](../mfc/reference/crebarctrl-class.md#create) do tworzenia formantu typowego paska pomocniczego Windows i dołącz je do `CReBarCtrl` obiektu, określając dowolne żądane style.
+
+1. Ładowanie mapy bitowej przy użyciu wywołania do [CBitmap::LoadBitmap](../mfc/reference/cbitmap-class.md#loadbitmap), który zostanie użyty jako tło obiekt formantu paska pomocniczego.
+
+1. Utwórz i zainicjuj wszystkie okna obiektów podrzędnych (paski narzędzi, formantów okna dialogowego i tak dalej), które będzie zawierać obiekt formantu paska pomocniczego.
+
+1. Inicjowanie **REBARBANDINFO** struktury wymaganych informacji dla urządzenia band o do wstawienia.
+
+1. Wywołaj [InsertBand](../mfc/reference/crebarctrl-class.md#insertband) do wstawienia istniejących okien podrzędnych (takich jak `m_wndReToolBar`) do nowej kontrolki paska pomocniczego. Aby uzyskać więcej informacji na temat Wstawianie pasma do istniejącej kontrolki paska pomocniczego, zobacz [formanty paska pomocniczego i paski](../mfc/rebar-controls-and-bands.md).
+
+## <a name="see-also"></a>Zobacz też
+
+[Korzystanie z CReBarCtrl](../mfc/using-crebarctrl.md)<br/>
+[Kontrolki](../mfc/controls-mfc.md)
 

@@ -25,12 +25,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: cda24d58e26157b8730ae5d010e0874195151b79
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: c7047161a059432b43d4ff1a92e9c4d10dc01d51
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43756931"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46387019"
 ---
 # <a name="cstring-operations-relating-to-c-style-strings"></a>Cstring — operacje odnoszące się do ciągów stylu C
 
@@ -111,6 +111,6 @@ Dla większości wyników funkcji, można po prostu zwrócenia `CString` obiekt 
 
 ## <a name="see-also"></a>Zobacz też
 
-[Ciągi (ATL/MFC)](../atl-mfc-shared/strings-atl-mfc.md)   
+[Ciągi (ATL/MFC)](../atl-mfc-shared/strings-atl-mfc.md)<br/>
 [CString — przekazywanie argumentów](../atl-mfc-shared/cstring-argument-passing.md)
 

@@ -21,21 +21,23 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6510f7f3bd9a88f4b938d2646bad6750fe310def
-ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
+ms.openlocfilehash: ee823d7b37428ea335d5d789a4fcfb4caa673dda
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43688750"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46378065"
 ---
 # <a name="running-a-c-clr-application-on-a-previous-runtime-version"></a>Uruchamianie aplikacji C++/clr w poprzedniej wersji środowiska uruchomieniowego
-O ile nie określono inaczej, aplikacji w języku C++ .NET Framework został opracowany pod kątem są uruchamiane w wersji środowiska uruchomieniowego (języka wspólnego CLR) języka wspólnego, której kompilator używa do tworzenia aplikacji. Jednak jest możliwe dla aplikacji .exe, który zaprojektowano pod kątem jednej wersji środowiska uruchomieniowego do uruchamiania w innej wersji, który zapewnia wymaganą funkcję.  
-  
- Aby to osiągnąć, należy podać plik app.config, który zawiera informacje o wersji środowiska uruchomieniowego w `supportedRuntime` tagu.  
-  
- W czasie wykonywania plik app.config musi mieć nazwę w postaci *nazwa_pliku.ext*.config, gdzie *nazwa_pliku.ext* jest nazwą pliku wykonywalnego, który uruchomił aplikację, a musi być w tym samym katalogu co plik wykonywalny. Na przykład jeśli aplikacja nosi nazwę TestApp.exe, plik app.config będzie nosić TestApp.exe.config.  
-  
- Jeśli określisz więcej niż jedna wersja środowiska uruchomieniowego i aplikacja zostanie uruchomiona na komputerze, który ma więcej niż jedna wersja zainstalowanego środowiska uruchomieniowego, aplikacja używa pierwszej wersji, została określona w pliku konfiguracji, który jest zainstalowany.  
-  
-## <a name="see-also"></a>Zobacz też  
- [Wdrażanie aplikacji komputerowych](../ide/deploying-native-desktop-applications-visual-cpp.md)
+
+O ile nie określono inaczej, aplikacji w języku C++ .NET Framework został opracowany pod kątem są uruchamiane w wersji środowiska uruchomieniowego (języka wspólnego CLR) języka wspólnego, której kompilator używa do tworzenia aplikacji. Jednak jest możliwe dla aplikacji .exe, który zaprojektowano pod kątem jednej wersji środowiska uruchomieniowego do uruchamiania w innej wersji, który zapewnia wymaganą funkcję.
+
+Aby to osiągnąć, należy podać plik app.config, który zawiera informacje o wersji środowiska uruchomieniowego w `supportedRuntime` tagu.
+
+W czasie wykonywania plik app.config musi mieć nazwę w postaci *nazwa_pliku.ext*.config, gdzie *nazwa_pliku.ext* jest nazwą pliku wykonywalnego, który uruchomił aplikację, a musi być w tym samym katalogu co plik wykonywalny. Na przykład jeśli aplikacja nosi nazwę TestApp.exe, plik app.config będzie nosić TestApp.exe.config.
+
+Jeśli określisz więcej niż jedna wersja środowiska uruchomieniowego i aplikacja zostanie uruchomiona na komputerze, który ma więcej niż jedna wersja zainstalowanego środowiska uruchomieniowego, aplikacja używa pierwszej wersji, została określona w pliku konfiguracji, który jest zainstalowany.
+
+## <a name="see-also"></a>Zobacz też
+
+[Wdrażanie aplikacji komputerowych](../ide/deploying-native-desktop-applications-visual-cpp.md)

@@ -20,12 +20,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: 795c16a46356eb9599e02b43b51066b603b8b9ce
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 4fef169cb0e2386c1629064ad7ea8a1a70a5c517
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43222111"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46382079"
 ---
 # <a name="using-a-windows-form-user-control-in-mfc"></a>Używanie formantu użytkownika formularza systemu Windows w MFC
 
@@ -85,5 +85,5 @@ Jeśli Twoja aplikacja MFC używa Windows Forms, musisz ponownie rozdzielić mfc
 
 ## <a name="see-also"></a>Zobacz także
 
-[Elementy interfejsu użytkownika](../mfc/user-interface-elements-mfc.md)  
-[Widoki formularzy](../mfc/form-views-mfc.md)  
+[Elementy interfejsu użytkownika](../mfc/user-interface-elements-mfc.md)<br/>
+[Widoki formularzy](../mfc/form-views-mfc.md)

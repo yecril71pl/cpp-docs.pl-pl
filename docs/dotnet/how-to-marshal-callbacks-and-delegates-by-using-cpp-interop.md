@@ -1,5 +1,5 @@
 ---
-title: 'Porady: kierowanie wywołań zwrotnych i delegatów za pomocą międzyoperacyjności języka C++ | Dokumentacja firmy Microsoft'
+title: 'Porady: przeprowadzanie Marshalingu wywołań zwrotnych i delegatów za pomocą międzyoperacyjności języka C++ | Dokumentacja firmy Microsoft'
 ms.custom: get-started-article
 ms.date: 11/04/2016
 ms.technology:
@@ -20,131 +20,135 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: dd1b9a13ebcc9f416a2953f53c98231b7a0df3c2
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: db3d4cf59aa3ec14e964d53a54afbe5a9fe0aecd
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33132781"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46381897"
 ---
 # <a name="how-to-marshal-callbacks-and-delegates-by-using-c-interop"></a>Porady: przeprowadzanie marshalingu wywołań zwrotnych i delegatów za pomocą międzyoperacyjności języka C++
-W tym temacie przedstawiono kierowanie wywołań zwrotnych i deleguje (zarządzanej wersji wywołanie zwrotne) między zarządzanymi i niezarządzanymi kodu za pomocą języka Visual C++.  
-  
- Poniższy kod przykłady użycia [zarządzane, niezarządzane](../preprocessor/managed-unmanaged.md) dyrektywy #pragma do zaimplementowania zarządzanych i niezarządzanych funkcji w tym samym pliku, ale można również zdefiniować funkcje w oddzielnych plików. Nie trzeba być kompilowana przy użyciu plików zawierających tylko funkcje niezarządzane [/CLR (kompilacja języka wspólnego środowiska uruchomieniowego)](../build/reference/clr-common-language-runtime-compilation.md).  
-  
-## <a name="example"></a>Przykład  
- W poniższym przykładzie pokazano sposób konfigurowania niezarządzanego API do wyzwolenia zarządzanego obiektu delegowanego. Delegat zarządzanych jest tworzony i jednej z metod międzyoperacyjnego <xref:System.Runtime.InteropServices.Marshal.GetFunctionPointerForDelegate%2A>, służy do pobierania podstawowy punkt wejścia dla delegata. Ten adres są następnie przekazywane do niezarządzanej funkcji wywołania go z nie wie, fakt, że są one zaimplementowane jako funkcja zarządzanych.  
-  
- Zwróć uwagę, że jest to możliwe, ale nie jest to konieczne, aby przypiąć delegata za pomocą [pin_ptr (C + +/ CLI)](../windows/pin-ptr-cpp-cli.md) zapobiegające jej ponownie znajduje się lub usuwane przez moduł garbage collector. Konieczna jest ochrona z przedwczesny wyrzucanie elementów bezużytecznych, ale przypinanie chroni więcej niż jest to konieczne, uniemożliwia kolekcji, ale uniemożliwia także programowi relokacji.  
-  
- Jeśli delegat znajduje się ponownie przez wyrzucania elementów bezużytecznych, nie wpłynie to wywołanie zwrotne underlaying zarządzane, więc <xref:System.Runtime.InteropServices.GCHandle.Alloc%2A> służy do dodawania odwołania do delegata, umożliwiając przenoszenie obiektu delegowanego, ale uniemożliwia usuwania. Za pomocą dojścia GCHandle zamiast pin_ptr zmniejsza ryzyko fragmentacji sterty zarządzanej.  
-  
-```  
-// MarshalDelegate1.cpp  
-// compile with: /clr  
-#include <iostream>  
-  
-using namespace System;  
-using namespace System::Runtime::InteropServices;  
-  
-#pragma unmanaged  
-  
-// Declare an unmanaged function type that takes two int arguments  
-// Note the use of __stdcall for compatibility with managed code  
-typedef int (__stdcall *ANSWERCB)(int, int);  
-  
-int TakesCallback(ANSWERCB fp, int n, int m) {  
-   printf_s("[unmanaged] got callback address, calling it...\n");  
-   return fp(n, m);  
-}  
-  
-#pragma managed  
-  
-public delegate int GetTheAnswerDelegate(int, int);  
-  
-int GetNumber(int n, int m) {  
-   Console::WriteLine("[managed] callback!");  
-   return n + m;  
-}  
-  
-int main() {  
-   GetTheAnswerDelegate^ fp = gcnew GetTheAnswerDelegate(GetNumber);  
-   GCHandle gch = GCHandle::Alloc(fp);  
-   IntPtr ip = Marshal::GetFunctionPointerForDelegate(fp);  
-   ANSWERCB cb = static_cast<ANSWERCB>(ip.ToPointer());  
-   Console::WriteLine("[managed] sending delegate as callback...");  
-  
-// force garbage collection cycle to prove  
-// that the delegate doesn't get disposed  
-   GC::Collect();  
-  
-   int answer = TakesCallback(cb, 243, 257);  
-  
-// release reference to delegate  
-   gch.Free();  
-}  
-```  
-  
-## <a name="example"></a>Przykład  
- Poniższy przykład jest podobny do poprzedniego przykładu, ale w takim przypadku wskaźnika określona funkcja jest przechowywane przez niezarządzanego API, aby go można wywołać w dowolnej chwili, wymagających pomijane wyrzucanie elementów bezużytecznych przez dowolnego czas. W związku z tym w poniższym przykładzie użyto globalnego wystąpienia <xref:System.Runtime.InteropServices.GCHandle> uniemożliwi delegat przeniesiono, niezależnie od zakresem funkcji. Zgodnie z opisem w pierwszym przykładzie, przy użyciu pin_ptr nie jest konieczne te przykłady, ale w takim przypadku nie działa mimo to, jak zakres pin_ptr jest ograniczona do jednej funkcji.  
-  
-```  
-// MarshalDelegate2.cpp  
-// compile with: /clr   
-#include <iostream>  
-  
-using namespace System;  
-using namespace System::Runtime::InteropServices;  
-  
-#pragma unmanaged  
-  
-// Declare an unmanaged function type that takes two int arguments  
-// Note the use of __stdcall for compatibility with managed code  
-typedef int (__stdcall *ANSWERCB)(int, int);  
-static ANSWERCB cb;  
-  
-int TakesCallback(ANSWERCB fp, int n, int m) {  
-   cb = fp;  
-   if (cb) {  
-      printf_s("[unmanaged] got callback address (%d), calling it...\n", cb);  
-      return cb(n, m);  
-   }  
-   printf_s("[unmanaged] unregistering callback");  
-   return 0;  
-}  
-  
-#pragma managed  
-  
-public delegate int GetTheAnswerDelegate(int, int);  
-  
-int GetNumber(int n, int m) {  
-   Console::WriteLine("[managed] callback!");  
-   static int x = 0;  
-   ++x;  
-  
-   return n + m + x;  
-}  
-  
-static GCHandle gch;  
-  
-int main() {  
-   GetTheAnswerDelegate^ fp = gcnew GetTheAnswerDelegate(GetNumber);  
-  
-   gch = GCHandle::Alloc(fp);  
-  
-   IntPtr ip = Marshal::GetFunctionPointerForDelegate(fp);  
-   ANSWERCB cb = static_cast<ANSWERCB>(ip.ToPointer());  
-   Console::WriteLine("[managed] sending delegate as callback...");  
-  
-   int answer = TakesCallback(cb, 243, 257);  
-  
-   // possibly much later (in another function)...  
-  
-   Console::WriteLine("[managed] releasing callback mechanisms...");  
-   TakesCallback(0, 243, 257);  
-   gch.Free();  
-}  
-```  
-  
-## <a name="see-also"></a>Zobacz też  
- [Korzystanie z międzyoperacyjności języka C++ (niejawna funkcja PInvoke)](../dotnet/using-cpp-interop-implicit-pinvoke.md)
+
+W tym temacie przedstawiono kierowania wywołań zwrotnych i delegatów (zarządzanej wersji wywołanie zwrotne) między kodem zarządzanym i niezarządzanym przy użyciu języka Visual C++.
+
+Poniższy kod przykłady użycia [zarządzane, niezarządzane](../preprocessor/managed-unmanaged.md) #pragma — dyrektywy do zaimplementowania zarządzanych i niezarządzanych funkcji w tym samym pliku, ale można również zdefiniować funkcje w oddzielnych plikach. Pliki zawierające tylko funkcji niezarządzanych nie muszą być skompilowana przy użyciu [/CLR (kompilacja języka wspólnego środowiska uruchomieniowego)](../build/reference/clr-common-language-runtime-compilation.md).
+
+## <a name="example"></a>Przykład
+
+Poniższy przykład pokazuje, jak skonfigurować niezarządzanego interfejsu API do wyzwolenia zarządzanych delegata. Zarządzane delegata jest tworzony i jednej z metod międzyoperacyjny <xref:System.Runtime.InteropServices.Marshal.GetFunctionPointerForDelegate%2A>, służy do pobierania podstawowego punktu wejścia dla delegata. Ten adres jest następnie przekazywany do niezarządzanej funkcji, który ją wywołuje nie znajomości fakt, że jest implementowana jako funkcji zarządzanej.
+
+Zwróć uwagę, że jest to możliwe, ale nie jest to konieczne, aby przypiąć delegata za pomocą [pin_ptr (C + +/ CLI)](../windows/pin-ptr-cpp-cli.md) aby zapobiec jej się ponownie lub usuwane przez moduł odśmiecania pamięci. Konieczna jest ochrona z przedwczesne wyrzucania elementów bezużytecznych, ale przypinanie chroni więcej niż jest to konieczne, ponieważ zapobiega kolekcji, ale także zapobiega relokacji.
+
+Jeśli delegat znajduje się ponownie, wyrzucanie elementów bezużytecznych, nie wpłynie to wywołanie zwrotne underlaying zarządzane, dlatego <xref:System.Runtime.InteropServices.GCHandle.Alloc%2A> służy do dodawania odwołania do delegata, umożliwiając przenoszenia obiektu delegowanego, ale uniemożliwia usuwania. Za pomocą GCHandle — zamiast pin_ptr zmniejsza ryzyko fragmentację sterty zarządzanej.
+
+```
+// MarshalDelegate1.cpp
+// compile with: /clr
+#include <iostream>
+
+using namespace System;
+using namespace System::Runtime::InteropServices;
+
+#pragma unmanaged
+
+// Declare an unmanaged function type that takes two int arguments
+// Note the use of __stdcall for compatibility with managed code
+typedef int (__stdcall *ANSWERCB)(int, int);
+
+int TakesCallback(ANSWERCB fp, int n, int m) {
+   printf_s("[unmanaged] got callback address, calling it...\n");
+   return fp(n, m);
+}
+
+#pragma managed
+
+public delegate int GetTheAnswerDelegate(int, int);
+
+int GetNumber(int n, int m) {
+   Console::WriteLine("[managed] callback!");
+   return n + m;
+}
+
+int main() {
+   GetTheAnswerDelegate^ fp = gcnew GetTheAnswerDelegate(GetNumber);
+   GCHandle gch = GCHandle::Alloc(fp);
+   IntPtr ip = Marshal::GetFunctionPointerForDelegate(fp);
+   ANSWERCB cb = static_cast<ANSWERCB>(ip.ToPointer());
+   Console::WriteLine("[managed] sending delegate as callback...");
+
+// force garbage collection cycle to prove
+// that the delegate doesn't get disposed
+   GC::Collect();
+
+   int answer = TakesCallback(cb, 243, 257);
+
+// release reference to delegate
+   gch.Free();
+}
+```
+
+## <a name="example"></a>Przykład
+
+Poniższy przykład jest podobny do poprzedniego przykładu, ale w tym przypadku wskaźnika określona funkcja jest przechowywany przez niezarządzanego interfejsu API, dzięki czemu może być wywoływany w dowolnym momencie wymagające pomijane wyrzucania elementów bezużytecznych dla dowolnego określonego czasu. W rezultacie, w poniższym przykładzie użyto globalnego wystąpienia <xref:System.Runtime.InteropServices.GCHandle> uniemożliwi delegata przenoszone, niezależne od zakresu funkcji. Zgodnie z opisem w pierwszym przykładzie, za pomocą pin_ptr nie jest konieczne w poniższych przykładach, ale w takim przypadku nie działa mimo to, jak zakres pin_ptr jest ograniczona do jednej funkcji.
+
+```
+// MarshalDelegate2.cpp
+// compile with: /clr
+#include <iostream>
+
+using namespace System;
+using namespace System::Runtime::InteropServices;
+
+#pragma unmanaged
+
+// Declare an unmanaged function type that takes two int arguments
+// Note the use of __stdcall for compatibility with managed code
+typedef int (__stdcall *ANSWERCB)(int, int);
+static ANSWERCB cb;
+
+int TakesCallback(ANSWERCB fp, int n, int m) {
+   cb = fp;
+   if (cb) {
+      printf_s("[unmanaged] got callback address (%d), calling it...\n", cb);
+      return cb(n, m);
+   }
+   printf_s("[unmanaged] unregistering callback");
+   return 0;
+}
+
+#pragma managed
+
+public delegate int GetTheAnswerDelegate(int, int);
+
+int GetNumber(int n, int m) {
+   Console::WriteLine("[managed] callback!");
+   static int x = 0;
+   ++x;
+
+   return n + m + x;
+}
+
+static GCHandle gch;
+
+int main() {
+   GetTheAnswerDelegate^ fp = gcnew GetTheAnswerDelegate(GetNumber);
+
+   gch = GCHandle::Alloc(fp);
+
+   IntPtr ip = Marshal::GetFunctionPointerForDelegate(fp);
+   ANSWERCB cb = static_cast<ANSWERCB>(ip.ToPointer());
+   Console::WriteLine("[managed] sending delegate as callback...");
+
+   int answer = TakesCallback(cb, 243, 257);
+
+   // possibly much later (in another function)...
+
+   Console::WriteLine("[managed] releasing callback mechanisms...");
+   TakesCallback(0, 243, 257);
+   gch.Free();
+}
+```
+
+## <a name="see-also"></a>Zobacz też
+
+[Korzystanie z międzyoperacyjności języka C++ (niejawna funkcja PInvoke)](../dotnet/using-cpp-interop-implicit-pinvoke.md)

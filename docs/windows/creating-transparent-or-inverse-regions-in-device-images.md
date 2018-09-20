@@ -30,12 +30,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: ab57df8151d02064b244212f28fe21628f0f3bb8
-ms.sourcegitcommit: f0c90000125a9497bf61e41624de189a043703c0
+ms.openlocfilehash: 2789d5c70dfe4569ef8eaa1d17136ad037efd18a
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44314849"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46374559"
 ---
 # <a name="creating-transparent-or-inverse-regions-in-device-images-image-editor-for-icons"></a>Tworzenie obszarów przezroczystych lub odwróconych w obrazach urządzeń (Edytor obrazów dla ikon)
 
@@ -71,5 +71,5 @@ Brak
 
 ## <a name="see-also"></a>Zobacz też
 
-[Klawisze skrótów](../windows/accelerator-keys-image-editor-for-icons.md)  
+[Klawisze skrótów](../windows/accelerator-keys-image-editor-for-icons.md)<br/>
 [Ikony i kursory: zasoby obrazów do wyświetlania na urządzeniach](../windows/icons-and-cursors-image-resources-for-display-devices-image-editor-for-icons.md)

@@ -21,139 +21,144 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9ae2708069141c8ed78e4e736d1b0664a166b4da
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: cc8b2d48a1d6970f52d33b00201600c65acf9f2a
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45715499"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46383344"
 ---
 # <a name="bittestandset-bittestandset64"></a>_bittestandset, _bittestandset64
-**Microsoft Specific**  
-  
- Generowanie instrukcji, która sprawdza, czy bit `b` adresu `a`, zwraca bieżącą wartość i ustawia bit na 1.  
-  
-## <a name="syntax"></a>Składnia  
-  
-```  
-unsigned char _bittestandset(  
-   long *a,  
-   long b  
-);  
-unsigned char _bittestandset64(  
-   __int64 *a,  
-   __int64 b  
-);  
-```  
-  
-#### <a name="parameters"></a>Parametry  
+
+**Microsoft Specific**
+
+Generowanie instrukcji, która sprawdza, czy bit `b` adresu `a`, zwraca bieżącą wartość i ustawia bit na 1.
+
+## <a name="syntax"></a>Składnia
+
+```
+unsigned char _bittestandset(
+   long *a,
+   long b
+);
+unsigned char _bittestandset64(
+   __int64 *a,
+   __int64 b
+);
+```
+
+#### <a name="parameters"></a>Parametry
+
 *a*<br/>
-[out w] Wskaźnik do pamięci do sprawdzenia.  
-  
+[out w] Wskaźnik do pamięci do sprawdzenia.
+
 *b*<br/>
-[in] Pozycja bitu do testowania.  
-  
-## <a name="return-value"></a>Wartość zwracana  
- Bit na określonej pozycji.  
-  
-## <a name="requirements"></a>Wymagania  
-  
-|Wewnętrzne|Architektura|  
-|---------------|------------------|  
-|`_bittestandset`|x86, ARM, x64|  
-|`_bittestandset64`|X64|  
-  
- **Plik nagłówkowy** \<intrin.h >  
-  
-## <a name="remarks"></a>Uwagi  
- Ta procedura jest dostępna wyłącznie jako wewnętrzna.  
-  
-## <a name="example"></a>Przykład  
-  
-```  
-// bittestandset.cpp  
-// processor: x86, ARM, x64  
-// This example uses several of the _bittest family of intrinsics  
-// to implement a Flags class that allows bit level access to an  
-// integer field.  
-#include <stdio.h>  
-#include <intrin.h>  
-  
-#pragma intrinsic(_bittestandset, _bittestandreset,\  
-                  _bittestandcomplement, _bittest)  
-  
-class Flags  
-{  
-private:  
-    long flags;  
-    long* oldValues;  
-  
-public:  
-    Flags() : flags(0)  
-    {  
-        oldValues = new long[32];  
-    }  
-  
-    ~Flags()  
-    {  
-        delete oldValues;  
-    }  
-  
-    void SetFlagBit(long nBit)  
-    {  
-        // We omit range checks on the argument  
-        oldValues[nBit] = _bittestandset(&flags, nBit);  
-        printf_s("Flags: 0x%x\n", flags);  
-    }  
-    void ClearFlagBit(long nBit)  
-    {  
-        oldValues[nBit] = _bittestandreset(&flags, nBit);  
-        printf_s("Flags: 0x%x\n", flags);  
-    }  
-    unsigned char GetFlagBit(long nBit)  
-    {  
-        unsigned char result = _bittest(&flags, nBit);  
-        printf_s("Flags: 0x%x\n", flags);  
-        return result;  
-    }  
-    void RestoreFlagBit(long nBit)  
-    {  
-        if (oldValues[nBit])  
-            oldValues[nBit] = _bittestandset(&flags, nBit);  
-        else  
-            oldValues[nBit] = _bittestandreset(&flags, nBit);  
-        printf_s("Flags: 0x%x\n", flags);       
-    }  
-    unsigned char ToggleBit(long nBit)  
-    {  
-        unsigned char result = _bittestandcomplement(&flags, nBit);  
-        printf_s("Flags: 0x%x\n", flags);  
-        return result;  
-    }  
-};  
-  
-int main()  
-{  
-    Flags f;  
-    f.SetFlagBit(1);  
-    f.SetFlagBit(2);  
-    f.SetFlagBit(3);  
-    f.ClearFlagBit(3);  
-    f.ToggleBit(1);  
-    f.RestoreFlagBit(2);  
-}  
-```  
-  
-```Output  
-Flags: 0x2  
-Flags: 0x6  
-Flags: 0xe  
-Flags: 0x6  
-Flags: 0x4  
-Flags: 0x0  
-```  
-  
-**END specyficzny dla Microsoft**  
-  
-## <a name="see-also"></a>Zobacz też  
- [Funkcje wewnętrzne kompilatora](../intrinsics/compiler-intrinsics.md)
+[in] Pozycja bitu do testowania.
+
+## <a name="return-value"></a>Wartość zwracana
+
+Bit na określonej pozycji.
+
+## <a name="requirements"></a>Wymagania
+
+|Wewnętrzne|Architektura|
+|---------------|------------------|
+|`_bittestandset`|x86, ARM, x64|
+|`_bittestandset64`|X64|
+
+**Plik nagłówkowy** \<intrin.h >
+
+## <a name="remarks"></a>Uwagi
+
+Ta procedura jest dostępna wyłącznie jako wewnętrzna.
+
+## <a name="example"></a>Przykład
+
+```
+// bittestandset.cpp
+// processor: x86, ARM, x64
+// This example uses several of the _bittest family of intrinsics
+// to implement a Flags class that allows bit level access to an
+// integer field.
+#include <stdio.h>
+#include <intrin.h>
+
+#pragma intrinsic(_bittestandset, _bittestandreset,\
+                  _bittestandcomplement, _bittest)
+
+class Flags
+{
+private:
+    long flags;
+    long* oldValues;
+
+public:
+    Flags() : flags(0)
+    {
+        oldValues = new long[32];
+    }
+
+    ~Flags()
+    {
+        delete oldValues;
+    }
+
+    void SetFlagBit(long nBit)
+    {
+        // We omit range checks on the argument
+        oldValues[nBit] = _bittestandset(&flags, nBit);
+        printf_s("Flags: 0x%x\n", flags);
+    }
+    void ClearFlagBit(long nBit)
+    {
+        oldValues[nBit] = _bittestandreset(&flags, nBit);
+        printf_s("Flags: 0x%x\n", flags);
+    }
+    unsigned char GetFlagBit(long nBit)
+    {
+        unsigned char result = _bittest(&flags, nBit);
+        printf_s("Flags: 0x%x\n", flags);
+        return result;
+    }
+    void RestoreFlagBit(long nBit)
+    {
+        if (oldValues[nBit])
+            oldValues[nBit] = _bittestandset(&flags, nBit);
+        else
+            oldValues[nBit] = _bittestandreset(&flags, nBit);
+        printf_s("Flags: 0x%x\n", flags);
+    }
+    unsigned char ToggleBit(long nBit)
+    {
+        unsigned char result = _bittestandcomplement(&flags, nBit);
+        printf_s("Flags: 0x%x\n", flags);
+        return result;
+    }
+};
+
+int main()
+{
+    Flags f;
+    f.SetFlagBit(1);
+    f.SetFlagBit(2);
+    f.SetFlagBit(3);
+    f.ClearFlagBit(3);
+    f.ToggleBit(1);
+    f.RestoreFlagBit(2);
+}
+```
+
+```Output
+Flags: 0x2
+Flags: 0x6
+Flags: 0xe
+Flags: 0x6
+Flags: 0x4
+Flags: 0x0
+```
+
+**END specyficzny dla Microsoft**
+
+## <a name="see-also"></a>Zobacz też
+
+[Funkcje wewnętrzne kompilatora](../intrinsics/compiler-intrinsics.md)

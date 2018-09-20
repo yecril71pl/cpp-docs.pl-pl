@@ -1,5 +1,5 @@
 ---
-title: C + +/ CLI migracji Elementarz | Dokumentacja firmy Microsoft
+title: C + +/ CLI Podręcznik migracji | Dokumentacja firmy Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -19,37 +19,40 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: add55156b23dd2f9eb746f032d8406bad3b9db56
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 88b32ea226971c0fa5b6d269a8992629c3c4de77
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33108689"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46385434"
 ---
 # <a name="ccli-migration-primer"></a>Podręcznik migracji C++/CLI
-Jest to przewodnik przenoszenia programy Visual C++ z rozszerzeń zarządzanych dla języka C++ dla Visual C++. 
-  
- C + +/ CLI rozszerza modelu programowania dynamiczne składnika, do standard języka ISO C++. Nowy język udostępnia szereg lepsza za pośrednictwem rozszerzeń zarządzanych. Ta sekcja zawiera wyliczany Lista rozszerzeń zarządzanych dla funkcji języka C++ i ich mapowania dla Visual C++, gdzie istnieje mapowanie programu i wskazuje tych konstrukcji, dla których nie istnieje żadne mapowanie.  
-  
-## <a name="in-this-section"></a>W tej sekcji  
- [Zarys zmian (C++/CLI)](../dotnet/outline-of-changes-cpp-cli.md)  
- WYSOKOPOZIOMOWY zarys krótki przewodnik udostępnia listę zmian w obszarze pięć kategorii Ogólne.  
-  
- [Słowa kluczowe języka (C++/CLI)](../dotnet/language-keywords-cpp-cli.md)  
- W tym artykule omówiono zmiany słów kluczowych języka, w tym usuwania podwójnego podkreślenia i wprowadzenie zarówno kontekstowe i odstępach słów kluczowych.  
-  
- [Typy zarządzane (C + +/ CL)](../dotnet/managed-types-cpp-cl.md)  
- Wygląda na składni zmiany w deklaracji wspólnej System typu (CTS) — w tym zmiany w deklaracji klasy, tablic (w tym tablicy parametrów), wyliczenia i tak dalej.  
-  
- [Deklaracje składowych w obrębie klasy lub interfejsu (C++/CLI)](../dotnet/member-declarations-within-a-class-or-interface-cpp-cli.md)  
- Przedstawia informacje dotyczące elementów członkowskich klasy, takie jak właściwości skalarne, właściwości indeksu, operatory, delegaci i zdarzenia zmiany.  
-  
- [Typy wartości i ich zachowania (C++/CLI)](../dotnet/value-types-and-their-behaviors-cpp-cli.md)  
- Skupiono się na typy wartości i nowej rodziny wskaźników wewnętrznych i przypinania. Zawiera omówienie również liczbę semantyki znaczących zmian, takich jak wprowadzenie niejawnej konwersji boxing, immutability spakowanymi typami wartości i usunięcie obsługi domyślnych konstruktorów w klasach wartość.  
-  
- [Ogólne zmiany w języku (C++/CLI)](../dotnet/general-language-changes-cpp-cli.md)  
- Szczegóły semantycznego zmiany, takie jak obsługa notacji rzutowania ciągu literału zachowanie i zmiany w semantyce między ISO C++ i C + +/ CLI.  
-  
-## <a name="see-also"></a>Zobacz też  
- [Zestawy mieszane (natywne i zarządzane)](../dotnet/mixed-native-and-managed-assemblies.md)   
- [Component Extensions dla platform środowiska uruchomieniowego](../windows/component-extensions-for-runtime-platforms.md)
+
+Jest to przewodnik do przenoszenia programów Visual C++ z zarządzanych rozszerzeń dla C++ do Visual C++.
+
+C + +/ CLI rozszerza paradygmat programowania dynamicznego składnika języka standard ISO C++. Nowy język oferuje szereg znaczne ulepszenia w stosunku do rozszerzeń zarządzanych. Ta sekcja zawiera listę zarządzanych rozszerzeń dla funkcji języka C++ i ich mapowanie do programu Visual C++, gdzie takie mapowanie istnieje i wykazuje te konstrukcje, dla których nie istnieje żadne mapowanie.
+
+## <a name="in-this-section"></a>W tej sekcji
+
+[Zarys zmian (C++/CLI)](../dotnet/outline-of-changes-cpp-cli.md)<br/>
+Zaawansowany konspekt dla szybkiego odwołania, zapewniający listę zmian w pięciu kategoriach ogólnych.
+
+[Słowa kluczowe języka (C++/CLI)](../dotnet/language-keywords-cpp-cli.md)<br/>
+W tym artykule omówiono zmiany słów kluczowych języka, w tym zniesienie podwójnego podkreślenia i wprowadzenie zarówno kontekstowych, jak i odstępów między słowami kluczowymi.
+
+[Typy zarządzane (C + +/ CL)](../dotnet/managed-types-cpp-cl.md)<br/>
+Zmiany syntaktyczne w deklaracji wspólnego systemu typu (CTS) — obejmuje to zmiany w deklaracji klas, tablic (w tym tablicy parametru), typów wyliczeniowych i tak dalej.
+
+[Deklaracje składowych w obrębie klasy lub interfejsu (C++/CLI)](../dotnet/member-declarations-within-a-class-or-interface-cpp-cli.md)<br/>
+Przedstawia zmiany dotyczące elementów członkowskich klasy takich jak właściwości skalarne, właściwości indeksu, operatory, delegaty i zdarzenia.
+
+[Typy wartości i ich zachowania (C++/CLI)](../dotnet/value-types-and-their-behaviors-cpp-cli.md)<br/>
+Koncentruje się na typach wartości i nowej rodzinie wskaźników wnętrza i przypinania. Omawia także szereg istotnych zmian semantycznych takich jak wprowadzenie niejawnego opakowania, niezmienność opakowanych typów wartości i usunięcie obsługi konstruktorów domyślnych w obrębie klas wartości.
+
+[Ogólne zmiany w języku (C++/CLI)](../dotnet/general-language-changes-cpp-cli.md)<br/>
+Szczegóły semantyczne zmian takich jak obsługa notacji oddanych ciągu literału zachowanie i zmiany w semantyce między ISO C++ i C + +/ interfejsu wiersza polecenia.
+
+## <a name="see-also"></a>Zobacz też
+
+[Zestawy mieszane (natywne i zarządzane)](../dotnet/mixed-native-and-managed-assemblies.md)<br/>
+[Component Extensions dla platform środowiska uruchomieniowego](../windows/component-extensions-for-runtime-platforms.md)

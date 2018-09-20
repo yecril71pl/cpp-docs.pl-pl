@@ -1,5 +1,5 @@
 ---
-title: Implementowanie obszarów roboczych w formantach listy | Dokumentacja firmy Microsoft
+title: Implementowanie obszarów roboczych w kontrolkach listy | Dokumentacja firmy Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -15,37 +15,40 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 44b92fbda7f00c761059a44b5bf9483e2dfac814
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: fc245ef87343d9f33277e41c5c191ea713e21da0
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33347363"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46383420"
 ---
 # <a name="implementing-working-areas-in-list-controls"></a>Implementowanie obszarów roboczych w kontrolkach listy
-Domyślnie przez kontrolki listy Rozmieszcza wszystkie elementy w sposób standardowy siatki. Jednak inna metoda jest obsługiwana, praca obszary Rozmieszcza elementy listy grup prostokątny. W przypadku obrazu formantu listy, który zawiera obszary robocze, zobacz za pomocą kontrolki widok listy w zestawie Windows SDK.  
-  
+
+Domyślnie formant listy Rozmieszcza elementy w sposób standardowy siatki. Inną metodą jest jednak obsługiwane, praca obszary Rozmieszcza elementy listy na grupy prostokątny. W przypadku obrazu kontrolkę listy, która implementuje obszary robocze, zobacz za pomocą kontrolki widok listy w zestawie Windows SDK.
+
 > [!NOTE]
->  Obszary robocze są widoczne tylko wtedy, gdy kontrolka listy jest w trybie małych ikon lub ikonę. Jednak wszystkie bieżące obszary robocze są obsługiwane, jeśli widok się przełączone do trybu raportu lub listy.  
-  
- Obszary robocze można wyświetlić puste obramowania (w lewo, top lub prawej elementy) lub spowodować poziomy pasek przewijania będzie wyświetlana po zwykle nie istnieć jedna. Inny użycie wspólnej jest można utworzyć wiele obszary robocze, do których elementów można przeniesiony lub usunięty. Przy użyciu tej metody można utworzyć obszary, w ramach jednego widoku, który ma inną funkcję. Użytkownik może następnie skategoryzować elementy przez umieszczenie ich w inny obszar. Przykładem tego może być widokiem systemu plików, który ma obszaru do odczytu i zapisu plików i w innym obszarze plików tylko do odczytu. Jeśli element pliku zostały przeniesione do obszaru tylko do odczytu, automatycznie czy stanie tylko do odczytu. Przenoszenie plików z widoku tylko do odczytu do obszaru odczytu/zapisu spowodowałoby pliku odczytu/zapisu.  
-  
- `CListCtrl` zawiera kilka funkcji elementów członkowskich do tworzenia i zarządzania obszary robocze w formancie z listy. [GetWorkAreas](../mfc/reference/clistctrl-class.md#getworkareas) i [SetWorkAreas](../mfc/reference/clistctrl-class.md#setworkareas) pobierać i ustawiać tablicę `CRect` obiektów (lub `RECT` struktury), który przechowywania obecnie implementowane obszary robocze dla formantu listy. Ponadto [GetNumberOfWorkAreas](../mfc/reference/clistctrl-class.md#getnumberofworkareas) pobiera bieżącą liczbę obszary robocze dla formantu listy (domyślnie 0).  
-  
-## <a name="items-and-working-areas"></a>Elementy i obszarów roboczych  
- Po utworzeniu obszaru roboczego elementy, które znajdują się w obszarze roboczym stać się członkami go. Podobnie jeśli element zostanie przeniesiony do obszaru roboczego, staje się on członkiem obszar roboczy, do której została przeniesiona. Jeśli element nie leży w dowolnym obszarze roboczym, staje się automatycznie członkiem pierwszego obszaru roboczego (indeks 0). Jeśli chcesz utworzyć element i umieścić w obszarze roboczym, należy utworzyć elementu i przenieś go do obszaru roboczego żądaną wywołaniem [SetItemPosition](../mfc/reference/clistctrl-class.md#setitemposition). Drugi przykład poniżej przedstawiono tej metody.  
-  
- Poniższy przykład implementuje czterech obszarów roboczych (`rcWorkAreas`), taki sam rozmiar z pikseli-10-całego obramowania każdego obszaru roboczego w formancie listy (`m_WorkAreaListCtrl`).  
-  
- [!code-cpp[NVC_MFCControlLadenDialog#20](../mfc/codesnippet/cpp/implementing-working-areas-in-list-controls_1.cpp)]  
-  
- Wywołanie [ApproximateViewRect](../mfc/reference/clistctrl-class.md#approximateviewrect) została wprowadzona, aby oszacować całkowitego obszaru wymagane, aby wyświetlić wszystkie elementy w jeden region. Ta Szacowana następnie jest podzielony na cztery regiony i wypełniane obramowanie 5 pikseli na poziomie.  
-  
- Kolejnym przykładzie przypisuje istniejących elementów listy do każdej grupy (`rcWorkAreas`) oraz odświeżenie widoku kontrolki (`m_WorkAreaListCtrl`) do ukończenia efekt.  
-  
- [!code-cpp[NVC_MFCControlLadenDialog#21](../mfc/codesnippet/cpp/implementing-working-areas-in-list-controls_2.cpp)]  
-  
-## <a name="see-also"></a>Zobacz też  
- [Korzystanie z CListCtrl](../mfc/using-clistctrl.md)   
- [Kontrolki](../mfc/controls-mfc.md)
+>  Obszary robocze są widoczne tylko wtedy, gdy kontrolka listy w trybie mała ikona lub ikonę. Jednak wszelkie bieżące obszary robocze są obsługiwane, jeśli widok jest przełączony do trybu raportu lub listy.
+
+Obszary robocze może służyć do zobrazit pusty obramowania (po lewej stronie, top lub po prawej stronie elementy) lub spowodować, że poziomy pasek przewijania będzie wyświetlana po zwykle nie istnieć tylko jeden. Inny wspólne użycie polega na utworzeniu wielu obszary robocze, do których elementów można przeniesiony lub usunięty. Przy użyciu tej metody można tworzyć obszary, w ramach jednego widoku, które mają różne znaczenie. Użytkownik może następnie skategoryzować elementy, umieszczając je w innej strefie. Na przykład będzie widok systemu plików, które ma odczytu/zapisu plików i innego obszaru dla plików tylko do odczytu. Jeśli element pliku zostały przeniesione do obszaru tylko do odczytu, go czy automatycznie stają się one tylko do odczytu. Przenoszenie plików z obszaru tylko do odczytu do obszaru odczytu/zapisu czy upewnij, że plik odczytu/zapisu.
+
+`CListCtrl` udostępnia kilka funkcji elementów członkowskich do tworzenia i zarządzania obszary robocze w kontrolce listy. [GetWorkAreas](../mfc/reference/clistctrl-class.md#getworkareas) i [SetWorkAreas](../mfc/reference/clistctrl-class.md#setworkareas) pobierać i ustawiać tablicę `CRect` obiektów (lub `RECT` struktury), który przechowywania aktualnie wdrożonych obszary robocze dla kontrolki listy. Ponadto [GetNumberOfWorkAreas](../mfc/reference/clistctrl-class.md#getnumberofworkareas) pobiera bieżącą liczbę obszary robocze dla kontrolki listy (domyślnie przez zero).
+
+## <a name="items-and-working-areas"></a>Elementy i obszarów roboczych
+
+Po utworzeniu obszaru roboczego elementy, które znajdują się w obszarze roboczym stają się jej członkowie. Podobnie jeśli element zostanie przeniesiony do obszaru roboczego, staje się członkiem obszaru roboczego, do którego został przeniesiony. Jeśli element nie leży w dowolnym obszarze roboczym, staje się automatycznie członkiem pierwszy obszar roboczy (indeks 0). Jeśli chcesz utworzyć element i jest umieszczany w ramach określonego obszaru roboczego, konieczne będzie utwórz go, a następnie przenieś go do żądanego obszaru roboczego z wywołaniem [SetItemPosition](../mfc/reference/clistctrl-class.md#setitemposition). Drugi przykład poniżej pokazano tej techniki.
+
+Poniższy przykład implementuje czterech obszarów roboczych (`rcWorkAreas`), taki sam rozmiar z 10 pikseli całego obramowania wokół każdego obszaru roboczego w kontrolce listy (`m_WorkAreaListCtrl`).
+
+[!code-cpp[NVC_MFCControlLadenDialog#20](../mfc/codesnippet/cpp/implementing-working-areas-in-list-controls_1.cpp)]
+
+Wywołanie [ApproximateViewRect](../mfc/reference/clistctrl-class.md#approximateviewrect) została wprowadzona, aby poznać szacunkową całkowitego obszaru, które są wymagane, aby wyświetlić wszystkie elementy w jednym regionie. Te dane szacunkowe następnie jest podzielony na cztery obszary i dopełniane przy użyciu obramowania 5 pikseli na poziomie.
+
+Następny przykład przypisuje istniejących elementów listy do każdej grupy (`rcWorkAreas`) oraz odświeżenie widoku formantu (`m_WorkAreaListCtrl`) do ukończenia efekt.
+
+[!code-cpp[NVC_MFCControlLadenDialog#21](../mfc/codesnippet/cpp/implementing-working-areas-in-list-controls_2.cpp)]
+
+## <a name="see-also"></a>Zobacz też
+
+[Korzystanie z CListCtrl](../mfc/using-clistctrl.md)<br/>
+[Kontrolki](../mfc/controls-mfc.md)
 

@@ -21,30 +21,32 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d92b95cac23eed029a49239d791df237377d8376
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: d630aa39cb4eb4e56a0d64446ac5a5ea7a67881c
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42587132"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46395859"
 ---
 # <a name="internationalization-strategies"></a>Strategie internacjonalizacji
-W zależności od systemów operacyjnych i rynków masz kilka strategie internacjonalizacji:  
-  
--   Twoja aplikacja używa Unicode.  
-  
-     Możesz korzystać z funkcji specyficznych dla standardu Unicode i wszystkie znaki są szerokie 16 bitów (chociaż znaki ANSI w niektórych części programu służy do celów specjalnych). Biblioteki wykonawczej C zawiera funkcje, makr i typy danych do programowania tylko standardu Unicode. MFC jest w pełni obsługuje standard Unicode.  
-  
--   Aplikacja używa MBCS i może działać na dowolnej platformie systemu Win32.  
-  
-     Możesz skorzystać z funkcji specyficznych dla MBCS. Ciągi może zawierać znaków jednobajtowych i dwubajtowych znaków. Biblioteki wykonawczej C zawiera funkcje, makr i typy danych, do MBCS — tylko do programowania. MFC jest MBCS — włączone w pełnym zakresie.  
-  
--   Kod źródłowy aplikacji są zapisywane pełne przenośności — przez kompilację z symbolem `_UNICODE` lub symbol `_MBCS` zdefiniowane, możesz utworzyć różne wersje korzystających z jedną. Aby uzyskać więcej informacji, zobacz [mapowania typ ogólny-tekst w pliku Tchar.h](../text/generic-text-mappings-in-tchar-h.md).  
-  
-     Można użyć w pełni przenośne C czasu wykonywania funkcji, makr i danych typów. Elastyczność MFC obsługuje jedną z następujących strategii.  
-  
- W pozostałej części tych tematów skoncentrować się na pisaniu całkowicie przenośny kod, który może stworzyć jako Unicode lub MBCS.  
-  
-## <a name="see-also"></a>Zobacz też  
- [Unicode i MBCS](../text/unicode-and-mbcs.md)   
- [Ustawienia regionalne i strony kodowe](../text/locales-and-code-pages.md)
+
+W zależności od systemów operacyjnych i rynków masz kilka strategie internacjonalizacji:
+
+- Twoja aplikacja używa Unicode.
+
+   Możesz korzystać z funkcji specyficznych dla standardu Unicode i wszystkie znaki są szerokie 16 bitów (chociaż znaki ANSI w niektórych części programu służy do celów specjalnych). Biblioteki wykonawczej C zawiera funkcje, makr i typy danych do programowania tylko standardu Unicode. MFC jest w pełni obsługuje standard Unicode.
+
+- Aplikacja używa MBCS i może działać na dowolnej platformie systemu Win32.
+
+   Możesz skorzystać z funkcji specyficznych dla MBCS. Ciągi może zawierać znaków jednobajtowych i dwubajtowych znaków. Biblioteki wykonawczej C zawiera funkcje, makr i typy danych, do MBCS — tylko do programowania. MFC jest MBCS — włączone w pełnym zakresie.
+
+- Kod źródłowy aplikacji są zapisywane pełne przenośności — przez kompilację z symbolem `_UNICODE` lub symbol `_MBCS` zdefiniowane, możesz utworzyć różne wersje korzystających z jedną. Aby uzyskać więcej informacji, zobacz [mapowania typ ogólny-tekst w pliku Tchar.h](../text/generic-text-mappings-in-tchar-h.md).
+
+   Można użyć w pełni przenośne C czasu wykonywania funkcji, makr i danych typów. Elastyczność MFC obsługuje jedną z następujących strategii.
+
+W pozostałej części tych tematów skoncentrować się na pisaniu całkowicie przenośny kod, który może stworzyć jako Unicode lub MBCS.
+
+## <a name="see-also"></a>Zobacz też
+
+[Unicode i MBCS](../text/unicode-and-mbcs.md)<br/>
+[Ustawienia regionalne i strony kodowe](../text/locales-and-code-pages.md)

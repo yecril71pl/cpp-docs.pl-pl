@@ -16,101 +16,107 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3a95725565dee2b25fd7f2e39927fde88c9cddff
-ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
+ms.openlocfilehash: feaf2c02dbb17272696571ba27a077e6e99836b0
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/26/2018
-ms.locfileid: "36956005"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46377197"
 ---
 # <a name="windows-sockets-byte-ordering"></a>Windows Sockets: określanie kolejności bajtów
-W tym artykule i dwa artykuły pomocnika opisano kilka problemów w programowaniu Windows Sockets. W tym artykule omówiono określanie kolejności bajtów. Inne problemy zostały omówione w artykułach: [Windows Sockets: Blokowanie](../mfc/windows-sockets-blocking.md) i [Windows Sockets: Konwertowanie ciągów](../mfc/windows-sockets-converting-strings.md).  
-  
- Jeśli jest używany lub pochodzi z klasy [CAsyncSocket](../mfc/reference/casyncsocket-class.md), musisz samodzielnie zarządzania tymi problemami. Jeśli jest używany lub pochodzi z klasy [CSocket —](../mfc/reference/csocket-class.md), MFC zarządza nimi automatycznie.  
-  
-## <a name="byte-ordering"></a>Określanie kolejności bajtów  
- Architektura różnych komputerów są przechowywane danych przy użyciu różnych bajtów zleceń. Na przykład maszyn opartych na Intel przechowywanie danych w odwrotnej kolejności komputery Macintosh (firmie). Kolejność bajtów firmy Intel, nazywany "little-Endian," jest również odwrotna kolejność "big Endian" standardowe sieci. W poniższej tabeli przedstawiono te warunki.  
-  
-### <a name="big--and-little-endian-byte-ordering"></a>Określanie kolejności bajtów big - i Little-Endian  
-  
-|Określanie kolejności bajtów|Znaczenie|  
-|-------------------|-------------|  
-|Big Endian|Najbardziej znaczący bajt jest z lewej strony słów.|  
-|Little Endian|Najbardziej znaczący bajt jest na prawym końcu wyrazu.|  
-  
- Zazwyczaj nie trzeba martwić o kolejność bajtów konwersji dane są wysyłane i odbierane za pośrednictwem sieci, ale istnieją sytuacje, w których należy przekonwertować bajtów zleceń.  
-  
-## <a name="when-you-must-convert-byte-orders"></a>Gdy należy przekonwertować zamówień bajtów  
- Należy przekonwertować bajtów zamówień w następujących sytuacjach:  
-  
--   Jest przekazanie informacji, który musi zostać zinterpretowany przez sieć, a nie dane, które są wysyłane na innym komputerze. Na przykład może przekazać porty i adresy, które należy zrozumieć sieci.  
-  
--   Aplikacja serwera, z którym komunikacji nie jest aplikacji MFC (i nie ma kodu źródłowego dla niego). Powoduje to wywołanie podczas konwersji kolejności bajtów, jeśli dwa komputery nie mają tej samej kolejności bajtów.  
-  
-## <a name="when-you-do-not-have-to-convert-byte-orders"></a>Jeśli nie masz można przekonwertować bajtów zlecenia  
- Można uniknąć pracy Konwertowanie zamówień bajtów w następujących sytuacjach:  
-  
--   Maszyny po obu stronach można zaakceptować nie wymiany bajtów i obie maszyny używać tej samej kolejności bajtów.  
-  
--   Serwer, którego komunikują się z jest aplikacji MFC.  
-  
--   Masz kod źródłowy dla serwera, który jest komunikacji, dzięki czemu można sprawdzić jawnie czy należy przekonwertować bajtów zamówień lub nie.  
-  
--   Można portu serwerowi MFC. Jest dość łatwo zrobić, a wynik jest zwykle mniejszy, szybszy kodu.  
-  
- Praca z [CAsyncSocket](../mfc/reference/casyncsocket-class.md), możesz jakiejkolwiek konwersji konieczne kolejności bajtów należy zarządzać. Windows Sockets standaryzuje modelu kolejności bajtów "big Endian" i zawiera funkcje, które umożliwia konwersję pomiędzy to zamówienie i inne. [CArchive —](../mfc/reference/carchive-class.md), jednak używanego z [CSocket —](../mfc/reference/csocket-class.md), używa przeciwnej kolejności ("little-Endian"), ale `CArchive` zajmuje się szczegóły konwersje kolejności bajtów dla Ciebie. Za pomocą tego standardowego kolejności w aplikacji lub przy użyciu funkcji konwersji kolejności bajtów Windows Sockets, możesz wprowadzić kod przenośną.  
-  
- Jest idealne rozwiązanie w przypadku używanie gniazd MFC podczas pisania obu końców komunikacji: używanie MFC obu końców. Jeśli piszesz aplikację, która będzie komunikować się z innego typu niż MFC aplikacji, takich jak serwer FTP, prawdopodobnie będzie konieczne zarządzanie wymienianie bajtów samodzielnie przed przekazywania danych do obiektu archiwum przy użyciu procedury konwersji Windows Sockets **ntohs**, **ntohl**, **htons**, i **htonl**. Te funkcje używane w komunikacji z aplikacją innego typu niż MFC jest wyświetlany w dalszej części tego artykułu.  
-  
+
+W tym artykule i dwa artykuły pomocnika opisano kilka problemów w programowaniu Windows Sockets. W tym artykule opisano, określanie kolejności bajtów. Inne problemy zostały omówione w artykułach: [Windows Sockets: Blokowanie](../mfc/windows-sockets-blocking.md) i [Windows Sockets: Konwertowanie ciągów](../mfc/windows-sockets-converting-strings.md).
+
+Jeśli używasz lub pochodzić od klasy [CAsyncSocket](../mfc/reference/casyncsocket-class.md), musisz samodzielnie zarządzania tymi problemami. Jeśli używasz lub pochodzić od klasy [CSocket](../mfc/reference/csocket-class.md), MFC zarządza je dla Ciebie.
+
+## <a name="byte-ordering"></a>Określanie kolejności bajtów
+
+Architektury innej maszyny są przechowywane dane przy użyciu różnych bajtów zamówienia. Na przykład maszyn opartych na Intel przechowywać dane w kolejności odwrotnej do komputerów Macintosh (Motorola). Kolejność bajtów firmy Intel, o nazwie "little-Endian," jest również odwrotna kolejność "big-Endian" Standardowa sieci. W poniższej tabeli opisano te warunki.
+
+### <a name="big--and-little-endian-byte-ordering"></a>Określanie kolejności bajtów big - i -Endian
+
+|Określanie kolejności bajtów|Znaczenie|
+|-------------------|-------------|
+|Big-Endian|Najbardziej znaczący bajt znajduje się na końcu po lewej stronie słowa.|
+|Little-Endian|Najbardziej znaczący bajt znajduje się na prawym końcu wyrazu.|
+
+Zazwyczaj nie trzeba martwić o kolejność bajtów konwersji danych wysyłanych i odbieranych przez sieć, ale istnieją sytuacje, w których należy przekonwertować zamówienia bajtów.
+
+## <a name="when-you-must-convert-byte-orders"></a>Kiedy należy przekonwertować zamówienia bajtów
+
+Musisz przekonwertować zamówień bajtów w następujących sytuacjach:
+
+- Kończy się sukcesem informacje, które musi być interpretowany przez sieć, a nie dane, które są wysyłane na inny komputer. Na przykład może zostać przekazany portów i adresów, które należy zrozumieć sieci.
+
+- Aplikacja serwera za pomocą którego zachodzi komunikacja nie jest aplikacji MFC (i nie masz kodu źródłowego dla niego). To wywołanie podczas konwersji kolejności bajtów, jeśli dwa komputery nie mają taką samą kolejnością bajtów.
+
+## <a name="when-you-do-not-have-to-convert-byte-orders"></a>Jeśli nie masz do przekonwertowania zamówienia bajtów
+
+Można uniknąć pracy Konwertowanie zamówień bajtów w następujących sytuacjach:
+
+- Maszyny na obu końcach można zaakceptować nie zamienić bajtów i obie maszyny, użyj takiej samej kolejności bajtów.
+
+- Serwer, który komunikują się z to aplikację MFC.
+
+- Masz kod źródłowy dla serwera, który jest komunikacji, dzięki czemu można sprawdzić jawnie czy należy przekonwertować zamówienia bajtów, czy nie.
+
+- Można portu serwera z MFC. Jest to dość łatwe, a wynik jest zazwyczaj mniejszy, szybszy kod.
+
+Praca z [CAsyncSocket](../mfc/reference/casyncsocket-class.md), wszystkie konwersje niezbędne kolejności bajtów musi zarządzać samodzielnie. Windows Sockets standaryzuje modelu kolejności bajtów "big-Endian" i udostępnia funkcje do konwersji między to zamówienie i innych. [CArchive](../mfc/reference/carchive-class.md), jednak używane z [CSocket](../mfc/reference/csocket-class.md), używa kolejności przeciwnej ("little-Endian"), ale `CArchive` dba o szczegółowe informacje o konwersji kolejności bajtów dla Ciebie. Za pomocą tego standardowego kolejność w swoich aplikacjach, lub przy użyciu funkcji konwersji kolejności bajtów Windows Sockets, można wprowadzić kod bardziej przenośny.
+
+W idealnym rozwiązaniem w przypadku używanie gniazd MFC jest pisanego obu końcach komunikacji: używanie MFC na obu końcach. Jeśli piszesz aplikację, która będzie komunikować się z aplikacji innych niż MFC, takich jak serwer FTP, prawdopodobnie musisz zarządzać wymienianie bajtów samodzielnie przed przekazywanie danych do obiektu archiwum, przy użyciu procedur konwersji Windows Sockets **ntohs**, **ntohl**, **htons**, i **htonl**. Te funkcje używane podczas komunikacji z aplikacją innego typu niż MFC jest wyświetlany w dalszej części tego artykułu.
+
 > [!NOTE]
->  Po drugim końcu komunikacja nie jest aplikacją MFC, możesz również należy unikać przesyłania strumieniowego C++ obiektów pochodzących od `CObject` do archiwum ponieważ odbiornik nie będzie mógł je obsłużyć. Zobacz sekcję Uwaga w [Windows Sockets: przy użyciu gniazda z archiwami](../mfc/windows-sockets-using-sockets-with-archives.md).  
-  
- Aby uzyskać więcej informacji na temat zamówień bajtów zobacz specyfikację Windows Sockets, dostępne w zestawie Windows SDK.  
-  
-## <a name="a-byte-order-conversion-example"></a>Przykład konwersji kolejności bajtów  
- Poniższy przykład przedstawia funkcję serializacji dla `CSocket` obiekt, który korzysta z archiwum. Przedstawiono również, przy użyciu funkcji konwersji kolejności bajtów w interfejsie API Windows Sockets.  
-  
- W tym przykładzie przedstawiono scenariusz, w którym pisania klienta, który komunikuje się z innego typu niż MFC aplikacji serwera, dla których nie masz dostępu do kodu źródłowego. W tym scenariuszu należy założono, kolejność bajtów standardowe sieci używane przez serwer z systemem innym niż MFC. Z kolei używa aplikacja kliencka MFC `CArchive` obiekt z `CSocket` obiektu i `CArchive` używa kolejność bajtów "little Endian", przeciwieństwem standardowe sieci.  
-  
- Załóżmy, że serwer innego typu niż MFC, z którego planujesz do komunikowania się ma ustanowić protokołu pakietu komunikat podobne do poniższych:  
-  
- [!code-cpp[NVC_MFCSimpleSocket#5](../mfc/codesnippet/cpp/windows-sockets-byte-ordering_1.cpp)]  
-  
- Warunków MFC to może być wyrażona w następujący sposób:  
-  
- [!code-cpp[NVC_MFCSimpleSocket#6](../mfc/codesnippet/cpp/windows-sockets-byte-ordering_2.cpp)]  
-  
- W języku C++ **struktury** jest zasadniczo samym co klasa. `Message` Struktura może mieć funkcji elementów członkowskich, takich jak `Serialize` funkcja członkowska zadeklarowana powyżej. `Serialize` Funkcji członkowskiej może wyglądać następująco:  
-  
- [!code-cpp[NVC_MFCSimpleSocket#7](../mfc/codesnippet/cpp/windows-sockets-byte-ordering_3.cpp)]  
-  
- W tym przykładzie odwołuje się do konwersji kolejności bajtów danych, ponieważ wystąpiła niezgodność wyczyść między kolejności bajtów aplikacji serwera z systemem innym niż MFC z jednej strony i `CArchive` używane w aplikacji klienta MFC w drugim zakończeniu. Pokazano w przykładzie kilka funkcji konwersji kolejności bajtów, które dostarcza Windows Sockets. W poniższej tabeli opisano te funkcje.  
-  
-### <a name="windows-sockets-byte-order-conversion-functions"></a>Windows Sockets kolejności bajtów funkcje konwersji  
-  
-|Funkcja|Cel|  
-|--------------|-------------|  
-|**ntohs**|Konwertowanie ilość 16-bitowych kolejności bajtów sieci na hoście kolejności bajtów (big-Endian na little Endian).|  
-|**ntohl**|Konwertowanie ilość 32-bitowych kolejności bajtów sieci na hosta kolejności bajtów (big-Endian na little Endian).|  
-|**Htons**|Konwertowanie ilość 16-bitowych kolejności bajtów hosta na kolejność bajtów sieci (little-Endian do big Endian).|  
-|**Htonl**|Konwertowanie ilość 32-bitowych kolejności bajtów hosta na kolejność bajtów sieci (little-Endian do big Endian).|  
-  
- Inny punkt, w tym przykładzie jest że gdy aplikacja gniazda na drugim końcu komunikacji jest aplikacją innego typu niż MFC, użytkownik musi unikać postać zbliżoną do następującej:  
-  
- `ar << pMsg;`  
-  
- gdzie `pMsg` wskaźnik do obiektu C++ pochodzi od klasy `CObject`. To spowoduje wysłanie dodatkowych informacji MFC związane z obiektami i serwer nie będzie zrozumiałe, jak gdyby aplikacji MFC.  
-  
- Aby uzyskać więcej informacji, zobacz:  
-  
--   [Gniazda systemu Windows: używanie klasy CAsyncSocket](../mfc/windows-sockets-using-class-casyncsocket.md)  
-  
--   [Gniazda systemu Windows: podstawy](../mfc/windows-sockets-background.md)  
-  
--   [Gniazda systemu Windows: gniazda strumieni](../mfc/windows-sockets-stream-sockets.md)  
-  
--   [Gniazda systemu Windows: gniazda do przesyłania datagramów](../mfc/windows-sockets-datagram-sockets.md)  
-  
-## <a name="see-also"></a>Zobacz też  
- [Gniazda systemu Windows w MFC](../mfc/windows-sockets-in-mfc.md)
+>  Po drugiej stronie komunikacja nie jest aplikacja MFC, musisz również unikać przesyłania strumieniowego obiektów C++ pochodzących od `CObject` do archiwum ponieważ odbiornik nie będzie mógł je obsłużyć. Zobacz uwagi w [Windows Sockets: przy użyciu gniazda z archiwami](../mfc/windows-sockets-using-sockets-with-archives.md).
+
+Aby uzyskać więcej informacji o zamówieniach bajtów zobacz specyfikację Windows Sockets, dostępne w zestawie Windows SDK.
+
+## <a name="a-byte-order-conversion-example"></a>Przykład konwersji kolejności bajtów
+
+W poniższym przykładzie pokazano funkcję serializacji dla `CSocket` obiektu, który używa archiwum. Ilustruje też, przy użyciu funkcji konwersji kolejność bajtów w interfejsie API Windows Sockets.
+
+W tym przykładzie przedstawiono scenariusz, w którym piszesz klienta, który komunikuje się z innego typu niż MFC aplikacji serwera, dla którego nie masz dostępu do kodu źródłowego. W tym scenariuszu należy zakładać, że serwer innego typu niż MFC używa kolejności bajtów standardowej sieci. Z kolei używa aplikacji klienckiej MFC `CArchive` obiekt z `CSocket` obiektu, a `CArchive` używa kolejności bajtów "little-Endian", to odwrotność wzorca sieci standard.
+
+Załóżmy, że serwer innego typu niż MFC, za pomocą którego planujesz komunikacji ma ustanowionych protokół pakietu komunikatu, jak pokazano poniżej:
+
+[!code-cpp[NVC_MFCSimpleSocket#5](../mfc/codesnippet/cpp/windows-sockets-byte-ordering_1.cpp)]
+
+W warunkach MFC to może być wyrażona w następujący sposób:
+
+[!code-cpp[NVC_MFCSimpleSocket#6](../mfc/codesnippet/cpp/windows-sockets-byte-ordering_2.cpp)]
+
+W języku C++ **struktury** jest zasadniczo tak samo jak klasy. `Message` Struktura może mieć funkcje Członkowskie, takich jak `Serialize` funkcji składowej zadeklarowanej powyżej. `Serialize` Funkcji składowej może wyglądać następująco:
+
+[!code-cpp[NVC_MFCSimpleSocket#7](../mfc/codesnippet/cpp/windows-sockets-byte-ordering_3.cpp)]
+
+Ten przykład wywołuje podczas konwersji kolejności bajtów danych, ponieważ wystąpiła niezgodność wyczyść między kolejność bajtów aplikacji serwera innego typu niż MFC na jednym końcu i `CArchive` używane w aplikacji klienckiej MFC na drugim końcu. W przykładzie pokazano kilka funkcji konwersji kolejności bajtów, które dostarcza Windows Sockets. W poniższej tabeli opisano te funkcje.
+
+### <a name="windows-sockets-byte-order-conversion-functions"></a>Windows Sockets funkcje konwersji kolejności bajtów
+
+|Funkcja|Cel|
+|--------------|-------------|
+|**ntohs**|Konwertuj ilość 16-bitowych w kolejności bajtów sieci na hosta kolejności bajtów (big-Endian do little-Endian).|
+|**ntohl**|Konwertować ilość 32-bitowy z kolejności bajtów sieci na hoście kolejności bajtów (big-Endian do little-Endian).|
+|**Htons**|Konwertuj ilość 16-bitowych w kolejności bajtów hosta na kolejności bajtów sieci (little-Endian do big-Endian).|
+|**Htonl**|Przekonwertować ilość 32-bitowych w kolejności bajtów hosta sieci kolejności bajtów (little-Endian do big-Endian).|
+
+Innego punktu w tym przykładzie jest to, gdy aplikacja gniazda na drugim końcu komunikacji znajduje się aplikacja innego typu niż MFC, należy unikać wykonywania podobny do poniższego:
+
+`ar << pMsg;`
+
+gdzie `pMsg` jest wskaźnikiem do obiektu języka C++, pochodzi z klasy `CObject`. To będzie wysyłać informacje dodatkowe MFC związane z obiektami i serwer nie rozumieją, jak gdyby była aplikacji MFC.
+
+Aby uzyskać więcej informacji, zobacz:
+
+- [Gniazda systemu Windows: używanie klasy CAsyncSocket](../mfc/windows-sockets-using-class-casyncsocket.md)
+
+- [Gniazda systemu Windows: podstawy](../mfc/windows-sockets-background.md)
+
+- [Gniazda systemu Windows: gniazda strumieni](../mfc/windows-sockets-stream-sockets.md)
+
+- [Gniazda systemu Windows: gniazda do przesyłania datagramów](../mfc/windows-sockets-datagram-sockets.md)
+
+## <a name="see-also"></a>Zobacz też
+
+[Gniazda systemu Windows w MFC](../mfc/windows-sockets-in-mfc.md)
 

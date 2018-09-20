@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: e9017ffe6e254aa96700beff76cd3ea62f14bfb9
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 79c94b9b29687d8d6bf32381f4e19e2ed21bf971
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43217486"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46372280"
 ---
 # <a name="firstis"></a>first_is
 
@@ -38,7 +38,7 @@ Określa indeks pierwszego elementu tablicy mają być przekazywane.
 
 ### <a name="parameters"></a>Parametry
 
-*Wyrażenie*  
+*Wyrażenie*<br/>
 Co najmniej jednego wyrażenia języka C. Pusty argument miejsca są dozwolone.
 
 ## <a name="remarks"></a>Uwagi
@@ -84,10 +84,10 @@ Aby uzyskać więcej informacji, zobacz [konteksty atrybutu](../windows/attribut
 
 ## <a name="see-also"></a>Zobacz też
 
-[Atrybuty IDL](../windows/idl-attributes.md)  
-[Atrybuty Typedef, Enum, Union oraz Struct](../windows/typedef-enum-union-and-struct-attributes.md)  
-[Atrybuty parametru](../windows/parameter-attributes.md)  
-[last_is](../windows/last-is.md)  
-[max_is](../windows/max-is.md)  
-[length_is](../windows/length-is.md)  
+[Atrybuty IDL](../windows/idl-attributes.md)<br/>
+[Atrybuty Typedef, Enum, Union oraz Struct](../windows/typedef-enum-union-and-struct-attributes.md)<br/>
+[Atrybuty parametru](../windows/parameter-attributes.md)<br/>
+[last_is](../windows/last-is.md)<br/>
+[max_is](../windows/max-is.md)<br/>
+[length_is](../windows/length-is.md)<br/>
 [size_is](../windows/size-is.md)  

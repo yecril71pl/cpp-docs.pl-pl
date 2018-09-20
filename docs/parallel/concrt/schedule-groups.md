@@ -14,36 +14,37 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c1395fbc58d8a4d1d06cd93eea21c0f3d2dec8c6
-ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
+ms.openlocfilehash: 4fa61772af96ba0d2602ff42a6a43b2b3a13a4e6
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33688794"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46385902"
 ---
 # <a name="schedule-groups"></a>Grupy harmonogramu
-Ten dokument zawiera opis roli grup harmonogramu współbieżność środowiska wykonawczego. A *grupy harmonogram* sposób tworzą koligacje lub grup, zadań powiązanych ze sobą. Każdy harmonogram ma jedną lub więcej grup harmonogramu. Grupy harmonogramu Użyj, jeśli wymagane jest wysoki stopień miejscowości spośród zadań, na przykład, gdy grupa powiązanych zadań korzystać z wykonania na tym samym węźle procesora. Z drugiej strony należy użyć wystąpienia harmonogramu, po aplikacji jakości określone wymagania, na przykład, jeśli chcesz ograniczyć ilość zasobów przetwarzania, które są przydzielone do zestawu zadań. Aby uzyskać więcej informacji na temat wystąpień harmonogramu, zobacz [wystąpienia harmonogramu](../../parallel/concrt/scheduler-instances.md).  
-  
+
+W tym dokumencie opisano rolę grupy harmonogramu, w środowisku uruchomieniowym współbieżności. A *grupa harmonogramu* affinitizes lub grupowanie, informacje o zadaniach pokrewnych. Każdy harmonogram ma co najmniej jedną grupę harmonogramu. Użyj grupy harmonogramu, gdy na przykład wymagają wysokiego stopnia miejscowość spośród zadań, gdy grupa powiązanych zadań korzystają z wykonywane w tym samym węźle procesora. Z drugiej strony Użyj wystąpienia harmonogramu w przypadku aplikacji szczególne wymagania jakościowe, na przykład, jeśli chcesz ograniczyć ilość zasobów przetwarzania, które są przydzielane do zestawu zadań. Aby uzyskać więcej informacji na temat wystąpienia harmonogramu, zobacz [wystąpienia harmonogramu](../../parallel/concrt/scheduler-instances.md).
+
 > [!TIP]
->  Współbieżność środowiska wykonawczego zapewnia harmonogram domyślny, i dlatego nie trzeba utworzyć w aplikacji. Harmonogram zadań ułatwia dostrojenie wydajności aplikacji, dlatego zaleca się uruchamiania z [równoległych biblioteki wzorców (PLL)](../../parallel/concrt/parallel-patterns-library-ppl.md) lub [biblioteki agentów asynchronicznych](../../parallel/concrt/asynchronous-agents-library.md) w przypadku jesteś nowym użytkownikiem współbieżności środowiska wykonawczego.  
-  
- Każdy `Scheduler` obiekt ma domyślnej grupy harmonogramu dla każdego węzła planowania. A *planowania węzła* mapy źródłowej topologii systemu. Środowisko uruchomieniowe tworzy jeden węzeł planowania dla każdego pakietu procesora lub Non-Uniform architektura pamięci (NUMA), niezależnie od liczba jest większa. Jeśli zadanie nie jawnie skojarzona z grupą harmonogram, harmonogram wybiera grupę, aby dodać zadanie.  
-  
- `SchedulingProtocol` Harmonogram zasad wpływa na kolejność, w którym planista wykonuje zadania w każdej grupie harmonogramu. Gdy `SchedulingProtocol` ma ustawioną wartość `EnhanceScheduleGroupLocality` (jest to wartość domyślna), harmonogram zadań wybiera następnego zadania z grupy harmonogram, który działa na bieżące zadanie zakończy lub wspólnie daje w wyniku. Harmonogram zadań wyszukuje bieżącą grupę harmonogram pracy przed przesyłane do następnej grupy dostępności. Z drugiej strony, gdy `SchedulingProtocol` ma ustawioną wartość `EnhanceForwardProgress`, planista przechodzi do następnej grupy harmonogramu po zakończeniu każdego zadania, lub daje w wyniku. Na przykład, który porównuje tych zasad, zobacz [porady: użycie grup harmonogramu do wpływ kolejność wykonywania](../../parallel/concrt/how-to-use-schedule-groups-to-influence-order-of-execution.md).  
-  
+>  Środowisko uruchomieniowe współbieżności zawiera domyślnego harmonogramu, a w związku z tym nie należy utworzyć w aplikacji. Ponieważ Harmonogram zadań ułatwia dostrajania wydajności aplikacji, zalecamy rozpoczęcie od [biblioteki wzorców równoległych (PPL)](../../parallel/concrt/parallel-patterns-library-ppl.md) lub [bibliotekę asynchronicznych agentów](../../parallel/concrt/asynchronous-agents-library.md) przypadku jesteś nowym użytkownikiem w czasie wykonywania współbieżności.
 
- Środowisko wykonawcze używa [concurrency::ScheduleGroup](../../parallel/concrt/reference/schedulegroup-class.md) klasy do reprezentowania grupy harmonogramu. Aby utworzyć `ScheduleGroup` obiekt, należy wywołać [concurrency::CurrentScheduler::CreateScheduleGroup](reference/currentscheduler-class.md#createschedulegroup) lub [concurrency::Scheduler::CreateScheduleGroup](reference/scheduler-class.md#createschedulegroup) metody. Środowisko uruchomieniowe używa mechanizmu liczenie odwołań w celu zarządzają okresem istnienia `ScheduleGroup` obiekty, podobnie jak w przypadku `Scheduler` obiektów. Po utworzeniu `ScheduleGroup` obiektu środowiska wykonawczego ustawia licznik do jednego odwołania. [Concurrency::ScheduleGroup::Reference](reference/schedulegroup-class.md#reference) metody zwiększa licznik odwołanie o jeden. [Concurrency::ScheduleGroup::Release](reference/schedulegroup-class.md#release) zmniejsza metody licznika odwołanie o jeden.  
-  
- Wiele typów współbieżność środowiska wykonawczego pozwalają skojarzyć obiektu wraz z grupą harmonogramu. Na przykład [concurrency::agent](../../parallel/concrt/reference/agent-class.md) klasy i komunikat bloku klas takich jak [concurrency::unbounded_buffer](reference/unbounded-buffer-class.md), [concurrency::join](../../parallel/concrt/reference/join-class.md)i współbieżność::[ czasomierz](reference/timer-class.md), podaj zastąpionej wersji konstruktora przyjmujących `ScheduleGroup` obiektu. Środowisko wykonawcze używa `Scheduler` obiekt, który jest skojarzony z tym `ScheduleGroup` obiektu do zaplanowania zadania.  
-  
- Można również użyć [concurrency::ScheduleGroup::ScheduleTask](reference/schedulegroup-class.md#scheduletask) metodę, aby zaplanować zadanie lightweight. Aby uzyskać więcej informacji na temat zadań lekkich, zobacz [zadań lekkich](../../parallel/concrt/lightweight-tasks.md).  
+Każdy `Scheduler` obiekt ma domyślna grupa harmonogramu dla każdego węzła planowania. A *planowania węzła* mapuje źródłową topologię systemu. Środowisko uruchomieniowe tworzy jeden węzeł planowania dla każdego pakietu procesora lub Non-Uniform architektura pamięci (NUMA), niezależnie od liczba jest większa. Jeśli zadanie nie jawnie skojarzona z grupą harmonogramu, harmonogram wybiera grupę, do której można dodać zadania.
 
-  
-## <a name="example"></a>Przykład  
- Na przykład, że używa Zaplanuj grupy, aby kontrolować kolejność wykonywania zadań, zobacz [porady: użycie grup harmonogramu do wpływ kolejność wykonywania](../../parallel/concrt/how-to-use-schedule-groups-to-influence-order-of-execution.md).  
-  
-## <a name="see-also"></a>Zobacz też  
- [Harmonogram zadań](../../parallel/concrt/task-scheduler-concurrency-runtime.md)   
- [Wystąpienia harmonogramu](../../parallel/concrt/scheduler-instances.md)   
- [Instrukcje: używanie grup harmonogramu do wywierania wpływu na kolejność wykonywania](../../parallel/concrt/how-to-use-schedule-groups-to-influence-order-of-execution.md)
+`SchedulingProtocol` Zasadę harmonogramu wpływa na kolejność, w którym harmonogramu służy do wykonywania zadań w każdej grupie harmonogramu. Gdy `SchedulingProtocol` ustawiono `EnhanceScheduleGroupLocality` (co jest ustawieniem domyślnym), harmonogram zadań wybiera następnego zadania z grupy harmonogramu, który działa na bieżące zadanie zakończy się lub daje wspólne. Harmonogram zadań wyszukuje bieżącą grupę harmonogram pracy przed przenosi do następnej grupy dostępności. Z drugiej strony, gdy `SchedulingProtocol` ustawiono `EnhanceForwardProgress`, harmonogram przechodzi do następnej grupy harmonogramu, po zakończeniu każdego zadania, lub daje. Na przykład, który porównuje tych zasad, zobacz [porady: Użyj grup harmonogramu do wpływają na kolejność wykonywania](../../parallel/concrt/how-to-use-schedule-groups-to-influence-order-of-execution.md).
+
+Środowisko wykonawcze używa [concurrency::ScheduleGroup](../../parallel/concrt/reference/schedulegroup-class.md) klasy do reprezentowania grup harmonogramu. Aby utworzyć `ScheduleGroup` obiektu, wywołaj [concurrency::CurrentScheduler::CreateScheduleGroup](reference/currentscheduler-class.md#createschedulegroup) lub [concurrency::Scheduler::CreateScheduleGroup](reference/scheduler-class.md#createschedulegroup) metody. Środowisko wykonawcze używa mechanizmu zliczanie odwołań, aby kontrolować okres istnienia `ScheduleGroup` obiektów, podobnie jak w przypadku `Scheduler` obiektów. Po utworzeniu `ScheduleGroup` obiektu, środowisko uruchomieniowe ustawia licznik do jednego odwołania. [Concurrency::ScheduleGroup::Reference](reference/schedulegroup-class.md#reference) metody zwiększa licznik odwołań za pomocą jednej. [Concurrency::ScheduleGroup::Release](reference/schedulegroup-class.md#release) metoda zmniejsza licznika odwołań za pomocą jednej.
+
+Wiele typów w środowisku uruchomieniowym współbieżności: umożliwiają skojarzenie obiektu wraz z grupy harmonogramów. Na przykład [concurrency::agent](../../parallel/concrt/reference/agent-class.md) bloku klasy i komunikat klasy, takie jak [concurrency::unbounded_buffer](reference/unbounded-buffer-class.md), [concurrency::join](../../parallel/concrt/reference/join-class.md)i współbieżnością::[ czasomierz](reference/timer-class.md), podać przeciążone wersje konstruktora, które przyjmują `ScheduleGroup` obiektu. Środowisko wykonawcze używa `Scheduler` obiektu, który jest skojarzony z tym `ScheduleGroup` obiektu do zaplanowania zadania.
+
+Można również użyć [concurrency::ScheduleGroup::ScheduleTask](reference/schedulegroup-class.md#scheduletask) metodę, aby zaplanować zadanie, uproszczone. Aby uzyskać więcej informacji na temat zadań lekkich zobacz [zadań lekkich](../../parallel/concrt/lightweight-tasks.md).
+
+## <a name="example"></a>Przykład
+
+Aby uzyskać przykład, że używa Zaplanuj grupy, aby kontrolować kolejność wykonywania zadań, zobacz [porady: Użyj grup harmonogramu do wpływają na kolejność wykonywania](../../parallel/concrt/how-to-use-schedule-groups-to-influence-order-of-execution.md).
+
+## <a name="see-also"></a>Zobacz też
+
+[Harmonogram zadań](../../parallel/concrt/task-scheduler-concurrency-runtime.md)<br/>
+[Wystąpienia harmonogramu](../../parallel/concrt/scheduler-instances.md)<br/>
+[Instrukcje: używanie grup harmonogramu do wywierania wpływu na kolejność wykonywania](../../parallel/concrt/how-to-use-schedule-groups-to-influence-order-of-execution.md)
 

@@ -48,264 +48,302 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b8c96e83d15110cb85e23cd7a8643d615cf7c0d8
-ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
+ms.openlocfilehash: b97bccbf9615c90292976839f841e4b2ffe6af9d
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/26/2018
-ms.locfileid: "36952375"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46383814"
 ---
 # <a name="cd2dgeometrysink-class"></a>Klasa CD2DGeometrySink
-Otoka dla ID2D1GeometrySink.  
-  
-## <a name="syntax"></a>Składnia  
-  
-```  
-class CD2DGeometrySink;  
-```  
-  
-## <a name="members"></a>Elementy członkowskie  
-  
-### <a name="public-constructors"></a>Konstruktory publiczne  
-  
-|Nazwa|Opis|  
-|----------|-----------------|  
-|[CD2DGeometrySink::CD2DGeometrySink](#cd2dgeometrysink)|Tworzy obiekt CD2DGeometrySink z CD2DPathGeometry obiektu.|  
-|[CD2DGeometrySink:: ~ CD2DGeometrySink](#_dtorcd2dgeometrysink)|Destruktor. Wywoływane, gdy trwa niszczenie obiektu sink geometrii D2D.|  
-  
-### <a name="public-methods"></a>Metody publiczne  
-  
-|Nazwa|Opis|  
-|----------|-----------------|  
-|[CD2DGeometrySink::AddArc](#addarc)|Dodaje pojedynczy łuk do geometrii ścieżki.|  
-|[CD2DGeometrySink::AddBezier](#addbezier)|Tworzy sześcienny krzywej Beziera pomiędzy bieżącym punktem a określonym punktu końcowego.|  
-|[CD2DGeometrySink::AddBeziers](#addbeziers)|Tworzy sekwencji krzywych Beziera sześcienny i dodaje je do ujścia geometrii.|  
-|[CD2DGeometrySink::AddLine](#addline)|Tworzy segmentu linii między bieżącym punktem a określonym punktu końcowego i dodaje go do ujścia geometrii.|  
-|[CD2DGeometrySink::AddLines](#addlines)|Tworzy sekwencję wierszy przy użyciu podanych punktów i dodaje je do ujścia geometrii.|  
-|[CD2DGeometrySink::AddQuadraticBezier](#addquadraticbezier)|Tworzy kwadratową krzywej Beziera pomiędzy bieżącym punktem a określonym punktu końcowego.|  
-|[CD2DGeometrySink::AddQuadraticBeziers](#addquadraticbeziers)|Dodaje sekwencję kwadratową segmentów Beziera w postaci tablicy w pojedynczym wywołaniu.|  
-|[CD2DGeometrySink::BeginFigure](#beginfigure)|Uruchamia nowe rysunek w określonym momencie.|  
-|[CD2DGeometrySink::Close](#close)|Zamyka zbiornika geometrii|  
-|[CD2DGeometrySink::EndFigure](#endfigure)|Kończy się bieżący rysunek; Opcjonalnie zamyka go.|  
-|[CD2DGeometrySink::Get](#get)|Zwraca interfejs ID2D1GeometrySink|  
-|[CD2DGeometrySink::IsValid](#isvalid)|Sprawdza geometrii zbiornika ważności|  
-|[CD2DGeometrySink::SetFillMode](#setfillmode)|Określa metodę używane do określenia, które punkty znajdują się wewnątrz geometrii opisanego przez ten obiekt sink geometry, a które punkty są poza.|  
-|[CD2DGeometrySink::SetSegmentFlags](#setsegmentflags)|Określa opcje sprzężenia i obrysu ma zostać zastosowany do nowych segmentów dodane do ujścia geometrii.|  
-  
-### <a name="public-operators"></a>Operatory publiczne  
-  
-|Nazwa|Opis|  
-|----------|-----------------|  
-|[CD2DGeometrySink::operator ID2D1GeometrySink *](#operator_id2d1geometrysink_star)|Zwraca interfejs ID2D1GeometrySink|  
-  
-### <a name="protected-data-members"></a>Dane chronione elementy członkowskie  
-  
-|Nazwa|Opis|  
-|----------|-----------------|  
-|[CD2DGeometrySink::m_pSink](#m_psink)|Wskaźnik do ID2D1GeometrySink.|  
-  
-## <a name="inheritance-hierarchy"></a>Hierarchia dziedziczenia  
- `CD2DGeometrySink`  
-  
-## <a name="requirements"></a>Wymagania  
- **Nagłówek:** afxrendertarget.h  
-  
-##  <a name="_dtorcd2dgeometrysink"></a>  CD2DGeometrySink:: ~ CD2DGeometrySink  
- Destruktor. Wywoływane, gdy trwa niszczenie obiektu sink geometrii D2D.  
-  
-```  
+
+Otoka ID2D1GeometrySink.
+
+## <a name="syntax"></a>Składnia
+
+```
+class CD2DGeometrySink;
+```
+
+## <a name="members"></a>Elementy członkowskie
+
+### <a name="public-constructors"></a>Konstruktory publiczne
+
+|Nazwa|Opis|
+|----------|-----------------|
+|[CD2DGeometrySink::CD2DGeometrySink](#cd2dgeometrysink)|Tworzy obiekt CD2DGeometrySink z CD2DPathGeometry obiektu.|
+|[CD2DGeometrySink:: ~ CD2DGeometrySink](#_dtorcd2dgeometrysink)|Destruktor. Wywołuje się, kiedy niszczony jest obiekt sink geometrii D2D.|
+
+### <a name="public-methods"></a>Metody publiczne
+
+|Nazwa|Opis|
+|----------|-----------------|
+|[CD2DGeometrySink::AddArc](#addarc)|Dodaje pojedynczego łuk geometrii ścieżki|
+|[CD2DGeometrySink::AddBezier](#addbezier)|Tworzy krzywą Beziera trzeciego stopnia pomiędzy bieżącym punktem a określonym punktem końcowym.|
+|[CD2DGeometrySink::AddBeziers](#addbeziers)|Tworzy sekwencję krzywe Beziera trzeciego stopnia i dodaje je do ujścia geometrii.|
+|[CD2DGeometrySink::AddLine](#addline)|Tworzy segment linii pomiędzy bieżącym punktem a określonym punktem końcowym i dodaje go do ujścia geometrii.|
+|[CD2DGeometrySink::AddLines](#addlines)|Tworzy sekwencję wierszy przy użyciu określonego punktów i dodaje je do ujścia geometrii.|
+|[CD2DGeometrySink::AddQuadraticBezier](#addquadraticbezier)|Tworzy krzywą Beziera drugiego stopnia pomiędzy bieżącym punktem a określonym punktem końcowym.|
+|[CD2DGeometrySink::AddQuadraticBeziers](#addquadraticbeziers)|Dodaje sekwencję drugiego stopnia segmentów Beziera w postaci tablicy w jednym wywołaniu.|
+|[CD2DGeometrySink::BeginFigure](#beginfigure)|Uruchamia nowy rysunek w określonym momencie.|
+|[CD2DGeometrySink::Close](#close)|Zamyka ujścia geometrii|
+|[CD2DGeometrySink::EndFigure](#endfigure)|Kończy bieżący rysunek; Opcjonalnie zamyka te błędy.|
+|[CD2DGeometrySink::Get](#get)|Zwraca ID2D1GeometrySink interfejsu|
+|[CD2DGeometrySink::IsValid](#isvalid)|Sprawdza ważność ujścia geometrii|
+|[CD2DGeometrySink::SetFillMode](#setfillmode)|Określa metodę używaną do określenia, które punkty są wewnątrz geometrii opisanego przez ten obiekt sink geometrii, a które punkty są poza.|
+|[CD2DGeometrySink::SetSegmentFlags](#setsegmentflags)|Określa opcje obrysu i dołączania mają być stosowane do nowych segmentów dodane do ujścia geometrii.|
+
+### <a name="public-operators"></a>Operatory publiczne
+
+|Nazwa|Opis|
+|----------|-----------------|
+|[CD2DGeometrySink::operator ID2D1GeometrySink *](#operator_id2d1geometrysink_star)|Zwraca ID2D1GeometrySink interfejsu|
+
+### <a name="protected-data-members"></a>Chronione elementy członkowskie danych
+
+|Nazwa|Opis|
+|----------|-----------------|
+|[CD2DGeometrySink::m_pSink](#m_psink)|Wskaźnik do ID2D1GeometrySink.|
+
+## <a name="inheritance-hierarchy"></a>Hierarchia dziedziczenia
+
+`CD2DGeometrySink`
+
+## <a name="requirements"></a>Wymagania
+
+**Nagłówek:** afxrendertarget.h
+
+##  <a name="_dtorcd2dgeometrysink"></a>  CD2DGeometrySink:: ~ CD2DGeometrySink
+
+Destruktor. Wywołuje się, kiedy niszczony jest obiekt sink geometrii D2D.
+
+```
 virtual ~CD2DGeometrySink();
-```  
-  
-##  <a name="addarc"></a>  CD2DGeometrySink::AddArc  
- Dodaje pojedynczy łuk do geometrii ścieżki.  
-  
-```  
+```
+
+##  <a name="addarc"></a>  CD2DGeometrySink::AddArc
+
+Dodaje pojedynczego łuk geometrii ścieżki
+
+```
 void AddArc(const D2D1_ARC_SEGMENT& arc);
-```  
-  
-### <a name="parameters"></a>Parametry  
- *Łuk*  
- Łuku do dodania do rysunku  
-  
-##  <a name="addbezier"></a>  CD2DGeometrySink::AddBezier  
- Tworzy sześcienny krzywej Beziera pomiędzy bieżącym punktem a określonym punktu końcowego.  
-  
-```  
+```
+
+### <a name="parameters"></a>Parametry
+
+*Łuk*<br/>
+Łuku do dodania do rysunku
+
+##  <a name="addbezier"></a>  CD2DGeometrySink::AddBezier
+
+Tworzy krzywą Beziera trzeciego stopnia pomiędzy bieżącym punktem a określonym punktem końcowym.
+
+```
 void AddBezier(const D2D1_BEZIER_SEGMENT& bezier);
-```  
-  
-### <a name="parameters"></a>Parametry  
- *Beziera*  
- Struktura, która opisuje punktów kontrolnych i krzywej Beziera, aby dodać punkt końcowy.  
-  
-##  <a name="addbeziers"></a>  CD2DGeometrySink::AddBeziers  
- Tworzy sekwencji krzywych Beziera sześcienny i dodaje je do ujścia geometrii.  
-  
-```  
+```
+
+### <a name="parameters"></a>Parametry
+
+*Beziera*<br/>
+Struktura, która opisuje punkty kontrolne i punkt końcowy krzywej Beziera do dodania.
+
+##  <a name="addbeziers"></a>  CD2DGeometrySink::AddBeziers
+
+Tworzy sekwencję krzywe Beziera trzeciego stopnia i dodaje je do ujścia geometrii.
+
+```
 void AddBeziers(
-    const CArray<D2D1_BEZIER_SEGMENT,  
+    const CArray<D2D1_BEZIER_SEGMENT,
     D2D1_BEZIER_SEGMENT>& beziers);
-```  
-  
-### <a name="parameters"></a>Parametry  
- *Beziera*  
- Tablica segmentów Beziera opisujący krzywych Beziera do utworzenia. Krzywa jest pobierana z obiektu sink geometrii bieżącego punktu (punkt końcowy ostatni segment rysowane lub lokalizacji określonej przez BeginFigure) do punktu końcowego pierwszy segment Beziera w tablicy. Jeśli tablica zawiera dodatkowe segmenty Beziera, każdy z kolejnych segmentów Beziera używa punktu końcowego segmentu Beziera jako jego punkt początkowy.  
-  
-##  <a name="addline"></a>  CD2DGeometrySink::AddLine  
- Tworzy segmentu linii między bieżącym punktem a określonym punktu końcowego i dodaje go do ujścia geometrii.  
-  
-```  
+```
+
+### <a name="parameters"></a>Parametry
+
+*Beziera*<br/>
+Tablica segmentów Beziera opisujący krzywych Beziera do utworzenia. Krzywej pochodzi z bieżącego punktu ujścia geometrii (punkt końcowy ostatni segment rysowania lub lokalizacji określonej przez BeginFigure) do punktu końcowego pierwszy segment Beziera w tablicy. Jeśli tablica zawiera dodatkowe segmentów Beziera, każdy z kolejnych segmentów Beziera używa punktu końcowego segmentu krzywej Beziera jako jego punkt początkowy.
+
+##  <a name="addline"></a>  CD2DGeometrySink::AddLine
+
+Tworzy segment linii pomiędzy bieżącym punktem a określonym punktem końcowym i dodaje go do ujścia geometrii.
+
+```
 void AddLine(CD2DPointF point);
-```  
-  
-### <a name="parameters"></a>Parametry  
- *Punkt*  
- Punkt końcowy linii do rysowania.  
-  
-##  <a name="addlines"></a>  CD2DGeometrySink::AddLines  
- Tworzy sekwencję wierszy przy użyciu podanych punktów i dodaje je do ujścia geometrii.  
-  
-```  
+```
+
+### <a name="parameters"></a>Parametry
+
+*Punkt*<br/>
+Punkt końcowy linii do rysowania.
+
+##  <a name="addlines"></a>  CD2DGeometrySink::AddLines
+
+Tworzy sekwencję wierszy przy użyciu określonego punktów i dodaje je do ujścia geometrii.
+
+```
 void AddLines(
-    const CArray<CD2DPointF,  
+    const CArray<CD2DPointF,
     CD2DPointF>& points);
-```  
-  
-### <a name="parameters"></a>Parametry  
- *Punkty*  
- Tablica jeden lub więcej punktów, które opisują wierszy do rysowania. Wiersz jest przenoszony z bieżącego punktu zbiornika geometrii (punkt końcowy ostatni segment rysowane lub lokalizacji określonej przez BeginFigure) do pierwszego punktu w tablicy. Jeśli tablica zawiera dodatkowe punkty, wiersz jest przenoszony z pierwszego punktu do drugiego w tablicy, od drugiego punktu trzeciego punktu i tak dalej. Tablica punktów końcowych wierszy Rysowanie sekwencji.  
-  
-##  <a name="addquadraticbezier"></a>  CD2DGeometrySink::AddQuadraticBezier  
- Tworzy kwadratową krzywej Beziera pomiędzy bieżącym punktem a określonym punktu końcowego.  
-  
-```  
+```
+
+### <a name="parameters"></a>Parametry
+
+*punkty*<br/>
+Tablica jednego lub więcej punktów, które opisują wiersze do rysowania. Linia jest rysowana od ujścia geometrii bieżący punkt (punkt końcowy ostatni segment rysowania lub lokalizacji określonej przez BeginFigure) do pierwszego punktu, w tablicy. Jeśli tablica zawiera dodatkowe punkty, od pierwszego punktu jest rysowana linia do drugiego w tablicy, drugi punkt początkowy punkt trzeci i tak dalej. Tablica sekwencji punktów końcowych wierszy do rysowania.
+
+##  <a name="addquadraticbezier"></a>  CD2DGeometrySink::AddQuadraticBezier
+
+Tworzy krzywą Beziera drugiego stopnia pomiędzy bieżącym punktem a określonym punktem końcowym.
+
+```
 void AddQuadraticBezier(const D2D1_QUADRATIC_BEZIER_SEGMENT& bezier);
-```  
-  
-### <a name="parameters"></a>Parametry  
- *Beziera*  
- Struktura, która opisuje punkt kontrolny i kwadratową krzywej Beziera, aby dodać punkt końcowy.  
-  
-##  <a name="addquadraticbeziers"></a>  CD2DGeometrySink::AddQuadraticBeziers  
- Dodaje sekwencję kwadratową segmentów Beziera w postaci tablicy w pojedynczym wywołaniu.  
-  
-```  
+```
+
+### <a name="parameters"></a>Parametry
+
+*Beziera*<br/>
+Struktura, która opisuje punkt kontrolny i punkt końcowy krzywą Beziera drugiego stopnia w celu dodania.
+
+##  <a name="addquadraticbeziers"></a>  CD2DGeometrySink::AddQuadraticBeziers
+
+Dodaje sekwencję drugiego stopnia segmentów Beziera w postaci tablicy w jednym wywołaniu.
+
+```
 void AddQuadraticBeziers(
-    const CArray<D2D1_QUADRATIC_BEZIER_SEGMENT,  
+    const CArray<D2D1_QUADRATIC_BEZIER_SEGMENT,
     D2D1_QUADRATIC_BEZIER_SEGMENT>& beziers);
-```  
-  
-### <a name="parameters"></a>Parametry  
- *Beziera*  
- Tablica sekwencji kwadratową segmentów Beziera.  
-  
-##  <a name="beginfigure"></a>  CD2DGeometrySink::BeginFigure  
- Uruchamia nowe rysunek w określonym momencie.  
-  
-```  
+```
+
+### <a name="parameters"></a>Parametry
+
+*Beziera*<br/>
+Tablica sekwencji drugiego stopnia segmentów Beziera.
+
+##  <a name="beginfigure"></a>  CD2DGeometrySink::BeginFigure
+
+Uruchamia nowy rysunek w określonym momencie.
+
+```
 void BeginFigure(
-    CD2DPointF startPoint,  
+    CD2DPointF startPoint,
     D2D1_FIGURE_BEGIN figureBegin);
-```  
-  
-### <a name="parameters"></a>Parametry  
- *startPoint*  
- Momentu, w którym można rozpocząć nowego rysunku.  
-  
- *figureBegin*  
- Określa, czy nowy rysunek powinien być pusty lub wypełniony.  
-  
-##  <a name="cd2dgeometrysink"></a>  CD2DGeometrySink::CD2DGeometrySink  
- Tworzy obiekt CD2DGeometrySink z CD2DPathGeometry obiektu.  
-  
-```  
+```
+
+### <a name="parameters"></a>Parametry
+
+*startPoint*<br/>
+Punkt, od którego należy rozpocząć nowy rysunek.
+
+*figureBegin*<br/>
+Czy nowy rysunek powinien być pusty lub wypełniony.
+
+##  <a name="cd2dgeometrysink"></a>  CD2DGeometrySink::CD2DGeometrySink
+
+Tworzy obiekt CD2DGeometrySink z CD2DPathGeometry obiektu.
+
+```
 CD2DGeometrySink(CD2DPathGeometry& pathGeometry);
-```  
-  
-### <a name="parameters"></a>Parametry  
- *pathGeometry*  
- Istniejący obiekt CD2DPathGeometry.  
-  
-##  <a name="close"></a>  CD2DGeometrySink::Close  
- Zamyka zbiornika geometrii  
-  
-```  
+```
+
+### <a name="parameters"></a>Parametry
+
+*pathGeometry*<br/>
+Istniejący obiekt CD2DPathGeometry.
+
+##  <a name="close"></a>  CD2DGeometrySink::Close
+
+Zamyka ujścia geometrii
+
+```
 BOOL Close();
-```  
-  
-### <a name="return-value"></a>Wartość zwracana  
- Różna od zera, w przypadku powodzenia; w przeciwnym razie wartość FALSE.  
-  
-##  <a name="endfigure"></a>  CD2DGeometrySink::EndFigure  
- Kończy się bieżący rysunek; Opcjonalnie zamyka go.  
-  
-```  
+```
+
+### <a name="return-value"></a>Wartość zwracana
+
+Wartość różną od zera, jeśli to się powiedzie; w przeciwnym razie wartość FALSE.
+
+##  <a name="endfigure"></a>  CD2DGeometrySink::EndFigure
+
+Kończy bieżący rysunek; Opcjonalnie zamyka te błędy.
+
+```
 void EndFigure(D2D1_FIGURE_END figureEnd);
-```  
-  
-### <a name="parameters"></a>Parametry  
- *figureEnd*  
- Wartość, która wskazuje, czy bieżący rysunek jest zamknięty. Jeśli rysunek jest zamknięty, między bieżącym punktem a punkt początkowy, określony przez BeginFigure jest rysowana linia.  
-  
-##  <a name="get"></a>  CD2DGeometrySink::Get  
- Zwraca interfejs ID2D1GeometrySink  
-  
-```  
+```
+
+### <a name="parameters"></a>Parametry
+
+*figureEnd*<br/>
+Wartość, która wskazuje, czy bieżący rysunek jest zamknięty. Jeśli rysunek jest zamknięty, linia jest rysowana pomiędzy bieżącym punktem a określonym przez BeginFigure punktu początkowego.
+
+##  <a name="get"></a>  CD2DGeometrySink::Get
+
+Zwraca ID2D1GeometrySink interfejsu
+
+```
 ID2D1GeometrySink* Get();
-```  
-  
-### <a name="return-value"></a>Wartość zwracana  
- Wskaźnik do interfejsu ID2D1GeometrySink lub wartość NULL, jeśli obiekt nie został jeszcze zainicjowany.  
-  
-##  <a name="isvalid"></a>  CD2DGeometrySink::IsValid  
- Sprawdza geometrii zbiornika ważności  
-  
-```  
-BOOL IsValid() const;  
-```  
-  
-### <a name="return-value"></a>Wartość zwracana  
- Wartość TRUE, jeśli zbiornika geometrii jest nieprawidłowy; w przeciwnym razie wartość FALSE.  
-  
-##  <a name="m_psink"></a>  CD2DGeometrySink::m_pSink  
- Wskaźnik do ID2D1GeometrySink.  
-  
-```  
-ID2D1GeometrySink* m_pSink;  
-```  
-  
-##  <a name="operator_id2d1geometrysink_star"></a>  CD2DGeometrySink::operator ID2D1GeometrySink *  
- Zwraca interfejs ID2D1GeometrySink  
-  
-```  
+```
+
+### <a name="return-value"></a>Wartość zwracana
+
+Wskaźnik do interfejsu ID2D1GeometrySink lub wartość NULL, jeśli obiekt nie został jeszcze zainicjowany.
+
+##  <a name="isvalid"></a>  CD2DGeometrySink::IsValid
+
+Sprawdza ważność ujścia geometrii
+
+```
+BOOL IsValid() const;
+```
+
+### <a name="return-value"></a>Wartość zwracana
+
+Wartość TRUE, jeśli geometrii ujścia jest ważny; w przeciwnym razie wartość FALSE.
+
+##  <a name="m_psink"></a>  CD2DGeometrySink::m_pSink
+
+Wskaźnik do ID2D1GeometrySink.
+
+```
+ID2D1GeometrySink* m_pSink;
+```
+
+##  <a name="operator_id2d1geometrysink_star"></a>  CD2DGeometrySink::operator ID2D1GeometrySink *
+
+Zwraca ID2D1GeometrySink interfejsu
+
+```
 operator ID2D1GeometrySink*();
-```   
-  
-### <a name="return-value"></a>Wartość zwracana  
- Wskaźnik do interfejsu ID2D1GeometrySink lub wartość NULL, jeśli obiekt nie został jeszcze zainicjowany.  
-  
-##  <a name="setfillmode"></a>  CD2DGeometrySink::SetFillMode  
- Określa metodę używane do określenia, które punkty znajdują się wewnątrz geometrii opisanego przez ten obiekt sink geometry, a które punkty są poza.  
-  
-```  
+```
+
+### <a name="return-value"></a>Wartość zwracana
+
+Wskaźnik do interfejsu ID2D1GeometrySink lub wartość NULL, jeśli obiekt nie został jeszcze zainicjowany.
+
+##  <a name="setfillmode"></a>  CD2DGeometrySink::SetFillMode
+
+Określa metodę używaną do określenia, które punkty są wewnątrz geometrii opisanego przez ten obiekt sink geometrii, a które punkty są poza.
+
+```
 void SetFillMode(D2D1_FILL_MODE fillMode);
-```  
-  
-### <a name="parameters"></a>Parametry  
- *fillMode*  
- Metoda używana do określenia, czy dany punkt jest częścią geometrii.  
-  
-##  <a name="setsegmentflags"></a>  CD2DGeometrySink::SetSegmentFlags  
- Określa opcje sprzężenia i obrysu ma zostać zastosowany do nowych segmentów dodane do ujścia geometrii.  
-  
-```  
+```
+
+### <a name="parameters"></a>Parametry
+
+*fillMode*<br/>
+Metoda używana do określenia, czy dany punkt znajduje się część geometrii.
+
+##  <a name="setsegmentflags"></a>  CD2DGeometrySink::SetSegmentFlags
+
+Określa opcje obrysu i dołączania mają być stosowane do nowych segmentów dodane do ujścia geometrii.
+
+```
 void SetSegmentFlags(D2D1_PATH_SEGMENT vertexFlags);
-```  
-  
-### <a name="parameters"></a>Parametry  
- *vertexFlags*  
- Opcje obrysu i sprzężenia ma zostać zastosowany do nowych segmentów dodane do ujścia geometrii.  
-  
-## <a name="see-also"></a>Zobacz też  
- [Klasy](../../mfc/reference/mfc-classes.md)
+```
+
+### <a name="parameters"></a>Parametry
+
+*vertexFlags*<br/>
+Opcje obrysu i dołączania mają być stosowane do nowych segmentów dodane do ujścia geometrii.
+
+## <a name="see-also"></a>Zobacz też
+
+[Klasy](../../mfc/reference/mfc-classes.md)

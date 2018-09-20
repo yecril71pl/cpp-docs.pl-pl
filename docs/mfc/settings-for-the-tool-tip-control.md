@@ -1,5 +1,5 @@
 ---
-title: Ustawienia dla narzędzia formantu etykietki | Dokumentacja firmy Microsoft
+title: Ustawienia narzędzia formantu etykietki | Dokumentacja firmy Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -15,21 +15,23 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 39de60d17dae5a6d7b2965350162117d049c29c8
-ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
+ms.openlocfilehash: 6d0adfd1c7a7ae1e1f36fa8dd53610d19ad8e7b2
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/26/2018
-ms.locfileid: "36951117"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46379557"
 ---
 # <a name="settings-for-the-tool-tip-control"></a>Ustawienia formantu etykietki narzędzia
-Można ustawić formantem etykietki narzędzia ([CToolTipCtrl](../mfc/reference/ctooltipctrl-class.md)) być aktywne lub nieaktywne. Po ustawieniu go jako aktywne formantem etykietki narzędzia jest wyświetlany, gdy kursor znajduje się na to narzędzie. Po ustawieniu go jako nieaktywny formantem etykietki narzędzia nie ma, nawet jeśli kursor znajduje się na to narzędzie. Wywołanie [Aktywuj](../mfc/reference/ctooltipctrl-class.md#activate) aktywować lub dezaktywować formantem etykietki narzędzia.  
-  
- Można ustawić aktywnego podpowiedzi do wyświetlenia etykietka narzędzia, gdy kursor znajduje się w narzędzia, czy okno właściciela formantem etykietki narzędzia jest aktywny lub nieaktywny, za pomocą stylu TTS_ALWAYSTIP. Jeśli nie używasz tego stylu, formantem etykietki narzędzia pojawia się, gdy właściciel okno jest aktywne, a nie jest nieaktywny.  
-  
- Większość aplikacji zawierają paski narzędzi z narzędziami, które odpowiadają na polecenia menu. Tych narzędzi jest wygodną metodą formantem etykietki narzędzia do wyświetlania tego samego tekstu jako odpowiedniego elementu menu. System automatycznie usuwa handlowego "i" (&) akceleratora znaków z ciągów wszystkich przekazany do formantem etykietki narzędzia, chyba że formant ma styl TTS_NOPREFIX.  
-  
-## <a name="see-also"></a>Zobacz też  
- [Korzystanie z CToolTipCtrl](../mfc/using-ctooltipctrl.md)   
- [Kontrolki](../mfc/controls-mfc.md)
+
+Możesz ustawić formantem etykietki narzędzia ([CToolTipCtrl](../mfc/reference/ctooltipctrl-class.md)) jako aktywną lub nieaktywną. Po ustawieniu go jako aktywny formantem etykietki narzędzia jest wyświetlany, gdy kursor znajduje się nad narzędziem. Po ustawieniu go jako nieaktywne formantem etykietki narzędzia jest niewidoczny, nawet jeśli kursor znajduje się nad narzędziem. Wywołaj [Aktywuj](../mfc/reference/ctooltipctrl-class.md#activate) aby aktywować lub dezaktywować formantem etykietki narzędzia.
+
+Można ustawić aktywny podpowiedzi do wyświetlenia etykietki narzędzia, gdy kursor znajduje się nad narzędziem, czy okno właściciela formantem etykietki narzędzia jest aktywne lub nieaktywne, przy użyciu stylu TTS_ALWAYSTIP. Jeśli nie używasz ten styl, formantem etykietki narzędzia pojawia się, gdy okno właściciela tego narzędzia jest aktywna, ale nie w przypadku, gdy jest nieaktywny.
+
+Większość aplikacji zawiera pasków narzędzi za pomocą narzędzi, które odnoszą się do poleceń menu. Dla tych narzędzi jest wygodne formantem etykietki narzędzia wyświetlić ten sam tekst jako odpowiedniego elementu menu. System automatycznie usuwa handlowe "i" (&) akceleratora znaków z wszystkie ciągi przekazywane do formantem etykietki narzędzia, chyba, że kontrolka ma styl TTS_NOPREFIX.
+
+## <a name="see-also"></a>Zobacz też
+
+[Korzystanie z CToolTipCtrl](../mfc/using-ctooltipctrl.md)<br/>
+[Kontrolki](../mfc/controls-mfc.md)
 

@@ -17,29 +17,31 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 839b38a135f9f7ada413de757035370e009cfa57
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 04b6aa92937ce2c7a0b94c5e5b796b0bf8581626
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33346974"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46385134"
 ---
 # <a name="menus-mfc"></a>Menu (MFC)
-MFC dostarcza dwa elementy, które ułatwiają korzystanie z menu:  
-  
--   Klasa [cmenu —](../mfc/reference/cmenu-class.md) do manipulowania menu programu w czasie wykonywania. Skorzystaj z dokumentacji dla `CMenu` i przykładowa, aby dowiedzieć się, jak używać `CMenu` efektywnie.  
-  
--   Mechanizm aktualizacji menu i przycisków paska narzędzi: Włączanie i wyłączanie je na bieżąco do własnych bieżący program warunków.  
-  
- Udostępnia również Visual C++ [edytora menu](../windows/menu-editor.md) tworzenia i edytowania zasobów menu programu.  
-  
-## <a name="what-do-you-want-to-know-more-about"></a>Co chcesz dowiedzieć się więcej o  
-  
--   [Manipulowanie podczas wykonywania programu obiektów menu.](../mfc/manipulating-menus-during-program-execution.md)  
-  
--   [Jak aktualizowanie obiektów interfejsu użytkownika](../mfc/how-to-update-user-interface-objects.md)  
-  
--   [próbki](../mfc/menu-sample-list.md)  
-  
-## <a name="see-also"></a>Zobacz też  
- [Elementy interfejsu użytkownika](../mfc/user-interface-elements-mfc.md)
+
+MFC udostępnia dwa elementy, które pozwalają pracować z menu:
+
+- Klasa [CMenu](../mfc/reference/cmenu-class.md) do manipulowania menu programu w czasie wykonywania. Zapoznaj się z dokumentacją dla `CMenu` i przykładu, aby dowiedzieć się, jak używać `CMenu` skutecznie.
+
+- Mechanizm aktualizowanie menu i przycisków paska narzędzi: Włączanie lub wyłączanie je na bieżąco, aby odpowiadały bieżące warunki programu.
+
+Visual C++ zapewnia również [Edytor menu](../windows/menu-editor.md) do tworzenia i edytowania zasobów menu programu.
+
+## <a name="what-do-you-want-to-know-more-about"></a>Co chcesz dowiedzieć się więcej na temat
+
+- [Operowanie menu obiekty podczas wykonywania programu](../mfc/manipulating-menus-during-program-execution.md)
+
+- [Jak zaktualizować obiektów interfejsu użytkownika](../mfc/how-to-update-user-interface-objects.md)
+
+- [Próbki](../mfc/menu-sample-list.md)
+
+## <a name="see-also"></a>Zobacz też
+
+[Elementy interfejsu użytkownika](../mfc/user-interface-elements-mfc.md)

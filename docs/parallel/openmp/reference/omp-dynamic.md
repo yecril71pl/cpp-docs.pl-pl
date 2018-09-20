@@ -16,41 +16,45 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: de4a81d861bf72943a67356577da37c36df63f69
-ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
+ms.openlocfilehash: b02a2a4d660057ab83da39add7fd32bcff3e6d90
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33695814"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46392141"
 ---
 # <a name="ompdynamic"></a>OMP_DYNAMIC
-Określa, czy OpenMP czas wykonywania można zmienić liczbę wątków w równoległego regionu.  
-  
-## <a name="syntax"></a>Składnia  
-  
-```  
-set OMP_DYNAMIC[=TRUE | =FALSE]  
-```  
-  
-## <a name="remarks"></a>Uwagi  
- `OMP_DYNAMIC` Zmiennej środowiskowej może zostać przesłonięta przez [omp_set_dynamic](../../../parallel/openmp/reference/omp-set-dynamic.md) funkcji.  
-  
- Wartość domyślna w implementacji Visual C++ standardu OpenMP to `OMP_DYNAMIC=FALSE`.  
-  
- Aby uzyskać więcej informacji, zobacz [4.3 OMP_DYNAMIC](../../../parallel/openmp/4-3-omp-dynamic.md).  
-  
-## <a name="example"></a>Przykład  
- Następujące polecenie ustawia `OMP_DYNAMIC` zmiennej środowiskowej na wartość TRUE:  
-  
-```  
-set OMP_DYNAMIC=TRUE  
-```  
-  
- Następujące polecenie wyświetla bieżące ustawienie `OMP_DYNAMIC` zmiennej środowiskowej:  
-  
-```  
-set OMP_DYNAMIC  
-```  
-  
-## <a name="see-also"></a>Zobacz też  
- [Zmienne środowiskowe](../../../parallel/openmp/reference/openmp-environment-variables.md)
+
+Określa, czy OpenMP, w czasie wykonywania można dostosować liczbę wątków w równoległego regionu.
+
+## <a name="syntax"></a>Składnia
+
+```
+set OMP_DYNAMIC[=TRUE | =FALSE]
+```
+
+## <a name="remarks"></a>Uwagi
+
+`OMP_DYNAMIC` Zmiennej środowiskowej, może zostać przesłonięta przez [omp_set_dynamic](../../../parallel/openmp/reference/omp-set-dynamic.md) funkcji.
+
+Wartość domyślna w implementacji Visual C++ OpenMP standard to `OMP_DYNAMIC=FALSE`.
+
+Aby uzyskać więcej informacji, zobacz [4.3 OMP_DYNAMIC](../../../parallel/openmp/4-3-omp-dynamic.md).
+
+## <a name="example"></a>Przykład
+
+Następujące polecenie ustawia `OMP_DYNAMIC` zmiennej środowiskowej na wartość TRUE:
+
+```
+set OMP_DYNAMIC=TRUE
+```
+
+Następujące polecenie wyświetla bieżące ustawienie `OMP_DYNAMIC` zmienną środowiskową:
+
+```
+set OMP_DYNAMIC
+```
+
+## <a name="see-also"></a>Zobacz też
+
+[Zmienne środowiskowe](../../../parallel/openmp/reference/openmp-environment-variables.md)

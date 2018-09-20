@@ -15,35 +15,37 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1786c89f4ec9cf1c0908dac5d81858d5b2e6b7db
-ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
+ms.openlocfilehash: 9ff524f1f29e4db2ac5bb4628064583f0fe7583e
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/26/2018
-ms.locfileid: "36950709"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46372369"
 ---
 # <a name="using-an-image-list-with-a-rebar-control"></a>Używanie listy obrazów z formantem paska pomocniczego
-Każdej grupy paska pomocniczego może zawierać między innymi obraz z listy skojarzony obraz. Poniższa procedura zawiera szczegóły dotyczące czynności niezbędnych do wyświetlania obrazu w paśmie paska pomocniczego.  
-  
-### <a name="to-display-images-in-a-rebar-band"></a>Do wyświetlania obrazów w paśmie paska pomocniczego  
-  
-1.  Dołącz listy obrazów do obiektu formantu paska pomocniczego poprzez wywołanie [SetImageList](../mfc/reference/crebarctrl-class.md#setimagelist), przekazanie wskaźnika do istniejącej listy obrazów.  
-  
-2.  Modyfikowanie **REBARBANDINFO** struktury można przypisać do grupy paska pomocniczego obrazu:  
-  
-    -   Ustaw *fMask* członka `RBBIM_IMAGE`, przy użyciu bitowego operatora OR uwzględnienie dodatkowych flag odpowiednio do potrzeb.  
-  
-    -   Ustaw *iImage* elementu członkowskiego do indeksu listy obrazów obrazu do wyświetlenia.  
-  
-3.  Inicjuj wszystkie pozostałe elementy członkowskie danych, takich jak rozmiar, tekst i uchwyt okna podrzędnego zawartych w niej niezbędne informacje.  
-  
-4.  Wstaw nową grupę (przy użyciu obrazu) przy użyciu wywołania do [CReBarCtrl::InsertBand](../mfc/reference/crebarctrl-class.md#insertband), przechodzącą **REBARBANDINFO** struktury.  
-  
- W poniższym przykładzie założono, że istniejący obiekt listy obrazów z dwa obrazy został dołączony do obiektu formantu paska pomocniczego (`m_wndReBar`). Nową grupę paska pomocniczego (zdefiniowane przez `rbi`), zawierający pierwszy obraz, jest dodawany przez wywołanie do `InsertBand`:  
-  
- [!code-cpp[NVC_MFCControlLadenDialog#28](../mfc/codesnippet/cpp/using-an-image-list-with-a-rebar-control_1.cpp)]  
-  
-## <a name="see-also"></a>Zobacz też  
- [Korzystanie z CReBarCtrl](../mfc/using-crebarctrl.md)   
- [Kontrolki](../mfc/controls-mfc.md)
+
+Każdego pasma paska pomocniczego może zawierać, między innymi obraz z listy obrazów skojarzone. W poniższej procedurze szczegółowo czynności niezbędnych do wyświetlania obrazu w przedziale paska pomocniczego.
+
+### <a name="to-display-images-in-a-rebar-band"></a>Aby wyświetlić obrazy w przedziale paska pomocniczego
+
+1. Dołączanie listy obrazów do obiektu formantu paska pomocniczego poprzez wywołanie [SetImageList](../mfc/reference/crebarctrl-class.md#setimagelist), przekazując wskaźnik do istniejącej listy obrazów.
+
+1. Modyfikowanie **REBARBANDINFO** strukturę, aby przypisać obrazu do pasma paska pomocniczego:
+
+   - Ustaw *fMask* członka do `RBBIM_IMAGE`, aby uwzględnić dodatkowe flagi zgodnie z potrzebami przy użyciu bitowego operatora OR.
+
+   - Ustaw *iImage* członek indeks listy obrazu obrazu do wyświetlenia.
+
+1. Inicjuj wszystkie pozostałe składowe danych, takich jak rozmiar tekstu i uchwyt okna podrzędnego zawartej niezbędne informacje.
+
+1. Wstaw nową grupę (przy użyciu obrazu) z wywołaniem [CReBarCtrl::InsertBand](../mfc/reference/crebarctrl-class.md#insertband), przekazując **REBARBANDINFO** struktury.
+
+W poniższym przykładzie założono, że istniejący obiekt listy obrazów z dwa obrazy został dołączony do obiektu formantu paska pomocniczego (`m_wndReBar`). Nową grupę paska pomocniczego (zdefiniowany przez `rbi`), zawierający pierwszy obraz, zostanie dodany z wywołaniem `InsertBand`:
+
+[!code-cpp[NVC_MFCControlLadenDialog#28](../mfc/codesnippet/cpp/using-an-image-list-with-a-rebar-control_1.cpp)]
+
+## <a name="see-also"></a>Zobacz też
+
+[Korzystanie z CReBarCtrl](../mfc/using-crebarctrl.md)<br/>
+[Kontrolki](../mfc/controls-mfc.md)
 

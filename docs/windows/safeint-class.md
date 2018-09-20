@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: b765f6393b9bd2d632539abb5fb7cd17c29297b6
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: bb264447aff789e375afeb9f0db26d2205b3eb2f
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45701756"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46374486"
 ---
 # <a name="safeint-class"></a>SafeInt — Klasa
 
@@ -231,5 +231,5 @@ Dostępne są dwie opcje, aby dostosować zasady dotyczące błędów. Pierwszym
 
 ## <a name="see-also"></a>Zobacz też
 
-[Biblioteka SafeInt](../windows/safeint-library.md)  
+[Biblioteka SafeInt](../windows/safeint-library.md)<br/>
 [SafeIntException, klasa](../windows/safeintexception-class.md)

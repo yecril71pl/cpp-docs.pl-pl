@@ -17,31 +17,33 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0490c6383327531ff04ab3f484aeb4b085ef9106
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 86c0178f0ea3bdccf9bd467aa24edc016a767530
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33349229"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46389112"
 ---
 # <a name="ole-mfc"></a>OLE (MFC)
-Implementowanie OLE funkcjonalność w programie dotyczy interfejsu użytkownika na kilka sposobów:  
-  
--   Visual edycji (Aktywacja w miejscu) wyświetla interfejsu użytkownika z innego programu w systemie windows z programem i modyfikuje menu programu z elementami z innego programu.  
-  
--   Przeciąganie i upuszczanie umożliwia użytkownikom przeciągnij obiekty w ramach i między systemem windows i nawet między programami.  
-  
--   Trackery podać wizualnych stan obiektów podczas edycji i przeciągnij i upuść.  
-  
- Aby uzyskać więcej informacji, zobacz:  
-  
--   [OLE i MFC](../mfc/ole-in-mfc.md)  
-  
--   [Edycja wizualna (aktywacji)](../mfc/activation-cpp.md)  
-  
--   [Przeciąganie i upuszczanie](../mfc/drag-and-drop-ole.md)  
-  
--   [Trackery](../mfc/trackers.md)  
-  
-## <a name="see-also"></a>Zobacz też  
- [Elementy interfejsu użytkownika](../mfc/user-interface-elements-mfc.md)
+
+Implementowanie OLE funkcji w programie wpływa na interfejs użytkownika na kilka sposobów:
+
+- Visual edycji (aktywacji w miejscu) wyświetla interfejsu użytkownika w innym programie w oknach programu i modyfikuje menu programu przy użyciu elementów z innym programie.
+
+- Przeciąganie i upuszczanie umożliwia użytkownikom przeciągnij obiekty w ramach i między oknami, a nawet między programami.
+
+- Trackery pominięcie edycja wizualna podpowiedzi wizualne do stanu obiektów i przeciągnij i upuść.
+
+Aby uzyskać więcej informacji, zobacz:
+
+- [OLE i MFC](../mfc/ole-in-mfc.md)
+
+- [Edycja wizualna (Aktywacja)](../mfc/activation-cpp.md)
+
+- [Przeciąganie i upuszczanie](../mfc/drag-and-drop-ole.md)
+
+- [Trackery](../mfc/trackers.md)
+
+## <a name="see-also"></a>Zobacz też
+
+[Elementy interfejsu użytkownika](../mfc/user-interface-elements-mfc.md)

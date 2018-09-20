@@ -15,70 +15,76 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6bacb9ea6a451026f7a515878cb649090ed9cbf4
-ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
+ms.openlocfilehash: a15910885b26c8026a6e504ef36d492cf63445e8
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33691849"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46379830"
 ---
 # <a name="how-to-use-exception-handling-to-break-from-a-parallel-loop"></a>Porady: Użyj obsługi wyjątków, aby przerwać pętlę równoległą
-W tym temacie przedstawia sposób zapisania algorytmu wyszukiwania dla struktury drzewa podstawowe.  
-  
- Temat [anulowania](cancellation-in-the-ppl.md) wyjaśniono roli anulowania Biblioteka wzorów równoległych. Korzystanie z obsługi wyjątków jest mniej wydajne sposób anulowania pracy równoległej niż użycie [concurrency::task_group::cancel](reference/task-group-class.md#cancel) i [concurrency::structured_task_group::cancel](reference/structured-task-group-class.md#cancel) metody. Jednak jeden scenariusz, w którym korzystanie z obsługi wyjątków, aby anulować pracy jest odpowiednie jest podczas wywołania do biblioteki innej firmy, która używa zadań lub algorytmy równoległe, ale nie zapewnia `task_group` lub `structured_task_group` obiekt, aby anulować.  
 
-  
-## <a name="example"></a>Przykład  
- Poniższy przykład przedstawia podstawowy `tree` typu, który zawiera element danych i listy węzłów podrzędnych. W poniższej sekcji przedstawiono treści `for_all` metody, które rekursywnie pełni funkcję pracy na każdy węzeł podrzędny.  
-  
- [!code-cpp[concrt-task-tree-search#2](../../parallel/concrt/codesnippet/cpp/how-to-use-exception-handling-to-break-from-a-parallel-loop_1.cpp)]  
-  
-## <a name="example"></a>Przykład  
- W poniższym przykładzie przedstawiono `for_all` metody. Używa [concurrency::parallel_for_each](reference/concurrency-namespace-functions.md#parallel_for_each) algorytm funkcji pracy w każdym węźle drzewa równolegle.  
-  
- [!code-cpp[concrt-task-tree-search#1](../../parallel/concrt/codesnippet/cpp/how-to-use-exception-handling-to-break-from-a-parallel-loop_2.cpp)]  
-  
-## <a name="example"></a>Przykład  
- W poniższym przykładzie przedstawiono `search_for_value` funkcji, która wyszukuje wartość w określonych `tree` obiektu. Ta funkcja przekazuje do `for_all` metody, a funkcja pracy, która zgłasza, gdy znajdzie węzła drzewa, który zawiera podana wartość.  
-  
- Przyjęto założenie, że `tree` klasy są dostarczane przez bibliotekę innych firm, a nie można go modyfikować. W takim przypadku korzystanie z obsługi wyjątków jest odpowiednie ponieważ `for_all` metoda nie dostarcza `task_group` lub `structured_task_group` obiektu do obiektu wywołującego. W związku z tym funkcja pracy nie może bezpośrednio anulować jej nadrzędnej grupy zadań.  
-  
- Funkcji pracy, które świadczą grupy zadań zgłasza wyjątek, środowisko uruchomieniowe zatrzyma wszystkie zadania, które znajdują się w grupie zadań (łącznie z wszelkich podrzędnych grup zadań) i odrzuca wszystkie zadania, które nie zostały jeszcze uruchomione. `search_for_value` Używa `try` - `catch` blok do przechwycenia wyjątek i wydrukować wynik do konsoli.  
-  
- [!code-cpp[concrt-task-tree-search#3](../../parallel/concrt/codesnippet/cpp/how-to-use-exception-handling-to-break-from-a-parallel-loop_3.cpp)]  
-  
-## <a name="example"></a>Przykład  
- Poniższy przykład tworzy `tree` obiektu i wyszukuje kilka wartości równolegle. `build_tree` Funkcja przedstawiono w dalszej części tego tematu.  
-  
- [!code-cpp[concrt-task-tree-search#4](../../parallel/concrt/codesnippet/cpp/how-to-use-exception-handling-to-break-from-a-parallel-loop_4.cpp)]  
-  
- W tym przykładzie użyto [concurrency::parallel_invoke](reference/concurrency-namespace-functions.md#parallel_invoke) algorytmu wyszukiwania wartości równolegle. Aby uzyskać więcej informacji dotyczących tego algorytmu, zobacz [algorytmy równoległe](../../parallel/concrt/parallel-algorithms.md).  
-  
-## <a name="example"></a>Przykład  
- W poniższym przykładzie pełną użyto obsługi wyjątków do wyszukiwania wartości w postaci struktury drzewiastej podstawowe.  
-  
- [!code-cpp[concrt-task-tree-search#5](../../parallel/concrt/codesnippet/cpp/how-to-use-exception-handling-to-break-from-a-parallel-loop_5.cpp)]  
-  
- W tym przykładzie tworzy następujące przykładowe dane wyjściowe.  
-  
-```Output  
-Found a node with value 32614.  
-Found a node with value 86131.  
-Did not find node with value 17522.  
-```  
-  
-## <a name="compiling-the-code"></a>Kompilowanie kodu  
- Skopiuj przykładowy kod i wklej go w projekcie programu Visual Studio lub wklej go w pliku o nazwie `task-tree-search.cpp` , a następnie uruchom następujące polecenie w oknie Wiersz polecenia programu Visual Studio.  
-  
- **Cl.exe/ehsc zadania drzewa search.cpp**  
-  
-## <a name="see-also"></a>Zobacz też  
- [Anulowanie w PPL](cancellation-in-the-ppl.md)   
- [Obsługa wyjątków](../../parallel/concrt/exception-handling-in-the-concurrency-runtime.md)   
- [Równoległość zadania](../../parallel/concrt/task-parallelism-concurrency-runtime.md)   
- [Algorytmy równoległe](../../parallel/concrt/parallel-algorithms.md)   
- [task_group — klasa](reference/task-group-class.md)   
- [structured_task_group — klasa](../../parallel/concrt/reference/structured-task-group-class.md)   
- [parallel_for_each — funkcja](reference/concurrency-namespace-functions.md#parallel_for_each)
+W tym temacie pokazano, jak napisać algorytm wyszukiwania w strukturze drzewa podstawowe.
 
+Temat [anulowania](cancellation-in-the-ppl.md) opisano rolę anulowania biblioteki wzorców równoległych. Korzystanie z obsługi wyjątków jest mniej skuteczny sposób, aby anulować czynność równoległą niż korzystanie z [concurrency::task_group::cancel](reference/task-group-class.md#cancel) i [CONCURRENCY::structured_task_group:: Cancel](reference/structured-task-group-class.md#cancel) metody. Jeden scenariusz, w których korzystanie z obsługi wyjątków można anulować pracy jest właściwe jest jednak po wywołaniu do biblioteki innej firmy, która używa zadania lub algorytmów równoległych, ale nie zapewnia `task_group` lub `structured_task_group` obiektu, aby anulować.
+
+## <a name="example"></a>Przykład
+
+Poniższy przykład przedstawia podstawowe `tree` typu, który zawiera element danych i listę węzłów podrzędnych. W poniższej sekcji pokazano treści `for_all` metody cyklicznie, która wykonuje funkcję pracy w każdym węźle podrzędnych.
+
+[!code-cpp[concrt-task-tree-search#2](../../parallel/concrt/codesnippet/cpp/how-to-use-exception-handling-to-break-from-a-parallel-loop_1.cpp)]
+
+## <a name="example"></a>Przykład
+
+W poniższym przykładzie przedstawiono `for_all` metody. Używa ona [concurrency::parallel_for_each](reference/concurrency-namespace-functions.md#parallel_for_each) algorytm funkcja pracy w każdym węźle drzewa równolegle.
+
+[!code-cpp[concrt-task-tree-search#1](../../parallel/concrt/codesnippet/cpp/how-to-use-exception-handling-to-break-from-a-parallel-loop_2.cpp)]
+
+## <a name="example"></a>Przykład
+
+W poniższym przykładzie przedstawiono `search_for_value` funkcji, która wyszukuje wartość w określonych `tree` obiektu. Tę funkcję, przekazuje do `for_all` metoda funkcję pracy, która zgłasza wyjątek, gdy znajdzie węzeł drzewa zawierający podanej wartości.
+
+Przyjęto założenie, że `tree` klasy są dostarczane przez biblioteki innej firmy, a nie można go modyfikować. W tym przypadku jest korzystanie z obsługi wyjątków ponieważ `for_all` metoda nie dostarcza `task_group` lub `structured_task_group` obiektu do obiektu wywołującego. W związku z tym funkcja pracy nie może bezpośrednio anulować jej nadrzędnej grupy zadań.
+
+Gdy ta funkcja pracy, które zapewniają do grupy zadań zgłasza wyjątek, środowisko uruchomieniowe zatrzymuje wszystkie zadania, które znajdują się w grupie zadań (w tym wszystkie grupy zadań podrzędnych) i odrzuca wszelkie zadania, które nie zostały rozpoczęte. `search_for_value` Używa funkcji `try` - `catch` bloku, aby przechwycić wyjątek i wydrukować wynik do konsoli.
+
+[!code-cpp[concrt-task-tree-search#3](../../parallel/concrt/codesnippet/cpp/how-to-use-exception-handling-to-break-from-a-parallel-loop_3.cpp)]
+
+## <a name="example"></a>Przykład
+
+Poniższy przykład tworzy `tree` obiekt i wyszukuje kilka wartości równolegle. `build_tree` Funkcji jest przedstawiony w dalszej części tego tematu.
+
+[!code-cpp[concrt-task-tree-search#4](../../parallel/concrt/codesnippet/cpp/how-to-use-exception-handling-to-break-from-a-parallel-loop_4.cpp)]
+
+W tym przykładzie użyto [concurrency::parallel_invoke](reference/concurrency-namespace-functions.md#parallel_invoke) algorytmu wyszukiwania wartości w sposób równoległy. Aby uzyskać więcej informacji na temat tego algorytmu, zobacz [algorytmy równoległe](../../parallel/concrt/parallel-algorithms.md).
+
+## <a name="example"></a>Przykład
+
+W poniższym przykładzie pełną użyto obsługi wyjątków do wyszukiwania wartości w postaci struktury drzewiastej podstawowe.
+
+[!code-cpp[concrt-task-tree-search#5](../../parallel/concrt/codesnippet/cpp/how-to-use-exception-handling-to-break-from-a-parallel-loop_5.cpp)]
+
+Ten przykład generuje następujące przykładowe dane wyjściowe.
+
+```Output
+Found a node with value 32614.
+Found a node with value 86131.
+Did not find node with value 17522.
+```
+
+## <a name="compiling-the-code"></a>Kompilowanie kodu
+
+Kopiuj przykładowy kod i wklej go w projekcie programu Visual Studio lub wklej go w pliku o nazwie `task-tree-search.cpp` , a następnie uruchom następujące polecenie w oknie wiersza polecenia programu Visual Studio.
+
+**Cl.exe/ehsc zadań drzewa search.cpp**
+
+## <a name="see-also"></a>Zobacz też
+
+[Anulowanie w PPL](cancellation-in-the-ppl.md)<br/>
+[Obsługa wyjątków](../../parallel/concrt/exception-handling-in-the-concurrency-runtime.md)<br/>
+[Równoległość zadania](../../parallel/concrt/task-parallelism-concurrency-runtime.md)<br/>
+[Algorytmy równoległe](../../parallel/concrt/parallel-algorithms.md)<br/>
+[task_group — klasa](reference/task-group-class.md)<br/>
+[structured_task_group, klasa](../../parallel/concrt/reference/structured-task-group-class.md)<br/>
+[parallel_for_each — funkcja](reference/concurrency-namespace-functions.md#parallel_for_each)
 

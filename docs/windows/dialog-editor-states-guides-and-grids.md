@@ -15,12 +15,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 22e27a5dddacf87a9768d7f6b8d27765d902b5ff
-ms.sourcegitcommit: f0c90000125a9497bf61e41624de189a043703c0
+ms.openlocfilehash: 3d0cc73df8304377bde00d8da2ab3c501ea5db45
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44318372"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46373274"
 ---
 # <a name="dialog-editor-states-guides-and-grids-c"></a>Stany Edytor okien dialogowych (prowadnice i siatki) (C++) 
 
@@ -50,6 +50,6 @@ Win32
 
 ## <a name="see-also"></a>Zobacz też
 
-[Rozmieszczenie kontrolek w oknach dialogowych](../windows/arrangement-of-controls-on-dialog-boxes.md)  
-[Kontrolki w oknach dialogowych](../windows/controls-in-dialog-boxes.md)  
+[Rozmieszczenie kontrolek w oknach dialogowych](../windows/arrangement-of-controls-on-dialog-boxes.md)<br/>
+[Kontrolki w oknach dialogowych](../windows/controls-in-dialog-boxes.md)<br/>
 [Kontrolki (MFC)](../mfc/controls-mfc.md)

@@ -16,27 +16,31 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 79d28b64b56ed501b47881fd9e3ba2bd2e8817e9
-ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
+ms.openlocfilehash: 42b95941e7853ec9bba830f5f5b37c0ed73b3548
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33690741"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46384708"
 ---
 # <a name="ompgetthreadnum"></a>omp_get_thread_num
-Zwraca liczbę wątków wykonywania wątku w jego zespołu wątku.  
-  
-## <a name="syntax"></a>Składnia  
-  
-```  
-int omp_get_thread_num( );  
-```  
-  
-## <a name="remarks"></a>Uwagi  
- Aby uzyskać więcej informacji, zobacz [3.1.4 funkcja omp_get_thread_num](../../../parallel/openmp/3-1-4-omp-get-thread-num-function.md).  
-  
-## <a name="example"></a>Przykład  
- Zobacz [równoległych](../../../parallel/openmp/reference/parallel.md) przykład przy użyciu `omp_get_thread_num`.  
-  
-## <a name="see-also"></a>Zobacz też  
- [Funkcje](../../../parallel/openmp/reference/openmp-functions.md)
+
+Zwraca liczbę wątków wątek wykonywania w jego zespół wątku.
+
+## <a name="syntax"></a>Składnia
+
+```
+int omp_get_thread_num( );
+```
+
+## <a name="remarks"></a>Uwagi
+
+Aby uzyskać więcej informacji, zobacz [3.1.4 funkcja omp_get_thread_num](../../../parallel/openmp/3-1-4-omp-get-thread-num-function.md).
+
+## <a name="example"></a>Przykład
+
+Zobacz [równoległe](../../../parallel/openmp/reference/parallel.md) na przykład za pomocą `omp_get_thread_num`.
+
+## <a name="see-also"></a>Zobacz też
+
+[Funkcje](../../../parallel/openmp/reference/openmp-functions.md)

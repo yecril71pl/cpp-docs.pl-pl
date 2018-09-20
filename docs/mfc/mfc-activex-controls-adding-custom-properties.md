@@ -1,5 +1,5 @@
 ---
-title: 'Formanty MFC ActiveX: Dodawanie właściwości niestandardowych | Dokumentacja firmy Microsoft'
+title: 'Kontrolki ActiveX MFC: Dodawanie właściwości niestandardowych | Dokumentacja firmy Microsoft'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -15,92 +15,96 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7facc4c712d070cffe9be5f07a236b2b04b972e9
-ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
+ms.openlocfilehash: 98cf8a0532c3b1f2044ba0338d3f2f2bf8e73813
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/25/2018
-ms.locfileid: "36931918"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46390992"
 ---
 # <a name="mfc-activex-controls-adding-custom-properties"></a>Kontrolki ActiveX MFC: dodawanie właściwości niestandardowych
-Właściwości niestandardowe różnią się od właściwości podstawowe właściwości niestandardowe nie są już implementowana przez `COleControl` klasy. Właściwość niestandardowa służy do ujawniać niektórych stanu lub wygląd formantu ActiveX do programisty, za pomocą formantu.  
-  
- W tym artykule opisano sposób dodawania właściwości niestandardowych do formantu ActiveX, za pomocą Kreatora dodawania właściwości i opisano wynikowy modyfikacji kodu. Tematy obejmują:  
-  
--   [Dodawanie właściwości niestandardowych przy użyciu Kreatora dodawania właściwości](#_core_using_classwizard_to_add_a_custom_property)  
-  
--   [Dodaj Kreatora właściwości zmiany właściwości niestandardowych](#_core_classwizard_changes_for_custom_properties)  
-  
- Właściwości niestandardowe są dostępne w czterech odmian wykonania: zmienna elementu członkowskiego, powiadomienia, metod Get/Set i sparametryzowane zmiennej elementu członkowskiego.  
-  
--   Implementacja zmiennej elementu członkowskiego  
-  
-     Ta implementacja reprezentuje stan właściwości jako zmienną członkowską do klasy formantu. Użyj zmiennej elementu członkowskiego implementacji, gdy nie jest ważne dowiedzieć się, gdy zmienia się wartość właściwości. Trzech typów ta implementacja tworzy minimalnej liczbie kod obsługi właściwości. Makro wpisu mapy wysyłania dla implementacji zmiennej elementu członkowskiego jest [disp_property —](../mfc/reference/dispatch-maps.md#disp_property).  
-  
--   Zmiennej członkowskiej z implementacją powiadomień  
-  
-     Ta implementacja składa się z zmiennej członkowskiej i funkcję powiadomień utworzone przez Kreatora dodawania właściwości. Funkcja powiadomień automatycznie jest wywoływana przez platformę po zmianie wartości właściwości. Użyj zmiennej elementu członkowskiego z implementacją powiadomień gdy potrzebne są zgłaszane po zmianie wartości właściwości. Ta implementacja wymaga więcej czasu, ponieważ wymaga wywołania funkcji. Makro wpisu mapy wysyłania dla tej implementacji jest [disp_property_notify —](../mfc/reference/dispatch-maps.md#disp_property_notify).  
-  
--   Implementacja metod Get/Set  
-  
-     Ta implementacja składa się z pary funkcji Członkowskich w klasy formantu. Implementacja metody Get i Set automatycznie wywołuje element członkowski Get funkcja bieżącą wartość właściwości żądanie formantu użytkownika i zestaw funkcji członkowskiej żądanie użytkownika formantu, można zmienić właściwości. Gdy do obliczenia wartości właściwości w czasie wykonywania sprawdzania poprawności wartości przekazywane przez kontrolki użytkownika przed zmianą właściwości rzeczywiste, lub implementować typ właściwości lub zapisu — tylko do odczytu, należy użyć tej implementacji. Makro wpisu mapy wysyłania dla tej implementacji jest [disp_property_ex —](../mfc/reference/dispatch-maps.md#disp_property_ex). Poniższej sekcji [Dodawanie właściwości niestandardowych przy użyciu Kreatora dodawania właściwości](#_core_using_classwizard_to_add_a_custom_property), używa właściwości niestandardowe CircleOffset aby zademonstrować tej implementacji.  
-  
--   Implementacja sparametryzowane  
-  
-     Implementacja sparametryzowane jest obsługiwana przez Kreatora dodawania właściwości. Sparametryzowane właściwości (nazywane również tablicy właściwości) może służyć do zestawu wartości za pośrednictwem pojedynczej właściwości formantu. Makro wpisu mapy wysyłania dla tej implementacji jest disp_property_param —. Aby uzyskać więcej informacji na ten typ implementacji, zobacz [implementacja właściwości sparametryzowana](../mfc/mfc-activex-controls-advanced-topics.md) w artykule formantów ActiveX: Tematy zaawansowane.  
-  
-##  <a name="_core_using_classwizard_to_add_a_custom_property"></a> Przy użyciu Dodaj Kreatora właściwości, aby dodać właściwości niestandardowe  
- W poniższej procedurze przedstawiono dodawanie właściwości niestandardowych CircleOffset, używanym w implementacji metody Get i Set. Właściwość niestandardowa CircleOffset umożliwia użytkownikowi formantu przesunięcie koło z Centrum prostokątem formantu. Dodawanie właściwości niestandardowych z implementacją innego niż metod Get/Set procedura jest bardzo podobne.  
-  
- Tę samą procedurę można również inne właściwości niestandardowe, które chcesz dodać. Zastąp nazwę właściwości niestandardowej nazwy właściwości CircleOffset i parametrów.  
-  
-#### <a name="to-add-the-circleoffset-custom-property-using-the-add-property-wizard"></a>Aby dodać właściwości niestandardowe CircleOffset za pomocą Kreatora dodawania właściwości  
-  
-1.  Załaduj projekt z kontroli.  
-  
-2.  W widoku klas rozwiń węzeł Biblioteka formantu.  
-  
-3.  Kliknij prawym przyciskiem myszy węzeł interfejsu dla formantu (drugiego węzła węzeł biblioteki), aby otworzyć menu skrótów.  
-  
-4.  W menu skrótów kliknij **Dodaj** , a następnie kliknij przycisk **Dodaj właściwość**.  
-  
-     Spowoduje to otwarcie [Dodaj Kreatora właściwości](../ide/names-add-property-wizard.md).  
-  
-5.  W **nazwa właściwości** wpisz *CircleOffset*.  
-  
-6.  Aby uzyskać **typ implementacji**, kliknij przycisk **metod Get/Set**.  
-  
-7.  W **typ właściwości** wybierz opcję **krótki**.  
-  
-8.  Wpisz unikatowe nazwy Get i ustawić funkcji lub zaakceptuj domyślne nazwy.  
-  
-9. Kliknij przycisk **Zakończ**.  
-  
-##  <a name="_core_classwizard_changes_for_custom_properties"></a> Dodaj Kreatora właściwości zostanie zmieniona dla właściwości niestandardowe  
- Po dodaniu niestandardowej właściwości CircleOffset Kreatora dodawania właściwości wprowadza zmiany do nagłówka (. H), jak i implementację (. Pliki CPP) klasy formantu.  
-  
- Następujące wiersze są dodawane do. Plik H, aby zadeklarować dwóch funkcji o nazwie `GetCircleOffset` i `SetCircleOffset`:  
-  
- [!code-cpp[NVC_MFC_AxUI#25](../mfc/codesnippet/cpp/mfc-activex-controls-adding-custom-properties_1.h)]  
-  
- Następujący wiersz jest dodawany do formantu. Plik IDL:  
-  
- [!code-cpp[NVC_MFC_AxUI#26](../mfc/codesnippet/cpp/mfc-activex-controls-adding-custom-properties_2.idl)]  
-  
- Ten wiersz przypisuje właściwości CircleOffset na określony numer ID pobierane z metody pozycję na liście właściwości i metody w Kreatorze dodawania właściwości.  
-  
- Ponadto następujące wiersz zostanie dodany do mapy wysyłania (w. Pliku CPP klasy formantu) do mapowania właściwości CircleOffset formantu dwie funkcje programu obsługi:  
-  
- [!code-cpp[NVC_MFC_AxUI#27](../mfc/codesnippet/cpp/mfc-activex-controls-adding-custom-properties_3.cpp)]  
-  
- Na koniec implementacje `GetCircleOffset` i `SetCircleOffset` funkcje są dodawane na końcu formantu. Pliku CPP. W większości przypadków należy zmodyfikować funkcji Get zwraca wartość właściwości. Funkcja zestawu zazwyczaj zawiera kod, który ma być wykonany przed lub po zmianie właściwości.  
-  
- [!code-cpp[NVC_MFC_AxUI#28](../mfc/codesnippet/cpp/mfc-activex-controls-adding-custom-properties_4.cpp)]  
-  
- Należy pamiętać, że Kreator dodawania właściwości automatycznie dodaje wywołanie, do [SetModifiedFlag](../mfc/reference/colecontrol-class.md#setmodifiedflag), aby treści funkcji zestawu. Wywołanie tej funkcji oznacza formant jako zmodyfikowane. Jeśli formant został zmodyfikowany, jego nowego stanu zostaną zapisane przy zapisywaniu kontenera. Ta funkcja powinna być wywoływana zmianie wartości właściwości zapisywane jako część trwały stan formantu.  
-  
-## <a name="see-also"></a>Zobacz też  
- [Kontrolki ActiveX MFC](../mfc/mfc-activex-controls.md)   
- [Formanty MFC ActiveX: właściwości](../mfc/mfc-activex-controls-properties.md)   
- [Formanty MFC ActiveX: metody](../mfc/mfc-activex-controls-methods.md)   
- [Klasa COleControl](../mfc/reference/colecontrol-class.md)
+
+Właściwości niestandardowe różnią się od właściwości podstawowe, w tym, że właściwości niestandardowe nie są już zaimplementowany przez `COleControl` klasy. Właściwość niestandardowa jest używana do udostępnienia określonego stanu lub wyglądu formantu ActiveX do programisty, za pomocą formantu.
+
+W tym artykule opisano, jak dodać właściwość niestandardową do formantu ActiveX, za pomocą Kreatora dodawania właściwości i wyjaśnia wynikowy modyfikacji kodu. Tematy obejmują:
+
+- [Dodawanie właściwości niestandardowych przy użyciu Kreatora dodawania właściwości](#_core_using_classwizard_to_add_a_custom_property)
+
+- [Dodaj Kreatora właściwości zmiany właściwości niestandardowych](#_core_classwizard_changes_for_custom_properties)
+
+Właściwości niestandardowe są dostępne w cztery różne typy wdrożenia: zmiennej składowej, składowej zmiennej za pomocą powiadomień, metod Get/Set i Parameterized.
+
+- Implementacja zmiennej elementu członkowskiego
+
+     Ta implementacja reprezentuje stan właściwości jako zmienną elementu członkowskiego w klasie kontrolki. Jeśli nie jest to ważne, aby wiedzieć, kiedy ulega zmianie wartość właściwości, należy użyć zmiennej elementu członkowskiego implementacji. Z trzech typów ta implementacja tworzy najmniejszą ilością kod pomocy technicznej dla właściwości. Makro wpis mapy wysyłania dla implementacji zmiennej elementu członkowskiego jest [DISP_PROPERTY](../mfc/reference/dispatch-maps.md#disp_property).
+
+- Zmiennej składowej z implementacją powiadomień
+
+     Ta implementacja składa się z zmienną członkowską i funkcję powiadomień, utworzony za pomocą Dodaj Kreatora właściwości. Funkcja powiadomień automatycznie jest wywoływane przez platformę po zmianie wartości właściwości. Użyj zmiennej elementu członkowskiego z implementacją powiadomień gdy potrzebujesz otrzymać powiadomienie po zmianie wartości właściwości. Ta implementacja wymaga więcej czasu, ponieważ wymaga wywołania funkcji. Makro wpis mapy wysyłania dla tej implementacji [DISP_PROPERTY_NOTIFY](../mfc/reference/dispatch-maps.md#disp_property_notify).
+
+- Implementacja metody GET/Set
+
+     Ta implementacja składa się z dwóch funkcji składowych w klasie kontrolki. Implementacja metody Get/Set automatycznie wywołuje członka Get funkcja bieżąca wartość właściwości żądanie formantu użytkownika i funkcja elementu członkowskiego zestawu po użytkownik formantu zażąda, można zmienić właściwości. Użyj tej implementacji, gdy to konieczne do obliczenia wartości właściwości w czasie wykonywania, sprawdzania poprawności wartości przekazane przez użytkownika kontrolki przed zmianą właściwości rzeczywiste, oraz implementowanie typu właściwości lub zapisu — tylko do odczytu. Makro wpis mapy wysyłania dla tej implementacji [DISP_PROPERTY_EX](../mfc/reference/dispatch-maps.md#disp_property_ex). Poniższej sekcji [Dodawanie właściwości niestandardowych przy użyciu Kreatora dodawania właściwości](#_core_using_classwizard_to_add_a_custom_property), używa niestandardowej właściwości CircleOffset aby zademonstrować tę implementację.
+
+- Implementacja sparametryzowane
+
+     Implementacja sparametryzowane jest obsługiwana przez Kreatora dodawania właściwości. Właściwości sparametryzowane (czasami nazywany tablicy właściwości) może służyć dostęp do zestawu wartości za pośrednictwem pojedynczej właściwości formantu. Makra wpis mapy wysyłania dla tej implementacji jest DISP_PROPERTY_PARAM. Aby uzyskać więcej informacji dotyczących implementowania tego typu, zobacz [Implementowanie właściwości sparametryzowane](../mfc/mfc-activex-controls-advanced-topics.md) w artykule kontrolek ActiveX: Tematy zaawansowane.
+
+##  <a name="_core_using_classwizard_to_add_a_custom_property"></a> Za pomocą Dodaj Kreatora właściwości, aby dodać właściwość niestandardową
+
+Poniższa procedura demonstruje, dodawanie właściwości niestandardowych CircleOffset, który używa implementacji metod Get/Set. Niestandardowa właściwość CircleOffset umożliwia użytkownikowi formantu przesunięcie koło z Centrum prostokąt otaczający formantu. Procedura dodawania właściwości niestandardowych z implementacją innego niż metod Get/Set jest bardzo podobne.
+
+Tę samą procedurę można również inne właściwości niestandardowe, które chcesz dodać. Zastąp nazwę właściwości niestandardowej CircleOffset nazwy właściwości i parametrów.
+
+#### <a name="to-add-the-circleoffset-custom-property-using-the-add-property-wizard"></a>Aby dodać właściwości niestandardowe CircleOffset za pomocą Kreatora dodawania właściwości
+
+1. Załaduj projekt formantu.
+
+1. W widoku klas rozwiń węzeł biblioteki kontrolki.
+
+1. Kliknij prawym przyciskiem myszy węzeł interfejsu dla kontrolki (drugi węzeł węzła biblioteki), aby otworzyć menu skrótów.
+
+1. W menu skrótów kliknij **Dodaj** a następnie kliknij przycisk **Dodaj właściwość**.
+
+     Spowoduje to otwarcie [Kreator dodawania właściwości](../ide/names-add-property-wizard.md).
+
+1. W **nazwa właściwości** wpisz *CircleOffset*.
+
+1. Aby uzyskać **typ implementacji**, kliknij przycisk **metod Get/Set**.
+
+1. W **typ właściwości** wybierz opcję **krótki**.
+
+1. Wpisz unikatowe nazwy, Pobierz i ustaw funkcji, lub zaakceptować domyślne nazwy.
+
+9. Kliknij przycisk **Zakończ**.
+
+##  <a name="_core_classwizard_changes_for_custom_properties"></a> Dodaj zmiany Kreatora właściwości dla właściwości niestandardowe
+
+Podczas dodawania właściwości niestandardowych CircleOffset Kreator dodawania właściwości sprawia, że zmiany do nagłówka (. Godz.), jak i implementację (. Plikach CPP) klasy kontrolki.
+
+Następujące wiersze są dodawane do. Plik H, aby zadeklarować dwie funkcje o nazwie `GetCircleOffset` i `SetCircleOffset`:
+
+[!code-cpp[NVC_MFC_AxUI#25](../mfc/codesnippet/cpp/mfc-activex-controls-adding-custom-properties_1.h)]
+
+Następujący wiersz jest dodawany do formantu. Plik IDL:
+
+[!code-cpp[NVC_MFC_AxUI#26](../mfc/codesnippet/cpp/mfc-activex-controls-adding-custom-properties_2.idl)]
+
+Ten wiersz przypisuje właściwość CircleOffset określonych numer identyfikacyjny pobranych z metody pozycji na liście właściwości i metod w Kreatorze dodawania właściwości.
+
+Ponadto dodaje się następujący wiersz do mapy wysyłania (w. Plik CPP klasy kontrolki) do mapowania właściwości CircleOffset dwie funkcje obsługi formantu:
+
+[!code-cpp[NVC_MFC_AxUI#27](../mfc/codesnippet/cpp/mfc-activex-controls-adding-custom-properties_3.cpp)]
+
+Na koniec implementacje `GetCircleOffset` i `SetCircleOffset` funkcje są dodawane na końcu formantu. Plik CPP. W większości przypadków należy zmodyfikować funkcję Get w celu zwrócenia wartości właściwości. Funkcja Set zazwyczaj zawiera kod, który ma być wykonany przed lub po zmianie właściwości.
+
+[!code-cpp[NVC_MFC_AxUI#28](../mfc/codesnippet/cpp/mfc-activex-controls-adding-custom-properties_4.cpp)]
+
+Należy pamiętać, że Kreator dodawania właściwości automatycznie dodaje połączenie, do [SetModifiedFlag](../mfc/reference/colecontrol-class.md#setmodifiedflag), do treści funkcji Set. Wywołanie tej funkcji oznacza kontrolkę, jak modyfikacji. W przypadku modyfikowania kontrolki jego nowego stanu zostaną zapisane przy zapisywaniu kontenera. Ta funkcja powinna być wywoływana zawsze wtedy, gdy właściwość zapisane jako części kontrolki trwały stan zmieni się wartość.
+
+## <a name="see-also"></a>Zobacz też
+
+[Kontrolki ActiveX MFC](../mfc/mfc-activex-controls.md)<br/>
+[Kontrolki ActiveX MFC: właściwości](../mfc/mfc-activex-controls-properties.md)<br/>
+[Kontrolki ActiveX MFC: metody](../mfc/mfc-activex-controls-methods.md)<br/>
+[Klasa COleControl](../mfc/reference/colecontrol-class.md)

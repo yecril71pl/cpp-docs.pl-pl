@@ -20,18 +20,20 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: aa326dba7772ddcdccb304900df4460ce9754665
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 6fc68923de531240a2d59336c79e54f6562b369c
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33345576"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46380532"
 ---
 # <a name="dragging-and-dropping-files-in-a-frame-window"></a>Przeciąganie i upuszczanie plików w oknie ramowym
-Okno ramowe zarządza relacji z Eksploratora plików lub Menedżera plików.  
-  
- Przez dodanie kilka inicjowanie odwołuje się zastąpienia z `CWinApp` funkcji członkowskiej `InitInstance`, zgodnie z opisem w [CWinApp: klasa aplikacji](../mfc/cwinapp-the-application-class.md), może mieć ramkę okna pośrednio otwieranie plików przeciągnięte z pliku Eksploratora lub Menedżera plików, a w oknie ramowym. Zobacz [Menedżer plików — przeciąganie i upuszczanie](../mfc/special-cwinapp-services.md).  
-  
-## <a name="see-also"></a>Zobacz też  
- [Używanie okien ramowych](../mfc/using-frame-windows.md)
+
+Okno ramowe zarządza ustanowioną relację z Eksploratora plików lub Menedżer plików.
+
+Przez dodanie kilku inicjowanie wywołań w zastąpienie metody `CWinApp` funkcja elementu członkowskiego `InitInstance`, zgodnie z opisem w [CWinApp: klasa aplikacji](../mfc/cwinapp-the-application-class.md), może mieć okna ramki pośrednio Otwórz pliki przeciągnięte z pliku Eksplorator lub Menedżer plików i porzucić w oknie ramki. Zobacz [Menedżer plików — przeciąganie i upuszczanie](../mfc/special-cwinapp-services.md).
+
+## <a name="see-also"></a>Zobacz też
+
+[Używanie okien ramowych](../mfc/using-frame-windows.md)
 

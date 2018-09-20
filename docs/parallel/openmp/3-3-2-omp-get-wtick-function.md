@@ -12,17 +12,18 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9119a2226fc67058f8d1848b45e6902bae0b361c
-ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
+ms.openlocfilehash: 0111e7ee1d4eba0a7ca9edf50d99cef8d052f6a1
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33688716"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46380319"
 ---
 # <a name="332-ompgetwtick-function"></a>3.3.2 Funkcja omp_get_wtick
-`omp_get_wtick` Funkcja zwraca wartość podwójnej precyzji zmienna punktu równa liczbie sekund między kolejnymi zegarowych. Format jest następujący:  
-  
-```  
-#include <omp.h>  
-double omp_get_wtick(void);  
+
+`omp_get_wtick` Funkcja zwraca wartość punktu zmiennoprzecinkową podwójnej precyzji równa liczbie sekund między taktami zegara kolejnych. Format jest następujący:
+
+```
+#include <omp.h>
+double omp_get_wtick(void);
 ```

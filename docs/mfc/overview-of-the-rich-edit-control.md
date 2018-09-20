@@ -14,26 +14,28 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 143fc93fb07d9ac7c4e803bbce426c114c02bfeb
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 7598449539fffdc2a8a4248fe02b29c83a2d2dfe
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33349977"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46387103"
 ---
 # <a name="overview-of-the-rich-edit-control"></a>Omówienie formantu edycji wzbogaconej
+
 > [!IMPORTANT]
->  Jeśli używasz kontrolki zaawansowanej edycji w oknie dialogowym (niezależnie od tego, czy aplikacja jest SDI i MDI, lub opartych na oknach dialogowych), należy wywołać [afxinitrichedit —](../mfc/reference/application-information-and-management.md#afxinitrichedit) po przed okno dialogowe jest wyświetlane okno. Typowe miejsce do wywołania tej funkcji znajduje się w programie pakietu `InitInstance` funkcję elementu członkowskiego. Nie trzeba wywołać ją za każdym razem, można wyświetlić okno dialogowe, tylko po raz pierwszy. Nie trzeba wywołać `AfxInitRichEdit` podczas pracy z `CRichEditView`.  
-  
- Formanty edycji wzbogaconej ([CRichEditCtrl](../mfc/reference/cricheditctrl-class.md)) zapewnia interfejs programowania dla formatowania tekstu. Jednak aplikacja musi implementować wszystkie składniki interfejsu użytkownika należy udostępnić użytkownikowi operacji formatowania. Oznacza to zaawansowanej edycji formantu obsługuje zmienianie atrybutów znaków lub zaznaczonego tekstu. Przykłady znaku, który atrybuty pogrubienie, kursywa, rodziny czcionek i rozmiar w punktach. Przykładami akapitu atrybuty wyrównania, marginesami oraz właściwościami tabulatorów. Jednak jest maksymalnie o podanie interfejsu użytkownika, czy to przyciski paska narzędzi, elementy menu lub format znak okno dialogowe. Dostępne są również funkcje do badania kontrolki zaawansowanej edycji dla atrybutów bieżącego zaznaczenia. Korzystania z tych funkcji, aby wyświetlić bieżące ustawienia dla atrybutów, na przykład ustawienie znacznik wyboru w poleceniu interfejsu użytkownika, jeśli zaznaczenie zawiera znak bold atrybuty formatowania.  
-  
- Aby uzyskać więcej informacji dotyczących formatowanie znaków i akapitów, zobacz [formatowanie znaków](../mfc/character-formatting-in-rich-edit-controls.md) i [formatowanie akapitów](../mfc/paragraph-formatting-in-rich-edit-controls.md) dalszej części tego tematu.  
-  
- Edycji wzbogaconej obsługę formantów, prawie wszystkie operacje i komunikaty powiadomień używane z wielowierszowych formantów edycyjnych. Formanty edycji w związku z tym aplikacje, że już Użyj formantów edycji można można łatwo zmienić być sformatowany. Dodatkowe komunikaty i powiadomienia umożliwiają aplikacjom dostęp do formantów edycyjnych unikatowe dla zaawansowanych funkcji. Aby uzyskać informacje o formantach edycyjnych, zobacz [CEdit](../mfc/reference/cedit-class.md).  
-  
- Aby uzyskać więcej informacji na powiadomień, zobacz [powiadomienia za pomocą formantu edycji wzbogaconej](../mfc/notifications-from-a-rich-edit-control.md) dalszej części tego tematu.  
-  
-## <a name="see-also"></a>Zobacz też  
- [Korzystanie z CRichEditCtrl](../mfc/using-cricheditctrl.md)   
- [Kontrolki](../mfc/controls-mfc.md)
+>  Jeśli używasz kontrolki edycji wzbogaconej, w oknie dialogowym (niezależnie od tego, czy aplikacja działa SDI i MDI, lub oparta na oknach dialogowych), należy wywołać [afxinitrichedit —](../mfc/reference/application-information-and-management.md#afxinitrichedit) po przed okno dialogowe zostanie wyświetlone okno. Typowe miejsce, aby wywołać tę funkcję znajduje się w swoim programie `InitInstance` funkcja elementu członkowskiego. Nie musisz wywołać ją za każdym razem, możesz wyświetlić okno dialogowe tylko za pierwszym razem. Nie trzeba wywoływać `AfxInitRichEdit` Jeśli pracujesz z `CRichEditView`.
+
+Formanty edycji wzbogaconej ([CRichEditCtrl](../mfc/reference/cricheditctrl-class.md)) zapewnia interfejs programowania dla formatowania tekstu. Jednak aplikacja musi zaimplementować wszelkie niezbędne udostępnić użytkownikowi operacji formatowania składników interfejsu użytkownika. Oznacza to, że sformatowanego obsługuje formant zmiana atrybutów znaków lub zaznaczonego tekstu. Przykłady znaków, atrybuty pogrubienie, kursywa, rodzinę czcionek i rozmiar punktu. Przykładami atrybuty akapitu wyrównanie, marginesy i tabulatora. Jednak jest maksymalnie musisz podać interfejsu użytkownika, czy to przycisków paska narzędzi, elementy menu lub okno dialogowe znaku z formatu. Dostępne są także funkcje do wykonywania zapytań rozwiniętej kontroli edycji w przypadku atrybutów elementów bieżącego zaznaczenia. Korzystania z tych funkcji, aby wyświetlić bieżące ustawienia dla atrybutów, na przykład ustawienie znacznik wyboru na polecenia interfejsu użytkownika, jeśli wybrano formatowania atrybutu znaków pogrubienie.
+
+Aby uzyskać więcej informacji na temat znaków i formatowanie akapitów, zobacz [formatowania znaków](../mfc/character-formatting-in-rich-edit-controls.md) i [formatowanie akapitów](../mfc/paragraph-formatting-in-rich-edit-controls.md) w dalszej części tego tematu.
+
+Tekstu sformatowanego obsługę formantów prawie wszystkie operacje i komunikaty powiadomień używane z formantami edycji wielowierszowe. W związku z tym czy już Użyj kontrolek edycji można łatwo zmienić na używać zaawansowanych aplikacji edycji wzbogaconej. Dodatkowe komunikaty i powiadomienia umożliwiają aplikacjom dostęp do kontrolek edycji unikatowy dla zaawansowanych funkcji. Aby uzyskać informacje o formantach edycji wzbogaconej, zobacz [CEdit](../mfc/reference/cedit-class.md).
+
+Aby uzyskać więcej informacji na temat powiadomień, zobacz [powiadomień w kontrolce edycji wzbogaconej](../mfc/notifications-from-a-rich-edit-control.md) w dalszej części tego tematu.
+
+## <a name="see-also"></a>Zobacz też
+
+[Korzystanie z CRichEditCtrl](../mfc/using-cricheditctrl.md)<br/>
+[Kontrolki](../mfc/controls-mfc.md)
 

@@ -16,32 +16,37 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d97cae8091f88c283412b36ef757b03c72f7580d
-ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
+ms.openlocfilehash: c2b5a285ef019cd1752b60065f7040d9a937ce38
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33691277"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46389892"
 ---
 # <a name="ompgetdynamic"></a>omp_get_dynamic
-Zwraca wartość wskazującą, czy liczba wątków, które są dostępne w kolejnych równoległego regionu można dostosować w czasie wykonywania.  
-  
-## <a name="syntax"></a>Składnia  
-  
-```  
-int omp_get_dynamic();  
-```  
-  
-## <a name="return-value"></a>Wartość zwracana  
- Jeśli jest różna od zera, dynamiczne Dostosowywanie wątków jest włączone.  
-  
-## <a name="remarks"></a>Uwagi  
- Dynamiczne Dostosowywanie wątków jest określany za pomocą [omp_set_dynamic](../../../parallel/openmp/reference/omp-set-dynamic.md) i [OMP_DYNAMIC](../../../parallel/openmp/reference/omp-dynamic.md).  
-  
- Aby uzyskać więcej informacji, zobacz [3.1.7 funkcja omp_set_dynamic](../../../parallel/openmp/3-1-7-omp-set-dynamic-function.md).  
-  
-## <a name="example"></a>Przykład  
- Zobacz [omp_set_dynamic](../../../parallel/openmp/reference/omp-set-dynamic.md) przykład przy użyciu `omp_get_dynamic`.  
-  
-## <a name="see-also"></a>Zobacz też  
- [Funkcje](../../../parallel/openmp/reference/openmp-functions.md)
+
+Zwraca wartość wskazującą, jeśli liczba wątków, które są dostępne w kolejnych równoległego regionu można dostosować w czasie wykonywania.
+
+## <a name="syntax"></a>Składnia
+
+```
+int omp_get_dynamic();
+```
+
+## <a name="return-value"></a>Wartość zwracana
+
+Jeśli wartość jest niezerowa, dynamiczne Dostosowywanie wątków jest włączona.
+
+## <a name="remarks"></a>Uwagi
+
+Dynamiczne Dostosowywanie wątków jest określony za pomocą [omp_set_dynamic](../../../parallel/openmp/reference/omp-set-dynamic.md) i [OMP_DYNAMIC](../../../parallel/openmp/reference/omp-dynamic.md).
+
+Aby uzyskać więcej informacji, zobacz [3.1.7 funkcja omp_set_dynamic](../../../parallel/openmp/3-1-7-omp-set-dynamic-function.md).
+
+## <a name="example"></a>Przykład
+
+Zobacz [omp_set_dynamic](../../../parallel/openmp/reference/omp-set-dynamic.md) na przykład za pomocą `omp_get_dynamic`.
+
+## <a name="see-also"></a>Zobacz też
+
+[Funkcje](../../../parallel/openmp/reference/openmp-functions.md)

@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 7ff83b156054774a06a371e7832dc73dc95a579c
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 6e10d147702908eff5dcdd8889f588030dcffbce
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43221261"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46384863"
 ---
 # <a name="retval"></a>retval
 
@@ -59,6 +59,6 @@ Aby uzyskać więcej informacji na temat konteksty atrybutu zobacz [konteksty at
 
 ## <a name="see-also"></a>Zobacz też
 
-[Atrybuty IDL](../windows/idl-attributes.md)  
-[Atrybuty parametru](../windows/parameter-attributes.md)  
+[Atrybuty IDL](../windows/idl-attributes.md)<br/>
+[Atrybuty parametru](../windows/parameter-attributes.md)<br/>
 [Atrybuty metody](../windows/method-attributes.md)  
